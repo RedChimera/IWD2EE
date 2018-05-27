@@ -1,0 +1,3294 @@
+BACKUP ~iwd2ee/backup~
+AUTHOR ~ced2168@columbia.edu~
+
+VERSION ~0.01~
+
+//MODDER
+
+ALWAYS
+//	ACTION_IF GAME_IS ~IWD2~ BEGIN
+           OUTER_SPRINT ~mod_folder~ ~iwd2ee~    //Folder Var
+//      END
+END
+
+AUTO_TRA ~iwd2ee/tra/%s~
+
+LANGUAGE   ~English~
+           ~English~
+           ~iwd2ee/tra/English/setup.tra~
+           ~iwd2ee/tra/English/class_revisions.tra~
+           ~iwd2ee/tra/English/loose_alignment.tra~
+           ~iwd2ee/tra/English/spell_revise.tra~
+
+
+
+//Class Revisions
+BEGIN @1 //
+      INCLUDE ~%mod_folder%/components/class_revisions.tpa~      //Class Revisions
+
+//Looser Alignment Restrictions for Classes
+BEGIN @2 //
+      INCLUDE ~%mod_folder%/components/loose_alignment.tpa~      //Looser Alignment
+
+//Spell Revisions
+BEGIN @3 //
+      INCLUDE ~%mod_folder%/components/spell_revise.tpa~      //Spell Revisions
+
+//Spell Focus Feats for All Schools
+/*
+BEGIN @4 //
+      INCLUDE ~%mod_folder%/components/spell_focus.tpa~      //Spell focus
+*/
+//Item Revisions
+
+//Creature Rebalancing
+
+//Better XP Progression
+
+//Faster Targos
+
+//Faster Horde Fortress
+
+//Faster Ice Temple
+
+//Faster Wandering Village
+
+//Faster Black Raven Monastery
+
+//Faster Underdark
+
+//Faster Dragon's Eye and Lord Pyros' Domain
+
+//Faster Severed Hand
+
+//More Potions for Oswald
+
+//Mage Scrolls for New Spells
+
+//Fewer Immunities for Bosses
+
+//Shapeshifting Sound Fix
+
+//More Accurate Saving Throws for Enemies
+//
+
+
+BEGIN "Spell Focus Feats for All Schools"
+
+// this reads in spell schools and translates them. Divination spells become necromancy, conjuration becomes evocation, abjuration becomes transmutation, and illusion becomes enchantment. This does not affect which spells a specialist mage can learn; that's handled via the edits to scrolls.
+
+COPY_EXISTING_REGEXP ~.*\.spl~ ~override~
+
+READ_BYTE "0x25" "spellschool"
+
+WRITE_SHORT 0x25 7
+
+IF_EVAL ("%spellschool%" = "0x3")
+
+COPY_EXISTING_REGEXP ~.*\.spl~ ~override~
+
+READ_BYTE "0x25" "spellschool"
+
+WRITE_SHORT 0x25 6
+
+IF_EVAL ("%spellschool%" = "0x2")
+
+COPY_EXISTING_REGEXP ~.*\.spl~ ~override~
+
+READ_BYTE "0x25" "spellschool"
+
+WRITE_SHORT 0x25 4
+
+IF_EVAL ("%spellschool%" = "0x5")
+
+COPY_EXISTING_REGEXP ~.*\.spl~ ~override~
+
+READ_BYTE "0x25" "spellschool"
+
+WRITE_SHORT 0x25 8
+
+IF_EVAL ("%spellschool%" = "0x1")
+
+// new names for Spell Focus feats
+
+COPY_EXISTING ~feats.2da~ ~override~
+  COUNT_2DA_COLS num_cols
+  READ_2DA_ENTRIES_NOW rows num_cols
+  FOR (row = 0; row < rows; ++row) BEGIN
+    READ_2DA_ENTRY_FORMER rows row 0 label
+    PATCH_MATCH ~%label%~ WITH
+      ~SPELL_FOCUS_ENCHANTMENT~ BEGIN
+        SET strref = RESOLVE_STR_REF(@841)
+        SET_2DA_ENTRY_LATER rows_out row 2 ~%strref%~
+        SET strref = RESOLVE_STR_REF(@842)
+        SET_2DA_ENTRY_LATER rows_out row 3 ~%strref%~
+      END
+      ~SPELL_FOCUS_EVOCATION~ BEGIN
+        SET strref = RESOLVE_STR_REF(@843)
+        SET_2DA_ENTRY_LATER rows_out row 2 ~%strref%~
+        SET strref = RESOLVE_STR_REF(@844)
+        SET_2DA_ENTRY_LATER rows_out row 3 ~%strref%~
+      END
+      ~SPELL_FOCUS_NECROMANCY~ BEGIN
+        SET strref = RESOLVE_STR_REF(@845)
+        SET_2DA_ENTRY_LATER rows_out row 2 ~%strref%~
+        SET strref = RESOLVE_STR_REF(@846)
+        SET_2DA_ENTRY_LATER rows_out row 3 ~%strref%~
+      END
+      ~SPELL_FOCUS_TRANSMUTATION~ BEGIN
+        SET strref = RESOLVE_STR_REF(@847)
+        SET_2DA_ENTRY_LATER rows_out row 2 ~%strref%~
+        SET strref = RESOLVE_STR_REF(@848)
+        SET_2DA_ENTRY_LATER rows_out row 3 ~%strref%~
+      END
+      DEFAULT
+    END
+  END
+  SET_2DA_ENTRIES_NOW rows_out num_cols
+BUT_ONLY
+
+
+BEGIN "Item Revisions" //
+
+COPY ~%mod_folder%/itm/00AMUL12.itm~ ~override~
+COPY ~%mod_folder%/itm/00AMUL14.itm~ ~override~
+COPY ~%mod_folder%/itm/00AMULBT.itm~ ~override~
+COPY ~%mod_folder%/itm/00AMULDS.itm~ ~override~
+COPY ~%mod_folder%/itm/00AMULES.itm~ ~override~
+COPY ~%mod_folder%/itm/00AROW05.itm~ ~override~
+COPY ~%mod_folder%/itm/00AROW08.itm~ ~override~
+COPY ~%mod_folder%/itm/00AROW09.itm~ ~override~
+COPY ~%mod_folder%/itm/00AROW10.itm~ ~override~
+COPY ~%mod_folder%/itm/00AROW88.itm~ ~override~
+COPY ~%mod_folder%/itm/00AROW90.itm~ ~override~
+COPY ~%mod_folder%/itm/00AROW97.itm~ ~override~
+COPY ~%mod_folder%/itm/00AROW99.itm~ ~override~
+COPY ~%mod_folder%/itm/00AX1H05.itm~ ~override~
+COPY ~%mod_folder%/itm/00AX1H74.itm~ ~override~
+COPY ~%mod_folder%/itm/00AX1H75.itm~ ~override~
+COPY ~%mod_folder%/itm/00AX1H77.itm~ ~override~
+COPY ~%mod_folder%/itm/00AX1H81.itm~ ~override~
+COPY ~%mod_folder%/itm/00AX1H96.itm~ ~override~
+COPY ~%mod_folder%/itm/00BARD04.itm~ ~override~
+COPY ~%mod_folder%/itm/00BARD05.itm~ ~override~
+COPY ~%mod_folder%/itm/00BARD06.itm~ ~override~
+COPY ~%mod_folder%/itm/00BARD08.itm~ ~override~
+COPY ~%mod_folder%/itm/00BARDRS.itm~ ~override~
+COPY ~%mod_folder%/itm/00BELTAD.itm~ ~override~
+COPY ~%mod_folder%/itm/00BOLT05.itm~ ~override~
+COPY ~%mod_folder%/itm/00BOLT08.itm~ ~override~
+COPY ~%mod_folder%/itm/00BOLT93.itm~ ~override~
+COPY ~%mod_folder%/itm/00BOLT94.itm~ ~override~
+COPY ~%mod_folder%/itm/00BOLT95.itm~ ~override~
+COPY ~%mod_folder%/itm/00BOLT96.itm~ ~override~
+COPY ~%mod_folder%/itm/00BOOT01.itm~ ~override~
+COPY ~%mod_folder%/itm/00BOOT02.itm~ ~override~
+COPY ~%mod_folder%/itm/00BOOTSB.itm~ ~override~
+COPY ~%mod_folder%/itm/00BOWC92.itm~ ~override~
+COPY ~%mod_folder%/itm/00BOWC94.itm~ ~override~
+COPY ~%mod_folder%/itm/00BOWC95.itm~ ~override~
+  SAY NAME1 @861
+  SAY NAME2 @861
+  SAY DESC @862
+COPY ~%mod_folder%/itm/00BOWC96.itm~ ~override~
+  SAY NAME1 @751
+  SAY NAME2 @751
+  SAY DESC @752
+COPY ~%mod_folder%/itm/00BOWL95.itm~ ~override~
+COPY ~%mod_folder%/itm/00BOWL96.itm~ ~override~
+COPY ~%mod_folder%/itm/00BOWL97.itm~ ~override~
+  SAY NAME1 @859
+  SAY NAME2 @859
+  SAY DESC @860
+COPY ~%mod_folder%/itm/00BOWS86.itm~ ~override~
+COPY ~%mod_folder%/itm/00BOWS87.itm~ ~override~
+COPY ~%mod_folder%/itm/00BOWS88.itm~ ~override~
+COPY ~%mod_folder%/itm/00BOWS92.itm~ ~override~
+COPY ~%mod_folder%/itm/00BRAC03.itm~ ~override~
+COPY ~%mod_folder%/itm/00BRAC04.itm~ ~override~
+COPY ~%mod_folder%/itm/00BRAC11.itm~ ~override~
+COPY ~%mod_folder%/itm/00BRACLA.itm~ ~override~
+COPY ~%mod_folder%/itm/00BRACRB.itm~ ~override~
+COPY ~%mod_folder%/itm/00BULL04.itm~ ~override~
+COPY ~%mod_folder%/itm/00BULL87.itm~ ~override~
+COPY ~%mod_folder%/itm/00BULL88.itm~ ~override~
+COPY ~%mod_folder%/itm/00BULL92.itm~ ~override~
+COPY ~%mod_folder%/itm/00BULL93.itm~ ~override~
+COPY ~%mod_folder%/itm/00BULL94.itm~ ~override~
+COPY ~%mod_folder%/itm/00BULL95.itm~ ~override~
+COPY ~%mod_folder%/itm/00BULL96.itm~ ~override~
+COPY ~%mod_folder%/itm/00BWLX96.itm~ ~override~
+COPY ~%mod_folder%/itm/00CLCKNV.itm~ ~override~
+COPY ~%mod_folder%/itm/00CLCKSB.itm~ ~override~
+COPY ~%mod_folder%/itm/00CLCKWC.itm~ ~override~
+COPY ~%mod_folder%/itm/00CLUB82.itm~ ~override~
+COPY ~%mod_folder%/itm/00CLUB90.itm~ ~override~
+COPY ~%mod_folder%/itm/00CLUB92.itm~ ~override~
+COPY ~%mod_folder%/itm/00CLUB95.itm~ ~override~
+COPY ~%mod_folder%/itm/00DAGG82.itm~ ~override~
+COPY ~%mod_folder%/itm/00DAGG84.itm~ ~override~
+COPY ~%mod_folder%/itm/00DAGG85.itm~ ~override~
+COPY ~%mod_folder%/itm/00DAGG86.itm~ ~override~
+COPY ~%mod_folder%/itm/00DAGG93.itm~ ~override~
+COPY ~%mod_folder%/itm/00DAGG94.itm~ ~override~
+COPY ~%mod_folder%/itm/00DAGG97.itm~ ~override~
+COPY ~%mod_folder%/itm/00DAGG99.itm~ ~override~
+COPY ~%mod_folder%/itm/00DAGGFW.itm~ ~override~
+COPY ~%mod_folder%/itm/00DAGGPF.itm~ ~override~
+COPY ~%mod_folder%/itm/00DART03.itm~ ~override~
+COPY ~%mod_folder%/itm/00DART05.itm~ ~override~
+COPY ~%mod_folder%/itm/00DART83.itm~ ~override~
+COPY ~%mod_folder%/itm/00DART84.itm~ ~override~
+COPY ~%mod_folder%/itm/00DART96.itm~ ~override~
+COPY ~%mod_folder%/itm/00DARTAT.itm~ ~override~
+COPY ~%mod_folder%/itm/00DARTDD.itm~ ~override~
+COPY ~%mod_folder%/itm/00FLAL85.itm~ ~override~
+COPY ~%mod_folder%/itm/00FLAL87.itm~ ~override~
+//COPY ~%mod_folder%/itm/00FLAL93.itm~ ~override~
+COPY ~%mod_folder%/itm/00GENMP.itm~ ~override~
+COPY ~%mod_folder%/itm/00HALB93.itm~ ~override~
+
+COPY ~%mod_folder%/itm/63HALBPB.itm~ ~override~
+  SAY NAME1 @740
+  SAY NAME2 @740
+  SAY DESC @741
+COPY ~%mod_folder%/itm/63HFHBPB.itm~ ~override~
+  SAY NAME1 @742
+  SAY NAME2 @742
+  SAY DESC @743
+
+COPY ~%mod_folder%/itm/00HALB98.itm~ ~override~
+COPY ~%mod_folder%/itm/00HALBHL.itm~ ~override~
+COPY ~%mod_folder%/itm/00HAMM89.itm~ ~override~
+COPY ~%mod_folder%/itm/00HAMM90.itm~ ~override~
+COPY ~%mod_folder%/itm/00HAMM95.itm~ ~override~
+COPY ~%mod_folder%/itm/00HAMM96.itm~ ~override~
+COPY ~%mod_folder%/itm/00HAMM97.itm~ ~override~
+COPY ~%mod_folder%/itm/00HAMMSC.itm~ ~override~
+COPY ~%mod_folder%/itm/00HAMT01.itm~ ~override~
+COPY ~%mod_folder%/itm/00HAMT02.itm~ ~override~
+COPY ~%mod_folder%/itm/00HAMT03.itm~ ~override~
+COPY ~%mod_folder%/itm/00HAMT04.itm~ ~override~
+COPY ~%mod_folder%/itm/00HAMT05.itm~ ~override~
+COPY ~%mod_folder%/itm/00HAMT06.itm~ ~override~
+COPY ~%mod_folder%/itm/00HAMT07.itm~ ~override~
+COPY ~%mod_folder%/itm/00HELM01.itm~ ~override~
+COPY ~%mod_folder%/itm/00HELM02.itm~ ~override~
+COPY ~%mod_folder%/itm/00HELM03.itm~ ~override~
+COPY ~%mod_folder%/itm/00HELM04.itm~ ~override~
+COPY ~%mod_folder%/itm/00HELM05.itm~ ~override~
+COPY ~%mod_folder%/itm/00HELM06.itm~ ~override~
+COPY ~%mod_folder%/itm/00HELM07.itm~ ~override~
+COPY ~%mod_folder%/itm/00HELMBH.itm~ ~override~
+COPY ~%mod_folder%/itm/00HELMDS.itm~ ~override~
+COPY ~%mod_folder%/itm/00HFAMBT.itm~ ~override~
+COPY ~%mod_folder%/itm/00HFAMBT.itm~ ~override~
+COPY ~%mod_folder%/itm/00HFAMDS.itm~ ~override~
+COPY ~%mod_folder%/itm/00HFAMES.itm~ ~override~
+COPY ~%mod_folder%/itm/00HFAMGC.itm~ ~override~
+COPY ~%mod_folder%/itm/00HFAMMP.itm~ ~override~
+COPY ~%mod_folder%/itm/00HFAXBA.itm~ ~override~
+COPY ~%mod_folder%/itm/00HFAXBB.itm~ ~override~
+COPY ~%mod_folder%/itm/00HFBCLA.itm~ ~override~
+COPY ~%mod_folder%/itm/00HFBCRB.itm~ ~override~
+COPY ~%mod_folder%/itm/00HFAXSP.itm~ ~override~
+COPY ~%mod_folder%/itm/00HFBD02.itm~ ~override~
+COPY ~%mod_folder%/itm/00HFBD04.itm~ ~override~
+COPY ~%mod_folder%/itm/00HFBD05.itm~ ~override~
+COPY ~%mod_folder%/itm/00HFBD06.itm~ ~override~
+COPY ~%mod_folder%/itm/00HFBD07.itm~ ~override~
+COPY ~%mod_folder%/itm/00HFBLSR.itm~ ~override~
+COPY ~%mod_folder%/itm/00HFBTAD.itm~ ~override~
+COPY ~%mod_folder%/itm/00HFBTSB.itm~ ~override~
+COPY ~%mod_folder%/itm/00HFCBHK.itm~ ~override~
+COPY ~%mod_folder%/itm/00HFCKFC.itm~ ~override~
+COPY ~%mod_folder%/itm/00HFCKMB.itm~ ~override~
+COPY ~%mod_folder%/itm/00HFCKSB.itm~ ~override~
+COPY ~%mod_folder%/itm/00HFCKWC.itm~ ~override~
+COPY ~%mod_folder%/itm/00HFDGFW.itm~ ~override~
+COPY ~%mod_folder%/itm/00HFDGPF.itm~ ~override~
+COPY ~%mod_folder%/itm/00HFDTAT.itm~ ~override~
+COPY ~%mod_folder%/itm/00HFDTDD.itm~ ~override~
+COPY ~%mod_folder%/itm/00HFFLSR.itm~ ~override~
+COPY ~%mod_folder%/itm/00HFGNMP.itm~ ~override~
+COPY ~%mod_folder%/itm/00HFHBHL.itm~ ~override~
+COPY ~%mod_folder%/itm/00HFHMBH.itm~ ~override~
+COPY ~%mod_folder%/itm/00HFHMDS.itm~ ~override~
+COPY ~%mod_folder%/itm/00HFHMSM.itm~ ~override~
+COPY ~%mod_folder%/itm/00HFHRSC.itm~ ~override~
+COPY ~%mod_folder%/itm/00HFLXIM.itm~ ~override~
+COPY ~%mod_folder%/itm/00HFMC38.itm~ ~override~
+COPY ~%mod_folder%/itm/00HFMEAR.itm~ ~override~
+COPY ~%mod_folder%/itm/00HFMRMG.itm~ ~override~
+COPY ~%mod_folder%/itm/00HFMRMS.itm~ ~override~
+COPY ~%mod_folder%/itm/00HFMRSS.itm~ ~override~
+COPY ~%mod_folder%/itm/00HFRBMR.itm~ ~override~
+COPY ~%mod_folder%/itm/00HFRBRA.itm~ ~override~
+COPY ~%mod_folder%/itm/00HFRGAR.itm~ ~override~
+COPY ~%mod_folder%/itm/00HFRGCR.itm~ ~override~
+COPY ~%mod_folder%/itm/00HFSBBS.itm~ ~override~
+COPY ~%mod_folder%/itm/00HFSDBU.itm~ ~override~
+COPY ~%mod_folder%/itm/00HFSGSS.itm~ ~override~
+COPY ~%mod_folder%/itm/00HFSLDB.itm~ ~override~
+COPY ~%mod_folder%/itm/00HFSFDD.itm~ ~override~
+COPY ~%mod_folder%/itm/00HFSLDY.itm~ ~override~
+COPY ~%mod_folder%/itm/00HFSSLS.itm~ ~override~
+COPY ~%mod_folder%/itm/00HFSSSK.itm~ ~override~
+COPY ~%mod_folder%/itm/00HFSSTD.itm~ ~override~
+COPY ~%mod_folder%/itm/00LEAT08.itm~ ~override~
+COPY ~%mod_folder%/itm/00LEAT86.itm~ ~override~
+COPY ~%mod_folder%/itm/00LEAT90.itm~ ~override~
+COPY ~%mod_folder%/itm/00LEAT92.itm~ ~override~
+COPY ~%mod_folder%/itm/00LEAT97.itm~ ~override~
+COPY ~%mod_folder%/itm/00MACE92.itm~ ~override~
+COPY ~%mod_folder%/itm/00MACE93.itm~ ~override~
+COPY ~%mod_folder%/itm/00MACE95.itm~ ~override~
+COPY ~%mod_folder%/itm/00MISC38.itm~ ~override~
+COPY ~%mod_folder%/itm/00MSTR85.itm~ ~override~
+COPY ~%mod_folder%/itm/00MSTR91.itm~ ~override~
+COPY ~%mod_folder%/itm/00MSTRMG.itm~ ~override~
+COPY ~%mod_folder%/itm/00MSTRMS.itm~ ~override~
+COPY ~%mod_folder%/itm/00MSTRSS.itm~ ~override~
+COPY ~%mod_folder%/itm/00POTN45.itm~ ~override~
+COPY ~%mod_folder%/itm/00POTN50.itm~ ~override~
+COPY ~%mod_folder%/itm/00POTN66.itm~ ~override~
+  SAY NAME1 @753
+  SAY NAME2 @753
+  SAY DESC @754
+//COPY ~%mod_folder%/itm/00POTN67.itm~ ~override~
+COPY ~%mod_folder%/itm/00POTN70.itm~ ~override~
+COPY ~%mod_folder%/itm/00POTN71.itm~ ~override~
+COPY ~%mod_folder%/itm/00POTN72.itm~ ~override~
+COPY ~%mod_folder%/itm/00POTN73.itm~ ~override~
+COPY ~%mod_folder%/itm/00POTN74.itm~ ~override~
+COPY ~%mod_folder%/itm/00POTN75.itm~ ~override~
+COPY ~%mod_folder%/itm/00POTN77.itm~ ~override~
+  SAY NAME1 @736
+  SAY NAME2 @736
+  SAY DESC @737
+COPY ~%mod_folder%/itm/00POTN78.itm~ ~override~
+  SAY NAME1 @645
+  SAY NAME2 @645
+  SAY DESC @646
+COPY ~%mod_folder%/itm/00POTN80.itm~ ~override~
+COPY ~%mod_folder%/itm/00POTN82.itm~ ~override~
+COPY ~%mod_folder%/itm/00POTN83.itm~ ~override~
+COPY ~%mod_folder%/itm/00POTN84.itm~ ~override~
+COPY ~%mod_folder%/itm/00POTN85.itm~ ~override~
+COPY ~%mod_folder%/itm/00POTN86.itm~ ~override~
+COPY ~%mod_folder%/itm/00POTN87.itm~ ~override~
+COPY ~%mod_folder%/itm/00POTN89.itm~ ~override~
+  SAY NAME1 @494
+  SAY NAME2 @494
+  SAY DESC @495
+COPY ~%mod_folder%/itm/00POTN90.itm~ ~override~
+  SAY NAME1 @384
+  SAY NAME2 @384
+  SAY DESC @385
+COPY ~%mod_folder%/itm/00POTN91.itm~ ~override~
+COPY ~%mod_folder%/itm/00POTN92.itm~ ~override~
+  SAY NAME1 @386
+  SAY NAME2 @386
+  SAY DESC @387
+COPY ~%mod_folder%/itm/00POTN93.itm~ ~override~
+COPY ~%mod_folder%/itm/00POTN94.itm~ ~override~
+COPY ~%mod_folder%/itm/00POTN95.itm~ ~override~
+  SAY NAME1 @388
+  SAY NAME2 @388
+  SAY DESC @389
+COPY ~%mod_folder%/itm/00POTN96.itm~ ~override~
+  SAY NAME1 @392
+  SAY NAME2 @392
+  SAY DESC @393
+COPY ~%mod_folder%/itm/00POTN97.itm~ ~override~
+  SAY NAME1 @394
+  SAY NAME2 @394
+  SAY DESC @395
+COPY ~%mod_folder%/itm/00POTN98.itm~ ~override~
+
+COPY ~%mod_folder%/itm/00POTN99.itm~ ~override~
+  SAY NAME1 @390
+  SAY NAME2 @390
+  SAY DESC @391
+
+COPY ~%mod_folder%/itm/00RING16.itm~ ~override~
+COPY ~%mod_folder%/itm/00RING23.itm~ ~override~
+COPY ~%mod_folder%/itm/00RING67.itm~ ~override~
+COPY ~%mod_folder%/itm/00RING69.itm~ ~override~
+COPY ~%mod_folder%/itm/00RING70.itm~ ~override~
+COPY ~%mod_folder%/itm/00RING72.itm~ ~override~
+COPY ~%mod_folder%/itm/00RING73.itm~ ~override~
+COPY ~%mod_folder%/itm/00RING74.itm~ ~override~
+COPY ~%mod_folder%/itm/00RING78.itm~ ~override~
+COPY ~%mod_folder%/itm/00RING82.itm~ ~override~
+COPY ~%mod_folder%/itm/00RING85.itm~ ~override~
+COPY ~%mod_folder%/itm/00RING89.itm~ ~override~
+COPY ~%mod_folder%/itm/00RING93.itm~ ~override~
+COPY ~%mod_folder%/itm/00RING97.itm~ ~override~
+COPY ~%mod_folder%/itm/00RINGCR.itm~ ~override~
+COPY ~%mod_folder%/itm/00ROBE99.itm~ ~override~
+COPY ~%mod_folder%/itm/00ROBEMR.itm~ ~override~
+COPY ~%mod_folder%/itm/00SCRL02.itm~ ~override~
+COPY ~%mod_folder%/itm/00SCRL03.itm~ ~override~
+COPY ~%mod_folder%/itm/00SCRL04.itm~ ~override~
+COPY ~%mod_folder%/itm/00SHLD91.itm~ ~override~
+COPY ~%mod_folder%/itm/00SHLD94.itm~ ~override~
+COPY ~%mod_folder%/itm/00SHLD95.itm~ ~override~
+COPY ~%mod_folder%/itm/00SHLDBU.itm~ ~override~
+//COPY ~%mod_folder%/itm/00SHLDMM.itm~ ~override~ // !!!
+COPY ~%mod_folder%/itm/00SLNG88.itm~ ~override~
+COPY ~%mod_folder%/itm/00SLNG89.itm~ ~override~
+COPY ~%mod_folder%/itm/00SLNG94.itm~ ~override~
+COPY ~%mod_folder%/itm/00SPER89.itm~ ~override~
+COPY ~%mod_folder%/itm/00STAF80.itm~ ~override~
+COPY ~%mod_folder%/itm/00STAF81.itm~ ~override~
+COPY ~%mod_folder%/itm/00STAF84.itm~ ~override~
+COPY ~%mod_folder%/itm/00STAF85.itm~ ~override~
+COPY ~%mod_folder%/itm/00STAF87.itm~ ~override~
+  SAY NAME1 @738
+  SAY NAME2 @738
+  SAY DESC @739
+COPY ~%mod_folder%/itm/00STAF89.itm~ ~override~
+COPY ~%mod_folder%/itm/00STAF90.itm~ ~override~
+COPY ~%mod_folder%/itm/00STAF92.itm~ ~override~
+COPY ~%mod_folder%/itm/00STAF93.itm~ ~override~
+COPY ~%mod_folder%/itm/00STAFDD.itm~ ~override~
+COPY ~%mod_folder%/itm/00SWDB94.itm~ ~override~
+COPY ~%mod_folder%/itm/00SWDB97.itm~ ~override~
+COPY ~%mod_folder%/itm/00SWDB99.itm~ ~override~
+  SAY NAME1 @863
+  SAY NAME2 @863
+  SAY DESC @864
+COPY ~%mod_folder%/itm/00SWDBRC.itm~ ~override~
+COPY ~%mod_folder%/itm/00SWDC92.itm~ ~override~
+COPY ~%mod_folder%/itm/00SWDC93.itm~ ~override~
+COPY ~%mod_folder%/itm/00SWDL07.itm~ ~override~
+COPY ~%mod_folder%/itm/00SWDL09.itm~ ~override~
+COPY ~%mod_folder%/itm/00SWDL80.itm~ ~override~
+COPY ~%mod_folder%/itm/00SWDL85.itm~ ~override~
+COPY ~%mod_folder%/itm/00SWDL89.itm~ ~override~
+COPY ~%mod_folder%/itm/00SWDL91.itm~ ~override~
+COPY ~%mod_folder%/itm/00SWDL92.itm~ ~override~
+COPY ~%mod_folder%/itm/00SWDL98.itm~ ~override~
+COPY ~%mod_folder%/itm/00SWDLDB.itm~ ~override~
+COPY ~%mod_folder%/itm/00SWDLDY.itm~ ~override~
+COPY ~%mod_folder%/itm/00SWDS85.itm~ ~override~
+COPY ~%mod_folder%/itm/00SWDS87.itm~ ~override~
+COPY ~%mod_folder%/itm/00SWDS94.itm~ ~override~
+COPY ~%mod_folder%/itm/00SWDSLS.itm~ ~override~
+COPY ~%mod_folder%/itm/00SWDSSK.itm~ ~override~
+COPY ~%mod_folder%/itm/00SWDSTD.itm~ ~override~
+COPY ~%mod_folder%/itm/00SWDT90.itm~ ~override~
+COPY ~%mod_folder%/itm/00SWDT93.itm~ ~override~
+COPY ~%mod_folder%/itm/00WAND01.itm~ ~override~
+COPY ~%mod_folder%/itm/00WAND02.itm~ ~override~
+COPY ~%mod_folder%/itm/00WAND16.itm~ ~override~
+  SAY NAME1 @625
+  SAY NAME2 @625
+  SAY DESC @626
+COPY ~%mod_folder%/itm/11AMULCM.itm~ ~override~
+COPY ~%mod_folder%/itm/11BOOKDE.itm~ ~override~
+COPY ~%mod_folder%/itm/11HFBKDE.itm~ ~override~
+COPY ~%mod_folder%/itm/11HFBKHW.itm~ ~override~
+COPY ~%mod_folder%/itm/11HFBKLD.itm~ ~override~
+/*
+//cannot switch HoF version of Book of Leaves to per day without artificially increasing the price
+
+COPY ~%mod_folder%/itm/11HFBKLE.itm~ ~override~
+COPY ~%mod_folder%/itm/11BOOKLE.itm~ ~override~
+  SAY NAME1 @627
+  SAY NAME2 @627
+  SAY DESC @628
+*/
+COPY ~%mod_folder%/itm/12AMULHC.itm~ ~override~
+COPY ~%mod_folder%/itm/12HFAMHC.itm~ ~override~
+
+COPY ~%mod_folder%/itm/52BOOKDV.itm~ ~override~
+COPY ~%mod_folder%/itm/52BOOKGE.itm~ ~override~
+COPY ~%mod_folder%/itm/52BOOKOG.itm~ ~override~
+COPY ~%mod_folder%/itm/52BOOKSU.itm~ ~override~
+COPY ~%mod_folder%/itm/52BOOKSV.itm~ ~override~
+COPY ~%mod_folder%/itm/52HFBKDV.itm~ ~override~
+COPY ~%mod_folder%/itm/52HFBKGE.itm~ ~override~
+COPY ~%mod_folder%/itm/52HFBKOG.itm~ ~override~
+COPY ~%mod_folder%/itm/52HFBKSU.itm~ ~override~
+COPY ~%mod_folder%/itm/52HFBKSV.itm~ ~override~
+
+
+COPY ~%mod_folder%/itm/00WAND20.itm~ ~override~
+
+COPY ~%mod_folder%/itm/00AMUL12.itm~ ~override~
+  SAY NAME1 @190
+  SAY NAME2 @190
+  SAY DESC @191
+COPY ~%mod_folder%/itm/00AMULBT.itm~ ~override~
+  SAY NAME1 @192
+  SAY NAME2 @192
+  SAY DESC @193
+COPY ~%mod_folder%/itm/00AROW88.itm~ ~override~
+  SAY NAME1 @194
+  SAY NAME2 @194
+  SAY DESC @195
+COPY ~%mod_folder%/itm/00AROW90.itm~ ~override~
+  SAY NAME1 @196
+  SAY NAME2 @196
+  SAY DESC @197
+COPY ~%mod_folder%/itm/00AROW97.itm~ ~override~
+  SAY NAME1 @198
+  SAY NAME2 @198
+  SAY DESC @199
+COPY ~%mod_folder%/itm/00BARD04.itm~ ~override~
+  SAY NAME1 @200
+  SAY NAME2 @200
+  SAY DESC @201
+COPY ~%mod_folder%/itm/00BARD06.itm~ ~override~
+  SAY NAME1 @202
+  SAY NAME2 @202
+  SAY DESC @203
+COPY ~%mod_folder%/itm/00BARD08.itm~ ~override~
+  SAY NAME1 @204
+  SAY NAME2 @204
+  SAY DESC @205
+COPY ~%mod_folder%/itm/00BARDRS.itm~ ~override~
+  SAY NAME1 @206
+  SAY NAME2 @206
+  SAY DESC @207
+COPY ~%mod_folder%/itm/00BELTAD.itm~ ~override~
+  SAY NAME1 @208
+  SAY NAME2 @208
+  SAY DESC @209
+COPY ~%mod_folder%/itm/00BOLT08.itm~ ~override~
+  SAY NAME1 @210
+  SAY NAME2 @210
+  SAY DESC @211
+COPY ~%mod_folder%/itm/00CWSHD1.itm~ ~override~
+COPY ~%mod_folder%/itm/00BOLT93.itm~ ~override~
+  SAY NAME1 @212
+  SAY NAME2 @212
+  SAY DESC @213
+COPY ~%mod_folder%/itm/00BOOT02.itm~ ~override~
+  SAY NAME1 @214
+  SAY NAME2 @214
+  SAY DESC @215
+COPY ~%mod_folder%/itm/00BOWC92.itm~ ~override~
+  SAY NAME1 @216
+  SAY NAME2 @216
+  SAY DESC @217
+COPY ~%mod_folder%/itm/00BOWC94.itm~ ~override~
+  SAY NAME1 @218
+  SAY NAME2 @218
+  SAY DESC @219
+COPY ~%mod_folder%/itm/00BOWL95.itm~ ~override~
+  SAY NAME1 @220
+  SAY NAME2 @220
+  SAY DESC @221
+COPY ~%mod_folder%/itm/00BOWL96.itm~ ~override~
+  SAY NAME1 @222
+  SAY NAME2 @222
+  SAY DESC @223
+COPY ~%mod_folder%/itm/00BOWS86.itm~ ~override~
+  SAY NAME1 @224
+  SAY NAME2 @224
+  SAY DESC @225
+COPY ~%mod_folder%/itm/00BOWS92.itm~ ~override~
+  SAY NAME1 @224
+  SAY NAME2 @224
+  SAY DESC @225
+COPY ~%mod_folder%/itm/00BOWS87.itm~ ~override~
+  SAY NAME1 @226
+  SAY NAME2 @226
+  SAY DESC @227
+COPY ~%mod_folder%/itm/00BULL04.itm~ ~override~
+  SAY NAME1 @228
+  SAY NAME2 @228
+  SAY DESC @229
+COPY ~%mod_folder%/itm/00BULL87.itm~ ~override~
+  SAY NAME1 @230
+  SAY NAME2 @230
+  SAY DESC @231
+COPY ~%mod_folder%/itm/00BULL88.itm~ ~override~
+  SAY NAME1 @232
+  SAY NAME2 @232
+  SAY DESC @233
+COPY ~%mod_folder%/itm/00BULL92.itm~ ~override~
+  SAY NAME1 @234
+  SAY NAME2 @234
+  SAY DESC @235
+COPY ~%mod_folder%/itm/00BWLX96.itm~ ~override~
+  SAY NAME1 @236
+  SAY NAME2 @236
+  SAY DESC @237
+COPY ~%mod_folder%/itm/00CLCKNV.itm~ ~override~
+  SAY NAME1 @238
+  SAY NAME2 @238
+  SAY DESC @239
+COPY ~%mod_folder%/itm/00CLUB82.itm~ ~override~
+  SAY NAME1 @240
+  SAY NAME2 @240
+  SAY DESC @241
+COPY ~%mod_folder%/itm/00CLUB90.itm~ ~override~
+  SAY NAME1 @242
+  SAY NAME2 @242
+  SAY DESC @243
+COPY ~%mod_folder%/itm/00CLUB92.itm~ ~override~
+  SAY NAME1 @244
+  SAY NAME2 @244
+  SAY DESC @245
+COPY ~%mod_folder%/itm/00CLUB95.itm~ ~override~
+  SAY NAME1 @246
+  SAY NAME2 @246
+  SAY DESC @247
+COPY ~%mod_folder%/itm/00DAGG82.itm~ ~override~
+  SAY NAME1 @248
+  SAY NAME2 @248
+  SAY DESC @249
+COPY ~%mod_folder%/itm/00DAGG82.itm~ ~override~
+  SAY NAME1 @250
+  SAY NAME2 @250
+  SAY DESC @251
+COPY ~%mod_folder%/itm/00DAGG93.itm~ ~override~
+  SAY NAME1 @252
+  SAY NAME2 @252
+  SAY DESC @253
+COPY ~%mod_folder%/itm/00DAGG94.itm~ ~override~
+  SAY NAME1 @254
+  SAY NAME2 @254
+  SAY DESC @255
+COPY ~%mod_folder%/itm/00DAGG99.itm~ ~override~
+  SAY NAME1 @256
+  SAY NAME2 @256
+  SAY DESC @257
+COPY ~%mod_folder%/itm/00DAGGFW.itm~ ~override~
+  SAY NAME1 @258
+  SAY NAME2 @258
+  SAY DESC @259
+COPY ~%mod_folder%/itm/00DAGGPF.itm~ ~override~
+  SAY NAME1 @260
+  SAY NAME2 @260
+  SAY DESC @261
+COPY ~%mod_folder%/itm/00DART03.itm~ ~override~
+  SAY NAME1 @262
+  SAY NAME2 @262
+  SAY DESC @263
+COPY ~%mod_folder%/itm/00DART83.itm~ ~override~
+  SAY NAME1 @264
+  SAY NAME2 @264
+  SAY DESC @265
+COPY ~%mod_folder%/itm/00DART84.itm~ ~override~
+  SAY NAME1 @266
+  SAY NAME2 @266
+  SAY DESC @267
+COPY ~%mod_folder%/itm/00DART96.itm~ ~override~
+  SAY NAME1 @268
+  SAY NAME2 @268
+  SAY DESC @269
+COPY ~%mod_folder%/itm/00DARTAT.itm~ ~override~
+  SAY NAME1 @270
+  SAY NAME2 @270
+  SAY DESC @271
+COPY ~%mod_folder%/itm/00DARTDD.itm~ ~override~
+  SAY NAME1 @272
+  SAY NAME2 @272
+  SAY DESC @273
+COPY ~%mod_folder%/itm/00FLAL85.itm~ ~override~
+  SAY NAME1 @274
+  SAY NAME2 @274
+  SAY DESC @275
+COPY ~%mod_folder%/itm/00FLAL87.itm~ ~override~
+  SAY NAME1 @276
+  SAY NAME2 @276
+  SAY DESC @277
+COPY ~%mod_folder%/itm/00HALB93.itm~ ~override~
+  SAY NAME1 @278
+  SAY NAME2 @278
+  SAY DESC @279
+COPY ~%mod_folder%/itm/00FLAL93.itm~ ~override~
+  SAY NAME1 @869
+  SAY NAME2 @869
+  SAY DESC @870
+COPY ~%mod_folder%/itm/00HALB98.itm~ ~override~
+  SAY NAME1 @280
+  SAY NAME2 @280
+  SAY DESC @281
+COPY ~%mod_folder%/itm/00HALBHL.itm~ ~override~
+  SAY NAME1 @282
+  SAY NAME2 @282
+  SAY DESC @283
+COPY ~%mod_folder%/itm/00HAMM89.itm~ ~override~
+  SAY NAME1 @284
+  SAY NAME2 @284
+  SAY DESC @285
+COPY ~%mod_folder%/itm/00HAMM90.itm~ ~override~
+  SAY NAME1 @286
+  SAY NAME2 @286
+  SAY DESC @287
+COPY ~%mod_folder%/itm/00HAMM95.itm~ ~override~
+  SAY NAME1 @288
+  SAY NAME2 @288
+  SAY DESC @289
+COPY ~%mod_folder%/itm/00HAMM97.itm~ ~override~
+  SAY NAME1 @290
+  SAY NAME2 @290
+  SAY DESC @291
+COPY ~%mod_folder%/itm/00HELM01.itm~ ~override~
+  SAY NAME1 @292
+  SAY NAME2 @292
+  SAY DESC @293
+COPY ~%mod_folder%/itm/00HELM02.itm~ ~override~
+  SAY NAME1 @294
+  SAY NAME2 @294
+  SAY DESC @295
+COPY ~%mod_folder%/itm/00HELM03.itm~ ~override~
+  SAY NAME1 @294
+  SAY NAME2 @294
+  SAY DESC @295
+COPY ~%mod_folder%/itm/00HELM04.itm~ ~override~
+  SAY NAME1 @294
+  SAY NAME2 @294
+  SAY DESC @295
+COPY ~%mod_folder%/itm/00HELM05.itm~ ~override~
+  SAY NAME1 @294
+  SAY NAME2 @294
+  SAY DESC @295
+COPY ~%mod_folder%/itm/00HELM06.itm~ ~override~
+  SAY NAME1 @294
+  SAY NAME2 @294
+  SAY DESC @295
+COPY ~%mod_folder%/itm/00HELM07.itm~ ~override~
+  SAY NAME1 @294
+  SAY NAME2 @294
+  SAY DESC @295
+COPY ~%mod_folder%/itm/00HELMBH.itm~ ~override~
+  SAY NAME1 @296
+  SAY NAME2 @296
+  SAY DESC @297
+COPY ~%mod_folder%/itm/00HELMDS.itm~ ~override~
+  SAY NAME1 @298
+  SAY NAME2 @298
+  SAY DESC @299
+COPY ~%mod_folder%/itm/00HFAMBT.itm~ ~override~
+  SAY NAME1 @300
+  SAY NAME2 @300
+  SAY DESC @301
+COPY ~%mod_folder%/itm/00HFAXBA.itm~ ~override~
+  SAY NAME1 @302
+  SAY NAME2 @302
+  SAY DESC @303
+COPY ~%mod_folder%/itm/00HFAXBB.itm~ ~override~
+  SAY NAME1 @304
+  SAY NAME2 @304
+  SAY DESC @305
+COPY ~%mod_folder%/itm/00HFBD04.itm~ ~override~
+  SAY NAME1 @306
+  SAY NAME2 @306
+  SAY DESC @307
+COPY ~%mod_folder%/itm/00HFBD06.itm~ ~override~
+  SAY NAME1 @308
+  SAY NAME2 @308
+  SAY DESC @309
+COPY ~%mod_folder%/itm/00HFBTAD.itm~ ~override~
+  SAY NAME1 @310
+  SAY NAME2 @310
+  SAY DESC @311
+COPY ~%mod_folder%/itm/00HFCBHK.itm~ ~override~
+  SAY NAME1 @312
+  SAY NAME2 @312
+  SAY DESC @313
+COPY ~%mod_folder%/itm/00HFDGFW.itm~ ~override~
+  SAY NAME1 @314
+  SAY NAME2 @314
+  SAY DESC @315
+COPY ~%mod_folder%/itm/00HFDGPF.itm~ ~override~
+  SAY NAME1 @316
+  SAY NAME2 @316
+  SAY DESC @317
+COPY ~%mod_folder%/itm/00HFDTAT.itm~ ~override~
+  SAY NAME1 @318
+  SAY NAME2 @318
+  SAY DESC @319
+COPY ~%mod_folder%/itm/00HFDTDD.itm~ ~override~
+  SAY NAME1 @320
+  SAY NAME2 @320
+  SAY DESC @321
+COPY ~%mod_folder%/itm/00HFFLSR.itm~ ~override~
+  SAY NAME1 @322
+  SAY NAME2 @322
+  SAY DESC @323
+COPY ~%mod_folder%/itm/00HFHBHL.itm~ ~override~
+  SAY NAME1 @324
+  SAY NAME2 @324
+  SAY DESC @325
+COPY ~%mod_folder%/itm/00HFHMBH.itm~ ~override~
+  SAY NAME1 @326
+  SAY NAME2 @326
+  SAY DESC @327
+COPY ~%mod_folder%/itm/00HFHMDS.itm~ ~override~
+  SAY NAME1 @328
+  SAY NAME2 @328
+  SAY DESC @329
+COPY ~%mod_folder%/itm/00HFHMSM.itm~ ~override~
+  SAY NAME1 @330
+  SAY NAME2 @330
+  SAY DESC @331
+COPY ~%mod_folder%/itm/00HFHRSC.itm~ ~override~
+  SAY NAME1 @332
+  SAY NAME2 @332
+  SAY DESC @333
+COPY ~%mod_folder%/itm/00HFMEAR.itm~ ~override~
+  SAY NAME1 @334
+  SAY NAME2 @334
+  SAY DESC @335
+COPY ~%mod_folder%/itm/00HFMRMS.itm~ ~override~
+  SAY NAME1 @336
+  SAY NAME2 @336
+  SAY DESC @337
+COPY ~%mod_folder%/itm/00HFMRSS.itm~ ~override~
+  SAY NAME1 @338
+  SAY NAME2 @338
+  SAY DESC @339
+COPY ~%mod_folder%/itm/00HFRBRA.itm~ ~override~
+  SAY NAME1 @340
+  SAY NAME2 @340
+  SAY DESC @341
+COPY ~%mod_folder%/itm/00HFRGAR.itm~ ~override~
+  SAY NAME1 @342
+  SAY NAME2 @342
+  SAY DESC @343
+COPY ~%mod_folder%/itm/00HFRGCR.itm~ ~override~
+  SAY NAME1 @344
+  SAY NAME2 @344
+  SAY DESC @345
+COPY ~%mod_folder%/itm/00HFSBBS.itm~ ~override~
+  SAY NAME1 @346
+  SAY NAME2 @346
+  SAY DESC @347
+COPY ~%mod_folder%/itm/00HFSDBU.itm~ ~override~
+  SAY NAME1 @348
+  SAY NAME2 @348
+  SAY DESC @349
+COPY ~%mod_folder%/itm/00HFSLDB.itm~ ~override~
+  SAY NAME1 @350
+  SAY NAME2 @350
+  SAY DESC @351
+COPY ~%mod_folder%/itm/00HFSLDY.itm~ ~override~
+  SAY NAME1 @352
+  SAY NAME2 @352
+  SAY DESC @353
+COPY ~%mod_folder%/itm/00HFSSLS.itm~ ~override~
+  SAY NAME1 @354
+  SAY NAME2 @354
+  SAY DESC @355
+COPY ~%mod_folder%/itm/00HFSSSK.itm~ ~override~
+  SAY NAME1 @356
+  SAY NAME2 @356
+  SAY DESC @357
+COPY ~%mod_folder%/itm/00HFSSTD.itm~ ~override~
+  SAY NAME1 @358
+  SAY NAME2 @358
+  SAY DESC @359
+COPY ~%mod_folder%/itm/00LEAT08.itm~ ~override~
+  SAY NAME1 @360
+  SAY NAME2 @360
+  SAY DESC @361
+COPY ~%mod_folder%/itm/00LEAT86.itm~ ~override~
+  SAY NAME1 @362
+  SAY NAME2 @362
+  SAY DESC @363
+COPY ~%mod_folder%/itm/00LEAT92.itm~ ~override~
+  SAY NAME1 @364
+  SAY NAME2 @364
+  SAY DESC @365
+COPY ~%mod_folder%/itm/00LEAT97.itm~ ~override~
+  SAY NAME1 @366
+  SAY NAME2 @366
+  SAY DESC @367
+COPY ~%mod_folder%/itm/00MACE92.itm~ ~override~
+  SAY NAME1 @368
+  SAY NAME2 @368
+  SAY DESC @369
+COPY ~%mod_folder%/itm/00MACE95.itm~ ~override~
+  SAY NAME1 @370
+  SAY NAME2 @370
+  SAY DESC @371
+COPY ~%mod_folder%/itm/00MSTR85.itm~ ~override~
+  SAY NAME1 @372
+  SAY NAME2 @372
+  SAY DESC @373
+COPY ~%mod_folder%/itm/00MSTR91.itm~ ~override~
+  SAY NAME1 @374
+  SAY NAME2 @374
+  SAY DESC @375
+COPY ~%mod_folder%/itm/00MSTRMS.itm~ ~override~
+  SAY NAME1 @376
+  SAY NAME2 @376
+  SAY DESC @377
+COPY ~%mod_folder%/itm/00MSTRSS.itm~ ~override~
+  SAY NAME1 @378
+  SAY NAME2 @378
+  SAY DESC @379
+COPY ~%mod_folder%/itm/00POTN45.itm~ ~override~
+  SAY NAME1 @380
+  SAY NAME2 @380
+  SAY DESC @381
+COPY ~%mod_folder%/itm/00POTN50.itm~ ~override~
+  SAY NAME1 @382
+  SAY NAME2 @382
+  SAY DESC @383
+COPY ~%mod_folder%/itm/00RING16.itm~ ~override~
+  SAY NAME1 @396
+  SAY NAME2 @396
+  SAY DESC @397
+COPY ~%mod_folder%/itm/00RING23.itm~ ~override~
+  SAY NAME1 @398
+  SAY NAME2 @398
+  SAY DESC @399
+COPY ~%mod_folder%/itm/00RING82.itm~ ~override~
+  SAY NAME1 @400
+  SAY NAME2 @400
+  SAY DESC @401
+COPY ~%mod_folder%/itm/00RING85.itm~ ~override~
+  SAY NAME1 @402
+  SAY NAME2 @402
+  SAY DESC @403
+COPY ~%mod_folder%/itm/00RING89.itm~ ~override~
+  SAY NAME1 @404
+  SAY NAME2 @404
+  SAY DESC @405
+COPY ~%mod_folder%/itm/00RING93.itm~ ~override~
+  SAY NAME1 @406
+  SAY NAME2 @406
+  SAY DESC @407
+COPY ~%mod_folder%/itm/00RING97.itm~ ~override~
+  SAY NAME1 @408
+  SAY NAME2 @408
+  SAY DESC @409
+COPY ~%mod_folder%/itm/00RINGCR.itm~ ~override~
+  SAY NAME1 @410
+  SAY NAME2 @410
+  SAY DESC @411
+COPY ~%mod_folder%/itm/00ROBE99.itm~ ~override~
+  SAY NAME1 @412
+  SAY NAME2 @412
+  SAY DESC @413
+COPY ~%mod_folder%/itm/00ROBEMR.itm~ ~override~
+  SAY NAME1 @414
+  SAY NAME2 @414
+  SAY DESC @415
+COPY ~%mod_folder%/itm/00HFRBMR.itm~ ~override~
+  SAY NAME1 @416
+  SAY NAME2 @416
+  SAY DESC @417
+COPY ~%mod_folder%/itm/00SCRL01.itm~ ~override~
+  SAY NAME1 @418
+  SAY NAME2 @418
+  SAY DESC @419
+COPY ~%mod_folder%/itm/00SCRL02.itm~ ~override~
+  SAY NAME1 @420
+  SAY NAME2 @420
+  SAY DESC @421
+COPY ~%mod_folder%/itm/00SCRL03.itm~ ~override~
+  SAY NAME1 @422
+  SAY NAME2 @422
+  SAY DESC @423
+COPY ~%mod_folder%/itm/00SCRL04.itm~ ~override~
+  SAY NAME1 @424
+  SAY NAME2 @424
+  SAY DESC @425
+COPY ~%mod_folder%/itm/00SHLD94.itm~ ~override~
+  SAY NAME1 @426
+  SAY NAME2 @426
+  SAY DESC @427
+COPY ~%mod_folder%/itm/00SHLDBU.itm~ ~override~
+  SAY NAME1 @428
+  SAY NAME2 @428
+  SAY DESC @429
+COPY ~%mod_folder%/itm/00SLNG88.itm~ ~override~
+  SAY NAME1 @430
+  SAY NAME2 @430
+  SAY DESC @431
+COPY ~%mod_folder%/itm/00SLNG89.itm~ ~override~
+  SAY NAME1 @432
+  SAY NAME2 @432
+  SAY DESC @433
+COPY ~%mod_folder%/itm/00SLNG94.itm~ ~override~
+  SAY NAME1 @434
+  SAY NAME2 @434
+  SAY DESC @435
+COPY ~%mod_folder%/itm/00SPER89.itm~ ~override~
+  SAY NAME1 @436
+  SAY NAME2 @436
+  SAY DESC @437
+COPY ~%mod_folder%/itm/00STAF80.itm~ ~override~
+  SAY NAME1 @438
+  SAY NAME2 @438
+  SAY DESC @439
+COPY ~%mod_folder%/itm/00STAF84.itm~ ~override~
+  SAY NAME1 @440
+  SAY NAME2 @440
+  SAY DESC @441
+COPY ~%mod_folder%/itm/00STAF85.itm~ ~override~
+  SAY NAME1 @442
+  SAY NAME2 @442
+  SAY DESC @443
+COPY ~%mod_folder%/itm/00STAF90.itm~ ~override~
+  SAY NAME1 @444
+  SAY NAME2 @444
+  SAY DESC @445
+COPY ~%mod_folder%/itm/00STAF93.itm~ ~override~
+  SAY NAME1 @446
+  SAY NAME2 @446
+  SAY DESC @447
+COPY ~%mod_folder%/itm/00SWDB94.itm~ ~override~
+  SAY NAME1 @448
+  SAY NAME2 @448
+  SAY DESC @449
+COPY ~%mod_folder%/itm/00SWDB97.itm~ ~override~
+  SAY NAME1 @450
+  SAY NAME2 @450
+  SAY DESC @451
+COPY ~%mod_folder%/itm/00SWDBRC.itm~ ~override~
+  SAY NAME1 @452
+  SAY NAME2 @452
+  SAY DESC @453
+COPY ~%mod_folder%/itm/00SWDC92.itm~ ~override~
+  SAY NAME1 @454
+  SAY NAME2 @454
+  SAY DESC @455
+COPY ~%mod_folder%/itm/00SWDC93.itm~ ~override~
+  SAY NAME1 @456
+  SAY NAME2 @456
+  SAY DESC @457
+COPY ~%mod_folder%/itm/00SWDL80.itm~ ~override~
+  SAY NAME1 @458
+  SAY NAME2 @458
+  SAY DESC @459
+COPY ~%mod_folder%/itm/00SWDL85.itm~ ~override~
+  SAY NAME1 @460
+  SAY NAME2 @460
+  SAY DESC @461
+COPY ~%mod_folder%/itm/00SWDL89.itm~ ~override~
+  SAY NAME1 @462
+  SAY NAME2 @462
+  SAY DESC @463
+COPY ~%mod_folder%/itm/00SWDL91.itm~ ~override~
+  SAY NAME1 @464
+  SAY NAME2 @464
+  SAY DESC @465
+COPY ~%mod_folder%/itm/00SWDL92.itm~ ~override~
+  SAY NAME1 @466
+  SAY NAME2 @466
+  SAY DESC @467
+COPY ~%mod_folder%/itm/00SWDL98.itm~ ~override~
+  SAY NAME1 @468
+  SAY NAME2 @468
+  SAY DESC @469
+COPY ~%mod_folder%/itm/00SWDLDB.itm~ ~override~
+  SAY NAME1 @470
+  SAY NAME2 @470
+  SAY DESC @471
+COPY ~%mod_folder%/itm/00SWDLDY.itm~ ~override~
+  SAY NAME1 @472
+  SAY NAME2 @472
+  SAY DESC @473
+COPY ~%mod_folder%/itm/00SWDS87.itm~ ~override~
+  SAY NAME1 @474
+  SAY NAME2 @474
+  SAY DESC @475
+COPY ~%mod_folder%/itm/00SWDS94.itm~ ~override~
+  SAY NAME1 @476
+  SAY NAME2 @476
+  SAY DESC @477
+COPY ~%mod_folder%/itm/00SWDSLS.itm~ ~override~
+  SAY NAME1 @478
+  SAY NAME2 @478
+  SAY DESC @479
+COPY ~%mod_folder%/itm/00SWDSSK.itm~ ~override~
+  SAY NAME1 @480
+  SAY NAME2 @480
+  SAY DESC @481
+COPY ~%mod_folder%/itm/00SWDSTD.itm~ ~override~
+  SAY NAME1 @482
+  SAY NAME2 @482
+  SAY DESC @483
+COPY ~%mod_folder%/itm/00SWDT93.itm~ ~override~
+  SAY NAME1 @484
+  SAY NAME2 @484
+  SAY DESC @485
+COPY ~%mod_folder%/itm/00WAND01.itm~ ~override~
+  SAY NAME1 @486
+  SAY NAME2 @486
+  SAY DESC @487
+COPY ~%mod_folder%/itm/00WAND02.itm~ ~override~
+  SAY NAME1 @488
+  SAY NAME2 @488
+  SAY DESC @489
+COPY ~%mod_folder%/itm/00WAND03.itm~ ~override~
+  SAY NAME1 @490
+  SAY NAME2 @490
+  SAY DESC @491
+
+// spells to work with edited potions; not all may be used
+COPY ~%mod_folder%/spl/EFFLUC1.spl~ ~override~
+COPY ~%mod_folder%/spl/EFFNV1.spl~ ~override~
+COPY ~%mod_folder%/spl/EFFPSN2.spl~ ~override~
+COPY ~%mod_folder%/spl/EFFSTR2.spl~ ~override~
+COPY ~%mod_folder%/spl/EFFTHRM1.spl~ ~override~
+COPY ~%mod_folder%/spl/EFFTHRM2.spl~ ~override~
+
+COPY ~%mod_folder%/itm/52BOOKOG.itm~ ~override~
+  SAY NAME1 @575
+  SAY NAME2 @575
+  SAY DESC @576
+COPY ~%mod_folder%/itm/52BOOKDV.itm~ ~override~
+COPY ~%mod_folder%/itm/52BOOKGE.itm~ ~override~
+COPY ~%mod_folder%/itm/52BOOKSU.itm~ ~override~
+COPY ~%mod_folder%/itm/52BOOKSV.itm~ ~override~
+/*
+COPY ~%mod_folder%/itm/52BOOKAD.itm~ ~override~
+  SAY NAME1 @577
+  SAY NAME2 @577
+  SAY DESC @578
+COPY ~%mod_folder%/itm/52HFBKAD.itm~ ~override~
+  SAY NAME1 @579
+  SAY NAME2 @579
+  SAY DESC @580
+*/
+COPY ~%mod_folder%/itm/52HFBKOG.itm~ ~override~
+  SAY NAME1 @581
+  SAY NAME2 @581
+  SAY DESC @582
+COPY ~%mod_folder%/itm/52HFBKSV.itm~ ~override~
+COPY ~%mod_folder%/itm/52HFBKSU.itm~ ~override~
+COPY ~%mod_folder%/itm/52HFBKGE.itm~ ~override~
+COPY ~%mod_folder%/itm/52HFBKDV.itm~ ~override~
+COPY ~%mod_folder%/itm/11SPERNP.itm~ ~override~
+COPY ~%mod_folder%/itm/11HAMMCR.itm~ ~override~
+COPY ~%mod_folder%/itm/11BELTSB.itm~ ~override~
+COPY ~%mod_folder%/itm/11BARDWD.itm~ ~override~
+COPY ~%mod_folder%/itm/11AX1HKS.itm~ ~override~
+COPY ~%mod_folder%/itm/11AMULCM.itm~ ~override~
+COPY ~%mod_folder%/itm/11HFBKHW.itm~ ~override~
+  SAY NAME1 @583
+  SAY NAME2 @583
+  SAY DESC @584
+COPY ~%mod_folder%/itm/11HFBKLD.itm~ ~override~
+  SAY NAME1 @585
+  SAY NAME2 @585
+  SAY DESC @586
+COPY ~%mod_folder%/itm/11HFBKLE.itm~ ~override~
+  SAY NAME1 @587
+  SAY NAME2 @587
+  SAY DESC @588
+COPY ~%mod_folder%/itm/11SWDLHE.itm~ ~override~
+  SAY NAME1 @593
+  SAY NAME2 @593
+  SAY DESC @594
+/*
+COPY ~%mod_folder%/itm/11SWDTWS.itm~ ~override~
+  SAY NAME1 @595
+  SAY NAME2 @595
+  SAY DESC @596
+*/
+COPY ~%mod_folder%/itm/50HIDE06.itm~ ~override~
+COPY ~%mod_folder%/itm/50BOOT14.itm~ ~override~
+COPY ~%mod_folder%/itm/50CLCK17.itm~ ~override~
+COPY ~%mod_folder%/itm/41AX1HAI.itm~ ~override~
+  SAY NAME1 @597
+  SAY NAME2 @597
+  SAY DESC @598
+COPY ~%mod_folder%/itm/50LEATMS.itm~ ~override~
+  SAY NAME1 @599
+  SAY NAME2 @599
+  SAY DESC @600
+COPY ~%mod_folder%/itm/50POTN56.itm~ ~override~
+  SAY NAME1 @601
+  SAY NAME2 @601
+  SAY DESC @602
+COPY ~%mod_folder%/itm/51HELMWM.itm~ ~override~
+  SAY NAME1 @603
+  SAY NAME2 @603
+  SAY DESC @604
+COPY ~%mod_folder%/itm/51HFHMWM.itm~ ~override~
+  SAY NAME1 @605
+  SAY NAME2 @605
+  SAY DESC @606
+COPY ~%mod_folder%/itm/51HFPT10.itm~ ~override~
+  SAY NAME1 @607
+  SAY NAME2 @607
+  SAY DESC @608
+COPY ~%mod_folder%/itm/51PLAT10.itm~ ~override~
+  SAY NAME1 @609
+  SAY NAME2 @609
+  SAY DESC @610
+COPY ~%mod_folder%/itm/52HFDGSH.itm~ ~override~
+  SAY NAME1 @611
+  SAY NAME2 @611
+  SAY DESC @612
+COPY ~%mod_folder%/itm/53AMULHD.itm~ ~override~
+COPY ~%mod_folder%/spl/EFFCOLD1.spl~ ~override~
+COPY ~%mod_folder%/itm/60CHANGR.itm~ ~override~
+  SAY NAME1 @613
+  SAY NAME2 @613
+  SAY DESC @614
+COPY ~%mod_folder%/itm/60CHANSA.itm~ ~override~
+COPY ~%mod_folder%/itm/60HFCNGR.itm~ ~override~
+  SAY NAME1 @613
+  SAY NAME2 @613
+  SAY DESC @614
+COPY ~%mod_folder%/spl/EFFCOLD2.spl~ ~override~
+COPY ~%mod_folder%/itm/61HFDGWS.itm~ ~override~
+  SAY NAME1 @617
+  SAY NAME2 @617
+  SAY DESC @618
+COPY ~%mod_folder%/itm/61DAGGWS.itm~ ~override~
+  SAY NAME1 @619
+  SAY NAME2 @619
+  SAY DESC @620
+COPY ~%mod_folder%/itm/00POTN06.itm~ ~override~
+  SAY NAME1 @647
+  SAY NAME2 @647
+  SAY DESC @648
+COPY ~%mod_folder%/itm/00POTN20.itm~ ~override~
+  SAY NAME1 @649
+  SAY NAME2 @649
+  SAY DESC @650
+COPY ~%mod_folder%/itm/00POTN81.itm~ ~override~
+  SAY NAME1 @651
+  SAY NAME2 @651
+  SAY DESC @652
+COPY ~%mod_folder%/itm/00RING25.itm~ ~override~
+  SAY NAME1 @702
+  SAY NAME2 @702
+  SAY DESC @703
+COPY ~%mod_folder%/itm/00RING15.itm~ ~override~
+  SAY NAME1 @704
+  SAY NAME2 @704
+  SAY DESC @705
+COPY ~%mod_folder%/itm/00RING88.itm~ ~override~
+  SAY NAME1 @706
+  SAY NAME2 @706
+  SAY DESC @707
+COPY ~%mod_folder%/itm/00RING90.itm~ ~override~
+  SAY NAME1 @708
+  SAY NAME2 @708
+  SAY DESC @709
+COPY ~%mod_folder%/itm/00RING94.itm~ ~override~
+  SAY NAME1 @710
+  SAY NAME2 @710
+  SAY DESC @711
+COPY ~%mod_folder%/itm/00RING95.itm~ ~override~
+  SAY NAME1 @712
+  SAY NAME2 @712
+  SAY DESC @713
+COPY ~%mod_folder%/itm/00AROW10.itm~ ~override~
+  SAY NAME1 @871
+  SAY NAME2 @871
+  SAY DESC @872
+
+// failed attempts to use opcode 402 on on-hit effects for weapons
+/*
+COPY ~%mod_folder%/itm/50HFSLWB.itm~ ~override~
+  SAY NAME1 @873
+  SAY NAME2 @873
+  SAY DESC @874
+COPY ~%mod_folder%/itm/50SWDLWB.itm~ ~override~
+  SAY NAME1 @875
+  SAY NAME2 @875
+  SAY DESC @876
+COPY ~%mod_folder%/itm/00AX2H85.itm~ ~override~
+  SAY NAME1 @877
+  SAY NAME2 @877
+  SAY DESC @878
+COPY ~%mod_folder%/itm/00DARTDD.itm~ ~override~
+  SAY NAME1 @879
+  SAY NAME2 @879
+  SAY DESC @880
+COPY ~%mod_folder%/itm/00HFDTDD.itm~ ~override~
+  SAY NAME1 @881
+  SAY NAME2 @881
+  SAY DESC @882
+COPY ~%mod_folder%/itm/00HFSLDY.itm~ ~override~
+  SAY NAME1 @883
+  SAY NAME2 @883
+  SAY DESC @884
+COPY ~%mod_folder%/itm/00SWDLDY.itm~ ~override~
+  SAY NAME1 @885
+  SAY NAME2 @885
+  SAY DESC @886
+COPY ~%mod_folder%/itm/51HAMMDA.itm~ ~override~
+  SAY NAME1 @887
+  SAY NAME2 @887
+  SAY DESC @888
+COPY ~%mod_folder%/itm/51HAMMDA.itm~ ~override~
+  SAY NAME1 @889
+  SAY NAME2 @889
+  SAY DESC @890
+COPY ~%mod_folder%/itm/00DART96.itm~ ~override~
+  SAY NAME1 @891
+  SAY NAME2 @891
+  SAY DESC @892
+COPY ~%mod_folder%/itm/00HFMRMS.itm~ ~override~
+  SAY NAME1 @893
+  SAY NAME2 @893
+  SAY DESC @894
+
+COPY ~%mod_folder%/spl/USSOPOI1.spl~ ~override~
+COPY ~%mod_folder%/spl/USSOPOI2.spl~ ~override~
+COPY ~%mod_folder%/spl/USSOPOI3.spl~ ~override~
+COPY ~%mod_folder%/spl/USSOBAN1.spl~ ~override~
+COPY ~%mod_folder%/spl/USSOBLI1.spl~ ~override~
+COPY ~%mod_folder%/spl/USSOCHA1.spl~ ~override~
+COPY ~%mod_folder%/spl/USSOCON1.spl~ ~override~
+COPY ~%mod_folder%/spl/USSOCON2.spl~ ~override~
+COPY ~%mod_folder%/spl/USSODEA1.spl~ ~override~
+//COPY ~%mod_folder%/spl/USSDISO1.spl~ ~override~ //doesn't yet exist
+COPY ~%mod_folder%/spl/USSODIS2.spl~ ~override~
+COPY ~%mod_folder%/spl/USSOENE1.spl~ ~override~
+COPY ~%mod_folder%/spl/USSOENT1.spl~ ~override~
+COPY ~%mod_folder%/spl/USSOFEA1.spl~ ~override~
+COPY ~%mod_folder%/spl/USSOFEE1.spl~ ~override~
+COPY ~%mod_folder%/spl/USSOHOP1.spl~ ~override~
+COPY ~%mod_folder%/spl/USSOPET1.spl~ ~override~
+COPY ~%mod_folder%/spl/USSORES1.spl~ ~override~
+COPY ~%mod_folder%/spl/USSOSIL1.spl~ ~override~
+COPY ~%mod_folder%/spl/USSOSLA1.spl~ ~override~
+COPY ~%mod_folder%/spl/USSOSLO1.spl~ ~override~
+COPY ~%mod_folder%/spl/USSOSTU1.spl~ ~override~
+COPY ~%mod_folder%/spl/USSOVAM1.spl~ ~override~
+COPY ~%mod_folder%/spl/USSOWEB1.spl~ ~override~
+
+COPY ~%mod_folder%/spl/USSOPOIA.spl~ ~override~
+COPY ~%mod_folder%/spl/USSOPOIB.spl~ ~override~
+COPY ~%mod_folder%/spl/USSOPOIC.spl~ ~override~
+COPY ~%mod_folder%/spl/USSOSTUN.spl~ ~override~
+COPY ~%mod_folder%/spl/USSOBANE.spl~ ~override~
+COPY ~%mod_folder%/spl/USSOBLIN.spl~ ~override~
+COPY ~%mod_folder%/spl/USSOCHAR.spl~ ~override~
+COPY ~%mod_folder%/spl/USSOCONF.spl~ ~override~
+COPY ~%mod_folder%/spl/USSOCONT.spl~ ~override~
+COPY ~%mod_folder%/spl/USSODEAF.spl~ ~override~
+COPY ~%mod_folder%/spl/USSODISP.spl~ ~override~
+COPY ~%mod_folder%/spl/USSODISR.spl~ ~override~
+COPY ~%mod_folder%/spl/USSOENTA.spl~ ~override~
+COPY ~%mod_folder%/spl/USSOFEAR.spl~ ~override~
+COPY ~%mod_folder%/spl/USSOFEEB.spl~ ~override~
+COPY ~%mod_folder%/spl/USSOHOPE.spl~ ~override~
+COPY ~%mod_folder%/spl/USSOPETR.spl~ ~override~
+COPY ~%mod_folder%/spl/USSORESI.spl~ ~override~
+COPY ~%mod_folder%/spl/USSOSILE.spl~ ~override~
+COPY ~%mod_folder%/spl/USSOSLAY.spl~ ~override~
+COPY ~%mod_folder%/spl/USSOSLOW.spl~ ~override~
+COPY ~%mod_folder%/spl/USSOVAMP.spl~ ~override~
+COPY ~%mod_folder%/spl/USSOWEB.spl~ ~override~
+*/
+
+
+BEGIN "Creature Rebalancing" //
+
+// Mind Flayer changes
+
+COPY ~%mod_folder%/itm/00MFLYR.itm~ ~override~
+COPY ~%mod_folder%/spl/SPIN196.spl~ ~override~
+COPY ~%mod_folder%/spl/SPIN219.spl~ ~override~
+
+// Chahopek the Guardian changes
+COPY ~%mod_folder%/itm/00CWSHE3.itm~ ~override~
+COPY ~%mod_folder%/spl/EFFDRAG1.spl~ ~override~
+COPY ~%mod_folder%/spl/SPIN225.spl~ ~override~
+
+COPY ~%mod_folder%/itm/USSTCG01.itm~ ~override~
+COPY ~%mod_folder%/spl/USSTCG02.spl~ ~override~
+COPY ~%mod_folder%/spl/USSTCG03.spl~ ~override~
+
+COPY_EXISTING ~60GUARDI.cre~ ~override~
+WRITE_LONG 0x24 700
+WRITE_LONG 0x26 700
+WRITE_SHORT 0x5C 0
+WRITE_SHORT 0x5D 0
+WRITE_SHORT 0x5E 0
+WRITE_SHORT 0x5F 0
+WRITE_SHORT 0x67 1
+WRITE_ASCII 0x8f6 ~USSTCG01~ #8	
+
+COPY ~%mod_folder%/spl/SPIN159.spl~ ~override~
+
+// patches all spellcasters to have two pips in all Spell Focus feats. Effectively increases all enemy spells' save DCs by 2, except for casters who already had Spell Focus.
+
+COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
+	READ_BYTE "0x8d" "clericlevel"
+	  PATCH_IF ~%clericlevel%~ != ~0~ BEGIN
+	  WRITE_BYTE 0x1e8 2
+	  WRITE_BYTE 0x1e9 2
+	  WRITE_BYTE 0x1ea 2
+	  WRITE_BYTE 0x1eb 2
+END
+BUT_ONLY
+COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
+	READ_BYTE "0x8e" "druidlevel"
+	  PATCH_IF ~%druidlevel%~ != ~0~ BEGIN
+	  WRITE_BYTE 0x1e8 2
+	  WRITE_BYTE 0x1e9 2
+	  WRITE_BYTE 0x1ea 2
+	  WRITE_BYTE 0x1eb 2
+END
+BUT_ONLY
+COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
+	READ_BYTE "0x94" "sorcererlevel"
+	  PATCH_IF ~%sorcererlevel%~ != ~0~ BEGIN
+	  WRITE_BYTE 0x1e8 2
+	  WRITE_BYTE 0x1e9 2
+	  WRITE_BYTE 0x1ea 2
+	  WRITE_BYTE 0x1eb 2
+END
+BUT_ONLY
+COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
+	READ_BYTE "0x95" "wizardlevel"
+	  PATCH_IF ~%wizardlevel%~ != ~0~ BEGIN
+	  WRITE_BYTE 0x1e8 2
+	  WRITE_BYTE 0x1e9 2
+	  WRITE_BYTE 0x1ea 2
+	  WRITE_BYTE 0x1eb 2
+END
+BUT_ONLY
+
+
+BEGIN ~Completely unnerfed challenge ratings: enemy CR is always equal to their level~
+
+SUBCOMPONENT ~Better XP Progression (enemies get appropriate challenge ratings for their level)~
+
+COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
+
+READ_BYTE "0x8A" "totallevel"
+
+WRITE_SHORT 0x25A 1
+
+IF_EVAL ("%totallevel%" = "0x1")
+
+COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
+
+READ_BYTE "0x8A" "totallevel"
+
+WRITE_SHORT 0x25A 2
+
+IF_EVAL ("%totallevel%" = "0x2")
+
+COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
+
+READ_BYTE "0x8A" "totallevel"
+
+WRITE_SHORT 0x25A 3
+
+IF_EVAL ("%totallevel%" = "0x3")
+
+COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
+
+READ_BYTE "0x8A" "totallevel"
+
+WRITE_SHORT 0x25A 4
+
+IF_EVAL ("%totallevel%" = "0x4")
+
+COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
+
+READ_BYTE "0x8A" "totallevel"
+
+WRITE_SHORT 0x25A 5
+
+IF_EVAL ("%totallevel%" = "0x5")
+
+COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
+
+READ_BYTE "0x8A" "totallevel"
+
+WRITE_SHORT 0x25A 6
+
+IF_EVAL ("%totallevel%" = "0x6")
+
+COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
+
+READ_BYTE "0x8A" "totallevel"
+
+WRITE_SHORT 0x25A 7
+
+IF_EVAL ("%totallevel%" = "0x7")
+
+COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
+
+READ_BYTE "0x8A" "totallevel"
+
+WRITE_SHORT 0x25A 8
+
+IF_EVAL ("%totallevel%" = "0x8")
+
+COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
+
+READ_BYTE "0x8A" "totallevel"
+
+WRITE_SHORT 0x25A 9
+
+IF_EVAL ("%totallevel%" = "0x9")
+
+COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
+
+READ_BYTE "0x8A" "totallevel"
+
+WRITE_SHORT 0x25A 10
+
+IF_EVAL ("%totallevel%" = "0xA")
+
+COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
+
+READ_BYTE "0x8A" "totallevel"
+
+WRITE_SHORT 0x25A 11
+
+IF_EVAL ("%totallevel%" = "0xB")
+
+COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
+
+READ_BYTE "0x8A" "totallevel"
+
+WRITE_SHORT 0x25A 12
+
+IF_EVAL ("%totallevel%" = "0xC")
+
+COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
+
+READ_BYTE "0x8A" "totallevel"
+
+WRITE_SHORT 0x25A 13
+
+IF_EVAL ("%totallevel%" = "0xD")
+
+COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
+
+READ_BYTE "0x8A" "totallevel"
+
+WRITE_SHORT 0x25A 14
+
+IF_EVAL ("%totallevel%" = "0xE")
+
+COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
+
+READ_BYTE "0x8A" "totallevel"
+
+WRITE_SHORT 0x25A 15
+
+IF_EVAL ("%totallevel%" = "0xF")
+
+COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
+
+READ_BYTE "0x8A" "totallevel"
+
+WRITE_SHORT 0x25A 16
+
+IF_EVAL ("%totallevel%" = "0x10")
+
+COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
+
+READ_BYTE "0x8A" "totallevel"
+
+WRITE_SHORT 0x25A 17
+
+IF_EVAL ("%totallevel%" = "0x11")
+
+COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
+
+READ_BYTE "0x8A" "totallevel"
+
+WRITE_SHORT 0x25A 18
+
+IF_EVAL ("%totallevel%" = "0x12")
+
+COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
+
+READ_BYTE "0x8A" "totallevel"
+
+WRITE_SHORT 0x25A 19
+
+IF_EVAL ("%totallevel%" = "0x13")
+
+COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
+
+READ_BYTE "0x8A" "totallevel"
+
+WRITE_SHORT 0x25A 20
+
+IF_EVAL ("%totallevel%" = "0x14")
+
+COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
+
+READ_BYTE "0x8A" "totallevel"
+
+WRITE_SHORT 0x25A 21
+
+IF_EVAL ("%totallevel%" = "0x15")
+
+COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
+
+READ_BYTE "0x8A" "totallevel"
+
+WRITE_SHORT 0x25A 22
+
+IF_EVAL ("%totallevel%" = "0x16")
+
+COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
+
+READ_BYTE "0x8A" "totallevel"
+
+WRITE_SHORT 0x25A 23
+
+IF_EVAL ("%totallevel%" = "0x17")
+
+COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
+
+READ_BYTE "0x8A" "totallevel"
+
+WRITE_SHORT 0x25A 24
+
+IF_EVAL ("%totallevel%" = "0x18")
+
+COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
+
+READ_BYTE "0x8A" "totallevel"
+
+WRITE_SHORT 0x25A 25
+
+IF_EVAL ("%totallevel%" = "0x19")
+
+COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
+
+READ_BYTE "0x8A" "totallevel"
+
+WRITE_SHORT 0x25A 26
+
+IF_EVAL ("%totallevel%" = "0x1A")
+
+COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
+
+READ_BYTE "0x8A" "totallevel"
+
+WRITE_SHORT 0x25A 27
+
+IF_EVAL ("%totallevel%" = "0x1B")
+
+COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
+
+READ_BYTE "0x8A" "totallevel"
+
+WRITE_SHORT 0x25A 28
+
+IF_EVAL ("%totallevel%" = "0x1C")
+
+COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
+
+READ_BYTE "0x8A" "totallevel"
+
+WRITE_SHORT 0x25A 29
+
+IF_EVAL ("%totallevel%" = "0x1d")
+
+COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
+
+READ_BYTE "0x8A" "totallevel"
+
+WRITE_SHORT 0x25A 30
+
+IF_EVAL ("%totallevel%" = "0x1E")
+
+///////////////////////////////////////////////////
+
+BEGIN ~Partially unnerfed challenge ratings: enemy CR is equal to or slightly less than their level (recommended)~
+SUBCOMPONENT ~Better XP Progression (enemies get appropriate challenge ratings for their level)~
+
+COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
+
+READ_BYTE "0x8A" "totallevel"
+
+WRITE_SHORT 0x25A 1
+
+IF_EVAL ("%totallevel%" = "0x1")
+
+COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
+
+READ_BYTE "0x8A" "totallevel"
+
+WRITE_SHORT 0x25A 2
+
+IF_EVAL ("%totallevel%" = "0x2")
+
+COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
+
+READ_BYTE "0x8A" "totallevel"
+
+WRITE_SHORT 0x25A 3
+
+IF_EVAL ("%totallevel%" = "0x3")
+
+COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
+
+READ_BYTE "0x8A" "totallevel"
+
+WRITE_SHORT 0x25A 4
+
+IF_EVAL ("%totallevel%" = "0x4")
+
+COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
+
+READ_BYTE "0x8A" "totallevel"
+
+WRITE_SHORT 0x25A 5
+
+IF_EVAL ("%totallevel%" = "0x5")
+
+COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
+
+READ_BYTE "0x8A" "totallevel"
+
+WRITE_SHORT 0x25A 6
+
+IF_EVAL ("%totallevel%" = "0x6")
+
+COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
+
+READ_BYTE "0x8A" "totallevel"
+
+WRITE_SHORT 0x25A 7
+
+IF_EVAL ("%totallevel%" = "0x7")
+
+COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
+
+READ_BYTE "0x8A" "totallevel"
+
+WRITE_SHORT 0x25A 8
+
+IF_EVAL ("%totallevel%" = "0x8")
+
+COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
+
+READ_BYTE "0x8A" "totallevel"
+
+WRITE_SHORT 0x25A 9
+
+IF_EVAL ("%totallevel%" = "0x9")
+
+COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
+
+READ_BYTE "0x8A" "totallevel"
+
+WRITE_SHORT 0x25A 9
+
+IF_EVAL ("%totallevel%" = "0xA")
+
+COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
+
+READ_BYTE "0x8A" "totallevel"
+
+WRITE_SHORT 0x25A 10
+
+IF_EVAL ("%totallevel%" = "0xB")
+
+COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
+
+READ_BYTE "0x8A" "totallevel"
+
+WRITE_SHORT 0x25A 10
+
+IF_EVAL ("%totallevel%" = "0xC")
+
+COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
+
+READ_BYTE "0x8A" "totallevel"
+
+WRITE_SHORT 0x25A 11
+
+IF_EVAL ("%totallevel%" = "0xD")
+
+COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
+
+READ_BYTE "0x8A" "totallevel"
+
+WRITE_SHORT 0x25A 12
+
+IF_EVAL ("%totallevel%" = "0xE")
+
+COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
+
+READ_BYTE "0x8A" "totallevel"
+
+WRITE_SHORT 0x25A 12
+
+IF_EVAL ("%totallevel%" = "0xF")
+
+COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
+
+READ_BYTE "0x8A" "totallevel"
+
+WRITE_SHORT 0x25A 13
+
+IF_EVAL ("%totallevel%" = "0x10")
+
+COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
+
+READ_BYTE "0x8A" "totallevel"
+
+WRITE_SHORT 0x25A 14
+
+IF_EVAL ("%totallevel%" = "0x11")
+
+COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
+
+READ_BYTE "0x8A" "totallevel"
+
+WRITE_SHORT 0x25A 14
+
+IF_EVAL ("%totallevel%" = "0x12")
+
+COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
+
+READ_BYTE "0x8A" "totallevel"
+
+WRITE_SHORT 0x25A 15
+
+IF_EVAL ("%totallevel%" = "0x13")
+
+COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
+
+READ_BYTE "0x8A" "totallevel"
+
+WRITE_SHORT 0x25A 16
+
+IF_EVAL ("%totallevel%" = "0x14")
+
+COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
+
+READ_BYTE "0x8A" "totallevel"
+
+WRITE_SHORT 0x25A 16
+
+IF_EVAL ("%totallevel%" = "0x15")
+
+COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
+
+READ_BYTE "0x8A" "totallevel"
+
+WRITE_SHORT 0x25A 17
+
+IF_EVAL ("%totallevel%" = "0x16")
+
+COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
+
+READ_BYTE "0x8A" "totallevel"
+
+WRITE_SHORT 0x25A 17
+
+IF_EVAL ("%totallevel%" = "0x17")
+
+COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
+
+READ_BYTE "0x8A" "totallevel"
+
+WRITE_SHORT 0x25A 18
+
+IF_EVAL ("%totallevel%" = "0x18")
+
+COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
+
+READ_BYTE "0x8A" "totallevel"
+
+WRITE_SHORT 0x25A 19
+
+IF_EVAL ("%totallevel%" = "0x19")
+
+COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
+
+READ_BYTE "0x8A" "totallevel"
+
+WRITE_SHORT 0x25A 19
+
+IF_EVAL ("%totallevel%" = "0x1A")
+
+COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
+
+READ_BYTE "0x8A" "totallevel"
+
+WRITE_SHORT 0x25A 20
+
+IF_EVAL ("%totallevel%" = "0x1B")
+
+COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
+
+READ_BYTE "0x8A" "totallevel"
+
+WRITE_SHORT 0x25A 21
+
+IF_EVAL ("%totallevel%" = "0x1C")
+
+COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
+
+READ_BYTE "0x8A" "totallevel"
+
+WRITE_SHORT 0x25A 22
+
+IF_EVAL ("%totallevel%" = "0x1d")
+
+COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
+
+READ_BYTE "0x8A" "totallevel"
+
+WRITE_SHORT 0x25A 22
+
+IF_EVAL ("%totallevel%" = "0x1E")
+
+
+
+BEGIN "Faster Targos"
+
+// copies a Shawford dialog file that lets you skip his quests
+COMPILE ~%mod_folder%/dlg/12SHAWFO.d~ 
+
+// patches Olap's script so that the game does not end if you skip Shawford's quests and Olap dies during the invasion.
+EXTEND_BOTTOM ~12OLAP0.bcs~ ~%mod_folder%/baf/USSTOLAP.baf~
+
+COPY ~%mod_folder%/bcs/12OLAP0.bcs~ ~override~
+
+BEGIN "Faster Horde Fortress"
+
+// patches gates to be openable by force
+
+COPY_EXISTING ~AR3000.are~ ~override~
+ WRITE_BYTE 0x9594 99
+ WRITE_BYTE 0x9595 00
+ WRITE_BYTE 0x965c 85
+BUT_ONLY
+
+COPY_EXISTING ~AR3100.are~ ~override~
+ WRITE_BYTE 0x7744 97
+ WRITE_BYTE 0x76e0 90
+BUT_ONLY
+
+BEGIN "Faster Ice Temple"
+
+// creates the Ice Wall Fault creature and places it in the right place by appending a few lines to the AR4100.bcs script
+
+COMPILE ~%mod_folder%/dlg/USSTIW02.d~ 
+COPY ~%mod_folder%/cre/USSTIW01.cre~ ~override~
+  SAY NAME1 @757
+  SAY NAME2 @757
+COPY ~%mod_folder%/itm/USSTIW03.itm~ ~override~
+COPY ~%mod_folder%/spl/USSTIW04.spl~ ~override~
+COPY ~%mod_folder%/spl/USSTIW05.spl~ ~override~
+
+EXTEND_BOTTOM ~AR4100.bcs~ ~%mod_folder%/baf/USSTIW06.baf~
+
+BEGIN "Faster Wandering Village" //
+
+COPY ~%mod_folder%/are/AR5015.are~ ~override~
+// 440
+// 340
+// toAR5104, 571, 277
+// door, 592, 264
+
+BEGIN "Faster Black Raven Monastery"
+
+// patches a door so you can force it open
+
+COPY_EXISTING ~AR5203.are~ ~override~
+ WRITE_BYTE 0x2724 90
+BUT_ONLY
+
+BEGIN "Faster Underdark"
+
+// patches a door so you can force it open
+
+COPY_EXISTING ~AR5300.are~ ~override~
+ WRITE_BYTE 0xa018 99
+ WRITE_BYTE 0xa0e0 99
+BUT_ONLY
+
+BEGIN "Faster Dragon's Eye and Lord Pyros' Domain" //
+
+//COPY ~%mod_folder%/are/AR6103.are~ ~override~
+
+// patches a door so you can force it open and also rigs the northmost exit in Lord Pyros' domain to lead to the Fields of Slaughter instead of back to Dragon's Eye
+
+COPY_EXISTING ~AR6103.are~ ~override~
+ WRITE_BYTE 0xE428 99
+BUT_ONLY
+COPY_EXISTING ~AR6104.are~ ~override~
+ WRITE_BYTE 0x91E6 0x36
+ WRITE_BYTE 0x91E7 0x32
+ WRITE_BYTE 0x91E8 0x30
+ WRITE_BYTE 0x91E9 0x30
+BUT_ONLY
+
+BEGIN "Faster Severed Hand"
+
+// creates Ruinlord Argos Val and appends a script to add him to the throne room where people can bluff their way to Isair and Madae
+
+COMPILE ~%mod_folder%/dlg/USSTSH01.d~ 
+
+COPY ~%mod_folder%/cre/USSTSHRL.cre~ ~override~
+  SAY NAME1 @766
+  SAY NAME2 @766
+COPY ~%mod_folder%/bcs/USSTRL.bcs~ ~override~
+COPY ~%mod_folder%/bcs/USSTSH02.bcs~ ~override~
+COPY ~%mod_folder%/bcs/USSTSH03.bcs~ ~override~
+COPY ~%mod_folder%/spl/USSTIW04.spl~ ~override~
+
+EXTEND_BOTTOM ~AR6303.bcs~ ~%mod_folder%/baf/USSTSH01.baf~
+
+BEGIN "More Potions for Oswald" //
+
+COPY ~%mod_folder%/sto/11OSWALD.sto~ ~override~
+
+BEGIN "More Mage Scrolls In Stores" //
+
+// creates new scrolls for spells that had no scrolls before
+
+COPY ~%mod_folder%/itm/USWI402Z.itm~ ~override~
+  SAY NAME1 @659
+  SAY NAME2 @659
+  SAY DESC @660
+COPY ~%mod_folder%/itm/USWI121Z.itm~ ~override~
+  SAY NAME1 @661
+  SAY NAME2 @661
+  SAY DESC @662
+COPY ~%mod_folder%/itm/USWI624Z.itm~ ~override~
+  SAY NAME1 @663
+  SAY NAME2 @663
+  SAY DESC @664
+COPY ~%mod_folder%/itm/USWI630Z.itm~ ~override~
+  SAY NAME1 @665
+  SAY NAME2 @665
+  SAY DESC @666
+
+// patches in higher-level mage scrolls to all major scroll sellers. Only higher-level spells are added; this does not give Elytharra all of the low-level spells that are otherwise missing from her store.
+
+COPY_EXISTING ~11ELYTHA.sto~ ~override~
+  ADD_STORE_ITEM ~SPWI119Z~   AFTER  ~SPWI118Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI124Z~   AFTER  ~SPWI118Z~ #1 #0 #0 ~IDENTIFIED~ #1
+
+  ADD_STORE_ITEM ~SPWI205Z~   AFTER  ~SPWI212Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI207Z~   AFTER  ~SPWI212Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI213Z~   AFTER  ~SPWI212Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI214Z~   AFTER  ~SPWI212Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI215Z~   AFTER  ~SPWI212Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI217Z~   AFTER  ~SPWI212Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI218Z~   AFTER  ~SPWI212Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI219Z~   AFTER  ~SPWI212Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI220Z~   AFTER  ~SPWI212Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI221Z~   AFTER  ~SPWI212Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI225Z~   AFTER  ~SPWI212Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI226Z~   AFTER  ~SPWI212Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI227Z~   AFTER  ~SPWI212Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI228Z~   AFTER  ~SPWI212Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI230Z~   AFTER  ~SPWI212Z~ #1 #0 #0 ~IDENTIFIED~ #1
+
+  ADD_STORE_ITEM ~SPWI902Z~   AFTER  ~SPWI308Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI903Z~   AFTER  ~SPWI308Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI905Z~   AFTER  ~SPWI308Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI906Z~   AFTER  ~SPWI308Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI907Z~   AFTER  ~SPWI308Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI908Z~   AFTER  ~SPWI308Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI909Z~   AFTER  ~SPWI308Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI910Z~   AFTER  ~SPWI308Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI911Z~   AFTER  ~SPWI308Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPPR719Z~   AFTER  ~SPWI308Z~ #1 #0 #0 ~IDENTIFIED~ #1
+
+  ADD_STORE_ITEM ~SPWI802Z~   AFTER  ~SPWI308Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI803Z~   AFTER  ~SPWI308Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI804Z~   AFTER  ~SPWI308Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI805Z~   AFTER  ~SPWI308Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI806Z~   AFTER  ~SPWI308Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI807Z~   AFTER  ~SPWI308Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI808Z~   AFTER  ~SPWI308Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI809Z~   AFTER  ~SPWI308Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI702Z~   AFTER  ~SPWI308Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI703Z~   AFTER  ~SPWI308Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI704Z~   AFTER  ~SPWI308Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI705Z~   AFTER  ~SPWI308Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI706Z~   AFTER  ~SPWI308Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI707Z~   AFTER  ~SPWI308Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI708Z~   AFTER  ~SPWI308Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI709Z~   AFTER  ~SPWI308Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI710Z~   AFTER  ~SPWI308Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI711Z~   AFTER  ~SPWI308Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI712Z~   AFTER  ~SPWI308Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI713Z~   AFTER  ~SPWI308Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI714Z~   AFTER  ~SPWI308Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI715Z~   AFTER  ~SPWI308Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI716Z~   AFTER  ~SPWI308Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI717Z~   AFTER  ~SPWI308Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI718Z~   AFTER  ~SPWI308Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI719Z~   AFTER  ~SPWI308Z~ #1 #0 #0 ~IDENTIFIED~ #1
+
+
+  ADD_STORE_ITEM ~SPWI601Z~   AFTER  ~SPWI308Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI603Z~   AFTER  ~SPWI308Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI605Z~   AFTER  ~SPWI308Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI606Z~   AFTER  ~SPWI308Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI607Z~   AFTER  ~SPWI308Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI608Z~   AFTER  ~SPWI308Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI609Z~   AFTER  ~SPWI308Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI610Z~   AFTER  ~SPWI308Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI611Z~   AFTER  ~SPWI308Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI612Z~   AFTER  ~SPWI308Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI613Z~   AFTER  ~SPWI308Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI614Z~   AFTER  ~SPWI308Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI615Z~   AFTER  ~SPWI308Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI616Z~   AFTER  ~SPWI308Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI617Z~   AFTER  ~SPWI308Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI618Z~   AFTER  ~SPWI308Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI619Z~   AFTER  ~SPWI308Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI620Z~   AFTER  ~SPWI308Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI621Z~   AFTER  ~SPWI308Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI622Z~   AFTER  ~SPWI308Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI623Z~   AFTER  ~SPWI308Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI626Z~   AFTER  ~SPWI308Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI627Z~   AFTER  ~SPWI308Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI628Z~   AFTER  ~SPWI308Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI629Z~   AFTER  ~SPWI308Z~ #1 #0 #0 ~IDENTIFIED~ #1
+
+  ADD_STORE_ITEM ~SPWI501Z~   AFTER  ~SPWI308Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI503Z~   AFTER  ~SPWI308Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI504Z~   AFTER  ~SPWI308Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI505Z~   AFTER  ~SPWI308Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI507Z~   AFTER  ~SPWI308Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI508Z~   AFTER  ~SPWI308Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI509Z~   AFTER  ~SPWI308Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI510Z~   AFTER  ~SPWI308Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI511Z~   AFTER  ~SPWI308Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI512Z~   AFTER  ~SPWI308Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI513Z~   AFTER  ~SPWI308Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI514Z~   AFTER  ~SPWI308Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI515Z~   AFTER  ~SPWI308Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI516Z~   AFTER  ~SPWI308Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI518Z~   AFTER  ~SPWI308Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI519Z~   AFTER  ~SPWI308Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI521Z~   AFTER  ~SPWI308Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI522Z~   AFTER  ~SPWI308Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI523Z~   AFTER  ~SPWI308Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI524Z~   AFTER  ~SPWI308Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI525Z~   AFTER  ~SPWI308Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI526Z~   AFTER  ~SPWI308Z~ #1 #0 #0 ~IDENTIFIED~ #1
+
+  ADD_STORE_ITEM ~SPWI401Z~   AFTER  ~SPWI308Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI404Z~   AFTER  ~SPWI308Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI405Z~   AFTER  ~SPWI308Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI406Z~   AFTER  ~SPWI308Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI407Z~   AFTER  ~SPWI308Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI408Z~   AFTER  ~SPWI308Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI410Z~   AFTER  ~SPWI308Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI411Z~   AFTER  ~SPWI308Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI412Z~   AFTER  ~SPWI308Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI413Z~   AFTER  ~SPWI308Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI414Z~   AFTER  ~SPWI308Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI417Z~   AFTER  ~SPWI308Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI418Z~   AFTER  ~SPWI308Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI419Z~   AFTER  ~SPWI308Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI420Z~   AFTER  ~SPWI308Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI421Z~   AFTER  ~SPWI308Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI422Z~   AFTER  ~SPWI308Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI423Z~   AFTER  ~SPWI308Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI424Z~   AFTER  ~SPWI308Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI425Z~   AFTER  ~SPWI308Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI426Z~   AFTER  ~SPWI308Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI427Z~   AFTER  ~SPWI308Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI428Z~   AFTER  ~SPWI308Z~ #1 #0 #0 ~IDENTIFIED~ #1
+
+  ADD_STORE_ITEM ~SPWI304Z~   AFTER  ~SPWI308Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI309Z~   AFTER  ~SPWI308Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI310Z~   AFTER  ~SPWI308Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI311Z~   AFTER  ~SPWI308Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI312Z~   AFTER  ~SPWI308Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI313Z~   AFTER  ~SPWI308Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI314Z~   AFTER  ~SPWI308Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI317Z~   AFTER  ~SPWI308Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI318Z~   AFTER  ~SPWI308Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI319Z~   AFTER  ~SPWI308Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI320Z~   AFTER  ~SPWI308Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI321Z~   AFTER  ~SPWI308Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI322Z~   AFTER  ~SPWI308Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI323Z~   AFTER  ~SPWI308Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI526Z~   AFTER  ~SPWI308Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~USWI121Z~   AFTER  ~SPWI308Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~USWI402Z~   AFTER  ~SPWI308Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~USWI624Z~   AFTER  ~SPWI308Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~USWI630Z~   AFTER  ~SPWI308Z~ #1 #0 #0 ~IDENTIFIED~ #1
+
+
+COPY_EXISTING ~41ZACK3.sto~ ~override~
+  ADD_STORE_ITEM ~SPWI902Z~   AFTER  ~SPWI323Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI903Z~   AFTER  ~SPWI323Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI905Z~   AFTER  ~SPWI323Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI906Z~   AFTER  ~SPWI323Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI907Z~   AFTER  ~SPWI323Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI908Z~   AFTER  ~SPWI323Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI909Z~   AFTER  ~SPWI323Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI910Z~   AFTER  ~SPWI323Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI911Z~   AFTER  ~SPWI323Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPPR719Z~   AFTER  ~SPWI308Z~ #1 #0 #0 ~IDENTIFIED~ #1
+
+  ADD_STORE_ITEM ~SPWI802Z~   AFTER  ~SPWI323Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI803Z~   AFTER  ~SPWI323Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI804Z~   AFTER  ~SPWI323Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI805Z~   AFTER  ~SPWI323Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI806Z~   AFTER  ~SPWI323Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI807Z~   AFTER  ~SPWI323Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI808Z~   AFTER  ~SPWI323Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI809Z~   AFTER  ~SPWI323Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI702Z~   AFTER  ~SPWI323Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI703Z~   AFTER  ~SPWI323Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI704Z~   AFTER  ~SPWI323Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI705Z~   AFTER  ~SPWI323Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI706Z~   AFTER  ~SPWI323Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI707Z~   AFTER  ~SPWI323Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI708Z~   AFTER  ~SPWI323Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI709Z~   AFTER  ~SPWI323Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI710Z~   AFTER  ~SPWI323Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI711Z~   AFTER  ~SPWI323Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI712Z~   AFTER  ~SPWI323Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI713Z~   AFTER  ~SPWI323Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI714Z~   AFTER  ~SPWI323Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI715Z~   AFTER  ~SPWI323Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI716Z~   AFTER  ~SPWI323Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI717Z~   AFTER  ~SPWI323Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI718Z~   AFTER  ~SPWI323Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI719Z~   AFTER  ~SPWI323Z~ #1 #0 #0 ~IDENTIFIED~ #1
+
+
+  ADD_STORE_ITEM ~SPWI601Z~   AFTER  ~SPWI323Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI603Z~   AFTER  ~SPWI323Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI605Z~   AFTER  ~SPWI323Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI606Z~   AFTER  ~SPWI323Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI607Z~   AFTER  ~SPWI323Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI608Z~   AFTER  ~SPWI323Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI609Z~   AFTER  ~SPWI323Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI610Z~   AFTER  ~SPWI323Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI611Z~   AFTER  ~SPWI323Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI612Z~   AFTER  ~SPWI323Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI613Z~   AFTER  ~SPWI323Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI614Z~   AFTER  ~SPWI323Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI615Z~   AFTER  ~SPWI323Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI616Z~   AFTER  ~SPWI323Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI617Z~   AFTER  ~SPWI323Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI618Z~   AFTER  ~SPWI323Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI619Z~   AFTER  ~SPWI323Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI620Z~   AFTER  ~SPWI323Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI621Z~   AFTER  ~SPWI323Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI622Z~   AFTER  ~SPWI323Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI623Z~   AFTER  ~SPWI323Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI626Z~   AFTER  ~SPWI323Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI627Z~   AFTER  ~SPWI323Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI628Z~   AFTER  ~SPWI323Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI629Z~   AFTER  ~SPWI323Z~ #1 #0 #0 ~IDENTIFIED~ #1
+
+  ADD_STORE_ITEM ~SPWI501Z~   AFTER  ~SPWI323Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI503Z~   AFTER  ~SPWI323Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI504Z~   AFTER  ~SPWI323Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI505Z~   AFTER  ~SPWI323Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI507Z~   AFTER  ~SPWI323Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI508Z~   AFTER  ~SPWI323Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI509Z~   AFTER  ~SPWI323Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI510Z~   AFTER  ~SPWI323Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI511Z~   AFTER  ~SPWI323Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI512Z~   AFTER  ~SPWI323Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI513Z~   AFTER  ~SPWI323Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI514Z~   AFTER  ~SPWI323Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI515Z~   AFTER  ~SPWI323Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI516Z~   AFTER  ~SPWI323Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI518Z~   AFTER  ~SPWI323Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI519Z~   AFTER  ~SPWI323Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI521Z~   AFTER  ~SPWI323Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI522Z~   AFTER  ~SPWI323Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI523Z~   AFTER  ~SPWI323Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI524Z~   AFTER  ~SPWI323Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI525Z~   AFTER  ~SPWI323Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI526Z~   AFTER  ~SPWI323Z~ #1 #0 #0 ~IDENTIFIED~ #1
+
+  ADD_STORE_ITEM ~SPWI401Z~   AFTER  ~SPWI323Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI404Z~   AFTER  ~SPWI323Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI405Z~   AFTER  ~SPWI323Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI406Z~   AFTER  ~SPWI323Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI407Z~   AFTER  ~SPWI323Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI408Z~   AFTER  ~SPWI323Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI410Z~   AFTER  ~SPWI323Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI411Z~   AFTER  ~SPWI323Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI412Z~   AFTER  ~SPWI323Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI413Z~   AFTER  ~SPWI323Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI414Z~   AFTER  ~SPWI323Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI417Z~   AFTER  ~SPWI323Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI418Z~   AFTER  ~SPWI323Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI419Z~   AFTER  ~SPWI323Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI420Z~   AFTER  ~SPWI323Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI421Z~   AFTER  ~SPWI323Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI422Z~   AFTER  ~SPWI323Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI423Z~   AFTER  ~SPWI323Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI424Z~   AFTER  ~SPWI323Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI425Z~   AFTER  ~SPWI323Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI426Z~   AFTER  ~SPWI323Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI427Z~   AFTER  ~SPWI323Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI428Z~   AFTER  ~SPWI323Z~ #1 #0 #0 ~IDENTIFIED~ #1
+
+  ADD_STORE_ITEM ~SPWI304Z~   AFTER  ~SPWI323Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI309Z~   AFTER  ~SPWI323Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI310Z~   AFTER  ~SPWI323Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI311Z~   AFTER  ~SPWI323Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI312Z~   AFTER  ~SPWI323Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI313Z~   AFTER  ~SPWI323Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI314Z~   AFTER  ~SPWI323Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI317Z~   AFTER  ~SPWI323Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI318Z~   AFTER  ~SPWI323Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI319Z~   AFTER  ~SPWI323Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI320Z~   AFTER  ~SPWI323Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI321Z~   AFTER  ~SPWI323Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI322Z~   AFTER  ~SPWI323Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI526Z~   AFTER  ~SPWI323Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~USWI121Z~   AFTER  ~SPWI323Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~USWI402Z~   AFTER  ~SPWI323Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~USWI624Z~   AFTER  ~SPWI323Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~USWI630Z~   AFTER  ~SPWI323Z~ #1 #0 #0 ~IDENTIFIED~ #1
+
+
+
+COPY_EXISTING ~50SUOMA.sto~ ~override~
+  ADD_STORE_ITEM ~SPWI902Z~   AFTER  ~SPWI525Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI903Z~   AFTER  ~SPWI525Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI905Z~   AFTER  ~SPWI525Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI906Z~   AFTER  ~SPWI525Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI907Z~   AFTER  ~SPWI525Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI908Z~   AFTER  ~SPWI525Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI909Z~   AFTER  ~SPWI525Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI910Z~   AFTER  ~SPWI525Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI911Z~   AFTER  ~SPWI525Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPPR719Z~   AFTER  ~SPWI308Z~ #1 #0 #0 ~IDENTIFIED~ #1
+
+  ADD_STORE_ITEM ~SPWI802Z~   AFTER  ~SPWI525Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI803Z~   AFTER  ~SPWI525Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI804Z~   AFTER  ~SPWI525Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI805Z~   AFTER  ~SPWI525Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI806Z~   AFTER  ~SPWI525Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI807Z~   AFTER  ~SPWI525Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI808Z~   AFTER  ~SPWI525Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI809Z~   AFTER  ~SPWI525Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI702Z~   AFTER  ~SPWI525Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI703Z~   AFTER  ~SPWI525Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI704Z~   AFTER  ~SPWI525Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI705Z~   AFTER  ~SPWI525Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI706Z~   AFTER  ~SPWI525Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI707Z~   AFTER  ~SPWI525Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI708Z~   AFTER  ~SPWI525Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI709Z~   AFTER  ~SPWI525Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI710Z~   AFTER  ~SPWI525Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI711Z~   AFTER  ~SPWI525Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI712Z~   AFTER  ~SPWI525Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI713Z~   AFTER  ~SPWI525Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI714Z~   AFTER  ~SPWI525Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI715Z~   AFTER  ~SPWI525Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI716Z~   AFTER  ~SPWI525Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI717Z~   AFTER  ~SPWI525Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI718Z~   AFTER  ~SPWI525Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI719Z~   AFTER  ~SPWI525Z~ #1 #0 #0 ~IDENTIFIED~ #1
+
+
+  ADD_STORE_ITEM ~SPWI601Z~   AFTER  ~SPWI525Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI603Z~   AFTER  ~SPWI525Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI605Z~   AFTER  ~SPWI525Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI606Z~   AFTER  ~SPWI525Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI607Z~   AFTER  ~SPWI525Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI608Z~   AFTER  ~SPWI525Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI609Z~   AFTER  ~SPWI525Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI610Z~   AFTER  ~SPWI525Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI611Z~   AFTER  ~SPWI525Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI612Z~   AFTER  ~SPWI525Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI613Z~   AFTER  ~SPWI525Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI614Z~   AFTER  ~SPWI525Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI615Z~   AFTER  ~SPWI525Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI616Z~   AFTER  ~SPWI525Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI617Z~   AFTER  ~SPWI525Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI618Z~   AFTER  ~SPWI525Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI619Z~   AFTER  ~SPWI525Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI620Z~   AFTER  ~SPWI525Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI621Z~   AFTER  ~SPWI525Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI622Z~   AFTER  ~SPWI525Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI623Z~   AFTER  ~SPWI525Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI626Z~   AFTER  ~SPWI525Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI627Z~   AFTER  ~SPWI525Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI628Z~   AFTER  ~SPWI525Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI629Z~   AFTER  ~SPWI525Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI526Z~   AFTER  ~SPWI525Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~USWI121Z~   AFTER  ~SPWI525Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~USWI402Z~   AFTER  ~SPWI525Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~USWI624Z~   AFTER  ~SPWI525Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~USWI630Z~   AFTER  ~SPWI525Z~ #1 #0 #0 ~IDENTIFIED~ #1
+
+
+COPY_EXISTING ~52BERED.sto~ ~override~
+  ADD_STORE_ITEM ~SPWI902Z~   AFTER  ~SPWI618Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI903Z~   AFTER  ~SPWI618Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI905Z~   AFTER  ~SPWI618Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI906Z~   AFTER  ~SPWI618Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI907Z~   AFTER  ~SPWI618Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI908Z~   AFTER  ~SPWI618Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI909Z~   AFTER  ~SPWI618Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI910Z~   AFTER  ~SPWI618Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI911Z~   AFTER  ~SPWI618Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPPR719Z~   AFTER  ~SPWI308Z~ #1 #0 #0 ~IDENTIFIED~ #1
+
+  ADD_STORE_ITEM ~SPWI802Z~   AFTER  ~SPWI618Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI803Z~   AFTER  ~SPWI618Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI804Z~   AFTER  ~SPWI618Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI805Z~   AFTER  ~SPWI618Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI806Z~   AFTER  ~SPWI618Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI807Z~   AFTER  ~SPWI618Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI808Z~   AFTER  ~SPWI618Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI809Z~   AFTER  ~SPWI618Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI702Z~   AFTER  ~SPWI618Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI703Z~   AFTER  ~SPWI618Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI704Z~   AFTER  ~SPWI618Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI705Z~   AFTER  ~SPWI618Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI706Z~   AFTER  ~SPWI618Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI707Z~   AFTER  ~SPWI618Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI708Z~   AFTER  ~SPWI618Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI709Z~   AFTER  ~SPWI618Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI710Z~   AFTER  ~SPWI618Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI711Z~   AFTER  ~SPWI618Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI712Z~   AFTER  ~SPWI618Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI713Z~   AFTER  ~SPWI618Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI714Z~   AFTER  ~SPWI618Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI715Z~   AFTER  ~SPWI618Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI716Z~   AFTER  ~SPWI618Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI717Z~   AFTER  ~SPWI618Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI718Z~   AFTER  ~SPWI618Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI719Z~   AFTER  ~SPWI618Z~ #1 #0 #0 ~IDENTIFIED~ #1
+
+
+COPY_EXISTING ~53MALAVO.sto~ ~override~
+  ADD_STORE_ITEM ~SPWI902Z~   AFTER  ~SPWI632Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI903Z~   AFTER  ~SPWI632Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI905Z~   AFTER  ~SPWI632Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI906Z~   AFTER  ~SPWI632Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI907Z~   AFTER  ~SPWI632Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI908Z~   AFTER  ~SPWI632Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI909Z~   AFTER  ~SPWI632Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI910Z~   AFTER  ~SPWI632Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI911Z~   AFTER  ~SPWI632Z~ #1 #0 #0 ~IDENTIFIED~ #1
+
+  ADD_STORE_ITEM ~SPWI802Z~   AFTER  ~SPWI632Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI803Z~   AFTER  ~SPWI632Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI804Z~   AFTER  ~SPWI632Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI805Z~   AFTER  ~SPWI632Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI806Z~   AFTER  ~SPWI632Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI807Z~   AFTER  ~SPWI632Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI808Z~   AFTER  ~SPWI632Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI809Z~   AFTER  ~SPWI632Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI702Z~   AFTER  ~SPWI632Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI703Z~   AFTER  ~SPWI632Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI704Z~   AFTER  ~SPWI632Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI705Z~   AFTER  ~SPWI632Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI706Z~   AFTER  ~SPWI632Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI707Z~   AFTER  ~SPWI632Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI708Z~   AFTER  ~SPWI632Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI709Z~   AFTER  ~SPWI632Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI710Z~   AFTER  ~SPWI632Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI711Z~   AFTER  ~SPWI632Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI712Z~   AFTER  ~SPWI632Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI713Z~   AFTER  ~SPWI632Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI714Z~   AFTER  ~SPWI632Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI715Z~   AFTER  ~SPWI632Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI716Z~   AFTER  ~SPWI632Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI717Z~   AFTER  ~SPWI632Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI718Z~   AFTER  ~SPWI632Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI719Z~   AFTER  ~SPWI632Z~ #1 #0 #0 ~IDENTIFIED~ #1
+
+
+COPY_EXISTING ~60SPELLS.sto~ ~override~
+  ADD_STORE_ITEM ~SPWI902Z~   AFTER  ~SPWI629Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI903Z~   AFTER  ~SPWI629Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI905Z~   AFTER  ~SPWI629Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI906Z~   AFTER  ~SPWI629Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI907Z~   AFTER  ~SPWI629Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI908Z~   AFTER  ~SPWI629Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI909Z~   AFTER  ~SPWI629Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI910Z~   AFTER  ~SPWI629Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI911Z~   AFTER  ~SPWI629Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPPR719Z~   AFTER  ~SPWI308Z~ #1 #0 #0 ~IDENTIFIED~ #1
+
+  ADD_STORE_ITEM ~SPWI802Z~   AFTER  ~SPWI629Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI803Z~   AFTER  ~SPWI629Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI804Z~   AFTER  ~SPWI629Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI805Z~   AFTER  ~SPWI629Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI806Z~   AFTER  ~SPWI629Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI807Z~   AFTER  ~SPWI629Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI808Z~   AFTER  ~SPWI629Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI809Z~   AFTER  ~SPWI629Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI702Z~   AFTER  ~SPWI629Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI703Z~   AFTER  ~SPWI629Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI704Z~   AFTER  ~SPWI629Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI705Z~   AFTER  ~SPWI629Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI706Z~   AFTER  ~SPWI629Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI707Z~   AFTER  ~SPWI629Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI708Z~   AFTER  ~SPWI629Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI709Z~   AFTER  ~SPWI629Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI710Z~   AFTER  ~SPWI629Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI711Z~   AFTER  ~SPWI629Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI712Z~   AFTER  ~SPWI629Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI713Z~   AFTER  ~SPWI629Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI714Z~   AFTER  ~SPWI629Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI715Z~   AFTER  ~SPWI629Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI716Z~   AFTER  ~SPWI629Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI717Z~   AFTER  ~SPWI629Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI718Z~   AFTER  ~SPWI629Z~ #1 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~SPWI719Z~   AFTER  ~SPWI629Z~ #1 #0 #0 ~IDENTIFIED~ #1
+
+
+BEGIN "Fewer Immunities for Bosses" //
+
+// replaces items that grant immunities to common enemy types and bosses
+
+COPY ~%mod_folder%/itm/BOSSRNG1.itm~ ~override~
+COPY ~%mod_folder%/itm/BOSSRNG2.itm~ ~override~
+COPY ~%mod_folder%/itm/LICHRNG1.itm~ ~override~
+COPY ~%mod_folder%/itm/DEMRNG1.itm~ ~override~
+COPY ~%mod_folder%/itm/41ORIA.itm~ ~override~
+COPY ~%mod_folder%/itm/11VEIRA3.itm~ ~override~
+COPY ~%mod_folder%/itm/00CIDEAD.itm~ ~override~
+COPY ~%mod_folder%/itm/00CIDED1.itm~ ~override~
+
+BEGIN "Shapeshifting Sound Fix (only install if your druid makes strange noises after shapeshifting; otherwise is unnecessary)" //
+
+COPY ~%mod_folder%/spl/SPIN122.spl~ ~override~
+
+BEGIN "More Accurate Saving Throws for Enemies"
+
+/*
+// Flawed formula; no longer used
+COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
+	READ_BYTE "0x8b" "barbarianlevel"
+	READ_BYTE "0x8c" "bardlevel"
+	READ_BYTE "0x8d" "clericlevel"
+	READ_BYTE "0x8e" "druidlevel"
+	READ_BYTE "0x8f" "fighterlevel"
+	READ_BYTE "0x90" "monklevel"
+	READ_BYTE "0x91" "paladinlevel"
+	READ_BYTE "0x92" "rangerlevel"
+	READ_BYTE "0x93" "roguelevel"
+	READ_BYTE "0x94" "sorcererlevel"
+	READ_BYTE "0x95" "wizardlevel"
+	  READ_BYTE 0x52 fortitudesave
+	  READ_BYTE 0x53 reflexsave
+	  READ_BYTE 0x54 willsave
+	  WRITE_BYTE 0x52 (%barbarianlevel% * 667 / 1000 + %fighterlevel% * 667 / 1000 + %paladinlevel% * 667 / 1000 + %rangerlevel% * 667 / 1000 + %bardlevel% / 3 + %clericlevel% * 4 / 10 + %druidlevel% * 4 / 10 + %monklevel% / 2 + %roguelevel% / 3 + %sorcererlevel% / 3 + %wizardlevel% / 3 + 1)
+	  WRITE_BYTE 0x53 (%barbarianlevel% / 2 + %fighterlevel% / 2 + %paladinlevel% / 2 + %rangerlevel% / 2 + %bardlevel% * 667 / 1000 + %clericlevel% / 3 + %druidlevel% / 3 + %monklevel% / 2 + %roguelevel% * 667 / 1000 + %sorcererlevel% / 3 + %wizardlevel% / 3 + 1)
+	  WRITE_BYTE 0x54 (%barbarianlevel% / 3 + %fighterlevel% / 3 + %paladinlevel% / 3 + %rangerlevel% / 3 + %bardlevel% / 2 + %clericlevel% * 667 / 1000 + %druidlevel% * 667 / 1000 + %monklevel% / 2 + %roguelevel% / 2 + %sorcererlevel% * 667 / 1000 + %wizardlevel% * 667 / 1000 + 1)
+BUT_ONLY
+*/
+
+// Reads in levels for all critters and uses a formula to set their saving throws. This only works for critters with fighter levels and gives them +2 to Fortitude saves.
+COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
+	READ_BYTE "0x8b" "barbarianlevel"
+	READ_BYTE "0x8c" "bardlevel"
+	READ_BYTE "0x8d" "clericlevel"
+	READ_BYTE "0x8e" "druidlevel"
+	READ_BYTE "0x8f" "fighterlevel"
+	READ_BYTE "0x90" "monklevel"
+	READ_BYTE "0x91" "paladinlevel"
+	READ_BYTE "0x92" "rangerlevel"
+	READ_BYTE "0x93" "roguelevel"
+	READ_BYTE "0x94" "sorcererlevel"
+	READ_BYTE "0x95" "wizardlevel"
+	  READ_BYTE 0x52 fortitudesave
+	  READ_BYTE 0x53 reflexsave
+	  READ_BYTE 0x54 willsave
+	  READ_BYTE "0x8f" "fighterlevels"
+	  PATCH_IF ~%fighterlevels%~ != ~0~ BEGIN
+	  WRITE_BYTE 0x52 (%barbarianlevel% * 667 / 1000 + %fighterlevel% * 667 / 1000 + %paladinlevel% * 667 / 1000 + %rangerlevel% * 667 / 1000 + %bardlevel% / 3 + %clericlevel% * 4 / 10 + %druidlevel% * 4 / 10 + %monklevel% / 2 + %roguelevel% / 3 + %sorcererlevel% / 3 + %wizardlevel% / 3 + 2)
+	  WRITE_BYTE 0x53 (%barbarianlevel% / 2 + %fighterlevel% / 2 + %paladinlevel% / 2 + %rangerlevel% / 2 + %bardlevel% * 667 / 1000 + %clericlevel% / 3 + %druidlevel% / 3 + %monklevel% / 2 + %roguelevel% * 667 / 1000 + %sorcererlevel% / 3 + %wizardlevel% / 3 + 1)
+	  WRITE_BYTE 0x54 (%barbarianlevel% / 3 + %fighterlevel% / 3 + %paladinlevel% / 3 + %rangerlevel% / 3 + %bardlevel% / 2 + %clericlevel% * 667 / 1000 + %druidlevel% * 667 / 1000 + %monklevel% / 2 + %roguelevel% / 2 + %sorcererlevel% * 667 / 1000 + %wizardlevel% * 667 / 1000)
+//BUT_ONLY
+    END
+BUT_ONLY_IF_IT_CHANGES
+
+// Alternate formula for critters with no fighter levels, granting no Fortitude save bonuses.
+COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
+	READ_BYTE "0x8b" "barbarianlevel"
+	READ_BYTE "0x8c" "bardlevel"
+	READ_BYTE "0x8d" "clericlevel"
+	READ_BYTE "0x8e" "druidlevel"
+	READ_BYTE "0x8f" "fighterlevel"
+	READ_BYTE "0x90" "monklevel"
+	READ_BYTE "0x91" "paladinlevel"
+	READ_BYTE "0x92" "rangerlevel"
+	READ_BYTE "0x93" "roguelevel"
+	READ_BYTE "0x94" "sorcererlevel"
+	READ_BYTE "0x95" "wizardlevel"
+	  READ_BYTE 0x52 fortitudesave
+	  READ_BYTE 0x53 reflexsave
+	  READ_BYTE 0x54 willsave
+	  READ_BYTE "0x8f" "fighterlevels"
+	  PATCH_IF ~%fighterlevels%~ EQUALS ~0~ BEGIN
+	  WRITE_BYTE 0x52 (%barbarianlevel% * 667 / 1000 + %fighterlevel% * 667 / 1000 + %paladinlevel% * 667 / 1000 + %rangerlevel% * 667 / 1000 + %bardlevel% / 3 + %clericlevel% * 4 / 10 + %druidlevel% * 4 / 10 + %monklevel% / 2 + %roguelevel% / 3 + %sorcererlevel% / 3 + %wizardlevel% / 3)
+	  WRITE_BYTE 0x53 (%barbarianlevel% / 2 + %fighterlevel% / 2 + %paladinlevel% / 2 + %rangerlevel% / 2 + %bardlevel% * 667 / 1000 + %clericlevel% / 3 + %druidlevel% / 3 + %monklevel% / 2 + %roguelevel% * 667 / 1000 + %sorcererlevel% / 3 + %wizardlevel% / 3)
+	  WRITE_BYTE 0x54 (%barbarianlevel% / 3 + %fighterlevel% / 3 + %paladinlevel% / 3 + %rangerlevel% / 3 + %bardlevel% / 2 + %clericlevel% * 667 / 1000 + %druidlevel% * 667 / 1000 + %monklevel% / 2 + %roguelevel% / 2 + %sorcererlevel% * 667 / 1000 + %wizardlevel% * 667 / 1000 + 2)
+//BUT_ONLY
+    END
+BUT_ONLY_IF_IT_CHANGES
+
+BEGIN "Make All Creatures Vulnerable to Critical Hits"
+
+COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
+
+READ_BYTE "0x303" "crit"
+
+WRITE_BYTE 0x303 0
+
+IF_EVAL ("%crit%" = "0x2")
+
+BEGIN "Sudden Death Mode"
+
+// Copies HP tables from a separate subfolder and further nerfs Mirror Image.
+COPY ~%mod_folder%/sd/HPBARB.2da~ ~override~
+COPY ~%mod_folder%/sd/HPCONBON.2da~ ~override~
+COPY ~%mod_folder%/sd/HPMONK.2da~ ~override~
+COPY ~%mod_folder%/sd/HPPRS.2da~ ~override~
+COPY ~%mod_folder%/sd/HPROG.2da~ ~override~
+COPY ~%mod_folder%/sd/HPWAR.2da~ ~override~
+COPY ~%mod_folder%/sd/HPWIZ.2da~ ~override~
+COPY ~%mod_folder%/sd/SPWI212.spl~ ~override~
+
+// Divides all creatures' HP by 2
+COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
+	READ_BYTE "0x24" "currenthp"
+	  WRITE_BYTE 0x24 (%currenthp% / 2)
+
+// Planned additions to Sudden Death mode; not implemented
+/*
+	READ_BYTE "0x26" "armorclass"
+	  WRITE_BYTE 0x26 (%armorclass% - 10)
+//	READ_BYTE "0x46" "baseattackbonus"
+//	  WRITE_BYTE 0x46 (%baseattackbonus% + 5)
+	READ_BYTE "0x266" "str"
+	  WRITE_BYTE 0x266 (%str% + 10)
+	READ_BYTE "0x269" "dex"
+	  WRITE_BYTE 0x269 (%dex% + 10)
+	READ_BYTE "0x267" "int"
+	  WRITE_BYTE 0x267 (%int% + 10)
+	READ_BYTE "0x268" "wis"
+	  WRITE_BYTE 0x268 (%wis% + 10)
+	READ_BYTE "0x26b" "cha"
+	  WRITE_BYTE 0x26b (%cha% + 10)
+	READ_BYTE "0x52" "fortsave"
+	  WRITE_BYTE 0x52 (%fortsave% - 5)
+	READ_BYTE "0x53" "reflexsave"
+	  WRITE_BYTE 0x53 (%reflexsave% - 10)
+	READ_BYTE "0x54" "willsave"
+	  WRITE_BYTE 0x54 (%willsave% - 10)
+// make sure players also suffer -5 to saving throws
+// maybe apply -5 resistance to everything
+// maybe apply +5 to movement rate
+	READ_BYTE "0x55" "fire"
+	  WRITE_BYTE 0x55 (%fire% - 5)
+	READ_BYTE "0x56" "cold"
+	  WRITE_BYTE 0x56 (%cold% - 5)
+	READ_BYTE "0x57" "elec"
+	  WRITE_BYTE 0x57 (%elec% - 5)
+	READ_BYTE "0x58" "acid"
+	  WRITE_BYTE 0x58 (%acid% - 5)
+	READ_BYTE "0x59" "spell"
+	  WRITE_BYTE 0x59 (%spell% - 5)
+//	READ_BYTE "0x5a" ""
+//	  WRITE_BYTE 0x5a (%% - 5)
+//	READ_BYTE "0x5b" ""
+//	  WRITE_BYTE 0x5b (%% - 5)
+	READ_BYTE "0x5c" "slash"
+	  WRITE_BYTE 0x5c (%slash% - 5)
+	READ_BYTE "0x5d" "crush"
+	  WRITE_BYTE 0x5d (%crush% - 5)
+	READ_BYTE "0x5e" "pierce"
+	  WRITE_BYTE 0x5e (%pierce% - 5)
+	READ_BYTE "0x5f" "missile"
+	  WRITE_BYTE 0x5f (%missile% - 5)
+	READ_BYTE "0x60" "magic"
+	  WRITE_BYTE 0x60 (%magic% - 5)
+	READ_BYTE "0x67" "luck"
+	  WRITE_BYTE 0x67 (%luck% + 1)
+	  WRITE_BYTE 0x1e8 2 //spell focus
+	  WRITE_BYTE 0x1e9 2 //spell focus
+	  WRITE_BYTE 0x1ea 2 //spell focus
+	  WRITE_BYTE 0x1eb 2 //spell focus
+	  WRITE_BYTE 0x1ec 2 //spell penetration
+*/
+BUT_ONLY
+
+BEGIN "Better Racial Enemies for Rangers"
+
+// This component works by changing creature types to the types targeted by vanilla racial enemies. You can't create a new "Arachnid" racial enemy, but you can patch spiders to be coded as ettercaps and then change the string for the racial enemy choice. Note that these commands can't be copied out of order, or else one command might overwrite another and place a creature type in the wrong category.
+
+// turn arachnids into driders
+
+COPY_EXISTING_REGEXP ~.+\.cre~ ~override~
+    READ_BYTE "0x386" "race"
+    PATCH_IF ~%race%~ EQUALS ~116~ BEGIN
+        WRITE_BYTE 0x386 182
+    END
+BUT_ONLY_IF_IT_CHANGES
+COPY_EXISTING_REGEXP ~.+\.cre~ ~override~
+    READ_BYTE "0x386" "race"
+    PATCH_IF ~%race%~ EQUALS ~107~ BEGIN
+        WRITE_BYTE 0x386 182
+    END
+BUT_ONLY_IF_IT_CHANGES
+
+
+// turn giants into giants
+
+COPY_EXISTING_REGEXP ~.+\.cre~ ~override~
+    READ_BYTE "0x386" "race"
+    PATCH_IF ~%race%~ EQUALS ~189~ BEGIN
+        WRITE_BYTE 0x386 153
+    END
+BUT_ONLY_IF_IT_CHANGES
+COPY_EXISTING_REGEXP ~.+\.cre~ ~override~
+    READ_BYTE "0x386" "race"
+    PATCH_IF ~%race%~ EQUALS ~179~ BEGIN
+        WRITE_BYTE 0x386 153
+    END
+BUT_ONLY_IF_IT_CHANGES
+COPY_EXISTING_REGEXP ~.+\.cre~ ~override~
+    READ_BYTE "0x386" "race"
+    PATCH_IF ~%race%~ EQUALS ~113~ BEGIN
+        WRITE_BYTE 0x386 153
+    END
+BUT_ONLY_IF_IT_CHANGES
+
+
+// turn goblins into goblins
+
+COPY_EXISTING_REGEXP ~.+\.cre~ ~override~
+    READ_BYTE "0x386" "race"
+    PATCH_IF ~%race%~ EQUALS ~111~ BEGIN
+        WRITE_BYTE 0x386 155
+    END
+BUT_ONLY_IF_IT_CHANGES
+COPY_EXISTING_REGEXP ~.+\.cre~ ~override~
+    READ_BYTE "0x386" "race"
+    PATCH_IF ~%race%~ EQUALS ~160~ BEGIN
+        WRITE_BYTE 0x386 155
+    END
+BUT_ONLY_IF_IT_CHANGES
+COPY_EXISTING_REGEXP ~.+\.cre~ ~override~
+    READ_BYTE "0x386" "race"
+    PATCH_IF ~%race%~ EQUALS ~180~ BEGIN
+        WRITE_BYTE 0x386 155
+    END
+BUT_ONLY_IF_IT_CHANGES
+COPY_EXISTING_REGEXP ~.+\.cre~ ~override~
+    READ_BYTE "0x386" "race"
+    PATCH_IF ~%race%~ EQUALS ~160~ BEGIN
+        WRITE_BYTE 0x386 155
+    END
+BUT_ONLY_IF_IT_CHANGES
+
+
+// turn bugs into bugbears
+
+COPY_EXISTING_REGEXP ~.+\.cre~ ~override~
+    READ_BYTE "0x386" "race"
+    PATCH_IF ~%race%~ EQUALS ~150~ BEGIN
+        WRITE_BYTE 0x386 180
+    END
+BUT_ONLY_IF_IT_CHANGES
+COPY_EXISTING_REGEXP ~.+\.cre~ ~override~
+    READ_BYTE "0x386" "race"
+    PATCH_IF ~%race%~ EQUALS ~151~ BEGIN
+        WRITE_BYTE 0x386 180
+    END
+BUT_ONLY_IF_IT_CHANGES
+COPY_EXISTING_REGEXP ~.+\.cre~ ~override~
+    READ_BYTE "0x386" "race"
+    PATCH_IF ~%race%~ EQUALS ~104~ BEGIN
+        WRITE_BYTE 0x386 180
+    END
+BUT_ONLY_IF_IT_CHANGES
+COPY_EXISTING_REGEXP ~.+\.cre~ ~override~
+    READ_BYTE "0x386" "race"
+    PATCH_IF ~%race%~ EQUALS ~181~ BEGIN
+        WRITE_BYTE 0x386 180
+    END
+BUT_ONLY_IF_IT_CHANGES
+COPY_EXISTING_REGEXP ~.+\.cre~ ~override~
+    READ_BYTE "0x386" "race"
+    PATCH_IF ~%race%~ EQUALS ~101~ BEGIN
+        WRITE_BYTE 0x386 180
+    END
+BUT_ONLY_IF_IT_CHANGES
+
+// turn aberrations into harpies 
+
+COPY_EXISTING_REGEXP ~.+\.cre~ ~override~
+    READ_BYTE "0x386" "race"
+    PATCH_IF ~%race%~ EQUALS ~106~ BEGIN
+        WRITE_BYTE 0x386 174
+    END
+BUT_ONLY_IF_IT_CHANGES
+COPY_EXISTING_REGEXP ~.+\.cre~ ~override~
+    READ_BYTE "0x386" "race"
+    PATCH_IF ~%race%~ EQUALS ~192~ BEGIN
+        WRITE_BYTE 0x386 174
+    END
+BUT_ONLY_IF_IT_CHANGES
+COPY_EXISTING_REGEXP ~.+\.cre~ ~override~
+    READ_BYTE "0x386" "race"
+    PATCH_IF ~%race%~ EQUALS ~186~ BEGIN
+        WRITE_BYTE 0x386 174
+    END
+BUT_ONLY_IF_IT_CHANGES
+COPY_EXISTING_REGEXP ~.+\.cre~ ~override~
+    READ_BYTE "0x386" "race"
+    PATCH_IF ~%race%~ EQUALS ~193~ BEGIN
+        WRITE_BYTE 0x386 174
+    END
+BUT_ONLY_IF_IT_CHANGES
+
+
+// turn demons (tanar'ri) into hook horrors
+
+COPY_EXISTING_REGEXP ~.+\.cre~ ~override~
+    READ_BYTE "0x386" "race"
+    PATCH_IF ~%race%~ EQUALS ~164~ BEGIN
+        WRITE_BYTE 0x386 181
+    END
+BUT_ONLY_IF_IT_CHANGES
+
+
+
+// turn constructs into orcs
+
+COPY_EXISTING_REGEXP ~.+\.cre~ ~override~
+    READ_BYTE "0x386" "race"
+    PATCH_IF ~%race%~ EQUALS ~215~ BEGIN
+        WRITE_BYTE 0x386 160
+    END
+BUT_ONLY_IF_IT_CHANGES
+COPY_EXISTING_REGEXP ~.+\.cre~ ~override~
+    READ_BYTE "0x386" "race"
+    PATCH_IF ~%race%~ EQUALS ~190~ BEGIN
+        WRITE_BYTE 0x386 160
+    END
+BUT_ONLY_IF_IT_CHANGES
+COPY_EXISTING_REGEXP ~.+\.cre~ ~override~
+    READ_BYTE "0x386" "race"
+    PATCH_IF ~%race%~ EQUALS ~156~ BEGIN
+        WRITE_BYTE 0x386 160
+    END
+BUT_ONLY_IF_IT_CHANGES
+
+
+// turn animals into ogres. Note that animal is not a race; it's a general type.
+
+COPY_EXISTING_REGEXP ~.+\.cre~ ~override~
+    READ_BYTE "0x385" "generaltype"
+    PATCH_IF ~%generaltype%~ EQUALS ~2~ BEGIN
+        WRITE_BYTE 0x386 113
+    END
+BUT_ONLY_IF_IT_CHANGES
+
+// turn elementals into salamanders
+
+COPY_EXISTING_REGEXP ~.+\.cre~ ~override~
+    READ_BYTE "0x386" "race"
+    PATCH_IF ~%race%~ EQUALS ~175~ BEGIN
+        WRITE_BYTE 0x386 161
+    END
+BUT_ONLY_IF_IT_CHANGES
+COPY_EXISTING_REGEXP ~.+\.cre~ ~override~
+    READ_BYTE "0x386" "race"
+    PATCH_IF ~%race%~ EQUALS ~152~ BEGIN
+        WRITE_BYTE 0x386 161
+    END
+BUT_ONLY_IF_IT_CHANGES
+
+
+// turn humans into shapeshifters
+
+COPY_EXISTING_REGEXP ~.+\.cre~ ~override~
+    READ_BYTE "0x386" "race"
+    PATCH_IF ~%race%~ EQUALS ~1~ BEGIN
+        WRITE_BYTE 0x386 191
+    END
+BUT_ONLY_IF_IT_CHANGES
+
+
+// turn trolls into trolls
+// no change needed
+
+
+
+// turn yuan-ti into yuan-ti
+
+
+COPY_EXISTING_REGEXP ~.+\.cre~ ~override~
+    READ_BYTE "0x386" "race"
+    PATCH_IF ~%race%~ EQUALS ~157~ BEGIN
+        WRITE_BYTE 0x386 168
+    END
+BUT_ONLY_IF_IT_CHANGES
+
+// turn underdark aberrations into umber hulks -> lizard men
+
+COPY_EXISTING_REGEXP ~.+\.cre~ ~override~
+    READ_BYTE "0x386" "race"
+    PATCH_IF ~%race%~ EQUALS ~184~ BEGIN
+        WRITE_BYTE 0x386 157
+    END
+BUT_ONLY_IF_IT_CHANGES
+COPY_EXISTING_REGEXP ~.+\.cre~ ~override~
+    READ_BYTE "0x386" "race"
+    PATCH_IF ~%race%~ EQUALS ~177~ BEGIN
+        WRITE_BYTE 0x386 157
+    END
+BUT_ONLY_IF_IT_CHANGES
+COPY_EXISTING_REGEXP ~.+\.cre~ ~override~
+    READ_BYTE "0x386" "race"
+    PATCH_IF ~%race%~ EQUALS ~166~ BEGIN
+        WRITE_BYTE 0x386 157
+    END
+BUT_ONLY_IF_IT_CHANGES
+
+
+// turn undead into undead
+// no change needed
+
+
+// turn dragons into wyverns
+
+COPY_EXISTING_REGEXP ~.+\.cre~ ~override~
+    READ_BYTE "0x386" "race"
+    PATCH_IF ~%race%~ EQUALS ~187~ BEGIN
+        WRITE_BYTE 0x386 118
+    END
+BUT_ONLY_IF_IT_CHANGES
+COPY_EXISTING_REGEXP ~.+\.cre~ ~override~
+    READ_BYTE "0x386" "race"
+    PATCH_IF ~%race%~ EQUALS ~188~ BEGIN
+        WRITE_BYTE 0x386 118
+    END
+BUT_ONLY_IF_IT_CHANGES
+COPY_EXISTING_REGEXP ~.+\.cre~ ~override~
+    READ_BYTE "0x386" "race"
+    PATCH_IF ~%race%~ EQUALS ~154~ BEGIN
+        WRITE_BYTE 0x386 118
+    END
+BUT_ONLY_IF_IT_CHANGES
+
+
+
+// turn amorphous beings into umber hulks
+
+COPY_EXISTING_REGEXP ~.+\.cre~ ~override~
+    READ_BYTE "0x386" "race"
+    PATCH_IF ~%race%~ EQUALS ~159~ BEGIN
+        WRITE_BYTE 0x386 166
+    END
+BUT_ONLY_IF_IT_CHANGES
+COPY_EXISTING_REGEXP ~.+\.cre~ ~override~
+    READ_BYTE "0x386" "race"
+    PATCH_IF ~%race%~ EQUALS ~119~ BEGIN
+        WRITE_BYTE 0x386 166
+    END
+BUT_ONLY_IF_IT_CHANGES
+COPY_EXISTING_REGEXP ~.+\.cre~ ~override~
+    READ_BYTE "0x386" "race"
+    PATCH_IF ~%race%~ EQUALS ~176~ BEGIN
+        WRITE_BYTE 0x386 166
+    END
+BUT_ONLY_IF_IT_CHANGES
+
+// create new strings for racial enemies so rangers know which group they're choosing
+
+STRING_SET 3280 ~Goblinoids~
+STRING_SET 3292 ~Goblins are extremely common in many non-human areas of Faerun.  The foundation of the "goblinoid" races, many goblins typify everything that humans associate with their cousins: stupidity, greed, and wickedness.  Goblins are not very technologically advanced.  As a result, they frequently raid human settlements for food and other provisions.
+
+Other variants of the goblin race include hobgoblins, bugbears, and orcs.~
+
+STRING_SET 28367 ~Giant Insects~
+STRING_SET 8032 ~With thick shells, deadly pincers, and even venomous fangs, giant insects are dangerous vermin that frequently cluster into swarms. Beetles, remorhazes, hook horrors, and carrion crawlers all constitute giant insects.~
+
+STRING_SET 37606 ~Demons/Devils~
+STRING_SET 37608 ~Fiendish denizens of the Abyss or the Nine Hells, demons and devils are locked in a neverending conflict called the Blood War, each dedicated to the other side's destructions. Both the baatezu and the tanar'ri are cruel, malevolent beings with magical abilities beyond the ken of mortals. Powerful mages sometimes bind demons or devils to their will, but unless there is a conduit to the Prime Material Plane, most "Primes" never encounter a fiend in the flesh.~
+
+STRING_SET 37616 ~Aberrations~
+STRING_SET 37618 ~Aberrations are mysterious, little-understood monsters seemingly alien to their own environment. With bizarre abilities and unknown origin, aberrations are rare but dangerous creatures. Doppelgangers, feyrs, will o' wisps, chimeras, otyughs, and harpies all constitute aberrations.~
+
+STRING_SET 37607 ~Giant Arachnids~
+STRING_SET 41079 ~Giant arachnids include both lesser vermin such as spiders and ettercaps as well as mutated variants such as driders, the unnatural union of a dark elf and a spider.  Almost always created as a punishment from the drow goddess Lolth, driders are bloodthirsty outcasts that scuttle through the Underdark scavenging for their next meal.  Though driders do possess the ability to shoot webs from their spider bodies, they also typically retain the class abilities they had from their dark elf past.~
+
+
+STRING_SET 3271 ~Constructs~
+STRING_SET 3282 ~Constructs~
+STRING_SET 3294 ~Constructs are inanimate objects, sometimes made animate through magical means. Anything from a moldy wooden barrel to a towering iron golem is considered a construct. Some rangers may target bridges, mines, and fortifications that pose a threat to nature, and learn how to deconstruct these creations that cannot be destroyed through conventional means.~
+
+STRING_SET 3279 ~Giants~
+STRING_SET 61 ~Giants~
+STRING_SET 3291 ~Giants are well known throughout the Frozen North.  Huge and powerful, giants are extremely dangerous foes.  They use their strength and mass to fell opponents with a single blow.  The most common giant race spoken of in Icewind Dale is the mighty Frost Giant.  Minotaurs, yetis, and ogres also constitute giants.~
+
+STRING_SET 3275 ~Underdark Aberrations~
+STRING_SET 3281 ~Underdark Aberrations~
+STRING_SET 3293 ~The Underdark is home to many strange and powerful creatures, including bizarre aberrations such as beholders, mind flayers, and umber hulks. Beholders are known for their powerful rays, while mind flayers are infamous for using their mental powers to enslave less intelligent races. Mind flayers often keep umber hulks as guards. Umber hulks are huge, incredibly powerful monsters with thick, scaly hides, sharp mandibles, and two sets of eyes, often kept as guards by mind flayers. The most debilitating power of the umber hulk is its ability to cause confusion with its gaze.~
+
+STRING_SET 15975 ~Animals~
+STRING_SET 15998 ~Part of a ranger's job is dealing with wild animals, and when nonviolent means fail, a ranger may be forced to slay a dangerous or diseased animal to protect others in the area. Bears, dogs, wolves, worgs, lions, leopards, panthers, and boars all constitute wild animals.~
+
+STRING_SET 3272 ~Elementals~
+STRING_SET 3290 ~Elementals~
+STRING_SET 3295 ~Elementals are beings from the Elemental Planes of Fire, Water, Earth, and Air. Vaguely humanoid in shape but utterly alien in intelligence, elementals seldom grace the Prime Material Plane unless summoned through magical means. If not constrained, they can pose a serious threat to the environment and civilization. Salamanders from the Elemental Plane of Fire or the Paraelemental Plane of Ice also constitute elementals.~
+
+
+// STRING_SET 3276 ~Trolls~
+// STRING_SET 3278 ~Trolls~
+// STRING_SET 3299 ~Some might argue that trolls are the natural enemy of most rangers.  Inherently violent and aggressive, trolls frequently attack with little or no provocation.  They attack humans and small human settlements regularly, destroying everything in their path.  Trolls are not only feared for their large, powerful limbs, but for their ability to rapidly regenerate most wounds inflicted on them.  Experienced adventurers carry fire and acid with them when expecting trolls.~
+
+STRING_SET 3277 ~Amorphous Beings~
+STRING_SET 3289 ~Amorphous Beings~
+STRING_SET 3300 ~Some creatures possess neither skeleton nor exoskeleton and defy typical laws of body structure. These amorphous beings can range from slimes and jellies to myconids and even the rare shambling mound. Slimes and jellies are often inherently toxic, while myconids often defend their territory with hallucinogenic spores that render their victims confused or even catatonic.~
+
+STRING_SET 879 ~Yuan-ti/Lizard Men~
+STRING_SET 3301 ~These creatures are rare, but extremely deadly opponents.  Yuan-ti are an offshoot of a race which ruled Faerun long before humanoids took control.  With snakelike bodies and vaguely human limbs, yuan-ti hide in secret vaults until the time is right to strike out at their enemies.  Yuan-ti are extremely intelligent foes with very sophisticated magical talents.  They are known for their cunning minds, poisonous traps, and vile religious rituals.
+
+Typically only found in tropical regions, Lizard Men are primitive bipeds with a well developed social structure and advanced religious beliefs.  Lizard Men tribes are typically led by a Lizard King who is significantly larger and more powerful than his kin.  Lizard Men do not come into conflict with humans often, but their fondness for the taste of human flesh often causes problems.~
+
+
+STRING_SET 37617 ~Dragons~
+STRING_SET 37619 ~Dragons are rightly feared as some of the most powerful creatures to walk the face of Faerun. While metallic dragons are nearly always good-aligned, chromatic dragons are notoriously violent and greedy. The most common dragon in Icewind Dale is the white dragon.
+
+Often mistaken for young dragons, wyverns are two-legged flying poisonous monsters. Though they have a limited intellect, they are cunning creatures with an aggressive nature.~
+
+STRING_SET 37605 ~Humans~
+STRING_SET 37609 ~While most humans live in relative harmony under nature's canopy, some humans pose a dangerous threat to its very existence. For a ranger, defending nature sometimes involves fighting against one's own kith and kin. The danger can be as mild as overfishing, or as severe as a reckless mage warping the environment for his own twisted ends. The ranger's involvement, likewise, may vary from quiet diplomacy to violent intervention, as the case may warrant.
+
+Choosing Humans as a racial enemy does not grant equivalent bonuses to demihumans such as dwarves, elves, gnomes, halflings, half-orcs, or half-elves, as these races seldom pose a direct threat to nature.~
+
+// Some creatures have no race and must be patched individually, by name, since WeiDU can't read the race they're supposed to be.
+//bugs
+COPY_EXISTING ~00SCRD.cre~ ~override~
+        WRITE_BYTE 0x386 180
+BUT_ONLY_IF_IT_CHANGES
+COPY_EXISTING ~00SDREM.cre~ ~override~
+        WRITE_BYTE 0x386 180
+BUT_ONLY_IF_IT_CHANGES
+COPY_EXISTING ~00SREM.cre~ ~override~
+        WRITE_BYTE 0x386 180
+BUT_ONLY_IF_IT_CHANGES
+COPY_EXISTING ~00SSHREM.cre~ ~override~
+        WRITE_BYTE 0x386 180
+BUT_ONLY_IF_IT_CHANGES
+COPY_EXISTING ~00SSREM.cre~ ~override~
+        WRITE_BYTE 0x386 180
+BUT_ONLY_IF_IT_CHANGES
+COPY_EXISTING ~41SCRD.cre~ ~override~
+        WRITE_BYTE 0x386 180
+BUT_ONLY_IF_IT_CHANGES
+COPY_EXISTING ~41SDREM.cre~ ~override~
+        WRITE_BYTE 0x386 180
+BUT_ONLY_IF_IT_CHANGES
+COPY_EXISTING ~41SREM.cre~ ~override~
+        WRITE_BYTE 0x386 180
+BUT_ONLY_IF_IT_CHANGES
+COPY_EXISTING ~41SSHREM.cre~ ~override~
+        WRITE_BYTE 0x386 180
+BUT_ONLY_IF_IT_CHANGES
+COPY_EXISTING ~41SSREM.cre~ ~override~
+        WRITE_BYTE 0x386 180
+BUT_ONLY_IF_IT_CHANGES
+
+//aberrations
+COPY_EXISTING ~00SDHRP.cre~ ~override~
+        WRITE_BYTE 0x386 174
+BUT_ONLY_IF_IT_CHANGES
+COPY_EXISTING ~00SGFYR.cre~ ~override~
+        WRITE_BYTE 0x386 174
+BUT_ONLY_IF_IT_CHANGES
+COPY_EXISTING ~00SOTY.cre~ ~override~
+        WRITE_BYTE 0x386 174
+BUT_ONLY_IF_IT_CHANGES
+COPY_EXISTING ~00SSHHRP.cre~ ~override~
+        WRITE_BYTE 0x386 174
+BUT_ONLY_IF_IT_CHANGES
+COPY_EXISTING ~00SSHRP.cre~ ~override~
+        WRITE_BYTE 0x386 174
+BUT_ONLY_IF_IT_CHANGES
+COPY_EXISTING ~41SDHRP.cre~ ~override~
+        WRITE_BYTE 0x386 174
+BUT_ONLY_IF_IT_CHANGES
+COPY_EXISTING ~41SGFYR.cre~ ~override~
+        WRITE_BYTE 0x386 174
+BUT_ONLY_IF_IT_CHANGES
+COPY_EXISTING ~41SOTY.cre~ ~override~
+        WRITE_BYTE 0x386 174
+BUT_ONLY_IF_IT_CHANGES
+COPY_EXISTING ~41SSHHRP.cre~ ~override~
+        WRITE_BYTE 0x386 174
+BUT_ONLY_IF_IT_CHANGES
+COPY_EXISTING ~41SSHRP.cre~ ~override~
+        WRITE_BYTE 0x386 174
+BUT_ONLY_IF_IT_CHANGES
+COPY_EXISTING ~61FEYR.cre~ ~override~
+        WRITE_BYTE 0x386 174
+BUT_ONLY_IF_IT_CHANGES
+COPY_EXISTING ~62FEYR.cre~ ~override~
+        WRITE_BYTE 0x386 174
+BUT_ONLY_IF_IT_CHANGES
+COPY_EXISTING ~62FEYR2.cre~ ~override~
+        WRITE_BYTE 0x386 174
+BUT_ONLY_IF_IT_CHANGES
+COPY_EXISTING ~62FEYR3.cre~ ~override~
+        WRITE_BYTE 0x386 174
+BUT_ONLY_IF_IT_CHANGES
+COPY_EXISTING ~62GFYR.cre~ ~override~
+        WRITE_BYTE 0x386 174
+BUT_ONLY_IF_IT_CHANGES
+COPY_EXISTING ~62GFYR2.cre~ ~override~
+        WRITE_BYTE 0x386 174
+BUT_ONLY_IF_IT_CHANGES
+COPY_EXISTING ~62GFYR3.cre~ ~override~
+        WRITE_BYTE 0x386 174
+BUT_ONLY_IF_IT_CHANGES
+COPY_EXISTING ~67FEYR.cre~ ~override~
+        WRITE_BYTE 0x386 174
+BUT_ONLY_IF_IT_CHANGES
+COPY_EXISTING ~67GFYR.cre~ ~override~
+        WRITE_BYTE 0x386 174
+BUT_ONLY_IF_IT_CHANGES
+
+
+//constructs
+COPY_EXISTING ~30DRUM1.cre~ ~override~
+        WRITE_BYTE 0x386 160
+BUT_ONLY_IF_IT_CHANGES
+COPY_EXISTING ~30DRUM2.cre~ ~override~
+        WRITE_BYTE 0x386 160
+BUT_ONLY_IF_IT_CHANGES
+COPY_EXISTING ~30DRUM3.cre~ ~override~
+        WRITE_BYTE 0x386 160
+BUT_ONLY_IF_IT_CHANGES
+COPY_EXISTING ~30DRUM4.cre~ ~override~
+        WRITE_BYTE 0x386 160
+BUT_ONLY_IF_IT_CHANGES
+COPY_EXISTING ~30DRUM5.cre~ ~override~
+        WRITE_BYTE 0x386 160
+BUT_ONLY_IF_IT_CHANGES
+COPY_EXISTING ~30DRUM6.cre~ ~override~
+        WRITE_BYTE 0x386 160
+BUT_ONLY_IF_IT_CHANGES
+COPY_EXISTING ~30DRUM7.cre~ ~override~
+        WRITE_BYTE 0x386 160
+BUT_ONLY_IF_IT_CHANGES
+COPY_EXISTING ~40BENEST.cre~ ~override~
+        WRITE_BYTE 0x386 160
+BUT_ONLY_IF_IT_CHANGES
+COPY_EXISTING ~61STOSLB.cre~ ~override~
+        WRITE_BYTE 0x386 160
+BUT_ONLY_IF_IT_CHANGES
+
+//demons
+COPY_EXISTING ~63NABI.cre~ ~override~
+        WRITE_BYTE 0x386 164
+BUT_ONLY_IF_IT_CHANGES
+
+// Changing race categories affects certain weapons and items which deal extra damage, or cannot affect, creatures of a certain type. This replaces those items and spells with adjusted versions that should target the right categories.
+COPY ~%mod_folder%/race/11AX1HKS.itm~ ~override~
+  SAY NAME1 @865
+  SAY NAME2 @865
+  SAY DESC @866
+COPY ~%mod_folder%/race/11HFAXKS.itm~ ~override~
+  SAY NAME1 @867
+  SAY NAME2 @867
+  SAY DESC @868
+COPY ~%mod_folder%/race/USSTSL02.itm~ ~override~
+COPY ~%mod_folder%/race/USSTHARM.itm~ ~override~
+COPY ~%mod_folder%/race/USSTDEST.itm~ ~override~
+COPY ~%mod_folder%/race/SPPR510.spl~ ~override~
+  SAY NAME1 @56
+  SAY NAME2 @56
+  SAY UNIDENTIFIED_DESC @57
+  SAY IDENTIFIED_DESC @57
+COPY ~%mod_folder%/race/SPWI619.spl~ ~override~
+  SAY NAME1 @554
+  SAY NAME2 @554
+  SAY UNIDENTIFIED_DESC @555
+  SAY IDENTIFIED_DESC @555
+COPY ~%mod_folder%/race/SMCUDGE.itm~ ~override~
+COPY ~%mod_folder%/race/SPPR715.spl~ ~override~
+  SAY NAME1 @60
+  SAY NAME2 @60
+  SAY UNIDENTIFIED_DESC @61
+  SAY IDENTIFIED_DESC @61
+COPY ~%mod_folder%/race/SPWI207.spl~ ~override~
+  SAY NAME1 @744
+  SAY NAME2 @744
+  SAY UNIDENTIFIED_DESC @745
+  SAY IDENTIFIED_DESC @745
+COPY ~%mod_folder%/race/SPPR113.spl~ ~override~
+  SAY NAME1 @833
+  SAY NAME2 @833
+  SAY UNIDENTIFIED_DESC @834
+  SAY IDENTIFIED_DESC @834
+COPY ~%mod_folder%/race/SPPR707.spl~ ~override~
+  SAY NAME1 @591
+  SAY NAME2 @591
+  SAY UNIDENTIFIED_DESC @592
+  SAY IDENTIFIED_DESC @592
+COPY ~%mod_folder%/race/SPWI711.spl~ ~override~
+  SAY NAME1 @567
+  SAY NAME2 @567
+  SAY UNIDENTIFIED_DESC @568
+  SAY IDENTIFIED_DESC @568
+COPY ~%mod_folder%/race/SPWI423.spl~ ~override~
+  SAY NAME1 @104
+  SAY NAME2 @104
+  SAY UNIDENTIFIED_DESC @105
+  SAY IDENTIFIED_DESC @105
+COPY ~%mod_folder%/race/SPPR417.spl~ ~override~
+COPY ~%mod_folder%/race/SPPR405.spl~ ~override~
+COPY ~%mod_folder%/race/SPWI911.spl~ ~override~
+COPY ~%mod_folder%/race/SPWI507.spl~ ~override~
+  SAY NAME1 @106
+  SAY NAME2 @106
+  SAY UNIDENTIFIED_DESC @107
+  SAY IDENTIFIED_DESC @107
+
+BEGIN "Cosmetic Tweaks"
+
+//There will be lots of cosmetic tweaks, but for now, this just expands the number of colors people can choose for characters' hair and skin. All races get access to the same colors.
+
+COPY ~%mod_folder%/tables/HAIRAASM.2da~ ~override~
+COPY ~%mod_folder%/tables/HAIRDARK.2da~ ~override~
+COPY ~%mod_folder%/tables/HAIRGOLD.2da~ ~override~
+COPY ~%mod_folder%/tables/HAIRGRAY.2da~ ~override~
+COPY ~%mod_folder%/tables/HAIRNORM.2da~ ~override~
+COPY ~%mod_folder%/tables/HAIRTIEF.2da~ ~override~
+COPY ~%mod_folder%/tables/HAIRWOOD.2da~ ~override~
+COPY ~%mod_folder%/tables/SKINAASM.2da~ ~override~
+COPY ~%mod_folder%/tables/SKINDARK.2da~ ~override~
+COPY ~%mod_folder%/tables/SKINGOLD.2da~ ~override~
+COPY ~%mod_folder%/tables/SKINGRAY.2da~ ~override~
+COPY ~%mod_folder%/tables/SKINNORM.2da~ ~override~
+COPY ~%mod_folder%/tables/SKINTIEF.2da~ ~override~
+COPY ~%mod_folder%/tables/SKINWOOD.2da~ ~override~
+
+BEGIN "Xuki Intimidation Option"
+
+//This currently just replaces Xuki's dialogue. I've added an option to intimidate her if you have the right stats and you choose the right dialogue options, but there's no trigger to make her flee; she just gives you her equipment.
+COMPILE ~%mod_folder%/dlg/21XUKI.d~
+
+BEGIN "Nonviolent Option for Isair and Madae"
+
+//This allows you to argue, intimidate, and bluff your way through the final fight, stalling for time until the mythal comes down. There are probably multiple different triggers across several scripts that we would need to duplicate in order to (1) get Orrick to appear in the main room instead of the side room by the pool so he can speak to Isair and Madae (2) skip the transition to the second half of the fight by the pool (3) maybe remove the various critters who appear before the fight, so they don't get in the way when the party is trying to flee (4) unlock the south door and let the party flee to the exit as if they had fought both sections of the final fight.
+COMPILE ~%mod_folder%/dlg/61ISAIR.d~ ~%mod_folder%/dlg/60MADAE.d~
+
+BEGIN "Alternative Dragon's Eye"
+
+COMPILE ~%mod_folder%/dlg/USSTLPP.d~ ~%mod_folder%/dlg/USSTLPL.d~ ~%mod_folder%/dlg/USSTLPJ.d~ ~%mod_folder%/dlg/USSTLPI.d~ ~%mod_folder%/dlg/USSTLPV.d~
+*/

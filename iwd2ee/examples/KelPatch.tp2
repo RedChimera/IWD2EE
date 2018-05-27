@@ -1,0 +1,98 @@
+// Problem:  After playing a game with some mod character, and saving him, then re-installing mods in a different order
+//           and re-loading the save, results in a messed-up character, with an incorrect Name, Bio, and Sounds.
+//           How to fix it?
+// Solution: You need to write a fix-it script, something like the included "KFIX.BCS". *Replace* CutSceneId("J#Kelsey")
+//           with your own character's name, such as "Tashia", or "Solaufein", as well as change the name of the
+//           script to something else (for example <YourChar>Fix.BCS), but don't edit other entries in the .BCS file.
+//           This script is originally written by Michael "Arian" Lyashenko for Tashia NPC Mod, and later edited to
+//           similarly fix Kelsey NPC Mod, so direct your questions to <sentinelsx@sympatico.ca>.
+
+BACKUP ~KelPatch\Backup~  // Always include Backup folder instructiong WeiDU where to store files
+                          // Note that originally the "KFIX.BCS" file is located in "KelPatch" folder.
+AUTHOR ~your@email.com~   // AUTHOR entry tells WeiDU which email to display in case of an error
+
+BEGIN ~Kelsey Fix-It Script Patch~  // Name of your mod, in this case it is a fix-it patch
+
+COPY ~KelPatch\kfix.bcs~ ~override\kfix.bcs~ // This copies "KFIX.BCS" file from "KelPatch" folder to "Override"
+  REPLACE ~70100~ ~Kelsey~  // And here the REPLACEs begin. Each 701## number in the script has to be updated.
+                            // This ~Kelsey~ entry should be your NPC's name. 
+  // Note the format: ~Text to say if sound is turned off~ [SOUNDTOPLAY]
+  // If you have no sound to play, simply don't include the [SOUND] part at all. Only the ~Text~
+  // Please refer to "KFIX.BCS" file to see what each number stands for
+  REPLACE ~70101~ ~Hello! My name is Kelsey. I've been hoping we would meet before long. I thought I saw you in the middle of that firestorm in the Promenade...anyone who can walk away from a pack of Shadow Thieves and Cowled Wizards must be worth knowing, I figure.~ [FWKLSY00]
+  REPLACE ~70102~ ~Sorry, this is out of my league!~ [FWKLSY01]
+  REPLACE ~70103~ ~We should really be proud of what we're doing.~ [FWKLSY02]
+  REPLACE ~70104~ ~Miscreants are a dime a dozen. I thought we would set our standards a little higher.~ [FWKLSY03]
+  REPLACE ~70105~ ~You really seem to have a cruel streak in you.~ [FWKLSY04]
+  REPLACE ~70106~ ~This is just too much...I can't be associated with you any longer.~ [FWKLSY05]
+  REPLACE ~70107~ ~If only the family could see me now...~ [FWKLSY06]
+  REPLACE ~70108~ ~I have just about had it. Let's put up our feet and rest a while.~ [FWKLSY07]
+  REPLACE ~70109~ ~I could find us more action at a swap meet. Let's get moving!~ [FWKLSY08]
+  REPLACE ~70110~ ~Say good night!~ [FWKLSY09]
+  REPLACE ~70111~ ~Watch out, my magic is stronger than you think!~ [FWKLSY10]
+  REPLACE ~70112~ ~You'll never see it coming!~ [FWKLSY11]
+  REPLACE ~70113~ ~You have miscalculated!~ [FWKLSY12]
+  REPLACE ~70114~ ~No more! No more!~ [FWKLSY13]
+  REPLACE ~70115~ ~~ [FWKLSY18] // I do not generally recommend leaving ~text~-empty sounds.
+  REPLACE ~70116~ ~~ [FWKLSY19]
+  REPLACE ~70117~ ~I hope I've got a healing potion somewhere...help...~ [FWKLSY20]
+  REPLACE ~70118~ ~If the forest could talk...I wonder if it would complain about the bugs?~ [FWKLSY21]
+  REPLACE ~70119~ ~Love them or hate them, cities are good for business.~ [FWKLSY22]
+  REPLACE ~70120~ ~It's at times like this I wish I knew how to cast Infravision.~ [FWKLSY23]
+  REPLACE ~70121~ ~Nice day, isn't it?~ [FWKLSY24]
+  REPLACE ~70122~ ~Anybody know any good ghost stories? Keep them to yourself!~ [FWKLSY25]
+  REPLACE ~70123~ ~Ready, boss.~ [FWKLSY26]
+  REPLACE ~70124~ ~What do you need?~ [FWKLSY27]
+  REPLACE ~70125~ ~Yeah?~ [FWKLSY28]
+  REPLACE ~70126~ ~Just tell me once.~ [FWKLSY29]
+  REPLACE ~70127~ ~Give the word.~ [FWKLSY30]
+  REPLACE ~70128~ ~Point the way.~ [FWKLSY31]
+  REPLACE ~70129~ ~I'm on the job.~ [FWKLSY32]
+  REPLACE ~70130~ ~Got it, boss.~ [FWKLSY33]
+  REPLACE ~70131~ ~You won't need to double-check my work.~ [FWKLSY34]
+  REPLACE ~70132~ ~It's done.~ [FWKLSY35]
+  REPLACE ~70133~ ~On your orders.~ [FWKLSY36]
+  REPLACE ~70134~ ~Watch me work.~ [FWKLSY37]
+  REPLACE ~70135~ ~I heard you the first time.~ [FWKLSY38]
+  REPLACE ~70136~ ~Kelsey's your man.~ [FWKLSY39]
+  REPLACE ~70137~ ~Ready for action.~ [FWKLSY40]
+  REPLACE ~70138~ ~That'll teach you!~ [FWKLSY41]
+  REPLACE ~70139~ ~Whoops!~ [FWKLSY42]
+  REPLACE ~70140~ ~I'm not getting through!~ [FWKLSY43]
+  REPLACE ~70141~ ~I'm a sorcerer, not a walking Bag of Holding. I had to drop that.~ [FWKLSY44]
+  REPLACE ~70142~ ~I can't believe I'm stealing from others, but I did it.~ [FWKLSY45]
+  REPLACE ~70143~ ~Sneaky Kelsey's out of sight.~ [FWKLSY46]
+  REPLACE ~70144~ ~Damn! That's a wasted spell!~ [FWKLSY47]
+  REPLACE ~70145~ ~Don't step anywhere near there.~ [FWKLSY48]
+  // And finally, update the character's BIO. Note the lack of sound here.
+  REPLACE ~70146~ ~KELSEY sounds for all the world like a young man who wants something he will never truly be able to have: a normal life. Born into a well-to-do trading company that does healthy business throughout most of the civilized Realms, Kelsey thought his life would take a relatively easy path, until he discovered in his mid-teens that he had innate magical powers. From what you can make out, relations with his family have become somewhat strained, but the remote business expeditions they sent him on as a result allowed him the opportunity to meet a few other sorcerers like himself as well as spend short periods of time in minor adventuring companies, and he learned to shape and develop his talents. Still, Kelsey is quite clearly troubled at being a mage by birth in a land where magic is greatly frowned upon, and at the same time he seems to feel unworthy of his obvious gifts.~
+
+// Now that the script patching is complete, all that's left is to trigger the execution of it from the damaged NPC.
+// For Kelsey v.1.02, which did not have Player-started interaction (when you force a dialog with Kelsey by talking to
+// him, only to get "Kelsey has nothing to say to you.", you would have to add a quick patch to the dialog file, which
+// would allow you to talk to your NPC.  The file "KelPatch.D" below has the following entry:
+//===========================
+//BEGIN ~KelPatch~
+//
+//APPEND ~J#KLSYJ~  // Appends an entry to NPC's "J" dialog file (inter-party banter)
+//  IF ~True()~ THEN BEGIN add1
+//    SAY ~Insert Something To Say here.~  // This is what your NPC will say when you try to talk to him/her
+//    IF ~~ THEN DO ~StartCutScene("kfix")~ EXIT // This gives no response choice, only End Dialog, which on its own
+//                                               // triggers the execution of the fix-it script which we patched above,
+//                                               // restoring name, bio and sounds of our damaged NPC.
+//  END
+//END
+//===========================
+// That's it. All that's left is to compile the .D file above
+
+COMPILE ~KelPatch\KelPatch.d~
+USING // No translation file
+
+// Now you're done. If you were simply editing, you should have the following files in your Baldur's Gate 2 Folder now:
+// File:   KelPatch.tp2        -- This file
+// Folder: KelPatch            -- Folder where your script and mini-patch ".d" file is located
+// File:   KelPatch\KelPatch.d -- The KelPatch exampled above
+// File:   KelPatch\KFIX.BCS   -- The Fix-it script
+// Folder: KelPatch\Backup     -- Backup folder which is pointed by BACKUP entry in the beginning of this file
+// Now if you run "WeiDU.exe KelPatch.tp2", it should compile your fix-it patch. Alternatively, rename WeiDU.exe
+// to "Setup-KelPatch.exe" and run it, to achieve the same effet.

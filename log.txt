@@ -1,0 +1,12 @@
+2018-05-27
+
+- Continued reorganizing: tra files for spell rev
+- Bug fix: SPWI705 (PW:S) and SPWI706 (PSpray) have same tra reference Fixed
+
+2018-05-25
+
+- Continued Reorganizing (re-tra spell revisions!)
+
+2018-05-24
+
+- Began reorganization (continue from Line 859 inc Class_rebalancing.tra)

@@ -1,0 +1,10 @@
+BACKUP ~backup~
+
+AUTHOR ~weimer@cs.berkeley.edu~
+
+AUTO_TRA ~tra~
+
+BEGIN ~AUTO_TRA test!~
+
+COMPILE ~a.d~        
+        ~b.d~        

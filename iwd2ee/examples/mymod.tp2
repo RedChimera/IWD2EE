@@ -1,0 +1,237 @@
+/* 
+ * Example TP file for a MOD
+ * 
+ * Tue Mar 12 11:13:01  2002 - created
+ *
+ * Try me out:
+ *
+ *   C:\> weidu mymod.tp2
+ */
+
+/* First, set the backup directory. Any time we would overwrite a file for
+ * any reason we will first save a copy of it to this directory. Uninstall
+ * information is also stored here. */
+BACKUP ~mymod/backup~
+
+/* Who wrote this mod? If there are any errors during install, the user
+ * will be asked to send email to this person. */
+AUTHOR ~weimer@cs.berkeley.edu~
+
+/* AUTO_TA causes all COMPILE-USING directives to look in the given
+ * directory (with %s replaced by the LANGUAGE directory from below) for
+ * TRA files that match the given D file's name. See COMPILE-USING below
+ * for how this works out. */ 
+AUTO_TRA ~mymod/%s~
+
+/* Continue on even if the following files are not present. */
+ALLOW_MISSING ~nothere.dlg~ // maybe this one only appears in ToB
+              ~missing.bcs~
+
+/* 
+ * First, list all available languages. This is optional.
+ * If more than one is given, the user will be asked to pick. 
+ *
+ * Syntax: 
+ * LANGUAGE ~name~ ~directory_name~ ~trans_file_for_this_tp_file~
+ */
+LANGUAGE ~American English~ ~american~ ~mymod/american/setup.tra~
+LANGUAGE ~Italian~          ~italian~  ~mymod/italian/setup.tra~
+
+/* 
+ * A MOD may have many packages. The user picks which ones will be
+ * installed.
+ *
+ * A package description starts with BEGIN ~package name~ and ends with
+ * a list of actions. 
+ */
+BEGIN @1        // here the package name comes from the setup.tra file 
+
+
+/* Another action is to copy a file from one place to another. 
+ * You may list as many ~source~ ~dest~ pairs as you like after the
+ * keyword COPY. */
+COPY ~mymod/foozle.bcs~         ~override/foozle.bcs~
+/* You could also copy an entire directory worth of files:
+ * COPY ~mymod/somedir~         ~override~
+ */
+
+/* Uncomment this COPY if you want to see what it's like to have a failure
+ * in the middle of installing something. WeiDU should remove
+ * override/foozle.bcs correctly.  
+ * COPY ~NOT_FOUND~       ~override/NOT_FOUND~
+ */
+
+/* You may patch files with strings as they are being copied. After giving
+ * a list of files to copy, give a list of patch instructions. Each patch
+ * instruction is of the form SAY PLACE ~new string~. If string is 
+ * totally new it will be added to dialog.tlk, etc. In any event, 
+ * all files listed after copy will be patched to point to that string
+ * reference. Here we fix up the name of foozle.cre as we copy it over. */
+COPY ~mymod/foozle.cre~         ~override/foozle.cre~
+  SAY NAME1 ~My Foozle~
+  SAY NAME2 ~My Foozle~
+
+/* You may replace ASCII text numbers in BCS files (or any other text file) 
+ * with new string references as they are copied. For example, assuming you
+ * wrote ex_number.bcs with something like DisplayHeadString(Myself,999999)
+ * it would be changed to DisplayHeadString(Myself,NewRef) where NewRef
+ * points to whatever string you indicate. Here we change it to Acid Arrows
+ * (which will already be in DIALOG.TLK), but you can use a completely new
+ * string as well. You may give as many REPLACEs as you like and they 
+ * all apply to every file copied in this action. */
+COPY ~mymod/ex_number.bcs~      ~override/ex_number.bcs~
+  REPLACE ~999999~              ~Acid Arrows~
+
+/* You may compile D files into DLG files with the COMPILE-USING action. 
+ * The first argument is a list of D file to process. The second
+ * argument is a list of paths to TRA files, all of which will be used in
+ * compiling all of the D files. All occurrences of %s in the paths will be
+ * replaced by the directory name of the language the user picked above.
+ * Output DLG files will be placed in override. */
+COMPILE ~mymod/foozle.d~        
+/* Since we said AUTO_TRA "mymod/%s" above, it is as if we had included: 
+USING   ~mymod/%s/foozle.tra~ */
+
+/* You may conditionally append text to text (e.g., 2Da) file using the
+ * APPEND-IF-UNLESS action. The first argument is the file to append to,
+ * the second is the string to append. Then comes a list of constraints
+ * of the form "IF ~string~" or "UNLESS ~string~". The append will happen 
+ * if all of the IF-strings are already in the file and none of the
+ * UNLESS-strings are already in the file. An empty list of constraints is
+ * true. The IF-UNLESS strings are actually regular expressions, but if you
+ * don't know what those are don't worry. 
+ *
+ * Here we add FOOZLE to PDIALOG.2DA. We're being extra cautious since this
+ * file changes between SOA and TOB. In SOA it has 4 columns, in TOB it has
+ * more. */
+APPEND ~pdialog.2da~ // SOA append
+~FOOZLE         FOOZLE               FOOZLE              FOOZLE~
+UNLESS ~FOOZLE~ // somehow we are already there, skip it
+UNLESS ~25POST~ // means TOB is installed, skip it
+
+APPEND ~pdialog.2da~ // TOB append
+~FOOZLE    FOOZLE              FOOZLE              FOOZLE           FOOZLE           FOOZLE                  FOOZLE                  FOOZLE~
+UNLESS ~FOOZLE~ // we are already there, skip it
+IF     ~25POST~ // requires TOB to be installed
+
+/* You may append or prepend your scripts to existing scripts. In this
+ * example we put the commands from mymod/fragment.bcs on top of baldur.bcs
+ * and at the bottom of wtasight.bcs. */
+EXTEND_TOP    ~baldur.bcs~   ~mymod/fragment.bcs~
+EXTEND_BOTTOM ~wtasight.bcs~ ~mymod/fragment.bcs~
+
+/* If "missing.bcs" is not present, this will basically copy fragment.bcs
+ * into override/missing.bcs */
+EXTEND_TOP    ~missing.bcs~  ~mymod/fragment.bcs~
+
+/* The most command "external action" is to view a file after a successful
+ * installation (usually your mod README). The word "VIEW" at the beginning
+ * of a command will be replaced by a viewer appropriate for the user
+ * (notepad for win32, something else for mac osx, etc.).  */
+AT_INTERACTIVE_EXIT ~VIEW override\pdialog.2da~
+
+/* Here's an example of an IF. */
+ACTION_IF FILE_EXISTS ~override/somefile~
+  THEN BEGIN 
+    PRINT ~You have the file "override/somefile", good.~
+    // COPY something, whatever
+  END ELSE BEGIN 
+    PRINT ~You don't have the file "override/somefile", good.~
+    // COPY something, FAIL ~you need that file~, whatever
+  END
+
+/* We could list other packages here: BEGIN ~Optional stuff~ ... */
+
+// here we'll show an example of adding a KIT with WeiDU
+BEGIN ~Generic (Fighter) Archer Kit~
+/* As an example of adding a KIT with WeiDU, I'll add an Archer kit 
+ * (equivalent to the Ranger archer kit) to the Fighter group. There's no
+ * reason that Archers should have to be good aligned woods-lovers. */
+
+ADD_KIT ~WWARCH~ /* this is the "internal" name of your kit, like
+                  * BERSERKER or LATHANDER */
+
+/* this line is appened to CLASWEAP.2DA */
+~WWARCH                 1           1           1           1           1
+1           1           1~
+
+/* this string is appened column-wise to WEAPPROF.2DA, starting with the
+ * third line*/
+~WWARCH 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 5 5 5 5 5 1 1 1 3 1 1 1 1 1 1 2 2 2 2 2 2 2 2 2 2 2 2 2~
+
+/* this line is appened to ABCLASRQ.2DA */
+~WWARCH                 9      0      0      0       0      0~
+
+/* this line is appened to ABCLSMOD.2DA */
+~WWARCH                 0       0       0       0       0       0~
+
+/* this line is appened to ABDCDSRQ.2DA */
+~WWARCH                 17      0      0       0       0      0~
+
+/* this line is appened to ABDCSCRQ.2DA */
+~WWARCH                 15      0      0       0       0      0~
+
+/* this line is appened to ALIGNMNT.2DA */
+~WWARCH                 1       1       1       1       1       1       1 1       1~
+
+/* this line goes to DUALCLAS.2DA */
+~WWARCH               0       1       1       1       1       0~
+
+/* this is the name of your abilities 2DA file, in the style of
+ * clabrn02.2da */
+~mymod/wwarch.2da~
+
+/* These are the 2da files listed in KITTABLE.2DA that you want your kit to
+ * be a part of. List as many as you like. */
+~K_F_H    K_F_D   K_F_G   K_F_E   K_F_HE   K_F_HL   K_F_HO~
+
+/* This is the "unusable" value you want for you kit and also the class
+ * value. These would normally appear at the end of KITLIST.2DA */
+~0x00008000     2~
+
+/* This is the High Level Ability Abbreviation (see LUABBR.2DA)
+ * Normal values are Fi0, Pa0, etc. */
+~Fi0~
+
+/* This is the TOB starting equipment list. Put a * if you don't want 
+ * something. See 25STWEAP.2DA. */
+~LEAT20 DART03,40 HELM07 BAG26 RING06 RING31 CLCK27 BOOT01 AMUL19 BRAC10 BELT06 AROW11,40 BULL03,40 BOLT06,40 POTN52,5 POTN04,2 POTN14,5 BOW11 BOW19 XBOW06~
+
+/* These are the strings you want for the lower, mixed and help
+ * descriptions for your kit. */
+SAY ~ generic archer~ 
+SAY ~Generic Archer~
+SAY ~GENERIC ARCHER: The generic archer is the epitome of skill with the bow.  He is the ultimate marksman, able to make almost any shot, no matter how difficult.  To become so skilled with the bow, the archer has had to sacrifice some of his proficiency with melee weapons and armor.
+
+Advantages:
+-  +1 to hit, and +1 to damage with any missile weapon for every 3 levels of experience.
+-  Every 4 levels he gains the ability to make a called shot once per day.  When he activates this ability, any shot made within the next 10 seconds is augmented in the following manner (according to the level of the archer):
+4th level:  -1 to THACO of target
+8th level:  -1 to save vs magic of target
+12th level:  -1 to strength of target
+16th level:  +2 bonus to damage
+
+Disadvantages:
+-  An archer can only become proficient in Melee weapons; he may never specialize.
+-  An archer cannot wear any metal armor.~
+
+/* This snippet shows how to use the kit number as a variable name to
+ * assign this kit to a creature. The "0" and the "0x4000" are necessary. 
+ * These offsets should be the same for all CREs. 
+COPY ~mymod/fighter.cre~ ~override/fighter.cre~ 
+  WRITE_SHORT   0x244 0
+  WRITE_SHORT   0x246 0x4000 + ~%WWARCH%~
+*/
+
+/* This snippet shows how to add a MUS file to SONGLIST.2DA. It also 
+ * copies the MUS file to the music\ directory.
+ADD_MUSIC   ~MYMUSIC~   ~mymod/somefile.mus~
+ * The variable %MYMUSIC% is now associated with the number of this MUS
+ * file. */
+
+/* Example use: 
+COPY ~mymod/script.bcs~ ~override/script.bcs~
+  REPLACE_TEXTUALLY 999999 ~%MYMUSIC%~
+ */
+
+// EOF: wsetup.tp

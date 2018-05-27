@@ -1,0 +1,21 @@
+/* 
+ * Example TP2 file to show you how to use constrains when copying files.
+ */
+BACKUP ~mymod/backup~
+AUTHOR ~weimer@cs.berkeley.edu~
+
+BEGIN ~A test of constraints of COPY.~
+
+COPY ~mymod/foozle.bcs~         ~override/IT-WORKED.1~
+        // note that you could put any patches here you wanted!
+        // SAY, WRITE_BYTE, etc.
+        IF_SIZE_IS 879
+
+COPY ~mymod/foozle.bcs~         ~override/ERROR.1~
+        IF_SIZE_IS 880
+
+COPY ~mymod/foozle.bcs~         ~override/IT-WORKED.2~
+        IF ~100AC~ // string contained in foozle.bcs
+
+COPY ~mymod/foozle.bcs~         ~override/ERROR.2~
+        UNLESS ~100AC~ // string contained in foozle.bcs

@@ -1,0 +1,12 @@
+/* 
+ * Example TP file for WeiDU Debugging
+ * 
+ */
+BACKUP ~mymod/backup~
+
+AUTHOR ~weimer@cs.berkeley.edu~
+
+BEGIN "Try A Double Copy"
+
+COPY ~mymod/copy~               ~override~
+COPY ~mymod/copy/kitlist.2da~   ~out/kitlist.2da~

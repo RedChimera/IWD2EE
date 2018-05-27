@@ -1,0 +1,5 @@
+BEGIN A
+
+IF ~~ THEN BEGIN 1
+  SAY @1
+END

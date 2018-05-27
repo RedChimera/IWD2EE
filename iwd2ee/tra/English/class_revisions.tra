@@ -1,0 +1,748 @@
+//Tra range: @101 to @1000
+
+//Class abilities @146 to 189  and @897 - @999 (with gaps)
+//Class/race descriptions @524 to @830 (with gaps)
+@146    = ~Ilmater: Soothing Touch~
+@147    = ~Ilmater: Soothing Touch~
+@148    = ~Werebadger Club~
+@149    = ~Viper's Fang~
+@150    = ~Hook Horror Claw~
+@151    = ~Rhinoceros Beetle Horn~
+@152    = ~Will o' Wisp Lightning~
+@153    = ~Greatsword of Frost +1~
+@154    = ~Greatsword of Fire +2~
+@155    = ~Greatsword of Lightning +3~
+@156    = ~Black Dragon Claw~
+@157    = ~Treant Branch~
+@158    = ~Creeping Doom~
+@159    = ~Shambling Mound Pseudopod~
+@160    = ~Wild Shape: Werebadger~
+@161    = ~Wild Shape: Viper~
+@162    = ~Wild Shape: Hook Horror~
+@163    = ~Wild Shape: Rhinoceros Beetle~
+@164    = ~Wild Shape: Will o' Wisp~
+@165    = ~Wild Shape: White Half-Dragon~
+@166    = ~Wild Shape: Red Half-Dragon~
+@167    = ~Wild Shape: Blue Half-Dragon~
+@168    = ~Wild Shape: Black Dragon~
+@169    = ~Wild Shape: Treant~
+@170    = ~Wild Shape: Creeping Doom~
+@171    = ~Wild Shape: Shambling Mound~
+@172    = ~Werebadger~
+@173    = ~Viper~
+@174    = ~Hook Horror~
+@175    = ~Rhinoceros Beetle~
+@176    = ~Will o' Wisp~
+@177    = ~White Half-Dragon~
+@178    = ~Red Half-Dragon~
+@179    = ~Blue Half-Dragon~
+@180    = ~Black Half-Dragon~
+@181    = ~Treant~
+@182    = ~Creeping Doom~
+@183    = ~Shambling Mound~
+@184    = ~Wild Shape: Will o' Wisp~
+@185    = ~WILD SHAPE, WILL O' WISP:
+
+Will o' Wisps are floating balls of light that can deal electrical damage on a touch attack. They are small and fragile, but very quick and possess unbreakable spell resistance (SR 100).
+
+Prerequisite: 5 Levels of Druid~
+@186    = ~Wild Shape: Creeping Doom~
+@187    = ~WILD SHAPE, CREEPING DOOM
+
+The druid gains the ability to shapeshift into a conscious mass of beetles and flying insects. The insects are easy to crush and are vulnerable to fire and other forms of magical damage, but piercing weapons are nearly useless against the swarm. The druid can coordinate the insects to sting in concert, dealing poison damage and inflicting spell failure on opponents from a distance.
+
+Prerequisite: 5 Levels of Druid~
+@188    = ~Wild Shape: Treant~
+@189    = ~WILD SHAPE: Treant
+
+Tall, strong, and resilient, treants are massive, sentient trees with sturdy bark and powerful attacks. A druid in treant form is very difficult to harm with weapons, but in turn is slow and plodding, and highly vulnerable to fire.
+
+Prerequisite: 8 Levels of Druid~
+
+@524    = ~Barbarian~
+@525    = ~BARBARIAN: 
+
+From the frozen wastes of the north and the hellish jungles of the south come brave, even reckless, warriors.  While not as disciplined or as skilled as a normal fighter, the barbarian can willingly throw himself into a berserker rage, becoming a tougher and stronger opponent.  
+
+Hit points per level: 1-12
+
+Advantages:
+* Proficient with all simple and martial weapons, light armor, medium armor, and shields.
+* Barbarian Rage: Can rage once per day per every 4 levels (starts at 1st level with one use). Rage gives them +4 to constitution and strength for 5 rounds, as well as 2 point armor class penalty, +2 to Will saves, and immunity to fear, stun, sleep, unconsciousness, paralysis, and hopelessness. After raging the barbarian will be fatigued for a period of time which will lower some of his abilities.
+* Fast Movement: Barbarians can move 10 feet faster than a standard character.
+* 2nd level: Uncanny Dodge. Barbarians retain their Dexterity bonus to Armor Class if they are attacked by invisible foes.
+* 5th level: Uncanny Dodge. Barbarians cannot be Sneak Attacked by rogues unless the attacker is at least four levels higher than the barbarian.
+* 11th level: Damage Reduction. The barbarian gains 1/- point of resistance to slashing, piercing, bludgeoning and missile damage.  He gains 1/- additional point of resistance at levels 14, 17, 20, and every 1 level after.
+* 15th level: Greater Rage. All of the barbarian's rages become greater rages, which increase the strength and constitution bonuses to +6 and the saving throw bonus to +3.  He or she still receives the -2 armor penalty.
+* 20th level: Tireless Rage. The barbarian is no longer fatigued after a rage.
+
+Disadvantages:
+* Barbarians gain feats at a slower rate than fighters.
+* Barbarians do not start with proficiency in heavy armor.~
+@526    = ~Bard~
+@527    = ~BARD: 
+
+The bard's strength is his pleasant and charming personality. With it and his wits he makes his way through the world. A bard is a talented musician and a walking storehouse of gossip, tall tales, and lore. He learns a little bit about everything that crosses his path; he is a jack-of-all-trades but master of none. While many bards are scoundrels, their stories and songs are welcome almost everywhere.
+
+Hit Points per Level: 1-6
+
+Advantages:
+* Proficient with all simple weapons, light armor, medium armor, and shields.  The bard is also proficient with large swords.
+* +1 to Alchemy, Knowledge (Arcana) and Spellcraft
+* Armored Arcana
+* 2nd level: Spellcasting.  Bards gain the ability to cast minor wizard spells.  Wearing a suit of armor imposes a chance of spell failure.
+* Many rogue like skills are class skills of the Bard.
+* Bard Songs.  Bards have the ability to sing melodies that have magical effects on creatures within thirty feet.  As they advance in level, they gain additional songs.  The songs are described in detail below.
+* 1st level: The Tale of Curran Strongheart.  When played, all the bard's allies gain +1 attack bonus, +1 damage, and immunity to fear. At level 19, this song grants an additional +1 to hit and damage and immunity to hopelessness.
+* 4th level: Tymora's Melody.  When played, Tymora's Melody gives the bard's allies +1 luck, +1 saving throws, and +2 to their Knowledge(arcana), Alchemy, and rogue skills. At level 22, this song grants an additional +1 to luck and saving throws and +2 to skill checks.
+* 7th level: The Siren's Yearning.  When played, every creature that hears the song suffers a cumulative -1 penalty to their Will saves for 10 rounds and must make a Will save or be entralled, unable to take action for one round or until they take damage. The Will save DC is equal to the bard's level. Thus, a level 15 bard's song has a DC of 15. The song has a 25% chance of affecting the bard's allies.
+* 10th level: The Song of Kaudies.  When played, the bard's allies are affected by the Blink spell for one round. All enemies have a 50% miss chance against the party, but the party also suffers a 20% miss chance against enemies and a 20% rate of spell failure.
+* 13th level: The War Chant of Sith.  When played, the bard's allies gain a +2 generic armor bonus, physical damage resistance of 3/-, and they regenerate 3 points of damage per round in combat. At level 25, this song grants an additional +2 to AC, 3/- physical damage resistance, 3 hit points healed per round.
+* 16th level: The Ballad of Three Heroes.  When played, the bard's allies gain +5 spell resistance, 5/- resistance to all forms of magical damage, and the effects of the Tale of Curran Strongheart, Tymora's Melody, and the War Chant of Sith. At level 28, this song grants an additional +5 spell resistance and 5/- resistance to magical damage.
+
+All songs do not stack unless otherwise specified. Until the bard learns the Ballad of Three Heroes, the songs are mutually exclusive; the party cannot benefit from more than one song at a time. Summoned creatures do not benefit from bard songs.
+
+Disadvantages:
+* Bards are not as effective in hand-to-hand combat as warriors or priests.
+* Bards have slower access to spells than a wizard or priest.~
+@528    = ~Cleric~
+@529    = ~CLERIC:
+
+The cleric is a generic priest (of any mythos) who tends to the spiritual needs of a community. He is both protector and healer, though he is not totally defensive.
+
+NOTE: Wisdom is the casting statistic for a cleric. It affects their maximum spellcasting level, spell saving throw DCs, and number of bonus spells.
+
+Hit Points per Level: 1-8
+
+Advantages:
+* Proficient with all simple, light armor, medium armor, heavy armor, and shields.
+* Clerics can cast powerful defensive and healing spells.
+* Clerics have the ability to Turn Undead.  When this power is invoked, the cleric attempts to use the power of his or her patron deity to either terrify (if good or neutral) or control (if evil) a group of undead. The higher the cleric's level and charisma are, the greater his or her chance of success is.
+* Clerics receive special powers and spells from their deity.
+* Spontaneous Casting: Clerics can convert their spells to cure (if good or neutral) or inflict (if evil) spells of the nearest level when a player shift-clicks on a spell at the time of casting. The spell clicked is immediately removed from the character's memorized list and cast as the nearest cure or inflict spell of the same level.
+
+Disadvantages:
+* Clerics do not have access to many powerful offensive spells.
+* Clerics are weaker in combat than fighters, rangers, paladins, and barbarians.~
+@530    = ~Druid~
+@531    = ~DRUID: 
+
+The druid serves the cause of nature and neutrality; the wilderness is his community. He uses his special powers to protect it and to preserve balance in the world.
+
+NOTE: Wisdom is the casting statistic for a druid. It affects their maximum spellcasting level, spell saving throw DCs, and number of bonus spells.
+
+Hit Points per Level: 1-8
+
+Advantages:
+* Proficient with all simple weapons except for the crossbow, the martial weapons largesword and polearm, plus light armor, medium armor, and shields.
+* Druids can cast powerful offensive and healing spells.
+* 5th level: Wild Shape: Werebadger.  The druid gains the ability to shapechange into an werebadger, which has a sturdy hide and attacks using a club.  The druid can use this form once per day at level 5, then gains an additional use every level thereafter. All Wild Shape abilities heal the caster and can be used more often as the druid gains levels.
+* 5th level: The Druid is high enough level to choose the special feats, Wild Shape: Will o' Wisp, Creeping Doom, and Treant.
+* 7th level: Wild Shape: Viper. Vipers are quick and evasive and can strike multiple times per round, dealing 2 poison damage per second for 1 round on a failed Fortitude save (DC 10).
+* 9th level: Wild Shape: Hook Horror.  Hook Horrors have chitinous armor and can attack multiple times per round using their claws
+* 9th level: Immunity to Poison.  The druid becomes immune to all forms of poison.
+* 11th level: Wild Shape: Rhinoceros Beetle.  Rhinoceros Beetle are massive insects with horns like battering rams. They have slow but very powerful attacks and are extremely resilient to damage.
+* 13th level: Wild Shape: Shambling Mound.  Shambling Mounds are massive heaps of plant matter that can ensnare their victims on a failed Reflex save (50% chance; DC 15).
+* 15th level: Wild Shape: White Half-Dragon.  White Half-Dragons have 25/- cold resistance and attack using a +1 greatsword (proficiency bonuses and penalties apply) that deals cold damage on hit. All half-dragons have high strength and are resistant to spells.
+* 15th level: Timeless Body.  The druid is immune to the effects of fatigue.
+* 17th level: Wild Shape: Red Half-Dragon.  Red Half-Dragons have 25/- fire resistance and attack using a +2 greatsword that deals fire damage on hit.
+* 19th level: Wild Shape: Blue Half-Dragon.  Blue Half-Dragons have 25/- electricity resistance and attack using a +3 greatsword that deals electricity damage on hit.
+* 21th level: Wild Shape: Black Dragon.  Black dragons are colossal wyrms with thick hides and deal acid damage on hit.
+
+Disadvantages:
+* Druids do not have access to many powerful defensive spells.
+* Druids are not as powerful as fighters, rangers, paladins, or barbarians in combat.~
+@532    = ~Fighter~
+@533    = ~FIGHTER:
+
+The fighter is a champion, swordsman, soldier, and brawler. He lives or dies by his knowledge of weapons and tactics.  Fighters can be found at the front of any battle, contesting toe-to-toe with monsters and villains. A good fighter needs to be strong and healthy if he hopes to survive.
+
+Hit Points per Level: 1-10
+
+Advantages:
+* Proficient with all simple and martial weapons, bastard swords, light armor, medium armor, heavy armor, and shields.
+* Receives a bonus feat at first level and every two levels after that.  This is in addition to the normal feat received by all character classes every three levels.
+* Characters with four or more levels of fighter may take the Weapon Specialization feat (three ranks in a weapon).  This gives them +5 to damage with that weapon type.
+* Every 5 levels, fighters get an additional +1 to weapon damage.
+
+Disadvantages:
+* Fighters lack any spellcasting ability.~
+@534    = ~Monk~
+@535    = ~MONK:
+
+Monks are warriors who pursue perfection through contemplation as well as action. They are versatile fighters, especially skilled in combat without weapons or armor. Though monks cannot cast spells, they have a unique magic of their own. They channel a subtle energy, called ki, which allows them to perform amazing feats. The monk's best-known feat is their ability to stun an opponent with an unarmed blow.  
+
+WARNING: A monk who multiclasses to a class other than monk or their order's favored class will never be allowed to advance in the monk class again.
+
+NOTE: Multiclassed monks ONLY use their monk levels when determining their base attack bonus and number of attacks when fighting unarmed.
+
+Hit Points per Level: 1-8
+
+Advantages:
+* The monk's base attack bonus grants additional attacks at a faster rate while the monk is unarmed.
+* As the monk increases in levels, the damage his fists inflicts does as well:
+
+Level 1-3: 1d6
+Level 4-7: 1d8
+Level 8-9: 1d8+1
+Level 10-11: 1d8+2
+Level 12-15: 1d8+3
+Level 16-20: 1d8+4
+Level 21-30: 1d8+5
+
+* Ki Strike: At level 8, the monk's unarmed attack is empowered with ki. The unarmed strike damage from such an attack can deal damage to a creature with damage reduction, such as a wight, as if the blow were made with a weapon with an enhancement bonus equal to the monk's damage bonus. Thus, a level 12 monk's fists strike as a +3 weapon.
+* At level 13, the monk's fists deal triple damage on critical hits instead of double, and the critical threat range is increased by 1 at level 26.
+* A monk's natural armor class starts at 10, and then increases by +1 at 5th level and every 5 levels thereafter.
+* When not wearing armor a monk adds his Wisdom bonus to his AC in the same manner as his Dexterity bonus.
+* Stunning Attacks: When this ability is used, all of the monk's attacks in the next round force the victim to make a saving throw or be stunned. This special ability automatically modifies a monk's normal attack, no targeting needs to be done.  A monk can make a stunning attack 1/day/level.
+* Evasion: Monks have the ability to evade damage from area affect spells. Whenever a monk makes a successful reflex save against an area effect spell that allows a reflex save for half damage, he or she takes no damage.
+* 2nd level: Deflect Arrows. The monk gains the Deflect Arrows feat, yielding a +1 miscellanous bonus against missile weapons.
+* 3rd level: Still Mind. The monk gains a +2 bonus to saving throws against spells and effects from the Enchantment school.  Unarmored movement speed increases.
+* 5th level: Purity of Body. The monk gains control over his body's immune system. He gains immunity to all diseases.
+* 6th level: Unarmored movement speed increases.
+* 7th level: Wholeness of Body.  The monk can cure up to twice his current level in hit points once each day.
+* 9th level: Improved Evasion.  The monk gains the Improved Evasion feat that is normally only available to rogues.
+* 10th level: Unarmored movement speed increases.
+* 10th level: Abundant Step.  The monk may teleport to any location in sight once per day.
+* 11th level: Diamond Body.  The monk is in such control of his own metabolism that he gains immunity to poison of all kinds.
+* 12th level: Unarmored movement speed increases.
+* 13th level: Diamond Soul.  The monk gains spell resistance.  His spell resistance equals his level + 10. In order to affect the monk with a spell, a spellcaster must roll the monk's spell resistance or higher on 1d20 + the spellcaster's level.
+* 15th level: Quivering Palm. This terrifying attack allows the monk to set up vibrations within the body of another creature that can be fatal.  The monk can use the quivering palm attack once per day. Constructs, oozes, plants, elementals and undead cannot be affected. The monk must be of higher level than the target (or have more levels than the target's number of Hit Dice). If the monk strikes successfully and the target takes damage from the blow, the target dies unless it makes a Fortitude saving throw (DC 10 + one-half the monk's level + Wisdom modifier). Unarmored movement speed increases.
+* 18th level: Unarmored movement speed increases.
+* 19th level: Empty Body. The monk can assume an ethereal state for  2 rounds a number of times a day equal to his level divided by 2.
+* 20th level: Perfect Self.  The monk has tuned his body with skill and quasi-magical abilities to the point that he becomes a magical creature. He is forevermore treated as an outsider (extraplanar creature) rather than as a humanoid. For instance, charm person does not affect him. Additionally, the monk gains damage reduction 20/+1. This means that the monk ignores (instantly regenerates) the first 20 points of damage from any attack unless the damage is dealt by a weapon with a +1 enhancement bonus (or better), by a spell, or by a form of energy (fire, cold, etc.). As an outsider, a 20th level monk is subject to spells that repel enchanted creatures, such as protection from law. 
+
+Disadvantages:
+* Loses many bonuses if wearing armor and/or using weapons.~
+@536    = ~Paladin~
+@537    = ~PALADIN:
+
+A paladin is a warrior bold and pure, the exemplar of everything good and true. Like the fighter, the paladin is a man of combat. However, the paladin lives for the ideals of righteousness, justice, honesty, piety, and chivalry. He strives to be a living example of these virtues so that others might learn from him as well as gain by his actions.
+
+NOTE: Wisdom is the casting statistic for a paladin. It affects their maximum spellcasting level, spell saving throw DCs, and number of bonus spells.
+
+WARNING: A paladin who multiclasses to a class other than paladin or their order's favored class will never be allowed to advance in the paladin class again.
+
+Hit Points per Level: 1-10
+
+Advantages:
+* Proficient with all simple and martial weapons, light armor, medium armor, heavy armor, and shields.
+* Adds Charisma modifier to all saving throws.
+* Paladins may use Lay On Hands 1/Day.  Lay On Hands heals the target for a number of hit points equal to the paladin's Charisma modifier times their paladin level (minimum of 1 point per level). Paladins gain an additional casting every 5 levels.
+* Paladins are immune to all forms of disease.
+* 2nd level: Smite Evil.  Once per day, the paladin may now attempt to smite evil with one normal melee attack. He adds his Charisma modifier (if positive) to his attack roll and deals 1 extra point of damage per level.
+* 2nd Level: Aura of Courage.  Paladins become immune to fear, and allies within 10 feet receive a bonus of +4 to saving throws against fear effects.
+* 3rd level: Remove Disease. The paladin gains the ability to remove disease from other characters a number of times per day equal to his level divided by 3.
+* 3rd Level: Turn Undead.  When this power is invoked, the paladin attempts to use the power of his or her patron deity to terrify a group of undead.  The higher the paladin's level and charisma are, the greater his or her chance of success is.  Though this ability is similar to the cleric's Turn Undead ability, the paladin's ability functions as though he or she were two levels lower than a cleric.
+* 4th Level: Spellcasting.  Paladins gain the ability to cast spells.
+
+Disadvantages
+* The paladin must be lawful good in alignment and must choose a divine order.  This choice of an order restricts the paladin's multiclassing possibilities.
+* The paladin must react to evil deeds that occur in his or her presence.~
+@538    = ~Ranger~
+@539    = ~RANGER:
+
+The ranger is a warrior and a woodsman. He is skilled with weapons and is knowledgeable in the ways of the forest. The ranger often protects and guides lost travelers and honest peasant-folk. A ranger needs to be strong and wise to the ways of nature to live a full life.
+
+NOTE: Wisdom is the casting statistic for a ranger. It affects their maximum spellcasting level, spell saving throw DCs, and number of bonus spells.
+
+Hit Points per Level: 1-10
+
+Advantages:
+* Proficient with all simple and martial weapons, light armor, medium armor, and shields.
+* Rangers gain the Rapid Shot feat at level 1.
+* Rangers may select a Favored Enemy at first level.  They gain +1 to damage against creatures of that race type.  Rangers gain an additional Favored Enemy every five levels, and the bonus against previous Favored Enemies increases by 1.
+* Rangers can fight with two weapons as if they had the feats Ambidexterity and Two-Weapon Fighting if they are wearing light or no armor only.
+* 4th level: Spellcasting.  Rangers gain the ability to cast spells.
+* Every 6 levels, rangers gain a use of the spell Set Natural Snare, which ensnares all targets for 5 rounds on a failed Reflex save. The save DC starts at 10 and increases by 1 for every level the ranger has achieved, up to a DC of 40 for a level 30 ranger.
+
+Disadvantages:
+* Rangers gain feats at a slower rate than fighters.
+* Rangers do not start with proficiency in heavy armor.~
+@540    = ~Rogue~
+@541    = ~ROGUE:
+
+To accomplish his goals, for good or ill, the rogue is a skilled pilferer. Cunning, nimbleness, and stealth are his hallmarks. Whether he turns his talent against innocent passers-by and wealthy merchants or oppressors and monsters is a choice for the rogue to make.
+
+Hit Points per Level: 1-6
+
+Advantages:
+* Proficient with all simple weapons, the martial weapon bows, and light armor.
+* Rogues receive a larger number of skill points per level than any other character class.  They can use these extra skill points to buy class skills like Disable Device to remove traps, Hide, Pick Pockets, and Use Magic Device.
+* Sneak Attack: To use Sneak Attack, attack an enemy's back when you have a melee weapon equipped.  Your first successful attack at the creature's back will do normal damage plus 1-6 points of damage with an additional 1-6 points at 3rd level and every two levels thereafter.
+* 2nd level: Evasion.  When a rogue reaches 2nd level, he or she gains the ability to evade damage from area affect spells.  Whenever a rogue makes a successful reflex save against an area effect spell that allows a reflex save for half damage, he or she takes no damage.
+* 3rd level: Uncanny Dodge. Rogues retain their Dexterity bonus to Armor Class if they are attacked by invisible foes.
+* 6th level: Uncanny Dodge: Rogues can't be Sneak Attacked by another rogue unless the attacker is four or more levels higher.
+* 10th level: Special Abilities: The rogue now gains access to a number of new feats available only to rogues.  These include Crippling Strike, Improved Evasion, and Slippery Mind.
+* Rogues gain +1 to luck every 5 levels.
+
+Disadvantages:
+* Rogues have no spellcasting ability and poor toe-to-toe combat ability.~
+@542    = ~PAINBEARER OF ILMATER:
+
+Ilmater, also known as the Crying God, is the god of suffering and perserverance.  Taught that enduring the suffering of others is the greatest act of sacrifice, Painbearers of Ilmater can be found wherever the weak are oppressed.  Painbearers are known for their charity, humility, and their unshaking faith during even the most trying of circumstances.
+
+Advantages:
+
+* Soothing Touch 1/day (heals 2d8 hit points and cures poison, bleeding wounds, and pain effects) 
+* Ilmater's Endurance 1/day (increase Con by 6 for a number of rounds equal to level)~
+
+@543    = ~GHOSTWISE HALFLING:
+
+Ghostwise halflings are the feral, reclusive cousins of lightfoot and strongheart halflings. They are found most often in the southern forests of the Realms living in small communities. Ghostwise halflings are rarely seen in large cities, but occasionally set out to explore the world for reasons known only to them. Visitors to ghostwise settlements often report that the halflings have kinship so tight with their fellows that they can communicate without speaking.
+
+Favored Class: Barbarian
+
+Advantages:
+* +1 to Dexterity.
+* +2 to Move Silently checks.
+* +1 to hit with thrown weapons.
+* +2 morale bonus on saving throws against fear.
+* May cast Set Natural Snare once per day, which ensnares all targets for 5 rounds on a failed Reflex save. The save DC starts at 10 and increases by 1 for every level the halfling has achieved, up to a DC of 40 for a level 30 halfling.
+
+Disadvantages:
+* -1 Strength.
+~
+
+@669    = ~Maximized Attacks:
+
+You have learned how to maximize the effect of your attacks at the cost of neglecting your defenses.
+
+Prerequisites: 4 ranks in Concentration and Weapon Specialization in 2 weapons.
+
+Benefit: All attacks do maximum damage for 1 round per level and the user receives a +4 bonus to hit and critical threat range, but a -4 penalty to AC.  Usable 1/day.~
+
+@785    = ~Aasimar~
+@786    = ~AASIMAR:
+
+Aasimar carry the blood of a celestial, the begotten offspring from the union of a mortal and a deity.  Aasimar are usually good-aligned and fight against evil in the world.  They typically have fair skin, golden eyes, and often a birthmark in the shape of the deity's holy symbol.  Aasimar are blessed with insight and personal magnetism and are typically paladins.
+
+Favored Class: Paladin
+
+Advantages:
+* +1 Wisdom.
+* +1 Charisma.
+* Acid, cold, and electrical resistance: 5 points.
+* Sunscorch 1/Day.
+* Darkvision.
+
+Disadvantages:
+* Level Adjustment +1: Aasimar are slightly more powerful and gain levels at a rate of about one level behind that of the common races.
+~
+@787    = ~Tiefling~
+@788    = ~TIEFLING:
+
+The infernal counterpart to aasimar, tieflings are humans with a hint of the diabolical in their bloodline. Though their appearance is mostly human, they often have telltale signs that belie their ancestry. Tieflings usually have dusky skin and dark or reddish hair. Though many sport small horns, cat eyes, or other bizarre features, most tieflings try to hide their abnormalities from humans.
+
+Favored Class: Rogue
+
+Advantages:
+* +1 Intelligence.
+* +1 Dexterity.
+* Cold, fire, and electrical resistance: 5 points.
+* +2 to Bluff and Hide checks.
+* Blindness 1/Day.
+* Darkvision.
+
+Disadvantages:
+* -1 Charisma.
+* Level Adjustment +1: Tieflings are slightly more powerful and gain levels at a rate of about one level behind that of the common races.
+~
+@789    = ~Moon Elf~
+@790    = ~MOON ELF:
+
+Moon elves tend to be slimmer than humans. Their features are finely chiseled and delicate, and they speak in melodic tones. Moon elves are often looked upon as being frivolous and aloof. They concern themselves with natural beauty, dancing, frolicking, and other similar pursuits. Their humor is clever, as are their songs and poetry. Moon elves are the most common elves in Faerun. Many of them have a deep-seated hatred for their subterranean cousins, the drow elves.
+
+Favored Class: Wizard
+
+Advantages:
+* +1 Dexterity.
+* +2 racial bonus to saves against Enchantment magic.
+* +2 racial bonus to Search checks.
+* Immunity to Sleep magic.
+* Proficient with longswords and bows (but not crossbows).
+
+Disadvantages:
+* -1 Constitution.
+~
+@791    = ~Drow~
+@792    = ~DROW: 
+
+Dark elves, also known as drow, are the subterranean cousins of moon elves. Their black skin and pale hair are a curse for their allegiance with the spider goddess, Lolth. Drow societies are usually ruled by cruel priestesses of Lolth and their noble houses. Dark elves are known for their arrogance, cruelty, and penchant for civil war.
+
+Favored Class: Wizard (male) or cleric (female).
+
+Advantages:
+* +1 to Dexterity.
+* +1 to Intelligence.
+* +1 to Charisma.
+* +2 racial bonus to saves against Enchantment magic.
+* +2 racial bonus on Will saves against spells and spell-like abilities.
+* +2 to Search checks.
+* Spell resistance of 11 + character level.
+* Immunity to Sleep magic.
+* Proficient with large swords and bows (but not crossbows)
+* Faerie Fire 3/day.
+* Darkvision.
+
+Disadvantages:
+* -1 to Constitution.
+* Light Blindness: -1 circumstance penalty to all attack rolls, saves and skill checks while operating in bright light.
+* Level Adjustment +2: Drow are more powerful and gain levels at a rate of about two levels behind the other common races of Faerun.
+~
+@793    = ~Wild Elf~
+@794    = ~WILD ELF:
+
+The rare wild elves are rarely seen by others, because they live in the heart of thick forests and they have incredible skill at keeping hidden.  Also called green elves, their skin tends to be dark brown, and their hair ranges from black to light brown, lightening to silvery white with age.
+
+Favored Class: Sorcerer
+
+Advantages:
+* +1 Dexterity.
+* +2 to Search checks.
+* +2 to saves against Enchantment magic.
+* Immunity to Sleep magic.
+* Proficient with large swords and bows (but not crossbows).
+
+Disadvantages:
+* -1 Intelligence.
+~
+@795    = ~Lightfoot Halfling~
+@796    = ~LIGHTFOOT HALFLING:
+
+Halflings stand about three feet tall, with florid skin and dark hair and eyes.  Unlike the more segregated strongheart halflings, the lightfoots of the Forgotten Realms are a common sight in human, elven, and dwarven lands. Lightfoot halflings are known for their incredible luck and their love of travel. They tend to be more gregarious than even their strongheart kin.
+
+Favored Class: Rogue
+
+Advantages:
+* +1 Dexterity.
+* +2 to Move Silently checks.
+* +1 to all saving throws.
+* +2 morale bonus on saving throws against fear.
+* +1 to hit with thrown weapons.
+
+Disadvantages:
+* -1 to Strength.
+~
+@797    = ~Strongheart Halfling~
+@798    = ~STRONGHEART HALFLING:
+
+While the lightfoot halflings value the experience of travel and the sight of new lands and peoples, the strongheart halflings are a more organized, orderly, and industrious race.  Strongheart halflings often surprise those more familiar with their wandering lightfoot cousins with their confident and readily competitive nature.
+
+Favored Class: Rogue
+
+Advantages:
+* +1 to Dexterity.
+* +2 to Move Silently checks.
+* +2 morale bonus on saving throws against fear.
+* +1 attack bonus with thrown weapons.
+* 1 extra feat at 1st level.
+
+Disadvantages:
+* -1 to Strength.
+~
+@799    = ~Rock Gnome~
+@800    = ~ROCK GNOME:
+
+Kin to dwarves, rock gnomes are noticeably smaller than their distant cousins. Gnomes, as they proudly maintain, are also less rotund than dwarves. Most have dark tan or brown skin, white hair, and rather large noses. Rock gnomes have lively and sly senses of humor, especially for practical jokes. In this sense, they are much more gregarious and sociable than their deep gnome cousins.  They have a love for nature that is only matched by their love for gems and jewelry.
+
+Favored Class: Illusionist
+
+Advantages:
+* +1 Constitution.
+* +1 attack bonus vs. kobolds, goblins, hobgoblins, and bugbears.
+* +4 dodge bonus against giants.
+* +2 to saves against illusions.
+* +2 to Alchemy skill checks.
+
+
+Disadvantages:
+* -1 Strength.
+~
+@801    = ~Deep Gnome~
+@802    = ~DEEP GNOME: 
+
+Also known as svirfneblin, the deep gnomes of the Realms are a secretive, mysterious race. Found in the deepest caverns of the Underdark, the svirfneblin live in constant fear of slavery or destruction at the hands or dark elves, mind flayers, and duergar. Deep gnomes are legendary for their ability to handle stone and gems. They have brown or gray skin and gray or white hair.
+
+Favored Class: Illusionist
+
+Advantages:
+* +1 Dexterity.
+* +1 Wisdom.
+* Spell resistance of 11 + character level.
+* +4 dodge bonus against all creatures.
+* Mirror Image 1/Day.
+* Invisibility 1/Day.
+* Blur 1/Day.
+* Nondetection.  Deep gnomes are difficult to detect by divination spells and by scrying items such as crystal balls.
+* +2 racial bonus to all saving throws.
+* +1 racial bonus to attack rolls against kobolds, goblins, hobgoblins, and bugbears.
+* Stonecunning: +2 racial bonus on Search checks.
+* +2 racial bonus on Hide checks, which improves to +4 in darkened areas underground.
+* Darkvision.
+
+Disadvantages:
+* -1 Strength.
+* -2 Charisma.
+* Level Adjustment +3: Svirfneblin are somewhat more powerful and gain levels at a rate of about three levels behind that of the other common races of Faerun.
+~
+@803    = ~Shield Dwarf~
+@804    = ~SHIELD DWARF:
+
+Shield dwarves are short stocky fellows, easily identifiable by their size and shape. They have ruddy cheeks, dark eyes, and dark hair. Shield dwarves tend to be dour and taciturn.  In large part, this demeanor has developed due to the slow erosion of shield dwarf kingdoms over the centuries. They are given to hard work, and care little for most humor. They typically enjoy beer, ale, and mead, but most of all, they love gold.
+
+Favored Class: Fighter.
+
+Advantages:
+* +1 to Constitution.
+* Stonecunning: +2 racial bonus on Search checks to notice unusual stonework, such as sliding walls, secret doors, stonework traps and new construction.
+* +2 racial bonus to saving throws against poison.
+* +2 racial bonus to saving throws against spells and spell-like effects.
+* +4 dodge bonus against giants.
+* +1 racial bonus to attack rolls against orcs and goblinoids (goblins, hobgoblins, and bugbears).
+* Darkvision.
+
+Disadvantages:
+* -1 to Charisma.
+~
+@805    = ~Gold Dwarf~
+@806    = ~GOLD DWARF:
+
+In a time when the dwarven race is in sad decline, the gold dwarves of the Realms received a divine gift from Moradin, the Soul Forger. The father of the dwarven gods granted the Thunder Blessing upon his people, resulting in a slow growth of the gold dwarf population. Though its effects may not be felt for decades, gold dwarves are already starting to re-establish themselves in the Realms as shrewd traders and proud, if somewhat haughty, warriors.
+
+Favored Class: Fighter
+
+Advantages:
+* +1 to Constitution.
+* Stonecunning: +2 racial bonus on Search checks to notice unusual stonework, such as sliding walls, secret doors, stonework traps and new construction.
+* +2 racial bonus to saving throws against poison.
+* +2 racial bonus to saving throws against spells and spell-like effects.
+* +4 dodge bonus against giants.
+* +1 racial bonus to attack rolls against aberrations, the bizarre creatures that live in the Underdark.
+* Darkvision.
+
+Disadvantages:
+* -1 to Dexterity.
+~
+@807    = ~Gray Dwarf~
+@808    = ~GRAY DWARF:
+
+Also known as duergar, the gray dwarves of the Forgotten Realms live even deeper underground than their shield dwarf and gold dwarf cousins. The duergar share little in common with other dwarves and practice slavery in their monstrous subterranean cities. Often motivated by greed and a thirst for power, gray dwarves are known throughout the Realms as devious, efficient warriors. Duergar almost always have gray hair and skin.
+
+Favored Class: Fighter
+
+Advantages:
+* +1 to Constitution.
+* Stonecunning: +2 racial bonus on Search checks to notice unusual stonework, such as sliding walls, secret doors, stonework traps and new construction.
+* +2 racial bonus to saving throws against poison.
+* +2 racial bonus to saving throws against spells and spell-like effects.
+* +4 racial bonus on Move Silently checks.  Gray dwarves excel in stealthy movement.
+* +4 dodge bonus against giants.
+* Immune to paralysis (still vulnerable to stunning attacks).
+* Invisibility 1/day.
+* Darkvision.
+
+Disadvantages:
+* -2 Charisma.
+* Light Sensitivity: Duergar suffer a -2 circumstance penalty to attack rolls, saves, and checks in bright light.
+* Level Adjustment +2: Duergar are more powerful and gain levels at a rate of about two levels behind that of the other common races of Faerun.
+~
+@809    = ~Half-orc~
+@810    = ~HALF-ORCS:
+
+Half-orcs are born from the union of human and orc parents. They are as tall as humans, but a little heavier due to their muscular builds. Their greenish pigmentation, sloping forehead, jutting jaw, prominent teeth and coarse body hair make their lineage plain for all to see.  Half-orcs are known for their great strength.
+
+Favored Class: Barbarian
+
+Advantages:
+* +1 Strength.
+* Darkvision.
+
+Disadvantages:
+* -1 Intelligence.
+* -1 Charisma.
+~
+
+@895    = ~Animal Empathy~
+@896    = ~ANIMAL EMPATHY (Cha; Trained Only; Druid, Ranger Only):
+
+Use this skill to keep a guard dog from barking at you, to get a wild bird to land on your outstretched hand, or to keep an owlbear calm while you back off. Any wild creature must make a Will save or be charmed for 1 round per caster level. At level 10, this spell can be used on humanoid targets, who receive a +5 bonus to their saving throw, and at level 20, it can be used on non-humanoid or animal targets, who receive a +10 bonus to their saving throw.
+~
+@815    = ~Abjurer~
+@816    = ~ABJURER: 
+
+A wizard that specializes in magic that protects, blocks, or banishes.
+
+Advantages:
+* Abjurers can memorize an additional spell per spell level they know.
+
+Disadvantages:
+* Abjurers cannot learn spells from the Invocation school.~
+@817    = ~Conjurer~
+@818    = ~CONJURER: 
+
+A wizard that specializes in creating creatures and objects to assist him.
+
+Advantages:
+* Conjurers can memorize an additional spell per spell level they know.
+
+Disadvantages:
+* Conjurers cannot learn spells from the Necromancy school.~
+@819    = ~Diviner~
+@820    = ~DIVINER: 
+
+A wizard that specializes in detection and divining magics.
+
+* Diviners can memorize an additional spell per spell level they know.
+
+Disadvantages:
+* Diviners cannot learn spells from the Illusion school.~
+@821    = ~Enchanter~
+@822    = ~ENCHANTER: 
+
+A wizard that specializes in manipulating the minds of sentient beings.
+
+* Enchanters can memorize an additional spell per spell level they know.
+
+Disadvantages:
+* Enchanters cannot learn spells from the Transmutation school.~
+@823    = ~Evoker~
+@824    = ~EVOKER: 
+
+A wizard that specializes in manipulating energy and creating something from nothing.
+
+* Evokers can memorize an additional spell per spell level they know.
+
+Disadvantages:
+* Evokers cannot learn spells from the Abjuration school.~
+@825    = ~Illusionist~
+@826    = ~ILLUSIONIST:
+
+A wizard that specializes in creating illusions to confuse and mislead.
+
+* Illusionists can memorize an additional spell per spell level they know.
+
+Disadvantages:
+* Illusionists cannot learn spells from the Divination school.~
+@827    = ~Necromancer~
+@828    = ~NECROMANCER:
+
+A wizard that specializes in magic dealing with death.
+
+* Necromancers can memorize an additional spell per spell level they know.
+
+Disadvantages:
+* Necromancers cannot learn spells from the Conjuration school.~
+@829    = ~Transmutation~
+@830    = ~TRANSMUTER:
+
+A wizard that specializes in magic that alters physical reality.
+
+* Transmuters can memorize an additional spell per spell level they know.
+
+Disadvantages:
+* Transmuters cannot learn spells from the Enchantment school.~
+
+@897    = ~The Song of Kaudies - Blink~
+@898    = ~~
+@899    = ~~
+@900    = ~~
+@901    = ~~
+@902    = ~~
+@903    = ~~
+@904    = ~~
+@905    = ~~
+@906    = ~~
+@907    = ~~
+@908    = ~~
+@909    = ~~
+@910    = ~~
+@911    = ~~
+@912    = ~~
+@913    = ~~
+@914    = ~~
+@915    = ~~
+@916    = ~~
+@917    = ~~
+@918    = ~~
+@919    = ~~
+@920    = ~~
+@921    = ~~
+@922    = ~~
+@923    = ~~
+@924    = ~~
+@925    = ~~
+@926    = ~~
+@927    = ~~
+@928    = ~~
+@929    = ~~
+@930    = ~~
+@931    = ~~
+@932    = ~~
+@933    = ~~
+@934    = ~~
+@935    = ~~
+@936    = ~~
+@937    = ~~
+@938    = ~~
+@939    = ~~
+@940    = ~~
+@941    = ~~
+@942    = ~~
+@943    = ~~
+@944    = ~~
+@945    = ~~
+@946    = ~~
+@947    = ~~
+@948    = ~~
+@949    = ~~
+@950    = ~~
+@951    = ~~
+@952    = ~~
+@953    = ~~
+@954    = ~~
+@955    = ~~
+@956    = ~~
+@957    = ~~
+@958    = ~~
+@959    = ~~
+@960    = ~~
+@961    = ~~
+@962    = ~~
+@963    = ~~
+@964    = ~~
+@965    = ~~
+@966    = ~~
+@967    = ~~
+@968    = ~~
+@969    = ~~
+@970    = ~~
+@971    = ~~
+@972    = ~~
+@973    = ~~
+@974    = ~~
+@975    = ~~
+@976    = ~~
+@977    = ~~
+@978    = ~~
+@979    = ~~
+@980    = ~~
+@981    = ~~
+@982    = ~~
+@983    = ~~
+@984    = ~~
+@985    = ~~
+@986    = ~~
+@987    = ~~
+@988    = ~~
+@989    = ~~
+@990    = ~~
+@991    = ~~
+@992    = ~~
+@993    = ~~
+@994    = ~~
+@995    = ~~
+@996    = ~~
+@997    = ~~
+@998    = ~~
+@999    = ~~
