@@ -1,0 +1,12 @@
+//NOTES
+// creates the Ice Wall Fault creature and places it in the right place by appending a few lines to the AR4100.bcs script
+
+COMPILE ~%mod_folder%/dlg/USSTIW02.d~ 
+COPY ~%mod_folder%/cre/USSTIW01.cre~ ~override~
+  SAY NAME1 @4000
+  SAY NAME2 @4000
+COPY ~%mod_folder%/itm/USSTIW03.itm~ ~override~
+COPY ~%mod_folder%/spl/USSTIW04.spl~ ~override~
+COPY ~%mod_folder%/spl/USSTIW05.spl~ ~override~
+
+EXTEND_BOTTOM ~AR4100.bcs~ ~%mod_folder%/baf/USSTIW06.baf~

@@ -1,0 +1,6 @@
+//NOTES
+COPY ~%mod_folder%/are/AR5015.are~ ~override~
+// 440
+// 340
+// toAR5104, 571, 277
+// door, 592, 264

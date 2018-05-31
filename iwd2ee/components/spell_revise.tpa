@@ -322,7 +322,7 @@ COPY_EXISTING ~SPWI428Z.itm~ ~override~
   SAY NAME1 @1561
   SAY NAME2 @1561
   SAY DESC @1562
-COPY ~%mod_folder%/itm/SPWI501Z.itm~ ~override~
+COPY_EXISTING ~SPWI501Z.itm~ ~override~
   SAY NAME1 @1767
   SAY NAME2 @1767
   SAY DESC @1768
@@ -649,9 +649,9 @@ COPY ~%mod_folder%/bam/USAZB01C.bam~ ~override~
 //COPY ~%mod_folder%/bam/USAZN1C.bam~ ~override~
 
 COPY ~%mod_folder%/itm/GOODBER.itm~ ~override~
-  SAY NAME1 @1492
-  SAY NAME2 @1492
-  SAY DESC @1493
+  SAY NAME1 @2492
+  SAY NAME2 @2492
+  SAY DESC @2493
 
 // edits to summoned critters
 
@@ -661,41 +661,41 @@ COPY ~%mod_folder%/cre/00SPSPI.cre~ ~override~
 
 // copying over all creature files for new shapeshifting forms
 COPY ~%mod_folder%/cre/USSTDR06.cre~ ~override~
-  SAY NAME1 @1172
-  SAY NAME2 @1172
+  SAY NAME1 @172
+  SAY NAME2 @172
 COPY ~%mod_folder%/cre/USSTDR03.cre~ ~override~
-  SAY NAME1 @1173
-  SAY NAME2 @1173
+  SAY NAME1 @173
+  SAY NAME2 @173
 COPY ~%mod_folder%/cre/USSTDR09.cre~ ~override~
-  SAY NAME1 @1174
-  SAY NAME2 @1174
+  SAY NAME1 @174
+  SAY NAME2 @174
 COPY ~%mod_folder%/cre/USSTDR12.cre~ ~override~
-  SAY NAME1 @1175
-  SAY NAME2 @1175
+  SAY NAME1 @175
+  SAY NAME2 @175
 COPY ~%mod_folder%/cre/USSTDR18.cre~ ~override~
-  SAY NAME1 @1176
-  SAY NAME2 @1176
+  SAY NAME1 @176
+  SAY NAME2 @176
 COPY ~%mod_folder%/cre/USSTDR22.cre~ ~override~
-  SAY NAME1 @1177
-  SAY NAME2 @1177
+  SAY NAME1 @177
+  SAY NAME2 @177
 COPY ~%mod_folder%/cre/USSTDR24.cre~ ~override~
-  SAY NAME1 @1178
-  SAY NAME2 @1178
+  SAY NAME1 @178
+  SAY NAME2 @178
 COPY ~%mod_folder%/cre/USSTDR27.cre~ ~override~
-  SAY NAME1 @1179
-  SAY NAME2 @1179
+  SAY NAME1 @179
+  SAY NAME2 @179
 COPY ~%mod_folder%/cre/USSTDR29.cre~ ~override~
-  SAY NAME1 @1180
-  SAY NAME2 @1180
+  SAY NAME1 @180
+  SAY NAME2 @180
 COPY ~%mod_folder%/cre/USSTDR32.cre~ ~override~
-  SAY NAME1 @1181
-  SAY NAME2 @1181
+  SAY NAME1 @181
+  SAY NAME2 @181
 COPY ~%mod_folder%/cre/USSTDR35.cre~ ~override~
-  SAY NAME1 @1182
-  SAY NAME2 @1182
+  SAY NAME1 @182
+  SAY NAME2 @182
 COPY ~%mod_folder%/cre/USSTDR38.cre~ ~override~
-  SAY NAME1 @1183
-  SAY NAME2 @1183
+  SAY NAME1 @183
+  SAY NAME2 @183
 COPY ~%mod_folder%/cre/00SVPRG.cre~ ~override~
   SAY NAME1 @1558
   SAY NAME2 @1558

@@ -1,4 +1,4 @@
-//TRA num range  @1000 to @2000
+//TRA num range  @1000 to @1999
 
 
 @1000    = ~Doom~
@@ -1216,6 +1216,30 @@ Saving Throw: Reflex partial
 
 This spell allows the caster to evoke dazzling beams of intensely hot light.  Every round, all creatures in the beam are blinded for 3 rounds and take 4d6 points of magic damage, or 16d6 damage over 4 rounds.  A successful Reflex save negates the blindness and reduces the damage by half.  Undead creatures, fungi, mold, oozes, slimes and other fungoid creatures caught in the ray suffer 1d6 points of damage per caster level (maximum 20d6) per round.  This spell bypasses spell resistance.
 ~
+@1621    = ~Great Shout~
+@1622    = ~Great Shout
+(Evocation)
+Level: Brd 6, Sor/Wiz 8, Oghma 7
+Range: Caster
+Duration: Instantaneous 
+Casting Time: 2 
+Area of Effect: 30-feet long, 10-foot diameter
+Saving Throw: Fortitude half
+
+Upon uttering the Great Shout, the caster releases a stunning force from his mouth in a 30-foot long, 10-foot diameter cone.  Creatures within the area of effect take 10d10 magic damage with a Fortitude save for half.  Those who fail the save are stunned for 5 rounds and deafened for 10 rounds.  The caster also takes 2d10 damage and is stunned for 1 round and deafened for 2 rounds, but makes his or her saving throw at a +5 bonus.  Great Shout bypasses spell resistance and immunity to magic.  Deafened creatures have a 25% chance of resisting this spell.~
+
+@1623    = ~Animal Rage~
+@1624    = ~Animal Rage 
+(Enchantment)
+Level:  Drd 4, Rgr 5
+Range: Touch
+Duration: 10 rounds
+Casting Time: 8
+Area of Effect: 1 creature
+Saving Throw: Special
+
+This spell imbues the target creature with animal ferocity. The target creature gains +4 strength, +4 constitution, +20% movement, and +2 to all saving throws.  The target loses the ability to cast spells while Animal Rage is in effect.  He or she can be controlled normally unless enemies are within sight, at which time the target immediately attacks in melee, using whatever is in hand.  There is a 5% chance per round that the target will go berserk, attacking friend and foe alike. Allies are automatically affected, while enemies may make a Will save to avoid the effects.
+~
 
 @1629    = ~Flame Arrow~
 @1630    = ~Flame Arrow 
@@ -1590,6 +1614,21 @@ Saving Throw: Fortitude negates
 
 This spell will make the target totally deaf.  Deafened spellcasters are 20% more likely to miscast any spell.  This deafness can be done away with by a dispel magic spell and similar effects.  Deaf creatures are immune to Power Word spells, bard songs, and sound-based attacks such as a harpy's wail.
 ~
+@1714    = ~Resurrection~
+@1715    = ~Resurrection
+(Conjuration)
+Level: Clr 7, Lathander 8
+Range: Touch 
+Duration: Instantaneous 
+Casting Time: 1 round
+Area of Effect: 1 creature
+Saving Throw: None
+
+As Raise Dead, except you are able to restore life and complete strength to a deceased character.  The deceased character must be in the party for the spell to work.  Upon completion of the spell, the creature is immediately restored to full hit points, vigor and health.  The ordeal however causes the character to lose one level during the process.
+
+Note that when this spell is inscribed on a scroll, its power and range is diminished.  A scroll of Resurrection only works when invoked at the place where the target died; if the caster leaves the area and attempts to resurrect his companion, the scroll will not work.
+~
+
 @1716    = ~Improved Alacrity~
 @1717    = ~Improved Alacrity 
 (Universal)
@@ -1705,6 +1744,43 @@ Saving Throw: None
 
 This spell creates a magical field of force that pushes away enemy attacks and spells, granting a +2 generic AC bonus and +2 to Reflex saves. The Ghost Armor spell does not hinder movement, adds no weight or encumbrance, nor does it prevent spellcasting. It lasts until dispelled or until the duration runs out.~
 
+@1744    = ~Knock~
+@1745    = ~Knock
+(Transmutation)
+Level: Sor/Wiz 2
+Range: Sight of Caster
+Duration: Special 
+Casting Time: 1 
+Area of Effect: Locked door, container, or construct
+Saving Throw: None
+
+The Knock spell opens locked, held or arcane locked doors.  It opens secret doors, as well as locked boxes or chests.  It does not raise barred gates or similar impediments.  Enemy constructs suffer 1d6 magic damage per caster level, up to a maximum of 20d6 at level 20.
+~
+@1747    = ~Horrid Wilting~
+@1748    = ~Horrid Wilting
+(Necromancy) 
+Level: Sor/Wiz 8, Ilmater 9, Talos 9
+Range: Sight of Caster
+Duration: Instantaneous
+Casting Time: 8
+Area of Effect: 30-foot radius
+Saving Throw: Fortitude half
+
+This spell evaporates moisture from the bodies of every living creature within the area of effect, inflicting 1d8 points of damage per caster level (Maximum 25d8).  Affected creatures are allowed a Fortitude save for half damage.  Water based creatures are especially vulnerable to this spell and suffer double damage.  Allies are unaffected by this spell.
+~
+@1749    = ~Stinking Cloud~
+@1750    = ~Stinking Cloud
+(Necromancy) 
+Level Sor/Wiz 3
+Range: Medium
+Duration: 1 round/level
+Casting Time: 2 
+Area of Effect: 30-foot radius
+Saving Throw: Fortitude negates
+
+Stinking Cloud creates a billowing mass of noxious vapors up to 30 feet away from the wizard.  Any living creature caught within the cloud must roll a successful Fortitude save or become nauseated, making them unable to attack, cast spells, concentrate on spells, and so on.  These effects last for as long as the character remains in the cloud.
+~
+
 @1755    = ~Unholy Blight~
 @1756    = ~Unholy Blight 
 (Evocation) [Evil]
@@ -1765,6 +1841,33 @@ Saving Throw: None
 
 This spell creates a meteoric iron magical club (1d6) that has +2 attack bonus and damage, and is treated as a +4 weapon for purposes of what it can hit.  Proficiency, strength, and specialization bonuses and penalties apply.  It does an additional 3d6 points of magic damage against all forms of unnatural creatures.
 ~
+@1767    = ~Animate Skeleton/Zombie~
+@1768    = ~This scroll contains the knowledge of two spells, Animate Skeleton and Animate Zombie:
+
+Animate Skeleton 
+(Necromancy) 
+Level: Clr 3, Sor/Wiz 5, Tempus 3
+Range: Sight of Caster
+Duration: Instantaneous 
+Casting Time: 9
+Area of Effect: Special 
+Saving Throw: None 
+
+This spell brings forth a long-dead skeleton from deep within the earth and reanimates it to serve the caster.  The higher the level of the caster, the more powerful the skeleton summoned by this spell.
+
+Animate Zombie 
+(Necromancy) 
+Level: Clr 3, Sor/Wiz 5, Tempus 3
+Range: Sight of Caster
+Duration: Instantaneous 
+Casting Time: 9
+Area of Effect: Special 
+Saving Throw: None 
+
+This spell brings forth a long-dead zombie from deep within the earth and reanimates it to serve the caster.  The higher the level of the caster, the more powerful the zombie summoned by this spell.
+
+WARNING: At higher levels, the Zombie Lords and Festering Drowned Dead summoned by this spell have powerful supernatural auras.  The effects of their auras may harm your own party members if they fall within the area of affect.~
+
 @1769    = ~Elemental Barrier~
 @1770    = ~Elemental Barrier 
 (Abjuration) 

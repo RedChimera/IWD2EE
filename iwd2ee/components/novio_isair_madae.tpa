@@ -1,0 +1,5 @@
+//NOTES
+//This allows you to argue, intimidate, and bluff your way through the final fight, stalling for time until the mythal comes down. There are probably multiple different triggers across several scripts that we would need to duplicate in order to (1) get Orrick to appear in the main room instead of the side room by the pool so he can speak to Isair and Madae (2) skip the transition to the second half of the fight by the pool (3) maybe remove the various critters who appear before the fight, so they don't get in the way when the party is trying to flee (4) unlock the south door and let the party flee to the exit as if they had fought both sections of the final fight.
+
+COMPILE ~%mod_folder%/dlg/61ISAIR.d~ ~%mod_folder%/dlg/60MADAE.d~
+

@@ -1,3 +1,11 @@
+2018-05-31
+
+- Finished reorg (first blush)
+
+2018-05-29
+
+- Reorganization: to creature revisions
+
 2018-05-27
 
 - Continued reorganizing: tra files for spell rev

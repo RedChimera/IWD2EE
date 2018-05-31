@@ -1,0 +1,537 @@
+//NOTES
+//Need to traify
+
+// This component works by changing creature types to the types targeted by vanilla racial enemies. You can't create a new "Arachnid" racial enemy, but you can patch spiders to be coded as ettercaps and then change the string for the racial enemy choice. Note that these commands can't be copied out of order, or else one command might overwrite another and place a creature type in the wrong category.
+
+// turn arachnids into driders
+
+COPY_EXISTING_REGEXP ~.+\.cre~ ~override~
+    READ_BYTE "0x386" "race"
+    PATCH_IF ~%race%~ EQUALS ~116~ BEGIN
+        WRITE_BYTE 0x386 182
+    END
+BUT_ONLY_IF_IT_CHANGES
+COPY_EXISTING_REGEXP ~.+\.cre~ ~override~
+    READ_BYTE "0x386" "race"
+    PATCH_IF ~%race%~ EQUALS ~107~ BEGIN
+        WRITE_BYTE 0x386 182
+    END
+BUT_ONLY_IF_IT_CHANGES
+
+
+// turn giants into giants
+
+COPY_EXISTING_REGEXP ~.+\.cre~ ~override~
+    READ_BYTE "0x386" "race"
+    PATCH_IF ~%race%~ EQUALS ~189~ BEGIN
+        WRITE_BYTE 0x386 153
+    END
+BUT_ONLY_IF_IT_CHANGES
+COPY_EXISTING_REGEXP ~.+\.cre~ ~override~
+    READ_BYTE "0x386" "race"
+    PATCH_IF ~%race%~ EQUALS ~179~ BEGIN
+        WRITE_BYTE 0x386 153
+    END
+BUT_ONLY_IF_IT_CHANGES
+COPY_EXISTING_REGEXP ~.+\.cre~ ~override~
+    READ_BYTE "0x386" "race"
+    PATCH_IF ~%race%~ EQUALS ~113~ BEGIN
+        WRITE_BYTE 0x386 153
+    END
+BUT_ONLY_IF_IT_CHANGES
+
+
+// turn goblins into goblins
+
+COPY_EXISTING_REGEXP ~.+\.cre~ ~override~
+    READ_BYTE "0x386" "race"
+    PATCH_IF ~%race%~ EQUALS ~111~ BEGIN
+        WRITE_BYTE 0x386 155
+    END
+BUT_ONLY_IF_IT_CHANGES
+COPY_EXISTING_REGEXP ~.+\.cre~ ~override~
+    READ_BYTE "0x386" "race"
+    PATCH_IF ~%race%~ EQUALS ~160~ BEGIN
+        WRITE_BYTE 0x386 155
+    END
+BUT_ONLY_IF_IT_CHANGES
+COPY_EXISTING_REGEXP ~.+\.cre~ ~override~
+    READ_BYTE "0x386" "race"
+    PATCH_IF ~%race%~ EQUALS ~180~ BEGIN
+        WRITE_BYTE 0x386 155
+    END
+BUT_ONLY_IF_IT_CHANGES
+COPY_EXISTING_REGEXP ~.+\.cre~ ~override~
+    READ_BYTE "0x386" "race"
+    PATCH_IF ~%race%~ EQUALS ~160~ BEGIN
+        WRITE_BYTE 0x386 155
+    END
+BUT_ONLY_IF_IT_CHANGES
+
+
+// turn bugs into bugbears
+
+COPY_EXISTING_REGEXP ~.+\.cre~ ~override~
+    READ_BYTE "0x386" "race"
+    PATCH_IF ~%race%~ EQUALS ~150~ BEGIN
+        WRITE_BYTE 0x386 180
+    END
+BUT_ONLY_IF_IT_CHANGES
+COPY_EXISTING_REGEXP ~.+\.cre~ ~override~
+    READ_BYTE "0x386" "race"
+    PATCH_IF ~%race%~ EQUALS ~151~ BEGIN
+        WRITE_BYTE 0x386 180
+    END
+BUT_ONLY_IF_IT_CHANGES
+COPY_EXISTING_REGEXP ~.+\.cre~ ~override~
+    READ_BYTE "0x386" "race"
+    PATCH_IF ~%race%~ EQUALS ~104~ BEGIN
+        WRITE_BYTE 0x386 180
+    END
+BUT_ONLY_IF_IT_CHANGES
+COPY_EXISTING_REGEXP ~.+\.cre~ ~override~
+    READ_BYTE "0x386" "race"
+    PATCH_IF ~%race%~ EQUALS ~181~ BEGIN
+        WRITE_BYTE 0x386 180
+    END
+BUT_ONLY_IF_IT_CHANGES
+COPY_EXISTING_REGEXP ~.+\.cre~ ~override~
+    READ_BYTE "0x386" "race"
+    PATCH_IF ~%race%~ EQUALS ~101~ BEGIN
+        WRITE_BYTE 0x386 180
+    END
+BUT_ONLY_IF_IT_CHANGES
+
+// turn aberrations into harpies 
+
+COPY_EXISTING_REGEXP ~.+\.cre~ ~override~
+    READ_BYTE "0x386" "race"
+    PATCH_IF ~%race%~ EQUALS ~106~ BEGIN
+        WRITE_BYTE 0x386 174
+    END
+BUT_ONLY_IF_IT_CHANGES
+COPY_EXISTING_REGEXP ~.+\.cre~ ~override~
+    READ_BYTE "0x386" "race"
+    PATCH_IF ~%race%~ EQUALS ~192~ BEGIN
+        WRITE_BYTE 0x386 174
+    END
+BUT_ONLY_IF_IT_CHANGES
+COPY_EXISTING_REGEXP ~.+\.cre~ ~override~
+    READ_BYTE "0x386" "race"
+    PATCH_IF ~%race%~ EQUALS ~186~ BEGIN
+        WRITE_BYTE 0x386 174
+    END
+BUT_ONLY_IF_IT_CHANGES
+COPY_EXISTING_REGEXP ~.+\.cre~ ~override~
+    READ_BYTE "0x386" "race"
+    PATCH_IF ~%race%~ EQUALS ~193~ BEGIN
+        WRITE_BYTE 0x386 174
+    END
+BUT_ONLY_IF_IT_CHANGES
+
+
+// turn demons (tanar'ri) into hook horrors
+
+COPY_EXISTING_REGEXP ~.+\.cre~ ~override~
+    READ_BYTE "0x386" "race"
+    PATCH_IF ~%race%~ EQUALS ~164~ BEGIN
+        WRITE_BYTE 0x386 181
+    END
+BUT_ONLY_IF_IT_CHANGES
+
+
+
+// turn constructs into orcs
+
+COPY_EXISTING_REGEXP ~.+\.cre~ ~override~
+    READ_BYTE "0x386" "race"
+    PATCH_IF ~%race%~ EQUALS ~215~ BEGIN
+        WRITE_BYTE 0x386 160
+    END
+BUT_ONLY_IF_IT_CHANGES
+COPY_EXISTING_REGEXP ~.+\.cre~ ~override~
+    READ_BYTE "0x386" "race"
+    PATCH_IF ~%race%~ EQUALS ~190~ BEGIN
+        WRITE_BYTE 0x386 160
+    END
+BUT_ONLY_IF_IT_CHANGES
+COPY_EXISTING_REGEXP ~.+\.cre~ ~override~
+    READ_BYTE "0x386" "race"
+    PATCH_IF ~%race%~ EQUALS ~156~ BEGIN
+        WRITE_BYTE 0x386 160
+    END
+BUT_ONLY_IF_IT_CHANGES
+
+
+// turn animals into ogres. Note that animal is not a race; it's a general type.
+
+COPY_EXISTING_REGEXP ~.+\.cre~ ~override~
+    READ_BYTE "0x385" "generaltype"
+    PATCH_IF ~%generaltype%~ EQUALS ~2~ BEGIN
+        WRITE_BYTE 0x386 113
+    END
+BUT_ONLY_IF_IT_CHANGES
+
+// turn elementals into salamanders
+
+COPY_EXISTING_REGEXP ~.+\.cre~ ~override~
+    READ_BYTE "0x386" "race"
+    PATCH_IF ~%race%~ EQUALS ~175~ BEGIN
+        WRITE_BYTE 0x386 161
+    END
+BUT_ONLY_IF_IT_CHANGES
+COPY_EXISTING_REGEXP ~.+\.cre~ ~override~
+    READ_BYTE "0x386" "race"
+    PATCH_IF ~%race%~ EQUALS ~152~ BEGIN
+        WRITE_BYTE 0x386 161
+    END
+BUT_ONLY_IF_IT_CHANGES
+
+
+// turn humans into shapeshifters
+
+COPY_EXISTING_REGEXP ~.+\.cre~ ~override~
+    READ_BYTE "0x386" "race"
+    PATCH_IF ~%race%~ EQUALS ~1~ BEGIN
+        WRITE_BYTE 0x386 191
+    END
+BUT_ONLY_IF_IT_CHANGES
+
+
+// turn trolls into trolls
+// no change needed
+
+
+
+// turn yuan-ti into yuan-ti
+
+
+COPY_EXISTING_REGEXP ~.+\.cre~ ~override~
+    READ_BYTE "0x386" "race"
+    PATCH_IF ~%race%~ EQUALS ~157~ BEGIN
+        WRITE_BYTE 0x386 168
+    END
+BUT_ONLY_IF_IT_CHANGES
+
+// turn underdark aberrations into umber hulks -> lizard men
+
+COPY_EXISTING_REGEXP ~.+\.cre~ ~override~
+    READ_BYTE "0x386" "race"
+    PATCH_IF ~%race%~ EQUALS ~184~ BEGIN
+        WRITE_BYTE 0x386 157
+    END
+BUT_ONLY_IF_IT_CHANGES
+COPY_EXISTING_REGEXP ~.+\.cre~ ~override~
+    READ_BYTE "0x386" "race"
+    PATCH_IF ~%race%~ EQUALS ~177~ BEGIN
+        WRITE_BYTE 0x386 157
+    END
+BUT_ONLY_IF_IT_CHANGES
+COPY_EXISTING_REGEXP ~.+\.cre~ ~override~
+    READ_BYTE "0x386" "race"
+    PATCH_IF ~%race%~ EQUALS ~166~ BEGIN
+        WRITE_BYTE 0x386 157
+    END
+BUT_ONLY_IF_IT_CHANGES
+
+
+// turn undead into undead
+// no change needed
+
+
+// turn dragons into wyverns
+
+COPY_EXISTING_REGEXP ~.+\.cre~ ~override~
+    READ_BYTE "0x386" "race"
+    PATCH_IF ~%race%~ EQUALS ~187~ BEGIN
+        WRITE_BYTE 0x386 118
+    END
+BUT_ONLY_IF_IT_CHANGES
+COPY_EXISTING_REGEXP ~.+\.cre~ ~override~
+    READ_BYTE "0x386" "race"
+    PATCH_IF ~%race%~ EQUALS ~188~ BEGIN
+        WRITE_BYTE 0x386 118
+    END
+BUT_ONLY_IF_IT_CHANGES
+COPY_EXISTING_REGEXP ~.+\.cre~ ~override~
+    READ_BYTE "0x386" "race"
+    PATCH_IF ~%race%~ EQUALS ~154~ BEGIN
+        WRITE_BYTE 0x386 118
+    END
+BUT_ONLY_IF_IT_CHANGES
+
+
+
+// turn amorphous beings into umber hulks
+
+COPY_EXISTING_REGEXP ~.+\.cre~ ~override~
+    READ_BYTE "0x386" "race"
+    PATCH_IF ~%race%~ EQUALS ~159~ BEGIN
+        WRITE_BYTE 0x386 166
+    END
+BUT_ONLY_IF_IT_CHANGES
+COPY_EXISTING_REGEXP ~.+\.cre~ ~override~
+    READ_BYTE "0x386" "race"
+    PATCH_IF ~%race%~ EQUALS ~119~ BEGIN
+        WRITE_BYTE 0x386 166
+    END
+BUT_ONLY_IF_IT_CHANGES
+COPY_EXISTING_REGEXP ~.+\.cre~ ~override~
+    READ_BYTE "0x386" "race"
+    PATCH_IF ~%race%~ EQUALS ~176~ BEGIN
+        WRITE_BYTE 0x386 166
+    END
+BUT_ONLY_IF_IT_CHANGES
+
+// create new strings for racial enemies so rangers know which group they're choosing
+
+STRING_SET 3280 ~Goblinoids~
+STRING_SET 3292 ~Goblins are extremely common in many non-human areas of Faerun.  The foundation of the "goblinoid" races, many goblins typify everything that humans associate with their cousins: stupidity, greed, and wickedness.  Goblins are not very technologically advanced.  As a result, they frequently raid human settlements for food and other provisions.
+
+Other variants of the goblin race include hobgoblins, bugbears, and orcs.~
+
+STRING_SET 28367 ~Giant Insects~
+STRING_SET 8032 ~With thick shells, deadly pincers, and even venomous fangs, giant insects are dangerous vermin that frequently cluster into swarms. Beetles, remorhazes, hook horrors, and carrion crawlers all constitute giant insects.~
+
+STRING_SET 37606 ~Demons/Devils~
+STRING_SET 37608 ~Fiendish denizens of the Abyss or the Nine Hells, demons and devils are locked in a neverending conflict called the Blood War, each dedicated to the other side's destructions. Both the baatezu and the tanar'ri are cruel, malevolent beings with magical abilities beyond the ken of mortals. Powerful mages sometimes bind demons or devils to their will, but unless there is a conduit to the Prime Material Plane, most "Primes" never encounter a fiend in the flesh.~
+
+STRING_SET 37616 ~Aberrations~
+STRING_SET 37618 ~Aberrations are mysterious, little-understood monsters seemingly alien to their own environment. With bizarre abilities and unknown origin, aberrations are rare but dangerous creatures. Doppelgangers, feyrs, will o' wisps, chimeras, otyughs, and harpies all constitute aberrations.~
+
+STRING_SET 37607 ~Giant Arachnids~
+STRING_SET 41079 ~Giant arachnids include both lesser vermin such as spiders and ettercaps as well as mutated variants such as driders, the unnatural union of a dark elf and a spider.  Almost always created as a punishment from the drow goddess Lolth, driders are bloodthirsty outcasts that scuttle through the Underdark scavenging for their next meal.  Though driders do possess the ability to shoot webs from their spider bodies, they also typically retain the class abilities they had from their dark elf past.~
+
+
+STRING_SET 3271 ~Constructs~
+STRING_SET 3282 ~Constructs~
+STRING_SET 3294 ~Constructs are inanimate objects, sometimes made animate through magical means. Anything from a moldy wooden barrel to a towering iron golem is considered a construct. Some rangers may target bridges, mines, and fortifications that pose a threat to nature, and learn how to deconstruct these creations that cannot be destroyed through conventional means.~
+
+STRING_SET 3279 ~Giants~
+STRING_SET 61 ~Giants~
+STRING_SET 3291 ~Giants are well known throughout the Frozen North.  Huge and powerful, giants are extremely dangerous foes.  They use their strength and mass to fell opponents with a single blow.  The most common giant race spoken of in Icewind Dale is the mighty Frost Giant.  Minotaurs, yetis, and ogres also constitute giants.~
+
+STRING_SET 3275 ~Underdark Aberrations~
+STRING_SET 3281 ~Underdark Aberrations~
+STRING_SET 3293 ~The Underdark is home to many strange and powerful creatures, including bizarre aberrations such as beholders, mind flayers, and umber hulks. Beholders are known for their powerful rays, while mind flayers are infamous for using their mental powers to enslave less intelligent races. Mind flayers often keep umber hulks as guards. Umber hulks are huge, incredibly powerful monsters with thick, scaly hides, sharp mandibles, and two sets of eyes, often kept as guards by mind flayers. The most debilitating power of the umber hulk is its ability to cause confusion with its gaze.~
+
+STRING_SET 15975 ~Animals~
+STRING_SET 15998 ~Part of a ranger's job is dealing with wild animals, and when nonviolent means fail, a ranger may be forced to slay a dangerous or diseased animal to protect others in the area. Bears, dogs, wolves, worgs, lions, leopards, panthers, and boars all constitute wild animals.~
+
+STRING_SET 3272 ~Elementals~
+STRING_SET 3290 ~Elementals~
+STRING_SET 3295 ~Elementals are beings from the Elemental Planes of Fire, Water, Earth, and Air. Vaguely humanoid in shape but utterly alien in intelligence, elementals seldom grace the Prime Material Plane unless summoned through magical means. If not constrained, they can pose a serious threat to the environment and civilization. Salamanders from the Elemental Plane of Fire or the Paraelemental Plane of Ice also constitute elementals.~
+
+
+// STRING_SET 3276 ~Trolls~
+// STRING_SET 3278 ~Trolls~
+// STRING_SET 3299 ~Some might argue that trolls are the natural enemy of most rangers.  Inherently violent and aggressive, trolls frequently attack with little or no provocation.  They attack humans and small human settlements regularly, destroying everything in their path.  Trolls are not only feared for their large, powerful limbs, but for their ability to rapidly regenerate most wounds inflicted on them.  Experienced adventurers carry fire and acid with them when expecting trolls.~
+
+STRING_SET 3277 ~Amorphous Beings~
+STRING_SET 3289 ~Amorphous Beings~
+STRING_SET 3300 ~Some creatures possess neither skeleton nor exoskeleton and defy typical laws of body structure. These amorphous beings can range from slimes and jellies to myconids and even the rare shambling mound. Slimes and jellies are often inherently toxic, while myconids often defend their territory with hallucinogenic spores that render their victims confused or even catatonic.~
+
+STRING_SET 879 ~Yuan-ti/Lizard Men~
+STRING_SET 3301 ~These creatures are rare, but extremely deadly opponents.  Yuan-ti are an offshoot of a race which ruled Faerun long before humanoids took control.  With snakelike bodies and vaguely human limbs, yuan-ti hide in secret vaults until the time is right to strike out at their enemies.  Yuan-ti are extremely intelligent foes with very sophisticated magical talents.  They are known for their cunning minds, poisonous traps, and vile religious rituals.
+
+Typically only found in tropical regions, Lizard Men are primitive bipeds with a well developed social structure and advanced religious beliefs.  Lizard Men tribes are typically led by a Lizard King who is significantly larger and more powerful than his kin.  Lizard Men do not come into conflict with humans often, but their fondness for the taste of human flesh often causes problems.~
+
+
+STRING_SET 37617 ~Dragons~
+STRING_SET 37619 ~Dragons are rightly feared as some of the most powerful creatures to walk the face of Faerun. While metallic dragons are nearly always good-aligned, chromatic dragons are notoriously violent and greedy. The most common dragon in Icewind Dale is the white dragon.
+
+Often mistaken for young dragons, wyverns are two-legged flying poisonous monsters. Though they have a limited intellect, they are cunning creatures with an aggressive nature.~
+
+STRING_SET 37605 ~Humans~
+STRING_SET 37609 ~While most humans live in relative harmony under nature's canopy, some humans pose a dangerous threat to its very existence. For a ranger, defending nature sometimes involves fighting against one's own kith and kin. The danger can be as mild as overfishing, or as severe as a reckless mage warping the environment for his own twisted ends. The ranger's involvement, likewise, may vary from quiet diplomacy to violent intervention, as the case may warrant.
+
+Choosing Humans as a racial enemy does not grant equivalent bonuses to demihumans such as dwarves, elves, gnomes, halflings, half-orcs, or half-elves, as these races seldom pose a direct threat to nature.~
+
+// Some creatures have no race and must be patched individually, by name, since WeiDU can't read the race they're supposed to be.
+//bugs
+COPY_EXISTING ~00SCRD.cre~ ~override~
+        WRITE_BYTE 0x386 180
+BUT_ONLY_IF_IT_CHANGES
+COPY_EXISTING ~00SDREM.cre~ ~override~
+        WRITE_BYTE 0x386 180
+BUT_ONLY_IF_IT_CHANGES
+COPY_EXISTING ~00SREM.cre~ ~override~
+        WRITE_BYTE 0x386 180
+BUT_ONLY_IF_IT_CHANGES
+COPY_EXISTING ~00SSHREM.cre~ ~override~
+        WRITE_BYTE 0x386 180
+BUT_ONLY_IF_IT_CHANGES
+COPY_EXISTING ~00SSREM.cre~ ~override~
+        WRITE_BYTE 0x386 180
+BUT_ONLY_IF_IT_CHANGES
+COPY_EXISTING ~41SCRD.cre~ ~override~
+        WRITE_BYTE 0x386 180
+BUT_ONLY_IF_IT_CHANGES
+COPY_EXISTING ~41SDREM.cre~ ~override~
+        WRITE_BYTE 0x386 180
+BUT_ONLY_IF_IT_CHANGES
+COPY_EXISTING ~41SREM.cre~ ~override~
+        WRITE_BYTE 0x386 180
+BUT_ONLY_IF_IT_CHANGES
+COPY_EXISTING ~41SSHREM.cre~ ~override~
+        WRITE_BYTE 0x386 180
+BUT_ONLY_IF_IT_CHANGES
+COPY_EXISTING ~41SSREM.cre~ ~override~
+        WRITE_BYTE 0x386 180
+BUT_ONLY_IF_IT_CHANGES
+
+//aberrations
+COPY_EXISTING ~00SDHRP.cre~ ~override~
+        WRITE_BYTE 0x386 174
+BUT_ONLY_IF_IT_CHANGES
+COPY_EXISTING ~00SGFYR.cre~ ~override~
+        WRITE_BYTE 0x386 174
+BUT_ONLY_IF_IT_CHANGES
+COPY_EXISTING ~00SOTY.cre~ ~override~
+        WRITE_BYTE 0x386 174
+BUT_ONLY_IF_IT_CHANGES
+COPY_EXISTING ~00SSHHRP.cre~ ~override~
+        WRITE_BYTE 0x386 174
+BUT_ONLY_IF_IT_CHANGES
+COPY_EXISTING ~00SSHRP.cre~ ~override~
+        WRITE_BYTE 0x386 174
+BUT_ONLY_IF_IT_CHANGES
+COPY_EXISTING ~41SDHRP.cre~ ~override~
+        WRITE_BYTE 0x386 174
+BUT_ONLY_IF_IT_CHANGES
+COPY_EXISTING ~41SGFYR.cre~ ~override~
+        WRITE_BYTE 0x386 174
+BUT_ONLY_IF_IT_CHANGES
+COPY_EXISTING ~41SOTY.cre~ ~override~
+        WRITE_BYTE 0x386 174
+BUT_ONLY_IF_IT_CHANGES
+COPY_EXISTING ~41SSHHRP.cre~ ~override~
+        WRITE_BYTE 0x386 174
+BUT_ONLY_IF_IT_CHANGES
+COPY_EXISTING ~41SSHRP.cre~ ~override~
+        WRITE_BYTE 0x386 174
+BUT_ONLY_IF_IT_CHANGES
+COPY_EXISTING ~61FEYR.cre~ ~override~
+        WRITE_BYTE 0x386 174
+BUT_ONLY_IF_IT_CHANGES
+COPY_EXISTING ~62FEYR.cre~ ~override~
+        WRITE_BYTE 0x386 174
+BUT_ONLY_IF_IT_CHANGES
+COPY_EXISTING ~62FEYR2.cre~ ~override~
+        WRITE_BYTE 0x386 174
+BUT_ONLY_IF_IT_CHANGES
+COPY_EXISTING ~62FEYR3.cre~ ~override~
+        WRITE_BYTE 0x386 174
+BUT_ONLY_IF_IT_CHANGES
+COPY_EXISTING ~62GFYR.cre~ ~override~
+        WRITE_BYTE 0x386 174
+BUT_ONLY_IF_IT_CHANGES
+COPY_EXISTING ~62GFYR2.cre~ ~override~
+        WRITE_BYTE 0x386 174
+BUT_ONLY_IF_IT_CHANGES
+COPY_EXISTING ~62GFYR3.cre~ ~override~
+        WRITE_BYTE 0x386 174
+BUT_ONLY_IF_IT_CHANGES
+COPY_EXISTING ~67FEYR.cre~ ~override~
+        WRITE_BYTE 0x386 174
+BUT_ONLY_IF_IT_CHANGES
+COPY_EXISTING ~67GFYR.cre~ ~override~
+        WRITE_BYTE 0x386 174
+BUT_ONLY_IF_IT_CHANGES
+
+
+//constructs
+COPY_EXISTING ~30DRUM1.cre~ ~override~
+        WRITE_BYTE 0x386 160
+BUT_ONLY_IF_IT_CHANGES
+COPY_EXISTING ~30DRUM2.cre~ ~override~
+        WRITE_BYTE 0x386 160
+BUT_ONLY_IF_IT_CHANGES
+COPY_EXISTING ~30DRUM3.cre~ ~override~
+        WRITE_BYTE 0x386 160
+BUT_ONLY_IF_IT_CHANGES
+COPY_EXISTING ~30DRUM4.cre~ ~override~
+        WRITE_BYTE 0x386 160
+BUT_ONLY_IF_IT_CHANGES
+COPY_EXISTING ~30DRUM5.cre~ ~override~
+        WRITE_BYTE 0x386 160
+BUT_ONLY_IF_IT_CHANGES
+COPY_EXISTING ~30DRUM6.cre~ ~override~
+        WRITE_BYTE 0x386 160
+BUT_ONLY_IF_IT_CHANGES
+COPY_EXISTING ~30DRUM7.cre~ ~override~
+        WRITE_BYTE 0x386 160
+BUT_ONLY_IF_IT_CHANGES
+COPY_EXISTING ~40BENEST.cre~ ~override~
+        WRITE_BYTE 0x386 160
+BUT_ONLY_IF_IT_CHANGES
+COPY_EXISTING ~61STOSLB.cre~ ~override~
+        WRITE_BYTE 0x386 160
+BUT_ONLY_IF_IT_CHANGES
+
+//demons
+COPY_EXISTING ~63NABI.cre~ ~override~
+        WRITE_BYTE 0x386 164
+BUT_ONLY_IF_IT_CHANGES
+
+// Changing race categories affects certain weapons and items which deal extra damage, or cannot affect, creatures of a certain type. This replaces those items and spells with adjusted versions that should target the right categories.
+COPY ~%mod_folder%/race/11AX1HKS.itm~ ~override~
+  SAY NAME1 @2865
+  SAY NAME2 @2865
+  SAY DESC @2866
+COPY ~%mod_folder%/race/11HFAXKS.itm~ ~override~
+  SAY NAME1 @2867
+  SAY NAME2 @2867
+  SAY DESC @2868
+COPY ~%mod_folder%/race/USSTSL02.itm~ ~override~
+COPY ~%mod_folder%/race/USSTHARM.itm~ ~override~
+COPY ~%mod_folder%/race/USSTDEST.itm~ ~override~
+COPY ~%mod_folder%/race/SPPR510.spl~ ~override~
+  SAY NAME1 @1056
+  SAY NAME2 @1056
+  SAY UNIDENTIFIED_DESC @1057
+  SAY IDENTIFIED_DESC @1057
+COPY ~%mod_folder%/race/SPWI619.spl~ ~override~
+  SAY NAME1 @1554
+  SAY NAME2 @1554
+  SAY UNIDENTIFIED_DESC @1555
+  SAY IDENTIFIED_DESC @1555
+COPY ~%mod_folder%/race/SMCUDGE.itm~ ~override~
+COPY ~%mod_folder%/race/SPPR715.spl~ ~override~
+  SAY NAME1 @1060
+  SAY NAME2 @1060
+  SAY UNIDENTIFIED_DESC @1061
+  SAY IDENTIFIED_DESC @1061
+COPY ~%mod_folder%/race/SPWI207.spl~ ~override~
+  SAY NAME1 @1744
+  SAY NAME2 @1744
+  SAY UNIDENTIFIED_DESC @1745
+  SAY IDENTIFIED_DESC @1745
+COPY ~%mod_folder%/race/SPPR113.spl~ ~override~
+  SAY NAME1 @1833
+  SAY NAME2 @1833
+  SAY UNIDENTIFIED_DESC @1834
+  SAY IDENTIFIED_DESC @1834
+COPY ~%mod_folder%/race/SPPR707.spl~ ~override~
+  SAY NAME1 @1591
+  SAY NAME2 @1591
+  SAY UNIDENTIFIED_DESC @1592
+  SAY IDENTIFIED_DESC @1592
+COPY ~%mod_folder%/race/SPWI711.spl~ ~override~
+  SAY NAME1 @1567
+  SAY NAME2 @1567
+  SAY UNIDENTIFIED_DESC @1568
+  SAY IDENTIFIED_DESC @1568
+COPY ~%mod_folder%/race/SPWI423.spl~ ~override~
+  SAY NAME1 @1104
+  SAY NAME2 @1104
+  SAY UNIDENTIFIED_DESC @1105
+  SAY IDENTIFIED_DESC @1105
+COPY ~%mod_folder%/race/SPPR417.spl~ ~override~
+COPY ~%mod_folder%/race/SPPR405.spl~ ~override~
+COPY ~%mod_folder%/race/SPWI911.spl~ ~override~
+COPY ~%mod_folder%/race/SPWI507.spl~ ~override~
+  SAY NAME1 @1106
+  SAY NAME2 @1106
+  SAY UNIDENTIFIED_DESC @1107
+  SAY IDENTIFIED_DESC @1107
