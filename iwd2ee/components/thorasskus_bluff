@@ -1,0 +1,3 @@
+//NOTES
+//This currently just adds the new dialog for Thorasskus. The Efreet assassins must be removed, Thorasskus must be assigned this dialog, and he must be scripted to start this dialog the moment he sees the player.
+COMPILE ~%mod_folder%/dlg/USSTTHOR.d~
