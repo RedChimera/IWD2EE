@@ -1,3 +1,7 @@
 //NOTES
+// This component only includes the dialog for the new Lord Pyros' Domain fight. The whole area must be emptied of its current creatures and scripts.
+// Then we must include new copies of Izbelah, Pyros, Lothar, Venomin, and Jasper, who must have these dialogs assigned.
+// There must be a script to initiate dialog on sight. The dialog will end in a combat. Izbelah's death must open the way to the Fields of Slaughter.
+// When this fight is complete, @semiticgod will edit the "Faster Dragon's Eye and Lord Pyros' Domain" component to make it compatible.
 
 COMPILE ~%mod_folder%/dlg/USSTLPP.d~ ~%mod_folder%/dlg/USSTLPL.d~ ~%mod_folder%/dlg/USSTLPJ.d~ ~%mod_folder%/dlg/USSTLPI.d~ ~%mod_folder%/dlg/USSTLPV.d~
