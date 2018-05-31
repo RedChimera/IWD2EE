@@ -1,0 +1,4 @@
+//NOTES
+
+// This changes Torak's dialog so the player can intimidate Torak's allies into not rushing to his defense. This dialog needs commands to keep them neutral and/or make them run away and vanish, leaving Torak alone. Team scripts are probably what make them turn hostile after Torak attacks the party.
+COMPILE ~%mod_folder%/dlg/20TORAK.d~
