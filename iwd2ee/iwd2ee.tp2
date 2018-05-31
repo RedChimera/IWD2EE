@@ -210,20 +210,34 @@ BEGIN @32
 
       INCLUDE ~%mod_folder%/components/guthma_diplomacy.tpa~      //~Diplomacy for Guthma~
 
+//Trick Harshom
+
 BEGIN @33
 
       INCLUDE ~%mod_folder%/components/harshom_trick.tpa~      //~Trick Harshom~
+
+//Intimidate Torak
 
 BEGIN @34
 
       INCLUDE ~%mod_folder%/components/torak_intimidate.tpa~      //~Intimidate Torak~
 
+//Intimidate Elder Brain
+
 BEGIN @35
 
       INCLUDE ~%mod_folder%/components/elder_brain.tpa~      //~Intimidate Elder Brain~
 
+//Bluff Thorasskus
+
 BEGIN @36
 
       INCLUDE ~%mod_folder%/components/thorasskus_bluff.tpa~      //~Bluff Thorasskus~
+
+//Bluff Thvara
+
+BEGIN @37
+
+      INCLUDE ~%mod_folder%/components/thvara_bluff.tpa~      //~Bluff Thvara~
 
 
