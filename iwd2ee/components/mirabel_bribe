@@ -1,0 +1,3 @@
+//NOTES
+//This currently just adds the dialogs for Mirabel and Majrash. This still needs commands to make them leave, as well as a replacement cutscene for the encounter that starts this dialog instead of having them deliver their lines overhead, like in vanilla. Their character files would also need to be assigned these dialogs as well.
+COMPILE ~%mod_folder%/dlg/USSTMA.d~ ~%mod_folder%/dlg/USSTMI.d~
