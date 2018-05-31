@@ -1,0 +1,5 @@
+//NOTES
+
+// This edits Limha's dialog so the player can try to bribe her to leave. She needs a command to make her teleport away as well as allow the player to report success to Venla the healer.
+// This also adds a line that she will deliver when the variable LimhaLowHP is 1. When she is injured, her script must tell her to initiate dialog so she can surrender. That part of the dialog also must allow the player to report success to Venla, and also let her teleport away if the player spares her life.
+COMPILE ~%mod_folder%/dlg/50LIMHA.d~
