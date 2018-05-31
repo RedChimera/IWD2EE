@@ -1089,3 +1089,28 @@ COPY ~%mod_folder%/spl/USSTDR40.spl~ ~override~
   SAY NAME2 @171
   SAY UNIDENTIFIED_DESC @171
   SAY IDENTIFIED_DESC @171
+  
+  STRING_SET 9558 ~PALADIN:
+
+A paladin is a warrior bold and pure, the exemplar of everything good and true. Like the fighter, the paladin is a man of combat. However, the paladin lives for the ideals of righteousness, justice, honesty, piety, and chivalry. He strives to be a living example of these virtues so that others might learn from him as well as gain by his actions.
+
+NOTE: Wisdom is the casting statistic for a paladin. It affects their maximum spellcasting level, spell saving throw DCs, and number of bonus spells.
+
+WARNING: A paladin who multiclasses to a class other than paladin or their order's favored class will never be allowed to advance in the paladin class again.
+
+Hit Points per Level: 1-10
+
+Advantages:
+* Proficient with all simple and martial weapons, light armor, medium armor, heavy armor, and shields.
+* Adds Charisma modifier to all saving throws.
+* Paladins may use Lay On Hands 1/Day.  Lay On Hands heals the target for a number of hit points equal to the paladin's Charisma modifier times their paladin level (minimum of 1 point per level). Paladins gain an additional casting every 5 levels.
+* Paladins are immune to all forms of disease.
+* 2nd level: Smite Evil.  Once per day, the paladin may now attempt to smite evil with one normal melee attack. He adds his Charisma modifier (if positive) to his attack roll and deals 1 extra point of damage per level.
+* 2nd Level: Aura of Courage.  Paladins become immune to fear, and allies within 10 feet receive a bonus of +4 to saving throws against fear effects.
+* 3rd level: Remove Disease. The paladin gains the ability to remove disease from other characters a number of times per day equal to his level divided by 3.
+* 3rd Level: Turn Undead.  When this power is invoked, the paladin attempts to use the power of his or her patron deity to terrify a group of undead.  The higher the paladin's level and charisma are, the greater his or her chance of success is.  Though this ability is similar to the cleric's Turn Undead ability, the paladin's ability functions as though he or she were two levels lower than a cleric.
+* 4th Level: Spellcasting.  Paladins gain the ability to cast spells.
+
+Disadvantages
+* The paladin must be lawful good or neutral good in alignment and must choose a divine order.  This choice of an order restricts the paladin's multiclassing possibilities.
+* The paladin must react to evil deeds that occur in his or her presence.~
