@@ -1,3 +1,5 @@
 //NOTES
-//This currently only makes a slight tweak to the Elder Brain's dialog, to make it compatible with the possibility that the party broke into the mind flayer city by force. The dialog still needs to be rigged to make sure that other creatures in the area become neutral when the brain is successfully intimidated.
+//This makes a slight tweak to the Elder Brain's dialog, to make it compatible with the possibility that the party broke into the mind flayer city by force. The dialog still needs to be rigged to make sure that other creatures in the area become neutral when the brain is successfully intimidated.
+//This also adds an option to Abdoshanheth's dialog, allowing the player to intimidate the Elder Brain directly from the dialog with Abdoshanheth.
 COMPILE ~%mod_folder%/dlg/53ELDER.d~
+COMPILE ~%mod_folder%/dlg/53ABDOSH.d~
