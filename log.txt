@@ -1,4 +1,12 @@
+2018-06-01
+
+Version 1.00.01
+
+- Fixed a few tpa file extensions
+
 2018-05-31
+
+Version 1.00.00
 
 - Finished reorg (first blush)
 
