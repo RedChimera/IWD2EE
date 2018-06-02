@@ -255,6 +255,6 @@ END
 
 IF ~~ THEN BEGIN TorakIntimidate
   SAY ~What? Bro-broken Tusk Clan! Slay them! Slay them all!~
-  IF ~~ THEN REPLY ~Whoever wants him gone is no enemy of ours.  We're only here to collect one head.  But whoever wants to defend him is welcome to try!~ DO ~Enemy()~ EXIT
+  IF ~~ THEN REPLY ~Whoever wants him gone is no enemy of ours.  We're only here to collect one head.  But whoever wants to defend him is welcome to try!~ DO ~Enemy() SetGlobal("RUNTORG","GLOBAL",1)~ EXIT
 END
 
