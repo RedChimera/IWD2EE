@@ -74,6 +74,11 @@ COPY ~%mod_folder%/spl/SPIN108.spl~ ~override~
   SAY IDENTIFIED_DESC @895
 COPY ~%mod_folder%/spl/USSTAE01.spl~ ~override~
 COPY ~%mod_folder%/spl/USSTAE02.spl~ ~override~
+/*
+COPY ~%mod_folder%/spl/USSTAE03.spl~ ~override~
+COPY ~%mod_folder%/spl/USSTAE04.spl~ ~override~
+COPY ~%mod_folder%/spl/USSTAE05.spl~ ~override~
+*/
 STRING_SET 27114 @896 
 
 // patch wyverns, spiders, beetles, chimeras, yetis, and remorhazes to be animals so they're subject to Animal Empathy
