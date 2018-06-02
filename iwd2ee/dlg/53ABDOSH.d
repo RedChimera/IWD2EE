@@ -1,6 +1,6 @@
 BEGIN ~53ABDOSH~
 
-IF ~  NumberOfTimesTalkedTo(0)
+IF ~  NumTimesTalkedTo(0)
 ~ THEN BEGIN 0
   SAY #22169
   IF ~~ THEN DO ~Enemy()~ EXTERN ~53ELDER~ 6
@@ -18,7 +18,7 @@ IF ~~ THEN BEGIN 2
   IF ~~ THEN REPLY ~So be it.~ DO ~Enemy()~ EXIT
 END
 
-IF ~  NumberOfTimesTalkedToGT(0)
+IF ~  NumTimesTalkedToGT(0)
 ~ THEN BEGIN 3
   SAY ~There is nothing more to say.  Leave quickly.~
   IF ~~ EXIT
