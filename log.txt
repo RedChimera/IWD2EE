@@ -4,6 +4,8 @@ Version 1.00.01
 
 - Fixed a few tpa file extensions
 
+- added files for Animal Empathy (with copy lines)
+
 2018-05-31
 
 Version 1.00.00
