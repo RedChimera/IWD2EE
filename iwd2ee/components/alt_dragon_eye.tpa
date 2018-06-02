@@ -7,10 +7,10 @@
 
 COMPILE ~%mod_folder%/dlg/USSTLPP.d~ ~%mod_folder%/dlg/USSTLPL.d~ ~%mod_folder%/dlg/USSTLPJ.d~ ~%mod_folder%/dlg/USSTLPI.d~ ~%mod_folder%/dlg/USSTLPV.d~
 
-COMPILE ~testWeiDu/dlg/61IZBELA.d~
-COMPILE ~testWeiDu/dlg/60ISELOR.d~
+COMPILE ~%mod_folder%/dlg/61IZBELA.d~
+COMPILE ~%mod_folder%/dlg/60ISELOR.d~
 // Note for @semiticgod: Nheero's dialogue displays an error message. We probably won't need this anyway: the parts I wanted to change shouldn't happen since we're replacing the entire Thorasskus encounter and the new dialog won't set the variables such that Nheero will need to give the obsolete vanilla lines.
-//COMPILE ~testWeiDu/dlg/61NHEERO.d~
+//COMPILE ~%mod_folder%/dlg/61NHEERO.d~
 
 // This overwrites a now-unneeded journal entry so we can add an entry about the new Izbelah fight. There should be a reference to it in the text of USSTLPI.dlg, Izbelah's custom dialog.
 STRING_SET 36025 ~In the lava chamber, we encountered Lord Pyros, a fire giant, a salamander, a yuan-ti halfbreed man named Venomin, and Izbelah arguing over a "Temporal Stasis" spell that Izbelah designed to prevent a volcanic eruption from destroying Dragon's Eye.  It seems that Lord Pyros and his friends in the lava chamber were afraid that the spell would stop time or cause some other catastrophe, but Izbelah thought it was worth the risk because her home was at stake.  In the end, Izbelah decided Lord Pyros was secretly planning to destroy Dragon's Eye, and even accused him of hiring us as assassins!~
