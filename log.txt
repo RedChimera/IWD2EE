@@ -1,3 +1,19 @@
+
+
+2018-06-03
+
+Version 1.00.02
+
+- Updated 00T01M.bcs to include leave area().  Needs testing.  
+
+2018-06-02
+
+- Update to Dragon_eye.tpa
+
+- Update to 20TORAK.D: Added SetGlobal("RUNTORG","GLOBAL",1) to successful intimidate
+
+
+
 2018-06-01
 
 Version 1.00.01
