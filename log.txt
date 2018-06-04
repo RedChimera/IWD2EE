@@ -1,4 +1,7 @@
 
+2018-06-04
+
+- Added SetGlobal("BLFFTHV","GLOBAL",1) to successful bluff in 50THVARA.D
 
 2018-06-03
 
