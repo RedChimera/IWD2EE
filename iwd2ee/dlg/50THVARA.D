@@ -91,6 +91,6 @@ END
 
 IF ~~ THEN BEGIN 9
   SAY ~Damn it!  Get out of my way!  Everyone, hurry--we don't have much time!~
-  IF ~~ THEN REPLY ~~ DO ~AddExperienceParty(2500)~ EXIT
+  IF ~~ THEN REPLY ~~ DO ~AddExperienceParty(2500) SetGlobal("BLFFTHV","GLOBAL",1)~ EXIT
 END
 
