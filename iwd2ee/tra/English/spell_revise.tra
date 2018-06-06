@@ -2121,3 +2121,16 @@ Area of Effect: 15-foot radius
 Saving Throw: Fortitude partial
 
 This spell brings forth a billowing cloud of acidic fog.  The thick fog corrodes everything it touches, dealing 1d6 points of acid damage per round.  Further, every round a creature remains in the cloud, its acid resistance is penalized by -4 points, which can reduce its acid resistance below zero, causing it to take extra damage from the cloud or any other form of acid damage.  The victim may attempt a Fortitude save; if successful, the acid resistance penalty is reduced to -2.  The penalty is cumulative and wears off after 5 rounds.~
+
+@1859     = ~Protection from Cold~
+@1860     = ~Protection from Cold
+(Abjuration) 
+Level: Clr 3, Drd 3, Rgr 2, Sor/Wiz 3, Selune 3
+Range: Touch 
+Duration: 3 rounds/level
+Casting Time: 6 
+Area of Effect: 1 creature
+Saving Throw: None 
+
+This spell grants a damage resistance of 15/- against cold if the caster targets herself, or a 10/- cold damage resistance for anyone else.  The effects lasts for the duration of the spell.
+~

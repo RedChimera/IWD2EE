@@ -2435,3 +2435,16 @@ COPY_EXISTING ~sppr727z.itm~ ~override~
    LPF CLONE_EFFECT INT_VAR match_opcode = 148 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
 COPY_EXISTING ~sppr728z.itm~ ~override~
    LPF CLONE_EFFECT INT_VAR match_opcode = 148 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+
+COPY ~%mod_folder%/spl/USPCOLD.spl~ ~override~
+  SAY NAME1 @1859
+  SAY NAME2 @1859
+  SAY UNIDENTIFIED_DESC @1860
+  SAY IDENTIFIED_DESC @1860
+COPY ~%mod_folder%/itm/USPCOLD.itm~ ~override~
+  SAY NAME1 @1859
+  SAY NAME2 @1859
+  SAY DESC @1860
+COPY ~%mod_folder%/bam/USCOLDA.bam~ ~override~
+COPY ~%mod_folder%/bam/USCOLDB.bam~ ~override~
+COPY ~%mod_folder%/bam/USCOLDC.bam~ ~override~

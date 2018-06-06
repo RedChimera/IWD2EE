@@ -1118,3 +1118,403 @@ Advantages:
 Disadvantages
 * The paladin must be lawful good or neutral good in alignment and must choose a divine order.  This choice of an order restricts the paladin's multiclassing possibilities.
 * The paladin must react to evil deeds that occur in his or her presence.~
+
+STRING_SET 8829 ~Concoct Potions~
+STRING_SET 25681 ~Concoct Potions~
+STRING_SET 36547 ~CONCOCT POTIONS:
+
+You have learned the seldom taught skill of the alchemist.  As you wander the world of Faerun you constantly scavenge for substances to fuel your research.
+
+Prerequisite: 1 level of rogue, Alchemy 8 or greater
+
+Benefit: The alchemist gains the Concoct Potions innate ability, which allows him or her to spend resources creating potions. For every 2 points of Alchemy above 8, the alchemist is able to create a broader variety of potions, and the cost of each potion is reduced by 5%.~
+STRING_SET 36552 ~Concoct Potions~
+
+COPY ~%mod_folder%/spl/SPIN231.spl~ ~override~
+  SAY NAME1 @4793
+  SAY NAME2 @4793
+  SAY UNIDENTIFIED_DESC @4793
+  SAY IDENTIFIED_DESC @4793
+
+COMPILE ~%mod_folder%/dlg/USALCP01.d~
+
+COPY ~%mod_folder%/cre/USALCP02.cre~ ~override~
+  SAY NAME1 @4793
+  SAY NAME2 @4793
+
+COPY ~%mod_folder%/itm/USALBEET.itm~ ~override~
+  SAY NAME1 @4759
+  SAY NAME2 @4759
+  SAY DESC @4760
+COPY ~%mod_folder%/itm/USALBEHO.itm~ ~override~
+  SAY NAME1 @4761
+  SAY NAME2 @4761
+  SAY DESC @4762
+COPY ~%mod_folder%/itm/USALBOGV.itm~ ~override~
+  SAY NAME1 @4744
+  SAY NAME2 @4744
+  SAY DESC @4745
+COPY ~%mod_folder%/itm/USALBRIN.itm~ ~override~
+  SAY NAME1 @4718
+  SAY NAME2 @4718
+  SAY DESC @4719
+COPY ~%mod_folder%/itm/USALRAIN.itm~ ~override~
+  SAY NAME1 @4700
+  SAY NAME2 @4700
+  SAY DESC @4701
+COPY ~%mod_folder%/itm/USALSOUR.itm~ ~override~
+  SAY NAME1 @4702
+  SAY NAME2 @4702
+  SAY DESC @4703
+COPY ~%mod_folder%/itm/USALSWEE.itm~ ~override~
+  SAY NAME1 @4704
+  SAY NAME2 @4704
+  SAY DESC @4705
+COPY ~%mod_folder%/itm/USALSNAK.itm~ ~override~
+  SAY NAME1 @4752
+  SAY NAME2 @4752
+  SAY DESC @4753
+COPY ~%mod_folder%/itm/USALFISH.itm~ ~override~
+  SAY NAME1 @4771
+  SAY NAME2 @4771
+  SAY DESC @4772
+COPY ~%mod_folder%/itm/USALCORA.itm~ ~override~
+  SAY NAME1 @4763
+  SAY NAME2 @4763
+  SAY DESC @4764
+COPY ~%mod_folder%/itm/USALMUSK.itm~ ~override~
+  SAY NAME1 @4724
+  SAY NAME2 @4724
+  SAY DESC @4725
+COPY ~%mod_folder%/itm/USALOGRE.itm~ ~override~
+  SAY NAME1 @4779
+  SAY NAME2 @4779
+  SAY DESC @4780
+COPY ~%mod_folder%/itm/USALFIRE.itm~ ~override~
+  SAY NAME1 @4767
+  SAY NAME2 @4767
+  SAY DESC @4768
+COPY ~%mod_folder%/itm/USALFROS.itm~ ~override~
+  SAY NAME1 @4769
+  SAY NAME2 @4769
+  SAY DESC @4770
+COPY ~%mod_folder%/itm/USALBLOO.itm~ ~override~
+  SAY NAME1 @4738
+  SAY NAME2 @4738
+  SAY DESC @4739
+COPY ~%mod_folder%/itm/USALTROL.itm~ ~override~
+  SAY NAME1 @4787
+  SAY NAME2 @4787
+  SAY DESC @4788
+COPY ~%mod_folder%/itm/USALLIME.itm~ ~override~
+  SAY NAME1 @4726
+  SAY NAME2 @4726
+  SAY DESC @4727
+COPY ~%mod_folder%/itm/USALGHOU.itm~ ~override~
+  SAY NAME1 @4775
+  SAY NAME2 @4775
+  SAY DESC @4776
+COPY ~%mod_folder%/itm/USALBURN.itm~ ~override~
+  SAY NAME1 @4722
+  SAY NAME2 @4722
+  SAY DESC @4723
+COPY ~%mod_folder%/itm/USALPLAS.itm~ ~override~
+  SAY NAME1 @4742
+  SAY NAME2 @4742
+  SAY DESC @4743
+COPY ~%mod_folder%/itm/USALSMOK.itm~ ~override~
+  SAY NAME1 @4714
+  SAY NAME2 @4714
+  SAY DESC @4715
+COPY ~%mod_folder%/itm/USALMAGN.itm~ ~override~
+  SAY NAME1 @4748
+  SAY NAME2 @4748
+  SAY DESC @4749
+COPY ~%mod_folder%/spl/USMAGN00.spl~ ~override~
+COPY ~%mod_folder%/itm/USALPRES.itm~ ~override~
+  SAY NAME1 @4720
+  SAY NAME2 @4720
+  SAY DESC @4721
+COPY ~%mod_folder%/itm/USALTREA.itm~ ~override~
+  SAY NAME1 @4785
+  SAY NAME2 @4785
+  SAY DESC @4786
+COPY ~%mod_folder%/itm/USALFEYR.itm~ ~override~
+  SAY NAME1 @4765
+  SAY NAME2 @4765
+  SAY DESC @4766
+COPY ~%mod_folder%/itm/USALRADI.itm~ ~override~
+  SAY NAME1 @4708
+  SAY NAME2 @4708
+  SAY DESC @4709
+COPY ~%mod_folder%/itm/USALBLAC.itm~ ~override~
+  SAY NAME1 @4710
+  SAY NAME2 @4710
+  SAY DESC @4711
+COPY ~%mod_folder%/itm/USALFIZZ.itm~ ~override~
+  SAY NAME1 @4773
+  SAY NAME2 @4773
+  SAY DESC @4774
+COPY ~%mod_folder%/itm/USALBUR2.itm~ ~override~
+  SAY NAME1 @4750
+  SAY NAME2 @4750
+  SAY DESC @4751
+COPY ~%mod_folder%/itm/USALVIAL.itm~ ~override~
+  SAY NAME1 @4728
+  SAY NAME2 @4728
+  SAY DESC @4729
+COPY ~%mod_folder%/itm/USALVAMP.itm~ ~override~
+  SAY NAME1 @4754
+  SAY NAME2 @4754
+  SAY DESC @4755
+COPY ~%mod_folder%/itm/USALGOLD.itm~ ~override~
+  SAY NAME1 @4777
+  SAY NAME2 @4777
+  SAY DESC @4778
+COPY ~%mod_folder%/itm/USALECTO.itm~ ~override~
+  SAY NAME1 @4730
+  SAY NAME2 @4730
+  SAY DESC @4731
+COPY ~%mod_folder%/itm/USALOILS.itm~ ~override~
+  SAY NAME1 @4781
+  SAY NAME2 @4781
+  SAY DESC @4782
+COPY ~%mod_folder%/itm/USALBONE.itm~ ~override~
+  SAY NAME1 @4712
+  SAY NAME2 @4712
+  SAY DESC @4713
+COPY ~%mod_folder%/itm/USALBITT.itm~ ~override~
+  SAY NAME1 @4716
+  SAY NAME2 @4716
+  SAY DESC @4717
+COPY ~%mod_folder%/itm/USALCLAR.itm~ ~override~
+  SAY NAME1 @4783
+  SAY NAME2 @4783
+  SAY DESC @4784
+COPY ~%mod_folder%/itm/USALELEC.itm~ ~override~
+  SAY NAME1 @4706
+  SAY NAME2 @4706
+  SAY DESC @4707
+COPY ~%mod_folder%/itm/USALFAIR.itm~ ~override~
+  SAY NAME1 @4746
+  SAY NAME2 @4746
+  SAY DESC @4747
+COPY ~%mod_folder%/itm/USALMURK.itm~ ~override~
+  SAY NAME1 @4736
+  SAY NAME2 @4736
+  SAY DESC @4737
+COPY ~%mod_folder%/itm/USALZOMB.itm~ ~override~
+  SAY NAME1 @4789
+  SAY NAME2 @4789
+  SAY DESC @4790
+COPY ~%mod_folder%/itm/00POTN94.itm~ ~override~
+COPY ~%mod_folder%/itm/00POTN95.itm~ ~override~
+COPY ~%mod_folder%/itm/00POTN96.itm~ ~override~
+COPY ~%mod_folder%/itm/00POTN97.itm~ ~override~
+COPY ~%mod_folder%/itm/00POTN99.itm~ ~override~
+
+COPY ~%mod_folder%/itm/00POTN03.itm~ ~override~
+  SAY NAME1 @4759
+  SAY NAME2 @4759
+  SAY DESC @4760
+COPY ~%mod_folder%/itm/00POTN02.itm~ ~override~
+  SAY NAME1 @4718
+  SAY NAME2 @4718
+  SAY DESC @4719
+COPY ~%mod_folder%/itm/00POTN04.itm~ ~override~
+  SAY NAME1 @4700
+  SAY NAME2 @4700
+  SAY DESC @4701
+COPY ~%mod_folder%/itm/00POTN05.itm~ ~override~
+  SAY NAME1 @4702
+  SAY NAME2 @4702
+  SAY DESC @4703
+COPY ~%mod_folder%/itm/00POTN10.itm~ ~override~
+  SAY NAME1 @4704
+  SAY NAME2 @4704
+  SAY DESC @4705
+COPY ~%mod_folder%/itm/00POTN11.itm~ ~override~
+  SAY NAME1 @4752
+  SAY NAME2 @4752
+  SAY DESC @4753
+COPY ~%mod_folder%/itm/00POTN19.itm~ ~override~
+  SAY NAME1 @4771
+  SAY NAME2 @4771
+  SAY DESC @4772
+COPY ~%mod_folder%/itm/00POTN20.itm~ ~override~
+  SAY NAME1 @4763
+  SAY NAME2 @4763
+  SAY DESC @4764
+COPY ~%mod_folder%/itm/00POTN21.itm~ ~override~
+  SAY NAME1 @4724
+  SAY NAME2 @4724
+  SAY DESC @4725
+COPY ~%mod_folder%/itm/00POTN22.itm~ ~override~
+  SAY NAME1 @4779
+  SAY NAME2 @4779
+  SAY DESC @4780
+COPY ~%mod_folder%/itm/00POTN23.itm~ ~override~
+  SAY NAME1 @4767
+  SAY NAME2 @4767
+  SAY DESC @4768
+COPY ~%mod_folder%/itm/00POTN24.itm~ ~override~
+  SAY NAME1 @4769
+  SAY NAME2 @4769
+  SAY DESC @4770
+COPY ~%mod_folder%/itm/00POTN25.itm~ ~override~
+  SAY NAME1 @4738
+  SAY NAME2 @4738
+  SAY DESC @4739
+COPY ~%mod_folder%/itm/00POTN26.itm~ ~override~
+  SAY NAME1 @4787
+  SAY NAME2 @4787
+  SAY DESC @4788
+COPY ~%mod_folder%/itm/00POTN29.itm~ ~override~
+  SAY NAME1 @4726
+  SAY NAME2 @4726
+  SAY DESC @4727
+COPY ~%mod_folder%/itm/00POTN47.itm~ ~override~
+  SAY NAME1 @4775
+  SAY NAME2 @4775
+  SAY DESC @4776
+COPY ~%mod_folder%/itm/00POTN52.itm~ ~override~
+  SAY NAME1 @4722
+  SAY NAME2 @4722
+  SAY DESC @4723
+COPY ~%mod_folder%/itm/00POTN54.itm~ ~override~
+  SAY NAME1 @4742
+  SAY NAME2 @4742
+  SAY DESC @4743
+COPY ~%mod_folder%/itm/00POTN67.itm~ ~override~
+  SAY NAME1 @4714
+  SAY NAME2 @4714
+  SAY DESC @4715
+COPY ~%mod_folder%/itm/00POTN68.itm~ ~override~
+  SAY NAME1 @4748
+  SAY NAME2 @4748
+  SAY DESC @4749
+COPY ~%mod_folder%/itm/00POTN69.itm~ ~override~
+  SAY NAME1 @4720
+  SAY NAME2 @4720
+  SAY DESC @4721
+COPY ~%mod_folder%/itm/00POTN70.itm~ ~override~
+  SAY NAME1 @4785
+  SAY NAME2 @4785
+  SAY DESC @4786
+COPY ~%mod_folder%/itm/00POTN71.itm~ ~override~
+  SAY NAME1 @4765
+  SAY NAME2 @4765
+  SAY DESC @4766
+COPY ~%mod_folder%/itm/00POTN72.itm~ ~override~
+  SAY NAME1 @4708
+  SAY NAME2 @4708
+  SAY DESC @4709
+COPY ~%mod_folder%/itm/00POTN73.itm~ ~override~
+  SAY NAME1 @4710
+  SAY NAME2 @4710
+  SAY DESC @4711
+COPY ~%mod_folder%/itm/00POTN75.itm~ ~override~
+  SAY NAME1 @4773
+  SAY NAME2 @4773
+  SAY DESC @4774
+COPY ~%mod_folder%/itm/00POTN76.itm~ ~override~
+  SAY NAME1 @4750
+  SAY NAME2 @4750
+  SAY DESC @4751
+COPY ~%mod_folder%/itm/00POTN77.itm~ ~override~
+  SAY NAME1 @4728
+  SAY NAME2 @4728
+  SAY DESC @4729
+COPY ~%mod_folder%/itm/00POTN78.itm~ ~override~
+  SAY NAME1 @4754
+  SAY NAME2 @4754
+  SAY DESC @4755
+COPY ~%mod_folder%/itm/00POTN79.itm~ ~override~
+  SAY NAME1 @4777
+  SAY NAME2 @4777
+  SAY DESC @4778
+COPY ~%mod_folder%/itm/00POTN80.itm~ ~override~
+  SAY NAME1 @4730
+  SAY NAME2 @4730
+  SAY DESC @4731
+COPY ~%mod_folder%/itm/00POTN81.itm~ ~override~
+  SAY NAME1 @4781
+  SAY NAME2 @4781
+  SAY DESC @4782
+COPY ~%mod_folder%/itm/00POTN82.itm~ ~override~
+  SAY NAME1 @4712
+  SAY NAME2 @4712
+  SAY DESC @4713
+COPY ~%mod_folder%/itm/00POTN83.itm~ ~override~
+  SAY NAME1 @4716
+  SAY NAME2 @4716
+  SAY DESC @4717
+COPY ~%mod_folder%/itm/00POTN84.itm~ ~override~
+  SAY NAME1 @4783
+  SAY NAME2 @4783
+  SAY DESC @4784
+COPY ~%mod_folder%/itm/00POTN85.itm~ ~override~
+  SAY NAME1 @4706
+  SAY NAME2 @4706
+  SAY DESC @4707
+COPY ~%mod_folder%/itm/00POTN86.itm~ ~override~
+  SAY NAME1 @4746
+  SAY NAME2 @4746
+  SAY DESC @4747
+COPY ~%mod_folder%/itm/00POTN87.itm~ ~override~
+  SAY NAME1 @4736
+  SAY NAME2 @4736
+  SAY DESC @4737
+COPY ~%mod_folder%/itm/00POTN88.itm~ ~override~
+  SAY NAME1 @4789
+  SAY NAME2 @4789
+  SAY DESC @4790
+COPY ~%mod_folder%/itm/61POTNUB.itm~ ~override~
+  SAY NAME1 @4791
+  SAY NAME2 @4791
+  SAY DESC @4792
+
+
+COPY ~%mod_folder%/bam/USALBEET.bam~ ~override~
+COPY ~%mod_folder%/bam/USALBEH3.bam~ ~override~
+COPY ~%mod_folder%/bam/USALBITT.bam~ ~override~
+COPY ~%mod_folder%/bam/USALBLAC.bam~ ~override~
+COPY ~%mod_folder%/bam/USALBLOO.bam~ ~override~
+COPY ~%mod_folder%/bam/USALBOGV.bam~ ~override~
+COPY ~%mod_folder%/bam/USALBON2.bam~ ~override~
+COPY ~%mod_folder%/bam/USALBRIN.bam~ ~override~
+COPY ~%mod_folder%/bam/USALBUR3.bam~ ~override~
+COPY ~%mod_folder%/bam/USALCLAR.bam~ ~override~
+COPY ~%mod_folder%/bam/USALCOR2.bam~ ~override~
+COPY ~%mod_folder%/bam/USALECTO.bam~ ~override~
+COPY ~%mod_folder%/bam/USALELEC.bam~ ~override~
+COPY ~%mod_folder%/bam/USALFAI2.bam~ ~override~
+COPY ~%mod_folder%/bam/USALFEY3.bam~ ~override~
+COPY ~%mod_folder%/bam/USALFISH.bam~ ~override~
+COPY ~%mod_folder%/bam/USALFIZZ.bam~ ~override~
+COPY ~%mod_folder%/bam/USALGHOU.bam~ ~override~
+COPY ~%mod_folder%/bam/USALGOL2.bam~ ~override~
+COPY ~%mod_folder%/bam/USALLIME.bam~ ~override~
+COPY ~%mod_folder%/bam/USALMAGN.bam~ ~override~
+COPY ~%mod_folder%/bam/USALMURK.bam~ ~override~
+COPY ~%mod_folder%/bam/USALMUSK.bam~ ~override~
+COPY ~%mod_folder%/bam/USALOGRE.bam~ ~override~
+COPY ~%mod_folder%/bam/USALOILS.bam~ ~override~
+COPY ~%mod_folder%/bam/USALPLAS.bam~ ~override~
+COPY ~%mod_folder%/bam/USALPRES.bam~ ~override~
+COPY ~%mod_folder%/bam/USALRAD3.bam~ ~override~
+COPY ~%mod_folder%/bam/USALRAI2.bam~ ~override~
+COPY ~%mod_folder%/bam/USALSALB.bam~ ~override~
+COPY ~%mod_folder%/bam/USALSALR.bam~ ~override~
+COPY ~%mod_folder%/bam/USALSMOK.bam~ ~override~
+COPY ~%mod_folder%/bam/USALSNAI.bam~ ~override~
+COPY ~%mod_folder%/bam/USALSNAK.bam~ ~override~
+COPY ~%mod_folder%/bam/USALSOUR.bam~ ~override~
+COPY ~%mod_folder%/bam/USALSWEE.bam~ ~override~
+COPY ~%mod_folder%/bam/USALTREE.bam~ ~override~
+COPY ~%mod_folder%/bam/USALTROL.bam~ ~override~
+COPY ~%mod_folder%/bam/USALVAMP.bam~ ~override~
+COPY ~%mod_folder%/bam/USALVIAL.bam~ ~override~
+COPY ~%mod_folder%/bam/USALZOMB.bam~ ~override~
+
+
