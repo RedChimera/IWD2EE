@@ -22,7 +22,7 @@ IF ~  NumberOfTimesTalkedTo(0)
 ~ THEN REPLY #8146 EXIT
 END
 
-IF ~~ THEN BEGIN 1
+IF ~!Global("LimhaAfterHannuDies", "GLOBAL", 1)~ THEN BEGIN 1
   SAY #8147
   IF ~  Global("50Limha","Global",0)
 ~ THEN REPLY #8148 DO ~SetGlobal("50Limha", "Global", 1)~ GOTO 6
@@ -186,6 +186,7 @@ IF ~~ THEN BEGIN 16
   SAY #8188
   IF ~~ THEN REPLY #8189 GOTO 17
   IF ~~ THEN REPLY #8190 GOTO 17
+  IF ~Global("USSUOMA_SCARED", "Global", 1)~ THEN REPLY ~That does explain how they survive out here.  Well, I'm leaving.~ GOTO IgnoreLimha
 END
 
 IF ~~ THEN BEGIN 17
@@ -365,3 +366,21 @@ IF ~~ THEN BEGIN 36
   SAY ~Done! A pleasure doing business with you, adventurers. *Hm-hm-hm!*~
   IF ~~ THEN REPLY ~Now leave this place, witch. You're not welcome here anymore.~ EXIT
 END
+
+IF ~~ THEN BEGIN IgnoreLimha
+  SAY ~What?  You're leaving?~
+  IF ~~ THEN REPLY ~I already got the directions I needed from Suoma, and I'm not interested in fighting a witch.  I'm not going to get in your way.~ GOTO IgnoreLimha2
+  IF ~~ THEN REPLY ~I'm done with the village.  I don't really care what you're doing with the children.~ GOTO IgnoreLimha2
+END
+
+IF ~~ THEN BEGIN IgnoreLimha2
+  SAY ~Oh.  That's surprising.  I'll just get rid of this pest, then. *Hm-hm-hm!*~
+  IF ~~ THEN REPLY ~~ DO ~SetGlobal("LimhaAfterHannuDies", "GLOBAL", 1)~ EXTERN ~50HANNU~ 8
+END
+
+IF ~Global("LimhaAfterHannuDies", "GLOBAL", 1)~ THEN BEGIN LimhaAfterHannuDies
+  SAY ~I welcome you again, precious thing.  I do hope you'll stay a while this time...~
+  IF ~~ THEN REPLY ~I'd like to purchase something.~ DO ~StartStore("50Limha", Protagonist)~ EXIT
+  IF ~~ THEN REPLY ~I'm just passing through.  Farewell, Limha.~ EXIT
+END
+

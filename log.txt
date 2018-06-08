@@ -1,3 +1,20 @@
+# Log
+
+Version 1.00.04
+
+2018-06-08
+
+-  Intimidate Suoma into giving you directions during her first dialog
+
+-  Use Diplomacy to persuade her to give you directions after helping Venla by killing Limha.
+
+-  If anyone in the party is a Diviner, you can tell the Hunter's Ghost that you can find your way on your own, and the exit should open automatically.
+
+-  If anyone in the party has high Wilderness Lore, you can also open the exit automatically.
+
+-  If anyone in the party very high Search, you can also open the exit automatically
+
+-  Fixes for torak intimidate
 
 Version 1.00.03
 
