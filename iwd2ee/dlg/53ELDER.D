@@ -73,6 +73,6 @@ IF ~  True()
 END
 
 IF ~~ THEN BEGIN 10
-  SAY ~ -- It would be unnecessary to waste effort removing a pest that would just as soon leave on its own. The gates you seek lie to the northeast.  Go there *now* - do not tarry or wander about our citadel - and do not return.  --~ THEN DO ~SetGlobal("SCAREDYBRAIN","GLOBAL",1)~ 
-  IF ~~ THEN EXIT
+  SAY ~ -- It would be unnecessary to waste effort removing a pest that would just as soon leave on its own. The gates you seek lie to the northeast.  Go there *now* - do not tarry or wander about our citadel - and do not return.  --~
+  IF ~~ THEN DO ~SetGlobal("ElderBrainScared", "GLOBAL", 1)~ EXIT
 END
