@@ -1138,6 +1138,8 @@ COPY ~%mod_folder%/spl/SPIN231.spl~ ~override~
 
 COMPILE ~%mod_folder%/dlg/USALCP01.d~
 
+COPY ~%mod_folder%/bam/USALCP02.bam~ ~override~
+
 COPY ~%mod_folder%/cre/USALCP02.cre~ ~override~
   SAY NAME1 @4793
   SAY NAME2 @4793
