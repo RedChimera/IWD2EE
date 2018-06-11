@@ -1,5 +1,13 @@
 # Log
 
+Version 1.00.06
+
+- Added concoct_potions.tra
+
+- Replaced spwi620z.itm
+
+- Replaced USALCP02.bam
+ 
 Version 1.00.05
 
 - Added 53ELDER.D and SPIN231.spl 

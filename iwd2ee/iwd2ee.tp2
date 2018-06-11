@@ -1,7 +1,7 @@
 BACKUP ~iwd2ee/backup~
 AUTHOR ~ced2168@columbia.edu~
 
-VERSION ~1.00.05~
+VERSION ~1.00.06~
 
 //MODDER
 
@@ -23,6 +23,7 @@ LANGUAGE   ~English~
            ~iwd2ee/tra/English/item_revisions.tra~
            ~iwd2ee/tra/English/creature_rebalancing.tra~
            ~iwd2ee/tra/English/faster_areas.tra~
+           ~iwd2ee/tra/English/concoct_potions.tra~
 
 
 
