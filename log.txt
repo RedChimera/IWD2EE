@@ -1,5 +1,21 @@
 # Log
 
+2018-06-12
+
+Version 1.00.07
+
+- A new version of 60MADAE.d
+
+- A new version of 61ISAIR.d
+
+- 63pExits.bcs
+
+- 63PPORRM.bcs
+
+- AR6305.bcs
+
+2018-06-10
+
 Version 1.00.06
 
 - Added concoct_potions.tra

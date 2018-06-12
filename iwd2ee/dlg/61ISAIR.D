@@ -269,8 +269,8 @@ SAY ~You're telling me that you sabotaged an entire mythal all on your own?  Wit
 END
 
 IF ~~ THEN BEGIN NoArmyIntimidateI
-SAY ~Years of labor went into this Legion.  We have expanded our alliances, our connections, and our coffers far beyond the Ten Towns.  We started from nothing, but today we are the greatest force in the region.  We are already unified.  We already enjoy solidarity with our allies.  As for enslavement... well, slaves already rebuilt the Severed Hand, didn't they?  From what I've seen, we've already achieved all of these things.~
-+ ~CheckSkillGT(Protagonist,15,Bluff)~ + ~You overestimate the strength of your connections.  Your alliance with the goblin hordes is frayed.  Guthma despised Sherincal and the Legion--until we came along, he planned on destroying the Legion once he was done with Targos.  You also overestimate the appeal of your own ideas.  None of your allies has any real allegiance to the Legion or its goals--your *allies* are nothing more than opportunists taking advantage of the chaos you generate.  The moment they feel their interests are threatened, they will abandon the Legion without a second thought.~ + SuccessfulNoArmyIntimidate1
+SAY ~Years of labor went into this Legion.  We have expanded our alliances, our connections, and our coffers far beyond the Ten Towns.  We started from nothing, but today we are the greatest force in the region.  We have already accomplished all of those things.  As for enslavement... well, slaves already rebuilt the Severed Hand, didn't they?~
++ ~CheckSkillGT(Protagonist,15,Bluff)~ + ~You overestimate the strength of your connections.  Guthma despised Sherincal and the Legion--until we came along, he planned on destroying the Legion once he was done with Targos.  None of your allies has any real allegiance to the Legion or its goals.  Your *allies* are nothing more than opportunists taking advantage of the chaos you generate.  The moment they feel their interests are threatened, they will abandon the Legion without a second thought.~ + SuccessfulNoArmyIntimidate1
 + ~~ + ~How long do you think that's going to last, Isair?  We have all of the Ten Towns on our side.  Your friends aren't going to stick around when things get rough.~ + FailedNoArmyIntimidate
 END
 
@@ -280,14 +280,14 @@ SAY ~Rough?  You have no idea what Madae and I have already been through, mercen
 END
 
 IF ~~ THEN BEGIN SuccessfulNoArmyIntimidate1
-SAY ~You mercenaries have been trudging through the wilderness for weeks--Your grasp of current events is weak, to say the least.  We've already established new contacts and new projects with everyone from Thay to the Cabal of Dragonkin to Iyachtu Xvim himself.  The Severed Hand itself is the result of numerous organizations working in concert.  Would "opportunists" have dedicated their own resources to the Legion's success?  The Legion's growth is exponential--We are even expanding our reach beyond Icewind Dale.~
+SAY ~You mercenaries have been trudging through the wilderness for weeks--Your grasp of current events is weak, to say the least.  We've already established new contacts and new projects with everyone from Thay to the Cabal of Dragonkin to Iyachtu Xvim himself.  The Severed Hand itself is the result of numerous organizations working in concert.  Would "opportunists" have dedicated their own resources to the Legion's success?~
 + ~CheckSkillGT(Protagonist,17,Intimidate)~ + ~Why would opportunists tell you any different?  It's in their best interests to tell you they're on your side.  But look at it from their point of view--the goblin horde is broken.  The Aurilites are broken.  The driders are broken.  Dragon's Eye is broken.  Even the Severed Hand is breaking apart.  Your allies keep ending up getting destroyed... and the survivors have noticed.  We've been waltzing around the Severed Hand because none of your allies care enough about your security to properly monitor the halls.  Why would they stick out their necks for your sake?  You *want* to believe that everyone is on your side, but the truth is, no one in this world really cares about the freaks and half-breeds of this world--not even the *other* freaks and half-breeds.~ + SuccessfulNoArmyIntimidate2
 + ~~ + ~It's not enough.  The Ten Towns have allies to the south.  When the other nations get involved, the Legion of the Chimera is doomed.~ + FailedNoArmyIntimidate
 END
 
 IF ~~ THEN BEGIN SuccessfulNoArmyIntimidate2
-SAY ~You mercenaries have no understanding of the trials we've gone through!  You have no idea what we've overcome!  You have no concept of the passion, the frustration--no, the FURY of the rejects of your "civilization!"  Entire nations of people are crying out for a world of their own, a home of their own!  We ARE that home!  We ARE that nation!  The Legion of the Chimera is not just a band of half-breeds running scared from humankind--we are a DREAM!  A dream of a newer world!  A dream of safety, of sovereignty, of *freedom* for the people your kind has oppressed for centuries, and are now crying out for liberation!~
-+ ~CheckSkillGT(Protagonist,21,Intimidate)~ + ~Passion and emotion don't win wars, Isair.  Wars are won by muscle and power.  Your "dream" is just a concept; armies are the reality.  A few petty mercenaries was enough to turn your forces against each other and ruin their efforts, and we are just a fraction of the army you think you can destroy.  Even after all your efforts, the Ten Towns remain standing, and even if you subdued them, the southern nations would come together and crush you before you can spread any further.  You're outnumbered no matter where you go.~ + SuccessfulNoArmyIntimidate3
+SAY ~You mercenaries have no understanding of the trials we've gone through!  You have no idea what we've overcome!  You have no concept of the passion, the frustration--no, the FURY of the rejects of your "civilization!"  Entire nations of people are crying out for a world of their own, a home of their own!  We ARE that home!  We ARE that nation!  The Legion of the Chimera is not just a band of half-breeds running scared from humankind--we are a DREAM!  A dream of safety, of sovereignty, of *freedom* for the people your kind has oppressed for centuries!~
++ ~CheckSkillGT(Protagonist,21,Intimidate)~ + ~Passion and emotion don't win wars, Isair.  Wars are won by muscle and power.  Your "dream" is just a concept; armies are the reality.  A few petty mercenaries was enough to turn your forces against each other and ruin their efforts, and we are just a fraction of the army you think you can destroy.  Even after all your efforts, the Ten Towns remain standing, and even if you subdued them, the southern nations would come together and crush you before you can spread any further.~ + SuccessfulNoArmyIntimidate3
 + ~~ + ~A dream isn't good enough, Isair.  You'll need a lot more than big ideas to win a war.~ + FailedNoArmyIntimidate
 END
 
@@ -324,8 +324,8 @@ END
 
 IF ~~ THEN BEGIN SuccessfulQuestionMotivesI1E
 SAY ~We do not need your "help," mercenary.  The Legion is already on the rise.  The Ten Towns are already falling.  Why would we give up a war we're already winning?~
-+ ~~ + ~Because you don't *need* to win the war, Isair.  All you need to do is establish a nation and then defend it.  That doesn't require conquering the Ten Towns.  Extract a few concessions, gather your resources, and move somewhere safe.  Don't risk the fate of your Legion by basing its survival on the Ten Towns' destruction.~ GOTO FailedQuestionMotivesI1B
-+ ~CheckSkillGT(Protagonist,25,Diplomacy)~ + ~I'm not here to deride your efforts, Isair.  But the very fact that I stand here, alive and fully armed, in your own citadel, despite everything you've done to bring me down, is proof enough that the Legion is not winning the war.  Nobody is winning this war.  Everyone is losing.  Now, I'm not saying we can all get along, or that the Ten Towns and the Legion can live in peace, or that we can put the past behind us and everyone will live happily ever after.  I'm not a fool.  But the Ten Towns, the Legion, and the world as a whole all stand to benefit if the Legion becomes an independent nation somewhere on Faerun.  It could be a sanctuary for all the people rejected by the rest of civilization.~ EXTERN ~60MADAE~ SuccessfulQuestionMotivesM1D
++ ~~ + ~Because you don't *need* to win the war, Isair.  All you need to do is establish a nation and then defend it.  Extract a few concessions, gather your resources, and move somewhere safe.  Don't risk the fate of your Legion by basing its survival on the Ten Towns' destruction.~ GOTO FailedQuestionMotivesI1B
++ ~CheckSkillGT(Protagonist,25,Diplomacy)~ + ~I'm not here to deride your efforts, Isair.  But the very fact that I stand here, alive and fully armed, in your own citadel, despite everything you've done to bring me down, is proof enough that the Legion is not winning the war.  Nobody is winning this war.  Everyone is losing.  Now, I'm not saying we can all get along, or that the Ten Towns and the Legion can live in peace side by side.  I'm not a fool.  But the Ten Towns, the Legion, and the world as a whole all stand to benefit if the Legion becomes an independent nation somewhere on Faerun.  It could be a sanctuary for all the people rejected by the rest of civilization.~ EXTERN ~60MADAE~ SuccessfulQuestionMotivesM1D
 END
 
 IF ~~ THEN BEGIN SuccessfulQuestionMotivesI1F
@@ -545,6 +545,7 @@ END
 IF ~~ THEN BEGIN MythalTriggerQuestionMotives2A
   SAY ~We've been fighting the same war since the day we were born.  Maiden Ilmadia, our... I... Agh! What--ack!--what was that?~
   IF ~~ THEN REPLY ~A very short story, apparently.~ GOTO MythalTriggerQuestionMotives2B
+  IF ~~ THEN REPLY ~What was what?~ GOTO MythalTriggerQuestionMotives2B
 END
 
 IF ~~ THEN BEGIN MythalTriggerQuestionMotives2B
@@ -560,9 +561,91 @@ END
 IF ~~ THEN BEGIN MythalTriggerNoArmyIntimidate
   SAY ~Collapsing?  This empire has only just begun!  We... I... Agh! What--ack!--what was that?~
   IF ~~ THEN REPLY ~You can already feel it, can't you?  Your empire is crumbling.~ GOTO MythalTriggerNoArmyIntimidate2
+  IF ~~ THEN REPLY ~What was what?~ GOTO MythalTriggerNoArmyIntimidate2
 END
 
 IF ~~ THEN BEGIN MythalTriggerNoArmyIntimidate2
   SAY ~Madae... what was that?  What's happening to me?~
-  IF ~~ THEN DO ~SetGlobal("Final_Battle_Progress","GLOBAL",3)~ EXTERN ~60MADAE~ 21
+  IF ~~ THEN DO ~SetGlobal("StartCutscene_63cFB06","MYAREA",1)
+SetGlobal("Final_Battle_Progress","GLOBAL",3)
+SetGlobal("US_Final_Battle_Alternate","GLOBAL",1)
+Unlock("AR6303_Door1")
+SetGlobal("Activate_Trigger","MYAREA",1)
+SetGlobal("StartCutscene_63cFB03","MYAREA",1)
+HideCreature("Serak",FALSE)
+HideCreature("Mourn",FALSE)
+HideCreature("Zilvar",FALSE)
+HideCreature("Tilzen",FALSE)
+HideCreature("Phaen",FALSE)
+HideCreature("Chimera",FALSE)
+HideCreature("Buvai_deNaly",FALSE)
+ActionOverride("Serak",DestroySelf())
+ActionOverride("Mourn",DestroySelf())
+ActionOverride("Zilvar",DestroySelf())
+ActionOverride("Tilzen",DestroySelf())
+ActionOverride("Phaen",DestroySelf())
+ActionOverride("Chimera",DestroySelf())
+ActionOverride("Buvai_deNaly",DestroySelf())
+ActionOverride("Ormis_Dohor",DestroySelf())
+ActionOverride("Monk_Sand",DestroySelf())
+ActionOverride("Monk_Shadow",DestroySelf())
+ActionOverride("Monk_Crystalline",DestroySelf())
+ActionOverride("Isair",DestroySelf())
+ActionOverride("Madae",DestroySelf())~ EXTERN ~60MADAE~ 21
+END
+
+IF ~~ THEN BEGIN ListOfCommands
+  SAY ~This should not appear in-game.~
+  IF ~~ THEN DO ~SetGlobal("Final_Battle_Progress","GLOBAL",3)
+SetGlobal("StartCutscene_63cFB02","MYAREA",1)
+SetGlobal("US_Final_Battle_Alternate","GLOBAL",1)
+Unlock("AR6303_Door1")
+SetGlobal("Activate_Trigger","MYAREA",1)
+HideCreature("Serak",TRUE)
+HideCreature("Mourn",TRUE)
+HideCreature("Zilvar",TRUE)
+HideCreature("Tilzen",TRUE)
+HideCreature("Phaen",TRUE)
+HideCreature("Chimera",TRUE)
+HideCreature("Buvai_deNaly",TRUE)
+ActionOverride("Serak",DestroySelf())
+ActionOverride("Mourn",DestroySelf())
+ActionOverride("Zilvar",DestroySelf())
+ActionOverride("Tilzen",DestroySelf())
+ActionOverride("Phaen",DestroySelf())
+ActionOverride("Chimera",DestroySelf())
+ActionOverride("Buvai_deNaly",DestroySelf())
+SetGlobal("StartCutscene_63cFB06","MYAREA",1)
+ActionOverride("Ormis_Dohor",DestroySelf())
+ActionOverride("Monk_Sand",DestroySelf())
+ActionOverride("Monk_Shadow",DestroySelf())
+ActionOverride("Monk_Crystalline",DestroySelf())~ EXIT
+END
+
+IF ~~ THEN BEGIN ListOfCommands2
+  SAY ~This should not appear in-game.~
+  IF ~~ THEN DO ~SetGlobal("StartCutscene_63cFB06","MYAREA",1)
+SetGlobal("Final_Battle_Progress","GLOBAL",3)
+SetGlobal("US_Final_Battle_Alternate","GLOBAL",1)
+Unlock("AR6303_Door1")
+SetGlobal("Activate_Trigger","MYAREA",1)
+SetGlobal("StartCutscene_63cFB03","MYAREA",1)
+HideCreature("Serak",FALSE)
+HideCreature("Mourn",FALSE)
+HideCreature("Zilvar",FALSE)
+HideCreature("Tilzen",FALSE)
+HideCreature("Phaen",FALSE)
+HideCreature("Chimera",FALSE)
+HideCreature("Buvai_deNaly",FALSE)
+ActionOverride("Serak",DestroySelf())
+ActionOverride("Mourn",DestroySelf())
+ActionOverride("Zilvar",DestroySelf())
+ActionOverride("Tilzen",DestroySelf())
+ActionOverride("Phaen",DestroySelf())
+ActionOverride("Chimera",DestroySelf())
+ActionOverride("Buvai_deNaly",DestroySelf())
+ActionOverride("Ormis_Dohor",DestroySelf())
+ActionOverride("Monk_Sand",DestroySelf())
+ActionOverride("Monk_Shadow",DestroySelf())
+ActionOverride("Monk_Crystalline",DestroySelf())~ EXIT
 END
