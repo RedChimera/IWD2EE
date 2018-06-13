@@ -488,10 +488,12 @@ END
 IF WEIGHT #5 ~  NumTimesTalkedToGT(0)
 Global("Crossroads_Quest","GLOBAL",2)
 ~ THEN BEGIN 46
-  SAY #29347
-  IF ~~ THEN REPLY #29348 DO ~AddXpVar("Level_12_Average",29275)
+  SAY ~You've done it.  The Crossroads are not sealed but... did you simply defeat them by force of arms?~
+  IF ~Global("US_OJAIHA_DIPLOMACY","GLOBAL",1)~ THEN REPLY ~Actually, we signed a treaty with the head of the temple of Sseth.  The deal won't last, but we figured it would keep the yuan-ti from Chult out of the way for the time being.  Now, can you tell us the way to the Severed Hand?~ DO ~AddXpVar("Level_12_Average",158)
 SetGlobal("Crossroads_Quest","GLOBAL",4)~ GOTO 48
-  IF ~~ THEN REPLY #29349 DO ~AddXpVar("Level_12_Average",29275)
+  IF ~!Global("US_OJAIHA_DIPLOMACY","GLOBAL",1)~ THEN REPLY #29348 DO ~AddXpVar("Level_12_Average",29275)
+SetGlobal("Crossroads_Quest","GLOBAL",4)~ GOTO 48
+  IF ~!Global("US_OJAIHA_DIPLOMACY","GLOBAL",1)~ THEN REPLY #29349 DO ~AddXpVar("Level_12_Average",29275)
 SetGlobal("Crossroads_Quest","GLOBAL",4)~ GOTO 48
 END
 

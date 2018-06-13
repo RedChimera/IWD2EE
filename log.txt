@@ -2,6 +2,12 @@
 
 2018-06-12
 
+Version 1.00.08
+
+- Numerous fixes
+
+2018-06-12
+
 Version 1.00.07
 
 - A new version of 60MADAE.d
