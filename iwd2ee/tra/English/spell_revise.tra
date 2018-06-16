@@ -676,12 +676,12 @@ This spell causes a creature to burst into flames if it fails a Reflex save. The
 (Transmutation) 
 Level: Pal 5, Sor/Wiz 5
 Range: Sight of Caster 
-Duration: 20 rounds
+Duration: 2 rounds / level
 Casting Time: 5
 Area of Effect: 1 creature
 Saving Throw: None
 
-Using this spell, a wizard may reduce the spell resistance of a target creature.  The victim's spell resistance will be reduced by 2 for every level of the caster. Spell resistance cannot block this spell, and there is no saving throw.~
+Using this spell, a wizard may reduce the spell resistance of a target creature.  The victim's spell resistance will be reduced by 1 point for every level of the caster. Spell resistance cannot block this spell, and there is no saving throw.~
 @1116    = ~Phantom Blade~
 @1117    = ~Phantom Blade 
 (Evocation) 
