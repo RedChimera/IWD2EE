@@ -115,7 +115,7 @@ Weight: 1 lb.
 
 STATISTICS:
 
-5/- Spell Resistance
+Resistance: 5/- Spell Resistance
 Weight: 1 lb.
 ~
 @4728     = ~Vial of Scales~
@@ -216,13 +216,13 @@ Weight: 1 lb.
 @4744     = ~Bog Vapor~
 @4745     = ~A blend of eldritch magic and noxious gases, this bottle of smoky greenish vapor is dense with enchantments. The gas itself is nothing but simple air and water extracted from a bog, but the enchantments are more complex. The bottle is lined with residue from slain Will o' Wisps and toxic mushrooms, and the gas imbued with the souls of fallen treants.
 
-The wielder may throw the bottle much like a grenade, bypassing any armor or shield bonuses the target may possess. Any creature unfortunate enough to touch the fumes will suffer a cumulative -1 penalty to spell resistance as the enchantment seeps into their system, rendering them vulnerable to hostile spells. The effect is short-lived, however, and will wear off after three rounds
+The wielder may throw the bottle much like a grenade, bypassing any armor or shield bonuses the target may possess. Any creature unfortunate enough to touch the fumes will suffer a cumulative -1 penalty to spell resistance as the enchantment seeps into their system, rendering them vulnerable to hostile spells. The effect is short-lived, however, and will wear off after three rounds.
 
 STATISTICS:
 
 Damage:  1d4
 Damage Type:  Missile (piercing)
-Special:  -1 Spell Resistance
+Special:  -1 Spell Resistance (cumulative) for 3 rounds
 Weight: 0 lb.
 Required Feat:  Simple Weapons, Missile
 Type:  One-handed
@@ -257,18 +257,18 @@ When drunk, the syrup creates an anti-magic field around the user's body, automa
 STATISTICS:
 
 Dispels all dispellable effects on the drinker
-10/- Spell Resistance
+Resistance: 10/- Spell Resistance
 25% Spell Failure
 Weight: 1 lb.
 ~
 @4752     = ~Snake Lymph~
 @4753     = ~Yuan-ti alchemists use a special blend of venom and assorted herbs to transform humanoid captives into histachii slaves. The process is irreversible and destroys the victim's mind, but it grants them unusual powers that make them helpful servants for their Yuan-ti masters.
 
-Much of the science is unknown to humanoids, but an Alchemist may concoct a special version of the histachii brew from Yuan-ti lymph and mandrake root that will grant the drinker some limited resistance to poison. For 10 rounds after the lymph is drunk, the user will enjoy 1/- resistance to poison damage, reducing most forms of poison to half their normal potential.
+Much of the science is unknown to humanoids, but an Alchemist may concoct a special version of the histachii brew from Yuan-ti lymph and mandrake root that will grant the drinker some limited resistance to poison. For 10 rounds after the lymph is drunk, the user will enjoy a +6 bonus to all saving throws against poison effects.
 
 STATISTICS:
 
-1/- Poison Resistance
+Poison Resistance: +6 to Fortitude saves against poison
 Weight: 1 lb.
 ~
 @4754     = ~Vampire Milk~
@@ -366,7 +366,7 @@ Weight: 1 lb.
 
 STATISTICS:
 
-5/- Cold Resistance
+Resistance: 5/- Cold Resistance
 Weight: 1 lb.
 ~
 @4777     = ~Golden Bubbles~
@@ -422,7 +422,7 @@ Weight: 1 lb.
 
 STATISTICS:
 
-5/- Acid Resistance
+Resistance: 5/- Acid Resistance
 Weight: 1 lb.
 ~
 @4791     = ~Vial of Vipers~
