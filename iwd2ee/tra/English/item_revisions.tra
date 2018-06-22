@@ -2417,12 +2417,12 @@ STATISTICS:
 
 Heals 1-100 hit points
 Weight: 1 lb.~
-@2649    = ~Potion of Mind Focusing~
-@2650    = ~This potion will temporarily enhance their mental abilities, boosting their Intelligence by 10. This bonus impacts Spellcraft, Alchemy, Knowledge (Arcana), Search, and Disable Device rolls as well as empowering mage spells. The effect is temporary, however, and will wear off after just 5 rounds.
+@2649    = ~Coral Balm~
+@2650    = ~By tearing off chunks from a coral reef, crushing the coral into powder, and mixing it with sea cucumber paste, an alchemist may create a bluish balm.  When smeared over the user's body, the balm will expand into a powerful shield,  trapping the user inside but protecting them from all forms of attack.  The shield will absorb 100 hit points before shattering.
 
 STATISTICS:
 
-Intelligence: +10
+Tortoise Shell (100 hit points)
 Weight: 1 lb.~
 @2651    = ~Oil of Speed~
 @2652    = ~Potions are typically found in ceramic, crystal, glass, or metal flasks or vials.  Flasks or other containers generally contain enough fluid to provide one person with one complete dose to achieve the effects of the potion.  
