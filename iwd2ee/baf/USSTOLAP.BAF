@@ -1,9 +1,0 @@
-IF
-	Global("IM_NOT_CRITICAL","LOCALS",0)
-	Global("Goblins_Attack_Palisade", "GLOBAL", 1)
-THEN
-	RESPONSE #100
-		SetCriticalPathObject(Myself,FALSE)
-		SetGlobal("IM_NOT_CRITICAL","LOCALS",1)
-		Continue()
-END

@@ -1,4 +1,0 @@
-//NOTES
-//We should patch ALIGNMNT.2da AND KIT Descriptions
-
-COPY ~%mod_folder%/tables/ALIGNMNT.2da~ ~override~

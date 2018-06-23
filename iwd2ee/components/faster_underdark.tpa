@@ -1,7 +1,0 @@
-//NOTES
-// patches a door so you can force it open
-
-COPY_EXISTING ~AR5300.are~ ~override~
- WRITE_BYTE 0xa018 99
- WRITE_BYTE 0xa0e0 99
-BUT_ONLY

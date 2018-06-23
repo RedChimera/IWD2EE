@@ -1,9 +1,0 @@
-//NOTES
-
-COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
-
-READ_BYTE "0x303" "crit"
-
-WRITE_BYTE 0x303 0
-
-IF_EVAL ("%crit%" = "0x2")

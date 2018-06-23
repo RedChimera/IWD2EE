@@ -1,6 +1,0 @@
-IF
-	True()
-THEN
-	RESPONSE #100
-		CreateCreature("USSTIW01","USSTIW01",[230.750],0)  // Ice Wall Fault
-END

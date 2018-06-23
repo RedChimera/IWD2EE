@@ -1,7 +1,0 @@
-IF
-	!Global("US_SH1","GLOBAL",1)
-THEN
-	RESPONSE #100
-		CreateCreature("USSTSHRL","",[1010.600],0)  // Ruinlord Argos Val
-		SetGlobal("US_SH1","GLOBAL",1)
-END

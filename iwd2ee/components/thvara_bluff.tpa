@@ -1,3 +1,0 @@
-//NOTES
-//This allows the player to bluff their way past Thvara. It needs a command to get Thvara and company to leave.
-COMPILE ~%mod_folder%/dlg/50THVARA.d~ ~%mod_folder%/dlg/50GNTFO.d~
