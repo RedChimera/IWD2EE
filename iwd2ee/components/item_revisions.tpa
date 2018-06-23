@@ -199,67 +199,6 @@ COPY ~%mod_folder%/itm/00MSTR91.itm~ ~override~
 COPY ~%mod_folder%/itm/00MSTRMG.itm~ ~override~
 COPY ~%mod_folder%/itm/00MSTRMS.itm~ ~override~
 COPY ~%mod_folder%/itm/00MSTRSS.itm~ ~override~
-COPY ~%mod_folder%/itm/00POTN45.itm~ ~override~
-COPY ~%mod_folder%/itm/00POTN50.itm~ ~override~
-COPY ~%mod_folder%/itm/00POTN66.itm~ ~override~
-  SAY NAME1 @2753
-  SAY NAME2 @2753
-  SAY DESC @2754
-//COPY ~%mod_folder%/itm/00POTN67.itm~ ~override~
-COPY ~%mod_folder%/itm/00POTN70.itm~ ~override~
-COPY ~%mod_folder%/itm/00POTN71.itm~ ~override~
-COPY ~%mod_folder%/itm/00POTN72.itm~ ~override~
-COPY ~%mod_folder%/itm/00POTN73.itm~ ~override~
-COPY ~%mod_folder%/itm/00POTN74.itm~ ~override~
-COPY ~%mod_folder%/itm/00POTN75.itm~ ~override~
-COPY ~%mod_folder%/itm/00POTN77.itm~ ~override~
-  SAY NAME1 @2736
-  SAY NAME2 @2736
-  SAY DESC @2737
-COPY ~%mod_folder%/itm/00POTN78.itm~ ~override~
-  SAY NAME1 @2645
-  SAY NAME2 @2645
-  SAY DESC @2646
-COPY ~%mod_folder%/itm/00POTN80.itm~ ~override~
-COPY ~%mod_folder%/itm/00POTN82.itm~ ~override~
-COPY ~%mod_folder%/itm/00POTN83.itm~ ~override~
-COPY ~%mod_folder%/itm/00POTN84.itm~ ~override~
-COPY ~%mod_folder%/itm/00POTN85.itm~ ~override~
-COPY ~%mod_folder%/itm/00POTN86.itm~ ~override~
-COPY ~%mod_folder%/itm/00POTN87.itm~ ~override~
-COPY ~%mod_folder%/itm/00POTN89.itm~ ~override~
-  SAY NAME1 @2494
-  SAY NAME2 @2494
-  SAY DESC @2495
-COPY ~%mod_folder%/itm/00POTN90.itm~ ~override~
-  SAY NAME1 @2384
-  SAY NAME2 @2384
-  SAY DESC @2385
-COPY ~%mod_folder%/itm/00POTN91.itm~ ~override~
-COPY ~%mod_folder%/itm/00POTN92.itm~ ~override~
-  SAY NAME1 @2386
-  SAY NAME2 @2386
-  SAY DESC @2387
-COPY ~%mod_folder%/itm/00POTN93.itm~ ~override~
-COPY ~%mod_folder%/itm/00POTN94.itm~ ~override~
-COPY ~%mod_folder%/itm/00POTN95.itm~ ~override~
-  SAY NAME1 @2388
-  SAY NAME2 @2388
-  SAY DESC @2389
-COPY ~%mod_folder%/itm/00POTN96.itm~ ~override~
-  SAY NAME1 @2392
-  SAY NAME2 @2392
-  SAY DESC @2393
-COPY ~%mod_folder%/itm/00POTN97.itm~ ~override~
-  SAY NAME1 @2394
-  SAY NAME2 @2394
-  SAY DESC @2395
-COPY ~%mod_folder%/itm/00POTN98.itm~ ~override~
-
-COPY ~%mod_folder%/itm/00POTN99.itm~ ~override~
-  SAY NAME1 @2390
-  SAY NAME2 @2390
-  SAY DESC @2391
 
 COPY ~%mod_folder%/itm/00RING16.itm~ ~override~
 COPY ~%mod_folder%/itm/00RING23.itm~ ~override~
@@ -776,14 +715,6 @@ COPY ~%mod_folder%/itm/00MSTRSS.itm~ ~override~
   SAY NAME1 @2378
   SAY NAME2 @2378
   SAY DESC @2379
-COPY ~%mod_folder%/itm/00POTN45.itm~ ~override~
-  SAY NAME1 @2380
-  SAY NAME2 @2380
-  SAY DESC @2381
-COPY ~%mod_folder%/itm/00POTN50.itm~ ~override~
-  SAY NAME1 @2382
-  SAY NAME2 @2382
-  SAY DESC @2383
 COPY ~%mod_folder%/itm/00RING16.itm~ ~override~
   SAY NAME1 @2396
   SAY NAME2 @2396
@@ -1050,10 +981,6 @@ COPY ~%mod_folder%/itm/50LEATMS.itm~ ~override~
   SAY NAME1 @2599
   SAY NAME2 @2599
   SAY DESC @2600
-COPY ~%mod_folder%/itm/50POTN56.itm~ ~override~
-  SAY NAME1 @2601
-  SAY NAME2 @2601
-  SAY DESC @2602
 COPY ~%mod_folder%/itm/51HELMWM.itm~ ~override~
   SAY NAME1 @2603
   SAY NAME2 @2603
@@ -1094,18 +1021,6 @@ COPY ~%mod_folder%/itm/61DAGGWS.itm~ ~override~
   SAY NAME1 @2619
   SAY NAME2 @2619
   SAY DESC @2620
-COPY ~%mod_folder%/itm/00POTN06.itm~ ~override~
-  SAY NAME1 @2647
-  SAY NAME2 @2647
-  SAY DESC @2648
-COPY ~%mod_folder%/itm/00POTN20.itm~ ~override~
-  SAY NAME1 @2649
-  SAY NAME2 @2649
-  SAY DESC @2650
-COPY ~%mod_folder%/itm/00POTN81.itm~ ~override~
-  SAY NAME1 @2651
-  SAY NAME2 @2651
-  SAY DESC @2652
 COPY ~%mod_folder%/itm/00RING25.itm~ ~override~
   SAY NAME1 @2702
   SAY NAME2 @2702
