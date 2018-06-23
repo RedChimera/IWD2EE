@@ -1,3 +1,99 @@
+// First are some lines that used to belong to Item Revisions, but were found to be over-writing stuff from this component. We're moving it to the start to make sure that the Concoct Potions lines later in this TPA will over-write the following lines.
+COPY ~%mod_folder%/itm/00POTN06.itm~ ~override~
+  SAY NAME1 @2647
+  SAY NAME2 @2647
+  SAY DESC @2648
+COPY ~%mod_folder%/itm/00POTN20.itm~ ~override~
+  SAY NAME1 @2649
+  SAY NAME2 @2649
+  SAY DESC @2650
+COPY ~%mod_folder%/itm/00POTN81.itm~ ~override~
+  SAY NAME1 @2651
+  SAY NAME2 @2651
+  SAY DESC @2652
+COPY ~%mod_folder%/itm/00POTN66.itm~ ~override~
+  SAY NAME1 @2753
+  SAY NAME2 @2753
+  SAY DESC @2754
+//COPY ~%mod_folder%/itm/00POTN67.itm~ ~override~
+COPY ~%mod_folder%/itm/00POTN70.itm~ ~override~
+COPY ~%mod_folder%/itm/00POTN71.itm~ ~override~
+COPY ~%mod_folder%/itm/00POTN72.itm~ ~override~
+COPY ~%mod_folder%/itm/00POTN73.itm~ ~override~
+COPY ~%mod_folder%/itm/00POTN74.itm~ ~override~
+COPY ~%mod_folder%/itm/00POTN75.itm~ ~override~
+COPY ~%mod_folder%/itm/00POTN77.itm~ ~override~
+  SAY NAME1 @2736
+  SAY NAME2 @2736
+  SAY DESC @2737
+COPY ~%mod_folder%/itm/00POTN78.itm~ ~override~
+  SAY NAME1 @2645
+  SAY NAME2 @2645
+  SAY DESC @2646
+COPY ~%mod_folder%/itm/00POTN80.itm~ ~override~
+COPY ~%mod_folder%/itm/00POTN82.itm~ ~override~
+COPY ~%mod_folder%/itm/00POTN83.itm~ ~override~
+COPY ~%mod_folder%/itm/00POTN84.itm~ ~override~
+COPY ~%mod_folder%/itm/00POTN85.itm~ ~override~
+COPY ~%mod_folder%/itm/00POTN86.itm~ ~override~
+COPY ~%mod_folder%/itm/00POTN87.itm~ ~override~
+COPY ~%mod_folder%/itm/00POTN89.itm~ ~override~
+  SAY NAME1 @2494
+  SAY NAME2 @2494
+  SAY DESC @2495
+
+/*
+//These lines are commented out because they are missing SAY NAME lines. The lines after these contain SAY NAME lines, so we want to make sure we don't copy over the items without patching them with the right strings.
+COPY ~%mod_folder%/itm/00POTN94.itm~ ~override~
+COPY ~%mod_folder%/itm/00POTN95.itm~ ~override~
+COPY ~%mod_folder%/itm/00POTN96.itm~ ~override~
+COPY ~%mod_folder%/itm/00POTN97.itm~ ~override~
+COPY ~%mod_folder%/itm/00POTN99.itm~ ~override~
+*/
+
+COPY ~%mod_folder%/itm/00POTN90.itm~ ~override~
+  SAY NAME1 @2384
+  SAY NAME2 @2384
+  SAY DESC @2385
+COPY ~%mod_folder%/itm/00POTN91.itm~ ~override~
+COPY ~%mod_folder%/itm/00POTN92.itm~ ~override~
+  SAY NAME1 @2386
+  SAY NAME2 @2386
+  SAY DESC @2387
+COPY ~%mod_folder%/itm/00POTN93.itm~ ~override~
+COPY ~%mod_folder%/itm/00POTN94.itm~ ~override~
+COPY ~%mod_folder%/itm/00POTN95.itm~ ~override~
+  SAY NAME1 @2388
+  SAY NAME2 @2388
+  SAY DESC @2389
+COPY ~%mod_folder%/itm/00POTN96.itm~ ~override~
+  SAY NAME1 @2392
+  SAY NAME2 @2392
+  SAY DESC @2393
+COPY ~%mod_folder%/itm/00POTN97.itm~ ~override~
+  SAY NAME1 @2394
+  SAY NAME2 @2394
+  SAY DESC @2395
+COPY ~%mod_folder%/itm/00POTN98.itm~ ~override~
+
+COPY ~%mod_folder%/itm/00POTN99.itm~ ~override~
+  SAY NAME1 @2390
+  SAY NAME2 @2390
+  SAY DESC @2391
+COPY ~%mod_folder%/itm/00POTN45.itm~ ~override~
+  SAY NAME1 @2380
+  SAY NAME2 @2380
+  SAY DESC @2381
+COPY ~%mod_folder%/itm/00POTN50.itm~ ~override~
+  SAY NAME1 @2382
+  SAY NAME2 @2382
+  SAY DESC @2383
+COPY ~%mod_folder%/itm/50POTN56.itm~ ~override~
+  SAY NAME1 @2601
+  SAY NAME2 @2601
+  SAY DESC @2602
+
+
 // all relevant class tables
 
 COPY ~%mod_folder%/tables/ABRACERQ.2da~ ~override~
@@ -1309,11 +1405,6 @@ COPY ~%mod_folder%/itm/USALZOMB.itm~ ~override~
   SAY NAME1 @4789
   SAY NAME2 @4789
   SAY DESC @4790
-COPY ~%mod_folder%/itm/00POTN94.itm~ ~override~
-COPY ~%mod_folder%/itm/00POTN95.itm~ ~override~
-COPY ~%mod_folder%/itm/00POTN96.itm~ ~override~
-COPY ~%mod_folder%/itm/00POTN97.itm~ ~override~
-COPY ~%mod_folder%/itm/00POTN99.itm~ ~override~
 
 COPY ~%mod_folder%/itm/00POTN03.itm~ ~override~
   SAY NAME1 @4759
