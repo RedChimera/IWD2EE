@@ -1,0 +1,90 @@
+// This file has been edited by Fredrik Lindgren, a.k.a. Wisp,
+// starting from 18 December 2012 and WeiDU 231.06.
+
+// Note added due to LGPL terms.
+//
+// This file was edited by Valerio Bigiani, AKA The Bigg, starting from
+// 6 November 2005. All changes for this file are listed in
+// diffs/examples.prompt.tra.diff file, as the output of a diff -Bw -c -N command.
+//
+// It was originally taken from Westley Weimer's WeiDU 185.
+
+  // WeiDU behaves as if the following file TRA were read in automatically
+
+  // you can change these prompts by assigning these special negative-index
+  // strings to whatever you want in your language-specific TRA files
+
+  // Note that it is NOT my goal to have every string in WeiDU be
+  // replaceable. Bug one of the GUI-people if you really want a better UI.
+
+@-1000= "The %TP2_FILE_NAME% mod has"
+@-1001= "distinct optional components.\nTo save time, you can choose what to do with them at a high level rather\nthan being asked about each one.\n"
+@-1002= "What should be done with all components that are NOT YET installed?\n[I]nstall them, [S]kip them, [A]sk about each one? "
+@-1003= "What should be done with all components that are ALREADY installed?\n[R]e-install them, [U]ninstall them, [S]kip them, [A]sk about each one? "
+
+@-1004= "PLEASE email the file"
+@-1005= "to"
+
+@-1006= "Install Component ["
+@-1007= "]?\n[R]e-Install, [N]o Change or [U]ninstall or [Q]uit? "
+@-1008= "]?\n[I]nstall, or [N]ot Install or [Q]uit? "
+
+@-1009= "Enter part of a module name: "
+
+@-1010= "Re-Installing ["
+@-1011= "] component "
+@-1012= "Re-Installing Using Language"
+
+@-1013= "Removing old installation of ["
+@-1014= "] first ..."
+@-1015= "SUCCESSFULLY REMOVED OLD"
+
+@-1016= "Installing"
+@-1017= "ERROR Installing ["
+@-1018= "], rolling back to previous state"
+@-1019= "SUCCESSFULLY INSTALLED     "
+@-1020= "Skipping"
+@-1021= "Removing ["
+@-1022= "] (component #"
+@-1023= ")"
+@-1024= "SUCCESSFULLY REMOVED ["
+
+@-1025= "]?\n[R]e-install, [N]o Change, [U]ninstall, [Q]uit or choose one:"
+@-1026= "]?\n[N]o, [Q]uit or choose one:"
+@-1027= " (currently installed="
+
+@-1028= "Would you like to display the components from ["
+@-1029= "]?\n[Y]es, [N]o? "
+
+@-1030= "]?\nchoose one:"
+@-1031= "]?\n[R]e-install, [N]o Change, [Q]uit or choose one:"
+@-1032= "NOT INSTALLED DUE TO ERRORS"
+@-1033= "INSTALLED WITH WARNINGS    "
+@-1034= "Would you like to display the readme? [Y]es [N]o"
+@-1035= "Using Language"
+
+@-1036= "Skipping GROUP ["
+@-1037= "] because it fails its requirements."
+
+@-1038= "[A]sk about each component, [S]kip all, or choose a pre-defined selection:"
+@-1039= "[A]sk about each component, [R]einstall the current configuration, [U]ninstall all, [S]kip all, or choose a pre-defined selection:"
+
+@-1040= "\nPlease choose the language in which you wish to play the game.\nIf you later wish to play the game in a different language you will need to edit the file weidu.conf and reinstall your mods.\n"
+@-1041= "Czech"
+@-1042= "German"
+@-1043= "English"
+@-1044= "Spanish"
+@-1045= "French"
+@-1046= "Italian"
+@-1047= "Polish"
+@-1048= "Portuguese"
+@-1049= "Turkish"
+@-1050= "Japanese"
+@-1051= "Korean"
+@-1052= "Simplified Chinese"
+@-1053= "Russian"
+@-1054= "Ukrainian"
+
+@-1060= "\nThis game is available in multiple languages, but WeiDU does not know which game language was used when this mod was installed.\n\nPlease indicate which game language was used when you installed this mod. Your choice will be used until WeiDU exits but will not be remembered.\n"
+@-1061= "\nUsing"
+@-1062= " and "

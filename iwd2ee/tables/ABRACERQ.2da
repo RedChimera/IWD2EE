@@ -1,0 +1,19 @@
+2DA V1.0
+0
+                        MIN_STR MAX_STR MIN_DEX MAX_DEX MIN_CON MAX_CON MIN_INT MAX_INT MIN_WIS MAX_WIS MIN_CHR MAX_CHR
+HUMAN                   2       19      2       19      2       19      2       19      2       19      2       19
+HUMAN_AASIMAR           2       19      2       19      2       19      2       19      2       19      2       19
+HUMAN_TIEFLING          2       19      2       19      2       19      2       19      2       19      2       19
+ELF                     2       19      2       19      2       19      2       19      2       19      2       19
+ELF_DROW                2       19      2       19      2       19      2       19      2       19      2       19
+ELF_WILD                2       19      2       19      2       19      2       19      2       19      2       19
+HALF_ELF                2       19      2       19      2       19      2       19      2       19      2       19
+DWARF                   2       19      2       19      2       19      2       19      2       19      2       19
+DWARF_GOLD              2       19      2       19      2       19      2       19      2       19      2       19
+DWARF_GRAY              2       19      2       19      2       19      2       19      2       19      2       19
+HALFLING                2       19      2       19      2       19      2       19      2       19      2       19
+HALFLING_STRONGHEART    2       19      2       19      2       19      2       19      2       19      2       19
+HALFLING_GHOSTWISE      2       19      2       19      2       19      2       19      2       19      2       19
+GNOME                   2       19      2       19      2       19      2       19      2       19      2       19
+GNOME_DEEP              2       19      2       19      2       19      2       19      2       19      2       19
+HALF_ORC                2       19      2       19      2       19      2       19      2       19      2       19

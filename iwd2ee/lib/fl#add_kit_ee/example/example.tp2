@@ -1,0 +1,86 @@
+BACKUP "example/backup"
+AUTHOR Wisp
+
+BEGIN example
+
+INCLUDE ~example/lib/fl#add_kit_ee.tpa~
+
+ADD_KIT ~flrustle~
+  ~flrustle                1           1           1           1           1           0           0           0~
+  ~flrustle 0 1 0 0 1 0 0 1 0 1 1 0 0 1 1 1 0 1 0 0 0 0 1 1 0 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0~
+  ~flrustle                0       9       0       0       0       0~
+  ~flrustle                0       0       0       0       0       0~
+  ~flrustle                0       17      0       0       0       0~
+  ~flrustle                0       15      0       0       0       0~
+  ~flrustle                0       1       1       1       1       1       1       1       1~
+  ~flrustle                1       1       1       0       0       0~
+  ~example/flrustle.2da~
+  ~K_T_H    K_T_D   K_T_G   K_T_E   K_T_HE   K_T_HL   K_T_HO~
+  ~0x00080000    4~
+  ~fl1~
+  ~LEAT14 * * BAG28 RING06 RING05,10 * BOOT02 AMUL19 BRAC16 BELT06 AROW11,40 BULL03,40 BOLT06,40 POTN52,5 POTN04,2 POTN14,5 DAGG12 SW1H28 STAF08~
+  SAY ~chickenrustler~
+  SAY ~Chickenrustler~
+  SAY ~CHICKENRUSTLER: kit description~
+
+LAF fl#add_kit_ee
+  INT_VAR
+    biography = 15883 // Normal biography for thieves
+    briefdesc = RESOLVE_STR_REF (~CHICKENRUSTLER: Not much of a thief, but the chickenrustler learns to fight pretty well due to frequently getting into scraps over <PRO_HISHER> chickenrustling ways.~)
+  STR_VAR
+    kit_name = flrustle
+    backstab = ~1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1~
+    clswpbon = ~1 0 3~
+    numwslot = 2
+    thiefskl = ~40 20~
+    traplimt = 6
+    clascolr = ~35 67 67 25 80~
+    clasiskl = "" // Inherit from parent class
+                  // clasthac is omitted and thus also inherited
+                  // As is thiefscl
+                  // And so on
+END
+
+/*
+ * As another example, if we don't care for the new stuff and just
+ * to make the kit compatible with BG(2)EE, we could simply use this:
+
+ LAF fl#add_kit_ee STR_VAR kit_name = flrustle END
+
+ * As you can infer from the documentation, all variables except
+ * kit_name can be omitted. The values for these variables will be
+ * inherited from the parent class. This is the case for all the old
+ * kits from the original BG2 and BG2: ToB, for example.
+ */
+
+/*
+ * As yet another example, if we don't want to omit any variables,
+ * our function call could look like this:
+
+ * NB: sneakatt and crippstr are not included at this time.
+
+ LAF fl#add_kit_ee
+   INT_VAR
+     biography = RESOLVE_STR_REF (~You grew up rustling chickens. It was a poultry childhood.~)
+     briefdesc = RESOLVE_STR_REF (~CHICKENRUSTLER: Not much of a thief, but the chickenrustler learns to fight pretty well due to frequently getting into scraps over <PRO_HISHER> chickenrustling ways.~)
+     fallen = 0
+     fallen_notice = ~-1~
+   STR_VAR
+     kit_name = flrustle
+     backstab = ~1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1~
+     clswpbon = ~1 0 3~
+     numwslot = ~2~
+     thiefskl = ~40 20~
+     traplimt = ~6~
+     clascolr = ~35 67 67 25 80~
+     clasiskl = ~0 0 0 0 0 0 0~
+     clasthac = ~0~
+     thiefscl = ~100 100 100 100 100 100 100 0~
+     hpclass  = ~hprog~
+     clsrcreq = ~1 1 1 1 1 1 1~
+ END
+
+ * Note that there is absolutely no need to provide a variable unless
+ * you want it to be different from the corresponding value of the
+ * parent class.
+ */

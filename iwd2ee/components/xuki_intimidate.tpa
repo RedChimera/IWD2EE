@@ -1,0 +1,5 @@
+//NOTES
+//This currently just replaces Xuki's dialogue. I've added an option to intimidate her if you have the right stats and you choose the right dialogue options, but there's no trigger to make her flee; she just gives you her equipment.
+
+COMPILE ~%mod_folder%/dlg/21XUKI.d~
+COPY ~%mod_folder%/bcs/USSTXUKI.bcs~ ~override~

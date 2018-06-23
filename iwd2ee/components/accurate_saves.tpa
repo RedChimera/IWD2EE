@@ -1,0 +1,74 @@
+//NOTES
+
+/*
+// Flawed formula; no longer used
+COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
+	READ_BYTE "0x8b" "barbarianlevel"
+	READ_BYTE "0x8c" "bardlevel"
+	READ_BYTE "0x8d" "clericlevel"
+	READ_BYTE "0x8e" "druidlevel"
+	READ_BYTE "0x8f" "fighterlevel"
+	READ_BYTE "0x90" "monklevel"
+	READ_BYTE "0x91" "paladinlevel"
+	READ_BYTE "0x92" "rangerlevel"
+	READ_BYTE "0x93" "roguelevel"
+	READ_BYTE "0x94" "sorcererlevel"
+	READ_BYTE "0x95" "wizardlevel"
+	  READ_BYTE 0x52 fortitudesave
+	  READ_BYTE 0x53 reflexsave
+	  READ_BYTE 0x54 willsave
+	  WRITE_BYTE 0x52 (%barbarianlevel% * 667 / 1000 + %fighterlevel% * 667 / 1000 + %paladinlevel% * 667 / 1000 + %rangerlevel% * 667 / 1000 + %bardlevel% / 3 + %clericlevel% * 4 / 10 + %druidlevel% * 4 / 10 + %monklevel% / 2 + %roguelevel% / 3 + %sorcererlevel% / 3 + %wizardlevel% / 3 + 1)
+	  WRITE_BYTE 0x53 (%barbarianlevel% / 2 + %fighterlevel% / 2 + %paladinlevel% / 2 + %rangerlevel% / 2 + %bardlevel% * 667 / 1000 + %clericlevel% / 3 + %druidlevel% / 3 + %monklevel% / 2 + %roguelevel% * 667 / 1000 + %sorcererlevel% / 3 + %wizardlevel% / 3 + 1)
+	  WRITE_BYTE 0x54 (%barbarianlevel% / 3 + %fighterlevel% / 3 + %paladinlevel% / 3 + %rangerlevel% / 3 + %bardlevel% / 2 + %clericlevel% * 667 / 1000 + %druidlevel% * 667 / 1000 + %monklevel% / 2 + %roguelevel% / 2 + %sorcererlevel% * 667 / 1000 + %wizardlevel% * 667 / 1000 + 1)
+BUT_ONLY
+*/
+
+// Reads in levels for all critters and uses a formula to set their saving throws. This only works for critters with fighter levels and gives them +2 to Fortitude saves.
+COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
+	READ_BYTE "0x8b" "barbarianlevel"
+	READ_BYTE "0x8c" "bardlevel"
+	READ_BYTE "0x8d" "clericlevel"
+	READ_BYTE "0x8e" "druidlevel"
+	READ_BYTE "0x8f" "fighterlevel"
+	READ_BYTE "0x90" "monklevel"
+	READ_BYTE "0x91" "paladinlevel"
+	READ_BYTE "0x92" "rangerlevel"
+	READ_BYTE "0x93" "roguelevel"
+	READ_BYTE "0x94" "sorcererlevel"
+	READ_BYTE "0x95" "wizardlevel"
+	  READ_BYTE 0x52 fortitudesave
+	  READ_BYTE 0x53 reflexsave
+	  READ_BYTE 0x54 willsave
+	  READ_BYTE "0x8f" "fighterlevels"
+	  PATCH_IF ~%fighterlevels%~ != ~0~ BEGIN
+	  WRITE_BYTE 0x52 (%barbarianlevel% * 667 / 1000 + %fighterlevel% * 667 / 1000 + %paladinlevel% * 667 / 1000 + %rangerlevel% * 667 / 1000 + %bardlevel% / 3 + %clericlevel% * 4 / 10 + %druidlevel% * 4 / 10 + %monklevel% / 2 + %roguelevel% / 3 + %sorcererlevel% / 3 + %wizardlevel% / 3 + 2)
+	  WRITE_BYTE 0x53 (%barbarianlevel% / 2 + %fighterlevel% / 2 + %paladinlevel% / 2 + %rangerlevel% / 2 + %bardlevel% * 667 / 1000 + %clericlevel% / 3 + %druidlevel% / 3 + %monklevel% / 2 + %roguelevel% * 667 / 1000 + %sorcererlevel% / 3 + %wizardlevel% / 3 + 1)
+	  WRITE_BYTE 0x54 (%barbarianlevel% / 3 + %fighterlevel% / 3 + %paladinlevel% / 3 + %rangerlevel% / 3 + %bardlevel% / 2 + %clericlevel% * 667 / 1000 + %druidlevel% * 667 / 1000 + %monklevel% / 2 + %roguelevel% / 2 + %sorcererlevel% * 667 / 1000 + %wizardlevel% * 667 / 1000)
+//BUT_ONLY
+    END
+BUT_ONLY_IF_IT_CHANGES
+
+// Alternate formula for critters with no fighter levels, granting no Fortitude save bonuses.
+COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
+	READ_BYTE "0x8b" "barbarianlevel"
+	READ_BYTE "0x8c" "bardlevel"
+	READ_BYTE "0x8d" "clericlevel"
+	READ_BYTE "0x8e" "druidlevel"
+	READ_BYTE "0x8f" "fighterlevel"
+	READ_BYTE "0x90" "monklevel"
+	READ_BYTE "0x91" "paladinlevel"
+	READ_BYTE "0x92" "rangerlevel"
+	READ_BYTE "0x93" "roguelevel"
+	READ_BYTE "0x94" "sorcererlevel"
+	READ_BYTE "0x95" "wizardlevel"
+	  READ_BYTE 0x52 fortitudesave
+	  READ_BYTE 0x53 reflexsave
+	  READ_BYTE 0x54 willsave
+	  READ_BYTE "0x8f" "fighterlevels"
+	  PATCH_IF ~%fighterlevels%~ EQUALS ~0~ BEGIN
+	  WRITE_BYTE 0x52 (%barbarianlevel% * 667 / 1000 + %fighterlevel% * 667 / 1000 + %paladinlevel% * 667 / 1000 + %rangerlevel% * 667 / 1000 + %bardlevel% / 3 + %clericlevel% * 4 / 10 + %druidlevel% * 4 / 10 + %monklevel% / 2 + %roguelevel% / 3 + %sorcererlevel% / 3 + %wizardlevel% / 3)
+	  WRITE_BYTE 0x53 (%barbarianlevel% / 2 + %fighterlevel% / 2 + %paladinlevel% / 2 + %rangerlevel% / 2 + %bardlevel% * 667 / 1000 + %clericlevel% / 3 + %druidlevel% / 3 + %monklevel% / 2 + %roguelevel% * 667 / 1000 + %sorcererlevel% / 3 + %wizardlevel% / 3)
+	  WRITE_BYTE 0x54 (%barbarianlevel% / 3 + %fighterlevel% / 3 + %paladinlevel% / 3 + %rangerlevel% / 3 + %bardlevel% / 2 + %clericlevel% * 667 / 1000 + %druidlevel% * 667 / 1000 + %monklevel% / 2 + %roguelevel% / 2 + %sorcererlevel% * 667 / 1000 + %wizardlevel% * 667 / 1000 + 2)
+//BUT_ONLY
+    END
+BUT_ONLY_IF_IT_CHANGES

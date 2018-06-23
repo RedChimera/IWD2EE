@@ -1,0 +1,2 @@
+//NOTES
+COPY ~%mod_folder%/spl/SPIN122.spl~ ~override~

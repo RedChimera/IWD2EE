@@ -1,0 +1,140 @@
+<!DOCTYPE HTML>
+
+<html>
+  <head>
+    <title>Documentation of fl#add_kit_ee</title>
+    <meta charset="utf-8">
+  </head>
+
+  <body>
+    <div>
+      <h2>fl#add_kit_ee</h2>
+      <p>This is an action function. On EE-type games, it complements
+        ADD_KIT by patching the new 2DA files with information
+        provided by the modder. It does nothing on game types other
+        than BG: EE, BGII: EE and IWD: EE. For a usage example, refer
+        to the "example" directory. This function requires WeiDU 237
+        or more recent.</p>
+
+      <p>This function will serve as a prototype for an eventual
+        extension of <code>ADD_KIT</code>. You are welcome to
+        use <a href="http://forums.pocketplane.net/index.php/board,44.0.html">this
+        forum</a> to report bugs or submit requests for additions and
+        changes.</p>
+
+      <h4>Usage:</h4>
+      <ol>
+        <li><p>Copy the file fl#add_kit_ee.tpa into your mod
+            folder.</p></li>
+        <li><p><code><a href="http://weidu.org/~thebigg/README-WeiDU.html#INCLUDE">INCLUDE</a></code>
+            the file in your TP2 file.</p></li>
+        <li><p>Use <code><a href="http://weidu.org/~thebigg/README-WeiDU.html#ADD_KIT">ADD_KIT</a></code>
+            as you normally would.</p></li>
+        <li><p><a href="http://weidu.org/~thebigg/README-WeiDU.html#LAUNCH_ACTION_FUNCTION">Launch</a>
+            the action function <code>fl#add_kit_ee</code>
+            after <code>ADD_KIT</code>.</p>
+          <p>Integer variables:</p>
+          <ul>
+            <li><code>biography</code> : optional : string reference</li>
+            <li><code>fallen</code> : optional : 0 or 1</li>
+            <li><code>briefdesc</code> : optional : string reference</li>
+            <li><code>fallen_notice</code> : optional : string reference</li>
+          </ul>
+          <p>String variables:</p>
+          <ul>
+            <li><code>kit_name</code> : required : the internal name of your kit</li>
+            <li><code>backstab</code> : optional : 2DA string</li>
+            <li><code>clsrcreq</code> : optional : 2DA string</li>
+            <li><code>clswpbon</code> : optional : 2DA string</li>
+            <li><code>hpclass</code>  : optional : 2DA string</li>
+            <li><code>numwslot</code> : optional : 2DA string</li>
+            <li><code>thiefskl</code> : optional : 2DA string</li>
+            <li><code>traplimt</code> : optional : 2DA string</li>
+            <li><code>clascolr</code> : optional : 2DA string</li>
+            <li><code>clasiskl</code> : optional : 2DA string</li>
+            <li><code>clasthac</code> : optional : 2DA string</li>
+            <li><code>thiefscl</code> : optional : 2DA string</li>
+            <li><code>sneakatt</code> : optional : 2DA string</li>
+            <li><code>crippstr</code> : optional : 2DA string</li>
+          </ul>
+          <p>If no value is provided for one or more of the optional
+            variables, the corresponding value of the parent class is
+            copied and used for this kit.</p>
+
+          <p>None of the 2DA strings should include the kit name. It
+            will be included automatically as appropriate.</p>
+
+          <p>The variables <code>biography</code>, <code>fallen</code>,
+            <code>briefdesc</code> and <code>fallen_notice</code> are
+            used in the file clastext.2da.</p>
+
+          <p>If <code>hpclass</code> references a custom 2DA file, it
+            needs to be copied into the game separately.</p>
+
+          <p>The
+            variables <code>backstab</code>, <code>thiefskl</code>,
+            <code>traplimt</code>, <code>sneakatt</code>
+            and <code>crippstr</code> should only be provided for
+            thief kits and will be ignored for other classes.</p>
+        </li>
+      </ol>
+
+      <h4>Version history</h4>
+      <p>v1.1.3:</p>
+      <ul>
+        <li>Update sodcltxt.2da on SoD games.</li>
+      </ul>
+      <p>v1.1.2:</p>
+      <ul>
+        <li>Fix the platform check to be less needlessly
+        discriminating. Notably, the function should now work on
+          SoD.</li>
+      </ul>
+      <p>v1.1.1:</p>
+      <ul>
+        <li>Perform more thorough checking of input data, for greater
+        robustness.</li>
+      </ul>
+
+      <p>v1.1.0:</p>
+      <ul>
+        <li>Add IWD: EE support.</li>
+      </ul>
+
+      <p>v1.0.5:</p>
+      <ul>
+        <li>Add support for the IWD: EE 2DA files sneakatt and crippstr.</li>
+        <li>Fix another compatibility issue with games lacking the
+        expected columns.</li>
+      </ul>
+
+      <p>v1.0.4:</p>
+      <ul>
+        <li>Fix compatibility issue with games lacking a FALLEN_NOTICE
+        column.</li>
+        <li>Fix a risk of variables from the calling environment
+        aversely affecting the function.</li>
+      </ul>
+
+      <p>v1.0.3:</p>
+      <ul>
+        <li>Do nothing on non-EE games.</li>
+        <li>The check for whether the kit exists is more robust.</li>
+      </ul>
+
+      <p>v1.0.2:</p>
+      <ul>
+        <li>Additional examples.</li>
+        <li>Add <code>fallen</code> variable.</li>
+        <li>Account for FALLEN_NOTICE in clastext.2da</li>
+      </ul>
+
+      <p>v1.0.1:</p>
+      <ul>
+        <li>Fix a mistyped variable name.</li>
+      </ul>
+
+      <p>v1.0.0: Initial release</p>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,74 @@
+//NOTES
+//
+
+// this reads in spell schools and translates them. Divination spells become necromancy, conjuration becomes evocation, abjuration becomes transmutation, and illusion becomes enchantment. This does not affect which spells a specialist mage can learn; that's handled via the edits to scrolls.
+
+COPY_EXISTING_REGEXP ~.*\.spl~ ~override~
+
+READ_BYTE "0x25" "spellschool"
+
+WRITE_SHORT 0x25 7
+
+IF_EVAL ("%spellschool%" = "0x3")
+
+COPY_EXISTING_REGEXP ~.*\.spl~ ~override~
+
+READ_BYTE "0x25" "spellschool"
+
+WRITE_SHORT 0x25 6
+
+IF_EVAL ("%spellschool%" = "0x2")
+
+COPY_EXISTING_REGEXP ~.*\.spl~ ~override~
+
+READ_BYTE "0x25" "spellschool"
+
+WRITE_SHORT 0x25 4
+
+IF_EVAL ("%spellschool%" = "0x5")
+
+COPY_EXISTING_REGEXP ~.*\.spl~ ~override~
+
+READ_BYTE "0x25" "spellschool"
+
+WRITE_SHORT 0x25 8
+
+IF_EVAL ("%spellschool%" = "0x1")
+
+// new names for Spell Focus feats
+
+COPY_EXISTING ~feats.2da~ ~override~
+  COUNT_2DA_COLS num_cols
+  READ_2DA_ENTRIES_NOW rows num_cols
+  FOR (row = 0; row < rows; ++row) BEGIN
+    READ_2DA_ENTRY_FORMER rows row 0 label
+    PATCH_MATCH ~%label%~ WITH
+      ~SPELL_FOCUS_ENCHANTMENT~ BEGIN
+        SET strref = RESOLVE_STR_REF(@121)
+        SET_2DA_ENTRY_LATER rows_out row 2 ~%strref%~
+        SET strref = RESOLVE_STR_REF(@122)
+        SET_2DA_ENTRY_LATER rows_out row 3 ~%strref%~
+      END
+      ~SPELL_FOCUS_EVOCATION~ BEGIN
+        SET strref = RESOLVE_STR_REF(@123)
+        SET_2DA_ENTRY_LATER rows_out row 2 ~%strref%~
+        SET strref = RESOLVE_STR_REF(@124)
+        SET_2DA_ENTRY_LATER rows_out row 3 ~%strref%~
+      END
+      ~SPELL_FOCUS_NECROMANCY~ BEGIN
+        SET strref = RESOLVE_STR_REF(@125)
+        SET_2DA_ENTRY_LATER rows_out row 2 ~%strref%~
+        SET strref = RESOLVE_STR_REF(@126)
+        SET_2DA_ENTRY_LATER rows_out row 3 ~%strref%~
+      END
+      ~SPELL_FOCUS_TRANSMUTATION~ BEGIN
+        SET strref = RESOLVE_STR_REF(@127)
+        SET_2DA_ENTRY_LATER rows_out row 2 ~%strref%~
+        SET strref = RESOLVE_STR_REF(@128)
+        SET_2DA_ENTRY_LATER rows_out row 3 ~%strref%~
+      END
+      DEFAULT
+    END
+  END
+  SET_2DA_ENTRIES_NOW rows_out num_cols
+BUT_ONLY

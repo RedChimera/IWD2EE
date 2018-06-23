@@ -1,0 +1,75 @@
+//NOTES
+
+// Copies HP tables from a separate subfolder and further nerfs Mirror Image.
+COPY ~%mod_folder%/sd/HPBARB.2da~ ~override~
+COPY ~%mod_folder%/sd/HPCONBON.2da~ ~override~
+COPY ~%mod_folder%/sd/HPMONK.2da~ ~override~
+COPY ~%mod_folder%/sd/HPPRS.2da~ ~override~
+COPY ~%mod_folder%/sd/HPROG.2da~ ~override~
+COPY ~%mod_folder%/sd/HPWAR.2da~ ~override~
+COPY ~%mod_folder%/sd/HPWIZ.2da~ ~override~
+COPY ~%mod_folder%/sd/SPWI212.spl~ ~override~
+
+// Divides all creatures' HP by 2
+COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
+	READ_BYTE "0x24" "currenthp"
+	  WRITE_BYTE 0x24 (%currenthp% / 2)
+
+// Planned additions to Sudden Death mode; not implemented
+/*
+	READ_BYTE "0x26" "armorclass"
+	  WRITE_BYTE 0x26 (%armorclass% - 10)
+//	READ_BYTE "0x46" "baseattackbonus"
+//	  WRITE_BYTE 0x46 (%baseattackbonus% + 5)
+	READ_BYTE "0x266" "str"
+	  WRITE_BYTE 0x266 (%str% + 10)
+	READ_BYTE "0x269" "dex"
+	  WRITE_BYTE 0x269 (%dex% + 10)
+	READ_BYTE "0x267" "int"
+	  WRITE_BYTE 0x267 (%int% + 10)
+	READ_BYTE "0x268" "wis"
+	  WRITE_BYTE 0x268 (%wis% + 10)
+	READ_BYTE "0x26b" "cha"
+	  WRITE_BYTE 0x26b (%cha% + 10)
+	READ_BYTE "0x52" "fortsave"
+	  WRITE_BYTE 0x52 (%fortsave% - 5)
+	READ_BYTE "0x53" "reflexsave"
+	  WRITE_BYTE 0x53 (%reflexsave% - 10)
+	READ_BYTE "0x54" "willsave"
+	  WRITE_BYTE 0x54 (%willsave% - 10)
+// make sure players also suffer -5 to saving throws
+// maybe apply -5 resistance to everything
+// maybe apply +5 to movement rate
+	READ_BYTE "0x55" "fire"
+	  WRITE_BYTE 0x55 (%fire% - 5)
+	READ_BYTE "0x56" "cold"
+	  WRITE_BYTE 0x56 (%cold% - 5)
+	READ_BYTE "0x57" "elec"
+	  WRITE_BYTE 0x57 (%elec% - 5)
+	READ_BYTE "0x58" "acid"
+	  WRITE_BYTE 0x58 (%acid% - 5)
+	READ_BYTE "0x59" "spell"
+	  WRITE_BYTE 0x59 (%spell% - 5)
+//	READ_BYTE "0x5a" ""
+//	  WRITE_BYTE 0x5a (%% - 5)
+//	READ_BYTE "0x5b" ""
+//	  WRITE_BYTE 0x5b (%% - 5)
+	READ_BYTE "0x5c" "slash"
+	  WRITE_BYTE 0x5c (%slash% - 5)
+	READ_BYTE "0x5d" "crush"
+	  WRITE_BYTE 0x5d (%crush% - 5)
+	READ_BYTE "0x5e" "pierce"
+	  WRITE_BYTE 0x5e (%pierce% - 5)
+	READ_BYTE "0x5f" "missile"
+	  WRITE_BYTE 0x5f (%missile% - 5)
+	READ_BYTE "0x60" "magic"
+	  WRITE_BYTE 0x60 (%magic% - 5)
+	READ_BYTE "0x67" "luck"
+	  WRITE_BYTE 0x67 (%luck% + 1)
+	  WRITE_BYTE 0x1e8 2 //spell focus
+	  WRITE_BYTE 0x1e9 2 //spell focus
+	  WRITE_BYTE 0x1ea 2 //spell focus
+	  WRITE_BYTE 0x1eb 2 //spell focus
+	  WRITE_BYTE 0x1ec 2 //spell penetration
+*/
+BUT_ONLY

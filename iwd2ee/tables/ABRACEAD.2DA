@@ -1,0 +1,19 @@
+2DA V1.0
+0
+            		MOD_STR MOD_DEX MOD_CON MOD_INT MOD_WIS MOD_CHR
+HUMAN       		0       0       0       0       0       0
+HUMAN_AASIMAR   	0       0       0       0       1       1
+HUMAN_TIEFLING  	0       1       0       1       0       -1
+ELF         		0       1       -1      0       0       0
+ELF_DROW                0       1       -1      1       0       1
+ELF_WILD                0       1       0      -1       0       0
+HALF_ELF    		0       0       0       0       0       0
+DWARF       		0       0       1       0       0       -1
+DWARF_GOLD      	0       -1      1       0       0       0
+DWARF_GRAY              0       0       1       0       0       -2
+HALFLING    		-1      1       0       0       0       0
+HALFLING_STRONGHEART    -1      1       0       0       0       0
+HALFLING_GHOSTWISE      -1      1       0       0       0       0
+GNOME                   -1      0       1       0       0       0
+GNOME_DEEP              -1      1       0       0       1       -2
+HALF_ORC                1       0       0       -1      0       -1

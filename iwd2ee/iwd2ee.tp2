@@ -1,0 +1,244 @@
+BACKUP ~iwd2ee/backup~
+AUTHOR ~ced2168@columbia.edu~
+
+VERSION ~1.00.11~
+
+//MODDER
+
+ALWAYS
+//	ACTION_IF GAME_IS ~IWD2~ BEGIN
+           OUTER_SPRINT ~mod_folder~ ~iwd2ee~    //Folder Var
+//      END
+END
+
+AUTO_TRA ~iwd2ee/tra/%s~
+
+LANGUAGE   ~English~
+           ~English~
+           ~iwd2ee/tra/English/setup.tra~
+           ~iwd2ee/tra/English/class_revisions.tra~
+           ~iwd2ee/tra/English/loose_alignment.tra~
+           ~iwd2ee/tra/English/spell_revise.tra~
+           ~iwd2ee/tra/English/spell_focus.tra~
+           ~iwd2ee/tra/English/item_revisions.tra~
+           ~iwd2ee/tra/English/creature_rebalancing.tra~
+           ~iwd2ee/tra/English/faster_areas.tra~
+           ~iwd2ee/tra/English/z_concoct_potions.tra~
+
+
+
+//Class Revisions
+BEGIN @1 //
+      INCLUDE ~%mod_folder%/components/class_revisions.tpa~      //Class Revisions
+
+//Looser Alignment Restrictions for Classes
+BEGIN @2 //
+      INCLUDE ~%mod_folder%/components/loose_alignment.tpa~      //Looser Alignment
+
+//Spell Revisions
+BEGIN @3 //
+      INCLUDE ~%mod_folder%/components/spell_revise.tpa~      //Spell Revisions
+
+//Spell Focus Feats for All Schools
+BEGIN @4 //
+      INCLUDE ~%mod_folder%/components/spell_focus.tpa~      //Spell focus
+
+//Item Revisions
+BEGIN @5 //
+      INCLUDE ~%mod_folder%/components/item_revisions.tpa~      //Item Revisions
+
+//Creature Rebalancing
+BEGIN @6 //
+      INCLUDE ~%mod_folder%/components/creature_rebalancing.tpa~      //Creature Rebalancing
+
+//Better XP Progression
+BEGIN @8
+
+SUBCOMPONENT @7
+
+      INCLUDE ~%mod_folder%/components/better_xp_1.tpa~      //~Completely unnerfed challenge ratings: enemy CR is always equal to their level~
+
+///////////////////////////////////////////////////
+
+BEGIN @9
+
+SUBCOMPONENT @7
+
+      INCLUDE ~%mod_folder%/components/better_xp_2.tpa~      //~Partially unnerfed challenge ratings: enemy CR is equal to or slightly less than their level (recommended)~
+
+
+//Faster Targos
+BEGIN @10
+
+      INCLUDE ~%mod_folder%/components/faster_targos.tpa~      //~Faster Targos~
+
+//Faster Horde Fortress
+BEGIN @11
+
+      INCLUDE ~%mod_folder%/components/faster_horde.tpa~      //~Faster Horde Fortress~
+
+//Faster Ice Temple
+BEGIN @12
+
+      INCLUDE ~%mod_folder%/components/faster_ice.tpa~      //~Faster Ice Temple~
+
+
+
+//Faster Wandering Village
+BEGIN @13
+
+      INCLUDE ~%mod_folder%/components/faster_w_village.tpa~      //~Faster Wandering Village~
+
+
+//Faster Black Raven Monastery
+
+BEGIN @14
+
+      INCLUDE ~%mod_folder%/components/faster_b_raven.tpa~      //~Faster Black Raven Monastery~
+
+//Faster Underdark
+
+BEGIN @15
+
+      INCLUDE ~%mod_folder%/components/faster_underdark.tpa~      //~Faster Underdark~
+
+//Faster Dragon's Eye and Lord Pyros' Domain
+
+BEGIN @16
+
+      INCLUDE ~%mod_folder%/components/faster_dragon_eye.tpa~      //~Faster Dragon's Eye and Lord Pyros' Domain~
+
+
+//Faster Severed Hand
+
+BEGIN @17
+
+      INCLUDE ~%mod_folder%/components/faster_severed_hand.tpa~      //~Faster Severed Hand~
+
+//More Potions for Oswald
+
+BEGIN @18
+
+      INCLUDE ~%mod_folder%/components/more_potions.tpa~      //~More Potions for Oswald~
+
+//Mage Scrolls for New Spells
+
+BEGIN @19
+
+      INCLUDE ~%mod_folder%/components/mage_scrolls.tpa~      //~Mage Scrolls for New Spells~
+
+//Fewer Immunities for Bosses
+
+BEGIN @20
+
+      INCLUDE ~%mod_folder%/components/fewer_immunities.tpa~      //~Fewer Immunities for Bosses~
+
+//Shapeshifting Sound Fix
+
+BEGIN @21
+
+      INCLUDE ~%mod_folder%/components/shape_sound.tpa~      //~Shapeshifting Sound Fix (only install if your druid makes strange noises after shapeshifting; otherwise is unnecessary)~
+
+//More Accurate Saving Throws for Enemies
+
+BEGIN @22
+
+      INCLUDE ~%mod_folder%/components/accurate_saves.tpa~      //~More Accurate Saving Throws for Enemies~
+
+//Make All Creatures Vulnerable to Critical Hits
+
+BEGIN @23
+
+      INCLUDE ~%mod_folder%/components/critical_hits.tpa~      //~Make All Creatures Vulnerable to Critical Hits~
+
+
+//Sudden Death Mode
+
+BEGIN @24
+
+      INCLUDE ~%mod_folder%/components/sudden_death.tpa~      //~Sudden Death Mode~
+
+//Better Racial Enemies for Rangers
+
+BEGIN @25
+
+      INCLUDE ~%mod_folder%/components/racial_enemies.tpa~      //~Better Racial Enemies for Rangers~
+
+
+
+//Cosmetic Tweaks
+
+BEGIN @26
+
+      INCLUDE ~%mod_folder%/components/cosmetic_tweaks.tpa~      //~Cosmetic Tweaks~
+
+//Xuki Intimidation Option
+
+BEGIN @27
+
+      INCLUDE ~%mod_folder%/components/xuki_intimidate.tpa~      //~Xuki Intimidation Option~
+
+
+//Nonviolent Option for Isair and Madae
+
+BEGIN @28
+
+      INCLUDE ~%mod_folder%/components/novio_isair_madae.tpa~      //~Nonviolent Option for Isair and Madae~
+
+
+//Alternative Dragon's Eye
+
+BEGIN @29
+
+      INCLUDE ~%mod_folder%/components/alt_dragon_eye.tpa~      //~Alternative Dragon's Eye~
+
+//Bribe Limha
+
+BEGIN @30
+
+      INCLUDE ~%mod_folder%/components/limha_bribe.tpa~      //~Bribe Limha~
+
+
+//Bribe Mirabel and Majrash
+
+BEGIN @31
+
+      INCLUDE ~%mod_folder%/components/mirabel_bribe.tpa~      //~Bribe Mirabel and Majrash~
+
+//Diplomacy for Guthma
+
+BEGIN @32
+
+      INCLUDE ~%mod_folder%/components/guthma_diplomacy.tpa~      //~Diplomacy for Guthma~
+
+//Trick Harshom
+
+BEGIN @33
+
+      INCLUDE ~%mod_folder%/components/harshom_trick.tpa~      //~Trick Harshom~
+
+//Intimidate Torak
+
+BEGIN @34
+
+      INCLUDE ~%mod_folder%/components/torak_intimidate.tpa~      //~Intimidate Torak~
+
+//Intimidate Elder Brain
+
+BEGIN @35
+
+      INCLUDE ~%mod_folder%/components/elder_brain.tpa~      //~Intimidate Elder Brain~
+
+//Bluff Thorasskus
+
+BEGIN @36
+
+      INCLUDE ~%mod_folder%/components/thorasskus_bluff.tpa~      //~Bluff Thorasskus~
+
+//Bluff Thvara
+
+BEGIN @37
+
+      INCLUDE ~%mod_folder%/components/thvara_bluff.tpa~      //~Bluff Thvara~
+
+

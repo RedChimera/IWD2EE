@@ -1,0 +1,2456 @@
+//NOTES
+//We should patch scrolls
+
+// fixed spell schools for scrolls
+
+COPY ~%mod_folder%/itm/SPWI101Z.itm~ ~override~
+COPY ~%mod_folder%/itm/SPWI102Z.itm~ ~override~
+COPY ~%mod_folder%/itm/SPWI103Z.itm~ ~override~
+COPY ~%mod_folder%/itm/SPWI104Z.itm~ ~override~
+COPY ~%mod_folder%/itm/SPWI105Z.itm~ ~override~
+COPY ~%mod_folder%/itm/SPWI107Z.itm~ ~override~
+COPY ~%mod_folder%/itm/SPWI108Z.itm~ ~override~
+COPY ~%mod_folder%/itm/SPWI110Z.itm~ ~override~
+COPY ~%mod_folder%/itm/SPWI112Z.itm~ ~override~
+COPY ~%mod_folder%/itm/SPWI113Z.itm~ ~override~
+COPY ~%mod_folder%/itm/SPWI114Z.itm~ ~override~
+COPY ~%mod_folder%/itm/SPWI115Z.itm~ ~override~
+COPY ~%mod_folder%/itm/SPWI117Z.itm~ ~override~
+COPY ~%mod_folder%/itm/SPWI118Z.itm~ ~override~
+COPY ~%mod_folder%/itm/SPWI119Z.itm~ ~override~
+COPY ~%mod_folder%/itm/SPWI120Z.itm~ ~override~
+COPY ~%mod_folder%/itm/SPWI122Z.itm~ ~override~
+COPY ~%mod_folder%/itm/SPWI124Z.itm~ ~override~
+
+COPY ~%mod_folder%/itm/SPWI201Z.itm~ ~override~
+COPY ~%mod_folder%/itm/SPWI203Z.itm~ ~override~
+COPY ~%mod_folder%/itm/SPWI205Z.itm~ ~override~
+COPY ~%mod_folder%/itm/SPWI206Z.itm~ ~override~
+COPY ~%mod_folder%/itm/SPWI207Z.itm~ ~override~
+COPY ~%mod_folder%/itm/SPWI209Z.itm~ ~override~
+COPY ~%mod_folder%/itm/SPWI211Z.itm~ ~override~
+COPY ~%mod_folder%/itm/SPWI212Z.itm~ ~override~
+COPY ~%mod_folder%/itm/SPWI213Z.itm~ ~override~
+COPY ~%mod_folder%/itm/SPWI214Z.itm~ ~override~
+COPY ~%mod_folder%/itm/SPWI215Z.itm~ ~override~
+COPY ~%mod_folder%/itm/SPWI217Z.itm~ ~override~
+COPY ~%mod_folder%/itm/SPWI218Z.itm~ ~override~
+COPY ~%mod_folder%/itm/SPWI219Z.itm~ ~override~
+COPY ~%mod_folder%/itm/SPWI220Z.itm~ ~override~
+COPY ~%mod_folder%/itm/SPWI221Z.itm~ ~override~
+COPY ~%mod_folder%/itm/SPWI222Z.itm~ ~override~
+COPY ~%mod_folder%/itm/SPWI223Z.itm~ ~override~
+COPY ~%mod_folder%/itm/SPWI224Z.itm~ ~override~
+COPY ~%mod_folder%/itm/SPWI225Z.itm~ ~override~
+//COPY ~%mod_folder%/itm/SPWI216Z.itm~ ~override~
+COPY ~%mod_folder%/itm/SPWI226Z.itm~ ~override~
+COPY ~%mod_folder%/itm/SPWI227Z.itm~ ~override~
+COPY ~%mod_folder%/itm/SPWI228Z.itm~ ~override~
+COPY ~%mod_folder%/itm/SPWI230Z.itm~ ~override~
+
+COPY ~%mod_folder%/itm/SPWI302Z.itm~ ~override~
+COPY ~%mod_folder%/itm/SPWI303Z.itm~ ~override~
+COPY ~%mod_folder%/itm/SPWI304Z.itm~ ~override~
+COPY ~%mod_folder%/itm/SPWI306Z.itm~ ~override~
+COPY ~%mod_folder%/itm/SPWI308Z.itm~ ~override~
+COPY ~%mod_folder%/itm/SPWI309Z.itm~ ~override~
+COPY ~%mod_folder%/itm/SPWI310Z.itm~ ~override~
+COPY ~%mod_folder%/itm/SPWI311Z.itm~ ~override~
+COPY ~%mod_folder%/itm/SPWI313Z.itm~ ~override~
+COPY ~%mod_folder%/itm/SPWI314Z.itm~ ~override~
+COPY ~%mod_folder%/itm/SPWI316Z.itm~ ~override~
+COPY ~%mod_folder%/itm/SPWI317Z.itm~ ~override~
+COPY ~%mod_folder%/itm/SPWI318Z.itm~ ~override~
+COPY ~%mod_folder%/itm/SPWI319Z.itm~ ~override~
+COPY ~%mod_folder%/itm/SPWI320Z.itm~ ~override~
+COPY ~%mod_folder%/itm/SPWI321Z.itm~ ~override~
+COPY ~%mod_folder%/itm/SPWI322Z.itm~ ~override~
+COPY ~%mod_folder%/itm/SPWI323Z.itm~ ~override~
+
+COPY ~%mod_folder%/itm/SPWI401Z.itm~ ~override~
+COPY ~%mod_folder%/itm/SPWI404Z.itm~ ~override~
+COPY ~%mod_folder%/itm/SPWI405Z.itm~ ~override~
+COPY ~%mod_folder%/itm/SPWI406Z.itm~ ~override~
+COPY ~%mod_folder%/itm/SPWI407Z.itm~ ~override~
+COPY ~%mod_folder%/itm/SPWI408Z.itm~ ~override~
+COPY ~%mod_folder%/itm/SPWI410Z.itm~ ~override~
+COPY ~%mod_folder%/itm/SPWI411Z.itm~ ~override~
+COPY ~%mod_folder%/itm/SPWI412Z.itm~ ~override~
+COPY ~%mod_folder%/itm/SPWI413Z.itm~ ~override~
+COPY ~%mod_folder%/itm/SPWI414Z.itm~ ~override~
+COPY ~%mod_folder%/itm/SPWI417Z.itm~ ~override~
+COPY ~%mod_folder%/itm/SPWI418Z.itm~ ~override~
+COPY ~%mod_folder%/itm/SPWI419Z.itm~ ~override~
+COPY ~%mod_folder%/itm/SPWI420Z.itm~ ~override~
+COPY ~%mod_folder%/itm/SPWI421Z.itm~ ~override~
+COPY ~%mod_folder%/itm/SPWI422Z.itm~ ~override~
+COPY ~%mod_folder%/itm/SPWI423Z.itm~ ~override~
+COPY ~%mod_folder%/itm/SPWI424Z.itm~ ~override~
+COPY ~%mod_folder%/itm/SPWI425Z.itm~ ~override~
+COPY ~%mod_folder%/itm/SPWI426Z.itm~ ~override~
+COPY ~%mod_folder%/itm/SPWI427Z.itm~ ~override~
+COPY ~%mod_folder%/itm/SPWI428Z.itm~ ~override~
+
+COPY ~%mod_folder%/itm/SPWI501Z.itm~ ~override~
+COPY ~%mod_folder%/itm/SPWI503Z.itm~ ~override~
+COPY ~%mod_folder%/itm/SPWI504Z.itm~ ~override~
+COPY ~%mod_folder%/itm/SPWI505Z.itm~ ~override~
+COPY ~%mod_folder%/itm/SPWI507Z.itm~ ~override~
+COPY ~%mod_folder%/itm/SPWI508Z.itm~ ~override~
+COPY ~%mod_folder%/itm/SPWI509Z.itm~ ~override~
+COPY ~%mod_folder%/itm/SPWI510Z.itm~ ~override~
+COPY ~%mod_folder%/itm/SPWI511Z.itm~ ~override~
+COPY ~%mod_folder%/itm/SPWI512Z.itm~ ~override~
+COPY ~%mod_folder%/itm/SPWI513Z.itm~ ~override~
+COPY ~%mod_folder%/itm/SPWI514Z.itm~ ~override~
+COPY ~%mod_folder%/itm/SPWI515Z.itm~ ~override~
+COPY ~%mod_folder%/itm/SPWI516Z.itm~ ~override~
+COPY ~%mod_folder%/itm/SPWI518Z.itm~ ~override~
+COPY ~%mod_folder%/itm/SPWI519Z.itm~ ~override~
+COPY ~%mod_folder%/itm/SPWI520Z.itm~ ~override~
+COPY ~%mod_folder%/itm/SPWI521Z.itm~ ~override~
+COPY ~%mod_folder%/itm/SPWI522Z.itm~ ~override~
+COPY ~%mod_folder%/itm/SPWI523Z.itm~ ~override~
+COPY ~%mod_folder%/itm/SPWI524Z.itm~ ~override~
+COPY ~%mod_folder%/itm/SPWI525Z.itm~ ~override~
+COPY ~%mod_folder%/itm/SPWI526Z.itm~ ~override~
+
+COPY ~%mod_folder%/itm/SPWI601Z.itm~ ~override~
+COPY ~%mod_folder%/itm/SPWI603Z.itm~ ~override~
+COPY ~%mod_folder%/itm/SPWI605Z.itm~ ~override~
+COPY ~%mod_folder%/itm/SPWI606Z.itm~ ~override~
+COPY ~%mod_folder%/itm/SPWI607Z.itm~ ~override~
+COPY ~%mod_folder%/itm/SPWI608Z.itm~ ~override~
+COPY ~%mod_folder%/itm/SPWI609Z.itm~ ~override~
+COPY ~%mod_folder%/itm/SPWI610Z.itm~ ~override~
+COPY ~%mod_folder%/itm/SPWI611Z.itm~ ~override~
+COPY ~%mod_folder%/itm/SPWI612Z.itm~ ~override~
+COPY ~%mod_folder%/itm/SPWI613Z.itm~ ~override~
+COPY ~%mod_folder%/itm/SPWI614Z.itm~ ~override~
+COPY ~%mod_folder%/itm/SPWI615Z.itm~ ~override~
+COPY ~%mod_folder%/itm/SPWI616Z.itm~ ~override~
+COPY ~%mod_folder%/itm/SPWI618Z.itm~ ~override~
+COPY ~%mod_folder%/itm/SPWI619Z.itm~ ~override~
+COPY ~%mod_folder%/itm/SPWI621Z.itm~ ~override~
+COPY ~%mod_folder%/itm/SPWI622Z.itm~ ~override~
+COPY ~%mod_folder%/itm/SPWI623Z.itm~ ~override~
+COPY ~%mod_folder%/itm/SPWI626Z.itm~ ~override~
+COPY ~%mod_folder%/itm/SPWI627Z.itm~ ~override~
+COPY ~%mod_folder%/itm/SPWI628Z.itm~ ~override~
+COPY ~%mod_folder%/itm/SPWI629Z.itm~ ~override~
+
+COPY ~%mod_folder%/itm/SPWI702Z.itm~ ~override~
+COPY ~%mod_folder%/itm/SPWI703Z.itm~ ~override~
+COPY ~%mod_folder%/itm/SPWI704Z.itm~ ~override~
+COPY ~%mod_folder%/itm/SPWI706Z.itm~ ~override~
+COPY ~%mod_folder%/itm/SPWI707Z.itm~ ~override~
+COPY ~%mod_folder%/itm/SPWI708Z.itm~ ~override~
+COPY ~%mod_folder%/itm/SPWI709Z.itm~ ~override~
+COPY ~%mod_folder%/itm/SPWI710Z.itm~ ~override~
+COPY ~%mod_folder%/itm/SPWI711Z.itm~ ~override~
+COPY ~%mod_folder%/itm/SPWI712Z.itm~ ~override~
+COPY ~%mod_folder%/itm/SPWI713Z.itm~ ~override~
+COPY ~%mod_folder%/itm/SPWI714Z.itm~ ~override~
+COPY ~%mod_folder%/itm/SPWI715Z.itm~ ~override~
+COPY ~%mod_folder%/itm/SPWI716Z.itm~ ~override~
+COPY ~%mod_folder%/itm/SPWI717Z.itm~ ~override~
+COPY ~%mod_folder%/itm/SPWI718Z.itm~ ~override~
+COPY ~%mod_folder%/itm/SPWI719Z.itm~ ~override~
+
+COPY ~%mod_folder%/itm/SPWI802Z.itm~ ~override~
+COPY ~%mod_folder%/itm/SPWI803Z.itm~ ~override~
+COPY ~%mod_folder%/itm/SPWI804Z.itm~ ~override~
+COPY ~%mod_folder%/itm/SPWI805Z.itm~ ~override~
+COPY ~%mod_folder%/itm/SPWI806Z.itm~ ~override~
+COPY ~%mod_folder%/itm/SPWI807Z.itm~ ~override~
+COPY ~%mod_folder%/itm/SPWI808Z.itm~ ~override~
+COPY ~%mod_folder%/itm/SPWI809Z.itm~ ~override~
+COPY ~%mod_folder%/itm/SPWI810Z.itm~ ~override~
+
+COPY ~%mod_folder%/itm/SPWI902Z.itm~ ~override~
+COPY ~%mod_folder%/itm/SPWI903Z.itm~ ~override~
+COPY ~%mod_folder%/itm/SPWI905Z.itm~ ~override~
+COPY ~%mod_folder%/itm/SPWI906Z.itm~ ~override~
+COPY ~%mod_folder%/itm/SPWI907Z.itm~ ~override~
+COPY ~%mod_folder%/itm/SPWI908Z.itm~ ~override~
+COPY ~%mod_folder%/itm/SPWI909Z.itm~ ~override~
+COPY ~%mod_folder%/itm/SPWI910Z.itm~ ~override~
+
+// adding descriptions to existing scrolls
+
+COPY_EXISTING ~SPWI102Z.itm~ ~override~
+  SAY NAME1 @1070
+  SAY NAME2 @1070
+  SAY DESC @1071
+COPY_EXISTING ~SPWI105Z.itm~ ~override~
+  SAY NAME1 @1855
+  SAY NAME2 @1855
+  SAY DESC @1856
+COPY_EXISTING ~SPWI107Z.itm~ ~override~
+  SAY NAME1 @1496
+  SAY NAME2 @1496
+  SAY DESC @1497
+COPY_EXISTING ~SPWI114Z.itm~ ~override~
+  SAY NAME1 @1068
+  SAY NAME2 @1068
+  SAY DESC @1069
+COPY_EXISTING ~SPWI116Z.itm~ ~override~
+  SAY NAME1 @1072
+  SAY NAME2 @1072
+  SAY DESC @1073
+COPY_EXISTING ~SPWI117Z.itm~ ~override~
+  SAY NAME1 @1074
+  SAY NAME2 @1074
+  SAY DESC @1075
+COPY_EXISTING ~SPWI118Z.itm~ ~override~
+  SAY NAME1 @1076
+  SAY NAME2 @1076
+  SAY DESC @1077
+COPY_EXISTING ~SPWI120Z.itm~ ~override~
+  SAY NAME1 @1732
+  SAY NAME2 @1732
+  SAY DESC @1733
+COPY_EXISTING ~SPWI203Z.itm~ ~override~
+  SAY NAME1 @1724
+  SAY NAME2 @1724
+  SAY DESC @1725
+COPY_EXISTING ~SPWI205Z.itm~ ~override~
+  SAY NAME1 @1034
+  SAY NAME2 @1034
+  SAY DESC @1035
+COPY_EXISTING ~SPWI205Z.itm~ ~override~
+  SAY NAME1 @1034
+  SAY NAME2 @1034
+  SAY DESC @1035
+COPY_EXISTING ~SPWI207Z.itm~ ~override~
+  SAY NAME1 @1744
+  SAY NAME2 @1744
+  SAY DESC @1745
+COPY_EXISTING ~SPWI212Z.itm~ ~override~
+  SAY NAME1 @1498
+  SAY NAME2 @1498
+  SAY DESC @1499
+COPY_EXISTING ~SPWI213Z.itm~ ~override~
+  SAY NAME1 @1749
+  SAY NAME2 @1749
+  SAY DESC @1750
+COPY_EXISTING ~SPWI214Z.itm~ ~override~
+  SAY NAME1 @1726
+  SAY NAME2 @1726
+  SAY DESC @1727
+COPY_EXISTING ~SPWI218Z.itm~ ~override~
+  SAY NAME1 @1134
+  SAY NAME2 @1134
+  SAY DESC @1135
+COPY_EXISTING ~SPWI221Z.itm~ ~override~
+  SAY NAME1 @1082
+  SAY NAME2 @1082
+  SAY DESC @1083
+COPY_EXISTING ~SPWI222Z.itm~ ~override~
+  SAY NAME1 @1698
+  SAY NAME2 @1698
+  SAY DESC @1699
+COPY_EXISTING ~SPWI223Z.itm~ ~override~
+  SAY NAME1 @1500
+  SAY NAME2 @1500
+  SAY DESC @1501
+COPY_EXISTING ~SPWI225Z.itm~ ~override~
+  SAY NAME1 @1036
+  SAY NAME2 @1036
+  SAY DESC @1037
+COPY_EXISTING ~SPWI308Z.itm~ ~override~
+  SAY NAME1 @1084
+  SAY NAME2 @1084
+  SAY DESC @1085
+COPY_EXISTING ~SPWI313Z.itm~ ~override~
+  SAY NAME1 @1559
+  SAY NAME2 @1559
+  SAY DESC @1560
+COPY_EXISTING ~SPWI314Z.itm~ ~override~
+  SAY NAME1 @1086
+  SAY NAME2 @1086
+  SAY DESC @1087
+COPY_EXISTING ~SPWI317Z.itm~ ~override~
+  SAY NAME1 @1734
+  SAY NAME2 @1734
+  SAY DESC @1735
+COPY_EXISTING ~SPWI318Z.itm~ ~override~
+  SAY NAME1 @1088
+  SAY NAME2 @1088
+  SAY DESC @1089
+COPY_EXISTING ~SPWI319Z.itm~ ~override~
+  SAY NAME1 @1090
+  SAY NAME2 @1090
+  SAY DESC @1091
+COPY_EXISTING ~SPWI404Z.itm~ ~override~
+  SAY NAME1 @1092
+  SAY NAME2 @1092
+  SAY DESC @1093
+COPY_EXISTING ~SPWI405Z.itm~ ~override~
+  SAY NAME1 @1094
+  SAY NAME2 @1094
+  SAY DESC @1095
+COPY_EXISTING ~SPWI410Z.itm~ ~override~
+  SAY NAME1 @1676
+  SAY NAME2 @1676
+  SAY DESC @1677
+COPY_EXISTING ~SPWI413Z.itm~ ~override~
+  SAY NAME1 @1678
+  SAY NAME2 @1678
+  SAY DESC @1679
+COPY_EXISTING ~SPWI414Z.itm~ ~override~
+  SAY NAME1 @1096
+  SAY NAME2 @1096
+  SAY DESC @1097
+COPY_EXISTING ~SPWI419Z.itm~ ~override~
+  SAY NAME1 @1098
+  SAY NAME2 @1098
+  SAY DESC @1099
+COPY_EXISTING ~SPWI420Z.itm~ ~override~
+  SAY NAME1 @1100
+  SAY NAME2 @1100
+  SAY DESC @1101
+COPY_EXISTING ~SPWI421Z.itm~ ~override~
+  SAY NAME1 @1102
+  SAY NAME2 @1102
+  SAY DESC @1103
+COPY_EXISTING ~SPWI423Z.itm~ ~override~
+  SAY NAME1 @1104
+  SAY NAME2 @1104
+  SAY DESC @1105
+COPY_EXISTING ~SPWI428Z.itm~ ~override~
+  SAY NAME1 @1561
+  SAY NAME2 @1561
+  SAY DESC @1562
+COPY_EXISTING ~SPWI501Z.itm~ ~override~
+  SAY NAME1 @1767
+  SAY NAME2 @1767
+  SAY DESC @1768
+COPY_EXISTING ~SPWI507Z.itm~ ~override~
+  SAY NAME1 @1106
+  SAY NAME2 @1106
+  SAY DESC @1107
+COPY_EXISTING ~SPWI508Z.itm~ ~override~
+  SAY NAME1 @1108
+  SAY NAME2 @1108
+  SAY DESC @1109
+COPY_EXISTING ~SPWI509Z.itm~ ~override~
+  SAY NAME1 @1110
+  SAY NAME2 @1110
+  SAY DESC @1111
+COPY_EXISTING ~SPWI511Z.itm~ ~override~
+  SAY NAME1 @1112
+  SAY NAME2 @1112
+  SAY DESC @1113
+COPY_EXISTING ~SPWI518Z.itm~ ~override~
+  SAY NAME1 @1114
+  SAY NAME2 @1114
+  SAY DESC @1115
+COPY_EXISTING ~SPWI521Z.itm~ ~override~
+  SAY NAME1 @1116
+  SAY NAME2 @1116
+  SAY DESC @1117
+COPY_EXISTING ~SPWI525Z.itm~ ~override~
+  SAY NAME1 @1118
+  SAY NAME2 @1118
+  SAY DESC @1119
+COPY_EXISTING ~SPWI526Z.itm~ ~override~
+  SAY NAME1 @1667
+  SAY NAME2 @1667
+  SAY DESC @1668
+COPY_EXISTING ~SPWI605Z.itm~ ~override~
+  SAY NAME1 @1857
+  SAY NAME2 @1857
+  SAY DESC @1858
+COPY_EXISTING ~SPWI606Z.itm~ ~override~
+  SAY NAME1 @1552
+  SAY NAME2 @1552
+  SAY DESC @1553
+COPY_EXISTING ~SPWI607Z.itm~ ~override~
+  SAY NAME1 @1694
+  SAY NAME2 @1694
+  SAY DESC @1695
+COPY_EXISTING ~SPWI610Z.itm~ ~override~
+  SAY NAME1 @1144
+  SAY NAME2 @1144
+  SAY DESC @1145
+COPY_EXISTING ~SPWI612Z.itm~ ~override~
+  SAY NAME1 @1130
+  SAY NAME2 @1130
+  SAY DESC @1131
+COPY_EXISTING ~SPWI614Z.itm~ ~override~
+  SAY NAME1 @1728
+  SAY NAME2 @1728
+  SAY DESC @1729
+COPY_EXISTING ~SPWI615Z.itm~ ~override~
+  SAY NAME1 @1120
+  SAY NAME2 @1120
+  SAY DESC @1121
+COPY ~%mod_folder%/itm/SPWI617Z.itm~ ~override~
+  SAY NAME1 @1811
+  SAY NAME2 @1811
+  SAY DESC @1812
+COPY_EXISTING ~SPWI618Z.itm~ ~override~
+  SAY NAME1 @1132
+  SAY NAME2 @1132
+  SAY DESC @1133
+COPY_EXISTING ~SPWI619Z.itm~ ~override~
+  SAY NAME1 @1554
+  SAY NAME2 @1554
+  SAY DESC @1555
+COPY_EXISTING ~SPWI621Z.itm~ ~override~
+  SAY NAME1 @1563
+  SAY NAME2 @1563
+  SAY DESC @1564
+COPY_EXISTING ~SPWI626Z.itm~ ~override~
+  SAY NAME1 @1508
+  SAY NAME2 @1508
+  SAY DESC @1509
+COPY_EXISTING ~SPWI704Z.itm~ ~override~
+  SAY NAME1 @1510
+  SAY NAME2 @1510
+  SAY DESC @1511
+COPY ~%mod_folder%/itm/SPWI705Z.itm~ ~override~
+  SAY NAME1 @1124
+  SAY NAME2 @1124
+  SAY DESC @1125
+COPY ~%mod_folder%/itm/SPWI706Z.itm~ ~override~
+  SAY NAME1 @1853
+  SAY NAME2 @1853
+  SAY DESC @1854
+COPY_EXISTING ~SPWI707Z.itm~ ~override~
+  SAY NAME1 @1136
+  SAY NAME2 @1136
+  SAY DESC @1137
+COPY_EXISTING ~SPWI709Z.itm~ ~override~
+  SAY NAME1 @1565
+  SAY NAME2 @1565
+  SAY DESC @1566
+COPY_EXISTING ~SPWI710Z.itm~ ~override~
+  SAY NAME1 @1040
+  SAY NAME2 @1040
+  SAY DESC @1041
+COPY_EXISTING ~SPWI711Z.itm~ ~override~
+  SAY NAME1 @1567
+  SAY NAME2 @1567
+  SAY DESC @1568
+COPY_EXISTING ~SPWI712Z.itm~ ~override~
+  SAY NAME1 @1769
+  SAY NAME2 @1769
+  SAY DESC @1770
+COPY_EXISTING ~SPWI717Z.itm~ ~override~
+  SAY NAME1 @1775
+  SAY NAME2 @1775
+  SAY DESC @1776
+COPY_EXISTING ~SPWI719Z.itm~ ~override~
+  SAY NAME1 @1556
+  SAY NAME2 @1556
+  SAY DESC @1557
+COPY_EXISTING ~SPWI805Z.itm~ ~override~
+  SAY NAME1 @1747
+  SAY NAME2 @1747
+  SAY DESC @1748
+COPY_EXISTING ~SPWI806Z.itm~ ~override~
+  SAY NAME1 @1621
+  SAY NAME2 @1621
+  SAY DESC @1622
+COPY_EXISTING ~SPWI807Z.itm~ ~override~
+  SAY NAME1 @1126
+  SAY NAME2 @1126
+  SAY DESC @1127
+COPY_EXISTING ~SPWI810Z.itm~ ~override~
+  SAY NAME1 @1138
+  SAY NAME2 @1138
+  SAY DESC @1139
+COPY_EXISTING ~SPWI903Z.itm~ ~override~
+  SAY NAME1 @1140
+  SAY NAME2 @1140
+  SAY DESC @1141
+COPY_EXISTING ~SPWI906Z.itm~ ~override~
+  SAY NAME1 @1142
+  SAY NAME2 @1142
+  SAY DESC @1143
+COPY_EXISTING ~SPWI907Z.itm~ ~override~
+  SAY NAME1 @1128
+  SAY NAME2 @1128
+  SAY DESC @1129
+COPY_EXISTING ~SPWI908Z.itm~ ~override~
+  SAY NAME1 @1851
+  SAY NAME2 @1851
+  SAY DESC @1852
+COPY_EXISTING ~SPWI911Z.itm~ ~override~
+  SAY NAME1 @1813
+  SAY NAME2 @1813
+  SAY DESC @1814
+COPY_EXISTING ~SPPR217Z.itm~ ~override~
+  SAY NAME1 @1684
+  SAY NAME2 @1684
+  SAY DESC @1685
+COPY_EXISTING ~SPPR219Z.itm~ ~override~
+  SAY NAME1 @1006
+  SAY NAME2 @1006
+  SAY DESC @1007
+COPY_EXISTING ~SPPR221Z.itm~ ~override~
+  SAY NAME1 @1042
+  SAY NAME2 @1042
+  SAY DESC @1043
+COPY_EXISTING ~SPPR222Z.itm~ ~override~
+  SAY NAME1 @1008
+  SAY NAME2 @1008
+  SAY DESC @1009
+COPY_EXISTING ~SPPR306Z.itm~ ~override~
+  SAY NAME1 @1633
+  SAY NAME2 @1633
+  SAY DESC @1634
+COPY_EXISTING ~SPPR314Z.itm~ ~override~
+  SAY NAME1 @1046
+  SAY NAME2 @1046
+  SAY DESC @1047
+COPY_EXISTING ~SPPR316Z.itm~ ~override~
+  SAY NAME1 @1048
+  SAY NAME2 @1048
+  SAY DESC @1049
+COPY_EXISTING ~SPPR319Z.itm~ ~override~
+  SAY NAME1 @1010
+  SAY NAME2 @1010
+  SAY DESC @1011
+COPY_EXISTING ~SPPR322Z.itm~ ~override~
+  SAY NAME1 @1012
+  SAY NAME2 @1012
+  SAY DESC @1013
+COPY_EXISTING ~SPPR407Z.itm~ ~override~
+  SAY NAME1 @1635
+  SAY NAME2 @1635
+  SAY DESC @1636
+COPY_EXISTING ~SPPR418Z.itm~ ~override~
+  SAY NAME1 @1016
+  SAY NAME2 @1016
+  SAY DESC @1017
+COPY_EXISTING ~SPPR420Z.itm~ ~override~
+  SAY NAME1 @1764
+  SAY NAME2 @1764
+  SAY DESC @1765
+COPY_EXISTING ~SPPR421Z.itm~ ~override~
+  SAY NAME1 @1020
+  SAY NAME2 @1020
+  SAY DESC @1021
+COPY_EXISTING ~SPPR423Z.itm~ ~override~
+  SAY NAME1 @1771
+  SAY NAME2 @1771
+  SAY DESC @1772
+COPY_EXISTING ~SPPR428Z.itm~ ~override~
+  SAY NAME1 @1762
+  SAY NAME2 @1762
+  SAY DESC @1763
+COPY_EXISTING ~SPPR507Z.itm~ ~override~
+  SAY NAME1 @1054
+  SAY NAME2 @1054
+  SAY DESC @1055
+COPY_EXISTING ~SPPR510Z.itm~ ~override~
+  SAY NAME1 @1056
+  SAY NAME2 @1056
+  SAY DESC @1057
+COPY_EXISTING ~SPPR514Z.itm~ ~override~
+  SAY NAME1 @1018
+  SAY NAME2 @1018
+  SAY DESC @1019
+COPY_EXISTING ~SPPR515Z.itm~ ~override~
+  SAY NAME1 @1758
+  SAY NAME2 @1758
+  SAY DESC @1759
+COPY_EXISTING ~SPPR517Z.itm~ ~override~
+  SAY NAME1 @1623
+  SAY NAME2 @1623
+  SAY DESC @1624
+COPY_EXISTING ~SPPR519Z.itm~ ~override~
+  SAY NAME1 @1518
+  SAY NAME2 @1518
+  SAY DESC @1519
+COPY_EXISTING ~SPPR524Z.itm~ ~override~
+  SAY NAME1 @1690
+  SAY NAME2 @1690
+  SAY DESC @1691
+COPY_EXISTING ~SPPR607Z.itm~ ~override~
+  SAY NAME1 @1058
+  SAY NAME2 @1058
+  SAY DESC @1059
+COPY_EXISTING ~SPPR610Z.itm~ ~override~
+  SAY NAME1 @1022
+  SAY NAME2 @1022
+  SAY DESC @1023
+COPY_EXISTING ~SPPR611Z.itm~ ~override~
+  SAY NAME1 @1760
+  SAY NAME2 @1760
+  SAY DESC @1761
+COPY_EXISTING ~SPPR612Z.itm~ ~override~
+  SAY NAME1 @1024
+  SAY NAME2 @1024
+  SAY DESC @1025
+COPY_EXISTING ~SPPR613Z.itm~ ~override~
+  SAY NAME1 @1026
+  SAY NAME2 @1026
+  SAY DESC @1027
+COPY_EXISTING ~SPPR615Z.itm~ ~override~
+  SAY NAME1 @1657
+  SAY NAME2 @1657
+  SAY DESC @1658
+COPY_EXISTING ~SPPR707Z.itm~ ~override~
+  SAY NAME1 @1591
+  SAY NAME2 @1591
+  SAY DESC @1592
+COPY ~%mod_folder%/itm/SPPR714Z.itm~ ~override~
+  SAY NAME1 @1544
+  SAY NAME2 @1544
+  SAY DESC @1545
+COPY ~%mod_folder%/itm/SPPR715Z.itm~ ~override~
+  SAY NAME1 @1060
+  SAY NAME2 @1060
+  SAY DESC @1061
+COPY_EXISTING ~SPPR717Z.itm~ ~override~
+  SAY NAME1 @1773
+  SAY NAME2 @1773
+  SAY DESC @1774
+COPY ~%mod_folder%/itm/SPPR719Z.itm~ ~override~
+  SAY NAME1 @1028
+  SAY NAME2 @1028
+  SAY DESC @1029
+COPY_EXISTING ~SPPR720Z.itm~ ~override~
+  SAY NAME1 @1030
+  SAY NAME2 @1030
+  SAY DESC @1031
+COPY_EXISTING ~SPPR725Z.itm~ ~override~
+  SAY NAME1 @1064
+  SAY NAME2 @1064
+  SAY DESC @1065
+COPY ~%mod_folder%/itm/SPPR726Z.itm~ ~override~
+  SAY NAME1 @1546
+  SAY NAME2 @1546
+  SAY DESC @1547
+COPY ~%mod_folder%/itm/SPPR727Z.itm~ ~override~
+  SAY NAME1 @1550
+  SAY NAME2 @1550
+  SAY DESC @1551
+COPY ~%mod_folder%/itm/SPPR728Z.itm~ ~override~
+  SAY NAME1 @1548
+  SAY NAME2 @1548
+  SAY DESC @1549
+COPY_EXISTING ~SPPR729Z.itm~ ~override~
+  SAY NAME1 @1066
+  SAY NAME2 @1066
+  SAY DESC @1067
+
+// All new spells must be included in the LIST tables
+
+COPY ~%mod_folder%/tables/LISTSPLL.2da~ ~override~
+COPY ~%mod_folder%/tables/LISTMAGE.2da~ ~override~
+
+// BAMs previously used for Animate Zombie
+
+COPY ~%mod_folder%/bam/USAZB01A.bam~ ~override~
+COPY ~%mod_folder%/bam/USAZB01B.bam~ ~override~
+COPY ~%mod_folder%/bam/USAZB01C.bam~ ~override~
+//COPY ~%mod_folder%/bam/USAZN1B.bam~ ~override~
+//COPY ~%mod_folder%/bam/USAZN1C.bam~ ~override~
+
+COPY ~%mod_folder%/itm/GOODBER.itm~ ~override~
+  SAY NAME1 @2492
+  SAY NAME2 @2492
+  SAY DESC @2493
+
+// edits to summoned critters
+
+COPY ~%mod_folder%/cre/00SCRD.cre~ ~override~
+COPY ~%mod_folder%/cre/00SGSPI.cre~ ~override~
+COPY ~%mod_folder%/cre/00SPSPI.cre~ ~override~
+
+// copying over all creature files for new shapeshifting forms
+COPY ~%mod_folder%/cre/USSTDR06.cre~ ~override~
+  SAY NAME1 @172
+  SAY NAME2 @172
+COPY ~%mod_folder%/cre/USSTDR03.cre~ ~override~
+  SAY NAME1 @173
+  SAY NAME2 @173
+COPY ~%mod_folder%/cre/USSTDR09.cre~ ~override~
+  SAY NAME1 @174
+  SAY NAME2 @174
+COPY ~%mod_folder%/cre/USSTDR12.cre~ ~override~
+  SAY NAME1 @175
+  SAY NAME2 @175
+COPY ~%mod_folder%/cre/USSTDR18.cre~ ~override~
+  SAY NAME1 @176
+  SAY NAME2 @176
+COPY ~%mod_folder%/cre/USSTDR22.cre~ ~override~
+  SAY NAME1 @177
+  SAY NAME2 @177
+COPY ~%mod_folder%/cre/USSTDR24.cre~ ~override~
+  SAY NAME1 @178
+  SAY NAME2 @178
+COPY ~%mod_folder%/cre/USSTDR27.cre~ ~override~
+  SAY NAME1 @179
+  SAY NAME2 @179
+COPY ~%mod_folder%/cre/USSTDR29.cre~ ~override~
+  SAY NAME1 @180
+  SAY NAME2 @180
+COPY ~%mod_folder%/cre/USSTDR32.cre~ ~override~
+  SAY NAME1 @181
+  SAY NAME2 @181
+COPY ~%mod_folder%/cre/USSTDR35.cre~ ~override~
+  SAY NAME1 @182
+  SAY NAME2 @182
+COPY ~%mod_folder%/cre/USSTDR38.cre~ ~override~
+  SAY NAME1 @183
+  SAY NAME2 @183
+COPY ~%mod_folder%/cre/00SVPRG.cre~ ~override~
+  SAY NAME1 @1558
+  SAY NAME2 @1558
+
+// edited Chill Touch and Death Armor
+COPY ~%mod_folder%/spl/EFFCT1.spl~ ~override~
+COPY ~%mod_folder%/spl/EFFCT2.spl~ ~override~
+COPY ~%mod_folder%/spl/EFFDA3.spl~ ~override~
+
+// Spell Revisions core component; copies over NUMEROUS spells
+
+COPY ~%mod_folder%/spl/SPPR108.spl~ ~override~
+  SAY NAME1 @1569
+  SAY NAME2 @1569
+  SAY UNIDENTIFIED_DESC @1570
+  SAY IDENTIFIED_DESC @1570
+
+COPY ~%mod_folder%/spl/SPPR114.spl~ ~override~
+  SAY NAME1 @1000
+  SAY NAME2 @1000
+  SAY UNIDENTIFIED_DESC @1001
+  SAY IDENTIFIED_DESC @1001
+
+COPY ~%mod_folder%/spl/SPPR203.spl~ ~override~
+  SAY NAME1 @1002
+  SAY NAME2 @1002
+  SAY UNIDENTIFIED_DESC @1003
+  SAY IDENTIFIED_DESC @1003
+
+COPY ~%mod_folder%/spl/SPPR205.spl~ ~override~
+  SAY NAME1 @1571
+  SAY NAME2 @1571
+  SAY UNIDENTIFIED_DESC @1572
+  SAY IDENTIFIED_DESC @1572
+
+COPY ~%mod_folder%/spl/SPPR207.spl~ ~override~
+  SAY NAME1 @1004
+  SAY NAME2 @1004
+  SAY UNIDENTIFIED_DESC @1005
+  SAY IDENTIFIED_DESC @1005
+
+COPY ~%mod_folder%/spl/SPPR215.spl~ ~override~
+
+COPY ~%mod_folder%/spl/SPPR219.spl~ ~override~
+  SAY NAME1 @1006
+  SAY NAME2 @1006
+  SAY UNIDENTIFIED_DESC @1007
+  SAY IDENTIFIED_DESC @1007
+
+COPY ~%mod_folder%/spl/SPPR222.spl~ ~override~
+  SAY NAME1 @1008
+  SAY NAME2 @1008
+  SAY UNIDENTIFIED_DESC @1009
+  SAY IDENTIFIED_DESC @1009
+
+COPY ~%mod_folder%/spl/SPPR319.spl~ ~override~
+  SAY NAME1 @1010
+  SAY NAME2 @1010
+  SAY UNIDENTIFIED_DESC @1011
+  SAY IDENTIFIED_DESC @1011
+
+COPY ~%mod_folder%/spl/SPPR322.spl~ ~override~
+  SAY NAME1 @1012
+  SAY NAME2 @1012
+  SAY UNIDENTIFIED_DESC @1013
+  SAY IDENTIFIED_DESC @1013
+
+COPY ~%mod_folder%/spl/SPPR406.spl~ ~override~
+  SAY NAME1 @1014
+  SAY NAME2 @1014
+  SAY UNIDENTIFIED_DESC @1015
+  SAY IDENTIFIED_DESC @1015
+
+COPY ~%mod_folder%/spl/SPPR418.spl~ ~override~
+  SAY NAME1 @1016
+  SAY NAME2 @1016
+  SAY UNIDENTIFIED_DESC @1017
+  SAY IDENTIFIED_DESC @1017
+
+COPY ~%mod_folder%/spl/SPPR514.spl~ ~override~
+  SAY NAME1 @1018
+  SAY NAME2 @1018
+  SAY UNIDENTIFIED_DESC @1019
+  SAY IDENTIFIED_DESC @1019
+
+COPY ~%mod_folder%/spl/SPPR522.spl~ ~override~
+  SAY NAME1 @1020
+  SAY NAME2 @1020
+  SAY UNIDENTIFIED_DESC @1021
+  SAY IDENTIFIED_DESC @1021
+
+COPY ~%mod_folder%/spl/SPPR610.spl~ ~override~
+  SAY NAME1 @1022
+  SAY NAME2 @1022
+  SAY UNIDENTIFIED_DESC @1023
+  SAY IDENTIFIED_DESC @1023
+
+COPY ~%mod_folder%/spl/SPPR612.spl~ ~override~
+  SAY NAME1 @1024
+  SAY NAME2 @1024
+  SAY UNIDENTIFIED_DESC @1025
+  SAY IDENTIFIED_DESC @1025
+
+COPY ~%mod_folder%/spl/SPPR613.spl~ ~override~
+  SAY NAME1 @1026
+  SAY NAME2 @1026
+  SAY UNIDENTIFIED_DESC @1027
+  SAY IDENTIFIED_DESC @1027
+
+COPY ~%mod_folder%/spl/SPPR719.spl~ ~override~
+  SAY NAME1 @1028
+  SAY NAME2 @1028
+  SAY UNIDENTIFIED_DESC @1029
+  SAY IDENTIFIED_DESC @1029
+
+COPY ~%mod_folder%/spl/SPPR720.spl~ ~override~
+  SAY NAME1 @1030
+  SAY NAME2 @1030
+  SAY UNIDENTIFIED_DESC @1031
+  SAY IDENTIFIED_DESC @1031
+
+COPY ~%mod_folder%/spl/SPWI119.spl~ ~override~
+  SAY NAME1 @1032
+  SAY NAME2 @1032
+  SAY UNIDENTIFIED_DESC @1033
+  SAY IDENTIFIED_DESC @1033
+
+COPY ~%mod_folder%/spl/SPWI205.spl~ ~override~
+  SAY NAME1 @1034
+  SAY NAME2 @1034
+  SAY UNIDENTIFIED_DESC @1035
+  SAY IDENTIFIED_DESC @1035
+
+COPY ~%mod_folder%/spl/SPWI225.spl~ ~override~
+  SAY NAME1 @1036
+  SAY NAME2 @1036
+  SAY UNIDENTIFIED_DESC @1037
+  SAY IDENTIFIED_DESC @1037
+
+COPY ~%mod_folder%/spl/SPWI228.spl~ ~override~
+  SAY NAME1 @1038
+  SAY NAME2 @1038
+  SAY UNIDENTIFIED_DESC @1039
+  SAY IDENTIFIED_DESC @1039
+
+COPY ~%mod_folder%/spl/SPWI710.spl~ ~override~
+  SAY NAME1 @1040
+  SAY NAME2 @1040
+  SAY UNIDENTIFIED_DESC @1041
+  SAY IDENTIFIED_DESC @1041
+
+COPY ~%mod_folder%/spl/SPPR221.spl~ ~override~
+  SAY NAME1 @1042
+  SAY NAME2 @1042
+  SAY UNIDENTIFIED_DESC @1043
+  SAY IDENTIFIED_DESC @1043
+
+COPY ~%mod_folder%/spl/SPWI302.spl~ ~override~
+  SAY NAME1 @1044
+  SAY NAME2 @1044
+  SAY UNIDENTIFIED_DESC @1045
+  SAY IDENTIFIED_DESC @1045
+
+COPY ~%mod_folder%/spl/SPPR314.spl~ ~override~
+  SAY NAME1 @1046
+  SAY NAME2 @1046
+  SAY UNIDENTIFIED_DESC @1047
+  SAY IDENTIFIED_DESC @1047
+
+COPY ~%mod_folder%/spl/SPPR316.spl~ ~override~
+  SAY NAME1 @1048
+  SAY NAME2 @1048
+  SAY UNIDENTIFIED_DESC @1049
+  SAY IDENTIFIED_DESC @1049
+
+COPY ~%mod_folder%/spl/SPPR318.spl~ ~override~
+  SAY NAME1 @1050
+  SAY NAME2 @1050
+  SAY UNIDENTIFIED_DESC @1051
+  SAY IDENTIFIED_DESC @1051
+
+COPY ~%mod_folder%/spl/SPPR404.spl~ ~override~
+  SAY NAME1 @1052
+  SAY NAME2 @1052
+  SAY UNIDENTIFIED_DESC @1053
+  SAY IDENTIFIED_DESC @1053
+
+COPY ~%mod_folder%/spl/SPPR507.spl~ ~override~
+  SAY NAME1 @1054
+  SAY NAME2 @1054
+  SAY UNIDENTIFIED_DESC @1055
+  SAY IDENTIFIED_DESC @1055
+
+COPY ~%mod_folder%/spl/SPPR510.spl~ ~override~
+  SAY NAME1 @1056
+  SAY NAME2 @1056
+  SAY UNIDENTIFIED_DESC @1057
+  SAY IDENTIFIED_DESC @1057
+
+COPY ~%mod_folder%/spl/SPPR607.spl~ ~override~
+  SAY NAME1 @1058
+  SAY NAME2 @1058
+  SAY UNIDENTIFIED_DESC @1059
+  SAY IDENTIFIED_DESC @1059
+
+COPY ~%mod_folder%/spl/SPPR715.spl~ ~override~
+  SAY NAME1 @1060
+  SAY NAME2 @1060
+  SAY UNIDENTIFIED_DESC @1061
+  SAY IDENTIFIED_DESC @1061
+
+COPY ~%mod_folder%/spl/SPPR716.spl~ ~override~
+  SAY NAME1 @1062
+  SAY NAME2 @1062
+  SAY UNIDENTIFIED_DESC @1063
+  SAY IDENTIFIED_DESC @1063
+
+COPY ~%mod_folder%/spl/SPPR717.spl~ ~override~
+  SAY NAME1 @1773
+  SAY NAME2 @1773
+  SAY UNIDENTIFIED_DESC @1774
+  SAY IDENTIFIED_DESC @1774
+
+COPY ~%mod_folder%/spl/SPPR725.spl~ ~override~
+  SAY NAME1 @1064
+  SAY NAME2 @1064
+  SAY UNIDENTIFIED_DESC @1065
+  SAY IDENTIFIED_DESC @1065
+
+COPY ~%mod_folder%/spl/SPPR729.spl~ ~override~
+  SAY NAME1 @1066
+  SAY NAME2 @1066
+  SAY UNIDENTIFIED_DESC @1067
+  SAY IDENTIFIED_DESC @1067
+
+COPY ~%mod_folder%/spl/SPWI114.spl~ ~override~
+  SAY NAME1 @1068
+  SAY NAME2 @1068
+  SAY UNIDENTIFIED_DESC @1069
+  SAY IDENTIFIED_DESC @1069
+
+COPY ~%mod_folder%/spl/SPWI102.spl~ ~override~
+  SAY NAME1 @1070
+  SAY NAME2 @1070
+  SAY UNIDENTIFIED_DESC @1071
+  SAY IDENTIFIED_DESC @1071
+COPY ~%mod_folder%/spl/SPWI105.spl~ ~override~
+  SAY NAME1 @1855
+  SAY NAME2 @1855
+  SAY UNIDENTIFIED_DESC @1856
+  SAY IDENTIFIED_DESC @1856
+
+COPY ~%mod_folder%/spl/SPWI116.spl~ ~override~
+  SAY NAME1 @1072
+  SAY NAME2 @1072
+  SAY UNIDENTIFIED_DESC @1073
+  SAY IDENTIFIED_DESC @1073
+
+COPY ~%mod_folder%/spl/SPWI117.spl~ ~override~
+  SAY NAME1 @1074
+  SAY NAME2 @1074
+  SAY UNIDENTIFIED_DESC @1075
+  SAY IDENTIFIED_DESC @1075
+
+COPY ~%mod_folder%/spl/SPWI118.spl~ ~override~
+  SAY NAME1 @1076
+  SAY NAME2 @1076
+  SAY UNIDENTIFIED_DESC @1077
+  SAY IDENTIFIED_DESC @1077
+
+COPY ~%mod_folder%/spl/SPWI214.spl~ ~override~
+  SAY NAME1 @1078
+  SAY NAME2 @1078
+  SAY UNIDENTIFIED_DESC @1079
+  SAY IDENTIFIED_DESC @1079
+
+COPY ~%mod_folder%/spl/SPWI217.spl~ ~override~
+  SAY NAME1 @1080
+  SAY NAME2 @1080
+  SAY UNIDENTIFIED_DESC @1081
+  SAY IDENTIFIED_DESC @1081
+
+COPY ~%mod_folder%/spl/SPWI221.spl~ ~override~
+  SAY NAME1 @1082
+  SAY NAME2 @1082
+  SAY UNIDENTIFIED_DESC @1083
+  SAY IDENTIFIED_DESC @1083
+
+COPY ~%mod_folder%/spl/SPWI213.spl~ ~override~
+  SAY NAME1 @1749
+  SAY NAME2 @1749
+  SAY UNIDENTIFIED_DESC @1750
+  SAY IDENTIFIED_DESC @1750
+
+COPY ~%mod_folder%/spl/SPWI308.spl~ ~override~
+  SAY NAME1 @1084
+  SAY NAME2 @1084
+  SAY UNIDENTIFIED_DESC @1085
+  SAY IDENTIFIED_DESC @1085
+
+COPY ~%mod_folder%/spl/SPWI314.spl~ ~override~
+  SAY NAME1 @1086
+  SAY NAME2 @1086
+  SAY UNIDENTIFIED_DESC @1087
+  SAY IDENTIFIED_DESC @1087
+
+COPY ~%mod_folder%/spl/SPWI318.spl~ ~override~
+  SAY NAME1 @1088
+  SAY NAME2 @1088
+  SAY UNIDENTIFIED_DESC @1089
+  SAY IDENTIFIED_DESC @1089
+
+COPY ~%mod_folder%/spl/SPWI319.spl~ ~override~
+  SAY NAME1 @1090
+  SAY NAME2 @1090
+  SAY UNIDENTIFIED_DESC @1091
+  SAY IDENTIFIED_DESC @1091
+
+COPY ~%mod_folder%/spl/SPWI404.spl~ ~override~
+  SAY NAME1 @1092
+  SAY NAME2 @1092
+  SAY UNIDENTIFIED_DESC @1093
+  SAY IDENTIFIED_DESC @1093
+
+COPY ~%mod_folder%/spl/SPWI405.spl~ ~override~
+  SAY NAME1 @1094
+  SAY NAME2 @1094
+  SAY UNIDENTIFIED_DESC @1095
+  SAY IDENTIFIED_DESC @1095
+
+COPY ~%mod_folder%/spl/SPWI414.spl~ ~override~
+  SAY NAME1 @1096
+  SAY NAME2 @1096
+  SAY UNIDENTIFIED_DESC @1097
+  SAY IDENTIFIED_DESC @1097
+
+COPY ~%mod_folder%/spl/SPWI419.spl~ ~override~
+  SAY NAME1 @1098
+  SAY NAME2 @1098
+  SAY UNIDENTIFIED_DESC @1099
+  SAY IDENTIFIED_DESC @1099
+
+COPY ~%mod_folder%/spl/SPWI420.spl~ ~override~
+  SAY NAME1 @1100
+  SAY NAME2 @1100
+  SAY UNIDENTIFIED_DESC @1101
+  SAY IDENTIFIED_DESC @1101
+
+COPY ~%mod_folder%/spl/SPWI421.spl~ ~override~
+  SAY NAME1 @1102
+  SAY NAME2 @1102
+  SAY UNIDENTIFIED_DESC @1103
+  SAY IDENTIFIED_DESC @1103
+
+COPY ~%mod_folder%/spl/SPWI423.spl~ ~override~
+  SAY NAME1 @1104
+  SAY NAME2 @1104
+  SAY UNIDENTIFIED_DESC @1105
+  SAY IDENTIFIED_DESC @1105
+
+COPY ~%mod_folder%/spl/SPWI507.spl~ ~override~
+  SAY NAME1 @1106
+  SAY NAME2 @1106
+  SAY UNIDENTIFIED_DESC @1107
+  SAY IDENTIFIED_DESC @1107
+
+COPY ~%mod_folder%/spl/SPWI508.spl~ ~override~
+  SAY NAME1 @1108
+  SAY NAME2 @1108
+  SAY UNIDENTIFIED_DESC @1109
+  SAY IDENTIFIED_DESC @1109
+
+COPY ~%mod_folder%/spl/SPWI509.spl~ ~override~
+  SAY NAME1 @1110
+  SAY NAME2 @1110
+  SAY UNIDENTIFIED_DESC @1111
+  SAY IDENTIFIED_DESC @1111
+
+COPY ~%mod_folder%/spl/SPWI511.spl~ ~override~
+  SAY NAME1 @1112
+  SAY NAME2 @1112
+  SAY UNIDENTIFIED_DESC @1113
+  SAY IDENTIFIED_DESC @1113
+
+COPY ~%mod_folder%/spl/SPWI518.spl~ ~override~
+  SAY NAME1 @1114
+  SAY NAME2 @1114
+  SAY UNIDENTIFIED_DESC @1115
+  SAY IDENTIFIED_DESC @1115
+
+COPY ~%mod_folder%/spl/SPWI521.spl~ ~override~
+  SAY NAME1 @1116
+  SAY NAME2 @1116
+  SAY UNIDENTIFIED_DESC @1117
+  SAY IDENTIFIED_DESC @1117
+
+COPY ~%mod_folder%/spl/SPWI525.spl~ ~override~
+  SAY NAME1 @1118
+  SAY NAME2 @1118
+  SAY UNIDENTIFIED_DESC @1119
+  SAY IDENTIFIED_DESC @1119
+
+COPY ~%mod_folder%/spl/SPWI615.spl~ ~override~
+  SAY NAME1 @1120
+  SAY NAME2 @1120
+  SAY UNIDENTIFIED_DESC @1121
+  SAY IDENTIFIED_DESC @1121
+
+COPY ~%mod_folder%/spl/SPWI617.spl~ ~override~
+  SAY NAME1 @1122
+  SAY NAME2 @1122
+  SAY UNIDENTIFIED_DESC @1123
+  SAY IDENTIFIED_DESC @1123
+
+COPY ~%mod_folder%/spl/SPWI705.spl~ ~override~
+  SAY NAME1 @1124
+  SAY NAME2 @1124
+  SAY UNIDENTIFIED_DESC @1125
+  SAY IDENTIFIED_DESC @1125
+COPY ~%mod_folder%/spl/SPWI706.spl~ ~override~
+  SAY NAME1 @1853
+  SAY NAME2 @1853
+  SAY UNIDENTIFIED_DESC @1854
+  SAY IDENTIFIED_DESC @1854
+
+COPY ~%mod_folder%/spl/SPWI805.spl~ ~override~
+  SAY NAME1 @1747
+  SAY NAME2 @1747
+  SAY UNIDENTIFIED_DESC @1748
+  SAY IDENTIFIED_DESC @1748
+COPY ~%mod_folder%/spl/EFFWT15.spl~ ~override~
+COPY ~%mod_folder%/spl/EFFWT16.spl~ ~override~
+COPY ~%mod_folder%/spl/EFFWT17.spl~ ~override~
+COPY ~%mod_folder%/spl/EFFWT18.spl~ ~override~
+COPY ~%mod_folder%/spl/EFFWT19.spl~ ~override~
+COPY ~%mod_folder%/spl/EFFWT20.spl~ ~override~
+COPY ~%mod_folder%/spl/EFFWT21.spl~ ~override~
+COPY ~%mod_folder%/spl/EFFWT22.spl~ ~override~
+COPY ~%mod_folder%/spl/EFFWT23.spl~ ~override~
+COPY ~%mod_folder%/spl/EFFWT24.spl~ ~override~
+COPY ~%mod_folder%/spl/EFFWT25.spl~ ~override~
+
+
+COPY ~%mod_folder%/spl/SPWI807.spl~ ~override~
+  SAY NAME1 @1126
+  SAY NAME2 @1126
+  SAY UNIDENTIFIED_DESC @1127
+  SAY IDENTIFIED_DESC @1127
+
+COPY ~%mod_folder%/spl/SPWI907.spl~ ~override~
+  SAY NAME1 @1128
+  SAY NAME2 @1128
+  SAY UNIDENTIFIED_DESC @1129
+  SAY IDENTIFIED_DESC @1129
+COPY ~%mod_folder%/spl/SPWI908.spl~ ~override~
+  SAY NAME1 @1851
+  SAY NAME2 @1851
+  SAY UNIDENTIFIED_DESC @1852
+  SAY IDENTIFIED_DESC @1852
+
+COPY ~%mod_folder%/spl/SPWI612.spl~ ~override~
+  SAY NAME1 @1130
+  SAY NAME2 @1130
+  SAY UNIDENTIFIED_DESC @1131
+  SAY IDENTIFIED_DESC @1131
+
+COPY ~%mod_folder%/spl/SPWI618.spl~ ~override~
+  SAY NAME1 @1132
+  SAY NAME2 @1132
+  SAY UNIDENTIFIED_DESC @1133
+  SAY IDENTIFIED_DESC @1133
+
+COPY ~%mod_folder%/spl/SPWI218.spl~ ~override~
+  SAY NAME1 @1134
+  SAY NAME2 @1134
+  SAY UNIDENTIFIED_DESC @1135
+  SAY IDENTIFIED_DESC @1135
+
+COPY ~%mod_folder%/spl/SPWI707.spl~ ~override~
+  SAY NAME1 @1136
+  SAY NAME2 @1136
+  SAY UNIDENTIFIED_DESC @1137
+  SAY IDENTIFIED_DESC @1137
+
+COPY ~%mod_folder%/spl/SPWI810.spl~ ~override~
+  SAY NAME1 @1138
+  SAY NAME2 @1138
+  SAY UNIDENTIFIED_DESC @1139
+  SAY IDENTIFIED_DESC @1139
+
+COPY ~%mod_folder%/spl/SPWI903.spl~ ~override~
+  SAY NAME1 @1140
+  SAY NAME2 @1140
+  SAY UNIDENTIFIED_DESC @1141
+  SAY IDENTIFIED_DESC @1141
+
+COPY ~%mod_folder%/spl/SPWI906.spl~ ~override~
+  SAY NAME1 @1142
+  SAY NAME2 @1142
+  SAY UNIDENTIFIED_DESC @1143
+  SAY IDENTIFIED_DESC @1143
+
+COPY ~%mod_folder%/spl/SPWI610.spl~ ~override~
+  SAY NAME1 @1144
+  SAY NAME2 @1144
+  SAY UNIDENTIFIED_DESC @1145
+  SAY IDENTIFIED_DESC @1145
+
+COPY ~%mod_folder%/spl/SPWI107.spl~ ~override~
+  SAY NAME1 @1496
+  SAY NAME2 @1496
+  SAY UNIDENTIFIED_DESC @1497
+  SAY IDENTIFIED_DESC @1497
+
+COPY ~%mod_folder%/spl/SPWI212.spl~ ~override~
+  SAY NAME1 @1498
+  SAY NAME2 @1498
+  SAY UNIDENTIFIED_DESC @1499
+  SAY IDENTIFIED_DESC @1499
+
+COPY ~%mod_folder%/spl/SPWI223.spl~ ~override~
+  SAY NAME1 @1500
+  SAY NAME2 @1500
+  SAY UNIDENTIFIED_DESC @1501
+  SAY IDENTIFIED_DESC @1501
+
+COPY ~%mod_folder%/spl/SPWI408.spl~ ~override~
+  SAY NAME1 @1502
+  SAY NAME2 @1502
+  SAY UNIDENTIFIED_DESC @1503
+  SAY IDENTIFIED_DESC @1503
+
+COPY ~%mod_folder%/spl/SPWI412.spl~ ~override~
+  SAY NAME1 @1504
+  SAY NAME2 @1504
+  SAY UNIDENTIFIED_DESC @1505
+  SAY IDENTIFIED_DESC @1505
+
+COPY ~%mod_folder%/spl/SPWI413.spl~ ~override~
+  SAY NAME1 @1678
+  SAY NAME2 @1678
+  SAY UNIDENTIFIED_DESC @1679
+  SAY IDENTIFIED_DESC @1679
+
+COPY ~%mod_folder%/spl/SPWI414.spl~ ~override~
+  SAY NAME1 @1096
+  SAY NAME2 @1096
+  SAY UNIDENTIFIED_DESC @1097
+  SAY IDENTIFIED_DESC @1097
+
+COPY ~%mod_folder%/spl/SPWI603.spl~ ~override~
+
+COPY ~%mod_folder%/spl/SPWI605.spl~ ~override~
+  SAY NAME1 @1857
+  SAY NAME2 @1857
+  SAY UNIDENTIFIED_DESC @1858
+  SAY IDENTIFIED_DESC @1858
+
+COPY ~%mod_folder%/spl/SPWI626.spl~ ~override~
+  SAY NAME1 @1508
+  SAY NAME2 @1508
+  SAY UNIDENTIFIED_DESC @1509
+  SAY IDENTIFIED_DESC @1509
+
+COPY ~%mod_folder%/spl/SPWI704.spl~ ~override~
+  SAY NAME1 @1510
+  SAY NAME2 @1510
+  SAY UNIDENTIFIED_DESC @1511
+  SAY IDENTIFIED_DESC @1511
+
+COPY ~%mod_folder%/spl/SPPR201.spl~ ~override~
+  SAY NAME1 @1512
+  SAY NAME2 @1512
+  SAY UNIDENTIFIED_DESC @1513
+  SAY IDENTIFIED_DESC @1513
+
+COPY ~%mod_folder%/spl/SPPR403.spl~ ~override~
+  SAY NAME1 @1514
+  SAY NAME2 @1514
+  SAY UNIDENTIFIED_DESC @1515
+  SAY IDENTIFIED_DESC @1515
+
+COPY ~%mod_folder%/spl/SPPR424.spl~ ~override~
+  SAY NAME1 @1516
+  SAY NAME2 @1516
+  SAY UNIDENTIFIED_DESC @1517
+  SAY IDENTIFIED_DESC @1517
+
+COPY ~%mod_folder%/spl/SPPR519.spl~ ~override~
+  SAY NAME1 @1518
+  SAY NAME2 @1518
+  SAY UNIDENTIFIED_DESC @1519
+  SAY IDENTIFIED_DESC @1519
+
+COPY ~%mod_folder%/spl/SPPR801.spl~ ~override~
+  SAY NAME1 @1520
+  SAY NAME2 @1520
+  SAY UNIDENTIFIED_DESC @1521
+  SAY IDENTIFIED_DESC @1521
+
+COPY ~%mod_folder%/spl/SPPR714.spl~ ~override~
+  SAY NAME1 @1544
+  SAY NAME2 @1544
+  SAY UNIDENTIFIED_DESC @1545
+  SAY IDENTIFIED_DESC @1545
+
+COPY ~%mod_folder%/spl/SPPR726.spl~ ~override~
+  SAY NAME1 @1546
+  SAY NAME2 @1546
+  SAY UNIDENTIFIED_DESC @1547
+  SAY IDENTIFIED_DESC @1547
+
+COPY ~%mod_folder%/spl/SPPR728.spl~ ~override~
+  SAY NAME1 @1548
+  SAY NAME2 @1548
+  SAY UNIDENTIFIED_DESC @1549
+  SAY IDENTIFIED_DESC @1549
+
+COPY ~%mod_folder%/spl/SPPR727.spl~ ~override~
+  SAY NAME1 @1550
+  SAY NAME2 @1550
+  SAY UNIDENTIFIED_DESC @1551
+  SAY IDENTIFIED_DESC @1551
+COPY ~%mod_folder%/spl/SPWI606.spl~ ~override~
+  SAY NAME1 @1552
+  SAY NAME2 @1552
+  SAY UNIDENTIFIED_DESC @1553
+  SAY IDENTIFIED_DESC @1553
+COPY ~%mod_folder%/spl/SPWI619.spl~ ~override~
+  SAY NAME1 @1554
+  SAY NAME2 @1554
+  SAY UNIDENTIFIED_DESC @1555
+  SAY IDENTIFIED_DESC @1555
+COPY ~%mod_folder%/spl/SPWI719.spl~ ~override~
+  SAY NAME1 @1556
+  SAY NAME2 @1556
+  SAY UNIDENTIFIED_DESC @1557
+  SAY IDENTIFIED_DESC @1557
+COPY ~%mod_folder%/spl/EFFV1.spl~ ~override~
+COPY ~%mod_folder%/spl/SPWI313.spl~ ~override~
+  SAY NAME1 @1559
+  SAY NAME2 @1559
+  SAY UNIDENTIFIED_DESC @1560
+  SAY IDENTIFIED_DESC @1560
+COPY ~%mod_folder%/spl/SPWI428.spl~ ~override~
+  SAY NAME1 @1561
+  SAY NAME2 @1561
+  SAY UNIDENTIFIED_DESC @1562
+  SAY IDENTIFIED_DESC @1562
+COPY ~%mod_folder%/spl/SPWI621.spl~ ~override~
+  SAY NAME1 @1563
+  SAY NAME2 @1563
+  SAY UNIDENTIFIED_DESC @1564
+  SAY IDENTIFIED_DESC @1564
+COPY ~%mod_folder%/spl/SPWI709.spl~ ~override~
+  SAY NAME1 @1565
+  SAY NAME2 @1565
+  SAY UNIDENTIFIED_DESC @1566
+  SAY IDENTIFIED_DESC @1566
+COPY ~%mod_folder%/spl/SPWI711.spl~ ~override~
+  SAY NAME1 @1567
+  SAY NAME2 @1567
+  SAY UNIDENTIFIED_DESC @1568
+  SAY IDENTIFIED_DESC @1568
+COPY ~%mod_folder%/spl/SPPR410.spl~ ~override~
+  SAY NAME1 @1573
+  SAY NAME2 @1573
+  SAY UNIDENTIFIED_DESC @1574
+  SAY IDENTIFIED_DESC @1574
+COPY ~%mod_folder%/spl/SPPR721.spl~ ~override~
+  SAY NAME1 @1837
+  SAY NAME2 @1837
+  SAY UNIDENTIFIED_DESC @1838
+  SAY IDENTIFIED_DESC @1838
+COPY ~%mod_folder%/spl/SPPR722.spl~ ~override~
+  SAY NAME1 @1839
+  SAY NAME2 @1839
+  SAY UNIDENTIFIED_DESC @1840
+  SAY IDENTIFIED_DESC @1840
+COPY ~%mod_folder%/spl/SPWI630.spl~ ~override~
+  SAY NAME1 @1589
+  SAY NAME2 @1589
+  SAY UNIDENTIFIED_DESC @1590
+  SAY IDENTIFIED_DESC @1590
+COPY ~%mod_folder%/spl/EFFSR1.spl~ ~override~
+COPY ~%mod_folder%/spl/SPPR707.spl~ ~override~
+  SAY NAME1 @1591
+  SAY NAME2 @1591
+  SAY UNIDENTIFIED_DESC @1592
+  SAY IDENTIFIED_DESC @1592
+COPY ~%mod_folder%/spl/SPWI806.spl~ ~override~
+  SAY NAME1 @1621
+  SAY NAME2 @1621
+  SAY UNIDENTIFIED_DESC @1622
+  SAY IDENTIFIED_DESC @1622
+COPY ~%mod_folder%/spl/SPPR517.spl~ ~override~
+  SAY NAME1 @1623
+  SAY NAME2 @1623
+  SAY UNIDENTIFIED_DESC @1624
+  SAY IDENTIFIED_DESC @1624
+COPY ~%mod_folder%/spl/USEFFAR.spl~ ~override~
+COPY ~%mod_folder%/spl/USEFFAR1.spl~ ~override~
+COPY ~%mod_folder%/spl/USEFFAR2.spl~ ~override~
+COPY ~%mod_folder%/spl/SPWI303.spl~ ~override~
+  SAY NAME1 @1629
+  SAY NAME2 @1629
+  SAY UNIDENTIFIED_DESC @1630
+  SAY IDENTIFIED_DESC @1630
+COPY ~%mod_folder%/spl/SPPR210.spl~ ~override~
+  SAY NAME1 @1631
+  SAY NAME2 @1631
+  SAY UNIDENTIFIED_DESC @1632
+  SAY IDENTIFIED_DESC @1632
+COPY ~%mod_folder%/spl/SPPR306.spl~ ~override~
+  SAY NAME1 @1633
+  SAY NAME2 @1633
+  SAY UNIDENTIFIED_DESC @1634
+  SAY IDENTIFIED_DESC @1634
+COPY ~%mod_folder%/spl/SPPR407.spl~ ~override~
+  SAY NAME1 @1635
+  SAY NAME2 @1635
+  SAY UNIDENTIFIED_DESC @1636
+  SAY IDENTIFIED_DESC @1636
+COPY ~%mod_folder%/spl/EFFCL.spl~ ~override~
+COPY ~%mod_folder%/spl/EFFSC.spl~ ~override~
+COPY ~%mod_folder%/spl/SPPR302.spl~ ~override~
+  SAY NAME1 @1641
+  SAY NAME2 @1641
+  SAY UNIDENTIFIED_DESC @1642
+  SAY IDENTIFIED_DESC @1642
+COPY ~%mod_folder%/spl/SPWI406.spl~ ~override~
+  SAY NAME1 @1653
+  SAY NAME2 @1653
+  SAY UNIDENTIFIED_DESC @1654
+  SAY IDENTIFIED_DESC @1654
+COPY ~%mod_folder%/spl/SPWI608.spl~ ~override~
+  SAY NAME1 @1655
+  SAY NAME2 @1655
+  SAY UNIDENTIFIED_DESC @1656
+  SAY IDENTIFIED_DESC @1656
+
+COPY ~%mod_folder%/spl/SPPR615.spl~ ~override~
+  SAY NAME1 @1657
+  SAY NAME2 @1657
+  SAY UNIDENTIFIED_DESC @1658
+  SAY IDENTIFIED_DESC @1658
+
+COPY ~%mod_folder%/spl/SPWI526.spl~ ~override~
+  SAY NAME1 @1667
+  SAY NAME2 @1667
+  SAY UNIDENTIFIED_DESC @1668
+  SAY IDENTIFIED_DESC @1668
+
+COPY ~%mod_folder%/spl/SPWI411.spl~ ~override~
+  SAY NAME1 @1670
+  SAY NAME2 @1670
+  SAY UNIDENTIFIED_DESC @1671
+  SAY IDENTIFIED_DESC @1671
+COPY ~%mod_folder%/spl/SPWI501.spl~ ~override~
+  SAY NAME1 @1672
+  SAY NAME2 @1672
+  SAY UNIDENTIFIED_DESC @1673
+  SAY IDENTIFIED_DESC @1673
+COPY ~%mod_folder%/spl/SPPR301.spl~ ~override~
+  SAY NAME1 @1674
+  SAY NAME2 @1674
+  SAY UNIDENTIFIED_DESC @1675
+  SAY IDENTIFIED_DESC @1675
+COPY ~%mod_folder%/spl/SPPR307.spl~ ~override~
+  SAY NAME1 @1676
+  SAY NAME2 @1676
+  SAY UNIDENTIFIED_DESC @1677
+  SAY IDENTIFIED_DESC @1677
+COPY ~%mod_folder%/spl/SPWI410.spl~ ~override~
+  SAY NAME1 @1676
+  SAY NAME2 @1676
+  SAY UNIDENTIFIED_DESC @1677
+  SAY IDENTIFIED_DESC @1677
+COPY ~%mod_folder%/spl/SPWI105.spl~ ~override~
+  SAY NAME1 @1680
+  SAY NAME2 @1680
+  SAY UNIDENTIFIED_DESC @1681
+  SAY IDENTIFIED_DESC @1681
+COPY ~%mod_folder%/spl/SPPR216.spl~ ~override~
+  SAY NAME1 @1682
+  SAY NAME2 @1682
+  SAY UNIDENTIFIED_DESC @1683
+  SAY IDENTIFIED_DESC @1683
+COPY ~%mod_folder%/spl/SPPR217.spl~ ~override~
+  SAY NAME1 @1684
+  SAY NAME2 @1684
+  SAY UNIDENTIFIED_DESC @1685
+  SAY IDENTIFIED_DESC @1685
+COPY ~%mod_folder%/spl/SPPR213.spl~ ~override~
+  SAY NAME1 @1686
+  SAY NAME2 @1686
+  SAY UNIDENTIFIED_DESC @1687
+  SAY IDENTIFIED_DESC @1687
+COPY ~%mod_folder%/spl/SPWI115.spl~ ~override~
+  SAY NAME1 @1688
+  SAY NAME2 @1688
+  SAY UNIDENTIFIED_DESC @1689
+  SAY IDENTIFIED_DESC @1689
+COPY ~%mod_folder%/spl/SPPR220.spl~ ~override~
+  SAY NAME1 @1692
+  SAY NAME2 @1692
+  SAY UNIDENTIFIED_DESC @1693
+  SAY IDENTIFIED_DESC @1693
+COPY ~%mod_folder%/spl/SPWI607.spl~ ~override~
+  SAY NAME1 @1694
+  SAY NAME2 @1694
+  SAY UNIDENTIFIED_DESC @1695
+  SAY IDENTIFIED_DESC @1695
+COPY ~%mod_folder%/spl/SPWI808.spl~ ~override~
+  SAY NAME1 @1696
+  SAY NAME2 @1696
+  SAY UNIDENTIFIED_DESC @1697
+  SAY IDENTIFIED_DESC @1697
+COPY ~%mod_folder%/spl/SPWI955.spl~ ~override~
+COPY ~%mod_folder%/spl/SPWI956.spl~ ~override~
+COPY ~%mod_folder%/spl/SPWI222.spl~ ~override~
+  SAY NAME1 @1698
+  SAY NAME2 @1698
+  SAY UNIDENTIFIED_DESC @1699
+  SAY IDENTIFIED_DESC @1699
+COPY ~%mod_folder%/spl/SPWI224.spl~ ~override~
+  SAY NAME1 @1700
+  SAY NAME2 @1700
+  SAY UNIDENTIFIED_DESC @1701
+  SAY IDENTIFIED_DESC @1701
+COPY ~%mod_folder%/spl/SPIN134.spl~ ~override~
+COPY ~%mod_folder%/spl/SPIN137.spl~ ~override~
+COPY ~%mod_folder%/spl/SPIN138.spl~ ~override~
+//COPY ~%mod_folder%/spl/SPIN166.spl~ ~override~
+COPY ~%mod_folder%/spl/USSTDS01.spl~ ~override~
+COPY ~%mod_folder%/spl/USSTDS02.spl~ ~override~
+COPY ~%mod_folder%/spl/SPPR511.spl~ ~override~
+  SAY NAME1 @1639
+  SAY NAME2 @1639
+  SAY UNIDENTIFIED_DESC @1640
+  SAY IDENTIFIED_DESC @1640
+COPY ~%mod_folder%/spl/SPPR712.spl~ ~override~
+  SAY NAME1 @1714
+  SAY NAME2 @1714
+  SAY UNIDENTIFIED_DESC @1715
+  SAY IDENTIFIED_DESC @1715
+COPY ~%mod_folder%/spl/USSTIA1.spl~ ~override~
+  SAY NAME1 @1716
+  SAY NAME2 @1716
+  SAY UNIDENTIFIED_DESC @1717
+  SAY IDENTIFIED_DESC @1717
+COPY ~%mod_folder%/bam/USSTBIA.bam~ ~override~
+COPY ~%mod_folder%/bam/USSTBIAB.bam~ ~override~
+COPY ~%mod_folder%/bam/USSTBIAC.bam~ ~override~
+COPY ~%mod_folder%/spl/SPWI201.spl~ ~override~
+COPY ~%mod_folder%/spl/SPWI310.spl~ ~override~
+  SAY NAME1 @1722
+  SAY NAME2 @1722
+  SAY UNIDENTIFIED_DESC @1723
+  SAY IDENTIFIED_DESC @1723
+COPY ~%mod_folder%/spl/USSTTS01.spl~ ~override~
+COPY ~%mod_folder%/spl/USSTTS02.spl~ ~override~
+COPY ~%mod_folder%/spl/SPPR309.spl~ ~override~
+  SAY NAME1 @1720
+  SAY NAME2 @1720
+  SAY UNIDENTIFIED_DESC @1721
+  SAY IDENTIFIED_DESC @1721
+COPY ~%mod_folder%/spl/SPWI203.spl~ ~override~
+  SAY NAME1 @1724
+  SAY NAME2 @1724
+  SAY UNIDENTIFIED_DESC @1725
+  SAY IDENTIFIED_DESC @1725
+COPY ~%mod_folder%/spl/SPWI214.spl~ ~override~
+  SAY NAME1 @1726
+  SAY NAME2 @1726
+  SAY UNIDENTIFIED_DESC @1727
+  SAY IDENTIFIED_DESC @1727
+COPY ~%mod_folder%/spl/SPWI702.spl~ ~override~
+  SAY NAME1 @1730
+  SAY NAME2 @1730
+  SAY UNIDENTIFIED_DESC @1731
+  SAY IDENTIFIED_DESC @1731
+COPY ~%mod_folder%/spl/SPWI020.spl~ ~override~
+COPY ~%mod_folder%/spl/SPIN171.spl~ ~override~
+COPY ~%mod_folder%/spl/SPIN175.spl~ ~override~
+COPY ~%mod_folder%/spl/SPWI120.spl~ ~override~
+  SAY NAME1 @1732
+  SAY NAME2 @1732
+  SAY UNIDENTIFIED_DESC @1733
+  SAY IDENTIFIED_DESC @1733
+COPY ~%mod_folder%/spl/SPWI317.spl~ ~override~
+  SAY NAME1 @1734
+  SAY NAME2 @1734
+  SAY UNIDENTIFIED_DESC @1735
+  SAY IDENTIFIED_DESC @1735
+COPY ~%mod_folder%/spl/SPWI207.spl~ ~override~
+  SAY NAME1 @1744
+  SAY NAME2 @1744
+  SAY UNIDENTIFIED_DESC @1745
+  SAY IDENTIFIED_DESC @1745
+COPY ~%mod_folder%/spl/USSTKEG1.spl~ ~override~
+COPY ~%mod_folder%/spl/USSTKEG2.spl~ ~override~
+/*
+COPY ~%mod_folder%/spl/SPIN127.spl~ ~override~
+COPY ~%mod_folder%/spl/SPIN129.spl~ ~override~
+COPY ~%mod_folder%/spl/SPIN131.spl~ ~override~
+*/
+
+COPY ~%mod_folder%/spl/EFFTT1.spl~ ~override~
+COPY ~%mod_folder%/spl/EFFTT2.spl~ ~override~
+COPY ~%mod_folder%/spl/SPWI229.spl~ ~override~
+
+COPY ~%mod_folder%/spl/SPPR325.spl~ ~override~
+COPY ~%mod_folder%/spl/SPIN992.spl~ ~override~
+
+COPY ~%mod_folder%/spl/SPPR515.spl~ ~override~
+  SAY NAME1 @1758
+  SAY NAME2 @1758
+  SAY UNIDENTIFIED_DESC @1759
+  SAY IDENTIFIED_DESC @1759
+
+COPY ~%mod_folder%/spl/SPPR611.spl~ ~override~
+  SAY NAME1 @1760
+  SAY NAME2 @1760
+  SAY UNIDENTIFIED_DESC @1761
+  SAY IDENTIFIED_DESC @1761
+COPY ~%mod_folder%/spl/SPPR428.spl~ ~override~
+  SAY NAME1 @1762
+  SAY NAME2 @1762
+  SAY UNIDENTIFIED_DESC @1763
+  SAY IDENTIFIED_DESC @1763
+COPY ~%mod_folder%/spl/SPPR420.spl~ ~override~
+  SAY NAME1 @1764
+  SAY NAME2 @1764
+  SAY UNIDENTIFIED_DESC @1765
+  SAY IDENTIFIED_DESC @1765
+COPY ~%mod_folder%/spl/SPPR524.spl~ ~override~
+  SAY NAME1 @1690
+  SAY NAME2 @1690
+  SAY UNIDENTIFIED_DESC @1691
+  SAY IDENTIFIED_DESC @1691
+COPY ~%mod_folder%/spl/SPPR716.spl~ ~override~
+  SAY NAME1 @1062
+  SAY NAME2 @1062
+  SAY UNIDENTIFIED_DESC @1063
+  SAY IDENTIFIED_DESC @1063
+COPY ~%mod_folder%/spl/SPWI717.spl~ ~override~
+  SAY NAME1 @1775
+  SAY NAME2 @1775
+  SAY UNIDENTIFIED_DESC @1776
+  SAY IDENTIFIED_DESC @1776
+
+// extra spells used in magical weapons such as Slay Living and Ball Lightning
+
+COPY ~%mod_folder%/spl/USSTDEST.spl~ ~override~
+COPY ~%mod_folder%/spl/USSTHARM.spl~ ~override~
+COPY ~%mod_folder%/spl/USSTSL01.spl~ ~override~
+
+COPY ~%mod_folder%/itm/USSTDEST.itm~ ~override~
+COPY ~%mod_folder%/itm/USSTHARM.itm~ ~override~
+COPY ~%mod_folder%/itm/USSTSL02.itm~ ~override~
+
+COPY ~%mod_folder%/spl/USSTPB01.spl~ ~override~
+COPY ~%mod_folder%/spl/USSTBBOD.spl~ ~override~
+COPY ~%mod_folder%/spl/USSTBL01.spl~ ~override~
+COPY ~%mod_folder%/spl/USSTIB01.spl~ ~override~
+COPY ~%mod_folder%/spl/USSTSMC1.spl~ ~override~
+COPY ~%mod_folder%/spl/USSTSB01.spl~ ~override~
+
+COPY ~%mod_folder%/spl/SPWI624.spl~ ~override~
+  SAY NAME1 @1663
+  SAY NAME2 @1663
+  SAY UNIDENTIFIED_DESC @1664
+  SAY IDENTIFIED_DESC @1664
+
+COPY ~%mod_folder%/spl/EFFGT.spl~ ~override~
+COPY ~%mod_folder%/spl/USSTGT01.spl~ ~override~
+
+
+COPY ~%mod_folder%/spl/SPPR112.spl~ ~override~
+  SAY NAME1 @1777
+  SAY NAME2 @1777
+  SAY UNIDENTIFIED_DESC @1778
+  SAY IDENTIFIED_DESC @1778
+COPY ~%mod_folder%/spl/SPPR218.spl~ ~override~
+  SAY NAME1 @1779
+  SAY NAME2 @1779
+  SAY UNIDENTIFIED_DESC @1780
+  SAY IDENTIFIED_DESC @1780
+COPY ~%mod_folder%/spl/SPPR416.spl~ ~override~
+  SAY NAME1 @1781
+  SAY NAME2 @1781
+  SAY UNIDENTIFIED_DESC @1782
+  SAY IDENTIFIED_DESC @1782
+COPY ~%mod_folder%/spl/SPPR513.spl~ ~override~
+  SAY NAME1 @1783
+  SAY NAME2 @1783
+  SAY UNIDENTIFIED_DESC @1784
+  SAY IDENTIFIED_DESC @1784
+COPY ~%mod_folder%/spl/SPWI712.spl~ ~override~
+
+
+COPY ~%mod_folder%/spl/SPWI614.spl~ ~override~
+  SAY NAME1 @1728
+  SAY NAME2 @1728
+  SAY UNIDENTIFIED_DESC @1729
+  SAY IDENTIFIED_DESC @1729
+COPY ~%mod_folder%/itm/00SCRL09.itm~ ~override~
+COPY ~%mod_folder%/itm/00SCRL10.itm~ ~override~
+
+COPY ~%mod_folder%/spl/SPWI712.spl~ ~override~
+  SAY NAME1 @1831
+  SAY NAME2 @1831
+  SAY UNIDENTIFIED_DESC @1832
+  SAY IDENTIFIED_DESC @1832
+COPY ~%mod_folder%/spl/SPPR113.spl~ ~override~
+  SAY NAME1 @1833
+  SAY NAME2 @1833
+  SAY UNIDENTIFIED_DESC @1834
+  SAY IDENTIFIED_DESC @1834
+COPY ~%mod_folder%/spl/EFFS2.spl~ ~override~
+COPY ~%mod_folder%/spl/SPPR113.spl~ ~override~
+  SAY NAME1 @1833
+  SAY NAME2 @1833
+  SAY UNIDENTIFIED_DESC @1834
+  SAY IDENTIFIED_DESC @1834
+COPY ~%mod_folder%/spl/EFFSSO2.spl~ ~override~
+COPY ~%mod_folder%/spl/SPPR113.spl~ ~override~
+  SAY NAME1 @1833
+  SAY NAME2 @1833
+  SAY UNIDENTIFIED_DESC @1834
+  SAY IDENTIFIED_DESC @1834
+COPY ~%mod_folder%/spl/SPPR718.spl~ ~override~
+  SAY NAME1 @1849
+  SAY NAME2 @1849
+  SAY UNIDENTIFIED_DESC @1850
+  SAY IDENTIFIED_DESC @1850
+COPY ~%mod_folder%/spl/SPWI010.spl~ ~override~
+COPY ~%mod_folder%/spl/EFFORS1.spl~ ~override~
+COPY ~%mod_folder%/spl/EFFORS2.spl~ ~override~
+
+
+
+// edited school descriptions
+
+COPY_EXISTING ~KITLIST.2da~ ~override~
+  COUNT_2DA_COLS num_cols
+  READ_2DA_ENTRIES_NOW rows num_cols
+  FOR (row = 0; row < rows; ++row) BEGIN
+    READ_2DA_ENTRY_FORMER rows row 0 label
+    PATCH_MATCH ~%label%~ WITH
+      ~19~ BEGIN
+        SET strref = RESOLVE_STR_REF(@816)
+        SET_2DA_ENTRY_LATER rows_out row 3 ~%strref%~
+      END
+      ~20~ BEGIN
+        SET strref = RESOLVE_STR_REF(@818)
+        SET_2DA_ENTRY_LATER rows_out row 3 ~%strref%~
+      END
+      ~21~ BEGIN
+        SET strref = RESOLVE_STR_REF(@820)
+        SET_2DA_ENTRY_LATER rows_out row 3 ~%strref%~
+      END
+      ~22~ BEGIN
+        SET strref = RESOLVE_STR_REF(@822)
+        SET_2DA_ENTRY_LATER rows_out row 3 ~%strref%~
+      END
+      ~23~ BEGIN
+        SET strref = RESOLVE_STR_REF(@824)
+        SET_2DA_ENTRY_LATER rows_out row 3 ~%strref%~
+      END
+      ~24~ BEGIN
+        SET strref = RESOLVE_STR_REF(@826)
+        SET_2DA_ENTRY_LATER rows_out row 3 ~%strref%~
+      END
+      ~25~ BEGIN
+        SET strref = RESOLVE_STR_REF(@828)
+        SET_2DA_ENTRY_LATER rows_out row 3 ~%strref%~
+      END
+      ~26~ BEGIN
+        SET strref = RESOLVE_STR_REF(@830)
+        SET_2DA_ENTRY_LATER rows_out row 3 ~%strref%~
+      END
+      DEFAULT
+    END
+  END
+  SET_2DA_ENTRIES_NOW rows_out num_cols
+BUT_ONLY
+
+// edited magical weapons summoned via spell
+
+//COPY ~%mod_folder%/itm/SNAKEBI.itm~ ~override~
+COPY ~%mod_folder%/itm/SHAMME1.itm~ ~override~
+COPY ~%mod_folder%/itm/SHAMME2.itm~ ~override~
+COPY ~%mod_folder%/itm/SHAMME3.itm~ ~override~
+COPY ~%mod_folder%/itm/USSTBC01.itm~ ~override~
+COPY ~%mod_folder%/itm/USSTBC02.itm~ ~override~
+COPY ~%mod_folder%/itm/USSTBC03.itm~ ~override~
+COPY ~%mod_folder%/itm/00CWVIP1.itm~ ~override~
+COPY ~%mod_folder%/itm/BBODISA.itm~ ~override~
+COPY ~%mod_folder%/itm/BCLAW.itm~ ~override~
+COPY ~%mod_folder%/itm/BLIGHTN.itm~ ~override~
+COPY ~%mod_folder%/itm/DECASTA.itm~ ~override~
+COPY ~%mod_folder%/itm/DOBONE.itm~ ~override~
+COPY ~%mod_folder%/itm/GOODBER.itm~ ~override~
+COPY ~%mod_folder%/itm/GTOUCH.itm~ ~override~
+COPY ~%mod_folder%/itm/moonbla.itm~ ~override~
+COPY ~%mod_folder%/itm/PBLADE.itm~ ~override~
+COPY ~%mod_folder%/itm/USSTCD01.itm~ ~override~
+COPY ~%mod_folder%/itm/00CWSHD1.itm~ ~override~
+COPY ~%mod_folder%/itm/00CWWYV1.itm~ ~override~
+COPY ~%mod_folder%/itm/00CWVIP1.itm~ ~override~
+COPY ~%mod_folder%/itm/LTOUCH.itm~ ~override~
+COPY ~%mod_folder%/itm/MSWRD14.itm~ ~override~
+COPY ~%mod_folder%/itm/MSWRD15.itm~ ~override~
+COPY ~%mod_folder%/itm/MSWRD16.itm~ ~override~
+COPY ~%mod_folder%/itm/MSWRD17.itm~ ~override~
+COPY ~%mod_folder%/itm/MSWRD18.itm~ ~override~
+COPY ~%mod_folder%/itm/MSWRD19.itm~ ~override~
+COPY ~%mod_folder%/itm/MSWRD20.itm~ ~override~
+COPY ~%mod_folder%/itm/MSWRD21.itm~ ~override~
+COPY ~%mod_folder%/itm/MSWRD22.itm~ ~override~
+COPY ~%mod_folder%/itm/MSWRD23.itm~ ~override~
+COPY ~%mod_folder%/itm/MSWRD24.itm~ ~override~
+COPY ~%mod_folder%/itm/MSWRD25.itm~ ~override~
+COPY ~%mod_folder%/itm/MSWRD26.itm~ ~override~
+COPY ~%mod_folder%/itm/MSWRD27.itm~ ~override~
+COPY ~%mod_folder%/itm/MSWRD28.itm~ ~override~
+COPY ~%mod_folder%/itm/MSWRD29.itm~ ~override~
+COPY ~%mod_folder%/itm/MSWRD30.itm~ ~override~
+COPY ~%mod_folder%/itm/SPPR519Z.itm~ ~override~
+COPY ~%mod_folder%/itm/SPPR424Z.itm~ ~override~
+COPY ~%mod_folder%/itm/SHOCKG01.itm~ ~override~
+COPY ~%mod_folder%/itm/SHOCKG02.itm~ ~override~
+COPY ~%mod_folder%/itm/SHOCKG03.itm~ ~override~
+COPY ~%mod_folder%/itm/SHOCKG04.itm~ ~override~
+COPY ~%mod_folder%/itm/SHOCKG05.itm~ ~override~
+COPY ~%mod_folder%/itm/SHOCKG06.itm~ ~override~
+COPY ~%mod_folder%/itm/SHOCKG07.itm~ ~override~
+COPY ~%mod_folder%/itm/SHOCKG08.itm~ ~override~
+COPY ~%mod_folder%/itm/SHOCKG09.itm~ ~override~
+COPY ~%mod_folder%/itm/SHOCKG10.itm~ ~override~
+COPY ~%mod_folder%/itm/SHOCKG11.itm~ ~override~
+COPY ~%mod_folder%/itm/SHOCKG12.itm~ ~override~
+COPY ~%mod_folder%/itm/SHOCKG13.itm~ ~override~
+COPY ~%mod_folder%/itm/SHOCKG14.itm~ ~override~
+COPY ~%mod_folder%/itm/SHOCKG15.itm~ ~override~
+COPY ~%mod_folder%/itm/SHOCKG16.itm~ ~override~
+COPY ~%mod_folder%/itm/SHOCKG17.itm~ ~override~
+COPY ~%mod_folder%/itm/SHOCKG18.itm~ ~override~
+COPY ~%mod_folder%/itm/SHOCKG19.itm~ ~override~
+COPY ~%mod_folder%/itm/SHOCKG20.itm~ ~override~
+COPY ~%mod_folder%/itm/SHOCKG21.itm~ ~override~
+COPY ~%mod_folder%/itm/SHOCKG22.itm~ ~override~
+COPY ~%mod_folder%/itm/SHOCKG23.itm~ ~override~
+COPY ~%mod_folder%/itm/SHOCKG24.itm~ ~override~
+COPY ~%mod_folder%/itm/SHOCKG25.itm~ ~override~
+COPY ~%mod_folder%/itm/SHOCKG26.itm~ ~override~
+COPY ~%mod_folder%/itm/SHOCKG27.itm~ ~override~
+COPY ~%mod_folder%/itm/SHOCKG28.itm~ ~override~
+COPY ~%mod_folder%/itm/SHOCKG29.itm~ ~override~
+COPY ~%mod_folder%/itm/SHOCKG30.itm~ ~override~
+COPY ~%mod_folder%/itm/SMCUDGE.itm~ ~override~
+
+// patching most magical weapons to work with Weapon Finesse by changing their category to "Small Swords"
+
+COPY_EXISTING ~CHILLT.itm~ ~override~
+WRITE_BYTE 0x01C 19
+COPY_EXISTING ~DESTRUC.itm~ ~override~
+WRITE_BYTE 0x01C 19
+COPY_EXISTING ~FBLADE.itm~ ~override~
+WRITE_BYTE 0x01C 19
+COPY_EXISTING ~GTOUCH.itm~ ~override~
+WRITE_BYTE 0x01C 19
+COPY_EXISTING ~HARM.itm~ ~override~
+WRITE_BYTE 0x01C 19
+COPY_EXISTING ~IBLADE.itm~ ~override~
+WRITE_BYTE 0x01C 19
+COPY_EXISTING ~ICW01.itm~ ~override~
+WRITE_BYTE 0x01C 19
+COPY_EXISTING ~ICW02.itm~ ~override~
+WRITE_BYTE 0x01C 19
+COPY_EXISTING ~ICW03.itm~ ~override~
+WRITE_BYTE 0x01C 19
+COPY_EXISTING ~ICW04.itm~ ~override~
+WRITE_BYTE 0x01C 19
+COPY_EXISTING ~ICW05.itm~ ~override~
+WRITE_BYTE 0x01C 19
+COPY_EXISTING ~ICW06.itm~ ~override~
+WRITE_BYTE 0x01C 19
+COPY_EXISTING ~ICW07.itm~ ~override~
+WRITE_BYTE 0x01C 19
+COPY_EXISTING ~ICW08.itm~ ~override~
+WRITE_BYTE 0x01C 19
+COPY_EXISTING ~ICW09.itm~ ~override~
+WRITE_BYTE 0x01C 19
+COPY_EXISTING ~ICW10.itm~ ~override~
+WRITE_BYTE 0x01C 19
+COPY_EXISTING ~ICW11.itm~ ~override~
+WRITE_BYTE 0x01C 19
+COPY_EXISTING ~ICW12.itm~ ~override~
+WRITE_BYTE 0x01C 19
+COPY_EXISTING ~ICW13.itm~ ~override~
+WRITE_BYTE 0x01C 19
+COPY_EXISTING ~ICW14.itm~ ~override~
+WRITE_BYTE 0x01C 19
+COPY_EXISTING ~ICW15.itm~ ~override~
+WRITE_BYTE 0x01C 19
+COPY_EXISTING ~ICW16.itm~ ~override~
+WRITE_BYTE 0x01C 19
+COPY_EXISTING ~ICW17.itm~ ~override~
+WRITE_BYTE 0x01C 19
+COPY_EXISTING ~ICW18.itm~ ~override~
+WRITE_BYTE 0x01C 19
+COPY_EXISTING ~ICW19.itm~ ~override~
+WRITE_BYTE 0x01C 19
+COPY_EXISTING ~ICW20.itm~ ~override~
+WRITE_BYTE 0x01C 19
+COPY_EXISTING ~ILW01.itm~ ~override~
+WRITE_BYTE 0x01C 19
+COPY_EXISTING ~ILW02.itm~ ~override~
+WRITE_BYTE 0x01C 19
+COPY_EXISTING ~ILW03.itm~ ~override~
+WRITE_BYTE 0x01C 19
+COPY_EXISTING ~ILW04.itm~ ~override~
+WRITE_BYTE 0x01C 19
+COPY_EXISTING ~ILW05.itm~ ~override~
+WRITE_BYTE 0x01C 19
+COPY_EXISTING ~IMW01.itm~ ~override~
+WRITE_BYTE 0x01C 19
+COPY_EXISTING ~IMW02.itm~ ~override~
+WRITE_BYTE 0x01C 19
+COPY_EXISTING ~IMW03.itm~ ~override~
+WRITE_BYTE 0x01C 19
+COPY_EXISTING ~IMW04.itm~ ~override~
+WRITE_BYTE 0x01C 19
+COPY_EXISTING ~IMW05.itm~ ~override~
+WRITE_BYTE 0x01C 19
+COPY_EXISTING ~IMW06.itm~ ~override~
+WRITE_BYTE 0x01C 19
+COPY_EXISTING ~IMW07.itm~ ~override~
+WRITE_BYTE 0x01C 19
+COPY_EXISTING ~IMW08.itm~ ~override~
+WRITE_BYTE 0x01C 19
+COPY_EXISTING ~IMW09.itm~ ~override~
+WRITE_BYTE 0x01C 19
+COPY_EXISTING ~IMW10.itm~ ~override~
+WRITE_BYTE 0x01C 19
+COPY_EXISTING ~ISW01.itm~ ~override~
+WRITE_BYTE 0x01C 19
+COPY_EXISTING ~ISW02.itm~ ~override~
+WRITE_BYTE 0x01C 19
+COPY_EXISTING ~ISW03.itm~ ~override~
+WRITE_BYTE 0x01C 19
+COPY_EXISTING ~ISW04.itm~ ~override~
+WRITE_BYTE 0x01C 19
+COPY_EXISTING ~ISW05.itm~ ~override~
+WRITE_BYTE 0x01C 19
+COPY_EXISTING ~ISW06.itm~ ~override~
+WRITE_BYTE 0x01C 19
+COPY_EXISTING ~ISW07.itm~ ~override~
+WRITE_BYTE 0x01C 19
+COPY_EXISTING ~ISW08.itm~ ~override~
+WRITE_BYTE 0x01C 19
+COPY_EXISTING ~ISW09.itm~ ~override~
+WRITE_BYTE 0x01C 19
+COPY_EXISTING ~ISW10.itm~ ~override~
+WRITE_BYTE 0x01C 19
+COPY_EXISTING ~ISW11.itm~ ~override~
+WRITE_BYTE 0x01C 19
+COPY_EXISTING ~ISW12.itm~ ~override~
+WRITE_BYTE 0x01C 19
+COPY_EXISTING ~ISW13.itm~ ~override~
+WRITE_BYTE 0x01C 19
+COPY_EXISTING ~ISW14.itm~ ~override~
+WRITE_BYTE 0x01C 19
+COPY_EXISTING ~ISW15.itm~ ~override~
+WRITE_BYTE 0x01C 19
+COPY_EXISTING ~LTOUCH.itm~ ~override~
+WRITE_BYTE 0x01C 19
+COPY_EXISTING ~MOONBLA.itm~ ~override~
+WRITE_BYTE 0x01C 19
+COPY_EXISTING ~PBLADE.itm~ ~override~
+WRITE_BYTE 0x01C 19
+COPY_EXISTING ~SHAMME1.itm~ ~override~
+WRITE_BYTE 0x01C 19
+COPY_EXISTING ~SHAMME2.itm~ ~override~
+WRITE_BYTE 0x01C 19
+COPY_EXISTING ~SHAMME3.itm~ ~override~
+WRITE_BYTE 0x01C 19
+COPY_EXISTING ~SHOCKG01.itm~ ~override~
+WRITE_BYTE 0x01C 19
+COPY_EXISTING ~SHOCKG02.itm~ ~override~
+WRITE_BYTE 0x01C 19
+COPY_EXISTING ~SHOCKG03.itm~ ~override~
+WRITE_BYTE 0x01C 19
+COPY_EXISTING ~SHOCKG04.itm~ ~override~
+WRITE_BYTE 0x01C 19
+COPY_EXISTING ~SHOCKG05.itm~ ~override~
+WRITE_BYTE 0x01C 19
+COPY_EXISTING ~SHOCKG06.itm~ ~override~
+WRITE_BYTE 0x01C 19
+COPY_EXISTING ~SHOCKG07.itm~ ~override~
+WRITE_BYTE 0x01C 19
+COPY_EXISTING ~SHOCKG08.itm~ ~override~
+WRITE_BYTE 0x01C 19
+COPY_EXISTING ~SHOCKG09.itm~ ~override~
+WRITE_BYTE 0x01C 19
+COPY_EXISTING ~SHOCKG10.itm~ ~override~
+WRITE_BYTE 0x01C 19
+COPY_EXISTING ~SHOCKG11.itm~ ~override~
+WRITE_BYTE 0x01C 19
+COPY_EXISTING ~SHOCKG12.itm~ ~override~
+WRITE_BYTE 0x01C 19
+COPY_EXISTING ~SHOCKG13.itm~ ~override~
+WRITE_BYTE 0x01C 19
+COPY_EXISTING ~SHOCKG14.itm~ ~override~
+WRITE_BYTE 0x01C 19
+COPY_EXISTING ~SHOCKG15.itm~ ~override~
+WRITE_BYTE 0x01C 19
+COPY_EXISTING ~SHOCKG16.itm~ ~override~
+WRITE_BYTE 0x01C 19
+COPY_EXISTING ~SHOCKG17.itm~ ~override~
+WRITE_BYTE 0x01C 19
+COPY_EXISTING ~SHOCKG18.itm~ ~override~
+WRITE_BYTE 0x01C 19
+COPY_EXISTING ~SHOCKG19.itm~ ~override~
+WRITE_BYTE 0x01C 19
+COPY_EXISTING ~SHOCKG20.itm~ ~override~
+WRITE_BYTE 0x01C 19
+COPY_EXISTING ~SHOCKG21.itm~ ~override~
+WRITE_BYTE 0x01C 19
+COPY_EXISTING ~SHOCKG22.itm~ ~override~
+WRITE_BYTE 0x01C 19
+COPY_EXISTING ~SHOCKG23.itm~ ~override~
+WRITE_BYTE 0x01C 19
+COPY_EXISTING ~SHOCKG24.itm~ ~override~
+WRITE_BYTE 0x01C 19
+COPY_EXISTING ~SHOCKG25.itm~ ~override~
+WRITE_BYTE 0x01C 19
+COPY_EXISTING ~SHOCKG26.itm~ ~override~
+WRITE_BYTE 0x01C 19
+COPY_EXISTING ~SHOCKG27.itm~ ~override~
+WRITE_BYTE 0x01C 19
+COPY_EXISTING ~SHOCKG28.itm~ ~override~
+WRITE_BYTE 0x01C 19
+COPY_EXISTING ~SHOCKG29.itm~ ~override~
+WRITE_BYTE 0x01C 19
+COPY_EXISTING ~SHOCKG30.itm~ ~override~
+WRITE_BYTE 0x01C 19
+COPY_EXISTING ~SNAKEBI.itm~ ~override~
+WRITE_BYTE 0x01C 19
+COPY_EXISTING ~USSTDEST.itm~ ~override~
+WRITE_BYTE 0x01C 19
+COPY_EXISTING ~USSTHARM.itm~ ~override~
+WRITE_BYTE 0x01C 19
+COPY_EXISTING ~USSTSL02.itm~ ~override~
+WRITE_BYTE 0x01C 19
+
+// Scroll fix: scrolls grant mage spells on casting
+
+COPY_EXISTING ~spwi201z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 146 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi205z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 148 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+
+COPY_EXISTING ~spwi101z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 148 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi102z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 146 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi103z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 148 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi104z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 146 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi105z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 148 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi107z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 146 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi108z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 146 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi110z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 146 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi112z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 146 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi113z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 146 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi114z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 146 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi115z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 146 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi116z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 148 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi117z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 146 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi118z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 146 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi119z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 146 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi120z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 146 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi122z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 146 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi124z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 148 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi201z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 146 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi203z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 146 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi205z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 148 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi206z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 146 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi207z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 146 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi209z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 146 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi211z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 146 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi212z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 146 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi213z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 148 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi214z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 146 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi215z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 148 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi217z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 146 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi218z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 146 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi219z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 146 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi220z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 148 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi221z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 146 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi222z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 146 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi223z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 146 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi224z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 146 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi225z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 146 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi226z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 146 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi227z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 148 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi228z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 146 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi230z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 148 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi302z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 148 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi303z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 146 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi304z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 148 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi305z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 146 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi306z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 148 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi308z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 148 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi309z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 148 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi310z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 146 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi311z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 146 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi312z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 148 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi313z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 148 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi314z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 146 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi316z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 146 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi317z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 146 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi318z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 146 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi319z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 148 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi320z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 148 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi321z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 148 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi322z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 146 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi323z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 146 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi401z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 148 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi404z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 148 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi405z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 146 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi406z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 146 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi407z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 148 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi408z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 146 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi410z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 146 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi411z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 148 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi412z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 148 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi413z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 146 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi414z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 146 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi417z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 146 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi418z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 148 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi419z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 148 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi420z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 148 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi421z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 148 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi422z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 146 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi423z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 148 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi424z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 146 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi425z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 146 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi426z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 146 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi427z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 146 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi428z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 148 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+/*
+COPY_EXISTING ~spwi501z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 148 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+*/
+COPY_EXISTING ~spwi503z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 148 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi504z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 148 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi505z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 148 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi507z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 146 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi508z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 146 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi509z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 148 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi510z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 146 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi511z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 146 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi512z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 148 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi513z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 148 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi514z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 148 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi515z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 148 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi516z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 148 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi518z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 146 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi519z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 146 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi520z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 148 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi521z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 146 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi522z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 146 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi523z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 146 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi524z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 146 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi525z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 146 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi526z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 148 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi601z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 146 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi603z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 146 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi605z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 148 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi606z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 148 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi607z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 146 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi608z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 146 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi609z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 148 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi610z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 146 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi611z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 148 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi612z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 146 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi613z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 148 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi614z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 146 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi615z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 146 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi616z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 146 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi617z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 146 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi618z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 146 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi619z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 148 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi620z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 146 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi621z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 148 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi622z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 148 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi623z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 148 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi626z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 148 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi627z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 148 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi628z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 148 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi629z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 148 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi702z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 146 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi703z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 148 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi704z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 146 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi705z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 146 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi706z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 148 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi707z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 148 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi708z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 148 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi709z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 148 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi710z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 146 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi711z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 148 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi712z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 146 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi713z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 148 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi714z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 148 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi715z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 148 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi716z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 148 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi717z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 148 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi718z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 148 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi719z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 146 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi802z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 148 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi803z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 148 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi804z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 146 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi805z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 148 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi806z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 148 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi807z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 146 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi808z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 148 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi809z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 148 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi810z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 146 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi902z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 148 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi903z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 146 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi905z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 148 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi906z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 148 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi907z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 146 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi908z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 148 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi909z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 146 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi910z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 148 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~spwi911z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 148 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+
+COPY_EXISTING ~sppr108z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 148 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~sppr210z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 146 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~sppr306z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 146 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~sppr407z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 146 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~sppr408z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 148 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~sppr415z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 146 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~sppr424z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 146 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~sppr427z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 148 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~sppr519z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 146 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~sppr714z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 148 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~sppr715z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 148 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~sppr719z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 148 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~sppr726z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 148 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~sppr727z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 148 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+COPY_EXISTING ~sppr728z.itm~ ~override~
+   LPF CLONE_EFFECT INT_VAR match_opcode = 148 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+
+COPY ~%mod_folder%/spl/USEFFC1.spl~ ~override~
+COPY ~%mod_folder%/spl/USEFFC2.spl~ ~override~
+COPY ~%mod_folder%/spl/USPCOLD.spl~ ~override~
+  SAY NAME1 @1859
+  SAY NAME2 @1859
+  SAY UNIDENTIFIED_DESC @1860
+  SAY IDENTIFIED_DESC @1860
+COPY ~%mod_folder%/itm/USPCOLD.itm~ ~override~
+  SAY NAME1 @1859
+  SAY NAME2 @1859
+  SAY DESC @1860
+COPY ~%mod_folder%/bam/USCOLDA.bam~ ~override~
+COPY ~%mod_folder%/bam/USCOLDB.bam~ ~override~
+COPY ~%mod_folder%/bam/USCOLDC.bam~ ~override~

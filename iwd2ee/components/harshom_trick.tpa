@@ -1,0 +1,7 @@
+//NOTES
+//This allows the player to attempt to trick Harshom with an illusion. However, there are no commands to make it happen. The last two lines need commands that apply a confusion effect to Harshom and ideally his companions. The last line also needs a command to open the door behind Harshom.
+COMPILE ~%mod_folder%/dlg/51HARSHO.d~
+//This also tweaks related dialogs to be compatible with the player seeking a shortcut through the Fell Woods. This shortcut might not be implemented in the final release of IWD2:EE, but it's here just in case.
+COMPILE ~%mod_folder%/dlg/50KURTTU.d~  //This returns an error message but installs anyway. WeiDU says it doesn't recognize a See trigger of some sort.
+COMPILE ~%mod_folder%/dlg/50CARITA.d~  //See above
+COMPILE ~%mod_folder%/dlg/50LEEVI.d~  //See above

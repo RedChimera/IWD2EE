@@ -1,0 +1,17 @@
+//NOTES
+//There will be lots of cosmetic tweaks, but for now, this just expands the number of colors people can choose for characters' hair and skin. All races get access to the same colors.
+
+COPY ~%mod_folder%/tables/HAIRAASM.2da~ ~override~
+COPY ~%mod_folder%/tables/HAIRDARK.2da~ ~override~
+COPY ~%mod_folder%/tables/HAIRGOLD.2da~ ~override~
+COPY ~%mod_folder%/tables/HAIRGRAY.2da~ ~override~
+COPY ~%mod_folder%/tables/HAIRNORM.2da~ ~override~
+COPY ~%mod_folder%/tables/HAIRTIEF.2da~ ~override~
+COPY ~%mod_folder%/tables/HAIRWOOD.2da~ ~override~
+COPY ~%mod_folder%/tables/SKINAASM.2da~ ~override~
+COPY ~%mod_folder%/tables/SKINDARK.2da~ ~override~
+COPY ~%mod_folder%/tables/SKINGOLD.2da~ ~override~
+COPY ~%mod_folder%/tables/SKINGRAY.2da~ ~override~
+COPY ~%mod_folder%/tables/SKINNORM.2da~ ~override~
+COPY ~%mod_folder%/tables/SKINTIEF.2da~ ~override~
+COPY ~%mod_folder%/tables/SKINWOOD.2da~ ~override~

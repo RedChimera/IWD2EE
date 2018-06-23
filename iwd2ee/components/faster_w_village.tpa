@@ -1,0 +1,18 @@
+//NOTES
+
+// This component introduces several new means of skipping the Wandering Village. First, the Hunter's Ghost has some new lines.
+// If anyone in the party has a Diviner level or high Search or Wilderness Lore, they can claim they can get through the woods on their own, which sets a variable.
+COMPILE ~%mod_folder%/dlg/50HGHOST.d~
+// Second, Suoma also has new lines. The first time you meet her, you can intimidate her into telling you how to escape the woods.
+// After you save the children from Limha and report to Venla, you can also use Diplomacy to get Suoma to help you earlier than normal.
+// Both of these set a new variable to 1.
+COMPILE ~%mod_folder%/dlg/50SUOMA.d~
+// Next, we have an updated area script for the exit from the Wandering Village.
+// If you use Intimidate or Diplomacy on Suoma, you should be able to fight the dark treants early.
+// If you have high Search or Wilderness Lore or a Diviner in the party, you should be able to walk right to the exit.
+COPY ~%mod_folder%/bcs/AR5015.bcs~ ~override~
+// The latter method requires a custom script, which replicates some but not all of the effects of the normal cutscene that plays when you kill the treants.
+COPY ~%mod_folder%/bcs/USWVSKIP.bcs~ ~override~
+
+// This area file was used in a previous version, which simply made the area exit available by default.
+//COPY ~%mod_folder%/are/AR5015.are~ ~override~

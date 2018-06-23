@@ -1,0 +1,9 @@
+//NOTES
+// copies a Shawford dialog file that lets you skip his quests
+COMPILE ~%mod_folder%/dlg/12SHAWFO.d~ 
+
+// patches Olap's script so that the game does not end if you skip Shawford's quests and Olap dies during the invasion.
+EXTEND_BOTTOM ~12OLAP0.bcs~ ~%mod_folder%/baf/USSTOLAP.baf~
+
+COPY ~%mod_folder%/bcs/12OLAP0.bcs~ ~override~
+

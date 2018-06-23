@@ -1,0 +1,116 @@
+// Solaufein Eclipse Enemies
+
+// Radeal, the Eclipse Kensai
+// Nrodlek, the Eclilpse Ant-Paladin
+// Radnuht, the Eclipse Barbarian
+// Reffus, the Eclipse Cleric
+// Ylekilnu, the Eclipse Druid
+// Citpeks, the Eclipse Sorcerer
+
+@1 = ~*Ahem*. (What's my line again?) Ah, it is the Solaufein and the Spawn of Bhaal. I am Redael, servant of the Unholy Eclipse and an all-around impressive fellow.~
+  @2 = ~Please be more serious. Are you threatening me?~
+  @3 = ~(yawn) Where have I heard this sort of thing before?~
+  @4 = ~Hello, Redael. We greet you in peace.~
+  @5 = ~(attack while Redael is talking)~
+
+@6 =~I know, I know. You probably get this sort of thing all the time. A mysterious group of no more than six powerful humanoids teleports into the area and attempts to kill you for some unclear reason. In an incredible surprise move, you kill them instead. It happens to us all the time too.~
+
+@99 = ~Notice how you were paralyzed with awe by our flashy entrance while we took the time to move into position? Don't you hate that?~
+
+@7 = ~Yes. Unfortunately for you, we have taken quite an interest in Solaufein's impressive progress. Thanks to him, Eilistraee's moon is rising and hope abounds for good-hearted Drow everywhere.~
+
+@8 = ~Peace? You wish. Will this end in violence?~
+
+@9 = ~As servants of the Unholy Eclipse, we cannot allow this to happen. We will strike you down and smite Solaufein to the earth. We will block the light of the moon from his soul forever.~
+  @10 = ~You know, this has been tried before.~
+  @11 = ~We will defend Solaufein to the last! Prepare yourselves!~
+
+@12 = ~Yes, but not by us! Did you check out our cool color-coordinated uniforms? Don't you wish your group looked this imposing? (Reffus, could you start humming our dramatic theme song?)~
+
+  @13 = ~Hey boss, they may not look like much, but they've got a Holy Avenger. Are you sure we can take them?~
+  @14 = ~Nrodlek, you may not look like much either, but *so do you*. An Unholy Avenger, that is. I'm sure we'll be fine.~
+
+@15 = ~So, this is the almost-witty banter portion of the encounter. If I'm reading my notes correctly I should spend quite a bit of time in empty posturing and chest-puffing.~
+
+  @16 = ~Hey boss, they've got Celestial Fury. Are you sure we can handle this?~
+  @17 = ~Hey, who's the leader here? We can take them.~
+
+@18 = ~And while you're wasting time here, all of our carefully-placed spell protections are wearing off. I can't believe they elected you leader over me.~
+
+@19 = ~Can it mage-boy! When you've got a Hand, an Eye and a Robe named after you maybe you'll sway my opinion. Surely you've noticed that spells never run out while you're talking?~
+
+  @20 = ~Speaking of the Robe of Vecna, they have it and I don't. They'll be casting spells faster than you can blink. Are we up to this?~
+  @21 = ~Yes, my cynical friend. we're up to this. I'm sure your spells will be fast enough.~
+
+@22 = ~As I was saying, we serve the Unholy Eclipse. Our dark patron has granted us the power to walk through the stillness and strike you down while you stand helpless.~
+
+@23 = ~Hey, you're telling them all of our secrets. Doesn't this negate the advantage of our surprise ambush?~
+
+@24 = ~(sigh) No, it does not. We'll be fine. Plus I was being eerily cryptic. I'm sure they don't really know what's coming.~
+
+  @25 = ~Hey, I see Crom Faeyr over there: Silverblade's hammer. These guys must be pretty strong. I'm starting to worry.~
+  @26 = ~Haven't I always been right in the past? Don't worry, we can handle these clowns.~
+  
+@27 = ~I know we should have gone with my plan instead. They'd be captured by now!~
+
+@28 = ~Ylekilnu, your plan was to dig a pit trap in the ground and hope that they got caught by it. Trust me, these guys are not going to fall for that sort of ploy.~
+
+@29 = ~I'm curious, <CHARNAME>. Do you have this sort of dissention in your ranks?~
+
+  @30 = ~No, I rule with an iron fist.~
+  @31 = ~No, our mutual respect and shared experiences bind us together.~
+  @32 = ~Yes, sometimes. But it always works out in the end.~
+
+@33 = ~I should have known. (Ha, don't you love these ambiguous replies? Saves me the trouble of having to think up something original.)~
+
+@34 = ~Anyway, much like you (but we're slightly comelier) we spend quite a bit of time attacking other adventuring parties and gathering their loot. We've learned from the mistakes of others and our grand plan is all-neigh perfect.~
+
+  @35 = ~Boss, they've combined the Ravager and the Serpent Shaft. I don't want to be decapitated. Can't we back out now?~
+  @36 = ~No, no, no! You'll be fine, they'll never get the chance to hit you. And if they do I'll just have you raised later. Tut! As I was saying ...~
+
+@37 = ~For example, we did all of our spell preparations before the battle. Don't you just love it when you can shoot some enemy mage from afar before they get up Stoneskin or Protection from Magic Weapons?~
+
+@38 = ~Hey! I told you I was never fond of that strategy. Professional courtesy and all.~
+
+  @39 = ~Hey boss, that looks quite a bit like Foebane next to Fflar's Scabbard. I've heard bad things about that combination.~
+  @40 = ~Trust me, we can still take them. Don't tell me you're afraid of Larloch's Minor Drain?~
+
+@41 = ~In addition, we protect our Kensai (and that would be me) with Spirit Armor to offset his aversion to encumbering armor. We know to cast Breach against Stoneskin and Protection from Magic Weapons. We know to cast Spellstrike against magical defenses.~
+
+  @42 = ~Truly you have a dizzying intellect.~
+  @43 = ~None of that will help you.~
+  @44 = ~And I see that you're wearing the Girdle of Giant Ego as well.~
+
+@45 = ~Wait 'til I get going. Where was I?~
+@46 = ~Perhaps not, but it can't hurt.~
+@47 = ~Not bad! Let me write that down. At least it's not the Girdle of Moral Superiority. No false pretensions here.~
+
+@48 = ~We try hard to ignore summoned monsters, we go after weak-looking party members, and we use gloating monologues to reveal all of our plans in advance. We know that Improved Haste beats Whirlwind, that Mordenkainen's Sword rocks and that Dragon's Breath seems to affect everything.~
+
+@49 = ~We don't sound like very nice people.~
+
+@50 = ~We're not nice people. We're bandits cleverly disguised as priests. Or was that the other way around? Nice guys send all of their forces against you in small, manageable chunks. They also provide tight corridors so that only your toughest tanks are ever in any danger while the rest of your party uses ranged attacks from safety.~
+
+@51 = ~We worked our way up from humble beginnings. I can still remember when we spent all of our time ferrying useless packages back and forth between people who lived a few yards apart. Ah, my first weakly enchanted long sword. Those were the days.~
+
+@52 = ~Anyway, according to my notes I've finished the posturing part and now I just have to accidentally give away our secret weakness before the fight starts.~
+
+@53 = ~Couldn't we skip that step, just this once?~
+
+@54 = ~Actually, yes. Ever notice how Vampires always seem to keep stakes and weapons of disruption lying around in their lairs? If I were the master vampire of a city I'd ban all uses of wood. Come on, how smart do you have to be?~
+
+@55 = ~Or notice how those red-dragon lairs are replete with items and potions that grant resistance to fire? Magic Golems are always preceeded by a strange cache of non-magical weapons? You can always sleep right outside the door of your most dire foe's lair without being noticed?~
+
+@56 = ~Well no freebies for you! We're here for ...~
+
+@57 = ~Guys, why are we here again?~
+
+@58 = ~Solaufein! And the loot!~
+
+@59 = ~Right, we're servants of the Unholy Eclipse. We're here for Solaufein. We won't even waste time asking you to hand him over.~
+
+@60 = ~Let's dance!~
+
+@61 = ~Eilistraee, preserve me!~
+
+@62 = ~Hey, Redael, wake up!~
