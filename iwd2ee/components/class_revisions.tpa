@@ -1610,4 +1610,10 @@ COPY ~%mod_folder%/bam/USALVAMP.bam~ ~override~
 COPY ~%mod_folder%/bam/USALVIAL.bam~ ~override~
 COPY ~%mod_folder%/bam/USALZOMB.bam~ ~override~
 
+STRING_SET 36546 ~MAXIMIZED ATTACKS:
 
+You have learned how to maximize the effect of your attacks while performing a short concentrated attack.
+
+Prerequisites: 4 ranks in Concentration and Weapon Specialization in 2 weapons.
+
+Benefit: All attacks do maximum damage and the user gains the benefits of Executioner's Eyes (+4 to attack and critical hit rolls) for 1 round per level.~
