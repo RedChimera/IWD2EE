@@ -705,7 +705,7 @@ Casting Time: 5
 Area of Effect: Caster
 Saving Throw: None
 
-Through this spell, the caster creates tiny balls of electricity that can be hurled in combat.  Upon a successful ranged touch attack (e.g. an attack that ignores armor bonuses) the ball will burst and deal electricity damage to all creatures in a 5-foot radius.  If the caster fails her attack bonus at +5, the ball will dissipate harmlessly.  Each ball deals 1d3 damage per three caster levels with a Reflex save for half (DC equal to 10 plus the caster's level divided by 3). The caster may throw as many balls as she likes until the spell expires.~
+Through this spell, the caster creates tiny balls of electricity that can be hurled in combat.  Upon a successful ranged touch attack (e.g. an attack that ignores armor bonuses) the ball will burst and deal 3d3 electricity damage to all creatures in a 5-foot radius.  If the caster fails her attack bonus at +5, the ball will dissipate harmlessly.  The caster may throw as many balls as she likes until the spell expires.~
 @1120    = ~Flesh to Stone~
 @1121    = ~Flesh to Stone 
 (Transmutation) 
@@ -760,7 +760,7 @@ Casting Time: 9
 Area of Effect: Special
 Saving Throw: Special
 
-This spell enables the caster to create a black, blade-shaped, planar rift, about three feet long.  It jumps into the caster's hand and is used as a normal sword, remaining there for the duration of the spell.  The sword acts as a +10 weapon and deals 2d12 damage per strike as well as draining 1d6 hit points from the victim and granting it to the caster.  Further, the blade drains a single level from the target with each hit on a failed Fortitude save, imposing a -1 penalty to hit and damage and a -5 penalty to HP.  The save DC is equal to the caster's level.~
+This spell enables the caster to create a black, blade-shaped, planar rift, about three feet long.  It jumps into the caster's hand and is used as a normal sword, remaining there for the duration of the spell.  The sword acts as a +10 weapon and deals 2d12 damage per strike as well as draining 1d8 hit points from the victim and granting it to the caster.  Further, the blade has a 25% chance of draining a single level from the target, imposing a -1 penalty to hit and damage and a -5 penalty to HP.~
 @1130    = ~Otiluke's Freezing Sphere~
 @1131    = ~Otiluke's Freezing Sphere 
 (Evocation)
@@ -1804,7 +1804,7 @@ Casting Time: 1 round
 Area of Effect: 1 creature
 Saving Throw: Fortitude partial
 
-This spell imbues the caster's hands with destructive negative energy that will release when a successful touch attack is made.  This attack will instantly slay a living creature unless a Fortitude save is made, in which case the creature takes 3d6 points of magic damage instead.  The Fortitude DC is equal to 15 plus the caster's level divided by 2. Thus, a level 10 Slay Living attack has a Fortitude DC of 20.  This spell has no affect on undead or constructs.~
+This spell imbues the caster's hands with destructive negative energy that will release when a successful touch attack is made.  This attack will instantly slay a living creature unless a Fortitude save is made, in which case the creature takes 3d6 + 1/level points of magic damage instead.  The Fortitude DC is equal to 15 plus the caster's level divided by 2. Thus, a level 10 Slay Living attack has a Fortitude DC of 20.  This spell has no affect on undead or constructs.~
 @1760    = ~Harm~
 @1761    = ~Harm 
 (Necromancy) 
