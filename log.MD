@@ -1,25 +1,10 @@
 # Log
 
+2018-07-02
 
-2018-06-19
+Version Alpha 1.00.12
 
-Version 1.00.09
-
-- fix for Snake Lymph from Concoct Potions
-
-- fixed True Seeing scroll usability
-
-- fixes for Great Shout and Lower Resistance nerf
-
-- haste fix, should be in Spell Revisions
-
-- Protection from Cold fixes for Spell Revisions
-
-2018-06-12
-
-Version 1.00.08
-
-- Numerous fixes
+- Fixes for  magically created weapons
 
 2018-06-12
 
