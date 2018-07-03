@@ -24,6 +24,7 @@ LANGUAGE   ~English~
            ~iwd2ee/tra/English/creature_rebalancing.tra~
            ~iwd2ee/tra/English/faster_areas.tra~
            ~iwd2ee/tra/English/z_concoct_potions.tra~
+		   ~iwd2ee/tra/English/npc_core.tra~
 
 
 
@@ -240,5 +241,11 @@ BEGIN @36
 BEGIN @37
 
       INCLUDE ~%mod_folder%/components/thvara_bluff.tpa~      //~Bluff Thvara~
+	  
+//NPC Core
+
+BEGIN @38
+
+      INCLUDE ~%mod_folder%/components/npc_core.tpa~      //~NPC Core~
 
 
