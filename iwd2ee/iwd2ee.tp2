@@ -1,7 +1,7 @@
 BACKUP ~iwd2ee/backup~
 AUTHOR ~ced2168@columbia.edu~
 
-VERSION ~1.00.12~
+VERSION ~1.01.00~
 
 //MODDER
 
@@ -248,4 +248,9 @@ BEGIN @38
 
       INCLUDE ~%mod_folder%/components/npc_core.tpa~      //~NPC Core~
 
+//Cosmetic improvements to the GUI and New loading screens
+
+BEGIN @39
+
+      INCLUDE ~%mod_folder%/components/gui.tpa~      //~NPC Core~
 

@@ -1,5 +1,13 @@
 # Log
 
+Version Alpha 1.01.00
+
+2018-07-12
+
+- Added Cosmetic Component and copied over GUICHP0B.MOS and GUICHP2B.MOS
+
+- Updated Weidu to 245
+
 2018-07-02
 
 Version Alpha 1.00.12
