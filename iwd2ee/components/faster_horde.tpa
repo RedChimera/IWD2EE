@@ -1,13 +1,344 @@
 //NOTES
 // patches gates to be openable by force
 
+OUTER_PATCH us_faster_horde_variables BEGIN
+	regionsize=0xc4
+	doorsize=0xc8
+END
+DEFINE_PATCH_FUNCTION ~ALTER_AREA_REGION_IWD2~
+	INT_VAR
+		type=~-1~
+		cursor=~-1~
+		trap_detect=~-1~
+		trap_remove=~-1~
+		trapped=~-1~
+		detected=~-1~
+		all_flags=~-1~
+		flag_locked=~-1~
+		flag_resets=~-1~
+		flag_party_required=~-1~
+		flag_trap_detectable=~-1~
+		flag_trap_enemies=~-1~
+		flag_tutorial=~-1~
+		flag_trap_npcs=~-1~
+		flag_silent=~-1~
+		flag_deactivated=~-1~
+		flag_impassable_npc=~-1~
+		flag_activation_point=~-1~
+		flag_connect_to_door=~-1~
+		bounding_left=~-1~
+		bounding_top=~-1~
+		bounding_right=~-1~
+		bounding_bottom=~-1~
+		info_point=99999999
+		launch_x=~-1~
+		launch_y=~-1~
+		activate_x=~-1~
+		activate_y=~-1~
+		alternate_x=~-1~
+		alternate_y=~-1~
+	STR_VAR
+		region_name=~~
+		destination_area=~same~
+		entrance_name=~same~
+		region_key=~same~
+		region_script=~same~
+BEGIN
+	SET region_name_length = (STRING_LENGTH ~%region_name%~)
+		PATCH_IF (region_name_length = 0) BEGIN
+			PATCH_FAIL ~No region name given for function ALTER_AREA_REGION_IWD2 ~
+		END
+	SET region_found = 0
+	READ_SHORT 0x6a regionnumber
+	READ_LONG 0x6c regionoffset
+	FOR (i = 0; i < regionnumber; ++i) BEGIN
+		SET offset = regionoffset + (i * regionsize)
+		READ_ASCII offset name_of_region (region_name_length)
+		PATCH_IF (~%name_of_region%~ STRING_EQUAL_CASE ~%region_name%~) BEGIN
+			region_found = 1
+			PATCH_IF (type != (0 - 1)) BEGIN
+				WRITE_SHORT (offset + 0x20) type
+			END
+			PATCH_IF (bounding_left != (0 - 1)) BEGIN
+				WRITE_SHORT (offset + 0x22) bounding_left
+			END
+			PATCH_IF (bounding_top != (0 - 1)) BEGIN
+				WRITE_SHORT (offset + 0x24) bounding_top
+			END
+			PATCH_IF (bounding_right != (0 - 1)) BEGIN
+				WRITE_SHORT (offset + 0x26) bounding_right
+			END
+			PATCH_IF (bounding_bottom != (0 - 1)) BEGIN
+				WRITE_SHORT (offset + 0x28) bounding_bottom
+			END
+			PATCH_IF (cursor != (0 - 1)) BEGIN
+				WRITE_LONG (offset + 0x34) cursor
+			END
+			PATCH_IF (!(~%destination_area%~ STRING_EQUAL ~same~)) BEGIN
+				WRITE_ASCIIE (offset + 0x38) ~%destination_area%~ #8
+			END
+			PATCH_IF (!(~%entrance_name%~ STRING_EQUAL ~same~)) BEGIN
+				WRITE_ASCIIE (offset + 0x40) ~%entrance_name%~ #32
+			END
+			PATCH_IF (info_point != 99999999) BEGIN
+				WRITE_LONG (offset + 0x64) info_point
+			END
+			PATCH_IF (trap_detect != (0 - 1)) BEGIN
+				WRITE_SHORT (offset + 0x68) trap_detect
+			END
+			PATCH_IF (trap_remove != (0 - 1)) BEGIN
+				WRITE_SHORT (offset + 0x6a) trap_remove
+			END
+			PATCH_IF (trapped != (0 - 1)) BEGIN
+				WRITE_SHORT (offset + 0x6c) trapped
+			END
+			PATCH_IF (detected != (0 - 1)) BEGIN
+				WRITE_SHORT (offset + 0x6e) detected
+			END
+			PATCH_IF (launch_x != (0 - 1)) BEGIN
+				WRITE_SHORT (offset + 0x70) launch_x
+			END
+			PATCH_IF (launch_y != (0 - 1)) BEGIN
+				WRITE_SHORT (offset + 0x72) launch_y
+			END
+			PATCH_IF (!(~%region_key%~ STRING_EQUAL ~same~)) BEGIN
+				WRITE_ASCIIE (offset + 0x74) ~%region_key%~ #8
+			END
+			PATCH_IF (!(~%region_script%~ STRING_EQUAL ~same~)) BEGIN
+				WRITE_ASCIIE (offset + 0x7c) ~%region_script%~ #8
+			END
+			PATCH_IF (activate_x != (0 - 1)) BEGIN
+				WRITE_SHORT (offset + 0x84) activate_x
+			END
+			PATCH_IF (activate_y != (0 - 1)) BEGIN
+				WRITE_SHORT (offset + 0x86) activate_y
+			END
+			PATCH_IF (alternate_x != (0 - 1)) BEGIN
+				WRITE_LONG (offset + 0x88) alternate_x
+			END
+			PATCH_IF (alternate_y != (0 - 1)) BEGIN
+				WRITE_LONG (offset + 0x9c) alternate_y
+			END
+			PATCH_IF (all_flags != (0 - 1)) BEGIN
+				WRITE_LONG (offset + 0x60) all_flags
+			END
+			i = regionnumber
+		END
+	END
+	PATCH_IF (region_found = 0) BEGIN
+		PATCH_WARN ~No region called %region_name% was found.~
+	END
+
+END
+
+COPY ~%mod_folder%/bcs/bcs_faster_horde~ ~override~
+
 COPY_EXISTING ~AR3000.are~ ~override~
- WRITE_BYTE 0x9594 99
- WRITE_BYTE 0x9595 00
- WRITE_BYTE 0x965c 85
+/*
+	WRITE_BYTE 0x9594 99
+	WRITE_BYTE 0x9595 00
+	WRITE_BYTE 0x965c 85
+*/
+	READ_LONG 0xb4 doornumber
+	READ_LONG 0xb8 dooroffset
+	FOR (i = 0; i < doornumber; ++i) BEGIN
+		SET offset = dooroffset + (i * doorsize)
+		READ_ASCII (offset + 0x20) doorid (8)
+		PATCH_IF (~%doorid%~ STRING_EQUAL ~MAINGATE~) BEGIN
+			WRITE_LONG (offset + 0x8c) 99
+		END
+		ELSE PATCH_IF (~%doorid%~ STRING_EQUAL ~SIDEGATE~) BEGIN
+			WRITE_LONG (offset + 0x8c) 99
+		END
+	END
+/*
+	LPF ALTER_AREA_DOOR INT_VAR lock_difficulty=99 STR_VAR door_name=~AR3000_Door1_MainGate~ END
+	LPF ALTER_AREA_DOOR INT_VAR lock_difficulty=85 STR_VAR door_name=~AR3000_Door2_SideGate~ END
+*/
 BUT_ONLY
 
 COPY_EXISTING ~AR3100.are~ ~override~
- WRITE_BYTE 0x7744 97
- WRITE_BYTE 0x76e0 90
+/*
+	LPF ALTER_AREA_DOOR INT_VAR
+flag_open=1
+flag_locked=0
+flag_forced=0
+flag_no_close=1
+flag_located=1
+flag_secret=0
+flag_detected=0
+flag_no_look=0
+flag_uses_key=0
+flag_sliding=0
+STR_VAR door_name=~AR3100_Door3_InnerGate~ END
+
+	LPF ALTER_AREA_DOOR INT_VAR lock_difficulty=110 STR_VAR door_name=~AR3100_Door2_InnerDoor~ END
+*/
+
+	READ_LONG 0xb4 doornumber
+	READ_LONG 0xb8 dooroffset
+	FOR (i = 0; i < doornumber; ++i) BEGIN
+		SET offset = dooroffset + (i * doorsize)
+		READ_ASCII (offset + 0x20) doorid (5)
+		PATCH_IF (~%doorid%~ STRING_EQUAL ~GATE1~) BEGIN
+			WRITE_LONG (offset + 0x28) 0x61
+		END
+		ELSE PATCH_IF (~%doorid%~ STRING_EQUAL ~DOOR1~) BEGIN
+			WRITE_LONG (offset + 0x8c) 110
+		END
+	END
 BUT_ONLY
+
+
+COPY_EXISTING ~AR3100.are~ ~override~
+	READ_LONG 0xb4 doornumber
+	READ_LONG 0xb8 dooroffset
+	FOR (i = 0; i < doornumber; ++i) BEGIN
+		SET offset = dooroffset + (i * doorsize)
+		READ_ASCII (offset + 0x20) doorid (7)
+		PATCH_IF (~%doorid%~ STRING_EQUAL ~GRATING~) BEGIN
+			LPF fj_are_structure INT_VAR fj_delete_mode=i STR_VAR fj_structure_type=~door~ END
+			--doornumber
+			--i
+		END
+	END
+
+	LPF fj_are_structure INT_VAR
+fj_flags=0x406
+fj_open_box_left=2159
+fj_open_box_top=478
+fj_open_box_right=2257
+fj_open_box_bottom=550
+fj_closed_box_left=2113
+fj_closed_box_top=493
+fj_closed_box_right=2234
+fj_closed_box_bottom=575
+fj_cursor_idx=30
+fj_trap_loc_x=2100
+fj_trap_loc_y=450
+fj_open_loc_x=2241
+fj_open_loc_y=572
+fj_closed_loc_x=2137
+fj_closed_loc_y=586
+fj_door_open_vert_0=(2159 + (484 << 16))
+fj_door_open_vert_1=(2249 + (478 << 16))
+fj_door_open_vert_2=(2257 + (544 << 16))
+fj_door_open_vert_3=(2167 + (550 << 16))
+fj_door_closed_vert_0=(2154 + (493 << 16))
+fj_door_closed_vert_1=(2234 + (520 << 16))
+fj_door_closed_vert_2=(2195 + (575 << 16))
+fj_door_closed_vert_3=(2113 + (549 << 16))
+fj_cell_open_vert_0=0
+fj_cell_closed_vert_0=0
+STR_VAR fj_structure_type=~door~ fj_name=~AR3100_Door1_Grate~ fj_door_wed_id=~GRATING~ END
+/*
+	LPF ALTER_AREA_DOOR INT_VAR lock_difficulty=65 STR_VAR door_name=~AR3100_Door1_Grate~ END
+*/
+	READ_LONG 0xb4 doornumber
+	READ_LONG 0xb8 dooroffset
+	FOR (i = 0; i < doornumber; ++i) BEGIN
+		SET offset = dooroffset + (i * doorsize)
+		READ_ASCII (offset + 0x20) doorid (7)
+		PATCH_IF (~%doorid%~ STRING_EQUAL ~GRATING~) BEGIN
+			WRITE_LONG (offset + 0x8c) 65
+		END
+	END
+
+	LPF ALTER_AREA_REGION_IWD2 INT_VAR type=2 cursor=28 all_flags=0x204 activate_x=2137 activate_y=586 info_point=(0 - 1) STR_VAR region_name=~Grate~ destination_area=~AR3101~ entrance_name=~USGR3101~ END
+BUT_ONLY
+
+COPY_EXISTING ~AR3101.are~ ~override~
+	LPF fj_are_structure INT_VAR fj_loc_x=2209 fj_loc_y=934 fj_orientation=10 STR_VAR fj_structure_type=~entrance~ fj_name=~USGR3101~ END
+	LPF fj_are_structure INT_VAR
+fj_type=0
+fj_flags=0x82
+fj_trap_active=1
+fj_box_left=1679
+fj_box_top=959
+fj_box_right=1869
+fj_box_bottom=1059
+fj_cursor_idx=0
+fj_trap_loc_x=2100
+fj_trap_loc_y=450
+fj_loc_x=781
+fj_loc_y=805
+fj_vertex_0=(1723 + (959 << 16))
+fj_vertex_1=(1869 + (1009 << 16))
+fj_vertex_2=(1831 + (1059 << 16))
+fj_vertex_3=(1679 + (1011 << 16))
+STR_VAR fj_structure_type=~region~ fj_name=~US_31Guthma_Cutscene~ fj_reg_script=~US31GCUT~ END
+
+	LPF fj_are_structure INT_VAR fj_trap_active=1 STR_VAR fj_structure_type=~region~ fj_name=~US_31Backdoor~ fj_reg_script=~US31BAKD~ END
+BUT_ONLY
+
+COPY_EXISTING ~us31pwd0.bcs~ ~override/31pward0.bcs~
+
+<<<<<<<< .../script.baf
+IF
+	True()
+THEN
+	RESPONSE #100
+		CutSceneId(Protagonist)
+		SetSavedLocation()
+		Wait(4)
+		HideCreature(Myself,TRUE)
+		JumpToPoint([786.816])
+END
+
+>>>>>>>>
+EXTEND_BOTTOM ~31cguth0.bcs~ ~.../script.baf~
+
+<<<<<<<< .../script.baf
+IF
+	True()
+THEN
+	RESPONSE #100
+		CutSceneId(Protagonist)
+		Wait(4)
+		JumpToSavedLocation()
+		HideCreature(Myself,FALSE)
+END
+
+>>>>>>>>
+EXTEND_BOTTOM ~31cguth3.bcs~ ~.../script.baf~
+
+COPY_EXISTING ~31cguth1.bcs~ ~override~
+	DECOMPILE_BCS_TO_BAF
+		REPLACE_TEXTUALLY CASE_INSENSITIVE ~JumpToPoint(\[504.1170\])
+~ ~~
+		REPLACE_TEXTUALLY CASE_INSENSITIVE ~JumpToPoint(\[536.1182\])
+~ ~~
+		REPLACE_TEXTUALLY CASE_INSENSITIVE ~JumpToPoint(\[488.1194\])
+~ ~~
+		REPLACE_TEXTUALLY CASE_INSENSITIVE ~JumpToPoint(\[520.1206\])
+~ ~~
+		REPLACE_TEXTUALLY CASE_INSENSITIVE ~JumpToPoint(\[472.1218\])
+~ ~~
+		REPLACE_TEXTUALLY CASE_INSENSITIVE ~JumpToPoint(\[504.1231\])
+~ ~~
+	COMPILE_BAF_TO_BCS
+
+COPY_EXISTING ~31cguth3.bcs~ ~override~
+	DECOMPILE_BCS_TO_BAF
+		REPLACE_TEXTUALLY CASE_INSENSITIVE ~MoveViewPointUntilDone(\[478.1197\],20)
+~ ~~
+	COMPILE_BAF_TO_BCS
+
+COPY_EXISTING ~31orchsb.cre~ ~override~ ~31buggut.cre~ ~override~
+	ADD_CRE_ITEM ~30sstone~ #0 #0 #0 ~NONE~ ~INV4~ //Wardstone that bypasses all wards
+
+COPY_EXISTING ~us31pwd0.bcs~ ~override/31pward0.bcs~
+
+<<<<<<<< .../script.baf
+IF
+	PartyHasItem("30sstone")  // Black Ward Stone
+	Entered([PC])
+THEN
+	RESPONSE #100
+		NoAction()
+END
+
+>>>>>>>>
+EXTEND_TOP ~30pward1.bcs~ ~.../script.baf~
+EXTEND_TOP ~30pward2.bcs~ ~.../script.baf~
+EXTEND_TOP ~30pward3.bcs~ ~.../script.baf~
