@@ -475,14 +475,21 @@ COPY_EXISTING ~63NABI.cre~ ~override~
 BUT_ONLY_IF_IT_CHANGES
 
 // Changing race categories affects certain weapons and items which deal extra damage, or cannot affect, creatures of a certain type. This replaces those items and spells with adjusted versions that should target the right categories.
-COPY ~%mod_folder%/race/11AX1HKS.itm~ ~override~
-  SAY NAME1 @2865
-  SAY NAME2 @2865
-  SAY DESC @2866
-COPY ~%mod_folder%/race/11HFAXKS.itm~ ~override~
-  SAY NAME1 @2867
-  SAY NAME2 @2867
-  SAY DESC @2868
+ACTION_IF (MOD_IS_INSTALLED ~iwd2ee.tp2~ ~4~) BEGIN //If Item Revisions is installed
+	COPY_EXISTING ~ZZL6GH.itm~ ~override~
+  		SAY DESC @10736
+	COPY_EXISTING ~11HFDGGH.itm~ ~override~
+		SAY DESC @10740
+	COPY_EXISTING ~ZZI6SC.itm~ ~override~
+		SAY DESC @11290
+	COPY_EXISTING ~ZZI6HFSC.itm~ ~override~
+		SAY DESC @11294
+	COPY_EXISTING ~ZZR6WB.itm~ ~override~ ~ZZR6HFWB.itm~ ~override~
+			LPF ALTER_EFFECT INT_VAR check_headers=1 check_globals=0 match_opcode=177 match_parameter1=1 match_parameter2=4 parameter1=191 END
+	COPY_EXISTING ~USSWDTWD.eff~ ~override~ ~USSWDTWH.eff~ ~override~
+		WRITE_LONG 0x1c 191
+END
+
 COPY ~%mod_folder%/race/USSTSL02.itm~ ~override~
 COPY ~%mod_folder%/race/USSTHARM.itm~ ~override~
 COPY ~%mod_folder%/race/USSTDEST.itm~ ~override~

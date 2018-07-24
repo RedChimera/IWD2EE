@@ -1,1149 +1,3245 @@
 //NOTES
 //
-COPY ~%mod_folder%/itm/00AMUL12.itm~ ~override~
-COPY ~%mod_folder%/itm/00AMUL14.itm~ ~override~
-COPY ~%mod_folder%/itm/00AMULBT.itm~ ~override~
-COPY ~%mod_folder%/itm/00AMULDS.itm~ ~override~
-COPY ~%mod_folder%/itm/00AMULES.itm~ ~override~
-COPY ~%mod_folder%/itm/00AROW05.itm~ ~override~
-COPY ~%mod_folder%/itm/00AROW08.itm~ ~override~
-COPY ~%mod_folder%/itm/00AROW09.itm~ ~override~
-COPY ~%mod_folder%/itm/00AROW10.itm~ ~override~
-COPY ~%mod_folder%/itm/00AROW88.itm~ ~override~
-COPY ~%mod_folder%/itm/00AROW90.itm~ ~override~
-COPY ~%mod_folder%/itm/00AROW97.itm~ ~override~
-COPY ~%mod_folder%/itm/00AROW99.itm~ ~override~
-COPY ~%mod_folder%/itm/00AX1H05.itm~ ~override~
-COPY ~%mod_folder%/itm/00AX1H74.itm~ ~override~
-COPY ~%mod_folder%/itm/00AX1H75.itm~ ~override~
-COPY ~%mod_folder%/itm/00AX1H77.itm~ ~override~
-COPY ~%mod_folder%/itm/00AX1H81.itm~ ~override~
-COPY ~%mod_folder%/itm/00AX1H96.itm~ ~override~
-COPY ~%mod_folder%/itm/00BARD04.itm~ ~override~
-COPY ~%mod_folder%/itm/00BARD05.itm~ ~override~
-COPY ~%mod_folder%/itm/00BARD06.itm~ ~override~
-COPY ~%mod_folder%/itm/00BARD08.itm~ ~override~
-COPY ~%mod_folder%/itm/00BARDRS.itm~ ~override~
-COPY ~%mod_folder%/itm/00BELTAD.itm~ ~override~
-COPY ~%mod_folder%/itm/00BOLT05.itm~ ~override~
-COPY ~%mod_folder%/itm/00BOLT08.itm~ ~override~
-COPY ~%mod_folder%/itm/00BOLT93.itm~ ~override~
-COPY ~%mod_folder%/itm/00BOLT94.itm~ ~override~
-COPY ~%mod_folder%/itm/00BOLT95.itm~ ~override~
-COPY ~%mod_folder%/itm/00BOLT96.itm~ ~override~
-COPY ~%mod_folder%/itm/00BOOT01.itm~ ~override~
-COPY ~%mod_folder%/itm/00BOOT02.itm~ ~override~
-COPY ~%mod_folder%/itm/00BOOTSB.itm~ ~override~
-COPY ~%mod_folder%/itm/00BOWC92.itm~ ~override~
-COPY ~%mod_folder%/itm/00BOWC94.itm~ ~override~
-COPY ~%mod_folder%/itm/00BOWC95.itm~ ~override~
-  SAY NAME1 @2861
-  SAY NAME2 @2861
-  SAY DESC @2862
-COPY ~%mod_folder%/itm/00BOWC96.itm~ ~override~
-  SAY NAME1 @2751
-  SAY NAME2 @2751
-  SAY DESC @2752
-COPY ~%mod_folder%/itm/00BOWL95.itm~ ~override~
-COPY ~%mod_folder%/itm/00BOWL96.itm~ ~override~
-COPY ~%mod_folder%/itm/00BOWL97.itm~ ~override~
-  SAY NAME1 @2859
-  SAY NAME2 @2859
-  SAY DESC @2860
-COPY ~%mod_folder%/itm/00BOWS86.itm~ ~override~
-COPY ~%mod_folder%/itm/00BOWS87.itm~ ~override~
-COPY ~%mod_folder%/itm/00BOWS88.itm~ ~override~
-COPY ~%mod_folder%/itm/00BOWS92.itm~ ~override~
-COPY ~%mod_folder%/itm/00BRAC03.itm~ ~override~
-COPY ~%mod_folder%/itm/00BRAC04.itm~ ~override~
-COPY ~%mod_folder%/itm/00BRAC11.itm~ ~override~
-COPY ~%mod_folder%/itm/00BRACLA.itm~ ~override~
-COPY ~%mod_folder%/itm/00BRACRB.itm~ ~override~
-COPY ~%mod_folder%/itm/00BULL04.itm~ ~override~
-COPY ~%mod_folder%/itm/00BULL87.itm~ ~override~
-COPY ~%mod_folder%/itm/00BULL88.itm~ ~override~
-COPY ~%mod_folder%/itm/00BULL92.itm~ ~override~
-COPY ~%mod_folder%/itm/00BULL93.itm~ ~override~
-COPY ~%mod_folder%/itm/00BULL94.itm~ ~override~
-COPY ~%mod_folder%/itm/00BULL95.itm~ ~override~
-COPY ~%mod_folder%/itm/00BULL96.itm~ ~override~
-COPY ~%mod_folder%/itm/00BWLX96.itm~ ~override~
-COPY ~%mod_folder%/itm/00CLCKNV.itm~ ~override~
-COPY ~%mod_folder%/itm/00CLCKSB.itm~ ~override~
-COPY ~%mod_folder%/itm/00CLCKWC.itm~ ~override~
-COPY ~%mod_folder%/itm/00CLUB82.itm~ ~override~
-COPY ~%mod_folder%/itm/00CLUB90.itm~ ~override~
-COPY ~%mod_folder%/itm/00CLUB92.itm~ ~override~
-COPY ~%mod_folder%/itm/00CLUB95.itm~ ~override~
-COPY ~%mod_folder%/itm/00DAGG82.itm~ ~override~
-COPY ~%mod_folder%/itm/00DAGG84.itm~ ~override~
-COPY ~%mod_folder%/itm/00DAGG85.itm~ ~override~
-COPY ~%mod_folder%/itm/00DAGG86.itm~ ~override~
-COPY ~%mod_folder%/itm/00DAGG93.itm~ ~override~
-COPY ~%mod_folder%/itm/00DAGG94.itm~ ~override~
-COPY ~%mod_folder%/itm/00DAGG97.itm~ ~override~
-COPY ~%mod_folder%/itm/00DAGG99.itm~ ~override~
-COPY ~%mod_folder%/itm/00DAGGFW.itm~ ~override~
-COPY ~%mod_folder%/itm/00DAGGPF.itm~ ~override~
-COPY ~%mod_folder%/itm/00DART03.itm~ ~override~
-COPY ~%mod_folder%/itm/00DART05.itm~ ~override~
-COPY ~%mod_folder%/itm/00DART83.itm~ ~override~
-COPY ~%mod_folder%/itm/00DART84.itm~ ~override~
-COPY ~%mod_folder%/itm/00DART96.itm~ ~override~
-COPY ~%mod_folder%/itm/00DARTAT.itm~ ~override~
-COPY ~%mod_folder%/itm/00DARTDD.itm~ ~override~
-COPY ~%mod_folder%/itm/00FLAL85.itm~ ~override~
-COPY ~%mod_folder%/itm/00FLAL87.itm~ ~override~
-//COPY ~%mod_folder%/itm/00FLAL93.itm~ ~override~
-COPY ~%mod_folder%/itm/00GENMP.itm~ ~override~
-COPY ~%mod_folder%/itm/00HALB93.itm~ ~override~
 
-COPY ~%mod_folder%/itm/63HALBPB.itm~ ~override~
-  SAY NAME1 @2740
-  SAY NAME2 @2740
-  SAY DESC @2741
-COPY ~%mod_folder%/itm/63HFHBPB.itm~ ~override~
-  SAY NAME1 @2742
-  SAY NAME2 @2742
-  SAY DESC @2743
+COPY ~%mod_folder%/itm/itm_item_revisions~ ~override~
 
-COPY ~%mod_folder%/itm/00HALB98.itm~ ~override~
-COPY ~%mod_folder%/itm/00HALBHL.itm~ ~override~
-COPY ~%mod_folder%/itm/00HAMM89.itm~ ~override~
-COPY ~%mod_folder%/itm/00HAMM90.itm~ ~override~
-COPY ~%mod_folder%/itm/00HAMM95.itm~ ~override~
-COPY ~%mod_folder%/itm/00HAMM96.itm~ ~override~
-COPY ~%mod_folder%/itm/00HAMM97.itm~ ~override~
-COPY ~%mod_folder%/itm/00HAMMSC.itm~ ~override~
-COPY ~%mod_folder%/itm/00HAMT01.itm~ ~override~
-COPY ~%mod_folder%/itm/00HAMT02.itm~ ~override~
-COPY ~%mod_folder%/itm/00HAMT03.itm~ ~override~
-COPY ~%mod_folder%/itm/00HAMT04.itm~ ~override~
-COPY ~%mod_folder%/itm/00HAMT05.itm~ ~override~
-COPY ~%mod_folder%/itm/00HAMT06.itm~ ~override~
-COPY ~%mod_folder%/itm/00HAMT07.itm~ ~override~
-COPY ~%mod_folder%/itm/00HELM01.itm~ ~override~
-COPY ~%mod_folder%/itm/00HELM02.itm~ ~override~
-COPY ~%mod_folder%/itm/00HELM03.itm~ ~override~
-COPY ~%mod_folder%/itm/00HELM04.itm~ ~override~
-COPY ~%mod_folder%/itm/00HELM05.itm~ ~override~
-COPY ~%mod_folder%/itm/00HELM06.itm~ ~override~
-COPY ~%mod_folder%/itm/00HELM07.itm~ ~override~
-COPY ~%mod_folder%/itm/00HELMBH.itm~ ~override~
-COPY ~%mod_folder%/itm/00HELMDS.itm~ ~override~
-COPY ~%mod_folder%/itm/00HFAMBT.itm~ ~override~
-COPY ~%mod_folder%/itm/00HFAMBT.itm~ ~override~
-COPY ~%mod_folder%/itm/00HFAMDS.itm~ ~override~
-COPY ~%mod_folder%/itm/00HFAMES.itm~ ~override~
-COPY ~%mod_folder%/itm/00HFAMGC.itm~ ~override~
-COPY ~%mod_folder%/itm/00HFAMMP.itm~ ~override~
-COPY ~%mod_folder%/itm/00HFAXBA.itm~ ~override~
-COPY ~%mod_folder%/itm/00HFAXBB.itm~ ~override~
-COPY ~%mod_folder%/itm/00HFBCLA.itm~ ~override~
-COPY ~%mod_folder%/itm/00HFBCRB.itm~ ~override~
-COPY ~%mod_folder%/itm/00HFAXSP.itm~ ~override~
-COPY ~%mod_folder%/itm/00HFBD02.itm~ ~override~
-COPY ~%mod_folder%/itm/00HFBD04.itm~ ~override~
-COPY ~%mod_folder%/itm/00HFBD05.itm~ ~override~
-COPY ~%mod_folder%/itm/00HFBD06.itm~ ~override~
-COPY ~%mod_folder%/itm/00HFBD07.itm~ ~override~
-COPY ~%mod_folder%/itm/00HFBLSR.itm~ ~override~
-COPY ~%mod_folder%/itm/00HFBTAD.itm~ ~override~
-COPY ~%mod_folder%/itm/00HFBTSB.itm~ ~override~
-COPY ~%mod_folder%/itm/00HFCBHK.itm~ ~override~
-COPY ~%mod_folder%/itm/00HFCKFC.itm~ ~override~
-COPY ~%mod_folder%/itm/00HFCKMB.itm~ ~override~
-COPY ~%mod_folder%/itm/00HFCKSB.itm~ ~override~
-COPY ~%mod_folder%/itm/00HFCKWC.itm~ ~override~
-COPY ~%mod_folder%/itm/00HFDGFW.itm~ ~override~
-COPY ~%mod_folder%/itm/00HFDGPF.itm~ ~override~
-COPY ~%mod_folder%/itm/00HFDTAT.itm~ ~override~
-COPY ~%mod_folder%/itm/00HFDTDD.itm~ ~override~
-COPY ~%mod_folder%/itm/00HFFLSR.itm~ ~override~
-COPY ~%mod_folder%/itm/00HFGNMP.itm~ ~override~
-COPY ~%mod_folder%/itm/00HFHBHL.itm~ ~override~
-COPY ~%mod_folder%/itm/00HFHMBH.itm~ ~override~
-COPY ~%mod_folder%/itm/00HFHMDS.itm~ ~override~
-COPY ~%mod_folder%/itm/00HFHMSM.itm~ ~override~
-COPY ~%mod_folder%/itm/00HFHRSC.itm~ ~override~
-COPY ~%mod_folder%/itm/00HFLXIM.itm~ ~override~
-COPY ~%mod_folder%/itm/00HFMC38.itm~ ~override~
-COPY ~%mod_folder%/itm/00HFMEAR.itm~ ~override~
-COPY ~%mod_folder%/itm/00HFMRMG.itm~ ~override~
-COPY ~%mod_folder%/itm/00HFMRMS.itm~ ~override~
-COPY ~%mod_folder%/itm/00HFMRSS.itm~ ~override~
-COPY ~%mod_folder%/itm/00HFRBMR.itm~ ~override~
-COPY ~%mod_folder%/itm/00HFRBRA.itm~ ~override~
-COPY ~%mod_folder%/itm/00HFRGAR.itm~ ~override~
-COPY ~%mod_folder%/itm/00HFRGCR.itm~ ~override~
-COPY ~%mod_folder%/itm/00HFSBBS.itm~ ~override~
-COPY ~%mod_folder%/itm/00HFSDBU.itm~ ~override~
-COPY ~%mod_folder%/itm/00HFSGSS.itm~ ~override~
-COPY ~%mod_folder%/itm/00HFSLDB.itm~ ~override~
-COPY ~%mod_folder%/itm/00HFSFDD.itm~ ~override~
-COPY ~%mod_folder%/itm/00HFSLDY.itm~ ~override~
-COPY ~%mod_folder%/itm/00HFSSLS.itm~ ~override~
-COPY ~%mod_folder%/itm/00HFSSSK.itm~ ~override~
-COPY ~%mod_folder%/itm/00HFSSTD.itm~ ~override~
-COPY ~%mod_folder%/itm/00LEAT08.itm~ ~override~
-COPY ~%mod_folder%/itm/00LEAT86.itm~ ~override~
-COPY ~%mod_folder%/itm/00LEAT90.itm~ ~override~
-COPY ~%mod_folder%/itm/00LEAT92.itm~ ~override~
-COPY ~%mod_folder%/itm/00LEAT97.itm~ ~override~
-COPY ~%mod_folder%/itm/00MACE92.itm~ ~override~
-COPY ~%mod_folder%/itm/00MACE93.itm~ ~override~
-COPY ~%mod_folder%/itm/00MACE95.itm~ ~override~
-COPY ~%mod_folder%/itm/00MISC38.itm~ ~override~
-COPY ~%mod_folder%/itm/00MSTR85.itm~ ~override~
-COPY ~%mod_folder%/itm/00MSTR91.itm~ ~override~
-COPY ~%mod_folder%/itm/00MSTRMG.itm~ ~override~
-COPY ~%mod_folder%/itm/00MSTRMS.itm~ ~override~
-COPY ~%mod_folder%/itm/00MSTRSS.itm~ ~override~
+COPY ~%mod_folder%/bam/bam_item_revisions~ ~override~
 
-COPY ~%mod_folder%/itm/00RING16.itm~ ~override~
-COPY ~%mod_folder%/itm/00RING23.itm~ ~override~
-COPY ~%mod_folder%/itm/00RING67.itm~ ~override~
-COPY ~%mod_folder%/itm/00RING69.itm~ ~override~
-COPY ~%mod_folder%/itm/00RING70.itm~ ~override~
-COPY ~%mod_folder%/itm/00RING72.itm~ ~override~
-COPY ~%mod_folder%/itm/00RING73.itm~ ~override~
-COPY ~%mod_folder%/itm/00RING74.itm~ ~override~
-COPY ~%mod_folder%/itm/00RING78.itm~ ~override~
-COPY ~%mod_folder%/itm/00RING82.itm~ ~override~
-COPY ~%mod_folder%/itm/00RING85.itm~ ~override~
-COPY ~%mod_folder%/itm/00RING89.itm~ ~override~
-COPY ~%mod_folder%/itm/00RING93.itm~ ~override~
-COPY ~%mod_folder%/itm/00RING97.itm~ ~override~
-COPY ~%mod_folder%/itm/00RINGCR.itm~ ~override~
-COPY ~%mod_folder%/itm/00ROBE99.itm~ ~override~
-COPY ~%mod_folder%/itm/00ROBEMR.itm~ ~override~
-COPY ~%mod_folder%/itm/00SCRL02.itm~ ~override~
-COPY ~%mod_folder%/itm/00SCRL03.itm~ ~override~
-COPY ~%mod_folder%/itm/00SCRL04.itm~ ~override~
-COPY ~%mod_folder%/itm/00SHLD91.itm~ ~override~
-COPY ~%mod_folder%/itm/00SHLD94.itm~ ~override~
-COPY ~%mod_folder%/itm/00SHLD95.itm~ ~override~
-COPY ~%mod_folder%/itm/00SHLDBU.itm~ ~override~
-//COPY ~%mod_folder%/itm/00SHLDMM.itm~ ~override~ // !!!
-COPY ~%mod_folder%/itm/00SLNG88.itm~ ~override~
-COPY ~%mod_folder%/itm/00SLNG89.itm~ ~override~
-COPY ~%mod_folder%/itm/00SLNG94.itm~ ~override~
-COPY ~%mod_folder%/itm/00SPER89.itm~ ~override~
-COPY ~%mod_folder%/itm/00STAF80.itm~ ~override~
-COPY ~%mod_folder%/itm/00STAF81.itm~ ~override~
-COPY ~%mod_folder%/itm/00STAF84.itm~ ~override~
-COPY ~%mod_folder%/itm/00STAF85.itm~ ~override~
-COPY ~%mod_folder%/itm/00STAF87.itm~ ~override~
-  SAY NAME1 @2738
-  SAY NAME2 @2738
-  SAY DESC @2739
-COPY ~%mod_folder%/itm/00STAF89.itm~ ~override~
-COPY ~%mod_folder%/itm/00STAF90.itm~ ~override~
-COPY ~%mod_folder%/itm/00STAF92.itm~ ~override~
-COPY ~%mod_folder%/itm/00STAF93.itm~ ~override~
-COPY ~%mod_folder%/itm/00STAFDD.itm~ ~override~
-COPY ~%mod_folder%/itm/00SWDB94.itm~ ~override~
-COPY ~%mod_folder%/itm/00SWDB97.itm~ ~override~
-COPY ~%mod_folder%/itm/00SWDB99.itm~ ~override~
-  SAY NAME1 @2863
-  SAY NAME2 @2863
-  SAY DESC @2864
-COPY ~%mod_folder%/itm/00SWDBRC.itm~ ~override~
-COPY ~%mod_folder%/itm/00SWDC92.itm~ ~override~
-COPY ~%mod_folder%/itm/00SWDC93.itm~ ~override~
-COPY ~%mod_folder%/itm/00SWDL07.itm~ ~override~
-COPY ~%mod_folder%/itm/00SWDL09.itm~ ~override~
-COPY ~%mod_folder%/itm/00SWDL80.itm~ ~override~
-COPY ~%mod_folder%/itm/00SWDL85.itm~ ~override~
-COPY ~%mod_folder%/itm/00SWDL89.itm~ ~override~
-COPY ~%mod_folder%/itm/00SWDL91.itm~ ~override~
-COPY ~%mod_folder%/itm/00SWDL92.itm~ ~override~
-COPY ~%mod_folder%/itm/00SWDL98.itm~ ~override~
-COPY ~%mod_folder%/itm/00SWDLDB.itm~ ~override~
-COPY ~%mod_folder%/itm/00SWDLDY.itm~ ~override~
-COPY ~%mod_folder%/itm/00SWDS85.itm~ ~override~
-COPY ~%mod_folder%/itm/00SWDS87.itm~ ~override~
-COPY ~%mod_folder%/itm/00SWDS94.itm~ ~override~
-COPY ~%mod_folder%/itm/00SWDSLS.itm~ ~override~
-COPY ~%mod_folder%/itm/00SWDSSK.itm~ ~override~
-COPY ~%mod_folder%/itm/00SWDSTD.itm~ ~override~
-COPY ~%mod_folder%/itm/00SWDT90.itm~ ~override~
-COPY ~%mod_folder%/itm/00SWDT93.itm~ ~override~
-COPY ~%mod_folder%/itm/00WAND01.itm~ ~override~
-COPY ~%mod_folder%/itm/00WAND02.itm~ ~override~
-COPY ~%mod_folder%/itm/00WAND16.itm~ ~override~
-  SAY NAME1 @2625
-  SAY NAME2 @2625
-  SAY DESC @2626
-COPY ~%mod_folder%/itm/11AMULCM.itm~ ~override~
-COPY ~%mod_folder%/itm/11BOOKDE.itm~ ~override~
-COPY ~%mod_folder%/itm/11HFBKDE.itm~ ~override~
-COPY ~%mod_folder%/itm/11HFBKHW.itm~ ~override~
-COPY ~%mod_folder%/itm/11HFBKLD.itm~ ~override~
-/*
-//cannot switch HoF version of Book of Leaves to per day without artificially increasing the price
+ACTION_IF !(FILE_EXISTS USALBEET.bam) BEGIN
+	COPY ~%mod_folder%/bam/USALBEET.bam~ ~override~
+	COPY ~%mod_folder%/bam/USALBEH3.bam~ ~override~
+	COPY ~%mod_folder%/bam/USALBITT.bam~ ~override~
+	COPY ~%mod_folder%/bam/USALBLAC.bam~ ~override~
+	COPY ~%mod_folder%/bam/USALBLOO.bam~ ~override~
+	COPY ~%mod_folder%/bam/USALBOGV.bam~ ~override~
+	COPY ~%mod_folder%/bam/USALBON2.bam~ ~override~
+	COPY ~%mod_folder%/bam/USALBRIN.bam~ ~override~
+	COPY ~%mod_folder%/bam/USALBUR3.bam~ ~override~
+	COPY ~%mod_folder%/bam/USALCLAR.bam~ ~override~
+	COPY ~%mod_folder%/bam/USALCOR2.bam~ ~override~
+	COPY ~%mod_folder%/bam/USALECTO.bam~ ~override~
+	COPY ~%mod_folder%/bam/USALELEC.bam~ ~override~
+	COPY ~%mod_folder%/bam/USALFAI2.bam~ ~override~
+	COPY ~%mod_folder%/bam/USALFEY3.bam~ ~override~
+	COPY ~%mod_folder%/bam/USALFISH.bam~ ~override~
+	COPY ~%mod_folder%/bam/USALFIZZ.bam~ ~override~
+	COPY ~%mod_folder%/bam/USALGHOU.bam~ ~override~
+	COPY ~%mod_folder%/bam/USALGOL2.bam~ ~override~
+	COPY ~%mod_folder%/bam/USALLIME.bam~ ~override~
+	COPY ~%mod_folder%/bam/USALMAGN.bam~ ~override~
+	COPY ~%mod_folder%/bam/USALMURK.bam~ ~override~
+	COPY ~%mod_folder%/bam/USALMUSK.bam~ ~override~
+	COPY ~%mod_folder%/bam/USALOGRE.bam~ ~override~
+	COPY ~%mod_folder%/bam/USALOILS.bam~ ~override~
+	COPY ~%mod_folder%/bam/USALPLAS.bam~ ~override~
+	COPY ~%mod_folder%/bam/USALPRES.bam~ ~override~
+	COPY ~%mod_folder%/bam/USALRAD3.bam~ ~override~
+	COPY ~%mod_folder%/bam/USALRAI2.bam~ ~override~
+	COPY ~%mod_folder%/bam/USALSALB.bam~ ~override~
+	COPY ~%mod_folder%/bam/USALSALR.bam~ ~override~
+	COPY ~%mod_folder%/bam/USALSMOK.bam~ ~override~
+	COPY ~%mod_folder%/bam/USALSNAI.bam~ ~override~
+	COPY ~%mod_folder%/bam/USALSNAK.bam~ ~override~
+	COPY ~%mod_folder%/bam/USALSOUR.bam~ ~override~
+	COPY ~%mod_folder%/bam/USALSWEE.bam~ ~override~
+	COPY ~%mod_folder%/bam/USALTREE.bam~ ~override~
+	COPY ~%mod_folder%/bam/USALTROL.bam~ ~override~
+	COPY ~%mod_folder%/bam/USALVAMP.bam~ ~override~
+	COPY ~%mod_folder%/bam/USALVIAL.bam~ ~override~
+	COPY ~%mod_folder%/bam/USALZOMB.bam~ ~override~
+END
 
-COPY ~%mod_folder%/itm/11HFBKLE.itm~ ~override~
-COPY ~%mod_folder%/itm/11BOOKLE.itm~ ~override~
-  SAY NAME1 @2627
-  SAY NAME2 @2627
-  SAY DESC @2628
-*/
-COPY ~%mod_folder%/itm/12AMULHC.itm~ ~override~
-COPY ~%mod_folder%/itm/12HFAMHC.itm~ ~override~
+COPY ~%mod_folder%/spl/spl_item_revisions~ ~override~
 
-COPY ~%mod_folder%/itm/52BOOKDV.itm~ ~override~
-COPY ~%mod_folder%/itm/52BOOKGE.itm~ ~override~
-COPY ~%mod_folder%/itm/52BOOKOG.itm~ ~override~
-COPY ~%mod_folder%/itm/52BOOKSU.itm~ ~override~
-COPY ~%mod_folder%/itm/52BOOKSV.itm~ ~override~
-COPY ~%mod_folder%/itm/52HFBKDV.itm~ ~override~
-COPY ~%mod_folder%/itm/52HFBKGE.itm~ ~override~
-COPY ~%mod_folder%/itm/52HFBKOG.itm~ ~override~
-COPY ~%mod_folder%/itm/52HFBKSU.itm~ ~override~
-COPY ~%mod_folder%/itm/52HFBKSV.itm~ ~override~
+COPY ~%mod_folder%/eff/eff_item_revisions~ ~override~
+
+COPY_EXISTING ~00AMUL12.itm~ ~override~
+	SAY IDENTIFIED_DESC @10021
+
+COPY_EXISTING ~00AMUL13.itm~ ~override~
+	SAY IDENTIFIED_DESC @10023
+
+COPY_EXISTING ~00AMUL14.itm~ ~override~
+	SAY IDENTIFIED_DESC @10025
+
+COPY_EXISTING ~00AMUL15.itm~ ~override~
+	SAY IDENTIFIED_DESC @10027
+
+COPY_EXISTING ~00AMUL30.itm~ ~override~
+	SAY IDENTIFIED_DESC @10029
+
+COPY_EXISTING ~00AMULBT.itm~ ~override~
+	SAY IDENTIFIED_DESC @10037
+
+COPY_EXISTING ~00HFAMBT.itm~ ~override~
+	SAY IDENTIFIED_DESC @10039
+
+COPY_EXISTING ~00AMULDS.itm~ ~override~
+	SAY IDENTIFIED_DESC @10041
+
+COPY_EXISTING ~00HFAMDS.itm~ ~override~
+	SAY IDENTIFIED_DESC @10043
+
+COPY_EXISTING ~00AMULES.itm~ ~override~
+	SAY IDENTIFIED_DESC @10045
+
+COPY_EXISTING ~00HFAMES.itm~ ~override~
+	SAY IDENTIFIED_DESC @10047
+
+COPY_EXISTING ~00AMULFD.itm~ ~override~
+	SAY IDENTIFIED_DESC @10049
+
+COPY_EXISTING ~00HFAMFD.itm~ ~override~
+	SAY IDENTIFIED_DESC @10051
+
+COPY_EXISTING ~00AMULGC.itm~ ~override~
+	SAY IDENTIFIED_DESC @10053
+
+COPY_EXISTING ~00HFAMGC.itm~ ~override~
+	SAY IDENTIFIED_DESC @10055
+
+COPY_EXISTING ~00AMULMP.itm~ ~override~
+	SAY IDENTIFIED_DESC @10057
+
+COPY_EXISTING ~00HFAMMP.itm~ ~override~
+	SAY IDENTIFIED_DESC @10059
+
+COPY_EXISTING ~00AMULSL.itm~ ~override~
+	SAY IDENTIFIED_DESC @10061
+
+COPY_EXISTING ~00HFAMSL.itm~ ~override~
+	SAY IDENTIFIED_DESC @10063
+
+COPY_EXISTING ~00POTNBI.itm~ ~override~ //Blood of the Innocent - it's an amulet, not a potion
+	SAY IDENTIFIED_DESC @10065
+
+COPY_EXISTING ~00HFPNBI.itm~ ~override~
+	SAY IDENTIFIED_DESC @10067
+
+COPY_EXISTING ~11AMULCM.itm~ ~override~
+	SAY IDENTIFIED_DESC @10069
+
+COPY_EXISTING ~11HFAMCM.itm~ ~override~
+	SAY NAME2 @10070
+
+COPY_EXISTING ~12AMULHC.itm~ ~override~
+	SAY IDENTIFIED_DESC @10073
+
+COPY_EXISTING ~12HFAMHC.itm~ ~override~
+	SAY IDENTIFIED_DESC @10075
+
+COPY_EXISTING ~53AMULBS.itm~ ~override~
+	SAY IDENTIFIED_DESC @10077
+
+COPY_EXISTING ~USHFAMBS.itm~ ~override~
+	SAY IDENTIFIED_DESC @10079
+
+COPY_EXISTING ~53AMULHD.itm~ ~override~
+	SAY IDENTIFIED_DESC @10081
+
+COPY_EXISTING ~USHFAMHD.itm~ ~override~
+	SAY IDENTIFIED_DESC @10083
+
+COPY_EXISTING ~00RING15.itm~ ~override~
+	SAY IDENTIFIED_DESC @10085
+
+COPY_EXISTING ~00RING16.itm~ ~override~
+	SAY IDENTIFIED_DESC @10087
+
+COPY_EXISTING ~00RING17.itm~ ~override~
+	SAY NAME2 @10088
+	SAY IDENTIFIED_DESC @10089
+
+COPY_EXISTING ~00RING18.itm~ ~override~
+	SAY IDENTIFIED_DESC @10091
+
+COPY_EXISTING ~00RING20.itm~ ~override~
+	SAY NAME2 @10094
+	SAY IDENTIFIED_DESC @10095
+
+COPY_EXISTING ~00RING21.itm~ ~override~
+	SAY NAME2 @10096
+	SAY IDENTIFIED_DESC @10097
+
+COPY_EXISTING ~00RING23.itm~ ~override~
+	SAY IDENTIFIED_DESC @10101
+
+COPY_EXISTING ~00RING25.itm~ ~override~
+	SAY IDENTIFIED_DESC @10103
+
+COPY_EXISTING ~00RING67.itm~ ~override~
+	SAY IDENTIFIED_DESC @10105
+
+COPY_EXISTING ~00RING68.itm~ ~override~
+	SAY IDENTIFIED_DESC @10107
+
+COPY_EXISTING ~00RING69.itm~ ~override~
+	SAY NAME2 @10108
+	SAY IDENTIFIED_DESC @10109
+
+COPY_EXISTING ~00RING70.itm~ ~override~
+	SAY NAME2 @10110
+	SAY IDENTIFIED_DESC @10111
+
+COPY_EXISTING ~00RING71.itm~ ~override~
+	SAY IDENTIFIED_DESC @10113
+
+COPY_EXISTING ~00RING72.itm~ ~override~
+	SAY IDENTIFIED_DESC @10115
+
+COPY_EXISTING ~00RING73.itm~ ~override~
+	SAY NAME2 @10116
+	SAY IDENTIFIED_DESC @10117
+
+COPY_EXISTING ~00RING74.itm~ ~override~
+	SAY IDENTIFIED_DESC @10119
+
+COPY_EXISTING ~00RING75.itm~ ~override~
+	SAY IDENTIFIED_DESC @10121
+
+COPY_EXISTING ~00RING76.itm~ ~override~
+	SAY NAME2 @10122
+	SAY IDENTIFIED_DESC @10123
+
+COPY_EXISTING ~00RING77.itm~ ~override~
+	SAY NAME2 @10124
+	SAY IDENTIFIED_DESC @10125
+
+COPY_EXISTING ~00RING78.itm~ ~override~
+	SAY NAME2 @10126
+	SAY IDENTIFIED_DESC @10127
+
+COPY_EXISTING ~00RING79.itm~ ~override~
+	SAY NAME2 @10128
+	SAY IDENTIFIED_DESC @10129
+
+COPY_EXISTING ~00RING80.itm~ ~override~
+	SAY NAME2 @10130
+	SAY IDENTIFIED_DESC @10131
+
+COPY_EXISTING ~00RING82.itm~ ~override~
+	SAY NAME2 @10134
+	SAY IDENTIFIED_DESC @10135
+
+COPY_EXISTING ~00RING83.itm~ ~override~
+	SAY IDENTIFIED_DESC @10137
+
+COPY_EXISTING ~00RING84.itm~ ~override~
+	SAY IDENTIFIED_DESC @10139
+
+COPY_EXISTING ~00RING85.itm~ ~override~
+	SAY NAME2 @10140
+	SAY IDENTIFIED_DESC @10141
+
+COPY_EXISTING ~00RING86.itm~ ~override~
+	SAY IDENTIFIED_DESC @10143
+
+COPY_EXISTING ~00RING87.itm~ ~override~
+	SAY IDENTIFIED_DESC @10145
+
+COPY_EXISTING ~00RING88.itm~ ~override~
+	SAY IDENTIFIED_DESC @10147
+
+COPY_EXISTING ~00RING89.itm~ ~override~
+	SAY IDENTIFIED_DESC @10149
+
+COPY_EXISTING ~00RING90.itm~ ~override~
+	SAY NAME2 @10150
+	SAY IDENTIFIED_DESC @10151
+
+COPY_EXISTING ~00RING91.itm~ ~override~
+	SAY NAME2 @10152
+	SAY IDENTIFIED_DESC @10153
+
+COPY_EXISTING ~00RING92.itm~ ~override~
+	SAY NAME2 @10154
+	SAY IDENTIFIED_DESC @10155
+
+COPY_EXISTING ~00RING93.itm~ ~override~
+	SAY NAME2 @10156
+	SAY IDENTIFIED_DESC @10157
+
+COPY_EXISTING ~00RING94.itm~ ~override~
+	SAY NAME2 @10158
+	SAY IDENTIFIED_DESC @10159
+
+COPY_EXISTING ~00RING95.itm~ ~override~
+	SAY IDENTIFIED_DESC @10161
+
+COPY_EXISTING ~00RING96.itm~ ~override~
+	SAY NAME2 @10162
+	SAY IDENTIFIED_DESC @10163
+
+COPY_EXISTING ~00RING97.itm~ ~override~
+	SAY IDENTIFIED_DESC @10165
+
+COPY_EXISTING ~00RING98.itm~ ~override~
+	SAY IDENTIFIED_DESC @10167
+
+COPY_EXISTING ~00RINGAR.itm~ ~override~
+	SAY IDENTIFIED_DESC @10169
+
+COPY_EXISTING ~00HFRGAR.itm~ ~override~
+	SAY IDENTIFIED_DESC @10171
+
+COPY_EXISTING ~00RINGCR.itm~ ~override~
+	SAY IDENTIFIED_DESC @10173
+
+COPY_EXISTING ~00HFRGCR.itm~ ~override~
+	SAY IDENTIFIED_DESC @10175
+
+COPY_EXISTING ~00RINGTB.itm~ ~override~
+	SAY IDENTIFIED_DESC @10181
+
+COPY_EXISTING ~00HFRGTB.itm~ ~override~
+	SAY IDENTIFIED_DESC @10183
+
+COPY_EXISTING ~41RINGRA.itm~ ~override~
+	PATCH_IF (MOD_IS_INSTALLED ~iwd2ee.tp2~ ~2~) BEGIN //If Spell Revisions is installed
+		SAY IDENTIFIED_DESC @10187
+	END ELSE BEGIN
+		SAY IDENTIFIED_DESC @10185
+	END
+
+COPY_EXISTING ~41HFRGRA.itm~ ~override~
+	SAY IDENTIFIED_DESC @10189
+
+COPY_EXISTING ~00BOOT01.itm~ ~override~
+	SAY IDENTIFIED_DESC @10191
+
+COPY_EXISTING ~00BOOT02.itm~ ~override~
+	SAY IDENTIFIED_DESC @10193
+
+COPY_EXISTING ~00BOOT09.itm~ ~override~
+	SAY IDENTIFIED_DESC @10201
+
+COPY_EXISTING ~00HFBTCS.itm~ ~override~
+	SAY NAME2 @10208
+	SAY IDENTIFIED_DESC @10209
+
+COPY_EXISTING ~00BOOTSB.itm~ ~override~
+	SAY IDENTIFIED_DESC @10211
+
+COPY_EXISTING ~00HFBTSB.itm~ ~override~
+	SAY IDENTIFIED_DESC @10213
+
+COPY_EXISTING ~10BOOTTB.itm~ ~override~
+	SAY IDENTIFIED_DESC @10215
+
+COPY_EXISTING ~10HFBTTB.itm~ ~override~
+	SAY IDENTIFIED_DESC @10217
+
+COPY_EXISTING ~50BOOT14.itm~ ~override~
+	SAY IDENTIFIED_DESC @10219
+
+COPY_EXISTING ~USHFBTWH.itm~ ~override~
+	SAY IDENTIFIED_DESC @10221
+
+COPY_EXISTING ~00BRAC11.itm~ ~override~
+	SAY IDENTIFIED_DESC @10237
+
+COPY_EXISTING ~00BRACBB.itm~ ~override~
+	SAY IDENTIFIED_DESC @10245
+
+COPY_EXISTING ~00HFBCBB.itm~ ~override~
+	SAY IDENTIFIED_DESC @10247
+
+COPY_EXISTING ~00BRACLA.itm~ ~override~
+	SAY IDENTIFIED_DESC @10253
+
+COPY_EXISTING ~00HFBCLA.itm~ ~override~
+	SAY IDENTIFIED_DESC @10255
+
+COPY_EXISTING ~00BRACRB.itm~ ~override~
+	SAY IDENTIFIED_DESC @10257
+
+COPY_EXISTING ~00HFBCRB.itm~ ~override~
+	SAY IDENTIFIED_DESC @10259
+
+COPY_EXISTING ~00BRACTB.itm~ ~override~
+	SAY IDENTIFIED_DESC @10261
+
+COPY_EXISTING ~00HFBCTB.itm~ ~override~
+	SAY IDENTIFIED_DESC @10263
+
+COPY_EXISTING ~40GENPWC.itm~ ~override~
+	SAY IDENTIFIED_DESC @10269
+
+COPY_EXISTING ~USHFGNWC.itm~ ~override~
+	SAY IDENTIFIED_DESC @10271
+
+COPY_EXISTING ~USHFBT05.itm~ ~override~
+	SAY NAME2 @10280
+	SAY IDENTIFIED_DESC @10281
+
+COPY_EXISTING ~00BELTAD.itm~ ~override~
+	SAY IDENTIFIED_DESC @10283
+
+COPY_EXISTING ~00HFBTAD.itm~ ~override~
+	SAY IDENTIFIED_DESC @10285
+
+COPY_EXISTING ~00BELTBG.itm~ ~override~
+	SAY IDENTIFIED_DESC @10287
+
+COPY_EXISTING ~00HFBTBG.itm~ ~override~
+	SAY IDENTIFIED_DESC @10289
+
+COPY_EXISTING ~00BELTDB.itm~ ~override~
+	SAY NAME2 @10290
+	SAY IDENTIFIED_DESC @10291
+
+COPY_EXISTING ~00HFBTDB.itm~ ~override~
+	SAY NAME2 @10292
+	SAY IDENTIFIED_DESC @10293
+
+COPY_EXISTING ~00HFBTLG.itm~ ~override~
+	SAY IDENTIFIED_DESC @10297
+
+COPY_EXISTING ~00BELTSS.itm~ ~override~
+	SAY IDENTIFIED_DESC @10299
+
+COPY_EXISTING ~00HFBTSS.itm~ ~override~
+	SAY IDENTIFIED_DESC @10301
+
+COPY_EXISTING ~11BELTMK.itm~ ~override~
+	SAY IDENTIFIED_DESC @10303
+
+COPY_EXISTING ~USHFBTMK.itm~ ~override~
+	SAY IDENTIFIED_DESC @10305
+
+COPY_EXISTING ~00CLCKBC.itm~ ~override~
+	SAY IDENTIFIED_DESC @10325
+
+COPY_EXISTING ~00HFCKBC.itm~ ~override~
+	SAY IDENTIFIED_DESC @10327
+
+COPY_EXISTING ~00CLCKFC.itm~ ~override~
+	SAY IDENTIFIED_DESC @10329
+
+COPY_EXISTING ~00HFCKFC.itm~ ~override~
+	SAY NAME2 @10330
+	SAY IDENTIFIED_DESC @10331
+
+COPY_EXISTING ~00HFCKMB.itm~ ~override~
+	SAY IDENTIFIED_DESC @10335
+
+COPY_EXISTING ~00CLCKNV.itm~ ~override~
+	SAY IDENTIFIED_DESC @10337
+
+COPY_EXISTING ~00HFCKNV.itm~ ~override~
+	SAY IDENTIFIED_DESC @10339
+
+COPY_EXISTING ~00CLCKSB.itm~ ~override~
+	SAY IDENTIFIED_DESC @10341
+
+COPY_EXISTING ~00HFCKSB.itm~ ~override~
+	SAY IDENTIFIED_DESC @10343
+
+COPY_EXISTING ~00CLCKWC.itm~ ~override~
+	SAY IDENTIFIED_DESC @10345
+
+COPY_EXISTING ~00HFCKWC.itm~ ~override~
+	SAY IDENTIFIED_DESC @10347
+
+COPY_EXISTING ~50CLCK17.itm~ ~override~
+	SAY IDENTIFIED_DESC @10349
+
+COPY_EXISTING ~USHFCKWH.itm~ ~override~
+	SAY IDENTIFIED_DESC @10351
+
+COPY_EXISTING ~53CLCKHD.itm~ ~override~
+	SAY IDENTIFIED_DESC @10353
+
+COPY_EXISTING ~USHFCKWH.itm~ ~override~
+	SAY IDENTIFIED_DESC @10355
+
+COPY_EXISTING ~00HELM01.itm~ ~override~
+	SAY UNIDENTIFIED_DESC @10357
+	SAY IDENTIFIED_DESC @10357
+
+COPY_EXISTING_REGEXP ~00HELM0[1-6].itm~ ~override~
+	SAY UNIDENTIFIED_DESC @10358
+	SAY IDENTIFIED_DESC @10358
+
+COPY_EXISTING ~00HELMBH.itm~ ~override~
+	SAY IDENTIFIED_DESC @10364
+
+COPY_EXISTING ~00HFHMBH.itm~ ~override~
+	SAY IDENTIFIED_DESC @10366
+
+COPY_EXISTING ~00HELMDS.itm~ ~override~
+	SAY IDENTIFIED_DESC @10368
+
+COPY_EXISTING ~00HFHMDS.itm~ ~override~
+	SAY IDENTIFIED_DESC @10370
+
+COPY_EXISTING ~00HELMSC.itm~ ~override~
+	SAY IDENTIFIED_DESC @10372
+
+COPY_EXISTING ~00HFHMSC.itm~ ~override~
+	SAY IDENTIFIED_DESC @10374
+
+COPY_EXISTING ~00HFHMSM.itm~ ~override~
+	SAY IDENTIFIED_DESC @10378
+
+COPY_EXISTING ~51HELMWM.itm~ ~override~
+	SAY IDENTIFIED_DESC @10380
+
+COPY_EXISTING ~51HFHMWM.itm~ ~override~
+	SAY IDENTIFIED_DESC @10382
+
+COPY_EXISTING ~00ROBE01.itm~ ~override~
+	SAY IDENTIFIED_DESC @10384
+
+COPY_EXISTING ~00ROBE02.itm~ ~override~
+	SAY IDENTIFIED_DESC @10386
+
+COPY_EXISTING ~00ROBE03.itm~ ~override~
+	SAY IDENTIFIED_DESC @10388
+
+COPY_EXISTING ~00ROBE04.itm~ ~override~
+	SAY IDENTIFIED_DESC @10390
+
+COPY_EXISTING ~00ROBE05.itm~ ~override~
+	SAY IDENTIFIED_DESC @10392
+
+COPY_EXISTING ~00ROBE06.itm~ ~override~
+	SAY IDENTIFIED_DESC @10394
+
+COPY_EXISTING ~00ROBE07.itm~ ~override~
+	SAY IDENTIFIED_DESC @10396
+
+COPY_EXISTING ~00ROBE15.itm~ ~override~
+	SAY IDENTIFIED_DESC @10398
+
+COPY_EXISTING ~00ROBE16.itm~ ~override~
+	SAY IDENTIFIED_DESC @10400
+
+COPY_EXISTING ~00ROBE99.itm~ ~override~
+	SAY IDENTIFIED_DESC @10402
+
+COPY_EXISTING ~00ROBEMR.itm~ ~override~
+	SAY IDENTIFIED_DESC @10404
+
+COPY_EXISTING ~00HFRBMR.itm~ ~override~
+	SAY IDENTIFIED_DESC @10406
+
+COPY_EXISTING ~00ROBERA.itm~ ~override~
+	SAY IDENTIFIED_DESC @10408
+
+COPY_EXISTING ~00HFRBRA.itm~ ~override~
+	SAY IDENTIFIED_DESC @10410
+
+COPY_EXISTING ~11ROBEPR.itm~ ~override~
+	SAY IDENTIFIED_DESC @10412
+
+COPY_EXISTING ~11HFRBPR.itm~ ~override~
+	SAY IDENTIFIED_DESC @10414
+
+COPY_EXISTING ~00LEAT05.itm~ ~override~
+	SAY IDENTIFIED_DESC @10424
+
+COPY_EXISTING ~00LEAT06.itm~ ~override~
+	SAY NAME2 @10425
+	SAY IDENTIFIED_DESC @10426
+
+COPY_EXISTING ~00LEAT07.itm~ ~override~
+	SAY IDENTIFIED_DESC @10428
+
+COPY_EXISTING ~00LEAT08.itm~ ~override~
+	SAY NAME2 @10429
+	SAY IDENTIFIED_DESC @10430
+
+COPY_EXISTING ~00LEAT86.itm~ ~override~
+	SAY NAME2 @10431
+	SAY IDENTIFIED_DESC @10432
+
+COPY_EXISTING ~00LEAT87.itm~ ~override~
+	SAY NAME2 @10433
+	SAY IDENTIFIED_DESC @10434
+
+COPY_EXISTING ~00LEAT88.itm~ ~override~
+	SAY NAME2 @10435
+	SAY IDENTIFIED_DESC @10436
+
+COPY_EXISTING ~00LEAT89.itm~ ~override~
+	SAY IDENTIFIED_DESC @10438
+
+COPY_EXISTING ~00LEAT90.itm~ ~override~
+	SAY NAME2 @10439
+	SAY IDENTIFIED_DESC @10440
+
+COPY_EXISTING ~00LEAT91.itm~ ~override~
+	SAY NAME2 @10441
+	SAY IDENTIFIED_DESC @10442
+
+COPY_EXISTING ~00LEAT92.itm~ ~override~
+	SAY NAME2 @10443
+	SAY IDENTIFIED_DESC @10444
+
+COPY_EXISTING ~00LEAT93.itm~ ~override~
+	SAY NAME2 @10445
+	SAY IDENTIFIED_DESC @10446
+
+COPY_EXISTING ~00LEAT94.itm~ ~override~
+	SAY NAME2 @10447
+	SAY IDENTIFIED_DESC @10448
+
+COPY_EXISTING ~00LEAT95.itm~ ~override~
+	SAY NAME2 @10449
+	SAY IDENTIFIED_DESC @10450
+
+COPY_EXISTING ~00LEAT96.itm~ ~override~
+	SAY NAME2 @10451
+	SAY IDENTIFIED_DESC @10452
+
+COPY_EXISTING ~00LEAT97.itm~ ~override~
+	SAY NAME2 @10453
+	SAY IDENTIFIED_DESC @10454
+
+COPY_EXISTING ~00LEAT98.itm~ ~override~
+	SAY NAME2 @10455
+	SAY IDENTIFIED_DESC @10456
+
+COPY_EXISTING ~00LEAT99.itm~ ~override~
+	SAY NAME2 @10457
+	SAY IDENTIFIED_DESC @10458
+
+COPY_EXISTING ~10LEATUB.itm~ ~override~
+	SAY IDENTIFIED_DESC @10460
+
+COPY_EXISTING ~10HFLTUB.itm~ ~override~
+	SAY NAME2 @10461
+	SAY IDENTIFIED_DESC @10462
+
+COPY_EXISTING ~62LEATDB.itm~ ~override~
+	SAY NAME2 @10463
+	SAY IDENTIFIED_DESC @10464
+
+COPY_EXISTING ~62HFLTDB.itm~ ~override~
+	SAY NAME2 @10465
+	SAY IDENTIFIED_DESC @10466
+
+COPY_EXISTING ~50LEATMS.itm~ ~override~
+	SAY NAME2 @10467
+	SAY IDENTIFIED_DESC @10468
+
+COPY_EXISTING ~50HFLTMS.itm~ ~override~
+	SAY NAME2 @10469
+	SAY IDENTIFIED_DESC @10470
+
+COPY_EXISTING ~60LEATZU.itm~ ~override~
+	SAY NAME2 @10471
+	SAY IDENTIFIED_DESC @10472
+
+COPY_EXISTING ~60HFLTZU.itm~ ~override~
+	SAY NAME2 @10473
+	SAY IDENTIFIED_DESC @10474
+
+COPY_EXISTING ~60LEATIN.itm~ ~override~
+	SAY NAME2 @10475
+	SAY IDENTIFIED_DESC @10476
+
+COPY_EXISTING ~60HFLTIN.itm~ ~override~
+	SAY NAME2 @10477
+	SAY IDENTIFIED_DESC @10478
+
+COPY_EXISTING ~00HIDE01.itm~ ~override~
+	SAY IDENTIFIED_DESC @10480
+
+COPY_EXISTING ~00HIDE02.itm~ ~override~
+	SAY IDENTIFIED_DESC @10482
+
+COPY_EXISTING ~00HIDE03.itm~ ~override~
+	SAY IDENTIFIED_DESC @10484
+
+COPY_EXISTING ~00HIDE04.itm~ ~override~
+	SAY IDENTIFIED_DESC @10486
+
+COPY_EXISTING ~USHFHD04.itm~ ~override~
+	SAY NAME2 @10487
+	SAY IDENTIFIED_DESC @10488
+
+COPY_EXISTING ~00HIDE05.itm~ ~override~
+	SAY IDENTIFIED_DESC @10490
+
+COPY_EXISTING ~50HIDE06.itm~ ~override~
+	SAY NAME2 @10493
+	SAY IDENTIFIED_DESC @10494
+
+COPY_EXISTING ~USHFHDWH.itm~ ~override~
+	SAY NAME2 @10495
+	SAY IDENTIFIED_DESC @10496
+
+COPY_EXISTING ~50HIDEAH.itm~ ~override~
+	SAY IDENTIFIED_DESC @10498
+
+COPY_EXISTING ~50HFHEAH.itm~ ~override~
+	SAY NAME2 @10499
+	SAY IDENTIFIED_DESC @10500
+
+COPY_EXISTING ~00CHAN02.itm~ ~override~
+	SAY IDENTIFIED_DESC @10504
+
+COPY_EXISTING ~00CHAN03.itm~ ~override~
+	SAY IDENTIFIED_DESC @10506
+
+COPY_EXISTING ~00CHAN06.itm~ ~override~
+	SAY NAME2 @10511
+	SAY IDENTIFIED_DESC @10512
+
+COPY_EXISTING ~00CHAN07.itm~ ~override~
+	SAY NAME2 @10515
+	SAY IDENTIFIED_DESC @10516
+
+COPY_EXISTING ~00CHAN08.itm~ ~override~
+	SAY NAME2 @10517
+	SAY IDENTIFIED_DESC @10518
+
+COPY_EXISTING ~00CHAN09.itm~ ~override~
+	SAY NAME2 @10521
+	SAY IDENTIFIED_DESC @10522
+
+COPY_EXISTING ~00CHANML.itm~ ~override~
+	SAY NAME2 @10525
+	SAY IDENTIFIED_DESC @10526
+
+COPY_EXISTING ~00HFCNML.itm~ ~override~
+	SAY NAME2 @10527
+	SAY IDENTIFIED_DESC @10528
+
+COPY_EXISTING ~60CHANCD.itm~ ~override~
+	SAY NAME2 @10529
+
+COPY_EXISTING ~60HFCNCD.itm~ ~override~
+	SAY NAME2 @10531
+
+COPY_EXISTING ~60CHANSA.itm~ ~override~
+	SAY NAME2 @10533
+	SAY IDENTIFIED_DESC @10534
+
+COPY_EXISTING ~60HFCNSA.itm~ ~override~
+	SAY NAME2 @10535
+	SAY IDENTIFIED_DESC @10536
+
+COPY_EXISTING ~60CHANTM.itm~ ~override~
+	SAY NAME2 @10537
+	SAY IDENTIFIED_DESC @10538
+
+COPY_EXISTING ~60HFCNTM.itm~ ~override~
+	SAY NAME2 @10539
+	SAY IDENTIFIED_DESC @10540
+
+COPY_EXISTING ~60CHANGR.itm~ ~override~
+	SAY NAME2 @10541
+	SAY IDENTIFIED_DESC @10542
+
+COPY_EXISTING ~60HFCNGR.itm~ ~override~
+	SAY NAME2 @10543
+	SAY IDENTIFIED_DESC @10544
+
+COPY_EXISTING ~00PLAT02.itm~ ~override~
+	SAY IDENTIFIED_DESC @10548
+
+COPY_EXISTING ~00PLAT03.itm~ ~override~
+	SAY NAME2 @10549
+	SAY IDENTIFIED_DESC @10550
+
+COPY_EXISTING ~00PLAT04.itm~ ~override~
+	SAY IDENTIFIED_DESC @10552
+
+COPY_EXISTING ~00PLAT10.itm~ ~override~
+	SAY IDENTIFIED_DESC @10554
+
+COPY_EXISTING ~00PLAT12.itm~ ~override~
+	SAY NAME2 @10557
+
+COPY_EXISTING ~51PLAT10.itm~ ~override~
+	SAY NAME2 @10559
+	SAY IDENTIFIED_DESC @10560
+
+COPY_EXISTING ~51HFPT10.itm~ ~override~
+	SAY NAME2 @10561
+	SAY IDENTIFIED_DESC @10562
+
+COPY_EXISTING ~60PLATOF.itm~ ~override~
+	SAY IDENTIFIED_DESC @10564
+
+COPY_EXISTING ~60HFPTOF.itm~ ~override~
+	SAY NAME2 @10565
+	SAY IDENTIFIED_DESC @10566
+
+COPY_EXISTING ~60PLATKC.itm~ ~override~
+	SAY NAME2 @10567
+	SAY IDENTIFIED_DESC @10568
+
+COPY_EXISTING ~60HFPTKC.itm~ ~override~
+	SAY NAME2 @10569
+	SAY IDENTIFIED_DESC @10570
+
+COPY_EXISTING ~60PLATPF.itm~ ~override~
+	SAY NAME2 @10571
+	SAY IDENTIFIED_DESC @10572
+
+COPY_EXISTING ~60HFPTPF.itm~ ~override~
+	SAY NAME2 @10573
+	SAY IDENTIFIED_DESC @10574
+
+COPY_EXISTING ~60PLATAG.itm~ ~override~
+	SAY NAME2 @10575
+	SAY IDENTIFIED_DESC @10576
+
+COPY_EXISTING ~60HFPTAG.itm~ ~override~
+	SAY NAME2 @10577
+	PATCH_IF (MOD_IS_INSTALLED ~iwd2ee.tp2~ ~2~) BEGIN //If Spell Revisions is installed
+		SAY IDENTIFIED_DESC @10580
+	END ELSE BEGIN
+		SAY IDENTIFIED_DESC @10578
+	END
+
+COPY_EXISTING ~60PLATDC.itm~ ~override~
+	SAY NAME2 @10581
+	SAY IDENTIFIED_DESC @10582
+
+COPY_EXISTING ~60HFPTDC.itm~ ~override~
+	SAY NAME2 @10583
+	SAY IDENTIFIED_DESC @10584
+
+COPY_EXISTING ~60PLATAA.itm~ ~override~
+	SAY NAME2 @10585
+
+COPY_EXISTING ~60HFPTAA.itm~ ~override~
+	SAY NAME2 @10587
+	SAY IDENTIFIED_DESC @10588
+
+COPY_EXISTING ~00SHLD16.itm~ ~override~
+	SAY IDENTIFIED_DESC @10602
+
+COPY_EXISTING ~00SHLD17.itm~ ~override~
+	SAY IDENTIFIED_DESC @10604
+
+COPY_EXISTING ~00SHLD85.itm~ ~override~
+	SAY NAME2 @10605
+	SAY IDENTIFIED_DESC @10606
+
+COPY_EXISTING ~00SHLD86.itm~ ~override~
+	SAY NAME2 @10607
+	SAY IDENTIFIED_DESC @10608
+
+COPY_EXISTING ~00SHLD87.itm~ ~override~
+	SAY NAME2 @10609
+	SAY IDENTIFIED_DESC @10610
+
+COPY_EXISTING ~00SHLD88.itm~ ~override~
+	SAY NAME2 @10611
+	SAY IDENTIFIED_DESC @10612
+
+COPY_EXISTING ~00SHLD89.itm~ ~override~
+	SAY NAME2 @10613
+	SAY IDENTIFIED_DESC @10614
+
+COPY_EXISTING ~00SHLD90.itm~ ~override~
+	SAY NAME2 @10615
+	SAY IDENTIFIED_DESC @10616
+
+COPY_EXISTING ~00SHLD91.itm~ ~override~
+	SAY NAME2 @10617
+	SAY IDENTIFIED_DESC @10618
+
+COPY_EXISTING ~00SHLD92.itm~ ~override~
+	SAY NAME2 @10619
+	SAY IDENTIFIED_DESC @10620
+
+COPY_EXISTING ~00SHLD93.itm~ ~override~
+	SAY IDENTIFIED_DESC @10622
+
+COPY_EXISTING ~00SHLD94.itm~ ~override~
+	SAY NAME2 @10623
+	SAY IDENTIFIED_DESC @10624
+
+COPY_EXISTING ~00SHLD95.itm~ ~override~
+	SAY IDENTIFIED_DESC @10626
+
+COPY_EXISTING ~00SHLD96.itm~ ~override~
+	SAY NAME2 @10627
+	SAY IDENTIFIED_DESC @10628
+
+COPY_EXISTING ~00SHLD97.itm~ ~override~
+	SAY IDENTIFIED_DESC @10630
+
+COPY_EXISTING ~00SHLD98.itm~ ~override~
+	SAY IDENTIFIED_DESC @10632
+
+COPY_EXISTING ~00SHLD99.itm~ ~override~
+	SAY IDENTIFIED_DESC @10634
+
+COPY_EXISTING ~00SHLDBU.itm~ ~override~
+	SAY NAME2 @10635
+	SAY IDENTIFIED_DESC @10636
+
+COPY_EXISTING ~00HFSDBU.itm~ ~override~
+	SAY NAME2 @10637
+	SAY IDENTIFIED_DESC @10638
+
+COPY_EXISTING ~00SHLDFF.itm~ ~override~
+	SAY NAME2 @10639
+	SAY IDENTIFIED_DESC @10640
+
+COPY_EXISTING ~00HFSDFF.itm~ ~override~
+	SAY NAME2 @10641
+	SAY IDENTIFIED_DESC @10642
+
+COPY_EXISTING ~00SHLDFV.itm~ ~override~
+	SAY IDENTIFIED_DESC @10644
+
+COPY_EXISTING ~00HFSDFV.itm~ ~override~
+	SAY NAME2 @10645
+	SAY IDENTIFIED_DESC @10646
+
+COPY_EXISTING ~00SHLDFF.itm~ ~override~
+	SAY NAME2 @10647
+	SAY IDENTIFIED_DESC @10648
+
+COPY_EXISTING ~00HFSDFF.itm~ ~override~
+	SAY NAME2 @10649
+	SAY IDENTIFIED_DESC @10650
+
+COPY_EXISTING ~00SHLDRF.itm~ ~override~
+	SAY NAME2 @10651
+	SAY IDENTIFIED_DESC @10652
+
+COPY_EXISTING ~00HFSDRF.itm~ ~override~
+	SAY NAME2 @10653
+	SAY IDENTIFIED_DESC @10654
+
+COPY_EXISTING ~12SHLDCT.itm~ ~override~
+	SAY NAME2 @10655
+
+COPY_EXISTING ~12HFSDCT.itm~ ~override~
+	SAY NAME2 @10657
+
+COPY_EXISTING ~12SHLDKD.itm~ ~override~
+	SAY NAME2 @10659
+	SAY IDENTIFIED_DESC @10660
+
+COPY_EXISTING ~12HFSDKD.itm~ ~override~
+	SAY NAME2 @10661
+	SAY IDENTIFIED_DESC @10662
+
+COPY_EXISTING ~12SHLDSG.itm~ ~override~
+	SAY NAME2 @10663
+	SAY IDENTIFIED_DESC @10664
+
+COPY_EXISTING ~12HFSDSG.itm~ ~override~
+	SAY NAME2 @10665
+	SAY IDENTIFIED_DESC @10666
+
+COPY_EXISTING ~12HFSDTS.itm~ ~override~
+	SAY NAME2 @10669
+	SAY IDENTIFIED_DESC @10670
+
+COPY_EXISTING ~51SHLDFO.itm~ ~override~
+	SAY NAME2 @10671
+	SAY IDENTIFIED_DESC @10672
+
+COPY_EXISTING ~51HFSDFO.itm~ ~override~
+	SAY NAME2 @10673
+	SAY IDENTIFIED_DESC @10674
+
+COPY_EXISTING ~00DAGG05.itm~ ~override~
+	SAY IDENTIFIED_DESC @10684
+
+COPY_EXISTING ~00DAGG81.itm~ ~override~
+	SAY IDENTIFIED_DESC @10688
+
+COPY_EXISTING ~00DAGG82.itm~ ~override~
+	SAY NAME2 @10689
+	SAY IDENTIFIED_DESC @10690
+
+COPY_EXISTING ~00DAGG84.itm~ ~override~
+	SAY NAME2 @10693
+
+COPY_EXISTING ~00DAGG90.itm~ ~override~
+	SAY IDENTIFIED_DESC @10706
+
+COPY_EXISTING ~00DAGG91.itm~ ~override~
+	SAY IDENTIFIED_DESC @10708
+
+COPY_EXISTING ~00DAGG92.itm~ ~override~
+	SAY IDENTIFIED_DESC @10710
+
+COPY_EXISTING ~00DAGG93.itm~ ~override~
+	SAY NAME2 @10711
+	SAY IDENTIFIED_DESC @10712
+
+COPY_EXISTING ~00DAGG94.itm~ ~override~
+	SAY NAME2 @10713
+	SAY IDENTIFIED_DESC @10714
+
+COPY_EXISTING ~00DAGG95.itm~ ~override~
+	SAY IDENTIFIED_DESC @10716
+
+COPY_EXISTING ~00DAGG96.itm~ ~override~
+	SAY NAME2 @10717
+	SAY IDENTIFIED_DESC @10718
+
+COPY_EXISTING ~00DAGG97.itm~ ~override~
+	SAY NAME2 @10719
+	SAY IDENTIFIED_DESC @10720
+
+COPY_EXISTING ~00DAGG98.itm~ ~override~
+	SAY IDENTIFIED_DESC @10722
+
+COPY_EXISTING ~00DAGG99.itm~ ~override~
+	SAY IDENTIFIED_DESC @10724
+
+COPY_EXISTING ~00DAGGFW.itm~ ~override~
+	SAY IDENTIFIED_DESC @10726
+
+COPY_EXISTING ~00HFDGFW.itm~ ~override~
+	SAY IDENTIFIED_DESC @10728
+
+COPY_EXISTING ~00DAGGPF.itm~ ~override~
+	SAY IDENTIFIED_DESC @10730
+
+COPY_EXISTING ~00HFDGPF.itm~ ~override~
+	SAY IDENTIFIED_DESC @10732
+
+COPY_EXISTING ~ZZL6GH.itm~ ~override~
+	PATCH_IF (MOD_IS_INSTALLED ~iwd2ee.tp2~ ~24~) BEGIN //If Better Racial Enemies is installed
+		SAY IDENTIFIED_DESC @10736
+	END ELSE BEGIN
+		SAY IDENTIFIED_DESC @10734
+	END
+
+COPY_EXISTING ~11HFDGGH.itm~ ~override~
+	PATCH_IF (MOD_IS_INSTALLED ~iwd2ee.tp2~ ~24~) BEGIN //If Spell Revisions is installed
+		SAY IDENTIFIED_DESC @10740
+	END ELSE BEGIN
+		SAY IDENTIFIED_DESC @10738
+	END
+
+COPY_EXISTING ~ZZJ5GT.itm~ ~override~
+	SAY IDENTIFIED_DESC @10742
+
+COPY_EXISTING ~ZZJ5HF.itm~ ~override~
+	SAY IDENTIFIED_DESC @10744
+
+COPY_EXISTING ~ZZJ5ST.itm~ ~override~
+	SAY IDENTIFIED_DESC @10746
+
+COPY_EXISTING ~ZZJ5HO.itm~ ~override~
+	SAY IDENTIFIED_DESC @10748
+
+COPY_EXISTING ~50HFDGLT.itm~ ~override~
+	SAY IDENTIFIED_DESC @10752
+
+COPY_EXISTING ~52DAGGSH.itm~ ~override~
+	SAY IDENTIFIED_DESC @10754
+
+COPY_EXISTING ~52HFDGSH.itm~ ~override~
+	SAY IDENTIFIED_DESC @10756
+
+COPY_EXISTING ~61DAGGWS.itm~ ~override~
+	SAY IDENTIFIED_DESC @10758
+
+COPY_EXISTING ~61HFDGWS.itm~ ~override~
+	SAY IDENTIFIED_DESC @10760
+
+COPY_EXISTING ~62DAGGXF.itm~ ~override~
+	SAY IDENTIFIED_DESC @10762
+
+COPY_EXISTING ~62HFDGXF.itm~ ~override~
+	SAY IDENTIFIED_DESC @10764
+
+COPY_EXISTING ~00SWDS05.itm~ ~override~
+	SAY NAME2 @10773
+	SAY IDENTIFIED_DESC @10774
+
+COPY_EXISTING ~00SWDS85.itm~ ~override~
+	SAY IDENTIFIED_DESC @10776
+
+COPY_EXISTING ~00SWDS86.itm~ ~override~
+	SAY NAME2 @10777
+	SAY IDENTIFIED_DESC @10778
+
+COPY_EXISTING ~00SWDS87.itm~ ~override~
+	SAY IDENTIFIED_DESC @10780
+
+COPY_EXISTING ~00SWDS92.itm~ ~override~
+	SAY IDENTIFIED_DESC @10790
+
+COPY_EXISTING ~00SWDS93.itm~ ~override~
+	SAY IDENTIFIED_DESC @10792
+
+COPY_EXISTING ~00SWDS94.itm~ ~override~
+	SAY IDENTIFIED_DESC @10794
+
+COPY_EXISTING ~00SWDS95.itm~ ~override~
+	SAY IDENTIFIED_DESC @10792
+
+COPY_EXISTING ~00SWDS97.itm~ ~override~
+	SAY IDENTIFIED_DESC @10800
+
+COPY_EXISTING ~00SWDS98.itm~ ~override~
+	SAY NAME2 @10801
+	SAY IDENTIFIED_DESC @10802
+
+COPY_EXISTING ~00SWDS99.itm~ ~override~
+	SAY IDENTIFIED_DESC @10804
+
+COPY_EXISTING ~00SWDSLS.itm~ ~override~
+	SAY NAME2 @10805
+	SAY IDENTIFIED_DESC @10806
+
+COPY_EXISTING ~00HFSSLS.itm~ ~override~
+	SAY NAME2 @10807
+	SAY IDENTIFIED_DESC @10808
+
+COPY_EXISTING ~00SWDSSK.itm~ ~override~
+	SAY NAME2 @10809
+	SAY IDENTIFIED_DESC @10810
+
+COPY_EXISTING ~00HFSSSK.itm~ ~override~
+	SAY NAME2 @10811
+	SAY IDENTIFIED_DESC @10812
+
+COPY_EXISTING ~00SWDSTD.itm~ ~override~
+	SAY NAME2 @10813
+	SAY IDENTIFIED_DESC @10814
+
+COPY_EXISTING ~00HFSSTD.itm~ ~override~
+	SAY NAME2 @10815
+	SAY IDENTIFIED_DESC @10816
+
+COPY_EXISTING ~ZZ35LS.itm~ ~override~
+	SAY NAME2 @10817
+	SAY IDENTIFIED_DESC @10818
+
+COPY_EXISTING ~ZZ36LS.itm~ ~override~
+	SAY NAME2 @10819
+	SAY IDENTIFIED_DESC @10820
+
+COPY_EXISTING ~00SWDL07.itm~ ~override~
+	SAY NAME2 @10829
+	SAY IDENTIFIED_DESC @10830
+
+COPY_EXISTING ~00SWDL09.itm~ ~override~
+	SAY IDENTIFIED_DESC @10834
+
+COPY_EXISTING ~00SWDL80.itm~ ~override~
+	SAY IDENTIFIED_DESC @10838
+
+COPY_EXISTING ~00SWDL81.itm~ ~override~
+	SAY IDENTIFIED_DESC @10840
+
+COPY_EXISTING ~00SWDL82.itm~ ~override~
+	SAY IDENTIFIED_DESC @10842
+
+COPY_EXISTING ~00SWDL84.itm~ ~override~
+	SAY NAME2 @10845
+	SAY IDENTIFIED_DESC @10846
+
+COPY_EXISTING ~00SWDL85.itm~ ~override~
+	SAY IDENTIFIED_DESC @10848
+
+COPY_EXISTING ~00SWDL89.itm~ ~override~
+	SAY NAME2 @10855
+	SAY IDENTIFIED_DESC @10856
+
+COPY_EXISTING ~00SWDL90.itm~ ~override~
+	SAY IDENTIFIED_DESC @10858
+
+COPY_EXISTING ~00SWDL91.itm~ ~override~
+	SAY IDENTIFIED_DESC @10860
+
+COPY_EXISTING ~00SWDL92.itm~ ~override~
+	SAY IDENTIFIED_DESC @10862
+
+COPY_EXISTING ~00SWDL93.itm~ ~override~
+	SAY IDENTIFIED_DESC @10864
+
+COPY_EXISTING ~00SWDL94.itm~ ~override~
+	SAY IDENTIFIED_DESC @10866
+
+COPY_EXISTING ~00SWDL95.itm~ ~override~
+	SAY NAME2 @10867
+	SAY IDENTIFIED_DESC @10868
+
+COPY_EXISTING ~00SWDL96.itm~ ~override~
+	SAY IDENTIFIED_DESC @10870
+
+COPY_EXISTING ~00SWDL97.itm~ ~override~
+	SAY IDENTIFIED_DESC @10872
+
+COPY_EXISTING ~00SWDL98.itm~ ~override~
+	SAY IDENTIFIED_DESC @10874
+
+COPY_EXISTING ~00SWDL99.itm~ ~override~
+	SAY IDENTIFIED_DESC @10876
+
+COPY_EXISTING ~00SWDLDB.itm~ ~override~
+	SAY IDENTIFIED_DESC @10878
+
+COPY_EXISTING ~00HFSLDB.itm~ ~override~
+	SAY IDENTIFIED_DESC @10880
+
+COPY_EXISTING ~00SWDLDY.itm~ ~override~
+	SAY IDENTIFIED_DESC @10882
+
+COPY_EXISTING ~00HFSLDY.itm~ ~override~
+	SAY IDENTIFIED_DESC @10884
+
+COPY_EXISTING ~11SWDLHE.itm~ ~override~
+	SAY IDENTIFIED_DESC @10886
+
+COPY_EXISTING ~11HFSLHE.itm~ ~override~
+	SAY IDENTIFIED_DESC @10888
+
+COPY_EXISTING ~50SWDLWB.itm~ ~override~
+	SAY IDENTIFIED_DESC @10890
+
+COPY_EXISTING ~50HFSLWB.itm~ ~override~
+	SAY IDENTIFIED_DESC @10892
+
+COPY_EXISTING ~60SWDLHA.itm~ ~override~
+	SAY IDENTIFIED_DESC @10894
+
+COPY_EXISTING ~60HFSLHA.itm~ ~override~
+	SAY IDENTIFIED_DESC @10896
+
+COPY_EXISTING ~00SWDB93.itm~ ~override~
+	SAY NAME2 @10915
+	SAY IDENTIFIED_DESC @10916
+
+COPY_EXISTING ~00SWDB94.itm~ ~override~
+	SAY IDENTIFIED_DESC @10918
+
+COPY_EXISTING ~00SWDB95.itm~ ~override~
+	SAY NAME2 @10919
+	SAY IDENTIFIED_DESC @10920
+
+COPY_EXISTING ~00SWDB96.itm~ ~override~
+	SAY IDENTIFIED_DESC @10922
+
+COPY_EXISTING ~00SWDB97.itm~ ~override~
+	SAY IDENTIFIED_DESC @10924
+
+COPY_EXISTING ~00SWDB98.itm~ ~override~
+	SAY NAME2 @10925
+	SAY IDENTIFIED_DESC @10926
+
+COPY_EXISTING ~00SWDB99.itm~ ~override~
+	SAY IDENTIFIED_DESC @10928
+
+COPY_EXISTING ~00SWDBBS.itm~ ~override~
+	SAY NAME2 @10931
+	SAY IDENTIFIED_DESC @10932
+
+COPY_EXISTING ~00HFSBBS.itm~ ~override~
+	SAY NAME2 @10933
+	SAY IDENTIFIED_DESC @10934
+
+COPY_EXISTING ~00SWDBRC.itm~ ~override~
+	SAY NAME2 @10935
+	SAY IDENTIFIED_DESC @10936
+
+COPY_EXISTING ~00HFSBRC.itm~ ~override~
+	SAY NAME2 @10937
+	SAY IDENTIFIED_DESC @10938
+
+COPY_EXISTING ~00SWDBWR.itm~ ~override~
+	SAY NAME2 @10939
+	SAY IDENTIFIED_DESC @10940
+
+COPY_EXISTING ~00HFSBWR.itm~ ~override~
+	SAY NAME2 @10941
+	SAY IDENTIFIED_DESC @10942
+
+COPY_EXISTING ~00SWDC87.itm~ ~override~
+	SAY NAME2 @10945
+	SAY IDENTIFIED_DESC @10946
+
+COPY_EXISTING ~00SWDC88.itm~ ~override~
+	SAY NAME2 @10947
+	SAY IDENTIFIED_DESC @10948
+
+COPY_EXISTING ~00SWDC89.itm~ ~override~
+	SAY IDENTIFIED_DESC @10950
+
+COPY_EXISTING ~00SWDC90.itm~ ~override~
+	SAY IDENTIFIED_DESC @10952
+
+COPY_EXISTING ~00SWDC91.itm~ ~override~
+	SAY NAME2 @10953
+	SAY IDENTIFIED_DESC @10954
+
+COPY_EXISTING ~00SWDC92.itm~ ~override~
+	SAY IDENTIFIED_DESC @10956
+
+COPY_EXISTING ~00SWDC93.itm~ ~override~
+	SAY NAME2 @10957
+	SAY IDENTIFIED_DESC @10958
+
+COPY_EXISTING ~00SWDCCS.itm~ ~override~
+	SAY NAME2 @10971
+	SAY IDENTIFIED_DESC @10972
+
+COPY_EXISTING ~00HFSCCS.itm~ ~override~
+	SAY NAME2 @10973
+	SAY IDENTIFIED_DESC @10974
+
+COPY_EXISTING ~63SWDCSS.itm~ ~override~
+	SAY NAME2 @10975
+	SAY IDENTIFIED_DESC @10976
+
+COPY_EXISTING ~63HFSCSS.itm~ ~override~
+	SAY NAME2 @10977
+	SAY IDENTIFIED_DESC @10978
+
+COPY_EXISTING ~00SWDT90.itm~ ~override~
+	SAY IDENTIFIED_DESC @10994
+
+COPY_EXISTING ~00SWDT93.itm~ ~override~
+	SAY IDENTIFIED_DESC @11000
+
+COPY_EXISTING ~USHFST93.itm~ ~override~
+	SAY NAME2 @11001
+	SAY IDENTIFIED_DESC @11002
+
+COPY_EXISTING ~00SWDT94.itm~ ~override~
+	SAY IDENTIFIED_DESC @11004
+
+COPY_EXISTING ~00SWDT97.itm~ ~override~
+	SAY IDENTIFIED_DESC @11010
+
+COPY_EXISTING ~00SWDT99.itm~ ~override~
+	SAY IDENTIFIED_DESC @11014
+
+COPY_EXISTING ~00SWDTCL.itm~ ~override~
+	SAY NAME2 @11015
+
+COPY_EXISTING ~00HFSTCL.itm~ ~override~
+	SAY NAME2 @11017
+
+COPY_EXISTING ~11SWDTWS.itm~ ~override~
+	SAY IDENTIFIED_DESC @11020
+
+COPY_EXISTING ~00STAF80.itm~ ~override~
+	SAY NAME2 @11039
+	SAY IDENTIFIED_DESC @11040
+
+COPY_EXISTING ~00STAF81.itm~ ~override~
+	SAY IDENTIFIED_DESC @11042
+
+COPY_EXISTING ~00STAF82.itm~ ~override~
+	SAY IDENTIFIED_DESC @11044
+
+COPY_EXISTING ~00STAF83.itm~ ~override~
+	SAY IDENTIFIED_DESC @11046
+
+COPY_EXISTING ~00STAF84.itm~ ~override~
+	SAY IDENTIFIED_DESC @11048
+
+COPY_EXISTING ~00STAF85.itm~ ~override~
+	SAY IDENTIFIED_DESC @11050
+
+COPY_EXISTING ~00STAF86.itm~ ~override~
+	SAY NAME2 @11051
+
+COPY_EXISTING ~00STAF87.itm~ ~override~
+	SAY IDENTIFIED_DESC @11054
+
+COPY_EXISTING ~00STAF89.itm~ ~override~
+	SAY NAME2 @11057
+	SAY IDENTIFIED_DESC @11058
+
+COPY_EXISTING ~00STAF90.itm~ ~override~
+	SAY IDENTIFIED_DESC @11060
+
+COPY_EXISTING ~00STAF91.itm~ ~override~
+	SAY NAME2 @11061
+	SAY IDENTIFIED_DESC @11062
+
+COPY_EXISTING ~00STAF92.itm~ ~override~
+	SAY NAME2 @11063
+	SAY IDENTIFIED_DESC @11064
+
+COPY_EXISTING ~00STAF93.itm~ ~override~
+	SAY NAME2 @11065
+	SAY IDENTIFIED_DESC @11066
+
+COPY_EXISTING ~00STAFDD.itm~ ~override~
+	SAY IDENTIFIED_DESC @11080
+
+COPY_EXISTING ~00HFSFDD.itm~ ~override~
+	SAY NAME2 @11081
+	SAY IDENTIFIED_DESC @11082
+
+COPY_EXISTING ~11HFSFPI.itm~ ~override~
+	SAY IDENTIFIED_DESC @11086
+
+COPY_EXISTING ~12HFSFWS.itm~ ~override~
+	SAY IDENTIFIED_DESC @11090
+
+COPY_EXISTING ~51STAFRH.itm~ ~override~
+	SAY IDENTIFIED_DESC @11092
+
+COPY_EXISTING ~51HFSFRH.itm~ ~override~
+	SAY IDENTIFIED_DESC @11094
+
+COPY_EXISTING ~00SPER08.itm~ ~override~
+	SAY NAME2 @11099
+	SAY IDENTIFIED_DESC @11100
+
+COPY_EXISTING ~USHFSR08.itm~ ~override~
+	SAY NAME2 @11101
+	SAY IDENTIFIED_DESC @11102
+
+COPY_EXISTING ~00SPER89.itm~ ~override~
+	SAY IDENTIFIED_DESC @11104
+
+COPY_EXISTING ~00SPER90.itm~ ~override~
+	SAY IDENTIFIED_DESC @11106
+
+COPY_EXISTING ~00SPER93.itm~ ~override~
+	SAY IDENTIFIED_DESC @11112
+
+COPY_EXISTING ~00SPER94.itm~ ~override~
+	SAY IDENTIFIED_DESC @11114
+
+COPY_EXISTING ~00SPERIM.itm~ ~override~
+	SAY NAME2 @11125
+	SAY IDENTIFIED_DESC @11126
+
+COPY_EXISTING ~00HFSRIM.itm~ ~override~
+	SAY NAME2 @11127
+	SAY IDENTIFIED_DESC @11128
+
+COPY_EXISTING ~11HFSRNP.itm~ ~override~
+	SAY IDENTIFIED_DESC @11132
+
+COPY_EXISTING ~50SPERKS.itm~ ~override~
+	SAY IDENTIFIED_DESC @11134
+
+COPY_EXISTING ~50HFSRKS.itm~ ~override~
+	SAY IDENTIFIED_DESC @11136
+
+COPY_EXISTING ~00HALB92.itm~ ~override~
+	SAY IDENTIFIED_DESC @11154
+
+COPY_EXISTING ~00HALB93.itm~ ~override~
+	SAY IDENTIFIED_DESC @11156
+
+COPY_EXISTING ~00HALB95.itm~ ~override~
+	SAY IDENTIFIED_DESC @11160
+
+COPY_EXISTING ~00HALB96.itm~ ~override~
+	SAY NAME2 @11161
+	SAY IDENTIFIED_DESC @11162
+
+COPY_EXISTING ~00HALB98.itm~ ~override~
+	SAY NAME2 @11165
+	SAY IDENTIFIED_DESC @11166
+
+COPY_EXISTING ~00HALB99.itm~ ~override~
+	SAY IDENTIFIED_DESC @11168
+
+COPY_EXISTING ~00HALBDC.itm~ ~override~
+	SAY NAME2 @11169
+	SAY IDENTIFIED_DESC @11170
+
+COPY_EXISTING ~00HFHBDC.itm~ ~override~
+	SAY NAME2 @11171
+	SAY IDENTIFIED_DESC @11172
+
+COPY_EXISTING ~00HALBHL.itm~ ~override~
+	SAY NAME2 @11173
+	SAY IDENTIFIED_DESC @11174
+
+COPY_EXISTING ~00HFHBHL.itm~ ~override~
+	SAY NAME2 @11175
+	SAY IDENTIFIED_DESC @11176
+
+COPY_EXISTING ~00AX1H73.itm~ ~override~
+	SAY NAME2 @11195
+	SAY IDENTIFIED_DESC @11196
+
+COPY_EXISTING ~00AX1H74.itm~ ~override~
+	SAY IDENTIFIED_DESC @11198
+
+COPY_EXISTING ~00AX1H75.itm~ ~override~
+	SAY IDENTIFIED_DESC @11200
+
+COPY_EXISTING ~00AX1H81.itm~ ~override~
+	SAY NAME2 @11211
+	SAY IDENTIFIED_DESC @11212
+
+COPY_EXISTING ~00AX1H82.itm~ ~override~
+	SAY IDENTIFIED_DESC @11214
+
+COPY_EXISTING ~00AX1H83.itm~ ~override~
+	SAY IDENTIFIED_DESC @11216
+
+COPY_EXISTING ~00AX1H84.itm~ ~override~
+	SAY NAME2 @11217
+	SAY IDENTIFIED_DESC @11218
+
+COPY_EXISTING ~00AX1H85.itm~ ~override~
+	SAY IDENTIFIED_DESC @11220
+
+COPY_EXISTING ~00AX1H86.itm~ ~override~
+	SAY NAME2 @11221
+	SAY IDENTIFIED_DESC @11222
+
+COPY_EXISTING ~00AX1H87.itm~ ~override~
+	SAY NAME2 @11223
+	SAY IDENTIFIED_DESC @11224
+
+COPY_EXISTING ~00AX1H88.itm~ ~override~
+	SAY IDENTIFIED_DESC @11226
+
+COPY_EXISTING ~00AX1H90.itm~ ~override~
+	SAY NAME2 @11229
+	SAY IDENTIFIED_DESC @11230
+
+COPY_EXISTING ~00AX1H94.itm~ ~override~
+	SAY NAME2 @11237
+
+COPY_EXISTING ~00AX1H97.itm~ ~override~
+	SAY NAME2 @11243
+	SAY IDENTIFIED_DESC @11244
+
+COPY_EXISTING ~00AX1H98.itm~ ~override~
+	SAY NAME2 @11245
+	SAY IDENTIFIED_DESC @11246
+
+COPY_EXISTING ~00AX1H99.itm~ ~override~
+	SAY NAME2 @11247
+	SAY IDENTIFIED_DESC @11248
+
+COPY_EXISTING ~00AX1HAS.itm~ ~override~
+	SAY NAME2 @11249
+	SAY IDENTIFIED_DESC @11250
+
+COPY_EXISTING ~00HFAXAS.itm~ ~override~
+	SAY NAME2 @11251
+	SAY IDENTIFIED_DESC @11252
+
+COPY_EXISTING ~00AX1HCK.itm~ ~override~
+	SAY NAME2 @11257
+	SAY IDENTIFIED_DESC @11258
+
+COPY_EXISTING ~00HFAXCK.itm~ ~override~
+	SAY NAME2 @11259
+	SAY IDENTIFIED_DESC @11260
+
+COPY_EXISTING ~00AX1HSC.itm~ ~override~
+	SAY NAME2 @11261
+	SAY IDENTIFIED_DESC @11262
+
+COPY_EXISTING ~00HFAXSC.itm~ ~override~
+	SAY NAME2 @11263
+	SAY IDENTIFIED_DESC @11264
+
+COPY_EXISTING ~00AX1HSP.itm~ ~override~
+	SAY NAME2 @11265
+	SAY IDENTIFIED_DESC @11266
+
+COPY_EXISTING ~00HFAXSP.itm~ ~override~
+	SAY NAME2 @11267
+	SAY IDENTIFIED_DESC @11268
+
+COPY_EXISTING ~00AX1HTA.itm~ ~override~
+	SAY NAME2 @11269
+
+COPY_EXISTING ~11AX1HHO.itm~ ~override~
+	SAY NAME2 @11271
+
+COPY_EXISTING ~11HFAXHO.itm~ ~override~
+	SAY NAME2 @11273
+	SAY IDENTIFIED_DESC @11274
+
+COPY_EXISTING ~11AX1HKS.itm~ ~override~
+	SAY IDENTIFIED_DESC @11276
+
+COPY_EXISTING ~11HFAXKS.itm~ ~override~
+	SAY IDENTIFIED_DESC @11278
+
+COPY_EXISTING ~41AX1HAI.itm~ ~override~
+	SAY IDENTIFIED_DESC @11280
+
+COPY_EXISTING ~USHFAXAI.itm~ ~override~
+	SAY IDENTIFIED_DESC @11282
+
+COPY_EXISTING ~51AX1HDF.itm~ ~override~
+	SAY NAME2 @11283
+	SAY IDENTIFIED_DESC @11284
+
+COPY_EXISTING ~51HFAXDF.itm~ ~override~
+	SAY NAME2 @11285
+	SAY IDENTIFIED_DESC @11286
+
+COPY_EXISTING ~ZZI6SC.itm~ ~override~
+	SAY NAME2 @11287
+	PATCH_IF (MOD_IS_INSTALLED ~iwd2ee.tp2~ ~24~) BEGIN //If Better Racial Enemies is installed
+		SAY IDENTIFIED_DESC @11290
+	END 
+
+COPY_EXISTING ~ZZI6HFSC.itm~ ~override~
+	SAY NAME2 @11291
+	PATCH_IF (MOD_IS_INSTALLED ~iwd2ee.tp2~ ~24~) BEGIN //If Better Racial Enemies is installed
+		SAY IDENTIFIED_DESC @11294
+	END 
+
+COPY_EXISTING ~00AX2H85.itm~ ~override~
+	SAY NAME2 @11297
+	SAY IDENTIFIED_DESC @11298
+
+COPY_EXISTING ~00AX2H86.itm~ ~override~
+	SAY NAME2 @11299
+	SAY IDENTIFIED_DESC @11300
+
+COPY_EXISTING ~00AX2H87.itm~ ~override~
+	SAY IDENTIFIED_DESC @11302
+
+COPY_EXISTING ~00AX2H93.itm~ ~override~
+	SAY IDENTIFIED_DESC @11314
+
+COPY_EXISTING ~00AX2H94.itm~ ~override~
+	SAY NAME2 @11315
+	SAY IDENTIFIED_DESC @11316
+
+COPY_EXISTING ~00AX2H95.itm~ ~override~
+	SAY NAME2 @11317
+	SAY IDENTIFIED_DESC @11318
+
+COPY_EXISTING ~00AX2H96.itm~ ~override~
+	SAY NAME2 @11319
+	SAY IDENTIFIED_DESC @11320
+
+COPY_EXISTING ~00AX2H98.itm~ ~override~
+	SAY NAME2 @11323
+	SAY IDENTIFIED_DESC @11324
+
+COPY_EXISTING ~00AX2H99.itm~ ~override~
+	SAY NAME2 @11325
+	SAY IDENTIFIED_DESC @11326
+
+COPY_EXISTING ~00AX2HBB.itm~ ~override~
+	SAY NAME2 @11327
+	SAY IDENTIFIED_DESC @11328
+
+COPY_EXISTING ~00HFAXBB.itm~ ~override~
+	SAY NAME2 @11329
+	SAY IDENTIFIED_DESC @11330
+
+COPY_EXISTING ~00AX2HBD.itm~ ~override~
+	SAY NAME2 @11331
+	SAY IDENTIFIED_DESC @11332
+
+COPY_EXISTING ~00HFAXBD.itm~ ~override~
+	SAY NAME2 @11333
+	SAY IDENTIFIED_DESC @11334
+
+COPY_EXISTING ~00AX2HWT.itm~ ~override~
+	SAY NAME2 @11335
+
+COPY_EXISTING ~00HFAXWT.itm~ ~override~
+	SAY NAME2 @11337
+
+COPY_EXISTING ~11HFAXEW.itm~ ~override~
+	SAY IDENTIFIED_DESC @11342
+
+COPY_EXISTING ~00CLUB82.itm~ ~override~
+	SAY IDENTIFIED_DESC @11348
+
+COPY_EXISTING ~00CLUB84.itm~ ~override~
+	SAY NAME2 @11351
+	SAY IDENTIFIED_DESC @11352
+
+COPY_EXISTING ~00CLUB86.itm~ ~override~
+	SAY NAME2 @11355
+	SAY IDENTIFIED_DESC @11356
+
+COPY_EXISTING ~00CLUB87.itm~ ~override~
+	SAY IDENTIFIED_DESC @11358
+
+COPY_EXISTING ~00CLUB88.itm~ ~override~
+	SAY IDENTIFIED_DESC @11360
+
+COPY_EXISTING ~00CLUB89.itm~ ~override~
+	SAY IDENTIFIED_DESC @11362
+
+COPY_EXISTING ~00CLUB90.itm~ ~override~
+	SAY IDENTIFIED_DESC @11364
+
+COPY_EXISTING ~00CLUB92.itm~ ~override~
+	SAY NAME2 @11367
+	SAY IDENTIFIED_DESC @11368
+
+COPY_EXISTING ~00CLUB95.itm~ ~override~
+	SAY NAME2 @11373
+	SAY IDENTIFIED_DESC @11374
+
+COPY_EXISTING ~00CLUB96.itm~ ~override~
+	SAY NAME2 @11375
+	SAY IDENTIFIED_DESC @11376
+
+COPY_EXISTING ~00CLUBHK.itm~ ~override~
+	SAY NAME2 @11383
+	SAY IDENTIFIED_DESC @11384
+
+COPY_EXISTING ~00HFCBHK.itm~ ~override~
+	SAY NAME2 @11385
+	SAY IDENTIFIED_DESC @11386
+
+COPY_EXISTING ~ZZG6CT.itm~ ~override~
+	SAY IDENTIFIED_DESC @11388
+
+COPY_EXISTING ~11HFCBMK.itm~ ~override~
+	SAY IDENTIFIED_DESC @11392
+
+COPY_EXISTING ~50HFCLBT.itm~ ~override~
+	SAY IDENTIFIED_DESC @11396
+
+COPY_EXISTING ~63CLUBMP.itm~ ~override~
+	SAY IDENTIFIED_DESC @11398
+
+COPY_EXISTING ~63HFCBMP.itm~ ~override~
+	SAY IDENTIFIED_DESC @11400
+
+COPY_EXISTING ~00MACE89.itm~ ~override~
+	SAY NAME2 @11407
+	SAY IDENTIFIED_DESC @11408
+
+COPY_EXISTING ~00MACE92.itm~ ~override~
+	SAY NAME2 @11413
+	SAY IDENTIFIED_DESC @11414
+
+COPY_EXISTING ~00MACE93.itm~ ~override~
+	SAY NAME2 @11415
+	SAY IDENTIFIED_DESC @11416
+
+COPY_EXISTING ~00MACE94.itm~ ~override~
+	SAY NAME2 @11417
+	SAY IDENTIFIED_DESC @11418
+
+COPY_EXISTING ~00MACE95.itm~ ~override~
+	SAY NAME2 @11419
+	SAY IDENTIFIED_DESC @11420
+
+COPY_EXISTING ~00MACEAR.itm~ ~override~
+	SAY NAME2 @11429
+	SAY IDENTIFIED_DESC @11430
+
+COPY_EXISTING ~00HFMEAR.itm~ ~override~
+	SAY NAME2 @11431
+	SAY IDENTIFIED_DESC @11432
+
+COPY_EXISTING ~00MACECF.itm~ ~override~
+	SAY NAME2 @11433
+
+COPY_EXISTING ~00HFMECF.itm~ ~override~
+	SAY NAME2 @11435
+
+COPY_EXISTING ~ZZJ6MM.itm~ ~override~
+	SAY IDENTIFIED_DESC @11438
+
+COPY_EXISTING ~ZZJ6HFMM.itm~ ~override~
+	SAY IDENTIFIED_DESC @11440
+
+COPY_EXISTING ~00MSTR85.itm~ ~override~
+	SAY IDENTIFIED_DESC @11450
+
+COPY_EXISTING ~00MSTR91.itm~ ~override~
+	SAY NAME2 @11461
+	SAY IDENTIFIED_DESC @11462
+
+COPY_EXISTING ~00MSTR92.itm~ ~override~
+	SAY NAME2 @11463
+	SAY IDENTIFIED_DESC @11464
+
+COPY_EXISTING ~00MSTR93.itm~ ~override~
+	SAY IDENTIFIED_DESC @11466
+
+COPY_EXISTING ~00MSTR95.itm~ ~override~
+	SAY IDENTIFIED_DESC @11470
+
+COPY_EXISTING ~00MSTR97.itm~ ~override~
+	SAY IDENTIFIED_DESC @11474
+
+COPY_EXISTING ~00MSTRMG.itm~ ~override~
+	SAY NAME2 @11479
+	SAY IDENTIFIED_DESC @11480
+
+COPY_EXISTING ~00HFMRMG.itm~ ~override~
+	SAY NAME2 @11481
+	SAY IDENTIFIED_DESC @11482
+
+COPY_EXISTING ~00MSTRMS.itm~ ~override~
+	SAY NAME2 @11483
+	SAY IDENTIFIED_DESC @11484
+
+COPY_EXISTING ~00HFMRMS.itm~ ~override~
+	SAY NAME2 @11485
+	SAY IDENTIFIED_DESC @11486
+
+COPY_EXISTING ~00FLAL03.itm~ ~override~
+	SAY NAME2 @11491
+	SAY IDENTIFIED_DESC @11492
+
+COPY_EXISTING ~USHFFL03.itm~ ~override~
+	SAY NAME2 @11493
+	SAY IDENTIFIED_DESC @11494
+
+COPY_EXISTING ~00FLAL85.itm~ ~override~
+	SAY IDENTIFIED_DESC @11496
+
+COPY_EXISTING ~00FLAL87.itm~ ~override~
+	SAY IDENTIFIED_DESC @11500
+
+COPY_EXISTING ~00FLAL88.itm~ ~override~
+	SAY IDENTIFIED_DESC @11502
+
+COPY_EXISTING ~00FLAL90.itm~ ~override~
+	SAY NAME2 @11505
+	SAY IDENTIFIED_DESC @11506
+
+COPY_EXISTING ~00FLAL95.itm~ ~override~
+	SAY NAME2 @11515
+	SAY IDENTIFIED_DESC @11516
+
+COPY_EXISTING ~00FLAL96.itm~ ~override~
+	SAY NAME2 @11517
+	SAY IDENTIFIED_DESC @11518
+
+COPY_EXISTING ~00FLAL98.itm~ ~override~
+	SAY NAME2 @11521
+	SAY IDENTIFIED_DESC @11522
+
+COPY_EXISTING ~00FLALFV.itm~ ~override~
+	SAY NAME2 @11525
+	SAY IDENTIFIED_DESC @11526
+
+COPY_EXISTING ~00HFFLFV.itm~ ~override~
+	SAY NAME2 @11527
+	SAY IDENTIFIED_DESC @11528
+
+COPY_EXISTING ~00FLALSR.itm~ ~override~
+	SAY NAME2 @11529
+	SAY IDENTIFIED_DESC @11530
+
+COPY_EXISTING ~00HFFLSR.itm~ ~override~
+	SAY NAME2 @11531
+	SAY IDENTIFIED_DESC @11532
+
+COPY_EXISTING ~00MSTRSS.itm~ ~override~
+	SAY NAME2 @11533
+	SAY IDENTIFIED_DESC @11534
+
+COPY_EXISTING ~00HFMRSS.itm~ ~override~
+	SAY NAME2 @11535
+	SAY IDENTIFIED_DESC @11536
+
+COPY_EXISTING ~11FLALBC.itm~ ~override~
+	SAY IDENTIFIED_DESC @11538
+
+COPY_EXISTING ~11HFFLBC.itm~ ~override~
+	SAY IDENTIFIED_DESC @11540
+
+COPY_EXISTING ~63FLALPF.itm~ ~override~
+	SAY IDENTIFIED_DESC @11542
+
+COPY_EXISTING ~63HFFLPF.itm~ ~override~
+	SAY IDENTIFIED_DESC @11544
+
+COPY_EXISTING ~00HAMM88.itm~ ~override~
+	SAY IDENTIFIED_DESC @11560
+
+COPY_EXISTING ~00HAMM89.itm~ ~override~
+	SAY IDENTIFIED_DESC @11562
+
+COPY_EXISTING ~00HAMM90.itm~ ~override~
+	SAY IDENTIFIED_DESC @11564
+
+COPY_EXISTING ~00HAMM91.itm~ ~override~
+	SAY NAME2 @11565
+	SAY IDENTIFIED_DESC @11566
+
+COPY_EXISTING ~00HAMM92.itm~ ~override~
+	SAY NAME2 @11567
+	SAY IDENTIFIED_DESC @11568
+
+COPY_EXISTING ~00HAMM95.itm~ ~override~
+	SAY NAME2 @11573
+	SAY IDENTIFIED_DESC @11574
+
+COPY_EXISTING ~00HAMM96.itm~ ~override~
+	SAY NAME2 @11575
+	SAY IDENTIFIED_DESC @11576
+
+COPY_EXISTING ~00HAMM97.itm~ ~override~
+	SAY NAME2 @11577
+	SAY IDENTIFIED_DESC @11578
+
+COPY_EXISTING ~00HAMM98.itm~ ~override~
+	SAY IDENTIFIED_DESC @11580
+
+COPY_EXISTING ~00HAMMPH.itm~ ~override~
+	SAY NAME2 @11583
+	SAY IDENTIFIED_DESC @11584
+
+COPY_EXISTING ~00HFHMPH.itm~ ~override~
+	SAY NAME2 @11585
+	SAY IDENTIFIED_DESC @11586
+
+COPY_EXISTING ~00HAMMSC.itm~ ~override~
+	SAY NAME2 @11587
+	SAY IDENTIFIED_DESC @11588
+
+COPY_EXISTING ~00HFHRSC.itm~ ~override~
+	SAY NAME2 @11589
+	SAY IDENTIFIED_DESC @11590
+
+COPY_EXISTING ~11HFHRCR.itm~ ~override~
+	SAY IDENTIFIED_DESC @11594
+
+COPY_EXISTING ~51HAMMDA.itm~ ~override~
+	SAY IDENTIFIED_DESC @11596
+
+COPY_EXISTING ~51HFHRDA.itm~ ~override~
+	SAY IDENTIFIED_DESC @11598
+
+COPY_EXISTING ~51HAMMVA.itm~ ~override~
+	SAY IDENTIFIED_DESC @11600
+
+COPY_EXISTING ~51HFHRVA.itm~ ~override~
+	SAY IDENTIFIED_DESC @11602
+
+COPY_EXISTING ~63HAMMBI.itm~ ~override~
+	SAY IDENTIFIED_DESC @11604
+
+COPY_EXISTING ~63HFHRBI.itm~ ~override~
+	SAY IDENTIFIED_DESC @11606
 
 
-COPY ~%mod_folder%/itm/00WAND20.itm~ ~override~
+COPY_EXISTING ~00DART03.itm~ ~override~
+	SAY IDENTIFIED_DESC @11632
 
-COPY ~%mod_folder%/itm/00AMUL12.itm~ ~override~
-  SAY NAME1 @2190
-  SAY NAME2 @2190
-  SAY DESC @2191
-COPY ~%mod_folder%/itm/00AMULBT.itm~ ~override~
-  SAY NAME1 @2192
-  SAY NAME2 @2192
-  SAY DESC @2193
-COPY ~%mod_folder%/itm/00AROW88.itm~ ~override~
-  SAY NAME1 @2194
-  SAY NAME2 @2194
-  SAY DESC @2195
-COPY ~%mod_folder%/itm/00AROW90.itm~ ~override~
-  SAY NAME1 @2196
-  SAY NAME2 @2196
-  SAY DESC @2197
-COPY ~%mod_folder%/itm/00AROW97.itm~ ~override~
-  SAY NAME1 @2198
-  SAY NAME2 @2198
-  SAY DESC @2199
-COPY ~%mod_folder%/itm/00BARD04.itm~ ~override~
-  SAY NAME1 @2200
-  SAY NAME2 @2200
-  SAY DESC @2201
-COPY ~%mod_folder%/itm/00BARD06.itm~ ~override~
-  SAY NAME1 @2202
-  SAY NAME2 @2202
-  SAY DESC @2203
-COPY ~%mod_folder%/itm/00BARD08.itm~ ~override~
-  SAY NAME1 @2204
-  SAY NAME2 @2204
-  SAY DESC @2205
-COPY ~%mod_folder%/itm/00BARDRS.itm~ ~override~
-  SAY NAME1 @2206
-  SAY NAME2 @2206
-  SAY DESC @2207
-COPY ~%mod_folder%/itm/00BELTAD.itm~ ~override~
-  SAY NAME1 @2208
-  SAY NAME2 @2208
-  SAY DESC @2209
-COPY ~%mod_folder%/itm/00BOLT08.itm~ ~override~
-  SAY NAME1 @2210
-  SAY NAME2 @2210
-  SAY DESC @2211
-COPY ~%mod_folder%/itm/00CWSHD1.itm~ ~override~
-COPY ~%mod_folder%/itm/00BOLT93.itm~ ~override~
-  SAY NAME1 @2212
-  SAY NAME2 @2212
-  SAY DESC @2213
-COPY ~%mod_folder%/itm/00BOOT02.itm~ ~override~
-  SAY NAME1 @2214
-  SAY NAME2 @2214
-  SAY DESC @2215
-COPY ~%mod_folder%/itm/00BOWC92.itm~ ~override~
-  SAY NAME1 @2216
-  SAY NAME2 @2216
-  SAY DESC @2217
-COPY ~%mod_folder%/itm/00BOWC94.itm~ ~override~
-  SAY NAME1 @2218
-  SAY NAME2 @2218
-  SAY DESC @2219
-COPY ~%mod_folder%/itm/00BOWL95.itm~ ~override~
-  SAY NAME1 @2220
-  SAY NAME2 @2220
-  SAY DESC @2221
-COPY ~%mod_folder%/itm/00BOWL96.itm~ ~override~
-  SAY NAME1 @2222
-  SAY NAME2 @2222
-  SAY DESC @2223
-COPY ~%mod_folder%/itm/00BOWS86.itm~ ~override~
-  SAY NAME1 @2224
-  SAY NAME2 @2224
-  SAY DESC @2225
-COPY ~%mod_folder%/itm/00BOWS92.itm~ ~override~
-  SAY NAME1 @2224
-  SAY NAME2 @2224
-  SAY DESC @2225
-COPY ~%mod_folder%/itm/00BOWS87.itm~ ~override~
-  SAY NAME1 @2226
-  SAY NAME2 @2226
-  SAY DESC @2227
-COPY ~%mod_folder%/itm/00BULL04.itm~ ~override~
-  SAY NAME1 @2228
-  SAY NAME2 @2228
-  SAY DESC @2229
-COPY ~%mod_folder%/itm/00BULL87.itm~ ~override~
-  SAY NAME1 @2230
-  SAY NAME2 @2230
-  SAY DESC @2231
-COPY ~%mod_folder%/itm/00BULL88.itm~ ~override~
-  SAY NAME1 @2232
-  SAY NAME2 @2232
-  SAY DESC @2233
-COPY ~%mod_folder%/itm/00BULL92.itm~ ~override~
-  SAY NAME1 @2234
-  SAY NAME2 @2234
-  SAY DESC @2235
-COPY ~%mod_folder%/itm/00BWLX96.itm~ ~override~
-  SAY NAME1 @2236
-  SAY NAME2 @2236
-  SAY DESC @2237
-COPY ~%mod_folder%/itm/00CLCKNV.itm~ ~override~
-  SAY NAME1 @2238
-  SAY NAME2 @2238
-  SAY DESC @2239
-COPY ~%mod_folder%/itm/00CLUB82.itm~ ~override~
-  SAY NAME1 @2240
-  SAY NAME2 @2240
-  SAY DESC @2241
-COPY ~%mod_folder%/itm/00CLUB90.itm~ ~override~
-  SAY NAME1 @2242
-  SAY NAME2 @2242
-  SAY DESC @2243
-COPY ~%mod_folder%/itm/00CLUB92.itm~ ~override~
-  SAY NAME1 @2244
-  SAY NAME2 @2244
-  SAY DESC @2245
-COPY ~%mod_folder%/itm/00CLUB95.itm~ ~override~
-  SAY NAME1 @2246
-  SAY NAME2 @2246
-  SAY DESC @2247
-COPY ~%mod_folder%/itm/00DAGG82.itm~ ~override~
-  SAY NAME1 @2248
-  SAY NAME2 @2248
-  SAY DESC @2249
-COPY ~%mod_folder%/itm/00DAGG82.itm~ ~override~
-  SAY NAME1 @2250
-  SAY NAME2 @2250
-  SAY DESC @2251
-COPY ~%mod_folder%/itm/00DAGG93.itm~ ~override~
-  SAY NAME1 @2252
-  SAY NAME2 @2252
-  SAY DESC @2253
-COPY ~%mod_folder%/itm/00DAGG94.itm~ ~override~
-  SAY NAME1 @2254
-  SAY NAME2 @2254
-  SAY DESC @2255
-COPY ~%mod_folder%/itm/00DAGG99.itm~ ~override~
-  SAY NAME1 @2256
-  SAY NAME2 @2256
-  SAY DESC @2257
-COPY ~%mod_folder%/itm/00DAGGFW.itm~ ~override~
-  SAY NAME1 @2258
-  SAY NAME2 @2258
-  SAY DESC @2259
-COPY ~%mod_folder%/itm/00DAGGPF.itm~ ~override~
-  SAY NAME1 @2260
-  SAY NAME2 @2260
-  SAY DESC @2261
-COPY ~%mod_folder%/itm/00DART03.itm~ ~override~
-  SAY NAME1 @2262
-  SAY NAME2 @2262
-  SAY DESC @2263
-COPY ~%mod_folder%/itm/00DART83.itm~ ~override~
-  SAY NAME1 @2264
-  SAY NAME2 @2264
-  SAY DESC @2265
-COPY ~%mod_folder%/itm/00DART84.itm~ ~override~
-  SAY NAME1 @2266
-  SAY NAME2 @2266
-  SAY DESC @2267
-COPY ~%mod_folder%/itm/00DART96.itm~ ~override~
-  SAY NAME1 @2268
-  SAY NAME2 @2268
-  SAY DESC @2269
-COPY ~%mod_folder%/itm/00DARTAT.itm~ ~override~
-  SAY NAME1 @2270
-  SAY NAME2 @2270
-  SAY DESC @2271
-COPY ~%mod_folder%/itm/00DARTDD.itm~ ~override~
-  SAY NAME1 @2272
-  SAY NAME2 @2272
-  SAY DESC @2273
-COPY ~%mod_folder%/itm/00FLAL85.itm~ ~override~
-  SAY NAME1 @2274
-  SAY NAME2 @2274
-  SAY DESC @2275
-COPY ~%mod_folder%/itm/00FLAL87.itm~ ~override~
-  SAY NAME1 @2276
-  SAY NAME2 @2276
-  SAY DESC @2277
-COPY ~%mod_folder%/itm/00HALB93.itm~ ~override~
-  SAY NAME1 @2278
-  SAY NAME2 @2278
-  SAY DESC @2279
-COPY ~%mod_folder%/itm/00FLAL93.itm~ ~override~
-  SAY NAME1 @2869
-  SAY NAME2 @2869
-  SAY DESC @2870
-COPY ~%mod_folder%/itm/00HALB98.itm~ ~override~
-  SAY NAME1 @2280
-  SAY NAME2 @2280
-  SAY DESC @2281
-COPY ~%mod_folder%/itm/00HALBHL.itm~ ~override~
-  SAY NAME1 @2282
-  SAY NAME2 @2282
-  SAY DESC @2283
-COPY ~%mod_folder%/itm/00HAMM89.itm~ ~override~
-  SAY NAME1 @2284
-  SAY NAME2 @2284
-  SAY DESC @2285
-COPY ~%mod_folder%/itm/00HAMM90.itm~ ~override~
-  SAY NAME1 @2286
-  SAY NAME2 @2286
-  SAY DESC @2287
-COPY ~%mod_folder%/itm/00HAMM95.itm~ ~override~
-  SAY NAME1 @2288
-  SAY NAME2 @2288
-  SAY DESC @2289
-COPY ~%mod_folder%/itm/00HAMM97.itm~ ~override~
-  SAY NAME1 @2290
-  SAY NAME2 @2290
-  SAY DESC @2291
-COPY ~%mod_folder%/itm/00HELM01.itm~ ~override~
-  SAY NAME1 @2292
-  SAY NAME2 @2292
-  SAY DESC @2293
-COPY ~%mod_folder%/itm/00HELM02.itm~ ~override~
-  SAY NAME1 @2294
-  SAY NAME2 @2294
-  SAY DESC @2295
-COPY ~%mod_folder%/itm/00HELM03.itm~ ~override~
-  SAY NAME1 @2294
-  SAY NAME2 @2294
-  SAY DESC @2295
-COPY ~%mod_folder%/itm/00HELM04.itm~ ~override~
-  SAY NAME1 @2294
-  SAY NAME2 @2294
-  SAY DESC @2295
-COPY ~%mod_folder%/itm/00HELM05.itm~ ~override~
-  SAY NAME1 @2294
-  SAY NAME2 @2294
-  SAY DESC @2295
-COPY ~%mod_folder%/itm/00HELM06.itm~ ~override~
-  SAY NAME1 @2294
-  SAY NAME2 @2294
-  SAY DESC @2295
-COPY ~%mod_folder%/itm/00HELM07.itm~ ~override~
-  SAY NAME1 @2294
-  SAY NAME2 @2294
-  SAY DESC @2295
-COPY ~%mod_folder%/itm/00HELMBH.itm~ ~override~
-  SAY NAME1 @2296
-  SAY NAME2 @2296
-  SAY DESC @2297
-COPY ~%mod_folder%/itm/00HELMDS.itm~ ~override~
-  SAY NAME1 @2298
-  SAY NAME2 @2298
-  SAY DESC @2299
-COPY ~%mod_folder%/itm/00HFAMBT.itm~ ~override~
-  SAY NAME1 @2300
-  SAY NAME2 @2300
-  SAY DESC @2301
-COPY ~%mod_folder%/itm/00HFAXBA.itm~ ~override~
-  SAY NAME1 @2302
-  SAY NAME2 @2302
-  SAY DESC @2303
-COPY ~%mod_folder%/itm/00HFAXBB.itm~ ~override~
-  SAY NAME1 @2304
-  SAY NAME2 @2304
-  SAY DESC @2305
-COPY ~%mod_folder%/itm/00HFBD04.itm~ ~override~
-  SAY NAME1 @2306
-  SAY NAME2 @2306
-  SAY DESC @2307
-COPY ~%mod_folder%/itm/00HFBD06.itm~ ~override~
-  SAY NAME1 @2308
-  SAY NAME2 @2308
-  SAY DESC @2309
-COPY ~%mod_folder%/itm/00HFBTAD.itm~ ~override~
-  SAY NAME1 @2310
-  SAY NAME2 @2310
-  SAY DESC @2311
-COPY ~%mod_folder%/itm/00HFCBHK.itm~ ~override~
-  SAY NAME1 @2312
-  SAY NAME2 @2312
-  SAY DESC @2313
-COPY ~%mod_folder%/itm/00HFDGFW.itm~ ~override~
-  SAY NAME1 @2314
-  SAY NAME2 @2314
-  SAY DESC @2315
-COPY ~%mod_folder%/itm/00HFDGPF.itm~ ~override~
-  SAY NAME1 @2316
-  SAY NAME2 @2316
-  SAY DESC @2317
-COPY ~%mod_folder%/itm/00HFDTAT.itm~ ~override~
-  SAY NAME1 @2318
-  SAY NAME2 @2318
-  SAY DESC @2319
-COPY ~%mod_folder%/itm/00HFDTDD.itm~ ~override~
-  SAY NAME1 @2320
-  SAY NAME2 @2320
-  SAY DESC @2321
-COPY ~%mod_folder%/itm/00HFFLSR.itm~ ~override~
-  SAY NAME1 @2322
-  SAY NAME2 @2322
-  SAY DESC @2323
-COPY ~%mod_folder%/itm/00HFHBHL.itm~ ~override~
-  SAY NAME1 @2324
-  SAY NAME2 @2324
-  SAY DESC @2325
-COPY ~%mod_folder%/itm/00HFHMBH.itm~ ~override~
-  SAY NAME1 @2326
-  SAY NAME2 @2326
-  SAY DESC @2327
-COPY ~%mod_folder%/itm/00HFHMDS.itm~ ~override~
-  SAY NAME1 @2328
-  SAY NAME2 @2328
-  SAY DESC @2329
-COPY ~%mod_folder%/itm/00HFHMSM.itm~ ~override~
-  SAY NAME1 @2330
-  SAY NAME2 @2330
-  SAY DESC @2331
-COPY ~%mod_folder%/itm/00HFHRSC.itm~ ~override~
-  SAY NAME1 @2332
-  SAY NAME2 @2332
-  SAY DESC @2333
-COPY ~%mod_folder%/itm/00HFMEAR.itm~ ~override~
-  SAY NAME1 @2334
-  SAY NAME2 @2334
-  SAY DESC @2335
-COPY ~%mod_folder%/itm/00HFMRMS.itm~ ~override~
-  SAY NAME1 @2336
-  SAY NAME2 @2336
-  SAY DESC @2337
-COPY ~%mod_folder%/itm/00HFMRSS.itm~ ~override~
-  SAY NAME1 @2338
-  SAY NAME2 @2338
-  SAY DESC @2339
-COPY ~%mod_folder%/itm/00HFRBRA.itm~ ~override~
-  SAY NAME1 @2340
-  SAY NAME2 @2340
-  SAY DESC @2341
-COPY ~%mod_folder%/itm/00HFRGAR.itm~ ~override~
-  SAY NAME1 @2342
-  SAY NAME2 @2342
-  SAY DESC @2343
-COPY ~%mod_folder%/itm/00HFRGCR.itm~ ~override~
-  SAY NAME1 @2344
-  SAY NAME2 @2344
-  SAY DESC @2345
-COPY ~%mod_folder%/itm/00HFSBBS.itm~ ~override~
-  SAY NAME1 @2346
-  SAY NAME2 @2346
-  SAY DESC @2347
-COPY ~%mod_folder%/itm/00HFSDBU.itm~ ~override~
-  SAY NAME1 @2348
-  SAY NAME2 @2348
-  SAY DESC @2349
-COPY ~%mod_folder%/itm/00HFSLDB.itm~ ~override~
-  SAY NAME1 @2350
-  SAY NAME2 @2350
-  SAY DESC @2351
-COPY ~%mod_folder%/itm/00HFSLDY.itm~ ~override~
-  SAY NAME1 @2352
-  SAY NAME2 @2352
-  SAY DESC @2353
-COPY ~%mod_folder%/itm/00HFSSLS.itm~ ~override~
-  SAY NAME1 @2354
-  SAY NAME2 @2354
-  SAY DESC @2355
-COPY ~%mod_folder%/itm/00HFSSSK.itm~ ~override~
-  SAY NAME1 @2356
-  SAY NAME2 @2356
-  SAY DESC @2357
-COPY ~%mod_folder%/itm/00HFSSTD.itm~ ~override~
-  SAY NAME1 @2358
-  SAY NAME2 @2358
-  SAY DESC @2359
-COPY ~%mod_folder%/itm/00LEAT08.itm~ ~override~
-  SAY NAME1 @2360
-  SAY NAME2 @2360
-  SAY DESC @2361
-COPY ~%mod_folder%/itm/00LEAT86.itm~ ~override~
-  SAY NAME1 @2362
-  SAY NAME2 @2362
-  SAY DESC @2363
-COPY ~%mod_folder%/itm/00LEAT92.itm~ ~override~
-  SAY NAME1 @2364
-  SAY NAME2 @2364
-  SAY DESC @2365
-COPY ~%mod_folder%/itm/00LEAT97.itm~ ~override~
-  SAY NAME1 @2366
-  SAY NAME2 @2366
-  SAY DESC @2367
-COPY ~%mod_folder%/itm/00MACE92.itm~ ~override~
-  SAY NAME1 @2368
-  SAY NAME2 @2368
-  SAY DESC @2369
-COPY ~%mod_folder%/itm/00MACE95.itm~ ~override~
-  SAY NAME1 @2370
-  SAY NAME2 @2370
-  SAY DESC @2371
-COPY ~%mod_folder%/itm/00MSTR85.itm~ ~override~
-  SAY NAME1 @2372
-  SAY NAME2 @2372
-  SAY DESC @2373
-COPY ~%mod_folder%/itm/00MSTR91.itm~ ~override~
-  SAY NAME1 @2374
-  SAY NAME2 @2374
-  SAY DESC @2375
-COPY ~%mod_folder%/itm/00MSTRMS.itm~ ~override~
-  SAY NAME1 @2376
-  SAY NAME2 @2376
-  SAY DESC @2377
-COPY ~%mod_folder%/itm/00MSTRSS.itm~ ~override~
-  SAY NAME1 @2378
-  SAY NAME2 @2378
-  SAY DESC @2379
-COPY ~%mod_folder%/itm/00RING16.itm~ ~override~
-  SAY NAME1 @2396
-  SAY NAME2 @2396
-  SAY DESC @2397
-COPY ~%mod_folder%/itm/00RING23.itm~ ~override~
-  SAY NAME1 @2398
-  SAY NAME2 @2398
-  SAY DESC @2399
-COPY ~%mod_folder%/itm/00RING82.itm~ ~override~
-  SAY NAME1 @2400
-  SAY NAME2 @2400
-  SAY DESC @2401
-COPY ~%mod_folder%/itm/00RING85.itm~ ~override~
-  SAY NAME1 @2402
-  SAY NAME2 @2402
-  SAY DESC @2403
-COPY ~%mod_folder%/itm/00RING89.itm~ ~override~
-  SAY NAME1 @2404
-  SAY NAME2 @2404
-  SAY DESC @2405
-COPY ~%mod_folder%/itm/00RING93.itm~ ~override~
-  SAY NAME1 @2406
-  SAY NAME2 @2406
-  SAY DESC @2407
-COPY ~%mod_folder%/itm/00RING97.itm~ ~override~
-  SAY NAME1 @2408
-  SAY NAME2 @2408
-  SAY DESC @2409
-COPY ~%mod_folder%/itm/00RINGCR.itm~ ~override~
-  SAY NAME1 @2410
-  SAY NAME2 @2410
-  SAY DESC @2411
-COPY ~%mod_folder%/itm/00ROBE99.itm~ ~override~
-  SAY NAME1 @2412
-  SAY NAME2 @2412
-  SAY DESC @2413
-COPY ~%mod_folder%/itm/00ROBEMR.itm~ ~override~
-  SAY NAME1 @2414
-  SAY NAME2 @2414
-  SAY DESC @2415
-COPY ~%mod_folder%/itm/00HFRBMR.itm~ ~override~
-  SAY NAME1 @2416
-  SAY NAME2 @2416
-  SAY DESC @2417
-COPY ~%mod_folder%/itm/00SCRL01.itm~ ~override~
-  SAY NAME1 @2418
-  SAY NAME2 @2418
-  SAY DESC @2419
-COPY ~%mod_folder%/itm/00SCRL02.itm~ ~override~
-  SAY NAME1 @2420
-  SAY NAME2 @2420
-  SAY DESC @2421
-COPY ~%mod_folder%/itm/00SCRL03.itm~ ~override~
-  SAY NAME1 @2422
-  SAY NAME2 @2422
-  SAY DESC @2423
-COPY ~%mod_folder%/itm/00SCRL04.itm~ ~override~
-  SAY NAME1 @2424
-  SAY NAME2 @2424
-  SAY DESC @2425
-COPY ~%mod_folder%/itm/00SHLD94.itm~ ~override~
-  SAY NAME1 @2426
-  SAY NAME2 @2426
-  SAY DESC @2427
-COPY ~%mod_folder%/itm/00SHLDBU.itm~ ~override~
-  SAY NAME1 @2428
-  SAY NAME2 @2428
-  SAY DESC @2429
-COPY ~%mod_folder%/itm/00SLNG88.itm~ ~override~
-  SAY NAME1 @2430
-  SAY NAME2 @2430
-  SAY DESC @2431
-COPY ~%mod_folder%/itm/00SLNG89.itm~ ~override~
-  SAY NAME1 @2432
-  SAY NAME2 @2432
-  SAY DESC @2433
-COPY ~%mod_folder%/itm/00SLNG94.itm~ ~override~
-  SAY NAME1 @2434
-  SAY NAME2 @2434
-  SAY DESC @2435
-COPY ~%mod_folder%/itm/00SPER89.itm~ ~override~
-  SAY NAME1 @2436
-  SAY NAME2 @2436
-  SAY DESC @2437
-COPY ~%mod_folder%/itm/00STAF80.itm~ ~override~
-  SAY NAME1 @2438
-  SAY NAME2 @2438
-  SAY DESC @2439
-COPY ~%mod_folder%/itm/00STAF84.itm~ ~override~
-  SAY NAME1 @2440
-  SAY NAME2 @2440
-  SAY DESC @2441
-COPY ~%mod_folder%/itm/00STAF85.itm~ ~override~
-  SAY NAME1 @2442
-  SAY NAME2 @2442
-  SAY DESC @2443
-COPY ~%mod_folder%/itm/00STAF90.itm~ ~override~
-  SAY NAME1 @2444
-  SAY NAME2 @2444
-  SAY DESC @2445
-COPY ~%mod_folder%/itm/00STAF93.itm~ ~override~
-  SAY NAME1 @2446
-  SAY NAME2 @2446
-  SAY DESC @2447
-COPY ~%mod_folder%/itm/00SWDB94.itm~ ~override~
-  SAY NAME1 @2448
-  SAY NAME2 @2448
-  SAY DESC @2449
-COPY ~%mod_folder%/itm/00SWDB97.itm~ ~override~
-  SAY NAME1 @2450
-  SAY NAME2 @2450
-  SAY DESC @2451
-COPY ~%mod_folder%/itm/00SWDBRC.itm~ ~override~
-  SAY NAME1 @2452
-  SAY NAME2 @2452
-  SAY DESC @2453
-COPY ~%mod_folder%/itm/00SWDC92.itm~ ~override~
-  SAY NAME1 @2454
-  SAY NAME2 @2454
-  SAY DESC @2455
-COPY ~%mod_folder%/itm/00SWDC93.itm~ ~override~
-  SAY NAME1 @2456
-  SAY NAME2 @2456
-  SAY DESC @2457
-COPY ~%mod_folder%/itm/00SWDL80.itm~ ~override~
-  SAY NAME1 @2458
-  SAY NAME2 @2458
-  SAY DESC @2459
-COPY ~%mod_folder%/itm/00SWDL85.itm~ ~override~
-  SAY NAME1 @2460
-  SAY NAME2 @2460
-  SAY DESC @2461
-COPY ~%mod_folder%/itm/00SWDL89.itm~ ~override~
-  SAY NAME1 @2462
-  SAY NAME2 @2462
-  SAY DESC @2463
-COPY ~%mod_folder%/itm/00SWDL91.itm~ ~override~
-  SAY NAME1 @2464
-  SAY NAME2 @2464
-  SAY DESC @2465
-COPY ~%mod_folder%/itm/00SWDL92.itm~ ~override~
-  SAY NAME1 @2466
-  SAY NAME2 @2466
-  SAY DESC @2467
-COPY ~%mod_folder%/itm/00SWDL98.itm~ ~override~
-  SAY NAME1 @2468
-  SAY NAME2 @2468
-  SAY DESC @2469
-COPY ~%mod_folder%/itm/00SWDLDB.itm~ ~override~
-  SAY NAME1 @2470
-  SAY NAME2 @2470
-  SAY DESC @2471
-COPY ~%mod_folder%/itm/00SWDLDY.itm~ ~override~
-  SAY NAME1 @2472
-  SAY NAME2 @2472
-  SAY DESC @2473
-COPY ~%mod_folder%/itm/00SWDS87.itm~ ~override~
-  SAY NAME1 @2474
-  SAY NAME2 @2474
-  SAY DESC @2475
-COPY ~%mod_folder%/itm/00SWDS94.itm~ ~override~
-  SAY NAME1 @2476
-  SAY NAME2 @2476
-  SAY DESC @2477
-COPY ~%mod_folder%/itm/00SWDSLS.itm~ ~override~
-  SAY NAME1 @2478
-  SAY NAME2 @2478
-  SAY DESC @2479
-COPY ~%mod_folder%/itm/00SWDSSK.itm~ ~override~
-  SAY NAME1 @2480
-  SAY NAME2 @2480
-  SAY DESC @2481
-COPY ~%mod_folder%/itm/00SWDSTD.itm~ ~override~
-  SAY NAME1 @2482
-  SAY NAME2 @2482
-  SAY DESC @2483
-COPY ~%mod_folder%/itm/00SWDT93.itm~ ~override~
-  SAY NAME1 @2484
-  SAY NAME2 @2484
-  SAY DESC @2485
-COPY ~%mod_folder%/itm/00WAND01.itm~ ~override~
-  SAY NAME1 @2486
-  SAY NAME2 @2486
-  SAY DESC @2487
-COPY ~%mod_folder%/itm/00WAND02.itm~ ~override~
-  SAY NAME1 @2488
-  SAY NAME2 @2488
-  SAY DESC @2489
-COPY ~%mod_folder%/itm/00WAND03.itm~ ~override~
-  SAY NAME1 @2490
-  SAY NAME2 @2490
-  SAY DESC @2491
+COPY_EXISTING ~00DART04.itm~ ~override~
+	SAY IDENTIFIED_DESC @11634
 
-// spells to work with edited potions; not all may be used
-COPY ~%mod_folder%/spl/EFFLUC1.spl~ ~override~
-COPY ~%mod_folder%/spl/EFFNV1.spl~ ~override~
-COPY ~%mod_folder%/spl/EFFPSN2.spl~ ~override~
-COPY ~%mod_folder%/spl/EFFSTR2.spl~ ~override~
-COPY ~%mod_folder%/spl/EFFTHRM1.spl~ ~override~
-COPY ~%mod_folder%/spl/EFFTHRM2.spl~ ~override~
+COPY_EXISTING ~00DART05.itm~ ~override~
+	SAY NAME2 @11635
+	SAY IDENTIFIED_DESC @11636
 
-COPY ~%mod_folder%/itm/52BOOKOG.itm~ ~override~
-  SAY NAME1 @2575
-  SAY NAME2 @2575
-  SAY DESC @2576
-COPY ~%mod_folder%/itm/52BOOKDV.itm~ ~override~
-COPY ~%mod_folder%/itm/52BOOKGE.itm~ ~override~
-COPY ~%mod_folder%/itm/52BOOKSU.itm~ ~override~
-COPY ~%mod_folder%/itm/52BOOKSV.itm~ ~override~
-/*
-COPY ~%mod_folder%/itm/52BOOKAD.itm~ ~override~
-  SAY NAME1 @2577
-  SAY NAME2 @2577
-  SAY DESC @2578
-COPY ~%mod_folder%/itm/52HFBKAD.itm~ ~override~
-  SAY NAME1 @2579
-  SAY NAME2 @2579
-  SAY DESC @2580
-*/
-COPY ~%mod_folder%/itm/52HFBKOG.itm~ ~override~
-  SAY NAME1 @2581
-  SAY NAME2 @2581
-  SAY DESC @2582
-COPY ~%mod_folder%/itm/52HFBKSV.itm~ ~override~
-COPY ~%mod_folder%/itm/52HFBKSU.itm~ ~override~
-COPY ~%mod_folder%/itm/52HFBKGE.itm~ ~override~
-COPY ~%mod_folder%/itm/52HFBKDV.itm~ ~override~
-COPY ~%mod_folder%/itm/11SPERNP.itm~ ~override~
-COPY ~%mod_folder%/itm/11HAMMCR.itm~ ~override~
-COPY ~%mod_folder%/itm/11BELTSB.itm~ ~override~
-COPY ~%mod_folder%/itm/11BARDWD.itm~ ~override~
-COPY ~%mod_folder%/itm/11AX1HKS.itm~ ~override~
-COPY ~%mod_folder%/itm/11AMULCM.itm~ ~override~
-COPY ~%mod_folder%/itm/11HFBKHW.itm~ ~override~
-  SAY NAME1 @2583
-  SAY NAME2 @2583
-  SAY DESC @2584
-COPY ~%mod_folder%/itm/11HFBKLD.itm~ ~override~
-  SAY NAME1 @2585
-  SAY NAME2 @2585
-  SAY DESC @2586
-COPY ~%mod_folder%/itm/11HFBKLE.itm~ ~override~
-  SAY NAME1 @2587
-  SAY NAME2 @2587
-  SAY DESC @2588
-COPY ~%mod_folder%/itm/11SWDLHE.itm~ ~override~
-  SAY NAME1 @2593
-  SAY NAME2 @2593
-  SAY DESC @2594
-/*
-COPY ~%mod_folder%/itm/11SWDTWS.itm~ ~override~
-  SAY NAME1 @2595
-  SAY NAME2 @2595
-  SAY DESC @2596
-*/
-COPY ~%mod_folder%/itm/50HIDE06.itm~ ~override~
-COPY ~%mod_folder%/itm/50BOOT14.itm~ ~override~
-COPY ~%mod_folder%/itm/50CLCK17.itm~ ~override~
-COPY ~%mod_folder%/itm/41AX1HAI.itm~ ~override~
-  SAY NAME1 @2597
-  SAY NAME2 @2597
-  SAY DESC @2598
-COPY ~%mod_folder%/itm/50LEATMS.itm~ ~override~
-  SAY NAME1 @2599
-  SAY NAME2 @2599
-  SAY DESC @2600
-COPY ~%mod_folder%/itm/51HELMWM.itm~ ~override~
-  SAY NAME1 @2603
-  SAY NAME2 @2603
-  SAY DESC @2604
-COPY ~%mod_folder%/itm/51HFHMWM.itm~ ~override~
-  SAY NAME1 @2605
-  SAY NAME2 @2605
-  SAY DESC @2606
-COPY ~%mod_folder%/itm/51HFPT10.itm~ ~override~
-  SAY NAME1 @2607
-  SAY NAME2 @2607
-  SAY DESC @2608
-COPY ~%mod_folder%/itm/51PLAT10.itm~ ~override~
-  SAY NAME1 @2609
-  SAY NAME2 @2609
-  SAY DESC @2610
-COPY ~%mod_folder%/itm/52HFDGSH.itm~ ~override~
-  SAY NAME1 @2611
-  SAY NAME2 @2611
-  SAY DESC @2612
-COPY ~%mod_folder%/itm/53AMULHD.itm~ ~override~
-COPY ~%mod_folder%/spl/EFFCOLD1.spl~ ~override~
-COPY ~%mod_folder%/itm/60CHANGR.itm~ ~override~
-  SAY NAME1 @2613
-  SAY NAME2 @2613
-  SAY DESC @2614
-COPY ~%mod_folder%/itm/60CHANSA.itm~ ~override~
-COPY ~%mod_folder%/itm/60HFCNGR.itm~ ~override~
-  SAY NAME1 @2613
-  SAY NAME2 @2613
-  SAY DESC @2614
-COPY ~%mod_folder%/spl/EFFCOLD2.spl~ ~override~
-COPY ~%mod_folder%/itm/61HFDGWS.itm~ ~override~
-  SAY NAME1 @2617
-  SAY NAME2 @2617
-  SAY DESC @2618
-COPY ~%mod_folder%/itm/61DAGGWS.itm~ ~override~
-  SAY NAME1 @2619
-  SAY NAME2 @2619
-  SAY DESC @2620
-COPY ~%mod_folder%/itm/00RING25.itm~ ~override~
-  SAY NAME1 @2702
-  SAY NAME2 @2702
-  SAY DESC @2703
-COPY ~%mod_folder%/itm/00RING15.itm~ ~override~
-  SAY NAME1 @2704
-  SAY NAME2 @2704
-  SAY DESC @2705
-COPY ~%mod_folder%/itm/00RING88.itm~ ~override~
-  SAY NAME1 @2706
-  SAY NAME2 @2706
-  SAY DESC @2707
-COPY ~%mod_folder%/itm/00RING90.itm~ ~override~
-  SAY NAME1 @2708
-  SAY NAME2 @2708
-  SAY DESC @2709
-COPY ~%mod_folder%/itm/00RING94.itm~ ~override~
-  SAY NAME1 @2710
-  SAY NAME2 @2710
-  SAY DESC @2711
-COPY ~%mod_folder%/itm/00RING95.itm~ ~override~
-  SAY NAME1 @2712
-  SAY NAME2 @2712
-  SAY DESC @2713
-COPY ~%mod_folder%/itm/00AROW10.itm~ ~override~
-  SAY NAME1 @2871
-  SAY NAME2 @2871
-  SAY DESC @2872
+COPY_EXISTING ~00DART83.itm~ ~override~
+	SAY IDENTIFIED_DESC @11638
 
-// failed attempts to use opcode 402 on on-hit effects for weapons
-/*
-COPY ~%mod_folder%/itm/50HFSLWB.itm~ ~override~
-  SAY NAME1 @2873
-  SAY NAME2 @2873
-  SAY DESC @2874
-COPY ~%mod_folder%/itm/50SWDLWB.itm~ ~override~
-  SAY NAME1 @2875
-  SAY NAME2 @2875
-  SAY DESC @2876
-COPY ~%mod_folder%/itm/00AX2H85.itm~ ~override~
-  SAY NAME1 @2877
-  SAY NAME2 @2877
-  SAY DESC @2878
-COPY ~%mod_folder%/itm/00DARTDD.itm~ ~override~
-  SAY NAME1 @2879
-  SAY NAME2 @2879
-  SAY DESC @2880
-COPY ~%mod_folder%/itm/00HFDTDD.itm~ ~override~
-  SAY NAME1 @2881
-  SAY NAME2 @2881
-  SAY DESC @2882
-COPY ~%mod_folder%/itm/00HFSLDY.itm~ ~override~
-  SAY NAME1 @2883
-  SAY NAME2 @2883
-  SAY DESC @2884
-COPY ~%mod_folder%/itm/00SWDLDY.itm~ ~override~
-  SAY NAME1 @2885
-  SAY NAME2 @2885
-  SAY DESC @2886
-COPY ~%mod_folder%/itm/51HAMMDA.itm~ ~override~
-  SAY NAME1 @2887
-  SAY NAME2 @2887
-  SAY DESC @2888
-COPY ~%mod_folder%/itm/51HAMMDA.itm~ ~override~
-  SAY NAME1 @2889
-  SAY NAME2 @2889
-  SAY DESC @2890
-COPY ~%mod_folder%/itm/00DART96.itm~ ~override~
-  SAY NAME1 @2891
-  SAY NAME2 @2891
-  SAY DESC @2892
-COPY ~%mod_folder%/itm/00HFMRMS.itm~ ~override~
-  SAY NAME1 @2893
-  SAY NAME2 @2893
-  SAY DESC @2894
+COPY_EXISTING ~00DART84.itm~ ~override~
+	SAY IDENTIFIED_DESC @11640
 
-COPY ~%mod_folder%/spl/USSOPOI1.spl~ ~override~
-COPY ~%mod_folder%/spl/USSOPOI2.spl~ ~override~
-COPY ~%mod_folder%/spl/USSOPOI3.spl~ ~override~
-COPY ~%mod_folder%/spl/USSOBAN1.spl~ ~override~
-COPY ~%mod_folder%/spl/USSOBLI1.spl~ ~override~
-COPY ~%mod_folder%/spl/USSOCHA1.spl~ ~override~
-COPY ~%mod_folder%/spl/USSOCON1.spl~ ~override~
-COPY ~%mod_folder%/spl/USSOCON2.spl~ ~override~
-COPY ~%mod_folder%/spl/USSODEA1.spl~ ~override~
-//COPY ~%mod_folder%/spl/USSDISO1.spl~ ~override~ //doesn't yet exist
-COPY ~%mod_folder%/spl/USSODIS2.spl~ ~override~
-COPY ~%mod_folder%/spl/USSOENE1.spl~ ~override~
-COPY ~%mod_folder%/spl/USSOENT1.spl~ ~override~
-COPY ~%mod_folder%/spl/USSOFEA1.spl~ ~override~
-COPY ~%mod_folder%/spl/USSOFEE1.spl~ ~override~
-COPY ~%mod_folder%/spl/USSOHOP1.spl~ ~override~
-COPY ~%mod_folder%/spl/USSOPET1.spl~ ~override~
-COPY ~%mod_folder%/spl/USSORES1.spl~ ~override~
-COPY ~%mod_folder%/spl/USSOSIL1.spl~ ~override~
-COPY ~%mod_folder%/spl/USSOSLA1.spl~ ~override~
-COPY ~%mod_folder%/spl/USSOSLO1.spl~ ~override~
-COPY ~%mod_folder%/spl/USSOSTU1.spl~ ~override~
-COPY ~%mod_folder%/spl/USSOVAM1.spl~ ~override~
-COPY ~%mod_folder%/spl/USSOWEB1.spl~ ~override~
+COPY_EXISTING ~00DART85.itm~ ~override~
+	SAY IDENTIFIED_DESC @11642
 
-COPY ~%mod_folder%/spl/USSOPOIA.spl~ ~override~
-COPY ~%mod_folder%/spl/USSOPOIB.spl~ ~override~
-COPY ~%mod_folder%/spl/USSOPOIC.spl~ ~override~
-COPY ~%mod_folder%/spl/USSOSTUN.spl~ ~override~
-COPY ~%mod_folder%/spl/USSOBANE.spl~ ~override~
-COPY ~%mod_folder%/spl/USSOBLIN.spl~ ~override~
-COPY ~%mod_folder%/spl/USSOCHAR.spl~ ~override~
-COPY ~%mod_folder%/spl/USSOCONF.spl~ ~override~
-COPY ~%mod_folder%/spl/USSOCONT.spl~ ~override~
-COPY ~%mod_folder%/spl/USSODEAF.spl~ ~override~
-COPY ~%mod_folder%/spl/USSODISP.spl~ ~override~
-COPY ~%mod_folder%/spl/USSODISR.spl~ ~override~
-COPY ~%mod_folder%/spl/USSOENTA.spl~ ~override~
-COPY ~%mod_folder%/spl/USSOFEAR.spl~ ~override~
-COPY ~%mod_folder%/spl/USSOFEEB.spl~ ~override~
-COPY ~%mod_folder%/spl/USSOHOPE.spl~ ~override~
-COPY ~%mod_folder%/spl/USSOPETR.spl~ ~override~
-COPY ~%mod_folder%/spl/USSORESI.spl~ ~override~
-COPY ~%mod_folder%/spl/USSOSILE.spl~ ~override~
-COPY ~%mod_folder%/spl/USSOSLAY.spl~ ~override~
-COPY ~%mod_folder%/spl/USSOSLOW.spl~ ~override~
-COPY ~%mod_folder%/spl/USSOVAMP.spl~ ~override~
-COPY ~%mod_folder%/spl/USSOWEB.spl~ ~override~
-*/
+COPY_EXISTING ~00DART86.itm~ ~override~
+	SAY IDENTIFIED_DESC @11644
 
+COPY_EXISTING ~00DART87.itm~ ~override~
+	SAY NAME2 @11645
+	SAY IDENTIFIED_DESC @11646
+
+COPY_EXISTING ~00DART88.itm~ ~override~
+	SAY NAME2 @11647
+
+COPY_EXISTING ~00DART94.itm~ ~override~
+	SAY NAME2 @11659
+	SAY IDENTIFIED_DESC @11660
+
+COPY_EXISTING ~00DART95.itm~ ~override~
+	SAY NAME2 @11661
+
+COPY_EXISTING ~00DART96.itm~ ~override~
+	SAY NAME2 @11663
+	SAY IDENTIFIED_DESC @11664
+
+COPY_EXISTING ~00DART97.itm~ ~override~
+	SAY NAME2 @11665
+
+COPY_EXISTING ~00DART98.itm~ ~override~
+	SAY NAME2 @11667
+	SAY IDENTIFIED_DESC @11668
+
+COPY_EXISTING ~00DART99.itm~ ~override~
+	SAY NAME2 @11669
+	SAY IDENTIFIED_DESC @11670
+
+COPY_EXISTING ~00DARTAT.itm~ ~override~
+	SAY NAME2 @11671
+	SAY IDENTIFIED_DESC @11672
+
+COPY_EXISTING ~00HFDTAT.itm~ ~override~
+	SAY NAME2 @11673
+	SAY IDENTIFIED_DESC @11674
+
+COPY_EXISTING ~00DARTDD.itm~ ~override~
+	SAY NAME2 @11675
+	SAY IDENTIFIED_DESC @11676
+
+COPY_EXISTING ~00HFDTDD.itm~ ~override~
+	SAY NAME2 @11677
+	SAY IDENTIFIED_DESC @11678
+
+COPY_EXISTING ~00DARTPD.itm~ ~override~
+	SAY NAME2 @11679
+
+COPY_EXISTING ~00HFDTPD.itm~ ~override~
+	SAY NAME2 @11681
+
+
+COPY_EXISTING ~00BOWS86.itm~ ~override~
+	SAY NAME2 @11689
+	SAY IDENTIFIED_DESC @11690
+
+COPY_EXISTING ~00BOWS87.itm~ ~override~
+	SAY NAME2 @11691
+	SAY IDENTIFIED_DESC @11692
+
+COPY_EXISTING ~00BOWS88.itm~ ~override~
+	SAY NAME2 @11693
+	SAY IDENTIFIED_DESC @11694
+
+COPY_EXISTING ~00BOWS89.itm~ ~override~
+	SAY NAME2 @11695
+	SAY IDENTIFIED_DESC @11696
+
+COPY_EXISTING ~00BOWS90.itm~ ~override~
+	SAY IDENTIFIED_DESC @11698
+
+COPY_EXISTING ~00BOWS91.itm~ ~override~
+	SAY NAME2 @11699
+	SAY IDENTIFIED_DESC @11700
+
+COPY_EXISTING ~00BOWS92.itm~ ~override~
+	SAY NAME2 @11701
+	SAY IDENTIFIED_DESC @11702
+
+COPY_EXISTING ~00BOWS93.itm~ ~override~
+	SAY NAME2 @11703
+	SAY IDENTIFIED_DESC @11704
+
+COPY_EXISTING ~00BOWS94.itm~ ~override~
+	SAY NAME2 @11705
+	SAY IDENTIFIED_DESC @11706
+
+COPY_EXISTING ~00BOWS95.itm~ ~override~
+	SAY IDENTIFIED_DESC @11708
+
+
+COPY_EXISTING ~00BOWSEH.itm~ ~override~
+	SAY NAME2 @11717
+	SAY IDENTIFIED_DESC @11718
+
+COPY_EXISTING ~00HFBSEH.itm~ ~override~
+	SAY NAME2 @11719
+	SAY IDENTIFIED_DESC @11720
+
+COPY_EXISTING ~00BOWSRS.itm~ ~override~
+	SAY NAME2 @11721
+	SAY IDENTIFIED_DESC @11722
+
+COPY_EXISTING ~00HFBSRS.itm~ ~override~
+	SAY NAME2 @11723
+	SAY IDENTIFIED_DESC @11724
+
+
+COPY_EXISTING ~00BOWP97.itm~ ~override~
+	SAY NAME2 @11729
+	SAY IDENTIFIED_DESC @11730
+
+COPY_EXISTING ~00BOWP98.itm~ ~override~
+	SAY IDENTIFIED_DESC @11732
+
+COPY_EXISTING ~00BOWP99.itm~ ~override~
+	SAY NAME2 @11733
+	SAY IDENTIFIED_DESC @11734
+
+
+COPY_EXISTING ~00BOWL95.itm~ ~override~
+	SAY IDENTIFIED_DESC @11750
+
+COPY_EXISTING ~00BOWL96.itm~ ~override~
+	SAY NAME2 @11751
+	SAY IDENTIFIED_DESC @11752
+
+COPY_EXISTING ~00BOWL97.itm~ ~override~
+	SAY NAME2 @11753
+	SAY IDENTIFIED_DESC @11754
+
+COPY_EXISTING ~00BOWL98.itm~ ~override~
+	SAY NAME2 @11755
+	SAY IDENTIFIED_DESC @11756
+
+COPY_EXISTING ~00BOWL99.itm~ ~override~
+	SAY NAME2 @11757
+	SAY IDENTIFIED_DESC @11758
+
+COPY_EXISTING ~00BOWLFK.itm~ ~override~
+	SAY NAME2 @11759
+	SAY IDENTIFIED_DESC @11760
+
+COPY_EXISTING ~00HFBLFK.itm~ ~override~
+	SAY NAME2 @11761
+	SAY IDENTIFIED_DESC @11762
+
+COPY_EXISTING ~00BOWLSF.itm~ ~override~
+	SAY NAME2 @11763
+
+COPY_EXISTING ~00HFBLSF.itm~ ~override~
+	SAY NAME2 @11765
+
+COPY_EXISTING ~00BOWLSR.itm~ ~override~
+	SAY NAME2 @11767
+	SAY IDENTIFIED_DESC @11768
+
+COPY_EXISTING ~00HFBLSR.itm~ ~override~
+	SAY NAME2 @11769
+	SAY IDENTIFIED_DESC @11770
+
+
+COPY_EXISTING ~00BOWC92.itm~ ~override~
+	SAY NAME2 @11777
+	SAY IDENTIFIED_DESC @11778
+
+COPY_EXISTING ~00BOWC93.itm~ ~override~
+	SAY NAME2 @11779
+	SAY IDENTIFIED_DESC @11780
+
+COPY_EXISTING ~00BOWC94.itm~ ~override~
+	SAY NAME2 @11781
+	SAY IDENTIFIED_DESC @11782
+
+COPY_EXISTING ~00BOWC95.itm~ ~override~
+	SAY NAME2 @11783
+	SAY IDENTIFIED_DESC @11784
+
+
+COPY_EXISTING ~00BOWCAG.itm~ ~override~
+	SAY NAME2 @11793
+	SAY IDENTIFIED_DESC @11794
+
+COPY_EXISTING ~00HFBCAG.itm~ ~override~
+	SAY NAME2 @11795
+	SAY IDENTIFIED_DESC @11796
+
+
+COPY_EXISTING ~00BWLX03.itm~ ~override~
+	SAY IDENTIFIED_DESC @11802
+
+COPY_EXISTING ~00BWLX04.itm~ ~override~
+	SAY IDENTIFIED_DESC @11804
+
+COPY_EXISTING ~00BWLX91.itm~ ~override~
+	SAY NAME2 @11805
+	SAY IDENTIFIED_DESC @11806
+
+COPY_EXISTING ~00BWLX92.itm~ ~override~
+	SAY IDENTIFIED_DESC @11808
+
+COPY_EXISTING ~00BWLX93.itm~ ~override~
+	SAY IDENTIFIED_DESC @11810
+
+COPY_EXISTING ~00BWLX94.itm~ ~override~
+	SAY IDENTIFIED_DESC @11812
+
+COPY_EXISTING ~00BWLX95.itm~ ~override~
+	SAY IDENTIFIED_DESC @11814
+
+COPY_EXISTING ~00BWLX96.itm~ ~override~
+	SAY NAME2 @11815
+	SAY IDENTIFIED_DESC @11816
+
+COPY_EXISTING ~00BWLX97.itm~ ~override~
+	SAY NAME2 @11817
+	SAY IDENTIFIED_DESC @11818
+
+COPY_EXISTING ~00BWLX98.itm~ ~override~
+	SAY NAME2 @11819
+	SAY IDENTIFIED_DESC @11820
+
+COPY_EXISTING ~00BWLX99.itm~ ~override~
+	SAY NAME2 @11821
+
+COPY_EXISTING ~00BWLXHF.itm~ ~override~
+	SAY NAME2 @11823
+	SAY IDENTIFIED_DESC @11824
+
+COPY_EXISTING ~00HFLXHF.itm~ ~override~
+	SAY NAME2 @11825
+	SAY IDENTIFIED_DESC @11826
+
+COPY_EXISTING ~00BWLXIM.itm~ ~override~
+	SAY NAME2 @11827
+	SAY IDENTIFIED_DESC @11828
+
+COPY_EXISTING ~00HFLXIM.itm~ ~override~
+	SAY NAME2 @11829
+	SAY IDENTIFIED_DESC @11830
+
+COPY_EXISTING ~00BWLXMB.itm~ ~override~
+	SAY NAME2 @11831
+	SAY IDENTIFIED_DESC @11832
+
+COPY_EXISTING ~00HFLXMB.itm~ ~override~
+	SAY NAME2 @11833
+	SAY IDENTIFIED_DESC @11834
+
+
+COPY_EXISTING ~00BWHX01.itm~ ~override~
+	SAY IDENTIFIED_DESC @11836
+
+COPY_EXISTING ~00BWHX02.itm~ ~override~
+	SAY IDENTIFIED_DESC @11838
+
+COPY_EXISTING ~00BWHX03.itm~ ~override~
+	SAY IDENTIFIED_DESC @11840
+
+COPY_EXISTING ~00BWHX04.itm~ ~override~
+	SAY NAME2 @11841
+	SAY IDENTIFIED_DESC @11842
+
+COPY_EXISTING ~00BWHX91.itm~ ~override~
+	SAY IDENTIFIED_DESC @11844
+
+COPY_EXISTING ~00BWHX92.itm~ ~override~
+	SAY IDENTIFIED_DESC @11846
+
+COPY_EXISTING ~00BWHX93.itm~ ~override~
+	SAY IDENTIFIED_DESC @11848
+
+COPY_EXISTING ~00BWHX94.itm~ ~override~
+	SAY IDENTIFIED_DESC @11850
+
+COPY_EXISTING ~00BWHX95.itm~ ~override~
+	SAY NAME2 @11851
+	SAY IDENTIFIED_DESC @11852
+
+COPY_EXISTING ~00BWHX96.itm~ ~override~
+	SAY NAME2 @11853
+	SAY IDENTIFIED_DESC @11854
+
+COPY_EXISTING ~00BWHX97.itm~ ~override~
+	SAY NAME2 @11855
+	SAY IDENTIFIED_DESC @11856
+
+COPY_EXISTING ~00BWHX98.itm~ ~override~
+	SAY IDENTIFIED_DESC @11858
+
+COPY_EXISTING ~00BWHX99.itm~ ~override~
+	SAY NAME2 @11859
+	SAY IDENTIFIED_DESC @11860
+
+COPY_EXISTING ~00BWHXGE.itm~ ~override~
+	SAY NAME2 @11861
+	SAY IDENTIFIED_DESC @11862
+
+COPY_EXISTING ~00HFHXGE.itm~ ~override~
+	SAY NAME2 @11863
+	SAY IDENTIFIED_DESC @11864
+
+COPY_EXISTING ~00BWHXHF.itm~ ~override~
+	SAY NAME2 @11865
+	SAY IDENTIFIED_DESC @11866
+
+COPY_EXISTING ~00HFHXHF.itm~ ~override~
+	SAY NAME2 @11867
+	SAY IDENTIFIED_DESC @11868
+
+COPY_EXISTING ~00BWHXIA.itm~ ~override~
+	SAY NAME2 @11869
+	SAY IDENTIFIED_DESC @11870
+
+COPY_EXISTING ~00HFHXIA.itm~ ~override~
+	SAY NAME2 @11871
+	SAY IDENTIFIED_DESC @11872
+
+COPY_EXISTING ~00BWHXMR.itm~ ~override~
+	SAY NAME2 @11873
+	SAY IDENTIFIED_DESC @11874
+
+COPY_EXISTING ~00HFHXMR.itm~ ~override~
+	SAY NAME2 @11875
+	SAY IDENTIFIED_DESC @11876
+
+COPY_EXISTING ~51BWHXDB.itm~ ~override~
+	SAY IDENTIFIED_DESC @11878
+
+COPY_EXISTING ~51HFHXDB.itm~ ~override~
+	SAY IDENTIFIED_DESC @11880
+
+COPY_EXISTING ~51BWHXHB.itm~ ~override~
+	SAY IDENTIFIED_DESC @11882
+
+COPY_EXISTING ~51HFHXHB.itm~ ~override~
+	SAY IDENTIFIED_DESC @11884
+
+
+COPY_EXISTING ~00SLNG88.itm~ ~override~
+	SAY NAME2 @11889
+	SAY IDENTIFIED_DESC @11890
+
+COPY_EXISTING ~00SLNG89.itm~ ~override~
+	SAY NAME2 @11891
+	SAY IDENTIFIED_DESC @11892
+
+
+COPY_EXISTING ~00SLNG92.itm~ ~override~
+	SAY NAME2 @11897
+	SAY IDENTIFIED_DESC @11898
+
+COPY_EXISTING ~00SLNG93.itm~ ~override~
+	SAY NAME2 @11899
+	SAY IDENTIFIED_DESC @11900
+
+COPY_EXISTING ~00SLNG94.itm~ ~override~
+	SAY IDENTIFIED_DESC @11902
+
+
+COPY_EXISTING ~00SLNGCT.itm~ ~override~
+	SAY NAME2 @11913
+	SAY IDENTIFIED_DESC @11914
+
+COPY_EXISTING ~00HFSGCT.itm~ ~override~
+	SAY NAME2 @11915
+	SAY IDENTIFIED_DESC @11916
+
+COPY_EXISTING ~00SLNGSS.itm~ ~override~
+	SAY NAME2 @11917
+	SAY IDENTIFIED_DESC @11918
+
+COPY_EXISTING ~00HFSGSS.itm~ ~override~
+	SAY NAME2 @11919
+	SAY IDENTIFIED_DESC @11920
+
+
+COPY_EXISTING ~11HFSGLH.itm~ ~override~
+	SAY IDENTIFIED_DESC @11924
+
+
+COPY_EXISTING ~00AROW05.itm~ ~override~
+	SAY IDENTIFIED_DESC @11934
+
+COPY_EXISTING ~00AROW06.itm~ ~override~
+	SAY NAME2 @11935
+	SAY IDENTIFIED_DESC @11936
+
+COPY_EXISTING ~00AROW07.itm~ ~override~
+	SAY IDENTIFIED_DESC @11938
+
+COPY_EXISTING ~00AROW08.itm~ ~override~
+	SAY IDENTIFIED_DESC @11940
+
+COPY_EXISTING ~00AROW09.itm~ ~override~
+	SAY IDENTIFIED_DESC @11942
+
+COPY_EXISTING ~00AROW10.itm~ ~override~
+	SAY NAME2 @11943
+	SAY IDENTIFIED_DESC @11944
+
+COPY_EXISTING ~00AROW14.itm~ ~override~
+	SAY IDENTIFIED_DESC @11946
+
+COPY_EXISTING ~00AROW85.itm~ ~override~
+	SAY IDENTIFIED_DESC @11948
+
+COPY_EXISTING ~00AROW86.itm~ ~override~
+	SAY IDENTIFIED_DESC @11950
+
+COPY_EXISTING ~00AROW87.itm~ ~override~
+	SAY NAME2 @11951
+	SAY IDENTIFIED_DESC @11952
+
+COPY_EXISTING ~00AROW88.itm~ ~override~
+	SAY IDENTIFIED_DESC @11954
+
+
+COPY_EXISTING ~00AROW90.itm~ ~override~
+	SAY IDENTIFIED_DESC @11958
+
+
+COPY_EXISTING ~00AROW96.itm~ ~override~
+	SAY IDENTIFIED_DESC @11970
+
+
+COPY_EXISTING ~00AROW98.itm~ ~override~
+	SAY NAME2 @11973
+	SAY IDENTIFIED_DESC @11974
+
+COPY_EXISTING ~00AROW99.itm~ ~override~
+	SAY IDENTIFIED_DESC @11976
+
+
+COPY_EXISTING ~00BOLT05.itm~ ~override~
+	SAY IDENTIFIED_DESC @11986
+
+
+COPY_EXISTING ~00BOLT08.itm~ ~override~
+	SAY NAME2 @11987
+	SAY IDENTIFIED_DESC @11988
+
+COPY_EXISTING ~00BOLT93.itm~ ~override~
+	SAY NAME2 @11989
+	SAY IDENTIFIED_DESC @11990
+
+COPY_EXISTING ~00BOLT94.itm~ ~override~
+	SAY IDENTIFIED_DESC @11992
+
+COPY_EXISTING ~00BOLT95.itm~ ~override~
+	SAY IDENTIFIED_DESC @11994
+
+COPY_EXISTING ~00BOLT96.itm~ ~override~
+	SAY IDENTIFIED_DESC @11996
+
+
+COPY_EXISTING ~00BULL04.itm~ ~override~
+	SAY NAME2 @12009
+	SAY IDENTIFIED_DESC @12010
+
+COPY_EXISTING ~00BULL86.itm~ ~override~
+	SAY IDENTIFIED_DESC @12012
+
+COPY_EXISTING ~00BULL87.itm~ ~override~
+	SAY NAME2 @12013
+	SAY IDENTIFIED_DESC @12014
+
+COPY_EXISTING ~00BULL88.itm~ ~override~
+	SAY NAME2 @12015
+	SAY IDENTIFIED_DESC @12016
+
+COPY_EXISTING ~00BULL89.itm~ ~override~
+	SAY NAME2 @12017
+	SAY IDENTIFIED_DESC @12018
+
+COPY_EXISTING ~00BULL90.itm~ ~override~
+	SAY NAME2 @12019
+	SAY IDENTIFIED_DESC @12020
+
+
+COPY_EXISTING ~00BULL92.itm~ ~override~
+	SAY NAME2 @12023
+	SAY IDENTIFIED_DESC @12024
+
+
+COPY_EXISTING ~00MISC31.itm~ ~override~
+	SAY IDENTIFIED_DESC @12040
+
+COPY_EXISTING ~USHFMC31.itm~ ~override~
+	SAY IDENTIFIED_DESC @12042
+
+COPY_EXISTING ~00MISC32.itm~ ~override~
+	SAY IDENTIFIED_DESC @12044
+
+COPY_EXISTING ~USHFMC32.itm~ ~override~
+	SAY IDENTIFIED_DESC @12046
+
+COPY_EXISTING ~00MISC37.itm~ ~override~
+	SAY IDENTIFIED_DESC @12048
+
+COPY_EXISTING ~USHFMC37.itm~ ~override~
+	SAY NAME2 @12049
+	SAY IDENTIFIED_DESC @12050
+
+COPY_EXISTING ~00MISC38.itm~ ~override~
+	SAY IDENTIFIED_DESC @12052
+
+COPY_EXISTING ~00HFMC38.itm~ ~override~
+	SAY IDENTIFIED_DESC @12054
+
+
+COPY_EXISTING ~USHFGNIR.itm~ ~override~
+	SAY IDENTIFIED_DESC @12058
+
+
+COPY_EXISTING ~00GENMP.itm~ ~override~
+	SAY IDENTIFIED_DESC @12064
+
+COPY_EXISTING ~00HFGNMP.itm~ ~override~
+	SAY IDENTIFIED_DESC @12066
+
+
+COPY_EXISTING ~USHFGNOD.itm~ ~override~
+	SAY IDENTIFIED_DESC @12074
+
+
+COPY_EXISTING ~00POTN06.itm~ ~override~
+	SAY IDENTIFIED_DESC @12078
+
+
+COPY_EXISTING ~USHFPN07.itm~ ~override~
+	SAY IDENTIFIED_DESC @12082
+
+COPY_EXISTING ~00POTN33.itm~ ~override~
+	SAY IDENTIFIED_DESC @12084
+
+COPY_EXISTING ~00POTN34.itm~ ~override~
+	SAY IDENTIFIED_DESC @12086
+
+COPY_EXISTING ~00POTN36.itm~ ~override~
+	SAY IDENTIFIED_DESC @12088
+
+COPY_EXISTING ~00POTN45.itm~ ~override~
+	SAY IDENTIFIED_DESC @12090
+
+COPY_EXISTING ~00POTN50.itm~ ~override~
+	SAY IDENTIFIED_DESC @12092
+
+COPY_EXISTING ~00POTN53.itm~ ~override~
+	SAY IDENTIFIED_DESC @12094
+
+COPY_EXISTING ~00POTN55.itm~ ~override~
+	SAY IDENTIFIED_DESC @12096
+
+COPY_EXISTING ~00HFPN55.itm~ ~override~
+	SAY IDENTIFIED_DESC @12098
+
+COPY_EXISTING ~00POTN66.itm~ ~override~
+	SAY IDENTIFIED_DESC @12100
+
+COPY_EXISTING ~00POTN74.itm~ ~override~
+	SAY IDENTIFIED_DESC @12102
+
+COPY_EXISTING ~00POTN89.itm~ ~override~
+	SAY IDENTIFIED_DESC @12104
+
+COPY_EXISTING ~00POTN90.itm~ ~override~
+	SAY NAME2 @12105
+	SAY IDENTIFIED_DESC @12106
+
+COPY_EXISTING ~00POTN91.itm~ ~override~
+	SAY IDENTIFIED_DESC @12108
+
+COPY_EXISTING ~00POTN92.itm~ ~override~
+	SAY IDENTIFIED_DESC @12110
+
+COPY_EXISTING ~00POTN93.itm~ ~override~
+	SAY IDENTIFIED_DESC @12112
+
+COPY_EXISTING ~00POTN94.itm~ ~override~
+	SAY NAME2 @12113
+	SAY IDENTIFIED_DESC @12114
+
+COPY_EXISTING ~00POTN95.itm~ ~override~
+	SAY NAME2 @12115
+	SAY IDENTIFIED_DESC @12116
+
+COPY_EXISTING ~00POTN96.itm~ ~override~
+	SAY NAME2 @12117
+	SAY IDENTIFIED_DESC @12118
+
+COPY_EXISTING ~00POTN97.itm~ ~override~
+	SAY IDENTIFIED_DESC @12120
+
+COPY_EXISTING ~00POTN98.itm~ ~override~
+	SAY IDENTIFIED_DESC @12122
+
+COPY_EXISTING ~00POTN99.itm~ ~override~
+	SAY IDENTIFIED_DESC @12124
+
+COPY_EXISTING ~50POTN56.itm~ ~override~
+	SAY IDENTIFIED_DESC @12126
+
+COPY ~%mod_folder%/itm/USALBEET.itm~ ~override/00POTN03.itm~
+  SAY NAME1 @4759
+  SAY NAME2 @4759
+  SAY DESC @4760
+COPY ~%mod_folder%/itm/USALBEHO.itm~ ~override~
+  SAY NAME1 @4761
+  SAY NAME2 @4761
+  SAY DESC @4762
+COPY ~%mod_folder%/itm/USALBOGV.itm~ ~override~
+  SAY NAME1 @4744
+  SAY NAME2 @4744
+  SAY DESC @4745
+COPY ~%mod_folder%/itm/USALBRIN.itm~ ~override/00POTN02.itm~
+  SAY NAME1 @4718
+  SAY NAME2 @4718
+  SAY DESC @4719
+COPY ~%mod_folder%/itm/USALRAIN.itm~ ~override/00POTN04.itm~
+  SAY NAME1 @4700
+  SAY NAME2 @4700
+  SAY DESC @4701
+COPY ~%mod_folder%/itm/USALSOUR.itm~ ~override/00POTN05.itm~
+  SAY NAME1 @4702
+  SAY NAME2 @4702
+  SAY DESC @4703
+COPY ~%mod_folder%/itm/USALSWEE.itm~ ~override/00POTN10.itm~
+  SAY NAME1 @4704
+  SAY NAME2 @4704
+  SAY DESC @4705
+COPY ~%mod_folder%/itm/USALSNAK.itm~ ~override/00POTN11.itm~
+  SAY NAME1 @4752
+  SAY NAME2 @4752
+  SAY DESC @4753
+COPY ~%mod_folder%/itm/USALFISH.itm~ ~override/00POTN19.itm~
+  SAY NAME1 @4771
+  SAY NAME2 @4771
+  SAY DESC @4772
+COPY ~%mod_folder%/itm/USALCORA.itm~ ~override/00POTN20.itm~
+  SAY NAME1 @4763
+  SAY NAME2 @4763
+  SAY DESC @4764
+COPY ~%mod_folder%/itm/USALMUSK.itm~ ~override/00POTN21.itm~
+  SAY NAME1 @4724
+  SAY NAME2 @4724
+  SAY DESC @4725
+COPY ~%mod_folder%/itm/USALOGRE.itm~ ~override/00POTN22.itm~
+  SAY NAME1 @4779
+  SAY NAME2 @4779
+  SAY DESC @4780
+COPY ~%mod_folder%/itm/USALFIRE.itm~ ~override/00POTN23.itm~
+  SAY NAME1 @4767
+  SAY NAME2 @4767
+  SAY DESC @4768
+COPY ~%mod_folder%/itm/USALFROS.itm~ ~override/00POTN24.itm~
+  SAY NAME1 @4769
+  SAY NAME2 @4769
+  SAY DESC @4770
+COPY ~%mod_folder%/itm/USALBLOO.itm~ ~override/00POTN25.itm~
+  SAY NAME1 @4738
+  SAY NAME2 @4738
+  SAY DESC @4739
+COPY ~%mod_folder%/itm/USALTROL.itm~ ~override/00POTN26.itm~
+  SAY NAME1 @4787
+  SAY NAME2 @4787
+  SAY DESC @4788
+COPY ~%mod_folder%/itm/USALLIME.itm~ ~override/00POTN29.itm~
+  SAY NAME1 @4726
+  SAY NAME2 @4726
+  SAY DESC @4727
+COPY ~%mod_folder%/itm/USALGHOU.itm~ ~override/00POTN47.itm~
+  SAY NAME1 @4775
+  SAY NAME2 @4775
+  SAY DESC @4776
+COPY ~%mod_folder%/itm/USALBURN.itm~ ~override/00POTN52.itm~
+  SAY NAME1 @4722
+  SAY NAME2 @4722
+  SAY DESC @4723
+COPY ~%mod_folder%/itm/USALPLAS.itm~ ~override/00POTN54.itm~
+  SAY NAME1 @4742
+  SAY NAME2 @4742
+  SAY DESC @4743
+COPY ~%mod_folder%/itm/USALSMOK.itm~ ~override/00POTN67.itm~
+  SAY NAME1 @4714
+  SAY NAME2 @4714
+  SAY DESC @4715
+COPY ~%mod_folder%/itm/USALMAGN.itm~ ~override/00POTN68.itm~
+  SAY NAME1 @4748
+  SAY NAME2 @4748
+  SAY DESC @4749
+COPY ~%mod_folder%/spl/USMAGN00.spl~ ~override~
+COPY ~%mod_folder%/itm/USALPRES.itm~ ~override/00POTN69.itm~
+  SAY NAME1 @4720
+  SAY NAME2 @4720
+  SAY DESC @4721
+COPY ~%mod_folder%/itm/USALTREA.itm~ ~override/00POTN70.itm~
+  SAY NAME1 @4785
+  SAY NAME2 @4785
+  SAY DESC @4786
+COPY ~%mod_folder%/itm/USALFEYR.itm~ ~override/00POTN71.itm~
+  SAY NAME1 @4765
+  SAY NAME2 @4765
+  SAY DESC @4766
+COPY ~%mod_folder%/itm/USALRADI.itm~ ~override/00POTN72.itm~
+  SAY NAME1 @4708
+  SAY NAME2 @4708
+  SAY DESC @4709
+COPY ~%mod_folder%/itm/USALBLAC.itm~ ~override/00POTN73.itm~
+  SAY NAME1 @4710
+  SAY NAME2 @4710
+  SAY DESC @4711
+COPY ~%mod_folder%/itm/USALFIZZ.itm~ ~override/00POTN75.itm~
+  SAY NAME1 @4773
+  SAY NAME2 @4773
+  SAY DESC @4774
+COPY ~%mod_folder%/itm/USALBUR2.itm~ ~override/00POTN76.itm~
+  SAY NAME1 @4750
+  SAY NAME2 @4750
+  SAY DESC @4751
+COPY ~%mod_folder%/itm/USALVIAL.itm~ ~override/00POTN77.itm~
+  SAY NAME1 @4728
+  SAY NAME2 @4728
+  SAY DESC @4729
+COPY ~%mod_folder%/itm/USALVAMP.itm~ ~override/00POTN78.itm~
+  SAY NAME1 @4754
+  SAY NAME2 @4754
+  SAY DESC @4755
+COPY ~%mod_folder%/itm/USALGOLD.itm~ ~override/00POTN79.itm~
+  SAY NAME1 @4777
+  SAY NAME2 @4777
+  SAY DESC @4778
+COPY ~%mod_folder%/itm/USALECTO.itm~ ~override/00POTN80.itm~
+  SAY NAME1 @4730
+  SAY NAME2 @4730
+  SAY DESC @4731
+COPY ~%mod_folder%/itm/USALOILS.itm~ ~override/00POTN81.itm~
+  SAY NAME1 @4781
+  SAY NAME2 @4781
+  SAY DESC @4782
+COPY ~%mod_folder%/itm/USALBONE.itm~ ~override/00POTN82.itm~
+  SAY NAME1 @4712
+  SAY NAME2 @4712
+  SAY DESC @4713
+COPY ~%mod_folder%/itm/USALBITT.itm~ ~override/00POTN83.itm~
+  SAY NAME1 @4716
+  SAY NAME2 @4716
+  SAY DESC @4717
+COPY ~%mod_folder%/itm/USALCLAR.itm~ ~override/00POTN84.itm~
+  SAY NAME1 @4783
+  SAY NAME2 @4783
+  SAY DESC @4784
+COPY ~%mod_folder%/itm/USALELEC.itm~ ~override/00POTN85.itm~
+  SAY NAME1 @4706
+  SAY NAME2 @4706
+  SAY DESC @4707
+COPY ~%mod_folder%/itm/USALFAIR.itm~ ~override/00POTN86.itm~
+  SAY NAME1 @4746
+  SAY NAME2 @4746
+  SAY DESC @4747
+COPY ~%mod_folder%/itm/USALMURK.itm~ ~override/00POTN87.itm~
+  SAY NAME1 @4736
+  SAY NAME2 @4736
+  SAY DESC @4737
+COPY ~%mod_folder%/itm/USALZOMB.itm~ ~override/00POTN88.itm~
+  SAY NAME1 @4789
+  SAY NAME2 @4789
+  SAY DESC @4790
+COPY ~%mod_folder%/itm/USALVIA2.itm~ ~override/61POTNUB.itm~
+  SAY NAME1 @4791
+  SAY NAME2 @4791
+  SAY DESC @4792
+
+
+COPY_EXISTING ~00BARD02.itm~ ~override~
+	SAY IDENTIFIED_DESC @12132
+
+COPY_EXISTING ~00HFBD02.itm~ ~override~
+	SAY IDENTIFIED_DESC @12134
+
+COPY_EXISTING ~00BARD03.itm~ ~override~
+	SAY IDENTIFIED_DESC @12136
+
+COPY_EXISTING ~00HFBD03.itm~ ~override~
+	SAY IDENTIFIED_DESC @12138
+
+
+COPY_EXISTING ~00HFBD04.itm~ ~override~
+	SAY IDENTIFIED_DESC @12142
+
+COPY_EXISTING ~00BARD05.itm~ ~override~
+	SAY IDENTIFIED_DESC @12144
+
+COPY_EXISTING ~00HFBD05.itm~ ~override~
+	SAY IDENTIFIED_DESC @12146
+
+COPY_EXISTING ~00BARD06.itm~ ~override~
+	SAY IDENTIFIED_DESC @12148
+
+COPY_EXISTING ~00HFBD06.itm~ ~override~
+	SAY IDENTIFIED_DESC @12150
+
+COPY_EXISTING ~00BARD07.itm~ ~override~
+	SAY IDENTIFIED_DESC @12152
+
+COPY_EXISTING ~00HFBD07.itm~ ~override~
+	SAY IDENTIFIED_DESC @12154
+
+COPY_EXISTING ~00BARD08.itm~ ~override~
+	SAY IDENTIFIED_DESC @12156
+
+COPY_EXISTING ~00HFBD08.itm~ ~override~
+	SAY IDENTIFIED_DESC @12158
+
+COPY_EXISTING ~00BARDRS.itm~ ~override~
+	SAY IDENTIFIED_DESC @12160
+
+COPY_EXISTING ~00HFBDRS.itm~ ~override~
+	SAY NAME2 @12161
+	SAY IDENTIFIED_DESC @12162
+
+COPY_EXISTING ~11BARDWD.itm~ ~override~
+	SAY IDENTIFIED_DESC @12164
+
+COPY_EXISTING ~11HFBDWD.itm~ ~override~
+	SAY IDENTIFIED_DESC @12166
+
+
+COPY_EXISTING ~00SCRL01.itm~ ~override~
+	SAY IDENTIFIED_DESC @12168
+
+COPY_EXISTING ~00SCRL02.itm~ ~override~
+	SAY IDENTIFIED_DESC @12170
+
+COPY_EXISTING ~00SCRL03.itm~ ~override~
+	SAY IDENTIFIED_DESC @12172
+
+COPY_EXISTING ~00SCRL04.itm~ ~override~
+	SAY IDENTIFIED_DESC @12174
+
+
+COPY_EXISTING ~00SCRL06.itm~ ~override~
+	SAY IDENTIFIED_DESC @12178
+
+
+COPY_EXISTING ~11BOOKDE.itm~ ~override~
+	SAY IDENTIFIED_DESC @12198
+
+COPY_EXISTING ~11HFBKDE.itm~ ~override~
+	SAY IDENTIFIED_DESC @12200
+
+COPY_EXISTING ~11HFBKHW.itm~ ~override~
+	SAY IDENTIFIED_DESC @12202
+
+COPY_EXISTING ~11HFBKLD.itm~ ~override~
+	SAY IDENTIFIED_DESC @12204
+
+
+COPY_EXISTING ~11HFBKLE.itm~ ~override~
+	SAY IDENTIFIED_DESC @12208
+
+COPY_EXISTING ~52BOOKAD.itm~ ~override~
+	SAY IDENTIFIED_DESC @12210
+
+COPY_EXISTING ~52HFBKAD.itm~ ~override~
+	SAY IDENTIFIED_DESC @12212
+
+
+COPY_EXISTING ~52HFBKDV.itm~ ~override~
+	SAY IDENTIFIED_DESC @12216
+
+
+COPY_EXISTING ~52BOOKOG.itm~ ~override~
+	SAY IDENTIFIED_DESC @12222
+
+COPY_EXISTING ~52HFBKOG.itm~ ~override~
+	SAY IDENTIFIED_DESC @12224
+
+
+COPY_EXISTING ~52HFBKSU.itm~ ~override~
+	SAY IDENTIFIED_DESC @12228
+
+COPY_EXISTING ~52BOOKSV.itm~ ~override~
+	SAY NAME2 @12229
+	SAY IDENTIFIED_DESC @12230
+
+COPY_EXISTING ~52HFBKSV.itm~ ~override~
+	SAY NAME2 @12231
+	SAY IDENTIFIED_DESC @12232
+
+
+COPY_EXISTING ~00WAND01.itm~ ~override~
+	SAY IDENTIFIED_DESC @12234
+
+COPY_EXISTING ~00WAND02.itm~ ~override~
+	SAY IDENTIFIED_DESC @12236
+
+COPY_EXISTING ~00WAND03.itm~ ~override~
+	SAY IDENTIFIED_DESC @12238
+
+COPY_EXISTING ~00WAND04.itm~ ~override~
+	SAY IDENTIFIED_DESC @12240
+
+COPY_EXISTING ~00WAND05.itm~ ~override~
+	SAY IDENTIFIED_DESC @12242
+
+
+COPY_EXISTING ~00WAND08.itm~ ~override~
+	SAY IDENTIFIED_DESC @12248
+
+
+COPY_EXISTING ~00WAND14.itm~ ~override~
+	SAY IDENTIFIED_DESC @12252
+
+COPY_EXISTING ~00WAND15.itm~ ~override~
+	SAY IDENTIFIED_DESC @12254
+
+COPY_EXISTING ~00WAND16.itm~ ~override~
+	SAY NAME2 @12255
+	SAY IDENTIFIED_DESC @12256
+
+
+COPY_EXISTING ~00WAND20.itm~ ~override~
+	SAY NAME2 @12261
+	SAY IDENTIFIED_DESC @12262
+
+COPY_EXISTING ~00WAND21.itm~ ~override~
+	SAY IDENTIFIED_DESC @12264
+
+COPY_EXISTING ~00WAND22.itm~ ~override~
+	SAY NAME2 @12265
+	SAY IDENTIFIED_DESC @12266
+
+COPY_EXISTING ~00WAND23.itm~ ~override~
+	SAY IDENTIFIED_DESC @12268
+
+COPY_EXISTING ~00WAND24.itm~ ~override~
+	SAY NAME2 @12269
+	SAY IDENTIFIED_DESC @12270
+
+COPY_EXISTING ~00WAND25.itm~ ~override~
+	SAY IDENTIFIED_DESC @12272
+
+COPY_EXISTING ~00WAND26.itm~ ~override~
+	SAY NAME2 @12273
+	SAY IDENTIFIED_DESC @12274
+
+COPY_EXISTING ~00WAND27.itm~ ~override~
+	SAY IDENTIFIED_DESC @12276
+
+COPY_EXISTING ~00WAND28.itm~ ~override~
+	SAY IDENTIFIED_DESC @12278
+
+COPY_EXISTING ~00WAND29.itm~ ~override~
+	SAY IDENTIFIED_DESC @12280
+
+
+COPY_EXISTING ~00WAND33.itm~ ~override~
+	SAY IDENTIFIED_DESC @12288
+
+COPY_EXISTING ~00WAND34.itm~ ~override~
+	SAY IDENTIFIED_DESC @12290
+
+COPY_EXISTING ~00WAND35.itm~ ~override~
+	SAY NAME2 @12291
+	SAY IDENTIFIED_DESC @12292
+
+COPY_EXISTING ~00WAND36.itm~ ~override~
+	SAY IDENTIFIED_DESC @12294
+
+COPY_EXISTING ~00WAND37.itm~ ~override~
+	SAY IDENTIFIED_DESC @12296
+
+
+COPY_EXISTING ~00WAND39.itm~ ~override~
+	SAY IDENTIFIED_DESC @12300
+
+COPY_EXISTING ~00WAND40.itm~ ~override~
+	SAY IDENTIFIED_DESC @12302
+
+
+COPY_EXISTING ~00WAND42.itm~ ~override~
+	SAY IDENTIFIED_DESC @12306
+
+COPY_EXISTING ~00WAND43.itm~ ~override~
+	SAY NAME2 @12307
+	SAY IDENTIFIED_DESC @12308
+
+
+COPY_EXISTING ~00WAND45.itm~ ~override~
+	SAY NAME2 @12311
+	SAY IDENTIFIED_DESC @12312
+
+
+//Pre-existing items for which room was not made in the TRA file go below
+
+COPY_EXISTING ~00HELM07.itm~ ~override~
+	SAY IDENTIFIED_DESC @12314
+
+
+//New items go below. The initial items have been sorted by item type, but items made later should just go at the end, regardless of their type.
+
+COPY_EXISTING ~USAMUL47.itm~ ~override~
+	SAY NAME2 @12413
+	SAY IDENTIFIED_DESC @12414
+
+COPY_EXISTING ~USAMUL50.itm~ ~override~
+	SAY NAME2 @12415
+	SAY IDENTIFIED_DESC @12416
+
+COPY_EXISTING ~USAMUL51.itm~ ~override~
+	SAY NAME2 @12417
+	SAY IDENTIFIED_DESC @12418
+
+COPY_EXISTING ~USAMUL56.itm~ ~override~
+	SAY NAME2 @12419
+	SAY IDENTIFIED_DESC @12420
+
+COPY_EXISTING ~USAMUL58.itm~ ~override~
+	SAY NAME2 @12421
+	SAY IDENTIFIED_DESC @12422
+
+COPY_EXISTING ~USAMUL59.itm~ ~override~
+	SAY NAME2 @12423
+	SAY IDENTIFIED_DESC @12424
+
+COPY_EXISTING ~USAX1H48.itm~ ~override~
+	SAY NAME2 @12425
+	SAY IDENTIFIED_DESC @12426
+
+COPY_EXISTING ~USBOLT45.itm~ ~override~
+	SAY NAME2 @12427
+	SAY IDENTIFIED_DESC @12428
+
+COPY_EXISTING ~USBOOT59.itm~ ~override~
+	SAY NAME2 @12429
+	SAY IDENTIFIED_DESC @12430
+
+COPY_EXISTING ~USBRAC47.itm~ ~override~
+	SAY NAME2 @12431
+	SAY IDENTIFIED_DESC @12432
+
+COPY_EXISTING ~USBRAC50.itm~ ~override~
+	SAY NAME2 @12433
+	SAY IDENTIFIED_DESC @12434
+
+COPY_EXISTING ~USBRAC55.itm~ ~override~
+	SAY NAME2 @12435
+	SAY IDENTIFIED_DESC @12436
+
+COPY_EXISTING ~USBRAC57.itm~ ~override~
+	SAY NAME2 @12437
+	SAY IDENTIFIED_DESC @12438
+
+COPY_EXISTING ~USBRAC59.itm~ ~override~
+	SAY NAME2 @12439
+	SAY IDENTIFIED_DESC @12440
+
+COPY_EXISTING ~USBWHX57.itm~ ~override~
+	SAY NAME2 @12441
+	SAY IDENTIFIED_DESC @12442
+
+COPY_EXISTING ~USCHAN40.itm~ ~override~
+	SAY NAME2 @12443
+	SAY IDENTIFIED_DESC @12444
+
+COPY_EXISTING ~USCHAN41.itm~ ~override~
+	SAY NAME2 @12445
+	SAY IDENTIFIED_DESC @12446
+
+COPY_EXISTING ~USCHAN48.itm~ ~override~
+	SAY NAME2 @12447
+	SAY IDENTIFIED_DESC @12448
+
+COPY_EXISTING ~USCHAN49.itm~ ~override~
+	SAY NAME2 @12449
+	SAY IDENTIFIED_DESC @12450
+
+COPY_EXISTING ~USCHAN52.itm~ ~override~
+	SAY NAME2 @12451
+	SAY IDENTIFIED_DESC @12452
+
+COPY_EXISTING ~USCHAN54.itm~ ~override~
+	SAY NAME2 @12453
+	SAY IDENTIFIED_DESC @12454
+
+COPY_EXISTING ~USCHAN59.itm~ ~override~
+	SAY NAME2 @12455
+	SAY IDENTIFIED_DESC @12456
+
+COPY_EXISTING ~USCLCK40.itm~ ~override~
+	SAY NAME2 @12457
+	SAY IDENTIFIED_DESC @12458
+
+COPY_EXISTING ~USCLCK50.itm~ ~override~
+	SAY NAME2 @12459
+	SAY IDENTIFIED_DESC @12460
+
+COPY_EXISTING ~USCLCK51.itm~ ~override~
+	SAY NAME2 @12461
+	SAY IDENTIFIED_DESC @12462
+
+COPY_EXISTING ~USCLCK55.itm~ ~override~
+	SAY NAME2 @12463
+	SAY IDENTIFIED_DESC @12464
+
+COPY_EXISTING ~USCLCKMH.itm~ ~override~
+	SAY NAME2 @12465
+	SAY IDENTIFIED_DESC @12466
+
+COPY_EXISTING ~USDAGG53.itm~ ~override~
+	SAY NAME2 @12467
+	SAY IDENTIFIED_DESC @12468
+
+COPY_EXISTING ~USDAGG59.itm~ ~override~
+	SAY NAME2 @12469
+	SAY IDENTIFIED_DESC @12470
+
+COPY_EXISTING ~USDART59.itm~ ~override~
+	SAY NAME2 @12471
+	SAY IDENTIFIED_DESC @12472
+
+COPY_EXISTING ~USHAMT48.itm~ ~override~
+	SAY NAME2 @12473
+	SAY IDENTIFIED_DESC @12474
+
+COPY_EXISTING ~USHELM50.itm~ ~override~
+	SAY NAME2 @12475
+	SAY IDENTIFIED_DESC @12476
+
+COPY_EXISTING ~USHELM59.itm~ ~override~
+	SAY NAME2 @12477
+	SAY IDENTIFIED_DESC @12478
+
+COPY_EXISTING ~USHIDEGU.itm~ ~override~
+	SAY NAME2 @12479
+	SAY IDENTIFIED_DESC @12480
+
+COPY_EXISTING ~USHFHDGU.itm~ ~override~
+	SAY NAME2 @12481
+	SAY IDENTIFIED_DESC @12482
+
+COPY_EXISTING ~USHIDE49.itm~ ~override~
+	SAY NAME2 @12483
+	SAY IDENTIFIED_DESC @12484
+
+COPY_EXISTING ~USHIDE59.itm~ ~override~
+	SAY NAME2 @12485
+	SAY IDENTIFIED_DESC @12486
+
+COPY_EXISTING ~USLEAT48.itm~ ~override~
+	SAY NAME2 @12487
+	SAY IDENTIFIED_DESC @12488
+
+COPY_EXISTING ~USLEAT51.itm~ ~override~
+	SAY NAME2 @12489
+	SAY IDENTIFIED_DESC @12490
+
+COPY_EXISTING ~USLEAT57.itm~ ~override~
+	SAY NAME2 @12491
+	SAY IDENTIFIED_DESC @12492
+
+COPY_EXISTING ~USLEAT58.itm~ ~override~
+	SAY NAME2 @12493
+	SAY IDENTIFIED_DESC @12494
+
+COPY_EXISTING ~USLEAT59.itm~ ~override~
+	SAY NAME2 @12495
+	SAY IDENTIFIED_DESC @12496
+
+COPY_EXISTING ~USPLAT35.itm~ ~override~
+	SAY NAME2 @12497
+	SAY IDENTIFIED_DESC @12498
+
+COPY_EXISTING ~USPLAT45.itm~ ~override~
+	SAY NAME2 @12499
+	SAY IDENTIFIED_DESC @12500
+
+COPY_EXISTING ~USPLAT48.itm~ ~override~
+	SAY NAME2 @12501
+	SAY IDENTIFIED_DESC @12502
+
+COPY_EXISTING ~USPLAT51.itm~ ~override~
+	SAY NAME2 @12503
+	SAY IDENTIFIED_DESC @12504
+
+COPY_EXISTING ~USPLAT58.itm~ ~override~
+	SAY NAME2 @12505
+	SAY IDENTIFIED_DESC @12506
+
+COPY_EXISTING ~USPLAT59.itm~ ~override~
+	SAY NAME2 @12507
+	SAY IDENTIFIED_DESC @12508
+
+COPY_EXISTING ~USRING50.itm~ ~override~
+	SAY NAME2 @12509
+	SAY IDENTIFIED_DESC @12510
+
+COPY_EXISTING ~USRING51.itm~ ~override~
+	SAY NAME2 @12511
+	SAY IDENTIFIED_DESC @12512
+
+COPY_EXISTING ~USRING52.itm~ ~override~
+	SAY NAME2 @12513
+	SAY IDENTIFIED_DESC @12514
+
+COPY_EXISTING ~USRING53.itm~ ~override~
+	SAY NAME2 @12515
+	SAY IDENTIFIED_DESC @12516
+
+COPY_EXISTING ~USRING55.itm~ ~override~
+	SAY NAME2 @12517
+	SAY IDENTIFIED_DESC @12518
+
+COPY_EXISTING ~USRING56.itm~ ~override~
+	SAY NAME2 @12519
+	SAY IDENTIFIED_DESC @12520
+
+COPY_EXISTING ~USRING58.itm~ ~override~
+	SAY NAME2 @12521
+	SAY IDENTIFIED_DESC @12522
+
+COPY_EXISTING ~USROBE56.itm~ ~override~
+	SAY NAME2 @12523
+	SAY IDENTIFIED_DESC @12524
+
+COPY_EXISTING ~USROBE59.itm~ ~override~
+	SAY NAME2 @12525
+	SAY IDENTIFIED_DESC @12526
+
+COPY_EXISTING ~USSHLD48.itm~ ~override~
+	SAY NAME2 @12527
+	SAY IDENTIFIED_DESC @12528
+
+COPY_EXISTING ~USSHLD49.itm~ ~override~
+	SAY NAME2 @12529
+	SAY IDENTIFIED_DESC @12530
+
+COPY_EXISTING ~USSHLD50.itm~ ~override~
+	SAY NAME2 @12531
+	SAY IDENTIFIED_DESC @12532
+
+COPY_EXISTING ~USSHLD51.itm~ ~override~
+	SAY NAME2 @12533
+	SAY IDENTIFIED_DESC @12534
+
+COPY_EXISTING ~USSHLD55.itm~ ~override~
+	SAY NAME2 @12535
+	SAY IDENTIFIED_DESC @12536
+
+COPY_EXISTING ~USSHLD56.itm~ ~override~
+	SAY NAME2 @12537
+	SAY IDENTIFIED_DESC @12538
+
+COPY_EXISTING ~USSHLD57.itm~ ~override~
+	SAY NAME2 @12539
+	SAY IDENTIFIED_DESC @12540
+
+COPY_EXISTING ~USSHLD58.itm~ ~override~
+	SAY NAME2 @12541
+	SAY IDENTIFIED_DESC @12542
+
+COPY_EXISTING ~USSHLD59.itm~ ~override~
+	SAY NAME2 @12543
+	SAY IDENTIFIED_DESC @12544
+
+COPY_EXISTING ~USSLNG59.itm~ ~override~
+	SAY NAME2 @12545
+	SAY IDENTIFIED_DESC @12546
+
+COPY_EXISTING ~USSWDK59.itm~ ~override~
+	SAY NAME1 @12547
+	SAY UNIDENTIFIED_DESC @12548
+	SAY NAME2 @12549
+	SAY IDENTIFIED_DESC @12550
+
+COPY_EXISTING ~USSWDT59.itm~ ~override~
+	SAY NAME2 @12551
+	SAY IDENTIFIED_DESC @12552
+
+
+//General patch changes
+
+COPY_EXISTING_REGEXP ~.*\.itm~ ~override~
+//If the item is a bullet, it should apply Strength bonus
+	READ_SHORT 0x1c us_item_category
+	PATCH_IF (us_item_category=14) BEGIN
+		LPF ALTER_ITEM_HEADER INT_VAR header_type=2 flag_strength=1 END
+	END
+	BUT_ONLY_IF_IT_CHANGES
+
+
+//Random loot table changes
+
+COPY ~%mod_folder%/tables/USRTNORM.2da~ ~override/RT_NORM.2da~
+
+COPY ~%mod_folder%/tables/USRTFURY.2da~ ~override/RT_FURY.2da~
