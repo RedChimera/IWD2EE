@@ -1,5 +1,11 @@
 # Log
 
+2018-07-26
+
+Version Alpha 1.02.00
+
+- Major update to Item Revisions; lesser updates to Class Rebalancing, Spell Revisions, Better Racial Enemies, and Faster Horde Fortress. Some components have warnings but none fail to install.
+
 Version Alpha 1.01.00
 
 2018-07-12
