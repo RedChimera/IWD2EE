@@ -1,0 +1,7 @@
+//NOTES
+//
+
+STRING_SET_EVALUATE 30923 @13000
+
+COPY ~%mod_folder%/bcs/bcs_revised_battle_square~ ~override~
+

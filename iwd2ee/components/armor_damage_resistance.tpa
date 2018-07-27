@@ -1,0 +1,63 @@
+//NOTES
+//
+
+OUTER_PATCH us_armor_damage_resistance_constants BEGIN
+	armorbonus=1
+	shieldbonus=3
+
+	modifyac=0
+	modifyslashingresistance=86
+	modifybludgeoningresistance=87
+	modifypiercingresistance=88
+	modifymissileresistance=89
+
+	effectsize=0x30
+END
+
+COPY_EXISTING_REGEXP ~.*\.itm~ ~override~
+//Armor and shields grant resistance to physical damage equal to half their armor/shield bonus, rounded down
+	READ_SHORT 0x1c us_item_category
+	PATCH_IF (us_item_category >= 60 AND us_item_category <= 68) OR (us_item_category = 2) BEGIN
+		us_bonus = 0
+		READ_LONG 0x6a us_offset
+		READ_SHORT 0x70 us_num_effects
+		FOR (i=0; i < us_num_effects; ++i) BEGIN
+			READ_SHORT us_offset us_opcode
+			READ_LONG (us_offset + 0x8) us_parameter2
+			PATCH_IF (us_opcode = modifyac AND us_parameter2 = armorbonus) BEGIN
+				READ_LONG (us_offset + 0x4) us_parameter1
+				us_bonus = us_parameter1 / 2
+				i = us_num_effects
+			END
+			us_offset += effectsize
+		END
+		PATCH_IF (us_bonus > 0) BEGIN
+			LPF ADD_ITEM_EQEFFECT INT_VAR opcode=modifyslashingresistance target=1 timing=2 parameter1=us_bonus END
+			LPF ADD_ITEM_EQEFFECT INT_VAR opcode=modifypiercingresistance target=1 timing=2 parameter1=us_bonus END
+			LPF ADD_ITEM_EQEFFECT INT_VAR opcode=modifybludgeoningresistance target=1 timing=2 parameter1=us_bonus END
+			LPF ADD_ITEM_EQEFFECT INT_VAR opcode=modifymissileresistance target=1 timing=2 parameter1=us_bonus END
+		END
+	END ELSE BEGIN
+	PATCH_IF (us_item_category = 12 OR us_item_category = 41 OR us_item_category = 47 OR us_item_category = 49 OR us_item_category = 53) BEGIN
+		us_bonus = 0
+		READ_LONG 0x6a us_offset
+		READ_SHORT 0x70 us_num_effects
+		FOR (i=0; i < us_num_effects; ++i) BEGIN
+			READ_SHORT us_offset us_opcode
+			READ_LONG (us_offset + 0x8) us_parameter2
+			PATCH_IF (us_opcode = modifyac AND us_parameter2 = shieldbonus) BEGIN
+				READ_LONG (us_offset + 0x4) us_parameter1
+				us_bonus = us_parameter1 / 2
+				i = us_num_effects
+			END
+			us_offset += effectsize
+		END
+		PATCH_IF (us_bonus > 0) BEGIN
+			LPF ADD_ITEM_EQEFFECT INT_VAR opcode=modifyslashingresistance target=1 timing=2 parameter1=us_bonus END
+			LPF ADD_ITEM_EQEFFECT INT_VAR opcode=modifypiercingresistance target=1 timing=2 parameter1=us_bonus END
+			LPF ADD_ITEM_EQEFFECT INT_VAR opcode=modifybludgeoningresistance target=1 timing=2 parameter1=us_bonus END
+			LPF ADD_ITEM_EQEFFECT INT_VAR opcode=modifymissileresistance target=1 timing=2 parameter1=us_bonus END
+		END
+	END
+	END
+	BUT_ONLY_IF_IT_CHANGES

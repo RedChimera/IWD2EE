@@ -24,7 +24,8 @@ LANGUAGE   ~English~
            ~iwd2ee/tra/English/creature_rebalancing.tra~
            ~iwd2ee/tra/English/faster_areas.tra~
            ~iwd2ee/tra/English/z_concoct_potions.tra~
-		   ~iwd2ee/tra/English/npc_core.tra~
+		 ~iwd2ee/tra/English/npc_core.tra~
+		 ~iwd2ee/tra/English/revised_battle_square.tra~
 
 
 
@@ -252,5 +253,17 @@ BEGIN @38
 
 BEGIN @39
 
-      INCLUDE ~%mod_folder%/components/gui.tpa~      //~NPC Core~
+      INCLUDE ~%mod_folder%/components/gui.tpa~      //~New GUI~
+
+//Adjusts rewards for Battle Square and allows the main rewards to be obtained much quicker
+
+BEGIN @40
+
+      INCLUDE ~%mod_folder%/components/revised_battle_square.tpa~      //~Revised Battle Square~
+
+//Armor and shields grant physical damage resistance equal to half their armor/shield bonus, rounded down
+
+BEGIN @41
+
+      INCLUDE ~%mod_folder%/components/armor_damage_resistance.tpa~      //~Minor Damage Resistance for Armor and Shields~
 
