@@ -5,6 +5,249 @@
 // This may require editing the area script for the inside of the temple:
 // if the global variable USIWGIVEXP is equal to 1 or 2, all those characters must be set to Hidden.
 
+OUTER_PATCH us_faster_ice_variables BEGIN
+	regionsize=0xc4
+	doorsize=0xc8
+END
+
+DEFINE_PATCH_FUNCTION ~ALTER_AREA_DOOR_IWD2~
+	INT_VAR
+		cursor=~-1~
+		trap_detect=~-1~
+		trap_remove=~-1~
+		trapped=~-1~
+		detected=~-1~
+		all_flags=~-1~
+		flag_open=~-1~
+		flag_locked=~-1~
+		flag_resets=~-1~
+		flag_detectable=~-1~
+		flag_forced=~-1~
+		flag_no_close=~-1~
+		flag_located=~-1~
+		flag_secret=~-1~
+		flag_detected=~-1~
+		flag_string=~-1~
+		flag_no_look=~-1~
+		flag_uses_key=~-1~
+		flag_sliding=~-1~
+		launch_x=~-1~
+		launch_y=~-1~
+		door_detect=~-1~
+		lock_difficulty=~-1~
+		open_x=~-1~
+		open_y=~-1~
+		close_x=~-1~
+		close_y=~-1~
+		unlock_message=99999999
+	STR_VAR
+		door_name=~~
+		door_open_sound=~same~
+		door_close_sound=~same~
+		door_key=~same~
+		door_script=~same~
+		travel_trigger=~same~
+		dialogue=~same~
+BEGIN
+	SET door_name_length = (STRING_LENGTH ~%door_name%~)
+		PATCH_IF (door_name_length = 0) BEGIN
+			PATCH_FAIL ~No door name given for function ALTER_AREA_DOOR_IWD2 ~
+		END
+	SET door_found = 0
+	READ_SHORT 0xb4 doornumber
+	READ_LONG 0xb8 dooroffset
+	FOR (i = 0; i < doornumber; ++i) BEGIN
+		SET offset = dooroffset + (i * doorsize)
+		READ_ASCII offset name_of_door (door_name_length)
+		PATCH_IF (~%name_of_door%~ STRING_EQUAL_CASE ~%door_name%~) BEGIN
+			door_found = 1
+			PATCH_IF (all_flags != (0 - 1)) BEGIN
+				WRITE_LONG (offset + 0x28) all_flags
+/*			END ELSE BEGIN
+				SET bit_enable = 0
+				SET bit_disable = 0xFFFFFFFF
+				PATCH_IF (flag_open != (0 - 1)) BEGIN
+					PATCH_IF (flag_open == 0) BEGIN
+						bit_disable -= 0x1
+					END ELSE BEGIN 
+						bit_enable += 0x1
+					END
+					PATCH_IF (flag_locked == 0) BEGIN
+						bit_disable -= 0x2
+					END ELSE BEGIN 
+						bit_enable += 0x2
+					END
+					PATCH_IF (flag_resets == 0) BEGIN
+						bit_disable -= 0x4
+					END ELSE BEGIN 
+						bit_enable += 0x4
+					END
+					PATCH_IF (flag_detectable == 0) BEGIN
+						bit_disable -= 0x8
+					END ELSE BEGIN 
+						bit_enable += 0x8
+					END
+					PATCH_IF (flag_forced == 0) BEGIN
+						bit_disable -= 0x10
+					END ELSE BEGIN 
+						bit_enable += 0x10
+					END
+					PATCH_IF (flag_no_close == 0) BEGIN
+						bit_disable -= 0x20
+					END ELSE BEGIN 
+						bit_enable += 0x20
+					END
+					PATCH_IF (flag_located == 0) BEGIN
+						bit_disable -= 0x40
+					END ELSE BEGIN 
+						bit_enable += 0x40
+					END
+					PATCH_IF (flag_secret == 0) BEGIN
+						bit_disable -= 0x80
+					END ELSE BEGIN 
+						bit_enable += 0x80
+					END
+					PATCH_IF (flag_detected == 0) BEGIN
+						bit_disable -= 0x100
+					END ELSE BEGIN 
+						bit_enable += 0x100
+					END
+					PATCH_IF (flag_string == 0) BEGIN
+						bit_disable -= 0x200
+					END ELSE BEGIN 
+						bit_enable += 0x200
+					END
+					PATCH_IF (flag_no_look == 0) BEGIN
+						bit_disable -= 0x400
+					END ELSE BEGIN 
+						bit_enable += 0x400
+					END
+					PATCH_IF (flag_uses_key == 0) BEGIN
+						bit_disable -= 0x4000
+					END ELSE BEGIN 
+						bit_enable += 0x4000
+					END
+				END
+				READ_LONG (offset + 0x28) flag_change
+				flag_change |= bit_enable
+				flag_change &= bit_disable
+				WRITE_LONG (offset + 0x28) flag_change */
+			END
+			PATCH_IF (cursor != (0 - 1)) BEGIN
+				WRITE_LONG (offset + 0x68) cursor
+			END
+			PATCH_IF (trap_detect != (0 - 1)) BEGIN
+				WRITE_SHORT (offset + 0x6c) trap_detect
+			END
+			PATCH_IF (trap_remove != (0 - 1)) BEGIN
+				WRITE_SHORT (offset + 0x6e) trap_remove
+			END
+			PATCH_IF (trapped != (0 - 1)) BEGIN
+				WRITE_SHORT (offset + 0x70) trapped
+			END
+			PATCH_IF (detected != (0 - 1)) BEGIN
+				WRITE_SHORT (offset + 0x72) detected
+			END
+			PATCH_IF (launch_x != (0 - 1)) BEGIN
+				WRITE_SHORT (offset + 0x74) launch_x
+			END
+			PATCH_IF (launch_y != (0 - 1)) BEGIN
+				WRITE_SHORT (offset + 0x76) launch_y
+			END
+			PATCH_IF (!(~%door_key%~ STRING_EQUAL ~same~)) BEGIN
+				WRITE_ASCIIE (offset + 0x78) ~%door_key%~ #8
+			END
+			PATCH_IF (!(~%door_script%~ STRING_EQUAL ~same~)) BEGIN
+				WRITE_ASCIIE (offset + 0x80) ~%door_script%~ #8
+			END
+			PATCH_IF (door_detect != (0 - 1)) BEGIN
+				WRITE_SHORT (offset + 0x88) door_detect
+			END
+			PATCH_IF (lock_difficulty != (0 - 1)) BEGIN
+				WRITE_SHORT (offset + 0x8c) lock_difficulty
+			END
+			PATCH_IF (open_x != (0 - 1)) BEGIN
+				WRITE_SHORT (offset + 0x90) open_x
+			END
+			PATCH_IF (open_y != (0 - 1)) BEGIN
+				WRITE_SHORT (offset + 0x92) open_y
+			END
+			PATCH_IF (close_x != (0 - 1)) BEGIN
+				WRITE_LONG (offset + 0x94) close_x
+			END
+			PATCH_IF (close_y != (0 - 1)) BEGIN
+				WRITE_LONG (offset + 0x96) close_y
+			END
+			PATCH_IF (unlock_message != 99999999) BEGIN
+				WRITE_LONG (offset + 0x98) unlock_message
+			END
+
+			i = doornumber
+		END
+	END
+	PATCH_IF (door_found = 0) BEGIN
+		PATCH_WARN ~No door called %door_name% was found.~
+	END
+
+END
+
+COPY_EXISTING ~AR4102.are~ ~override~
+	LPF ALTER_AREA_DOOR_IWD2 INT_VAR lock_difficulty=75 unlock_message=(0 - 1) STR_VAR door_name=~AR4102_Door2~ END
+	LPF ALTER_AREA_DOOR_IWD2 INT_VAR lock_difficulty=75 unlock_message=(0 - 1) all_flags=0x26a STR_VAR door_name=~AR4102_Door8~ END
+	LPF ALTER_AREA_DOOR_IWD2 INT_VAR lock_difficulty=75 unlock_message=(0 - 1) all_flags=0x260 STR_VAR door_name=~AR4102_Door9~ END
+	LPF ALTER_AREA_DOOR_IWD2 INT_VAR lock_difficulty=75 all_flags=0x2a3 STR_VAR door_name=~AR4102_Door10~ END
+	LPF ALTER_AREA_DOOR_IWD2 INT_VAR lock_difficulty=75 unlock_message=(0 - 1) all_flags=0xa2 STR_VAR door_name=~AR4102_Door14~ END
+
+COPY_EXISTING ~41LYSARS.bcs~ ~override~
+	DECOMPILE_BCS_TO_BAF
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~Kill(MyTarget)~ ~Kill(MyTarget)
+SetGlobal("US_Sacrifice_Door_State","MYAREA",1)
+SetGlobalTimer("US_Sacrifice_Door_Delay","MYAREA",14)~
+	COMPILE_BAF_TO_BCS
+
+<<<<<<<< .../script.baf
+IF
+	Global("US_Sacrifice_Door_State","MYAREA",2)
+	GlobalTimerExpired("US_Sacrifice_Doors","MYAREA")
+	OpenState("AR4101_Door14",TRUE)
+THEN
+	RESPONSE #100
+		SetGlobal("US_Sacrifice_Door_State","MYAREA",0)
+		CloseDoor("AR4101_Door13")
+		CloseDoor("AR4101_Door14")
+		CloseDoor("AR4101_Door15")
+		Lock("AR4101_Door13")
+		Lock("AR4101_Door14")
+		Lock("AR4101_Door15")
+END
+
+IF
+	Global("US_Sacrifice_Door_State","MYAREA",1)
+	GlobalTimerExpired("US_Sacrifice_Door_Delay","MYAREA")
+	OpenState("AR4101_Door14",FALSE)
+THEN
+	RESPONSE #100
+		SetGlobal("US_Sacrifice_Door_State","MYAREA",2)
+		SetGlobalTimer("US_Sacrifice_Doors","MYAREA",70)
+		Unlock("AR4101_Door13")
+		Unlock("AR4101_Door14")
+		Unlock("AR4101_Door15")
+		OpenDoor("AR4101_Door13")
+		OpenDoor("AR4101_Door14")
+		OpenDoor("AR4101_Door15")
+END
+
+>>>>>>>>
+
+EXTEND_TOP ~41LYSARS.bcs~ ~.../script.baf~
+
+COPY_EXISTING ~41PSHADO.bcs~ ~override~
+	DECOMPILE_BCS_TO_BAF
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~Unlock(\"AR4102_Door10\")~ ~Unlock("AR4102_Door10")
+Unlock("AR4102_Door9")
+OpenDoor("AR4102_Door9")~
+	COMPILE_BAF_TO_BCS
+
 COMPILE ~%mod_folder%/dlg/USSTIW02.d~ 
 COPY ~%mod_folder%/cre/USSTIW01.cre~ ~override~
   SAY NAME1 @4000

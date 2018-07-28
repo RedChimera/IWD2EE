@@ -288,9 +288,9 @@ Weight: 0 lb.~
 
 STATISTICS:
 
-Strength: +10 bonus
-Dexterity: -10 penalty
-Constitution: -10 penalty
+Strength: Set to 30
+Dexterity: Set to 1
+Constitution: Set to 1
 Special: Can only be removed by a Remove Curse spell
 Weight: 0 lb.~
 //@10090    = ~Ring of Invisibility~
