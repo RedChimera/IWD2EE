@@ -3980,7 +3980,8 @@ COPY_EXISTING ~ar6304.are~ ~override~ //Severed Hand fourth floor
 
 
 COPY_EXISTING ~11jemel.cre~ ~override~ //Gallaway Trading Post worker
-	LPF IWD2_REMOVE_CRE_ITEM STR_VAR item=~11RTHF02~ END
+	LPF IWD2_ADD_CRE_ITEM INT_VAR cq1=0  cq2=0  cq3=0 STR_VAR item=~~ slot=~qitem1~ END
+//	LPF IWD2_REMOVE_CRE_ITEM STR_VAR item=~11RTHF02~ END
 
 COPY_EXISTING ~60hiephe.cre~ ~override~ ~60hiephh.cre~ ~override~ //Hiepherus
 	LPF IWD2_ADD_CRE_ITEM INT_VAR cq1=1  cq2=1  cq3=1 STR_VAR item=~00RTHF46~ slot=~cloak~ END
@@ -3989,7 +3990,8 @@ COPY_EXISTING ~62mdarf.cre~ ~override~ //Lich in Fields of Slaughter
 	LPF IWD2_ADD_CRE_ITEM INT_VAR cq1=1  cq2=1  cq3=1 STR_VAR item=~USRT18_V~ slot=~inv6~ END
 
 COPY_EXISTING ~62saabl1.cre~ ~override~ ~62saabl2.cre~ ~override~ //Saablic Tan
-	LPF IWD2_REMOVE_CRE_ITEM STR_VAR item=~00RTHF46~ END
+	LPF IWD2_ADD_CRE_ITEM INT_VAR cq1=0  cq2=0  cq3=0 STR_VAR item=~~ slot=~cloak~ END
+//	LPF IWD2_REMOVE_CRE_ITEM STR_VAR item=~00RTHF46~ END
 
 COPY_EXISTING ~63grdcom.cre~ ~override~ //Guard Commander at Severed Hand Entrance
 	LPF IWD2_ADD_CRE_ITEM INT_VAR cq1=1  cq2=1  cq3=1 STR_VAR item=~00RTHF40~ slot=~helmet~ END
@@ -3998,7 +4000,8 @@ COPY_EXISTING ~65iytxm.cre~ ~override~ //Iyachtu Xvim
 	LPF IWD2_ADD_CRE_ITEM INT_VAR cq1=1  cq2=1  cq3=1 STR_VAR item=~USRT19_V~ slot=~inv7~ END
 
 COPY_EXISTING ~67trmal.cre~ ~override~ //Elite on Severed Hand rooftop
-	LPF IWD2_REMOVE_CRE_ITEM STR_VAR item=~00RTHF04~ END
+	LPF IWD2_ADD_CRE_ITEM INT_VAR cq1=0  cq2=0  cq3=0 STR_VAR item=~~ slot=~armor~ END
+//	LPF IWD2_REMOVE_CRE_ITEM STR_VAR item=~00RTHF04~ END
 
 
 COPY_EXISTING ~20newder.dlg~ ~override~ //Dereth Springsong dialogue
