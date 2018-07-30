@@ -46,7 +46,13 @@ Weight: 0 lb.~
 //@10032    = ~Yeti Skin Scarf~
 //@10033    = ~Item description can remain the same; if new description is needed put it here~
 //@10034    = ~Winter Wolf Scarf~
-//@10035    = ~Item description can remain the same; if new description is needed put it here~
+@10035    = ~This is a scarf that is constructed from the fur of a Winter Wolf.
+
+STATISTICS:
+
+Resistance: 2/- Cold Resistance
+Charisma: +1
+Weight: 2 lb.~
 //@10036    = ~Belib's Multiple Tool~
 @10037    = ~Belib the Wary was a very bright gnome, and self-proclaimed adventurer, who believed in covering every angle of his tiny arse before leaving on grand quests.  He created magical items that literally saturated the gamut of possible situations that could arise from his high adventures.  These magical items would have been the envy of all adventurers, had Belib been successful in leaving his domicile with his equipment.
 
@@ -700,7 +706,13 @@ Weight:  4 lb.~
 //@10202    = ~Yeti Skin Boots~
 //@10203    = ~Item description can remain the same; if new description is needed put it here~
 //@10204    = ~Winter Wolf Boots~
-//@10205    = ~Item description can remain the same; if new description is needed put it here~
+@10205    = ~Boots are normally hand-made by cobblers.  Common boots are made by using a form, but good boots are designed for the foot of an individual. These particular boots have been fashioned from the hide of a  Winter Wolf.
+
+STATISTICS:
+
+Resistance: 2/- Cold Resistance
+Charisma: +1
+Weight:  4~
 //@10206    = ~Chimandrae's Slippers~
 //@10207    = ~Item description can remain the same; if new description is needed put it here~
 @10208    = ~Chimandrae's Quick Slippers~
@@ -790,7 +802,13 @@ Weight:  3 lb.~
 //@10240    = ~Yeti Skin Gloves~
 //@10241    = ~Item description can remain the same; if new description is needed put it here~
 //@10242    = ~Winter Wolf Gloves~
-//@10243    = ~Item description can remain the same; if new description is needed put it here~
+@10243    = ~These fur lined gloves have been stitched together using the skins of a Winter Wolf.
+
+STATISTICS:
+
+Resistance: 2/- Cold Resistance
+Charisma: +1
+Weight: 1 lb.~
 //@10244    = ~Brazen Bands~
 @10245    = ~These Brazen Bands are enchanted to draw an enemy's blows to them and cancel their inertia, thereby providing protection equivalent to that of chain mail but without the inconveniences that wearing such heavy armor normally entails.
 
@@ -1036,9 +1054,20 @@ Weight: 3 lb.~
 //@10318    = ~Cloak of Non-Detection~
 //@10319    = ~Item description can remain the same; if new description is needed put it here~
 //@10320    = ~Yeti Skin Cloak~
-//@10321    = ~Item description can remain the same; if new description is needed put it here~
+@10321    = ~The cloak can be made in every possible shape with just about every type of fabric.  The most common forms are a circular piece of fabric with a hole in the center for the head, and fabric draped from neck, connected by a chain, brooch, cord, or pins. This cloak appears to be constructed from the skins of a Yeti.
+
+STATISTICS:
+
+Resistance: 3/- Cold Resistance
+Weight: 3 lb.~
 //@10322    = ~Winter Wolf Cloak~
-//@10323    = ~Item description can remain the same; if new description is needed put it here~
+@10323    = ~The cloak can be made in every possible shape with just about every type of fabric.  The most common forms are a circular piece of fabric with a hole in the center for the head, and fabric draped from neck, connected by a chain, brooch, cord, or pins. This cloak appears to be constructed from the skins of a Winter Wolf.
+
+STATISTICS:
+
+Resistance: 4/- Cold Resistance
+Charisma: +1
+Weight: 3 lb.~
 //@10324    = ~Berywel's Cloak~
 @10325    = ~The notorious halfling rogue and prankster Berywel Elmroot wore this cloak during his most well known streak of burglaries in Western Heartlands.  After being incarcerated for twelve years in Berdusk, Berywel decided to do something to prevent the priests of Helm in that city from capturing him again.  His gnomish friend, Chester Spindle, created this muted green and brown cloak in exchange for a case of wine stolen from a temple of Ilmater.  Under its protection, Berywel slipped out of Berdusk at least ten times despite having priests of Helm in hot pursuit.  When Berywel retired in Baldur's Gate, he sold the cloak to a friend.
 
@@ -1191,7 +1220,14 @@ Weight: 2 lb.~
 //@10359    = ~Yeti Skin Hat~
 //@10360    = ~Item description can remain the same; if new description is needed put it here~
 //@10361    = ~Winter Wolf Hat~
-//@10362    = ~Item description can remain the same; if new description is needed put it here~
+@10362    = ~This is furry hat crafted from the skin of the Winter Wolf.
+
+STATISTICS:
+
+Special:
+  Resistance: 2/- Cold Resistance 
+ Charisma: +1
+Weight: 1 lb.~
 //@10363    = ~The Black Hands of Shelgoth~
 @10364    = ~Shelgoth, a powerful lich "living" in the wake of Netheril's fall, was a terror to bands of Netherese refugees who wandered around the area near the area once known as Moander's Footstep.  His undead warriors and animals were dreadful to behold on their rocky perches.  It took the concerted effort of over a hundred invaders to defeat the lich.  Once the terror had been dispatched, some arcanists-turned-wizards decided to use the magic-laced skeletal hands in the construction of a helm.  Some historians mutter in the margins of their writings that the wizards may have been attempting to construct an item similar to the ill-fated Crown of Horns.  The helm's history post-creation is unknown.
 
@@ -4268,10 +4304,9 @@ STATISTICS:
 
 Damage:  2d10 + 4
 Attack Bonus: +4 
-Enchantment:  +5
+Enchantment:  +4
 Damage Type:  Slashing
 Special:
-  Sure Striking: Weapon is treated as having a +5 enchantment for the purpose of hitting creatures that require magical weapons to hit
   Keen: Increases chance of scoring a critical hit
 Weight: 10 lb.
 Feat Requirement:  Exotic Weapon, Bastard Sword
@@ -5648,16 +5683,18 @@ Special:
 Weight: 7 lb.
 Required Feat:  Martial Weapon, Axe
 Type:  One-handed~
-@11217    = ~Handaxe of Supreme Speed~
+@11217    = ~Handaxe of Supreme Speed +5~
 @11218    = ~The handaxe is basically a smaller version of the battleaxe. With a smaller, lighter head and a shortened shaft, the handaxe can be wielded with deadly speed and accuracy. Although it can be wielded as a primary weapon, its lighter size makes it an ideal secondary or off-handed weapon. 
 
 STATISTICS:
 
-Damage:  1d6
+Damage:  1d6  +5
+Attack Bonus:  +5 
+Enchantment:  +5
 Damage Type:  Slashing
 Special:
   Speed: +3 attacks per combat round
-Weight: 7 lb.
+Weight: 1 lb.
 Required Feat:  Martial Weapon, Axe
 Type:  One-handed~
 //@11219    = ~Winter Axe +5~
@@ -6174,7 +6211,7 @@ Type:  Two-handed~
 
 STATISTICS:
 
-Damage:  2d12 + 5
+Damage:  2d12 + 10
 Attack Penalty: -10
 Enchantment:  +5
 Damage Type:  Slashing
@@ -6722,7 +6759,7 @@ Enchantment:  +5
 Damage Type:  Bludgeoning
 Special:
   Undead Burning: +2d6 fire damage vs. undead
-  Disruption: All undead and outsiders hit by weapon must make a Fortitude save (DC 14) or be destroyed
+  Disruption: All undead and outsiders hit by weapon must make a Fortitude save (DC 17) or be destroyed
   Sure Striking: Weapon is treated as having a +5 enchantment for the purpose of hitting creatures that require magical weapons to hit
 Weight: 12 lb.
 Required Feat:  Simple Weapon, Mace
@@ -11373,3 +11410,164 @@ Special:
 Weight: 12 lb.
 Feat Requirement:  Martial Weapon, Great Sword
 Type:  Two-handed~
+@12553    = ~Acid Arrows +4~
+@12554    = ~This arrow is coated in acid so that when it strikes an enemy, it will not only pierce its flesh but also begin to eat away at the wound, enlarging and deepening its severity.
+
+STATISTICS:
+
+Damage:  1d6  +1
+Attack Bonus:  +1 
+Enchantment:  +1
+Damage Type:  Missile (piercing)
+Special:
+  Corrosion: +1d4 acid damage, and an additional +2d4 acid damage over the following 2 rounds
+Weight: 0 lb.
+Launcher:  Bow~
+@12555    = ~Mighty Arrows +3~
+@12556    = ~These arrows were enhanced through magical means when they were created.  They appear slightly straighter then the average arrow, almost alive as they effortlessly leave your bow and streak towards their target with deadly accuracy.
+
+STATISTICS:
+
+Damage:  1d6 + 3
+Attack Bonus:  +3 
+Enchantment:  +3
+Damage Type:  Missile (piercing)
+Special:
+  Gains Strength bonus to damage
+Weight: 0 lb.
+Launcher:  Bow~
+@12557    = ~Everlast Arrow +5~
+@12558    = ~These arrows were enhanced through magical means when they were created.  They appear slightly straighter then the average arrow, almost alive as they effortlessly leave your bow and streak towards their target with deadly accuracy.
+
+STATISTICS:
+
+Damage:  1d6 + 5
+Attack Bonus:  +5 
+Enchantment:  +5
+Damage Type:  Missile (piercing)
+Special:
+  Returning: Arrow returns to the user
+Weight: 0 lb.
+Launcher:  Bow~
+@12559    = ~Arrow of Detonation~
+@12560    = ~These very rare arrows explode in fireballs on hit, dealing damage to nearby creatures as well.
+
+STATISTICS:
+
+Damage:  6d6 (Reflex DC 24 for half)
+Attack Bonus:  Automatically hits
+Enchantment:  +5
+Damage Type:  Fire
+Special:
+  Explodes on hit and deals damage to all creatures within 20 feet
+Weight: 0 lb.
+Launcher:  Bow~
+@12561    = ~Returning Keen Arrow of Strength +5~
+@12562    = ~These arrows were enhanced through magical means when they were created.  They appear slightly straighter then the average arrow, almost alive as they effortlessly leave your bow and streak towards their target with deadly accuracy.
+
+STATISTICS:
+
+Damage:  1d6 + 5
+Attack Bonus:  +5 
+Enchantment:  +5
+Damage Type:  Missile (piercing)
+Special:
+  Returning: Arrow returns to the user
+  Keen: Increases chance of scoring a critical hit
+  Gains Strength bonus to damage
+Weight: 0 lb.
+Launcher:  Bow~
+@12563    = ~Negative Energy Bolt +4~
+@12564    = ~Quarrels or bolts are the ammunition fired by crossbows regardless of the weapon's size.  However this bolt has been imbued with magical properties which enhances performance in flight, almost as if the bolt was guided towards its target.
+
+STATISTICS:
+
+Damage:  1d8  +4
+Attack Bonus:  +4 
+Enchantment:  +4
+Damage Type:  Missile (piercing)
+Special:
+  Energy Drain: -2 to Attack Bonus / -2 to damage, -10 to max hit points (Fortitude DC 29) 
+Weight:  0 lb.
+Launcher:  Crossbow~
+@12565    = ~Heavy Bolt +4~
+@12566    = ~This bolt is heavier than most bolts, but its impressive enchantments allow it to fly flawlessly nonetheless.
+
+STATISTICS:
+
+Damage:  2d8  +4
+Attack Bonus:  +4 
+Enchantment:  +4
+Damage Type:  Missile (piercing)
+Weight:  1 lb.
+Launcher:  Crossbow~
+@12567    = ~Bolt of Lightning~
+@12568    = ~These very rare bolts turn into lightning bolts on hit, skewering lines of creatures.
+
+STATISTICS:
+
+Damage:  6d6 (Reflex DC 26 for half)
+Enchantment:  +5
+Damage Type:  Electrical
+Special:  
+  Turns into a lightning bolt when fired and deals damage to all creatures in its path
+Weight:  0 lb.
+Launcher:  Crossbow~
+@12569    = ~Returning Keen Bolt +5~
+@12570    = ~Quarrels or bolts are the ammunition fired by crossbows regardless of the weapon's size.  However this bolt has been imbued with magical properties which enhances performance in flight, almost as if the bolt was guided towards its target.
+
+STATISTICS:
+
+Damage:  1d8  +5
+Attack Bonus:  +5 
+Enchantment:  +5
+Damage Type:  Missile (piercing)
+Special:
+  Returning: Bolt returns to user
+  Keen: Increases chance of scoring a critical hit
+Weight:  0 lb.
+Launcher:  Crossbow~
+@12571    = ~Greater Vampiric Bullet +3~
+@12572    = ~Magical currents are embedded inside this bullet so that it seems a little more balanced and lighter as it jumps towards an opponent. 
+
+STATISTICS:
+
+Damage:  1d4  +3
+Attack Bonus:  +3 
+Enchantment:  +3
+Damage Type:  Missile (bludgeoning)
+Special:
+  Vampiric: 2d4 hit points drained from target and temporarily added to wielder (Fortitude DC 24)
+Weight: 0 lb.
+Launcher:  Sling~
+@12573    = ~ Brilliant Returning Bullet +5~
+@12574    = ~Magical currents are embedded inside this bullet so that it seems a little more balanced and lighter as it jumps towards an opponent. 
+
+STATISTICS:
+
+Damage:  1d4  +5
+Attack Bonus:  +5 
+Enchantment:  +5
+Damage Type:  Missile (bludgeoning)
+Special:
+  Returning: Bullet returns to user
+  Brilliant Energy: Bypasses armor and shield bonuses
+Weight: 0 lb.
+Launcher:  Sling~
+@12575    = ~Pan-Elemental Flail +5~
+@12576    = ~The flail is a sturdy wooden handle attached to an iron rod, a wooden rod with spikes, or a spiked iron ball. Between the handle and its implement is either a hinge or chain link.  The weapon has been enhanced magically, effectively forming a bond between the weapon and its wielder.
+
+STATISTICS:
+
+Damage:  1d8  +5
+Attack Bonus:  +5 
+Enchantment:  +5
+Damage Type:  Bludgeoning
+Special:
+  Flame: +1d6 fire damage
+  Frost: +1d6 cold damage
+  Shock: +1d6 electric damage
+  Corrosion: +1d6 acid damage
+Weight: 5 lb.
+Required Feat:  Martial Weapon, Flail
+Type:  One-handed~

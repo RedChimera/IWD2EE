@@ -1483,8 +1483,10 @@ COPY ~%mod_folder%/bam/USALECTO.bam~ ~override~
 COPY ~%mod_folder%/bam/USALELEC.bam~ ~override~
 COPY ~%mod_folder%/bam/USALFAI2.bam~ ~override~
 COPY ~%mod_folder%/bam/USALFEY3.bam~ ~override~
+COPY ~%mod_folder%/bam/USALFIRE.bam~ ~override~
 COPY ~%mod_folder%/bam/USALFISH.bam~ ~override~
 COPY ~%mod_folder%/bam/USALFIZZ.bam~ ~override~
+COPY ~%mod_folder%/bam/USALFROS.bam~ ~override~
 COPY ~%mod_folder%/bam/USALGHOU.bam~ ~override~
 COPY ~%mod_folder%/bam/USALGOL2.bam~ ~override~
 COPY ~%mod_folder%/bam/USALLIME.bam~ ~override~
@@ -1497,8 +1499,6 @@ COPY ~%mod_folder%/bam/USALPLAS.bam~ ~override~
 COPY ~%mod_folder%/bam/USALPRES.bam~ ~override~
 COPY ~%mod_folder%/bam/USALRAD3.bam~ ~override~
 COPY ~%mod_folder%/bam/USALRAI2.bam~ ~override~
-COPY ~%mod_folder%/bam/USALSALB.bam~ ~override~
-COPY ~%mod_folder%/bam/USALSALR.bam~ ~override~
 COPY ~%mod_folder%/bam/USALSMOK.bam~ ~override~
 COPY ~%mod_folder%/bam/USALSNAI.bam~ ~override~
 COPY ~%mod_folder%/bam/USALSNAK.bam~ ~override~
