@@ -1,0 +1,490 @@
+2DA V1.0																																																																																																																											
+*																																																																																																																											
+	1	2	3	4	5	6	7	8	9	10	11	12	13	14	15	16	17	18	19	20																																																																																																							
+RT01_L	00Gem01	00Gem02	00Gem03	00Ring01	00Ring02	00Ring03	00Amul01	00Amul02	00Gem02	00Ring02	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop																																																																																																		
+RT01_M	00Amul03	00Amul02	00Gem07	00Gem06	00Gem05	00Amul03	00Amul02	00Gem07	00Gem06	00Gem05	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop																																																																																																		
+RT01_R	00ax1h01	00ax1h11	00ax2h01	00club01	00Flal01	00Mace01	00Mstr01	00Dagg01	00Hamm01	00Hamm05	00halb01	00spear01	00staf01	00bowc01	00bowl01	00bwlx01	00slng01	UP	UP	UP	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	00Potn04	SPWI122Z	00hamm02	00halb02	00sper95	00staf95	00bowc02	00bows02	00bwhx02	00swdb02	00swdc94	00swdl02	00swds02	00leat01	00belt01	00brac01	UP	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	00Potn85	00Potn86	00Potn87	00Potn04	00Potn04	00Potn04	SPPR103Z	SPWI112Z	SPWI112Z	00Ring86	00Ring87																																													
+RT01_V	00bows01	00swdb01	00swdc01	00swdl01	00swds01	00swds02	00leat01	00belt01	00brac01	00helm01	00ax1h01	00ax1h05	00ax2h01	00club01	00flal99	00mace02	00mstr02	00dagg02	UP	UP	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	00Potn85	00Potn86	00Potn87	00Potn04	SPPR103Z	SPWI122Z	SPWI120Z	00Ring86	00Ring78	00ax1h02	00ax1h12	00ax2h97	00club94	00flal99	00mace02	00mstr02	00dagg02	00hamm02	00halb02	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	00Potn70	00Potn71	00Potn72	00Potn73	SPPR103Z	SPWI206Z	SPWI212Z	SPPR211Z	00Ring72																																													
+RT02_L	00Amul03	00Amul04	00gem10	00Gem09	00Gem08	00Gem07	00Gem06	00Gem05	00Gem04	00Ring04	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop																																																																																																		
+RT02_M	00Amul03	00Amul04	00gem10	00Gem09	00Gem08	00Gem07	00Gem06	00Gem05	00Gem04	00Ring04	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop																																																																																																									
+RT02_R	00sper01	00staf01	00bowl01	00bows01	00bwlx01	00slng01	00swdb01	00swdc94	00swdl01	00swds01	00swdt02	00leat04	00ax1h02	00ax1h12	00ax2h97	00club94	00flal99	UP	UP	UP	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	00Potn82	00club94	00flal99	00mace02	00mstr02	00dagg02	00hamm02	00halb02	00sper95	00staf02	00bowc04	00bows03	00slng02	00swdc99	00swdb03	UP	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	00Potn82	00Potn88	SPPR218Z	SPPR222Z	SPPR214Z	SPPR214Z	SPWI213Z	00Potn73																																																	
+RT02_V	00mace02	00mstr02	00dagg02	00hamm02	00halb02	00sper95	00staf95	00bowc02	00bwhx02	00bows02	00swdb02	00swdc94	00swdl02	00swds02	00swdt02	00leat04	00ax1h02	00ax1h12	UP	UP	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	00Potn82	SPPR217Z	SPPR218Z	SPPR222Z	SPPR214Z	00Potn73	00Ring83	00shld07	00swdt99	00boot02	00brac09	00ax1h03	00ax2h92	00flal02	00mace03	00mstr03	00dagg03	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	SPPR222Z	SPPR214Z	SPWI213Z	00Potn05	00Potn05	00Potn05	00Potn73	SPWI304Z																																																
+RT03_L	00Gem12	00Gem11	00Gem10	00Gem09	00Gem08	00Gem07	00Gem06	00Gem05	00Gem04	00Amul06	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop																																																																																																		
+RT03_M	00Gem12	00Gem11	00Gem10	00Gem09	00Gem08	00Gem07	00Gem06	00Gem05	00Gem04	00Amul06	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop																																																																																																									
+RT03_R	00hamm02	00halb02	00sper95	00staf95	00bows02	00bwlx02	00slng95	00swdb02	00swdc94	00swdl02	00swds02	00swdt02	00leat04	00ax1h02	00ax1h12	00ax2h97	00club94	UP	UP	UP	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	00Potn76	SPWI209Z	SPWI122Z	00club99	00flal02	00mstr03	00mace03	00dagg99	00hamm99	00halb03	00sper94	00staf94	00bowc04	00bowl03	00bwhx02	00swdb02	00swdc94	UP	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	00Potn76	00Potn77	00Potn78	00Potn05	00Potn05	SPPR318Z	SPPR322Z	SPPR323Z	SPWI305Z	SPWI322Z	00Ring91	00Clck01																																											
+RT03_V	00flal99	00mace02	00mstr02	00dagg02	00hamm02	00halb02	00sper95	00staf95	00bows02	00bwlx02	00slng95	00swdb02	00swdc94	00swdl02	00swdt03	00swdt99	00ax1h03	00ax2h92	UP	UP	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	00Potn76	00Potn77	00Potn05	SPPR322Z	SPPR319Z	SPWI228Z	SPWI308Z	00swdb03	00swdl99	00swds03	00swdt03	00ax1h03	00ax2h92	00club99	00flal02	00mace03	00mstr03	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	SPWI304Z	SPWI309Z	SPPR324Z	SPPR324Z	SPPR403Z	SPPR415Z	SPWI323Z	00Ring91	00Ring92	00Clck01																																														
+RT04_L	00Gem14	00Gem13	00Gem12	00Gem11	00Gem10	00Ring07	00Ring06	00Ring05	00Amul07	00Amul06	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop																																																																																																		
+RT04_M	00Gem14	00Gem13	00Gem12	00Gem11	00Gem10	00Ring07	00Ring06	00Ring05	00Amul07	00Amul06	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop																																																																																																								
+RT04_R	00shld99	00hamm02	00halb02	00sper95	00staf95	00bows02	00bwlx02	00slng95	00swdb02	00swdc99	00swdl03	00swds03	00swdt03	00chan04	00ax1h03	00ax2h92	00flal02	UP	UP	UP	SPWI321Z	SPWI318Z	SPWI314Z	SPPR320Z	SPPR214Z	00club99	00flal02	00mace03	00mstr03	00dagg03	00hamm03	00halb03	00sper02	00staff99	00bows95	00bwlx99	00slng94	00swdl98	00swds99	UP	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	SPPR416Z	SPPR427Z	SPWI414Z	SPPR428Z																																																															
+RT04_V	00mace03	00mstr03	00dagg03	00hamm03	00halb03	00sper02	00staf02	00bowc04	00bowl03	00bowp02	00bwhx03	00swdb03	00swdc99	00swdl03	00swds03	00swdt03	00ax1h03	00ax2h92	UP	UP	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	SPPR416Z	SPWI406Z	SPWI411Z	SPWI414Z	00swdt89	00swdb98	00swdc98	00boot04	00brac05	00ax1h90	00ax2h91	00mstr95	00club93	00flal94	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	SPWI504Z	SPWI511Z	SPWI513Z	SPPR502Z																																																						
+RT05_L	00Gem14	00Gem13	00Gem12	00Gem11	00Gem10	00Gem15	00Ring06	00ring07	00Amul07	00Amul06	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop																																																																																																	
+RT05_M	00Gem14	00Gem13	00Gem12	00Gem11	00Gem10	00Gem15	00Ring06	00ring07	00Amul07	00Amul06	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop																																																																																																								
+RT05_R	00shld99	00dagg03	00hamm03	00halb03	00sper02	00staf02	00bowl03	00slng02	00bwlx03	00swdb03	00swdc99	00swdl03	00swds03	00swdt99	00chan01	00ax1h03	00flal02	UP	UP	UP	00ax2h92	00club99	00flal02	00mstr96	00mace99	00dagg05	00hamm98	00halb99	00sper99	00staf99	00bowc99	00slng94	00bwhx94	00swdb89	UP	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop																																																																								
+RT05_V	00mace03	00mstr03	00dagg03	00hamm03	00halb03	00sper02	00staf02	00bowc04	00bowl03	00bwhx03	00swdb03	00swdc99	00swdl03	00swds04	00swt89	00swdc98	00chan04	00ax1h04	UP	UP	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	00swdc98	00swdl98	00swds99	00swdt89	00ax1h90	00ax2h91	00mstr97	00club93	00mace99	00dagg05	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop																																																														
+RT06_L	00Gem17	00Gem16	00Gem15	00Gem14	00Gem13	00Gem12	00Gem11	00Ring06	00Ring07	00Amul07	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop																																																																																																	
+RT06_M	00Gem17	00Gem16	00Gem15	00Gem14	00Gem13	00Gem12	00Gem11	00Ring06	00Ring07	00Amul07	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop																																																																																																								
+RT06_R	00hamm03	00halb03	00sper02	00staf02	00bowp02	00bows03	00bwlx03	00slng02	00swdb03	00swdb89	00swdc98	00swdl04	00swds04	00swdt89	00chan04	00ax1h04	00ax2h91	UP	UP	UP	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	00belt02	00boot04	00shld16	00ax1h90	00mstr95	00club93	00mace99	00dagg98	00hamm87	00halb89	00sper98	00staf93	00bwhx93	00bowc98	UP	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop																																																									
+RT06_V	00club93	00flal94	00mace99	00mstr90	00dagg04	00hamm04	00halb04	00sper99	00staf99	00bowl91	00bows95	00bwlx95	00swdb89	00swdc98	00swdl04	00swds04	00swdt89	00plat01	UP	UP	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	00swdb98	zzz6bs	00swdl97	00swds90	00brac10	00shld98	00ax1h06	00ax2h90	00mstr94	00mace98	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop																																																														
+RT07_L	00Gem17	00Gem16	00Gem15	00Gem14	00Ring08	00Gem17	00Gem16	00Gem15	00Gem14	00Ring08	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop																																																																																																	
+RT07_M	00Gem17	00Gem16	00Gem15	00Gem14	00Ring08	00Gem17	00Gem16	00Gem15	00Gem14	00Ring08	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop																																																																																																								
+RT07_R	00club93	00flal94	00mace99	00dagg04	00hamm04	00halb04	00sper99	00staf99	00bows99	00bwlx95	00slng99	00swdb89	00swdc98	00swdl04	00swds04	00swdt89	00shld16	UP	UP	UP	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	00ax1h06	00ax2h90	00mstr94	00flal93	00mace98	00dagg98	00hamm87	00halb89	00sper98	00staf93	00bowc98	00bwlx95	00slng99	00swdl98	UP	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop																																																									
+RT07_V	00ax1h04	00club93	00flal94	00mace99	00mstr90	00dagg04	00hamm04	00halb04	00sper99	00staf99	00bowl91	00bwhx94	00swdb89	00swdc97	00swdl88	00swds90	00swdt88	00shld16	UP	UP	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	00swdb98	zzz6bs	00swdt88	00swds90	00shld98	00ax1h06	00mstr94	00mace98	00flal93	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop																																																															
+RT08_L	00Gem18	00Gem17	00Gem16	00Gem15	00Ring09	00Ring08	00Gem18	00Gem17	00Gem16	00Gem15	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop																																																																																																	
+RT08_M	00Gem18	00Gem17	00Gem16	00Gem15	00Ring09	00Ring08	00Gem18	00Gem17	00Gem16	00Gem15	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop																																																																																																								
+RT08_R	00club93	00dagg04	00hamm04	00halb04	00sper99	00staf99	00bows99	00bwlx99	00slng99	00swdb88	00swdc97	00swdl88	00swds90	00swdt88	00plat01	00shld16	00ax1h93	UP	UP	UP	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	00ax1h92	00mstr94	00mace98	00flal93	00dagg98	00hamm87	00halb89	00staf88	00sper97	00bowc95	00bows94	00bwhx92	00swdb87	00swdc96	UP	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop																																																									
+RT08_V	00flal93	00mace98	00mstr89	00dagg89	00hamm87	00halb89	00sper98	00staf98	00bowl90	00bows98	00bwlx94	00swdb88	00swdc97	00swdl88	00swds90	00swdt88	00shld98	00ax1h93	UP	UP	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	00swdl96	00swds89	00swdt87	00boot01	00shld17	00ax1h99	00ax2h89	00mstr93	00mace97	00flal92	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop																																																														
+RT09_L	00Gem18	00Gem17	00Gem16	00Ring09	00Ring08	00Gem18	00Gem17	00Gem16	00Ring09	00Ring08	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop																																																																																																	
+RT09_M	00Gem18	00Gem17	00Gem16	00Ring09	00Ring08	00Gem18	00Gem17	00Gem16	00Ring09	00Ring08	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop																																																																																																								
+RT09_R	00dagg89	00hamm87	00halb89	00sper98	00staf98	00bwlx94	00slng98	00bows98	00swdc97	00swdb88	00swdl88	00swds90	00swdt88	00shld98	00ax1h93	00ax2h90	00flal93	UP	UP	UP	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	00mstr94	00flal93	00mace98	00club98	00dagg88	00hamm86	00hamm86	00halb88	00sper97	00bows94	00slng92	00bowl89	00swdl96	00swdb87	UP	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop																																																									
+RT09_V	00mace98	00mstr89	00dagg89	00hamm87	00halb89	00sper98	00staf98	00bowl90	00bows98	00bwhx92	00swdb87	00swdc96	00swdl87	00swds89	00swdt87	00shld17	00ax1h92	00ax2h89	UP	UP	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	00swdt87	00swds89	00boot05	00shld97	00ax1h99	00mstr93	00mace97	00club98	00dagg88	00hamm86	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop																																																														
+RT10_L	00Gem19	00Gem17	00Gem16	00Gem14	00Ring09	00Ring08	00Ring06	00Amul08	00Gem19	00Gem17	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop																																																																																																	
+RT10_M	00Gem19	00Gem17	00Gem16	00Gem14	00Ring09	00Ring08	00Ring06	00Amul08	00Gem19	00Gem17	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop																																																																																																								
+RT10_R	00ax1h93	00ax2h90	00flal93	00mace89	00dagg89	00hamm87	00halb89	00sper98	00staf98	00slng97	00bwlx93	00bows97	00swdc96	00swdb87	00swdl87	00swds89	00swdt87	UP	UP	UP	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	00mstr93	00mace97	00flal92	00dagg88	00hamm85	00staf88	00halb88	00sper96	00staf96	00bwhx04	00bwlx04	00slng96	00swdl95	00swds98	UP	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop																																																									
+RT10_V	00ax2h89	00flal92	00mace97	00mstr88	00dagg88	00hamm86	00halb88	00sper97	00staf97	00bowl89	00bows97	00bwhx92	00swdb87	00swdc96	00swdl87	00swdt87	00ax1h92	00ax2h89	UP	UP	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	00swdt98	00swdc95	00ax1h89	00ax2h88	00flal91	00mace96	00mstr87	00club97	00dagg87	00hamm97	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop																																																														
+RT11_L	00Gem19	00Gem17	00Gem16	00Gem14	00Ring09	00Ring08	00Ring06	00Amul08	00Gem19	00Gem17	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop																																																																																																	
+RT11_M	00Gem19	00Gem17	00Gem16	00Gem14	00Ring09	00Ring08	00Ring06	00Amul08	00Gem19	00Gem17	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop																																																																																																								
+RT11_R	00halb88	00sper97	00staf98	00bwlx93	00slng97	00bows97	00swdl87	00swdb87	00swdc96	00swds88	00swdt86	00ax1h91	00ax2h88	00club97	00flal91	00mace96	00mstr87	UP	UP	UP	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	00mstr99	00dagg88	00hamm86	00halb88	00sper96	00staf96	00bowc96	00bwhx04	00bowl88	00swdb97	00swdl95	00swds98	00swdt98	00swdc95	UP	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop																																																									
+RT11_V	00dagg88	00hamm86	00halb88	00sper97	00staf97	00bows97	00bwlx93	00slng97	00swdb87	00swdc96	00swdl87	00swds89	00swdt87	00ax1h92	00ax2h88	00club97	00flal91	00mace96	UP	UP	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	00ax1h89	00ax2h88	00club97	00flal91	00mace96	00mstr87	00dagg87	00hamm97	00halb87	00sper96	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop																																																														
+RT12_L	00Gem19	00Gem17	00Gem16	00Amul08	00Ring09	00ring08	00Gem19	00Gem17	00Gem16	00Amul08	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop																																																																																																	
+RT12_M	00Gem19	00Gem17	00Gem16	00Amul08	00Ring09	00ring08	00Gem19	00Gem17	00Gem16	00Amul08	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop																																															
+RT12_R	00bows97	00slng97	00bwlx93	00swdb87	00swdc96	00swdl87	00swds89	00ax1h92	00ax2h89	00club97	00flal91	00mace96	00mstr87	00dagg87	00hamm85	00halb87	00sper96	UP	UP	UP	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	00sper96	00staf96	00bwhx04	00bwlx04	00bowc96	00swdb97	00swdl95	00swdc93	00flal98	00mace95	00hamm85	00staf87	00staf91	00bowp99	UP	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop
+RT12_V	00staf96	00bowl88	00bows96	00bwhx91	00swdc95	00swdb86	00swdl86	00swds88	00swdt86	00ax1h91	00ax2h88	00club97	00flal91	00mace96	00mstr87	00dagg87	00hamm85	00halb87	UP	UP	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	00slng91	00swdc93	00swdl94	00flal98	00mace95	00hamm85	00staf87	00staf91	00bowp99	00slng91	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop					
+RT13_L	00Gem20	00Gem19	00Gem18	00Ring09	00Ring08	00Amul08	00Gem20	00Gem19	00Gem18	00Ring09	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop																																								
+RT13_M	00Gem20	00Gem19	00Gem18	00Ring09	00Ring08	00Amul08	00Gem20	00Gem19	00Gem18	00Ring09	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop																																															
+RT13_R	00ax1h91	00ax2h88	00flal91	00club97	00mace96	00mstr87	00dagg87	00hamm85	00sper96	00staf96	00halb87	00bows96	00bwlx92	00slng96	00swdb86	00swdc95	00swdl86	UP	UP	UP	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	00swds88	00swdt86	00ax1h91	00ax2h95	00flal98	00mace95	00mstr86	00dagg95	00hamm85	00halb94	00sper92	00staf87	00bowp99	00slng91	UP	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop
+RT13_V	00swds88	00swdt86	00ax1h91	00ax2h88	00club97	00flal91	00mace96	00mstr87	00dagg87	00hamm85	00sper96	00halb87	00staf96	00slng91	00bowp99	00swdb93	00swdc93	00swdl94	UP	UP	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	00swdb93	00swdc93	00swdl94	00swds97	00swdt94	00ax1h95	00ax2h95	00flal98	00mace95	00mstr86	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop					
+RT14_L	00Gem22	00Gem21	00Gem20	00Gem19	00Gem18	00Ring09	00Gem22	00Gem21	00Gem20	00Gem19	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop																																								
+RT14_M	00Gem22	00Gem21	00Gem20	00Gem19	00Gem18	00Ring09	00Gem22	00Gem21	00Gem20	00Gem19	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop																																															
+RT14_R	00dagg87	00hamm97	00halb87	00sper96	00staf96	00slng96	00bwlx92	00bows96	00swds88	00swdb93	00swdc93	00swdl94	00swdt94	00swds97	00ax1h95	00ax2h95	00flal98	UP	UP	UP	00dagg95	00hamm85	00halb94	00sper92	00staf87	00staf91	00bowp99	00swdb96	00swdc90	00swdl93	00swds96	00swdt93	zzj6us	00ax1h97	UP	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop															
+RT14_V	00dagg95	00hamm85	00halb94	00sper92	00staf87	00staf91	00bowp99	00slng91	00swdb93	00swdc93	00swdl94	00swds97	00swdt94	00ax1h95	00ax2h95	00flal98	00mace95	00mstr86	UP	UP	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	00ax1h97	00flal97	00mace94	00mstr92	00dagg96	00halb98	00halb98	00staf86	00staf86	00bwlx98	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop					
+RT15_L	00Gem22	00Gem21	00Gem20	00Gem19	00Amul08	00Gem22	00Gem21	00Gem20	00Gem19	00Amul08	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop																																								
+RT15_M	00Gem22	00Gem21	00Gem20	00Gem19	00Amul08	00Gem22	00Gem21	00Gem20	00Gem19	00Amul08	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop																																															
+RT15_R	00bowp99	00slng91	00swdb93	00swdc93	00swdl94	00swds97	00swdb96	00ax2h95	00ax1h95	00flal98	00mace95	00mstr86	00dagg95	00hamm85	00halb94	00sper92	00staf87	UP	UP	UP	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	00bowp99	00slng91	00swdb93	00swdc90	00swdl93	00swds96	00swdt93	zzj6us	00ax1h94	00ax2h96	00flal97	00mace94	00mstr92	00dagg87	UP	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop
+RT15_V	00bowp99	00slng91	00swdb93	00swdc93	00swdl94	00swds97	00swdt94	00ax1h95	00ax2h95	00flal98	00mace95	00mstr86	00dagg95	00hamm85	00hamm85	00halb98	00halb98	00staf86	UP	UP	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	00halb98	00halb98	00staf86	00staf86	00bows93	00bwlx98	00swdb96	00swdc90	00swdl93	00swdt93	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop					
+																																																																	
+RMEW_01	00ax1h03	00ax1h81	00ax1h82	00ax2h92	00Club84	00Club85	00Club99	00Flal02	00Flal89	00Flal90	00Mace03	00Mace91	00Mstr03	00Mstr85	00Dagg03	00Dagg94	00Dagg99	00Hamm03	00Hamm92	00Hamm93	00Hamm99	00Halb03	00Halb93	00sper02	00Sper91	00Sper94	00Staf02	00Staf84	00Staf85	00Staf94	00SwdB03	00SwdB92	00SwdC89	00SwdC99	00SwdL03	00SwdL84	00SwdL85	00SwdL99	00SwdS03	00SwdS92	00SwdS93	00SwdT03	00SwdT92	00SwdT99				
+RMEW_02	00ax1h79	00ax1h80	00ax1h90	00ax2h91	00Club82	00Club83	00Flal87	00Flal88	00Flal94	ZZL6MA	00Mace90	00Mace99	00Mstr84	00Mstr90	00Mstr95	00Mstr96	00Mstr97	00Mstr98	00Dagg04	00Dagg05	00Dagg92	00Dagg93	00Hamm04	00Hamm90	00Hamm91	00Hamm98	00Halb04	00Halb92	00Halb99	00Sper90	00Sper99	00Staf82	00Staf83	00Staf99	00SwdB89	00SwdB91	00SwdC88	00SwdC98	00SwdL04	00SwdL82	00SwdL83	00SwdL98	00SwdS04	00SwdS91	00SwdS92	00SwdS99	00SwdT89	00SwdT91
+RMEW_03	00ax1h78	00ax1h93	00ax2h90	ZZG6CT	00Club81	00Flal85	00Flal93	00Mace89	00Mace98	00Mstr89	00Mstr94	00Dagg89	00Dagg90	00Dagg91	00Dagg98	00Hamm87	00Hamm88	00Hamm89	00Halb89	00Halb91	00Sper89	00Sper98	00Staf80	00Staf81	00Staf93	00Staf98	00SwdB88	00SwdB98	00SwdC87	00SwdC97	00SwdL80	00SwdL81	00SwdL88	00SwdL97	00SwdS86	00SwdS87	00SwdS90	00SwdT88	00SwdT90	50SwdLWB	ZZJ6BS	zzz6bs						
+RMEW_04	00ax1h92	00ax1h99	00ax2h89	00Club98	00Flal92	00Mace97	00Mstr88	00Mstr93	00Mstr99	00Dagg88	00Hamm86	00Halb88	00Sper97	00Staf88	00Staf92	00Staf97	00SwdB87	00SwdC96	00SwdL87	00SwdL96	00SwdS89	00SwdT87																										
+RMEW_05	00ax2h88	00ax1h91	00Club97	00Flal03	00Flal91	00Mace96	00Mstr87	00Dagg87	00Dagg97	00Hamm85	00Hamm97	00Halb87	00Sper96	00Staf96	00SwdB86	00SwdB97	00SwdC95	00SwdL86	00SwdL89	00SwdL95	00SwdS88	00SwdS98	00SwdT86	00SwdT98																								
+RMEW_06	00ax1h95	00ax2h95	00Club92	00Flal98	00Mace95	00Mstr86	00Dagg95	00Hamm96	00Halb94	00Sper92	00Staf87	00Staf91	00SwdB93	00SwdC93	00SwdL94	00SwdS97	00Swdt94																															
+RMEW_07	00ax2h96	00ax1h94	00Club91	00Flal97	00Mace94	00Mstr92	00Dagg96	zzh6dh	00Halb98	00Sper93	00Staf86	00SwdB96	00SwdC90	00SwdL93	00SwdS96	00SwdT93	zzj6us																															
+RMEW_08	00ax1h97	00Club96	00Flal95	00Halb96	zzm6uc	00SwdC92	00SwdL92	00SwdT95	00SwdT97																																							
+RMEW_09	00ax1h86	00ax2h94	00Club90	00Mace93	00Hamm95	00Halb97	00Staf90	00SwdB94	00SwdB95	00SwdL91	00SwdS95	00SwdT96																																				
+RMEW_10	00ax2h98	00ax1h88	00Club95	00Flal96	00Mace92	00Mstr91	00Hamm94	00Halb95	00Staf05	00Staf89	00SwdC91	00SwdL90	00SwdS94																																			
+RMEW_11	00ax1h87	00ax2h93	00Club89																																													
+RMEW_12	00ax2h87	00ax1h85	00Club88																																													
+RMEW_13	00ax1h84	00ax2h86	00Club87																																													
+RMEW_14	00ax2h85	00ax1h83	00Club86																																													
+RMEW_15	00Club86																																															
+																																																
+RMIW_01	00ax1h76	00ax1h77	00Slng02	00BowC02	00BowC04	00BowC93	00BowL03	00BowP02	00BowS03	00BowS90	00BowS91	00Bwhx03	00Bwhx97	00Bwlx03	00Bwlx97	00Slng02						
+RMIW_02	00ax1h74	00ax1h75	0rt0Dagg83	00Slng99	00BowC99	00BowL91	00BowL97	00Bowl98	00BowS89	00BowS92	00BowS95	00BowS99	00Bwhx94	00Bwhx96	00Bwlx95	00Bwlx96	00Bwlx99	00Slng89	00Slng94	00Slng99	00Arow91	00Dart85
+RMIW_03	00ax1h06	00ax1h73	00Dagg81	00Dagg81	00BowC92	00BowC98	00BowL90	00BowL95	00BowL96	00BowS87	00BowS88	00BowS98	00Bwhx93	00Bwhx95	00Bwlx91	00Bwlx94	00Slng93	00Slng98	00Arow86	00Bull86	00Dart83	00Dart84
+RMIW_04	00BowC95	00BowC97	00BowL89	00BowS94	00BowS97	00Bwhx92	00Bwlx93	00Slng92	00Slng97													
+RMIW_05	00ax1h89	00ax1h98	00BowC96	00BowL88	00BowS96	00Bwhx04	00Bwhx91	00Bwlx04	00Bwlx92	00Slng96												
+RMIW_06	00BowP99	00Slng91																				
+RMIW_07	00BowS93	00Bwlx98																				
+RMIW_08	00BowC94	00BowP98	00Bwhx99	00Slng88																		
+RMIW_09	00BowL99	00BowP97	00Bwhx98	00Slng90																		
+RMIW_10																						
+																						
+RARM_01	00Leat02	00Leat94	00Leat95	00Leat96	00Leat97	00Leat98	00Leat99															
+RARM_02	00Leat03	00Leat05	00Leat90	00Leat91	00Leat92	00Leat93																
+RARM_03	50Hide06	00Leat06	00Leat07	00Leat86	00Leat87	00Leat88	00Leat89															
+RARM_04	00Chan02	51Plat10																				
+RARM_05	00Chan03	00Chan05																				
+RARM_06	00Plat02					
+RARM_07	00Plat04					
+RARM_08	00Plat03					
+RARM_09						
+RARM_10						
+RARM_11						
+RARM_12						
+RARM_13						
+RARM_14						
+RARM_15						
+						
+RSHD_01	00Shld 87	00Shld90	00Shld93	00Shld96	00Shld99	
+RSHD_02	00Shld11	00Shld86	00Shld89	00Shld92	00Shld95	51ShldFo
+RSHD_03	00Shld16	00Shld85	00Shld88	00Shld91	00Shld94	00Shld98
+RSHD_04	00Shld17	00Shld97				
+RSHD_05						
+RSHD_06																				
+RSHD_07																				
+RSHD_08																				
+RSHD_09																				
+RSHD_10																				
+RSHD_11																				
+RSHD_12																				
+RSHD_13																				
+RSHD_14																				
+RSHD_15																				
+																				
+RAMO_01	00Arow03	00Arow89	00Arow90	00Arow96	00Arow97	00Bull02	00Bull90	00Bull91	00Dart02	00Dart04	00Dart87	00Dart88								
+RAMO_02	00Arow04	00Arow87	00Arow88	00Arow95	00Bull03	00Bull88	00Bull89	00Dart86	00Dart93	00Dart99										
+RAMO_03	00Arow05	00Arow08	00Arow09	00Arow85	00Arow94	00Arow99	00Bolt05	00Bolt08	00Bolt94	00Bolt95	00Bolt96	00Bolt99	00Bull87	00Bull93	00Bull94	00Bull95	00Bull96	00Bull99	00Dart92	00Dart95
+RAMO_04	00Arow06	00Arow07	00Arow10	00Arow14	00Arow93	00Bolt98	00Bull98	00Dart03	00Dart91	00Dart96										
+RAMO_05	00Arow92	00Arow98	00Bolt93	00Bolt97	00Bull04	00Bull92	00Bull97	00Dart90	00Dart94	00Dart98										
+RAMO_06																							
+RAMO_07																							
+RAMO_08	00Dart05																						
+RAMO_09	00Dart97																						
+RAMO_10																							
+RAMO_MK	00Dart89	00Dart02	00Dart04	00Dart87	00Dart89	00Dart89	00Dart89	00Dart89	00Dart89	00Dart89	00Dart89	00Dart89	00Dart89	00Dart89	00Dart89	00Dart89	00Dart89	00Dart89					
+																							
+RPTN_01	00Potn74	00Potn75	00Potn83	00Potn84	00Potn85	00Potn86	00Potn87																
+RPTN_02	00Potn69	00Potn70	00Potn71	00Potn72	00Potn73	00Potn79	00Potn80	00Potn81	00Potn82	00Potn88													
+RPTN_03	00Potn68	00Potn76	00Potn77	00Potn78																			
+																							
+RWIZ_01	SPWI101Z	SPWI102Z	SPWI103Z	SPWI104Z	SPWI105Z	SPWI107Z	SPWI108Z	SPWI110Z	SPWI112Z	SPWI113Z	SPWI114Z	SPWI115Z	SPWI116Z	SPWI117Z	SPWI118Z	SPWI119Z	SPWI120Z	SPWI122Z					
+RWIZ_02	SPWI201Z	SPWI203Z	SPWI205Z	SPWI206Z	SPWI207Z	SPWI209Z	SPWI228Z	SPWI211Z	SPWI212Z	SPWI213Z	SPWI214Z	SPWI215Z	SPWI217Z	SPWI218Z	SPWI219Z	SPWI220Z	SPWI221Z	SPWI222Z	SPWI223Z	SPWI224Z	SPWI225Z	SPWI226Z	SPWI227Z
+RWIZ_03	SPWI302Z	SPWI303Z	SPWI304Z	SPWI305Z	SPWI306Z	SPWI308Z	SPWI309Z	SPWI310Z	SPWI311Z	SPWI312Z	SPWI313Z	SPWI314Z	SPWI316Z	SPWI317Z	SPWI318Z	SPWI319Z	SPWI320Z	SPWI321Z	SPWI322Z	SPWI323Z			
+RWIZ_04	SPWI401Z	SPWI404Z	SPWI405Z	SPWI406Z	SPWI407Z	SPWI408Z	SPWI410Z	SPWI411Z	SPWI412Z	SPWI413Z	SPWI414Z	SPWI417A	SPWI418Z	SPWI428Z	SPWI420Z	SPWI421Z	SPWI422Z	SPWI423Z	SPWI424Z	SPWI425Z	SPWI426Z	SPWI427Z	SPWI409Z
+RWIZ_05	SPWI501Z	SPWI503Z	SPWI504Z	SPWI505Z	SPWI507Z	SPWI508Z	SPWI509Z	SPWI510Z	SPWI511Z	SPWI512Z	SPWI513Z	SPWI514Z	SPWI515A	SPWI516Z	SPWI518Z	SPWI519Z	SPWI520Z	SPWI521Z	SPWI522Z	SPWI523Z	SPWI524Z	SPWI525Z	
+RWIZ_06	SPWI601Z	SPWI603Z	SPWI605Z	SPWI606Z	SPWI607Z	SPWI608Z	SPWI609Z	SPWI610Z	SPWI611Z	SPWI612Z	SPWI613Z	SPWI614Z	SPWI615Z	SPWI616Z	SPWI617Z	SPWI618Z	SPWI619Z	SPWI620Z	SPWI621Z	SPWI622Z	SPWI623Z	SPWI629Z	SPWI626Z	SPWI627Z	SPWI628Z
+RWIZ_07	SPWI702Z	SPWI703Z	SPWI704Z	SPWI705Z	SPWI706Z	SPWI707Z	SPWI708Z	SPWI709Z	SPWI710Z	SPWI711Z	SPWI712Z	SPWI713Z	SPWI714Z	SPWI715Z	SPWI716Z	SPWI717Z	SPWI718Z	SPWI719Z							
+RWIZ_08	SPWI802Z	SPWI803Z	SPWI804A	SPWI805Z	SPWI806Z	SPWI807Z	SPWI808Z	SPWI809Z	SPWI810Z																
+RWIZ_09	SPWI902Z	SPWI903Z	SPWI905Z	SPWI906Z	SPWI907Z	SPWI908Z	SPWI909Z	SPWI910Z	SPWI911Z																
+																									
+RPRI_01	SPPR103Z	SPPR105Z	SPPR108Z	SPPR112Z	SPPR113Z	SPPR114Z	SPPR115Z	SPPR116Z	SPPR117Z																
+RPRI_02	SPPR201Z	SPPR203Z	SPPR205Z	SPPR210Z	SPPR211Z	SPPR212Z	SPPR214Z	SPPR216Z	SPPR217Z	SPPR218Z	SPPR219Z	SPPR222Z	SPPR221Z												
+RPRI_03	SPPR326Z	SPPR304Z	SPPR306Z	SPPR325Z	SPPR308Z	SPPR313Z	SPPR314Z	SPPR324Z	SPPR316Z	SPPR318Z	SPPR319Z	SPPR320Z	SPPR322Z	SPPR323Z											
+RPRI_04	SPPR401Z	SPPR403Z	SPPR404Z	SPPR407Z	SPPR415Z	SPPR416Z	SPPR417Z	SPPR418Z	SPPR420Z	SPPR421Z	SPPR422Z	SPPR423Z	SPPR424Z	SPPR425Z	SPPR426Z	SPPR427Z	SPPR428Z	SPPR408Z							
+RPRI_05	SPPR502Z	SPPR503Z	SPPR504Z	SPPR507Z	SPPR510Z	SPPR512Z	SPPR513Z	SPPR514Z	SPPR515Z	SPPR516Z	SPPR517Z	SPPR518Z	SPPR519Z	SPPR520Z	SPPR521Z	SPPR524Z									
+RPRI_06	SPPR606Z	SPPR607Z	SPPR608Z	SPPR610Z	SPPR611Z	SPPR612Z	SPPR613Z	SPPR615Z	SPPR616Z																
+RPRI_07	SPPR704Z	SPPR705Z	SPPR707Z	SPPR712Z	SPPR714Z	SPPR717Z	SPPR718Z	SPPR719Z	SPPR720Z	SPPR721Z	SPPR722Z	SPPR715Z	SPPR725Z	SPPR726Z	SPPR727Z	SPPR728Z	SPPR729Z								
+																									
+RRNG_01	00Ring19	00Ring21	00Ring76	00Ring77	00Ring78	00Ring79	00Ring80	00Ring84	00Ring85	00Ring86	00Ring87	00Ring99	00Amul15	00Amul31											
+RRNG_02	00Ring20	00Ring71	00Ring72	00Ring73	00Ring74	00Ring75	00Ring82	00Ring83	00Ring97	00Ring98	00Amul14	00Amul32													
+RRNG_03	00Ring15	00Ring67	00Ring68	00Ring69	00Ring70	00Ring90	00Ring91	00Ring92	00Ring93	00Ring94	00Ring95	00Ring96	00Amul13												
+RRNG_04	00Ring16	00Ring18	00Ring22	00Ring23			
+RRNG_05	00Ring25	00Ring81	00Ring88	00Ring89			
+RRNG_06							
+RRNG_07							
+RRNG_08							
+RRNG_09							
+RRNG_10							
+RRNG_11							
+RRNG_12							
+RRNG_13							
+RRNG_14							
+RRNG_15							
+							
+RMSC_01	00Brac09	00Brac12	00Brac17	00Robe15	00Robe16	00Clck17	00Helm18
+RMSC_02	00Brac02	00Brac18	00Robe02	00Robe03	00Robe04	00Clck18	00Helm19
+RMSC_03	00Brac03	00Brac10	00Clck01	00Clck03	00Clck04		
+RMSC_04	00Brac04								
+RMSC_05	00Robe99								
+RMSC_06	00Clck02	00Robe01							
+RMSC_07									
+RMSC_08									
+RMSC_09									
+RMSC_10	00Robe05	00Robe06	00Robe07						
+RMSC_11									
+RMSC_12									
+RMSC_13									
+RMSC_14									
+RMSC_15									
+									
+Arow_P1	arow01	arow01	arow01	arow02	arow08	arow01	arow01	arow01	
+Arow_P2	arow01	arow01	arow02	arow02	arow08	arow08	arow01	arow01	arow01
+AskelP1	blun06	ax1h01	sw1h01	sw1h04					
+AskelP2	blun06	ax1h01	sw1h01	sw1h04	hqmstar	hqbswrd	hqlswrd	hqaxe																	
+AskelP3	hqmstar	hqbswrd	hqlswrd	hqaxe	blun06	ax1h01	sw1h05	hqmstar	hqlswrd	ax1h02	blun07	hqaxe													
+AskelP4	hqmstar	hqbswrd	hqlswrd	hqaxe	sw1h02	sw1h05	sw1h08	ax1h02																	
+Skel_M1	hamm01	sw2h01	sw1h01	ax1h01	staf01	blun02	sw1h04	sw1h07	blun06	dagg01	hqlswrd	hqmace	hamm01	sw2h01	sw1h01	ax1h01	blun06	blun02	sw1h04	sw1h07					
+Skel_R1	bow05	bow05	bow03	bow01	bow03	bow05	bow05																		
+Skel_R2	bow05	bow03	bow03	bow01	bow06	bow01	bow03	bow03	bow05																
+TskelP1	ax1h01	sw1h01	sw1h04																						
+TskelP2	ax1h01	sw1h01	sw1h04	hqbswrd	hqlswrd	hqaxe																			
+TskelP3	hqbswrd	hqlswrd	hqaxe	hqbswrd	hqlswrd	hqaxe	ax1h02	sw1h05	ax1h01	sw1h01	sw1h04														
+TskelP4	hqbswrd	hqlswrd	hqaxe	ax1h02	sw1h05	sw1h02																			
+																									
+00RG03	00Gem01	00Gem02	00Gem03	00Ring01	00Ring02	00Ring03	00Amul01	00Amul02	00Gem02	00Ring02	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop
+00RG04	00Amul03	00Amul02	00Gem07	00Gem06	00Gem05	00Amul03	00Amul02	00Gem07	00Gem06	00Gem05	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop
+00RG05	00Amul03	00Amul04	00gem10	00Gem09	00Gem08	00Gem07	00Gem06	00Gem05	00Gem04	00Ring04	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop
+00RG06	00Gem12	00Gem11	00Gem10	00Gem09	00Gem08	00Gem07	00Gem06	00Gem05	00Gem04	00Amul06	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop
+00RG07	00Gem13	00Gem12	00Gem11	00Gem10	00Gem09	00Gem08	00Ring07	00Ring05	00Amul07	00Amul06	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop
+00RG08	00Gem14	00Gem13	00Gem12	00Gem11	00Gem10	00Ring07	00Ring06	00Ring05	00Amul07	00Amul06	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop
+00RG09	00Gem14	00Gem13	00Gem12	00Gem11	00Gem10	00Gem15	00Ring06	00ring07	00Amul07	00Amul06	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop
+00RG10	00Gem17	00Gem16	00Gem15	00Gem14	00Gem13	00Gem12	00Gem11	00Ring06	00Ring07	00Amul07	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop
+00RG11	00Gem17	00Gem16	00Gem15	00Gem14	00Ring08	00Gem17	00Gem16	00Gem15	00Gem14	00Ring08	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop
+00RG12	00Gem18	00Gem17	00Gem16	00Gem15	00Ring09	00Ring08	00Gem18	00Gem17	00Gem16	00Gem15	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop
+00RG13	00Gem18	00Gem17	00Gem16	00Ring09	00Ring08	00Gem18	00Gem17	00Gem16	00Ring09	00Ring08	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop
+00RG14	00Gem19	00Gem17	00Gem16	00Gem14	00Ring09	00Ring08	00Ring06	00Amul08	00Gem19	00Gem17	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop
+00RG15	00Gem19	00Gem17	00Gem16	00Gem14	00Ring09	00Ring08	00Ring06	00Amul08	00Gem19	00Gem17	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop
+00RG16	00Gem19	00Gem17	00Gem16	00Amul08	00Ring09	00ring08	00Gem19	00Gem17	00Gem16	00Amul08	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop
+00RG17	00Gem20	00Gem19	00Gem18	00Ring09	00Ring08	00Amul08	00Gem20	00Gem19	00Gem18	00Ring09	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop
+00RG18	00Gem22	00Gem21	00Gem20	00Gem19	00Gem18	00Ring09	00Gem22	00Gem21	00Gem20	00Gem19	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop
+00RG19	00Gem22	00Gem21	00Gem20	00Gem19	00Amul08	00Gem22	00Gem21	00Gem20	00Gem19	00Amul08	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop
+																									
+00CWAroA	00Arow01	00Arow01	00Arow01	00Arow01	00Arow02	00Arow02	00Arow01	00Arow01	00Arow01	00Arow01															
+00CWAroB	00Arow01	00Arow01	00Arow02	00Arow02	00Arow08	00Arow03	00Arow02	00Arow02	00Arow02	00Arow01															
+00CWAroC	00Arow02	00Arow02	00Arow03	00Arow03	00Arow09	00Arow08	00Arow04	00Arow03	00Arow02	00Arow02															
+00CWAroD	00Arow03	00Arow03	00Arow04	00Arow09	00Arow08	00Arow04	00Arow04	00Arow99	00Arow03	00Arow03																																																																													
+																																																																																							
+00Shield	00CIShiA	00CIShiB	00CIShiC	00CIShiD	No_Drop																																																																																		
+00Helmet	00CIHelA	00CIHelB	00CIHelC	00CIHelD	00CIHelD	No_Drop																																																																																	
+00BowA	00CWBowA	00CWBowB	00CWBowD	00CWBowE	00CWBowG	00CWBowH																																																																																	
+00BowB	00CWBowB	00CWBowC	00CWBowH	00CWBowI	00CWBowD	00CWBowE																																																																																	
+00BowC	00CWBowC	00CWBowI	00CWBowF																																																																																				
+																																																																																							
+00Skel1A	00CWSwdA	00CWSwdD	00CWSwdG	00CWAxeA	00CWBluA	00CWBluB	00CWBluD	00CWBluG	00CWHamA	00CWBluE	00CWHamB	00CWBluH	00CWSwdG	00CWSwdE	00CWSwdB																																																																								
+00Skel1B	00CWSwdB	00CWSwdE	00CWSwdH	00CWAxeB	00CWBluE	00CWBluH	00CWHamB	00CWSwdE	00CWSwdH	00CWAxeB	00CWBluE	00CWSwdA	00CWSwdD	00CWSwdG	00CWBluB																																																																								
+00Skel1C	00CWSwdC	00CWSwdF	00CWSwdI	00CWaxeC	00CWBluC	00CWBluF	00CWHamC	00CWSwdB	00CWSwdE	00CWSwdH	00CWAxeB	00CWBluE	00CWBluH																																																																										
+00Skel2A	00CWSwdJ	00CWAxeD	00CWHalA	00CWSpeB	00CWStaA	00CWHalB	00CWSwdK																																																																																
+00Skel2B	00CWHalC	00CWSwdL																																																																																					
+00Skel2C	00CWSwdL	00CWSperB	00CWStaB	00CWHalC	00CWHalb	00CWHalC																																																																																	
+																																																																																							
+00RTFire	00Potn52	00Misc32	00Misc32	00Misc32	00Misc32	00Misc32	00Hamm01	00Hamm01	00Hamm01	00Hamm01	00Hamm01	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop																																																																			
+00RWBarb	00CWAxeA	00CWSwdA	00CWBluD																																																																																				
+																																																																																							
+00RTGob1	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	00Ax1h11	00Ax1h11	00Ax1h11	00Shld04	00Shld05	00Shld06	00SwdS01	00SwdS01	00Dagg01	00Dagg01																																																																			
+																																																																																							
+00RTAVE1	00Arow01	00Arow01	00Arow01	00Arow01	00Bolt01	00Bolt01	00Bolt01	00Bull01	00Bull01	00Bull01	00Bull01																																																																												
+00RTAVE2	00Sper01	00Sper01	00ax1h11	00ax1h11	00GenIR	00GenIR	00Mace01	00Mace01	00Hamm01	00Hamm01	00SwdS01	00SwdS01	00Shld05	00Shld05	00Leat01	00ax1h01	00BowS01	00Dagg01	00GenIR	00Helm02																																																																			
+00RTAVE3	00Misc20	00Misc20	00ax1h11	00ax1h11	00Club01	00Club01	00Mace01	00Mace01	00Hamm01	00Hamm01	00SwdS01	00SwdS01	00Misc19	00Misc19	00Misc18	00Misc18	00Shld06	00ax1h01	00Dagg01	00Helm02																																																																			
+																																																																																							
+00RTHF01	00HFBtDB																																																																																						
+00RTHF02	00HFBcTB																																																																																						
+00RTHF03	00HFCkBC																																																																																						
+00RTHF04	00HFHmSC																																																																																						
+00RTHF05	00HFRgAR																																																																																						
+00RTHF06	00HFDtDD																																																																																						
+00RTHF07	00HFaxBb																																																																																						
+00RTHF08	00HFaxSc																																																																																						
+00RTHF09	00HFaxSp
+00RTHF10	00HFCbHK
+00RTHF11	00HFhxHF
+00RTHF12	00HFlxHF
+00RTHF13	00HFBLSF
+	
+00RTHF15	00HFDtAT
+00RTHF16	00HFDgFW
+00RTHF17	00HFMeCF
+00RTHF18	00HFMrMS
+00RTHF19	00HFHbDC
+00RTHF20	00HFSBBS
+00RTHF21	00HFSSTD
+00RTHF22	00HFaxBD
+00RTHF23	00HFSdBU
+00RTHF24	00HFSdMM
+00RTHF25	00HFSdMM
+00RTHF26	00HFSCCS
+00RTHF27	00HFHbHL
+00RTHF28	00HFFlSR
+00RTHF29	00HFMrSS
+00RTHF30	00HFSBWr
+00RTHF31	00HFMeAR
+00RTHF32	00HFSLDY
+00RTHF33	00HFSSLS
+00RTHF34	00HFBtSB
+00RTHF35	00HfBtCS
+00RTHF36	00HFBcRB
+00RTHF37	00HFBcLA
+00RTHF38	00HFRbRA
+00RTHF39	00HFRbMR
+00RTHF40	00HFHmBH
+00RTHF41	00HFRgHR
+00RTHF42	00HFRgTB
+00RTHF43	00HFAmMP
+00RTHF44	00HFAmGC
+00RTHF45	00HFCkFC
+00RTHF46	00HFCkSB
+00RTHF47	00HFBtAD
+00RTHF48	00HFBtBG
+00RTHF49	00HFSdFF
+00RTHF50	00HFSdFV
+00RTHF51	00HFBSEH
+00RTHF52	00HFBLFK
+00RTHF53	00HFBSRS
+00RTHF54	00HFBLSR
+00RTHF55	00HFhxMR
+00RTHF56	00HFlxMB
+00RTHF57	00HFhxGe
+00RTHF58	00HFlxIM
+00RTHF59	00HFSgCT
+00RTHF60	00HFDtPD
+00RTHF61	ZZI6HFSC
+00RTHF62	00HFaxWT
+00RTHF63	00HFSgSS
+00RTHF64	00HFSLDB
+00RTHF65	00HFSBRC
+00RTHF66	00HFSSSK
+00RTHF67	00HFFLFV
+00RTHF68	00HFSfDD
+00RTHF69	00HFSrIm
+00RTHF70	00HFHrSC
+00RTHF71	00HFDgPF
+00RTHF72	00HFMrMG
+00RTHF73	00HFSTCl
+00RTHF74	ZZJ6HFMM
+00RTHF75	00HFBd01
+00RTHF76	00HFBd02
+00RTHF77	00HFBd03
+00RTHF78	00HFBd04
+00RTHF79	00HFBd05
+00RTHF80	00HFBd06
+00RTHF81	00HFBd07
+00RTHF82	00HFBd08
+00RTHF83	00HFHmPH
+00RTHF84	00HFaxBa
+00RTHF85	00HFaxAS
+00RTHF86	00HFaxCK
+00RTHF87	00HFCnML
+00RTHF88	00HFHmDS
+00RTHF89	00HFBdRS																																																																																						
+																																																																																							
+10RTHF01	10HFBtTB																																																																																						
+10RTHF02	10RTHF02																																																																																						
+																																																																																							
+11RTHF01	11HFAmCM																																																																																						
+11RTHF02	11HFAmLK																																																																																						
+11RTHF03	11HFBtSB																																																																																						
+11RTHF04	11HfBkLe																																																																																						
+11RTHF05	11HFBkDe																																																																																						
+11RTHF06	11HFBdWD																																																																																						
+11RTHF07	11HFGnDH																																																																																						
+11RTHF08	00HFMc38																																																																																						
+11RTHF09	00Potn55																																																																																						
+11RTHF10	11HFRbPR																																																																																						
+11RTHF11	11HFaxKS																																																																																						
+11RTHF12	11HFCbMK																																																																																						
+11RTHF13	11HFDgGH																																																																																						
+11RTHF14	ZZJ5HF																																																																																						
+11RTHf15	ZZJ5Ho																																																																																						
+11RTHF16	11HFFlBC																																																																																						
+11RTHF17	11HFSTWS																																																																																						
+11RTHF18	11HFHrCR																																																																																						
+11RTHF19	11HFSLHe																																																																																						
+11RTHF20	11HFSgLH																																																																																						
+11RTHF21	11HFSfPI																																																																																						
+11RTHF22	zz36LS																																																																																						
+11RTHF23	11HFBkHW																																																																																						
+11RTHF24	11HFBkLD																																																																																						
+11RTHF25	11HFaxHO																																																																																						
+11RTHF26	11HFaxEW																																																																																						
+																																																																																							
+12RTHF01	12HFSdTS																																																																																						
+12RTHF02	12HFAmHC																																																																																						
+12RTHF03	12HFSfWS																																																																																						
+12RTHF04	11HFSrNP																																																																																						
+																																																																																							
+41RTHF01	41HFRgRA																																																																																						
+41RTHF02	ZZR6HFWB																																																																																						
+																																																																																							
+50RTHF01	50HFDgLT																																																																																						
+50RTHF02	50HFClBT																																																																																						
+50RTHF03	50HFHeAH																																																																																						
+50RTHF04	50HFLtMS																																																																																						
+50RTHF05	50HFSrKS																																																																																						
+50RTHF06	51HFHrDa																																																																																						
+																																																																																							
+51RTHF01	51HFhxDB																																																																																						
+51RTHF02	51HFhxHB																																																																																						
+51RTHF03	51HFHmWM																																																																																						
+51RTHF04	51HFHrVa																																																																																						
+51RTHF05	51HFSfRH																																																																																						
+51RTHF06	51HFaxDF																																																																																						
+51RTHF07	51HFSdFo																																																																																						
+51RTHF08	51HFPt10																																																																																						
+51RTHF09	50HFSLWB																																																																																						
+																																																																																							
+52RTHF01	52HFBkDV																																																																																						
+52RTHF02	52HFBkGE																																																																																						
+52RTHF03	52HFBkSu																																																																																						
+52RTHF04	52HFBkSV																																																																																						
+52RTHF05	52HFBkAd																																																																																						
+52RTHF06	52HFBkOG																																																																																						
+52RTHF07	52HFDgSH																																																																																						
+																																																																																							
+60RTHF01	60HFLtZu																																																																																						
+60RTHF02	60HFLtIn																																																																																						
+60RTHF03	60HFCnCD																																																																																						
+60RTHF04	60HFCnGR																																																																																						
+60RTHF05	60HFCnSa																																																																																						
+60RTHF06	60HFPtOF																																																																																						
+60RTHF07	60HFCnTM																																																																																						
+60RTHF08	60HFPtKC																																																																																						
+60RTHF09	60HFPtDC																																																																																						
+60RTHF10	60HFPtPF																																																																																						
+60RTHF11	60HFPtAA																																																																																						
+60RTHF12	60HFPtAG																																																																																						
+60RTHF13	60HFSLHA																																																																																						
+																																																																																							
+61RTHF01	61HFGnMM																																																																																						
+61RTHF02	61HFDgWS																																																																																						
+61RTHF03	61HFGnMR																																																																																						
+																																																																																							
+62RTHF01	62HFLtDB																																																																																						
+62RTHF02	62HFDgXF																																																																																						
+																																																																																							
+63RTHF01	63HFSCSS																																																																																						
+63RTHF02	63HFHbPB																																																																																						
+63RTHF03	63HFCbMP																																																																																						
+63RTHF04	63HFFlPF																																																																																						
+63RTHf05	63HFHrBI																																																																																						
+63RTHF06	63CWPus2																																																																																						
+																																																																																							
+00RTKt01	00HFBCAG																																																																																						
+00RTKt02	00HFhxIA																																																																																						
+00RTKt03	00HFAmES																																																																																						
+00RTKt04	00HFAmDS																																																																																						
+00RTKt05	00HFAmBT																																																																																						
+00RTKt06	00HFAmSL																																																																																						
+00RTKt07	00HFAmFD																																																																																						
+00RTKt08	00HFBtLG																																																																																						
+00RTKt09	00HFBtSS																																																																																						
+00RTKt10	00HFBcHF																																																																																						
+00RTKt11	00HFBcBB																																																																																						
+00RTKt12	00HFCkNV																																																																																						
+00RTKt13	00HFCkMB																																																																																						
+00RTKt14	00HFHmSM																																																																																						
+00RTKt15	00HFGnMP																																																																																						
+																																																																																							
+00RTKt17	00HFPnBI																																																																																						
+00RTKt18	00HFRgCR																																																																																						
+00RTKt19	00HFBcTC																																																																																						
+																																																																																							
+00GBag01	00GBgB01																																																																																						
+00GBag02	00GBgB02																																																																																						
+00GBag03	00GBgB03																																																																																						
+00GBag04	00GBgB04																																																																																						
+00GBag05	00GBgB05																																																																																						
+00GBag06	00GBgB06																																																																																						
+00GBag07	00GBgB07																																																																																						
+00GBag08	00GBgB08																																																																																						
+00GBag09	00GBgB09																																																																																						
+00GBag10	00GBgB10																																																																																						
+00PBag01	00PBgB01																																																																																						
+00PBag02	00PBgB02																																																																																						
+00PBag03	00PBgB03																																																																																						
+00PBag04	00PBgB04																																																																																						
+00PBag05	00PBgB05																																																																																						
+00PBag06	00PBgB06																																																																																						
+00PBag07	00PBgB07																																																																																						
+00PBag08	00PBgB08																																																																																						
+00PBag09	00PBgB09																																																																																						
+00PBag10	00PBgB10																																																																																						
+00SBag01	00SBgB01																																																																																						
+00SBag02	00SBgB02																																																																																						
+00SBag03	00SBgB03																																																																																						
+00SBag04	00SBgB04																																																																																						
+00SBag05	00SBgB05																																																																																						
+00SBag06	00SBgB06																																																																																						
+00SBag07	00SBgB07																																																																																						
+00SBag08	00SBgB08																																																																																						
+00SBag09	00SBgB09																																																																																						
+00SBag10	00SBgB10																																																																																						
+41HBagNa	41HBgBNa																																																																																						
+00HBag01	00HBgB01																																																																																						
+00HBag02	00HBgB02		      
+
+PtchRT01	60HFPtKC
+PtchRT02   	60HFPtAG
+PtchRT03      	60HFCnTM
+PtchRT04      	60HFPtDC
+PtchRT05       	60HFPtPF
+PtchRT06        00HFCnML
+PtchRT07        60HFPtAA  																																																																																			
