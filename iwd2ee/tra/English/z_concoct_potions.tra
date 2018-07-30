@@ -434,3 +434,6 @@ Vipergout for 6 rounds
 Weight: 1 lb.
 ~
 @4793     = ~Concoct Potions~
+@4794     = ~Begin.~
+@4795     = ~Exit.~
+@4796     = ~You may not concoct potions when enemies are nearby.~

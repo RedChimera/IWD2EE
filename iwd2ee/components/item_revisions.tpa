@@ -1,6 +1,328 @@
 //NOTES
 //
 
+
+	//	v1.0
+	DEFINE_PATCH_FUNCTION	IWD2_ADD_CRE_ITEM
+		INT_VAR
+			cq1 = 0
+			cq2 = 0
+			cq3 = 0
+			equip = 1
+			ability = 0
+		STR_VAR
+			mode = ~~
+			item = ~~
+			flags = ~~
+			slot = ~~
+	BEGIN
+		READ_ASCII	0	sig	(8)
+		PATCH_IF	~%sig%~	STRING_EQUAL	~CRE V2.2~	BEGIN
+			LPF	IWD2_CRE_REINDEX	RET	slt_off	itm_off	itm_num	fx_off	END
+			SET	flag = 0
+			PATCH_IF	! ~%flags%~	STRING_CONTAINS_REGEXP	~identified~	BEGIN	SET	flag |= 1	END
+			PATCH_IF	! ~%flags%~	STRING_CONTAINS_REGEXP	~unstealable~	BEGIN	SET	flag |= 2	END
+			PATCH_IF	! ~%flags%~	STRING_CONTAINS_REGEXP	~stolen~			BEGIN	SET	flag |= 4	END
+			PATCH_IF	! ~%flags%~	STRING_CONTAINS_REGEXP	~undroppable~	BEGIN	SET	flag |= 8	END
+			TO_LOWER	slot
+			TO_LOWER	mode
+			SET	itm_add = 1
+			INNER_PATCH	~%slot%~	BEGIN
+				REPLACE_TEXTUALLY	~[ %TAB%%WNL%%MNL%%LNL%]+~	~ ~
+				COUNT_2DA_COLS	cols
+				READ_2DA_ENTRIES_NOW	~READ_ADD_CRE_ITEM~	cols
+			END
+			SET	wpn_slot = ~-1~	FOR	(i = 9; i < 16; i+=2)		BEGIN	READ_SHORT	(slt_off + i * 0x2)	index	PATCH_IF index = 65535	BEGIN	SET	wpn_slot = i	SET	i = 16	END	END
+			SET	shd_slot = ~-1~	FOR	(i = 10; i < 17; i+=2)	BEGIN	READ_SHORT	(slt_off + i * 0x2)	index	PATCH_IF index = 65535	BEGIN	SET	shd_slot = i	SET	i = 17	END	END
+			SET	inv_slot = ~-1~	FOR	(i = 25; i < 49; ++i)		BEGIN	READ_SHORT	(slt_off + i * 0x2)	index	PATCH_IF index = 65535	BEGIN	SET	inv_slot = i	SET	i = 49	END	END
+			SET	qvr_slot = ~-1~	FOR	(i = 17; i < 20; ++i)		BEGIN	READ_SHORT	(slt_off + i * 0x2)	index	PATCH_IF index = 65535	BEGIN	SET	qvr_slot = i	SET	i = 20	END	END
+			SET	qit_slot = ~-1~	FOR	(i = 22; i < 25; ++i)		BEGIN	READ_SHORT	(slt_off + i * 0x2)	index	PATCH_IF index = 65535	BEGIN	SET	qit_slot = i	SET	i = 25	END	END
+			SET	rng_slot = ~-1~		FOR	(i = 4; i < 6; ++i)		BEGIN	READ_SHORT	(slt_off + i * 0x2)	index	PATCH_IF index = 65535	BEGIN	SET	rng_slot = i	SET	i = 6		END	END
+			FOR	(i = 0; i < cols; ++i)	BEGIN
+				READ_2DA_ENTRY_FORMER	~READ_ADD_CRE_ITEM~ 0 i slot
+				PATCH_MATCH	~%slot%~
+				WITH	~helmet~	BEGIN	SET	slot = 0		END	~armor~		BEGIN	SET	slot = 1		END	~shield~	BEGIN	SET	slot = 2		END	~gloves~	BEGIN	SET	slot = 3
+					END	~lring~		BEGIN	SET	slot = 4		END	~rring~		BEGIN	SET	slot = 5		END	~amulet~	BEGIN	SET	slot = 6		END	~belt~		BEGIN	SET	slot = 7
+					END	~boots~		BEGIN	SET	slot = 8		END	~ring~		BEGIN	SET	slot = 53		END	~inv~			BEGIN	SET	slot = 54		
+					END	~weapon1~	BEGIN	SET	slot = 9		END	~shield1~	BEGIN	SET	slot = 10		END	~weapon2~	BEGIN	SET	slot = 11		END	~shield2~	BEGIN	SET	slot = 12
+					END	~weapon3~	BEGIN	SET	slot = 13		END	~shield3~	BEGIN	SET	slot = 14		END	~weapon4~	BEGIN	SET	slot = 15		END	~shield4~	BEGIN	SET	slot = 16
+					END	~quiver1~	BEGIN	SET	slot = 17		END	~quiver2~	BEGIN	SET	slot = 18		END	~quiver3~	BEGIN	SET	slot = 19		END	~quiver4~	BEGIN	SET	slot = 20
+					END	~cloak~		BEGIN	SET	slot = 21		END	~qitem1~	BEGIN	SET	slot = 22		END	~qitem2~	BEGIN	SET	slot = 23		END	~qitem3~	BEGIN	SET	slot = 24
+					END	~inv1~		BEGIN	SET	slot = 25		END	~inv2~		BEGIN	SET	slot = 26		END	~inv3~		BEGIN	SET	slot = 27		END	~inv4~		BEGIN	SET	slot = 28
+					END	~inv5~		BEGIN	SET	slot = 29		END	~inv6~		BEGIN	SET	slot = 30		END	~inv7~		BEGIN	SET	slot = 31		END	~inv8~		BEGIN	SET	slot = 32
+					END	~inv9~		BEGIN	SET	slot = 33		END	~inv10~		BEGIN	SET	slot = 34		END	~inv11~		BEGIN	SET	slot = 35		END	~inv12~		BEGIN	SET	slot = 36
+					END	~inv13~		BEGIN	SET	slot = 37		END	~inv14~		BEGIN	SET	slot = 38		END	~inv15~		BEGIN	SET	slot = 39		END	~inv16~		BEGIN	SET	slot = 40
+					END	~inv17~		BEGIN	SET	slot = 41		END	~inv18~		BEGIN	SET	slot = 42		END	~inv19~		BEGIN	SET	slot = 43		END	~inv20~		BEGIN	SET	slot = 44
+					END	~inv21~		BEGIN	SET	slot = 45		END	~inv22~		BEGIN	SET	slot = 46		END	~inv23~		BEGIN	SET	slot = 47		END	~inv24~		BEGIN	SET	slot = 48
+					END	~magic~		BEGIN	SET	slot = 49		END	~weapon~	BEGIN	SET	slot = 50		END	~quiver~	BEGIN	SET	slot = 51		END	~qitem~		BEGIN	SET	slot = 52
+					END	DEFAULT	SET	slot = ~-1~
+				END
+				PATCH_IF	slot = ~-1~	BEGIN
+					SET	i = cols
+					PATCH_IF	inv_slot != ~-1~	BEGIN
+						WRITE_SHORT	(slt_off + inv_slot * 0x2)	itm_num
+					END
+				END	ELSE	BEGIN
+					PATCH_MATCH	slot
+					WITH	2	WHEN shd_slot != ~-1~	BEGIN	slot = shd_slot
+						END	50 WHEN wpn_slot != ~-1~	BEGIN	slot = wpn_slot
+						END	51 WHEN qvr_slot != ~-1~	BEGIN	slot = qvr_slot
+						END	52 WHEN qit_slot != ~-1~	BEGIN	slot = qit_slot
+						END	53 WHEN rng_slot != ~-1~	BEGIN	slot = rng_slot
+						END	54 WHEN inv_slot != ~-1~	BEGIN	slot = inv_slot
+						END	DEFAULT
+							READ_SHORT	(slt_off + slot * 0x2)	value
+							PATCH_IF	value != 65535	BEGIN
+								PATCH_IF	~%mode%~	STRING_EQUAL	~move~	BEGIN
+									WRITE_SHORT	(slt_off + inv_slot * 0x2)	value
+									SET	i = cols
+								END
+								PATCH_IF	~%mode%~	STRING_EQUAL	~replace~	BEGIN
+									SET	i = cols
+									SET	itm_num = value
+									SET	itm_add = 0
+								END
+							END
+					END
+				END
+			END
+			PATCH_IF	slot = ~-1~	BEGIN
+				PATCH_WARN	~No available inventory slots, item not added.~
+			END	ELSE	BEGIN
+				WRITE_SHORT	(slt_off + slot * 0x2)	itm_num
+				PATCH_IF	itm_add	BEGIN
+					INSERT_BYTES	(itm_off + itm_num * 0x14)	0x14
+				END
+				WRITE_ASCIIE	(itm_off + itm_num * 0x14)	~%item%~	#8
+				WRITE_SHORT		(itm_off + itm_num * 0x14 + 0xa)	cq1
+				WRITE_SHORT		(itm_off + itm_num * 0x14 + 0xc)	cq2
+				WRITE_SHORT		(itm_off + itm_num * 0x14 + 0xe)	cq3
+				WRITE_LONG		(itm_off + itm_num * 0x14 + 0x10)	flag
+				PATCH_IF	equip	BEGIN
+					PATCH_MATCH	slot
+					WITH	9 11 13 15	BEGIN
+							SET	index = (slot - 9) / 2
+							WRITE_SHORT	(slt_off + 50 * 0x2)	index
+							WRITE_SHORT	(slt_off + 51 * 0x2)	ability
+						END	49	BEGIN
+							WRITE_SHORT	(slt_off + 50 * 0x2)	1000
+							WRITE_SHORT	(slt_off + 51 * 0x2)	ability
+						END	DEFAULT
+					END
+				END
+				WRITE_LONG	0x61a (THIS + itm_add)		//	Item count
+				WRITE_LONG	0x61e	(THIS + itm_add * 0x14)	//	Effects offset
+			END
+		END
+	END
+	
+
+	//	v1.0
+	DEFINE_PATCH_FUNCTION	IWD2_REMOVE_CRE_ITEM
+		STR_VAR
+			item = ~~
+	BEGIN
+		READ_ASCII	0	sig	(8)
+		PATCH_IF	~%sig%~	STRING_EQUAL	~CRE V2.2~	BEGIN
+			INNER_PATCH_SAVE	item ~%item%~ BEGIN	INSERT_BYTES BUFFER_LENGTH 1	WRITE_BYTE (BUFFER_LENGTH - 1) 32	INSERT_BYTES 0 1	WRITE_BYTE	0 32	END
+			TEXT_SPRINT	w ~[ %TAB%%WNL%%MNL%%LNL%]~
+			LPF	IWD2_CRE_REINDEX	RET	slt_off	itm_off	itm_num	fx_off	END
+			TO_UPPER	item
+			SET	itm_add = 0
+			PATCH_IF	~%item%~ STRING_EQUAL ~~	BEGIN
+				DELETE_BYTES	itm_off	(itm_num * 0x14)
+				FOR (j = 0; j < 50;	++j)	BEGIN
+					WRITE_SHORT	(slt_off + j * 0x2)	~-1~
+				END
+				SET	itm_add -= itm_num
+			END	ELSE	BEGIN
+				FOR	(i = 0; i < itm_num; ++i)	BEGIN
+					READ_ASCII	(itm_off + i * 0x14)	resref
+					TO_UPPER resref
+					PATCH_IF	! ~%item%~ STRING_CONTAINS_REGEXP ~%w%%resref%%w%~	BEGIN
+						DELETE_BYTES	(itm_off + i * 0x14)	0x14
+						FOR (j = 0; j < 50;	++j)	BEGIN
+							READ_SHORT	(slt_off + j * 0x2)	slot
+							PATCH_IF	slot > i	BEGIN
+								WRITE_SHORT	(slt_off + j * 0x2) (THIS - 1)
+							END
+							PATCH_IF	slot = i	BEGIN
+								WRITE_SHORT	(slt_off + j * 0x2)	~-1~
+							END
+						END
+						SET	itm_add -= 1	SET	i -= 1	SET	itm_num -= 1
+					END
+				END
+			END
+			WRITE_LONG	0x61a (THIS + itm_add)		//	Item count
+			WRITE_LONG	0x61e	(THIS + itm_add * 0x14)	//	Effects offset
+		END
+	END
+
+	//	v1.0
+	DEFINE_PATCH_FUNCTION	IWD2_CRE_REINDEX
+		RET
+			ba_0_off ba_0_num ba_1_off ba_1_num ba_2_off ba_2_num ba_3_off ba_3_num ba_4_off ba_4_num ba_5_off ba_5_num ba_6_off ba_6_num ba_7_off ba_7_num ba_8_off ba_8_num
+			cl_0_off cl_0_num cl_1_off cl_1_num cl_2_off cl_2_num cl_3_off cl_3_num cl_4_off cl_4_num cl_5_off cl_5_num cl_6_off cl_6_num cl_7_off cl_7_num cl_8_off cl_8_num
+			dr_0_off dr_0_num dr_1_off dr_1_num dr_2_off dr_2_num dr_3_off dr_3_num dr_4_off dr_4_num dr_5_off dr_5_num dr_6_off dr_6_num dr_7_off dr_7_num dr_8_off dr_8_num
+			pa_0_off pa_0_num pa_1_off pa_1_num pa_2_off pa_2_num pa_3_off pa_3_num pa_4_off pa_4_num pa_5_off pa_5_num pa_6_off pa_6_num pa_7_off pa_7_num pa_8_off pa_8_num
+			ra_0_off ra_0_num ra_1_off ra_1_num ra_2_off ra_2_num ra_3_off ra_3_num ra_4_off ra_4_num ra_5_off ra_5_num ra_6_off ra_6_num ra_7_off ra_7_num ra_8_off ra_8_num
+			so_0_off so_0_num so_1_off so_1_num so_2_off so_2_num so_3_off so_3_num so_4_off so_4_num so_5_off so_5_num so_6_off so_6_num so_7_off so_7_num so_8_off so_8_num
+			wi_0_off wi_0_num wi_1_off wi_1_num wi_2_off wi_2_num wi_3_off wi_3_num wi_4_off wi_4_num wi_5_off wi_5_num wi_6_off wi_6_num wi_7_off wi_7_num wi_8_off wi_8_num
+			do_0_off do_0_num do_1_off do_1_num do_2_off do_2_num do_3_off do_3_num do_4_off do_4_num do_5_off do_5_num do_6_off do_6_num do_7_off do_7_num do_8_off do_8_num
+			ab_off ab_num sng_off	sng_num	shp_off	shp_num	slt_off	itm_off	itm_num	fx_off	fx_num
+	BEGIN
+		FOR	(i = 0; i < 9; ++i)	BEGIN
+			READ_LONG	(0x3ba + i * 4) $ba(~%i%~ ~off~)	READ_LONG	(0x4b6 + i * 4)	EVAL $ba(~%i%~ ~num~)	SET	$ba(~%i%~ ~size~)	 = ($ba(~%i%~ ~num~) * 0x10 + 8)	READ_ASCII	$ba(~%i%~ ~off~)	EVAL $ba(~%i%~)	($ba(~%i%~ ~size~))
+			READ_LONG	(0x3de + i * 4) $cl(~%i%~ ~off~)	READ_LONG	(0x4da + i * 4)	EVAL $cl(~%i%~ ~num~)	SET	$cl(~%i%~ ~size~)	 = ($cl(~%i%~ ~num~) * 0x10 + 8)	READ_ASCII	$cl(~%i%~ ~off~)	EVAL $cl(~%i%~)	($cl(~%i%~ ~size~))
+			READ_LONG	(0x402 + i * 4) $dr(~%i%~ ~off~)	READ_LONG	(0x4fe + i * 4)	EVAL $dr(~%i%~ ~num~)	SET	$dr(~%i%~ ~size~)	 = ($dr(~%i%~ ~num~) * 0x10 + 8)	READ_ASCII	$dr(~%i%~ ~off~)	EVAL $dr(~%i%~)	($dr(~%i%~ ~size~))
+			READ_LONG	(0x426 + i * 4) $pa(~%i%~ ~off~)	READ_LONG	(0x522 + i * 4)	EVAL $pa(~%i%~ ~num~)	SET	$pa(~%i%~ ~size~)	 = ($pa(~%i%~ ~num~) * 0x10 + 8)	READ_ASCII	$pa(~%i%~ ~off~)	EVAL $pa(~%i%~)	($pa(~%i%~ ~size~))
+			READ_LONG	(0x44a + i * 4)	$ra(~%i%~ ~off~)	READ_LONG	(0x546 + i * 4)	EVAL $ra(~%i%~ ~num~)	SET	$ra(~%i%~ ~size~)	 = ($ra(~%i%~ ~num~) * 0x10 + 8)	READ_ASCII	$ra(~%i%~ ~off~)	EVAL $ra(~%i%~)	($ra(~%i%~ ~size~))
+			READ_LONG	(0x46e + i * 4) $so(~%i%~ ~off~)	READ_LONG	(0x56a + i * 4)	EVAL $so(~%i%~ ~num~)	SET	$so(~%i%~ ~size~)	 = ($so(~%i%~ ~num~) * 0x10 + 8)	READ_ASCII	$so(~%i%~ ~off~)	EVAL $so(~%i%~)	($so(~%i%~ ~size~))
+			READ_LONG	(0x492 + i * 4) $wi(~%i%~ ~off~)	READ_LONG	(0x58e + i * 4)	EVAL $wi(~%i%~ ~num~)	SET	$wi(~%i%~ ~size~)	 = ($wi(~%i%~ ~num~) * 0x10 + 8)	READ_ASCII	$wi(~%i%~ ~off~)	EVAL $wi(~%i%~)	($wi(~%i%~ ~size~))
+			READ_LONG	(0x5b2 + i * 4) $do(~%i%~ ~off~)	READ_LONG	(0x5d6 + i * 4)	EVAL $do(~%i%~ ~num~)	SET	$do(~%i%~ ~size~)	 = ($do(~%i%~ ~num~) * 0x10 + 8)	READ_ASCII	$do(~%i%~ ~off~)	EVAL $do(~%i%~)	($do(~%i%~ ~size~))
+		END
+		READ_LONG	0x5fa ab_off	READ_LONG	0x5fe	ab_num	SET	ab_size = (ab_num * 0x10 + 8)		READ_ASCII	ab_off	abilities	(ab_size)
+		READ_LONG	0x602	sng_off	READ_LONG	0x606	sng_num	SET	sng_size = (sng_num * 0x10 + 8)	READ_ASCII	sng_off	songs	(sng_size)
+		READ_LONG	0x60a	shp_off	READ_LONG	0x60e	shp_num	SET	shp_size = (shp_num * 0x10 + 8)	READ_ASCII	shp_off	shapes	(shp_size)
+		READ_LONG	0x612	slt_off																															READ_ASCII	slt_off	slots	(0x68)
+		READ_LONG	0x616	itm_off	READ_LONG	0x61a	itm_num	SET	itm_size = (itm_num * 0x14)			READ_ASCII	itm_off	items	(itm_size)
+		READ_LONG	0x61e	fx_off	READ_LONG	0x622	fx_num	SET	fx_size = (fx_num * 0x108)			READ_ASCII	fx_off	effects	(fx_size)
+		SET	offset = 0x62e
+		PATCH_IF	(ba_0_off > ba_1_off) OR (ba_1_off > ba_2_off) OR (ba_2_off > ba_3_off) OR (ba_3_off > ba_4_off) OR
+							(ba_4_off > ba_5_off) OR (ba_5_off > ba_6_off) OR (ba_6_off > ba_7_off) OR (ba_7_off > ba_8_off) OR (ba_8_off > cl_0_off) OR
+							(cl_0_off > cl_1_off) OR (cl_1_off > cl_2_off) OR (cl_2_off > cl_3_off) OR (cl_3_off > cl_4_off) OR
+							(cl_4_off > cl_5_off) OR (cl_5_off > cl_6_off) OR (cl_6_off > cl_7_off) OR (cl_7_off > cl_8_off) OR (cl_8_num > dr_0_off) OR
+							(dr_0_off > dr_1_off) OR (dr_1_off > dr_2_off) OR (dr_2_off > dr_3_off) OR (dr_3_off > dr_4_off) OR
+							(dr_4_off > dr_5_off) OR (dr_5_off > dr_6_off) OR (dr_6_off > dr_7_off) OR (dr_7_off > dr_8_off) OR (dr_8_num > pa_0_off) OR
+							(pa_0_off > pa_1_off) OR (pa_1_off > pa_2_off) OR (pa_2_off > pa_3_off) OR (pa_3_off > pa_4_off) OR
+							(pa_4_off > pa_5_off) OR (pa_5_off > pa_6_off) OR (pa_6_off > pa_7_off) OR (pa_7_off > pa_8_off) OR (pa_8_num > ra_0_off) OR
+							(ra_0_off > ra_1_off) OR (ra_1_off > ra_2_off) OR (ra_2_off > ra_3_off) OR (ra_3_off > ra_4_off) OR
+							(ra_4_off > ra_5_off) OR (ra_5_off > ra_6_off) OR (ra_6_off > ra_7_off) OR (ra_7_off > ra_8_off) OR (ra_8_num > ra_0_off) OR
+							(so_0_off > so_1_off) OR (so_1_off > so_2_off) OR (so_2_off > so_3_off) OR (so_3_off > so_4_off) OR
+							(so_4_off > so_5_off) OR (so_5_off > so_6_off) OR (so_6_off > so_7_off) OR (so_7_off > so_8_off) OR (so_8_num > so_0_off) OR
+							(wi_0_off > wi_1_off) OR (wi_1_off > wi_2_off) OR (wi_2_off > wi_3_off) OR (wi_3_off > wi_4_off) OR
+							(wi_4_off > wi_5_off) OR (wi_5_off > wi_6_off) OR (wi_6_off > wi_7_off) OR (wi_7_off > wi_8_off) OR (wi_8_num > wi_0_off) OR
+							(do_0_off > do_1_off) OR (do_1_off > do_2_off) OR (do_2_off > do_3_off) OR (do_3_off > do_4_off) OR
+							(do_4_off > do_5_off) OR (do_5_off > do_6_off) OR (do_6_off > do_7_off) OR (do_7_off > do_8_off) OR (do_8_num > ab_off) OR
+							(ab_off > sng_off) OR (sng_off > shp_off) OR (shp_off > slt_off) OR (slt_off >= itm_off) OR (itm_off > fx_off) BEGIN
+			SET	ba_0_off	= offset	WRITE_LONG	0x3ba	ba_0_off	WRITE_ASCIIE	ba_0_off	~%ba_0%~
+			FOR	(i = 1; i < 9; ++i)	BEGIN	SET	j = i - 1	SET	$ba(~%i%~ ~off~)	= $ba(~%j%~ ~off~) + $ba(~%j%~ ~size~)	WRITE_LONG	(0x3ba + i * 4)	$ba(~%i%~ ~off~)	WRITE_ASCIIE	$ba(~%i%~ ~off~)	$ba(~%i%~)	END
+			SET	cl_0_off	= ba_8_off + ba_8_size	WRITE_LONG	0x3de	cl_0_off	WRITE_ASCIIE	cl_0_off	~%cl_0%~
+			FOR	(i = 1; i < 9; ++i)	BEGIN	SET	j = i - 1	SET	$cl(~%i%~ ~off~)	= $cl(~%j%~ ~off~) + $cl(~%j%~ ~size~)	WRITE_LONG	(0x3de + i * 4)	$cl(~%i%~ ~off~)	WRITE_ASCIIE	$cl(~%i%~ ~off~)	$cl(~%i%~)	END
+			SET	dr_0_off	= cl_8_off + cl_8_size	WRITE_LONG	0x402	dr_0_off	WRITE_ASCIIE	dr_0_off	~%dr_0%~
+			FOR	(i = 1; i < 9; ++i)	BEGIN	SET	j = i - 1	SET	$dr(~%i%~ ~off~)	= $dr(~%j%~ ~off~) + $dr(~%j%~ ~size~)	WRITE_LONG	(0x402 + i * 4)	$dr(~%i%~ ~off~)	WRITE_ASCIIE	$dr(~%i%~ ~off~)	$dr(~%i%~)	END
+			SET	pa_0_off	= dr_8_off + dr_8_size	WRITE_LONG	0x426	pa_0_off	WRITE_ASCIIE	pa_0_off	~%pa_0%~
+			FOR	(i = 1; i < 9; ++i)	BEGIN	SET	j = i - 1	SET	$pa(~%i%~ ~off~)	= $pa(~%j%~ ~off~) + $pa(~%j%~ ~size~)	WRITE_LONG	(0x426 + i * 4)	$pa(~%i%~ ~off~)	WRITE_ASCIIE	$pa(~%i%~ ~off~)	$pa(~%i%~)	END
+			SET	ra_0_off	= pa_8_off + pa_8_size	WRITE_LONG	0x44a	ra_0_off	WRITE_ASCIIE	ra_0_off	~%ra_0%~
+			FOR	(i = 1; i < 9; ++i)	BEGIN	SET	j = i - 1	SET	$ra(~%i%~ ~off~)	= $ra(~%j%~ ~off~) + $ra(~%j%~ ~size~)	WRITE_LONG	(0x44a + i * 4)	$ra(~%i%~ ~off~)	WRITE_ASCIIE	$ra(~%i%~ ~off~)	$ra(~%i%~)	END
+			SET	so_0_off	= ra_8_off + ra_8_size	WRITE_LONG	0x46e	so_0_off	WRITE_ASCIIE	so_0_off	~%so_0%~
+			FOR	(i = 1; i < 9; ++i)	BEGIN	SET	j = i - 1	SET	$so(~%i%~ ~off~)	= $so(~%j%~ ~off~) + $so(~%j%~ ~size~)	WRITE_LONG	(0x46e + i * 4)	$so(~%i%~ ~off~)	WRITE_ASCIIE	$so(~%i%~ ~off~)	$so(~%i%~)	END
+			SET	wi_0_off	= so_8_off + so_8_size	WRITE_LONG	0x492	wi_0_off	WRITE_ASCIIE	wi_0_off	~%wi_0%~
+			FOR	(i = 1; i < 9; ++i)	BEGIN	SET	j = i - 1	SET	$wi(~%i%~ ~off~)	= $wi(~%j%~ ~off~) + $wi(~%j%~ ~size~)	WRITE_LONG	(0x492 + i * 4)	$wi(~%i%~ ~off~)	WRITE_ASCIIE	$wi(~%i%~ ~off~)	$wi(~%i%~)	END
+			SET	do_0_off	= wi_8_off + wi_8_size	WRITE_LONG	0x5b2	do_0_off	WRITE_ASCIIE	do_0_off	~%do_0%~
+			FOR	(i = 1; i < 9; ++i)	BEGIN	SET	j = i - 1	SET	$do(~%i%~ ~off~)	= $do(~%j%~ ~off~) + $do(~%j%~ ~size~)	WRITE_LONG	(0x5b2 + i * 4)	$do(~%i%~ ~off~)	WRITE_ASCIIE	$do(~%i%~ ~off~)	$do(~%i%~)	END
+				
+			SET	ab_off	= do_8_off + do_8_size	WRITE_LONG	0x5fa	ab_off	WRITE_ASCIIE	ab_off	~%abilities%~
+			SET	sng_off	= ab_off + ab_size			WRITE_LONG	0x602	sng_off	WRITE_ASCIIE	sng_off	~%songs%~
+			SET	shp_off	= sng_off + sng_size		WRITE_LONG	0x60a	shp_off	WRITE_ASCIIE	shp_off	~%shapes%~
+			SET	slt_off	= shp_off + shp_size		WRITE_LONG	0x612	slt_off	WRITE_ASCIIE	slt_off	~%slots%~
+			SET	itm_off	= slt_off + 0x68				WRITE_LONG	0x616	itm_off	WRITE_ASCIIE	itm_off	~%items%~
+			SET	fx_off	= itm_off + itm_size		WRITE_LONG	0x61e	fx_off	WRITE_ASCIIE	fx_off	~%effects%~
+		END
+	END
+	
+	
+
+DEFINE_PATCH_FUNCTION ~REPLACE_AREA_ITEM_IWD2~
+	INT_VAR
+		single_match=0
+		charges1=~-1~
+		charges2=~-1~
+		charges3=~-1~
+	STR_VAR
+		old_item=~~
+		new_item=~~
+		flags=~same~
+BEGIN
+	SET item_name_length = (STRING_LENGTH ~%old_item%~)
+	PATCH_IF (~%flags%~ STRING_EQUAL_CASE ~same~) BEGIN
+		SET flag = 0xDEFA
+	END ELSE BEGIN
+	SET	flag = 0
+	PATCH_IF	! ~%flags%~	STRING_CONTAINS_REGEXP	~identified~	BEGIN SET	flag |= 1	END
+	PATCH_IF	! ~%flags%~	STRING_CONTAINS_REGEXP	~unstealable~	BEGIN SET	flag |= 2	END
+	PATCH_IF	! ~%flags%~	STRING_CONTAINS_REGEXP	~stolen~		BEGIN SET	flag |= 4	END
+	PATCH_IF	! ~%flags%~	STRING_CONTAINS_REGEXP	~undroppable~	BEGIN SET	flag |= 8	END
+	END
+	SET item_found = 0
+	READ_SHORT 0x86 itemnumber
+	READ_LONG 0x88 itemoffset
+	FOR (i = 0; i < itemnumber; ++i) BEGIN
+		SET offset = itemoffset + (i * 0x14)
+		READ_ASCII offset name_of_item (item_name_length)
+		PATCH_IF (~%name_of_item%~ STRING_EQUAL_CASE ~%old_item%~) BEGIN
+			item_found = 1
+			WRITE_ASCIIE offset ~%new_item%~ #8
+			PATCH_IF (charges1 != (0 - 1)) BEGIN
+				WRITE_SHORT (offset + 0xa) charges1
+			END
+			PATCH_IF (charges2 != (0 - 1)) BEGIN
+				WRITE_SHORT (offset + 0xc) charges2
+			END
+			PATCH_IF (charges3 != (0 - 1)) BEGIN
+				WRITE_SHORT (offset + 0xe) charges3
+			END
+			PATCH_IF (flag != 0xDEFA) BEGIN
+				WRITE_LONG (offset + 0x10) flag
+			END
+
+
+			PATCH_IF (single_match = 1) BEGIN
+				i = itemnumber
+			END
+			
+		END
+	END
+	PATCH_IF (item_found = 0) BEGIN
+		PATCH_WARN ~No item called %old_item% was found.~
+	END
+
+END
+
+DEFINE_PATCH_FUNCTION ~CONVERT_DLG_TO_IWD2_FORMAT~
+BEGIN
+	READ_LONG 0xc ulgiash
+	PATCH_IF (ulgiash = 0x34) BEGIN
+		DELETE_BYTES 0x30 4
+
+		READ_LONG 0xc ulgiash
+		ulgiash -= 4
+		WRITE_LONG 0xc ulgiash
+	
+		READ_LONG 0x14 ulgiash
+		ulgiash -= 4
+		WRITE_LONG 0x14 ulgiash
+	
+		READ_LONG 0x18 ulgiash
+		ulgiash -= 4
+		WRITE_LONG 0x18 ulgiash
+		READ_LONG ulgiash ulgiash
+		INSERT_BYTES (ulgiash - 2) 2
+		
+		READ_LONG 0x20 ulgiash
+		ulgiash -= 4
+		WRITE_LONG 0x20 ulgiash
+	
+		READ_LONG 0x28 ulgiash
+		ulgiash -= 4
+		WRITE_LONG 0x28 ulgiash
+		READ_LONG ulgiash ulgiash
+		INSERT_BYTES (ulgiash - 2) 2
+	END
+
+END
+
 COPY ~%mod_folder%/itm/itm_item_revisions~ ~override~
 
 COPY ~%mod_folder%/bam/bam_item_revisions~ ~override~
@@ -21,8 +343,10 @@ ACTION_IF !(FILE_EXISTS USALBEET.bam) BEGIN
 	COPY ~%mod_folder%/bam/USALELEC.bam~ ~override~
 	COPY ~%mod_folder%/bam/USALFAI2.bam~ ~override~
 	COPY ~%mod_folder%/bam/USALFEY3.bam~ ~override~
+	COPY ~%mod_folder%/bam/USALFIRE.bam~ ~override~
 	COPY ~%mod_folder%/bam/USALFISH.bam~ ~override~
 	COPY ~%mod_folder%/bam/USALFIZZ.bam~ ~override~
+	COPY ~%mod_folder%/bam/USALFROS.bam~ ~override~
 	COPY ~%mod_folder%/bam/USALGHOU.bam~ ~override~
 	COPY ~%mod_folder%/bam/USALGOL2.bam~ ~override~
 	COPY ~%mod_folder%/bam/USALLIME.bam~ ~override~
@@ -35,8 +359,6 @@ ACTION_IF !(FILE_EXISTS USALBEET.bam) BEGIN
 	COPY ~%mod_folder%/bam/USALPRES.bam~ ~override~
 	COPY ~%mod_folder%/bam/USALRAD3.bam~ ~override~
 	COPY ~%mod_folder%/bam/USALRAI2.bam~ ~override~
-	COPY ~%mod_folder%/bam/USALSALB.bam~ ~override~
-	COPY ~%mod_folder%/bam/USALSALR.bam~ ~override~
 	COPY ~%mod_folder%/bam/USALSMOK.bam~ ~override~
 	COPY ~%mod_folder%/bam/USALSNAI.bam~ ~override~
 	COPY ~%mod_folder%/bam/USALSNAK.bam~ ~override~
@@ -67,6 +389,9 @@ COPY_EXISTING ~00AMUL15.itm~ ~override~
 
 COPY_EXISTING ~00AMUL30.itm~ ~override~
 	SAY IDENTIFIED_DESC @10029
+
+COPY_EXISTING ~00AMUL32.itm~ ~override~
+	SAY IDENTIFIED_DESC @10035
 
 COPY_EXISTING ~00AMULBT.itm~ ~override~
 	SAY IDENTIFIED_DESC @10037
@@ -313,6 +638,9 @@ COPY_EXISTING ~00BOOT02.itm~ ~override~
 COPY_EXISTING ~00BOOT09.itm~ ~override~
 	SAY IDENTIFIED_DESC @10201
 
+COPY_EXISTING ~00BOOT15.itm~ ~override~
+	SAY IDENTIFIED_DESC @10205
+
 COPY_EXISTING ~00HFBTCS.itm~ ~override~
 	SAY NAME2 @10208
 	SAY IDENTIFIED_DESC @10209
@@ -337,6 +665,9 @@ COPY_EXISTING ~USHFBTWH.itm~ ~override~
 
 COPY_EXISTING ~00BRAC11.itm~ ~override~
 	SAY IDENTIFIED_DESC @10237
+
+COPY_EXISTING ~00BRAC18.itm~ ~override~
+	SAY IDENTIFIED_DESC @10243
 
 COPY_EXISTING ~00BRACBB.itm~ ~override~
 	SAY IDENTIFIED_DESC @10245
@@ -407,6 +738,12 @@ COPY_EXISTING ~11BELTMK.itm~ ~override~
 COPY_EXISTING ~USHFBTMK.itm~ ~override~
 	SAY IDENTIFIED_DESC @10305
 
+COPY_EXISTING ~00CLCK17.itm~ ~override~
+	SAY IDENTIFIED_DESC @10321
+
+COPY_EXISTING ~00CLCK18.itm~ ~override~
+	SAY IDENTIFIED_DESC @10323
+
 COPY_EXISTING ~00CLCKBC.itm~ ~override~
 	SAY IDENTIFIED_DESC @10325
 
@@ -460,6 +797,9 @@ COPY_EXISTING ~00HELM01.itm~ ~override~
 COPY_EXISTING_REGEXP ~00HELM0[1-6].itm~ ~override~
 	SAY UNIDENTIFIED_DESC @10358
 	SAY IDENTIFIED_DESC @10358
+
+COPY_EXISTING ~00HELM19.itm~ ~override~
+	SAY IDENTIFIED_DESC @10362
 
 COPY_EXISTING ~00HELMBH.itm~ ~override~
 	SAY IDENTIFIED_DESC @10364
@@ -1074,9 +1414,6 @@ COPY_EXISTING ~00SWDS93.itm~ ~override~
 
 COPY_EXISTING ~00SWDS94.itm~ ~override~
 	SAY IDENTIFIED_DESC @10794
-
-COPY_EXISTING ~00SWDS95.itm~ ~override~
-	SAY IDENTIFIED_DESC @10792
 
 COPY_EXISTING ~00SWDS97.itm~ ~override~
 	SAY IDENTIFIED_DESC @10800
@@ -3226,6 +3563,54 @@ COPY_EXISTING ~USSWDT59.itm~ ~override~
 	SAY NAME2 @12551
 	SAY IDENTIFIED_DESC @12552
 
+COPY_EXISTING ~USAROW47.itm~ ~override~
+	SAY NAME2 @12553
+	SAY IDENTIFIED_DESC @12554
+
+COPY_EXISTING ~USAROW48.itm~ ~override~
+	SAY NAME2 @12555
+	SAY IDENTIFIED_DESC @12556
+
+COPY_EXISTING ~USAROW49.itm~ ~override~
+	SAY NAME2 @12557
+	SAY IDENTIFIED_DESC @12558
+
+COPY_EXISTING ~USAROW52.itm~ ~override~
+	SAY NAME2 @12559
+	SAY IDENTIFIED_DESC @12560
+
+COPY_EXISTING ~USAROW59.itm~ ~override~
+	SAY NAME2 @12561
+	SAY IDENTIFIED_DESC @12562
+
+COPY_EXISTING ~USBOLT47.itm~ ~override~
+	SAY NAME2 @12563
+	SAY IDENTIFIED_DESC @12564
+
+COPY_EXISTING ~USBOLT48.itm~ ~override~
+	SAY NAME2 @12565
+	SAY IDENTIFIED_DESC @12566
+
+COPY_EXISTING ~USBOLT52.itm~ ~override~
+	SAY NAME2 @12567
+	SAY IDENTIFIED_DESC @12568
+
+COPY_EXISTING ~USBOLT53.itm~ ~override~
+	SAY NAME2 @12569
+	SAY IDENTIFIED_DESC @12570
+
+COPY_EXISTING ~USBULL48.itm~ ~override~
+	SAY NAME2 @12571
+	SAY IDENTIFIED_DESC @12572
+
+COPY_EXISTING ~USBULL53.itm~ ~override~
+	SAY NAME2 @12573
+	SAY IDENTIFIED_DESC @12574
+
+COPY_EXISTING ~USFLAL59.itm~ ~override~
+	SAY NAME2 @12575
+	SAY IDENTIFIED_DESC @12576
+
 
 //General patch changes
 
@@ -3240,6 +3625,394 @@ COPY_EXISTING_REGEXP ~.*\.itm~ ~override~
 
 //Random loot table changes
 
-COPY ~%mod_folder%/tables/USRTNORM.2da~ ~override/RT_NORM.2da~
+COPY_EXISTING ~%mod_folder%/tables/tables_item_revisions~ ~override~
 
-COPY ~%mod_folder%/tables/USRTFURY.2da~ ~override/RT_FURY.2da~
+APPEND ~RT_NORM.2da~
+~
+USRTHF01	00SPER08
+USRTHF02	00SWDT93
+USRTHF03	50HIDE06
+USRTHF04	50BOOT14
+USRTHF05	50CLCK17
+USRTHF06	53CLCKHD
+USRTHF07	53AMULHD
+USRTHF08	53AMULBS
+USRTHF09	11BELTMK
+USRTHF10	00FLAL03
+USRTHF11	00GENIR
+USRTHF12	00GENOD
+USRTHF13	40GENPWC
+USRTHF14	00HIDE04
+USRTHF15	USHIDEGU
+USRTHF16	41AX1HAI
+USRTHF17	00MISC31
+USRTHF18	00MISC32
+USRTHF19	00MISC37
+USRTHF20	00RING19
+USRTHF21	00RING20
+USRTHF22	00RING91
+USRTHF23	00CLCK01
+USRTHF24	00CLCK02
+USRTHF25	USCLCK40
+USRTHF26	00BRAC02
+USRTHF27	00BRAC03
+USRTHF28	00BRAC04
+USRTHF29	USBRAC47
+USRTHF30	00POTN07
+USRTHF31	00BELT05
+USRTHF32	12SHLDCT
+USRTHF33	12SHLDKD
+USRTHF34	12SHLDSG
+USRTHF35	00CLCKWC
+~	        
+APPEND ~RT_FURY.2da~
+~
+USRTHF01	USHFSR08
+USRTHF02	USHFST93
+USRTHF03	USHFHDWH
+USRTHF04	USHFBTWH
+USRTHF05	USHFCKWH
+USRTHF06	USHFCKHD
+USRTHF07	USHFAMHD
+USRTHF08	USHFAMBS
+USRTHF09	USHFBTMK
+USRTHF10	USHFFL03
+USRTHF11	USHFGNIR
+USRTHF12	USHFGNOD
+USRTHF13	USHFGNWC
+USRTHF14	USHFHD04
+USRTHF15	USHFHDGU
+USRTHF16	USHFAXAI
+USRTHF17	USHFMC31
+USRTHF18	USHFMC32
+USRTHF19	USHFMC37
+USRTHF20	00RING91
+USRTHF21	USRING50
+USRTHF22	USRING55
+USRTHF23	USCLCK40
+USRTHF24	USCLCK50
+USRTHF25	USCLCK55
+USRTHF26	USBRAC47
+USRTHF27	USBRAC50
+USRTHF28	USBRAC55
+USRTHF29	USBRAC55
+USRTHF30	USHFPN07
+USRTHF31	USHFBT05
+USRTHF32	12HFSDCT
+USRTHF33	12HFSDKD
+USRTHF34	12HFSDSG
+USRTHF35	00HFCKWC
+~
+
+//New items and item relocations
+
+ACTION_IF !(FILE_EXISTS_IN_GAME 00hfsdtcl.itm) BEGIN //If Black Isle's official patch 201 is not installed
+	COPY_EXISTING ~50NYM2.sto~ ~override~ //Nym store
+		ADD_STORE_ITEM ~PTCHRT01~ #1 #1 #1 ~IDENTIFIED~ #1 //Myrkul armor
+		ADD_STORE_ITEM ~PTCHRT06~ #1 #1 #1 ~IDENTIFIED~ #1 //Mercenaries' Lot armor
+
+	COPY_EXISTING ~00BASHS3.sto~ ~override~ //Avarine Decanter genie store
+		ADD_STORE_ITEM ~PTCHRT02~ #1 #1 #1 ~IDENTIFIED~ #1 //Air Genasi armor
+
+	COPY_EXISTING ~53HEGGR.sto~ ~override~ //Underdark weapon/armor store
+		ADD_STORE_ITEM ~PTCHRT04~ AFTER ~00CHAN02~ #1 #1 #1 ~IDENTIFIED~ #1 //Fiend plate armor
+		ADD_STORE_ITEM ~PTCHRT05~ AFTER ~00CHAN02~ #1 #1 #1 ~IDENTIFIED~ #1 //Diamond plate armor
+	COPY_EXISTING ~60SHEEMI.sto~ ~override~ //Conlan store
+		ADD_STORE_ITEM ~PTCHRT07~ #1 #1 #1 ~IDENTIFIED~ #1 //Aasimar's Aura armor
+		ADD_STORE_ITEM ~PTCHRT03~ #1 #1 #1 ~IDENTIFIED~ #1 //Tuqak Mauler's armor
+
+END
+
+ACTION_IF !(MOD_IS_INSTALLED ~Setup-IWD2-Ease.tp2~ ~14~) BEGIN //If Stronger Bastard Swords from IWD2-Ease is not installed
+	COPY_EXISTING ~11deird.sto~ ~override~ //Gallaway Trading Post
+		ADD_STORE_ITEM ~00SWDB99~ AFTER ~00SWDB02~ #1 #1 #1 ~IDENTIFIED~ #1 //Fang
+END
+
+ACTION_IF !(MOD_IS_INSTALLED ~Setup-IWD2-Ease.tp2~ ~18~) BEGIN //If Include Forgotten Armor and Shields is not installed
+
+	COPY_EXISTING ~30GOBKRU.dlg~ ~override~ //Kruntur dialogue
+		DECOMPILE_DLG_TO_D
+		REPLACE_TEXTUALLY CASE_INSENSITIVE ~RARM_02~ ~USRTHF34~ //Sad Giant's Cap
+		COMPILE_D_TO_DLG
+		LPF CONVERT_DLG_TO_IWD2_FORMAT END
+
+
+	COPY_EXISTING ~11DEIRD.sto~ ~override~ //Gallaway Trading Post
+		ADD_STORE_ITEM ~60RTHF06~ AFTER ~00PLAT01~ #1 #1 #1 ~IDENTIFIED~ #1 //Owl's Feather
+		ADD_STORE_ITEM ~USRTHF32~ AFTER ~00SHLD03~ #1 #1 #1 ~IDENTIFIED~ #1 //Cliffs of Targos
+
+	COPY_EXISTING ~20arte.sto~ ~override~ //Shaengarne villager store
+		ADD_STORE_ITEM ~USRTHF33~ AFTER ~00SHLD01~ #1 #1 #1 ~IDENTIFIED~ #1 //Knucklehead Shield
+
+	COPY_EXISTING ~50NYM2.sto~ ~override~ //Nym store
+		ADD_STORE_ITEM ~00CHAN07~ #1 #1 #1 ~IDENTIFIED~ #1 //Elven Chainmail +1
+
+	COPY_EXISTING ~53WODE.sto~ ~override~ //Underdark ranged ammunition store
+		ADD_STORE_ITEM ~00LEAT08~ #1 #1 #1 ~IDENTIFIED~ #1 //Mourner's Armor
+
+	COPY_EXISTING ~60SHEEMI.sto~ ~override~ //Conlan store
+		ADD_STORE_ITEM ~60RTHF02~ #1 #1 #1 ~IDENTIFIED~ #1 //Interloper armor
+
+	COPY_EXISTING ~61RAKSHA.sto~ ~override~  //Rakshasa Nathaniel store
+		ADD_STORE_ITEM ~60RTHF04~ #1 #1 #1 ~IDENTIFIED~ #1 //Glacial Resilience armor
+
+
+	COPY_EXISTING ~41Ingrat.cre~ ~override~ //Doppelganger Neverwinter Captain
+		LPF IWD2_ADD_CRE_ITEM INT_VAR cq1=1 STR_VAR item=~60RTHF05~ slot=~armor~ END
+END 
+
+COPY_EXISTING ~10guthe.sto~ ~override~ //Salty Dog Barbarian store
+	ADD_STORE_ITEM ~00BOOT15~ #1 #1 #1 ~IDENTIFIED~ #1 //Winter Wolf Boots
+	ADD_STORE_ITEM ~00CLCK18~ #1 #1 #1 ~IDENTIFIED~ #1 //Winter Wolf Cloak
+	ADD_STORE_ITEM ~00BRAC18~ #1 #1 #1 ~IDENTIFIED~ #1 //Winter Wolf Gloves
+	ADD_STORE_ITEM ~00AMUL32~ #1 #1 #1 ~IDENTIFIED~ #1 //Winter Wolf Scarf
+	ADD_STORE_ITEM ~00HELM19~ #1 #1 #1 ~IDENTIFIED~ #1 //Winter Wolf Hat
+	ADD_STORE_ITEM ~00BOOT14~ #1 #1 #1 ~IDENTIFIED~ #6 //Yeti Boots
+	ADD_STORE_ITEM ~00CLCK17~ #1 #1 #1 ~IDENTIFIED~ #6 //Yeti Cloak
+	ADD_STORE_ITEM ~00BRAC17~ #1 #1 #1 ~IDENTIFIED~ #6 //Yeti Gloves
+	ADD_STORE_ITEM ~00AMUL31~ #1 #1 #1 ~IDENTIFIED~ #6 //Yeti Scarf
+	ADD_STORE_ITEM ~00HELM18~ #1 #1 #1 ~IDENTIFIED~ #6 //Yeti Hat
+	ADD_STORE_ITEM ~00BOWP01~ AFTER ~00BOWS01~ #1 #1 #1 ~IDENTIFIED~ #1 //Composite Shortbow
+	ADD_STORE_ITEM ~10RTHF02~ AFTER ~00LEAT04~ #1 #1 #1 ~IDENTIFIED~ #1 //Uthgar's Blessing
+
+COPY_EXISTING ~11deird.sto~ ~override~ //Gallaway Trading Post
+	ADD_STORE_ITEM ~00SHLD16~ AFTER ~00SHLD15~ #1 #1 #1 ~IDENTIFIED~ #1 //Tower Shield +1
+	ADD_STORE_ITEM ~00BOWP01~ AFTER ~00BOWS01~ #1 #1 #1 ~IDENTIFIED~ #2 //Composite Shortbow
+	ADD_STORE_ITEM ~00BOWC01~ AFTER ~00BOWL01~ #1 #1 #1 ~IDENTIFIED~ #2 //Composite Longbow
+	ADD_STORE_ITEM ~00BOWC02~ AFTER ~00BOWC01~ #1 #1 #1 ~IDENTIFIED~ #1 //Masterwork Composite Longbow
+	ADD_STORE_ITEM ~00BWLX02~ AFTER ~00BWLX01~ #1 #1 #1 ~IDENTIFIED~ #1 //Masterwork Light Crossbow
+	ADD_STORE_ITEM ~00BWLX99~ AFTER ~00BWLX02~ #1 #1 #1 ~IDENTIFIED~ #1 //Light Crossbow of Accuracy
+	ADD_STORE_ITEM ~00BWHX02~ AFTER ~00BWHX01~ #1 #1 #1 ~IDENTIFIED~ #1 //Masterwork Heavy Crossbow
+	ADD_STORE_ITEM ~00RTHF55~ AFTER ~00BWHX02~ #1 #1 #1 ~IDENTIFIED~ #1 //Mailripper
+	ADD_STORE_ITEM ~00RTHF15~ AFTER ~00DART02~ #20 #0 #0 ~IDENTIFIED~ #2 //Adron's Theorem darts
+
+COPY_EXISTING ~11elytha.sto~ ~override~ //Elytharra store
+	ADD_STORE_ITEM ~00RING87~ AFTER ~00RING75~ #1 #1 #1 ~IDENTIFIED~ #1 //Lesser Chameleon Ring
+	ADD_STORE_ITEM ~00RING21~ AFTER ~00RING87~ #1 #1 #1 ~IDENTIFIED~ #1 //Wizard's Ring
+	ADD_STORE_ITEM ~00RING86~ AFTER ~00RING21~ #1 #1 #1 ~IDENTIFIED~ #1 //Ring of Beauty
+	ADD_STORE_ITEM ~00ROBE01~ BEFORE ~00ROBE03~ #1 #1 #1 ~IDENTIFIED~ #1 //Robe of Cold Resistance
+	ADD_STORE_ITEM ~00ROBE04~ AFTER ~00ROBE03~ #1 #1 #1 ~IDENTIFIED~ #1 //Adventurer's Robe
+	ADD_STORE_ITEM ~00ROBE02~ AFTER ~00ROBE04~ #1 #1 #1 ~IDENTIFIED~ #1 //Knave's Robe
+	ADD_STORE_ITEM ~00WAND06~ AFTER ~00WAND14~ #50 #1 #1 ~IDENTIFIED~ #1 //Wand of Sleep
+	ADD_STORE_ITEM ~00WAND20~ AFTER ~00WAND06~ #50 #1 #1 ~IDENTIFIED~ #1 //Ice Dagger Wand
+	ADD_STORE_ITEM ~00WAND21~ AFTER ~00WAND20~ #50 #1 #1 ~IDENTIFIED~ #1 //Wand of Burning Hands
+	ADD_STORE_ITEM ~00WAND22~ AFTER ~00WAND21~ #50 #1 #1 ~IDENTIFIED~ #1 //Wand of Magic Armor
+	ADD_STORE_ITEM ~00WAND23~ AFTER ~00WAND22~ #50 #1 #1 ~IDENTIFIED~ #1 //Chromatic Orb Wand
+	ADD_STORE_ITEM ~00WAND24~ AFTER ~00WAND23~ #50 #1 #1 ~IDENTIFIED~ #1 //Wand of Dazzling Colors
+	ADD_STORE_ITEM ~00WAND29~ AFTER ~00WAND24~ #50 #1 #1 ~IDENTIFIED~ #1 //Wand of Enfeeblement
+	ADD_STORE_ITEM ~00WAND31~ AFTER ~00WAND29~ #50 #1 #1 ~IDENTIFIED~ #1 //Wand of Protection from Evil
+	ADD_STORE_ITEM ~00RTHF03~ AFTER ~10RTHF01~ #1 #1 #1 ~IDENTIFIED~ #1 //Berywel's Cloak
+	ADD_STORE_ITEM ~00RTHF04~ AFTER ~00BRAC12~ #1 #1 #1 ~IDENTIFIED~ #1 //School Cap
+	ADD_STORE_ITEM ~USRTHF31~ AFTER ~00BELT05~ #1 #1 #1 ~IDENTIFIED~ #1 //Girdle of Beatification/HoF version
+	REMOVE_STORE_ITEM ~00BELT05~ ~00RING75~ ~00RING78~
+
+COPY_EXISTING ~11ragnib.sto~ ~override~ //Targos Temple of Tempus
+	ADD_STORE_ITEM ~00RING77~ AFTER ~00RING80~ #1 #1 #1 ~IDENTIFIED~ #1 //Lesser Ring of Resistances
+	REMOVE_STORE_ITEM ~00RING74~
+
+COPY_EXISTING ~20arte.sto~ ~override~ //Shaengarne villager store
+	ADD_STORE_ITEM ~11RTHF02~ #1 #1 #1 ~IDENTIFIED~ #1 //Lucky Knucky
+	ADD_STORE_ITEM ~00RTHF12~ AFTER ~00MISC32~ #1 #1 #1 ~IDENTIFIED~ #1 //Hagnen's Foolishness
+
+COPY_EXISTING ~20dereth.sto~ ~override~ //Dereth druid store
+	ADD_STORE_ITEM ~SPPR502Z~ AFTER ~SPWI306Z~ #1 #1 #1 ~IDENTIFIED~ #3 //Cure Critical Wounds scroll
+	ADD_STORE_ITEM ~SPPR403Z~ AFTER ~SPPR502Z~ #1 #1 #1 ~IDENTIFIED~ #1 //Freedom of Movement scroll
+	ADD_STORE_ITEM ~SPPR422Z~ AFTER ~SPPR403Z~ #1 #1 #1 ~IDENTIFIED~ #2 //Thorn Spray scroll
+	ADD_STORE_ITEM ~SPPR615Z~ AFTER ~SPPR422Z~ #1 #1 #1 ~IDENTIFIED~ #2 //Conjure Animals scroll
+	ADD_STORE_ITEM ~SPPR613Z~ AFTER ~SPPR615Z~ #1 #1 #1 ~IDENTIFIED~ #1 //Whirlwind scroll
+	ADD_STORE_ITEM ~SPPR729Z~ AFTER ~SPPR613Z~ #1 #1 #1 ~IDENTIFIED~ #1 //Aura of Vitality scroll
+
+COPY_EXISTING ~40BDAWN.sto~ ~override~ //Beodaewn the Werewolf Man store
+	ADD_STORE_ITEM ~USRTHF01~ AFTER ~00SPER99~ #1 #1 #1 ~IDENTIFIED~ #1 //Spear of Sorrows
+	ADD_STORE_ITEM ~00RTHF47~ AFTER ~00BOOT02~ #1 #1 #1 ~IDENTIFIED~ #1 //Arcs of Disredain
+	REMOVE_STORE_ITEM ~00AMUL12~ ~00SPER99~
+
+COPY_EXISTING ~41ZACK1.sto~ ~override~ ~41ZACK2.sto~ ~override~ ~41ZACK3.sto~ ~override~ //Zack Boosenberry stores
+	ADD_STORE_ITEM ~00RING78~ AFTER ~00RING20~ #1 #1 #1 ~IDENTIFIED~ #1 //Spirit Armor Ring
+	ADD_STORE_ITEM ~00RING98~ AFTER ~00RING78~ #1 #1 #1 ~IDENTIFIED~ #1 //Chameleon Ring
+	ADD_STORE_ITEM ~00WAND13~ AFTER ~00WAND06~ #50 #1 #1 ~IDENTIFIED~ #1 //Wand of Trap Detection
+	REMOVE_STORE_ITEM ~00WAND06~
+
+COPY_EXISTING ~50NYM2.sto~ ~override~ //Nym store
+	ADD_STORE_ITEM ~00RTHF64~ AFTER ~00RING19~ #1 #1 #1 ~IDENTIFIED~ #1 //Delnar's Healing Sword
+
+COPY_EXISTING ~00BASHS3.sto~ ~override~ //Avarine Decanter genie store
+	WRITE_LONG 0x14 155 //Buying stuff from him costs less money (since he actually has some good stuff now), though his goods are still overpriced
+	ADD_STORE_ITEM ~00ROBE16~ AFTER ~00ROBE15~ #1 #1 #1 ~IDENTIFIED~ #1 //Robe of Electrical Resistance
+	ADD_STORE_ITEM ~50RTHF04~ AFTER ~00ROBE16~ #1 #1 #1 ~IDENTIFIED~ #1 //Milton Sixtoes armor
+	ADD_STORE_ITEM ~00WAND42~ AFTER ~00WAND04~ #50 #1 #1 ~IDENTIFIED~ #1 //Wand of Cure Moderate Wounds
+	ADD_STORE_ITEM ~00WAND43~ AFTER ~00WAND44~ #50 #1 #1 ~IDENTIFIED~ #1 //Wand of Spell Resistance
+	ADD_STORE_ITEM ~USCLCK40~ AFTER ~00BELT03~ #1 #1 #1 ~IDENTIFIED~ #1 //Cloak of Protection +3
+	ADD_STORE_ITEM ~USBRAC47~ AFTER ~00BOOT01~ #1 #1 #1 ~IDENTIFIED~ #1 //Bracers of Armor +5
+	ADD_STORE_ITEM ~00RTHF73~ AFTER ~00BRAC10~ #1 #1 #1 ~IDENTIFIED~ #1 //Cleaver
+	ADD_STORE_ITEM ~00RTHF58~ AFTER ~00RTHF73~ #1 #1 #1 ~IDENTIFIED~ #1 //Iron Mary crossbow
+	ADD_STORE_ITEM ~00AROW07~ AFTER ~00POTN01~ #1 #1 #1 ~IDENTIFIED~ #1 //Arrow of Dispelling
+	ADD_STORE_ITEM ~USBOLT52~ AFTER ~00AROW07~ #1 #1 #1 ~IDENTIFIED~ #12 //Bolt of Lightning
+	REMOVE_STORE_ITEM ~00WAND24~
+
+COPY_EXISTING ~50TAHVO.sto~ ~override~ //Nym store
+	ADD_STORE_ITEM ~00RTHF51~ AFTER ~00BOWS03~ #1 #1 #1 ~IDENTIFIED~ #1 //Eye of the Hunter bow
+	ADD_STORE_ITEM ~ZZG6CT~ AFTER ~00SPER98~ #1 #1 #1 ~IDENTIFIED~ #1 //Troll Killer club
+	ADD_STORE_ITEM ~USRTHF03~ AFTER ~50HIDE06~ #1 #1 #1 ~IDENTIFIED~ #1 //Wandering Hunter Armor/HoF version
+	ADD_STORE_ITEM ~USRTHF04~ AFTER ~50BOOT14~ #1 #1 #1 ~IDENTIFIED~ #1 //Wandering Hunter Boots/HoF version
+	ADD_STORE_ITEM ~USRTHF05~ AFTER ~50CLCK17~ #1 #1 #1 ~IDENTIFIED~ #1 //Wandering Hunter Cloak/HoF version
+	REMOVE_STORE_ITEM ~50HIDE06~ ~50BOOT14~ ~50CLCK17~
+
+COPY_EXISTING ~50LIMHA.sto~ ~override~ //Limha store
+	ADD_STORE_ITEM ~00RTHF88~ AFTER ~00AX1H82~ #1 #1 #1 ~IDENTIFIED~ #1 //Dragon's Sight
+	ADD_STORE_ITEM ~00SWDL96~ AFTER ~00SWDL03~ #1 #1 #1 ~IDENTIFIED~ #1 //Longsword +1: Bloodletting
+	ADD_STORE_ITEM ~00POTN22~ AFTER ~00SWDL96~ #1 #1 #1 ~IDENTIFIED~ #8 //Ogre Bile
+	REMOVE_STORE_ITEM ~00AX1H82~ ~00SWDL03~
+
+COPY_EXISTING ~51DRAGU.sto~ ~override~ ~51DRAGU2.sto~ ~override~ //Duergar engineer stores
+	ADD_STORE_ITEM ~USBOLT48~ AFTER ~00BOLT04~ #20 #1 #1 ~IDENTIFIED~ #1 //Heavy Bolt +4
+
+COPY_EXISTING ~52BERED.sto~ ~override~ //Beodaewn the Werewolf Man store
+	REMOVE_STORE_ITEM ~52RTHF05~
+	ADD_STORE_ITEM ~52RTHF05~ AFTER ~52RTHF04~ #6 #1 #1 ~IDENTIFIED~ #1 //How to be an Adventurer
+
+COPY_EXISTING ~53HEGGR.sto~ ~override~ //Underdark weapon/armor store
+	ADD_STORE_ITEM ~00SHLD85~ AFTER ~00SHLD16~ #1 #1 #1 ~IDENTIFIED~ #1 //Tower Shield of Spell Resistance +2
+	REMOVE_STORE_ITEM ~00STAF93~
+
+COPY_EXISTING ~53KADRES.sto~ ~override~ //Kadresh drow store
+	ADD_STORE_ITEM ~00RTHF09~ #1 #3 #1 ~IDENTIFIED~ #1 //Spiritcaller
+	ADD_STORE_ITEM ~00RING75~ AFTER ~00RING71~ #1 #1 #1 ~IDENTIFIED~ #1 //Chameleon Ring of Dexterity
+
+COPY_EXISTING ~53MALAVO.sto~ ~override~ //Malavon store
+	ADD_STORE_ITEM ~00AMUL15~ BEFORE ~00RING22~ #1 #1 #1 ~IDENTIFIED~ #1 //Amulet of Intellect
+	ADD_STORE_ITEM ~00ROBE99~ BEFORE ~00STAF80~ #1 #1 #1 ~IDENTIFIED~ #1 //Robe of Enfusing
+	ADD_STORE_ITEM ~00STAF93~ AFTER ~00STAF80~ #1 #1 #1 ~IDENTIFIED~ #1 //Staff of Magic Vulnerability +1
+	ADD_STORE_ITEM ~USRING53~ AFTER ~00RING22~ #1 #1 #1 ~IDENTIFIED~ #1 //Onyx Ring of Teleportation
+
+COPY_EXISTING ~53MYRVEK.sto~ ~override~ //Underdark magic store
+	ADD_STORE_ITEM ~00BRAC04~ AFTER ~00BRAC03~ #1 #1 #1 ~IDENTIFIED~ #1 //Bracers of Armor +4
+	ADD_STORE_ITEM ~USAMUL50~ AFTER ~00AMUL13~ #1 #1 #1 ~IDENTIFIED~ #1 //Amulet of Antimagic
+
+COPY_EXISTING ~53WODE.sto~ ~override~ //Underdark ranged ammunition store
+	ADD_STORE_ITEM ~USAROW47~ AFTER ~00AROW99~ #20 #1 #1 ~IDENTIFIED~ #1 //Arrows of Acid +4
+	ADD_STORE_ITEM ~USAROW52~ AFTER ~USAROW47~ #1 #1 #1 ~IDENTIFIED~ #4 //Arrows of Detonation
+	ADD_STORE_ITEM ~USBULL48~ AFTER ~00BULL99~ #20 #1 #1 ~IDENTIFIED~ #1 //Greater Vampiric Bullet +3
+
+COPY_EXISTING ~60NATHAN.sto~ ~override~ //Kuldahar Nathaniel store
+	ADD_STORE_ITEM ~USRTHF35~ AFTER ~00RTKT04~ #1 #1 #1 ~IDENTIFIED~ #1 //Woodland Cloak
+	ADD_STORE_ITEM ~00RING74~ AFTER ~00RING68~ #1 #1 #1 ~IDENTIFIED~ #1 //Ring of Protection from Evil
+	ADD_STORE_ITEM ~00STAF92~ AFTER ~USRTHF35~ #1 #1 #1 ~IDENTIFIED~ #1 //Staff of Banishing +2
+	REMOVE_STORE_ITEM ~00RING21~
+
+COPY_EXISTING ~60SHEEMI.sto~ ~override~ //Conlan store
+	ADD_STORE_ITEM ~00RTKT02~ AFTER ~00RTHF58~ #1 #1 #1 ~IDENTIFIED~ #1 //Iron Arbalest
+	ADD_STORE_ITEM ~USCHAN40~ AFTER ~00CHAN03~ #1 #1 #1 ~IDENTIFIED~ #1 //Chainmail +3
+	ADD_STORE_ITEM ~USCHAN41~ AFTER ~USCHAN40~ #1 #1 #1 ~IDENTIFIED~ #1 //Splint Mail +3
+	ADD_STORE_ITEM ~00SHLD89~ AFTER ~00SHLD98~ #1 #1 #1 ~IDENTIFIED~ #1 //Large Shield of Electrical Resistance +3
+	ADD_STORE_ITEM ~00AX1H86~ AFTER ~00AX1H92~ #1 #1 #1 ~IDENTIFIED~ #1 //Mass-Slasher +5
+	ADD_STORE_ITEM ~00AX2H99~ AFTER ~00AX2H89~ #1 #1 #1 ~IDENTIFIED~ #1 //Greataxe of Vampiric Burst +4
+	ADD_STORE_ITEM ~00CLUB92~ AFTER ~00CLUB98~ #1 #1 #1 ~IDENTIFIED~ #1 //Club of Intoxication +4
+	ADD_STORE_ITEM ~00MACE95~ AFTER ~00MACE97~ #1 #1 #1 ~IDENTIFIED~ #1 //Fiery Mace of Disruption +3
+	ADD_STORE_ITEM ~00RTHF83~ AFTER ~00HAMM86~ #1 #1 #1 ~IDENTIFIED~ #1 //Protean Hammer
+	ADD_STORE_ITEM ~00RTHF28~ AFTER ~00FLAL92~ #1 #1 #1 ~IDENTIFIED~ #1 //Shackles of Roa flail
+	ADD_STORE_ITEM ~00STAF91~ AFTER ~00STAF97~ #1 #1 #1 ~IDENTIFIED~ #1 //Staff of Health +3
+	ADD_STORE_ITEM ~00RTHF69~ AFTER ~00SPER97~ #1 #1 #1 ~IDENTIFIED~ #1 //Impaler
+	ADD_STORE_ITEM ~00SWDT98~ AFTER ~00RTHF73~ #1 #1 #1 ~IDENTIFIED~ #1 //Greatsword of Flame +3
+	ADD_STORE_ITEM ~00SWDL95~ AFTER ~00SWDL87~ #1 #1 #1 ~IDENTIFIED~ #1 //Longsword of Speed +2
+	ADD_STORE_ITEM ~00RTHF65~ AFTER ~00SWDB87~ #1 #1 #1 ~IDENTIFIED~ #1 //Rage of Chaos
+	ADD_STORE_ITEM ~00SWDC90~ AFTER ~00SWDC96~ #1 #1 #1 ~IDENTIFIED~ #1 //Scimitar: Blood Trails
+	REMOVE_STORE_ITEM ~00RTHF26~ ~00RTHF54~ ~00RTHF58~ ~00RTHF73~ ~00HALB96~ ~00CLCK03~ ~00ROBE04~ ~00ROBE99~ ~00RING15~ ~00RING22~
+
+COPY_EXISTING ~61RAKSHA.sto~ ~override~ //Rakshasa Nathaniel store
+	ADD_STORE_ITEM ~62RTHF01~ #1 #1 #1 ~IDENTIFIED~ #1 //Dirty Bits armor
+	ADD_STORE_ITEM ~00BWHX04~ BEFORE ~00BOLT98~ #1 #1 #1 ~IDENTIFIED~ #1 //Heavy Crossbow of Missile Weakness +2
+	REMOVE_STORE_ITEM ~00RTHF47~ ~00RTHF55~ ~00WAND13~ ~00AROW07~
+
+COPY_EXISTING ~63ERADRU.sto~ ~override~ //Xvim priest temple
+	READ_LONG 0x10 ulgiash
+	ulgiash |= 0x1
+	WRITE_LONG 0x10 ulgiash //Can buy items from this store
+	ADD_STORE_ITEM ~00HALB96~ #1 #1 #1 ~IDENTIFIED~ #1 //Massive Halberd of Hate +4
+
+COPY_EXISTING ~63RIKI.sto~ ~override~ //Severed Hand thief store
+	ADD_STORE_ITEM ~00RING81~ BEFORE ~00BOOT02~ #1 #1 #1 ~IDENTIFIED~ #1 //Tymora's Loop
+	ADD_STORE_ITEM ~00AROW07~ AFTER ~00AROW94~ #1 #1 #1 ~IDENTIFIED~ #1 //Arrow of Dispelling
+	ADD_STORE_ITEM ~USAROW52~ AFTER ~00AROW94~ #1 #1 #1 ~IDENTIFIED~ #9 //Arrows of Detonation
+	ADD_STORE_ITEM ~USBOLT52~ AFTER ~00BOLT99~ #1 #1 #1 ~IDENTIFIED~ #9 //Bolts of Lightning
+	ADD_STORE_ITEM ~USCLCK51~ AFTER ~00CLCK03~ #1 #1 #1 ~IDENTIFIED~ #9 //Improved Cloak of Displacement
+	REMOVE_STORE_ITEM ~00CLCK03~
+
+
+COPY_EXISTING ~ar3000.are~ ~override~ //Horde Fortress outside
+	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR charges1=2 single_match=1 STR_VAR old_item=~SPPR115Z~ new_item=~00POTN22~ END
+
+COPY_EXISTING ~ar3101.are~ ~override~ //Guthma's cabin
+	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR charges1=1  charges2=1  charges3=1 single_match=1 STR_VAR old_item=~RT03_R~ new_item=~00RTHF59~ END
+
+COPY_EXISTING ~ar5203.are~ ~override~ //Black Raven Tomb
+	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR single_match=1 STR_VAR old_item=~00RTHF28~ new_item=~00RTKT19~ END
+	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR single_match=1 STR_VAR old_item=~00BRAC04~ new_item=~00BOOT01~ END
+
+COPY_EXISTING ~ar6051.are~ ~override~ //Yuan-ti lair
+	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR single_match=1 STR_VAR old_item=~50RTHF04~ new_item=~00RTHF61~ END
+	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR single_match=1 STR_VAR old_item=~00RTKT19~ new_item=~USRT16_V~ END
+
+COPY_EXISTING ~ar6101.are~ ~override~ //Dragon's Eye first floor
+	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR charges1=1  charges2=1  charges3=1 single_match=1 STR_VAR old_item=~00RTKT02~ new_item=~RT13_R~ END
+	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR single_match=1 STR_VAR old_item=~00SWDT91~ new_item=~00SPER90~ END
+	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR charges1=4277 single_match=1 STR_VAR old_item=~00BRAC03~ new_item=~MISC07~ END
+	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR charges1=652 single_match=1 STR_VAR old_item=~00HAMM04~ new_item=~MISC07~ END
+	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR charges1=1 single_match=1 STR_VAR old_item=~00SWDS85~ new_item=~00POTN80~ END
+	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR charges1=1  charges2=1  charges3=1 single_match=1 STR_VAR old_item=~00SWDB91~ new_item=~RT13_R~ END
+
+COPY_EXISTING ~ar6102.are~ ~override~ //Dragon's Eye second floor
+	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR charges1=1  charges2=1  charges3=1 single_match=1 STR_VAR old_item=~00RTHF59~ new_item=~00SLNG97~ END
+
+COPY_EXISTING ~ar6103.are~ ~override~ //Dragon's Eye third floor
+	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR charges1=1  charges2=1  charges3=1 single_match=1 STR_VAR old_item=~00RING18~ new_item=~USRT17_V~ END
+
+COPY_EXISTING ~ar6300.are~ ~override~ //Severed Hand entrance
+	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR charges1=50 single_match=1 STR_VAR old_item=~00RTHF69~ new_item=~00WAND34~ END
+
+COPY_EXISTING ~ar6301.are~ ~override~ //Severed Hand first floor
+	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR charges1=1 single_match=1 STR_VAR old_item=~00RTHF09~ new_item=~00POTN95~ END
+	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR charges1=2389 single_match=1 STR_VAR old_item=~00RTHF64~ new_item=~MISC07~ END
+	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR charges1=1 single_match=1 STR_VAR old_item=~00RTHF65~ new_item=~USALBEHO~ END
+
+COPY_EXISTING ~ar6304.are~ ~override~ //Severed Hand fourth floor
+	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR charges1=1 single_match=1 STR_VAR old_item=~00RTHF40~ new_item=~00POTN68~ END
+
+
+COPY_EXISTING ~11jemel.cre~ ~override~ //Gallaway Trading Post worker
+	LPF IWD2_REMOVE_CRE_ITEM STR_VAR item=~11RTHF02~ END
+
+COPY_EXISTING ~60hiephe.cre~ ~override~ ~60hiephh.cre~ ~override~ //Hiepherus
+	LPF IWD2_ADD_CRE_ITEM INT_VAR cq1=1  cq2=1  cq3=1 STR_VAR item=~00RTHF46~ slot=~cloak~ END
+
+COPY_EXISTING ~62mdarf.cre~ ~override~ //Lich in Fields of Slaughter
+	LPF IWD2_ADD_CRE_ITEM INT_VAR cq1=1  cq2=1  cq3=1 STR_VAR item=~USRT18_V~ slot=~inv6~ END
+
+COPY_EXISTING ~62saabl1.cre~ ~override~ ~62saabl2.cre~ ~override~ //Saablic Tan
+	LPF IWD2_REMOVE_CRE_ITEM STR_VAR item=~00RTHF46~ END
+
+COPY_EXISTING ~63grdcom.cre~ ~override~ //Guard Commander at Severed Hand Entrance
+	LPF IWD2_ADD_CRE_ITEM INT_VAR cq1=1  cq2=1  cq3=1 STR_VAR item=~00RTHF40~ slot=~helmet~ END
+
+COPY_EXISTING ~65iytxm.cre~ ~override~ //Iyachtu Xvim
+	LPF IWD2_ADD_CRE_ITEM INT_VAR cq1=1  cq2=1  cq3=1 STR_VAR item=~USRT19_V~ slot=~inv7~ END
+
+COPY_EXISTING ~67trmal.cre~ ~override~ //Elite on Severed Hand rooftop
+	LPF IWD2_REMOVE_CRE_ITEM STR_VAR item=~00RTHF04~ END
+
+
+COPY_EXISTING ~20newder.dlg~ ~override~ //Dereth Springsong dialogue
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~00SWDC99~ ~00RTHF26~
+
+COPY_EXISTING ~50nym.dlg~ ~override~ //Nym dialogue
+	DECOMPILE_DLG_TO_D
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~StartStore(\"50Nym\"~ ~StartStore("50Nym2"~
+	COMPILE_D_TO_DLG
+	LPF CONVERT_DLG_TO_IWD2_FORMAT END
+
+COPY_EXISTING ~00bahsh.dlg~ ~override~ //Avarine Decanter genie dialogue
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~StartStore(\"00Bashs1\"~ ~StartStore("00Bashs3"~
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~StartStore(\"00Bashs2\"~ ~StartStore("00Bashs3"~
+
+COPY_EXISTING ~60jerms2.dlg~ ~override~ //Jermsy dialogue
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~00RTHF51~ ~00RTHF54~

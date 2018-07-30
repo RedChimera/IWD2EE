@@ -61,7 +61,6 @@ RT15_L	00Gem22	00Gem21	00Gem20	00Gem19	00Amul08	00Gem22	00Gem21	00Gem20	00Gem19	
 RT15_M	00Gem22	00Gem21	00Gem20	00Gem19	00Amul08	00Gem22	00Gem21	00Gem20	00Gem19	00Amul08	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop																																																															
 RT15_R	RMEW_06	RMIW_06	RARM_06	RSHD_06	RWIZ_05	RPRI_05	RRNG_05	RMSC_05	RPTN_03	RPTN_02	RPTN_01	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	RMEW_06	RMIW_06	RARM_06	RSHD_06	RWIZ_06	RPRI_06	RRNG_06	RMSC_06	RWIZ_07	RPRI_07	RRNG_07	RMSC_07	RPTN_03	RPTN_02	RPTN_01	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop										
 RT15_V	RMEW_06	RMIW_06	RARM_06	RSHD_06	RWIZ_06	RPRI_06	RRNG_06	RMSC_06	RPTN_03	RPTN_02	RPTN_01	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	RMEW_06	RMIW_06	RARM_06	RSHD_06	RWIZ_06	RPRI_06	RRNG_06	RMSC_06	RWIZ_07	RPRI_07	RRNG_07	RMSC_07	RPTN_03	RPTN_02	RPTN_01	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop							
-
 USRT16_V		RMEW_07	RMIW_07	RARM_07	RSHD_07	RRNG_07	RMSC_07
 USRT17_V		RMEW_07	RMIW_07	RARM_07	RSHD_07	RRNG_07	RMSC_07
 USRT18_V		RMEW_07	RMIW_07	RARM_07	RSHD_07	RRNG_07	RMSC_07
@@ -72,14 +71,14 @@ RMEW_02	00ax1h04	00ax1h79	00ax1h80	00ax1h90	00ax2h91	00Club82	00Club83	00Flal87	
 RMEW_03	00ax1h78	00ax1h93	00ax2h90	ZZG6CT	00Club81	00Flal85	00Flal93	00Mace89	00Mace98	00Mstr89	00Mstr94	00Dagg05	00Dagg89	00Dagg90	00Dagg91	00Dagg98	00Hamm87	00Hamm88	00Hamm89	00Halb89	00Halb91	00Sper89	00Sper98	00Staf80	00Staf81	00Staf93	00Staf98	00SwdB88	00SwdB98	00SwdC87	00SwdC97	00SwdL80	00SwdL81	00SwdL88	00SwdL97	00SwdS86	00SwdS87	00SwdS90	00SwdT88	00SwdT90	50SwdLWB	ZZJ6BS						
 RMEW_04	00ax1h92	00ax1h99	00ax2h89	00Club98	00Flal92	00Mace97	00Mstr88	00Mstr93	00Mstr99	00Dagg88	00Hamm86	00Halb88	00Sper97	00Staf88	00Staf92	00Staf97	00SwdB87	00SwdC96	00SwdL87	00SwdL96	00SwdS89	00SwdT87																										
 RMEW_05	00ax1h91	00ax2h88	00Club97	00Flal03	00Flal91	00Mace96	00Mstr87	00Dagg87	00Dagg97	00Hamm85	00Hamm97	00Halb87	00Sper96	00Staf96	00SwdB86	00SwdB97	00SwdC95	00SwdL86	00SwdL89	00SwdL95	00SwdS88	00SwdS98	00SwdT86	00SwdT98																								
-RMEW_06	00ax1h95	00ax2h95	00Club92	00Flal98	00Mace95	00Mstr86	00Dagg95	00Hamm96	00Halb94	00Sper92	00Staf87	00Staf91	00SwdB93	00SwdC93	00SwdL94	00SwdS97	00Swdt94																															
+RMEW_06	00ax1h95	00ax2h95	00Club92	00Flal98	00Mace95	00Dagg95	00Hamm96	00Halb94	00Sper92	00Staf87	00Staf91	00SwdB93	00SwdC93	00SwdL94	00SwdS97	00Swdt94																															
 RMEW_07	00ax1h94	00ax2h96	00Club91	00Flal97	00Mace94	00Mstr92	00Dagg96	00Halb98	00Sper93	00Staf86	00SwdB96	00SwdC90	00SwdL93	00SwdS95	00SwdS96	00SwdT93																															
-RMEW_08	00ax1h97	00Club96	00Flal95	00Halb96	00SwdC92	00SwdL92	00SwdT95	00SwdT97																																							
-RMEW_09	00ax1h86	00ax2h94	00Club90	00Mace93	00Hamm95	00Halb97	00Staf90	00SwdB94	00SwdB95	00SwdL91	00SwdT96																																				
+RMEW_08	00ax1h97	00Club96	00Flal95	00Mstr86	00Halb96	00SwdC92	00SwdL92	00SwdT95	00SwdT97																																							
+RMEW_09	00ax1h86	00ax2h87	00Club90	00Mace93	00Hamm95	00Halb97	00Staf90	00SwdB94	00SwdB95	00SwdL91	00SwdT96																																				
 RMEW_10	00ax1h88	00ax2h98	00Club95	00Flal96	00Mace92	00Mstr91	00Hamm94	00Halb95	00Staf05	00Staf89	00SwdC91	00SwdL90	00SwdS94																																			
-RMEW_11	00ax1h87	00ax2h93	00Club89	USDagg59																																												
-RMEW_12	00ax1h85	00ax2h87	00Club88	USSwdT59																																												
-RMEW_13	00ax1h83	00ax2h85	00Club87																																													
+RMEW_11	00ax1h84	00ax1h87	00ax2h93	00Club89	USDagg59																																												
+RMEW_12	00ax1h85	00ax2h94	00Club88	USSwdT59																																												
+RMEW_13	00ax1h83	00ax2h85	00Club87	USFlal59																																													
 RMEW_14	00ax2h86	00Club86	USSwdK59																																																																																			
 																																																
 RMIW_01	00ax1h76	00Slng02	00BowC02	00BowC04	00BowC93	00BowL03	00BowP02	00BowP98	00BowS03	00BowS90	00BowS91	00Bwhx03	00Bwhx97	00Bwlx03	00Bwlx97	00Slng02	00Slng94	00Arow91																												
@@ -87,12 +86,12 @@ RMIW_02	00ax1h75	00BowC04	00Slng99	00BowC99	00BowL91	00BowL97	00BowL98	00BowS86	
 RMIW_03	00ax1h06	00ax1h72	00HamT09	00Dagg81	00BowC92	00BowC98	00BowL90	00BowL95	00BowL96	00BowS87	00BowS88	00BowS98	00Bwhx93	00Bwhx95	00Bwlx91	00Bwlx94	00Slng93	00Slng98	00Dart83	00Dart84																						
 RMIW_04 00ax1h73	00Dagg82	00BowC95	00BowC97	00BowL89	00BowS94	00BowS97	00Bwhx92	00Bwlx04	00Bwlx93	00Slng92	00Slng97	00Arow86	00Bull86																																			
 RMIW_05	00ax1h89	00ax1h98	00HamT10	00BowC96	00BowL88	00BowS96	00Bwhx04	00Bwhx91	00Bwlx92	00Slng96																																		
-RMIW_06	00BowP99	00Slng91	USax1h48	USHamT48																																									
-RMIW_07	00BowL99	00BowS93	00Bwlx98																																										
+RMIW_06	00BowP99	00Slng91	USax1h48	USHamT48	USArow49																																									
+RMIW_07	00BowL99	00BowS93	00Bwlx98	USBolt53	USBull53																																										
 RMIW_08	00BowC94	00Bwhx99	00Slng88	USDagg53																																							
 RMIW_09	00BowP97	00Bwhx98	00Slng90																																								
-RMIW_10 USBwhx57	USDart59
-RMIW_11
+RMIW_10 USBwhx57	USDart59	USBwhx57	USDart59	USBwhx57	USDart59
+RMIW_11 USArow59
 RMIW_12
 RMIW_13
 RMIW_14	USSlng59																																								
@@ -101,12 +100,12 @@ RARM_01	00Leat02	00Leat94	00Leat95	00Leat96	00Leat97	00Leat98	00Leat99	00Chan05	
 RARM_02	00Leat03	00Leat05	00Leat90	00Leat91	00Leat92	00Leat93	50Hide06	00Chan02	00Plat02	00Plat12																																			
 RARM_03	00Leat06	00Leat07	00Leat86	00Leat87	00Leat88	00Leat89	00Chan03	00Plat04	USChan41																																			
 RARM_04	00Chan07	USChan40	USPlat35																																							
-RARM_05	00Plat03	USPlat45																																										
+RARM_05	00Plat03	USPlat45	00Plat03	USPlat45	00Plat03	USPlat45																																										
 RARM_06	USLeat48	USHide49	USChan48	USChan49	USPlat48																																											
-RARM_07	USLeat51	USPlat51																																										
-RARM_08	USChan52	USChan54																																										
-RARM_09	USLeat57	USPlat58																																										
-RARM_10	USLeat58	USHide59																																											
+RARM_07	USLeat51	USPlat51	USLeat51	USPlat51	USLeat51	USPlat51																																										
+RARM_08	USChan52	USChan54	USChan52	USChan54	USChan52	USChan54																																										
+RARM_09	USLeat57	USPlat58	USLeat57	USPlat58	USLeat57	USPlat58																																										
+RARM_10	USLeat58	USHide59	USLeat58	USHide59	USLeat58	USHide59																																											
 RARM_11																																												
 RARM_12	USLeat59																																											
 RARM_13	USPlat59																																								
@@ -115,12 +114,12 @@ RARM_14	USChan59
 RSHD_01	00Shld11	00Shld16	00Shld90	00Shld93	00Shld99																																							
 RSHD_02	00Shld17	00Shld88	00Shld92	00Shld94	00Shld95	00Shld97	00Shld98																																				
 RSHD_03	00Shld85	00Shld86	00Shld91																																						
-RSHD_04	00Shld88	00Shld96																																										
-RSHD_05	00Shld87	00Shld89																																											
-RSHD_06	USShld48	USShld49																																											
-RSHD_07	USShld50	USShld51																																											
+RSHD_04	00Shld88	00Shld96	00Shld88	00Shld96	00Shld88	00Shld96																																										
+RSHD_05	00Shld87	00Shld89	00Shld87	00Shld89	00Shld87	00Shld89																																											
+RSHD_06	USShld48	USShld49	USShld48	USShld49	USShld48	USShld49																																											
+RSHD_07	USShld50	USShld51	USShld50	USShld51	USShld50	USShld51																																											
 RSHD_08	USShld55																																											
-RSHD_09	USShld56	USShld57																																										
+RSHD_09	USShld56	USShld57	USShld56	USShld57	USShld56	USShld57																																										
 RSHD_10	USShld58																																											
 RSHD_11																																												
 RSHD_12																																												
@@ -132,8 +131,8 @@ RAMO_02	00Arow04	00Arow05	00Arow08	00Arow09	00Arow87	00Arow88	00Arow95	00Arow99	
 RAMO_03	00Arow06	00Arow94	00Bolt08	00Bolt99	00Bull89	00Bull90	00Bull99	00Dart03	00Dart92	00Dart95																								
 RAMO_04	00Arow10	00Arow93	00Bolt98	00Bull98	00Dart91	00Dart96	00Dart99	USBolt45																																	
 RAMO_05	00Arow85	00Arow92	00Arow98	00Bolt93	00Bolt97	00Bull04	00Bull92	00Bull97	00Dart90	00Dart98																																		
-RAMO_06	00Dart05	00Dart98																																										
-RAMO_07	00Dart94	00Dart97																																												
+RAMO_06	00Dart05	00Dart98	USArow48	USBolt47	USBolt48																																										
+RAMO_07	00Dart94	00Dart97	USBolt52	USArow52																																												
 RAMO_08																																											
 RAMO_09																																											
 RAMO_10																																												
@@ -167,10 +166,10 @@ RRNG_03	00Ring15	00Ring20	00Ring67	00Ring69	00Ring70	00Ring90	00Ring94	00Ring95	
 RRNG_04	00Ring18	00Ring23	00Ring73	00Ring92	00Ring93	00Ring97	00Ring98																																					
 RRNG_05	00Ring22	00Ring68	00Ring74	00Ring75	00Ring79	00Ring88	00Ring91																																							
 RRNG_06	00Ring72	00Ring89	00Ring96	USAmul47																																										
-RRNG_07	USRing53	USAmul50																																										
-RRNG_08	USRing51	USAmul51																																											
-RRNG_09	USRing52	USAmul56																																										
-RRNG_10	USRing56	USAmul58																																										
+RRNG_07	USRing53	USAmul50	USRing53	USAmul50	USRing53	USAmul50																																										
+RRNG_08	USRing51	USAmul51	USRing51	USAmul51	USRing51	USAmul51																																											
+RRNG_09	USRing52	USAmul56	USRing52	USAmul56	USRing52	USAmul56																																										
+RRNG_10	USRing56	USAmul58	USRing56	USAmul58	USRing56	USAmul58																																										
 RRNG_11	USAmul59																																										
 RRNG_12																																												
 RRNG_13																																												
@@ -179,17 +178,17 @@ RRNG_14	USRing58
 RMSC_01	00Brac02	00Brac09	00Clck01	00Robe02	00Robe03	00Robe04																																					
 RMSC_02	00Brac03	00Brac05	00Belt02	00Belt03	00Belt04	00Helm07																																			
 RMSC_03	00Brac04	00Brac10	00Clck02	00Robe01	00Robe15	00Robe16																																							
-RMSC_04	00Boot01	USBrac47																																								
-RMSC_05	00Robe99	USClck40																																										
+RMSC_04	00Boot01	USBrac47	00Boot01	USBrac47	00Boot01	USBrac47																																								
+RMSC_05	00Robe99	USClck40	00Robe99	USClck40	00Robe99	USClck40																																										
 RMSC_06	00Robe05	00Robe06	00Robe07	USBrac50																																										
-RMSC_07	USClck50	USHelm50																																										
-RMSC_08	USBrac55	USClck55																																											
-RMSC_09	USClck51	USRobe56																																										
-RMSC_10	USBrac59	USBoot59																																							
+RMSC_07	USClck50	USHelm50	USClck50	USHelm50	USClck50	USHelm50																																										
+RMSC_08	USBrac55	USClck55	USBrac55	USClck55	USBrac55	USClck55																																											
+RMSC_09	USClck51	USRobe56	USClck51	USRobe56	USClck51	USRobe56																																										
+RMSC_10	USBrac59	USBoot59	USBrac59	USBoot59	USBrac59	USBoot59																																							
 RMSC_11																																											
 RMSC_12	USBrac57																																											
 RMSC_13	USHelm59																																											
-RMSC_14	USRobe59																																											
+RMSC_14	USRobe59																																													
 																																												
 Arow_P1	arow01	arow01	arow01	arow02	arow08	arow01	arow01	arow01																																				
 Arow_P2	arow01	arow01	arow02	arow02	arow08	arow08	arow01	arow01	arow01																																			
@@ -484,3 +483,11 @@ TskelP4	hqbswrd	hqlswrd	hqaxe	ax1h02	sw1h05	sw1h02
 41HBagNa	41HBgANa
 00HBag01	00HBgA01
 00HBag02	00HBgA02
+PtchRT01	60PlatKC
+PtchRT02	60PlatAG
+PtchRT03	60ChanTM
+PtchRT04	60PlatDC
+PtchRT05	60PlatPF
+PtchRT06	00ChanML
+PtchRT07	60PlatAA
+
