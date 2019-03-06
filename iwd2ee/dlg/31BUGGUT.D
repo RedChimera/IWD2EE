@@ -98,7 +98,7 @@ END
 
 IF ~~ THEN BEGIN DiplomacyGuthma7Failed
   SAY ~You're suggesting I let Targos STAND? That I give up all of our progress based on the words of a Targos soldier? You think I don't know what you're doing? I AM NOT SO EASILY FOOLED!~
-  IF ~~ THEN REPLY ~~ DO ~Enemy()
+  IF ~~ THEN REPLY ~So be it.~ DO ~Enemy()
 ~ EXIT
 END
 
@@ -138,6 +138,6 @@ END
 
 IF ~~ THEN BEGIN DiplomacyGuthma13
   SAY ~Then you're not here for gold! You're here to retrieve a spy, and I WILL NOT ALLOW IT!~
-  IF ~~ THEN REPLY ~~ DO ~Enemy()
+  IF ~~ THEN REPLY ~So be it.~ DO ~Enemy()
 ~ EXIT
 END

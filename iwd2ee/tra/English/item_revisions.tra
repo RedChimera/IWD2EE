@@ -10649,6 +10649,14 @@ Special:
   Wearer is immune to all charm and domination effects
 Weight: 4 lb.~
 
+//@12315    = ~Wyvern Poison~
+@12316    = ~This bottle contains the unspent poison that has been extracted from a wyvern's stinger. Now refined by yuan-ti alchemical equipment, the poison can be put on a weapon to make it deadlier. However, given the centrality of poison to yuan-ti, it is possible that this poison serves some other purpose in Dragon's Eye.
+
+STATISTICS:
+
+This poison can be put on a weapon to make the weapon poison creatures on hit. When full, the bottle has enough poison for three uses.
+
+Weight: 1 lb.~
 
 @12413    = ~Storm Shell Amulet~
 @12414    = ~Amulets are usually magical devices that are commonly worn around the neck, suspended from a chain.  The type of chain that comes with an amulet generally increases the item's aesthetic value, not its magical properties.  Only one amulet can be dangled from the neck.
@@ -10690,7 +10698,7 @@ Weight: 1 lb.~
 
 STATISTICS:
 
-Generic Armor Bonus: +5 
+Generic Armor Bonus: +5
 Saving Throw Bonus: +5
 Weight: 1 lb.~
 @12425    = ~Returning Throwing Axe +5~
@@ -10869,7 +10877,7 @@ Special:
   Retaliation: Whenever wearer is hit by a melee attack, he or she automatically makes an additional melee attack against a nearby enemy.
 Weight: 15 lb.~
 @12457    = ~Cloak of Protection +3~
-@12458    = ~This simple cloak has been imbued with some small magical properties to help protect its wearer. It does so by affecting both saving throws and armor class. It is ideal for wizards and others who cannot wear bulkier or more restrictive types of armor. 
+@12458    = ~This simple cloak has been imbued with some small magical properties to help protect its wearer. It does so by affecting both saving throws and armor class. It is ideal for wizards and others who cannot wear bulkier or more restrictive types of armor.
 
 STATISTICS:
 
@@ -10877,7 +10885,7 @@ Deflection Bonus:  +3
 Saving Throw:  +3 bonus
 Weight:  3 lb.~
 @12459    = ~Cloak of Protection +4~
-@12460    = ~This simple cloak has been imbued with some small magical properties to help protect its wearer. It does so by affecting both saving throws and armor class. It is ideal for wizards and others who cannot wear bulkier or more restrictive types of armor. 
+@12460    = ~This simple cloak has been imbued with some small magical properties to help protect its wearer. It does so by affecting both saving throws and armor class. It is ideal for wizards and others who cannot wear bulkier or more restrictive types of armor.
 
 STATISTICS:
 
@@ -10974,7 +10982,7 @@ STATISTICS:
 Generic Armor Bonus: +3
 Weight: 2 lb.~
 @12477    = ~Executioner Helm~
-@12478    = ~This class of decorative helmet, made of reinforced leather or metal, covers the face and head. Eye slits and breathing holes come highly recommended.  
+@12478    = ~This class of decorative helmet, made of reinforced leather or metal, covers the face and head. Eye slits and breathing holes come highly recommended.
 
 STATISTICS:
 

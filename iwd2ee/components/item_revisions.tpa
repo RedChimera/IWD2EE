@@ -3282,6 +3282,15 @@ COPY_EXISTING ~00WAND45.itm~ ~override~
 COPY_EXISTING ~00HELM07.itm~ ~override~
 	SAY IDENTIFIED_DESC @12314
 
+COPY_EXISTING ~61GENWP.itm~ ~override~
+	SAY UNIDENTIFIED_DESC @12316
+
+COPY_EXISTING ~61pbrewt.bcs~ ~override~
+	DECOMPILE_AND_PATCH BEGIN
+		REPLACE_TEXTUALLY CASE_INSENSITIVE ~GiveItemCreate(\"61GenWP\",\"PoisonTable\",1,0,0)~ ~GiveItemCreate("61GenWP","PoisonTable",3,0,0)~
+		REPLACE_TEXTUALLY CASE_INSENSITIVE ~Global(\"61ExitTo6104Open\",\"GLOBAL\",1)~ ~False()~
+	END
+
 
 //New items go below. The initial items have been sorted by item type, but items made later should just go at the end, regardless of their type.
 
