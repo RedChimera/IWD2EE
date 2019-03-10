@@ -1,14 +1,71 @@
 //NOTES
 //COPY ~%mod_folder%/are/AR6103.are~ ~override~
 
+OUTER_PATCH us_faster_horde_variables BEGIN
+	regionsize=0xc4
+	doorsize=0xc8
+END
+
+INCLUDE ~%mod_folder%/components/us_functions.tpa~ //Functions that may be used in multiple components
+
+
+
+COPY_EXISTING ~61pbridg.bcs~ ~override~
+	DECOMPILE_AND_PATCH BEGIN
+		REPLACE_TEXTUALLY CASE_INSENSITIVE ~.IsAnimationID.*
+~ ~
+~
+	END
+
+COPY_EXISTING ~61pexrmp.bcs~ ~override~
+	DECOMPILE_AND_PATCH BEGIN
+		REPLACE_TEXTUALLY CASE_INSENSITIVE ~Global(\"FountainCount\",\"MYAREA\",4)~ ~~
+	END
+
+COPY_EXISTING ~61pslime.bcs~ ~override~
+	DECOMPILE_AND_PATCH BEGIN
+		REPLACE_TEXTUALLY CASE_INSENSITIVE ~SetGlobalTimer(\"SlimeDoorTimer\",\"MYAREA\",ONE_DAY)~ ~SetGlobalTimer("SlimeDoorTimer","MYAREA",60)~
+	END
+
+COPY_EXISTING ~61sseeye.bcs~ ~override~
+	DECOMPILE_AND_PATCH BEGIN
+		REPLACE_TEXTUALLY CASE_INSENSITIVE ~.IsAnimationID.*
+~ ~False()
+~
+	END
+
+<<<<<<<< .../script.baf
+
+IF
+	NumTimesTalkedToGT(0)
+	AttackedBy([PC],DEFAULT)
+	See([PC],0)
+	GlobalGT("61NumEfreetiKilled","GLOBAL",9)
+	Global("CurrentForm","LOCALS",0)
+THEN
+	RESPONSE #100
+		SetGlobal("CurrentForm","LOCALS",1)
+		SetGlobal("ChangeForm","LOCALS",1)
+		DialogInterrupt(FALSE)
+END
+
+>>>>>>>>
+EXTEND_TOP ~61thoram.bcs~ ~.../script.baf~
+
+STRING_SET_EVALUATE 35435 ~This strange door does not budge. Written on it in calligraphy are the words, "Only by the will of the High Priest shalt thou pass."~
+
+/*
 // patches a door so you can force it open and also rigs the northmost exit in Lord Pyros' domain to lead to the Fields of Slaughter instead of back to Dragon's Eye
 
 COPY_EXISTING ~AR6103.are~ ~override~
  WRITE_BYTE 0xE428 99
 BUT_ONLY
+
+*/
 COPY_EXISTING ~AR6104.are~ ~override~
  WRITE_BYTE 0x91E6 0x36
  WRITE_BYTE 0x91E7 0x32
  WRITE_BYTE 0x91E8 0x30
  WRITE_BYTE 0x91E9 0x30
 BUT_ONLY
+
