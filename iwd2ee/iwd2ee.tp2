@@ -291,10 +291,13 @@ BEGIN @40
 BEGIN @41
 
       INCLUDE ~%mod_folder%/components/armor_damage_resistance.tpa~      //~Minor Damage Resistance for Armor and Shields~
-	  
+
 //ChangeAIScript Fix
 
 BEGIN @42
 
       INCLUDE ~%mod_folder%/components/change_ai_script_fix.tpa~      //~ChangeAIScript Fix~
 
+//Race Revisions
+BEGIN @43 //
+      INCLUDE ~%mod_folder%/components/race_revisions.tpa~      //Race Revisions

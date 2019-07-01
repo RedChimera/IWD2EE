@@ -1,5 +1,5 @@
 //TRA num 1-100
-@1    = ~Class Rebalancing~
+@1    = ~Class Revisions~
 @2    = ~Looser Alignment Restrictions~
 @3    = ~Spell Revisions~
 @4    = ~Spell Focus Feats for All Schools~
@@ -41,3 +41,4 @@
 @40   = ~Revised Battle Square~
 @41   = ~Minor Damage Resistance for Armor and Shields~
 @42   = ~ChangeAIScript Fix~
+@43   = ~Race Revisions~

@@ -128,7 +128,11 @@ Spell Focus: Transmutation/Abjuration
 
 --Item Revisions--
 
-This component rebalances numerous items in IWD2, including some that only show up in Heart of Fury mode or as random drops. It also updates many incomplete spell descriptions, including save DCs for on-hit effects.
+Normally, Icewind Dale 2's items are balanced terribly. There are a handful of ridiculously overpowered magic items (e.g. Winged Blight, Massive Halberd of Hate) towering over hundreds of almost useless magic items (e.g. items that just provide +1 Hide skill or 1/- Spell Resistance). It's not even a low-magic game: one gets tons of magic items, but most of them suck.
+
+This component revises most of the magical items in Icewind Dale 2, giving them a much larger variety of useful abilities. The purpose is primarily to empower weak items rather than to weaken strong items. It also updates many incomplete spell descriptions, including save DCs for on-hit effects.
+
+Item Revisions also adds many new items to the random loot tables, including powerful armor, shields, rings, amulets, and ammunition. 
 
 --Creature Rebalancing--
 
@@ -227,6 +231,18 @@ Dragons
 
 Due to how the component works, some mod-introduced items and spells may not work on their intended targets. For example, a hammer that does extra damage to golems will no longer deal extra damage to anything, while a spell that deals extra damage to shapeshifters will now deal extra damage to humans. Vanilla items and spells, however, should work normally; the Kegsplitter will affect kegs properly, and the Goblinslayer dagger will apply its effects to all "goblinoid" enemies, which includes orcs in this component.
 
+--Revised Battle Square--
+
+To get all the rewards for the Battle Square, one normally has to fight 25 battles per rank, to a total of 250 battles. Even if the party members are powerful enough to win all the battles, this is still very tedious.
+
+This component makes it so one only has to beat a rank once (with 3 or more squares) to get the main reward for the rank. To get all the rewards, it will only take 30 battles rather than 250.
+
+--Minor Damage Resistance for Armor and Shields--
+
+Inspired by Weimer's similar component from IWD2-Ease, this component patches every armor and shield in the game so they give physical damage resistance equal to half their Armor Class bonus, rounded down. 
 
 This mod is most balanced when installed on top of other mods like Light of Selune, Tweaks for IWD2, and Tactics4IWD2, but it also works on its own. Much of the credit for the inspiration for this mod goes to the makers of those three mods, which provided the groundwork for this mod and the changes it makes. I would also like to thank @Firecrow, who provided indispensable feedback and played an instrumental role in inspiring many of the mod's features, and @subtledoctor, @bubb, and @Gwendolyne for providing invaluable technical support during the construction of the mod.
 
+--Race Revisions--
+
+This component makes race stats less different. All racial ability score bonuses and penalties are halved (e.g. moon elves just get +1 Dexterity and -1 Constitution), but all characters can get up to 19 in an ability score at character creation rather than 18.
