@@ -130,8 +130,8 @@ COPY ~%mod_folder%/itm/50POTN56.itm~ ~override~
 
 // all relevant class tables
 
-COPY ~%mod_folder%/tables/ABRACERQ.2da~ ~override~
-COPY ~%mod_folder%/tables/ABRACEAD.2da~ ~override~
+//COPY ~%mod_folder%/tables/ABRACERQ.2da~ ~override~
+//COPY ~%mod_folder%/tables/ABRACEAD.2da~ ~override~
 COPY ~%mod_folder%/tables/BAATFGT.2da~ ~override~
 COPY ~%mod_folder%/tables/BAATMAG.2da~ ~override~
 COPY ~%mod_folder%/tables/BAATMKU.2da~ ~override~
@@ -714,7 +714,7 @@ COPY_EXISTING ~help03.2da~ ~override~
   END
   SET_2DA_ENTRIES_NOW rows_out num_cols
 BUT_ONLY
-
+/*
 COPY_EXISTING ~help04.2da~ ~override~
   COUNT_2DA_COLS num_cols
   READ_2DA_ENTRIES_NOW rows num_cols
@@ -782,7 +782,7 @@ COPY_EXISTING ~help04.2da~ ~override~
   END
   SET_2DA_ENTRIES_NOW rows_out num_cols
 BUT_ONLY
-
+*/
 // New description reflecting the changes to Painbearers of Ilmater
 COPY_EXISTING ~KITLIST.2da~ ~override~
   COUNT_2DA_COLS num_cols
@@ -800,8 +800,8 @@ COPY_EXISTING ~KITLIST.2da~ ~override~
   SET_2DA_ENTRIES_NOW rows_out num_cols
 BUT_ONLY
 
+/*
 // Not all race and class descriptions are connected to .2da files. For the others, we have to use STRING_SET to simply replace them.
-
 STRING_SET 25 ~HALF-ORCS:
 
 Half-orcs are born from the union of human and orc parents. They are as tall as humans, but a little heavier due to their muscular builds. Their greenish pigmentation, sloping forehead, jutting jaw, prominent teeth and coarse body hair make their lineage plain for all to see.  Half-orcs are known for their great strength.
@@ -987,7 +987,7 @@ Advantages:
 Disadvantages:
 * Level Adjustment +1: Aasimar are slightly more powerful and gain levels at a rate of about one level behind that of the common races.
 ~
-
+*/
 // New descriptions for other classes, including replacing the descriptions for specialist mages.
 
 
@@ -1005,14 +1005,14 @@ STRING_SET 9560 @531
 STRING_SET 9558 @537
 STRING_SET 9557 @539
 STRING_SET 36 @535
-STRING_SET 9554 ~STUNNING ATTACK:
+STRING_SET 37695 ~STUNNING ATTACK:
 
 You know how to strike opponents in vulnerable areas.
 
 Prerequisites: Dex 13+, Wis 13+, base attack bonus +8 or higher
 
 Benefit:  When attacking with Stunning Attack, it forces a foe damaged by your unarmed attack to make a Fortitude saving throw (DC 10 + one-half you level + Wis modifier), in addition to dealing damage normally.  If the defender fails his saving throw, he is stunned for 1 round.  A stunned character can't act and can be hit automatically.  You may attempt a stunning attack once per day for every four levels you have attained.~
-
+/*
 STRING_SET 9554 ~LIGHTFOOT HALFLING:
 
 Halflings stand about three feet tall, with florid skin and dark hair and eyes.  Unlike the more segregated strongheart halflings, the lightfoots of the Forgotten Realms are a common sight in human, elven, and dwarven lands. Lightfoot halflings are known for their incredible luck and their love of travel. They tend to be more gregarious than even their strongheart kin.
@@ -1080,6 +1080,7 @@ Advantages:
 Disadvantages:
 * -1 to Charisma.
 ~
+*/
 STRING_SET 9556 @533
 STRING_SET 37 @525
 STRING_SET 36 @535

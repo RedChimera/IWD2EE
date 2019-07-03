@@ -123,3 +123,445 @@ BEGIN
 	END
 
 END
+
+	//	v1.0
+	DEFINE_PATCH_FUNCTION	IWD2_ADD_CRE_ITEM
+		INT_VAR
+			cq1 = 0
+			cq2 = 0
+			cq3 = 0
+			equip = 1
+			ability = 0
+		STR_VAR
+			mode = ~~
+			item = ~~
+			flags = ~~
+			slot = ~~
+	BEGIN
+		READ_ASCII	0	sig	(8)
+		PATCH_IF	~%sig%~	STRING_EQUAL	~CRE V2.2~	BEGIN
+			LPF	IWD2_CRE_REINDEX	RET	slt_off	itm_off	itm_num	fx_off	END
+			SET	flag = 0
+			PATCH_IF	! ~%flags%~	STRING_CONTAINS_REGEXP	~identified~	BEGIN	SET	flag |= 1	END
+			PATCH_IF	! ~%flags%~	STRING_CONTAINS_REGEXP	~unstealable~	BEGIN	SET	flag |= 2	END
+			PATCH_IF	! ~%flags%~	STRING_CONTAINS_REGEXP	~stolen~			BEGIN	SET	flag |= 4	END
+			PATCH_IF	! ~%flags%~	STRING_CONTAINS_REGEXP	~undroppable~	BEGIN	SET	flag |= 8	END
+			TO_LOWER	slot
+			TO_LOWER	mode
+			SET	itm_add = 1
+			INNER_PATCH	~%slot%~	BEGIN
+				REPLACE_TEXTUALLY	~[ %TAB%%WNL%%MNL%%LNL%]+~	~ ~
+				COUNT_2DA_COLS	cols
+				READ_2DA_ENTRIES_NOW	~READ_ADD_CRE_ITEM~	cols
+			END
+			SET	wpn_slot = ~-1~	FOR	(i = 9; i < 16; i+=2)		BEGIN	READ_SHORT	(slt_off + i * 0x2)	index	PATCH_IF index = 65535	BEGIN	SET	wpn_slot = i	SET	i = 16	END	END
+			SET	shd_slot = ~-1~	FOR	(i = 10; i < 17; i+=2)	BEGIN	READ_SHORT	(slt_off + i * 0x2)	index	PATCH_IF index = 65535	BEGIN	SET	shd_slot = i	SET	i = 17	END	END
+			SET	inv_slot = ~-1~	FOR	(i = 25; i < 49; ++i)		BEGIN	READ_SHORT	(slt_off + i * 0x2)	index	PATCH_IF index = 65535	BEGIN	SET	inv_slot = i	SET	i = 49	END	END
+			SET	qvr_slot = ~-1~	FOR	(i = 17; i < 20; ++i)		BEGIN	READ_SHORT	(slt_off + i * 0x2)	index	PATCH_IF index = 65535	BEGIN	SET	qvr_slot = i	SET	i = 20	END	END
+			SET	qit_slot = ~-1~	FOR	(i = 22; i < 25; ++i)		BEGIN	READ_SHORT	(slt_off + i * 0x2)	index	PATCH_IF index = 65535	BEGIN	SET	qit_slot = i	SET	i = 25	END	END
+			SET	rng_slot = ~-1~		FOR	(i = 4; i < 6; ++i)		BEGIN	READ_SHORT	(slt_off + i * 0x2)	index	PATCH_IF index = 65535	BEGIN	SET	rng_slot = i	SET	i = 6		END	END
+			FOR	(i = 0; i < cols; ++i)	BEGIN
+				READ_2DA_ENTRY_FORMER	~READ_ADD_CRE_ITEM~ 0 i slot
+				PATCH_MATCH	~%slot%~
+				WITH	~helmet~	BEGIN	SET	slot = 0		END	~armor~		BEGIN	SET	slot = 1		END	~shield~	BEGIN	SET	slot = 2		END	~gloves~	BEGIN	SET	slot = 3
+					END	~lring~		BEGIN	SET	slot = 4		END	~rring~		BEGIN	SET	slot = 5		END	~amulet~	BEGIN	SET	slot = 6		END	~belt~		BEGIN	SET	slot = 7
+					END	~boots~		BEGIN	SET	slot = 8		END	~ring~		BEGIN	SET	slot = 53		END	~inv~			BEGIN	SET	slot = 54		
+					END	~weapon1~	BEGIN	SET	slot = 9		END	~shield1~	BEGIN	SET	slot = 10		END	~weapon2~	BEGIN	SET	slot = 11		END	~shield2~	BEGIN	SET	slot = 12
+					END	~weapon3~	BEGIN	SET	slot = 13		END	~shield3~	BEGIN	SET	slot = 14		END	~weapon4~	BEGIN	SET	slot = 15		END	~shield4~	BEGIN	SET	slot = 16
+					END	~quiver1~	BEGIN	SET	slot = 17		END	~quiver2~	BEGIN	SET	slot = 18		END	~quiver3~	BEGIN	SET	slot = 19		END	~quiver4~	BEGIN	SET	slot = 20
+					END	~cloak~		BEGIN	SET	slot = 21		END	~qitem1~	BEGIN	SET	slot = 22		END	~qitem2~	BEGIN	SET	slot = 23		END	~qitem3~	BEGIN	SET	slot = 24
+					END	~inv1~		BEGIN	SET	slot = 25		END	~inv2~		BEGIN	SET	slot = 26		END	~inv3~		BEGIN	SET	slot = 27		END	~inv4~		BEGIN	SET	slot = 28
+					END	~inv5~		BEGIN	SET	slot = 29		END	~inv6~		BEGIN	SET	slot = 30		END	~inv7~		BEGIN	SET	slot = 31		END	~inv8~		BEGIN	SET	slot = 32
+					END	~inv9~		BEGIN	SET	slot = 33		END	~inv10~		BEGIN	SET	slot = 34		END	~inv11~		BEGIN	SET	slot = 35		END	~inv12~		BEGIN	SET	slot = 36
+					END	~inv13~		BEGIN	SET	slot = 37		END	~inv14~		BEGIN	SET	slot = 38		END	~inv15~		BEGIN	SET	slot = 39		END	~inv16~		BEGIN	SET	slot = 40
+					END	~inv17~		BEGIN	SET	slot = 41		END	~inv18~		BEGIN	SET	slot = 42		END	~inv19~		BEGIN	SET	slot = 43		END	~inv20~		BEGIN	SET	slot = 44
+					END	~inv21~		BEGIN	SET	slot = 45		END	~inv22~		BEGIN	SET	slot = 46		END	~inv23~		BEGIN	SET	slot = 47		END	~inv24~		BEGIN	SET	slot = 48
+					END	~magic~		BEGIN	SET	slot = 49		END	~weapon~	BEGIN	SET	slot = 50		END	~quiver~	BEGIN	SET	slot = 51		END	~qitem~		BEGIN	SET	slot = 52
+					END	DEFAULT	SET	slot = ~-1~
+				END
+				PATCH_IF	slot = ~-1~	BEGIN
+					SET	i = cols
+					PATCH_IF	inv_slot != ~-1~	BEGIN
+						WRITE_SHORT	(slt_off + inv_slot * 0x2)	itm_num
+					END
+				END	ELSE	BEGIN
+					PATCH_MATCH	slot
+					WITH	2	WHEN shd_slot != ~-1~	BEGIN	slot = shd_slot
+						END	50 WHEN wpn_slot != ~-1~	BEGIN	slot = wpn_slot
+						END	51 WHEN qvr_slot != ~-1~	BEGIN	slot = qvr_slot
+						END	52 WHEN qit_slot != ~-1~	BEGIN	slot = qit_slot
+						END	53 WHEN rng_slot != ~-1~	BEGIN	slot = rng_slot
+						END	54 WHEN inv_slot != ~-1~	BEGIN	slot = inv_slot
+						END	DEFAULT
+							READ_SHORT	(slt_off + slot * 0x2)	value
+							PATCH_IF	value != 65535	BEGIN
+								PATCH_IF	~%mode%~	STRING_EQUAL	~move~	BEGIN
+									WRITE_SHORT	(slt_off + inv_slot * 0x2)	value
+									SET	i = cols
+								END
+								PATCH_IF	~%mode%~	STRING_EQUAL	~replace~	BEGIN
+									SET	i = cols
+									SET	itm_num = value
+									SET	itm_add = 0
+								END
+							END
+					END
+				END
+			END
+			PATCH_IF	slot = ~-1~	BEGIN
+				PATCH_WARN	~No available inventory slots, item not added.~
+			END	ELSE	BEGIN
+				WRITE_SHORT	(slt_off + slot * 0x2)	itm_num
+				PATCH_IF	itm_add	BEGIN
+					INSERT_BYTES	(itm_off + itm_num * 0x14)	0x14
+				END
+				WRITE_ASCIIE	(itm_off + itm_num * 0x14)	~%item%~	#8
+				WRITE_SHORT		(itm_off + itm_num * 0x14 + 0xa)	cq1
+				WRITE_SHORT		(itm_off + itm_num * 0x14 + 0xc)	cq2
+				WRITE_SHORT		(itm_off + itm_num * 0x14 + 0xe)	cq3
+				WRITE_LONG		(itm_off + itm_num * 0x14 + 0x10)	flag
+				PATCH_IF	equip	BEGIN
+					PATCH_MATCH	slot
+					WITH	9 11 13 15	BEGIN
+							SET	index = (slot - 9) / 2
+							WRITE_SHORT	(slt_off + 50 * 0x2)	index
+							WRITE_SHORT	(slt_off + 51 * 0x2)	ability
+						END	49	BEGIN
+							WRITE_SHORT	(slt_off + 50 * 0x2)	1000
+							WRITE_SHORT	(slt_off + 51 * 0x2)	ability
+						END	DEFAULT
+					END
+				END
+				WRITE_LONG	0x61a (THIS + itm_add)		//	Item count
+				WRITE_LONG	0x61e	(THIS + itm_add * 0x14)	//	Effects offset
+			END
+		END
+	END
+	
+
+	//	v1.0
+	DEFINE_PATCH_FUNCTION	IWD2_REMOVE_CRE_ITEM
+		STR_VAR
+			item = ~~
+	BEGIN
+		READ_ASCII	0	sig	(8)
+		PATCH_IF	~%sig%~	STRING_EQUAL	~CRE V2.2~	BEGIN
+			INNER_PATCH_SAVE	item ~%item%~ BEGIN	INSERT_BYTES BUFFER_LENGTH 1	WRITE_BYTE (BUFFER_LENGTH - 1) 32	INSERT_BYTES 0 1	WRITE_BYTE	0 32	END
+			TEXT_SPRINT	w ~[ %TAB%%WNL%%MNL%%LNL%]~
+			LPF	IWD2_CRE_REINDEX	RET	slt_off	itm_off	itm_num	fx_off	END
+			TO_UPPER	item
+			SET	itm_add = 0
+			PATCH_IF	~%item%~ STRING_EQUAL ~~	BEGIN
+				DELETE_BYTES	itm_off	(itm_num * 0x14)
+				FOR (j = 0; j < 50;	++j)	BEGIN
+					WRITE_SHORT	(slt_off + j * 0x2)	~-1~
+				END
+				SET	itm_add -= itm_num
+			END	ELSE	BEGIN
+				FOR	(i = 0; i < itm_num; ++i)	BEGIN
+					READ_ASCII	(itm_off + i * 0x14)	resref
+					TO_UPPER resref
+					PATCH_IF	! ~%item%~ STRING_CONTAINS_REGEXP ~%w%%resref%%w%~	BEGIN
+						DELETE_BYTES	(itm_off + i * 0x14)	0x14
+						FOR (j = 0; j < 50;	++j)	BEGIN
+							READ_SHORT	(slt_off + j * 0x2)	slot
+							PATCH_IF	slot > i	BEGIN
+								WRITE_SHORT	(slt_off + j * 0x2) (THIS - 1)
+							END
+							PATCH_IF	slot = i	BEGIN
+								WRITE_SHORT	(slt_off + j * 0x2)	~-1~
+							END
+						END
+						SET	itm_add -= 1	SET	i -= 1	SET	itm_num -= 1
+					END
+				END
+			END
+			WRITE_LONG	0x61a (THIS + itm_add)		//	Item count
+			WRITE_LONG	0x61e	(THIS + itm_add * 0x14)	//	Effects offset
+		END
+	END
+
+	//	v1.0
+	DEFINE_PATCH_FUNCTION	IWD2_CRE_REINDEX
+		RET
+			ba_0_off ba_0_num ba_1_off ba_1_num ba_2_off ba_2_num ba_3_off ba_3_num ba_4_off ba_4_num ba_5_off ba_5_num ba_6_off ba_6_num ba_7_off ba_7_num ba_8_off ba_8_num
+			cl_0_off cl_0_num cl_1_off cl_1_num cl_2_off cl_2_num cl_3_off cl_3_num cl_4_off cl_4_num cl_5_off cl_5_num cl_6_off cl_6_num cl_7_off cl_7_num cl_8_off cl_8_num
+			dr_0_off dr_0_num dr_1_off dr_1_num dr_2_off dr_2_num dr_3_off dr_3_num dr_4_off dr_4_num dr_5_off dr_5_num dr_6_off dr_6_num dr_7_off dr_7_num dr_8_off dr_8_num
+			pa_0_off pa_0_num pa_1_off pa_1_num pa_2_off pa_2_num pa_3_off pa_3_num pa_4_off pa_4_num pa_5_off pa_5_num pa_6_off pa_6_num pa_7_off pa_7_num pa_8_off pa_8_num
+			ra_0_off ra_0_num ra_1_off ra_1_num ra_2_off ra_2_num ra_3_off ra_3_num ra_4_off ra_4_num ra_5_off ra_5_num ra_6_off ra_6_num ra_7_off ra_7_num ra_8_off ra_8_num
+			so_0_off so_0_num so_1_off so_1_num so_2_off so_2_num so_3_off so_3_num so_4_off so_4_num so_5_off so_5_num so_6_off so_6_num so_7_off so_7_num so_8_off so_8_num
+			wi_0_off wi_0_num wi_1_off wi_1_num wi_2_off wi_2_num wi_3_off wi_3_num wi_4_off wi_4_num wi_5_off wi_5_num wi_6_off wi_6_num wi_7_off wi_7_num wi_8_off wi_8_num
+			do_0_off do_0_num do_1_off do_1_num do_2_off do_2_num do_3_off do_3_num do_4_off do_4_num do_5_off do_5_num do_6_off do_6_num do_7_off do_7_num do_8_off do_8_num
+			ab_off ab_num sng_off	sng_num	shp_off	shp_num	slt_off	itm_off	itm_num	fx_off	fx_num
+	BEGIN
+		FOR	(i = 0; i < 9; ++i)	BEGIN
+			READ_LONG	(0x3ba + i * 4) $ba(~%i%~ ~off~)	READ_LONG	(0x4b6 + i * 4)	EVAL $ba(~%i%~ ~num~)	SET	$ba(~%i%~ ~size~)	 = ($ba(~%i%~ ~num~) * 0x10 + 8)	READ_ASCII	$ba(~%i%~ ~off~)	EVAL $ba(~%i%~)	($ba(~%i%~ ~size~))
+			READ_LONG	(0x3de + i * 4) $cl(~%i%~ ~off~)	READ_LONG	(0x4da + i * 4)	EVAL $cl(~%i%~ ~num~)	SET	$cl(~%i%~ ~size~)	 = ($cl(~%i%~ ~num~) * 0x10 + 8)	READ_ASCII	$cl(~%i%~ ~off~)	EVAL $cl(~%i%~)	($cl(~%i%~ ~size~))
+			READ_LONG	(0x402 + i * 4) $dr(~%i%~ ~off~)	READ_LONG	(0x4fe + i * 4)	EVAL $dr(~%i%~ ~num~)	SET	$dr(~%i%~ ~size~)	 = ($dr(~%i%~ ~num~) * 0x10 + 8)	READ_ASCII	$dr(~%i%~ ~off~)	EVAL $dr(~%i%~)	($dr(~%i%~ ~size~))
+			READ_LONG	(0x426 + i * 4) $pa(~%i%~ ~off~)	READ_LONG	(0x522 + i * 4)	EVAL $pa(~%i%~ ~num~)	SET	$pa(~%i%~ ~size~)	 = ($pa(~%i%~ ~num~) * 0x10 + 8)	READ_ASCII	$pa(~%i%~ ~off~)	EVAL $pa(~%i%~)	($pa(~%i%~ ~size~))
+			READ_LONG	(0x44a + i * 4)	$ra(~%i%~ ~off~)	READ_LONG	(0x546 + i * 4)	EVAL $ra(~%i%~ ~num~)	SET	$ra(~%i%~ ~size~)	 = ($ra(~%i%~ ~num~) * 0x10 + 8)	READ_ASCII	$ra(~%i%~ ~off~)	EVAL $ra(~%i%~)	($ra(~%i%~ ~size~))
+			READ_LONG	(0x46e + i * 4) $so(~%i%~ ~off~)	READ_LONG	(0x56a + i * 4)	EVAL $so(~%i%~ ~num~)	SET	$so(~%i%~ ~size~)	 = ($so(~%i%~ ~num~) * 0x10 + 8)	READ_ASCII	$so(~%i%~ ~off~)	EVAL $so(~%i%~)	($so(~%i%~ ~size~))
+			READ_LONG	(0x492 + i * 4) $wi(~%i%~ ~off~)	READ_LONG	(0x58e + i * 4)	EVAL $wi(~%i%~ ~num~)	SET	$wi(~%i%~ ~size~)	 = ($wi(~%i%~ ~num~) * 0x10 + 8)	READ_ASCII	$wi(~%i%~ ~off~)	EVAL $wi(~%i%~)	($wi(~%i%~ ~size~))
+			READ_LONG	(0x5b2 + i * 4) $do(~%i%~ ~off~)	READ_LONG	(0x5d6 + i * 4)	EVAL $do(~%i%~ ~num~)	SET	$do(~%i%~ ~size~)	 = ($do(~%i%~ ~num~) * 0x10 + 8)	READ_ASCII	$do(~%i%~ ~off~)	EVAL $do(~%i%~)	($do(~%i%~ ~size~))
+		END
+		READ_LONG	0x5fa ab_off	READ_LONG	0x5fe	ab_num	SET	ab_size = (ab_num * 0x10 + 8)		READ_ASCII	ab_off	abilities	(ab_size)
+		READ_LONG	0x602	sng_off	READ_LONG	0x606	sng_num	SET	sng_size = (sng_num * 0x10 + 8)	READ_ASCII	sng_off	songs	(sng_size)
+		READ_LONG	0x60a	shp_off	READ_LONG	0x60e	shp_num	SET	shp_size = (shp_num * 0x10 + 8)	READ_ASCII	shp_off	shapes	(shp_size)
+		READ_LONG	0x612	slt_off																															READ_ASCII	slt_off	slots	(0x68)
+		READ_LONG	0x616	itm_off	READ_LONG	0x61a	itm_num	SET	itm_size = (itm_num * 0x14)			READ_ASCII	itm_off	items	(itm_size)
+		READ_LONG	0x61e	fx_off	READ_LONG	0x622	fx_num	SET	fx_size = (fx_num * 0x108)			READ_ASCII	fx_off	effects	(fx_size)
+		SET	offset = 0x62e
+		PATCH_IF	(ba_0_off > ba_1_off) OR (ba_1_off > ba_2_off) OR (ba_2_off > ba_3_off) OR (ba_3_off > ba_4_off) OR
+							(ba_4_off > ba_5_off) OR (ba_5_off > ba_6_off) OR (ba_6_off > ba_7_off) OR (ba_7_off > ba_8_off) OR (ba_8_off > cl_0_off) OR
+							(cl_0_off > cl_1_off) OR (cl_1_off > cl_2_off) OR (cl_2_off > cl_3_off) OR (cl_3_off > cl_4_off) OR
+							(cl_4_off > cl_5_off) OR (cl_5_off > cl_6_off) OR (cl_6_off > cl_7_off) OR (cl_7_off > cl_8_off) OR (cl_8_num > dr_0_off) OR
+							(dr_0_off > dr_1_off) OR (dr_1_off > dr_2_off) OR (dr_2_off > dr_3_off) OR (dr_3_off > dr_4_off) OR
+							(dr_4_off > dr_5_off) OR (dr_5_off > dr_6_off) OR (dr_6_off > dr_7_off) OR (dr_7_off > dr_8_off) OR (dr_8_num > pa_0_off) OR
+							(pa_0_off > pa_1_off) OR (pa_1_off > pa_2_off) OR (pa_2_off > pa_3_off) OR (pa_3_off > pa_4_off) OR
+							(pa_4_off > pa_5_off) OR (pa_5_off > pa_6_off) OR (pa_6_off > pa_7_off) OR (pa_7_off > pa_8_off) OR (pa_8_num > ra_0_off) OR
+							(ra_0_off > ra_1_off) OR (ra_1_off > ra_2_off) OR (ra_2_off > ra_3_off) OR (ra_3_off > ra_4_off) OR
+							(ra_4_off > ra_5_off) OR (ra_5_off > ra_6_off) OR (ra_6_off > ra_7_off) OR (ra_7_off > ra_8_off) OR (ra_8_num > ra_0_off) OR
+							(so_0_off > so_1_off) OR (so_1_off > so_2_off) OR (so_2_off > so_3_off) OR (so_3_off > so_4_off) OR
+							(so_4_off > so_5_off) OR (so_5_off > so_6_off) OR (so_6_off > so_7_off) OR (so_7_off > so_8_off) OR (so_8_num > so_0_off) OR
+							(wi_0_off > wi_1_off) OR (wi_1_off > wi_2_off) OR (wi_2_off > wi_3_off) OR (wi_3_off > wi_4_off) OR
+							(wi_4_off > wi_5_off) OR (wi_5_off > wi_6_off) OR (wi_6_off > wi_7_off) OR (wi_7_off > wi_8_off) OR (wi_8_num > wi_0_off) OR
+							(do_0_off > do_1_off) OR (do_1_off > do_2_off) OR (do_2_off > do_3_off) OR (do_3_off > do_4_off) OR
+							(do_4_off > do_5_off) OR (do_5_off > do_6_off) OR (do_6_off > do_7_off) OR (do_7_off > do_8_off) OR (do_8_num > ab_off) OR
+							(ab_off > sng_off) OR (sng_off > shp_off) OR (shp_off > slt_off) OR (slt_off >= itm_off) OR (itm_off > fx_off) BEGIN
+			SET	ba_0_off	= offset	WRITE_LONG	0x3ba	ba_0_off	WRITE_ASCIIE	ba_0_off	~%ba_0%~
+			FOR	(i = 1; i < 9; ++i)	BEGIN	SET	j = i - 1	SET	$ba(~%i%~ ~off~)	= $ba(~%j%~ ~off~) + $ba(~%j%~ ~size~)	WRITE_LONG	(0x3ba + i * 4)	$ba(~%i%~ ~off~)	WRITE_ASCIIE	$ba(~%i%~ ~off~)	$ba(~%i%~)	END
+			SET	cl_0_off	= ba_8_off + ba_8_size	WRITE_LONG	0x3de	cl_0_off	WRITE_ASCIIE	cl_0_off	~%cl_0%~
+			FOR	(i = 1; i < 9; ++i)	BEGIN	SET	j = i - 1	SET	$cl(~%i%~ ~off~)	= $cl(~%j%~ ~off~) + $cl(~%j%~ ~size~)	WRITE_LONG	(0x3de + i * 4)	$cl(~%i%~ ~off~)	WRITE_ASCIIE	$cl(~%i%~ ~off~)	$cl(~%i%~)	END
+			SET	dr_0_off	= cl_8_off + cl_8_size	WRITE_LONG	0x402	dr_0_off	WRITE_ASCIIE	dr_0_off	~%dr_0%~
+			FOR	(i = 1; i < 9; ++i)	BEGIN	SET	j = i - 1	SET	$dr(~%i%~ ~off~)	= $dr(~%j%~ ~off~) + $dr(~%j%~ ~size~)	WRITE_LONG	(0x402 + i * 4)	$dr(~%i%~ ~off~)	WRITE_ASCIIE	$dr(~%i%~ ~off~)	$dr(~%i%~)	END
+			SET	pa_0_off	= dr_8_off + dr_8_size	WRITE_LONG	0x426	pa_0_off	WRITE_ASCIIE	pa_0_off	~%pa_0%~
+			FOR	(i = 1; i < 9; ++i)	BEGIN	SET	j = i - 1	SET	$pa(~%i%~ ~off~)	= $pa(~%j%~ ~off~) + $pa(~%j%~ ~size~)	WRITE_LONG	(0x426 + i * 4)	$pa(~%i%~ ~off~)	WRITE_ASCIIE	$pa(~%i%~ ~off~)	$pa(~%i%~)	END
+			SET	ra_0_off	= pa_8_off + pa_8_size	WRITE_LONG	0x44a	ra_0_off	WRITE_ASCIIE	ra_0_off	~%ra_0%~
+			FOR	(i = 1; i < 9; ++i)	BEGIN	SET	j = i - 1	SET	$ra(~%i%~ ~off~)	= $ra(~%j%~ ~off~) + $ra(~%j%~ ~size~)	WRITE_LONG	(0x44a + i * 4)	$ra(~%i%~ ~off~)	WRITE_ASCIIE	$ra(~%i%~ ~off~)	$ra(~%i%~)	END
+			SET	so_0_off	= ra_8_off + ra_8_size	WRITE_LONG	0x46e	so_0_off	WRITE_ASCIIE	so_0_off	~%so_0%~
+			FOR	(i = 1; i < 9; ++i)	BEGIN	SET	j = i - 1	SET	$so(~%i%~ ~off~)	= $so(~%j%~ ~off~) + $so(~%j%~ ~size~)	WRITE_LONG	(0x46e + i * 4)	$so(~%i%~ ~off~)	WRITE_ASCIIE	$so(~%i%~ ~off~)	$so(~%i%~)	END
+			SET	wi_0_off	= so_8_off + so_8_size	WRITE_LONG	0x492	wi_0_off	WRITE_ASCIIE	wi_0_off	~%wi_0%~
+			FOR	(i = 1; i < 9; ++i)	BEGIN	SET	j = i - 1	SET	$wi(~%i%~ ~off~)	= $wi(~%j%~ ~off~) + $wi(~%j%~ ~size~)	WRITE_LONG	(0x492 + i * 4)	$wi(~%i%~ ~off~)	WRITE_ASCIIE	$wi(~%i%~ ~off~)	$wi(~%i%~)	END
+			SET	do_0_off	= wi_8_off + wi_8_size	WRITE_LONG	0x5b2	do_0_off	WRITE_ASCIIE	do_0_off	~%do_0%~
+			FOR	(i = 1; i < 9; ++i)	BEGIN	SET	j = i - 1	SET	$do(~%i%~ ~off~)	= $do(~%j%~ ~off~) + $do(~%j%~ ~size~)	WRITE_LONG	(0x5b2 + i * 4)	$do(~%i%~ ~off~)	WRITE_ASCIIE	$do(~%i%~ ~off~)	$do(~%i%~)	END
+				
+			SET	ab_off	= do_8_off + do_8_size	WRITE_LONG	0x5fa	ab_off	WRITE_ASCIIE	ab_off	~%abilities%~
+			SET	sng_off	= ab_off + ab_size			WRITE_LONG	0x602	sng_off	WRITE_ASCIIE	sng_off	~%songs%~
+			SET	shp_off	= sng_off + sng_size		WRITE_LONG	0x60a	shp_off	WRITE_ASCIIE	shp_off	~%shapes%~
+			SET	slt_off	= shp_off + shp_size		WRITE_LONG	0x612	slt_off	WRITE_ASCIIE	slt_off	~%slots%~
+			SET	itm_off	= slt_off + 0x68				WRITE_LONG	0x616	itm_off	WRITE_ASCIIE	itm_off	~%items%~
+			SET	fx_off	= itm_off + itm_size		WRITE_LONG	0x61e	fx_off	WRITE_ASCIIE	fx_off	~%effects%~
+		END
+	END
+	
+	
+
+DEFINE_PATCH_FUNCTION ~REPLACE_AREA_ITEM_IWD2~
+	INT_VAR
+		single_match=0
+		charges1=~-1~
+		charges2=~-1~
+		charges3=~-1~
+	STR_VAR
+		old_item=~~
+		new_item=~~
+		flags=~same~
+BEGIN
+	SET item_name_length = (STRING_LENGTH ~%old_item%~)
+	PATCH_IF (~%flags%~ STRING_EQUAL_CASE ~same~) BEGIN
+		SET flag = 0xDEFA
+	END ELSE BEGIN
+	SET	flag = 0
+	PATCH_IF	! ~%flags%~	STRING_CONTAINS_REGEXP	~identified~	BEGIN SET	flag |= 1	END
+	PATCH_IF	! ~%flags%~	STRING_CONTAINS_REGEXP	~unstealable~	BEGIN SET	flag |= 2	END
+	PATCH_IF	! ~%flags%~	STRING_CONTAINS_REGEXP	~stolen~		BEGIN SET	flag |= 4	END
+	PATCH_IF	! ~%flags%~	STRING_CONTAINS_REGEXP	~undroppable~	BEGIN SET	flag |= 8	END
+	END
+	SET item_found = 0
+	READ_SHORT 0x86 itemnumber
+	READ_LONG 0x88 itemoffset
+	FOR (i = 0; i < itemnumber; ++i) BEGIN
+		SET offset = itemoffset + (i * 0x14)
+		READ_ASCII offset name_of_item (item_name_length)
+		PATCH_IF (~%name_of_item%~ STRING_EQUAL_CASE ~%old_item%~) BEGIN
+			item_found = 1
+			WRITE_ASCIIE offset ~%new_item%~ #8
+			PATCH_IF (charges1 != (0 - 1)) BEGIN
+				WRITE_SHORT (offset + 0xa) charges1
+			END
+			PATCH_IF (charges2 != (0 - 1)) BEGIN
+				WRITE_SHORT (offset + 0xc) charges2
+			END
+			PATCH_IF (charges3 != (0 - 1)) BEGIN
+				WRITE_SHORT (offset + 0xe) charges3
+			END
+			PATCH_IF (flag != 0xDEFA) BEGIN
+				WRITE_LONG (offset + 0x10) flag
+			END
+
+
+			PATCH_IF (single_match = 1) BEGIN
+				i = itemnumber
+			END
+			
+		END
+	END
+	PATCH_IF (item_found = 0) BEGIN
+		PATCH_WARN ~No item called %old_item% was found.~
+	END
+
+END
+
+DEFINE_PATCH_FUNCTION ~CONVERT_DLG_TO_IWD2_FORMAT~
+BEGIN
+	READ_LONG 0xc ulgiash
+	PATCH_IF (ulgiash = 0x34) BEGIN
+		DELETE_BYTES 0x30 4
+
+		READ_LONG 0xc ulgiash
+		ulgiash -= 4
+		WRITE_LONG 0xc ulgiash
+	
+		READ_LONG 0x14 ulgiash
+		ulgiash -= 4
+		WRITE_LONG 0x14 ulgiash
+
+		READ_LONG 0x18 ulgiash
+		ulgiash -= 4
+		WRITE_LONG 0x18 ulgiash
+		READ_LONG ulgiash ulgiash
+		INSERT_BYTES (ulgiash - 2) 2
+		
+		READ_LONG 0x20 ulgiash
+		ulgiash -= 4
+		WRITE_LONG 0x20 ulgiash
+	
+		READ_LONG 0x28 ulgiash
+		ulgiash -= 4
+		WRITE_LONG 0x28 ulgiash
+		READ_LONG ulgiash ulgiash
+		INSERT_BYTES (ulgiash - 2) 2
+	END
+END
+
+DEFINE_PATCH_FUNCTION ~GET_2DA_ROW~
+	INT_VAR
+		starting_row=0
+		numcolumns=0
+		match_column=0
+		found_it=0
+	STR_VAR
+		match=~DEFA~
+	RET
+		numcols
+		matched
+BEGIN
+		COUNT_2DA_ROWS numcolumns numrows
+		FOR (i = starting_row; i < numrows; ++i) BEGIN
+			READ_2DA_ENTRY i match_column numcolumns string_to_match
+			PATCH_IF (~%string_to_match%~ STRING_EQUAL_CASE ~%match%~) BEGIN
+				matched = i
+				found_it = 1
+				i = numrows
+
+			END
+		END
+		numcols = numcolumns
+		PATCH_IF (found_it = 0) BEGIN
+			PATCH_FAIL ~GET_2DA_ROW: Could not find a row that contains %match% in column %match_column%.~
+		END
+END
+
+DEFINE_ACTION_FUNCTION ~ACTION_APPEND_TO_STRING~
+	INT_VAR
+		strref=(0 - 1)
+		new_string=0
+	STR_VAR
+		newtext=~~
+	RET
+		new_strref
+		description_new
+BEGIN
+	ACTION_GET_STRREF strref description_old
+	OUTER_SPRINT description_new ~%description_old%~ ^ ~%newtext%~
+	ACTION_IF new_string = 0 BEGIN
+		STRING_SET_EVALUATE strref ~%description_new%~
+	END
+	OUTER_SET new_strref = RESOLVE_STR_REF(~%description_new%~)
+END
+
+DEFINE_PATCH_FUNCTION ~PATCH_APPEND_TO_STRING~
+	INT_VAR
+		strref=(0 - 1)
+		new_string=0
+	STR_VAR
+		newtext=~~
+	RET
+		new_strref
+		description_new
+BEGIN
+	GET_STRREF strref description_old
+	SPRINT description_new ~%description_old%~ ^ ~%newtext%~
+	PATCH_IF new_string = 0 BEGIN
+		INNER_ACTION BEGIN
+			STRING_SET_EVALUATE strref ~%description_new%~
+		END
+	END
+	new_strref = RESOLVE_STR_REF(~%description_new%~)
+END
+
+DEFINE_ACTION_FUNCTION ~ACTION_REPLACE_IN_STRING~
+	INT_VAR
+		strref=(0 - 1)
+		match_case=0
+		new_string=0
+	STR_VAR
+		match=~DEFA~
+		replace_with=~~
+	RET
+		new_strref
+		description_new
+BEGIN
+	ACTION_GET_STRREF strref description_old
+	OUTER_PATCH_SAVE description_new ~%description_old%~ BEGIN
+		PATCH_IF match_case = 0 BEGIN
+			REPLACE_TEXTUALLY CASE_INSENSITIVE ~%match%~ ~%replace_with%~
+		END
+		ELSE BEGIN
+			REPLACE_TEXTUALLY CASE_SENSITIVE ~%match%~ ~%replace_with%~
+		END
+	END
+	ACTION_IF new_string = 0 BEGIN
+		STRING_SET_EVALUATE strref ~%description_new%~
+	END
+	OUTER_SET new_strref = RESOLVE_STR_REF(~%description_new%~)
+END
+
+DEFINE_PATCH_FUNCTION ~PATCH_REPLACE_IN_STRING~
+	INT_VAR
+		strref=(0 - 1)
+		match_case=0
+		new_string=0
+	STR_VAR
+		match=~DEFA~
+		replace_with=~~
+	RET
+		new_strref
+		description_new
+BEGIN
+	GET_STRREF strref description_old
+	INNER_PATCH_SAVE description_new ~%description_old%~ BEGIN
+		PATCH_IF match_case = 0 BEGIN
+			REPLACE_TEXTUALLY CASE_INSENSITIVE ~%match%~ ~%replace_with%~
+		END
+		ELSE BEGIN
+			REPLACE_TEXTUALLY CASE_SENSITIVE ~%match%~ ~%replace_with%~
+		END
+	END
+	PATCH_IF new_string = 0 BEGIN
+		INNER_ACTION BEGIN
+			STRING_SET_EVALUATE strref ~%description_new%~
+		END
+	END
+	new_strref = RESOLVE_STR_REF(~%description_new%~)
+END

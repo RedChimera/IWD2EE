@@ -130,7 +130,7 @@ STATISTICS:
 
 Armor Class:  +1 (generic)
 Special:
- Spell Power:  Can cast the spell Fireball (at level 10) once per day
+ Spell Power:  Can cast the spell Fireball (at level 10) three times per day
 Weight: 1 lb.~
 //@10050    = ~Sunfire Talisman~
 @10051    = ~Fire can be the bringer of life, or the harvester of death.  With the Sunfire Talisman, both scenarios are true.  Crafted by an unknown, yet clever sorcerer, the Sunfire Talisman gave its wearer added protection against all sorts of melee attacks and had the power to ignite a sunfire fireball once per day at surrounding would-be attackers.  In addition, if the would be attackers tried to turn the tables and attack the sorcerer with their own fire weapons, the Sunfire Talisman would grant its wearer added resistance to fire.
@@ -139,7 +139,7 @@ STATISTICS:
 
 Armor Class:  +3 (generic)
 Special:
- Spell Power:  Can cast the spell Sunfire once per day
+ Spell Power:  Can instantly cast the spell Sunfire (at level 15, save DC 40) three times per day
  Resistance: 20/-  Fire Resistance
 Weight: 1 lb.~
 //@10052    = ~Gohoin's Charm~
@@ -162,14 +162,14 @@ Weight: 0 lb.~
 
 STATISTICS:
  
-Increased Duration: Wearer's arcane spells last 50% longer
+Increased Duration: Wearer's arcane spells last 25% longer
 Weight: 0 lb.~
 //@10058    = ~Mirabel's Maleficent Pendant~
 @10059    = ~Worn by Mirabel, a Red Wizard diviner sent to kill the would-be saviors of Icewind Dale, this beautiful pendant displays an ivory cameo of a beautiful bald woman.  The cameo is held in place with an intricate silver frame that is, in turn, fastened to the neck with a burgundy ribbon choker.  Engraved on the back of the frame are the Mulhorandi letters for "A.L."
 
 STATISTICS:
  
-Increased Duration: Wearer's arcane spells last twice as long
+Increased Duration: Wearer's arcane spells last 50% longer
 Spell Power: Can cast the spell Malison (at level 30) 1/Day
 Weight: 0 lb.~
 //@10060    = ~Snow Leopard Charm~
@@ -4091,7 +4091,7 @@ Special:  Heals 6d6 points of damage per hit
 Weight: 4 lb.
 Feat Requirement:  Martial Weapon, Large Sword
 Type:  One-handed~
-//@10881    = ~Dykhast Longsword~
+@10881    = ~Dykhast Longsword~
 @10882    = ~Ancient dwarven legends tell of a time when the noblest of metals was not dwarven steel, nor meteoric iron, nor mithril, but dykhast - an alloy so strong that a blade's edge would never dull with toil or battle, and with a surface so perfect and gleaming that its shimmering surface could be seen a dragon's flight away.  The oldest of dwarves speak of dykhast blades with tears of fond remembrance in their eyes, and callously spit at the mention of the "sundry weak and piddling'" metals that today's arms and armor are fashioned from.
 
 There are rumors, though, of an ancient and secret temple called Chogoh Kyn - it is there, the tales say, that blades of dykhast are still made in the fashion of days long past.  The price may be high, but for the true connoisseur, there is no matching the glory, the perfection, the utter joy... of dykhast.
@@ -4107,7 +4107,7 @@ Special:
 Weight: 1 lb.
 Feat Requirement:  Martial Weapon, Large Sword
 Type:  One-handed~
-//@10883    = ~Sword of Gleaming Dykhast~
+@10883    = ~Sword of Gleaming Dykhast~
 @10884    = ~Ancient dwarven legends tell of a time when the noblest of metals was not dwarven steel, nor meteoric iron, nor mithril, but dykhast - an alloy so strong that a blade's edge would never dull with toil or battle, and with a surface so perfect and gleaming that its shimmering surface could be seen a dragon's flight away.  The oldest of dwarves speak of dykhast blades with tears of fond remembrance in their eyes, and callously spit at the mention of the "sundry weak and piddling'" metals that today's arms and armor are fashioned from.
 
 There are rumors, though, of an ancient and secret temple called Chogoh Kyn - it is there, the tales say, that blades of dykhast are still made in the fashion of days long past.  The price may be high, but for the true connoisseur, there is no matching the glory, the perfection, the utter joy... of dykhast.
@@ -4425,10 +4425,8 @@ Type:  One-handed~
 @10933    = ~Know Thy Family +3~
 @10934    = ~The great warlord of the North, Kresselack the Black Wolf, is said to have sired many children during his long reign, and so it came that one of these, a sickly young man by the name of Thomas, sought out his father after his mother died and bequeathed an ugly sword of iron to Thomas in her legacy.  Upon the blade was inscribed "Know thy family," and Thomas took the motto to heart.  Bolstered by the sword and his mother's loss, he became determined to find Kresselack - whether out of a need for a new family to belong to or to take revenge on Kresselack for abandoning his mother, it is not known.   
  
-When he found the Black Wolf, Kresselack spurned the young man, claiming that the sickly and weak-looking Thomas shared no blood with him, then ordered him beaten and left beneath the shadow of Kelvin's Cairn to die.  After two days in the freezing cold, Thomas was rescued by a tribe of Uthgart barbarians fleeing Kresselack's army.  Nursing the man back to health, the barbarians adopted Thomas into their tribe and he eventually became one of their greatest hunters.  When he passed away from winter chill many years later, he left his sword to his youngest son to help him find his way in the world.  
+When he found the Black Wolf, Kresselack spurned the young man, claiming that the sickly and weak-looking Thomas shared no blood with him, then ordered him beaten and left beneath the shadow of Kelvin's Cairn to die.  After two days in the freezing cold, Thomas was rescued by a tribe of Uthgart barbarians fleeing Kresselack's army.  Nursing the man back to health, the barbarians adopted Thomas into their tribe and he eventually became one of their greatest hunters.  When he passed away from winter chill many years later, he left his sword to his youngest son to help him find his way in the world.
 
-This powerful sword grants its user the ability to know the heart of an opponent's weakness.  
- 
 STATISTICS: 
  
 Damage:  1d10 + 3 
@@ -4446,7 +4444,7 @@ Type:  One-handed~
    
 This weapon has been considered quite a blessing by those who wield it.  Against lawful creatures it does devastating damage and attacks are made with an uncanny accuracy.  Rage of Chaos has been known to turn the tide in many a battle.  In addition, the victim may loses control of his or her faculties and flies into a state of confusion when struck by the weapon.  The chaotic powers of the blade also prevent the wielder from being controlled of confused in battle. 
  
-The history of Rage of Chaos is unknown.  The weapon has appeared throughout the realms in various battles over the centuries only to be lost once again. 
+The history of Rage of Chaos is unknown.  The weapon has appeared throughout the realms in various battles over the centuries only to be lost once again.
  
 STATISTICS: 
  
@@ -4881,9 +4879,33 @@ Type:  Two-handed~
 //@11033    = ~Staff of Nature's Wrath +3~
 //@11034    = ~If we decide to make a HoF version of this item, we should put its description here~
 //@11035    = ~Staff of the Hanged Man's Glee~
-//@11036    = ~Item description can remain the same; if new description is needed put it here~
-//@11037    = ~Staff of the Hanged Man's Glee +3~
-//@11038    = ~If we decide to make a HoF version of this item, we should put its description here~
+@11036    = ~This grim staff, of a most despicable repute, was originally carved from the wood of Dead Man's Tree: an ancient black willow that stood on the outskirts of a forgotten hamlet of the Moonshae's, from which criminals were hung. All manner of bandits, murderers, rapists, and other worthies were left dangling from its knotty limbs; and all to the delight of the grave-digger Mordigan. For Mordigan, a secret practitioner of the necromantic arts, saw ample opportunity in which to ply his trade. Interring the remains of the evil men within close proximity of the tree, Mordigan called upon the dark powers of the negative material to perform a baleful act upon the black willow. It was given a sort of semi-sentience, and the ability to feed upon the remains of those who had so recently swung from its branches. Black roots descended into rotting flesh; and alarmingly enough, the tortured visages of the slain began to appear in the twisted knots of the black willow's bole before its burning. But, to the surprise of the villagers, the potently ensorcelled staff carved by the hands of the evil Mordigan did indeed prove to be their undoing. And thus did the hanged men of Dead Man's Tree have their revenge.
+
+STATISTICS:
+
+Damage:  1d6 + 1
+Attack Bonus:  +1 
+Enchantment:  +1
+Damage Type:  Bludgeoning
+Special:
+  Control Undead: Can use a variant of Control Undead to take control of all undead creatures within 30 feet for 10 rounds (Will DC 18) once per day
+Weight: 2 lb.
+Feat Requirement:  Simple Weapon, Quarterstaff
+Type:  Two-handed~
+@11037    = ~The Hanged Man's Horrifying Glee~
+@11038    = ~This grim staff, of a most despicable repute, was originally carved from the wood of Dead Man's Tree: an ancient black willow that stood on the outskirts of a forgotten hamlet of the Moonshae's, from which criminals were hung. All manner of bandits, murderers, rapists, and other worthies were left dangling from its knotty limbs; and all to the delight of the grave-digger Mordigan. For Mordigan, a secret practitioner of the necromantic arts, saw ample opportunity in which to ply his trade. Interring the remains of the evil men within close proximity of the tree, Mordigan called upon the dark powers of the negative material to perform a baleful act upon the black willow. It was given a sort of semi-sentience, and the ability to feed upon the remains of those who had so recently swung from its branches. Black roots descended into rotting flesh; and alarmingly enough, the tortured visages of the slain began to appear in the twisted knots of the black willow's bole before its burning. But, to the surprise of the villagers, the potently ensorcelled staff carved by the hands of the evil Mordigan did indeed prove to be their undoing. And thus did the hanged men of Dead Man's Tree have their revenge.
+
+STATISTICS:
+
+Damage:  1d6 + 3
+Attack Bonus:  +3
+Enchantment:  +3
+Damage Type:  Bludgeoning
+Special:
+  Control Undead: Can use a variant of Control Undead to take control of all undead creatures within 30 feet for 10 rounds (Will DC 36) once per day
+Weight: 2 lb.
+Feat Requirement:  Simple Weapon, Quarterstaff
+Type:  Two-handed~
 @11039    = ~Bruiser Staff +1~
 @11040    = ~The simplest and humblest of staff weapons, the quarterstaff is a length of wood ranging six to nine feet in length.  Masterwork quarterstaffs are made of stout oak and are shod with metal at both ends.  This one is particularly special as it has been imbued with magical properties.  
 
@@ -4992,7 +5014,7 @@ Type:  Two-handed~
 STATISTICS:
 
 Damage:  1d6 + 4
-Attack Bonus:  +4 
+Attack Bonus:  +4
 Enchantment:  +4
 Damage Type:  Bludgeoning
 Special:
@@ -5002,7 +5024,7 @@ Feat Requirement:  Simple Weapon, Quarterstaff
 Type:  Two-handed
 Minimum Intelligence of 20 Required~
 //@11059    = ~Staff of Greater Spell Resistance +5~
-@11060    = ~The simplest and humblest of staff weapons, the quarterstaff is a length of wood ranging six to nine feet in length.  Masterwork quarterstaffs are made of stout oak and are shod with metal at both ends.  This one is particularly special as it has been imbued with magical properties.  
+@11060    = ~The simplest and humblest of staff weapons, the quarterstaff is a length of wood ranging six to nine feet in length.  Masterwork quarterstaffs are made of stout oak and are shod with metal at both ends.  This one is particularly special as it has been imbued with magical properties.
 
 STATISTICS:
 
@@ -5081,7 +5103,7 @@ Damage:  1d8 + 2
 Attack Bonus:  +2 
 Enchantment:  +2
 Damage Type:  Bludgeoning
-Special: 
+Special:
   Spell Power: Can cast Haste (at level 15) twice per day
 Weight: 4 lb.
 Feat Requirement:  Simple Weapon, Quarterstaff
@@ -5118,9 +5140,23 @@ Weight: 3 lb.
 Feat Requirement:  Simple Weapon, Quarterstaff
 Type:  Two-handed~
 //@11087    = ~Whispering Staff~
-//@11088    = ~Item description can remain the same; if new description is needed put it here~
+@11088    = ~This ironwood staff was once held by the goblin sorcerer Caballus, and it still bears the stink of his touch.  Trails of runes encircle the staff like snakes, and aside from a single minor rune of accuracy and another of wounding, the rest appear to be nonsense syllables and bunk.  The staff is surprisingly light and well-balanced for its size, and it can be held easily in one hand. It vanishes momentarily when swung, most likely through some sort of minor illusionary magic.
+
+STATISTICS:
+
+Damage:  1d6 + 1
+Attack Bonus:  +1 
+Enchantment:  +1
+Damage Type:  Bludgeoning
+Special:  
+  Sneaky Weapon: This weapon turns invisible for a brief moment when used to attack
+  +1 to Move Silently skill
+  1% chance target is Silenced when struck
+Weight: 3 lb.
+Feat Requirement:  Simple Weapon, Quarterstaff
+Type:  One-handed~
 //@11089    = ~Caballus' Whispering Staff~
-@11090    = ~This ironwood staff was once held by the goblin sorcerer Caballus, and it still bears the stink of his touch.  Trails of runes encircle the staff like snakes, and aside from a single minor rune of accuracy and another of wounding, the rest appear to be nonsense syllables and bunk.  The staff is surprisingly light and well-balanced for its size, and it can be held easily in one hand. 
+@11090    = ~This ironwood staff was once held by the goblin sorcerer Caballus, and it still bears the stink of his touch.  Trails of runes encircle the staff like snakes, and aside from a single minor rune of accuracy and another of wounding, the rest appear to be nonsense syllables and bunk.  The staff is surprisingly light and well-balanced for its size, and it can be held easily in one hand. It vanishes momentarily when swung, most likely through some sort of minor illusionary magic.
 
 STATISTICS:
 
@@ -5129,6 +5165,7 @@ Attack Bonus:  +3
 Enchantment:  +3
 Damage Type:  Bludgeoning
 Special:  
+  Sneaky Weapon: This weapon turns invisible for a brief moment when used to attack
   +10 to Move Silently skill
   Target is silenced upon successful hit  (Will DC 20)
   Spell Power: Can cast the spell Invisibility Sphere (at level 20) 1/day
@@ -10648,15 +10685,69 @@ Armor Class: +1 (generic)
 Special:
   Wearer is immune to all charm and domination effects
 Weight: 4 lb.~
-
 //@12315    = ~Wyvern Poison~
 @12316    = ~This bottle contains the unspent poison that has been extracted from a wyvern's stinger. Now refined by yuan-ti alchemical equipment, the poison can be put on a weapon to make it deadlier. However, given the centrality of poison to yuan-ti, it is possible that this poison serves some other purpose in Dragon's Eye.
 
 STATISTICS:
 
-This poison can be put on a weapon to make the weapon poison creatures on hit. When full, the bottle has enough poison for three uses.
+This poison can be put on a weapon to make the weapon poison creatures on hit for six rounds. When full, the bottle has enough poison for three uses.
 
 Weight: 1 lb.~
+//@12317    = ~Target Arrows~
+@12318    = ~These are extremely well-made arrows, crafted by the finest fletchers for the purpose of competing in tournaments. Arrows of this type are designed for longer flight and increased accuracy. Unfortunately, they lack any kind of ability to pentrate armor or thick hides.
+
+STATISTICS:
+
+Damage:  1d4
+Attack Bonus: +5
+Damage Type:  Missile (piercing)
+Weight:  0 lb.
+Launcher:  Bow~
+//@12323    = ~Book of Leaves~
+@12324    = ~The covers of this heavy book are made of bark, and the pages are made of pressed leaves.  It is not clear what is holding this book together, for you see no bindings and no glue along the spine.
+
+When this book is held in the hand of a druid and the druid is touching solid ground, a sheath of bark will sprout from the earth and cover the wielder, making his skin as tough as the skin of a great tree.  
+ 
+STATISTICS:
+
+Spell Power: Can cast the spell Barkskin once per day
+Weight:  1 lb.~
+//@12325    = ~Pudu's Blight~
+@12326    = ~Captain Pudu, the Captain of the Guard of the Legion of the Chimera, is undoubtedly a master of overkill.  Typical of half-goblins, Pudu felt the need to wield the largest weapon physically possible for the vertically challenged half-breeds, the halberd.
+
+Naturally, not satisfied with any ordinary halberd, Pudu commissioned for particularly nasty weapon enchantments on his weapon of choice.  In line with the position Pudu held within the Legion of the Chimera, his new halberd, which he affectionately called Pudu's Blight, caused excessive fire damage on those who were unfortunate enough to be on the receiving end of the red glowing blade.  In addition, the halberd has been known to stun the opponent, rendering the target unable to fend off Pudu's attack.  An opponent that cannot fight back is indeed Pudu's favorite type of opponent - just don't tell that to Pudu.
+
+STATISTICS:
+
+Damage:  1d10 + 3
+Attack Bonus:  +3
+Enchantment:  +3
+Damage Type:  Piercing
+Special:
+  Stunning: 25% chance target is stunned for 1/2 combat round (Fortitude DC 30)
+  Flaming Burst:  50% chance each hit does +2d6 fire damage and 10% chance of +2d10 extra fire damage
+Weight: 14 lb.
+Feat Requirement:  Martial Weapon, Polearm
+Type:  Two-handed~
+//@12325    = ~Pudu's Fiery Blight~
+@12328    = ~Captain Pudu, the Captain of the Guard of the Legion of the Chimera, is undoubtedly a master of overkill.  Typical of half-goblins, Pudu felt the need to wield the largest weapon physically possible for the vertically challenged half-breeds; the halberd.
+
+Naturally, not satisfied with any ordinary halberd, Pudu commissioned for particularly nasty weapon enchantments on his weapon of choice.  In line with the position Pudu held within the Legion of the Chimera, his new halberd, which he affectionately called Pudu's Fiery Blight, caused excessive fire damage on those who were unfortunate enough to be on the receiving end of the red glowing blade.  In addition, the halberd has been known to stun the opponent, rendering the target unable to fend off Pudu's attack, and even lower the target's resistances.  An opponent that cannot fight back is indeed Pudu's favorite type of opponent - just don't tell that to Pudu.
+
+STATISTICS:
+
+Damage:  1d10 + 5
+Attack Bonus:  +5 
+Enchantment:  +5
+Damage Type:  Piercing
+Special:
+  Stunning: 25% chance target is stunned for 1/2 combat round (Fortitude DC 40)
+  Flaming Burst:  +2d6 fire damage and 10% chance of +2d10 extra fire damage
+  Lower Resistance: Each hit lowers the target's Spell Resistance by 2 for 10 rounds (Will DC 40, cumulative)
+Weight: 14 lb.
+Feat Requirement:  Martial Weapon, Polearm
+Type:  Two-handed~
+
 
 @12413    = ~Storm Shell Amulet~
 @12414    = ~Amulets are usually magical devices that are commonly worn around the neck, suspended from a chain.  The type of chain that comes with an amulet generally increases the item's aesthetic value, not its magical properties.  Only one amulet can be dangled from the neck.
@@ -11259,7 +11350,7 @@ STATISTICS:
 
 Shield Bonus: +5
 Special:
-  Spell Power: Can cast Entropy Shield (lasting 12 rounds) 1/Day
+  Spell Power: Can cast Divine Shell (lasting 12 rounds) 1/Day
 Armor Check Penalty:  -2
 Arcane Spell Failure:  15%
 Weight: 6 lb.~
@@ -11392,7 +11483,7 @@ Minimum Strength of 25 Required~
 
 STATISTICS:
 
-Damage:  1d10 + 6
+Damage:  1d12 + 6
 Attack Bonus: +6 
 Enchantment:  +6
 Damage Type:  Slashing
@@ -11423,9 +11514,9 @@ Type:  Two-handed~
 
 STATISTICS:
 
-Damage:  1d6  +1
-Attack Bonus:  +1 
-Enchantment:  +1
+Damage:  1d6  +4
+Attack Bonus:  +4
+Enchantment:  +4
 Damage Type:  Missile (piercing)
 Special:
   Corrosion: +1d4 acid damage, and an additional +2d4 acid damage over the following 2 rounds
@@ -11579,3 +11670,68 @@ Special:
 Weight: 5 lb.
 Required Feat:  Martial Weapon, Flail
 Type:  One-handed~
+@12577    = ~The Spear of White Ash +3~
+@12578    = ~Consecrated by Malarite priests hundreds of years ago, this spear was used on High Hunts in preparation for their bloody feasts. It was last in the hands of Old Hunter Wellin, who is believed to have died when he foolishly hunted dryads near the Cloakwood. The weapon is made from a single piece of ash wood topped with a cruel spearhead.
+
+STATISTICS:
+
+Damage:  1d8 + 3
+Attack Bonus:  +3 
+Enchantment:  +3
+Damage Type:  Piercing
+Special:
+  Piercing Enhancement: While this spear is equipped, any piercing damage dealt by the wielder's spells or abilities is increased by 40%. This does not increase the damage from this spear.
+Weight: 5 lb.
+Feat Requirement:  Martial Weapon, Polearm
+Type:  Two-handed~
+@12579    = ~Sharpened Spear of White Ash +5~
+@12580    = ~Consecrated by Malarite priests hundreds of years ago, this spear was used on High Hunts in preparation for their bloody feasts. It was last in the hands of Old Hunter Wellin, who is believed to have died when he foolishly hunted dryads near the Cloakwood. The weapon is made from a single piece of ash wood topped with a cruel spearhead.
+
+STATISTICS:
+
+Damage:  1d8 + 5
+Attack Bonus:  +5
+Enchantment:  +5
+Damage Type:  Piercing
+Special:
+  Piercing Enhancement: While this spear is equipped, any piercing damage dealt by the wielder's spells or abilities is increased by 100%. This does not increase the damage from this spear.
+Weight: 5 lb.
+Feat Requirement:  Martial Weapon, Polearm
+Type:  Two-handed~
+@12581    = ~Katana of Focus +5~
+@12582    = ~To enchant a katana is no simple process. Unlike conventional weapons, the katana is already a near-perfect fighting sword. To improve it usually requires a sacrifice, perhaps a dying samurai might beg a Wu Jen to infuse his fighting spirit into the spirit of the katana. The wielder of an enchanted katana, such as this one, must respect the customs of Kara-Tur and of the samurai who once carried this blade into battle. Not doing so could drastically change one's luck for the worse.
+
+STATISTICS:
+
+Damage:  15
+Attack Bonus: +5
+Enchantment:  +5
+Damage Type:  Slashing
+Special:
+  Kai: Wielder deals maximum damage with each hit
+Weight: 3 lb.
+Feat Requirement:  Exotic Weapon, Bastard Sword
+Type:  One-handed~
+@12583    = ~Greater Staff of the Elements~
+@12584    = ~The simplest and humblest of staff weapons, the quarterstaff is a length of wood ranging six to nine feet in length.  Masterwork quarterstaffs are made of stout oak and are shod with metal at both ends.  This one is particularly special as it has been imbued with magical properties.
+
+STATISTICS:
+
+Damage:  1d6
+Damage Type:  Bludgeoning
+Special:
+  Flaming Burst: +1d6 fire damage and 25% chance of +2d10 extra fire damage
+  Frost Burst: +1d6 cold damage and 25% chance of +2d10 extra cold damage
+  Shocking Burst: +1d6 electrical damage and 25% chance of +2d10 extra electrical damage
+  Corrosive Burst: +1d6 acid damage and 25% chance of +2d10 extra acid damage
+Weight: 4 lb.
+Feat Requirement:  Simple Weapon, Quarterstaff
+Type:  Two-handed~
+@12585    = ~Ring of Thex~
+@12586    = ~This ornate silver ring is set with a single red stone of an unknown type. The ring is believed to have been created by an adventuring mage named Thex. Thex claimed she was tired of sitting back and flinging spells at enemies while the rest of her adventuring party was able to get into the thick of battle. She felt that the ring would allow her to become what she chose to call a Battlemage. The Ring of Thex was the crowning achievement of her short career.
+
+STATISTICS:
+
+Constant Effect: User under the effects of the spell Tenser's Transformation while equipped
+
+Weight: 0 lb.~

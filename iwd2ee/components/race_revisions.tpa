@@ -1,0 +1,325 @@
+COPY ~%mod_folder%/tables/tables_race_revisions/ABRACERQ.2da~ ~override~
+COPY ~%mod_folder%/tables/tables_race_revisions/ABRACEAD.2da~ ~override~
+
+COPY_EXISTING ~help04.2da~ ~override~
+  COUNT_2DA_COLS num_cols
+  READ_2DA_ENTRIES_NOW rows num_cols
+  FOR (row = 0; row < rows; ++row) BEGIN
+    READ_2DA_ENTRY_FORMER rows row 0 label
+    PATCH_MATCH ~%label%~ WITH
+      ~2~ BEGIN
+        SET strref = RESOLVE_STR_REF(@786)
+        SET_2DA_ENTRY_LATER rows_out row 2 ~%strref%~
+      END
+      ~3~ BEGIN
+        SET strref = RESOLVE_STR_REF(@788)
+        SET_2DA_ENTRY_LATER rows_out row 2 ~%strref%~
+      END
+      ~4~ BEGIN
+        SET strref = RESOLVE_STR_REF(@790)
+        SET_2DA_ENTRY_LATER rows_out row 2 ~%strref%~
+      END
+      ~5~ BEGIN
+        SET strref = RESOLVE_STR_REF(@792)
+        SET_2DA_ENTRY_LATER rows_out row 2 ~%strref%~
+      END
+      ~6~ BEGIN
+        SET strref = RESOLVE_STR_REF(@794)
+        SET_2DA_ENTRY_LATER rows_out row 2 ~%strref%~
+      END
+      ~7~ BEGIN
+        SET strref = RESOLVE_STR_REF(@796)
+        SET_2DA_ENTRY_LATER rows_out row 2 ~%strref%~
+      END
+      ~8~ BEGIN
+        SET strref = RESOLVE_STR_REF(@798)
+        SET_2DA_ENTRY_LATER rows_out row 2 ~%strref%~
+      END
+      ~9~ BEGIN
+        SET strref = RESOLVE_STR_REF(@543)
+        SET_2DA_ENTRY_LATER rows_out row 2 ~%strref%~
+      END
+      ~10~ BEGIN
+        SET strref = RESOLVE_STR_REF(@800)
+        SET_2DA_ENTRY_LATER rows_out row 2 ~%strref%~
+      END
+      ~11~ BEGIN
+        SET strref = RESOLVE_STR_REF(@802)
+        SET_2DA_ENTRY_LATER rows_out row 2 ~%strref%~
+      END
+      ~13~ BEGIN
+        SET strref = RESOLVE_STR_REF(@804)
+        SET_2DA_ENTRY_LATER rows_out row 2 ~%strref%~
+      END
+      ~14~ BEGIN
+        SET strref = RESOLVE_STR_REF(@806)
+        SET_2DA_ENTRY_LATER rows_out row 2 ~%strref%~
+      END
+      ~15~ BEGIN
+        SET strref = RESOLVE_STR_REF(@808)
+        SET_2DA_ENTRY_LATER rows_out row 2 ~%strref%~
+      END
+      ~16~ BEGIN
+        SET strref = RESOLVE_STR_REF(@810)
+        SET_2DA_ENTRY_LATER rows_out row 2 ~%strref%~
+      END
+      DEFAULT
+    END
+  END
+  SET_2DA_ENTRIES_NOW rows_out num_cols
+BUT_ONLY
+
+// Not all race and class descriptions are connected to .2da files. For the others, we have to use STRING_SET to simply replace them.
+STRING_SET 25 ~HALF-ORCS:
+
+Half-orcs are born from the union of human and orc parents. They are as tall as humans, but a little heavier due to their muscular builds. Their greenish pigmentation, sloping forehead, jutting jaw, prominent teeth and coarse body hair make their lineage plain for all to see.  Half-orcs are known for their great strength.
+
+Favored Class: Barbarian
+
+Advantages:
+* +1 Strength.
+* Darkvision.
+
+Disadvantages:
+* -1 Intelligence.
+* -1 Charisma.~
+STRING_SET 5660 ~STRONGHEART HALFLING:
+
+While the lightfoot halflings value the experience of travel and the sight of new lands and peoples, the strongheart halflings are a more organized, orderly, and industrious race.  Strongheart halflings often surprise those more familiar with their wandering lightfoot cousins with their confident and readily competitive nature.
+
+Favored Class: Rogue
+
+Advantages:
+* +1 to Dexterity.
+* +2 to Move Silently checks.
+* +2 morale bonus on saving throws against fear.
+* +1 attack bonus with thrown weapons.
+* 1 extra feat at 1st level.
+
+Disadvantages:
+* -1 to Strength.
+~
+STRING_SET 5662 ~DEEP GNOME: 
+
+Also known as svirfneblin, the deep gnomes of the Realms are a secretive, mysterious race. Found in the deepest caverns of the Underdark, the svirfneblin live in constant fear of slavery or destruction at the hands or dark elves, mind flayers, and duergar. Deep gnomes are legendary for their ability to handle stone and gems. They have brown or gray skin and gray or white hair.
+
+Favored Class: Illusionist
+
+Advantages:
+* +1 Dexterity.
+* +1 Wisdom.
+* Spell resistance of 11 + character level.
+* +4 dodge bonus against all creatures.
+* Mirror Image 1/Day.
+* Invisibility 1/Day.
+* Blur 1/Day.
+* Nondetection.  Deep gnomes are difficult to detect by divination spells and by scrying items such as crystal balls.
+* +2 racial bonus to all saving throws.
+* +1 racial bonus to attack rolls against kobolds, goblins, hobgoblins, and bugbears.
+* Stonecunning: +2 racial bonus on Search checks.
+* +2 racial bonus on Hide checks, which improves to +4 in darkened areas underground.
+* Darkvision.
+
+Disadvantages:
+* -1 Strength.
+* -2 Charisma.
+* Level Adjustment +3: Svirfneblin are somewhat more powerful and gain levels at a rate of about three levels behind that of the other common races of Faerun.
+~
+STRING_SET 5661 ~GHOSTWISE HALFLING:
+
+Ghostwise halflings are the feral, reclusive cousins of lightfoot and strongheart halflings. They are found most often in the southern forests of the Realms living in small communities. Ghostwise halflings are rarely seen in large cities, but occasionally set out to explore the world for reasons known only to them. Visitors to ghostwise settlements often report that the halflings have kinship so tight with their fellows that they can communicate without speaking.
+
+Favored Class: Barbarian
+
+Advantages:
+* +1 to Dexterity.
+* +2 to Move Silently checks.
+* +1 to hit with thrown weapons.
+* +2 morale bonus on saving throws against fear.
+* Set Natural Snares 1/day. Set Natural Snare ensnares all enemies within the area of effect for 5 rounds on a failed Reflex save. The save DC is equal to the caster's level plus 10. Thus, a level 10 halfling's Natural Snare will have a save DC of 20.
+
+Disadvantages:
+* -1 Strength.
+~
+STRING_SET 5416 ~GRAY DWARF:
+
+Also known as duergar, the gray dwarves of the Forgotten Realms live even deeper underground than their shield dwarf and gold dwarf cousins. The duergar share little in common with other dwarves and practice slavery in their monstrous subterranean cities. Often motivated by greed and a thirst for power, gray dwarves are known throughout the Realms as devious, efficient warriors. Duergar almost always have gray hair and skin.
+
+Favored Class: Fighter
+
+Advantages:
+* +1 to Constitution.
+* Stonecunning: +2 racial bonus on Search checks to notice unusual stonework, such as sliding walls, secret doors, stonework traps and new construction.
+* +2 racial bonus to saving throws against poison.
+* +2 racial bonus to saving throws against spells and spell-like effects.
+* +4 racial bonus on Move Silently checks.  Gray dwarves excel in stealthy movement.
+* +4 dodge bonus against giants.
+* Immune to paralysis (still vulnerable to stunning attacks).
+* Invisibility 1/day.
+* Darkvision.
+
+Disadvantages:
+* -2 Charisma.
+* Light Sensitivity: Duergar suffer a -2 circumstance penalty to attack rolls, saves, and checks in bright light.
+* Level Adjustment +2: Duergar are more powerful and gain levels at a rate of about two levels behind that of the other common races of Faerun.
+~
+STRING_SET 5413 ~GOLD DWARF:
+
+In a time when the dwarven race is in sad decline, the gold dwarves of the Realms received a divine gift from Moradin, the Soul Forger. The father of the dwarven gods granted the Thunder Blessing upon his people, resulting in a slow growth of the gold dwarf population. Though its effects may not be felt for decades, gold dwarves are already starting to re-establish themselves in the Realms as shrewd traders and proud, if somewhat haughty, warriors.
+
+Favored Class: Fighter
+
+Advantages:
+* +1 to Constitution.
+* Stonecunning: +2 racial bonus on Search checks to notice unusual stonework, such as sliding walls, secret doors, stonework traps and new construction.
+* +2 racial bonus to saving throws against poison.
+* +2 racial bonus to saving throws against spells and spell-like effects.
+* +4 dodge bonus against giants.
+* +1 racial bonus to attack rolls against aberrations, the bizarre creatures that live in the Underdark.
+* Darkvision.
+
+Disadvantages:
+* -1 to Dexterity.
+~
+STRING_SET 5397 ~WILD ELF:
+
+The rare wild elves are rarely seen by others, because they live in the heart of thick forests and they have incredible skill at keeping hidden.  Also called green elves, their skin tends to be dark brown, and their hair ranges from black to light brown, lightening to silvery white with age.
+
+Favored Class: Sorcerer
+
+Advantages:
+* +1 Dexterity.
+* +2 to Search checks.
+* +2 to saves against Enchantment magic.
+* Immunity to Sleep magic.
+* Proficient with large swords and bows (but not crossbows).
+
+Disadvantages:
+* -1 Intelligence.
+~
+STRING_SET 5394 ~DROW: 
+
+Dark elves, also known as drow, are the subterranean cousins of moon elves. Their black skin and pale hair are a curse for their allegiance with the spider goddess, Lolth. Drow societies are usually ruled by cruel priestesses of Lolth and their noble houses. Dark elves are known for their arrogance, cruelty, and penchant for civil war.
+
+Favored Class: Wizard (male) or cleric (female).
+
+Advantages:
+* +1 to Dexterity.
+* +1 to Intelligence.
+* +1 to Charisma.
+* +2 racial bonus to saves against Enchantment magic.
+* +2 racial bonus on Will saves against spells and spell-like abilities.
+* +2 to Search checks.
+* Spell resistance of 11 + character level.
+* Immunity to Sleep magic.
+* Proficient with large swords and bows (but not crossbows)
+* Faerie Fire 3/day.
+* Darkvision.
+
+Disadvantages:
+* -1 to Constitution.
+* Light Blindness: -1 circumstance penalty to all attack rolls, saves and skill checks while operating in bright light.
+* Level Adjustment +2: Drow are more powerful and gain levels at a rate of about two levels behind the other common races of Faerun.
+~
+STRING_SET 5388 ~TIEFLING:
+
+The infernal counterpart to aasimar, tieflings are humans with a hint of the diabolical in their bloodline. Though their appearance is mostly human, they often have telltale signs that belie their ancestry. Tieflings usually have dusky skin and dark or reddish hair. Though many sport small horns, cat eyes, or other bizarre features, most tieflings try to hide their abnormalities from humans.
+
+Favored Class: Rogue
+
+Advantages:
+* +1 Intelligence.
+* +1 Dexterity.
+* Cold, fire, and electrical resistance: 5 points.
+* +2 to Bluff and Hide checks.
+* Blindness 1/Day.
+* Darkvision.
+
+Disadvantages:
+* -1 Charisma.
+* Level Adjustment +1: Tieflings are slightly more powerful and gain levels at a rate of about one level behind that of the common races.
+~
+STRING_SET 5386 ~AASIMAR: 
+
+Aasimar carry the blood of a celestial, the begotten offspring from the union of a mortal and a deity.  Aasimar are usually good-aligned and fight against evil in the world.  They typically have fair skin, golden eyes, and often a birthmark in the shape of the deity's holy symbol.  Aasimar are blessed with insight and personal magnetism and are typically paladins.
+
+Favored Class: Paladin
+
+Advantages:
+* +1 Wisdom.
+* +1 Charisma.
+* Acid, cold, and electrical resistance: 5 points.
+* Sunscorch 1/Day.
+* Darkvision.
+
+Disadvantages:
+* Level Adjustment +1: Aasimar are slightly more powerful and gain levels at a rate of about one level behind that of the common races.
+~
+
+STRING_SET 9554 ~LIGHTFOOT HALFLING:
+
+Halflings stand about three feet tall, with florid skin and dark hair and eyes.  Unlike the more segregated strongheart halflings, the lightfoots of the Forgotten Realms are a common sight in human, elven, and dwarven lands. Lightfoot halflings are known for their incredible luck and their love of travel. They tend to be more gregarious than even their strongheart kin.
+
+Favored Class: Rogue
+
+Advantages:
+* +1 Dexterity.
+* +2 to Move Silently checks.
+* +1 to all saving throws.
+* +2 morale bonus on saving throws against fear.
+* +1 to hit with thrown weapons.
+
+Disadvantages:
+* -1 to Strength.
+~
+STRING_SET 9553 ~ROCK GNOME:
+
+Kin to dwarves, rock gnomes are noticeably smaller than their distant cousins. Gnomes, as they proudly maintain, are also less rotund than dwarves. Most have dark tan or brown skin, white hair, and rather large noses. Rock gnomes have lively and sly senses of humor, especially for practical jokes. In this sense, they are much more gregarious and sociable than their deep gnome cousins.  They have a love for nature that is only matched by their love for gems and jewelry.
+
+Favored Class: Illusionist
+
+Advantages:
+* +1 Constitution.
+* +1 attack bonus vs. kobolds, goblins, hobgoblins, and bugbears.
+* +4 dodge bonus against giants.
+* +2 to saves against illusions.
+* +2 to Alchemy skill checks.
+
+
+Disadvantages:
+* -1 Strength.
+~
+STRING_SET 9552 ~MOON ELF:
+
+Moon elves tend to be slimmer than humans. Their features are finely chiseled and delicate, and they speak in melodic tones. Moon elves are often looked upon as being frivolous and aloof. They concern themselves with natural beauty, dancing, frolicking, and other similar pursuits. Their humor is clever, as are their songs and poetry. Moon elves are the most common elves in Faerun. Many of them have a deep-seated hatred for their subterranean cousins, the drow elves.
+
+Favored Class: Wizard
+
+Advantages:
+* +1 Dexterity.
+* +2 racial bonus to saves against Enchantment magic.
+* +2 racial bonus to Search checks.
+* Immunity to Sleep magic.
+* Proficient with longswords and bows (but not crossbows).
+
+Disadvantages:
+* -1 Constitution.
+~
+STRING_SET 9551 ~SHIELD DWARF:
+
+Shield dwarves are short stocky fellows, easily identifiable by their size and shape. They have ruddy cheeks, dark eyes, and dark hair. Shield dwarves tend to be dour and taciturn.  In large part, this demeanor has developed due to the slow erosion of shield dwarf kingdoms over the centuries. They are given to hard work, and care little for most humor. They typically enjoy beer, ale, and mead, but most of all, they love gold.
+
+Favored Class: Fighter.
+
+Advantages:
+* +1 to Constitution.
+* Stonecunning: +2 racial bonus on Search checks to notice unusual stonework, such as sliding walls, secret doors, stonework traps and new construction.
+* +2 racial bonus to saving throws against poison.
+* +2 racial bonus to saving throws against spells and spell-like effects.
+* +4 dodge bonus against giants.
+* +1 racial bonus to attack rolls against orcs and goblinoids (goblins, hobgoblins, and bugbears).
+* Darkvision.
+
+Disadvantages:
+* -1 to Charisma.
+~

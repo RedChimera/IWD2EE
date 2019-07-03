@@ -72,14 +72,14 @@ RMEW_03	00ax1h78	00ax1h93	00ax2h90	ZZG6CT	00Club81	00Flal85	00Flal93	00Mace89	00
 RMEW_04	00ax1h92	00ax1h99	00ax2h89	00Club98	00Flal92	00Mace97	00Mstr88	00Mstr93	00Mstr99	00Dagg88	00Hamm86	00Halb88	00Sper97	00Staf88	00Staf92	00Staf97	00SwdB87	00SwdC96	00SwdL87	00SwdL96	00SwdS89	00SwdT87																										
 RMEW_05	00ax1h91	00ax2h88	00Club97	00Flal03	00Flal91	00Mace96	00Mstr87	00Dagg87	00Dagg97	00Hamm85	00Hamm97	00Halb87	00Sper96	00Staf96	00SwdB86	00SwdB97	00SwdC95	00SwdL86	00SwdL89	00SwdL95	00SwdS88	00SwdS98	00SwdT86	00SwdT98																								
 RMEW_06	00ax1h95	00ax2h95	00Club92	00Flal98	00Mace95	00Dagg95	00Hamm96	00Halb94	00Sper92	00Staf87	00Staf91	00SwdB93	00SwdC93	00SwdL94	00SwdS97	00Swdt94																															
-RMEW_07	00ax1h94	00ax2h96	00Club91	00Flal97	00Mace94	00Mstr92	00Dagg96	00Halb98	00Sper93	00Staf86	00SwdB96	00SwdC90	00SwdL93	00SwdS95	00SwdS96	00SwdT93																															
+RMEW_07	00ax1h94	00ax2h96	00Club91	00Flal97	00Mace94	00Mstr92	00Dagg96	00Halb98	00Sper93	00Staf86	00SwdB96	00SwdC90	00SwdL93	00SwdS95	00SwdS96	00SwdT93	USSwdK51																														
 RMEW_08	00ax1h97	00Club96	00Flal95	00Mstr86	00Halb96	00SwdC92	00SwdL92	00SwdT95	00SwdT97																																							
 RMEW_09	00ax1h86	00ax2h87	00Club90	00Mace93	00Hamm95	00Halb97	00Staf90	00SwdB94	00SwdB95	00SwdL91	00SwdT96																																				
 RMEW_10	00ax1h88	00ax2h98	00Club95	00Flal96	00Mace92	00Mstr91	00Hamm94	00Halb95	00Staf05	00Staf89	00SwdC91	00SwdL90	00SwdS94																																			
 RMEW_11	00ax1h84	00ax1h87	00ax2h93	00Club89	USDagg59																																												
 RMEW_12	00ax1h85	00ax2h94	00Club88	USSwdT59																																												
 RMEW_13	00ax1h83	00ax2h85	00Club87	USFlal59																																													
-RMEW_14	00ax2h86	00Club86	USSwdK59																																																																																			
+RMEW_14	00ax2h86	00Club86	USSwdK59	USStaf59																																																																																		
 																																																
 RMIW_01	00ax1h76	00Slng02	00BowC02	00BowC04	00BowC93	00BowL03	00BowP02	00BowP98	00BowS03	00BowS90	00BowS91	00Bwhx03	00Bwhx97	00Bwlx03	00Bwlx97	00Slng02	00Slng94	00Arow91																												
 RMIW_02	00ax1h75	00BowC04	00Slng99	00BowC99	00BowL91	00BowL97	00BowL98	00BowS86	00BowS89	00BowS92	00BowS95	00BowS99	00Bwhx94	00Bwhx96	00Bwlx95	00Bwlx96	00Slng89	00Slng99	00Dart86																						
