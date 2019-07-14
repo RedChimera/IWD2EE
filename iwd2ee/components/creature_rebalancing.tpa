@@ -1,5 +1,189 @@
 //NOTES
 //
+
+OUTER_PATCH us_creature_constants BEGIN
+	creflags=0x10
+	gold=0x1c
+	states=0x20
+	currenthp=0x24
+	maxhp=0x26
+	maximumhp=0x26
+	metalcolor=0x2c
+	minorcolor=0x2d
+	majorcolor=0x2e
+	skincolor=0x2f
+	leathercolor=0x30
+	armorcolor=0x31
+	haircolor=0x32
+	armorclass=0x46
+	fortitudesave=0x52
+	reflexsave=0x53
+	willsave=0x54
+	fireresistance=0x55
+	coldresistance=0x56
+	elecresistance=0x57
+	electricityresistance=0x57
+	acidresistance=0x58
+	spellresistance=0x59
+	magicfireresistance=0x5a
+	magiccoldresistance=0x5b
+	slashingresistance=0x5c
+	crushingresistance=0x5d
+	bludgeoningresistance=0x5d
+	piercingresistance=0x5e
+	missileresistance=0x5f
+	magicdamageresistance=0x60
+	luck=0x67
+	turnundeadlevel=0x68
+	leveltotal=0x8a
+	levelbarbarian=0x8b
+	levelbard=0x8c
+	levelcleric=0x8d
+	leveldruid=0x8e
+	levelfighter=0x8f
+	levelmonk=0x90
+	levelpaladin=0x91
+	levelranger=0x92
+	levelrogue=0x93
+	levelsorcerer=0x8a
+	levelwizard=0x8a
+	leveltotal=0x8a
+	teamscript=0x1ac
+	specialscript1=0x1b4
+	enchantmentlevel=0x1bc
+	feats1=0x1c0
+	feats2=0x1c4
+	feats3=0x1c8
+	proficiencybow=0x1d8
+	proficiencycrossbow=0x1d9
+	proficiencymissile=0x1da
+	proficiencyaxe=0x1db
+	proficiencymace=0x1dc
+	proficiencyflail=0x1dd
+	proficiencypolearm=0x1de
+	proficiencyhammer=0x1df
+	proficiencystaff=0x1e0
+	proficiencyquarterstaff=0x1e0
+	proficiencygreatsword=0x1e1
+	proficiencylargesword=0x1e2
+	proficiencysmallblade=0x1e3
+	toughness=0x1e4
+	armoredarcana=0x1e5
+	cleave=0x1e6
+	armorproficiency=0x1e7
+	spellfocusenchantment=0x1e8
+	spellfocusevocation=0x1e9
+	spellfocusnecromancy=0x1ea
+	spellfocustransmutation=0x1eb
+	spellpenetration=0x1ec
+	extrarage=0x1ed
+	extrawildshape=0x1ee
+	extrasmiting=0x1ef
+	extraturning=0x1f0
+	proficiencybastardsword=0x1f1
+	skillalchemy=0x218
+	skillanimalempathy=0x219
+	skillbluff=0x21a
+	skillconcentration=0x21b
+	skilldiplomacy=0x21c
+	skilldisabledevice=0x21d
+	skillhide=0x21e
+	skillintimidate=0x21f
+	skilllore=0x220
+	skillknowledgearcana=0x220
+	skillmovesilently=0x221
+	skillopenlocks=0x222
+	skillpickpockets=0x223
+	skillsearch=0x224
+	skillspellcraft=0x225
+	skillusemagicdevice=0x226
+	skillwildernesslore=0x227
+	challengerating=0x25a
+	favoredenemy1=0x25b
+	favoredenemy2=0x25c
+	favoredenemy3=0x25d
+	favoredenemy4=0x25e
+	favoredenemy5=0x25f
+	favoredenemy6=0x260
+	favoredenemy7=0x261
+	favoredenemy8=0x262
+	subrace=0x263
+	strength=0x266
+	intelligence=0x267
+	wisdom=0x268
+	dexterity=0x269
+	constitution=0x26a
+	charisma=0x26b
+	morale=0x26c
+	moralebreak=0x26d
+	moralerecovery=0x26e
+	kit=0x270
+	overridescript=0x274
+	specialscript2=0x27c
+	combatscript=0x284
+	specialscript3=0x28c
+	movementscript=0x294
+	defaultvisibility=0x29c
+	deathvariableset=0x2aa
+	deathvariableincrement=0x2ca
+	fadeamount=0x301
+	attributes=0x303
+	allegiance=0x384
+	general=0x385
+	race=0x386
+	class=0x387
+	specifics=0x388
+	gender=0x389
+	alignment=0x38f
+	scriptname=0x394
+	class2=0x3b4
+	classmask=0x3b6
+	dialog=0x626
+	dialogue=0x626
+END
+
+DEFINE_PATCH_FUNCTION ~SET_CLASS_LEVELS_IWD2~
+	INT_VAR
+		newlevelbarbarian=0
+		newlevelbard=0
+		newlevelcleric=0
+		newleveldruid=0
+		newlevelfighter=0
+		newlevelmonk=0
+		newlevelpaladin=0
+		newlevelranger=0
+		newlevelrogue=0
+		newlevelsorcerer=0
+		newlevelwizard=0
+	STR_VAR
+		updatehp=~~
+BEGIN
+	WRITE_BYTE levelbarbarian newlevelbarbarian
+	WRITE_BYTE levelbard newlevelbard
+	WRITE_BYTE levelcleric newlevelcleric
+	WRITE_BYTE leveldruid newleveldruid
+	WRITE_BYTE levelfighter newlevelfighter
+	WRITE_BYTE levelmonk newlevelmonk
+	WRITE_BYTE levelpaladin newlevelpaladin
+	WRITE_BYTE levelranger newlevelranger
+	WRITE_BYTE levelrogue newlevelrogue
+	WRITE_BYTE levelsorcerer newlevelsorcerer
+	WRITE_BYTE levelwizard newlevelwizard
+	newleveltotal = (newlevelbarbarian + newlevelbard + newlevelcleric + newleveldruid + newlevelfighter + newlevelmonk + newlevelpaladin + newlevelranger + newlevelrogue + newlevelsorcerer + newlevelwizard)
+	WRITE_BYTE leveltotal newleveltotal
+	PATCH_IF ~%updatehp%~ STRING_EQUAL_CASE ~average~ BEGIN
+		newhp = (newlevelbarbarian * 6 + newlevelbard * 3 + newlevelcleric * 4 + newleveldruid * 4 + newlevelfighter * 5 + newlevelmonk * 4 + newlevelpaladin * 5 + newlevelranger * 5 + newlevelrogue * 3 + newlevelsorcerer * 2 + newlevelwizard * 2 + newleveltotal / 2)
+		WRITE_SHORT currenthp newhp
+		WRITE_SHORT maxhp newhp
+	END	ELSE BEGIN
+	PATCH_IF ~%updatehp%~ STRING_EQUAL_CASE ~max~ OR ~%updatehp%~ STRING_EQUAL_CASE ~maximum~ BEGIN
+		newhp = (newlevelbarbarian * 12 + newlevelbard * 6 + newlevelcleric * 8 + newleveldruid * 8 + newlevelfighter * 10 + newlevelmonk * 8 + newlevelpaladin * 10 + newlevelranger * 10 + newlevelrogue * 6 + newlevelsorcerer * 4 + newlevelwizard * 4)
+		WRITE_SHORT currenthp newhp
+		WRITE_SHORT maxhp newhp
+	END
+	END
+END
+
 // Mind Flayer changes
 
 COPY ~%mod_folder%/itm/00MFLYR.itm~ ~override~
@@ -23,10 +207,41 @@ WRITE_SHORT 0x5D 0
 WRITE_SHORT 0x5E 0
 WRITE_SHORT 0x5F 0
 WRITE_SHORT 0x67 1
-WRITE_ASCII 0x8f6 ~USSTCG01~ #8	
+WRITE_ASCII 0x8f6 ~USSTCG01~ #8
 
 COPY ~%mod_folder%/spl/SPIN159.spl~ ~override~
-
+/*
+COPY_EXISTING ~63DRACE.cre~ ~override~
+	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelfighter=16 newlevelwizard=12 STR_VAR updatehp=~max~ END
+	WRITE_SHORT armorclass 30
+	WRITE_BYTE strength 30
+	WRITE_BYTE dexterity 13
+	WRITE_BYTE constitution 20
+	WRITE_BYTE intelligence 18
+	WRITE_BYTE wisdom 8
+	WRITE_BYTE charisma 12
+	WRITE_BYTE fortitudesave 15
+	WRITE_BYTE reflexsave 12
+	WRITE_BYTE willsave 14
+	WRITE_BYTE bludgeoningresistance 0
+	WRITE_BYTE acidresistance 100
+	READ_LONG feats1 ulgiash
+	ulgiash|=0x40001004
+	WRITE_LONG feats1 ulgiash
+	READ_LONG feats2 ulgiash
+	ulgiash|=0x2004
+	WRITE_LONG feats2 ulgiash
+	WRITE_BYTE skillconcentration 23
+	WRITE_BYTE skillspellcraft 23
+	WRITE_BYTE proficiencybastardsword 3
+	WRITE_BYTE proficiencygreatsword 3
+	WRITE_BYTE challengerating 20
+	LPF	IWD2_REMOVE_SPELLS_KNOWN STR_VAR class=~wizard~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=2 STR_VAR class=~wizard~ resource=~SPWI305~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=2 STR_VAR class=~wizard~ resource=~SPWI508~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~SPWI605~ END
+	LPF	IWD2_CRE_ABILITY INT_VAR num=1 STR_VAR resource=~SPIN197~ END
+*/
 // patches all spellcasters to have two pips in all Spell Focus feats. Effectively increases all enemy spells' save DCs by 2, except for casters who already had Spell Focus.
 
 COPY_EXISTING_REGEXP ~.*\.cre~ ~override~

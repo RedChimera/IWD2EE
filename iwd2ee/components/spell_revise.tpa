@@ -2213,7 +2213,7 @@ COPY_EXISTING ~spwi303z.itm~ ~override~
 COPY_EXISTING ~spwi304z.itm~ ~override~
    LPF CLONE_EFFECT INT_VAR match_opcode = 148 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
 COPY_EXISTING ~spwi305z.itm~ ~override~
-   LPF CLONE_EFFECT INT_VAR match_opcode = 146 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+   LPF CLONE_EFFECT INT_VAR silent=1 match_opcode = 146 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
 COPY_EXISTING ~spwi306z.itm~ ~override~
    LPF CLONE_EFFECT INT_VAR match_opcode = 148 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
 COPY_EXISTING ~spwi308z.itm~ ~override~

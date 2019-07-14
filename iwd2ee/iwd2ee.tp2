@@ -34,6 +34,8 @@ ALWAYS
 	END
 
 	VERBOSE
+	INCLUDE ~%mod_folder%/components/iwd2ee_functions.tpa~ //Functions that may be used in multiple components
+	LAM	IWD2_INDEX_LISTS
 END
 
 AUTO_TRA ~iwd2ee/tra/%s~
@@ -152,7 +154,7 @@ BEGIN @18
 
 BEGIN @19
 
-      INCLUDE ~%mod_folder%/components/mage_scrolls.tpa~      //~Mage Scrolls for New Spells~
+      INCLUDE ~%mod_folder%/components/mage_scrolls_2.tpa~      //~Mage Scrolls for New Spells~
 
 //Fewer Immunities for Bosses
 

@@ -2840,7 +2840,7 @@ Weight: 15 lb.~
 
 STATISTICS:
 
-Shield Bonus: +3
+Shield Bonus: +4
 Special:
   Spell Power: Can cast the spell Holy Smite (at level 10) 1/day
 Armor Check Penalty:  -2
@@ -7488,8 +7488,20 @@ Feat Requirement:  Martial Weapon, Hammer
 Type:  One-handed~
 //@11569    = ~Lawful Hammer~
 //@11570    = ~Item description can remain the same; if new description is needed put it here~
-//@11571    = ~Holy Hammer of Corrosive Burst +5~
-//@11572    = ~Item description can remain the same; if new description is needed put it here~
+@11571    = ~Hammer of Stone +5~
+@11572    = ~Like others of its type, this warhammer is made entirely of steel, with a bone-crushing hammer mounted upon an 18" shaft.  It has also been bestowed with a small number of magical properties, however, thus making it more effective in combat.
+
+STATISTICS:
+
+Damage:  1d8 + 5
+Attack Bonus:  +5 
+Enchantment:  +5
+Damage Type:  Bludgeoning
+Special:
+  Petrification: 15% chance of turning target to stone (Fortitude DC 35)
+Weight: 7 lb.
+Feat Requirement:  Martial Weapon, Hammer
+Type:  One-handed~
 @11573    = ~Hammer of Haste +5~
 @11574    = ~Like others of its type, this warhammer is made entirely of steel, with a bone-crushing hammer mounted upon an 18" shaft.  It has also been bestowed with a small number of magical properties, however, thus making it more effective in combat.  
 
@@ -9138,7 +9150,7 @@ Damage:  +5 (missile)
 Attack Bonus:  +5
 Special:
   Speed: +1 attack per combat round
-  Increased Duration: Wielder's divine spells last 50% longer
+  Increased Duration: Wielder's divine spells last 20% longer
   Spell Power: Can cast the spell Greater Restoration 1/Day
 Weight: 0 lb.
 Feat Requirement:  Simple Weapon, Missile
@@ -9843,20 +9855,16 @@ STATISTICS:
 
 Permanent +1 to all Saving Throws
 Weight:  1 lb.~
-@12117    = ~Potion of Resistance Transference~
+@12117    = ~Potion of Energy Resistance~
 @12118    = ~Potions are typically found in ceramic, crystal, glass, or metal flasks or vials.  Flasks or other containers generally contain enough fluid to provide one person with one complete dose to achieve the effects of the potion.  
 
 STATISTICS:
 
-Permanent 10/- Fire Resistance
-Permanent 10/- Cold Resistance
-Permanent 10/- Electricity Resistance
-Permanent 10/- Acid Resistance
-Permanent 10/- Magic Damage Resistance
-Permanent 5/+ Slashing Vulnerability
-Permanent 5/+ Piercing Vulnerability
-Permanent 5/+ Bludgeoning Vulnerability
-Permanent 5/+ Missile Vulnerability
+Permanent 3/- Fire Resistance
+Permanent 3/- Cold Resistance
+Permanent 3/- Electricity Resistance
+Permanent 3/- Acid Resistance
+Permanent 3/- Magic Damage Resistance
 Weight:  1 lb.~
 //@12119    = ~Potion of Resistance~
 @12120    = ~Potions are typically found in ceramic, crystal, glass, or metal flasks or vials.  Flasks or other containers generally contain enough fluid to provide one person with one complete dose to achieve the effects of the potion.  
@@ -9933,7 +9941,13 @@ This harp can cast Heal or Resurrection 1/Day.  It can only be played by a bard 
 Minimum Wisdom of 16 required
 Weight: 3 lb.~
 //@12139    = ~Lyre of Progression~
-//@12140    = ~Item description can remain the same; if new description is needed put it here~
+@12140    = ~The Lyre of Progression was created by the bard Sedini Paletto.  Sedini was a teacher of young aspiring bards during difficult times.  This instrument, held close at all times, helped Sedini fight off those who would attack him or his students.  When Sedini grew old, he passed it on to his best student, Galwen Alaman.  Galwen continued teaching for a few years before setting out into the wilderness on a life of adventure.  It is believed that he lost the lyre when he accidentally dropped it in a marsh.
+
+STATISTICS:
+
+Luck: +1
+
+Weight:  2 lb.~
 //@12141    = ~Lyre of Inner Focus~
 @12142    = ~The Lyre of Inner Focus was created by the bard Sedini Paletto.  Sedini was a teacher of young aspiring bards during difficult times.  This instrument, held close at all times, helped Sedini fight off those who would attack him or his students.  When Sedini grew old, he passed it on to his best student, Galwen Alaman.  Galwen continued teaching for a few years before setting out into the wilderness on a life of adventure.  It is believed that he lost the lyre when he accidentally dropped it in a marsh.
 
@@ -11735,3 +11749,12 @@ STATISTICS:
 Constant Effect: User under the effects of the spell Tenser's Transformation while equipped
 
 Weight: 0 lb.~
+//@12587    = ~Sabotaged Histachii Brew~
+@12588    = ~This liquid, specially prepared by one of the yuan-ti priestesses, is the concoction of yuan-ti venom and various herbs and roots, including the modified mandrake root that you planted.
+
+STATISTICS:
+
+This enchanted broth transforms anyone who ingests it into a special yuan-ti histachii for a period of four hours.  While transformed, the imbiber maintains mental clarity and control over their facilities, but is otherwise indistinguishable from regular histachii.
+
+In addition, even after the transformation ends, the imbiber's skin remains harder than normal, having retained a small portion of the transmutation to scales. This grants a permanent, non-cumulative +1 generic Armor Class bonus.
+Weight: 1 lb.~
