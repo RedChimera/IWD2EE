@@ -1,35 +1,4 @@
-DEFINE_PATCH_FUNCTION ~CONVERT_DLG_TO_IWD2_FORMAT~
-BEGIN
-	READ_LONG 0xc ulgiash
-	PATCH_IF (ulgiash = 0x34) BEGIN
-		DELETE_BYTES 0x30 4
 
-		READ_LONG 0xc ulgiash
-		ulgiash -= 4
-		WRITE_LONG 0xc ulgiash
-	
-		READ_LONG 0x14 ulgiash
-		ulgiash -= 4
-		WRITE_LONG 0x14 ulgiash
-	
-		READ_LONG 0x18 ulgiash
-		ulgiash -= 4
-		WRITE_LONG 0x18 ulgiash
-		READ_LONG ulgiash ulgiash
-		INSERT_BYTES (ulgiash - 2) 2
-		
-		READ_LONG 0x20 ulgiash
-		ulgiash -= 4
-		WRITE_LONG 0x20 ulgiash
-	
-		READ_LONG 0x28 ulgiash
-		ulgiash -= 4
-		WRITE_LONG 0x28 ulgiash
-		READ_LONG ulgiash ulgiash
-		INSERT_BYTES (ulgiash - 2) 2
-	END
-
-END
 
 // First are some lines that used to belong to Item Revisions, but were found to be over-writing stuff from this component. We're moving it to the start to make sure that the Concoct Potions lines later in this TPA will over-write the following lines.
 /*

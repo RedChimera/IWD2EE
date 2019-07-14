@@ -6,7 +6,7 @@ OUTER_PATCH us_faster_horde_variables BEGIN
 	doorsize=0xc8
 END
 
-INCLUDE ~%mod_folder%/components/us_functions.tpa~ //Functions that may be used in multiple components
+//INCLUDE ~%mod_folder%/components/us_functions.tpa~ //Functions that may be used in multiple components
 
 COPY ~%mod_folder%/bcs/bcs_faster_horde~ ~override~
 

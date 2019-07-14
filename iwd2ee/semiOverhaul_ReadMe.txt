@@ -241,8 +241,9 @@ This component makes it so one only has to beat a rank once (with 3 or more squa
 
 Inspired by Weimer's similar component from IWD2-Ease, this component patches every armor and shield in the game so they give physical damage resistance equal to half their Armor Class bonus, rounded down. 
 
-This mod is most balanced when installed on top of other mods like Light of Selune, Tweaks for IWD2, and Tactics4IWD2, but it also works on its own. Much of the credit for the inspiration for this mod goes to the makers of those three mods, which provided the groundwork for this mod and the changes it makes. I would also like to thank @Firecrow, who provided indispensable feedback and played an instrumental role in inspiring many of the mod's features, and @subtledoctor, @bubb, and @Gwendolyne for providing invaluable technical support during the construction of the mod.
-
 --Race Revisions--
 
 This component makes race stats less different. All racial ability score bonuses and penalties are halved (e.g. moon elves just get +1 Dexterity and -1 Constitution), but all characters can get up to 19 in an ability score at character creation rather than 18.
+
+
+This mod is most balanced when installed on top of other mods like Light of Selune, Tweaks for IWD2, and Tactics4IWD2, but it also works on its own. Much of the credit for the inspiration for this mod goes to the makers of those three mods, which provided the groundwork for this mod and the changes it makes. I would also like to thank @Firecrow, who provided indispensable feedback and played an instrumental role in inspiring many of the mod's features, and @subtledoctor, @bubb, and @Gwendolyne for providing invaluable technical support during the construction of the mod.

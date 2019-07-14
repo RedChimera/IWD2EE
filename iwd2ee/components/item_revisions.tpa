@@ -1,7 +1,7 @@
 //NOTES
 //
 
-INCLUDE ~%mod_folder%/components/us_functions.tpa~ //Functions that may be used in multiple components
+//INCLUDE ~%mod_folder%/components/us_functions.tpa~ //Functions that may be used in multiple components
 
 
 COPY ~%mod_folder%/itm/itm_item_revisions~ ~override~
@@ -917,11 +917,11 @@ COPY_EXISTING ~00HFSDFV.itm~ ~override~
 	SAY NAME2 @10645
 	SAY IDENTIFIED_DESC @10646
 
-COPY_EXISTING ~00SHLDFF.itm~ ~override~
+COPY_EXISTING ~00SHLDMM.itm~ ~override~
 	SAY NAME2 @10647
 	SAY IDENTIFIED_DESC @10648
 
-COPY_EXISTING ~00HFSDFF.itm~ ~override~
+COPY_EXISTING ~00HFSDMM.itm~ ~override~
 	SAY NAME2 @10649
 	SAY IDENTIFIED_DESC @10650
 
@@ -1901,6 +1901,10 @@ COPY_EXISTING ~00HAMM92.itm~ ~override~
 	SAY NAME2 @11567
 	SAY IDENTIFIED_DESC @11568
 
+COPY_EXISTING ~00HAMM94.itm~ ~override~
+	SAY NAME2 @11571
+	SAY IDENTIFIED_DESC @11572
+
 COPY_EXISTING ~00HAMM95.itm~ ~override~
 	SAY NAME2 @11573
 	SAY IDENTIFIED_DESC @11574
@@ -2765,6 +2769,8 @@ COPY_EXISTING ~00BARD03.itm~ ~override~
 COPY_EXISTING ~00HFBD03.itm~ ~override~
 	SAY IDENTIFIED_DESC @12138
 
+COPY_EXISTING ~00BARD04.itm~ ~override~
+	SAY IDENTIFIED_DESC @12140
 
 COPY_EXISTING ~00HFBD04.itm~ ~override~
 	SAY IDENTIFIED_DESC @12142
@@ -3360,6 +3366,9 @@ COPY_EXISTING ~USRINGTH.itm~ ~override~
 	SAY NAME2 @12585
 	SAY IDENTIFIED_DESC @12586
 
+COPY_EXISTING ~61POTNSB.itm~ ~override~
+	SAY IDENTIFIED_DESC @12588
+
 
 //General patch changes
 
@@ -3470,6 +3479,7 @@ ACTION_IF !(FILE_EXISTS_IN_GAME 00hfsdtcl.itm) BEGIN //If Black Isle's official 
 	COPY_EXISTING ~53HEGGR.sto~ ~override~ //Underdark weapon/armor store
 		ADD_STORE_ITEM ~PTCHRT04~ AFTER ~00CHAN02~ #1 #1 #1 ~IDENTIFIED~ #1 //Fiend plate armor
 		ADD_STORE_ITEM ~PTCHRT05~ AFTER ~00CHAN02~ #1 #1 #1 ~IDENTIFIED~ #1 //Diamond plate armor
+
 	COPY_EXISTING ~60SHEEMI.sto~ ~override~ //Conlan store
 		ADD_STORE_ITEM ~PTCHRT07~ #1 #1 #1 ~IDENTIFIED~ #1 //Aasimar's Aura armor
 		ADD_STORE_ITEM ~PTCHRT03~ #1 #1 #1 ~IDENTIFIED~ #1 //Tuqak Mauler's armor
@@ -3512,7 +3522,7 @@ ACTION_IF !(MOD_IS_INSTALLED ~Setup-IWD2-Ease.tp2~ ~18~) BEGIN //If Include Forg
 
 	COPY_EXISTING ~41Ingrat.cre~ ~override~ //Doppelganger Neverwinter Captain
 		LPF IWD2_ADD_CRE_ITEM INT_VAR cq1=1 STR_VAR item=~60RTHF05~ slot=~armor~ END
-END 
+END
 
 COPY_EXISTING ~10guthe.sto~ ~override~ //Salty Dog Barbarian store
 	ADD_STORE_ITEM ~00BOOT15~ #1 #1 #1 ~IDENTIFIED~ #1 //Winter Wolf Boots
@@ -3584,6 +3594,8 @@ COPY_EXISTING ~40BDAWN.sto~ ~override~ //Beodaewn the Werewolf Man store
 	REMOVE_STORE_ITEM ~00AMUL12~ ~00SPER99~
 
 COPY_EXISTING ~41ZACK1.sto~ ~override~ ~41ZACK2.sto~ ~override~ ~41ZACK3.sto~ ~override~ //Zack Boosenberry stores
+	REMOVE_STORE_ITEM ~00MSTR95~
+	ADD_STORE_ITEM ~00MSTR95~ BEFORE ~00HAMM04~ #1 #1 #1 ~IDENTIFIED~ #1 //Morningstar of Thorns
 	ADD_STORE_ITEM ~00RING78~ AFTER ~00RING20~ #1 #1 #1 ~IDENTIFIED~ #1 //Spirit Armor Ring
 	ADD_STORE_ITEM ~00RING98~ AFTER ~00RING78~ #1 #1 #1 ~IDENTIFIED~ #1 //Chameleon Ring
 	ADD_STORE_ITEM ~00WAND13~ AFTER ~00WAND06~ #50 #1 #1 ~IDENTIFIED~ #1 //Wand of Trap Detection
@@ -3602,8 +3614,9 @@ COPY_EXISTING ~00BASHS3.sto~ ~override~ //Avarine Decanter genie store
 	ADD_STORE_ITEM ~USBRAC47~ AFTER ~00BOOT01~ #1 #1 #1 ~IDENTIFIED~ #1 //Bracers of Armor +5
 	ADD_STORE_ITEM ~00RTHF73~ AFTER ~00BRAC10~ #1 #1 #1 ~IDENTIFIED~ #1 //Cleaver
 	ADD_STORE_ITEM ~00RTHF58~ AFTER ~00RTHF73~ #1 #1 #1 ~IDENTIFIED~ #1 //Iron Mary crossbow
-	ADD_STORE_ITEM ~00AROW07~ AFTER ~00POTN01~ #1 #1 #1 ~IDENTIFIED~ #1 //Arrow of Dispelling
-	ADD_STORE_ITEM ~USBOLT52~ AFTER ~00AROW07~ #1 #1 #1 ~IDENTIFIED~ #12 //Bolt of Lightning
+	ADD_STORE_ITEM ~00AROW07~ AFTER ~00POTN01~ #1 #1 #1 ~IDENTIFIED~ #5 //Arrow of Dispelling
+	ADD_STORE_ITEM ~USBOLT52~ AFTER ~00AROW07~ #1 #1 #1 ~IDENTIFIED~ #30 //Bolt of Lightning
+	ADD_STORE_ITEM ~USAROW52~ AFTER ~00AROW07~ #1 #1 #1 ~IDENTIFIED~ #30 //Arrows of Detonation
 	ADD_STORE_ITEM ~USRINGTH~ AFTER ~00RING18~ #1 #1 #1 ~IDENTIFIED~ #1 //Ring of Thex
 	REMOVE_STORE_ITEM ~00WAND24~
 
@@ -3622,7 +3635,7 @@ COPY_EXISTING ~50LIMHA.sto~ ~override~ //Limha store
 	REMOVE_STORE_ITEM ~00AX1H82~ ~00SWDL03~
 
 COPY_EXISTING ~51DRAGU.sto~ ~override~ ~51DRAGU2.sto~ ~override~ //Duergar engineer stores
-	ADD_STORE_ITEM ~USBOLT48~ AFTER ~00BOLT04~ #20 #1 #1 ~IDENTIFIED~ #1 //Heavy Bolt +4
+	ADD_STORE_ITEM ~USBOLT48~ AFTER ~00BOLT04~ #40 #1 #1 ~IDENTIFIED~ #1 ~UNLIMITED~ //Heavy Bolt +4
 
 COPY_EXISTING ~52BERED.sto~ ~override~ //Beodaewn the Werewolf Man store
 	REMOVE_STORE_ITEM ~52RTHF05~
@@ -3643,6 +3656,8 @@ COPY_EXISTING ~53MALAVO.sto~ ~override~ //Malavon store
 	ADD_STORE_ITEM ~USRING53~ AFTER ~00RING22~ #1 #1 #1 ~IDENTIFIED~ #1 //Onyx Ring of Teleportation
 
 COPY_EXISTING ~53MYRVEK.sto~ ~override~ //Underdark magic store
+	REMOVE_STORE_ITEM ~00RING23~
+	ADD_STORE_ITEM ~00RING23~ AFTER ~00POTN21~ #1 #1 #1 ~IDENTIFIED~ #1 //Ring of Energy
 	ADD_STORE_ITEM ~00BRAC04~ AFTER ~00BRAC03~ #1 #1 #1 ~IDENTIFIED~ #1 //Bracers of Armor +4
 	ADD_STORE_ITEM ~USAMUL50~ AFTER ~00AMUL13~ #1 #1 #1 ~IDENTIFIED~ #1 //Amulet of Antimagic
 
@@ -3652,6 +3667,8 @@ COPY_EXISTING ~53WODE.sto~ ~override~ //Underdark ranged ammunition store
 	ADD_STORE_ITEM ~USBULL48~ AFTER ~00BULL99~ #20 #1 #1 ~IDENTIFIED~ #1 //Greater Vampiric Bullet +3
 
 COPY_EXISTING ~60NATHAN.sto~ ~override~ //Kuldahar Nathaniel store
+	REMOVE_STORE_ITEM ~00AMUL12~
+	ADD_STORE_ITEM ~00AMUL12~ AFTER ~00RTHF72~ #3 #1 #1 ~IDENTIFIED~ #1 //Necklace of Missiles
 	ADD_STORE_ITEM ~USRTHF35~ AFTER ~00RTKT04~ #1 #1 #1 ~IDENTIFIED~ #1 //Woodland Cloak
 	ADD_STORE_ITEM ~00RING74~ AFTER ~00RING68~ #1 #1 #1 ~IDENTIFIED~ #1 //Ring of Protection from Evil
 	ADD_STORE_ITEM ~00STAF92~ AFTER ~USRTHF35~ #1 #1 #1 ~IDENTIFIED~ #1 //Staff of Banishing +2
@@ -3695,7 +3712,6 @@ COPY_EXISTING ~63RIKI.sto~ ~override~ //Severed Hand thief store
 	ADD_STORE_ITEM ~USBOLT52~ AFTER ~00BOLT99~ #1 #1 #1 ~IDENTIFIED~ #9 //Bolts of Lightning
 	ADD_STORE_ITEM ~USCLCK51~ AFTER ~00CLCK03~ #1 #1 #1 ~IDENTIFIED~ #9 //Improved Cloak of Displacement
 	REMOVE_STORE_ITEM ~00CLCK03~
-
 
 COPY_EXISTING ~ar3000.are~ ~override~ //Horde Fortress outside
 	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR charges1=2 single_match=1 STR_VAR old_item=~SPPR115Z~ new_item=~00POTN22~ END

@@ -124,6 +124,612 @@ BEGIN
 
 END
 
+DEFINE_PATCH_FUNCTION ~ALTER_AREA_DOOR_IWD2~
+	INT_VAR
+		cursor=~-1~
+		trap_detect=~-1~
+		trap_remove=~-1~
+		trapped=~-1~
+		detected=~-1~
+		all_flags=~-1~
+		flag_open=~-1~
+		flag_locked=~-1~
+		flag_resets=~-1~
+		flag_detectable=~-1~
+		flag_forced=~-1~
+		flag_no_close=~-1~
+		flag_located=~-1~
+		flag_secret=~-1~
+		flag_detected=~-1~
+		flag_string=~-1~
+		flag_no_look=~-1~
+		flag_uses_key=~-1~
+		flag_sliding=~-1~
+		launch_x=~-1~
+		launch_y=~-1~
+		door_detect=~-1~
+		lock_difficulty=~-1~
+		open_x=~-1~
+		open_y=~-1~
+		close_x=~-1~
+		close_y=~-1~
+		unlock_message=99999999
+	STR_VAR
+		door_name=~~
+		door_open_sound=~same~
+		door_close_sound=~same~
+		door_key=~same~
+		door_script=~same~
+		travel_trigger=~same~
+		dialogue=~same~
+BEGIN
+	SET door_name_length = (STRING_LENGTH ~%door_name%~)
+		PATCH_IF (door_name_length = 0) BEGIN
+			PATCH_FAIL ~No door name given for function ALTER_AREA_DOOR_IWD2 ~
+		END
+	SET door_found = 0
+	READ_SHORT 0xb4 doornumber
+	READ_LONG 0xb8 dooroffset
+	FOR (i = 0; i < doornumber; ++i) BEGIN
+		SET offset = dooroffset + (i * doorsize)
+		READ_ASCII offset name_of_door (door_name_length)
+		PATCH_IF (~%name_of_door%~ STRING_EQUAL_CASE ~%door_name%~) BEGIN
+			door_found = 1
+			PATCH_IF (all_flags != (0 - 1)) BEGIN
+				WRITE_LONG (offset + 0x28) all_flags
+/*			END ELSE BEGIN
+				SET bit_enable = 0
+				SET bit_disable = 0xFFFFFFFF
+				PATCH_IF (flag_open != (0 - 1)) BEGIN
+					PATCH_IF (flag_open == 0) BEGIN
+						bit_disable -= 0x1
+					END ELSE BEGIN 
+						bit_enable += 0x1
+					END
+					PATCH_IF (flag_locked == 0) BEGIN
+						bit_disable -= 0x2
+					END ELSE BEGIN 
+						bit_enable += 0x2
+					END
+					PATCH_IF (flag_resets == 0) BEGIN
+						bit_disable -= 0x4
+					END ELSE BEGIN 
+						bit_enable += 0x4
+					END
+					PATCH_IF (flag_detectable == 0) BEGIN
+						bit_disable -= 0x8
+					END ELSE BEGIN 
+						bit_enable += 0x8
+					END
+					PATCH_IF (flag_forced == 0) BEGIN
+						bit_disable -= 0x10
+					END ELSE BEGIN 
+						bit_enable += 0x10
+					END
+					PATCH_IF (flag_no_close == 0) BEGIN
+						bit_disable -= 0x20
+					END ELSE BEGIN 
+						bit_enable += 0x20
+					END
+					PATCH_IF (flag_located == 0) BEGIN
+						bit_disable -= 0x40
+					END ELSE BEGIN 
+						bit_enable += 0x40
+					END
+					PATCH_IF (flag_secret == 0) BEGIN
+						bit_disable -= 0x80
+					END ELSE BEGIN 
+						bit_enable += 0x80
+					END
+					PATCH_IF (flag_detected == 0) BEGIN
+						bit_disable -= 0x100
+					END ELSE BEGIN 
+						bit_enable += 0x100
+					END
+					PATCH_IF (flag_string == 0) BEGIN
+						bit_disable -= 0x200
+					END ELSE BEGIN 
+						bit_enable += 0x200
+					END
+					PATCH_IF (flag_no_look == 0) BEGIN
+						bit_disable -= 0x400
+					END ELSE BEGIN 
+						bit_enable += 0x400
+					END
+					PATCH_IF (flag_uses_key == 0) BEGIN
+						bit_disable -= 0x4000
+					END ELSE BEGIN 
+						bit_enable += 0x4000
+					END
+				END
+				READ_LONG (offset + 0x28) flag_change
+				flag_change |= bit_enable
+				flag_change &= bit_disable
+				WRITE_LONG (offset + 0x28) flag_change */
+			END
+			PATCH_IF (cursor != (0 - 1)) BEGIN
+				WRITE_LONG (offset + 0x68) cursor
+			END
+			PATCH_IF (trap_detect != (0 - 1)) BEGIN
+				WRITE_SHORT (offset + 0x6c) trap_detect
+			END
+			PATCH_IF (trap_remove != (0 - 1)) BEGIN
+				WRITE_SHORT (offset + 0x6e) trap_remove
+			END
+			PATCH_IF (trapped != (0 - 1)) BEGIN
+				WRITE_SHORT (offset + 0x70) trapped
+			END
+			PATCH_IF (detected != (0 - 1)) BEGIN
+				WRITE_SHORT (offset + 0x72) detected
+			END
+			PATCH_IF (launch_x != (0 - 1)) BEGIN
+				WRITE_SHORT (offset + 0x74) launch_x
+			END
+			PATCH_IF (launch_y != (0 - 1)) BEGIN
+				WRITE_SHORT (offset + 0x76) launch_y
+			END
+			PATCH_IF (!(~%door_key%~ STRING_EQUAL ~same~)) BEGIN
+				WRITE_ASCIIE (offset + 0x78) ~%door_key%~ #8
+			END
+			PATCH_IF (!(~%door_script%~ STRING_EQUAL ~same~)) BEGIN
+				WRITE_ASCIIE (offset + 0x80) ~%door_script%~ #8
+			END
+			PATCH_IF (door_detect != (0 - 1)) BEGIN
+				WRITE_SHORT (offset + 0x88) door_detect
+			END
+			PATCH_IF (lock_difficulty != (0 - 1)) BEGIN
+				WRITE_SHORT (offset + 0x8c) lock_difficulty
+			END
+			PATCH_IF (open_x != (0 - 1)) BEGIN
+				WRITE_SHORT (offset + 0x90) open_x
+			END
+			PATCH_IF (open_y != (0 - 1)) BEGIN
+				WRITE_SHORT (offset + 0x92) open_y
+			END
+			PATCH_IF (close_x != (0 - 1)) BEGIN
+				WRITE_LONG (offset + 0x94) close_x
+			END
+			PATCH_IF (close_y != (0 - 1)) BEGIN
+				WRITE_LONG (offset + 0x96) close_y
+			END
+			PATCH_IF (unlock_message != 99999999) BEGIN
+				WRITE_LONG (offset + 0x98) unlock_message
+			END
+
+			i = doornumber
+		END
+	END
+	PATCH_IF (door_found = 0) BEGIN
+		PATCH_WARN ~No door called %door_name% was found.~
+	END
+END
+
+	//	v1.0
+	DEFINE_ACTION_MACRO	IWD2_INDEX_LISTS	BEGIN
+		COPY_EXISTING	~LISTINNT.2DA~	override
+			CLEAR_ARRAY	~IDX_LISTINNT~
+			READ_2DA_ENTRIES_NOW	~IDX_LISTINNT~	2
+		BUT_ONLY
+		COPY_EXISTING	~LISTSONG.2DA~	override
+			CLEAR_ARRAY	~IDX_LISTSONG~
+			READ_2DA_ENTRIES_NOW	~IDX_LISTSONG~	2
+		BUT_ONLY
+		COPY_EXISTING	~LISTSHAP.2DA~	override
+			CLEAR_ARRAY	~IDX_LISTSHAP~
+			READ_2DA_ENTRIES_NOW	~IDX_LISTSHAP~	2
+		BUT_ONLY
+		COPY_EXISTING	~LISTSPLL.2DA~	override
+			CLEAR_ARRAY	~IDX_LISTSPLL~
+			READ_2DA_ENTRIES_NOW	~IDX_LISTSPLL~	9
+		BUT_ONLY
+	END
+
+	//	v1.0
+	DEFINE_PATCH_FUNCTION	IWD2_CRE_SPELL
+		INT_VAR
+			num = 1
+			index = ~-1~
+			forcelevel = 0
+		STR_VAR
+			class = ~~
+			resource = ~~
+	BEGIN
+		TO_UPPER	resource
+		TO_LOWER	class
+		PATCH_MATCH	~%class%~
+		WITH	~bard~			~brd~	BEGIN	SET	col = 1	TEXT_SPRINT	pre ~ba~	SET	idx_off = 0x3ba
+			END	~cleric~		~clr~	BEGIN	SET	col = 2	TEXT_SPRINT	pre ~cl~	SET	idx_off = 0x3de 
+			END	~druid~			~drd~	BEGIN	SET	col = 3	TEXT_SPRINT	pre ~dr~	SET	idx_off = 0x402
+			END	~paladin~		~pal~	BEGIN	SET	col = 4	TEXT_SPRINT	pre ~pa~	SET	idx_off = 0x426
+			END	~ranger~		~rgr~	BEGIN	SET	col = 5	TEXT_SPRINT	pre ~ra~	SET	idx_off = 0x44a
+			END	~sorcerer~	~sor~	BEGIN	SET	col = 6	TEXT_SPRINT	pre ~so~	SET	idx_off = 0x46e
+			END	~wizard~		~wiz~	BEGIN	SET	col = 7	TEXT_SPRINT	pre ~wi~	SET	idx_off = 0x492
+			END	~domain~		~dmn~	BEGIN	SET	col = 8	TEXT_SPRINT	pre ~do~	SET	idx_off = 0x5b2
+			END	DEFAULT	col = 0
+		END
+		PATCH_IF	col = 0	BEGIN
+			PATCH_WARN	~Invalid Class (%class%) - "bard","BRD","cleric","CLR","druid","DRD","paladin","PAL","ranger","RGR","sorcerer","SOR","wizard","WIZ","domain","DMN"~
+		END	ELSE	BEGIN
+			PATCH_MATCH	index	WITH
+				ANY index > IDX_LISTSPLL	BEGIN	
+					PATCH_WARN	~Invalid Spell - index not listed in LISTSPLL.2da~
+					SET	index = ~-1~
+				END	~-1~	BEGIN
+					FOR	(i = 0; i < IDX_LISTSPLL; ++i) BEGIN
+						READ_2DA_ENTRY_FORMER	~IDX_LISTSPLL~	i 8	entry
+						TO_UPPER	entry
+						PATCH_IF	~%entry%~ STRING_EQUAL ~%resource%~	BEGIN
+							PATCH_IF	col = 8	BEGIN
+								SET	level = forcelevel
+								SET	index = i //- 1
+							END	ELSE	BEGIN
+								READ_2DA_ENTRY_FORMER	~IDX_LISTSPLL~	i col	level
+								PATCH_IF	level > 0	BEGIN
+									SET	index = i //- 1
+								END	ELSE	BEGIN
+									PATCH_IF	forcelevel BEGIN
+										SET	index = i //- 1
+										SET	level = forcelevel
+									END	ELSE	BEGIN
+										SET	index = ~-1~
+									END
+								END
+							END
+							SET	i = IDX_LISTSPLL
+						END
+					END
+				END	DEFAULT
+					READ_2DA_ENTRY_FORMER	~IDX_LISTSPLL~	index col	level
+					PATCH_IF	level = 0	BEGIN
+						SET	index = ~-1~
+					END
+			END
+			PATCH_IF	index = ~-1~	BEGIN
+				PATCH_WARN	~Spell (%resource%) not available to (%class%), check (LISTSPLL.2da).~
+			END	ELSE	BEGIN
+				READ_ASCII	0	sig	(8)
+				PATCH_IF	~%sig%~	STRING_EQUAL	~CRE V2.2~	BEGIN
+					SET	lvl = level - 1
+					TEXT_SPRINT	splnum ~%pre%_%lvl%_num~
+					TEXT_SPRINT	sploff ~%pre%_%lvl%_off~
+					LPF	IWD2_CRE_REINDEX	RET
+						ba_0_off ba_0_num ba_1_off ba_1_num ba_2_off ba_2_num ba_3_off ba_3_num ba_4_off ba_4_num ba_5_off ba_5_num ba_6_off ba_6_num ba_7_off ba_7_num ba_8_off ba_8_num
+						cl_0_off cl_0_num cl_1_off cl_1_num cl_2_off cl_2_num cl_3_off cl_3_num cl_4_off cl_4_num cl_5_off cl_5_num cl_6_off cl_6_num cl_7_off cl_7_num cl_8_off cl_8_num
+						dr_0_off dr_0_num dr_1_off dr_1_num dr_2_off dr_2_num dr_3_off dr_3_num dr_4_off dr_4_num dr_5_off dr_5_num dr_6_off dr_6_num dr_7_off dr_7_num dr_8_off dr_8_num
+						pa_0_off pa_0_num pa_1_off pa_1_num pa_2_off pa_2_num pa_3_off pa_3_num pa_4_off pa_4_num pa_5_off pa_5_num pa_6_off pa_6_num pa_7_off pa_7_num pa_8_off pa_8_num
+						ra_0_off ra_0_num ra_1_off ra_1_num ra_2_off ra_2_num ra_3_off ra_3_num ra_4_off ra_4_num ra_5_off ra_5_num ra_6_off ra_6_num ra_7_off ra_7_num ra_8_off ra_8_num
+						so_0_off so_0_num so_1_off so_1_num so_2_off so_2_num so_3_off so_3_num so_4_off so_4_num so_5_off so_5_num so_6_off so_6_num so_7_off so_7_num so_8_off so_8_num
+						wi_0_off wi_0_num wi_1_off wi_1_num wi_2_off wi_2_num wi_3_off wi_3_num wi_4_off wi_4_num wi_5_off wi_5_num wi_6_off wi_6_num wi_7_off wi_7_num wi_8_off wi_8_num
+						do_0_off do_0_num do_1_off do_1_num do_2_off do_2_num do_3_off do_3_num do_4_off do_4_num do_5_off do_5_num do_6_off do_6_num do_7_off do_7_num do_8_off do_8_num
+						ab_off ab_num sng_off shp_off	slt_off	itm_off	fx_off	END
+					SET	splnum = EVAL ~%splnum%~
+					SET	sploff = EVAL ~%sploff%~
+					SET	spl_add = 0
+					FOR	(i = 0; i < splnum; ++i)	BEGIN
+						READ_LONG	(sploff + i * 0x10)	ability
+						PATCH_IF	ability = index	BEGIN
+							READ_LONG	(sploff + i * 0x10 + 0x4) kn_num
+							READ_LONG	(sploff + i * 0x10 + 0x8) mz_num
+							PATCH_IF	(num = 0)	BEGIN
+								DELETE_BYTES	(sploff + i * 0x10)	0x10
+								SET	spl_add = ~-1~
+							END	ELSE	BEGIN
+								PATCH_IF	(kn_num + num) <= 0 BEGIN
+									WRITE_LONG	(sploff + i * 0x10 + 0x4)	0
+								END	ELSE	BEGIN
+									WRITE_LONG	(sploff + i * 0x10 + 0x4)	(THIS + num)
+								END
+								PATCH_IF	mz_num + num <= 0	BEGIN
+									WRITE_LONG	(sploff + i * 0x10 + 0x8)	0
+								END	ELSE	BEGIN
+									WRITE_LONG	(sploff + i * 0x10 + 0x8)	(THIS + num)
+								END
+							END
+						END
+					END
+					PATCH_IF	spl_add = 0	AND num > 0 BEGIN
+						INSERT_BYTES	(sploff + splnum * 0x10)	0x10
+						WRITE_LONG		(sploff + splnum * 0x10)	index
+						WRITE_LONG		(sploff + splnum * 0x10 + 0x4)	num
+						WRITE_LONG		(sploff + splnum * 0x10 + 0x8)	num
+						SET	spl_add = 1
+					END
+					SET	update = 0
+					PATCH_IF	spl_add	!= 0	BEGIN
+						DEFINE_ASSOCIATIVE_ARRAY	offsets	BEGIN	0x3ba => 0x4b6	0x3de => 0x4da	0x402 => 0x4fe	0x426 => 0x522	0x44a => 0x546	0x46e => 0x56a	0x492 => 0x58e	0x5b2 => 0x5d6	END
+						PHP_EACH	offsets AS	offset => count	BEGIN
+							FOR	(i = 0; i < 9; ++i)	BEGIN
+								PATCH_IF	update = 0	BEGIN
+									PATCH_IF	idx_off + (level - 1) * 4 = offset + i * 4	BEGIN
+										SET	update = 1
+										WRITE_LONG	(count + i * 4)	(THIS + spl_add)
+									END
+								END	ELSE	BEGIN
+									WRITE_LONG	(offset + i * 4) (THIS + 0x10 * spl_add)
+								END
+							END
+						END
+						WRITE_LONG	0x5fa (THIS + 0x10 * spl_add)	//	Abilities offset
+						WRITE_LONG	0x602	(THIS + 0x10 * spl_add)	//	Songs offset
+						WRITE_LONG	0x60a	(THIS + 0x10 * spl_add)	//	Shapes offset
+						WRITE_LONG	0x612	(THIS + 0x10 * spl_add)	//	Item Slots offset
+						WRITE_LONG	0x616	(THIS + 0x10 * spl_add)	//	Items offset
+						WRITE_LONG	0x61e	(THIS + 0x10 * spl_add)	//	Effects offset
+					END
+				END
+			END
+		END
+	END
+
+
+
+	//	v1.0
+	DEFINE_PATCH_FUNCTION	IWD2_REMOVE_SPELLS_KNOWN
+		STR_VAR
+			level = ~0~
+			class = ~~
+	BEGIN
+		TO_LOWER	class
+		READ_ASCII	0	sig	(8)
+		PATCH_IF	~%sig%~	STRING_EQUAL	~CRE V2.2~	BEGIN
+			SET	lvl = level - 1
+			TEXT_SPRINT	splnum ~%pre%_%lvl%_num~
+			TEXT_SPRINT	sploff ~%pre%_%lvl%_off~
+			LPF	IWD2_CRE_REINDEX	RET
+				ba_0_off ba_0_num ba_1_off ba_1_num ba_2_off ba_2_num ba_3_off ba_3_num ba_4_off ba_4_num ba_5_off ba_5_num ba_6_off ba_6_num ba_7_off ba_7_num ba_8_off ba_8_num
+				cl_0_off cl_0_num cl_1_off cl_1_num cl_2_off cl_2_num cl_3_off cl_3_num cl_4_off cl_4_num cl_5_off cl_5_num cl_6_off cl_6_num cl_7_off cl_7_num cl_8_off cl_8_num
+				dr_0_off dr_0_num dr_1_off dr_1_num dr_2_off dr_2_num dr_3_off dr_3_num dr_4_off dr_4_num dr_5_off dr_5_num dr_6_off dr_6_num dr_7_off dr_7_num dr_8_off dr_8_num
+				pa_0_off pa_0_num pa_1_off pa_1_num pa_2_off pa_2_num pa_3_off pa_3_num pa_4_off pa_4_num pa_5_off pa_5_num pa_6_off pa_6_num pa_7_off pa_7_num pa_8_off pa_8_num
+				ra_0_off ra_0_num ra_1_off ra_1_num ra_2_off ra_2_num ra_3_off ra_3_num ra_4_off ra_4_num ra_5_off ra_5_num ra_6_off ra_6_num ra_7_off ra_7_num ra_8_off ra_8_num
+				so_0_off so_0_num so_1_off so_1_num so_2_off so_2_num so_3_off so_3_num so_4_off so_4_num so_5_off so_5_num so_6_off so_6_num so_7_off so_7_num so_8_off so_8_num
+				wi_0_off wi_0_num wi_1_off wi_1_num wi_2_off wi_2_num wi_3_off wi_3_num wi_4_off wi_4_num wi_5_off wi_5_num wi_6_off wi_6_num wi_7_off wi_7_num wi_8_off wi_8_num
+				do_0_off do_0_num do_1_off do_1_num do_2_off do_2_num do_3_off do_3_num do_4_off do_4_num do_5_off do_5_num do_6_off do_6_num do_7_off do_7_num do_8_off do_8_num
+				ab_off ab_num sng_off shp_off	slt_off	itm_off	fx_off	END
+			DEFINE_ASSOCIATIVE_ARRAY	classes	BEGIN
+				~bard~			, 0x3ba , 0x4b6	=> ~ba~
+				~cleric~		, 0x3de , 0x4da => ~cl~ 
+				~druid~			, 0x402 , 0x4fe => ~dr~
+				~paladin~		, 0x426 , 0x522 => ~pa~ 
+				~ranger~		, 0x44a , 0x546 => ~ra~
+				~sorcerer~	, 0x46e , 0x56a => ~so~
+				~wizard~		, 0x492 , 0x58e => ~wi~
+				~domain~		, 0x5b2 , 0x5d6 => ~do~
+			END
+			SET	offset = 0
+			PHP_EACH	classes	AS	label => pre	BEGIN
+				FOR	(i = 1; i < 10; ++i)	BEGIN
+					SET	lvl = i - 1
+					WRITE_LONG	(label_1 + lvl * 4)	(THIS - offset * 0x10)
+					PATCH_IF	! ~%class%~	STRING_CONTAINS_REGEXP ~%label%~	BEGIN
+						PATCH_IF	(! ~%level%~	STRING_CONTAINS_REGEXP ~[%i%0]~)	BEGIN
+							DELETE_BYTES	($~%pre%~(~%lvl%~~off~) - offset * 0x10) 	($~%pre%~(~%lvl%~~num~) * 0x10)
+							WRITE_LONG	(label_2 + lvl * 4) 0
+							SET	offset += $~%pre%~(~%lvl%~~num~)
+						END
+					END
+				END
+			END
+			WRITE_LONG	0x5fa (THIS - offset * 0x10)	//	Abilities offset
+			WRITE_LONG	0x602	(THIS - offset * 0x10)	//	Songs offset
+			WRITE_LONG	0x60a	(THIS - offset * 0x10)	//	Shapes offset
+			WRITE_LONG	0x612	(THIS - offset * 0x10)	//	Item Slots offset
+			WRITE_LONG	0x616	(THIS - offset * 0x10)	//	Items offset
+			WRITE_LONG	0x61e	(THIS - offset * 0x10)	//	Effects offset
+		END
+	END
+
+	//	v1.0
+	DEFINE_PATCH_FUNCTION	IWD2_REMOVE_SPELLS_MEMORIZED
+		STR_VAR
+			level = ~0~
+			class = ~~
+	BEGIN
+		TO_LOWER	class
+		READ_ASCII	0	sig	(8)
+		PATCH_IF	~%sig%~	STRING_EQUAL	~CRE V2.2~	BEGIN
+			SET	lvl = level - 1
+			TEXT_SPRINT	splnum ~%pre%_%lvl%_num~
+			TEXT_SPRINT	sploff ~%pre%_%lvl%_off~
+			LPF	IWD2_CRE_REINDEX	RET
+				ba_0_off ba_0_num ba_1_off ba_1_num ba_2_off ba_2_num ba_3_off ba_3_num ba_4_off ba_4_num ba_5_off ba_5_num ba_6_off ba_6_num ba_7_off ba_7_num ba_8_off ba_8_num
+				cl_0_off cl_0_num cl_1_off cl_1_num cl_2_off cl_2_num cl_3_off cl_3_num cl_4_off cl_4_num cl_5_off cl_5_num cl_6_off cl_6_num cl_7_off cl_7_num cl_8_off cl_8_num
+				dr_0_off dr_0_num dr_1_off dr_1_num dr_2_off dr_2_num dr_3_off dr_3_num dr_4_off dr_4_num dr_5_off dr_5_num dr_6_off dr_6_num dr_7_off dr_7_num dr_8_off dr_8_num
+				pa_0_off pa_0_num pa_1_off pa_1_num pa_2_off pa_2_num pa_3_off pa_3_num pa_4_off pa_4_num pa_5_off pa_5_num pa_6_off pa_6_num pa_7_off pa_7_num pa_8_off pa_8_num
+				ra_0_off ra_0_num ra_1_off ra_1_num ra_2_off ra_2_num ra_3_off ra_3_num ra_4_off ra_4_num ra_5_off ra_5_num ra_6_off ra_6_num ra_7_off ra_7_num ra_8_off ra_8_num
+				so_0_off so_0_num so_1_off so_1_num so_2_off so_2_num so_3_off so_3_num so_4_off so_4_num so_5_off so_5_num so_6_off so_6_num so_7_off so_7_num so_8_off so_8_num
+				wi_0_off wi_0_num wi_1_off wi_1_num wi_2_off wi_2_num wi_3_off wi_3_num wi_4_off wi_4_num wi_5_off wi_5_num wi_6_off wi_6_num wi_7_off wi_7_num wi_8_off wi_8_num
+				do_0_off do_0_num do_1_off do_1_num do_2_off do_2_num do_3_off do_3_num do_4_off do_4_num do_5_off do_5_num do_6_off do_6_num do_7_off do_7_num do_8_off do_8_num
+				ab_off ab_num sng_off shp_off	slt_off	itm_off	fx_off	END
+			DEFINE_ASSOCIATIVE_ARRAY	classes	BEGIN
+				~bard~ => ~ba~ 	~cleric~ => ~cl~ 	~druid~ => ~dr~ 	~paladin~ => ~pa~ 	~ranger~ => ~ra~ 	~sorcerer~ => ~so~ 	~wizard~ => ~wi~ 	~domain~ => ~do~
+			END
+			PHP_EACH	classes AS	label => pre	BEGIN
+				PATCH_IF	! ~%class%~	STRING_CONTAINS_REGEXP ~%label%~	BEGIN
+					FOR	(i = 1; i < 10; ++i)	BEGIN	SET	lvl = i - 1
+						PATCH_IF	(! ~%level%~	STRING_CONTAINS_REGEXP ~[%i%0]~)	BEGIN
+							FOR (j = 0; j < $~%pre%~(~%lvl%~~num~); ++j)	BEGIN
+								WRITE_LONG	($~%pre%~(~%lvl%~~off~) + j * 0x10 + 0x4) 	0
+								WRITE_LONG	($~%pre%~(~%lvl%~~off~) + j * 0x10 + 0x8) 	0
+							END
+						END
+					END
+				END
+			END
+		END
+	END
+
+	//	v1.0
+	DEFINE_PATCH_FUNCTION	IWD2_CRE_ABILITY
+		INT_VAR
+			num = 1
+			index = ~-1~
+		STR_VAR
+			resource = ~~
+	BEGIN
+		TO_UPPER resource
+		PATCH_MATCH	index	WITH
+			ANY index > IDX_LISTINNT	BEGIN	
+				PATCH_WARN	~Invalid Ability - index not listed in LISTINNT.2da~
+				SET	index = ~-1~
+			END	~-1~	BEGIN
+				FOR	(i = 1; i < IDX_LISTINNT; ++i) BEGIN
+					READ_2DA_ENTRY_FORMER	~IDX_LISTINNT~	i 1	entry
+					TO_UPPER	entry
+					PATCH_IF	~%entry%~ STRING_EQUAL ~%resource%~	BEGIN
+						SET	index = i - 1
+						SET	i = IDX_LISTINNT
+					END
+				END
+			END	DEFAULT
+		END
+		PATCH_IF	index = ~-1~	BEGIN
+			PATCH_WARN	~Invalid Ability (%resource%) - not listed in LISTINNT.2da~
+		END	ELSE	BEGIN
+			READ_ASCII	0	sig	(8)
+			PATCH_IF	~%sig%~	STRING_EQUAL	~CRE V2.2~	BEGIN
+				LPF	IWD2_CRE_REINDEX	RET	ab_off ab_num sng_off shp_off	slt_off	itm_off	fx_off	END
+				SET	ab_add = 0
+				FOR	(i = 0; i < ab_num; ++i)	BEGIN
+					READ_LONG	(ab_off + i * 0x10)	ability
+					PATCH_IF	ability = index	BEGIN
+						READ_LONG	(ab_off + i * 0x10 + 0x4) kn_num
+						READ_LONG	(ab_off + i * 0x10 + 0x8) mz_num
+						PATCH_IF	(kn_num + num) <= 0 OR (num = 0)	BEGIN
+							DELETE_BYTES	(ab_off + i * 0x10)	0x10
+							SET	ab_add = ~-1~
+						END	ELSE	BEGIN
+							WRITE_LONG	(ab_off + i * 0x10 + 0x4)	(THIS + num)
+							PATCH_IF	mz_num + num <= 0	BEGIN
+								WRITE_LONG	(ab_off + i * 0x10 + 0x8)	0
+							END	ELSE	BEGIN
+								WRITE_LONG	(ab_off + i * 0x10 + 0x8)	(THIS + num)
+							END
+						END
+					END
+				END
+				PATCH_IF	ab_add = 0	AND num > 0 BEGIN
+					INSERT_BYTES	(ab_off + ab_num * 0x10)	0x10
+					WRITE_LONG		(ab_off + ab_num * 0x10)	index
+					WRITE_LONG		(ab_off + ab_num * 0x10 + 0x4)	num
+					WRITE_LONG		(ab_off + ab_num * 0x10 + 0x8)	num
+					SET	ab_add = 1
+				END
+				PATCH_IF	ab_add	!= 0	BEGIN
+					WRITE_LONG	0x5fe (THIS + ab_add)					//	Abilities count
+					WRITE_LONG	0x602	(THIS + 0x10 * ab_add)	//	Songs offset
+					WRITE_LONG	0x60a	(THIS + 0x10 * ab_add)	//	Shapes offset
+					WRITE_LONG	0x612	(THIS + 0x10 * ab_add)	//	Item Slots offset
+					WRITE_LONG	0x616	(THIS + 0x10 * ab_add)	//	Items offset
+					WRITE_LONG	0x61e	(THIS + 0x10 * ab_add)	//	Effects offset
+				END
+			END
+		END
+	END
+
+	//	v1.0
+	DEFINE_PATCH_FUNCTION	IWD2_ADD_CRE_EFFECT
+		INT_VAR
+			opcode = 0
+			timing = 0
+			target = 0
+			parameter1 = 0
+			parameter2 = 0
+			parameter3 = 0
+			parameter4 = 0
+	//		parameter5 = 0
+	//		time_applied = 0	//	EE-only
+			power = 0
+			resist_dispel = 0
+			duration = 0
+			probability1 = 100
+			probability2 = 0
+			dicenumber = 0
+			dicesize = 0
+			savingthrow = 0
+			savebonus = 0
+			school = 0
+			special = 0
+	//		internal = 0
+			lowestefflvl = 0
+			highestefflvl = 0
+			casterx = ~-1~
+			castery = ~-1~
+			targetx = ~-1~
+			targety = ~-1~
+			restype = 0
+			sourceflags = 0
+			projectile = 0
+			sourceslot = ~-1~
+			casterlvl = 0
+	//		internalflags = 0
+			sectype = 0
+			insert_point = ~-1~
+		STR_VAR
+			resource = ~~
+			resource2 = ~~
+			resource3 = ~~
+			effsource = ~~
+			effvar = ~~
+	BEGIN
+		READ_ASCII	0	sig	(8)
+		PATCH_IF	~%sig%~	STRING_EQUAL	~CRE V2.2~	BEGIN
+			LPF	IWD2_CRE_REINDEX	RET	fx_off	fx_num	END
+			READ_BYTE	0x33	fx_ver
+			PATCH_IF	fx_ver	= 0 	BEGIN
+				PATCH_IF	fx_num = 0	BEGIN
+					WRITE_BYTE	0x33	1
+				END	ELSE	BEGIN
+					PATCH_FAIL	~Needs converting to V2 effects.~
+				END
+			END
+			PATCH_IF	(insert_point > fx_num) OR (insert_point < 0)	BEGIN
+				SET	insert_point = fx_num
+			END
+			INSERT_BYTES	(fx_off + insert_point * 0x108)	0x108
+			WRITE_ASCII		(fx_off + insert_point * 0x108)	~EFF V2.0~
+			WRITE_LONG		(fx_off + insert_point * 0x108 + 0x8)		opcode
+			WRITE_LONG		(fx_off + insert_point * 0x108 + 0xc)		target
+			WRITE_LONG		(fx_off + insert_point * 0x108 + 0x10)	power
+			WRITE_LONG		(fx_off + insert_point * 0x108 + 0x14)	parameter1
+			WRITE_LONG		(fx_off + insert_point * 0x108 + 0x18)	parameter2
+			WRITE_LONG		(fx_off + insert_point * 0x108 + 0x1c)	timing
+			WRITE_LONG		(fx_off + insert_point * 0x108 + 0x20)	duration
+			WRITE_SHORT		(fx_off + insert_point * 0x108 + 0x24)	probability1
+			WRITE_SHORT		(fx_off + insert_point * 0x108 + 0x26)	probability2
+			WRITE_ASCIIE	(fx_off + insert_point * 0x108 + 0x28)	~%resource%~	#8
+			WRITE_LONG		(fx_off + insert_point * 0x108 + 0x30)	savingthrow
+			WRITE_LONG		(fx_off + insert_point * 0x108 + 0x34)	savebonus
+			WRITE_LONG		(fx_off + insert_point * 0x108 + 0x38)	dicenumber
+			WRITE_LONG		(fx_off + insert_point * 0x108 + 0x3c)	dicesize
+			WRITE_LONG		(fx_off + insert_point * 0x108 + 0x40)	special
+			WRITE_LONG		(fx_off + insert_point * 0x108 + 0x44)	school
+	//		WRITE_LONG		(fx_off + insert_point * 0x108 + 0x48)	internal
+			WRITE_LONG		(fx_off + insert_point * 0x108 + 0x4c)	lowestefflvl
+			WRITE_LONG		(fx_off + insert_point * 0x108 + 0x50)	highestefflvl
+			WRITE_LONG		(fx_off + insert_point * 0x108 + 0x54)	resist_dispel
+			WRITE_LONG		(fx_off + insert_point * 0x108 + 0x58)	parameter3
+			WRITE_LONG		(fx_off + insert_point * 0x108 + 0x5c)	parameter4
+	//		WRITE_LONG		(fx_off + insert_point * 0x108 + 0x60)	parameter5
+	//		WRITE_LONG		(fx_off + insert_point * 0x108 + 0x64)	time_applied
+			WRITE_ASCIIE	(fx_off + insert_point * 0x108 + 0x68)	~%resource2%~	#8
+			WRITE_ASCIIE	(fx_off + insert_point * 0x108 + 0x70)	~%resource3%~	#8
+			WRITE_LONG		(fx_off + insert_point * 0x108 + 0x78)	casterx
+			WRITE_LONG		(fx_off + insert_point * 0x108 + 0x7c)	castery
+			WRITE_LONG		(fx_off + insert_point * 0x108 + 0x80)	targetx
+			WRITE_LONG		(fx_off + insert_point * 0x108 + 0x84)	targety
+			WRITE_LONG		(fx_off + insert_point * 0x108 + 0x88)	restype
+			WRITE_ASCIIE	(fx_off + insert_point * 0x108 + 0x8c)	~%effsource%~	#8
+			WRITE_LONG		(fx_off + insert_point * 0x108 + 0x94)	sourceflags
+			WRITE_LONG		(fx_off + insert_point * 0x108 + 0x98)	projectile
+			WRITE_LONG		(fx_off + insert_point * 0x108 + 0x9c)	sourceslot
+			WRITE_ASCIIE	(fx_off + insert_point * 0x108 + 0xa0)	~%effvar%~	#32
+			WRITE_LONG		(fx_off + insert_point * 0x108 + 0xc0)	casterlvl
+	//		WRITE_LONG		(fx_off + insert_point * 0x108 + 0xc4)	internalflags
+			WRITE_LONG		(fx_off + insert_point * 0x108 + 0xc8)	sectype
+			WRITE_LONG	0x622 (THIS + 1)
+		END
+	END
+
 	//	v1.0
 	DEFINE_PATCH_FUNCTION	IWD2_ADD_CRE_ITEM
 		INT_VAR
