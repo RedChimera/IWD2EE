@@ -810,23 +810,46 @@ Resistance: 2/- Cold Resistance
 Charisma: +1
 Weight: 1 lb.~
 //@10244    = ~Brazen Bands~
-@10245    = ~These Brazen Bands are enchanted to draw an enemy's blows to them and cancel their inertia, thereby providing protection equivalent to that of chain mail but without the inconveniences that wearing such heavy armor normally entails.
+@10245    = ~These Brazen Bands are enchanted to draw an enemy's blows to them and cancel their inertia, thereby providing extra protection but without the inconveniences that wearing heavy armor normally entails.
 
 STATISTICS:
 
 Generic Armor Bonus: +3 
 Weight: 1 lb.~
 //@10246    = ~Indomitable Bands~
-@10247    = ~These Indomitable Bands are enchanted to draw an enemy's blows to them and cancel their inertia, thereby providing protection equivalent to that of chain mail but without the inconveniences that wearing such heavy armor normally entails.
+@10247    = ~These Indomitable Bands are enchanted to draw an enemy's blows to them and cancel their inertia, thereby providing extra protection but without the inconveniences that wearing heavy armor normally entails.
 
 STATISTICS:
 
 Generic Armor Bonus: +5
 Weight: 1 lb.~
 //@10248    = ~Bands of Focus~
-//@10249    = ~Item description can remain the same; if new description is needed put it here~
+@10249    = ~In the surviving teachings of the Kamjin-Doh of Kara-Tur, it is written that a true weapon master relies not on leather, chain, or plate, but on honing their skills so that they are never struck at all... and this means a weapon master must know their enemy's movements like the movements of their own hand.  But such mastery lies in staying focused upon your enemy even in the heat of battle... and these simple leather armbands are intended to do just that.
+
+Initially used to help in the training of students at the Kamjin-Doh, these Bands of Focus radiate a soft moonlight glow when the light of dusk falls upon them.  While worn, they exert a slight calming influence on the mind of the sword saint that wields them, heightening the warrior's perceptions and senses, and allowing them to read the movements of their opponents easier.  On the rare occasion when an enemy strikes a sword saint, these bands allow the wielder to shrug off pain (which in the teachings of Kamjin-Doh are called, "distractions") and keep the pain where it belongs - on one's opponent. 
+
+Many of these bands were scattered throughout Faerun in the wake of the destruction of the Kamjin-Doh at the hands of the Master of Razors.  It is rumored that the Master of Razors possessed a set of these bands as well, but their location remains a mystery. 
+
+STATISTICS:
+
+Special
+ Damage reduction 5/+1
+Focus: Wearer deals maximum damage with each hit
+Weight: 1 lb.~
 //@10250    = ~Bands of the Master~
-//@10251    = ~Item description can remain the same; if new description is needed put it here~
+@10251    = ~When the last kensai of Kamjin-Doh, the Master of Razors, was slain in the fields of western Kara-Tur, these simple leather bands were ripped from his arms... and his arms ripped from his shoulders... as punishment for his destruction of the Kamjin-Doh.  The identities of those who defeated him are not known, but the rumors in Kara Tur were that his slayers were the spirits of three sword saints of Kamjin-Doh, returned from death to end the crimes of the renegade kensai.
+
+It was discovered that these once-simple bands of focus that the Master of Razors had worn as a student had become stained with blood and shame, and no longer shone with the same light as it once had.  As the Master lost focus, his bands of focus corroded, almost to rot away as they were wrapped upon his bleeding arms.  Nonetheless, these tattered bands still hold the power, strength, and viciousness of the Master of Razors... making the one who wields them far more deadly.
+
+If you wear these bands, never forget their purpose, never forget your focus, and never forget the reach of your enemy.  Keep these three things in your heart, and they will serve you well in battle. 
+
+STATISTICS:
+
+Attack Bonus: +3
+Damage Bonus: +3
+Focus: Wearer deals maximum damage with each hit
+Weight: 1 lb.
+Minimum Wisdom of 16 Required~
 //@10252    = ~The Lions of Arkamadis~
 @10253    = ~Between 910 and 946 DR, the lands east of the Spine of the World mountains were often plagued by the minions of the archmage Arkamadis.  Believed to have had contact with Arrakon, the would-be conqueror of Icewind Dale's barbarians, Arkamadis was only slightly less dedicated to dominating the native people that surrounded his tower, Whitestone Talon.
 
@@ -2632,7 +2655,7 @@ Armor Check Penalty:  -10
 Arcane Spell Failure:  50%
 Weight: 25 lb.~
 @10611    = ~Large Shield of Resilience +2~
-@10612    = ~A large shield is carried in the same manner as a small shield.  Its weight prevents the character from using his shield hand for anything other than carrying the large shield.  Large shields are usually made of metal, range from 3'-4' in diameter, and can be of any shape, from round to square to a spread dragon's wings.  A typical medieval shield resembles a triangle with one point facing downward. This shield has runes scribed onto it that glow eerily in dim light. 
+@10612    = ~A large shield is carried in the same manner as a small shield.  Its weight prevents the character from using his shield hand for anything other than carrying the large shield.  Large shields are usually made of metal, range from 3'-4' in diameter, and can be of any shape, from round to square to a spread dragon's wings.  A typical medieval shield resembles a triangle with one point facing downward. This shield has runes scribed onto it that glow eerily in dim light.
 
 STATISTICS:
 
@@ -4281,8 +4304,17 @@ Type:  One-handed~
 
 //@10897    = ~Bastard Sword~
 //@10898    = ~Item description can remain the same; if new description is needed put it here~
-//@10899    = ~Masterwork Bastard Sword~
-//@10900    = ~Item description can remain the same; if new description is needed put it here~
+@10899    = ~Katana~
+@10900    = ~The katana is a single-edged, slightly curved sword that ends with a chisel point.  The katana is perhaps one of the finest swords ever made, the steps to its creation a long and secret process that is more art form than anything else.  This blade is an important facet of Kara-Turan culture.  To touch or wield a samurai's katana is to insult the samurai and to incite his wrath.  For a gaijin, or foreigner, to own such a blade is a rare occurrence.  Either the gaijin is a greatly honored friend of an important minister, or the gaijin has murdered a samurai.
+
+STATISTICS:
+
+Damage:  1d10
+Attack Bonus: +1
+Damage Type:  Slashing
+Weight: 6 lb.
+Feat Requirement:  Exotic Weapon, Bastard Sword
+Type:  One-handed~
 //@10901    = ~Bastard Sword +1~
 //@10902    = ~Item description can remain the same; if new description is needed put it here~
 //@10903    = ~Bastard Sword +5~
@@ -4297,18 +4329,18 @@ Type:  One-handed~
 //@10912    = ~Item description can remain the same; if new description is needed put it here~
 //@10913    = ~Static Bastard Sword~
 //@10914    = ~Item description can remain the same; if new description is needed put it here~
-@10915    = ~Bastard Sword of Heroism +4~
-@10916    = ~Besides its superb craftsmanship, tiny runes of power can be seen etched all along the surface. It's obvious a lot of time and effort went into its creation and although not apparent at first, a slight blue glow can be seen emanating from the runes.
+@10915    = ~Grand Katana of Heroism +6~
+@10916    = ~To enchant a katana is no simple process. Unlike conventional weapons, the katana is already a near-perfect fighting sword. To improve it usually requires a sacrifice, perhaps a dying samurai might beg a Wu Jen to infuse his fighting spirit into the spirit of the katana. The wielder of an enchanted katana, such as this one, must respect the customs of Kara-Tur and of the samurai who once carried this blade into battle. Not doing so could drastically change one's luck for the worse.
 
 STATISTICS:
 
-Damage:  2d10 + 4
-Attack Bonus: +4 
-Enchantment:  +4
+Damage:  1d20 + 6
+Attack Bonus: +6
+Enchantment:  +6
 Damage Type:  Slashing
 Special:
-  Keen: Increases chance of scoring a critical hit
-Weight: 10 lb.
+  Reach of 2 lengths, rather than 1
+Weight: 5 lb.
 Feat Requirement:  Exotic Weapon, Bastard Sword
 Type:  One-handed~
 //@10917    = ~Miasmic Bastard Sword~
@@ -4442,19 +4474,18 @@ Type:  One-handed~
 @10935    = ~Rage of Chaos +3~
 @10936    = ~This weapon is a sight to behold.  The blade is crafted of red-gold with a silver edge.  The guard is finely polished platinum, and the wire wound hilt is crafted of black adamantine.  When drawn, the blade radiates a rainbow of colors. 
    
-This weapon has been considered quite a blessing by those who wield it.  Against lawful creatures it does devastating damage and attacks are made with an uncanny accuracy.  Rage of Chaos has been known to turn the tide in many a battle.  In addition, the victim may loses control of his or her faculties and flies into a state of confusion when struck by the weapon.  The chaotic powers of the blade also prevent the wielder from being controlled of confused in battle. 
- 
+This weapon has been considered quite a blessing by those who wield it.  Against lawful creatures it does devastating damage and attacks are made with an uncanny accuracy.  Rage of Chaos has been known to turn the tide in many a battle.  In addition, the victim may loses control of his or her faculties and flies into a state of confusion when struck by the weapon.
+
 The history of Rage of Chaos is unknown.  The weapon has appeared throughout the realms in various battles over the centuries only to be lost once again.
  
 STATISTICS: 
  
 Damage: 1d10 + 3 
 Attack Bonus: +3  
-Enchantment:  +3 
+Enchantment:  +3
 Damage Type: Slashing 
-Special: 
-  Constant Effect: Chaotic Commands while equipped 
-  Spell Process:  Target under the effects of the spell Chaos for 3 rounds upon successful hit (Will DC 17) 
+Special:
+  Spell Process:  Target under the effects of the spell Chaos for 3 rounds upon successful hit (Will DC 15)
   Chaotic: +2d6 damage to lawful creatures 
 Weight: 8 lb. 
 Feat Requirement:  Exotic Weapon, Bastard Sword 
@@ -4462,7 +4493,7 @@ Type:  One-handed~
 @10937    = ~Order's Nemesis +5~
 @10938    = ~This weapon is a sight to behold.  The blade is crafted of red-gold with a silver edge.  The guard is finely polished platinum, and the wire wound hilt is crafted of black adamantine.  When drawn, the blade radiates a rainbow of colors. 
    
-This weapon has been considered quite a blessing by those who wield it.  Against lawful creatures it does devastating damage and attacks are made with an uncanny accuracy.  Rage of Chaos has been known to turn the tide in many a battle.  In addition, the victim may loses control of his or her faculties and flies into a state of confusion when struck by the weapon.  The chaotic powers of the blade also prevent the wielder from being controlled of confused in battle. 
+This weapon has been considered quite a blessing by those who wield it.  Against lawful creatures it does devastating damage and attacks are made with an uncanny accuracy.  Rage of Chaos has been known to turn the tide in many a battle.  In addition, the victim may loses control of his or her faculties and flies into a state of confusion when struck by the weapon.  The chaotic powers of the blade also prevent the wielder from being controlled of confused in battle.
  
 The history of Rage of Chaos is unknown.  The weapon has appeared throughout the realms in various battles over the centuries only to be lost once again. 
  
@@ -6374,13 +6405,11 @@ Big Death is an especially large axe - almost ridiculously so - and is only iden
 
 STATISTICS:
 
-Damage:  1d10 + 1
-Attack Bonus:  +1 
+Damage:  2d8 + 1
+Attack Bonus:  -10 
 Enchantment:  +1
-Damage Type:  Missile (piercing)
-Damage Type: Melee (slashing)
+Damage Type: Slashing
 Special:
-  Doom-Edged: 1d6 additional slashing damage
   Returning: returns to wielder's hand after being thrown
 Weight: 10 lb.
 Required Feat:  Martial Weapon, Axe
@@ -6397,13 +6426,11 @@ Big Black Flying-Death is an especially large axe - almost ridiculously so - and
 
 STATISTICS:
 
-Damage:  1d10 + 3
-Attack Bonus : +3 
+Damage:  2d10 + 3
+Attack Bonus : -10
 Enchantment:  +3
-Damage Type:  Missile (piercing)
-Damage Type: Melee (slashing)
+Damage Type: Slashing
 Special:
-  Doom-Edged: 1d10 additional slashing damage
   Returning: returns to wielder's hand after being thrown
 Weight: 10 lb.
 Required Feat:  Martial Weapon, Axe
@@ -8430,8 +8457,8 @@ Damage:  +3 (missile)
 Attack Bonus:  +2 
 Special:
   Constant Effect: Wielder is under the effects of the spell Holy Power
-Weight: 9 lb.Feat 
-Requirement:  Martial Weapon, Bow
+Weight: 9 lb.
+Feat Requirement:  Martial Weapon, Bow
 Type:  Two-handed~
 @11779    = ~Composite Longbow of Point Blank Defense~
 @11780    = ~Composite bows are longbows or shortbows whose staves are made from more than one type of material.  This gives greater flexibility, and thus better range.  These were developed after the normal longbow.  
@@ -11723,7 +11750,7 @@ Enchantment:  +5
 Damage Type:  Slashing
 Special:
   Kai: Wielder deals maximum damage with each hit
-Weight: 3 lb.
+Weight: 1 lb.
 Feat Requirement:  Exotic Weapon, Bastard Sword
 Type:  One-handed~
 @12583    = ~Greater Staff of the Elements~
@@ -11742,7 +11769,7 @@ Weight: 4 lb.
 Feat Requirement:  Simple Weapon, Quarterstaff
 Type:  Two-handed~
 @12585    = ~Ring of Thex~
-@12586    = ~This ornate silver ring is set with a single red stone of an unknown type. The ring is believed to have been created by an adventuring mage named Thex. Thex claimed she was tired of sitting back and flinging spells at enemies while the rest of her adventuring party was able to get into the thick of battle. She felt that the ring would allow her to become what she chose to call a Battlemage. The Ring of Thex was the crowning achievement of her short career.
+@12586    = ~This ornate silver ring is set with a single red stone of an unknown type.  The ring is believed to have been created by an adventuring mage named Thex.  Thex claimed she was tired of sitting back and flinging spells at enemies while the rest of her adventuring party was able to get into the thick of battle.  She felt that the ring would allow her to become what she chose to call a Battlemage.  The Ring of Thex was the crowning achievement of her short career.
 
 STATISTICS:
 
@@ -11758,3 +11785,59 @@ This enchanted broth transforms anyone who ingests it into a special yuan-ti his
 
 In addition, even after the transformation ends, the imbiber's skin remains harder than normal, having retained a small portion of the transmutation to scales. This grants a permanent, non-cumulative +1 generic Armor Class bonus.
 Weight: 1 lb.~
+@12589    = ~Black Swan Armor +1~
+@12590    = ~This armor was made by the dwarven smith Karador and an elven enchanter known as Elameth of Five Trees. During the time of cooperation between the Hand of the Seldarine and Dorn's Deep, many wondrous items were produced.  This suit of armor was one of them.  Exceptionally light and beautiful, the armor was originally worn by a female elven marshal in the Severed Hand, which is why the orcs didn't take it when they sacked the towers.  The armor was later stolen from the Hand by Maiden Ilmadia.
+
+STATISTICS:
+
+No Armor Proficiency Required
+Armor Bonus: +8
+Max Dex Bonus:  None
+Armor Check Penalty:  -0
+Arcane Spell Failure:  0%
+Special:
+  Spellcasting and Thieving abilities can be performed without penalties from wearing armor.
+Weight: 9 lb.~
+@12591    = ~Exquisite Black Swan Armor +5~
+@12592    = ~This armor was made by the dwarven smith Karador and an elven enchanter known as Elameth of Five Trees. During the time of cooperation between the Hand of the Seldarine and Dorn's Deep, many wondrous items were produced.  This suit of armor was one of them.  Exceptionally light and beautiful, the armor was originally worn by a female elven marshal in the Severed Hand, which is why the orcs didn't take it when they sacked the towers.  The armor was later stolen from the Hand by Maiden Ilmadia.
+
+STATISTICS:
+
+No Armor Proficiency Required
+Armor Bonus: +12
+Max Dex Bonus:  None
+Armor Check Penalty:  -0
+Arcane Spell Failure:  0%
+Special:
+  Charisma: +5
+  Spellcasting and Thieving abilities can be performed without penalties from wearing armor.
+Weight: 1 lb.~
+@12593    = ~Celestial Fury +3~
+@12594    = ~To enchant a katana is no simple process. Unlike conventional weapons, the katana is already a near-perfect fighting sword. To improve it usually requires a sacrifice, perhaps a dying samurai might beg a Wu Jen to infuse his fighting spirit into the spirit of the katana. The wielder of an enchanted katana, such as this one, must respect the customs of Kara-Tur and of the samurai who once carried this blade into battle. Not doing so could drastically change one's luck for the worse.
+
+STATISTICS:
+
+Damage:  1d10 + 3
+Attack Bonus: +3
+Enchantment:  +3
+Damage Type:  Slashing
+Special:
+  Shocking Burst: +1d6 electrical damage and 5% chance of +20 extra electrical damage
+Weight: 3 lb.
+Feat Requirement:  Exotic Weapon, Bastard Sword
+Type:  One-handed~
+@12595    = ~Heavenly Fury +5~
+@12596    = ~To enchant a katana is no simple process. Unlike conventional weapons, the katana is already a near-perfect fighting sword. To improve it usually requires a sacrifice, perhaps a dying samurai might beg a Wu Jen to infuse his fighting spirit into the spirit of the katana. The wielder of an enchanted katana, such as this one, must respect the customs of Kara-Tur and of the samurai who once carried this blade into battle. Not doing so could drastically change one's luck for the worse.
+
+STATISTICS:
+
+Damage:  1d10 + 5
+Attack Bonus: +5
+Enchantment:  +5
+Damage Type:  Slashing
+Special:
+  Flaming Burst: +1d6 fire damage and 10% chance of +20 extra fire damage
+  Shocking Burst: +1d6 electrical damage and 10% chance of +20 extra electrical damage
+Weight: 3 lb.
+Feat Requirement:  Exotic Weapon, Bastard Sword
+Type:  One-handed~

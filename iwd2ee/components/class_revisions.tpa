@@ -611,7 +611,7 @@ COPY_EXISTING ~feats.2da~ ~override~
     PATCH_MATCH ~%label%~ WITH
       ~MAXIMIZED_ATTACKS~ BEGIN
         SET strref = RESOLVE_STR_REF(@669)
-        SET_2DA_ENTRY_LATER rows_out row 2 ~%strref%~
+        SET_2DA_ENTRY_LATER rows_out row 3 ~%strref%~
       END
       DEFAULT
     END
@@ -980,7 +980,9 @@ You know how to strike opponents in vulnerable areas.
 
 Prerequisites: Dex 13+, Wis 13+, base attack bonus +8 or higher
 
-Benefit:  When attacking with Stunning Attack, it forces a foe damaged by your unarmed attack to make a Fortitude saving throw (DC 10 + one-half you level + Wis modifier), in addition to dealing damage normally.  If the defender fails his saving throw, he is stunned for 1 round.  A stunned character can't act and can be hit automatically.  You may attempt a stunning attack once per day for every four levels you have attained.~
+Benefit:  When attacking with Stunning Attack, it forces a foe damaged by your unarmed attack to make a Fortitude saving throw (DC 10 + one-half your level + Wis modifier), in addition to dealing damage normally.  If the defender fails his saving throw, he is stunned for 1 round.  A stunned character can't act and can be hit automatically.  You may attempt a stunning attack once per day for every four levels you have attained.~
+
+STRING_SET 39846 @898
 /*
 STRING_SET 9554 ~LIGHTFOOT HALFLING:
 
@@ -1643,11 +1645,3 @@ COPY ~%mod_folder%/itm/61POTNUB.itm~ ~override~
   SAY NAME2 @4791
   SAY DESC @4792
 */
-
-STRING_SET 36546 ~MAXIMIZED ATTACKS:
-
-You have learned how to maximize the effect of your attacks while performing a short concentrated attack.
-
-Prerequisites: 4 ranks in Concentration and Weapon Specialization in 2 weapons.
-
-Benefit: All attacks do maximum damage and the user gains the benefits of Executioner's Eyes (+4 to attack and critical hit rolls) for 1 round per level.~

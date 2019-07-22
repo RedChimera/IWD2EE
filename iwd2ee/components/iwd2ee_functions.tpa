@@ -1171,3 +1171,181 @@ BEGIN
 	END
 	new_strref = RESOLVE_STR_REF(~%description_new%~)
 END
+
+DEFINE_PATCH_FUNCTION ~ADD_ITEM_HEADER~
+  INT_VAR
+    type=3
+    required_id=0
+    location=3
+    alt_dicesize=0
+    target=1
+    target_count=0
+    range=0
+    projectile_type=0
+    alt_dicenumber=0
+    speed=0
+    alt_damage=0
+    thaco=0
+    dicesize=0
+    school=0
+    dicenumber=0
+    sectype=0
+    damage=0
+    damage_type=0
+    charges=0
+    depletion=0
+    flags=0
+    projectile=1
+    overhand=0
+    backhand=0
+    thrust=0
+    is_bow=0
+    is_xbow=0
+    is_sling=0
+
+    copy_header=0
+    insert_point=~-1~
+  STR_VAR
+    icon=~~
+  RET
+    insert_point
+BEGIN
+  hs=0x38
+
+  READ_LONG 0x64 ho
+  READ_SHORT 0x68 hc
+  READ_LONG 0x6a eo
+  insert_point = (insert_point>hc || insert_point<0) ? hc : insert_point
+  copy_header = (copy_header<0) ? 0 : copy_header
+
+  PATCH_IF copy_header>hc BEGIN
+    PATCH_WARN ~Unable to copy %copy_header%th header, %SOURCE_FILE% contains only %hc% headers!~
+  END ELSE BEGIN
+    INSERT_BYTES ho+insert_point*hs hs
+    hc+=1
+    eo+=hs
+    PATCH_IF copy_header BEGIN
+      READ_SHORT ho+(copy_header - 1)*hs+0x1e ec
+      READ_SHORT ho+(copy_header - 1)*hs+0x20 ei
+      READ_ASCII eo+ei*0x30 effs (ec*0x30)
+      READ_ASCII ho+(copy_header - 1)*hs copy (hs)
+      WRITE_ASCIIE ho+insert_point*hs ~%copy%~ (hs)
+    END
+    WRITE_SHORT 0x68 hc
+    WRITE_LONG 0x6a eo
+
+    READ_SHORT 0x70 ei
+    FOR (i=ho;i<ho+hc*hs;i+=hs) BEGIN
+      READ_SHORT i+0x1e ec
+      WRITE_SHORT i+0x20 ei
+      ei+=ec
+    END
+
+    PATCH_IF copy_header BEGIN
+      READ_SHORT ho+insert_point*hs+0x1e ec
+      READ_SHORT ho+insert_point*hs+0x20 ei
+      INSERT_BYTES eo+ei*0x30 ec*0x30
+      WRITE_ASCIIE eo+ei*0x30 ~%effs%~ (ec*0x30)
+    END ELSE BEGIN
+      off=ho+insert_point*hs
+      WRITE_BYTE off type
+      WRITE_BYTE off+0x1 required_id
+      WRITE_BYTE off+0x2 location
+      WRITE_BYTE off+0x3 alt_dicesize
+      WRITE_ASCIIE off+0x4 ~%icon%~ (8)
+      WRITE_BYTE off+0xc target
+      WRITE_BYTE off+0xd target_count
+      WRITE_SHORT off+0xe range
+      WRITE_BYTE off+0x10 projectile_type
+      WRITE_BYTE off+0x11 alt_dicenumber
+      WRITE_BYTE off+0x12 speed
+      WRITE_BYTE off+0x13 alt_damage
+      WRITE_SHORT off+0x14 thaco
+      WRITE_BYTE off+0x16 dicesize
+      WRITE_BYTE off+0x17 school
+      WRITE_BYTE off+0x18 dicenumber
+      WRITE_BYTE off+0x19 sectype
+      WRITE_SHORT off+0x1a damage
+      WRITE_SHORT off+0x1c damage_type
+      WRITE_SHORT off+0x22 charges
+      WRITE_SHORT off+0x24 depletion
+      WRITE_LONG off+0x26 flags
+      WRITE_SHORT off+0x2a projectile
+      WRITE_SHORT off+0x2c overhand
+      WRITE_SHORT off+0x2e backhand
+      WRITE_SHORT off+0x30 thrust
+      WRITE_SHORT off+0x32 is_bow
+      WRITE_SHORT off+0x34 is_xbow
+      WRITE_SHORT off+0x36 is_sling
+    END
+  END
+END
+
+DEFINE_PATCH_FUNCTION ~ADD_SPELL_HEADER~
+	INT_VAR
+		type=1
+		location=4
+		target=1
+		target_count=0
+		range=0
+		required_level=1
+		speed=0
+		projectile=1
+
+		copy_header=0
+		insert_point=~-1~
+	STR_VAR
+		icon=~~
+	RET
+		insert_point
+BEGIN
+  hs=0x28
+
+  READ_LONG 0x64 ho
+  READ_SHORT 0x68 hc
+  READ_LONG 0x6a eo
+  insert_point = (insert_point>hc || insert_point<0) ? hc : insert_point
+  copy_header = (copy_header<0) ? 0 : copy_header
+
+  PATCH_IF copy_header>hc BEGIN
+    PATCH_WARN ~Unable to copy %copy_header%th header, %SOURCE_FILE% contains only %hc% headers!~
+  END ELSE BEGIN
+    INSERT_BYTES ho+insert_point*hs hs
+    hc+=1
+    eo+=hs
+    PATCH_IF copy_header BEGIN
+      READ_SHORT ho+(copy_header - 1)*hs+0x1e ec
+      READ_SHORT ho+(copy_header - 1)*hs+0x20 ei
+      READ_ASCII eo+ei*0x30 effs (ec*0x30)
+      READ_ASCII ho+(copy_header - 1)*hs copy (hs)
+      WRITE_ASCIIE ho+insert_point*hs ~%copy%~ (hs)
+    END
+    WRITE_SHORT 0x68 hc
+    WRITE_LONG 0x6a eo
+
+    READ_SHORT 0x70 ei
+    FOR (i=ho;i<ho+hc*hs;i+=hs) BEGIN
+      READ_SHORT i+0x1e ec
+      WRITE_SHORT i+0x20 ei
+      ei+=ec
+    END
+
+    PATCH_IF copy_header BEGIN
+      READ_SHORT ho+insert_point*hs+0x1e ec
+      READ_SHORT ho+insert_point*hs+0x20 ei
+      INSERT_BYTES eo+ei*0x30 ec*0x30
+      WRITE_ASCIIE eo+ei*0x30 ~%effs%~ (ec*0x30)
+    END ELSE BEGIN
+      off=ho+insert_point*hs
+      WRITE_BYTE off type
+      WRITE_BYTE off+0x2 location
+      WRITE_ASCIIE off+0x4 ~%icon%~ (8)
+      WRITE_BYTE off+0xc target
+      WRITE_BYTE off+0xd target_count
+      WRITE_SHORT off+0xe range
+      WRITE_SHORT off+0x10 required_level
+      WRITE_LONG off+0x12 speed
+      WRITE_SHORT off+0x26 projectile
+    END
+  END
+END

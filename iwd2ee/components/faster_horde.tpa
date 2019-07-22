@@ -2,6 +2,7 @@
 // patches gates to be openable by force
 
 OUTER_PATCH us_faster_horde_variables BEGIN
+	actorsize=0x110
 	regionsize=0xc4
 	doorsize=0xc8
 END
@@ -75,6 +76,17 @@ STR_VAR door_name=~AR3100_Door3_InnerGate~ END
 		ELSE PATCH_IF (~%doorid%~ STRING_EQUAL ~DOOR1~) BEGIN
 			WRITE_LONG (offset + 0x8c) 110
 		END
+	END
+
+	READ_SHORT 0x68 actornumber
+	READ_LONG 0x64 actoroffset
+	FOR (i = 0; i < actornumber; ++i) BEGIN
+		SET offset = actoroffset + (i * actorsize)
+		READ_ASCII offset actorname
+		PATCH_IF (~%actorname%~ STRING_EQUAL ~09_OrcHSh~) BEGIN
+			WRITE_BYTE (offset + 0x2f) 0x7
+		END
+
 	END
 BUT_ONLY
 
