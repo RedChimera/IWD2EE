@@ -163,7 +163,7 @@ Advantages:
 * Proficient with all simple and martial weapons, bastard swords, light armor, medium armor, heavy armor, and shields.
 * Receives a bonus feat at first level and every two levels after that.  This is in addition to the normal feat received by all character classes every three levels.
 * Characters with four or more levels of fighter may take the Weapon Specialization feat (three ranks in a weapon).  This gives them +5 to damage with that weapon type.
-* Every 5 levels, fighters get an additional +1 to weapon damage.
+* Fighters get an additional +1 to weapon damage at levels 5, 10, 15, 20, 22, 24, 26, 28, and 30.
 
 Disadvantages:
 * Fighters lack any spellcasting ability.~
@@ -179,7 +179,17 @@ NOTE: Multiclassed monks ONLY use their monk levels when determining their base 
 Hit Points per Level: 1-8
 
 Advantages:
-* The monk's base attack bonus grants additional attacks at a faster rate while the monk is unarmed.
+* The monk attacks at a faster rate than other characters while unarmed:
+
+Level 1-3: 2 attacks per round
+Level 4-6: 3 attacks
+Level 7-9: 4 attacks
+Level 10-12: 5 attacks
+Level 13-15: 5 attacks, plus a 20% chance after each hit to immediately make another attack
+Level 16-20: 5 attacks, plus a 40% chance after each hit to immediately make another attack
+Level 21-25: 5 attacks, plus a 70% chance after each hit to immediately make another attack
+Level 26-30: 5 attacks, plus a 100% chance after each hit to immediately make another attack
+
 * As the monk increases in levels, the damage his fists inflicts does as well:
 
 Level 1-3: 1d6
@@ -191,7 +201,6 @@ Level 16-20: 1d8+4
 Level 21-30: 1d8+5
 
 * Ki Strike: At level 8, the monk's unarmed attack is empowered with ki. The unarmed strike damage from such an attack can deal damage to a creature with damage reduction, such as a wight, as if the blow were made with a weapon with an enhancement bonus equal to the monk's damage bonus. Thus, a level 12 monk's fists strike as a +3 weapon.
-* At level 13, the monk's fists deal triple damage on critical hits instead of double, and the critical threat range is increased by 1 at level 26.
 * A monk's natural armor class starts at 10, and then increases by +1 at 5th level and every 5 levels thereafter.
 * When not wearing armor a monk adds his Wisdom bonus to his AC in the same manner as his Dexterity bonus.
 * Stunning Attacks: When this ability is used, all of the monk's attacks in the next round force the victim to make a saving throw or be stunned. This special ability automatically modifies a monk's normal attack, no targeting needs to be done.  A monk can make a stunning attack 1/day/level.
@@ -304,13 +313,13 @@ Disadvantages:
 * -1 Strength.
 ~
 
-@669    = ~Maximized Attacks:
+@669    = ~MAXIMIZED ATTACKS:
 
-You have learned how to maximize the effect of your attacks at the cost of neglecting your defenses.
+You have learned how to maximize the effect of your attacks while performing a short concentrated attack.
 
 Prerequisites: 4 ranks in Concentration and Weapon Specialization in 2 weapons.
 
-Benefit: All attacks do maximum damage for 1 round per level and the user receives a +4 bonus to hit and critical threat range, but a -4 penalty to AC.  Usable 1/day.~
+Benefit: All attacks do maximum damage for 1 round per level. If you are level 12 or higher, you also gain a +4 attack bonus and +4 critical threat range for the duration.~
 
 @785    = ~Aasimar~
 @786    = ~AASIMAR:
@@ -644,7 +653,7 @@ Disadvantages:
 * Transmuters cannot learn spells from the Enchantment school.~
 
 @897    = ~The Song of Kaudies - Blink~
-@898    = ~~
+@898    = ~Additional attack~
 @899    = ~~
 @900    = ~~
 @901    = ~~

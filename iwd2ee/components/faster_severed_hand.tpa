@@ -12,3 +12,7 @@ COPY ~%mod_folder%/bcs/USSTSH03.bcs~ ~override~
 COPY ~%mod_folder%/spl/USSTIW04.spl~ ~override~
 
 EXTEND_BOTTOM ~AR6303.bcs~ ~%mod_folder%/baf/USSTSH01.baf~
+
+COPY_EXISTING ~AR6702.are~ ~override~
+	LPF ALTER_AREA_DOOR_IWD2 INT_VAR all_flags=0x661 STR_VAR door_name=~AR6702_Bridge_Gate~ END
+	BUT_ONLY_IF_IT_CHANGES

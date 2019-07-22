@@ -2,17 +2,16 @@
 
 
 @1000    = ~Doom~
-
 @1001    = ~Doom
 (Enchantment) 
 Level: Clr 1, Talos 1, Bard 2
 Range: Sight of Caster
-Duration: 3 rounds / level
-Casting Time: 1
+Duration: 2 rounds / level
+Casting Time: 4
 Area of Effect: 1 creature
-Saving Throw: Will negates 
+Saving Throw: None
 
-This spell causes a feeling of doom to overwhelm the target.  For the duration of the spell the target receives a -2 penalty to attack bonus and saving throws.~
+This spell causes a feeling of doom to overwhelm the target.  For the duration of the spell the target receives a -2 penalty to attack bonus and saving throws. Multiple Doom spells stack, giving the target additional penalties.~
 @1002    = ~Chant~
 @1003    = ~Chant
 (Conjuration) 
@@ -116,7 +115,7 @@ This spell grants the caster the ability to touch a creature and instantly poiso
 @1018    = ~Shield of Lathander~
 @1019    = ~Shield of Lathander 
 (Conjuration) [Good]
-Level: Clr 5, Lathander 4
+Level: Clr 4, Pal 4, Lathander 4
 Range: Touch
 Duration: 20 rounds
 Casting Time: 5
@@ -212,19 +211,19 @@ Area of Effect: 15-foot radius
 Saving Throw: Will negates 
 
 All enemies within the area of effect must make a Will save or flee in terror. Certain creatures, such as undead, are immune to this spell.~
-@1036    = ~Power Word Sleep~
-@1037    = ~Power Word: Sleep 
+@1036    = ~Power Word: Sleep~
+@1037    = ~Power Word: Sleep
 (Divination) 
 Level: Brd 2, Sor/Wiz 2
 Range: Sight of Caster
 Duration: 3 rounds
-Casting Time: 1 
-Area of Effect: 1 creature 
-Saving Throw: Will negates
+Casting Time: 0
+Area of Effect: 1 creature
+Saving Throw: None
 
-When a wizard calls upon a Power Word Sleep spell, he forces a comatose slumber upon a creature who must resist with a Will save at a -2 penalty or fall asleep.  The creature will not wake up if injured.  This spell has no effect on deaf creatures.~
+When a wizard calls upon a Power Word: Sleep spell, he forces a comatose slumber upon a creature.  There is no saving throw, though the creature will wake up if injured.  This spell has no effect on deaf creatures.~
 @1038    = ~Death Armor~
-@1039    = ~Death Armor 
+@1039    = ~Death Armor
 (Necromancy) 
 Level: Sor/Wiz 2, Cleric 2, Talos 2
 Range: Caster
@@ -262,7 +261,7 @@ Eye of Stone - This eye shields the caster from a single petrification attack.  
 @1042    = ~Rainstorm~
 @1043    = ~Rainstorm 
 (Evocation)
-Level: Drd 2, Rgr 3
+Level: Drd 2
 Range: Sight of Caster
 Duration: 2 rounds
 Casting Time: 6
@@ -276,7 +275,7 @@ This spell, which may only be cast outdoors, brings forth a magical rain that sa
 Level: Brd 3, Clr 3, Drd 4, Pal 3, Sor/Wiz 3, Oghma 3
 Range: Sight of Caster
 Duration: Instantaneous 
-Casting Time: 3 
+Casting Time: 3
 Area of Effect: 15-foot radius 
 Saving Throw: Will negates
 
@@ -306,7 +305,7 @@ This spell enables a cleric to aid and protect any one being other than the cler
 @1050    = ~Moonblade~
 @1051    = ~Moonblade 
 (Evocation)
-Level: Drd 3, Selune 3
+Level: Drd 3, Rgr 2, Selune 3
 Range: Caster
 Duration: 10 rounds
 Casting Time: 6
@@ -317,7 +316,7 @@ This spell summons forth a silent, weightless sword-like construct made of moonl
 
 The strike of a moonblade drains a target's vitality, inflicting 1d12+4 points of damage, and an additional 1d12 points to undead, who are particularly susceptible.  A successful strike also temporarily scrambles magic, causing any spells the target casts in the next round to fail.~
 @1052    = ~Neutralize Poison~
-@1053    = ~Neutralize Poison 
+@1053    = ~Neutralize Poison
 (Conjuration) 
 Level: Brd 4, Clr 4, Drd 3, Pal 4, Rgr 3
 Range: Touch 
@@ -330,14 +329,14 @@ When this spell is placed upon a poisoned individual, it immediately neutralizes
 @1054    = ~Champion's Strength~
 @1055    = ~Champion's Strength 
 (Transmutation) 
-Level: Clr 5, Pal 5, Tempus 5
+Level: Clr 5, Pal 4, Tempus 5
 Range: Sight of Caster
 Duration: 3 rounds / level
-Casting Time: 2
+Casting Time: 8
 Area of Effect: 1 creature
 Saving Throw: None
 
-When this spell is cast, the caster effectively draws on the strength of his god and lends it to the target creature, in effect creating a champion.  The target gains a +7 strength bonus for the duration of the spell.~
+When this spell is cast, the caster effectively draws on the strength of his god and lends it to the target creature, in effect creating a champion.  The target gains a +12 strength bonus for the duration of the spell. However, the spell requires concentration by the caster; until the duration ends, the caster cannot cast any more spells.~
 @1056    = ~Insect Plague~
 @1057    = ~Insect Plague 
 (Conjuration)
@@ -405,7 +404,7 @@ Saving Throw: None
 
 Upon casting this spell, the caster exudes magical energy that imbues all allies in the area of effect with healthy vigor.  This allows them to perform tremendous physical feats well beyond their normal capabilities.  All allies in the area of effect gain a +4 bonus to strength, dexterity and constitution for the duration of the spell.~
 @1068    = ~Shield~
-@1069    = ~Shield 
+@1069    = ~Shield
 (Abjuration)
 Level: Sor/Wiz 1
 Range: Caster
@@ -443,7 +442,7 @@ A Sleep spell causes a comatose slumber to come upon all creatures in the area o
 Level: Sor/Wiz 1
 Range: Touch
 Duration: Special
-Casting Time: 1 
+Casting Time: 1
 Area of Effect: 1 creature
 Saving Throw: Special
 
@@ -498,15 +497,15 @@ Upon completion of this spell, a jet of flame shoots from the caster's fingertip
 (Evocation)
 Level: Sor/Wiz 2
 Range: Caster 
-Duration: 1 round / level 
-Casting Time: 2
+Duration: 10 rounds
+Casting Time: 10
 Area of Effect: Caster
 Saving Throw: None
 
-This spell creates a staff of force in the caster's hand which can be wielded as a weapon - weapon proficiency bonuses or penalties apply.  The Decastave deals 1d8 bludgeoning damage per hit, and can hit creatures immune to normal weapons.  The staff also drains an additional 1d6 hit points per strike that is transferred over to the wielder's own hit points.  These extra hit points can take the wielder over his maximum hit points, but any hit points gained in such a manner are temporary and will dissipate in an hour.~
+This spell creates a staff of force in the caster's hand which can be wielded as a weapon - weapon proficiency bonuses or penalties apply.  The Decastave deals 10 bludgeoning damage per hit, and can hit creatures immune to normal weapons, though it has no attack bonus.  The staff also drains an additional 10 hit points per strike that is transferred over to the wielder's own hit points.  These extra hit points can take the wielder over his maximum hit points, but any hit points gained in such a manner are temporary and will dissipate after 10 minutes.~
 @1084    = ~Lightning Bolt~
-@1085    = ~Lightning Bolt 
-(Evocation) 
+@1085    = ~Lightning Bolt
+(Evocation)
 Level: Sor/Wiz 3, Talos 3
 Range: Line of Sight
 Duration: Instantaneous 
@@ -529,7 +528,7 @@ This spell imbues the caster's hands with the ability to drain life, taking 1d6 
 @1088    = ~Icelance~
 @1089    = ~Icelance 
 (Evocation)
-Level: Sor/Wiz 3
+Level: Drd 3, Sor/Wiz 3
 Range: Sight of Caster
 Duration: Instantaneous 
 Casting Time: 3
@@ -551,7 +550,7 @@ This spell creates a lance of force, extending from the caster to a specified po
 @1092    = ~Ice Storm~
 @1093    = ~Ice Storm 
 (Evocation) 
-Level: Drd 5, Sor/Wiz 4
+Level: Drd 4, Sor/Wiz 4
 Range: Sight of Caster
 Duration: Instantaneous
 Casting Time: 4 
@@ -562,7 +561,7 @@ When this spell is cast, shards of ice smash down on all targets in the area of 
 @1094    = ~Improved Invisibility~
 @1095    = ~Improved Invisibility 
 (Illusion) 
-Level: Brd 5, Sor/Wiz 4, Mask 4
+Level: Brd 5, Rgr 4, Sor/Wiz 4, Mask 4
 Range: Touch 
 Duration: 2 rounds / level
 Casting Time: 4 
@@ -619,7 +618,7 @@ This spell creates the emotion of hope within the area of effect. All creatures 
 @1104    = ~Shout~
 @1105    = ~Shout 
 (Evocation)
-Level: Brd 4, Sor/Wiz 4, Oghma 4
+Level: Brd 3, Sor/Wiz 4, Oghma 4
 Range: Close (30 ft. long, 10 ft. diameter)
 Duration: Instantaneous 
 Casting Time: 1 
@@ -640,8 +639,8 @@ Saving Throw: Will negates
 The domination spell enables the caster to control the actions of any creature while the spell is in effect.  This control is maintained through a telepathic link between the caster and the victim.  The target gets a Will save at -2 in order to avoid the effect.~
 @1108    = ~Hold Monster~
 @1109    = ~Hold Monster
-(Enchantment) 
-Level: Brd 4, Sor/Wiz 5
+(Enchantment)
+Level: Brd 4, Clr 4, Sor/Wiz 5
 Range: Sight of Caster
 Duration: 1 round / level 
 Casting Time: 5 
@@ -685,9 +684,9 @@ Using this spell, a wizard may reduce the spell resistance of a target creature.
 @1116    = ~Phantom Blade~
 @1117    = ~Phantom Blade 
 (Evocation) 
-Level: Brd 5, Sor/Wiz 5, Mask 6
+Level: Brd 5, Pal 3, Sor/Wiz 5, Mask 6
 Range: Caster
-Duration: 3 rounds + 1 round/level 
+Duration: 3 rounds + 1 round/level
 Casting Time: 5
 Area of Effect: Special
 Saving Throw: None 
@@ -698,7 +697,7 @@ The phantom blade deals 1d8+2 damage with a +2 bonus to attack and strikes as a 
 @1118    = ~Ball Lightning~
 @1119    = ~Ball Lightning 
 (Evocation)
-Level: Sor/Wiz 5, Talos 5
+Level: Drd 5, Rgr 4, Sor/Wiz 5, Talos 5
 Range: Caster 
 Duration: 1 round / level
 Casting Time: 5
@@ -717,28 +716,28 @@ Area of Effect: 1 creature
 Saving Throw: Fortitude negates
 
 This spell turns a living creature to stone on a failed Fortitude save.  The effects of this spell may be reversed with the 6th level wizard spell, Stone to Flesh. This spell has no effect on undead or creatures who have been blinded.~
-@1122    = ~Power Word Silence~
+@1122    = ~Power Word: Silence~
 @1123    = ~Power Word: Silence 
-(Divination) 
+(Divination)
 Level: Brd 5, Sor/Wiz 6, Oghma 5, Bane 6
 Range: Sight of Caster
 Duration: 4 rounds
-Casting Time: 1
+Casting Time: 0
 Area of Effect: 1 Creature
 Saving Throw: None
 
 This spell allows the caster to utter one of the words of power. When spoken, Power Word: Silence can be invoked against any creature in range, preventing them from making a sound.  No saving throw is allowed. This spell has no effect on deaf creatures.~
-@1124    = ~Power Word Stun~
+@1124    = ~Power Word: Stun~
 @1125    = ~Power Word: Stun 
-(Divination) 
-Level: Sor/Wiz 7, Oghma 6, Tempus 8
+(Divination)
+Level: Brd 6, Sor/Wiz 7, Oghma 6, Tempus 8
 Range: Sight of Caster
-Duration: Special 
-Casting Time: 1
+Duration: Special
+Casting Time: 0
 Area of Effect: 1 creature
 Saving Throw: Special
 
-Similar to Power Word: Silence and Power Word: Kill, Power Word: Stun is another of the words of power. Creatures with less than 50 hit points are stunned for 4-16 rounds, those with 51 to 100 hit points are stunned for 2-8 rounds, those with 101 to 150 hit points are stunned for 1-4 rounds, and those with more than 151 hit points must make a Will save at -2 or be stunned for one round. The spell checks the creature's current hit points, not their maximum, so even the toughest creatures can be affected by this spell if they are wounded. This spell has no effect on deaf creatures.~
+Power Word: Stun is another of the words of power. Creatures with less than 50 hit points are stunned for 4-16 rounds, those with 51 to 100 hit points are stunned for 2-8 rounds, those with 101 to 150 hit points are stunned for 1-4 rounds, and those with more than 151 hit points must make a Will save at -2 or be stunned for one round. The spell checks the creature's current hit points, not their maximum, so even the toughest creatures can be affected by this spell if they are wounded. This spell has no effect on deaf creatures.~
 @1126    = ~Iron Body~
 @1127    = ~Iron Body 
 (Transmutation)
@@ -782,7 +781,7 @@ Casting Time: 5
 Area of Effect: Caster
 Saving Throw: Fortitude negates
 
-This spell creates darts made of bone that drain the life force from its victims, dealing 2d6 magic damage and penalizing the target's Fortitude save by 1 for 5 rounds with every successful hit. The darts strike as +3 weapons and will not run out until they vanish after 5 rounds.~
+This spell creates darts made of bone that drain the life force from its victims, dealing 1d4+3 missile damage plus 2d6 magic damage and penalizing the target's Fortitude save by 2 for 5 rounds with every successful hit. The darts strike as +3 weapons and will not run out until they vanish after 5 rounds.~
 @1134    = ~Ghoul Touch~
 @1135    = ~Ghoul Touch 
 (Necromancy) 
@@ -816,17 +815,17 @@ Area of Effect: 1 creature
 Saving Throw: Fortitude half
 
 This horrid spell strips the flesh from a target, causing a magically induced bleeding wound that deals 4 damage per round for the duration of the spell, with an additional 4 bleeding damage for every 10 levels of the caster, up to a maximum of 16 damage per round at level 30.  A successful Fortitude save will halve the damage from the bleeding.~
-@1140    = ~Power Word Kill~
-@1141    = ~Power Word: Kill 
+@1140    = ~Power Word: Kill~
+@1141    = ~Power Word: Kill
 (Divination)
-Level: Sor/Wiz 9, Oghma 8, Tempus 9
+Level: Brd 8, Sor/Wiz 9, Oghma 8, Tempus 9
 Range: Sight of Caster
 Duration: Permanent 
-Casting Time: 1
+Casting Time: 0
 Area of Effect: 1 creature
 Saving Throw: Partial
 
-Similar to Power Word: Silence and Power Word: Stun, Power Word: Kill is the deadliest word of power. The moment the word is spoken, the victim is instantly killed on a failed Will save at a -4 penalty. Those who survive still suffer 10d6 magic damage. This spell has no effect on deaf creatures.~
+Power Word: Kill is the deadliest word of power. The moment the word is spoken, the victim is instantly killed on a failed Will save at a -4 penalty. Those who survive still suffer 60 magic damage. This spell has no effect on deaf creatures.~
 @1142    = ~Wail of the Banshee~
 @1143    = ~Wail of the Banshee 
 (Transmutation) 
@@ -848,19 +847,18 @@ Casting Time: 6
 Area of Effect: Caster
 Saving Throw: Fortitude half
 
-This spell confers the powers of a lich's touch and a lich's immunities upon the caster. The wizard's hands are imbued with a chilling force of negative energy, allowing the caster to deal 2d10 cold damage on a successful touch attack and paralyze living victims for 10 rounds on a failed Fortitude save.  While the spell is active, the caster is treated as undead, becoming immune to poison, disease, bleeding wounds, energy drain, death magic, petrification, stun, emotion spells, cold damage, paralysis, charm, berserk, confusion, fatigue, sleep, and fear. However, the transformation is draining for the caster, who suffers -2 Strength, Dexterity, and Constitution and cannot benefit from any form of healing magic until the duration expires.
-~
+This spell confers the powers of a lich's touch and a lich's immunities upon the caster. The wizard's hands are imbued with a chilling force of negative energy, allowing the caster to deal 2d10 cold damage on a successful touch attack and paralyze living victims for 10 rounds on a failed Fortitude save.  While the spell is active, the caster is treated as undead, becoming immune to poison, disease, bleeding wounds, energy drain, death magic, petrification, stun, emotion spells, cold damage, paralysis, charm, berserk, confusion, fatigue, sleep, and fear. However, the transformation is draining for the caster, who suffers -2 Strength, Dexterity, and Constitution and cannot benefit from any form of healing magic until the duration expires.~
 @1496    = ~Eagle's Splendor~
 @1497    = ~Eagle's Splendor 
-(Transmutation) 
-Level: Brd 2, Sor/Wiz 2, Oghma 1
+(Transmutation)
+Level: Brd 2, Drd 2, Pal 2, Sor/Wiz 2, Oghma 1
 Range: Caster
 Duration: 1 hour / level
 Casting Time: 1 
 Target: Creature touched
 Saving Throw: None 
 
-The transmutated creature becomes more poised, articulate, and personally forceful.  The spell grants +3 to Charisma, adding the usual benefits of Charisma-based skills and abilities. ~
+The transmutated creature becomes more poised, articulate, and personally forceful.  The spell grants +3 to Charisma, adding the usual benefits of Charisma-based skills and abilities.~
 @1498    = ~Mirror Image~
 @1499    = ~Mirror Image 
 (Illusion) 
@@ -875,19 +873,18 @@ When a Mirror Image spell is invoked, the spellcaster causes two to eight duplic
 @1500    = ~Cat's Grace~
 @1501    = ~Cat's Grace 
 (Transmutation) 
-Level: Brd 2, Sor/Wiz 2
-Range: Touch 
+Level: Brd 2, Drd 2, Rgr 2, Sor/Wiz 2
+Range: Touch
 Duration: 1 hour/level
 Casting Time: 2
 Area of Effect: 1 creature
-Saving Throw: None 
+Saving Throw: None
 
-This spell grants the target creature a +4 Dexterity bonus for the duration of the spell.
-~
+This spell grants the target creature a +4 Dexterity bonus for the duration of the spell.~
 @1502    = ~Stoneskin~
 @1503    = ~Stoneskin 
 (Abjuration)
-Level: Sor/Wiz 4, Ilmater 6
+Level: Drd 4, Rgr 4, Sor/Wiz 4, Ilmater 6
 Range: Touch
 Duration: 2 rounds / level
 Casting Time: 1
@@ -898,7 +895,7 @@ The warded creature gains resistance to blows, cuts, stabs, and slashes.  The su
 ~
 @1504    = ~Malison~
 @1505    = ~Malison 
-(Enchantment) 
+(Enchantment)
 Level: Sor/Wiz 4, Oghma 4
 Range: Sight of Caster
 Duration: 1 round / level 
@@ -921,7 +918,7 @@ This spell creates a corporeal barrier around the target's body by tapping into 
 @1508    = ~Wyvern Call~
 @1509    = ~Wyvern Call 
 (Conjuration) 
-Level: Sor/Wiz 6
+Level: Drd 6, Rgr 6, Sor/Wiz 6
 Range: Sight of Caster
 Duration: 5 rounds / level
 Casting Time: 1 round
@@ -1079,13 +1076,13 @@ Range: Sight of Caster
 Duration: 5 rounds
 Casting Time: 5
 Area of Effect: 10-foot radius
-Saving Throw: Fortitude partial
+Saving Throw: None
 
-This spell deals 6d8 damage and imposes a -2 penalty to attack rolls and saving throws to all living creatures within a 10-foot radius for 5 rounds.  A successful Fortitude halves the damage.  Any creatures that die as a result of this damage are obliterated and their essence is transformed into a 3 hit dice skeleton under control of the caster.  Also, for each creature that dies in this manner the caster receives a +1 bonus to strength, dexterity, and constitution for 1 turn. Soul Eater has no effect on undead or constructs.~
+This spell deals 10d6 damage and imposes a -2 penalty to attack rolls and saving throws to all living, hostile creatures within a 10-foot radius for 5 rounds.  Any creatures that die as a result of this damage are obliterated and their essence is transformed into a 3 hit dice skeleton under control of the caster.  Also, for each creature that dies in this manner the caster gains 20 temporary hit points for 1 hour. Soul Eater has no effect on undead or constructs.~
 @1556    = ~Vipergout~
 @1557    = ~Vipergout 
 (Conjuration) 
-Level: Sor/Wiz 7
+Level: Drd 7, Rgr 6, Sor/Wiz 7
 Range: Caster
 Duration: 10 rounds
 Casting Time: 7
@@ -1098,18 +1095,18 @@ This spell summons vipers which leap forth from the caster's mouth to attack her
 @1559    = ~Skull Trap~
 @1560    = ~Skull Trap
 (Necromancy)
-Level: Sor/Wiz 4
+Level: Sor/Wiz 3
 Range: Sight of Caster 
 Duration:  Special
 Casting Time: 3 
 Area of Effect: Special
 Saving Throw: Reflex half
 
-Upon casting this spell, a skull is thrown by the caster at the target area. The skull floats in the area until a creature comes within 5 feet of it. When this happens, the skull is triggered and explodes, damaging everyone within a 10-foot radius. The damage inflicted is equal to 1-6 hit points per level of the caster. When casting this spell, it is wise to set it far away from the party, lest they set it off accidentally.  Leaving the area the Skull Trap is in will make it disappear harmlessly.  A successful Reflex save will do half damage.~
+Upon casting this spell, a skull is thrown by the caster at the target area. The skull floats in the area until a creature comes within 5 feet of it. When this happens, the skull is triggered and explodes, dealing 1d6 slashing damage per level (max 10d6) to all creatures in a 10-foot radius. When casting this spell, it is wise to set it far away from the party, lest they set it off accidentally.  Leaving the area the Skull Trap is in will make it disappear harmlessly.  A successful Reflex save will do half damage.~
 @1561    = ~Spider Spawn~
 @1562    = ~Spider Spawn 
 (Conjuration) 
-Level: Sor/Wiz 3
+Level: Drd 3, Sor/Wiz 3
 Range: Sight of Caster
 Duration: 5 rounds + 1 round/level
 Casting Time: 6
@@ -1170,11 +1167,11 @@ Saving Throw: None
 This spell instills courage within allies in the area of effect, yielding increased morale.  Demoralized troops will once again regain their courage and return to battle.  If the subject is suffering from a fear effect when receiving the spell, those effects will be removed.  In addition, any person under the effects of Remove Fear will be immune to spells that cause fear for the duration of the spell.~
 @1571    = ~Find Traps~
 @1572    = ~Find Traps 
-(Divination) 
+(Divination)
 Level: Clr 2, Oghma 3
 Range: Sight of Caster
 Duration: 10 rounds 
-Casting Time: 5 
+Casting Time: 5
 Area of Effect: Caster
 Saving Throw: None 
 
@@ -1193,16 +1190,16 @@ This spell summons a small insect to the caster, then enlarges it to giant size,
 ~
 
 @1589    = ~Translocation Trick~
-@1590    = ~Translocation Trick 
+@1590    = ~Translocation Trick
 (Transmutation)
-Level: Sor/Wiz 3, Brd 4
+Level: Sor/Wiz 2, Brd 2
 Range: Sight of Caster
 Duration: Instantaneous
-Casting Time: 1
+Casting Time: 0
 Area of Effect: Special
-Saving Throw: Fortitude negates
+Saving Throw: None
 
-This spell allows the caster to switch positions with another creature - creatures not allied with the caster are entitled to a Fortitude save to resist the translocation.
+This spell allows the caster to switch positions with another creature - there is no Saving Throw. Stationary creatures that are part of a structure are unaffected by this spell.
 ~
 @1591    = ~Sunbeam~
 @1592    = ~Sunbeam
@@ -1231,7 +1228,7 @@ Upon uttering the Great Shout, the caster releases a stunning force from his mou
 @1623    = ~Animal Rage~
 @1624    = ~Animal Rage 
 (Enchantment)
-Level:  Drd 4, Rgr 5
+Level:  Drd 4, Rgr 3
 Range: Touch
 Duration: 10 rounds
 Casting Time: 8
@@ -1306,9 +1303,9 @@ Vitriolic Sphere bypasses spell resistance.~
 @1639    = ~Righteous Wrath of the Faithful~
 @1640    = ~Righteous Wrath of the Faithful 
 (Enchantment)
-Level: Clr 5, Pal 5
+Level: Clr 5, Pal 4
 Range: Caster
-Duration: 5 rounds 
+Duration: 5 rounds
 Casting Time: 8
 Area of Effect: 30-foot radius
 Saving Throw: None
@@ -1318,7 +1315,7 @@ This spell bestows a form of divine madness upon the priest's allies, improving 
 @1641    = ~Call Lightning~
 @1642    = ~Call Lightning
 (Transmutation) 
-Level: Drd 3, Rgr 4
+Level: Clr 5, Drd 3, Rgr 4, Sor/Wiz 6
 Range: Sight of Caster
 Duration: 10 rounds/level
 Casting Time: 1 round
@@ -1352,7 +1349,7 @@ This spell is similar to the 4th level wizard spell, Minor Globe of Invulnerabil
 @1657    = ~Conjure Animals~
 @1658    = ~Conjure Animals
 (Conjuration) 
-Level: Drd 5, Rgr 6
+Level: Drd 5, Rgr 5
 Range: Sight of Caster
 Duration: 40 rounds
 Casting Time: 9
@@ -1364,14 +1361,14 @@ This spell summons forth 1d3 massive mountain bears that will obey commands from
 @1659    = ~Dimension Door~
 @1660    = ~Dimension Door 
 (Transmutation) 
-Level: Brd 4, Sor/Wiz 4 Selune 4
-Range: Caster
+Level: Brd 1, Sor/Wiz 1, Selune 4
+Range: 20 feet + 2 feet/level
 Duration: Instantaneous
-Casting Time: 1
+Casting Time: 0
 Area of Effect: Caster
 Saving Throw: None 
 
-This spell transports the caster to any place within the visual range of the caster. When the spell is cast, a dimensional portal opens up in front of the caster, which he immediately steps through.~
+This spell teleports the caster to any point within the range of the spell. The point can be outside the caster's visual range, but it must be a location the party has seen.~
 @1661    = ~Spook~
 @1662    = ~Spook 
 (Illusion)
@@ -1397,29 +1394,28 @@ Saving Throw: None
 This spell grants a +30 magic damage resistance bonus for the duration of the spell.
 ~
 @1665    = ~Translocation Trick~
-@1666    = ~Translocation Trick 
-(Transmutation) 
-Level: Sor/Wiz 3, Brd 4
+@1666    = ~Translocation Trick
+(Transmutation)
+Level: Sor/Wiz 2, Brd 2
 Range: Sight of Caster
 Duration: Instantaneous
-Casting Time: 1
+Casting Time: 0
 Area of Effect: Special
-Saving Throw: Fortitude negates
+Saving Throw: None
 
-This spell allows the caster to switch positions with another creature - creatures not allied with the caster are entitled to a Fortitude save to resist the translocation.
+This spell allows the caster to switch positions with another creature - there is no Saving Throw. Stationary creatures that are part of a structure are unaffected by this spell.
 ~
-@1667    = ~Lutzaen's Frequent Jaunt~
-@1668    = ~Lutzaen's Frequent Jaunt 
+@1667    = ~Lutzaen's Local Teleport~
+@1668    = ~Lutzaen's Local Teleport
 (Transmutation) 
-Level: Sor/Wiz 5
-Range: Caster
-Duration: 10 rounds / level
-Casting Time: Instant
-Area of Effect: Caster
-Saving Throw: None 
+Level: Brd 5, Sor/Wiz 5
+Range: Anywhere in current area
+Duration: Instantaneous
+Casting Time: 2
+Area of Effect: Party
+Saving Throw: None
 
-Similar to Dimension Door, Lutzaen's Frequent Jaunt allows the caster to instantaneously jump to another location within visual sight.  This spell gives the caster the special ability to jump a number of additional times, once for every 3 caster levels.
-~
+Lutzaen's Local Teleport lets the caster teleport their party to another location in the same area. The target point can be anywhere in the area, even if the caster cannot see it. Since the teleport distance is relatively short, there is no chance of the teleportation going wrong.~
 @1670    = ~Emotion: Despair~
 @1671    = ~Emotion: Despair
 (Enchantment)
@@ -1430,7 +1426,7 @@ Casting Time: 4
 Area of Effect: 15' radius
 Saving Throw: Will negates
 
-This spell creates the emotion of despair within the area of effect. All creatures affected by the spell gain a -2 on their saving throws, attack bonuses, and damage rolls. Allies and unnatural creatures are unaffected.~
+This spell creates the emotion of despair within the area of effect. All creatures affected by the spell must make a Will save at a -5 penalty or gain a -2 on their saving throws, attack bonuses, and damage rolls. Allies and unnatural creatures are unaffected.~
 @1672    = ~Animate Zombie~
 @1673    = ~Animate Zombie 
 (Necromancy) 
@@ -1519,8 +1515,8 @@ Saving Throw: None
 This spell empowers the attacks of any animal, granting it +3 to hit and damage until the duration runs out.  At level 10, this spell also grants the animal a +1 enhancement bonus, causing its natural attack to strike as a +1 weapon (1d12 base slashing damage). At levels 20 and 30, this bonus increases to +2 and +3.~
 @1686    = ~Spiritual Weapon~
 @1687    = ~Spiritual Weapon 
-(Evocation) 
-Level: Clr 2
+(Evocation)
+Level: Clr 2, Pal 1
 Casting Time: 5 
 Range: Caster
 Duration: 3 rounds + 1 round / level 
@@ -1545,7 +1541,7 @@ The electrical charge is sufficient for one successful attack, and once an oppon
 @1690    = ~Snakebite~
 @1691    = ~Snakebite 
 (Transmutation) 
-Level: Drd 3, Rgr 4
+Level: Drd 3, Rgr 2
 Range: Caster
 Duration: 1 round/level
 Casting Time: 5
@@ -1557,7 +1553,7 @@ This spell transforms the caster's hands and arms into snakes which can be emplo
 @1692    = ~Expeditious Retreat~
 @1693    = ~Expeditious Retreat 
 (Transmutation)
-Level: Clr 4, Ilmater 2
+Level: Clr 2, Ilmater 2, Rgr 2
 Range: Touch
 Duration: 5 rounds
 Casting Time: 1
@@ -1571,20 +1567,20 @@ This spell grants incredible speed to all friendly creatures within the area of 
 (Transmutation)
 Level: Sor/Wiz 8
 Range: Sight of Caster
-Duration: Instantaneous 
+Duration: Instantaneous
 Casting Time: 6
 Area of Effect: 1 Creature
 Saving Throw: Fortitude partial
 
 The spell makes a creature... vanish. When cast, a ball of green energy shoots forth from the caster to the target, who will be disintegrated unless they make a Fortitude save. This spell works on undead creatures. If the victim makes its saving throw, it will only suffer 6d6 damage. If it fails, however, it will suffer 2d8 slashing damage per caster level, almost assuredly resulting in the victim's death. This increases to 2d10 at level 20, 2d12 at level 25, and finally 2d20 at level 30. Thus, a level 15 caster would deal 30d8 damage, while a level 30 caster would deal 60d20 damage.
 ~
-@1696    = ~Power Word Blind~
-@1697    = ~Power Word Blind 
+@1696    = ~Power Word: Blind~
+@1697    = ~Power Word: Blind
 (Divination) 
-Level: Brd 8, Sor/Wiz 8, Tempus 7, Bane 8 
+Level: Brd 7, Sor/Wiz 8, Tempus 7, Bane 8
 Range: Sight of Caster
 Duration: Special
-Casting Time: 1 
+Casting Time: 0
 Area of Effect: 10-foot radius
 Saving Throw: None
 
@@ -1610,7 +1606,7 @@ Range: Sight of Caster
 Duration: 1 day
 Casting Time: 2
 Area of Effect: 1 creature
-Saving Throw: Fortitude negates
+Saving Throw: None
 
 This spell will make the target totally deaf.  Deafened spellcasters are 20% more likely to miscast any spell.  This deafness can be done away with by a dispel magic spell and similar effects.  Deaf creatures are immune to Power Word spells, bard songs, and sound-based attacks such as a harpy's wail.
 ~
@@ -1630,7 +1626,7 @@ Note that when this spell is inscribed on a scroll, its power and range is dimin
 ~
 
 @1716    = ~Improved Alacrity~
-@1717    = ~Improved Alacrity 
+@1717    = ~Improved Alacrity
 (Universal)
 Level: Sor/Wiz 9, Clr 9, Drd 9
 Range: Caster 
@@ -1654,7 +1650,7 @@ Saving Throw: None
 Blur causes the wizard's body to become blurred, shifting and wavering. This distortion gives the caster's attackers a 20% miss chance when trying to hit him.~
 @1720    = ~Invisibility Purge~
 @1721    = ~Invisibility Purge 
-(Divination) 
+(Divination)
 Level: Clr 3, Sor/Wiz 3, Brd 3, Drd 4
 Range: Personal
 Duration: Instantaneous
@@ -1677,8 +1673,8 @@ By casting this spell, the wizard makes the creature touched undetectable by div
 ~
 @1724    = ~True Seeing~
 @1725    = ~True Seeing 
-(Divination) 
-Level: Clr 5, Brd 6, Sor/Wiz 5, Pal 5, Drd 6, Oghma 3
+(Divination)
+Level: Brd 6, Clr 5, Drd 6, Pal 5, Sor/Wiz 5, Oghma 3
 Range: Sight of Caster
 Duration: Special
 Casting Time: 5 
@@ -1687,7 +1683,7 @@ Saving Throw: None
 
 This spell dispels any form of invisibility and reveals any hidden characters in the area of effect (i.e., thieves using stealth), regardless of spell resistance.  This will also dispel all other illusionary protections, including Minor Mirror Image, Mirror Image, and Blur spells.  Nondetection will prevent True Seeing from revealing a hidden creature, but True Seeing will dispel a Nondetection spell in the process.  This spell cures any form of Blindness and makes the caster immune to blindness for 5 rounds.~
 @1726    = ~Ox's Fortitude~
-@1727    = ~Ox's Fortitude 
+@1727    = ~Ox's Fortitude
 (Transmutation) 
 Level: Brd 2, Clr 2, Pal 2, Sor/Wiz 2, Lathander 2
 Range: Touch 
@@ -1820,7 +1816,7 @@ This spell imbues the caster's hands with destructive negative energy that will 
 @1762    = ~Ice Blade~
 @1763    = ~Ice Blade 
 (Evocation) 
-Level: Clr 4, Drd 3
+Level: Clr 3, Drd 2, Rgr 1
 Range: Caster
 Duration: 4 rounds + 1 round/level
 Casting Time: 4 
@@ -1832,14 +1828,14 @@ This spell creates a segment of deep chilling cold that springs forth from the c
 @1764    = ~Star Metal Cudgel~
 @1765    = ~Star Metal Cudgel
 (Conjuration)
-Level: Drd 4, Rgr 4
+Level: Drd 4, Rgr 3
 Range: Caster
 Duration: 30 rounds
 Casting Time: 7
 Area of Effect: Caster
 Saving Throw: None
 
-This spell creates a meteoric iron magical club (1d6) that has +2 attack bonus and damage, and is treated as a +4 weapon for purposes of what it can hit.  Proficiency, strength, and specialization bonuses and penalties apply.  It does an additional 3d6 points of magic damage against all forms of unnatural creatures.
+This spell creates a meteoric iron magical club (1d6) that has +2 attack bonus and damage, and is treated as a +5 weapon for purposes of what it can hit.  Proficiency, strength, and specialization bonuses and penalties apply.  It does an additional 3d6 points of magic damage against all forms of unnatural creatures.
 ~
 @1767    = ~Animate Skeleton/Zombie~
 @1768    = ~This scroll contains the knowledge of two spells, Animate Skeleton and Animate Zombie:
@@ -1870,9 +1866,9 @@ WARNING: At higher levels, the Zombie Lords and Festering Drowned Dead summoned 
 
 @1769    = ~Elemental Barrier~
 @1770    = ~Elemental Barrier 
-(Abjuration) 
-Level: Clr 8, Drd 8, Sor/Wiz 8
-Range: Touch 
+(Abjuration)
+Level: Brd 8, Clr 8, Drd 7, Sor/Wiz 8
+Range: Touch
 Duration: 1 round / level
 Casting Time: 7
 Area 'of Effect: 15' radius
@@ -1906,8 +1902,8 @@ This spell imbues the caster's hands with destructive negative energy that will 
 ~
 @1775    = ~Control Undead~
 @1776    = ~Control Undead 
-(Necromancy) 
-Level: Sor/Wiz 7
+(Necromancy)
+Level: Clr 7, Sor/Wiz 7
 Range: Sight of Caster
 Duration: 3 rounds / level
 Casting Time: 7
@@ -1922,52 +1918,52 @@ The control undead spell allows the caster to take control of undead creatures w
 Level: Clr 1
 Range: Touch
 Duration: Special
-Casting Time: 5 
+Casting Time: 1
 Area of Effect: 1 creature
 Saving Throw: None
 
-This spell imbues the caster's hands with destructive negative energy that will release when a successful touch attack is made.  This attack deals 1d8 + 1 points of magic damage per caster level (maximum of 1d8 +5).  This spell has no affect on undead or constructs.  At level 1, the caster may strike three times with this weapon, increasing to four times at level 4 and five times at level 7.~
+This spell imbues the caster's hands with destructive negative energy that will release when a successful touch attack is made.  This attack deals 1d8 magic damage + 1 per caster level (maximum of 1d8 + 30).  This spell has no effect on undead or constructs.~
 @1779    = ~Inflict Moderate Wounds~
 @1780    = ~Inflict Moderate Wounds 
 (Necromancy) 
 Level: Clr 2
 Range: Touch 
 Duration: Special
-Casting Time: 5 
+Casting Time: 1
 Area of Effect: 1 creature
 Saving Throw: None
 
-This spell imbues the caster's hands with destructive negative energy that will release when a successful touch attack is made.  This attack deals 2d8 + 1 points per caster level of magic damage (maximum of 2d8 +10).  This spell has no effect on undead or constructs.  At level 3, the caster may strike three times with this weapon, increasing to four times at level 6 and five times at level 9.~
+This spell imbues the caster's hands with destructive negative energy that will release when a successful touch attack is made.  This attack deals 2d8 magic damage + 2 per caster level (maximum of 2d8 + 60).  This spell has no effect on undead or constructs.~
 @1781    = ~Inflict Serious Wounds~
-@1782    = ~Inflict Serious Wounds 
+@1782    = ~Inflict Serious Wounds
 (Necromancy) 
 Level: Clr 3
-Range: Touch 
+Range: Touch
 Duration: Special
-Casting Time: 5 
+Casting Time: 2
 Area of Effect: 1 creature
 Saving Throw: None
 
-This spell imbues the caster's hands with destructive negative energy that will release when a successful touch attack is made.  This attack deals 3d8 + 1 points per caster level of magic damage (maximum 3d8 + 15).  This spell has no affect on undead or constructs.  At level 5, the caster may strike three times with this weapon, increasing to four times at level 8 and five times at level 11.~
+This spell imbues the caster's hands with destructive negative energy that will release when a successful touch attack is made.  This attack deals 3d8 magic damage + 3 per caster level (maximum of 3d8 + 90).  This spell has no effect on undead or constructs.~
 @1783    = ~Inflict Critical Wounds~
-@1784    = ~Inflict Critical Wounds 
-(Necromancy) 
+@1784    = ~Inflict Critical Wounds
+(Necromancy)
 Level: Clr 4
 Range: Touch 
 Duration: Special
-Casting Time: 8 
+Casting Time: 2
 Area of Effect: 1 creature
 Saving Throw: None
 
-This spell imbues the caster's hands with destructive negative energy that will release when a successful touch attack is made.  This attack deals 4d8 + 1 points per level of the caster of magic damage (maximum of 4d8 +20).  This spell has no affect on undead or constructs.  At level 7, the caster may strike three times with this weapon, increasing to four times at level 10 and five times at level 13.~
+This spell imbues the caster's hands with destructive negative energy that will release when a successful touch attack is made.  This attack deals 4d8 magic damage + 4 per caster level (maximum of 4d8 + 120).  This spell has no effect on undead or constructs.~
 
-@1811    = ~Power Word Silence~
+@1811    = ~Power Word: Silence~
 @1812    = ~Power Word: Silence 
 (Divination)
 Level: Brd 5, Sor/Wiz 6, Oghma 5, Bane 6
 Range: Sight of Caster
 Duration: 4 rounds
-Casting Time: 1
+Casting Time: 0
 Area of Effect: 1 Creature
 Saving Throw: None
 
@@ -2047,6 +2043,7 @@ Duration: Instantaneous
 Casting Time: 1
 Area of Effect: 30-foot radius
 Saving Throw: None
+
 When uttered, this spell turns the cleric into a bridge between his god and the Prime Material Plane, allowing him to funnel magical energy to smite all creatures of non-evil alignment in the area of effect.  The effects differ according to the target's level:
 
   Less than 4 - Death
@@ -2057,7 +2054,7 @@ When uttered, this spell turns the cleric into a bridge between his god and the 
 There is no saving throw, and the effects last for the duration of the spell or until dispelled.  This spell may only be cast by evil characters.  Deaf creatures are immune to this spell.~
 
 @1849    = ~Greater Shield of Lathander~
-@1850    = ~Greater Shield of Lathander 
+@1850    = ~Greater Shield of Lathander
 (Conjuration) [Good]
 Level: Clr 7
 Range: Caster
@@ -2078,7 +2075,7 @@ Casting Time: 9
 Area of Effect: 30-foot radius
 Saving Throw: Reflex half
 
-Upon completion of this spell, meteors bombard the area of effect, dealing devastating damage to friend or foe.  All creatures in the area effect take 10d10 fire damage and 10d10 crushing damage with a Reflex save for half damage.  The caster is well advised to be careful in his use of this spell.
+Upon completion of this spell, meteors bombard the area of effect, dealing devastating damage to friend or foe.  All creatures in the area effect take 1d12 damage per level with a Reflex save for half damage. Half the damage is bludgeoning and the other half is fire. The caster is well advised to be careful in his use of this spell.
 ~
 @1853    = ~Prismatic Spray~
 @1854    = ~Prismatic Spray
@@ -2134,3 +2131,234 @@ Saving Throw: None
 
 This spell grants a damage resistance of 15/- against cold if the caster targets herself, or a 10/- cold damage resistance for anyone else.  The effects lasts for the duration of the spell.
 ~
+@1861     = ~Cure Light Wounds~
+@1862     = ~Cure Light Wounds
+(Conjuration)
+Level: Brd 1, Clr 1, Drd 1, Pal 1, Rgr 2
+Range: Touch
+Duration: Instantaneous  
+Casting Time: 1
+Area of Effect: 1 creature
+Saving Throw: None 
+
+When casting this spell and laying his hand upon a living creature, the caster heals 1d8 points of damage +1 per caster level (up to 1d8+30).~
+@1863     = ~Cure Moderate Wounds~
+@1864     = ~Cure Moderate Wounds
+(Conjuration)
+Level: Brd 2, Clr 2, Drd 3, Pal 3, Rng 3
+Range: Touch 
+Duration: Instantaneous 
+Casting Time: 1
+Area of Effect: 1 creature
+Saving Throw: None
+
+When casting this spell and laying his hand upon a living creature, the caster heals 2d8 points of damage +2 per caster level (up to 2d8+60).~
+@1865     = ~Cure Serious Wounds~
+@1866     = ~Cure Serious Wounds
+(Conjuration) 
+Level: Brd 3, Clr 3, Drd 4, Pal 4, Rgr 4, Ilmater 3
+Range: Touch
+Duration: Instantaneous
+Casting Time: 2
+Area of Effect: 1 creature
+Saving Throw: None 
+
+When casting this spell and laying his hand upon a living creature, the caster heals 3d8 points of damage +3 per caster level (up to 3d8+90).~
+@1867     = ~Cure Critical Wounds~
+@1868     = ~Cure Critical Wounds
+(Conjuration)
+Level: Brd 4, Clr 4, Drd 5
+Range: Touch 
+Duration: Instantaneous
+Casting Time: 2
+Area of Effect: 1 creature
+Saving Throw: None
+
+When casting this spell and laying his hand upon a living creature, the caster heals 4d8 points of damage +4 per caster level (up to 4d8+120).~
+@1869     = ~Healing Circle~
+@1870     = ~Healing Circle
+(Conjuration) 
+Level: Brd 5, Clr 5, Drd 6
+Range: Caster
+Duration: Instantaneous
+Casting Time: 3
+Area of Effect: 30-foot radius
+Saving Throw: None 
+
+This spell heals all friendly creatures within the area of effect by 2d8 points of damage +2 per caster level (up to +60).~
+@1871     = ~Bless~
+@1872     = ~Bless
+(Conjuration)
+Level: Clr 1, Pal 1, Tempus 1
+Range: Sight of Caster
+Duration: 1 minute / level
+Casting Time: 2
+Area of Effect: 25-foot radius
+Saving Throw: None 
+
+Upon uttering this spell, the caster raises the attack bonus of allied creatures in the area of effect by +1.  Bless counters and dispels Bane.~
+@1873     = ~Bane~
+@1874     = ~Bane
+(Enchantment)
+Level: Clr 1, Bane 1
+Range: Sight of Caster
+Duration: 1 minute / level
+Casting Time: 2
+Area of Effect: 25-foot radius
+Saving Throw: None
+
+Bane is the reverse of Bless, and lowers the morale and attack bonus of enemy creatures in the area of effect by 1 for the duration of the spell.  Bane counters and dispels Bless.~
+@1875     = ~Haste~
+@1876     = ~Haste
+(Transmutation)
+Level: Brd 3, Rgr 4, Sor/Wiz 3
+Range: Sight of Caster
+Duration: 1 round/level 
+Casting Time: 3 
+Area of Effect: 1 creature
+Saving Throw: None 
+
+A creature affected by Haste gains an extra attack every round, a +4 armor bonus, and moves at double its base movement rate.  Haste dispels and counters slow and is not cumulative with itself or with other similar magic.~
+@1877     = ~Fire Seeds~
+@1878     = ~Fire Seeds
+(Conjuration) 
+Level: Drd 6, Rgr 4
+Range: Caster
+Duration: 10 rounds
+Casting Time: 1 round
+Area of Effect: Special
+Saving Throw: Reflex half
+
+This spell creates one explosive seed in the caster's inventory for every five levels (2 at 10th level, 3 at 15th level, etc...).  When hurled, the seeds explode, doing 5d8 points of damage to everything within a five-foot radius.  Creatures have a Reflex save for half damage.~
+@1879     = ~Web~
+@1880     = ~Web
+(Conjuration) 
+Level: Drd 2, Sor/Wiz 2
+Range: Sight of Caster
+Duration: 15 rounds
+Casting Time: 2 
+Area of Effect: 15-foot radius
+Saving Throw: Reflex negates
+
+Web creates a many-layered mass of strong, sticky strands, similar to spider webs, but much larger and tougher.  Creatures within the area of effect who fail a Reflex save suffer a -2 penalty to attack rolls, -4 penalty to Dexterity, and can't move.  An entangled character who attempts to cast a spell must make a Concentration check or lose the spell.~
+@1881     = ~Fiery Cloud~
+@1882     = ~Fiery Cloud
+(Conjuration)
+Level: Drd 8, Sor/Wiz 8
+Range: Sight of Caster
+Duration: 10 rounds
+Casting Time: 2
+Area of Effect: 10-foot radius
+Saving Throw: Reflex half
+
+This spell brings forth a thin, smoky cloud that fills the area of effect and initially appears harmless.  However, one round later it sparks and flames, dealing 1d4 fire damage per level to anyone caught in the area of effect.  The cloud will continue to flare at regular one round intervals for the duration of the spell.~
+@1883     = ~Trollish Fortitude~
+@1884     = ~Trollish Fortitude
+(Necromancy)
+Level: Drd 6, Rgr 6, Sor/Wiz 6
+Range: Caster
+Duration: 20 rounds
+Casting Time: 6
+Area of Effect: Caster
+Saving Throw: None
+
+This spell imbues the caster with the resilience of a troll, allowing the caster to regenerate 5 hit points per round up to his/her maximum hit points.~
+@1885     = ~Iron Skins~
+@1886     = ~Iron Skins
+(Transmutation) 
+Level: Clr 5, Pal 5
+Range: Caster
+Duration: 8 hours
+Casting Time: 1 round
+Area of Effect: Caster
+Saving Throw: None 
+
+This spell provides the caster with a damage reduction of 10/- to bludgeoning, piercing, and slashing damage.  This resistance bonus only applies to a number of attacks equal to 1 attack for every 2 levels of the caster up to a maximum of 8, after which the spell will dissipate.  This spell is not cumulative with itself or similar magicks (such as the 4th level wizard spell Stoneskin).~
+@1887     = ~Ray of Enfeeblement~
+@1888     = ~Ray of Enfeeblement
+(Necromancy) 
+Level: Clr 2, Sor/Wiz 2
+Range: Sight of Caster
+Duration: 2 rounds / level
+Casting Time: 2
+Area of Effect: 1 creature
+Saving Throw: Fortitude negates
+
+By means of a Ray of Enfeeblement, the caster weakens an opponent, reducing its strength and therefore the attacks that rely upon it.  The victim's strength is reduced by 15 for the duration of the spell, unless a Fortitude save is made at a -3 penalty.  Any associated penalties with having a reduced strength apply.  The effects of this spell are not cumulative with repeat castings.~
+@1889     = ~Vitriolic Sphere~
+@1890     = ~Vitriolic Sphere
+(Conjuration)
+Level: Drd 4, Sor/Wiz 4
+Range: Sight of Caster
+Duration: Special
+Casting Time: 4
+Area of Effect: Special
+Saving Throw: Reflex half
+
+This spell conjures a sphere of glowing emerald acid that the caster can direct to strike any target within range.  When it reaches its target, the sphere explodes and drenches the victim in potent acid.  The victim suffers 1d4 points of acid damage per caster level, to a maximum of 12d4 points of damage (Reflex half).  After the initial damage, the victim must make a Reflex save every round which will reduce the damage for that round by half and also stop any further acid damage.  If unsuccessful, the victim continues to suffer acid damage in the following rounds, sustaining two less dice of damage each round.  For example, an 8th-level wizard inflicts 8d4 damage with this spell on the first round, 6d4 on the second round, 4d4 on the third round, 2d4 on the fourth round, and the spell ends on the fifth round.  Each round the victim is entitled to a Reflex save to avoid further damage in any remaining rounds.  The vitriolic sphere also splashes acid in a 5-foot radius around the primary target.  Any creatures within the splash radius must make a Reflex save or suffer a splash hit that inflicts 1d4 points of damage per every five levels of the caster.  Splash hits do not cause continuing damage.~
+@1891     = ~Gedlee's Electric Loop~
+@1892     = ~Gedlee's Electric Loop
+(Evocation)
+Level: Drd 2, Sor/Wiz 2, Talos 2
+Range: Close
+Duration: Instantaneous
+Casting Time: 2
+Area of Effect: 5-foot radius
+Saving Throw: Reflex half
+
+Upon completion of this spell a ring of electricity erupts from the caster, dealing 1d6 electricity damage per every two caster levels (maximum 5d6 electricity damage) to every creature within the area of effect.  In addition, creatures struck by the ring are stunned for 1 round.  A successful Reflex save halves the damage and negates the stunning effect.~
+@1893     = ~Burning Hands~
+@1894     = ~Burning Hands
+(Transmutation) 
+Level: Drd 1, Sor/Wiz 1
+Range: Caster
+Duration: Instantaneous 
+Casting Time: 1 
+Area of Effect: Burst of flames 10ft. long, centered on caster's hands
+Saving Throw: Reflex half
+
+When the wizard casts this spell, a jet of searing flame shoots from his fingertips. The flame jets are five feet in length and spread out in a horizontal arc of about 120 degrees in front of the wizard. Any creature in the area of effect suffers 1d4 points of damage per caster level (maximum of 5d4).  A successful Reflex save halves the damage.~
+@1895     = ~Flame Blade~
+@1896     = ~Flame Blade
+(Evocation)
+Level: Drd 2, Rgr 1
+Range: Caster
+Duration: 10 rounds/level
+Casting Time: 4 
+Area of Effect: Caster
+Saving Throw: None 
+
+With this spell, the caster causes a blazing ray of red-hot fire to spring forth from his hand. This blade-like ray is wielded as if it were a scimitar.  Attacks with the Flame Blade are melee touch attacks.  The blade deals 1d8 + 6 fire damage but does not gain the caster's strength bonus to damage because it is immaterial.~
+@1897     = ~Shillelagh~
+@1898     = ~Shillelagh
+(Transmutation) 
+Level: Drd 1, Rgr 1
+Range: Caster
+Duration: 10 rounds / level
+Casting Time: 2 
+Area of Effect: Caster
+Saving Throw: None 
+
+This spell creates a magical cudgel that is +1 attack bonus and inflicts 1d10+1 bludgeoning damage per strike.~
+@1899     = ~Contagion~
+@1900     = ~Contagion
+(Necromancy) 
+Level: Clr 3, Drd 3, Sor/Wiz 4
+Range: Sight of Caster
+Duration: Permanent
+Casting Time: 4
+Area of Effect: 1 creature 
+Saving Throw: Fortitude negates 
+
+This spell causes a major disease and weakness in a creature.  The afflicted individual is immediately stricken with painful and distracting symptoms: boils, blotches, lesions, seeping abscesses, and so on.  Strength, Dexterity, and Constitution are reduced by 4.  The afflicted creature is also slowed.  These effects persist until the character receives a remove disease spell.  Casting Contagion on the same creature multiple times will worsen the disease. A Fortitude save (made with a -8 penalty) will negate the effects.~
+@1901     = ~Holy Power~
+@1902     = ~Holy Power
+(Evocation) 
+Level: Clr 4, Pal 3, Ilmater 5
+Range: None
+Duration: 1 round/level
+Casting Time: 6
+Area of Effect: Caster
+Saving Throw: None
+
+Through this spell, the caster channels the power of his god throughout his entire being, amplifying the damage done by his attacks.  The caster gains a +4 damage bonus for the duration of the spell.~

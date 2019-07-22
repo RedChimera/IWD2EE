@@ -21,11 +21,11 @@ ALWAYS
 31 SpellRES(S:RES*,O:Target*)~
 			REPLACE_TEXTUALLY EXACT_MATCH ~95 SpellPoint(P:Target*,I:Spell*Spell)~ ~95 SpellPoint(P:Target*,I:Spell*Spell)
 95 SpellPointRES(S:RES*,P:Target*)~
-			REPLACE_TEXTUALLY EXACT_MATCH ~113 ForceSpell(O:Target*,I:Spell*Spell)~ ~113 ForceSpell(O:Target*,I:Spell*Spell)
+			REPLACE_TEXTUALLY EXACT_MATCH ~113 ForceSpell(O:Target,I:Spell*Spell)~ ~113 ForceSpell(O:Target,I:Spell*Spell)
 113 ForceSpellRES(S:RES*,O:Target*)~
-			REPLACE_TEXTUALLY EXACT_MATCH ~114 ForceSpellPoint(P:Target*,I:Spell*Spell)~ ~114 ForceSpellPoint(P:Target*,I:Spell*Spell)
+			REPLACE_TEXTUALLY EXACT_MATCH ~114 ForceSpellPoint(P:Target,I:Spell*Spell)~ ~114 ForceSpellPoint(P:Target,I:Spell*Spell)
 114 ForceSpellPointRES(S:RES*,P:Target*)~
-			REPLACE_TEXTUALLY EXACT_MATCH ~181 ReallyForceSpell(O:Target*,I:Spell*Spell)~ ~181 ReallyForceSpell(O:Target*,I:Spell*Spell)
+			REPLACE_TEXTUALLY EXACT_MATCH ~181 ReallyForceSpell(O:Target,I:Spell*Spell)~ ~181 ReallyForceSpell(O:Target,I:Spell*Spell)
 181 ReallyForceSpellRES(S:RES*,O:Target*)~
 			REPLACE_TEXTUALLY EXACT_MATCH ~191 SpellNoDec(O:Target*,I:Spell*Spell)~ ~191 SpellNoDec(O:Target*,I:Spell*Spell)
 191 SpellNoDecRES(S:RES*,O:Target*)~
@@ -301,5 +301,25 @@ BEGIN @42
       INCLUDE ~%mod_folder%/components/change_ai_script_fix.tpa~      //~ChangeAIScript Fix~
 
 //Race Revisions
-BEGIN @43 //
+
+BEGIN @43
+
       INCLUDE ~%mod_folder%/components/race_revisions.tpa~      //Race Revisions
+
+//Enemies give the same amount of experience regardless of the party's level
+
+BEGIN @44
+
+      INCLUDE ~%mod_folder%/components/constant_xp.tpa~      //Enemies give the same amount of experience regardless of the party's level
+
+//Adjust encounter level-scaling
+
+BEGIN @46
+SUBCOMPONENT @45
+
+      INCLUDE ~%mod_folder%/components/high_level_encounters_1.tpa~ //Always fight at least the medium-level version of an encounter
+
+BEGIN @47
+SUBCOMPONENT @45
+
+      INCLUDE ~%mod_folder%/components/high_level_encounters_2.tpa~ //Always fight the high-level version of an encounter

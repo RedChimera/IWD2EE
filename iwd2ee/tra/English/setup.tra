@@ -42,3 +42,7 @@
 @41   = ~Minor Damage Resistance for Armor and Shields~
 @42   = ~ChangeAIScript Fix~
 @43   = ~Race Revisions~
+@44   = ~Enemies give the same amount of experience regardless of the party's level~
+@45   = ~Adjust encounter level-scaling~
+@46   = ~Always fight at least the medium-level version of an encounter~
+@47   = ~Always fight the high-level version of an encounter~
