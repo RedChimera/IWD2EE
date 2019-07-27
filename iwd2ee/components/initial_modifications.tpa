@@ -1,0 +1,48 @@
+SILENT
+
+COPY ~%mod_folder%/usInitialModifications.txt~ ~override~
+
+ //Files in this folder may be used in multiple components and shouldn't affect the game unless a component is installed that uses the file.
+COPY ~%mod_folder%/initial~ ~override~
+
+ //Turning the "test" creatures into regular creatures because their irregular CRE format can crash WeiDU when patching all creatures.
+COPY_EXISTING ~00gob.cre~ ~override/test_01.cre~ ~00gob.cre~ ~override/test_02.cre~ ~00gob.cre~ ~override/test_03.cre~ ~00gob.cre~ ~override/testocle.cre~
+
+COPY_EXISTING ~attstyl.ids~ ~override/attstyle.ids~ //This is to prevent a bug where WeiDU looks for attstyle.ids while extending scripts but it's not there in IWD2
+
+COPY_EXISTING ~action.ids~ ~override~ //Patching action.ids to include the SpellRES actions
+	REPLACE_TEXTUALLY EXACT_MATCH ~31 Spell(O:Target*,I:Spell*Spell)~ ~31 Spell(O:Target*,I:Spell*Spell)
+31 SpellRES(S:RES*,O:Target*)~
+	UNLESS ~31 SpellRES~
+
+COPY_EXISTING ~action.ids~ ~override~
+	REPLACE_TEXTUALLY EXACT_MATCH ~95 SpellPoint(P:Target*,I:Spell*Spell)~ ~95 SpellPoint(P:Target*,I:Spell*Spell)
+95 SpellPointRES(S:RES*,P:Target*)~
+	UNLESS ~95 SpellPointRES~
+
+COPY_EXISTING ~action.ids~ ~override~
+	REPLACE_TEXTUALLY EXACT_MATCH ~113 ForceSpell(O:Target,I:Spell*Spell)~ ~113 ForceSpell(O:Target,I:Spell*Spell)
+113 ForceSpellRES(S:RES*,O:Target*)~
+	UNLESS ~113 ForceSpellRES~
+
+COPY_EXISTING ~action.ids~ ~override~
+	REPLACE_TEXTUALLY EXACT_MATCH ~114 ForceSpellPoint(P:Target,I:Spell*Spell)~ ~114 ForceSpellPoint(P:Target,I:Spell*Spell)
+114 ForceSpellPointRES(S:RES*,P:Target*)~
+	UNLESS ~114 ForceSpellPointRES~
+
+COPY_EXISTING ~action.ids~ ~override~
+	REPLACE_TEXTUALLY EXACT_MATCH ~181 ReallyForceSpell(O:Target,I:Spell*Spell)~ ~181 ReallyForceSpell(O:Target,I:Spell*Spell)
+181 ReallyForceSpellRES(S:RES*,O:Target*)~
+	UNLESS ~181 ReallyForceSpellRES~
+
+COPY_EXISTING ~action.ids~ ~override~
+	REPLACE_TEXTUALLY EXACT_MATCH ~191 SpellNoDec(O:Target*,I:Spell*Spell)~ ~191 SpellNoDec(O:Target*,I:Spell*Spell)
+191 SpellNoDecRES(S:RES*,O:Target*)~
+	UNLESS ~191 SpellNoDecRES~
+
+COPY_EXISTING ~action.ids~ ~override~
+	REPLACE_TEXTUALLY EXACT_MATCH ~192 SpellPointNoDec(P:Target*,I:Spell*Spell)~ ~192 SpellPointNoDec(P:Target*,I:Spell*Spell)
+192 SpellPointNoDecRES(S:RES*,P:Target*)~
+	UNLESS ~192 SpellPointNoDecRES~
+
+VERBOSE

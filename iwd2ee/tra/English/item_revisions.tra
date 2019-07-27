@@ -2717,7 +2717,7 @@ Weight: 6 lb.~
 
 STATISTICS:
 
-Shield Bonus: +2
+Shield Bonus: +1
 Armor Bonus: +1 vs. missile weapons
 Special:
   Hit Point Bonus: +15 to Max Hit Points
@@ -11106,12 +11106,12 @@ Special:
 Weight: 2 lb.
 Feat Requirement:  Martial Weapon, Hammer
 Type:  One-handed~
-@12475    = ~Helmet of Defense~
+@12475    = ~Helmet of Defense +5~
 @12476    = ~This class of decorative helmet, made of reinforced leather or metal, covers the face and head. Eye slits and breathing holes come highly recommended.  
 
 STATISTICS:
 
-Generic Armor Bonus: +3
+Generic Armor Bonus: +5
 Weight: 2 lb.~
 @12477    = ~Executioner Helm~
 @12478    = ~This class of decorative helmet, made of reinforced leather or metal, covers the face and head. Eye slits and breathing holes come highly recommended.
@@ -11395,12 +11395,12 @@ Special:
 Armor Check Penalty:  -2
 Arcane Spell Failure:  15%
 Weight: 6 lb.~
-@12529    = ~Tower Shield of Resistance +3~
+@12529    = ~Tower Shield of Resistance +4~
 @12530    = ~This massive shield is nearly as tall as the wielder. Basically, it is a portable wall meant to provide cover. It can provide up to total cover, depending on how far you come out from behind it. A tower shield, however, does not provide cover against targeted spells; a spellcaster can cast a spell on you by targeting the shield you are holding. This shield has runes scribed onto it that glow eerily in dim light. 
 
 STATISTICS:
 
-Shield Bonus: +5
+Shield Bonus: +6
 Armor Bonus:  +1 vs. missile weapons
 Special:  
   Resistance: 5/- Fire Resistance
@@ -11411,24 +11411,24 @@ Special:
 Armor Check Penalty:  -10
 Arcane Spell Failure:  50%
 Weight: 15 lb.~
-@12531    = ~Tower Shield of Spell Resistance +4~
+@12531    = ~Tower Shield of Spell Resistance +5~
 @12532    = ~This massive shield is nearly as tall as the wielder. Basically, it is a portable wall meant to provide cover. It can provide up to total cover, depending on how far you come out from behind it. A tower shield, however, does not provide cover against targeted spells; a spellcaster can cast a spell on you by targeting the shield you are holding. This shield has runes scribed onto it that glow eerily in dim light. 
 
 STATISTICS:
 
-Shield Bonus: +6
+Shield Bonus: +7
 Armor Bonus:  +1 vs. missile weapons
 Special:  
   Spell Resistance: Set to 24
 Armor Check Penalty:  -10
 Arcane Spell Failure:  50%
 Weight: 25 lb.~
-@12533    = ~Large Shield of Health +4~
+@12533    = ~Large Shield of Health +5~
 @12534    = ~A large shield is carried in the same manner as a small shield.  Its weight prevents the character from using his shield hand for anything other than carrying the large shield.  Large shields are usually made of metal, range from 3'-4' in diameter, and can be of any shape, from round to square to a spread dragon's wings.  A typical medieval shield resembles a triangle with one point facing downward. This shield has runes scribed onto it that glow eerily in dim light. 
 
 STATISTICS:
 
-Shield Bonus: +6
+Shield Bonus: +7
 Special:
   Hit Point Bonus: +50 to Max Hit Points
 Armor Check Penalty:  -2
@@ -11457,12 +11457,12 @@ Special:
 Armor Check Penalty:  -1
 Arcane Spell Failure:  5%
 Weight: 3 lb.~
-@12539    = ~Aegis Shield +5~
+@12539    = ~Aegis Shield +6~
 @12540    = ~A large shield is carried in the same manner as a small shield.  Its weight prevents the character from using his shield hand for anything other than carrying the large shield.  Large shields are usually made of metal, range from 3'-4' in diameter, and can be of any shape, from round to square to a spread dragon's wings.  A typical medieval shield resembles a triangle with one point facing downward. This shield has runes scribed onto it that glow eerily in dim light. 
 
 STATISTICS:
 
-Shield Bonus: +7
+Shield Bonus: +8
 Special:
   Spell Power: Can cast Aegis once per day, except that the effects last for 8 hours
 Armor Check Penalty:  -2
@@ -11841,3 +11841,44 @@ Special:
 Weight: 3 lb.
 Feat Requirement:  Exotic Weapon, Bastard Sword
 Type:  One-handed~
+@12597    = ~Large Shield +3~
+@12598    = ~A large shield is carried in the same manner as a small shield.  Its weight prevents the character from using his shield hand for anything other than carrying the large shield.  Large shields are usually made of metal, range from 3'-4' in diameter, and can be of any shape, from round to square to a spread dragon's wings.  A typical medieval shield resembles a triangle with one point facing downward. This shield has runes scribed onto it that glow eerily in dim light.
+
+STATISTICS:
+
+Shield Bonus: +5
+Armor Check Penalty:  -2
+Arcane Spell Failure:  15%
+Weight: 12 lb.~
+@12599    = ~Tower Shield +5~
+@12600    = ~This massive shield is nearly as tall as the wielder. Basically, it is a portable wall meant to provide cover. It can provide up to total cover, depending on how far you come out from behind it. A tower shield, however, does not provide cover against targeted spells; a spellcaster can cast a spell on you by targeting the shield you are holding. This shield has runes scribed onto it that glow eerily in dim light.
+
+STATISTICS:
+
+Shield Bonus: +7
+Armor Bonus:  +1 vs. missile weapons
+Armor Check Penalty:  -10
+Arcane Spell Failure:  50%
+Weight: 10 lb.~
+@12601    = ~Death Armor +3~
+@12602    = ~Splint mail is a variant of banded mail in which the metal strips are applied vertically to the backing of chain, leather, or cloth rather than horizontally as in banded mail.  Since the human body does not swivel in mid-torso as much as it flexes back to front, splint mail is more restrictive in battle. This particular suit of armor has been magically enchanted for increased durability and protection.
+
+STATISTICS:
+
+Heavy Armor
+Armor Bonus: +9
+Max Dex Bonus:  +0
+Armor Check Penalty:  -7
+Arcane Spell Failure:  40%
+Special:
+  Constant Effect: Wearer is under the effects of the spell Death Armor
+Weight: 32 lb.~
+@12603    = ~Helmet of Defense +3~
+@12604    = ~This class of decorative helmet, made of reinforced leather or metal, covers the face and head. Eye slits and breathing holes come highly recommended.
+
+STATISTICS:
+
+Generic Armor Bonus: +3
+Weight: 2 lb.~
+
+@12900    = ~Hrm - you are powerful allies, indeed.  More gold and gems to line your pockets, then - also, a suit of plate armor, a warhammer, a helmet, all crafted and enchanted by great duergar artisans.  They are well deserved, outsider.~

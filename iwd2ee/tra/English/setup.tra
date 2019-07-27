@@ -4,7 +4,7 @@
 @3    = ~Spell Revisions~
 @4    = ~Spell Focus Feats for All Schools~
 @5    = ~Item Revisions~
-@6    = ~Creature Rebalancing~
+@6    = ~Creature Revisions~
 @7    = ~Better XP Progression~
 @8    = ~Completely unnerfed challenge ratings: enemy CR is always equal to their level~
 @9    = ~Partially unnerfed challenge ratings: enemy CR is equal to or slightly less than their level (recommended)~
@@ -46,3 +46,5 @@
 @45   = ~Adjust encounter level-scaling~
 @46   = ~Always fight at least the medium-level version of an encounter~
 @47   = ~Always fight the high-level version of an encounter~
+@48   = ~Reduce the HP bonuses of creatures in Heart of Fury Mode~
+@49   = ~Remove ability score bonuses of allied summoned creatures in Heart of Fury Mode~

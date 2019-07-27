@@ -1,3 +1,204 @@
+DEFINE_PATCH_FUNCTION ~ALTER_AREA_ACTOR_IWD2~
+	INT_VAR
+		spawned=~-1~
+		animation=~-1~
+		orient=~-1~
+		expiry=~-2~
+		wander=~-1~
+		follow=~-1~
+		times_talked=~-1~
+		flag_cre_unattached=~-1~
+		flag_seen_party=~-1~
+		flag_invulnerable=~-1~
+		flag_override_script_name=~-1~
+		flag_difficulty_1=~-1~
+		flag_difficulty_2=~-1~
+		flag_difficulty_3=~-1~
+		flag_time_set=0
+		flag_time_unset=0
+		x_coord=~-1~
+		y_coord=~-1~
+		dest_x=~-1~
+		dest_y=~-1~
+	STR_VAR
+		actor_name=~~
+		match_cre_file=~~
+		cre_file=~same~
+		dlg_file=~same~
+		script_override=~same~
+		script_special3=~same~
+		script_special2=~same~
+		script_combat=~same~
+		script_movement=~same~
+		script_team=~same~
+		script_special1=~same~
+BEGIN
+	PATCH_IF (dest_x = (0 - 1)) BEGIN
+		dest_x = x_coord
+	END
+	PATCH_IF (dest_y = (0 - 1)) BEGIN
+		dest_y = y_coord
+	END
+	actor_name_length = (STRING_LENGTH ~%actor_name%~)
+	cre_file_length = (STRING_LENGTH ~%match_cre_file%~)
+	actor_found = 0
+	READ_SHORT 0x68 actornumber
+	READ_LONG 0x64 actoroffset
+	FOR (i = 0; i < actornumber; ++i) BEGIN
+		offset = actoroffset + (i * 0x110)
+		READ_ASCII offset name_of_actor (actor_name_length)
+		READ_ASCII (offset + 0x80) cre_file_of_actor (cre_file_length)
+
+		PATCH_IF ((actor_name_length = 0) OR (~%name_of_actor%~ STRING_EQUAL_CASE ~%actor_name%~)) AND ((cre_file_length = 0) OR (~%cre_file_of_actor%~ STRING_EQUAL_CASE ~%match_cre_file%~)) BEGIN
+			actor_found = 1
+			PATCH_IF (x_coord != (0 - 1)) BEGIN
+				WRITE_SHORT (offset + 0x20) x_coord
+			END
+			PATCH_IF (y_coord != (0 - 1)) BEGIN
+				WRITE_SHORT (offset + 0x22) y_coord
+			END
+			PATCH_IF (dest_x != (0 - 1)) BEGIN
+				WRITE_SHORT (offset + 0x24) dest_x
+			END
+			PATCH_IF (dest_y != (0 - 1)) BEGIN
+				WRITE_SHORT (offset + 0x26) dest_y
+			END
+			PATCH_IF (spawned != (0 - 1)) BEGIN
+				WRITE_SHORT (offset + 0x2c) spawned
+			END
+			PATCH_IF (animation != (0 - 1)) BEGIN
+				WRITE_LONG (offset + 0x30) animation
+			END
+			PATCH_IF (orient != (0 - 1)) BEGIN
+				WRITE_SHORT (offset + 0x34) orient
+			END
+			PATCH_IF (expiry != (0 - 2)) BEGIN
+				WRITE_LONG (offset + 0x38) expiry
+			END
+			PATCH_IF (wander != (0 - 1)) BEGIN
+				WRITE_SHORT (offset + 0x3c) wander
+			END
+			PATCH_IF (follow != (0 - 1)) BEGIN
+				WRITE_SHORT (offset + 0x3e) follow
+			END
+			PATCH_IF (times_talked != (0 - 1)) BEGIN
+				WRITE_LONG (offset + 0x44) times_talked
+			END
+			PATCH_IF (!(~%dlg_file%~ STRING_EQUAL ~same~)) BEGIN
+				WRITE_ASCIIE (offset + 0x48) ~%dlg_file%~ #8
+			END
+			PATCH_IF (!(~%script_override%~ STRING_EQUAL ~same~)) BEGIN
+				WRITE_ASCIIE (offset + 0x50) ~%script_override%~ #8
+			END
+			PATCH_IF (!(~%script_special3%~ STRING_EQUAL ~same~)) BEGIN
+				WRITE_ASCIIE (offset + 0x58) ~%script_special3%~ #8
+			END
+			PATCH_IF (!(~%script_special2%~ STRING_EQUAL ~same~)) BEGIN
+				WRITE_ASCIIE (offset + 0x60) ~%script_special2%~ #8
+			END
+			PATCH_IF (!(~%script_combat%~ STRING_EQUAL ~same~)) BEGIN
+				WRITE_ASCIIE (offset + 0x68) ~%script_combat%~ #8
+			END
+			PATCH_IF (!(~%script_movement%~ STRING_EQUAL ~same~)) BEGIN
+				WRITE_ASCIIE (offset + 0x70) ~%script_movement%~ #8
+			END
+			PATCH_IF (!(~%script_team%~ STRING_EQUAL ~same~)) BEGIN
+				WRITE_ASCIIE (offset + 0x78) ~%script_team%~ #8
+			END
+			PATCH_IF (!(~%cre_file%~ STRING_EQUAL ~same~)) BEGIN
+				WRITE_ASCIIE (offset + 0x80) ~%cre_file%~ #8
+			END
+			PATCH_IF (!(~%script_special1%~ STRING_EQUAL ~same~)) BEGIN
+				WRITE_ASCIIE (offset + 0x90) ~%script_special1%~ #8
+			END
+
+			bit_enable = 0
+			bit_disable = 0xFFFFFFFF
+			PATCH_IF (flag_cre_unattached == 0) BEGIN
+				bit_disable -= 0x1
+			END ELSE BEGIN
+				PATCH_IF (flag_cre_unattached > 0) BEGIN
+					bit_enable += 0x1
+				END
+			END
+			PATCH_IF (flag_seen_party == 0) BEGIN
+				bit_disable -= 0x2
+			END ELSE BEGIN
+				PATCH_IF (flag_seen_party > 0) BEGIN
+					bit_enable += 0x2
+				END
+			END
+			PATCH_IF (flag_invulnerable == 0) BEGIN
+				bit_disable -= 0x4
+			END ELSE BEGIN
+				PATCH_IF (flag_invulnerable > 0) BEGIN
+					bit_enable += 0x4
+				END
+			END
+			PATCH_IF (flag_override_script_name == 0) BEGIN
+				bit_disable -= 0x8
+			END ELSE BEGIN
+				PATCH_IF (flag_override_script_name > 0) BEGIN
+					bit_enable += 0x8
+				END
+			END
+			READ_LONG (offset + 0x28) flag_change
+			flag_change |= bit_enable
+			flag_change &= bit_disable
+			WRITE_LONG (offset + 0x28) flag_change
+
+			bit_enable = 0
+			bit_disable = 0xFFFFFFFF
+			PATCH_IF (flag_difficulty_1 == 0) BEGIN
+				bit_disable -= 0x1
+			END ELSE BEGIN
+				PATCH_IF (flag_difficulty_1 > 0) BEGIN
+					bit_enable += 0x1
+				END
+			END
+			PATCH_IF (flag_difficulty_2 == 0) BEGIN
+				bit_disable -= 0x2
+			END ELSE BEGIN
+				PATCH_IF (flag_difficulty_2 > 0) BEGIN
+					bit_enable += 0x2
+				END
+			END
+			PATCH_IF (flag_difficulty_3 == 0) BEGIN
+				bit_disable -= 0x4
+			END ELSE BEGIN
+				PATCH_IF (flag_difficulty_3 > 0) BEGIN
+					bit_enable += 0x4
+				END
+			END
+			READ_BYTE (offset + 0x2f) flag_change
+			flag_change |= bit_enable
+			flag_change &= bit_disable
+			WRITE_BYTE (offset + 0x2f) flag_change
+
+			bit_enable = 0
+			bit_disable = 0xFFFFFFFF
+			bit_enable += flag_time_set
+			bit_disable -= flag_time_unset
+			READ_LONG (offset + 0x40) flag_change
+			flag_change |= bit_enable
+			flag_change &= bit_disable
+			WRITE_LONG (offset + 0x40) flag_change
+		END
+	END
+	PATCH_IF (actor_found = 0) BEGIN
+		PATCH_IF actor_name_length > 0 AND cre_file_length > 0 BEGIN
+			PATCH_WARN ~No actor called %actor_name% or with the resource %match_cre_file%.CRE was found.~
+		END
+		PATCH_IF actor_name_length > 0 AND cre_file_length = 0 BEGIN
+			PATCH_WARN ~No actor called %actor_name% was found.~
+		END
+		PATCH_IF actor_name_length = 0 AND cre_file_length > 0 BEGIN
+			PATCH_WARN ~No actor with the resource %match_cre_file%.CRE was found.~
+		END
+	END
+
+END
+
 DEFINE_PATCH_FUNCTION ~ALTER_AREA_REGION_IWD2~
 	INT_VAR
 		type=~-1~
@@ -45,7 +246,7 @@ BEGIN
 	READ_SHORT 0x6a regionnumber
 	READ_LONG 0x6c regionoffset
 	FOR (i = 0; i < regionnumber; ++i) BEGIN
-		SET offset = regionoffset + (i * regionsize)
+		SET offset = regionoffset + (i * 0xc4)
 		READ_ASCII offset name_of_region (region_name_length)
 		PATCH_IF (~%name_of_region%~ STRING_EQUAL_CASE ~%region_name%~) BEGIN
 			region_found = 1
@@ -171,7 +372,7 @@ BEGIN
 	READ_SHORT 0xb4 doornumber
 	READ_LONG 0xb8 dooroffset
 	FOR (i = 0; i < doornumber; ++i) BEGIN
-		SET offset = dooroffset + (i * doorsize)
+		SET offset = dooroffset + (i * 0xc8)
 		READ_ASCII offset name_of_door (door_name_length)
 		PATCH_IF (~%name_of_door%~ STRING_EQUAL_CASE ~%door_name%~) BEGIN
 			door_found = 1

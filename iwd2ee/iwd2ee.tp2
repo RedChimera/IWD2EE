@@ -10,30 +10,13 @@ ALWAYS
            OUTER_SPRINT ~mod_folder~ ~iwd2ee~    //Folder Var
 //      END
 
-	SILENT
+
 	ACTION_IF !FILE_EXISTS_IN_GAME ~usInitialModifications.txt~ BEGIN
-		COPY ~%mod_folder%/usInitialModifications.txt~ ~override~
+		INCLUDE ~%mod_folder%/components/initial_modifications.tpa~
 
-		COPY_EXISTING ~attstyl.ids~ ~override/attstyle.ids~ //This is to prevent a bug where WeiDU looks for attstyle.ids while extending scripts but it's not there in IWD2
-
-		COPY_EXISTING ~action.ids~ ~override~ //Patching action.ids to include the SpellRES actions
-			REPLACE_TEXTUALLY EXACT_MATCH ~31 Spell(O:Target*,I:Spell*Spell)~ ~31 Spell(O:Target*,I:Spell*Spell)
-31 SpellRES(S:RES*,O:Target*)~
-			REPLACE_TEXTUALLY EXACT_MATCH ~95 SpellPoint(P:Target*,I:Spell*Spell)~ ~95 SpellPoint(P:Target*,I:Spell*Spell)
-95 SpellPointRES(S:RES*,P:Target*)~
-			REPLACE_TEXTUALLY EXACT_MATCH ~113 ForceSpell(O:Target,I:Spell*Spell)~ ~113 ForceSpell(O:Target,I:Spell*Spell)
-113 ForceSpellRES(S:RES*,O:Target*)~
-			REPLACE_TEXTUALLY EXACT_MATCH ~114 ForceSpellPoint(P:Target,I:Spell*Spell)~ ~114 ForceSpellPoint(P:Target,I:Spell*Spell)
-114 ForceSpellPointRES(S:RES*,P:Target*)~
-			REPLACE_TEXTUALLY EXACT_MATCH ~181 ReallyForceSpell(O:Target,I:Spell*Spell)~ ~181 ReallyForceSpell(O:Target,I:Spell*Spell)
-181 ReallyForceSpellRES(S:RES*,O:Target*)~
-			REPLACE_TEXTUALLY EXACT_MATCH ~191 SpellNoDec(O:Target*,I:Spell*Spell)~ ~191 SpellNoDec(O:Target*,I:Spell*Spell)
-191 SpellNoDecRES(S:RES*,O:Target*)~
-			REPLACE_TEXTUALLY EXACT_MATCH ~192 SpellPointNoDec(P:Target*,I:Spell*Spell)~ ~192 SpellPointNoDec(P:Target*,I:Spell*Spell)
-192 SpellPointNoDecRES(S:RES*,P:Target*)~
 	END
 
-	VERBOSE
+
 	INCLUDE ~%mod_folder%/components/iwd2ee_functions.tpa~ //Functions that may be used in multiple components
 	LAM	IWD2_INDEX_LISTS
 END
@@ -323,3 +306,15 @@ BEGIN @47
 SUBCOMPONENT @45
 
       INCLUDE ~%mod_folder%/components/high_level_encounters_2.tpa~ //Always fight the high-level version of an encounter
+
+//Reduce the HP bonuses of creatures in Heart of Fury Mode
+
+BEGIN @48
+
+      INCLUDE ~%mod_folder%/components/hof_bonus_changes_1.tpa~ //Reduce the HP bonuses of creatures in Heart of Fury Mode
+
+//Remove ability score bonuses of allied summoned creatures in Heart of Fury Mode
+
+BEGIN @49
+
+      INCLUDE ~%mod_folder%/components/hof_summon_changes_1.tpa~ //Remove ability score bonuses of allied summoned creatures in Heart of Fury Mode
