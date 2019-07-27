@@ -99,12 +99,12 @@ RMIW_14	USSlng59
 RARM_01	00Leat02	00Leat94	00Leat95	00Leat96	00Leat97	00Leat98	00Leat99	00Chan05	00Plat10																																				
 RARM_02	00Leat03	00Leat05	00Leat90	00Leat91	00Leat92	00Leat93	50Hide06	00Chan02	00Plat02	00Plat12																																			
 RARM_03	00Leat06	00Leat07	00Leat86	00Leat87	00Leat88	00Leat89	00Chan03	00Plat04	USChan41																																			
-RARM_04	00Chan07	USChan40	USPlat35																																							
-RARM_05	00Plat03	USPlat45	00Plat03	USPlat45	00Plat03	USPlat45																																										
+RARM_04	00Chan07	00Plat03	USChan40	USPlat35																																							
+RARM_05	USChan45	USPlat45	USPlat51																																									
 RARM_06	USLeat48	USHide49	USChan48	USChan49	USPlat48																																											
-RARM_07	USLeat51	USPlat51	USLeat51	USPlat51	USLeat51	USPlat51																																										
+RARM_07	USLeat51																																						
 RARM_08	USChan52	USChan54	USChan52	USChan54	USChan52	USChan54																																										
-RARM_09	USLeat57	USPlat58	USLeat57	USPlat58	USLeat57	USPlat59																																										
+RARM_09	USLeat57	USPlat59	USLeat57	USPlat59	USLeat57	USPlat59																																										
 RARM_10	USLeat58	USHide59	USLeat58	USHide59	USLeat58	USHide59																																											
 RARM_11																																												
 RARM_12	USLeat59																																											
@@ -112,10 +112,10 @@ RARM_13	USPlat58
 RARM_14	USChan59																																																																																							
 																																												
 RSHD_01	00Shld11	00Shld16	00Shld90	00Shld93	00Shld99																																							
-RSHD_02	00Shld17	00Shld88	00Shld92	00Shld94	00Shld95	00Shld97	00Shld98																																				
-RSHD_03	00Shld85	00Shld86	00Shld91																																						
-RSHD_04	00Shld88	00Shld96	00Shld88	00Shld96	00Shld88	00Shld96																																										
-RSHD_05	00Shld87	00Shld89	00Shld87	00Shld89	00Shld87	00Shld89																																											
+RSHD_02	00Shld17	00Shld88	00Shld94	00Shld95	00Shld97	00Shld98																																				
+RSHD_03	00Shld85	00Shld86	00Shld91	USShld40																																					
+RSHD_04	00Shld88	00Shld92	00Shld96	00Shld88	00Shld92	00Shld96																																								
+RSHD_05	00Shld87	00Shld89	USShld47	00Shld87	00Shld89	USShld47																																								
 RSHD_06	USShld48	USShld49	USShld48	USShld49	USShld48	USShld49																																											
 RSHD_07	USShld50	USShld51	USShld50	USShld51	USShld50	USShld51																																											
 RSHD_08	USShld55																																											

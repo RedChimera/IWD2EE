@@ -5,8 +5,20 @@
 @20002=~Cold damage dealt increased by 100%~
 @20003=~Cold damage dealt increased by 150%~
 @20004=~Cold damage dealt increased by 200%~
+@21001=~Ruin~
+@21002=~Greater Ruin~
+@21003=~Epic Warding~
+@21004=~Epic Mage Armor~
+
+@21651=~Sseth's Venom~
+@21652=~Sseth's Scales~
 @21751=~Auril's Whirlwind~
+@21752=~Greater Snakebite~
+@21851=~Utter Hatred~
+@21852=~Storm of Sseth~
 @21951=~Auril's Blessing~
+@21952=~Mass Harm~
+@22751=~Stygian Ice Storm~
 
 @23001=~Shadow of the Void~
 @23002=~Blightfire~
@@ -29,3 +41,7 @@ In Auril's name,
 Oria.
 
 Weight:  0 lb.~
+@23004=~Greater Wraith~
+@23005=~Marilith~
+@23006=~Greater Marilith~
+@23007=~Greater Gelugon~

@@ -137,7 +137,7 @@ This spell summons a wave of water that moves in the direction willed by the cas
 @1022    = ~Circle of Blades~
 @1023    = ~Circle of Blades 
 (Evocation)
-Level: Clr 6, Pal 6, Helm 6, Tempus 6
+Level: Clr 6, Pal 5, Helm 6, Tempus 6
 Range: Caster
 Duration: 2 rounds
 Casting Time: 9
@@ -1179,7 +1179,7 @@ This spell imbues the caster with a heightened awareness for danger around him o
 @1573    = ~Giant Vermin~
 @1574    = ~Giant Vermin
 (Transmutation)
-Level: Clr 5, Drd 4, Rgr 4
+Level: Clr 5, Drd 4, Rgr 4, Sor/Wiz 5
 Range: Sight of Caster
 Duration: 10 rounds / level 
 Casting Time: 7
