@@ -48,3 +48,5 @@
 @47   = ~Always fight the high-level version of an encounter~
 @48   = ~Reduce the HP bonuses of creatures in Heart of Fury Mode~
 @49   = ~Remove ability score bonuses of allied summoned creatures in Heart of Fury Mode~
+@50   = ~Enemies give 25 * CR experience, enough for a six-character party to reach level 14-15 by the end of the game~
+@51   = ~Enemies give 35 * CR experience, enough for a six-character party to reach level 17-18 by the end of the game~

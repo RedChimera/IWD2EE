@@ -16,3 +16,11 @@ EXTEND_BOTTOM ~AR6303.bcs~ ~%mod_folder%/baf/USSTSH01.baf~
 COPY_EXISTING ~AR6702.are~ ~override~
 	LPF ALTER_AREA_DOOR_IWD2 INT_VAR all_flags=0x661 STR_VAR door_name=~AR6702_Bridge_Gate~ END
 	BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING ~20riki.dlg~ ~override~ //Nym dialogue
+	DECOMPILE_DLG_TO_D
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~GlobalGT(\"SH_Perform_Illmater_Ritual\", ?\"GLOBAL\", ?3)~ ~True()~
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~GlobalLT(\"SH_Perform_Illmater_Ritual\", ?\"GLOBAL\", ?4)~ ~False()~
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~Global(\"SH_Purify_Pool ?\", ?\"GLOBAL\", ?3)~ ~True()~
+	COMPILE_D_TO_DLG
+	LPF CONVERT_DLG_TO_IWD2_FORMAT END

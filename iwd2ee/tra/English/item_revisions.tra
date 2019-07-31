@@ -778,8 +778,16 @@ Weight:  4 lb.~
 //@10227    = ~Item description can remain the same; if new description is needed put it here~
 //@10228    = ~Bracers of Archery~
 //@10229    = ~Item description can remain the same; if new description is needed put it here~
-//@10230    = ~Gauntlets of Fumbling~
-//@10231    = ~Item description can remain the same; if new description is needed put it here~
+@10230    = ~Gauntlets of Reckless Swings~
+@10231    = ~'Elander's Gloves of Misplacement'
+With mischief in mind, the impetuous Elander set out to craft these cursed gauntlets to best a rival.  It turns out his malice got the best of him, when he mistook these gloves for another pair. 
+
+STATISTICS:
+
+Attack Bonus: -5 penalty
+Damage: +5 bonus
+Special:  Can only be removed by a Remove Curse spell
+Weight:  2 lb.~
 //@10232    = ~Gauntlets of Weapon Skill~
 //@10233    = ~Item description can remain the same; if new description is needed put it here~
 //@10234    = ~Gauntlets of Weapon Expertise~
@@ -832,10 +840,10 @@ Many of these bands were scattered throughout Faerun in the wake of the destruct
 
 STATISTICS:
 
-Special
- Damage reduction 5/+1
+Damage reduction 5/+1
 Focus: Wearer deals maximum damage with each hit
-Weight: 1 lb.~
+Weight: 1 lb.
+Minimum Wisdom of 14 Required~
 //@10250    = ~Bands of the Master~
 @10251    = ~When the last kensai of Kamjin-Doh, the Master of Razors, was slain in the fields of western Kara-Tur, these simple leather bands were ripped from his arms... and his arms ripped from his shoulders... as punishment for his destruction of the Kamjin-Doh.  The identities of those who defeated him are not known, but the rumors in Kara Tur were that his slayers were the spirits of three sword saints of Kamjin-Doh, returned from death to end the crimes of the renegade kensai.
 
@@ -950,17 +958,14 @@ Weight: 2 lb.~
 
 STATISTICS:
 
-Spell Power: Can cast the spell Gedlee's Electric Loop (at level 10) 1/Day (Reflex DC 20)
-Resistance: 5/- Electrical Resistance
+Electrical damage dealt by wearer is increased by 30%
 Weight: 3 lb.~
-//@10284    = ~Insulated Arcs of Disredain~
+@10284    = ~Conductive Arcs of Disredain~
 @10285    = ~Disredain was an eccentric wizard who became enthralled with the manipulation of electricity.  In addition to the wands he created, Disredain made a number of experimental magic items during a fifteen-year period of frenzied research.  This belt was one of the items he did not think highly of.  Consisting of large, crescent-shaped slices of mottled copper sitting back to back, the belt is quite thick and unique in appearance.  A cleric of Talos named Ylkath wore the Arcs for three decades before he died of old age.  His companion, the Umberlant priestess Ashalla of the Jade Tide, kept the belt for barely three years before she was shot dead by pirates that survived one of her nautical attacks.  The pirates sold the belt to a fence.  Its history past that point is unknown.
 
 STATISTICS:
 
-Spell Power: Can cast the spell Gedlee's Electric Loop (at level 10) 5/Day (Reflex DC 30)
-Spell Power: Can cast the spell Chain Lightning (at level 25) 1/Day
-Resistance: 15/- Electrical Resistance
+Electrical damage dealt by wearer is increased by 60%
 Weight: 3 lb.~
 //@10286    = ~Black Goat Girdle~
 @10287    = ~Made by halflings, the Black Goat Girdle is sacred to all of their religious sects.  Legends say that the Black Goat appeared to a nameless halfling village that had been sacked by goblins during a terrible winter.  The tribe of warriors slew most of the halfling men, burned the fields, and took all of the town's livestock.  Broken but not hopeless, the villagers congregated for prayer in the burned chapel at the center of town.  Out of the smoke drifting over the edge of town, a black goat appeared with six kids, five black, one white.  Over the course of six days, the kids grew, gave birth to more kids, and each previous generation died in the night.  The milk, meat, and hide provided by the goats helped the halflings survive through their harsh winter.  After the six days of miracles had passed, the town tanner made a belt from the hide of the mother goat that had appeared out of the smoke.  Halfling tales often contain stories of halfling heroes wearing the Black Goat Girdle on their adventures, though no one has yet determined exactly where the legend truly originated.
@@ -3018,7 +3023,7 @@ Attack Bonus:  +2
 Enchantment:  +2
 Damage Type:  Piercing
 Special:
-  This weapon can reach out and attack at a range of 10 (a normal dagger has a reach of 0, a long sword has a reach of 1, and a two-handed sword has a reach of 2)
+  This weapon can reach out and attack at a range of 10 (a normal dagger has a reach of 0, a long sword has a reach of 1, and a two-handed sword has a reach of 2). It can even be used to sneak attack at long range.
 Weight: 2 lb.
 Feat Requirement:  Simple Weapon, Small Blade
 Type:  One-handed~
@@ -3112,7 +3117,7 @@ Special:
 Weight: 1 lb.
 Feat Requirement:  Simple Weapon, Small Blade
 Type:  One-handed~
-@10711    = ~Knife of Flame +1~
+@10711    = ~Dagger of Speed +1~
 @10712    = ~The typical dagger has a pointed, usually double-edged blade, as opposed to a knife, which has a single edge and is a bit shorter than the dagger. 
 
 STATISTICS:
@@ -3122,8 +3127,7 @@ Attack Bonus:  +1
 Enchantment:  +1
 Damage Type:  Piercing
 Special:
-  Spell Resistance: Set to 12
-  Flame: +1d4 fire damage
+  Speed: 1 additional attack per combat round
 Weight: 1 lb.
 Feat Requirement:  Simple Weapon, Small Blade
 Type:  One-handed~
@@ -3544,7 +3548,7 @@ Type:  One-handed~
 STATISTICS:
 
 Damage:  1d6 + 1
-Attack Bonus: +1 
+Attack Bonus:  +1
 Enchantment:  +1
 Damage Type:  Piercing
 Special:
@@ -3554,18 +3558,17 @@ Special:
 Weight:  3 lb.
 Feat Requirement:  Simple Weapon, Small Blade
 Type:  One-handed~
-//@10779    = ~Short Sword of Sanctuary +1~
+@10779    = ~Short Sword of Invisibility +2~
 @10780    = ~The short sword is the first type of sword to come into existence.  In the simplest of terms, a short sword can be considered a dagger with a blade so long that it can no longer be called a dagger.  The term short sword does not exist in sword classifications.  However, it has come to be used to describe a double-edged blade about two feet in length.  The sword tip is usually pointed, ideal for thrusting.  
 
 STATISTICS:
 
-Damage:  1d6 + 1
-Attack Bonus: +1 
-Enchantment:  +1
+Damage:  1d6 + 2
+Attack Bonus:  +2
+Enchantment:  +2
 Damage Type:  Piercing
 Special:
-  Spell Power: Can cast the spell Sanctuary 1/day
-  Stunning: 25% chance target is stunned for 1/2 round (Fortitude DC 18)
+  Invisibility: 25% chance per hit to turn the wielder invisible for 1 round
 Weight:  3 lb.
 Feat Requirement:  Simple Weapon, Small Blade
 Type:  One-handed~
@@ -3601,18 +3604,18 @@ Special:
 Weight:  3 lb.
 Feat Requirement:  Simple Weapon, Small Blade
 Type:  One-handed~
-//@10793    = ~Charged Short Sword of Wounding +5~
-@10794    = ~The short sword is the first type of sword to come into existence.  In the simplest of terms, a short sword can be considered a dagger with a blade so long that it can no longer be called a dagger.  The term short sword does not exist in sword classifications.  However, it has come to be used to describe a double-edged blade about two feet in length.  The sword tip is usually pointed, ideal for thrusting.  
+@10793    = ~Fast Short Sword of Sneak Attacks +5~
+@10794    = ~The short sword is the first type of sword to come into existence.  In the simplest of terms, a short sword can be considered a dagger with a blade so long that it can no longer be called a dagger.  The term short sword does not exist in sword classifications.  However, it has come to be used to describe a double-edged blade about two feet in length.  The sword tip is usually pointed, ideal for thrusting.
 
 STATISTICS:
 
 Damage:  1d6 + 5
-Attack Bonus:  +5 
+Attack Bonus:  +5
 Enchantment:  +5
 Damage Type:  Piercing
 Special:
-  Shocking Burst:  +2d6 electric damage and 10% chance of +2d10 extra electric damage
-  Wounding: Inflicts 5 additional point of damge per round for 10 rounds (Fortitude DC 40)
+  Speed: 1 additional attack per combat round
+  Backstabbing: After a sneak attack with this weapon, there is no delay before the target can be sneak attacked again
 Weight:  3 lb.
 Feat Requirement:  Simple Weapon, Small Blade
 Type:  One-handed~
@@ -3648,12 +3651,14 @@ Special:
 Weight:  3 lb.
 Feat Requirement:  Simple Weapon, Small Blade
 Type:  One-handed~
-//@10803    = ~Short Sword of Shadows~
+@10803    = ~Short Sword of Shadows +1~
 @10804    = ~The short sword is the first type of sword to come into existence.  In the simplest of terms, a short sword can be considered a dagger with a blade so long that it can no longer be called a dagger.  The term short sword does not exist in sword classifications.  However, it has come to be used to describe a double-edged blade about two feet in length.  The sword tip is usually pointed, ideal for thrusting.  
 
 STATISTICS:
 
-Damage:  1d6
+Damage:  1d6 + 1
+Attack Bonus:  +1
+Enchantment:  +1
 Damage Type:  Piercing
 Special:
   Generic Armor Bonus: +1
@@ -4009,17 +4014,17 @@ Special:
 Weight: 4 lb.
 Feat Requirement:  Martial Weapon, Large Sword
 Type:  One-handed~
-@10867    = ~Longsword of Speed +2~
+@10867    = ~Longsword +3: Enforcer~
 @10868    = ~These swords are usually referred to as doubled-edged swords, war swords, or military swords.  In many cases, the longsword has a single-edged blade. There is no single version of the longsword; the design and length vary from culture to culture, and may vary within the same culture depending on the era.  Among the most common characteristics of all longswords is their length, which ranges from 35 inches to 47 inches.  In the latter case, the blade is known to take up 40 inches of the total length.  Most longswords have a double-edged blade and a sharp point at the tip.  Despite the tip, the longsword is designed for slashing, not thrusting. 
 
 STATISTICS:
 
-Damage:  1d8 + 2
-Attack Bonus: +2
-Enchantment: +2 
+Damage:  1d8 + 3
+Attack Bonus: +3
+Enchantment: +3
 Damage Type:  Slashing
 Special:
-  Speed: 1 additional attack per combat round
+  Spellblade: Each hit with this sword decreases the wielder's spellcasting time by 1 for 2 rounds (cumulative)
 Weight: 4 lb.
 Feat Requirement:  Martial Weapon, Large Sword
 Type:  One-handed~
@@ -5037,8 +5042,20 @@ Special:
 Weight: 4 lb.
 Feat Requirement:  Simple Weapon, Quarterstaff
 Type:  Two-handed~
-//@11055    = ~Incendiary Staff +2~
-//@11056    = ~Item description can remain the same; if new description is needed put it here~
+@11055    = ~Cleric's Staff +2~
+@11056    = ~The simplest and humblest of staff weapons, the quarterstaff is a length of wood ranging six to nine feet in length.  Masterwork quarterstaffs are made of stout oak and are shod with metal at both ends.  This one is particularly special as it has been imbued with magical properties.
+
+STATISTICS:
+
+Damage:  1d6 + 2
+Attack Bonus:  +2 
+Enchantment:  +2
+Damage Type:  Bludgeoning
+Special:
+  Wielder's divine spells last 20% longer
+Weight: 4 lb.
+Feat Requirement:  Simple Weapon, Quarterstaff
+Type:  Two-handed~
 @11057    = ~Staff of Infinite Fire +4~
 @11058    = ~The simplest and humblest of staff weapons, the quarterstaff is a length of wood ranging six to nine feet in length.  Masterwork quarterstaffs are made of stout oak and are shod with metal at both ends.  This one is particularly special as it has been imbued with magical properties.  
 
@@ -5052,8 +5069,7 @@ Special:
   Infinite Fire: Can shoot out a Fireball that deals 8d6 fire damage (Reflex DC 20 for half). This ability can be used unlimited times per day.
 Weight: 4 lb.
 Feat Requirement:  Simple Weapon, Quarterstaff
-Type:  Two-handed
-Minimum Intelligence of 20 Required~
+Type:  Two-handed~
 //@11059    = ~Staff of Greater Spell Resistance +5~
 @11060    = ~The simplest and humblest of staff weapons, the quarterstaff is a length of wood ranging six to nine feet in length.  Masterwork quarterstaffs are made of stout oak and are shod with metal at both ends.  This one is particularly special as it has been imbued with magical properties.
 
@@ -7011,8 +7027,20 @@ Special:
 Weight: 8 lb.
 Required Feat:  Simple Weapon, Mace
 Type:  One-handed~
-//@11475    = ~Static Star +1~
-//@11476    = ~Item description can remain the same; if new description is needed put it here~
+@11475    = ~Morningstar of Misfortune +1~
+@11476    = ~The morningstar is a wooden shaft topped with a metal head made up of a spiked iron sheath.  Morningstars have an overall length of about four feet.  This particular one is mounted with a golden head that has been magically enhanced so as to improve performance and escape the malleability of gold.
+
+STATISTICS:
+
+Damage:  1d8  +1
+Attack Bonus:  +1 
+Enchantment:  +1
+Damage Type:  Bludgeoning
+Special:
+  Misfortune: Each hit gives the target -1 luck for 3 rounds (cumulative, no save)
+Weight: 8 lb.
+Required Feat:  Simple Weapon, Mace
+Type:  One-handed~
 //@11477    = ~Holy Morningstar +1~
 //@11478    = ~Item description can remain the same; if new description is needed put it here~
 @11479    = ~Morning Glory +2~
@@ -8252,7 +8280,8 @@ STATISTICS:
 Damage: +3 (missile)
 Attack Bonus: +3 
 Special:
-  Speed: 1 extra attack per round
+  Speed: 2 extra attacks per round
+  Special: Reduced range compared to other bows
 Weight: 1 lb.
 Feat Requirement:  Martial Weapon, Bow
 Type:  Two-handed~
@@ -8265,7 +8294,8 @@ Damage: +5 (missile)
 Attack Bonus: +5 
 Special:
   Luck: +1
-  Speed: 2 extra attacks per round
+  Speed: 3 extra attacks per round
+  Special: Reduced range compared to other bows
 Weight: 1 lb.
 Feat Requirement:  Martial Weapon, Bow
 Type:  Two-handed~
@@ -8276,7 +8306,7 @@ Type:  Two-handed~
 //@11727    = ~Composite Shortbow +1~
 //@11728    = ~Item description can remain the same; if new description is needed put it here~
 @11729    = ~Composite Shortbow of Haste +5~
-@11730    = ~Composite bows are made from laminated horn, wood, or bone and built with a recurve, meaning that the bow8 remains bow-shaped even when unstrung.
+@11730    = ~Composite bows are made from laminated horn, wood, or bone and built with a recurve, meaning that the bow remains bow-shaped even when unstrung.
 
 STATISTICS:
 
@@ -8414,10 +8444,36 @@ Special:
 Weight: 3 lb.
 Feat Requirement:  Martial Weapon, Bow
 Type:  Two-handed~
-@11763    = ~Sophia's Flight +1~
-//@11764    = ~Item description can remain the same; if new description is needed put it here~
-@11765    = ~Sophia's Arc +3~
-//@11766    = ~Item description can remain the same; if new description is needed put it here~
+@11763    = ~Sophia's Flight +2~
+@11764    = ~This longbow is the subject of legend among the squabbling citadels of the Sword Coast, a legend fiercely debated in drinking halls and taverns in and along the storm-lashed coast.  According to the tale, the bow takes its name from its pivotal role in the escape of a young woman named Sophia, a typical maiden fair who was pledged to marry the son of Duke Hugh Gladegrin (the son is described as hideously ugly and of foul temperament, of course).  Sophia, however, believed she was destined to marry one of the Duke's archers, a dashing young golden-haired fellow who roamed the surrounding lands felling foul beasts with a single twang of his mighty bow.  As the tale goes, one of the court wizards (a transmuter) took pity on the young woman's plight and cast a spell that turned her into an arrow for an hour's time.  The transmuter arranged for Sophia to be fired from the castle wall to a ship waiting off the coast, where she could sail to freedom.
+
+The tale then breaks down from here, as numerous accounts claim that Sophia did not flee the coast safely, and that she transformed back into her normal body while she was halfway across the water, plunging into the icy ocean.  Another school claims that, while in arrow form, Sophia pierced the side of the ship, then choked to death when she resumed her normal form with her neck embedded in the ship's hull.  Still others claim that she was never even launched from the bow, and that she resumed her normal form while inside the archer's quiver, and she awoke, naked, wearing only the small band of leather about her body. When this last argument is made, the discussion generally deteriorates into a steady stream of sexual innuendos and the evening officially goes downhill.
+
+Whatever the tale, the bow has a range unmatched by many other bows in the realms, and the arrows launched from it strike far and true - unlike the story surrounding the bow.
+
+STATISTICS:
+
+Damage:  +2 (missile)
+Attack Bonus:  +4
+Special: Half again the range of a normal bow.
+Weight: 3 lb.
+Feat Requirement:  Martial Weapon, Bow
+Type:  Two-handed~
+@11765    = ~Sophia's Arc +5~
+@11766    = ~This longbow is the subject of legend among the squabbling citadels of the Sword Coast, a legend fiercely debated in drinking halls and taverns in and along the storm-lashed coast.  According to the tale, the bow takes its name from its pivotal role in the escape of a young woman named Sophia, a typical maiden fair who was pledged to marry the son of Duke Hugh Gladegrin (the son is described as hideously ugly and of foul temperament, of course).  Sophia, however, believed she was destined to marry one of the Duke's archers, a dashing young golden-haired fellow who roamed the surrounding lands felling foul beasts with a single twang of his mighty bow.  As the tale goes, one of the court wizards (a transmuter) took pity on the young woman's plight and cast a spell that turned her into an arrow for an hour's time.  The transmuter arranged for Sophia to be fired from the castle wall to a ship waiting off the coast, where she could sail to freedom.
+
+The tale then breaks down from here, as numerous accounts claim that Sophia did not flee the coast safely, and that she transformed back into her normal body while she was halfway across the water, plunging into the icy ocean.  Another school claims that, while in arrow form, Sophia pierced the side of the ship, then choked to death when she resumed her normal form with her neck embedded in the ship's hull.  Still others claim that she was never even launched from the bow, and that she resumed her normal form while inside the archer's quiver, and she awoke, naked, wearing only the small band of leather about her body. When this last argument is made, the discussion generally deteriorates into a steady stream of sexual innuendos and the evening officially goes downhill. 
+
+Whatever the tale, the bow has a range unmatched by many other bows in the realms, and the arrows launched from it strike far and true - unlike the story surrounding the bow.
+
+STATISTICS:
+
+Damage:  +5 (missile)
+Attack Bonus:  +8
+Special: Half again the range of a normal bow.
+Weight: 3 lb.
+Feat Requirement:  Martial Weapon, Bow
+Type:  Two-handed~
 @11767    = ~Sun-Reacher +3~
 @11768    = ~The elves of Evereska are known for their isolationism as much as their skill and bravery in battle.  One of their most well known warriors in human lands was the incredibly accurate archer Bariah Goldendown.  Though the elves will neither confirm nor deny the legend, some human tales state that keen-eyed Bariah never missed a target in battle.  His bow, crafted by his mother, was never given a name that was known outside of the family.  The humans that suffered under its power called it "Sun-Reacher," believing that Bariah's arrows could reach into the heavens themselves.  In a battle that many Evereskans are bitter about to this day, Bariah's griffon mount was killed in the sky by the spells of invisible wizards that ambushed an elven patrol.  Though only one mage escaped with his life, he did manage to take Sun-Reacher with him.
 
@@ -10228,7 +10284,7 @@ This book gains power when the passages within are read aloud by a priest of Tem
 
 STATISTICS:
 
-Spell Power: Casts the spell Champion's Strength (at level 10) on all allies within 25 feet once per day 
+Spell Power: Casts the spell Champion's Strength (at level 10) on all allies within 25 feet once per day
 
 Weight: 1 lb.~
 //@12201    = ~Heart of Winter~ //HoF
@@ -10251,9 +10307,9 @@ The misfortunes plaguing Icewind Dale led to the ambush of Hrothgar's expedition
 
 The brave band of adventurers searched out this evil, their travels carrying them from the crypts of the Vale of Shadows through the numerous ruins of the North, including the decaying elven fortress of the Severed Hand and the lava-filled caverns of Dragon's Eye.  Much of their journey has been lost, but there is no doubt that their efforts led to the salvation of Kuldahar and the Ten-Towns and their deeds are still spoken of in Easthaven and Kuldahar to this day.  Hrothgar himself has been laid to rest in a small glen near the town of Kuldahar, in memory of his selflessness in coming to the aid of his neighbor in a time when Easthaven itself was suffering troubles of its own. 
 
-Among their other acts of heroism, the adventurers are credited with the discovery of the location of the tomb of Kresselack the Black Wolf, one of the most infamous of the Northern generals, the discovery of the Severed Hand, and numerous other monasteries and ruins believed lost to time and the snows of the North. 
+Among their other acts of heroism, the adventurers are credited with the discovery of the location of the tomb of Kresselack the Black Wolf, one of the most infamous of the Northern generals, the discovery of the Severed Hand, and numerous other monasteries and ruins believed lost to time and the snows of the North.
 
-After reading the closing chapter of the book above, you notice that the top letter in each of the chapters weave together to form a peculiar summoning spell.  When a passage is recited from the book, it summons the howling winds of Icewind Dale to the reader's aid.  
+After reading the closing chapter of the book above, you notice that the top letter in each of the chapters weave together to form a peculiar summoning spell.  When a passage is recited from the book, it summons the howling winds of Icewind Dale to the reader's aid.
 
 STATISTICS:
 
@@ -10270,7 +10326,7 @@ When this book is held in the hand of a druid and the druid is touching solid gr
  
 STATISTICS:
 
-Spell Power: Casts a more powerful version of the spell Barkskin (+12 armor bonus) 1/Day
+Spell Power: Casts a more powerful version of the spell Barkskin (+6 AC bonus) 1/Day
 Spell Power: Casts the spell Shambler 1/Day
 Weight: 1~
 //@12209    = ~How To Be An Adventurer~
@@ -10861,13 +10917,12 @@ Special:
   Brilliant Energy: Bypasses armor and shield bonuses
 Weight:  0 lb.
 Launcher:  Crossbow~
-@12429    = ~Boots of Haste~
-@12430    = ~These boots have been magically enhanced so that wearer is able to travel at twice the normal speed. They are much prized by those whose profession involves traveling long distances.
+@12429    = ~Boots of Greater Speed~
+@12430    = ~These boots have been magically enhanced so that wearer is able to travel extremely fast, much faster than regular boots of speed. They are much prized by those whose profession involves traveling long distances.
 
 STATISTICS:
 
-Special: Doubles movement rate
-Constant Effect: Haste while equipped
+Special: Movement rate increased significantly
 Weight: 1 lb.~
 @12431    = ~Bracers of Defense +5~
 @12432    = ~Normally bracers are used to add support and protection to forearm area of the body. However, these bracers have been magically altered so that the wearer receives armor like protection without the constraints of wearing armor.  Bracers such as these are highly prized by wizards and sorcerers who must have complete freedom of movement to perform their magical arts.
@@ -10891,7 +10946,7 @@ STATISTICS:
 Armor Bonus: +10
 Weight: 2 lb.~
 @12437    = ~Gloves of Death~
-@12438    = ~These gloves were given their name for a good reason. While wearing these gloves, one can point at a creature , and that creature will almost surely die. This effect only functions once per day.
+@12438    = ~These gloves were given their name for a good reason. While wearing these gloves, one can point at a creature, and that creature will almost surely die. This effect only functions once per day.
 
 STATISTICS:
 
@@ -10906,15 +10961,15 @@ Attack Bonus: +3
 Damage:  +5 bonus
 Speed: 1 extra attack per round with any weapon 
 Weight:  2 lb.~
-@12441    = ~Heavy Crossbow of Endless Bolts +5~
+@12441    = ~Heavy Crossbow of Endless Bolts +10~
 @12442    = ~A crossbow is a bow mounted crosswise on a wooden or metal shaft, the latter called a tiller.  The bow is usually made of ash or yew.  The crossbow fires a quarrel (also called a bolt). A slight blue glow can be seen emanating from the crossbar.
 
 STATISTICS:
 
-Damage:  +12 (missile)
-Attack Bonus:  +5
+Damage:  +22 (missile)
+Attack Bonus:  +10
 Special:
-  This crossbow does not need ammunition. Instead, it fires an infinite supply of +5 bolts. 
+  This crossbow does not need ammunition. Instead, it fires an infinite supply of +10 bolts.
 Weight: 9 lb.
 Feat Requirement:  Simple Weapon, Crossbow
 Type:  Two-handed~
@@ -11086,7 +11141,6 @@ Enchantment:  +5
 Damage Type:  Missile (piercing)
 Special:
   Five attacks per round
-  No Strength bonus to damage
   Flame: +3 fire damage
 Weight: 0 lb.
 Required Feat:  Simple Weapons, Missile
@@ -11212,13 +11266,13 @@ Arcane Spell Failure:  15%
 Special:
   Movement Rate: +10
 Weight: 4 lb.~
-@12493    = ~Studded Leather Armor of Perfect Reflexes +5~
+@12493    = ~Studded Leather Armor of Perfect Reflexes +6~
 @12494    = ~Studded leather armor has little in common with normal leather armor.  While leather armor is a hardened shell, studded leather armor is soft and supple with hundreds of metal rivets affixed.  The rivets are so close together that they form a flexible coating of hard metal that turns aside slashing and cutting attacks.  The soft leather backing is little more than a means of securing the rivets in place. Magical enchantments enhance the protective abilities of this leather armor.
 
 STATISTICS:
 
 Light Armor
-Armor Bonus: +8
+Armor Bonus: +9
 Max Dex Bonus:  +5
 Armor Check Penalty:  -1
 Arcane Spell Failure:  15%
@@ -11251,13 +11305,13 @@ Arcane Spell Failure:  35%
 Special:
   When below 50% HP, wearer gains the effects of Heroic Inspiration, as if he or she possessed the feat.
 Weight: 45 lb.~
-@12499    = ~Half-Plate of Expertise +2~
+@12499    = ~Half-Plate of Expertise +4~
 @12500    = ~This armor is a combination of chainmail with metal plates covering vital areas. Buckles and straps hold the whole suit together and distribute the weight, but the armor still hangs more loosely than full plate.  In addition, this suit of half-plate mail is enchanted and gives additional bonuses to the wearer's armor class.
 
 STATISTICS:
 
 Heavy Armor
-Armor Bonus:  +9
+Armor Bonus:  +11
 Max Dex Bonus:  +0
 Armor Check Penalty:  -7
 Arcane Spell Failure:  40%
@@ -11265,13 +11319,13 @@ Special:
   Generic Armor Bonus: +5
   Attack Penalty: -5
 Weight: 40 lb.~
-@12501    = ~Half-Plate of Holy Power +2~
+@12501    = ~Half-Plate of Holy Power +3~
 @12502    = ~This armor is a combination of chainmail with metal plates covering vital areas. Buckles and straps hold the whole suit together and distribute the weight, but the armor still hangs more loosely than full plate.  In addition, this suit of half-plate mail is enchanted and gives additional bonuses to the wearer's armor class.
 
 STATISTICS:
 
 Heavy Armor
-Armor Bonus:  +9
+Armor Bonus:  +10
 Max Dex Bonus:  +0
 Armor Check Penalty:  -7
 Arcane Spell Failure:  40%
@@ -11302,19 +11356,17 @@ Arcane Spell Failure:  35%
 Special:
   Damage Reduction 15/+3
 Weight: 35 lb.~
-@12507    = ~Elven Full Plate Mail +6~
+@12507    = ~Full Plate +10~
 @12508    = ~Full plate armor is the best armor a warrior can buy, both in appearance and protection.  The perfectly fitted interlocking plates are specially angled to deflect arrows and blows, and the entire suit is carefully adorned with rich engraving and embossed detail.  With its magical enchantments, this suit of full plate is ideal for warriors.
 
 STATISTICS:
 
-No Armor Proficiency Required
-Armor Bonus: +14
-Max Dex Bonus:  None
-Armor Check Penalty:  -0
-Arcane Spell Failure:  0%
-Special:
-  Spellcasting and Thieving abilities can be performed without penalties from wearing armor.
-Weight: 9 lb.~
+Heavy Armor
+Armor Bonus: +18
+Max Dex Bonus:  +1
+Armor Check Penalty:  -6
+Arcane Spell Failure:  35%
+Weight: 15 lb.~
 @12509    = ~Ring of Protection +6~
 @12510    = ~This magical ring provides the wearer with amazing protection.
 
@@ -11880,5 +11932,101 @@ STATISTICS:
 
 Generic Armor Bonus: +3
 Weight: 2 lb.~
+@12605    = ~Ring of the Intelligent Combatant~
+@12606    = ~A ring is a small band of precious metal that is used as jewelry.  Some rare rings have had enchantments placed upon them that confer various magical abilities.  These rings are highly sought after, especially by those of the adventuring profession. For no apparent reason, this ring feels warm to the touch.
+
+STATISTICS:
+
+
+Attack Bonus: +4
+Weight: 0 lb.
+Minimum Intelligence of 15 Required~
+@12607    = ~Greater Ring of Invisibility~
+@12608    = ~A ring is a small band of precious metal that is used as jewelry.  Some rare rings have had enchantments placed upon them that confer various magical abilities.  These rings are highly sought after, especially by those of the adventuring profession. For no apparent reason, this ring feels warm to the touch.
+
+STATISTICS:
+
+
+Constant Invisibility: Wearer is under the effect of Improved Invisibility
+Weight: 0 lb.~
+@12609    = ~Heavy Crossbow of Destruction +6~
+@12610    = ~A crossbow is a bow mounted crosswise on a wooden or metal shaft, the latter called a tiller.  The bow is usually made of ash or yew.  The crossbow fires a quarrel (also called a bolt). A slight blue glow can be seen emanating from the crossbar.
+
+STATISTICS:
+
+Damage:  +14 (missile)
+Attack Bonus:  +6
+Special:
+  Destruction: Bolts fired from this crossbow have a 25% chance of casting Destruction on the target (Fortitude DC 32)
+Weight: 9 lb.
+Feat Requirement:  Simple Weapon, Crossbow
+Type:  Two-handed~
+@12611    = ~Cloak of Acid Immunity~
+@12612    = ~The Cloak of Acid Immunity is among the greatest bulwarks against corrosion. While worn, the wearer's body and equipment become unaffected by all but the most potent acids and bases.
+
+STATISTICS:
+
+Resistance:  100/- Acid Resistance
+Weight:  3 lb.~
+@12613    = ~Hide Armor of Elemental Resistance +5~
+@12614    = ~Hide armor is made from multiple layers of leather armor.  Though stiff and hard to move in, it is relatively simple to make and provides a good barrier against cold weather.  It is most commonly seen on the warriors and huntsmen of northern barbarian tribes.
+
+STATISTICS:
+
+Medium Armor
+Armor Bonus: +8
+Max Dex Bonus:  +4
+Armor Check Penalty:  -3
+Arcane Spell Failure:  20%
+Special:
+  Resistance: 15/- Fire Resistance
+  Resistance: 15/- Cold Resistance
+  Resistance: 15/- Electrical Resistance
+  Resistance: 15/- Acid Resistance
+Weight: 10 lb.~
+@12615    = ~Amulet of Willpower~
+@12616    = ~Amulets are some of the most favored items to enchant by wizards because of their ability to be worn without interfering with the delicate rituals of spell casting. This particular amulet increases the wearer's ability to shrug off harmful mental effects.
+
+STATISTICS:
+
+Will Saving Throw: +10
+Weight: 1 lb.~
+@12617    = ~Ring of the Divine~
+@12618    = ~A ring is a small band of precious metal that is used as jewelry.  Some rare rings have had enchantments placed upon them that confer various magical abilities.  These rings are highly sought after, especially by those of the adventuring profession. For no apparent reason, this ring feels warm to the touch.
+
+STATISTICS:
+
+
+Wearer's divine spells last 40% longer
+Weight: 0 lb.~
+@12619    = ~Field Plate of Force Immunity +5~
+@12620    = ~Field plate is actually a more commonly used form of full plate armor. It consists of shaped and fitted metal plates riveted and interlocked to cover the entire body. This suit is made of adamantite and has been magically enhanced for added protection and durability.
+
+STATISTICS:
+
+Heavy Armor
+Armor Bonus: +12
+Max Dex Bonus:  +1
+Armor Check Penalty:  -6
+Arcane Spell Failure:  35%
+Special:
+  Resistance: 100/- Magic Damage Resistance
+Weight: 25 lb.~
+@12621    = ~Helmet of Defense +7~
+@12622    = ~This class of decorative helmet, made of reinforced leather or metal, covers the face and head. Eye slits and breathing holes come highly recommended.
+
+STATISTICS:
+
+Generic Armor Bonus: +7
+Weight: 2 lb.~
+@12623    = ~Gauntlets of Slow Force~
+@12624    = ~These magical gauntlets make the wearer's attacks slower but much more powerful and accurate.
+
+STATISTICS:
+
+Attack Bonus: +5
+Damage:  +10 bonus
+Slow: -1 attack per round with any weapon
+Weight:  2 lb.~
 
 @12900    = ~Hrm - you are powerful allies, indeed.  More gold and gems to line your pockets, then - also, a suit of plate armor, a warhammer, a helmet, all crafted and enchanted by great duergar artisans.  They are well deserved, outsider.~
