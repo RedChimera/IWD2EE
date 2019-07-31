@@ -338,12 +338,12 @@ END
 
 IF ~~ THEN BEGIN 41
   SAY ~Oh... I see.  At least... at least he's not dead.  I will wait for him.  Return to the town.  I - I will find my way there soon.~
-  IF ~~ THEN REPLY ~~ DO ~SetGlobal("30Enneli_Nodes","GLOBAL", 2)
+  IF ~~ THEN REPLY ~Farewell.~ DO ~SetGlobal("30Enneli_Nodes","GLOBAL", 2)
 SetGlobal("Braston_Ennelia_Leave", "GLOBAL", 1)~ EXIT
 END
 
 IF ~~ THEN BEGIN 42
   SAY ~Oh... this is terrible news.  Return to the town.  I - I will find my way there soon... *sniff*~
-  IF ~~ THEN REPLY ~~ DO ~SetGlobal("30Enneli_Nodes","GLOBAL", 2)
+  IF ~~ THEN REPLY ~Farewell.~ DO ~SetGlobal("30Enneli_Nodes","GLOBAL", 2)
 SetGlobal("Braston_Ennelia_Leave", "GLOBAL", 1)~ EXIT
 END

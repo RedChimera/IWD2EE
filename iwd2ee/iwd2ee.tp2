@@ -291,9 +291,15 @@ BEGIN @43
 
 //Enemies give the same amount of experience regardless of the party's level
 
-BEGIN @44
+BEGIN @50
+SUBCOMPONENT @44
 
-      INCLUDE ~%mod_folder%/components/constant_xp.tpa~      //Enemies give the same amount of experience regardless of the party's level
+      INCLUDE ~%mod_folder%/components/constant_xp_1.tpa~      //Enemies give 25 * CR experience
+
+BEGIN @51
+SUBCOMPONENT @44
+
+      INCLUDE ~%mod_folder%/components/constant_xp_2.tpa~      //Enemies give 35 * CR experience
 
 //Adjust encounter level-scaling
 

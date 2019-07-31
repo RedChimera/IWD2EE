@@ -344,6 +344,10 @@ COPY_EXISTING ~50BOOT14.itm~ ~override~
 COPY_EXISTING ~USHFBTWH.itm~ ~override~
 	SAY IDENTIFIED_DESC @10221
 
+COPY_EXISTING ~00BRAC08.itm~ ~override~
+	SAY NAME2 @10230
+	SAY IDENTIFIED_DESC @10231
+
 COPY_EXISTING ~00BRAC11.itm~ ~override~
 	SAY IDENTIFIED_DESC @10237
 
@@ -394,6 +398,7 @@ COPY_EXISTING ~00BELTAD.itm~ ~override~
 	SAY IDENTIFIED_DESC @10283
 
 COPY_EXISTING ~00HFBTAD.itm~ ~override~
+	SAY NAME2 @10284
 	SAY IDENTIFIED_DESC @10285
 
 COPY_EXISTING ~00BELTBG.itm~ ~override~
@@ -1091,6 +1096,7 @@ COPY_EXISTING ~00SWDS86.itm~ ~override~
 	SAY IDENTIFIED_DESC @10778
 
 COPY_EXISTING ~00SWDS87.itm~ ~override~
+	SAY NAME2 @10779
 	SAY IDENTIFIED_DESC @10780
 
 COPY_EXISTING ~00SWDS92.itm~ ~override~
@@ -1100,6 +1106,7 @@ COPY_EXISTING ~00SWDS93.itm~ ~override~
 	SAY IDENTIFIED_DESC @10792
 
 COPY_EXISTING ~00SWDS94.itm~ ~override~
+	SAY NAME2 @10793
 	SAY IDENTIFIED_DESC @10794
 
 COPY_EXISTING ~00SWDS97.itm~ ~override~
@@ -1110,6 +1117,7 @@ COPY_EXISTING ~00SWDS98.itm~ ~override~
 	SAY IDENTIFIED_DESC @10802
 
 COPY_EXISTING ~00SWDS99.itm~ ~override~
+	SAY NAME2 @10803
 	SAY IDENTIFIED_DESC @10804
 
 COPY_EXISTING ~00SWDSLS.itm~ ~override~
@@ -1337,7 +1345,7 @@ COPY_EXISTING ~00SWDT90.itm~ ~override~
 COPY_EXISTING ~00SWDT93.itm~ ~override~
 	SAY IDENTIFIED_DESC @11000
 
-COPY_EXISTING ~USHFST93.itm~ ~override~
+COPY_EXISTING ~USHFST93.itm~ ~override~ ~USHFCWSK.itm~ ~override~
 	SAY NAME2 @11001
 	SAY IDENTIFIED_DESC @11002
 
@@ -1390,6 +1398,10 @@ COPY_EXISTING ~00STAF86.itm~ ~override~
 
 COPY_EXISTING ~00STAF87.itm~ ~override~
 	SAY IDENTIFIED_DESC @11054
+
+COPY_EXISTING ~00STAF88.itm~ ~override~
+	SAY NAME2 @11055
+	SAY IDENTIFIED_DESC @11056
 
 COPY_EXISTING ~00STAF89.itm~ ~override~
 	SAY NAME2 @11057
@@ -1813,6 +1825,10 @@ COPY_EXISTING ~00MSTR95.itm~ ~override~
 COPY_EXISTING ~00MSTR97.itm~ ~override~
 	SAY IDENTIFIED_DESC @11474
 
+COPY_EXISTING ~00MSTR98.itm~ ~override~
+	SAY NAME2 @11475
+	SAY IDENTIFIED_DESC @11476
+
 COPY_EXISTING ~00MSTRMG.itm~ ~override~
 	SAY NAME2 @11479
 	SAY IDENTIFIED_DESC @11480
@@ -2143,9 +2159,11 @@ COPY_EXISTING ~00HFBLFK.itm~ ~override~
 
 COPY_EXISTING ~00BOWLSF.itm~ ~override~
 	SAY NAME2 @11763
+	SAY IDENTIFIED_DESC @11764
 
 COPY_EXISTING ~00HFBLSF.itm~ ~override~
 	SAY NAME2 @11765
+	SAY IDENTIFIED_DESC @11766
 
 COPY_EXISTING ~00BOWLSR.itm~ ~override~
 	SAY NAME2 @11767
@@ -2601,6 +2619,7 @@ COPY_EXISTING ~50POTN56.itm~ ~override~
 	SAY IDENTIFIED_DESC @12126
 
 COPY ~%mod_folder%/itm/USALBEET.itm~ ~override/00POTN03.itm~
+//	LPF ALTER_EFFECT INT_VAR silent=1 check_headers=1 check_globals=1 STR_VAR match_resource= EVAL ~%SOURCE_RES%~ resource= EVAL ~%DEST_RES%~ END
   SAY NAME1 @4759
   SAY NAME2 @4759
   SAY DESC @4760
@@ -3419,17 +3438,77 @@ COPY_EXISTING ~USHELM45.itm~ ~override~
 	SAY NAME2 @12603
 	SAY IDENTIFIED_DESC @12604
 
+COPY_EXISTING ~USRING42.itm~ ~override~
+	SAY NAME2 @12605
+	SAY IDENTIFIED_DESC @12606
+
+COPY_EXISTING ~USRING57.itm~ ~override~
+	SAY NAME2 @12607
+	SAY IDENTIFIED_DESC @12608
+
+COPY_EXISTING ~USBWHX58.itm~ ~override~
+	SAY NAME2 @12609
+	SAY IDENTIFIED_DESC @12610
+
+COPY_EXISTING ~USCLCK52.itm~ ~override~
+	SAY NAME2 @12611
+	SAY IDENTIFIED_DESC @12612
+
+COPY_EXISTING ~USHIDE51.itm~ ~override~
+	SAY NAME2 @12613
+	SAY IDENTIFIED_DESC @12614
+
+COPY_EXISTING ~USAMUL48.itm~ ~override~
+	SAY NAME2 @12615
+	SAY IDENTIFIED_DESC @12616
+
+COPY_EXISTING ~USRING54.itm~ ~override~
+	SAY NAME2 @12617
+	SAY IDENTIFIED_DESC @12618
+
+COPY_EXISTING ~USPLAT54.itm~ ~override~
+	SAY NAME2 @12619
+	SAY IDENTIFIED_DESC @12620
+
+COPY_EXISTING ~USHELM55.itm~ ~override~
+	SAY NAME2 @12621
+	SAY IDENTIFIED_DESC @12622
+
+COPY_EXISTING ~USBRAC52.itm~ ~override~
+	SAY NAME2 @12623
+	SAY IDENTIFIED_DESC @12624
+
 
 //General patch changes
 
 COPY_EXISTING_REGEXP ~.*\.itm~ ~override~
-//If the item is a bullet or dart, it should apply Strength bonus
+	READ_LONG 0x18 us_item_flags
 	READ_SHORT 0x1c us_item_category
+//If the item is a bullet or dart, it should apply Strength bonus
 	PATCH_IF (us_item_category=14 OR us_item_category=24) BEGIN
 		LPF ALTER_ITEM_HEADER INT_VAR header_type=2 flag_strength=1 END
 	END
+//Arrows, bolts and bullets should have 0 range by default so the range is dependent on the launcher
+	PATCH_IF (us_item_category=5 OR us_item_category=14 OR us_item_category=31) BEGIN
+		LPF ALTER_ITEM_HEADER INT_VAR header_type=2 range=0 END
+	END
+//Making sure two-handed axes don't thrust (they're not halberds)
+	PATCH_IF (us_item_category=25 AND (us_item_flags BAND 0x2 = 0x2)) BEGIN
+		LPF ALTER_ITEM_HEADER INT_VAR header_type=1 animation_overhand=50 animation_backhand=50 animation_thrust=0 END
+	END
+//Making sure spears always thrust (sure, spears sometimes can slash, but there are already plenty of other weapons with slashing animations)
+	PATCH_IF (us_item_category=29) BEGIN
+		LPF ALTER_ITEM_HEADER INT_VAR header_type=1 animation_overhand=0 animation_backhand=0 animation_thrust=100 END
+	END
 	BUT_ONLY_IF_IT_CHANGES
 
+//Scimitars should have the scimitar animation
+COPY_EXISTING_REGEXP ~..SWDC..\.itm~ ~override~ ~..HFSC..\.itm~ ~override~
+	READ_SHORT 0x1c us_item_category
+	PATCH_IF (us_item_category=20) BEGIN
+		WRITE_ASCII 0x22 ~SC~ #2
+	END
+	BUT_ONLY_IF_IT_CHANGES
 
 //Random loot table changes
 
@@ -3481,9 +3560,13 @@ USRTHF40	USHELM45
 USHFMODA	USNOTHIN
 USHFMODB	USNOTHIN
 USHFMODC	USNOTHIN
-USHFCWMO	USNOTHIN
-USHFCWMR	USCWMAR1
-USHFCWMG	USCWMAR2
+USCWHFMO	USNOTHIN
+USCWHFMR	USCWMAR1
+USCWHFMG	USCWMAR2
+USCWHFGE	00CWGLG1
+USCWHFGG	USCWGLG2
+USCIHFXV	USCIXVIM
+USCWHFSK	00CWSKX1
 ~
 APPEND ~RT_FURY.2da~
 ~
@@ -3531,9 +3614,14 @@ USRTHF40	USHELM50
 USHFMODA	USHFMDA
 USHFMODB	USHFMDB
 USHFMODC	USHFMDC
-USHFCWMO	USCWHFMO
-USHFCWMR	USCWMAR2
-USHFCWMG	USCWMAR3
+USCWHFMO	USHFCWMO
+USCWHFMR	USCWMAR2
+USCWHFMG	USCWMAR3
+USCWHFGE	USCWGLG2
+USCWHFGG	USCWGLG3
+USCIHFXV	USHFCIXV
+USCWHFSK	USHFCWSK
+
 ~
 
 //New items and item relocations
@@ -3622,7 +3710,7 @@ COPY_EXISTING ~11deird.sto~ ~override~ //Gallaway Trading Post
 COPY_EXISTING ~11elytha.sto~ ~override~ //Elytharra store
 	REMOVE_STORE_ITEM ~11RTHF04~
 	ADD_STORE_ITEM ~11RTHF04~ BEFORE ~00AMUL14~ #1 #1 #1 ~IDENTIFIED~ #1 //Book of Leaves
-	ADD_STORE_ITEM ~11RTHF07~ AFTER ~00AMUL13~ #1 #1 #1 ~IDENTIFIED~ #1 //Dreisbach's Iron Hoop
+//	ADD_STORE_ITEM ~11RTHF07~ AFTER ~00AMUL13~ #1 #1 #1 ~IDENTIFIED~ #1 //Dreisbach's Iron Hoop
 	ADD_STORE_ITEM ~00RING87~ AFTER ~00RING75~ #1 #1 #1 ~IDENTIFIED~ #1 //Lesser Chameleon Ring
 	ADD_STORE_ITEM ~00RING21~ AFTER ~00RING87~ #1 #1 #1 ~IDENTIFIED~ #1 //Wizard's Ring
 	ADD_STORE_ITEM ~00RING86~ AFTER ~00RING21~ #1 #1 #1 ~IDENTIFIED~ #1 //Ring of Beauty
@@ -3644,6 +3732,7 @@ COPY_EXISTING ~11elytha.sto~ ~override~ //Elytharra store
 
 COPY_EXISTING ~11ragnib.sto~ ~override~ //Targos Temple of Tempus
 	ADD_STORE_ITEM ~00RING77~ AFTER ~00RING80~ #1 #1 #1 ~IDENTIFIED~ #1 //Lesser Ring of Resistances
+	ADD_STORE_ITEM ~USRING42~ AFTER ~00RING77~ #1 #1 #1 ~IDENTIFIED~ #1 //Ring of the Intelligent Combatant
 	REMOVE_STORE_ITEM ~00RING74~
 
 COPY_EXISTING ~20arte.sto~ ~override~ //Shaengarne villager store
@@ -3651,6 +3740,11 @@ COPY_EXISTING ~20arte.sto~ ~override~ //Shaengarne villager store
 	ADD_STORE_ITEM ~00RTHF12~ AFTER ~00MISC32~ #1 #1 #1 ~IDENTIFIED~ #1 //Hagnen's Foolishness
 
 COPY_EXISTING ~20dereth.sto~ ~override~ //Dereth druid store
+	ADD_STORE_ITEM ~00POTN81~ AFTER ~00POTN01~ #1 #1 #1 ~IDENTIFIED~ #4
+	ADD_STORE_ITEM ~00POTN19~ AFTER ~00POTN01~ #1 #1 #1 ~IDENTIFIED~ #4
+	ADD_STORE_ITEM ~00POTN02~ AFTER ~00POTN01~ #1 #1 #1 ~IDENTIFIED~ #1 ~UNLIMITED~
+	ADD_STORE_ITEM ~00POTN20~ AFTER ~00POTN01~ #1 #1 #1 ~IDENTIFIED~ #1 ~UNLIMITED~
+	ADD_STORE_ITEM ~00POTN70~ AFTER ~00POTN01~ #1 #1 #1 ~IDENTIFIED~ #1 ~UNLIMITED~
 	ADD_STORE_ITEM ~SPPR502Z~ AFTER ~SPWI306Z~ #1 #1 #1 ~IDENTIFIED~ #3 //Cure Critical Wounds scroll
 	ADD_STORE_ITEM ~SPPR403Z~ AFTER ~SPPR502Z~ #1 #1 #1 ~IDENTIFIED~ #1 //Freedom of Movement scroll
 	ADD_STORE_ITEM ~SPPR422Z~ AFTER ~SPPR403Z~ #1 #1 #1 ~IDENTIFIED~ #2 //Thorn Spray scroll
@@ -3660,6 +3754,7 @@ COPY_EXISTING ~20dereth.sto~ ~override~ //Dereth druid store
 
 COPY_EXISTING ~40BDAWN.sto~ ~override~ //Beodaewn the Werewolf Man store
 	ADD_STORE_ITEM ~USRTHF01~ AFTER ~00SPER99~ #1 #1 #1 ~IDENTIFIED~ #1 //Spear of Sorrows
+	ADD_STORE_ITEM ~11RTHF25~ AFTER ~USRTHF01~ #1 #1 #1 ~IDENTIFIED~ #1 //Haft Over Head
 	ADD_STORE_ITEM ~00RTHF47~ AFTER ~00BOOT02~ #1 #1 #1 ~IDENTIFIED~ #1 //Arcs of Disredain
 	REMOVE_STORE_ITEM ~00AMUL12~ ~00SPER99~
 
@@ -3673,6 +3768,7 @@ COPY_EXISTING ~41ZACK1.sto~ ~override~ ~41ZACK2.sto~ ~override~ ~41ZACK3.sto~ ~o
 
 COPY_EXISTING ~50NYM2.sto~ ~override~ //Nym store
 	ADD_STORE_ITEM ~00RTHF64~ AFTER ~00RING19~ #1 #1 #1 ~IDENTIFIED~ #1 //Delnar's Healing Sword
+	ADD_STORE_ITEM ~00DAGG93~ AFTER ~00RTHF64~ #1 #1 #1 ~IDENTIFIED~ #1 //Dagger of Speed +1
 
 COPY_EXISTING ~00BASHS3.sto~ ~override~ //Avarine Decanter genie store
 	WRITE_LONG 0x14 155 //Buying stuff from him costs less money (since he actually has some good stuff now), though his goods are still overpriced
@@ -3684,7 +3780,8 @@ COPY_EXISTING ~00BASHS3.sto~ ~override~ //Avarine Decanter genie store
 	ADD_STORE_ITEM ~USBRAC47~ AFTER ~00BOOT01~ #1 #1 #1 ~IDENTIFIED~ #1 //Bracers of Armor +5
 	ADD_STORE_ITEM ~00RTHF73~ AFTER ~00BRAC10~ #1 #1 #1 ~IDENTIFIED~ #1 //Cleaver
 	ADD_STORE_ITEM ~00RTHF58~ AFTER ~00RTHF73~ #1 #1 #1 ~IDENTIFIED~ #1 //Iron Mary crossbow
-	ADD_STORE_ITEM ~00AROW07~ AFTER ~00POTN01~ #1 #1 #1 ~IDENTIFIED~ #5 //Arrow of Dispelling
+	ADD_STORE_ITEM ~00AROW07~ AFTER ~00POTN01~ #1 #1 #1 ~IDENTIFIED~ #30 //Arrow of Dispelling
+	ADD_STORE_ITEM ~00DART05~ AFTER ~00AROW07~ #20 #1 #1 ~IDENTIFIED~ #12 //Zilzanzer's Magnificent Dart +5
 	ADD_STORE_ITEM ~USBOLT52~ AFTER ~00AROW07~ #1 #1 #1 ~IDENTIFIED~ #30 //Bolt of Lightning
 	ADD_STORE_ITEM ~USAROW52~ AFTER ~00AROW07~ #1 #1 #1 ~IDENTIFIED~ #30 //Arrows of Detonation
 	ADD_STORE_ITEM ~USRINGTH~ AFTER ~00RING18~ #1 #1 #1 ~IDENTIFIED~ #1 //Ring of Thex
@@ -3702,7 +3799,14 @@ COPY_EXISTING ~50TAHVO.sto~ ~override~ //Nym store
 COPY_EXISTING ~50LIMHA.sto~ ~override~ //Limha store
 	ADD_STORE_ITEM ~00RTHF88~ AFTER ~00AX1H82~ #1 #1 #1 ~IDENTIFIED~ #1 //Dragon's Sight
 	ADD_STORE_ITEM ~00SWDL96~ AFTER ~00SWDL03~ #1 #1 #1 ~IDENTIFIED~ #1 //Longsword +1: Bloodletting
-	ADD_STORE_ITEM ~00POTN22~ AFTER ~00SWDL96~ #1 #1 #1 ~IDENTIFIED~ #8 //Ogre Bile
+	ADD_STORE_ITEM ~00POTN07~ AFTER ~00SWDL96~ #1 #1 #1 ~IDENTIFIED~ #6 //Spirit Essence
+	ADD_STORE_ITEM ~00POTN79~ AFTER ~00SWDL96~ #1 #1 #1 ~IDENTIFIED~ #6 //Golden Bubbles
+	ADD_STORE_ITEM ~00POTN86~ AFTER ~00SWDL96~ #1 #1 #1 ~IDENTIFIED~ #6 //Fairy Oil
+	ADD_STORE_ITEM ~00POTN87~ AFTER ~00SWDL96~ #1 #1 #1 ~IDENTIFIED~ #6 //Murky Liquor
+	ADD_STORE_ITEM ~00POTN76~ AFTER ~00SWDL96~ #1 #1 #1 ~IDENTIFIED~ #6 //Burning Syrup
+	ADD_STORE_ITEM ~00POTN80~ AFTER ~00SWDL96~ #1 #1 #1 ~IDENTIFIED~ #10 //Refined Ectoplasm
+	ADD_STORE_ITEM ~00POTN83~ AFTER ~00SWDL96~ #1 #1 #1 ~IDENTIFIED~ #1 ~UNLIMITED~ //Bitter Tonic
+	ADD_STORE_ITEM ~00POTN22~ AFTER ~00SWDL96~ #1 #1 #1 ~IDENTIFIED~ #1 ~UNLIMITED~ //Ogre Bile
 	REMOVE_STORE_ITEM ~00AX1H82~ ~00SWDL03~
 
 COPY_EXISTING ~51DRAGU.sto~ ~override~ ~51DRAGU2.sto~ ~override~ //Duergar engineer stores
@@ -3717,6 +3821,7 @@ COPY_EXISTING ~53HEGGR.sto~ ~override~ //Underdark weapon/armor store
 	REMOVE_STORE_ITEM ~00STAF93~
 
 COPY_EXISTING ~53KADRES.sto~ ~override~ //Kadresh drow store
+	ADD_STORE_ITEM ~00RTHF37~ #1 #1 #1 ~IDENTIFIED~ #1 //The Lions of Arkamadis
 	ADD_STORE_ITEM ~00RTHF09~ #1 #3 #1 ~IDENTIFIED~ #1 //Spiritcaller
 	ADD_STORE_ITEM ~00RING75~ AFTER ~00RING71~ #1 #1 #1 ~IDENTIFIED~ #1 //Chameleon Ring of Dexterity
 
@@ -3728,14 +3833,28 @@ COPY_EXISTING ~53MALAVO.sto~ ~override~ //Malavon store
 
 COPY_EXISTING ~53MYRVEK.sto~ ~override~ //Underdark magic store
 	REMOVE_STORE_ITEM ~00RING23~
+	ADD_STORE_ITEM ~00POTN69~ BEFORE ~00POTN21~ #1 #1 #1 ~IDENTIFIED~ #1 ~UNLIMITED~
+	ADD_STORE_ITEM ~00POTN53~ BEFORE ~00POTN21~ #1 #1 #1 ~IDENTIFIED~ #1 ~UNLIMITED~
+	ADD_STORE_ITEM ~00POTN03~ BEFORE ~00POTN21~ #1 #1 #1 ~IDENTIFIED~ #1 ~UNLIMITED~
+	ADD_STORE_ITEM ~00POTN72~ BEFORE ~00POTN21~ #1 #1 #1 ~IDENTIFIED~ #1 ~UNLIMITED~
 	ADD_STORE_ITEM ~00RING23~ AFTER ~00POTN21~ #1 #1 #1 ~IDENTIFIED~ #1 //Ring of Energy
 	ADD_STORE_ITEM ~00BRAC04~ AFTER ~00BRAC03~ #1 #1 #1 ~IDENTIFIED~ #1 //Bracers of Armor +4
 	ADD_STORE_ITEM ~USAMUL50~ AFTER ~00AMUL13~ #1 #1 #1 ~IDENTIFIED~ #1 //Amulet of Antimagic
+	ADD_STORE_ITEM ~00POTN90~ AFTER ~00POTN21~ #1 #1 #1 ~IDENTIFIED~ #1
+	ADD_STORE_ITEM ~00POTN78~ AFTER ~00POTN21~ #1 #1 #1 ~IDENTIFIED~ #4
+	ADD_STORE_ITEM ~00POTN76~ AFTER ~00POTN21~ #1 #1 #1 ~IDENTIFIED~ #4
+	ADD_STORE_ITEM ~00POTN77~ AFTER ~00POTN21~ #1 #1 #1 ~IDENTIFIED~ #6
 
 COPY_EXISTING ~53WODE.sto~ ~override~ //Underdark ranged ammunition store
-	ADD_STORE_ITEM ~USAROW47~ AFTER ~00AROW99~ #20 #1 #1 ~IDENTIFIED~ #1 //Arrows of Acid +4
+	ADD_STORE_ITEM ~00RTHF06~ #1 #1 #1 ~IDENTIFIED~ #1 //Delnar's Dart of Dispelling
+	ADD_STORE_ITEM ~USAROW47~ AFTER ~00AROW99~ #20 #1 #1 ~IDENTIFIED~ #4 //Arrows of Acid +4
 	ADD_STORE_ITEM ~USAROW52~ AFTER ~USAROW47~ #1 #1 #1 ~IDENTIFIED~ #4 //Arrows of Detonation
-	ADD_STORE_ITEM ~USBULL48~ AFTER ~00BULL99~ #20 #1 #1 ~IDENTIFIED~ #1 //Greater Vampiric Bullet +3
+	ADD_STORE_ITEM ~USBULL48~ AFTER ~00BULL99~ #20 #1 #1 ~IDENTIFIED~ #4 //Greater Vampiric Bullet +3
+
+COPY_EXISTING ~60CHEAP.sto~ ~override~ //Bonus store
+	ADD_STORE_ITEM ~00RTHF68~ AFTER ~00RTKT15~ #1 #1 #1 ~IDENTIFIED~ #1 //Delnar's Delight
+	ADD_STORE_ITEM ~00ROBE06~ AFTER ~00RTKT15~ #1 #1 #1 ~IDENTIFIED~ #1 //Robe of the Neutral Archmagi
+	ADD_STORE_ITEM ~00RTHF77~ AFTER ~00RTKT15~ #1 #1 #1 ~IDENTIFIED~ #1 //The Unstrung Harp
 
 COPY_EXISTING ~60NATHAN.sto~ ~override~ //Kuldahar Nathaniel store
 	REMOVE_STORE_ITEM ~00AMUL12~
@@ -3746,25 +3865,46 @@ COPY_EXISTING ~60NATHAN.sto~ ~override~ //Kuldahar Nathaniel store
 	REMOVE_STORE_ITEM ~00RING21~
 
 COPY_EXISTING ~60SHEEMI.sto~ ~override~ //Conlan store
+	ADD_STORE_ITEM ~USRTHF38~ #1 #1 #1 ~IDENTIFIED~ #1 //Black Swan Armor
+	ADD_STORE_ITEM ~00DART05~ AFTER ~00DART91~ #20 #1 #1 ~IDENTIFIED~ #2 //Zilzanzer's Magnificent Dart +5
 	ADD_STORE_ITEM ~00RTKT02~ AFTER ~00RTHF58~ #1 #1 #1 ~IDENTIFIED~ #1 //Iron Arbalest
 	ADD_STORE_ITEM ~USCHAN40~ AFTER ~00CHAN03~ #1 #1 #1 ~IDENTIFIED~ #1 //Chainmail +3
 	ADD_STORE_ITEM ~USCHAN41~ AFTER ~USCHAN40~ #1 #1 #1 ~IDENTIFIED~ #1 //Splint Mail +3
 	ADD_STORE_ITEM ~00SHLD89~ AFTER ~00SHLD98~ #1 #1 #1 ~IDENTIFIED~ #1 //Large Shield of Electrical Resistance +3
 	ADD_STORE_ITEM ~00AX1H86~ AFTER ~00AX1H92~ #1 #1 #1 ~IDENTIFIED~ #1 //Mass-Slasher +5
-	ADD_STORE_ITEM ~00AX2H99~ AFTER ~00AX2H89~ #1 #1 #1 ~IDENTIFIED~ #1 //Greataxe of Vampiric Burst +4
+//	ADD_STORE_ITEM ~00AX2H99~ AFTER ~00AX2H89~ #1 #1 #1 ~IDENTIFIED~ #1 //Greataxe of Vampiric Burst +4
 	ADD_STORE_ITEM ~00CLUB92~ AFTER ~00CLUB98~ #1 #1 #1 ~IDENTIFIED~ #1 //Club of Intoxication +4
 	ADD_STORE_ITEM ~00MACE95~ AFTER ~00MACE97~ #1 #1 #1 ~IDENTIFIED~ #1 //Fiery Mace of Disruption +3
 	ADD_STORE_ITEM ~00RTHF83~ AFTER ~00HAMM86~ #1 #1 #1 ~IDENTIFIED~ #1 //Protean Hammer
 	ADD_STORE_ITEM ~00RTHF28~ AFTER ~00FLAL92~ #1 #1 #1 ~IDENTIFIED~ #1 //Shackles of Roa flail
 	ADD_STORE_ITEM ~00STAF91~ AFTER ~00STAF97~ #1 #1 #1 ~IDENTIFIED~ #1 //Staff of Health +3
 	ADD_STORE_ITEM ~00RTHF69~ AFTER ~00SPER97~ #1 #1 #1 ~IDENTIFIED~ #1 //Impaler
+//	ADD_STORE_ITEM ~00HALB95~ AFTER ~00HALB94~ #1 #1 #1 ~IDENTIFIED~ #1 //Infernal Halberd of the Defender
 	ADD_STORE_ITEM ~00SWDT98~ AFTER ~00RTHF73~ #1 #1 #1 ~IDENTIFIED~ #1 //Greatsword of Flame +3
-	ADD_STORE_ITEM ~00SWDL95~ AFTER ~00SWDL87~ #1 #1 #1 ~IDENTIFIED~ #1 //Longsword of Speed +2
+	ADD_STORE_ITEM ~00SWDL95~ AFTER ~00SWDL87~ #1 #1 #1 ~IDENTIFIED~ #1 //Longsword +3: Enforcer
 	ADD_STORE_ITEM ~00RTHF65~ AFTER ~00SWDB87~ #1 #1 #1 ~IDENTIFIED~ #1 //Rage of Chaos
 	ADD_STORE_ITEM ~00SWDC90~ AFTER ~00SWDC96~ #1 #1 #1 ~IDENTIFIED~ #1 //Scimitar: Blood Trails
-	REMOVE_STORE_ITEM ~00RTHF26~ ~00RTHF54~ ~00RTHF58~ ~00RTHF73~ ~00HALB96~ ~00CLCK03~ ~00ROBE04~ ~00ROBE99~ ~00RING15~ ~00RING22~
+	REMOVE_STORE_ITEM ~00RTHF26~ ~00RTHF54~ ~00RTHF58~ ~00RTHF73~ ~00HALB94~ ~00HALB96~ ~00CLCK03~ ~00ROBE04~ ~00ROBE99~ ~00RING15~ ~00RING22~
+
+COPY_EXISTING ~61ARCHON.sto~ ~override~ //Dragon's Eye lava ferry store
+	WRITE_LONG 0x14 130
+	WRITE_LONG 0x18 50
+	WRITE_LONG 0x1C 20
+	ADD_STORE_ITEM ~00DART97~ #20 #1 #1 ~IDENTIFIED~ #4
+	ADD_STORE_ITEM ~00DART85~ #20 #1 #1 ~IDENTIFIED~ #1 ~UNLIMITED~
+	ADD_STORE_ITEM ~00BULL95~ #20 #1 #1 ~IDENTIFIED~ #1 ~UNLIMITED~
+	ADD_STORE_ITEM ~00BOLT95~ #20 #1 #1 ~IDENTIFIED~ #1 ~UNLIMITED~
+	ADD_STORE_ITEM ~USAROW52~ #1 #1 #1 ~IDENTIFIED~ #8
+	ADD_STORE_ITEM ~00AROW08~ #20 #1 #1 ~IDENTIFIED~ #1 ~UNLIMITED~
+	ADD_STORE_ITEM ~00WAND04~  #50 #50 #1 ~IDENTIFIED~ #1 //Wand of Fire
+	ADD_STORE_ITEM ~00POTN70~ #1 #1 #1 ~IDENTIFIED~ #1 ~UNLIMITED~
+	ADD_STORE_ITEM ~00RTHF67~ #1 #1 #1 ~IDENTIFIED~ #1
+//	ADD_STORE_ITEM ~00CLUB95~ #1 #1 #1 ~IDENTIFIED~ #1
 
 COPY_EXISTING ~61RAKSHA.sto~ ~override~ //Rakshasa Nathaniel store
+	WRITE_LONG 0x14 150
+	WRITE_LONG 0x18 40
+	WRITE_LONG 0x1C 20
 	ADD_STORE_ITEM ~USRTHF36~ #1 #1 #1 ~IDENTIFIED~ #1 //The Spear of White Ash
 	ADD_STORE_ITEM ~62RTHF01~ #1 #1 #1 ~IDENTIFIED~ #1 //Dirty Bits armor
 	ADD_STORE_ITEM ~00BWHX04~ BEFORE ~00BOLT98~ #1 #1 #1 ~IDENTIFIED~ #1 //Heavy Crossbow of Missile Weakness +2
@@ -3778,17 +3918,38 @@ COPY_EXISTING ~63ERADRU.sto~ ~override~ //Xvim priest temple
 
 COPY_EXISTING ~63RIKI.sto~ ~override~ //Severed Hand thief store
 	ADD_STORE_ITEM ~00RING81~ BEFORE ~00BOOT02~ #1 #1 #1 ~IDENTIFIED~ #1 //Tymora's Loop
-	ADD_STORE_ITEM ~00AROW07~ AFTER ~00AROW94~ #1 #1 #1 ~IDENTIFIED~ #1 //Arrow of Dispelling
+	ADD_STORE_ITEM ~00AROW07~ AFTER ~00AROW94~ #1 #1 #1 ~IDENTIFIED~ #9 //Arrow of Dispelling
 	ADD_STORE_ITEM ~USAROW52~ AFTER ~00AROW94~ #1 #1 #1 ~IDENTIFIED~ #9 //Arrows of Detonation
 	ADD_STORE_ITEM ~USBOLT52~ AFTER ~00BOLT99~ #1 #1 #1 ~IDENTIFIED~ #9 //Bolts of Lightning
-	ADD_STORE_ITEM ~USCLCK51~ AFTER ~00CLCK03~ #1 #1 #1 ~IDENTIFIED~ #9 //Improved Cloak of Displacement
+	ADD_STORE_ITEM ~USCLCK51~ AFTER ~00CLCK03~ #1 #1 #1 ~IDENTIFIED~ #1 //Improved Cloak of Displacement
 	REMOVE_STORE_ITEM ~00CLCK03~
 
+COPY_EXISTING ~ar2002.are~ ~override~ //Shaengarne Vrek cave
+	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR charges1=1 charges2=1 charges3=1 single_match=1 STR_VAR old_item=~11RTHF25~ new_item=~USRT02_V~ END
+	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR charges1=4 charges2=1 charges3=1 container=1 single_match=1 STR_VAR old_item=~RT02_L~ new_item=~00POTN88~ END
+
+COPY_EXISTING ~ar2101.are~ ~override~ //Shaengarne, the Malarite dam
+	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR charges1=2 charges2=1 charges3=1 container=1 single_match=1 STR_VAR old_item=~00MISC31~ new_item=~00POTN21~ END
+
 COPY_EXISTING ~ar3000.are~ ~override~ //Horde Fortress outside
-	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR charges1=2 single_match=1 STR_VAR old_item=~SPPR115Z~ new_item=~00POTN22~ END
+	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR charges1=4 single_match=1 STR_VAR old_item=~SPPR115Z~ new_item=~00POTN22~ END
+	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR charges1=3 single_match=1 STR_VAR old_item=~SPPR103Z~ new_item=~00POTN82~ END
+	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR charges1=2 container=5 single_match=1 STR_VAR old_item=~00RG04~ new_item=~00POTN26~ END
+
+COPY_EXISTING ~ar3001.are~ ~override~ //Goblin Warrens floor 1
+	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR charges1=3 charges2=1 charges3=1 container=9 single_match=1 STR_VAR old_item=~00MISC31~ new_item=~00POTN73~ END
+
+COPY_EXISTING ~ar3002.are~ ~override~ //Goblin Warrens floor 2
+	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR charges1=1 charges2=1 charges3=1 single_match=1 STR_VAR old_item=~00RTHF13~ new_item=~USRT03_V~ END
 
 COPY_EXISTING ~ar3101.are~ ~override~ //Guthma's cabin
 	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR charges1=1  charges2=1  charges3=1 single_match=1 STR_VAR old_item=~RT03_R~ new_item=~00RTHF59~ END
+
+COPY_EXISTING ~ar4102.are~ ~override~ //Ice Temple level 2
+	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR charges1=5  charges2=0  charges3=0 single_match=1 STR_VAR old_item=~00MISC02~ new_item=~00POTN24~ END
+
+COPY_EXISTING ~ar5002.are~ ~override~ //Limha's home
+	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR charges1=1  charges2=0  charges3=0 single_match=1 STR_VAR old_item=~00POTN11~ new_item=~00POTN78~ END
 
 COPY_EXISTING ~ar5030.are~ ~override~ //Fell Wood, Will o' Wisp lair
 	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR charges2=1 charges3=1 single_match=1 STR_VAR old_item=~RT08_R~ new_item=~USRTHF37~ END
@@ -3796,6 +3957,10 @@ COPY_EXISTING ~ar5030.are~ ~override~ //Fell Wood, Will o' Wisp lair
 COPY_EXISTING ~ar5203.are~ ~override~ //Black Raven Tomb
 	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR single_match=1 STR_VAR old_item=~00RTHF28~ new_item=~00RTKT19~ END
 	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR single_match=1 STR_VAR old_item=~00BRAC04~ new_item=~00BOOT01~ END
+
+COPY_EXISTING ~ar5301.are~ ~override~ //Underdark, drider lair
+	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR charges1=3 single_match=1 STR_VAR old_item=~00WAND29~ new_item=~00POTN68~ END
+	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR charges1=1 single_match=1 STR_VAR old_item=~00WAND45~ new_item=~00POTN91~ END
 
 COPY_EXISTING ~ar6051.are~ ~override~ //Yuan-ti lair
 	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR single_match=1 STR_VAR old_item=~50RTHF04~ new_item=~00RTHF61~ END
@@ -3807,13 +3972,21 @@ COPY_EXISTING ~ar6101.are~ ~override~ //Dragon's Eye first floor
 	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR charges1=4277 single_match=1 STR_VAR old_item=~00BRAC03~ new_item=~MISC07~ END
 	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR charges1=652 single_match=1 STR_VAR old_item=~00HAMM04~ new_item=~MISC07~ END
 	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR charges1=1 single_match=1 STR_VAR old_item=~00SWDS85~ new_item=~00POTN80~ END
+	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR charges1=40 charges2=0 single_match=1 STR_VAR old_item=~00DAGG84~ new_item=~00DART05~ END
+	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR charges1=2 single_match=1 STR_VAR old_item=~00SLNG94~ new_item=~00POTN24~ END
 	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR charges1=1  charges2=1  charges3=1 single_match=1 STR_VAR old_item=~00SWDB91~ new_item=~RT13_R~ END
 
 COPY_EXISTING ~ar6102.are~ ~override~ //Dragon's Eye second floor
-	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR charges1=1  charges2=1  charges3=1 single_match=1 STR_VAR old_item=~00RTHF59~ new_item=~00SLNG97~ END
+	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR charges1=5  charges2=1  charges3=1 single_match=1 STR_VAR old_item=~00RTHF59~ new_item=~00POTN71~ END
 
 COPY_EXISTING ~ar6103.are~ ~override~ //Dragon's Eye third floor
 	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR charges1=1  charges2=1  charges3=1 single_match=1 STR_VAR old_item=~00RING18~ new_item=~USRT17_V~ END
+
+COPY_EXISTING ~ar6200.are~ ~override~ //Fields of Slaughter
+	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR charges1=1 single_match=1 STR_VAR old_item=~00RTHF68~ new_item=~00MISC07~ END
+
+COPY_EXISTING ~ar6201.are~ ~override~ //Saablic Tan area
+	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR charges1=4  charges2=1  charges3=1 single_match=1 STR_VAR old_item=~00RTHF67~ new_item=~00POTN71~ END
 
 COPY_EXISTING ~ar6300.are~ ~override~ //Severed Hand entrance
 	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR charges1=50 single_match=1 STR_VAR old_item=~00RTHF69~ new_item=~00WAND34~ END
@@ -3821,22 +3994,86 @@ COPY_EXISTING ~ar6300.are~ ~override~ //Severed Hand entrance
 COPY_EXISTING ~ar6301.are~ ~override~ //Severed Hand first floor
 	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR charges1=1 single_match=1 STR_VAR old_item=~00RTHF09~ new_item=~00POTN95~ END
 	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR charges1=2389 single_match=1 STR_VAR old_item=~00RTHF64~ new_item=~MISC07~ END
-	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR charges1=1 single_match=1 STR_VAR old_item=~00RTHF65~ new_item=~USALBEHO~ END
+	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR charges1=1 single_match=1 STR_VAR old_item=~00RTHF65~ new_item=~USNOITEM~ END
+
+COPY_EXISTING ~ar6302.are~ ~override~ //Severed Hand second floor
+	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR container=12 single_match=1 STR_VAR old_item=~00RTHF39~ new_item=~USNOITEM~ END
+	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR container=6 charges1=3 single_match=1 STR_VAR old_item=~00ROBE99~ new_item=~USALBEHO~ END
+	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR container=3 single_match=1 STR_VAR old_item=~SPWI903Z~ new_item=~USNOITEM~ END
 
 COPY_EXISTING ~ar6304.are~ ~override~ //Severed Hand fourth floor
 	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR charges1=1 single_match=1 STR_VAR old_item=~00RTHF40~ new_item=~00POTN68~ END
+	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR container=7 charges1=3 single_match=1 STR_VAR old_item=~RT15_L~ new_item=~00POTN88~ END
+	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR container=7 charges1=5 single_match=1 STR_VAR old_item=~RT15_R~ new_item=~00POTN73~ END
+	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR container=2 charges1=1 charges2=1 charges3=1 single_match=1 STR_VAR old_item=~SPWI806Z~ new_item=~USRT15_V~ END
+	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR container=5 single_match=1 STR_VAR old_item=~SPWI902Z~ new_item=~USNOITEM~ END
+	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR container=5 single_match=1 STR_VAR old_item=~SPWI910Z~ new_item=~USNOITEM~ END
+
+COPY_EXISTING ~ar6401.are~ ~override~ //Severed Hand Mage Tower floor 2
+	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR charges1=2 single_match=1 STR_VAR old_item=~00RTHF10~ new_item=~00POTN06~ END
+
+COPY_EXISTING ~ar6402.are~ ~override~ //Severed Hand Mage Tower floor 3
+	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR charges1=1 charges2=1 single_match=1 STR_VAR old_item=~00RTHF77~ new_item=~SPWI902Z~ END
+
+COPY_EXISTING ~ar6503.are~ ~override~ //Severed Hand Cleric Tower floor 4
+	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR container=1 charges1=40 single_match=1 STR_VAR old_item=~RAMO_06~ new_item=~USBULL48~ END
+	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR container=2 charges1=20 single_match=1 STR_VAR old_item=~RAMO_06~ new_item=~USBULL48~ END
+	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR container=1 charges1=1 charges2=1 charges3=1 single_match=1 STR_VAR old_item=~RT15_R~ new_item=~USRT18_V~ END
+	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR container=3 charges1=1 single_match=1 STR_VAR old_item=~00POTN03~ new_item=~00POTN88~ END
+	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR container=3 charges1=4 single_match=1 STR_VAR old_item=~00POTN05~ new_item=~00POTN78~ END
+	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR container=3 charges1=1 single_match=1 STR_VAR old_item=~RAMO_06~ new_item=~USALBEHO~ END
+	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR container=4 charges1=2 single_match=1 STR_VAR old_item=~RAMO_06~ new_item=~00POTN78~ END
+
+COPY_EXISTING ~ar6600.are~ ~override~ //Severed Hand Officer Tower floor 1
+	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR container=1 charges1=10 single_match=1 STR_VAR old_item=~RT15_L~ new_item=~USBOLT52~ END
+
+COPY_EXISTING ~ar6601.are~ ~override~ //Severed Hand Officer Tower floor 2
+	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR container=1 single_match=1 STR_VAR old_item=~RAMO_06~ new_item=~USNOITEM~ END
+	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR container=2 charges1=1 single_match=1 STR_VAR old_item=~00DART95~ new_item=~00LEAT04~ END
+	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR container=2 single_match=1 STR_VAR old_item=~00DART96~ new_item=~USNOITEM~ END
+	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR container=2 single_match=1 STR_VAR old_item=~RAMO_06~ new_item=~USNOITEM~ END
+
+COPY_EXISTING ~ar6602.are~ ~override~ //Severed Hand Officer Tower floor 3
+	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR container=3 charges1=1 single_match=1 STR_VAR old_item=~RT15_M~ new_item=~00POTN78~ END
+	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR container=3 charges1=1 single_match=1 STR_VAR old_item=~RAMO_05~ new_item=~00POTN76~ END
+	LPF REPLACE_AREA_ITEM_IWD2 STR_VAR old_item=~RAMO_06~ new_item=~USNOITEM~ END
+
+COPY_EXISTING ~ar6603.are~ ~override~ //Severed Hand Officer Tower floor 4
+	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR container=1 single_match=1 STR_VAR old_item=~RARM_07~ new_item=~USNOITEM~ END
+	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR container=1 charges1=3 single_match=1 STR_VAR old_item=~RMIW_08~ new_item=~00POTN87~ END
+	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR container=1 charges1=40 single_match=1 STR_VAR old_item=~00AROW10~ new_item=~USAROW47~ END
+	LPF REPLACE_AREA_ITEM_IWD2 STR_VAR old_item=~RAMO_06~ new_item=~USNOITEM~ END
+
+COPY_EXISTING ~ar6700.are~ ~override~ //Severed Hand War Tower floor 1
+	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR container=1 charges1=4 single_match=1 STR_VAR old_item=~00MISC02~ new_item=~00POTN33~ END
+	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR container=1 charges1=40 charges2=40 charges3=40 single_match=1 STR_VAR old_item=~00BOOK49~ new_item=~RAMO_06~ END
+
+COPY_EXISTING ~ar6701.are~ ~override~ //Severed Hand War Tower floor 2
+	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR charges1=2 single_match=1 STR_VAR old_item=~RT15_M~ new_item=~00POTN25~ END
+	LPF REPLACE_AREA_ITEM_IWD2 STR_VAR old_item=~RT15_R~ new_item=~USNOITEM~ END
+	LPF REPLACE_AREA_ITEM_IWD2 STR_VAR old_item=~RAMO_06~ new_item=~USNOITEM~ END
+
+COPY_EXISTING ~ar6702.are~ ~override~ //Severed Hand War Tower floor 2
+	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR container=5 charges1=6 charges2=6 charges3=6 single_match=1 STR_VAR old_item=~00DART98~ new_item=~USAROW52~ END
+	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR container=5 single_match=1 STR_VAR old_item=~00BOLT05~ new_item=~00BOLT93~ END
 
 
 COPY_EXISTING ~11jemel.cre~ ~override~ //Gallaway Trading Post worker
 	LPF IWD2_ADD_CRE_ITEM INT_VAR cq1=0  cq2=0  cq3=0 STR_VAR item=~~ slot=~qitem1~ END
 //	LPF IWD2_REMOVE_CRE_ITEM STR_VAR item=~11RTHF02~ END
 
+COPY_EXISTING ~11phaen.cre~ ~override~ //Phaen of the Rags
+	LPF IWD2_ADD_CRE_ITEM INT_VAR cq1=1 STR_VAR item=~11RTHF21~ slot=~weapon1~ mode=~replace~ END
+
 COPY_EXISTING ~60hiephe.cre~ ~override~ ~60hiephh.cre~ ~override~ //Hiepherus
 	LPF IWD2_ADD_CRE_ITEM INT_VAR cq1=1  cq2=1  cq3=1 STR_VAR item=~00RTHF46~ slot=~cloak~ END
 
+COPY_EXISTING ~62kratu.cre~ ~override~ //Orc Shaman leader in Fields of Slaughter
+	LPF IWD2_ADD_CRE_ITEM INT_VAR cq1=1  cq2=1  cq3=1 STR_VAR item=~00STAF88~ slot=~weapon1~ mode=~replace~ END
+/*
 COPY_EXISTING ~62mdarf.cre~ ~override~ //Lich in Fields of Slaughter
 	LPF IWD2_ADD_CRE_ITEM INT_VAR cq1=1  cq2=1  cq3=1 STR_VAR item=~USRT18_V~ slot=~inv6~ END
-
+*/
 COPY_EXISTING ~62saabl1.cre~ ~override~ ~62saabl2.cre~ ~override~ //Saablic Tan
 	LPF IWD2_ADD_CRE_ITEM INT_VAR cq1=0  cq2=0  cq3=0 STR_VAR item=~~ slot=~cloak~ END
 //	LPF IWD2_REMOVE_CRE_ITEM STR_VAR item=~00RTHF46~ END
@@ -3844,8 +4081,20 @@ COPY_EXISTING ~62saabl1.cre~ ~override~ ~62saabl2.cre~ ~override~ //Saablic Tan
 COPY_EXISTING ~63grdcom.cre~ ~override~ //Guard Commander at Severed Hand Entrance
 	LPF IWD2_ADD_CRE_ITEM INT_VAR cq1=1  cq2=1  cq3=1 STR_VAR item=~00RTHF40~ slot=~helmet~ END
 
+COPY_EXISTING ~63thaymf.cre~ ~override~ ~63thaymm.cre~ ~override~ //Red Wizards
+	LPF IWD2_ADD_CRE_ITEM INT_VAR cq1=1  cq2=1  cq3=1 STR_VAR item=~00STAF01~ slot=~weapon1~ mode=~replace~ END
+
+COPY_EXISTING ~63vese.cre~ ~override~ //Guard Commander at Severed Hand Entrance
+	LPF IWD2_ADD_CRE_ITEM INT_VAR cq1=1  cq2=1  cq3=1 STR_VAR item=~00RTHF39~ slot=~armor~ mode=~replace~ END
+
 COPY_EXISTING ~65iytxm.cre~ ~override~ //Iyachtu Xvim
 	LPF IWD2_ADD_CRE_ITEM INT_VAR cq1=1  cq2=1  cq3=1 STR_VAR item=~USRT19_V~ slot=~inv7~ END
+
+COPY_EXISTING ~65worsh4.cre~ ~override~
+	LPF IWD2_REMOVE_CRE_ITEM STR_VAR item=~00RTHF37~ END
+
+COPY_EXISTING ~66stub.cre~ ~override~ ~66stubh.cre~ ~override~ ~66bisbe.cre~ ~override~
+	LPF IWD2_REMOVE_CRE_ITEM STR_VAR item=~00RTHF06~ END
 
 COPY_EXISTING ~67trmal.cre~ ~override~ //Elite on Severed Hand rooftop
 	LPF IWD2_ADD_CRE_ITEM INT_VAR cq1=0  cq2=0  cq3=0 STR_VAR item=~~ slot=~armor~ END
@@ -3853,11 +4102,18 @@ COPY_EXISTING ~67trmal.cre~ ~override~ //Elite on Severed Hand rooftop
 
 COPY_EXISTING_REGEXP ~.*\.cre~ ~override~ //Greatsword of the Soulless now includes HoF version
 	REPLACE_TEXTUALLY CASE_SENSITIVE ~00SWDT93~ ~USRTHF02~
+	REPLACE_TEXTUALLY CASE_SENSITIVE ~00CWSKX1~ ~USCWHFSK~
 	BUT_ONLY_IF_IT_CHANGES
 
 
 COPY_EXISTING ~20newder.dlg~ ~override~ //Dereth Springsong dialogue
 	REPLACE_TEXTUALLY CASE_INSENSITIVE ~GiveItemCreate(\"00SWDC99\",Protagonist, 1, 0, 0)~ ~GiveItemCreate("00RTHF26",Protagonist, 1, 1, 0)~
+
+COPY_EXISTING ~30enneli.dlg~ ~override~ //Ennelia dialogue
+	DECOMPILE_DLG_TO_D
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~GiveItemCreate(\"RMIW_02\",Protagonist, ?1, ?1, ?0)~ ~GiveItemCreate("00RTHF13",Protagonist,1,1,0)~
+	COMPILE_D_TO_DLG
+	LPF CONVERT_DLG_TO_IWD2_FORMAT END
 
 COPY_EXISTING ~50nym.dlg~ ~override~ //Nym dialogue
 	DECOMPILE_DLG_TO_D

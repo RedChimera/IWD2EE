@@ -67,6 +67,9 @@ ACTION_IF NOT FILE_EXISTS_IN_GAME ~ushfmoda.itm~ BEGIN
 			END
 		END
 		BUT_ONLY_IF_IT_CHANGES
+
+	COPY_EXISTING ~charbase.cre~ ~override~
+		LPF	IWD2_REMOVE_CRE_ITEM STR_VAR item=~USHFMODA~ END
 END
 
 COPY_EXISTING ~ushfmda.itm~ ~override~ ~ushfmdb.itm~ ~override~ ~ushfmdc.itm~ ~override~
