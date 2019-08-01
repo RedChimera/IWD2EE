@@ -552,7 +552,7 @@ END
 			PATCH_WARN	~Invalid Class (%class%) - "bard","BRD","cleric","CLR","druid","DRD","paladin","PAL","ranger","RGR","sorcerer","SOR","wizard","WIZ","domain","DMN"~
 		END	ELSE	BEGIN
 			PATCH_MATCH	index	WITH
-				ANY index > IDX_LISTSPLL	BEGIN	
+				ANY index > IDX_LISTSPLL	BEGIN
 					PATCH_WARN	~Invalid Spell - index not listed in LISTSPLL.2da~
 					SET	index = ~-1~
 				END	~-1~	BEGIN
@@ -1071,7 +1071,7 @@ END
 					PATCH_IF	! ~%item%~ STRING_CONTAINS_REGEXP ~%w%%resref%%w%~	BEGIN
 						DELETE_BYTES	(itm_off + i * 0x14)	0x14
 						FOR (j = 0; j < 50;	++j)	BEGIN
-							READ_SHORT	(slt_off + j * 0x2)	slot
+							READ_SSHORT	(slt_off + j * 0x2)	slot
 							PATCH_IF	slot > i	BEGIN
 								WRITE_SHORT	(slt_off + j * 0x2) (THIS - 1)
 							END

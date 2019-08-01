@@ -3559,7 +3559,7 @@ USRTHF40	USHELM45
 
 USHFMODA	USNOTHIN
 USHFMODB	USNOTHIN
-USHFMODC	USNOTHIN
+USHFMODP	USNOTHIN
 USCWHFMO	USNOTHIN
 USCWHFMR	USCWMAR1
 USCWHFMG	USCWMAR2
@@ -3613,7 +3613,7 @@ USRTHF40	USHELM50
 
 USHFMODA	USHFMDA
 USHFMODB	USHFMDB
-USHFMODC	USHFMDC
+USHFMODP	USHFMDP
 USCWHFMO	USHFCWMO
 USCWHFMR	USCWMAR2
 USCWHFMG	USCWMAR3
@@ -3732,7 +3732,7 @@ COPY_EXISTING ~11elytha.sto~ ~override~ //Elytharra store
 
 COPY_EXISTING ~11ragnib.sto~ ~override~ //Targos Temple of Tempus
 	ADD_STORE_ITEM ~00RING77~ AFTER ~00RING80~ #1 #1 #1 ~IDENTIFIED~ #1 //Lesser Ring of Resistances
-	ADD_STORE_ITEM ~USRING42~ AFTER ~00RING77~ #1 #1 #1 ~IDENTIFIED~ #1 //Ring of the Intelligent Combatant
+//	ADD_STORE_ITEM ~USRING42~ AFTER ~00RING77~ #1 #1 #1 ~IDENTIFIED~ #1 //Ring of the Intelligent Combatant
 	REMOVE_STORE_ITEM ~00RING74~
 
 COPY_EXISTING ~20arte.sto~ ~override~ //Shaengarne villager store
@@ -3944,9 +3944,23 @@ COPY_EXISTING ~ar3002.are~ ~override~ //Goblin Warrens floor 2
 
 COPY_EXISTING ~ar3101.are~ ~override~ //Guthma's cabin
 	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR charges1=1  charges2=1  charges3=1 single_match=1 STR_VAR old_item=~RT03_R~ new_item=~00RTHF59~ END
+	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR container=20 charges1=1  charges2=1  charges3=1 single_match=1 STR_VAR old_item=~SPWI310Z~ new_item=~USRT04_V~ END
+
+COPY_EXISTING ~ar4000.are~ ~override~ //Western Pass
+	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR container=6 charges1=1  charges2=1  charges3=1 single_match=1 STR_VAR old_item=~00BOLT04~ new_item=~USRT04_V~ END
+
+COPY_EXISTING ~ar4101.are~ ~override~ //Ice Temple level 1
+	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR container=19 charges1=1  charges2=1  charges3=1 single_match=1 STR_VAR old_item=~RT01_L~ new_item=~RT05_R~ END
+	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR container=22 charges1=1  charges2=1  charges3=1 single_match=1 STR_VAR old_item=~RT01_L~ new_item=~RT05_R~ END
+	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR container=26 charges1=1  charges2=1  charges3=1 single_match=1 STR_VAR old_item=~RT01_L~ new_item=~RT05_R~ END
 
 COPY_EXISTING ~ar4102.are~ ~override~ //Ice Temple level 2
 	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR charges1=5  charges2=0  charges3=0 single_match=1 STR_VAR old_item=~00MISC02~ new_item=~00POTN24~ END
+	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR container=12 charges1=1  charges2=1  charges3=1 single_match=1 STR_VAR old_item=~00BOLT01~ new_item=~RT08_R~ END
+	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR container=14 charges1=1  charges2=1  charges3=1 single_match=1 STR_VAR old_item=~RT07_M~ new_item=~RT07_R~ END
+	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR container=17 charges1=1  charges2=1  charges3=1 single_match=1 STR_VAR old_item=~00AROW02~ new_item=~RT08_R~ END
+	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR container=20 charges1=1  charges2=1  charges3=1 single_match=1 STR_VAR old_item=~RAMO_02~ new_item=~USRT05_V~ END
+
 
 COPY_EXISTING ~ar5002.are~ ~override~ //Limha's home
 	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR charges1=1  charges2=0  charges3=0 single_match=1 STR_VAR old_item=~00POTN11~ new_item=~00POTN78~ END
@@ -3954,27 +3968,42 @@ COPY_EXISTING ~ar5002.are~ ~override~ //Limha's home
 COPY_EXISTING ~ar5030.are~ ~override~ //Fell Wood, Will o' Wisp lair
 	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR charges2=1 charges3=1 single_match=1 STR_VAR old_item=~RT08_R~ new_item=~USRTHF37~ END
 
+COPY_EXISTING ~ar5101.are~ ~override~ //Hook Horror caves
+	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR container=2 charges1=1 charges2=1 charges3=1 single_match=1 STR_VAR old_item=~RT10_M~ new_item=~USRT10_V~ END
+
 COPY_EXISTING ~ar5203.are~ ~override~ //Black Raven Tomb
 	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR single_match=1 STR_VAR old_item=~00RTHF28~ new_item=~00RTKT19~ END
 	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR single_match=1 STR_VAR old_item=~00BRAC04~ new_item=~00BOOT01~ END
 
+COPY_EXISTING ~ar5300.are~ ~override~ //Underdark
+	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR container=2 charges1=1 charges2=1 charges3=1 single_match=1 STR_VAR old_item=~00LEAT05~ new_item=~RT10_R~ END
+	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR container=5 charges1=1 charges2=1 charges3=1 single_match=1 STR_VAR old_item=~00POTN87~ new_item=~USRT12_V~ END
+	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR container=8 charges1=1 charges2=1 charges3=1 single_match=1 STR_VAR old_item=~00RING09~ new_item=~RT10_R~ END
+
 COPY_EXISTING ~ar5301.are~ ~override~ //Underdark, drider lair
 	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR charges1=3 single_match=1 STR_VAR old_item=~00WAND29~ new_item=~00POTN68~ END
 	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR charges1=1 single_match=1 STR_VAR old_item=~00WAND45~ new_item=~00POTN91~ END
+
+COPY_EXISTING ~ar5302.are~ ~override~ //Underdark, mind flayer lair
+	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR container=7 charges1=1 charges2=1 charges3=1 single_match=1 STR_VAR old_item=~RT11_R~ new_item=~USRT11_V~ END
+
+COPY_EXISTING ~ar6003.are~ ~override~ //Kuldahar Pass, Hiepherus lair
+	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR container=1 charges1=1 charges2=1 charges3=1 single_match=1 STR_VAR old_item=~RT12_R~ new_item=~USRT12_V~ END
 
 COPY_EXISTING ~ar6051.are~ ~override~ //Yuan-ti lair
 	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR single_match=1 STR_VAR old_item=~50RTHF04~ new_item=~00RTHF61~ END
 	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR single_match=1 STR_VAR old_item=~00RTKT19~ new_item=~USRT16_V~ END
 
 COPY_EXISTING ~ar6101.are~ ~override~ //Dragon's Eye first floor
-	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR charges1=1  charges2=1  charges3=1 single_match=1 STR_VAR old_item=~00RTKT02~ new_item=~RT13_R~ END
-	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR single_match=1 STR_VAR old_item=~00SWDT91~ new_item=~00SPER90~ END
+	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR charges1=1 charges2=1 charges3=1 single_match=1 STR_VAR old_item=~00RTKT02~ new_item=~RT10_R~ END
+	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR charges1=1 charges2=1 charges3=1 single_match=1 STR_VAR old_item=~00SWDT91~ new_item=~RT13_R~ END
+	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR charges1=1 charges2=1 charges3=1 single_match=1 STR_VAR old_item=~00SHLD86~ new_item=~USRT13_R~ END
 	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR charges1=4277 single_match=1 STR_VAR old_item=~00BRAC03~ new_item=~MISC07~ END
 	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR charges1=652 single_match=1 STR_VAR old_item=~00HAMM04~ new_item=~MISC07~ END
 	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR charges1=1 single_match=1 STR_VAR old_item=~00SWDS85~ new_item=~00POTN80~ END
 	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR charges1=40 charges2=0 single_match=1 STR_VAR old_item=~00DAGG84~ new_item=~00DART05~ END
 	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR charges1=2 single_match=1 STR_VAR old_item=~00SLNG94~ new_item=~00POTN24~ END
-	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR charges1=1  charges2=1  charges3=1 single_match=1 STR_VAR old_item=~00SWDB91~ new_item=~RT13_R~ END
+	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR charges1=1  charges2=1  charges3=1 single_match=1 STR_VAR old_item=~00SWDB91~ new_item=~RT11_R~ END
 
 COPY_EXISTING ~ar6102.are~ ~override~ //Dragon's Eye second floor
 	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR charges1=5  charges2=1  charges3=1 single_match=1 STR_VAR old_item=~00RTHF59~ new_item=~00POTN71~ END

@@ -2,35 +2,22 @@
 
 APPEND ~RT_NORM.2da~
 ~
-USHFMODA	USNOTHIN
-USHFMODB	USNOTHIN
+USHFMODP	USNOTHIN
 ~
-UNLESS ~USHFMODA~
+UNLESS ~USHFMODP~
 
 APPEND ~RT_FURY.2da~
 ~
-USHFMODA	USHFMDA
-USHFMODB	USHFMDB
+USHFMODP	USHFMDP
 ~
-UNLESS ~USHFMODA~
+UNLESS ~USHFMODP~
 
-ACTION_IF NOT FILE_EXISTS_IN_GAME ~ushfmoda.itm~ BEGIN
+ACTION_IF NOT FILE_EXISTS_IN_GAME ~ushfmodp.itm~ BEGIN
 
-	COPY_EXISTING ~00rthf01.itm~ ~override/ushfmoda.itm~ ~00rthf01.itm~ ~override/ushfmodb.itm~
-/*
-	OUTER_FOR (i = 0; i <= 8; ++i) BEGIN
-		COPY_EXISTING ~ushfmda.itm~ ~override/ushfmda%i%.itm~ ~ushfmdb.itm~ ~override/ushfmdb%i%.itm~
-			LPF ALTER_EFFECT INT_VAR check_headers=0 check_globals=1 match_opcode=123 opcode=143 parameter1=i STR_VAR resource=~USHFMODP~ END
-	END
-*/
+	COPY_EXISTING ~00rthf01.itm~ ~override/ushfmodp.itm~
+
 	COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
-		READ_SSHORT 0x26 themaxhp
-		PATCH_IF themaxhp <= 60 BEGIN
-			TEXT_SPRINT hofitem ~USHFMODA~
-		END
-		ELSE BEGIN
-			TEXT_SPRINT hofitem ~USHFMODB~
-		END
+		TEXT_SPRINT hofitem ~USHFMODP~
 		READ_LONG 0x612 itemslotsoffset
 		READ_SSHORT (itemslotsoffset + 0xE) theslot
 		PATCH_IF theslot < 0 BEGIN
@@ -57,12 +44,12 @@ ACTION_IF NOT FILE_EXISTS_IN_GAME ~ushfmoda.itm~ BEGIN
 							LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item= EVAL ~%hofitem%~ slot=~gloves~ END
 						END
 						ELSE BEGIN
-							READ_SSHORT (itemslotsoffset + 0x10) theslot
+							READ_SSHORT (itemslotsoffset + 0x2A) theslot
 							PATCH_IF theslot < 0 BEGIN
-								LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item= EVAL ~%hofitem%~ slot=~boots~ END
+								LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item= EVAL ~%hofitem%~ slot=~cloak~ END
 							END
 							ELSE BEGIN
-								LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item= EVAL ~%hofitem%~ slot=~cloak~ mode=~move~ END
+								LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item= EVAL ~%hofitem%~ slot=~boots~ mode=~move~ END
 							END
 						END
 					END
@@ -72,8 +59,8 @@ ACTION_IF NOT FILE_EXISTS_IN_GAME ~ushfmoda.itm~ BEGIN
 		BUT_ONLY_IF_IT_CHANGES
 
 	COPY_EXISTING ~charbase.cre~ ~override~
-		LPF	IWD2_REMOVE_CRE_ITEM STR_VAR item=~USHFMODA~ END
+		LPF	IWD2_REMOVE_CRE_ITEM STR_VAR item=~USHFMODP~ END
 END
 
-COPY_EXISTING_REGEXP ~ushfmd[ab]\.itm~ ~override~
-	LPF ALTER_EFFECT INT_VAR check_headers=0 check_globals=1 match_opcode=18 probability2=0 END
+COPY_EXISTING ~ushfmdp.itm~ ~override~
+	LPF ALTER_EFFECT INT_VAR check_headers=0 check_globals=1 match_opcode=54 probability2=0 END

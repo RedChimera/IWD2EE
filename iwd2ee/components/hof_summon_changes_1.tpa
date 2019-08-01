@@ -4,13 +4,10 @@ COPY ~%mod_folder%/eff/eff_hof_summon_changes~ ~override~
 
 COPY ~%mod_folder%/spl/spl_hof_summon_changes~ ~override~
 
-//NOTES
-
 APPEND ~RT_NORM.2da~
 ~
 USHFMODA	USNOTHIN
 USHFMODB	USNOTHIN
-USHFMODC	USNOTHIN
 ~
 UNLESS ~USHFMODA~
 
@@ -18,14 +15,18 @@ APPEND ~RT_FURY.2da~
 ~
 USHFMODA	USHFMDA
 USHFMODB	USHFMDB
-USHFMODC	USHFMDC
 ~
 UNLESS ~USHFMODA~
 
 ACTION_IF NOT FILE_EXISTS_IN_GAME ~ushfmoda.itm~ BEGIN
 
-	COPY_EXISTING ~00rthf01.itm~ ~override/ushfmoda.itm~ ~00rthf01.itm~ ~override/ushfmodb.itm~ ~00rthf01.itm~ ~override/ushfmodc.itm~
-
+	COPY_EXISTING ~00rthf01.itm~ ~override/ushfmoda.itm~ ~00rthf01.itm~ ~override/ushfmodb.itm~
+/*
+	OUTER_FOR (i = 0; i <= 8; ++i) BEGIN
+		COPY_EXISTING ~ushfmda.itm~ ~override/ushfmda%i%.itm~ ~ushfmdb.itm~ ~override/ushfmdb%i%.itm~
+			LPF ALTER_EFFECT INT_VAR check_headers=0 check_globals=1 match_opcode=123 opcode=143 parameter1=i STR_VAR resource=~USHFMODP~ END
+	END
+*/
 	COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
 		READ_SSHORT 0x26 themaxhp
 		PATCH_IF themaxhp <= 60 BEGIN
@@ -78,5 +79,5 @@ ACTION_IF NOT FILE_EXISTS_IN_GAME ~ushfmoda.itm~ BEGIN
 		LPF	IWD2_REMOVE_CRE_ITEM STR_VAR item=~USHFMODA~ END
 END
 
-COPY_EXISTING ~ushfmda.itm~ ~override~ ~ushfmdb.itm~ ~override~ ~ushfmdc.itm~ ~override~
+COPY_EXISTING_REGEXP ~ushfmd[ab]\.itm~ ~override~
 	LPF ALTER_EFFECT INT_VAR check_headers=0 check_globals=1 match_opcode=402 probability2=0 STR_VAR match_resource=~USHFSMOD~ END

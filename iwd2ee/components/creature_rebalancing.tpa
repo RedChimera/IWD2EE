@@ -198,6 +198,10 @@ COPY ~%mod_folder%/spl/spl_creature_revisions~ ~override~
 
 COPY ~%mod_folder%/bam/bam_creature_revisions~ ~override~
 
+COPY_EXISTING ~31ORCSH0.bcs~ ~override/31ORCSH4.bcs~ ~31ORCSH0.bcs~ ~override/31ORCSH5.bcs~ ~31ORCSH0.bcs~ ~override/30ORCS0.bcs~ ~31ORCSH0.bcs~ ~override/30ORCS1.bcs~ ~31ORCSH0.bcs~ ~override/31ORCS00.bcs~ ~31ORCSH0.bcs~ ~override/31ORCS01.bcs~ ~31ORCSH0.bcs~ ~override/31ORCS03.bcs~ ~31ORCSH0.bcs~ ~override/31ORCS04.bcs~ ~31ORCSH0.bcs~ ~override/31ORCS09.bcs~ ~31ORCSH0.bcs~ ~override/31ORCS10.bcs~
+
+COPY_EXISTING ~30WCHDR0.bcs~ ~override/31ORCS02.bcs~ ~30WCHDR0.bcs~ ~override/31ORCS05.bcs~ ~30WCHDR0.bcs~ ~override/31ORCS06.bcs~ ~30WCHDR0.bcs~ ~override/31ORCS07.bcs~ ~30WCHDR0.bcs~ ~override/31ORCS08.bcs~
+
 COPY_EXISTING ~60GUARDI.cre~ ~override~
 	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelfighter=29 END
 	WRITE_SHORT currenthp 700
@@ -277,7 +281,7 @@ COPY_EXISTING ~usms003.spl~ ~override~
 	SAY NAME1 @21011
 	SAY NAME2 @21011
 
-COPY_EXISTING ~sppr114.spl~ ~override/usip114.spl~ ~sppr428.spl~ ~override/usip428.spl~ ~spwi211.spl~ ~override/usiw211.spl~ ~spwi220.spl~ ~override/usiw220.spl~ ~spwi316.spl~ ~override/usiw316.spl~ ~spwi318.spl~ ~override/usiw318.spl~ ~spwi404.spl~ ~override/usiw404.spl~ ~spwi424.spl~ ~override/usiw424.spl~ ~spwi504.spl~ ~override/usiw504.spl~ ~spwi507.spl~ ~override/usiw507.spl~ ~spwi509.spl~ ~override/usiw509.spl~ ~spwi605.spl~ ~override/usiw605.spl~ ~spwi612.spl~ ~override/usiw612.spl~ ~spwi708.spl~ ~override/usiw708.spl~
+COPY_EXISTING ~sppr114.spl~ ~override/usip114.spl~ ~sppr302.spl~ ~override/usip302.spl~ ~sppr428.spl~ ~override/usip428.spl~ ~sppr729.spl~ ~override/usip729.spl~ ~spwi211.spl~ ~override/usiw211.spl~ ~spwi220.spl~ ~override/usiw220.spl~ ~spwi316.spl~ ~override/usiw316.spl~ ~spwi318.spl~ ~override/usiw318.spl~ ~spwi404.spl~ ~override/usiw404.spl~ ~spwi419.spl~ ~override/usiw419.spl~ ~spwi424.spl~ ~override/usiw424.spl~ ~spwi504.spl~ ~override/usiw504.spl~ ~spwi507.spl~ ~override/usiw507.spl~ ~spwi509.spl~ ~override/usiw509.spl~ ~spwi605.spl~ ~override/usiw605.spl~ ~spwi612.spl~ ~override/usiw612.spl~ ~spwi708.spl~ ~override/usiw708.spl~ ~spwi910.spl~ ~override/usiw910.spl~
 	WRITE_SHORT 0x1c 4
 	WRITE_LONG 0x34 1
 //	LPF ALTER_SPELL_HEADER INT_VAR location=4 END
@@ -293,6 +297,21 @@ COPY_EXISTING ~spwi719.spl~ ~override/usiw719.spl~
 	LPF DELETE_EFFECT INT_VAR silent=1 check_headers=1 check_globals=1 match_opcode=144 END
 	LPF DELETE_EFFECT INT_VAR silent=1 check_headers=1 check_globals=1 match_opcode=145 END
 	IF_EXISTS
+
+COPY_EXISTING ~sppr213.spl~ ~override/usip251.spl~
+	WRITE_SHORT 0x1c 4
+	WRITE_LONG 0x34 1
+//	LPF ALTER_SPELL_HEADER INT_VAR location=4 END
+	LPF ALTER_EFFECT INT_VAR silent=1 check_headers=1 check_globals=1 STR_VAR match_resource= EVAL ~%SOURCE_RES%~ resource= EVAL ~%DEST_RES%~ END
+	LPF ALTER_EFFECT INT_VAR silent=1 check_headers=1 check_globals=1 STR_VAR match_resource=~SHAMME1~ resource=~USSSPER1~ END
+	LPF ALTER_EFFECT INT_VAR silent=1 check_headers=1 check_globals=1 STR_VAR match_resource=~SHAMME2~ resource=~USSSPER2~ END
+	LPF ALTER_EFFECT INT_VAR silent=1 check_headers=1 check_globals=1 STR_VAR match_resource=~SHAMME3~ resource=~USSSPER3~ END
+	IF_EXISTS
+
+COPY_EXISTING ~shamme1.itm~ ~override/usssper1.itm~ ~shamme2.itm~ ~override/usssper2.itm~ ~shamme3.itm~ ~override/usssper3.itm~
+	WRITE_SHORT 0x1c 29
+	WRITE_ASCII 0x22 ~SP~ #2
+	LPF ALTER_ITEM_HEADER INT_VAR damage_type=1 animation_overhand=0 animation_backhand=0 animation_thrust=100 END
 
 COPY_EXISTING ~usip651.spl~ ~override~
 	SAY NAME1 @21651
@@ -333,6 +352,90 @@ COPY_EXISTING ~usip952.spl~ ~override~
 COPY_EXISTING ~usiw751.spl~ ~override~
 	SAY NAME1 @22751
 	SAY NAME2 @22751
+
+COPY_EXISTING ~12GOBSH1.cre~ ~override~ ~30GOBSH1.cre~ ~override~ ~31GOBSH1.cre~ ~override~ ~31GOBSH2.cre~ ~override~
+	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newleveldruid=6 STR_VAR updatehp=~average~ END
+	WRITE_BYTE wisdom 14
+	WRITE_BYTE skillconcentration 9
+	WRITE_BYTE skillspellcraft 9
+	WRITE_BYTE challengerating 6
+	LPF	IWD2_REMOVE_SPELLS_KNOWN STR_VAR class=~cleric~ END
+	LPF	IWD2_REMOVE_SPELLS_KNOWN STR_VAR class=~druid~ END
+
+COPY_EXISTING ~30GOBSOR.cre~ ~override~ ~31GOBSOR.cre~ ~override~ ~31GOBSO2.cre~ ~override~
+	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelsorcerer=6 STR_VAR updatehp=~average~ END
+	WRITE_BYTE charisma 14
+	WRITE_BYTE skillconcentration 9
+	WRITE_BYTE skillspellcraft 9
+	WRITE_BYTE challengerating 6
+	LPF	IWD2_REMOVE_SPELLS_KNOWN STR_VAR class=~sorcerer~ END
+	LPF	IWD2_REMOVE_SPELLS_KNOWN STR_VAR class=~wizard~ END
+
+COPY_EXISTING ~20ORCSHM.cre~ ~override~ ~20ORCSHV.cre~ ~override~
+	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelcleric=4 STR_VAR updatehp=~average~ END
+	WRITE_BYTE wisdom 13
+	WRITE_BYTE skillconcentration 7
+	WRITE_BYTE skillspellcraft 7
+	WRITE_BYTE proficiencypolearm 1
+	WRITE_BYTE challengerating 4
+	LPF	IWD2_REMOVE_SPELLS_KNOWN STR_VAR class=~cleric~ END
+	LPF	IWD2_REMOVE_SPELLS_KNOWN STR_VAR class=~druid~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~cleric~ resource=~SPWI306~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~cleric~ resource=~SPPR215~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~cleric~ resource=~SPPR401~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~cleric~ resource=~SPPR425~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~cleric~ resource=~SPPR502~ END
+
+COPY_EXISTING ~30ORCSH1.cre~ ~override~ ~30ORCSHH.cre~ ~override~ ~31ORCSH1.cre~ ~override~ ~31ORCSH2.cre~ ~override~
+	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelcleric=6 STR_VAR updatehp=~average~ END
+	WRITE_BYTE wisdom 14
+	WRITE_BYTE skillconcentration 9
+	WRITE_BYTE skillspellcraft 9
+	WRITE_BYTE proficiencypolearm 2
+	WRITE_BYTE challengerating 6
+	LPF	IWD2_REMOVE_SPELLS_KNOWN STR_VAR class=~cleric~ END
+	LPF	IWD2_REMOVE_SPELLS_KNOWN STR_VAR class=~druid~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=2 STR_VAR class=~cleric~ resource=~SPWI306~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=2 STR_VAR class=~cleric~ resource=~SPPR215~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~cleric~ resource=~SPPR325~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~cleric~ resource=~SPPR401~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~cleric~ resource=~SPPR425~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~cleric~ resource=~SPPR502~ END
+
+COPY_EXISTING ~30ORCTRU.cre~ ~override~ ~31ORCHSB.cre~ ~override~ ~31ORCHSH.cre~ ~override~
+	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelcleric=9 STR_VAR updatehp=~max~ END
+	WRITE_BYTE wisdom 16
+	WRITE_BYTE skillconcentration 12
+	WRITE_BYTE skillspellcraft 12
+	WRITE_BYTE proficiencypolearm 2
+	WRITE_BYTE challengerating 9
+	LPF	IWD2_REMOVE_SPELLS_KNOWN STR_VAR class=~cleric~ END
+	LPF	IWD2_REMOVE_SPELLS_KNOWN STR_VAR class=~druid~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=3 STR_VAR class=~cleric~ resource=~SPWI306~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=3 STR_VAR class=~cleric~ resource=~SPPR215~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=2 STR_VAR class=~cleric~ resource=~SPPR325~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~cleric~ resource=~SPPR401~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~cleric~ resource=~SPPR425~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~cleric~ resource=~SPPR502~ END
+
+COPY_EXISTING ~30ORCWD.cre~ ~override~ ~31ORCWD.cre~ ~override~ ~31ORCWD2.cre~ ~override~
+	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelwizard=6 STR_VAR updatehp=~average~ END
+	WRITE_BYTE intelligence 14
+	WRITE_BYTE skillconcentration 9
+	WRITE_BYTE skillspellcraft 9
+	WRITE_BYTE challengerating 6
+	LPF	IWD2_REMOVE_SPELLS_KNOWN STR_VAR class=~wizard~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=4 STR_VAR class=~wizard~ resource=~SPWI112~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=2 STR_VAR class=~wizard~ resource=~SPWI211~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~SPWI215~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~SPWI221~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~SPWI304~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~SPWI312~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=2 STR_VAR class=~wizard~ resource=~SPWI404~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~SPWI424~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~SPWI509~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~SPWI802~ END
+
 
 COPY_EXISTING ~41CATHIN.cre~ ~override~
 	WRITE_BYTE coldresistance 100
@@ -1283,6 +1386,22 @@ COPY_EXISTING ~61PPCIRC.bcs~ ~override~
 		REPLACE_TEXTUALLY CASE_INSENSITIVE ~ActionOverride(LastTrigger,ForceSpellPoint(\[1214\.1972\],WIZARD_SUMMON_FIEND))~ ~ActionOverride(LastTrigger,ForceSpellPointRES("USIW951",[1214.1972]))~
 	END
 */
+COPY_EXISTING ~AR3000.are~ ~override~
+	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR actor_name=~06_GobSh~ script_special2=~31GOBSH4~ END
+	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR actor_name=~07_GobSh~ script_special2=~31GOBSH4~ END
+	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR actor_name=~16_GobSh~ script_special2=~31GOBSH4~ END
+
+COPY_EXISTING ~AR3001.are~ ~override~ ~AR3002.are~ ~override~
+	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR match_cre_file=~30GOBSH1~ script_special2=~31GOBSH4~ END
+	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR match_cre_file=~30GOBSOR~ script_special2=~31GOBSR0~ END
+
+COPY_EXISTING ~AR3100.are~ ~override~
+	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR match_cre_file=~31GOBSH1~ script_team=~31GOBSH4~ END
+	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR match_cre_file=~31GOBSOR~ script_special2=~31GOBSR0~ END
+
+COPY_EXISTING ~AR3101.are~ ~override~
+	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR match_cre_file=~31GOBSO2~ script_special2=~31GOBSR0~ END
+
 COPY_EXISTING ~AR4000.are~ ~override~
 	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR match_cre_file=~40RANGRM~ script_combat=~00AATBN~ END
 
