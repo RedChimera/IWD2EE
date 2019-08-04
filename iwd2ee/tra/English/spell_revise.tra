@@ -148,7 +148,7 @@ This spell conjures forth a wall of circling, razor-sharp blades that whirl and 
 @1024    = ~Spiritual Wrath~
 @1025    = ~Spiritual Wrath 
 (Evocation)
-Level: Drd 6, Pal 6, Helm 7, Tempus 6
+Level: Clr 6, Pal 6, Helm 7, Tempus 6
 Range: Sight of Caster
 Duration: Instantaneous
 Casting Time: 2
@@ -759,7 +759,7 @@ Casting Time: 9
 Area of Effect: Special
 Saving Throw: Special
 
-This spell enables the caster to create a black, blade-shaped, planar rift, about three feet long.  It jumps into the caster's hand and is used as a normal sword, remaining there for the duration of the spell.  The sword acts as a +10 weapon and deals 2d12 damage per strike as well as draining 1d8 hit points from the victim and granting it to the caster.  Further, the blade has a 25% chance of draining a single level from the target, imposing a -1 penalty to hit and damage and a -5 penalty to HP.~
+This spell enables the caster to create a black, blade-shaped, planar rift, about three feet long.  It jumps into the caster's hand and is used as a normal sword, remaining there for the duration of the spell.  The sword acts as a +10 weapon and deals 2d12 damage per strike.  Furthermore, the blade drains one single level from the target per hit, imposing a -1 penalty to hit and damage and a -5 penalty to HP.~
 @1130    = ~Otiluke's Freezing Sphere~
 @1131    = ~Otiluke's Freezing Sphere 
 (Evocation)
@@ -1264,26 +1264,26 @@ This spell toughens the target creature's body to withstand fire and cold, grant
 @1633    = ~Protection from Fire~
 @1634    = ~Protection from Fire 
 (Abjuration) 
-Level: Clr 3, Drd 3, Rgr 2, Sor/Wiz 3, Selune 3
+Level: Clr 3, Drd 3, Rgr 3, Sor/Wiz 3, Selune 3
 Range: Touch 
 Duration: 3 rounds/level
-Casting Time: 6 
+Casting Time: 6
 Area of Effect: 1 creature
 Saving Throw: None 
 
-This spell grants a damage resistance of 15/- against fire if the caster targets herself, or a 10/- fire damage resistance for anyone else.  The effects lasts for the duration of the spell.
+This spell grants a damage resistance of 20/- against fire to the target for the duration.
 ~
 @1635    = ~Protection from Lightning~
 @1636    = ~Protection from Lightning 
 (Abjuration) 
-Level: Clr 4, Drd 4, Rgr 3, Sor/Wiz 4
-Range: Touch 
+Level: Clr 4, Drd 3, Rgr 3
+Range: Touch
 Duration: 5 rounds/level
-Casting Time: 7 
+Casting Time: 7
 Area of Effect: 1 creature
 Saving Throw: None 
 
-This spell grants a 15/- electricity resistance bonus to the target creature that lasts for the duration of the spell.
+This spell grants a 30/- electricity resistance bonus to the target creature for the duration.
 ~
 @1637    = ~Vitriolic Sphere~
 @1638    = ~Vitriolic Sphere 
@@ -1862,19 +1862,19 @@ Saving Throw: None
 
 This spell brings forth a long-dead zombie from deep within the earth and reanimates it to serve the caster.  The higher the level of the caster, the more powerful the zombie summoned by this spell.
 
-WARNING: At higher levels, the Zombie Lords and Festering Drowned Dead summoned by this spell have powerful supernatural auras.  The effects of their auras may harm your own party members if they fall within the area of affect.~
+WARNING: At higher levels, the Zombie Lords and Festering Drowned Dead summoned by this spell have powerful supernatural auras.  The effects of their auras may harm your own party members if they fall within the area of effect.~
 
 @1769    = ~Elemental Barrier~
-@1770    = ~Elemental Barrier 
+@1770    = ~Elemental Barrier
 (Abjuration)
 Level: Brd 8, Clr 8, Drd 7, Sor/Wiz 8
 Range: Touch
-Duration: 1 round / level
-Casting Time: 7
-Area 'of Effect: 15' radius
+Duration: 10 rounds
+Casting Time: 8
+Area 'of Effect: 1 creature
 Saving Throw: None 
 
-This spell confers damage resistance of 10/- to acid, fire, cold and electrical damage to all allies within the area of effects, as well as 15/- resistance to the caster.  This effect lasts for the duration of the spell or until dispelled.
+This spell grants the recipient near-total immunity to elemental damage. For the duration, the target gains 100/- resistance to fire, cold, electricity, and acid damage.
 ~
 @1771    = ~Wall of Moonlight~
 @1772    = ~Wall of Moonlight 
@@ -1964,7 +1964,7 @@ Level: Brd 5, Sor/Wiz 6, Oghma 5, Bane 6
 Range: Sight of Caster
 Duration: 4 rounds
 Casting Time: 0
-Area of Effect: 1 Creature
+Area of Effect: 1 creature
 Saving Throw: None
 
 This spell allows the caster to utter one of the words of power. When spoken, Power Word: Silence can be invoked against any creature in range, preventing them from making a sound.  No saving throw is allowed. This spell has no effect on deaf creatures.~
@@ -1976,25 +1976,25 @@ Range: Sight of Caster
 Duration: 1 round/level
 Casting Time: 9
 Area of Effect: 20-foot radius
-Saving Throw: Will negates 
+Saving Throw: Will negates
 
 This spell forces all creatures not allied with the caster in the area of effect to Will save or be dominated as if affected by the 5th level spell Dominate Person.  Undead are unaffected by this spell.
 ~
 
 @1831    = ~Elemental Barrier~
-@1832    = ~Elemental Barrier 
-(Abjuration) 
-Level: Clr 8, Drd 8, Sor/Wiz 8
-Range: Touch 
-Duration: 1 round / level
+@1832    = ~Elemental Barrier
+(Abjuration)
+Level: Brd 8, Clr 8, Drd 7, Sor/Wiz 8
+Range: Touch
+Duration: 10 rounds
 Casting Time: 8
-Area 'of Effect: 15' Radius
+Area 'of Effect: 1 creature
 Saving Throw: None 
 
-This spell confers damage resistance of 10/- to acid, fire, cold and electrical damage to all allies within the area of effect, as well as 15/- resistance to the caster.  This effect lasts for the duration of the spell or until dispelled.
+This spell grants the recipient near-total immunity to elemental damage. For the duration, the target gains 100/- resistance to fire, cold, electricity, and acid damage.
 ~
 @1833    = ~Sunscorch~
-@1834    = ~Sunscorch 
+@1834    = ~Sunscorch
 (Evocation)
 Level: Drd 1, Rgr 1, Lathander 1, Selune 1
 Range: Sight of Caster
@@ -2122,14 +2122,14 @@ This spell brings forth a billowing cloud of acidic fog.  The thick fog corrodes
 @1859     = ~Protection from Cold~
 @1860     = ~Protection from Cold
 (Abjuration) 
-Level: Clr 3, Drd 3, Rgr 2, Sor/Wiz 3, Selune 3
-Range: Touch 
+Level: Clr 3, Drd 3, Rgr 3, Sor/Wiz 3, Selune 3
+Range: Touch
 Duration: 3 rounds/level
-Casting Time: 6 
+Casting Time: 6
 Area of Effect: 1 creature
 Saving Throw: None 
 
-This spell grants a damage resistance of 15/- against cold if the caster targets herself, or a 10/- cold damage resistance for anyone else.  The effects lasts for the duration of the spell.
+This spell grants a damage resistance of 20/- against cold to the target for the duration.
 ~
 @1861     = ~Cure Light Wounds~
 @1862     = ~Cure Light Wounds
@@ -2362,3 +2362,66 @@ Area of Effect: Caster
 Saving Throw: None
 
 Through this spell, the caster channels the power of his god throughout his entire being, amplifying the damage done by his attacks.  The caster gains a +4 damage bonus for the duration of the spell.~
+@1903     = ~Protection from Acid~
+@1904     = ~Protection from Acid
+(Abjuration) 
+Level: Sor/Wiz 5
+Range: Touch 
+Duration: 10 rounds / level
+Casting Time: 6
+Area of Effect: 1 creature 
+Saving Throw: None 
+
+This spell grants a damage resistance of 25/- against acid damage for the duration.~
+@1905     = ~Protection from Electricity~
+@1906     = ~Protection from Electricity
+(Abjuration) 
+Level: Sor/Wiz 5, Talos 4
+Range: Touch 
+Duration: 10 rounds / level
+Casting Time: 6
+Area of Effect: 1 creature 
+Saving Throw: None 
+
+This spell grants a damage resistance of 25/- against electrical damage for the duration of the spell.~
+@1907     = ~Storm Shell~
+@1908     = ~Storm Shell
+(Abjuration)
+Level: Drd 4, Rgr 4, Talos 3
+Range: Caster
+Duration: 10 rounds
+Casting Time: 6
+Area of Effect: Caster
+Saving Throw: None
+
+This spell surrounds the caster with a dark sphere of disruptive energy that moves with him or her.  The storm shell grants a 100/- resistance bonus to electricity and a 15/- resistance bonus to fire and cold. In addition, the caster is protected from all storm and cloud-based spells while the storm shell is active.~
+@1909     = ~Shambler~
+@1910     = ~Shambler
+(Conjuration)
+Level: Drd 7
+Range: Sight of Caster
+Duration: 8 hours
+Casting Time: 1 round
+Area of Effect: Special
+Saving Throw: None
+
+This spell creates two shambling mounds of 12 HD which willingly aid the caster in combat or whatever other duties they are assigned and have the capability to carry out.~
+
+
+@1980     = ~Level:~
+@1981     = ~Brd~
+@1982     = ~Clr~
+@1983     = ~Drd~
+@1984     = ~Pal~
+@1985     = ~Rgr~
+@1986     = ~Sor~
+@1987     = ~Wiz~
+@1988     = ~Ilmater~
+@1989     = ~Lathander~
+@1990     = ~Selune~
+@1991     = ~Helm~
+@1992     = ~Oghma~
+@1993     = ~Tempus~
+@1994     = ~Bane~
+@1995     = ~Mask~
+@1996     = ~Talos~

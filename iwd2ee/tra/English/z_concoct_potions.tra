@@ -39,7 +39,7 @@ Resistance: 20/- Fire Resistance
 Weight: 1 lb.
 ~
 @4710     = ~Black Mania~
-@4711     = ~Not all potions are exactly medical.  Some alchemists turn their talents to producing narcotics, and make their living by peddling addictive poisons to the idle and restless.  This black oil is a modified version of one such narcotic.  When drunk Black Mania will induce a violent state of confusion, granting the user a +3 bonus to damage rolls and melee attack rolls at the cost of a -3 penalty to AC and missile attacks.  Further, the user goes berserk for 10 rounds and his or her hit points are hidden for the duration of the effect.
+@4711     = ~Not all potions are exactly medical.  Some alchemists turn their talents to producing narcotics, and make their living by peddling addictive poisons to the idle and restless.  This black oil is a modified version of one such narcotic.  When drunk Black Mania will induce a violent state of confusion, granting the user a +5 bonus to damage rolls and melee attack rolls at the cost of a -3 penalty to AC and missile attacks.  Further, the user goes berserk for 10 rounds and his or her hit points are hidden for the duration of the effect.
 
 STATISTICS:
 
@@ -206,7 +206,7 @@ Weight: 1 lb.
 @4742     = ~Plasma~
 @4743     = ~A crackling blue gas buzzes inside this small glass container. By collecting energy from various sources and transferring the latent power to an inert gas, an alchemist may create a safe and useful form of plasma.
 
-The user must open the bottle and inhale deeply, holding the gas in their lungs until the plasma is absorbed into the bloodstream. The plasma adds a special boost to every strike the user makes in combat, increasing all attack damage by 2 points. The plasma quickly dissipates, however, and the effects will vanish within 10 rounds.
+The user must open the bottle and inhale deeply, holding the gas in their lungs until the plasma is absorbed into the bloodstream. The plasma adds a special boost to every strike the user makes in combat, increasing all attack damage by 4 points. The plasma quickly dissipates, however, and the effects will vanish within 10 rounds.
 
 STATISTICS:
 

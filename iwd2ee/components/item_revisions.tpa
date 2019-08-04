@@ -3478,6 +3478,54 @@ COPY_EXISTING ~USBRAC52.itm~ ~override~
 	SAY NAME2 @12623
 	SAY IDENTIFIED_DESC @12624
 
+COPY_EXISTING ~USAROW51.itm~ ~override~
+	SAY NAME2 @12625
+	SAY IDENTIFIED_DESC @12626
+
+COPY_EXISTING ~USAROW54.itm~ ~override~
+	SAY NAME2 @12627
+	SAY IDENTIFIED_DESC @12628
+
+COPY_EXISTING ~USAROW57.itm~ ~override~
+	SAY NAME2 @12629
+	SAY IDENTIFIED_DESC @12630
+
+COPY_EXISTING ~USAROW58.itm~ ~override~
+	SAY NAME2 @12631
+	SAY IDENTIFIED_DESC @12632
+
+COPY_EXISTING ~USAX1H57.itm~ ~override~
+	SAY NAME2 @12633
+	SAY IDENTIFIED_DESC @12634
+
+COPY_EXISTING ~USBOLT54.itm~ ~override~
+	SAY NAME2 @12635
+	SAY IDENTIFIED_DESC @12636
+
+COPY_EXISTING ~USBOLT58.itm~ ~override~
+	SAY NAME2 @12637
+	SAY IDENTIFIED_DESC @12638
+
+COPY_EXISTING ~USBULL56.itm~ ~override~
+	SAY NAME2 @12639
+	SAY IDENTIFIED_DESC @12640
+
+COPY_EXISTING ~USBULL59.itm~ ~override~
+	SAY NAME2 @12641
+	SAY IDENTIFIED_DESC @12642
+
+COPY_EXISTING ~USDAGG51.itm~ ~override~
+	SAY NAME2 @12643
+	SAY IDENTIFIED_DESC @12644
+
+COPY_EXISTING ~USHAMTDT.itm~ ~override~
+	SAY NAME2 @12645
+	SAY IDENTIFIED_DESC @12646
+
+COPY_EXISTING ~USHFHTDT.itm~ ~override~
+	SAY NAME2 @12647
+	SAY IDENTIFIED_DESC @12648
+
 
 //General patch changes
 
@@ -3556,6 +3604,7 @@ USRTHF37	00STAF05
 USRTHF38	USPLATSW
 USRTHF39	USSWDK46
 USRTHF40	USHELM45
+USRTHF41	USHAMTDT
 
 USHFMODA	USNOTHIN
 USHFMODB	USNOTHIN
@@ -3610,6 +3659,7 @@ USRTHF37	USHFSF05
 USRTHF38	USHFPTSW
 USRTHF39	USHFSK46
 USRTHF40	USHELM50
+USRTHF41	USHFHTDT
 
 USHFMODA	USHFMDA
 USHFMODB	USHFMDB
@@ -3818,7 +3868,8 @@ COPY_EXISTING ~52BERED.sto~ ~override~ //Beodaewn the Werewolf Man store
 
 COPY_EXISTING ~53HEGGR.sto~ ~override~ //Underdark weapon/armor store
 	ADD_STORE_ITEM ~00SHLD85~ AFTER ~00SHLD16~ #1 #1 #1 ~IDENTIFIED~ #1 //Tower Shield of Spell Resistance +2
-	REMOVE_STORE_ITEM ~00STAF93~
+	ADD_STORE_ITEM ~USRTHF41~ AFTER ~00HAMT10~ #1 #1 #1 ~IDENTIFIED~ #1
+	REMOVE_STORE_ITEM ~00STAF93~ ~00HAMT10~
 
 COPY_EXISTING ~53KADRES.sto~ ~override~ //Kadresh drow store
 	ADD_STORE_ITEM ~00RTHF37~ #1 #1 #1 ~IDENTIFIED~ #1 //The Lions of Arkamadis
@@ -3918,6 +3969,7 @@ COPY_EXISTING ~63ERADRU.sto~ ~override~ //Xvim priest temple
 
 COPY_EXISTING ~63RIKI.sto~ ~override~ //Severed Hand thief store
 	ADD_STORE_ITEM ~00RING81~ BEFORE ~00BOOT02~ #1 #1 #1 ~IDENTIFIED~ #1 //Tymora's Loop
+	ADD_STORE_ITEM ~00RTHF10~ AFTER ~00BOOT02~ #1 #1 #1 ~IDENTIFIED~ #1 //Headknocker
 	ADD_STORE_ITEM ~00AROW07~ AFTER ~00AROW94~ #1 #1 #1 ~IDENTIFIED~ #9 //Arrow of Dispelling
 	ADD_STORE_ITEM ~USAROW52~ AFTER ~00AROW94~ #1 #1 #1 ~IDENTIFIED~ #9 //Arrows of Detonation
 	ADD_STORE_ITEM ~USBOLT52~ AFTER ~00BOLT99~ #1 #1 #1 ~IDENTIFIED~ #9 //Bolts of Lightning
@@ -3991,6 +4043,7 @@ COPY_EXISTING ~ar6003.are~ ~override~ //Kuldahar Pass, Hiepherus lair
 	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR container=1 charges1=1 charges2=1 charges3=1 single_match=1 STR_VAR old_item=~RT12_R~ new_item=~USRT12_V~ END
 
 COPY_EXISTING ~ar6051.are~ ~override~ //Yuan-ti lair
+	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR container=1 charges1=10 charges2=1 charges3=1 single_match=1 STR_VAR old_item=~00SWDC97~ new_item=~USAROW54~ END
 	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR single_match=1 STR_VAR old_item=~50RTHF04~ new_item=~00RTHF61~ END
 	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR single_match=1 STR_VAR old_item=~00RTKT19~ new_item=~USRT16_V~ END
 
@@ -4009,6 +4062,7 @@ COPY_EXISTING ~ar6102.are~ ~override~ //Dragon's Eye second floor
 	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR charges1=5  charges2=1  charges3=1 single_match=1 STR_VAR old_item=~00RTHF59~ new_item=~00POTN71~ END
 
 COPY_EXISTING ~ar6103.are~ ~override~ //Dragon's Eye third floor
+	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR container=17 charges1=10 charges2=1 charges3=1 single_match=1 STR_VAR old_item=~00RG13~ new_item=~USAROW54~ END
 	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR charges1=1  charges2=1  charges3=1 single_match=1 STR_VAR old_item=~00RING18~ new_item=~USRT17_V~ END
 
 COPY_EXISTING ~ar6200.are~ ~override~ //Fields of Slaughter
@@ -4093,6 +4147,9 @@ COPY_EXISTING ~11jemel.cre~ ~override~ //Gallaway Trading Post worker
 
 COPY_EXISTING ~11phaen.cre~ ~override~ //Phaen of the Rags
 	LPF IWD2_ADD_CRE_ITEM INT_VAR cq1=1 STR_VAR item=~11RTHF21~ slot=~weapon1~ mode=~replace~ END
+
+COPY_EXISTING ~40gblka.cre~ ~override~ ~60hiephh.cre~ ~override~ //Goublika
+	LPF IWD2_ADD_CRE_ITEM INT_VAR cq1=3  cq2=1  cq3=1 STR_VAR item=~USBULL59~ slot=~inv4~ END
 
 COPY_EXISTING ~60hiephe.cre~ ~override~ ~60hiephh.cre~ ~override~ //Hiepherus
 	LPF IWD2_ADD_CRE_ITEM INT_VAR cq1=1  cq2=1  cq3=1 STR_VAR item=~00RTHF46~ slot=~cloak~ END
