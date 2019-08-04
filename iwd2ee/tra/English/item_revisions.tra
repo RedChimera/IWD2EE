@@ -12028,5 +12028,182 @@ Attack Bonus: +5
 Damage:  +10 bonus
 Slow: -1 attack per round with any weapon
 Weight:  2 lb.~
+@12625    = ~Brilliant Keen Arrows +5~
+@12626    = ~These arrows were enhanced through magical means when they were created.  They appear slightly straighter than the average arrow, almost alive as they effortlessly leave your bow and streak towards their target with deadly accuracy.
+
+STATISTICS:
+
+Damage:  1d6  +5
+Attack Bonus:  +5
+Enchantment:  +5
+Damage Type:  Missile (piercing)
+Special:
+  Keen: Increased chance of scoring a critical hit on target
+  Brilliant Energy: Bypasses armor and shield bonuses
+Weight: 0 lb.
+Launcher:  Bow~
+@12627    = ~Arrows of Deadly Venom +2~
+@12628    = ~The arrow of biting was designed as a deadly compliment to the archer.  With the barbed arrow tip coated in a nasty poison that will infiltrate the bloodstream of its victims causing agony and often times, death.
+
+STATISTICS:
+
+Damage:  1d6  +2
+Attack Bonus:  +2
+Enchantment:  +2
+Damage Type:  Missile (piercing)
+Special:
+  Venom: +4 points of poison damage every second for 12 seconds (Fortitude DC 31)
+Weight: 0 lb.
+Launcher:  Bow~
+@12629    = ~Xvimian Acid Arrows +5~
+@12630    = ~This arrow is coated in acid so that when it strikes an enemy, it will not only pierce its flesh but also begin to eat away at the wound, enlarging and deepening its severity.
+
+STATISTICS:
+
+Damage:  1d6  +5
+Attack Bonus:  +5
+Enchantment:  +5
+Damage Type:  Missile (piercing)
+Special:
+  Corrosion: +2d4 acid damage, and an additional +4d4 acid damage over the following 2 rounds
+Weight: 0 lb.
+Launcher:  Bow~
+@12631    = ~Executioner Arrows +5~
+@12632    = ~These arrows were enhanced through magical means when they were created.  They appear slightly straighter then the average arrow, almost alive as they effortlessly leave your bow and streak towards their target with deadly accuracy.
+
+STATISTICS:
+
+Damage:  1d6 + 5
+Attack Bonus:  +5 
+Enchantment:  +5
+Damage Type:  Slashing
+Special:
+  Keen: Increased chance of scoring a critical hit on target
+  Constant Effect: The character is under the effect of Executioner's Eyes while these arrows are equipped
+Weight: 0 lb.
+Launcher:  Bow~
+@12633    = ~Vorpal Throwing Axe +5~
+@12634    = ~The handaxe or throwing axe is also known as a hatchet.  The axe blade has a sharp steel tip, counterbalanced by a pointed fluke.  The short handle has a point on the bottom and the head may have a spike on the top. Runes of power have been etched into the blade to further enhance it.
+
+STATISTICS:
+
+Damage:  1d6  +5
+Attack bonus:  +5
+Enchantment:  +5
+Damage Type (melee):  Slashing
+Damage Type (thrown):  Slashing
+Special:
+  Beheading: With each axe thrown, there is a 12% chance the target will be decapitated (Fortitude DC 28). Undead are immune. This effect only occurs if the axe is thrown.
+Weight: 4 lb.
+Required Feat:  Martial Weapon, Axe
+Type:  One-handed~
+@12635    = ~Bolts of Irrestible Slowing +3~
+@12636    = ~Quarrels or bolts are the ammunition fired by crossbows regardless of the weapon's size.  However this bolt has been imbued with magical properties which enhances performance in flight, almost as if the bolt was guided towards its target.
+
+STATISTICS:
+
+Damage:  1d8  +3
+Attack Bonus:  +3
+Enchantment:  +3
+Damage Type:  Missile (piercing)
+Special:
+  Slowing: Target is slowed for 1 round on hit (no save)
+Weight:  0 lb.
+Launcher:  Crossbow~
+@12637    = ~Magic Splitting Bolts +5~
+@12638    = ~Quarrels or bolts are the ammunition fired by crossbows regardless of the weapon's size.  However this bolt has been imbued with magical properties which enhances performance in flight, almost as if the bolt was guided towards its target.
+
+STATISTICS:
+
+Damage:  1d8  +5
+Attack Bonus:  +5
+Enchantment:  +5
+Damage Type:  Missile (piercing)
+Special:
+  Magic Force: +1d4+1 magic damage
+  Splitting: When fired, these bolts split into two bolts; each will deal full damage
+Weight:  0 lb.
+Launcher:  Crossbow~
+@12639    = ~Bullets of Bludgeoning Weakness +5~
+@12640    = ~Magical currents are embedded inside this bullet so that it seems a little more balanced and lighter as it jumps towards an opponent.
+
+STATISTICS:
+
+Damage:  1d4  +5
+Attack Bonus:  +5 
+Enchantment:  +5
+Damage Type:  Missile (bludgeoning)
+Special:
+  Bludgeoning Weakness: Lowers the target's bludgeoning resistance by 5 for 3 rounds (cumulative, no save)
+Weight: 0 lb.
+Launcher:  Sling~
+@12641    = ~Boulders +2~
+@12642    = ~These bullets, when launched, transform into large boulders in mid-flight, while retaining the same speed they had when launched. As a result, they strike with tremendous force.
+
+STATISTICS:
+
+Damage:  6d10
+Attack Bonus:  -10
+Enchantment:  +2
+Damage Type:  Bludgeoning
+Special:
+  Transforms into a boulder when launched
+  Impact: Increased chance of scoring a critical hit on target
+Weight: 0 lb.
+Launcher:  Sling~
+@12643    = ~Throwing Daggers of Terrible Luck +5~
+@12644    = ~The typical throwing dagger has a pointed, usually double-edged blade, as opposed to a knife, which has a single edge and is a bit shorter than the dagger.  Unlike a dagger, this one has a smaller handle and is balanced differently. Runes of power have been  etched into the blade and glow ominously.
+
+STATISTICS:
+
+Damage:  1d4 + 5
+Attack Bonus:  +5
+Enchantment:  +5
+Damage Type: Missile (piercing)
+Damage Type: Melee (piercing)
+Special:
+  Misfortune: Each hit gives the target -2 luck for 3 rounds (cumulative, no save). This effect only occurs if the dagger is thrown.
+Weight: 0 lb.
+Feat Requirement:  Simple Weapon, Small Blade
+Type:  One-handed~
+@12645    = ~Dwarven Thrower +3~
+@12646    = ~This hammer - not to be confused with the elven made Dwarf Thrower - is only usable by dwarves.  In the capable hands of a dwarven warrior the hammer may be thrown at an opponent.  The magic in the hammer draws it back to the hand of its wielder.  If it hits an opponent it does double the normal damage that a hammer would normally do.  Against giants and ogres the hammer does an additional +7 damage, due to the special hatred that dwarves hold against these races.
+
+Unlike most anti-giant weapons, which are designed to hit giants in the legs and trip them, this particular Dwarven Thrower was intended to hit giants in the head. For this reason, the hammer is enchanted to fly farther than a typical throwing hammer.
+
+
+STATISTICS:
+
+Damage:  2d4 + 3, + an additional 7 vs. giants
+Attack Bonus:  +3
+Enchantment:  +3
+Damage Type (melee):  Bludgeoning
+Damage Type (thrown):  Missile (bludgeoning)
+Special:
+  Returning: Returns to user
+  Range of 30 feet rather than 10
+Weight: 2 lb.
+Feat Requirement:  Martial Weapon, Hammer
+Type:  One-handed~
+@12647    = ~Dwarven Thrower +5~
+@12648    = ~This hammer - not to be confused with the elven made Dwarf Thrower - is only usable by dwarves.  In the capable hands of a dwarven warrior the hammer may be thrown at an opponent.  The magic in the hammer draws it back to the hand of its wielder.  If it hits an opponent it does double the normal damage that a hammer would normally do.  Against giants and ogres the hammer does an additional +7 damage, due to the special hatred that dwarves hold against these races.
+
+Unlike most anti-giant weapons, which are designed to hit giants in the legs and trip them, this particular Dwarven Thrower was intended to hit giants in the head. For this reason, the hammer is enchanted to fly farther than a typical throwing hammer.
+
+
+STATISTICS:
+
+Damage:  2d4 + 5, + an additional 7 vs. giants
+Attack Bonus:  +5
+Enchantment:  +5
+Damage Type (melee):  Bludgeoning
+Damage Type (thrown):  Missile (bludgeoning)
+Special:
+  Returning: Returns to user
+  Impact: Increased chance of scoring a critical hit on target
+  Range of 30 feet rather than 10
+Weight: 2 lb.
+Feat Requirement:  Martial Weapon, Hammer
+Type:  One-handed~
 
 @12900    = ~Hrm - you are powerful allies, indeed.  More gold and gems to line your pockets, then - also, a suit of plate armor, a warhammer, a helmet, all crafted and enchanted by great duergar artisans.  They are well deserved, outsider.~

@@ -14,5 +14,17 @@ COPY ~%mod_folder%/bcs/AR5015.bcs~ ~override~
 // The latter method requires a custom script, which replicates some but not all of the effects of the normal cutscene that plays when you kill the treants.
 COPY ~%mod_folder%/bcs/USWVSKIP.bcs~ ~override~
 
+
+// Making it so you can go all the way through the Fell Wood right from the start, without waiting for plot events.
+COPY_EXISTING ~AR5011.bcs~ ~override~
+	DECOMPILE_AND_PATCH BEGIN
+		REPLACE_TEXTUALLY CASE_INSENSITIVE ~GlobalGT(\"50Tahvo_Wight\",\"Global\",1)~ ~True()~
+	END
+
+COPY_EXISTING ~AR5016.bcs~ ~override~
+	DECOMPILE_AND_PATCH BEGIN
+		REPLACE_TEXTUALLY CASE_INSENSITIVE ~GlobalGT(\"50Venla_Children\",\"Global\",1)~ ~True()~
+	END
+
 // This area file was used in a previous version, which simply made the area exit available by default.
 //COPY ~%mod_folder%/are/AR5015.are~ ~override~

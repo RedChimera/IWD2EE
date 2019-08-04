@@ -12,7 +12,7 @@ COPY ~%mod_folder%/itm/itm_spell_revisions~ ~override~
 
 COPY ~%mod_folder%/bam/bam_spell_revisions~ ~override~
 
-
+COPY ~%mod_folder%/tables/LISTDOMN.2da~ ~override~
 
 // fixed spell schools for scrolls
 
@@ -2148,6 +2148,30 @@ COPY_EXISTING ~sppr425.spl~ ~override~
 	SAY UNIDENTIFIED_DESC @1902
 	SAY IDENTIFIED_DESC @1902
 
+COPY_EXISTING ~spwi522.spl~ ~override~
+	SAY NAME1 @1903
+	SAY NAME2 @1903
+	SAY UNIDENTIFIED_DESC @1904
+	SAY IDENTIFIED_DESC @1904
+
+COPY_EXISTING ~spwi523.spl~ ~override~
+	SAY NAME1 @1905
+	SAY NAME2 @1905
+	SAY UNIDENTIFIED_DESC @1906
+	SAY IDENTIFIED_DESC @1906
+
+COPY_EXISTING ~sppr323.spl~ ~override~
+	SAY NAME1 @1907
+	SAY NAME2 @1907
+	SAY UNIDENTIFIED_DESC @1908
+	SAY IDENTIFIED_DESC @1908
+
+COPY_EXISTING ~sppr723.spl~ ~override~
+	SAY NAME1 @1909
+	SAY NAME2 @1909
+	SAY UNIDENTIFIED_DESC @1910
+	SAY IDENTIFIED_DESC @1910
+
 COPY_EXISTING ~effse.spl~ ~override~
 	LPF ALTER_EFFECT INT_VAR silent=1 check_headers=1 check_globals=1 match_opcode=10 opcode=18 parameter1=20 END
 	LPF DELETE_EFFECT INT_VAR silent=1 check_headers=1 check_globals=1 match_opcode=15 END
@@ -2576,3 +2600,179 @@ COPY ~%mod_folder%/itm/USPCOLD.itm~ ~override~
 COPY ~%mod_folder%/bam/USCOLDA.bam~ ~override~
 COPY ~%mod_folder%/bam/USCOLDB.bam~ ~override~
 COPY ~%mod_folder%/bam/USCOLDC.bam~ ~override~
+
+OUTER_SPRINT stringlevel @1980
+OUTER_SPRINT stringbrd @1981
+OUTER_SPRINT stringclr @1982
+OUTER_SPRINT stringdrd @1983
+OUTER_SPRINT stringpal @1984
+OUTER_SPRINT stringrgr @1985
+OUTER_SPRINT stringsor @1986
+OUTER_SPRINT stringwiz @1987
+OUTER_SPRINT stringilmater @1988
+OUTER_SPRINT stringlathander @1989
+OUTER_SPRINT stringselune @1990
+OUTER_SPRINT stringhelm @1991
+OUTER_SPRINT stringoghma @1992
+OUTER_SPRINT stringtempus @1993
+OUTER_SPRINT stringbane @1994
+OUTER_SPRINT stringmask @1995
+OUTER_SPRINT stringtalos @1996
+COPY_EXISTING ~LISTSPLL.2da~ ~override~
+	COUNT_2DA_COLS numcolumns
+	COUNT_2DA_ROWS numcolumns numrows
+	FOR (i = 0; i < numrows; ++i) BEGIN
+		READ_2DA_ENTRY i 8 numcolumns spell_res_ref
+		PATCH_IF FILE_EXISTS_IN_GAME ~%spell_res_ref%.spl~ BEGIN
+			numcasters = 0
+			TEXT_SPRINT levelstring ~%stringlevel%~
+			READ_2DA_ENTRY i 1 numcolumns brd
+			READ_2DA_ENTRY i 2 numcolumns clr
+			READ_2DA_ENTRY i 3 numcolumns drd
+			READ_2DA_ENTRY i 4 numcolumns pal
+			READ_2DA_ENTRY i 5 numcolumns rgr
+			READ_2DA_ENTRY i 7 numcolumns wiz
+			PATCH_IF brd > 0 BEGIN
+				PATCH_IF numcasters > 0 BEGIN
+					TEXT_SPRINT levelstring ~%levelstring%,~
+				END
+				TEXT_SPRINT levelstring ~%levelstring% %stringbrd% %brd%~
+				numcasters += 1
+			END
+			PATCH_IF clr > 0 BEGIN
+				PATCH_IF numcasters > 0 BEGIN
+					TEXT_SPRINT levelstring ~%levelstring%,~
+				END
+				TEXT_SPRINT levelstring ~%levelstring% %stringclr% %clr%~
+				numcasters += 1
+			END
+			PATCH_IF drd > 0 BEGIN
+				PATCH_IF numcasters > 0 BEGIN
+					TEXT_SPRINT levelstring ~%levelstring%,~
+				END
+				TEXT_SPRINT levelstring ~%levelstring% %stringdrd% %drd%~
+				numcasters += 1
+			END
+			PATCH_IF pal > 0 BEGIN
+				PATCH_IF numcasters > 0 BEGIN
+					TEXT_SPRINT levelstring ~%levelstring%,~
+				END
+				TEXT_SPRINT levelstring ~%levelstring% %stringpal% %pal%~
+				numcasters += 1
+			END
+			PATCH_IF rgr > 0 BEGIN
+				PATCH_IF numcasters > 0 BEGIN
+					TEXT_SPRINT levelstring ~%levelstring%,~
+				END
+				TEXT_SPRINT levelstring ~%levelstring% %stringrgr% %rgr%~
+				numcasters += 1
+			END
+			PATCH_IF wiz > 0 BEGIN
+				PATCH_IF numcasters > 0 BEGIN
+					TEXT_SPRINT levelstring ~%levelstring%,~
+				END
+				TEXT_SPRINT levelstring ~%levelstring% %stringsor%/%stringwiz% %wiz%~
+				numcasters += 1
+			END
+			PATCH_SILENT
+			INNER_ACTION BEGIN
+				COPY_EXISTING ~LISTDOMN.2da~ ~override~
+					COUNT_2DA_COLS numcolumns2
+					COUNT_2DA_ROWS numcolumns2 numrows2
+					FOR (j = 0; j < numrows2; ++j) BEGIN
+						READ_2DA_ENTRY j (numcolumns2 - 1) numcolumns2 domain_resref
+						PATCH_IF (~%domain_resref%~ STRING_EQUAL_CASE ~%spell_res_ref%~) BEGIN
+							READ_2DA_ENTRY j 1 numcolumns2 cil
+							READ_2DA_ENTRY j 2 numcolumns2 cla
+							READ_2DA_ENTRY j 3 numcolumns2 cse
+							READ_2DA_ENTRY j 4 numcolumns2 che
+							READ_2DA_ENTRY j 5 numcolumns2 cog
+							READ_2DA_ENTRY j 6 numcolumns2 cte
+							READ_2DA_ENTRY j 7 numcolumns2 cba
+							READ_2DA_ENTRY j 8 numcolumns2 cma
+							READ_2DA_ENTRY j 9 numcolumns2 cta
+							PATCH_IF cil > 0 BEGIN
+								PATCH_IF numcasters > 0 BEGIN
+									TEXT_SPRINT levelstring ~%levelstring%,~
+								END
+								TEXT_SPRINT levelstring ~%levelstring% %stringilmater% %cil%~
+								numcasters += 1
+							END
+							PATCH_IF cla > 0 BEGIN
+								PATCH_IF numcasters > 0 BEGIN
+									TEXT_SPRINT levelstring ~%levelstring%,~
+								END
+								TEXT_SPRINT levelstring ~%levelstring% %stringlathander% %cla%~
+								numcasters += 1
+							END
+							PATCH_IF cse > 0 BEGIN
+								PATCH_IF numcasters > 0 BEGIN
+									TEXT_SPRINT levelstring ~%levelstring%,~
+								END
+								TEXT_SPRINT levelstring ~%levelstring% %stringselune% %cse%~
+								numcasters += 1
+							END
+							PATCH_IF che > 0 BEGIN
+								PATCH_IF numcasters > 0 BEGIN
+									TEXT_SPRINT levelstring ~%levelstring%,~
+								END
+								TEXT_SPRINT levelstring ~%levelstring% %stringhelm% %che%~
+								numcasters += 1
+							END
+							PATCH_IF cog > 0 BEGIN
+								PATCH_IF numcasters > 0 BEGIN
+									TEXT_SPRINT levelstring ~%levelstring%,~
+								END
+								TEXT_SPRINT levelstring ~%levelstring% %stringoghma% %cog%~
+								numcasters += 1
+							END
+							PATCH_IF cte > 0 BEGIN
+								PATCH_IF numcasters > 0 BEGIN
+									TEXT_SPRINT levelstring ~%levelstring%,~
+								END
+								TEXT_SPRINT levelstring ~%levelstring% %stringtempus% %cte%~
+								numcasters += 1
+							END
+							PATCH_IF cba > 0 BEGIN
+								PATCH_IF numcasters > 0 BEGIN
+									TEXT_SPRINT levelstring ~%levelstring%,~
+								END
+								TEXT_SPRINT levelstring ~%levelstring% %stringbane% %cba%~
+								numcasters += 1
+							END
+							PATCH_IF cma > 0 BEGIN
+								PATCH_IF numcasters > 0 BEGIN
+									TEXT_SPRINT levelstring ~%levelstring%,~
+								END
+								TEXT_SPRINT levelstring ~%levelstring% %stringmask% %cma%~
+								numcasters += 1
+							END
+							PATCH_IF cta > 0 BEGIN
+								PATCH_IF numcasters > 0 BEGIN
+									TEXT_SPRINT levelstring ~%levelstring%,~
+								END
+								TEXT_SPRINT levelstring ~%levelstring% %stringtalos% %cta%~
+								numcasters += 1
+							END
+						END
+					END
+					BUT_ONLY_IF_IT_CHANGES
+			END
+			PATCH_IF numcasters > 0 BEGIN
+				INNER_ACTION BEGIN
+					COPY_EXISTING ~%spell_res_ref%.spl~ ~override~
+						READ_LONG UNIDENTIFIED_DESC description_ref
+						LPF PATCH_REPLACE_IN_STRING INT_VAR strref=description_ref match_case=1 new_string=1 STR_VAR match= EVAL ~%stringlevel%.*~ replace_with= EVAL ~%levelstring%~ RET description_new=description_new END
+						SAY_EVALUATED UNIDENTIFIED_DESC ~%description_new%~
+						BUT_ONLY_IF_IT_CHANGES
+
+					COPY_EXISTING ~%spell_res_ref%z.itm~ ~override~
+						SAY_EVALUATED IDENTIFIED_DESC ~%description_new%~
+						IF_EXISTS
+						BUT_ONLY_IF_IT_CHANGES
+				END
+			END
+			PATCH_VERBOSE
+		END
+	END
+	BUT_ONLY_IF_IT_CHANGES

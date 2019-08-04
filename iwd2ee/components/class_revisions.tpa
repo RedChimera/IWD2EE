@@ -118,7 +118,6 @@ COPY ~%mod_folder%/tables/feats.2da~ ~override~
 COPY ~%mod_folder%/tables/FEATCLAS.2da~ ~override~
 COPY ~%mod_folder%/tables/FEATLVL.2da~ ~override~
 COPY ~%mod_folder%/tables/LVLFEAT.2da~ ~override~
-COPY ~%mod_folder%/tables/LISTDOMN.2da~ ~override~
 COPY ~%mod_folder%/tables/LISTINNT.2da~ ~override~
 COPY ~%mod_folder%/tables/LISTSONG.2da~ ~override~
 COPY ~%mod_folder%/tables/HPBARB.2da~ ~override~
@@ -678,6 +677,26 @@ COPY_EXISTING ~help03.2da~ ~override~
         SET strref = RESOLVE_STR_REF(@542)
         SET_2DA_ENTRY_LATER rows_out row 2 ~%strref%~
       END
+      ~2~ BEGIN
+        SET strref = RESOLVE_STR_REF(@548)
+        SET_2DA_ENTRY_LATER rows_out row 2 ~%strref%~
+      END
+      ~3~ BEGIN
+        SET strref = RESOLVE_STR_REF(@547)
+        SET_2DA_ENTRY_LATER rows_out row 2 ~%strref%~
+      END
+      ~4~ BEGIN
+        SET strref = RESOLVE_STR_REF(@546)
+        SET_2DA_ENTRY_LATER rows_out row 2 ~%strref%~
+      END
+      ~6~ BEGIN
+        SET strref = RESOLVE_STR_REF(@545)
+        SET_2DA_ENTRY_LATER rows_out row 2 ~%strref%~
+      END
+      ~9~ BEGIN
+        SET strref = RESOLVE_STR_REF(@544)
+        SET_2DA_ENTRY_LATER rows_out row 2 ~%strref%~
+      END
       DEFAULT
     END
   END
@@ -1110,13 +1129,23 @@ COPY ~%mod_folder%/itm/USSTDR39.itm~ ~override~
 COPY ~%mod_folder%/spl/USSTCD1.spl~ ~override~
 COPY ~%mod_folder%/spl/USSTCD2.spl~ ~override~
 
-// replacement for Pain Touch
+// replacement for Cleric special abilities
 
+COPY ~%mod_folder%/spl/SPIN263.spl~ ~override~
+  SAY NAME1 @190
+  SAY NAME2 @190
+COPY ~%mod_folder%/spl/SPIN264.spl~ ~override~
+  SAY NAME1 @191
+  SAY NAME2 @191
+COPY ~%mod_folder%/spl/SPIN265.spl~ ~override~
+COPY ~%mod_folder%/spl/SPIN266.spl~ ~override~
+COPY ~%mod_folder%/spl/SPIN267.spl~ ~override~
+COPY ~%mod_folder%/spl/SPIN268.spl~ ~override~
+COPY ~%mod_folder%/spl/SPIN269.spl~ ~override~
 COPY ~%mod_folder%/spl/SPIN270.spl~ ~override~
   SAY NAME1 @146
   SAY NAME2 @146
-  SAY UNIDENTIFIED_DESC @147
-  SAY IDENTIFIED_DESC @147
+COPY ~%mod_folder%/spl/SPIN271.spl~ ~override~
 
 // Copying over all the spells involved in the revised shapeshifting forms.
 
