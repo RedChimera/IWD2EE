@@ -398,8 +398,8 @@ This spell will heal 5d8+25 hit points and cure a creature of all of the followi
 Level: Drd 7, Lathander 8
 Range: Caster
 Duration: 2 rounds/level
-Casting Time: 7
-Area of Effect: 5-foot radius
+Casting Time: 2
+Area of Effect: 20-foot radius
 Saving Throw: None 
 
 Upon casting this spell, the caster exudes magical energy that imbues all allies in the area of effect with healthy vigor.  This allows them to perform tremendous physical feats well beyond their normal capabilities.  All allies in the area of effect gain a +4 bonus to strength, dexterity and constitution for the duration of the spell.~
@@ -1104,7 +1104,7 @@ Saving Throw: Reflex half
 
 Upon casting this spell, a skull is thrown by the caster at the target area. The skull floats in the area until a creature comes within 5 feet of it. When this happens, the skull is triggered and explodes, dealing 1d6 slashing damage per level (max 10d6) to all creatures in a 10-foot radius. When casting this spell, it is wise to set it far away from the party, lest they set it off accidentally.  Leaving the area the Skull Trap is in will make it disappear harmlessly.  A successful Reflex save will do half damage.~
 @1561    = ~Spider Spawn~
-@1562    = ~Spider Spawn 
+@1562    = ~Spider Spawn
 (Conjuration) 
 Level: Drd 3, Sor/Wiz 3
 Range: Sight of Caster
@@ -1115,7 +1115,7 @@ Saving Throw: None
 
 This spell conjures a large spider which is brought under the caster's telepathic control.  There is a 20% chance of summoning 2 spiders.  The type of spider that appears depends upon the level of the caster:
 
-7th : Giant spider
+5th : Giant spider
 9th : Phase spider
 12th+ : Sword spider
 ~

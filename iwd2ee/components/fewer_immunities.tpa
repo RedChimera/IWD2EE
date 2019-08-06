@@ -1,7 +1,422 @@
 //NOTES
+
+OUTER_PATCH us_creature_constants BEGIN
+	creflags=0x10
+	gold=0x1c
+	states=0x20
+	currenthp=0x24
+	maxhp=0x26
+	maximumhp=0x26
+	animation=0x28
+	metalcolor=0x2c
+	minorcolor=0x2d
+	majorcolor=0x2e
+	skincolor=0x2f
+	leathercolor=0x30
+	armorcolor=0x31
+	haircolor=0x32
+	armorclass=0x46
+	fortitudesave=0x52
+	reflexsave=0x53
+	willsave=0x54
+	fireresistance=0x55
+	coldresistance=0x56
+	elecresistance=0x57
+	electricityresistance=0x57
+	acidresistance=0x58
+	spellresistance=0x59
+	magicfireresistance=0x5a
+	magiccoldresistance=0x5b
+	slashingresistance=0x5c
+	crushingresistance=0x5d
+	bludgeoningresistance=0x5d
+	piercingresistance=0x5e
+	missileresistance=0x5f
+	magicdamageresistance=0x60
+	luck=0x67
+	turnundeadlevel=0x68
+	leveltotal=0x8a
+	levelbarbarian=0x8b
+	levelbard=0x8c
+	levelcleric=0x8d
+	leveldruid=0x8e
+	levelfighter=0x8f
+	levelmonk=0x90
+	levelpaladin=0x91
+	levelranger=0x92
+	levelrogue=0x93
+	levelsorcerer=0x94
+	levelwizard=0x95
+	teamscript=0x1ac
+	specialscript1=0x1b4
+	enchantmentlevel=0x1bc
+	feats1=0x1c0
+	feats2=0x1c4
+	feats3=0x1c8
+	proficiencybow=0x1d8
+	proficiencycrossbow=0x1d9
+	proficiencymissile=0x1da
+	proficiencyaxe=0x1db
+	proficiencymace=0x1dc
+	proficiencyflail=0x1dd
+	proficiencypolearm=0x1de
+	proficiencyhammer=0x1df
+	proficiencystaff=0x1e0
+	proficiencyquarterstaff=0x1e0
+	proficiencygreatsword=0x1e1
+	proficiencylargesword=0x1e2
+	proficiencysmallblade=0x1e3
+	toughness=0x1e4
+	armoredarcana=0x1e5
+	cleave=0x1e6
+	armorproficiency=0x1e7
+	spellfocusenchantment=0x1e8
+	spellfocusevocation=0x1e9
+	spellfocusnecromancy=0x1ea
+	spellfocustransmutation=0x1eb
+	spellpenetration=0x1ec
+	extrarage=0x1ed
+	extrawildshape=0x1ee
+	extrasmiting=0x1ef
+	extraturning=0x1f0
+	proficiencybastardsword=0x1f1
+	skillalchemy=0x218
+	skillanimalempathy=0x219
+	skillbluff=0x21a
+	skillconcentration=0x21b
+	skilldiplomacy=0x21c
+	skilldisabledevice=0x21d
+	skillhide=0x21e
+	skillintimidate=0x21f
+	skilllore=0x220
+	skillknowledgearcana=0x220
+	skillmovesilently=0x221
+	skillopenlocks=0x222
+	skillpickpockets=0x223
+	skillsearch=0x224
+	skillspellcraft=0x225
+	skillusemagicdevice=0x226
+	skillwildernesslore=0x227
+	challengerating=0x25a
+	favoredenemy1=0x25b
+	favoredenemy2=0x25c
+	favoredenemy3=0x25d
+	favoredenemy4=0x25e
+	favoredenemy5=0x25f
+	favoredenemy6=0x260
+	favoredenemy7=0x261
+	favoredenemy8=0x262
+	subrace=0x263
+	strength=0x266
+	intelligence=0x267
+	wisdom=0x268
+	dexterity=0x269
+	constitution=0x26a
+	charisma=0x26b
+	morale=0x26c
+	moralebreak=0x26d
+	moralerecovery=0x26e
+	kit=0x270
+	overridescript=0x274
+	specialscript2=0x27c
+	combatscript=0x284
+	specialscript3=0x28c
+	movementscript=0x294
+	defaultvisibility=0x29c
+	deathvariableset=0x2aa
+	deathvariableincrement=0x2ca
+	fadeamount=0x301
+	attributes=0x303
+	allegiance=0x384
+	general=0x385
+	race=0x386
+	class=0x387
+	specifics=0x388
+	gender=0x389
+	alignment=0x38f
+	scriptname=0x394
+	class2=0x3b4
+	classmask=0x3b6
+	dialog=0x626
+	dialogue=0x626
+
+	actorsize=0x110
+	regionsize=0xc4
+	doorsize=0xc8
+END
+
+COPY ~%mod_folder%/bcs/bcs_revised_immunities~ ~override~
+
+COPY ~%mod_folder%/itm/itm_revised_immunities~ ~override~
+
+COPY_EXISTING ~41SHERI.cre~ ~override~ ~41SHERI2.cre~ ~override~ ~41SHERI3.cre~ ~override~ ~50DRAWY.cre~ ~override~ ~51DRAWY.cre~ ~override~ ~60GUARDI.cre~ ~override~ ~65IYTXM.cre~ ~override~
+	LPF	IWD2_ADD_CRE_ITEM STR_VAR item=~USBOSS~ slot=~cloak~ mode=~move~ END
+
+COPY_EXISTING ~41GOLEIC.cre~ ~override~ ~41GOLEMC.cre~ ~override~
+	WRITE_BYTE spellresistance 15
+
+COPY_EXISTING ~50WIL.cre~ ~override~ ~50WILH.cre~ ~override~ ~50WILX.cre~ ~override~
+	WRITE_BYTE fireresistance 20
+	WRITE_BYTE coldresistance 100
+	WRITE_BYTE electricityresistance 50
+	WRITE_BYTE acidresistance 20
+	WRITE_BYTE magicdamageresistance 0
+	WRITE_BYTE spellresistance 15
+
+COPY_EXISTING ~50WIL2.cre~ ~override~
+	WRITE_BYTE fireresistance 30
+	WRITE_BYTE coldresistance 100
+	WRITE_BYTE electricityresistance 100
+	WRITE_BYTE acidresistance 30
+	WRITE_BYTE magicdamageresistance 10
+	WRITE_BYTE spellresistance 20
+
+COPY_EXISTING ~50WIL3.cre~ ~override~
+	WRITE_BYTE fireresistance 20
+	WRITE_BYTE coldresistance 100
+	WRITE_BYTE electricityresistance 50
+	WRITE_BYTE acidresistance 30
+	WRITE_BYTE magicdamageresistance 0
+	WRITE_BYTE spellresistance 20
+
+COPY_EXISTING ~50DRAWY.cre~ ~override~ ~51DRAWY.cre~ ~override~ ~60GUARDI.cre~ ~override~
+	LPF	IWD2_ADD_CRE_ITEM STR_VAR item=~00CIDRG1~ slot=~lring~ mode=~replace~ END
+
+
+COPY_EXISTING ~51OCH.cre~ ~override~ ~51OCHH.cre~ ~override~ ~51OCHX.cre~ ~override~
+	WRITE_BYTE reflexsave 0
+	WRITE_BYTE slashingresistance 20
+	WRITE_BYTE bludgeoningresistance 30
+	WRITE_BYTE piercingresistance 20
+	WRITE_BYTE missileresistance 0
+
+COPY_EXISTING ~52GOLIR.cre~ ~override~ ~61GOLIRO.cre~ ~override~ ~64IGOLEM.cre~ ~override~
+	WRITE_BYTE fireresistance 100
+	WRITE_BYTE coldresistance 50
+	WRITE_BYTE electricityresistance 20
+	WRITE_BYTE acidresistance 10
+	WRITE_BYTE magicdamageresistance 10
+	WRITE_BYTE spellresistance 25
+	WRITE_BYTE slashingresistance 15
+	WRITE_BYTE bludgeoningresistance 5
+	WRITE_BYTE piercingresistance 10
+	WRITE_BYTE missileresistance 10
+
+COPY_EXISTING ~52MNKBR.cre~ ~override~
+	WRITE_BYTE fireresistance 100
+	WRITE_BYTE coldresistance 0
+	WRITE_BYTE electricityresistance 10
+	WRITE_BYTE acidresistance 10
+	WRITE_BYTE magicdamageresistance 10
+	WRITE_BYTE spellresistance 20
+
+COPY_EXISTING ~52MNKCL.cre~ ~override~
+	WRITE_BYTE fireresistance 100
+	WRITE_BYTE coldresistance 15
+	WRITE_BYTE electricityresistance 100
+	WRITE_BYTE acidresistance 5
+	WRITE_BYTE magicdamageresistance 0
+	WRITE_BYTE spellresistance 15
+
+COPY_EXISTING ~52MNKCRB.cre~ ~override~
+	WRITE_BYTE fireresistance 30
+	WRITE_BYTE coldresistance 20
+	WRITE_BYTE electricityresistance 5
+	WRITE_BYTE acidresistance 0
+	WRITE_BYTE magicdamageresistance 0
+	WRITE_BYTE spellresistance 20
+	WRITE_BYTE slashingresistance 5
+	WRITE_BYTE piercingresistance 5
+	WRITE_BYTE bludgeoningresistance 0
+	WRITE_BYTE missileresistance 5
+
+COPY_EXISTING ~52MNKCRG.cre~ ~override~
+	WRITE_BYTE fireresistance 20
+	WRITE_BYTE coldresistance 20
+	WRITE_BYTE electricityresistance 100
+	WRITE_BYTE acidresistance 20
+	WRITE_BYTE magicdamageresistance 20
+	WRITE_BYTE spellresistance 25
+	WRITE_BYTE bludgeoningresistance 251 //-5
+
+COPY_EXISTING ~52MNKSA.cre~ ~override~
+	WRITE_BYTE fireresistance 0
+	WRITE_BYTE coldresistance 10
+	WRITE_BYTE electricityresistance 100
+	WRITE_BYTE acidresistance 30
+	WRITE_BYTE magicdamageresistance 10
+	WRITE_BYTE spellresistance 0
+	WRITE_BYTE slashingresistance 15
+	WRITE_BYTE bludgeoningresistance 5
+	WRITE_BYTE piercingresistance 10
+	WRITE_BYTE missileresistance 10
+
+COPY_EXISTING ~52MNKSH.cre~ ~override~
+	WRITE_BYTE fireresistance 10
+	WRITE_BYTE coldresistance 100
+	WRITE_BYTE electricityresistance 10
+	WRITE_BYTE acidresistance 50
+	WRITE_BYTE magicdamageresistance 10
+	WRITE_BYTE spellresistance 15
+	WRITE_BYTE enchantmentlevel 1
+
+COPY_EXISTING ~52MNKST.cre~ ~override~
+	WRITE_BYTE fireresistance 20
+	WRITE_BYTE coldresistance 30
+	WRITE_BYTE electricityresistance 5
+	WRITE_BYTE acidresistance 30
+	WRITE_BYTE magicdamageresistance 5
+	WRITE_BYTE spellresistance 15
+	WRITE_BYTE bludgeoningresistance 251 //-5
+
+COPY_EXISTING ~53FGOLEM.cre~ ~override~
+	WRITE_BYTE fireresistance 0
+	WRITE_BYTE coldresistance 20
+	WRITE_BYTE electricityresistance 100
+	WRITE_BYTE acidresistance 0
+	WRITE_BYTE magicdamageresistance 20
+	WRITE_BYTE spellresistance 20
+	WRITE_BYTE slashingresistance 0
+	WRITE_BYTE bludgeoningresistance 15
+	WRITE_BYTE piercingresistance 5
+	WRITE_BYTE missileresistance 0
+
+COPY_EXISTING ~53GOLIM.cre~ ~override~ ~53GOLIMH.cre~ ~override~
+	WRITE_BYTE fireresistance 10
+	WRITE_BYTE coldresistance 30
+	WRITE_BYTE electricityresistance 100
+	WRITE_BYTE acidresistance 5
+	WRITE_BYTE magicdamageresistance 50
+	WRITE_BYTE spellresistance 30
+	WRITE_BYTE slashingresistance 5
+	WRITE_BYTE bludgeoningresistance 25
+	WRITE_BYTE piercingresistance 15
+	WRITE_BYTE missileresistance 10
+
+COPY_EXISTING ~53GOLIMX.cre~ ~override~
+	WRITE_BYTE fireresistance 10
+	WRITE_BYTE coldresistance 30
+	WRITE_BYTE electricityresistance 100
+	WRITE_BYTE acidresistance 5
+	WRITE_BYTE magicdamageresistance 50
+	WRITE_BYTE spellresistance 0
+	WRITE_BYTE slashingresistance 5
+	WRITE_BYTE bludgeoningresistance 25
+	WRITE_BYTE piercingresistance 15
+	WRITE_BYTE missileresistance 10
+
+COPY_EXISTING ~53MGOLEM.cre~ ~override~
+	WRITE_BYTE fireresistance 40
+	WRITE_BYTE coldresistance 50
+	WRITE_BYTE electricityresistance 100
+	WRITE_BYTE acidresistance 15
+	WRITE_BYTE magicdamageresistance 50
+	WRITE_BYTE spellresistance 35
+	WRITE_BYTE slashingresistance 15
+	WRITE_BYTE bludgeoningresistance 15
+	WRITE_BYTE piercingresistance 5
+	WRITE_BYTE missileresistance 10
+
+COPY_EXISTING ~60ATALA.cre~ ~override~ ~60INHEIN.cre~ ~override~ ~60JAIGER.cre~ ~override~ ~60KAERVA.cre~ ~override~ ~60KAIRN.cre~ ~override~ ~60KHREE.cre~ ~override~
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~00CIBAR1~ ~USTOUGHE~
+
+COPY_EXISTING ~61MUSJEL.cre~ ~override~ ~61SLIOLI.cre~ ~override~
+	WRITE_BYTE reflexsave 2
+	WRITE_BYTE coldresistance 0
+	WRITE_BYTE electricityresistance 15
+	WRITE_BYTE slashingresistance 25
+	WRITE_BYTE bludgeoningresistance 35
+	WRITE_BYTE piercingresistance 25
+	WRITE_BYTE missileresistance 0
+
+// Patching fiends so they have fiendish immunities rather than undead immunities
+
+COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
+	READ_BYTE race therace
+	PATCH_IF (therace = 164 AND !(MOD_IS_INSTALLED ~iwd2ee.tp2~ ~23~)) OR (therace = 181 AND (MOD_IS_INSTALLED ~iwd2ee.tp2~ ~23~)) BEGIN
+		REPLACE_TEXTUALLY CASE_INSENSITIVE ~00CIDEAD~ ~USCIFIEN~
+		REPLACE_TEXTUALLY CASE_INSENSITIVE ~00CIDED1~ ~USCIFIEN~
+	END
+
+	BUT_ONLY_IF_IT_CHANGES
+
+// Patching elementals, salamanders and genies to have elemental resistances
+
+COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
+	READ_BYTE race therace
+	PATCH_IF (therace = 152) OR (therace = 161) OR (therace = 175) BEGIN
+		LPF	IWD2_REMOVE_CRE_ITEM STR_VAR item=~00CIDED1 00CIDEAD~ END
+		READ_LONG 0x612 itemslotsoffset
+		READ_SSHORT (itemslotsoffset + 0x6) theslot
+		PATCH_IF theslot = ~-1~ BEGIN
+			LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item=~USCIELEM~ slot=~gloves~ END
+
+		END
+		ELSE BEGIN
+			READ_SSHORT (itemslotsoffset + 0x8) theslot
+			PATCH_IF theslot = ~-1~ BEGIN
+				LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item=~USCIELEM~ slot=~lring~ END
+			END
+			ELSE BEGIN
+				READ_SSHORT (itemslotsoffset + 0xA) theslot
+				PATCH_IF theslot = ~-1~ BEGIN
+					LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item=~USCIELEM~ slot=~rring~ END
+				END
+				ELSE BEGIN
+					READ_SSHORT (itemslotsoffset + 0xC) theslot
+					PATCH_IF theslot = ~-1~ BEGIN
+						LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item=~USCIELEM~ slot=~amulet~ END
+					END
+					ELSE BEGIN
+						READ_SSHORT (itemslotsoffset + 0xE) theslot
+						PATCH_IF theslot = ~-1~ BEGIN
+							LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item=~USCIELEM~ slot=~belt~ END
+						END
+						ELSE BEGIN
+							READ_SSHORT (itemslotsoffset + 0x10) theslot
+							PATCH_IF theslot = ~-1~ BEGIN
+								LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item=~USCIELEM~ slot=~boots~ END
+							END
+							ELSE BEGIN
+								READ_SSHORT (itemslotsoffset + 0x2A) theslot
+								PATCH_IF theslot = ~-1~ BEGIN
+									LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item=~USCIELEM~ slot=~cloak~ END
+								END
+							END
+						END
+					END
+				END
+			END
+		END
+	END
+	BUT_ONLY_IF_IT_CHANGES
+
+// Patching trolls so they have more HP but are vulnerable to fire and acid
+
+COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
+	READ_BYTE race therace
+	PATCH_IF therace = 165 BEGIN
+		READ_SSHORT currenthp thecurrenthp
+		READ_SSHORT maxhp themaxhp
+		WRITE_SHORT currenthp (thecurrenthp * 2)
+		WRITE_SHORT maxhp (themaxhp * 2)
+
+		READ_SBYTE fireresistance thefireresistance
+		READ_SBYTE coldresistance thecoldresistance
+		READ_SBYTE acidresistance theacidresistance
+		PATCH_IF thefireresistance < 20 BEGIN
+			WRITE_BYTE fireresistance (thefireresistance - 20)
+		END
+		ELSE BEGIN
+			WRITE_BYTE coldresistance (thecoldresistance - 20)
+		END
+		WRITE_BYTE acidresistance (theacidresistance - 20)
+	END
+	BUT_ONLY_IF_IT_CHANGES
+
 //We should patch these
 // replaces items that grant immunities to common enemy types and bosses
-
+/*
 COPY ~%mod_folder%/itm/BOSSRNG1.itm~ ~override~
 COPY ~%mod_folder%/itm/BOSSRNG2.itm~ ~override~
 COPY ~%mod_folder%/itm/LICHRNG1.itm~ ~override~
@@ -10,3 +425,4 @@ COPY ~%mod_folder%/itm/41ORIA.itm~ ~override~
 COPY ~%mod_folder%/itm/11VEIRA3.itm~ ~override~
 COPY ~%mod_folder%/itm/00CIDEAD.itm~ ~override~
 COPY ~%mod_folder%/itm/00CIDED1.itm~ ~override~
+*/

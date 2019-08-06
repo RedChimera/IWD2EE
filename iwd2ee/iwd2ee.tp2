@@ -145,7 +145,7 @@ BEGIN @19
 
 BEGIN @20
 
-      INCLUDE ~%mod_folder%/components/fewer_immunities.tpa~      //~Fewer Immunities for Bosses~
+      INCLUDE ~%mod_folder%/components/fewer_immunities.tpa~      //~Revised Creature Immunities~
 
 //Shapeshifting Sound Fix
 
@@ -159,12 +159,17 @@ BEGIN @22
 
       INCLUDE ~%mod_folder%/components/accurate_saves.tpa~      //~More Accurate Saving Throws for Enemies~
 
-//Make All Creatures Vulnerable to Critical Hits
+//Revise Critical Hit Immunity
 
-BEGIN @23
+BEGIN @56
+SUBCOMPONENT @23
 
-      INCLUDE ~%mod_folder%/components/critical_hits.tpa~      //~Make All Creatures Vulnerable to Critical Hits~
+      INCLUDE ~%mod_folder%/components/critical_hits_1.tpa~      //~Undead, constructs, objects, elementals and oozes become immune to critical hits; all other creatures become vulnerable to critical hits~
 
+BEGIN @57
+SUBCOMPONENT @23
+
+      INCLUDE ~%mod_folder%/components/critical_hits_2.tpa~      //~Revise Critical Hit Immunity~
 
 //Sudden Death Mode
 
@@ -289,58 +294,58 @@ BEGIN @42
 
 BEGIN @43
 
-      INCLUDE ~%mod_folder%/components/race_revisions.tpa~      //Race Revisions
+      INCLUDE ~%mod_folder%/components/race_revisions.tpa~      //~Race Revisions~
 
 //Enemies give the same amount of experience regardless of the party's level
 
 BEGIN @50
 SUBCOMPONENT @44
 
-      INCLUDE ~%mod_folder%/components/constant_xp_1.tpa~      //Enemies give 25 * CR experience
+      INCLUDE ~%mod_folder%/components/constant_xp_1.tpa~      //~Enemies give 25 * CR experience~
 
 BEGIN @51
 SUBCOMPONENT @44
 
-      INCLUDE ~%mod_folder%/components/constant_xp_2.tpa~      //Enemies give 35 * CR experience
+      INCLUDE ~%mod_folder%/components/constant_xp_2.tpa~      //~Enemies give 35 * CR experience~
 
 //Adjust encounter level-scaling
 
 BEGIN @46
 SUBCOMPONENT @45
 
-      INCLUDE ~%mod_folder%/components/high_level_encounters_1.tpa~ //Always fight at least the medium-level version of an encounter
+      INCLUDE ~%mod_folder%/components/high_level_encounters_1.tpa~ //~Always fight at least the medium-level version of an encounter~
 
 BEGIN @47
 SUBCOMPONENT @45
 
-      INCLUDE ~%mod_folder%/components/high_level_encounters_2.tpa~ //Always fight the high-level version of an encounter
+      INCLUDE ~%mod_folder%/components/high_level_encounters_2.tpa~ //~Always fight the high-level version of an encounter~
 
 //Reduce the HP bonuses of creatures in Heart of Fury Mode
 
 BEGIN @48
 
-      INCLUDE ~%mod_folder%/components/hof_bonus_changes_1.tpa~ //Reduce the HP bonuses of creatures in Heart of Fury Mode
+      INCLUDE ~%mod_folder%/components/hof_bonus_changes_1.tpa~ //~Reduce the HP bonuses of creatures in Heart of Fury Mode~
 
 //Reduce the attack bonuses of creatures in Heart of Fury Mode
 
 BEGIN @52
 
-      INCLUDE ~%mod_folder%/components/hof_attack_changes_1.tpa~ //Reduce the attack bonuses of creatures in Heart of Fury Mode
+      INCLUDE ~%mod_folder%/components/hof_attack_changes_1.tpa~ //~Reduce the attack bonuses of creatures in Heart of Fury Mode~
 
 //Reduce the Saving Throw bonuses of creatures in Heart of Fury Mode
 
 BEGIN @54
 SUBCOMPONENT @53
 
-      INCLUDE ~%mod_folder%/components/hof_save_changes_1.tpa~ //Creatures in Heart of Fury Mode get -3 to all saves
+      INCLUDE ~%mod_folder%/components/hof_save_changes_1.tpa~ //~Creatures in Heart of Fury Mode get -3 to all saves~
 
 BEGIN @55
 SUBCOMPONENT @53
 
-      INCLUDE ~%mod_folder%/components/hof_save_changes_1.tpa~ //Creatures in Heart of Fury Mode that are normally 10 HD or less get -3 to all saves
+      INCLUDE ~%mod_folder%/components/hof_save_changes_1.tpa~ //~Creatures in Heart of Fury Mode that are normally 10 HD or less get -3 to all saves~
 
 //Remove ability score bonuses of allied summoned creatures in Heart of Fury Mode
 
 BEGIN @49
 
-      INCLUDE ~%mod_folder%/components/hof_summon_changes_1.tpa~ //Remove ability score bonuses of allied summoned creatures in Heart of Fury Mode
+      INCLUDE ~%mod_folder%/components/hof_summon_changes_1.tpa~ //~Remove ability score bonuses of allied summoned creatures in Heart of Fury Mode~

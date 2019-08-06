@@ -519,11 +519,9 @@ COPY ~%mod_folder%/race/SPPR113.spl~ ~override~
   SAY NAME2 @1833
   SAY UNIDENTIFIED_DESC @1834
   SAY IDENTIFIED_DESC @1834
-COPY ~%mod_folder%/race/SPPR707.spl~ ~override~
-  SAY NAME1 @1591
-  SAY NAME2 @1591
-  SAY UNIDENTIFIED_DESC @1592
-  SAY IDENTIFIED_DESC @1592
+COPY_EXISTING ~SPPR707.spl~ ~override~
+	LPF ALTER_EFFECT INT_VAR match_opcode=402 match_parameter2=11 parameter2=17 END
+
 COPY ~%mod_folder%/race/SPWI711.spl~ ~override~
   SAY NAME1 @1567
   SAY NAME2 @1567

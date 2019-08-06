@@ -45,4 +45,14 @@ COPY_EXISTING ~action.ids~ ~override~
 192 SpellPointNoDecRES(S:RES*,P:Target*)~
 	UNLESS ~192 SpellPointNoDecRES~
 
+COPY_EXISTING ~action.ids~ ~override~
+	REPLACE_TEXTUALLY EXACT_MATCH ~160 ApplySpell(O:Target,I:Spell*Spell)~ ~160 ApplySpell(O:Target,I:Spell*Spell)
+160 ApplySpellRES(S:RES*,O:Target)~
+	UNLESS ~160 ApplySpellRES~
+
+COPY_EXISTING_REGEXP ~50CVENl0\.bcs~ ~override~ ~52CC[1-8]P[1-6]\.bcs~ ~override~ ~52MOROH3\.bcs~ ~override~ ~61PCFLOR\.bcs~ ~override~ //Fixing a bug where permanent effects would be removed from PCs via certain scripts
+	DECOMPILE_AND_PATCH BEGIN
+		REPLACE_TEXTUALLY EXACT_MATCH ~ClearSpriteEffects(~ ~ApplySpellRES("USDISPEL",~
+	END
+
 VERBOSE

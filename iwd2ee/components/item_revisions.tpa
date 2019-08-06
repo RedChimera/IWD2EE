@@ -3606,6 +3606,12 @@ USRTHF39	USSWDK46
 USRTHF40	USHELM45
 USRTHF41	USHAMTDT
 
+USRHF001	USAROW47
+USRHF002	00AROW06
+USRHF003	00AROW91
+USRHF004	USPLAT51
+USRHF005	00BRAC10
+
 USHFMODA	USNOTHIN
 USHFMODB	USNOTHIN
 USHFMODP	USNOTHIN
@@ -3660,6 +3666,12 @@ USRTHF38	USHFPTSW
 USRTHF39	USHFSK46
 USRTHF40	USHELM50
 USRTHF41	USHFHTDT
+
+USRHF001	USAROW57
+USRHF002	USAROW54
+USRHF003	USAROW49
+USRHF004	USPLAT59
+USRHF005	USBRAC59
 
 USHFMODA	USHFMDA
 USHFMODB	USHFMDB
@@ -3733,6 +3745,7 @@ ACTION_IF !(MOD_IS_INSTALLED ~Setup-IWD2-Ease.tp2~ ~18~) BEGIN //If Include Forg
 END
 
 COPY_EXISTING ~10guthe.sto~ ~override~ //Salty Dog Barbarian store
+	ADD_STORE_ITEM ~00AROW97~ AFTER ~00AROW02~ #40 #1 #1 ~IDENTIFIED~ #3
 	ADD_STORE_ITEM ~00BOOT15~ #1 #1 #1 ~IDENTIFIED~ #1 //Winter Wolf Boots
 	ADD_STORE_ITEM ~00CLCK18~ #1 #1 #1 ~IDENTIFIED~ #1 //Winter Wolf Cloak
 	ADD_STORE_ITEM ~00BRAC18~ #1 #1 #1 ~IDENTIFIED~ #1 //Winter Wolf Gloves
@@ -3786,6 +3799,7 @@ COPY_EXISTING ~11ragnib.sto~ ~override~ //Targos Temple of Tempus
 	REMOVE_STORE_ITEM ~00RING74~
 
 COPY_EXISTING ~20arte.sto~ ~override~ //Shaengarne villager store
+	ADD_STORE_ITEM ~00AROW96~ AFTER ~00AROW01~ #40 #1 #1 ~IDENTIFIED~ #1 ~UNLIMITED~ //Hunting Arrows
 	ADD_STORE_ITEM ~11RTHF02~ #1 #1 #1 ~IDENTIFIED~ #1 //Lucky Knucky
 	ADD_STORE_ITEM ~00RTHF12~ AFTER ~00MISC32~ #1 #1 #1 ~IDENTIFIED~ #1 //Hagnen's Foolishness
 
@@ -3822,6 +3836,7 @@ COPY_EXISTING ~50NYM2.sto~ ~override~ //Nym store
 
 COPY_EXISTING ~00BASHS3.sto~ ~override~ //Avarine Decanter genie store
 	WRITE_LONG 0x14 155 //Buying stuff from him costs less money (since he actually has some good stuff now), though his goods are still overpriced
+	ADD_STORE_ITEM ~USRHF005~ AFTER ~00BRAC10~ #1 #1 #1 ~IDENTIFIED~ #1
 	ADD_STORE_ITEM ~00ROBE16~ AFTER ~00ROBE15~ #1 #1 #1 ~IDENTIFIED~ #1 //Robe of Electrical Resistance
 	ADD_STORE_ITEM ~50RTHF04~ AFTER ~00ROBE16~ #1 #1 #1 ~IDENTIFIED~ #1 //Milton Sixtoes armor
 	ADD_STORE_ITEM ~00WAND42~ AFTER ~00WAND04~ #50 #1 #1 ~IDENTIFIED~ #1 //Wand of Cure Moderate Wounds
@@ -3836,7 +3851,7 @@ COPY_EXISTING ~00BASHS3.sto~ ~override~ //Avarine Decanter genie store
 	ADD_STORE_ITEM ~USAROW52~ AFTER ~00AROW07~ #1 #1 #1 ~IDENTIFIED~ #30 //Arrows of Detonation
 	ADD_STORE_ITEM ~USRINGTH~ AFTER ~00RING18~ #1 #1 #1 ~IDENTIFIED~ #1 //Ring of Thex
 	ADD_STORE_ITEM ~USRTHF39~ AFTER ~USRINGTH~ #1 #1 #1 ~IDENTIFIED~ #1 //Celestial Fury
-	REMOVE_STORE_ITEM ~00WAND24~
+	REMOVE_STORE_ITEM ~00WAND24~ ~00BRAC10~
 
 COPY_EXISTING ~50TAHVO.sto~ ~override~ //Nym store
 	ADD_STORE_ITEM ~00RTHF51~ AFTER ~00BOWS03~ #1 #1 #1 ~IDENTIFIED~ #1 //Eye of the Hunter bow
@@ -3938,6 +3953,9 @@ COPY_EXISTING ~60SHEEMI.sto~ ~override~ //Conlan store
 	REMOVE_STORE_ITEM ~00RTHF26~ ~00RTHF54~ ~00RTHF58~ ~00RTHF73~ ~00HALB94~ ~00HALB96~ ~00CLCK03~ ~00ROBE04~ ~00ROBE99~ ~00RING15~ ~00RING22~
 
 COPY_EXISTING ~61ARCHON.sto~ ~override~ //Dragon's Eye lava ferry store
+	READ_LONG 0x10 ulgiash
+	ulgiash|=0x1
+	WRITE_LONG 0x10 ulgiash
 	WRITE_LONG 0x14 130
 	WRITE_LONG 0x18 50
 	WRITE_LONG 0x1C 20
@@ -4007,6 +4025,7 @@ COPY_EXISTING ~ar4101.are~ ~override~ //Ice Temple level 1
 	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR container=26 charges1=1  charges2=1  charges3=1 single_match=1 STR_VAR old_item=~RT01_L~ new_item=~RT05_R~ END
 
 COPY_EXISTING ~ar4102.are~ ~override~ //Ice Temple level 2
+	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR charges1=1  charges2=1  charges3=1 single_match=1 STR_VAR old_item=~00AROW91~ new_item=~USRHF003~ END
 	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR charges1=5  charges2=0  charges3=0 single_match=1 STR_VAR old_item=~00MISC02~ new_item=~00POTN24~ END
 	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR container=12 charges1=1  charges2=1  charges3=1 single_match=1 STR_VAR old_item=~00BOLT01~ new_item=~RT08_R~ END
 	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR container=14 charges1=1  charges2=1  charges3=1 single_match=1 STR_VAR old_item=~RT07_M~ new_item=~RT07_R~ END

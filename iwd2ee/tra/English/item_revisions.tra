@@ -4086,7 +4086,7 @@ Type:  One-handed~
 //@10877    = ~Death's Bane~
 @10878    = ~Delnar was a timid mage who never was one for adventure.  He spent most of his life in quiet study, living with his mother, trying to learn the art of crafting magical items.  Unfortunately, his mother had a habit of interrupting him at crucial points during the enchantment process, often with disastrous results.  Death's Bane is another botched attempt by Delnar to construct something of use.
 
-This weapon is truly an enigma.  When used in battle it does little to no damage, instead healing the intended target.  However, the healing is miniscule at best and hardly worth the effort required to swing the blade.  In any case, it has been given the name 'Death's Bane' because of its inability to slay a target.
+This weapon is truly an enigma.  When used in battle it does little to no damage, instead healing the intended target.  It has been given the name 'Death's Bane' because of its inability to slay a target.
 
 What purpose Delnar originally intended this weapon to serve is unknown.  There are some who argue that it functions as intended, while others laugh at the absurdity of this.
 
@@ -4104,7 +4104,7 @@ Type:  One-handed~
 //@10879    = ~Delnar's Healing Blade~
 @10880    = ~Delnar was a timid mage who never was one for adventure.  He spent most of his life in quiet study, living with his mother, trying to learn the art of crafting magical items.  Unfortunately, his mother had a habit of interrupting him at crucial points during the enchantment process, often with disastrous results.  Delnar's Healing Blade is another botched attempt by Delnar to construct something of use.
 
-This weapon is truly an enigma.  When used in battle it does little to no damage, instead healing the intended target.  However, the healing is miniscule at best and hardly worth the effort required to swing the blade.  In any case, it has been given the name 'Delnar's Healing Blade' because of its inability to slay a target.
+This weapon is truly an enigma.  When used in battle it does little to no damage, instead healing the intended target.  It has been given the name 'Delnar's Healing Blade' because of its inability to slay a target.
 
 What purpose Delnar originally intended this weapon to serve is unknown.  There are some who argue that it functions as intended, while others laugh at the absurdity of this.
 
@@ -4119,21 +4119,21 @@ Special:  Heals 6d6 points of damage per hit
 Weight: 4 lb.
 Feat Requirement:  Martial Weapon, Large Sword
 Type:  One-handed~
-@10881    = ~Dykhast Longsword~
-@10882    = ~Ancient dwarven legends tell of a time when the noblest of metals was not dwarven steel, nor meteoric iron, nor mithril, but dykhast - an alloy so strong that a blade's edge would never dull with toil or battle, and with a surface so perfect and gleaming that its shimmering surface could be seen a dragon's flight away.  The oldest of dwarves speak of dykhast blades with tears of fond remembrance in their eyes, and callously spit at the mention of the "sundry weak and piddling'" metals that today's arms and armor are fashioned from.
+@10881    = ~Dykhast Sword~
+@10882    = ~Ancient dwarven legends tell of a time when the noblest of metals was not dwarven steel, nor meteoric iron, nor mithril, but dykhast - an alloy so strong that a blade's edge would never dull with toil or battle, and with a surface so perfect and gleaming that its shimmering surface could be seen a dragon's flight away.  The oldest of dwarves speak of dykhast blades with tears of fond remembrance in their eyes, and callously spit at the mention of the "sundry weak and piddling" metals that today's arms and armor are fashioned from.
 
 There are rumors, though, of an ancient and secret temple called Chogoh Kyn - it is there, the tales say, that blades of dykhast are still made in the fashion of days long past.  The price may be high, but for the true connoisseur, there is no matching the glory, the perfection, the utter joy... of dykhast.
 
 STATISTICS:
 
-Damage:  1d8 + 6
-Attack Bonus: +6 
+Damage:  1d10 + 6
+Attack Bonus: +6
 Enchantment:  +6
 Damage Type:  Slashing
 Special:
   Keen: Increased chance of a critical hit
 Weight: 1 lb.
-Feat Requirement:  Martial Weapon, Large Sword
+Feat Requirement:  Exotic Weapon, Bastard Sword
 Type:  One-handed~
 @10883    = ~Sword of Gleaming Dykhast~
 @10884    = ~Ancient dwarven legends tell of a time when the noblest of metals was not dwarven steel, nor meteoric iron, nor mithril, but dykhast - an alloy so strong that a blade's edge would never dull with toil or battle, and with a surface so perfect and gleaming that its shimmering surface could be seen a dragon's flight away.  The oldest of dwarves speak of dykhast blades with tears of fond remembrance in their eyes, and callously spit at the mention of the "sundry weak and piddling'" metals that today's arms and armor are fashioned from.
@@ -4142,14 +4142,14 @@ There are rumors, though, of an ancient and secret temple called Chogoh Kyn - it
 
 STATISTICS:
 
-Damage:  1d8 + 12
-Attack Bonus: +12 
+Damage:  1d10 + 12
+Attack Bonus: +12
 Enchantment:  +12
 Damage Type:  Slashing
 Special:
   Keen: Increased chance of a critical hit
 Weight: 1 lb.
-Feat Requirement:  Martial Weapon, Large Sword
+Feat Requirement:  Exotic Weapon, Bastard Sword
 Type:  One-handed~
 //@10885    = ~Heart of <CHARNAME>~
 @10886    = ~You have no idea where this dwarven-forged blade came from, but clearly etched on its blade is "<CHARNAME>."  You're sure you've never seen it before, yet it feels strangely familiar when you hold it in your hand.  The blade looks several generations old and bears numerous nicks and scratches, and radiates a faint chill.  You have no idea how it came to bear your name.
@@ -4178,7 +4178,7 @@ This sword was left behind by a previous party when they retook the Severed Hand
 STATISTICS:
 
 Damage:  1d8 + 5
-Attack Bonus: + 5 
+Attack Bonus: + 5
 Enchantment:  +5
 Damage Type:  Slashing
 Special:
@@ -4205,7 +4205,7 @@ Attack Bonus:  +2
 Enchantment:  +2
 Damage Type:  Slashing
 Special:
-  Spell Process: 33% chance of casting Bane on target (Will DC 21)
+  Energy Drain: -1 to Attack Bonus / -1 to damage, -5 to max hit points (Fortitude DC 16)
 Weight: 4 lb.
 Feat Requirement:  Martial Weapon, Large Sword
 Type:  One-handed~
@@ -4221,7 +4221,7 @@ Attack Bonus:  +4
 Enchantment:  +4
 Damage Type:  Slashing
 Special:
-  Energy Drain: -3 to Attack Bonus / -3 to damage, -15 to max hit points (Fortitude DC 32) 
+  Energy Drain: -3 to Attack Bonus / -3 to damage, -15 to max hit points (Fortitude DC 22)
 Weight: 4 lb.
 Feat Requirement:  Martial Weapon, Large Sword
 Type:  One-handed~
@@ -4244,7 +4244,7 @@ From the moment Ehld left the throne room in search of the Lost Followers, the w
 
 Over six years, Ehld traveled the lands of Faerun and across the planes themselves, seeking the Six, and asking them to answer for their crimes.  Each scoffed at the old man and his worn-looking blade, only to find him a dangerous opponent... and in the end, the victor.  He recorded the events of their death upon a stone set into the pommel of his blade, and there was even regret in his writings that he had not been able to enlighten the Lost Followers to turn from their path before it came to its end.
 
-When the last of the Six had answered for their crimes upon the edge of the Cera Sumat blade, Ehld returned to the Weeping Queen and laid the blade at her feet.  Where once it had been a tarnished blade, it shone as brightly as the sun, and the stone in the pommel was covered with the writing of his journeys.  He detached the stone, and set into a chain, and he gave the Weeping Queen.  Ehld told her to keep the chain to wear as a reminder of the many evils of the world and that they are never far from one's heart... but if one's heart is true and one's path is righteous, one may triumph against any number of evils.  
+When the last of the Six had answered for their crimes upon the edge of the Cera Sumat blade, Ehld returned to the Weeping Queen and laid the blade at her feet.  Where once it had been a tarnished blade, it shone as brightly as the sun, and the stone in the pommel was covered with the writing of his journeys.  He detached the stone, and set into a chain, and he gave it to the Weeping Queen.  Ehld told her to keep the chain to wear as a reminder of the many evils of the world and that they are never far from one's heart... but if one's heart is true and one's path is righteous, one may triumph against any number of evils.
 
 Duke Ehld outlived his queen, living to the age of 107, at which point Ehld took his Cera Sumat and left the Barbed Kingdom... and is said to have traveled north.  In time, the Barbed Kingdom rose to its former glory and its name was changed, and with it, the fate of Cera Sumat and the Medallion of the Lost Followers was forgotten... until your arrival in Kuldahar and the medallion and the Holy Avenger were united once again to meet the Lost Followers in battle one final time.  
 
@@ -4284,7 +4284,7 @@ From the moment Ehld left the throne room in search of the Lost Followers, the w
 
 Over six years, Ehld traveled the lands of Faerun and across the planes themselves, seeking the Six, and asking them to answer for their crimes.  Each scoffed at the old man and his worn-looking blade, only to find him a dangerous opponent... and in the end, the victor.  He recorded the events of their death upon a stone set into the pommel of his blade, and there was even regret in his writings that he had not been able to enlighten the Lost Followers to turn from their path before it came to its end.
 
-When the last of the Six had answered for their crimes upon the edge of the Cera Sumat blade, Ehld returned to the Weeping Queen and laid the blade at her feet.  Where once it had been a tarnished blade, it shone as brightly as the sun, and the stone in the pommel was covered with the writing of his journeys.  He detached the stone, and set into a chain, and he gave the Weeping Queen.  Ehld told her to keep the chain to wear as a reminder of the many evils of the world and that they are never far from one's heart... but if one's heart is true and one's path is righteous, one may triumph against any number of evils.  
+When the last of the Six had answered for their crimes upon the edge of the Cera Sumat blade, Ehld returned to the Weeping Queen and laid the blade at her feet.  Where once it had been a tarnished blade, it shone as brightly as the sun, and the stone in the pommel was covered with the writing of his journeys.  He detached the stone, and set into a chain, and he gave it to the Weeping Queen.  Ehld told her to keep the chain to wear as a reminder of the many evils of the world and that they are never far from one's heart... but if one's heart is true and one's path is righteous, one may triumph against any number of evils.
 
 Duke Ehld outlived his queen, living to the age of 107, at which point Ehld took his Cera Sumat and left the Barbed Kingdom... and is said to have traveled north.  In time, the Barbed Kingdom rose to its former glory and its name was changed, and with it, the fate of Cera Sumat and the Medallion of the Lost Followers was forgotten... until your arrival in Kuldahar and the medallion and the Holy Avenger were united once again to meet the Lost Followers in battle one final time.  
 
