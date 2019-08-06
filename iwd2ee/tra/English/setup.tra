@@ -18,10 +18,10 @@
 @17   = ~Faster Severed Hand~
 @18   = ~More Potions for Oswald~
 @19   = ~Mage Scrolls for New Spells~
-@20   = ~Fewer Immunities for Bosses~
+@20   = ~Revised Creature Resistances and Immunities~
 @21   = ~Shapeshifting Sound Fix (only install if your druid makes strange noises after shapeshifting; otherwise is unnecessary)~
 @22   = ~More Accurate Saving Throws for Enemies~
-@23   = ~Make All Creatures Vulnerable to Critical Hits~
+@23   = ~Revise Critical Hit Immunity~
 @24   = ~Sudden Death Mode~
 @25   = ~Better Racial Enemies for Rangers~
 @26   = ~Cosmetic Tweaks~
@@ -54,3 +54,5 @@
 @53   = ~Reduce the Saving Throw bonuses of creatures in Heart of Fury Mode~
 @54   = ~Creatures in Heart of Fury Mode get -3 to all saves~
 @55   = ~Creatures in Heart of Fury Mode that are normally 10 HD or less get -3 to all saves~
+@56   = ~Undead, constructs, objects, elementals and oozes become immune to critical hits; all other creatures become vulnerable to critical hits~
+@57   = ~All creatures become vulnerable to critical hits~
