@@ -2172,6 +2172,12 @@ COPY_EXISTING ~sppr723.spl~ ~override~
 	SAY UNIDENTIFIED_DESC @1910
 	SAY IDENTIFIED_DESC @1910
 
+COPY_EXISTING ~sppr116.spl~ ~override~
+	SAY NAME1 @1911
+	SAY NAME2 @1911
+	SAY UNIDENTIFIED_DESC @1912
+	SAY IDENTIFIED_DESC @1912
+
 COPY_EXISTING ~effse.spl~ ~override~
 	LPF ALTER_EFFECT INT_VAR silent=1 check_headers=1 check_globals=1 match_opcode=10 opcode=18 parameter1=20 END
 	LPF DELETE_EFFECT INT_VAR silent=1 check_headers=1 check_globals=1 match_opcode=15 END
@@ -2773,6 +2779,37 @@ COPY_EXISTING ~LISTSPLL.2da~ ~override~
 				END
 			END
 			PATCH_VERBOSE
+		END
+	END
+	BUT_ONLY_IF_IT_CHANGES
+
+OUTER_SPRINT stringoneround @1977
+OUTER_SPRINT stringinstant @1978
+OUTER_SPRINT stringcastingtime @1979
+COPY_EXISTING ~LISTSPLL.2da~ ~override~
+	COUNT_2DA_COLS numcolumns
+	COUNT_2DA_ROWS numcolumns numrows
+	FOR (i = 0; i < numrows; ++i) BEGIN
+		READ_2DA_ENTRY i 8 numcolumns spell_res_ref
+		PATCH_IF FILE_EXISTS_IN_GAME ~%spell_res_ref%.spl~ BEGIN
+			INNER_ACTION BEGIN
+				COPY_EXISTING ~%spell_res_ref%.spl~ ~override~
+					READ_SHORT 0x94 thecastingtime ELSE 0
+					READ_LONG UNIDENTIFIED_DESC description_ref
+					PATCH_IF thecastingtime = 0 BEGIN
+						LPF PATCH_REPLACE_IN_STRING INT_VAR strref=description_ref match_case=1 new_string=1 STR_VAR match= EVAL ~%stringcastingtime%.*~ replace_with= EVAL ~%stringcastingtime% %stringinstant%~ RET description_new=description_new END
+					END
+					ELSE BEGIN
+						LPF PATCH_REPLACE_IN_STRING INT_VAR strref=description_ref match_case=1 new_string=1 STR_VAR match= EVAL ~%stringcastingtime%.*~ replace_with= EVAL ~%stringcastingtime% %thecastingtime%~ RET description_new=description_new END
+					END
+					SAY_EVALUATED UNIDENTIFIED_DESC ~%description_new%~
+					BUT_ONLY_IF_IT_CHANGES
+	
+				COPY_EXISTING ~%spell_res_ref%z.itm~ ~override~
+					SAY_EVALUATED IDENTIFIED_DESC ~%description_new%~
+					IF_EXISTS
+					BUT_ONLY_IF_IT_CHANGES
+			END
 		END
 	END
 	BUT_ONLY_IF_IT_CHANGES

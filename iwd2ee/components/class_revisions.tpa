@@ -666,7 +666,7 @@ COPY_EXISTING ~help02.2da~ ~override~
   END
   SET_2DA_ENTRIES_NOW rows_out num_cols
 BUT_ONLY
-
+/*
 COPY_EXISTING ~help03.2da~ ~override~
   COUNT_2DA_COLS num_cols
   READ_2DA_ENTRIES_NOW rows num_cols
@@ -702,6 +702,7 @@ COPY_EXISTING ~help03.2da~ ~override~
   END
   SET_2DA_ENTRIES_NOW rows_out num_cols
 BUT_ONLY
+*/
 /*
 COPY_EXISTING ~help04.2da~ ~override~
   COUNT_2DA_COLS num_cols
@@ -772,6 +773,34 @@ COPY_EXISTING ~help04.2da~ ~override~
 BUT_ONLY
 */
 // New description reflecting the changes to Painbearers of Ilmater
+STRING_SET_EVALUATE 38118 @542
+STRING_SET_EVALUATE 38126 @544
+STRING_SET_EVALUATE 38123 @545
+STRING_SET_EVALUATE 38121 @546
+STRING_SET_EVALUATE 38120 @547
+STRING_SET_EVALUATE 38119 @548
+/*
+COPY_EXISTING ~KITLIST.2da~ ~override~
+	strref_ilmater = RESOLVE_STR_REF(@542)
+	strref_talos = RESOLVE_STR_REF(@544)
+	strref_tempus = RESOLVE_STR_REF(@545)
+	strref_helm = RESOLVE_STR_REF(@546)
+	strref_selune = RESOLVE_STR_REF(@547)
+	strref_lathander = RESOLVE_STR_REF(@548)
+	LPF GET_2DA_ROW STR_VAR match=~CLERIC_ILMATER~ RET numcolumns=numcols row=matched END
+	SET_2DA_ENTRY row 3 numcolumns ~%strref_ilmater%~
+	LPF GET_2DA_ROW STR_VAR match=~CLERIC_TALOS~ RET numcolumns=numcols row=matched END
+	SET_2DA_ENTRY row 3 numcolumns ~%strref_talos%~
+	LPF GET_2DA_ROW STR_VAR match=~CLERIC_TEMPUS~ RET numcolumns=numcols row=matched END
+	SET_2DA_ENTRY row 3 numcolumns ~%strref_tempus%~
+	LPF GET_2DA_ROW STR_VAR match=~CLERIC_HELM~ RET numcolumns=numcols row=matched END
+	SET_2DA_ENTRY row 3 numcolumns ~%strref_helm%~
+	LPF GET_2DA_ROW STR_VAR match=~CLERIC_SELUNE~ RET numcolumns=numcols row=matched END
+	SET_2DA_ENTRY row 3 numcolumns ~%strref_selune%~
+	LPF GET_2DA_ROW STR_VAR match=~CLERIC_LATHANDER~ RET numcolumns=numcols row=matched END
+	SET_2DA_ENTRY row 3 numcolumns ~%strref_lathander%~
+*/
+/*
 COPY_EXISTING ~KITLIST.2da~ ~override~
   COUNT_2DA_COLS num_cols
   READ_2DA_ENTRIES_NOW rows num_cols
@@ -787,7 +816,7 @@ COPY_EXISTING ~KITLIST.2da~ ~override~
   END
   SET_2DA_ENTRIES_NOW rows_out num_cols
 BUT_ONLY
-
+*/
 /*
 // Not all race and class descriptions are connected to .2da files. For the others, we have to use STRING_SET to simply replace them.
 STRING_SET 25 ~HALF-ORCS:

@@ -2,8 +2,8 @@
 
 APPEND ~RT_NORM.2da~
 ~
-USHFMODA	USNOTHIN
-USHFMODB	USNOTHIN
+USHFMODA	No_Drop
+USHFMODB	No_Drop
 ~
 UNLESS ~USHFMODA~
 
@@ -71,8 +71,9 @@ ACTION_IF NOT FILE_EXISTS_IN_GAME ~ushfmoda.itm~ BEGIN
 		END
 		BUT_ONLY_IF_IT_CHANGES
 
-	COPY_EXISTING ~charbase.cre~ ~override~
-		LPF	IWD2_REMOVE_CRE_ITEM STR_VAR item=~USHFMODA~ END
+	COPY_EXISTING ~CHARBASE.cre~ ~override~ ~USGEOF.cre~ ~override~ ~USREIG.cre~ ~override~ ~USVEIR.cre~ ~override~ ~USEMMA.cre~ ~override~ ~USVREK.cre~ ~override~ ~USVUNA.cre~ ~override~ ~USXHAA.cre~ ~override~ ~USZACK.cre~ ~override~ ~USPAIR.cre~ ~override~ ~USSERS.cre~ ~override~
+		LPF	IWD2_REMOVE_CRE_ITEM STR_VAR item=~USHFMODA USHFMODB~ END
+		IF_EXISTS
 END
 
 COPY_EXISTING_REGEXP ~ushfmd[ab]\.itm~ ~override~

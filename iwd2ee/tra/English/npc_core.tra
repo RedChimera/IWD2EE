@@ -1,3 +1,203 @@
+
+
+@4800     = ~Summon Aocha~
+@4801     = ~Reform Party~
+@4802     = ~Veira's Wedding Ring~
+@4803     = ~This ring is the only part of Veira that remains truly tangible.  Bound in death as well as life, the ring never leaves Veira's finger.
+
+Veira remains only partly corporeal so long as she clings to the Material Plane.  She can interact with the world around her, but her partially ethereal form has no need for sleep, and she can neither enjoy the pleasure of food or drink, nor can she suffer the pain of illness and injury.  If her form is damaged, she can slowly regenerate over time, but she is otherwise immune to all biological effects, both positive and negative.  If her form is destroyed, she can be restored with a sufficient burst of positive energy, such as a Raise Dead spell.
+
+STATISTICS:
+
+Regeneration: 1 hit point per round
+Damage Reduction: 5/+1 Damage Reduction
+Resistance: 25/- Cold Resistance
+Resistance: 5/- Acid, Electricity, and Fire Resistance
+Immunity to healing spells, fatigue, poison, disease, bleeding wounds, stun, web, entangle, intoxication, nausea, vampiric touch, energy drain, Stoneskin, Iron Skins, Barkskin, enfeeblement, Otiluke's Resilient Sphere, Tortoise Shell, Horrid Wilting, death magic, petrification, polymorph, critical hits, and most potions.
+Weight: 0 lb.~
+@4804     = ~Veira's Wedding Ring~
+@4805     = ~This ring is the only part of Veira that remains truly tangible.  Bound in death as well as life, the ring never leaves Veira's finger.
+
+Veira remains only partly corporeal so long as she clings to the Material Plane.  She can interact with the world around her, but her partially ethereal form has no need for sleep, and she can neither enjoy the pleasure of food or drink, nor can she suffer the pain of illness and injury.  If her form is damaged, she can slowly regenerate over time, but she is otherwise immune to all biological effects, both positive and negative.  If her form is destroyed, she can be restored with a sufficient burst of positive energy, such as a Raise Dead spell.
+
+STATISTICS:
+
+Regeneration: 1 hit point per round
+Damage Reduction: 5/+1 Damage Reduction
+Resistance: 25/- Cold Resistance
+Resistance: 5/- Acid, Electricity, and Fire Resistance
+Immunity to healing spells, fatigue, poison, disease, bleeding wounds, stun, web, entangle, intoxication, nausea, vampiric touch, energy drain, Stoneskin, Iron Skins, Barkskin, enfeeblement, Otiluke's Resilient Sphere, Tortoise Shell, Horrid Wilting, death magic, petrification, polymorph, critical hits, and most potions.
+Weight: 0 lb.~
+@4806     = ~Vrek's Claw~
+@4807     = ~Vrek prefers to use his jagged claws in combat, finding conventional weapons designed for humanoid hands to be clumsy in his grip.  Vrek may still use a shield or a weapon in his off hand, but he uses his claws as his primary attack.  As a magical being, Vrek's claws strike as a +1 weapon for the purposes of overcoming damage reduction.
+
+STATISTICS: 
+
+Damage: 1d8 + 1 
+Attack Bonus: +1  
+Enchantment:  +1
+Damage Type: Slashing
+Weight: 0 lb.
+Feat Requirement:  None
+Type:  One-handed~
+@4808     = ~Vrek's Claw~
+@4809     = ~Vrek prefers to use his jagged claws in combat, finding conventional weapons designed for humanoid hands to be clumsy in his grip.  Vrek may still use a shield or a weapon in his off hand, but he uses his claws as his primary attack.  As a magical being, Vrek's claws strike as a +1 weapon for the purposes of overcoming damage reduction.
+
+STATISTICS: 
+
+Damage: 1d8 + 1 
+Attack Bonus: +1  
+Enchantment:  +1
+Damage Type: Slashing
+Weight: 0 lb.
+Feat Requirement:  None
+Type:  One-handed~
+@4810     = ~Vrek's Hide~
+@4811     = ~Vrek's hide is unique among trolls.  His entire body is covered with a strange growth of unknown origin, and as a river troll born in the frozen North, he is naturally resistant to cold temperatures.  Combined with his thick, scaly skin and innate regeneration, Vrek is extremely resilient to natural attacks.
+
+STATISTICS:
+
+Armor Bonus: +6
+Max Dex Bonus:  None
+Special:
+  Resistance: -20 weakness to fire and acid damage
+  Regeneration: Regenerates 1 hit point per second
+  Resistance: 5/- resistance to cold damage
+Weight: 0 lb.~
+@4812     = ~Vrek's Hide~
+@4813     = ~Vrek's hide is unique among trolls.  His entire body is covered with a strange growth of unknown origin, and as a river troll born in the frozen North, he is naturally resistant to cold temperatures.  Combined with his thick, scaly skin and innate regeneration, Vrek is extremely resilient to natural attacks.
+
+STATISTICS:
+
+Armor Bonus: +6
+Max Dex Bonus:  None
+Special:
+  Resistance: -20 weakness to fire and acid damage
+  Regeneration: Regenerates 1 hit point per second
+  Resistance: 5/- resistance to cold damage
+Weight: 0 lb.~
+@4814     = ~Vunarg's Throwing Axe~
+@4815     = ~This throwing axe is Vunarg's most prized possession, won during a fight with a band of adventurers who failed to defeat the Vunarg Clan.  The blade is engraved with shallow runes that make it fly more accurately and also return to the wielder's hand when thrown.  It still contains an etching on the handle written in Common, presumably from the axe's former, human owner:
+
+Be always worthy
+Be never proud
+--Morgan
+
+STATISTICS:
+
+Damage:  1d6  +1
+Attack Bonus:  +1
+Enchantment:  +1
+Damage Type:  Missile (piercing)
+Special:
+  Returning: Returns to user's hand once thrown
+Weight: 4 lb.
+Required Feat:  Martial Weapon, Axe
+Type:  One-handed~
+@4816     = ~Vunarg's Throwing Axe~
+@4817     = ~This throwing axe is Vunarg's most prized possession, won during a fight with a band of adventurers who failed to defeat the Vunarg Clan.  The blade is engraved with shallow runes that make it fly more accurately and also return to the wielder's hand when thrown.  It still contains an etching on the handle written in Common, presumably from the axe's former, human owner:
+
+Be always worthy
+Be never proud
+--Morgan
+
+STATISTICS:
+
+Damage:  1d6  +1
+Attack Bonus:  +1
+Enchantment:  +1
+Damage Type:  Missile (piercing)
+Special:
+  Returning: Returns to user's hand once thrown
+Weight: 4 lb.
+Required Feat:  Martial Weapon, Axe
+Type:  One-handed~
+@4818     = ~Xhaan's Claw~
+@4819     = ~Xhaan prefers to fight with his claws, as he has had no need for weapons in the countless lifetimes he has lived in the Nine Hells.  He may still use a shield or a weapon in his off hand, but he uses his claws as his primary attack.  As an extraplanar being, Xhaan's claws strike as a +1 weapon for the purposes of overcoming damage reduction.
+ 
+STATISTICS: 
+ 
+Damage: 1d4
+Enchantment:  +1
+Damage Type: Slashing 
+Special:
+  Frost: +1d6 cold damage
+Weight: 0 lb. 
+Feat Requirement:  None
+Type:  One-handed~
+@4820     = ~Xhaan's Claw~
+@4821     = ~Xhaan prefers to fight with his claws, as he has had no need for weapons in the countless lifetimes he has lived in the Nine Hells.  He may still use a shield or a weapon in his off hand, but he uses his claws as his primary attack.  As an extraplanar being, Xhaan's claws strike as a +1 weapon for the purposes of overcoming damage reduction.
+ 
+STATISTICS: 
+ 
+Damage: 1d4
+Enchantment:  +1
+Damage Type: Slashing 
+Special:
+  Frost: +1d6 cold damage
+Weight: 0 lb. 
+Feat Requirement:  None
+Type:  One-handed~
+@4822     = ~Abishai Hide~
+@4823     = ~As a white abishai, Xhaan is innately resistant to spells and elemental damage.  His thick hide and extraplanar biology also grants him immunity to poison and disease and the ability to regenerate from his wounds.  As a baatezu, he feels no fear, and minor charms are useless on his alien mind.
+
+STATISTICS:
+
+Armor Bonus: +4
+Max Dex Bonus:  None
+Special:
+  Resistance: 10/- Acid Resistance
+  Resistance: 15/- Fire Resistance
+  Resistance: 20/- Cold Resistance
+  Resistance: 10/- Spell Resistance
+  Regeneration: Regenerates 1 hit point per round
+  Immunity to disease, poison, charm, and fear effects
+Weight: 0 lb.~
+@4824     = ~Abishai Hide~
+@4825     = ~As a white abishai, Xhaan is innately resistant to spells and elemental damage.  His thick hide and extraplanar biology also grants him immunity to poison and disease and the ability to regenerate from his wounds.  As a baatezu, he feels no fear, and minor charms are useless on his alien mind.
+
+STATISTICS:
+
+Armor Bonus: +4
+Max Dex Bonus:  None
+Special:
+  Resistance: 10/- Acid Resistance
+  Resistance: 15/- Fire Resistance
+  Resistance: 20/- Cold Resistance
+  Resistance: 10/- Spell Resistance
+  Regeneration: Regenerates 1 hit point per round
+  Immunity to disease, poison, charm, and fear effects
+Weight: 0 lb.~
+@4826     = ~Aocha's Venom~
+@4827     = ~Aocha's Venom~
+@4828     = ~Aocha's Venom~
+@4829     = ~Aocha's Venom~
+
+@4860     = ~Summon Aocha~
+@4861     = ~Summon Aocha
+
+(Conjuration) 
+Range: Sight of Caster
+Duration: 10 rounds/level
+Casting Time: 5
+Area of Effect: Special 
+Saving Throw: None 
+
+For 10 rounds per level, Zack Boosenburry may call his loyal mount Aocha to battle.  Aocha is a big furry spider and is far more sweet and cuddly than one might expect (or want), but in combat, she is no less dangerous than her wild relatives.  She is innately immune to web effects and possesses a powerful venom, and will gladly rush to Zack's defense in times of danger.
+
+If she should perish in the line of duty, Zack has a special formula in his pocket that can restore her to normal health, but she still needs 8 hours of rest to recover before Zack may summon her again.
+~
+@4862     = ~Stygian Ice Storm~
+@4863     = ~Stygian Ice Storm
+(Conjuration)
+Range: Sight of Caster
+Duration: Instantaneous
+Casting Time: 4
+Area of Effect: 20-foot radius
+Saving Throw: Will negates
+
+Stygian Ice Storm is the signature spell of gelugons, though a lesser devil could also cast it upon growing powerful enough. When cast, it summons a storm of hellish ice from Stygia, the fifth layer of the Nine Hells. All creatures in the area of effect take 12d6 cold damage with no save, and must make a Will saving throw or be effectively feebleminded for 7 rounds due to the severe memory loss caused by Stygian ice. The caster is unaffected, as are undead creatures.~
+
 //TRA num range  @5000 to @5299
 
 
@@ -6,7 +206,7 @@
 @5002     = ~Lizard Man~
 @5003     = ~Orc~
 @5004     = ~Salamander~
-@5005     = ~Tanar'ri~
+@5005     = ~Fiend~
 @5006     = ~Troll~
 @5007     = ~Genie~
 @5008     = ~Hook Horror~

@@ -1227,6 +1227,48 @@ BEGIN
 
 END
 
+DEFINE_PATCH_FUNCTION ~SET_CLASS_LEVELS_IWD2~
+	INT_VAR
+		newlevelbarbarian=0
+		newlevelbard=0
+		newlevelcleric=0
+		newleveldruid=0
+		newlevelfighter=0
+		newlevelmonk=0
+		newlevelpaladin=0
+		newlevelranger=0
+		newlevelrogue=0
+		newlevelsorcerer=0
+		newlevelwizard=0
+	STR_VAR
+		updatehp=~~
+BEGIN
+	WRITE_BYTE levelbarbarian newlevelbarbarian
+	WRITE_BYTE levelbard newlevelbard
+	WRITE_BYTE levelcleric newlevelcleric
+	WRITE_BYTE leveldruid newleveldruid
+	WRITE_BYTE levelfighter newlevelfighter
+	WRITE_BYTE levelmonk newlevelmonk
+	WRITE_BYTE levelpaladin newlevelpaladin
+	WRITE_BYTE levelranger newlevelranger
+	WRITE_BYTE levelrogue newlevelrogue
+	WRITE_BYTE levelsorcerer newlevelsorcerer
+	WRITE_BYTE levelwizard newlevelwizard
+	newleveltotal = (newlevelbarbarian + newlevelbard + newlevelcleric + newleveldruid + newlevelfighter + newlevelmonk + newlevelpaladin + newlevelranger + newlevelrogue + newlevelsorcerer + newlevelwizard)
+	WRITE_BYTE leveltotal newleveltotal
+	PATCH_IF ~%updatehp%~ STRING_EQUAL_CASE ~average~ BEGIN
+		newhp = (newlevelbarbarian * 6 + newlevelbard * 3 + newlevelcleric * 4 + newleveldruid * 4 + newlevelfighter * 5 + newlevelmonk * 4 + newlevelpaladin * 5 + newlevelranger * 5 + newlevelrogue * 3 + newlevelsorcerer * 2 + newlevelwizard * 2 + newleveltotal / 2)
+		WRITE_SHORT currenthp newhp
+		WRITE_SHORT maxhp newhp
+	END	ELSE BEGIN
+	PATCH_IF ~%updatehp%~ STRING_EQUAL_CASE ~max~ OR ~%updatehp%~ STRING_EQUAL_CASE ~maximum~ BEGIN
+		newhp = (newlevelbarbarian * 12 + newlevelbard * 6 + newlevelcleric * 8 + newleveldruid * 8 + newlevelfighter * 10 + newlevelmonk * 8 + newlevelpaladin * 10 + newlevelranger * 10 + newlevelrogue * 6 + newlevelsorcerer * 4 + newlevelwizard * 4)
+		WRITE_SHORT currenthp newhp
+		WRITE_SHORT maxhp newhp
+	END
+	END
+END
+
 DEFINE_PATCH_FUNCTION ~CONVERT_DLG_TO_IWD2_FORMAT~
 BEGIN
 	READ_LONG 0xc ulgiash
