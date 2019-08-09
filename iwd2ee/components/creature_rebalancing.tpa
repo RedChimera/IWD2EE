@@ -146,48 +146,6 @@ OUTER_PATCH us_creature_constants BEGIN
 	doorsize=0xc8
 END
 
-DEFINE_PATCH_FUNCTION ~SET_CLASS_LEVELS_IWD2~
-	INT_VAR
-		newlevelbarbarian=0
-		newlevelbard=0
-		newlevelcleric=0
-		newleveldruid=0
-		newlevelfighter=0
-		newlevelmonk=0
-		newlevelpaladin=0
-		newlevelranger=0
-		newlevelrogue=0
-		newlevelsorcerer=0
-		newlevelwizard=0
-	STR_VAR
-		updatehp=~~
-BEGIN
-	WRITE_BYTE levelbarbarian newlevelbarbarian
-	WRITE_BYTE levelbard newlevelbard
-	WRITE_BYTE levelcleric newlevelcleric
-	WRITE_BYTE leveldruid newleveldruid
-	WRITE_BYTE levelfighter newlevelfighter
-	WRITE_BYTE levelmonk newlevelmonk
-	WRITE_BYTE levelpaladin newlevelpaladin
-	WRITE_BYTE levelranger newlevelranger
-	WRITE_BYTE levelrogue newlevelrogue
-	WRITE_BYTE levelsorcerer newlevelsorcerer
-	WRITE_BYTE levelwizard newlevelwizard
-	newleveltotal = (newlevelbarbarian + newlevelbard + newlevelcleric + newleveldruid + newlevelfighter + newlevelmonk + newlevelpaladin + newlevelranger + newlevelrogue + newlevelsorcerer + newlevelwizard)
-	WRITE_BYTE leveltotal newleveltotal
-	PATCH_IF ~%updatehp%~ STRING_EQUAL_CASE ~average~ BEGIN
-		newhp = (newlevelbarbarian * 6 + newlevelbard * 3 + newlevelcleric * 4 + newleveldruid * 4 + newlevelfighter * 5 + newlevelmonk * 4 + newlevelpaladin * 5 + newlevelranger * 5 + newlevelrogue * 3 + newlevelsorcerer * 2 + newlevelwizard * 2 + newleveltotal / 2)
-		WRITE_SHORT currenthp newhp
-		WRITE_SHORT maxhp newhp
-	END	ELSE BEGIN
-	PATCH_IF ~%updatehp%~ STRING_EQUAL_CASE ~max~ OR ~%updatehp%~ STRING_EQUAL_CASE ~maximum~ BEGIN
-		newhp = (newlevelbarbarian * 12 + newlevelbard * 6 + newlevelcleric * 8 + newleveldruid * 8 + newlevelfighter * 10 + newlevelmonk * 8 + newlevelpaladin * 10 + newlevelranger * 10 + newlevelrogue * 6 + newlevelsorcerer * 4 + newlevelwizard * 4)
-		WRITE_SHORT currenthp newhp
-		WRITE_SHORT maxhp newhp
-	END
-	END
-END
-
 COPY ~%mod_folder%/cre/cre_creature_revisions~ ~override~
 
 COPY ~%mod_folder%/bcs/bcs_creature_revisions~ ~override~
@@ -908,6 +866,12 @@ COPY_EXISTING ~50LIMHA.cre~ ~override~ ~50LIMHA2.cre~ ~override~
 	LPF	IWD2_CRE_SPELL INT_VAR num=2 STR_VAR class=~wizard~ resource=~SPWI902~ END
 	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~SPWI908~ END
 
+COPY_EXISTING ~51DUEBO.cre~ ~override~ ~51DARGAB.cre~ ~override~ ~51DRAGU.cre~ ~override~ ~52DUEBO.cre~ ~override~ ~52DUEBOX.cre~ ~override~ ~52DUELE.cre~ ~override~
+	PATCH_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~4~ BEGIN
+		REPLACE_TEXTUALLY CASE_INSENSITIVE ~00BOLT02~ ~USRHF006~
+	END
+	BUT_ONLY_IF_IT_CHANGES
+
 COPY_EXISTING ~53HARPY.cre~ ~override~
 	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelfighter=10 END
 	SAY NAME1 @23010
@@ -1125,6 +1089,17 @@ COPY_EXISTING ~USWIGHTI.cre~ ~override~
 	SAY NAME1 @23009
 	SAY NAME2 @23009
 
+COPY_EXISTING ~USWIGHTW.cre~ ~override~
+	SAY NAME1 @23013
+	SAY NAME2 @23013
+
+COPY_EXISTING ~USWIGHTW.cre~ ~override/USKHAVRO.cre~
+	SAY NAME1 #41140
+	SAY NAME2 #41141
+	LPF	IWD2_ADD_CRE_ITEM INT_VAR cq1=1 cq2=1 cq3=1 equip=0 STR_VAR item=~USRT12_V~ slot=~inv7~ END
+	LPF	IWD2_ADD_CRE_ITEM INT_VAR cq1=1 cq2=1 cq3=1 equip=0 STR_VAR item=~RT12_R~ slot=~inv8~ END
+	WRITE_ASCII deathvariableincrement ~60Wight_Dead~ #32
+
 COPY_EXISTING ~USWRAIGR.cre~ ~override~
 	SAY NAME1 @23004
 	SAY NAME2 @23004
@@ -1136,7 +1111,7 @@ COPY_EXISTING ~USSHADVO.cre~ ~override~
 	SAY NAME1 @23001
 	SAY NAME2 @23001
 
-COPY_EXISTING ~USSHADVO.itm~ ~override~
+COPY_EXISTING ~USSHADVO.itm~ ~override~ ~USWIGHTW.itm~ ~override~
 	SAY NAME1 @23002
 	SAY NAME2 @23002
 
@@ -1776,6 +1751,8 @@ COPY_EXISTING ~AR6000.are~ ~override~
 	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR actor_name=~04_Wraith_02~ cre_file=~USWRAIGR~ script_special2=~USWRAIGR~ END
 	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR actor_name=~05_Wraith_01~ cre_file=~USWRAIGR~ script_special2=~USWRAIGR~ END
 	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR actor_name=~07_Wraith_02~ cre_file=~USWRAIGR~ script_special2=~USWRAIGR~ END
+	LPF ALTER_AREA_ACTOR_IWD2 INT_VAR flag_difficulty_1=1 flag_difficulty_2=1 flag_difficulty_3=0 STR_VAR actor_name=~02_Khavros_the_Black~ END
+	LPF ALTER_AREA_ACTOR_IWD2 INT_VAR flag_difficulty_1=0 flag_difficulty_2=0 flag_difficulty_3=1 STR_VAR actor_name=~02_Wight_05~ cre_file=~USKHAVRO~ script_special2=~USWIGHTW~ END
 
 COPY_EXISTING ~AR6001.are~ ~override~
 	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR match_cre_file=~60HARPY~ script_special2=~USHRPINF~ script_combat=~60HARPYC~ END
@@ -1852,7 +1829,7 @@ EXTEND_BOTTOM ~ar6500.bcs~ ~.../script.baf~
 
 APPEND ~RT_NORM.2da~
 ~
-USCWHFMO	USNOTHIN
+USCWHFMO	No_Drop
 USCWHFMR	USCWMAR1
 USCWHFMG	USCWMAR2
 USCWHFGE	00CWGLG1

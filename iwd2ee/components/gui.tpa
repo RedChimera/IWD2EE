@@ -1,4 +1,6 @@
-COPY ~%mod_folder%/mos/GUICHP0B.MOS~ ~override~
-COPY ~%mod_folder%/mos/GUICHP2B.MOS~ ~override~
+COPY ~%mod_folder%/bam/bam_new_gui~ ~override~
+
+COPY ~%mod_folder%/mos/mos_new_gui~ ~override~
+
 //COPY ~%mod_folder%/png/GUICHP0B.png~ ~override~
 //COPY ~%mod_folder%/png/GUICHP2B.png~ ~override~

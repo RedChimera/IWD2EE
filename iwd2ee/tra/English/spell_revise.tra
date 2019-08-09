@@ -2406,8 +2406,21 @@ Area of Effect: Special
 Saving Throw: None
 
 This spell creates two shambling mounds of 12 HD which willingly aid the caster in combat or whatever other duties they are assigned and have the capability to carry out.~
+@1911     = ~Faerie Fire~
+@1912     = ~Faerie Fire
+(Evocation)
+Level: Drd 1, Lathander 1, Selune 1
+Range: Sight of Caster
+Duration: 1 minute / level
+Casting Time: 4
+Area of Effect: 1 creature
+Saving Throw: None
 
+This spell outlines a creature with a pale glow, making its position and movements easily visible - this has the effect of an armor bonus penalty of 2.~
 
+@1977     = ~1 round~
+@1978     = ~Instant~
+@1979     = ~Casting Time:~
 @1980     = ~Level:~
 @1981     = ~Brd~
 @1982     = ~Clr~

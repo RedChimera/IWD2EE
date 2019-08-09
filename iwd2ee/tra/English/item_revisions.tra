@@ -1,4 +1,4 @@
-//TRA num range @10000 to @12999
+//TRA num range @10000 to @19999
 
 @2492    = ~Goodberry~
 @2493    = ~Created by the Goodberry spell, these simple looking blueberries will heal 1d4+5 points of damage for each bunch of berries eaten.~
@@ -3844,7 +3844,7 @@ Special:
   Bypasses armor and shield bonuses
   Each hit scrambles magic, causing any spell cast by the target in the next round to have a 50% chance of failing
 Weight: 2 lb.
-Feat Requirement:  Martial Weapon, Large Sword
+Feat Requirement:  Simple Weapon, Small Blade
 Type:  One-handed~
 //@10835    = ~Moonblade of Selune +4~
 //@10836    = ~If we decide to make a HoF version of this item, we should put its description here~
