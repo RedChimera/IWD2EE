@@ -2167,6 +2167,7 @@ COPY_EXISTING ~sppr323.spl~ ~override~
 	SAY IDENTIFIED_DESC @1908
 
 COPY_EXISTING ~sppr723.spl~ ~override~
+//	LPF ALTER_EFFECT INT_VAR silent=1 check_headers=1 check_globals=1 match_opcode=410 parameter1=2 END
 	SAY NAME1 @1909
 	SAY NAME2 @1909
 	SAY UNIDENTIFIED_DESC @1910

@@ -9682,28 +9682,28 @@ Launcher:  Sling~
 
 STATISTICS:
 
-Damage: 2d8 Fire damage to a single opponent (Reflex DC 20 for half)
+Damage: 3d8 Fire damage to a single opponent (Reflex DC 16 for half)
 Weight: 0 lb.~
 //@12041    = ~Lamp Oil~ // HoF
 @12042    = ~This container contains lamp oil, usually used for lanterns and such. This particular container has a rag soaked in oil attached to it so that it can be ignited and thrown at an opponent.
 
 STATISTICS:
 
-Damage: 25d8 Fire damage to a single opponent (Reflex DC 40 for half)
+Damage: 10d8 Fire damage to a single opponent (Reflex DC 27 for half)
 Weight: 0 lb.~
 //@12043    = ~Flaming Oil~
 @12044    = ~Inside of this glass pot is an expensive mixture of oil and other chemicals.  When this mixture is set ablaze, it burns for several seconds at a very hot temperature.  Flaming oil is sometimes difficult to use because it takes a long time for the user to properly throw it.  Adventurers often carry oil with them to deal with trolls in the unfortunate event that they are encountered.
 
 STATISTICS:
 
-When thrown at a target, the glass pot breaks, spreading flaming oil over everything within a 5' radius, doing 2d8 points of fire damage (Reflex DC 24 for half)
+When thrown at a target, the glass pot breaks, spreading flaming oil over everything within a 5' radius, doing 3d8 points of fire damage (Reflex DC 16 for half)
 Weight: 0 lb.~
 //@12045    = ~Flaming Oil~ // HoF
 @12046    = ~Inside of this glass pot is an expensive mixture of oil and other chemicals.  When this mixture is set ablaze, it burns for several seconds at a very hot temperature.  Flaming oil is sometimes difficult to use because it takes a long time for the user to properly throw it.  Adventurers often carry oil with them to deal with trolls in the unfortunate event that they are encountered.
 
 STATISTICS:
 
-When thrown at a target, the glass pot breaks, spreading flaming oil over everything within a 5' radius, doing 25d8 points of fire damage (Reflex DC 44 for half)
+When thrown at a target, the glass pot breaks, spreading flaming oil over everything within a 5' radius, doing 10d8 points of fire damage (Reflex DC 27 for half)
 Weight: 0 lb.~
 //@12047    = ~Xainlaphar's Flying Skull~
 @12048    = ~Xainlaphar, a mad Red Wizard of Thay, was known for turning the skulls of his slain enemies into weapons.  His most common weapon was known as the "Flying Skull."  In essence, the item is not much different from the spell Skull Trap.  Xainlaphar died in 913 DR, long before he had time to use even half of his enchanted skulls.  They were claimed by his foes, a paladin and priest of Helm.  They intended to destroy the items, but at least forty were stolen by crafty thieves on the way back to Sembia.
@@ -9794,7 +9794,12 @@ STATISTICS:
 Heals 1-100 hit points
 Weight: 1 lb.~
 //@12079    = ~Spirit Essence~
-//@12080    = ~Item description can remain the same; if new description is needed put it here~
+@12080    = ~This valuable potion is made by capturing and distilling the spirits of trolls.  Normally only attempted by powerful necromancers and enchanters, the process results in a powerful healing potion able to instantly regenerate even severe wounds.
+
+STATISTICS:
+
+Heals 40 hit points
+Weight: 1 lb.~
 //@12081    = ~Spirit Essence~ //HoF
 @12082    = ~This valuable potion is made by capturing and distilling the spirits of trolls.  Normally only attempted by powerful necromancers and enchanters, the process results in a powerful healing potion able to instantly regenerate even severe wounds.
 
@@ -9804,12 +9809,15 @@ Heals 100 hit points
 Weight: 1 lb.~
 
 //@12083    = ~Potion of Heroism~
-@12084    = ~This potion is imbued with a powerful enchantment, which will simulate a temporary increase in level.  The effect lasts for 10 turns which makes this potion a powerful ally in a deadly combat.
+@12084    = ~This potion is imbued with a powerful enchantment, which will simulate a temporary increase in level.  The effect lasts for 10 turns, making this potion a great ally in a long combat.
 
 STATISTICS:
 
-Hit Points:  +10
-Attack Bonus:  +2 
+Hit Points:  +20
+Attack Bonus:  +2
+Fortitude Saves: +1
+Reflex Saves: +1
+Will Saves: +1
 Duration:  10 turns
 Weight:  1 lb.~
 //@12085    = ~Potion of Invisibility~
@@ -9820,35 +9828,41 @@ STATISTICS:
 Imbiber becomes invisible
 Weight: 1 lb.~
 //@12087    = ~Potion of Absorption~
-@12088    = ~This potion, as would be expected, will absorb external attacks once it has been consumed.  All blunt attacks made against the imbiber are cushioned, so that only the strongest get through.  Also there is +10 electrical resistance for the duration of the effect, which in this case is 10 turns.
+@12088    = ~This potion, as would be expected, will absorb external attacks once it has been consumed.  All blunt attacks made against the imbiber are cushioned, so that only the strongest get through. This effect lasts for 10 rounds.
 
 STATISTICS:
 
-Armor Class:  +10 bonus vs. crushing attacks
-Resistance:  20/- Electrical Resistance
-Duration:  10 turns
+Resistance:  25/- Bludgeoning Resistance
 Weight: 1 lb.~
 //@12089    = ~Potion of Invulnerability~
-@12090    = ~This potion confers very high resistance to all attacks, while giving bonuses to all saving throws.  The effects of the elixir last for 5 turns but can only be used by warriors.
+@12090    = ~This potion confer near-complete invulnerability to all damage. The effects are short-lived, however, lasting for only 2 rounds.
 
 STATISTICS:
 
-Armor Bonus +10
-Saving Throws:  +5 bonus
+Resistance:  100/- Fire Resistance
+Resistance:  100/- Cold Resistance
+Resistance:  100/- Electrical Resistance
+Resistance:  100/- Acid Resistance
+Resistance:  100/- Magic Damage Resistance
+Resistance:  100/- Poison Resistance
+Resistance:  100/- Slashing Resistance
+Resistance:  100/- Piercing Resistance
+Resistance:  100/- Bludgeoning Resistance
+Resistance:  100/- Missile Resistance
 Weight: 1 lb.~
 //@12091    = ~Thrym Extract~
 @12092    = ~This thick liquid is harvested and distilled from the glands of dead polar worms.  It is the substance that helps keep the huge creatures warm in the desolate north.  Drinking the liquid straight from the creature's body is almost always fatal, so alchemists attempt to distill the substance until it is relatively safe to consume.  Even in its current state, however, it can still be deadly.
 
 STATISTICS:
 
-User takes 2d8 fire damage on a failed Fortitude save (DC 14) but also gains 20/-  cold resistance for 10 rounds.
+User takes 2d8 fire damage on a failed Fortitude save (DC 14) but also gains 40/- cold resistance for 5 rounds.
 Weight: 1 lb.~
 //@12093    = ~Potion of Explosions~
 @12094    = ~This potion is a vial of pain as it will explode into a burning ball of fire upon impact.  Keep it in a safe place lest ye meet an untimely end.
 
 STATISTICS:
 
-Damage:  6D6  (Reflex DC 17 for half)
+Damage:  6D6  (Reflex DC 18 for half)
 Area:  20 ft radius
 Weight: 1 lb.~
 //@12095    = ~Flask of Braehg~
@@ -9870,12 +9884,12 @@ Strength: +12
 Sickening: -3 Saving Throw penalty
 Duration: 2 hours
 Weight: 1 lb.~
-//@12099    = ~Potion of Greater Restoration~
+@12099    = ~Potion of Restoration~
 @12100    = ~Potions are typically found in ceramic, crystal, glass, or metal flasks or vials.  Flasks or other containers generally contain enough fluid to provide one person with one complete dose to achieve the effects of the potion.  
 
 STATISTICS:
 
-This potion will heal 5d8+25 hit points and cure a creature of all of the following ailments: energy drain, feeblemind, any form of insanity such as confusion or berserk states of mind, charm, domination, hopelessness, despair, panic, and artificially induced sleep.
+This potion will cure a creature of energy drain and ability score loss.
 Weight: 1 lb.~
 //@12101    = ~Sanctuary Potion~
 @12102    = ~Potions are typically found in ceramic, crystal, glass, or metal flasks or vials.  Flasks or other containers generally contain enough fluid to provide one person with one complete dose to achieve the effects of the potion.  
@@ -12205,5 +12219,83 @@ Special:
 Weight: 2 lb.
 Feat Requirement:  Martial Weapon, Hammer
 Type:  One-handed~
+@12649    = ~Potion of Greater Restoration~
+@12650    = ~Potions are typically found in ceramic, crystal, glass, or metal flasks or vials.  Flasks or other containers generally contain enough fluid to provide one person with one complete dose to achieve the effects of the potion.
+
+STATISTICS:
+
+This potion will heal 5d8+25 hit points and cure a creature of all of the following ailments: energy drain, feeblemind, any form of insanity such as confusion or berserk states of mind, charm, domination, hopelessness, despair, panic, and artificially induced sleep.
+Weight: 1 lb.~
+//@12651    = ~Elven Healing Wine~
+@12652    = ~This bottle of elven wine also has the properties of a healing potion.  During one of the elven festivals, the priests of the Seldarine's Hand imbibed too much that day and accidentally added a barrel of elven wine to a mixture that was intended for healing potions.  Due to an interaction with the enchantments surrounding the Severed Hand, this bottle has powerful but unpredictable effects.
+
+STATISTICS:
+
+Heals 2-200 hit points
+Weight: 1 lb.~
+//@12653    = ~Potion of Heroism~
+@12654    = ~This potion is imbued with a powerful enchantment, which will simulate a temporary increase in level.  The effect lasts for 10 turns, making this potion a great ally in a long combat.
+
+STATISTICS:
+
+Hit Points:  +60
+Attack Bonus:  +6
+Attacks per round: +1
+Fortitude Saves: +3
+Reflex Saves: +2
+Will Saves: +2
+Duration:  10 turns
+Weight:  1 lb.~
+@12655    = ~Potion of Improved Invisibility~
+@12656    = ~This potion confers Improved Invisibility similar to the fourth-level wizard spell of the same name. The drinker can attack or cast spells while remaining partially invisible. The effects will last for 1 hour.
+
+STATISTICS:
+
+Imbiber gains the effects of Improved Invisibility
+Weight: 1 lb.~
+//@12657    = ~Potion of Absorption~
+@12658    = ~This potion, as would be expected, will absorb external attacks once it has been consumed.  All blunt attacks made against the imbiber are cushioned, so that only the strongest get through. This effect lasts for 10 rounds.
+
+STATISTICS:
+
+Resistance:  50/- Bludgeoning Resistance
+Weight: 1 lb.~
+//@12659    = ~Potion of Invulnerability~
+@12660    = ~This potion confer near-complete invulnerability to all damage. The effects are short-lived, however, lasting for only 3 rounds.
+
+STATISTICS:
+
+Resistance:  100/- Fire Resistance
+Resistance:  100/- Cold Resistance
+Resistance:  100/- Electrical Resistance
+Resistance:  100/- Acid Resistance
+Resistance:  100/- Magic Damage Resistance
+Resistance:  100/- Poison Resistance
+Resistance:  100/- Slashing Resistance
+Resistance:  100/- Piercing Resistance
+Resistance:  100/- Bludgeoning Resistance
+Resistance:  100/- Missile Resistance
+Weight: 1 lb.~
+//@12661    = ~Thrym Extract~
+@12662    = ~This thick liquid is harvested and distilled from the glands of dead polar worms.  It is the substance that helps keep the huge creatures warm in the desolate north.  Drinking the liquid straight from the creature's body is almost always fatal, so alchemists attempt to distill the substance until it is relatively safe to consume.  Even in its current state, however, it can still be deadly.
+
+STATISTICS:
+
+User takes 2d8 fire damage on a failed Fortitude save (DC 22) but also gains 80/- cold resistance for 5 rounds.
+Weight: 1 lb.~
+//@12663    = ~Potion of Explosions~
+@12664    = ~This potion is a vial of pain as it will explode into a burning ball of fire upon impact.  Keep it in a safe place lest ye meet an untimely end.
+
+STATISTICS:
+
+Damage:  15d6  (Reflex DC 30 for half)
+Area:  20 ft radius
+Weight: 1 lb.~
 
 @12900    = ~Hrm - you are powerful allies, indeed.  More gold and gems to line your pockets, then - also, a suit of plate armor, a warhammer, a helmet, all crafted and enchanted by great duergar artisans.  They are well deserved, outsider.~
+@12901    = ~Drink this Rainwater Brew, Ennelia.  It should help your condition.~
+@12902    = ~Drink this Sour Draught, Ennelia.  It should help your condition.~
+@12903    = ~This rainwater brew may help - drink it down.~
+@12904    = ~Perhaps a sour draught can help your wounds.~
+@12905    = ~This rainwater brew may help - drink it down.~
+@12906    = ~Perhaps a sour draught can help your wounds.~
