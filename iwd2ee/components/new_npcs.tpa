@@ -198,6 +198,22 @@ COMPILE ~%mod_folder%/dlg/dlg_new_npcs/10KICKSH.d~
 
 COMPILE ~%mod_folder%/dlg/dlg_new_npcs/12SHAWFO.d~
 
+ACTION_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~4~ BEGIN
+
+COPY_EXISTING ~10REIG.dlg~ ~override~
+	DECOMPILE_AND_PATCH BEGIN
+		REPLACE_TEXTUALLY CASE_INSENSITIVE ~PartyHasItem(\"00POTN04\")~ ~Or(2)
+	PartyHasItem("00POTN04")
+	PartyHasItem("USHFPN04")~
+		REPLACE_TEXTUALLY CASE_INSENSITIVE ~TakePartyItemNum(\"00Potn04\", ?1)~ ~TakePartyItemNum("00Potn04",1)
+TakePartyItemNum("USHFPN04",1)~
+		REPLACE_TEXTUALLY CASE_INSENSITIVE ~DestroyItem(\"00Potn04\")~ ~DestroyItem("00Potn04")
+DestroyItem("USHFPN04")~
+	END
+	LPF CONVERT_DLG_TO_IWD2_FORMAT END
+
+END
+
 COPY_EXISTING ~LISTINNT.2da~ ~override~
 	COUNT_2DA_ROWS 2 numrows
 	READ_2DA_ENTRY (numrows - 1) 0 2 lastindex

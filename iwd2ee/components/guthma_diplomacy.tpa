@@ -11,10 +11,30 @@ STRING_SET 6187 ~Lord Ulbrec heard of our success in infiltrating the horde fort
 STRING_SET 36624 ~The heroes have returned!  Targos is saved!~
 // Note for @semiticgod: Guthma's death is also referenced in 11CAHLH0.bcs, but seems to be dependent on Guthma actually being dead. Same goes for 11DENHA1.bcs, 10THOMF0.bcs, 1100THMF.bcs, 1200THMF.bcs, and 12SOLDR0.bcs.
 
-ACTION_IF MOD_IS_INSTALLED ~iwd2ee.pt2~ ~4~ BEGIN
-	COPY_EXISTING ~30enneli.dlg~ ~override~ //Ennelia dialogue
-		DECOMPILE_DLG_TO_D
-		REPLACE_TEXTUALLY CASE_INSENSITIVE ~GiveItemCreate(\"RMIW_02\",Protagonist, ?1, ?1, ?0)~ ~GiveItemCreate("00RTHF13",Protagonist,1,1,0)~
-		COMPILE_D_TO_DLG
-		LPF CONVERT_DLG_TO_IWD2_FORMAT END
+ACTION_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~4~ BEGIN
+
+COPY_EXISTING ~30ENNELI.dlg~ ~override~
+	DECOMPILE_DLG_TO_D
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~GiveItemCreate(\"RMIW_02\",Protagonist, ?1, ?1, ?0)~ ~GiveItemCreate("00RTHF13",Protagonist,1,1,0)~
+
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~PartyHasItem(\"00POTN03\")~ ~False()~
+
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~PartyHasItem(\"00POTN04\")~ ~Or(2)
+	PartyHasItem("00POTN04")
+	PartyHasItem("USHFPN04")~
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~TakePartyItemNum(\"00Potn04\", ?1)~ ~TakePartyItemNum("00Potn04",1)
+TakePartyItemNum("USHFPN04",1)~
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~UseItem(\"00Potn04\", ?Myself)~ ~UseItem("00Potn04",Myself)
+UseItem("USHFPN04",Myself)~
+
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~PartyHasItem(\"00POTN05\")~ ~Or(2)
+	PartyHasItem("00POTN05")
+	PartyHasItem("USHFPN05")~
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~TakePartyItemNum(\"00Potn05\", ?1)~ ~TakePartyItemNum("00Potn05",1)
+TakePartyItemNum("USHFPN05",1)~
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~UseItem(\"00Potn05\", ?Myself)~ ~UseItem("00Potn05",Myself)
+UseItem("USHFPN05",Myself)~
+	COMPILE_D_TO_DLG
+	LPF CONVERT_DLG_TO_IWD2_FORMAT END
+
 END
