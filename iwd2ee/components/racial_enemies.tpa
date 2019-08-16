@@ -490,53 +490,9 @@ ACTION_IF (MOD_IS_INSTALLED ~iwd2ee.tp2~ ~4~) BEGIN //If Item Revisions is insta
 		WRITE_LONG 0x1c 191
 END
 
-COPY ~%mod_folder%/race/USSTSL02.itm~ ~override~
-COPY ~%mod_folder%/race/USSTHARM.itm~ ~override~
-COPY ~%mod_folder%/race/USSTDEST.itm~ ~override~
-COPY ~%mod_folder%/race/SPPR510.spl~ ~override~
-  SAY NAME1 @1056
-  SAY NAME2 @1056
-  SAY UNIDENTIFIED_DESC @1057
-  SAY IDENTIFIED_DESC @1057
-COPY ~%mod_folder%/race/SPWI619.spl~ ~override~
-  SAY NAME1 @1554
-  SAY NAME2 @1554
-  SAY UNIDENTIFIED_DESC @1555
-  SAY IDENTIFIED_DESC @1555
-COPY ~%mod_folder%/race/SMCUDGE.itm~ ~override~
-COPY ~%mod_folder%/race/SPPR715.spl~ ~override~
-  SAY NAME1 @1060
-  SAY NAME2 @1060
-  SAY UNIDENTIFIED_DESC @1061
-  SAY IDENTIFIED_DESC @1061
-COPY ~%mod_folder%/race/SPWI207.spl~ ~override~
-  SAY NAME1 @1744
-  SAY NAME2 @1744
-  SAY UNIDENTIFIED_DESC @1745
-  SAY IDENTIFIED_DESC @1745
-COPY ~%mod_folder%/race/SPPR113.spl~ ~override~
-  SAY NAME1 @1833
-  SAY NAME2 @1833
-  SAY UNIDENTIFIED_DESC @1834
-  SAY IDENTIFIED_DESC @1834
+COPY_EXISTING ~SPPR113.spl~ ~override~
+	LPF CLONE_EFFECT INT_VAR match_opcode=402 match_parameter2=31 parameter2=1 END
+	LPF ALTER_EFFECT INT_VAR match_opcode=402 match_parameter2=31 parameter2=17 END
+
 COPY_EXISTING ~SPPR707.spl~ ~override~
 	LPF ALTER_EFFECT INT_VAR match_opcode=402 match_parameter2=11 parameter2=17 END
-
-COPY ~%mod_folder%/race/SPWI711.spl~ ~override~
-  SAY NAME1 @1567
-  SAY NAME2 @1567
-  SAY UNIDENTIFIED_DESC @1568
-  SAY IDENTIFIED_DESC @1568
-COPY ~%mod_folder%/race/SPWI423.spl~ ~override~
-  SAY NAME1 @1104
-  SAY NAME2 @1104
-  SAY UNIDENTIFIED_DESC @1105
-  SAY IDENTIFIED_DESC @1105
-COPY ~%mod_folder%/race/SPPR417.spl~ ~override~
-COPY ~%mod_folder%/race/SPPR405.spl~ ~override~
-COPY ~%mod_folder%/race/SPWI911.spl~ ~override~
-COPY ~%mod_folder%/race/SPWI507.spl~ ~override~
-  SAY NAME1 @1106
-  SAY NAME2 @1106
-  SAY UNIDENTIFIED_DESC @1107
-  SAY IDENTIFIED_DESC @1107

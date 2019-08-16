@@ -3143,18 +3143,17 @@ Special:
 Weight: 1 lb.
 Feat Requirement:  Simple Weapon, Small Blade
 Type:  One-handed~
-//@10715    = ~Dagger of Warding~
+@10715    = ~Dagger of Warding +2~
 @10716    = ~Like most typical daggers, this dagger has a pointed,  double-edged blade.  It has also been imbued with magical abilities which have increased its usefulness. 
 
 STATISTICS:
 
-Damage:  1d4 
-Enchantment:  +5
+Damage:  1d4 + 2
+Attack Bonus:  +2
+Enchantment:  +2
 Damage Type:  Piercing
 Special:
-  Defending: +4 Deflection Bonus
-  Pierce Defending: +6 Armor Bonus against piercing attacks
-  Sure Striking: Weapon is treated as having a +5 enchantment for the purpose of hitting creatures that require magical weapons to hit
+  Defending: +4 Generic Armor Bonus
 Weight: 1 lb.
 Feat Requirement:  Simple Weapon, Small Blade
 Type:  One-handed~
@@ -5896,17 +5895,17 @@ Special:
 Weight: 3 lb.
 Required Feat:  Martial Weapon, Axe
 Type:  One-handed~
-@11247    = ~Battleaxe of Speed +1~
+@11247    = ~Battleaxe of Force +2~
 @11248    = ~The most common version of the battleaxe is a stout pole about four feet in length with a single-edged, trumpet-shaped blade mounted on one end.  Battleaxes are also called broad axes. 
 
 STATISTICS:
 
-Damage:  1d8  +1
-Attack Bonus:  +1 
-Enchantment:  +1
+Damage:  1d8  +2
+Attack Bonus:  +2
+Enchantment:  +2
 Damage Type:  Slashing
 Special:
-  Speed: 1 extra attack per combat round
+  Magic Force: +1d6 magic damage
 Weight: 7 lb.
 Required Feat:  Martial Weapon, Axe
 Type:  One-hande~

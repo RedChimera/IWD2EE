@@ -1009,6 +1009,7 @@ COPY_EXISTING ~00DAGG94.itm~ ~override~
 	SAY IDENTIFIED_DESC @10714
 
 COPY_EXISTING ~00DAGG95.itm~ ~override~
+	SAY NAME2 @10715
 	SAY IDENTIFIED_DESC @10716
 
 COPY_EXISTING ~00DAGG96.itm~ ~override~
@@ -3763,6 +3764,26 @@ COPY_EXISTING_REGEXP ~..SWDC..\.itm~ ~override~ ~..HFSC..\.itm~ ~override~
 	END
 	BUT_ONLY_IF_IT_CHANGES
 
+APPEND ~ITEMABIL.2da~
+~
+00HFBD03	1
+00BRACHF	1
+00HFBCHF	1
+USRING42	1
+00STAF89	1
+00AX2H85	1
+00AX2HBD	1
+00HFAXBD	1
+00FLAL96	1
+00DARTAT	1
+00HFDTAT	1
+00BOWS87	1
+00BOWCAG	1
+00HFBCAG	1
+USSHLD59	1
+USSLNG59	1
+~
+
 //Random loot table changes
 
 COPY_EXISTING ~%mod_folder%/tables/tables_item_revisions~ ~override~
@@ -3826,6 +3847,8 @@ USCWHFMR	USCWMAR1
 USCWHFMG	USCWMAR2
 USCWHFGE	00CWGLG1
 USCWHFGG	USCWGLG2
+USCWHFMF	USCWMFLA
+USCIHFEB	USCIELDB
 USCIHFXV	USCIXVIM
 USCWHFSK	00CWSKX1
 
@@ -3995,6 +4018,8 @@ USCWHFMR	USCWMAR2
 USCWHFMG	USCWMAR3
 USCWHFGE	USCWGLG2
 USCWHFGG	USCWGLG3
+USCWHFMF	USHFCWMF
+USCIHFEB	USHFCIEB
 USCIHFXV	USHFCIXV
 USCWHFSK	USHFCWSK
 
@@ -4216,7 +4241,7 @@ COPY_EXISTING ~11elytha.sto~ ~override~ //Elytharra store
 
 COPY_EXISTING ~11ragnib.sto~ ~override~ //Targos Temple of Tempus
 	ADD_STORE_ITEM ~00RING77~ AFTER ~00RING80~ #1 #1 #1 ~IDENTIFIED~ #1 //Lesser Ring of Resistances
-//	ADD_STORE_ITEM ~USRING42~ AFTER ~00RING77~ #1 #1 #1 ~IDENTIFIED~ #1 //Ring of the Intelligent Combatant
+	ADD_STORE_ITEM ~USRING42~ AFTER ~00RING77~ #1 #1 #1 ~IDENTIFIED~ #1 //Ring of the Intelligent Combatant
 	REMOVE_STORE_ITEM ~00RING74~
 
 COPY_EXISTING ~20arte.sto~ ~override~ //Shaengarne villager store
@@ -4600,6 +4625,9 @@ COPY_EXISTING ~53oincha.cre~ ~override~ //Mindflayer who you give the Blue Ioun 
 COPY_EXISTING ~60hiephe.cre~ ~override~ ~60hiephh.cre~ ~override~ //Hiepherus
 	LPF IWD2_ADD_CRE_ITEM INT_VAR cq1=1  cq2=1  cq3=1 STR_VAR item=~00RTHF46~ slot=~cloak~ END
 
+COPY_EXISTING ~60pbsorc.cre~ ~override~
+	LPF IWD2_REMOVE_CRE_ITEM STR_VAR item=~RT12_R~ END
+
 COPY_EXISTING ~62kratu.cre~ ~override~ //Orc Shaman leader in Fields of Slaughter
 	LPF IWD2_ADD_CRE_ITEM INT_VAR cq1=1  cq2=1  cq3=1 STR_VAR item=~00STAF88~ slot=~weapon1~ mode=~replace~ END
 /*
@@ -4616,7 +4644,7 @@ COPY_EXISTING ~63grdcom.cre~ ~override~ //Guard Commander at Severed Hand Entran
 COPY_EXISTING ~63thaymf.cre~ ~override~ ~63thaymm.cre~ ~override~ //Red Wizards
 	LPF IWD2_ADD_CRE_ITEM INT_VAR cq1=1  cq2=1  cq3=1 STR_VAR item=~00STAF01~ slot=~weapon1~ mode=~replace~ END
 
-COPY_EXISTING ~63vese.cre~ ~override~ //Guard Commander at Severed Hand Entrance
+COPY_EXISTING ~63vese.cre~ ~override~ //Severed Hand Red Wizard leader
 	LPF IWD2_ADD_CRE_ITEM INT_VAR cq1=1  cq2=1  cq3=1 STR_VAR item=~00RTHF39~ slot=~armor~ mode=~replace~ END
 
 COPY_EXISTING ~65iytxm.cre~ ~override~ //Iyachtu Xvim
@@ -4661,10 +4689,8 @@ COPY_EXISTING ~51barud.dlg~ ~override~ //Barud Barzam (duergar leader) dialogue
 STRING_SET_EVALUATE 9254 @12900
 
 COPY_EXISTING ~53ginafa.dlg~ ~override~ //Ginafae dialogue
-	DECOMPILE_DLG_TO_D
-	REPLACE_TEXTUALLY CASE_INSENSITIVE ~GiveItemCreate(\"53ClckHD\", ?Protagonist, ?1, ?1, ?1)~ ~GiveItemCreate("USRTHF06",Protagonist,1,1,1)~
-	REPLACE_TEXTUALLY CASE_INSENSITIVE ~GiveItemCreate(\"53AmulHD\", ?Protagonist, ?1, ?1, ?1)~ ~GiveItemCreate("USRTHF07",Protagonist,1,1,1)~
-	COMPILE_D_TO_DLG
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~53ClckHD~ ~USRTHF06~
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~53AmulHD~ ~USRTHF07~
 	LPF CONVERT_DLG_TO_IWD2_FORMAT END
 
 COPY_EXISTING ~53oincha.dlg~ ~override~
@@ -4700,7 +4726,7 @@ COPY_EXISTING_REGEXP ~.*\.are~ ~override~ ~.*\.cre~ ~override~ ~.*\.sto~ ~overri
 	BUT_ONLY_IF_IT_CHANGES
 
 COPY_EXISTING_REGEXP ~.*\.are~ ~override~
-	LPF REPLACE_AREA_ITEM STR_VAR old_item=~00MISC31~ new_item=~USRTHF17~ END
+	LPF REPLACE_AREA_ITEM_IWD2 STR_VAR old_item=~00MISC31~ new_item=~USRTHF17~ END
 	IF ~00MISC31~
 	BUT_ONLY_IF_IT_CHANGES
 
@@ -4710,7 +4736,7 @@ COPY_EXISTING_REGEXP ~.*\.cre~ ~override~ ~.*\.sto~ ~override~
 	BUT_ONLY_IF_IT_CHANGES
 
 COPY_EXISTING_REGEXP ~.*\.are~ ~override~
-	LPF REPLACE_AREA_ITEM STR_VAR old_item=~00MISC32~ new_item=~USRTHF18~ END
+	LPF REPLACE_AREA_ITEM_IWD2 STR_VAR old_item=~00MISC32~ new_item=~USRTHF18~ END
 	IF ~00MISC32~
 	BUT_ONLY_IF_IT_CHANGES
 
@@ -4720,12 +4746,12 @@ COPY_EXISTING_REGEXP ~.*\.cre~ ~override~ ~.*\.sto~ ~override~ ~12ISHER\.dlg~ ~o
 	BUT_ONLY_IF_IT_CHANGES
 
 COPY_EXISTING_REGEXP ~.*\.are~ ~override~
-	LPF REPLACE_AREA_ITEM STR_VAR old_item=~00GENIR~ new_item=~USRTHF11~ END
+	LPF REPLACE_AREA_ITEM_IWD2 STR_VAR old_item=~00GENIR~ new_item=~USRTHF11~ END
 	IF ~00GENIR~
 	BUT_ONLY_IF_IT_CHANGES
 
 COPY_EXISTING ~AR4102.are~ ~override~
-	LPF REPLACE_AREA_ITEM INT_VAR container=18 STR_VAR old_item=~USRTHF11~ new_item=~00GENIR~ END
+	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR container=18 STR_VAR old_item=~USRTHF11~ new_item=~00GENIR~ END
 
 COPY_EXISTING ~11OSWALD.dlg~ ~override~ ~20EMMA.dlg~ ~override~ ~41NICK.dlg~ ~override~ ~50VENLA.dlg~ ~override~ ~51ZAMA.dlg~ ~override~ ~52NONIN.dlg~ ~override~ ~53LAB.dlg~ ~override~ ~53LABX.dlg~ ~override~ ~61PYROS.dlg~ ~override~
 	REPLACE_TEXTUALLY CASE_INSENSITIVE ~GiveItemCreate(\"00POTN~ ~GiveItemCreate("USPNHF~

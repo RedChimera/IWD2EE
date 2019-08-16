@@ -149,7 +149,7 @@ COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
 	READ_LONG animation theanimation
 	READ_BYTE general thegeneral
 	READ_BYTE race therace
-	PATCH_IF (thegeneral = 4) OR (therace = 156) OR (therace = 160 AND !(MOD_IS_INSTALLED ~iwd2ee.tp2~ ~23~)) OR (therace = 152) OR (therace = 161) OR (therace = 175) OR (theanimation >= 30976 AND theanimation <= 30979) OR (theanimation = 29442) OR (theanimation = 61329) BEGIN
+	PATCH_IF (thegeneral = 4) OR (therace = 156) OR (therace = 160 AND (MOD_IS_INSTALLED ~iwd2ee.tp2~ ~23~)) OR (therace = 152) OR (therace = 161) OR (therace = 175) OR (theanimation >= 30976 AND theanimation <= 30979) OR (theanimation = 29442) OR (theanimation = 61329) BEGIN
 		READ_BYTE attributes theattributes
 		theattributes|=0x2
 		WRITE_BYTE attributes theattributes
