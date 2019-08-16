@@ -446,7 +446,7 @@ Casting Time: 1
 Area of Effect: 1 creature
 Saving Throw: Special
 
-When the caster completes this spell, a blue glow encompasses his hand.  This energy attacks the life force of any creature the wizard touches (no attack roll is required).  The touched creature suffers 1d6 cold damage receives a -1 attack bonus modifier for 10 rounds after being struck.  If the creature is undead creature, it is affected by panic (Will negates) for 10 rounds.  The Will DC is equal to 10 plus the caster's level divided by 3.  Undead suffer no damage or attack bonus penalty from Chill Touch. ~
+When the caster completes this spell, a blue glow encompasses his hand.  This energy attacks the life force of any creature the wizard touches (no attack roll is required).  The touched creature suffers 1d6 cold damage and receives a -1 attack bonus modifier for 10 rounds after being struck.  If the creature is undead creature, it is affected by panic (Will negates) for 10 rounds.  The Will DC is equal to 10 plus the caster's level divided by 3.  Undead suffer no damage or attack bonus penalty from Chill Touch. ~
 @1076    = ~Chromatic Orb~
 @1077    = ~Chromatic Orb 
 (Evocation) 
@@ -1811,7 +1811,7 @@ Casting Time: 1 round
 Area of Effect: 1 creature
 Saving Throw: Fortitude negates
 
-This spell imbues the caster's hands with destructive negative energy that will release when a successful touch attack is made at +2.  This attack deals magic damage equal to all but 1d4 of the target's current hit points on a failed Fortitude save. The save DC is equal to 16 plus the caster's level divided by 2. Thus, a level 12 Harm spell has a Fortitude DC of 22. This spell has no affect on undead or constructs.
+This spell imbues the caster's hands with destructive negative energy that will release when a successful touch attack is made at +2.  This attack deals magic damage equal to all but 1d4 of the target's current hit points on a failed Fortitude save. The save DC is equal to 16 plus the caster's level divided by 2. Thus, a level 12 Harm spell has a Fortitude DC of 22. This spell has no effect on undead or constructs.
 ~
 @1762    = ~Ice Blade~
 @1763    = ~Ice Blade 
@@ -2417,6 +2417,17 @@ Area of Effect: 1 creature
 Saving Throw: None
 
 This spell outlines a creature with a pale glow, making its position and movements easily visible - this has the effect of an armor bonus penalty of 2.~
+@1913     = ~Aegis~
+@1914     = ~Aegis
+(Abjuration)
+Level: Sor/Wiz 9, Helm 9
+Range: Caster 
+Duration: 30 rounds
+Casting Time: 1
+Area of Effect: Caster
+Saving Throw: None 
+
+This spell grants the caster a 15/- bonus to acid, cold, fire, and electricity resistance, a +5 deflection bonus, +3 spell resistance, +2 to all saves, and the effects of Stoneskin, Minor Globe of Invulnerability, and Freedom of Movement for the duration of the spell.~
 
 @1977     = ~1 round~
 @1978     = ~Instant~
@@ -2438,3 +2449,148 @@ This spell outlines a creature with a pale glow, making its position and movemen
 @1994     = ~Bane~
 @1995     = ~Mask~
 @1996     = ~Talos~
+
+@30001=~Cold damage dealt increased by 50%~
+@30002=~Cold damage dealt increased by 100%~
+@30003=~Cold damage dealt increased by 150%~
+@30004=~Cold damage dealt increased by 200%~
+
+@35252     = ~Null Healing~
+@36252     = ~Null Healing
+(Necromancy)
+Level: Clr 2
+Range: Sight of Caster
+Duration: 1 day
+Casting Time: 3
+Area of Effect: 1 creature
+Saving Throw: None
+
+This necromantic curse prevents a creature from healing. For 1 day, the cursed creature cannot regain Hit Points by items, spells, abilities, resting, or regeneration. There is no saving throw.~
+@35951     = ~Auril's Blessing~
+@36951     = ~Auril's Blessing
+(Conjuration)
+Level: Drd 9
+Range: Caster
+Duration: 1 round/level
+Casting Time: 9
+Area of Effect: Caster
+Saving Throw: None
+
+This spell calls upon the power of Auril to amplify the caster's cold spells. For the duration, cold damage dealt by the caster is increased by 50%. If the caster is level 20 or higher, their cold damage is instead increased by 100%. It is increased by 150% for a 25th-level caster and by 200% for a 30th-level caster.~
+@35952     = ~Mass Harm~
+@36952     = ~Mass Harm
+(Necromancy)
+Level: Clr 9
+Range: Sight of Caster
+Duration: Instantaneous
+Casting Time: 9
+Area of Effect: All enemies within 30 ft.
+Saving Throw: Fortitude negates
+
+Mass Harm releases destructive negative energy upon all enemies in the area of effect. Those creatures must Save vs. Fortitude or lose all but 1d4 of their hit points. This spell has no effect on undead or constructs.~
+@37151     = ~True Strike~
+@38151     = ~True Strike
+(Divination) 
+Level: Brd 1, Pal 1, Rgr 1, Sor/Wiz 1
+Range: Caster
+Duration: 9 seconds
+Casting Time: 1
+Area of Effect: Caster
+Saving Throw: None
+
+The True Strike spell gives the caster incredible insights into his or her enemies' weaknesses, but only for an extremely short duration. For 9 seconds, the caster gains a +20 attack bonus.~
+@37652     = ~Isaac's Greater Missile Storm~
+@38652     = ~Isaac's Greater Missile Storm
+(Evocation)
+Level: Sor/Wiz 6
+Range: Sight of Caster
+Duration: Instantaneous
+Casting Time: 4
+Area of Effect: 1 creature
+Saving Throw: None 
+
+This spell creates a large number of projectiles akin to those created by the Magic Missile spell, which hit a single target. Each missile deals 1d4+1 magic damage with no saving throw. The spell fires one missile per level of the wizard, to a maximum of 30 missiles at level 30.~
+@37751     = ~Stygian Ice Storm~
+@38751     = ~Stygian Ice Storm
+Level: Sor/Wiz 7
+(Conjuration)
+Range: Sight of Caster
+Duration: Instantaneous
+Casting Time: 4
+Area of Effect: 20-foot radius
+Saving Throw: Will negates
+
+Stygian Ice Storm is the signature spell of gelugons. When cast, it summons a storm of hellish ice from Stygia, the fifth layer of the Nine Hells. All creatures in the area of effect take 12d6 cold damage with no save, and must make a Will saving throw or be effectively feebleminded for 3 rounds due to the severe memory loss caused by Stygian ice. The caster is unaffected, as are undead creatures.~
+@37752     = ~Mantle~
+@38752     = ~Mantle
+(Abjuration)
+Level: Sor/Wiz 7
+Range: Caster
+Duration: 4 rounds
+Casting Time: 1
+Area of Effect: Caster
+Saving Throw: None
+
+This spell envelops the caster in a magical cloak of force, which blocks all but the most powerful physical attacks. For 4 rounds, the caster gains damage reduction 15/+3. The damage reduction increases based on the level of the caster:
+
+Caster level		Damage Reduction
+14 and below        15/+3
+15 - 19             20/+4
+20 - 24             25/+5
+25 - 29             30/+6
+30 and above        35/+7~
+@37852     = ~Energy Drain~
+@38852     = ~Energy Drain
+(Necromancy)
+Level: Clr 8, Sor/Wiz 8
+Range: Sight of Caster
+Duration: Permanent
+Casting Time: 2
+Area of Effect: 1 creature
+Saving Throw: Fortitude negates
+
+Similar to the energy drain of a wight or wraith, except much more powerful, this spell drains multiple levels from a creature. If the target fails a Fortitude saving throw at -8, it is drained one level for every three levels of the caster, to a maximum energy drain of 10 levels for a 30th-level caster. The energy drain is permanent until cured with a Restoration spell. This spell has no effect on undead or constructs.~
+@37853     = ~Enslave~
+@38853     = ~Enslave
+(Enchantment) 
+Level: Brd 7, Sor/Wiz 8
+Range: Sight of Caster
+Duration: Permanent
+Casting Time: 8
+Area of Effect: 1 creature
+Saving Throw: Will negates 
+
+This spell allows the caster to permanently gain full control of another creature. The target must make a Will saving throw at -4. If it fails, it is dominated by the caster until it dies or the effect is dispelled. Enslave can even affect undead and constructs.~
+@37952     = ~Perfect Invisibility~
+@38952     = ~Perfect Invisibility
+(Illusion) 
+Level: Sor/Wiz 9
+Range: Touch
+Duration: 3 rounds
+Casting Time: 4
+Area of Effect: 1 creature
+Saving Throw: None
+
+This spell is the ultimate form of invisibility. While under the effect of Perfect Invisibility, a creature can attack, cast a spell or otherwise interact with another creature or object while remaining completely invisible. However, Perfect Invisibility can still be dispelled by effects that would dispel regular invisibility, such as True Seeing or Dispel Magic. Barring such removal, the spell will last for 3 rounds.~
+@37953     = ~Improved Alacrity~
+@38953     = ~Improved Alacrity
+(Transmutation)
+Level: Clr 9, Drd 9, Sor/Wiz 9
+Range: Caster 
+Duration: 6 rounds
+Casting Time: 5
+Area of Effect: Caster
+Saving Throw: None 
+
+This spell eliminates the interval between spellcasting, allowing the caster to begin a new spell as soon as he or she finishes casting the previous one. A spellcaster under the effects of Improved Alacrity can cast multiple spells in the space of a single round, but the concentration involved imposes a -3 penalty to casting speed for the duration of the spell.~
+@37954     = ~Living Lightning~
+@38954     = ~Living Lightning
+(Evocation)
+Level: Drd 9, Sor/Wiz 9
+Range: Caster
+Duration: 1 round/level
+Casting Time: 10
+Area of Effect: Random creatures within 20 feet
+Saving Throw: Reflex half
+
+Living Lightning is essentially a spell that repeatedly casts itself. When cast, a lightning bolt shoots out of the caster, targeting a random enemy within 20 feet (if there are no enemies within 20 feet of the caster, nothing happens immediately). The bolt deals 10d6 damage, with a Reflex save for half. Every round thereafter for the duration of the spell, another lightning bolt is released, requiring no further action by the caster.~

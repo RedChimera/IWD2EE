@@ -12,6 +12,8 @@ COPY ~%mod_folder%/itm/itm_spell_revisions~ ~override~
 
 COPY ~%mod_folder%/bam/bam_spell_revisions~ ~override~
 
+COPY ~%mod_folder%/bcs/bcs_spell_revisions~ ~override~
+
 COPY ~%mod_folder%/tables/LISTDOMN.2da~ ~override~
 
 // fixed spell schools for scrolls
@@ -2179,6 +2181,12 @@ COPY_EXISTING ~sppr116.spl~ ~override~
 	SAY UNIDENTIFIED_DESC @1912
 	SAY IDENTIFIED_DESC @1912
 
+COPY_EXISTING ~spwi909.spl~ ~override~
+	SAY NAME1 @1913
+	SAY NAME2 @1913
+	SAY UNIDENTIFIED_DESC @1914
+	SAY IDENTIFIED_DESC @1914
+
 COPY_EXISTING ~effse.spl~ ~override~
 	LPF ALTER_EFFECT INT_VAR silent=1 check_headers=1 check_globals=1 match_opcode=10 opcode=18 parameter1=20 END
 	LPF DELETE_EFFECT INT_VAR silent=1 check_headers=1 check_globals=1 match_opcode=15 END
@@ -2190,7 +2198,85 @@ COPY_EXISTING ~spwi224.spl~ ~override~
 /*
 COPY_EXISTING ~ilw01.itm~ ~override~ ~imw01.itm~ ~override~ ~isw01.itm~ ~override~ ~icw01.itm~ ~override~
 	LPF ALTER_ITEM_HEADER INT_VAR thac0=32767 END
+
 */
+COPY_EXISTING ~uspr252.spl~ ~override~
+	SAY NAME1 @35252
+	SAY NAME2 @35252
+	SAY UNIDENTIFIED_DESC @36252
+	SAY IDENTIFIED_DESC @36252
+
+COPY_EXISTING ~uspr951.spl~ ~override~
+	SAY NAME1 @35951
+	SAY NAME2 @35951
+	SAY UNIDENTIFIED_DESC @36951
+	SAY IDENTIFIED_DESC @36951
+	LPF ALTER_EFFECT INT_VAR silent=1 check_headers=1 check_globals=1 match_opcode=139 match_parameter1=30001 parameter1=RESOLVE_STR_REF(@30001) END
+	LPF ALTER_EFFECT INT_VAR silent=1 check_headers=1 check_globals=1 match_opcode=139 match_parameter1=30002 parameter1=RESOLVE_STR_REF(@30002) END
+	LPF ALTER_EFFECT INT_VAR silent=1 check_headers=1 check_globals=1 match_opcode=139 match_parameter1=30003 parameter1=RESOLVE_STR_REF(@30003) END
+	LPF ALTER_EFFECT INT_VAR silent=1 check_headers=1 check_globals=1 match_opcode=139 match_parameter1=30004 parameter1=RESOLVE_STR_REF(@30004) END
+
+COPY_EXISTING ~uspr952.spl~ ~override~
+	SAY NAME1 @35952
+	SAY NAME2 @35952
+	SAY UNIDENTIFIED_DESC @36952
+	SAY IDENTIFIED_DESC @36952
+
+COPY_EXISTING ~uswi151.spl~ ~override~
+	SAY NAME1 @37151
+	SAY NAME2 @37151
+	SAY UNIDENTIFIED_DESC @38151
+	SAY IDENTIFIED_DESC @38151
+
+COPY_EXISTING ~uswi652.spl~ ~override~
+	SAY NAME1 @37652
+	SAY NAME2 @37652
+	SAY UNIDENTIFIED_DESC @38652
+	SAY IDENTIFIED_DESC @38652
+
+COPY_EXISTING ~uswi751.spl~ ~override~
+	SAY NAME1 @37751
+	SAY NAME2 @37751
+	SAY UNIDENTIFIED_DESC @38751
+	SAY IDENTIFIED_DESC @38751
+
+COPY_EXISTING ~uswi752.spl~ ~override~
+	SAY NAME1 @37752
+	SAY NAME2 @37752
+	SAY UNIDENTIFIED_DESC @38752
+	SAY IDENTIFIED_DESC @38752
+
+COPY_EXISTING ~uswi852.spl~ ~override~
+	SAY NAME1 @37852
+	SAY NAME2 @37852
+	SAY UNIDENTIFIED_DESC @38852
+	SAY IDENTIFIED_DESC @38852
+
+COPY_EXISTING ~uswi853.spl~ ~override~
+	SAY NAME1 @37853
+	SAY NAME2 @37853
+	SAY UNIDENTIFIED_DESC @38853
+	SAY IDENTIFIED_DESC @38853
+
+COPY_EXISTING ~uswi952.spl~ ~override~
+	SAY NAME1 @37952
+	SAY NAME2 @37952
+	SAY UNIDENTIFIED_DESC @38952
+	SAY IDENTIFIED_DESC @38952
+
+COPY_EXISTING ~uswi953.spl~ ~override~
+	SAY NAME1 @37953
+	SAY NAME2 @37953
+	SAY UNIDENTIFIED_DESC @38953
+	SAY IDENTIFIED_DESC @38953
+
+COPY_EXISTING ~uswi954.spl~ ~override~
+	SAY NAME1 @37954
+	SAY NAME2 @37954
+	SAY UNIDENTIFIED_DESC @38954
+	SAY IDENTIFIED_DESC @38954
+
+
 OUTER_FOR (i = 1; i < 30; ++i) BEGIN
 	OUTER_SET ones_digit = (i + 1) MODULO 10
 	OUTER_SET tens_digit = (i + 1) / 10
@@ -2600,7 +2686,7 @@ COPY_EXISTING ~USPCOLD.spl~ ~override~
   SAY NAME2 @1859
   SAY UNIDENTIFIED_DESC @1860
   SAY IDENTIFIED_DESC @1860
-COPY ~%mod_folder%/itm/USPCOLD.itm~ ~override~
+COPY ~%mod_folder%/itm/USPCOLDZ.itm~ ~override~
   SAY NAME1 @1859
   SAY NAME2 @1859
   SAY DESC @1860
@@ -2796,6 +2882,7 @@ COPY_EXISTING ~LISTSPLL.2da~ ~override~
 			INNER_ACTION BEGIN
 				COPY_EXISTING ~%spell_res_ref%.spl~ ~override~
 					READ_SHORT 0x94 thecastingtime ELSE 0
+//					READ_LONG NAME1 name_ref
 					READ_LONG UNIDENTIFIED_DESC description_ref
 					PATCH_IF thecastingtime = 0 BEGIN
 						LPF PATCH_REPLACE_IN_STRING INT_VAR strref=description_ref match_case=1 new_string=1 STR_VAR match= EVAL ~%stringcastingtime%.*~ replace_with= EVAL ~%stringcastingtime% %stringinstant%~ RET description_new=description_new END
@@ -2807,6 +2894,7 @@ COPY_EXISTING ~LISTSPLL.2da~ ~override~
 					BUT_ONLY_IF_IT_CHANGES
 	
 				COPY_EXISTING ~%spell_res_ref%z.itm~ ~override~
+//					WRITE_LONG NAME2 name_ref
 					SAY_EVALUATED IDENTIFIED_DESC ~%description_new%~
 					IF_EXISTS
 					BUT_ONLY_IF_IT_CHANGES

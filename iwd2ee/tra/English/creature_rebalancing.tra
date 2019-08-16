@@ -14,8 +14,8 @@
 @21007=~Mass Destruction~
 @21008=~Xvimian Storm~
 @21009=~Mass Energy Drain~
-@21010=~Call Slayer Knights~
-@21011=~Call Gelugon~
+@21010=~Thought of Death~
+@21011=~Living Lightning~
 
 @21651=~Sseth's Venom~
 @21652=~Sseth's Scales~
@@ -60,3 +60,6 @@ Weight:  0 lb.~
 @23011=~Infernal Harpy~
 @23012=~Black Ice Knight~
 @23013=~Winterwight~
+
+@24002=~Call Slayer Knights~
+@24003=~Call Gelugon~

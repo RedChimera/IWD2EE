@@ -1,0 +1,13 @@
+1-100: Setup
+101-120: Looser Alignment Restrictions
+121-145: Expanded Spell Focus
+146-999: Class Revisions
+1000-1999: Spell Revisions
+4000-4499: Faster Areas
+4500-4799: Concoct Potions
+4800-5999: NPC Core
+10000-19999: Item Revisions
+20000-29999: Creature Revisions
+30000-39999: Spell Revisions
+40000-49999: NPC dialogue
+54500-54799: Concoct Potions

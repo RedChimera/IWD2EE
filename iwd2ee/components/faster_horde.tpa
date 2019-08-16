@@ -224,7 +224,7 @@ COPY_EXISTING ~31cguth3.bcs~ ~override~
 	END
 
 COPY_EXISTING ~31orchsb.cre~ ~override~ ~31buggut.cre~ ~override~
-	ADD_CRE_ITEM ~30sstone~ #0 #0 #0 ~NONE~ ~INV4~ //Wardstone that bypasses all wards
+	LPF	IWD2_ADD_CRE_ITEM INT_VAR equip=0 STR_VAR item=~30SSTONE~ slot=~inv7~ mode=~move~ END //Wardstone that bypasses all wards
 
 COPY_EXISTING ~us31pwd0.bcs~ ~override/31pward0.bcs~
 
