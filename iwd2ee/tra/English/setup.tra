@@ -57,3 +57,7 @@
 @56   = ~Undead, constructs, objects, elementals and oozes become immune to critical hits; all other creatures become vulnerable to critical hits~
 @57   = ~All creatures become vulnerable to critical hits~
 @58   = ~NPCs gain experience upon joining to match the party's experience~
+@59   = ~Have the party start the game with extra experience in Heart of Fury Mode~
+@60   = ~Start with a total of 36000 experience divided among the party, enough for a six-character party to start at level 4 (recommended if you've installed some of the components that weaken HoF creatures)~
+@61   = ~Start with a total of 90000 experience divided among the party, enough for a six-character party to start at level 6~
+@62   = ~Start with a total of 270000 experience divided among the party, enough for a six-character party to start at level 10 (recommended if you haven't installed the components that weaken HoF creatures)~

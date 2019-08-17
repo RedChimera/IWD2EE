@@ -355,3 +355,20 @@ SUBCOMPONENT @53
 BEGIN @49 DESIGNATED 50
 
       INCLUDE ~%mod_folder%/components/hof_summon_changes_1.tpa~ //~Remove ability score bonuses of allied summoned creatures in Heart of Fury Mode~
+
+//Have the party start with more experience on Heart of Fury Mode
+
+BEGIN @60 DESIGNATED 64
+SUBCOMPONENT @59
+
+      INCLUDE ~%mod_folder%/components/hof_start_xp_4.tpa~ //~Start with a total of 36000 experience divided among the party, enough for a six-character party to start at level 4~
+
+BEGIN @61 DESIGNATED 66
+SUBCOMPONENT @59
+
+      INCLUDE ~%mod_folder%/components/hof_start_xp_6.tpa~ //~Start with a total of 90000 experience divided among the party, enough for a six-character party to start at level 6~
+
+BEGIN @62 DESIGNATED 70
+SUBCOMPONENT @59
+
+      INCLUDE ~%mod_folder%/components/hof_start_xp_10.tpa~ //~Start with a total of 270000 experience divided among the party, enough for a six-character party to start at level 10~
