@@ -2512,8 +2512,8 @@ Saving Throw: None
 This spell creates a large number of projectiles akin to those created by the Magic Missile spell, which hit a single target. Each missile deals 1d4+1 magic damage with no saving throw. The spell fires one missile per level of the wizard, to a maximum of 30 missiles at level 30.~
 @37751     = ~Stygian Ice Storm~
 @38751     = ~Stygian Ice Storm
-Level: Sor/Wiz 7
 (Conjuration)
+Level: Sor/Wiz 7
 Range: Sight of Caster
 Duration: Instantaneous
 Casting Time: 4
@@ -2533,7 +2533,7 @@ Saving Throw: None
 
 This spell envelops the caster in a magical cloak of force, which blocks all but the most powerful physical attacks. For 4 rounds, the caster gains damage reduction 15/+3. The damage reduction increases based on the level of the caster:
 
-Caster level		Damage Reduction
+Caster level        Damage Reduction
 14 and below        15/+3
 15 - 19             20/+4
 20 - 24             25/+5
