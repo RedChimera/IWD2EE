@@ -138,6 +138,6 @@ END
 
 IF ~~ THEN BEGIN DiplomacyGuthma13
   SAY ~Then you're not here for gold! You're here to retrieve a spy, and I WILL NOT ALLOW IT!~
-  IF ~~ THEN REPLY ~So be it.~ DO ~Enemy()
+  IF ~~ THEN DO ~Enemy()
 ~ EXIT
 END

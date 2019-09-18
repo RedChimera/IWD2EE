@@ -180,7 +180,7 @@ END
 
 IF ~~ THEN BEGIN TrickHarshomFailed
   SAY ~Spread out! Make sure... Wait. No, this is just an illusion! Everyone, there are no umber hulks! The enemy is right in front of us! Find the illusionist and kill them!~
-  IF ~~ THEN REPLY ~~ DO ~Enemy()~ EXIT
+  IF ~~ THEN DO ~Enemy()~ EXIT
 END
 
 IF ~~ THEN BEGIN TrickHarshom2

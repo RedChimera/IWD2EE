@@ -2454,6 +2454,37 @@ This spell grants the caster a 15/- bonus to acid, cold, fire, and electricity r
 @30002=~Cold damage dealt increased by 100%~
 @30003=~Cold damage dealt increased by 150%~
 @30004=~Cold damage dealt increased by 200%~
+@30005=~Protected by Freedom of Movement~
+@30006=~Protected by Chaotic Commands~
+@30007=~Impervious Sanctity of Mind~
+@30008=~Protected by Mind Blank~
+@30009=~Protected by Death Ward~
+@30010=~Protected by Spell Shield~
+@30011=~Protected by Elemental Barrier~
+
+@31508     = ~Chaotic Commands~
+@32508     = ~Chaotic Commands
+(Enchantment) [Chaos]
+Level: Clr 5, Tempus 5
+Range: Sight of Caster
+Duration: 10 rounds / level
+Casting Time: 3
+Area of Effect: 1 creature
+Saving Throw: None
+
+Chaotic Commands renders a creature immune to magical commands.  Charm, Dominate Person, Command, Sleep, Confusion, Feeblemind, and Symbol spells all fit into this category.~
+
+@33804     = ~Mind Blank~
+@34804     = ~Mind Blank
+(Abjuration)
+Level: Clr 9, Sor/Wiz 8
+Range: 10 ft.
+Duration: 1 Day 
+Casting Time: 1
+Area of Effect: One Creature
+Saving Throw: None
+
+In the interests of one's self-control and privacy, Mind Blank shields a creature's mind from almost any mental effect - Charm, Command, Dominate Person, Fear, Feeblemind, and any scrying by crystal balls or other divination methods. ~
 
 @35252     = ~Null Healing~
 @36252     = ~Null Healing
@@ -2466,6 +2497,17 @@ Area of Effect: 1 creature
 Saving Throw: None
 
 This necromantic curse prevents a creature from healing. For 1 day, the cursed creature cannot regain Hit Points by items, spells, abilities, resting, or regeneration. There is no saving throw.~
+@35753     = ~Power Word: Heal~
+@36753     = ~Power Word: Heal
+(Divination)
+Level: Brd 8, Clr 7
+Range: Sight of Caster
+Duration: Instantaneous
+Casting Time: 0
+Area of Effect: 1 creature
+Saving Throw: None
+
+Power Word: Heal is one of the beneficial words of power. When uttered, it heals a creature to their maximum hit points and cures poison, disease, blindness, deafness, feeblemindedness, intoxication, and bleeding. Power Word: Heal has no effect on undead.~
 @35951     = ~Auril's Blessing~
 @36951     = ~Auril's Blessing
 (Conjuration)
@@ -2539,6 +2581,17 @@ Caster level        Damage Reduction
 20 - 24             25/+5
 25 - 29             30/+6
 30 and above        35/+7~
+@37753     = ~Fortune's Favorite~
+@38753     = ~Fortune's Favorite
+(Enchantment) 
+Level: Brd 7
+Range: Sight of Caster
+Duration: 7 seconds
+Casting Time: 2
+Area of Effect: 1 creature
+Saving Throw: None 
+
+This spell bestows flawless luck upon a creature. For 7 seconds, the recipient gains a +20 bonus to luck. This means that the recipient will deal maximum damage with their attacks, take minimum damage from spells, roll a natural 20 with each attack, and almost always succeed on saving throws.~
 @37852     = ~Energy Drain~
 @38852     = ~Energy Drain
 (Necromancy)
@@ -2561,6 +2614,17 @@ Area of Effect: 1 creature
 Saving Throw: Will negates 
 
 This spell allows the caster to permanently gain full control of another creature. The target must make a Will saving throw at -4. If it fails, it is dominated by the caster until it dies or the effect is dispelled. Enslave can even affect undead and constructs.~
+@37854     = ~Army of Images~
+@38854     = ~Army of Images
+(Illusion)
+Level: Brd 8, Mask 8
+Range: Caster
+Duration: 10 rounds
+Casting Time: 8
+Area of Effect: 20-foot radius
+Saving Throw: None 
+
+Army of Images is like Mirror Image, except as an area of effect. When cast, all allies within 20 feet become surrounded by eight illusory duplicates. Incoming attacks may hit the duplicates rather than the real creatures.~
 @37952     = ~Perfect Invisibility~
 @38952     = ~Perfect Invisibility
 (Illusion) 

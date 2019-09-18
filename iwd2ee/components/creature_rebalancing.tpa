@@ -204,10 +204,12 @@ COPY_EXISTING ~uses002.spl~ ~override~
 COPY_EXISTING ~uses003.spl~ ~override~
 	SAY NAME1 @21003
 	SAY NAME2 @21003
+	LPF ALTER_EFFECT INT_VAR silent=1 check_headers=1 check_globals=1 match_opcode=139 match_parameter1=20007 parameter1=RESOLVE_STR_REF(@20007) END
 
 COPY_EXISTING ~uses004.spl~ ~override~
 	SAY NAME1 @21004
 	SAY NAME2 @21004
+	LPF ALTER_EFFECT INT_VAR silent=1 check_headers=1 check_globals=1 match_opcode=139 match_parameter1=20006 parameter1=RESOLVE_STR_REF(@20006) END
 
 COPY_EXISTING ~uses005.spl~ ~override~
 	SAY NAME1 @21005
@@ -286,6 +288,7 @@ COPY_EXISTING ~usip651.spl~ ~override~
 COPY_EXISTING ~usip652.spl~ ~override~
 	SAY NAME1 @21652
 	SAY NAME2 @21652
+	LPF ALTER_EFFECT INT_VAR silent=1 check_headers=1 check_globals=1 match_opcode=139 match_parameter1=20005 parameter1=RESOLVE_STR_REF(@20005) END
 
 COPY_EXISTING ~usip751.spl~ ~override~
 	SAY NAME1 @21751
@@ -468,14 +471,14 @@ COPY_EXISTING ~40GIAFOM.cre~ ~override~ ~40RGIAFO.cre~ ~override~ ~41GIAFOM.cre~
 	WRITE_BYTE proficiencybow 1
 	WRITE_BYTE challengerating 10
 
-COPY_EXISTING ~53FOMOTH.cre~ ~override~
-	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelbarbarian=12 STR_VAR updatehp=~average~ END
+COPY_EXISTING ~53FOMOTH.cre~ ~override~ ~50GNTFO.cre~ ~override~
+	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelbarbarian=12 STR_VAR updatehp=~max~ END
 	WRITE_SHORT armorclass 12
 	READ_LONG feats2 ulgiash
 	ulgiash|=0x80
 	WRITE_LONG feats2 ulgiash
 	WRITE_BYTE proficiencybow 2
-	WRITE_BYTE challengerating 10
+	WRITE_BYTE challengerating 12
 
 COPY_EXISTING ~41CATHIN.cre~ ~override~
 	WRITE_BYTE coldresistance 100
@@ -2492,6 +2495,11 @@ COPY_EXISTING_REGEXP ~00s.*\.cre~ ~override~
 	END
 	BUT_ONLY_IF_IT_CHANGES
 
+// Patches all creatures in the prologue to have -1 luck, so they won't get critical hits (this is actually a buff to the non-elite goblins, which normally have -3 luck).
+
+COPY_EXISTING_REGEXP ~1.*\.cre~ ~override~
+	WRITE_BYTE luck 255 //-1
+
 // Patches all spellcasters to have two pips in all Spell Focus feats. Effectively increases all enemy spells' save DCs by 4, except for casters who already had Spell Focus.
 
 COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
@@ -2510,3 +2518,16 @@ COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
 	END
 	BUT_ONLY_IF_IT_CHANGES
 
+// Fixing a bug that sometimes caused non-arcane spellcasters to get arcane spell failure
+
+COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
+	READ_BYTE levelbard bardlevel
+	READ_BYTE levelsorcerer sorcererlevel
+	READ_BYTE levelwizard wizardlevel
+	PATCH_IF bardlevel = 0 AND sorcererlevel = 0 AND wizardlevel = 0 BEGIN
+		READ_LONG feats1 thefeats1
+		thefeats1|=0x10
+		WRITE_LONG feats1 thefeats1
+		WRITE_BYTE armoredarcana 20
+	END
+	BUT_ONLY_IF_IT_CHANGES

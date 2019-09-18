@@ -334,22 +334,22 @@ END
 
 IF ~~ THEN BEGIN SuccessfulQuestionMotivesM3I
 SAY ~I don't understand.  Why would...~
-  IF ~~ THEN REPLY ~~ EXTERN ~61ISAIR~ SuccessfulQuestionMotivesI3K
+  IF ~~ THEN EXTERN ~61ISAIR~ SuccessfulQuestionMotivesI3K
 END
 
 IF ~~ THEN BEGIN SuccessfulQuestionMotivesM3J
 SAY ~A... a long time, Isair.  A very long time.~
-  IF ~~ THEN REPLY ~~ EXTERN ~61ISAIR~ SuccessfulQuestionMotivesI3M
+  IF ~~ THEN EXTERN ~61ISAIR~ SuccessfulQuestionMotivesI3M
 END
 
 IF ~~ THEN BEGIN SuccessfulQuestionMotivesM3JJ
 SAY ~Yes.  I think it would be.~
-  IF ~~ THEN REPLY ~~ EXTERN ~61ISAIR~ SuccessfulQuestionMotivesI3N
+  IF ~~ THEN EXTERN ~61ISAIR~ SuccessfulQuestionMotivesI3N
 END
 
 IF ~~ THEN BEGIN SuccessfulQuestionMotivesM3K
 SAY ~Isair? I... urgh...~
-  IF ~~ THEN REPLY ~~ EXTERN ~61ISAIR~ MythalTriggerQuestionMotives3A
+  IF ~~ THEN EXTERN ~61ISAIR~ MythalTriggerQuestionMotives3A
 END
 
 IF ~~ THEN BEGIN FailedQuestionMotivesRaceAny
@@ -374,7 +374,7 @@ END
 
 IF ~~ THEN BEGIN SuccessfulQuestionMotivesM1D
 SAY ~... If only it were that simple.~
-IF ~~ THEN REPLY ~~ EXTERN ~61ISAIR~ SuccessfulQuestionMotivesI1F
+IF ~~ THEN EXTERN ~61ISAIR~ SuccessfulQuestionMotivesI1F
 END
 
 IF ~~ THEN BEGIN FailedQuestionMotivesM1A

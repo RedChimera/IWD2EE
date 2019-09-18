@@ -218,7 +218,7 @@ END
 
 IF ~Global("LimhaLowHP", "GLOBAL", 1)~ THEN BEGIN LimhaLowHP
   SAY ~Wait! Wait! I'll do it! I'll break the curse! I'll turn all the children back to normal! Just let me live! I don't want to die! I'll fix everything...~
-  IF ~~ THEN REPLY ~~ DO ~FadeToColor([0.0],0)
+  IF ~~ THEN DO ~FadeToColor([0.0],0)
 Wait(3)
 FadeFromColor([0.0],0)~ GOTO 26
 END
@@ -317,7 +317,7 @@ END
 
 IF ~~ THEN BEGIN 30
   SAY ~Hm... Hm! Now that you mention it, I could do a lot with that. That's a fine price for a batch of minks. Show me the gold and I'll break the curse...~
-  IF ~~ THEN REPLY ~~ DO ~FadeToColor([0.0],0)
+  IF ~~ THEN DO ~FadeToColor([0.0],0)
 Wait(3)
 FadeFromColor([0.0],0)
 TakePartyGold(1000)~ GOTO 31
@@ -350,14 +350,14 @@ END
 
 IF ~~ THEN BEGIN 34
   SAY ~A fair price for a batch of minks, isn't it? Very well, I'll break the curse...~
-  IF ~~ THEN REPLY ~~ DO ~FadeToColor([0.0],0)
+  IF ~~ THEN DO ~FadeToColor([0.0],0)
 Wait(3)
 FadeFromColor([0.0],0)~ GOTO 36
 END
 
 IF ~~ THEN BEGIN 35
   SAY ~Fair enough. A fine price for a batch of minks, isn't it? Give me a moment and I'll break the curse...~
-  IF ~~ THEN REPLY ~~ DO ~FadeToColor([0.0],0)
+  IF ~~ THEN DO ~FadeToColor([0.0],0)
 Wait(3)
 FadeFromColor([0.0],0)~ GOTO 36
 END
@@ -375,7 +375,7 @@ END
 
 IF ~~ THEN BEGIN IgnoreLimha2
   SAY ~Oh.  That's surprising.  I'll just get rid of this pest, then. *Hm-hm-hm!*~
-  IF ~~ THEN REPLY ~~ DO ~SetGlobal("LimhaAfterHannuDies", "GLOBAL", 1)~ EXTERN ~50HANNU~ 8
+  IF ~~ THEN DO ~SetGlobal("LimhaAfterHannuDies", "GLOBAL", 1)~ EXTERN ~50HANNU~ 8
 END
 
 IF ~Global("LimhaAfterHannuDies", "GLOBAL", 1)~ THEN BEGIN LimhaAfterHannuDies

@@ -126,7 +126,7 @@ Disadvantages:
 * Clerics do not have access to many powerful offensive spells.
 * Clerics are weaker in combat than fighters, rangers, paladins, and barbarians.~
 @530    = ~Druid~
-@531    = ~DRUID: 
+@531    = ~DRUID:
 
 The druid serves the cause of nature and neutrality; the wilderness is his community. He uses his special powers to protect it and to preserve balance in the world.
 
@@ -294,7 +294,7 @@ Ilmater, also known as the Crying God, is the god of suffering and perserverance
 
 Advantages:
 
-* Soothing Touch 1/day (heals 2d8 hit points and cures poison, bleeding wounds, and pain effects) 
+* Soothing Touch 1/day (heals 2d8 hit points and cures poison, bleeding wounds, and pain effects)
 * Ilmater's Endurance 1/day (allows a non-evil ally to bear far more pain but also suffer more pain, granting them a +20 Constitution bonus and a -5 vulnerability to physical damage)~
 
 @543    = ~GHOSTWISE HALFLING:
@@ -335,7 +335,7 @@ Also known as He of the Unsleeping Eyes, Helm is the god of guardians.  His serv
 
 Advantages:
 
-* Helm's Shield 1/day (grants the recipient a +4 generic AC bonus and a +2 bonus to all saving throws for 30 rounds) 
+* Helm's Shield 1/day (grants the recipient a +4 generic AC bonus and a +2 bonus to all saving throws for 30 rounds)
 * Helm's Watch 1/day (allows the recipient to see invisible creatures and grants them immunity to sleep, blindness, fatigue and sneak attacks for 30 rounds)~
 @547    = ~SILVERSTAR OF SELUNE:
 
@@ -361,6 +361,35 @@ You have learned how to maximize the effect of your attacks while performing a s
 Prerequisites: 4 ranks in Concentration and Weapon Specialization in 2 weapons.
 
 Benefit: All attacks do maximum damage for 1 round per level. If you are level 12 or higher, you also gain a +4 attack bonus and +4 critical threat range for the duration.~
+@670    = ~TOUGHNESS:
+
+You are tougher than normal.
+
+Benefit: You gain +10 hit points.
+
+Special: You may gain this feat up to 5 times in Icewind Dale 2. Taking Toughness a second time grants +15 hit points (+25 total). Taking it a third time grants +20 HP (+45 total). Taking it a fourth time grants +25 HP (+70 total), and taking it a fifth time grants +30 HP (+100 total).~
+@671    = ~GREAT FORTITUDE:
+
+You are tougher than normal.
+
+Benefit: You get a +3 bonus to all Fortitude saving throws.~
+@672    = ~IRON WILL:
+
+You have a stronger will than normal.
+
+Benefit: You get a +3 bonus to all Will saving throws.~
+@673    = ~LIGHTNING REFLEXES:
+
+You have faster than normal reflexes.
+
+Benefit: You get a +3 bonus to all Reflex saving throws.~
+@674    = ~~
+@675    = ~~
+@676    = ~~
+@677    = ~~
+@678    = ~~
+@679    = ~~
+@680    = ~~
 
 @785    = ~Aasimar~
 @786    = ~AASIMAR:

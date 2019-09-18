@@ -3,7 +3,7 @@ BEGIN ~10BLANC~
 IF WEIGHT #0 ~  Global("US_Geoffrey_Convinced_To_Join","GLOBAL",1)
 ~ THEN BEGIN BlanchardPikeBlankDialogue
   SAY ~Go bother someone else, stranger.  I've got more interesting people to talk to -- like myself, or better yet, nobody.~
-  IF ~~ THEN REPLY ~~ EXIT
+  IF ~~ THEN EXIT
 END
 
 IF WEIGHT #3 ~  NumberOfTimesTalkedTo(0)

@@ -2,7 +2,7 @@ BEGIN ~USSTMI~
 
 IF ~~ THEN BEGIN 0
   SAY ~Of course I was, Majrash. Never underestimate a diviner.~
-  IF ~~ THEN REPLY ~~ EXTERN ~USSTMA~ 1
+  IF ~~ THEN EXTERN ~USSTMA~ 1
 END
 
 IF ~~ THEN BEGIN 1
@@ -14,7 +14,7 @@ END
 
 IF ~~ THEN BEGIN 2
   SAY ~I am Mirabel. Diviner and destroyer.~
-  IF ~~ THEN REPLY ~~ EXTERN ~USSTMA~ 3
+  IF ~~ THEN EXTERN ~USSTMA~ 3
 END
 
 IF ~~ THEN BEGIN 3

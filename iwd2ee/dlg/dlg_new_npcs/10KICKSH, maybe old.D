@@ -3,7 +3,7 @@ BEGIN ~10KICKSH~
 IF WEIGHT #0 ~  Global("US_Geoffrey_Convinced_To_Join","GLOBAL",1)
 ~ THEN BEGIN KickshawBlankDialogue
   SAY ~Hello again, stranger.  I hope you enjoy running around doing chores for Shawford, but you'll excuse me if I prefer to stay right here.~
-  IF ~~ THEN REPLY ~~ EXIT
+  IF ~~ THEN EXIT
 END
 
 IF WEIGHT #3 ~  NumberOfTimesTalkedTo(0)

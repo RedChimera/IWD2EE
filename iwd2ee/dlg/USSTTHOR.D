@@ -28,7 +28,7 @@ END
 
 IF ~~ THEN BEGIN 4
   SAY ~Yes. If I wasn't here to stop you.~
-  IF ~~ THEN REPLY ~~ DO ~Enemy()~ EXIT
+  IF ~~ THEN DO ~Enemy()~ EXIT
 END
 
 IF ~~ THEN BEGIN 5
@@ -47,12 +47,12 @@ END
 
 IF ~~ THEN BEGIN 6
   SAY ~You'll regret those words, warmblood!~
-  IF ~~ THEN REPLY ~~ DO ~Enemy()~ EXIT
+  IF ~~ THEN DO ~Enemy()~ EXIT
 END
 
 IF ~~ THEN BEGIN 7
   SAY ~The barbarians do not worship Tempus, adventurers--they worship *Tempos.* I am not falling for sssuch an obvious lie.~
-  IF ~~ THEN REPLY ~~ DO ~Enemy()~ EXIT
+  IF ~~ THEN DO ~Enemy()~ EXIT
 END
 
 IF ~~ THEN BEGIN 8
@@ -63,7 +63,7 @@ END
 
 IF ~~ THEN BEGIN 9
   SAY ~I find that unlikely.~
-  IF ~~ THEN REPLY ~~ DO ~Enemy()~ EXIT
+  IF ~~ THEN DO ~Enemy()~ EXIT
 END
 
 IF ~~ THEN BEGIN 10
@@ -88,7 +88,7 @@ END
 
 IF ~~ THEN BEGIN 14
   SAY ~Find it in the lab on the upper level!~
-  IF ~~ THEN REPLY ~~ DO ~AddExperienceParty(10000)
+  IF ~~ THEN DO ~AddExperienceParty(10000)
 StartCutScene("USSTTHOR")~ EXIT
 END
 

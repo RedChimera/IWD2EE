@@ -14,25 +14,25 @@ END
 
 IF ~~ THEN BEGIN 0
   SAY ~Cool thy anger, my friend... Venomin, Izbelah, I assure you I would never suffer an eruption to consume Dragon's Eye. We shall do whatever we can to help thy people, but... thy spell gives us pause.~
-  IF ~~ THEN REPLY ~~ EXTERN ~USSTLPL~ 1
+  IF ~~ THEN EXTERN ~USSTLPL~ 1
 END
 
 IF ~~ THEN BEGIN 1
   SAY ~If there is even a single mistake, the result could be catastrophic... The spell could permanently stop time, or worse.~
-  IF ~~ THEN REPLY ~~ EXTERN ~USSTLPI~ 2
+  IF ~~ THEN EXTERN ~USSTLPI~ 2
 END
 
 IF ~~ THEN BEGIN 2
   SAY ~You know these people, High Sorceress?~
-  IF ~~ THEN REPLY ~~ EXTERN ~USSTLPI~ 3
+  IF ~~ THEN EXTERN ~USSTLPI~ 3
 END
 
 IF ~~ THEN BEGIN 3
   SAY ~I confess that I do not understand your question.~
-  IF ~~ THEN REPLY ~~ EXTERN ~USSTLPI~ 4
+  IF ~~ THEN EXTERN ~USSTLPI~ 4
 END
 
 IF ~~ THEN BEGIN 4
   SAY ~Izbelah! You wound me! I would never dare break our trust.~
-  IF ~~ THEN REPLY ~~ EXTERN ~USSTLPI~ 5
+  IF ~~ THEN EXTERN ~USSTLPI~ 5
 END
