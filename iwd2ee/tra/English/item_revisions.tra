@@ -9681,7 +9681,7 @@ Launcher:  Sling~
 
 STATISTICS:
 
-Damage: 3d8 Fire damage to a single opponent (Reflex DC 16 for half)
+Damage: 4d8 Fire damage to a single opponent (Reflex DC 16 for half)
 Weight: 0 lb.~
 //@12041    = ~Lamp Oil~ // HoF
 @12042    = ~This container contains lamp oil, usually used for lanterns and such. This particular container has a rag soaked in oil attached to it so that it can be ignited and thrown at an opponent.
@@ -9695,7 +9695,7 @@ Weight: 0 lb.~
 
 STATISTICS:
 
-When thrown at a target, the glass pot breaks, spreading flaming oil over everything within a 5' radius, doing 3d8 points of fire damage (Reflex DC 16 for half)
+When thrown at a target, the glass pot breaks, spreading flaming oil over everything within a 5' radius, doing 5d8 points of fire damage (Reflex DC 16 for half)
 Weight: 0 lb.~
 //@12045    = ~Flaming Oil~ // HoF
 @12046    = ~Inside of this glass pot is an expensive mixture of oil and other chemicals.  When this mixture is set ablaze, it burns for several seconds at a very hot temperature.  Flaming oil is sometimes difficult to use because it takes a long time for the user to properly throw it.  Adventurers often carry oil with them to deal with trolls in the unfortunate event that they are encountered.
@@ -9709,14 +9709,14 @@ Weight: 0 lb.~
 
 STATISTICS:
 
-When thrown, the skull hovers at the target point until a creature comes near it, at which point it explodes for 4d8 magic damage, harming everyone within 10' (Reflex DC 28 for half)
+When thrown, the skull hovers at the target point until a creature comes near it, at which point it explodes for 10d8 magic damage, harming everyone within 10' (Reflex DC 25 for half)
 Weight: 1 lb.~
 @12049    = ~Xainlaphar's Detonating Skull~ // HoF
 @12050    = ~Xainlaphar, a mad Red Wizard of Thay, was known for turning the skulls of his slain enemies into weapons.  His most common weapon was known as the "Detonating Skull."  In essence, the item is not much different from the spell Skull Trap.  Xainlaphar died in 913 DR, long before he had time to use even half of his enchanted skulls.  They were claimed by his foes, a paladin and priest of Helm.  They intended to destroy the items, but at least forty were stolen by crafty thieves on the way back to Sembia.
 
 STATISTICS:
 
-When thrown, the skull hovers at the target point until a creature comes near it, at which point it explodes for 30d8 magic damage, harming everyone within 10' (Reflex DC 45 for half)
+When thrown, the skull hovers at the target point until a creature comes near it, at which point it explodes for 20d8 magic damage, harming everyone within 10' (Reflex DC 35 for half)
 Weight: 1 lb.~
 //@12051    = ~Howling Wolf Charm~
 @12052    = ~This is a smallish, silver wolf's head charm of the sort sometimes fashioned by Rashemen shamans of the Tribe of the Wolf.  By gripping the charm tightly and howling towards the heavens, one may summon a fierce gray wolf to aid him or her in battle.  Such charms are said to tarnish as their power wanes, and eventually disintegrate into silvery powder when the last of their summoning energy has been consumed.
@@ -10208,41 +10208,41 @@ Weight: 1 lb.~
 
 
 //@12167    = ~Protection from Acid~
-@12168    = ~A Protection from Acid scroll offers protection to the target from all forms of acid, be they of a natural or magical nature. The effect is not permanent, however, and will wear off after 12 hours.
+@12168    = ~A Protection from Acid scroll offers protection to the target from all forms of acid, be they of a natural or magical nature. The effect is not permanent, however, and will wear off after 24 hours.
 
 STATISTICS:
 
-Resistance:  30/- Acid Resistance
-Range:  30 ft
+Resistance:  50/- Acid Resistance
+Range:  20 ft.
 Area:  1 creature
-Duration:  12 hours~
+Duration:  24 hours~
 //@12169    = ~Protection from Cold~
-@12170    = ~A Protection from Cold scroll offers protection to the target from all forms of cold, be they of a natural or magical nature.  This effect is not permanent, however, and will wear off after 12 hours.
+@12170    = ~A Protection from Cold scroll offers protection to the target from all forms of cold, be they of a natural or magical nature.  This effect is not permanent, however, and will wear off after 24 hours.
 
 STATISTICS:
 
-Resistance:  30/- Cold Resistance
-Range:  30 ft
+Resistance:  50/- Cold Resistance
+Range:  20 ft.
 Area:  1 creature
-Duration:  12 hours~
+Duration:  24 hours~
 //@12171    = ~Protection from Electricity~
-@12172    = ~A Protection from Electricity scroll offers protection to the target from all forms of electrical damage, be it of a natural or magical nature.  The effect is not permanent, however, and will wear off after 12 hours.
+@12172    = ~A Protection from Electricity scroll offers protection to the target from all forms of electrical damage, be it of a natural or magical nature.  The effect is not permanent, however, and will wear off after 24 hours.
 
 STATISTICS:
 
-Resistance:  30/- Electrical Resistance
-Range:  30 ft
+Resistance:  50/- Electrical Resistance
+Range:  20 ft.
 Area:  1 creature
-Duration:  12 hours~
+Duration:  24 hours~
 //@12173    = ~Protection from Fire~
-@12174    = ~A Protection from Fire scroll offers protection to the target from all forms of fire, even that of magical or elemental nature. The effect is not permanent, however, and will wear off after 12 hours.
+@12174    = ~A Protection from Fire scroll offers protection to the target from all forms of fire, even that of magical or elemental nature. The effect is not permanent, however, and will wear off after 24 hours.
 
 STATISTICS:
 
-Resistance:  30/- Fire Resistance
-Range:  30 ft
+Resistance:  50/- Fire Resistance
+Range:  20 ft.
 Area:  1 creature
-Duration:  12 hours~
+Duration:  24 hours~
 //@12175    = ~Protection from Magic~
 //@12176    = ~Item description can remain the same; if new description is needed put it here~
 //@12177    = ~Protection from Poison~
@@ -10253,27 +10253,76 @@ STATISTICS:
 Special:
   Recipient is immune to poison and poison damage for the duration
   Removes poison already in the target's system
-Range:  30 ft
+Range:  20 ft.
 Area:  1 creature
 Duration:  6 hours~
 //@12179    = ~Protection from Petrification~
 //@12180    = ~Item description can remain the same; if new description is needed put it here~
 //@12181    = ~Stone to Flesh Scroll~
 //@12182    = ~Item description can remain the same; if new description is needed put it here~
-//@12183    = ~Cursed Scroll of Weakness~
-//@12184    = ~Item description can remain the same; if new description is needed put it here~
-//@12185    = ~Cursed Scroll of Clumsiness~
-//@12186    = ~Item description can remain the same; if new description is needed put it here~
-//@12187    = ~Cursed Scroll of Foolishness~
-//@12188    = ~Item description can remain the same; if new description is needed put it here~
-//@12189    = ~Cursed Scroll of Ugliness~
-//@12190    = ~Item description can remain the same; if new description is needed put it here~
-//@12191    = ~Cursed Scroll of Petrification~
-//@12192    = ~Item description can remain the same; if new description is needed put it here~
-//@12193    = ~Cursed Scroll of Ailment~
-//@12194    = ~Item description can remain the same; if new description is needed put it here~
-//@12195    = ~Cursed Scroll of Stupidity~
-//@12196    = ~Item description can remain the same; if new description is needed put it here~
+@12183    = ~Cursed Scroll of Petrification~
+@12184    = ~This scroll appears to be a Protection from Petrification scroll, but it is actually a cursed scroll. When used, it will turn the target to stone if the target fails its Fortitude save. The scroll could potentially be used to curse a monster.
+
+STATISTICS:
+
+Target must make a Fortitude save (DC 25) or be turned to stone.
+Range:  20 ft.
+Area:  1 creature
+Duration: Permanent~
+@12185    = ~Cursed Scroll of Acid Vulnerability~
+@12186    = ~This scroll appears to be a Protection from Acid scroll, but it is actually a cursed scroll. When used, it will grant vulnerability to acid, causing the target to take additional damage from acid attacks. The scroll could potentially be used to curse a monster.
+
+STATISTICS:
+
+Vulnerability:  -30 Acid Resistance
+Range:  20 ft.
+Area:  1 creature
+Duration: 24 hours~
+@12187    = ~Cursed Scroll of Fire Vulnerability~
+@12188    = ~This scroll appears to be a Protection from Fire scroll, but it is actually a cursed scroll. When used, it will grant vulnerability to fire, causing the target to take additional damage from fire attacks. The scroll could potentially be used to curse a monster.
+
+STATISTICS:
+
+Vulnerability:  -30 Fire Resistance
+Range:  20 ft.
+Area:  1 creature
+Duration: 24 hours~
+@12189    = ~Cursed Scroll of Electricity Vulnerability~
+@12190    = ~This scroll appears to be a Protection from Electricity scroll, but it is actually a cursed scroll. When used, it will grant vulnerability to electricity, causing the target to take additional damage from electrical attacks. The scroll could potentially be used to curse a monster.
+
+STATISTICS:
+
+Vulnerability:  -30 Electricity Resistance
+Range:  20 ft.
+Area:  1 creature
+Duration: 24 hours~
+@12191    = ~Cursed Scroll of Petrification~
+@12192    = ~This scroll appears to be a Protection from Petrification scroll, but it is actually a cursed scroll. When used, it will turn the target to stone if the target fails its Fortitude save. The scroll could potentially be used to curse a monster.
+
+STATISTICS:
+
+Target must make a Fortitude save (DC 25) or be turned to stone.
+Range:  20 ft.
+Area:  1 creature
+Duration: Permanent~
+@12193    = ~Cursed Scroll of Poison~
+@12194    = ~This scroll appears to be a Protection from Poison scroll, but it is actually a cursed scroll. When used, it poison the target. The scroll could potentially be used to curse a monster.
+
+STATISTICS:
+
+Poison: Target takes 4 damage per second for 30 seconds (no save)
+Range:  20 ft.
+Area:  1 creature
+Duration: 24 hours~
+@12195    = ~Cursed Scroll of Cold Vulnerability~
+@12196    = ~This scroll appears to be a Protection from Cold scroll, but it is actually a cursed scroll. When used, it will grant vulnerability to cold, causing the target to take additional damage from cold attacks. The scroll could potentially be used to curse a monster.
+
+STATISTICS:
+
+Vulnerability:  -30 Cold Resistance
+Range:  20 ft.
+Area:  1 creature
+Duration: 24 hours~
 
 
 //@12197    = ~Book of the Deserving~
@@ -10507,50 +10556,50 @@ Area:  10 ft radius
 Duration:  15 rounds
 Weight: 1 lb.~
 //@12235    = ~Wand of Magic Missiles~
-@12236    = ~When activated, the wand will eject a missile of magical energy that darts forth and unerringly strike its target. This includes enemy creatures in a melee. The target creature must be seen or otherwise detected to be hit, however, so near-total concealment, such as that offered by arrow slits, can render the spell ineffective.  Against a creature, the missile will inflict 1d4+1 points of damage.
+@12236    = ~When activated, the wand will eject five missiles of magical energy that darts forth and unerringly strike its target. This includes enemy creatures in a melee. The target creature must be seen or otherwise detected to be hit, however, so near-total concealment, such as that offered by arrow slits, can render the spell ineffective.  Against a creature, the missiles will inflict a total of 5d4+5 points of damage.
 
 STATISTICS:
 
 Special:  5 magic missiles will strike target
-Damage:  5d4 +5
+Damage:  5d4+5
 Range: 100 ft
 Area:  1 creature
 Weight: 1 lb.~
-//@12237    = ~Wand of Paralysis~
-@12238    = ~When used, this wand shoots forth a thin ray of bluish color to a maximum range of 60'.  When a creature is touched by the ray, it must make a Fortitude save in order to avoid being stunned for 10 rounds.
+@12237    = ~Wand of Paralysis~
+@12238    = ~When used, this wand shoots forth a thin ray of bluish color to a maximum range of 60'.  When a creature is touched by the ray, it must make a Will save in order to avoid being stunned for 5 rounds.
 
 STATISTICS:
 
-Effect:  Target stunned unless a Fortitude save is made (DC 18)
+Effect:  Target stunned unless a Will save is made (DC 18)
 Range:  100 ft
 Area:  1 creature
-Duration:  10 rounds
+Duration:  5 rounds
 Weight: 1 lb.~
 //@12239    = ~Wand of Fire~
-@12240    = ~The wand will cough forth a huge, burning ball of fire that streaks out to the desired range (to a maximum of 120') and bursts in a fiery, violent blast, just like the fireball spell.  The fireball inflicts 6d6 points of damage.  The victim(s) must make a Reflex save  to take half damage.  The second ability of the wand is akin to the spell 'Agannazar's Scorcher' in that a column of flame will streak towards the victim inflicting 6D6 damage, no save.
+@12240    = ~The wand will cough forth a huge, burning ball of fire that streaks out to the desired range (to a maximum of 120') and bursts in a fiery, violent blast, just like the fireball spell.  The fireball inflicts 6d6 points of damage.  The victim(s) must make a Reflex save  to take half damage.  The second ability of the wand is akin to the spell 'Agannazar's Scorcher' in that a column of flame will streak towards the victim inflicting 6d6 damage, no save.
 
 STATISTICS:
 
 Ability  1:
-Effect:  shoots out a Fireball
-Damage:  6D6 (Reflex DC 17)
-Range:  90 ft
+Effect:  Shoots out a Fireball
+Damage:  6d6 (Reflex DC 17)
+Range:  90 ft.
 Area 30 ft radius
 
 Ability  2:
 Effect:  Agannazar's scorcher
-Damage:  6D6 (no save)
-Range:  90 ft
+Damage:  6d6 (no save)
+Range:  90 ft.
 Area:  1 creature
 Weight: 1 lb.~
 //@12241    = ~Wand of Lightning~
-@12242    = ~The possessor of the wand can discharge a bolt of lightning.  As it passes through a creature, it does 6d6 points of damage, with a Reflex for half damage.  When the lightning bolt intersects with a wall it will fizzle out.
+@12242    = ~The possessor of the wand can discharge a bolt of lightning.  As it passes through a creature, it does 8d6 points of damage, with a Reflex for half damage.  When the lightning bolt intersects with a wall it will fizzle out.
 
 STATISTICS:
 
 Effect:  Lightning bolt
-Damage:  6D6 (Reflex DC 17)
-Range:  100ft
+Damage:  8d6 (Reflex DC 21)
+Range:  100 ft.
 Area:  Path of bolt
 Weight: 1 lb.~
 //@12243    = ~Wand of Sleep~
@@ -10564,7 +10613,7 @@ STATISTICS:
 
 Effect:  Flame Strike
 Damage:  9d6 (Reflex DC 18)
-Range:  120 ft
+Range:  120 ft.
 Area:  10 ft radius
 Weight: 1 lb.~
 //@12249    = ~Wand of Trap Detection~
@@ -10574,16 +10623,16 @@ Weight: 1 lb.~
 
 STATISTICS;
 
-Special:  Can cast Grease (Reflex DC 14)
+Special:  Can cast Grease (Reflex DC 12)
 Weight: 1 lb.~
-//@12253    = ~Wand of Stinking Cloud~
+@12253    = ~Wand of Enervation~
 @12254    = ~Wands are 1 1/4 feet long and slender.  They are made of ivory, bone, or wood and are usually tipped with something - metal, crystal, stone, etc.  They are fragile and tend to break easily.  Because of this, they are often kept in cases.  
 
 Wands are powered by charges, each use costing one or more charges (depending on the item).  When a wand runs out of charges, it is consumed and destroyed.
 
 STATISTICS:
 
-Can cast Stinking Cloud (Fortitude DC 15)
+Energy Drain: Drains three levels from the target (Fortitude DC 26)
 Weight: 1 lb.~
 @12255    = ~Lesser Wand of Haste~
 @12256    = ~Wands are 1 1/4 feet long and slender.  They are made of ivory, bone, or wood and are usually tipped with something - metal, crystal, stone, etc.  They are fragile and tend to break easily.  Because of this, they are often kept in cases.  
@@ -10605,7 +10654,7 @@ Wands are powered by charges, each use costing one or more charges (depending on
 
 STATISTICS:
 
-Can cast the spell Ice Dagger (at level 1)
+Can shoot an Ice Dagger at a creature, dealing 5d4 cold damage with no save, and dealing 1 cold damage to adjacent enemies
 Weight: 1 lb.~
 //@12263    = ~Wand of Burning Hands~
 @12264    = ~Wands are 1 1/4 feet long and slender.  They are made of ivory, bone, or wood and are usually tipped with something - metal, crystal, stone, etc.  They are fragile and tend to break easily.  Because of this, they are often kept in cases.  
@@ -10614,25 +10663,27 @@ Wands are powered by charges, each use costing one or more charges (depending on
 
 STATISTICS:
 
-Can cast the spell Burning Hands (at level 2; Reflex DC 12 for half)
+Can cast the spell Burning Hands (5d4 fire damage; Reflex DC 14 for half)
 Weight: 1 lb.~
-@12265    = ~Wand of Magic Armor~
+@12265    = ~Wand of Armor~
 @12266    = ~Wands are 1 1/4 feet long and slender.  They are made of ivory, bone, or wood and are usually tipped with something - metal, crystal, stone, etc.  They are fragile and tend to break easily.  Because of this, they are often kept in cases.  
 
 Wands are powered by charges, each use costing one or more charges (depending on the item).  When a wand runs out of charges, it is consumed and destroyed.
 
 STATISTICS:
 
-Grants a creature an armor bonus of +4 for 4 rounds
+Grants a creature a +4 generic AC bonus for 6 rounds
+Range: 100 ft.
 Weight: 1 lb.~
-//@12267    = ~Wand of Chromatic Orb~
+@12267    = ~Elemental Breach Wand~
 @12268    = ~Wands are 1 1/4 feet long and slender.  They are made of ivory, bone, or wood and are usually tipped with something - metal, crystal, stone, etc.  They are fragile and tend to break easily.  Because of this, they are often kept in cases.  
 
 Wands are powered by charges, each use costing one or more charges (depending on the item).  When a wand runs out of charges, it is consumed and destroyed.
 
 STATISTICS:
 
-Can cast the spell Chromatic Orb (at level 1; Reflex DC 12)
+Reduces a creature's resistance to fire, cold, electricity and acid by 10 (no save, non-cumulative)
+Range: 100 ft.
 Weight: 1 lb.~
 @12269    = ~Wand of Dazzling Colors~
 @12270    = ~Wands are 1 1/4 feet long and slender.  They are made of ivory, bone, or wood and are usually tipped with something - metal, crystal, stone, etc.  They are fragile and tend to break easily.  Because of this, they are often kept in cases.  
@@ -10659,16 +10710,18 @@ Wands are powered by charges, each use costing one or more charges (depending on
 
 STATISTICS:
 
-Can grant a creature +6 Dexterity for 3 rounds
+Can grant a creature +10 Dexterity for 3 rounds
+Range: 100 ft.
 Weight: 1 lb.~
-//@12275    = ~Wand of Displacement~
-@12276    = ~Wands are 1 1/4 feet long and slender.  They are made of ivory, bone, or wood and are usually tipped with something - metal, crystal, stone, etc.  They are fragile and tend to break easily.  Because of this, they are often kept in cases.  
+@12275    = ~Wand of Images~
+@12276    = ~Wands are 1 1/4 feet long and slender.  They are made of ivory, bone, or wood and are usually tipped with something - metal, crystal, stone, etc.  They are fragile and tend to break easily.  Because of this, they are often kept in cases.
 
 Wands are powered by charges, each use costing one or more charges (depending on the item).  When a wand runs out of charges, it is consumed and destroyed.
 
 STATISTICS:
 
-Can grant the effects of the spell Blur to a creature for 3 rounds
+Can grant two mirror images to a creature (as per the Mirror Image spell) for 4 rounds
+Range: 100 ft.
 Weight: 1 lb.~
 //@12277    = ~Wand of Melf's Acid Arrow~
 @12278    = ~Wands are 1 1/4 feet long and slender.  They are made of ivory, bone, or wood and are usually tipped with something - metal, crystal, stone, etc.  They are fragile and tend to break easily.  Because of this, they are often kept in cases.  
@@ -10677,7 +10730,7 @@ Wands are powered by charges, each use costing one or more charges (depending on
 
 STATISTICS:
 
-Can cast the spell Melf's Acid Arrow (at level 6)
+Can cast the spell Melf's Acid Arrow, dealing 2d4 acid damage per round for 3 rounds
 Weight: 1 lb.~
 //@12279    = ~Wand of Enfeeblement~
 @12280    = ~Wands are 1 1/4 feet long and slender.  They are made of ivory, bone, or wood and are usually tipped with something - metal, crystal, stone, etc.  They are fragile and tend to break easily.  Because of this, they are often kept in cases.  
@@ -10686,22 +10739,36 @@ Wands are powered by charges, each use costing one or more charges (depending on
 
 STATISTICS:
 
-Can reduce a creature's Strength by 15 for 3 rounds (Fortitude DC 13
+Can reduce a creature's Strength by 15 for 4 rounds (Fortitude DC 17)
 Weight: 1 lb.~
 //@12281    = ~Wand of Entanglement~
-//@12282    = ~Item description can remain the same; if new description is needed put it here~
+@12282    = ~Wands are 1 1/4 feet long and slender.  They are made of ivory, bone, or wood and are usually tipped with something - metal, crystal, stone, etc.  They are fragile and tend to break easily.  Because of this, they are often kept in cases.
+
+Wands are powered by charges, each use costing one or more charges (depending on the item).  When a wand runs out of charges, it is consumed and destroyed.
+
+STATISTICS:
+
+Can entangle a creature for 1 round, immobilizing it (Reflex DC 24)
+Weight: 1 lb.~
 //@12283    = ~Wand of Evil Protection~
 //@12284    = ~Item description can remain the same; if new description is needed put it here~
 //@12285    = ~Sunscorch Wand~
-//@12286    = ~Item description can remain the same; if new description is needed put it here~
-//@12287    = ~Bane Wand~
+@12286    = ~Wands are 1 1/4 feet long and slender.  They are made of ivory, bone, or wood and are usually tipped with something - metal, crystal, stone, etc.  They are fragile and tend to break easily.  Because of this, they are often kept in cases.
+
+Wands are powered by charges, each use costing one or more charges (depending on the item).  When a wand runs out of charges, it is consumed and destroyed.
+
+STATISTICS:
+
+Can cast the spell Sunscorch (at level 10)
+Weight: 1 lb.~
+@12287    = ~Doom Wand~
 @12288    = ~Wands are 1 1/4 feet long and slender.  They are made of ivory, bone, or wood and are usually tipped with something - metal, crystal, stone, etc.  They are fragile and tend to break easily.  Because of this, they are often kept in cases.  
 
 Wands are powered by charges, each use costing one or more charges (depending on the item).  When a wand runs out of charges, it is consumed and destroyed.
 
 STATISTICS:
 
-Can cast the spell Bane (Will DC 16)
+Grants a creature a -2 penalty to saving throws and attack rolls for 10 rounds (no save, cumulative)
 Weight: 1 lb.~
 //@12289    = ~Sanctuary Wand~
 @12290    = ~Wands are 1 1/4 feet long and slender.  They are made of ivory, bone, or wood and are usually tipped with something - metal, crystal, stone, etc.  They are fragile and tend to break easily.  Because of this, they are often kept in cases.  
@@ -10710,16 +10777,18 @@ Wands are powered by charges, each use costing one or more charges (depending on
 
 STATISTICS:
 
-Can grant the effects of the spell Sanctuary to a creature for 2 rounds
+Can grant the effects of the spell Sanctuary to a creature for 5 rounds
+Range: 100 ft.
 Weight: 1 lb.~
 @12291    = ~Lesser Wand of Spell Resistance~
-@12292    = ~Wands are 1 1/4 feet long and slender.  They are made of ivory, bone, or wood and are usually tipped with something - metal, crystal, stone, etc.  They are fragile and tend to break easily.  Because of this, they are often kept in cases.  
+@12292    = ~Wands are 1 1/4 feet long and slender.  They are made of ivory, bone, or wood and are usually tipped with something - metal, crystal, stone, etc.  They are fragile and tend to break easily.  Because of this, they are often kept in cases.
 
 Wands are powered by charges, each use costing one or more charges (depending on the item).  When a wand runs out of charges, it is consumed and destroyed.
 
 STATISTICS:
 
-Can set a creature's Spell Resistance to 12 for 20 rounds. Has no effect on enemies.
+Can grant a creature +6 Spell Resistance for 10 rounds
+Range: 100 ft.
 Weight: 1 lb.~
 //@12293    = ~Hold Person Wand~
 @12294    = ~Wands are 1 1/4 feet long and slender.  They are made of ivory, bone, or wood and are usually tipped with something - metal, crystal, stone, etc.  They are fragile and tend to break easily.  Because of this, they are often kept in cases.  
@@ -10739,8 +10808,16 @@ STATISTICS:
 
 Can cast the spell Silence (Will DC 14)
 Weight: 1 lb.~
-//@12297    = ~Wand of Aid~
-//@12298    = ~Item description can remain the same; if new description is needed put it here~
+@12297    = ~Wand of Greater Health~
+@12298    = ~Wands are 1 1/4 feet long and slender.  They are made of ivory, bone, or wood and are usually tipped with something - metal, crystal, stone, etc.  They are fragile and tend to break easily.  Because of this, they are often kept in cases.
+
+Wands are powered by charges, each use costing one or more charges (depending on the item).  When a wand runs out of charges, it is consumed and destroyed.
+
+STATISTICS:
+
+Can grant a creature 40 temporary hit points for 4 hours
+Range: 5 ft.
+Weight: 1 lb.~
 //@12299    = ~Wand of Charm~
 @12300    = ~Wands are 1 1/4 feet long and slender.  They are made of ivory, bone, or wood and are usually tipped with something - metal, crystal, stone, etc.  They are fragile and tend to break easily.  Because of this, they are often kept in cases.  
 
@@ -10748,7 +10825,7 @@ Wands are powered by charges, each use costing one or more charges (depending on
 
 STATISTICS:
 
-Can cast the spell Charm Person or Animal (Will DC 13)
+Can cast the spell Charm Person or Animal (Will DC 18)
 Weight: 1 lb.~
 //@12301    = ~Wand of Dismissal~
 @12302    = ~When this potent wand is pointed at a summoned creature and the command word uttered, the creature must make a Will save to avoid being prematurely dismissed and sent back to its home plane. 
@@ -10758,20 +10835,26 @@ STATISTICS:
 Can cast the spell Dismissal (Will DC 22)
 Weight: 1 lb.~
 //@12303    = ~Wand of Alicorn Lance~
-//@12304    = ~Item description can remain the same; if new description is needed put it here~
+@12304    = ~This wand is carved to look similar to a unicorn's horn.  Close inspection reveals that it has actually been made from dense elm wood.  The wand smells faintly of rain-drenched soil.  When used, the wand duplicates the effects of the priest spell Alicorn Lance.
+
+STATISTICS:
+
+Can fire an Alicorn Lance at the target, dealing 4d6 piercing damage with no save and outlining the target in a silvery radiance for 3 rounds, granting a -2 AC penalty.
+Weight: 1 lb.~
 //@12305    = ~Wand of Cure Moderate Wounds~
 @12306    = ~This strangely shaped ivory and gold wand is covered with symbols of Lathander, the god of renewal.  The wand becomes blade-like towards the end.  A single peacock feather is held within an oval space near the flat tip.  When used, the wand duplicates the effects of the priest spell Cure Moderate Wounds.
 
 STATISTICS:
 
-Can cast Cure Moderate Wounds (heals 2d8+1 hit points)
+Can cast Cure Moderate Wounds (heals 2d8+10 hit points)
 Weight: 1 lb.~
 @12307    = ~Wand of Spell Resistance~
-@12308    = ~Looking like an archetypal wand, this slender black ebony rod is tipped with a gold star similar to the stars found in the holy symbol of Mystra, goddess of magic.  When used, the wand duplicates the effects of the priest spell Spell Shield.
+@12308    = ~Looking like an archetypal wand, this slender black ebony rod is tipped with a gold star similar to the stars found in the holy symbol of Mystra, goddess of magic.  When used, the wand grants a creature the ability to resist magic.
 
 STATISTICS:
 
-Can set a creature's Spell Resistance to 18 for 20 rounds. Has no effect on enemies.
+Can set a creature's Spell Resistance to 24 for 20 rounds. Has no effect on enemies.
+Range: 100 ft.
 Weight: 1 lb.~
 //@12309    = ~Wand of Remove Paralysis~
 //@12310    = ~Item description can remain the same; if new description is needed put it here~
@@ -12290,6 +12373,42 @@ STATISTICS:
 Damage:  15d6  (Reflex DC 30 for half)
 Area:  20 ft radius
 Weight: 1 lb.~
+//@12665    = ~Protection from Acid~
+@12666    = ~A Protection from Acid scroll offers protection to the target from all forms of acid, be they of a natural or magical nature. The effect is not permanent, however, and will wear off after 24 hours.
+
+STATISTICS:
+
+Resistance:  100/- Acid Resistance
+Range:  20 ft.
+Area:  1 creature
+Duration:  24 hours~
+//@12667    = ~Protection from Cold~
+@12668    = ~A Protection from Cold scroll offers protection to the target from all forms of cold, be they of a natural or magical nature.  This effect is not permanent, however, and will wear off after 24 hours.
+
+STATISTICS:
+
+Resistance:  100/- Cold Resistance
+Range:  20 ft.
+Area:  1 creature
+Duration:  24 hours~
+//@12669    = ~Protection from Electricity~
+@12670    = ~A Protection from Electricity scroll offers protection to the target from all forms of electrical damage, be it of a natural or magical nature.  The effect is not permanent, however, and will wear off after 24 hours.
+
+STATISTICS:
+
+Resistance:  100/- Electrical Resistance
+Range:  20 ft.
+Area:  1 creature
+Duration:  24 hours~
+//@12671    = ~Protection from Fire~
+@12672    = ~A Protection from Fire scroll offers protection to the target from all forms of fire, even that of magical or elemental nature. The effect is not permanent, however, and will wear off after 24 hours.
+
+STATISTICS:
+
+Resistance:  100/- Fire Resistance
+Range:  20 ft.
+Area:  1 creature
+Duration:  24 hours~
 
 @12900    = ~Hrm - you are powerful allies, indeed.  More gold and gems to line your pockets, then - also, a suit of plate armor, a warhammer, a helmet, all crafted and enchanted by great duergar artisans.  They are well deserved, outsider.~
 @12901    = ~Drink this Rainwater Brew, Ennelia.  It should help your condition.~

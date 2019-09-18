@@ -1,4 +1,4 @@
-
+COPY ~%mod_folder%/spl/spl_class_revisions~ ~override~
 
 // First are some lines that used to belong to Item Revisions, but were found to be over-writing stuff from this component. We're moving it to the start to make sure that the Concoct Potions lines later in this TPA will over-write the following lines.
 /*
@@ -176,7 +176,7 @@ COPY ~%mod_folder%/spl/USSTAE03.spl~ ~override~
 COPY ~%mod_folder%/spl/USSTAE04.spl~ ~override~
 COPY ~%mod_folder%/spl/USSTAE05.spl~ ~override~
 
-STRING_SET 27114 @896 
+STRING_SET 27114 @896
 
 // patch wyverns, spiders, beetles, chimeras, yetis, and remorhazes to be animals so they're subject to Animal Empathy
 
@@ -610,6 +610,22 @@ COPY_EXISTING ~feats.2da~ ~override~
     PATCH_MATCH ~%label%~ WITH
       ~MAXIMIZED_ATTACKS~ BEGIN
         SET strref = RESOLVE_STR_REF(@669)
+        SET_2DA_ENTRY_LATER rows_out row 3 ~%strref%~
+      END
+      ~TOUGHNESS~ BEGIN
+        SET strref = RESOLVE_STR_REF(@670)
+        SET_2DA_ENTRY_LATER rows_out row 3 ~%strref%~
+      END
+      ~GREAT_FORTITUDE~ BEGIN
+        SET strref = RESOLVE_STR_REF(@671)
+        SET_2DA_ENTRY_LATER rows_out row 3 ~%strref%~
+      END
+      ~IRON_WILL~ BEGIN
+        SET strref = RESOLVE_STR_REF(@672)
+        SET_2DA_ENTRY_LATER rows_out row 3 ~%strref%~
+      END
+      ~LIGHTNING_REFLEXES~ BEGIN
+        SET strref = RESOLVE_STR_REF(@673)
         SET_2DA_ENTRY_LATER rows_out row 3 ~%strref%~
       END
       DEFAULT

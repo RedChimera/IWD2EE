@@ -766,6 +766,7 @@ COPY_EXISTING ~SPPR219.spl~ ~override~
   SAY NAME2 @1006
   SAY UNIDENTIFIED_DESC @1007
   SAY IDENTIFIED_DESC @1007
+	LPF ALTER_EFFECT INT_VAR silent=1 check_headers=1 check_globals=1 match_opcode=139 match_parameter1=30010 parameter1=RESOLVE_STR_REF(@30010) END
 
 COPY_EXISTING ~SPPR222.spl~ ~override~
   SAY NAME1 @1008
@@ -934,6 +935,7 @@ COPY_EXISTING ~SPPR716.spl~ ~override~
   SAY NAME2 @1062
   SAY UNIDENTIFIED_DESC @1063
   SAY IDENTIFIED_DESC @1063
+	LPF ALTER_EFFECT INT_VAR silent=1 check_headers=1 check_globals=1 match_opcode=139 match_parameter1=30007 parameter1=RESOLVE_STR_REF(@30007) END
 
 COPY_EXISTING ~SPPR717.spl~ ~override~
   SAY NAME1 @1773
@@ -1287,12 +1289,14 @@ COPY_EXISTING ~SPPR403.spl~ ~override~
   SAY NAME2 @1514
   SAY UNIDENTIFIED_DESC @1515
   SAY IDENTIFIED_DESC @1515
+	LPF ALTER_EFFECT INT_VAR silent=1 check_headers=1 check_globals=1 match_opcode=139 match_parameter1=30005 parameter1=RESOLVE_STR_REF(@30005) END
 
 COPY_EXISTING ~SPPR424.spl~ ~override~
   SAY NAME1 @1516
   SAY NAME2 @1516
   SAY UNIDENTIFIED_DESC @1517
   SAY IDENTIFIED_DESC @1517
+	LPF ALTER_EFFECT INT_VAR silent=1 check_headers=1 check_globals=1 match_opcode=139 match_parameter1=30009 parameter1=RESOLVE_STR_REF(@30009) END
 
 COPY_EXISTING ~SPPR519.spl~ ~override~
   SAY NAME1 @1518
@@ -1728,6 +1732,7 @@ COPY_EXISTING ~SPWI712.spl~ ~override~
   SAY NAME2 @1831
   SAY UNIDENTIFIED_DESC @1832
   SAY IDENTIFIED_DESC @1832
+	LPF ALTER_EFFECT INT_VAR silent=1 check_headers=1 check_globals=1 match_opcode=139 match_parameter1=30011 parameter1=RESOLVE_STR_REF(@30011) END
 
 COPY_EXISTING ~SPPR113.spl~ ~override~
   SAY NAME1 @1833
@@ -2200,11 +2205,32 @@ COPY_EXISTING ~ilw01.itm~ ~override~ ~imw01.itm~ ~override~ ~isw01.itm~ ~overrid
 	LPF ALTER_ITEM_HEADER INT_VAR thac0=32767 END
 
 */
+
+COPY_EXISTING ~sppr508.spl~ ~override~
+	SAY NAME1 @31508
+	SAY NAME2 @31508
+	SAY UNIDENTIFIED_DESC @32508
+	SAY IDENTIFIED_DESC @32508
+	LPF ALTER_EFFECT INT_VAR silent=1 check_headers=1 check_globals=1 match_opcode=139 match_parameter1=30006 parameter1=RESOLVE_STR_REF(@30006) END
+
+COPY_EXISTING ~spwi804.spl~ ~override~
+	SAY NAME1 @33804
+	SAY NAME2 @33804
+	SAY UNIDENTIFIED_DESC @34804
+	SAY IDENTIFIED_DESC @34804
+	LPF ALTER_EFFECT INT_VAR silent=1 check_headers=1 check_globals=1 match_opcode=139 match_parameter1=30008 parameter1=RESOLVE_STR_REF(@30008) END
+
 COPY_EXISTING ~uspr252.spl~ ~override~
 	SAY NAME1 @35252
 	SAY NAME2 @35252
 	SAY UNIDENTIFIED_DESC @36252
 	SAY IDENTIFIED_DESC @36252
+
+COPY_EXISTING ~uspr753.spl~ ~override~
+	SAY NAME1 @35753
+	SAY NAME2 @35753
+	SAY UNIDENTIFIED_DESC @36753
+	SAY IDENTIFIED_DESC @36753
 
 COPY_EXISTING ~uspr951.spl~ ~override~
 	SAY NAME1 @35951
@@ -2246,6 +2272,12 @@ COPY_EXISTING ~uswi752.spl~ ~override~
 	SAY UNIDENTIFIED_DESC @38752
 	SAY IDENTIFIED_DESC @38752
 
+COPY_EXISTING ~uswi753.spl~ ~override~
+	SAY NAME1 @37753
+	SAY NAME2 @37753
+	SAY UNIDENTIFIED_DESC @38753
+	SAY IDENTIFIED_DESC @38753
+
 COPY_EXISTING ~uswi852.spl~ ~override~
 	SAY NAME1 @37852
 	SAY NAME2 @37852
@@ -2257,6 +2289,12 @@ COPY_EXISTING ~uswi853.spl~ ~override~
 	SAY NAME2 @37853
 	SAY UNIDENTIFIED_DESC @38853
 	SAY IDENTIFIED_DESC @38853
+
+COPY_EXISTING ~uswi854.spl~ ~override~
+	SAY NAME1 @37854
+	SAY NAME2 @37854
+	SAY UNIDENTIFIED_DESC @38854
+	SAY IDENTIFIED_DESC @38854
 
 COPY_EXISTING ~uswi952.spl~ ~override~
 	SAY NAME1 @37952
@@ -2678,6 +2716,15 @@ COPY_EXISTING ~sppr727z.itm~ ~override~
    LPF CLONE_EFFECT INT_VAR match_opcode = 148 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
 COPY_EXISTING ~sppr728z.itm~ ~override~
    LPF CLONE_EFFECT INT_VAR match_opcode = 148 opcode = 147 target = 1 parameter1 = 0 parameter2 = 0 END
+
+COPY_EXISTING ~AR4102.are~ ~override~
+	LPF fj_are_structure INT_VAR fj_trap_active=1 STR_VAR fj_structure_type=~region~ fj_name=~US_Battle_Square_Teleport~ fj_reg_script=~USBSNTEL~ END
+
+COPY_EXISTING ~AR5202.are~ ~override~
+	LPF fj_are_structure INT_VAR fj_trap_active=1 STR_VAR fj_structure_type=~region~ fj_name=~US_Disable_Teleport~ fj_reg_script=~USNOTEL~ END
+
+COPY_EXISTING ~AR5201.are~ ~override~ ~AR5203.are~ ~override~
+	LPF fj_are_structure INT_VAR fj_trap_active=1 STR_VAR fj_structure_type=~region~ fj_name=~US_Enable_Teleport~ fj_reg_script=~USYESTEL~ END
 
 COPY_EXISTING ~USEFFC1.spl~ ~override~
 COPY_EXISTING ~USEFFC2.spl~ ~override~

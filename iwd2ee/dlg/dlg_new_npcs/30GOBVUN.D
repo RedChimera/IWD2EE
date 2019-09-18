@@ -117,7 +117,7 @@ END
 
 IF ~~ THEN BEGIN VunargJoin5
   SAY ~Let me speak with my clan about this...~
-  IF ~~ THEN REPLY ~~ DO ~FadeToColor([0.0],0)
+  IF ~~ THEN DO ~FadeToColor([0.0],0)
 Wait(3)
 FadeFromColor([0.0],0)~ GOTO VunargJoin6
 END

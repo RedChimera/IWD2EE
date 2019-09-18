@@ -434,22 +434,22 @@ END
 
 IF ~~ THEN BEGIN SuccessfulQuestionMotivesI3J
 SAY ~I...~
-  IF ~~ THEN REPLY ~~ EXTERN ~60MADAE~ SuccessfulQuestionMotivesM3I
+  IF ~~ THEN EXTERN ~60MADAE~ SuccessfulQuestionMotivesM3I
 END
 
 IF ~~ THEN BEGIN SuccessfulQuestionMotivesI3K
 SAY ~Heh...~
-  IF ~~ THEN REPLY ~~ GOTO SuccessfulQuestionMotivesI3L
+  IF ~~ THEN GOTO SuccessfulQuestionMotivesI3L
 END
 
 IF ~~ THEN BEGIN SuccessfulQuestionMotivesI3L
 SAY ~How long has it been, Madae?  How long have we been away from home?~
-  IF ~~ THEN REPLY ~~ EXTERN ~60MADAE~ SuccessfulQuestionMotivesM3J
+  IF ~~ THEN EXTERN ~60MADAE~ SuccessfulQuestionMotivesM3J
 END
 
 IF ~~ THEN BEGIN SuccessfulQuestionMotivesI3M
 SAY ~Maybe we should go back sometime.  It might be nice.~
-  IF ~~ THEN REPLY ~~ EXTERN ~60MADAE~ SuccessfulQuestionMotivesM3JJ
+  IF ~~ THEN EXTERN ~60MADAE~ SuccessfulQuestionMotivesM3JJ
 END
 
 IF ~~ THEN BEGIN SuccessfulQuestionMotivesI3N
@@ -459,7 +459,7 @@ END
 
 IF ~~ THEN BEGIN SuccessfulQuestionMotivesI3O
 SAY ~Yes.  Another time, I think.  Then we can...Agh! What--ack!--what was that?~
-  IF ~~ THEN REPLY ~~ EXTERN ~60MADAE~ SuccessfulQuestionMotivesM3K
+  IF ~~ THEN EXTERN ~60MADAE~ SuccessfulQuestionMotivesM3K
 END
 
 IF ~~ THEN BEGIN FailedMageIntimidateFight

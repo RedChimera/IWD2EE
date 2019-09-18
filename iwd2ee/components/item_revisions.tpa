@@ -3037,10 +3037,36 @@ COPY_EXISTING ~00SCRL03.itm~ ~override~
 COPY_EXISTING ~00SCRL04.itm~ ~override~
 	SAY IDENTIFIED_DESC @12174
 
-
 COPY_EXISTING ~00SCRL06.itm~ ~override~
 	SAY IDENTIFIED_DESC @12178
 
+COPY_EXISTING ~00SCRL11.itm~ ~override~
+	SAY NAME2 @12183
+	SAY IDENTIFIED_DESC @12184
+
+COPY_EXISTING ~00SCRL12.itm~ ~override~
+	SAY NAME2 @12185
+	SAY IDENTIFIED_DESC @12186
+
+COPY_EXISTING ~00SCRL13.itm~ ~override~
+	SAY NAME2 @12187
+	SAY IDENTIFIED_DESC @12188
+
+COPY_EXISTING ~00SCRL14.itm~ ~override~
+	SAY NAME2 @12189
+	SAY IDENTIFIED_DESC @12190
+
+COPY_EXISTING ~00SCRL15.itm~ ~override~
+	SAY NAME2 @12191
+	SAY IDENTIFIED_DESC @12192
+
+COPY_EXISTING ~00SCRL16.itm~ ~override~
+	SAY NAME2 @12193
+	SAY IDENTIFIED_DESC @12194
+
+COPY_EXISTING ~00SCRL17.itm~ ~override~
+	SAY NAME2 @12195
+	SAY IDENTIFIED_DESC @12196
 
 COPY_EXISTING ~11BOOKDE.itm~ ~override~
 	SAY IDENTIFIED_DESC @12198
@@ -3095,7 +3121,7 @@ COPY_EXISTING ~00WAND02.itm~ ~override~
 	SAY IDENTIFIED_DESC @12236
 
 COPY_EXISTING ~00WAND03.itm~ ~override~
-	SAY NAME2 #6690
+	SAY NAME2 @12237
 	SAY IDENTIFIED_DESC @12238
 
 COPY_EXISTING ~00WAND04.itm~ ~override~
@@ -3104,21 +3130,19 @@ COPY_EXISTING ~00WAND04.itm~ ~override~
 COPY_EXISTING ~00WAND05.itm~ ~override~
 	SAY IDENTIFIED_DESC @12242
 
-
 COPY_EXISTING ~00WAND08.itm~ ~override~
 	SAY IDENTIFIED_DESC @12248
-
 
 COPY_EXISTING ~00WAND14.itm~ ~override~
 	SAY IDENTIFIED_DESC @12252
 
 COPY_EXISTING ~00WAND15.itm~ ~override~
+	SAY NAME2 @12253
 	SAY IDENTIFIED_DESC @12254
 
 COPY_EXISTING ~00WAND16.itm~ ~override~
 	SAY NAME2 @12255
 	SAY IDENTIFIED_DESC @12256
-
 
 COPY_EXISTING ~00WAND20.itm~ ~override~
 	SAY NAME2 @12261
@@ -3132,6 +3156,7 @@ COPY_EXISTING ~00WAND22.itm~ ~override~
 	SAY IDENTIFIED_DESC @12266
 
 COPY_EXISTING ~00WAND23.itm~ ~override~
+	SAY NAME2 @12267
 	SAY IDENTIFIED_DESC @12268
 
 COPY_EXISTING ~00WAND24.itm~ ~override~
@@ -3146,6 +3171,7 @@ COPY_EXISTING ~00WAND26.itm~ ~override~
 	SAY IDENTIFIED_DESC @12274
 
 COPY_EXISTING ~00WAND27.itm~ ~override~
+	SAY NAME2 @12275
 	SAY IDENTIFIED_DESC @12276
 
 COPY_EXISTING ~00WAND28.itm~ ~override~
@@ -3154,8 +3180,11 @@ COPY_EXISTING ~00WAND28.itm~ ~override~
 COPY_EXISTING ~00WAND29.itm~ ~override~
 	SAY IDENTIFIED_DESC @12280
 
+COPY_EXISTING ~00WAND32.itm~ ~override~
+	SAY IDENTIFIED_DESC @12286
 
 COPY_EXISTING ~00WAND33.itm~ ~override~
+	SAY NAME2 @12287
 	SAY IDENTIFIED_DESC @12288
 
 COPY_EXISTING ~00WAND34.itm~ ~override~
@@ -3171,6 +3200,9 @@ COPY_EXISTING ~00WAND36.itm~ ~override~
 COPY_EXISTING ~00WAND37.itm~ ~override~
 	SAY IDENTIFIED_DESC @12296
 
+COPY_EXISTING ~00WAND38.itm~ ~override~
+	SAY NAME2 @12297
+	SAY IDENTIFIED_DESC @12298
 
 COPY_EXISTING ~00WAND39.itm~ ~override~
 	SAY IDENTIFIED_DESC @12300
@@ -3178,6 +3210,8 @@ COPY_EXISTING ~00WAND39.itm~ ~override~
 COPY_EXISTING ~00WAND40.itm~ ~override~
 	SAY IDENTIFIED_DESC @12302
 
+COPY_EXISTING ~00WAND41.itm~ ~override~
+	SAY IDENTIFIED_DESC @12304
 
 COPY_EXISTING ~00WAND42.itm~ ~override~
 	SAY IDENTIFIED_DESC @12306
@@ -3731,8 +3765,22 @@ COPY_EXISTING ~USHFPN50.itm~ ~override~
 COPY_EXISTING ~USHFPN53.itm~ ~override~
 	SAY IDENTIFIED_DESC @12664
 
+COPY_EXISTING ~USHFSC01.itm~ ~override~
+	SAY IDENTIFIED_DESC @12666
+
+COPY_EXISTING ~USHFSC02.itm~ ~override~
+	SAY IDENTIFIED_DESC @12668
+
+COPY_EXISTING ~USHFSC03.itm~ ~override~
+	SAY IDENTIFIED_DESC @12670
+
+COPY_EXISTING ~USHFSC04.itm~ ~override~
+	SAY IDENTIFIED_DESC @12672
+
 
 //General patch changes
+
+
 
 
 COPY_EXISTING_REGEXP ~.*\.itm~ ~override~
@@ -3754,6 +3802,33 @@ COPY_EXISTING_REGEXP ~.*\.itm~ ~override~
 	PATCH_IF (us_item_category=29) BEGIN
 		LPF ALTER_ITEM_HEADER INT_VAR header_type=1 animation_overhand=0 animation_backhand=0 animation_thrust=100 END
 	END
+
+//Making sure items that aren't supposed to be usable by wizards, monks or paladins cannot be used by the kits of those classes
+	READ_LONG 0x1e us_item_unusability
+	READ_BYTE 0x2d us_kit_unusability_3
+	READ_BYTE 0x2f us_kit_unusability_4
+	PATCH_IF (us_item_unusability BAND 0x400 > 0) AND (us_item_category != 11) BEGIN
+		us_kit_unusability_3|=0x7f
+		us_kit_unusability_4|=0xc0
+	END
+	ELSE BEGIN
+		us_kit_unusability_3&=0x80
+		us_kit_unusability_4&=0x3f
+	END
+	PATCH_IF (us_item_unusability BAND 0x20 > 0) BEGIN
+		us_kit_unusability_4|=0x38
+	END
+	ELSE BEGIN
+		us_kit_unusability_4&=0xc7
+	END
+	PATCH_IF (us_item_unusability BAND 0x40 > 0) BEGIN
+		us_kit_unusability_4|=0x7
+	END
+	ELSE BEGIN
+		us_kit_unusability_4&=0xf8
+	END
+	WRITE_BYTE 0x2d us_kit_unusability_3
+	WRITE_BYTE 0x2f us_kit_unusability_4
 	BUT_ONLY_IF_IT_CHANGES
 
 //Scimitars should have the scimitar animation
@@ -3960,6 +4035,11 @@ USPNHF97	00POTN97
 USPNHF98	00POTN98
 USPNHF99	00POTN99
 USPNHFUB	61POTNUB
+
+USSCHF01	00SCRL01
+USSCHF02	00SCRL02
+USSCHF03	00SCRL03
+USSCHF04	00SCRL04
 ~
 APPEND ~RT_FURY.2da~
 ~
@@ -4133,6 +4213,11 @@ USPNHF97	00POTN97
 USPNHF98	00POTN98
 USPNHF99	00POTN99
 USPNHFUB	USHFPNUB
+
+USSCHF01	USHFSC01
+USSCHF02	USHFSC02
+USSCHF03	USHFSC03
+USSCHF04	USHFSC04
 ~
 
 //New items and item relocations
@@ -4469,6 +4554,7 @@ COPY_EXISTING ~ar3101.are~ ~override~ //Guthma's cabin
 
 COPY_EXISTING ~ar4000.are~ ~override~ //Western Pass
 	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR container=6 charges1=1  charges2=1  charges3=1 single_match=1 STR_VAR old_item=~00BOLT04~ new_item=~USRT04_V~ END
+	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR container=1 charges1=1  charges2=1  charges3=1 single_match=1 STR_VAR old_item=~40GENPWC~ new_item=~USRTHF13~ END
 
 COPY_EXISTING ~ar4101.are~ ~override~ //Ice Temple level 1
 	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR container=19 charges1=1  charges2=1  charges3=1 single_match=1 STR_VAR old_item=~RT01_L~ new_item=~RT05_R~ END
@@ -4757,6 +4843,15 @@ COPY_EXISTING_REGEXP ~.*\.are~ ~override~
 COPY_EXISTING ~AR4102.are~ ~override~
 	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR container=18 STR_VAR old_item=~USRTHF11~ new_item=~00GENIR~ END
 
+COPY_EXISTING ~40PTABLE.bcs~ ~override~
+	DECOMPILE_AND_PATCH BEGIN
+		REPLACE_TEXTUALLY CASE_INSENSITIVE ~HasItem(\"00Potn50\",Myself)~ ~Or(2)
+		HasItem("00Potn50",Myself)
+		HasItem("USHFPN50",Myself)~
+		REPLACE_TEXTUALLY CASE_INSENSITIVE ~DestroyItem(\"00Potn50\")~ ~DestroyItem("00Potn50")
+		DestroyItem("USHFPN50")~
+	END
+
 COPY_EXISTING ~11OSWALD.dlg~ ~override~ ~20EMMA.dlg~ ~override~ ~41NICK.dlg~ ~override~ ~50VENLA.dlg~ ~override~ ~51ZAMA.dlg~ ~override~ ~52NONIN.dlg~ ~override~ ~53LAB.dlg~ ~override~ ~53LABX.dlg~ ~override~ ~61PYROS.dlg~ ~override~
 	REPLACE_TEXTUALLY CASE_INSENSITIVE ~GiveItemCreate(\"00POTN~ ~GiveItemCreate("USPNHF~
 
@@ -4924,3 +5019,11 @@ TakePartyItemNum("USHFPN10",1)~
 !HasItem("USHFPN10",Myself)~
 	END
 	LPF CONVERT_DLG_TO_IWD2_FORMAT END
+
+COPY_EXISTING_REGEXP ~.*\.are~ ~override~ ~.*\.cre~ ~override~ ~.*\.sto~ ~override~
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~00SCRL01~ ~USSCHF01~
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~00SCRL02~ ~USSCHF02~
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~00SCRL03~ ~USSCHF03~
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~00SCRL04~ ~USSCHF04~
+	IF ~00SCRL0[1-4]~
+	BUT_ONLY_IF_IT_CHANGES

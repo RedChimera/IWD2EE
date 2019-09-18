@@ -5,6 +5,9 @@ COPY ~%mod_folder%/usInitialModifications.txt~ ~override~
  //Files in this folder may be used in multiple components and shouldn't affect the game unless a component is installed that uses the file.
 COPY ~%mod_folder%/initial~ ~override~
 
+COPY ~%mod_folder%/ieex_override~ ~override~
+COPY ~%mod_folder%/ieex_main_folder~ ~./~
+
  //Turning the "test" creatures into regular creatures because their irregular CRE format can crash WeiDU when patching all creatures.
 COPY_EXISTING ~00gob.cre~ ~override/test_01.cre~ ~00gob.cre~ ~override/test_02.cre~ ~00gob.cre~ ~override/test_03.cre~ ~00gob.cre~ ~override/testocle.cre~
 
@@ -59,5 +62,59 @@ COPY_EXISTING_REGEXP ~50CVENl0\.bcs~ ~override~ ~52CC[1-8]P[1-6]\.bcs~ ~override
 	DECOMPILE_AND_PATCH BEGIN
 		REPLACE_TEXTUALLY EXACT_MATCH ~ClearSpriteEffects(~ ~ApplySpellRES("USDISPEL",~
 	END
+/*
+COPY_EXISTING ~animate.ids~ ~override~
+	REPLACE_TEXTUALLY ~0x1001 Wyvern, White (Big)~ ~0x1000 Wyvern (Big)
+0x1001 Wyvern, White (Big)~
+	REPLACE_TEXTUALLY ~0x1201 Dragon, Black (BG2)~ ~0x1200 Dragon, Red (BG2)
+0x1201 Dragon, Black (BG2)
+0x1202 Dragon, Silver (BG2)~
 
+APPEND ~sounds.ini~
+~
+[MDR1] /Red Dragon/
+att1=red03
+att1frame=0
+att2=red04
+att2frame=0
+att3=red05
+att3frame=0
+att4=
+att4frame=
+btlcry=red01,red02
+btlcryframe=0,0
+damage=red06
+damageframe=0
+death=red07
+deathframe=
+fidget=
+fidgetframe=
+selected=red01,red02
+selectedframe=0,0
+fall=
+fallframe=
+
+[MDR3] /Silver Dragon/
+att1=silv03
+att1frame=0
+att2=silv04
+att2frame=0
+att3=silv05
+att3frame=0
+att4=
+att4frame=
+btlcry=silv01,silv02
+btlcryframe=0,0
+damage=silv06
+damageframe=0
+death=silv07
+deathframe=
+fidget=
+fidgetframe=
+selected=silv01,silv02
+selectedframe=0,0
+fall=
+fallframe=
+~
+*/
 VERBOSE

@@ -116,7 +116,7 @@ END
 
 IF ~~ THEN BEGIN VrekJoinFailedNoFood
   SAY ~Vrek no join you.  You take Vrek's food.  Vrek kill you and eat!~
-  IF ~~ THEN REPLY ~~ DO ~Enemy()~ EXIT
+  IF ~~ THEN DO ~Enemy()~ EXIT
 END
 
 IF ~~ THEN BEGIN VrekJoinThreat

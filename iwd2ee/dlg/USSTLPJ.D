@@ -2,7 +2,7 @@ BEGIN ~USSTLPJ~
 
 IF ~~ THEN BEGIN 0
   SAY ~We have not had time to review the spell ourselves. Our diviner will be here tomorrow and then-~
-  IF ~~ THEN REPLY ~~ EXTERN ~USSTLPI~ 1
+  IF ~~ THEN EXTERN ~USSTLPI~ 1
 END
 
 IF ~~ THEN BEGIN 1

@@ -279,12 +279,12 @@ END
 
 IF ~~ THEN BEGIN ReigJoinPartyGoblinsAlive2
   SAY ~Keep an eye out for goblin archers if you don't want to end up like Brohn.  Stay close and stay quiet... The goblins have the advantage of numbers, and we can't afford to get surrounded.~
-  IF ~~ THEN REPLY ~~ DO ~JoinParty()
+  IF ~~ THEN DO ~JoinParty()
 SetGlobal("US_Reig_Joined", "GLOBAL", 1)~ EXIT
 END
 
 IF ~~ THEN BEGIN ReigJoinPartyGoblinsDead
   SAY ~My thanks, but the ale can wait.  Let's report to Ulbrec.  He needs to know what happened here.~
-  IF ~~ THEN REPLY ~~ DO ~JoinParty()
+  IF ~~ THEN DO ~JoinParty()
 SetGlobal("US_Reig_Joined", "GLOBAL", 1)~ EXIT
 END

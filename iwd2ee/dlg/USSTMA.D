@@ -8,17 +8,17 @@ END
 
 IF ~~ THEN BEGIN 1
   SAY ~I will not. So, how shall we proceed?~
-  IF ~~ THEN REPLY ~~ EXTERN ~USSTMI~ 1
+  IF ~~ THEN EXTERN ~USSTMI~ 1
 END
 
 IF ~~ THEN BEGIN 2
   SAY ~I am Majrash. Conjurer and connoisseur of fine wine and fine women.~
-  IF ~~ THEN REPLY ~~ EXTERN ~USSTMI~ 2
+  IF ~~ THEN EXTERN ~USSTMI~ 2
 END
 
 IF ~~ THEN BEGIN 3
   SAY ~The Legion of the Chimera selected us to bury you. They have excellent taste in assassins.~
-  IF ~~ THEN REPLY ~~ EXTERN ~USSTMI~ 3
+  IF ~~ THEN EXTERN ~USSTMI~ 3
 END
 
 IF ~~ THEN BEGIN 4

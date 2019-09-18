@@ -171,11 +171,11 @@ Weight: 1 lb.~
 @4722     = ~Burning Oil~
 @4723     = ~Simple to make but expensive to produce, this mixture of blackpowder and highly refined oil and gas will ignite when it breaks against a target.  As soon as the bottle hits the ground, a small capsule of pure sodium and another capsule of water will break open.  The sodium catches fire on contact with the water, setting the rest of the mixture alight.
 
-A weak grenade inside the bottle then causes the flaming oil to expand rapidly, spreading the flame across all creatures within a 30 foot radius.  Anyone caught inside the burst will suffer 4d6 points of damage with a Reflex save (DC 15) for half.
+A weak grenade inside the bottle then causes the flaming oil to expand rapidly, spreading the flame across all creatures within a 30 foot radius.  Anyone caught inside the burst will suffer 6d6 points of damage with a Reflex save (DC 15) for half.
 
 STATISTICS:
 
-4d6 fire damage (Reflex DC 15 for 1/2 damage)
+6d6 fire damage (Reflex DC 15 for 1/2 damage)
 Area of Effect: 30-foot radius
 Range: 40'
 Weight: 1 lb.~
@@ -366,7 +366,7 @@ STATISTICS:
 
 Damage:  1d3
 Damage Type:  Missile (bludgeoning)
-Special:  -3 Spell Resistance and -3 resistance to fire, cold, electricity, acid, and magic damage (cumulative) for 5 rounds
+Special:  -3 Spell Resistance and -3 resistance to fire, cold, electricity, and acid damage (cumulative) for 5 rounds
 Weight: 0 lb.
 Required Feat:  Simple Weapons, Missile
 Type:  One-handed~
@@ -379,7 +379,7 @@ STATISTICS:
 
 Damage:  1d3
 Damage Type:  Missile (bludgeoning)
-Special:  -5 Spell Resistance and -5 resistance to fire, cold, electricity, acid, and magic damage (cumulative) for 5 rounds
+Special:  -5 Spell Resistance and -5 resistance to fire, cold, electricity, and acid damage (cumulative) for 5 rounds
 Weight: 0 lb.
 Required Feat:  Simple Weapons, Missile
 Type:  One-handed~
