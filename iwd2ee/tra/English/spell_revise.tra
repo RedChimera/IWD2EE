@@ -2541,6 +2541,17 @@ Area of Effect: Caster
 Saving Throw: None
 
 The True Strike spell gives the caster incredible insights into his or her enemies' weaknesses, but only for an extremely short duration. For 9 seconds, the caster gains a +20 attack bonus.~
+@37251     = ~Identify Creature~
+@38251     = ~Identify Creature
+(Divination)
+Level: Brd 2, Drd 2, Rgr 2, Sor/Wiz 2
+Range: Sight of Caster
+Duration: Instantaneous
+Casting Time: 2
+Area of Effect: 1 creature
+Saving Throw: None
+
+Identify Creature reveals useful combat information about the target creature. The information includes the creature's level, current and maximum hit points, number of attacks per round, ability scores, resistances, saving throws, and various other traits that depend on the creature.~
 @37652     = ~Isaac's Greater Missile Storm~
 @38652     = ~Isaac's Greater Missile Storm
 (Evocation)
