@@ -13,7 +13,6 @@ for _, macroEntry in ipairs({
 	{"add_esp_dword", "81 C4"},
 	{"add_esp_eax", "03 E0"},
 	{"add_[ecx+edi]_al", "00 04 39"},
-	{"add_[ecx+edi]_al", "28 04 39"},
 	{"add_[ecx+edi]_ax", "66 01 04 39"},
 	{"add_[ecx+edi]_eax", "01 04 39"},
 	{"and_eax_byte", "83 E0"},
