@@ -843,16 +843,16 @@ function IEex_WriteOpcode(opcodeFunctions)
 		IEex_WriteDword(writeAddress, toWrite)
 	end
 
-	writeOrDefault(vftable + 0x0,  opcodeFunctions["__vecDelDtor"],  0x499BE0)
+	writeOrDefault(vftable + 0x0,  opcodeFunctions["__vecDelDtor"],  0x499BE0) -- retn 0x4  - (implemented)
 	writeOrDefault(vftable + 0x4,  opcodeFunctions["Copy"],          IEex_WriteOpcodeCopy(vftable))
-	writeOrDefault(vftable + 0x8,  opcodeFunctions["ApplyEffect"],   0x0)
-	writeOrDefault(vftable + 0xC,  opcodeFunctions["ResolveEffect"], 0x4A3030)
-	writeOrDefault(vftable + 0x10, opcodeFunctions["OnAdd"],         0x799E60) -- nullsub (retn 4)
-	writeOrDefault(vftable + 0x14, opcodeFunctions["OnAddSpecific"], 0x799E60) -- nullsub (retn 4)
-	writeOrDefault(vftable + 0x18, opcodeFunctions["OnLoad"],        0x4A42F0)
-	writeOrDefault(vftable + 0x1C, opcodeFunctions["CheckSave"],     0x78E6E0) -- xor_eax_eax
-	writeOrDefault(vftable + 0x20, opcodeFunctions["UsesDice"],      0x4A4BB0)
-	writeOrDefault(vftable + 0x24, opcodeFunctions["OnRemove"],      0x4A51D0) -- nullsub (retn 4)
+	writeOrDefault(vftable + 0x8,  opcodeFunctions["ApplyEffect"],   0x799E20) -- retn 0x4  - (xor eax, eax)
+	writeOrDefault(vftable + 0xC,  opcodeFunctions["ResolveEffect"], 0x4A3030) -- retn 0x4  - (implemented)
+	writeOrDefault(vftable + 0x10, opcodeFunctions["OnAddSpecific"], 0x799E60) -- retn 0x4  - (nullsub)
+	writeOrDefault(vftable + 0x14, opcodeFunctions["OnLoad"],        0x799E60) -- retn 0x4  - (nullsub)
+	writeOrDefault(vftable + 0x18, opcodeFunctions["CheckSave"],     0x4A42F0) -- retn 0x14 - (implemented)
+	writeOrDefault(vftable + 0x1C, opcodeFunctions["UsesDice"],      0x78E6E0) -- retn 0x0  - (xor eax, eax)
+	writeOrDefault(vftable + 0x20, opcodeFunctions["DisplayString"], 0x4A4BB0) -- retn 0x4  - (implemented)
+	writeOrDefault(vftable + 0x24, opcodeFunctions["OnRemove"],      0x4A51D0) -- retn 0x4  - (implemented)
 
 	return IEex_RunOpcodeDecode(vftable)
 
