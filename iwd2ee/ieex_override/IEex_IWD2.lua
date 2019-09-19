@@ -49,13 +49,42 @@ function IEex_GetActorTooltip(actorID)
 	return IEex_FetchString(nameStrref)
 end
 
+function IEex_GetActorStat(actorID, statID)
+	local ecx = IEex_Call(0x4531A0, {}, IEex_GetActorShare(actorID), 0x0)
+	return IEex_Call(0x446DD0, {statID}, ecx, 0x0)
+end
+
+function IEex_GetActorSpellState(actorID, spellStateID)
+	local bitsetStruct = IEex_Malloc(0x8)
+	local spellStateStart = IEex_Call(0x4531A0, {}, IEex_GetActorShare(actorID), 0x0) + 0xEC
+	IEex_Call(0x45E380, {spellStateID, bitsetStruct}, spellStateStart, 0x0)
+	local spellState = bit32.extract(IEex_Call(0x45E390, {}, bitsetStruct, 0x0), 0, 0x8)
+	IEex_Free(bitsetStruct)
+	return spellState == 1
+end
+
+function IEex_IterateActorEffects(actorID, func)
+	local esi = IEex_ReadDword(IEex_GetActorShare(actorID) + 0x552A)
+	while esi ~= 0x0 do
+		local edi = IEex_ReadDword(esi + 0x8) - 0x4
+		func(edi)
+		esi = IEex_ReadDword(esi)
+	end
+	esi = IEex_ReadDword(IEex_GetActorShare(actorID) + 0x54FE)
+	while esi ~= 0x0 do
+		local edi = IEex_ReadDword(esi + 0x8) - 0x4
+		func(edi)
+		esi = IEex_ReadDword(esi)
+	end
+end
+
 ----------------
 -- Game State --
 ----------------
 
 function IEex_DisplayString(string)
-	string = "" .. string
 
+	string = tostring(string)
 	local stringMem = IEex_Malloc(#string + 1)
 	IEex_WriteString(stringMem, string)
 
@@ -256,7 +285,7 @@ function IEex_DefineAssemblyFunctions()
 		@apply_loop
 		!push_byte 01 ; immediateResolve ;
 		!push_byte 00 ; noSave ;
-		!push_byte 00 ; Timed list ;
+		!push_byte 01 ; Timed list ;
 		!push_[edi+byte] 08 ; Effect ;
 		!mov_ecx_[ebp+byte] 08
 		!mov_eax_[ecx]
