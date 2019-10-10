@@ -2461,6 +2461,136 @@ This spell grants the caster a 15/- bonus to acid, cold, fire, and electricity r
 @30009=~Protected by Death Ward~
 @30010=~Protected by Spell Shield~
 @30011=~Protected by Elemental Barrier~
+@30012=~Quiver of Plenty +1~
+@30013=~This quiver was created by the Quiver of Plenty spell. It holds a limitless supply of +1 arrows.
+
+STATISTICS:
+
+Damage:  1d6 + 1
+Attack Bonus:  +1 
+Enchantment:  +1
+Damage Type:  Missile (piercing)
+Special:
+  Unlimited Arrows: Any number of arrows can be taken from the quiver.
+Weight:  0 lb.
+Launcher:  Bow~
+@30014=~Quiver of Plenty +2~
+@30015=~This quiver was created by the Quiver of Plenty spell. It holds a limitless supply of +2 arrows.
+
+STATISTICS:
+
+Damage:  1d6 + 2
+Attack Bonus:  +2
+Enchantment:  +2
+Damage Type:  Missile (piercing)
+Special:
+  Unlimited Arrows: Any number of arrows can be taken from the quiver.
+Weight:  0 lb.
+Launcher:  Bow~
+@30016=~Quiver of Plenty +3~
+@30017=~This quiver was created by the Quiver of Plenty spell. It holds a limitless supply of +3 arrows.
+
+STATISTICS:
+
+Damage:  1d6 + 3
+Attack Bonus:  +3
+Enchantment:  +3
+Damage Type:  Missile (piercing)
+Special:
+  Unlimited Arrows: Any number of arrows can be taken from the quiver.
+Weight:  0 lb.
+Launcher:  Bow~
+@30018=~Quiver of Plenty +4~
+@30019=~This quiver was created by the Quiver of Plenty spell. It holds a limitless supply of +4 arrows.
+
+STATISTICS:
+
+Damage:  1d6 + 4
+Attack Bonus:  +4
+Enchantment:  +4
+Damage Type:  Missile (piercing)
+Special:
+  Unlimited Arrows: Any number of arrows can be taken from the quiver.
+Weight:  0 lb.
+Launcher:  Bow~
+@30020=~Quiver of Plenty +5~
+@30021=~This quiver was created by the Quiver of Plenty spell. It holds a limitless supply of +5 arrows.
+
+STATISTICS:
+
+Damage:  1d6 + 5
+Attack Bonus:  +5
+Enchantment:  +5
+Damage Type:  Missile (piercing)
+Special:
+  Unlimited Arrows: Any number of arrows can be taken from the quiver.
+Weight:  0 lb.
+Launcher:  Bow~
+@30022=~Quiver of Plenty +6~
+@30023=~This quiver was created by the Quiver of Plenty spell. It holds a limitless supply of +6 arrows.
+
+STATISTICS:
+
+Damage:  1d6 + 6
+Attack Bonus:  +6
+Enchantment:  +6
+Damage Type:  Missile (piercing)
+Special:
+  Unlimited Arrows: Any number of arrows can be taken from the quiver.
+Weight:  0 lb.
+Launcher:  Bow~
+@30024=~Quiver of Plenty +7~
+@30025=~This quiver was created by the Quiver of Plenty spell. It holds a limitless supply of +7 arrows.
+
+STATISTICS:
+
+Damage:  1d6 + 7
+Attack Bonus:  +7
+Enchantment:  +7
+Damage Type:  Missile (piercing)
+Special:
+  Unlimited Arrows: Any number of arrows can be taken from the quiver.
+Weight:  0 lb.
+Launcher:  Bow~
+@30026=~Quiver of Plenty +8~
+@30027=~This quiver was created by the Quiver of Plenty spell. It holds a limitless supply of +8 arrows.
+
+STATISTICS:
+
+Damage:  1d6 + 8
+Attack Bonus:  +8
+Enchantment:  +8
+Damage Type:  Missile (piercing)
+Special:
+  Unlimited Arrows: Any number of arrows can be taken from the quiver.
+Weight:  0 lb.
+Launcher:  Bow~
+@30028=~Quiver of Plenty +9~
+@30029=~This quiver was created by the Quiver of Plenty spell. It holds a limitless supply of +9 arrows.
+
+STATISTICS:
+
+Damage:  1d6 + 9
+Attack Bonus:  +9
+Enchantment:  +9
+Damage Type:  Missile (piercing)
+Special:
+  Unlimited Arrows: Any number of arrows can be taken from the quiver.
+Weight:  0 lb.
+Launcher:  Bow~
+@30030=~Quiver of Plenty +10~
+@30031=~This quiver was created by the Quiver of Plenty spell. It holds a limitless supply of +10 arrows.
+
+STATISTICS:
+
+Damage:  1d6 + 10
+Attack Bonus:  +10
+Enchantment:  +10
+Damage Type:  Missile (piercing)
+Special:
+  Unlimited Arrows: Any number of arrows can be taken from the quiver.
+Weight:  0 lb.
+Launcher:  Bow~
 
 @31508     = ~Chaotic Commands~
 @32508     = ~Chaotic Commands
@@ -2481,7 +2611,7 @@ Level: Clr 9, Sor/Wiz 8
 Range: 10 ft.
 Duration: 1 Day 
 Casting Time: 1
-Area of Effect: One Creature
+Area of Effect: 1 creature
 Saving Throw: None
 
 In the interests of one's self-control and privacy, Mind Blank shields a creature's mind from almost any mental effect - Charm, Command, Dominate Person, Fear, Feeblemind, and any scrying by crystal balls or other divination methods. ~
@@ -2497,6 +2627,30 @@ Area of Effect: 1 creature
 Saving Throw: None
 
 This necromantic curse prevents a creature from healing. For 1 day, the cursed creature cannot regain Hit Points by items, spells, abilities, resting, or regeneration. There is no saving throw.~
+@35351     = ~Quiver of Plenty~
+@36351     = ~Quiver of Plenty
+(Conjuration)
+Level: Rgr 3
+Range: Caster
+Duration: 10 rounds + 2 rounds / level
+Casting Time: 5
+Area of Effect: Caster
+Saving Throw: None
+
+This spell temporarily gives the ranger a quiver containing an unlimited supply of magical arrows. The arrows have an additional +1 to attack and damage for every 4 ranger levels. The quiver cannot be dropped or given to another character.
+
+Note: The quiver is created in the ranger's first ammunition slot, destroying any items previously in that slot. Be sure to have the first ammunition slot empty before casting Quiver of Plenty.~
+@35551     = ~Supreme Speed~
+@36551     = ~Supreme Speed
+(Alteration)
+Level: Rgr 5
+Range: Caster
+Duration: 15 rounds
+Casting Time: 4
+Area of Effect: Caster
+Saving Throw: None
+
+This spell drastically speeds up the ranger's movement. For the duration, the ranger moves at the fastest possible speed.~
 @35753     = ~Power Word: Heal~
 @36753     = ~Power Word: Heal
 (Divination)

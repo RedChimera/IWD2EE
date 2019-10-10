@@ -196,7 +196,7 @@ RRNG_14	USRing58	EOL
 RMSC_01	00Brac02	00Brac09	00Clck01	00Robe02	00Robe03	00Robe04	EOL																																					
 RMSC_02	00Brac03	00Brac05	00Belt02	00Belt03	00Belt04	00Helm07	EOL																																			
 RMSC_03	00Brac04	00Brac10	00Clck02	00Robe01	00Robe15	00Robe16	EOL																																							
-RMSC_04	00Boot01	USBrac47	EOL																																								
+RMSC_04	00Boot01	USBrac46	USBrac47	EOL																																								
 RMSC_05	00Robe99	USClck40	USHelm45	EOL																																									
 RMSC_06	00Robe05	00Robe06	00Robe07	USBrac50	USClck50	EOL																																									
 RMSC_07	USClck55	USHelm50	USBrac52	EOL																																									

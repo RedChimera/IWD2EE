@@ -3777,6 +3777,10 @@ COPY_EXISTING ~USHFSC03.itm~ ~override~
 COPY_EXISTING ~USHFSC04.itm~ ~override~
 	SAY IDENTIFIED_DESC @12672
 
+COPY_EXISTING ~USBRAC46.itm~ ~override~
+	SAY NAME2 @12673
+	SAY IDENTIFIED_DESC @12674
+
 
 //General patch changes
 
@@ -3795,7 +3799,7 @@ COPY_EXISTING_REGEXP ~.*\.itm~ ~override~
 		LPF ALTER_ITEM_HEADER INT_VAR header_type=2 range=0 END
 	END
 //Making sure two-handed axes don't thrust (they're not halberds)
-	PATCH_IF (us_item_category=25 AND (us_item_flags BAND 0x2 = 0x2)) BEGIN
+	PATCH_IF (us_item_category=25 AND ((us_item_flags BAND 0x00000002) = 0x00000002)) BEGIN
 		LPF ALTER_ITEM_HEADER INT_VAR header_type=1 animation_overhand=50 animation_backhand=50 animation_thrust=0 END
 	END
 //Making sure spears always thrust (sure, spears sometimes can slash, but there are already plenty of other weapons with slashing animations)
@@ -3807,21 +3811,23 @@ COPY_EXISTING_REGEXP ~.*\.itm~ ~override~
 	READ_LONG 0x1e us_item_unusability
 	READ_BYTE 0x2d us_kit_unusability_3
 	READ_BYTE 0x2f us_kit_unusability_4
-	PATCH_IF (us_item_unusability BAND 0x400 > 0) AND (us_item_category != 11) BEGIN
-		us_kit_unusability_3|=0x7f
-		us_kit_unusability_4|=0xc0
+	PATCH_IF ((us_item_unusability BAND 0x00000400) = 0x00000400) BEGIN
+		PATCH_IF (us_item_category != 11) BEGIN
+			us_kit_unusability_3|=0x7f
+			us_kit_unusability_4|=0xc0
+		END
 	END
 	ELSE BEGIN
 		us_kit_unusability_3&=0x80
 		us_kit_unusability_4&=0x3f
 	END
-	PATCH_IF (us_item_unusability BAND 0x20 > 0) BEGIN
+	PATCH_IF ((us_item_unusability BAND 0x00000020) = 0x00000020) BEGIN
 		us_kit_unusability_4|=0x38
 	END
 	ELSE BEGIN
 		us_kit_unusability_4&=0xc7
 	END
-	PATCH_IF (us_item_unusability BAND 0x40 > 0) BEGIN
+	PATCH_IF ((us_item_unusability BAND 0x00000040) = 0x00000040) BEGIN
 		us_kit_unusability_4|=0x7
 	END
 	ELSE BEGIN

@@ -12409,6 +12409,13 @@ Resistance:  100/- Fire Resistance
 Range:  20 ft.
 Area:  1 creature
 Duration:  24 hours~
+@12673    = ~Bracers of Concentration~
+@12674    = ~Normally bracers are used to add support and protection to forearm area of the body. However, these bracers have been magically altered to protect the mind rather than the body. A spellcaster who wears these bracers can more easily maintain their focus on the spell they are casting. Even searing pain will not always interrupt the wearer of these bracers.
+
+STATISTICS:
+
+Concentration Skill: +15
+Weight: 2 lb.~
 
 @12900    = ~Hrm - you are powerful allies, indeed.  More gold and gems to line your pockets, then - also, a suit of plate armor, a warhammer, a helmet, all crafted and enchanted by great duergar artisans.  They are well deserved, outsider.~
 @12901    = ~Drink this Rainwater Brew, Ennelia.  It should help your condition.~

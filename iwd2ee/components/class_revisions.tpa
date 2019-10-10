@@ -145,7 +145,6 @@ COPY ~%mod_folder%/tables/SPCD_GR.2da~ ~override~
 COPY ~%mod_folder%/tables/SPCHF_GW.2da~ ~override~
 COPY ~%mod_folder%/tables/SPLBRDKN.2da~ ~override~
 COPY ~%mod_folder%/tables/SPLSRCKN.2da~ ~override~
-COPY ~%mod_folder%/tables/SPONCAST.2da~ ~override~
 COPY ~%mod_folder%/tables/WSPECIAL.2da~ ~override~
 
 COPY ~%mod_folder%/tables/MONCRATE.2da~ ~override~
@@ -1311,6 +1310,12 @@ COPY ~%mod_folder%/spl/SPIN231.spl~ ~override~
   SAY NAME2 @4793
   SAY UNIDENTIFIED_DESC @4793
   SAY IDENTIFIED_DESC @4793
+
+COPY_EXISTING ~USIN231.spl~ ~override~
+  SAY NAME1 @4794
+  SAY NAME2 @4794
+  SAY UNIDENTIFIED_DESC @4794
+  SAY IDENTIFIED_DESC @4794
 
 COPY ~%mod_folder%/dlg/USALCP01.d~ ~override/USALCP01.dlg~
 	COMPILE_D_TO_DLG
