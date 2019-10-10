@@ -208,6 +208,39 @@ function EXSEARCH(effectData, creatureData)
 	end
 end
 
+statspells = {
+{96, 0, {[21] = "USRAGE3", [25] = "USRAGE4", [29] = "USRAGE5"}}, -- Barbarian Rage
+{100, 0, {[0] = "USMAXIM1", [12] = "USMAXIM2"}} -- Maximized Attacks
+}
+
+function MESTATSP(effectData, creatureData)
+	local targetID = IEex_GetActorIDShare(creatureData)
+	local statSpellList = statspells[IEex_ReadDword(effectData + 0x1C)]
+	if statSpellList ~= nil then
+		local creatureStat = 0
+		if statSpellList[2] == 0 then
+			creatureStat = IEex_GetActorStat(targetID, statSpellList[1])
+		elseif statSpellList[2] == 1 then
+			creatureStat = IEex_ReadByte(creatureData + statSpellList[1], 0)
+		elseif statSpellList[2] == 2 then
+			creatureStat = IEex_ReadSignedWord(creatureData + statSpellList[1], 0)
+		elseif statSpellList[2] == 4 then
+			creatureStat = IEex_ReadLong(creatureData + statSpellList[1])
+		end
+		local spellRES = ""
+		local highest = -1
+		for key,value in pairs(statSpellList[3]) do
+			if creatureStat >= key and key > highest then
+				spellRES = value
+				highest = key
+			end
+		end
+		if spellRES ~= "" then
+			IEex_ApplyResref(spellRES, targetID)
+		end
+	end
+end
+
 classstatnames = {"Barbarian", "Bard", "Cleric", "Druid", "Fighter", "Monk", "Paladin", "Ranger", "Rogue", "Sorcerer", "Wizard"}
 function MESTATPR(effectData, creatureData)
 	local targetID = IEex_GetActorIDShare(creatureData)

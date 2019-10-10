@@ -15,6 +15,7 @@ COPY ~%mod_folder%/bam/bam_spell_revisions~ ~override~
 COPY ~%mod_folder%/bcs/bcs_spell_revisions~ ~override~
 
 COPY ~%mod_folder%/tables/LISTDOMN.2da~ ~override~
+COPY ~%mod_folder%/tables/SPONCAST.2da~ ~override~
 
 // fixed spell schools for scrolls
 
@@ -2225,6 +2226,58 @@ COPY_EXISTING ~uspr252.spl~ ~override~
 	SAY NAME2 @35252
 	SAY UNIDENTIFIED_DESC @36252
 	SAY IDENTIFIED_DESC @36252
+
+COPY_EXISTING ~uspr351.spl~ ~override~
+	SAY NAME1 @35351
+	SAY NAME2 @35351
+	SAY UNIDENTIFIED_DESC @36351
+	SAY IDENTIFIED_DESC @36351
+
+COPY_EXISTING ~usquip01.itm~ ~override~
+	SAY NAME2 @30012
+	SAY IDENTIFIED_DESC @30013
+
+COPY_EXISTING ~usquip02.itm~ ~override~
+	SAY NAME2 @30014
+	SAY IDENTIFIED_DESC @30015
+
+COPY_EXISTING ~usquip03.itm~ ~override~
+	SAY NAME2 @30016
+	SAY IDENTIFIED_DESC @30017
+
+COPY_EXISTING ~usquip04.itm~ ~override~
+	SAY NAME2 @30018
+	SAY IDENTIFIED_DESC @30019
+
+COPY_EXISTING ~usquip05.itm~ ~override~
+	SAY NAME2 @30020
+	SAY IDENTIFIED_DESC @30021
+
+COPY_EXISTING ~usquip06.itm~ ~override~
+	SAY NAME2 @30022
+	SAY IDENTIFIED_DESC @30023
+
+COPY_EXISTING ~usquip07.itm~ ~override~
+	SAY NAME2 @30024
+	SAY IDENTIFIED_DESC @30025
+
+COPY_EXISTING ~usquip08.itm~ ~override~
+	SAY NAME2 @30026
+	SAY IDENTIFIED_DESC @30027
+
+COPY_EXISTING ~usquip09.itm~ ~override~
+	SAY NAME2 @30028
+	SAY IDENTIFIED_DESC @30029
+
+COPY_EXISTING ~usquip10.itm~ ~override~
+	SAY NAME2 @30030
+	SAY IDENTIFIED_DESC @30031
+
+COPY_EXISTING ~uspr551.spl~ ~override~
+	SAY NAME1 @35551
+	SAY NAME2 @35551
+	SAY UNIDENTIFIED_DESC @36551
+	SAY IDENTIFIED_DESC @36551
 
 COPY_EXISTING ~uspr753.spl~ ~override~
 	SAY NAME1 @35753

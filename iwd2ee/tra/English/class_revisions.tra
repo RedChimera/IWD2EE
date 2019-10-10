@@ -76,6 +76,9 @@ Advantages:
 * 11th level: Damage Reduction. The barbarian gains 1/- point of resistance to slashing, piercing, bludgeoning and missile damage.  He gains 1/- additional point of resistance at levels 14, 17, 20, and every 1 level after.
 * 15th level: Greater Rage. All of the barbarian's rages become greater rages, which increase the strength and constitution bonuses to +6 and the saving throw bonus to +3.  He or she still receives the -2 armor penalty.
 * 20th level: Tireless Rage. The barbarian is no longer fatigued after a rage.
+* 21st level: Mighty Rage. The barbarian's rage ability now grants +8 to Strength and Constitution and +4 to Will saves.
+* 25th level: Barbarian rage now grants +10 to Strength and Constitution and +5 to Will saves.
+* 29th level: Barbarian rage now grants +12 to Strength and Constitution and +6 to Will saves.
 
 Disadvantages:
 * Barbarians gain feats at a slower rate than fighters.
@@ -140,7 +143,7 @@ Advantages:
 * 5th level: Wild Shape: Werebadger.  The druid gains the ability to shapechange into an werebadger, which has a sturdy hide and attacks using a club.  The druid can use this form once per day at level 5, then gains an additional use every level thereafter. All Wild Shape abilities heal the caster and can be used more often as the druid gains levels.
 * 5th level: The Druid is high enough level to choose the special feats, Wild Shape: Will o' Wisp, Creeping Doom, and Treant.
 * 7th level: Wild Shape: Viper. Vipers are quick and evasive and can strike multiple times per round, dealing 2 poison damage per second for 1 round on a failed Fortitude save (DC 10).
-* 9th level: Wild Shape: Hook Horror.  Hook Horrors have chitinous armor and can attack multiple times per round using their claws
+* 9th level: Wild Shape: Hook Horror.  Hook Horrors have chitinous armor and can attack multiple times per round using their claws.
 * 9th level: Immunity to Poison.  The druid becomes immune to all forms of poison.
 * 11th level: Wild Shape: Rhinoceros Beetle.  Rhinoceros Beetle are massive insects with horns like battering rams. They have slow but very powerful attacks and are extremely resilient to damage.
 * 13th level: Wild Shape: Shambling Mound.  Shambling Mounds are massive heaps of plant matter that can ensnare their victims on a failed Reflex save (50% chance; DC 15).
@@ -323,7 +326,7 @@ Advantages:
 * Talos' Blessing 1/Day (for 5 rounds, all electrical damage dealt by the priest is increased by 30%)~
 @545    = ~BATTLEGUARD OF TEMPUS:
 
-The Lord of Battles, Tempus, is worshipped by warriors across the Faerun.  As war can be found in almost every civilzed part of the world, so too can the Battleguards of Tempus.  Battleguards fight bravely and inspire their comrades to deeds of valor.  They are known for their bravery and stubborn nature.
+The Lord of Battles, Tempus, is worshipped by warriors across the Faerun.  As war can be found in almost every civilized part of the world, so too can the Battleguards of Tempus.  Battleguards fight bravely and inspire their comrades to deeds of valor.  They are known for their bravery and stubborn nature.
 
 Advantages:
 
@@ -360,7 +363,7 @@ You have learned how to maximize the effect of your attacks while performing a s
 
 Prerequisites: 4 ranks in Concentration and Weapon Specialization in 2 weapons.
 
-Benefit: All attacks do maximum damage for 1 round per level. If you are level 12 or higher, you also gain a +4 attack bonus and +4 critical threat range for the duration.~
+Benefit: All attacks do maximum damage for 5 rounds. If you are a level 12 Fighter or higher, you also gain a +4 attack bonus and +4 critical threat range for the duration.~
 @670    = ~TOUGHNESS:
 
 You are tougher than normal.
@@ -1259,4 +1262,5 @@ Vipergout for 6 rounds
 Weight: 1 lb.
 ~
 @4793     = ~Concoct Potions~
+@4794     = ~Envenom Weapon~
 
