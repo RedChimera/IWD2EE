@@ -1,3 +1,9 @@
+COPY ~%mod_folder%/bam/bam_class_revisions~ ~override~
+
+COPY ~%mod_folder%/cre/cre_class_revisions~ ~override~
+
+COPY ~%mod_folder%/itm/itm_class_revisions~ ~override~
+
 COPY ~%mod_folder%/spl/spl_class_revisions~ ~override~
 
 // First are some lines that used to belong to Item Revisions, but were found to be over-writing stuff from this component. We're moving it to the start to make sure that the Concoct Potions lines later in this TPA will over-write the following lines.
@@ -560,7 +566,7 @@ COPY_EXISTING ~feats.2da~ ~override~
     READ_2DA_ENTRY_FORMER rows row 0 label
     PATCH_MATCH ~%label%~ WITH
       ~WILDSHAPE_BOAR~ BEGIN
-        SET strref = RESOLVE_STR_REF(@185)
+        SET strref = RESOLVE_STR_REF(@202)
         SET_2DA_ENTRY_LATER rows_out row 3 ~%strref%~
       END
       ~WILDSHAPE_PANTHER~ BEGIN
@@ -568,7 +574,7 @@ COPY_EXISTING ~feats.2da~ ~override~
         SET_2DA_ENTRY_LATER rows_out row 3 ~%strref%~
       END
       ~WILDSHAPE_SHAMBLER~ BEGIN
-        SET strref = RESOLVE_STR_REF(@189)
+        SET strref = RESOLVE_STR_REF(@204)
         SET_2DA_ENTRY_LATER rows_out row 3 ~%strref%~
       END
       DEFAULT
@@ -584,7 +590,7 @@ COPY_EXISTING ~feats.2da~ ~override~
     READ_2DA_ENTRY_FORMER rows row 0 label
     PATCH_MATCH ~%label%~ WITH
       ~WILDSHAPE_BOAR~ BEGIN
-        SET strref = RESOLVE_STR_REF(@184)
+        SET strref = RESOLVE_STR_REF(@201)
         SET_2DA_ENTRY_LATER rows_out row 2 ~%strref%~
       END
       ~WILDSHAPE_PANTHER~ BEGIN
@@ -592,7 +598,7 @@ COPY_EXISTING ~feats.2da~ ~override~
         SET_2DA_ENTRY_LATER rows_out row 2 ~%strref%~
       END
       ~WILDSHAPE_SHAMBLER~ BEGIN
-        SET strref = RESOLVE_STR_REF(@188)
+        SET strref = RESOLVE_STR_REF(@203)
         SET_2DA_ENTRY_LATER rows_out row 2 ~%strref%~
       END
       DEFAULT
@@ -626,6 +632,60 @@ COPY_EXISTING ~feats.2da~ ~override~
       ~LIGHTNING_REFLEXES~ BEGIN
         SET strref = RESOLVE_STR_REF(@673)
         SET_2DA_ENTRY_LATER rows_out row 3 ~%strref%~
+      END
+      ~EXOTIC_BASTARD~ BEGIN
+        SET strref = RESOLVE_STR_REF(@674)
+        SET_2DA_ENTRY_LATER rows_out row 3 ~%strref%~
+      END
+      ~MARTIAL_AXE~ BEGIN
+        SET strref = RESOLVE_STR_REF(@675)
+        SET_2DA_ENTRY_LATER rows_out row 3 ~%strref%~
+      END
+      ~MARTIAL_BOW~ BEGIN
+        SET strref = RESOLVE_STR_REF(@676)
+        SET_2DA_ENTRY_LATER rows_out row 3 ~%strref%~
+      END
+      ~MARTIAL_FLAIL~ BEGIN
+        SET strref = RESOLVE_STR_REF(@677)
+        SET_2DA_ENTRY_LATER rows_out row 3 ~%strref%~
+      END
+      ~MARTIAL_GREATSWORD~ BEGIN
+        SET strref = RESOLVE_STR_REF(@678)
+        SET_2DA_ENTRY_LATER rows_out row 3 ~%strref%~
+      END
+      ~MARTIAL_HAMMER~ BEGIN
+        SET strref = RESOLVE_STR_REF(@679)
+        SET_2DA_ENTRY_LATER rows_out row 3 ~%strref%~
+      END
+      ~MARTIAL_LARGESWORD~ BEGIN
+        SET strref = RESOLVE_STR_REF(@680)
+        SET_2DA_ENTRY_LATER rows_out row 3 ~%strref%~
+      END
+      ~MARTIAL_POLEARM~ BEGIN
+        SET strref = RESOLVE_STR_REF(@681)
+        SET_2DA_ENTRY_LATER rows_out row 3 ~%strref%~
+      END
+      ~SIMPLE_CROSSBOW~ BEGIN
+        SET strref = RESOLVE_STR_REF(@682)
+        SET_2DA_ENTRY_LATER rows_out row 3 ~%strref%~
+      END
+      ~SIMPLE_MACE~ BEGIN
+        SET strref = RESOLVE_STR_REF(@683)
+        SET_2DA_ENTRY_LATER rows_out row 3 ~%strref%~
+      END
+      ~SIMPLE_MISSILE~ BEGIN
+        SET strref = RESOLVE_STR_REF(@684)
+        SET_2DA_ENTRY_LATER rows_out row 3 ~%strref%~
+      END
+      ~SIMPLE_QUARTERSTAFF~ BEGIN
+        SET strref = RESOLVE_STR_REF(@685)
+        SET_2DA_ENTRY_LATER rows_out row 3 ~%strref%~
+      END
+      ~SIMPLE_SMALLBLADE~ BEGIN
+        SET title = RESOLVE_STR_REF(@686)
+		SET description = RESOLVE_STR_REF(@687)
+        SET_2DA_ENTRY_LATER rows_out row 2 ~%title%~
+		SET_2DA_ENTRY_LATER rows_out row 3 ~%description%~
       END
       DEFAULT
     END
@@ -1218,11 +1278,6 @@ COPY ~%mod_folder%/spl/USSTDR17.spl~ ~override~
   SAY NAME2 @164
   SAY UNIDENTIFIED_DESC @164
   SAY IDENTIFIED_DESC @164
-COPY ~%mod_folder%/spl/SPIN111.spl~ ~override~
-  SAY NAME1 @164
-  SAY NAME2 @164
-  SAY UNIDENTIFIED_DESC @164
-  SAY IDENTIFIED_DESC @164
 COPY ~%mod_folder%/spl/USSTDR20.spl~ ~override~
   SAY NAME1 @165
   SAY NAME2 @165
@@ -1248,17 +1303,7 @@ COPY ~%mod_folder%/spl/USSTDR34.spl~ ~override~
   SAY NAME2 @169
   SAY UNIDENTIFIED_DESC @169
   SAY IDENTIFIED_DESC @169
-COPY ~%mod_folder%/spl/SPIN246.spl~ ~override~
-  SAY NAME1 @169
-  SAY NAME2 @169
-  SAY UNIDENTIFIED_DESC @169
-  SAY IDENTIFIED_DESC @169
 COPY ~%mod_folder%/spl/USSTDR36.spl~ ~override~
-  SAY NAME1 @170
-  SAY NAME2 @170
-  SAY UNIDENTIFIED_DESC @170
-  SAY IDENTIFIED_DESC @170
-COPY ~%mod_folder%/spl/SPIN245.spl~ ~override~
   SAY NAME1 @170
   SAY NAME2 @170
   SAY UNIDENTIFIED_DESC @170
@@ -1268,7 +1313,151 @@ COPY ~%mod_folder%/spl/USSTDR40.spl~ ~override~
   SAY NAME2 @171
   SAY UNIDENTIFIED_DESC @171
   SAY IDENTIFIED_DESC @171
-  
+
+COPY_EXISTING ~USWS01.spl~ ~override~
+	SAY NAME1 @192
+	SAY NAME2 @192
+
+COPY_EXISTING ~USWS02.spl~ ~override~
+	SAY NAME1 @193
+	SAY NAME2 @193
+
+COPY_EXISTING ~USWS03.spl~ ~override~
+	SAY NAME1 @194
+	SAY NAME2 @194
+
+COPY_EXISTING ~USWS04.spl~ ~override~
+	SAY NAME1 @195
+	SAY NAME2 @195
+
+COPY_EXISTING ~USWS05.spl~ ~override~
+	SAY NAME1 @196
+	SAY NAME2 @196
+
+COPY_EXISTING ~USWS06.spl~ ~override~
+	SAY NAME1 @171
+	SAY NAME2 @171
+
+COPY_EXISTING ~USWS07.spl~ ~override~
+	SAY NAME1 @197
+	SAY NAME2 @197
+
+COPY_EXISTING ~USWS08.spl~ ~override~
+	SAY NAME1 @198
+	SAY NAME2 @198
+
+COPY_EXISTING ~USWS09.spl~ ~override~
+	SAY NAME1 @199
+	SAY NAME2 @199
+
+COPY_EXISTING ~USWS10.spl~ ~override~
+	SAY NAME1 @200
+	SAY NAME2 @200
+
+COPY_EXISTING ~USWS21.spl~ ~override/spin111.spl~
+	SAY NAME1 @201
+	SAY NAME2 @201
+
+COPY_EXISTING ~USBLINKT.spl~ ~override~
+	SAY NAME1 @205
+	SAY NAME2 @205
+
+COPY_EXISTING ~USWS22.spl~ ~override/spin245.spl~
+	SAY NAME1 @170
+	SAY NAME2 @170
+
+COPY_EXISTING ~USWS23.spl~ ~override/spin246.spl~
+	SAY NAME1 @163
+	SAY NAME2 @163
+
+COPY_EXISTING ~USWS30.spl~ ~override~
+	SAY NAME1 @168
+	SAY NAME2 @168
+
+COPY_EXISTING_REGEXP ~USW01L.*\.itm~ ~override~
+	SAY NAME1 @209
+	SAY NAME2 @209
+	SAY DESC @209
+
+COPY_EXISTING_REGEXP ~USW03L.*\.itm~ ~override~
+	SAY NAME1 @149
+	SAY NAME2 @149
+	SAY DESC @149
+
+COPY_EXISTING_REGEXP ~USW04L.*\.itm~ ~override~
+	SAY NAME1 @207
+	SAY NAME2 @207
+	SAY DESC @207
+
+COPY_EXISTING_REGEXP ~USW05L.*\.itm~ ~override~
+	SAY NAME1 @208
+	SAY NAME2 @208
+	SAY DESC @208
+
+COPY_EXISTING_REGEXP ~USW21L.*\.itm~ ~override~
+	SAY NAME1 @206
+	SAY NAME2 @206
+	SAY DESC @206
+
+COPY_EXISTING_REGEXP ~USW22L.*\.itm~ ~override~
+	SAY NAME1 @158
+	SAY NAME2 @158
+	SAY DESC @158
+
+COPY_EXISTING_REGEXP ~USW23L.*\.itm~ ~override~
+	SAY NAME1 @151
+	SAY NAME2 @151
+	SAY DESC @151
+
+COPY_EXISTING_REGEXP ~USW30L.*\.itm~ ~override~
+	SAY NAME1 @156
+	SAY NAME2 @156
+	SAY DESC @156
+
+COPY_EXISTING ~LISTSHAP.2da~ ~override~
+	COUNT_2DA_ROWS 2 numrows
+	READ_2DA_ENTRY (numrows - 1) 0 2 lastindex
+	lastindex += 1
+	INSERT_2DA_ROW numrows 2 ~%lastindex% USWS01~
+	numrows += 1
+	lastindex += 1
+	INSERT_2DA_ROW numrows 2 ~%lastindex% USWS02~
+	numrows += 1
+	lastindex += 1
+	INSERT_2DA_ROW numrows 2 ~%lastindex% USWS03~
+	numrows += 1
+	lastindex += 1
+	INSERT_2DA_ROW numrows 2 ~%lastindex% USWS04~
+	numrows += 1
+	lastindex += 1
+	INSERT_2DA_ROW numrows 2 ~%lastindex% USWS05~
+	numrows += 1
+	lastindex += 1
+	INSERT_2DA_ROW numrows 2 ~%lastindex% USWS06~
+	numrows += 1
+	lastindex += 1
+	INSERT_2DA_ROW numrows 2 ~%lastindex% USWS07~
+	numrows += 1
+	lastindex += 1
+	INSERT_2DA_ROW numrows 2 ~%lastindex% USWS08~
+	numrows += 1
+	lastindex += 1
+	INSERT_2DA_ROW numrows 2 ~%lastindex% USWS09~
+	numrows += 1
+	lastindex += 1
+	INSERT_2DA_ROW numrows 2 ~%lastindex% USWS10~
+	numrows += 1
+	lastindex += 1
+	INSERT_2DA_ROW numrows 2 ~%lastindex% USWS30~
+
+COPY_EXISTING ~spin122.spl~ ~override~ ~sppr504.spl~ ~override~ ~sppr712.spl~ ~override~
+	LPF CLONE_EFFECT INT_VAR multi_match=1 opcode=172 timing=9 STR_VAR resource=~USBLINKT~ insert=~last~ END
+	UNLESS ~USBLINKT~
+
+COPY_EXISTING ~spin122.spl~ ~override~ ~sppr504.spl~ ~override~ ~sppr712.spl~ ~override~
+	LPF CLONE_EFFECT INT_VAR multi_match=1 opcode=276 parameter2=255 timing=9 STR_VAR resource=~USNOSALA~ insert=~last~ END
+	UNLESS ~USNOSALA~
+
   STRING_SET 9558 ~PALADIN:
 
 A paladin is a warrior bold and pure, the exemplar of everything good and true. Like the fighter, the paladin is a man of combat. However, the paladin lives for the ideals of righteousness, justice, honesty, piety, and chivalry. He strives to be a living example of these virtues so that others might learn from him as well as gain by his actions.

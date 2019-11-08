@@ -19,7 +19,7 @@ Level: Clr 2, Tempus 2
 Range: Caster
 Duration: 10 rounds
 Casting Time: 1 round 
-Area of Effect: 30-foot radius 
+Area of Effect: 30-foot radius
 Saving Throw: None 
 
 By means of the Chant spell, the cleric brings special favor upon himself and his party, and causes harm to his enemies.  When the Chant spell is completed, all the cleric's allies in the area of effect gain +1 to attack, damage, and saving throws, while the cleric's enemies suffer a -1 penalty to their attacks, damage and saves.  Multiple Chants are not cumulative.  This spell requires a moderate amount of concentration by the caster, so the cleric's movement is slowed by half.~
@@ -446,7 +446,7 @@ Casting Time: 1
 Area of Effect: 1 creature
 Saving Throw: Special
 
-When the caster completes this spell, a blue glow encompasses his hand.  This energy attacks the life force of any creature the wizard touches (no attack roll is required).  The touched creature suffers 1d6 cold damage and receives a -1 attack bonus modifier for 10 rounds after being struck.  If the creature is undead creature, it is affected by panic (Will negates) for 10 rounds.  The Will DC is equal to 10 plus the caster's level divided by 3.  Undead suffer no damage or attack bonus penalty from Chill Touch. ~
+When the caster completes this spell, a blue glow encompasses his hand.  This energy attacks the life force of any creature the wizard touches (no attack roll is required).  The touched creature suffers 1d6 cold damage and receives a -1 attack bonus modifier for 10 rounds after being struck.  If the creature is undead creature, it is affected by panic (Will negates) for 10 rounds.  The Will DC is equal to 10 plus the caster's level divided by 3.  Undead suffer no damage or attack bonus penalty from Chill Touch.~
 @1076    = ~Chromatic Orb~
 @1077    = ~Chromatic Orb 
 (Evocation) 
@@ -502,7 +502,7 @@ Casting Time: 10
 Area of Effect: Caster
 Saving Throw: None
 
-This spell creates a staff of force in the caster's hand which can be wielded as a weapon - weapon proficiency bonuses or penalties apply.  The Decastave deals 10 bludgeoning damage per hit, and can hit creatures immune to normal weapons, though it has no attack bonus.  The staff also drains an additional 10 hit points per strike that is transferred over to the wielder's own hit points.  These extra hit points can take the wielder over his maximum hit points, but any hit points gained in such a manner are temporary and will dissipate after 10 minutes.~
+This spell creates a staff of force in the caster's hand which can be wielded as a weapon - weapon proficiency bonuses or penalties apply.  The Decastave deals 10 bludgeoning damage per hit, and can hit creatures immune to normal weapons, though it has no attack bonus.  The staff also drains an additional 10 hit points per strike that is transferred over to the wielder's own hit points.  These extra hit points can take the wielder over his or her maximum hit points, but any hit points gained in such a manner are temporary and will dissipate after 10 minutes.~
 @1084    = ~Lightning Bolt~
 @1085    = ~Lightning Bolt
 (Evocation)
@@ -535,7 +535,7 @@ Casting Time: 3
 Area of Effect: 1 creature
 Saving Throw: Fortitude half
 
-This spell fires a magical lance of ice at a target of the caster's choosing.  It automatically hits, inflicting 5d6 points of damage and forcing the target to make a Fortitude save or be stunned for 3 rounds. ~
+This spell fires a magical lance of ice at a target of the caster's choosing.  It automatically hits, inflicting 5d6 points of cold damage and forcing the target to make a Fortitude save or be stunned for 3 rounds.~
 @1090    = ~Lance of Disruption~
 @1091    = ~Lance of Disruption 
 (Evocation)
@@ -683,17 +683,17 @@ Saving Throw: None
 Using this spell, a wizard may reduce the spell resistance of a target creature.  The victim's spell resistance will be reduced by 1 point for every level of the caster. Spell resistance cannot block this spell, and there is no saving throw.~
 @1116    = ~Phantom Blade~
 @1117    = ~Phantom Blade 
-(Evocation) 
+(Evocation)
 Level: Brd 5, Pal 3, Sor/Wiz 5, Mask 6
 Range: Caster
-Duration: 3 rounds + 1 round/level
+Duration: 20 rounds
 Casting Time: 5
 Area of Effect: Special
-Saving Throw: None 
+Saving Throw: None
 
-This spell creates a translucent, shadowlike, weightless area of magical force extending from the fingers of one of the caster's hands.  This silent construct can be wielded as a longsword and may strike targets from a short distance away.  
+This spell creates a translucent, shadowlike, weightless area of magical force extending from the fingers of one of the caster's hands.  This silent construct can be wielded as a longsword and may strike targets from a short distance away.
 
-The phantom blade deals 1d8+2 damage with a +2 bonus to attack and strikes as a +5 weapon for the purposes of bypassing weapon immunities, and inflicts an additional 1d10 magic damage (or 1d20 damage if the target is undead).  Due to its etheric nature, it ignores armor and shield bonuses but gains no bonuses or penalties from the wielder's Strength.  This sword can only be used by the caster and remains in her hand for the duration or until dispelled.~
+The phantom blade deals 1d8+3 damage with a +3 bonus to attack and strikes as a +6 weapon for the purposes of bypassing weapon immunities, and inflicts an additional 1d10 magic damage (or 1d10+10 damage if the target is undead).  Due to its etheric nature, it ignores armor and shield bonuses, though it still strikes harder depending on the wielder's Strength. Although the phantom blade appears as a longsword, it uses the small blade proficiency and can be used with Weapon Finesse. This sword can only be used by the caster and remains in her hand for the duration or until dispelled.~
 @1118    = ~Ball Lightning~
 @1119    = ~Ball Lightning 
 (Evocation)
@@ -748,9 +748,9 @@ Casting Time: 8
 Area of Effect: Caster
 Saving Throw: None
 
-This spell transforms the caster's body into living iron, granting him several powerful resistances and abilities.  While the spell is in effect, the caster has 15/- resistance to fire, acid, electricity, and all forms of physical damage.  Spells that affect respiration or the physiology of the caster are ignored completely, such as poison, blindness, deafness, and disease to name a few.  In addition, the caster gains a +8 bonus to strength and constitution and a -8 dexterity penalty.  Unfortunately, the caster's movement becomes slow and awkward under the weight of his new body, setting his movement rate to half its normal rate, and he receives a -6 penalty to casting time.~
+This spell transforms the caster's body into living iron, granting him several powerful resistances and abilities.  While the spell is in effect, the caster has 15/- resistance to fire, acid, electricity, and all forms of physical damage.  Spells that affect respiration or the physiology of the caster are ignored completely, such as poison, blindness, deafness, and disease to name a few.  In addition, the caster gains a +8 bonus to strength and constitution and a -8 dexterity penalty.  Unfortunately, the caster's movement becomes slow and awkward under the weight of his new body, setting his movement rate to half its normal rate, and he receives a -2 penalty to casting speed.~
 @1128    = ~Black Blade of Disaster~
-@1129    = ~Black Blade of Disaster 
+@1129    = ~Black Blade of Disaster
 (Conjuration) 
 Level: Sor/Wiz 9, Mask 9
 Range: Caster
@@ -759,7 +759,7 @@ Casting Time: 9
 Area of Effect: Special
 Saving Throw: Special
 
-This spell enables the caster to create a black, blade-shaped, planar rift, about three feet long.  It jumps into the caster's hand and is used as a normal sword, remaining there for the duration of the spell.  The sword acts as a +10 weapon and deals 2d12 damage per strike.  Furthermore, the blade drains one single level from the target per hit, imposing a -1 penalty to hit and damage and a -5 penalty to HP.~
+This spell enables the caster to create a black, blade-shaped, planar rift, about three feet long.  It jumps into the caster's hand and is used as a normal sword, remaining there for the duration of the spell. The sword acts as a +10 weapon, dealing 2d12+10 damage per strike with a +10 attack bonus. Furthermore, the blade drains one single level from the target per hit, imposing a -1 penalty to hit and damage and a -5 penalty to HP.~
 @1130    = ~Otiluke's Freezing Sphere~
 @1131    = ~Otiluke's Freezing Sphere 
 (Evocation)
@@ -2592,6 +2592,19 @@ Special:
 Weight:  0 lb.
 Launcher:  Bow~
 
+@31215     = ~Draw Upon Holy Might~
+@32215     = ~Draw Upon Holy Might
+(Evocation)
+Level: Clr 2, Pal 2, Tempus 2
+Range: Caster
+Duration: 10 rounds
+Casting Time: 5
+Area of Effect: Caster
+Saving Throw: None
+
+The caster calls upon their god to grant them power for a short period. The caster's Strength, Dexterity and Constitution are all raised by 1 point for every 3 levels of the caster.  A third level caster would have their abilities raised by 1, while a 12th level caster would have their abilities raised by 4.
+
+When cast as a paladin spell, Draw Upon Holy Might gives additional bonuses. The paladin's Strength, Dexterity and Constitution are raised an additional number of points equal to the paladin's Charisma bonus. However, the total stat bonuses granted (from both level and Charisma) cannot be higher than +10.~
 @31508     = ~Chaotic Commands~
 @32508     = ~Chaotic Commands
 (Enchantment) [Chaos]
@@ -2604,6 +2617,17 @@ Saving Throw: None
 
 Chaotic Commands renders a creature immune to magical commands.  Charm, Dominate Person, Command, Sleep, Confusion, Feeblemind, and Symbol spells all fit into this category.~
 
+@33322     = ~Melf's Minute Meteors~
+@34322     = ~Melf's Minute Meteors
+(Evocation)
+Level: Sor/Wiz 3
+Range: Caster
+Duration: 8 hours 
+Casting Time: 3
+Area of Effect: Caster
+Saving Throw: Reflex half
+
+This spell enables the wizard to cast one small meteor for each level of the caster. Each meteor bursts into a 1-foot-diameter sphere upon impact and inflicts 1d4+3 points of damage (plus Strength bonus) and +3 points of fire damage to the creature struck. The meteors use the missile proficiency, gain a +5 bonus to attack rolls, and strike as +3 weapons. The wizard may discharge up to five missiles per round.~
 @33804     = ~Mind Blank~
 @34804     = ~Mind Blank
 (Abjuration)
@@ -2614,8 +2638,30 @@ Casting Time: 1
 Area of Effect: 1 creature
 Saving Throw: None
 
-In the interests of one's self-control and privacy, Mind Blank shields a creature's mind from almost any mental effect - Charm, Command, Dominate Person, Fear, Feeblemind, and any scrying by crystal balls or other divination methods. ~
+In the interests of one's self-control and privacy, Mind Blank shields a creature's mind from almost any mental effect - Charm, Command, Dominate Person, Fear, Feeblemind, and any scrying by crystal balls or other divination methods.~
 
+@35151     = ~Divine Shield~
+@36151     = ~Divine Shield
+(Abjuration)
+Level: Pal 1
+Range: Caster
+Duration: 5 rounds + Charisma bonus
+Casting Time: 3
+Area of Effect: Caster
+Saving Throw: None
+
+This spell creates a barrier around the paladin that shields him or her temporarily. The paladin gains a generic Armor Class bonus equal to his or her Charisma bonus. The shield lasts for 5 rounds, plus an additional number of rounds equal to the paladin's Charisma bonus.~
+@35152     = ~Hunter's Mark~
+@36152     = ~Hunter's Mark
+(Divination)
+Level: Rgr 1
+Range: 1000 ft.
+Duration: 1 hour
+Casting Time: 1
+Area of Effect: 1 creature
+Saving Throw: None
+
+By casting Hunter's Mark, the ranger magically marks a creature as their quarry. For the duration, all physical damage that would be dealt to the marked creature is increased by 3, plus an additional 3 for every 10 ranger levels. In addition, the creature cannot become invisible while marked. Hunter's Mark can be cast on any creature the party sees, even if the ranger does not see it.~
 @35252     = ~Null Healing~
 @36252     = ~Null Healing
 (Necromancy)
@@ -2706,6 +2752,17 @@ Area of Effect: 1 creature
 Saving Throw: None
 
 Identify Creature reveals useful combat information about the target creature. The information includes the creature's level, current and maximum hit points, number of attacks per round, ability scores, resistances, saving throws, and various other traits that depend on the creature.~
+@37352     = ~Remove Magic~
+@38352     = ~Remove Magic
+(Abjuration)
+Level: Clr 3, Drd 4, Pal 3, Sor/Wiz 3, Oghma 2
+Range: Sight of Caster
+Duration: Instantaneous 
+Casting Time: 5
+Area of Effect: 15-foot radius 
+Saving Throw: Will negates
+
+Remove Magic is like Dispel Magic, except it only affects enemies. When cast, it dispels most magical effects on enemies in the area of effect who fail a Will save. For every 5 levels of the caster, enemies make their saves at an additional -1 penalty.~
 @37652     = ~Isaac's Greater Missile Storm~
 @38652     = ~Isaac's Greater Missile Storm
 (Evocation)

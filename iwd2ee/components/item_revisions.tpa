@@ -3781,6 +3781,18 @@ COPY_EXISTING ~USBRAC46.itm~ ~override~
 	SAY NAME2 @12673
 	SAY IDENTIFIED_DESC @12674
 
+COPY_EXISTING ~USDAGGJD.itm~ ~override~
+	SAY NAME2 @12675
+	SAY IDENTIFIED_DESC @12676
+
+COPY_EXISTING ~USHFDGJD.itm~ ~override~
+	SAY NAME2 @12677
+	SAY IDENTIFIED_DESC @12678
+
+COPY_EXISTING ~USBWLX59.itm~ ~override~
+	SAY NAME2 @12679
+	SAY IDENTIFIED_DESC @12680
+
 
 //General patch changes
 
@@ -3798,6 +3810,14 @@ COPY_EXISTING_REGEXP ~.*\.itm~ ~override~
 	PATCH_IF (us_item_category=5 OR us_item_category=14 OR us_item_category=31) BEGIN
 		LPF ALTER_ITEM_HEADER INT_VAR header_type=2 range=0 END
 	END
+//Throwing daggers and darts should have decent range.
+	PATCH_IF (us_item_category=16 OR us_item_category=24) BEGIN
+		LPF ALTER_ITEM_HEADER INT_VAR header_type=2 range=30 END
+	END
+//Throwing axes and throwing hammers shouldn't have long range - they're heavy!
+	PATCH_IF (us_item_category=21 OR us_item_category=25) BEGIN
+		LPF ALTER_ITEM_HEADER INT_VAR header_type=2 range=10 END
+	END
 //Making sure two-handed axes don't thrust (they're not halberds)
 	PATCH_IF (us_item_category=25 AND ((us_item_flags BAND 0x00000002) = 0x00000002)) BEGIN
 		LPF ALTER_ITEM_HEADER INT_VAR header_type=1 animation_overhand=50 animation_backhand=50 animation_thrust=0 END
@@ -3806,6 +3826,9 @@ COPY_EXISTING_REGEXP ~.*\.itm~ ~override~
 	PATCH_IF (us_item_category=29) BEGIN
 		LPF ALTER_ITEM_HEADER INT_VAR header_type=1 animation_overhand=0 animation_backhand=0 animation_thrust=100 END
 	END
+
+COPY_EXISTING ~ushamtdt.itm~ ~override~ ~ushfhtdt.itm~ ~override~
+	LPF ALTER_ITEM_HEADER INT_VAR header_type=2 range=30 END
 
 //Making sure items that aren't supposed to be usable by wizards, monks or paladins cannot be used by the kits of those classes
 	READ_LONG 0x1e us_item_unusability
@@ -3912,6 +3935,7 @@ USRTHF38	USPLATSW
 USRTHF39	USSWDK46
 USRTHF40	USHELM45
 USRTHF41	USHAMTDT
+USRTHF42	USDAGGJD
 
 USRHF001	USAROW47
 USRHF002	00AROW06
@@ -4090,6 +4114,7 @@ USRTHF38	USHFPTSW
 USRTHF39	USHFSK46
 USRTHF40	USHELM50
 USRTHF41	USHFHTDT
+USRTHF42	USHFDGJD
 
 USRHF001	USAROW57
 USRHF002	USAROW54
@@ -4455,6 +4480,7 @@ COPY_EXISTING ~53MYRVEK.sto~ ~override~ //Underdark magic store
 
 COPY_EXISTING ~53WODE.sto~ ~override~ //Underdark ranged ammunition store
 	ADD_STORE_ITEM ~00RTHF06~ #1 #1 #1 ~IDENTIFIED~ #1 //Delnar's Dart of Dispelling
+	ADD_STORE_ITEM ~00BOWS88~ BEFORE ~00AROW94~ #1 #1 #1 ~IDENTIFIED~ #1 //Shortbow of the Agile +1
 	ADD_STORE_ITEM ~USAROW47~ AFTER ~00AROW99~ #20 #1 #1 ~IDENTIFIED~ #4 //Arrows of Acid +4
 	ADD_STORE_ITEM ~USAROW52~ AFTER ~USAROW47~ #1 #1 #1 ~IDENTIFIED~ #4 //Arrows of Detonation
 	ADD_STORE_ITEM ~USBULL48~ AFTER ~00BULL99~ #20 #1 #1 ~IDENTIFIED~ #4 //Greater Vampiric Bullet +3
@@ -4474,12 +4500,12 @@ COPY_EXISTING ~60NATHAN.sto~ ~override~ //Kuldahar Nathaniel store
 
 COPY_EXISTING ~60SHEEMI.sto~ ~override~ //Conlan store
 	ADD_STORE_ITEM ~USRTHF38~ #1 #1 #1 ~IDENTIFIED~ #1 //Black Swan Armor
-	ADD_STORE_ITEM ~00DART05~ AFTER ~00DART91~ #20 #1 #1 ~IDENTIFIED~ #2 //Zilzanzer's Magnificent Dart +5
+	ADD_STORE_ITEM ~00DART05~ AFTER ~00DART91~ #20 #1 #1 ~IDENTIFIED~ #4 //Zilzanzer's Magnificent Dart +5
 	ADD_STORE_ITEM ~00RTKT02~ AFTER ~00RTHF58~ #1 #1 #1 ~IDENTIFIED~ #1 //Iron Arbalest
 	ADD_STORE_ITEM ~USCHAN40~ AFTER ~00CHAN03~ #1 #1 #1 ~IDENTIFIED~ #1 //Chainmail +3
 	ADD_STORE_ITEM ~USCHAN41~ AFTER ~USCHAN40~ #1 #1 #1 ~IDENTIFIED~ #1 //Splint Mail +3
 	ADD_STORE_ITEM ~00SHLD89~ AFTER ~00SHLD98~ #1 #1 #1 ~IDENTIFIED~ #1 //Large Shield of Electrical Resistance +3
-	ADD_STORE_ITEM ~00AX1H86~ AFTER ~00AX1H92~ #1 #1 #1 ~IDENTIFIED~ #1 //Mass-Slasher +5
+//	ADD_STORE_ITEM ~00AX1H86~ AFTER ~00AX1H92~ #1 #1 #1 ~IDENTIFIED~ #1 //Mass-Slasher +5
 //	ADD_STORE_ITEM ~00AX2H99~ AFTER ~00AX2H89~ #1 #1 #1 ~IDENTIFIED~ #1 //Greataxe of Vampiric Burst +4
 	ADD_STORE_ITEM ~00CLUB92~ AFTER ~00CLUB98~ #1 #1 #1 ~IDENTIFIED~ #1 //Club of Intoxication +4
 	ADD_STORE_ITEM ~00MACE95~ AFTER ~00MACE97~ #1 #1 #1 ~IDENTIFIED~ #1 //Fiery Mace of Disruption +3
@@ -4489,6 +4515,7 @@ COPY_EXISTING ~60SHEEMI.sto~ ~override~ //Conlan store
 	ADD_STORE_ITEM ~00RTHF69~ AFTER ~00SPER97~ #1 #1 #1 ~IDENTIFIED~ #1 //Impaler
 //	ADD_STORE_ITEM ~00HALB95~ AFTER ~00HALB94~ #1 #1 #1 ~IDENTIFIED~ #1 //Infernal Halberd of the Defender
 	ADD_STORE_ITEM ~00SWDT98~ AFTER ~00RTHF73~ #1 #1 #1 ~IDENTIFIED~ #1 //Greatsword of Flame +3
+	ADD_STORE_ITEM ~USRTHF42~ AFTER ~00DAGG96~ #1 #1 #1 ~IDENTIFIED~ #1 //Joril's Dagger +3
 	ADD_STORE_ITEM ~00SWDL95~ AFTER ~00SWDL87~ #1 #1 #1 ~IDENTIFIED~ #1 //Longsword +3: Enforcer
 	ADD_STORE_ITEM ~00RTHF65~ AFTER ~00SWDB87~ #1 #1 #1 ~IDENTIFIED~ #1 //Rage of Chaos
 	ADD_STORE_ITEM ~00SWDC90~ AFTER ~00SWDC96~ #1 #1 #1 ~IDENTIFIED~ #1 //Scimitar: Blood Trails

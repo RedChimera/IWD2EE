@@ -958,14 +958,14 @@ Weight: 2 lb.~
 
 STATISTICS:
 
-Electrical damage dealt by wearer is increased by 30%
+Electrical damage dealt by wearer from most sources is increased by 30%
 Weight: 3 lb.~
 @10284    = ~Conductive Arcs of Disredain~
 @10285    = ~Disredain was an eccentric wizard who became enthralled with the manipulation of electricity.  In addition to the wands he created, Disredain made a number of experimental magic items during a fifteen-year period of frenzied research.  This belt was one of the items he did not think highly of.  Consisting of large, crescent-shaped slices of mottled copper sitting back to back, the belt is quite thick and unique in appearance.  A cleric of Talos named Ylkath wore the Arcs for three decades before he died of old age.  His companion, the Umberlant priestess Ashalla of the Jade Tide, kept the belt for barely three years before she was shot dead by pirates that survived one of her nautical attacks.  The pirates sold the belt to a fence.  Its history past that point is unknown.
 
 STATISTICS:
 
-Electrical damage dealt by wearer is increased by 60%
+Electrical damage dealt by wearer from most sources is increased by 60%
 Weight: 3 lb.~
 //@10286    = ~Black Goat Girdle~
 @10287    = ~Made by halflings, the Black Goat Girdle is sacred to all of their religious sects.  Legends say that the Black Goat appeared to a nameless halfling village that had been sacked by goblins during a terrible winter.  The tribe of warriors slew most of the halfling men, burned the fields, and took all of the town's livestock.  Broken but not hopeless, the villagers congregated for prayer in the burned chapel at the center of town.  Out of the smoke drifting over the edge of town, a black goat appeared with six kids, five black, one white.  Over the course of six days, the kids grew, gave birth to more kids, and each previous generation died in the night.  The milk, meat, and hide provided by the goats helped the halflings survive through their harsh winter.  After the six days of miracles had passed, the town tanner made a belt from the hide of the mother goat that had appeared out of the smoke.  Halfling tales often contain stories of halfling heroes wearing the Black Goat Girdle on their adventures, though no one has yet determined exactly where the legend truly originated.
@@ -3637,7 +3637,7 @@ Weight:  3 lb.
 Feat Requirement:  Simple Weapon, Small Blade
 Type:  One-handed~
 @10801    = ~Short Sword of the Future +3~
-@10802    = ~The short sword is the first type of sword to come into existence.  In the simplest of terms, a short sword can be considered a dagger with a blade so long that it can no longer be called a dagger.  The term short sword does not exist in sword classifications.  However, it has come to be used to describe a double-edged blade about two feet in length.  The sword tip is usually pointed, ideal for thrusting.  
+@10802    = ~The short sword is the first type of sword to come into existence.  In the simplest of terms, a short sword can be considered a dagger with a blade so long that it can no longer be called a dagger.  The term short sword does not exist in sword classifications.  However, it has come to be used to describe a double-edged blade about two feet in length.  The sword tip is usually pointed, ideal for thrusting.
 
 STATISTICS:
 
@@ -3646,7 +3646,7 @@ Attack Bonus:  +3
 Enchantment:  +3
 Damage Type:  Piercing
 Special:
-  Delayed Damage: Inflicts an additional 5d6 piercing damage 10 rounds later
+  Delayed Damage: Inflicts an additional 3d6 piercing damage 10 rounds later
 Weight:  3 lb.
 Feat Requirement:  Simple Weapon, Small Blade
 Type:  One-handed~
@@ -4119,7 +4119,7 @@ Weight: 4 lb.
 Feat Requirement:  Martial Weapon, Large Sword
 Type:  One-handed~
 @10881    = ~Dykhast Sword~
-@10882    = ~Ancient dwarven legends tell of a time when the noblest of metals was not dwarven steel, nor meteoric iron, nor mithril, but dykhast - an alloy so strong that a blade's edge would never dull with toil or battle, and with a surface so perfect and gleaming that its shimmering surface could be seen a dragon's flight away.  The oldest of dwarves speak of dykhast blades with tears of fond remembrance in their eyes, and callously spit at the mention of the "sundry weak and piddling" metals that today's arms and armor are fashioned from.
+@10882    = ~Ancient dwarven legends tell of a time when the noblest of metals was not dwarven steel, nor meteoric iron, nor mithril, but dykhast - an alloy so strong that a blade's edge would be capable of slicing through adamantine, and with a surface so perfect and gleaming that its shimmering surface could be seen a dragon's flight away.  The oldest of dwarves speak of dykhast blades with tears of fond remembrance in their eyes, and callously spit at the mention of the "sundry weak and piddling" metals that today's arms and armor are fashioned from.
 
 There are rumors, though, of an ancient and secret temple called Chogoh Kyn - it is there, the tales say, that blades of dykhast are still made in the fashion of days long past.  The price may be high, but for the true connoisseur, there is no matching the glory, the perfection, the utter joy... of dykhast.
 
@@ -4363,18 +4363,18 @@ Special:
 Weight:  9 lb.
 Feat Requirement:  Exotic Weapon, Bastard Sword
 Type:  One-handed~
-@10919    = ~Bastard Sword of Wrath +5~
+@10919    = ~Bastard Sword +3: Conflagration~
 @10920    = ~Also known as the hand-and-a-half sword, the bastard sword derives its name from the fact that it is halfway between the greatsword and the longsword. The bastard sword has a double-edged blade and a long grip, which can accommodate both hands if preferred.  The overall length of the bastard sword ranges between four feet and four feet ten inches.   
 
 STATISTICS:
 
-Damage:  1d10 + 5
-Attack Bonus: +5
-Enchantment:  +5
+Damage:  1d10 + 3
+Attack Bonus: +3
+Enchantment:  +3
 Damage Type:  Slashing
 Special:
-  Flaming Burst:  +2d6 fire damage and 10% chance of +2d10 extra fire damage
-  Strength: +5
+  Flame:  +2d6 fire damage
+  Conflagration: Each hit has a 20% chance to instantly release a 10d6 damage fireball on the target
 Weight:  9 lb.
 Feat Requirement:  Exotic Weapon, Bastard Sword
 Type:  One-handed~
@@ -4396,10 +4396,8 @@ Weight:  9 lb.
 Feat Requirement:  Exotic Weapon, Bastard Sword
 Type:  One-handed~
 //@10923    = ~Bastard Sword +2: Black Adder~
-@10924    = ~Also known as the hand-and-a-half sword, the bastard sword derives its name from the fact that it is halfway between the greatsword and the longsword. The bastard sword has a double-edged blade and a long grip, which can accommodate both hands if preferred.  The overall length of the bastard sword ranges between four feet and four feet ten inches.    
+@10924    = ~Also known as the hand-and-a-half sword, the bastard sword derives its name from the fact that it is halfway between the greatsword and the longsword. The bastard sword has a double-edged blade and a long grip, which can accommodate both hands if preferred.  The overall length of the bastard sword ranges between four feet and four feet ten inches.
 
-This particular bastard sword is was forged with the blood of a black adder and enchanted by a Yuan-Ti pureblood sorcerer. The sword blade is decorated with intertwined runic images of snakes. During combat the runes sometimes spring to life to aid the wielder. 
- 
 STATISTICS: 
  
 Damage:  1d10 + 2 
@@ -4408,9 +4406,8 @@ Enchantment:  +2
 Damage Type:  Slashing 
 Special: 
   Spell Process: 33% chance of spitting forth a viper as per the Vipergout spell on each successful hit
-  Venom: +2 points of poison damage every second for 6 seconds (Fortitude DC 24) 
-  Keen: Increases chance of scoring a critical hit 
-Weight:  9 lb. 
+  Venom: +2 points of poison damage every second for 6 seconds (Fortitude DC 24)
+Weight:  9 lb.
 Feat Requirement:  Exotic Weapon, Bastard Sword 
 Type:  One-handed~
 @10925    = ~Bastard Sword of Slashing Weakness +2~
@@ -4444,7 +4441,7 @@ Type:  One-handed~
 @10931    = ~Bastard's Son +2~
 @10932    = ~The great warlord of the North, Kresselack the Black Wolf, is said to have sired many children during his long reign, and so it came that one of these, a sickly young man by the name of Thomas, sought out his father after his mother died and bequeathed an ugly sword of iron to Thomas in her legacy.  Upon the blade was inscribed "Know thy family," and Thomas took the motto to heart.  Bolstered by the sword and his mother's loss, he became determined to find Kresselack - whether out of a need for a new family to belong to or to take revenge on Kresselack for abandoning his mother, it is not known.  
 
-When he found the Black Wolf, Kresselack spurned the young man, claiming that the sickly and weak-looking Thomas shared no blood with him, then ordered him beaten and left beneath the shadow of Kelvin's Cairn to die.  After two days in the freezing cold, Thomas was rescued by a tribe of Uthgart barbarians fleeing Kresselack's army.  Nursing the man back to health, the barbarians adopted Thomas into their tribe and he eventually became one of their greatest hunters.  When he passed away from winter chill many years later, he left his sword to his youngest son to help him find his way in the world. 
+When he found the Black Wolf, Kresselack spurned the young man, claiming that the sickly and weak-looking Thomas shared no blood with him, then ordered him beaten and left beneath the shadow of Kelvin's Cairn to die.  After two days in the freezing cold, Thomas was rescued by a tribe of Uthgart barbarians fleeing Kresselack's army.  Nursing the man back to health, the barbarians adopted Thomas into their tribe and he eventually became one of their greatest hunters.  When he passed away from winter chill many years later, he left his sword to his youngest son to help him find his way in the world.
 
 STATISTICS:
 
@@ -4490,7 +4487,7 @@ Enchantment:  +3
 Damage Type: Slashing 
 Special:
   Spell Process:  Target under the effects of the spell Chaos for 3 rounds upon successful hit (Will DC 15)
-  Chaotic: +2d6 damage to lawful creatures 
+  Chaotic: +2d6 damage to lawful creatures
 Weight: 8 lb. 
 Feat Requirement:  Exotic Weapon, Bastard Sword 
 Type:  One-handed~
@@ -4499,7 +4496,7 @@ Type:  One-handed~
    
 This weapon has been considered quite a blessing by those who wield it.  Against lawful creatures it does devastating damage and attacks are made with an uncanny accuracy.  Rage of Chaos has been known to turn the tide in many a battle.  In addition, the victim may loses control of his or her faculties and flies into a state of confusion when struck by the weapon.  The chaotic powers of the blade also prevent the wielder from being controlled of confused in battle.
  
-The history of Rage of Chaos is unknown.  The weapon has appeared throughout the realms in various battles over the centuries only to be lost once again. 
+The history of Order's Nemesis is unknown.  The weapon has appeared throughout the realms in various battles over the centuries only to be lost once again.
  
 STATISTICS: 
  
@@ -4835,8 +4832,20 @@ Feat Requirement:  Martial Weapon, Great Sword
 Type:  Two-handed~
 //@11005    = ~Greatsword of Righteousness +2~
 //@11006    = ~Item description can remain the same; if new description is needed put it here~
-//@11007    = ~Greatsword of Virtue~
-//@11008    = ~Item description can remain the same; if new description is needed put it here~
+@11007    = ~Greatsword of Perfection~
+@11008    = ~The greatsword is a derivative of the longsword.  Weaponsmiths have always looked for ways to improve existing weapons.  In an effort to improve the longsword, the blade was lengthened.  Eventually, the handle had to be extended and two hands became necessary to properly swing the sword.  The primary function of greatswords is cleaving mounted knights and breaking up pike formations.  This one is particularly good at its job as it has been enchanted with a few magical properties.
+
+STATISTICS:
+
+Damage:  2d6
+Enchantment:  +5
+Damage Type:  Slashing
+Special:
+  Perfection: Gains a bonus to attack and damage equal to the sum of the wielder's Dexterity, Constitution, Intelligence, Wisdom, and Charisma bonuses (to a maximum of +20)
+  Sure Striking: Weapon is treated as having a +5 enchantment for the purpose of hitting creatures that require magical weapons to hit
+Weight: 12 lb.
+Feat Requirement:  Martial Weapon, Great Sword
+Type:  Two-handed~
 //@11009    = ~Greatsword: Frost Defender~
 @11010    = ~The greatsword is a derivative of the longsword.  Weaponsmiths have always looked for ways to improve existing weapons.  In an effort to improve the longsword, the blade was lengthened.  Eventually, the handle had to be extended and two hands became necessary to properly swing the sword.  The primary function of greatswords is cleaving mounted knights and breaking up pike formations.  This one is particularly good at its job as it has been enchanted with a few magical properties.
 
@@ -5118,11 +5127,11 @@ Type:  Two-handed~
 STATISTICS:
 
 Damage:  1d6 + 1
-Attack Bonus:  +1 
+Attack Bonus:  +1
 Enchantment:  +1
 Damage Type:  Bludgeoning
 Special:
-  Cause Magic Vulnerability: Can lower a creature's Magic Damage Resistance by 5 for 10 rounds 1/Day (no save)
+  Magic Vulnerability: Each hit lowers magic damage resistance by 1 for 3 rounds (cumulative, no save)
 Weight: 4 lb.
 Feat Requirement:  Simple Weapon, Quarterstaff
 Type:  Two-handed~
@@ -5150,12 +5159,12 @@ Attack Bonus:  +2
 Enchantment:  +2
 Damage Type:  Bludgeoning
 Special:
-  Spell Power: Can cast Haste (at level 15) twice per day
+  Magic damage dealt by wearer from most sources is increased by 30%
 Weight: 4 lb.
 Feat Requirement:  Simple Weapon, Quarterstaff
 Type:  Two-handed~
-@11081    = ~Delnar's Lightning Staff~
-@11082    = ~Delnar was a timid mage who never was one for adventure.  He spent most of his life in quiet study, living with his mother, trying to learn the art of crafting magical items.  Unfortunately, his mother had a habit of interrupting him at crucial points during the enchantment process, often with disastrous results.  Delnar's Lightning Stave is so named because of the lack of interruptions during its construction (and may well be the only item made by Delnar that functions as intended).
+@11081    = ~Delnar's Magic Staff~
+@11082    = ~Delnar was a timid mage who never was one for adventure.  He spent most of his life in quiet study, living with his mother, trying to learn the art of crafting magical items.  Unfortunately, his mother had a habit of interrupting him at crucial points during the enchantment process, often with disastrous results.  Delnar's Magic Staff is notable for the lack of interruptions during its construction (and may well be the only item made by Delnar that functions as intended).
 
 STATISTICS:
 
@@ -5164,8 +5173,7 @@ Attack Bonus:  +5
 Enchantment:  +5
 Damage Type:  Bludgeoning
 Special:
-  Shock: 50% chance of +3d6 electrical damage
-  Spell Power: Can cast the spell Chain Lightning (at level 30) twice per day
+  Magic damage dealt by wearer from most sources is increased by 50%
 Weight: 4 lb.
 Feat Requirement:  Simple Weapon, Quarterstaff
 Type:  Two-handed~
@@ -8147,7 +8155,7 @@ Weight: 2 lb.
 Feat Requirement:  Martial Weapon, Bow
 Type:  Two-handed
 Minimum Dexterity of 16 Required~
-@11693    = ~Shortbow of Displacement +1~
+@11693    = ~Shortbow of the Agile +1~
 @11694    = ~Shortbows were the first to be developed, although they were not called such.  This is more of a default term that refers to anything which is not a long bow.  Shortbow staves are about 5 ' feet long on the average.  As the years passed, attempts were made to increase bow ranges.  Bows were either given longer staves or flexibility was increased with no change to the length.  The former resulted in what is now called the longbow.  
 
 STATISTICS:
@@ -8155,7 +8163,7 @@ STATISTICS:
 Damage: +1 (missile)
 Attack Bonus: +1 
 Special:
-  Constant Effect: Wielder is under the effects of the spell Blur
+  Gains Dexterity bonus to damage
 Weight: 2 lb.
 Feat Requirement:  Martial Weapon, Bow
 Type:  Two-handed~
@@ -8189,7 +8197,7 @@ Type:  Two-handed~
 STATISTICS:
 
 Special:
-  Dodging: +3 Armor Class vs. Missiles 
+  Dodging: +5 Armor Class vs. Missiles
 Weight: 2 lb.
 Feat Requirement:  Martial Weapon, Bow
 Type:  Two-handed~
@@ -8205,15 +8213,15 @@ Special:
 Weight: 2 lb.
 Feat Requirement:  Martial Weapon, Bow
 Type:  Two-handed~
-@11703    = ~Shortbow of Greater Dodging +4~
+@11703    = ~Shortbow of the Agile +5~
 @11704    = ~Shortbows were the first to be developed, although they were not called such.  This is more of a default term that refers to anything which is not a longbow.  Shortbow staves are about 5 ' feet long on the average.  As the years passed, attempts were made to increase bow ranges.  Bows were either given longer staves or flexibility was increased with no change to the length.  The former resulted in what is now called the longbow.  
 
 STATISTICS:
 
-Damage:  +4 (missile)
-Attack Bonus:  +4 
+Damage:  +5 (missile)
+Attack Bonus:  +5
 Special:
-  Dodging: +8 Armor Class vs. Missiles 
+  Gains Dexterity bonus to damage
 Weight: 2 lb.
 Feat Requirement:  Martial Weapon, Bow
 Type:  Two-handed~
@@ -8622,7 +8630,7 @@ Attack Bonus:  +4
 Weight: 6 lb.
 Feat Requirement:  Simple Weapon, Crossbow
 Type:  Two-handed~
-//@11803    = ~Light Crossbow of Speed +1~
+@11803    = ~Light Crossbow of the Future +1~
 @11804    = ~A short-lived outpost of humans in the Frozen Forest unearthed this weapon, and many others, from the ruins of an ancient settlement deep within that cold land.  Never knowing the names of their extinct benefactors, the colonists used these "tools" to carve a large territory for themselves, though in the end it was for naught.  Crushed by a superior number of Hobgoblins, these unfortunate souls have joined the ancients in their anonymity.  
 
 STATISTICS:
@@ -8630,11 +8638,11 @@ STATISTICS:
 Damage:  +1 (missile)
 Attack Bonus:  +4 
 Special:
-  Speed: 1 extra attack per round
+  Delayed Damage: Inflicts an additional 6d6 missile damage 10 rounds later
 Weight: 5 lb.
 Feat Requirement:  Simple Weapon, Crossbow
 Type:  Two-handed~
-@11805    = ~Light Crossbow of Constitution +2~
+@11805    = ~Light Crossbow of the Mind +2~
 @11806    = ~A crossbow is a bow mounted crosswise on a wooden or metal shaft, the latter called a tiller.  The bow is usually made of ash or yew.  The crossbow fires a quarrel (also called a bolt). 
 
 STATISTICS:
@@ -8642,7 +8650,7 @@ STATISTICS:
 Damage: +2 (missile)
 Attack Bonus:  +6 
 Special:
-  Constitution: +3 
+  Gains Intelligence bonus to both attack and damage
 Weight: 6 lb.
 Feat Requirement:  Simple Weapon, Crossbow
 Type:  Two-handed~
@@ -8687,7 +8695,7 @@ Weight: 6 lb.
 Feat Requirement:  Simple Weapon, Crossbow
 Type:  Two-handed~
 @11815    = ~Light Crossbow of Prayer +1~
-@11816    = ~A crossbow is a bow mounted crosswise on a wooden or metal shaft, the latter called a tiller.  The bow is usually made of ash or yew.  The crossbow fires a quarrel (also called a bolt). 
+@11816    = ~A crossbow is a bow mounted crosswise on a wooden or metal shaft, the latter called a tiller.  The bow is usually made of ash or yew.  The crossbow fires a quarrel (also called a bolt).
 
 STATISTICS:
 
@@ -8726,7 +8734,14 @@ Weight: 6 lb.
 Feat Requirement:  Simple Weapon, Crossbow
 Type:  Two-handed~
 @11821    = ~Light Crossbow of Accuracy~
-//@11822    = ~Item description can remain the same; if new description is needed put it here~
+@11822    = ~A crossbow is a bow mounted crosswise on a wooden or metal shaft, the latter called a tiller.  The bow is usually made of ash or yew.  The crossbow fires a quarrel (also called a bolt).
+
+STATISTICS:
+
+Attack Bonus:  +6
+Weight: 6 lb.
+Feat Requirement:  Simple Weapon, Crossbow
+Type:  Two-handed~
 @11823    = ~Hagnen's Foolishness +1~
 @11824    = ~This light crossbow was named, not by its dwarven designer, Hagnen Odestone, but by his wife Miraenna, who was responsible for stringing the crossbow with dragon gut and then checking its aim and speed of fire.  There was apparently no love lost between the couple, and their arguments on everything from maintaining the home to maintaining the accounts were legendary within the clan halls.  Shortly after Hagnen was crushed to death in the great quake of 1275 DR, Hagnen's wife proceeded to lay her husband's name (and backlog of uncompleted work) to rest by finishing the last of a series of enchanted weapons that still lay in Hagnen's workshop, cursing each one with Hagnen's name.  After finishing the last of his weapons, Miraenna apparently left the dwarven clan home and traveled southwards, gladly ridding herself of the Odestone name and creations.  
 
@@ -8923,7 +8938,7 @@ Special:
 Weight: 9 lb.
 Feat Requirement:  Simple Weapon, Crossbow
 Type:  Two-handed~
-//@11857    = ~Heavy Crossbow of Speed +5~
+@11857    = ~Heavy Crossbow of Blood +5~
 @11858    = ~A crossbow is a bow mounted crosswise on a wooden or metal shaft, the latter called a tiller.  The bow is usually made of ash or yew.  The crossbow fires a quarrel (also called a bolt). 
 
 STATISTICS:
@@ -8931,7 +8946,7 @@ STATISTICS:
 Damage:  +12 (missile)
 Attack Bonus:  +5 
 Special:
-  Speed: 1 additional attack per combat round
+  Wounding: Bolts from this crossbow cause 5 hit points of damage per round for 10 rounds. Multiple wounds are cumulative. (Fortitude DC 36)
 Weight: 9 lb.
 Feat Requirement:  Simple Weapon, Crossbow
 Type:  Two-handed~
@@ -9219,7 +9234,7 @@ STATISTICS:
 Damage:  +3 (missile)
 Attack Bonus:  +3
 Special:
-  Speed: +1 attack per combat round
+  Gains Wisdom bonus to attack
 Weight: 0 lb.
 Feat Requirement:  Simple Weapon, Missile
 Type:  One-handed~
@@ -9231,8 +9246,7 @@ STATISTICS:
 Damage:  +5 (missile)
 Attack Bonus:  +5
 Special:
-  Speed: +1 attack per combat round
-  Increased Duration: Wielder's divine spells last 20% longer
+  Gains Wisdom bonus to attack and damage
   Spell Power: Can cast the spell Greater Restoration 1/Day
 Weight: 0 lb.
 Feat Requirement:  Simple Weapon, Missile
@@ -11507,13 +11521,12 @@ STATISTICS:
 
 Spell Power: Can cast Black Blade of Disaster (lasting 30 rounds) 1/Day
 Weight: 0 lb.~
-@12521    = ~Ring of Aura Cleansing~
+@12521    = ~Ring of Epic Enfusing~
 @12522    = ~A ring is a small band of precious metal that is used as jewelry.  Some rare rings have had enchantments placed upon them that confer various magical abilities.  These rings are highly sought after, especially by those of the adventuring profession. For no apparent reason, this ring feels warm to the touch.
 
 STATISTICS:
 
-Wearer can begin casting another spell immediately after casting the previous spell
-Constitution: Set to 3
+Fire, cold, electric, acid, and magic damage dealt by the wearer from most sources is increased by 60%
 Weight: 0 lb.~
 @12523    = ~Robe of Fire Mastery~
 @12524    = ~Since the age of Netheril, wizards have learned to bestow a wide variety of magical properties upon the everyday objects that surround them. A favorite item of such enchantment is the common robe. It is lightweight, affordable, and holds its enchantment well, thereby making it ideal equipment for a wizard.
@@ -12263,7 +12276,7 @@ Weight: 0 lb.
 Feat Requirement:  Simple Weapon, Small Blade
 Type:  One-handed~
 @12645    = ~Dwarven Thrower +3~
-@12646    = ~This hammer - not to be confused with the elven made Dwarf Thrower - is only usable by dwarves.  In the capable hands of a dwarven warrior the hammer may be thrown at an opponent.  The magic in the hammer draws it back to the hand of its wielder.  If it hits an opponent it does double the normal damage that a hammer would normally do.  Against giants and ogres the hammer does an additional +7 damage, due to the special hatred that dwarves hold against these races.
+@12646    = ~This hammer - not to be confused with the elven made Dwarf Thrower - is only usable by dwarves.  In the capable hands of a dwarven warrior the hammer may be thrown at an opponent.  The magic in the hammer draws it back to the hand of its wielder. Against giants and ogres the hammer does an additional +7 damage, due to the special hatred that dwarves hold against these races.
 
 Unlike most anti-giant weapons, which are designed to hit giants in the legs and trip them, this particular Dwarven Thrower was intended to hit giants in the head. For this reason, the hammer is enchanted to fly farther than a typical throwing hammer.
 
@@ -12282,7 +12295,7 @@ Weight: 2 lb.
 Feat Requirement:  Martial Weapon, Hammer
 Type:  One-handed~
 @12647    = ~Dwarven Thrower +5~
-@12648    = ~This hammer - not to be confused with the elven made Dwarf Thrower - is only usable by dwarves.  In the capable hands of a dwarven warrior the hammer may be thrown at an opponent.  The magic in the hammer draws it back to the hand of its wielder.  If it hits an opponent it does double the normal damage that a hammer would normally do.  Against giants and ogres the hammer does an additional +7 damage, due to the special hatred that dwarves hold against these races.
+@12648    = ~This hammer - not to be confused with the elven made Dwarf Thrower - is only usable by dwarves.  In the capable hands of a dwarven warrior the hammer may be thrown at an opponent.  The magic in the hammer draws it back to the hand of its wielder. Against giants and ogres the hammer does an additional +7 damage, due to the special hatred that dwarves hold against these races.
 
 Unlike most anti-giant weapons, which are designed to hit giants in the legs and trip them, this particular Dwarven Thrower was intended to hit giants in the head. For this reason, the hammer is enchanted to fly farther than a typical throwing hammer.
 
@@ -12416,6 +12429,47 @@ STATISTICS:
 
 Concentration Skill: +15
 Weight: 2 lb.~
+@12675    = ~Joril's Dagger +3~
+@12676    = ~Joril was a powerful frost giant that lived with his clan in the Spine of the World. His magic dagger was lost when he was killed by a band of adventurers. Eventually the dagger wound up in the town of Kuldahar where it was reforged so that it could be used as a two-handed sword.
+
+STATISTICS:
+
+Damage:  4d4 + 3
+Attack Bonus:  +3
+Enchantment:  +3
+Damage Type: Piercing
+Special:
+  Counts as a dagger and can be used with Weapon Finesse despite being two-handed
+Weight: 12 lb.
+Feat Requirement:  Simple Weapon, Small Blade
+Type:  Two-handed~
+@12677    = ~Joril's Dagger +5~
+@12678    = ~Joril was a powerful frost giant that lived with his clan in the Spine of the World. His magic dagger was lost when he was killed by a band of adventurers. Eventually the dagger wound up in the town of Kuldahar where it was reforged so that it could be used as a two-handed sword.
+
+STATISTICS:
+
+Damage:  4d4 + 5
+Attack Bonus:  +5
+Enchantment:  +5
+Damage Type: Piercing
+Special:
+  Frost: +1d6 cold damage
+  Counts as a dagger and can be used with Weapon Finesse despite being two-handed
+Weight: 12 lb.
+Feat Requirement:  Simple Weapon, Small Blade
+Type:  Two-handed~
+@12679    = ~Swiftest Crossbow +5~
+@12680    = ~A short-lived outpost of humans in the Frozen Forest unearthed this weapon, and many others, from the ruins of an ancient settlement deep within that cold land.  Never knowing the names of their extinct benefactors, the colonists used these "tools" to carve a large territory for themselves, though in the end it was for naught.  Crushed by a superior number of Hobgoblins, these unfortunate souls have joined the ancients in their anonymity.
+
+STATISTICS:
+
+Damage:  +5 (missile)
+Attack Bonus:  +12
+Special:
+  Speed: 5 attacks per round
+Weight: 5 lb.
+Feat Requirement:  Simple Weapon, Crossbow
+Type:  Two-handed~
 
 @12900    = ~Hrm - you are powerful allies, indeed.  More gold and gems to line your pockets, then - also, a suit of plate armor, a warhammer, a helmet, all crafted and enchanted by great duergar artisans.  They are well deserved, outsider.~
 @12901    = ~Drink this Rainwater Brew, Ennelia.  It should help your condition.~
