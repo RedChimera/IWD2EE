@@ -58,9 +58,14 @@ COPY_EXISTING ~trigger.ids~ ~override~
 0x4031 HaveSpellRES(S:Spell*)~
 	UNLESS ~0x4031 HaveSpellRES~
 
-COPY_EXISTING_REGEXP ~50CVENl0\.bcs~ ~override~ ~52CC[1-8]P[1-6]\.bcs~ ~override~ ~52MOROH3\.bcs~ ~override~ ~61PCFLOR\.bcs~ ~override~ //Fixing a bug where permanent effects would be removed from PCs via certain scripts
+COPY_EXISTING_REGEXP ~50CVENl0\.bcs~ ~override~ ~52MOROH3\.bcs~ ~override~ ~61PCFLOR\.bcs~ ~override~ //Fixing a bug where permanent effects would be removed from PCs via certain scripts
 	DECOMPILE_AND_PATCH BEGIN
 		REPLACE_TEXTUALLY EXACT_MATCH ~ClearSpriteEffects(~ ~ApplySpellRES("USDISPEL",~
+	END
+
+COPY_EXISTING_REGEXP ~52CC[1-8]P[1-6]\.bcs~ ~override~
+	DECOMPILE_AND_PATCH BEGIN
+		REPLACE_TEXTUALLY EXACT_MATCH ~ClearSpriteEffects(~ ~ApplySpellRES("USCHSORD",~
 	END
 /*
 COPY_EXISTING ~animate.ids~ ~override~

@@ -2207,6 +2207,12 @@ COPY_EXISTING ~ilw01.itm~ ~override~ ~imw01.itm~ ~override~ ~isw01.itm~ ~overrid
 
 */
 
+COPY_EXISTING ~sppr215.spl~ ~override~
+	SAY NAME1 @31215
+	SAY NAME2 @31215
+	SAY UNIDENTIFIED_DESC @32215
+	SAY IDENTIFIED_DESC @32215
+
 COPY_EXISTING ~sppr508.spl~ ~override~
 	SAY NAME1 @31508
 	SAY NAME2 @31508
@@ -2214,12 +2220,30 @@ COPY_EXISTING ~sppr508.spl~ ~override~
 	SAY IDENTIFIED_DESC @32508
 	LPF ALTER_EFFECT INT_VAR silent=1 check_headers=1 check_globals=1 match_opcode=139 match_parameter1=30006 parameter1=RESOLVE_STR_REF(@30006) END
 
+COPY_EXISTING ~spwi322.spl~ ~override~
+	SAY NAME1 @33322
+	SAY NAME2 @33322
+	SAY UNIDENTIFIED_DESC @34322
+	SAY IDENTIFIED_DESC @34322
+
 COPY_EXISTING ~spwi804.spl~ ~override~
 	SAY NAME1 @33804
 	SAY NAME2 @33804
 	SAY UNIDENTIFIED_DESC @34804
 	SAY IDENTIFIED_DESC @34804
 	LPF ALTER_EFFECT INT_VAR silent=1 check_headers=1 check_globals=1 match_opcode=139 match_parameter1=30008 parameter1=RESOLVE_STR_REF(@30008) END
+
+COPY_EXISTING ~uspr151.spl~ ~override~
+	SAY NAME1 @35151
+	SAY NAME2 @35151
+	SAY UNIDENTIFIED_DESC @36151
+	SAY IDENTIFIED_DESC @36151
+
+COPY_EXISTING ~uspr152.spl~ ~override~
+	SAY NAME1 @35152
+	SAY NAME2 @35152
+	SAY UNIDENTIFIED_DESC @36152
+	SAY IDENTIFIED_DESC @36152
 
 COPY_EXISTING ~uspr252.spl~ ~override~
 	SAY NAME1 @35252
@@ -2800,6 +2824,27 @@ COPY ~%mod_folder%/bam/USCOLDA.bam~ ~override~
 COPY ~%mod_folder%/bam/USCOLDB.bam~ ~override~
 COPY ~%mod_folder%/bam/USCOLDC.bam~ ~override~
 
+COPY_EXISTING ~sppr504.spl~ ~override~ ~sppr712.spl~ ~override~
+	LPF CLONE_EFFECT INT_VAR multi_match=1 opcode=172 timing=9 STR_VAR resource=~USBLINKT~ insert=~last~ END
+	UNLESS ~USBLINKT~
+
+COPY_EXISTING ~sppr504.spl~ ~override~ ~sppr712.spl~ ~override~
+	LPF CLONE_EFFECT INT_VAR multi_match=1 opcode=276 parameter2=255 timing=9 STR_VAR resource=~USNOSALA~ insert=~last~ END
+	UNLESS ~USNOSALA~
+
+COPY_EXISTING ~sppr504.spl~ ~override~ ~sppr712.spl~ ~override~
+	LPF CLONE_EFFECT INT_VAR multi_match=1 opcode=112 timing=9 STR_VAR resource=~USQUIP01~ insert=~last~ END
+	LPF CLONE_EFFECT INT_VAR multi_match=1 opcode=112 timing=9 STR_VAR resource=~USQUIP02~ insert=~last~ END
+	LPF CLONE_EFFECT INT_VAR multi_match=1 opcode=112 timing=9 STR_VAR resource=~USQUIP03~ insert=~last~ END
+	LPF CLONE_EFFECT INT_VAR multi_match=1 opcode=112 timing=9 STR_VAR resource=~USQUIP04~ insert=~last~ END
+	LPF CLONE_EFFECT INT_VAR multi_match=1 opcode=112 timing=9 STR_VAR resource=~USQUIP05~ insert=~last~ END
+	LPF CLONE_EFFECT INT_VAR multi_match=1 opcode=112 timing=9 STR_VAR resource=~USQUIP06~ insert=~last~ END
+	LPF CLONE_EFFECT INT_VAR multi_match=1 opcode=112 timing=9 STR_VAR resource=~USQUIP07~ insert=~last~ END
+	LPF CLONE_EFFECT INT_VAR multi_match=1 opcode=112 timing=9 STR_VAR resource=~USQUIP08~ insert=~last~ END
+	LPF CLONE_EFFECT INT_VAR multi_match=1 opcode=112 timing=9 STR_VAR resource=~USQUIP09~ insert=~last~ END
+	LPF CLONE_EFFECT INT_VAR multi_match=1 opcode=112 timing=9 STR_VAR resource=~USQUIP10~ insert=~last~ END
+	UNLESS ~USQUIP01~
+
 OUTER_SPRINT stringlevel @1980
 OUTER_SPRINT stringbrd @1981
 OUTER_SPRINT stringclr @1982
@@ -2987,10 +3032,10 @@ COPY_EXISTING ~LISTSPLL.2da~ ~override~
 		PATCH_IF FILE_EXISTS_IN_GAME ~%spell_res_ref%.spl~ BEGIN
 			INNER_ACTION BEGIN
 				COPY_EXISTING ~%spell_res_ref%.spl~ ~override~
-					READ_SHORT 0x94 thecastingtime ELSE 0
+					READ_SSHORT 0x94 thecastingtime ELSE 0
 //					READ_LONG NAME1 name_ref
 					READ_LONG UNIDENTIFIED_DESC description_ref
-					PATCH_IF thecastingtime = 0 BEGIN
+					PATCH_IF thecastingtime < 0 BEGIN
 						LPF PATCH_REPLACE_IN_STRING INT_VAR strref=description_ref match_case=1 new_string=1 STR_VAR match= EVAL ~%stringcastingtime%.*~ replace_with= EVAL ~%stringcastingtime% %stringinstant%~ RET description_new=description_new END
 					END
 					ELSE BEGIN

@@ -12,7 +12,7 @@
 @153    = ~Greatsword of Frost +1~
 @154    = ~Greatsword of Fire +2~
 @155    = ~Greatsword of Lightning +3~
-@156    = ~Black Dragon Claw~
+@156    = ~Dragon Claw~
 @157    = ~Treant Branch~
 @158    = ~Creeping Doom~
 @159    = ~Shambling Mound Pseudopod~
@@ -24,7 +24,7 @@
 @165    = ~Wild Shape: White Half-Dragon~
 @166    = ~Wild Shape: Red Half-Dragon~
 @167    = ~Wild Shape: Blue Half-Dragon~
-@168    = ~Wild Shape: Black Dragon~
+@168    = ~Dragon Shape: Black Dragon~
 @169    = ~Wild Shape: Treant~
 @170    = ~Wild Shape: Creeping Doom~
 @171    = ~Wild Shape: Shambling Mound~
@@ -47,19 +47,45 @@ Will o' Wisps are floating balls of light that can deal electrical damage on a t
 
 Prerequisite: 5 Levels of Druid~
 @186    = ~Wild Shape: Creeping Doom~
-@187    = ~WILD SHAPE, CREEPING DOOM
+@187    = ~WILD SHAPE, CREEPING DOOM:
 
-The druid gains the ability to shapeshift into a conscious mass of beetles and flying insects. The insects are easy to crush and are vulnerable to fire and other forms of magical damage, but piercing weapons are nearly useless against the swarm. The druid can coordinate the insects to sting in concert, dealing poison damage and inflicting spell failure on opponents from a distance.
+The druid gains the ability to shapeshift into a conscious mass of beetles and flying insects. The insects are easy to crush and are vulnerable to fire and other forms of magical damage, but piercing weapons are nearly useless against the swarm. The druid can coordinate the insects to sting in concert, attacking opponents from a distance. Creatures hit must make a Will save or be distracted and receive 50% spell failure. The DC of the Will save increases based on the druid's level. While in this form, the druid is in flight and thus is protected from Grease, Web, Entangle, Spike Growth, Spike Stones, and Earthquake.
 
 Prerequisite: 5 Levels of Druid~
 @188    = ~Wild Shape: Treant~
-@189    = ~WILD SHAPE: Treant
+@189    = ~WILD SHAPE: TREANT:
 
 Tall, strong, and resilient, treants are massive, sentient trees with sturdy bark and powerful attacks. A druid in treant form is very difficult to harm with weapons, but in turn is slow and plodding, and highly vulnerable to fire.
 
 Prerequisite: 8 Levels of Druid~
 @190    = ~Talos: Talos' Blessing~
 @191    = ~Tempus: Tempus' Mastery~
+@192    = ~Wild Shape: Winter Wolf~
+@193    = ~Wild Shape: Polar Bear~
+@194    = ~Wild Shape: Giant Viper~
+@195    = ~Elemental Shape: Salamander~
+@196    = ~Elemental Shape: Frost Salamander~
+@197    = ~Elemental Shape: Fire Elemental~
+@198    = ~Elemental Shape: Earth Elemental~
+@199    = ~Elemental Shape: Water Elemental~
+@200    = ~Elemental Shape: Air Elemental~
+@201    = ~Wild Shape: Blink Dog~
+@202    = ~WILD SHAPE, BLINK DOG:
+
+The druid gains the ability to turn into a blink dog. The blink dog form is not effective in combat, but the druid becomes under the effect of Blink (incoming attacks have a 50% to miss), and he or she gains the ability to teleport short distances at will. The distance the druid can teleport while in blink dog form increases based on level.
+
+Prerequisite: 5 Levels of Druid~
+@203    = ~Wild Shape: Rhinoceros Beetle~
+@204    = ~WILD SHAPE, RHINOCEROS BEETLE:
+
+The druid gains the ability to shapeshift into an enormous rhinocerous beetle. While in this form, the druid has two fewer attacks per round (minimum of 1), but they gain 5/- physical damage resistance. This resistance increases by another 5/- every 5 levels, to a maximum of 25/- at level 28.
+
+Prerequisite: 8 Levels of Druid~
+@205    = ~Blink Teleport~
+@206    = ~Blink Dog Bite~
+@207    = ~Salamander Spear~
+@208    = ~Frost Salamander Spear~
+@209    = ~Winter Wolf Breath~
 @524    = ~Barbarian~
 @525    = ~BARBARIAN: 
 
@@ -140,18 +166,21 @@ Hit Points per Level: 1-8
 Advantages:
 * Proficient with all simple weapons except for the crossbow, the martial weapons largesword and polearm, plus light armor, medium armor, and shields.
 * Druids can cast powerful offensive and healing spells.
-* 5th level: Wild Shape: Werebadger.  The druid gains the ability to shapechange into an werebadger, which has a sturdy hide and attacks using a club.  The druid can use this form once per day at level 5, then gains an additional use every level thereafter. All Wild Shape abilities heal the caster and can be used more often as the druid gains levels.
-* 5th level: The Druid is high enough level to choose the special feats, Wild Shape: Will o' Wisp, Creeping Doom, and Treant.
-* 7th level: Wild Shape: Viper. Vipers are quick and evasive and can strike multiple times per round, dealing 2 poison damage per second for 1 round on a failed Fortitude save (DC 10).
-* 9th level: Wild Shape: Hook Horror.  Hook Horrors have chitinous armor and can attack multiple times per round using their claws.
+* At 5th level, Druids start gaining Wild Shape abilities, which let them turn themselves into animals, magical beasts, elementals, and other forms. At higher levels, Druids gain additional options for forms and can use Wild Shape additional times per day.
+* 5th level: Wild Shape: Winter Wolf.  The druid gains the ability to shapeshift into an winter wolf. While in winter wolf form, the Druid can is immune to cold and can attack once per round with the winter wolf's frost breath, which deals 4d4 cold damage (Reflex DC 10 for half). Every 5 levels thereafter, the breath damage increases by 2d4 and the save DC increases by 5.
+* 5th level: The Druid is high enough level to choose two special feats: Wild Shape: Blink Dog, and Wild Shape: Creeping Doom.
+* 7th level: Wild Shape: Polar Bear. While in polar bear form, the Druid gains an additional attack per round compared to his or her natural form. Every 3 levels thereafter, the polar bear form gains +1 to Strength, Dexterity and Constitution, and its attack damage increases.
+* 8th level: The Druid is high enough level to choose another special feat: Wild Shape: Rhinoceros Beetle.
+* 9th level: Wild Shape: Giant Viper. While in giant viper form, the Druid's attacks poison the target, dealing 2 damage per second for 6 seconds (Fortitude DC 15). Every 3 levels thereafter, the giant viper form gains +1 to Strength, Dexterity and Constitution, +2 AC, and the save DC against its poison increases by 3.
 * 9th level: Immunity to Poison.  The druid becomes immune to all forms of poison.
-* 11th level: Wild Shape: Rhinoceros Beetle.  Rhinoceros Beetle are massive insects with horns like battering rams. They have slow but very powerful attacks and are extremely resilient to damage.
-* 13th level: Wild Shape: Shambling Mound.  Shambling Mounds are massive heaps of plant matter that can ensnare their victims on a failed Reflex save (50% chance; DC 15).
-* 15th level: Wild Shape: White Half-Dragon.  White Half-Dragons have 25/- cold resistance and attack using a +1 greatsword (proficiency bonuses and penalties apply) that deals cold damage on hit. All half-dragons have high strength and are resistant to spells.
-* 15th level: Timeless Body.  The druid is immune to the effects of fatigue.
-* 17th level: Wild Shape: Red Half-Dragon.  Red Half-Dragons have 25/- fire resistance and attack using a +2 greatsword that deals fire damage on hit.
-* 19th level: Wild Shape: Blue Half-Dragon.  Blue Half-Dragons have 25/- electricity resistance and attack using a +3 greatsword that deals electricity damage on hit.
-* 21th level: Wild Shape: Black Dragon.  Black dragons are colossal wyrms with thick hides and deal acid damage on hit.
+* 11th level: Elemental Shape: Salamander. While in salamander form, the Druid is immune to fire, weak to cold, and radiates an aura of extreme heat that deals 2d6 fire damage to nearby creatures per round. Every 5 levels thereafter, the damage of the salamander form's fire aura is increased by 1d6.
+* 11th level: Elemental Shape: Frost Salamander. While in frost salamander form, the Druid is immune to cold, weak to fire, and radiates an aura of extreme cold that deals 2d6 cold damage to nearby creatures per round. Every 5 levels thereafter, the damage of the frost salamander form's cold aura is increased by 1d6.
+* 13th level: Wild Shape: Shambling Mound. While in shambling mound form, the Druid is immune to electricity, resistant to bludgeoning damage, and has a 50% chance with each attack to engulf the target (Fortitude DC 17),  immobilizing them, blinding them, and dealing 3d4 extra damage over the next round. Every 3 levels thereafter, the shambler form gains +1 Strength, +2 Constitution, +3 AC, the chance to engulf is increased by 10%, and the save DC against it is increased by 3.
+* 15th level: Elemental Shape: Fire Elemental. While in fire elemental form, the Druid is immune to fire, weak to cold, and has damage reduction 5/+1. It has one fewer attack per round compared to the Druid's natural form, but it deals high damage per hit. Every 5 levels thereafter, the fire elemental form gains +2 Strength, +1 Dexterity, +2 Constitution, and +5 AC, its attack damage increases, and its damage reduction increases (to 10/+2, then 15/+3, then 20/+4).
+* 15th level: Elemental Shape: Earth Elemental. While in earth elemental form, the Druid has 5/- physical damage resistance as well as damage reduction 5/+1. It has one fewer attack per round compared to the Druid's natural form, but it deals high damage per hit. Every 5 levels thereafter, the earth elemental form gains +2 Strength, +1 Dexterity, +2 Constitution, and +5 AC, its attack damage increases, and its damage reduction increases (to 10/+2, then 15/+3, then 20/+4).
+* 15th level: Elemental Shape: Water Elemental. While in water elemental form, the Druid is immune to fire and acid, weak to electricity, and has damage reduction 5/+1. It has one fewer attack per round compared to the Druid's natural form, but it deals high damage per hit. Every 5 levels thereafter, the water elemental form gains +2 Strength, +1 Dexterity, +2 Constitution, and +5 AC, its attack damage increases, and its damage reduction increases (to 10/+2, then 15/+3, then 20/+4).
+* 15th level: Elemental Shape: Air Elemental. While in air elemental form, the Druid is resistant to electricity and has damage reduction 5/+1. It deals less damage than the other elemental forms but has very high AC and Dexterity. Every 5 levels thereafter, the air elemental form gains +2 Strength, +2 Dexterity, +1 Constitution, and +5 AC, its attack damage increases, and its damage reduction increases (to 10/+2, then 15/+3, then 20/+4).
+* 30th level: Dragon Shape: Black Dragon. The Druid gains the ability to shapeshift into an adult black dragon. While in black dragon form, the Druid is immune to acid and has extremely high AC. The Druid will only attack twice per round but will deal massive damage per hit at long range. 
 
 Disadvantages:
 * Druids do not have access to many powerful defensive spells.
@@ -386,13 +415,132 @@ Benefit: You get a +3 bonus to all Will saving throws.~
 You have faster than normal reflexes.
 
 Benefit: You get a +3 bonus to all Reflex saving throws.~
-@674    = ~~
-@675    = ~~
-@676    = ~~
-@677    = ~~
-@678    = ~~
-@679    = ~~
-@680    = ~~
+@674    = ~EXOTIC WEAPON PROFICIENCY, BASTARD SWORD:
+
+You are proficient with using bastard swords as a one-handed weapon.
+
+Benefit: You make attack rolls with the weapon normally. Two ranks in this feat is Weapon Focus, which grants +2 to hit and damage. Three ranks in the feat is Weapon Specialization, which grants +5 to hit and damage. Only characters with four or more levels of Fighter may take Weapon Specialization.
+
+Normal: A character who uses a weapon without being proficient with it suffers a -4 penalty on attack rolls.
+
+Special: Fighters are proficient with all exotic weapons.  You can gain this feat multiple times.
+~
+@675    = ~MARTIAL WEAPON PROFICIENCY, AXE:
+
+This feat will allow you to be proficient with axes.
+
+Benefits: You make attack rolls with the weapon normally. Two ranks in this feat is Weapon Focus, which grants +2 to hit and damage. Three ranks in the feat is Weapon Specialization, which grants +5 to hit and damage. Only characters with four or more levels of Fighter may take Weapon Specialization.
+
+Normal: A character who uses a weapon without being proficient with it suffers a -4 penalty on attack rolls.
+
+Special: Barbarians, fighters, paladins, and rangers are proficient with all martial weapons.  You can gain this feat multiple times.
+~
+@676    = ~MARTIAL WEAPON PROFICIENCY, BOW:
+
+This feat will allow you to be proficient with bows.
+
+Benefits: You make attack rolls with the weapon normally. Two ranks in this feat is Weapon Focus, which grants +2 to hit and damage. Three ranks in the feat is Weapon Specialization, which grants +5 to hit and damage. Only characters with four or more levels of Fighter may take Weapon Specialization.
+
+Normal: A character who uses a weapon without being proficient with it suffers a -4 penalty on attack rolls.
+
+Special: Barbarians, fighters, paladins, and rangers are proficient with all martial weapons.  You can gain this feat multiple times.
+~
+@677    = ~MARTIAL WEAPON PROFICIENCY, FLAIL:
+
+This feat will allow you to be proficient with flails.
+
+Benefits: You make attack rolls with the weapon normally. Two ranks in this feat is Weapon Focus, which grants +2 to hit and damage. Three ranks in the feat is Weapon Specialization, which grants +5 to hit and damage. Only characters with four or more levels of Fighter may take Weapon Specialization.
+
+Normal: A character who uses a weapon without being proficient with it suffers a -4 penalty on attack rolls.
+
+Special: Barbarians, fighters, paladins, and rangers are proficient with all martial weapons.  You can gain this feat multiple times.
+~
+@678    = ~MARTIAL WEAPON PROFICIENCY, GREATSWORD:
+
+This feat will allow you to be proficient with greatswords.
+
+Benefits: You make attack rolls with the weapon normally. Two ranks in this feat is Weapon Focus, which grants +2 to hit and damage. Three ranks in the feat is Weapon Specialization, which grants +5 to hit and damage. Only characters with four or more levels of Fighter may take Weapon Specialization.
+
+Normal: A character who uses a weapon without being proficient with it suffers a -4 penalty on attack rolls.
+
+Special: Barbarians, fighters, paladins, and rangers are proficient with all martial weapons.  You can gain this feat multiple times.
+~
+@679    = ~MARTIAL WEAPON PROFICIENCY, HAMMER:
+
+This feat will allow you to be proficient with hammers.
+
+Benefits: You make attack rolls with the weapon normally. Two ranks in this feat is Weapon Focus, which grants +2 to hit and damage. Three ranks in the feat is Weapon Specialization, which grants +5 to hit and damage. Only characters with four or more levels of Fighter may take Weapon Specialization.
+
+Normal: A character who uses a weapon without being proficient with it suffers a -4 penalty on attack rolls.
+
+Special: Barbarians, fighters, paladins, and rangers are proficient with all martial weapons.  You can gain this feat multiple times.
+~
+@680    = ~MARTIAL WEAPON PROFICIENCY, LARGE SWORD:
+
+This feat will allow you to be proficient with large swords.
+
+Benefits: You make attack rolls with the weapon normally. Two ranks in this feat is Weapon Focus, which grants +2 to hit and damage. Three ranks in the feat is Weapon Specialization, which grants +5 to hit and damage. Only characters with four or more levels of Fighter may take Weapon Specialization.
+
+Normal: A character who uses a weapon without being proficient with it suffers a -4 penalty on attack rolls.
+
+Special: Barbarians, fighters, paladins, and rangers are proficient with all martial weapons.  You can gain this feat multiple times.
+~
+@681    = ~MARTIAL WEAPON PROFICIENCY, POLEARM:
+
+This feat will allow you to be proficient with polearms.
+
+Benefits: You make attack rolls with the weapon normally. Two ranks in this feat is Weapon Focus, which grants +2 to hit and damage. Three ranks in the feat is Weapon Specialization, which grants +5 to hit and damage. Only characters with four or more levels of Fighter may take Weapon Specialization.
+
+Normal: A character who uses a weapon without being proficient with it suffers a -4 penalty on attack rolls.
+
+Special: Barbarians, fighters, paladins, and rangers are proficient with all martial weapons.  You can gain this feat multiple times.
+~
+@682    = ~SIMPLE WEAPON PROFICIENCY, CROSSBOW:
+
+You understand how to use crossbows.
+
+Benefit: You make attack rolls with simple weapons normally. Two ranks in this feat is Weapon Focus, which grants +2 to hit and damage. Three ranks in the feat is Weapon Specialization, which grants +5 to hit and damage. Only characters with four or more levels of Fighter may take Weapon Specialization.
+
+Normal: A character who uses a weapon without being proficient with it suffers a -4 penalty on attack rolls.
+~
+@683    = ~SIMPLE WEAPON PROFICIENCY, MACE:
+
+You understand how to use maces.
+
+Benefit: You make attack rolls with simple weapons normally. Two ranks in this feat is Weapon Focus, which grants +2 to hit and damage. Three ranks in the feat is Weapon Specialization, which grants +5 to hit and damage. Only characters with four or more levels of Fighter may take Weapon Specialization.
+
+Normal: A character who uses a weapon without being proficient with it suffers a -4 penalty on attack rolls.
+~
+@684    = ~SIMPLE WEAPON PROFICIENCY, MISSILE:
+
+You understand how to use missile weapons such as darts and slings.
+
+Benefit: You make attack rolls with simple weapons normally. Two ranks in this feat is Weapon Focus, which grants +2 to hit and damage. Three ranks in the feat is Weapon Specialization, which grants +5 to hit and damage. Only characters with four or more levels of Fighter may take Weapon Specialization.
+
+Normal: A character who uses a weapon without being proficient with it suffers a -4 penalty on attack rolls.
+
+Note: Shortbows and longbows use Martial Weapon Proficiency, Bow.
+~
+@685    = ~SIMPLE WEAPON PROFICIENCY, QUARTERSTAFF:
+
+You understand how to use quarterstaves.
+
+Benefit: You make attack rolls with simple weapons normally. Two ranks in this feat is Weapon Focus, which grants +2 to hit and damage. Three ranks in the feat is Weapon Specialization, which grants +5 to hit and damage. Only characters with four or more levels of Fighter may take Weapon Specialization.
+
+Normal: A character who uses a weapon without being proficient with it suffers a -4 penalty on attack rolls.
+~
+@686    = ~Simple Weapon, Small Blade/Touch Attack~
+@687    = ~SIMPLE WEAPON PROFICIENCY, SMALL BLADE/TOUCH ATTACK:
+
+You understand how to use small blades such as daggers and short swords, as well as how to make touch attacks, such as unarmed strikes, natural weapons, or magical attacks that require an attack roll.
+
+Benefit: You make attack rolls with simple weapons normally. Two ranks in this feat is Weapon Focus, which grants +2 to hit and damage. Three ranks in the feat is Weapon Specialization, which grants +5 to hit and damage. Only characters with four or more levels of Fighter may take Weapon Specialization.
+
+Normal: A character who uses a weapon without being proficient with it suffers a -4 penalty on attack rolls.
+~
+@688    = ~~
+@689    = ~~
+@690    = ~~
 
 @785    = ~Aasimar~
 @786    = ~AASIMAR:
@@ -1262,5 +1410,5 @@ Vipergout for 6 rounds
 Weight: 1 lb.
 ~
 @4793     = ~Concoct Potions~
-@4794     = ~Envenom Weapon~
+@4794     = ~Poison Weapon~
 

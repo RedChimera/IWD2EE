@@ -208,29 +208,68 @@ function EXSEARCH(effectData, creatureData)
 	end
 end
 
+function EXPRINTO(effectData, creatureData)
+	local offset = IEex_ReadDword(effectData + 0x1c)
+	local read_size = IEex_ReadDword(effectData + 0x40)
+	if read_size == 1 then
+		IEex_DisplayString("Byte at offset " .. offset .. " is " .. IEex_ReadByte(creatureData + offset, 0x0))
+	elseif read_size == 2 then
+		IEex_DisplayString("Word at offset " .. offset .. " is " .. IEex_ReadWord(creatureData + offset, 0x0))
+	elseif read_size == 4 or read_size == 0 then
+		IEex_DisplayString("Dword at offset " .. offset .. " is " .. IEex_ReadDword(creatureData + offset))
+	else
+		IEex_DisplayString("String at offset " .. offset .. " is " .. IEex_ReadLString(creatureData + offset, 0x8))
+	end
+end
+
+function MESNEAKS(effectData, creatureData)
+	local targetID = IEex_GetActorIDShare(creatureData)
+	IEex_IterateActorEffects(targetID, function(eData)
+		local theopcode = IEex_ReadDword(eData + 0x10)
+		if theopcode == 287 then
+		end
+	end)
+end
+
 statspells = {
-{96, 0, {[21] = "USRAGE3", [25] = "USRAGE4", [29] = "USRAGE5"}}, -- Barbarian Rage
-{100, 0, {[0] = "USMAXIM1", [12] = "USMAXIM2"}} -- Maximized Attacks
+{[21] = "USRAGE3", [25] = "USRAGE4", [29] = "USRAGE5"}, -- Barbarian Rage
+{[0] = "USMAXIM1", [12] = "USMAXIM2"}, -- Maximized Attacks
+{[0] = "USDVSH01", [14] = "USDVSH02", [16] = "USDVSH03", [18] = "USDVSH04", [20] = "USDVSH05", [22] = "USDVSH06", [24] = "USDVSH07", [26] = "USDVSH08", [28] = "USDVSH09", [30] = "USDVSH10", [32] = "USDVSH11", [34] = "USDVSH12", [36] = "USDVSH13", [38] = "USDVSH14", [40] = "USDVSH15"}, -- Divine Shield
+{[0] = "USW01L01", [10] = "USW01L10", [15] = "USW01L15", [20] = "USW01L20", [25] = "USW01L25", [30] = "USW01L30"}, -- Wild Shape: Winter Wolf
+{[0] = "USW02L01", [9] = "USW02L09", [10] = "USW02L10", [13] = "USW02L13", [16] = "USW02L16", [19] = "USW02L19", [22] = "USW02L22", [24] = "USW02L24", [25] = "USW02L25", [28] = "USW02L28"}, -- Wild Shape: Polar Bear
+{[0] = "USW03L01", [12] = "USW03L12", [15] = "USW03L15", [16] = "USW03L16", [18] = "USW03L18", [21] = "USW03L21", [24] = "USW03L24", [27] = "USW03L27", [30] = "USW03L30"}, -- Wild Shape: Giant Viper
+{[0] = "USW04L01", [16] = "USW04L16", [21] = "USW04L21", [24] = "USW04L24", [26] = "USW04L26"}, -- Wild Shape: Salamander
+{[0] = "USW05L01", [16] = "USW05L16", [21] = "USW05L21", [24] = "USW05L24", [26] = "USW05L26"}, -- Wild Shape: Frost Salamander
+{[0] = "USW06L01", [16] = "USW06L16", [19] = "USW06L19", [22] = "USW06L22", [24] = "USW06L24", [25] = "USW06L25", [28] = "USW06L28"}, -- Wild Shape: Shambling Mound
+{[0] = "USW07L01", [16] = "USW07L16", [20] = "USW07L20", [24] = "USW07L24", [25] = "USW07L25", [30] = "USW07L30"}, -- Wild Shape: Fire Elemental
+{[0] = "USW08L01", [16] = "USW08L16", [20] = "USW08L20", [24] = "USW08L24", [25] = "USW08L25", [30] = "USW08L30"}, -- Wild Shape: Earth Elemental
+{[0] = "USW09L01", [16] = "USW09L16", [20] = "USW09L20", [24] = "USW09L24", [25] = "USW09L25", [30] = "USW09L30"}, -- Wild Shape: Water Elemental
+{[0] = "USW10L01", [16] = "USW10L16", [20] = "USW10L20", [24] = "USW10L24", [25] = "USW10L25", [30] = "USW10L30"}, -- Wild Shape: Air Elemental
+{[0] = "USW11L01", }, -- Placeholder
+{[0] = "USW12L01", }, -- Placeholder
+{[0] = "USW21L01", [9] = "USW21L09", [16] = "USW21L16", [24] = "USW21L24"}, -- Wild Shape: Blink Dog (Feat 1)
+{[0] = "USW22L01", [10] = "USW22L10", [15] = "USW22L15", [20] = "USW22L20", [25] = "USW22L25", [30] = "USW22L30"}, -- Wild Shape: Creeping Doom (Feat 2)
+{[0] = "USW23L01", [13] = "USW23L13", [18] = "USW23L18", [23] = "USW23L23", [28] = "USW23L28"}, -- Wild Shape: Rhinoceros Beetle (Feat 3)
+{[0] = "USW30L01"}, -- Wild Shape: Black Dragon
+{[0] = "USDUHM01", [2] = "USDUHM02", [3] = "USDUHM03", [4] = "USDUHM04", [5] = "USDUHM05", [6] = "USDUHM06", [7] = "USDUHM07", [8] = "USDUHM08", [9] = "USDUHM09", [10] = "USDUHM10"},
+{[12] = "USDAMA01", [14] = "USDAMA02", [16] = "USDAMA03", [18] = "USDAMA04", [20] = "USDAMA05", [22] = "USDAMA06", [24] = "USDAMA07", [26] = "USDAMA08", [28] = "USDAMA09", [30] = "USDAMA10", [32] = "USDAMA11", [34] = "USDAMA12", [36] = "USDAMA13", [38] = "USDAMA14", [40] = "USDAMA15"}, -- Stat-based bonuses to damage
+{[14] = "USDAMA01", [18] = "USDAMA02", [22] = "USDAMA03", [26] = "USDAMA04", [30] = "USDAMA05", [34] = "USDAMA06", [38] = "USDAMA07"}, -- Half stat-based bonuses to damage
+{[12] = "USATTA01", [14] = "USATTA02", [16] = "USATTA03", [18] = "USATTA04", [20] = "USATTA05", [22] = "USATTA06", [24] = "USATTA07", [26] = "USATTA08", [28] = "USATTA09", [30] = "USATTA10", [32] = "USATTA11", [34] = "USATTA12", [36] = "USATTA13", [38] = "USATTA14", [40] = "USATTA15"}, -- Stat-based attack bonuses
+{[1] = "USDAMA01", [2] = "USDAMA02", [3] = "USDAMA03", [4] = "USDAMA04", [5] = "USDAMA05", [6] = "USDAMA06", [7] = "USDAMA07", [8] = "USDAMA08", [9] = "USDAMA09", [10] = "USDAMA10", [11] = "USDAMA11", [12] = "USDAMA12", [13] = "USDAMA13", [14] = "USDAMA14", [15] = "USDAMA15", [16] = "USDAMA16", [17] = "USDAMA17", [18] = "USDAMA18", [19] = "USDAMA19", [20] = "USDAMA20"}, -- Damage bonuses
+{[1] = "USATTA01", [2] = "USATTA02", [3] = "USATTA03", [4] = "USATTA04", [5] = "USATTA05", [6] = "USATTA06", [7] = "USATTA07", [8] = "USATTA08", [9] = "USATTA09", [10] = "USATTA10", [11] = "USATTA11", [12] = "USATTA12", [13] = "USATTA13", [14] = "USATTA14", [15] = "USATTA15", [16] = "USATTA16", [17] = "USATTA17", [18] = "USATTA18", [19] = "USATTA19", [20] = "USATTA20"}, -- Attack bonuses
 }
 
-function MESTATSP(effectData, creatureData)
-	local targetID = IEex_GetActorIDShare(creatureData)
-	local statSpellList = statspells[IEex_ReadDword(effectData + 0x1C)]
+
+function applyStatSpell(targetID, index, statValue)
+	if statValue < 0 then
+		statValue = 0
+	end
+	local statSpellList = statspells[index]
 	if statSpellList ~= nil then
-		local creatureStat = 0
-		if statSpellList[2] == 0 then
-			creatureStat = IEex_GetActorStat(targetID, statSpellList[1])
-		elseif statSpellList[2] == 1 then
-			creatureStat = IEex_ReadByte(creatureData + statSpellList[1], 0)
-		elseif statSpellList[2] == 2 then
-			creatureStat = IEex_ReadSignedWord(creatureData + statSpellList[1], 0)
-		elseif statSpellList[2] == 4 then
-			creatureStat = IEex_ReadLong(creatureData + statSpellList[1])
-		end
 		local spellRES = ""
 		local highest = -1
-		for key,value in pairs(statSpellList[3]) do
-			if creatureStat >= key and key > highest then
+		for key,value in pairs(statSpellList) do
+			if statValue >= key and key > highest then
 				spellRES = value
 				highest = key
 			end
@@ -239,6 +278,47 @@ function MESTATSP(effectData, creatureData)
 			IEex_ApplyResref(spellRES, targetID)
 		end
 	end
+end
+
+function MESTATSP(effectData, creatureData)
+	local targetID = IEex_GetActorIDShare(creatureData)
+	local statValue = 0
+	local stat = IEex_ReadDword(effectData + 0x18)
+	local index = IEex_ReadWord(effectData + 0x1C, 0)
+	local readType = IEex_ReadWord(effectData + 0x1E, 0)
+	if readType == 0 then
+		statValue = IEex_GetActorStat(targetID, stat)
+	elseif readType == 1 then
+		statValue = IEex_ReadByte(creatureData + stat, 0)
+	elseif readType == 2 then
+		statValue = IEex_ReadSignedWord(creatureData + stat, 0)
+	elseif readType == 4 then
+		statValue = IEex_ReadDword(creatureData + stat)
+	end
+	statValue = statValue + IEex_ReadDword(effectData + 0x44)
+	applyStatSpell(targetID, index, statValue)
+end
+
+function MEHOLYMI(effectData, creatureData)
+	local statValue = IEex_ReadDword(effectData + 0x44)
+
+	local index = IEex_ReadWord(effectData + 0x1C, 0)
+	local casterClass = IEex_ReadByte(effectData + 0xC5, 0)
+	if casterClass == 7 then
+		statValue = statValue + math.floor((IEex_GetActorStat(targetID, 42) - 10) / 2)
+	end
+	applyStatSpell(targetID, index, statValue)
+end
+
+function MEPERFEC(effectData, creatureData)
+	local statValue = IEex_ReadDword(effectData + 0x44)
+	statValue = statValue + math.floor((IEex_GetActorStat(targetID, 38) - 10) / 2)
+	statValue = statValue + math.floor((IEex_GetActorStat(targetID, 39) - 10) / 2)
+	statValue = statValue + math.floor((IEex_GetActorStat(targetID, 40) - 10) / 2)
+	statValue = statValue + math.floor((IEex_GetActorStat(targetID, 41) - 10) / 2)
+	statValue = statValue + math.floor((IEex_GetActorStat(targetID, 42) - 10) / 2)
+	local index = IEex_ReadWord(effectData + 0x1C, 0)
+	applyStatSpell(targetID, index, statValue)
 end
 
 classstatnames = {"Barbarian", "Bard", "Cleric", "Druid", "Fighter", "Monk", "Paladin", "Ranger", "Rogue", "Sorcerer", "Wizard"}
