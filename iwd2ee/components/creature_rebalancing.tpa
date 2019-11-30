@@ -26,28 +26,6 @@ COPY_EXISTING ~00ciarma.itm~ ~override~ ~00ciarmb.itm~ ~override~ ~00ciarmc.itm~
 	LPF DELETE_EFFECT INT_VAR silent=1 check_headers=0 check_globals=1 match_opcode=145 END
 	BUT_ONLY_IF_IT_CHANGES
 
-COPY_EXISTING ~21HRP.cre~ ~override~ //Chapter 1 Harpies now use their wail
-	WRITE_ASCII specialscript2 ~00HARPY0~ #8
-
-COPY_EXISTING ~20ORCFIR.cre~ ~override~ ~20FIRSPC.cre~ ~override~
-	LPF	IWD2_ADD_CRE_ITEM INT_VAR cq1=10 equip=1 STR_VAR item=~00AROW08~ slot=~quiver1~ mode=~replace~ END
-
-COPY_EXISTING ~40RANGRF.cre~ ~override~
-	LPF	IWD2_ADD_CRE_ITEM INT_VAR cq1=20 equip=1 STR_VAR item=~00AROW09~ slot=~quiver1~ mode=~replace~ END
-
-COPY_EXISTING ~40RANGRM.cre~ ~override~
-	LPF	IWD2_ADD_CRE_ITEM INT_VAR equip=1 STR_VAR item=~00CWBOWD~ slot=~weapon2~ mode=~replace~ END
-	LPF	IWD2_ADD_CRE_ITEM INT_VAR cq1=20 equip=1 STR_VAR item=~00AROW09~ slot=~quiver1~ mode=~replace~ END
-
-COPY_EXISTING ~40RANGRC.cre~ ~override~
-	LPF	IWD2_ADD_CRE_ITEM INT_VAR cq1=40 equip=1 STR_VAR item=~00AROW09~ slot=~quiver1~ mode=~replace~ END
-
-COPY_EXISTING ~40ILIUM.cre~ ~override~ ~40ILUM2.cre~ ~override~ ~40ILUM3.cre~ ~override~
-	LPF	IWD2_ADD_CRE_ITEM INT_VAR cq1=40 equip=1 STR_VAR item=~00BOLT94~ slot=~quiver1~ mode=~replace~ END
-
-COPY_EXISTING ~40WOLFWI.cre~ ~override/USWOLWIN.cre~
-	WRITE_BYTE allegiance 128
-
 COPY_EXISTING ~uses001.spl~ ~override~
 	SAY NAME1 @21001
 	SAY NAME2 @21001
@@ -94,6 +72,10 @@ COPY_EXISTING ~uses011.spl~ ~override~
 	SAY NAME1 @21011
 	SAY NAME2 @21011
 
+COPY_EXISTING ~uses012.spl~ ~override~
+	SAY NAME1 @21012
+	SAY NAME2 @21012
+
 COPY_EXISTING ~usms002.spl~ ~override~
 	SAY NAME1 @24002
 	SAY NAME2 @24002
@@ -102,7 +84,16 @@ COPY_EXISTING ~usms003.spl~ ~override~
 	SAY NAME1 @24003
 	SAY NAME2 @24003
 
-COPY_EXISTING ~sppr114.spl~ ~override/usip114.spl~ ~sppr302.spl~ ~override/usip302.spl~ ~sppr428.spl~ ~override/usip428.spl~ ~sppr729.spl~ ~override/usip729.spl~ ~spwi211.spl~ ~override/usiw211.spl~ ~spwi220.spl~ ~override/usiw220.spl~ ~spwi316.spl~ ~override/usiw316.spl~ ~spwi318.spl~ ~override/usiw318.spl~ ~spwi404.spl~ ~override/usiw404.spl~ ~spwi419.spl~ ~override/usiw419.spl~ ~spwi424.spl~ ~override/usiw424.spl~ ~spwi504.spl~ ~override/usiw504.spl~ ~spwi507.spl~ ~override/usiw507.spl~ ~spwi509.spl~ ~override/usiw509.spl~ ~spwi605.spl~ ~override/usiw605.spl~ ~spwi612.spl~ ~override/usiw612.spl~ ~spwi708.spl~ ~override/usiw708.spl~ ~spwi910.spl~ ~override/usiw910.spl~
+COPY_EXISTING ~usms004.spl~ ~override~
+	SAY NAME1 @24004
+	SAY NAME2 @24004
+
+COPY_EXISTING ~usms005.spl~ ~override~
+	SAY NAME1 @24005
+	SAY NAME2 @24005
+	LPF ALTER_EFFECT INT_VAR silent=1 check_headers=1 check_globals=1 match_opcode=139 match_parameter1=20008 parameter1=RESOLVE_STR_REF(@20008) END
+
+COPY_EXISTING ~sppr114.spl~ ~override/usip114.spl~ ~sppr250.spl~ ~override/usip250.spl~ ~sppr302.spl~ ~override/usip302.spl~ ~sppr350.spl~ ~override/usip350.spl~ ~sppr428.spl~ ~override/usip428.spl~ ~sppr517.spl~ ~override/usip517.spl~ ~sppr602.spl~ ~override/usip602.spl~ ~sppr704.spl~ ~override/usip704.spl~ ~sppr729.spl~ ~override/usip729.spl~ ~spwi211.spl~ ~override/usiw211.spl~ ~spwi220.spl~ ~override/usiw220.spl~ ~spwi316.spl~ ~override/usiw316.spl~ ~spwi318.spl~ ~override/usiw318.spl~ ~spwi404.spl~ ~override/usiw404.spl~ ~spwi405.spl~ ~override/usiw405.spl~ ~spwi411.spl~ ~override/usiw411.spl~ ~spwi419.spl~ ~override/usiw419.spl~ ~spwi424.spl~ ~override/usiw424.spl~ ~spwi504.spl~ ~override/usiw504.spl~ ~spwi507.spl~ ~override/usiw507.spl~ ~spwi509.spl~ ~override/usiw509.spl~ ~spwi605.spl~ ~override/usiw605.spl~ ~spwi612.spl~ ~override/usiw612.spl~ ~spwi615.spl~ ~override/usiw615.spl~ ~spwi617.spl~ ~override/usiw617.spl~ ~spwi705.spl~ ~override/usiw705.spl~ ~spwi708.spl~ ~override/usiw708.spl~ ~spwi808.spl~ ~override/usiw808.spl~ ~spwi810.spl~ ~override/usiw810.spl~ ~spwi910.spl~ ~override/usiw910.spl~
 	WRITE_SHORT 0x1c 2
 //	LPF ALTER_SPELL_HEADER INT_VAR location=4 END
 	LPF ALTER_EFFECT INT_VAR silent=1 check_headers=1 check_globals=1 STR_VAR match_resource= EVAL ~%SOURCE_RES%~ resource= EVAL ~%DEST_RES%~ END
@@ -135,6 +126,10 @@ COPY_EXISTING ~00swdl04.itm~ ~override/uscwslbk.itm~
 	READ_LONG 0x18 ulgiash
 	ulgiash&=0xFFFFFFFB
 	WRITE_LONG 0x18 ulgiash
+
+COPY_EXISTING ~usip152.spl~ ~override~
+	SAY NAME1 @21152
+	SAY NAME2 @21152
 
 COPY_EXISTING ~usip651.spl~ ~override~
 	SAY NAME1 @21651
@@ -217,6 +212,9 @@ COPY_EXISTING ~12CABALL.cre~ ~override~ ~30GOBSOR.cre~ ~override~ ~31GOBSOR.cre~
 	LPF	IWD2_REMOVE_SPELLS_KNOWN STR_VAR class=~sorcerer~ END
 	LPF	IWD2_REMOVE_SPELLS_KNOWN STR_VAR class=~wizard~ END
 
+COPY_EXISTING ~20ORCFIR.cre~ ~override~ ~20FIRSPC.cre~ ~override~
+	LPF	IWD2_ADD_CRE_ITEM INT_VAR cq1=10 equip=1 STR_VAR item=~00AROW08~ slot=~quiver1~ mode=~replace~ END
+
 COPY_EXISTING ~20ORCSHM.cre~ ~override~ ~20ORCSHV.cre~ ~override~
 	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelcleric=4 STR_VAR updatehp=~average~ END
 	WRITE_BYTE wisdom 13
@@ -231,6 +229,60 @@ COPY_EXISTING ~20ORCSHM.cre~ ~override~ ~20ORCSHV.cre~ ~override~
 	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~cleric~ resource=~SPPR401~ END
 	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~cleric~ resource=~SPPR425~ END
 	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~cleric~ resource=~SPPR502~ END
+
+COPY_EXISTING ~20MALARA.cre~ ~override~ ~20RNDMAL.cre~ ~override~
+	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newleveldruid=4 STR_VAR updatehp=~average~ END
+	WRITE_BYTE wisdom 14
+	WRITE_BYTE skillconcentration 7
+	WRITE_BYTE skillspellcraft 7
+	WRITE_BYTE proficiencysmallblade 1
+	WRITE_BYTE challengerating 4
+	LPF	IWD2_REMOVE_SPELLS_KNOWN STR_VAR class=~cleric~ END
+	LPF	IWD2_REMOVE_SPELLS_KNOWN STR_VAR class=~druid~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=2 STR_VAR class=~druid~ resource=~SPPR103~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=2 STR_VAR class=~druid~ resource=~SPPR105~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~druid~ resource=~SPWI214~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~druid~ resource=~SPPR250~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~druid~ resource=~SPPR401~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~druid~ resource=~SPPR422~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~druid~ resource=~SPPR517~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~druid~ resource=~SPPR615~ END
+	PATCH_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~2~ BEGIN
+		LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~druid~ resource=~SPPR250~ END
+	END
+	ELSE BEGIN
+		LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~druid~ resource=~SPPR217~ END
+	END
+
+COPY_EXISTING ~20MALARP.cre~ ~override~
+	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelcleric=4 STR_VAR updatehp=~average~ END
+	WRITE_BYTE wisdom 14
+	WRITE_BYTE skillconcentration 7
+	WRITE_BYTE skillspellcraft 7
+	WRITE_BYTE proficiencysmallblade 1
+	WRITE_BYTE challengerating 4
+	LPF	IWD2_REMOVE_SPELLS_KNOWN STR_VAR class=~cleric~ END
+	LPF	IWD2_REMOVE_SPELLS_KNOWN STR_VAR class=~druid~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=2 STR_VAR class=~cleric~ resource=~SPPR103~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~cleric~ resource=~SPWI306~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~cleric~ resource=~SPPR401~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~cleric~ resource=~SPPR425~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~cleric~ resource=~SPPR616~ END
+
+COPY_EXISTING ~20MALARH.cre~ ~override~
+	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelcleric=6 STR_VAR updatehp=~average~ END
+	WRITE_BYTE wisdom 16
+	WRITE_BYTE skillconcentration 9
+	WRITE_BYTE skillspellcraft 9
+	WRITE_BYTE proficiencysmallblade 2
+	WRITE_BYTE challengerating 6
+	LPF	IWD2_REMOVE_SPELLS_KNOWN STR_VAR class=~cleric~ END
+	LPF	IWD2_REMOVE_SPELLS_KNOWN STR_VAR class=~druid~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=2 STR_VAR class=~cleric~ resource=~SPPR103~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=2 STR_VAR class=~cleric~ resource=~SPWI306~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~cleric~ resource=~SPPR401~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~cleric~ resource=~SPPR425~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~cleric~ resource=~SPPR616~ END
 
 COPY_EXISTING ~21ELFMGE.cre~ ~override~
 	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelwizard=5 STR_VAR updatehp=~max~ END
@@ -325,6 +377,7 @@ COPY_EXISTING ~40GIAFOM.cre~ ~override~ ~40RGIAFO.cre~ ~override~ ~41GIAFOM.cre~
 	WRITE_LONG feats2 ulgiash
 	WRITE_BYTE proficiencybow 1
 	WRITE_BYTE challengerating 10
+	WRITE_ASCII specialscript2 ~00BRBRG0~ #8
 
 COPY_EXISTING ~53FOMOTH.cre~ ~override~ ~50GNTFO.cre~ ~override~
 	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelbarbarian=12 STR_VAR updatehp=~max~ END
@@ -334,6 +387,104 @@ COPY_EXISTING ~53FOMOTH.cre~ ~override~ ~50GNTFO.cre~ ~override~
 	WRITE_LONG feats2 ulgiash
 	WRITE_BYTE proficiencybow 2
 	WRITE_BYTE challengerating 12
+	WRITE_ASCII specialscript2 ~00BRBRG0~ #8
+	LPF	IWD2_ADD_CRE_ITEM INT_VAR equip=1 STR_VAR item=~00CWFOR3~ slot=~weapon2~ mode=~replace~ END
+
+COPY_EXISTING ~USFOMGRN.cre~ ~override~
+	SAY NAME1 @23015
+	SAY NAME2 @23015
+
+COPY_EXISTING ~40DRUIDF.cre~ ~override~ ~40DRUIDM.cre~ ~override~
+	WRITE_BYTE skillconcentration 7
+	WRITE_BYTE skillspellcraft 7
+	LPF	IWD2_REMOVE_SPELLS_KNOWN STR_VAR class=~druid~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~druid~ resource=~SPPR105~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=3 STR_VAR class=~druid~ resource=~SPPR117~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~druid~ resource=~SPPR216~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~druid~ resource=~SPPR428~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~druid~ resource=~SPPR401~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=2 STR_VAR class=~druid~ resource=~SPPR615~ END
+	PATCH_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~2~ BEGIN
+		LPF	IWD2_CRE_SPELL INT_VAR num=2 STR_VAR class=~druid~ resource=~SPWI318~ END
+		LPF	IWD2_CRE_SPELL INT_VAR num=2 STR_VAR class=~druid~ resource=~SPWI404~ END
+		LPF	IWD2_CRE_SPELL INT_VAR num=2 STR_VAR class=~druid~ resource=~SPWI504~ END
+	END
+	LPF	IWD2_ADD_CRE_ITEM INT_VAR equip=1 STR_VAR item=~00CWBLUA~ slot=~weapon2~ mode=~replace~ END
+	LPF	IWD2_ADD_CRE_ITEM INT_VAR equip=1 STR_VAR item=~00CWSLG1~ slot=~weapon1~ mode=~replace~ END
+	LPF	IWD2_ADD_CRE_ITEM INT_VAR cq1=20 equip=1 STR_VAR item=~00BULL01~ slot=~quiver2~ mode=~replace~ END
+	LPF	IWD2_ADD_CRE_ITEM INT_VAR cq1=5 equip=1 STR_VAR item=~00BULL94~ slot=~quiver1~ mode=~replace~ END
+
+COPY_EXISTING ~40ODEA.cre~ ~override~ ~40ODEA2.cre~ ~override~ ~40ODEA3.cre~ ~override~
+	WRITE_BYTE skillconcentration 15
+	WRITE_BYTE skillspellcraft 15
+	LPF	IWD2_REMOVE_SPELLS_KNOWN STR_VAR class=~druid~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~druid~ resource=~SPPR105~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=4 STR_VAR class=~druid~ resource=~SPPR117~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~druid~ resource=~SPPR216~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~druid~ resource=~SPPR428~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~druid~ resource=~SPPR302~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=2 STR_VAR class=~druid~ resource=~SPPR401~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=2 STR_VAR class=~druid~ resource=~SPPR502~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~druid~ resource=~SPPR523~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=2 STR_VAR class=~druid~ resource=~SPPR615~ END
+	PATCH_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~2~ BEGIN
+		LPF	IWD2_CRE_SPELL INT_VAR num=2 STR_VAR class=~druid~ resource=~SPWI318~ END
+		LPF	IWD2_CRE_SPELL INT_VAR num=3 STR_VAR class=~druid~ resource=~SPWI404~ END
+		LPF	IWD2_CRE_SPELL INT_VAR num=2 STR_VAR class=~druid~ resource=~SPWI504~ END
+		LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~druid~ resource=~USPR951~ END
+		LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~druid~ resource=~USWI954~ END
+	END
+
+COPY_EXISTING ~40RANGRF.cre~ ~override~
+	WRITE_ASCII specialscript2 ~40RANGRC~ #8
+	LPF	IWD2_REMOVE_SPELLS_KNOWN STR_VAR class=~ranger~ END
+	PATCH_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~2~ BEGIN
+		LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~ranger~ resource=~USPR152~ END
+		LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~ranger~ resource=~USWI151~ END
+		LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~ranger~ resource=~SPWI305~ END
+//		LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~ranger~ resource=~SPPR502~ END
+	END
+	LPF	IWD2_ADD_CRE_ITEM INT_VAR cq1=20 equip=1 STR_VAR item=~00AROW09~ slot=~quiver1~ mode=~replace~ END
+
+COPY_EXISTING ~40RANGRM.cre~ ~override~
+	WRITE_ASCII specialscript2 ~40RANGRC~ #8
+	LPF	IWD2_REMOVE_SPELLS_KNOWN STR_VAR class=~ranger~ END
+	PATCH_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~2~ BEGIN
+		LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~ranger~ resource=~USPR152~ END
+		LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~ranger~ resource=~USWI151~ END
+		LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~ranger~ resource=~SPWI305~ END
+//		LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~ranger~ resource=~SPPR502~ END
+	END
+	LPF	IWD2_ADD_CRE_ITEM INT_VAR equip=1 STR_VAR item=~00CWBOWD~ slot=~weapon2~ mode=~replace~ END
+	LPF	IWD2_ADD_CRE_ITEM INT_VAR cq1=20 equip=1 STR_VAR item=~00AROW09~ slot=~quiver1~ mode=~replace~ END
+
+COPY_EXISTING ~40RANGRC.cre~ ~override~
+	LPF	IWD2_REMOVE_SPELLS_KNOWN STR_VAR class=~ranger~ END
+	PATCH_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~2~ BEGIN
+		LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~ranger~ resource=~USPR152~ END
+		LPF	IWD2_CRE_SPELL INT_VAR num=2 STR_VAR class=~ranger~ resource=~USWI151~ END
+		LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~ranger~ resource=~SPWI305~ END
+		LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~ranger~ resource=~SPWI405~ END
+		LPF	IWD2_CRE_SPELL INT_VAR num=2 STR_VAR class=~ranger~ resource=~SPPR502~ END
+	END
+	LPF	IWD2_ADD_CRE_ITEM INT_VAR cq1=40 equip=1 STR_VAR item=~00AROW09~ slot=~quiver1~ mode=~replace~ END
+
+COPY_EXISTING ~40ILIUM.cre~ ~override~ ~40ILUM2.cre~ ~override~ ~40ILUM3.cre~ ~override~
+	LPF	IWD2_REMOVE_SPELLS_KNOWN STR_VAR class=~ranger~ END
+	PATCH_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~2~ BEGIN
+		LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~ranger~ resource=~USPR152~ END
+		LPF	IWD2_CRE_SPELL INT_VAR num=3 STR_VAR class=~ranger~ resource=~USWI151~ END
+		LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~ranger~ resource=~SPWI305~ END
+		LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~ranger~ resource=~SPWI405~ END
+		LPF	IWD2_CRE_SPELL INT_VAR num=2 STR_VAR class=~ranger~ resource=~SPPR502~ END
+	END
+	LPF	IWD2_ADD_CRE_ITEM INT_VAR cq1=40 equip=1 STR_VAR item=~00BOLT94~ slot=~quiver1~ mode=~replace~ END
+
+COPY_EXISTING_REGEXP ~00SWTWLF\.cre~ ~override~ ~30WWLF\.cre~ ~override~ ~40RWOLFW\.cre~ ~override~ ~40WOLFWI\.cre~ ~override~ ~41SWTWLF\.cre~ ~override~ ~50WFW.*\.cre~ ~override~ ~50WLFW.*\.cre~ ~override~
+	LPF	IWD2_ADD_CRE_ITEM INT_VAR equip=1 STR_VAR item=~USCWHFWW~ slot=~weapon2~ mode=~replace~ END
+
+COPY_EXISTING ~40WOLFWI.cre~ ~override/USWOLWIN.cre~
+	WRITE_BYTE allegiance 128
 
 COPY_EXISTING ~41CATHIN.cre~ ~override~
 	WRITE_BYTE coldresistance 100
@@ -557,6 +708,57 @@ COPY_EXISTING ~50THVARA.cre~ ~override~
 COPY_EXISTING ~41GENOR.itm~ ~override~
 	SAY UNIDENTIFIED_DESC @23003
 */
+
+COPY_EXISTING ~41BISHOP.cre~ ~override~
+	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelcleric=12 STR_VAR updatehp=~average~ END
+	WRITE_BYTE skillconcentration 14
+	WRITE_BYTE skillspellcraft 14
+	WRITE_BYTE challengerating 10
+	LPF	IWD2_REMOVE_SPELLS_KNOWN STR_VAR class=~cleric~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~cleric~ resource=~SPPR213~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=2 STR_VAR class=~cleric~ resource=~SPPR311~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=2 STR_VAR class=~cleric~ resource=~SPPR401~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~cleric~ resource=~SPPR425~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~cleric~ resource=~SPPR503~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~cleric~ resource=~SPPR507~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~cleric~ resource=~SPPR612~ END
+//	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~cleric~ resource=~SPPR614~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~cleric~ resource=~SPPR712~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~cleric~ resource=~SPPR801~ END
+	PATCH_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~2~ BEGIN
+		LPF	IWD2_CRE_SPELL INT_VAR num=2 STR_VAR class=~cleric~ resource=~SPWI508~ END
+	END
+
+COPY_EXISTING ~41MYSTIC.cre~ ~override~
+	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelwizard=12 STR_VAR updatehp=~average~ END
+	WRITE_BYTE skillconcentration 15
+	WRITE_BYTE skillspellcraft 15
+	WRITE_BYTE challengerating 10
+	LPF	IWD2_REMOVE_SPELLS_KNOWN STR_VAR class=~wizard~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=4 STR_VAR class=~wizard~ resource=~SPWI112~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=3 STR_VAR class=~wizard~ resource=~SPWI211~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~SPWI212~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=3 STR_VAR class=~wizard~ resource=~SPWI303~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=2 STR_VAR class=~wizard~ resource=~SPWI312~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=2 STR_VAR class=~wizard~ resource=~SPWI422~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~SPWI521~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~SPWI509~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~SPWI615~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~SPWI623~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~SPWI704~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=2 STR_VAR class=~wizard~ resource=~SPWI808~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~SPWI910~ END
+
+COPY_EXISTING ~41WARRIO.cre~ ~override~
+	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelfighter=12 STR_VAR updatehp=~average~ END
+	WRITE_BYTE dexterity 13
+	WRITE_BYTE constitution 14
+	WRITE_BYTE intelligence 8
+	WRITE_BYTE charisma 10
+	WRITE_BYTE proficiencylargesword 3
+	WRITE_BYTE proficiencybastardsword 3
+	WRITE_BYTE challengerating 10
+
 COPY_EXISTING ~41NECROM.cre~ ~override~ ~41RNECRO.cre~ ~override~
 	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelwizard=11 END
 	READ_LONG feats3 ulgiash
@@ -706,11 +908,188 @@ COPY_EXISTING ~50LIMHA.cre~ ~override~ ~50LIMHA2.cre~ ~override~
 	LPF	IWD2_CRE_SPELL INT_VAR num=2 STR_VAR class=~wizard~ resource=~SPWI902~ END
 	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~SPWI908~ END
 
-COPY_EXISTING ~51DUEBO.cre~ ~override~ ~51DARGAB.cre~ ~override~ ~51DRAGU.cre~ ~override~ ~52DUEBO.cre~ ~override~ ~52DUEBOX.cre~ ~override~ ~52DUELE.cre~ ~override~
+COPY_EXISTING ~50WYRWH.cre~ ~override~ ~51WYRWH.cre~ ~override~
+	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelbarbarian=12 END
+	WRITE_SHORT currenthp 120
+	WRITE_SHORT maxhp 120
+	WRITE_SHORT armorclass 20
+	WRITE_BYTE strength 25
+	WRITE_BYTE constitution 20
+	WRITE_BYTE slashingresistance 0
+	WRITE_BYTE piercingresistance 0
+	WRITE_BYTE crushingresistance 0
+	WRITE_BYTE missileresistance 0
+	WRITE_BYTE fireresistance (0 - 10)
+	WRITE_BYTE coldresistance 100
+	WRITE_BYTE electricityresistance 0
+	WRITE_BYTE acidresistance 0
+	WRITE_BYTE magicdamageresistance 0
+	WRITE_BYTE spellresistance 15
+	WRITE_BYTE enchantmentlevel 0
+	WRITE_BYTE challengerating 13
+	LPF	IWD2_ADD_CRE_ITEM INT_VAR equip=1 STR_VAR item=~USCWHFWY~ slot=~weapon2~ mode=~replace~ END
+	LPF	IWD2_ADD_CRE_ITEM INT_VAR equip=1 STR_VAR item=~001D20P~ slot=~weapon1~ mode=~replace~ END
+
+COPY_EXISTING ~50DRAWY.cre~ ~override~ ~51DRAWY.cre~ ~override~
+	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelbarbarian=12 newlevelsorcerer=4 END
+	WRITE_SHORT currenthp 200
+	WRITE_SHORT maxhp 200
+	WRITE_SHORT armorclass 20
+	WRITE_BYTE strength 28
+	WRITE_BYTE constitution 24
+	WRITE_BYTE slashingresistance 0
+	WRITE_BYTE piercingresistance 0
+	WRITE_BYTE crushingresistance 0
+	WRITE_BYTE missileresistance 0
+	WRITE_BYTE fireresistance 0
+	WRITE_BYTE coldresistance 100
+	WRITE_BYTE electricityresistance 0
+	WRITE_BYTE acidresistance 0
+	WRITE_BYTE magicdamageresistance 0
+	WRITE_BYTE spellresistance 20
+	WRITE_BYTE enchantmentlevel 1
+	WRITE_BYTE challengerating 18
+	LPF	IWD2_REMOVE_CRE_ITEM STR_VAR item=~10CICAT1 00CWSHE3 00CIIMMC~ END
+	LPF	IWD2_ADD_CRE_ITEM INT_VAR equip=1 STR_VAR item=~00CWSHE0~ slot=~weapon2~ mode=~replace~ END
+	LPF	IWD2_ADD_CRE_ITEM INT_VAR equip=1 STR_VAR item=~USCWDRW1~ slot=~quiver1~ mode=~replace~ END
+	LPF	IWD2_ADD_CRE_ITEM INT_VAR equip=1 STR_VAR item=~USCWDRW2~ slot=~quiver2~ mode=~replace~ END
+	LPF	IWD2_ADD_CRE_ITEM INT_VAR equip=1 STR_VAR item=~USCWHFWD~ slot=~weapon1~ mode=~replace~ END
+	LPF	IWD2_ADD_CRE_ITEM INT_VAR equip=0 STR_VAR item=~USCIHFWD~ slot=~boots~ mode=~replace~ END
+
+COPY_EXISTING ~51HSTMU.cre~ ~override~
+	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelwizard=9 STR_VAR updatehp=~max~ END
+	WRITE_BYTE skillconcentration 12
+	WRITE_BYTE skillspellcraft 12
+	WRITE_BYTE challengerating 9
+	LPF	IWD2_REMOVE_SPELLS_KNOWN STR_VAR class=~wizard~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=6 STR_VAR class=~wizard~ resource=~SPWI112~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=3 STR_VAR class=~wizard~ resource=~SPWI211~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~SPWI227~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=3 STR_VAR class=~wizard~ resource=~SPWI303~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~SPWI711~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=2 STR_VAR class=~wizard~ resource=~SPWI504~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~SPWI605~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~SPWI623~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~SPWI704~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~SPWI715~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=2 STR_VAR class=~wizard~ resource=~SPWI803~ END
+	PATCH_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~2~ BEGIN
+		LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~SPWI621~ END
+		LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~USWI352~ END
+	END
+
+COPY_EXISTING ~51HARSHO.cre~ ~override~
+	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelwizard=14 STR_VAR updatehp=~max~ END
+	WRITE_BYTE skillconcentration 17
+	WRITE_BYTE skillspellcraft 17
+	WRITE_BYTE challengerating 14
+	LPF	IWD2_REMOVE_SPELLS_KNOWN STR_VAR class=~wizard~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=6 STR_VAR class=~wizard~ resource=~SPWI112~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=3 STR_VAR class=~wizard~ resource=~SPWI211~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=2 STR_VAR class=~wizard~ resource=~SPWI212~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=3 STR_VAR class=~wizard~ resource=~SPWI303~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=3 STR_VAR class=~wizard~ resource=~SPWI422~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~SPWI621~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=2 STR_VAR class=~wizard~ resource=~SPWI504~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~SPWI623~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=2 STR_VAR class=~wizard~ resource=~SPWI626~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~SPWI704~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~SPWI713~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~SPWI803~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~SPWI805~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~SPWI910~ END
+	PATCH_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~2~ BEGIN
+		LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~USWI352~ END
+		LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~SPPR719~ END
+	END
+
+COPY_EXISTING ~51DUECL.cre~ ~override~ ~52DUECL.cre~ ~override~ ~52DUECLX.cre~ ~override~
+	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelcleric=7 STR_VAR updatehp=~average~ END
+	WRITE_BYTE skillconcentration 10
+	WRITE_BYTE skillspellcraft 10
+	WRITE_BYTE challengerating 7
+	LPF	IWD2_REMOVE_SPELLS_KNOWN STR_VAR class=~cleric~ END
+	LPF	IWD2_REMOVE_SPELLS_KNOWN STR_VAR class=~domain~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=2 STR_VAR class=~cleric~ resource=~SPPR301~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=2 STR_VAR class=~cleric~ resource=~SPPR325~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~cleric~ resource=~SPPR401~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~cleric~ resource=~SPPR405~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=2 STR_VAR class=~cleric~ resource=~SPPR503~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~cleric~ resource=~SPPR521~ END
+
+COPY_EXISTING ~51DUEBO.cre~ ~override~ ~52DUEBO.cre~ ~override~ ~52DUEBOX.cre~ ~override~
+	LPF	IWD2_ADD_CRE_ITEM INT_VAR equip=1 STR_VAR item=~USCWBOW2~ slot=~weapon1~ mode=~replace~ END
 	PATCH_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~4~ BEGIN
-		REPLACE_TEXTUALLY CASE_INSENSITIVE ~00BOLT02~ ~USRHF006~
+		LPF	IWD2_ADD_CRE_ITEM INT_VAR equip=1 cq1=20 STR_VAR item=~USRHF006~ slot=~quiver1~ mode=~replace~ END
 	END
 	BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING ~51BARUD.cre~ ~override~ ~52BARUD.cre~ ~override~
+	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelcleric=9 newlevelfighter=6 STR_VAR updatehp=~max~ END
+	WRITE_BYTE skillconcentration 15
+	WRITE_BYTE skillspellcraft 15
+	WRITE_BYTE challengerating 15
+	LPF	IWD2_REMOVE_SPELLS_KNOWN STR_VAR class=~cleric~ END
+	LPF	IWD2_REMOVE_SPELLS_KNOWN STR_VAR class=~domain~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=3 STR_VAR class=~cleric~ resource=~SPPR215~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=2 STR_VAR class=~cleric~ resource=~SPPR301~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~cleric~ resource=~SPPR401~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~cleric~ resource=~SPPR405~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~cleric~ resource=~SPPR502~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~cleric~ resource=~SPPR503~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~cleric~ resource=~SPPR518~ END
+
+COPY_EXISTING ~51DARGAB.cre~ ~override~ ~52DARGAB.cre~ ~override~
+	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelfighter=12 STR_VAR updatehp=~max~ END
+	LPF	IWD2_ADD_CRE_ITEM INT_VAR equip=1 STR_VAR item=~00BWHX02~ slot=~weapon2~ mode=~replace~ END
+	PATCH_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~4~ BEGIN
+		LPF	IWD2_ADD_CRE_ITEM INT_VAR equip=1 cq1=30 STR_VAR item=~USBOLT48~ slot=~quiver1~ mode=~replace~ END
+	END
+	WRITE_BYTE challengerating 12
+
+COPY_EXISTING ~51DRAGU.cre~ ~override~
+	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelfighter=10 STR_VAR updatehp=~max~ END
+	PATCH_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~4~ BEGIN
+		LPF	IWD2_ADD_CRE_ITEM INT_VAR equip=1 cq1=30 STR_VAR item=~USBOLT48~ slot=~quiver1~ mode=~replace~ END
+	END
+	WRITE_BYTE challengerating 10
+
+COPY_EXISTING ~51HARHOR.cre~ ~override~ ~52HARHOR.cre~ ~override~
+	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelfighter=12 STR_VAR updatehp=~max~ END
+	LPF	IWD2_REMOVE_CRE_ITEM STR_VAR item=~00CWBOWJ 00BOLT02~ END
+	WRITE_BYTE challengerating 12
+
+COPY_EXISTING ~51ZAMA.cre~ ~override~ ~52ZAMA.cre~ ~override~
+	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelcleric=13 STR_VAR updatehp=~max~ END
+	WRITE_BYTE skillconcentration 16
+	WRITE_BYTE skillspellcraft 16
+	WRITE_BYTE challengerating 13
+	LPF	IWD2_REMOVE_SPELLS_KNOWN STR_VAR class=~cleric~ END
+	LPF	IWD2_REMOVE_SPELLS_KNOWN STR_VAR class=~domain~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=4 STR_VAR class=~cleric~ resource=~SPPR301~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=4 STR_VAR class=~cleric~ resource=~SPPR325~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=2 STR_VAR class=~cleric~ resource=~SPPR405~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=3 STR_VAR class=~cleric~ resource=~SPPR503~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~cleric~ resource=~SPPR607~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=2 STR_VAR class=~cleric~ resource=~SPPR726~ END
+	PATCH_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~2~ BEGIN
+		LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~cleric~ resource=~SPWI910~ END
+	END
+
+COPY_EXISTING ~52DUELE.cre~ ~override~
+	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelfighter=12 STR_VAR updatehp=~max~ END
+	LPF	IWD2_ADD_CRE_ITEM INT_VAR equip=1 STR_VAR item=~00BWHX02~ slot=~weapon2~ mode=~replace~ END
+	PATCH_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~4~ BEGIN
+		LPF	IWD2_ADD_CRE_ITEM INT_VAR equip=1 cq1=20 STR_VAR item=~USBOLT47~ slot=~quiver1~ mode=~replace~ END
+	END
+	WRITE_BYTE challengerating 12
+
+COPY_EXISTING ~52GOLIR.cre~ ~override~ ~61GOLIRO.cre~ ~override~ ~64IGOLEM.cre~ ~override~
+	LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item=~USCIHFRG~ slot=~amulet~ mode=~replace~ END
+
+COPY_EXISTING ~USGOLADA.cre~ ~override~
+	SAY NAME1 @23014
+	SAY NAME2 @23014
 
 COPY_EXISTING ~53CELEDR.cre~ ~override~
 	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelwizard=13 END
@@ -781,6 +1160,24 @@ COPY_EXISTING ~53DRFIT2.cre~ ~override~ ~53DRFITH.cre~ ~override~
 	WRITE_BYTE challengerating 12
 	LPF	IWD2_ADD_CRE_ITEM INT_VAR equip=1 STR_VAR item=~00BWHX02~ slot=~weapon1~ END
 	LPF	IWD2_ADD_CRE_ITEM INT_VAR equip=0 STR_VAR item=~00SWDL02~ slot=~weapon2~ END
+
+COPY_EXISTING ~53DROPR.cre~ ~override~
+	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelcleric=13 END
+	WRITE_BYTE skillconcentration 16
+	WRITE_BYTE skillspellcraft 16
+	WRITE_BYTE spellpenetration 2
+	WRITE_BYTE challengerating 13
+	LPF	IWD2_REMOVE_SPELLS_KNOWN STR_VAR class=~cleric~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=2 STR_VAR class=~cleric~ resource=~SPPR215~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=2 STR_VAR class=~cleric~ resource=~SPWI302~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=4 STR_VAR class=~cleric~ resource=~SPWI501~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=2 STR_VAR class=~cleric~ resource=~SPPR417~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=2 STR_VAR class=~cleric~ resource=~SPPR503~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=2 STR_VAR class=~cleric~ resource=~SPPR518~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~cleric~ resource=~SPPR607~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~cleric~ resource=~SPPR717~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=2 STR_VAR class=~cleric~ resource=~SPPR705~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=2 STR_VAR class=~cleric~ resource=~SPPR715~ END
 
 COPY_EXISTING ~53DRIDPR.cre~ ~override~ ~53DRIPRH.cre~ ~override~ ~53VIDRPR.cre~ ~override~ ~53VIDRP2.cre~ ~override~
 	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelcleric=12 END
@@ -967,6 +1364,9 @@ COPY_EXISTING ~53ELDERB.cre~ ~override~
 	LPF	IWD2_REMOVE_SPELLS_KNOWN STR_VAR class=~cleric~ END
 	LPF	IWD2_REMOVE_SPELLS_KNOWN STR_VAR class=~wizard~ END
 
+COPY_EXISTING ~21HRP.cre~ ~override~ //Chapter 1 Harpies now use their wail
+	WRITE_ASCII specialscript2 ~00HARPY0~ #8
+
 COPY_EXISTING ~53HARPY.cre~ ~override~
 	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelfighter=10 END
 	SAY NAME1 @23010
@@ -1085,6 +1485,81 @@ COPY_EXISTING ~60NEOORP.cre~ ~override~
 	PATCH_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~2~ BEGIN
 		LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~cleric~ resource=~SPWI910~ END
 	END
+
+COPY_EXISTING ~60ATALA.cre~ ~override~
+	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelwizard=24 STR_VAR updatehp=~max~ END
+	WRITE_BYTE skillconcentration 27
+	WRITE_BYTE skillspellcraft 27
+	WRITE_BYTE challengerating 21
+	LPF	IWD2_REMOVE_SPELLS_KNOWN STR_VAR class=~wizard~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=6 STR_VAR class=~wizard~ resource=~SPWI112~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=4 STR_VAR class=~wizard~ resource=~SPWI212~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=4 STR_VAR class=~wizard~ resource=~SPWI319~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=4 STR_VAR class=~wizard~ resource=~SPWI422~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=3 STR_VAR class=~wizard~ resource=~SPWI519~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=2 STR_VAR class=~wizard~ resource=~SPWI810~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~SPWI717~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=2 STR_VAR class=~wizard~ resource=~SPWI607~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~SPPR715~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=2 STR_VAR class=~wizard~ resource=~SPWI802~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~SPWI805~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~SPWI906~ END
+	PATCH_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~2~ BEGIN
+		LPF	IWD2_CRE_SPELL INT_VAR num=2 STR_VAR class=~wizard~ resource=~USWI752~ END
+		LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~USWI953~ END
+	END
+
+COPY_EXISTING ~60INHEIN.cre~ ~override~
+	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelcleric=24 STR_VAR updatehp=~max~ END
+	WRITE_LONG animation 24592 //Cleric female human
+	WRITE_LONG kit 0x20 //Priest of Bane
+	WRITE_BYTE skillconcentration 27
+	WRITE_BYTE skillspellcraft 27
+	WRITE_BYTE challengerating 21
+	LPF	IWD2_REMOVE_SPELLS_KNOWN STR_VAR class=~cleric~ END
+	LPF	IWD2_REMOVE_SPELLS_KNOWN STR_VAR class=~domain~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=3 STR_VAR class=~cleric~ resource=~SPPR301~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~cleric~ resource=~SPPR417~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=4 STR_VAR class=~cleric~ resource=~SPPR503~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=2 STR_VAR class=~cleric~ resource=~SPPR705~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~cleric~ resource=~SPPR717~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~cleric~ resource=~SPPR726~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=1 forcelevel=6 STR_VAR class=~domain~ resource=~SPWI510~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=1 forcelevel=7 STR_VAR class=~domain~ resource=~SPWI905~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=1 forcelevel=8 STR_VAR class=~domain~ resource=~SPWI806~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=1 forcelevel=9 STR_VAR class=~domain~ resource=~SPWI911~ END
+
+COPY_EXISTING ~60JAIGER.cre~ ~override~
+	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelranger=21 STR_VAR updatehp=~max~ END
+	WRITE_ASCII combatscript ~00AATGN~ #8
+	WRITE_BYTE dexterity 28
+	WRITE_BYTE challengerating 21
+	LPF	IWD2_REMOVE_CRE_ITEM STR_VAR item=~001D6P~ END
+	LPF	IWD2_ADD_CRE_ITEM INT_VAR equip=1 STR_VAR item=~USCWJAI1~ slot=~weapon1~ mode=~replace~ END
+
+COPY_EXISTING ~60KAERVA.cre~ ~override~
+	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelfighter=21 STR_VAR updatehp=~max~ END
+	WRITE_ASCII combatscript ~00AATGN~ #8
+	WRITE_BYTE challengerating 21
+
+COPY_EXISTING ~60KAIRN.cre~ ~override~
+	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelbarbarian=21 STR_VAR updatehp=~max~ END
+	WRITE_ASCII combatscript ~00AATBN~ #8
+	WRITE_LONG animation 62216 //Fire giant
+	WRITE_BYTE constitution 25
+	WRITE_BYTE proficiencyhammer 2
+	WRITE_BYTE proficiencymissile 2
+	WRITE_BYTE challengerating 21
+	LPF	IWD2_ADD_CRE_ITEM INT_VAR equip=1 STR_VAR item=~USCWKAI2~ slot=~weapon2~ mode=~replace~ END
+	LPF	IWD2_ADD_CRE_ITEM INT_VAR equip=1 STR_VAR item=~USCWKAI1~ slot=~weapon1~ mode=~replace~ END
+
+COPY_EXISTING ~60KHREE.cre~ ~override~
+	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelmonk=21 STR_VAR updatehp=~max~ END
+	WRITE_SHORT armorclass 35
+	WRITE_BYTE dexterity 30
+	WRITE_BYTE spellresistance 31
+	WRITE_BYTE proficiencysmallblade 2
+	WRITE_BYTE challengerating 21
 
 COPY_EXISTING ~60GUARDI.cre~ ~override~
 	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelfighter=21 newlevelsorcerer=8 END
@@ -1267,13 +1742,44 @@ COPY_EXISTING ~60YTPRIE.cre~ ~override~ ~61YHPRIE.cre~ ~override~ ~61RYHPRI.cre~
 	LPF	IWD2_CRE_SPELL INT_VAR num=2 STR_VAR class=~cleric~ resource=~SPPR608~ END
 	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~cleric~ resource=~SPPR728~ END
 
+COPY_EXISTING ~62HAYUA.cre~ ~override~ ~66HAYUA.cre~ ~override~
+	SAY NAME1 #16592
+	SAY NAME2 #16588
+	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelcleric=16 STR_VAR updatehp=~average~ END
+	WRITE_BYTE skillconcentration 19
+	WRITE_BYTE skillspellcraft 19
+	WRITE_BYTE proficiencysmallblade 2
+	WRITE_BYTE challengerating 16
+	LPF	IWD2_REMOVE_SPELLS_KNOWN STR_VAR class=~cleric~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~cleric~ resource=~SPPR417~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~cleric~ resource=~SPPR502~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=3 STR_VAR class=~cleric~ resource=~SPPR503~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=2 STR_VAR class=~cleric~ resource=~SPPR608~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~cleric~ resource=~SPPR728~ END
+
 COPY_EXISTING ~60YTSORC.cre~ ~override~ ~61YHSORC.cre~ ~override~ ~61RYHSOR.cre~ ~override~ ~60JESZRA.cre~ ~override~
 	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelsorcerer=14 STR_VAR updatehp=~max~ END
 	WRITE_BYTE intelligence 18
 	WRITE_BYTE charisma 18
 	WRITE_BYTE skillconcentration 17
 	WRITE_BYTE skillspellcraft 17
+	WRITE_BYTE proficiencylargesword 2
+	WRITE_BYTE proficiencysmallblade 2
 	WRITE_BYTE challengerating 14
+	LPF	IWD2_REMOVE_SPELLS_KNOWN STR_VAR class=~sorcerer~ END
+	LPF	IWD2_REMOVE_SPELLS_KNOWN STR_VAR class=~wizard~ END
+
+COPY_EXISTING ~62HAYUA2.cre~ ~override~ ~66HAYUA3.cre~ ~override~
+	SAY NAME1 #17358
+	SAY NAME2 #17429
+	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelsorcerer=16 STR_VAR updatehp=~max~ END
+	WRITE_BYTE intelligence 18
+	WRITE_BYTE charisma 18
+	WRITE_BYTE skillconcentration 19
+	WRITE_BYTE skillspellcraft 19
+	WRITE_BYTE proficiencylargesword 2
+	WRITE_BYTE proficiencysmallblade 2
+	WRITE_BYTE challengerating 16
 	LPF	IWD2_REMOVE_SPELLS_KNOWN STR_VAR class=~sorcerer~ END
 	LPF	IWD2_REMOVE_SPELLS_KNOWN STR_VAR class=~wizard~ END
 
@@ -1283,6 +1789,8 @@ COPY_EXISTING ~60CEDRA.cre~ ~override~
 	WRITE_BYTE charisma 22
 	WRITE_BYTE skillconcentration 22
 	WRITE_BYTE skillspellcraft 22
+	WRITE_BYTE proficiencylargesword 2
+	WRITE_BYTE proficiencysmallblade 2
 	WRITE_BYTE challengerating 20
 	LPF	IWD2_REMOVE_SPELLS_KNOWN STR_VAR class=~sorcerer~ END
 	LPF	IWD2_REMOVE_SPELLS_KNOWN STR_VAR class=~wizard~ END
@@ -1308,10 +1816,12 @@ COPY_EXISTING ~60YTARCH.cre~ ~override~ ~60RANYTA.cre~ ~override~
 	END
 	LPF	IWD2_REMOVE_SPELLS_KNOWN STR_VAR class=~ranger~ END
 	PATCH_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~2~ BEGIN
+		LPF	IWD2_CRE_SPELL INT_VAR num=2 STR_VAR class=~ranger~ resource=~USPR152~ END
 		LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~ranger~ resource=~SPPR220~ END
 		LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~ranger~ resource=~SPWI305~ END
 		LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~ranger~ resource=~SPWI405~ END
 		LPF	IWD2_CRE_SPELL INT_VAR num=2 STR_VAR class=~ranger~ resource=~SPPR502~ END
+		LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~ranger~ resource=~USPR551~ END
 		LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~ranger~ resource=~SPWI719~ END
 	END
 	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~ranger~ resource=~SPPR517~ END
@@ -1387,6 +1897,247 @@ COPY_EXISTING ~61YASENT.cre~ ~override~
 	END
 	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~ranger~ resource=~SPPR517~ END
 	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~ranger~ resource=~SPPR523~ END
+
+COPY_EXISTING ~61LIZLEA.cre~ ~override~ ~61LIZLER.cre~ ~override~
+	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelfighter=13 STR_VAR updatehp=~max~ END
+	WRITE_BYTE proficiencyhammer 3
+	WRITE_BYTE proficiencypolearm 3
+
+COPY_EXISTING ~61LIZSHA.cre~ ~override~ ~61LIZSHR.cre~ ~override~
+	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newleveldruid=12 STR_VAR updatehp=~average~ END
+	READ_LONG feats2 ulgiash
+	ulgiash|=0x80000
+	WRITE_LONG feats2 ulgiash
+	READ_LONG feats3 ulgiash
+	ulgiash|=0x2
+	WRITE_LONG feats3 ulgiash
+	WRITE_BYTE skillconcentration 15
+	WRITE_BYTE skillspellcraft 15
+	LPF	IWD2_REMOVE_SPELLS_KNOWN STR_VAR class=~druid~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=4 STR_VAR class=~druid~ resource=~SPPR113~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=2 STR_VAR class=~druid~ resource=~SPPR401~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=2 STR_VAR class=~druid~ resource=~SPPR502~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=2 STR_VAR class=~druid~ resource=~SPPR503~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~druid~ resource=~SPPR608~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=2 STR_VAR class=~druid~ resource=~SPPR705~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~druid~ resource=~SPPR719~ END
+	PATCH_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~2~ BEGIN
+		LPF	IWD2_CRE_SPELL INT_VAR num=2 STR_VAR class=~druid~ resource=~SPWI404~ END
+		LPF	IWD2_CRE_SPELL INT_VAR num=2 STR_VAR class=~druid~ resource=~SPWI504~ END
+		LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~druid~ resource=~USWI954~ END
+	END
+
+COPY_EXISTING ~61LIZWAR.cre~ ~override~ ~61LIZWRR.cre~ ~override~
+	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelfighter=10 END
+	WRITE_BYTE proficiencymissile 3
+	WRITE_BYTE proficiencyhammer 3
+	WRITE_BYTE proficiencymace 3
+	WRITE_BYTE proficiencypolearm 3
+
+COPY_EXISTING ~62SPBLD.cre~ ~override~
+	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelbard=16 STR_VAR updatehp=~max~ END
+	WRITE_BYTE skillconcentration 19
+	WRITE_BYTE skillspellcraft 19
+	WRITE_BYTE challengerating 16
+	WRITE_BYTE proficiencylargesword 2
+	WRITE_ASCII combatscript ~USBLADES~ #8
+	LPF	IWD2_ADD_CRE_ITEM STR_VAR item=~USCWBSI1~ slot=~shield1~ mode=~replace~ END
+	LPF	IWD2_ADD_CRE_ITEM INT_VAR equip=1 STR_VAR item=~USCWBSI1~ slot=~weapon1~ mode=~replace~ END
+	LPF	IWD2_REMOVE_SPELLS_KNOWN STR_VAR class=~wizard~ END
+	LPF	IWD2_REMOVE_SPELLS_KNOWN STR_VAR class=~bard~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~bard~ resource=~SPWI212~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=2 STR_VAR class=~bard~ resource=~SPWI401~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=2 STR_VAR class=~bard~ resource=~SPWI617~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~bard~ resource=~SPWI903~ END
+	PATCH_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~2~ BEGIN
+		LPF	IWD2_CRE_SPELL INT_VAR num=2 STR_VAR class=~bard~ resource=~USWI151~ END
+		LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~bard~ resource=~SPWI512~ END
+		LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~bard~ resource=~SPWI613~ END
+		LPF	IWD2_CRE_SPELL INT_VAR num=2 STR_VAR class=~bard~ resource=~USWI753~ END
+	END
+
+COPY_EXISTING ~62KRATU.cre~ ~override~
+	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelcleric=20 STR_VAR updatehp=~max~ END
+	WRITE_BYTE skillconcentration 23
+	WRITE_BYTE skillspellcraft 23
+	WRITE_BYTE challengerating 21
+	LPF	IWD2_REMOVE_SPELLS_KNOWN STR_VAR class=~cleric~ END
+	LPF	IWD2_REMOVE_SPELLS_KNOWN STR_VAR class=~domain~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=4 STR_VAR class=~cleric~ resource=~SPWI501~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~cleric~ resource=~SPPR417~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=4 STR_VAR class=~cleric~ resource=~SPPR503~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=2 STR_VAR class=~cleric~ resource=~SPPR705~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~cleric~ resource=~SPPR726~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~cleric~ resource=~SPPR728~ END
+	PATCH_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~2~ BEGIN
+		LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~cleric~ resource=~SPWI717~ END
+		LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~cleric~ resource=~USPR952~ END
+	END
+
+COPY_EXISTING ~62MDARF.cre~ ~override~
+	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelwizard=20 END
+	WRITE_BYTE skillconcentration 23
+	WRITE_BYTE skillspellcraft 23
+	WRITE_BYTE challengerating 21
+	LPF	IWD2_REMOVE_SPELLS_KNOWN STR_VAR class=~wizard~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=6 STR_VAR class=~wizard~ resource=~SPWI112~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=3 STR_VAR class=~wizard~ resource=~SPWI212~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=4 STR_VAR class=~wizard~ resource=~SPWI313~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~SPWI405~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=4 STR_VAR class=~wizard~ resource=~SPWI422~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=3 STR_VAR class=~wizard~ resource=~SPWI519~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=2 STR_VAR class=~wizard~ resource=~SPWI810~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=2 STR_VAR class=~wizard~ resource=~SPWI603~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=2 STR_VAR class=~wizard~ resource=~SPWI702~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~SPWI717~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~SPWI607~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~SPPR715~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~SPWI802~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~SPWI805~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=2 STR_VAR class=~wizard~ resource=~SPWI903~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=2 STR_VAR class=~wizard~ resource=~SPWI906~ END
+	PATCH_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~2~ BEGIN
+		LPF	IWD2_CRE_SPELL INT_VAR num=2 STR_VAR class=~wizard~ resource=~USWI352~ END
+		LPF	IWD2_CRE_SPELL INT_VAR num=2 STR_VAR class=~wizard~ resource=~USWI752~ END
+		LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~USWI953~ END
+	END
+
+COPY_EXISTING_REGEXP ~62REDWI.*\.cre~ ~override~ ~63THAYM.*\.cre~ ~override~
+	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelwizard=16 STR_VAR updatehp=~max~ END
+	WRITE_BYTE skillconcentration 19
+	WRITE_BYTE skillspellcraft 19
+	WRITE_BYTE challengerating 16
+	LPF	IWD2_REMOVE_SPELLS_KNOWN STR_VAR class=~wizard~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=6 STR_VAR class=~wizard~ resource=~SPWI112~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=5 STR_VAR class=~wizard~ resource=~SPWI211~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~SPWI212~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=3 STR_VAR class=~wizard~ resource=~SPWI303~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=2 STR_VAR class=~wizard~ resource=~SPWI308~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~SPWI405~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=3 STR_VAR class=~wizard~ resource=~SPWI422~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~SPWI511~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=2 STR_VAR class=~wizard~ resource=~SPWI504~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=2 STR_VAR class=~wizard~ resource=~SPWI519~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=2 STR_VAR class=~wizard~ resource=~SPWI603~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~SPWI605~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~SPWI703~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~SPWI705~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~SPWI706~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~SPWI708~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~SPWI802~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~SPWI803~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~SPWI808~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~SPWI809~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=2 STR_VAR class=~wizard~ resource=~SPWI902~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~SPWI908~ END
+	PATCH_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~2~ BEGIN
+		LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~USWI352~ END
+		LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~USWI751~ END
+		LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~USWI752~ END
+	END
+
+COPY_EXISTING_REGEXP ~63CEDRIN\.cre~ ~override~ ~63FYNNE\.cre~ ~override~ ~63TASHA\.cre~ ~override~ ~67REDWI.*\.cre~ ~override~
+	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelwizard=17 STR_VAR updatehp=~max~ END
+	WRITE_BYTE skillconcentration 20
+	WRITE_BYTE skillspellcraft 20
+	WRITE_BYTE challengerating 17
+	LPF	IWD2_REMOVE_SPELLS_KNOWN STR_VAR class=~wizard~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=6 STR_VAR class=~wizard~ resource=~SPWI112~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=5 STR_VAR class=~wizard~ resource=~SPWI211~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~SPWI212~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=3 STR_VAR class=~wizard~ resource=~SPWI303~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=2 STR_VAR class=~wizard~ resource=~SPWI308~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~SPWI405~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=3 STR_VAR class=~wizard~ resource=~SPWI422~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~SPWI511~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=2 STR_VAR class=~wizard~ resource=~SPWI504~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=2 STR_VAR class=~wizard~ resource=~SPWI519~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=2 STR_VAR class=~wizard~ resource=~SPWI603~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~SPWI605~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~SPWI703~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~SPWI705~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~SPWI706~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~SPWI708~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~SPWI607~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~SPWI802~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~SPWI803~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~SPWI808~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~SPWI809~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=2 STR_VAR class=~wizard~ resource=~SPWI902~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~SPWI908~ END
+	PATCH_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~2~ BEGIN
+		LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~USWI352~ END
+		LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~USWI751~ END
+		LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~USWI752~ END
+	END
+
+COPY_EXISTING ~62SAABL1.cre~ ~override~ ~62SAABL2.cre~ ~override~
+	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelwizard=25 STR_VAR updatehp=~max~ END
+	WRITE_BYTE skillconcentration 28
+	WRITE_BYTE skillspellcraft 28
+	WRITE_BYTE challengerating 25
+	LPF	IWD2_REMOVE_SPELLS_KNOWN STR_VAR class=~wizard~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=6 STR_VAR class=~wizard~ resource=~SPWI112~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=5 STR_VAR class=~wizard~ resource=~SPWI211~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=2 STR_VAR class=~wizard~ resource=~SPWI212~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=3 STR_VAR class=~wizard~ resource=~SPWI303~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=2 STR_VAR class=~wizard~ resource=~SPWI308~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~SPWI405~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=4 STR_VAR class=~wizard~ resource=~SPWI424~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=2 STR_VAR class=~wizard~ resource=~SPWI504~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=2 STR_VAR class=~wizard~ resource=~SPWI519~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=2 STR_VAR class=~wizard~ resource=~SPWI603~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~SPWI605~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=2 STR_VAR class=~wizard~ resource=~SPWI706~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=3 STR_VAR class=~wizard~ resource=~SPWI708~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~SPWI709~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~SPWI607~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=2 STR_VAR class=~wizard~ resource=~SPWI802~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~SPWI808~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=3 STR_VAR class=~wizard~ resource=~SPWI902~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~SPWI908~ END
+	PATCH_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~2~ BEGIN
+		LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~USWI352~ END
+		LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~USWI751~ END
+		LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~USWI752~ END
+		LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~USWI953~ END
+	END
+
+COPY_EXISTING ~63VESE.cre~ ~override~
+	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelwizard=21 STR_VAR updatehp=~max~ END
+	WRITE_BYTE skillconcentration 24
+	WRITE_BYTE skillspellcraft 24
+	WRITE_BYTE challengerating 21
+	LPF	IWD2_REMOVE_SPELLS_KNOWN STR_VAR class=~wizard~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=6 STR_VAR class=~wizard~ resource=~SPWI112~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=5 STR_VAR class=~wizard~ resource=~SPWI211~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=2 STR_VAR class=~wizard~ resource=~SPWI212~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=3 STR_VAR class=~wizard~ resource=~SPWI303~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=2 STR_VAR class=~wizard~ resource=~SPWI308~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~SPWI405~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=3 STR_VAR class=~wizard~ resource=~SPWI422~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~SPWI511~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=2 STR_VAR class=~wizard~ resource=~SPWI504~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=2 STR_VAR class=~wizard~ resource=~SPWI519~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=2 STR_VAR class=~wizard~ resource=~SPWI603~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~SPWI605~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~SPWI705~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~SPWI706~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=2 STR_VAR class=~wizard~ resource=~SPWI708~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~SPWI607~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~SPWI802~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~SPWI803~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~SPWI808~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=3 STR_VAR class=~wizard~ resource=~SPWI902~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~SPWI903~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~SPWI905~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~SPWI908~ END
+	PATCH_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~2~ BEGIN
+		LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~USWI352~ END
+		LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~USWI751~ END
+		LPF	IWD2_CRE_SPELL INT_VAR num=2 STR_VAR class=~wizard~ resource=~USWI752~ END
+		LPF	IWD2_CRE_SPELL INT_VAR num=2 STR_VAR class=~wizard~ resource=~USWI952~ END
+	END
 
 COPY_EXISTING ~00SPITFI.cre~ ~override~ ~41PFIEND.cre~ ~override~ ~41SPITFI.cre~ ~override~ ~63PITFND.cre~ ~override~ ~63YXBU.cre~ ~override~
 	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelfighter=12 newlevelwizard=8 STR_VAR updatehp=~max~ END
@@ -1523,6 +2274,10 @@ COPY_EXISTING ~USWIGHTI.cre~ ~override~
 COPY_EXISTING ~USWIGHTW.cre~ ~override~
 	SAY NAME1 @23013
 	SAY NAME2 @23013
+
+COPY_EXISTING ~USWIGHTW.cre~ ~override/USSWIGHW.cre~
+	WRITE_ASCII specialscript2 ~USWIGHTW~ #8
+	WRITE_ASCII combatscript ~00AATGN~ #8
 
 COPY_EXISTING ~USWIGHTW.cre~ ~override/USKHAVRO.cre~
 	SAY NAME1 #41140
@@ -2202,11 +2957,20 @@ COPY_EXISTING ~AR6103.are~ ~override~
 	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR actor_name=~02_EliteGuard_04~ match_cre_file=~61GOLIRO~ cre_file=~USMARILI~ script_special2=~~ script_combat=~USMARILI~ END
 
 COPY_EXISTING ~AR6200.are~ ~override~
+	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR match_cre_file=~62SPBLD~ script_combat=~USBLADES~ END
+	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR actor_name=~ElvenDreadWarrior06~ cre_file=~62SPBLD~ script_combat=~USBLADES~ END
+	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR actor_name=~Yuan-Ti alfbreed2~ script_special2=~60YTSORC~ END
+	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR actor_name=~Yuan-TiHalfbreed~ script_special2=~60YTPRIC~ END
 	LPF ALTER_AREA_ACTOR_IWD2 INT_VAR flag_difficulty_1=0 flag_difficulty_2=0 flag_difficulty_3=0 STR_VAR actor_name=~Half Dragon~ END
 	LPF ALTER_AREA_ACTOR_IWD2 INT_VAR flag_difficulty_1=1 flag_difficulty_2=1 flag_difficulty_3=1 STR_VAR actor_name=~HalfOrc2~ cre_file=~62HADR2~ script_combat=~62HADRC~ END
 
 COPY_EXISTING ~AR6300.are~ ~override~
 	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR actor_name=~Guard_Commander~ script_combat=~USHDRBLU~ END
+
+COPY_EXISTING ~AR6304.are~ ~override~
+	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR actor_name=~GB_YuanTiHalfbreed1~ script_combat=~60YTPRIC~ END
+	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR actor_name=~GB_YuanTiHalfbreed2~ script_combat=~60YTPRIC~ END
+	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR actor_name=~GB_ThayvianMage1~ cre_file=~66RHDR~ script_special3=~00HADRRD~ END
 
 COPY_EXISTING ~AR6500.are~ ~override~
 	LPF ALTER_AREA_ACTOR_IWD2 INT_VAR flag_difficulty_3=0 STR_VAR actor_name=~Cornugon_1~ END
@@ -2225,9 +2989,19 @@ COPY_EXISTING ~AR6502.are~ ~override~
 COPY_EXISTING ~AR6503.are~ ~override~
 	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR actor_name=~Undead_Sherincal~ script_special3=~6503STOP~ script_special2=~USHDRBLU~ END
 
+COPY_EXISTING ~AR6600.are~ ~override~
+	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR match_cre_file=~66HAYUA~ script_combat=~60YTPRIC~ END
+	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR match_cre_file=~66HAYUA3~ script_combat=~60YTSORC~ END
+
+	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR actor_name=~BugbearCaptain~ cre_file=~USFOMGRN~ script_combat=~00AATBN~ END
+
 COPY_EXISTING ~AR6603.are~ ~override~
 	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR actor_name=~Pudu~ script_combat=~USPUDU~ END
 	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR actor_name=~Vyxein~ script_combat=~USVYXEIN~ END
+
+COPY_EXISTING ~AR6700.are~ ~override~
+	LPF ALTER_AREA_ACTOR_IWD2 INT_VAR x_coord=556 y_coord=485 orient=0 STR_VAR actor_name=~EliteNeoOrog1~ cre_file=~USFOMGRN~ script_combat=~00AATBN~ END
+	LPF ALTER_AREA_ACTOR_IWD2 INT_VAR x_coord=659 y_coord=485 orient=0 STR_VAR actor_name=~EliteNeoOrog2~ cre_file=~USFOMGRN~ script_combat=~00AATBN~ END
 
 COPY_EXISTING ~AR6703.are~ ~override~
 	READ_LONG 0xCC songsoffset
@@ -2277,6 +3051,12 @@ USCIHFEB	USCIELDB
 USCWHFGU	USCWGUAR
 USCIHFGU	USCIGUAR
 USCIHFXV	USCIXVIM
+USCIHFRG	USCIRGOL
+USCIHFAG	USCIAGOL
+USCWHFWW	USCWWOWI
+USCWHFWD	USCWWHDR
+USCIHFWD	USCIWHDR
+USCWHFWY	USCWWYRM
 ~
 UNLESS ~USCWHFMO~
 
@@ -2292,6 +3072,11 @@ USCIHFEB	USHFCIEB
 USCWHFGU	USHFCWGU
 USCIHFGU	USHFCIGU
 USCIHFXV	USHFCIXV
+USCIHFRG	USHFCIRG
+USCWHFWW	USHFCWWW
+USCWHFWD	USHFCWWD
+USCIHFWD	USHFCIWD
+USCWHFWY	USHFCWWY
 ~
 UNLESS ~USCWHFMO~
 
@@ -2390,3 +3175,11 @@ COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
 		WRITE_BYTE armoredarcana 20
 	END
 	BUT_ONLY_IF_IT_CHANGES
+
+INCLUDE ~%mod_folder%/components/final_patches.tpa~
+
+// Attaching a spell state to conjured weapons so that enemies know when they have one equipped
+
+COPY_EXISTING_REGEXP ~C[LMSC]DAMAG\.itm~ ~override~ ~I[LMSC]W[0-9][0-9]\.itm~ ~override~ ~SLIVING\.itm~ ~override~ ~SLAYL[0-9][0-9]\.itm~ ~override~ ~USSTSL[0-9][0-9]\.itm~ ~override~ ~HARM\.itm~ ~override~ ~USHARM[0-9][0-9]\.itm~ ~override~ ~DESTRUC\.itm~ ~override~ ~USDEST[0-9][0-9]\.itm~ ~override~ ~SHILLEL\.itm~ ~override~ ~USSHIL[0-9][0-9]\.itm~ ~override~ ~BCLAW\.itm~ ~override~ ~FBLADE\.itm~ ~override~ ~IBLADE\.itm~ ~override~ ~MOONBLA\.itm~ ~override~ ~SNAKEBI\.itm~ ~override~ ~USSNBI[0-9][0-9]\.itm~ ~override~ ~SMCUDGE\.itm~ ~override~ ~FSEEDS\.itm~ ~override~ ~CHILLT\.itm~ ~override~ ~GHOULT\.itm~ ~override~ ~DECASTA\.itm~ ~override~ ~MMMETEO\.itm~ ~override~ ~BLIGHTN\.itm~ ~override~ ~PBLADE\.itm~ ~override~ ~LTOUCH\.itm~ ~override~ ~DOBONE\.itm~ ~override~ ~MSWORD\.itm~ ~override~ ~MSWRD[0-9][0-9]\.itm~ ~override~ ~BBODISA\.itm~ ~override~
+	LPF ADD_ITEM_EQEFFECT INT_VAR opcode=288 target=1 timing=2 parameter2=101 END
+	IF_EXISTS

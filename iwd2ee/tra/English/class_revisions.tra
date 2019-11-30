@@ -796,7 +796,7 @@ Disadvantages:
 @895    = ~Animal Empathy~
 @896    = ~ANIMAL EMPATHY (Cha; Trained Only; Druid, Ranger Only):
 
-Use this skill to keep a guard dog from barking at you, to get a wild bird to land on your outstretched hand, or to keep an owlbear calm while you back off. Any wild creature must make a Will save or be charmed for 1 round per caster level. At level 10, this spell can be used on humanoid targets, who receive a +5 bonus to their saving throw, and at level 20, it can be used on non-humanoid or animal targets, who receive a +10 bonus to their saving throw.
+Use this skill to keep a guard dog from barking at you, to get a wild bird to land on your outstretched hand, or to keep an owlbear calm while you back off. Any wild creature, including animals as well as animalistic monsters such as wyverns, must make a Will save or be charmed for 1 round per caster level.
 ~
 @815    = ~Abjurer~
 @816    = ~ABJURER: 

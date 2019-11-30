@@ -848,3 +848,5 @@ Exists("Reig")~
 		REPLACE_TEXTUALLY CASE_INSENSITIVE ~Exists(\"Reig\")~ ~Exists("Reig")
 !Global("US_Reig_Joined","GLOBAL",1)~
 	END
+
+INCLUDE ~%mod_folder%/components/final_patches.tpa~
