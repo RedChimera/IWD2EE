@@ -223,6 +223,9 @@ COPY_EXISTING ~00RING80.itm~ ~override~
 	SAY NAME2 @10130
 	SAY IDENTIFIED_DESC @10131
 
+COPY_EXISTING ~00RING81.itm~ ~override~
+	SAY IDENTIFIED_DESC @10133
+
 COPY_EXISTING ~00RING82.itm~ ~override~
 	SAY NAME2 @10134
 	SAY IDENTIFIED_DESC @10135
@@ -922,6 +925,7 @@ COPY_EXISTING ~00HFSDFF.itm~ ~override~
 	SAY IDENTIFIED_DESC @10642
 
 COPY_EXISTING ~00SHLDFV.itm~ ~override~
+	SAY NAME2 @10643
 	SAY IDENTIFIED_DESC @10644
 
 COPY_EXISTING ~00HFSDFV.itm~ ~override~
@@ -1459,6 +1463,9 @@ COPY_EXISTING ~00SPER89.itm~ ~override~
 COPY_EXISTING ~00SPER90.itm~ ~override~
 	SAY IDENTIFIED_DESC @11106
 
+COPY_EXISTING ~00SPER91.itm~ ~override~
+	SAY IDENTIFIED_DESC @11108
+
 COPY_EXISTING ~00SPER93.itm~ ~override~
 	SAY IDENTIFIED_DESC @11112
 
@@ -1562,6 +1569,10 @@ COPY_EXISTING ~00AX1H90.itm~ ~override~
 
 COPY_EXISTING ~00AX1H94.itm~ ~override~
 	SAY NAME2 @11237
+
+COPY_EXISTING ~00AX1H94.itm~ ~override~
+	SAY NAME2 @11237
+	SAY IDENTIFIED_DESC @11238
 
 COPY_EXISTING ~00AX1H97.itm~ ~override~
 	SAY NAME2 @11243
@@ -2205,6 +2216,7 @@ COPY_EXISTING ~00BWLX03.itm~ ~override~
 	SAY IDENTIFIED_DESC @11802
 
 COPY_EXISTING ~00BWLX04.itm~ ~override~
+	SAY NAME2 @11803
 	SAY IDENTIFIED_DESC @11804
 
 COPY_EXISTING ~00BWLX91.itm~ ~override~
@@ -2301,6 +2313,7 @@ COPY_EXISTING ~00BWHX97.itm~ ~override~
 	SAY IDENTIFIED_DESC @11856
 
 COPY_EXISTING ~00BWHX98.itm~ ~override~
+	SAY NAME2 @11857
 	SAY IDENTIFIED_DESC @11858
 
 COPY_EXISTING ~00BWHX99.itm~ ~override~
@@ -3262,6 +3275,7 @@ COPY_EXISTING ~63HFHBPB.itm~ ~override~
 	SAY IDENTIFIED_DESC @12328
 
 
+
 //New items go below. The initial items have been sorted by item type, but items made later should just go at the end, regardless of their type.
 
 COPY_EXISTING ~USAMUL47.itm~ ~override~
@@ -3793,6 +3807,85 @@ COPY_EXISTING ~USBWLX59.itm~ ~override~
 	SAY NAME2 @12679
 	SAY IDENTIFIED_DESC @12680
 
+COPY_EXISTING ~USCLCK48.itm~ ~override~
+	SAY NAME2 @12681
+	SAY IDENTIFIED_DESC @12682
+
+COPY_EXISTING ~USAMUL53.itm~ ~override~
+	SAY NAME2 @12683
+	SAY IDENTIFIED_DESC @12684
+
+COPY_EXISTING ~USSHLD45.itm~ ~override~
+	SAY NAME2 @12685
+	SAY IDENTIFIED_DESC @12686
+
+COPY_EXISTING ~USSHLD52.itm~ ~override~
+	SAY NAME2 @12687
+	SAY IDENTIFIED_DESC @12688
+
+COPY_EXISTING ~USBOOT45.itm~ ~override~
+	SAY NAME2 @12689
+	SAY IDENTIFIED_DESC @12690
+
+COPY_EXISTING ~USAMUL52.itm~ ~override~
+	SAY NAME2 @12691
+	SAY IDENTIFIED_DESC @12692
+
+COPY_EXISTING ~USHFBC11.itm~ ~override~
+	SAY IDENTIFIED_DESC @12694
+
+COPY_EXISTING ~USCHAN44.itm~ ~override~
+	SAY NAME2 @12695
+	SAY IDENTIFIED_DESC @12696
+
+COPY_EXISTING ~USCHAN56.itm~ ~override~
+	SAY NAME2 @12697
+	SAY IDENTIFIED_DESC @12698
+
+COPY_EXISTING ~USIOUN52.itm~ ~override~
+	SAY NAME1 @12699
+	SAY UNIDENTIFIED_DESC @12700
+	SAY NAME2 @12701
+	SAY IDENTIFIED_DESC @12702
+
+COPY_EXISTING ~USSHLD54.itm~ ~override~
+	SAY NAME2 @12703
+	SAY IDENTIFIED_DESC @12704
+
+COPY_EXISTING ~USBRAC45.itm~ ~override~
+	SAY NAME2 @12705
+	SAY IDENTIFIED_DESC @12706
+
+COPY_EXISTING ~USBRAC54.itm~ ~override~
+	SAY NAME2 @12707
+	SAY IDENTIFIED_DESC @12708
+
+COPY_EXISTING ~USBOOT44.itm~ ~override~
+	SAY NAME2 @12709
+	SAY IDENTIFIED_DESC @12710
+
+COPY_EXISTING ~USBRAC53.itm~ ~override~
+	SAY UNIDENTIFIED_DESC @12712
+	SAY NAME2 @12713
+	SAY IDENTIFIED_DESC @12714
+
+COPY_EXISTING ~USBRAC35.itm~ ~override~
+	SAY NAME2 @12715
+	SAY IDENTIFIED_DESC @12716
+
+COPY_EXISTING ~USIOUN58.itm~ ~override~
+	SAY NAME1 @12717
+	SAY UNIDENTIFIED_DESC @12718
+	SAY NAME2 @12719
+	SAY IDENTIFIED_DESC @12720
+
+COPY_EXISTING ~USSTAF48.itm~ ~override~
+	SAY NAME2 @12721
+	SAY IDENTIFIED_DESC @12722
+
+COPY_EXISTING ~USSPER45.itm~ ~override~
+	SAY NAME2 @12723
+	SAY IDENTIFIED_DESC @12724
 
 //General patch changes
 
@@ -3826,10 +3919,6 @@ COPY_EXISTING_REGEXP ~.*\.itm~ ~override~
 	PATCH_IF (us_item_category=29) BEGIN
 		LPF ALTER_ITEM_HEADER INT_VAR header_type=1 animation_overhand=0 animation_backhand=0 animation_thrust=100 END
 	END
-
-COPY_EXISTING ~ushamtdt.itm~ ~override~ ~ushfhtdt.itm~ ~override~
-	LPF ALTER_ITEM_HEADER INT_VAR header_type=2 range=30 END
-
 //Making sure items that aren't supposed to be usable by wizards, monks or paladins cannot be used by the kits of those classes
 	READ_LONG 0x1e us_item_unusability
 	READ_BYTE 0x2d us_kit_unusability_3
@@ -3860,6 +3949,9 @@ COPY_EXISTING ~ushamtdt.itm~ ~override~ ~ushfhtdt.itm~ ~override~
 	WRITE_BYTE 0x2f us_kit_unusability_4
 	BUT_ONLY_IF_IT_CHANGES
 
+COPY_EXISTING ~ushamtdt.itm~ ~override~ ~ushfhtdt.itm~ ~override~
+	LPF ALTER_ITEM_HEADER INT_VAR header_type=2 range=30 END
+
 //Scimitars should have the scimitar animation
 COPY_EXISTING_REGEXP ~..SWDC..\.itm~ ~override~ ~..HFSC..\.itm~ ~override~
 	READ_SHORT 0x1c us_item_category
@@ -3886,6 +3978,10 @@ USRING42	1
 00HFBCAG	1
 USSHLD59	1
 USSLNG59	1
+USAMUL52	1
+00AMULDS	1
+00HFAMDS	1
+USSTAF48	1
 ~
 
 //Random loot table changes
@@ -3936,6 +4032,8 @@ USRTHF39	USSWDK46
 USRTHF40	USHELM45
 USRTHF41	USHAMTDT
 USRTHF42	USDAGGJD
+USRTHF43	00BRAC11
+USRTHF44	USBRAC45
 
 USRHF001	USAROW47
 USRHF002	00AROW06
@@ -3958,6 +4056,9 @@ USCWHFGU	USCWGUAR
 USCIHFGU	USCIGUAR
 USCIHFXV	USCIXVIM
 USCWHFSK	00CWSKX1
+USCIHFRG	USCIRGOL
+USCIHFAG	USCIAGOL
+USCWHFWW	USCWWOWI
 
 USAFBEET	USALBEET
 USAFBEHO	USALBEHO
@@ -4115,6 +4216,8 @@ USRTHF39	USHFSK46
 USRTHF40	USHELM50
 USRTHF41	USHFHTDT
 USRTHF42	USHFDGJD
+USRTHF43	USHFBC11
+USRTHF44	USBRAC54
 
 USRHF001	USAROW57
 USRHF002	USAROW54
@@ -4137,6 +4240,9 @@ USCWHFGU	USHFCWGU
 USCIHFGU	USHFCIGU
 USCIHFXV	USHFCIXV
 USCWHFSK	USHFCWSK
+USCIHFRG	USHFCIRG
+USCIHFAG	USHFCIAG
+USCWHFWW	USHFCWWW
 
 USAFBEET	USHFBEET
 USAFBEHO	USHFBEHO
@@ -4359,6 +4465,8 @@ COPY_EXISTING ~11elytha.sto~ ~override~ //Elytharra store
 	ADD_STORE_ITEM ~USRTHF31~ AFTER ~00BELT05~ #1 #1 #1 ~IDENTIFIED~ #1 //Girdle of Beatification/HoF version
 	REMOVE_STORE_ITEM ~00BELT05~ ~00RING75~ ~00RING78~
 
+COPY ~%mod_folder%/sto/11OSWALD.sto~ ~override~
+
 COPY_EXISTING ~11ragnib.sto~ ~override~ //Targos Temple of Tempus
 	ADD_STORE_ITEM ~00RING77~ AFTER ~00RING80~ #1 #1 #1 ~IDENTIFIED~ #1 //Lesser Ring of Resistances
 	ADD_STORE_ITEM ~USRING42~ AFTER ~00RING77~ #1 #1 #1 ~IDENTIFIED~ #1 //Ring of the Intelligent Combatant
@@ -4366,6 +4474,7 @@ COPY_EXISTING ~11ragnib.sto~ ~override~ //Targos Temple of Tempus
 
 COPY_EXISTING ~20arte.sto~ ~override~ //Shaengarne villager store
 	ADD_STORE_ITEM ~00AROW96~ AFTER ~00AROW01~ #40 #1 #1 ~IDENTIFIED~ #1 ~UNLIMITED~ //Hunting Arrows
+	ADD_STORE_ITEM ~USBRAC35~ #1 #1 #1 ~IDENTIFIED~ #1 //Bracers of Improved Expertise
 	ADD_STORE_ITEM ~11RTHF02~ #1 #1 #1 ~IDENTIFIED~ #1 //Lucky Knucky
 	ADD_STORE_ITEM ~00RTHF12~ AFTER ~00MISC32~ #1 #1 #1 ~IDENTIFIED~ #1 //Hagnen's Foolishness
 
@@ -4390,15 +4499,17 @@ COPY_EXISTING ~40BDAWN.sto~ ~override~ //Beodaewn the Werewolf Man store
 
 COPY_EXISTING ~41ZACK1.sto~ ~override~ ~41ZACK2.sto~ ~override~ ~41ZACK3.sto~ ~override~ //Zack Boosenberry stores
 	REMOVE_STORE_ITEM ~00MSTR95~
+	ADD_STORE_ITEM ~00RTHF64~ BEFORE ~00HAMM04~ #1 #1 #1 ~IDENTIFIED~ #1 //Delnar's Healing Sword
 	ADD_STORE_ITEM ~00MSTR95~ BEFORE ~00HAMM04~ #1 #1 #1 ~IDENTIFIED~ #1 //Morningstar of Thorns
 	ADD_STORE_ITEM ~00RING78~ AFTER ~00RING20~ #1 #1 #1 ~IDENTIFIED~ #1 //Spirit Armor Ring
 	ADD_STORE_ITEM ~00RING98~ AFTER ~00RING78~ #1 #1 #1 ~IDENTIFIED~ #1 //Chameleon Ring
 	ADD_STORE_ITEM ~00WAND13~ AFTER ~00WAND06~ #50 #1 #1 ~IDENTIFIED~ #1 //Wand of Trap Detection
+//	ADD_STORE_ITEM ~USBOOT44~ AFTER ~00BOOT04~ #1 #1 #1 ~IDENTIFIED~ #1 //Boots of Stealthy Speed
 	REMOVE_STORE_ITEM ~00WAND06~
 
 COPY_EXISTING ~50NYM2.sto~ ~override~ //Nym store
-	ADD_STORE_ITEM ~00RTHF64~ AFTER ~00RING19~ #1 #1 #1 ~IDENTIFIED~ #1 //Delnar's Healing Sword
-	ADD_STORE_ITEM ~00DAGG93~ AFTER ~00RTHF64~ #1 #1 #1 ~IDENTIFIED~ #1 //Dagger of Speed +1
+	ADD_STORE_ITEM ~00DAGG93~ AFTER ~00ROBE03~ #1 #1 #1 ~IDENTIFIED~ #1 //Dagger of Speed +1
+
 
 COPY_EXISTING ~00BASHS3.sto~ ~override~ //Avarine Decanter genie store
 	WRITE_LONG 0x14 155 //Buying stuff from him costs less money (since he actually has some good stuff now), though his goods are still overpriced
@@ -4419,7 +4530,7 @@ COPY_EXISTING ~00BASHS3.sto~ ~override~ //Avarine Decanter genie store
 	ADD_STORE_ITEM ~USRTHF39~ AFTER ~USRINGTH~ #1 #1 #1 ~IDENTIFIED~ #1 //Celestial Fury
 	REMOVE_STORE_ITEM ~00WAND24~ ~00BRAC10~
 
-COPY_EXISTING ~50TAHVO.sto~ ~override~ //Nym store
+COPY_EXISTING ~50TAHVO.sto~ ~override~ //Tahvo the Huntmaster store
 	ADD_STORE_ITEM ~00RTHF51~ AFTER ~00BOWS03~ #1 #1 #1 ~IDENTIFIED~ #1 //Eye of the Hunter bow
 	ADD_STORE_ITEM ~ZZG6CT~ AFTER ~00SPER98~ #1 #1 #1 ~IDENTIFIED~ #1 //Troll Killer club
 	ADD_STORE_ITEM ~USRTHF03~ AFTER ~50HIDE06~ #1 #1 #1 ~IDENTIFIED~ #1 //Wandering Hunter Armor/HoF version
@@ -4428,6 +4539,7 @@ COPY_EXISTING ~50TAHVO.sto~ ~override~ //Nym store
 	REMOVE_STORE_ITEM ~50HIDE06~ ~50BOOT14~ ~50CLCK17~
 
 COPY_EXISTING ~50LIMHA.sto~ ~override~ //Limha store
+	ADD_STORE_ITEM ~USBRAC53~ AFTER ~00AX1H82~ #1 #1 #1 ~IDENTIFIED~ #1 //Gloves of Rage
 	ADD_STORE_ITEM ~00RTHF88~ AFTER ~00AX1H82~ #1 #1 #1 ~IDENTIFIED~ #1 //Dragon's Sight
 	ADD_STORE_ITEM ~00SWDL96~ AFTER ~00SWDL03~ #1 #1 #1 ~IDENTIFIED~ #1 //Longsword +1: Bloodletting
 	ADD_STORE_ITEM ~00POTN07~ AFTER ~00SWDL96~ #1 #1 #1 ~IDENTIFIED~ #6 //Spirit Essence
@@ -4440,11 +4552,18 @@ COPY_EXISTING ~50LIMHA.sto~ ~override~ //Limha store
 	ADD_STORE_ITEM ~00POTN83~ AFTER ~00SWDL96~ #1 #1 #1 ~IDENTIFIED~ #1 ~UNLIMITED~ //Bitter Tonic
 	ADD_STORE_ITEM ~00POTN22~ AFTER ~00SWDL96~ #1 #1 #1 ~IDENTIFIED~ #1 ~UNLIMITED~ //Ogre Bile
 	REMOVE_STORE_ITEM ~00AX1H82~ ~00SWDL03~
-
+/*
+COPY_EXISTING ~50CARYNA.sto~ ~override~ //Fell Wood dryad store
+	READ_LONG 0x10 ulgiash
+	ulgiash|=0x1
+	WRITE_LONG 0x10 ulgiash
+	WRITE_LONG 0x14 110
+	ADD_STORE_ITEM ~00RTKT04~ #1 #1 #1 ~IDENTIFIED~ #1 //Druid's Stone
+*/
 COPY_EXISTING ~51DRAGU.sto~ ~override~ ~51DRAGU2.sto~ ~override~ //Duergar engineer stores
 	ADD_STORE_ITEM ~USBOLT48~ AFTER ~00BOLT04~ #40 #1 #1 ~IDENTIFIED~ #1 ~UNLIMITED~ //Heavy Bolt +4
 
-COPY_EXISTING ~52BERED.sto~ ~override~ //Beodaewn the Werewolf Man store
+COPY_EXISTING ~52BERED.sto~ ~override~ //Black Raven library store
 	REMOVE_STORE_ITEM ~52RTHF05~
 	ADD_STORE_ITEM ~52RTHF05~ AFTER ~52RTHF04~ #6 #1 #1 ~IDENTIFIED~ #1 //How to be an Adventurer
 
@@ -4454,6 +4573,8 @@ COPY_EXISTING ~53HEGGR.sto~ ~override~ //Underdark weapon/armor store
 	REMOVE_STORE_ITEM ~00STAF93~ ~00HAMT10~
 
 COPY_EXISTING ~53KADRES.sto~ ~override~ //Kadresh drow store
+//	ADD_STORE_ITEM ~USCLCK48~ #1 #1 #1 ~IDENTIFIED~ #1 //Cloak of Iron
+	ADD_STORE_ITEM ~00RTHF44~ #1 #1 #1 ~IDENTIFIED~ #1 //Gauntlets of Assassination
 	ADD_STORE_ITEM ~00RTHF37~ #1 #1 #1 ~IDENTIFIED~ #1 //The Lions of Arkamadis
 	ADD_STORE_ITEM ~00RTHF09~ #1 #3 #1 ~IDENTIFIED~ #1 //Spiritcaller
 	ADD_STORE_ITEM ~00RING75~ AFTER ~00RING71~ #1 #1 #1 ~IDENTIFIED~ #1 //Chameleon Ring of Dexterity
@@ -4486,6 +4607,7 @@ COPY_EXISTING ~53WODE.sto~ ~override~ //Underdark ranged ammunition store
 	ADD_STORE_ITEM ~USBULL48~ AFTER ~00BULL99~ #20 #1 #1 ~IDENTIFIED~ #4 //Greater Vampiric Bullet +3
 
 COPY_EXISTING ~60CHEAP.sto~ ~override~ //Bonus store
+	ADD_STORE_ITEM ~USSTAF48~ AFTER ~00RTKT15~ #1 #1 #1 ~IDENTIFIED~ #1 //Staff of Goblin Summoning
 	ADD_STORE_ITEM ~00RTHF68~ AFTER ~00RTKT15~ #1 #1 #1 ~IDENTIFIED~ #1 //Delnar's Delight
 	ADD_STORE_ITEM ~00ROBE06~ AFTER ~00RTKT15~ #1 #1 #1 ~IDENTIFIED~ #1 //Robe of the Neutral Archmagi
 	ADD_STORE_ITEM ~00RTHF77~ AFTER ~00RTKT15~ #1 #1 #1 ~IDENTIFIED~ #1 //The Unstrung Harp
@@ -4563,6 +4685,9 @@ COPY_EXISTING ~63RIKI.sto~ ~override~ //Severed Hand thief store
 	ADD_STORE_ITEM ~USCLCK51~ AFTER ~00CLCK03~ #1 #1 #1 ~IDENTIFIED~ #1 //Improved Cloak of Displacement
 	REMOVE_STORE_ITEM ~00CLCK03~
 
+COPY_EXISTING ~41PARENA.bcs~ ~override~
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~00BRAC11~ ~USRTHF43~
+
 COPY_EXISTING ~ar2002.are~ ~override~ //Shaengarne Vrek cave
 	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR charges1=1 charges2=1 charges3=1 single_match=1 STR_VAR old_item=~11RTHF25~ new_item=~USRT02_V~ END
 	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR charges1=4 charges2=1 charges3=1 container=1 single_match=1 STR_VAR old_item=~RT02_L~ new_item=~00POTN88~ END
@@ -4608,6 +4733,9 @@ COPY_EXISTING ~ar5002.are~ ~override~ //Limha's home
 
 COPY_EXISTING ~ar5030.are~ ~override~ //Fell Wood, Will o' Wisp lair
 	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR charges2=1 charges3=1 single_match=1 STR_VAR old_item=~RT08_R~ new_item=~USRTHF37~ END
+
+COPY_EXISTING ~ar5100.are~ ~override~ //Hook Horror caves
+	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR container=1 charges1=3000 charges2=6000 charges3=0 single_match=1 STR_VAR old_item=~MISC07~ new_item=~MISC07~ END
 
 COPY_EXISTING ~ar5101.are~ ~override~ //Hook Horror caves
 	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR container=2 charges1=1 charges2=1 charges3=1 single_match=1 STR_VAR old_item=~RT10_M~ new_item=~USRT10_V~ END
@@ -5060,3 +5188,5 @@ COPY_EXISTING_REGEXP ~.*\.are~ ~override~ ~.*\.cre~ ~override~ ~.*\.sto~ ~overri
 	REPLACE_TEXTUALLY CASE_INSENSITIVE ~00SCRL04~ ~USSCHF04~
 	IF ~00SCRL0[1-4]~
 	BUT_ONLY_IF_IT_CHANGES
+
+INCLUDE ~%mod_folder%/components/final_patches.tpa~

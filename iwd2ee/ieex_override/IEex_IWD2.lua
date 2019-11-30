@@ -97,6 +97,16 @@ function IEex_DisplayString(string)
 
 end
 
+function IEex_TF(bool)
+	if bool == true then
+		IEex_DisplayString("True")
+	elseif bool == false then
+		IEex_DisplayString("False")
+	else
+		IEex_DisplayString("Huh?")
+	end
+end
+
 function IEex_FetchString(strref)
 
 	local resultPtr = IEex_Malloc(0x4)
@@ -231,6 +241,51 @@ function MESNEAKS(effectData, creatureData)
 	end)
 end
 
+function MECRITIM(effectData, creatureData)
+	local targetID = IEex_GetActorIDShare(creatureData)
+	local immunityCount = IEex_ReadSignedWord(creatureData + 0x700, 0x0)
+	local permanentImmunity = IEex_ReadByte(creatureData + 0x702, 0x0)
+	local specialFlags = IEex_ReadByte(creatureData + 0x89F, 0)
+	local isImmune = (bit32.band(specialFlags, 0x2) ~= 0)
+	local makePermanent = IEex_ReadDword(effectData + 0x1C)
+	if (isImmune and immunityCount == -1) or makePermanent == 1 then 
+		immunityCount = 0
+		permanentImmunity = 1
+		IEex_WriteByte(creatureData + 0x702, permanentImmunity)
+	end
+	local modifier = IEex_ReadDword(effectData + 0x18)
+	if modifier > 0 then
+		immunityCount = immunityCount + modifier
+		if immunityCount > -1 then
+			IEex_WriteByte(creatureData + 0x89F, bit32.bor(specialFlags, 0x2))
+		end
+	elseif modifier < 0 then
+		immunityCount = immunityCount + modifier
+		if immunityCount <= -1 then
+			IEex_WriteByte(creatureData + 0x89F, bit32.band(specialFlags, 0xFD))
+		end
+	end
+	IEex_WriteWord(creatureData + 0x700, immunityCount)
+end
+
+function MECRITRE(effectData, creatureData)
+	local targetID = IEex_GetActorIDShare(creatureData)
+	local immunityCount = IEex_ReadSignedWord(creatureData + 0x700, 0x0)
+	local permanentImmunity = IEex_ReadByte(creatureData + 0x702, 0x0)
+	local specialFlags = IEex_ReadByte(creatureData + 0x89F, 0)
+	local isImmune = (bit32.band(specialFlags, 0x2) ~= 0)
+	if (isImmune and immunityCount == -1) or permanentImmunity == 1 then 
+		immunityCount = 0
+		permanentImmunity = 1
+		IEex_WriteByte(creatureData + 0x702, permanentImmunity)
+		IEex_WriteByte(creatureData + 0x89F, bit32.bor(specialFlags, 0x2))
+	else
+		immunityCount = -1
+		IEex_WriteByte(creatureData + 0x89F, bit32.band(specialFlags, 0xFD))
+	end
+	IEex_WriteWord(creatureData + 0x700, immunityCount)
+end
+
 statspells = {
 {[21] = "USRAGE3", [25] = "USRAGE4", [29] = "USRAGE5"}, -- Barbarian Rage
 {[0] = "USMAXIM1", [12] = "USMAXIM2"}, -- Maximized Attacks
@@ -257,8 +312,14 @@ statspells = {
 {[12] = "USATTA01", [14] = "USATTA02", [16] = "USATTA03", [18] = "USATTA04", [20] = "USATTA05", [22] = "USATTA06", [24] = "USATTA07", [26] = "USATTA08", [28] = "USATTA09", [30] = "USATTA10", [32] = "USATTA11", [34] = "USATTA12", [36] = "USATTA13", [38] = "USATTA14", [40] = "USATTA15"}, -- Stat-based attack bonuses
 {[1] = "USDAMA01", [2] = "USDAMA02", [3] = "USDAMA03", [4] = "USDAMA04", [5] = "USDAMA05", [6] = "USDAMA06", [7] = "USDAMA07", [8] = "USDAMA08", [9] = "USDAMA09", [10] = "USDAMA10", [11] = "USDAMA11", [12] = "USDAMA12", [13] = "USDAMA13", [14] = "USDAMA14", [15] = "USDAMA15", [16] = "USDAMA16", [17] = "USDAMA17", [18] = "USDAMA18", [19] = "USDAMA19", [20] = "USDAMA20"}, -- Damage bonuses
 {[1] = "USATTA01", [2] = "USATTA02", [3] = "USATTA03", [4] = "USATTA04", [5] = "USATTA05", [6] = "USATTA06", [7] = "USATTA07", [8] = "USATTA08", [9] = "USATTA09", [10] = "USATTA10", [11] = "USATTA11", [12] = "USATTA12", [13] = "USATTA13", [14] = "USATTA14", [15] = "USATTA15", [16] = "USATTA16", [17] = "USATTA17", [18] = "USATTA18", [19] = "USATTA19", [20] = "USATTA20"}, -- Attack bonuses
+{[5] = "USACAR01", [10] = "USACAR02", [15] = "USACAR03", [20] = "USACAR04", [25] = "USACAR05", [30] = "USACAR06", [35] = "USACAR07", [40] = "USACAR08", [45] = "USACAR09", [50] = "USACAR10", [55] = "USACAR11", [60] = "USACAR12", [65] = "USACAR13", [70] = "USACAR14", [75] = "USACAR15", [80] = "USACAR16", [85] = "USACAR17", [90] = "USACAR18", [95] = "USACAR19", [100] = "USACAR20", [105] = "USACAR21", [110] = "USACAR22", [115] = "USACAR23", [120] = "USACAR24", [125] = "USACAR25"}, -- Armor bonus based on skills
+{[1] = "USIRONDR"}, -- Extra Iron Skins damage reduction
+{[12] = "USACSH01", [14] = "USACSH02", [16] = "USACSH03", [18] = "USACSH04", [20] = "USACSH05", [22] = "USACSH06", [24] = "USACSH07", [26] = "USACSH08", [28] = "USACSH09", [30] = "USACSH10", [32] = "USACSH11", [34] = "USACSH12", [36] = "USACSH13", [38] = "USACSH14", [40] = "USACSH15", [42] = "USACSH16", [44] = "USACSH17", [46] = "USACSH18", [48] = "USACSH19", [50] = "USACSH20", [52] = "USACSH21", [54] = "USACSH22", [56] = "USACSH23", [58] = "USACSH24", [60] = "USACSH25"}, -- Stat-based shield bonus
+{[12] = "USREGE01", [14] = "USREGE02", [16] = "USREGE03", [18] = "USREGE04", [20] = "USREGE05", [22] = "USREGE06", [24] = "USREGE07", [26] = "USREGE08", [28] = "USREGE09", [30] = "USREGE10", [32] = "USREGE11", [34] = "USREGE12", [36] = "USREGE13", [38] = "USREGE14", [40] = "USREGE15", [42] = "USREGE16", [44] = "USREGE17", [46] = "USREGE18", [48] = "USREGE19", [50] = "USREGE20", [52] = "USREGE21", [54] = "USREGE22", [56] = "USREGE23", [58] = "USREGE24", [60] = "USREGE25"}, -- Stat-based healing}
+{[12] = "USPHDR01", [14] = "USPHDR02", [16] = "USPHDR03", [18] = "USPHDR04", [20] = "USPHDR05", [22] = "USPHDR06", [24] = "USPHDR07", [26] = "USPHDR08", [28] = "USPHDR09", [30] = "USPHDR10", [32] = "USPHDR11", [34] = "USPHDR12", [36] = "USPHDR13", [38] = "USPHDR14", [40] = "USPHDR15"},
+{[12] = "USSANC05", [14] = "USSANC10", [16] = "USSANC15", [18] = "USSANC20", [20] = "USSANC25", [22] = "USSANC30", [24] = "USSANC35", [26] = "USSANC40", [28] = "USSANC45", [30] = "USSANC50", [32] = "USSANC55", [34] = "USSANC60", [36] = "USSANC65", [38] = "USSANC70", [40] = "USSANC75"},
+{[12] = "USSANC10", [14] = "USSANC20", [16] = "USSANC30", [18] = "USSANC40", [20] = "USSANC50", [22] = "USSANC60", [24] = "USSANC70", [26] = "USSANC80", [28] = "USSANC90", [30] = "USSANC00"},
 }
-
 
 function applyStatSpell(targetID, index, statValue)
 	if statValue < 0 then
@@ -300,6 +361,7 @@ function MESTATSP(effectData, creatureData)
 end
 
 function MEHOLYMI(effectData, creatureData)
+	local targetID = IEex_GetActorIDShare(creatureData)
 	local statValue = IEex_ReadDword(effectData + 0x44)
 
 	local index = IEex_ReadWord(effectData + 0x1C, 0)
@@ -311,6 +373,7 @@ function MEHOLYMI(effectData, creatureData)
 end
 
 function MEPERFEC(effectData, creatureData)
+	local targetID = IEex_GetActorIDShare(creatureData)
 	local statValue = IEex_ReadDword(effectData + 0x44)
 	statValue = statValue + math.floor((IEex_GetActorStat(targetID, 38) - 10) / 2)
 	statValue = statValue + math.floor((IEex_GetActorStat(targetID, 39) - 10) / 2)
@@ -319,6 +382,180 @@ function MEPERFEC(effectData, creatureData)
 	statValue = statValue + math.floor((IEex_GetActorStat(targetID, 42) - 10) / 2)
 	local index = IEex_ReadWord(effectData + 0x1C, 0)
 	applyStatSpell(targetID, index, statValue)
+end
+
+function MESTATRO(effectData, creatureData)
+	local targetID = IEex_GetActorIDShare(creatureData)
+	local stat = IEex_ReadWord(effectData + 0x44, 0x0)
+	local statValue = IEex_GetActorStat(targetID, stat)
+	local dc = IEex_ReadWord(effectData + 0x46, 0x0)
+	local roll = math.random(20)
+	local invert = (bit32.band(IEex_ReadDword(effectData + 0x34), 0x100000) > 0)
+	if roll > 1 and (roll == 20 or statValue + roll >= dc) then
+		if invert == false then
+			local spellRES = IEex_ReadLString(effectData + 0x18, 8)
+			if spellRES ~= "" then
+				IEex_ApplyResref(spellRES, targetID)
+			end
+		end
+	else
+		if invert == true then
+			local spellRES = IEex_ReadLString(effectData + 0x18, 8)
+			if spellRES ~= "" then
+				IEex_ApplyResref(spellRES, targetID)
+			end
+		end
+	end
+end
+
+function MESTATES(effectData, creatureData)
+	local targetID = IEex_GetActorIDShare(creatureData)
+	local state = IEex_ReadDword(effectData + 0x44)
+	local stateValue = bit32.bor(IEex_ReadDword(creatureData + 0x5BC), IEex_ReadDword(creatureData + 0x920))
+	local invert = (bit32.band(IEex_ReadDword(effectData + 0x34), 0x100000) > 0)
+	if bit32.band(stateValue, state) > 0 then
+		if invert == false then
+			local spellRES = IEex_ReadLString(effectData + 0x18, 8)
+			if spellRES ~= "" then
+				IEex_ApplyResref(spellRES, targetID)
+			end
+		end
+	else
+		if invert == true then
+			local spellRES = IEex_ReadLString(effectData + 0x18, 8)
+			if spellRES ~= "" then
+				IEex_ApplyResref(spellRES, targetID)
+			end
+		end
+	end
+end
+
+function MESTATEI(effectData, creatureData)
+	local targetID = IEex_GetActorIDShare(creatureData)
+	local stateValue = bit32.bor(IEex_ReadDword(creatureData + 0x5BC), IEex_ReadDword(creatureData + 0x920))
+	local invert = (bit32.band(IEex_ReadDword(effectData + 0x34), 0x100000) > 0)
+	if bit32.band(stateValue, 0x10) > 0 and bit32.band(stateValue, 0x400000) == 0 then
+		if invert == false then
+			local spellRES = IEex_ReadLString(effectData + 0x18, 8)
+			if spellRES ~= "" then
+				IEex_ApplyResref(spellRES, targetID)
+			end
+		end
+	else
+		if invert == true then
+			local spellRES = IEex_ReadLString(effectData + 0x18, 8)
+			if spellRES ~= "" then
+				IEex_ApplyResref(spellRES, targetID)
+			end
+		end
+	end
+end
+
+function MEKILLSP(effectData, creatureData)
+	local targetID = IEex_GetActorIDShare(creatureData)
+	local sourceID = IEex_ReadDword(effectData + 0x10C)
+	local stateValue = bit32.bor(IEex_ReadDword(creatureData + 0x5BC), IEex_ReadDword(creatureData + 0x920))
+	local invert = (bit32.band(IEex_ReadDword(effectData + 0x34), 0x100000) > 0)
+	if bit32.band(stateValue, 0xFC0) > 0 then
+		if invert == false then
+			local spellRES = IEex_ReadLString(effectData + 0x18, 8)
+			if spellRES ~= "" then
+				IEex_ApplyResref(spellRES, sourceID)
+			end
+		end
+	else
+		if invert == true then
+			local spellRES = IEex_ReadLString(effectData + 0x18, 8)
+			if spellRES ~= "" then
+				IEex_ApplyResref(spellRES, sourceID)
+			end
+		end
+	end
+end
+
+function MESPLSTS(effectData, creatureData)
+	local targetID = IEex_GetActorIDShare(creatureData)
+	local spellState1 = IEex_ReadByte(effectData + 0x44, 0x0)
+	local spellState2 = IEex_ReadByte(effectData + 0x45, 0x0)
+	local spellState3 = IEex_ReadByte(effectData + 0x46, 0x0)
+	local spellState4 = IEex_ReadByte(effectData + 0x47, 0x0)
+	local invert = (bit32.band(IEex_ReadDword(effectData + 0x34), 0x100000) > 0)
+	if IEex_GetActorSpellState(targetID, spellState1) or (spellState2 > 0 and IEex_GetActorSpellState(targetID, spellState2)) or (spellState3 > 0 and IEex_GetActorSpellState(targetID, spellState3)) or (spellState4 > 0 and IEex_GetActorSpellState(targetID, spellState4)) then
+		if invert == false then
+			local spellRES = IEex_ReadLString(effectData + 0x18, 8)
+			if spellRES ~= "" then
+				IEex_ApplyResref(spellRES, targetID)
+			end
+		end
+	else
+		if invert == true then
+			local spellRES = IEex_ReadLString(effectData + 0x18, 8)
+			if spellRES ~= "" then
+				IEex_ApplyResref(spellRES, targetID)
+			end
+		end
+	end
+end
+
+function MESPELL(effectData, creatureData)
+	local targetID = IEex_GetActorIDShare(creatureData)
+	local spellRES = IEex_ReadLString(effectData + 0x18, 8)
+	if spellRES ~= "" then
+		IEex_ApplyResref(spellRES, targetID)
+	end
+end
+
+onhitspells = {
+[1] = "USOHTEST",
+[5020] = "USCLEA20",
+[5050] = "USCLEA50",
+[5100] = "USCLEA00",
+}
+
+function MEONHIT(effectData, creatureData)
+	local targetID = IEex_GetActorIDShare(creatureData)
+	local sourceID = IEex_ReadDword(effectData + 0x10C)
+	local headerType = IEex_ReadDword(effectData + 0x44)
+	if IEex_GetActorSpellState(sourceID, 225) then
+		IEex_IterateActorEffects(sourceID, function(eData)
+			local theopcode = IEex_ReadDword(eData + 0x10)
+			local theparameter2 = IEex_ReadDword(eData + 0x20)
+			if theopcode == 288 and theparameter2 == 225 then
+				local theparameter1 = IEex_ReadDword(eData + 0x1C)
+				local matchHeader = IEex_ReadDword(eData + 0x48)
+				local spellRES = onhitspells[theparameter1]
+				if spellRES ~= nil and (matchHeader == 0 or matchHeader == headerType) then
+					local targetSource = (bit32.band(IEex_ReadDword(eData + 0x38), 0x200000) > 0)
+					local fromTarget = (bit32.band(IEex_ReadDword(eData + 0x38), 0x400000) > 0)
+					if targetSource == true then
+						IEex_ApplyResref(spellRES, sourceID)
+					else
+						IEex_ApplyResref(spellRES, targetID)
+					end
+				end
+			end
+		end)
+	end
+	if IEex_GetActorSpellState(targetID, 226) then
+		IEex_IterateActorEffects(targetID, function(eData)
+			local theopcode = IEex_ReadDword(eData + 0x10)
+			local theparameter2 = IEex_ReadDword(eData + 0x20)
+			if theopcode == 288 and theparameter2 == 226 then
+				local theparameter1 = IEex_ReadDword(eData + 0x1C)
+				local matchHeader = IEex_ReadDword(eData + 0x48)
+				local spellRES = onhitspells[theparameter1]
+				if spellRES ~= nil and (matchHeader == 0 or matchHeader == headerType) then
+					local targetSource = (bit32.band(IEex_ReadDword(eData + 0x38), 0x200000) > 0)
+					local fromTarget = (bit32.band(IEex_ReadDword(eData + 0x38), 0x400000) > 0)
+					if targetSource == true then
+						IEex_ApplyResref(spellRES, sourceID)
+					else
+						IEex_ApplyResref(spellRES, targetID)
+					end
+				end
+			end
+		end)
+	end
 end
 
 classstatnames = {"Barbarian", "Bard", "Cleric", "Druid", "Fighter", "Monk", "Paladin", "Ranger", "Rogue", "Sorcerer", "Wizard"}

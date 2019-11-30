@@ -83,25 +83,23 @@ Weight: 1 lb.~
 //@10040    = ~Druid's Stone~
 @10041    = ~These sand-colored stones were fashioned by druids watching the borders of the Anauroch Desert.  The druids would often meditate while on their lonely vigils, and the stones they wore would help them commune with the earth and stones beneath their feet, telling them of the movements of desert creatures in the surrounding area.  In times of danger, they could summon the strength of the earth to their aid, causing their skin to become as hard as stone and giving them some protection against attacks. 
 
-The reason for their vigil was unknown, but the druids vanished mysteriously over fifty years ago, and no one knows what became of them.  Only their druid stones remained, and the stones have told no stories. 
+The reason for their vigil was unknown, but the druids vanished mysteriously over fifty years ago, and no one knows what became of them.  Only their druid stones remained, and the stones have told no stories.
 
 STATISTICS:
 
 Special:
- Spell Power:  Can cast the spell Stoneskin (at level 15) once per day
-Weight: 1 lb.~
+  While under the effect of Stoneskin, the wearer gains 5/- resistance to physical damage
+Weight: 1 lb.
+Minimum Wisdom of 13 Required~
 //@10042    = ~Druid's Stone of Thorns~
 @10043    = ~Versions of these sand-colored stones were fashioned by druids watching the borders of the Anauroch Desert, but this particular stone was worn by Theon, who was believed to have organized the Anauroch vigil based on portents he had received upon the winter winds.  When Atalacyls the Lost eventually crossed the boundaries of the Anauroch desert, Theon gathered the druids to him and engaged him in battle on the sands.  Despite the powers of their stones, Atalacyls defeated them to a man and turned their bodies to sand, then made a small pile of their druid stones as a warning to others not to follow him on his path.  He continued his journey westwards until he was found by Old Duke Kholsa Ehld, and the two of them met in battle over Atalacyls' crimes against the Weeping Queen.
 
-While worn, this stone allows the druid to ask favors of the earth and stones beneath their feet.  In times of danger, the stone can summon the strength of the earth to their aid, causing rocky stalactites to erupt from the earth, the area to blossom with spikes, or the wearer's skin to become as hard as stone and giving them some protection against attacks. 
-
 STATISTICS:
 
 Special:
- Spell Power:  Can cast spell Spike Growth (at level 30) once per day
- Spell Power:  Can cast the spell Stoneskin (at level 30) once per day
- Spell Power:  Can cast the spell Spike Stones (at level 30) once per day
-Weight: 1 lb.~
+  While under the effect of Stoneskin, the wearer gains 10/- resistance to physical damage, and enemies who hit the wearer in melee take 2d4 piercing damage
+Weight: 1 lb.
+Minimum Wisdom of 13 Required~
 //@10044    = ~Eye of the Storm~
 @10045    = ~In the howling north of Icewind Dale, it can be difficult to steady oneself before battle... or even keep one's wit when surrounded by foes.  These simple medallions carry a minor blessing that allows a soldier to achieve a measure of peace even in the middle of combat, allowing him to steady himself to face the trials ahead.  These medallions are highly prized by soldiers that deal with the Uthgardt, especially when trading turns sour, and it seems blood is about to be shed.  
 
@@ -261,7 +259,7 @@ STATISTICS:
 
 Spell Power: Can cast Blur (at level 10) 1/Day
 Spell Power: Can cast Melf's Acid Arrow (at level 10) 1/Day
-Spell Power:  Can cast Otiluke's Resilient Sphere (at level 10) 1/Day
+Spell Power:  Can cast Otiluke's Resilient Sphere with no save, bypassing spell resistance (at level 10) 1/Day
 Weight: 1 lb.~
 //@10082    = ~House of Despana Insignia~ //HoF
 @10083    = ~This small obsidian and adamantite amulet has a metal hoop near the top through which a purple and pink ribbon passes.  The raised surface of the amulet features the arrow and hexagon glyph of House Despana.  Malavon Despana crafted the amulet for his brother, Ilmryn.  Legends state that when Malavon and his allies in the church of Vhaeraun attacked the Lolth matriarchy, he had to face his brother, then the Weapons Master of House Despana, in a pitched battle.  Just as Ilmryn gained the upper hand, Malavon uttered a secret word that invoked an unknown power within the amulet.  Ilmryn was surrounded by a magical barrier that protected him from harm.  Since it was ostensibly a beneficial magical effect, Ilmryn's natural magic resistance did not help him resist the amulet's power.  When the Weapons Master emerged from the protective sphere, he found himself face to face with over a dozen of the most powerful tanar'ri he had ever seen.  He died screaming, cursing his brother's name.
@@ -270,7 +268,7 @@ STATISTICS:
 
 Spell Power: Can cast Blur (at level 30) 1/Day
 Spell Power: Can cast Lutzaen's Frequent Jaunt (at level 30) 1/Day
-Spell Power:  Can cast Otiluke's Resilient Sphere with no save (at level 30) 1/Day
+Spell Power:  Can cast Otiluke's Resilient Sphere with no save, bypassing spell resistance (at level 30) 1/Day
 Weight: 1 lb.~
 
 
@@ -294,9 +292,7 @@ Weight: 0 lb.~
 
 STATISTICS:
 
-Strength: Set to 30
-Dexterity: Set to 1
-Constitution: Set to 1
+While equipped, the wearer is afflicted by a disease that grants +10 Strength but also -4 Dexterity and -4 Constitution. The Strength bonus will stack with Strength bonuses from other items or spells. Curing the disease will remove both the bonuses and penalties.
 Special: Can only be removed by a Remove Curse spell
 Weight: 0 lb.~
 //@10090    = ~Ring of Invisibility~
@@ -423,7 +419,7 @@ STATISTICS:
 
 Resistance: 1/- Slashing Resistance
 Resistance: 1/- Piercing Resistance
-Resistance: 1/- Crushing Resistance
+Resistance: 1/- Bludgeoning Resistance
 Resistance: 1/- Missile Resistance
 Resistance: 1/- Fire Resistance
 Resistance: 1/- Cold Resistance
@@ -453,7 +449,12 @@ STATISTICS:
 Wisdom: +2
 Weight: 0 lb.~
 //@10132    = ~Tymora's Loop~
-//@10133    = ~Item description can remain the same; if new description is needed put it here~
+@10133    = ~This ring has received the blessings of Tymora and will bring good luck to those who wear it.
+
+STATISTICS:
+
+Luck:  +2
+Weight: 0 lb.~
 @10134    = ~Ring of Force Resistance~
 @10135    = ~A ring is a small band of precious metal that is used as jewelry.  Some rare rings have had enchantments placed upon them that confer various magical abilities.  These rings are highly sought after, especially by those of the adventuring profession. For no apparent reason, this ring feels warm to the touch.
 
@@ -801,9 +802,7 @@ STATISTICS:
 
 Armor Class:  +5 (armor)
 Special:  
-  Can cast Planar Binding: Water Elemental (at level 15) 1/day
-  Can cast Cone of Cold (at level 15) 1/day
-  Can cast Horrid Wilting (at level 15) 1/day
+  Cold and magic damage dealt by the wearer from most sources is increased by 30%
 Weight:  3 lb.~
 //@10238    = ~Elven Sewn Gloves~
 //@10239    = ~Item description can remain the same; if new description is needed put it here~
@@ -866,7 +865,7 @@ Arkamadis wore a pair of bracers during most of his time in the north.  Regardle
 STATISTICS:
 
 Deflection Bonus: +4
-Special: Can grant self +8 Strength for 2 rounds 1/Day
+Special: Can grant self +8 Strength for 8 rounds 1/Day
 Weight: 1 lb.~
 //@10254    = ~Great Lions of Arkamadis~
 @10255    = ~Between 910 and 946 DR, the lands east of the Spine of the World mountains were often plagued by the minions of the archmage Arkamadis.  Believed to have had contact with Arrakon, the would-be conqueror of Icewind Dale's barbarians, Arkamadis was only slightly less dedicated to dominating the native people that surrounded his tower, Whitestone Talon.
@@ -876,7 +875,7 @@ Arkamadis wore a pair of bracers during most of his time in the north.  Regardle
 STATISTICS:
 
 Deflection Bonus: +6
-Special: Can grant self +12 Strength for 3 rounds 1/Day
+Special: Can grant self +12 Strength for 12 rounds 1/Day
 Weight: 1 lb.~
 //@10256    = ~Rakavik's Bracers~
 @10257    = ~The invoker Rakavik Savell was a man of few words.  He kept company with thugs, brigands, murderers, and criminals of all sorts, men and women who valued strong actions over a silver tongue.  Rakavik was a clever man, and devised these bracers knowing that most people assume bracers are for protection.  When opponents thought Rakavik was out of spells, he never needed to pull out a wand or staff to make a quick offensive action.  He simply made a non-threatening gesture with his arms and activated these polished steel bracers.  Despite being over two hundred years old, the large sections of black enamel on the bracers are still dark and shining.
@@ -885,7 +884,7 @@ Rakavik died in 1012 DR when he and his fellows botched an attempted burglary in
 
 STATISTICS:
 
-Spell Power: Once per day, can cast a more powerful version of Magic Missile. The bracers fire 10 magic missiles at a single target. Each missile deals 1d4+1 damage.~
+Spell Power: Once per day, can cast a more powerful version of Magic Missile. The bracers fire 15 magic missiles at a single target. Each missile deals 1d4+1 damage.~
 //@10258    = ~Rakavik's Imbued Bracers~
 @10259    = ~The invoker Rakavik Savell was a man of few words.  He kept company with thugs, brigands, murderers, and criminals of all sorts, men and women who valued strong actions over a silver tongue.  Rakavik was a clever man, and devised these bracers knowing that most people assume bracers are for protection.  When opponents thought Rakavik was out of spells, he never needed to pull out a wand or staff to make a quick offensive action.  He simply made a non-threatening gesture with his arms and activated these polished steel bracers.  Despite being over two hundred years old, the large sections of black enamel on the bracers are still dark and shining.
 
@@ -893,7 +892,7 @@ Rakavik died in 1012 DR when he and his fellows botched an attempted burglary in
 
 STATISTICS:
 
-Spell Power: Once per day, can cast a more powerful version of Mordenkainen's Force Missiles. The bracers fire 10 force missiles at a single target. Each missile deals 2d4 damage to the target and forces every creature within 5 feet of the target to make a Reflex save or take 35 damage.
+Spell Power: Once per day, can cast a more powerful version of Magic Missile. The bracers fire 40 magic missiles at a single target. Each missile deals 1d4+1 damage.
 Weight: 1 lb.~
 //@10260    = ~Tamjan's Bracers~
 @10261    = ~The Neverwinter wizard Tamjan Baker could have been an excellent mage, or so his teachers said.  Unfortunately, Tamjan was called upon repeatedly to assist his father in the expansion of their family bakery.  To establish a reputation among the cities of the north, Tamjan would magically preserve the freshness of his father's baked goods as he whisked them away to important events from Luskan to Silverymoon.  Tamjan hated assisting his father.  It made him the butt of jokes in wizardly circles across the north.  Tamjan eventually decided to hire a group of bandits to attack him and his father as they traveled to Luskan.  The young mage believed that the attack would scare his father into giving up his outlandish plan to establish bakeries across the north.  The bandits became overzealous in the execution of their role.  Weeks later, all the Neverwinter scouts found were Tamjan's magical bracers lying in a puddle of slush.
@@ -1128,7 +1127,7 @@ In the evening, three farmers approached Behem's field and saw the farmer asleep
 STATISTICS:
 
 Constitution: +6 bonus
-Special: When wearer is hit, there is a 40% chance that the attacker will be entangled for 1 round. In addition, if the target fails a DC 30 Fortitude saving throw, it will be engulfed by the entangling plants, taking 3d4 crushing damage over the round.
+Special: When wearer is hit, there is a 40% chance that the attacker will be entangled for 1 round. In addition, if the target fails a DC 30 Fortitude saving throw, it will be engulfed by the entangling plants, taking 3d4 bludgeoning damage over the round.
 Weight: 3 lb.~
 //@10332    = ~Mystra's Blessing~
 //@10333    = ~Item description can remain the same; if new description is needed put it here~
@@ -1387,7 +1386,7 @@ Armor Bonus: +5 vs. missile
 Saving Throw Bonus:  +5 on Reflex saves
 Weight:  4 lb.~
 //@10389    = ~Adventurer's Robe~
-@10390    = ~This robe has been specially enchanted to meet the eclectic needs of the adventuring wizard. Aside from protecting the wearer from various forms of crushing damage, it also provides protection from the spells and abilities that affect the mind.
+@10390    = ~This robe has been specially enchanted to meet the eclectic needs of the adventuring wizard. Aside from protecting the wearer from various forms of bludgeoning damage, it also provides protection from the spells and abilities that affect the mind.
 
 STATISTICS:
 
@@ -1811,8 +1810,8 @@ Special:
   Resistance: 10/- Acid Resistance
   Saving Throw Bonus: +5 to Fortitude saves
 Weight: 25 lb.~
-@10467    = ~Milton Sixtoes' Armor +1~
-@10468    = ~Absolute Self started out as very ordinary studded leather armor worn by an even more ordinary thief named Milton Sixtoes (so named since he had six toes on his left foot).  Milton belonged to a local thieves guild in the mining city of Mirabar, and thus was tasked with petty thievery of coin purses and the occasional gem.  
+@10467    = ~Milton Sixtoes' Armor +2~
+@10468    = ~Milton Sixtoes' Armor started out as very ordinary studded leather armor worn by an even more ordinary thief named Milton Sixtoes (so named since he had six toes on his left foot).  Milton belonged to a local thieves guild in the mining city of Mirabar, and thus was tasked with petty thievery of coin purses and the occasional gem.
 
 All was well enough by Milton's ordinary standards, until one day when a thief of notable magical prowess transferred to Milton's guild.  The guild master assigned this new thief to be Milton's partner in crime, aiding him in his petty, but profitable dirty deeds.  Little did Milton know that his new partner was not satisfied with petty thievery.  In fact, it was his partner's higher ambition that almost got Milton in trouble with the local authorities.  During thieving assignments with his new partner, Milton began to perform very risky acts of larceny, and not through his own will.  It was as if someone else had control of Milton's body and used him to carry out the acts.  Luckily for Milton, he was able to perform the higher risk activities, but he knew that one day his luck would run out.
 
@@ -1823,7 +1822,7 @@ Not long after Milton began wearing the armor, he discovered his new partner was
 STATISTICS:
 
 Light Armor
-Armor Bonus: +4
+Armor Bonus: +5
 Max Dex Bonus:  +5
 Armor Check Penalty:  -1
 Arcane Spell Failure:  15%
@@ -1831,7 +1830,7 @@ Special:
   Spellward: Immune to Charm and Domination spells
 Weight: 20 lb.~
 @10469    = ~Milton Sixtoes' Armor of Absolute Self +4~
-@10470    = ~Mental Oneness started out as very ordinary studded leather armor worn by an even more ordinary thief named Milton Sixtoes (so named since he had six toes on his left foot).  Milton belonged to a local thieves guild in the mining city of Mirabar, and thus was tasked with petty thievery of coin purses and the occasional gem.  
+@10470    = ~Milton Sixtoes' Armor of Absolute Self started out as very ordinary studded leather armor worn by an even more ordinary thief named Milton Sixtoes (so named since he had six toes on his left foot).  Milton belonged to a local thieves guild in the mining city of Mirabar, and thus was tasked with petty thievery of coin purses and the occasional gem.
 
 All was well enough by Milton's ordinary standards, until one day when a thief of notable magical prowess transferred to Milton's guild.  The guild master assigned this new thief to be Milton's partner in crime, aiding him in his petty, but profitable dirty deeds.  Little did Milton know that his new partner was not satisfied with petty thievery.  In fact, it was his partner's higher ambition that almost got Milton in trouble with the local authorities.  During thieving assignments with his new partner, Milton began to perform very risky acts of larceny, and not through his own will.  It was as if someone else had control of Milton's body and used him to carry out the acts.  Luckily for Milton, he was able to perform the higher risk activities, but he knew that one day his luck would run out.
 
@@ -1899,8 +1898,9 @@ Max Dex Bonus:  +5
 Armor Check Penalty:  -1
 Arcane Spell Failure:  15%
 Special:
-  Wearer is under the effect of the 3rd level Mage spell Nondetection.
+  Wearer is under the effect of Nondetection.
   Move Silently skill: +6
+  The armor bonus of Interloper is increased by 1 for every 5 points of Move Silently the wearer has.
 Weight: 5 lb.~
 @10477    = ~Silent Interloper +5~
 @10478    = ~One of the greatest skills a scout can have is the ability to sneak about undetected.  For many years a scout will hone their craft in the arts of hiding in shadows and moving silently, just so they may attain one of the most valuable resources in the realm - information. 
@@ -1917,8 +1917,9 @@ Max Dex Bonus:  +5
 Armor Check Penalty:  -1
 Arcane Spell Failure:  15%
 Special:
-  Wearer is under the effect of the 3rd level Mage spell Nondetection
+  Wearer is under the effect of Nondetection.
   Move Silently skill: +12
+  The armor bonus of Silent Interloper is increased by 1 for every 5 points of Move Silently the wearer has.
 Weight: 15 lb.~
 
 
@@ -2129,9 +2130,8 @@ Armor Bonus: +8
 Max Dex Bonus:  +2
 Armor Check Penalty:  -5
 Arcane Spell Failure:  30%
-Special: 
-  Hit Point Bonus: +20 to Max Hit Points
-  Regeneration: Regain 1 hit point every round
+Special:
+  Regeneration: Every round, the wearer regains a number of Hit Points equal to their Constitution bonus
 Weight: 40 lb.~
 //@10519    = ~Mail of Life +5~ //HoF
 //@10520    = ~If we decide to make a HoF version of this item, we should put its description here~
@@ -2206,7 +2206,7 @@ Max Dex Bonus:  +0
 Armor Check Penalty:  -6
 Arcane Spell Failure:  40%
 Special:
-  Spell Power:  Can cast the spell Sanctuary (at level 10) once per day. 
+  Whenever the wearer is hit in melee, there is a chance (5% * the wearer's Wisdom bonus) that the wearer will be protected by Sanctuary for the next 3 rounds
 Weight: 40 lb.~
 @10535    = ~Sanctity of Being +4~
 @10536    = ~Maya Selvinis was a solitary half-elf ranger who lived on the outskirts of Neverwinter.  Feeling different and un-whole due to her breeding, she rarely had any interaction with other people except when she was summoned to aid in a crisis.  Although she did not care for the company of others, she was more than eager to aid those in peril.  However, after helping others, she would quickly return to her solitary ways, despite the general tolerance exhibited by the locals in Neverwinter.
@@ -2226,7 +2226,7 @@ Max Dex Bonus:  +0
 Armor Check Penalty:  -6
 Arcane Spell Failure:  40%
 Special:
-  Spell Power:  Can cast the spell Sanctuary (at level 20) twice per day. 
+  Whenever the wearer is hit in melee, there is a chance (10% * the wearer's Wisdom bonus) that the wearer will be protected by Sanctuary for the next 3 rounds
   Spellward:  Immunity to Cloak of Fear, Horror and Charm Person spells
 Weight: 40 lb.~
 @10537    = ~Armor of Tuqak Mauler +2~
@@ -2277,7 +2277,7 @@ Max Dex Bonus:  +0
 Armor Check Penalty:  -6
 Arcane Spell Failure:  40%
 Special:
-  Retribution: 50% chance attacker suffers 1d6 cold damage per successful hit on wearer of Glacial Resilience (melee only)
+  Retribution: Attacker suffers 1d6 cold damage per successful hit on wearer of Glacial Resilience (melee only)
 Weight: 40 lb.~
 @10543    = ~Glacial Storm +5~
 @10544    = ~Kyndor Icehammer was a mighty Dwarven warrior who loved the cold of the Dales.  Not only did Kyndor call Icewind Dale his home, but he also had a special connection to the Dales - it was a part of him - not just a part of his body, but of his very soul.  
@@ -2294,7 +2294,7 @@ Max Dex Bonus:  +0
 Armor Check Penalty:  -6
 Arcane Spell Failure:  40%
 Special:
-  Retribution: 50% chance attacker suffers 2d6 cold damage per successful hit on wearer of Glacial Storm (melee only)
+  Retribution: Attacker suffers 2d6 cold damage per successful hit on wearer of Glacial Storm (melee only)
   Resistance:  15/- Cold Resistance
 Weight: 40 lb.~
 
@@ -2491,7 +2491,7 @@ Max Dex Bonus:  +1
 Armor Check Penalty:  -5
 Arcane Spell Failure:  35%
 Special:
-  Spellward: Immunity to Stinking Cloud, Cloudkill, and Cloud of Pestilence
+  Spellward: Immunity to Stinking Cloud, Cloudkill, Cloud of Pestilence and Whirlwind
   Saving Throw Bonus:  +2 to Reflex saves
 Weight: 50 lb.~
 @10577    = ~Air Genasi Gale Armor +3~ //Without Spell Revisions Installed
@@ -2531,9 +2531,9 @@ Special:
   Saving Throw Bonus:  +6 to Reflex saves
 Weight: 70 lb.~
 @10581    = ~Diamond Cut +1~
-@10582    = ~Plate and full plate are arguably the toughest armor in any realm.  However, no one can deny that full plate is susceptible to crushing damage.  In fact, most bludgeoning weapons were created with the intention of blowing through full plate armor. 
+@10582    = ~Plate and full plate are arguably the toughest armor in any realm.  However, no one can deny that full plate is susceptible to bludgeoning damage.  In fact, most bludgeoning weapons were created with the intention of blowing through full plate armor. 
 
-With this thought in mind, the armor known as Diamond Cut was forged.  No one is exactly sure how Diamond Cut came into existence, but what is known is that the renowned Mirabar armorsmith, Cutter Boomstock, one day unveiled the armor to a well-to-do knight who traveled all the way from Amn.  Diamond Cut glistened in the firelight like a thousand diamonds, almost blinding was the intensity of the sheen.  And, in a remarkable demonstration, Cutter Boomstock lifted his anvil high in the air and struck the armor.  To everyone's amazement, the strike left no mark on the sparkling armor.   
+With this thought in mind, the armor known as Diamond Cut was forged.  No one is exactly sure how Diamond Cut came into existence, but what is known is that the renowned Mirabar armorsmith, Cutter Boomstock, one day unveiled the armor to a well-to-do knight who traveled all the way from Amn.  Diamond Cut glistened in the firelight like a thousand diamonds, almost blinding was the intensity of the sheen.  And, in a remarkable demonstration, Cutter Boomstock lifted his anvil high in the air and struck the armor.  To everyone's amazement, the strike left no mark on the sparkling armor.
 The knight happily took the armor and left Mirabar forever, never to be seen again.  However, his armor, Diamond Cut, has been seen from time to time, leading people to speculate that the elaborate knight met an untimely death.
 
 STATISTICS:
@@ -2544,10 +2544,13 @@ Max Dex Bonus:  +1
 Armor Check Penalty:  -5
 Arcane Spell Failure:  35%
 Special:
-  Resistance: 2/- Bludgeoning Resistance
+  Resistance: 5/- Bludgeoning Resistance
+  Resistance: 3/- Slashing Resistance
+  Resistance: 3/- Piercing Resistance
+  Resistance: 3/- Missile Resistance
 Weight: 50 lb.~
 @10583    = ~Diamond Cutter +3~
-@10584    = ~Plate and full plate are arguably the toughest armor in any realm.  However, no one can deny that full plate is susceptible to crushing damage.  In fact, most bludgeoning weapons were created with the intention of blowing through full plate armor. 
+@10584    = ~Plate and full plate are arguably the toughest armor in any realm.  However, no one can deny that full plate is susceptible to bludgeoning damage.  In fact, most bludgeoning weapons were created with the intention of blowing through full plate armor. 
 
 With this thought in mind, the armor known as Diamond Cutter was forged.  No one is exactly sure how Diamond Cutter came into existence, but what is known is that the renowned Mirabar armorsmith, Cutter Boomstock, one day unveiled the armor to a well-to-do knight who traveled all the way from Amn.  Diamond Cutter glistened in the firelight like a thousand diamonds, almost blinding was the intensity of the sheen.  And, in a remarkable demonstration, Cutter Boomstock lifted his anvil high in the air and struck the armor.  To everyone's amazement, the strike left no mark on the sparkling armor.   
 
@@ -2561,13 +2564,29 @@ Max Dex Bonus:  +1
 Armor Check Penalty:  -5
 Arcane Spell Failure:  35%
 Special:
-  Resistance: 3/- Bludgeoning Resistance
-  Resistance: 1/- Slashing Resistance
-  Resistance: 1/- Piercing Resistance
-  Resistance: 1/- Missile Resistance
+  Resistance: 10/- Bludgeoning Resistance
+  Resistance: 5/- Slashing Resistance
+  Resistance: 5/- Piercing Resistance
+  Resistance: 5/- Missile Resistance
 Weight: 50 lb.~
 @10585    = ~Aasimar's Aura +2~
-//@10586    = ~Item description can remain the same; if new description is needed put it here~
+@10586    = ~Aasimars are direct offspring from a union between mortal and celestial minion.  While normally carrying innate powers, it is not unusual for an Aasimar to don blessed armor.  Such is the case for this unique armor known as Aasimar's Aura.  The armor shimmers with a silvery glow and is adorned with exquisite blue etchings across the breast.  One look at the armor and it is simple to see that it possesses powerful protections.
+
+Long ago, the Blood War between the Baazetu and the Tanar'ri spilled over to the material plane.  Luckily for most of the world, the battle was far away from any major towns or cities.  However, this was still no comfort for the Celestial beings that watched over the material plane.  So, it was quickly decided to amass as many Celestial and Aasimar beings as possible and drive the Blood War back into its own abyssal planes.  However, because of the great numbers of Tanar'ri and Baatezu, the Celestial beings permanently blessed all the Aasimars' armor with Protection from Evil.  This spell allowed the Aasimars to get in close to the evil creatures without getting attacked.  Once all the Aasimars were in position, the Celestials gave the order to attack, which completely surprised the hordes of Baazetu and Tanar'ri.  The ensuing battle raged for days, with high casualties on both sides, but eventually the evil hordes were pushed back into their abyssal planes.
+
+As a result of the high Aasimar casualties, it was not uncommon for looters to take the armor off the dead.  So, from time to time, a set of Aasimar's Aura will pop up in a shop, or on an adventurer who could afford the high purchase price.
+
+STATISTICS:
+
+Heavy Armor
+Armor Bonus: +10
+Max Dex Bonus:  +1
+Armor Check Penalty:  -5
+Arcane Spell Failure:  35%
+Special:
+  Wearer is under the effect of the spell Protection from Evil
+  Spellward: Immunity to Unholy Blight and Blasphemy
+Weight: 50 lb.~
 @10587    = ~Celestial Aura +5~
 @10588    = ~Aasimars are direct offspring from a union between mortal and celestial minion.  While normally carrying innate powers, it is not unusual for an Aasimar to don blessed armor.  Such is the case for this unique armor known as Celestial Aura.  The armor shimmers with a silvery glow and is adorned with exquisite blue etchings across the breast.  One look at the armor and it is simple to see that it possesses powerful protections. 
 
@@ -2585,7 +2604,8 @@ Arcane Spell Failure:  35%
 Special:
   Wearer is under the effect of the 1st level Mage spell Protection from Evil
   Resistance: 20/- Fire Resistance
-  Saving Throw Bonus: +3 to Fortitude saves 
+  Saving Throw Bonus: +3 to Fortitude saves
+  Spellward: Immunity to Unholy Blight and Blasphemy
 Weight: 50 lb.~
 
 //@10589    = ~Buckler~
@@ -2642,7 +2662,7 @@ Armor Bonus: +1 vs. missile weapons
 Special:  
   Resistance: 1/- slashing resistance
   Resistance: 1/- piercing resistance
-  Resistance: 1/- crushing resistance
+  Resistance: 1/- bludgeoning resistance
   Resistance: 1/- missile resistance
 Armor Check Penalty:  -10
 Arcane Spell Failure:  50%
@@ -2843,15 +2863,16 @@ Special:
 Armor Check Penalty:  -1
 Arcane Spell Failure:  5%
 Weight: 6 lb.~
-//@10643    = ~Flank of the Virgin~
+@10643    = ~Flank of the Virgin +1~
 @10644    = ~It is rare that the residents of the Ten-Towns willingly interfere in the affairs of the native barbarians.  Occasionally, the townsmen cannot help but come across a landmark or religious site that the barbarians erected.  Twenty years ago, Sammel Colger of Bremen was fishing near the Sea of Moving Ice when he discovered the remnants of a small barbarian ship.  He was drawn to a particular piece of the hull that had a colorful painting on the side.  As he pulled the wood from the water, a polar bear leapt up from the depths and struck at the young man's head.  Instinctively, he pulled the wood towards his face.  The bear's huge talons were deflected.  Amazingly, the creature slipped and fell back into the cold water.  Not hesitating to see what the bear would do, Sammel rushed back to his small ship and returned to Bremen.  A priest of Tempus later told the young man that the painting was of a sacrificial virgin.  He believed that the small boat must have drifted all the way from Maer Dualdon to the Sea of Moving Ice, where it was smashed to pieces.  Sammel had the wood fashioned into a shield, which he took with him on his far-reaching fishing trips until the end of his days.
 
 STATISTICS:
 
-Shield Bonus: +2
-Dexterity: +2 bonus
+Shield Bonus: +3
 Armor Check Penalty:  -2
 Arcane Spell Failure:  15%
+Special:
+  Dexterity: +2
 Weight: 15 lb.~
 @10645    = ~Blessed Flank of the Virgin +3~
 @10646    = ~It is rare that the residents of the Ten-Towns willingly interfere in the affairs of the native barbarians.  Occasionally, the townsmen cannot help but come across a landmark or religious site that the barbarians erected.  Twenty years ago, Sammel Colger of Bremen was fishing near the Sea of Moving Ice when he discovered the remnants of a small barbarian ship.  He was drawn to a particular piece of the hull that had a colorful painting on the side.  As he pulled the wood from the water, a polar bear leapt up from the depths and struck at the young man's head.  Instinctively, he pulled the wood towards his face.  The bear's huge talons were deflected.  Amazingly, the creature slipped and fell back into the cold water.  Not hesitating to see what the bear would do, Sammel rushed back to his small ship and returned to Bremen.  A priest of Tempus later told the young man that the painting was of a sacrificial virgin.  He believed that the small boat must have drifted all the way from Maer Dualdon to the Sea of Moving Ice, where it was smashed to pieces.  Sammel had the wood fashioned into a shield, which he took with him on his far-reaching fishing trips until the end of his days.
@@ -2859,9 +2880,10 @@ Weight: 15 lb.~
 STATISTICS:
 
 Shield Bonus: +5
-Dexterity: +5 bonus
 Armor Check Penalty:  -2
 Arcane Spell Failure:  15%
+Special:
+  Dexterity: +5
 Weight: 15 lb.~
 @10647    = ~Myo-Myo's Gong +1~
 @10648    = ~Myo-Myo was a famous ghost hunter from T'u Lung in Kara Tur, and made her living by slaying or banishing all manner of demons and foul spirits.  Myo-Myo's so-called gong is but one of her many pieces of fantastic equipment, a round black shield ringed with geometric patterns and infused with sacred power by the seven stone monks of Seven Stone Monk Temple.  Once per day the shield's bearer may strike his or her weapon against Myo-Myo's gong, the resulting "CLASH!" sending out a wave of spiritual energy that rends at the forms of any evil creatures.
@@ -4135,7 +4157,7 @@ Weight: 1 lb.
 Feat Requirement:  Exotic Weapon, Bastard Sword
 Type:  One-handed~
 @10883    = ~Sword of Gleaming Dykhast~
-@10884    = ~Ancient dwarven legends tell of a time when the noblest of metals was not dwarven steel, nor meteoric iron, nor mithril, but dykhast - an alloy so strong that a blade's edge would never dull with toil or battle, and with a surface so perfect and gleaming that its shimmering surface could be seen a dragon's flight away.  The oldest of dwarves speak of dykhast blades with tears of fond remembrance in their eyes, and callously spit at the mention of the "sundry weak and piddling'" metals that today's arms and armor are fashioned from.
+@10884    = ~Ancient dwarven legends tell of a time when the noblest of metals was not dwarven steel, nor meteoric iron, nor mithril, but dykhast - an alloy so strong that a blade's edge would be capable of slicing through adamantine, and with a surface so perfect and gleaming that its shimmering surface could be seen a dragon's flight away.  The oldest of dwarves speak of dykhast blades with tears of fond remembrance in their eyes, and callously spit at the mention of the "sundry weak and piddling'" metals that today's arms and armor are fashioned from.
 
 There are rumors, though, of an ancient and secret temple called Chogoh Kyn - it is there, the tales say, that blades of dykhast are still made in the fashion of days long past.  The price may be high, but for the true connoisseur, there is no matching the glory, the perfection, the utter joy... of dykhast.
 
@@ -4374,7 +4396,7 @@ Enchantment:  +3
 Damage Type:  Slashing
 Special:
   Flame:  +2d6 fire damage
-  Conflagration: Each hit has a 20% chance to instantly release a 10d6 damage fireball on the target
+  Conflagration: Each hit has a 20% chance to instantly release a 10d6 damage fireball on the target (Reflex DC 35 for half)
 Weight:  9 lb.
 Feat Requirement:  Exotic Weapon, Bastard Sword
 Type:  One-handed~
@@ -4405,7 +4427,7 @@ Attack Bonus:  +2
 Enchantment:  +2 
 Damage Type:  Slashing 
 Special: 
-  Spell Process: 33% chance of spitting forth a viper as per the Vipergout spell on each successful hit
+  Spell Process: 33% chance per hit of summoning a viper under the wielder's control
   Venom: +2 points of poison damage every second for 6 seconds (Fortitude DC 24)
 Weight:  9 lb.
 Feat Requirement:  Exotic Weapon, Bastard Sword 
@@ -4432,7 +4454,7 @@ STATISTICS:
 Damage:  1d10
 Damage Type:  Slashing
 Special: 
-  Corrosion: +1d6 acid damage
+  Corrosion: +1d4 acid damage
 Weight: 10 lb.
 Feat Requirement:  Exotic Weapon, Bastard Sword
 Type:  One-handed~
@@ -4475,7 +4497,7 @@ Type:  One-handed~
 @10935    = ~Rage of Chaos +3~
 @10936    = ~This weapon is a sight to behold.  The blade is crafted of red-gold with a silver edge.  The guard is finely polished platinum, and the wire wound hilt is crafted of black adamantine.  When drawn, the blade radiates a rainbow of colors. 
    
-This weapon has been considered quite a blessing by those who wield it.  Against lawful creatures it does devastating damage and attacks are made with an uncanny accuracy.  Rage of Chaos has been known to turn the tide in many a battle.  In addition, the victim may loses control of his or her faculties and flies into a state of confusion when struck by the weapon.
+This weapon has been considered quite a blessing by those who wield it.  Against lawful creatures it does devastating damage.  Rage of Chaos has been known to turn the tide in many a battle.  In addition, the victim may lose control of his or her faculties and fly into a state of confusion when struck by the weapon.
 
 The history of Rage of Chaos is unknown.  The weapon has appeared throughout the realms in various battles over the centuries only to be lost once again.
  
@@ -4486,28 +4508,28 @@ Attack Bonus: +3
 Enchantment:  +3
 Damage Type: Slashing 
 Special:
-  Spell Process:  Target under the effects of the spell Chaos for 3 rounds upon successful hit (Will DC 15)
-  Chaotic: +2d6 damage to lawful creatures
-Weight: 8 lb. 
-Feat Requirement:  Exotic Weapon, Bastard Sword 
+  Spell Process: 33% chance per hit to confuse the target for 2 rounds (Will DC 18)
+  Chaotic: +3d6 damage to lawful creatures
+Weight: 8 lb.
+Feat Requirement:  Exotic Weapon, Bastard Sword
 Type:  One-handed~
 @10937    = ~Order's Nemesis +5~
-@10938    = ~This weapon is a sight to behold.  The blade is crafted of red-gold with a silver edge.  The guard is finely polished platinum, and the wire wound hilt is crafted of black adamantine.  When drawn, the blade radiates a rainbow of colors. 
+@10938    = ~This weapon is a sight to behold.  The blade is crafted of red-gold with a silver edge.  The guard is finely polished platinum, and the wire wound hilt is crafted of black adamantine.  When drawn, the blade radiates a rainbow of colors.
    
-This weapon has been considered quite a blessing by those who wield it.  Against lawful creatures it does devastating damage and attacks are made with an uncanny accuracy.  Rage of Chaos has been known to turn the tide in many a battle.  In addition, the victim may loses control of his or her faculties and flies into a state of confusion when struck by the weapon.  The chaotic powers of the blade also prevent the wielder from being controlled of confused in battle.
+This weapon has been considered quite a blessing by those who wield it.  Against lawful creatures it does devastating damage.  Rage of Chaos has been known to turn the tide in many a battle.  In addition, the victim may lose control of his or her faculties and fly into a state of confusion when struck by the weapon. The chaotic powers of the blade also prevent the wielder from being controlled of confused in battle.
  
 The history of Order's Nemesis is unknown.  The weapon has appeared throughout the realms in various battles over the centuries only to be lost once again.
  
 STATISTICS: 
  
-Damage: 1d10 + 5 
-Attack Bonus: +5  
+Damage: 1d10 + 5
+Attack Bonus: +5
 Enchantment:  +5 
-Damage Type: Slashing 
-Special: 
+Damage Type: Slashing
+Special:
   Constant Effect: Chaotic Commands while equipped 
-  Spell Process:  Target under the effects of the spell Chaos for 5 rounds upon successful hit (Will DC 29) 
-  Chaotic: +2d6 damage to lawful creatures 
+  Spell Process: 50% chance per hit to confuse the target for 2 rounds (Will DC 27)
+  Chaotic: +4d6 damage to lawful creatures
 Weight: 8 lb. 
 Feat Requirement:  Exotic Weapon, Bastard Sword 
 Type:  One-handed~
@@ -5317,7 +5339,7 @@ Attack Bonus:  +2
 Enchantment:  +2
 Damage Type:  Piercing
 Special:
-  Plague of Sorrows: Each hit inflicts a disease that lowers Wisdom and Charisma by 2 until cured (Fortitude DC 16)
+  Plague of Sorrows: Each hit inflicts a disease that lowers Strength, Dexterity, and Wisdom by 2 until cured (Fortitude DC 16, cumulative)
 Weight:  2 lb.
 Feat Requirement:  Martial Weapon, Polearm
 Type:  Two-handed~
@@ -5331,7 +5353,7 @@ Attack Bonus:  +4
 Enchantment:  +4
 Damage Type:  Piercing
 Special:
-  Plague of Sorrows: Each hit inflicts a disease that lowers Wisdom and Charisma by 6 until cured (Fortitude DC 32)
+  Plague of Sorrows: Each hit inflicts a disease that lowers Strength, Dexterity, and Wisdom by 4 until cured (Fortitude DC 30, cumulative)
 Weight:  2 lb.
 Feat Requirement:  Martial Weapon, Polearm
 Type:  Two-handed~
@@ -5364,7 +5386,17 @@ Weight: 5 lb.
 Feat Requirement:  Martial Weapon, Polearm
 Type:  Two-handed~
 //@11107    = ~Lightning Spear~
-//@11108    = ~Item description can remain the same; if new description is needed put it here~
+@11108    = ~One of man's earliest weapons, dating back to the most primitive of times, the first spears were simply wooden poles or sticks sharpened at one end.  When man mastered metals, spearheads were made from iron and steel.  Having reached this end, weaponers began experimenting with different types of spear heads, thus leading to the development of certain polearm types.  This spear is slightly different though, as it has been imbued with certain magical properties.
+
+STATISTICS:
+
+Damage:  1d8
+Damage Type:  Piercing
+Special:
+  Shock: +1d6 electric damage
+Weight: 5 lb.
+Feat Requirement:  Martial Weapon, Polearm
+Type:  Two-handed~
 //@11109    = ~Fiery Spear +2~
 //@11110    = ~Item description can remain the same; if new description is needed put it here~
 //@11111    = ~Ice Spear +4~
@@ -5377,7 +5409,7 @@ Attack Bonus:  +4
 Enchantment:  +4
 Damage Type:  Piercing
 Special:
-  Ice Spear Throwing: This spear can be thrown, taking the form of an Icelance. When it is thrown, it gets a +4 attack bonus. If it hits, it deals 5d6 cold damage with no save and stuns the target for 3 rounds (Fortitude DC 26). The spear can be thrown three times per day. If it runs out of charges, it can still be used as a melee weapon for the rest of the day.
+  Ice Spear Throwing: This spear can be thrown, taking the form of an Icelance. If it hits, it deals 5d6 cold damage with no save but inflicts no physical damage.
 Weight: 5 lb.
 Feat Requirement:  Martial Weapon, Polearm
 Type:  Two-handed~
@@ -5389,7 +5421,7 @@ STATISTICS:
 Damage:  1d8
 Damage Type:  Piercing
 Special:
-  Wounding: Inflicts 1 additional point of damge per round for 10 rounds (Fortitude DC 14)
+  Wounding: Inflicts 1 additional point of damge per round for 10 rounds (Fortitude DC 17)
 Weight: 5 lb.
 Feat Requirement:  Martial Weapon, Polearm
 Type:  Two-handed~
@@ -5459,11 +5491,12 @@ Type:  Two-handed~
 
 STATISTICS:
 
-Damage:  1d8 + 1
-Attack Bonus:  +1 
-Enchantment:  +1
+Damage:  1d8 + 2
+Attack Bonus:  +2
+Enchantment:  +2
 Damage Type:  Piercing
-Special: +1d6 piercing damage and 10% chance of +1d10 extra piercing damage
+Special:
+  Penetrating: Increases chance of scoring a critical hit
 Weight: 5 lb.
 Feat Requirement:  Martial Weapon, Polearm
 Type:  Two-handed~
@@ -5472,11 +5505,12 @@ Type:  Two-handed~
 
 STATISTICS:
 
-Damage:  1d8 + 2
-Attack Bonus:  +2
-Enchantment:  +2
+Damage:  1d8 + 4
+Attack Bonus:  +4
+Enchantment:  +4
 Damage Type:  Piercing
-Special: +2d6 piercing damage and 20% chance of +2d10 extra piercing damage
+  Penetrating: Increases chance of scoring a critical hit
+  Heartseeking: All attacks ignore targets shield and armor bonuses
 Weight: 5 lb.
 Feat Requirement:  Martial Weapon, Polearm
 Type:  Two-handed~
@@ -5865,8 +5899,20 @@ Type:  One-handed~
 //@11234    = ~Item description can remain the same; if new description is needed put it here~
 //@11235    = ~Battleaxe +3~
 //@11236    = ~Item description can remain the same; if new description is needed put it here~
-@11237    = ~Battleaxe of Focus +1~
-//@11238    = ~Item description can remain the same; if new description is needed put it here~
+@11237    = ~Battleaxe of Killing Sprees +4~
+@11238    = ~Besides its superb craftsmanship, tiny runes of power can be seen etched all along the surface. It's obvious a lot of time and effort went into its creation and although not apparent at first, a slight blue glow can be seen emanating from the runes.
+
+STATISTICS:
+
+Damage:  1d8  +4
+Attack Bonus:  +4
+Enchantment:  +4
+Damage Type:  Slashing
+Special:
+  Killing Spree: After the wielder kills a creature with this axe (the finishing blow must have been dealt by this weapon), the wielder gains +10 damage for 1 round (cumulative)
+Weight: 7 lb.
+Required Feat:  Martial Weapon, Axe
+Type:  One-handed~
 //@11239    = ~Battleaxe of Burning~
 //@11240    = ~Item description can remain the same; if new description is needed put it here~
 //@11241    = ~Masterwork Throwing Axe~
@@ -5883,7 +5929,7 @@ Damage Type:  Slashing
 Special: 
   Resistance: 2/- Slashing Resistance
   Resistance: 2/- Piercing Resistance
-  Resistance: 2/- Crushing Resistance
+  Resistance: 2/- Bludgeoning Resistance
   Resistance: 2/- Missile Resistance
 Weight: 7 lb.
 Required Feat:  Martial Weapon, Axe
@@ -6570,7 +6616,7 @@ Attack Bonus:  +5
 Enchantment:  +5
 Damage Type:  Bludgeoning
 Special:
-  Lawful: +2d6 damage against chaotic creatures
+  Lawful: +4d6 damage against chaotic creatures
   Spell Power: Can cast Greater Command (at level 30) 3/day
 Weight: 3 lb.
 Required Feat:  Simple Weapon, Mace
@@ -6655,7 +6701,7 @@ Attack Bonus: +3
 Enchantment:  +3
 Damage Type: Bludgeoning
 Special:  
-  Headknocking: 33% chance target takes +3d6 Crushing damage to the head 
+  Headknocking: 33% chance target takes +3d6 Bludgeoning damage to the head 
   Spell Process: 20% chance target becomes Confused for 1 round (Will DC 27)
 Weight: 6 lb.
 Required Feat:  Simple Weapon, Mace
@@ -6670,7 +6716,7 @@ Attack Bonus: +5
 Enchantment:  +5
 Damage Type: Bludgeoning
 Special:  
-  Headknocking: 66% chance target takes +3d6 Crushing damage to the head 
+  Headknocking: 66% chance target takes +3d6 Bludgeoning damage to the head
   Spell Process: 50% chance target becomes Confused for 1 round (Will DC 33)
   Impact: Increased chance of scoring a critical hit
 Weight: 6 lb.
@@ -7501,7 +7547,7 @@ STATISTICS:
 Damage:  1d8 + 1
 Attack Bonus:  +1 
 Enchantment:  +1
-Damage Type:  Crushing
+Damage Type:  Bludgeoning
 Special:
   Frost: 50% chance +1d6 cold damage
   Stunning: 50% chance target is stunned for 1/2 combat round (Fortitude DC 18)
@@ -8337,15 +8383,15 @@ Special:
 Weight: 2 lb.
 Feat Requirement:  Martial Weapon, Bow
 Type:  Two-handed~
-@11733    = ~Composite Shortbow of Endurance +3~
+@11733    = ~Composite Shortbow of Dexterity +3~
 @11734    = ~Composite bows are made from laminated horn, wood, or bone and built with a recurve, meaning that the bow remains bow-shaped even when unstrung.
 
 STATISTICS:
 
 Damage:  +4 (missile)
-Attack Bonus: +3 
+Attack Bonus: +3
 Special:
-  Constitution: +4 bonus
+  Dexterity: +6 bonus
 Weight: 2 lb.
 Feat Requirement:  Martial Weapon, Bow
 Type:  Two-handed~
@@ -8402,7 +8448,7 @@ Special:
 Weight: 3 lb.
 Feat Requirement:  Martial Weapon, Bow
 Type:  Two-handed~
-@11755    = ~Longbow of Electrical Resistance +1~
+@11755    = ~Longbow of Electricity +1~
 @11756    = ~The longbow is similar to the shortbow, except that the staff is about as high as the archer is, usually 6 to 6.5 feet.  It has two advantages over the shortbow: better range and hence, it is much more accurate.  This one has been enhanced with magical properties, giving it an air of perfection.
 
 STATISTICS:
@@ -8410,7 +8456,7 @@ STATISTICS:
 Damage: +1 (missile)
 Attack Bonus: +2 
 Special:
-  Resistance: 10/- electrical resistance
+  Shock: Arrows fired from this bow deal +1d4 electrical damage
 Weight: 3 lb.
 Feat Requirement:  Martial Weapon, Bow
 Type:  Two-handed~
@@ -8535,20 +8581,13 @@ Special:
 Weight: 3 lb.
 Feat Requirement:  Martial Weapon, Bow
 Type:  Two-handed~
-@11781    = ~Composite Longbow of Empowerment +3~
+@11781    = ~Composite Longbow of Power Shots +4~
 @11782    = ~Composite bows are longbows or shortbows whose staves are made from more than one type of material.  This gives greater flexibility, and thus better range.  These were developed after the normal longbow.  
 
 STATISTICS:
 
-Damage:  +5 (missile)
-Attack Bonus:  +4 
-Special:
-  Strength: +3
-  Dexterity: +3
-  Constitution: +3
-  Intelligence: +3
-  Wisdom: +3
-  Charisma: +3
+Damage:  +16 (missile)
+Attack Bonus:  -5
 Weight: 3 lb.
 Feat Requirement:  Martial Weapon, Bow
 Type:  Two-handed~
@@ -8716,7 +8755,7 @@ Attack Bonus:  +2
 Special:
   Resistance: 2/- Slashing Resistance
   Resistance: 2/- Piercing Resistance
-  Resistance: 2/- Crushing Resistance
+  Resistance: 2/- Bludgeoning Resistance
   Resistance: 2/- Missile Resistance
 Weight: 6 lb.
 Feat Requirement:  Simple Weapon, Crossbow
@@ -8846,7 +8885,7 @@ Type:  Two-handed~
 
 STATISTICS:
 
-Damage:  +3 (missile)
+Damage:  +4 (missile)
 Attack Bonus:  +1 
 Weight: 9 lb.
 Feat Requirement:  Simple Weapon, Crossbow
@@ -10936,7 +10975,7 @@ Special:
 Weight: 14 lb.
 Feat Requirement:  Martial Weapon, Polearm
 Type:  Two-handed~
-//@12325    = ~Pudu's Fiery Blight~
+//@12327    = ~Pudu's Fiery Blight~
 @12328    = ~Captain Pudu, the Captain of the Guard of the Legion of the Chimera, is undoubtedly a master of overkill.  Typical of half-goblins, Pudu felt the need to wield the largest weapon physically possible for the vertically challenged half-breeds; the halberd.
 
 Naturally, not satisfied with any ordinary halberd, Pudu commissioned for particularly nasty weapon enchantments on his weapon of choice.  In line with the position Pudu held within the Legion of the Chimera, his new halberd, which he affectionately called Pudu's Fiery Blight, caused excessive fire damage on those who were unfortunate enough to be on the receiving end of the red glowing blade.  In addition, the halberd has been known to stun the opponent, rendering the target unable to fend off Pudu's attack, and even lower the target's resistances.  An opponent that cannot fight back is indeed Pudu's favorite type of opponent - just don't tell that to Pudu.
@@ -10954,7 +10993,6 @@ Special:
 Weight: 14 lb.
 Feat Requirement:  Martial Weapon, Polearm
 Type:  Two-handed~
-
 
 @12413    = ~Storm Shell Amulet~
 @12414    = ~Amulets are usually magical devices that are commonly worn around the neck, suspended from a chain.  The type of chain that comes with an amulet generally increases the item's aesthetic value, not its magical properties.  Only one amulet can be dangled from the neck.
@@ -11060,7 +11098,7 @@ Weight: 2 lb.~
 
 STATISTICS:
 
-Spell Power: Once per day, can use a stronger version of Finger of Death. The target must save vs. Fortitude (DC 40) or die instantly; the target takes 10d6+40 damage even if the save is made.
+Spell Power: Once per day, can use a stronger version of Finger of Death. The target must save vs. Fortitude (DC 40) or die instantly; the target takes 50d6+50 damage even if it made the save.
 Weight: 1 lb.~
 @12439    = ~Gauntlets of Extraordinary Specialization~
 @12440    = ~These magical gauntlets turn the wearer into a master of weapons. One who is already a master warrior will become even more skilled.
@@ -11564,11 +11602,11 @@ STATISTICS:
 Shield Bonus: +6
 Armor Bonus:  +1 vs. missile weapons
 Special:  
-  Resistance: 5/- Fire Resistance
-  Resistance: 5/- Cold Resistance
-  Resistance: 5/- Electrical Resistance
-  Resistance: 5/- Acid Resistance
-  Resistance: 5/- Magic Damage Resistance
+  Resistance: 10/- Fire Resistance
+  Resistance: 10/- Cold Resistance
+  Resistance: 10/- Electrical Resistance
+  Resistance: 10/- Acid Resistance
+  Resistance: 10/- Magic Damage Resistance
 Armor Check Penalty:  -10
 Arcane Spell Failure:  50%
 Weight: 15 lb.~
@@ -11637,16 +11675,16 @@ STATISTICS:
 Shield Bonus: +8
 Armor Bonus:  +1 vs. missile weapons
 Special:  
-  Resistance: 2/- Slashing Resistance
-  Resistance: 2/- Piercing Resistance
-  Resistance: 2/- Bludgeoning Resistance
-  Resistance: 2/- Missile Resistance
-  Resistance: 2/- Fire Resistance
-  Resistance: 2/- Cold Resistance
-  Resistance: 2/- Electrical Resistance
-  Resistance: 2/- Acid Resistance
-  Resistance: 2/- Magic Damage Resistance
-  Resistance: 2/- Poison Resistance
+  Resistance: 5/- Slashing Resistance
+  Resistance: 5/- Piercing Resistance
+  Resistance: 5/- Bludgeoning Resistance
+  Resistance: 5/- Missile Resistance
+  Resistance: 5/- Fire Resistance
+  Resistance: 5/- Cold Resistance
+  Resistance: 5/- Electrical Resistance
+  Resistance: 5/- Acid Resistance
+  Resistance: 5/- Magic Damage Resistance
+  Resistance: 5/- Poison Resistance
 Armor Check Penalty:  -10
 Arcane Spell Failure:  50%
 Weight: 25 lb.~
@@ -12469,6 +12507,189 @@ Special:
   Speed: 5 attacks per round
 Weight: 5 lb.
 Feat Requirement:  Simple Weapon, Crossbow
+Type:  Two-handed~
+@12681    = ~Cloak of Iron~
+@12682    = ~Slightly more literal than the typical cloak of iron, this strange metallic cloak increases the power of the spell Iron Skins.
+
+STATISTICS:
+
+The wearer gains an additional 30/- resistance to slashing, piercing, and bludgeoning damage as long as they are under the effect of the spell Iron Skins.
+Weight:  9 lb.~
+@12683    = ~Necklace of Combat Stealth~
+@12684    = ~Amulets are some of the most favored items to enchant by wizards because of their ability to be worn without interfering with the delicate rituals of spell casting. This particular amulet increases the wearer's ability to shrug off harmful mental effects.
+
+STATISTICS:
+
+Every round, the wearer makes a DC 40 Hide check. If successful, the wearer becomes invisible for 1 round.
+Weight: 1 lb.~
+@12685    = ~Rogue's Buckler +3~
+@12686    = ~A buckler, also known as a target shield, is a small round shield of wood or metal that fastens to the forearm.  Because of it's size it is light and can be worn with very little restriction to movement. This particular buckler is slightly warm to the touch.
+
+STATISTICS:
+
+Shield Bonus:  +4
+Special:
+  The bearer's Dexterity bonus is added to the shield bonus of this shield.
+Armor Check Penalty:  -1
+Arcane Spell Failure:  5%
+Weight:  2 lb.~
+@12687    = ~Shield of the Hand +12~
+@12688    = ~Made during the golden age between the elves of the Seldarine's Hand and the dwarves of Dorn's Deep. Etched with elven runes across its face, this shield was made from some of the strongest metals to ever come from Dorn's Deep. Any bearer of this shield is confident in the fact that this shield will deflect any blow brought upon it. The shield is almost weightless and not at all cumbersome to use, comparable to a buckler.
+
+STATISTICS:
+
+Shield Bonus:  +14
+Armor Bonus:  +1 vs. missile weapons
+Armor Check Penalty:  -1
+Arcane Spell Failure:  5%
+Weight:  1 lb.~
+@12689    = ~Boots of Striding~
+@12690    = ~These boots have been magically enchanted to increase the wearer's constitution.
+
+STATISTICS:
+
+Constitution: +4
+Weight: 1 lb.~
+@12691    = ~Tortoise Shell Amulet~
+@12692    = ~Amulets are usually magical devices that are commonly worn around the neck, suspended from a chain.  The type of chain that comes with an amulet generally increases the item's aesthetic value, not its magical properties.  Only one amulet can be dangled from the neck.
+
+STATISTICS:
+
+Spell Power: At will, can surround the wearer with a Tortoise Shell, which incapacitates the wearer for the next round but blocks the first damaging effect that would hit the wearer during that time.
+Weight: 1 lb.
+Minimum Wisdom of 16 Required~
+//@12693    = ~Bracers of Icelandic Pearl~ //HoF version
+@12694    = ~It is said that these magnificent bracers were constructed in the Spine of the World Mountains, and not so long ago. On the coastline of the Sea of Moving Ice, there dwelled Prashnak, an abjurer -- and a stubborn one at that. Apparently Prashnak was having a great deal of difficulty fending off a relentless scourge of trolls, who no doubt were interested in nothing more than his dug out, well stationed bower. Prashnak used storms of acid to keep the trolls at bay.  However the young mage was tiring of the constant attacks, and the trolls were becoming bolder.
+
+After several months of studying the various effects of wilting magic, elemental summoning, and magical methods of frosting, Prashnak was finally ready to try his experiment. After summoning a water elemental, Prashnak evaporated choice bodily components and then froze the hapless creature. This lead to the creation of truly horrific sculptures of ice. The trolls, as simple as they are, took extreme offense to these totems and reportedly fled the area. The experiment a gleaming success, the exultant Prashnak continues his woeful studies to this day. What manner of thief took hold of the bracers is unknown, but they have been missing for several years.
+
+STATISTICS:
+
+Armor Class:  +10 (armor)
+Special:  
+  Cold and magic damage dealt by the wearer from most sources is increased by 50%
+Weight:  3 lb.~
+@12695    = ~Chainmail of the Shield +2~
+@12696    = ~Chain mail is made of interlocking metal rings.  It is always worn over a layer of padded fabric or soft leather to prevent chafing and lessen the impact of blows. A faint blue glow can be seen emanating from the armor.
+
+STATISTICS:
+
+Medium Armor
+Armor Bonus: +7
+Max Dex Bonus:  +2
+Armor Check Penalty:  -5
+Arcane Spell Failure:  30%
+Special:
+  Shield Bonus: +7
+Weight: 30 lb.~
+@12697    = ~Chainmail of Solid Endurance +5~
+@12698    = ~Chain mail is made of interlocking metal rings.  It is always worn over a layer of padded fabric or soft leather to prevent chafing and lessen the impact of blows. A faint blue glow can be seen emanating from the armor.
+
+STATISTICS:
+
+Medium Armor
+Armor Bonus: +10
+Max Dex Bonus:  +2
+Armor Check Penalty:  -5
+Arcane Spell Failure:  30%
+Special:
+  Wearer gains additional physical damage resistance equal to their Constitution bonus
+Weight: 25 lb.~
+@12699    = ~Strange Sphere~
+@12700    = ~This sphere, colored half-red and half-blue, radiates powerful magic.~
+@12701    = ~Scarlet-Blue Ioun Stone~
+@12702    = ~This is an ioun stone - its powers are activated by placing the stone above ones head, causing it to float there until removed. This scarlet-blue sphere makes the wearer significantly more intelligent.
+
+STATISTICS:
+
+Intelligence: +8
+Weight: 1 lb.~
+@12703    = ~Large Shield of Perfect Blocking +5~
+@12704    = ~A large shield is carried in the same manner as a small shield.  Its weight prevents the character from using his shield hand for anything other than carrying the large shield.  Large shields are usually made of metal, range from 3'-4' in diameter, and can be of any shape, from round to square to a spread dragon's wings.  A typical medieval shield resembles a triangle with one point facing downward. This shield has runes scribed onto it that glow eerily in dim light.
+
+STATISTICS:
+
+Shield Bonus: +7
+Special:
+  Every second, there is a 20% chance that any damage dealt to the character during that second will be prevented
+Armor Check Penalty:  -2
+Arcane Spell Failure:  15%
+Weight: 6 lb.~
+@12705    = ~Gauntlets of Assassination~
+@12706    = ~Gauntlets are armored gloves.  They can be made of leather, metal plates, or chain mail.  Every suit of armor is assumed to include gauntlets of an appropriate type.  Magical gauntlets tend to be finer, lighter, and more easily worn than normal varieties.
+
+STATISTICS:
+
+If the wearer attacks a creature from stealth or invisibility, the wearer gains +5 to attack and damage for the next round (including on the first hit)
+Weight:  1 lb.~
+@12707    = ~Greater Gauntlets of Assassination~
+@12708    = ~Gauntlets are armored gloves.  They can be made of leather, metal plates, or chain mail.  Every suit of armor is assumed to include gauntlets of an appropriate type.  Magical gauntlets tend to be finer, lighter, and more easily worn than normal varieties.
+
+STATISTICS:
+
+If the wearer attacks a creature from stealth or invisibility, the wearer gains +10 to attack and damage for the next round (including on the first hit)
+Weight:  1 lb.~
+@12709    = ~Boots of Stealthy Speed~
+@12710    = ~These boots make the wearer move much faster, but only while hiding or invisible. This magical increase in speed will not cause the wearer's footsteps to be louder.
+
+STATISTICS:
+
+Special: Triples movement rate while invisible or in stealth
+Weight: 1 lb.~
+
+//@12711    = ~Yeti Skin Gloves~
+@12712    = ~These fur lined gloves have been stitched together using the skins of a Yeti.~
+@12713    = ~Gloves of Rage~
+@12714    = ~Enchanted by one of the greatest barbarian shamans, these gloves increase the effectiveness of the wearer's berserk sprees.
+
+STATISTICS:
+
+Special: While under the effect of Barbarian Rage, Animal Rage, or Blood Rage, the wearer gains an additional attack per round.
+Weight:  1 lb.~
+@12715    = ~Bracers of Improved Expertise~
+@12716    = ~Normally bracers are used to add support and protection to forearm area of the body. However, these bracers have been magically altered so that the wearer receives armor like protection without the constraints of wearing armor.  Bracers such as these are highly prized by wizards and sorcerers who must have complete freedom of movement to perform their magical arts.
+
+STATISTICS:
+
+Special: The wearer receives double the bonuses and penalties from Expertise
+Weight: 2 lb.~
+@12717    = ~Strange Stone~
+@12718    = ~This stone radiates powerful magic.~
+@12719    = ~Dusty Rose Ioun Stone~
+@12720    = ~This is an ioun stone - its powers are activated by placing the stone above ones head, causing it to float there until removed. This dusty rose ellipsoid makes the wearer harder to hit in combat.
+
+STATISTICS:
+
+Generic Armor Bonus: +8
+Weight: 1 lb.~
+@12721    = ~Staff of Goblin Summoning +1~
+@12722    = ~The simplest and humblest of staff weapons, the quarterstaff is a length of wood ranging six to nine feet in length.  Masterwork quarterstaffs are made of stout oak and are shod with metal at both ends.  This one is particularly special as it has been imbued with magical properties.
+
+STATISTICS:
+
+Damage:  1d6 + 1
+Attack Bonus:  +1 
+Enchantment:  +1
+Damage Type:  Bludgeoning
+Special:
+  Goblin Summoning: Each hit with this staff summons a goblin under the wielder's control for 10 rounds
+Weight: 4 lb.
+Feat Requirement:  Simple Weapon, Quarterstaff
+Type:  Two-handed
+Minimum Intelligence of 13 Required~
+@12723    = ~Vampiric Hunting Spear +3~
+@12724    = ~One of man's earliest weapons, dating back to the most primitive of times, the first spears were simply wooden poles or sticks sharpened at one end.  When man mastered metals, spearheads were made from iron and steel.  Having reached this end, weaponers began experimenting with different types of spear heads, thus leading to the development of certain polearm types.  This spear is slightly different though, as it has been imbued with certain magical properties.
+
+STATISTICS:
+
+Damage:  1d8 + 3
+Attack Bonus:  +3
+Enchantment:  +3
+Damage Type:  Piercing
+Special:
+  Vampiric Hunting: The wielder is healed 4d8 Hit Points whenever they kill a creature with this spear (this weapon must have dealt the killing blow to the creature)
+Weight: 5 lb.
+Feat Requirement:  Martial Weapon, Polearm
 Type:  Two-handed~
 
 @12900    = ~Hrm - you are powerful allies, indeed.  More gold and gems to line your pockets, then - also, a suit of plate armor, a warhammer, a helmet, all crafted and enchanted by great duergar artisans.  They are well deserved, outsider.~

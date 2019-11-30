@@ -1,0 +1,11 @@
+COPY_EXISTING_REGEXP ~.*\.itm~ ~override~
+	READ_SHORT 0x68 thenumheaders
+	PATCH_IF thenumheaders > 0 BEGIN
+		READ_BYTE 0x82 thefirstheadertype
+		PATCH_IF thefirstheadertype = 1 OR thefirstheadertype = 2 BEGIN
+			LPF ADD_ITEM_EFFECT INT_VAR type=1 opcode=500 target=2 timing=0 special=1 STR_VAR resource=~MEONHIT~ END
+			LPF ADD_ITEM_EFFECT INT_VAR type=2 opcode=500 target=2 timing=0 special=2 STR_VAR resource=~MEONHIT~ END
+		END
+	END
+	UNLESS ~MEONHIT~
+	BUT_ONLY_IF_IT_CHANGES

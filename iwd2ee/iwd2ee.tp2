@@ -131,7 +131,7 @@ BEGIN @17 DESIGNATED 15
 
 //More Potions for Oswald
 
-BEGIN @18 DESIGNATED 16
+BEGIN @18 DESIGNATED 16 DEPRECATED ~The content of this component has been moved to Item Revisions.~
 
       INCLUDE ~%mod_folder%/components/more_potions.tpa~      //~More Potions for Oswald~
 

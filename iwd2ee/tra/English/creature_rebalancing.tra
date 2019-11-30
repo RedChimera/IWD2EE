@@ -8,6 +8,7 @@
 @20005=~Scales enhanced (Armor Bonus +15)~
 @20006=~Protected by Epic Mage Armor (Armor Bonus +20)~
 @20007=~Protected by Epic Warding (Damage Reduction 50/+10)~
+@20008=~Singing Battlesong: Bladesong - Extra Attacks Per Round and Combat Bonuses~
 @21001=~Ruin~
 @21002=~Greater Ruin~
 @21003=~Epic Warding~
@@ -19,7 +20,9 @@
 @21009=~Mass Energy Drain~
 @21010=~Thought of Death~
 @21011=~Living Lightning~
+@21012=~Create Winterwight~
 
+@21152=~Hunter's Mark~
 @21651=~Sseth's Venom~
 @21652=~Sseth's Scales~
 @21751=~Auril's Whirlwind~
@@ -63,6 +66,10 @@ Weight:  0 lb.~
 @23011=~Infernal Harpy~
 @23012=~Black Ice Knight~
 @23013=~Winterwight~
+@23014=~Adamantine Golem~
+@23015=~Greater Fomorian~
 
 @24002=~Call Slayer Knights~
 @24003=~Call Gelugon~
+@24004=~Greater Pain~
+@24005=~Bladesong - Extra Attack and Combat Bonuses~

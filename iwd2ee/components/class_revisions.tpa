@@ -2177,3 +2177,5 @@ COPY ~%mod_folder%/itm/61POTNUB.itm~ ~override~
   SAY NAME2 @4791
   SAY DESC @4792
 */
+
+INCLUDE ~%mod_folder%/components/final_patches.tpa~
