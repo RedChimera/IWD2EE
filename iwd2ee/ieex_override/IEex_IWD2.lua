@@ -7,6 +7,105 @@ end
 -- Actor Manipulation --
 ------------------------
 
+-- Directly applies an effect to an actor based on the args table.
+function IEex_ApplyEffectToActor(actorID, args)
+
+	local writeType = {
+		["BYTE"]   = 0,
+		["WORD"]   = 1,
+		["DWORD"]  = 2,
+		["RESREF"] = 3,
+	}
+
+	local writeTypeFunc = {
+		[writeType.BYTE]   = IEex_WriteByte,
+		[writeType.WORD]   = IEex_WriteWord,
+		[writeType.DWORD]  = IEex_WriteDword,
+		[writeType.RESREF] = function(address, arg) IEex_WriteLString(address, arg, 0x8) end,
+	}
+
+	local argFailType = {
+		["ERROR"]   = 0,
+		["DEFAULT"] = 1,
+	}
+
+	local writeArgs = function(address, writeDefs)
+		for _, writeDef in ipairs(writeDefs) do
+			local argKey = writeDef[1]
+			local arg = args[argKey]
+			if not arg then
+				if writeDef[4] == argFailType.DEFAULT then
+					arg = writeDef[5]
+				else
+					IEex_Error(argKey.." must be defined!")
+				end
+			end
+			writeTypeFunc[writeDef[3]](address + writeDef[2], arg)
+		end
+	end
+
+	local Item_effect_st = IEex_Malloc(0x30)
+	writeArgs(Item_effect_st, {
+		{ "opcode",        0x0,  writeType.WORD,   argFailType.ERROR        },
+		{ "target",        0x2,  writeType.BYTE,   argFailType.DEFAULT, 1   },
+		{ "power",         0x3,  writeType.BYTE,   argFailType.DEFAULT, 0   },
+		{ "parameter1",    0x4,  writeType.DWORD,  argFailType.DEFAULT, 0   },
+		{ "parameter2",    0x8,  writeType.DWORD,  argFailType.DEFAULT, 0   },
+		{ "timing",        0xC,  writeType.BYTE,   argFailType.DEFAULT, 0   },
+		{ "resist_dispel", 0xD,  writeType.BYTE,   argFailType.DEFAULT, 0   },
+		{ "duration",      0xE,  writeType.DWORD,  argFailType.DEFAULT, 0   },
+		{ "probability1",  0x12, writeType.BYTE,   argFailType.DEFAULT, 100 },
+		{ "probability2",  0x13, writeType.BYTE,   argFailType.DEFAULT, 0   },
+		{ "resource",      0x14, writeType.RESREF, argFailType.DEFAULT, ""  },
+		{ "dicenumber",    0x1C, writeType.DWORD,  argFailType.DEFAULT, 0   },
+		{ "dicesize",      0x20, writeType.DWORD,  argFailType.DEFAULT, 0   },
+		{ "savingthrow",   0x24, writeType.DWORD,  argFailType.DEFAULT, 0   },
+		{ "savebonus",     0x28, writeType.DWORD,  argFailType.DEFAULT, 0   },
+		{ "special",       0x2C, writeType.DWORD,  argFailType.DEFAULT, 0   },
+	})
+
+	local source = IEex_Malloc(0x8)
+	IEex_WriteDword(source + 0x0, args["source_x"] or -1)
+	IEex_WriteDword(source + 0x4, args["source_y"] or -1)
+
+	local target = IEex_Malloc(0x8)
+	IEex_WriteDword(target + 0x0, args["target_x"] or -1)
+	IEex_WriteDword(target + 0x4, args["target_y"] or -1)
+
+	-- CGameEffect::DecodeEffect(Item_effect_st *effect, CPoint *source, int sourceID, CPoint *target)
+	local CGameEffect = IEex_Call(0x48C800, {
+		target,
+		args["source_id"] or -1,
+		source,
+		Item_effect_st,
+	}, nil, 0x10)
+
+	IEex_Free(Item_effect_st)
+	IEex_Free(source)
+	IEex_Free(target)
+	
+	writeArgs(CGameEffect, {
+		{ "sectype",           0x4C, writeType.DWORD,  argFailType.DEFAULT, 0  },
+		{ "parameter3",        0x5C, writeType.DWORD,  argFailType.DEFAULT, 0  },
+		{ "parameter4",        0x60, writeType.DWORD,  argFailType.DEFAULT, 0  },
+		{ "parameter5",        0x64, writeType.DWORD,  argFailType.DEFAULT, 0  },
+		{ "vvcresource",       0x6C, writeType.RESREF, argFailType.DEFAULT, "" },
+		{ "resource2",         0x74, writeType.RESREF, argFailType.DEFAULT, "" },
+		{ "restype",           0x8C, writeType.DWORD,  argFailType.DEFAULT, 0  },
+		{ "parent_resource",   0x90, writeType.RESREF, argFailType.DEFAULT, "" },
+		{ "resource_flags",    0x98, writeType.DWORD,  argFailType.DEFAULT, 0  },
+		{ "impact_projectile", 0x9C, writeType.DWORD,  argFailType.DEFAULT, 0  },
+		{ "sourceslot",        0xA0, writeType.DWORD,  argFailType.DEFAULT, -1 },
+		{ "effvar",            0xA4, writeType.RESREF, argFailType.DEFAULT, "" },
+		{ "casterlvl",         0xC4, writeType.DWORD,  argFailType.DEFAULT, 1  },
+		{ "internal_flags",    0xC8, writeType.DWORD,  argFailType.DEFAULT, 0  },
+	})
+
+	local share = IEex_GetActorShare(actorID)
+	-- CGameSprite::AddEffect(CGameSprite *this, CGameEffect *pEffect, char list, int noSave, int immediateResolve)
+	IEex_Call(IEex_ReadDword(IEex_ReadDword(share) + 0x78), {1, 0, 1, CGameEffect}, share, 0x0)
+end
+
 function IEex_ApplyResref(resref, actorID)
 
 	local share = IEex_GetActorShare(actorID)
@@ -144,14 +243,18 @@ end
 
 function IEex_GetActorIDCharacter(characterNum)
 	if characterNum >= 0 and characterNum <= 5 then
-		return IEex_ReadDword(0x2FAE87E + characterNum * 0x4)
+		local g_pBaldurChitin = IEex_ReadDword(0x8CF6DC)
+		local m_pObjectGame = IEex_ReadDword(g_pBaldurChitin + 0x1C54)
+		return IEex_ReadDword(m_pObjectGame + 0x3816 + characterNum * 0x4)
 	end
 	return -1
 end
 
 function IEex_GetActorIDPortrait(portraitNum)
 	if portraitNum >= 0 and portraitNum <= 5 then
-		return IEex_ReadDword(0x2FAE896 + portraitNum * 0x4)
+		local g_pBaldurChitin = IEex_ReadDword(0x8CF6DC)
+		local m_pObjectGame = IEex_ReadDword(g_pBaldurChitin + 0x1C54)
+		return IEex_ReadDword(m_pObjectGame + 0x382E + portraitNum * 0x4)
 	end
 	return -1
 end

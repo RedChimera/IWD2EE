@@ -87,21 +87,6 @@ function IEex_WriteDword(address, value)
 	end
 end
 
--- Function for editing text fields without a terminating NULL (e.g. resrefs)
--- This is basically like the WeiDU WRITE_ASCII function.
--- IEex_WriteLString(0x20, "SPWI304", 8)
--- equals
--- WRITE_ASCII 0x20 ~SPWI304~ #8
-function IEex_WriteLString(address, toWrite, maxLength)
-	local stringLength = string.len(toWrite)
-	local not_so_null = IEex_ReadByte(address + stringLength, 0x0)
-	iEex_WriteString(address, toWrite)
-	IEex_WriteByte(address + stringLength, not_so_null)
-	for i = stringLength, maxLength - 1, 1 do
-		IEex_WriteByte(address + i, 0x0)
-	end
-end
-
 -- OS:WINDOWS
 function IEex_DllCall(dll, proc, args, ecx, pop)
 	local procaddress = #dll + 1
@@ -1186,16 +1171,115 @@ end
 	-- Writes the given string at the specified address.
 	-- NOTE: Writes a terminating NULL in addition to the raw string.
 
-	-- junk result = IEex_WriteString(number address, string toWrite)
-	IEex_WriteAssemblyFunction("IEex_WriteString", {
-		"55 8B EC 53 51 52 56 57 6A 00 6A 01 FF 75 08 \z
-		!call >_lua_tonumberx \z
-		83 C4 0C \z
-		!call >__ftol2_sse \z
-		8B F8 6A 00 6A 02 FF 75 08 \z
-		!call >_lua_tolstring \z
-		83 C4 0C 8B F0 8A 06 88 07 46 47 80 3E 00 75 F5 C6 07 00 B8 00 00 00 00 5F 5E 5A 59 5B 5D C3"
-	})
+	-- SIGNATURE:
+	-- <void> = IEex_WriteString(number address, string toWrite)
+	IEex_WriteAssemblyFunction("IEex_WriteString", {[[
+
+		!build_stack_frame
+		!push_registers
+
+		!push_byte 00
+		!push_byte 01
+		!push_[ebp+byte] 08
+		!call >_lua_tonumberx
+		!add_esp_byte 0C
+		!call >__ftol2_sse
+		!mov_edi_eax
+
+		!push_byte 00
+		!push_byte 02
+		!push_[ebp+byte] 08
+		!call >_lua_tolstring
+		!add_esp_byte 0C
+
+		!mov_esi_eax
+
+		@copy_loop
+		!mov_al_[esi]
+		!mov_[edi]_al
+		!inc_esi
+		!inc_edi
+		!cmp_byte:[esi]_byte 00
+		!jne_dword >copy_loop
+
+		!mov_byte:[edi]_byte 00
+
+		!xor_eax_eax
+		!restore_stack_frame
+		!ret
+
+	]]})
+
+	-- Writes a string to the given address, padding any remaining space with null bytes to achieve desired length.
+	-- If #toWrite >= to maxLength, terminating null is not written.
+	-- If #toWrite > maxLength, characters after [1, maxLength] are discarded and not written.
+
+	-- SIGNATURE:
+	-- <void> = IEex_WriteLString(number address, string toWrite, number maxLength)
+	IEex_WriteAssemblyFunction("IEex_WriteLString", {[[
+
+		!build_stack_frame
+		!push_registers
+
+		!push_byte 00
+		!push_byte 01
+		!push_[ebp+byte] 08
+		!call >_lua_tonumberx
+		!add_esp_byte 0C
+		!call >__ftol2_sse
+		!mov_edi_eax
+
+		!push_byte 00
+		!push_byte 02
+		!push_[ebp+byte] 08
+		!call >_lua_tolstring
+		!add_esp_byte 0C
+		!mov_esi_eax
+
+		!push_byte 00
+		!push_byte 03
+		!push_[ebp+byte] 08
+		!call >_lua_tonumberx
+		!add_esp_byte 0C
+		!call >__ftol2_sse
+		!mov_ebx_eax
+
+		!xor_edx_edx
+
+		!cmp_edx_ebx
+		!jae_dword >return
+
+		!cmp_byte:[esi]_byte 00
+		!je_dword >null_loop
+
+		@copy_loop
+
+		!mov_al_[esi]
+		!mov_[edi]_al
+		!inc_esi
+		!inc_edi
+
+		!inc_edx
+		!cmp_edx_ebx
+		!jae_dword >return
+
+		!cmp_byte:[esi]_byte 00
+		!jne_dword >copy_loop
+
+		@null_loop
+		!mov_byte:[edi]_byte 00
+		!inc_edi
+
+		!inc_edx
+		!cmp_edx_ebx
+		!jb_dword >null_loop
+
+		@return
+		!xor_eax_eax
+		!restore_stack_frame
+		!ret
+
+	]]})
 
 	local debugHookName = "IEex_ReadDwordDebug"
 	local debugHookAddress = IEex_Malloc(#debugHookName + 1)
