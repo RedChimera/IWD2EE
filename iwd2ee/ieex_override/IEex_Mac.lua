@@ -252,6 +252,7 @@ for _, macroEntry in ipairs({
 	{"mov_fs:[0]_esp", "64 89 25 00 00 00 00"},
 	{"mov_[dword]_dword", "C7 05"},
 	{"mov_[dword]_eax", "A3"},
+	{"mov_[dword]_edi", "89 3D"},
 	{"mov_[dword]_esi", "89 35"},
 	{"mov_[eax+dword]_edx", "89 90"},
 	{"mov_[ebp+byte]_dword", "C7 45"},
