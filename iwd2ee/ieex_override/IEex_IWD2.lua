@@ -1018,6 +1018,41 @@ function IEex_WritePatches()
 	]]})
 	IEex_WriteAssembly(hasMetStunningAttackRequirements, {"!jmp_dword", {featsHook, 4, 4}})
 
+	-------------------------------------------------------------------------
+	-- Unequipping item should properly trigger Opcode OnRemove() function --
+	-------------------------------------------------------------------------
+
+	local unequipSpriteGlobal = IEex_Malloc(0x4)
+	IEex_WriteDword(unequipSpriteGlobal, 0x0)
+
+	local fixUnequipOnRemove1 = 0x4E8F04
+	local fixUnequipOnRemove1Hook = IEex_WriteAssemblyAuto({[[
+		!mov_[dword]_edi ]], {unequipSpriteGlobal, 4}, [[
+		!call :4C0830 ; CGameEffectList_RemoveMatchingEffect() ;
+		!mov_[dword]_dword ]], {unequipSpriteGlobal, 4}, [[ #0
+		!jmp_dword ]], {fixUnequipOnRemove1 + 0x5, 4, 4}, [[
+	]]})
+	IEex_WriteAssembly(fixUnequipOnRemove1, {"!jmp_dword", {fixUnequipOnRemove1Hook, 4, 4}})
+
+	local fixUnequipOnRemove2 = 0x4C0870
+	local fixUnequipOnRemove2Hook = IEex_WriteAssemblyAuto({[[
+
+		!call :7FB3E3 ; CPtrList::RemoveAt() ;
+
+		!cmp_[dword]_byte ]], {unequipSpriteGlobal, 4}, [[ 00
+		!je_dword ]], {fixUnequipOnRemove2 + 0x5, 4, 4}, [[
+
+		!push_all_registers_iwd2
+		!push_[dword] ]], {unequipSpriteGlobal, 4}, [[
+		!mov_ecx_edi
+		!mov_eax_[ecx]
+		!call_[eax+byte] 24
+		!pop_all_registers_iwd2
+		!jmp_dword ]], {fixUnequipOnRemove2 + 0x5, 4, 4}, [[
+
+	]]})
+	IEex_WriteAssembly(fixUnequipOnRemove2, {"!jmp_dword", {fixUnequipOnRemove2Hook, 4, 4}})
+
 	IEex_EnableCodeProtection()
 
 end
