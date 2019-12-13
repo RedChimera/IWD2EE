@@ -1,5 +1,7 @@
 <img src="https://github.com/RedChimera/semiOverhaul-v1.32/blob/master/iwd2ee/png/title.png">
 
+# Icewind Dale 2: Enhanced Edition
+
 Installation:
 
 1. Unzip all files into your IWD2 folder.
