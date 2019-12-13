@@ -169,7 +169,7 @@ SUBCOMPONENT @23
 BEGIN @57 DESIGNATED 21
 SUBCOMPONENT @23
 
-      INCLUDE ~%mod_folder%/components/critical_hits_2.tpa~      //~Revise Critical Hit Immunity~
+      INCLUDE ~%mod_folder%/components/critical_hits_2.tpa~      //~All creatures become vulnerable to critical hits~
 
 //Sudden Death Mode
 
@@ -372,3 +372,10 @@ BEGIN @62 DESIGNATED 70
 SUBCOMPONENT @59
 
       INCLUDE ~%mod_folder%/components/hof_start_xp_10.tpa~ //~Start with a total of 270000 experience divided among the party, enough for a six-character party to start at level 10~
+
+//Remove the delay after a sneak attack before the creature can be sneak attacked again
+
+BEGIN @63 DESIGNATED 75
+
+      INCLUDE ~%mod_folder%/components/no_sneak_attack_delay.tpa~ //~Remove the delay after a sneak attack before the creature can be sneak attacked again~
+

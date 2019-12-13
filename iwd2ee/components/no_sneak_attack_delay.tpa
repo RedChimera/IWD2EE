@@ -1,0 +1,14 @@
+COPY_EXISTING ~IEex_WEIDU.lua~ ~override~
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_no_sneak_attack_delay.*~ ~ex_no_sneak_attack_delay = true~
+
+COPY_EXISTING_REGEXP ~.*\.itm~ ~override~
+	READ_SHORT 0x68 thenumheaders
+	PATCH_IF thenumheaders > 0 BEGIN
+		READ_BYTE 0x82 thefirstheadertype
+		PATCH_IF thefirstheadertype = 1 OR thefirstheadertype = 2 BEGIN
+			LPF ADD_ITEM_EFFECT INT_VAR insert_point=0 type=1 opcode=276 target=2 timing=0 parameter2=287 STR_VAR resource=~USNOSAD~ END
+			LPF ADD_ITEM_EFFECT INT_VAR insert_point=0 type=2 opcode=276 target=2 timing=0 parameter2=287 STR_VAR resource=~USNOSAD~ END
+		END
+	END
+	UNLESS ~USNOSAD~
+	BUT_ONLY_IF_IT_CHANGES

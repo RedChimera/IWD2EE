@@ -9,3 +9,15 @@ COPY_EXISTING_REGEXP ~.*\.itm~ ~override~
 	END
 	UNLESS ~MEONHIT~
 	BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING_REGEXP ~00FIST\.itm~ ~override~ ~00MFIST.*\.itm~ ~override~ ~CHILLT\.itm~ ~override~ ~DESTRUC\.itm~ ~override~ ~GTOUCH\.itm~ ~override~ ~HARM\.itm~ ~override~ ~ICW[0-9][0-9]\.itm~ ~override~ ~ILW[0-9][0-9]\.itm~ ~override~ ~IMW[0-9][0-9]\.itm~ ~override~ ~ISW[0-9][0-9]\.itm~ ~override~ ~LTOUCH\.itm~ ~override~ ~SHOCKG[0-9][0-9]\.itm~ ~override~ ~SLIVING\.itm~ ~override~ ~SNAKEBI\.itm~ ~override~
+	READ_SHORT 0x68 thenumheaders
+	PATCH_IF thenumheaders > 0 BEGIN
+		READ_BYTE 0x82 thefirstheadertype
+		PATCH_IF thefirstheadertype = 1 BEGIN
+			LPF ADD_ITEM_EFFECT INT_VAR type=1 opcode=500 target=2 timing=0 parameter2=2001 special=1 STR_VAR resource=~MEEXHIT~ END
+		END
+	END
+	IF_EXISTS
+	UNLESS ~MEEXHIT~
+	BUT_ONLY_IF_IT_CHANGES

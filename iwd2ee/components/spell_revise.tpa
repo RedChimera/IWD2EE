@@ -1954,8 +1954,12 @@ COPY ~%mod_folder%/itm/USHARM30.itm~ ~override~
 
 // patching most magical weapons to work with Weapon Finesse by changing their category to "Small Swords"
 
-COPY_EXISTING_REGEXP ~CHILLT.itm~ ~override~ ~DESTRUC.itm~ ~override~ ~FBLADE.itm~ ~override~ ~GTOUCH.itm~ ~override~ ~HARM.itm~ ~override~ ~IBLADE.itm~ ~override~ ~ICW[0-9][0-9].itm~ ~override~ ~ILW[0-9][0-9].itm~ ~override~ ~IMW[0-9][0-9].itm~ ~override~ ~ISW[0-9][0-9].itm~ ~override~ ~LTOUCH.itm~ ~override~ ~MOONBLA.itm~ ~override~ ~PBLADE.itm~ ~override~ ~SHAMME[0-9].itm~ ~override~ ~SHOCKG[0-9][0-9].itm~ ~override~ ~SNAKEBI.itm~ ~override~ ~USSTDEST.itm~ ~override~ ~USSTHARM.itm~ ~override~ ~USSTSL02.itm~ ~override~
+COPY_EXISTING_REGEXP ~CHILLT.itm~ ~override~ ~DESTRUC.itm~ ~override~ ~GTOUCH.itm~ ~override~ ~HARM.itm~ ~override~ ~ICW[0-9][0-9].itm~ ~override~ ~ILW[0-9][0-9].itm~ ~override~ ~IMW[0-9][0-9].itm~ ~override~ ~ISW[0-9][0-9].itm~ ~override~ ~LTOUCH.itm~ ~override~ ~SHOCKG[0-9][0-9].itm~ ~override~ ~SNAKEBI.itm~ ~override~ ~USSTDEST.itm~ ~override~ ~USSTHARM.itm~ ~override~ ~USSTSL02.itm~ ~override~
 	WRITE_BYTE 0x01C 19
+
+COPY_EXISTING_REGEXP ~ICW[0-9][0-9].itm~ ~override~ ~ILW[0-9][0-9].itm~ ~override~ ~IMW[0-9][0-9].itm~ ~override~ ~ISW[0-9][0-9].itm~ ~override~
+	LPF ALTER_ITEM_HEADER INT_VAR charges=0 END
+	LPF ADD_ITEM_EFFECT INT_VAR insert_point=0 type=1 opcode=112 target=1 timing=0 STR_VAR resource= EVAL ~%SOURCE_RES%~ END
 
 COPY_EXISTING ~sppr103.spl~ ~override~
 	LPF ALTER_SPELL_HEADER INT_VAR speed=1 END
@@ -2232,6 +2236,12 @@ COPY_EXISTING ~sppr305.spl~ ~override~
 	SAY UNIDENTIFIED_DESC @32305
 	SAY IDENTIFIED_DESC @32305
 
+COPY_EXISTING ~sppr409.spl~ ~override~
+	SAY NAME1 @31409
+	SAY NAME2 @31409
+	SAY UNIDENTIFIED_DESC @32409
+	SAY IDENTIFIED_DESC @32409
+
 COPY_EXISTING ~sppr508.spl~ ~override~
 	SAY NAME1 @31508
 	SAY NAME2 @31508
@@ -2240,10 +2250,10 @@ COPY_EXISTING ~sppr508.spl~ ~override~
 	LPF ALTER_EFFECT INT_VAR silent=1 check_headers=1 check_globals=1 match_opcode=139 match_parameter1=30006 parameter1=RESOLVE_STR_REF(@30006) END
 
 COPY_EXISTING ~spwi122.spl~ ~override~
-	SAY NAME1 @33322
-	SAY NAME2 @33322
-	SAY UNIDENTIFIED_DESC @34322
-	SAY IDENTIFIED_DESC @34322
+	SAY NAME1 @33122
+	SAY NAME2 @33122
+	SAY UNIDENTIFIED_DESC @34122
+	SAY IDENTIFIED_DESC @34122
 
 COPY_EXISTING ~spwi322.spl~ ~override~
 	SAY NAME1 @33322
@@ -2373,6 +2383,12 @@ COPY_EXISTING ~uswi352.spl~ ~override~
 	SAY NAME2 @37352
 	SAY UNIDENTIFIED_DESC @38352
 	SAY IDENTIFIED_DESC @38352
+
+COPY_EXISTING ~uswi451.spl~ ~override~
+	SAY NAME1 @37451
+	SAY NAME2 @37451
+	SAY UNIDENTIFIED_DESC @38451
+	SAY IDENTIFIED_DESC @38451
 
 COPY_EXISTING ~uswi652.spl~ ~override~
 	SAY NAME1 @37652
@@ -3092,6 +3108,58 @@ COPY_EXISTING ~LISTSPLL.2da~ ~override~
 					IF_EXISTS
 					BUT_ONLY_IF_IT_CHANGES
 			END
+		END
+	END
+	BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING_REGEXP ~.*\.spl~ ~override~
+	READ_LONG 0x18 thespellflags
+	PATCH_IF (thespellflags BAND 0x00004000) = 0 BEGIN
+		READ_LONG 0x64 headeroffset
+		READ_SHORT 0x68 numheaders
+		READ_LONG 0x6A effectoffset
+		READ_SHORT (headeroffset + 0x28 * (numheaders - 1) + 0x1E) lastheadernumeffects
+		READ_SHORT (headeroffset + 0x28 * (numheaders - 1) + 0x20) lastheaderfirsteffectindex
+		numeffects = lastheadernumeffects + lastheaderfirsteffectindex
+		offset = effectoffset
+		FOR (i = 0; i < numeffects; ++i) BEGIN
+			READ_SHORT offset theopcode
+			READ_BYTE (offset + 0xC) thetiming
+			PATCH_IF theopcode = 12 AND thetiming != 3 AND thetiming != 4 BEGIN
+				READ_BYTE (offset + 0x4) theparameter1
+				READ_SBYTE (offset + 0x1C) thedicenumber
+				PATCH_IF thedicenumber < 0 BEGIN
+					thedicenumber = 0
+				END
+				READ_SBYTE (offset + 0x20) thedicesize
+				PATCH_IF thedicesize < 0 BEGIN
+					thedicesize = 0
+				END
+				READ_LONG (offset + 0x24) thesavingthrow
+				thesavingthrow|=0x10000
+				thesavingthrow|=0x80000
+				PATCH_IF (thesavingthrow BAND 0x00000004) > 0 BEGIN
+					thesavingthrow&=0xFFFFFFFB
+					thesavingthrow|=0x400
+				END
+				PATCH_IF (thesavingthrow BAND 0x00000008) > 0 BEGIN
+					thesavingthrow&=0xFFFFFFF7
+					thesavingthrow|=0x800
+				END
+				PATCH_IF (thesavingthrow BAND 0x00000010) > 0 BEGIN
+					thesavingthrow&=0xFFFFFFEF
+					thesavingthrow|=0x1000
+				END
+				WRITE_SHORT offset 500
+				WRITE_LONG (offset + 0x4) (theparameter1 + (thedicesize << 8) + (thedicenumber << 16))
+				WRITE_BYTE (offset + 0xC) 0
+				WRITE_LONG (offset + 0xE) 0
+				WRITE_ASCII (offset + 0x14) ~EXDAMAGE~ #8
+				WRITE_LONG (offset + 0x1C) 0
+				WRITE_LONG (offset + 0x20) 0
+				WRITE_LONG (offset + 0x24) thesavingthrow
+			END
+			offset = offset + 0x30
 		END
 	END
 	BUT_ONLY_IF_IT_CHANGES

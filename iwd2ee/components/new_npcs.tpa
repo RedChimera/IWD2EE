@@ -790,6 +790,7 @@ COPY_EXISTING ~52SERSA.cre~ ~override~
 
 COPY_EXISTING ~10BLACK.cre~ ~override/USGEOF.cre~ ~10REIG.cre~ ~override/USREIG.cre~ ~11VEIRA.cre~ ~override/USVEIR.cre~ ~20EMMA.cre~ ~override/USEMMA.cre~ ~20VREK.cre~ ~override/USVREK.cre~ ~30GOBVUN.cre~ ~override/USVUNA.cre~ ~41XHAAN.cre~ ~override/USXHAA.cre~ ~41ZACK.cre~ ~override/USZACK.cre~ ~50PAIRI.cre~ ~override/USPAIR.cre~ ~52SERSA.cre~ ~override/USSERS.cre~
 	WRITE_BYTE allegiance 5
+	WRITE_BYTE defaultvisibility 0
 	WRITE_ASCII overridescript ~~ #8
 	WRITE_ASCII specialscript1 ~~ #8
 	WRITE_ASCII teamscript ~~ #8
@@ -797,6 +798,10 @@ COPY_EXISTING ~10BLACK.cre~ ~override/USGEOF.cre~ ~10REIG.cre~ ~override/USREIG.
 	WRITE_ASCII combatscript ~~ #8
 	WRITE_ASCII specialscript3 ~~ #8
 	WRITE_ASCII movementscript ~~ #8
+	READ_BYTE armoredarcana thearmoredarcana
+	PATCH_IF thearmoredarcana = 20 BEGIN
+		WRITE_BYTE armoredarcana 0
+	END
 
 COPY_EXISTING ~USGEOF.cre~ ~override~ ~USREIG.cre~ ~override~ ~USEMMA.cre~ ~override~ ~USSERS.cre~ ~override~
 	WRITE_BYTE race 1
