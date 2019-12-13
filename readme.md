@@ -36,7 +36,17 @@ Components:
 21. Sudden Death Mode
 22. Better Racial Enemies for Rangers
 23. Cosmetic Tweaks
-24-34. More Persuasion Options
+24. Xuki Intimidation Option
+25. Nonviolent Option for Isair and Madae
+26. Alternative Dragon's Eye
+27. Bribe Limha
+28. Bribe Mirabel and Majrash
+29. Diplomacy for Guthma
+30. Trick Harshom
+31. Intimidate Torak
+32. Intimidate Elder Brain
+33. Bluff Thorasskus
+34. Bluff Thvara
 35. NPC Core
 36. NPCs start with experience
 37. New GUI
@@ -53,7 +63,7 @@ Components:
 48. Have the party start with experience in Heart of Fury Mode
 49. Remove the delay between sneak attacks
 
---Class Revisions--
+## Class Revisions
 
 This component dramatically rebalances the game to make warriors and rogues much more viable, while slightly nerfing some aspects of the typical powergaming classes (clerics, sorcerers, and druids). This component is most balanced when combined with the Spell Revisions component.
 
@@ -99,7 +109,7 @@ Paladins: Paladins get more spell slots, and they get them at lower levels. Pala
 
 Sorcerers: Sorcerers get slightly slower spell growth and slightly slower access to new spell picks. They will no longer hit their peak at level 20 and then experience near-zero growth.
 
---Looser Alignment Restrictions for Classes--
+## Looser Alignment Restrictions for Classes
 
 Even IWD2's very broad class system can be restrictive in some ways, mostly in the lawful/chaotic axis. This component loosens a few of the restrictions, allowing certain classes to be compatible with more alignments:
 
@@ -111,7 +121,7 @@ Paladins of Ilmater and Mystra can be Neutral Good
 Paladins of Helm can be Lawful Neutral
 Rogues can be Lawful Good
 
---Spell Revisions--
+## Spell Revisions
 
 This component significantly strengthens many underpowered spells while slightly weakening the most powerful options. It also switches some spells to lower or higher levels and grants some spells to classes that previously could not cast them. Here are the main changes:
 
@@ -125,7 +135,7 @@ This component significantly strengthens many underpowered spells while slightly
 
 - Spells that weaken a creature rather than disabling it have a higher DC or no save at all (e.g. Deafness has no save since it simply gives 20% spell failure).
 
---Spell Focus Feats for All Schools--
+## Spell Focus Feats for All Schools
 
 In the unmodded game, spellcasters could only choose Spell Focus to empower Evocation, Necromancy, Transmutation, and Enchantment spells. This component expands those four feats to apply to the other four spell schools as well. The new feats are:
 
@@ -134,7 +144,7 @@ Spell Focus: Enchantment/Illusion
 Spell Focus: Necromancy/Divination
 Spell Focus: Transmutation/Abjuration
 
---Item Revisions--
+## Item Revisions
 
 Normally, Icewind Dale 2's items are balanced terribly. There are a handful of ridiculously overpowered magic items (e.g. Winged Blight, Massive Halberd of Hate) towering over hundreds of almost useless magic items (e.g. items that just provide +1 Hide skill or 1/- Spell Resistance). It's not even a low-magic game: one gets tons of magic items, but most of them suck.
 
@@ -142,7 +152,7 @@ Item Revisions enhances most of the magical items in Icewind Dale 2, giving them
 
 Item Revisions also adds many new items to the random loot tables, including powerful armor, shields, rings, amulets, and ammunition. 
 
---Creature Revisions--
+## Creature Revisions
 
 This component enhances creatures and encounters throughout the game. Here are the main changes:
 
@@ -158,25 +168,25 @@ Fixes:
 - On Heart of Fury Mode, enemy monks have higher-level monk fists to reflect the fact that they are higher-level. 
 - On Heart of Fury Mode, creatures summoned by enemies now gain Heart of Fury Mode bonuses.
 
---Better XP Progression--
+## Better XP Progression
 
 In most RPGs, you gain levels at a roughly constant level over the course of the game. In IWD2, though, you gain XP and levels slower and slower as you progress in the game, which is the biggest reason why the late game is so much less fun than the early game. This is because many enemies are rigged to be a lower challenge rating than their actual level. By the time you're in the Severed Hand, you might be fighting critters that are level 17 but have a challenge rating of 9!
 
 This component fixes that. There are two install options. The first option sets all creatures' challenge rating equal to their level, which results in extremely fast leveling as the game progresses. The second option, which is the recommended version, sets CR to slightly below their level after level 9. Neither option will affect early game enemies much, but midgame and endgame enemies will now grant XP appropriate to the challenge they pose.
 
---Faster Targos--
+## Faster Targos
 
 This component allows the player to skip most of the Targos questline. The first time you speak with Shawford Crale, you can trigger the goblin invasion with Vghotan, Ghotrag, and Caballus by saying "Did you hear that?" midway through the dialogue.
 
---Faster Horde Fortress--
+## Faster Horde Fortress
 
 This component rigs the front gate of the Horde Fortress so that you can force it open and attack the fortress head on rather than sneaking through the tunnels. It also adds additional ways to get inside Guthma's cabin.
 
---Faster Ice Temple--
+## Faster Ice Temple
 
 Getting through the Ice Temple is one of the slowest parts of IWD2, with lots of disconnected plot triggers and quest items. This component makes it so some of the locked doors in the temple that normally require keys or the lightning machine to open are now either open by default or pickable. This component also allows you to skip the whole area by tearing down the wall through brute force. If you deal enough damage to the Ice Wall Fault in the northwest corner of the exterior map (the one with Sherincal and the Remorhazes), the wall will collapse and you can proceed to the next area. Destroying the wall is extremely difficult, however, as the wall has tremendous damage resistances, lots of HP, and deals cold damage whenever it is struck.
 
---Faster Wandering Village--
+## Faster Wandering Village
 
 This component lets you delve all the way through the Fell Wood and fight the Will o' Wisps the first time you go there, rather than having to go through it three times for the three quests.
 
@@ -184,15 +194,15 @@ The component also allows you to skip all of the Wandering Village questlines an
 
 It is still possible to complete all of the Wandering Village quests with this component installed.
 
---Faster Black Raven Monastery--
+## Faster Black Raven Monastery
 
 This component allows you to skip the Black Raven Monastery trials without having to kill the monks. The locked door in the monastery basement can now be picked.
 
---Faster Underdark--
+## Faster Underdark
 
 This component lets you skip the Viciscamera questline. You should be able to force open the doors to the mind flayer city and proceed without doing any chores for Malavon.
 
---Faster Dragon's Eye and Lord Pyros' Domain--
+## Faster Dragon's Eye and Lord Pyros' Domain
 
 Dragon's Eye and the time paradox questline in Lord Pyros' Domain have long been the low point of IWD2, with massive amounts of backtracking, numerous plot triggers with few clues to indicate where you're supposed to go, and very little reward for the immense amount of time you have to invest in the game just to get through it. This component allows you to avoid all of that nonsense and proceed directly to the Fields of Slaughter, if you want to.
 
@@ -200,19 +210,19 @@ Opening the door in the third floor of Dragon's Eye no longer requires you to pu
 
 Also, the component rigs the north exit from Lord Pyros' Domain (not the exit you unlock during the questline, but the exit NORTH of that one) to lead directly to the Fields of Slaughter, instead of back to Dragon's Eye. Once you're in Lord Pyros' Domain, you can skip the Temporal Stasis quest just by going back from where you came. This will also skip Nickademus' favor.
 
---Faster Severed Hand--
+## Faster Severed Hand
 
 The Severed Hand can also take a fair amount of time, and while it's not nearly as monotonous as Dragon's Eye or the Ice Temple, some parts of it can still be very slow. This component adds Ruinlord Argos Val to Isair and Madae's throne room. If you have a very high Bluff score, you can convince him to introduce you to Isair and Madae without having to do any of the other quests in the Severed Hand.
 
 This component also makes it so you do not need to defeat Iyachtu Xvim before going to the final boss (though in this case you'll have to fight the glabrezus in the final battle).
 
---Mage Scrolls for New Spells--
+## Mage Scrolls for New Spells
 
 This component adds relatively high-level mage scrolls to various spell vendors, including Elytharra, Zack Boosenberry, Suoma, Bered, and Sheemish. A solo wizard or a level 1 wizard in HoF mode will be able to learn high-end spells and keep pace with a sorcerer. This isn't too extreme: early-game vendors might have a couple of scrolls at 5th-7th level, but they won't have tons of 9th-level scrolls.
 
 This also adds scrolls of the new spells from Spell Revisions, allowing wizards as well as sorcerers to learn these spells.
 
---Revised Creature Resistances and Immunities--
+## Revised Creature Resistances and Immunities
 
 This component revises the resistances of some creatures to be more reasonable. For example, slimes in Dragon's Eye aren't completely immune to physical damage, and iron golems and will o' wisps aren't completely immune to magic (they still have high spell resistance, though).
 
@@ -220,23 +230,23 @@ Elementals now have regular elemental immunities rather than undead immunities. 
 
 Trolls no longer fall down and have to be finished off by fire or acid; instead they regenerate faster and have more HP but take significantly more damage from fire and acid.
 
---Shapeshifting Sound Fix--
+## Shapeshifting Sound Fix
 
 Testing found that shapeshifting in a previous version of semiOverhaul could result in a weird sound loop. This component should fix the problem if it comes up, but is not otherwise necessary.
 
---More Accurate Saving Throws for Enemies--
+## More Accurate Saving Throws for Enemies
 
 This component adjusts all enemy saving throws in the game, making them roughly equal to the player's saving throws at the same level. Thus, a level 10 enemy fighter will have similar saving throws to a level 10 fighter in the party.
 
---Revise Critical Hit Immunity--
+## Revise Critical Hit Immunity
 
 The vanilla game gives out immunity to critical hits to enemies that shouldn't have it, including fiends and certain random enemies. This component has two options: either you can give critical hit immunity to all undead, constructs, objects, elementals and oozes and remove it for all other creatures, or you can make all creatures vulnerable to critical hits.
 
---Sudden Death Mode--
+## Sudden Death Mode
 
 This is a simple component designed to speed up the pace of combat. Both enemies and party members get half of their normal HP. Clerics get 1d4 HP per level instead of 1d8, an 18 Constitution only grants +2 HP per level instead of +4, and an enemy with 50 base HP will have 25 HP. The game balance should otherwise be identical, since enemies and party members are equally affected (overall difficulty should be roughly the same), but death will be much closer for both. The +80 HP from Heart of Fury mode is not affected by this component, so this component will work in the enemy's favor in HoF mode. Install this component if you're looking to make the game faster or more dangerous.
 
---Better Racial Enemies for Rangers--
+## Better Racial Enemies for Rangers
 
 In the vanilla game, there were a lot of racial enemy choices that simply weren't very useful. Getting bonuses against yuan-ti and undead was simply better than getting bonuses against bugbears and hook horrors. This component gives the player the ability to choose from a new set of racial enemies:
 
@@ -257,71 +267,71 @@ Elementals
 Trolls
 Dragons
 
---Cosmetic Tweaks--
+## Cosmetic Tweaks
 
 Currently, this component lets any race choose any of the available colors on character creation.
 
---More Persuasion Options--
+## More Persuasion Options
 
 These components add more opportunities in the game to use Bluff, Diplomacy, and Intimidate, usually to skip a battle.
 
---NPC Core--
+## NPC Core
 
 This component allows several existing NPCs to join the party: the fighter Reig, the rogue Black Geoffrey, the diviner Veira, the cleric Emma Moonblade, the troll Vrek Vileclaw, the goblin Vunarg, the rogue/illusionist Zack Boosenburry, the abishai Xhaan, the sorcerer Pairi, and the monk Sersa. 
 
---NPCs gain experience upon joining to match the party's experience--
+## NPCs gain experience upon joining to match the party's experience
 
 This component lets NPCs from the NPC Core component start with experience based on the party's total experience (so that they won't start at significantly higher level if you were soloing).
 
---Cosmetic improvements to the GUI and New loading screens--
+## Cosmetic improvements to the GUI and New loading screens
 
 This component currently adds a new main menu screen and new chapter screens. There are no new buttons, but the GUI should look better.
 
---Revised Battle Square--
+## Revised Battle Square
 
 To get all the rewards for the Battle Square, one normally has to fight 25 battles per rank, to a total of 250 battles. Even if the party members are powerful enough to win all the battles, this is still very tedious.
 
 This component makes it so one only has to beat a rank once (with 3 or more squares) to get the main reward for the rank. To get all the rewards, it will only take 30 battles rather than 250.
 
---Minor Damage Resistance for Armor and Shields--
+## Minor Damage Resistance for Armor and Shields
 
 Inspired by Weimer's similar component from IWD2-Ease, this component patches every armor and shield in the game so they give physical damage resistance equal to half their Armor Class bonus, rounded down. 
 
---ChangeAIScript Fix--
+## ChangeAIScript Fix
 
---Race Revisions--
+## Race Revisions
 
 This component makes race stats less different. All racial ability score bonuses and penalties are halved (e.g. moon elves just get +1 Dexterity and -1 Constitution), but all characters can get up to 19 in an ability score at character creation rather than 18.
 
---Enemies give the same amount of experience regardless of the party's level--
+## Enemies give the same amount of experience regardless of the party's level
 
 This component makes killing enemies give the same amount of experience no matter the party's level. This way, leveling up doesn't come with the dissatifaction of enemies giving less experience, and there's no incentive to delay leveling up to increase experience gain. There are two options: either you can have enemies give experience equal to 25 * their challenge rating (a six-character party will reach about level 15 by the end of the game), or it can be 35 * their challenge rating (a six-character party will reach about level 18 by the end of the game).
 
---Adjust encounter level-scaling--
+## Adjust encounter level-scaling
 
 Icewind Dale 2 encounters often have additional enemies for a higher-level party. This component has two options: you can make it so you always fight at least the version of the encounter meant for a medium-level party, or you can make it so you always fight the version meant for a high-level party. The higher-level versions of encounters usually just have a couple more enemies or in some cases have tougher versions of enemies; they aren't impossible for a lower-level party to complete.
 
---Reduce the HP bonuses of creatures in Heart of Fury Mode--
+## Reduce the HP bonuses of creatures in Heart of Fury Mode
 
 Enemies in Heart of Fury Mode normally have absolutely ridiculous HP: goblins in the prologue have 157 HP, and the frost spiders in Chapter 2 have 452 HP! This component drastically reduces the HP on creatures in Heart of Fury Mode: goblins in the prologue have 13 HP, and the frost spiders have 232 HP. This will make Heart of Fury Mode easier, but also much less tedious (and Creature Revisions makes Heart of Fury Mode more challenging to make up for it).
 
---Reduce the attack bonuses of creatures in Heart of Fury Mode--
+## Reduce the attack bonuses of creatures in Heart of Fury Mode
 
 Enemies in Heart of Fury Mode have such high attack bonuses that it's near impossible for them to miss except on a 1. This component gives creatures outside the party a -9 attack penalty on Heart of Fury Mode. They will still have higher attack bonuses than they do on the next-hardest difficulty, but it won't be quite as extreme.
 
---Reduce the Saving Throw bonuses of creatures in Heart of Fury Mode--
+## Reduce the Saving Throw bonuses of creatures in Heart of Fury Mode
 
 Early on in Heart of Fury Mode, it can be very difficult to get enemies to fail saving throws if you're starting as a low-level party. This component gives a small saving throw penalty to creatures outside the party on Heart of Fury Mode.
 
---Remove ability score bonuses of allied summoned creatures in Heart of Fury Mode--
+## Remove ability score bonuses of allied summoned creatures in Heart of Fury Mode
 
 In Heart of Fury Mode, allied summoned creatures also get HoF bonuses, and since you reach high level more quickly, summoned creature can be quite overpowered. This component makes it so summoned creatures don't gain the normal +10 to all ability scores that creatures on Heart of Fury Mode get, unless they are summoned by an enemy.
 
---Have the party start with more experience on Heart of Fury Mode--
+## Have the party start with more experience on Heart of Fury Mode
 
 The beginning of Heart of Fury Mode is absolutely brutal if you start at level 1 - even with some of those components installed that weaken HoF creatures. This component gives the party some experience at the start of the game. The experience is divided among party members, so a smaller party will start at a higher level. You have choices of how much experience to start with.
 
---Remove the delay after a sneak attack before the creature can be sneak attacked again--
+## Remove the delay after a sneak attack before the creature can be sneak attacked again
 
 Normally once a rogue sneak attacks a creature, that creature becomes immune to sneak attacks for about 3 rounds. This component removes that immunity, allowing the creature to be sneak attacked again.
 
