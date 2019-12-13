@@ -145,7 +145,7 @@ NOTE: Wisdom is the casting statistic for a cleric. It affects their maximum spe
 Hit Points per Level: 1-8
 
 Advantages:
-* Proficient with all simple, light armor, medium armor, heavy armor, and shields.
+* Proficient with all simple weapons as well as hammers, flails, light armor, medium armor, heavy armor, and shields.
 * Clerics can cast powerful defensive and healing spells.
 * Clerics have the ability to Turn Undead.  When this power is invoked, the cleric attempts to use the power of his or her patron deity to either terrify (if good or neutral) or control (if evil) a group of undead. The higher the cleric's level and charisma are, the greater his or her chance of success is.
 * Clerics receive special powers and spells from their deity.
@@ -538,7 +538,15 @@ Benefit: You make attack rolls with simple weapons normally. Two ranks in this f
 
 Normal: A character who uses a weapon without being proficient with it suffers a -4 penalty on attack rolls.
 ~
-@688    = ~~
+@688    = ~RESIST POISON:
+
+Over years, some among your people carefully expose themselves to poisons in controlled dosages in order to build up immunity to their effects.  A few are thereby weakened, but the strong adjust.
+
+Prerequisite: Gray dwarf, half-orc
+
+Benefit: You get a +4 bonus on Fortitude saving throws against poison. In addition, each second you would take poison damage, the damage you take is reduced by 1.
+
+Special: You may only take this feat as a 1st-level character.~
 @689    = ~~
 @690    = ~~
 
@@ -875,7 +883,7 @@ Disadvantages:
 
 @897    = ~The Song of Kaudies - Blink~
 @898    = ~Additional attack~
-@899    = ~~
+@899    = ~Sneak Attack~
 @900    = ~~
 @901    = ~~
 @902    = ~~

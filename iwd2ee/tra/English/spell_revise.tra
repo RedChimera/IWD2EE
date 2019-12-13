@@ -129,13 +129,13 @@ This spell grants the target a 3/- damage resistance bonus to bludgeoning, slash
 Level: Drd 5, Rgr 5
 Range: 40 feet
 Duration: Instantaneous
-Casting Time: 1 round
+Casting Time: 5
 Area of Effect: 5-foot wide wave
 Saving Throw: Reflex half
 
-This spell summons a wave of water that moves in the direction willed by the caster, striking all in its path with massive force. The wave deals 1d8 crushing damage per caster level (maximum 15d8), and every creature struck by the wave must make a Reflex save or be stunned or knocked unconscious for 1 round.~
+This spell summons a wave of water that moves in the direction willed by the caster, striking all in its path with massive force. The wave deals 1d8 crushing damage per caster level (maximum 15d8), and every creature struck by the wave must make a Reflex save or be pushed back and knocked down for 1 round.~
 @1022    = ~Circle of Blades~
-@1023    = ~Circle of Blades 
+@1023    = ~Circle of Blades
 (Evocation)
 Level: Clr 6, Pal 5, Helm 6, Tempus 6
 Range: Caster
@@ -305,14 +305,14 @@ This spell enables a cleric to aid and protect any one being other than the cler
 @1050    = ~Moonblade~
 @1051    = ~Moonblade 
 (Evocation)
-Level: Drd 3, Rgr 2, Selune 3
+Level: Drd 3, Rgr 2, Selune 2
 Range: Caster
 Duration: 10 rounds
 Casting Time: 6
 Area of Effect: Caster
 Saving Throw: None
 
-This spell summons forth a silent, weightless sword-like construct made of moonlight that extends 4 feet from the caster's hand. The moonblade is considered a +4 weapon for determining what creatures it can damage, though the bonus does not apply to attack bonus. In addition, due to the insubstantial nature of the moonblade, melee bonuses from strength do not apply and the blade bypasses armor and shield bonuses to AC.
+This spell summons forth a silent, weightless sword-like construct made of moonlight that extends 4 feet from the caster's hand. The moonblade is considered a +4 weapon for determining what creatures it can damage, though the bonus does not apply to attack bonus. In addition, due to the insubstantial nature of the moonblade, the blade bypasses armor and shield bonuses to AC, though it still gains damage bonuses from Strength, proficiency, and any other damage bonus a melee weapon could gain. It uses the Simple Weapon: Small Blade proficiency.
 
 The strike of a moonblade drains a target's vitality, inflicting 1d12+4 points of damage, and an additional 1d12 points to undead, who are particularly susceptible. A successful strike also temporarily scrambles magic, causing any spells the target casts in the next round to fail.~
 @1052    = ~Neutralize Poison~
@@ -704,7 +704,7 @@ Casting Time: 5
 Area of Effect: Caster
 Saving Throw: None
 
-Through this spell, the caster creates tiny balls of electricity that can be hurled in combat. Upon a successful ranged touch attack (e.g. an attack that ignores armor bonuses) the ball will burst and deal 3d3 electricity damage to all creatures in a 5-foot radius. If the caster fails her attack bonus at +5, the ball will dissipate harmlessly. The caster may throw as many balls as she likes until the spell expires.~
+Through this spell, the caster creates five balls of electricity that can be hurled in combat. When a ball lightning is thrown at an enemy, it deals 4d6 electrical damage, and other ball lightnings will similtaneously shoot at every enemy within 8 feet of the target, dealing the same damage. The ball lightnings automatically hit, and they gain any damage bonuses a dart would gain (they use the Simple Weapon: Missile proficiency).~
 @1120    = ~Flesh to Stone~
 @1121    = ~Flesh to Stone 
 (Transmutation) 
@@ -847,7 +847,7 @@ Casting Time: 6
 Area of Effect: Caster
 Saving Throw: Fortitude half
 
-This spell confers the powers of a lich's touch and a lich's immunities upon the caster. The wizard's hands are imbued with a chilling force of negative energy, allowing the caster to deal 2d10 cold damage on a successful touch attack and paralyze living victims for 10 rounds on a failed Fortitude save. While the spell is active, the caster is treated as undead, becoming immune to poison, disease, bleeding wounds, energy drain, death magic, petrification, stun, emotion spells, cold damage, paralysis, charm, berserk, confusion, fatigue, sleep, and fear. However, the transformation is draining for the caster, who suffers -2 Strength, Dexterity, and Constitution and cannot benefit from any form of healing magic until the duration expires.~
+This spell confers the powers of a lich's touch and a lich's immunities upon the caster. The wizard's hands are imbued with a chilling force of negative energy, allowing the caster to deal 3d10+5 cold damage (plus damage bonuses from Strength, proficiencies, spells, items and other effects) with each hit and paralyze living victims for 10 rounds on a failed Fortitude save. The attack uses the Simple Weapon: Small Blade/Touch Attack proficiency. While the spell is active, the caster is treated as undead, becoming immune to poison, disease, bleeding wounds, energy drain, death magic, petrification, stun, cold damage, paralysis, charm, berserk, confusion, fatigue, sleep, and fear.~
 @1496    = ~Eagle's Splendor~
 @1497    = ~Eagle's Splendor 
 (Transmutation)
@@ -1199,7 +1199,7 @@ Casting Time: 0
 Area of Effect: Special
 Saving Throw: None
 
-This spell allows the caster to switch positions with another creature - there is no Saving Throw. Stationary creatures that are part of a structure are unaffected by this spell.
+This spell allows the caster to pull another creature to them - there is no Saving Throw. Stationary creatures that are part of a structure are unaffected by this spell.
 ~
 @1591    = ~Sunbeam~
 @1592    = ~Sunbeam
@@ -1517,12 +1517,12 @@ This spell empowers the attacks of any animal, granting it +3 to hit and damage 
 @1687    = ~Spiritual Weapon 
 (Evocation)
 Level: Clr 2, Pal 1
-Casting Time: 5 
+Casting Time: 5
 Range: Caster
-Duration: 3 rounds + 1 round / level 
+Duration: 3 rounds + 1 round / level
 Saving Throw: None 
 
-By calling upon his deity, the caster brings into existence a magical hammer which may be used as a weapon, striking as a +1 weapon. This hammer is composed of pure force and can be used to strike targets from a safe distance, dealing 1d8 bludgeoning damage per strike. At level 8, the hammer strikes as a +2 weapon and deals 1d4 electricity damage per hit. At level 12, the hammer strikes as a +3 weapon and deals 1d8 electricity damage per hit.
+By calling upon his deity, the caster brings into existence a magical hammer which may be used as a weapon, striking as a +1 weapon. This hammer is composed of pure force and can be used to strike targets from a safe distance, dealing 1d8 bludgeoning damage per strike. At level 8, the hammer strikes as a +2 weapon and deals 1d4 electricity damage per hit. At level 12, the hammer strikes as a +3 weapon and deals 1d8 electricity damage per hit. The Spiritual Hammer uses the Martial Weapon: Hammer proficiency.
 ~
 @1688    = ~Shocking Grasp~
 @1689    = ~Shocking Grasp 
@@ -1620,7 +1620,7 @@ Casting Time: 1 round
 Area of Effect: 1 creature
 Saving Throw: None
 
-As Raise Dead, except you are able to restore life and complete strength to a deceased character. The deceased character must be in the party for the spell to work. Upon completion of the spell, the creature is immediately restored to full hit points, vigor and health. The ordeal however causes the character to lose one level during the process.
+As Raise Dead, except you are able to restore life and complete strength to a deceased character. The deceased character must be in the party for the spell to work. Upon completion of the spell, the creature is immediately restored to full hit points, vigor and health.
 
 Note that when this spell is inscribed on a scroll, its power and range is diminished. A scroll of Resurrection only works when invoked at the place where the target died; if the caster leaves the area and attempts to resurrect his companion, the scroll will not work.
 ~
@@ -1635,7 +1635,7 @@ Casting Time: 1 round
 Area of Effect: Caster
 Saving Throw: None 
 
-This spell eliminates the interval between spellcasting, allowing the caster to begin a new spell as soon as he or she finishes casting the previous one. A spellcaster under the effects of Improved Alacrity can cast multiple spells in the space of a single round, but the concentration involved imposes a -3 penalty to casting time for the duration of the spell.
+This spell eliminates the interval between spellcasting, allowing the caster to begin a new spell as soon as he or she finishes casting the previous one. A spellcaster under the effects of Improved Alacrity can cast multiple spells in the space of a single round, but the concentration involved imposes a -3 penalty to casting speed for the duration of the spell.
 ~
 @1718    = ~Blur~
 @1719    = ~Blur 
@@ -1800,7 +1800,7 @@ Casting Time: 1 round
 Area of Effect: 1 creature
 Saving Throw: Fortitude partial
 
-This spell imbues the caster's hands with destructive negative energy that will release when a successful touch attack is made. This attack will instantly slay a living creature unless a Fortitude save is made, in which case the creature takes 3d6 + 1/level points of magic damage instead. The Fortitude DC is equal to 15 plus the caster's level divided by 2. Thus, a level 10 Slay Living attack has a Fortitude DC of 20. This spell has no affect on undead or constructs.~
+This spell imbues the caster's hands with destructive negative energy that will release when a successful touch attack is made. This attack will instantly slay a living creature unless a Fortitude save is made, in which case the creature takes 3d6 + 1/level points of magic damage instead. The Fortitude DC is equal to 15 plus the caster's Wisdom and Spell Focus bonuses. Thus, a level 10 Slay Living attack has a Fortitude DC of 20. This spell has no affect on undead or constructs.~
 @1760    = ~Harm~
 @1761    = ~Harm 
 (Necromancy) 
@@ -1811,19 +1811,19 @@ Casting Time: 1 round
 Area of Effect: 1 creature
 Saving Throw: Fortitude negates
 
-This spell imbues the caster's hands with destructive negative energy that will release when a successful touch attack is made at +2. This attack deals magic damage equal to all but 1d4 of the target's current hit points on a failed Fortitude save. The save DC is equal to 16 plus the caster's level divided by 2. Thus, a level 12 Harm spell has a Fortitude DC of 22. This spell has no effect on undead or constructs.
+This spell imbues the caster's hands with destructive negative energy that will release when a successful touch attack is made at +2. This attack deals magic damage equal to all but 1d4 of the target's current hit points on a failed Fortitude save. The save DC is equal to 18 plus the caster's Wisdom and Spell Focus bonuses. Thus, a level 12 Harm spell has a Fortitude DC of 22. This spell has no effect on undead or constructs.
 ~
 @1762    = ~Ice Blade~
-@1763    = ~Ice Blade 
+@1763    = ~Ice Blade
 (Evocation) 
 Level: Clr 3, Drd 2, Rgr 1
 Range: Caster
 Duration: 4 rounds + 1 round/level
 Casting Time: 4 
 Area of Effect: Caster
-Saving Throw: Reflex 
+Saving Throw: Reflex
 
-This spell creates a segment of deep chilling cold that springs forth from the casters hand, taking the shape of a scimitar and wielded as one. Attacks with the Ice Blade are melee touch attacks. The blade deals 1d8 + 6 cold damage and the victim must make a Reflex save or be slowed for 2 rounds. The save DC is equal to 10 plus the caster's level divided by 3. The Ice Blade does not gain the caster's strength bonus to damage because it is immaterial, but bypasses armor and shield bonuses.
+This spell creates a segment of deep chilling cold that springs forth from the casters hand, taking the shape of a scimitar and wielded as one. Attacks with the Ice Blade are melee touch attacks. The blade deals 2d6 cold damage and bypasses armor and shield bonuses, and the victim must make a Reflex save or be slowed for 2 rounds. The Reflex DC is equal to 12 plus the caster's Wisdom and Spell Focus bonuses. The Ice Blade uses the Martial Weapon: Large Sword proficiency. It cannot critically hit, but it does gain bonuses to attack and damage from Strength, proficiency, spells, items, and other effects.
 ~
 @1764    = ~Star Metal Cudgel~
 @1765    = ~Star Metal Cudgel
@@ -1897,7 +1897,7 @@ Casting Time: 1 round
 Area of Effect: 1 creature
 Saving Throw: Fortitude partial
 
-This spell imbues the caster's hands with destructive negative energy that will release when a successful touch attack is made. This attack will instantly destroy a target, blasting it into small chunks. A Fortitude saving throw is allowed and if successful the target takes 10d6 magic damage instead of being destroyed. The Fortitude DC is equal to 20 plus the caster's level divided by 2. This spell has no affect on undead or constructs. Note that a character struck with a Destruction spell cannot be raised from the dead with a Raise Dead or Resurrection spell.
+This spell imbues the caster's hands with divine force that will release when a successful touch attack is made. This attack will instantly destroy a target, blasting it into small chunks. A Fortitude saving throw is allowed and if successful the target takes 10d6 magic damage instead of being destroyed. The Fortitude DC is equal to 19 plus the caster's Wisdom and Spell Focus bonuses. Destruction can even destroy undead and constructs. Note that a character struck with a Destruction spell cannot be raised from the dead with a Raise Dead or Resurrection spell.
 ~
 @1775    = ~Control Undead~
 @1776    = ~Control Undead 
@@ -2213,25 +2213,25 @@ Bane is the reverse of Bless, and lowers the morale and attack bonus of enemy cr
 Level: Brd 3, Rgr 4, Sor/Wiz 3
 Range: Sight of Caster
 Duration: 1 round/level 
-Casting Time: 3 
+Casting Time: 3
 Area of Effect: 1 creature
 Saving Throw: None 
 
 A creature affected by Haste gains an extra attack every round, a +4 armor bonus, and moves at double its base movement rate. Haste dispels and counters slow and is not cumulative with itself or with other similar magic.~
 @1877     = ~Fire Seeds~
 @1878     = ~Fire Seeds
-(Conjuration) 
+(Conjuration)
 Level: Drd 6, Rgr 4
 Range: Caster
 Duration: 10 rounds
-Casting Time: 1 round
+Casting Time: 5
 Area of Effect: Special
 Saving Throw: Reflex half
 
-This spell creates one explosive seed in the caster's inventory for every five levels (2 at 10th level, 3 at 15th level, etc...). When hurled, the seeds explode, doing 5d8 points of damage to everything within a five-foot radius. Creatures have a Reflex save for half damage.~
+This spell creates one explosive seed for every five levels (2 at 10th level, 3 at 15th level, etc...), which can be thrown by the caster. When hurled, the seeds explode, doing 6d6 points of fire damage to everything within a 15-foot radius. The Fire Seeds use the Simple Weapon: Missile proficiency and gain damage bonuses based on Strength, proficiency, items, spells, and other sources. Creatures can make Reflex save for half damage. The DC of the Reflex save is 10 plus the caster's total level.~
 @1879     = ~Web~
 @1880     = ~Web
-(Conjuration) 
+(Conjuration)
 Level: Drd 2, Sor/Wiz 2
 Range: Sight of Caster
 Duration: 15 rounds
@@ -2322,12 +2322,12 @@ When the wizard casts this spell, a jet of searing flame shoots from his fingert
 (Evocation)
 Level: Drd 2, Rgr 1
 Range: Caster
-Duration: 10 rounds / level
+Duration: 2 rounds / level
 Casting Time: 4 
 Area of Effect: Caster
 Saving Throw: None 
 
-With this spell, the caster causes a blazing ray of red-hot fire to spring forth from his hand. This blade-like ray is wielded as if it were a scimitar. Attacks with the Flame Blade are melee touch attacks. The blade deals 1d8 + 6 fire damage but does not gain the caster's strength bonus to damage because it is immaterial.~
+With this spell, the caster causes a blazing ray of red-hot fire to spring forth from their hand. This blade-like ray is wielded as if it were a scimitar, and uses the Martial Weapon: Large Sword proficiency. Attacks with the Flame Blade deal 2d8 fire damage and bypass armor and shield bonuses. The Flame Blade cannot critically hit or be used in sneak attacks, but it does gain bonuses to attack and damage from Strength, proficiency, spells, items, and other effects.~
 @1897     = ~Shillelagh~
 @1898     = ~Shillelagh
 (Transmutation) 
@@ -2620,6 +2620,17 @@ Area of Effect: 20-foot radius
 Saving Throw: Will negates 
 
 This spell holds animals rigidly immobile. Animals with magical powers such as winter wolves do count as animals, as do some of the more animalistic monsters such as wyverns. The effect is centered on a point selected by the caster, and 1-4 animals within 20 feet of the target point are affected. Those who succeed on their Will save are unaffected by the spell. Being held does not prevent the worsening of the subject's condition due to wounds, disease, or poison.~
+@31409     = ~Cloak of Fear~
+@32409     = ~Cloak of Fear
+(Conjuration)
+Level: Clr 4, Bane 4
+Range: Caster
+Duration: 6 rounds
+Casting Time: 6
+Area of Effect: Caster
+Saving Throw: Will negates
+
+Cloak of Fear bestows the caster with an aura of fear in a 5-foot radius.  All creatures that enter the cloak's area of effect must make a Will save or flee in panic for 1 round, and must continue to make Will saves twice a round as long as they are in the cloak of fear's area of effect.  The aura does not affect undead creatures.~
 @31508     = ~Chaotic Commands~
 @32508     = ~Chaotic Commands
 (Enchantment) [Chaos]
@@ -2652,7 +2663,7 @@ Casting Time: 3
 Area of Effect: Caster
 Saving Throw: Reflex half
 
-This spell enables the wizard to cast one small meteor for each level of the caster. Each meteor bursts into a 1-foot-diameter sphere upon impact and inflicts 1d4+3 points of damage (plus Strength bonus) and +3 points of fire damage to the creature struck. The meteors use the missile proficiency, gain a +5 bonus to attack rolls, and strike as +3 weapons. The wizard may discharge up to five missiles per round.~
+This spell enables the wizard to cast one small meteor for each level of the caster. Each meteor bursts into a 1-foot-diameter sphere upon impact and inflicts 1d4+6 points of fire damage (plus Strength bonus). The meteors use the Simple Weapon: Missile proficiency, gain a +5 bonus to attack rolls, and strike as +3 weapons. The wizard may discharge up to five missiles per round.~
 @33708     = ~Acid Storm~
 @34708     = ~Acid Storm
 (Evocation)
@@ -2799,6 +2810,17 @@ Area of Effect: 15-foot radius
 Saving Throw: Will negates
 
 Remove Magic is like Dispel Magic, except it only affects enemies. When cast, it dispels most magical effects on enemies in the area of effect who fail a Will save. For every 5 levels of the caster, enemies make their saves at an additional -1 penalty.~
+@37451     = ~Teleport Field~
+@38451     = ~Teleport Field
+(Transmutation) 
+Level: Brd 5, Sor/Wiz 4
+Range: Sight of Caster
+Duration: 4 rounds
+Casting Time: 4
+Area of Effect: 15-foot radius
+Saving Throw: None
+
+This spell creates a strange magical field in the area of effect. Any hostile creature in the field will be teleported to a random location in the field each round.~
 @37652     = ~Isaac's Greater Missile Storm~
 @38652     = ~Isaac's Greater Missile Storm
 (Evocation)

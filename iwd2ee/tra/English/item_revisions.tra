@@ -913,9 +913,26 @@ STATISTICS:
 Deflection Bonus: +6
 Weight: 1 lb.~
 //@10264    = ~Thunder Clap~
-//@10265    = ~Item description can remain the same; if new description is needed put it here~
+@10265    = ~When a high level monk hits someone, the victims often say it was like getting hit by a bolt of lightning.
+
+The bracers known as Thunder Clap are a prized possession of the monks that own them.  Being that monks rarely use weapons other than their own hands and feet, these bracers offer an edge in battle that is rarely seen in the Realms.  These bracers allow the skilled monk to imbue their attacks with lightning.  The added speed dished out by these bracers have, on several occasions, evened the odds against would be bandits that try to outnumber their monk victims.
+
+STATISTICS:
+
+Special:
+ Shock: Unarmed attacks deal an additional 1d6 electrical damage
+Weight: 1 lb.~
 //@10266    = ~Force of Lightning~
-//@10267    = ~Item description can remain the same; if new description is needed put it here~
+@10267    = ~When a high level monk hits someone, the victims often say it was like getting hit by a bolt of lightning.
+
+The bracers known as Force of Lightning are a prized possession of the monks that own them.  Being that monks rarely use weapons other than their own hands and feet, these bracers offer an edge in battle that is rarely seen in the Realms.  These bracers allow the skilled monk to imbue their attacks with lightning.  The added speed dished out by these bracers have, on several occasions, evened the odds against would be bandits that try to outnumber their monk victims.
+
+
+STATISTICS:
+
+Special:
+ Shock: Unarmed attacks deal an additional 2d4 electrical damage
+Weight: 1 lb.~
 //@10268    = ~Periapt of Wound Closure~
 @10269    = ~This magical stone looks exactly the same as the others of this ilk.  The person possessing it need never fear open, bleeding wounds because the periapt prevents them.  In addition, the periapt increases the normal rate of healing, and allows normal healing of wounds that would not do so normally.
 
@@ -1366,7 +1383,8 @@ Weight: 3 lb.~
 
 STATISTICS:
 
-Resistance:  15/- Cold Resistance
+Resistance:  20/- Cold Resistance
+All cold damage dealt by the character is increased by 20%
 Weight:  3 lb.~
 //@10385    = ~Knave's Robe~
 @10386    = ~A favorite among thief-wizards, the Knave's Robe has been enchanted to shield its wearer from the blades and poisons of any darkened alley.
@@ -1376,6 +1394,7 @@ STATISTICS:
 Armor Bonus: +3 vs. Slashing
 Armor Bonus: +3 vs. Piercing
 Saving Throw Bonus: +5 on Fortitude saves
+Sneak Casting: The wearer can sneak attack with spells. When the wearer hits a creature from behind with a damaging spell, the spell will deal additional damage equal to the wearer's Sneak Attack damage.
 Weight:  4 lb.~
 //@10387    = ~Traveler's Robe~
 @10388    = ~This Traveler's Robe has been perfected for use by any rambling, itinerant wizard that travels from town to town. Its enchantments provide protection from the bandit's arrow and from the jealous thief-wizard that lies in ambush with his Fireball.
@@ -1425,14 +1444,16 @@ Weight:  6 lb.~
 
 STATISTICS:
 
-Resistance:  15/- Fire Resistance
+Resistance:  20/- Fire Resistance
+All fire damage dealt by the character is increased by 20%
 Weight:  3 lb.~
 //@10399    = ~Wizard Robe of Electrical Resistance~
 @10400    = ~While seen with less frequency than some other Wizard Robes, those of Electrical Resistance can hardly be considered a rarity. Some are worn by paranoiacs seeking protection from a ragged mountain storm but many more are worn by mages seeking to protect themselves from the intrigues of others of their kind.
 
 STATISTICS:
 
-Resistance:  15/- Electrical Resistance
+Resistance:  20/- Electrical Resistance
+All electrical damage dealt by the character is increased by 20%
 Weight:  3 lb.~
 //@10401    = ~Robe of Enfusing~
 @10402    = ~Since the age of Netheril, wizards have learned to bestow a wide variety of magical properties upon the everyday objects that surround them. A favorite item of such enchantment is the common robe. It is lightweight, affordable, and holds its enchantment well, thereby making it ideal equipment for a wizard.
@@ -1440,7 +1461,7 @@ Weight:  3 lb.~
 STATISTICS:
 
 Deflection Bonus: +3
-Fire, cold, electric, acid, and magic damage dealt by the wearer from most sources is increased by 20%
+Fire, cold, electric, acid, and magic damage dealt by the wearer is increased by 20%
 Weight:  4 lb.~
 //@10403    = ~Master's Robe~
 @10404    = ~Several of these robes were created for the short-lived Michell Academy near Berdusk.  The masters of the school wore distinctive robes that enhanced their spellcasting ability.  Unfortuntely, Michell and his staff were too arrogant and confrontational for a nearby Loviatan temple.  The mistresses of the temple organized an attack on the school that lasted only an hour.  Despite the brevity of the battle, some historians claim that the torture inflicted upon the wizards lasted for weeks.  This particular robe was worn by Jamal Briars, a professor of alchemy.  The Loviatans decided to make a pun of his name; they had air elementals drag the man through thorny briars until he bled to death.
@@ -1551,18 +1572,18 @@ Armor Check Penalty:  -0
 Arcane Spell Failure:  10%
 Special: Once donned, this armor cannot be removed without a Remove Curse spell. While it is equipped, the wearer is unaware of his or her current hit points and has a -3 penalty to all thieving skills. However the wearer also gets a +3 bonus to attack and damage.
 Weight: 10 lb.~
-@10431    = ~Leather Armor of Providence +1~
+@10431    = ~Leather Armor of the Wilderness +2~
 @10432    = ~Leather armor, despite the popular misconception, is not soft and supple like the leather used to make a ranger's boots or a druid's robe.  That kind of leather offers no better protection than common clothing.  Magical enchantments enhance the protective abilities of this leather armor.
 
 STATISTICS:
 
 Light Armor
-Armor Bonus: +3
+Armor Bonus: +4
 Max Dex Bonus:  +6
 Armor Check Penalty:  -0
 Arcane Spell Failure:  10%
 Special:
-  Death Ward while equipped
+  The armor bonus of this armor is increased by 1 for every 5 points of Wilderness Lore the wearer has
 Weight: 10 lb.~
 @10433    = ~Studded Leather Armor of Luck +2~
 @10434    = ~Studded leather armor has little in common with normal leather armor.  While leather armor is a hardened shell, studded leather armor is soft and supple with hundreds of metal rivets affixed.  The rivets are so close together that they form a flexible coating of hard metal that turns aside slashing and cutting attacks.  The soft leather backing is little more than a means of securing the rivets in place. Magical enchantments enhance the protective abilities of this leather armor.
@@ -1575,7 +1596,7 @@ Max Dex Bonus:  +5
 Armor Check Penalty:  -0
 Arcane Spell Failure:  15%
 Special:
-  Luck: +1
+  Luck: +2
 Weight: 15 lb.~
 @10435    = ~Leather Armor of Fire Resistance +2~
 @10436    = ~Leather armor, despite the popular misconception, is not soft and supple like the leather used to make a ranger's boots or a druid's robe.  That kind of leather offers no better protection than common clothing.  Magical enchantments enhance the protective abilities of this leather armor.
@@ -1615,7 +1636,7 @@ Max Dex Bonus:  +5
 Armor Check Penalty:  -0
 Arcane Spell Failure:  15%
 Special:
-  Special: Can create two mirror images for 5 rounds 2/day
+  Can create two mirror images for 5 rounds 2/day
 Weight: 15 lb.~
 @10441    = ~Studded Leather Armor of Fortitude +1~
 @10442    = ~Studded leather armor has little in common with normal leather armor.  While leather armor is a hardened shell, studded leather armor is soft and supple with hundreds of metal rivets affixed.  The rivets are so close together that they form a flexible coating of hard metal that turns aside slashing and cutting attacks.  The soft leather backing is little more than a means of securing the rivets in place. Magical enchantments enhance the protective abilities of this leather armor.
@@ -1753,6 +1774,7 @@ Armor Check Penalty:  -0
 Arcane Spell Failure:  10%
 Special:
   Strength: +2
+  If the wearer is using Barbarian Rage, the bonus Strength from this armor stacks with the bonus Strength from Barbarian Rage
 Weight: 15 lb.~
 @10461    = ~Uthgar's Great Blessing +1~
 @10462    = ~Crafted by the finest Barbarian armorer and proudly embroidered with Uthgar's large, beast totem spirit, the Blue Bear, this style of leather armor became the mainstay of the Blue Bear tribal warriors. 
@@ -1770,8 +1792,9 @@ Max Dex Bonus:  +6
 Armor Check Penalty:  -0
 Arcane Spell Failure:  10%
 Special:
-  Strength: +6
-  Hit Point Bonus: +30 to Max Hit Points
+  Strength: +4
+  Constitution: +4
+  If the wearer is using Barbarian Rage, the bonus Strength and Constitution from this armor stack with the bonus Strength and Constitution from Barbarian Rage
 Weight: 15 lb.~
 @10463    = ~Dirty Bits +3~
 @10464    = ~It is often said that a person does not choose a profession, the profession chooses the person.  So was the case with Nasty Phil, the local corpse cleaner for the Ten Towns many years ago.  Nasty Phil, you see, was no undertaker - no, it was his responsibility, after a party of adventurers dispatched with a monster (or monsters) that was terrorizing a local community, to clean up the mess that was left over.  
@@ -2132,9 +2155,20 @@ Armor Check Penalty:  -5
 Arcane Spell Failure:  30%
 Special:
   Regeneration: Every round, the wearer regains a number of Hit Points equal to their Constitution bonus
-Weight: 40 lb.~
-//@10519    = ~Mail of Life +5~ //HoF
-//@10520    = ~If we decide to make a HoF version of this item, we should put its description here~
+Weight: 15 lb.~
+@10519    = ~Mail of Life +5~ //HoF
+@10520    = ~This armor was crafted from meteoric iron by dwarven and elven smiths during the Time of Cooperation.  A high priest of Moradin and a high priest of Labelas Enoreth enchanted the armor with its powers.  Unfortunately, no elven or dwarven warrior ever wore the chain mail.  When troubles arose between the Hand of the Seldarine and Dorn's Deep, the dwarves locked the armor in a vault, refusing to use anything the elves had a hand in creating.
+
+STATISTICS:
+
+Medium Armor
+Armor Bonus: +10
+Max Dex Bonus:  +2
+Armor Check Penalty:  -5
+Arcane Spell Failure:  30%
+Special:
+  Regeneration: Every round, the wearer regains a number of Hit Points equal to their Constitution bonus
+Weight: 10 lb.~
 @10521    = ~Ogien's Scale +3~
 @10522    = ~The great barbarian hero Ogien wore this armor during his many legendary conquests.  Ogien was said to be a bear of a man, taller than his fellow barbarians and a good deal wider.  It is said by some of the barbarians that Ogien would wrestle with wolves for amusement, and it is known that he was haunted by a prophecy that he would die "under white paws."  When he was killed fighting polar bears on the tundra of Icewind Dale, his armor was buried with him.  Despite its power, it is not distinctive in its appearance.
 
@@ -2145,10 +2179,24 @@ Armor Bonus: +8
 Max Dex Bonus:  +2
 Armor Check Penalty:  -5
 Arcane Spell Failure:  30%
-Spell Power: Wearer can cast Animal Rage (at level 15) 3/Day
+Special:
+  Spell Power: Wearer can cast Animal Rage 1/Day
+  While under the effect of Barbarian Rage, Animal Rage, or Blood Rage, the wearer gains 3/- resistance to all damage.
 Weight: 25 lb.~
-//@10523    = ~Ogien's Scale +5~
-//@10524    = ~If we decide to make a HoF version of this item, we should put its description here~
+@10523    = ~Ogien's Scale +5~ //HoF
+@10524    = ~The great barbarian hero Ogien wore this armor during his many legendary conquests.  Ogien was said to be a bear of a man, taller than his fellow barbarians and a good deal wider.  It is said by some of the barbarians that Ogien would wrestle with wolves for amusement, and it is known that he was haunted by a prophecy that he would die "under white paws."  When he was killed fighting polar bears on the tundra of Icewind Dale, his armor was buried with him.  Despite its power, it is not distinctive in its appearance.
+
+STATISTICS:
+
+Medium Armor
+Armor Bonus: +10
+Max Dex Bonus:  +2
+Armor Check Penalty:  -5
+Arcane Spell Failure:  30%
+Special:
+  Spell Power: Wearer can cast a combination of Animal Rage and Blood Rage 1/Day
+  While under the effect of Barbarian Rage, Animal Rage, or Blood Rage, the wearer gains 5/- resistance to all damage.
+Weight: 20 lb.~
 @10525    = ~Mercenary's Lot +2~
 @10526    = ~The mercenary's lot has been a difficult one in the lands of Icewind Dale, for there is little to occupy one's fighting skills in the far north... at least until recently.  This armor was worn by a mercenary company called the Silver Band who was driven from the north after a heated debate at the Ten-Towns council (a debate that barred further mercenary service from most of the Ten-Towns for a period not exceeding three seasons).   According to the debate, the mercenaries were not seen as effective combatants, and certainly not worth the gold they were paid for their meager weapon skills. 
 
@@ -3107,7 +3155,7 @@ Attack Bonus:  +2
 Enchantment:  +2
 Damage Type:  Piercing
 Special:
-  Venom: +2 points of poison damage every second for 6 seconds (Fortitude DC 18)
+  Venom: +2 points of poison damage every second for 6 seconds (Fortitude DC 18 + twice the wielder's Dexterity bonus)
 Weight: 1 lb.
 Feat Requirement:  Simple Weapon, Small Blade
 Type:  One-handed~
@@ -3125,17 +3173,17 @@ Special:
 Weight: 1 lb.
 Feat Requirement:  Simple Weapon, Small Blade
 Type:  One-handed~
-//@10709    = ~Vampire's Fang +1~
+@10709    = ~Vampire's Fang +4~
 @10710    = ~The typical dagger has a pointed, usually double-edged blade, as opposed to a knife, which has a single edge and is a bit shorter than the dagger. 
 
 STATISTICS:
 
-Damage:  1d4 + 1
-Attack Bonus:  +1 
-Enchantment:  +1
+Damage:  1d4 + 4
+Attack Bonus:  +4
+Enchantment:  +4
 Damage Type:  Piercing
 Special:
-  Vampiric: 1d4 hit points drained from target and temporarily added to wielder (Fortitude DC 16 save for none)
+  Vampiric: 2d4 hit points drained from target and temporarily added to wielder (Fortitude DC 30 save for none)
 Weight: 1 lb.
 Feat Requirement:  Simple Weapon, Small Blade
 Type:  One-handed~
@@ -3229,7 +3277,7 @@ STATISTICS:
 Damage:  1d4
 Damage Type:  Piercing
 Special:
-  Venom: +2 points of poison damage every second for 6 seconds (Fortitude DC 12)
+  Venom: +2 points of poison damage every second for 6 seconds (Fortitude DC 12 + the wielder's Dexterity bonus)
 Weight: 1 lb.
 Feat Requirement:  Simple Weapon, Small Blade
 Type:  One-handed~
@@ -3266,25 +3314,25 @@ Type:  One-handed~
 //@10729    = ~Poisonfang~
 @10730    = ~Ysha Poisonfang was a minor but very successful assassin.  She preferred to strike at her targets from a distance and relied on poison to deal the fatal blow.  Ysha was an abused and twisted young woman who enjoyed the suffering of others.  She rarely used fast acting poisons and reveled in the screams of agony as her victims slowly perished.  After a series of successful assassinations she was given an enchanted dagger by her guild.  She promptly named the blade Poisonfang and took the name for her surname as well.
 
-Poisonfang is a throwing dagger with several enchantments.  The weapons accuracy has been enhanced, has a chance to inflict the victim with a virulent poison, and then returns to its user.
+Poisonfang is a throwing dagger with several enchantments.  The weapon's accuracy has been enhanced, it inflicts a slow-acting poison on the victim, and it returns to the user after being thrown.
 
 STATISTICS:
 
-Damage:  1d4 + 2
-Attack Bonus:  +2 
-Enchantment:  +2
+Damage:  1d4 + 3
+Attack Bonus:  +3
+Enchantment:  +3
 Damage Type: Missile (piercing)
 Damage Type: Melee (piercing)
 Special: 
   Returning: Returns to user 
-  Venom: 50% chance of +2 points of poison damage every second for 6 seconds (Fortitude DC 24)
+  Venom: +1 points of poison damage every 2 seconds for 12 seconds (no save)
 Weight: 1 lb.
 Feat Requirement:  Simple Weapon, Small Blade
 Type:  One-handed~
 //@10731    = ~Ysha's Sting~
 @10732    = ~Ysha Poisonfang was a minor but very successful assassin.  She preferred to strike at her targets from a distance and relied on poison to deal the fatal blow.  Ysha was an abused and twisted young woman who enjoyed the suffering of others.  She rarely used fast acting poisons and reveled in the screams of agony as her victims slowly perished.  After a series of successful assassinations she was given an enchanted dagger by her guild.  She promptly named the blade Ysha's Sting.
 
-Ysha's Sting is a throwing dagger with several enchantments.  The weapons accuracy has been enhanced, has a chance to inflict the victim with a virulent poison, and then returns to its user.
+Ysha's Sting is a throwing dagger with several enchantments.  The weapon's accuracy has been enhanced, it inflicts a slow-acting poison on the victim, and it returns to the user after being thrown
 
 STATISTICS:
 
@@ -3295,7 +3343,7 @@ Damage Type: Missile (piercing)
 Damage Type: Melee (piercing)
 Special: 
   Returning: Returns to user 
-  Venom: +3 points of poison damage every second for 6 seconds (Fortitude DC 37)
+  Venom: +1 points of poison damage every 2 seconds for 18 seconds (no save)
 Weight: 1 lb.
 Feat Requirement:  Simple Weapon, Small Blade
 Type:  One-handed~
@@ -3490,7 +3538,7 @@ Type:  One-handed~
 
 Forged from the finest metals and enchanted with the darkest magics akin to Xvimian lore, the Xvimian Fang reflects no light from its blackened steel.  The blade is so black, in fact, that any details that usually stand out from a curved dagger blade are completely absent.  It is as if the blade actually absorbs light. 
 
-Saablic Tan always keeps the Xvimian Fang close, not just because the dagger has the awesome power to potentially turn individuals to stone when attacked, but because the dagger increased the potency of his acid spells - truly a powerful weapon befitting a powerful wizard.
+Saablic Tan always keeps the Xvimian Fang close, not just because the dagger has the awesome power to potentially turn individuals to stone, but because the dagger increased the potency of his acid spells - truly a powerful weapon befitting a powerful wizard.
 
 STATISTICS:
 
@@ -3509,8 +3557,8 @@ Type:  One-handed~
 
 Forged from the finest metals and enchanted with the darkest magics akin to Xvimian lore, the Xvimian Fang reflects no light from its blackened steel.  The blade is so black, in fact, that any details that usually stand out from a curved dagger blade are completely absent.  It is as if the blade actually absorbs light. 
 
-Saablic Tan always keeps the Xvimian Fang of Despair close, not just because the dagger has the awesome power to potentially turn individuals to stone, or cause eminent hopelessness, when attacked, but because the dagger actually increases the wielder's intellect - truly a powerful weapon befitting a powerful wizard.
- 
+Saablic Tan always keeps the Xvimian Fang of Despair close, not just because the dagger has the awesome power to potentially turn individuals to stone, or cause eminent hopelessness, when attacked, but because the dagger increased the potency of his acid spells - truly a powerful weapon befitting a powerful wizard.
+
 
 STATISTICS:
 
@@ -3545,7 +3593,7 @@ Attack Bonus:  +3
 Enchantment:  +3
 Damage Type:  Piercing
 Special:
-  Inflicts an additional 4d6 piercing damage to creatures that are not yet hostile
+  Sneak attacks with this weapon deal an additional 3d6 damage
 Weight: 3 lb.
 Feat Requirement:  Simple Weapon, Small Blade
 Type:  One-handed~
@@ -3636,7 +3684,7 @@ Enchantment:  +5
 Damage Type:  Piercing
 Special:
   Speed: 1 additional attack per combat round
-  Backstabbing: After a sneak attack with this weapon, there is no delay before the target can be sneak attacked again
+  After a sneak attack with this weapon, there is no delay before the target can be sneak attacked again
 Weight:  3 lb.
 Feat Requirement:  Simple Weapon, Small Blade
 Type:  One-handed~
@@ -3733,9 +3781,9 @@ Attack Bonus:  +3
 Enchantment:  +3
 Damage Type: Piercing
 Special:
-    Venom: +2 points of poison damage every second for 12 seconds (Fortitude DC 24)
-    Move Silently: +6
-    Hide: +6
+  Move Silently: +6
+  Hide: +6
+  Whenever the wielder attacks a creature from stealth or invisibility with this weapon, the attack deals bonus piercing damage equal to the wielder's Sneak Attack damage (even if the hit was already a sneak attack, this extra damage is still added). Partial invisibility is not sufficient.
 Weight: 3 lb.
 Feat Requirement:  Simple Weapon, Small Blade
 Type:  One-handed~
@@ -3751,9 +3799,9 @@ Attack Bonus:  +5
 Enchantment:  +5
 Damage Type: Piercing
 Special:
-    Venom: +2 points of poison damage every second for 24 seconds (Fortitude DC 24)
-    Move Silently: +12
-    Hide: +12
+  Move Silently: +12
+  Hide: +12
+  Whenever the wielder attacks a creature from stealth or invisibility with this weapon, the attack deals bonus piercing damage equal to the wielder's Sneak Attack damage (even if the hit was already a sneak attack, this extra damage is still added). Partial invisibility is not sufficient.
 Weight: 3 lb.
 Feat Requirement:  Simple Weapon, Small Blade
 Type:  One-handed~
@@ -3840,8 +3888,9 @@ Damage:  1d8 + 3
 Attack Bonus:  +3 
 Enchantment:  +3
 Damage Type:  Slashing
-Special
+Special:
   Knowledge (Arcana): +20 bonus
+  Deals an additional +1 electrical damage for every 5 points of Knowledge (Arcana) the wielder has
 Weight:  4 lb.
 Feat Requirement:  Martial Weapon, Large Sword
 Type:  One-handed~
@@ -3852,15 +3901,12 @@ Type:  One-handed~
 A moonblade bypasses armor and strikes at a target directly.  The weapon drains life force and leaves no visible wounds, unless the creature is undead.  Undead suffer terrible wounds from a moonblade.  Their substance actually seems to boil away, and they suffer double damage.
 Moonblade's of Selune are the favored weapons of the priestesses of Selune.  They are usually granted only to priestesses who serve the church beyond the call of duty.  This weapon was given to Emma Moonblade for her unswerving dedication to the church.
 
-Due to the nature of the blade, this blade cannot be used as a sneak attack weapon.
-
 STATISTICS:
 
 Damage:  1d8 + 2
 Enchantment:  +2
 Damage Type:  Magic
 Special:
-  No Strength bonus
   Deals double damage to undead
   Bypasses armor and shield bonuses
   Each hit scrambles magic, causing any spell cast by the target in the next round to have a 50% chance of failing
@@ -4307,11 +4353,11 @@ Over six years, Ehld traveled the lands of Faerun and across the planes themselv
 
 When the last of the Six had answered for their crimes upon the edge of the Cera Sumat blade, Ehld returned to the Weeping Queen and laid the blade at her feet.  Where once it had been a tarnished blade, it shone as brightly as the sun, and the stone in the pommel was covered with the writing of his journeys.  He detached the stone, and set into a chain, and he gave it to the Weeping Queen.  Ehld told her to keep the chain to wear as a reminder of the many evils of the world and that they are never far from one's heart... but if one's heart is true and one's path is righteous, one may triumph against any number of evils.
 
-Duke Ehld outlived his queen, living to the age of 107, at which point Ehld took his Cera Sumat and left the Barbed Kingdom... and is said to have traveled north.  In time, the Barbed Kingdom rose to its former glory and its name was changed, and with it, the fate of Cera Sumat and the Medallion of the Lost Followers was forgotten... until your arrival in Kuldahar and the medallion and the Holy Avenger were united once again to meet the Lost Followers in battle one final time.  
+Duke Ehld outlived his queen, living to the age of 107, at which point Ehld took his Cera Sumat and left the Barbed Kingdom... and is said to have traveled north.  In time, the Barbed Kingdom rose to its former glory and its name was changed, and with it, the fate of Cera Sumat and the Medallion of the Lost Followers was forgotten... until your arrival in Kuldahar and the medallion and the Holy Avenger were united once again to meet the Lost Followers in battle one final time.
 
 But the story of Ehld and Cera Sumat was a story of another time, and of the adventures of another hero.  This is now your time, and your epic.  If your band counts a paladin among its number, then this ancient blade is yours to wield against the forces of evil...  
 
-And perhaps, if your heart is true, save a land from destruction once again. 
+And perhaps, if your heart is true, save a land from destruction once again.
 
 STATISTICS:
 
@@ -4447,7 +4493,7 @@ Weight:  9 lb.
 Feat Requirement:  Exotic Weapon, Bastard Sword
 Type:  One-handed~
 //@10927    = ~Fang~
-@10928    = ~This uniquely made Bastard Sword is imbued with an ever present supply of acidic venom.  While not poisonous, the venom will burn upon contact if it contacts directly with flesh.   
+@10928    = ~This uniquely made Bastard Sword is imbued with an ever present supply of acidic venom.  While not poisonous, the venom will burn upon contact if it contacts directly with flesh.
 
 STATISTICS:
 
@@ -5478,7 +5524,7 @@ Type:  Two-handed~
 STATISTICS:
 
 Damage:  1d8 + 5
-Attack Bonus:  +5 
+Attack Bonus:  +5
 Enchantment:  +5
 Damage Type:  Piercing
 Special: 
@@ -5637,14 +5683,14 @@ Special:
 Weight: 10 lb.
 Feat Requirement:  Martial Weapon, Polearm
 Type:  Two-handed~
-@11171    = ~Hand of the Buccaneer +5~
+@11171    = ~Hand of the Buccaneer +4~
 @11172    = ~This halberd has a core of iron within its shaft, and looks like it was intended to hook onto the sides of enemy ships and lock them in place to allow them to be boarded.  It is quite light and quick for a halberd, and the hook on the end makes it easy to latch onto structures. It doesn't look like it's seen much combat use, although it would be perfect for lancing goblins from a distance.
 
 STATISTICS:
 
-Damage:  1d10 + 5
-Attack Bonus:  +5 
-Enchantment:  +5
+Damage:  1d10 + 4
+Attack Bonus:  +4
+Enchantment:  +4
 Damage Type:  Piercing
 Special:
   Quick: No delay before attacking
@@ -5871,7 +5917,7 @@ Type:  One-handed~
 STATISTICS:
 
 Damage:  1d8  +5
-Attack Bonus:  +20 
+Attack Bonus:  +20
 Enchantment:  +5
 Damage Type:  Slashing
 Special:
@@ -6017,14 +6063,17 @@ Enchantment:  +3
 Damage Type:  Electrical
 Special:
   Returning: Returns to user
+  Lightning: Inflicts electrical damage to all objects in path of lightning bolt
+  Deals bonus electrical damage from Strength, proficiency, and any other damage bonus a throwing axe would gain
+  Reflex DC 20 for half damage; the DC is increased by the thrower's Dexterity bonus
   Automatically hits but cannot critically hit
-  Deals no physical damage; damage bonuses do not increase the damage of this ability
-  Lightning: Inflicts electrical damage to all objects in path of electrical bolt  
+
 
 Melee:
 
 Damage:  1d6  +3
 Attack Bonus:  +3
+Enchantment:  +3
 Damage Type: Slashing
 Weight: 4 lb.
 Required Feat:  Martial Weapon, Axe
@@ -6039,19 +6088,21 @@ STATISTICS:
 
 Thrown:
 
-Damage:  5d6+5
-Damage Type:  Electrical
+Damage:  3d6+5
 Enchantment:  +5
+Damage Type:  Electrical
 Special:
   Returning: Returns to user
+  Ball Lightning: Inflicts electrical damage to all enemies within an 8' radius
+  Deals bonus electrical damage from Strength, proficiency, and any other damage bonus a throwing axe would gain
+  Reflex DC 30 for half damage; the DC is increased by the thrower's Dexterity bonus
   Automatically hits but cannot critically hit
-  Deals no physical damage; damage bonuses do not increase the damage of this ability
-  Gedlee's Electric Loop: Inflicts electrical damage to all objects within a 5' radius
 
 Melee:
 
 Damage:  1d6 +5
 Attack Bonus: +5
+Enchantment:  +5
 Damage Type: Slashing
 Weight: 4 lb.
 Required Feat:  Martial Weapon, Axe
@@ -6094,28 +6145,27 @@ Special:
 Weight: 1 lb.
 Required Feat:  Martial Weapon, Axe
 Type:  One-handed~
-@11265    = ~Spiritcaller +3~
-@11266    = ~Spiritcaller was originally crafted as a gift for a dwarven general.  The weapon was given the ability to heal wounds and raise fallen soldiers on the field of battle.  Unfortunately the axe fell into the hands of the drow after an unsuccessful skirmish near the Underdark.
+@11265    = ~Deathcaller +3~
+@11266    = ~Lifecaller was originally crafted as a gift for a dwarven general.  The weapon was given the ability to heal wounds and raise fallen soldiers on the field of battle.  Unfortunately the axe fell into the hands of the drow after an unsuccessful skirmish near the Underdark.
 
-It is unknown what was done to warp the magic of the axe, but it is not the weapon it once was.  The axe can now be used to cause wounds three times per day, and summon spirits of the dead once per day.
+It is unknown what was done to warp the magic of the axe, but it is not the weapon it once was.  The axe can now be used to cause wounds three times per day, and instantly slay a creature once per day.
 
 STATISTICS:
 
 Damage: 1d8   +3
-Attack Bonus:  +3 
+Attack Bonus:  +3
 Enchantment:  +3
 Damage Type: Slashing 
 Special:
-  Spell Power: Can cast the spell Inflict Critical Wounds (at level 15) 3/day
-  Spell Power: Can cast the spell Slay Living (at level 15) 1/day
+  Three times per day, the wielder can imbue Deathcaller with negative energy, causing its next hit within 3 rounds to cast Inflict Serious Wounds (at level 10) on the target.
+  Once per day, the wielder can imbue Deathcaller with negative energy, causing its next hit within 3 rounds to cast Slay Living (Fortitude DC 20) on the target.
 Weight: 3 lb.
 Required Feat:  Martial Weapon, Axe
 Type:  One-handed~
 @11267    = ~Death's Ally +5~
-@11268    = ~Death's Ally was originally crafted as a gift for a dwarven general.  The weapon was given the ability to heal wounds and raise fallen soldiers on the field of battle.  Unfortunately the axe fell into the hands of the drow after an unsuccessful skirmish near the underdark.
+@11268    = ~Life's Ally was originally crafted as a gift for a dwarven general.  The weapon was given the ability to heal wounds and raise fallen soldiers on the field of battle.  Unfortunately the axe fell into the hands of the drow after an unsuccessful skirmish near the underdark.
 
-It is unknown what was done to warp the magic of the axe, but it is not the weapon it once was.  The axe can now be used to cause wounds three times per day, and summon spirits of the dead once per day.
-
+It is unknown what was done to warp the magic of the axe, but it is not the weapon it once was.  The axe can now be used to cause wounds three times per day, and instantly slay a creature once per day.
 STATISTICS:
 
 Damage: 1d8   +5
@@ -6123,8 +6173,8 @@ Attack Bonus:  +5
 Enchantment:  +5
 DamageType: Slashing 
 Special:
-  Spell Power: Can cast the spell Slay Living (at level 30) 3/day
-  Spell Power: Can cast the spell Destruction (at level 30) 1/day
+  Three times per day, the wielder can imbue Death's Ally with negative energy, causing its next hit within 3 rounds to cast Inflict Critical Wounds (at level 20) on the target.
+  Once per day, the wielder can imbue Death's Ally with negative energy, causing its next hit within 3 rounds to cast Destruction (Fortitude DC 30) on the target.
 Weight: 3 lb.
 Required Feat:  Martial Weapon, Axe
 Type:  One-handed~
@@ -6137,7 +6187,7 @@ Type:  One-handed~
 
 Dullcobble made several attempts to fashion a chopping axe, most of them ending up as cordwood next to his fireplace.  In the day before his challenge was to be called due, his only surviving weapon was a lop-sided axe whose haft was widely overbalanced. Realizing that displaying such a weapon would make him the laughing stock of the community, Dullcobble hired a wild mage to take his misshapen axe and turn it into a serviceable weapon.  The mage shrugged, took his payment, and promised the axe to Dullcobble on the dawn of the next day.  When Dullcobble woke up in the morning, the misshapen axe lay on his doorstep, unchanged, and he had no choice but to take the axe to his challengers... and take his chances. 
 
-When Dullcobble brought it into the town's meeting hall, the axe's appearance was greeted with derision and laughter.  Dullcobble, his face burning, became so angry he threw it at his tormenters - and watched as the haft traveled over the blade's head to smash into a pillar and shatter it, causing the roof to collapse.  Dullcobble, slack-jawed with surprise, was knocked unconscious by a falling timber, but the other challengers made it outside without injury.  
+When Dullcobble brought it into the town's meeting hall, the axe's appearance was greeted with derision and laughter.  Dullcobble, his face burning, became so angry he threw it at his tormenters - and watched as the haft traveled over the blade's head to smash into a pillar and shatter it, causing the roof to collapse.  Dullcobble, slack-jawed with surprise, was knocked unconscious by a falling timber, but the other challengers made it outside without injury.
 
 Dullcobble's blow to the head was a serious one, and it turned him into the village idiot - not much of a change from his previous lifestyle.  The axe itself was tossed upon a merchant cart headed north, and it was never seen again.  Whatever the enchantments the wild mage scrawled on the axe did, it causes the haft to be the first to strike an opponent, doing crushing damage instead of slashing damage. 
 
@@ -6188,10 +6238,9 @@ Type:  One-handed~
 STATISTICS:
 
 Damage:  1d8+2
-Damage Type:  cold
+Damage Type:  Cold
 Special:
-  Deals no physical damage; damage bonuses do not apply to the damage of this weapon
-  Bypasses armor and shield bonuses
+  Damage bonuses increase the cold damage of this axe
 Weight: 5 lb.
 Required Feat:  Martial Weapon, Axe
 Type:  One-handed~
@@ -6200,11 +6249,12 @@ Type:  One-handed~
 
 STATISTICS:
 
-Damage:  5d8+5
-Damage Type:  cold
+Damage:  1d8+6
+Attack Bonus:  +3
+Enchantment:  +3
+Damage Type:  Cold
 Special:
-  Deals no physical damage; damage bonuses do not apply to the damage of this weapon
-  Bypasses armor and shield bonuses
+  Damage bonuses increase the cold damage of this axe
 Weight: 5 lb.
 Required Feat:  Martial Weapon, Axe
 Type:  One-handed~
@@ -6313,7 +6363,7 @@ Damage:  1d12 + 5
 Attack Bonus:  +5 
 Enchantment:  +5
 Damage Type:  Slashing
-Special: 
+Special:
   Keen: Increases chance of scoring a critical hit
   Spell Process: While equipped, user is under the effects of the spell Blur
 Weight:  20 lb.
@@ -6581,8 +6631,6 @@ Attack Bonus:  +5
 Enchantment:  +5
 Damage Type:  Bludgeoning
 Special:
-  Luck: +5
-  Skills: +5
   Saving Throws: +5
 Weight: 3 lb.
 Required Feat:  Simple Weapon, Mace
@@ -6635,8 +6683,20 @@ Special:
 Weight: 3 lb.
 Required Feat:  Simple Weapon, Mace
 Type:  One-handed~
-//@11365    = ~Walloping Club +5~
-//@11366    = ~Item description can remain the same; if new description is needed put it here~
+@11365    = ~Unstoppable Club +3~
+@11366    = ~Most clubs are stout, hardwood sticks, narrow at the grip and wider at the end.  This simple weapon has been used since mankind first began using tools.  Anyone can find a good stout piece of wood and swing it; hence the club's widespread use.
+
+STATISTICS:
+
+Damage:  1d6  +3
+Attack Bonus:  Automatically hits
+Enchantment:  +3
+Damage Type:  Bludgeoning
+Special:
+  Automatically hits but cannot critically hit
+Weight: 3 lb.
+Required Feat:  Simple Weapon, Mace
+Type:  One-handed~
 @11367    = ~Club of Intoxication +4~
 @11368    = ~Most clubs are stout, hardwood sticks, narrow at the grip and wider at the end.  This simple weapon has been used since mankind first began using tools.  Anyone can find a good stout piece of wood and swing it; hence the club's widespread use.
 
@@ -8271,27 +8331,27 @@ Special:
 Weight: 2 lb.
 Feat Requirement:  Martial Weapon, Bow
 Type:  Two-handed~
-@11705    = ~Shortbow of Rejuvenation +2~
-@11706    = ~Shortbows were the first to be developed, although they were not called such.  This is more of a default term that refers to anything which is not a longbow.  Shortbow staves are about 5 ' feet long on the average.  As the years passed, attempts were made to increase bow ranges.  Bows were either given longer staves or flexibility was increased with no change to the length.  The former resulted in what is now called the longbow.  
+@11705    = ~Venomspitter +2~
+@11706    = ~Shortbows were the first to be developed, although they were not called such.  This is more of a default term that refers to anything which is not a longbow.  Shortbow staves are about 5 ' feet long on the average.  As the years passed, attempts were made to increase bow ranges.  Bows were either given longer staves or flexibility was increased with no change to the length.  The former resulted in what is now called the longbow.
 
 STATISTICS:
 
 Damage:  +2 (missile)
 Attack Bonus:  +2 
 Special:
-  Rejuvenation: Wielder regains 2 hit points whenever an arrow fired from this bow hits a creature
+  Arrows fired from this bow poison the target, dealing 2 damage per second for 6 seconds (Fortitude DC 18 + twice the wielder's Dexterity bonus)
 Weight: 2 lb.
 Feat Requirement:  Martial Weapon, Bow
 Type:  Two-handed~
-//@11707    = ~Shortbow of Health +1~
+@11707    = ~Shortbow of Sneak Attacking +1~
 @11708    = ~Shortbows were the first to be developed, although they were not called such.  This is more of a default term that refers to anything which is not a longbow.  Shortbow staves are about 5 ' feet long on the average.  As the years passed, attempts were made to increase bow ranges.  Bows were either given longer staves or flexibility was increased with no change to the length.  The former resulted in what is now called the longbow.  
 
 STATISTICS:
 
 Damage:  +1 (missile)
-Attack Bonus:  +1 
+Attack Bonus:  +1
 Special:
-  Hit Point Bonus: +10 to maximum hit points
+  If the wielder fires this bow while in stealth or invisibility, the attack will be treated as a sneak attack, dealing additional piercing damage equal to the wielder's sneak attack damage. Partial invisibility as created by the Improved Invisibility spell does not count.
 Weight: 2 lb.
 Feat Requirement:  Martial Weapon, Bow
 Type:  Two-handed~
@@ -9063,6 +9123,7 @@ Damage:  +10 (missile)
 Attack Bonus: +4
 Special:
   Assassin's Eyes: Wielder is under the effect of Executioner's Eyes 
+  If the wielder fires this crossbow while in stealth or invisibility, the attack will be treated as a sneak attack, dealing additional piercing damage equal to the wielder's sneak attack damage. Partial invisibility as created by the Improved Invisibility spell does not count.
 Weight: 14 lb.
 Feat Requirement:  Simple Weapon, Crossbow
 Type:  Two-handed~
@@ -9075,6 +9136,7 @@ Damage:  +14 (missile)
 Attack Bonus: +6
 Special:
   Assassin's Eyes: Wielder is under the effect of Executioner's Eyes
+  If the wielder fires this crossbow while in stealth or invisibility, the attack will be treated as a sneak attack, dealing additional piercing damage equal to the wielder's sneak attack damage. Partial invisibility as created by the Improved Invisibility spell does not count.
 Weight: 14 lb.
 Feat Requirement:  Simple Weapon, Crossbow
 Type:  Two-handed~
@@ -11283,13 +11345,12 @@ Type:  One-handed~
 
 STATISTICS:
 
-Damage:  1d4  +3
+Damage:  1d4  +6
 Attack Bonus:  +5
 Enchantment:  +5
-Damage Type:  Missile (piercing)
+Damage Type:  Fire
 Special:
   Five attacks per round
-  Flame: +3 fire damage
 Weight: 0 lb.
 Required Feat:  Simple Weapons, Missile
 Type:  One-handed~
@@ -11412,7 +11473,7 @@ Max Dex Bonus:  +5
 Armor Check Penalty:  -1
 Arcane Spell Failure:  15%
 Special:
-  Movement Rate: +10
+  Movement Rate doubled
 Weight: 4 lb.~
 @12493    = ~Studded Leather Armor of Perfect Reflexes +6~
 @12494    = ~Studded leather armor has little in common with normal leather armor.  While leather armor is a hardened shell, studded leather armor is soft and supple with hundreds of metal rivets affixed.  The rivets are so close together that they form a flexible coating of hard metal that turns aside slashing and cutting attacks.  The soft leather backing is little more than a means of securing the rivets in place. Magical enchantments enhance the protective abilities of this leather armor.
@@ -11728,7 +11789,7 @@ Attack Bonus: +6
 Enchantment:  +6
 Damage Type:  Slashing
 Special:
-  Slaying: With each hit, target must make a Fortitude save (DC 20) or die instantly
+  Slaying: With each hit, target must make a Fortitude save (DC 20 + wielder's Dexterity bonus) or die instantly
   Speed: 1 extra attack per combat round
   Keen: Increases chance of scoring a critical hit
 Weight: 1 lb.
@@ -12691,6 +12752,33 @@ Special:
 Weight: 5 lb.
 Feat Requirement:  Martial Weapon, Polearm
 Type:  Two-handed~
+@12725    = ~Studded Leather of Safe Stealth +5~
+@12726    = ~Studded leather armor has little in common with normal leather armor.  While leather armor is a hardened shell, studded leather armor is soft and supple with hundreds of metal rivets affixed.  The rivets are so close together that they form a flexible coating of hard metal that turns aside slashing and cutting attacks.  The soft leather backing is little more than a means of securing the rivets in place. Magical enchantments enhance the protective abilities of this leather armor.
+
+STATISTICS:
+
+Light Armor
+Armor Bonus: +8
+Max Dex Bonus:  +5
+Armor Check Penalty:  -1
+Arcane Spell Failure:  15%
+Special:
+  While fully invisible or in stealth, the wearer gains 30/- resistance to all damage.
+Weight: 4 lb.~
+@12727    = ~Dire-Hammer of Knockback +5~
+@12728    = ~Like others of its type, this warhammer is made entirely of steel, with a bone-crushing hammer mounted upon an 18" shaft.  It has also been bestowed with a small number of magical properties, however, thus making it more effective in combat.
+
+STATISTICS:
+
+Damage:  1d10 + 5
+Attack Bonus:  +5
+Enchantment:  +5
+Damage Type:  Bludgeoning
+Special:
+  Knockback: Target is knocked back with each hit
+Weight: 11 lb.
+Feat Requirement:  Martial Weapon, Hammer
+Type:  One-handed~
 
 @12900    = ~Hrm - you are powerful allies, indeed.  More gold and gems to line your pockets, then - also, a suit of plate armor, a warhammer, a helmet, all crafted and enchanted by great duergar artisans.  They are well deserved, outsider.~
 @12901    = ~Drink this Rainwater Brew, Ennelia.  It should help your condition.~
