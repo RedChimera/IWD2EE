@@ -182,7 +182,7 @@ RRNG_01	00Ring19	00Ring21	00Ring76	00Ring77	00Ring80	00Ring84	00Ring85	00Ring86	
 RRNG_02	00Ring67	00Ring71	00Ring73	00Ring78	00Ring82	00Ring83	00Ring87	00Amul13	00Amul14	EOL																																
 RRNG_03	00Ring15	00Ring20	00Ring67	00Ring69	00Ring70	00Ring90	00Ring94	00Ring95	00Amul15	USRing42	EOL																													
 RRNG_04	00Ring18	00Ring23	00Ring73	00Ring92	00Ring93	00Ring97	00Ring98	EOL																																					
-RRNG_05	00Ring22	00Ring68	00Ring74	00Ring75	00Ring79	00Ring88	00Ring91	EOL																																							
+RRNG_05	00Ring22	00Ring68	00Ring74	00Ring75	00Ring79	00Ring88	00Ring91	USRing44	EOL																																							
 RRNG_06	00Ring72	00Ring89	00Ring96	USAmul47	USAmul48	USRing50	EOL																																									
 RRNG_07	USRing53	USRing54	USAmul50	USAmul52	USAmul53	EOL																																									
 RRNG_08	USRing51	USRing55	USAmul51	USAmul59	EOL																																								
@@ -193,11 +193,11 @@ RRNG_12
 RRNG_13																																												
 RRNG_14	USRing58	EOL																																												
 																																												
-RMSC_01	00Brac02	00Brac09	00Clck01	USBrac35	EOL																																					
-RMSC_02	00Brac03	00Brac05	00Belt02	00Belt03	00Belt04	00Helm07	USBoot44	EOL																																			
+RMSC_01	00Brac02	00Brac09	00Clck01	00Helm07	USBrac35	EOL																																					
+RMSC_02	00Brac03	00Brac05	00Belt02	00Belt03	00Belt04	USBoot44	USBrac37	EOL																																			
 RMSC_03	00Brac04	00Brac10	00Clck02	USBrac45	EOL																																							
-RMSC_04	00Boot01	USBoot45	USBrac47	EOL																																								
-RMSC_05	00Robe99	USClck40	USClck48	USHelm45	EOL																																									
+RMSC_04	00Boot01	USBoot45	USBrac44	USBrac47	EOL																																								
+RMSC_05	00Robe99	USClck40	USClck48	USHelm45	USBrac43	EOL																																									
 RMSC_06	00Robe05	00Robe06	00Robe07	USBrac50	USClck50	EOL																																									
 RMSC_07	USClck55	USHelm50	USBrac52	EOL																																									
 RMSC_08	USBrac54	USBrac55	USClck52	USIoun52	EOL																																								

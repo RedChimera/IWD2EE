@@ -161,7 +161,7 @@ SetGlobal("Reig_Quest", "GLOBAL", 2)~ JOURNAL #1477 GOTO 18
   IF ~~ THEN REPLY #20832 EXIT
 END
 
-IF WEIGHT #2 ~  HPGT(Myself,6)
+IF WEIGHT #2 ~  HPGT(Myself,3)
 Global("Reig_Quest","GLOBAL",1)
 Global("Reig_Heal_Priest","GLOBAL",0)
 ~ THEN BEGIN 16

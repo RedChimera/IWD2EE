@@ -249,7 +249,7 @@ Level 21-30: 1d8+5
 * 11th level: Diamond Body.  The monk is in such control of his own metabolism that he gains immunity to poison of all kinds.
 * 12th level: Unarmored movement speed increases.
 * 13th level: Diamond Soul.  The monk gains spell resistance.  His spell resistance equals his level + 10. In order to affect the monk with a spell, a spellcaster must roll the monk's spell resistance or higher on 1d20 + the spellcaster's level.
-* 15th level: Quivering Palm. This terrifying attack allows the monk to set up vibrations within the body of another creature that can be fatal.  The monk can use the quivering palm attack once per day. Constructs, oozes, plants, elementals and undead cannot be affected. The monk must be of higher level than the target (or have more levels than the target's number of Hit Dice). If the monk strikes successfully and the target takes damage from the blow, the target dies unless it makes a Fortitude saving throw (DC 10 + one-half the monk's level + Wisdom modifier). Unarmored movement speed increases.
+* 15th level: Quivering Palm. This terrifying attack allows the monk to set up vibrations within the body of another creature that can be fatal.  The monk can use the quivering palm attack once per day. Constructs and undead cannot be affected. The monk must be of higher level than the target (or have more levels than the target's number of Hit Dice). The next time the monk hits a creature with an unarmed attack, the target dies unless it makes a Fortitude saving throw (DC 10 + one-half the monk's level + Wisdom modifier). Unarmored movement speed increases. The monk gains additional uses of Quivering Palm at levels 21 and 27.
 * 18th level: Unarmored movement speed increases.
 * 19th level: Empty Body. The monk can assume an ethereal state for  2 rounds a number of times a day equal to his level divided by 2.
 * 20th level: Perfect Self.  The monk has tuned his body with skill and quasi-magical abilities to the point that he becomes a magical creature. He is forevermore treated as an outsider (extraplanar creature) rather than as a humanoid. For instance, charm person does not affect him. Additionally, the monk gains damage reduction 20/+1. This means that the monk ignores (instantly regenerates) the first 20 points of damage from any attack unless the damage is dealt by a weapon with a +1 enhancement bonus (or better), by a spell, or by a form of energy (fire, cold, etc.). As an outsider, a 20th level monk is subject to spells that repel enchanted creatures, such as protection from law. 
@@ -272,7 +272,7 @@ Advantages:
 * Adds Charisma modifier to all saving throws.
 * Paladins may use Lay On Hands 1/Day.  Lay On Hands heals the target for a number of hit points equal to the paladin's Charisma modifier times their paladin level (minimum of 1 point per level). Paladins gain an additional casting every 5 levels.
 * Paladins are immune to all forms of disease.
-* 2nd level: Smite Evil.  Once per day, the paladin may now attempt to smite evil with one normal melee attack. He adds his Charisma modifier (if positive) to his attack roll and deals 1 extra point of damage per level.
+* 2nd level: Smite Evil.  Once per day, the paladin may now attempt to smite evil with one normal melee attack. He adds his Charisma modifier (if positive) to his attack roll and deals extra damage equal to his paladin level plus his Charisma modifier.
 * 2nd Level: Aura of Courage.  Paladins become immune to fear, and allies within 10 feet receive a bonus of +4 to saving throws against fear effects.
 * 3rd level: Remove Disease. The paladin gains the ability to remove disease from other characters a number of times per day equal to his level divided by 3.
 * 3rd Level: Turn Undead.  When this power is invoked, the paladin attempts to use the power of his or her patron deity to terrify a group of undead.  The higher the paladin's level and charisma are, the greater his or her chance of success is.  Though this ability is similar to the cleric's Turn Undead ability, the paladin's ability functions as though he or she were two levels lower than a cleric.
@@ -547,19 +547,82 @@ Prerequisite: Gray dwarf, half-orc
 Benefit: You get a +4 bonus on Fortitude saving throws against poison. In addition, each second you would take poison damage, the damage you take is reduced by 1.
 
 Special: You may only take this feat as a 1st-level character.~
-@689    = ~~
-@690    = ~~
+@689    = ~Improved Wild Shape~
+@690    = ~IMPROVED WILD SHAPE:
+
+You can use your Wild Shape ability more often and more effectively.
+
+Prerequisite: 3 levels of druid
+
+Benefit: You gain an additional use of Wild Shape per day. You also count as 3 levels higher for purposes of determining the power of your shapeshifted form, though this does not give you access to new forms earlier. This feat may be taken up to three times.~
+@691    = ~Improved Rage~
+@692    = ~IMPROVED RAGE:
+
+You can invoke your barbarian rage more often and more forcefully.
+
+Prerequisite: 1 level of barbarian
+
+Benefit: You gain an additional use of Barbarian Rage per day. You also gain an additional +1 Strength and Constitution while raging; these bonuses stack with the existing bonuses of the rage effect. This feat may be taken up to three times.~
+@693    = ~Improved Smiting~
+@694    = ~IMPROVED SMITING:
+
+You may use your Smite Evil ability more often and with greater power.
+
+Prerequisite: 2 levels of paladin
+
+Benefit: You gain an additional use of Smite Evil per day. In addition, your paladin level and Charisma modifier are added again to the damage of Smite Evil. This feat may be taken up to three times.~
+@695    = ~Improved Turning~
+@696    = ~IMPROVED TURNING:
+
+You may use your Turn Undead ability more often and can turn more powerful undead.
+
+Prerequisite: 1 level of Cleric or 3 levels of Paladin
+
+Benefit: You gain an additional use of Turn Undead per day. You also count as 3 levels higher for purposes of determining how powerful undead you can turn. This feat may be taken up to three times.~
+@697    = ~Planar Turning~
+@698    = ~PLANAR TURNING:
+
+You may turn not just undead but also creatures from the Outer Planes.
+
+Prerequisite: 1 level of Cleric or 3 levels of Paladin
+
+Benefit: Spells and abilities you use that turn undead can also turn fiends and other creatures from the Outer Planes.~
+
+@543    = ~GHOSTWISE HALFLING:
+
+Ghostwise halflings are the feral, reclusive cousins of lightfoot and strongheart halflings. They are found most often in the southern forests of the Realms living in small communities. Ghostwise halflings are rarely seen in large cities, but occasionally set out to explore the world for reasons known only to them. Visitors to ghostwise settlements often report that the halflings have kinship so tight with their fellows that they can communicate without speaking.
+
+Favored Class: Barbarian
+
+Advantages:
+* +2 to Dexterity.
+* +2 to Move Silently checks.
+* +1 to hit with thrown weapons.
+* +2 morale bonus on saving throws against fear.
+* Gains 1.5 times their Strength bonus to damage with thrown weapons, as with two-handed weapons.
+
+Disadvantages:
+* -2 Intelligence.
+~
+
+@669    = ~Maximized Attacks:
+
+You have learned how to maximize the effect of your attacks at the cost of neglecting your defenses.
+
+Prerequisites: 4 ranks in Concentration and Weapon Specialization in 2 weapons.
+
+Benefit: All attacks do maximum damage for 1 round per level and the user receives a +4 bonus to hit and critical threat range, but a -4 penalty to AC.  Usable 1/day.~
 
 @785    = ~Aasimar~
 @786    = ~AASIMAR:
 
-Aasimar carry the blood of a celestial, the begotten offspring from the union of a mortal and a deity.  Aasimar are usually good-aligned and fight against evil in the world.  They typically have fair skin, golden eyes, and often a birthmark in the shape of the deity's holy symbol.  Aasimar are blessed with insight and personal magnetism and are typically paladins.
+Aasimar carry the blood of a celestial, the begotten offspring from the union of a mortal and a celestial.  Aasimar are usually good-aligned and fight against evil in the world.  They typically have fair skin, golden eyes, and often a birthmark in the shape of a deity's holy symbol.  Aasimar are blessed with insight and personal magnetism and are typically paladins.
 
 Favored Class: Paladin
 
 Advantages:
-* +1 Wisdom.
-* +1 Charisma.
+* +2 Wisdom.
+* +2 Charisma.
 * Acid, cold, and electrical resistance: 5 points.
 * Sunscorch 1/Day.
 * Darkvision.
@@ -575,15 +638,15 @@ The infernal counterpart to aasimar, tieflings are humans with a hint of the dia
 Favored Class: Rogue
 
 Advantages:
-* +1 Intelligence.
-* +1 Dexterity.
+* +2 Intelligence.
+* +2 Dexterity.
 * Cold, fire, and electrical resistance: 5 points.
 * +2 to Bluff and Hide checks.
 * Blindness 1/Day.
 * Darkvision.
 
 Disadvantages:
-* -1 Charisma.
+* -2 Charisma.
 * Level Adjustment +1: Tieflings are slightly more powerful and gain levels at a rate of about one level behind that of the common races.
 ~
 @789    = ~Moon Elf~
@@ -594,14 +657,14 @@ Moon elves tend to be slimmer than humans. Their features are finely chiseled an
 Favored Class: Wizard
 
 Advantages:
-* +1 Dexterity.
+* +2 Dexterity.
 * +2 racial bonus to saves against Enchantment magic.
 * +2 racial bonus to Search checks.
 * Immunity to Sleep magic.
 * Proficient with longswords and bows (but not crossbows).
 
 Disadvantages:
-* -1 Constitution.
+* -2 Constitution.
 ~
 @791    = ~Drow~
 @792    = ~DROW: 
@@ -611,20 +674,20 @@ Dark elves, also known as drow, are the subterranean cousins of moon elves. Thei
 Favored Class: Wizard (male) or cleric (female).
 
 Advantages:
-* +1 to Dexterity.
-* +1 to Intelligence.
-* +1 to Charisma.
+* +2 to Dexterity.
+* +2 to Intelligence.
+* +2 to Charisma.
 * +2 racial bonus to saves against Enchantment magic.
 * +2 racial bonus on Will saves against spells and spell-like abilities.
 * +2 to Search checks.
 * Spell resistance of 11 + character level.
 * Immunity to Sleep magic.
-* Proficient with large swords and bows (but not crossbows)
+* Proficient with large swords and crossbows (but not bows)
 * Faerie Fire 3/day.
 * Darkvision.
 
 Disadvantages:
-* -1 to Constitution.
+* -2 to Constitution.
 * Light Blindness: -1 circumstance penalty to all attack rolls, saves and skill checks while operating in bright light.
 * Level Adjustment +2: Drow are more powerful and gain levels at a rate of about two levels behind the other common races of Faerun.
 ~
@@ -636,14 +699,14 @@ The rare wild elves are rarely seen by others, because they live in the heart of
 Favored Class: Sorcerer
 
 Advantages:
-* +1 Dexterity.
+* +2 Dexterity.
 * +2 to Search checks.
 * +2 to saves against Enchantment magic.
 * Immunity to Sleep magic.
 * Proficient with large swords and bows (but not crossbows).
 
 Disadvantages:
-* -1 Intelligence.
+* -2 Intelligence.
 ~
 @795    = ~Lightfoot Halfling~
 @796    = ~LIGHTFOOT HALFLING:
@@ -653,14 +716,15 @@ Halflings stand about three feet tall, with florid skin and dark hair and eyes. 
 Favored Class: Rogue
 
 Advantages:
-* +1 Dexterity.
+* +2 Dexterity.
 * +2 to Move Silently checks.
 * +1 to all saving throws.
 * +2 morale bonus on saving throws against fear.
 * +1 to hit with thrown weapons.
+* May add their Dexterity modifier rather than their Strength modifier to the damage of a thrown weapon (if the former is higher).
 
 Disadvantages:
-* -1 to Strength.
+* -2 to Strength.
 ~
 @797    = ~Strongheart Halfling~
 @798    = ~STRONGHEART HALFLING:
@@ -670,14 +734,14 @@ While the lightfoot halflings value the experience of travel and the sight of ne
 Favored Class: Rogue
 
 Advantages:
-* +1 to Dexterity.
+* +2 to Dexterity.
 * +2 to Move Silently checks.
 * +2 morale bonus on saving throws against fear.
 * +1 attack bonus with thrown weapons.
 * 1 extra feat at 1st level.
 
 Disadvantages:
-* -1 to Strength.
+* -2 to Strength.
 ~
 @799    = ~Rock Gnome~
 @800    = ~ROCK GNOME:
@@ -687,15 +751,16 @@ Kin to dwarves, rock gnomes are noticeably smaller than their distant cousins. G
 Favored Class: Illusionist
 
 Advantages:
-* +1 Constitution.
+* +2 Intelligence.
 * +1 attack bonus vs. kobolds, goblins, hobgoblins, and bugbears.
 * +4 dodge bonus against giants.
 * +2 to saves against illusions.
+* +2 save DC against the character's own illusion spells (stacks with Spell Focus)
 * +2 to Alchemy skill checks.
 
 
 Disadvantages:
-* -1 Strength.
+* -2 Strength.
 ~
 @801    = ~Deep Gnome~
 @802    = ~DEEP GNOME: 
@@ -705,8 +770,8 @@ Also known as svirfneblin, the deep gnomes of the Realms are a secretive, myster
 Favored Class: Illusionist
 
 Advantages:
-* +1 Dexterity.
-* +1 Wisdom.
+* +2 Dexterity.
+* +2 Wisdom.
 * Spell resistance of 11 + character level.
 * +4 dodge bonus against all creatures.
 * Mirror Image 1/Day.
@@ -720,8 +785,8 @@ Advantages:
 * Darkvision.
 
 Disadvantages:
-* -1 Strength.
-* -2 Charisma.
+* -2 Strength.
+* -4 Charisma.
 * Level Adjustment +3: Svirfneblin are somewhat more powerful and gain levels at a rate of about three levels behind that of the other common races of Faerun.
 ~
 @803    = ~Shield Dwarf~
@@ -732,16 +797,17 @@ Shield dwarves are short stocky fellows, easily identifiable by their size and s
 Favored Class: Fighter.
 
 Advantages:
-* +1 to Constitution.
+* +2 to Constitution.
 * Stonecunning: +2 racial bonus on Search checks to notice unusual stonework, such as sliding walls, secret doors, stonework traps and new construction.
 * +2 racial bonus to saving throws against poison.
 * +2 racial bonus to saving throws against spells and spell-like effects.
 * +4 dodge bonus against giants.
 * +1 racial bonus to attack rolls against orcs and goblinoids (goblins, hobgoblins, and bugbears).
+* Proficient with axes and hammers.
 * Darkvision.
 
 Disadvantages:
-* -1 to Charisma.
+* -2 to Charisma.
 ~
 @805    = ~Gold Dwarf~
 @806    = ~GOLD DWARF:
@@ -751,16 +817,17 @@ In a time when the dwarven race is in sad decline, the gold dwarves of the Realm
 Favored Class: Fighter
 
 Advantages:
-* +1 to Constitution.
+* +2 to Constitution.
 * Stonecunning: +2 racial bonus on Search checks to notice unusual stonework, such as sliding walls, secret doors, stonework traps and new construction.
 * +2 racial bonus to saving throws against poison.
 * +2 racial bonus to saving throws against spells and spell-like effects.
 * +4 dodge bonus against giants.
 * +1 racial bonus to attack rolls against aberrations, the bizarre creatures that live in the Underdark.
+* Proficient with axes and hammers.
 * Darkvision.
 
 Disadvantages:
-* -1 to Dexterity.
+* -2 to Dexterity.
 ~
 @807    = ~Gray Dwarf~
 @808    = ~GRAY DWARF:
@@ -770,7 +837,7 @@ Also known as duergar, the gray dwarves of the Forgotten Realms live even deeper
 Favored Class: Fighter
 
 Advantages:
-* +1 to Constitution.
+* +2 to Constitution.
 * Stonecunning: +2 racial bonus on Search checks to notice unusual stonework, such as sliding walls, secret doors, stonework traps and new construction.
 * +2 racial bonus to saving throws against poison.
 * +2 racial bonus to saving throws against spells and spell-like effects.
@@ -778,10 +845,11 @@ Advantages:
 * +4 dodge bonus against giants.
 * Immune to paralysis (still vulnerable to stunning attacks).
 * Invisibility 1/day.
+* Proficient with axes and hammers.
 * Darkvision.
 
 Disadvantages:
-* -2 Charisma.
+* -4 Charisma.
 * Light Sensitivity: Duergar suffer a -2 circumstance penalty to attack rolls, saves, and checks in bright light.
 * Level Adjustment +2: Duergar are more powerful and gain levels at a rate of about two levels behind that of the other common races of Faerun.
 ~
@@ -793,12 +861,12 @@ Half-orcs are born from the union of human and orc parents. They are as tall as 
 Favored Class: Barbarian
 
 Advantages:
-* +1 Strength.
+* +2 Strength.
 * Darkvision.
 
 Disadvantages:
-* -1 Intelligence.
-* -1 Charisma.
+* -2 Intelligence.
+* -2 Charisma.
 ~
 
 @895    = ~Animal Empathy~
@@ -884,7 +952,7 @@ Disadvantages:
 @897    = ~The Song of Kaudies - Blink~
 @898    = ~Additional attack~
 @899    = ~Sneak Attack~
-@900    = ~~
+@900    = ~Knocked Down~
 @901    = ~~
 @902    = ~~
 @903    = ~~

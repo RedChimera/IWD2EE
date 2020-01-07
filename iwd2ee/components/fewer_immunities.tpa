@@ -162,6 +162,7 @@ COPY_EXISTING ~50WIL.cre~ ~override~ ~50WILH.cre~ ~override~ ~50WILX.cre~ ~overr
 	WRITE_BYTE acidresistance 20
 	WRITE_BYTE magicdamageresistance 0
 	WRITE_BYTE spellresistance 15
+	WRITE_BYTE enchantmentlevel 1
 
 COPY_EXISTING ~50WIL2.cre~ ~override~
 	WRITE_BYTE fireresistance 30
@@ -170,6 +171,7 @@ COPY_EXISTING ~50WIL2.cre~ ~override~
 	WRITE_BYTE acidresistance 30
 	WRITE_BYTE magicdamageresistance 10
 	WRITE_BYTE spellresistance 20
+	WRITE_BYTE enchantmentlevel 1
 
 COPY_EXISTING ~50WIL3.cre~ ~override~
 	WRITE_BYTE fireresistance 20
@@ -178,6 +180,7 @@ COPY_EXISTING ~50WIL3.cre~ ~override~
 	WRITE_BYTE acidresistance 30
 	WRITE_BYTE magicdamageresistance 0
 	WRITE_BYTE spellresistance 20
+	WRITE_BYTE enchantmentlevel 2
 
 COPY_EXISTING ~50DRAWY.cre~ ~override~ ~51DRAWY.cre~ ~override~ ~60GUARDI.cre~ ~override~
 	LPF	IWD2_ADD_CRE_ITEM STR_VAR item=~00CIDRG1~ slot=~lring~ mode=~replace~ END

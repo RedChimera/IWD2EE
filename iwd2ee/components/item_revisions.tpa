@@ -6,7 +6,13 @@
 
 COPY ~%mod_folder%/itm/itm_item_revisions~ ~override~
 
+COPY ~%mod_folder%/spl/spl_item_revisions~ ~override~
+
+COPY ~%mod_folder%/eff/eff_item_revisions~ ~override~
+
 COPY ~%mod_folder%/bam/bam_item_revisions~ ~override~
+
+COPY ~%mod_folder%/sto/sto_item_revisions~ ~override~
 
 ACTION_IF !(FILE_EXISTS USALBEET.bam) BEGIN
 	COPY ~%mod_folder%/bam/USALBEET.bam~ ~override~
@@ -51,10 +57,6 @@ ACTION_IF !(FILE_EXISTS USALBEET.bam) BEGIN
 	COPY ~%mod_folder%/bam/USALVIAL.bam~ ~override~
 	COPY ~%mod_folder%/bam/USALZOMB.bam~ ~override~
 END
-
-COPY ~%mod_folder%/spl/spl_item_revisions~ ~override~
-
-COPY ~%mod_folder%/eff/eff_item_revisions~ ~override~
 
 COPY_EXISTING ~00AMUL12.itm~ ~override~
 	SAY IDENTIFIED_DESC @10021
@@ -3918,6 +3920,26 @@ COPY_EXISTING ~USHAMM53.itm~ ~override~
 	SAY NAME2 @12727
 	SAY IDENTIFIED_DESC @12728
 
+COPY_EXISTING ~USRING44.itm~ ~override~
+	SAY NAME2 @12729
+	SAY IDENTIFIED_DESC @12730
+
+COPY_EXISTING ~USBRAC44.itm~ ~override~
+	SAY NAME2 @12731
+	SAY IDENTIFIED_DESC @12732
+
+COPY_EXISTING ~USBRAC43.itm~ ~override~
+	SAY NAME2 @12733
+	SAY IDENTIFIED_DESC @12734
+
+COPY_EXISTING ~USBRAC37.itm~ ~override~
+	SAY NAME2 @12735
+	SAY IDENTIFIED_DESC @12736
+
+COPY_EXISTING ~USABAG01.itm~ ~override~
+	SAY NAME2 @12737
+	SAY IDENTIFIED_DESC @12738
+
 //General patch changes
 
 
@@ -3950,10 +3972,19 @@ COPY_EXISTING_REGEXP ~.*\.itm~ ~override~
 	PATCH_IF (us_item_category=29) BEGIN
 		LPF ALTER_ITEM_HEADER INT_VAR header_type=1 animation_overhand=0 animation_backhand=0 animation_thrust=100 END
 	END
-//Making sure items that aren't supposed to be usable by wizards, monks or paladins cannot be used by the kits of those classes
+//Making sure items that aren't supposed to be usable by clerics, wizards, monks or paladins cannot be used by the kits of those classes
 	READ_LONG 0x1e us_item_unusability
+	READ_BYTE 0x2b us_kit_unusability_2
 	READ_BYTE 0x2d us_kit_unusability_3
 	READ_BYTE 0x2f us_kit_unusability_4
+	PATCH_IF ((us_item_unusability BAND 0x00000004) = 0x00000004) BEGIN
+		us_kit_unusability_2|=0xff
+		us_kit_unusability_3|=0x80
+	END
+	ELSE BEGIN
+		us_kit_unusability_2&=0x0
+		us_kit_unusability_3&=0x7f
+	END
 	PATCH_IF ((us_item_unusability BAND 0x00000400) = 0x00000400) BEGIN
 		PATCH_IF (us_item_category != 11) BEGIN
 			us_kit_unusability_3|=0x7f
@@ -3976,12 +4007,21 @@ COPY_EXISTING_REGEXP ~.*\.itm~ ~override~
 	ELSE BEGIN
 		us_kit_unusability_4&=0xf8
 	END
+	WRITE_BYTE 0x2b us_kit_unusability_2
 	WRITE_BYTE 0x2d us_kit_unusability_3
 	WRITE_BYTE 0x2f us_kit_unusability_4
 	BUT_ONLY_IF_IT_CHANGES
 
 COPY_EXISTING ~00ax1hck.itm~ ~override~ ~00hfaxck.itm~ ~override~ ~ushamtdt.itm~ ~override~ ~ushfhtdt.itm~ ~override~
 	LPF ALTER_ITEM_HEADER INT_VAR header_type=2 range=30 END
+
+COPY_EXISTING ~11bookde.itm~ ~override~ ~11hfbkde.itm~ ~override~
+	READ_BYTE 0x2b us_kit_unusability_2
+	READ_BYTE 0x2d us_kit_unusability_3
+	us_kit_unusability_2|=0xef
+	us_kit_unusability_3|=0x80
+	WRITE_BYTE 0x2b us_kit_unusability_2
+	WRITE_BYTE 0x2d us_kit_unusability_3
 
 //Scimitars should have the scimitar animation
 COPY_EXISTING_REGEXP ~..SWDC..\.itm~ ~override~ ~..HFSC..\.itm~ ~override~
@@ -4092,6 +4132,16 @@ USCWHFSK	00CWSKX1
 USCIHFRG	USCIRGOL
 USCIHFAG	USCIAGOL
 USCWHFWW	USCWWOWI
+USCWHFWD	USCWWHDR
+USCIHFWD	USCIWHDR
+USCWHFWY	USCWWYRM
+USCWHFR1	00CWRDE1
+USCWHFR2	00CWRDE2
+USCWHFR3	00CWRDE3
+USCWHFCO	USCWCRN1
+USCWHFCG	USCWCRN2
+USCWHFGL	USCWGLB1
+USCWHFLG	USCWGLB2
 
 USAFBEET	USALBEET
 USAFBEHO	USALBEHO
@@ -4278,6 +4328,16 @@ USCWHFSK	USHFCWSK
 USCIHFRG	USHFCIRG
 USCIHFAG	USHFCIAG
 USCWHFWW	USHFCWWW
+USCWHFWD	USHFCWWD
+USCIHFWD	USHFCIWD
+USCWHFWY	USHFCWWY
+USCWHFR1	USHFCWR1
+USCWHFR2	USHFCWR2
+USCWHFR3	USHFCWR3
+USCWHFCO	USCWCRN2
+USCWHFCG	USCWCRN3
+USCWHFGL	USCWGLB2
+USCWHFLG	USCWGLB3
 
 USAFBEET	USHFBEET
 USAFBEHO	USHFBEHO
@@ -4476,6 +4536,7 @@ COPY_EXISTING ~11deird.sto~ ~override~ //Gallaway Trading Post
 	ADD_STORE_ITEM ~00BWHX02~ AFTER ~00BWHX01~ #1 #1 #1 ~IDENTIFIED~ #1 //Masterwork Heavy Crossbow
 	ADD_STORE_ITEM ~00RTHF55~ AFTER ~00BWHX02~ #1 #1 #1 ~IDENTIFIED~ #1 //Mailripper
 	ADD_STORE_ITEM ~00RTHF15~ AFTER ~00DART02~ #20 #0 #0 ~IDENTIFIED~ #2 //Adron's Theorem darts
+	ADD_STORE_ITEM ~USABAG01~ AFTER ~00RTHF50~ #0 #0 #0 ~IDENTIFIED~ #1 //Ammo Belt
 
 COPY_EXISTING ~11elytha.sto~ ~override~ //Elytharra store
 	REMOVE_STORE_ITEM ~11RTHF04~
@@ -4545,7 +4606,6 @@ COPY_EXISTING ~41ZACK1.sto~ ~override~ ~41ZACK2.sto~ ~override~ ~41ZACK3.sto~ ~o
 
 COPY_EXISTING ~50NYM2.sto~ ~override~ //Nym store
 	ADD_STORE_ITEM ~00DAGG93~ AFTER ~00ROBE03~ #1 #1 #1 ~IDENTIFIED~ #1 //Dagger of Speed +1
-
 
 COPY_EXISTING ~00BASHS3.sto~ ~override~ //Avarine Decanter genie store
 	WRITE_LONG 0x14 155 //Buying stuff from him costs less money (since he actually has some good stuff now), though his goods are still overpriced
@@ -4901,6 +4961,11 @@ COPY_EXISTING ~11jemel.cre~ ~override~ //Gallaway Trading Post worker
 
 COPY_EXISTING ~11phaen.cre~ ~override~ //Phaen of the Rags
 	LPF IWD2_ADD_CRE_ITEM INT_VAR cq1=1 STR_VAR item=~11RTHF21~ slot=~weapon1~ mode=~replace~ END
+
+COPY_EXISTING ~12ghotra.cre~ ~override~ //Ghotrag
+	LPF IWD2_REMOVE_CRE_ITEM STR_VAR item=~RT01_V~ END
+	LPF IWD2_REMOVE_CRE_ITEM STR_VAR item=~RT04_R~ END
+	LPF IWD2_ADD_CRE_ITEM INT_VAR cq1=1  cq2=1  cq3=1 STR_VAR item=~USRT01_V~ slot=~inv7~ END
 
 COPY_EXISTING ~40gblka.cre~ ~override~ ~60hiephh.cre~ ~override~ //Goublika
 	LPF IWD2_ADD_CRE_ITEM INT_VAR cq1=3  cq2=1  cq3=1 STR_VAR item=~USBULL59~ slot=~inv4~ END

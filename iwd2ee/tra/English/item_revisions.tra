@@ -864,8 +864,8 @@ Arkamadis wore a pair of bracers during most of his time in the north.  Regardle
 
 STATISTICS:
 
-Deflection Bonus: +4
-Special: Can grant self +8 Strength for 8 rounds 1/Day
+The wearer's Strength bonus is added to any spell damage they deal
+Special: Can grant self +6 Strength for 4 rounds 1/Day
 Weight: 1 lb.~
 //@10254    = ~Great Lions of Arkamadis~
 @10255    = ~Between 910 and 946 DR, the lands east of the Spine of the World mountains were often plagued by the minions of the archmage Arkamadis.  Believed to have had contact with Arrakon, the would-be conqueror of Icewind Dale's barbarians, Arkamadis was only slightly less dedicated to dominating the native people that surrounded his tower, Whitestone Talon.
@@ -874,8 +874,8 @@ Arkamadis wore a pair of bracers during most of his time in the north.  Regardle
 
 STATISTICS:
 
-Deflection Bonus: +6
-Special: Can grant self +12 Strength for 12 rounds 1/Day
+The wearer's Strength bonus is added to any spell damage they deal
+Special: Can grant self +10 Strength for 5 rounds 1/Day
 Weight: 1 lb.~
 //@10256    = ~Rakavik's Bracers~
 @10257    = ~The invoker Rakavik Savell was a man of few words.  He kept company with thugs, brigands, murderers, and criminals of all sorts, men and women who valued strong actions over a silver tongue.  Rakavik was a clever man, and devised these bracers knowing that most people assume bracers are for protection.  When opponents thought Rakavik was out of spells, he never needed to pull out a wand or staff to make a quick offensive action.  He simply made a non-threatening gesture with his arms and activated these polished steel bracers.  Despite being over two hundred years old, the large sections of black enamel on the bracers are still dark and shining.
@@ -915,7 +915,7 @@ Weight: 1 lb.~
 //@10264    = ~Thunder Clap~
 @10265    = ~When a high level monk hits someone, the victims often say it was like getting hit by a bolt of lightning.
 
-The bracers known as Thunder Clap are a prized possession of the monks that own them.  Being that monks rarely use weapons other than their own hands and feet, these bracers offer an edge in battle that is rarely seen in the Realms.  These bracers allow the skilled monk to imbue their attacks with lightning.  The added speed dished out by these bracers have, on several occasions, evened the odds against would be bandits that try to outnumber their monk victims.
+The bracers known as Thunder Clap are a prized possession of the monks that own them.  Being that monks rarely use weapons other than their own hands and feet, these bracers offer an edge in battle that is rarely seen in the Realms.  These bracers allow the skilled monk to imbue their attacks with lightning.  The added force dished out by these bracers has, on several occasions, evened the odds against would be bandits that try to outnumber their monk victims.
 
 STATISTICS:
 
@@ -925,7 +925,7 @@ Weight: 1 lb.~
 //@10266    = ~Force of Lightning~
 @10267    = ~When a high level monk hits someone, the victims often say it was like getting hit by a bolt of lightning.
 
-The bracers known as Force of Lightning are a prized possession of the monks that own them.  Being that monks rarely use weapons other than their own hands and feet, these bracers offer an edge in battle that is rarely seen in the Realms.  These bracers allow the skilled monk to imbue their attacks with lightning.  The added speed dished out by these bracers have, on several occasions, evened the odds against would be bandits that try to outnumber their monk victims.
+The bracers known as Force of Lightning are a prized possession of the monks that own them.  Being that monks rarely use weapons other than their own hands and feet, these bracers offer an edge in battle that is rarely seen in the Realms.  These bracers allow the skilled monk to imbue their attacks with lightning.  The added force dished out by these bracers has, on several occasions, evened the odds against would be bandits that try to outnumber their monk victims.
 
 
 STATISTICS:
@@ -1178,7 +1178,7 @@ STATISTICS:
 
 Special:
  Retribution: 50% chance of inflicting the spell Sunscorch whenever the attacking enemy successfully hits wearer of Nature's Fury
- Retribution: 10% chance of inflicting the spell Call Lightning whenever the attacking enemy successfully hits wearer of Nature's Fury 
+ Retribution: 10% chance of inflicting the spell Call Lightning whenever the attacking enemy successfully hits wearer of Nature's Fury
 Weight: 2 lb.~
 //@10340    = ~The Shroud of Bankao~
 @10341    = ~Believed to be the burial shroud of a mysterious eastern warlord, the Shroud of Bankao has been worn by some of the most notorious thugs and murderers on the Sword Coast.  Its coarse black fabric has grown coal gray over many years of use.  Its last known owner was Polger Carallo, an extortionist who operated in the worst parts of Waterdeep.  Polger made his living shaking down the residents of the poor districts of the city.  A priest of Bane told Polger that he owed the church a tribute for his success.  Polger refused the priest's offer and died at the end of the Banite's morningstar.
@@ -1359,7 +1359,7 @@ STATISTICS:
 
 Generic Armor Bonus:  +1
 Special:
-  White Wyrm's Breath: breathe a cone of frost for 5d6 points of cold damage (Reflex DC 16 for half) 1/day
+  White Wyrm's Breath: breathe a cone of frost for 8d8 points of cold damage (Reflex DC 16 + twice wearer's Charisma bonus for half) 1/day
 Weight: 3 lb.~
 //@10381    = ~Great White Wyrm's Maw~
 @10382    = ~Kellem Longeyes was a noted ranger in the town of Bremen, trekking far and wide across the Savage North in pursuit of his prey.  Kellem hunted wyverns, drakes, and other wyrms of all sorts, especially those that made to attack the Ten-Towns or their outlying settlements.  The grizzled ranger took many trophies - in time, little of equipment was not adorned with one kind of wyrm or another.
@@ -1374,8 +1374,8 @@ STATISTICS:
 
 Generic Armor Bonus:  +2 
 Special:
-  Resistance: +5 Cold Resistance
-  White Wyrm's Breath: breathe a cone of frost for 25d6 points of cold damage (Reflex DC 30 for half) 1/day
+  Resistance: 15/- Cold Resistance
+  White Wyrm's Breath: breathe a cone of frost for 16d8 points of cold damage (Reflex DC 24 + twice wearer's Charisma bonus for half) 1/day
 Weight: 3 lb.~
 
 //@10383    = ~Wizard Robe of Cold Resistance~
@@ -1461,7 +1461,7 @@ Weight:  3 lb.~
 STATISTICS:
 
 Deflection Bonus: +3
-Fire, cold, electric, acid, and magic damage dealt by the wearer is increased by 20%
+Spellcasting time decreased by 2
 Weight:  4 lb.~
 //@10403    = ~Master's Robe~
 @10404    = ~Several of these robes were created for the short-lived Michell Academy near Berdusk.  The masters of the school wore distinctive robes that enhanced their spellcasting ability.  Unfortuntely, Michell and his staff were too arrogant and confrontational for a nearby Loviatan temple.  The mistresses of the temple organized an attack on the school that lasted only an hour.  Despite the brevity of the battle, some historians claim that the torture inflicted upon the wizards lasted for weeks.  This particular robe was worn by Jamal Briars, a professor of alchemy.  The Loviatans decided to make a pun of his name; they had air elementals drag the man through thorny briars until he bled to death.
@@ -2198,7 +2198,7 @@ Special:
   While under the effect of Barbarian Rage, Animal Rage, or Blood Rage, the wearer gains 5/- resistance to all damage.
 Weight: 20 lb.~
 @10525    = ~Mercenary's Lot +2~
-@10526    = ~The mercenary's lot has been a difficult one in the lands of Icewind Dale, for there is little to occupy one's fighting skills in the far north... at least until recently.  This armor was worn by a mercenary company called the Silver Band who was driven from the north after a heated debate at the Ten-Towns council (a debate that barred further mercenary service from most of the Ten-Towns for a period not exceeding three seasons).   According to the debate, the mercenaries were not seen as effective combatants, and certainly not worth the gold they were paid for their meager weapon skills. 
+@10526    = ~The mercenary's lot has been a difficult one in the lands of Icewind Dale, for there is little to occupy one's fighting skills in the far north... at least until recently.  This armor was worn by a mercenary company called the Silver Band who was driven from the north after a heated debate at the Ten-Towns council (a debate that barred further mercenary service from most of the Ten-Towns for a period not exceeding three seasons).   According to the debate, the mercenaries were not seen as effective combatants, and certainly not worth the gold they were paid for their meager weapon skills.
 
 In order to pay for their passage back south, the Silver Band was forced to sell several suits of their armor in order to transport their mounts and siege engines, and the Band swore they would never return to the North, even if the region perished under an avalanche of goblins and other freakish monsters.  Apparently, their ability to predict the future was not listed in their company annals. 
 
@@ -2650,7 +2650,8 @@ Max Dex Bonus:  +1
 Armor Check Penalty:  -5
 Arcane Spell Failure:  35%
 Special:
-  Wearer is under the effect of the 1st level Mage spell Protection from Evil
+  Wearer is under the effect of Protection from Evil
+  Wearer is under the effect of Holy Aura
   Resistance: 20/- Fire Resistance
   Saving Throw Bonus: +3 to Fortitude saves
   Spellward: Immunity to Unholy Blight and Blasphemy
@@ -7051,7 +7052,7 @@ STATISTICS:
 Damage:  1d8
 Damage Type:  Bludgeoning
 Special: 
-  Venom: +2 points of poison damage every second for 6 seconds (Fortitude DC 10)
+  Venom: +2 points of poison damage every second for 6 seconds (Fortitude DC 10 + wielder's Strength bonus)
 Weight: 8 lb.
 Required Feat:  Simple Weapon, Mace
 Type:  One-handed~
@@ -7104,7 +7105,7 @@ Attack Bonus:  +3
 Enchantment:  +3
 Damage Type:  Bludgeoning
 Special:
-  Vampiric: 25% chance of 2d4 hit points drained from target and added to wielder (Fortitude DC 24)
+  Vampiric: 50% chance of 2d4 hit points drained from target and added to wielder (Fortitude DC 19 + wielder's Constitution bonus)
 Weight: 8 lb.
 Required Feat:  Simple Weapon, Mace
 Type:  One-handed~
@@ -7272,8 +7273,8 @@ Attack Bonus:  +2
 Enchantment:  +2
 Damage Type:  Bludgeoning
 Special:
-  Venom: +2 points of poison damage every second for 6 seconds (Fortitude DC 18)
-  Wounding: 100% chance of inflicting 2 additional points of damage per round for 10 rounds (Fortitude DC 18)
+  Venom: +2 points of poison damage every second for 6 seconds (Fortitude DC 18 + wielder's Strength bonus)
+  Wounding: +2 additional points of damage per round for 10 rounds (Fortitude DC 18 + wielder's Strength bonus)
 Weight: 5 lb.
 Required Feat:  Martial Weapon, Flail
 Type:  One-handed~
@@ -7289,7 +7290,7 @@ Attack Bonus:  +1
 Enchantment:  +1
 Damage Type:  Bludgeoning
 Special:
-  Stunning: 50% chance target is stunned for 1/2 combat round (Fortitude DC 15)
+  Stunning: 50% chance target is stunned for 1/2 combat round (Fortitude DC 12 + wielder's Strength bonus)
 Weight: 5 lb.
 Required Feat:  Martial Weapon, Flail
 Type:  One-handed~
@@ -7303,6 +7304,7 @@ Attack Bonus:  +1
 Enchantment:  +1
 Damage Type:  Bludgeoning
 Special:
+  Generic Armor Bonus: +1
   Blunt Defense: +3 Armor Class vs. bludgeoning attacks
 Weight: 5 lb.
 Required Feat:  Martial Weapon, Flail
@@ -7433,7 +7435,7 @@ Attack Bonus:  +3
 Enchantment:  +3
 Damage Type:  Bludgeoning
 Special:
-  33% chance of  +8 Strength on wielder for 2 rounds when struck (melee only / non cumulative)
+  33% chance of  +8 Strength on wielder for 2 rounds when struck (non cumulative)
 Weight: 5 lb.
 Required Feat:  Martial Weapon, Flail
 Type:  One-handed~
@@ -7455,31 +7457,31 @@ Attack Bonus:  +5
 Enchantment:  +5
 Damage Type:  Bludgeoning
 Special:
-  50% chance of  +12 Strength on wielder when struck (melee only / non cumulative)
+  50% chance of  +12 Strength on wielder when struck (non cumulative)
 Weight: 5 lb.
 Required Feat:  Martial Weapon, Flail
 Type:  One-handed~
-@11533    = ~The Skirling Skull +1~
+@11533    = ~The Skirling Skull +2~
 @11534    = ~The Skirling Skull, thought to be of deep gnome manufacture, is a flail of notably unusual design: a three-foot long wooden shaft topped with a stone head carved to resemble a skull and crowned with long, glimmering shards of impossibly hard crystal.
 
-When the enchanted crystals strike an object they vibrate and emit a keening wail - these unnatural harmonics can rend magical auras and dispel whatever sorcery surrounds the target.  The same ringing tone also has a chance of deafening the target and wielder both.
+When the enchanted crystals strike an object they vibrate and emit a keening wail - these unnatural harmonics can rend magical auras and dispel whatever sorcery surrounds the target.  The same ringing tone also has a chance of deafening the target.
 
 STATISTICS:
 
-Damage:  1d8  +1
-Attack Bonus:  +1 
-Enchantment:  +1
+Damage:  1d8  +2
+Attack Bonus:  +2
+Enchantment:  +2
 Damage Type:  Bludgeoning
 Special:
-  Dispelling: 25% chance Dispel Magic on target (Will DC 15)
-  Wail: Deafens struck target (Fortitude DC 13); 25% chance to deafen self (Fortitude DC 10)
+  Dispelling: 25% chance Dispel Magic on target (Will DC 15 + wielder's Strength bonus)
+  Wail: Deafens struck target (Fortitude DC 15 + wielder's Strength bonus)
 Weight: 5 lb.
 Required Feat:  Martial Weapon, Flail
 Type:  One-handed~
 @11535    = ~Skirling Svirfneblin Skull +5~
 @11536    = ~The Skirling Svirfneblin Skull, thought to be of deep gnome manufacture, is a flail of notably unusual design: a three-foot long wooden shaft topped with a stone head carved to resemble a skull and crowned with long, glimmering shards of impossibly hard crystal.
 
-When the enchanted crystals strike an object they vibrate and emit a keening wail - these unnatural harmonics can rend magical auras and dispel whatever sorcery surrounds the target.  The same ringing tone also has a chance of deafening the target and wielder both.
+When the enchanted crystals strike an object they vibrate and emit a keening wail - these unnatural harmonics can rend magical auras and dispel whatever sorcery surrounds the target.  The same ringing tone also has a chance of deafening the target.
 
 STATISTICS:
 
@@ -7488,8 +7490,8 @@ Attack Bonus:  +5
 Enchantment:  +5
 Damage Type:  Bludgeoning
 Special:
-  Dispelling: 50% chance Dispel Magic on target (Will DC 23)
-  Wail: Deafen struck target (Fortitude DC 23); 25% chance to deafen self (Fortitude DC 16)
+  Dispelling: 50% chance Dispel Magic on target (Will DC 25 + wielder's Strength bonus)
+  Wail: Deafen struck target (Fortitude DC 25 + wielder's Strength bonus)
 Weight: 5 lb.
 Required Feat:  Martial Weapon, Flail
 Type:  One-handed~
@@ -7498,7 +7500,7 @@ Type:  One-handed~
 
 This weapon is all that remains of Slow Cedric's Gallop, a small frontier settlement located in the Southern Pass of the Spine of the World Mountains.  The settlement is believed to have been overrun by a tribe of orcs in the great winter of 1170 DR, and when the cold season passed, the settlement and the bodies of the townsfolk had been buried beneath great mountains of snow.  When the first travelers braved the Pass in the spring season, they found only the top of the settlement's great stone belltower peeking through the mountainous drifts.  This odd-looking flail was found lying upon the tower's bloodied stone floor, surrounded by the frost-dusted bodies of several dead orcs. 
 
-According to tales, the Black Chimes were a symbol of office of the settlement's Bell Warden, whose duty was two-fold - to ring the warning bell when an enemy was sighted in the pass, and after the warning bell had been rung, to defend the pass with his life.  It is believed the first Bell Warden of Slow Cedric's Gallop was the original creator of the Black Chimes, an enchanted flail that would ring to warn the town of danger at the same time as he leapt into battle against his foes. 
+According to tales, the Black Chimes were a symbol of office of the settlement's Bell Warden, whose duty was two-fold - to ring the warning bell when an enemy was sighted in the pass, and after the warning bell had been rung, to defend the pass with his life.  It is believed the first Bell Warden of Slow Cedric's Gallop was the original creator of the Black Chimes, an enchanted flail that would ring to warn the town of danger at the same time as he leapt into battle against his foes.
 
 STATISTICS:
 
@@ -7506,7 +7508,7 @@ Damage:  1d8
 Attack Bonus:  +1 
 Enchantment;  +1
 Damage Type:  Bludgeoning
-Special:  
+Special:
   For the purposes of hitting enchanted creatures this weapon is considered a +1 weapon
   25% chance target is Deafened (Fortitude DC 15)
   Penalty:  -1 to Move Silently skill
@@ -7514,11 +7516,11 @@ Weight: 5 lb.
 Required Feat:  Martial Weapon, Flail
 Type:  One-handed~
 //@11539    = ~Black Chimes of the Bell Warden~
-@11540    = ~This heavy flail is composed of an iron rod with three hollow metal tubes secured to it by thin black iron chains.  When held, the chimes ring together, as if stirred by the wind, and no amount of padding or wrapping seems to silence the flail's chiming.  When swung in combat, the chimes clash like thunder, having a chance of deafening anyone struck by it. 
+@11540    = ~This heavy flail is composed of an iron rod with three hollow metal tubes secured to it by thin black iron chains.  When held, the chimes ring together, as if stirred by the wind, and no amount of padding or wrapping seems to silence the flail's chiming.  When swung in combat, the chimes clash like thunder, having a chance of deafening anyone struck by it.
 
 This weapon is all that remains of Slow Cedric's Gallop, a small frontier settlement located in the Southern Pass of the Spine of the World Mountains.  The settlement is believed to have been overrun by a tribe of orcs in the great winter of 1170 DR, and when the cold season passed, the settlement and the bodies of the townsfolk had been buried beneath great mountains of snow.  When the first travelers braved the Pass in the spring season, they found only the top of the settlement's great stone belltower peeking through the mountainous drifts.  This odd-looking flail was found lying upon the tower's bloodied stone floor, surrounded by the frost-dusted bodies of several dead orcs. 
 
-According to tales, the Black Chimes were a symbol of office of the settlement's Bell Warden, whose duty was two-fold - to ring the warning bell when an enemy was sighted in the pass, and after the warning bell had been rung, to defend the pass with his life.  It is believed the first Bell Warden of Slow Cedric's Gallop was the original creator of the Black Chimes, an enchanted flail that would ring to warn the town of danger at the same time as he leapt into battle against his foes. 
+According to tales, the Black Chimes were a symbol of office of the settlement's Bell Warden, whose duty was two-fold - to ring the warning bell when an enemy was sighted in the pass, and after the warning bell had been rung, to defend the pass with his life.  It is believed the first Bell Warden of Slow Cedric's Gallop was the original creator of the Black Chimes, an enchanted flail that would ring to warn the town of danger at the same time as he leapt into battle against his foes.
 
 STATISTICS:
 
@@ -9405,7 +9407,7 @@ Attack Bonus:  +1
 Enchantment:  +1
 Damage Type:  Missile (piercing)
 Special:
-  Venom: +2 points of poison damage every second for 12 seconds (Fortitude DC 24)
+  Venom: +2 points of poison damage every second for 6 seconds (Fortitude DC 16 + twice the archer's Dexterity bonus)
 Weight: 0 lb.
 Launcher:  Bow~
 //@11937    = ~Arrows of Dispelling~
@@ -12641,7 +12643,7 @@ Max Dex Bonus:  +2
 Armor Check Penalty:  -5
 Arcane Spell Failure:  30%
 Special:
-  Shield Bonus: +7
+  Shield Bonus: +5
 Weight: 30 lb.~
 @12697    = ~Chainmail of Solid Endurance +5~
 @12698    = ~Chain mail is made of interlocking metal rings.  It is always worn over a layer of padded fabric or soft leather to prevent chafing and lessen the impact of blows. A faint blue glow can be seen emanating from the armor.
@@ -12779,6 +12781,40 @@ Special:
 Weight: 11 lb.
 Feat Requirement:  Martial Weapon, Hammer
 Type:  One-handed~
+@12729    = ~Ring of Greater Entanglement~
+@12730    = ~A ring is a small band of precious metal that is used as jewelry.  Some rare rings have had enchantments placed upon them that confer various magical abilities.  These rings are highly sought after, especially by those of the adventuring profession. For no apparent reason, this ring feels warm to the touch.
+
+STATISTICS:
+
+The save DC of the spell Entangle is increased by 6 when cast by the wearer
+Weight: 0 lb.~
+@12731    = ~Gloves of Frost~
+@12732    = ~Gauntlets are armored gloves.  They can be made of leather, metal plates, or chain mail.  Every suit of armor is assumed to include gauntlets of an appropriate type.  Magical gauntlets tend to be finer, lighter, and more easily worn than normal varieties.
+
+STATISTICS:
+
+The spells Frost Fingers, Chill Touch, and Lich Touch deal 50% more damage and have +4 DC
+Weight:  1 lb.~
+@12733    = ~Gauntlets of Torm~
+@12734    = ~Gauntlets are armored gloves.  They can be made of leather, metal plates, or chain mail.  Every suit of armor is assumed to include gauntlets of an appropriate type.  Magical gauntlets tend to be finer, lighter, and more easily worn than normal varieties.
+
+STATISTICS:
+
+The extra damage from Smite Evil is increased by 60%
+Weight:  1 lb.~
+@12735    = ~Bracers of Stunning Attacks~
+@12736    = ~Normally bracers are used to add support and protection to forearm area of the body. However, these magical bracers are meant for offense, making stunning attacks more effective.
+
+STATISTICS:
+
+Special: The wearer's Stunning Attacks gain +2 save DC
+Weight: 2 lb.~
+@12737    = ~Ammo Belt~
+@12738    = ~This shoulder belt is ideally suited for holding sling bullets, darts, arrows, bolts, throwing daggers, throwing axes, or throwing hammers.
+
+STATISTICS:
+
+Weight: 2 lb.~
 
 @12900    = ~Hrm - you are powerful allies, indeed.  More gold and gems to line your pockets, then - also, a suit of plate armor, a warhammer, a helmet, all crafted and enchanted by great duergar artisans.  They are well deserved, outsider.~
 @12901    = ~Drink this Rainwater Brew, Ennelia.  It should help your condition.~

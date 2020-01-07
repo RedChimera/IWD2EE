@@ -53,6 +53,12 @@ BEGIN @2 DESIGNATED 1 //
 BEGIN @3 DESIGNATED 2 //
       INCLUDE ~%mod_folder%/components/spell_revise.tpa~      //Spell Revisions
 
+//Revise opposing schools for specialist wizards
+/*
+BEGIN @64 DESIGNATED 80
+
+      INCLUDE ~%mod_folder%/components/revise_opposing_schools.tpa~ //~Revise opposing schools for specialist wizards~
+*/
 //Spell Focus Feats for All Schools
 BEGIN @4 DESIGNATED 3 //
       INCLUDE ~%mod_folder%/components/spell_focus.tpa~      //Spell focus
