@@ -1,0 +1,19 @@
+2DA V1.0
+0
+                                                FIRE    COLD    ELEC    ACID    SPELL   MAGIC_FIRE      MAGIC_COLD      SLASHING        BLUDGEONING        PIERCING        MISSILE
+HUMAN					0		0		0		0		0		0			0			0			0			0			0
+HUMAN_AASIMAR			0		5		5		5		0		0			0			0			0			0			0
+HUMAN_TIEFLING			5		5		5		0		0		0			0			0			0			0			0
+ELF 					0		0		0		0		0		0			0			0			0			0			0
+ELF_DROW                                -5               0               0               0               5              0                       0                       0                       0                       0                       0
+ELF_WILD				0		0		0		0		0		0			0			0			0			0			0
+HALF_ELF				0		0		0		0		0		0			0			0			0			0			0
+DWARF					0		0		0		0		0		0			0			0			0			0			0
+DWARF_GOLD				0		0		0		0		0		0			0			0			0			0			0
+DWARF_GRAY				-5		0		0		0		0		0			0			0			0			0			0
+HALFLING				0		0		0		0		0		0			0			0			0			0			0
+HALFLING_STRONGHEART	0		0		0		0		0		0			0			0			0			0			0
+HALFLING_GHOSTWISE		0		0		0		0		0		0			0			0			0			0			0
+GNOME					0		0		0		0		0		0			0			0			0			0			0
+GNOME_DEEP                              0               0               0               0               5              0                       0                       0                       0                       0                       0
+HALF_ORC				0		0		0		0		0		0			0			0			0			0			0

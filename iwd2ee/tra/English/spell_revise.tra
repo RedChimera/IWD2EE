@@ -502,15 +502,15 @@ Casting Time: 10
 Area of Effect: Caster
 Saving Throw: None
 
-This spell creates a staff of force in the caster's hand which can be wielded as a weapon - weapon proficiency bonuses or penalties apply. The Decastave deals 10 bludgeoning damage per hit, and can hit creatures immune to normal weapons, though it has no attack bonus. The staff also drains an additional 10 hit points per strike that is transferred over to the wielder's own hit points. These extra hit points can take the wielder over his or her maximum hit points, but any hit points gained in such a manner are temporary and will dissipate after 10 minutes.~
+This spell creates a staff of force in the caster's hand which can be wielded as a weapon, using the Simple Weapon: Quarterstaff proficiency. The Decastave deals 10 bludgeoning damage per hit, and strikes as a +1 weapon, though it has no attack bonus. The staff also drains an additional 10 hit points per strike that is transferred over to the wielder's own hit points. These extra hit points can take the wielder over his or her maximum hit points, but any hit points gained in such a manner are temporary and will dissipate after 10 minutes.~
 @1084    = ~Lightning Bolt~
 @1085    = ~Lightning Bolt
 (Evocation)
 Level: Sor/Wiz 3, Talos 3
 Range: Line of Sight
-Duration: Instantaneous 
+Duration: Instantaneous
 Casting Time: 3 
-Area of Effect: Special 
+Area of Effect: Special
 Saving Throw: Reflex half
 
 Upon casting this spell, the wizard releases a powerful stroke of electrical energy that inflicts 1d8 points of damage per level of the spellcaster to each creature within its area of effect (maximum damage of 10d8). A successful Reflex save at a -4 penalty reduces this damage to half. When the lightning bolt intersects with a wall it will fizzle out.~
@@ -520,11 +520,11 @@ Upon casting this spell, the wizard releases a powerful stroke of electrical ene
 Level: Sor/Wiz 3
 Range: Touch
 Duration: Special
-Casting Time: 3 
+Casting Time: 1
 Area of Effect: 1 creature
 Saving Throw: None 
 
-This spell imbues the caster's hands with the ability to drain life, taking 1d6 hit points for every two caster levels from a living victim and granting it to the caster (maximum 10d6), with any hit points over the caster's normal maximum total treated as temporary bonus hit points. The temporary hit points disappear after 1 hour.~
+This spell imbues the caster's hands with the ability to drain life, taking 1d6 hit points per level from a living victim and granting it to the caster (maximum 10d6), with any hit points over the caster's normal maximum total treated as temporary bonus hit points. The temporary hit points disappear after 1 hour.~
 @1088    = ~Icelance~
 @1089    = ~Icelance 
 (Evocation)
@@ -537,7 +537,7 @@ Saving Throw: Fortitude half
 
 This spell fires a magical lance of ice at a target of the caster's choosing. It automatically hits, inflicting 5d6 points of cold damage and forcing the target to make a Fortitude save or be stunned for 3 rounds.~
 @1090    = ~Lance of Disruption~
-@1091    = ~Lance of Disruption 
+@1091    = ~Lance of Disruption
 (Evocation)
 Level: Sor/Wiz 3
 Range: 60 feet
@@ -667,9 +667,9 @@ Range: Sight of Caster
 Duration: 10 rounds
 Casting Time: 5
 Area of Effect: 1 creature
-Saving Throw: Reflex negates
+Saving Throw: Special
 
-This spell causes a creature to burst into flames if it fails a Reflex save. The creature will burn for 3d6 points of damage every round, and gouts of flame erupt from the burning target, causing any creatures within ten feet of the target to take 1d6 points of damage from the flames. Anyone hit by the victim's flames must also make a Reflex save to avoid contracting the shroud themselves.~
+This spell causes a creature to burst into flames. The creature will burn for 3d6 points of damage every round, and gouts of flame erupt from the burning target, causing any creatures within ten feet of the target to take 1d6 points of damage from the flames. Anyone hit by the victim's flames must also make a Reflex save to avoid contracting the shroud themselves.~
 @1114    = ~Lower Resistance~
 @1115    = ~Lower Resistance 
 (Transmutation) 
@@ -772,7 +772,7 @@ Saving Throw: Reflex negates
 
 This spell fires an orb of cold at a creature that inflicts 1d8 points of cold damage/level of the caster (maximum of 30d8) and slows the target for 1 round per level. If the target makes its saving throw, however, they only suffer half damage and the slow effect is negated. The orb is nonmagical and bypasses immunity to magic.~
 @1132    = ~Darts of Bone~
-@1133    = ~Darts of Bone 
+@1133    = ~Darts of Bone
 (Necromancy)
 Level: Sor/Wiz 6
 Range: Caster
@@ -789,10 +789,10 @@ Level: Sor/Wiz 2
 Range: Touch
 Duration: 5 rounds
 Casting Time: 2
-Area of Effect: Caster
-Saving Throw: Fortitude negates 
+Area of Effect: 1 creature
+Saving Throw: Fortitude negates
 
-This spell brings the power of the ghoul to the caster's hands - when a successful touch attack is made, the victim must make a successful Fortitude save or be paralyzed and be covered with an awful carrion stench for 5 rounds. The Fortitude DC is equal to 12 plus the caster's level divided by 3. All living creatures within a 10-foot radius of the victim, with the exception of the caster, suffer extreme nausea and are at a penalty of 2 for attack bonuses, damage, and saving throws. This penalty can be resisted with a successful Fortitude save every round a creature remains within 10 feet of the victim. The caster may strike multiple creatures with this attack; the spell is not expended after a single use.~
+This spell brings the power of the ghoul to the caster's hands - upon touching a creature (no attack roll necessary), the victim must make a successful Fortitude save or be paralyzed and be covered with an awful carrion stench for 5 rounds. All living creatures within a 10-foot radius of the victim, with the exception of the caster, suffer extreme nausea and are at a penalty of 2 for attack bonuses, damage, and saving throws.~
 @1136    = ~Malavon's Rage~
 @1137    = ~Malavon's Rage
 (Evocation)
@@ -2642,6 +2642,17 @@ Area of Effect: 1 creature
 Saving Throw: None
 
 Chaotic Commands renders a creature immune to magical commands. Charm, Dominate Person, Command, Sleep, Confusion, Feeblemind, and Symbol spells all fit into this category.~
+@31616     = ~Dolorous Decay~
+@32616     = ~Dolorous Decay
+(Necromancy) 
+Level: Clr 6, Drd 6
+Range: Sight of Caster 
+Duration: 1 round/level
+Casting Time: 2
+Area of Effect: 1 creature 
+Saving Throw: Fortitude negates
+
+Dolorous decay is a rotting and withering of the body that spreads quickly and painfully throughout the afflicted creature.  Afflicted creatures take 1 point of damage per second and are slowed for 1 round per level.  The target creature can resist the disease with a successful Fortitude save at a -8 penalty.~
 @33122     = ~Ice Dagger~
 @34122     = ~Ice Dagger
 (Evocation)
@@ -2675,6 +2686,28 @@ Area of Effect: 20-foot radius
 Saving Throw: Reflex half
 
 You cause acid to rain downward, dealing 3d6 acid damage per round for 1 round per 3 levels (max 24d6 over 8 rounds). The acid lasts half as many rounds (rounded down) for creatures that succeed on a Reflex save. The storm itself lasts only a few seconds, but the acid adheres to the skin of creatures in the area, causing damage over time.~
+@33713     = ~Cacofiend~
+@34713     = ~Cacofiend
+(Conjuration) 
+Level: Sor/Wiz 7
+Range: Sight of Caster
+Duration: 15 rounds
+Casting Time: 1 round
+Area of Effect: Special 
+Saving Throw: None 
+
+When this spell is cast, it will summon a cornugon, a devil from the Nine Hells. The cornugon will serve the caster as long as the caster is under Protection from Evil. However, if the caster ever loses that protection, the devil will turn on the party. This is a dangerous spell to invoke, saved best for desperate times.~
+@33714     = ~Delayed Blast Fireball~
+@34714     = ~Delayed Blast Fireball
+(Evocation)
+Level: Sor/Wiz 7
+Range: Sight of Caster
+Duration: Special
+Casting Time: 7
+Area of Effect: 30-foot radius
+Saving Throw: Reflex half
+
+This spell creates a fireball that hovers at a point determined by the caster.  The fireball will stay in position until someone walks too close to it, at which point it will explode for 1d6 points of damage per caster level. (max 20d6, Reflex save for half damage).~
 @33804     = ~Mind Blank~
 @34804     = ~Mind Blank
 (Abjuration)
@@ -2686,7 +2719,28 @@ Area of Effect: 1 creature
 Saving Throw: None
 
 In the interests of one's self-control and privacy, Mind Blank shields a creature's mind from almost any mental effect - Charm, Command, Dominate Person, Fear, Feeblemind, and any scrying by crystal balls or other divination methods.~
+@33809     = ~Summon Fiend~
+@34809     = ~Summon Fiend
+(Conjuration) 
+Level: Sor/Wiz 8
+Range: Sight of Caster
+Duration: 15 rounds
+Casting Time: 1 round
+Area of Effect: Special 
+Saving Throw: None
 
+More powerful than the 7th level variant, casting this spell summons a frenzied demon called a glabrezu.  This demon will attack the caster's enemies if the caster is protected from evil, but it will attack the party if the caster loses that protection. Only desperate or suicidal mages use this spell.~
+@33905     = ~Gate~
+@34905     = ~Gate
+(Conjuration) 
+Level: Clr 9, Sor/Wiz 9, Bane 7
+Range: Sight of Caster
+Duration: 33 rounds
+Casting Time: 9
+Area of Effect: Special
+Saving Throw: None
+
+By means of this spell, the caster summons an especially powerful devil called a gelugon. The gelugon will fight for the party as long as the caster is under Protection from Evil. However, if the caster loses Protection from Evil, the devil tear the caster and their companions apart piece by piece, and then feast on the remains.~
 @35151     = ~Divine Shield~
 @36151     = ~Divine Shield
 (Abjuration)
@@ -2744,6 +2798,17 @@ Area of Effect: Caster
 Saving Throw: None
 
 This spell drastically speeds up the ranger's movement. For the duration, the ranger moves at the fastest possible speed.~
+@35653     = ~Repulsion~
+@36653     = ~Repulsion
+(Abjuration)
+Level: Brd 7, Clr 6, Sor/Wiz 7, Helm 5
+Range: Caster
+Duration: 10 rounds
+Casting Time: 6
+Area of Effect: 20-foot radius
+Saving Throw: None
+
+This spell grants the caster an aura that repels nearby enemies, sending them hurtling away from the caster. Any enemy that comes within the area of effect must make a Will save at -3 or be knocked back.~
 @35753     = ~Power Word: Heal~
 @36753     = ~Power Word: Heal
 (Divination)

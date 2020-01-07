@@ -1,0 +1,91 @@
+//Patching all scrolls to be usable by the correct wizard kits.
+
+COPY_EXISTING_REGEXP ~sppr.*\.spl~ ~override~ ~spwi.*\.spl~ ~override~ ~uspr.*\.spl~ ~override~ ~uswi.*\.spl~ ~override~
+	READ_LONG NAME1 thespellnameref
+	READ_LONG UNIDENTIFIED_DESC thespelldescref
+	READ_BYTE 0x25 theschool
+	TEXT_SPRINT thescrollres ~%SOURCE_RES%z~
+	INNER_ACTION BEGIN
+		COPY_EXISTING ~%thescrollres%.itm~ ~override~
+			WRITE_LONG NAME1 thespellnameref
+			WRITE_LONG UNIDENTIFIED_DESC thespelldescref
+			READ_LONG 0x1E theunusability
+			PATCH_IF (theunusability BAND 0x00000400) = 0 BEGIN
+				READ_BYTE 0x2D thekitunusability3
+				READ_BYTE 0x2F thekitunusability4
+				thekitunusability3&=0xC0
+				thekitunusability4&=0x3F
+
+				PATCH_IF theschool = 1 BEGIN
+					thekitunusability3|=0x8
+				END ELSE PATCH_IF theschool = 2 BEGIN
+					thekitunusability3|=0x10
+				END ELSE PATCH_IF theschool = 3 BEGIN
+					thekitunusability3|=0x4
+				END ELSE PATCH_IF theschool = 4 BEGIN
+					thekitunusability3|=0x20
+				END ELSE PATCH_IF theschool = 5 BEGIN
+					thekitunusability3|=0x1
+				END ELSE PATCH_IF theschool = 6 BEGIN
+					thekitunusability4|=0x40
+				END ELSE PATCH_IF theschool = 7 BEGIN
+					thekitunusability4|=0x80
+				END ELSE PATCH_IF theschool = 8 BEGIN
+					thekitunusability3|=0x2
+				END
+
+				WRITE_BYTE 0x2D thekitunusability3
+				WRITE_BYTE 0x2F thekitunusability4
+				LPF DELETE_ITEM_EFFECT INT_VAR opcode_to_delete=147 END
+				LPF CLONE_EFFECT INT_VAR check_headers=1 check_globals=0 match_opcode=146 opcode=147 target=1 timing=1 parameter1=1 parameter2=0 STR_VAR insert=~below~ END
+			END
+			IF_EXISTS
+			BUT_ONLY_IF_IT_CHANGES
+	END
+	BUT_ONLY_IF_IT_CHANGES
+
+// edited school descriptions
+
+COPY_EXISTING ~KITLIST.2da~ ~override~
+  COUNT_2DA_COLS num_cols
+  READ_2DA_ENTRIES_NOW rows num_cols
+  FOR (row = 0; row < rows; ++row) BEGIN
+    READ_2DA_ENTRY_FORMER rows row 0 label
+    PATCH_MATCH ~%label%~ WITH
+      ~19~ BEGIN
+        SET strref = RESOLVE_STR_REF(@816)
+        SET_2DA_ENTRY_LATER rows_out row 3 ~%strref%~
+      END
+      ~20~ BEGIN
+        SET strref = RESOLVE_STR_REF(@818)
+        SET_2DA_ENTRY_LATER rows_out row 3 ~%strref%~
+      END
+      ~21~ BEGIN
+        SET strref = RESOLVE_STR_REF(@820)
+        SET_2DA_ENTRY_LATER rows_out row 3 ~%strref%~
+      END
+      ~22~ BEGIN
+        SET strref = RESOLVE_STR_REF(@822)
+        SET_2DA_ENTRY_LATER rows_out row 3 ~%strref%~
+      END
+      ~23~ BEGIN
+        SET strref = RESOLVE_STR_REF(@824)
+        SET_2DA_ENTRY_LATER rows_out row 3 ~%strref%~
+      END
+      ~24~ BEGIN
+        SET strref = RESOLVE_STR_REF(@826)
+        SET_2DA_ENTRY_LATER rows_out row 3 ~%strref%~
+      END
+      ~25~ BEGIN
+        SET strref = RESOLVE_STR_REF(@828)
+        SET_2DA_ENTRY_LATER rows_out row 3 ~%strref%~
+      END
+      ~26~ BEGIN
+        SET strref = RESOLVE_STR_REF(@830)
+        SET_2DA_ENTRY_LATER rows_out row 3 ~%strref%~
+      END
+      DEFAULT
+    END
+  END
+  SET_2DA_ENTRIES_NOW rows_out num_cols
+BUT_ONLY

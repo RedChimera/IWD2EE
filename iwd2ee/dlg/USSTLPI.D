@@ -23,7 +23,7 @@ END
 
 IF ~~ THEN BEGIN 4
   SAY ~You sent these mercenaries after me, didn't you? You've been working with the Legion's enemies! You're not worried about the spell--you WANTED the volcano to destroy Dragon's Eye!~
-  IF ~~ THEN JOURNAL 36025 EXTERN ~USSTLPP~ 4
+  IF ~~ THEN JOURNAL #36025 EXTERN ~USSTLPP~ 4
 END
 
 IF ~~ THEN BEGIN 5

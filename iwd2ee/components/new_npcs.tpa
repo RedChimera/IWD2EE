@@ -450,7 +450,7 @@ COPY_EXISTING ~11VEIRA.cre~ ~override~
 	WRITE_BYTE class 11
 	WRITE_SHORT class2 11
 	WRITE_LONG classmask 1024
-	WRITE_LONG kit 0x1000000 //Diviner
+	WRITE_LONG kit 0x100 //Diviner
 	WRITE_LONG feats1 0
 	WRITE_LONG feats2 0x43E40000
 	WRITE_LONG feats3 0x10
@@ -489,7 +489,7 @@ COPY_EXISTING ~20EMMA.cre~ ~override~
 	WRITE_BYTE skillconcentration 9
 	WRITE_BYTE skilldiplomacy 7
 	WRITE_BYTE challengerating 6
-	WRITE_LONG kit 0x2 //Silverstar of Selune
+	WRITE_LONG kit 0x20000 //Silverstar of Selune
 	WRITE_LONG feats1 0x208
 	PATCH_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~4~ BEGIN
 		WRITE_LONG feats2 0x13F00000
@@ -691,7 +691,7 @@ COPY_EXISTING ~41ZACK.cre~ ~override~
 	WRITE_BYTE class 11
 	WRITE_SHORT class2 9
 	WRITE_LONG classmask 1024
-	WRITE_LONG kit 0x4000000 //Illusionist
+	WRITE_LONG kit 0x400 //Illusionist
 	WRITE_LONG feats1 0x11008
 	WRITE_LONG feats2 0x13F00080
 	WRITE_LONG feats3 0

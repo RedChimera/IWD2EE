@@ -21,6 +21,8 @@
 @21010=~Thought of Death~
 @21011=~Living Lightning~
 @21012=~Create Winterwight~
+@21013=~Animus Blizzard~
+@21014=~Many Missiles~
 
 @21152=~Hunter's Mark~
 @21651=~Sseth's Venom~
@@ -68,8 +70,10 @@ Weight:  0 lb.~
 @23013=~Winterwight~
 @23014=~Adamantine Golem~
 @23015=~Greater Fomorian~
+@23016=~Narinian~
 
 @24002=~Call Slayer Knights~
 @24003=~Call Gelugon~
 @24004=~Greater Pain~
 @24005=~Bladesong - Extra Attack and Combat Bonuses~
+@24006=~Animate Restless Dead~

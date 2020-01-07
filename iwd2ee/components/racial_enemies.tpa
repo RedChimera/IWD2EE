@@ -139,7 +139,8 @@ COPY_EXISTING_REGEXP ~.+\.cre~ ~override~
     END
 BUT_ONLY_IF_IT_CHANGES
 
-
+COPY_EXISTING ~IEex_WEIDU.lua~ ~override~
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_fiend_race *=.*~ ~ex_fiend_race = 181~
 
 // turn constructs into orcs
 
