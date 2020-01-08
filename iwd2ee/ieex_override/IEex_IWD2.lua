@@ -322,6 +322,125 @@ function IEex_FetchString(strref)
 
 end
 
+function IEex_2DALoad(resref)
+
+	local C2DArray = IEex_Malloc(0x24)
+	IEex_WriteDword(C2DArray + 0x0, 0x0) -- lock?
+	IEex_WriteDword(C2DArray + 0x4, 0x0) -- res
+	IEex_WriteLString(C2DArray + 0x8, "", 0x8) -- resref
+	IEex_WriteDword(C2DArray + 0x10, 0x0) -- m_pNamesX
+	IEex_WriteDword(C2DArray + 0x14, 0x0) -- m_pNamesY
+	IEex_WriteDword(C2DArray + 0x18, 0x0) -- m_pArray
+	IEex_WriteDword(C2DArray + 0x1C, IEex_ReadDword(0x8C1758)) -- defaultCString (afxPchNil)
+	IEex_WriteWord(C2DArray + 0x20, 0x0) -- m_nSizeX
+	IEex_WriteWord(C2DArray + 0x22, 0x0) -- m_nSizeY
+
+	local resrefMem = IEex_Malloc(0x8)
+	IEex_WriteLString(resrefMem, resref, 0x8)
+	IEex_Call(0x402B70, {resrefMem}, C2DArray, 0x0)
+	IEex_Free(resrefMem)
+
+	return C2DArray
+
+end
+
+function IEex_2DADemand(arrayName)
+	local C2DArray = IEex_Loaded2DAs[arrayName]
+	if not C2DArray then
+		C2DArray = IEex_2DALoad(arrayName)
+		if IEex_ReadDword(C2DArray + 0x18) == 0x0 then
+			IEex_Free(C2DArray)
+			IEex_TracebackMessage("IEex CRITICAL ERROR - Couldn't find "..arrayName..".2DA!\n"..debug.traceback())
+			return nil
+		end
+		IEex_Loaded2DAs[arrayName] = C2DArray
+	end
+	return C2DArray
+end
+
+function IEex_2DAFindColumn(C2DArray, columnString)
+	local m_nSizeX = IEex_ReadWord(C2DArray + 0x20, 0)
+	local columnIndex = nil
+	local columnAccess = IEex_ReadDword(C2DArray + 0x10)
+	for i = 1, m_nSizeX, 1 do
+		local column = IEex_ReadString(IEex_ReadDword(columnAccess))
+		if column == columnString then
+			columnIndex = i - 1 -- zero-indexing in memory
+			break
+		end
+		columnAccess = columnAccess + 0x4
+	end
+	return columnIndex
+end
+
+function IEex_2DAFindRow(C2DArray, rowString)
+	local m_nSizeY = IEex_ReadWord(C2DArray + 0x20, 1)
+	local rowIndex = nil
+	local rowAccess = IEex_ReadDword(C2DArray + 0x14)
+	for i = 1, m_nSizeY, 1 do
+		local row = IEex_ReadString(IEex_ReadDword(rowAccess))
+		if row == rowString then
+			rowIndex = i - 1 -- zero-indexing in memory
+			break
+		end
+		rowAccess = rowAccess + 0x4
+	end
+	return rowIndex
+end
+
+function IEex_2DAGetAt(C2DArray, x, y)
+	local array = IEex_ReadDword(C2DArray + 0x18)
+	local m_nSizeX = IEex_ReadWord(C2DArray + 0x20, 0)
+	local accessOffset = (m_nSizeX * y + x) * 4
+	return IEex_ReadString(IEex_ReadDword(array + accessOffset))
+end
+
+function IEex_2DAGetAtStrings(arrayName, columnString, rowString)
+
+	local C2DArray = IEex_2DADemand(arrayName)
+	local defaultString = IEex_ReadString(IEex_ReadDword(C2DArray + 0x1C))
+
+	local columnIndex = IEex_2DAFindColumn(C2DArray, columnString)
+	-- Tried to lookup a non-existent column, serve default
+	if not columnIndex then return defaultString end 
+
+	local rowIndex = IEex_2DAFindRow(C2DArray, rowString)
+	-- Tried to lookup a non-existent row, serve default
+	if not rowIndex then return defaultString end 
+
+	local array = IEex_ReadDword(C2DArray + 0x18)
+	local m_nSizeX = IEex_ReadWord(C2DArray + 0x20, 0)
+	local accessOffset = (m_nSizeX * rowIndex + columnIndex) * 4
+	return IEex_ReadString(IEex_ReadDword(array + accessOffset))
+
+end
+
+function IEex_2DAGetAtRelated(arrayName, relatedColumn, columnString, compareFunc)
+
+	local C2DArray = IEex_2DADemand(arrayName)
+	local defaultString = IEex_ReadString(IEex_ReadDword(C2DArray + 0x1C))
+
+	local relatedColumnIndex = IEex_2DAFindColumn(C2DArray, relatedColumn)
+	if not relatedColumnIndex then return defaultString end 
+
+	local columnIndex = IEex_2DAFindColumn(C2DArray, columnString)
+	if not columnIndex then return defaultString end 
+
+	local foundRowIndex = nil
+	local maxRowIndex = IEex_ReadWord(C2DArray + 0x20, 1) - 1
+	for rowIndex = 0, maxRowIndex, 1 do
+		if compareFunc(IEex_2DAGetAt(C2DArray, relatedColumnIndex, rowIndex)) then
+			foundRowIndex = rowIndex
+			break
+		end
+	end
+
+	if not foundRowIndex then return defaultString end 
+
+	return IEex_2DAGetAt(C2DArray, columnIndex, foundRowIndex)
+
+end
+
 ----------------------
 -- ActorID Fetching --
 ----------------------
@@ -2766,7 +2885,7 @@ function IEex_FeatHook(share, oldBaseStats, oldDerivedStats)
 	--IEex_MessageBox("oldDerivedStats: "..IEex_ToHex(oldDerivedStats))
 
 	local newBaseStats = share + 0x5A4
-	for featID = 0, 74, 1 do
+	for featID = 0, IEex_NEW_FEATS_MAXID, 1 do
 		if IEex_IsFeatTaken(newBaseStats, featID) then
 			local oldFeatCount = IEex_GetFeatCount(oldBaseStats, featID)
 			local newFeatCount = IEex_GetFeatCount(newBaseStats, featID)
@@ -2784,6 +2903,525 @@ end
 --------------------
 -- Initialization --
 --------------------
+
+---------------
+-- CONSTANTS --
+---------------
+
+IEex_NEW_FEATS_MAXID = nil
+IEex_NEW_FEATS_SIZE  = nil
+
+---------------
+-- Functions --
+---------------
+
+function IEex_LoadResources()
+
+	IEex_Loaded2DAs = {}
+
+	local feats2DA = IEex_2DADemand("B3FEATS")
+	
+	local idColumn = IEex_2DAFindColumn(feats2DA, "ID")
+	local maxRowIndex = IEex_ReadWord(feats2DA + 0x20, 1) - 1
+
+	local previousID = 74
+	for rowIndex = 0, maxRowIndex, 1 do
+		local myID = tonumber(IEex_2DAGetAt(feats2DA, idColumn, rowIndex))
+		if (previousID + 1) ~= myID then
+			IEex_TracebackMessage("IEex CRITICAL ERROR - B3FEATS.2DA contains hole at ID = "..(previousID + 1).."; Fix this!")
+		end
+		previousID = myID
+	end
+
+	IEex_NEW_FEATS_MAXID = previousID
+	IEex_NEW_FEATS_SIZE = IEex_NEW_FEATS_MAXID + 1
+
+	IEex_WriteDelayedPatches()
+
+end
+
+function IEex_WriteDelayedPatches()
+
+	IEex_DisableCodeProtection()
+
+	--------------------
+	-- FeatList Hooks --
+	--------------------
+
+	IEex_FeatPanelStringHook = function(featID)
+		local foundMax = tonumber(IEex_2DAGetAtRelated("B3FEATS", "ID", "MAX", function(id)
+			return tonumber(id) == featID
+		end))
+		return foundMax > 1
+	end
+
+	IEex_FeatPipsHook = function(featID)
+		local foundValue = tonumber(IEex_2DAGetAtRelated("B3FEATS", "ID", "MAX", function(id)
+			return tonumber(id) == featID
+		end))
+		return foundValue
+	end
+
+	IEex_GetFeatCountHook = function(sprite, featID)
+		return IEex_ReadByte(sprite + 0x78F + (featID - 0x4B), 0)
+	end
+
+	IEex_SetFeatCountHook = function(sprite, featID, count)
+		IEex_WriteByte(sprite + 0x78F + (featID - 0x4B), count)
+	end
+
+	IEex_FeatIncrementableHook = function (sprite, featID)
+		local featCount = IEex_ReadByte(sprite + 0x78F + (featID - 0x4B), 0)
+		local foundMax = tonumber(IEex_2DAGetAtRelated("B3FEATS", "ID", "MAX", function(id)
+			return tonumber(id) == featID
+		end))
+		return featCount < foundMax
+	end
+
+	IEex_FeatTakeableHook = function(sprite, featID)
+		local foundFunc = IEex_2DAGetAtRelated("B3FEATS", "ID", "PREREQUISITE_FUNCTION", function(id)
+			return tonumber(id) == featID
+		end)
+		return _G[foundFunc](IEex_GetActorIDShare(sprite), featID)
+	end
+
+	------------------------
+	-- FeatList Hooks ASM --
+	------------------------
+
+	------------------------------
+	-- CGameSprite_SetFeatCount --
+	------------------------------
+
+	IEex_WriteByte(0x762897 + 2, IEex_NEW_FEATS_SIZE)
+
+	local featGetCountHookAddress = 0x76290B
+	local featGetCountHook = IEex_WriteAssemblyAuto({[[
+
+		!jbe_dword ]], {featGetCountHookAddress + 0x6, 4, 4}, [[
+		!cmp_eax_byte 47
+		!jle_dword :762D5E
+
+		!push_all_registers_iwd2
+
+		!push_dword ]], {IEex_WriteStringAuto("IEex_SetFeatCountHook"), 4}, [[
+		!push_dword *_g_lua
+		!call >_lua_getglobal
+		!add_esp_byte 08
+
+		; sprite ;
+		!push_esi
+		!fild_[esp]
+		!sub_esp_byte 04
+		!fstp_qword:[esp]
+		!push_dword *_g_lua
+		!call >_lua_pushnumber
+		!add_esp_byte 0C
+
+		; featID ;
+		!push_edi
+		!fild_[esp]
+		!sub_esp_byte 04
+		!fstp_qword:[esp]
+		!push_dword *_g_lua
+		!call >_lua_pushnumber
+		!add_esp_byte 0C
+
+		; count ;
+		!push_ebx
+		!fild_[esp]
+		!sub_esp_byte 04
+		!fstp_qword:[esp]
+		!push_dword *_g_lua
+		!call >_lua_pushnumber
+		!add_esp_byte 0C
+
+		!push_byte 00
+		!push_byte 00
+		!push_byte 00
+		!push_byte 00
+		!push_byte 03
+		!push_dword *_g_lua
+		!call >_lua_pcallk
+		!add_esp_byte 18
+
+		!pop_all_registers_iwd2
+		!jmp_dword :762D5E
+
+	]]})
+	IEex_WriteAssembly(featGetCountHookAddress, {"!jmp_dword", {featGetCountHook, 4, 4}, "!nop"})
+	
+	---------------------------
+	-- FeatList_GetFeatCount --
+	---------------------------
+
+	IEex_WriteByte(0x762E26 + 2, IEex_NEW_FEATS_SIZE)
+
+	local featGetCountHookAddress = 0x762E6A
+	local featGetCountHook = IEex_WriteAssemblyAuto({[[
+
+		!jbe_dword ]], {featGetCountHookAddress + 0x6, 4, 4}, [[
+		!cmp_eax_byte 47
+		!jle_dword :762FD1
+
+		!push_registers_iwd2
+
+		!push_dword ]], {IEex_WriteStringAuto("IEex_GetFeatCountHook"), 4}, [[
+		!push_dword *_g_lua
+		!call >_lua_getglobal
+		!add_esp_byte 08
+
+		; sprite ;
+		!push_esi
+		!fild_[esp]
+		!sub_esp_byte 04
+		!fstp_qword:[esp]
+		!push_dword *_g_lua
+		!call >_lua_pushnumber
+		!add_esp_byte 0C
+
+		; featID ;
+		!push_edi
+		!fild_[esp]
+		!sub_esp_byte 04
+		!fstp_qword:[esp]
+		!push_dword *_g_lua
+		!call >_lua_pushnumber
+		!add_esp_byte 0C
+
+		!push_byte 00
+		!push_byte 00
+		!push_byte 00
+		!push_byte 01
+		!push_byte 02
+		!push_dword *_g_lua
+		!call >_lua_pcallk
+		!add_esp_byte 18
+
+		!push_byte 00
+		!push_byte FF
+		!push_dword *_g_lua
+		!call >_lua_tonumberx
+		!add_esp_byte 0C
+
+		!call >__ftol2_sse
+		!push_eax
+
+		!push_byte FE
+		!push_dword *_g_lua
+		!call >_lua_settop
+		!add_esp_byte 08
+
+		!pop_eax
+
+		!pop_registers_iwd2
+		!pop_edi
+		!pop_esi
+		!ret_word 04 00
+
+	]]})
+	IEex_WriteAssembly(featGetCountHookAddress, {"!jmp_dword", {featGetCountHook, 4, 4}, "!nop"})
+
+	--------------------------
+	-- Feat_Get_Number_Pips --
+	--------------------------
+
+	IEex_WriteByte(0x7630A5 + 2, IEex_NEW_FEATS_SIZE)
+
+	local featNumberPipsHookAddress = 0x7630C6
+	local featNumberPipsHook = IEex_WriteAssemblyAuto({[[
+
+		!cmp_eax_byte 42
+		!pop_esi
+		!jbe_dword ]], {featNumberPipsHookAddress + 0x6, 4, 4}, [[
+
+		!cmp_eax_byte 47
+		!jle_dword :7630F3
+
+		!push_registers_iwd2
+
+		!push_dword ]], {IEex_WriteStringAuto("IEex_FeatPipsHook"), 4}, [[
+		!push_dword *_g_lua
+		!call >_lua_getglobal
+		!add_esp_byte 08
+
+		; featID ;
+		!mov_eax_[esp+byte] 1C
+		!push_eax
+		!fild_[esp]
+		!sub_esp_byte 04
+		!fstp_qword:[esp]
+		!push_dword *_g_lua
+		!call >_lua_pushnumber
+		!add_esp_byte 0C
+
+		!push_byte 00
+		!push_byte 00
+		!push_byte 00
+		!push_byte 01
+		!push_byte 01
+		!push_dword *_g_lua
+		!call >_lua_pcallk
+		!add_esp_byte 18
+
+		!push_byte 00
+		!push_byte FF
+		!push_dword *_g_lua
+		!call >_lua_tonumberx
+		!add_esp_byte 0C
+
+		!call >__ftol2_sse
+		!push_eax
+
+		!push_byte FE
+		!push_dword *_g_lua
+		!call >_lua_settop
+		!add_esp_byte 08
+
+		!pop_eax
+
+		!pop_registers_iwd2
+		!ret_word 04 00
+
+	]]})
+	IEex_WriteAssembly(featNumberPipsHookAddress, {"!jmp_dword", {featNumberPipsHook, 4, 4}, "!nop"})
+
+	-------------------
+	-- Feat_Takeable --
+	-------------------
+
+	IEex_WriteByte(0x763206 + 2, IEex_NEW_FEATS_SIZE)
+
+	local featTakeableHookAddress = 0x763270
+	local featTakeableHook = IEex_WriteAssemblyAuto({[[
+
+		!cmp_ebp_byte 4A
+		!jbe_dword ]], {featTakeableHookAddress + 0x6, 4, 4}, [[
+
+		!push_eax
+		!push_ecx
+		!push_edx
+		!push_ebp
+		!push_esi
+		!push_edi
+
+		!push_dword ]], {IEex_WriteStringAuto("IEex_FeatTakeableHook"), 4}, [[
+		!push_dword *_g_lua
+		!call >_lua_getglobal
+		!add_esp_byte 08
+
+		; sprite ;
+		!push_esi
+		!fild_[esp]
+		!sub_esp_byte 04
+		!fstp_qword:[esp]
+		!push_dword *_g_lua
+		!call >_lua_pushnumber
+		!add_esp_byte 0C
+
+		; featID ;
+		!push_ebp
+		!fild_[esp]
+		!sub_esp_byte 04
+		!fstp_qword:[esp]
+		!push_dword *_g_lua
+		!call >_lua_pushnumber
+		!add_esp_byte 0C
+
+		!push_byte 00
+		!push_byte 00
+		!push_byte 00
+		!push_byte 01
+		!push_byte 02
+		!push_dword *_g_lua
+		!call >_lua_pcallk
+		!add_esp_byte 18
+
+		!push_byte FF
+		!push_dword *_g_lua
+		!call >_lua_toboolean
+		!add_esp_byte 08
+
+		!push_eax
+
+		!push_byte FE
+		!push_dword *_g_lua
+		!call >_lua_settop
+		!add_esp_byte 08
+
+		!pop_ebx
+
+		!pop_edi
+		!pop_esi
+		!pop_ebp
+		!pop_edx
+		!pop_ecx
+		!pop_eax
+		!jmp_dword :7638FD
+
+	]]})
+	IEex_WriteAssembly(featTakeableHookAddress, {"!jmp_dword", {featTakeableHook, 4, 4}, "!nop"})
+
+	------------------------
+	-- Feat_Incrementable --
+	------------------------
+
+	IEex_WriteByte(0x763A46 + 2, IEex_NEW_FEATS_SIZE)
+
+	local featIncrementableHookAddress = 0x763A6C
+	local featIncrementableHook = IEex_WriteAssemblyAuto({[[
+
+		!jbe_dword ]], {featIncrementableHookAddress + 0x6, 4, 4}, [[
+		!cmp_eax_byte 47
+		!jle_dword :763BB7
+
+		!push_registers_iwd2
+
+		!push_dword ]], {IEex_WriteStringAuto("IEex_FeatIncrementableHook"), 4}, [[
+		!push_dword *_g_lua
+		!call >_lua_getglobal
+		!add_esp_byte 08
+
+		; sprite ;
+		!push_esi
+		!fild_[esp]
+		!sub_esp_byte 04
+		!fstp_qword:[esp]
+		!push_dword *_g_lua
+		!call >_lua_pushnumber
+		!add_esp_byte 0C
+
+		; featID ;
+		!push_edi
+		!fild_[esp]
+		!sub_esp_byte 04
+		!fstp_qword:[esp]
+		!push_dword *_g_lua
+		!call >_lua_pushnumber
+		!add_esp_byte 0C
+
+		!push_byte 00
+		!push_byte 00
+		!push_byte 00
+		!push_byte 01
+		!push_byte 02
+		!push_dword *_g_lua
+		!call >_lua_pcallk
+		!add_esp_byte 18
+
+		!push_byte FF
+		!push_dword *_g_lua
+		!call >_lua_toboolean
+		!add_esp_byte 08
+
+		!push_eax
+
+		!push_byte FE
+		!push_dword *_g_lua
+		!call >_lua_settop
+		!add_esp_byte 08
+
+		!pop_eax
+
+		!pop_registers_iwd2
+
+		!test_eax_eax
+		!jz_dword :763A9D
+		!jmp_dword :763BDD
+
+	]]})
+	IEex_WriteAssembly(featIncrementableHookAddress, {"!jmp_dword", {featIncrementableHook, 4, 4}, "!nop"})
+
+	----------------------------------
+	-- Feat_Update_Panel_With_Taken --
+	----------------------------------
+
+	IEex_WriteByte(0x765CE8 + 2, IEex_NEW_FEATS_SIZE)
+	IEex_WriteByte(0x765DC8 + 2, IEex_NEW_FEATS_SIZE)
+
+	local featPanelStringHookAddress = 0x765D27
+	local featPanelStringHook = IEex_WriteAssemblyAuto({[[
+
+		!cmp_eax_byte 42
+		!jbe_dword ]], {featPanelStringHookAddress + 0x5, 4, 4}, [[
+		!cmp_eax_byte 47
+		!jle_dword :765D7E
+
+		!push_all_registers_iwd2
+
+		!push_dword ]], {IEex_WriteStringAuto("IEex_FeatPanelStringHook"), 4}, [[
+		!push_dword *_g_lua
+		!call >_lua_getglobal
+		!add_esp_byte 08
+
+		; featID ;
+		!push_esi
+		!fild_[esp]
+		!sub_esp_byte 04
+		!fstp_qword:[esp]
+		!push_dword *_g_lua
+		!call >_lua_pushnumber
+		!add_esp_byte 0C
+
+		!push_byte 00
+		!push_byte 00
+		!push_byte 00
+		!push_byte 01
+		!push_byte 01
+		!push_dword *_g_lua
+		!call >_lua_pcallk
+		!add_esp_byte 18
+
+		!push_byte FF
+		!push_dword *_g_lua
+		!call >_lua_toboolean
+		!add_esp_byte 08
+
+		!push_eax
+
+		!push_byte FE
+		!push_dword *_g_lua
+		!call >_lua_settop
+		!add_esp_byte 08
+
+		!pop_eax
+		!test_eax_eax
+
+		!pop_all_registers_iwd2
+
+		!jz_dword :765D7E
+		!jmp_dword :765D3B
+
+	]]})
+	IEex_WriteAssembly(featPanelStringHookAddress, {"!jmp_dword", {featPanelStringHook, 4, 4}})
+
+	-------------------------------------
+	-- Has_Feat_And_Meets_Requirements --
+	-------------------------------------
+
+	IEex_WriteByte(0x763156 + 2, IEex_NEW_FEATS_SIZE)
+
+	----------------------------
+	-- Level_Up_Accept_Skills --
+	----------------------------
+
+	IEex_WriteByte(0x5E1251 + 2, IEex_NEW_FEATS_SIZE)
+
+	---------------
+	-- nNumItems --
+	---------------
+
+	IEex_WriteWord(0x84EA66, IEex_NEW_FEATS_SIZE)
+
+
+
+	IEex_EnableCodeProtection()
+
+end
+
+----------------------------------
+-- IEex_DefineAssemblyFunctions --
+----------------------------------
 
 function IEex_DefineAssemblyFunctions()
 
@@ -2857,9 +3495,43 @@ function IEex_DefineAssemblyFunctions()
 
 end
 
+-----------------------
+-- IEex_WritePatches --
+-----------------------
+
 function IEex_WritePatches()
 
 	IEex_DisableCodeProtection()
+
+	-------------------------
+	-- Resources Load Hook --
+	-------------------------
+
+	local loadResourcesHookAddress = 0x59CC58
+	local loadResourcesHook = IEex_WriteAssemblyAuto({[[
+
+		!call :53CB60
+		!push_all_registers_iwd2
+
+		!push_dword ]], {IEex_WriteStringAuto("IEex_LoadResources"), 4}, [[
+		!push_dword *_g_lua
+		!call >_lua_getglobal
+		!add_esp_byte 08
+
+		!push_byte 00
+		!push_byte 00
+		!push_byte 00
+		!push_byte 00
+		!push_byte 00
+		!push_dword *_g_lua
+		!call >_lua_pcallk
+		!add_esp_byte 18
+
+		!pop_all_registers_iwd2
+		!jmp_dword ]], {loadResourcesHookAddress + 0x5, 4, 4},
+
+	})
+	IEex_WriteAssembly(loadResourcesHookAddress, {"!jmp_dword", {loadResourcesHook, 4, 4}})
 
 	---------------------------------------------------------
 	-- Fix non-player animations crashing when leveling up --
@@ -3042,6 +3714,8 @@ function IEex_WritePatches()
 
 	]]})
 	IEex_WriteAssembly(fixUnequipOnRemove2, {"!jmp_dword", {fixUnequipOnRemove2Hook, 4, 4}})
+
+
 
 	IEex_EnableCodeProtection()
 
