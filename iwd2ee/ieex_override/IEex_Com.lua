@@ -87,6 +87,12 @@ function IEex_WriteDword(address, value)
 	end
 end
 
+function IEex_WriteStringAuto(string)
+	local address = IEex_Malloc(#string + 1)
+	IEex_WriteString(address, string)
+	return address
+end
+
 -- OS:WINDOWS
 function IEex_DllCall(dll, proc, args, ecx, pop)
 	local procaddress = #dll + 1
@@ -113,6 +119,12 @@ end
 
 function IEex_Error(message)
 	error(message.." "..debug.traceback())
+end
+
+function IEex_TracebackMessage(message)
+	message = message.."\n"..debug.traceback()
+	print(message)
+	IEex_MessageBox(message)
 end
 
 IEex_ReadDwordDebug_Suppress = false
