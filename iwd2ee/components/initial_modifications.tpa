@@ -1,5 +1,4 @@
 SILENT
-
 COPY ~%mod_folder%/usInitialModifications.txt~ ~override~
 
  //Files in this folder may be used in multiple components and shouldn't affect the game unless a component is installed that uses the file.
@@ -122,4 +121,54 @@ fall=
 fallframe=
 ~
 */
+
+
+//Making it so Lua scripts can recognize a spell's actual level for a spellcaster.
+
+COPY_EXISTING ~IEex_WEIDU.lua~ ~override~
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_listspll *=.*~ ~ex_listspll = {}~
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_listdomn *=.*~ ~ex_listdomn = {}~
+
+COPY_EXISTING ~LISTSPLL.2da~ ~override~
+	COUNT_2DA_COLS numcolumns
+	COUNT_2DA_ROWS numcolumns numrows
+	FOR (i = 0; i < numrows; ++i) BEGIN
+		READ_2DA_ENTRY i 1 numcolumns brd
+		READ_2DA_ENTRY i 2 numcolumns clr
+		READ_2DA_ENTRY i 3 numcolumns drd
+		READ_2DA_ENTRY i 4 numcolumns pal
+		READ_2DA_ENTRY i 5 numcolumns rgr
+		READ_2DA_ENTRY i 6 numcolumns sor
+		READ_2DA_ENTRY i 7 numcolumns wiz
+		READ_2DA_ENTRY i 8 numcolumns spell_res_ref
+		PATCH_IF (FILE_EXISTS_IN_GAME ~%spell_res_ref%.spl~) BEGIN
+			INNER_ACTION BEGIN
+				COPY_EXISTING ~IEex_WEIDU.lua~ ~override~
+					REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_listspll = {~ ~ex_listspll = {["%spell_res_ref%"] = {%brd%, %clr%, %drd%, %pal%, %rgr%, %sor%, %wiz%}, ~
+			END
+		END
+	END
+
+COPY_EXISTING ~LISTDOMN.2da~ ~override~
+	COUNT_2DA_COLS numcolumns
+	COUNT_2DA_ROWS numcolumns numrows
+	FOR (i = 0; i < numrows; ++i) BEGIN
+		READ_2DA_ENTRY i 1 numcolumns cil
+		READ_2DA_ENTRY i 2 numcolumns cla
+		READ_2DA_ENTRY i 3 numcolumns cse
+		READ_2DA_ENTRY i 4 numcolumns che
+		READ_2DA_ENTRY i 5 numcolumns cog
+		READ_2DA_ENTRY i 6 numcolumns cte
+		READ_2DA_ENTRY i 7 numcolumns cba
+		READ_2DA_ENTRY i 8 numcolumns cma
+		READ_2DA_ENTRY i 9 numcolumns cta
+		READ_2DA_ENTRY i (numcolumns - 1) numcolumns spell_res_ref
+		PATCH_IF (FILE_EXISTS_IN_GAME ~%spell_res_ref%.spl~) BEGIN
+			INNER_ACTION BEGIN
+				COPY_EXISTING ~IEex_WEIDU.lua~ ~override~
+					REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_listdomn = {~ ~ex_listdomn = {["%spell_res_ref%"] = {%cil%, %cla%, %cse%, %che%, %cog%, %cte%, %cba%, %cma%, %cta%}, ~
+			END
+		END
+	END
+
 VERBOSE

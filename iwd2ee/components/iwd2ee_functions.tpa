@@ -1414,6 +1414,38 @@ BEGIN
 	END
 END
 
+DEFINE_ACTION_FUNCTION ~ADD_FEAT_IWD2~
+	INT_VAR
+		nameref=0
+		descref=0
+		max=1
+	STR_VAR
+		name=~~
+		points=~0                       0                       0                       0                       0                       0                       0                       0                       0                       0                       0                       0                       0                       0                       0                       0                       0                       0                       0                       0                       0                       0                       0                       0                       0                       0                       0                       0                       0                       0                       0                       0                       0                       0                       0                       0~
+		script=~Feats_True~
+		featspl_1=~NoSpellForThis~
+		featspl_2=~NoSpellForThis~
+		featspl_3=~NoSpellForThis~
+		featspl_4=~NoSpellForThis~
+		featspl_5=~NoSpellForThis~
+BEGIN
+	COPY_EXISTING ~b3feats.2da~ ~override~
+		COUNT_2DA_ROWS 4 numrows
+		nextid = numrows + 75
+		INSERT_2DA_ROW numrows 4 ~%name% %nextid% %max% %script%~
+
+	COPY_EXISTING ~feats.2da~ ~override~
+		COUNT_2DA_COLS numcols
+		COUNT_2DA_ROWS numcols numrows
+		INSERT_2DA_ROW numrows numcols ~%name% %nextid% %nameref% %descref% %points%~
+
+	COPY_EXISTING ~%featspl_1%.spl~ ~override/FE_%nextid%_1.spl~ ~%featspl_2%.spl~ ~override/FE_%nextid%_2.spl~ ~%featspl_3%.spl~ ~override/FE_%nextid%_3.spl~ ~%featspl_4%.spl~ ~override/FE_%nextid%_4.spl~ ~%featspl_5%.spl~ ~override/FE_%nextid%_5.spl~
+		IF_EXISTS
+
+	COPY_EXISTING ~IEex_WEIDU.lua~ ~override~
+		REPLACE_TEXTUALLY ~ex_feat_name_id = {~ ~ex_feat_name_id = {["%name%"] = %nextid%, ~
+END
+
 DEFINE_PATCH_FUNCTION ~CONVERT_DLG_TO_IWD2_FORMAT~
 BEGIN
 	READ_LONG 0xc ulgiash

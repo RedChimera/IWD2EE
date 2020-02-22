@@ -1,3 +1,7 @@
+COPY ~%mod_folder%/eff/eff_racial_enemies~ ~override~
+
+COPY ~%mod_folder%/spl/spl_racial_enemies~ ~override~
+
 //NOTES
 //Need to traify
 

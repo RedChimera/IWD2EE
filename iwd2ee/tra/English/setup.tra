@@ -61,5 +61,7 @@
 @60   = ~Start with a total of 36000 experience divided among the party, enough for a six-character party to start at level 4 (recommended if you've installed some of the components that weaken HoF creatures)~
 @61   = ~Start with a total of 90000 experience divided among the party, enough for a six-character party to start at level 6~
 @62   = ~Start with a total of 270000 experience divided among the party, enough for a six-character party to start at level 10 (recommended if you haven't installed the components that weaken HoF creatures)~
-@63   = ~Remove the delay after a sneak attack before the creature can be sneak attacked again~
+@63   = ~Reduce the delay after a sneak attack before the creature can be sneak attacked again~
 @64   = ~Revise opposing schools for specialist wizards~
+@65   = ~Remove it~
+@66   = ~Lower it to 1 round (recommended)~

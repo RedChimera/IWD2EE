@@ -1,12 +1,12 @@
 //NOTES
-// This component includes the dialog for the new Lord Pyros' Domain fight and edits related dialogs to be compatible.
-// The whole area must be emptied of its current creatures and scripts.
-// Then we must include new copies of Izbelah, Pyros, Lothar, Venomin, and Jasper, who must have these dialogs assigned.
-// There must be a script to initiate dialog on sight. The dialog will end in a combat. Izbelah's death must open the way to the Fields of Slaughter.
-// When this fight is complete, @semiticgod will edit the "Faster Dragon's Eye and Lord Pyros' Domain" component to make it compatible.
+
+COPY ~%mod_folder%/are/are_alt_dragon_eye~ ~override~
+
+COPY ~%mod_folder%/bcs/bcs_alt_dragon_eye~ ~override~
 
 COMPILE ~%mod_folder%/dlg/USSTLPP.d~ ~%mod_folder%/dlg/USSTLPL.d~ ~%mod_folder%/dlg/USSTLPJ.d~ ~%mod_folder%/dlg/USSTLPI.d~ ~%mod_folder%/dlg/USSTLPV.d~
 
+COMPILE ~%mod_folder%/dlg/61ARCHON.d~
 COMPILE ~%mod_folder%/dlg/61IZBELA.d~
 COMPILE ~%mod_folder%/dlg/60ISELOR.d~
 // Note for @semiticgod: Nheero's dialogue displays an error message. We probably won't need this anyway: the parts I wanted to change shouldn't happen since we're replacing the entire Thorasskus encounter and the new dialog won't set the variables such that Nheero will need to give the obsolete vanilla lines.
@@ -18,3 +18,15 @@ STRING_SET 29274 ~Iselore told us that the Legion of the Chimera forces are usin
 STRING_SET 35006 ~According to Nheero's research, roughly thirty years ago this volcano - Dragon's Eye - erupted, disintegrating nearly every living thing inside.  Shortly thereafter, the yuan-ti halfbreed children fled here from Kuldahar, befriended the surviving lizardmen hatchlings, excavated the third level from the cooling volcanic rock, and once again claimed this place as their home.  He further explained that yuan-ti High Priest Thorasskus recently received a vision from his god Sseth about an imminent eruption, and asked High Sorceress Izbelah to design a spell that would reverse the process.~
 STRING_SET 35071 ~According to Nheero's research, roughly thirty years ago this volcano - Dragon's Eye - erupted, instantly disintegrating nearly every living thing inside.  Shortly thereafter the yuan-ti halfbreed children fled here from Kuldahar, befriended the surviving lizardmen hatchlings, excavated the third level from the cooling volcanic rock, and once again claimed this place as their home.  He further explained that yuan-ti High Priest Thorasskus recently received a vision from his god Sseth about an imminent eruption, and asked High Sorceress Izbelah to design a spell that would reverse the process.~
 STRING_SET 35074 ~According to Nheero's research, roughly thirty years ago this volcano - Dragon's Eye - erupted, disintegrating nearly every living thing inside.  Shortly thereafter, the yuan-ti halfbreed children fled here from Kuldahar, befriended the surviving lizardmen hatchlings, excavated the third level from the cooling volcanic rock, and once again claimed this place as their home.  He further explained that yuan-ti High Priest Thorasskus recently received a vision from his god Sseth about an imminent eruption.  Thorasskus then informed High Sorceress Izbelah who hastily researched a spell to prevent it, but she hasn't been seen since.~
+
+COPY_EXISTING ~61VENOMI.CRE~ ~override~
+	READ_LONG 0x10 thecreflags
+	thecreflags&=0xFFFFDFFF //Not important to the plot
+	WRITE_LONG 0x10 thecreflags
+	WRITE_BYTE defaultvisibility 0
+
+COPY_EXISTING ~61PYROS.CRE~ ~override~
+	WRITE_BYTE defaultvisibility 0
+
+COPY_EXISTING ~61YASENT.CRE~ ~override/USADEYUC.CRE~
+	WRITE_BYTE allegiance 128

@@ -23,29 +23,114 @@ COPY_EXISTING_REGEXP ~00FIST\.itm~ ~override~ ~00MFIST.*\.itm~ ~override~ ~CHILL
 	BUT_ONLY_IF_IT_CHANGES
 
 COPY_EXISTING_REGEXP ~.*\.itm~ ~override~
-	is_ranged = 0
 	READ_SHORT 0x68 thenumheaders
 	PATCH_IF thenumheaders > 0 BEGIN
 		offset = 0x82
 		FOR (i = 0; i < thenumheaders; ++i) BEGIN
 			READ_BYTE offset theheadertype
 			READ_SHORT (offset + 0x18) thedicenumber
-			PATCH_IF theheadertype = 2 AND thedicenumber > 0 BEGIN
-				is_ranged = 1
-				READ_SHORT (offset + 0x1C) thedamagetype
+			READ_SHORT (offset + 0x1C) thedamagetype
+			PATCH_IF thedamagetype = 1 OR thedamagetype = 4 BEGIN
+				damageeffecttype = 0x100000
+			END ELSE PATCH_IF thedamagetype = 2 OR thedamagetype = 9 BEGIN
+				damageeffecttype = 0
+			END ELSE BEGIN
+				damageeffecttype = 0x1000000
+			END
+			PATCH_IF theheadertype = 1 AND thedicenumber > 0 BEGIN
+				LPF ADD_ITEM_EFFECT INT_VAR header=(i + 1) type=1 opcode=500 target=2 timing=0 parameter2=damageeffecttype savingthrow=0x1880000 STR_VAR resource=~EXDAMAGE~ END
+			END ELSE PATCH_IF theheadertype = 2 AND thedicenumber > 0 BEGIN
+				LPF ADD_ITEM_EFFECT INT_VAR header=(i + 1) type=2 opcode=500 target=2 timing=0 parameter2=damageeffecttype savingthrow=0x880000 STR_VAR resource=~EXDAMAGE~ END
 			END
 			offset += 0x38
 		END
 	END
-	PATCH_IF is_ranged = 1 BEGIN
-		PATCH_IF thedamagetype = 1 OR thedamagetype = 4 BEGIN
-			damageeffecttype = 0x100000
-		END ELSE PATCH_IF thedamagetype = 2 OR thedamagetype = 9 BEGIN
-			damageeffecttype = 0
-		END ELSE BEGIN
-			damageeffecttype = 0x1000000
-		END
-		LPF ADD_ITEM_EFFECT INT_VAR type=2 opcode=500 target=2 timing=0 parameter2=damageeffecttype savingthrow=0xC0000 STR_VAR resource=~EXDAMAGE~ END
-	END
 	UNLESS ~EXDAMAGE~
+	BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING_REGEXP ~.*\.itm~ ~override~
+	ismelee = 0
+	isranged = 0
+	READ_SHORT 0x18 theitemflags
+	READ_SHORT 0x1C thecategory
+	READ_ASCII 0x22 theappearance (2)
+	PATCH_IF (~%theappearance%~ STRING_EQUAL_CASE ~2A~) OR (~%theappearance%~ STRING_EQUAL_CASE ~3A~) OR (~%theappearance%~ STRING_EQUAL_CASE ~4A~) BEGIN
+		LPF ADD_ITEM_EQEFFECT INT_VAR opcode=288 target=1 timing=2 parameter1=thecategory parameter2=241 savingthrow=(theitemflags << 16) special=1 STR_VAR resource=~USEQTYPE~ END
+	END ELSE PATCH_IF thecategory = 67 BEGIN
+		LPF ADD_ITEM_EQEFFECT INT_VAR opcode=288 target=1 timing=2 parameter1=thecategory parameter2=241 savingthrow=(theitemflags << 16) special=2 STR_VAR resource=~USEQTYPE~ END
+	END ELSE PATCH_IF (~%theappearance%~ STRING_EQUAL_CASE ~D1~) OR (~%theappearance%~ STRING_EQUAL_CASE ~D2~) OR (~%theappearance%~ STRING_EQUAL_CASE ~D3~) OR (~%theappearance%~ STRING_EQUAL_CASE ~D4~) BEGIN
+		LPF ADD_ITEM_EQEFFECT INT_VAR opcode=288 target=1 timing=2 parameter1=thecategory parameter2=241 savingthrow=(theitemflags << 16) special=3 STR_VAR resource=~USEQTYPE~ END
+	END ELSE BEGIN
+		READ_SHORT 0x68 thenumheaders
+		PATCH_IF thenumheaders > 0 BEGIN
+			offset = 0x82
+			FOR (i = 0; i < thenumheaders; ++i) BEGIN
+				READ_BYTE offset theheadertype
+				PATCH_IF theheadertype = 1 AND isranged = 0 BEGIN
+					ismelee = 1
+					READ_SHORT (offset + 0x18) thedicenumber
+					READ_SHORT (offset + 0x1C) thedamagetype
+					PATCH_IF thedicenumber = 0 BEGIN
+						thedamagetype = 0
+					END
+				END ELSE PATCH_IF theheadertype = 2 BEGIN
+					isranged = 1
+					READ_SHORT (offset + 0x18) thedicenumber
+					READ_SHORT (offset + 0x1C) thedamagetype
+					PATCH_IF thedicenumber = 0 BEGIN
+						thedamagetype = 0
+					END
+				END
+				offset += 0x38
+			END
+			PATCH_IF isranged = 1 BEGIN
+				LPF ADD_ITEM_EQEFFECT INT_VAR opcode=288 target=1 timing=2 parameter1=thecategory parameter2=241 savingthrow=(theitemflags << 16) special=(4 + (thedamagetype << 24)) STR_VAR resource=~USEQTYPE~ END
+			END ELSE PATCH_IF ismelee = 1 BEGIN
+				PATCH_IF (~%theappearance%~ STRING_EQUAL_CASE ~  ~) BEGIN
+					LPF ADD_ITEM_EQEFFECT INT_VAR opcode=288 target=1 timing=2 parameter1=thecategory parameter2=241 savingthrow=(theitemflags << 16) special=(6 + (thedamagetype << 24)) STR_VAR resource=~USEQTYPE~ END
+				END ELSE BEGIN
+					LPF ADD_ITEM_EQEFFECT INT_VAR opcode=288 target=1 timing=2 parameter1=thecategory parameter2=241 savingthrow=(theitemflags << 16) special=(5 + (thedamagetype << 24)) STR_VAR resource=~USEQTYPE~ END
+				END
+			END
+		END
+	END
+	UNLESS ~USEQTYPE~
+	BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING_REGEXP ~.*\.itm~ ~override~
+	isweapon = 0
+	READ_SHORT 0x68 thenumheaders
+	PATCH_IF thenumheaders > 0 BEGIN
+		offset = 0x82
+		FOR (i = 0; i < thenumheaders; ++i) BEGIN
+			READ_BYTE offset theheadertype
+			PATCH_IF theheadertype = 1 OR theheadertype = 2 BEGIN
+				isweapon = 1
+			END
+			offset += 0x38
+		END
+		PATCH_IF isweapon = 1 BEGIN
+			LPF ADD_ITEM_EQEFFECT INT_VAR opcode=434 target=1 timing=2 parameter1=1 STR_VAR resource=~USREPERM~ END
+		END
+	END
+	UNLESS ~USREPERM~
+	BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING_REGEXP ~.*\.itm~ ~override~
+	isweapon = 0
+	READ_SHORT 0x68 thenumheaders
+	PATCH_IF thenumheaders > 0 BEGIN
+		offset = 0x82
+		FOR (i = 0; i < thenumheaders; ++i) BEGIN
+			READ_BYTE offset theheadertype
+			PATCH_IF theheadertype = 1 OR theheadertype = 2 BEGIN
+				isweapon = 1
+			END
+			offset += 0x38
+		END
+		PATCH_IF isweapon = 1 BEGIN
+			LPF ADD_ITEM_EQEFFECT INT_VAR opcode=287 target=1 timing=2 STR_VAR resource=~USNONSNA~ END
+		END
+	END
+	UNLESS ~USNONSNA~
 	BUT_ONLY_IF_IT_CHANGES

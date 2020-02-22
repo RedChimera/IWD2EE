@@ -72,7 +72,7 @@ Prerequisite: 8 Levels of Druid~
 @201    = ~Wild Shape: Blink Dog~
 @202    = ~WILD SHAPE, BLINK DOG:
 
-The druid gains the ability to turn into a blink dog. The blink dog form is not effective in combat, but the druid becomes under the effect of Blink (incoming attacks have a 50% to miss), and he or she gains the ability to teleport short distances at will. The distance the druid can teleport while in blink dog form increases based on level.
+The druid gains the ability to turn into a blink dog. The blink dog form is not effective in combat, but the druid becomes under the effect of Blink (incoming attacks have a 50% chance to miss), and he or she gains the ability to teleport short distances at will. The distance the druid can teleport while in blink dog form increases based on level.
 
 Prerequisite: 5 Levels of Druid~
 @203    = ~Wild Shape: Rhinoceros Beetle~
@@ -86,10 +86,226 @@ Prerequisite: 8 Levels of Druid~
 @207    = ~Salamander Spear~
 @208    = ~Frost Salamander Spear~
 @209    = ~Winter Wolf Breath~
+
+@301    = ~Concoct Potions~
+@302    = ~CONCOCT POTIONS:
+
+You have learned the art of crafting potions.  As you wander the world of Faerun you constantly scavenge for substances to fuel your research.
+
+Prerequisite: Alchemy 10 or greater
+
+Benefit: You gain the Concoct Potions ability, which allows you to spend resources creating potions. For every 2 points of Alchemy above 10, you are able to create a broader variety of potions, and the cost of each potion is reduced by 5%.~
+@303    = ~Defensive Stance~
+@304    = ~DEFENSIVE STANCE:
+
+You know how to take a defensive stance, focusing on blocking incoming attacks.
+
+Prerequisite: Base attack bonus +2 or higher
+
+Benefit: While you are using the Guard action, you gain a +4 generic armor bonus.~
+@305    = ~Extend Spell~
+@306    = ~METAMAGIC, EXTEND SPELL:
+
+You may lengthen the duration of your low-level spells.
+
+Prerequisites: You must be able to cast spells of a certain level to take points in this feat:
+1 point: 3rd-level spells
+2 points: 5th-level spells
+3 points: 7th-level spells
+4 points: 9th-level spells
+
+Benefit: When you cast a spell of 2nd-level or lower, its duration is doubled.
+
+This feat may be taken up to four times. Each time, you become able to extend a spell up to 2 levels higher:
+2 points: up to 4th-level spells
+3 points: up to 6th-level spells
+4 points: up to 8th-level spells~
+@307    = ~Improved Sneak Attack~
+@308    = ~IMPROVED SNEAK ATTACK:
+
+Your sneak attacks are especially deadly.
+
+Prerequisite: 1 level of rogue
+
+Benefit: Your sneak attacks deal an additional 1d6 damage. This feat may be taken up to five times.~
+@309    = ~Improved Two-Weapon Fighting~
+@310    = ~IMPROVED TWO-WEAPON FIGHTING:
+
+You are an expert at fighting with two weapons. You can attack even more quickly with them.
+
+Prerequisite: Base attack bonus +16 or higher, must have Ambidexterity and Two-Weapon Fighting or be a ranger
+
+Benefit: While wielding two weapons, with each hit you have a 20% chance to immediately make another attack.
+
+Special: Rangers do not need the Ambidexterity and Two-Weapon Fighting feats to gain this feat. However, if a ranger does not have those two feats, they cannot use Improved Two-Weapon Fighting unless they wear light or no armor.~
+@311    = ~Improved Unarmed Abilities~
+@312    = ~IMPROVED UNARMED ABILITIES:
+
+Your unarmed abilities are particularly effective.
+
+Prerequisite: Stunning Attack
+
+Benefit: The Stunning Attack and Quivering Palm abilities gain +2 DC. This feat may be taken up to five times.~
+@313    = ~Kensei~
+@314    = ~KENSEI:
+
+You have been trained in the way of the kensei, or "sword-saint." You specialize in fighting without armor.
+
+Prerequisite: 1 level of fighter
+
+Benefit: You gain +1 to attack and damage per 3 fighter levels (minimum of +1) and a +2 generic AC bonus. These bonuses only function when you are not wearing armor (robes are acceptable) and are wielding one or more melee weapons (excluding unarmed attacks and most shapeshifted attacks) without a shield.
+
+Special: You may only take this feat as a 1st-level character.~
+@315    = ~Knockdown~
+@316    = ~KNOCKDOWN:
+
+You are trained to knock down or trip enemies in melee combat.
+
+Prerequisite: Base attack bonus +5 or higher
+
+Benefit: You gain an ability that lets you knock down or trip an adjacent creature. The ability can be used once per round. If your Dexterity is higher than your Strength, you attempt to trip the target, which must make a Reflex save (DC 10 + half your level + your Dexterity modifier) or fall down for 4 seconds. Otherwise, you try to knock down your target, which must make a Fortitude save (DC 10 + half your level + your Strength modifier) or fall down for 4 seconds. A creature gains a +4 bonus to the save for each time someone has tried to knock down or trip them in the past 10 rounds. Especially large creatures cannot be knocked down or tripped.
+
+This feat may be taken twice. When taken a second time, the feat is Improved Knockdown, which allows you to knock down or trip even large creatures, and adds a +2 bonus to the DC.~
+@317    = ~Light Armor Mastery~
+@318    = ~LIGHT ARMOR MASTERY:
+
+You are experienced enough at wearing light armor that for you it is no more restrictive than clothing.
+
+Prerequisites: Dex 17+, Proficiency with light armor
+
+Benefit: While wearing light armor, you suffer no armor check penalty or max Dexterity bonus.~
+@319    = ~Master of Magic Force~
+@320    = ~MASTER OF MAGIC FORCE:
+
+Your mastery of force magic has yielded impressive results.
+
+Prerequisites: You must be able to cast 4th level spells and have a Spellcraft of 10 or higher.
+
+Benefit: Grants 5 Magic Damage Resistance (permanent), and a +20% increase to all Magic Damage done.~
+@321    = ~Maximize Spell~
+@322    = ~METAMAGIC, MAXIMIZE SPELL:
+
+You may cast low-level spells at their maximum power.
+
+Prerequisites: You must be able to cast spells of a certain level to take points in this feat:
+1 point: 7th-level spells
+2 points: 8th-level spells
+3 points: 9th-level spells
+
+Benefit: Your 1st-level spells deal the maximum possible damage or heal the maximum possible number of hit points.
+
+This feat may be taken up to three times. Each time, you become able to maximize a spell one level higher:
+2 points: up to 2nd-level spells
+3 points: up to 3rd-level spells~
+@323    = ~Mobility~
+@324    = ~MOBILITY:
+
+You can dodge attacks particularly well while moving.
+
+Prerequisites: Dex 13+, Dodge
+
+Benefit: While moving, you gain a +2 Armor Class bonus.~
+@325    = ~Quicken Spell~
+@326    = ~METAMAGIC, QUICKEN SPELL:
+
+You may quickly cast a low-level spell before casting another spell.
+
+Prerequisites: You must be able to cast spells of a certain level to take points in this feat:
+1 point: 5th-level spells
+2 points: 6th-level spells
+3 points: 7th-level spells
+4 points: 8th-level spells
+5 points: 9th-level spells
+
+Benefit: After you cast a 1st-level spell, you may begin casting another spell without waiting for the round to end. You may only cast one quickened spell per round.
+
+This feat may be taken up to five times. Each time, you become able to quicken a spell one level higher:
+2 points: up to 2nd-level spells
+3 points: up to 3rd-level spells
+4 points: up to 4th-level spells
+5 points: up to 5th-level spells~
+@327    = ~Rapid Reload~
+@328    = ~RAPID RELOAD:
+
+You are especially quick with crossbows. You can reload a crossbow faster.
+
+Prerequisites: Base attack bonus +11 or higher, Weapon Focus in crossbows
+
+Benefit: Crossbows which would normally restrict you to one attack per round instead restrict you to two attacks per round. Rapid Reload has no effect on crossbows that already allow more than one attack per round.~
+@329    = ~Safe Spell~
+@330    = ~METAMAGIC, SAFE SPELL:
+
+You may shape the area of effect of your low-level spells to avoid harming allies.
+
+Prerequisites: You must be able to cast spells of a certain level to take points in this feat:
+1 point: 3rd-level spells
+2 points: 5th-level spells
+3 points: 7th-level spells
+4 points: 9th-level spells
+
+Benefit: When you cast an area of effect spell of 2nd-level or lower that normally could harm allies, such as Web or Agannazar's Scorcher, it will leave allies unharmed.
+
+This feat may be taken up to four times. Each time, you become able to safen a spell up to 2 levels higher:
+2 points: up to 4th-level spells
+3 points: up to 6th-level spells
+4 points: up to 8th-level spells~
+@331    = ~Shield Focus~
+@332    = ~SHIELD FOCUS:
+
+You are especially skilled at using shields.
+
+Prerequisites: Shield Proficiency; gaining a second rank requires 4 or more levels of Fighter
+
+Benefit: You gain a +2 AC bonus while using a shield. Two ranks in this feat is Shield Specialization, which grants an additional +2 AC bonus.~
+@333    = ~Spring Attack~
+@334    = ~SPRING ATTACK:
+
+You excel at moving while fighting.
+
+Prerequisites: Dex 13+, Dodge, Mobility, Base attack bonus +4 or higher
+
+Benefit: Whenever you hit a creature with a melee attack, you move 50% quicker for 1 second.~
+@335    = ~Terrifying Rage~
+@336    = ~TERRIFYING RAGE:
+
+Your barbarian rage is terrifying to behold.
+
+Prerequisites: Greater Rage, Intimidate 18 or higher
+
+Benefit: While you are raging, enemies within 6 feet of you must make a Will save (DC 3 + your Intimidate skill) or run away for 3 rounds.~
+@337    = ~Two-Weapon Defense~
+@338    = ~TWO-WEAPON DEFENSE:
+
+You are skilled at parrying attacks while wielding two weapons.
+
+Prerequisites: Two-Weapon Fighting or 1 level of ranger
+
+Benefit: While wielding two weapons, you gain a +1 Armor Class bonus. Taking this feat a second time increases the bonus to +2.
+
+Special: Rangers do not need Two-Weapon Fighting to gain this feat. However, if a ranger does not have the Two-Weapon Fighting feat, they do not gain the benefits of Two-Weapon Defense while wearing medium or heavy armor.~
+@339    = ~Augment Summoning~
+@340    = ~AUGMENT SUMMONING:
+
+Your summoned creatures are more powerful than normal.
+
+Prerequisites: Spell Focus, Conjuration
+
+Benefit: Creatures you summon gain +4 Strength and Constitution. These bonuses stack with temporary bonuses to Strength and Constitution.~
+@341    = ~Feint~
+@342    = ~FEINT:
+
+In melee combat, you are skilled at using trickery to gain the upper hand against opponents.
+
+Prerequisites: Bluff 4 or greater
+
+Benefit: You gain an ability that lets you feint an adjacent creature. The ability can be used once per round. The target must make a Will save (DC 10 + your Bluff skill). On a failure, for 4 seconds, the target loses its Dexterity bonus to AC, and it gains additional penalties to Armor Class and attack rolls equal to one third of your Bluff skill, rounded down. A creature gains a +4 bonus to the save for each time someone has tried to feint them in the past 10 rounds.
+
+This feat may be taken twice. When taken a second time, the feat is Improved Feint, which lets you feint as a free action once per round. After you feint for the first time in a round, you may use another ability or cast a spell before the round is over. Improved Feint also adds +2 to the save DC.~
+
 @524    = ~Barbarian~
 @525    = ~BARBARIAN: 
 
-From the frozen wastes of the north and the hellish jungles of the south come brave, even reckless, warriors.  While not as disciplined or as skilled as a normal fighter, the barbarian can willingly throw himself into a berserker rage, becoming a tougher and stronger opponent.  
+From the frozen wastes of the north and the hellish jungles of the south come brave, even reckless, warriors.  While not as disciplined or as skilled as a normal fighter, the barbarian can willingly throw himself into a berserker rage, becoming a tougher and stronger opponent.
 
 Hit points per level: 1-12
 
@@ -110,7 +326,7 @@ Disadvantages:
 * Barbarians gain feats at a slower rate than fighters.
 * Barbarians do not start with proficiency in heavy armor.~
 @526    = ~Bard~
-@527    = ~BARD: 
+@527    = ~BARD:
 
 The bard's strength is his pleasant and charming personality. With it and his wits he makes his way through the world. A bard is a talented musician and a walking storehouse of gossip, tall tales, and lore. He learns a little bit about everything that crosses his path; he is a jack-of-all-trades but master of none. While many bards are scoundrels, their stories and songs are welcome almost everywhere.
 
@@ -118,8 +334,8 @@ Hit Points per Level: 1-6
 
 Advantages:
 * Proficient with all simple weapons, light armor, medium armor, and shields.  The bard is also proficient with large swords.
-* +1 to Alchemy, Knowledge (Arcana) and Spellcraft
-* Armored Arcana
+* Gains one point in Armored Arcana.
+* +1 to Alchemy, Knowledge (Arcana) and Spellcraft.
 * 2nd level: Spellcasting.  Bards gain the ability to cast minor wizard spells.  Wearing a suit of armor imposes a chance of spell failure.
 * Many rogue like skills are class skills of the Bard.
 * Bard Songs.  Bards have the ability to sing melodies that have magical effects on creatures within thirty feet.  As they advance in level, they gain additional songs.  The songs are described in detail below.
@@ -242,7 +458,7 @@ Level 21-30: 1d8+5
 * 3rd level: Still Mind. The monk gains a +2 bonus to saving throws against spells and effects from the Enchantment school.  Unarmored movement speed increases.
 * 5th level: Purity of Body. The monk gains control over his body's immune system. He gains immunity to all diseases.
 * 6th level: Unarmored movement speed increases.
-* 7th level: Wholeness of Body.  The monk can cure up to twice his current level in hit points once each day.
+* 7th level: Wholeness of Body.  The monk can regain hit points equal to their monk level times their Wisdom modifier once each day.
 * 9th level: Improved Evasion.  The monk gains the Improved Evasion feat that is normally only available to rogues.
 * 10th level: Unarmored movement speed increases.
 * 10th level: Abundant Step.  The monk may teleport to any location in sight once per day.
@@ -252,7 +468,7 @@ Level 21-30: 1d8+5
 * 15th level: Quivering Palm. This terrifying attack allows the monk to set up vibrations within the body of another creature that can be fatal.  The monk can use the quivering palm attack once per day. Constructs and undead cannot be affected. The monk must be of higher level than the target (or have more levels than the target's number of Hit Dice). The next time the monk hits a creature with an unarmed attack, the target dies unless it makes a Fortitude saving throw (DC 10 + one-half the monk's level + Wisdom modifier). Unarmored movement speed increases. The monk gains additional uses of Quivering Palm at levels 21 and 27.
 * 18th level: Unarmored movement speed increases.
 * 19th level: Empty Body. The monk can assume an ethereal state for  2 rounds a number of times a day equal to his level divided by 2.
-* 20th level: Perfect Self.  The monk has tuned his body with skill and quasi-magical abilities to the point that he becomes a magical creature. He is forevermore treated as an outsider (extraplanar creature) rather than as a humanoid. For instance, charm person does not affect him. Additionally, the monk gains damage reduction 20/+1. This means that the monk ignores (instantly regenerates) the first 20 points of damage from any attack unless the damage is dealt by a weapon with a +1 enhancement bonus (or better), by a spell, or by a form of energy (fire, cold, etc.). As an outsider, a 20th level monk is subject to spells that repel enchanted creatures, such as protection from law. 
+* 20th level: Perfect Self.  The monk has tuned his body with skill and quasi-magical abilities to the point that he becomes a magical creature. He is forevermore treated as an outsider (extraplanar creature) rather than as a humanoid. For instance, charm person does not affect him. Additionally, the monk gains damage reduction 20/+1. This means that the monk ignores (instantly regenerates) the first 20 points of damage from any attack unless the damage is dealt by a weapon with a +1 enhancement bonus (or better), by a spell, or by a form of energy (fire, cold, etc.). As an outsider, a 20th level monk is subject to spells that repel enchanted creatures, such as protection from law.
 
 Disadvantages:
 * Loses many bonuses if wearing armor and/or using weapons.~
@@ -296,7 +512,7 @@ Advantages:
 * Rangers may select a Favored Enemy at first level.  They gain +1 to damage against creatures of that race type.  Rangers gain an additional Favored Enemy every five levels, and the bonus against previous Favored Enemies increases by 1.
 * Rangers can fight with two weapons as if they had the feats Ambidexterity and Two-Weapon Fighting if they are wearing light or no armor only.
 * 4th level: Spellcasting.  Rangers gain the ability to cast spells.
-* Every 6 levels, rangers gain a use of the spell Set Natural Snare, which ensnares all targets for 5 rounds on a failed Reflex save. The save DC starts at 10 and increases by 1 for every level the ranger has achieved, up to a DC of 40 for a level 30 ranger.
+* Every 6 levels, rangers gain a use of the spell Set Natural Snare, which ensnares all targets for 5 rounds on a failed Reflex save. The save DC is 6 plus the ranger's Wilderness Lore skill.
 
 Disadvantages:
 * Rangers gain feats at a slower rate than fighters.
@@ -336,15 +552,16 @@ Ghostwise halflings are the feral, reclusive cousins of lightfoot and stronghear
 Favored Class: Barbarian
 
 Advantages:
-* +1 to Dexterity.
+* +2 to Dexterity.
 * +2 to Move Silently checks.
 * +1 to hit with thrown weapons.
 * +2 morale bonus on saving throws against fear.
-* May cast Set Natural Snare once per day, which ensnares all targets for 5 rounds on a failed Reflex save. The save DC starts at 10 and increases by 1 for every level the halfling has achieved, up to a DC of 40 for a level 30 halfling.
+* Gains 1.5 times their Strength bonus to damage with thrown weapons, as one would with two-handed weapons.
 
 Disadvantages:
-* -1 Strength.
+* -2 Intelligence.
 ~
+
 @544    = ~STORMLORD OF TALOS:
 
 Talos the Destroyer is the god of storms and destruction.  The bane of many rangers and druids, Talos works his evil through the use of his priests, the Stormlords.  Stormlords terrorize farming communities all across Faerun with threats of imminent doom if all do not appease the Destroyer.  They are known for their abusive terrorism and their foolhardy nature.
@@ -587,31 +804,48 @@ You may turn not just undead but also creatures from the Outer Planes.
 Prerequisite: 1 level of Cleric or 3 levels of Paladin
 
 Benefit: Spells and abilities you use that turn undead can also turn fiends and other creatures from the Outer Planes.~
+@699    = ~Envenom Weapon~
+@700    = ~ENVENOM WEAPON:
 
-@543    = ~GHOSTWISE HALFLING:
+You have learned the seldom taught skill of the poisoner. You are skilled at acquiring and using poison.
 
-Ghostwise halflings are the feral, reclusive cousins of lightfoot and strongheart halflings. They are found most often in the southern forests of the Realms living in small communities. Ghostwise halflings are rarely seen in large cities, but occasionally set out to explore the world for reasons known only to them. Visitors to ghostwise settlements often report that the halflings have kinship so tight with their fellows that they can communicate without speaking.
+Prerequisite: 1 level of rogue, Alchemy 8 or greater
 
-Favored Class: Barbarian
+Benefit: Once per day, you may coat your weapons in poison. For 5 rounds, each hit you make with any weapon (including missile weapons) will poison the target unless it makes a Fortitude save (DC 6 + your Alchemy skill). If poisoned, the target takes 12 poison damage over the next 6 seconds.~
+@701    = ~CRIPPLING STRIKE:
 
-Advantages:
-* +2 to Dexterity.
-* +2 to Move Silently checks.
-* +1 to hit with thrown weapons.
-* +2 morale bonus on saving throws against fear.
-* Gains 1.5 times their Strength bonus to damage with thrown weapons, as with two-handed weapons.
+When making a sneak attack, you are able to deal a devastating blow that weakens an enemy.
 
-Disadvantages:
-* -2 Intelligence.
-~
+Prerequisite: 10th level rogue
 
-@669    = ~Maximized Attacks:
+Benefit: Any time the character makes a successful sneak attack, the attack does its normal damage and also causes 1 point of temporary Strength damage per 3 levels of rogue. The Strength damage lasts 10 rounds.~
+@702    = ~ARTERIAL STRIKE:
 
-You have learned how to maximize the effect of your attacks at the cost of neglecting your defenses.
+Your skill with sneak attacks allows you to cause a bleeding wound.
 
-Prerequisites: 4 ranks in Concentration and Weapon Specialization in 2 weapons.
+Prerequisite: At least one level of rogue, base attack bonus +4 or higher.
 
-Benefit: All attacks do maximum damage for 1 round per level and the user receives a +4 bonus to hit and critical threat range, but a -4 penalty to AC.  Usable 1/day.~
+Benefit:  Allows the rogue to sacrifice 1d6 points of sneak attack damage to inflict a bleeding wound that causes deals an extra 10 damage over 10 rounds. For every six rogue levels past 1 (i.e. at levels 7, 13, 19, and 25), the rogue sacrifices another 1d6 points to deal another 10 damage over the 10 rounds.~
+@703    = ~Grapple~
+@704    = ~GRAPPLE:
+
+While anyone can grapple something, you have the skill to grapple even a hostile creature in the midst of combat.
+
+Benefit: You gain an ability that lets you grab an adjacent creature. The ability can be used once per round. The target must make a Reflex save (DC 12 + half your level + your Strength or Dexterity modifier (whichever is higher)) or be grappled by you for 2 rounds. While grappled, the creature gets a -4 attack penalty, a 50% chance of spell failure, and cannot move away from you. If you move, you may pull the creature along with you.
+
+To grapple, you must have at least one hand free. The target gains +4 to the save for each time someone has tried to grapple them in the past 10 rounds. If you grapple an ally or a paralyzed, stunned, sleeping, or knocked down creature, there is no save. Especially large creatures cannot be grappled.~
+@705    = ~ARMORED ARCANA:
+
+You are skilled at casting arcane spells while using certain armor and shields.
+
+Prerequisite: The ability to cast arcane spells.
+
+Benefit: Taking this feat allows you to cast arcane spells with light armor and/or a buckler or small shield equipped with no chance of spell failure. If you take this feat a second time, you gain no chance of spell failure from medium armor or large shields. If you take it a third time, you can cast arcane spells reliably with any armor or shield equipped.~
+@706    = ~IMPROVED INITIATIVE:
+
+You can react more quickly than normal in a fight.
+
+Benefit: The "speed factor" delay before you attack for the first time in a round is reduced by 4. The casting time of all your spells is reduced by 1.~
 
 @785    = ~Aasimar~
 @786    = ~AASIMAR:
@@ -953,25 +1187,25 @@ Disadvantages:
 @898    = ~Additional attack~
 @899    = ~Sneak Attack~
 @900    = ~Knocked Down~
-@901    = ~~
-@902    = ~~
-@903    = ~~
-@904    = ~~
-@905    = ~~
-@906    = ~~
-@907    = ~~
-@908    = ~~
-@909    = ~~
-@910    = ~~
-@911    = ~~
-@912    = ~~
-@913    = ~~
-@914    = ~~
-@915    = ~~
-@916    = ~~
-@917    = ~~
-@918    = ~~
-@919    = ~~
+@901    = ~Concoct Potions~
+@902    = ~Poison Weapon~
+@903    = ~Knockdown~
+@904    = ~Attempts Knockdown~
+@905    = ~Sneak Attack with Crippling Strike (-1 Str)~
+@906    = ~Sneak Attack with Crippling Strike (-2 Str)~
+@907    = ~Sneak Attack with Crippling Strike (-3 Str)~
+@908    = ~Sneak Attack with Crippling Strike (-4 Str)~
+@909    = ~Sneak Attack with Crippling Strike (-5 Str)~
+@910    = ~Sneak Attack with Crippling Strike (-6 Str)~
+@911    = ~Sneak Attack with Crippling Strike (-7 Str)~
+@912    = ~Sneak Attack with Crippling Strike (-8 Str)~
+@913    = ~Sneak Attack with Crippling Strike (-9 Str)~
+@914    = ~Sneak Attack with Crippling Strike (-10 Str)~
+@915    = ~Attempts Trip Attack~
+@916    = ~Attempts Grapple~
+@917    = ~You cannot grapple unless you have at least one hand free.~
+@918    = ~Feint~
+@919    = ~Grapple~
 @920    = ~~
 @921    = ~~
 @922    = ~~
@@ -1485,6 +1719,4 @@ STATISTICS:
 Vipergout for 6 rounds
 Weight: 1 lb.
 ~
-@4793     = ~Concoct Potions~
-@4794     = ~Poison Weapon~
 
