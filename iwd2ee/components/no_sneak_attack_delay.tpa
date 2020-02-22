@@ -1,6 +1,6 @@
 COPY_EXISTING ~IEex_WEIDU.lua~ ~override~
 	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_no_sneak_attack_delay.*~ ~ex_no_sneak_attack_delay = true~
-
+/*
 COPY_EXISTING_REGEXP ~.*\.itm~ ~override~
 	READ_SHORT 0x68 thenumheaders
 	PATCH_IF thenumheaders > 0 BEGIN
@@ -12,3 +12,4 @@ COPY_EXISTING_REGEXP ~.*\.itm~ ~override~
 	END
 	UNLESS ~USNOSAD~
 	BUT_ONLY_IF_IT_CHANGES
+*/

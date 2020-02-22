@@ -1,15 +1,13 @@
 BEGIN ~USSTLPP~
 
-IF WEIGHT #0 ~  NumTimesTalkedTo(0)
-~ THEN BEGIN 5
+IF WEIGHT #0 ~Global("Izbelah1_dead","GLOBAL",1)~ THEN BEGIN 5
   SAY ~It grieves my heart to see a valued friend turn on me so... I will turn my attention to the eruption. It may still be possible to save Dragon's Eye.~
-  IF ~~ EXIT
+  IF ~~ THEN GOTO 6
 END
 
-IF WEIGHT #0 ~  NumTimesTalkedToGT(0)
-~ THEN BEGIN 6
+IF ~~ THEN BEGIN 6
   SAY ~I know not who you are, but I suggest you leave this place. The Legion will not look kindly upon this incident. The entrance to the Fields of Slaughter lies just below the entrance to Dragon's Eye.~
-  IF ~~ EXIT
+  IF ~~ THEN DO ~SetGlobal("US_Pyros_End_Talk","GLOBAL",1)~ EXIT
 END
 
 IF ~~ THEN BEGIN 0

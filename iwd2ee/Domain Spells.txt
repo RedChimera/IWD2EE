@@ -1,0 +1,98 @@
+Bane:
+1: Bane, Command
+2: Horror, Silence
+3: Dire Charm, Rigid Thinking
+4: Cloak of Fear, Emotion: Despair
+5: Domination, Greater Command
+6: Feeblemind, Power Word: Silence
+7: Control Undead, Gate
+8: Enslave, Great Shout
+9: Mass Dominate, Power Word: Kill
+
+Helm:
+1: Armor of Faith, Protection from Evil
+2: Hold Person, Spell Shield
+3: Glyph of Warding, Protection from Arrows
+4: Death Ward, Defensive Harmony
+5: Banishment, Repulsion
+6: Circle of Blades, Globe of Invulnerability
+7: Impervious Sanctity of Mind, Mantle
+8: Elemental Barrier, Seven Eyes
+9: Aegis, Iron Body
+
+Ilmater:
+1: Minor Elemental Barrier, Ox's Fortitude
+2: Aid, Exaltation
+3: Cure Serious Wounds, Magic Circle Against Evil
+4: Emotion: Hope, Otiluke's Resilient Sphere
+5: Feeblemind, Greater Restoration
+6: Stoneskin, Trollish Fortitude
+7: Impervious Sanctity of Mind, Mist of Eldath
+8: Holy Aura, Iron Body
+9: Horrid Wilting, Mass Heal
+
+Lathander:
+1: Faerie Fire, Sunscorch
+2: Aganazzar's Scorcher, Halt Undead
+3: Negative Energy Protection, Restoration
+4: Holy Smite, Shield of Lathander
+5: Raise Dead, Sol's Searing Orb
+6: Greater Shield of Lathander, Heal
+7: Greater Restoration, Sunbeam
+8: Aura of Vitality, Resurrection
+9: Mass Heal, Meteor Swarm
+
+Mask:
+1: Cat's Grace, Sleep
+2: Blindness, Blur
+3: Invisibility Sphere, Mirror Image
+4: Blink, Improved Invisibility
+5: Lutzaen's Local Teleport, Shadow Conjuration
+6: Darts of Bone, Greater Shadow Conjuration
+7: Mass Haste, Shades
+8: Army of Images, Mass Invisibility
+9: Black Blade of Disaster, Perfect Invisibility
+
+Oghma:
+1: Identify, Identify Creature
+2: Find Traps, Remove Magic
+3: Dispel Magic, True Seeing
+4: Malison, Shout
+5: Power Word: Heal, Power Word: Silence
+6: Power Word: Stun, Symbol of Fear
+7: Great Shout, Symbol of Hopelessness
+8: Power Word: Kill, Symbol of Death
+9: Executioner's Eyes, Wail of the Banshee
+
+Selune:
+1: Faerie Fire, Moon Motes
+2: Moonblade, Otiluke's Resilient Sphere
+3: Summon Cow, Wall of Moonlight
+4: Emotion: Rage, Ghost Armor
+5: Protection from Magic Energy, Suffocate
+6: Antimagic Field, Divine Shell
+7: Lutzaen's Local Teleport, Planar Binding: Air Elemental
+8: Improved Alacrity, Planar Ally: Fire Elemental
+9: Elemental Legion, Prismatic Spray
+
+Talos:
+1: Doom, Shocking Grasp
+2: Gedlee's Electric Loop, Storm Shell
+3: Call Lightning, Lightning Bolt
+4: Protection from Electricity, Static Charge
+5: Ball Lightning, Chain Lightning
+6: Acid Storm, Whirlwind
+7: Destruction, Fire Storm
+8: Earthquake, Horrid Wilting
+9: Living Lightning, Meteor Swarm
+
+Tempus:
+1: Magic Stone, True Strike
+2: Chant, Draw Upon Holy Might
+3: Animate Zombie, Prayer
+4: Emotion: Rage, Recitation
+5: Champion's Strength, Chaotic Commands
+6: Circle of Blades, Spiritual Wrath
+7: Mordenkainen's Sword, Tenser's Transformation
+8: Aura of Vitality, Iron Body
+9: Black Blade of Disaster, Executioner's Eyes

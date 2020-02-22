@@ -156,6 +156,36 @@ COPY ~%mod_folder%/tables/WSPECIAL.2da~ ~override~
 COPY_EXISTING ~IEex_WEIDU.lua~ ~override~
 	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_proficiency_damage *=.*~ ~ex_proficiency_damage = {[0] = 0, [1] = 0, [2] = 2, [3] = 5}~
 
+COPY_EXISTING ~IEex_TRA.lua~ ~override~
+	ex_tra_904 = RESOLVE_STR_REF(@904)
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_tra_904 *=.*~ ~ex_tra_904 = %ex_tra_904%~
+	ex_tra_905 = RESOLVE_STR_REF(@905)
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_tra_905 *=.*~ ~ex_tra_905 = %ex_tra_905%~
+	ex_tra_906 = RESOLVE_STR_REF(@906)
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_tra_906 *=.*~ ~ex_tra_906 = %ex_tra_906%~
+	ex_tra_907 = RESOLVE_STR_REF(@907)
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_tra_907 *=.*~ ~ex_tra_907 = %ex_tra_907%~
+	ex_tra_908 = RESOLVE_STR_REF(@908)
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_tra_908 *=.*~ ~ex_tra_908 = %ex_tra_908%~
+	ex_tra_909 = RESOLVE_STR_REF(@909)
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_tra_909 *=.*~ ~ex_tra_909 = %ex_tra_909%~
+	ex_tra_910 = RESOLVE_STR_REF(@910)
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_tra_910 *=.*~ ~ex_tra_910 = %ex_tra_910%~
+	ex_tra_911 = RESOLVE_STR_REF(@911)
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_tra_911 *=.*~ ~ex_tra_911 = %ex_tra_911%~
+	ex_tra_912 = RESOLVE_STR_REF(@912)
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_tra_912 *=.*~ ~ex_tra_912 = %ex_tra_912%~
+	ex_tra_913 = RESOLVE_STR_REF(@913)
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_tra_913 *=.*~ ~ex_tra_913 = %ex_tra_913%~
+	ex_tra_914 = RESOLVE_STR_REF(@914)
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_tra_914 *=.*~ ~ex_tra_914 = %ex_tra_914%~
+	ex_tra_915 = RESOLVE_STR_REF(@915)
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_tra_915 *=.*~ ~ex_tra_915 = %ex_tra_915%~
+	ex_tra_916 = RESOLVE_STR_REF(@916)
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_tra_916 *=.*~ ~ex_tra_916 = %ex_tra_916%~
+	ex_tra_917 = RESOLVE_STR_REF(@917)
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_tra_917 *=.*~ ~ex_tra_917 = %ex_tra_917%~
+
 COPY ~%mod_folder%/tables/MONCRATE.2da~ ~override~
 COPY ~%mod_folder%/tables/XPLEVEL.2da~ ~override~
 
@@ -188,310 +218,15 @@ STRING_SET 27114 @896
 
 // patch wyverns, spiders, beetles, chimeras, yetis, and remorhazes to be animals so they're subject to Animal Empathy
 
-COPY_EXISTING ~00SBSC.cre~ ~override~
-        WRITE_BYTE 0x385 2
-BUT_ONLY_IF_IT_CHANGES
-COPY_EXISTING ~00SBTL11.cre~ ~override~
-        WRITE_BYTE 0x385 2
-BUT_ONLY_IF_IT_CHANGES
-COPY_EXISTING ~00SBTL13.cre~ ~override~
-        WRITE_BYTE 0x385 2
-BUT_ONLY_IF_IT_CHANGES
-COPY_EXISTING ~00SBTL15.cre~ ~override~
-        WRITE_BYTE 0x385 2
-BUT_ONLY_IF_IT_CHANGES
-COPY_EXISTING ~00SBTL7.cre~ ~override~
-        WRITE_BYTE 0x385 2
-BUT_ONLY_IF_IT_CHANGES
-COPY_EXISTING ~00SBTL9.cre~ ~override~
-        WRITE_BYTE 0x385 2
-BUT_ONLY_IF_IT_CHANGES
-COPY_EXISTING ~00SCCR.cre~ ~override~
-        WRITE_BYTE 0x385 2
-BUT_ONLY_IF_IT_CHANGES
-COPY_EXISTING ~00SCRD.cre~ ~override~
-        WRITE_BYTE 0x385 2
-BUT_ONLY_IF_IT_CHANGES
-COPY_EXISTING ~00SDREM.cre~ ~override~
-        WRITE_BYTE 0x385 2
-BUT_ONLY_IF_IT_CHANGES
-COPY_EXISTING ~00SDUHK.cre~ ~override~
-        WRITE_BYTE 0x385 2
-BUT_ONLY_IF_IT_CHANGES
-COPY_EXISTING ~00SDYET.cre~ ~override~
-        WRITE_BYTE 0x385 2
-BUT_ONLY_IF_IT_CHANGES
-COPY_EXISTING ~00SGSPI.cre~ ~override~
-        WRITE_BYTE 0x385 2
-BUT_ONLY_IF_IT_CHANGES
-COPY_EXISTING ~00SHKH.cre~ ~override~
-        WRITE_BYTE 0x385 2
-BUT_ONLY_IF_IT_CHANGES
-COPY_EXISTING ~00SOTY.cre~ ~override~
-        WRITE_BYTE 0x385 2
-BUT_ONLY_IF_IT_CHANGES
-COPY_EXISTING ~00SPSPI.cre~ ~override~
-        WRITE_BYTE 0x385 2
-BUT_ONLY_IF_IT_CHANGES
-COPY_EXISTING ~00SREM.cre~ ~override~
-        WRITE_BYTE 0x385 2
-BUT_ONLY_IF_IT_CHANGES
-COPY_EXISTING ~00SRMYC.cre~ ~override~
-        WRITE_BYTE 0x385 2
-BUT_ONLY_IF_IT_CHANGES
-COPY_EXISTING ~00SS2304.cre~ ~override~
-        WRITE_BYTE 0x385 2
-BUT_ONLY_IF_IT_CHANGES
-COPY_EXISTING ~00SSHREM.cre~ ~override~
-        WRITE_BYTE 0x385 2
-BUT_ONLY_IF_IT_CHANGES
-COPY_EXISTING ~00SSHUHK.cre~ ~override~
-        WRITE_BYTE 0x385 2
-BUT_ONLY_IF_IT_CHANGES
-COPY_EXISTING ~00SSHYET.cre~ ~override~
-        WRITE_BYTE 0x385 2
-BUT_ONLY_IF_IT_CHANGES
-COPY_EXISTING ~00SSREM.cre~ ~override~
-        WRITE_BYTE 0x385 2
-BUT_ONLY_IF_IT_CHANGES
-COPY_EXISTING ~00SSSPI.cre~ ~override~
-        WRITE_BYTE 0x385 2
-BUT_ONLY_IF_IT_CHANGES
-COPY_EXISTING ~00SSUHK.cre~ ~override~
-        WRITE_BYTE 0x385 2
-BUT_ONLY_IF_IT_CHANGES
-COPY_EXISTING ~00SSYET.cre~ ~override~
-        WRITE_BYTE 0x385 2
-BUT_ONLY_IF_IT_CHANGES
-COPY_EXISTING ~00SUHK.cre~ ~override~
-        WRITE_BYTE 0x385 2
-BUT_ONLY_IF_IT_CHANGES
-COPY_EXISTING ~00SWYV.cre~ ~override~
-        WRITE_BYTE 0x385 2
-BUT_ONLY_IF_IT_CHANGES
-COPY_EXISTING ~00SYETI.cre~ ~override~
-        WRITE_BYTE 0x385 2
-BUT_ONLY_IF_IT_CHANGES
-COPY_EXISTING ~20CARCWL.cre~ ~override~
-        WRITE_BYTE 0x385 2
-BUT_ONLY_IF_IT_CHANGES
-COPY_EXISTING ~21SPDQN.cre~ ~override~
-        WRITE_BYTE 0x385 2
-BUT_ONLY_IF_IT_CHANGES
-COPY_EXISTING ~21SPDSML.cre~ ~override~
-        WRITE_BYTE 0x385 2
-BUT_ONLY_IF_IT_CHANGES
-COPY_EXISTING ~30OTY.cre~ ~override~
-        WRITE_BYTE 0x385 2
-BUT_ONLY_IF_IT_CHANGES
-COPY_EXISTING ~30SPIWO.cre~ ~override~
-        WRITE_BYTE 0x385 2
-BUT_ONLY_IF_IT_CHANGES
-COPY_EXISTING ~30SPIWOD.cre~ ~override~
-        WRITE_BYTE 0x385 2
-BUT_ONLY_IF_IT_CHANGES
-COPY_EXISTING ~30SPIWOQ.cre~ ~override~
-        WRITE_BYTE 0x385 2
-BUT_ONLY_IF_IT_CHANGES
-COPY_EXISTING ~30WOLWOS.cre~ ~override~
-        WRITE_BYTE 0x385 2
-BUT_ONLY_IF_IT_CHANGES
-COPY_EXISTING ~40RYETIT.cre~ ~override~
-        WRITE_BYTE 0x385 2
-BUT_ONLY_IF_IT_CHANGES
-COPY_EXISTING ~40SPIFR.cre~ ~override~
-        WRITE_BYTE 0x385 2
-BUT_ONLY_IF_IT_CHANGES
-COPY_EXISTING ~40SPIFRH.cre~ ~override~
-        WRITE_BYTE 0x385 2
-BUT_ONLY_IF_IT_CHANGES
-COPY_EXISTING ~40YETITU.cre~ ~override~
-        WRITE_BYTE 0x385 2
-BUT_ONLY_IF_IT_CHANGES
-COPY_EXISTING ~41REMHZA.cre~ ~override~
-        WRITE_BYTE 0x385 2
-BUT_ONLY_IF_IT_CHANGES
-COPY_EXISTING ~41REMHZQ.cre~ ~override~
-        WRITE_BYTE 0x385 2
-BUT_ONLY_IF_IT_CHANGES
-COPY_EXISTING ~41REMHZR.cre~ ~override~
-        WRITE_BYTE 0x385 2
-BUT_ONLY_IF_IT_CHANGES
-COPY_EXISTING ~41REMHZZ.cre~ ~override~
-        WRITE_BYTE 0x385 2
-BUT_ONLY_IF_IT_CHANGES
-COPY_EXISTING ~41SBSC.cre~ ~override~
-        WRITE_BYTE 0x385 2
-BUT_ONLY_IF_IT_CHANGES
-COPY_EXISTING ~41SBTL11.cre~ ~override~
-        WRITE_BYTE 0x385 2
-BUT_ONLY_IF_IT_CHANGES
-COPY_EXISTING ~41SBTL15.cre~ ~override~
-        WRITE_BYTE 0x385 2
-BUT_ONLY_IF_IT_CHANGES
-COPY_EXISTING ~41SBTL9.cre~ ~override~
-        WRITE_BYTE 0x385 2
-BUT_ONLY_IF_IT_CHANGES
-COPY_EXISTING ~41SCCR.cre~ ~override~
-        WRITE_BYTE 0x385 2
-BUT_ONLY_IF_IT_CHANGES
-COPY_EXISTING ~41SCRD.cre~ ~override~
-        WRITE_BYTE 0x385 2
-BUT_ONLY_IF_IT_CHANGES
-COPY_EXISTING ~41SDREM.cre~ ~override~
-        WRITE_BYTE 0x385 2
-BUT_ONLY_IF_IT_CHANGES
-COPY_EXISTING ~41SDUHK.cre~ ~override~
-        WRITE_BYTE 0x385 2
-BUT_ONLY_IF_IT_CHANGES
-COPY_EXISTING ~41SDYET.cre~ ~override~
-        WRITE_BYTE 0x385 2
-BUT_ONLY_IF_IT_CHANGES
-COPY_EXISTING ~41SGSPI.cre~ ~override~
-        WRITE_BYTE 0x385 2
-BUT_ONLY_IF_IT_CHANGES
-COPY_EXISTING ~41SOTY.cre~ ~override~
-        WRITE_BYTE 0x385 2
-BUT_ONLY_IF_IT_CHANGES
-COPY_EXISTING ~41SPSPI.cre~ ~override~
-        WRITE_BYTE 0x385 2
-BUT_ONLY_IF_IT_CHANGES
-COPY_EXISTING ~41SREM.cre~ ~override~
-        WRITE_BYTE 0x385 2
-BUT_ONLY_IF_IT_CHANGES
-COPY_EXISTING ~41SSHREM.cre~ ~override~
-        WRITE_BYTE 0x385 2
-BUT_ONLY_IF_IT_CHANGES
-COPY_EXISTING ~41SSREM.cre~ ~override~
-        WRITE_BYTE 0x385 2
-BUT_ONLY_IF_IT_CHANGES
-COPY_EXISTING ~41SSSPI.cre~ ~override~
-        WRITE_BYTE 0x385 2
-BUT_ONLY_IF_IT_CHANGES
-COPY_EXISTING ~41SSUHK.cre~ ~override~
-        WRITE_BYTE 0x385 2
-BUT_ONLY_IF_IT_CHANGES
-COPY_EXISTING ~41SWYV.cre~ ~override~
-        WRITE_BYTE 0x385 2
-BUT_ONLY_IF_IT_CHANGES
-COPY_EXISTING ~41WYVERN.cre~ ~override~
-        WRITE_BYTE 0x385 2
-BUT_ONLY_IF_IT_CHANGES
-COPY_EXISTING ~50ABOMIN.cre~ ~override~
-        WRITE_BYTE 0x385 2
-BUT_ONLY_IF_IT_CHANGES
-COPY_EXISTING ~50ETR.cre~ ~override~
-        WRITE_BYTE 0x385 2
-BUT_ONLY_IF_IT_CHANGES
-COPY_EXISTING ~50SPIFH.cre~ ~override~
-        WRITE_BYTE 0x385 2
-BUT_ONLY_IF_IT_CHANGES
-COPY_EXISTING ~50SPIFH2.cre~ ~override~
-        WRITE_BYTE 0x385 2
-BUT_ONLY_IF_IT_CHANGES
-COPY_EXISTING ~50SPIFR.cre~ ~override~
-        WRITE_BYTE 0x385 2
-BUT_ONLY_IF_IT_CHANGES
-COPY_EXISTING ~50SPIFR2.cre~ ~override~
-        WRITE_BYTE 0x385 2
-BUT_ONLY_IF_IT_CHANGES
-COPY_EXISTING ~50SPIFRR.cre~ ~override~
-        WRITE_BYTE 0x385 2
-BUT_ONLY_IF_IT_CHANGES
-COPY_EXISTING ~50WYV.cre~ ~override~
-        WRITE_BYTE 0x385 2
-BUT_ONLY_IF_IT_CHANGES
-COPY_EXISTING ~50WYVH.cre~ ~override~
-        WRITE_BYTE 0x385 2
-BUT_ONLY_IF_IT_CHANGES
-COPY_EXISTING ~50WYVR.cre~ ~override~
-        WRITE_BYTE 0x385 2
-BUT_ONLY_IF_IT_CHANGES
-COPY_EXISTING ~51UMB.cre~ ~override~
-        WRITE_BYTE 0x385 2
-BUT_ONLY_IF_IT_CHANGES
-COPY_EXISTING ~51UMBR.cre~ ~override~
-        WRITE_BYTE 0x385 2
-BUT_ONLY_IF_IT_CHANGES
-COPY_EXISTING ~52SPIPW.cre~ ~override~
-        WRITE_BYTE 0x385 2
-BUT_ONLY_IF_IT_CHANGES
-COPY_EXISTING ~52SPIPWR.cre~ ~override~
-        WRITE_BYTE 0x385 2
-BUT_ONLY_IF_IT_CHANGES
-COPY_EXISTING ~52YETGH.cre~ ~override~
-        WRITE_BYTE 0x385 2
-BUT_ONLY_IF_IT_CHANGES
-COPY_EXISTING ~52YETTG.cre~ ~override~
-        WRITE_BYTE 0x385 2
-BUT_ONLY_IF_IT_CHANGES
-COPY_EXISTING ~52YETTGR.cre~ ~override~
-        WRITE_BYTE 0x385 2
-BUT_ONLY_IF_IT_CHANGES
-COPY_EXISTING ~52YETTU.cre~ ~override~
-        WRITE_BYTE 0x385 2
-BUT_ONLY_IF_IT_CHANGES
-COPY_EXISTING ~52YETTUR.cre~ ~override~
-        WRITE_BYTE 0x385 2
-BUT_ONLY_IF_IT_CHANGES
-COPY_EXISTING ~52YETUH.cre~ ~override~
-        WRITE_BYTE 0x385 2
-BUT_ONLY_IF_IT_CHANGES
-COPY_EXISTING ~53BLUMYC.cre~ ~override~
-        WRITE_BYTE 0x385 2
-BUT_ONLY_IF_IT_CHANGES
-COPY_EXISTING ~53MYCBLH.cre~ ~override~
-        WRITE_BYTE 0x385 2
-BUT_ONLY_IF_IT_CHANGES
-COPY_EXISTING ~53MYCREH.cre~ ~override~
-        WRITE_BYTE 0x385 2
-BUT_ONLY_IF_IT_CHANGES
-COPY_EXISTING ~53REDMYC.cre~ ~override~
-        WRITE_BYTE 0x385 2
-BUT_ONLY_IF_IT_CHANGES
-COPY_EXISTING ~53RNDMYC.cre~ ~override~
-        WRITE_BYTE 0x385 2
-BUT_ONLY_IF_IT_CHANGES
-COPY_EXISTING ~53SPIGIN.cre~ ~override~
-        WRITE_BYTE 0x385 2
-BUT_ONLY_IF_IT_CHANGES
-COPY_EXISTING ~53SPISW.cre~ ~override~
-        WRITE_BYTE 0x385 2
-BUT_ONLY_IF_IT_CHANGES
-COPY_EXISTING ~53SPISWH.cre~ ~override~
-        WRITE_BYTE 0x385 2
-BUT_ONLY_IF_IT_CHANGES
-COPY_EXISTING ~61DAWYVE.cre~ ~override~
-        WRITE_BYTE 0x385 2
-BUT_ONLY_IF_IT_CHANGES
-COPY_EXISTING ~61SPIGIA.cre~ ~override~
-        WRITE_BYTE 0x385 2
-BUT_ONLY_IF_IT_CHANGES
-COPY_EXISTING ~61SPISWD.cre~ ~override~
-        WRITE_BYTE 0x385 2
-BUT_ONLY_IF_IT_CHANGES
-COPY_EXISTING ~61WYVERN.cre~ ~override~
-        WRITE_BYTE 0x385 2
-BUT_ONLY_IF_IT_CHANGES
-COPY_EXISTING ~61WYVERR.cre~ ~override~
-        WRITE_BYTE 0x385 2
-BUT_ONLY_IF_IT_CHANGES
-COPY_EXISTING ~63PREC.cre~ ~override~
-        WRITE_BYTE 0x385 2
-BUT_ONLY_IF_IT_CHANGES
-COPY_EXISTING ~66CHIM.cre~ ~override~
-        WRITE_BYTE 0x385 2
-BUT_ONLY_IF_IT_CHANGES
-COPY_EXISTING ~66CHIM1.cre~ ~override~
-        WRITE_BYTE 0x385 2
-BUT_ONLY_IF_IT_CHANGES
-COPY_EXISTING ~67CHIM.cre~ ~override~
-        WRITE_BYTE 0x385 2
-BUT_ONLY_IF_IT_CHANGES
-COPY_EXISTING ~67CHIM2.cre~ ~override~
-        WRITE_BYTE 0x385 2
-BUT_ONLY_IF_IT_CHANGES
-
+COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
+	READ_LONG animation theanimation
+	PATCH_IF (theanimation = 4097 OR theanimation = 31232 OR theanimation = 31233 OR theanimation = 31234 OR theanimation = 31235 OR theanimation = 31491 OR theanimation = 32559 OR theanimation = 40960 OR theanimation = 57344 OR theanimation = 57362 OR theanimation = 57378 OR theanimation = 57400 OR theanimation = 57416 OR theanimation = 57424 OR theanimation = 59244 OR theanimation = 60467) BEGIN
+		READ_BYTE general thegeneral
+		PATCH_IF thegeneral != 4 BEGIN
+			WRITE_BYTE general 2
+		END
+	END
+	BUT_ONLY_IF_IT_CHANGES
 
 // non-functioning spells intended to replicate Aegis of Rime
 
@@ -724,11 +459,63 @@ COPY_EXISTING ~feats.2da~ ~override~
         SET_2DA_ENTRY_LATER rows_out row 2 ~%title%~
 		SET_2DA_ENTRY_LATER rows_out row 3 ~%description%~
       END
+      ~ENVENOM_WEAPON~ BEGIN
+        SET title = RESOLVE_STR_REF(@699)
+		SET description = RESOLVE_STR_REF(@700)
+        SET_2DA_ENTRY_LATER rows_out row 2 ~%title%~
+		SET_2DA_ENTRY_LATER rows_out row 3 ~%description%~
+      END
+      ~CRIPPLING_STRIKE~ BEGIN
+        SET strref = RESOLVE_STR_REF(@701)
+        SET_2DA_ENTRY_LATER rows_out row 3 ~%strref%~
+      END
+      ~ARTERIAL_STRIKE~ BEGIN
+        SET strref = RESOLVE_STR_REF(@702)
+        SET_2DA_ENTRY_LATER rows_out row 3 ~%strref%~
+      END
+      ~FORESTER~ BEGIN
+        SET title = RESOLVE_STR_REF(@703)
+		SET description = RESOLVE_STR_REF(@704)
+        SET_2DA_ENTRY_LATER rows_out row 2 ~%title%~
+		SET_2DA_ENTRY_LATER rows_out row 3 ~%description%~
+      END
+/*
+      ~ARMORED_ARCANA~ BEGIN
+        SET strref = RESOLVE_STR_REF(@705)
+        SET_2DA_ENTRY_LATER rows_out row 3 ~%strref%~
+      END
+*/
+      ~IMPROVED_INITIATIVE~ BEGIN
+        SET strref = RESOLVE_STR_REF(@706)
+        SET_2DA_ENTRY_LATER rows_out row 3 ~%strref%~
+      END
       DEFAULT
     END
   END
   SET_2DA_ENTRIES_NOW rows_out num_cols
 BUT_ONLY
+
+LAF ADD_FEAT_IWD2 INT_VAR nameref=RESOLVE_STR_REF(@339) descref=RESOLVE_STR_REF(@340) max=1 STR_VAR name=~ME_AUGMENT_SUMMONING~ script=~Feats_AugmentSummoning~ featspl_1=~USFAUGS1~ END
+LAF ADD_FEAT_IWD2 INT_VAR nameref=RESOLVE_STR_REF(@301) descref=RESOLVE_STR_REF(@302) max=1 STR_VAR name=~ME_CONCOCT_POTIONS~ script=~Feats_ConcoctPotions~ featspl_1=~USFALCP1~ END
+LAF ADD_FEAT_IWD2 INT_VAR nameref=RESOLVE_STR_REF(@303) descref=RESOLVE_STR_REF(@304) max=1 STR_VAR name=~ME_DEFENSIVE_STANCE~ script=~Feats_DefensiveStance~ featspl_1=~USFDSTA1~ END
+LAF ADD_FEAT_IWD2 INT_VAR nameref=RESOLVE_STR_REF(@305) descref=RESOLVE_STR_REF(@306) max=4 STR_VAR name=~ME_EXTEND_SPELL~ script=~Feats_ExtendSpell~ featspl_1=~USFEXSP1~ featspl_2=~USFEXSP1~ featspl_3=~USFEXSP1~ featspl_4=~USFEXSP1~ END
+LAF ADD_FEAT_IWD2 INT_VAR nameref=RESOLVE_STR_REF(@341) descref=RESOLVE_STR_REF(@342) max=2 STR_VAR name=~ME_FEINT~ script=~Feats_Feint~ featspl_1=~USFFEIN1~ featspl_2=~USFFEIN2~ END
+LAF ADD_FEAT_IWD2 INT_VAR nameref=RESOLVE_STR_REF(@307) descref=RESOLVE_STR_REF(@308) max=5 STR_VAR name=~ME_IMPROVED_SNEAK_ATTACK~ script=~Feats_ImprovedSneakAttack~ END
+LAF ADD_FEAT_IWD2 INT_VAR nameref=RESOLVE_STR_REF(@309) descref=RESOLVE_STR_REF(@310) max=1 STR_VAR name=~ME_IMPROVED_TWO_WEAPON_FIGHTING~ script=~Feats_ImprovedTwoWeaponFighting~ featspl_1=~USFITWF1~ END
+LAF ADD_FEAT_IWD2 INT_VAR nameref=RESOLVE_STR_REF(@311) descref=RESOLVE_STR_REF(@312) max=5 STR_VAR name=~ME_IMPROVED_UNARMED_ABILITIES~ script=~Feats_ImprovedUnarmedAbilities~ featspl_1=~USFUNAB1~ featspl_2=~USFUNAB1~ featspl_3=~USFUNAB1~ featspl_4=~USFUNAB1~ featspl_5=~USFUNAB1~ END
+LAF ADD_FEAT_IWD2 INT_VAR nameref=RESOLVE_STR_REF(@313) descref=RESOLVE_STR_REF(@314) max=1 STR_VAR name=~ME_KENSEI~ script=~Feats_Kensei~ featspl_1=~USFKENS1~ END
+LAF ADD_FEAT_IWD2 INT_VAR nameref=RESOLVE_STR_REF(@315) descref=RESOLVE_STR_REF(@316) max=2 STR_VAR name=~ME_KNOCKDOWN~ script=~Feats_Knockdown~ featspl_1=~USFKNKD1~ featspl_2=~USFKNKD2~ END
+LAF ADD_FEAT_IWD2 INT_VAR nameref=RESOLVE_STR_REF(@317) descref=RESOLVE_STR_REF(@318) max=1 STR_VAR name=~ME_LIGHT_ARMOR_MASTERY~ script=~Feats_LightArmorMastery~ featspl_1=~USFARMA1~ END
+LAF ADD_FEAT_IWD2 INT_VAR nameref=RESOLVE_STR_REF(@319) descref=RESOLVE_STR_REF(@320) max=1 STR_VAR name=~ME_MASTER_OF_MAGIC_FORCE~ script=~Feats_MasterOfMagicForce~ featspl_1=~USFMOMF1~ END
+LAF ADD_FEAT_IWD2 INT_VAR nameref=RESOLVE_STR_REF(@321) descref=RESOLVE_STR_REF(@322) max=3 STR_VAR name=~ME_MAXIMIZE_SPELL~ script=~Feats_MaximizeSpell~ featspl_1=~USFMASP1~ featspl_2=~USFMASP1~ featspl_3=~USFMASP1~ featspl_4=~USFMASP1~ featspl_5=~USFMASP1~ END
+LAF ADD_FEAT_IWD2 INT_VAR nameref=RESOLVE_STR_REF(@323) descref=RESOLVE_STR_REF(@324) max=1 STR_VAR name=~ME_MOBILITY~ script=~Feats_Mobility~ featspl_1=~USFMOBI1~ END
+LAF ADD_FEAT_IWD2 INT_VAR nameref=RESOLVE_STR_REF(@325) descref=RESOLVE_STR_REF(@326) max=5 STR_VAR name=~ME_QUICKEN_SPELL~ script=~Feats_QuickenSpell~ featspl_1=~USFQUSP1~ featspl_2=~USFQUSP1~ featspl_3=~USFQUSP1~ featspl_4=~USFQUSP1~ featspl_5=~USFQUSP1~ END
+LAF ADD_FEAT_IWD2 INT_VAR nameref=RESOLVE_STR_REF(@327) descref=RESOLVE_STR_REF(@328) max=1 STR_VAR name=~ME_RAPID_RELOAD~ script=~Feats_RapidReload~ featspl_1=~USFRARL1~ END
+LAF ADD_FEAT_IWD2 INT_VAR nameref=RESOLVE_STR_REF(@329) descref=RESOLVE_STR_REF(@330) max=4 STR_VAR name=~ME_SAFE_SPELL~ script=~Feats_SafeSpell~ featspl_1=~USFSASP1~ featspl_2=~USFSASP1~ featspl_3=~USFSASP1~ featspl_4=~USFSASP1~ featspl_5=~USFSASP1~ END
+LAF ADD_FEAT_IWD2 INT_VAR nameref=RESOLVE_STR_REF(@331) descref=RESOLVE_STR_REF(@332) max=2 STR_VAR name=~ME_SHIELD_FOCUS~ script=~Feats_ShieldFocus~ featspl_1=~USFSHLF1~ END
+LAF ADD_FEAT_IWD2 INT_VAR nameref=RESOLVE_STR_REF(@333) descref=RESOLVE_STR_REF(@334) max=1 STR_VAR name=~ME_SPRING_ATTACK~ script=~Feats_SpringAttack~ featspl_1=~USFSPRA1~ END
+LAF ADD_FEAT_IWD2 INT_VAR nameref=RESOLVE_STR_REF(@335) descref=RESOLVE_STR_REF(@336) max=1 STR_VAR name=~ME_TERRIFYING_RAGE~ script=~Feats_TerrifyingRage~ featspl_1=~USFTERG1~ END
+LAF ADD_FEAT_IWD2 INT_VAR nameref=RESOLVE_STR_REF(@337) descref=RESOLVE_STR_REF(@338) max=2 STR_VAR name=~ME_TWO_WEAPON_DEFENSE~ script=~Feats_TwoWeaponDefense~ featspl_1=~USFTWDF1~ END
 
 // New descriptions for classes
 COPY_EXISTING ~help02.2da~ ~override~
@@ -1523,28 +1310,38 @@ Disadvantages
 * The paladin must be lawful good or neutral good in alignment and must choose a divine order.  This choice of an order restricts the paladin's multiclassing possibilities.
 * The paladin must react to evil deeds that occur in his or her presence.~
 
-STRING_SET 8829 ~Concoct Potions~
-STRING_SET 25681 ~Concoct Potions~
-STRING_SET 36547 ~CONCOCT POTIONS:
+STRING_SET 8829 @699
+STRING_SET 8792 @900
 
-You have learned the seldom taught skill of the alchemist.  As you wander the world of Faerun you constantly scavenge for substances to fuel your research.
+COPY_EXISTING ~USCONCOC.spl~ ~override~
+  SAY NAME1 @901
+  SAY NAME2 @901
+  SAY UNIDENTIFIED_DESC @901
+  SAY IDENTIFIED_DESC @901
 
-Prerequisite: 1 level of rogue, Alchemy 8 or greater
+COPY_EXISTING ~USKNKDO.spl~ ~override~
+  SAY NAME1 @903
+  SAY NAME2 @903
+  SAY UNIDENTIFIED_DESC @903
+  SAY IDENTIFIED_DESC @903
 
-Benefit: The alchemist gains the Concoct Potions innate ability, which allows him or her to spend resources creating potions. For every 2 points of Alchemy above 8, the alchemist is able to create a broader variety of potions, and the cost of each potion is reduced by 5%.~
-STRING_SET 36552 ~Concoct Potions~
+COPY_EXISTING ~USFEINT.spl~ ~override~
+  SAY NAME1 @918
+  SAY NAME2 @918
+  SAY UNIDENTIFIED_DESC @918
+  SAY IDENTIFIED_DESC @918
 
-COPY ~%mod_folder%/spl/SPIN231.spl~ ~override~
-  SAY NAME1 @4793
-  SAY NAME2 @4793
-  SAY UNIDENTIFIED_DESC @4793
-  SAY IDENTIFIED_DESC @4793
+COPY_EXISTING ~USGRAPP.spl~ ~override~
+  SAY NAME1 @919
+  SAY NAME2 @919
+  SAY UNIDENTIFIED_DESC @919
+  SAY IDENTIFIED_DESC @919
 
-COPY_EXISTING ~USIN231.spl~ ~override~
-  SAY NAME1 @4794
-  SAY NAME2 @4794
-  SAY UNIDENTIFIED_DESC @4794
-  SAY IDENTIFIED_DESC @4794
+COPY_EXISTING ~SPIN231.spl~ ~override~
+  SAY NAME1 @699
+  SAY NAME2 @699
+  SAY UNIDENTIFIED_DESC @699
+  SAY IDENTIFIED_DESC @699
 
 COPY ~%mod_folder%/dlg/USALCP01.d~ ~override/USALCP01.dlg~
 	COMPILE_D_TO_DLG
@@ -2217,5 +2014,20 @@ COPY ~%mod_folder%/itm/61POTNUB.itm~ ~override~
   SAY NAME2 @4791
   SAY DESC @4792
 */
+
+COPY_EXISTING ~LISTINNT.2da~ ~override~
+	COUNT_2DA_ROWS 2 numrows
+	READ_2DA_ENTRY (numrows - 1) 0 2 lastindex
+	lastindex += 1
+	INSERT_2DA_ROW numrows 2 ~%lastindex% USCONCOC~
+	numrows += 1
+	lastindex += 1
+	INSERT_2DA_ROW numrows 2 ~%lastindex% USKNKDO~
+	numrows += 1
+	lastindex += 1
+	INSERT_2DA_ROW numrows 2 ~%lastindex% USGRAPP~
+	numrows += 1
+	lastindex += 1
+	INSERT_2DA_ROW numrows 2 ~%lastindex% USFEINT~
 
 INCLUDE ~%mod_folder%/components/final_patches.tpa~

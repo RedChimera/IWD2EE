@@ -379,9 +379,14 @@ SUBCOMPONENT @59
 
       INCLUDE ~%mod_folder%/components/hof_start_xp_10.tpa~ //~Start with a total of 270000 experience divided among the party, enough for a six-character party to start at level 10~
 
-//Remove the delay after a sneak attack before the creature can be sneak attacked again
+//Reduce the delay after a sneak attack before the creature can be sneak attacked again
 
-BEGIN @63 DESIGNATED 75
+BEGIN @65 DESIGNATED 75
+SUBCOMPONENT @63
 
-      INCLUDE ~%mod_folder%/components/no_sneak_attack_delay.tpa~ //~Remove the delay after a sneak attack before the creature can be sneak attacked again~
+      INCLUDE ~%mod_folder%/components/no_sneak_attack_delay.tpa~ //~Remove it~
 
+BEGIN @66 DESIGNATED 76
+SUBCOMPONENT @63
+
+      INCLUDE ~%mod_folder%/components/reduced_sneak_attack_delay.tpa~ //~Lower it to 1 round~

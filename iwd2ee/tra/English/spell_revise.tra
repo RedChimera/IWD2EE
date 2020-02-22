@@ -360,7 +360,7 @@ Saving Throw: None
 
 Heal wipes away disease and injury from a target creature. It cures blindness, diseases, feeblemind and restores the target to maximum hit points if they have been injured. There is no effect when used on the Undead.~
 @1060    = ~Symbol of Hopelessness~
-@1061    = ~Symbol of Hopelessness 
+@1061    = ~Symbol of Hopelessness
 (Divination) 
 Level: Clr 8, Sor/Wiz 8, Oghma 7
 Range: Sight of Caster
@@ -380,18 +380,18 @@ Casting Time: 7
 Area of Effect: Caster
 Saving Throw: None
 
-This spell steels the caster's mind against any outside influence. Charm, Command, Confusion, Dominate Person, Fear, Feeblemind, Hold, Sleep, Hopelessness and any psionic attack directed at the caster will fail as long as this spell is in effect. ~
+This spell steels the caster's mind against any outside influence. Charm, Command, Confusion, Dominate Person, Fear, Feeblemind, Hold, Sleep, Hopelessness and any psionic attack directed at the caster will fail as long as this spell is in effect.~
 @1064    = ~Greater Restoration~
 @1065    = ~Greater Restoration 
 (Necromancy)
-Level: Clr 7, Lathander 7
+Level: Clr 8, Drd 9, Lathander 7
 Range: Touch
 Duration: Instantaneous
 Casting Time: 3
 Area of Effect: 1 creature
 Saving Throw: None
 
-This spell will heal 5d8+25 hit points and cure a creature of all of the following ailments: energy drain, feeblemind, any form of insanity such as confusion or berserk states of mind, charm, domination, hopelessness, despair, panic, and artificially induced sleep.~
+This spell will heal all hit points and cure a creature of almost any ailment: energy drain, paralysis, hold, stun, slow, petrification, enfeeblement, pain, bleeding, poison, disease, acid damage over time, blindness, deafness, silence, feeblemind, any form of insanity such as confusion or berserk states of mind, charm, domination, hopelessness, despair, panic, and artificially induced sleep.~
 @1066    = ~Aura of Vitality~
 @1067    = ~Aura of Vitality 
 (Transmutation) 
@@ -2631,6 +2631,28 @@ Area of Effect: Caster
 Saving Throw: Will negates
 
 Cloak of Fear bestows the caster with an aura of fear in a 5-foot radius.  All creatures that enter the cloak's area of effect must make a Will save or flee in panic for 1 round, and must continue to make Will saves twice a round as long as they are in the cloak of fear's area of effect.  The aura does not affect undead creatures.~
+@31423     = ~Wall of Moonlight~
+@32423     = ~Wall of Moonlight
+(Evocation)
+Level: Drd 4, Selune 3
+Range: Sight of Caster
+Duration: 5 rounds
+Casting Time: 7
+Area of Effect: 20-foot long, 5-foot wide wall
+Saving Throw: None
+
+This spell invokes a shimmering tapestry of blue-white force.  This wall is intangible, requiring no physical anchor, and can easily be passed through.  Evil creatures passing through the wall take 4d10 magic damage.  Undead creatures passing through the wall take 8d10 magic damage.  A creature that has passed through the wall can only take damage from it once.  Only one Wall of Moonlight may be in effect at any time.~
+@31427     = ~Wall of Fire~
+@32427     = ~Wall of Fire
+(Evocation)
+Level: Drd 5, Sor/Wiz 4
+Range: Sight of Caster
+Duration: 5 rounds
+Casting Time: 4
+Area of Effect: 20-foot long, 5-foot wide wall
+Saving Throw: None 
+
+This spell brings into existence an immobile, blazing curtain of shimmering fire. Any creature passing through the wall takes 9d6 fire damage. Only one wall of fire may be active at any one time.~
 @31508     = ~Chaotic Commands~
 @32508     = ~Chaotic Commands
 (Enchantment) [Chaos]
@@ -2664,12 +2686,23 @@ Area of Effect: 1 creature
 Saving Throw: None 
 
 Upon completion of this spell, the caster hurls a magical shard of ice imbued with deep freezing cold, dealing 1d4 cold damage to the target creature per caster level (5d4 maximum). Other creatures within 5 feet also take the same amount of damage, except that they may make a Reflex save for half damage.~
+@33299     = ~Summon Cow~
+@34299     = ~Summon Cow
+(Conjuration)
+Level: Selune 3
+Range: Visual range of the caster 
+Duration: Instant
+Casting Time: 1 
+Area of Effect: 1 creature
+Saving Throw: None
+
+In a shocking display that is bound to cow your enemies, this spell drops a cow from the sky onto the target creature. The cow deals 10d8 bludgeoning damage to the creature. There is no Saving Throw, and Spell Resistance cannot stop the cow.~
 @33322     = ~Melf's Minute Meteors~
 @34322     = ~Melf's Minute Meteors
 (Evocation)
 Level: Sor/Wiz 3
 Range: Caster
-Duration: 8 hours 
+Duration: 8 hours
 Casting Time: 3
 Area of Effect: Caster
 Saving Throw: Reflex half

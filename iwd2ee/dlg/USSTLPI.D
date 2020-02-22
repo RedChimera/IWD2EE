@@ -30,5 +30,5 @@ IF ~~ THEN BEGIN 5
   SAY ~Enough interruptions! Enough sabotage! Venomin, to my side!~
   IF ~~ THEN DO ~
 Enemy()
-~ EXIT
+~ JOURNAL #36025 EXIT
 END
