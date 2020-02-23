@@ -1,5 +1,8 @@
 
 for _, macroEntry in ipairs({
+	{"cmp_[ecx*4+dword]_eax", "39 04 8D"},
+	{"cmp_[esi*4+dword]_eax", "39 04 B5"},
+	{"mov_[edx*4+dword]_eax", "89 04 95"},
 	{"add_eax_byte", "83 C0"},
 	{"add_eax_dword", "05"},
 	{"add_eax_edx", "03 C2"},
