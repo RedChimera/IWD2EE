@@ -4003,14 +4003,14 @@ COPY_EXISTING_REGEXP ~.*\.itm~ ~override~
 		us_kit_unusability_3&=0x7f
 	END
 	PATCH_IF ((us_item_unusability BAND 0x00000400) = 0x00000400) BEGIN
-		PATCH_IF (us_item_category != 11) BEGIN
-			us_kit_unusability_3|=0x7f
-			us_kit_unusability_4|=0xc0
-		END
+		us_kit_unusability_3|=0x7f
+		us_kit_unusability_4|=0xc0
 	END
 	ELSE BEGIN
-		us_kit_unusability_3&=0x80
-		us_kit_unusability_4&=0x3f
+		PATCH_IF (us_item_category != 11) BEGIN
+			us_kit_unusability_3&=0x80
+			us_kit_unusability_4&=0x3f
+		END
 	END
 	PATCH_IF ((us_item_unusability BAND 0x00000020) = 0x00000020) BEGIN
 		us_kit_unusability_4|=0x38
