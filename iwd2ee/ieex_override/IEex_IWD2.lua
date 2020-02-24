@@ -5426,6 +5426,33 @@ function IEex_WriteDelayedPatches()
 	-- FeatList Hooks ASM --
 	------------------------
 
+	--------------------------------
+	-- FIX CHARGEN ARRAY OVERFLOW --
+	-------------------------------- 
+
+	local chargenBeforeFeatCounts = IEex_Malloc(IEex_NEW_FEATS_SIZE * 0x4)
+	for i = 0, IEex_NEW_FEATS_MAXID, 1 do
+		IEex_WriteDword(chargenBeforeFeatCounts + i * 4, 0x0)
+	end
+
+	------------------------
+	-- Chargen_Init_Feats --
+	------------------------
+
+	IEex_WriteAssembly(0x60CD6C, {"!mov_[edx*4+dword]_eax", {chargenBeforeFeatCounts, 4}})
+
+	-----------------------------
+	-- Chargen_Update_FeatList --
+	-----------------------------
+
+	IEex_WriteAssembly(0x60E689, {"!cmp_[ecx*4+dword]_eax", {chargenBeforeFeatCounts, 4}})
+
+	-------------------------------
+	-- Chargen_OnFeatCountChange --
+	-------------------------------
+
+	IEex_WriteAssembly(0x623447, {"!cmp_[esi*4+dword]_eax", {chargenBeforeFeatCounts, 4}})
+
 	------------------------------
 	-- CGameSprite_SetFeatCount --
 	------------------------------
