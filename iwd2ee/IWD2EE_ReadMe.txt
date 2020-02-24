@@ -7,6 +7,8 @@ Installation:
 
 Icewind Dale 2: Enhanced Edition is a compilation of tweaks and fixes for Icewind Dale 2, enhancing the game in a variety of ways. Classes, spells, items, creatures, and encounters are made more interesting. IWD2EE changes over 300 spells and over 1,000 items, and it adds over 30 new spells, over 120 new items, and several NPCs that can join the party. The mod fixes many of the big issues with the original Icewind Dale 2: you no longer have to solve tedious, cryptic puzzles to complete certain areas, enemies in Heart of Fury Mode are empowered in interesting ways rather than just having lots of HP, and you can revise the experience system so you won't get zero experience for killing enemies late in the game.
 
+Class Revisions, Spell Revisions, Item Revisions and Creature Revisions are the core components of IWD2EE. It is recommended you install all four of them.
+
 Components:
 
 1. Class Revisions

@@ -113,7 +113,7 @@ function IEex_ApplyResref(resref, actorID)
 
 	local share = IEex_GetActorShare(actorID)
 	if actorID == 0 or actorID == -1 or share == 0 then
-		IEex_Error("IEex_ApplyResref() passed invalid actorID")
+		print("IEex_ApplyResref(\"" .. resref .. "\", " .. actorID .. ") passed invalid actorID")
 		return
 	end
 
