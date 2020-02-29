@@ -1,0 +1,4 @@
+COPY ~%mod_folder%/music/music_looping_main_theme/Theme.mus~ ~Music~
+
+COPY ~%mod_folder%/music/music_looping_main_theme/THEMEA.acm~ ~Music/THEME~
+COPY ~%mod_folder%/music/music_looping_main_theme/THEMEB.acm~ ~Music/THEME~

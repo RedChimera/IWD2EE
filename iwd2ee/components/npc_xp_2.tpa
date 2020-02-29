@@ -1,4 +1,4 @@
-
+/*
 OUTER_SET nextlevelxp = 1000
 OUTER_FOR (i = 2; i <= 30; ++i) BEGIN
 	OUTER_SET nextlevelxp4 = nextlevelxp * 4 / 5
@@ -78,5 +78,8 @@ END
 >>>>>>>>
 
 EXTEND_TOP ~usjoin2.bcs~ ~.../script.baf~ EVAL
-
+*/
 COPY_EXISTING ~usjoin2.bcs~ ~override/usjoin.bcs~
+
+COPY_EXISTING ~usnpcxp.spl~ ~override~
+	LPF ALTER_EFFECT INT_VAR check_headers=1 check_globals=0 match_opcode=500 special=1 STR_VAR match_resource=~MENPCXP~ END

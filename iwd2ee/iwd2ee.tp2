@@ -102,8 +102,6 @@ BEGIN @12 DESIGNATED 10
 
       INCLUDE ~%mod_folder%/components/faster_ice.tpa~      //~Faster Ice Temple~
 
-
-
 //Faster Wandering Village
 BEGIN @13 DESIGNATED 11
 
@@ -122,18 +120,23 @@ BEGIN @15 DESIGNATED 13
 
       INCLUDE ~%mod_folder%/components/faster_underdark.tpa~      //~Faster Underdark~
 
-//Faster Dragon's Eye and Lord Pyros' Domain
+//Faster Dragon's Eye
 
 BEGIN @16 DESIGNATED 14
 
-      INCLUDE ~%mod_folder%/components/faster_dragon_eye.tpa~      //~Faster Dragon's Eye and Lord Pyros' Domain~
-
+      INCLUDE ~%mod_folder%/components/faster_dragon_eye.tpa~      //~Faster Dragon's Eye~
 
 //Faster Severed Hand
 
 BEGIN @17 DESIGNATED 15
 
       INCLUDE ~%mod_folder%/components/faster_severed_hand.tpa~      //~Faster Severed Hand~
+
+//Alternative Dragon's Eye
+
+BEGIN @29 DESIGNATED 27
+
+      INCLUDE ~%mod_folder%/components/alt_dragon_eye.tpa~      //~Alternative Dragon's Eye~
 
 //More Potions for Oswald
 
@@ -210,13 +213,6 @@ BEGIN @28 DESIGNATED 26
 
       INCLUDE ~%mod_folder%/components/novio_isair_madae.tpa~      //~Nonviolent Option for Isair and Madae~
 
-
-//Alternative Dragon's Eye
-
-BEGIN @29 DESIGNATED 27
-
-      INCLUDE ~%mod_folder%/components/alt_dragon_eye.tpa~      //~Alternative Dragon's Eye~
-
 //Bribe Limha
 
 BEGIN @30 DESIGNATED 28
@@ -274,15 +270,27 @@ BEGIN @38 DESIGNATED 36
 
 //NPCs gain experience upon joining to match the party's experience
 
-BEGIN @58 REQUIRE_COMPONENT ~iwd2ee.tp2~ ~36~ ~~ DESIGNATED 52
+BEGIN @68 REQUIRE_COMPONENT ~iwd2ee.tp2~ ~36~ ~~ DESIGNATED 52
+SUBCOMPONENT @58
 
-      INCLUDE ~%mod_folder%/components/npc_xp.tpa~ //~NPCs gain experience upon joining to match the party's experience~
+      INCLUDE ~%mod_folder%/components/npc_xp_1.tpa~ //~NPCs start with the average experience of the rest of the party~
+
+BEGIN @69 REQUIRE_COMPONENT ~iwd2ee.tp2~ ~36~ ~~ DESIGNATED 53
+SUBCOMPONENT @58
+
+      INCLUDE ~%mod_folder%/components/npc_xp_2.tpa~ //~NPCs start with one fifth the total experience of the rest of the party~
 
 //Cosmetic improvements to the GUI and New loading screens
 
 BEGIN @39 DESIGNATED 37
 
       INCLUDE ~%mod_folder%/components/gui.tpa~      //~New GUI~
+
+//Looping Main Theme
+
+BEGIN @67 DESIGNATED 80
+
+      INCLUDE ~%mod_folder%/components/looping_main_theme.tpa~ //~Looping Main Theme~
 
 //Adjusts rewards for Battle Square and allows the main rewards to be obtained much quicker
 
