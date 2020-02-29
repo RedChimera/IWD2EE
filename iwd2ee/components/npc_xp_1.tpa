@@ -1,0 +1,82 @@
+/*
+OUTER_SET nextlevelxp = 1000
+OUTER_FOR (i = 2; i <= 30; ++i) BEGIN
+	OUTER_SET nextlevelxp4 = nextlevelxp * 4 / 5
+	OUTER_SET nextlevelxp3 = nextlevelxp * 3 / 5
+	OUTER_SET nextlevelxp2 = nextlevelxp * 2 / 5
+	OUTER_SET nextlevelxp1 = nextlevelxp / 5
+<<<<<<<< .../script.baf
+
+IF
+	CheckPartyAverageLevel(%i%,1)
+	NumInParty(5)
+THEN
+	RESPONSE #100
+		ChangeStat(Myself,XP,%nextlevelxp%,SET)
+		JoinParty()
+		ChangeCurrentScript("")
+END
+
+IF
+	CheckPartyAverageLevel(%i%,1)
+	NumInParty(4)
+THEN
+	RESPONSE #100
+		ChangeStat(Myself,XP,%nextlevelxp4%,SET)
+		JoinParty()
+		ChangeCurrentScript("")
+END
+
+IF
+	CheckPartyAverageLevel(%i%,1)
+	NumInParty(3)
+THEN
+	RESPONSE #100
+		ChangeStat(Myself,XP,%nextlevelxp3%,SET)
+		JoinParty()
+		ChangeCurrentScript("")
+END
+
+IF
+	CheckPartyAverageLevel(%i%,1)
+	NumInParty(2)
+THEN
+	RESPONSE #100
+		ChangeStat(Myself,XP,%nextlevelxp2%,SET)
+		JoinParty()
+		ChangeCurrentScript("")
+END
+
+IF
+	CheckPartyAverageLevel(%i%,1)
+	NumInParty(1)
+THEN
+	RESPONSE #100
+		ChangeStat(Myself,XP,%nextlevelxp1%,SET)
+		JoinParty()
+		ChangeCurrentScript("")
+END
+
+>>>>>>>>
+
+EXTEND_TOP ~usjoin2.bcs~ ~.../script.baf~ EVAL
+
+	OUTER_SET nextlevelxp = nextlevelxp + (i * 1000)
+END
+
+<<<<<<<< .../script.baf
+
+IF
+	CheckPartyAverageLevel(30,3)
+THEN
+	RESPONSE #100
+		ChangeStat(Myself,XP,528000,SET)
+		JoinParty()
+		ChangeCurrentScript("")
+END
+
+>>>>>>>>
+
+EXTEND_TOP ~usjoin2.bcs~ ~.../script.baf~ EVAL
+*/
+COPY_EXISTING ~usjoin2.bcs~ ~override/usjoin.bcs~

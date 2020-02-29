@@ -24,32 +24,34 @@ Components:
 11. Faster Wandering Village
 12. Faster Black Raven Monastery
 13. Faster Underdark
-14. Faster Dragon's Eye and Lord Pyros' Domain
+14. Faster Dragon's Eye
 15. Faster Severed Hand
-16. Mage Scrolls for New Spells
-17. Revised Creature Immunities
-18. Shapeshifting Sound Fix
-19. More Accurate Saving Throws for Enemies
-20. Revise Critical Hit Immunity
-21. Sudden Death Mode
-22. Better Racial Enemies for Rangers
-23. Cosmetic Tweaks
-24-34. More Persuasion Options
+16. Alternative Dragon's Eye
+17. Mage Scrolls for New Spells
+18. Revised Creature Immunities
+19. Shapeshifting Sound Fix
+20. More Accurate Saving Throws for Enemies
+21. Revise Critical Hit Immunity
+22. Sudden Death Mode
+23. Better Racial Enemies for Rangers
+24. Cosmetic Tweaks
+25-34. More Persuasion Options
 35. NPC Core
 36. NPCs start with experience
 37. New GUI
-38. Revised Battle Square
-39. Minor Damage Resistance for Armor and Shields
-40. ChangeAIScript Fix
-41. Race Revisions
-42. Enemies give the same amount of experience regardless of the party's level
-43. Adjust encounter level-scaling
-44. Reduce enemy HP bonuses in Heart of Fury Mode
-45. Reduce enemy attack bonuses in Heart of Fury Mode
-46. Reduce enemy saving throw bonuses in Heart of Fury Mode
-47. Weaken allied summoned creatures in Heart of Fury Mode
-48. Have the party start with experience in Heart of Fury Mode
-49. Remove the delay between sneak attacks
+38. Looping Main Theme
+39. Revised Battle Square
+40. Minor Damage Resistance for Armor and Shields
+41. ChangeAIScript Fix
+42. Race Revisions
+43. Enemies give the same amount of experience regardless of the party's level
+44. Adjust encounter level-scaling
+45. Reduce enemy HP bonuses in Heart of Fury Mode
+46. Reduce enemy attack bonuses in Heart of Fury Mode
+47. Reduce enemy saving throw bonuses in Heart of Fury Mode
+48. Weaken allied summoned creatures in Heart of Fury Mode
+49. Have the party start with experience in Heart of Fury Mode
+50. Remove the delay between sneak attacks
 
 --Class Revisions--
 
@@ -190,13 +192,11 @@ This component allows you to skip the Black Raven Monastery trials without havin
 
 This component lets you skip the Viciscamera questline. You should be able to force open the doors to the mind flayer city and proceed without doing any chores for Malavon.
 
---Faster Dragon's Eye and Lord Pyros' Domain--
+--Faster Dragon's Eye--
 
-Dragon's Eye and the time paradox questline in Lord Pyros' Domain have long been the low point of IWD2, with massive amounts of backtracking, numerous plot triggers with few clues to indicate where you're supposed to go, and very little reward for the immense amount of time you have to invest in the game just to get through it. This component allows you to avoid all of that nonsense and proceed directly to the Fields of Slaughter, if you want to.
+Dragon's Eye and the time paradox questline in Lord Pyros' Domain have long been the low point of IWD2, with massive amounts of backtracking, numerous plot triggers with few clues to indicate where you're supposed to go, and very little reward for the immense amount of time you have to invest in the game just to get through it. This component makes two of the mandatory side quests in Dragon's Eye optional.
 
 Opening the door in the third floor of Dragon's Eye no longer requires you to put poison in the four pools in the area; you just have to kill Thorasskus. In addition, you can pass under the Eye of Sseth without being a histachii.
-
-Also, the component rigs the north exit from Lord Pyros' Domain (not the exit you unlock during the questline, but the exit NORTH of that one) to lead directly to the Fields of Slaughter, instead of back to Dragon's Eye. Once you're in Lord Pyros' Domain, you can skip the Temporal Stasis quest just by going back from where you came. This will also skip Nickademus' favor.
 
 --Faster Severed Hand--
 
@@ -204,11 +204,13 @@ The Severed Hand can also take a fair amount of time, and while it's not nearly 
 
 This component also makes it so you do not need to defeat Iyachtu Xvim before going to the final boss (though in this case you'll have to fight the glabrezus in the final battle).
 
---Mage Scrolls for New Spells--
+--Alternative Dragon's Eye--
 
-This component adds relatively high-level mage scrolls to various spell vendors, including Elytharra, Zack Boosenberry, Suoma, Bered, and Sheemish. A solo wizard or a level 1 wizard in HoF mode will be able to learn high-end spells and keep pace with a sorcerer. This isn't too extreme: early-game vendors might have a couple of scrolls at 5th-7th level, but they won't have tons of 9th-level scrolls.
+This component simplifies the final area of Dragon's Eye. Rather than having to go through a long time travel quest, you just fight one battle to prevent Izbelah from casting Temporal Stasis. The component changes some dialogs in Chapter 5 to make it clear why you're fighting Izbelah.
 
-This also adds scrolls of the new spells from Spell Revisions, allowing wizards as well as sorcerers to learn these spells.
+--Add more scrolls to the game--
+
+This component adds relatively high-level mage scrolls to various spell vendors, including Elytharra, Zack Boosenberry, Suoma, Bered, and Sheemish. A solo wizard or a wizard in HoF mode will be able to learn high-end spells and keep pace with a sorcerer. This isn't too extreme: early-game vendors might have a couple of scrolls at 5th-7th level, but they won't have tons of 9th-level scrolls.
 
 --Revised Creature Resistances and Immunities--
 
@@ -269,11 +271,15 @@ This component allows several existing NPCs to join the party: the fighter Reig,
 
 --NPCs gain experience upon joining to match the party's experience--
 
-This component lets NPCs from the NPC Core component start with experience based on the party's total experience (so that they won't start at significantly higher level if you were soloing).
+This component lets NPCs from the NPC Core component start with experience to match the party. There are two subcomponents. The first one makes NPCs start with the average experience of the rest of the party members. The second one makes them start with a fifth of the total experience of the party (this way, a small, high level party won't recruit high level NPCs).
 
 --Cosmetic improvements to the GUI and New loading screens--
 
 This component currently adds a new main menu screen and new chapter screens. There are no new buttons, but the GUI should look better.
+
+--Looping Main Theme--
+
+Normally IWD2's main theme does not loop. After 1 minute, it ends and you spend the rest of character creation with no music playing. This component edits the main theme to loop.
 
 --Revised Battle Square--
 
@@ -289,7 +295,7 @@ Inspired by Weimer's similar component from IWD2-Ease, this component patches ev
 
 --Race Revisions--
 
-This component makes race stats less different. All racial ability score bonuses and penalties are halved (e.g. moon elves just get +1 Dexterity and -1 Constitution), but all characters can get up to 19 in an ability score at character creation rather than 18.
+Race Revisions gives some new abilities to certain races, to make them fit their archetypes better. For example, lightfoot halflings gain their Dexterity modifier (if higher than their Strength modifier) to the damage of slings and other throwing weapons. Rock gnomes gain a bonus to Intelligence rather than Constitution.
 
 --Enemies give the same amount of experience regardless of the party's level--
 

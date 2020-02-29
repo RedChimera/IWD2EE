@@ -1019,6 +1019,10 @@ function EXDAMAGE(effectData, creatureData)
 	local saveBonusStat = IEex_ReadByte(effectData + 0x47, 0x0)
 	local parent_resource = IEex_ReadLString(effectData + 0x90, 8)
 	local casterlvl = IEex_ReadDword(effectData + 0xC4)
+	local rogueLevel = 0
+	local isSneakAttack = false
+	local isTrueBackstab = false
+	local hasProtection = false
 	if sourceID > 0 then
 		sourceData = IEex_GetActorShare(sourceID)
 		if proficiency > 0 and ex_feat_id_offset[proficiency] ~= nil then
@@ -1037,10 +1041,7 @@ function EXDAMAGE(effectData, creatureData)
 		if IEex_GetActorSpellState(sourceID, 233) and bit32.band(savingthrow, 0x20000) == 0 and bit32.band(savingthrow, 0x40000) == 0 and bit32.band(savingthrow, 0x800000) == 0 then
 			damage = damage + math.floor((IEex_GetActorStat(sourceID, 36) - 10) / 2)
 		end
-		local rogueLevel = IEex_GetActorStat(sourceID, 104)
-		local isSneakAttack = false
-		local isTrueBackstab = false
-		local hasProtection = false
+		rogueLevel = IEex_GetActorStat(sourceID, 104)
 		if (rogueLevel > 0 or IEex_GetActorSpellState(sourceID, 192)) and bit32.band(savingthrow, 0x80000) and (IEex_GetActorSpellState(sourceID, 218) or (IEex_GetActorSpellState(sourceID, 217) and IEex_DirectionWithinCyclicRange(sourceID, targetID, 9)) or IEex_IsValidBackstabDirection(sourceID, targetID)) and IEex_GetActorStat(targetID, 96) == 0 and IEex_GetActorSpellState(targetID, 216) == false and (bit32.band(savingthrow, 0x20000) > 0 or bit32.band(savingthrow, 0x40000) > 0 or bit32.band(savingthrow, 0x800000) > 0 or (bit32.band(savingthrow, 0x40000) == 0 and IEex_GetActorSpellState(sourceID, 232))) then
 			isSneakAttack = true
 			if IEex_GetActorSpellState(sourceID, 217) then
@@ -4923,6 +4924,28 @@ function MEHGTMOD(effectData, creatureData)
 	end
 end
 --]]
+
+function MENPCXP(effectData, creatureData)
+	local sourceID = IEex_ReadDword(effectData + 0x10C)
+	if sourceID <= 0 then return end
+	local sourceData = IEex_GetActorShare(sourceID)
+	local special = IEex_ReadDword(effectData + 0x44)
+	local totalXP = 0
+	local slotID = 0
+	local slotCount = 0
+	for i = 0, 5, 1 do
+		slotID = IEex_GetActorIDCharacter(i)
+		if slotID > 0 and slotID ~= sourceID then
+			slotCount = slotCount + 1
+			totalXP = totalXP + IEex_ReadDword(IEex_GetActorShare(slotID) + 0x5B4)
+		end
+	end
+	if special == 0 and slotCount > 0 then
+		IEex_WriteDword(sourceData + 0x5B4, math.floor(totalXP / slotCount))
+	elseif special == 1 then
+		IEex_WriteDword(sourceData + 0x5B4, math.floor(totalXP / 5))
+	end
+end
 
 function MENOSUST(effectData, creatureData)
 	EEex_WriteDword(creatureData + 0x5BC, bit32.band(IEex_ReadDword(creatureData + 0x5BC), 0xEFFFFFFF))

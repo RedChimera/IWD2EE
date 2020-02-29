@@ -14,10 +14,10 @@
 @13   = ~Faster Wandering Village~
 @14   = ~Faster Black Raven Monastery~
 @15   = ~Faster Underdark~
-@16   = ~Faster Dragon's Eye and Lord Pyros' Domain~
+@16   = ~Faster Dragon's Eye~
 @17   = ~Faster Severed Hand~
 @18   = ~More Potions for Oswald~
-@19   = ~Mage Scrolls for New Spells~
+@19   = ~Add more scrolls to the game~
 @20   = ~Revised Creature Resistances and Immunities~
 @21   = ~Shapeshifting Sound Fix (only install if your druid makes strange noises after shapeshifting; otherwise is unnecessary)~
 @22   = ~More Accurate Saving Throws for Enemies~
@@ -65,3 +65,6 @@
 @64   = ~Revise opposing schools for specialist wizards~
 @65   = ~Remove it~
 @66   = ~Lower it to 1 round (recommended)~
+@67   = ~Looping main theme~
+@68   = ~NPCs start with the average experience of the rest of the party~
+@69   = ~NPCs start with one fifth the total experience of the rest of the party (so NPC starting XP won't depend on party size)~
