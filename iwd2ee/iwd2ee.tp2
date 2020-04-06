@@ -158,7 +158,7 @@ BEGIN @20 DESIGNATED 18
 
 //Shapeshifting Sound Fix
 
-BEGIN @21 DESIGNATED 19
+BEGIN @21 DESIGNATED 19 DEPRECATED ~~
 
       INCLUDE ~%mod_folder%/components/shape_sound.tpa~      //~Shapeshifting Sound Fix (only install if your druid makes strange noises after shapeshifting; otherwise is unnecessary)~
 
@@ -182,7 +182,7 @@ SUBCOMPONENT @23
 
 //Sudden Death Mode
 
-BEGIN @24 DESIGNATED 22
+BEGIN @24 DESIGNATED 22 DEPRECATED ~~
 
       INCLUDE ~%mod_folder%/components/sudden_death.tpa~      //~Sudden Death Mode~
 
@@ -306,7 +306,7 @@ BEGIN @41 DESIGNATED 39
 
 //ChangeAIScript Fix
 
-BEGIN @42 DESIGNATED 40
+BEGIN @42 DESIGNATED 40 DEPRECATED ~~
 
       INCLUDE ~%mod_folder%/components/change_ai_script_fix.tpa~      //~ChangeAIScript Fix~
 

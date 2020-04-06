@@ -172,3 +172,5 @@ COPY_EXISTING ~LISTDOMN.2da~ ~override~
 	END
 
 VERBOSE
+
+INCLUDE ~%mod_folder%/components/change_ai_script_fix.tpa~

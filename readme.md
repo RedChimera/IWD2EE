@@ -2,14 +2,18 @@
 
 # Icewind Dale 2: Enhanced Edition
 
+Icewind Dale 2: Enhanced Edition is a compilation of tweaks and fixes for Icewind Dale 2, enhancing the game in a variety of ways. Classes, spells, items, creatures, and encounters are made more interesting. IWD2EE changes over 300 spells and over 1,000 items, and it adds over 30 new spells, over 120 new items, and several NPCs that can join the party. The mod fixes many of the big issues with the original Icewind Dale 2: you no longer have to solve tedious, cryptic puzzles to complete certain areas, enemies in Heart of Fury Mode are empowered in interesting ways rather than just having lots of HP, and you can revise the experience system so you won't get zero experience for killing enemies late in the game.
+
 Installation:
 
 1. Unzip all files into your IWD2 folder.
 2. Double-click on the Setup-iwd2ee.exe application.
 3. The WeiDu window will pop up. Follow the prompt and WeiDu will install the mod on your game. This can also reinstall or uninstall the mod.
-4. In the IWD2 folder will appear a new program: IWD2EE.exe. Start the game by clicking on it. If you start the game via IWD2.exe, the game will not work right.
+4. In the IWD2 folder will appear a new program: IWD2EE.exe.
+<img src="https://github.com/RedChimera/semiOverhaul-v1.32/blob/master/iwd2ee/png/IWD2Programs.png">
+5. You MUST start the game by clicking on IWD2EE.exe. If you click on IWD2.exe instead, the game will crash during character creation or when you load a save game.
 
-Icewind Dale 2: Enhanced Edition is a compilation of tweaks and fixes for Icewind Dale 2, enhancing the game in a variety of ways. Classes, spells, items, creatures, and encounters are made more interesting. IWD2EE changes over 300 spells and over 1,000 items, and it adds over 30 new spells, over 120 new items, and several NPCs that can join the party. The mod fixes many of the big issues with the original Icewind Dale 2: you no longer have to solve tedious, cryptic puzzles to complete certain areas, enemies in Heart of Fury Mode are empowered in interesting ways rather than just having lots of HP, and you can revise the experience system so you won't get zero experience for killing enemies late in the game.
+
 
 Components:
 
@@ -28,40 +32,38 @@ Components:
 13. Faster Underdark
 14. Faster Dragon's Eye and Lord Pyros' Domain
 15. Faster Severed Hand
-16. Mage Scrolls for New Spells
-17. Revised Creature Immunities
-18. Shapeshifting Sound Fix
+16. Alternative Dragon's Eye
+17. Mage Scrolls for New Spells
+18. Revised Creature Immunities
 19. More Accurate Saving Throws for Enemies
 20. Revise Critical Hit Immunity
-21. Sudden Death Mode
-22. Better Racial Enemies for Rangers
-23. Cosmetic Tweaks
-24. Xuki Intimidation Option
-25. Nonviolent Option for Isair and Madae
-26. Alternative Dragon's Eye
-27. Bribe Limha
-28. Bribe Mirabel and Majrash
-29. Diplomacy for Guthma
-30. Trick Harshom
-31. Intimidate Torak
-32. Intimidate Elder Brain
-33. Bluff Thorasskus
-34. Bluff Thvara
-35. NPC Core
-36. NPCs start with experience
-37. New GUI
-38. Revised Battle Square
-39. Minor Damage Resistance for Armor and Shields
-40. ChangeAIScript Fix
-41. Race Revisions
-42. Enemies give the same amount of experience regardless of the party's level
-43. Adjust encounter level-scaling
-44. Reduce enemy HP bonuses in Heart of Fury Mode
-45. Reduce enemy attack bonuses in Heart of Fury Mode
-46. Reduce enemy saving throw bonuses in Heart of Fury Mode
-47. Weaken allied summoned creatures in Heart of Fury Mode
-48. Have the party start with experience in Heart of Fury Mode
-49. Remove the delay between sneak attacks
+21. Better Racial Enemies for Rangers
+22. Cosmetic Tweaks
+23. Xuki Intimidation Option
+24. Nonviolent Option for Isair and Madae
+25. Bribe Limha
+26. Bribe Mirabel and Majrash
+27. Diplomacy for Guthma
+28. Trick Harshom
+29. Intimidate Torak
+30. Intimidate Elder Brain
+31. Bluff Thorasskus
+32. Bluff Thvara
+33. NPC Core
+34. NPCs start with experience
+35. New GUI
+36. Looping Main Theme
+37. Revised Battle Square
+38. Minor Damage Resistance for Armor and Shields
+39. Race Revisions
+40. Enemies give the same amount of experience regardless of the party's level
+41. Adjust encounter level-scaling
+42. Reduce enemy HP bonuses in Heart of Fury Mode
+43. Reduce enemy attack bonuses in Heart of Fury Mode
+44. Reduce enemy saving throw bonuses in Heart of Fury Mode
+45. Weaken allied summoned creatures in Heart of Fury Mode
+46. Have the party start with experience in Heart of Fury Mode
+47. Remove the delay between sneak attacks
 
 ## Class Revisions
 
@@ -103,7 +105,7 @@ Monks: Monks now get much faster and more accurate unarmed attacks, and their at
 
 Fighters: Fighters get +1 to damage every 5 levels (increasing to every 2 levels after level 20), and now the fighter-exclusive Weapon Specialization feats give +5 to hit and damage. All warriors get better saving throws and stronger attacks.
 
-Rangers: Rangers get more spell slots, and they get them at lower levels. They are also able to use Set Natural Snare every 6 levels, which snares enemies for 5 rounds on a failed Reflex save. Set Natural Snare is much more effective than in the original game; the save DC now improves by 1 for every level and will work reliably even in Heart of Fury mode.
+Rangers: Rangers get more spell slots, and they get them at lower levels. They are also able to use Set Natural Snare every 6 levels, which snares enemies for 5 rounds on a failed Reflex save. Set Natural Snare is much more effective than in the original game; the save DC now improves based on the character's Wilderness Lore skill.
 
 Paladins: Paladins get more spell slots, and they get them at lower levels. Paladins get an additional casting of Lay on Hands every 5 levels.
 
@@ -230,10 +232,6 @@ Elementals now have regular elemental immunities rather than undead immunities. 
 
 Trolls no longer fall down and have to be finished off by fire or acid; instead they regenerate faster and have more HP but take significantly more damage from fire and acid.
 
-## Shapeshifting Sound Fix
-
-Testing found that shapeshifting in a previous version of semiOverhaul could result in a weird sound loop. This component should fix the problem if it comes up, but is not otherwise necessary.
-
 ## More Accurate Saving Throws for Enemies
 
 This component adjusts all enemy saving throws in the game, making them roughly equal to the player's saving throws at the same level. Thus, a level 10 enemy fighter will have similar saving throws to a level 10 fighter in the party.
@@ -241,10 +239,6 @@ This component adjusts all enemy saving throws in the game, making them roughly 
 ## Revise Critical Hit Immunity
 
 The vanilla game gives out immunity to critical hits to enemies that shouldn't have it, including fiends and certain random enemies. This component has two options: either you can give critical hit immunity to all undead, constructs, objects, elementals and oozes and remove it for all other creatures, or you can make all creatures vulnerable to critical hits.
-
-## Sudden Death Mode
-
-This is a simple component designed to speed up the pace of combat. Both enemies and party members get half of their normal HP. Clerics get 1d4 HP per level instead of 1d8, an 18 Constitution only grants +2 HP per level instead of +4, and an enemy with 50 base HP will have 25 HP. The game balance should otherwise be identical, since enemies and party members are equally affected (overall difficulty should be roughly the same), but death will be much closer for both. The +80 HP from Heart of Fury mode is not affected by this component, so this component will work in the enemy's favor in HoF mode. Install this component if you're looking to make the game faster or more dangerous.
 
 ## Better Racial Enemies for Rangers
 
@@ -301,8 +295,6 @@ This component makes it so one only has to beat a rank once (with 3 or more squa
 
 Inspired by Weimer's similar component from IWD2-Ease, this component patches every armor and shield in the game so they give physical damage resistance equal to half their Armor Class bonus, rounded down. 
 
-## ChangeAIScript Fix
-
 ## Race Revisions
 
 Race Revisions gives some new abilities to certain races, to make them fit their archetypes better. For example, lightfoot halflings gain their Dexterity modifier (if higher than their Strength modifier) to the damage of slings and other throwing weapons. Rock gnomes gain a bonus to Intelligence rather than Constitution.
@@ -329,7 +321,7 @@ Early on in Heart of Fury Mode, it can be very difficult to get enemies to fail 
 
 ## Remove ability score bonuses of allied summoned creatures in Heart of Fury Mode
 
-In Heart of Fury Mode, allied summoned creatures also get HoF bonuses, and since you reach high level more quickly, summoned creature can be quite overpowered. This component makes it so summoned creatures don't gain the normal +10 to all ability scores that creatures on Heart of Fury Mode get, unless they are summoned by an enemy.
+In Heart of Fury Mode, allied summoned creatures also get HoF bonuses, and since you reach high level more quickly, summoned creatures can be quite overpowered. This component makes it so summoned creatures don't gain the normal +10 to all ability scores that creatures on Heart of Fury Mode get, unless they are summoned by an enemy.
 
 ## Have the party start with more experience on Heart of Fury Mode
 

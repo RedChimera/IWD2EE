@@ -1042,7 +1042,8 @@ function EXDAMAGE(effectData, creatureData)
 			damage = damage + math.floor((IEex_GetActorStat(sourceID, 36) - 10) / 2)
 		end
 		rogueLevel = IEex_GetActorStat(sourceID, 104)
-		if (rogueLevel > 0 or IEex_GetActorSpellState(sourceID, 192)) and bit32.band(savingthrow, 0x80000) and (IEex_GetActorSpellState(sourceID, 218) or (IEex_GetActorSpellState(sourceID, 217) and IEex_DirectionWithinCyclicRange(sourceID, targetID, 9)) or IEex_IsValidBackstabDirection(sourceID, targetID)) and IEex_GetActorStat(targetID, 96) == 0 and IEex_GetActorSpellState(targetID, 216) == false and (bit32.band(savingthrow, 0x20000) > 0 or bit32.band(savingthrow, 0x40000) > 0 or bit32.band(savingthrow, 0x800000) > 0 or (bit32.band(savingthrow, 0x40000) == 0 and IEex_GetActorSpellState(sourceID, 232))) then
+		local stateValue = bit32.bor(IEex_ReadDword(creatureData + 0x5BC), IEex_ReadDword(creatureData + 0x920))
+		if (rogueLevel > 0 or IEex_GetActorSpellState(sourceID, 192)) and bit32.band(savingthrow, 0x80000) and (IEex_GetActorSpellState(sourceID, 218) or (IEex_GetActorSpellState(sourceID, 217) and IEex_DirectionWithinCyclicRange(sourceID, targetID, 9)) or IEex_IsValidBackstabDirection(sourceID, targetID) or bit32.band(stateValue, 0x80140029) > 0) and IEex_GetActorStat(targetID, 96) == 0 and IEex_GetActorSpellState(targetID, 216) == false and (bit32.band(savingthrow, 0x20000) > 0 or bit32.band(savingthrow, 0x40000) > 0 or bit32.band(savingthrow, 0x800000) > 0 or (bit32.band(savingthrow, 0x40000) == 0 and IEex_GetActorSpellState(sourceID, 232))) then
 			isSneakAttack = true
 			if IEex_GetActorSpellState(sourceID, 217) then
 				if IEex_IsValidBackstabDirection(sourceID, targetID) then
@@ -3552,7 +3553,17 @@ function MESAFESP(effectData, creatureData)
 })
 	end
 end
+--[[
+MESPLPRT works similarly to opcode 290. It grants immunity to the spell if the target satisfies a condition.
 
+Values for special:
+0: The target gets immunity if they have protection from the opcode specified by parameter2.
+1: The target gets immunity if they have protection from the spell specified by parameter1 and parameter2.
+2: The target gets immunity if they have any of the states specified by parameter2.
+3: The target gets immunity if they have the spell state specified by parameter2.
+4: The target gets immunity if their stat specified by parameter2 satisfies a condition based on the last byte of parameter2.
+5:
+--]]
 function MESPLPRT(effectData, creatureData)
 	local sourceID = IEex_ReadDword(effectData + 0x10C)
 	local targetID = IEex_GetActorIDShare(creatureData)
@@ -3576,6 +3587,8 @@ function MESPLPRT(effectData, creatureData)
 		if (match_opcode == 39 and (targetRace == 2 or targetRace == 3 or targetRace == 183)) or ((match_opcode == 109 or match_opcode == 175) and ((targetRace == 4 and targetSubrace == 2) or targetRace == 185)) then
 			hasProtection = true
 		elseif ((match_opcode == 55 or match_opcode == 420) and IEex_GetActorSpellState(checkID, 8)) or ((match_opcode == 40 or match_opcode == 109 or match_opcode == 154 or match_opcode == 157 or match_opcode == 158 or match_opcode == 175 or match_opcode == 176) and IEex_GetActorSpellState(checkID, 29)) then
+			hasProtection = true
+		elseif ((match_opcode == 24 or match_opcode == 236) and IEex_GetActorStat(checkID, 102) >= 2) or (match_opcode == 25 and (IEex_GetActorStat(checkID, 99) >= 9 or IEex_GetActorStat(checkID, 101) >= 11)) or (match_opcode == 78 and (IEex_GetActorStat(checkID, 101) >= 5 or IEex_GetActorStat(checkID, 102) >= 1)) then
 			hasProtection = true
 		else
 			IEex_IterateActorEffects(checkID, function(eData)
