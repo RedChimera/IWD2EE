@@ -109,6 +109,18 @@ COPY_EXISTING ~usms006.spl~ ~override~
 	SAY NAME1 @24006
 	SAY NAME2 @24006
 
+COPY_EXISTING ~usms007.spl~ ~override~
+	SAY NAME1 @24007
+	SAY NAME2 @24007
+
+COPY_EXISTING ~usms008.spl~ ~override~
+	SAY NAME1 @24008
+	SAY NAME2 @24008
+
+COPY_EXISTING ~usms009.spl~ ~override~
+	SAY NAME1 @24009
+	SAY NAME2 @24009
+
 COPY_EXISTING ~sppr114.spl~ ~override/usip114.spl~ ~sppr250.spl~ ~override/usip250.spl~ ~sppr302.spl~ ~override/usip302.spl~ ~sppr350.spl~ ~override/usip350.spl~ ~sppr428.spl~ ~override/usip428.spl~ ~sppr517.spl~ ~override/usip517.spl~ ~sppr602.spl~ ~override/usip602.spl~ ~sppr704.spl~ ~override/usip704.spl~ ~sppr729.spl~ ~override/usip729.spl~ ~spwi211.spl~ ~override/usiw211.spl~ ~spwi220.spl~ ~override/usiw220.spl~ ~spwi316.spl~ ~override/usiw316.spl~ ~spwi318.spl~ ~override/usiw318.spl~ ~spwi404.spl~ ~override/usiw404.spl~ ~spwi405.spl~ ~override/usiw405.spl~ ~spwi411.spl~ ~override/usiw411.spl~ ~spwi419.spl~ ~override/usiw419.spl~ ~spwi424.spl~ ~override/usiw424.spl~ ~spwi504.spl~ ~override/usiw504.spl~ ~spwi507.spl~ ~override/usiw507.spl~ ~spwi509.spl~ ~override/usiw509.spl~ ~spwi605.spl~ ~override/usiw605.spl~ ~spwi612.spl~ ~override/usiw612.spl~ ~spwi615.spl~ ~override/usiw615.spl~ ~spwi617.spl~ ~override/usiw617.spl~ ~spwi705.spl~ ~override/usiw705.spl~ ~spwi708.spl~ ~override/usiw708.spl~ ~spwi808.spl~ ~override/usiw808.spl~ ~spwi810.spl~ ~override/usiw810.spl~ ~spwi910.spl~ ~override/usiw910.spl~
 	WRITE_SHORT 0x1c 2
 //	LPF ALTER_SPELL_HEADER INT_VAR location=4 END
@@ -2687,6 +2699,56 @@ COPY_EXISTING ~USSHADVO.itm~ ~override~ ~USWIGHTW.itm~ ~override~
 	SAY NAME1 @23002
 	SAY NAME2 @23002
 
+COPY_EXISTING ~USDREAML.cre~ ~override~
+	SAY NAME1 @23017
+	SAY NAME2 @23017
+
+COPY_EXISTING_REGEXP ~6[127]FEYR\.cre~ ~override~ ~62FEYR[23]\.cre~ ~override~
+	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelrogue=13 STR_VAR updatehp=~max~ END
+	WRITE_ASCII specialscript2 ~USFEYR~ #8
+	WRITE_BYTE enchantmentlevel 2
+	WRITE_SHORT armorclass 21
+	WRITE_BYTE strength 20
+	WRITE_BYTE dexterity 22
+	WRITE_BYTE constitution 16
+	WRITE_BYTE intelligence 21
+	WRITE_BYTE wisdom 24
+	WRITE_BYTE charisma 25
+	WRITE_BYTE slashingresistance (0 - 5)
+	WRITE_BYTE piercingresistance (0 - 5)
+	WRITE_BYTE spellresistance 26
+	WRITE_BYTE magicdamageresistance 30
+	READ_LONG feats2 ulgiash
+	ulgiash|=0x400000
+	WRITE_LONG feats2 ulgiash
+	WRITE_BYTE skillconcentration 16
+	WRITE_BYTE skillspellcraft 16
+	WRITE_BYTE proficiencymace 2
+	WRITE_BYTE challengerating 11
+	LPF	IWD2_ADD_CRE_ITEM INT_VAR equip=0 STR_VAR item=~USCWHFF1~ slot=~weapon1~ mode=~replace~ END
+
+
+COPY_EXISTING_REGEXP ~[04][01]SGFYR\.cre~ ~override~ ~[04][01]S[DS]HRP\.cre~ ~override~ ~[04][01]SSHHRP\.cre~ ~override~ ~6[127]GFYR\.cre~ ~override~ ~62GFYR[23]\.cre~ ~override~
+	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelrogue=19 STR_VAR updatehp=~max~ END
+	WRITE_BYTE enchantmentlevel 3
+	WRITE_SHORT armorclass 25
+	WRITE_BYTE strength 26
+	WRITE_BYTE dexterity 22
+	WRITE_BYTE constitution 19
+	WRITE_BYTE intelligence 27
+	WRITE_BYTE wisdom 26
+	WRITE_BYTE charisma 30
+	WRITE_BYTE spellresistance 32
+	WRITE_BYTE magicdamageresistance 50
+	READ_LONG feats2 ulgiash
+	ulgiash|=0x400000
+	WRITE_LONG feats2 ulgiash
+	WRITE_BYTE skillconcentration 22
+	WRITE_BYTE skillspellcraft 22
+	WRITE_BYTE proficiencymace 2
+	WRITE_BYTE challengerating 16
+	LPF	IWD2_ADD_CRE_ITEM INT_VAR equip=0 STR_VAR item=~USCWHFF2~ slot=~weapon1~ mode=~replace~ END
+
 COPY_EXISTING ~41SHERI.cre~ ~override~ ~41SHERI2.cre~ ~override~ ~41SHERI3.cre~ ~override~
 	WRITE_BYTE enchantmentlevel 1
 	WRITE_BYTE proficiencybow 3
@@ -3680,7 +3742,7 @@ COPY_EXISTING ~AR6200.are~ ~override~
 	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR actor_name=~Yuan-TiHalfbreed~ script_special2=~60YTPRIC~ END
 	LPF ALTER_AREA_ACTOR_IWD2 INT_VAR flag_difficulty_1=0 flag_difficulty_2=0 flag_difficulty_3=0 STR_VAR actor_name=~Half Dragon~ END
 	LPF ALTER_AREA_ACTOR_IWD2 INT_VAR flag_difficulty_1=1 flag_difficulty_2=1 flag_difficulty_3=1 STR_VAR actor_name=~HalfOrc2~ cre_file=~62HADR2~ script_combat=~62HADRC~ END
-	LPF ALTER_AREA_ACTOR_IWD2 INT_VAR flag_difficulty_1=0 flag_difficulty_2=0 flag_difficulty_3=1 STR_VAR actor_name=~IceZombie1~ cre_file=~USWIGHTW~ END
+	LPF ALTER_AREA_ACTOR_IWD2 INT_VAR flag_difficulty_1=0 flag_difficulty_2=0 flag_difficulty_3=1 STR_VAR actor_name=~IceZombie1~ cre_file=~USWIGHTW~ script_special2=~USWIGHTW~ END
 
 COPY_EXISTING ~AR6300.are~ ~override~
 	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR actor_name=~Guard_Commander~ script_combat=~USHDRBLU~ END
@@ -3723,6 +3785,10 @@ COPY_EXISTING ~AR6603.are~ ~override~
 COPY_EXISTING ~AR6700.are~ ~override~
 	LPF ALTER_AREA_ACTOR_IWD2 INT_VAR x_coord=556 y_coord=485 orient=0 STR_VAR actor_name=~EliteNeoOrog1~ cre_file=~USFOMGRN~ script_combat=~00AATBN~ END
 	LPF ALTER_AREA_ACTOR_IWD2 INT_VAR x_coord=659 y_coord=485 orient=0 STR_VAR actor_name=~EliteNeoOrog2~ cre_file=~USFOMGRN~ script_combat=~00AATBN~ END
+
+COPY_EXISTING ~AR6701.are~ ~override~
+	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR match_cre_file=~67SPLMRS~ cre_file=~67FEYR~ script_special2=~USFEYR~ END
+	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR match_cre_file=~67WLMRS~ cre_file=~67FEYR~ script_special2=~USFEYR~ END
 
 COPY_EXISTING ~AR6703.are~ ~override~
 	READ_LONG 0xCC songsoffset
@@ -3785,6 +3851,8 @@ USCWHFCO	USCWCRN1
 USCWHFCG	USCWCRN2
 USCWHFGL	USCWGLB1
 USCWHFLG	USCWGLB2
+USCWHFF1	USCWFEY1
+USCWHFF2	USCWFEY3
 ~
 UNLESS ~USCWHFMO~
 
@@ -3812,6 +3880,8 @@ USCWHFCO	USCWCRN2
 USCWHFCG	USCWCRN3
 USCWHFGL	USCWGLB2
 USCWHFLG	USCWGLB3
+USCWHFF1	USCWFEY2
+USCWHFF2	USCWFEY4
 ~
 UNLESS ~USCWHFMO~
 
