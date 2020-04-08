@@ -7,8 +7,8 @@ COPY_EXISTING_REGEXP ~sppr.*\.spl~ ~override~ ~spwi.*\.spl~ ~override~ ~uspr.*\.
 	TEXT_SPRINT thescrollres ~%SOURCE_RES%z~
 	INNER_ACTION BEGIN
 		COPY_EXISTING ~%thescrollres%.itm~ ~override~
-			WRITE_LONG NAME1 thespellnameref
-			WRITE_LONG UNIDENTIFIED_DESC thespelldescref
+			WRITE_LONG NAME2 thespellnameref
+			WRITE_LONG IDENTIFIED_DESC thespelldescref
 			READ_LONG 0x1E theunusability
 			PATCH_IF (theunusability BAND 0x00000400) = 0 BEGIN
 				READ_BYTE 0x2D thekitunusability3
@@ -36,12 +36,13 @@ COPY_EXISTING_REGEXP ~sppr.*\.spl~ ~override~ ~spwi.*\.spl~ ~override~ ~uspr.*\.
 
 				WRITE_BYTE 0x2D thekitunusability3
 				WRITE_BYTE 0x2F thekitunusability4
-				LPF DELETE_ITEM_EFFECT INT_VAR opcode_to_delete=147 END
-				LPF CLONE_EFFECT INT_VAR check_headers=1 check_globals=0 match_opcode=146 opcode=147 target=1 timing=1 parameter1=1 parameter2=0 STR_VAR insert=~below~ END
+//				LPF DELETE_ITEM_EFFECT INT_VAR opcode_to_delete=147 END
+//				LPF CLONE_EFFECT INT_VAR check_headers=1 check_globals=0 match_opcode=146 opcode=147 target=1 timing=1 parameter1=1 parameter2=0 STR_VAR insert=~below~ END
 			END
 			IF_EXISTS
 			BUT_ONLY_IF_IT_CHANGES
 	END
+	IF_EXISTS
 	BUT_ONLY_IF_IT_CHANGES
 
 // edited school descriptions

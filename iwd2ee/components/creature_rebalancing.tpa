@@ -2965,6 +2965,7 @@ COPY_EXISTING ~63GRDCOM.cre~ ~override~
 	WRITE_BYTE intelligence 18
 	WRITE_BYTE wisdom 8
 	WRITE_BYTE charisma 14
+	WRITE_BYTE elecresistance 100
 	WRITE_BYTE fortitudesave 13
 	WRITE_BYTE reflexsave 10
 	WRITE_BYTE willsave 13
