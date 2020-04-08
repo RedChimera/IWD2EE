@@ -2270,11 +2270,6 @@ COPY_EXISTING ~LISTSPLL.2da~ ~override~
 					WRITE_LONG 0x1E theunusability
 					BUT_ONLY_IF_IT_CHANGES
 
-				COPY_EXISTING ~%spell_res_ref%z.itm~ ~override~
-//					WRITE_LONG NAME2 name_ref
-					SAY_EVALUATED IDENTIFIED_DESC ~%description_new%~
-					IF_EXISTS
-					BUT_ONLY_IF_IT_CHANGES
 			END
 		END
 	END
@@ -2494,7 +2489,7 @@ COPY_EXISTING ~sppr103.spl~ ~override~ ~sppr214.spl~ ~override~ ~sppr401.spl~ ~o
 	BUT_ONLY_IF_IT_CHANGES
 
 //Patching all scrolls to be usable by the correct wizard kits.
-
+/*
 COPY_EXISTING_REGEXP ~sppr.*\.spl~ ~override~ ~spwi.*\.spl~ ~override~ ~uspr.*\.spl~ ~override~ ~uswi.*\.spl~ ~override~
 	READ_LONG NAME1 thespellnameref
 	READ_LONG UNIDENTIFIED_DESC thespelldescref
@@ -2510,25 +2505,7 @@ COPY_EXISTING_REGEXP ~sppr.*\.spl~ ~override~ ~spwi.*\.spl~ ~override~ ~uspr.*\.
 				READ_BYTE 0x2F thekitunusability4
 				thekitunusability3&=0xC0
 				thekitunusability4&=0x3F
-/*
-				PATCH_IF theschool = 1 BEGIN
-					thekitunusability3|=0x8
-				END ELSE PATCH_IF theschool = 2 BEGIN
-					thekitunusability3|=0x10
-				END ELSE PATCH_IF theschool = 3 BEGIN
-					thekitunusability3|=0x4
-				END ELSE PATCH_IF theschool = 4 BEGIN
-					thekitunusability3|=0x20
-				END ELSE PATCH_IF theschool = 5 BEGIN
-					thekitunusability3|=0x1
-				END ELSE PATCH_IF theschool = 6 BEGIN
-					thekitunusability4|=0x40
-				END ELSE PATCH_IF theschool = 7 BEGIN
-					thekitunusability4|=0x80
-				END ELSE PATCH_IF theschool = 8 BEGIN
-					thekitunusability3|=0x2
-				END
-*/
+
 				PATCH_IF theschool = 1 BEGIN
 					thekitunusability3|=0x24
 				END ELSE PATCH_IF theschool = 2 BEGIN
@@ -2555,7 +2532,9 @@ COPY_EXISTING_REGEXP ~sppr.*\.spl~ ~override~ ~spwi.*\.spl~ ~override~ ~uspr.*\.
 			BUT_ONLY_IF_IT_CHANGES
 	END
 	BUT_ONLY_IF_IT_CHANGES
+*/
 
+INCLUDE ~%mod_folder%/components/revise_opposing_schools.tpa~
 
 COPY_EXISTING_REGEXP ~sppr.*\.spl~ ~override~ ~spwi.*\.spl~ ~override~ ~uspr.*\.spl~ ~override~ ~uswi.*\.spl~ ~override~
 	READ_SHORT 0x94 thecastingtime ELSE 0
