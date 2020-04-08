@@ -6215,6 +6215,20 @@ function IEex_WritePatches()
 	]]})
 	IEex_WriteAssembly(fixUnequipOnRemove2, {"!jmp_dword", {fixUnequipOnRemove2Hook, 4, 4}})
 
+	-------------------------------------------------------------
+	-- Spell writability is now determined by scroll usability --
+	-------------------------------------------------------------
+
+	local writableCheckAddress = 0x62995B
+	local writableCheckHook = IEex_WriteAssemblyAuto({[[
+		!add_esp_byte 04
+		!mov_eax_[esp+byte] 14
+		!push_eax
+		!push_edx
+		!call :5BA080
+		!jmp_dword ]], {writableCheckAddress + 0x5, 4, 4}, [[
+	]]})
+	IEex_WriteAssembly(writableCheckAddress, {"!jmp_dword", {writableCheckHook, 4, 4}})
 
 
 	IEex_EnableCodeProtection()
