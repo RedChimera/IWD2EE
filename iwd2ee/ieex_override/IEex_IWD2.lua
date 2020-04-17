@@ -6,6 +6,119 @@ end
 dofile("override/IEex_TRA.lua")
 dofile("override/IEex_WEIDU.lua")
 
+----------
+-- DIMM --
+----------
+
+function IEex_FileExtensionToType(extension)
+
+	local extensions = {
+		["2DA"]  = 0x3F4, -- CResText
+		["ARE"]  = 0x3F2, -- CResArea
+		["BAM"]  = 0x3E8, -- CResCell
+		["BCS"]  = 0x3EF, -- CResText
+		["BIO"]  = 0x3FE, -- CResBIO
+		["BMP"]  = 0x1  , -- CResBitmap
+		["BS"]   = 0x3F9, -- CResText
+		["CHR"]  = 0x3FA, -- CResCHR
+		["CHU"]  = 0x3EA, -- CResUI
+		["CRE"]  = 0x3F1, -- CResCRE
+		["DLG"]  = 0x3F3, -- CResDLG
+		["EFF"]  = 0x3F8, -- CResEffect
+		["GAM"]  = 0x3F5, -- CResGame
+		["GLSL"] = 0x405, -- CResText
+		["GUI"]  = 0x402, -- CResText
+		["IDS"]  = 0x3F0, -- CResText
+		["INI"]  = 0x802, -- CRes(???)
+		["ITM"]  = 0x3ED, -- CResItem
+		["LUA"]  = 0x409, -- CResText
+		["MENU"] = 0x408, -- CResText
+		["MOS"]  = 0x3EC, -- CResMosaic
+		["MVE"]  = 0x2  , -- CRes(???)
+		["PLT"]  = 0x6  , -- CResPLT
+		["PNG"]  = 0x40B, -- CResPng
+		["PRO"]  = 0x3FD, -- CResBinary
+		["PVRZ"] = 0x404, -- CResPVR
+		["SPL"]  = 0x3EE, -- CResSpell
+		["SQL"]  = 0x403, -- CResText
+		["STO"]  = 0x3F6, -- CResStore
+		["TGA"]  = 0x3  , -- CRes(???)
+		["TIS"]  = 0x3EB, -- CResTileSet
+		["TOH"]  = 0x407, -- CRes(???)
+		["TOT"]  = 0x406, -- CRes(???)
+		["TTF"]  = 0x40A, -- CResFont
+		["VEF"]  = 0x3FC, -- CResBinary
+		["VVC"]  = 0x3FB, -- CResBinary
+		["WAV"]  = 0x4  , -- CResWave
+		["WBM"]  = 0x3FF, -- CResWebm
+		["WED"]  = 0x3E9, -- CResWED
+		["WFX"]  = 0x5  , -- CResBinary
+		["WMP"]  = 0x3F7, -- CResWorldMap
+	}
+
+	return extensions[extension:upper()]
+
+end
+
+function IEex_GetResourceManager()
+	return IEex_ReadDword(0x8CF6D8) + 0x542
+end
+
+IEex_ResWrapper = {}
+IEex_ResWrapper.__index = IEex_ResWrapper
+
+function IEex_ResWrapper:isValid()
+	return self.pData ~= 0x0
+end
+
+function IEex_ResWrapper:getData()
+	return self.pData
+end
+
+function IEex_ResWrapper:free()
+	local pRes = self.pRes
+	if pRes ~= 0x0 then
+		-- CRes_Dump (opposite of demand)
+		IEex_Call(0x77E5F0, {}, pRes, 0x0)
+		-- CRes_Unload (opposite of load)
+		IEex_Call(0x77E370, {}, pRes, 0x0)
+		-- CResourceManager_DumpRes (opposite of dimmGetResObject)
+		IEex_Call(0x787CE0, {pRes}, IEex_GetResourceManager(), 0x0)
+		self.pRes = 0x0
+		self.pData = 0x0
+	end
+end
+
+function IEex_ResWrapper:init(pRes)
+	self.pRes = pRes
+	self.pData = pRes ~= 0x0 and IEex_ReadDword(pRes + 0x8) or 0x0
+end
+
+function IEex_ResWrapper:new(pRes, o)
+	local o = o or {}
+	setmetatable(o, self)
+	o:init(pRes)
+	return o
+end
+
+function IEex_DemandRes(resref, extension)
+
+	local resrefMem = IEex_Malloc(0x8)
+	IEex_WriteLString(resrefMem, resref, 8)
+	-- dimmGetResObject
+	local pRes = IEex_Call(0x786DF0, {1, IEex_FileExtensionToType(extension), resrefMem}, IEex_GetResourceManager(), 0x0)
+	IEex_Free(resrefMem)
+
+	if pRes ~= 0x0 then
+		-- CRes_Load
+		IEex_Call(0x77E610, {}, pRes, 0x0)
+		-- CRes_Demand
+		IEex_Call(0x77E390, {}, pRes, 0x0)
+	end
+
+	return IEex_ResWrapper:new(pRes)
+end
+
 ------------------------
 -- Actor Manipulation --
 ------------------------
@@ -4961,8 +5074,8 @@ function MENPCXP(effectData, creatureData)
 end
 
 function MENOSUST(effectData, creatureData)
-	EEex_WriteDword(creatureData + 0x5BC, bit32.band(IEex_ReadDword(creatureData + 0x5BC), 0xEFFFFFFF))
-	EEex_WriteDword(creatureData + 0x920, bit32.band(IEex_ReadDword(creatureData + 0x920), 0xEFFFFFFF))
+	IEex_WriteDword(creatureData + 0x5BC, bit32.band(IEex_ReadDword(creatureData + 0x5BC), 0xEFFFFFFF))
+	IEex_WriteDword(creatureData + 0x920, bit32.band(IEex_ReadDword(creatureData + 0x920), 0xEFFFFFFF))
 end
 
 function MESUCREA(effectData, creatureData)
