@@ -71,6 +71,14 @@ function IEex_ResWrapper:isValid()
 	return self.pData ~= 0x0
 end
 
+function IEex_ResWrapper:getResRef()
+	return self.resref
+end
+
+function IEex_ResWrapper:getRes()
+	return self.pRes
+end
+
 function IEex_ResWrapper:getData()
 	return self.pData
 end
@@ -84,20 +92,22 @@ function IEex_ResWrapper:free()
 		IEex_Call(0x77E370, {}, pRes, 0x0)
 		-- CResourceManager_DumpRes (opposite of dimmGetResObject)
 		IEex_Call(0x787CE0, {pRes}, IEex_GetResourceManager(), 0x0)
+		self.resref = ""
 		self.pRes = 0x0
 		self.pData = 0x0
 	end
 end
 
-function IEex_ResWrapper:init(pRes)
+function IEex_ResWrapper:init(resref, pRes)
+	self.resref = resref
 	self.pRes = pRes
 	self.pData = pRes ~= 0x0 and IEex_ReadDword(pRes + 0x8) or 0x0
 end
 
-function IEex_ResWrapper:new(pRes, o)
+function IEex_ResWrapper:new(resref, pRes, o)
 	local o = o or {}
 	setmetatable(o, self)
-	o:init(pRes)
+	o:init(resref, pRes)
 	return o
 end
 
@@ -116,7 +126,48 @@ function IEex_DemandRes(resref, extension)
 		IEex_Call(0x77E390, {}, pRes, 0x0)
 	end
 
-	return IEex_ResWrapper:new(pRes)
+	return IEex_ResWrapper:new(resref, pRes)
+end
+
+function IEex_DemandCItem(resref)
+
+	local resrefMem = IEex_Malloc(0x8)
+	IEex_WriteLString(resrefMem, resref, 8)
+
+	local CItem = IEex_Malloc(0xEE)
+	-- CItem_Construct
+	IEex_Call(0x4E7E90, {
+		0x0, -- flags
+		0x0, -- wear
+		0x0, -- useCount3
+		0x0, -- useCount2
+		0x0, -- useCount1
+		IEex_ReadDword(resrefMem + 0x4), -- resref (2/2)
+		IEex_ReadDword(resrefMem + 0x0), -- resref (1/2)
+	}, CItem, 0x0)
+
+	-- CResItem_Demand
+	IEex_Call(0x4015B0, {}, IEex_ReadDword(CItem + 0x8), 0x0)
+	IEex_Free(resrefMem)
+
+	return CItem
+end
+
+function IEex_DumpCItem(CItem)
+	-- CResItem_Dump
+	IEex_Call(0x401BA0, {}, IEex_ReadDword(CItem + 0x8), 0x0)
+	-- CItem_Dump (handles both CRes_Unload and CResourceManager_DumpRes)
+	IEex_Call(0x4E8180, {}, CItem, 0x0)
+	IEex_Free(CItem)
+end
+
+function IEex_CanSpriteUseItem(sprite, resref)
+	local CItem = IEex_DemandCItem(resref)
+	local junkPtr = IEex_Malloc(0x4)
+	local result = IEex_Call(0x5B9D20, {0x0, junkPtr, CItem, sprite}, IEex_GetGameData(), 0x0)
+	IEex_Free(junkPtr)
+	IEex_DumpCItem(CItem)
+	return result == 1
 end
 
 ------------------------
@@ -5502,6 +5553,88 @@ IEex_NEW_FEATS_SIZE  = nil
 ---------------
 
 function IEex_LoadResources()
+	IEex_IndexAllResources()
+	IEex_MapSpellsToScrolls()
+	IEex_LoadInitial2DAs()
+	IEex_WriteDelayedPatches()
+end
+
+function IEex_IndexAllResources()
+
+	IEex_IndexedResources = {}
+
+	local unknownSubstruct = IEex_GetResourceManager() + 0x24C
+	local unknownSubstruct2 = IEex_ReadDword(unknownSubstruct + 0x10)
+
+	local limit = IEex_ReadDword(unknownSubstruct + 0xC)
+	local currentIndex = 0
+	local currentAddress = 0
+
+	while currentIndex ~= limit do
+		local resref = IEex_ReadLString(unknownSubstruct2 + currentAddress, 8)
+		if resref ~= "" then
+			local type = IEex_ReadWord(unknownSubstruct2 + currentAddress + 0x12, 0)
+			local typeBucket = IEex_IndexedResources[type]
+			if not typeBucket then
+				typeBucket = {}
+				IEex_IndexedResources[type] = typeBucket
+			end
+			table.insert(typeBucket, resref)
+		end
+		currentIndex = currentIndex + 1
+		currentAddress = currentAddress + 0x18
+	end
+
+	for type, bucket in pairs(IEex_IndexedResources) do
+		table.sort(bucket)
+	end
+
+end
+
+function IEex_MapSpellsToScrolls()
+
+	IEex_SpellToScroll = {}
+
+	for i, resref in ipairs(IEex_IndexedResources[IEex_FileExtensionToType("ITM")]) do
+
+		local prefix = resref:sub(1, 4)
+		if prefix == "SPWI" or prefix == "SPPR" then
+
+			local resWrapper = IEex_DemandRes(resref, "ITM")
+
+			if resWrapper:isValid() then
+
+				local data = resWrapper:getData()
+				local category = IEex_ReadWord(data + 0x1C, 0)
+				local abilitiesNum = IEex_ReadWord(data + 0x68, 0)
+
+				if category == 11 and abilitiesNum >= 2 then
+
+					local secondAbilityAddress = data + IEex_ReadDword(data + 0x64) + 0x38
+					local secondAbilityEffectCount = IEex_ReadWord(secondAbilityAddress + 0x1E, 0)
+
+					if secondAbilityEffectCount >= 1 then
+						local effectIndex = IEex_ReadWord(secondAbilityAddress + 0x20, 0)
+						local effectAddress = data + IEex_ReadDword(data + 0x6A) + effectIndex * 0x30
+						if IEex_ReadWord(effectAddress, 0) == 147 then
+							local spellResref = IEex_ReadLString(effectAddress + 0x14, 8)
+							IEex_SpellToScroll[spellResref:upper()] = resref
+						end
+					end
+				end
+
+				resWrapper:free()
+
+			else
+				local message = "[IEex_MapSpellsToScrolls] Critical Error: "..resref..".ITM couldn't be accessed."
+				print(message)
+				IEex_MessageBox(message)
+			end
+		end
+	end
+end
+
+function IEex_LoadInitial2DAs()
 
 	IEex_Loaded2DAs = {}
 
@@ -5521,8 +5654,6 @@ function IEex_LoadResources()
 
 	IEex_NEW_FEATS_MAXID = previousID
 	IEex_NEW_FEATS_SIZE = IEex_NEW_FEATS_MAXID + 1
-
-	IEex_WriteDelayedPatches()
 
 end
 
@@ -6332,17 +6463,112 @@ function IEex_WritePatches()
 	-- Spell writability is now determined by scroll usability --
 	-------------------------------------------------------------
 
-	local writableCheckAddress = 0x62995B
+	IEex_Extern_CSpell_UsableBySprite = function(CSpell, sprite)
+
+		local resref = IEex_ReadLString(CSpell + 0x8, 8)
+
+		local scrollResref = IEex_SpellToScroll[resref]
+		local resWrapper = nil
+		local scrollError = false
+
+		if scrollResref then
+			resWrapper = IEex_DemandRes(scrollResref, "ITM")
+			if not resWrapper:isValid() then scrollError = true end
+		else
+			scrollError = true
+		end
+
+		if scrollError then
+			local message = "[IEex_Extern_CSpell_UsableBySprite] Critical Error: "..resref..".SPL doesn't have a valid scroll!"
+			print(message)
+			IEex_MessageBox(message)
+			return true
+		end
+
+		local itemResRef = resWrapper:getResRef()
+		local itemRes = resWrapper:getRes()
+		local itemData = resWrapper:getData()
+
+		local kit = IEex_GetActorStat(IEex_GetActorIDShare(sprite), 89)
+
+		local mageKits = bit32.band(kit, 0x7FC0)
+		local unusableKits = IEex_Flags({
+			bit32.lshift(IEex_ReadByte(itemData + 0x29, 0), 24),
+			bit32.lshift(IEex_ReadByte(itemData + 0x2B, 0), 16),
+			bit32.lshift(IEex_ReadByte(itemData + 0x2D, 0), 8),
+			IEex_ReadByte(itemData + 0x2F, 0)
+		})
+
+		resWrapper:free()
+
+		if bit32.band(unusableKits, mageKits) ~= 0x0 then
+			-- Mage kit was explicitly excluded
+			return false
+		end
+
+		return IEex_CanSpriteUseItem(sprite, itemResRef)
+
+	end
+
+	local writableCheckAddress = 0x54AA40
 	local writableCheckHook = IEex_WriteAssemblyAuto({[[
-		!add_esp_byte 04
-		!mov_eax_[esp+byte] 14
+
+		!push_registers_iwd2
+
+		; push sprite ;
+		!push_[esp+byte] 1C
+		; push CSpell ;
+		!push_ecx
+
+		!push_dword ]], {IEex_WriteStringAuto("IEex_Extern_CSpell_UsableBySprite"), 4}, [[
+		!push_dword *_g_lua
+		!call >_lua_getglobal
+		!add_esp_byte 08
+
+		; CSpell ;
+		!fild_[esp]
+		!sub_esp_byte 04
+		!fstp_qword:[esp]
+		!push_dword *_g_lua
+		!call >_lua_pushnumber
+		!add_esp_byte 0C
+
+		; sprite ;
+		!fild_[esp]
+		!sub_esp_byte 04
+		!fstp_qword:[esp]
+		!push_dword *_g_lua
+		!call >_lua_pushnumber
+		!add_esp_byte 0C
+
+		!push_byte 00
+		!push_byte 00
+		!push_byte 00
+		!push_byte 01
+		!push_byte 02
+		!push_dword *_g_lua
+		!call >_lua_pcallk
+		!add_esp_byte 18
+
+		!push_byte FF
+		!push_dword *_g_lua
+		!call >_lua_toboolean
+		!add_esp_byte 08
+
 		!push_eax
-		!push_edx
-		!call :5BA080
-		!jmp_dword ]], {writableCheckAddress + 0x5, 4, 4}, [[
+
+		!push_byte FE
+		!push_dword *_g_lua
+		!call >_lua_settop
+		!add_esp_byte 08
+
+		!pop_eax
+
+		!pop_registers_iwd2
+		!ret_word 04 00
+
 	]]})
 	IEex_WriteAssembly(writableCheckAddress, {"!jmp_dword", {writableCheckHook, 4, 4}})
-
 
 	IEex_EnableCodeProtection()
 
