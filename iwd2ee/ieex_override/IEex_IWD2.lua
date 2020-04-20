@@ -6,6 +6,202 @@ end
 dofile("override/IEex_TRA.lua")
 dofile("override/IEex_WEIDU.lua")
 
+----------------
+-- Spell List --
+----------------
+
+IEex_CasterType = {
+	["Bard"] = 1,
+	["Cleric"] = 2,
+	["Druid"] = 3,
+	["Paladin"] = 4,
+	["Ranger"] = 5,
+	["Sorcerer"] = 6,
+	["Wizard"] = 7,
+	["Domain"] = 8,
+	["Innate"] = 9,
+	["Song"] = 10,
+	["Shape"] = 11,
+}
+
+function IEex_SetSpellInfo(actorID, casterType, spellLevel, resref, memorizedCount, castableCount)
+
+	local memMod = memorizedCount
+	local castMod = castableCount
+
+	local typeInfo = IEex_FetchSpellInfo(actorID, {casterType})
+	local levelFill = typeInfo and typeInfo[casterType][spellLevel] or nil
+	if levelFill then
+		for _, entry in ipairs(levelFill) do
+			if entry.resref == resref then
+				memMod = memorizedCount - entry.memorizedCount
+				castMod = castableCount - entry.castableCount
+				break
+			end
+		end
+	end
+
+	IEex_AlterSpellInfo(actorID, casterType, spellLevel, resref, memMod, castMod)
+
+end
+
+function IEex_AlterSpellInfo(actorID, casterType, spellLevel, resref, memorizeMod, castableMod)
+
+	if casterType < 1 or casterType > 11 then
+		local message = "[IEex_AlterSpellInfo] Critical Caller Error: casterType out of bounds - got "..casterType.."; valid range includes [1,11]"
+		print(message)
+		IEex_MessageBox(message)
+		return
+	end
+
+	local levelCheck = function(lower, higher)
+		if spellLevel < lower or spellLevel > higher then
+			local message = "[IEex_AlterSpellInfo] Critical Caller Error: spellLevel out of bounds - got "..spellLevel.." for type "..casterType.."; valid range includes ["..lower..","..higher.."]"
+			print(message)
+			IEex_MessageBox(message)
+			return false
+		end
+		return true
+	end
+
+	if casterType <= 8 then
+		if not levelCheck(1, 9) then return end
+	else
+		if not levelCheck(1, 1) then return end
+	end
+
+	local share = IEex_GetActorShare(actorID)
+
+	local normal = function(casterType)
+		return 0x4284 + (casterType - 1) * 0x100, IEex_LISTSPLL_Reverse
+	end
+
+	local switch = {
+		[1]  = normal,
+		[2]  = normal,
+		[3]  = normal,
+		[4]  = normal,
+		[5]  = normal,
+		[6]  = normal,
+		[7]  = normal,
+		[8]  = function(t) return 0x4984, IEex_LISTSPLL_Reverse end,
+		[9]  = function(t) return 0x4A84, IEex_LISTINNT_Reverse end,
+		[10] = function(t) return 0x4AA0, IEex_LISTSONG_Reverse end,
+		[11] = function(t) return 0x4ABC, IEex_LISTSHAP_Reverse end,
+	}
+
+	local offset, list = switch[casterType](casterType)
+	local baseTypeAddress = share + offset
+	local address = baseTypeAddress + (spellLevel - 1) * 0x1C
+
+	local id = list[resref]
+	if not id then
+		local message = "[IEex_AlterSpellInfo] Critical Caller Error: resref \""..resref.."\" not present in corresponding master spell-list 2DA"
+		print(message)
+		IEex_MessageBox(message)
+		return
+	end
+
+	local ptrMem = IEex_Malloc(0x10)
+	IEex_WriteDword(ptrMem, id)
+	IEex_WriteDword(ptrMem + 0x4, memorizeMod)
+	IEex_WriteDword(ptrMem + 0x8, castableMod)
+	IEex_WriteDword(ptrMem + 0xC, 0x0)
+
+	IEex_Call(0x725950, {
+		ptrMem + 0xC,
+		ptrMem + 0x8,
+		ptrMem + 0x4,
+		ptrMem
+	}, address, 0x0)
+
+	if casterType <= 8 then
+		local maxActiveLevelAddress = baseTypeAddress + 0xFC
+		if IEex_ReadDword(maxActiveLevelAddress) < spellLevel then
+			IEex_WriteDword(maxActiveLevelAddress, spellLevel)
+		end
+	end
+
+	IEex_Free(ptrMem)
+
+end
+
+function IEex_FetchSpellInfo(actorID, casterTypes)
+
+	for _, casterType in ipairs(casterTypes) do
+		if casterType < 1 or casterType > 11 then
+			local message = "[IEex_FetchSpellInfo] Critical Caller Error: casterType out of bounds - got "..casterType.."; valid range includes [1,11]"
+			print(message)
+			IEex_MessageBox(message)
+			return
+		end
+	end
+
+	local toReturn = {}
+	local share = IEex_GetActorShare(actorID)
+
+	local dataFromEntry = function(address, t)
+		return {
+			["resref"] = t[IEex_ReadDword(address)],
+			["memorizedCount"] = IEex_ReadDword(address + 0x4),
+			["castableCount"] = IEex_ReadDword(address + 0x8),
+		}
+	end
+
+	local genLevel = function(address, t)
+		local levelFill = {}
+		local currentEntryBase = IEex_ReadDword(address + 0x4)
+		local pEndEntry = IEex_ReadDword(address + 0x8)
+		while currentEntryBase ~= pEndEntry do
+			table.insert(levelFill, dataFromEntry(currentEntryBase, t))
+			currentEntryBase = currentEntryBase + 0x10
+		end
+		return levelFill
+	end
+
+	local typeFill = function(currentLevelBase, casterType)
+		local typeFill = {}
+		for level = 1, 9, 1 do
+			local levelFill = genLevel(currentLevelBase, IEex_LISTSPLL)
+			table.insert(typeFill, levelFill)
+			currentLevelBase = currentLevelBase + 0x1C
+		end
+		toReturn[casterType] = typeFill
+	end
+
+	local levelFill = function(currentLevelBase, casterType, t)
+		local typeFill = {}
+		local levelFill = genLevel(currentLevelBase, t)
+		table.insert(typeFill, levelFill)
+		toReturn[casterType] = typeFill
+	end
+
+	local normal = function(casterType)
+		typeFill(share + 0x4284 + (casterType - 1) * 0x100, casterType)
+	end
+
+	local switch = {
+		[1]  = normal,
+		[2]  = normal,
+		[3]  = normal,
+		[4]  = normal,
+		[5]  = normal,
+		[6]  = normal,
+		[7]  = normal,
+		[8]  = function(type) typeFill(share + 0x4984, type) end,
+		[9]  = function(type) levelFill(share + 0x4A84, type, IEex_LISTINNT) end,
+		[10] = function(type) levelFill(share + 0x4AA0, type, IEex_LISTSONG) end,
+		[11] = function(type) levelFill(share + 0x4ABC, type, IEex_LISTSHAP) end,
+	}
+
+	for _, casterType in ipairs(casterTypes) do
+		switch[casterType](casterType)
+	end
+
+	return toReturn
+
+end
+
 ----------
 -- DIMM --
 ----------
@@ -5552,11 +5748,58 @@ IEex_NEW_FEATS_SIZE  = nil
 -- Functions --
 ---------------
 
-function IEex_LoadResources()
+function IEex_Stage1Startup()
 	IEex_IndexAllResources()
 	IEex_MapSpellsToScrolls()
 	IEex_LoadInitial2DAs()
 	IEex_WriteDelayedPatches()
+end
+
+function IEex_Stage2Startup()
+	IEex_IndexMasterSpellLists()
+end
+
+function IEex_IndexMasterSpellLists()
+
+	local index = function(address, t, r)
+
+		local currentAddress = IEex_ReadDword(address)
+		local limit = IEex_ReadDword(address + 0x4) - 1
+
+		if limit >= 0 then
+			local resref = IEex_ReadLString(currentAddress, 8)
+			t[0] = resref
+			r[resref] = 0
+			currentAddress = currentAddress + 0x8
+		end
+
+		for i = 1, limit, 1 do
+			local resref = IEex_ReadLString(currentAddress, 8)
+			table.insert(t, resref)
+			r[resref] = i
+			currentAddress = currentAddress + 0x8
+		end
+
+	end
+
+	local data = IEex_GetGameData()
+
+	IEex_LISTSPLL = {}
+	IEex_LISTSPLL_Reverse = {}
+	index(data + 0x4BF8, IEex_LISTSPLL, IEex_LISTSPLL_Reverse)
+
+	IEex_LISTINNT = {}
+	IEex_LISTINNT_Reverse = {}
+	index(data + 0x4C00, IEex_LISTINNT, IEex_LISTINNT_Reverse)
+
+	IEex_LISTSONG = {}
+	IEex_LISTSONG_Reverse = {}
+	index(data + 0x4C08, IEex_LISTSONG, IEex_LISTSONG_Reverse)
+
+	IEex_LISTSHAP = {}
+	IEex_LISTSHAP_Reverse = {}
+	index(data + 0x4C10, IEex_LISTSHAP, IEex_LISTSHAP_Reverse)
+
 end
 
 function IEex_IndexAllResources()
@@ -6247,17 +6490,17 @@ function IEex_WritePatches()
 
 	IEex_DisableCodeProtection()
 
-	-------------------------
-	-- Resources Load Hook --
-	-------------------------
+	---------------------
+	-- Stage 1 Startup --
+	---------------------
 
-	local loadResourcesHookAddress = 0x59CC58
-	local loadResourcesHook = IEex_WriteAssemblyAuto({[[
+	local stage1StartupHookAddress = 0x59CC58
+	local stage1StartupHook = IEex_WriteAssemblyAuto({[[
 
 		!call :53CB60
 		!push_all_registers_iwd2
 
-		!push_dword ]], {IEex_WriteStringAuto("IEex_LoadResources"), 4}, [[
+		!push_dword ]], {IEex_WriteStringAuto("IEex_Stage1Startup"), 4}, [[
 		!push_dword *_g_lua
 		!call >_lua_getglobal
 		!add_esp_byte 08
@@ -6272,10 +6515,40 @@ function IEex_WritePatches()
 		!add_esp_byte 18
 
 		!pop_all_registers_iwd2
-		!jmp_dword ]], {loadResourcesHookAddress + 0x5, 4, 4},
+		!jmp_dword ]], {stage1StartupHookAddress + 0x5, 4, 4},
 
 	})
-	IEex_WriteAssembly(loadResourcesHookAddress, {"!jmp_dword", {loadResourcesHook, 4, 4}})
+	IEex_WriteAssembly(stage1StartupHookAddress, {"!jmp_dword", {stage1StartupHook, 4, 4}})
+
+	---------------------
+	-- Stage 2 Startup --
+	---------------------
+
+	local stage2StartupHookAddress = 0x421BA9
+	local stage2StartupHook = IEex_WriteAssemblyAuto({[[
+
+		!call :423800
+		!push_all_registers_iwd2
+
+		!push_dword ]], {IEex_WriteStringAuto("IEex_Stage2Startup"), 4}, [[
+		!push_dword *_g_lua
+		!call >_lua_getglobal
+		!add_esp_byte 08
+
+		!push_byte 00
+		!push_byte 00
+		!push_byte 00
+		!push_byte 00
+		!push_byte 00
+		!push_dword *_g_lua
+		!call >_lua_pcallk
+		!add_esp_byte 18
+
+		!pop_all_registers_iwd2
+		!jmp_dword ]], {stage2StartupHookAddress + 0x5, 4, 4},
+
+	})
+	IEex_WriteAssembly(stage2StartupHookAddress, {"!jmp_dword", {stage2StartupHook, 4, 4}})
 
 	---------------------------------------------------------
 	-- Fix non-player animations crashing when leveling up --
