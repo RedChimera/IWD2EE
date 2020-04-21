@@ -786,13 +786,10 @@ function IEex_CompareActorAllegiances(actorID1, actorID2)
 end
 
 function IEex_IsSprite(actorID, allowDead)
-	if actorID > 0 then
-		local share = IEex_GetActorShare(actorID)
-		if IEex_ReadByte(share + 0x4, 0) == 0x31 then
-			return allowDead or bit32.band(IEex_ReadDword(share + 0x434), 0xFC0) == 0x0
-		end
-	end
-	return false
+	local share = IEex_GetActorShare(actorID)
+	return share ~= 0x0 -- share != NULL
+	   and IEex_ReadByte(share + 0x4, 0) == 0x31 -- m_objectType == TYPE_SPRITE
+	   and (allowDead or bit32.band(IEex_ReadDword(share + 0x5BC), 0xFC0) == 0x0) -- allowDead or Status (not includes) STATE_*_DEATH
 end
 
 ----------------
