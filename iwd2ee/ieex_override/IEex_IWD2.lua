@@ -6,6 +6,366 @@ end
 dofile("override/IEex_TRA.lua")
 dofile("override/IEex_WEIDU.lua")
 
+----------------
+-- Spell List --
+----------------
+
+IEex_CasterType = {
+	["Bard"] = 1,
+	["Cleric"] = 2,
+	["Druid"] = 3,
+	["Paladin"] = 4,
+	["Ranger"] = 5,
+	["Sorcerer"] = 6,
+	["Wizard"] = 7,
+	["Domain"] = 8,
+	["Innate"] = 9,
+	["Song"] = 10,
+	["Shape"] = 11,
+}
+
+function IEex_SetSpellInfo(actorID, casterType, spellLevel, resref, memorizedCount, castableCount)
+
+	local memMod = memorizedCount
+	local castMod = castableCount
+
+	local typeInfo = IEex_FetchSpellInfo(actorID, {casterType})
+	local levelFill = typeInfo and typeInfo[casterType][spellLevel] or nil
+	if levelFill then
+		for _, entry in ipairs(levelFill) do
+			if entry.resref == resref then
+				memMod = memorizedCount - entry.memorizedCount
+				castMod = castableCount - entry.castableCount
+				break
+			end
+		end
+	end
+
+	IEex_AlterSpellInfo(actorID, casterType, spellLevel, resref, memMod, castMod)
+
+end
+
+function IEex_AlterSpellInfo(actorID, casterType, spellLevel, resref, memorizeMod, castableMod)
+
+	if casterType < 1 or casterType > 11 then
+		local message = "[IEex_AlterSpellInfo] Critical Caller Error: casterType out of bounds - got "..casterType.."; valid range includes [1,11]"
+		print(message)
+		IEex_MessageBox(message)
+		return
+	end
+
+	local levelCheck = function(lower, higher)
+		if spellLevel < lower or spellLevel > higher then
+			local message = "[IEex_AlterSpellInfo] Critical Caller Error: spellLevel out of bounds - got "..spellLevel.." for type "..casterType.."; valid range includes ["..lower..","..higher.."]"
+			print(message)
+			IEex_MessageBox(message)
+			return false
+		end
+		return true
+	end
+
+	if casterType <= 8 then
+		if not levelCheck(1, 9) then return end
+	else
+		if not levelCheck(1, 1) then return end
+	end
+
+	local share = IEex_GetActorShare(actorID)
+
+	local normal = function(casterType)
+		return 0x4284 + (casterType - 1) * 0x100, IEex_LISTSPLL_Reverse
+	end
+
+	local switch = {
+		[1]  = normal,
+		[2]  = normal,
+		[3]  = normal,
+		[4]  = normal,
+		[5]  = normal,
+		[6]  = normal,
+		[7]  = normal,
+		[8]  = function(t) return 0x4984, IEex_LISTSPLL_Reverse end,
+		[9]  = function(t) return 0x4A84, IEex_LISTINNT_Reverse end,
+		[10] = function(t) return 0x4AA0, IEex_LISTSONG_Reverse end,
+		[11] = function(t) return 0x4ABC, IEex_LISTSHAP_Reverse end,
+	}
+
+	local offset, list = switch[casterType](casterType)
+	local baseTypeAddress = share + offset
+	local address = baseTypeAddress + (spellLevel - 1) * 0x1C
+
+	local id = list[resref]
+	if not id then
+		local message = "[IEex_AlterSpellInfo] Critical Caller Error: resref \""..resref.."\" not present in corresponding master spell-list 2DA"
+		print(message)
+		IEex_MessageBox(message)
+		return
+	end
+
+	local ptrMem = IEex_Malloc(0x10)
+	IEex_WriteDword(ptrMem, id)
+	IEex_WriteDword(ptrMem + 0x4, memorizeMod)
+	IEex_WriteDword(ptrMem + 0x8, castableMod)
+	IEex_WriteDword(ptrMem + 0xC, 0x0)
+
+	IEex_Call(0x725950, {
+		ptrMem + 0xC,
+		ptrMem + 0x8,
+		ptrMem + 0x4,
+		ptrMem
+	}, address, 0x0)
+
+	if casterType <= 8 then
+		local maxActiveLevelAddress = baseTypeAddress + 0xFC
+		if IEex_ReadDword(maxActiveLevelAddress) < spellLevel then
+			IEex_WriteDword(maxActiveLevelAddress, spellLevel)
+		end
+	end
+
+	IEex_Free(ptrMem)
+
+end
+
+function IEex_FetchSpellInfo(actorID, casterTypes)
+
+	for _, casterType in ipairs(casterTypes) do
+		if casterType < 1 or casterType > 11 then
+			local message = "[IEex_FetchSpellInfo] Critical Caller Error: casterType out of bounds - got "..casterType.."; valid range includes [1,11]"
+			print(message)
+			IEex_MessageBox(message)
+			return
+		end
+	end
+
+	local toReturn = {}
+	local share = IEex_GetActorShare(actorID)
+
+	local dataFromEntry = function(address, t)
+		return {
+			["resref"] = t[IEex_ReadDword(address)],
+			["memorizedCount"] = IEex_ReadDword(address + 0x4),
+			["castableCount"] = IEex_ReadDword(address + 0x8),
+		}
+	end
+
+	local genLevel = function(address, t)
+		local levelFill = {}
+		local currentEntryBase = IEex_ReadDword(address + 0x4)
+		local pEndEntry = IEex_ReadDword(address + 0x8)
+		while currentEntryBase ~= pEndEntry do
+			table.insert(levelFill, dataFromEntry(currentEntryBase, t))
+			currentEntryBase = currentEntryBase + 0x10
+		end
+		return levelFill
+	end
+
+	local typeFill = function(currentLevelBase, casterType)
+		local typeFill = {}
+		for level = 1, 9, 1 do
+			local levelFill = genLevel(currentLevelBase, IEex_LISTSPLL)
+			table.insert(typeFill, levelFill)
+			currentLevelBase = currentLevelBase + 0x1C
+		end
+		toReturn[casterType] = typeFill
+	end
+
+	local levelFill = function(currentLevelBase, casterType, t)
+		local typeFill = {}
+		local levelFill = genLevel(currentLevelBase, t)
+		table.insert(typeFill, levelFill)
+		toReturn[casterType] = typeFill
+	end
+
+	local normal = function(casterType)
+		typeFill(share + 0x4284 + (casterType - 1) * 0x100, casterType)
+	end
+
+	local switch = {
+		[1]  = normal,
+		[2]  = normal,
+		[3]  = normal,
+		[4]  = normal,
+		[5]  = normal,
+		[6]  = normal,
+		[7]  = normal,
+		[8]  = function(type) typeFill(share + 0x4984, type) end,
+		[9]  = function(type) levelFill(share + 0x4A84, type, IEex_LISTINNT) end,
+		[10] = function(type) levelFill(share + 0x4AA0, type, IEex_LISTSONG) end,
+		[11] = function(type) levelFill(share + 0x4ABC, type, IEex_LISTSHAP) end,
+	}
+
+	for _, casterType in ipairs(casterTypes) do
+		switch[casterType](casterType)
+	end
+
+	return toReturn
+
+end
+
+----------
+-- DIMM --
+----------
+
+function IEex_FileExtensionToType(extension)
+
+	local extensions = {
+		["2DA"]  = 0x3F4, -- CResText
+		["ARE"]  = 0x3F2, -- CResArea
+		["BAM"]  = 0x3E8, -- CResCell
+		["BCS"]  = 0x3EF, -- CResText
+		["BIO"]  = 0x3FE, -- CResBIO
+		["BMP"]  = 0x1  , -- CResBitmap
+		["BS"]   = 0x3F9, -- CResText
+		["CHR"]  = 0x3FA, -- CResCHR
+		["CHU"]  = 0x3EA, -- CResUI
+		["CRE"]  = 0x3F1, -- CResCRE
+		["DLG"]  = 0x3F3, -- CResDLG
+		["EFF"]  = 0x3F8, -- CResEffect
+		["GAM"]  = 0x3F5, -- CResGame
+		["GLSL"] = 0x405, -- CResText
+		["GUI"]  = 0x402, -- CResText
+		["IDS"]  = 0x3F0, -- CResText
+		["INI"]  = 0x802, -- CRes(???)
+		["ITM"]  = 0x3ED, -- CResItem
+		["LUA"]  = 0x409, -- CResText
+		["MENU"] = 0x408, -- CResText
+		["MOS"]  = 0x3EC, -- CResMosaic
+		["MVE"]  = 0x2  , -- CRes(???)
+		["PLT"]  = 0x6  , -- CResPLT
+		["PNG"]  = 0x40B, -- CResPng
+		["PRO"]  = 0x3FD, -- CResBinary
+		["PVRZ"] = 0x404, -- CResPVR
+		["SPL"]  = 0x3EE, -- CResSpell
+		["SQL"]  = 0x403, -- CResText
+		["STO"]  = 0x3F6, -- CResStore
+		["TGA"]  = 0x3  , -- CRes(???)
+		["TIS"]  = 0x3EB, -- CResTileSet
+		["TOH"]  = 0x407, -- CRes(???)
+		["TOT"]  = 0x406, -- CRes(???)
+		["TTF"]  = 0x40A, -- CResFont
+		["VEF"]  = 0x3FC, -- CResBinary
+		["VVC"]  = 0x3FB, -- CResBinary
+		["WAV"]  = 0x4  , -- CResWave
+		["WBM"]  = 0x3FF, -- CResWebm
+		["WED"]  = 0x3E9, -- CResWED
+		["WFX"]  = 0x5  , -- CResBinary
+		["WMP"]  = 0x3F7, -- CResWorldMap
+	}
+
+	return extensions[extension:upper()]
+
+end
+
+function IEex_GetResourceManager()
+	return IEex_ReadDword(0x8CF6D8) + 0x542
+end
+
+IEex_ResWrapper = {}
+IEex_ResWrapper.__index = IEex_ResWrapper
+
+function IEex_ResWrapper:isValid()
+	return self.pData ~= 0x0
+end
+
+function IEex_ResWrapper:getResRef()
+	return self.resref
+end
+
+function IEex_ResWrapper:getRes()
+	return self.pRes
+end
+
+function IEex_ResWrapper:getData()
+	return self.pData
+end
+
+function IEex_ResWrapper:free()
+	local pRes = self.pRes
+	if pRes ~= 0x0 then
+		-- CRes_Dump (opposite of demand)
+		IEex_Call(0x77E5F0, {}, pRes, 0x0)
+		-- CRes_Unload (opposite of load)
+		IEex_Call(0x77E370, {}, pRes, 0x0)
+		-- CResourceManager_DumpRes (opposite of dimmGetResObject)
+		IEex_Call(0x787CE0, {pRes}, IEex_GetResourceManager(), 0x0)
+		self.resref = ""
+		self.pRes = 0x0
+		self.pData = 0x0
+	end
+end
+
+function IEex_ResWrapper:init(resref, pRes)
+	self.resref = resref
+	self.pRes = pRes
+	self.pData = pRes ~= 0x0 and IEex_ReadDword(pRes + 0x8) or 0x0
+end
+
+function IEex_ResWrapper:new(resref, pRes, o)
+	local o = o or {}
+	setmetatable(o, self)
+	o:init(resref, pRes)
+	return o
+end
+
+function IEex_DemandRes(resref, extension)
+
+	local resrefMem = IEex_Malloc(0x8)
+	IEex_WriteLString(resrefMem, resref, 8)
+	-- dimmGetResObject
+	local pRes = IEex_Call(0x786DF0, {1, IEex_FileExtensionToType(extension), resrefMem}, IEex_GetResourceManager(), 0x0)
+	IEex_Free(resrefMem)
+
+	if pRes ~= 0x0 then
+		-- CRes_Load
+		IEex_Call(0x77E610, {}, pRes, 0x0)
+		-- CRes_Demand
+		IEex_Call(0x77E390, {}, pRes, 0x0)
+	end
+
+	return IEex_ResWrapper:new(resref, pRes)
+end
+
+function IEex_DemandCItem(resref)
+
+	local resrefMem = IEex_Malloc(0x8)
+	IEex_WriteLString(resrefMem, resref, 8)
+
+	local CItem = IEex_Malloc(0xEE)
+	-- CItem_Construct
+	IEex_Call(0x4E7E90, {
+		0x0, -- flags
+		0x0, -- wear
+		0x0, -- useCount3
+		0x0, -- useCount2
+		0x0, -- useCount1
+		IEex_ReadDword(resrefMem + 0x4), -- resref (2/2)
+		IEex_ReadDword(resrefMem + 0x0), -- resref (1/2)
+	}, CItem, 0x0)
+
+	-- CResItem_Demand
+	IEex_Call(0x4015B0, {}, IEex_ReadDword(CItem + 0x8), 0x0)
+	IEex_Free(resrefMem)
+
+	return CItem
+end
+
+function IEex_DumpCItem(CItem)
+	-- CResItem_Dump
+	IEex_Call(0x401BA0, {}, IEex_ReadDword(CItem + 0x8), 0x0)
+	-- CItem_Dump (handles both CRes_Unload and CResourceManager_DumpRes)
+	IEex_Call(0x4E8180, {}, CItem, 0x0)
+	IEex_Free(CItem)
+end
+
+function IEex_CanSpriteUseItem(sprite, resref)
+	local CItem = IEex_DemandCItem(resref)
+	local junkPtr = IEex_Malloc(0x4)
+	local result = IEex_Call(0x5B9D20, {0x0, junkPtr, CItem, sprite}, IEex_GetGameData(), 0x0)
+	IEex_Free(junkPtr)
+	IEex_DumpCItem(CItem)
+	return result == 1
+end
+
 ------------------------
 -- Actor Manipulation --
 ------------------------
@@ -426,13 +786,10 @@ function IEex_CompareActorAllegiances(actorID1, actorID2)
 end
 
 function IEex_IsSprite(actorID, allowDead)
-	if actorID > 0 then
-		local share = IEex_GetActorShare(actorID)
-		if IEex_ReadByte(share + 0x4, 0) == 0x31 then
-			return allowDead or bit32.band(IEex_ReadDword(share + 0x434), 0xFC0) == 0x0
-		end
-	end
-	return false
+	local share = IEex_GetActorShare(actorID)
+	return share ~= 0x0 -- share != NULL
+	   and IEex_ReadByte(share + 0x4, 0) == 0x31 -- m_objectType == TYPE_SPRITE
+	   and (allowDead or bit32.band(IEex_ReadDword(share + 0x5BC), 0xFC0) == 0x0) -- allowDead or Status (not includes) STATE_*_DEATH
 end
 
 ----------------
@@ -4961,8 +5318,8 @@ function MENPCXP(effectData, creatureData)
 end
 
 function MENOSUST(effectData, creatureData)
-	EEex_WriteDword(creatureData + 0x5BC, bit32.band(IEex_ReadDword(creatureData + 0x5BC), 0xEFFFFFFF))
-	EEex_WriteDword(creatureData + 0x920, bit32.band(IEex_ReadDword(creatureData + 0x920), 0xEFFFFFFF))
+	IEex_WriteDword(creatureData + 0x5BC, bit32.band(IEex_ReadDword(creatureData + 0x5BC), 0xEFFFFFFF))
+	IEex_WriteDword(creatureData + 0x920, bit32.band(IEex_ReadDword(creatureData + 0x920), 0xEFFFFFFF))
 end
 
 function MESUCREA(effectData, creatureData)
@@ -5388,7 +5745,136 @@ IEex_NEW_FEATS_SIZE  = nil
 -- Functions --
 ---------------
 
-function IEex_LoadResources()
+function IEex_Stage1Startup()
+	IEex_IndexAllResources()
+	IEex_MapSpellsToScrolls()
+	IEex_LoadInitial2DAs()
+	IEex_WriteDelayedPatches()
+end
+
+function IEex_Stage2Startup()
+	IEex_IndexMasterSpellLists()
+end
+
+function IEex_IndexMasterSpellLists()
+
+	local index = function(address, t, r)
+
+		local currentAddress = IEex_ReadDword(address)
+		local limit = IEex_ReadDword(address + 0x4) - 1
+
+		if limit >= 0 then
+			local resref = IEex_ReadLString(currentAddress, 8)
+			t[0] = resref
+			r[resref] = 0
+			currentAddress = currentAddress + 0x8
+		end
+
+		for i = 1, limit, 1 do
+			local resref = IEex_ReadLString(currentAddress, 8)
+			table.insert(t, resref)
+			r[resref] = i
+			currentAddress = currentAddress + 0x8
+		end
+
+	end
+
+	local data = IEex_GetGameData()
+
+	IEex_LISTSPLL = {}
+	IEex_LISTSPLL_Reverse = {}
+	index(data + 0x4BF8, IEex_LISTSPLL, IEex_LISTSPLL_Reverse)
+
+	IEex_LISTINNT = {}
+	IEex_LISTINNT_Reverse = {}
+	index(data + 0x4C00, IEex_LISTINNT, IEex_LISTINNT_Reverse)
+
+	IEex_LISTSONG = {}
+	IEex_LISTSONG_Reverse = {}
+	index(data + 0x4C08, IEex_LISTSONG, IEex_LISTSONG_Reverse)
+
+	IEex_LISTSHAP = {}
+	IEex_LISTSHAP_Reverse = {}
+	index(data + 0x4C10, IEex_LISTSHAP, IEex_LISTSHAP_Reverse)
+
+end
+
+function IEex_IndexAllResources()
+
+	IEex_IndexedResources = {}
+
+	local unknownSubstruct = IEex_GetResourceManager() + 0x24C
+	local unknownSubstruct2 = IEex_ReadDword(unknownSubstruct + 0x10)
+
+	local limit = IEex_ReadDword(unknownSubstruct + 0xC)
+	local currentIndex = 0
+	local currentAddress = 0
+
+	while currentIndex ~= limit do
+		local resref = IEex_ReadLString(unknownSubstruct2 + currentAddress, 8)
+		if resref ~= "" then
+			local type = IEex_ReadWord(unknownSubstruct2 + currentAddress + 0x12, 0)
+			local typeBucket = IEex_IndexedResources[type]
+			if not typeBucket then
+				typeBucket = {}
+				IEex_IndexedResources[type] = typeBucket
+			end
+			table.insert(typeBucket, resref)
+		end
+		currentIndex = currentIndex + 1
+		currentAddress = currentAddress + 0x18
+	end
+
+	for type, bucket in pairs(IEex_IndexedResources) do
+		table.sort(bucket)
+	end
+
+end
+
+function IEex_MapSpellsToScrolls()
+
+	IEex_SpellToScroll = {}
+
+	for i, resref in ipairs(IEex_IndexedResources[IEex_FileExtensionToType("ITM")]) do
+
+		local prefix = resref:sub(1, 4)
+		if prefix == "SPWI" or prefix == "SPPR" then
+
+			local resWrapper = IEex_DemandRes(resref, "ITM")
+
+			if resWrapper:isValid() then
+
+				local data = resWrapper:getData()
+				local category = IEex_ReadWord(data + 0x1C, 0)
+				local abilitiesNum = IEex_ReadWord(data + 0x68, 0)
+
+				if category == 11 and abilitiesNum >= 2 then
+
+					local secondAbilityAddress = data + IEex_ReadDword(data + 0x64) + 0x38
+					local secondAbilityEffectCount = IEex_ReadWord(secondAbilityAddress + 0x1E, 0)
+
+					if secondAbilityEffectCount >= 1 then
+						local effectIndex = IEex_ReadWord(secondAbilityAddress + 0x20, 0)
+						local effectAddress = data + IEex_ReadDword(data + 0x6A) + effectIndex * 0x30
+						if IEex_ReadWord(effectAddress, 0) == 147 then
+							local spellResref = IEex_ReadLString(effectAddress + 0x14, 8)
+							IEex_SpellToScroll[spellResref:upper()] = resref
+						end
+					end
+				end
+
+				resWrapper:free()
+
+			else
+				local message = "[IEex_MapSpellsToScrolls] Critical Error: "..resref..".ITM couldn't be accessed."
+				print(message)
+				IEex_MessageBox(message)
+			end
+		end
+	end
+end
+
+function IEex_LoadInitial2DAs()
 
 	IEex_Loaded2DAs = {}
 
@@ -5408,8 +5894,6 @@ function IEex_LoadResources()
 
 	IEex_NEW_FEATS_MAXID = previousID
 	IEex_NEW_FEATS_SIZE = IEex_NEW_FEATS_MAXID + 1
-
-	IEex_WriteDelayedPatches()
 
 end
 
@@ -6003,17 +6487,17 @@ function IEex_WritePatches()
 
 	IEex_DisableCodeProtection()
 
-	-------------------------
-	-- Resources Load Hook --
-	-------------------------
+	---------------------
+	-- Stage 1 Startup --
+	---------------------
 
-	local loadResourcesHookAddress = 0x59CC58
-	local loadResourcesHook = IEex_WriteAssemblyAuto({[[
+	local stage1StartupHookAddress = 0x59CC58
+	local stage1StartupHook = IEex_WriteAssemblyAuto({[[
 
 		!call :53CB60
 		!push_all_registers_iwd2
 
-		!push_dword ]], {IEex_WriteStringAuto("IEex_LoadResources"), 4}, [[
+		!push_dword ]], {IEex_WriteStringAuto("IEex_Stage1Startup"), 4}, [[
 		!push_dword *_g_lua
 		!call >_lua_getglobal
 		!add_esp_byte 08
@@ -6028,10 +6512,40 @@ function IEex_WritePatches()
 		!add_esp_byte 18
 
 		!pop_all_registers_iwd2
-		!jmp_dword ]], {loadResourcesHookAddress + 0x5, 4, 4},
+		!jmp_dword ]], {stage1StartupHookAddress + 0x5, 4, 4},
 
 	})
-	IEex_WriteAssembly(loadResourcesHookAddress, {"!jmp_dword", {loadResourcesHook, 4, 4}})
+	IEex_WriteAssembly(stage1StartupHookAddress, {"!jmp_dword", {stage1StartupHook, 4, 4}})
+
+	---------------------
+	-- Stage 2 Startup --
+	---------------------
+
+	local stage2StartupHookAddress = 0x421BA9
+	local stage2StartupHook = IEex_WriteAssemblyAuto({[[
+
+		!call :423800
+		!push_all_registers_iwd2
+
+		!push_dword ]], {IEex_WriteStringAuto("IEex_Stage2Startup"), 4}, [[
+		!push_dword *_g_lua
+		!call >_lua_getglobal
+		!add_esp_byte 08
+
+		!push_byte 00
+		!push_byte 00
+		!push_byte 00
+		!push_byte 00
+		!push_byte 00
+		!push_dword *_g_lua
+		!call >_lua_pcallk
+		!add_esp_byte 18
+
+		!pop_all_registers_iwd2
+		!jmp_dword ]], {stage2StartupHookAddress + 0x5, 4, 4},
+
+	})
+	IEex_WriteAssembly(stage2StartupHookAddress, {"!jmp_dword", {stage2StartupHook, 4, 4}})
 
 	---------------------------------------------------------
 	-- Fix non-player animations crashing when leveling up --
@@ -6219,17 +6733,112 @@ function IEex_WritePatches()
 	-- Spell writability is now determined by scroll usability --
 	-------------------------------------------------------------
 
-	local writableCheckAddress = 0x62995B
+	IEex_Extern_CSpell_UsableBySprite = function(CSpell, sprite)
+
+		local resref = IEex_ReadLString(CSpell + 0x8, 8)
+
+		local scrollResref = IEex_SpellToScroll[resref]
+		local resWrapper = nil
+		local scrollError = false
+
+		if scrollResref then
+			resWrapper = IEex_DemandRes(scrollResref, "ITM")
+			if not resWrapper:isValid() then scrollError = true end
+		else
+			scrollError = true
+		end
+
+		if scrollError then
+			local message = "[IEex_Extern_CSpell_UsableBySprite] Critical Error: "..resref..".SPL doesn't have a valid scroll!"
+			print(message)
+			IEex_MessageBox(message)
+			return true
+		end
+
+		local itemResRef = resWrapper:getResRef()
+		local itemRes = resWrapper:getRes()
+		local itemData = resWrapper:getData()
+
+		local kit = IEex_GetActorStat(IEex_GetActorIDShare(sprite), 89)
+
+		local mageKits = bit32.band(kit, 0x7FC0)
+		local unusableKits = IEex_Flags({
+			bit32.lshift(IEex_ReadByte(itemData + 0x29, 0), 24),
+			bit32.lshift(IEex_ReadByte(itemData + 0x2B, 0), 16),
+			bit32.lshift(IEex_ReadByte(itemData + 0x2D, 0), 8),
+			IEex_ReadByte(itemData + 0x2F, 0)
+		})
+
+		resWrapper:free()
+
+		if bit32.band(unusableKits, mageKits) ~= 0x0 then
+			-- Mage kit was explicitly excluded
+			return false
+		end
+
+		return IEex_CanSpriteUseItem(sprite, itemResRef)
+
+	end
+
+	local writableCheckAddress = 0x54AA40
 	local writableCheckHook = IEex_WriteAssemblyAuto({[[
-		!add_esp_byte 04
-		!mov_eax_[esp+byte] 14
+
+		!push_registers_iwd2
+
+		; push sprite ;
+		!push_[esp+byte] 1C
+		; push CSpell ;
+		!push_ecx
+
+		!push_dword ]], {IEex_WriteStringAuto("IEex_Extern_CSpell_UsableBySprite"), 4}, [[
+		!push_dword *_g_lua
+		!call >_lua_getglobal
+		!add_esp_byte 08
+
+		; CSpell ;
+		!fild_[esp]
+		!sub_esp_byte 04
+		!fstp_qword:[esp]
+		!push_dword *_g_lua
+		!call >_lua_pushnumber
+		!add_esp_byte 0C
+
+		; sprite ;
+		!fild_[esp]
+		!sub_esp_byte 04
+		!fstp_qword:[esp]
+		!push_dword *_g_lua
+		!call >_lua_pushnumber
+		!add_esp_byte 0C
+
+		!push_byte 00
+		!push_byte 00
+		!push_byte 00
+		!push_byte 01
+		!push_byte 02
+		!push_dword *_g_lua
+		!call >_lua_pcallk
+		!add_esp_byte 18
+
+		!push_byte FF
+		!push_dword *_g_lua
+		!call >_lua_toboolean
+		!add_esp_byte 08
+
 		!push_eax
-		!push_edx
-		!call :5BA080
-		!jmp_dword ]], {writableCheckAddress + 0x5, 4, 4}, [[
+
+		!push_byte FE
+		!push_dword *_g_lua
+		!call >_lua_settop
+		!add_esp_byte 08
+
+		!pop_eax
+
+		!pop_registers_iwd2
+		!ret_word 04 00
+
 	]]})
 	IEex_WriteAssembly(writableCheckAddress, {"!jmp_dword", {writableCheckHook, 4, 4}})
-
 
 	IEex_EnableCodeProtection()
 
