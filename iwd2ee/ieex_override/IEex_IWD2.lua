@@ -1351,6 +1351,10 @@ Bit 18: If set, the damage is treated as the base damage of a missile weapon, so
 If both bits 17 and 18 are set, opcode 73 damage bonuses are not applied multiple times. Also, if at least one
  of those two bits are set, the minimum damage of each die will be increased based on the source character's Luck bonuses.
  If neither of those two bits are set, the maximum damage of each die is decreased based on the target character's Luck bonuses.
+Bit 19: If set, the character's Sneak Attack dice will be added to the damage if the conditions for a Sneak Attack are met.
+Bit 21: If set, the character gains temporary Hit Points (for 1 hour) equal to the damage dealt.
+Bit 22: If set, the character regains Hit Points equal to the damage dealt (but will not go over the character's max HP).
+Bit 25: If set, the damage will be reduced by the target's damage reduction if the damage's enchantment level (specified in the fourth bit of special) is too low.
 
 savebonus - The saving throw DC bonus of the damage is equal to that of the opcode 500 effect.
 
@@ -1409,7 +1413,7 @@ function EXDAMAGE(effectData, creatureData)
 			end
 		end
 		if IEex_GetActorSpellState(sourceID, 233) and bit32.band(savingthrow, 0x20000) == 0 and bit32.band(savingthrow, 0x40000) == 0 and bit32.band(savingthrow, 0x800000) == 0 then
-			damage = damage + math.floor((IEex_GetActorStat(sourceID, 36) - 10) / 2)
+			damage = damage + math.floor((IEex_GetActorStat(sourceID, 36) - 10) / 4)
 		end
 		rogueLevel = IEex_GetActorStat(sourceID, 104)
 		local stateValue = bit32.bor(IEex_ReadDword(creatureData + 0x5BC), IEex_ReadDword(creatureData + 0x920))
@@ -1451,8 +1455,9 @@ function EXDAMAGE(effectData, creatureData)
 			luck = 127
 		end
 		
-		if IEex_GetActorStat(targetID, 103) > 0 then
-			local favoredEnemyDamage = math.floor((IEex_GetActorStat(targetID, 103) / 5) + 1)
+		if IEex_GetActorStat(sourceID, 103) > 0 then
+--			local favoredEnemyDamage = math.floor((IEex_GetActorStat(sourceID, 103) / 5) + 1)
+			local favoredEnemyDamage = 4
 			local enemyRace = IEex_ReadByte(creatureData + 0x26, 0x0)
 			if enemyRace == IEex_ReadByte(sourceData + 0x7F7, 0x0) or enemyRace == IEex_ReadByte(sourceData + 0x7F8, 0x0) or enemyRace == IEex_ReadByte(sourceData + 0x7F9, 0x0) or enemyRace == IEex_ReadByte(sourceData + 0x7FA, 0x0) or enemyRace == IEex_ReadByte(sourceData + 0x7FB, 0x0) or enemyRace == IEex_ReadByte(sourceData + 0x7FC, 0x0) or enemyRace == IEex_ReadByte(sourceData + 0x7FD, 0x0) or enemyRace == IEex_ReadByte(sourceData + 0x7FE, 0x0) then
 				damage = damage + favoredEnemyDamage
@@ -1607,7 +1612,7 @@ function EXDAMAGE(effectData, creatureData)
 			damage = damage + bonusStatValue
 		end
 		local saveBonusStatValue = 0
-		if saveBonusStat > 0 then
+		if saveBonusStat > 0 and bit32.band(savingthrow, 0x2000000) == 0 then
 			if saveBonusStat == 120 then
 				local highestStatValue = IEex_GetActorStat(sourceID, 38)
 				saveBonusStat = 38
@@ -1684,6 +1689,27 @@ function EXDAMAGE(effectData, creatureData)
 			end
 		end)
 		damage = math.floor(damage * damageMultiplier / 100)
+	end
+	if bit32.band(savingthrow, 0x2000000) > 0 then
+		local weaponEnchantment = IEex_ReadByte(effectData + 0x47, 0x0)
+		local damageReduction = IEex_ReadByte(creatureData + 0x758, 0x0)
+		IEex_IterateActorEffects(targetID, function(eData)
+			local theopcode = IEex_ReadDword(eData + 0x10)
+			if theopcode == 436 then
+				local theparameter2 = IEex_ReadDword(eData + 0x20)
+				if theparameter2 > damageReduction then
+					damageReduction = theparameter2
+				end
+			end
+		end)
+		if IEex_GetActorSpellState(targetID, 18) and weaponEnchantment < 5 and damageReduction < 5 then
+			damage = damage - 10
+		elseif weaponEnchantment < damageReduction then
+			damage = damage - damageReduction
+		end
+	end
+	if damage < 0 then
+		damage = 0
 	end
 	if parameter2 == 0x7FFFFFFF then
 		IEex_ApplyEffectToActor(targetID, {
@@ -3319,6 +3345,7 @@ function MEWHIRLA(effectData, creatureData)
 	local targetX = IEex_ReadDword(creatureData + 0x6)
 	local targetY = IEex_ReadDword(creatureData + 0xA)
 	local weaponRES = {"", ""}
+	local wearingLightArmor = true
 	if IEex_GetActorSpellState(sourceID, 241) then
 		IEex_IterateActorEffects(sourceID, function(eData)
 			local theopcode = IEex_ReadDword(eData + 0x10)
@@ -3332,6 +3359,8 @@ function MEWHIRLA(effectData, creatureData)
 					else
 						weaponRES[2] = IEex_ReadLString(eData + 0x94, 8)
 					end
+				elseif (theparameter1 >= 62 and theparameter1 <= 66) or theparameter1 == 68 then
+					wearingLightArmor = false
 				end
 			end
 		end)
@@ -3341,14 +3370,12 @@ function MEWHIRLA(effectData, creatureData)
 		local resWrapper = IEex_DemandRes(res, "ITM")
 		if resWrapper:isValid() then
 			local itemData = resWrapper:getData()
---			IEex_DisplayString(res)
 			local proficiencyFeat = 0 
 			local isTwoHanded = (bit32.band(IEex_ReadDword(itemData + 0x18), 0x2) > 0)
 			local itemType = IEex_ReadWord(itemData + 0x1C, 0x0)
 			if ex_item_type_proficiency[itemType] ~= nil then
 				proficiencyFeat = ex_item_type_proficiency[itemType]
 			end
---			IEex_DisplayString("ugu")
 			local effectOffset = IEex_ReadDword(itemData + 0x6A)
 			local numHeaders = IEex_ReadWord(itemData + 0x68, 0x0)
 			for header = 1, numHeaders, 1 do
@@ -3365,12 +3392,39 @@ function MEWHIRLA(effectData, creatureData)
 					local attackRoll = math.random(20) + IEex_GetActorStat(sourceID, 32)
 					local isHit = false
 					local stateValue = bit32.bor(IEex_ReadDword(creatureData + 0x5BC), IEex_ReadDword(creatureData + 0x920))
-					if attackRoll >= 20 or bit32.bor(stateValue, 0xE9) > 0 then
+					if attackRoll >= 20 or bit32.band(stateValue, 0xE9) > 0 then
 						isHit = true
 					elseif attackRoll >= 2 then
-						local attackBonus = IEex_ReadByte(sourceData + 0x5EC, 0x0) + IEex_GetActorStat(sourceID, 7) + IEex_ReadSignedWord(offset + 0x14, 0x0)
+						local attackBonus = IEex_ReadByte(sourceData + 0x5EC, 0x0) + IEex_GetActorStat(sourceID, 7) + IEex_ReadSignedWord(offset + 0x14, 0x0) - 4
 						if proficiencyFeat > 0 then
 							attackBonus = attackBonus + ex_proficiency_attack[IEex_ReadByte(sourceData + ex_feat_id_offset[proficiencyFeat], 0x0)]
+						end
+						if IEex_GetActorStat(sourceID, 103) > 0 then
+						local favoredEnemyBonus = math.floor((IEex_GetActorStat(sourceID, 103) / 5) + 1)
+							local enemyRace = IEex_ReadByte(creatureData + 0x26, 0x0)
+							if enemyRace == IEex_ReadByte(sourceData + 0x7F7, 0x0) or enemyRace == IEex_ReadByte(sourceData + 0x7F8, 0x0) or enemyRace == IEex_ReadByte(sourceData + 0x7F9, 0x0) or enemyRace == IEex_ReadByte(sourceData + 0x7FA, 0x0) or enemyRace == IEex_ReadByte(sourceData + 0x7FB, 0x0) or enemyRace == IEex_ReadByte(sourceData + 0x7FC, 0x0) or enemyRace == IEex_ReadByte(sourceData + 0x7FD, 0x0) or enemyRace == IEex_ReadByte(sourceData + 0x7FE, 0x0) then
+								attackBonus = attackBonus + favoredEnemyBonus
+							end
+						end
+						if weaponRES[2] ~= "" then
+							local dualWieldingPenalty = 4
+							if hand == 2 then
+								dualWieldingPenalty = 8
+							end
+							if IEex_GetActorStat(sourceID, 103) > 0 and wearingLightArmor then
+								dualWieldingPenalty = dualWieldingPenalty - 6
+							else
+								if bit32.band(IEex_ReadDword(sourceData + 0x75C), 0x2) > 0 then
+									dualWieldingPenalty = dualWieldingPenalty - 4
+								end
+								if bit32.band(IEex_ReadDword(sourceData + 0x764), 0x40) > 0 then
+									dualWieldingPenalty = dualWieldingPenalty - 2
+								end
+							end
+							if dualWieldingPenalty < 0 then
+								dualWieldingPenalty = 0
+							end
+							attackBonus = attackBonus - dualWieldingPenalty
 						end
 						local attackStatBonus = 0
 						if bit32.band(IEex_ReadDword(offset + 0x26), 0x1) > 0 then
@@ -3401,6 +3455,7 @@ function MEWHIRLA(effectData, creatureData)
 						if attackRoll + attackBonus >= ac then
 							isHit = true
 						end
+--						IEex_DisplayString(attackRoll .. " + " .. attackBonus .. " = " .. attackRoll + attackBonus .. " vs " .. ac)
 					end
 					local feedbackString = IEex_GetActorName(sourceID) .. "- Attacks " .. IEex_GetActorName(targetID) .. " with " .. IEex_FetchString(IEex_ReadDword(itemData + 0xC)) .. " : "
 					if isHit then
@@ -3409,6 +3464,7 @@ function MEWHIRLA(effectData, creatureData)
 						feedbackString = feedbackString .. "Miss"
 					end
 					IEex_DisplayString(feedbackString)
+					
 					if isHit then
 						if itemDamageType > 0 then
 							local newparameter2 = 0
@@ -3422,6 +3478,7 @@ function MEWHIRLA(effectData, creatureData)
 							local bonusStat = 0
 							local bonusStatMultiplier = 0
 							local bonusStatDivisor = 0
+							local weaponEnchantment = IEex_ReadDword(itemData + 0x60)
 							if bit32.band(IEex_ReadDword(offset + 0x26), 0x1) > 0 then
 								bonusStat = 36
 								if bit32.band(IEex_ReadDword(itemData + 0x18), 0x2) > 0 then
@@ -3432,6 +3489,7 @@ function MEWHIRLA(effectData, creatureData)
 									bonusStatDivisor = 2
 								end
 							end
+							
 							IEex_ApplyEffectToActor(targetID, {
 ["opcode"] = 500,
 ["target"] = 2,
@@ -3439,8 +3497,8 @@ function MEWHIRLA(effectData, creatureData)
 ["duration"] = 0,
 ["parameter1"] = IEex_ReadByte(offset + 0x1A, 0x0) + (IEex_ReadByte(offset + 0x16, 0x0) * 0x100) + (IEex_ReadByte(offset + 0x18, 0x0) * 0x10000) + (proficiencyFeat * 0x1000000),
 ["parameter2"] = newparameter2,
-["savingthrow"] = 0x20000,
-["special"] = bonusStat + (bonusStatMultiplier * 0x100) + (bonusStatDivisor * 0x10000),
+["savingthrow"] = 0x2020000,
+["special"] = bonusStat + (bonusStatMultiplier * 0x100) + (bonusStatDivisor * 0x10000) + (weaponEnchantment * 0x1000000),
 ["resource"] = "EXDAMAGE",
 ["source_id"] = sourceID
 })
@@ -3586,16 +3644,6 @@ function MEONHIT(effectData, creatureData)
 	local sourceID = IEex_ReadDword(effectData + 0x10C)
 	if not IEex_IsSprite(sourceID, false) then return end
 	local headerType = IEex_ReadDword(effectData + 0x44)
-	IEex_IterateActorEffects(targetID, function(eData)
-		local theopcode = IEex_ReadDword(eData + 0x10)
-		if theopcode == 287 then
-			local thetiming = IEex_ReadDword(eData + 0x24)
-			local theparameter3 = IEex_ReadDword(eData + 0x60)
-			if thetiming == 4096 and theparameter3 == 0 then
-				IEex_WriteDword(eData + 0x60, 1)
-			end
-		end
-	end)
 	if IEex_GetActorSpellState(sourceID, 225) then
 		IEex_IterateActorEffects(sourceID, function(eData)
 			local theopcode = IEex_ReadDword(eData + 0x10)
