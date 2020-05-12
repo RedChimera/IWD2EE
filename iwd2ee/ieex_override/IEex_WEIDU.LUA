@@ -1,4 +1,5 @@
-ex_proficiency_damage = {[0] = 0, [1] = 0, [2] = 0, [3] = 2}
+ex_proficiency_damage = {[0] = 0, [1] = 0, [2] = 0, [3] = 2, [4] = 2, [5] = 2}
+ex_proficiency_attack = {[0] = -4, [1] = 0, [2] = 1, [3] = 1, [4] = 1, [5] = 1}
 ex_sneak_attack_delay = 21
 ex_no_sneak_attack_delay = false
 ex_fiend_race = 164

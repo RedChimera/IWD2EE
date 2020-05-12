@@ -301,6 +301,16 @@ Prerequisites: Bluff 4 or greater
 Benefit: You gain an ability that lets you feint an adjacent creature. The ability can be used once per round. The target must make a Will save (DC 10 + your Bluff skill). On a failure, for 4 seconds, the target loses its Dexterity bonus to AC, and it gains additional penalties to Armor Class and attack rolls equal to one third of your Bluff skill, rounded down. A creature gains a +4 bonus to the save for each time someone has tried to feint them in the past 10 rounds.
 
 This feat may be taken twice. When taken a second time, the feat is Improved Feint, which lets you feint as a free action once per round. After you feint for the first time in a round, you may use another ability or cast a spell before the round is over. Improved Feint also adds +2 to the save DC.~
+@343    = ~Whirlwind Attack~
+@344    = ~WHIRLWIND ATTACK:
+
+You can perform a spinning attack to hit multiple enemies around you.
+
+Prerequisites: Dex 13+, Int 13+, Expertise, Dodge, Mobility, Spring Attack, base attack bonus 4 or greater; taking the feat a second time requires Dex 21+.
+
+Benefit: You gain the Whirlwind Attack ability, usable once per round. By using the ability, you make an attack with each of your weapons against each nearby enemy, forgoing all other attacks for the round. The radius of the attack depends on the reach of your weapon.
+
+When taken a second time, the feat is Improved Whirlwind Attack, which increases the radius of the attack by 5 feet.~
 
 @524    = ~Barbarian~
 @525    = ~BARBARIAN: 
@@ -1206,7 +1216,7 @@ Disadvantages:
 @917    = ~You cannot grapple unless you have at least one hand free.~
 @918    = ~Feint~
 @919    = ~Grapple~
-@920    = ~~
+@920    = ~Whirlwind Attack~
 @921    = ~~
 @922    = ~~
 @923    = ~~
