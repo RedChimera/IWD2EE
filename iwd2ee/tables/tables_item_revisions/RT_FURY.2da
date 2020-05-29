@@ -78,7 +78,7 @@ USRT14_V		RMEW_09	RMIW_09	RARM_09	RSHD_09	RRNG_09	RMSC_09	EOL
 USRT15_V		RMEW_10	RMIW_10	RARM_10	RSHD_10	RRNG_10	RMSC_10	EOL
 USRT16_V	00ax1h84	00ax1h87	00ax2h93	00Club89	USDagg59	USArow59	USRing57	USPlat59	USBwlx59	EOL
 USRT17_V	00ax1h85	00ax2h94	00Club88	USSwdT59	USLeat59	USBrac57	USBwhx57	USShld52	EOL
-USRT18_V	00ax1h83	00ax2h85	USFlal59	USPlat58	USShld52	USHelm59	00SwdT96	EOL
+USRT18_V	00ax1h83	00ax2h85	USFlal59	USPlat58	USShld52	USBelt58	USHelm59	00SwdT96	EOL
 USRT19_V	00ax2h86	00Club86	USSwdK59	USChan59	USRing58	USRobe59	USStaf59	EOL																						
 
 USNOITEM	No_Drop
@@ -185,7 +185,7 @@ RRNG_04	00Ring18	00Ring23	00Ring73	00Ring92	00Ring93	00Ring97	00Ring98	EOL
 RRNG_05	00Ring22	00Ring68	00Ring74	00Ring75	00Ring79	00Ring88	00Ring91	USRing44	EOL																																							
 RRNG_06	00Ring72	00Ring89	00Ring96	USAmul47	USAmul48	USRing50	EOL																																									
 RRNG_07	USRing53	USRing54	USAmul50	USAmul52	USAmul53	EOL																																									
-RRNG_08	USRing51	USRing55	USAmul51	USAmul59	EOL																																								
+RRNG_08	00Ring81	USRing51	USRing55	USAmul51	USAmul59	EOL																																								
 RRNG_09	USRing56	USAmul56	EOL																																										
 RRNG_10	USRing49	USRing52	USAmul58	EOL																																										
 RRNG_11	USRing57	EOL																																									
@@ -199,13 +199,13 @@ RMSC_03	00Brac04	00Brac10	00Clck02	USBrac45	EOL
 RMSC_04	00Boot01	USBoot45	USBrac44	USBrac47	EOL																																								
 RMSC_05	00Robe99	USClck40	USClck48	USHelm45	USBrac43	EOL																																									
 RMSC_06	00Robe05	00Robe06	00Robe07	USBrac50	USClck50	EOL																																									
-RMSC_07	USClck55	USHelm50	USBrac52	USRobe56	EOL																																									
+RMSC_07	USClck55	USHelm50	USBrac52	USRobe56	USPerm50	EOL																																									
 RMSC_08	USBrac54	USBrac55	USClck52	USIoun52	EOL																																								
 RMSC_09	USClck51	USRobe54	USHelm55	EOL																																									
 RMSC_10	USBrac59	USBoot59	USIoun58	EOL																																							
 RMSC_11																																											
 RMSC_12	USBrac57	EOL																																											
-RMSC_13	USHelm59	EOL																																											
+RMSC_13	USBelt58	USHelm59	EOL																																											
 RMSC_14	USRobe59	EOL																																											
 					
 Arow_P1	arow01	arow01	arow01	arow02	arow08	arow01	arow01	arow01	
@@ -258,13 +258,13 @@ TskelP4	hqbswrd	hqlswrd	hqaxe	ax1h02	sw1h05	sw1h02
 00Skel2B	00CWHalC	00CWSwdL																																																																																					
 00Skel2C	00CWSwdL	00CWSperB	00CWStaB	00CWHalC	00CWHalb	00CWHalC																																																																																	
 																																																																																							
-00RTFire	00Potn52	00Misc32	00Misc32	00Misc32	00Misc32	00Misc32	00Hamm01	00Hamm01	00Hamm01	00Hamm01	00Hamm01	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop																																																																			
+00RTFire	USHFPN52	USHFMC32	USHFMC32	USHFMC32	USHFMC32	USHFMC32	00Hamm01	00Hamm01	00Hamm01	00Hamm01	00Hamm01	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop																																																																			
 00RWBarb	00CWAxeA	00CWSwdA	00CWBluD																																																																																				
 																																																																																							
 00RTGob1	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	No_Drop	00Ax1h11	00Ax1h11	00Ax1h11	00Shld04	00Shld05	00Shld06	00SwdS01	00SwdS01	00Dagg01	00Dagg01																																																																			
 																																																																																							
 00RTAVE1	00Arow01	00Arow01	00Arow01	00Arow01	00Bolt01	00Bolt01	00Bolt01	00Bull01	00Bull01	00Bull01	00Bull01																																																																												
-00RTAVE2	00Sper01	00Sper01	00ax1h11	00ax1h11	00GenIR	00GenIR	00Mace01	00Mace01	00Hamm01	00Hamm01	00SwdS01	00SwdS01	00Shld05	00Shld05	00Leat01	00ax1h01	00BowS01	00Dagg01	00GenIR	00Helm02																																																																			
+00RTAVE2	00Sper01	00Sper01	00ax1h11	00ax1h11	USHFGNIR	USHFGNIR	00Mace01	00Mace01	00Hamm01	00Hamm01	00SwdS01	00SwdS01	00Shld05	00Shld05	00Leat01	00ax1h01	00BowS01	00Dagg01	USHFGNIR	00Helm02																																																																			
 00RTAVE3	00Misc20	00Misc20	00ax1h11	00ax1h11	00Club01	00Club01	00Mace01	00Mace01	00Hamm01	00Hamm01	00SwdS01	00SwdS01	00Misc19	00Misc19	00Misc18	00Misc18	00Shld06	00ax1h01	00Dagg01	00Helm02																																																																			
 																																																																																							
 00RTHF01	00HFBtDB																																																																																						

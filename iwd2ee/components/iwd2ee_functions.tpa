@@ -1305,8 +1305,72 @@ END
 			SET	fx_off	= itm_off + itm_size		WRITE_LONG	0x61e	fx_off	WRITE_ASCIIE	fx_off	~%effects%~
 		END
 	END
-	
-	
+
+DEFINE_PATCH_FUNCTION ~ADD_CRE_EXTENDED_FEAT~
+	INT_VAR
+		points=1
+	STR_VAR
+		name=~~
+BEGIN
+	theid = 0
+	INNER_ACTION BEGIN
+		SILENT
+		COPY_EXISTING ~b3feats.2da~ ~override~
+			COUNT_2DA_ROWS 4 numrows
+			FOR (i = 0; i < numrows; ++i) BEGIN
+				READ_2DA_ENTRY i 0 4 thename
+				PATCH_IF (~%name%~ STRING_EQUAL_CASE ~%thename%~) BEGIN
+					READ_2DA_ENTRY i 1 4 theid
+				END
+			END
+			IF_EXISTS
+			BUT_ONLY_IF_IT_CHANGES
+		VERBOSE
+	END
+
+	PATCH_IF theid > 0 BEGIN
+		READ_BYTE (0x1A8 + theid) currentpoints
+		FOR (i = currentpoints + 1; i <= points; ++i) BEGIN
+			theopcode = 0xDEFA
+			theparameter1 = 0xDEFA
+			theparameter2 = 0xDEFA
+			thespecial = 0xDEFA
+			thetiming = 0xDE
+			thesavingthrow = 0xDEFA
+			TEXT_SPRINT theresource ~DEFA~
+			INNER_ACTION BEGIN
+				COPY_EXISTING ~FE_%theid%_%i%.spl~ ~override~
+					READ_SHORT 0xAA theopcode ELSE 0xDEFA
+					READ_LONG 0xAE theparameter1 ELSE 0xDEFA
+					READ_LONG 0xB2 theparameter2 ELSE 0xDEFA
+					READ_LONG 0xD6 thespecial ELSE 0xDEFA
+					READ_BYTE 0xB6 thetiming ELSE 0xDE
+					READ_LONG 0xCE thesavingthrow ELSE 0xDEFA
+					READ_ASCII 0xBE theresource ELSE ~DEFA~
+					IF_EXISTS
+					BUT_ONLY_IF_IT_CHANGES
+			END
+			PATCH_IF theopcode = 171 BEGIN
+				LPF	IWD2_CRE_ABILITY INT_VAR num=1 STR_VAR resource= EVAL ~%theresource%~ END
+			END ELSE PATCH_IF theopcode != 0xDEFA BEGIN
+				LPF IWD2_ADD_CRE_EFFECT INT_VAR opcode=theopcode target=1 timing=thetiming parameter1=theparameter1 parameter2=theparameter2 special=thespecial savingthrow=thesavingthrow STR_VAR resource= EVAL ~%theresource%~ effsource= EVAL ~FE_%theid%_%i%~ END
+			END
+		END
+		WRITE_BYTE (0x1A8 + theid) points
+		thebit = theid - 64
+		theoffset = 0x1C8 + (thebit / 32) * 4
+		thebit = (thebit MODULO 32)
+		featvalue = 1
+		FOR (i = 0; i < thebit; ++i) BEGIN
+			featvalue *= 2
+		END
+		READ_LONG theoffset thefeatlist
+		thefeatlist |= featvalue
+		WRITE_LONG theoffset thefeatlist
+		LPF IWD2_ADD_CRE_EFFECT INT_VAR opcode=187 target=0 timing=1 parameter1=points STR_VAR effvar= EVAL ~%name%~ END
+	END
+
+END
 
 DEFINE_PATCH_FUNCTION ~REPLACE_AREA_ITEM_IWD2~
 	INT_VAR

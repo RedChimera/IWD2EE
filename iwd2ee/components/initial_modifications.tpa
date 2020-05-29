@@ -66,6 +66,15 @@ COPY_EXISTING_REGEXP ~52CC[1-8]P[1-6]\.bcs~ ~override~
 	DECOMPILE_AND_PATCH BEGIN
 		REPLACE_TEXTUALLY EXACT_MATCH ~ClearSpriteEffects(~ ~ApplySpellRES("USCHSORD",~
 	END
+
+COPY_EXISTING ~60C6000A.bcs~ ~override~ ~64ORRICC.bcs~ ~override~
+	DECOMPILE_AND_PATCH BEGIN
+		REPLACE_TEXTUALLY EXACT_MATCH ~ClearPartyEffects()~ ~ApplySpellRES("USDISPEP",Player1)~
+	END
+
+COPY ~%mod_folder%/bcs~ ~%mod_folder%/bcs~
+	DECOMPILE_AND_PATCH BEGIN
+	END
 /*
 COPY_EXISTING ~animate.ids~ ~override~
 	REPLACE_TEXTUALLY ~0x1001 Wyvern, White (Big)~ ~0x1000 Wyvern (Big)

@@ -38,7 +38,7 @@ Attack Bonus: +1
 Enchantment:  +1
 Damage Type: Slashing
 Weight: 0 lb.
-Feat Requirement:  None
+Required Feat:  Simple Weapons, Touch Attack
 Type:  One-handed~
 @4808     = ~Vrek's Claw~
 @4809     = ~Vrek prefers to use his jagged claws in combat, finding conventional weapons designed for humanoid hands to be clumsy in his grip.  Vrek may still use a shield or a weapon in his off hand, but he uses his claws as his primary attack.  As a magical being, Vrek's claws strike as a +1 weapon for the purposes of overcoming damage reduction.
@@ -50,7 +50,7 @@ Attack Bonus: +1
 Enchantment:  +1
 Damage Type: Slashing
 Weight: 0 lb.
-Feat Requirement:  None
+Required Feat:  Simple Weapons, Touch Attack
 Type:  One-handed~
 @4810     = ~Vrek's Hide~
 @4811     = ~Vrek's hide is unique among trolls.  His entire body is covered with a strange growth of unknown origin, and as a river troll born in the frozen North, he is naturally resistant to cold temperatures.  Combined with his thick, scaly skin and innate regeneration, Vrek is extremely resilient to natural attacks.

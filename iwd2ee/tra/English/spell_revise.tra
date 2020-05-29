@@ -117,12 +117,12 @@ This spell grants the caster the ability to touch a creature and instantly poiso
 (Conjuration) [Good]
 Level: Clr 4, Pal 4, Lathander 4
 Range: Touch
-Duration: 20 rounds
-Casting Time: 5
+Duration: 3 rounds
+Casting Time: 4
 Area of Effect: 1 creature
 Saving Throw: None
 
-This spell grants the target a 3/- damage resistance bonus to bludgeoning, slashing, piercing, fire, cold, acid, and electricity damage for the duration of the spell.~
+This spell grants the target a 15/- damage resistance bonus to bludgeoning, slashing, piercing, fire, cold, acid, and electricity damage for the duration of the spell.~
 @1020    = ~Smashing Wave~
 @1021    = ~Smashing Wave 
 (Evocation)
@@ -286,7 +286,7 @@ A Dispel Magic spell removes magical effects upon anyone within the area of effe
 Level: Brd 3, Clr 3, Drd 3, Rgr 3
 Range: Touch
 Duration: Instantaneous
-Casting Time: 3
+Casting Time: 1
 Area of Effect: 1 creature
 Saving Throw: None
 
@@ -317,15 +317,15 @@ This spell summons forth a silent, weightless sword-like construct made of moonl
 The strike of a moonblade drains a target's vitality, inflicting 1d12+4 points of damage, and an additional 1d12 points to undead, who are particularly susceptible. A successful strike also temporarily scrambles magic, causing any spells the target casts in the next round to fail.~
 @1052    = ~Neutralize Poison~
 @1053    = ~Neutralize Poison
-(Conjuration) 
+(Conjuration)
 Level: Brd 4, Clr 4, Drd 3, Pal 4, Rgr 3
 Range: Touch 
-Duration: Instantaneous
+Duration: 3 rounds
 Casting Time: 1 
 Area of Effect: 1 creature
 Saving Throw: None 
 
-When this spell is placed upon a poisoned individual, it immediately neutralizes any poison, ends any persistent bleeding, and heals 2d8 hit points.~
+When this spell is placed upon a poisoned individual, it immediately neutralizes any poison, ends any persistent bleeding, and heals 4d6 hit points. In addition, the target gains 2/- poison resistance for 3 rounds.~
 @1054    = ~Champion's Strength~
 @1055    = ~Champion's Strength 
 (Transmutation) 
@@ -415,18 +415,18 @@ Saving Throw: None
 
 Shield creates an invisible, mobile disk of force that hovers in front of the caster. It negates Magic Missile attacks directed at the caster. The disk also intercepts attacks, providing a +5 shield bonus.~
 @1070    = ~Mage Armor~
-@1071    = ~Mage Armor 
+@1071    = ~Mage Armor
 (Conjuration) 
 Level: Brd 1, Sor/Wiz 1
 Range: Touch
-Duration: 3 rounds / level
-Casting Time: 3 
-Area of Effect: 15-foot radius
-Saving Throw: None 
+Duration: 10 rounds + 2 rounds/level
+Casting Time: 3
+Area of Effect: 1 creature
+Saving Throw: None
 
-By means of this spell, the wizard creates a magical field of force, granting a +1 generic AC bonus to all nearby allies. The armor spell does not hinder movement, adds no weight or encumbrance, nor does it prevent spellcasting. The field also protects the mind somewhat, granting a +1 bonus to Will saves. It lasts until successfully dispelled or until the duration runs out.~
+By means of this spell, the wizard creates a magical field of force that serves as if it were scale mail armor (Armor Bonus: 4). It is cumulative with Dexterity and with a shield bonus. The armor spell does not hinder movement, adds no weight or encumbrance, nor does it prevent spellcasting. It lasts until successfully dispelled or until the duration runs out.~
 @1072    = ~Sleep~
-@1073    = ~Sleep 
+@1073    = ~Sleep
 (Enchantment) 
 Level: Brd 1, Rgr 2, Sor/Wiz 1, Mask 1
 Range: Sight of Caster
@@ -438,7 +438,7 @@ Saving Throw: Will
 A Sleep spell causes a comatose slumber to come upon all creatures in the area of effect that fail a Will save. Sleeping creatures are helpless, but will awaken upon taking damage.~
 @1074    = ~Chill Touch~
 @1075    = ~Chill Touch 
-(Necromancy) 
+(Necromancy)
 Level: Sor/Wiz 1
 Range: Touch
 Duration: Special
@@ -446,7 +446,7 @@ Casting Time: 1
 Area of Effect: 1 creature
 Saving Throw: Special
 
-When the caster completes this spell, a blue glow encompasses his hand. This energy attacks the life force of any creature the wizard touches (no attack roll is required). The touched creature suffers 1d6 cold damage and receives a -1 attack bonus modifier for 10 rounds after being struck. If the creature is undead creature, it is affected by panic (Will negates) for 10 rounds. The Will DC is equal to 10 plus the caster's level divided by 3. Undead suffer no damage or attack bonus penalty from Chill Touch.~
+When the caster completes this spell, a blue glow encompasses his hand. This energy attacks the life force of any creature the wizard touches (no attack roll is required). The touched creature suffers 1d6 cold damage per level (max 5d6) and receives a -3 attack bonus modifier for 10 rounds after being struck. If the creature is undead creature, it is affected by panic (Will negates) for 10 rounds. The Will DC is equal to 10 plus the caster's level divided by 3. Undead suffer no damage or attack bonus penalty from Chill Touch.~
 @1076    = ~Chromatic Orb~
 @1077    = ~Chromatic Orb 
 (Evocation) 
@@ -574,12 +574,12 @@ This spell is similar to the Invisibility spell, but the recipient is able to at
 (Necromancy)
 Level: Brd 4, Sor/Wiz 4
 Range: Touch
-Duration: 1 round / level
-Casting Time: 3 
-Area of Effect: 15-foot radius 
+Duration: 5 rounds + 1 round/level
+Casting Time: 4
+Area of Effect: 1 creature
 Saving Throw: None
 
-This spell creates a corporeal barrier around the caster's nearest allies by tapping into their life force. The armor itself is weightless, and does not hinder movement or spell casting, granting a +3 generic bonus to AC. Also, due to the magical nature of the spell, the recipients will receive a +3 bonus to Fortitude saves. There is a danger to using the targets' life force to power the spell, as when the spell expires, the external portion of the spirit is temporarily lost and 2d4 points of damage is incurred.~
+This spell creates a corporeal barrier around the target's body by tapping into the target's life force. The armor itself is weightless, and does not hinder movement or spell casting. Spirit Armor grants an armor bonus of +8, and a +3 bonus to Fortitude saves. When the spell expires, the external portion of the spirit is temporarily lost and 3d6 points of damage is incurred.~
 @1098    = ~Emotion: Rage~
 @1099    = ~Emotion: Rage
 (Enchantment)
@@ -928,7 +928,7 @@ Saving Throw: None
 When this spell is cast, the wizard opens up a magical channel that will summon a wyvern to his aid. The wyvern will remain under the wizard's control and will live and die at his command until the spell duration expires.
 ~
 @1510    = ~Mordenkainen's Sword~
-@1511    = ~Mordenkainen's Sword 
+@1511    = ~Mordenkainen's Sword
 (Evocation)
 Level: Sor/Wiz 7
 Range: Sight of Caster
@@ -937,7 +937,7 @@ Casting Time: 7
 Area of Effect: Special
 Saving Throw: None
 
-This spell summons a shimmering sword of force that can be mentally wielded by the caster. Despite the fact it is held in the hand, it can hit creatures anywhere within the sight of the caster. The sword has a bonus to attack equal to the caster's level and damages its target for 3d6+3 points of damage. It is a considered a +3 weapon, so it can damage creatures normally that are resistant to damage from lesser magical items.~
+This spell summons a shimmering sword of force that can be mentally wielded by the caster. Despite the fact it is held in the hand, it can hit creatures anywhere within the sight of the caster. The sword has a bonus to attack equal to the caster's level and damages its target for 3d6+3 points of damage. It is a considered a +3 weapon, so it can damage creatures normally that are resistant to damage from lesser magical items. Mordenkainen's Sword uses the Simple Weapon: Small Blade proficiency.~
 @1512    = ~Aid~
 @1513    = ~Aid 
 (Enchantment)
@@ -954,12 +954,12 @@ The recipient of this spell gains +1 attack bonus, +1 to saving throws, and 8 te
 (Abjuration) 
 Level: Clr 4, Drd 4, Pal 4, Rgr 4
 Range: Touch 
-Duration: 1 round / level
+Duration: 10 rounds + 1 round/level
 Casting Time: 4
 Area of Effect: 1 creature
 Saving Throw: None 
 
-This spell gives the affected creature an immunity to magic that impedes movement (such as Grease, Web or Slow spells) and negates the effects of paralysis and hold spells.
+This spell gives the affected creature an immunity to magic that impedes movement (such as Grease, Web or Slow spells) and negates the effects of paralysis and hold spells. It does not grant immunity to stun.
 ~
 @1516    = ~Death Ward~
 @1517    = ~Death Ward 
@@ -1648,17 +1648,17 @@ Area of Effect: Caster
 Saving Throw: None
 
 Blur causes the wizard's body to become blurred, shifting and wavering. This distortion gives the caster's attackers a 20% miss chance when trying to hit him.~
-@1720    = ~Invisibility Purge~
-@1721    = ~Invisibility Purge 
+@1720    = ~Dispel Illusions~
+@1721    = ~Dispel Illusions
 (Divination)
 Level: Clr 3, Sor/Wiz 3, Brd 3, Drd 4
 Range: Personal
 Duration: Instantaneous
-Casting Time: 3 
-Saving Throw: None 
+Casting Time: 2
+Area of Effect: Sight of Caster
+Saving Throw: None
 
-Any invisible creatures within 20' have their invisibility dispelled. This includes creatures that are under the effects of Invisibility, Improved Invisibility, or mundane stealth. This spell does not bypass spell resistance.
-~
+This spell removes all illusionary effects from enemies in the area of effect, including Invisibility, Sanctuary, Mirror Image, and Blur.~
 @1722    = ~Nondetection~
 @1723    = ~Nondetection 
 (Abjuration) 
@@ -1669,19 +1669,19 @@ Casting Time: 3
 Area of Effect: 1 creature
 Saving Throw: None 
 
-By casting this spell, the wizard makes the creature touched undetectable by divination spells such as Invisibility Purge. This will also prevent a True Seeing spell from revealing the target, but Nondetection will be consumed in the process, leaving the target vulnerable to a subsequent divination spell.
+By casting this spell, the wizard makes the creature touched undetectable by divination spells such as Dispel Illusions and True Seeing.
 ~
 @1724    = ~True Seeing~
-@1725    = ~True Seeing 
+@1725    = ~True Seeing
 (Divination)
 Level: Brd 6, Clr 5, Drd 6, Pal 5, Sor/Wiz 5, Oghma 3
 Range: Sight of Caster
-Duration: Special
-Casting Time: 5 
-Area of Effect: Sight of Caster
+Duration: 5 rounds
+Casting Time: 5
+Area of Effect: 30' radius
 Saving Throw: None 
 
-This spell dispels any form of invisibility and reveals any hidden characters in the area of effect (i.e., thieves using stealth), regardless of spell resistance. This will also dispel all other illusionary protections, including Minor Mirror Image, Mirror Image, and Blur spells. Nondetection will prevent True Seeing from revealing a hidden creature, but True Seeing will dispel a Nondetection spell in the process. This spell cures any form of Blindness and makes the caster immune to blindness for 5 rounds.~
+True Seeing dispels all illusions among enemies and reveals any hidden characters in the area of effect (i.e., thieves using stealth), regardless of spell resistance. Mirror Image, Blur, Sanctuary, and all forms of invisibility are removed. Each round for the duration, this effect is repeated, dispelling illusions more recently created. This spell cures any form of blindness and makes the caster immune to blindness for 5 rounds.~
 @1726    = ~Ox's Fortitude~
 @1727    = ~Ox's Fortitude
 (Transmutation) 
@@ -1722,23 +1722,23 @@ The caster utters the finger of death incantation, points his index finger at th
 (Illusion) 
 Level: Brd 1, Sor/Wiz 1, Mask 1
 Range: Caster
-Duration: 3 rounds + 1 round / level
-Casting Time: 5
+Duration: 24 hours
+Casting Time: 0
 Area of Effect: 1 creature
 Saving Throw: None 
 
-Upon casting this spell, the caster creates 1d2 images of the target that will travel along beside him or her. The image will perform all of the actions that the target does, forcing opponents to guess which image to attack. The image will disappear with a successful Dispel Magic, when attacked or when the spell duration runs out.~
+Upon casting this spell, the caster creates an image of the target that will travel along beside him or her. The image will perform all of the actions that the target does, forcing opponents to guess which image to attack. The image will disappear with a successful Dispel Magic, when attacked or when the spell duration runs out.~
 @1734    = ~Ghost Armor~
 @1735    = ~Ghost Armor
 (Conjuration)
 Level: Brd 3, Sor/Wiz 3, Selune 4
 Range: Touch
-Duration: 2 rounds / level
+Duration: 5 rounds + 2 rounds/level
 Casting Time: 3 
-Area of Effect: 15-foot radius 
+Area of Effect: 1 creature
 Saving Throw: None 
 
-This spell creates a magical field of force that pushes away enemy attacks and spells, granting a +2 generic AC bonus and +2 to Reflex saves. The Ghost Armor spell does not hinder movement, adds no weight or encumbrance, nor does it prevent spellcasting. It lasts until dispelled or until the duration runs out.~
+This spell creates a magical field of force with the strength of half-plate armor (armor bonus +7). It is cumulative with Dexterity effects and shield bonuses. The Ghost Armor spell does not hinder movement, adds no weight or encumbrance, nor does it prevent spellcasting. It lasts until dispelled or until the duration runs out.~
 
 @1744    = ~Knock~
 @1745    = ~Knock
@@ -2056,13 +2056,13 @@ There is no saving throw, and the effects last for the duration of the spell or 
 @1850    = ~Greater Shield of Lathander
 (Conjuration) [Good]
 Level: Clr 7
-Range: Caster
-Duration: 5 rounds
+Range: Touch
+Duration: 3 rounds
 Casting Time: 7
-Area of Effect: 15' radius
+Area of Effect: 1 creature
 Saving Throw: None
 
-This spell grants damage reduction of 5/- to all forms of damage for the duration of the spell as well as +5 spell resistance.
+This spell grants damage reduction of 30/- to all forms of damage for the duration of the spell as well as +30 spell resistance.
 ~
 @1851    = ~Meteor Swarm~
 @1852    = ~Meteor Swarm 
@@ -2355,8 +2355,8 @@ This spell causes a major disease and weakness in a creature. The afflicted indi
 (Evocation) 
 Level: Clr 4, Pal 3, Ilmater 5
 Range: None
-Duration: 1 round/level
-Casting Time: 6
+Duration: 12 rounds
+Casting Time: 4
 Area of Effect: Caster
 Saving Throw: None
 
@@ -2421,12 +2421,12 @@ This spell outlines a creature with a pale glow, making its position and movemen
 (Abjuration)
 Level: Sor/Wiz 9, Helm 9
 Range: Caster 
-Duration: 30 rounds
+Duration: 20 rounds
 Casting Time: 1
 Area of Effect: Caster
 Saving Throw: None 
 
-This spell grants the caster a 15/- bonus to acid, cold, fire, and electricity resistance, a +5 deflection bonus, +3 spell resistance, +2 to all saves, and the effects of Stoneskin, Minor Globe of Invulnerability, and Freedom of Movement for the duration of the spell.~
+This spell grants the caster a 15/- bonus to all damage resistances, a +10 generic armor bonus, +20 spell resistance, and +5 to all saves.~
 
 @1977     = ~1 round~
 @1978     = ~Instant~
@@ -2595,7 +2595,31 @@ Launcher:  Bow~
 @30034=~Protected by Mantle (Damage Reduction 25/+5)~
 @30035=~Protected by Mantle (Damage Reduction 30/+6)~
 @30036=~Protected by Mantle (Damage Reduction 35/+7)~
+@30037=~Minor Elemental Barrier~
+@30038=~Protected from Fire~
+@30039=~Protected from Cold~
+@30040=~Protected from Electricity~
+@30041=~Protected from Acid~
+@30042=~Protected from Magic Energy~
+@30043=~Blurred~
+@30044=~Blink~
+@30045=~Rage~
+@30046=~Hope~
+@30047=~Protected by Aegis~
 
+@31212     = ~Slow Poison~
+@32212     = ~Slow Poison
+(Conjuration) 
+Level: Brd 2, Clr 2, Drd 2, Pal 2, Rgr 1
+Range: Touch 
+Duration: Instantaneous
+Casting Time: 0
+Area of Effect: 1 creature 
+Saving Throw: None 
+
+When this spell is placed upon a poisoned individual, it greatly slows the effects of venom, actually neutralizing all but the most deadly poisons.
+
+This spell will also sober up a character that has drunken himself into a stupor.~
 @31215     = ~Draw Upon Holy Might~
 @32215     = ~Draw Upon Holy Might
 (Evocation)
@@ -2609,6 +2633,17 @@ Saving Throw: None
 The caster calls upon their god to grant them power for a short period. The caster's Strength, Dexterity and Constitution are all raised by 1 point for every 3 levels of the caster. A third level caster would have their abilities raised by 1, while a 12th level caster would have their abilities raised by 4.
 
 When cast as a paladin spell, Draw Upon Holy Might gives additional bonuses. The paladin's Strength, Dexterity and Constitution are raised an additional number of points equal to the paladin's Charisma bonus. However, the total stat bonuses granted (from both level and Charisma) cannot be higher than +10.~
+@31308     = ~Remove Paralysis~
+@32308     = ~Remove Paralysis
+(Conjuration) 
+Level: Clr 2, Pal 2
+Range: Close
+Duration: Permanent 
+Casting Time: 1
+Area of Effect: 25' Radius
+Saving Throw: None 
+
+The caster can free creatures from the effects of any paralysis, stunning, or related magic (such as a ghoul touch, or a Hold Person spell).~
 @31305     = ~Hold Animal~
 @32305     = ~Hold Animal
 (Enchantment) 
@@ -2620,6 +2655,17 @@ Area of Effect: 20-foot radius
 Saving Throw: Will negates 
 
 This spell holds animals rigidly immobile. Animals with magical powers such as winter wolves do count as animals, as do some of the more animalistic monsters such as wyverns. The effect is centered on a point selected by the caster, and 1-4 animals within 20 feet of the target point are affected. Those who succeed on their Will save are unaffected by the spell. Being held does not prevent the worsening of the subject's condition due to wounds, disease, or poison.~
+@31326     = ~Negative Energy Protection~
+@32326     = ~Negative Energy Protection
+(Abjuration) 
+Level: Clr 3, Lathander 3
+Range: Touch
+Duration: 3 rounds/level
+Casting Time: 1
+Area of Effect: 1 creature
+Saving Throw: None 
+
+This spell employs positive energy to ward off the effects of negative energy from attacks such as those employed by wights, spectres and vampires.  The target creature is immune to energy drain for the duration of the spell.~
 @31409     = ~Cloak of Fear~
 @32409     = ~Cloak of Fear
 (Conjuration)
@@ -2658,7 +2704,7 @@ This spell brings into existence an immobile, blazing curtain of shimmering fire
 (Enchantment) [Chaos]
 Level: Clr 5, Tempus 5
 Range: Sight of Caster
-Duration: 1 round / level
+Duration: 10 rounds + 1 round/level
 Casting Time: 3
 Area of Effect: 1 creature
 Saving Throw: None
@@ -2686,6 +2732,19 @@ Area of Effect: 1 creature
 Saving Throw: None 
 
 Upon completion of this spell, the caster hurls a magical shard of ice imbued with deep freezing cold, dealing 1d4 cold damage to the target creature per caster level (5d4 maximum). Other creatures within 5 feet also take the same amount of damage, except that they may make a Reflex save for half damage.~
+@33209     = ~Luck~
+@34209     = ~Luck
+(Enchantment) 
+Level: Brd 2, Drd 2, Sor/Wiz 2
+Range: Sight of Caster
+Duration: 10 rounds
+Casting Time: 2
+Area of Effect: 1 creature
+Saving Throw: None 
+
+The recipient of this spell gains a +2 bonus to luck for the duration of the spell, with another +1 per 10 caster levels (max +5).
+
+Luck influences damage dice rolls, attack rolls, saving throws, and skill checks. For instance, if a character with +2 luck would roll 18 on an attack, the luck bonus adds 2 to the roll, making it a 20 and resulting in a critical hit.~
 @33299     = ~Summon Cow~
 @34299     = ~Summon Cow
 (Conjuration)
@@ -2707,7 +2766,7 @@ Casting Time: 3
 Area of Effect: Caster
 Saving Throw: Reflex half
 
-This spell enables the wizard to cast one small meteor for each level of the caster. Each meteor bursts into a 1-foot-diameter sphere upon impact and inflicts 1d4+6 points of fire damage (plus Strength bonus). The meteors use the Simple Weapon: Missile proficiency, gain a +5 bonus to attack rolls, and strike as +3 weapons. The wizard may discharge up to five missiles per round.~
+This spell creates fifteen small meteors, which can be thrown by the caster. Each meteor bursts into a 1-foot-diameter sphere upon impact and inflicts 1d4+6 points of fire damage (plus Strength bonus). The meteors use the Simple Weapon: Missile proficiency, gain a +5 bonus to attack rolls, and strike as +3 weapons. The wizard may discharge up to five missiles per round.~
 @33708     = ~Acid Storm~
 @34708     = ~Acid Storm
 (Evocation)
@@ -2839,7 +2898,7 @@ Range: Caster
 Duration: 10 rounds
 Casting Time: 6
 Area of Effect: 20-foot radius
-Saving Throw: None
+Saving Throw: Will negates
 
 This spell grants the caster an aura that repels nearby enemies, sending them hurtling away from the caster. Any enemy that comes within the area of effect must make a Will save at -3 or be knocked back.~
 @35753     = ~Power Word: Heal~
