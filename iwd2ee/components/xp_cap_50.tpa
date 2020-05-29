@@ -1,0 +1,17 @@
+// Credit goes to Nomad and IBreakThings for figuring out the offsets to modify in the exe.
+/*
+COPY ~IWD2.exe~ ~IWD2.exe~
+	WRITE_LONG 0x0014389B 50
+	WRITE_BYTE 0x00143895 50
+	WRITE_LONG 0x00144C71 (0 - 1)
+	WRITE_BYTE 0x001DCD4A 50
+*/
+
+COPY_EXISTING ~IEex_INI.lua~ ~override~
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~\[\"EX_XPCAP\"\].*~ ~["EX_XPCAP"] = true,~
+	IF_EXISTS
+	BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING ~EX_XPCAP.lua~ ~override~
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~level_cap = .*~ ~level_cap = 50~
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~xp_cap = .*~ ~xp_cap = -1~

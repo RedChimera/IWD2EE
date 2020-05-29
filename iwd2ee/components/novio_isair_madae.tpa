@@ -12,4 +12,3 @@ COPY ~%mod_folder%/bcs/AR6305.bcs~ ~override~
 COPY ~%mod_folder%/bcs/63PPORRM.bcs~ ~override~
 //Finally, the script for the exit to the end credits has the same line [!Global("US_Final_Battle_Alternate","GLOBAL",1)] at line 3 to keep the game from barricading the exit.
 COPY ~%mod_folder%/bcs/63pExits.bcs~ ~override~
-

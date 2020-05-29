@@ -606,7 +606,7 @@ Weight: 1 lb.~
 
 The Circle of Ice was sponsored by a merchant from Waterdeep whose name has been burned from recorded history by the Hosttower. Apparently, after being forced to debase himself before the Hosttower during a trading agreement in Luskan (and being forced to surrender much of his cargo), the merchant became obsessed with wiping the Hosttower from the face of Faerun. Commissioning wizards in Waterdeep to fashion a score of rings for him, he set about using the last of his remaining wealth to hire a band of wizard slayers to bring about the downfall of the Hosttower. These twenty wizard slayers made arrangements to travel north on their own and rendezvous with the merchant in Luskan. 
 
-Ironically enough, the merchant never wore one of these rings, which was key in exposing and defeating the movement. As soon as he returned to Luskan, his mind picked apart by telepaths and his movements scried, and each wizard slayer and accomplice were noted, identified, and ultimately led into deathtraps where their rings proved no match against the summoned monsters and arrows of slaying wielded by the ambush parties. It is rumored that only one wizard slayer, Martek, escaped the Hosttower, and to this day, he has never been found, which has been a constant source of irritation to the mages. 
+Ironically enough, the merchant never wore one of these rings, which was key in exposing and defeating the movement. As soon as he returned to Luskan, his mind was picked apart by telepaths and his movements scried, and each wizard slayer and accomplice was noted, identified, and ultimately led into deathtraps where their rings proved no match against the summoned monsters and arrows of slaying wielded by the ambush parties. It is rumored that only one wizard slayer, Martek, escaped the Hosttower, and to this day, he has never been found, which has been a constant source of irritation to the mages.
 
 In any event, the Circle of Ice died a quick, silent death in Luskan, but the merchant lived on as a toy of the Hosttower, serving them until death, at which point, his corpse was stored in their laboratories. It is most likely his preserved body will end up as the left arm of a flesh golem named Bok many years from now. 
 
@@ -861,11 +861,11 @@ Focus: Wearer deals maximum damage with each hit
 Weight: 1 lb.
 Minimum Wisdom of 14 Required~
 //@10250    = ~Bands of the Master~
-@10251    = ~When the last kensai of Kamjin-Doh, the Master of Razors, was slain in the fields of western Kara-Tur, these simple leather bands were ripped from his arms... and his arms ripped from his shoulders... as punishment for his destruction of the Kamjin-Doh. The identities of those who defeated him are not known, but the rumors in Kara Tur were that his slayers were the spirits of three sword saints of Kamjin-Doh, returned from death to end the crimes of the renegade kensai.
+@10251    = ~When the last kensei of Kamjin-Doh, the Master of Razors, was slain in the fields of western Kara-Tur, these simple leather bands were ripped from his arms... and his arms ripped from his shoulders... as punishment for his destruction of the Kamjin-Doh. The identities of those who defeated him are not known, but the rumors in Kara Tur were that his slayers were the spirits of three sword saints of Kamjin-Doh, returned from death to end the crimes of the renegade kensei.
 
 It was discovered that these once-simple bands of focus that the Master of Razors had worn as a student had become stained with blood and shame, and no longer shone with the same light as it once had. As the Master lost focus, his bands of focus corroded, almost to rot away as they were wrapped upon his bleeding arms. Nonetheless, these tattered bands still hold the power, strength, and viciousness of the Master of Razors... making the one who wields them far more deadly.
 
-If you wear these bands, never forget their purpose, never forget your focus, and never forget the reach of your enemy. Keep these three things in your heart, and they will serve you well in battle. 
+If you wear these bands, never forget their purpose, never forget your focus, and never forget the reach of your enemy. Keep these three things in your heart, and they will serve you well in battle.
 
 STATISTICS:
 
@@ -881,7 +881,7 @@ Arkamadis wore a pair of bracers during most of his time in the north. Regardles
 
 STATISTICS:
 
-The wearer's Strength bonus is added to any spell damage they deal
+Half the wearer's Strength bonus is added to any spell damage they deal
 Special: Can grant self +6 Strength for 4 rounds 1/Day
 Weight: 1 lb.~
 //@10254    = ~Great Lions of Arkamadis~
@@ -891,7 +891,7 @@ Arkamadis wore a pair of bracers during most of his time in the north. Regardles
 
 STATISTICS:
 
-The wearer's Strength bonus is added to any spell damage they deal
+Half the wearer's Strength bonus is added to any spell damage they deal
 Special: Can grant self +10 Strength for 5 rounds 1/Day
 Weight: 1 lb.~
 //@10256    = ~Rakavik's Bracers~
@@ -1213,7 +1213,7 @@ Charisma: +6 bonus
 Improved Alertness: Wearer is immune to sneak attacks
 Weight: 2 lb.~
 //@10344    = ~Woodland Cloak~
-@10345    = ~The leaves that fall from the great oak of Kuldahar are surprisingly flexible, much like cloth, and when treated with special druidic magics, can be fashioned as cloaks. When worn, the cloaks make no sound, and they provide the wearer with a minor chameleon effect, allowing them to blend into the natural surroundings and avoid the notice of those that would do the wearer harm. Furthermore, in times of danger, the wearer may wrap the cloak around his body, making his skin as hard as wood and helping to protect him against attack
+@10345    = ~The leaves that fall from the great oak of Kuldahar are surprisingly flexible, much like cloth, and when treated with special druidic magics, can be fashioned as cloaks. When worn, the cloaks make no sound, and they provide the wearer with a minor chameleon effect, allowing them to blend into the natural surroundings and avoid the notice of those that would do the wearer harm. Furthermore, in times of danger, the wearer may wrap the cloak around their body, making their skin as hard as wood and helping to protect them against attack.
 
 STATISTICS:
 
@@ -5994,10 +5994,10 @@ Attack Bonus:  +5
 Enchantment:  +5
 Damage Type:  Slashing
 Special: 
-  Resistance: 2/- Slashing Resistance
-  Resistance: 2/- Piercing Resistance
-  Resistance: 2/- Bludgeoning Resistance
-  Resistance: 2/- Missile Resistance
+  Resistance: 5/- Slashing Resistance
+  Resistance: 5/- Piercing Resistance
+  Resistance: 5/- Bludgeoning Resistance
+  Resistance: 5/- Missile Resistance
 Weight: 7 lb.
 Required Feat:  Martial Weapon, Axe
 Type:  One-handed~
@@ -7827,7 +7827,7 @@ Enchantment:  +3
 Damage Type: Bludgeoning
 Special:  
   Spell Power: Can cast the spell Shocking Grasp (at level 20) twice per day
-  Spell Power: Can cast the spell  Lightning Bolt (at level 20) once per day
+  Spell Power: Can cast the spell Lightning Bolt (at level 20) once per day
 Weight: 7 lb.
 Feat Requirement:  Martial Weapon, Hammer
 Type:  One-handed~
@@ -7851,7 +7851,7 @@ Type:  One-handed~
 //@11591    = ~Craftsman's Hammer~
 //@11592    = ~Item description can remain the same; if new description is needed put it here~
 //@11593    = ~Slow and Steady~
-@11594    = ~This heavy-headed hammer looks like it was used for construction on the Palisade, and it's possible that none of the workers were aware of its enchanted nature. While this weapon is a little slower and heavier than a warhammer, its swing is true and does more damage when it hits. A single tap from this hammer creates a clear, ringing note. 
+@11594    = ~This heavy-headed hammer looks like it was used for construction on the Palisade, and it's possible that none of the workers were aware of its enchanted nature. While this weapon is a little slower and heavier than a warhammer, its swing is true and does more damage when it hits. A single tap from this hammer creates a clear, ringing note.
 
 STATISTICS:
 
@@ -9971,7 +9971,7 @@ STATISTICS:
 Resistance:  25/- Bludgeoning Resistance
 Weight: 1 lb.~
 //@12089    = ~Potion of Invulnerability~
-@12090    = ~This potion confer near-complete invulnerability to all damage. The effects are short-lived, however, lasting for only 2 rounds.
+@12090    = ~This potion confers near-complete invulnerability to all damage. The effects are short-lived, however, lasting for only 2 rounds.
 
 STATISTICS:
 
@@ -10631,7 +10631,7 @@ Though the origins of the grimoire and the identity of anyone associated with it
 
 The unsavory book was cast into a temple brazier but, to the astonishment of numerous witnesses, it vanished in a cloud of foul-smelling vapor rather than bursting into flames. Since that day the Obscene Grimoire has appeared in many places, never found intentionally and always disappearing again within a few year's time.
 
-The thick, black, leather-bound book is filled with painstakingly detailed woodblock prints, each depicting a gruesome scene of violent perversion. Even the briefest of glances through its disturbing pages is enough to assure the reader that no taboo is left unturned. However, for those willing to carefully peruse the disquieting work, there are dark runes and ritual directions hidden amongst the illumination around each print. Those so inclined are able to use the power of Mensel's Obscene Grimoire to summon a cacofiend, bound to the reader's service, one time before the book vanishes.
+The thick, black, leather-bound book is filled with painstakingly detailed woodblock prints, each depicting a gruesome scene of violent perversion. Even the briefest of glances through its disturbing pages is enough to assure the reader that no taboo is left unturned. However, for those willing to carefully peruse the disquieting work, there are dark runes and ritual directions hidden amongst the illumination around each print. Those so inclined are able to use the power of Mensel's Obscene Grimoire to summon a cacofiend, bound to the reader's service, once per day.
 
 STATISTICS:
 
@@ -10639,14 +10639,14 @@ Special:
   Using the grimoire casts both Protection From Evil and Cacofiend.
   The Obscene Grimoire may be used once per day.
 Weight: 2 lb.~
-//@12223    = ~Mensel's Obscene Grimoire Pervertere~
+//@12223    = ~Mensel's Vile Grimoire Pervertere~
 @12224    = ~Mensel of Cormyr, at one time the Lord of Immersea, was that rare sort of nobleman, a fellow well known to be kind, generous, and humanitarian to a fault. He was much loved by his family, servants, and those that lived upon his lands. Well after the elderly Lord Mensel had passed away in his sleep, a secret vault was found hidden beneath his study. Within the vault Mensel's heirs found a small hoard of treasure... and the Vile Grimoire Pervertere.
 
 Though the origins of the grimoire and the identity of anyone associated with it - save the late Lord Mensel, of course - are still unknown, unwholesome rumors sprang up like mushrooms and still abound after nearly a century. The worst of the scandalous claims involved a seer from Arabel, a pious young man that seemed saddened to explain that Lord Mensel had the grimoire fashioned for himself at great expense and then slew all those involved in its making - an assertion that did no less than bring ruin to Mensel's name and family.
 
 The unsavory book was cast into a temple brazier but, to the astonishment of numerous witnesses, it vanished in a cloud of foul-smelling vapor rather than bursting into flames. Since that day the Obscene Grimoire has appeared in many places, never found intentionally and always disappearing again within a few year's time.
 
-The thick, black, leather-bound book is filled with painstakingly detailed woodblock prints, each depicting a gruesome scene of violent perversion. Even the briefest of glances through its disturbing pages is enough to assure the reader that no taboo is left unturned. However, for those willing to carefully peruse the disquieting work, there are dark runes and ritual directions hidden among the illumination around each print. Those so inclined are able to use the power of Mensel's Obscene Grimoire to summon a powerful fiend, bound to the reader's service, once per day.
+The thick, black, leather-bound book is filled with painstakingly detailed woodblock prints, each depicting a gruesome scene of violent perversion. Even the briefest of glances through its disturbing pages is enough to assure the reader that no taboo is left unturned. However, for those willing to carefully peruse the disquieting work, there are dark runes and ritual directions hidden among the illumination around each print. Those so inclined are able to use the power of Mensel's Vile Grimoire Pervertere to summon a powerful fiend, bound to the reader's service, once per day.
 
 STATISTICS:
 
@@ -12849,7 +12849,64 @@ STATISTICS:
 
 Fire, cold, electric, and acid damage dealt by the wearer is increased by 40%
 Weight: 0 lb.~
+@12743    = ~Staff of Curing~
+@12744    = ~The simplest and humblest of staff weapons, the quarterstaff is a length of wood ranging six to nine feet in length. Masterwork quarterstaffs are made of stout oak and are shod with metal at both ends. This one is particularly special as it has been imbued with magical properties.
 
+STATISTICS:
+
+Damage:  1d6 + 1
+Attack Bonus:  +1 
+Enchantment:  +1
+Damage Type:  Bludgeoning
+Special:
+  The wielder's healing spells and abilities heal 50% more hit points
+Weight: 4 lb.
+Feat Requirement:  Simple Weapon, Quarterstaff
+Type:  Two-handed~
+@12745    = ~Staff of Healing~
+@12746    = ~The simplest and humblest of staff weapons, the quarterstaff is a length of wood ranging six to nine feet in length. Masterwork quarterstaffs are made of stout oak and are shod with metal at both ends. This one is particularly special as it has been imbued with magical properties.
+
+STATISTICS:
+
+Damage:  1d6 + 3
+Attack Bonus:  +3
+Enchantment:  +3
+Damage Type:  Bludgeoning
+Special:
+  The wielder's healing spells and abilities heal 100% more hit points
+Weight: 4 lb.
+Feat Requirement:  Simple Weapon, Quarterstaff
+Type:  Two-handed~
+@12747    = ~Impervious Elixir~
+@12748    = ~Potions are typically found in ceramic, crystal, glass, or metal flasks or vials. Flasks or other containers generally contain enough fluid to provide one person with one complete dose to achieve the effects of the potion.
+
+STATISTICS:
+
+The drinker permanently becomes immune to critical hits
+Weight:  1 lb.~
+@12749    = ~Namji's Robe~
+@12750    = ~A wizard from Thesk named Namji was the creator of this powerful robe.  While it does not impart a host of magical resistances to the wearer, it is extremely useful for spellcasters who find themselves in dangerous situations often.  Namji himself was a reckless battle wizard who delighted in hurling spells from the midst of the fray.  He was feared for his use of Namji's Burning Hands, an adaptation of the common Burning Hands spell.
+
+STATISTICS:
+
+Regeneration: Regain 2 hit points per round
+Regenerative Casting: The wearer regains 3 hit points whenever they cast a spell
+Weight:  3 lb.~
+@12751    = ~Namji's Regenerative Robe~
+@12752    = ~A wizard from Thesk named Namji was the creator of this powerful robe.  While it does not impart a host of magical resistances to the wearer, it is extremely useful for spellcasters who find themselves in dangerous situations often.  Namji himself was a reckless battle wizard who delighted in hurling spells from the midst of the fray.  He was feared for his use of Namji's Burning Hands, an adaptation of the common Burning Hands spell.
+
+STATISTICS:
+
+Regeneration: Regain 3 hit points per round
+Regenerative Casting: The wearer regains 6 hit points whenever they cast a spell
+Weight:  3 lb.~
+@12753    = ~Epic Belt of Extension~
+@12754    = ~Belts are usually wide bands of leather or some other material  that can be fastened around the waist. Most belts are used for the practical purpose of holding up ones pants, but like most articles of clothing they can also be used for ornamental purposes.
+
+STATISTICS:
+
+The wearer's spells last twice as long
+Weight: 3 lb.~
 @12900    = ~Hrm - you are powerful allies, indeed. More gold and gems to line your pockets, then - also, a suit of plate armor, a warhammer, a helmet, all crafted and enchanted by great duergar artisans. They are well deserved, outsider.~
 @12901    = ~Drink this Rainwater Brew, Ennelia. It should help your condition.~
 @12902    = ~Drink this Sour Draught, Ennelia. It should help your condition.~

@@ -462,7 +462,7 @@ Level 21-30: 1d8+5
 * Ki Strike: At level 8, the monk's unarmed attack is empowered with ki. The unarmed strike damage from such an attack can deal damage to a creature with damage reduction, such as a wight, as if the blow were made with a weapon with an enhancement bonus equal to the monk's damage bonus. Thus, a level 12 monk's fists strike as a +3 weapon.
 * A monk's natural armor class starts at 10, and then increases by +1 at 5th level and every 5 levels thereafter.
 * When not wearing armor a monk adds his Wisdom bonus to his AC in the same manner as his Dexterity bonus.
-* Stunning Attacks: When this ability is used, all of the monk's attacks in the next round force the victim to make a saving throw or be stunned. This special ability automatically modifies a monk's normal attack, no targeting needs to be done.  A monk can make a stunning attack 1/day/level.
+* Stunning Attacks: When this ability is used, all of the monk's attacks in the next round force the victim to make a saving throw or be stunned. A monk can make a stunning attack 1/day/level.
 * Evasion: Monks have the ability to evade damage from area affect spells. Whenever a monk makes a successful reflex save against an area effect spell that allows a reflex save for half damage, he or she takes no damage.
 * 2nd level: Deflect Arrows. The monk gains the Deflect Arrows feat, yielding a +1 miscellanous bonus against missile weapons.
 * 3rd level: Still Mind. The monk gains a +2 bonus to saving throws against spells and effects from the Enchantment school.  Unarmored movement speed increases.
@@ -475,9 +475,9 @@ Level 21-30: 1d8+5
 * 11th level: Diamond Body.  The monk is in such control of his own metabolism that he gains immunity to poison of all kinds.
 * 12th level: Unarmored movement speed increases.
 * 13th level: Diamond Soul.  The monk gains spell resistance.  His spell resistance equals his level + 10. In order to affect the monk with a spell, a spellcaster must roll the monk's spell resistance or higher on 1d20 + the spellcaster's level.
-* 15th level: Quivering Palm. This terrifying attack allows the monk to set up vibrations within the body of another creature that can be fatal.  The monk can use the quivering palm attack once per day. Constructs and undead cannot be affected. The monk must be of higher level than the target (or have more levels than the target's number of Hit Dice). The next time the monk hits a creature with an unarmed attack, the target dies unless it makes a Fortitude saving throw (DC 10 + one-half the monk's level + Wisdom modifier). Unarmored movement speed increases. The monk gains additional uses of Quivering Palm at levels 21 and 27.
+* 15th level: Quivering Palm. This terrifying attack allows the monk to set up vibrations within the body of another creature that can be fatal.  The monk can use the quivering palm attack once per day. The next time the monk hits a creature with an unarmed attack, the target dies unless it makes a Fortitude saving throw (DC 10 + one-half the monk's level + Wisdom modifier). Constructs and undead cannot be affected. Unarmored movement speed increases. The monk gains additional uses of Quivering Palm at levels 21 and 27.
 * 18th level: Unarmored movement speed increases.
-* 19th level: Empty Body. The monk can assume an ethereal state for  2 rounds a number of times a day equal to his level divided by 2.
+* 19th level: Empty Body. The monk can assume an ethereal state for 2 rounds a number of times a day equal to his level divided by 2.
 * 20th level: Perfect Self.  The monk has tuned his body with skill and quasi-magical abilities to the point that he becomes a magical creature. He is forevermore treated as an outsider (extraplanar creature) rather than as a humanoid. For instance, charm person does not affect him. Additionally, the monk gains damage reduction 20/+1. This means that the monk ignores (instantly regenerates) the first 20 points of damage from any attack unless the damage is dealt by a weapon with a +1 enhancement bonus (or better), by a spell, or by a form of energy (fire, cold, etc.). As an outsider, a 20th level monk is subject to spells that repel enchanted creatures, such as protection from law.
 
 Disadvantages:
@@ -498,7 +498,7 @@ Advantages:
 * Adds Charisma modifier to all saving throws.
 * Paladins may use Lay On Hands 1/Day.  Lay On Hands heals the target for a number of hit points equal to the paladin's Charisma modifier times their paladin level (minimum of 1 point per level). Paladins gain an additional casting every 5 levels.
 * Paladins are immune to all forms of disease.
-* 2nd level: Smite Evil.  Once per day, the paladin may now attempt to smite evil with one normal melee attack. He adds his Charisma modifier (if positive) to his attack roll and deals extra damage equal to his paladin level plus his Charisma modifier.
+* 2nd level: Smite Evil.  Once per day, the paladin may now attempt to smite evil with one normal melee attack. He adds his Charisma modifier (if positive) to his attack roll and deals a number of extra d4s equal to his paladin level plus his Charisma modifier. Paladins can smite evil an additional time every 10 levels.
 * 2nd Level: Aura of Courage.  Paladins become immune to fear, and allies within 10 feet receive a bonus of +4 to saving throws against fear effects.
 * 3rd level: Remove Disease. The paladin gains the ability to remove disease from other characters a number of times per day equal to his level divided by 3.
 * 3rd Level: Turn Undead.  When this power is invoked, the paladin attempts to use the power of his or her patron deity to terrify a group of undead.  The higher the paladin's level and charisma are, the greater his or her chance of success is.  Though this ability is similar to the cleric's Turn Undead ability, the paladin's ability functions as though he or she were two levels lower than a cleric.
@@ -612,6 +612,158 @@ Advantages:
 
 * Improved Turning Feat
 * Lathander's Renewal 1/day (heals 6x cleric level in hit points and cures energy drain)~
+
+@560    = ~PALADIN OF ILMATER:
+
+Paladins of Ilmater venerate the god of suffering.  They willingly take the most horrible wounds in any battle just to prevent the suffering of others.  They are typically known for their humility.
+
+Favored Classes: Can multiclass to a Painbearer of Ilmater or a Monk of the Broken Ones without losing the ability to advance in the paladin class.
+
+WARNING: A paladin who multiclasses to a class other than paladin or one of their order's favored classes will never be allowed to advance in the paladin class again.~
+@561    = ~PALADIN OF HELM:
+
+Paladins of Helm follow the teachings of the god of guardians.  They are dedicated to defending the weak and protecting important places against assault.
+
+Favored Classes: Can multiclass to a fighter or a Watcher of Helm without losing the ability to advance in the paladin class.
+
+WARNING: A paladin who multiclasses to a class other than paladin or one of their order's favored classes will never be allowed to advance in the paladin class again.~
+@562    = ~PALADIN OF MYSTRA:
+
+Paladins of Mystra insure that the powers of the goddess of magic are not used for evil.  They seek out evil spellcasters all over Faerun for the protection of civilization and to protect benign wizards from the repercussions of irresponsible magic use.
+
+Favored Classes: Can multiclass to a wizard or a sorcerer without losing the ability to advance in the paladin class.
+
+WARNING: A paladin who multiclasses to a class other than paladin or one of their order's favored classes will never be allowed to advance in the paladin class again.~
+@563    = ~MONK OF THE OLD ORDER:
+
+Members of the Old Order do not worship any particular deity, but are fond of philosophical debates and introspection.
+
+Favored Classes: Can multiclass to a rogue or a druid without losing the ability to advance in the monk class.
+
+WARNING: A monk who multiclasses to a class other than monk or one of their order's favored classes will never be allowed to advance in the monk class again.~
+@564    = ~MONK OF THE BROKEN ONES:
+
+Members of the Order of the Broken Ones venerate Ilmater, god of suffering.  They strive to endure the pain of their training as well as the pain of others.
+
+Favored Classes: Can multiclass to a Painbearer of Ilmater or a Paladin of Ilmater without losing the ability to advance in the monk class.
+
+WARNING: A monk who multiclasses to a class other than monk or one of their order's favored classes will never be allowed to advance in the monk class again.~
+@565    = ~MONK OF THE DARK MOON:
+
+Members of the Order of the Dark Moon worship Shar, goddess of darkness and loss.  They use their monastic training as a route to personal and spiritual power.
+
+Favored Classes: Can multiclass to a rogue or a sorcerer without losing the ability to advance in the monk class.
+
+WARNING: A monk who multiclasses to a class other than monk or one of their order's favored classes will never be allowed to advance in the monk class again.~
+
+@580    = ~
+
+Domain Spells:
+1: Bane, Command
+2: Horror, Silence
+3: Dire Charm, Rigid Thinking
+4: Cloak of Fear, Emotion: Despair
+5: Domination, Greater Command
+6: Feeblemind, Power Word: Silence
+7: Control Undead, Gate
+8: Enslave, Great Shout
+9: Mass Dominate, Power Word: Kill~
+@581    = ~
+
+Domain Spells:
+1: Armor of Faith, Protection from Evil
+2: Hold Person, Spell Shield
+3: Glyph of Warding, Protection from Arrows
+4: Death Ward, Defensive Harmony
+5: Banishment, Repulsion
+6: Circle of Blades, Globe of Invulnerability
+7: Impervious Sanctity of Mind, Mantle
+8: Elemental Barrier, Seven Eyes
+9: Aegis, Iron Body~
+@582    = ~
+
+Domain Spells:
+1: Minor Elemental Barrier, Ox's Fortitude
+2: Aid, Exaltation
+3: Cure Serious Wounds, Magic Circle Against Evil
+4: Emotion: Hope, Otiluke's Resilient Sphere
+5: Feeblemind, Greater Restoration
+6: Stoneskin, Trollish Fortitude
+7: Impervious Sanctity of Mind, Mist of Eldath
+8: Holy Aura, Iron Body
+9: Horrid Wilting, Mass Heal~
+@583    = ~
+
+Domain Spells:
+1: Faerie Fire, Sunscorch
+2: Aganazzar's Scorcher, Halt Undead
+3: Negative Energy Protection, Restoration
+4: Holy Smite, Shield of Lathander
+5: Raise Dead, Sol's Searing Orb
+6: Greater Shield of Lathander, Heal
+7: Greater Restoration, Sunbeam
+8: Aura of Vitality, Resurrection
+9: Mass Heal, Meteor Swarm~
+@584    = ~
+
+Domain Spells:
+1: Cat's Grace, Sleep
+2: Blindness, Blur
+3: Invisibility Sphere, Mirror Image
+4: Blink, Improved Invisibility
+5: Lutzaen's Local Teleport, Shadow Conjuration
+6: Darts of Bone, Greater Shadow Conjuration
+7: Mass Haste, Shades
+8: Army of Images, Mass Invisibility
+9: Black Blade of Disaster, Perfect Invisibility~
+@585    = ~
+
+Domain Spells:
+1: Identify, Identify Creature
+2: Find Traps, Remove Magic
+3: Dispel Magic, True Seeing
+4: Malison, Shout
+5: Power Word: Heal, Power Word: Silence
+6: Power Word: Stun, Symbol of Fear
+7: Great Shout, Symbol of Hopelessness
+8: Power Word: Kill, Symbol of Death
+9: Executioner's Eyes, Wail of the Banshee~
+@586    = ~
+
+Domain Spells:
+1: Faerie Fire, Moon Motes
+2: Moonblade, Otiluke's Resilient Sphere
+3: Summon Cow, Wall of Moonlight
+4: Emotion: Rage, Ghost Armor
+5: Protection from Magic Energy, Suffocate
+6: Antimagic Field, Divine Shell
+7: Lutzaen's Local Teleport, Planar Binding: Air Elemental
+8: Improved Alacrity, Planar Ally: Fire Elemental
+9: Elemental Legion, Prismatic Spray~
+@587    = ~
+
+Domain Spells:
+1: Doom, Shocking Grasp
+2: Gedlee's Electric Loop, Storm Shell
+3: Call Lightning, Lightning Bolt
+4: Protection from Electricity, Static Charge
+5: Ball Lightning, Chain Lightning
+6: Acid Storm, Whirlwind
+7: Destruction, Fire Storm
+8: Earthquake, Horrid Wilting
+9: Living Lightning, Meteor Swarm~
+@588    = ~
+
+Domain Spells:
+1: Magic Stone, True Strike
+2: Chant, Draw Upon Holy Might
+3: Animate Zombie, Prayer
+4: Emotion: Rage, Recitation
+5: Champion's Strength, Chaotic Commands
+6: Circle of Blades, Spiritual Wrath
+7: Mordenkainen's Sword, Tenser's Transformation
+8: Aura of Vitality, Iron Body
+9: Black Blade of Disaster, Executioner's Eyes~
 
 @669    = ~MAXIMIZED ATTACKS:
 
@@ -797,7 +949,7 @@ You may use your Smite Evil ability more often and with greater power.
 
 Prerequisite: 2 levels of paladin
 
-Benefit: You gain an additional use of Smite Evil per day. In addition, your paladin level and Charisma modifier are added again to the damage of Smite Evil. This feat may be taken up to three times.~
+Benefit: You gain an additional use of Smite Evil per day. In addition, your Charisma modifier is added again to the damage of Smite Evil. This feat may be taken up to three times.~
 @695    = ~Improved Turning~
 @696    = ~IMPROVED TURNING:
 

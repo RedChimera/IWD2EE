@@ -96,3 +96,26 @@ Tempus:
 7: Mordenkainen's Sword, Tenser's Transformation
 8: Aura of Vitality, Iron Body
 9: Black Blade of Disaster, Executioner's Eyes
+
+
+Auril:
+1: Ice Blade
+2: Snilloc's Snowball Swarm
+3: Icelance
+4: Fireshield (Blue), Ice Storm
+5: Cone of Cold
+6: Otiluke's Freezing Sphere
+7: Auril's Whirlwind
+8:
+9: Auril's Blessing
+
+Malar:
+1: Hunter's Mark
+2: Summon Nature's Ally II
+3: Summon Nature's Ally III, Animal Rage
+4: Emotion: Rage
+5:
+6: Summon Nature's Ally VI
+7: Creeping Doom
+8:
+9: Executioner's Eyes

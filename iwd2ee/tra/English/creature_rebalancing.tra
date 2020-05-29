@@ -9,6 +9,9 @@
 @20006=~Protected by Epic Mage Armor (Armor Bonus +20)~
 @20007=~Protected by Epic Warding (Damage Reduction 50/+10)~
 @20008=~Singing Battlesong: Bladesong - Extra Attacks Per Round and Combat Bonuses~
+@20009=~Greater Death Armor~
+@20010=~Applies Soul Eater with each hit~
+
 @21001=~Ruin~
 @21002=~Greater Ruin~
 @21003=~Epic Warding~
@@ -23,6 +26,7 @@
 @21012=~Create Winterwight~
 @21013=~Animus Blizzard~
 @21014=~Many Missiles~
+@21015=~Souleating Weapon~
 
 @21152=~Hunter's Mark~
 @21651=~Sseth's Venom~
@@ -35,6 +39,7 @@
 @21952=~Mass Harm~
 @22651=~Hellish Snowball Swarm~
 @22751=~Stygian Ice Storm~
+@22754=~Greater Death Armor~
 @22851=~Greater Trollish Fortitude~
 
 @23001=~Shadow of the Void~
@@ -72,6 +77,13 @@ Weight:  0 lb.~
 @23015=~Greater Fomorian~
 @23016=~Narinian~
 @23017=~Dream Larva~
+@23018=~Marilith Blade~
+@23019=~Foul beast!  I'll not utter my name to you!  Back to the burning fires of the Nine Hells with you!~
+@23020=~Yes, you're a gelugon.  You are second in power only to the formidable pit fiends of the baatezu. Gelugons hail from the icy layers of Stygia and Cania in the Nine Hells; I can tell by your lighter coloring that you're from Cania. Your main duties include spying and being elite guards. If you prove yourself to be a formidable gelugon, which I'm sure you have, you will be given the honor of being cast into the Pit of Hellfrost for 1001 days, then...~
+@23021=~From what I can tell, you're a devil.  I believe devils come from the Nine Hells.  Why is this relevant?~
+@23022=~I must say, I have never met a mortal who was so knowledgeable about the Blood War and the denizens of Baator.  I respect this.  In fact, I shall let you live, as a reward for your impressive knowledge.  Now, I have things I must attend to.  Farewell, <CHARNAME>, but know that if we meet again, I will consume you.~
+@23023=~Typical mortal hero.  Oh well, I was getting a bit hungry anyways.  Gentle-devils, after you...~
+@23024=~Death Knight Greatsword~
 
 @24002=~Call Slayer Knights~
 @24003=~Call Gelugon~
@@ -81,3 +93,8 @@ Weight:  0 lb.~
 @24007=~Nightmare~
 @24008=~Greater Nightmare~
 @24009=~Remove Magic~
+@24012=~Smite Good~
+@24013=~Xvimian Smite~
+@24014=~Animate Cold Bones~
+@24015=~Fell Soul Eater~
+@24016=~Hellfireball~

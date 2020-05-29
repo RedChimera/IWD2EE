@@ -398,3 +398,15 @@ BEGIN @66 DESIGNATED 76
 SUBCOMPONENT @63
 
       INCLUDE ~%mod_folder%/components/reduced_sneak_attack_delay.tpa~ //~Lower it to 1 round~
+
+//Increase the level cap
+
+BEGIN @71 DESIGNATED 81
+SUBCOMPONENT @70
+
+      INCLUDE ~%mod_folder%/components/xp_cap_40.tpa~ //~Increase it to 40~
+
+BEGIN @72 DESIGNATED 82
+SUBCOMPONENT @70
+
+      INCLUDE ~%mod_folder%/components/xp_cap_50.tpa~ //~Increase it to 50~

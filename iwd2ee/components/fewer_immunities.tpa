@@ -320,6 +320,19 @@ COPY_EXISTING ~53MGOLEM.cre~ ~override~
 	WRITE_BYTE piercingresistance 5
 	WRITE_BYTE missileresistance 10
 
+COPY_EXISTING ~53VICISC.cre~ ~override~
+	WRITE_BYTE fireresistance 5
+	WRITE_BYTE coldresistance 15
+	WRITE_BYTE electricityresistance 0
+	WRITE_BYTE acidresistance 100
+	WRITE_BYTE magicdamageresistance 10
+	WRITE_BYTE spellresistance 25
+	WRITE_BYTE slashingresistance 10
+	WRITE_BYTE piercingresistance 10
+	WRITE_BYTE bludgeoningresistance 20
+	WRITE_BYTE missileresistance 10
+	WRITE_BYTE enchantmentlevel 4
+
 COPY_EXISTING ~60ATALA.cre~ ~override~ ~60INHEIN.cre~ ~override~ ~60JAIGER.cre~ ~override~ ~60KAERVA.cre~ ~override~ ~60KAIRN.cre~ ~override~ ~60KHREE.cre~ ~override~
 	REPLACE_TEXTUALLY CASE_INSENSITIVE ~00CIBAR1~ ~USTOUGHE~
 
@@ -398,7 +411,8 @@ COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
 
 COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
 	READ_BYTE race therace
-	PATCH_IF therace = 165 BEGIN
+	PATCH_IF therace = 165 OR therace = 171 BEGIN
+		LPF	IWD2_REMOVE_CRE_ITEM STR_VAR item=~00CIDED1 00CIDEAD~ END
 		READ_SSHORT currenthp thecurrenthp
 		READ_SSHORT maxhp themaxhp
 		WRITE_SHORT currenthp (thecurrenthp * 2)
