@@ -64,6 +64,7 @@ Components:
 45. Weaken allied summoned creatures in Heart of Fury Mode
 46. Have the party start with experience in Heart of Fury Mode
 47. Remove the delay between sneak attacks
+48. Increase the level cap
 
 ## Class Revisions
 
@@ -330,5 +331,9 @@ The beginning of Heart of Fury Mode is absolutely brutal if you start at level 1
 ## Remove the delay after a sneak attack before the creature can be sneak attacked again
 
 Normally once a rogue sneak attacks a creature, that creature becomes immune to sneak attacks for about 3 rounds. This component removes that immunity, allowing the creature to be sneak attacked again.
+
+## Increase the level cap
+
+This component increases the level cap to 40 or to 50 (your choice). You'll only reach such high levels if you're soloing or playing Heart of Fury Mode.
 
 Much of the credit for the inspiration for this mod goes to the makers of Light of Selune, IWD2-Ease, and Tactics4IWD2, which provided the groundwork for this mod and the changes it makes. I would also like to thank Firecrow, who provided indispensable feedback and played an instrumental role in inspiring many of the mod's features, and subtledoctor, bubb, and Gwendolyne for providing invaluable technical support during the construction of the mod.
