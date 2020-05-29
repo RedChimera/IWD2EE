@@ -508,9 +508,9 @@ end
 -------------------
 
 function IEex_GetActorName(actorID)
-	local share = IEex_GetActorShare(actorID)
-	local nameStrref = IEex_ReadDword(share + 0x5A4)
-	return IEex_FetchString(nameStrref)
+	-- CGameSprite::GetName()
+	local CString = IEex_Call(0x71F760, {}, IEex_GetActorShare(actorID), 0x0)
+	return IEex_ReadString(IEex_ReadDword(CString))
 end
 
 function IEex_GetActorTooltip(actorID)
@@ -831,6 +831,25 @@ function IEex_TF(bool)
 	else
 		IEex_DisplayString("Huh?")
 	end
+end
+
+function IEex_SetToken(tokenString, valueString)
+
+	local tokenStringLen = #tokenString
+	local mem = IEex_Malloc(tokenStringLen + #valueString + 2)
+
+	local valueStringMem = mem + tokenStringLen + 0x1
+	IEex_WriteString(mem, tokenString)
+	IEex_WriteString(valueStringMem, valueString)
+
+	local g_pBaldurChitin = IEex_ReadDword(0x8CF6DC)
+	-- GetTokenCString
+	local CString = IEex_Call(0x7FC1A5, {mem}, g_pBaldurChitin + 0x1CC8, 0x0)
+
+	-- CString_equ_raw_string
+	IEex_Call(0x7FCD57, {valueStringMem}, CString, 0x0)
+	IEex_Free(mem)
+
 end
 
 function IEex_FetchString(strref)
