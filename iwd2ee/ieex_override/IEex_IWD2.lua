@@ -1406,9 +1406,9 @@ ex_feat_id_offset = {[18] = 0x78D, [38] = 0x777, [39] = 0x774, [40] = 0x779, [41
 ex_damage_multiplier_type = {[0] = 9, [0x10000] = 4, [0x20000] = 2, [0x40000] = 3, [0x80000] = 1, [0x100000] = 8, [0x200000] = 6, [0x400000] = 5, [0x800000] = 10, [0x1000000] = 7, [0x2000000] = 1, [0x4000000] = 2, [0x8000000] = 9, [0x10000000] = 5}
 ex_damage_resistance_stat = {[0] = 22, [0x10000] = 17, [0x20000] = 15, [0x40000] = 16, [0x80000] = 14, [0x100000] = 23, [0x200000] = 74, [0x400000] = 73, [0x800000] = 24, [0x1000000] = 21, [0x2000000] = 19, [0x4000000] = 20, [0x8000000] = 22, [0x10000000] = 73}
 function EXDAMAGE(effectData, creatureData)
+	if IEex_CheckForEffectRepeat(effectData, creatureData) then return end
 	local sourceID = IEex_ReadDword(effectData + 0x10C)
 	local targetID = IEex_GetActorIDShare(creatureData)
-	if IEex_CheckForEffectRepeat(targetID, effectData) then return end
 	if not IEex_IsSprite(sourceID, false) then
 		sourceID = 0
 	end
@@ -1948,6 +1948,7 @@ function EXDAMAGE(effectData, creatureData)
 end
 
 function MESNEAKA(effectData, creatureData)
+	if IEex_CheckForEffectRepeat(effectData, creatureData) then return end
 	local sourceID = IEex_ReadDword(effectData + 0x10C)
 	if not IEex_IsSprite(sourceID, false) then return end
 	local targetID = IEex_GetActorIDShare(creatureData)
@@ -2013,6 +2014,7 @@ function MESNEAKA(effectData, creatureData)
 end
 
 function MEHEALIN(effectData, creatureData)
+	if IEex_CheckForEffectRepeat(effectData, creatureData) then return end
 	local sourceID = IEex_ReadDword(effectData + 0x10C)
 	local targetID = IEex_GetActorIDShare(creatureData)
 	if not IEex_IsSprite(sourceID, false) then
@@ -2132,6 +2134,7 @@ ex_feat_bit_location = {
 }
 
 function MEMODFEA(effectData, creatureData)
+	if IEex_CheckForEffectRepeat(effectData, creatureData) then return end
 	local targetID = IEex_GetActorIDShare(creatureData)
 	local parameter1 = IEex_ReadDword(effectData + 0x18)
 	local parameter2 = IEex_ReadDword(effectData + 0x1C)
@@ -2154,6 +2157,7 @@ function MEMODFEA(effectData, creatureData)
 end
 --[[
 function MECRITIM(effectData, creatureData)
+	if IEex_CheckForEffectRepeat(effectData, creatureData) then return end
 	local targetID = IEex_GetActorIDShare(creatureData)
 	local immunityCount = IEex_ReadSignedWord(creatureData + 0x700, 0x0)
 	local permanentImmunity = IEex_ReadByte(creatureData + 0x702, 0x0)
@@ -2182,11 +2186,13 @@ end
 --]]
 
 function MECRITIM(effectData, creatureData)
+	if IEex_CheckForEffectRepeat(effectData, creatureData) then return end
 	local specialFlags = IEex_ReadByte(creatureData + 0x89F, 0)
 	IEex_WriteByte(creatureData + 0x89F, bit32.bor(specialFlags, 0x2))
 end
 
 function MECRITRE(effectData, creatureData)
+	if IEex_CheckForEffectRepeat(effectData, creatureData) then return end
 	local targetID = IEex_GetActorIDShare(creatureData)
 	local immunityCount = IEex_ReadSignedWord(creatureData + 0x700, 0x0)
 	local permanentImmunity = IEex_ReadByte(creatureData + 0x702, 0x0)
@@ -2262,9 +2268,9 @@ function applyStatSpell(targetID, index, statValue)
 end
 
 function MESTATSP(effectData, creatureData)
+	if IEex_CheckForEffectRepeat(effectData, creatureData) then return end
 	if not IEex_IsSprite(IEex_ReadDword(effectData + 0x10C), false) then return end
 	local targetID = IEex_GetActorIDShare(creatureData)
-	if IEex_CheckForEffectRepeat(targetID, effectData) then return end
 	local statValue = 0
 	local stat = IEex_ReadWord(effectData + 0x18, 0)
 	local otherStat = IEex_ReadByte(effectData + 0x1A, 0)
@@ -2317,11 +2323,11 @@ function MESTATSP(effectData, creatureData)
 end
 
 function MERAGE(effectData, creatureData)
+	if IEex_CheckForEffectRepeat(effectData, creatureData) then return end
 	local sourceID = IEex_ReadDword(effectData + 0x10C)
 	if not IEex_IsSprite(sourceID, false) then return end
 	local sourceData = IEex_GetActorShare(sourceID)
 	local targetID = IEex_GetActorIDShare(creatureData)
-	if IEex_CheckForEffectRepeat(targetID, effectData) then return end
 	local duration = IEex_ReadDword(effectData + 0x44)
 	local parent_resource = IEex_ReadLString(effectData + 0x90, 8)
 	local casterlvl = IEex_ReadDword(effectData + 0xC4)
@@ -2371,6 +2377,7 @@ function MERAGE(effectData, creatureData)
 end
 
 function METURNUN(effectData, creatureData)
+	if IEex_CheckForEffectRepeat(effectData, creatureData) then return end
 	local sourceID = IEex_ReadDword(effectData + 0x10C)
 	if not IEex_IsSprite(sourceID, false) then return end
 	local sourceData = IEex_GetActorShare(sourceID)
@@ -2470,8 +2477,8 @@ function METURNUN(effectData, creatureData)
 end
 
 function MESMITEH(effectData, creatureData)
+	if IEex_CheckForEffectRepeat(effectData, creatureData) then return end
 	local targetID = IEex_GetActorIDShare(creatureData)
-	if IEex_CheckForEffectRepeat(targetID, effectData) then return end
 	local duration = IEex_ReadDword(effectData + 0x44)
 	local parent_resource = IEex_ReadLString(effectData + 0x90, 8)
 	local charismaBonus = math.floor((IEex_GetActorStat(targetID, 42) - 10) / 2)
@@ -2489,10 +2496,10 @@ function MESMITEH(effectData, creatureData)
 end
 
 function MESMITE(effectData, creatureData)
+	if IEex_CheckForEffectRepeat(effectData, creatureData) then return end
 	local sourceID = IEex_ReadDword(effectData + 0x10C)
 	local targetID = IEex_GetActorIDShare(creatureData)
 	if not IEex_IsSprite(sourceID, false) then return end
-	if IEex_CheckForEffectRepeat(targetID, effectData) then return end
 	local sourceData = IEex_GetActorShare(sourceID)
 	local parameter2 = IEex_ReadDword(effectData + 0x1C)
 	local special = IEex_ReadDword(effectData + 0x44)
@@ -2539,9 +2546,9 @@ function MESMITE(effectData, creatureData)
 end
 
 function MEHOLYMI(effectData, creatureData)
+	if IEex_CheckForEffectRepeat(effectData, creatureData) then return end
 	if not IEex_IsSprite(IEex_ReadDword(effectData + 0x10C), false) then return end
 	local targetID = IEex_GetActorIDShare(creatureData)
-	if IEex_CheckForEffectRepeat(targetID, effectData) then return end
 	local statValue = IEex_ReadDword(effectData + 0x44)
 
 	local index = IEex_ReadWord(effectData + 0x1C, 0)
@@ -2553,9 +2560,9 @@ function MEHOLYMI(effectData, creatureData)
 end
 
 function MEPERFEC(effectData, creatureData)
+	if IEex_CheckForEffectRepeat(effectData, creatureData) then return end
 	if not IEex_IsSprite(IEex_ReadDword(effectData + 0x10C), false) then return end
 	local targetID = IEex_GetActorIDShare(creatureData)
-	if IEex_CheckForEffectRepeat(targetID, effectData) then return end
 	local statValue = IEex_ReadDword(effectData + 0x44)
 	statValue = statValue + math.floor((IEex_GetActorStat(targetID, 38) - 10) / 2)
 	statValue = statValue + math.floor((IEex_GetActorStat(targetID, 39) - 10) / 2)
@@ -2567,9 +2574,9 @@ function MEPERFEC(effectData, creatureData)
 end
 
 function MESTATRO(effectData, creatureData)
+	if IEex_CheckForEffectRepeat(effectData, creatureData) then return end
 	if not IEex_IsSprite(IEex_ReadDword(effectData + 0x10C), false) then return end
 	local targetID = IEex_GetActorIDShare(creatureData)
-	if IEex_CheckForEffectRepeat(targetID, effectData) then return end
 	local stat = IEex_ReadWord(effectData + 0x44, 0x0)
 	local statValue = IEex_GetActorStat(targetID, stat)
 	local dc = IEex_ReadWord(effectData + 0x46, 0x0)
@@ -2593,9 +2600,9 @@ function MESTATRO(effectData, creatureData)
 end
 
 function MESTATES(effectData, creatureData)
+	if IEex_CheckForEffectRepeat(effectData, creatureData) then return end
 	if not IEex_IsSprite(IEex_ReadDword(effectData + 0x10C), false) then return end
 	local targetID = IEex_GetActorIDShare(creatureData)
-	if IEex_CheckForEffectRepeat(targetID, effectData) then return end
 	local state = IEex_ReadDword(effectData + 0x44)
 	local stateValue = bit32.bor(IEex_ReadDword(creatureData + 0x5BC), IEex_ReadDword(creatureData + 0x920))
 	local invert = (bit32.band(IEex_ReadDword(effectData + 0x3C), 0x100000) > 0)
@@ -2617,9 +2624,9 @@ function MESTATES(effectData, creatureData)
 end
 
 function MESTATEI(effectData, creatureData)
+	if IEex_CheckForEffectRepeat(effectData, creatureData) then return end
 	if not IEex_IsSprite(IEex_ReadDword(effectData + 0x10C), false) then return end
 	local targetID = IEex_GetActorIDShare(creatureData)
-	if IEex_CheckForEffectRepeat(targetID, effectData) then return end
 	local stateValue = bit32.bor(IEex_ReadDword(creatureData + 0x5BC), IEex_ReadDword(creatureData + 0x920))
 	local invert = (bit32.band(IEex_ReadDword(effectData + 0x3C), 0x100000) > 0)
 	if bit32.band(stateValue, 0x10) > 0 and bit32.band(stateValue, 0x400000) == 0 then
@@ -2640,6 +2647,7 @@ function MESTATEI(effectData, creatureData)
 end
 
 function MEKILLSP(effectData, creatureData)
+	if IEex_CheckForEffectRepeat(effectData, creatureData) then return end
 	local targetID = IEex_GetActorIDShare(creatureData)
 	local sourceID = IEex_ReadDword(effectData + 0x10C)
 	if not IEex_IsSprite(sourceID, false) then return end
@@ -2705,9 +2713,9 @@ function MEKILLSP(effectData, creatureData)
 end
 
 function MESPLSTS(effectData, creatureData)
+	if IEex_CheckForEffectRepeat(effectData, creatureData) then return end
 	if not IEex_IsSprite(IEex_ReadDword(effectData + 0x10C), false) then return end
 	local targetID = IEex_GetActorIDShare(creatureData)
-	if IEex_CheckForEffectRepeat(targetID, effectData) then return end
 	local spellState1 = IEex_ReadByte(effectData + 0x44, 0x0)
 	local spellState2 = IEex_ReadByte(effectData + 0x45, 0x0)
 	local spellState3 = IEex_ReadByte(effectData + 0x46, 0x0)
@@ -2731,9 +2739,9 @@ function MESPLSTS(effectData, creatureData)
 end
 
 function MEMOVSPL(effectData, creatureData)
+	if IEex_CheckForEffectRepeat(effectData, creatureData) then return end
 	if not IEex_IsSprite(IEex_ReadDword(effectData + 0x10C), false) then return end
 	local targetID = IEex_GetActorIDShare(creatureData)
-	if IEex_CheckForEffectRepeat(targetID, effectData) then return end
 	local spellRES = IEex_ReadLString(effectData + 0x18, 8)
 	IEex_ApplyEffectToActor(targetID, {
 ["opcode"] = 254,
@@ -2761,9 +2769,9 @@ function MEMOVSPL(effectData, creatureData)
 end
 
 function MERACESP(effectData, creatureData)
+	if IEex_CheckForEffectRepeat(effectData, creatureData) then return end
 	if not IEex_IsSprite(IEex_ReadDword(effectData + 0x10C), false) then return end
 	local targetID = IEex_GetActorIDShare(creatureData)
-	if IEex_CheckForEffectRepeat(targetID, effectData) then return end
 	local matchRace = IEex_ReadByte(effectData + 0x44, 0x0)
 	local matchSubrace = IEex_ReadByte(effectData + 0x45, 0x0)
 	local invert = (bit32.band(IEex_ReadDword(effectData + 0x3C), 0x100000) > 0)
@@ -2785,12 +2793,12 @@ function MERACESP(effectData, creatureData)
 end
 
 function MEACTSPL(effectData, creatureData)
+	if IEex_CheckForEffectRepeat(effectData, creatureData) then return end
 	local sourceID = IEex_GetActorIDShare(creatureData)
 	if not IEex_IsSprite(sourceID, false) then return end
 	local action = IEex_ReadWord(effectData + 0x44, 0x0)
 	if action ~= IEex_ReadWord(creatureData + 0x476, 0x0) then return end
 	local targetID = IEex_ReadDword(creatureData + 0x4BE)
-	if IEex_CheckForEffectRepeat(targetID, effectData) then return end
 	local spellRES = IEex_ReadLString(effectData + 0x18, 8)
 	local casterlvl = IEex_ReadDword(effectData + 0xC4)
 	if casterlvl <= 1 then
@@ -2854,9 +2862,9 @@ function MEACTSPL(effectData, creatureData)
 end
 
 function MERAGEST(effectData, creatureData)
+	if IEex_CheckForEffectRepeat(effectData, creatureData) then return end
 	if not IEex_IsSprite(IEex_ReadDword(effectData + 0x10C), false) then return end
 	local targetID = IEex_GetActorIDShare(creatureData)
-	if IEex_CheckForEffectRepeat(targetID, effectData) then return end
 	local parameter1 = IEex_ReadDword(effectData + 0x18)
 	local parameter2 = IEex_ReadDword(effectData + 0x1C)
 	IEex_ApplyEffectToActor(targetID, {
@@ -2907,6 +2915,7 @@ function MERAGEST(effectData, creatureData)
 end
 
 function MEREDIRE(effectData, creatureData)
+	if IEex_CheckForEffectRepeat(effectData, creatureData) then return end
 	local targetID = IEex_GetActorIDShare(creatureData)
 	local sourceID = IEex_ReadDword(effectData + 0x10C)
 	if not IEex_IsSprite(sourceID, false) then return end
@@ -2927,9 +2936,9 @@ function MEREDIRE(effectData, creatureData)
 end
 
 function MEQUIPLE(effectData, creatureData)
+	if IEex_CheckForEffectRepeat(effectData, creatureData) then return end
 	if not IEex_IsSprite(IEex_ReadDword(effectData + 0x10C), false) then return end
 	local targetID = IEex_GetActorIDShare(creatureData)
-	if IEex_CheckForEffectRepeat(targetID, effectData) then return end
 	local hasBow = false
 	if IEex_GetActorSpellState(targetID, 241) then
 		IEex_IterateActorEffects(targetID, function(eData)
@@ -2958,6 +2967,7 @@ ex_real_projectile = {
 [77] = 67,
 }
 function MESPELLT(effectData, creatureData)
+	if IEex_CheckForEffectRepeat(effectData, creatureData) then return end
 	local targetID = IEex_GetActorIDShare(creatureData)
 	local sourceID = IEex_ReadDword(effectData + 0x10C)
 	if targetID == sourceID or not IEex_IsSprite(sourceID, false) or not IEex_IsSprite(targetID, false) then return end
@@ -3051,9 +3061,9 @@ function MESPELLT(effectData, creatureData)
 end
 
 function MEKENSEI(effectData, creatureData)
+	if IEex_CheckForEffectRepeat(effectData, creatureData) then return end
 	if not IEex_IsSprite(IEex_ReadDword(effectData + 0x10C), false) then return end
 	local targetID = IEex_GetActorIDShare(creatureData)
-	if IEex_CheckForInfiniteLoop(targetID, IEex_ReadDword(effectData + 0x24), "MEKENSEI", 5) then return end
 	local casterlvl = IEex_GetActorStat(targetID, 100)
 	if casterlvl < 3 then
 		casterlvl = 3
@@ -3128,9 +3138,9 @@ ex_armor_penalties = {
 [68] = {30, 2, 5},
 }
 function MEARMMAS(effectData, creatureData)
+	if IEex_CheckForEffectRepeat(effectData, creatureData) then return end
 	if not IEex_IsSprite(IEex_ReadDword(effectData + 0x10C), false) then return end
 	local targetID = IEex_GetActorIDShare(creatureData)
-	if IEex_CheckForInfiniteLoop(targetID, IEex_ReadDword(effectData + 0x24), "MEARMMAS", 5) then return end
 	IEex_ApplyEffectToActor(targetID, {
 ["opcode"] = 254,
 ["target"] = 2,
@@ -3221,6 +3231,7 @@ function MEARMMAS(effectData, creatureData)
 end
 
 function MEARMARC(effectData, creatureData)
+	if IEex_CheckForEffectRepeat(effectData, creatureData) then return end
 	if not IEex_IsSprite(IEex_ReadDword(effectData + 0x10C), false) then return end
 	local targetID = IEex_GetActorIDShare(creatureData)
 	IEex_ApplyEffectToActor(targetID, {
@@ -3273,9 +3284,9 @@ function MEARMARC(effectData, creatureData)
 end
 
 function MERAPREL(effectData, creatureData)
+	if IEex_CheckForEffectRepeat(effectData, creatureData) then return end
 	if not IEex_IsSprite(IEex_ReadDword(effectData + 0x10C), false) then return end
 	local targetID = IEex_GetActorIDShare(creatureData)
-	if IEex_CheckForInfiniteLoop(targetID, IEex_ReadDword(effectData + 0x24), "MERAPREL", 5) then return end
 	IEex_ApplyEffectToActor(targetID, {
 ["opcode"] = 254,
 ["target"] = 2,
@@ -3338,6 +3349,7 @@ function MERAPREL(effectData, creatureData)
 end
 
 function MEIMPTWF(effectData, creatureData)
+	if IEex_CheckForEffectRepeat(effectData, creatureData) then return end
 	local targetID = IEex_GetActorIDShare(creatureData)
 	local sourceID = IEex_ReadDword(effectData + 0x10C)
 	if not IEex_IsSprite(sourceID, false) then return end
@@ -3380,8 +3392,8 @@ function MEIMPTWF(effectData, creatureData)
 end
 
 function MESHLDFO(effectData, creatureData)
+	if IEex_CheckForEffectRepeat(effectData, creatureData) then return end
 	local targetID = IEex_GetActorIDShare(creatureData)
-	if IEex_CheckForInfiniteLoop(targetID, IEex_ReadDword(effectData + 0x24), "MESHLDFO", 5) then return end
 	if not IEex_IsSprite(IEex_ReadDword(effectData + 0x10C), false) then return end
 	local parameter1 = IEex_ReadDword(effectData + 0x18)
 	IEex_ApplyEffectToActor(targetID, {
@@ -3423,9 +3435,9 @@ function MESHLDFO(effectData, creatureData)
 end
 
 function METWDEFE(effectData, creatureData)
+	if IEex_CheckForEffectRepeat(effectData, creatureData) then return end
 	if not IEex_IsSprite(IEex_ReadDword(effectData + 0x10C), false) then return end
 	local targetID = IEex_GetActorIDShare(creatureData)
-	if IEex_CheckForInfiniteLoop(targetID, IEex_ReadDword(effectData + 0x24), "METWDEFE", 5) then return end
 	local parameter1 = IEex_ReadDword(effectData + 0x18)
 	IEex_ApplyEffectToActor(targetID, {
 ["opcode"] = 254,
@@ -3469,8 +3481,9 @@ function METWDEFE(effectData, creatureData)
 end
 
 extra_hands = {[32558] = 4, [60365] = 6, [60697] = 4,}
-
+ex_whirla_index = 1
 function MEWHIRLA(effectData, creatureData)
+	if IEex_CheckForEffectRepeat(effectData, creatureData) then return end
 	local targetID = IEex_GetActorIDShare(creatureData)
 	local sourceID = IEex_ReadDword(effectData + 0x10C)
 	if not IEex_IsSprite(sourceID) or IEex_CompareActorAllegiances(sourceID, targetID) > -1 then return end
@@ -3612,13 +3625,27 @@ function MEWHIRLA(effectData, creatureData)
 						end
 --						IEex_DisplayString(attackRoll .. " + " .. attackBonus .. " = " .. attackRoll + attackBonus .. " vs " .. ac)
 					end
-					local feedbackString = IEex_GetActorName(sourceID) .. "- Attacks " .. IEex_GetActorName(targetID) .. " with " .. IEex_FetchString(IEex_ReadDword(itemData + 0xC)) .. " : "
+					local feedbackString = "Attacks " .. IEex_GetActorName(targetID) .. " with " .. IEex_FetchString(IEex_ReadDword(itemData + 0xC)) .. " : "
 					if isHit then
 						feedbackString = feedbackString .. "Hit"
 					else
 						feedbackString = feedbackString .. "Miss"
 					end
-					IEex_DisplayString(feedbackString)
+					IEex_SetToken("MEWHRA" .. ex_whirla_index, feedbackString)
+					IEex_ApplyEffectToActor(sourceID, {
+["opcode"] = 139,
+["target"] = 2,
+["timing"] = 0,
+["duration"] = 0,
+["parameter1"] = ex_whirla[ex_whirla_index],
+["source_id"] = sourceID
+})
+					if ex_whirla_index == 20 then
+						ex_whirla_index = 1
+					else
+						ex_whirla_index = ex_whirla_index + 1
+					end
+--					IEex_DisplayString(feedbackString)
 					
 					if isHit then
 						if itemDamageType > 0 then
@@ -3769,6 +3796,7 @@ function MEWHIRLA(effectData, creatureData)
 end
 
 function MEROTATE(effectData, creatureData)
+	if IEex_CheckForEffectRepeat(effectData, creatureData) then return end
 	local targetID = IEex_GetActorIDShare(creatureData)
 	local sourceID = IEex_ReadDword(effectData + 0x10C)
 	if IEex_ReadDword(effectData + 0x1C) > 0 and IEex_IsSprite(sourceID) then
@@ -3791,6 +3819,7 @@ function MEROTATE(effectData, creatureData)
 end
 
 function MESPELL(effectData, creatureData)
+	if IEex_CheckForEffectRepeat(effectData, creatureData) then return end
 	if not IEex_IsSprite(IEex_ReadDword(effectData + 0x10C), false) then return end
 	local targetID = IEex_GetActorIDShare(creatureData)
 	local spellRES = IEex_ReadLString(effectData + 0x18, 8)
@@ -3815,6 +3844,7 @@ exhitspells = {
 }
 
 function MEONHIT(effectData, creatureData)
+	if IEex_CheckForEffectRepeat(effectData, creatureData) then return end
 	local targetID = IEex_GetActorIDShare(creatureData)
 	local sourceID = IEex_ReadDword(effectData + 0x10C)
 	if not IEex_IsSprite(sourceID, false) then return end
@@ -3946,6 +3976,7 @@ function MEONHIT(effectData, creatureData)
 end
 
 function MEEXHIT(effectData, creatureData)
+	if IEex_CheckForEffectRepeat(effectData, creatureData) then return end
 	local targetID = IEex_GetActorIDShare(creatureData)
 	local sourceID = IEex_ReadDword(effectData + 0x10C)
 	if not IEex_IsSprite(sourceID, false) then return end
@@ -4078,7 +4109,7 @@ function MEEXHIT(effectData, creatureData)
 end
 
 repeat_record = {}
-
+--[[
 function IEex_CheckForEffectRepeat(actorID, effectData)
 	if bit32.band(IEex_ReadDword(effectData + 0x3C), 0x4000) > 0 then return false end
 	local parameter1 = IEex_ReadDword(effectData + 0x18)
@@ -4109,7 +4140,38 @@ function IEex_CheckForEffectRepeat(actorID, effectData)
 	table.insert(repeat_record[actorID][funcName], {["parameter1"] = parameter1, ["parameter2"] = parameter2, ["special"] = special, ["time"] = time, ["sourceID"] = sourceID, ["parent_resource"] = parent_resource})
 	return false
 end
-
+--]]
+function IEex_CheckForEffectRepeat(effectData, creatureData)
+	local actorID = IEex_GetActorIDShare(creatureData)
+--	if bit32.band(IEex_ReadDword(effectData + 0x3C), 0x4000) > 0 then return false end
+	local parameter1 = IEex_ReadDword(effectData + 0x18)
+	local parameter2 = IEex_ReadDword(effectData + 0x1C)
+	local special = IEex_ReadDword(effectData + 0x44)
+	local time = IEex_ReadDword(effectData + 0x24)
+	local sourceID = IEex_ReadDword(effectData + 0x10C)
+	local funcName = IEex_ReadLString(effectData + 0x2C, 8)
+	local parent_resource = IEex_ReadLString(effectData + 0x90, 8)
+	if repeat_record[actorID] == nil then
+		repeat_record[actorID] = {}
+	end
+	local newTick = false
+	if repeat_record[actorID][funcName] == nil then
+		repeat_record[actorID][funcName] = {}
+	else
+		for k, v in ipairs(repeat_record[actorID][funcName]) do
+			if v["time"] ~= time then
+				newTick = true
+			elseif v["effectData"] == effectData then
+				return true
+			end
+		end
+	end
+	if newTick then
+		repeat_record[actorID][funcName] = {}
+	end
+	table.insert(repeat_record[actorID][funcName], {["effectData"] = effectData, ["time"] = time})
+	return false
+end
 loop_record = {}
 
 function IEex_CheckForInfiniteLoop(actorID, time, funcName, repeatLimit)
@@ -4133,10 +4195,10 @@ function IEex_CheckForInfiniteLoop(actorID, time, funcName, repeatLimit)
 end
 
 function MEREPERM(effectData, creatureData)
---	if true then return end
+	if IEex_CheckForEffectRepeat(effectData, creatureData) then return end
 	if IEex_ReadDword(effectData + 0x10C) <= 0 then return end
 	local targetID = IEex_GetActorIDShare(creatureData)
-	if IEex_CheckForInfiniteLoop(targetID, IEex_ReadDword(effectData + 0x24), "MEREPERM", 5) then return end
+--	if IEex_CheckForInfiniteLoop(targetID, IEex_ReadDword(effectData + 0x24), "MEREPERM", 5) then return end
 
 	if IEex_GetActorSpellState(targetID, 224) then
 		IEex_IterateActorEffects(targetID, function(eData)
@@ -4222,11 +4284,11 @@ function MEREPERM(effectData, creatureData)
 end
 
 function MEONCAST(effectData, creatureData)
+	if IEex_CheckForEffectRepeat(effectData, creatureData) then return end
 	local targetID = IEex_GetActorIDShare(creatureData)
 --	print("MEONCAST")
 	if not IEex_IsSprite(targetID, false) then return end
 --	print("from " .. targetID)
-	if IEex_CheckForEffectRepeat(targetID, effectData) then return end
 	local casterlvl = IEex_ReadByte(effectData + 0xC4, 0x0)
 	local parent_resource = IEex_ReadLString(effectData + 0x18, 8)
 	local lowestClassSpellLevel = 10
@@ -4404,10 +4466,10 @@ function MEONCAST(effectData, creatureData)
 end
 
 function MESAFESP(effectData, creatureData)
+	if IEex_CheckForEffectRepeat(effectData, creatureData) then return end
 	local sourceID = IEex_ReadDword(effectData + 0x10C)
 	if not IEex_IsSprite(sourceID, false) then return end
 	local targetID = IEex_GetActorIDShare(creatureData)
-	if IEex_CheckForEffectRepeat(targetID, effectData) then return end
 	local casterlvl = IEex_ReadByte(effectData + 0xC4, 0x0)
 	local casterClass = IEex_ReadByte(effectData + 0xC5, 0x0)
 	local savingthrow = IEex_ReadDword(effectData + 0x3C)
@@ -4484,6 +4546,7 @@ Values for special:
 6: The target gets immunity if they have any of the races specified by parameter2.
 --]]
 function MESPLPRT(effectData, creatureData)
+	if IEex_CheckForEffectRepeat(effectData, creatureData) then return end
 	local sourceID = IEex_ReadDword(effectData + 0x10C)
 	local targetID = IEex_GetActorIDShare(creatureData)
 	local checkID = targetID
@@ -4619,6 +4682,7 @@ function MESPLPRT(effectData, creatureData)
 end
 
 function MEPSTACK(effectData, creatureData)
+	if IEex_CheckForEffectRepeat(effectData, creatureData) then return end
 	local sourceID = IEex_ReadDword(effectData + 0x10C)
 	local targetID = IEex_GetActorIDShare(creatureData)
 	if targetID <= 0 or not IEex_IsSprite(sourceID, false) then return end
@@ -4637,9 +4701,9 @@ function MEPSTACK(effectData, creatureData)
 end
 
 function MESPLSAV(effectData, creatureData)
+	if IEex_CheckForEffectRepeat(effectData, creatureData) then return end
 	local sourceID = IEex_ReadDword(effectData + 0x10C)
 	local targetID = IEex_GetActorIDShare(creatureData)
-	if IEex_CheckForEffectRepeat(targetID, effectData) then return end
 	if not IEex_IsSprite(sourceID, false) then 
 		sourceID = 0
 	end
@@ -4756,10 +4820,10 @@ function MESPLSAV(effectData, creatureData)
 end
 
 function MEQUIVPA(effectData, creatureData)
+	if IEex_CheckForEffectRepeat(effectData, creatureData) then return end
 	local sourceID = IEex_ReadDword(effectData + 0x10C)
 	if not IEex_IsSprite(sourceID, false) then return end
 	local targetID = IEex_GetActorIDShare(creatureData)
-	if IEex_CheckForEffectRepeat(targetID, effectData) then return end
 	local sourceData = IEex_GetActorShare(sourceID)
 	local spellRES = IEex_ReadLString(effectData + 0x18, 8)
 	local savingthrow = bit32.band(IEex_ReadDword(effectData + 0x3C), 0xFFFFFFE3)
@@ -4807,10 +4871,10 @@ function MEQUIVPA(effectData, creatureData)
 end
 
 function MEKNOCKD(effectData, creatureData)
+	if IEex_CheckForEffectRepeat(effectData, creatureData) then return end
 	local sourceID = IEex_ReadDword(effectData + 0x10C)
 	if not IEex_IsSprite(sourceID, false) then return end
 	local targetID = IEex_GetActorIDShare(creatureData)
-	if IEex_CheckForEffectRepeat(targetID, effectData) then return end
 	local sourceData = IEex_GetActorShare(sourceID)
 	local spellRES = IEex_ReadLString(effectData + 0x18, 8)
 	local savingthrow = bit32.band(IEex_ReadDword(effectData + 0x3C), 0xFFFFFFE3)
@@ -4912,10 +4976,10 @@ function MEKNOCKD(effectData, creatureData)
 end
 
 function MEFEINT(effectData, creatureData)
+	if IEex_CheckForEffectRepeat(effectData, creatureData) then return end
 	local sourceID = IEex_ReadDword(effectData + 0x10C)
 	if not IEex_IsSprite(sourceID, false) then return end
 	local targetID = IEex_GetActorIDShare(creatureData)
-	if IEex_CheckForEffectRepeat(targetID, effectData) then return end
 	local sourceData = IEex_GetActorShare(sourceID)
 	local spellRES = IEex_ReadLString(effectData + 0x18, 8)
 	local savingthrow = bit32.band(IEex_ReadDword(effectData + 0x3C), 0xFFFFFFE3)
@@ -5085,10 +5149,10 @@ function MEFEINT(effectData, creatureData)
 end
 
 function MEGRAPPL(effectData, creatureData)
+	if IEex_CheckForEffectRepeat(effectData, creatureData) then return end
 	local sourceID = IEex_ReadDword(effectData + 0x10C)
 	if not IEex_IsSprite(sourceID, false) then return end
 	local targetID = IEex_GetActorIDShare(creatureData)
-	if IEex_CheckForEffectRepeat(targetID, effectData) then return end
 	local sourceData = IEex_GetActorShare(sourceID)
 	local spellRES = IEex_ReadLString(effectData + 0x18, 8)
 	local savingthrow = bit32.band(IEex_ReadDword(effectData + 0x3C), 0xFFFFFFE3)
@@ -5225,10 +5289,10 @@ function MEGRAPP2(effectData, creatureData)
 end
 
 function MEDISARM(effectData, creatureData)
+	if IEex_CheckForEffectRepeat(effectData, creatureData) then return end
 	local sourceID = IEex_ReadDword(effectData + 0x10C)
 	if not IEex_IsSprite(sourceID, false) then return end
 	local targetID = IEex_GetActorIDShare(creatureData)
-	if IEex_CheckForEffectRepeat(targetID, effectData) then return end
 	local sourceData = IEex_GetActorShare(sourceID)
 	local spellRES = IEex_ReadLString(effectData + 0x18, 8)
 	local savingthrow = bit32.band(IEex_ReadDword(effectData + 0x3C), 0xFFFFFFE3)
@@ -5314,10 +5378,10 @@ function MEDISARM(effectData, creatureData)
 end
 
 function MESPLPRC(effectData, creatureData)
+	if IEex_CheckForEffectRepeat(effectData, creatureData) then return end
 	local sourceID = IEex_ReadDword(effectData + 0x10C)
 	if not IEex_IsSprite(sourceID, false) then return end
 	local targetID = IEex_GetActorIDShare(creatureData)
-	if IEex_CheckForEffectRepeat(targetID, effectData) then return end
 	local spellRES = IEex_ReadLString(effectData + 0x18, 8)
 	local percentChance = IEex_ReadByte(effectData + 0x44, 0x0)
 	local bonusStatMultiplier = IEex_ReadByte(effectData + 0x45, 0x0)
@@ -5375,9 +5439,9 @@ function MESPLPRC(effectData, creatureData)
 end
 
 function MEMIRRIM(effectData, creatureData)
+	if IEex_CheckForEffectRepeat(effectData, creatureData) then return end
 	local targetID = IEex_GetActorIDShare(creatureData)
 	local sourceID = IEex_ReadDword(effectData + 0x10C)
-	if IEex_CheckForEffectRepeat(targetID, effectData) then return end
 	local parameter1 = IEex_ReadDword(effectData + 0x18)
 	local parameter2 = IEex_ReadDword(effectData + 0x1C)
 	local duration = IEex_ReadDword(effectData + 0x44)
@@ -5443,10 +5507,10 @@ function MEMIRRIM(effectData, creatureData)
 end
 
 function MEPOISON(effectData, creatureData)
+	if IEex_CheckForEffectRepeat(effectData, creatureData) then return end
 	local sourceID = IEex_ReadDword(effectData + 0x10C)
 	if not IEex_IsSprite(sourceID, false) then return end
 	local targetID = IEex_GetActorIDShare(creatureData)
-	if IEex_CheckForEffectRepeat(targetID, effectData) then return end
 	local parameter1 = IEex_ReadDword(effectData + 0x18)
 	local parameter2 = IEex_ReadDword(effectData + 0x1C)
 	if parameter2 == 0 then
@@ -5488,8 +5552,8 @@ function MEPOISON(effectData, creatureData)
 end
 
 function MEPOISOW(effectData, creatureData)
+	if IEex_CheckForEffectRepeat(effectData, creatureData) then return end
 	local targetID = IEex_GetActorIDShare(creatureData)
-	if IEex_CheckForEffectRepeat(targetID, effectData) then return end
 	local sourceID = IEex_ReadDword(effectData + 0x10C)
 	if not IEex_IsSprite(sourceID, false) then return end
 	local parameter1 = IEex_ReadDword(effectData + 0x18)
@@ -5532,6 +5596,7 @@ function MEPOISOW(effectData, creatureData)
 end
 
 function MENOTEL(effectData, creatureData)
+	if IEex_CheckForEffectRepeat(effectData, creatureData) then return end
 	local targetID = IEex_GetActorIDShare(creatureData)
 	local sourceID = IEex_ReadDword(effectData + 0x10C)
 	if not IEex_IsSprite(sourceID, false) then return end
@@ -5542,7 +5607,6 @@ function MENOTEL(effectData, creatureData)
 	local targetY = IEex_ReadDword(effectData + 0x88)
 	local targetIDX = IEex_ReadDword(creatureData + 0x6)
 	local targetIDY = IEex_ReadDword(creatureData + 0xA)
-	if IEex_CheckForEffectRepeat(targetID, effectData) then return end
 	local disableTeleport = false
 	
 	local areaData = IEex_ReadDword(creatureData + 0x12)
@@ -5568,8 +5632,8 @@ function MENOTEL(effectData, creatureData)
 end
 
 function METELEFI(effectData, creatureData)
+	if IEex_CheckForEffectRepeat(effectData, creatureData) then return end
 	local targetID = IEex_GetActorIDShare(creatureData)
-	if IEex_CheckForEffectRepeat(targetID, effectData) then return end
 	local sourceID = IEex_ReadDword(effectData + 0x10C)
 	local parameter1 = IEex_ReadDword(effectData + 0x18)
 	local sourceX = IEex_ReadDword(effectData + 0x7C)
@@ -5601,11 +5665,13 @@ function METELEFI(effectData, creatureData)
 end
 
 function MESETZ(effectData, creatureData)
+	if IEex_CheckForEffectRepeat(effectData, creatureData) then return end
 	local parameter1 = IEex_ReadDword(effectData + 0x18)
 	IEex_WriteDword(creatureData + 0xE, parameter1 * -1)
 end
 
 function MEWINGBU(effectData, creatureData)
+	if IEex_CheckForEffectRepeat(effectData, creatureData) then return end
 	local targetID = IEex_GetActorIDShare(creatureData)
 	local sourceID = IEex_ReadDword(effectData + 0x10C)
 	if IEex_GetActorSpellState(targetID, 230) then return end
@@ -5660,6 +5726,7 @@ function MEWINGBU(effectData, creatureData)
 end
 
 function METELMOV(effectData, creatureData)
+--	if IEex_CheckForEffectRepeat(effectData, creatureData) then return end
 	local targetID = IEex_GetActorIDShare(creatureData)
 	local parameter1 = IEex_ReadDword(effectData + 0x18)
 	local parameter2 = IEex_ReadDword(effectData + 0x1C)
@@ -5669,7 +5736,19 @@ function METELMOV(effectData, creatureData)
 	local targetY = IEex_ReadDword(creatureData + 0xA)
 	local destinationX = IEex_ReadDword(creatureData + 0x556E)
 	local destinationY = IEex_ReadDword(creatureData + 0x5572)
-	if destinationX > 0 or destinationY > 0 then
+	local disableTeleport = false
+	local areaData = IEex_ReadDword(creatureData + 0x12)
+	if areaData <= 0 then return end
+	local areaType = IEex_ReadWord(areaData + 0x40, 0x0)
+	if bit32.band(areaType, 0x800) > 0 then
+		disableTeleport = true
+	else
+		local areaRES = IEex_ReadLString(areaData, 8)
+		if areaRES == "AR4102" and ((targetX >= 400 and targetX <= 970 and targetY >= 1030 and targetY <= 1350) or (destinationX >= 400 and destinationX <= 970 and destinationY >= 1030 and destinationY <= 1350)) then
+			disableTeleport = true
+		end
+	end
+	if (destinationX > 0 or destinationY > 0) and disableTeleport == false then
 		if special == 1 then
 			IEex_ApplyEffectToActor(targetID, {
 ["opcode"] = 233,
@@ -5705,6 +5784,7 @@ function METELMOV(effectData, creatureData)
 end
 
 function MEGHOSTW(effectData, creatureData)
+--	if IEex_CheckForEffectRepeat(effectData, creatureData) then return end
 	local targetID = IEex_GetActorIDShare(creatureData)
 	local parameter1 = IEex_ReadDword(effectData + 0x18)
 	local parameter2 = IEex_ReadDword(effectData + 0x1C)
@@ -5747,6 +5827,7 @@ function MEGHOSTW(effectData, creatureData)
 end
 
 function MEHGTSET(effectData, creatureData)
+	if IEex_CheckForEffectRepeat(effectData, creatureData) then return end
 	local parameter1 = IEex_ReadDword(effectData + 0x18)
 	local parameter2 = IEex_ReadDword(effectData + 0x1C)
 	local currentHeight = IEex_ReadDword(creatureData + 0xE)
@@ -5986,6 +6067,7 @@ end
 --]]
 
 function MENPCXP(effectData, creatureData)
+	if IEex_CheckForEffectRepeat(effectData, creatureData) then return end
 	local sourceID = IEex_ReadDword(effectData + 0x10C)
 	if sourceID <= 0 then return end
 	local sourceData = IEex_GetActorShare(sourceID)
@@ -6008,11 +6090,13 @@ function MENPCXP(effectData, creatureData)
 end
 
 function MENOSUST(effectData, creatureData)
+	if IEex_CheckForEffectRepeat(effectData, creatureData) then return end
 	IEex_WriteDword(creatureData + 0x5BC, bit32.band(IEex_ReadDword(creatureData + 0x5BC), 0xEFFFFFFF))
 	IEex_WriteDword(creatureData + 0x920, bit32.band(IEex_ReadDword(creatureData + 0x920), 0xEFFFFFFF))
 end
 
 function MESUCREA(effectData, creatureData)
+	if IEex_CheckForEffectRepeat(effectData, creatureData) then return end
 	local sourceID = IEex_ReadDword(effectData + 0x10C)
 	if sourceID <= 0 then return end
 	local sourceData = IEex_GetActorShare(sourceID)
@@ -6166,6 +6250,7 @@ function MESUCREA(effectData, creatureData)
 end
 
 function MEEAFIEN(effectData, creatureData)
+	if IEex_CheckForEffectRepeat(effectData, creatureData) then return end
 	local sourceID = IEex_ReadDword(effectData + 0x10C)
 	if sourceID <= 0 then return end
 	local summonerID = IEex_ReadDword(creatureData + 0x72C)
@@ -6220,8 +6305,8 @@ opcodenames = {[3] = "berserk", [5] = "charm", [12] = "damage", [17] = "healing"
 
 classstatnames = {"Barbarian", "Bard", "Cleric", "Druid", "Fighter", "Monk", "Paladin", "Ranger", "Rogue", "Sorcerer", "Wizard"}
 function MESTATPR(effectData, creatureData)
+	if IEex_CheckForEffectRepeat(effectData, creatureData) then return end
 	local targetID = IEex_GetActorIDShare(creatureData)
-	if IEex_CheckForEffectRepeat(targetID, effectData) then return end
 	IEex_DisplayString(IEex_GetActorName(targetID))
 	local levelsum = IEex_GetActorStat(targetID, 95)
 	local classlevels = {}

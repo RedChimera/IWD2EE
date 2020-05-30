@@ -762,6 +762,7 @@ COPY_EXISTING ~52SERSA.cre~ ~override~
 	WRITE_BYTE skillhide 12
 	WRITE_BYTE skillmovesilently 15
 	WRITE_BYTE challengerating 12
+	WRITE_BYTE general 1
 	WRITE_LONG kit 0
 	WRITE_LONG feats1 0x40012100
 	READ_LONG feats2 ulgiash
@@ -803,7 +804,7 @@ COPY_EXISTING ~10BLACK.cre~ ~override/USGEOF.cre~ ~10REIG.cre~ ~override/USREIG.
 		WRITE_BYTE armoredarcana 0
 	END
 
-COPY_EXISTING ~USGEOF.cre~ ~override~ ~USREIG.cre~ ~override~ ~USEMMA.cre~ ~override~ ~USSERS.cre~ ~override~
+COPY_EXISTING ~USREIG.cre~ ~override~ ~USEMMA.cre~ ~override~ ~USSERS.cre~ ~override~
 	WRITE_BYTE race 1
 
 COPY_EXISTING ~USREIG.cre~ ~override~

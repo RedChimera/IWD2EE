@@ -186,6 +186,27 @@ COPY_EXISTING ~IEex_TRA.lua~ ~override~
 	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_tra_916 *=.*~ ~ex_tra_916 = %ex_tra_916%~
 	ex_tra_917 = RESOLVE_STR_REF(@917)
 	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_tra_917 *=.*~ ~ex_tra_917 = %ex_tra_917%~
+	ex_whirla1 = RESOLVE_STR_REF(~<MEWHRA1>~)
+	ex_whirla2 = RESOLVE_STR_REF(~<MEWHRA2>~)
+	ex_whirla3 = RESOLVE_STR_REF(~<MEWHRA3>~)
+	ex_whirla4 = RESOLVE_STR_REF(~<MEWHRA4>~)
+	ex_whirla5 = RESOLVE_STR_REF(~<MEWHRA5>~)
+	ex_whirla6 = RESOLVE_STR_REF(~<MEWHRA6>~)
+	ex_whirla7 = RESOLVE_STR_REF(~<MEWHRA7>~)
+	ex_whirla8 = RESOLVE_STR_REF(~<MEWHRA8>~)
+	ex_whirla9 = RESOLVE_STR_REF(~<MEWHRA9>~)
+	ex_whirla10 = RESOLVE_STR_REF(~<MEWHRA10>~)
+	ex_whirla11 = RESOLVE_STR_REF(~<MEWHRA11>~)
+	ex_whirla12 = RESOLVE_STR_REF(~<MEWHRA12>~)
+	ex_whirla13 = RESOLVE_STR_REF(~<MEWHRA13>~)
+	ex_whirla14 = RESOLVE_STR_REF(~<MEWHRA14>~)
+	ex_whirla15 = RESOLVE_STR_REF(~<MEWHRA15>~)
+	ex_whirla16 = RESOLVE_STR_REF(~<MEWHRA16>~)
+	ex_whirla17 = RESOLVE_STR_REF(~<MEWHRA17>~)
+	ex_whirla18 = RESOLVE_STR_REF(~<MEWHRA18>~)
+	ex_whirla19 = RESOLVE_STR_REF(~<MEWHRA19>~)
+	ex_whirla20 = RESOLVE_STR_REF(~<MEWHRA20>~)
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_whirla *=.*~ ~ex_whirla = {%ex_whirla1%,%ex_whirla2%,%ex_whirla3%,%ex_whirla4%,%ex_whirla5%,%ex_whirla6%,%ex_whirla7%,%ex_whirla8%,%ex_whirla9%,%ex_whirla10%,%ex_whirla11%,%ex_whirla12%,%ex_whirla13%,%ex_whirla14%,%ex_whirla15%,%ex_whirla16%,%ex_whirla17%,%ex_whirla18%,%ex_whirla19%,%ex_whirla20%}~
 
 COPY ~%mod_folder%/tables/MONCRATE.2da~ ~override~
 COPY ~%mod_folder%/tables/XPLEVEL.2da~ ~override~
