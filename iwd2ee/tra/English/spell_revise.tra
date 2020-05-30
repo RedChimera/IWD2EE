@@ -3062,9 +3062,20 @@ Area of Effect: 20-foot radius
 Saving Throw: None 
 
 Army of Images is like Mirror Image, except as an area of effect. When cast, all allies within 20 feet become surrounded by eight illusory duplicates. Incoming attacks may hit the duplicates rather than the real creatures.~
+@37855     = ~Teleport Step~
+@38855     = ~Teleport Step
+(Transmutation)
+Level: Brd 8, Sor/Wiz 8, Selune 9
+Range: Sight of Caster
+Duration: 3 rounds/level
+Casting Time: 4
+Area of Effect: 1 creature
+Saving Throw: None 
+
+Among the greatest teleportation spells, Teleport Step lets the recipient teleport anywhere in the area simply by moving. Click on a destination for the character, and they will teleport there. The character can teleport any number of times with this spell.~
 @37952     = ~Perfect Invisibility~
 @38952     = ~Perfect Invisibility
-(Illusion) 
+(Illusion)
 Level: Sor/Wiz 9
 Range: Touch
 Duration: 3 rounds

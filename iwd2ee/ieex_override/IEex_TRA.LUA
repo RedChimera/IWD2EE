@@ -12,3 +12,4 @@ ex_tra_914 = 0
 ex_tra_915 = 0
 ex_tra_916 = 0
 ex_tra_917 = 0
+ex_whirla = {}

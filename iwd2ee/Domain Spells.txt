@@ -73,7 +73,7 @@ Selune:
 6: Antimagic Field, Divine Shell
 7: Lutzaen's Local Teleport, Planar Binding: Air Elemental
 8: Improved Alacrity, Planar Ally: Fire Elemental
-9: Elemental Legion, Prismatic Spray
+9: Elemental Legion, Teleport Step
 
 Talos:
 1: Doom, Shocking Grasp
