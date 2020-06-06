@@ -708,6 +708,110 @@ function IEex_WriteAssemblyFunction(functionName, assembly)
 	return functionAddress
 end
 
+function IEex_HookBeforeCall(address, assembly)
+	IEex_WriteAssembly(address, {"!jmp_dword", {IEex_WriteAssemblyAuto(
+		IEex_ConcatTables({
+			assembly,
+			{
+				"!call", {address + IEex_ReadDword(address + 0x1) + 0x5, 4, 4},
+			},
+			{[[
+				@return
+				!jmp_dword ]], {address + 0x5, 4, 4},
+			},
+		})
+	), 4, 4}})
+end
+
+function IEex_HookAfterCall(address, assembly)
+	IEex_WriteAssembly(address, {"!jmp_dword", {IEex_WriteAssemblyAuto(
+		IEex_ConcatTables({
+			{
+				"!call", {address + IEex_ReadDword(address + 0x1) + 0x5, 4, 4},
+			},
+			assembly,
+			{[[
+				@return
+				!jmp_dword ]], {address + 0x5, 4, 4},
+			},
+		})
+	), 4, 4}})
+end
+
+function IEex_HookRestore(address, restoreDelay, restoreSize, assembly)
+
+	local storeBytes = function(startAddress, size)
+		local bytes = {}
+		local limit = startAddress + size - 1
+		for i = startAddress, limit, 1 do
+			table.insert(bytes, {IEex_ReadByte(i, 0), 1})
+		end
+		return bytes
+	end
+
+	local afterInstruction = address + restoreDelay + restoreSize
+	local restoreBytes = storeBytes(address + restoreDelay, restoreSize)
+
+	local nops = {}
+	local limit = restoreDelay + restoreSize - 5
+	for i = 1, limit, 1 do
+		table.insert(nops, {0x90, 1})
+	end
+
+	local hookCode = IEex_WriteAssemblyAuto(IEex_ConcatTables({
+		assembly,
+		"@return",
+		restoreBytes,
+		{[[
+			!jmp_dword ]], {afterInstruction, 4, 4},
+		},
+	}))
+
+	IEex_WriteAssembly(address, IEex_ConcatTables({
+		{
+			"!jmp_dword", {hookCode, 4, 4}
+		},
+		nops,
+	}))
+end
+
+function IEex_HookAfterRestore(address, restoreDelay, restoreSize, assembly)
+
+	local storeBytes = function(startAddress, size)
+		local bytes = {}
+		local limit = startAddress + size - 1
+		for i = startAddress, limit, 1 do
+			table.insert(bytes, {IEex_ReadByte(i, 0), 1})
+		end
+		return bytes
+	end
+
+	local afterInstruction = address + restoreDelay + restoreSize
+	local restoreBytes = storeBytes(address + restoreDelay, restoreSize)
+
+	local nops = {}
+	local limit = restoreDelay + restoreSize - 5
+	for i = 1, limit, 1 do
+		table.insert(nops, {0x90, 1})
+	end
+
+	local hookCode = IEex_WriteAssemblyAuto(IEex_ConcatTables({
+		restoreBytes,
+		assembly,
+		"@return",
+		{[[
+			!jmp_dword ]], {afterInstruction, 4, 4},
+		},
+	}))
+
+	IEex_WriteAssembly(address, IEex_ConcatTables({
+		{
+			"!jmp_dword", {hookCode, 4, 4}
+		},
+		nops,
+	}))
+end
+
 function IEex_WriteOpcode(opcodeFunctions)
 
 	local IEex_RunOpcodeDecode = function(vftable)

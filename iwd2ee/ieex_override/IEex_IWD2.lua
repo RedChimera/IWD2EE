@@ -452,7 +452,7 @@ function IEex_ApplyEffectToActor(actorID, args)
 	IEex_Free(Item_effect_st)
 	IEex_Free(source)
 	IEex_Free(target)
-	
+
 	writeArgs(CGameEffect, {
 		{ "sectype",           0x4C, writeType.DWORD,  argFailType.DEFAULT, 0  },
 		{ "parameter3",        0x5C, writeType.DWORD,  argFailType.DEFAULT, 0  },
@@ -598,7 +598,7 @@ function IEex_GetActorArmorClass(actorID)
 	else
 		armorClass = armorClass + dexterityBonus
 	end
-	
+
 	armorClass = armorClass + armorBonus
 	armorClass = armorClass + deflectionBonus
 	armorClass = armorClass + shieldBonus
@@ -618,8 +618,10 @@ function IEex_GetActorArmorClass(actorID)
 end
 
 function IEex_GetActorStat(actorID, statID)
-	local ecx = IEex_Call(0x4531A0, {}, IEex_GetActorShare(actorID), 0x0)
-	return IEex_Call(0x446DD0, {statID}, ecx, 0x0)
+	local share = IEex_GetActorShare(actorID)
+	local bAllowEffectListCall = IEex_ReadDword(share + 0x72A4) == 1
+	local activeStats = share + (bAllowEffectListCall and 0x920 or 0x1778)
+	return IEex_Call(0x446DD0, {statID}, activeStats, 0x0)
 end
 
 function IEex_GetActorSpellState(actorID, spellStateID)
@@ -648,7 +650,7 @@ function IEex_GetActorTarget(actorID)
 end
 
 -- Returns the coordinates of the point the actor is targeting with their
---  current action. 
+--  current action.
 function IEex_GetActorTargetPoint(actorID)
 	local share = IEex_GetActorShare(actorID)
 	local targetX = IEex_ReadDword(share + 0x540)
@@ -758,7 +760,7 @@ function IEex_CanLearnScroll(actorID, itemData)
 end
 
 function IEex_GetDistance(x1, y1, x2, y2)
-	return math.floor((((x1 - x2) ^ 2) + ((y1 - y2) ^ 2)) ^ .5) 
+	return math.floor((((x1 - x2) ^ 2) + ((y1 - y2) ^ 2)) ^ .5)
 end
 
 ex_classid_listspll = {[2] = 1, [3] = 2, [4] = 3, [7] = 4, [8] = 5, [10] = 6, [11] = 7}
@@ -945,11 +947,11 @@ function IEex_2DAGetAtStrings(arrayName, columnString, rowString)
 
 	local columnIndex = IEex_2DAFindColumn(C2DArray, columnString)
 	-- Tried to lookup a non-existent column, serve default
-	if not columnIndex then return defaultString end 
+	if not columnIndex then return defaultString end
 
 	local rowIndex = IEex_2DAFindRow(C2DArray, rowString)
 	-- Tried to lookup a non-existent row, serve default
-	if not rowIndex then return defaultString end 
+	if not rowIndex then return defaultString end
 
 	local array = IEex_ReadDword(C2DArray + 0x18)
 	local m_nSizeX = IEex_ReadWord(C2DArray + 0x20, 0)
@@ -964,10 +966,10 @@ function IEex_2DAGetAtRelated(arrayName, relatedColumn, columnString, compareFun
 	local defaultString = IEex_ReadString(IEex_ReadDword(C2DArray + 0x1C))
 
 	local relatedColumnIndex = IEex_2DAFindColumn(C2DArray, relatedColumn)
-	if not relatedColumnIndex then return defaultString end 
+	if not relatedColumnIndex then return defaultString end
 
 	local columnIndex = IEex_2DAFindColumn(C2DArray, columnString)
-	if not columnIndex then return defaultString end 
+	if not columnIndex then return defaultString end
 
 	local foundRowIndex = nil
 	local maxRowIndex = IEex_ReadWord(C2DArray + 0x20, 1) - 1
@@ -978,7 +980,7 @@ function IEex_2DAGetAtRelated(arrayName, relatedColumn, columnString, compareFun
 		end
 	end
 
-	if not foundRowIndex then return defaultString end 
+	if not foundRowIndex then return defaultString end
 
 	return IEex_2DAGetAt(C2DArray, columnIndex, foundRowIndex)
 
@@ -1280,7 +1282,7 @@ function EXPRINTS(effectData, creatureData)
 	local ending = IEex_ReadDword(effectData + 0x44)
 	for i = starting, ending, 1 do
 		IEex_DisplayString(IEex_ToHex(i, 0, true) .. ": " .. IEex_ReadByte(creatureData + i, 0x0) .. ", " .. IEex_ReadWord(creatureData + i, 0x0) .. ", " .. IEex_ReadDword(creatureData + i) .. ", \"" .. IEex_ReadLString(creatureData + i, 8) .. "\"")
-	end 
+	end
 end
 
 function IEex_Search(search_target, search_start, search_length, is_string)
@@ -1306,12 +1308,12 @@ end
 function IEex_PrintData(search_start, search_length)
 	for i = 0, search_length, 1 do
 		IEex_DisplayString(IEex_ToHex(i, 0, true) .. ": " .. IEex_ReadByte(search_start + i, 0x0) .. ", " .. IEex_ReadWord(search_start + i, 0x0) .. ", " .. IEex_ReadDword(search_start + i) .. ", \"" .. IEex_ReadLString(search_start + i, 8) .. "\"")
-	end 
+	end
 end
 
 ex_order_multiclass = {
-[1] = {{3, 0x8000}, {6, 0x10}, {7, -1}}, 
-[2] = {{3, 0x40000}, {5, -1}, {7, -1}}, 
+[1] = {{3, 0x8000}, {6, 0x10}, {7, -1}},
+[2] = {{3, 0x40000}, {5, -1}, {7, -1}},
 [4] = {{7, -1}, {10, -1}, {11, -1}},
 [8] = {{4, -1}, {6, -1}, {9, -1}},
 [16] = {{3, 0x8000}, {6, -1}, {7, 0x1}},
@@ -1489,7 +1491,7 @@ function EXDAMAGE(effectData, creatureData)
 		if IEex_GetActorSpellState(sourceID, 64) then
 			luck = 127
 		end
-		
+
 		if IEex_GetActorStat(sourceID, 103) > 0 then
 --			local favoredEnemyDamage = math.floor((IEex_GetActorStat(sourceID, 103) / 5) + 1)
 			local favoredEnemyDamage = 4
@@ -1640,7 +1642,7 @@ function EXDAMAGE(effectData, creatureData)
 			else
 				bonusStatValue = IEex_GetActorStat(sourceID, bonusStat)
 			end
-			
+
 			if bonusStat >= 36 and bonusStat <= 42 then
 				bonusStatValue = math.floor((bonusStatValue - 10) / 2)
 			end
@@ -2164,7 +2166,7 @@ function MECRITIM(effectData, creatureData)
 	local specialFlags = IEex_ReadByte(creatureData + 0x89F, 0)
 	local isImmune = (bit32.band(specialFlags, 0x2) ~= 0)
 	local makePermanent = IEex_ReadDword(effectData + 0x1C)
-	if (isImmune and immunityCount == -1) or makePermanent == 1 then 
+	if (isImmune and immunityCount == -1) or makePermanent == 1 then
 		immunityCount = 0
 		permanentImmunity = 1
 		IEex_WriteByte(creatureData + 0x702, permanentImmunity)
@@ -2198,7 +2200,7 @@ function MECRITRE(effectData, creatureData)
 	local permanentImmunity = IEex_ReadByte(creatureData + 0x702, 0x0)
 	local specialFlags = IEex_ReadByte(creatureData + 0x89F, 0)
 	local isImmune = (bit32.band(specialFlags, 0x2) ~= 0)
-	if (isImmune and immunityCount == -1) or permanentImmunity == 1 then 
+	if (isImmune and immunityCount == -1) or permanentImmunity == 1 then
 		immunityCount = 0
 		permanentImmunity = 1
 		IEex_WriteByte(creatureData + 0x702, permanentImmunity)
@@ -2336,11 +2338,11 @@ function MERAGE(effectData, creatureData)
 	if barbarianLevel >= 29 then
 		baseBonus = 12
 	elseif barbarianLevel >= 25 then
-		baseBonus = 10			
+		baseBonus = 10
 	elseif barbarianLevel >= 21 then
-		baseBonus = 8	
+		baseBonus = 8
 	elseif barbarianLevel >= 15 then
-		baseBonus = 6	
+		baseBonus = 6
 	elseif barbarianLevel >= 1 then
 		baseBonus = 4
 	end
@@ -2873,18 +2875,18 @@ function MERAGEST(effectData, creatureData)
 ["timing"] = 1,
 ["resource"] = "MERAGEST",
 ["source_id"] = targetID
-})	
+})
 	if IEex_GetActorSpellState(targetID, 159) or IEex_GetActorSpellState(targetID, 160) then
 		local barbarianLevel = IEex_GetActorStat(targetID, 96)
 		local baseBonus = 0
 		if barbarianLevel >= 29 then
 			baseBonus = 12
 		elseif barbarianLevel >= 25 then
-			baseBonus = 10			
+			baseBonus = 10
 		elseif barbarianLevel >= 21 then
-			baseBonus = 8	
+			baseBonus = 8
 		elseif barbarianLevel >= 15 then
-			baseBonus = 6	
+			baseBonus = 6
 		elseif barbarianLevel >= 1 then
 			baseBonus = 4
 		end
@@ -3074,7 +3076,7 @@ function MEKENSEI(effectData, creatureData)
 ["timing"] = 1,
 ["resource"] = "USKENBON",
 ["source_id"] = targetID
-})	
+})
 
 	if IEex_GetActorSpellState(targetID, 241) then
 		local hasArmor = false
@@ -3147,7 +3149,7 @@ function MEARMMAS(effectData, creatureData)
 ["timing"] = 1,
 ["resource"] = "USARMMAS",
 ["source_id"] = targetID
-})	
+})
 	local armorType = 67
 	if IEex_GetActorSpellState(targetID, 241) then
 		IEex_IterateActorEffects(targetID, function(eData)
@@ -3240,7 +3242,7 @@ function MEARMARC(effectData, creatureData)
 ["timing"] = 1,
 ["resource"] = "USARMARC",
 ["source_id"] = targetID
-})	
+})
 	local armorType = 0
 	local shieldType = 0
 	if IEex_GetActorSpellState(targetID, 241) then
@@ -3538,7 +3540,7 @@ function MEWHIRLA(effectData, creatureData)
 		local resWrapper = IEex_DemandRes(res, "ITM")
 		if resWrapper:isValid() then
 			local itemData = resWrapper:getData()
-			local proficiencyFeat = 0 
+			local proficiencyFeat = 0
 			local isTwoHanded = (bit32.band(IEex_ReadDword(itemData + 0x18), 0x2) > 0)
 			local itemType = IEex_ReadWord(itemData + 0x1C, 0x0)
 			if ex_item_type_proficiency[itemType] ~= nil then
@@ -3548,7 +3550,7 @@ function MEWHIRLA(effectData, creatureData)
 			local numHeaders = IEex_ReadWord(itemData + 0x68, 0x0)
 			for header = 1, numHeaders, 1 do
 				local offset = itemData + 0x4A + header * 0x38
-					
+
 				local itemRange = 20 * IEex_ReadWord(offset + 0xE, 0x0) + 40
 				local whirlwindAttackFeatID = ex_feat_name_id["ME_WHIRLWIND_ATTACK"]
 				if whirlwindAttackFeatID ~= nil and IEex_ReadByte(sourceData + 0x744 + whirlwindAttackFeatID, 0x0) >= 2 then
@@ -3556,7 +3558,7 @@ function MEWHIRLA(effectData, creatureData)
 				end
 				local itemDamageType = IEex_ReadWord(offset + 0x1C, 0x0)
 				if IEex_ReadByte(offset, 0x0) == 1 and IEex_GetDistance(sourceX, sourceY, targetX, targetY) <= itemRange then
-					
+
 					local attackRoll = math.random(20) + IEex_GetActorStat(sourceID, 32)
 					local isHit = false
 					local stateValue = bit32.bor(IEex_ReadDword(creatureData + 0x5BC), IEex_ReadDword(creatureData + 0x920))
@@ -3646,7 +3648,7 @@ function MEWHIRLA(effectData, creatureData)
 						ex_whirla_index = ex_whirla_index + 1
 					end
 --					IEex_DisplayString(feedbackString)
-					
+
 					if isHit then
 						if itemDamageType > 0 then
 							local newparameter2 = 0
@@ -3717,7 +3719,7 @@ function MEWHIRLA(effectData, creatureData)
 								local effsavingthrow = IEex_ReadDword(headerEffectOffset + 0x24)
 								local effsavebonus = IEex_ReadDword(headerEffectOffset + 0x28)
 								local effspecial = IEex_ReadDword(headerEffectOffset + 0x2C)
-	
+
 								if effopcode == 12 then
 									effopcode = 500
 									if effdicenumber < 0 then
@@ -3788,7 +3790,7 @@ function MEWHIRLA(effectData, creatureData)
 					end
 				end
 			end
-			
+
 			resWrapper:free()
 		end
 		hand = hand + 1
@@ -4263,7 +4265,7 @@ function MEREPERM(effectData, creatureData)
 					acceptable_classes["" .. c[1]] = c[2]
 				end
 				for i = 1, 11, 1 do
-					if IEex_GetActorStat(targetID, 95 + i) > 0 then 
+					if IEex_GetActorStat(targetID, 95 + i) > 0 then
 						if acceptable_classes["" .. i] == nil then
 							acceptable = false
 						elseif acceptable_classes["" .. i] ~= -1 and bit32.band(kit, acceptable_classes["" .. i]) == 0 then
@@ -4294,7 +4296,7 @@ function MEONCAST(effectData, creatureData)
 	local lowestClassSpellLevel = 10
 	local classSpellLevel = 0
 	for i = 2, 11, 1 do
-		if IEex_GetActorStat(targetID, 95 + i) > 0 then 
+		if IEex_GetActorStat(targetID, 95 + i) > 0 then
 			classSpellLevel = IEex_GetClassSpellLevel(targetID, i, parent_resource)
 			if classSpellLevel > 0 and classSpellLevel < lowestClassSpellLevel then
 				lowestClassSpellLevel = classSpellLevel
@@ -4302,7 +4304,7 @@ function MEONCAST(effectData, creatureData)
 		end
 	end
 	classSpellLevel = lowestClassSpellLevel
-	
+
 	IEex_ApplyEffectToActor(targetID, {
 ["opcode"] = 254,
 ["target"] = 2,
@@ -4704,7 +4706,7 @@ function MESPLSAV(effectData, creatureData)
 	if IEex_CheckForEffectRepeat(effectData, creatureData) then return end
 	local sourceID = IEex_ReadDword(effectData + 0x10C)
 	local targetID = IEex_GetActorIDShare(creatureData)
-	if not IEex_IsSprite(sourceID, false) then 
+	if not IEex_IsSprite(sourceID, false) then
 		sourceID = 0
 	end
 	local sourceData = 0
@@ -5608,7 +5610,7 @@ function MENOTEL(effectData, creatureData)
 	local targetIDX = IEex_ReadDword(creatureData + 0x6)
 	local targetIDY = IEex_ReadDword(creatureData + 0xA)
 	local disableTeleport = false
-	
+
 	local areaData = IEex_ReadDword(creatureData + 0x12)
 	if areaData <= 0 then return end
 	local areaType = IEex_ReadWord(areaData + 0x40, 0x0)
@@ -5896,8 +5898,8 @@ function MEHGTMOD(effectData, creatureData)
 ["source_id"] = targetID
 })
 	end
-	
-	if (minHeight <= 0 or bit32.band(special, 0x1) == 0x1) and (height <= minHeight and speed <= 0 and accel <= 0) then 
+
+	if (minHeight <= 0 or bit32.band(special, 0x1) == 0x1) and (height <= minHeight and speed <= 0 and accel <= 0) then
 		IEex_WriteWord(creatureData + 0x618, 0)
 		IEex_WriteWord(creatureData + 0x61A, 0)
 		IEex_WriteWord(creatureData + 0x61C, -1)
@@ -5948,7 +5950,7 @@ function MEHGTMOD(effectData, creatureData)
 ["source_target"] = targetID,
 ["source_id"] = sourceID
 })
-			return 
+			return
 		end
 	end
 	if minHeight < 0 then
@@ -6145,7 +6147,7 @@ function MESUCREA(effectData, creatureData)
 			end
 		end)
 	end
-	
+
 	if targetIsSummoner and IEex_GetActorSpellState(targetID, 228) then
 		IEex_IterateActorEffects(targetID, function(eData)
 			local theopcode = IEex_ReadDword(eData + 0x10)
@@ -6216,7 +6218,7 @@ function MESUCREA(effectData, creatureData)
 		local summonerAllegiance = IEex_ReadByte(creatureData + 0x24, 0x0)
 		if summonerAllegiance == 255 or summonerAllegiance == 254 or summonerAllegiance == 200 then
 			summonerIsEnemy = true
-		end 
+		end
 		local summonerHasProtection = IEex_GetActorSpellState(targetID, 1)
 
 		if (summonerIsEnemy and summonerHasProtection) or (summonerIsEnemy == false and summonerHasProtection == false) then
@@ -6261,7 +6263,7 @@ function MEEAFIEN(effectData, creatureData)
 	local summonerAllegiance = IEex_ReadByte(summonerData + 0x24, 0x0)
 	if summonerAllegiance == 255 or summonerAllegiance == 254 or summonerAllegiance == 200 then
 		summonerIsEnemy = true
-	end 
+	end
 	local summonerHasProtection = IEex_GetActorSpellState(summonerID, 1)
 
 	if (summonerIsEnemy and summonerHasProtection) or (summonerIsEnemy == false and summonerHasProtection == false) then
@@ -6331,7 +6333,7 @@ function MESTATPR(effectData, creatureData)
 		levelstring = levelstring .. ")"
 	end
 	IEex_DisplayString(levelstring)
-	
+
 	IEex_DisplayString("Hit Points: " .. IEex_ReadSignedWord(creatureData + 0x5C0, 0x0) .. "/" .. IEex_GetActorStat(targetID, 1))
 	local armorClassList = IEex_GetActorArmorClass(targetID)
 	local ac = armorClassList[1]
@@ -6446,26 +6448,26 @@ function MESTATPR(effectData, creatureData)
 	end
 	if mirrorImagesRemaining > 0 then
 		IEex_DisplayString("Mirror images remaining: " .. mirrorImagesRemaining)
-	end	
+	end
 	if stoneskinDamageRemaining > 0 then
 		IEex_DisplayString("Stoneskin damage remaining: " .. stoneskinDamageRemaining)
-	end	
+	end
 	IEex_DisplayString(MEGetStat(targetID, "Iron skins remaining: ", 88, "\n") .. MEGetStat(targetID, "Casting time reduced by ", 77, "\n"))
 	if IEex_GetActorStat(targetID, 104) > 0 then
 		IEex_DisplayString("Sneak attack damage: " .. math.floor((IEex_GetActorStat(targetID, 104) + 1) / 2) + sneakAttackModifier)
-	end	
+	end
 	if IEex_GetActorStat(targetID, 79) > 0 then
 		IEex_DisplayString(IEex_GetActorName(targetID) .. " casts arcane spells as if " .. IEex_GetActorStat(targetID, 79) .. " levels higher")
-	end	
+	end
 	if IEex_GetActorStat(targetID, 53) ~= 100 then
 		IEex_DisplayString(IEex_GetActorName(targetID) .. " casts arcane spells with " .. IEex_GetActorStat(targetID, 53) .. "% the normal duration")
-	end	
+	end
 	if IEex_GetActorStat(targetID, 80) > 0 then
 		IEex_DisplayString(IEex_GetActorName(targetID) .. " casts divine spells as if " .. IEex_GetActorStat(targetID, 80) .. " levels higher")
-	end	
+	end
 	if IEex_GetActorStat(targetID, 54) ~= 100 then
 		IEex_DisplayString(IEex_GetActorName(targetID) .. " casts divine spells with " .. IEex_GetActorStat(targetID, 54) .. "% the normal duration")
-	end	
+	end
 	if extendSpellLevel > 0 then
 		IEex_DisplayString(IEex_GetActorName(targetID) .. " can extend up to " .. IEex_GetNth(extendSpellLevel) .. "-level spells")
 	end
@@ -6701,7 +6703,7 @@ function IEex_LoadInitial2DAs()
 	IEex_Loaded2DAs = {}
 
 	local feats2DA = IEex_2DADemand("B3FEATS")
-	
+
 	local idColumn = IEex_2DAFindColumn(feats2DA, "ID")
 	local maxRowIndex = IEex_ReadWord(feats2DA + 0x20, 1) - 1
 
@@ -6770,7 +6772,7 @@ function IEex_WriteDelayedPatches()
 
 	--------------------------------
 	-- FIX CHARGEN ARRAY OVERFLOW --
-	-------------------------------- 
+	--------------------------------
 
 	local chargenBeforeFeatCounts = IEex_Malloc(IEex_NEW_FEATS_SIZE * 0x4)
 	for i = 0, IEex_NEW_FEATS_MAXID, 1 do
@@ -6850,13 +6852,14 @@ function IEex_WriteDelayedPatches()
 		!push_dword *_g_lua
 		!call >_lua_pcallk
 		!add_esp_byte 18
+		!call >IEex_CheckCallError
 
 		!pop_all_registers_iwd2
 		!jmp_dword :762D5E
 
 	]]})
 	IEex_WriteAssembly(featGetCountHookAddress, {"!jmp_dword", {featGetCountHook, 4, 4}, "!nop"})
-	
+
 	---------------------------
 	-- FeatList_GetFeatCount --
 	---------------------------
@@ -6903,6 +6906,7 @@ function IEex_WriteDelayedPatches()
 		!push_dword *_g_lua
 		!call >_lua_pcallk
 		!add_esp_byte 18
+		!call >IEex_CheckCallError
 
 		!push_byte 00
 		!push_byte FF
@@ -6969,6 +6973,7 @@ function IEex_WriteDelayedPatches()
 		!push_dword *_g_lua
 		!call >_lua_pcallk
 		!add_esp_byte 18
+		!call >IEex_CheckCallError
 
 		!push_byte 00
 		!push_byte FF
@@ -7042,6 +7047,7 @@ function IEex_WriteDelayedPatches()
 		!push_dword *_g_lua
 		!call >_lua_pcallk
 		!add_esp_byte 18
+		!call >IEex_CheckCallError
 
 		!push_byte FF
 		!push_dword *_g_lua
@@ -7114,6 +7120,7 @@ function IEex_WriteDelayedPatches()
 		!push_dword *_g_lua
 		!call >_lua_pcallk
 		!add_esp_byte 18
+		!call >IEex_CheckCallError
 
 		!push_byte FF
 		!push_dword *_g_lua
@@ -7177,6 +7184,7 @@ function IEex_WriteDelayedPatches()
 		!push_dword *_g_lua
 		!call >_lua_pcallk
 		!add_esp_byte 18
+		!call >IEex_CheckCallError
 
 		!push_byte FF
 		!push_dword *_g_lua
@@ -7230,6 +7238,54 @@ end
 ----------------------------------
 
 function IEex_DefineAssemblyFunctions()
+
+	IEex_WriteAssemblyAuto({[[
+
+		$IEex_CheckCallError
+
+		!test_eax_eax
+		!jnz_dword >error
+		!ret
+
+		@error
+		!push_byte 00
+		!push_byte FF
+		!push_dword *_g_lua
+		!call >_lua_tolstring
+		!add_esp_byte 0C
+
+		; _lua_pushstring arg ;
+		!push_eax
+
+		!push_dword ]], {IEex_WriteStringAuto("print"), 4}, [[
+		!push_dword *_g_lua
+		!call >_lua_getglobal
+		!add_esp_byte 08
+
+		!push_dword *_g_lua
+		!call >_lua_pushstring
+		!add_esp_byte 08
+
+		!push_byte 00
+		!push_byte 00
+		!push_byte 00
+		!push_byte 00
+		!push_byte 01
+		!push_dword *_g_lua
+		!call >_lua_pcallk
+		!add_esp_byte 18
+		!call >IEex_CheckCallError
+
+		; Clear error string off of stack ;
+		!push_byte FE
+		!push_dword *_g_lua
+		!call >_lua_settop
+		!add_esp_byte 08
+
+		!mov_eax #1
+		!ret
+
+	]]})
 
 	-- push resref
 	-- push share
@@ -7332,6 +7388,7 @@ function IEex_WritePatches()
 		!push_dword *_g_lua
 		!call >_lua_pcallk
 		!add_esp_byte 18
+		!call >IEex_CheckCallError
 
 		!pop_all_registers_iwd2
 		!jmp_dword ]], {stage1StartupHookAddress + 0x5, 4, 4},
@@ -7362,6 +7419,7 @@ function IEex_WritePatches()
 		!push_dword *_g_lua
 		!call >_lua_pcallk
 		!add_esp_byte 18
+		!call >IEex_CheckCallError
 
 		!pop_all_registers_iwd2
 		!jmp_dword ]], {stage2StartupHookAddress + 0x5, 4, 4},
@@ -7423,6 +7481,7 @@ function IEex_WritePatches()
 		!push_dword *_g_lua
 		!call >_lua_pcallk
 		!add_esp_byte 18
+		!call >IEex_CheckCallError
 
 		!test_eax_eax
 		!jnz_dword >error
@@ -7507,6 +7566,7 @@ function IEex_WritePatches()
 		!push_dword *_g_lua
 		!call >_lua_pcallk
 		!add_esp_byte 18
+		!call >IEex_CheckCallError
 
 		!pop_registers
 
@@ -7641,6 +7701,7 @@ function IEex_WritePatches()
 		!push_dword *_g_lua
 		!call >_lua_pcallk
 		!add_esp_byte 18
+		!call >IEex_CheckCallError
 
 		!push_byte FF
 		!push_dword *_g_lua
@@ -7672,6 +7733,7 @@ if not IEex_AlreadyInitialized then
 
 	IEex_DefineAssemblyFunctions()
 	IEex_WritePatches()
+	dofile("override/IEex_Cre.lua")
 	dofile("override/IEex_Opc.lua")
 
 end
