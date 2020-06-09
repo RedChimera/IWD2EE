@@ -6730,17 +6730,12 @@ function IEex_WriteDelayedPatches()
 	--------------------
 
 	IEex_FeatPanelStringHook = function(featID)
-		local foundMax = tonumber(IEex_2DAGetAtRelated("B3FEATS", "ID", "MAX", function(id)
-			return tonumber(id) == featID
-		end))
+		local foundMax = tonumber(IEex_2DAGetAtRelated("B3FEATS", "ID", "MAX", function(id) return tonumber(id) == featID end))
 		return foundMax > 1
 	end
 
 	IEex_FeatPipsHook = function(featID)
-		local foundValue = tonumber(IEex_2DAGetAtRelated("B3FEATS", "ID", "MAX", function(id)
-			return tonumber(id) == featID
-		end))
-		return foundValue
+		return tonumber(IEex_2DAGetAtRelated("B3FEATS", "ID", "MAX", function(id) return tonumber(id) == featID	end))
 	end
 
 	IEex_GetFeatCountHook = function(sprite, featID)
@@ -6752,18 +6747,26 @@ function IEex_WriteDelayedPatches()
 	end
 
 	IEex_FeatIncrementableHook = function (sprite, featID)
+
 		local featCount = IEex_ReadByte(sprite + 0x78F + (featID - 0x4B), 0)
-		local foundMax = tonumber(IEex_2DAGetAtRelated("B3FEATS", "ID", "MAX", function(id)
-			return tonumber(id) == featID
-		end))
-		return featCount < foundMax
+		local foundMax = tonumber(IEex_2DAGetAtRelated("B3FEATS", "ID", "MAX", function(id) return tonumber(id) == featID end))
+		if featCount >= foundMax then return false end
+
+		local actorID = IEex_GetActorIDShare(sprite)
+
+		local prerequisiteFunc = IEex_2DAGetAtRelated("B3FEATS", "ID", "PREREQUISITE_FUNCTION", function(id) return tonumber(id) == featID end)
+		if prerequisiteFunc ~= "*" and prerequisiteFunc ~= "" and not _G[prerequisiteFunc](actorID, featID) then return false end
+
+		local incrementableFunc = IEex_2DAGetAtRelated("B3FEATS", "ID", "INCREMENTABLE_FUNCTION", function(id) return tonumber(id) == featID end)
+		if incrementableFunc ~= "*" and incrementableFunc ~= "" and not _G[incrementableFunc](actorID, featID) then return false end
+
+		return true
 	end
 
-	IEex_FeatTakeableHook = function(sprite, featID)
-		local foundFunc = IEex_2DAGetAtRelated("B3FEATS", "ID", "PREREQUISITE_FUNCTION", function(id)
-			return tonumber(id) == featID
-		end)
-		return _G[foundFunc](IEex_GetActorIDShare(sprite), featID)
+	IEex_MeetsFeatRequirementsHook = function(sprite, featID)
+		local foundFunc = IEex_2DAGetAtRelated("B3FEATS", "ID", "PREREQUISITE_FUNCTION", function(id) return tonumber(id) == featID end)
+		if foundFunc ~= "*" and foundFunc ~= "" and not _G[foundFunc](IEex_GetActorIDShare(sprite), featID) then return false end
+		return true
 	end
 
 	------------------------
@@ -6997,17 +7000,17 @@ function IEex_WriteDelayedPatches()
 	]]})
 	IEex_WriteAssembly(featNumberPipsHookAddress, {"!jmp_dword", {featNumberPipsHook, 4, 4}, "!nop"})
 
-	-------------------
-	-- Feat_Takeable --
-	-------------------
+	---------------------------------------
+	-- CGameSprite_MeetsFeatRequirements --
+	---------------------------------------
 
 	IEex_WriteByte(0x763206 + 2, IEex_NEW_FEATS_SIZE)
 
-	local featTakeableHookAddress = 0x763270
-	local featTakeableHook = IEex_WriteAssemblyAuto({[[
+	local meetsFeatRequirementsHookAddress = 0x763270
+	local meetsFeatRequirementsHook = IEex_WriteAssemblyAuto({[[
 
 		!cmp_ebp_byte 4A
-		!jbe_dword ]], {featTakeableHookAddress + 0x6, 4, 4}, [[
+		!jbe_dword ]], {meetsFeatRequirementsHookAddress + 0x6, 4, 4}, [[
 
 		!push_eax
 		!push_ecx
@@ -7016,7 +7019,7 @@ function IEex_WriteDelayedPatches()
 		!push_esi
 		!push_edi
 
-		!push_dword ]], {IEex_WriteStringAuto("IEex_FeatTakeableHook"), 4}, [[
+		!push_dword ]], {IEex_WriteStringAuto("IEex_MeetsFeatRequirementsHook"), 4}, [[
 		!push_dword *_g_lua
 		!call >_lua_getglobal
 		!add_esp_byte 08
@@ -7072,7 +7075,7 @@ function IEex_WriteDelayedPatches()
 		!jmp_dword :7638FD
 
 	]]})
-	IEex_WriteAssembly(featTakeableHookAddress, {"!jmp_dword", {featTakeableHook, 4, 4}, "!nop"})
+	IEex_WriteAssembly(meetsFeatRequirementsHookAddress, {"!jmp_dword", {meetsFeatRequirementsHook, 4, 4}, "!nop"})
 
 	------------------------
 	-- Feat_Incrementable --
