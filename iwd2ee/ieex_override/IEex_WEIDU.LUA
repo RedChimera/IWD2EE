@@ -6,3 +6,4 @@ ex_fiend_race = 164
 ex_feat_name_id = {}
 ex_listspll = {}
 ex_listdomn = {}
+ex_trueschool = {}

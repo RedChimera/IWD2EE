@@ -1487,16 +1487,20 @@ DEFINE_ACTION_FUNCTION ~ADD_FEAT_IWD2~
 		name=~~
 		points=~0                       0                       0                       0                       0                       0                       0                       0                       0                       0                       0                       0                       0                       0                       0                       0                       0                       0                       0                       0                       0                       0                       0                       0                       0                       0                       0                       0                       0                       0                       0                       0                       0                       0                       0                       0~
 		script=~Feats_True~
+		prerequisite_script=~~
 		featspl_1=~NoSpellForThis~
 		featspl_2=~NoSpellForThis~
 		featspl_3=~NoSpellForThis~
 		featspl_4=~NoSpellForThis~
 		featspl_5=~NoSpellForThis~
 BEGIN
+	ACTION_IF (~%prerequisite_script%~ STRING_EQUAL_CASE ~~) BEGIN
+		OUTER_SPRINT prerequsite_script ~%script%~
+	END
 	COPY_EXISTING ~b3feats.2da~ ~override~
-		COUNT_2DA_ROWS 4 numrows
+		COUNT_2DA_ROWS 5 numrows
 		nextid = numrows + 75
-		INSERT_2DA_ROW numrows 4 ~%name% %nextid% %max% %script%~
+		INSERT_2DA_ROW numrows 4 ~%name% %nextid% %max% %prerequisite_script% %script%~
 
 	COPY_EXISTING ~feats.2da~ ~override~
 		COUNT_2DA_COLS numcols

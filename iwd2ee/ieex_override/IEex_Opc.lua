@@ -155,6 +155,44 @@
 	-- New Opcode #502 (ScreenEffects) --
 	-------------------------------------
 
+	IEex_ScreenEffectsGlobalFunctions = {}
+	
+	function IEex_AddScreenEffectsGlobal(func_name, func)
+		IEex_ScreenEffectsGlobalFunctions[func_name] = func
+	end
+
+	IEex_AddScreenEffectsGlobal("EXEFFMOD", function(effectData, creatureData)
+		local targetID = IEex_ReadDword(creatureData + 0x34)
+		local sourceID = IEex_ReadDword(effectData + 0x10C)
+		local internal_flags = IEex_ReadDword(effectData + 0xC8)
+		local opcode = IEex_ReadDword(effectData + 0xC)
+		if bit32.band(internal_flags, 0x2000000) > 0 then return false end
+		local savingthrow = IEex_ReadDword(effectData + 0x3C)
+		local savebonus = IEex_ReadDword(effectData + 0x40)
+		local school = IEex_ReadDword(effectData + 0x48)
+		local parent_resource = IEex_ReadLString(effectData + 0x90, 8)
+		if ex_trueschool[parent_resource] ~= nil then
+			school = ex_trueschool[parent_resource]
+		end
+		if bit32.band(savingthrow, 0x1C) > 0 and IEex_GetActorSpellState(sourceID, 195) then
+			IEex_IterateActorEffects(sourceID, function(eData)
+				local theopcode = IEex_ReadDword(eData + 0x10)
+				local theparameter2 = IEex_ReadDword(eData + 0x20)
+				if theopcode == 288 and theparameter2 == 195 then
+					local theparameter1 = IEex_ReadDword(eData + 0x1C)
+					local theresource = IEex_ReadLString(eData + 0x30, 8)
+					local thesavingthrow = IEex_ReadDword(eData + 0x40)
+					if (theresource ~= "" and theresource == parent_resource) or bit32.band(thesavingthrow, 2 ^ (school + 15)) > 0 then
+						savebonus = savebonus + theparameter1
+					end
+				end
+			end)
+			IEex_DisplayString(savebonus)
+			IEex_WriteDword(effectData + 0x40, savebonus)
+		end
+		return false
+	end)
+	
 	IEex_RegisterLuaStat({
 
 		["reload"] = function(stats)
@@ -234,6 +272,12 @@
 
 	IEex_OnCheckAddScreenEffectsHook = function(pEffect, pSprite)
 
+		for func_name, func in pairs(IEex_ScreenEffectsGlobalFunctions) do
+			if func(pEffect, pSprite) then
+				return true
+			end
+		end
+		
 		local actorID = IEex_GetActorIDShare(pSprite)
 		local screenList = IEex_AccessLuaStats(actorID).screenEffects
 

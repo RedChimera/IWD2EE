@@ -308,7 +308,7 @@ You can perform a spinning attack to hit multiple enemies around you.
 
 Prerequisites: Dex 13+, Int 13+, Expertise, Dodge, Mobility, Spring Attack, base attack bonus 4 or greater; taking the feat a second time requires Dex 21+.
 
-Benefit: You gain the Whirlwind Attack ability, usable once per round. By using the ability, you make an attack with each of your weapons against each nearby enemy, forgoing all other attacks for the round. The radius of the attack depends on the reach of your weapon.
+Benefit: You gain the Whirlwind Attack ability, usable once per round. By using the ability, you make an attack with each of your weapons against each nearby enemy, forgoing all other attacks for the round. All attacks made this way have a -4 attack penalty. The radius of the attack depends on the reach of your weapon.
 
 When taken a second time, the feat is Improved Whirlwind Attack, which increases the radius of the attack by 5 feet.~
 
