@@ -1495,12 +1495,12 @@ DEFINE_ACTION_FUNCTION ~ADD_FEAT_IWD2~
 		featspl_5=~NoSpellForThis~
 BEGIN
 	ACTION_IF (~%prerequisite_script%~ STRING_EQUAL_CASE ~~) BEGIN
-		OUTER_SPRINT prerequsite_script ~%script%~
+		OUTER_SPRINT prerequisite_script ~%script%~
 	END
 	COPY_EXISTING ~b3feats.2da~ ~override~
 		COUNT_2DA_ROWS 5 numrows
 		nextid = numrows + 75
-		INSERT_2DA_ROW numrows 4 ~%name% %nextid% %max% %prerequisite_script% %script%~
+		INSERT_2DA_ROW (numrows + 1) 4 ~%name% %nextid% %max% %prerequisite_script% %script%~
 
 	COPY_EXISTING ~feats.2da~ ~override~
 		COUNT_2DA_COLS numcols

@@ -8437,17 +8437,36 @@ Type:  Two-handed~
 
 
 //@11725    = ~Composite Shortbow~
-//@11726    = ~Item description can remain the same; if new description is needed put it here~
+@11726    = ~Composite bows are made from laminated horn, wood, or bone and built with a recurve, meaning that the bow remains bow-shaped even when unstrung.
+
+STATISTICS:
+
+Special:
+  Composite: Gains Strength bonus to damage, up to a maximum of +1
+Weight: 2 lb.
+Feat Requirement:  Martial Weapon, Bow
+Type:  Two-handed~
 //@11727    = ~Composite Shortbow +1~
-//@11728    = ~Item description can remain the same; if new description is needed put it here~
+@11728    = ~Composite bows are made from laminated horn, wood, or bone and built with a recurve, meaning that the bow remains bow-shaped even when unstrung.
+
+STATISTICS:
+
+Damage:  +1 (missile)
+Attack Bonus:  +1
+Special:
+  Composite: Gains Strength bonus to damage, up to a maximum of +2
+Weight: 2 lb.
+Feat Requirement:  Martial Weapon, Bow
+Type:  Two-handed~
 @11729    = ~Composite Shortbow of Haste +5~
 @11730    = ~Composite bows are made from laminated horn, wood, or bone and built with a recurve, meaning that the bow remains bow-shaped even when unstrung.
 
 STATISTICS:
 
 Damage: +6 (missile)
-Attack Bonus: +5 
+Attack Bonus: +5
 Special:
+  Composite: Gains Strength bonus to damage, up to a maximum of +6
   Constant Effect: Wielder is under the effects of the spell Haste
 Weight: 2 lb.
 Feat Requirement:  Martial Weapon, Bow
@@ -8457,8 +8476,8 @@ Type:  Two-handed~
 
 STATISTICS:
 
-Damage:  +1 (missile)
 Special:
+  Composite: Gains Strength bonus to damage, up to a maximum of +1
   Resistance: 5/- Cold Resistance
   Resistance: 5/- Fire Resistance
   Resistance: 3/- Missile Resistance
@@ -8470,9 +8489,10 @@ Type:  Two-handed~
 
 STATISTICS:
 
-Damage:  +4 (missile)
+Damage:  +3 (missile)
 Attack Bonus: +3
 Special:
+  Composite: Gains Strength bonus to damage, up to a maximum of +4
   Dexterity: +6 bonus
 Weight: 2 lb.
 Feat Requirement:  Martial Weapon, Bow
@@ -8480,26 +8500,81 @@ Type:  Two-handed~
 
 
 //@11735    = ~Longbow~
-//@11736    = ~Item description can remain the same; if new description is needed put it here~
+@11736    = ~The longbow is similar to the shortbow, except that the staff is about as high as the archer is, usually 6 to 6.5 feet.  It has two advantages over the shortbow: better range and hence, it is much more accurate.
+
+STATISTICS:
+
+Damage:  +1 (missile)
+Weight: 3 lb.
+Feat Requirement:  Martial Weapon, Bow
+Type:  Two-handed~
 //@11737    = ~Masterwork Longbow~
-//@11738    = ~Item description can remain the same; if new description is needed put it here~
+@11738    = ~The longbow is similar to the shortbow, except that the staff is about as high as the archer is, usually 6 to 6.5 feet.  It has two advantages over the shortbow: better range and hence, it is much more accurate.
+
+STATISTICS:
+
+Damage:  +1 (missile)
+Attack Bonus:  +1
+Weight: 3 lb.
+Feat Requirement:  Martial Weapon, Bow
+Type:  Two-handed~
 //@11739    = ~Longbow +1~
-//@11740    = ~Item description can remain the same; if new description is needed put it here~
+@11740    = ~The longbow is similar to the shortbow, except that the staff is about as high as the archer is, usually 6 to 6.5 feet.  It has two advantages over the shortbow: better range and hence, it is much more accurate.  This one has been enhanced with magical properties, giving it an air of perfection.
+
+STATISTICS:
+
+Damage:  +2 (missile)
+Attack Bonus: +1
+Weight: 3 lb.
+Feat Requirement:  Martial Weapon, Bow
+Type:  Two-handed~
 //@11741    = ~Longbow +5~
-//@11742    = ~Item description can remain the same; if new description is needed put it here~
+@11742    = ~The longbow is similar to the shortbow, except that the staff is about as high as the archer is, usually 6 to 6.5 feet.  It has two advantages over the shortbow: better range and hence, it is much more accurate.  This one has been enhanced with magical properties, giving it an air of perfection.
+
+STATISTICS:
+
+Damage:  +6 (missile)
+Attack Bonus: +5
+Weight: 3 lb.
+Feat Requirement:  Martial Weapon, Bow
+Type:  Two-handed~
 //@11743    = ~Longbow +4~
-//@11744    = ~Item description can remain the same; if new description is needed put it here~
+@11744    = ~The longbow is similar to the shortbow, except that the staff is about as high as the archer is, usually 6 to 6.5 feet.  It has two advantages over the shortbow: better range and hence, it is much more accurate.  This one has been enhanced with magical properties, giving it an air of perfection.
+
+STATISTICS:
+
+Damage:  +5 (missile)
+Attack Bonus: +4
+Weight: 3 lb.
+Feat Requirement:  Martial Weapon, Bow
+Type:  Two-handed~
 //@11745    = ~Longbow +3~
-//@11746    = ~Item description can remain the same; if new description is needed put it here~
+@11746    = ~The longbow is similar to the shortbow, except that the staff is about as high as the archer is, usually 6 to 6.5 feet.  It has two advantages over the shortbow: better range and hence, it is much more accurate.  This one has been enhanced with magical properties, giving it an air of perfection.
+
+STATISTICS:
+
+Damage:  +4 (missile)
+Attack Bonus: +3
+Weight: 3 lb.
+Feat Requirement:  Martial Weapon, Bow
+Type:  Two-handed~
 //@11747    = ~Longbow +2~
-//@11748    = ~Item description can remain the same; if new description is needed put it here~
+@11748    = ~The longbow is similar to the shortbow, except that the staff is about as high as the archer is, usually 6 to 6.5 feet.  It has two advantages over the shortbow: better range and hence, it is much more accurate.  This one has been enhanced with magical properties, giving it an air of perfection.
+
+STATISTICS:
+
+Damage:  +3 (missile)
+Attack Bonus: +2
+Weight: 3 lb.
+Feat Requirement:  Martial Weapon, Bow
+Type:  Two-handed~
 //@11749    = ~Spellward Longbow +2~
 @11750    = ~The longbow is similar to the shortbow, except that the staff is about as high as the archer is, usually 6 to 6.5 feet. It has two advantages over the shortbow: better range and hence, it is much more accurate. This one has been enhanced with magical properties, giving it an air of perfection.
 
 STATISTICS:
 
-Damage:  +2 (missile)
-Attack Bonus: +3 
+Damage:  +3 (missile)
+Attack Bonus: +2
 Special:
   Spell Resistance: Set to 15
   Spellward: Protection from the spells Melf's Acid Arrow and Flame Arrow
@@ -8511,8 +8586,8 @@ Type:  Two-handed~
 
 STATISTICS:
 
-Damage:  +2 (missile)
-Attack Bonus: +3 
+Damage:  +3 (missile)
+Attack Bonus: +2
 Special:
   Fatigue: Arrows fired from this bow inflict 2 points of fatigue (Fortitude DC 20). Once a creature has 6 points of fatigue, it thereafter receives a -1 luck penalty for every additional point of fatigue it gains.
 Weight: 3 lb.
@@ -8523,8 +8598,8 @@ Type:  Two-handed~
 
 STATISTICS:
 
-Damage:  +1 (missile)
-Attack Bonus: +2 
+Damage:  +2 (missile)
+Attack Bonus: +1
 Special:
   Spell Power: User may cast Cat's Grace (at level 10; self only) 1/day
 Weight: 3 lb.
@@ -8535,8 +8610,8 @@ Type:  Two-handed~
 
 STATISTICS:
 
-Damage: +1 (missile)
-Attack Bonus: +2 
+Damage: +2 (missile)
+Attack Bonus: +1
 Special:
   Shock: Arrows fired from this bow deal +1d4 electrical damage
 Weight: 3 lb.
@@ -8547,8 +8622,8 @@ Type:  Two-handed~
 
 STATISTICS:
 
-Damage: +4 (missile)
-Attack Bonus: +5 
+Damage: +5 (missile)
+Attack Bonus: +4
 Special:
   Movement Rate: +6
   Crippling: Reduces target's movement rate by 6 for 1 round (no save)
@@ -8560,8 +8635,8 @@ Type:  Two-handed~
 
 STATISTICS:
 
-Damage: +1 (missile)
-Attack Bonus: +2 
+Damage: +2 (missile)
+Attack Bonus: +1
 Special:
   Frost: Arrows fired from this bow deal +1d6 cold damage
 Weight: 3 lb.
@@ -8572,8 +8647,8 @@ Type:  Two-handed~
 
 STATISTICS:
 
-Damage:  +3 (missile)
-Attack Bonus:  +4 
+Damage:  +4 (missile)
+Attack Bonus:  +3
 Special:
   Frost: Arrows fired from this bow deal +2d6 cold damage
 Weight: 3 lb.
@@ -8588,7 +8663,7 @@ Whatever the tale, the bow has a range unmatched by many other bows in the realm
 
 STATISTICS:
 
-Damage:  +2 (missile)
+Damage:  +3 (missile)
 Attack Bonus:  +4
 Special: Half again the range of a normal bow.
 Weight: 3 lb.
@@ -8597,13 +8672,13 @@ Type:  Two-handed~
 @11765    = ~Sophia's Arc +5~
 @11766    = ~This longbow is the subject of legend among the squabbling citadels of the Sword Coast, a legend fiercely debated in drinking halls and taverns in and along the storm-lashed coast. According to the tale, the bow takes its name from its pivotal role in the escape of a young woman named Sophia, a typical maiden fair who was pledged to marry the son of Duke Hugh Gladegrin (the son is described as hideously ugly and of foul temperament, of course). Sophia, however, believed she was destined to marry one of the Duke's archers, a dashing young golden-haired fellow who roamed the surrounding lands felling foul beasts with a single twang of his mighty bow. As the tale goes, one of the court wizards (a transmuter) took pity on the young woman's plight and cast a spell that turned her into an arrow for an hour's time. The transmuter arranged for Sophia to be fired from the castle wall to a ship waiting off the coast, where she could sail to freedom.
 
-The tale then breaks down from here, as numerous accounts claim that Sophia did not flee the coast safely, and that she transformed back into her normal body while she was halfway across the water, plunging into the icy ocean. Another school claims that, while in arrow form, Sophia pierced the side of the ship, then choked to death when she resumed her normal form with her neck embedded in the ship's hull. Still others claim that she was never even launched from the bow, and that she resumed her normal form while inside the archer's quiver, and she awoke, naked, wearing only the small band of leather about her body. When this last argument is made, the discussion generally deteriorates into a steady stream of sexual innuendos and the evening officially goes downhill. 
+The tale then breaks down from here, as numerous accounts claim that Sophia did not flee the coast safely, and that she transformed back into her normal body while she was halfway across the water, plunging into the icy ocean. Another school claims that, while in arrow form, Sophia pierced the side of the ship, then choked to death when she resumed her normal form with her neck embedded in the ship's hull. Still others claim that she was never even launched from the bow, and that she resumed her normal form while inside the archer's quiver, and she awoke, naked, wearing only the small band of leather about her body. When this last argument is made, the discussion generally deteriorates into a steady stream of sexual innuendos and the evening officially goes downhill.
 
 Whatever the tale, the bow has a range unmatched by many other bows in the realms, and the arrows launched from it strike far and true - unlike the story surrounding the bow.
 
 STATISTICS:
 
-Damage:  +5 (missile)
+Damage:  +6 (missile)
 Attack Bonus:  +8
 Special: Half again the range of a normal bow.
 Weight: 3 lb.
@@ -8614,8 +8689,8 @@ Type:  Two-handed~
 
 STATISTICS:
 
-Damage: +3 (missile)
-Attack Bonus: +9
+Damage: +4 (missile)
+Attack Bonus: +8
 Weight: 3 lb.
 Feat Requirement:  Martial Weapon, Bow
 Type:  Two-handed~
@@ -8624,8 +8699,8 @@ Type:  Two-handed~
 
 STATISTICS:
 
-Damage: +5 (missile)
-Attack Bonus: +15
+Damage: +6 (missile)
+Attack Bonus: +14
 Special:
   Spell Power: Can cast the spell Protection From Arrows (at level 20) 1/day
 Weight: 3 lb.
@@ -8634,19 +8709,49 @@ Type:  Two-handed~
 
 
 //@11771    = ~Composite Longbow~
-//@11772    = ~Item description can remain the same; if new description is needed put it here~
+@11772    = ~Composite bows are longbows or shortbows whose staves are made from more than one type of material.  This gives greater flexibility, and thus better range.  These were developed after the normal longbow.
+
+STATISTICS:
+
+Damage:  +1 (missile)
+Special:
+  Composite: Gains Strength bonus to damage, up to a maximum of +1
+Weight: 3 lb.
+Feat Requirement:  Martial Weapon, Bow
+Type:  Two-handed~
 //@11773    = ~Masterwork Composite Longbow~
-//@11774    = ~Item description can remain the same; if new description is needed put it here~
+@11774    = ~Composite bows are longbows or shortbows whose staves are made from more than one type of material.  This gives greater flexibility, and thus better range.  These were developed after the normal longbow.
+
+STATISTICS:
+
+Damage:  +1 (missile)
+Attack Bonus:  +1
+Special:
+  Composite: Gains Strength bonus to damage, up to a maximum of +2
+Weight: 3 lb.
+Feat Requirement:  Martial Weapon, Bow
+Type:  Two-handed~
 //@11775    = ~Composite Longbow +1~
-//@11776    = ~Item description can remain the same; if new description is needed put it here~
+@11776    = ~Composite bows are longbows or shortbows whose staves are made from more than one type of material.  This gives greater flexibility, and thus better range.  These were developed after the normal longbow.
+
+STATISTICS:
+
+Damage:  +2 (missile)
+Attack Bonus:  +1
+Special:
+  Composite: Gains Strength bonus to damage, up to a maximum of +2
+Weight: 3 lb.
+Feat Requirement:  Martial Weapon, Bow
+Type:  Two-handed~
 @11777    = ~Composite Longbow of Holy Power +1~
 @11778    = ~Composite bows are longbows or shortbows whose staves are made from more than one type of material. This gives greater flexibility, and thus better range. These were developed after the normal longbow.
 
 STATISTICS:
 
-Damage:  +3 (missile)
-Attack Bonus:  +2 
+Damage:  +2 (missile)
+Attack Bonus:  +1
 Special:
+  Composite: Gains Strength bonus to damage, up to a maximum of +2
   Constant Effect: Wielder is under the effects of the spell Holy Power
 Weight: 9 lb.
 Feat Requirement:  Martial Weapon, Bow
@@ -8656,9 +8761,9 @@ Type:  Two-handed~
 
 STATISTICS:
 
-Damage:  +2 (missile)
-Attack Bonus:  +1 
+Damage:  +1 (missile)
 Special:
+  Composite: Gains Strength bonus to damage, up to a maximum of +1
   +2 Armor Class vs. slashing, piercing and bludgeoning attacks
 Weight: 3 lb.
 Feat Requirement:  Martial Weapon, Bow
@@ -8668,8 +8773,10 @@ Type:  Two-handed~
 
 STATISTICS:
 
-Damage:  +16 (missile)
+Damage:  +10 (missile)
 Attack Bonus:  -5
+Special:
+  Composite: Gains Strength bonus to damage, up to a maximum of +10
 Weight: 3 lb.
 Feat Requirement:  Martial Weapon, Bow
 Type:  Two-handed~
@@ -8678,22 +8785,62 @@ Type:  Two-handed~
 
 STATISTICS:
 
-Damage:  +4 (missile)
-Attack Bonus:  +3
+Damage:  +3 (missile)
+Attack Bonus:  +2
 Special:
+  Composite: Gains Strength bonus to damage, up to a maximum of +3
   Dodging: +6 Armor Class vs. missile attacks
 Weight: 9 lb.
 Feat Requirement:  Martial Weapon, Bow
 Type:  Two-handed~
 //@11785    = ~Composite Longbow +5~
-//@11786    = ~Item description can remain the same; if new description is needed put it here~
+@11786    = ~Composite bows are longbows or shortbows whose staves are made from more than one type of material.  This gives greater flexibility, and thus better range.  These were developed after the normal longbow.
+
+STATISTICS:
+
+Damage:  +6 (missile)
+Attack Bonus:  +5
+Special:
+  Composite: Gains Strength bonus to damage, up to a maximum of +6
+Weight: 3 lb.
+Feat Requirement:  Martial Weapon, Bow
+Type:  Two-handed~
 //@11787    = ~Composite Longbow +4~
-//@11788    = ~Item description can remain the same; if new description is needed put it here~
+@11788    = ~Composite bows are longbows or shortbows whose staves are made from more than one type of material.  This gives greater flexibility, and thus better range.  These were developed after the normal longbow.
+
+STATISTICS:
+
+Damage:  +5 (missile)
+Attack Bonus:  +4
+Special:
+  Composite: Gains Strength bonus to damage, up to a maximum of +5
+Weight: 3 lb.
+Feat Requirement:  Martial Weapon, Bow
+Type:  Two-handed~
 //@11789    = ~Composite Longbow +3~
-//@11790    = ~Item description can remain the same; if new description is needed put it here~
+@11790    = ~Composite bows are longbows or shortbows whose staves are made from more than one type of material.  This gives greater flexibility, and thus better range.  These were developed after the normal longbow.
+STATISTICS:
+
+Damage:  +4 (missile)
+Attack Bonus:  +3
+Special:
+  Composite: Gains Strength bonus to damage, up to a maximum of +4
+Weight: 3 lb.
+Feat Requirement:  Martial Weapon, Bow
+Type:  Two-handed~
 //@11791    = ~Composite Longbow +2~
-//@11792    = ~Item description can remain the same; if new description is needed put it here~
-@11793    = ~Arc of Gold +6~
+@11792    = ~Composite bows are longbows or shortbows whose staves are made from more than one type of material.  This gives greater flexibility, and thus better range.  These were developed after the normal longbow.
+
+STATISTICS:
+
+Damage:  +3 (missile)
+Attack Bonus:  +2
+Special:
+  Composite: Gains Strength bonus to damage, up to a maximum of +3
+Weight: 3 lb.
+Feat Requirement:  Martial Weapon, Bow
+Type:  Two-handed~
+@11793    = ~Arc of Gold~
 @11794    = ~It can be argued that the Arc of Gold and its sister, the Mithral Arc, brought about the end of the dwarven-elvish alliance in the North many years past, and led to the destruction of the Severed Hand and the fall of Dorn's Deep. Many tragedies have occurred around these two items, and many are the deaths they caused although no arrow was ever shot from them. 
 
 At the height of the dwarven-elvish alliance in the North, a disagreement arose between the two races over the matter of trading enchanted weapons to the men of the south, who were beginning to establish a foothold in the North. The dwarves were of the opinion that the many great works that had been built through the joint efforts of the dwarves and elves should be offered up to man and the profits used to fill the coffers of both races. This suggestion was not well-received by the elves nor by their leader, the arch-mage Larrel, and the matter was quickly dropped. 
@@ -8706,15 +8853,15 @@ When the Mythal was cast, the Arc of Gold vanished from the halls of the Severed
 
 STATISTICS:
 
-Damage:  +8 (missile)
-Attack Bonus:  +7
+Damage:  +6 (missile)
+Attack Bonus:  +5
 Special:
-  Quick: No delay before attacking
+  Composite: Gains Strength bonus to damage, up to a maximum of +15
 Weight: 9 lb.
 Feat Requirement:  Martial Weapon, Bow
 Type:  Two-handed
 Minimum Dexterity of 18 Required~
-@11795    = ~Mithral Arc +9~
+@11795    = ~Mithral Arc~
 @11796    = ~It can be argued that the Mithral Arc and its brother, the Arc of Gold, brought about the end of the dwarven-elvish alliance in the North many years past, and led to the destruction of the Severed Hand and the fall of Dorn's Deep. Many tragedies have occurred around these two items, and many are the deaths they caused although no arrow was ever shot from them. 
 
 The Mithral Arc was developed at the height of the dwarven-elvish alliance, and it was one of the many joint items developed by the dwarves and elves of the Severed Hand before the destruction of the Severed Hand and the Fall of Dorn's Deep. Its accuracy was unparalleled, and the dwarves presented it to the elves as a token of goodwill between the races. The string of the bow was said to have been blessed by the elvish archmage Larrel himself, with a range that seemed to rival the horizon. It was mounted in the halls of Severed Hand so that all visitors could see it, and see the achievements the dwarves and elves united could bring about.
@@ -8723,14 +8870,14 @@ When its brother, the Arc of Gold, was discovered in the hands of a band of orcs
 
 It is said that at the moment the alliance disbanded, the string of the Mithral Arc broke with a final twang, and the bow, useless, remained deep within Lower Dorn's Deep, silently watching as the dwarves were slowly driven deeper and deeper into the Deep by the encroaching goblinoid hordes that had begun to swarm down from the North. It was never seen and never taken by the Dark Horde that marched through Dorn's Deep, and the Mithral Arc remained there for countless years in the darkness with the dwarven dead piled around it, still clutching their weapons. 
 
-How it came to be here is unknown, but the string of the Mithral Arc is restored and the bow is eager to be used. Perhaps there is hope for the fallen elves and dwarves still... or at least the opportunity to reclaim their once-proud homeland from the goblin hordes that threaten it. 
+How it came to be here is unknown, but the string of the Mithral Arc is restored and the bow is eager to be used. Perhaps there is hope for the fallen elves and dwarves still... or at least the opportunity to reclaim their once-proud homeland from the half-breed hordes that threaten it. 
 
 STATISTICS:
 
 Damage:  +11 (missile)
 Attack Bonus:  +10
 Special:
-  Quick: No delay before attacking
+  Composite: Gains Strength bonus to damage, up to a maximum of +15
 Weight: 1 lb.
 Feat Requirement:  Martial Weapon, Bow
 Type:  Two-handed
