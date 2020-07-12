@@ -12,6 +12,7 @@ for module, tf in pairs(IEex_Modules) do
 		dofile("override/" .. module .. ".lua")
 	end
 end
+
 ----------------
 -- Spell List --
 ----------------
@@ -375,6 +376,17 @@ end
 ------------------------
 -- Actor Manipulation --
 ------------------------
+
+function IEex_SetActorScript(actorID, level, resref)
+	IEex_ApplyEffectToActor(actorID, {
+		["opcode"] = 82,
+		["target"] = 1,
+		["parameter2"] = level,
+		["timing"] = 9,
+		["resource"] = resref,
+		["source_id"] = actorID,
+	})
+end
 
 -- Directly applies an effect to an actor based on the args table.
 function IEex_ApplyEffectToActor(actorID, args)
@@ -803,6 +815,17 @@ end
 ----------------
 -- Game State --
 ----------------
+
+function IEex_CreateCreature(resref)
+	local mem = IEex_Malloc(0xC)
+	IEex_WriteLString(mem, resref, 8)
+	local resrefCStringPtr = mem + 0x8
+	-- CResRef_GetResRefStr
+	IEex_Call(0x78AA30, {resrefCStringPtr}, mem, 0x0)
+	-- This is usually used with hardcoded resrefs by CtrlAltDelete:JeffKAttacks() and JeffKDefends()
+	IEex_Call(0x4EC390, {IEex_ReadDword(resrefCStringPtr)}, nil, 0x0)
+	IEex_Free(mem)
+end
 
 function IEex_GetGameData()
 	local g_pBaldurChitin = IEex_ReadDword(0x8CF6DC)
@@ -7378,7 +7401,6 @@ function IEex_DefineAssemblyFunctions()
 		!push_dword *_g_lua
 		!call >_lua_pcallk
 		!add_esp_byte 18
-		!call >IEex_CheckCallError
 
 		; Clear error string off of stack ;
 		!push_byte FE
@@ -7585,7 +7607,6 @@ function IEex_WritePatches()
 		!push_dword *_g_lua
 		!call >_lua_pcallk
 		!add_esp_byte 18
-		!call >IEex_CheckCallError
 
 		!test_eax_eax
 		!jnz_dword >error
@@ -7826,6 +7847,256 @@ function IEex_WritePatches()
 
 	]]})
 	IEex_WriteAssembly(writableCheckAddress, {"!jmp_dword", {writableCheckHook, 4, 4}})
+
+	-----------------------------------------------------
+	-- SPECIAL_1 and TEAM scripts should be persistent --
+	-----------------------------------------------------
+
+	-- 0x71DB62 - SPECIAL_1
+	IEex_HookJumpNoReturn(0x71DB62, {[[
+
+		!mov_ecx_[eax]
+		!mov_[esp+byte]_ecx 10
+		!mov_ecx_[eax+byte] 04
+		!mov_[esp+byte]_ecx 14
+
+		!add_esi_dword #750
+		!push_esi
+		!lea_ecx_[esp+byte] 14
+
+		!jmp_dword :71DCCC
+
+	]]})
+
+	-- 0x71DBB3 - TEAM
+	IEex_HookJumpNoReturn(0x71DBB3, {[[
+
+		!mov_eax_[esp+byte] 5C
+
+		!mov_ecx_[eax]
+		!mov_[esp+byte]_ecx 10
+		!mov_ecx_[eax+byte] 04
+		!mov_[esp+byte]_ecx 14
+
+		!add_esi_dword #748
+		!push_esi
+		!lea_ecx_[esp+byte] 14
+
+		!jmp_dword :71DCCC
+
+	]]})
+
+	--------------------------------------------------------
+	-- NPC Core: Engine should tolerate non-standard NPCs --
+	--------------------------------------------------------
+
+	---------------------------------------------------------
+	-- CRuleTables_GetRaceName():                          --
+	--   Pull out-of-bounds race strings from B3RACEST.2DA --
+	---------------------------------------------------------
+
+	IEex_Extern_CRuleTables_GetRaceName = function(race)
+		local result = IEex_2DAGetAtStrings("B3RACE", "STRREF", tostring(race))
+		return result ~= "*" and tonumber(result) or ex_tra_5000
+	end
+
+	IEex_HookJump(0x544DFA, 0, {[[
+
+		!ja_dword >extended_race
+		!jmp_dword >jmp_fail
+
+		@extended_race
+		!push_registers_iwd2
+
+		; race ;
+		!push_ecx
+
+		!push_dword ]], {IEex_WriteStringAuto("IEex_Extern_CRuleTables_GetRaceName"), 4}, [[
+		!push_dword *_g_lua
+		!call >_lua_getglobal
+		!add_esp_byte 08
+
+		; race ;
+		!fild_[esp]
+		!sub_esp_byte 04
+		!fstp_qword:[esp]
+		!push_dword *_g_lua
+		!call >_lua_pushnumber
+		!add_esp_byte 0C
+
+		!push_byte 00
+		!push_byte 00
+		!push_byte 00
+		!push_byte 01
+		!push_byte 01
+		!push_dword *_g_lua
+		!call >_lua_pcallk
+		!add_esp_byte 18
+		!call >IEex_CheckCallError
+		!test_eax_eax
+		!jz_dword >ok
+		!mov_eax ]], {ex_tra_5000, 4}, [[
+		!jmp_dword >error
+
+		@ok
+		!push_byte 00
+		!push_byte FF
+		!push_dword *_g_lua
+		!call >_lua_tonumberx
+		!add_esp_byte 0C
+		!call >__ftol2_sse
+		!push_eax
+		!push_byte FE
+		!push_dword *_g_lua
+		!call >_lua_settop
+		!add_esp_byte 08
+		!pop_eax
+
+		@error
+		!pop_registers_iwd2
+		!jmp_dword :545009
+
+	]]})
+
+	------------------------------------------------------------
+	-- InfScreenCharacter_InitLevelupClassSelectionButtons(): --
+	--   Allow out-of-bounds races to take levels             --
+	------------------------------------------------------------
+
+	IEex_WriteAssembly(0x5E8CE1, {"!ja_dword :5E8D11"})
+
+	-----------------------------------------------------
+	-- Action JoinParty(): Should correctly set up NPC --
+	-----------------------------------------------------
+
+	IEex_HookBeforeCall(0x72958F, {[[
+
+		!push_all_registers_iwd2
+
+		!sub_esp_byte 04
+		!mov_eax_esp
+		!push_byte FF
+		!push_eax
+		!push_byte 00
+		!mov_edi_[esi+byte] 5C
+		!push_edi
+		!mov_ebx_[dword] #8CF6DC ; g_pBaldurhitin ;
+		!mov_ebx_[ebx+dword] #1C54 ; m_pObjectGame ;
+		!add_ebx_dword #372C ; CGameObjectArray ;
+		!mov_ecx_ebx
+		!call :599C70 ; CGameObjectArray_GetDeny ;
+
+		!pop_ecx
+		!xor_edx_edx
+
+		@button_loop
+		!push_byte 00
+		!push_edx
+		!call :594120 ; CGameSprite_SetButtonType ;
+		!inc_edx
+		!cmp_edx_byte 09
+		!jne_dword >button_loop
+
+		!call :724610 ; CGameSprite_AssignDefaultButtons ;
+
+		!push_byte FF
+		!push_byte 00
+		!push_edi
+		!mov_ecx_ebx
+		!call :59A010 ; CGameObjectArray_UndoDeny ;
+
+		!mov_byte:[esi+dword]_byte #4C52 01 ; m_bGlobal ;
+
+		!pop_all_registers_iwd2
+
+	]]})
+
+	------------------------------------------------------
+	-- Action LeaveParty(): Should correctly set up NPC --
+	------------------------------------------------------
+
+	IEex_HookBeforeCall(0x7295F7, {[[
+		!mov_byte:[esi+dword]_byte #4C52 00 ; m_bGlobal ;
+	]]})
+
+	---------------------------------------------------------
+	-- CGameSprite_GetRacialFavoredClass():                --
+	--   Pull out-of-bounds racial classes from B3RACE.2DA --
+	---------------------------------------------------------
+
+	IEex_Extern_CGameSprite_GetRacialFavoredClass = function(race)
+		local result = IEex_2DAGetAtStrings("B3RACE", "FAVORED_CLASS", tostring(race))
+		return result ~= "*" and tonumber(result) or 1
+	end
+
+	IEex_HookJump(0x7645A9, 0, {[[
+
+		!ja_dword >extended_race
+		!jmp_dword >jmp_fail
+
+		@extended_race
+		!push_eax
+		!push_ebx
+		!push_ecx
+		!push_edx
+		!push_ebp
+		!push_esi
+
+		; race ;
+		!inc_eax
+		!push_eax
+
+		!push_dword ]], {IEex_WriteStringAuto("IEex_Extern_CGameSprite_GetRacialFavoredClass"), 4}, [[
+		!push_dword *_g_lua
+		!call >_lua_getglobal
+		!add_esp_byte 08
+
+		; race ;
+		!fild_[esp]
+		!sub_esp_byte 04
+		!fstp_qword:[esp]
+		!push_dword *_g_lua
+		!call >_lua_pushnumber
+		!add_esp_byte 0C
+
+		!push_byte 00
+		!push_byte 00
+		!push_byte 00
+		!push_byte 01
+		!push_byte 01
+		!push_dword *_g_lua
+		!call >_lua_pcallk
+		!add_esp_byte 18
+		!call >IEex_CheckCallError
+		!test_eax_eax
+		!jz_dword >ok
+		!mov_edi #1
+		!jmp_dword >error
+
+		@ok
+		!push_byte 00
+		!push_byte FF
+		!push_dword *_g_lua
+		!call >_lua_tonumberx
+		!add_esp_byte 0C
+		!call >__ftol2_sse
+		!push_eax
+		!push_byte FE
+		!push_dword *_g_lua
+		!call >_lua_settop
+		!add_esp_byte 08
+		!pop_edi
+
+		@error
+		!pop_esi
+		!pop_ebp
+		!pop_edx
+		!pop_ecx
+		!pop_ebx
+		!pop_eax
+		!jmp_dword :7646B7
+
+	]]})
 
 	IEex_EnableCodeProtection()
 

@@ -7,6 +7,11 @@ COPY ~%mod_folder%/initial~ ~override~
 COPY ~%mod_folder%/ieex_override~ ~override~
 COPY ~%mod_folder%/ieex_main_folder~ ~./~
 
+COPY_EXISTING ~IEex_TRA.lua~ ~override~
+	ex_tra_5000 = RESOLVE_STR_REF(@5000)
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_tra_5000 *=.*~ ~ex_tra_5000 = %ex_tra_5000%~
+IF_EXISTS
+
  //Turning the "test" creatures into regular creatures because their irregular CRE format can crash WeiDU when patching all creatures.
 COPY_EXISTING ~00gob.cre~ ~override/test_01.cre~ ~00gob.cre~ ~override/test_02.cre~ ~00gob.cre~ ~override/test_03.cre~ ~00gob.cre~ ~override/testocle.cre~
 
@@ -181,5 +186,3 @@ COPY_EXISTING ~LISTDOMN.2da~ ~override~
 	END
 
 VERBOSE
-
-INCLUDE ~%mod_folder%/components/change_ai_script_fix.tpa~

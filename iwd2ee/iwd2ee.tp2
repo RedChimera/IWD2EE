@@ -308,8 +308,6 @@ BEGIN @41 DESIGNATED 39
 
 BEGIN @42 DESIGNATED 40 DEPRECATED ~~
 
-      INCLUDE ~%mod_folder%/components/change_ai_script_fix.tpa~      //~ChangeAIScript Fix~
-
 //Race Revisions
 
 BEGIN @43 DESIGNATED 41

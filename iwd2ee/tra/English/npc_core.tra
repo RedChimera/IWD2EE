@@ -201,13 +201,14 @@ Stygian Ice Storm is the signature spell of gelugons, though a lesser devil coul
 //TRA num range  @5000 to @5299
 
 
-@5000     = ~Goblin~
-@5001     = ~Golem~
-@5002     = ~Lizard Man~
-@5003     = ~Orc~
-@5004     = ~Salamander~
-@5005     = ~Fiend~
-@5006     = ~Troll~
-@5007     = ~Genie~
-@5008     = ~Hook Horror~
-@5009     = ~Mind Flayer~
+@5000     = ~ERROR~
+@5001     = ~Goblin~
+@5002     = ~Golem~
+@5003     = ~Lizard Man~
+@5004     = ~Orc~
+@5005     = ~Salamander~
+@5006     = ~Fiend~
+@5007     = ~Troll~
+@5008     = ~Genie~
+@5009     = ~Hook Horror~
+@5010     = ~Mind Flayer~
