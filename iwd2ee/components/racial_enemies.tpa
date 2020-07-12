@@ -203,9 +203,14 @@ COPY_EXISTING_REGEXP ~.+\.cre~ ~override~
 BUT_ONLY_IF_IT_CHANGES
 
 
-// turn trolls into trolls
-// no change needed
+// turn snow trolls into trolls
 
+COPY_EXISTING_REGEXP ~.+\.cre~ ~override~
+    READ_BYTE "0x386" "race"
+    PATCH_IF ~%race%~ EQUALS ~171~ BEGIN
+        WRITE_BYTE 0x386 165
+    END
+BUT_ONLY_IF_IT_CHANGES
 
 
 // turn yuan-ti into yuan-ti

@@ -376,3 +376,9 @@ ApplySpellRES("USPAIRC",Myself)~ EXIT
   IF ~~ THEN REPLY ~Fall in line, Pairi.  We've got a long march ahead of us.~ DO ~SetGlobal("US_Pairi_Joined", "GLOBAL", 1)
 ApplySpellRES("USPAIRC",Myself)~ EXIT
 END
+
+IF ~~ THEN BEGIN PairiJoin3
+  SAY ~You would take me with you?  I don't know what to say -- this is so exciting!~
+  IF ~~ THEN REPLY ~Just say yes.~ GOTO PairiJoin2
+  IF ~~ THEN REPLY ~It could be dangerous.  You'd learn a lot, but you'd be taking a lot of risks, too.  Are you sure you're up to it?~ GOTO PairiJoin2
+END

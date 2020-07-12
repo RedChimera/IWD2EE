@@ -10,7 +10,239 @@ COPY ~%mod_folder%/ieex_main_folder~ ~./~
 COPY_EXISTING ~IEex_TRA.lua~ ~override~
 	ex_tra_5000 = RESOLVE_STR_REF(@5000)
 	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_tra_5000 *=.*~ ~ex_tra_5000 = %ex_tra_5000%~
-IF_EXISTS
+	SPRINT ex_str_level @55000
+	REPLACE_TEXTUALLY ~ex_str_level *=.*~ ~ex_str_level = "%ex_str_level%"~
+	SPRINT ex_str_barbarian @55001
+	REPLACE_TEXTUALLY ~ex_str_barbarian *=.*~ ~ex_str_barbarian = "%ex_str_barbarian%"~ 
+	SPRINT ex_str_bard @55002
+	REPLACE_TEXTUALLY ~ex_str_bard *=.*~ ~ex_str_bard = "%ex_str_bard%"~
+	SPRINT ex_str_cleric @55003
+	REPLACE_TEXTUALLY ~ex_str_cleric *=.*~ ~ex_str_cleric = "%ex_str_cleric%"~ 
+	SPRINT ex_str_druid @55004
+	REPLACE_TEXTUALLY ~ex_str_druid *=.*~ ~ex_str_druid = "%ex_str_druid%"~ 
+	SPRINT ex_str_fighter @55005
+	REPLACE_TEXTUALLY ~ex_str_fighter *=.*~ ~ex_str_fighter = "%ex_str_fighter%"~ 
+	SPRINT ex_str_monk @55006
+	REPLACE_TEXTUALLY ~ex_str_monk *=.*~ ~ex_str_monk = "%ex_str_monk%"~ 
+	SPRINT ex_str_paladin @55007
+	REPLACE_TEXTUALLY ~ex_str_paladin *=.*~ ~ex_str_paladin = "%ex_str_paladin%"~ 
+	SPRINT ex_str_ranger @55008
+	REPLACE_TEXTUALLY ~ex_str_ranger *=.*~ ~ex_str_ranger = "%ex_str_ranger%"~ 
+	SPRINT ex_str_rogue @55009
+	REPLACE_TEXTUALLY ~ex_str_rogue *=.*~ ~ex_str_rogue = "%ex_str_rogue%"~ 
+	SPRINT ex_str_sorcerer @55010
+	REPLACE_TEXTUALLY ~ex_str_sorcerer *=.*~ ~ex_str_sorcerer = "%ex_str_sorcerer%"~ 
+	SPRINT ex_str_wizard @55011
+	REPLACE_TEXTUALLY ~ex_str_wizard *=.*~ ~ex_str_wizard = "%ex_str_wizard%"~ 
+	SPRINT ex_str_hitpoints @55012
+	REPLACE_TEXTUALLY ~ex_str_hitpoints *=.*~ ~ex_str_hitpoints = "%ex_str_hitpoints%"~ 
+	SPRINT ex_str_armorclass @55013
+	REPLACE_TEXTUALLY ~ex_str_armorclass *=.*~ ~ex_str_armorclass = "%ex_str_armorclass%"~ 
+	SPRINT ex_str_acslashing @55014
+	REPLACE_TEXTUALLY ~ex_str_acslashing *=.*~ ~ex_str_acslashing = "%ex_str_acslashing%"~ 
+	SPRINT ex_str_acpiercing @55015
+	REPLACE_TEXTUALLY ~ex_str_acpiercing *=.*~ ~ex_str_acpiercing = "%ex_str_acpiercing%"~ 
+	SPRINT ex_str_acbludgeoning @55016
+	REPLACE_TEXTUALLY ~ex_str_acbludgeoning *=.*~ ~ex_str_acbludgeoning = "%ex_str_acbludgeoning%"~ 
+	SPRINT ex_str_acmissile @55017
+	REPLACE_TEXTUALLY ~ex_str_acmissile *=.*~ ~ex_str_acmissile = "%ex_str_acmissile%"~ 
+	SPRINT ex_str_attackbonus @55018
+	REPLACE_TEXTUALLY ~ex_str_attackbonus *=.*~ ~ex_str_attackbonus = "%ex_str_attackbonus%"~ 
+	SPRINT ex_str_attacksperround @55019
+	REPLACE_TEXTUALLY ~ex_str_attacksperround *=.*~ ~ex_str_attacksperround = "%ex_str_attacksperround%"~ 
+	SPRINT ex_str_abilityscores @55020
+	REPLACE_TEXTUALLY ~ex_str_abilityscores *=.*~ ~ex_str_abilityscores = "%ex_str_abilityscores%"~ 
+	SPRINT ex_str_strength @55021
+	REPLACE_TEXTUALLY ~ex_str_strength *=.*~ ~ex_str_strength = "%ex_str_strength%"~ 
+	SPRINT ex_str_dexterity @55022
+	REPLACE_TEXTUALLY ~ex_str_dexterity *=.*~ ~ex_str_dexterity = "%ex_str_dexterity%"~ 
+	SPRINT ex_str_constitution @55023
+	REPLACE_TEXTUALLY ~ex_str_constitution *=.*~ ~ex_str_constitution = "%ex_str_constitution%"~ 
+	SPRINT ex_str_intelligence @55024
+	REPLACE_TEXTUALLY ~ex_str_intelligence *=.*~ ~ex_str_intelligence = "%ex_str_intelligence%"~ 
+	SPRINT ex_str_wisdom @55025
+	REPLACE_TEXTUALLY ~ex_str_wisdom *=.*~ ~ex_str_wisdom = "%ex_str_wisdom%"~ 
+	SPRINT ex_str_charisma @55026
+	REPLACE_TEXTUALLY ~ex_str_charisma *=.*~ ~ex_str_charisma = "%ex_str_charisma%"~ 
+	SPRINT ex_str_slashingresistance @55027
+	REPLACE_TEXTUALLY ~ex_str_slashingresistance *=.*~ ~ex_str_slashingresistance = "%ex_str_slashingresistance%"~ 
+	SPRINT ex_str_piercingresistance @55028
+	REPLACE_TEXTUALLY ~ex_str_piercingresistance *=.*~ ~ex_str_piercingresistance = "%ex_str_piercingresistance%"~ 
+	SPRINT ex_str_bludgeoningresistance @55029
+	REPLACE_TEXTUALLY ~ex_str_bludgeoningresistance *=.*~ ~ex_str_bludgeoningresistance = "%ex_str_bludgeoningresistance%"~ 
+	SPRINT ex_str_missileresistance @55030
+	REPLACE_TEXTUALLY ~ex_str_missileresistance *=.*~ ~ex_str_missileresistance = "%ex_str_missileresistance%"~ 
+	SPRINT ex_str_fireresistance @55031
+	REPLACE_TEXTUALLY ~ex_str_fireresistance *=.*~ ~ex_str_fireresistance = "%ex_str_fireresistance%"~ 
+	SPRINT ex_str_coldresistance @55032
+	REPLACE_TEXTUALLY ~ex_str_coldresistance *=.*~ ~ex_str_coldresistance = "%ex_str_coldresistance%"~ 
+	SPRINT ex_str_electricityresistance @55033
+	REPLACE_TEXTUALLY ~ex_str_electricityresistance *=.*~ ~ex_str_electricityresistance = "%ex_str_electricityresistance%"~ 
+	SPRINT ex_str_acidresistance @55034
+	REPLACE_TEXTUALLY ~ex_str_acidresistance *=.*~ ~ex_str_acidresistance = "%ex_str_acidresistance%"~ 
+	SPRINT ex_str_poisonresistance @55035
+	REPLACE_TEXTUALLY ~ex_str_poisonresistance *=.*~ ~ex_str_poisonresistance = "%ex_str_poisonresistance%"~ 
+	SPRINT ex_str_magicdamageresistance @55036
+	REPLACE_TEXTUALLY ~ex_str_magicdamageresistance *=.*~ ~ex_str_magicdamageresistance = "%ex_str_magicdamageresistance%"~ 
+	SPRINT ex_str_spellresistance @55037
+	REPLACE_TEXTUALLY ~ex_str_spellresistance *=.*~ ~ex_str_spellresistance = "%ex_str_spellresistance%"~ 
+	SPRINT ex_str_damagereduction @55038
+	REPLACE_TEXTUALLY ~ex_str_damagereduction *=.*~ ~ex_str_damagereduction = "%ex_str_damagereduction%"~ 
+	SPRINT ex_str_savingthrows @55039
+	REPLACE_TEXTUALLY ~ex_str_savingthrows *=.*~ ~ex_str_savingthrows = "%ex_str_savingthrows%"~ 
+	SPRINT ex_str_fortitude @55040
+	REPLACE_TEXTUALLY ~ex_str_fortitude *=.*~ ~ex_str_fortitude = "%ex_str_fortitude%"~ 
+	SPRINT ex_str_reflex @55041
+	REPLACE_TEXTUALLY ~ex_str_reflex *=.*~ ~ex_str_reflex = "%ex_str_reflex%"~ 
+	SPRINT ex_str_will @55042
+	REPLACE_TEXTUALLY ~ex_str_will *=.*~ ~ex_str_will = "%ex_str_will%"~ 
+	SPRINT ex_str_concentrationskill @55043
+	REPLACE_TEXTUALLY ~ex_str_concentrationskill *=.*~ ~ex_str_concentrationskill = "%ex_str_concentrationskill%"~ 
+	SPRINT ex_str_mirrorimages @55044
+	REPLACE_TEXTUALLY ~ex_str_mirrorimages *=.*~ ~ex_str_mirrorimages = "%ex_str_mirrorimages%"~ 
+	SPRINT ex_str_stoneskins @55045
+	REPLACE_TEXTUALLY ~ex_str_stoneskins *=.*~ ~ex_str_stoneskins = "%ex_str_stoneskins%"~ 
+	SPRINT ex_str_ironskins @55115
+	REPLACE_TEXTUALLY ~ex_str_ironskins *=.*~ ~ex_str_ironskins = "%ex_str_ironskins%"~ 
+	SPRINT ex_str_castingtime @55046
+	REPLACE_TEXTUALLY ~ex_str_castingtime *=.*~ ~ex_str_castingtime = "%ex_str_castingtime%"~ 
+	SPRINT ex_str_sneakattackdamage @55047
+	REPLACE_TEXTUALLY ~ex_str_sneakattackdamage *=.*~ ~ex_str_sneakattackdamage = "%ex_str_sneakattackdamage%"~ 
+	SPRINT ex_str_55048 @55048
+	REPLACE_TEXTUALLY ~ex_str_55048 *=.*~ ~ex_str_55048 = "%ex_str_55048%"~ 
+	SPRINT ex_str_55049 @55049
+	REPLACE_TEXTUALLY ~ex_str_55049 *=.*~ ~ex_str_55049 = "%ex_str_55049%"~ 
+	SPRINT ex_str_55050 @55050
+	REPLACE_TEXTUALLY ~ex_str_55050 *=.*~ ~ex_str_55050 = "%ex_str_55050%"~ 
+	SPRINT ex_str_55051 @55051
+	REPLACE_TEXTUALLY ~ex_str_55051 *=.*~ ~ex_str_55051 = "%ex_str_55051%"~ 
+	SPRINT ex_str_55052 @55052
+	REPLACE_TEXTUALLY ~ex_str_55052 *=.*~ ~ex_str_55052 = "%ex_str_55052%"~ 
+	SPRINT ex_str_55053 @55053
+	REPLACE_TEXTUALLY ~ex_str_55053 *=.*~ ~ex_str_55053 = "%ex_str_55053%"~ 
+	SPRINT ex_str_55054 @55054
+	REPLACE_TEXTUALLY ~ex_str_55054 *=.*~ ~ex_str_55054 = "%ex_str_55054%"~ 
+	SPRINT ex_str_55055 @55055
+	REPLACE_TEXTUALLY ~ex_str_55055 *=.*~ ~ex_str_55055 = "%ex_str_55055%"~ 
+	SPRINT ex_str_55056 @55056
+	REPLACE_TEXTUALLY ~ex_str_55056 *=.*~ ~ex_str_55056 = "%ex_str_55056%"~
+	SPRINT ex_str_55057 @55057
+	REPLACE_TEXTUALLY ~ex_str_55057 *=.*~ ~ex_str_55057 = "%ex_str_55057%"~ 
+	SPRINT ex_str_55058 @55058
+	REPLACE_TEXTUALLY ~ex_str_55058 *=.*~ ~ex_str_55058 = "%ex_str_55058%"~ 
+	SPRINT ex_str_55059 @55059
+	REPLACE_TEXTUALLY ~ex_str_55059 *=.*~ ~ex_str_55059 = "%ex_str_55059%"~ 
+	SPRINT ex_str_55060 @55060
+	REPLACE_TEXTUALLY ~ex_str_55060 *=.*~ ~ex_str_55060 = "%ex_str_55060%"~
+	SPRINT ex_str_55061 @55061
+	REPLACE_TEXTUALLY ~ex_str_55061 *=.*~ ~ex_str_55061 = "%ex_str_55061%"~ 
+	SPRINT ex_str_55062 @55062
+	REPLACE_TEXTUALLY ~ex_str_55062 *=.*~ ~ex_str_55062 = "%ex_str_55062%"~ 
+	SPRINT ex_str_immunities @55063
+	REPLACE_TEXTUALLY ~ex_str_immunities *=.*~ ~ex_str_immunities = "%ex_str_immunities%"~ 
+	SPRINT ex_str_berserk @55064
+	REPLACE_TEXTUALLY ~ex_str_berserk *=.*~ ~ex_str_berserk = "%ex_str_berserk%"~ 
+	SPRINT ex_str_charm @55065
+	REPLACE_TEXTUALLY ~ex_str_charm *=.*~ ~ex_str_charm = "%ex_str_charm%"~ 
+	SPRINT ex_str_damage @55066
+	REPLACE_TEXTUALLY ~ex_str_damage *=.*~ ~ex_str_damage = "%ex_str_damage%"~ 
+	SPRINT ex_str_healing @55067
+	REPLACE_TEXTUALLY ~ex_str_healing *=.*~ ~ex_str_healing = "%ex_str_healing%"~ 
+	SPRINT ex_str_invisibility @55068
+	REPLACE_TEXTUALLY ~ex_str_invisibility *=.*~ ~ex_str_invisibility = "%ex_str_invisibility%"~ 
+	SPRINT ex_str_moralefailure @55069
+	REPLACE_TEXTUALLY ~ex_str_moralefailure *=.*~ ~ex_str_moralefailure = "%ex_str_moralefailure%"~ 
+	SPRINT ex_str_fear @55070
+	REPLACE_TEXTUALLY ~ex_str_fear *=.*~ ~ex_str_fear = "%ex_str_fear%"~ 
+	SPRINT ex_str_poison @55071
+	REPLACE_TEXTUALLY ~ex_str_poison *=.*~ ~ex_str_poison = "%ex_str_poison%"~ 
+	SPRINT ex_str_silence @55072
+	REPLACE_TEXTUALLY ~ex_str_silence *=.*~ ~ex_str_silence = "%ex_str_silence%"~ 
+	SPRINT ex_str_sleep @55073
+	REPLACE_TEXTUALLY ~ex_str_sleep *=.*~ ~ex_str_sleep = "%ex_str_sleep%"~ 
+	SPRINT ex_str_slow @55074
+	REPLACE_TEXTUALLY ~ex_str_slow *=.*~ ~ex_str_slow = "%ex_str_slow%"~ 
+	SPRINT ex_str_stun @55075
+	REPLACE_TEXTUALLY ~ex_str_stun *=.*~ ~ex_str_stun = "%ex_str_stun%"~ 
+	SPRINT ex_str_dispelling @55076
+	REPLACE_TEXTUALLY ~ex_str_dispelling *=.*~ ~ex_str_dispelling = "%ex_str_dispelling%"~ 
+	SPRINT ex_str_spellfailure @55077
+	REPLACE_TEXTUALLY ~ex_str_spellfailure *=.*~ ~ex_str_spellfailure = "%ex_str_spellfailure%"~ 
+	SPRINT ex_str_blindness @55078
+	REPLACE_TEXTUALLY ~ex_str_blindness *=.*~ ~ex_str_blindness = "%ex_str_blindness%"~ 
+	SPRINT ex_str_feeblemindedness @55079
+	REPLACE_TEXTUALLY ~ex_str_feeblemindedness *=.*~ ~ex_str_feeblemindedness = "%ex_str_feeblemindedness%"~ 
+	SPRINT ex_str_disease @55080
+	REPLACE_TEXTUALLY ~ex_str_disease *=.*~ ~ex_str_disease = "%ex_str_disease%"~ 
+	SPRINT ex_str_deafness @55081
+	REPLACE_TEXTUALLY ~ex_str_deafness *=.*~ ~ex_str_deafness = "%ex_str_deafness%"~ 
+	SPRINT ex_str_fatigue @55082
+	REPLACE_TEXTUALLY ~ex_str_fatigue *=.*~ ~ex_str_fatigue = "%ex_str_fatigue%"~ 
+	SPRINT ex_str_intoxication @55083
+	REPLACE_TEXTUALLY ~ex_str_intoxication *=.*~ ~ex_str_intoxication = "%ex_str_intoxication%"~ 
+	SPRINT ex_str_paralysis @55084
+	REPLACE_TEXTUALLY ~ex_str_paralysis *=.*~ ~ex_str_paralysis = "%ex_str_paralysis%"~ 
+	SPRINT ex_str_teleportation @55085
+	REPLACE_TEXTUALLY ~ex_str_teleportation *=.*~ ~ex_str_teleportation = "%ex_str_teleportation%"~ 
+	SPRINT ex_str_confusion @55086
+	REPLACE_TEXTUALLY ~ex_str_confusion *=.*~ ~ex_str_confusion = "%ex_str_confusion%"~ 
+	SPRINT ex_str_petrification @55087
+	REPLACE_TEXTUALLY ~ex_str_petrification *=.*~ ~ex_str_petrification = "%ex_str_petrification%"~ 
+	SPRINT ex_str_polymorphing @55088
+	REPLACE_TEXTUALLY ~ex_str_polymorphing *=.*~ ~ex_str_polymorphing = "%ex_str_polymorphing%"~ 
+	SPRINT ex_str_entangle @55089
+	REPLACE_TEXTUALLY ~ex_str_entangle *=.*~ ~ex_str_entangle = "%ex_str_entangle%"~ 
+	SPRINT ex_str_web @55090
+	REPLACE_TEXTUALLY ~ex_str_web *=.*~ ~ex_str_web = "%ex_str_web%"~ 
+	SPRINT ex_str_grease @55091
+	REPLACE_TEXTUALLY ~ex_str_grease *=.*~ ~ex_str_grease = "%ex_str_grease%"~ 
+	SPRINT ex_str_hold @55092
+	REPLACE_TEXTUALLY ~ex_str_hold *=.*~ ~ex_str_hold = "%ex_str_hold%"~ 
+	SPRINT ex_str_movementpenalties @55093
+	REPLACE_TEXTUALLY ~ex_str_movementpenalties *=.*~ ~ex_str_movementpenalties = "%ex_str_movementpenalties%"~ 
+	SPRINT ex_str_vampiriceffects @55094
+	REPLACE_TEXTUALLY ~ex_str_vampiriceffects *=.*~ ~ex_str_vampiriceffects = "%ex_str_vampiriceffects%"~ 
+	SPRINT ex_str_beltyn @55095
+	REPLACE_TEXTUALLY ~ex_str_beltyn *=.*~ ~ex_str_beltyn = "%ex_str_beltyn%"~ 
+	SPRINT ex_str_salamanderauras @55096
+	REPLACE_TEXTUALLY ~ex_str_salamanderauras *=.*~ ~ex_str_salamanderauras = "%ex_str_salamanderauras%"~ 
+	SPRINT ex_str_umberhulkgaze @55097
+	REPLACE_TEXTUALLY ~ex_str_umberhulkgaze *=.*~ ~ex_str_umberhulkgaze = "%ex_str_umberhulkgaze%"~ 
+	SPRINT ex_str_animalrage @55098
+	REPLACE_TEXTUALLY ~ex_str_animalrage *=.*~ ~ex_str_animalrage = "%ex_str_animalrage%"~ 
+	SPRINT ex_str_vitriolicsphere @55099
+	REPLACE_TEXTUALLY ~ex_str_vitriolicsphere *=.*~ ~ex_str_vitriolicsphere = "%ex_str_vitriolicsphere%"~ 
+	SPRINT ex_str_harpywail @55100
+	REPLACE_TEXTUALLY ~ex_str_harpywail *=.*~ ~ex_str_harpywail = "%ex_str_harpywail%"~ 
+	SPRINT ex_str_jackalweregaze @55101
+	REPLACE_TEXTUALLY ~ex_str_jackalweregaze *=.*~ ~ex_str_jackalweregaze = "%ex_str_jackalweregaze%"~ 
+	SPRINT ex_str_hopelessness @55102
+	REPLACE_TEXTUALLY ~ex_str_hopelessness *=.*~ ~ex_str_hopelessness = "%ex_str_hopelessness%"~ 
+	SPRINT ex_str_nausea @55103
+	REPLACE_TEXTUALLY ~ex_str_nausea *=.*~ ~ex_str_nausea = "%ex_str_nausea%"~ 
+	SPRINT ex_str_enfeeblement @55104
+	REPLACE_TEXTUALLY ~ex_str_enfeeblement *=.*~ ~ex_str_enfeeblement = "%ex_str_enfeeblement%"~ 
+	SPRINT ex_str_domination @55105
+	REPLACE_TEXTUALLY ~ex_str_domination *=.*~ ~ex_str_domination = "%ex_str_domination%"~
+	SPRINT ex_str_otiluke @55106
+	REPLACE_TEXTUALLY ~ex_str_otiluke *=.*~ ~ex_str_otiluke = "%ex_str_otiluke%"~ 
+	SPRINT ex_str_wounding @55107
+	REPLACE_TEXTUALLY ~ex_str_wounding *=.*~ ~ex_str_wounding = "%ex_str_wounding%"~ 
+	SPRINT ex_str_knockdown @55108
+	REPLACE_TEXTUALLY ~ex_str_knockdown *=.*~ ~ex_str_knockdown = "%ex_str_knockdown%"~ 
+	SPRINT ex_str_instantdeath @55109
+	REPLACE_TEXTUALLY ~ex_str_instantdeath *=.*~ ~ex_str_instantdeath = "%ex_str_instantdeath%"~ 
+	SPRINT ex_str_holdundead @55110
+	REPLACE_TEXTUALLY ~ex_str_holdundead *=.*~ ~ex_str_holdundead = "%ex_str_holdundead%"~ 
+	SPRINT ex_str_controlundead @55111
+	REPLACE_TEXTUALLY ~ex_str_controlundead *=.*~ ~ex_str_controlundead = "%ex_str_controlundead%"~ 
+	SPRINT ex_str_banishment @55112
+	REPLACE_TEXTUALLY ~ex_str_banishment *=.*~ ~ex_str_banishment = "%ex_str_banishment%"~ 
+	SPRINT ex_str_energydrain @55113
+	REPLACE_TEXTUALLY ~ex_str_energydrain *=.*~ ~ex_str_energydrain = "%ex_str_energydrain%"~ 
+	SPRINT ex_str_55114 @55114
+	REPLACE_TEXTUALLY ~ex_str_55114 *=.*~ ~ex_str_55114 = "%ex_str_55114%"~
+	IF_EXISTS
 
  //Turning the "test" creatures into regular creatures because their irregular CRE format can crash WeiDU when patching all creatures.
 COPY_EXISTING ~00gob.cre~ ~override/test_01.cre~ ~00gob.cre~ ~override/test_02.cre~ ~00gob.cre~ ~override/test_03.cre~ ~00gob.cre~ ~override/testocle.cre~

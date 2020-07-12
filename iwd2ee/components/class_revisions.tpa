@@ -186,6 +186,8 @@ COPY_EXISTING ~IEex_TRA.lua~ ~override~
 	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_tra_916 *=.*~ ~ex_tra_916 = %ex_tra_916%~
 	ex_tra_917 = RESOLVE_STR_REF(@917)
 	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_tra_917 *=.*~ ~ex_tra_917 = %ex_tra_917%~
+
+/*
 	ex_whirla1 = RESOLVE_STR_REF(~<MEWHRA1>~)
 	ex_whirla2 = RESOLVE_STR_REF(~<MEWHRA2>~)
 	ex_whirla3 = RESOLVE_STR_REF(~<MEWHRA3>~)
@@ -206,7 +208,48 @@ COPY_EXISTING ~IEex_TRA.lua~ ~override~
 	ex_whirla18 = RESOLVE_STR_REF(~<MEWHRA18>~)
 	ex_whirla19 = RESOLVE_STR_REF(~<MEWHRA19>~)
 	ex_whirla20 = RESOLVE_STR_REF(~<MEWHRA20>~)
-	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_whirla *=.*~ ~ex_whirla = {%ex_whirla1%,%ex_whirla2%,%ex_whirla3%,%ex_whirla4%,%ex_whirla5%,%ex_whirla6%,%ex_whirla7%,%ex_whirla8%,%ex_whirla9%,%ex_whirla10%,%ex_whirla11%,%ex_whirla12%,%ex_whirla13%,%ex_whirla14%,%ex_whirla15%,%ex_whirla16%,%ex_whirla17%,%ex_whirla18%,%ex_whirla19%,%ex_whirla20%}~
+*/
+	ex_whirla1 = RESOLVE_STR_REF(@55301)
+	ex_whirla2 = RESOLVE_STR_REF(@55302)
+	ex_whirla3 = RESOLVE_STR_REF(@55303)
+	ex_whirla4 = RESOLVE_STR_REF(@55304)
+	ex_whirla5 = RESOLVE_STR_REF(@55305)
+	ex_whirla6 = RESOLVE_STR_REF(@55306)
+	ex_whirla7 = RESOLVE_STR_REF(@55307)
+	ex_whirla8 = RESOLVE_STR_REF(@55308)
+	ex_whirla9 = RESOLVE_STR_REF(@55309)
+	ex_whirla10 = RESOLVE_STR_REF(@55310)
+	ex_whirla11 = RESOLVE_STR_REF(@55311)
+	ex_whirla12 = RESOLVE_STR_REF(@55312)
+	ex_whirla13 = RESOLVE_STR_REF(@55313)
+	ex_whirla14 = RESOLVE_STR_REF(@55314)
+	ex_whirla15 = RESOLVE_STR_REF(@55315)
+	ex_whirla16 = RESOLVE_STR_REF(@55316)
+	ex_whirla17 = RESOLVE_STR_REF(@55317)
+	ex_whirla18 = RESOLVE_STR_REF(@55318)
+	ex_whirla19 = RESOLVE_STR_REF(@55319)
+	ex_whirla20 = RESOLVE_STR_REF(@55320)
+	ex_whirla21 = RESOLVE_STR_REF(@55321)
+	ex_whirla22 = RESOLVE_STR_REF(@55322)
+	ex_whirla23 = RESOLVE_STR_REF(@55323)
+	ex_whirla24 = RESOLVE_STR_REF(@55324)
+	ex_whirla25 = RESOLVE_STR_REF(@55325)
+	ex_whirla26 = RESOLVE_STR_REF(@55326)
+	ex_whirla27 = RESOLVE_STR_REF(@55327)
+	ex_whirla28 = RESOLVE_STR_REF(@55328)
+	ex_whirla29 = RESOLVE_STR_REF(@55329)
+	ex_whirla30 = RESOLVE_STR_REF(@55330)
+	ex_whirla31 = RESOLVE_STR_REF(@55331)
+	ex_whirla32 = RESOLVE_STR_REF(@55332)
+	ex_whirla33 = RESOLVE_STR_REF(@55333)
+	ex_whirla34 = RESOLVE_STR_REF(@55334)
+	ex_whirla35 = RESOLVE_STR_REF(@55335)
+	ex_whirla36 = RESOLVE_STR_REF(@55336)
+	ex_whirla37 = RESOLVE_STR_REF(@55337)
+	ex_whirla38 = RESOLVE_STR_REF(@55338)
+	ex_whirla39 = RESOLVE_STR_REF(@55339)
+	ex_whirla40 = RESOLVE_STR_REF(@55340)
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_whirla *=.*~ ~ex_whirla = {%ex_whirla1%,%ex_whirla2%,%ex_whirla3%,%ex_whirla4%,%ex_whirla5%,%ex_whirla6%,%ex_whirla7%,%ex_whirla8%,%ex_whirla9%,%ex_whirla10%,%ex_whirla11%,%ex_whirla12%,%ex_whirla13%,%ex_whirla14%,%ex_whirla15%,%ex_whirla16%,%ex_whirla17%,%ex_whirla18%,%ex_whirla19%,%ex_whirla20%,%ex_whirla21%,%ex_whirla22%,%ex_whirla23%,%ex_whirla24%,%ex_whirla25%,%ex_whirla26%,%ex_whirla27%,%ex_whirla28%,%ex_whirla29%,%ex_whirla30%,%ex_whirla31%,%ex_whirla32%,%ex_whirla33%,%ex_whirla34%,%ex_whirla35%,%ex_whirla36%,%ex_whirla37%,%ex_whirla38%,%ex_whirla39%,%ex_whirla40%}~
 
 COPY ~%mod_folder%/tables/MONCRATE.2da~ ~override~
 COPY ~%mod_folder%/tables/XPLEVEL.2da~ ~override~

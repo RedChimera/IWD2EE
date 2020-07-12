@@ -3065,6 +3065,21 @@ function MEQUIPLE(effectData, creatureData)
 	if IEex_CheckForEffectRepeat(effectData, creatureData) then return end
 	if not IEex_IsSprite(IEex_ReadDword(effectData + 0x10C), false) then return end
 	local targetID = IEex_GetActorIDShare(creatureData)
+	local sourceID = IEex_ReadDword(effectData + 0x10C)
+	local duration = IEex_ReadDword(effectData + 0x44)
+	if IEex_ReadLString(effectData + 0x92, 2) == "PR" then
+		duration = math.floor(duration * IEex_GetActorStat(sourceID, 54) / 100)
+	end
+	local quiverData = IEex_ReadDword(creatureData + 0x4B04)
+	local quiverRES = ""
+	local quiverNum = 0
+	local quiverFlags = 0
+	if quiverData > 0 then
+		quiverRES = IEex_ReadLString(quiverData + 0xC, 8)
+		quiverNum = IEex_ReadWord(quiverData + 0x18, 0x0)
+		quiverFlags = IEex_ReadByte(quiverData + 0x20, 0x0)
+	end
+--[[
 	local hasBow = false
 	if IEex_GetActorSpellState(targetID, 241) then
 		IEex_IterateActorEffects(targetID, function(eData)
@@ -3078,6 +3093,116 @@ function MEQUIPLE(effectData, creatureData)
 			end
 		end)
 	end
+--]]
+	if quiverRES ~= "" then
+		if IEex_ReadLString(quiverData + 0xC, 6) ~= "USQUIP" then
+			IEex_ApplyEffectToActor(targetID, {
+["opcode"] = 143,
+["target"] = 2,
+["timing"] = 4,
+["duration"] = duration,
+["parameter1"] = 11,
+["resource"] = quiverRES,
+["parent_resource"] = "MEQUIPLE",
+["source_id"] = targetID
+})
+		end
+	end
+	if not IEex_GetActorSpellState(targetID, 187) then
+		IEex_ApplyEffectToActor(targetID, {
+["opcode"] = 288,
+["target"] = 2,
+["timing"] = 1,
+["parameter1"] = quiverNum,
+["parameter2"] = 187,
+["special"] = quiverFlags,
+["resource"] = quiverRES,
+["parent_resource"] = "MEQUIPLE",
+["source_id"] = targetID
+})
+	else
+		IEex_IterateActorEffects(targetID, function(eData)
+			local theopcode = IEex_ReadDword(eData + 0x10)
+			local theparameter1 = IEex_ReadDword(eData + 0x1C)
+			local theparent_resource = IEex_ReadLString(eData + 0x94, 8)
+			if theopcode == 143 and theparameter1 == 11 and theparent_resource == "MEQUIPLE" then
+				IEex_WriteDword(eData + 0x28, IEex_ReadDword(effectData + 0x24) + duration * 15)
+			end
+		end)
+	end
+end
+
+function MEQUIPL2(effectData, creatureData)
+	if IEex_CheckForEffectRepeat(effectData, creatureData) then return end
+	if not IEex_IsSprite(IEex_ReadDword(effectData + 0x10C), false) then return end
+	local targetID = IEex_GetActorIDShare(creatureData)
+	local sourceID = IEex_ReadDword(effectData + 0x10C)
+	local quiverData = IEex_ReadDword(creatureData + 0x4B04)
+	if quiverData > 0 and IEex_ReadByte(creatureData + 0x34C0, 0x0) == 11 and IEex_ReadByte(creatureData + 0x3D3C, 0x0) == 11 then
+		IEex_WriteByte(creatureData + 0x4BA4, 11)
+		local resWrapper = IEex_DemandRes(IEex_ReadLString(quiverData + 0xC, 8), "ITM")
+		if resWrapper:isValid() then
+			local itemData = resWrapper:getData()
+			IEex_WriteWord(creatureData + 0x34BC, IEex_ReadWord(quiverData + 0x18, 0x0))
+			IEex_WriteLString(creatureData + 0x34A4, IEex_ReadLString(itemData + 0x3A, 8), 8)
+			local thename1 = IEex_ReadDword(itemData + 0x8)
+			local thename2 = IEex_ReadDword(itemData + 0xC)
+			if thename2 > 0 and thename2 < 999999 and (IEex_ReadWord(itemData + 0x42, 0x0) == 0 or bit32.band(IEex_ReadByte(quiverData + 0x20, 0x0), 0x1) > 0) then
+				IEex_WriteDword(creatureData + 0x34AC, thename2)
+			else
+				IEex_WriteDword(creatureData + 0x34AC, thename1)
+			end
+		end
+	end
+end
+
+function MEQUIVNO(effectData, creatureData)
+	if IEex_CheckForEffectRepeat(effectData, creatureData) then return end
+	if not IEex_IsSprite(IEex_ReadDword(effectData + 0x10C), false) then return end
+	local targetID = IEex_GetActorIDShare(creatureData)
+	local quiverData = IEex_ReadDword(creatureData + 0x4B04)
+	local quiverRES = ""
+	if quiverData > 0 then
+		quiverRES = IEex_ReadLString(quiverData + 0xC, 8)
+	end
+	if IEex_GetActorSpellState(targetID, 187) then
+		IEex_IterateActorEffects(targetID, function(eData)
+			local theopcode = IEex_ReadDword(eData + 0x10)
+			local theparameter1 = IEex_ReadDword(eData + 0x1C)
+			local theparameter2 = IEex_ReadDword(eData + 0x20)
+			local theresource = IEex_ReadLString(eData + 0x30, 8)
+			local thespecial = IEex_ReadDword(eData + 0x48)
+			if theopcode == 288 and theparameter2 == 187 and theresource == quiverRES and quiverRES ~= "" then
+				IEex_WriteWord(quiverData + 0x18, theparameter1)
+				IEex_WriteByte(quiverData + 0x20, thespecial)
+			end
+		end)
+	end
+	if IEex_ReadByte(creatureData + 0x34C0, 0x0) == 11 and IEex_ReadByte(creatureData + 0x3D3C, 0x0) == 11 and IEex_ReadByte(creatureData + 0x4BA4, 0x0) == 10 then
+		if IEex_ReadDword(creatureData + 0x4B04) > 0 then
+			IEex_WriteByte(creatureData + 0x4BA4, 11)
+		elseif IEex_ReadDword(creatureData + 0x4B08) > 0 then
+			IEex_WriteByte(creatureData + 0x34C0, 12)
+			IEex_WriteByte(creatureData + 0x3D3C, 12)
+			IEex_WriteByte(creatureData + 0x4BA4, 12)
+		elseif IEex_ReadDword(creatureData + 0x4B0C) > 0 then
+			IEex_WriteByte(creatureData + 0x34C0, 13)
+			IEex_WriteByte(creatureData + 0x3D3C, 13)
+			IEex_WriteByte(creatureData + 0x4BA4, 13)
+		else
+			IEex_WriteByte(creatureData + 0x34C0, 10)
+			IEex_WriteByte(creatureData + 0x3D3C, 0)
+		end
+	end
+	IEex_ApplyEffectToActor(targetID, {
+["opcode"] = 254,
+["target"] = 2,
+["timing"] = 1,
+["resource"] = "MEQUIPLE",
+["parent_resource"] = "MEQUIPLE",
+["source_id"] = targetID
+})
+
 end
 
 ex_real_projectile = {
@@ -3751,13 +3876,17 @@ function MEWHIRLA(effectData, creatureData)
 						end
 --						IEex_DisplayString(attackRoll .. " + " .. attackBonus .. " = " .. attackRoll + attackBonus .. " vs " .. ac)
 					end
-					local feedbackString = "Attacks " .. IEex_GetActorName(targetID) .. " with " .. IEex_FetchString(IEex_ReadDword(itemData + 0xC)) .. " : "
+					IEex_SetToken("EXWHNAME" .. ex_whirla_index, IEex_GetActorName(targetID))
+					IEex_SetToken("EXWHWEAP" .. ex_whirla_index, IEex_FetchString(IEex_ReadDword(itemData + 0xC)))
+--					local feedbackString = "Attacks " .. IEex_GetActorName(targetID) .. " with " .. IEex_FetchString(IEex_ReadDword(itemData + 0xC)) .. " : "
 					if isHit then
-						feedbackString = feedbackString .. "Hit"
+						IEex_SetToken("EXWHHITMISS" .. ex_whirla_index, ex_str_hit)
+--						feedbackString = feedbackString .. "Hit"
 					else
-						feedbackString = feedbackString .. "Miss"
+						IEex_SetToken("EXWHHITMISS" .. ex_whirla_index, ex_str_miss)
+--						feedbackString = feedbackString .. "Miss"
 					end
-					IEex_SetToken("MEWHRA" .. ex_whirla_index, feedbackString)
+--					IEex_SetToken("MEWHRA" .. ex_whirla_index, feedbackString)
 					IEex_ApplyEffectToActor(sourceID, {
 ["opcode"] = 139,
 ["target"] = 2,
@@ -3766,7 +3895,7 @@ function MEWHIRLA(effectData, creatureData)
 ["parameter1"] = ex_whirla[ex_whirla_index],
 ["source_id"] = sourceID
 })
-					if ex_whirla_index == 20 then
+					if ex_whirla_index == 40 then
 						ex_whirla_index = 1
 					else
 						ex_whirla_index = ex_whirla_index + 1
@@ -6427,9 +6556,9 @@ function IEex_GetNth(n)
 	return nth
 end
 
-opcodenames = {[3] = "berserk", [5] = "charm", [12] = "damage", [17] = "healing", [20] = "invisibility", [23] = "morale failure", [24] = "fear", [25] = "poison", [38] = "silence", [39] = "sleep", [40] = "slow", [45] = "stun", [58] = "dispelling", [60] = "spell failure", [74] = "blindness", [76] = "feeblemindedness", [78] = "disease", [80] = "deafness", [93] = "fatigue", [94] = "intoxication", [109] = "paralysis", [124] = "teleportation", [128] = "confusion", [134] = "petrification", [135] = "polymorphing", [154] = "entangle", [157] = "web", [158] = "grease", [175] = "hold", [176] = "movement penalties", [241] = "vampiric effects", [247] = "Beltyn's Burning Blood", [255] = "salamander auras", [256] = "umber hulk gaze", [279] = "Animal Rage", [281] = "Vitriolic Sphere", [294] = "harpy wail", [295] = "jackalwere gaze", [400] = "hopelessness", [404] = "nausea", [405] = "enfeeblement", [412] = "Domination", [414] = "Otiluke's Resilient Sphere", [416] = "wounding", [419] = "knockdown", [420] = "instant death", [424] = "Hold Undead", [425] = "Control Undead", [428] = "Dismissal/Banishment", [429] = "energy drain"}
+opcodenames = {[3] = ex_str_berserk, [5] = ex_str_charm, [12] = ex_str_damage, [17] = ex_str_healing, [20] = ex_str_invisibility, [23] = ex_str_moralefailure, [24] = ex_str_fear, [25] = ex_str_poison, [38] = ex_str_silence, [39] = ex_str_sleep, [40] = ex_str_slow, [45] = ex_str_stun, [58] = ex_str_dispelling, [60] = ex_str_spellfailure, [74] = ex_str_blindness, [76] = ex_str_feeblemindedness, [78] = ex_str_disease, [80] = ex_str_deafness, [93] = ex_str_fatigue, [94] = ex_str_intoxication, [109] = ex_str_paralysis, [124] = ex_str_teleportation, [128] = ex_str_confusion, [134] = ex_str_petrification, [135] = ex_str_polymorphing, [154] = ex_str_entangle, [157] = ex_str_web, [158] = ex_str_grease, [175] = ex_str_hold, [176] = ex_str_movementpenalties, [241] = ex_str_vampiriceffects, [247] = ex_str_beltyn, [255] = ex_str_salamanderauras, [256] = ex_str_umberhulkgaze, [279] = ex_str_animalrage, [281] = ex_str_vitriolicsphere, [294] = ex_str_harpywail, [295] = ex_str_jackalweregaze, [400] = ex_str_hopelessness, [404] = ex_str_nausea, [405] = ex_str_enfeeblement, [412] = ex_str_domination, [414] = ex_str_otiluke, [416] = ex_str_wounding, [419] = ex_str_knockdown, [420] = ex_str_instantdeath, [424] = ex_str_holdundead, [425] = ex_str_controlundead, [428] = ex_str_banishment, [429] = ex_str_energydrain}
 
-classstatnames = {"Barbarian", "Bard", "Cleric", "Druid", "Fighter", "Monk", "Paladin", "Ranger", "Rogue", "Sorcerer", "Wizard"}
+classstatnames = {ex_str_barbarian, ex_str_bard, ex_str_cleric, ex_str_druid, ex_str_fighter, ex_str_monk, ex_str_paladin, ex_str_ranger, ex_str_rogue, ex_str_sorcerer, ex_str_wizard}
 function MESTATPR(effectData, creatureData)
 	if IEex_CheckForEffectRepeat(effectData, creatureData) then return end
 	local targetID = IEex_GetActorIDShare(creatureData)
@@ -6442,7 +6571,7 @@ function MESTATPR(effectData, creatureData)
 			table.insert(classlevels, {classstatnames[i - 95], leveli})
 		end
 	end
-	local levelstring = "Level " .. levelsum
+	local levelstring = ex_str_level .. levelsum
 	local numclasses = #classlevels
 	if numclasses == 1 then
 		levelstring = levelstring .. " " .. classlevels[1][1]
@@ -6458,7 +6587,7 @@ function MESTATPR(effectData, creatureData)
 	end
 	IEex_DisplayString(levelstring)
 
-	IEex_DisplayString("Hit Points: " .. IEex_ReadSignedWord(creatureData + 0x5C0, 0x0) .. "/" .. IEex_GetActorStat(targetID, 1))
+	IEex_DisplayString(ex_str_hitpoints .. IEex_ReadSignedWord(creatureData + 0x5C0, 0x0) .. "/" .. IEex_GetActorStat(targetID, 1))
 	local armorClassList = IEex_GetActorArmorClass(targetID)
 	local ac = armorClassList[1]
 	local acslashing = armorClassList[2]
@@ -6466,21 +6595,21 @@ function MESTATPR(effectData, creatureData)
 	local acbludgeoning = armorClassList[4]
 	local acmissile = armorClassList[5]
 	if acslashing == acpiercing and acslashing == acbludgeoning and acslashing == acmissile then
-		IEex_DisplayString("Armor Class: " .. (ac + acslashing))
+		IEex_DisplayString(ex_str_armorclass .. (ac + acslashing))
 	else
-		IEex_DisplayString("AC vs. slashing: " .. ac + acslashing .. "  AC vs. piercing: " .. ac + acpiercing .. "  AC vs. bludgeoning: " .. ac + acbludgeoning .. "  AC vs. missiles: " .. ac + acmissile)
+		IEex_DisplayString(ex_str_acslashing .. ac + acslashing .. "  " .. ex_str_acpiercing .. ac + acpiercing .. "  " .. ex_str_acbludgeoning .. ac + acbludgeoning .. "  " .. ex_str_acmissile .. ac + acmissile)
 	end
 --[[
 	if IEex_GetActorStat(targetID, 7) >= 0 then
-		IEex_DisplayString("Attack Bonus: +" .. IEex_GetActorStat(targetID, 7))
+		IEex_DisplayString(ex_str_attackbonus .. "+" .. IEex_GetActorStat(targetID, 7))
 	else
-		IEex_DisplayString("Attack Bonus: " .. IEex_GetActorStat(targetID, 7))
+		IEex_DisplayString(ex_str_attackbonus .. IEex_GetActorStat(targetID, 7))
 	end
 --]]
-	IEex_DisplayString("Attacks per round: " .. IEex_GetActorStat(targetID, 8))
-	IEex_DisplayString("Ability Scores: ")
-	IEex_DisplayString("Strength: " .. IEex_GetActorStat(targetID, 36) .. "  Dexterity: " .. IEex_GetActorStat(targetID, 40) .. "  Constitution: " .. IEex_GetActorStat(targetID, 41) .. "  Intelligence: " .. IEex_GetActorStat(targetID, 38) .. "  Wisdom: " .. IEex_GetActorStat(targetID, 39) .. "  Charisma: " .. IEex_GetActorStat(targetID, 42))
-	IEex_DisplayString(MEGetStat(targetID, "Slashing Resistance: ", 21, "\n") .. MEGetStat(targetID, "Piercing Resistance: ", 23, "\n") .. MEGetStat(targetID, "Bludgeoning Resistance: ", 22, "\n") .. MEGetStat(targetID, "Missile Resistance: ", 24, "\n") .. MEGetStat(targetID, "Fire Resistance: ", 14, "\n") .. MEGetStat(targetID, "Cold Resistance: ", 15, "\n") .. MEGetStat(targetID, "Electricity Resistance: ", 16, "\n") .. MEGetStat(targetID, "Acid Resistance: ", 17, "\n") .. MEGetStat(targetID, "Poison Resistance: ", 74, "\n") .. MEGetStat(targetID, "Magic Damage Resistance: ", 73, "\n") .. MEGetStat(targetID, "Spell Resistance: ", 18, "\n"))
+	IEex_DisplayString(ex_str_attacksperround .. IEex_GetActorStat(targetID, 8))
+	IEex_DisplayString(ex_str_abilityscores)
+	IEex_DisplayString(ex_str_strength .. IEex_GetActorStat(targetID, 36) .. "  " .. ex_str_dexterity .. IEex_GetActorStat(targetID, 40) .. "  " .. ex_str_constitution .. IEex_GetActorStat(targetID, 41) .. "  " .. ex_str_intelligence .. IEex_GetActorStat(targetID, 38) .. "  " .. ex_str_wisdom .. IEex_GetActorStat(targetID, 39) .. "  " .. ex_str_charisma .. IEex_GetActorStat(targetID, 42))
+	IEex_DisplayString(MEGetStat(targetID, ex_str_slashingresistance, 21, "/-\n") .. MEGetStat(targetID, ex_str_piercingresistance, 23, "/-\n") .. MEGetStat(targetID, ex_str_bludgeoningresistance, 22, "/-\n") .. MEGetStat(targetID, ex_str_missileresistance, 24, "/-\n") .. MEGetStat(targetID, ex_str_fireresistance, 14, "/-\n") .. MEGetStat(targetID, ex_str_coldresistance, 15, "/-\n") .. MEGetStat(targetID, ex_str_electricityresistance, 16, "/-\n") .. MEGetStat(targetID, ex_str_acidresistance, 17, "/-\n") .. MEGetStat(targetID, ex_str_poisonresistance, 74, "/-\n") .. MEGetStat(targetID, ex_str_magicdamageresistance, 73, "/-\n") .. MEGetStat(targetID, ex_str_spellresistance, 18, "/-\n"))
 	local damageReduction = IEex_ReadByte(creatureData + 0x758, 0x0)
 	local mirrorImagesRemaining = 0
 	local stoneskinDamageRemaining = 0
@@ -6544,16 +6673,16 @@ function MESTATPR(effectData, creatureData)
 		immunities[176] = true
 	end
 	if damageReduction <= 1 and IEex_GetActorStat(targetID, 101) > 19 then
-		IEex_DisplayString("Damage Reduction: 20/+1")
+		IEex_DisplayString(ex_str_damagereduction .. "20/+1")
 	elseif damageReduction < 5 and IEex_GetActorSpellState(targetID, 18) then
-		IEex_DisplayString("Damage Reduction: 10/+5")
+		IEex_DisplayString(ex_str_damagereduction .. "10/+5")
 	elseif damageReduction > 0 then
-		IEex_DisplayString("Damage Reduction: " .. 5 * damageReduction .. "/+" .. damageReduction)
+		IEex_DisplayString(ex_str_damagereduction .. 5 * damageReduction .. "/+" .. damageReduction)
 	end
-	IEex_DisplayString("Saving Throws: ")
-	IEex_DisplayString("Fortitude: " .. IEex_GetActorStat(targetID, 9) .. "  Reflex: " .. IEex_GetActorStat(targetID, 10) .. "  Will: " .. IEex_GetActorStat(targetID, 11))
+	IEex_DisplayString(ex_str_savingthrows)
+	IEex_DisplayString(ex_str_fortitude .. IEex_GetActorStat(targetID, 9) .. "  " .. ex_str_reflex .. IEex_GetActorStat(targetID, 10) .. "  " .. ex_str_will .. IEex_GetActorStat(targetID, 11))
 	if #immunities > 0 then
-		local immunitiesString = "Immunities: "
+		local immunitiesString = ex_str_immunities
 		local firstImmunity = true
 		for key,value in pairs(immunities) do
 			if opcodenames[key] ~= nil then
@@ -6568,62 +6697,77 @@ function MESTATPR(effectData, creatureData)
 		IEex_DisplayString(immunitiesString)
 	end
 	if IEex_GetActorStat(targetID, 97) > 0 or IEex_GetActorStat(targetID, 98) > 0 or IEex_GetActorStat(targetID, 99) > 0 or IEex_GetActorStat(targetID, 102) > 0 or IEex_GetActorStat(targetID, 103) > 0 or IEex_GetActorStat(targetID, 105) > 0 or IEex_GetActorStat(targetID, 106) > 0 then
-		IEex_DisplayString("Concentration skill: " .. IEex_ReadByte(creatureData + 0x7B7, 0x0) + math.floor((IEex_GetActorStat(targetID, 41) - 10) / 2))
+		IEex_DisplayString(ex_str_concentrationskill .. IEex_ReadByte(creatureData + 0x7B7, 0x0) + math.floor((IEex_GetActorStat(targetID, 41) - 10) / 2))
 	end
 	if mirrorImagesRemaining > 0 then
-		IEex_DisplayString("Mirror images remaining: " .. mirrorImagesRemaining)
+		IEex_DisplayString(ex_str_mirrorimages .. mirrorImagesRemaining)
 	end
 	if stoneskinDamageRemaining > 0 then
-		IEex_DisplayString("Stoneskin damage remaining: " .. stoneskinDamageRemaining)
+		IEex_DisplayString(ex_str_stoneskins .. stoneskinDamageRemaining)
 	end
-	IEex_DisplayString(MEGetStat(targetID, "Iron skins remaining: ", 88, "\n") .. MEGetStat(targetID, "Casting time reduced by ", 77, "\n"))
+	IEex_DisplayString(MEGetStat(targetID, ex_str_ironskins, 88, "\n") .. MEGetStat(targetID, ex_str_castingtime, 77, "\n"))
 	if IEex_GetActorStat(targetID, 104) > 0 then
-		IEex_DisplayString("Sneak attack damage: " .. math.floor((IEex_GetActorStat(targetID, 104) + 1) / 2) + sneakAttackModifier)
+		IEex_DisplayString(ex_str_sneakattackdamage .. math.floor((IEex_GetActorStat(targetID, 104) + 1) / 2) + sneakAttackModifier)
 	end
 	if IEex_GetActorStat(targetID, 79) > 0 then
-		IEex_DisplayString(IEex_GetActorName(targetID) .. " casts arcane spells as if " .. IEex_GetActorStat(targetID, 79) .. " levels higher")
+		IEex_DisplayString(string.gsub(string.gsub(ex_str_55048, "<EXICNAME>", IEex_GetActorName(targetID)), "<EXICVAL1>", IEex_GetActorStat(targetID, 79)))
+--		IEex_DisplayString(IEex_GetActorName(targetID) .. " casts arcane spells as if " .. IEex_GetActorStat(targetID, 79) .. " levels higher")
 	end
 	if IEex_GetActorStat(targetID, 53) ~= 100 then
-		IEex_DisplayString(IEex_GetActorName(targetID) .. " casts arcane spells with " .. IEex_GetActorStat(targetID, 53) .. "% the normal duration")
+		IEex_DisplayString(string.gsub(string.gsub(ex_str_55049, "<EXICNAME>", IEex_GetActorName(targetID)), "<EXICVAL1>", IEex_GetActorStat(targetID, 53)))
+--		IEex_DisplayString(IEex_GetActorName(targetID) .. " casts arcane spells with " .. IEex_GetActorStat(targetID, 53) .. "% the normal duration")
 	end
 	if IEex_GetActorStat(targetID, 80) > 0 then
-		IEex_DisplayString(IEex_GetActorName(targetID) .. " casts divine spells as if " .. IEex_GetActorStat(targetID, 80) .. " levels higher")
+		IEex_DisplayString(string.gsub(string.gsub(ex_str_55050, "<EXICNAME>", IEex_GetActorName(targetID)), "<EXICVAL1>", IEex_GetActorStat(targetID, 80)))
+--		IEex_DisplayString(IEex_GetActorName(targetID) .. " casts divine spells as if " .. IEex_GetActorStat(targetID, 80) .. " levels higher")
 	end
 	if IEex_GetActorStat(targetID, 54) ~= 100 then
-		IEex_DisplayString(IEex_GetActorName(targetID) .. " casts divine spells with " .. IEex_GetActorStat(targetID, 54) .. "% the normal duration")
+		IEex_DisplayString(string.gsub(string.gsub(ex_str_55051, "<EXICNAME>", IEex_GetActorName(targetID)), "<EXICVAL1>", IEex_GetActorStat(targetID, 54)))
+--		IEex_DisplayString(IEex_GetActorName(targetID) .. " casts divine spells with " .. IEex_GetActorStat(targetID, 54) .. "% the normal duration")
 	end
 	if extendSpellLevel > 0 then
-		IEex_DisplayString(IEex_GetActorName(targetID) .. " can extend up to " .. IEex_GetNth(extendSpellLevel) .. "-level spells")
+		IEex_DisplayString(string.gsub(string.gsub(ex_str_55052, "<EXICNAME>", IEex_GetActorName(targetID)), "<EXICVAL1>", extendSpellLevel))
+--		IEex_DisplayString(IEex_GetActorName(targetID) .. " can extend up to " .. IEex_GetNth(extendSpellLevel) .. "-level spells")
 	end
 	if maximizeSpellLevel > 0 then
-		IEex_DisplayString(IEex_GetActorName(targetID) .. " can maximize up to " .. IEex_GetNth(maximizeSpellLevel) .. "-level spells")
+		IEex_DisplayString(string.gsub(string.gsub(ex_str_55053, "<EXICNAME>", IEex_GetActorName(targetID)), "<EXICVAL1>", maximizeSpellLevel))
+--		IEex_DisplayString(IEex_GetActorName(targetID) .. " can maximize up to " .. IEex_GetNth(maximizeSpellLevel) .. "-level spells")
 	end
 	if quickenSpellLevel > 0 then
-		IEex_DisplayString(IEex_GetActorName(targetID) .. " can quicken up to " .. IEex_GetNth(quickenSpellLevel) .. "-level spells")
+		IEex_DisplayString(string.gsub(string.gsub(ex_str_55054, "<EXICNAME>", IEex_GetActorName(targetID)), "<EXICVAL1>", quickenSpellLevel))
+--		IEex_DisplayString(IEex_GetActorName(targetID) .. " can quicken up to " .. IEex_GetNth(quickenSpellLevel) .. "-level spells")
 	end
 	if safeSpellLevel > 0 then
-		IEex_DisplayString(IEex_GetActorName(targetID) .. " can safen up to " .. IEex_GetNth(safeSpellLevel) .. "-level spells")
+		IEex_DisplayString(string.gsub(string.gsub(ex_str_55055, "<EXICNAME>", IEex_GetActorName(targetID)), "<EXICVAL1>", safeSpellLevel))
+--		IEex_DisplayString(IEex_GetActorName(targetID) .. " can safen up to " .. IEex_GetNth(safeSpellLevel) .. "-level spells")
 	end
 	if IEex_GetActorStat(targetID, 76) ~= 0 then
-		IEex_DisplayString(IEex_GetActorName(targetID) .. " can cast more than one spell per round")
+		IEex_DisplayString(string.gsub(ex_str_55056, "<EXICNAME>", IEex_GetActorName(targetID)))
+--		IEex_DisplayString(IEex_GetActorName(targetID) .. " can cast more than one spell per round")
 	end
 	if IEex_GetActorStat(targetID, 81) ~= 0 then
-		IEex_DisplayString(IEex_GetActorName(targetID) .. " can see invisible creatures")
+		IEex_DisplayString(string.gsub(ex_str_55057, "<EXICNAME>", IEex_GetActorName(targetID)))
+--		IEex_DisplayString(IEex_GetActorName(targetID) .. " can see invisible creatures")
 	end
 	if bit32.band(IEex_ReadByte(creatureData + 0x89F, 0), 0x2) ~= 0 then
-		IEex_DisplayString(IEex_GetActorName(targetID) .. " is protected from critical hits")
+		IEex_DisplayString(string.gsub(ex_str_55058, "<EXICNAME>", IEex_GetActorName(targetID)))
+--		IEex_DisplayString(IEex_GetActorName(targetID) .. " is protected from critical hits")
 	end
 	if IEex_GetActorSpellState(targetID, 216) then
-		IEex_DisplayString(IEex_GetActorName(targetID) .. " is protected from sneak attacks")
+		IEex_DisplayString(string.gsub(ex_str_55059, "<EXICNAME>", IEex_GetActorName(targetID)))
+--		IEex_DisplayString(IEex_GetActorName(targetID) .. " is protected from sneak attacks")
 	end
 	if IEex_GetActorSpellState(targetID, 64) then
-		IEex_DisplayString(IEex_GetActorName(targetID) .. " deals maximum damage with each hit")
+		IEex_DisplayString(string.gsub(ex_str_55060, "<EXICNAME>", IEex_GetActorName(targetID)))
+--		IEex_DisplayString(IEex_GetActorName(targetID) .. " deals maximum damage with each hit")
 	end
 	if IEex_GetActorSpellState(targetID, 218) then
-		IEex_DisplayString(IEex_GetActorName(targetID) .. " can sneak attack on each hit")
+		IEex_DisplayString(string.gsub(ex_str_55061, "<EXICNAME>", IEex_GetActorName(targetID)))
+--		IEex_DisplayString(IEex_GetActorName(targetID) .. " can sneak attack on each hit")
 	end
 	if IEex_GetActorStat(targetID, 83) ~= 0 then
-		IEex_DisplayString(IEex_GetActorName(targetID) .. " cannot be reduced below " .. IEex_GetActorStat(targetID, 83) .. " HP")
+		IEex_DisplayString(string.gsub(string.gsub(ex_str_55051, "<EXICNAME>", IEex_GetActorName(targetID)), "<EXICVAL1>", IEex_GetActorStat(targetID, 83)))
+--		IEex_DisplayString(IEex_GetActorName(targetID) .. " cannot be reduced below " .. IEex_GetActorStat(targetID, 83) .. " HP")
 	end
 end
 

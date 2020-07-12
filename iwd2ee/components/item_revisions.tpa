@@ -4073,7 +4073,7 @@ COPY_EXISTING ~USBELT58.itm~ ~override~
 
 //General patch changes
 
-
+/*
 COPY_EXISTING_REGEXP ~.*\.itm~ ~override~
 	READ_LONG 0x18 theitemflags
 	PATCH_IF (theitemflags BAND 0x00040000) = 0 BEGIN
@@ -4132,7 +4132,7 @@ COPY_EXISTING_REGEXP ~.*\.itm~ ~override~
 		END
 	END
 	BUT_ONLY_IF_IT_CHANGES
-
+*/
 COPY_EXISTING_REGEXP ~.*\.itm~ ~override~
 	READ_LONG 0x18 us_item_flags
 	READ_SHORT 0x1c us_item_category

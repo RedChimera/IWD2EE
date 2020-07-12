@@ -2871,14 +2871,14 @@ This necromantic curse prevents a creature from healing. For 1 day, the cursed c
 (Conjuration)
 Level: Rgr 3
 Range: Caster
-Duration: 10 rounds + 2 rounds / level
+Duration: 30 rounds
 Casting Time: 5
 Area of Effect: Caster
 Saving Throw: None
 
 This spell temporarily gives the ranger a quiver containing an unlimited supply of magical arrows. The arrows have an additional +1 to attack and damage for every 4 ranger levels. The quiver cannot be dropped or given to another character.
 
-Note: The quiver is created in the ranger's first ammunition slot, destroying any items previously in that slot. Be sure to have the first ammunition slot empty before casting Quiver of Plenty.~
+Note: The quiver is created in the ranger's first ammunition slot. Any ammunition that was previously in that slot will be unavailable until the spell ends.~
 @35551     = ~Supreme Speed~
 @36551     = ~Supreme Speed
 (Alteration)

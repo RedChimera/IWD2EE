@@ -166,6 +166,12 @@ SetGlobal("SR_Emma_Has_Blade","GLOBAL", 1)~ JOURNAL #36404 GOTO 29
   IF ~~ THEN REPLY #36445 DO ~FadeToColor([0.0],0)
 RestUntilHealed()
 FadeFromColor([0.0],0)~ EXIT
+  IF ~!NumInParty(6)
+!Global("US_VREK_JOIN","GLOBAL",1)
+Global("SR_Recover_Blade","GLOBAL",4)
+!Global("SR_Kaitlin_Fled","GLOBAL",1)
+!Global("SR_Kaitlin_Dead","GLOBAL",1)
+~ THEN REPLY ~Would you consider joining us?  The horde has laid claim to Shaengarne Bridge, and Lord Ulbrec has asked us to retake the bridge.  We would be grateful if you would lend us your assistance.~ GOTO EmmaJoin1
   IF ~~ THEN REPLY #36446 EXIT
 END
 
@@ -241,6 +247,9 @@ END
 
 IF ~~ THEN BEGIN 21
   SAY #36459
+  IF ~!NumInParty(6)
+!Global("US_VREK_JOIN","GLOBAL",1)
+~ THEN REPLY ~Would you consider joining us?  The horde has laid claim to Shaengarne Bridge, and Lord Ulbrec has asked us to retake the bridge.  We would be grateful if you would lend us your assistance.~ GOTO EmmaJoin1
   IF ~~ THEN REPLY #36460 EXIT
 END
 
