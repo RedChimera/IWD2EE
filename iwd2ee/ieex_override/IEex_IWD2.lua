@@ -1520,9 +1520,6 @@ function EXDAMAGE(effectData, creatureData)
 	if IEex_CheckForEffectRepeat(effectData, creatureData) then return end
 	local sourceID = IEex_ReadDword(effectData + 0x10C)
 	local targetID = IEex_GetActorIDShare(creatureData)
-	if not IEex_IsSprite(sourceID, false) then
-		sourceID = 0
-	end
 	local sourceData = 0
 	local damage = IEex_ReadByte(effectData + 0x18, 0x0)
 	local dicesize = IEex_ReadByte(effectData + 0x19, 0x0)
@@ -1543,7 +1540,7 @@ function EXDAMAGE(effectData, creatureData)
 	local isSneakAttack = false
 	local isTrueBackstab = false
 	local hasProtection = false
-	if sourceID > 0 then
+	if IEex_IsSprite(sourceID, true) then
 		sourceData = IEex_GetActorShare(sourceID)
 		if proficiency > 0 and ex_feat_id_offset[proficiency] ~= nil then
 			local proficiencyDamage = ex_proficiency_damage[IEex_ReadByte(sourceData + ex_feat_id_offset[proficiency], 0x0)]
@@ -1594,7 +1591,7 @@ function EXDAMAGE(effectData, creatureData)
 	end
 	local luck = 0
 	local currentRoll = 0
-	if sourceID > 0 and (bit32.band(savingthrow, 0x20000) > 0 or bit32.band(savingthrow, 0x40000) > 0) then
+	if IEex_IsSprite(sourceID, true) and (bit32.band(savingthrow, 0x20000) > 0 or bit32.band(savingthrow, 0x40000) > 0) then
 		damage = damage + IEex_GetActorStat(sourceID, 50)
 		luck = IEex_GetActorStat(sourceID, 32)
 		if IEex_GetActorSpellState(sourceID, 64) then
@@ -1609,7 +1606,7 @@ function EXDAMAGE(effectData, creatureData)
 				damage = damage + favoredEnemyDamage
 			end
 		end
-	elseif sourceID > 0 and bit32.band(savingthrow, 0x800000) > 0 then
+	elseif IEex_IsSprite(sourceID, true) and bit32.band(savingthrow, 0x800000) > 0 then
 		luck = IEex_GetActorStat(sourceID, 32)
 		if IEex_GetActorSpellState(sourceID, 64) then
 			luck = 127
@@ -1618,7 +1615,7 @@ function EXDAMAGE(effectData, creatureData)
 		if IEex_GetActorStat(targetID, 32) ~= 0 then
 			luck = 0 - IEex_GetActorStat(targetID, 32)
 		end
-		if sourceID > 0 and IEex_GetActorSpellState(sourceID, 238) then
+		if IEex_IsSprite(sourceID, true) and IEex_GetActorSpellState(sourceID, 238) then
 			local casterClass = IEex_ReadByte(effectData + 0xC5, 0x0)
 			local sourceSpell = ex_damage_source_spell[parent_resource]
 			if sourceSpell == nil then
@@ -1662,7 +1659,7 @@ function EXDAMAGE(effectData, creatureData)
 	end
 	local arterialStrikeCount = 0
 	local hasCripplingStrikeFeat = false
-	if sourceID > 0 then
+	if IEex_IsSprite(sourceID, true) then
 		hasCripplingStrikeFeat = (bit32.band(IEex_ReadDword(sourceData + 0x75C), 0x800) > 0)
 		if bit32.band(savingthrow, 0x80000) > 0 and isSneakAttack then
 			local sneakAttackDiceNumber = math.floor((rogueLevel + 1) / 2)
@@ -1826,7 +1823,7 @@ function EXDAMAGE(effectData, creatureData)
 			end
 		end)
 	end
-	if sourceID > 0 and bit32.band(savingthrow, 0x10000) > 0 then
+	if IEex_IsSprite(sourceID, true) and bit32.band(savingthrow, 0x10000) > 0 then
 		local damageMultiplier = 100
 		IEex_IterateActorEffects(sourceID, function(eData)
 			local theopcode = IEex_ReadDword(eData + 0x10)
@@ -1948,7 +1945,7 @@ function EXDAMAGE(effectData, creatureData)
 			end
 		end
 	end
-	if sourceID > 0 and isSneakAttack then
+	if IEex_IsSprite(sourceID, true) and isSneakAttack then
 		if IEex_GetActorSpellState(sourceID, 86) then
 			IEex_ApplyEffectToActor(sourceID, {
 ["opcode"] = 139,
@@ -2128,9 +2125,6 @@ function MEHEALIN(effectData, creatureData)
 	if IEex_CheckForEffectRepeat(effectData, creatureData) then return end
 	local sourceID = IEex_ReadDword(effectData + 0x10C)
 	local targetID = IEex_GetActorIDShare(creatureData)
-	if not IEex_IsSprite(sourceID, false) then
-		sourceID = 0
-	end
 	local sourceData = 0
 	local healing = IEex_ReadSignedWord(effectData + 0x18, 0x0)
 	local dicesize = IEex_ReadByte(effectData + 0x1A, 0x0)
@@ -2141,7 +2135,7 @@ function MEHEALIN(effectData, creatureData)
 	local savingthrow = bit32.band(IEex_ReadDword(effectData + 0x3C), 0xFFFFFFE3)
 	local parent_resource = IEex_ReadLString(effectData + 0x90, 8)
 	local casterlvl = IEex_ReadDword(effectData + 0xC4)
-	if sourceID > 0 then
+	if IEex_IsSprite(sourceID, true) then
 		sourceData = IEex_GetActorShare(sourceID)
 		if IEex_GetActorSpellState(sourceID, 238) and dicenumber > 0 then
 			local casterClass = IEex_ReadByte(effectData + 0xC5, 0x0)
@@ -4959,9 +4953,6 @@ function MESPLSAV(effectData, creatureData)
 	if IEex_CheckForEffectRepeat(effectData, creatureData) then return end
 	local sourceID = IEex_ReadDword(effectData + 0x10C)
 	local targetID = IEex_GetActorIDShare(creatureData)
-	if not IEex_IsSprite(sourceID, false) then
-		sourceID = 0
-	end
 	local sourceData = 0
 	local spellRES = IEex_ReadLString(effectData + 0x18, 8)
 	local savingthrow = bit32.band(IEex_ReadDword(effectData + 0x3C), 0xFFFFFFE3)
@@ -4974,7 +4965,7 @@ function MESPLSAV(effectData, creatureData)
 	local casterlvl = IEex_ReadDword(effectData + 0xC4)
 
 	local saveBonusStatValue = 0
-	if sourceID > 0 then
+	if IEex_IsSprite(sourceID, true) then
 		sourceData = IEex_GetActorShare(sourceID)
 		if saveBonusStat > 0 then
 			if saveBonusStat == 160 then
