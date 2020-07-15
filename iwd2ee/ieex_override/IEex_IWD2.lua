@@ -1203,6 +1203,11 @@ function Feats_Mobility(actorID, featID)
 	return (IEex_ReadByte(creatureData + 0x805, 0x0) >= 13 and bit32.band(IEex_ReadDword(creatureData + 0x75C), 0x10000) > 0)
 end
 
+function Feats_NaturalSpell(actorID, featID)
+	local creatureData = IEex_GetActorShare(actorID)
+	return (IEex_ReadByte(creatureData + 0x62A, 0x0) > 4 and IEex_ReadByte(creatureData + 0x807, 0x0) >= 13)
+end
+
 function Feats_QuickenSpell(actorID, featID)
 	local creatureData = IEex_GetActorShare(actorID)
 	local quickenSpellFeatCount = IEex_ReadByte(creatureData + 0x744 + ex_feat_name_id["ME_QUICKEN_SPELL"], 0x0)
@@ -2890,7 +2895,7 @@ end
 
 function MERACESP(effectData, creatureData)
 	if IEex_CheckForEffectRepeat(effectData, creatureData) then return end
-	if not IEex_IsSprite(IEex_ReadDword(effectData + 0x10C), false) then return end
+--	if not IEex_IsSprite(IEex_ReadDword(effectData + 0x10C), false) then return end
 	local targetID = IEex_GetActorIDShare(creatureData)
 	local matchRace = IEex_ReadByte(effectData + 0x44, 0x0)
 	local matchSubrace = IEex_ReadByte(effectData + 0x45, 0x0)
@@ -3055,6 +3060,435 @@ function MEREDIRE(effectData, creatureData)
 	end
 end
 
+function MEPOLYMO(effectData, creatureData)
+	if IEex_CheckForEffectRepeat(effectData, creatureData) then return end
+	local targetID = IEex_GetActorIDShare(creatureData)
+	local sourceID = IEex_ReadDword(effectData + 0x10C)
+	if not IEex_IsSprite(sourceID, false) then return end
+	local creRES = IEex_ReadLString(effectData + 0x18, 8)
+	local parent_resource = IEex_ReadLString(effectData + 0x90, 8)
+	local baseStrength = IEex_ReadByte(creatureData + 0x802, 0x0)
+	local baseDexterity = IEex_ReadByte(creatureData + 0x805, 0x0)
+	local baseConstitution = IEex_ReadByte(creatureData + 0x806, 0x0)
+	local baseIntelligence = IEex_ReadByte(creatureData + 0x803, 0x0)
+	local baseWisdom = IEex_ReadByte(creatureData + 0x804, 0x0)
+	local baseCharisma = IEex_ReadByte(creatureData + 0x807, 0x0)
+	if IEex_GetActorSpellState(targetID, 188) then
+		IEex_IterateActorEffects(targetID, function(eData)
+			local theopcode = IEex_ReadDword(eData + 0x10)
+			local theparameter1 = IEex_ReadDword(eData + 0x1C)
+			local theparameter2 = IEex_ReadDword(eData + 0x20)
+			if theopcode == 288 and theparameter2 == 188 then
+				baseStrength = IEex_ReadByte(eData + 0x44, 0x0)
+				baseDexterity = IEex_ReadByte(eData + 0x45, 0x0)
+				baseConstitution = IEex_ReadByte(eData + 0x46, 0x0)
+				baseIntelligence = IEex_ReadByte(eData + 0x47, 0x0)
+				baseWisdom = IEex_ReadByte(eData + 0x48, 0x0)
+				baseCharisma = IEex_ReadByte(eData + 0x49, 0x0)
+			end
+		end)
+	else
+		IEex_ApplyEffectToActor(targetID, {
+["opcode"] = 288,
+["target"] = 2,
+["timing"] = 9,
+["parameter1"] = IEex_ReadDword(creatureData + 0x5C4),
+["parameter2"] = 188,
+["savebonus"] = baseStrength + baseDexterity * 0x100 + baseConstitution * 0x10000 + baseIntelligence * 0x1000000,
+["special"] = baseWisdom + baseCharisma * 0x100,
+["parent_resource"] = "USPOLYBA",
+["source_id"] = targetID
+})
+	end
+	local resWrapper = IEex_DemandRes(creRES, "CRE")
+	if resWrapper:isValid() then
+		local formData = resWrapper:getData()
+		IEex_ApplyEffectToActor(targetID, {
+["opcode"] = 254,
+["target"] = 2,
+["timing"] = 9,
+["resource"] = "USPOLYSP",
+["source_id"] = targetID
+})
+		IEex_ApplyEffectToActor(targetID, {
+["opcode"] = 254,
+["target"] = 2,
+["timing"] = 9,
+["resource"] = "USPOLYMO",
+["source_id"] = targetID
+})
+		local newStrength = IEex_ReadByte(formData + 0x266, 0x0)
+		if newStrength > baseStrength then
+--			IEex_WriteByte(creatureData + 0x802, newStrength)
+			IEex_ApplyEffectToActor(targetID, {
+["opcode"] = 44,
+["target"] = 2,
+["timing"] = 9,
+["parameter1"] = newStrength,
+["parameter2"] = 1,
+["parent_resource"] = "USPOLYMO",
+["source_id"] = targetID
+})
+		else
+--			IEex_WriteByte(creatureData + 0x802, baseStrength)
+			IEex_ApplyEffectToActor(targetID, {
+["opcode"] = 44,
+["target"] = 2,
+["timing"] = 9,
+["parameter1"] = baseStrength,
+["parameter2"] = 1,
+["parent_resource"] = "USPOLYMO",
+["source_id"] = targetID
+})
+		end
+		local newDexterity = IEex_ReadByte(formData + 0x269, 0x0)
+		if newDexterity > baseDexterity then
+--			IEex_WriteByte(creatureData + 0x805, newDexterity)
+			IEex_ApplyEffectToActor(targetID, {
+["opcode"] = 15,
+["target"] = 2,
+["timing"] = 9,
+["parameter1"] = newDexterity,
+["parameter2"] = 1,
+["parent_resource"] = "USPOLYMO",
+["source_id"] = targetID
+})
+		else
+--			IEex_WriteByte(creatureData + 0x805, baseDexterity)
+			IEex_ApplyEffectToActor(targetID, {
+["opcode"] = 15,
+["target"] = 2,
+["timing"] = 9,
+["parameter1"] = baseDexterity,
+["parameter2"] = 1,
+["parent_resource"] = "USPOLYMO",
+["source_id"] = targetID
+})
+		end
+		local newConstitution = IEex_ReadByte(formData + 0x26A, 0x0)
+		if newConstitution > baseConstitution then
+--			IEex_WriteByte(creatureData + 0x806, newConstitution)
+			IEex_ApplyEffectToActor(targetID, {
+["opcode"] = 10,
+["target"] = 2,
+["timing"] = 9,
+["parameter1"] = newConstitution,
+["parameter2"] = 1,
+["parent_resource"] = "USPOLYMO",
+["source_id"] = targetID
+})
+		else
+--			IEex_WriteByte(creatureData + 0x806, baseConstitution)
+			IEex_ApplyEffectToActor(targetID, {
+["opcode"] = 10,
+["target"] = 2,
+["timing"] = 9,
+["parameter1"] = baseConstitution,
+["parameter2"] = 1,
+["parent_resource"] = "USPOLYMO",
+["source_id"] = targetID
+})
+		end
+		local newIntelligence = IEex_ReadByte(formData + 0x267, 0x0)
+		if newIntelligence > baseIntelligence then
+--			IEex_WriteByte(creatureData + 0x803, newIntelligence)
+			IEex_ApplyEffectToActor(targetID, {
+["opcode"] = 19,
+["target"] = 2,
+["timing"] = 9,
+["parameter1"] = newIntelligence,
+["parameter2"] = 1,
+["parent_resource"] = "USPOLYMO",
+["source_id"] = targetID
+})
+		else
+--			IEex_WriteByte(creatureData + 0x803, baseIntelligence)
+			IEex_ApplyEffectToActor(targetID, {
+["opcode"] = 19,
+["target"] = 2,
+["timing"] = 9,
+["parameter1"] = baseIntelligence,
+["parameter2"] = 1,
+["parent_resource"] = "USPOLYMO",
+["source_id"] = targetID
+})
+		end
+		local newWisdom = IEex_ReadByte(formData + 0x268, 0x0)
+		if newWisdom > baseWisdom then
+--			IEex_WriteByte(creatureData + 0x804, newWisdom)
+			IEex_ApplyEffectToActor(targetID, {
+["opcode"] = 49,
+["target"] = 2,
+["timing"] = 9,
+["parameter1"] = newWisdom,
+["parameter2"] = 1,
+["parent_resource"] = "USPOLYMO",
+["source_id"] = targetID
+})
+		else
+--			IEex_WriteByte(creatureData + 0x804, baseWisdom)
+			IEex_ApplyEffectToActor(targetID, {
+["opcode"] = 49,
+["target"] = 2,
+["timing"] = 9,
+["parameter1"] = baseWisdom,
+["parameter2"] = 1,
+["parent_resource"] = "USPOLYMO",
+["source_id"] = targetID
+})
+		end
+		local newCharisma = IEex_ReadByte(formData + 0x26B, 0x0)
+		if newCharisma > baseCharisma then
+--			IEex_WriteByte(creatureData + 0x807, newCharisma)
+			IEex_ApplyEffectToActor(targetID, {
+["opcode"] = 6,
+["target"] = 2,
+["timing"] = 9,
+["parameter1"] = newCharisma,
+["parameter2"] = 1,
+["parent_resource"] = "USPOLYMO",
+["source_id"] = targetID
+})
+		else
+--			IEex_WriteByte(creatureData + 0x807, baseCharisma)
+			IEex_ApplyEffectToActor(targetID, {
+["opcode"] = 6,
+["target"] = 2,
+["timing"] = 9,
+["parameter1"] = baseCharisma,
+["parameter2"] = 1,
+["parent_resource"] = "USPOLYMO",
+["source_id"] = targetID
+})
+		end
+		IEex_ApplyEffectToActor(targetID, {
+["opcode"] = 144,
+["target"] = 2,
+["timing"] = 9,
+["parameter2"] = 2,
+["parent_resource"] = "USPOLYSP",
+["source_id"] = targetID
+})
+		IEex_ApplyEffectToActor(targetID, {
+["opcode"] = 145,
+["target"] = 2,
+["timing"] = 9,
+["parameter2"] = 1,
+["parent_resource"] = "USPOLYSP",
+["source_id"] = targetID
+})
+		IEex_ApplyEffectToActor(targetID, {
+["opcode"] = 0,
+["target"] = 2,
+["timing"] = 9,
+["parameter1"] = IEex_ReadWord(formData + 0x46, 0x0) - 10,
+["parameter2"] = 1,
+["parent_resource"] = "USPOLYMO",
+["source_id"] = targetID
+})
+		IEex_ApplyEffectToActor(targetID, {
+["opcode"] = 1,
+["target"] = 2,
+["timing"] = 9,
+["parameter1"] = IEex_ReadByte(formData + 0x51, 0x0),
+["parameter2"] = 1,
+["parent_resource"] = "USPOLYMO",
+["source_id"] = targetID
+})
+		IEex_ApplyEffectToActor(targetID, {
+["opcode"] = 30,
+["target"] = 2,
+["timing"] = 9,
+["parameter1"] = IEex_ReadByte(formData + 0x55, 0x0),
+["parameter2"] = 1,
+["parent_resource"] = "USPOLYMO",
+["source_id"] = targetID
+})
+		IEex_ApplyEffectToActor(targetID, {
+["opcode"] = 28,
+["target"] = 2,
+["timing"] = 9,
+["parameter1"] = IEex_ReadByte(formData + 0x56, 0x0),
+["parameter2"] = 1,
+["parent_resource"] = "USPOLYMO",
+["source_id"] = targetID
+})
+		IEex_ApplyEffectToActor(targetID, {
+["opcode"] = 29,
+["target"] = 2,
+["timing"] = 9,
+["parameter1"] = IEex_ReadByte(formData + 0x57, 0x0),
+["parameter2"] = 1,
+["parent_resource"] = "USPOLYMO",
+["source_id"] = targetID
+})
+		IEex_ApplyEffectToActor(targetID, {
+["opcode"] = 27,
+["target"] = 2,
+["timing"] = 9,
+["parameter1"] = IEex_ReadByte(formData + 0x58, 0x0),
+["parameter2"] = 1,
+["parent_resource"] = "USPOLYMO",
+["source_id"] = targetID
+})
+		IEex_ApplyEffectToActor(targetID, {
+["opcode"] = 166,
+["target"] = 2,
+["timing"] = 9,
+["parameter1"] = IEex_ReadByte(formData + 0x59, 0x0),
+["parameter2"] = 1,
+["parent_resource"] = "USPOLYMO",
+["source_id"] = targetID
+})
+		IEex_ApplyEffectToActor(targetID, {
+["opcode"] = 86,
+["target"] = 2,
+["timing"] = 9,
+["parameter1"] = IEex_ReadByte(formData + 0x5C, 0x0),
+["parameter2"] = 1,
+["parent_resource"] = "USPOLYMO",
+["source_id"] = targetID
+})
+		IEex_ApplyEffectToActor(targetID, {
+["opcode"] = 87,
+["target"] = 2,
+["timing"] = 9,
+["parameter1"] = IEex_ReadByte(formData + 0x5D, 0x0),
+["parameter2"] = 1,
+["parent_resource"] = "USPOLYMO",
+["source_id"] = targetID
+})
+		IEex_ApplyEffectToActor(targetID, {
+["opcode"] = 88,
+["target"] = 2,
+["timing"] = 9,
+["parameter1"] = IEex_ReadByte(formData + 0x5E, 0x0),
+["parameter2"] = 1,
+["parent_resource"] = "USPOLYMO",
+["source_id"] = targetID
+})
+		IEex_ApplyEffectToActor(targetID, {
+["opcode"] = 89,
+["target"] = 2,
+["timing"] = 9,
+["parameter1"] = IEex_ReadByte(formData + 0x5F, 0x0),
+["parameter2"] = 1,
+["parent_resource"] = "USPOLYMO",
+["source_id"] = targetID
+})
+		IEex_ApplyEffectToActor(targetID, {
+["opcode"] = 31,
+["target"] = 2,
+["timing"] = 9,
+["parameter1"] = IEex_ReadByte(formData + 0x60, 0x0),
+["parameter2"] = 1,
+["parent_resource"] = "USPOLYMO",
+["source_id"] = targetID
+})
+		if IEex_ReadWord(formData + 0x1BC, 0x0) > 0 then
+			IEex_ApplyEffectToActor(targetID, {
+["opcode"] = 436,
+["target"] = 2,
+["timing"] = 9,
+["parameter2"] = IEex_ReadWord(formData + 0x1BC, 0x0),
+["parent_resource"] = "USPOLYMO",
+["source_id"] = targetID
+})
+		end
+		IEex_ApplyEffectToActor(targetID, {
+["opcode"] = 53,
+["target"] = 2,
+["timing"] = 1,
+["parameter1"] = IEex_ReadDword(formData + 0x28),
+["parameter2"] = 2,
+["parent_resource"] = "USPOLYMO",
+["source_id"] = targetID
+})
+		IEex_ApplyEffectToActor(targetID, {
+["opcode"] = 53,
+["target"] = 2,
+["timing"] = 0,
+["duration"] = 1,
+["parameter1"] = IEex_ReadDword(formData + 0x28),
+["parameter2"] = 0,
+["parent_resource"] = "USPOLYMO",
+["source_id"] = targetID
+})
+	end
+	resWrapper:free()
+end
+
+function MEPOLYBA(effectData, creatureData)
+	if IEex_CheckForEffectRepeat(effectData, creatureData) then return end
+	local targetID = IEex_GetActorIDShare(creatureData)
+	local sourceID = IEex_ReadDword(effectData + 0x10C)
+	if not IEex_IsSprite(sourceID, false) then return end
+	local parent_resource = IEex_ReadLString(effectData + 0x90, 8)
+	local baseAnimation = 0
+--	local baseDexterity = IEex_ReadByte(creatureData + 0x805, 0x0)
+--	local baseConstitution = IEex_ReadByte(creatureData + 0x806, 0x0)
+--	local baseIntelligence = IEex_ReadByte(creatureData + 0x803, 0x0)
+--	local baseWisdom = IEex_ReadByte(creatureData + 0x804, 0x0)
+--	local baseCharisma = IEex_ReadByte(creatureData + 0x807, 0x0)
+	if IEex_GetActorSpellState(targetID, 188) then
+		IEex_IterateActorEffects(targetID, function(eData)
+			local theopcode = IEex_ReadDword(eData + 0x10)
+			local theparameter2 = IEex_ReadDword(eData + 0x20)
+			if theopcode == 288 and theparameter2 == 188 then
+				baseAnimation = IEex_ReadDword(eData + 0x1C)
+--				baseStrength = IEex_ReadByte(eData + 0x44, 0x0)
+--				baseDexterity = IEex_ReadByte(eData + 0x45, 0x0)
+--				baseConstitution = IEex_ReadByte(eData + 0x46, 0x0)
+--				baseIntelligence = IEex_ReadByte(eData + 0x47, 0x0)
+--				baseWisdom = IEex_ReadByte(eData + 0x48, 0x0)
+--				baseCharisma = IEex_ReadByte(eData + 0x49, 0x0)
+			end
+		end)
+	end
+	IEex_ApplyEffectToActor(targetID, {
+["opcode"] = 254,
+["target"] = 2,
+["timing"] = 9,
+["resource"] = "USPOLYSP",
+["source_id"] = targetID
+})
+	IEex_ApplyEffectToActor(targetID, {
+["opcode"] = 254,
+["target"] = 2,
+["timing"] = 9,
+["resource"] = "USPOLYMO",
+["source_id"] = targetID
+})
+	IEex_ApplyEffectToActor(targetID, {
+["opcode"] = 254,
+["target"] = 2,
+["timing"] = 9,
+["resource"] = "USPOLYBA",
+["source_id"] = targetID
+})
+	if baseAnimation > 0 then
+		IEex_ApplyEffectToActor(targetID, {
+["opcode"] = 53,
+["target"] = 2,
+["timing"] = 1,
+["parameter1"] = baseAnimation,
+["parameter2"] = 2,
+["parent_resource"] = "USPOLYMO",
+["source_id"] = targetID
+})
+		IEex_ApplyEffectToActor(targetID, {
+["opcode"] = 53,
+["target"] = 2,
+["timing"] = 0,
+["duration"] = 1,
+["parameter1"] = baseAnimation,
+["parameter2"] = 0,
+["parent_resource"] = "USPOLYMO",
+["source_id"] = targetID
+})
+	end
+end
+
 function MEQUIPLE(effectData, creatureData)
 	if IEex_CheckForEffectRepeat(effectData, creatureData) then return end
 	if not IEex_IsSprite(IEex_ReadDword(effectData + 0x10C), false) then return end
@@ -3147,6 +3581,7 @@ function MEQUIPL2(effectData, creatureData)
 				IEex_WriteDword(creatureData + 0x34AC, thename1)
 			end
 		end
+		resWrapper:free()
 	end
 end
 

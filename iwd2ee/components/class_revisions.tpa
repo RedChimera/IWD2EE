@@ -583,6 +583,7 @@ LAF ADD_FEAT_IWD2 INT_VAR nameref=RESOLVE_STR_REF(@333) descref=RESOLVE_STR_REF(
 LAF ADD_FEAT_IWD2 INT_VAR nameref=RESOLVE_STR_REF(@335) descref=RESOLVE_STR_REF(@336) max=1 STR_VAR name=~ME_TERRIFYING_RAGE~ script=~Feats_TerrifyingRage~ featspl_1=~USFTERG1~ END
 LAF ADD_FEAT_IWD2 INT_VAR nameref=RESOLVE_STR_REF(@337) descref=RESOLVE_STR_REF(@338) max=2 STR_VAR name=~ME_TWO_WEAPON_DEFENSE~ script=~Feats_TwoWeaponDefense~ featspl_1=~USFTWDF1~ END
 LAF ADD_FEAT_IWD2 INT_VAR nameref=RESOLVE_STR_REF(@343) descref=RESOLVE_STR_REF(@344) max=2 STR_VAR name=~ME_WHIRLWIND_ATTACK~ script=~Feats_WhirlwindAttack~ prerequisite_script=~Prereq_WhirlwindAttack~ featspl_1=~USFWHRA1~ END
+LAF ADD_FEAT_IWD2 INT_VAR nameref=RESOLVE_STR_REF(@345) descref=RESOLVE_STR_REF(@346) max=1 STR_VAR name=~ME_NATURAL_SPELL~ script=~Feats_NaturalSpell~ featspl_1=~USFNASP1~ END
 
 // New descriptions for classes
 COPY_EXISTING ~help02.2da~ ~override~
@@ -1314,6 +1315,30 @@ COPY_EXISTING_REGEXP ~USW30L.*\.itm~ ~override~
 	SAY NAME1 @156
 	SAY NAME2 @156
 	SAY DESC @156
+
+COPY_EXISTING_REGEXP ~USW[0-9][0-9]L[0-9][0-9]\.spl~ ~override~
+	READ_LONG 0x64 headeroffset
+	READ_SHORT 0x68 numheaders
+	READ_LONG 0x6A effectoffset
+	READ_SHORT (headeroffset + 0x28 * (numheaders - 1) + 0x1E) lastheadernumeffects
+	READ_SHORT (headeroffset + 0x28 * (numheaders - 1) + 0x20) lastheaderfirsteffectindex
+	numeffects = lastheadernumeffects + lastheaderfirsteffectindex
+	offset = effectoffset
+	FOR (i = 0; i < numeffects; ++i) BEGIN
+		READ_SHORT offset theopcode
+		READ_LONG (offset + 0x8) theparameter2
+		READ_BYTE (offset + 0xC) thetiming
+		PATCH_IF theopcode = 135 BEGIN
+			WRITE_SHORT offset 500
+			READ_ASCII (offset + 0x14) theresource
+			WRITE_ASCIIE (offset + 0x4) ~%theresource%~ #8
+			WRITE_ASCII (offset + 0x14) ~MEPOLYMO~ #8
+			WRITE_BYTE (offset + 0xC) 0
+			WRITE_LONG (offset + 0xE) 0
+		END
+		offset = offset + 0x30
+	END
+	BUT_ONLY_IF_IT_CHANGES
 
 COPY_EXISTING ~LISTSHAP.2da~ ~override~
 	COUNT_2DA_ROWS 2 numrows

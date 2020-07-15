@@ -311,6 +311,14 @@ Prerequisites: Dex 13+, Int 13+, Expertise, Dodge, Mobility, Spring Attack, base
 Benefit: You gain the Whirlwind Attack ability, usable once per round. By using the ability, you make an attack with each of your weapons against each nearby enemy, forgoing all other attacks for the round. All attacks made this way have a -4 attack penalty and cannot critically hit. The radius of the attack depends on the reach of your weapon.
 
 When taken a second time, the feat is Improved Whirlwind Attack, which increases the radius of the attack by 5 feet.~
+@345    = ~Natural Spell~
+@346    = ~Natural Spell:
+
+You are able to replicate the verbal and somatic components of spells while shapeshifted.
+
+Prerequisites: Cha 13+, Wild Shape.
+
+Benefit: You can cast spells while in any shapeshifted form.~
 
 @524    = ~Barbarian~
 @525    = ~BARBARIAN: 
@@ -564,9 +572,9 @@ Favored Class: Barbarian
 Advantages:
 * +2 to Dexterity.
 * +2 to Move Silently checks.
-* +1 to hit with thrown weapons.
+* +1 to hit with slings and thrown weapons.
 * +2 morale bonus on saving throws against fear.
-* Gains 1.5 times their Strength bonus to damage with thrown weapons, as one would with two-handed weapons.
+* Gains 1.5 times their Strength bonus to damage with slings and thrown weapons, as one would with two-handed weapons.
 
 Disadvantages:
 * -2 Intelligence.
@@ -1116,8 +1124,8 @@ Advantages:
 * +2 to Move Silently checks.
 * +1 to all saving throws.
 * +2 morale bonus on saving throws against fear.
-* +1 to hit with thrown weapons.
-* May add their Dexterity modifier rather than their Strength modifier to the damage of a thrown weapon (if the former is higher).
+* +1 to hit with slings and thrown weapons.
+* May add their Dexterity modifier rather than their Strength modifier to the damage of a sling or thrown weapon (if the former is higher).
 
 Disadvantages:
 * -2 to Strength.
@@ -1133,7 +1141,7 @@ Advantages:
 * +2 to Dexterity.
 * +2 to Move Silently checks.
 * +2 morale bonus on saving throws against fear.
-* +1 attack bonus with thrown weapons.
+* +1 attack bonus with slings and thrown weapons.
 * 1 extra feat at 1st level.
 
 Disadvantages:
@@ -1161,7 +1169,7 @@ Disadvantages:
 @801    = ~Deep Gnome~
 @802    = ~DEEP GNOME: 
 
-Also known as svirfneblin, the deep gnomes of the Realms are a secretive, mysterious race. Found in the deepest caverns of the Underdark, the svirfneblin live in constant fear of slavery or destruction at the hands or dark elves, mind flayers, and duergar. Deep gnomes are legendary for their ability to handle stone and gems. They have brown or gray skin and gray or white hair.
+Also known as svirfneblin, the deep gnomes of the Realms are a secretive, mysterious race. Found in the deepest caverns of the Underdark, the svirfneblin live in constant fear of slavery or destruction at the hands or dark elves, mind flayers, and duergar. Deep gnomes are legendary for their ability to handle stone and gems. They have brown or gray skin and gray or white hair. They are among the few denizens of the Underdark that tend not to be evil.
 
 Favored Class: Illusionist
 
@@ -1344,7 +1352,105 @@ A wizard that specializes in magic that alters physical reality.
 
 Disadvantages:
 * Transmuters cannot learn spells from the Enchantment school.~
+@831    = ~AASIMAR:
 
+Aasimar carry the blood of a celestial, the begotten offspring from the union of a mortal and a celestial. Aasimar are usually good-aligned and fight against evil in the world. They typically have fair skin, golden eyes, and often a birthmark in the shape of a deity's holy symbol. Aasimar are blessed with insight and personal magnetism and are typically paladins.
+
+Favored Class: Paladin
+
+Advantages:
+* +1 Wisdom.
+* +1 Charisma.
+* Acid, cold, and electrical resistance: 5 points.
+* Sunscorch 1/Day.
+* Darkvision.
+
+Disadvantages:
+* -2 Dexterity.
+~
+@832    = ~TIEFLING:
+
+The infernal counterpart to aasimar, tieflings are humans with a hint of the diabolical in their bloodline. Though their appearance is mostly human, they often have telltale signs that belie their ancestry. Tieflings usually have dusky skin and dark or reddish hair. Though many sport small horns, cat eyes, or other bizarre features, most tieflings try to hide their abnormalities from humans.
+
+Favored Class: Rogue
+
+Advantages:
+* +1 Intelligence.
+* +1 Dexterity.
+* Cold, fire, and electrical resistance: 5 points.
+* +2 to Bluff and Hide checks.
+* Blindness 1/Day.
+* Darkvision.
+
+Disadvantages:
+* -2 Charisma.
+~
+@833    = ~DROW:
+
+Dark elves, also known as drow, are the subterranean cousins of moon elves. Their black skin and pale hair are a curse for their allegiance with the spider goddess, Lolth. Drow societies are usually ruled by cruel priestesses of Lolth and their noble houses. Dark elves are known for their arrogance, cruelty, and penchant for civil war.
+
+Favored Class: Wizard (male) or cleric (female).
+
+Advantages:
+* +2 to Dexterity.
+* +2 racial bonus to saves against Enchantment magic.
+* +2 racial bonus on Will saves against spells and spell-like abilities.
+* +2 to Search checks.
+* Spell resistance of 1 + character level.
+* Immunity to Sleep magic.
+* Proficient with large swords and crossbows (but not bows)
+* Faerie Fire 3/day.
+* Darkvision.
+
+Disadvantages:
+* -2 to Constitution.
+* Light Blindness: -1 circumstance penalty to all attack rolls, saves and skill checks while operating in bright light.
+~
+@834    = ~GRAY DWARF:
+
+Also known as duergar, the gray dwarves of the Forgotten Realms live even deeper underground than their shield dwarf and gold dwarf cousins. The duergar share little in common with other dwarves and practice slavery in their monstrous subterranean cities. Often motivated by greed and a thirst for power, gray dwarves are known throughout the Realms as devious, efficient warriors. Duergar almost always have gray hair and skin.
+
+Favored Class: Fighter
+
+Advantages:
+* +2 to Constitution.
+* Stonecunning: +2 racial bonus on Search checks to notice unusual stonework, such as sliding walls, secret doors, stonework traps and new construction.
+* +2 racial bonus to saving throws against poison.
+* +2 racial bonus to saving throws against spells and spell-like effects.
+* +4 racial bonus on Move Silently checks. Gray dwarves excel in stealthy movement.
+* +4 dodge bonus against giants.
+* Immune to paralysis (still vulnerable to stunning attacks).
+* Invisibility 1/day.
+* Proficient with axes and hammers.
+* Darkvision.
+
+Disadvantages:
+* -4 Charisma.
+* Light Blindness: -2 circumstance penalty to all attack rolls, saves and skill checks while operating in bright light.
+~
+@835    = ~DEEP GNOME:
+
+Also known as svirfneblin, the deep gnomes of the Realms are a secretive, mysterious race. Found in the deepest caverns of the Underdark, the svirfneblin live in constant fear of slavery or destruction at the hands or dark elves, mind flayers, and duergar. Deep gnomes are legendary for their ability to handle stone and gems. They have brown or gray skin and gray or white hair. They are among the few denizens of the Underdark that tend not to be evil.
+
+Favored Class: Illusionist
+
+Advantages:
+* +1 Dexterity.
+* +1 Wisdom.
+* Spell resistance of 1 + character level.
+* Mirror Image 1/Day.
+* Invisibility 1/Day.
+* Blur 1/Day.
+* Nondetection. Deep gnomes are difficult to detect by divination spells and by scrying items such as crystal balls.
+* +1 racial bonus to attack rolls against kobolds, goblins, hobgoblins, and bugbears.
+* Stonecunning: +2 racial bonus on Search checks.
+* +2 racial bonus on Hide checks, which improves to +4 in darkened areas underground.
+* Darkvision.
+
+Disadvantages:
+* -2 Strength.
+* -4 Charisma.
+~
 @897    = ~The Song of Kaudies - Blink~
 @898    = ~Additional attack~
 @899    = ~Sneak Attack~

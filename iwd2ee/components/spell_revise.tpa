@@ -57,7 +57,8 @@ COPY ~%mod_folder%/bam/USAZB01C.bam~ ~override~
 COPY ~%mod_folder%/itm/GOODBER.itm~ ~override~
   SAY NAME1 @2492
   SAY NAME2 @2492
-  SAY DESC @2493
+  SAY UNIDENTIFIED_DESC @2493
+  SAY IDENTIFIED_DESC @2493
 
 // edits to summoned critters
 
@@ -1143,7 +1144,6 @@ COPY ~%mod_folder%/itm/BCLAW.itm~ ~override~
 COPY ~%mod_folder%/itm/BLIGHTN.itm~ ~override~
 COPY ~%mod_folder%/itm/DECASTA.itm~ ~override~
 COPY ~%mod_folder%/itm/DOBONE.itm~ ~override~
-COPY ~%mod_folder%/itm/GOODBER.itm~ ~override~
 COPY ~%mod_folder%/itm/GTOUCH.itm~ ~override~
 COPY ~%mod_folder%/itm/moonbla.itm~ ~override~
 COPY ~%mod_folder%/itm/PBLADE.itm~ ~override~

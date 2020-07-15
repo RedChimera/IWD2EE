@@ -1,0 +1,133 @@
+COPY_EXISTING ~IEex_INI.lua~ ~override~
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~\[\"EX_LVADJ\"\].*~ ~["EX_LVADJ"] = true,~
+	IF_EXISTS
+	BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING ~usraceab.spl~ ~override~
+	LPF ALTER_EFFECT INT_VAR silent=1 check_headers=1 check_globals=0 match_opcode=500 match_special=518 probability2=0 STR_VAR match_resource=~MERACESP~ END
+	IF_EXISTS
+
+COPY_EXISTING ~abracead.2da~ ~override~
+	LPF GET_2DA_ROW INT_VAR numcolumns=7 match_column=0 STR_VAR match=~HUMAN_AASIMAR~ RET aasimarrow=matched END
+	SET_2DA_ENTRY aasimarrow 2 7 ~-2~
+	SET_2DA_ENTRY aasimarrow 5 7 ~1~
+	SET_2DA_ENTRY aasimarrow 6 7 ~1~
+	LPF GET_2DA_ROW INT_VAR numcolumns=7 match_column=0 STR_VAR match=~HUMAN_TIEFLING~ RET tieflingrow=matched END
+	SET_2DA_ENTRY tieflingrow 2 7 ~1~
+	SET_2DA_ENTRY tieflingrow 4 7 ~1~
+	LPF GET_2DA_ROW INT_VAR numcolumns=7 match_column=0 STR_VAR match=~ELF_DROW~ RET drowrow=matched END
+	SET_2DA_ENTRY drowrow 4 7 ~0~
+	SET_2DA_ENTRY drowrow 6 7 ~0~
+	LPF GET_2DA_ROW INT_VAR numcolumns=7 match_column=0 STR_VAR match=~GNOME_DEEP~ RET svirfrow=matched END
+	SET_2DA_ENTRY svirfrow 2 7 ~1~
+	SET_2DA_ENTRY svirfrow 5 7 ~1~
+
+COPY_EXISTING ~racersmd.2da~ ~override~
+	LPF GET_2DA_ROW INT_VAR numcolumns=12 match_column=0 STR_VAR match=~ELF_DROW~ RET drowrow=matched END
+	SET_2DA_ENTRY drowrow 5 12 ~1~
+	LPF GET_2DA_ROW INT_VAR numcolumns=12 match_column=0 STR_VAR match=~GNOME_DEEP~ RET svirfrow=matched END
+	SET_2DA_ENTRY svirfrow 5 12 ~1~
+
+COPY_EXISTING ~strtxp.2da~ ~override~
+	LPF GET_2DA_ROW INT_VAR numcolumns=2 match_column=0 STR_VAR match=~HUMAN_AASIMAR~ RET aasimarrow=matched END
+	SET_2DA_ENTRY aasimarrow 1 2 ~0~
+	LPF GET_2DA_ROW INT_VAR numcolumns=2 match_column=0 STR_VAR match=~HUMAN_TIEFLING~ RET tieflingrow=matched END
+	SET_2DA_ENTRY tieflingrow 1 2 ~0~
+	LPF GET_2DA_ROW INT_VAR numcolumns=2 match_column=0 STR_VAR match=~ELF_DROW~ RET drowrow=matched END
+	SET_2DA_ENTRY drowrow 1 2 ~0~
+	LPF GET_2DA_ROW INT_VAR numcolumns=2 match_column=0 STR_VAR match=~DWARF_GRAY~ RET duergarrow=matched END
+	SET_2DA_ENTRY duergarrow 1 2 ~0~
+	LPF GET_2DA_ROW INT_VAR numcolumns=2 match_column=0 STR_VAR match=~GNOME_DEEP~ RET svirfrow=matched END
+	SET_2DA_ENTRY svirfrow 1 2 ~0~
+
+COPY_EXISTING ~help04.2da~ ~override~
+  COUNT_2DA_COLS num_cols
+  READ_2DA_ENTRIES_NOW rows num_cols
+  FOR (row = 0; row < rows; ++row) BEGIN
+    READ_2DA_ENTRY_FORMER rows row 0 label
+    PATCH_MATCH ~%label%~ WITH
+      ~2~ BEGIN
+        SET strref = RESOLVE_STR_REF(@831)
+        SET_2DA_ENTRY_LATER rows_out row 2 ~%strref%~
+      END
+      ~3~ BEGIN
+        SET strref = RESOLVE_STR_REF(@832)
+        SET_2DA_ENTRY_LATER rows_out row 2 ~%strref%~
+      END
+      ~5~ BEGIN
+        SET strref = RESOLVE_STR_REF(@833)
+        SET_2DA_ENTRY_LATER rows_out row 2 ~%strref%~
+      END
+      ~11~ BEGIN
+        SET strref = RESOLVE_STR_REF(@835)
+        SET_2DA_ENTRY_LATER rows_out row 2 ~%strref%~
+      END
+      ~15~ BEGIN
+        SET strref = RESOLVE_STR_REF(@834)
+        SET_2DA_ENTRY_LATER rows_out row 2 ~%strref%~
+      END
+      DEFAULT
+    END
+  END
+  SET_2DA_ENTRIES_NOW rows_out num_cols
+BUT_ONLY
+
+// Not all race and class descriptions are connected to .2da files. For the others, we have to use STRING_SET to simply replace them.
+STRING_SET 5386 @831
+STRING_SET 5388 @832
+STRING_SET 5394 @833
+STRING_SET 5416 @834
+STRING_SET 5662 @835
+/*
+<<<<<<<< .../script.baf
+IF
+	Exists(Player1)
+	!CheckSpellState(Player1,203)
+THEN
+	RESPONSE #100
+		ReallyForceSpellRES("USRACEAB",Player1)
+END
+
+IF
+	Exists(Player2)
+	!CheckSpellState(Player2,203)
+THEN
+	RESPONSE #100
+		ReallyForceSpellRES("USRACEAB",Player2)
+END
+
+IF
+	Exists(Player3)
+	!CheckSpellState(Player3,203)
+THEN
+	RESPONSE #100
+		ReallyForceSpellRES("USRACEAB",Player3)
+END
+
+IF
+	Exists(Player4)
+	!CheckSpellState(Player4,203)
+THEN
+	RESPONSE #100
+		ReallyForceSpellRES("USRACEAB",Player4)
+END
+
+IF
+	Exists(Player5)
+	!CheckSpellState(Player5,203)
+THEN
+	RESPONSE #100
+		ReallyForceSpellRES("USRACEAB",Player5)
+END
+
+IF
+	Exists(Player6)
+	!CheckSpellState(Player6,203)
+THEN
+	RESPONSE #100
+		ReallyForceSpellRES("USRACEAB",Player6)
+END
+
+>>>>>>>>
+EXTEND_BOTTOM ~baldur.bcs~ ~.../script.baf~
+*/
