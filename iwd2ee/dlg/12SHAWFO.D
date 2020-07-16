@@ -470,11 +470,13 @@ END
 IF ~~ THEN BEGIN ShawfordTransition
   SAY ~Very well, I'll find someone else to handle the situation. In the meantime-~
   IF ~  Global("10Swift_Dead","GLOBAL",0)
-~ THEN REPLY #10813 DO ~SetGlobal("Goblins_Attack_Palisade", "GLOBAL", 1)
+~ THEN REPLY #10813 DO ~AddexperienceParty(5100)
+SetGlobal("Goblins_Attack_Palisade", "GLOBAL", 1)
 StartCutSceneMode()
 StartCutScene("12cWar2")~ EXIT
   IF ~  Global("10Swift_Dead","GLOBAL",1)
-~ THEN REPLY #10813 DO ~SetGlobal("Goblins_Attack_Palisade", "GLOBAL", 1)
+~ THEN REPLY #10813 DO ~AddexperienceParty(5100)
+SetGlobal("Goblins_Attack_Palisade", "GLOBAL", 1)
 StartCutSceneMode()
 StartCutScene("12cWar0")~ EXIT
 END

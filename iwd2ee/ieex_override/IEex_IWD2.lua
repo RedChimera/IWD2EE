@@ -788,6 +788,13 @@ function IEex_GetClassSpellLevel(actorID, casterClass, spellRES)
 			classSpellLevel = ex_listdomn[spellRES][ex_kitid_listdomn[casterKit]]
 		end
 	end
+	if ex_classid_listspll[casterClass] == nil and ex_listspll[spellRES] ~= nil then
+		for k, v in ipairs(ex_listspll[spellRES]) do
+			if v > 0 and (classSpellLevel == 0 or v < classSpellLevel) then 
+				classSpellLevel = v
+			end
+		end
+	end
 	return classSpellLevel
 end
 
@@ -1541,6 +1548,16 @@ function EXDAMAGE(effectData, creatureData)
 	local saveBonusStat = IEex_ReadByte(effectData + 0x47, 0x0)
 	local parent_resource = IEex_ReadLString(effectData + 0x90, 8)
 	local casterlvl = IEex_ReadDword(effectData + 0xC4)
+	local casterClass = IEex_ReadByte(effectData + 0xC5, 0x0)
+	local sourceSpell = ex_damage_source_spell[parent_resource]
+	if sourceSpell == nil then
+		sourceSpell = parent_resource
+	end
+	local classSpellLevel = 0
+	if IEex_IsSprite(sourceID, true) then
+		classSpellLevel = IEex_GetClassSpellLevel(sourceID, casterClass, sourceSpell)
+	end
+	savebonus = savebonus + classSpellLevel
 	local rogueLevel = 0
 	local isSneakAttack = false
 	local isTrueBackstab = false
@@ -1621,12 +1638,6 @@ function EXDAMAGE(effectData, creatureData)
 			luck = 0 - IEex_GetActorStat(targetID, 32)
 		end
 		if IEex_IsSprite(sourceID, true) and IEex_GetActorSpellState(sourceID, 238) then
-			local casterClass = IEex_ReadByte(effectData + 0xC5, 0x0)
-			local sourceSpell = ex_damage_source_spell[parent_resource]
-			if sourceSpell == nil then
-				sourceSpell = parent_resource
-			end
-			local classSpellLevel = IEex_GetClassSpellLevel(sourceID, casterClass, sourceSpell)
 			local maximumMaximizeSpellLevel = 0
 			IEex_IterateActorEffects(sourceID, function(eData)
 				local theopcode = IEex_ReadDword(eData + 0x10)
@@ -1768,17 +1779,25 @@ function EXDAMAGE(effectData, creatureData)
 		local saveBonusStatValue = 0
 		if saveBonusStat > 0 and bit32.band(savingthrow, 0x2000000) == 0 then
 			if saveBonusStat == 120 then
-				local highestStatValue = IEex_GetActorStat(sourceID, 38)
-				saveBonusStat = 38
-				if IEex_GetActorStat(sourceID, 39) > highestStatValue then
-					highestStatValue = IEex_GetActorStat(sourceID, 39)
+				if casterClass == 11 then
+					saveBonusStat = 38
+				elseif casterClass == 3 or casterClass == 4 or casterClass == 7 or casterClass == 8 then
 					saveBonusStat = 39
-				end
-				if IEex_GetActorStat(sourceID, 42) > highestStatValue then
-					highestStatValue = IEex_GetActorStat(sourceID, 42)
+				elseif casterClass == 2 or casterClass == 10 then
 					saveBonusStat = 42
+				else
+					local highestStatValue = IEex_GetActorStat(sourceID, 38)
+					saveBonusStat = 38
+					if IEex_GetActorStat(sourceID, 39) > highestStatValue then
+						highestStatValue = IEex_GetActorStat(sourceID, 39)
+						saveBonusStat = 39
+					end
+					if IEex_GetActorStat(sourceID, 42) > highestStatValue then
+						highestStatValue = IEex_GetActorStat(sourceID, 42)
+						saveBonusStat = 42
+					end
+					saveBonusStatValue = highestStatValue
 				end
-				saveBonusStatValue = highestStatValue
 			else
 				saveBonusStatValue = IEex_GetActorStat(sourceID, saveBonusStat)
 			end
@@ -2339,7 +2358,7 @@ statspells = {
 [16] = {[0] = "USW21L01", [9] = "USW21L09", [16] = "USW21L16", [24] = "USW21L24"}, -- Wild Shape: Blink Dog (Feat 1)
 [17] = {[0] = "USW22L01", [10] = "USW22L10", [15] = "USW22L15", [20] = "USW22L20", [25] = "USW22L25", [30] = "USW22L30"}, -- Wild Shape: Creeping Doom (Feat 2)
 [18] = {[0] = "USW23L01", [13] = "USW23L13", [18] = "USW23L18", [23] = "USW23L23", [28] = "USW23L28"}, -- Wild Shape: Rhinoceros Beetle (Feat 3)
-[19] = {[0] = "USW30L01"}, -- Wild Shape: Black Dragon
+[19] = {[0] = "USW30L01", [40] = "USW30L40", [50] = "USW30L50"}, -- Wild Shape: Black Dragon
 [20] = {[0] = "USDUHM01", [2] = "USDUHM02", [3] = "USDUHM03", [4] = "USDUHM04", [5] = "USDUHM05", [6] = "USDUHM06", [7] = "USDUHM07", [8] = "USDUHM08", [9] = "USDUHM09", [10] = "USDUHM10"},
 [21] = {[12] = "USDAMA01", [14] = "USDAMA02", [16] = "USDAMA03", [18] = "USDAMA04", [20] = "USDAMA05", [22] = "USDAMA06", [24] = "USDAMA07", [26] = "USDAMA08", [28] = "USDAMA09", [30] = "USDAMA10", [32] = "USDAMA11", [34] = "USDAMA12", [36] = "USDAMA13", [38] = "USDAMA14", [40] = "USDAMA15"}, -- Stat-based bonuses to damage
 [22] = {[14] = "USDAMA01", [18] = "USDAMA02", [22] = "USDAMA03", [26] = "USDAMA04", [30] = "USDAMA05", [34] = "USDAMA06", [38] = "USDAMA07"}, -- Half stat-based bonuses to damage
@@ -3487,6 +3506,26 @@ function MEPOLYBA(effectData, creatureData)
 ["source_id"] = targetID
 })
 	end
+end
+
+function MEPOLYBL(originatingEffectData, effectData, creatureData)
+	if IEex_CheckForEffectRepeat(effectData, creatureData) then return end
+	local targetID = IEex_GetActorIDShare(creatureData)
+	local parent_resource = IEex_ReadLString(effectData + 0x90, 8)
+	local opcode = IEex_ReadDword(effectData + 0xC)
+	local savingthrow = IEex_ReadDword(effectData + 0x3C)
+	if opcode == 111 and bit32.band(savingthrow, 0x10000) == 0 then
+		return true
+	elseif opcode == 58 then
+		IEex_ApplyEffectToActor(targetID, {
+["opcode"] = 402,
+["target"] = 2,
+["timing"] = 9,
+["resource"] = "SPIN122",
+["source_id"] = targetID
+})
+	end
+	return false
 end
 
 function MEQUIPLE(effectData, creatureData)
@@ -5398,21 +5437,39 @@ function MESPLSAV(effectData, creatureData)
 	local spellFocus = IEex_ReadByte(effectData + 0x47, 0x0)
 	local parent_resource = IEex_ReadLString(effectData + 0x90, 8)
 	local casterlvl = IEex_ReadDword(effectData + 0xC4)
-
+	local casterClass = IEex_ReadByte(effectData + 0xC5, 0x0)
+	local sourceSpell = ex_damage_source_spell[parent_resource]
+	if sourceSpell == nil then
+		sourceSpell = parent_resource
+	end
+	local classSpellLevel = 0
+	if IEex_IsSprite(sourceID, true) then
+		classSpellLevel = IEex_GetClassSpellLevel(sourceID, casterClass, sourceSpell)
+	end
+	savebonus = savebonus + classSpellLevel
 	local saveBonusStatValue = 0
 	if IEex_IsSprite(sourceID, true) then
 		sourceData = IEex_GetActorShare(sourceID)
 		if saveBonusStat > 0 then
-			if saveBonusStat == 160 then
-				local highestStatValue = IEex_GetActorStat(sourceID, 38)
-				saveBonusStat = 38
-				if IEex_GetActorStat(sourceID, 39) > highestStatValue then
-					highestStatValue = IEex_GetActorStat(sourceID, 39)
+			if saveBonusStat == 120 or saveBonusStat == 160 then
+				if casterClass == 11 then
+					saveBonusStat = 38
+				elseif casterClass == 3 or casterClass == 4 or casterClass == 7 or casterClass == 8 then
 					saveBonusStat = 39
-				end
-				if IEex_GetActorStat(sourceID, 42) > highestStatValue then
-					highestStatValue = IEex_GetActorStat(sourceID, 42)
+				elseif casterClass == 2 or casterClass == 10 then
 					saveBonusStat = 42
+				else
+					local highestStatValue = IEex_GetActorStat(sourceID, 38)
+					saveBonusStat = 38
+					if IEex_GetActorStat(sourceID, 39) > highestStatValue then
+						highestStatValue = IEex_GetActorStat(sourceID, 39)
+						saveBonusStat = 39
+					end
+					if IEex_GetActorStat(sourceID, 42) > highestStatValue then
+						highestStatValue = IEex_GetActorStat(sourceID, 42)
+						saveBonusStat = 42
+					end
+					saveBonusStatValue = highestStatValue
 				end
 				saveBonusStatValue = highestStatValue
 			elseif ex_stat_check[saveBonusStat] ~= nil then

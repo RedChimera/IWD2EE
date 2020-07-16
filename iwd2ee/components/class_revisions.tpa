@@ -1317,6 +1317,7 @@ COPY_EXISTING_REGEXP ~USW30L.*\.itm~ ~override~
 	SAY DESC @156
 
 COPY_EXISTING_REGEXP ~USW[0-9][0-9]L[0-9][0-9]\.spl~ ~override~
+	LPF ALTER_EFFECT INT_VAR silent=1 check_headers=1 check_globals=0 match_opcode=111 savingthrow=0x10000 END
 	READ_LONG 0x64 headeroffset
 	READ_SHORT 0x68 numheaders
 	READ_LONG 0x6A effectoffset
@@ -1338,6 +1339,10 @@ COPY_EXISTING_REGEXP ~USW[0-9][0-9]L[0-9][0-9]\.spl~ ~override~
 		END
 		offset = offset + 0x30
 	END
+	BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING_REGEXP ~USW[0-9][0-9]L[0-9][0-9]\.itm~ ~override~
+	LPF ADD_ITEM_EQEFFECT INT_VAR opcode=502 target=1 timing=2 STR_VAR resource=~MEPOLYBL~ END
 	BUT_ONLY_IF_IT_CHANGES
 
 COPY_EXISTING ~LISTSHAP.2da~ ~override~
@@ -1383,6 +1388,9 @@ COPY_EXISTING ~spin122.spl~ ~override~ ~sppr504.spl~ ~override~ ~sppr712.spl~ ~o
 COPY_EXISTING ~spin122.spl~ ~override~ ~sppr504.spl~ ~override~ ~sppr712.spl~ ~override~
 	LPF CLONE_EFFECT INT_VAR multi_match=1 opcode=276 parameter2=255 timing=9 STR_VAR resource=~USNOSALA~ insert=~last~ END
 	UNLESS ~USNOSALA~
+
+COPY_EXISTING ~sppr504.spl~ ~override~ ~sppr712.spl~ ~override~
+	LPF CLONE_EFFECT INT_VAR multi_match=1 opcode=500 timing=0 parameter1=0 parameter2=0 STR_VAR resource=~MEPOLYBA~ insert=~last~ END
 
   STRING_SET 9558 ~PALADIN:
 

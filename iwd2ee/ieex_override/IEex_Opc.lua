@@ -160,7 +160,7 @@
 	function IEex_AddScreenEffectsGlobal(func_name, func)
 		IEex_ScreenEffectsGlobalFunctions[func_name] = func
 	end
-
+--[[
 	IEex_AddScreenEffectsGlobal("EXEFFMOD", function(effectData, creatureData)
 		local targetID = IEex_ReadDword(creatureData + 0x34)
 		local sourceID = IEex_ReadDword(effectData + 0x10C)
@@ -192,7 +192,7 @@
 		end
 		return false
 	end)
-	
+--]]
 	IEex_RegisterLuaStat({
 
 		["reload"] = function(stats)

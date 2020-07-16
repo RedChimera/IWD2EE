@@ -1010,15 +1010,15 @@ Weight: 1 lb.~
 
 @1544    = ~Symbol of Pain~
 @1545    = ~Symbol of Pain 
-(Divination) 
+(Divination)
 Level: Clr 8, Sor/Wiz 8
 Range: Sight of Caster
-Duration: 10 rounds / level
+Duration: 1 round / level
 Casting Time: 9
 Area of Effect: 30-foot radius
-Saving Throw: Fortitude half
+Saving Throw: None
 
-This spell conjures forth a magical glyph imbued with magical power that channels its effects through any enemy creatures capable of seeing it. Creatures affected will suffer wracking pains throughout their body, reducing their Dexterity scores by 6 and impose a -6 penalty on attack rolls, skill checks and ability checks. A successful Fortitude save will reduce the penalties by half. This spell has no effect on blind creatures.
+This spell conjures forth a magical glyph imbued with magical power that channels its effects through any enemy creatures capable of seeing it. Creatures affected will suffer wracking pains throughout their body, reducing their Dexterity scores by 6 and impose a -6 penalty on attack rolls, skill checks and ability checks. This spell has no effect on blind creatures.
 ~
 @1546    = ~Symbol of Death~
 @1547    = ~Symbol of Death 
@@ -1320,7 +1320,7 @@ Range: Sight of Caster
 Duration: 10 rounds/level
 Casting Time: 1 round
 Area of Effect: Sight of Caster
-Saving Throw: Fortitude half
+Saving Throw: Reflex half
 
 When a Call Lightning spell is cast, it must be cast outside, otherwise it will not work and the spell is wasted. The caster is able to call down bolts of lightning. The caster can call down one bolt per 10 rounds. The spell has a duration of 10 rounds per caster level. Each bolt causes 1d10 points of electrical damage for each of the caster's experience levels (maximum of 10d10). The bolt of lightning flashes down in a vertical stroke at any of the caster's enemies. The caster does not choose the targets of the spell, though the lightning will not strike any of his allies.~
 
@@ -1424,9 +1424,9 @@ Range: Sight of Caster
 Duration: 5 rounds
 Casting Time: 4
 Area of Effect: 15' radius
-Saving Throw: Will negates
+Saving Throw: None
 
-This spell creates the emotion of despair within the area of effect. All creatures affected by the spell must make a Will save at a -5 penalty or gain a -2 on their saving throws, attack bonuses, and damage rolls. Allies and unnatural creatures are unaffected.~
+This spell creates the emotion of despair within the area of effect. All creatures affected by the spell gain a -2 penalty on their saving throws, attack bonuses, and damage rolls. Allies and unnatural creatures are unaffected.~
 @1672    = ~Animate Zombie~
 @1673    = ~Animate Zombie 
 (Necromancy) 
@@ -1492,7 +1492,7 @@ Up to 2: Unconscious for 5 rounds
 A successful Will save at -2 will negate the effect. Blind creatures are not affected by color spray.
 ~
 @1682    = ~Alicorn Lance~
-@1683    = ~Alicorn Lance 
+@1683    = ~Alicorn Lance
 (Evocation)
 Level: Drd 2, Rgr 2, Ilmater 2, Selune 2
 Range: Sight of Caster
@@ -1501,7 +1501,7 @@ Casting Time: 5
 Area of Effect: 1 creature
 Saving Throw: None
 
-This spell creates a silver-hued, partially ethereal lance shaped in the form of an alicorn (a unicorn horn). The spellcaster chooses a target and the alicorn lance instantaneously fires at it, inflicting 1d6 points of piercing damage, plus another 1d6 damage per 5 levels. Although the alicorn lance dissipates after it strikes, it leaves a silvery radiance around the target that makes it easier to see and hit, giving it a -2 armor bonus for 3 rounds.~
+This spell creates a silver-hued, partially ethereal lance shaped in the form of an alicorn (a unicorn horn). The spellcaster chooses a target and the alicorn lance instantaneously fires at it, inflicting 4d6 points of piercing damage, plus another 1d6 damage per 5 levels. Although the alicorn lance dissipates after it strikes, it leaves a silvery radiance around the target that makes it easier to see and hit, giving it a -2 armor penalty for 3 rounds.~
 @1684    = ~Beast Claw~
 @1685    = ~Beast Claw
 (Transmutation)

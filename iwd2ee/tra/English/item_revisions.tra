@@ -11893,7 +11893,7 @@ STATISTICS:
 
 Shield Bonus: +8
 Special:
-  Spell Power: Can cast Aegis once per day, except that the effects last for 8 hours
+  Spell Power: Can cast Aegis once per day
 Armor Check Penalty:  -2
 Arcane Spell Failure:  15%
 Weight: 6 lb.~
@@ -13052,6 +13052,13 @@ STATISTICS:
 
 The wearer's spells last twice as long
 Weight: 3 lb.~
+@12755    = ~Lesser Robe of Maximizing~
+@12756    = ~Since the age of Netheril, wizards have learned to bestow a wide variety of magical properties upon the everyday objects that surround them. A favorite item of such enchantment is the common robe. It is lightweight, affordable, and holds its enchantment well, thereby making it ideal equipment for a wizard.
+
+STATISTICS:
+
+Maximizing: The wearer's 1st-level spells deal maximum damage. If the wearer already has the Maximize Spell feat, the maximum spell level that can be maximized is increased by 1.
+Weight: 0 lb.~
 @12900    = ~Hrm - you are powerful allies, indeed. More gold and gems to line your pockets, then - also, a suit of plate armor, a warhammer, a helmet, all crafted and enchanted by great duergar artisans. They are well deserved, outsider.~
 @12901    = ~Drink this Rainwater Brew, Ennelia. It should help your condition.~
 @12902    = ~Drink this Sour Draught, Ennelia. It should help your condition.~
