@@ -312,13 +312,13 @@ Benefit: You gain the Whirlwind Attack ability, usable once per round. By using 
 
 When taken a second time, the feat is Improved Whirlwind Attack, which increases the radius of the attack by 5 feet.~
 @345    = ~Natural Spell~
-@346    = ~Natural Spell:
+@346    = ~NATURAL SPELL:
 
 You are able to replicate the verbal and somatic components of spells while shapeshifted.
 
 Prerequisites: Cha 13+, Wild Shape.
 
-Benefit: You can cast spells while in any shapeshifted form.~
+Benefit: You can cast spells while in any shapeshifted form. However, the awkwardness of replicating the verbal and somatic components gives you a +4 penalty to casting time (you can still cast spells without penalty in your natural form).~
 
 @524    = ~Barbarian~
 @525    = ~BARBARIAN: 

@@ -59,6 +59,17 @@ function IEex_ReadByte(address, index)
 	return bit32.extract(IEex_ReadDword(address), index * 0x8, 0x8)
 end
 
+-- Reads a dword from the given address, extracting and returning the "index"th signed byte.
+function IEex_ReadSignedByte(address, index)
+	local readValue = bit32.extract(IEex_ReadDword(address), index * 0x8, 0x8)
+	-- TODO: Implement better conversion code.
+	if readValue >= 128 then
+		return -256 + readValue
+	else
+		return readValue
+	end
+end
+
 function IEex_ReadWord(address, index)
 	return bit32.extract(IEex_ReadDword(address), index * 0x10, 0x10)
 end

@@ -840,6 +840,10 @@ function IEex_GetGameData()
 	return m_pObjectGame
 end
 
+function IEex_GetGameTick()
+	return IEex_ReadDword(IEex_GetGameData() + 0x1B78)
+end
+
 function IEex_DisplayString(string)
 
 	string = tostring(string)
@@ -1836,14 +1840,20 @@ function EXDAMAGE(effectData, creatureData)
 	if bit32.band(savingthrow, 0x1000) > 0 then
 		newSavingThrow = bit32.bor(newSavingThrow, 0x10)
 	end
+	local damageBlocked = false
 	local damageAbsorbed = false
 	if IEex_GetActorSpellState(targetID, 214) then
 		IEex_IterateActorEffects(targetID, function(eData)
 			local theopcode = IEex_ReadDword(eData + 0x10)
 			local theparameter1 = IEex_ReadDword(eData + 0x1C)
 			local theparameter2 = IEex_ReadDword(eData + 0x20)
-			if theopcode == 288 and theparameter2 == 214 and theparameter1 == IEex_ReadWord(effectData + 0x1E, 0x0) then
-				damageAbsorbed = true
+			local theresource = IEex_ReadLString(eData + 0x30, 8)
+			local thesavingthrow = IEex_ReadDword(eData + 0x40)
+			if theopcode == 288 and theparameter2 == 214 and (theparameter1 == IEex_ReadWord(effectData + 0x1E, 0x0) or (theresource == parent_resource and (theresource ~= "" or bit32.band(thesavingthrow, 0x20000) > 0))) then
+				damageBlocked = true
+				if bit32.band(thesavingthrow, 0x10000) > 0 then
+					damageAbsorbed = true
+				end
 			end
 		end)
 	end
@@ -1908,7 +1918,7 @@ function EXDAMAGE(effectData, creatureData)
 	["source_target"] = targetID,
 	["source_id"] = sourceID
 	})
-		else
+		elseif damageBlocked == false then
 			IEex_ApplyEffectToActor(targetID, {
 	["opcode"] = 12,
 	["target"] = 2,
@@ -1922,7 +1932,7 @@ function EXDAMAGE(effectData, creatureData)
 	["source_id"] = sourceID
 	})
 		end
-		if bit32.band(savingthrow, 0x200000) > 0 or bit32.band(savingthrow, 0x400000) > 0 then
+		if (bit32.band(savingthrow, 0x200000) > 0 or bit32.band(savingthrow, 0x400000) > 0) and damageBlocked == false then
 			local targetResistance = 0
 			if ex_damage_resistance_stat[damageType] ~= nil then
 				targetResistance = IEex_GetActorStat(targetID, ex_damage_resistance_stat[damageType])
@@ -3092,6 +3102,33 @@ function MEPOLYMO(effectData, creatureData)
 	local baseIntelligence = IEex_ReadByte(creatureData + 0x803, 0x0)
 	local baseWisdom = IEex_ReadByte(creatureData + 0x804, 0x0)
 	local baseCharisma = IEex_ReadByte(creatureData + 0x807, 0x0)
+	local specialFlags = IEex_ReadByte(creatureData + 0x89F, 0x0)
+	local baseCritImmunity = 0
+	if bit32.band(specialFlags, 0x2) > 0 then
+		baseCritImmunity = 1
+	end
+	local hasCursedWeapon = false
+	IEex_IterateActorEffects(targetID, function(eData)
+		local theopcode = IEex_ReadDword(eData + 0x10)
+		local theparameter1 = IEex_ReadDword(eData + 0x1C)
+		local theparameter2 = IEex_ReadDword(eData + 0x20)
+		local thesavingthrow = IEex_ReadDword(eData + 0x40)
+		local thespecial = IEex_ReadByte(eData + 0x48, 0x0)
+		if theopcode == 288 and theparameter2 == 241 and thespecial >= 4 and bit32.band(thesavingthrow, 0x100000) > 0 then
+			hasCursedWeapon = true
+		end
+	end)
+	if hasCursedWeapon then
+		IEex_ApplyEffectToActor(targetID, {
+["opcode"] = 290,
+["target"] = 2,
+["timing"] = 0,
+["resource"] = parent_resource,
+["parent_resource"] = parent_resource,
+["source_id"] = targetID
+})
+		return
+	end
 	if IEex_GetActorSpellState(targetID, 188) then
 		IEex_IterateActorEffects(targetID, function(eData)
 			local theopcode = IEex_ReadDword(eData + 0x10)
@@ -3113,6 +3150,7 @@ function MEPOLYMO(effectData, creatureData)
 ["timing"] = 9,
 ["parameter1"] = IEex_ReadDword(creatureData + 0x5C4),
 ["parameter2"] = 188,
+["savingthrow"] = baseCritImmunity * 0x1000000,
 ["savebonus"] = baseStrength + baseDexterity * 0x100 + baseConstitution * 0x10000 + baseIntelligence * 0x1000000,
 ["special"] = baseWisdom + baseCharisma * 0x100,
 ["parent_resource"] = "USPOLYBA",
@@ -3122,6 +3160,11 @@ function MEPOLYMO(effectData, creatureData)
 	local resWrapper = IEex_DemandRes(creRES, "CRE")
 	if resWrapper:isValid() then
 		local formData = resWrapper:getData()
+		if bit32.band(IEex_ReadByte(formData + 0x303, 0x0), 0x2) > 0 then
+			IEex_WriteByte(creatureData + 0x89F, bit32.bor(specialFlags, 0x2))
+		else
+			IEex_WriteByte(creatureData + 0x89F, bit32.band(specialFlags, 0xFD))
+		end
 		IEex_ApplyEffectToActor(targetID, {
 ["opcode"] = 254,
 ["target"] = 2,
@@ -3208,6 +3251,7 @@ function MEPOLYMO(effectData, creatureData)
 ["source_id"] = targetID
 })
 		end
+--[[
 		local newIntelligence = IEex_ReadByte(formData + 0x267, 0x0)
 		if newIntelligence > baseIntelligence then
 --			IEex_WriteByte(creatureData + 0x803, newIntelligence)
@@ -3280,6 +3324,7 @@ function MEPOLYMO(effectData, creatureData)
 ["source_id"] = targetID
 })
 		end
+--]]
 		IEex_ApplyEffectToActor(targetID, {
 ["opcode"] = 144,
 ["target"] = 2,
@@ -3294,6 +3339,16 @@ function MEPOLYMO(effectData, creatureData)
 ["timing"] = 9,
 ["parameter2"] = 1,
 ["parent_resource"] = "USPOLYSP",
+["source_id"] = targetID
+})
+		IEex_ApplyEffectToActor(targetID, {
+["opcode"] = 288,
+["target"] = 2,
+["timing"] = 9,
+["parameter1"] = -4,
+["parameter2"] = 193,
+["special"] = 2,
+["parent_resource"] = "USPOLYMO",
 ["source_id"] = targetID
 })
 		IEex_ApplyEffectToActor(targetID, {
@@ -3318,8 +3373,8 @@ function MEPOLYMO(effectData, creatureData)
 ["opcode"] = 30,
 ["target"] = 2,
 ["timing"] = 9,
-["parameter1"] = IEex_ReadByte(formData + 0x55, 0x0),
-["parameter2"] = 1,
+["parameter1"] = IEex_ReadSignedByte(formData + 0x55, 0x0),
+["parameter2"] = 0,
 ["parent_resource"] = "USPOLYMO",
 ["source_id"] = targetID
 })
@@ -3327,8 +3382,8 @@ function MEPOLYMO(effectData, creatureData)
 ["opcode"] = 28,
 ["target"] = 2,
 ["timing"] = 9,
-["parameter1"] = IEex_ReadByte(formData + 0x56, 0x0),
-["parameter2"] = 1,
+["parameter1"] = IEex_ReadSignedByte(formData + 0x56, 0x0),
+["parameter2"] = 0,
 ["parent_resource"] = "USPOLYMO",
 ["source_id"] = targetID
 })
@@ -3336,8 +3391,8 @@ function MEPOLYMO(effectData, creatureData)
 ["opcode"] = 29,
 ["target"] = 2,
 ["timing"] = 9,
-["parameter1"] = IEex_ReadByte(formData + 0x57, 0x0),
-["parameter2"] = 1,
+["parameter1"] = IEex_ReadSignedByte(formData + 0x57, 0x0),
+["parameter2"] = 0,
 ["parent_resource"] = "USPOLYMO",
 ["source_id"] = targetID
 })
@@ -3345,8 +3400,8 @@ function MEPOLYMO(effectData, creatureData)
 ["opcode"] = 27,
 ["target"] = 2,
 ["timing"] = 9,
-["parameter1"] = IEex_ReadByte(formData + 0x58, 0x0),
-["parameter2"] = 1,
+["parameter1"] = IEex_ReadSignedByte(formData + 0x58, 0x0),
+["parameter2"] = 0,
 ["parent_resource"] = "USPOLYMO",
 ["source_id"] = targetID
 })
@@ -3354,8 +3409,8 @@ function MEPOLYMO(effectData, creatureData)
 ["opcode"] = 166,
 ["target"] = 2,
 ["timing"] = 9,
-["parameter1"] = IEex_ReadByte(formData + 0x59, 0x0),
-["parameter2"] = 1,
+["parameter1"] = IEex_ReadSignedByte(formData + 0x59, 0x0),
+["parameter2"] = 0,
 ["parent_resource"] = "USPOLYMO",
 ["source_id"] = targetID
 })
@@ -3363,8 +3418,8 @@ function MEPOLYMO(effectData, creatureData)
 ["opcode"] = 86,
 ["target"] = 2,
 ["timing"] = 9,
-["parameter1"] = IEex_ReadByte(formData + 0x5C, 0x0),
-["parameter2"] = 1,
+["parameter1"] = IEex_ReadSignedByte(formData + 0x5C, 0x0),
+["parameter2"] = 0,
 ["parent_resource"] = "USPOLYMO",
 ["source_id"] = targetID
 })
@@ -3372,8 +3427,8 @@ function MEPOLYMO(effectData, creatureData)
 ["opcode"] = 87,
 ["target"] = 2,
 ["timing"] = 9,
-["parameter1"] = IEex_ReadByte(formData + 0x5D, 0x0),
-["parameter2"] = 1,
+["parameter1"] = IEex_ReadSignedByte(formData + 0x5D, 0x0),
+["parameter2"] = 0,
 ["parent_resource"] = "USPOLYMO",
 ["source_id"] = targetID
 })
@@ -3381,8 +3436,8 @@ function MEPOLYMO(effectData, creatureData)
 ["opcode"] = 88,
 ["target"] = 2,
 ["timing"] = 9,
-["parameter1"] = IEex_ReadByte(formData + 0x5E, 0x0),
-["parameter2"] = 1,
+["parameter1"] = IEex_ReadSignedByte(formData + 0x5E, 0x0),
+["parameter2"] = 0,
 ["parent_resource"] = "USPOLYMO",
 ["source_id"] = targetID
 })
@@ -3390,8 +3445,8 @@ function MEPOLYMO(effectData, creatureData)
 ["opcode"] = 89,
 ["target"] = 2,
 ["timing"] = 9,
-["parameter1"] = IEex_ReadByte(formData + 0x5F, 0x0),
-["parameter2"] = 1,
+["parameter1"] = IEex_ReadSignedByte(formData + 0x5F, 0x0),
+["parameter2"] = 0,
 ["parent_resource"] = "USPOLYMO",
 ["source_id"] = targetID
 })
@@ -3399,8 +3454,8 @@ function MEPOLYMO(effectData, creatureData)
 ["opcode"] = 31,
 ["target"] = 2,
 ["timing"] = 9,
-["parameter1"] = IEex_ReadByte(formData + 0x60, 0x0),
-["parameter2"] = 1,
+["parameter1"] = IEex_ReadSignedByte(formData + 0x60, 0x0),
+["parameter2"] = 0,
 ["parent_resource"] = "USPOLYMO",
 ["source_id"] = targetID
 })
@@ -3449,6 +3504,7 @@ function MEPOLYBA(effectData, creatureData)
 --	local baseIntelligence = IEex_ReadByte(creatureData + 0x803, 0x0)
 --	local baseWisdom = IEex_ReadByte(creatureData + 0x804, 0x0)
 --	local baseCharisma = IEex_ReadByte(creatureData + 0x807, 0x0)
+	local specialFlags = IEex_ReadByte(creatureData + 0x89F, 0x0)
 	if IEex_GetActorSpellState(targetID, 188) then
 		IEex_IterateActorEffects(targetID, function(eData)
 			local theopcode = IEex_ReadDword(eData + 0x10)
@@ -3461,6 +3517,11 @@ function MEPOLYBA(effectData, creatureData)
 --				baseIntelligence = IEex_ReadByte(eData + 0x47, 0x0)
 --				baseWisdom = IEex_ReadByte(eData + 0x48, 0x0)
 --				baseCharisma = IEex_ReadByte(eData + 0x49, 0x0)
+				if bit32.band(IEex_ReadDword(eData + 0x40), 0x1000000) > 0 then
+					IEex_WriteByte(creatureData + 0x89F, bit32.bor(specialFlags, 0x2))
+				else
+					IEex_WriteByte(creatureData + 0x89F, bit32.band(specialFlags, 0xFD))
+				end
 			end
 		end)
 	end
@@ -3506,26 +3567,6 @@ function MEPOLYBA(effectData, creatureData)
 ["source_id"] = targetID
 })
 	end
-end
-
-function MEPOLYBL(originatingEffectData, effectData, creatureData)
-	if IEex_CheckForEffectRepeat(effectData, creatureData) then return end
-	local targetID = IEex_GetActorIDShare(creatureData)
-	local parent_resource = IEex_ReadLString(effectData + 0x90, 8)
-	local opcode = IEex_ReadDword(effectData + 0xC)
-	local savingthrow = IEex_ReadDword(effectData + 0x3C)
-	if opcode == 111 and bit32.band(savingthrow, 0x10000) == 0 then
-		return true
-	elseif opcode == 58 then
-		IEex_ApplyEffectToActor(targetID, {
-["opcode"] = 402,
-["target"] = 2,
-["timing"] = 9,
-["resource"] = "SPIN122",
-["source_id"] = targetID
-})
-	end
-	return false
 end
 
 function MEQUIPLE(effectData, creatureData)
@@ -7260,6 +7301,215 @@ function MEGetStat(targetID, pre, stat, post)
 	else
 		return pre .. IEex_GetActorStat(targetID, stat) .. post
 	end
+end
+
+----------------------------------------------------------------
+-- Functions which can be used by Opcode 502 (Screen Effects) --
+----------------------------------------------------------------
+
+function MEPOLYBL(originatingEffectData, effectData, creatureData)
+	if IEex_CheckForEffectRepeat(effectData, creatureData) then return end
+	local targetID = IEex_GetActorIDShare(creatureData)
+	local parent_resource = IEex_ReadLString(effectData + 0x90, 8)
+	local opcode = IEex_ReadDword(effectData + 0xC)
+	local savingthrow = IEex_ReadDword(effectData + 0x3C)
+	if opcode == 111 and bit32.band(savingthrow, 0x10000) == 0 then
+		return true
+	elseif opcode == 58 then
+		IEex_ApplyEffectToActor(targetID, {
+["opcode"] = 402,
+["target"] = 2,
+["timing"] = 9,
+["resource"] = "SPIN122",
+["source_id"] = targetID
+})
+	end
+	return false
+end
+
+function MESUMMOD(originatingEffectData, effectData, creatureData)
+	local sourceID = IEex_ReadDword(effectData + 0x10C)
+	local opcode = IEex_ReadDword(effectData + 0xC)
+	local power = IEex_ReadDword(effectData + 0x10)
+	local parameter1 = IEex_ReadDword(effectData + 0x18)
+	local parameter2 = IEex_ReadDword(effectData + 0x1C)
+	local special = IEex_ReadDword(effectData + 0x44)
+	local school = IEex_ReadDword(effectData + 0x48)
+	local resource = IEex_ReadLString(effectData + 0x2C, 8)
+	local vvcresource = IEex_ReadLString(effectData + 0x6C, 8)
+	local parent_resource = IEex_ReadLString(effectData + 0x90, 8)
+	local casterlvl = IEex_ReadDword(effectData + 0xC4)
+	local casterClass = IEex_ReadByte(effectData + 0xC5, 0x0)
+	local sourceSpell = ex_damage_source_spell[parent_resource]
+	if sourceSpell == nil then
+		sourceSpell = parent_resource
+	end
+	local classSpellLevel = 0
+	if IEex_IsSprite(sourceID, true) then
+		classSpellLevel = IEex_GetClassSpellLevel(sourceID, casterClass, sourceSpell)
+	end
+	if opcode ~= 67 and opcode ~= 410 and opcode ~= 411 and (opcode ~= 288 or parameter2 ~= 207) then return false end
+	local internal_flags = IEex_ReadDword(effectData + 0xC8)
+	if bit32.band(internal_flags, 0x4000000) == 0 then
+		local targetID = IEex_GetActorIDShare(creatureData)
+		if targetID ~= sourceID or not IEex_IsSprite(targetID) or not IEex_IsSprite(sourceID) then return false end
+		local o_spellRES = IEex_ReadLString(originatingEffectData + 0x18, 8)
+		local o_spellRES2 = IEex_ReadLString(originatingEffectData + 0x6C, 8)
+		local o_spellRES3 = IEex_ReadLString(originatingEffectData + 0x74, 8)
+		local o_savingthrow = IEex_ReadDword(originatingEffectData + 0x3C)
+		if bit32.band(o_savingthrow, 0x100000) > 0 and parent_resource ~= o_spellRES and parent_resource ~= o_spellRES2 and parent_resource ~= o_spellRES3 then return false end
+		if bit32.band(o_savingthrow, 0x200000) > 0 and classSpellLevel > IEex_ReadDword(originatingEffectData + 0x18) then return false end
+		if bit32.band(o_savingthrow, 0x400000) > 0 and school ~= IEex_ReadDword(originatingEffectData + 0x1C) then return false end
+		local o_special = IEex_ReadDword(originatingEffectData + 0x44)
+		if bit32.band(o_savingthrow, 0x10000) > 0 then
+			parameter1 = parameter1 * o_special
+		else
+			parameter1 = parameter1 + o_special
+		end
+		if parameter1 <= 0 then return true end
+		IEex_WriteDword(effectData + 0x18, parameter1)
+	end
+	return false
+end
+
+previous_attacks_deflected = {}
+function MEDEFLEC(originatingEffectData, effectData, creatureData)
+	local targetID = IEex_GetActorIDShare(creatureData)
+	local sourceID = IEex_ReadDword(effectData + 0x10C)
+	local string = IEex_ReadDword(originatingEffectData + 0x18)
+	local types_blocked = IEex_ReadDword(originatingEffectData + 0x1C)
+	local savingthrow = IEex_ReadDword(originatingEffectData + 0x3C)
+	local delay = IEex_ReadDword(originatingEffectData + 0x44)
+	local parent_resource = IEex_ReadLString(originatingEffectData + 0x90, 8)
+	local damage_type = IEex_ReadWord(effectData + 0x1E, 0x0)
+	local flags = IEex_ReadDword(effectData + 0x44)
+	local restype = IEex_ReadDword(effectData + 0x8C)
+	local internal_flags = IEex_ReadDword(effectData + 0xC8)
+	if bit32.band(internal_flags, 0x4000000) > 0 then return false end
+	local opcode = IEex_ReadDword(effectData + 0xC)
+	local effectRES = IEex_ReadLString(effectData + 0x90, 8)
+	local isOnHitEffect = false
+	local doDeflect = true
+	if bit32.band(savingthrow, 0x10000) == 0 and IEex_GetActorSpellState(targetID, 246) then
+		IEex_IterateActorEffects(targetID, function(eData)
+			local the_opcode = IEex_ReadDword(eData + 0x10)
+			local the_parameter1 = IEex_ReadDword(eData + 0x1C)
+			local the_parameter2 = IEex_ReadDword(eData + 0x20)
+			local the_special = IEex_ReadDword(eData + 0x48)
+			local the_resource = IEex_ReadLString(eData + 0x30, 8)
+			if the_opcode == 288 and the_parameter1 > 0 and the_parameter2 == 246 and the_resource == parent_resource then
+				doDeflect = false
+			end
+		end)
+	end
+	if previous_attacks_deflected["" .. targetID] == nil then
+		previous_attacks_deflected["" .. targetID] = {}
+	end
+	if opcode == 12 and effectRES == "" and (damage_type == 0 and bit32.band(types_blocked, 0x4000) > 0) or (damage_type ~= 0 and bit32.band(types_blocked, damage_type) > 0) and ((bit32.band(savingthrow, 0x10000) > 0 and delay ~= 0) or (bit32.band(savingthrow, 0x10000) == 0 and doDeflect)) then
+--		effectRES = IEex_ReadLString(effectData + 0x6C, 8)
+		effectRES = "IEex_DAM"
+		previous_attacks_deflected["" .. targetID][effectRES] = IEex_GetGameTick()
+	elseif bit32.band(savingthrow, 0x80000) > 0 and previous_attacks_deflected["" .. targetID]["IEex_DAM"] == IEex_GetGameTick() and restype == 2 then
+		isOnHitEffect = true
+	end
+	if opcode ~= 12 and isOnHitEffect == false then return false end
+	
+
+	
+
+	if isOnHitEffect or (damage_type == 0 and bit32.band(types_blocked, 0x4000) > 0) or (damage_type ~= 0 and bit32.band(types_blocked, damage_type) > 0) then
+		if doDeflect or isOnHitEffect then
+			if bit32.band(savingthrow, 0x10000) > 0 and delay ~= -1 and isOnHitEffect == false then
+				if delay > 0 then
+					delay = delay - 1
+					IEex_WriteDword(originatingEffectData + 0x44, delay)
+				else
+					return false
+				end
+			end
+			if bit32.band(savingthrow, 0x10000) == 0 and delay ~= -1 and isOnHitEffect == false then
+				IEex_ApplyEffectToActor(targetID, {
+["opcode"] = 288,
+["target"] = 2,
+["timing"] = 0,
+["duration"] = delay,
+["parameter1"] = 1,
+["parameter2"] = 246,
+["resource"] = parent_resource,
+["parent_resource"] = "MEDEFDEL",
+["internal_flags"] = 0x4000000,
+["source_target"] = targetID,
+["source_id"] = targetID,
+})
+			end
+			if string ~= -1 and isOnHitEffect == false then
+				IEex_ApplyEffectToActor(targetID, {
+["opcode"] = 139,
+["target"] = 2,
+["timing"] = 1,
+["parameter1"] = string,
+["resource"] = parent_resource,
+["parent_resource"] = "MEDEFSTR",
+["internal_flags"] = 0x4000000,
+["source_target"] = targetID,
+["source_id"] = targetID,
+})
+			end
+			if bit32.band(savingthrow, 0x100000) > 0 and IEex_IsSprite(sourceID, false) and targetID ~= sourceID then
+				IEex_ApplyEffectToActor(sourceID, {
+["opcode"] = IEex_ReadDword(effectData + 0xC),
+["target"] = IEex_ReadDword(effectData + 0x10),
+["power"] = IEex_ReadDword(effectData + 0x14),
+["parameter1"] = IEex_ReadDword(effectData + 0x18),
+["parameter2"] = IEex_ReadDword(effectData + 0x1C),
+["timing"] = IEex_ReadDword(effectData + 0x20),
+["duration"] = IEex_ReadDword(effectData + 0x24),
+["resource"] = IEex_ReadLString(effectData + 0x2C, 8),
+["dicenumber"] = IEex_ReadDword(effectData + 0x34),
+["dicesize"] = IEex_ReadDword(effectData + 0x38),
+["savingthrow"] = IEex_ReadDword(effectData + 0x3C),
+["savebonus"] = IEex_ReadDword(effectData + 0x40),
+["special"] = IEex_ReadDword(effectData + 0x44),
+["school"] = IEex_ReadDword(effectData + 0x48),
+["resist_dispel"] = IEex_ReadDword(effectData + 0x58),
+["parameter3"] = IEex_ReadDword(effectData + 0x5C),
+["parameter4"] = IEex_ReadDword(effectData + 0x60),
+["parameter5"] = IEex_ReadDword(effectData + 0x64),
+["vvcresource"] = IEex_ReadLString(effectData + 0x6C, 8),
+["resource2"] = IEex_ReadLString(effectData + 0x74, 8),
+["source_x"] = IEex_ReadDword(creatureData + 0x8),
+["source_y"] = IEex_ReadDword(creatureData + 0xC),
+["target_x"] = IEex_ReadDword(IEex_GetActorShare(sourceID) + 0x8),
+["target_y"] = IEex_ReadDword(IEex_GetActorShare(sourceID) + 0xC),
+["restype"] = IEex_ReadDword(effectData + 0x8C),
+["parent_resource"] = IEex_ReadLString(effectData + 0x90, 8),
+["resource_flags"] = IEex_ReadDword(effectData + 0x98),
+["impact_projectile"] = IEex_ReadDword(effectData + 0x9C),
+["sourceslot"] = IEex_ReadDword(effectData + 0xA0),
+["effvar"] = IEex_ReadLString(effectData + 0xA4, 32),
+["casterlvl"] = IEex_ReadDword(effectData + 0xC4),
+["internal_flags"] = bit32.bor(internal_flags, 0x4000000),
+["sectype"] = IEex_ReadDword(effectData + 0xCC),
+["source_target"] = sourceID,
+["source_id"] = targetID
+})
+			end
+			if bit32.band(savingthrow, 0x10000) > 0 and bit32.band(savingthrow, 0x20000) > 0 and delay == 0 and isOnHitEffect == false then
+				IEex_ApplyEffectToActor(targetID, {
+["opcode"] = 321,
+["target"] = 2,
+["timing"] = 1,
+["duration"] = IEex_GetGameTick() + 1,
+["resource"] = parent_resource,
+["internal_flags"] = 0x4000000,
+["source_target"] = targetID,
+["source_id"] = targetID
+})
+			end
+			return true
+		end
+	end
+	return false
 end
 
 ---------------

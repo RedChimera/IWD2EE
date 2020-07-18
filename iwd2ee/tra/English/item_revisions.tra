@@ -334,7 +334,7 @@ Weight: 0 lb.~
 STATISTICS:
 
 Special: Deal damage to a single creature 1/day
-Damage:  6d6 (no save)
+Damage:  10d6 (no save, bypasses spell resistance)
 Weight: 0 lb.~
 //@10102    = ~Every God Ring~
 @10103    = ~Rings such as these are one of the most well kept secrets among the pious. For in order for these rings to be created they must be blessed by all the known gods. This can cause problems, especially for those faiths that conflict with each other. It's not surprising that those who choose to don the ring refuse to reveal its origins for fear of being persecuted by their own brethren.
@@ -462,12 +462,12 @@ STATISTICS:
 
 Luck:  +2
 Weight: 0 lb.~
-@10134    = ~Ring of Force Resistance~
+@10134    = ~Ring of Sneak Attacks~
 @10135    = ~A ring is a small band of precious metal that is used as jewelry. Some rare rings have had enchantments placed upon them that confer various magical abilities. These rings are highly sought after, especially by those of the adventuring profession. For no apparent reason, this ring feels warm to the touch.
 
 STATISTICS:
 
-Resistance: 10/- Magic Damage Resistance
+The wearer's Sneak Attack damage is increased by 2d6
 Weight: 0 lb.~
 //@10136    = ~Ring of Knowledge~
 @10137    = ~A ring is a small band of precious metal that is used as jewelry. Some rare rings have had enchantments placed upon them that confer various magical abilities. These rings are highly sought after, especially by those of the adventuring profession. For no apparent reason, this ring feels warm to the touch.
@@ -477,13 +477,12 @@ STATISTICS:
 Knowledge (Arcana): +5
 Alchemy: +5
 Weight: 0 lb.~
-//@10138    = ~Ring of Knowing~
+@10138    = ~Lesser Extending Ring~
 @10139    = ~A ring is a small band of precious metal that is used as jewelry. Some rare rings have had enchantments placed upon them that confer various magical abilities. These rings are highly sought after, especially by those of the adventuring profession. For no apparent reason, this ring feels warm to the touch.
 
 STATISTICS:
 
-Knowledge (Arcana): +3
-Alchemy: +3
+The wearer's 1st-level spells have twice the normal duration. If the wearer has the Extend Spell feat, the maximum spell level they can extend is increased by 1.
 Weight: 0 lb.~
 @10140    = ~Lesser Ring of Force Resistance~
 @10141    = ~A ring is a small band of precious metal that is used as jewelry. Some rare rings have had enchantments placed upon them that confer various magical abilities. These rings are highly sought after, especially by those of the adventuring profession. For no apparent reason, this ring feels warm to the touch.
@@ -512,7 +511,8 @@ Weight: 0 lb.~
 
 STATISTICS:
 
-Resistance:  30/- Cold Resistance
+Resistance:  50/- Cold Resistance
+All cold damage dealt by the wearer is increased by 50%
 Weight: 0 lb.~
 //@10148    = ~Ring of Greater Regeneration~
 @10149    = ~A ring is a small band of precious metal that is used as jewelry. Some rare rings have had enchantments placed upon them that confer various magical abilities. These rings are highly sought after, especially by those of the adventuring profession. For no apparent reason, this ring feels warm to the touch.
@@ -12984,7 +12984,7 @@ Weight: 2 lb.~
 
 STATISTICS:
 
-Creatures summoned by the wearer gain a +10 damage bonus
+The wearer's summoning spells summon twice as many creatures
 Weight:  3 lb.~
 @12741    = ~Greater Ring of the Elements~
 @12742    = ~A ring is a small band of precious metal that is used as jewelry. Some rare rings have had enchantments placed upon them that confer various magical abilities. These rings are highly sought after, especially by those of the adventuring profession. For no apparent reason, this ring feels warm to the touch.
@@ -13058,7 +13058,38 @@ Weight: 3 lb.~
 STATISTICS:
 
 Maximizing: The wearer's 1st-level spells deal maximum damage. If the wearer already has the Maximize Spell feat, the maximum spell level that can be maximized is increased by 1.
+Weight: 3 lb.~
+@12757    = ~Ring of the Ram~
+@12758    = ~Also known as the Breaker of Castles, with one word, this ring can unleash fantastic and deadly powers. When it is triggered, a barely discernible, ram-like shape billows forth from the ring. This force can potentially knock opponents off of walls, destroy castle gates, or crush enemies, but it is damaging as well in its own right.
+
+STATISTICS:
+
+Spell Power: Once per day, the wearer may deal 15d6 bludgeoning damage to one creature, pushing them away from the wearer.
 Weight: 0 lb.~
+@12759    = ~Robe of Maximizing~
+@12760    = ~Since the age of Netheril, wizards have learned to bestow a wide variety of magical properties upon the everyday objects that surround them. A favorite item of such enchantment is the common robe. It is lightweight, affordable, and holds its enchantment well, thereby making it ideal equipment for a wizard.
+
+STATISTICS:
+
+Maximizing: The wearer's spells of 2nd-level or lower deal maximum damage. If the wearer already has the Maximize Spell feat, the maximum spell level that can be maximized is increased by 2.
+Weight: 3 lb.~
+@12761    = ~Greater Robe of Maximizing~
+@12762    = ~Since the age of Netheril, wizards have learned to bestow a wide variety of magical properties upon the everyday objects that surround them. A favorite item of such enchantment is the common robe. It is lightweight, affordable, and holds its enchantment well, thereby making it ideal equipment for a wizard.
+
+STATISTICS:
+
+Maximizing: The wearer's spells of 3rd-level or lower deal maximum damage. If the wearer already has the Maximize Spell feat, the maximum spell level that can be maximized is increased by 3.
+Weight: 3 lb.~
+@12763    = ~Tower Shield +8~
+@12764    = ~This massive shield is nearly as tall as the wielder. Basically, it is a portable wall meant to provide cover. It can provide up to total cover, depending on how far you come out from behind it. A tower shield, however, does not provide cover against targeted spells; a spellcaster can cast a spell on you by targeting the shield you are holding. This shield has runes scribed onto it that glow eerily in dim light.
+
+STATISTICS:
+
+Shield Bonus: +10
+Armor Bonus:  +1 vs. missile weapons
+Armor Check Penalty:  -10
+Arcane Spell Failure:  50%
+Weight: 7 lb.~
 @12900    = ~Hrm - you are powerful allies, indeed. More gold and gems to line your pockets, then - also, a suit of plate armor, a warhammer, a helmet, all crafted and enchanted by great duergar artisans. They are well deserved, outsider.~
 @12901    = ~Drink this Rainwater Brew, Ennelia. It should help your condition.~
 @12902    = ~Drink this Sour Draught, Ennelia. It should help your condition.~

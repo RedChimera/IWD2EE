@@ -359,44 +359,116 @@ COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
 // Patching elementals, salamanders and genies to have elemental resistances
 
 COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
+	READ_LONG animation theanimation
 	READ_BYTE race therace
+	READ_BYTE fireresistance thefireresistance
 	PATCH_IF (therace = 152) OR (therace = 161) OR (therace = 175) BEGIN
-		LPF	IWD2_REMOVE_CRE_ITEM STR_VAR item=~00CIDED1 00CIDEAD~ END
+		LPF	IWD2_REMOVE_CRE_ITEM STR_VAR item=~00CIBAR1 00CIDED1 00CIDEAD~ END
+		TEXT_SPRINT theimmunityitem ~USCIELEM~
+		PATCH_IF theanimation = 29456 OR theanimation = 57896 OR theanimation = 60376 BEGIN
+			TEXT_SPRINT theimmunityitem ~USCIELEF~
+		END ELSE PATCH_IF theanimation = 32519 OR theanimation = 57880 BEGIN
+			TEXT_SPRINT theimmunityitem ~USCIELEE~
+		END ELSE PATCH_IF theanimation = 57912 OR theanimation = 58008 OR theanimation = 57938 BEGIN
+			TEXT_SPRINT theimmunityitem ~USCIELEW~
+		END ELSE PATCH_IF theanimation = 29472 OR theanimation = 29473 OR (theanimation = 32517 AND thefireresistance < 20 AND !(~%SOURCE_RES%~ STRING_EQUAL_CASE ~41ONDABO~)) OR theanimation = 61363 BEGIN
+			TEXT_SPRINT theimmunityitem ~USCIELEA~
+		END ELSE PATCH_IF theanimation = 58664 OR theanimation = 60392 BEGIN
+			TEXT_SPRINT theimmunityitem ~USCIELEI~
+		END ELSE PATCH_IF (theanimation = 32517 AND thefireresistance >= 20) BEGIN
+			TEXT_SPRINT theimmunityitem ~USCIGEEF~
+		END ELSE PATCH_IF (~%SOURCE_RES%~ STRING_EQUAL_CASE ~41ONDABO~) BEGIN
+			TEXT_SPRINT theimmunityitem ~USCIGEMA~
+		END
 		READ_LONG 0x612 itemslotsoffset
 		READ_SSHORT (itemslotsoffset + 0x6) theslot
 		PATCH_IF theslot = ~-1~ BEGIN
-			LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item=~USCIELEM~ slot=~gloves~ END
+			LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item= EVAL ~%theimmunityitem%~ slot=~gloves~ END
 
 		END
 		ELSE BEGIN
 			READ_SSHORT (itemslotsoffset + 0x8) theslot
 			PATCH_IF theslot = ~-1~ BEGIN
-				LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item=~USCIELEM~ slot=~lring~ END
+				LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item= EVAL ~%theimmunityitem%~ slot=~lring~ END
 			END
 			ELSE BEGIN
 				READ_SSHORT (itemslotsoffset + 0xA) theslot
 				PATCH_IF theslot = ~-1~ BEGIN
-					LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item=~USCIELEM~ slot=~rring~ END
+					LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item= EVAL ~%theimmunityitem%~ slot=~rring~ END
 				END
 				ELSE BEGIN
 					READ_SSHORT (itemslotsoffset + 0xC) theslot
 					PATCH_IF theslot = ~-1~ BEGIN
-						LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item=~USCIELEM~ slot=~amulet~ END
+						LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item= EVAL ~%theimmunityitem%~ slot=~amulet~ END
 					END
 					ELSE BEGIN
 						READ_SSHORT (itemslotsoffset + 0xE) theslot
 						PATCH_IF theslot = ~-1~ BEGIN
-							LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item=~USCIELEM~ slot=~belt~ END
+							LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item= EVAL ~%theimmunityitem%~ slot=~belt~ END
 						END
 						ELSE BEGIN
 							READ_SSHORT (itemslotsoffset + 0x10) theslot
 							PATCH_IF theslot = ~-1~ BEGIN
-								LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item=~USCIELEM~ slot=~boots~ END
+								LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item= EVAL ~%theimmunityitem%~ slot=~boots~ END
 							END
 							ELSE BEGIN
 								READ_SSHORT (itemslotsoffset + 0x2A) theslot
 								PATCH_IF theslot = ~-1~ BEGIN
-									LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item=~USCIELEM~ slot=~cloak~ END
+									LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item= EVAL ~%theimmunityitem%~ slot=~cloak~ END
+								END
+							END
+						END
+					END
+				END
+			END
+		END
+	END
+	BUT_ONLY_IF_IT_CHANGES
+
+// Patching myconids and shambling mounds to have the correct resistances
+
+COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
+	READ_LONG animation theanimation
+	PATCH_IF theanimation = 29442 OR theanimation = 60313 OR theanimation = 60329 OR theanimation = 60337 BEGIN
+		LPF	IWD2_REMOVE_CRE_ITEM STR_VAR item=~00CIBAR1 00CIDED1 00CIDEAD~ END
+		TEXT_SPRINT theimmunityitem ~USCIMYCO~
+		PATCH_IF theanimation = 29442 BEGIN
+			TEXT_SPRINT theimmunityitem ~USCISHAM~
+		END
+		READ_LONG 0x612 itemslotsoffset
+		READ_SSHORT (itemslotsoffset + 0x6) theslot
+		PATCH_IF theslot = ~-1~ BEGIN
+			LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item= EVAL ~%theimmunityitem%~ slot=~gloves~ END
+		END
+		ELSE BEGIN
+			READ_SSHORT (itemslotsoffset + 0x8) theslot
+			PATCH_IF theslot = ~-1~ BEGIN
+				LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item= EVAL ~%theimmunityitem%~ slot=~lring~ END
+			END
+			ELSE BEGIN
+				READ_SSHORT (itemslotsoffset + 0xA) theslot
+				PATCH_IF theslot = ~-1~ BEGIN
+					LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item= EVAL ~%theimmunityitem%~ slot=~rring~ END
+				END
+				ELSE BEGIN
+					READ_SSHORT (itemslotsoffset + 0xC) theslot
+					PATCH_IF theslot = ~-1~ BEGIN
+						LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item= EVAL ~%theimmunityitem%~ slot=~amulet~ END
+					END
+					ELSE BEGIN
+						READ_SSHORT (itemslotsoffset + 0xE) theslot
+						PATCH_IF theslot = ~-1~ BEGIN
+							LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item= EVAL ~%theimmunityitem%~ slot=~belt~ END
+						END
+						ELSE BEGIN
+							READ_SSHORT (itemslotsoffset + 0x10) theslot
+							PATCH_IF theslot = ~-1~ BEGIN
+								LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item= EVAL ~%theimmunityitem%~ slot=~boots~ END
+							END
+							ELSE BEGIN
+								READ_SSHORT (itemslotsoffset + 0x2A) theslot
+								PATCH_IF theslot = ~-1~ BEGIN
+									LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item= EVAL ~%theimmunityitem%~ slot=~cloak~ END
 								END
 							END
 						END

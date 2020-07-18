@@ -135,7 +135,7 @@ RSHD_04	00Shld88	00Shld92	00Shld96	EOL
 RSHD_05	00Shld87	00Shld89	USShld47	EOL																																								
 RSHD_06	USShld45	USShld48	USShld49	EOL																																											
 RSHD_07	USShld50	USShld51	EOL																																											
-RSHD_08	USShld55	EOL																																											
+RSHD_08	USShld53	USShld55	EOL																																											
 RSHD_09	USShld56	USShld57	EOL																																										
 RSHD_10	USShld54	USShld58	EOL																																											
 RSHD_11																																												
@@ -178,15 +178,15 @@ RPRI_05	SPPR502Z	SPPR503Z	SPPR504Z	SPPR507Z	SPPR510Z	SPPR512Z	SPPR513Z	SPPR514Z	
 RPRI_06	SPPR606Z	SPPR607Z	SPPR608Z	SPPR610Z	SPPR611Z	SPPR612Z	SPPR613Z	SPPR615Z	SPPR616Z	EOL																																			
 RPRI_07	SPPR704Z	SPPR705Z	SPPR707Z	SPPR712Z	SPPR714Z	SPPR717Z	SPPR718Z	SPPR719Z	SPPR720Z	SPPR721Z	SPPR722Z	SPPR715Z	SPPR725Z	SPPR726Z	SPPR727Z	SPPR728Z	SPPR729Z	EOL																											
 																																												
-RRNG_01	00Ring19	00Ring21	00Ring76	00Ring77	00Ring80	00Ring84	00Ring85	00Ring86	00Ring99	EOL																														
-RRNG_02	00Ring67	00Ring71	00Ring73	00Ring78	00Ring82	00Ring83	00Ring87	00Amul13	00Amul14	EOL																																
-RRNG_03	00Ring15	00Ring20	00Ring67	00Ring69	00Ring70	00Ring90	00Ring94	00Ring95	00Amul15	USRing42	EOL																													
-RRNG_04	00Ring18	00Ring23	00Ring73	00Ring92	00Ring93	00Ring97	00Ring98	EOL																																					
-RRNG_05	00Ring22	00Ring68	00Ring74	00Ring75	00Ring79	00Ring88	00Ring91	USRing44	EOL																																							
+RRNG_01	00Ring19	00Ring21	00Ring67	00Ring76	00Ring77	00Ring80	00Ring84	00Ring85	00Ring86	00Ring99	EOL																														
+RRNG_02	00Ring23	00Ring71	00Ring73	00Ring78	00Ring83	00Ring87	00Amul13	00Amul14	EOL																																
+RRNG_03	00Ring15	00Ring20	00Ring69	00Ring70	00Ring90	00Ring94	00Ring95	00Amul15	USRing42	EOL																													
+RRNG_04	00Ring18	00Ring73	00Ring82	00Ring92	00Ring93	00Ring97	00Ring98	USRing45	EOL																																					
+RRNG_05	00Ring22	00Ring68	00Ring74	00Ring75	00Ring79	00Ring91	USRing44	EOL																																							
 RRNG_06	00Ring72	00Ring89	00Ring96	USAmul47	USAmul48	USRing50	EOL																																									
 RRNG_07	USRing53	USRing54	USAmul50	USAmul52	USAmul53	EOL																																									
 RRNG_08	00Ring81	USRing51	USRing55	USAmul51	USAmul59	EOL																																								
-RRNG_09	USRing56	USAmul56	EOL																																										
+RRNG_09	00Ring88	USRing56	USAmul56	EOL																																										
 RRNG_10	USRing49	USRing52	USAmul58	EOL																																										
 RRNG_11	USRing57	EOL																																									
 RRNG_12																																												
@@ -198,10 +198,10 @@ RMSC_02	00Brac03	00Brac05	00Belt02	00Belt03	00Belt04	USBoot44	USBrac37	EOL
 RMSC_03	00Brac04	00Brac10	00Clck02	USBrac45	USRobe41	EOL																																							
 RMSC_04	00Boot01	USBoot45	USBrac44	USBrac47	EOL																																								
 RMSC_05	00Robe99	USClck40	USClck48	USHelm45	USBrac43	EOL																																									
-RMSC_06	00Robe05	00Robe06	00Robe07	USBrac50	USClck50	EOL																																									
+RMSC_06	00Robe05	00Robe06	00Robe07	USBrac50	USClck50	USRobe47	EOL																																									
 RMSC_07	USClck55	USHelm50	USBrac52	USRobe56	USPerm50	EOL																																									
 RMSC_08	USBrac54	USBrac55	USClck52	USIoun52	EOL																																								
-RMSC_09	USClck51	USRobe54	USHelm55	EOL																																									
+RMSC_09	USClck51	USRobe53	USRobe54	USHelm55	EOL																																									
 RMSC_10	USBrac59	USBoot59	USIoun58	EOL																																							
 RMSC_11																																											
 RMSC_12	USBrac57	EOL																																											

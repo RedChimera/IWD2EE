@@ -160,5 +160,6 @@ END
 IF ~~ THEN BEGIN VrekJoinSuccess2
   SAY ~Vrek... Vrek say yes.  But if human give sword to healer, Vrek kill human.~
   IF ~~ THEN REPLY ~That's good enough for me.  Come along... we have orcs to slay.~ DO ~SetGlobal("US_Vrek_Joined", "GLOBAL", 1)
+SetGlobal("US_VREK_JOIN", "GLOBAL", 1)
 ApplySpellRES("USVREKC",Myself)~ EXIT
 END

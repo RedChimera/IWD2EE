@@ -2607,6 +2607,7 @@ Launcher:  Bow~
 @30046=~Hope~
 @30047=~Protected by Aegis~
 @30048=~Created by the Goodberry spell, these simple looking blueberries will heal 1d4+5 points of damage for each bunch of berries eaten.~
+@30049=~Reflected the attack~
 
 @31212     = ~Slow Poison~
 @32212     = ~Slow Poison
@@ -2946,6 +2947,17 @@ Area of Effect: Caster
 Saving Throw: None
 
 The True Strike spell gives the caster incredible insights into his or her enemies' weaknesses, but only for an extremely short duration. For 9 seconds, the caster gains a +20 attack bonus.~
+@37152     = ~Reflect Attack~
+@38152     = ~Reflect Attack
+(Abjuration)
+Level: Brd 1, Pal 1, Sor/Wiz 1, Helm 1
+Range: Caster
+Duration: 8 hours or until triggered
+Casting Time: 0
+Area of Effect: Caster
+Saving Throw: None
+
+After this spell is cast, the next instance of physical damage the caster would receive is reflected back at the attacker, damaging them instead. If the physical damage came from a weapon, any on-hit effects of the weapon will also be reflected back at the attacker.~
 @37251     = ~Identify Creature~
 @38251     = ~Identify Creature
 (Divination)
