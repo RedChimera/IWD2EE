@@ -217,6 +217,16 @@ end
 -- Random Utility --
 --------------------
 
+function IEex_IterateCPtrList(CPtrList, func)
+	local m_pNext = IEex_ReadDword(CPtrList + 0x4)
+	while m_pNext ~= 0x0 do
+		if func(IEex_ReadDword(m_pNext + 0x8)) then
+			break
+		end
+		m_pNext = IEex_ReadDword(m_pNext)
+	end
+end
+
 function IEex_ConcatTables(tables)
 	local toReturn = {}
 	for _, _table in ipairs(tables) do
@@ -723,8 +733,9 @@ function IEex_HookBeforeCall(address, assembly)
 	IEex_WriteAssembly(address, {"!jmp_dword", {IEex_WriteAssemblyAuto(
 		IEex_ConcatTables({
 			assembly,
-			{
-				"!call", {address + IEex_ReadDword(address + 0x1) + 0x5, 4, 4},
+			{[[
+				@call
+				!call ]], {address + IEex_ReadDword(address + 0x1) + 0x5, 4, 4},
 			},
 			{[[
 				@return
@@ -774,6 +785,7 @@ function IEex_HookRestore(address, restoreDelay, restoreSize, assembly)
 		"@return",
 		restoreBytes,
 		{[[
+			@return_skip
 			!jmp_dword ]], {afterInstruction, 4, 4},
 		},
 	}))

@@ -105,7 +105,7 @@ function IEex_AlterSpellInfo(actorID, casterType, spellLevel, resref, memorizeMo
 	if not id then
 		local message = "[IEex_AlterSpellInfo] Critical Caller Error: resref \""..resref.."\" not present in corresponding master spell-list 2DA"
 		print(message)
-		IEex_MessageBox(message)
+		--IEex_MessageBox(message)
 		return
 	end
 
@@ -207,6 +207,20 @@ function IEex_FetchSpellInfo(actorID, casterTypes)
 
 	return toReturn
 
+end
+
+function IEex_Debug_GiveAllWizardSpells()
+
+	local actorID = IEex_GetActorIDSelected()
+	if not IEex_IsSprite(actorID) then return end
+
+	local base = "SPWI"
+
+	for i = 100, 999, 1 do
+		local resref = base..string.format("%03d", i)
+		local level = math.floor(i / 100)
+		IEex_SetSpellInfo(actorID, IEex_CasterType.Wizard, level, resref, 999, 999)
+	end
 end
 
 ----------
@@ -513,11 +527,34 @@ function IEex_SetActorTooltip(actorID, strref)
 	IEex_WriteDword(share + 0x5A8, strref)
 end
 
-
-
 -------------------
 -- Actor Details --
 -------------------
+
+function IEex_CheckActorLOS(actorID, pointX, pointY)
+
+	local share = IEex_GetActorShare(actorID)
+	local area = IEex_ReadDword(share + 0x12)
+
+	local actorX, actorY = IEex_GetActorLocation(actorID)
+	local points = IEex_Malloc(0x10)
+	IEex_WriteDword(points + 0x0, actorX)
+	IEex_WriteDword(points + 0x4, actorY)
+	IEex_WriteDword(points + 0x8, pointX)
+	IEex_WriteDword(points + 0xC, pointY)
+
+	local terrainTable = IEex_Call(IEex_ReadDword(IEex_ReadDword(share) + 0x9C), {}, share, 0x0)
+	local toReturn = IEex_Call(0x46A820, {1, terrainTable, points + 0x8, points}, area, 0x0)
+
+	IEex_UndoActorShare(actorID)
+	IEex_Free(points)
+	return toReturn == 1
+end
+
+function IEex_CheckActorLOSObject(actorID, targetID)
+	local targetX, targetY = IEex_GetActorLocation(targetID)
+	return IEex_CheckActorLOS(actorID, targetX, targetY)
+end
 
 function IEex_GetActorName(actorID)
 	-- CGameSprite::GetName()
@@ -775,6 +812,10 @@ function IEex_GetDistance(x1, y1, x2, y2)
 	return math.floor((((x1 - x2) ^ 2) + ((y1 - y2) ^ 2)) ^ .5)
 end
 
+function IEex_GetDistanceIsometric(x1, y1, x2, y2)
+	return math.floor(((x1 - x2) ^ 2 + (4/3 * (y1 - y2)) ^ 2) ^ .5)
+end
+
 ex_classid_listspll = {[2] = 1, [3] = 2, [4] = 3, [7] = 4, [8] = 5, [10] = 6, [11] = 7}
 ex_kitid_listdomn = {[0x8000] = 1, [0x10000] = 2, [0x20000] = 3, [0x40000] = 4, [0x80000] = 5, [0x100000] = 6, [0x200000] = 7, [0x400000] = 8, [0x800000] = 9}
 function IEex_GetClassSpellLevel(actorID, casterClass, spellRES)
@@ -812,6 +853,10 @@ function IEex_CompareActorAllegiances(actorID1, actorID2)
 	end
 end
 
+function IEex_IsActorDead(actorID)
+	return bit32.band(IEex_ReadDword(share + 0x5BC), 0xFC0) ~= 0x0
+end
+
 function IEex_IsSprite(actorID, allowDead)
 	local share = IEex_GetActorShare(actorID)
 	return share ~= 0x0 -- share != NULL
@@ -834,6 +879,13 @@ function IEex_CreateCreature(resref)
 	IEex_Free(mem)
 end
 
+function IEex_GetCInfinity()
+	local m_pObjectGame = IEex_GetGameData()
+	local m_visibleArea = IEex_ReadByte(m_pObjectGame + 0x37E0, 0)
+	local CGameArea = IEex_ReadDword(m_pObjectGame + m_visibleArea * 0x4 + 0x37E2)
+	return CGameArea + 0x4CC
+end
+
 function IEex_GetGameData()
 	local g_pBaldurChitin = IEex_ReadDword(0x8CF6DC)
 	local m_pObjectGame = IEex_ReadDword(g_pBaldurChitin + 0x1C54)
@@ -842,6 +894,11 @@ end
 
 function IEex_GetGameTick()
 	return IEex_ReadDword(IEex_GetGameData() + 0x1B78)
+end
+
+function IEex_GetEngineWorld()
+	local g_pBaldurChitin = IEex_ReadDword(0x8CF6DC)
+	return IEex_ReadDword(g_pBaldurChitin + 0x1C88)
 end
 
 function IEex_DisplayString(string)
@@ -885,7 +942,6 @@ function IEex_SetToken(tokenString, valueString)
 	-- CString_equ_raw_string
 	IEex_Call(0x7FCD57, {valueStringMem}, CString, 0x0)
 	IEex_Free(mem)
-
 end
 
 function IEex_FetchString(strref)
@@ -898,7 +954,6 @@ function IEex_FetchString(strref)
 	IEex_Free(resultPtr)
 
 	return toReturn
-
 end
 
 function IEex_2DALoad(resref)
@@ -920,7 +975,6 @@ function IEex_2DALoad(resref)
 	IEex_Free(resrefMem)
 
 	return C2DArray
-
 end
 
 function IEex_2DADemand(arrayName)
@@ -991,7 +1045,6 @@ function IEex_2DAGetAtStrings(arrayName, columnString, rowString)
 	local m_nSizeX = IEex_ReadWord(C2DArray + 0x20, 0)
 	local accessOffset = (m_nSizeX * rowIndex + columnIndex) * 4
 	return IEex_ReadString(IEex_ReadDword(array + accessOffset))
-
 end
 
 function IEex_2DAGetAtRelated(arrayName, relatedColumn, columnString, compareFunc)
@@ -1017,7 +1070,6 @@ function IEex_2DAGetAtRelated(arrayName, relatedColumn, columnString, compareFun
 	if not foundRowIndex then return defaultString end
 
 	return IEex_2DAGetAt(C2DArray, columnIndex, foundRowIndex)
-
 end
 
 ----------------------
@@ -1039,7 +1091,6 @@ function IEex_GetActorIDCursor()
 	local m_iPicked = IEex_ReadDword(CGameArea + 0x246)
 
 	return m_iPicked
-
 end
 
 function IEex_GetActorIDCharacter(characterNum)
@@ -1082,7 +1133,13 @@ function IEex_GetActorShare(actorID)
 	local toReturn = IEex_ReadDword(resultPtr)
 	IEex_Free(resultPtr)
 	return toReturn
+end
 
+function IEex_UndoActorShare(actorID)
+	local g_pBaldurChitin = IEex_ReadDword(0x8CF6DC)
+	local m_pObjectGame = IEex_ReadDword(g_pBaldurChitin + 0x1C54)
+	local CGameObjectArray = m_pObjectGame + 0x372C
+	IEex_Call(0x599E70, {-1, 0, actorID}, CGameObjectArray, 0x0)
 end
 
 ---------------------------------------------------------------------------
@@ -8987,5 +9044,11 @@ if not IEex_AlreadyInitialized then
 	IEex_WritePatches()
 	dofile("override/IEex_Cre.lua")
 	dofile("override/IEex_Opc.lua")
+	dofile("override/IEex_Gui.lua")
+
+	-- Actually IWD2's "operator_new" and "operator_delete", (needed for IEex memory to interact with engine)
+	-- NOTE: THESE NEED TO BE THE LAST LINES EXECUTED DURING INITIAL STARTUP!
+	IEex_DefineAssemblyLabel("_malloc", 0x7FC95B)
+	IEex_DefineAssemblyLabel("_free", 0x7FC984)
 
 end
