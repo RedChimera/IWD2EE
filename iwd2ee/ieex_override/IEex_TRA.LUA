@@ -129,4 +129,6 @@ ex_str_controlundead = ""
 ex_str_banishment = ""
 ex_str_energydrain = ""
 ex_str_55114 = ""
+ex_str_hit = ""
+ex_str_miss = ""
 ex_whirla = {}

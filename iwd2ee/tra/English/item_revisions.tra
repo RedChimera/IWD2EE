@@ -292,7 +292,7 @@ Weight: 0 lb.~
 STATISTICS:
 
 Special:  Charm a single animal 1/day (no save)
-Duration:  5 rounds
+Duration:  2 hours
 Weight: 0 lb.~
 @10088    = ~Ring of Most Twisted Strength~
 @10089    = ~This ring is surrounded by two small tubes, each of which contains a strange purple fluid. When worn, the ring makes the wearer as strong as anyone could possibly be in this world, yet it severely weakens them in other important ways. It also causes the wearer's body to appear malformed, with very thick arms and legs, but very small hands and feet, and a thin torso. Most likely this ring was created by a Wish from a fool who wanted to become supernaturally strong.
@@ -5294,7 +5294,7 @@ Damage Type:  Bludgeoning
 Special:  
   Sneaky Weapon: This weapon turns invisible for a brief moment when used to attack
   +1 to Move Silently skill
-  1% chance target is Silenced when struck
+  2% chance target is Silenced when struck
 Weight: 3 lb.
 Feat Requirement:  Simple Weapon, Quarterstaff
 Type:  One-handed~
@@ -6818,7 +6818,21 @@ Special:
 Required Feat:  Simple Weapon, Mace
 Type:  One-handed~
 //@11389    = ~Memories of Kuldahar~
-//@11390    = ~Item description can remain the same; if new description is needed put it here~
+@11390    = ~This huge gnarled tree limb is a broken bough from the great tree of Kuldahar, a mighty oak far to the southeast of Targos.  The great oak is believed to be a gift of the God of Nature, Silvanus, and it is an awe-inspiring sight, towering hundreds of feet into the sky and providing a great circle of warmth to all who live beneath its sheltering limbs.  For many, the tree represents a peaceful symbiosis between town and nature, and the tree is revered as a holy site by druids throughout Faerun.
+
+When the town of Kuldahar was laid siege by the great evil from the Spine of the World Mountains in the Year of the Cold Soul, 1281 DR, the great tree of Kuldahar was buffeted by the great winds and howling storms blasting the region, causing its circle of warmth to recede and snapping off several limbs from the top of the tree.  These limbs were gathered up by the town's residents after the town of Kuldahar was saved, and they were kept in many houses as a symbol of the town's persistence in the face of adversity.  Some of these pieces of the great tree have found their way throughout the Ten-Towns, and the limbs still carry some of the warmth and enchantment of the great tree within them, making them powerful weapons. 
+
+STATISTICS:
+
+Damage:  1d6 + 1
+Attack Bonus:  +1
+Enchantment:  +1
+Damage Type:  Bludgeoning
+Special:
+  Resistance: 10/- Cold Resistance
+Weight: 3 lb.
+Required Feat:  Simple Weapon, Mace
+Type:  One-handed~
 //@11391    = ~Branching Paths of Kuldahar~
 @11392    = ~This huge gnarled tree limb is a broken bough from the great tree of Kuldahar, a mighty oak far to the southeast of Targos. The great oak is believed to be a gift of the God of Nature, Silvanus, and it is an awe-inspiring sight, towering hundreds of feet into the sky and providing a great circle of warmth to all who live beneath its sheltering limbs. For many, the tree represents a peaceful symbiosis between town and nature, and the tree is revered as a holy site by druids throughout Faerun. 
 
@@ -7530,7 +7544,7 @@ Enchantment;  +1
 Damage Type:  Bludgeoning
 Special:
   For the purposes of hitting enchanted creatures this weapon is considered a +1 weapon
-  25% chance target is Deafened (Fortitude DC 15)
+  Upon hitting a creature, the chimes awaken all party members (if sleeping) and grant them a +1 attack bonus for 1 round (non-cumulative)
   Penalty:  -1 to Move Silently skill
 Weight: 5 lb.
 Required Feat:  Martial Weapon, Flail
@@ -7549,7 +7563,7 @@ Attack Bonus:  +5
 Enchantment:  +5 
 Damage Type:  Bludgeoning
 Special:  
-  50% chance target is Deafened (Fortitude DC 20)
+  Upon hitting a creature, the chimes awaken all party members (if sleeping) and grant them a +3 attack bonus for 1 round (non-cumulative)
   Spellward: Immunity to the spells, Power Word Silence and Silence
 Weight: 5 lb.
 Required Feat:  Martial Weapon, Flail

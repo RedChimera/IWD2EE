@@ -202,6 +202,14 @@ COPY_EXISTING_REGEXP ~.+\.cre~ ~override~
     END
 BUT_ONLY_IF_IT_CHANGES
 
+COPY_EXISTING ~41REMHZA.cre~ ~override~
+	WRITE_BYTE specifics 142
+
+COPY_EXISTING ~41RQUEEN.bcs~ ~override~
+	DECOMPILE_AND_PATCH BEGIN
+		REPLACE_TEXTUALLY CASE_INSENSITIVE ~See.*ANKHEG.*~ ~See([0.0.0.0.142],0)~
+	END
+
 
 // turn snow trolls into trolls
 

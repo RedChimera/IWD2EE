@@ -502,7 +502,7 @@ Casting Time: 10
 Area of Effect: Caster
 Saving Throw: None
 
-This spell creates a staff of force in the caster's hand which can be wielded as a weapon, using the Simple Weapon: Quarterstaff proficiency. The Decastave deals 10 bludgeoning damage per hit, and strikes as a +1 weapon, though it has no attack bonus. The staff also drains an additional 10 hit points per strike that is transferred over to the wielder's own hit points. These extra hit points can take the wielder over his or her maximum hit points, but any hit points gained in such a manner are temporary and will dissipate after 10 minutes.~
+This spell creates a staff of force in the caster's hand which can be wielded as a weapon, using the Simple Weapon: Quarterstaff proficiency. The Decastave deals 10 bludgeoning damage per hit, and strikes as a +1 weapon, though it has no attack bonus. The staff also drains an additional 10 hit points per strike and heals the wielder that many Hit Points.~
 @1084    = ~Lightning Bolt~
 @1085    = ~Lightning Bolt
 (Evocation)
@@ -1576,7 +1576,7 @@ The spell makes a creature... vanish. When cast, a ball of green energy shoots f
 ~
 @1696    = ~Power Word: Blind~
 @1697    = ~Power Word: Blind
-(Divination) 
+(Divination)
 Level: Brd 7, Sor/Wiz 8, Tempus 7, Bane 8
 Range: Sight of Caster
 Duration: Special
@@ -1588,7 +1588,7 @@ This spell blinds enemy creatures within the area of effect. The duration of the
 ~
 @1698    = ~Blindness~
 @1699    = ~Blindness 
-(Transmutation)  
+(Illusion)
 Level: Brd 2, Clr 3, Sor/Wiz 3, Mask 2
 Range: Sight of Caster
 Duration: 8 hours
@@ -2991,6 +2991,17 @@ Area of Effect: 15-foot radius
 Saving Throw: None
 
 This spell creates a strange magical field in the area of effect. Any hostile creature in the field will be teleported to a random location in the field each round.~
+@37452     = ~Phantasmal Killer~
+@38452     = ~Phantasmal Killer
+(Illusion)
+Level: Brd 4, Sor/Wiz 4
+Range: Sight of Caster
+Duration: Instantaneous
+Casting Time: 4
+Area of Effect: 1 creature
+Saving Throw: Will or Fortitude negates
+
+Phantasmal Killer causes the target to be struck down by an embodiment of its worst fears. The target may make a Will save to disbelieve the illusion. On a failure, they must make a Fortitude save or die. Even on a successful Fortitude save, they still take 3d6 magic damage. If the target was panicking when they got hit by this spell, the DC of both saves is increased by 6.~
 @37652     = ~Isaac's Greater Missile Storm~
 @38652     = ~Isaac's Greater Missile Storm
 (Evocation)

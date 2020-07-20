@@ -187,6 +187,10 @@ COPY_EXISTING ~IEex_TRA.lua~ ~override~
 	ex_tra_917 = RESOLVE_STR_REF(@917)
 	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_tra_917 *=.*~ ~ex_tra_917 = %ex_tra_917%~
 
+	SPRINT ex_str_hit @55398
+	REPLACE_TEXTUALLY ~ex_str_hit *=.*~ ~ex_str_hit = "%ex_str_hit%"~
+	SPRINT ex_str_miss @55399
+	REPLACE_TEXTUALLY ~ex_str_miss *=.*~ ~ex_str_miss = "%ex_str_miss%"~
 /*
 	ex_whirla1 = RESOLVE_STR_REF(~<MEWHRA1>~)
 	ex_whirla2 = RESOLVE_STR_REF(~<MEWHRA2>~)

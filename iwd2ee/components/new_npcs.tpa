@@ -881,4 +881,17 @@ Exists("Reig")~
 !Global("US_Reig_Joined","GLOBAL",1)~
 	END
 
+<<<<<<<< .../script.baf
+IF
+	Global("US_Geoffrey_Convinced_To_Join","GLOBAL",1)
+	Global("US_Delete_Duplicate_Geoffrey","GLOBAL",0)
+THEN
+	RESPONSE #100
+		SetGlobal("US_Delete_Duplicate_Geoffrey","GLOBAL",1)
+		ActionOverride("09_Black_Geoffrey",DestroySelf())
+END
+
+>>>>>>>>
+EXTEND_BOTTOM ~AR1200.bcs~ ~.../script.baf~
+
 INCLUDE ~%mod_folder%/components/final_patches.tpa~
