@@ -153,9 +153,8 @@ function IEex_GetGroundPilesAroundActor(actorID)
 		return a.distance < b.distance
 	end)
 
-	if defaultContainer == -1 then
-		local newContainer = IEex_Call(0x5B75C0, {actorID}, IEex_GetGameData(), 0x0)
-		defaultContainerID = IEex_GetActorIDShare(newContainer)
+	if defaultContainerID == -1 then
+		defaultContainerID = IEex_Call(0x5B75C0, {actorID}, IEex_GetGameData(), 0x0)
 	end
 
 	toReturn.defaultContainerID = defaultContainerID
