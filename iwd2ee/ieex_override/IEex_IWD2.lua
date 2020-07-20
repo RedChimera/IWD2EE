@@ -7002,6 +7002,7 @@ function MESUCREA(effectData, creatureData)
 	local sourceID = IEex_ReadDword(effectData + 0x10C)
 	if sourceID <= 0 then return end
 	local sourceData = IEex_GetActorShare(sourceID)
+	if sourceData == 0 then return end
 	local targetID = IEex_GetActorIDShare(creatureData)
 	local creatureName = IEex_ReadLString(sourceData + 0x598, 8)
 	local isReload = false

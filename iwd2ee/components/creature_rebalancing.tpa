@@ -431,6 +431,9 @@ COPY_EXISTING ~21XUKI.cre~ ~override~
 COPY_EXISTING ~30GOBHO.cre~ ~override~
 	WRITE_SHORT armorclass 10
 	WRITE_BYTE proficiencypolearm 2
+	READ_LONG feats1 ulgiash
+	ulgiash&=0xBFFFFFFF
+	WRITE_LONG feats1 ulgiash
 	WRITE_BYTE challengerating 3
 	LPF	IWD2_ADD_CRE_ITEM INT_VAR equip=1 STR_VAR item=~00LEAT04~ slot=~armor~ mode=~replace~ END
 	LPF	IWD2_ADD_CRE_ITEM INT_VAR equip=1 STR_VAR item=~00HALB01~ slot=~weapon1~ mode=~replace~ END
