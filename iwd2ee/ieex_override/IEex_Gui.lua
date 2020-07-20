@@ -3,6 +3,13 @@
 -- Functions --
 ---------------
 
+function IEex_GetCursorXY()
+	local g_pBaldurChitin = IEex_ReadDword(0x8CF6DC)
+	local x = IEex_ReadDword(g_pBaldurChitin + 0x1906)
+	local y = IEex_ReadDword(g_pBaldurChitin + 0x190A)
+	return x, y
+end
+
 function IEex_SetViewportBottom(bottom)
 	IEex_WriteDword(IEex_GetCInfinity() + 0x48 + 0xC, bottom)
 end
@@ -47,6 +54,40 @@ end
 
 function IEex_SetPanelActive(CUIPanel, active)
 	IEex_Call(0x4D3980, {active and 1 or 0}, CUIPanel, 0x0)
+end
+
+function IEex_GetControlFromPanel(CUIPanel, controlID)
+	local foundControl = 0x0
+	IEex_IterateCPtrList(CUIPanel + 0x4, function(CUIControl)
+		if IEex_GetControlID(CUIControl) == controlID then
+			foundControl = CUIControl
+			return true
+		end
+	end)
+	return foundControl
+end
+
+function IEex_GetControlArea(CUIControl)
+	local x = IEex_ReadDword(CUIControl + 0xE)
+	local y = IEex_ReadDword(CUIControl + 0x12)
+	local w = IEex_ReadDword(CUIControl + 0x16)
+	local h = IEex_ReadDword(CUIControl + 0x1A)
+	return x, y, w, h
+end
+
+function IEex_GetControlAreaAbsolute(CUIControl)
+	local panelX, panelY, _, _ = IEex_GetPanelArea(IEex_ReadDword(CUIControl + 0x6))
+	local controlX, controlY, controlW, controlH = IEex_GetControlArea(CUIControl)
+	return panelX + controlX, panelY + controlY, controlW, controlH
+end
+
+function IEex_IsPointOverControl(CUIControl, x, y)
+	local controlX, controlY, controlW, controlH = IEex_GetControlAreaAbsolute(CUIControl)
+	return x >= controlX and x <= (controlX + controlW) and y >= controlY and y <= (controlY + controlH)
+end
+
+function IEex_IsPointOverControlID(CUIPanel, controlID, x, y)
+	return IEex_IsPointOverControl(IEex_GetControlFromPanel(CUIPanel, controlID), x, y)
 end
 
 function IEex_GetControlID(CUIControl)
@@ -128,6 +169,7 @@ IEex_Quickloot_On = false
 IEex_Quickloot_Active = false
 IEex_Quickloot_Items = {}
 IEex_Quickloot_ItemsAccessIndex = 1
+IEex_Quickloot_HighlightContainerID = -1
 IEex_Quickloot_DefaultContainerID = 0
 IEex_Quickloot_OldActorX = -1
 IEex_Quickloot_OldActorY = -1
@@ -160,6 +202,7 @@ end
 
 function IEex_Quickloot_UpdateItems()
 
+	-- Build IEex_Quickloot_Items
 	local actorID = IEex_Quickloot_GetValidPartyMember()
 	local piles = IEex_GetGroundPilesAroundActor(actorID)
 
@@ -182,6 +225,22 @@ function IEex_Quickloot_UpdateItems()
 
 	IEex_Quickloot_OldActorX = actorX
 	IEex_Quickloot_OldActorY = actorY
+
+	-- Update container highlight on hover
+	IEex_Quickloot_HighlightContainerID = -1
+	local panel = IEex_Quickloot_GetPanel()
+	local cursorX, cursorY = IEex_GetCursorXY()
+
+	for i = 0, 9, 1 do
+		if IEex_IsPointOverControlID(panel, i, cursorX, cursorY) then
+			local overContainerID = IEex_Quickloot_GetSlotData(i).containerID
+			if overContainerID ~= IEex_Quickloot_DefaultContainerID then
+				IEex_Quickloot_HighlightContainerID = overContainerID
+			end
+		end
+	end
+
+	-- Redraw panel
 	IEex_Quickloot_InvalidatePanel()
 end
 
@@ -336,20 +395,26 @@ function IEex_DefineCustomButtonControl(controlName, args)
 		for _, writeDef in ipairs(writeDefs) do
 			local argKey = writeDef[1]
 			local arg = args[argKey]
+			local skipWrite = false
 			if not arg then
 				local failType = writeDef[4]
 				if failType == argFailType.DEFAULT then
 					arg = writeDef[5]
-				elseif failType ~= argFailType.NOTHING then
+				elseif failType == argFailType.ERROR then
 					IEex_Error(argKey.." must be defined!")
+				else
+					skipWrite = true
 				end
 			end
-			writeTypeFunc[writeDef[3]](address + writeDef[2], arg)
+			if not skipWrite then
+				writeTypeFunc[writeDef[3]](address + writeDef[2], arg)
+			end
 		end
 	end
 
 	writeArgs(newButtonVFTable, {
 		{ "OnLButtonClick", 0x68, writeType.DWORD, argFailType.NOTHING },
+		{ "OnLButtonDoubleClick", 0x6C, writeType.DWORD, argFailType.NOTHING },
 	})
 
 	IEex_ControlTypeMaxIndex = IEex_ControlTypeMaxIndex + 1
@@ -423,6 +488,7 @@ end
 
 	IEex_DefineCustomButtonControl("IEex_Quickloot_ScrollLeft", {
 		["OnLButtonClick"] = IEex_Quickloot_ScrollLeft_OnLButtonClick,
+		["OnLButtonDoubleClick"] = 0x4D4D70, -- CUIControlButton_OnLButtonDown; prevents double-click cooldown.
 	})
 
 	--------------------------------
@@ -466,6 +532,7 @@ end
 
 	IEex_DefineCustomButtonControl("IEex_Quickloot_ScrollRight", {
 		["OnLButtonClick"] = IEex_Quickloot_ScrollRight_OnLButtonClick,
+		["OnLButtonDoubleClick"] = 0x4D4D70, -- CUIControlButton_OnLButtonDown; prevents double-click cooldown.
 	})
 
 	-------------------------------
@@ -581,10 +648,10 @@ function IEex_Extern_CScreenWorld_TimerSynchronousUpdate()
 
 		local worldScreen = IEex_GetEngineWorld()
 		local panelActive = IEex_Quickloot_IsPanelActive()
-		
+
 		-- Need to hide if dialog / container is present
 		if panelActive and (
-			   IEex_IsPanelActive(IEex_GetPanelFromEngine(worldScreen, 7)) 
+			   IEex_IsPanelActive(IEex_GetPanelFromEngine(worldScreen, 7))
 			or IEex_IsPanelActive(IEex_GetPanelFromEngine(worldScreen, 8)))
 		then
 			IEex_Quickloot_Hide(false)
@@ -1062,6 +1129,44 @@ end
 		!pop_all_registers_iwd2
 		!ret_word 08 00
 	]]}))
+
+	IEex_HookAfterRestore(0x47F954, 0, 5, {[[
+
+		!test_eax_eax
+		!jnz_dword >return
+
+		!push_registers_iwd2
+
+		!push_dword ]], {IEex_WriteStringAuto("IEex_Quickloot_HighlightContainerID"), 4}, [[
+		!push_dword *_g_lua
+		!call >_lua_getglobal
+		!add_esp_byte 08
+
+		!push_byte 00
+		!push_byte FF
+		!push_dword *_g_lua
+		!call >_lua_tonumberx
+		!add_esp_byte 0C
+		!call >__ftol2_sse
+		!push_eax
+		!push_byte FE
+		!push_dword *_g_lua
+		!call >_lua_settop
+		!add_esp_byte 08
+		!pop_edx
+
+		!xor_eax_eax
+		!cmp_edx_[esi+byte] 5C
+		!jne_dword >no_highlight
+		!mov_eax #1
+
+		@no_highlight
+		!pop_registers_iwd2
+	]]})
+
+	-- Redirect empty CUIControlButtonWorldContainerSlot_OnLButtonDoubleClick to CUIControlButton_OnLButtonDown.
+	-- Prevents double-click cooldown.
+	IEex_WriteDword(0x85A3E4, 0x4D4D70)
 
 	IEex_EnableCodeProtection()
 

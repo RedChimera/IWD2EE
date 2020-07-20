@@ -865,6 +865,7 @@ function IEex_CompareActorAllegiances(actorID1, actorID2)
 end
 
 function IEex_IsActorDead(actorID)
+	local share = IEex_GetActorShare(actorID)
 	return bit32.band(IEex_ReadDword(share + 0x5BC), 0xFC0) ~= 0x0
 end
 
