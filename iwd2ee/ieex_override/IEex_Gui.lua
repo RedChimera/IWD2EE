@@ -28,11 +28,11 @@ function IEex_PanelInvalidate(CUIPanel)
 	IEex_Call(0x4D3810, {0x0}, CUIPanel, 0x0)
 end
 
-function IEex_GetPanelArea(CUIManager)
-	local x = IEex_ReadDword(CUIManager + 0x24)
-	local y = IEex_ReadDword(CUIManager + 0x28)
-	local w = IEex_ReadDword(CUIManager + 0x34)
-	local h = IEex_ReadDword(CUIManager + 0x38)
+function IEex_GetPanelArea(CUIPanel)
+	local x = IEex_ReadDword(CUIPanel + 0x24)
+	local y = IEex_ReadDword(CUIPanel + 0x28)
+	local w = IEex_ReadDword(CUIPanel + 0x34)
+	local h = IEex_ReadDword(CUIPanel + 0x38)
 	return x, y, w, h
 end
 
@@ -45,7 +45,7 @@ function IEex_GetUIManagerFromEngine(CBaldurEngine)
 end
 
 function IEex_GetPanelFromEngine(CBaldurEngine, panelID)
-	return IEex_GetPanel(CBaldurEngine + 0x30, panelID)
+	return IEex_GetPanel(IEex_GetUIManagerFromEngine(CBaldurEngine), panelID)
 end
 
 function IEex_IsPanelActive(CUIPanel)
@@ -67,6 +67,10 @@ function IEex_GetControlFromPanel(CUIPanel, controlID)
 	return foundControl
 end
 
+function IEex_GetControlPanel(CUIControl)
+	return IEex_ReadDword(CUIControl + 0x6)
+end
+
 function IEex_GetControlArea(CUIControl)
 	local x = IEex_ReadDword(CUIControl + 0xE)
 	local y = IEex_ReadDword(CUIControl + 0x12)
@@ -76,9 +80,13 @@ function IEex_GetControlArea(CUIControl)
 end
 
 function IEex_GetControlAreaAbsolute(CUIControl)
-	local panelX, panelY, _, _ = IEex_GetPanelArea(IEex_ReadDword(CUIControl + 0x6))
+	local panelX, panelY, _, _ = IEex_GetPanelArea(IEex_GetControlPanel(CUIControl))
 	local controlX, controlY, controlW, controlH = IEex_GetControlArea(CUIControl)
 	return panelX + controlX, panelY + controlY, controlW, controlH
+end
+
+function IEex_IsControlOnPanel(CUIControl, CUIPanel)
+	return IEex_GetControlPanel(CUIControl) == CUIPanel
 end
 
 function IEex_IsPointOverControl(CUIControl, x, y)
@@ -166,11 +174,10 @@ end
 -------------------------
 
 IEex_Quickloot_On = false
-IEex_Quickloot_Active = false
 IEex_Quickloot_Items = {}
 IEex_Quickloot_ItemsAccessIndex = 1
 IEex_Quickloot_HighlightContainerID = -1
-IEex_Quickloot_DefaultContainerID = 0
+IEex_Quickloot_DefaultContainerID = -1
 IEex_Quickloot_OldActorX = -1
 IEex_Quickloot_OldActorY = -1
 
@@ -185,19 +192,19 @@ end
 
 function IEex_Quickloot_Show()
 	IEex_Quickloot_UpdateItems()
-	IEex_SetPanelActive(IEex_Quickloot_GetPanel(), true)
-	local _, y, _, _ = IEex_GetPanelArea(IEex_GetPanelFromEngine(IEex_GetEngineWorld(), 23))
+	local panel = IEex_Quickloot_GetPanel()
+	IEex_SetPanelActive(panel, true)
+	local _, y, _, _ = IEex_GetPanelArea(panel)
 	IEex_SetViewportBottom(y)
-	IEex_Quickloot_Active = true
 end
 
 function IEex_Quickloot_Hide(changeViewport)
-	IEex_SetPanelActive(IEex_Quickloot_GetPanel(), false)
+	local panel = IEex_Quickloot_GetPanel()
+	IEex_SetPanelActive(panel, false)
 	if changeViewport or changeViewport == nil then
-		local _, y, _, h = IEex_GetPanelArea(IEex_GetPanelFromEngine(IEex_GetEngineWorld(), 23))
+		local _, y, _, h = IEex_GetPanelArea(panel)
 		IEex_SetViewportBottom(y + h)
 	end
-	IEex_Quickloot_Active = false
 end
 
 function IEex_Quickloot_UpdateItems()
@@ -245,16 +252,10 @@ function IEex_Quickloot_UpdateItems()
 end
 
 function IEex_Quickloot_GetSlotData(controlID)
-
-	local entry = IEex_Quickloot_Items[IEex_Quickloot_ItemsAccessIndex + controlID]
-	if entry then
-		return entry
-	else
-		return {
-			["containerID"] = IEex_Quickloot_DefaultContainerID,
-			["slotIndex"] = IEex_GetContainerIDNumItems(IEex_Quickloot_DefaultContainerID),
-		}
-	end
+	return IEex_Quickloot_Items[IEex_Quickloot_ItemsAccessIndex + controlID] or {
+		["containerID"] = IEex_Quickloot_DefaultContainerID,
+		["slotIndex"] = IEex_GetContainerIDNumItems(IEex_Quickloot_DefaultContainerID),
+	}
 end
 
 function IEex_Quickloot_GetValidPartyMember()
@@ -278,6 +279,10 @@ end
 
 function IEex_Quickloot_IsPanelActive()
 	return IEex_IsPanelActive(IEex_Quickloot_GetPanel())
+end
+
+function IEex_Quickloot_IsControlOnPanel(control)
+	return IEex_IsControlOnPanel(control, IEex_Quickloot_GetPanel())
 end
 
 function IEex_Quickloot_ScrollLeft(control)
@@ -594,18 +599,27 @@ function IEex_Extern_CUIManager_fInit_CHUInitialized(CUIManager, resrefPointer)
 end
 
 function IEex_Extern_CUIControlButtonWorldContainerSlot_OnLButtonClick_GetActiveContainerID(control)
-	if not IEex_Quickloot_Active then return -1 end
-	return IEex_Quickloot_GetSlotData(IEex_GetControlID(control)).containerID
+	if IEex_Quickloot_IsControlOnPanel(control) then
+		return IEex_Quickloot_GetSlotData(IEex_GetControlID(control)).containerID
+	else
+		return -1
+	end
 end
 
 function IEex_Extern_CUIControlButtonWorldContainerSlot_OnLButtonClick_GetActiveContainerSpriteID(control)
-	if not IEex_Quickloot_Active then return -1 end
-	return IEex_Quickloot_GetValidPartyMember()
+	if IEex_Quickloot_IsControlOnPanel(control) then
+		return IEex_Quickloot_GetValidPartyMember()
+	else
+		return -1
+	end
 end
 
 function IEex_Extern_CUIControlButtonWorldContainerSlot_OnLButtonClick_GetContainerItemIndex(control)
-	if not IEex_Quickloot_Active then return -1 end
-	return IEex_Quickloot_GetSlotData(IEex_GetControlID(control)).slotIndex
+	if IEex_Quickloot_IsControlOnPanel(control) then
+		return IEex_Quickloot_GetSlotData(IEex_GetControlID(control)).slotIndex
+	else
+		return -1
+	end
 end
 
 function IEex_Extern_CUIControlButtonWorldContainerSlot_OnLButtonClick_Done(control)
@@ -614,8 +628,8 @@ function IEex_Extern_CUIControlButtonWorldContainerSlot_OnLButtonClick_Done(cont
 	IEex_Quickloot_InvalidatePanel()
 end
 
-function IEex_Extern_CUIControlButtonWorldContainerSlot_OnLButtonClick_IsQuicklootActive(control)
-	return IEex_Quickloot_IsPanelActive()
+function IEex_Extern_CUIControlButtonWorldContainerSlot_OnLButtonClick_GetOnlyUpdateSlot(control)
+	return IEex_Quickloot_IsControlOnPanel(control)
 end
 
 IEex_Extern_CScreenWorld_ScheduledTasks = {
@@ -703,7 +717,7 @@ end
 	local activeContainerIDFuncName = IEex_WriteStringAuto("IEex_Extern_CUIControlButtonWorldContainerSlot_OnLButtonClick_GetActiveContainerID")
 	local activeContainerSpriteIDFuncName = IEex_WriteStringAuto("IEex_Extern_CUIControlButtonWorldContainerSlot_OnLButtonClick_GetActiveContainerSpriteID")
 	local containerItemIndexFuncName = IEex_WriteStringAuto("IEex_Extern_CUIControlButtonWorldContainerSlot_OnLButtonClick_GetContainerItemIndex")
-	local quicklootActiveFuncName = IEex_WriteStringAuto("IEex_Extern_CUIControlButtonWorldContainerSlot_OnLButtonClick_IsQuicklootActive")
+	local onlyUpdateSlotFuncName = IEex_WriteStringAuto("IEex_Extern_CUIControlButtonWorldContainerSlot_OnLButtonClick_GetOnlyUpdateSlot")
 
 	--------------------
 	--- GUI Hooks ASM --
@@ -840,19 +854,28 @@ end
 
 	IEex_WriteAssemblyAuto({[[
 
-		$IEex_Extern_CUIControlButtonWorldContainerSlot_OnLButtonClick_IsQuicklootActive
-		!push_registers_iwd2
+		$IEex_Extern_CUIControlButtonWorldContainerSlot_OnLButtonClick_GetOnlyUpdateSlot
+		!push_state
 
-		!push_dword ]], {quicklootActiveFuncName, 4}, [[
+		!push_dword ]], {onlyUpdateSlotFuncName, 4}, [[
 		!push_dword *_g_lua
 		!call >_lua_getglobal
 		!add_esp_byte 08
+
+		; arg ;
+		!push_[ebp+byte] 08
+		!fild_[esp]
+		!sub_esp_byte 04
+		!fstp_qword:[esp]
+		!push_dword *_g_lua
+		!call >_lua_pushnumber
+		!add_esp_byte 0C
 
 		!push_byte 00
 		!push_byte 00
 		!push_byte 00
 		!push_byte 01
-		!push_byte 00
+		!push_byte 01
 		!push_dword *_g_lua
 		!call >_lua_pcallk
 		!add_esp_byte 18
@@ -874,20 +897,22 @@ end
 		!pop_eax
 
 		@error
-		!pop_registers_iwd2
-		!ret
+		!pop_state
+		!ret_word 04 00
 	]]})
 
 	-- 0x695C8E OnLButtonClick - CUIControlScrollBarWorldContainer_UpdateScrollBar
 	IEex_HookBeforeCall(0x695C8E, {[[
-		!call >IEex_Extern_CUIControlButtonWorldContainerSlot_OnLButtonClick_IsQuicklootActive
+		!push_[esp+byte] 18
+		!call >IEex_Extern_CUIControlButtonWorldContainerSlot_OnLButtonClick_GetOnlyUpdateSlot
 		!test_eax_eax
 		!jnz_dword >return
 	]]})
 
 	-- 0x696080 OnLButtonClick - CUIControlEncumbrance_SetVolume
 	IEex_HookBeforeCall(0x696080, {[[
-		!call >IEex_Extern_CUIControlButtonWorldContainerSlot_OnLButtonClick_IsQuicklootActive
+		!push_[esp+byte] 20
+		!call >IEex_Extern_CUIControlButtonWorldContainerSlot_OnLButtonClick_GetOnlyUpdateSlot
 		!test_eax_eax
 		!jz_dword >call
 		!add_esp_byte 08
@@ -896,7 +921,8 @@ end
 
 	-- 0x69608D OnLButtonClick - CUIControlEncumbrance_SetEncumbrance
 	IEex_HookBeforeCall(0x69608D, {[[
-		!call >IEex_Extern_CUIControlButtonWorldContainerSlot_OnLButtonClick_IsQuicklootActive
+		!push_[esp+byte] 20
+		!call >IEex_Extern_CUIControlButtonWorldContainerSlot_OnLButtonClick_GetOnlyUpdateSlot
 		!test_eax_eax
 		!jz_dword >call
 		!add_esp_byte 08
@@ -905,7 +931,8 @@ end
 
 	-- 0x69608D OnLButtonClick - CUIControlLabel_SetText
 	IEex_HookBeforeCall(0x6960EE, {[[
-		!call >IEex_Extern_CUIControlButtonWorldContainerSlot_OnLButtonClick_IsQuicklootActive
+		!push_[esp+byte] 1C
+		!call >IEex_Extern_CUIControlButtonWorldContainerSlot_OnLButtonClick_GetOnlyUpdateSlot
 		!test_eax_eax
 		!jz_dword >call
 		!add_esp_byte 04
