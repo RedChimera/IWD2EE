@@ -133,6 +133,7 @@ function IEex_GetGroundPilesAroundActor(actorID)
 	IEex_IterateCPtrList(m_lVertSortBack, function(containerID)
 
 		local containerShare = IEex_GetActorShare(containerID)
+		if containerShare == 0x0 then return end
 		if IEex_ReadByte(containerShare + 0x4, 0) ~= 0x11 then return end
 
 		defaultContainerID = containerID
