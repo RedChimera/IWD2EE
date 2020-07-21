@@ -317,9 +317,15 @@ BEGIN @43 DESIGNATED 41
 
 //Let aasimars, tieflings, drow, duergar, and svirfneblin level up just as fast as other races (no ECL/level adjustment) but weaken them to the power level of other races
 
-BEGIN @73 REQUIRE_COMPONENT ~iwd2ee.tp2~ ~41~ ~~ DESIGNATED 83
+BEGIN @73 REQUIRE_COMPONENT ~iwd2ee.tp2~ ~41~ ~~ DESIGNATED 83 DEPRECATED ~~
 
       INCLUDE ~%mod_folder%/components/no_ecl.tpa~ //~Let aasimars, tieflings, drow, duergar, and svirfneblin level up just as fast as other races (no ECL/level adjustment) but weaken them to the power level of other races~
+
+//Revise racial level adjustment/ECL
+
+BEGIN @74 REQUIRE_COMPONENT ~iwd2ee.tp2~ ~41~ ~~ DESIGNATED 84
+
+      INCLUDE ~%mod_folder%/components/no_ecl_2.tpa~ //~Revise racial level adjustment/ECL~
 
 //Enemies give the same amount of experience regardless of the party's level
 

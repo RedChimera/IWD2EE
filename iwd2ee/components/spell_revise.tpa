@@ -1586,6 +1586,12 @@ COPY_EXISTING ~sppr508.spl~ ~override~
 	SAY IDENTIFIED_DESC @32508
 	LPF ALTER_EFFECT INT_VAR silent=1 check_headers=1 check_globals=1 match_opcode=139 match_parameter1=30006 parameter1=RESOLVE_STR_REF(@30006) END
 
+COPY_EXISTING ~sppr523.spl~ ~override~
+	SAY NAME1 @31523
+	SAY NAME2 @31523
+	SAY UNIDENTIFIED_DESC @32523
+	SAY IDENTIFIED_DESC @32523
+
 COPY_EXISTING ~sppr616.spl~ ~override~
 	SAY NAME1 @31616
 	SAY NAME2 @31616
@@ -1880,8 +1886,8 @@ COPY_EXISTING ~uspr951.spl~ ~override~
 	SAY IDENTIFIED_DESC @36951
 	LPF ALTER_EFFECT INT_VAR silent=1 check_headers=1 check_globals=1 match_opcode=139 match_parameter1=30001 parameter1=RESOLVE_STR_REF(@30001) END
 	LPF ALTER_EFFECT INT_VAR silent=1 check_headers=1 check_globals=1 match_opcode=139 match_parameter1=30002 parameter1=RESOLVE_STR_REF(@30002) END
-	LPF ALTER_EFFECT INT_VAR silent=1 check_headers=1 check_globals=1 match_opcode=139 match_parameter1=30003 parameter1=RESOLVE_STR_REF(@30003) END
-	LPF ALTER_EFFECT INT_VAR silent=1 check_headers=1 check_globals=1 match_opcode=139 match_parameter1=30004 parameter1=RESOLVE_STR_REF(@30004) END
+//	LPF ALTER_EFFECT INT_VAR silent=1 check_headers=1 check_globals=1 match_opcode=139 match_parameter1=30003 parameter1=RESOLVE_STR_REF(@30003) END
+//	LPF ALTER_EFFECT INT_VAR silent=1 check_headers=1 check_globals=1 match_opcode=139 match_parameter1=30004 parameter1=RESOLVE_STR_REF(@30004) END
 
 COPY_EXISTING ~uspr952.spl~ ~override~
 	SAY NAME1 @35952
@@ -1907,6 +1913,12 @@ COPY_EXISTING ~uswi251.spl~ ~override~
 	SAY NAME2 @37251
 	SAY UNIDENTIFIED_DESC @38251
 	SAY IDENTIFIED_DESC @38251
+
+COPY_EXISTING ~uswi351.spl~ ~override~
+	SAY NAME1 @37351
+	SAY NAME2 @37351
+	SAY UNIDENTIFIED_DESC @38351
+	SAY IDENTIFIED_DESC @38351
 
 COPY_EXISTING ~uswi352.spl~ ~override~
 	SAY NAME1 @37352

@@ -5068,7 +5068,13 @@ function MEREPERM(effectData, creatureData)
 	if IEex_ReadDword(effectData + 0x10C) <= 0 then return end
 	local targetID = IEex_GetActorIDShare(creatureData)
 --	if IEex_CheckForInfiniteLoop(targetID, IEex_ReadDword(effectData + 0x24), "MEREPERM", 5) then return end
-
+	if IEex_ReadSignedByte(creatureData + 0x603, 0x0) == -1 then
+		for i = 0, 5, 1 do
+			if IEex_GetActorIDCharacter(i) == targetID then
+				IEex_WriteByte(creatureData + 0x603, 0)
+			end
+		end
+	end
 	if IEex_GetActorSpellState(targetID, 224) then
 		IEex_IterateActorEffects(targetID, function(eData)
 			local theopcode = IEex_ReadDword(eData + 0x10)

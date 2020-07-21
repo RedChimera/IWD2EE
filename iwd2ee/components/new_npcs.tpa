@@ -809,6 +809,7 @@ COPY_EXISTING ~52SERSA.cre~ ~override~
 
 
 COPY_EXISTING ~10BLACK.cre~ ~override/USGEOF.cre~ ~10REIG.cre~ ~override/USREIG.cre~ ~11VEIRA.cre~ ~override/USVEIR.cre~ ~20EMMA.cre~ ~override/USEMMA.cre~ ~20VREK.cre~ ~override/USVREK.cre~ ~30GOBVUN.cre~ ~override/USVUNA.cre~ ~41XHAAN.cre~ ~override/USXHAA.cre~ ~41ZACK.cre~ ~override/USZACK.cre~ ~50PAIRI.cre~ ~override/USPAIR.cre~ ~52SERSA.cre~ ~override/USSERS.cre~
+	WRITE_BYTE luck 0
 	READ_LONG creflags thecreflags
 	thecreflags&=0xFFFFDFFF
 	WRITE_LONG creflags thecreflags

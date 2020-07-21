@@ -4,23 +4,11 @@ COPY_EXISTING ~IEex_INI.lua~ ~override~
 	BUT_ONLY_IF_IT_CHANGES
 
 COPY_EXISTING ~usraceab.spl~ ~override~
+	LPF ALTER_EFFECT INT_VAR silent=1 check_headers=1 check_globals=0 match_opcode=500 match_special=513 probability2=0 STR_VAR match_resource=~MERACESP~ END
+	LPF ALTER_EFFECT INT_VAR silent=1 check_headers=1 check_globals=0 match_opcode=500 match_special=514 probability2=0 STR_VAR match_resource=~MERACESP~ END
 	LPF ALTER_EFFECT INT_VAR silent=1 check_headers=1 check_globals=0 match_opcode=500 match_special=518 probability2=0 STR_VAR match_resource=~MERACESP~ END
+	LPF ALTER_EFFECT INT_VAR silent=1 check_headers=1 check_globals=0 match_opcode=500 match_special=769 probability2=0 STR_VAR match_resource=~MERACESP~ END
 	IF_EXISTS
-
-COPY_EXISTING ~abracead.2da~ ~override~
-	LPF GET_2DA_ROW INT_VAR numcolumns=7 match_column=0 STR_VAR match=~HUMAN_AASIMAR~ RET aasimarrow=matched END
-	SET_2DA_ENTRY aasimarrow 2 7 ~-2~
-	SET_2DA_ENTRY aasimarrow 5 7 ~1~
-	SET_2DA_ENTRY aasimarrow 6 7 ~1~
-	LPF GET_2DA_ROW INT_VAR numcolumns=7 match_column=0 STR_VAR match=~HUMAN_TIEFLING~ RET tieflingrow=matched END
-	SET_2DA_ENTRY tieflingrow 2 7 ~1~
-	SET_2DA_ENTRY tieflingrow 4 7 ~1~
-	LPF GET_2DA_ROW INT_VAR numcolumns=7 match_column=0 STR_VAR match=~ELF_DROW~ RET drowrow=matched END
-	SET_2DA_ENTRY drowrow 4 7 ~0~
-	SET_2DA_ENTRY drowrow 6 7 ~0~
-	LPF GET_2DA_ROW INT_VAR numcolumns=7 match_column=0 STR_VAR match=~GNOME_DEEP~ RET svirfrow=matched END
-	SET_2DA_ENTRY svirfrow 2 7 ~1~
-	SET_2DA_ENTRY svirfrow 5 7 ~1~
 
 COPY_EXISTING ~racersmd.2da~ ~override~
 	LPF GET_2DA_ROW INT_VAR numcolumns=12 match_column=0 STR_VAR match=~ELF_DROW~ RET drowrow=matched END
@@ -47,19 +35,19 @@ COPY_EXISTING ~help04.2da~ ~override~
     READ_2DA_ENTRY_FORMER rows row 0 label
     PATCH_MATCH ~%label%~ WITH
       ~2~ BEGIN
-        SET strref = RESOLVE_STR_REF(@831)
+        SET strref = RESOLVE_STR_REF(@836)
         SET_2DA_ENTRY_LATER rows_out row 2 ~%strref%~
       END
       ~3~ BEGIN
-        SET strref = RESOLVE_STR_REF(@832)
+        SET strref = RESOLVE_STR_REF(@837)
         SET_2DA_ENTRY_LATER rows_out row 2 ~%strref%~
       END
       ~5~ BEGIN
-        SET strref = RESOLVE_STR_REF(@833)
+        SET strref = RESOLVE_STR_REF(@838)
         SET_2DA_ENTRY_LATER rows_out row 2 ~%strref%~
       END
       ~11~ BEGIN
-        SET strref = RESOLVE_STR_REF(@835)
+        SET strref = RESOLVE_STR_REF(@840)
         SET_2DA_ENTRY_LATER rows_out row 2 ~%strref%~
       END
       ~15~ BEGIN
@@ -73,11 +61,11 @@ COPY_EXISTING ~help04.2da~ ~override~
 BUT_ONLY
 
 // Not all race and class descriptions are connected to .2da files. For the others, we have to use STRING_SET to simply replace them.
-STRING_SET 5386 @831
-STRING_SET 5388 @832
-STRING_SET 5394 @833
+STRING_SET 5386 @836
+STRING_SET 5388 @837
+STRING_SET 5394 @838
 STRING_SET 5416 @834
-STRING_SET 5662 @835
+STRING_SET 5662 @840
 /*
 <<<<<<<< .../script.baf
 IF

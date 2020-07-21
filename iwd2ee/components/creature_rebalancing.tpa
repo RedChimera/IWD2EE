@@ -249,8 +249,8 @@ COPY_EXISTING ~usip951.spl~ ~override~
 	SAY NAME2 @21951
 	LPF ALTER_EFFECT INT_VAR silent=1 check_headers=1 check_globals=1 match_opcode=139 match_parameter1=20001 parameter1=RESOLVE_STR_REF(@20001) END
 	LPF ALTER_EFFECT INT_VAR silent=1 check_headers=1 check_globals=1 match_opcode=139 match_parameter1=20002 parameter1=RESOLVE_STR_REF(@20002) END
-	LPF ALTER_EFFECT INT_VAR silent=1 check_headers=1 check_globals=1 match_opcode=139 match_parameter1=20003 parameter1=RESOLVE_STR_REF(@20003) END
-	LPF ALTER_EFFECT INT_VAR silent=1 check_headers=1 check_globals=1 match_opcode=139 match_parameter1=20004 parameter1=RESOLVE_STR_REF(@20004) END
+//	LPF ALTER_EFFECT INT_VAR silent=1 check_headers=1 check_globals=1 match_opcode=139 match_parameter1=20003 parameter1=RESOLVE_STR_REF(@20003) END
+//	LPF ALTER_EFFECT INT_VAR silent=1 check_headers=1 check_globals=1 match_opcode=139 match_parameter1=20004 parameter1=RESOLVE_STR_REF(@20004) END
 
 COPY_EXISTING ~usip952.spl~ ~override~
 	SAY NAME1 @21952
@@ -272,6 +272,14 @@ COPY_EXISTING ~usiw754.spl~ ~override~
 COPY_EXISTING ~usiw851.spl~ ~override~
 	SAY NAME1 @22851
 	SAY NAME2 @22851
+
+// Patches all creatures in the prologue and Chapter 1 to have -1 luck, so they won't get critical hits (this is actually a buff to the non-elite goblins, which normally have -3 luck).
+
+COPY_EXISTING_REGEXP ~[123].*\.cre~ ~override~ ~00GOB.*\.cre~ ~override~  ~00HAGOB\.cre~ ~override~ ~00HOB.*\.cre~ ~override~ ~00ORC.*\.cre~ ~override~ ~00OROBLA\.cre~ ~override~
+	WRITE_BYTE luck 255 //-1
+
+COPY_EXISTING ~20EMMA.cre~ ~override~ ~20ORCCHF.cre~ ~override~ ~20VREK.cre~ ~override~ ~21GAERNT.cre~ ~override~ ~21SPDQN.cre~ ~override~ ~21XUKI.cre~ ~override~ ~30BEETQ.cre~ ~override~ ~30GOBKRU.cre~ ~override~ ~30GOBMOK.cre~ ~override~ ~30GOBOGR.cre~ ~override~ ~30GOBOV1.cre~ ~override~ ~30GOBVUN.cre~ ~override~ ~30GOBWR2.cre~ ~override~ ~30GOBWR4.cre~ ~override~ ~30GOBWR6.cre~ ~override~ ~30GOBWRC.cre~ ~override~ ~30HOBGUM.cre~ ~override~ ~30ILQUAG.cre~ ~override~ ~30OGRCH.cre~ ~override~ ~30OGRGAR.cre~ ~override~ ~30ORCGOT.cre~ ~override~ ~30ORCTRU.cre~ ~override~ ~30OROCA.cre~ ~override~ ~30OROPUS.cre~ ~override~ ~30OROTAS.cre~ ~override~ ~30OTY.cre~ ~override~ ~30SPIWOQ.cre~ ~override~ ~30TEQUAG.cre~ ~override~ ~30YQUOGG.cre~ ~override~ ~31BUGGUT.cre~ ~override~ ~31BUGJAI.cre~ ~override~ ~31GOBHC.cre~ ~override~ ~31GOBOV1.cre~ ~override~ ~31HOBCH.cre~ ~override~ ~31HOBSER.cre~ ~override~ ~31ORCHC.cre~ ~override~ ~31ORCHSB.cre~ ~override~ ~31ORCHSH.cre~ ~override~ ~31ORCOLD.cre~ ~override~ ~31OROCH.cre~ ~override~ ~31OROCO.cre~ ~override~
+	WRITE_BYTE luck 0
 
 COPY_EXISTING ~11PHAEN.cre~ ~override~ ~12PHAEN.cre~ ~override~
 	WRITE_BYTE skillconcentration 6
@@ -4419,11 +4427,6 @@ COPY_EXISTING_REGEXP ~00s.*\.cre~ ~override~
 		WRITE_BYTE allegiance 255
 	END
 	BUT_ONLY_IF_IT_CHANGES
-
-// Patches all creatures in the prologue to have -1 luck, so they won't get critical hits (this is actually a buff to the non-elite goblins, which normally have -3 luck).
-
-COPY_EXISTING_REGEXP ~1.*\.cre~ ~override~
-	WRITE_BYTE luck 255 //-1
 
 // Patches all spellcasters to have two pips in all Spell Focus feats. Effectively increases all enemy spells' save DCs by 4, except for casters who already had Spell Focus.
 

@@ -1317,12 +1317,12 @@ This spell bestows a form of divine madness upon the priest's allies, improving 
 (Transmutation) 
 Level: Clr 5, Drd 3, Rgr 4, Sor/Wiz 6
 Range: Sight of Caster
-Duration: 10 rounds/level
+Duration: 5 rounds/level
 Casting Time: 1 round
 Area of Effect: Sight of Caster
 Saving Throw: Reflex half
 
-When a Call Lightning spell is cast, it must be cast outside, otherwise it will not work and the spell is wasted. The caster is able to call down bolts of lightning. The caster can call down one bolt per 10 rounds. The spell has a duration of 10 rounds per caster level. Each bolt causes 1d10 points of electrical damage for each of the caster's experience levels (maximum of 10d10). The bolt of lightning flashes down in a vertical stroke at any of the caster's enemies. The caster does not choose the targets of the spell, though the lightning will not strike any of his allies.~
+When a Call Lightning spell is cast, it must be cast outside, otherwise it will not work and the spell is wasted. The caster is able to call down bolts of lightning. The caster can call down one bolt per 5 rounds. The spell has a duration of 5 rounds per caster level. Each bolt causes 1d10 points of electrical damage for each of the caster's experience levels (maximum of 10d10). The bolt of lightning flashes down in a vertical stroke at any of the caster's enemies. The caster does not choose the targets of the spell, though the lightning will not strike any of his allies.~
 
 @1653    = ~Minor Globe of Invulnerability~
 @1654    = ~Minor Globe of Invulnerability 
@@ -2410,12 +2410,12 @@ This spell creates a shambling mound of 12 HD which willingly aids the caster in
 (Evocation)
 Level: Drd 1, Lathander 1, Selune 1
 Range: Sight of Caster
-Duration: 1 minute / level
+Duration: 3 rounds / level
 Casting Time: 1
-Area of Effect: 1 creature
+Area of Effect: 20-foot radius
 Saving Throw: None
 
-This spell outlines a creature with a pale glow, making its position and movements easily visible - this has the effect of an armor bonus penalty of 2.~
+This spell outlines all enemies in the area of effect with a pale glow, making their position and movements easily visible - this gives a -2 AC penalty.~
 @1913     = ~Aegis~
 @1914     = ~Aegis
 (Abjuration)
@@ -2712,6 +2712,16 @@ Area of Effect: 1 creature
 Saving Throw: None
 
 Chaotic Commands renders a creature immune to magical commands. Charm, Dominate Person, Command, Sleep, Confusion, Feeblemind, and Symbol spells all fit into this category.~
+@31523     = ~Static Charge~
+@32523     = ~Static Charge
+(Transmutation)
+Level: Drd 5, Rgr 6, Talos 4
+Duration: 5 turns
+Casting Time: 1 round
+Area of Effect: Sight of Caster
+Saving Throw: Reflex half
+
+Static Charge is similar to Call Lightning except it can be used indoors. Upon completion of this spell an enemy creature within the area of effect is fried by a static discharge for 1d8 electricity damage per caster level, to a maximum of 16d8 electricity damage.  Once released the static charge will build up again on the caster, discharging once per 5 rounds for the duration of the spell.~
 @31616     = ~Dolorous Decay~
 @32616     = ~Dolorous Decay
 (Necromancy) 
@@ -2924,7 +2934,7 @@ Casting Time: 9
 Area of Effect: Caster
 Saving Throw: None
 
-This spell calls upon the power of Auril to amplify the caster's cold spells. For the duration, cold damage dealt by the caster is increased by 50%. If the caster is level 20 or higher, their cold damage is instead increased by 100%. It is increased by 150% for a 25th-level caster and by 200% for a 30th-level caster.~
+This spell calls upon the power of Auril to amplify the caster's cold spells. For the duration, cold damage dealt by the caster is increased by 50%. If the caster is level 30 or higher, their cold damage is instead increased by 100%.~
 @35952     = ~Mass Harm~
 @36952     = ~Mass Harm
 (Necromancy)
@@ -2969,6 +2979,17 @@ Area of Effect: 1 creature
 Saving Throw: None
 
 Identify Creature reveals useful combat information about the target creature. The information includes the creature's level, current and maximum hit points, number of attacks per round, ability scores, resistances, saving throws, and various other traits that depend on the creature.~
+@37351     = ~Clairvoyance~
+@38351     = ~Clairvoyance
+(Divination)
+Level: Drd 2, Rgr 3
+Range: Caster
+Duration: Permanent
+Casting Time: 5
+Area of Effect: Entire area
+Saving Throw: None
+
+The Clairvoyance spell empowers the caster to see in their mind the geographical features and buildings of the region they are currently exploring. It extends to a great range, but cannot reveal creatures or their movements. Clairvoyance can be cast indoors or outdoors.~
 @37352     = ~Remove Magic~
 @38352     = ~Remove Magic
 (Abjuration)

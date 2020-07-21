@@ -271,7 +271,7 @@
 	})
 
 	IEex_OnCheckAddScreenEffectsHook = function(pEffect, pSprite)
-
+		IEex_WriteDword(pEffect + 0x68, IEex_GetGameTick())
 		for func_name, func in pairs(IEex_ScreenEffectsGlobalFunctions) do
 			if func(pEffect, pSprite) then
 				return true
