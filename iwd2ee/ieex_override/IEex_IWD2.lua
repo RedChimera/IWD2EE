@@ -9099,6 +9099,17 @@ function IEex_WritePatches()
 
 	]]})
 
+	----------------------------------------------------------------------------
+	-- Run CtrlAltDelete:EnableCheatKeys() by default if Cheats are turned on --
+	----------------------------------------------------------------------------
+
+	IEex_HookReturnNOPs(0x686EAC, 1, {[[
+		!mov_eax_[dword] #8CF6DC
+		!mov_eax_[eax+dword] #1C54
+		!mov_eax_[eax+dword] #446E
+		!mov_[esi+dword]_eax #156
+	]]})
+
 	IEex_EnableCodeProtection()
 
 end

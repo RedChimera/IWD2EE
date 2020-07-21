@@ -760,6 +760,32 @@ function IEex_HookAfterCall(address, assembly)
 	), 4, 4}})
 end
 
+function IEex_HookReturnNOPs(address, nopCount, assembly)
+
+	local afterInstruction = address + 0x5 + nopCount
+	IEex_DefineAssemblyLabel("return", afterInstruction)
+
+	local hookCode = IEex_WriteAssemblyAuto(IEex_ConcatTables({
+		assembly,
+		{
+			"!jmp_dword", {afterInstruction, 4, 4},
+		},
+	}))
+
+	local nops = {}
+	local limit = nopCount
+	for i = 1, limit, 1 do
+		table.insert(nops, {0x90, 1})
+	end
+
+	IEex_WriteAssembly(address, IEex_ConcatTables({
+		{
+			"!jmp_dword", {hookCode, 4, 4}
+		},
+		nops,
+	}))
+end
+
 function IEex_HookRestore(address, restoreDelay, restoreSize, assembly)
 
 	local storeBytes = function(startAddress, size)
