@@ -9116,6 +9116,21 @@ function IEex_WritePatches()
 		!mov_[esi+dword]_eax #156
 	]]})
 
+	-------------------------------------------------------------------------------
+	-- Load screen's hint text should render correctly on widescreen resolutions --
+	-------------------------------------------------------------------------------
+
+	IEex_HookAfterCall(0x44229E, {[[
+		!push_eax
+		!mov_[esp+byte]_dword 28 #0
+		!mov_[esp+byte]_dword 2C #0
+		!movzx_eax_word:[dword] #8BA31C
+		!mov_[esp+byte]_eax 30
+		!movzx_eax_word:[dword] #8BA31E
+		!mov_[esp+byte]_eax 34
+		!pop_eax
+	]]})
+
 	IEex_EnableCodeProtection()
 
 end
