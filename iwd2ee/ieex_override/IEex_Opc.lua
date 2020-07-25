@@ -156,7 +156,7 @@
 	-------------------------------------
 
 	IEex_ScreenEffectsGlobalFunctions = {}
-	
+
 	function IEex_AddScreenEffectsGlobal(func_name, func)
 		IEex_ScreenEffectsGlobalFunctions[func_name] = func
 	end
@@ -277,7 +277,7 @@
 				return true
 			end
 		end
-		
+
 		local actorID = IEex_GetActorIDShare(pSprite)
 		local screenList = IEex_AccessLuaStats(actorID).screenEffects
 

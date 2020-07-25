@@ -203,19 +203,32 @@ function IEex_DumpDynamicCode()
 end
 
 -- OS:WINDOWS
-function IEex_MessageBox(message)
+function IEex_MessageBox(message, iconOverride)
 	local caption = "IEex"
 	local messageAddress = IEex_Malloc(#message + 1 + #caption + 1)
 	local captionAddress = messageAddress + #message + 1
 	IEex_WriteString(messageAddress, message)
 	IEex_WriteString(captionAddress, caption)
-	IEex_DllCall("User32", "MessageBoxA", {IEex_Flags({0x40}), captionAddress, messageAddress, 0x0}, nil, 0x0)
+	IEex_DllCall("User32", "MessageBoxA", {IEex_Flags({iconOverride or 0x40}), captionAddress, messageAddress, 0x0}, nil, 0x0)
 	IEex_Free(messageAddress)
 end
 
 --------------------
 -- Random Utility --
 --------------------
+
+IEex_OnceTable = {}
+
+function IEex_Once(key, func)
+	if not IEex_OnceTable[key] then
+		IEex_OnceTable[key] = true
+		func()
+	end
+end
+
+function IEex_Default(defaultVal, val)
+	return val ~= nil and val or defaultVal
+end
 
 function IEex_IterateCPtrList(CPtrList, func)
 	local m_pNext = IEex_ReadDword(CPtrList + 0x4)
@@ -1147,23 +1160,28 @@ function IEex_UnsetMask(original, toUnsetmask)
 	return bit32.band(original, bit32.bnot(toUnsetmask))
 end
 
-function IEex_ToHex(number, minLength, prefix)
+function IEex_ToHex(number, minLength, suppressPrefix)
 	if type(number) ~= "number" then
 		-- This is usually a critical error somewhere else
 		-- in the code, so throw a fully fledged error.
 		IEex_Error("Passed a NaN value: '"..tostring(number).."'!")
 	end
-	local hexString = string.format("%x", number)
-	local wantedLength = (minLength or 0) - #hexString
-	for i = 1, wantedLength, 1 do
-		hexString = "0"..hexString
-	end
-	hexString = hexString:upper()
-	if not prefix then
-		return "0x"..hexString
+	local hexString = nil
+	if number < 0 then
+		-- string.format can't handle "negative" numbers for some reason
+		hexString = ""
+		while number ~= 0x0 do
+			hexString = string.format("%x", bit32.extract(number, 0, 4)):upper()..hexString
+			number = bit32.rshift(number, 4)
+		end
 	else
-		return hexString
+		hexString = string.format("%x", number):upper()
+		local wantedLength = (minLength or 0) - #hexString
+		for i = 1, wantedLength, 1 do
+			hexString = "0"..hexString
+		end
 	end
+	return suppressPrefix and hexString or "0x"..hexString
 end
 
 -------------------------------
@@ -1533,31 +1551,75 @@ end
 
 	-- SIGNATURE:
 	-- number result = IEex_ReadDword(number address)
-	IEex_WriteAssemblyFunction("IEex_ReadDword", {
-		"55 8B EC 53 51 52 56 57 6A 00 6A 01 FF 75 08 \z
-		!call >_lua_tonumberx \z
-		83 C4 0C \z
-		!call >__ftol2_sse \z
-		FF 30 \z
-		50 \z
-		68", {debugHookAddress, 4},
-		"FF 75 08 \z
-		!call >_lua_getglobal \z
-		83 C4 08 \z
-		DB 04 24 83 EC 04 DD 1C 24 FF 75 08 \z
-		!call >_lua_pushnumber \z
-		83 C4 0C \z
-		FF 34 24 \z
-		DB 04 24 83 EC 04 DD 1C 24 FF 75 08 \z
-		!call >_lua_pushnumber \z
-		83 C4 0C \z
-		6A 00 6A 00 6A 00 6A 00 6A 02 FF 75 08 \z
-		!call >_lua_pcallk \z
-		83 C4 18 \z
-		DB 04 24 83 EC 04 DD 1C 24 FF 75 08 \z
-		!call >_lua_pushnumber \z
-		83 C4 0C B8 01 00 00 00 5F 5E 5A 59 5B 5D C3"
-	})
+	IEex_WriteAssemblyFunction("IEex_ReadDword", {[[
+
+		!push_ebp
+		!mov_ebp_esp
+		!push_ebx
+		!push_ecx
+		!push_edx
+		!push_esi
+		!push_edi
+
+		!push_byte 00
+		!push_byte 01
+		!push_[ebp+byte] 08
+		!call >_lua_tonumberx
+		!add_esp_byte 0C
+
+		!call >__ftol2_sse ; Put address from _lua_tonumberx in eax ;
+		!push_[eax] ; Store read value on stack ;
+		!push_eax ; Store address on stack ;
+
+		!push_dword ]], {debugHookAddress, 4}, [[
+		!push_[ebp+byte] 08
+		!call >_lua_getglobal
+		!add_esp_byte 08
+
+		; Push address ;
+		!fild_[esp]
+		!sub_esp_byte 04
+		!fstp_qword:[esp]
+		!push_[ebp+byte] 08
+		!call >_lua_pushnumber
+		!add_esp_byte 0C
+
+		; Push copy of read value ;
+		!push_[esp]
+		!fild_[esp]
+		!sub_esp_byte 04
+		!fstp_qword:[esp]
+		!push_[ebp+byte] 08
+		!call >_lua_pushnumber
+		!add_esp_byte 0C
+
+		; Call IEex_ReadDwordDebug ;
+		!push_byte 00
+		!push_byte 00
+		!push_byte 00
+		!push_byte 00
+		!push_byte 02
+		!push_[ebp+byte] 08
+		!call >_lua_pcallk
+		!add_esp_byte 18
+
+		; Return read value ;
+		!fild_[esp]
+		!sub_esp_byte 04
+		!fstp_qword:[esp]
+		!push_[ebp+byte] 08
+		!call >_lua_pushnumber
+		!add_esp_byte 0C
+
+		!mov_eax #1
+		!pop_edi
+		!pop_esi
+		!pop_edx
+		!pop_ecx
+		!pop_ebx
+		!pop_ebp
+		!ret
+	]]})
 
 	-- Reads a string from the given address until a NULL is encountered.
 	-- NOTE: Certain game structures, (most commonly resrefs), don't
