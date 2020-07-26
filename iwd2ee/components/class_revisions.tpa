@@ -112,6 +112,7 @@ COPY ~%mod_folder%/tables/BAATMAG.2da~ ~override~
 COPY ~%mod_folder%/tables/BAATMKU.2da~ ~override~
 COPY ~%mod_folder%/tables/BAATNFG.2da~ ~override~
 COPY ~%mod_folder%/tables/CLABBA01.2da~ ~override~
+COPY ~%mod_folder%/tables/CLABCL07.2da~ ~override~
 COPY ~%mod_folder%/tables/CLABDR01.2da~ ~override~
 COPY ~%mod_folder%/tables/CLABFI01.2da~ ~override~
 COPY ~%mod_folder%/tables/CLABFI05.2da~ ~override~
@@ -559,6 +560,10 @@ COPY_EXISTING ~feats.2da~ ~override~
         SET strref = RESOLVE_STR_REF(@706)
         SET_2DA_ENTRY_LATER rows_out row 3 ~%strref%~
       END
+      ~WEAPON_FINESSE~ BEGIN
+        SET strref = RESOLVE_STR_REF(@707)
+        SET_2DA_ENTRY_LATER rows_out row 3 ~%strref%~
+      END
       DEFAULT
     END
   END
@@ -630,6 +635,10 @@ COPY_EXISTING ~help02.2da~ ~override~
       END
       ~9~ BEGIN
         SET strref = RESOLVE_STR_REF(@541)
+        SET_2DA_ENTRY_LATER rows_out row 2 ~%strref%~
+      END
+      ~11~ BEGIN
+        SET strref = RESOLVE_STR_REF(@523)
         SET_2DA_ENTRY_LATER rows_out row 2 ~%strref%~
       END
       DEFAULT
@@ -1084,6 +1093,7 @@ Disadvantages:
 STRING_SET 9556 @533
 STRING_SET 37 @525
 STRING_SET 36 @535
+STRING_SET 9563 @523
 
 // Copying over all the items involved in the revised shapeshifting forms.
 COPY ~%mod_folder%/itm/USSTDR07.itm~ ~override~

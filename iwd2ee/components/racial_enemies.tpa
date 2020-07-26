@@ -167,6 +167,8 @@ COPY_EXISTING_REGEXP ~.+\.cre~ ~override~
     END
 BUT_ONLY_IF_IT_CHANGES
 
+COPY_EXISTING ~IEex_WEIDU.lua~ ~override~
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_construct_race *=.*~ ~ex_construct_race = 160~
 
 // turn animals into ogres. Note that animal is not a race; it's a general type.
 

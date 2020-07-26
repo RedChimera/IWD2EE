@@ -146,19 +146,19 @@ COPY_EXISTING ~AR3101.are~ ~override~
 fj_type=0
 fj_flags=0x82
 fj_trap_active=1
-fj_box_left=1431
-fj_box_top=922
+fj_box_left=178
+fj_box_top=580
 fj_box_right=1916
-fj_box_bottom=1299
+fj_box_bottom=1556
 fj_cursor_idx=0
 fj_trap_loc_x=2100
 fj_trap_loc_y=450
 fj_loc_x=781
 fj_loc_y=805
-fj_vertex_0=(1613 + (922 << 16))
+fj_vertex_0=(848 + (580 << 16))
 fj_vertex_1=(1916 + (1067 << 16))
-fj_vertex_2=(1711 + (1299 << 16))
-fj_vertex_3=(1431 + (1184 << 16))
+fj_vertex_2=(1564 + (1556 << 16))
+fj_vertex_3=(178 + (967 << 16))
 STR_VAR fj_structure_type=~region~ fj_name=~US_31Guthma_Cutscene~ fj_reg_script=~US31GCUT~ END
 
 	LPF fj_are_structure INT_VAR fj_trap_active=1 STR_VAR fj_structure_type=~region~ fj_name=~US_31Backdoor~ fj_reg_script=~US31BAKD~ END

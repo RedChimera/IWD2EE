@@ -1428,6 +1428,7 @@ COPY_EXISTING ~00STAF84.itm~ ~override~
 	SAY IDENTIFIED_DESC @11048
 
 COPY_EXISTING ~00STAF85.itm~ ~override~
+	SAY NAME2 @11049
 	SAY IDENTIFIED_DESC @11050
 
 COPY_EXISTING ~00STAF86.itm~ ~override~
@@ -4095,6 +4096,38 @@ COPY_EXISTING ~USSHLD53.itm~ ~override~
 	SAY NAME2 @12763
 	SAY IDENTIFIED_DESC @12764
 
+COPY_EXISTING ~USSTAFBS.itm~ ~override~
+	SAY NAME2 @12765
+	SAY IDENTIFIED_DESC @12766
+
+COPY_EXISTING ~USHFSFBS.itm~ ~override~
+	SAY NAME2 @12767
+	SAY IDENTIFIED_DESC @12768
+
+COPY_EXISTING ~USCLCK58.itm~ ~override~
+	SAY NAME2 @12769
+	SAY IDENTIFIED_DESC @12770
+
+COPY_EXISTING ~USCLCK56.itm~ ~override~
+	SAY NAME2 @12771
+	SAY IDENTIFIED_DESC @12772
+
+COPY_EXISTING ~USRING59.itm~ ~override~
+	SAY NAME2 @12773
+	SAY IDENTIFIED_DESC @12774
+
+COPY_EXISTING ~USBELT59.itm~ ~override~
+	SAY NAME2 @12775
+	SAY IDENTIFIED_DESC @12776
+
+COPY_EXISTING ~USROBE51.itm~ ~override~
+	SAY NAME2 @12777
+	SAY IDENTIFIED_DESC @12778
+
+COPY_EXISTING ~USBELT45.itm~ ~override~
+	SAY NAME2 @12779
+	SAY IDENTIFIED_DESC @12780
+
 //General patch changes
 
 /*
@@ -4180,9 +4213,20 @@ COPY_EXISTING_REGEXP ~.*\.itm~ ~override~
 	PATCH_IF (us_item_category=25 AND ((us_item_flags BAND 0x00000002) = 0x00000002)) BEGIN
 		LPF ALTER_ITEM_HEADER INT_VAR header_type=1 animation_overhand=50 animation_backhand=50 animation_thrust=0 END
 	END
-//Making sure spears always thrust (sure, spears sometimes can slash, but there are already plenty of other weapons with slashing animations)
+//Making sure spears and 3 range and always thrust (sure, spears sometimes can slash, but there are already plenty of other weapons with slashing animations)
 	PATCH_IF (us_item_category=29) BEGIN
 		LPF ALTER_ITEM_HEADER INT_VAR header_type=1 animation_overhand=0 animation_backhand=0 animation_thrust=100 END
+		READ_SHORT 0x68 numheaders
+		FOR (i = 0; i < numheaders; ++i) BEGIN
+			offset = 0x82 + i * 0x38
+			READ_BYTE i theheadertype
+			PATCH_IF theheadertype = 1 BEGIN
+				READ_SHORT (offset + 0xE) therange
+				PATCH_IF therange <= 2 BEGIN
+					WRITE_SHORT (offset + 0xE) 3
+				END
+			END
+		END
 	END
 //Making sure items that aren't supposed to be usable by clerics, wizards, monks or paladins cannot be used by the kits of those classes
 	READ_LONG 0x1e us_item_unusability
@@ -4341,6 +4385,7 @@ USRTHF45	00CHAN08
 USRTHF46	00CHAN09
 USRTHF47	USSTAFCU
 USRTHF48	USROBENJ
+USRTHF49	USSTAFBS
 
 USRHF001	USAROW47
 USRHF002	00AROW06
@@ -4541,6 +4586,7 @@ USRTHF45	USHFCN08
 USRTHF46	USHFCN09
 USRTHF47	USHFSFCU
 USRTHF48	USHFRBNJ
+USRTHF49	USHFSFBS
 
 USRHF001	USAROW57
 USRHF002	USAROW54
@@ -4720,11 +4766,10 @@ END
 ACTION_IF !(MOD_IS_INSTALLED ~Setup-IWD2-Ease.tp2~ ~18~) BEGIN //If Include Forgotten Armor and Shields is not installed
 
 	COPY_EXISTING ~30GOBKRU.dlg~ ~override~ //Kruntur dialogue
-		DECOMPILE_DLG_TO_D
-		REPLACE_TEXTUALLY CASE_INSENSITIVE ~RARM_02~ ~USRTHF34~ //Sad Giant's Cap
-		COMPILE_D_TO_DLG
-		LPF CONVERT_DLG_TO_IWD2_FORMAT END
-
+		DECOMPILE_AND_PATCH BEGIN
+			REPLACE_TEXTUALLY CASE_INSENSITIVE ~RARM_02~ ~USRTHF34~ //Sad Giant's Cap
+			REPLACE_TEXTUALLY CASE_INSENSITIVE ~RSHD_03~ ~USRTHF34~ //Sad Giant's Cap
+		END
 
 	COPY_EXISTING ~11DEIRD.sto~ ~override~ //Gallaway Trading Post
 		ADD_STORE_ITEM ~60RTHF06~ AFTER ~00PLAT01~ #1 #1 #1 ~IDENTIFIED~ #1 //Owl's Feather
@@ -4836,6 +4881,7 @@ COPY_EXISTING ~40BDAWN.sto~ ~override~ //Beodaewn the Werewolf Man store
 
 COPY_EXISTING ~41ZACK1.sto~ ~override~ ~41ZACK2.sto~ ~override~ ~41ZACK3.sto~ ~override~ //Zack Boosenberry stores
 	REMOVE_STORE_ITEM ~00MSTR95~
+	ADD_STORE_ITEM ~USRTHF49~ AFTER ~00HAMM04~ #1 #1 #1 ~IDENTIFIED~ #1 //Staff of Besieging
 	ADD_STORE_ITEM ~00RTHF64~ BEFORE ~00HAMM04~ #1 #1 #1 ~IDENTIFIED~ #1 //Delnar's Healing Sword
 	ADD_STORE_ITEM ~00MSTR95~ BEFORE ~00HAMM04~ #1 #1 #1 ~IDENTIFIED~ #1 //Morningstar of Thorns
 	ADD_STORE_ITEM ~00RING78~ AFTER ~00RING20~ #1 #1 #1 ~IDENTIFIED~ #1 //Spirit Armor Ring
@@ -5296,6 +5342,17 @@ COPY_EXISTING_REGEXP ~.*\.cre~ ~override~ //Greatsword of the Soulless now inclu
 COPY_EXISTING ~20newder.dlg~ ~override~ //Dereth Springsong dialogue
 	REPLACE_TEXTUALLY CASE_INSENSITIVE ~GiveItemCreate(\"00SWDC99\",Protagonist, 1, 0, 0)~ ~GiveItemCreate("00RTHF26",Protagonist, 1, 1, 0)~
 
+COPY_EXISTING ~30gobkru.dlg~ ~override~ //Kruntur dialogue
+	DECOMPILE_AND_PATCH BEGIN
+		REPLACE_TEXTUALLY CASE_INSENSITIVE ~DestroyItem(\"00BracTB\")~ ~~
+		REPLACE_TEXTUALLY CASE_INSENSITIVE ~CreateItem(\"30GenTB\", *1, *1, *0)~ ~~
+	END
+
+COPY_EXISTING ~30yquog.dlg~ ~override~ //Yquog dialogue
+	DECOMPILE_AND_PATCH BEGIN
+		REPLACE_TEXTUALLY CASE_INSENSITIVE ~RMEW_02~ ~USRT04_V~
+	END
+
 COPY_EXISTING ~50nym.dlg~ ~override~ //Nym dialogue
 	DECOMPILE_DLG_TO_D
 	REPLACE_TEXTUALLY CASE_INSENSITIVE ~StartStore(\"50Nym\"~ ~StartStore("50Nym2"~
@@ -5564,5 +5621,7 @@ COPY_EXISTING_REGEXP ~.*\.are~ ~override~ ~.*\.cre~ ~override~ ~.*\.sto~ ~overri
 	REPLACE_TEXTUALLY CASE_INSENSITIVE ~00SCRL04~ ~USSCHF04~
 	IF ~00SCRL0[1-4]~
 	BUT_ONLY_IF_IT_CHANGES
+
+STRING_SET_EVALUATE 40237 @981
 
 INCLUDE ~%mod_folder%/components/final_patches.tpa~

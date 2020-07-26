@@ -704,7 +704,7 @@ Casting Time: 5
 Area of Effect: Caster
 Saving Throw: None
 
-Through this spell, the caster creates five balls of electricity that can be hurled in combat. When a ball lightning is thrown at an enemy, it deals 4d6 electrical damage, and other ball lightnings will similtaneously shoot at every enemy within 8 feet of the target, dealing the same damage. The ball lightnings automatically hit, and they gain any damage bonuses a dart would gain (they use the Simple Weapon: Missile proficiency).~
+Through this spell, the caster creates five balls of electricity that can be hurled in combat. When a ball lightning is thrown at an enemy, it deals 2d6 electrical damage, and other ball lightnings will similtaneously shoot at every enemy within 8 feet of the target, dealing the same damage. The ball lightnings automatically hit, and they gain any damage bonuses a dart would gain (they use the Simple Weapon: Missile proficiency).~
 @1120    = ~Flesh to Stone~
 @1121    = ~Flesh to Stone 
 (Transmutation) 
@@ -770,7 +770,7 @@ Casting Time: 6
 Area of Effect: 1 creature
 Saving Throw: Reflex negates
 
-This spell fires an orb of cold at a creature that inflicts 1d8 points of cold damage/level of the caster (maximum of 30d8) and slows the target for 1 round per level. If the target makes its saving throw, however, they only suffer half damage and the slow effect is negated. The orb is nonmagical and bypasses immunity to magic.~
+This spell fires an orb of cold at a creature that inflicts 1d8 points of cold damage/level of the caster (maximum of 30d8) and slows the target for 1 round per level. If the target makes its saving throw, however, they only suffer half damage and the slow effect is negated.~
 @1132    = ~Darts of Bone~
 @1133    = ~Darts of Bone
 (Necromancy)
@@ -1522,7 +1522,7 @@ Range: Caster
 Duration: 3 rounds + 1 round / level
 Saving Throw: None 
 
-By calling upon his deity, the caster brings into existence a magical hammer which may be used as a weapon, striking as a +1 weapon. This hammer is composed of pure force and can be used to strike targets from a safe distance, dealing 1d8 bludgeoning damage per strike. At level 8, the hammer strikes as a +2 weapon and deals 1d4 electricity damage per hit. At level 12, the hammer strikes as a +3 weapon and deals 1d8 electricity damage per hit. The Spiritual Hammer uses the Martial Weapon: Hammer proficiency.
+By calling upon his deity, the caster brings into existence a magical hammer which may be used as a weapon, striking as a +1 weapon. This hammer is composed of pure force and can be used to strike targets from a safe distance, dealing 1d8 bludgeoning damage per strike. At level 8, the hammer strikes as a +2 weapon and deals an additional 1d4 electricity damage per hit. At level 12, the hammer strikes as a +3 weapon and the electricity damage increases to 1d8. The Spiritual Hammer uses the Martial Weapon: Hammer proficiency.
 ~
 @1688    = ~Shocking Grasp~
 @1689    = ~Shocking Grasp 
@@ -1787,7 +1787,7 @@ Casting Time: 3
 Area of Effect: 20-foot radius
 Saving Throw: Fortitude partial
 
-This spell calls upon unholy power to smite your enemies. Any creatures of good alignment within the area of effect take 1d8 damage (maximum 5d8) per two caster levels and nauseates them for 1d4 rounds, which gives them a -2 to their attack bonus, AC, and saving throws. A successful Fortitude save reduces damage to half and negates the nauseating effect. Neutral creatures take half damage and are not sickened. 
+This spell calls upon unholy power to smite your enemies. Any creatures of non-evil alignment within the area of effect take 1d8 damage (maximum 5d8) per two caster levels and are nauseated for 3 rounds, which gives them a -2 to their attack bonus, AC, and saving throws. A successful Fortitude save reduces damage to half and negates the nauseating effect. Neutral creatures take half damage and are not sickened. 
 ~
 @1757    = ~Ice Wall Fault~
 @1758    = ~Slay Living~
@@ -2228,7 +2228,7 @@ Casting Time: 5
 Area of Effect: Special
 Saving Throw: Reflex half
 
-This spell creates one explosive seed for every five levels (2 at 10th level, 3 at 15th level, etc...), which can be thrown by the caster. When hurled, the seeds explode, doing 6d6 points of fire damage to everything within a 15-foot radius. The Fire Seeds use the Simple Weapon: Missile proficiency and gain damage bonuses based on Strength, proficiency, items, spells, and other sources. Creatures can make Reflex save for half damage. The DC of the Reflex save is 10 plus the caster's total level.~
+This spell creates one explosive seed for every five levels (2 at 10th level, 3 at 15th level, etc...), which can be thrown by the caster. When hurled, the seeds explode, doing 4d6 points of fire damage to everything within a 15-foot radius. The Fire Seeds use the Simple Weapon: Missile proficiency and gain damage bonuses based on Strength, proficiency, items, spells, and other sources. Creatures can make Reflex save for half damage. The DC of the Reflex save is 16 + Wisdom and Spell Focus bonuses.~
 @1879     = ~Web~
 @1880     = ~Web
 (Conjuration)
@@ -2283,7 +2283,7 @@ Casting Time: 2
 Area of Effect: 1 creature
 Saving Throw: Fortitude negates
 
-By means of a Ray of Enfeeblement, the caster weakens an opponent, reducing its strength and therefore the attacks that rely upon it. The victim's strength is reduced by 15 for the duration of the spell, unless a Fortitude save is made at a -3 penalty. Any associated penalties with having a reduced strength apply. The effects of this spell are not cumulative with repeat castings.~
+By means of a Ray of Enfeeblement, the caster weakens an opponent, reducing its strength and therefore the attacks that rely upon it. The victim's strength is reduced by 15 for the duration of the spell, unless a Fortitude save is made at a -4 penalty. Any associated penalties with having a reduced strength apply. The effects of this spell are not cumulative with repeat castings.~
 @1889     = ~Vitriolic Sphere~
 @1890     = ~Vitriolic Sphere
 (Conjuration)
@@ -2325,7 +2325,7 @@ Range: Caster
 Duration: 2 rounds / level
 Casting Time: 4 
 Area of Effect: Caster
-Saving Throw: None 
+Saving Throw: None
 
 With this spell, the caster causes a blazing ray of red-hot fire to spring forth from their hand. This blade-like ray is wielded as if it were a scimitar, and uses the Martial Weapon: Large Sword proficiency. Attacks with the Flame Blade deal 2d8 fire damage and bypass armor and shield bonuses. The Flame Blade cannot critically hit or be used in sneak attacks, but it does gain bonuses to attack and damage from Strength, proficiency, spells, items, and other effects.~
 @1897     = ~Shillelagh~
@@ -2334,11 +2334,11 @@ With this spell, the caster causes a blazing ray of red-hot fire to spring forth
 Level: Drd 1, Rgr 1
 Range: Caster
 Duration: 10 rounds / level
-Casting Time: 2 
+Casting Time: 2
 Area of Effect: Caster
 Saving Throw: None 
 
-This spell creates a magical cudgel that has a +1 attack bonus and inflicts 1d10+1 bludgeoning damage per strike. The enchantment, attack and damage bonuses of the Shillelagh increase to +2 at level 6, +3 at level 9, +4 at level 12, and +5 at level 15. The Shillelagh also gains an additional bonus to attack and damage equal to the character's Wisdom bonus. If the character is dual wielding, their other weapon will also gain this bonus. The Shillelagh uses the Simple Weapon: Mace proficiency.~
+This spell creates a magical cudgel that has a +1 attack bonus and inflicts 1d10+1 bludgeoning damage per strike. The enchantment, attack and damage bonuses of the Shillelagh increase to +2 at level 6, +3 at level 9, +4 at level 12, and +5 at level 15. The Shillelagh also gains an additional bonus to attack and damage equal to the character's Wisdom bonus. The Shillelagh uses the Simple Weapon: Mace proficiency.~
 @1899     = ~Contagion~
 @1900     = ~Contagion
 (Necromancy) 
@@ -2609,6 +2609,17 @@ Launcher:  Bow~
 @30048=~Created by the Goodberry spell, these simple looking blueberries will heal 1d4+5 points of damage for each bunch of berries eaten.~
 @30049=~Reflected the attack~
 
+@31115     = ~Armor of Faith~
+@32115     = ~Armor of Faith
+(Abjuration) 
+Level: Clr 1, Pal, Helm 1
+Range: Caster
+Duration: 3 rounds + 1 round/level 
+Casting Time: 1
+Area of Effect: Caster
+Saving Throw: None 
+
+The armor of faith is a force of energy that absorbs a portion of the damage intended for the caster. The caster gains a 1/- resistance to all non-poison damage for the duration of the spell. For every five caster levels, they get another 1/- resistance.~
 @31212     = ~Slow Poison~
 @32212     = ~Slow Poison
 (Conjuration) 
@@ -2635,6 +2646,17 @@ Saving Throw: None
 The caster calls upon their god to grant them power for a short period. The caster's Strength, Dexterity and Constitution are all raised by 1 point for every 3 levels of the caster. A third level caster would have their abilities raised by 1, while a 12th level caster would have their abilities raised by 4.
 
 When cast as a paladin spell, Draw Upon Holy Might gives additional bonuses. The paladin's Strength, Dexterity and Constitution are raised an additional number of points equal to the paladin's Charisma bonus. However, the total stat bonuses granted (from both level and Charisma) cannot be higher than +10.~
+@31226     = ~Moon Motes~
+@32226     = ~Moon Motes
+(Conjuration) 
+Level: Drd 2, Selune 1
+Range: Caster
+Duration: Instantaneous
+Casting Time: 3
+Area of Effect: 5' x 20' x 20' cone
+Saving Throw: Reflex half
+
+This spell calls upon Selune's connection with moonlight and magic to invoke a spray of glowing spheres. The spell causes 1d6 magic damage per level (max 5d6) to every creature caught in its path. Creatures can make a Reflex save for half damage.~
 @31308     = ~Remove Paralysis~
 @32308     = ~Remove Paralysis
 (Conjuration) 
@@ -2657,6 +2679,17 @@ Area of Effect: 20-foot radius
 Saving Throw: Will negates 
 
 This spell holds animals rigidly immobile. Animals with magical powers such as winter wolves do count as animals, as do some of the more animalistic monsters such as wyverns. The effect is centered on a point selected by the caster, and 1-4 animals within 20 feet of the target point are affected. Those who succeed on their Will save are unaffected by the spell. Being held does not prevent the worsening of the subject's condition due to wounds, disease, or poison.~
+@31310     = ~Miscast Magic~
+@32310     = ~Miscast Magic
+(Enchantment) 
+Level: Clr 3
+Range: Sight of Caster
+Duration: 20 rounds
+Casting Time: 3
+Area of Effect: 1 creature
+Saving Throw: Will negates 
+
+Any spell casting creature that is affected by this spell has its casting ability severely disabled.  When the creature attempts to cast a spell, it has an 50% chance of failure.  Creatures can Will save to avoid the effect, but do so at -5.~
 @31326     = ~Negative Energy Protection~
 @32326     = ~Negative Energy Protection
 (Abjuration) 
@@ -2913,6 +2946,17 @@ Area of Effect: 20-foot radius
 Saving Throw: Will negates
 
 This spell grants the caster an aura that repels nearby enemies, sending them hurtling away from the caster. Any enemy that comes within the area of effect must make a Will save at -3 or be knocked back.~
+@35654     = ~Wondrous Recall~
+@36654     = ~Wondrous Recall
+(Enchantment)
+Level: Brd 6, Clr 6, Drd 6
+Range: Caster
+Duration: Instantaneous
+Casting Time: 3
+Area of Effect: Caster
+Saving Throw: None
+
+This spell enables the caster to bring back to memory 2 spells that have been previously cast. If no spells have been cast yet, nothing happens. Wondrous Recall cannot recall 6th-level or higher spells.~
 @35753     = ~Power Word: Heal~
 @36753     = ~Power Word: Heal
 (Divination)
@@ -2924,6 +2968,17 @@ Area of Effect: 1 creature
 Saving Throw: None
 
 Power Word: Heal is one of the beneficial words of power. When uttered, it heals a creature to their maximum hit points and cures poison, disease, blindness, deafness, feeblemindedness, intoxication, and bleeding. Power Word: Heal has no effect on undead.~
+@35754     = ~Regeneration~
+@36754     = ~Regeneration
+(Divination)
+Level: Clr 7, Drd 8
+Range: Touch
+Duration: 1 round / 2 levels
+Casting Time: 7
+Area of Effect: 1 creature
+Saving Throw: None
+
+This spell lets a creature regenerate wounds very rapidly. For the duration, the target regenerates 3 HP per second.~
 @35951     = ~Auril's Blessing~
 @36951     = ~Auril's Blessing
 (Conjuration)
@@ -2939,7 +2994,7 @@ This spell calls upon the power of Auril to amplify the caster's cold spells. Fo
 @36952     = ~Mass Harm
 (Necromancy)
 Level: Clr 9
-Range: Sight of Caster
+Range: Caster
 Duration: Instantaneous
 Casting Time: 9
 Area of Effect: All enemies within 30 ft.
@@ -3023,6 +3078,17 @@ Area of Effect: 1 creature
 Saving Throw: Will or Fortitude negates
 
 Phantasmal Killer causes the target to be struck down by an embodiment of its worst fears. The target may make a Will save to disbelieve the illusion. On a failure, they must make a Fortitude save or die. Even on a successful Fortitude save, they still take 3d6 magic damage. If the target was panicking when they got hit by this spell, the DC of both saves is increased by 6.~
+@37551     = ~Steal Spells~
+@38551     = ~Steal Spells
+(Transmutation)
+Level: Brd 5, Sor/Wiz 5, Mask 5
+Range: Sight of Caster
+Duration: Instantaneous
+Casting Time: 5
+Area of Effect: 1 creature
+Saving Throw: None
+
+This spell steals memorized spells from the target and grants their spell slots to the caster. The caster makes a Pick Pockets roll, adding their caster level (and any normal bonuses to Pick Pockets). For every 10 points of the total roll, the target loses one memorized spell of 5th-level or lower, and the caster regains one spell of 4th-level or lower (prioritizing the highest-level spells that can be lost or regained this way). There is no Saving Throw, though Magic Resistance may prevent the theft.~
 @37652     = ~Isaac's Greater Missile Storm~
 @38652     = ~Isaac's Greater Missile Storm
 (Evocation)
@@ -3074,6 +3140,17 @@ Area of Effect: 1 creature
 Saving Throw: None 
 
 This spell bestows flawless luck upon a creature. For 7 seconds, the recipient gains a +20 bonus to luck. This means that the recipient will deal maximum damage with their attacks, take minimum damage from spells, roll a natural 20 with each attack, and almost always succeed on saving throws.~
+@37755     = ~Lightning Barrage~
+@38755     = ~Lightning Barrage
+(Evocation)
+Level: Sor/Wiz 7, Talos 7
+Range: Sight of Caster
+Duration: Instantaneous
+Casting Time: 4
+Area of Effect: Special
+Saving Throw: Reflex half
+
+This spell fires a flurry of small lightning bolts at the target. One bolt is fired per level (max 30), each one dealing 1d8 electrical damage (with a Reflex save for half) to all creatures in its path. The bolts will bounce off walls, potentially hitting the same creature multiple times per bolt.~
 @37852     = ~Energy Drain~
 @38852     = ~Energy Drain
 (Necromancy)
@@ -3137,7 +3214,7 @@ Range: Caster
 Duration: 6 rounds
 Casting Time: 5
 Area of Effect: Caster
-Saving Throw: None 
+Saving Throw: None
 
 This spell eliminates the interval between spellcasting, allowing the caster to begin a new spell as soon as he or she finishes casting the previous one. A spellcaster under the effects of Improved Alacrity can cast multiple spells in the space of a single round, but the concentration involved imposes a -3 penalty to casting speed for the duration of the spell.~
 @37954     = ~Living Lightning~

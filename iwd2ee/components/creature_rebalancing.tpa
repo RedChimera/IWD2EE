@@ -4072,6 +4072,7 @@ COPY_EXISTING ~AR3100.are~ ~override~
 	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR match_cre_file=~31GOBSH1~ script_team=~31GOBSH4~ END
 	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR match_cre_file=~31GOBSOR~ script_special2=~31GOBSR0~ END
 	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR match_cre_file=~31BUGB00~ script_special2=~USBUGBEA~ END
+	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR actor_name=~08_Bug_04~ script_combat=~00AATGN~ END
 
 COPY_EXISTING ~AR3101.are~ ~override~
 	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR match_cre_file=~31ORCWD2~ script_special2=~30WCHDR0~ END
@@ -4439,10 +4440,22 @@ COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
 		READ_LONG feats2 thefeats2
 		thefeats2|=0xF0000000
 		WRITE_LONG feats2 thefeats2
-		WRITE_BYTE spellfocusenchantment 2
-		WRITE_BYTE spellfocusevocation 2
-		WRITE_BYTE spellfocusnecromancy 2
-		WRITE_BYTE spellfocustransmutation 2
+		READ_BYTE spellfocusenchantment ulgiash
+		PATCH_IF ulgiash < 1 BEGIN
+			WRITE_BYTE spellfocusenchantment 1
+		END
+		READ_BYTE spellfocusevocation ulgiash
+		PATCH_IF ulgiash < 1 BEGIN
+			WRITE_BYTE spellfocusevocation 1
+		END
+		READ_BYTE spellfocusnecromancy ulgiash
+		PATCH_IF ulgiash < 1 BEGIN
+			WRITE_BYTE spellfocusnecromancy 1
+		END
+		READ_BYTE spellfocustransmutation ulgiash
+		PATCH_IF ulgiash < 1 BEGIN
+			WRITE_BYTE spellfocustransmutation 1
+		END
 	END
 	BUT_ONLY_IF_IT_CHANGES
 

@@ -243,6 +243,38 @@ COPY_EXISTING ~IEex_TRA.lua~ ~override~
 	REPLACE_TEXTUALLY ~ex_str_energydrain *=.*~ ~ex_str_energydrain = "%ex_str_energydrain%"~ 
 	SPRINT ex_str_55114 @55114
 	REPLACE_TEXTUALLY ~ex_str_55114 *=.*~ ~ex_str_55114 = "%ex_str_55114%"~
+	ex_tra_55401 = RESOLVE_STR_REF(@55401)
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_tra_55401 *=.*~ ~ex_tra_55401 = %ex_tra_55401%~
+	ex_tra_55402 = RESOLVE_STR_REF(@55402)
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_tra_55402 *=.*~ ~ex_tra_55402 = %ex_tra_55402%~
+	SPRINT ex_str_55431 @55431
+	REPLACE_TEXTUALLY ~ex_str_55431 *=.*~ ~ex_str_55431 = "%ex_str_55431%"~
+	SPRINT ex_str_55432 @55432
+	REPLACE_TEXTUALLY ~ex_str_55432 *=.*~ ~ex_str_55432 = "%ex_str_55432%"~
+	SPRINT ex_str_55453 @55453
+	REPLACE_TEXTUALLY ~ex_str_55453 *=.*~ ~ex_str_55453 = "%ex_str_55453%"~
+	SPRINT ex_str_55454 @55454
+	REPLACE_TEXTUALLY ~ex_str_55454 *=.*~ ~ex_str_55454 = "%ex_str_55454%"~
+	SPRINT ex_str_55455 @55455
+	REPLACE_TEXTUALLY ~ex_str_55455 *=.*~ ~ex_str_55455 = "%ex_str_55455%"~
+	SPRINT ex_str_1st_level @55461
+	REPLACE_TEXTUALLY ~ex_str_1st_level *=.*~ ~ex_str_1st_level = "%ex_str_1st_level%"~
+	SPRINT ex_str_2nd_level @55462
+	REPLACE_TEXTUALLY ~ex_str_2nd_level *=.*~ ~ex_str_2nd_level = "%ex_str_2nd_level%"~
+	SPRINT ex_str_3rd_level @55463
+	REPLACE_TEXTUALLY ~ex_str_3rd_level *=.*~ ~ex_str_3rd_level = "%ex_str_3rd_level%"~
+	SPRINT ex_str_4th_level @55464
+	REPLACE_TEXTUALLY ~ex_str_4th_level *=.*~ ~ex_str_4th_level = "%ex_str_4th_level%"~
+	SPRINT ex_str_5th_level @55465
+	REPLACE_TEXTUALLY ~ex_str_5th_level *=.*~ ~ex_str_5th_level = "%ex_str_5th_level%"~
+	SPRINT ex_str_6th_level @55466
+	REPLACE_TEXTUALLY ~ex_str_6th_level *=.*~ ~ex_str_6th_level = "%ex_str_6th_level%"~
+	SPRINT ex_str_7th_level @55467
+	REPLACE_TEXTUALLY ~ex_str_7th_level *=.*~ ~ex_str_7th_level = "%ex_str_7th_level%"~
+	SPRINT ex_str_8th_level @55468
+	REPLACE_TEXTUALLY ~ex_str_8th_level *=.*~ ~ex_str_8th_level = "%ex_str_8th_level%"~
+	SPRINT ex_str_9th_level @55469
+	REPLACE_TEXTUALLY ~ex_str_9th_level *=.*~ ~ex_str_9th_level = "%ex_str_9th_level%"~
 	IF_EXISTS
 
  //Turning the "test" creatures into regular creatures because their irregular CRE format can crash WeiDU when patching all creatures.
@@ -310,9 +342,51 @@ COPY_EXISTING ~60C6000A.bcs~ ~override~ ~64ORRICC.bcs~ ~override~
 		REPLACE_TEXTUALLY EXACT_MATCH ~ClearPartyEffects()~ ~ApplySpellRES("USDISPEP",Player1)~
 	END
 
-COPY ~%mod_folder%/bcs~ ~%mod_folder%/bcs~
+COPY_EXISTING ~20PTORA2.bcs~ ~override~ ~20PTORA3.bcs~ ~override~ ~20PTORA4.bcs~ ~override~
 	DECOMPILE_AND_PATCH BEGIN
+		REPLACE_TEXTUALLY EXACT_MATCH ~Entered(~ ~Global("SR_Torak_Dead","GLOBAL",0)
+Entered(~
 	END
+
+COPY_EXISTING ~20CTORD2.bcs~ ~override~
+	DECOMPILE_AND_PATCH BEGIN
+		REPLACE_TEXTUALLY EXACT_MATCH ~MultiPlayerSync()~ ~MultiPlayerSync()
+SetGlobal("SR_Torak_Talk","GLOBAL",1)~
+	END
+
+COPY_EXISTING ~20CTORD3.bcs~ ~override~
+	DECOMPILE_AND_PATCH BEGIN
+		REPLACE_TEXTUALLY EXACT_MATCH ~MultiPlayerSync()~ ~MultiPlayerSync()
+SetGlobal("SR_Torak_Talk","GLOBAL",2)~
+	END
+
+COPY_EXISTING ~20CTORD4.bcs~ ~override~
+	DECOMPILE_AND_PATCH BEGIN
+		REPLACE_TEXTUALLY EXACT_MATCH ~MultiPlayerSync()~ ~MultiPlayerSync()
+SetGlobal("SR_Torak_Talk","GLOBAL",3)~
+	END
+
+COPY_EXISTING ~AR2001.bcs~ ~override~
+	DECOMPILE_AND_PATCH BEGIN
+		REPLACE_TEXTUALLY ~SetGlobal(\"TorakDialog\", *\"MYAREA\", *1)~ ~SetGlobal("TorakDialog","MYAREA",1)
+SetGlobal("SR_Torak_Talk","GLOBAL",4)~
+	END
+
+COPY_EXISTING ~62PSAABG.bcs~ ~override~
+	DECOMPILE_AND_PATCH BEGIN
+		REPLACE_TEXTUALLY EXACT_MATCH ~Entered(~ ~Global("AR6201_VISITED","GLOBAL",0)
+Entered(~
+	END
+
+
+COPY_EXISTING ~AR2000.are~ ~override~
+	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR actor_name=~Torak2~ script_special1=~00HIDE0~ END
+	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR actor_name=~Torak3~ script_special1=~00HIDE0~ END
+	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR actor_name=~Torak4~ script_special1=~00HIDE0~ END
+
+COPY_EXISTING ~AR6200.are~ ~override~
+	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR actor_name=~Saablic_Tan~ script_special3=~USSAABL1~ END
+	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR actor_name=~Wanmok~ script_special3=~USSAABL1~ END
 /*
 COPY_EXISTING ~animate.ids~ ~override~
 	REPLACE_TEXTUALLY ~0x1001 Wyvern, White (Big)~ ~0x1000 Wyvern (Big)

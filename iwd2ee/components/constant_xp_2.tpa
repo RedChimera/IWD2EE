@@ -1,1 +1,20 @@
 COPY ~%mod_folder%/tables/tables_cr_xp_2/MONCRATE.2da~ ~override~
+
+COPY_EXISTING ~loadhint.2da~ ~override~
+	COUNT_2DA_ROWS 2 numrows
+	found_it = 0
+	FOR (i = 1; i < numrows; ++i) BEGIN
+		PATCH_IF found_it = 1 BEGIN
+			READ_2DA_ENTRY i 0 2 theindex
+			theindex -= 1
+			SET_2DA_ENTRY i 0 2 theindex
+		END
+		READ_2DA_ENTRY i 1 2 thestrref
+		PATCH_IF thestrref = 41402 BEGIN
+			REMOVE_2DA_ROW i 2
+			found_it = 1
+			numrows -= 1
+			i -= 1
+		END
+
+	END

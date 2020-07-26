@@ -157,3 +157,20 @@
 @55340=~Attacks <EXWHNAME40> with <EXWHWEAP40> : <EXWHHITMISS40>~
 @55398=~Hit~
 @55399=~Miss~
+
+@55401=~<EXSSFULL1>~
+@55402=~<EXSSFULL2>~
+@55431=~<EXSSREGAINEDLOSTAND><EXSSNUMSPELLS> <EXSSLEVELORNAME> spell~
+@55432=~<EXSSREGAINEDLOSTAND><EXSSNUMSPELLS> <EXSSLEVELORNAME> spells~
+@55453=~Regained ~
+@55454=~Lost ~
+@55455=~and ~
+@55461=~1st-level~
+@55462=~2nd-level~
+@55463=~3rd-level~
+@55464=~4th-level~
+@55465=~5th-level~
+@55466=~6th-level~
+@55467=~7th-level~
+@55468=~8th-level~
+@55469=~9th-level~

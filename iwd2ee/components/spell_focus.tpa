@@ -61,7 +61,7 @@ COPY_EXISTING ~feats.2da~ ~override~
         SET strref = RESOLVE_STR_REF(@126)
         SET_2DA_ENTRY_LATER rows_out row 3 ~%strref%~
       END
-      ~SPELL_FOCUS_TRANSMUTATION~ BEGIN
+      ~SPELL_FOCUS_TRANSMUTE~ BEGIN
         SET strref = RESOLVE_STR_REF(@127)
         SET_2DA_ENTRY_LATER rows_out row 2 ~%strref%~
         SET strref = RESOLVE_STR_REF(@128)
@@ -72,3 +72,6 @@ COPY_EXISTING ~feats.2da~ ~override~
   END
   SET_2DA_ENTRIES_NOW rows_out num_cols
 BUT_ONLY
+
+COPY_EXISTING ~IEex_WEIDU.lua~ ~override~
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_spell_focus_component_installed.*~ ~ex_spell_focus_component_installed = true~

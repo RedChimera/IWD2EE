@@ -964,7 +964,7 @@ Weight: 1~
 
 STATISTICS:
 
-Special: 
+Special:
   While equipped it will prevent ongoing blood loss from weapons that cause the Wounding effect.
   Regenerate 1 HP per 3 seconds
 Weight: 1~
@@ -1439,6 +1439,7 @@ STATISTICS:
 Armor Class:  +5 (generic)
 Spell Resistance: +10
 Saving Throw:  +3 bonus
+The wearer's spells gain +3 DC
 Weight:  6 lb.~
 //@10393    = ~Robe of the Neutral Archmagi~
 @10394    = ~This powerful Wizard Robe offers protection from all forms of physical attack while at the same time increasing one's magical resistance and saving throws. Due to the nature of its enchantment, it can only be worn by those of neutral alignment.
@@ -1448,6 +1449,7 @@ STATISTICS:
 Armor Class:  +5 (generic)
 Spell Resistance: +10
 Saving Throw:  +3 bonus
+The wearer's spells gain +3 DC
 Weight:  6 lb.~
 //@10395    = ~Robe of the Evil Archmagi~
 @10396    = ~This powerful Wizard Robe offers protection from all forms of physical attack while at the same time increasing one's magical resistance and saving throws. Due to the nature of its enchantment, it can only be worn by those of evil alignment.
@@ -1457,6 +1459,7 @@ STATISTICS:
 Armor Class:  +5 (generic)
 Spell Resistance: +10
 Saving Throw:  +3 bonus
+The wearer's spells gain +3 DC
 Weight:  6 lb.~
 //@10397    = ~Wizard Robe of Fire Resistance~
 @10398    = ~Due to the extremely volatile nature of most magics, Wizard Robes of Fire Resistance are not uncommon among young acolytes and their wizardly tutors.
@@ -5113,7 +5116,7 @@ Special:
 Weight: 4 lb.
 Feat Requirement:  Simple Weapon, Quarterstaff
 Type:  Two-handed~
-//@11049    = ~Spellward Staff~
+@11049    = ~Lesser Staff of Spell Focus~
 @11050    = ~The simplest and humblest of staff weapons, the quarterstaff is a length of wood ranging six to nine feet in length. Masterwork quarterstaffs are made of stout oak and are shod with metal at both ends. This one is particularly special as it has been imbued with magical properties. 
 
 STATISTICS:
@@ -5121,7 +5124,7 @@ STATISTICS:
 Damage:  1d6
 Damage Type:  Bludgeoning
 Special:
-  Spellward: Immunity to level 1 spells
+  Spells cast by the wielder gain +1 DC
 Weight: 4 lb.
 Feat Requirement:  Simple Weapon, Quarterstaff
 Type:  Two-handed~
@@ -5288,10 +5291,10 @@ Type:  Two-handed~
 STATISTICS:
 
 Damage:  1d6 + 1
-Attack Bonus:  +1 
+Attack Bonus:  +1
 Enchantment:  +1
 Damage Type:  Bludgeoning
-Special:  
+Special:
   Sneaky Weapon: This weapon turns invisible for a brief moment when used to attack
   +1 to Move Silently skill
   2% chance target is Silenced when struck
@@ -5538,9 +5541,21 @@ Weight: 6 lb.
 Feat Requirement:  Martial Weapon, Polearm
 Type:  Two-handed~
 //@11129    = ~Nine Paces~
-//@11130    = ~Item description can remain the same; if new description is needed put it here~
+@11130    = ~This long spear is made of a thick shaft of oak, and it looks like it has been used extensively in hunting arctic boars.  It bears numerous sigils and runes along its haft to help it strike straight and true, and when held in a life or death situation, the spear can lash out at an opponent up to five lengths from the wielder, taking the victim down before they can even enter close combat.  While the spear seems to confer no wounding enchantments, it does look capable of harming creatures only affected by magic weapons.
+
+STATISTICS:
+
+Damage:  1d8
+Attack Bonus:  +1 
+Damage Type:  Piercing
+Special: 
+  Reach of 5 lengths, rather than 3
+  For the purposes of hitting enchanted creatures this weapon is considered a +1 weapon
+Weight: 7 lb.
+Feat Requirement:  Martial Weapon, Polearm
+Type:  Two-handed~
 //@11131    = ~Twelve Paces~
-@11132    = ~This long spear is made of a thick shaft of oak, and it looks like it has been used extensively in hunting arctic boars. It bears numerous sigils and runes along its haft to help it strike straight and true, and when held in a life or death situation, the spear can lash out at an opponent up to five lengths from the wielder, taking the victim down before they can even enter close combat.
+@11132    = ~This long spear is made of a thick shaft of oak, and it looks like it has been used extensively in hunting arctic boars. It bears numerous sigils and runes along its haft to help it strike straight and true, and when held in a life or death situation, the spear can lash out at an opponent up to sever lengths from the wielder, taking the victim down before they can even enter close combat.
 
 STATISTICS:
 
@@ -5548,8 +5563,8 @@ Damage:  1d8 + 5
 Attack Bonus:  +5
 Enchantment:  +5
 Damage Type:  Piercing
-Special: 
-  Reach of 5 lengths, rather than 2
+Special:
+  Reach of 7 lengths, rather than 3
 Weight: 7 lb.
 Feat Requirement:  Martial Weapon, Polearm
 Type:  Two-handed~
@@ -11315,7 +11330,8 @@ Launcher:  Crossbow~
 
 STATISTICS:
 
-Special: Movement rate increased significantly
+Haste
+Movement rate increased significantly
 Weight: 1 lb.~
 @12431    = ~Bracers of Defense +5~
 @12432    = ~Normally bracers are used to add support and protection to forearm area of the body. However, these bracers have been magically altered so that the wearer receives armor like protection without the constraints of wearing armor. Bracers such as these are highly prized by wizards and sorcerers who must have complete freedom of movement to perform their magical arts.
@@ -11564,6 +11580,7 @@ Weight: 2 lb.~
 
 STATISTICS:
 
+Armor Class:  +1 (generic)
 Constant Effect: Wearer is under the effect of the spell Executioner's Eyes
 Weight: 2 lb.~
 @12479    = ~Guardian Dragon Scale~
@@ -13022,7 +13039,7 @@ Special:
 Weight: 4 lb.
 Feat Requirement:  Simple Weapon, Quarterstaff
 Type:  Two-handed~
-@12745    = ~Staff of Healing~
+@12745    = ~Staff of Greater Healing~
 @12746    = ~The simplest and humblest of staff weapons, the quarterstaff is a length of wood ranging six to nine feet in length. Masterwork quarterstaffs are made of stout oak and are shod with metal at both ends. This one is particularly special as it has been imbued with magical properties.
 
 STATISTICS:
@@ -13104,6 +13121,77 @@ Armor Bonus:  +1 vs. missile weapons
 Armor Check Penalty:  -10
 Arcane Spell Failure:  50%
 Weight: 7 lb.~
+@12765    = ~Staff of Besieging~
+@12766    = ~A favorite among abjurers, this particular staff was created by a wizard named Gulph the Tiny.  A diminutive human mage, Gulph didn't want to be stuck in a situation where he would have to rely on his physical abilities.  This staff helped him have the upper hand in magical duels.  Gulph met his end when he foolishly went looking for Ibenian Mushrooms in a grove full of quicklings.  The staff remained among the quicklings for several years until a passing party of adventurers slaughtered the evil fae creatures and took the staff as their own.
+
+STATISTICS:
+
+Damage:  1d6 + 1
+Attack Bonus:  +1 
+Enchantment:  +1
+Damage Type:  Bludgeoning
+Special:
+  The wielder's abjuration spells gain +6 DC (such as Dispel Magic, Remove Magic, and Glyph of Warding)
+Weight: 4 lb.
+Feat Requirement:  Simple Weapon, Quarterstaff
+Type:  Two-handed~
+@12767    = ~Staff of Greater Besieging~
+@12768    = ~A favorite among abjurers, this particular staff was created by a wizard named Gulph the Tiny.  A diminutive human mage, Gulph didn't want to be stuck in a situation where he would have to rely on his physical abilities.  This staff helped him have the upper hand in magical duels.  Gulph met his end when he foolishly went looking for Ibenian Mushrooms in a grove full of quicklings.  The staff remained among the quicklings for several years until a passing party of adventurers slaughtered the evil fae creatures and took the staff as their own.
+
+STATISTICS:
+
+Damage:  1d6 + 3
+Attack Bonus:  +3
+Enchantment:  +3
+Damage Type:  Bludgeoning
+Special:
+  The wielder's abjuration spells gain +9 DC (such as Dispel Magic, Remove Magic, and Glyph of Warding)
+Weight: 4 lb.
+Feat Requirement:  Simple Weapon, Quarterstaff
+Type:  Two-handed~
+@12769    = ~Cloak of Protection +10~
+@12770    = ~This simple cloak has been imbued with some small magical properties to help protect its wearer. It does so by affecting both saving throws and armor class. It is ideal for wizards and others who cannot wear bulkier or more restrictive types of armor.
+
+STATISTICS:
+
+Deflection Bonus:  +10
+Saving Throw:  +10 bonus
+Weight:  3 lb.~
+@12771    = ~Whirlwind Cloak~
+@12772    = ~The cloak can be made in every possible shape with just about every type of fabric.  The most common forms are a circular piece of fabric with a hole in the center for the head, and fabric draped from neck, connected by a chain, brooch, cord, or pins.
+
+STATISTICS:
+
+When the wearer performs a Whirlwind Attack, they can still make their full number of attacks in the following round.
+Weight:  1 lb.~
+@12773    = ~Ring of Protection +10~
+@12774    = ~This magical ring provides the wearer with amazing protection.
+
+STATISTICS:
+
+Deflection Bonus:  +10
+Weight: 0 lb.~
+@12775    = ~Belt of Perfect Immunity~
+@12776    = ~Belts are usually wide bands of leather or some other material  that can be fastened around the waist. Most belts are used for the practical purpose of holding up ones pants, but like most articles of clothing they can also be used for ornamental purposes.
+
+STATISTICS:
+
+The wearer is immune to charm, domination, fear, hopelessness, hold, paralysis, stun, sleep, berserk, feeblemindedness, petrification, instant death, blindness, deafness, silence, casting failure, poison, disease, wounding effects, fatigue, intoxication, knockdown, enfeeblement, nausea, and energy drain.
+Weight: 3 lb.~
+@12777    = ~Robe of Epic Illusions~
+@12778    = ~Since the age of Netheril, wizards have learned to bestow a wide variety of magical properties upon the everyday objects that surround them. A favorite item of such enchantment is the common robe. It is lightweight, affordable, and holds its enchantment well, thereby making it ideal equipment for a wizard.
+
+STATISTICS:
+
+The wearer's illusion spells gain +10 DC
+Weight:  3 lb.~
+@12779    = ~Girdle of the Poisoner~
+@12780    = ~Girdles are generally similar to belts.  Unlike belts, girdles are not used to hold up pants and dungarees, but to carry pouches, scabbards, and the like.
+
+STATISTICS:
+
+All poison damage dealt by the character is increased by 50%
+Weight:  2 lb.~
 @12900    = ~Hrm - you are powerful allies, indeed. More gold and gems to line your pockets, then - also, a suit of plate armor, a warhammer, a helmet, all crafted and enchanted by great duergar artisans. They are well deserved, outsider.~
 @12901    = ~Drink this Rainwater Brew, Ennelia. It should help your condition.~
 @12902    = ~Drink this Sour Draught, Ennelia. It should help your condition.~

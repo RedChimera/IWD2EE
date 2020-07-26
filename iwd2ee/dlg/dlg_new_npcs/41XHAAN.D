@@ -15,7 +15,7 @@ END
 
 IF ~~ THEN BEGIN XhaanAsk1
   SAY ~I can offer many things, mortal.  What is it that you want?~
-  IF ~!NumInParty(6)~ THEN REPLY ~An ally.  If I set you free, then you will join me and help me defeat the Legion of the Chimera.~ GOTO XhaanAskJoin
+  IF ~!NumInParty(6)~ THEN REPLY ~An ally.  If I set you free, then you will join me and help me defeat the Legion of the Chimera.~ DO ~SetGlobal("US_Xhaan_Promise_Join","GLOBAL",1)~ GOTO XhaanAskJoin
   IF ~~ THEN REPLY ~Gold.  That is the price of your freedom.~ GOTO XhaanAskGold
   IF ~~ THEN REPLY ~Power.  I will trade your freedom for a portion of your life force.~ GOTO XhaanAskXP
 END

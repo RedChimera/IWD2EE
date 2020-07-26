@@ -10,6 +10,7 @@ ALWAYS
            OUTER_SPRINT ~mod_folder~ ~iwd2ee~    //Folder Var
 //      END
 
+	INCLUDE ~%mod_folder%/components/iwd2ee_functions.tpa~ //Functions that may be used in multiple components
 
 	ACTION_IF !FILE_EXISTS_IN_GAME ~usInitialModifications.txt~ BEGIN
 		INCLUDE ~%mod_folder%/components/initial_modifications.tpa~
@@ -17,7 +18,6 @@ ALWAYS
 	END
 
 
-	INCLUDE ~%mod_folder%/components/iwd2ee_functions.tpa~ //Functions that may be used in multiple components
 	SILENT
 	LAM	IWD2_INDEX_LISTS
 	VERBOSE

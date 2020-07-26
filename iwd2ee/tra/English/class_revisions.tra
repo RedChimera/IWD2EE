@@ -320,6 +320,22 @@ Prerequisites: Cha 13+, Wild Shape.
 
 Benefit: You can cast spells while in any shapeshifted form. However, the awkwardness of replicating the verbal and somatic components gives you a +4 penalty to casting time (you can still cast spells without penalty in your natural form).~
 
+@522    = ~Wizard~
+@523    = ~WIZARD:
+
+The wizard strives to be a master of magical energies, shaping them and casting them as spells. To do so, he studies strange tongues and obscure facts and devotes much of his time to magical research. A wizard must rely on knowledge and wit to survive. Wizards are rarely seen adventuring without a retinue of fighters and men-at-arms. Because there are different types (or schools) of magic, there are different types of wizards. However, the most common sort studies all types of magic and learns a wide variety of spells. His broad range makes him well suited to the demands of adventuring.
+
+Note: To cast a spell, a wizard must have an Intelligence equal to or greater than the spells level plus 10. Intelligence is the casting statistic for a wizard.  It affects their maximum spellcasting level, spell saving throw DCs, and number of bonus spells.
+
+Hit Points per Level: 1-4
+
+Advantages:
+* Proficient with all simple weapons except for simple missile weapons.
+* Receive a bonus feat every five levels in addition to the normal feats given to all character classes every three levels.
+* If the character does not specialize in a school of magic, they gain a +1 bonus to the DC of all their spells.
+
+Disadvantages:
+* Starts with no proficiencies in armor and is a very poor at melee combat.~
 @524    = ~Barbarian~
 @525    = ~BARBARIAN: 
 
@@ -384,6 +400,17 @@ Advantages:
 * Clerics have the ability to Turn Undead. When this power is invoked, the cleric attempts to use the power of his or her patron deity to either terrify (if good or neutral) or control (if evil) a group of undead. The higher the cleric's level and charisma are, the greater his or her chance of success is.
 * Clerics receive special powers and spells from their deity.
 * Spontaneous Casting: Clerics can convert their spells to cure (if good or neutral) or inflict (if evil) spells of the nearest level when a player shift-clicks on a spell at the time of casting. The spell clicked is immediately removed from the character's memorized list and cast as the nearest cure or inflict spell of the same level.
+
+Spontaneous Casting Spells:
+1: Cure Light Wounds/Inflict Light Wounds
+2: Cure Moderate Wounds/Inflict Moderate Wounds
+3: Cure Serious Wounds/Inflict Serious Wounds
+4: Cure Critical Wounds/Inflict Critical Wounds
+5: Raise Dead/Slay Living
+6: Heal/Harm
+7: Resurrection/Destruction
+8: Greater Restoration/Energy Drain
+9: Mass Heal/Mass Harm
 
 Disadvantages:
 * Clerics do not have access to many powerful offensive spells.
@@ -719,7 +746,7 @@ Domain Spells:
 2: Blindness, Blur
 3: Invisibility Sphere, Mirror Image
 4: Blink, Improved Invisibility
-5: Lutzaen's Local Teleport, Shadow Conjuration
+5: Lutzaen's Local Teleport, Steal Spells
 6: Darts of Bone, Greater Shadow Conjuration
 7: Mass Haste, Shades
 8: Army of Images, Mass Invisibility
@@ -757,7 +784,7 @@ Domain Spells:
 4: Protection from Electricity, Static Charge
 5: Ball Lightning, Chain Lightning
 6: Acid Storm, Whirlwind
-7: Destruction, Fire Storm
+7: Fire Storm, Lightning Barrage
 8: Earthquake, Horrid Wilting
 9: Living Lightning, Meteor Swarm~
 @588    = ~
@@ -1016,6 +1043,13 @@ Benefit: Taking this feat allows you to cast arcane spells with light armor and/
 You can react more quickly than normal in a fight.
 
 Benefit: The "speed factor" delay before you attack for the first time in a round is reduced by 4. The casting time of all your spells is reduced by 1.~
+@707    = ~WEAPON FINESSE:
+
+You are especially skilled at using daggers, short swords and unarmed strikes, which allows you to benefit as much from Dexterity as from Strength.
+
+Prerequisite: Proficient with small blade/touch attack, base attack bonus +1.
+
+Benefit: With daggers, short swords, unarmed attacks and natural weapons, you may use your Dexterity modifier instead of your Strength modifier on attack rolls.  Since you need your second hand for balance, if you carry a shield, apply the shield's armor check penalty to your attack rolls.~
 
 @785    = ~Aasimar~
 @786    = ~AASIMAR:
@@ -1285,6 +1319,7 @@ A wizard that specializes in magic that protects, blocks, or banishes.
 
 Advantages:
 * Abjurers can memorize an additional spell per spell level they know.
+* Abjuration spells cast by an abjurer gain +2 DC.
 
 Disadvantages:
 * Abjurers cannot learn spells from the Invocation school.~
@@ -1295,6 +1330,7 @@ A wizard that specializes in creating creatures and objects to assist him.
 
 Advantages:
 * Conjurers can memorize an additional spell per spell level they know.
+* Conjuration spells cast by a conjurer gain +2 DC.
 
 Disadvantages:
 * Conjurers cannot learn spells from the Necromancy school.~
@@ -1304,6 +1340,7 @@ Disadvantages:
 A wizard that specializes in detection and divining magics.
 
 * Diviners can memorize an additional spell per spell level they know.
+* Divination spells cast by a diviner gain +2 DC.
 
 Disadvantages:
 * Diviners cannot learn spells from the Illusion school.~
@@ -1313,15 +1350,17 @@ Disadvantages:
 A wizard that specializes in manipulating the minds of sentient beings.
 
 * Enchanters can memorize an additional spell per spell level they know.
+* Enchantment spells cast by an enchanter gain +2 DC.
 
 Disadvantages:
 * Enchanters cannot learn spells from the Transmutation school.~
 @823    = ~Evoker~
-@824    = ~EVOKER: 
+@824    = ~EVOKER:
 
 A wizard that specializes in manipulating energy and creating something from nothing.
 
 * Evokers can memorize an additional spell per spell level they know.
+* Evocation spells cast by an evoker gain +2 DC.
 
 Disadvantages:
 * Evokers cannot learn spells from the Abjuration school.~
@@ -1331,6 +1370,7 @@ Disadvantages:
 A wizard that specializes in creating illusions to confuse and mislead.
 
 * Illusionists can memorize an additional spell per spell level they know.
+* Illusion spells cast by an illusionist gain +2 DC.
 
 Disadvantages:
 * Illusionists cannot learn spells from the Divination school.~
@@ -1340,6 +1380,7 @@ Disadvantages:
 A wizard that specializes in magic dealing with death.
 
 * Necromancers can memorize an additional spell per spell level they know.
+* Necromancy spells cast by a necromancer gain +2 DC.
 
 Disadvantages:
 * Necromancers cannot learn spells from the Conjuration school.~
@@ -1349,6 +1390,7 @@ Disadvantages:
 A wizard that specializes in magic that alters physical reality.
 
 * Transmuters can memorize an additional spell per spell level they know.
+* Transmutation spells cast by a transmuter gain +2 DC.
 
 Disadvantages:
 * Transmuters cannot learn spells from the Enchantment school.~
@@ -1617,10 +1659,10 @@ Disadvantages:
 @977    = ~~
 @978    = ~~
 @979    = ~~
-@980    = ~~
-@981    = ~~
-@982    = ~~
-@983    = ~~
+@980    = ~If you drop something on the ground instead of a container, it will eventually disappear after many hours have passed. Key items will not disappear this way.~
+@981    = ~In cramped fighting situations, use spears, halberds, quarterstaves, greatswords, and two-handed axes to attack enemies from a distance. Spears in particular have the longest reach of these weapons.~
+@982    = ~If you have difficulty with a battle, try using spells like Bless, Cat's Grace, Haste, and Emotion: Hope before you engage the enemy.~
+@983    = ~Right-click the inventory button to toggle quickloot, which lets you pick up items much faster.~
 @984    = ~~
 @985    = ~~
 @986    = ~~
