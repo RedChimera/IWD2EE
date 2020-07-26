@@ -250,9 +250,9 @@ function IEex_Quickloot_UpdateItems()
 
 	for i = 0, 9, 1 do
 		if IEex_IsPointOverControlID(panel, i, cursorX, cursorY) then
-			local overContainerID = IEex_Quickloot_GetSlotData(i).containerID
-			if overContainerID ~= IEex_Quickloot_DefaultContainerID then
-				IEex_Quickloot_HighlightContainerID = overContainerID
+			local overSlotData = IEex_Quickloot_GetSlotData(i)
+			if not overSlotData.isFallback then
+				IEex_Quickloot_HighlightContainerID = overSlotData.containerID
 			end
 		end
 	end
@@ -265,6 +265,7 @@ function IEex_Quickloot_GetSlotData(controlID)
 	return IEex_Quickloot_Items[IEex_Quickloot_ItemsAccessIndex + controlID] or {
 		["containerID"] = IEex_Quickloot_DefaultContainerID,
 		["slotIndex"] = IEex_GetContainerIDNumItems(IEex_Quickloot_DefaultContainerID),
+		["isFallback"] = true,
 	}
 end
 
