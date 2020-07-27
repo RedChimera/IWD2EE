@@ -7,7 +7,7 @@ dofile("override/IEex_TRA.lua")
 dofile("override/IEex_WEIDU.lua")
 dofile("override/IEex_INI.lua")
 dofile("override/IEex_Core.lua")
---dofile("override/IEex_Key.lua")
+dofile("override/IEex_Key.lua")
 
 for module, tf in pairs(IEex_Modules) do
 	if tf then
