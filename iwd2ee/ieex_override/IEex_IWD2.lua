@@ -7,7 +7,7 @@ dofile("override/IEex_TRA.lua")
 dofile("override/IEex_WEIDU.lua")
 dofile("override/IEex_INI.lua")
 dofile("override/IEex_Core.lua")
-dofile("override/IEex_Key.lua")
+--dofile("override/IEex_Key.lua")
 
 for module, tf in pairs(IEex_Modules) do
 	if tf then
@@ -1693,7 +1693,7 @@ function EXDAMAGE(effectData, creatureData)
 	if IEex_CheckForEffectRepeat(effectData, creatureData) then return end
 	local sourceID = IEex_ReadDword(effectData + 0x10C)
 	local targetID = IEex_GetActorIDShare(creatureData)
-	local sourceData = 0
+	local sourceData = IEex_GetActorShare(sourceID)
 	local damage = IEex_ReadByte(effectData + 0x18, 0x0)
 	local dicesize = IEex_ReadByte(effectData + 0x19, 0x0)
 	local dicenumber = IEex_ReadByte(effectData + 0x1A, 0x0)
@@ -1735,24 +1735,23 @@ function EXDAMAGE(effectData, creatureData)
 			end
 		end
 	end
-	if bit32.band(savingthrow, 0x40) > 0 then
-		savebonus = savebonus + IEex_ReadByte(sourceData + 0x784, 0x0) * 2
-	end
-	if bit32.band(savingthrow, 0x80) > 0 then
-		savebonus = savebonus + IEex_ReadByte(sourceData + 0x785, 0x0) * 2
-	end
-	if bit32.band(savingthrow, 0x100) > 0 then
-		savebonus = savebonus + IEex_ReadByte(sourceData + 0x786, 0x0) * 2
-	end
-	if bit32.band(savingthrow, 0x200) > 0 then
-		savebonus = savebonus + IEex_ReadByte(sourceData + 0x787, 0x0) * 2
-	end
 	local rogueLevel = 0
 	local isSneakAttack = false
 	local isTrueBackstab = false
 	local hasProtection = false
 	if IEex_IsSprite(sourceID, true) then
-		sourceData = IEex_GetActorShare(sourceID)
+		if bit32.band(savingthrow, 0x40) > 0 then
+			savebonus = savebonus + IEex_ReadByte(sourceData + 0x784, 0x0) * 2
+		end
+		if bit32.band(savingthrow, 0x80) > 0 then
+			savebonus = savebonus + IEex_ReadByte(sourceData + 0x785, 0x0) * 2
+		end
+		if bit32.band(savingthrow, 0x100) > 0 then
+			savebonus = savebonus + IEex_ReadByte(sourceData + 0x786, 0x0) * 2
+		end
+		if bit32.band(savingthrow, 0x200) > 0 then
+			savebonus = savebonus + IEex_ReadByte(sourceData + 0x787, 0x0) * 2
+		end
 		if proficiency > 0 and ex_feat_id_offset[proficiency] ~= nil then
 			local proficiencyDamage = ex_proficiency_damage[IEex_ReadByte(sourceData + ex_feat_id_offset[proficiency], 0x0)]
 			if proficiencyDamage ~= nil then
@@ -3355,6 +3354,50 @@ function MEBARRAG(effectData, creatureData)
 })
 	end
 --]]
+end
+
+function MEGARGOY(effectData, creatureData)
+	if IEex_CheckForEffectRepeat(effectData, creatureData) then return end
+	IEex_WriteDword(effectData + 0x110, 1)
+	local targetID = IEex_GetActorIDShare(creatureData)
+	local savingthrow = bit32.band(IEex_ReadDword(effectData + 0x3C), 0xFFFFFFE3)
+	local parent_resource = IEex_ReadLString(effectData + 0x90, 8)
+	local currentAction = IEex_ReadWord(creatureData + 0x476, 0x0)
+	if currentAction == 0 and not IEex_GetActorSpellState(targetID, 18) then
+		IEex_ApplyEffectToActor(targetID, {
+["opcode"] = 402,
+["target"] = 2,
+["timing"] = 4,
+["duration"] = 6,
+["resource"] = "USGARGO1",
+["parent_resource"] = "USGARGO1",
+["source_target"] = targetID,
+["source_id"] = targetID
+})
+	else
+		IEex_ApplyEffectToActor(targetID, {
+["opcode"] = 254,
+["target"] = 2,
+["timing"] = 1,
+["resource"] = "USGARGO1",
+["parent_resource"] = "USGARGO1",
+["source_target"] = targetID,
+["source_id"] = targetID
+})
+	end
+end
+
+function MEGARGOS(effectData, creatureData)
+	if IEex_CheckForEffectRepeat(effectData, creatureData) then return end
+	IEex_WriteDword(effectData + 0x110, 1)
+	local targetID = IEex_GetActorIDShare(creatureData)
+	local parameter1 = IEex_ReadDword(effectData + 0x18)
+	IEex_IterateActorEffects(targetID, function(eData)
+		local theopcode = IEex_ReadDword(eData + 0x10)
+		if theopcode == 218 then
+			IEex_WriteDword(eData + 0x60, parameter1)
+		end
+	end)
 end
 
 function MEREDIRE(effectData, creatureData)
@@ -6077,7 +6120,14 @@ ex_animation_size = {}
 MESPLPR2 works similarly to opcodes 206 and 290. It grants immunity to the spell if the target satisfies a condition.
 
 parameter2 - Determines the condition. If it's true, the target is immune to the spell. The conditions are the same as with
- opcodes 206 and 290, but will take things like Better Racial Enemies into account.
+ opcodes 206 and 290, but will take things like Better Racial Enemies into account. There are some extras added at the end, though.
+ Here are some of them:
+ 55: Unnatural (undead, construct, object, or extraplanar creature)
+ 94: Nonliving (undead, construct, or object)
+ 96: Mindless (undead, construct, object, shambling mound, or ooze)
+ 98: Drow or duergar
+ 100: Light-sensitive (drow, duergar, fungi, shadows, wights, and wraiths)
+ 
 
 --]]
 function MESPLPR2(effectData, creatureData)
@@ -6266,6 +6316,25 @@ function MESPLPR2(effectData, creatureData)
 		if IEex_ReadByte(creatureData + 0x26, 0x0) == ex_fiend_race or IEex_ReadByte(creatureData + 0x26, 0x0) == 152 or IEex_ReadByte(creatureData + 0x26, 0x0) == 161 then
 			hasProtection = true
 		end
+	elseif protectionType == 94 then
+		local animation = IEex_ReadDword(creatureData + 0x5C4)
+		if IEex_ReadByte(creatureData + 0x25, 0x0) == 4 or IEex_ReadByte(creatureData + 0x26, 0x0) == ex_construct_race then
+			hasProtection = true
+		end
+	elseif protectionType == 96 then
+		local animation = IEex_ReadDword(creatureData + 0x5C4)
+		if IEex_ReadByte(creatureData + 0x25, 0x0) == 4 or IEex_ReadByte(creatureData + 0x26, 0x0) == ex_construct_race or animation == 29442 or (animation >= 30976 and animation <= 30979) then
+			hasProtection = true
+		end
+	elseif protectionType == 98 then
+		if IEex_ReadByte(creatureData + 0x26, 0x0) == 183 or (IEex_ReadByte(creatureData + 0x26, 0x0) == 2 and IEex_ReadByte(creatureData + 0x7FF, 0x0) == 1) or IEex_ReadByte(creatureData + 0x26, 0x0) == 185 or (IEex_ReadByte(creatureData + 0x26, 0x0) == 4 and IEex_ReadByte(creatureData + 0x7FF, 0x0) == 2) then
+			hasProtection = true
+		end
+	elseif protectionType == 100 then
+		local animation = IEex_ReadDword(creatureData + 0x5C4)
+		if IEex_ReadByte(creatureData + 0x26, 0x0) == 183 or (IEex_ReadByte(creatureData + 0x26, 0x0) == 2 and IEex_ReadByte(creatureData + 0x7FF, 0x0) == 1) or IEex_ReadByte(creatureData + 0x26, 0x0) == 185 or (IEex_ReadByte(creatureData + 0x26, 0x0) == 4 and IEex_ReadByte(creatureData + 0x7FF, 0x0) == 2) or animation == 58153 or animation == 58201 or animation == 58217 or animation == 59656 or animation == 59672 or animation == 60313 or animation == 60329 or animation == 60337 then
+			hasProtection = true
+		end
 	end
 	
 	if (hasProtection == true and invert == false) or (hasProtection == false and invert == true) then
@@ -6325,7 +6394,7 @@ function MESPLSAV(effectData, creatureData)
 	if IEex_CheckForEffectRepeat(effectData, creatureData) then return end
 	local sourceID = IEex_ReadDword(effectData + 0x10C)
 	local targetID = IEex_GetActorIDShare(creatureData)
-	local sourceData = 0
+	local sourceData = IEex_GetActorShare(sourceID)
 	local spellRES = IEex_ReadLString(effectData + 0x18, 8)
 	local savingthrow = bit32.band(IEex_ReadDword(effectData + 0x3C), 0xFFFFFFE3)
 	local savebonus = IEex_ReadDword(effectData + 0x40)
@@ -6366,21 +6435,20 @@ function MESPLSAV(effectData, creatureData)
 			savebonus = savebonus + state_save_penalties[parent_resource][2]
 		end
 	end
-	if bit32.band(savingthrow, 0x40) > 0 then
-		savebonus = savebonus + IEex_ReadByte(sourceData + 0x784, 0x0) * 2
-	end
-	if bit32.band(savingthrow, 0x80) > 0 then
-		savebonus = savebonus + IEex_ReadByte(sourceData + 0x785, 0x0) * 2
-	end
-	if bit32.band(savingthrow, 0x100) > 0 then
-		savebonus = savebonus + IEex_ReadByte(sourceData + 0x786, 0x0) * 2
-	end
-	if bit32.band(savingthrow, 0x200) > 0 then
-		savebonus = savebonus + IEex_ReadByte(sourceData + 0x787, 0x0) * 2
-	end
 	local saveBonusStatValue = 0
 	if IEex_IsSprite(sourceID, true) then
-		sourceData = IEex_GetActorShare(sourceID)
+		if bit32.band(savingthrow, 0x40) > 0 then
+			savebonus = savebonus + IEex_ReadByte(sourceData + 0x784, 0x0) * 2
+		end
+		if bit32.band(savingthrow, 0x80) > 0 then
+			savebonus = savebonus + IEex_ReadByte(sourceData + 0x785, 0x0) * 2
+		end
+		if bit32.band(savingthrow, 0x100) > 0 then
+			savebonus = savebonus + IEex_ReadByte(sourceData + 0x786, 0x0) * 2
+		end
+		if bit32.band(savingthrow, 0x200) > 0 then
+			savebonus = savebonus + IEex_ReadByte(sourceData + 0x787, 0x0) * 2
+		end
 		if casterClass == 11 then
 			savebonus = savebonus - math.floor((IEex_GetActorStat(sourceID, 38) - 10) / 2)
 		elseif casterClass == 3 or casterClass == 4 or casterClass == 7 or casterClass == 8 then

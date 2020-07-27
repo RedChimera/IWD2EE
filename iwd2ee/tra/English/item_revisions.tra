@@ -13193,6 +13193,13 @@ STATISTICS:
 All poison damage dealt by the character is increased by 50%
 Weight:  2 lb.~
 @12900    = ~Hrm - you are powerful allies, indeed. More gold and gems to line your pockets, then - also, a suit of plate armor, a warhammer, a helmet, all crafted and enchanted by great duergar artisans. They are well deserved, outsider.~
+@12781    = ~Gargoyle Boots~
+@12782    = ~Legend holds that the Mage who created this magical footwear trapped the spirit of an actual gargoyle within these boots. Unfortunately, they couldn't protect the nameless wizard from the vengeance of the gargoyle's mate.
+
+STATISTICS:
+
+Special: If the wearer stands still for 6 seconds without doing anything, they gain a single skin of Stoneskin (absorbing the next 10 points of physical damage from a +4 or lower weapon) for 8 hours
+Weight: 3 lb.~
 @12901    = ~Drink this Rainwater Brew, Ennelia. It should help your condition.~
 @12902    = ~Drink this Sour Draught, Ennelia. It should help your condition.~
 @12903    = ~This rainwater brew may help - drink it down.~

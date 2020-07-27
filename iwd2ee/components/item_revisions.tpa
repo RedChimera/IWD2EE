@@ -4128,6 +4128,10 @@ COPY_EXISTING ~USBELT45.itm~ ~override~
 	SAY NAME2 @12779
 	SAY IDENTIFIED_DESC @12780
 
+COPY_EXISTING ~USBOOT42.itm~ ~override~
+	SAY NAME2 @12781
+	SAY IDENTIFIED_DESC @12782
+
 //General patch changes
 
 /*
@@ -4893,6 +4897,7 @@ COPY_EXISTING ~41ZACK1.sto~ ~override~ ~41ZACK2.sto~ ~override~ ~41ZACK3.sto~ ~o
 
 COPY_EXISTING ~50NYM2.sto~ ~override~ //Nym store
 	ADD_STORE_ITEM ~00DAGG93~ AFTER ~00ROBE03~ #1 #1 #1 ~IDENTIFIED~ #1 //Dagger of Speed +1
+	ADD_STORE_ITEM ~USBOOT42~ AFTER ~00BOOT03~ #1 #1 #1 ~IDENTIFIED~ #1 //Gargoyle Boots
 
 COPY_EXISTING ~00BASHS3.sto~ ~override~ //Avarine Decanter genie store
 	WRITE_LONG 0x14 155 //Buying stuff from him costs less money (since he actually has some good stuff now), though his goods are still overpriced
