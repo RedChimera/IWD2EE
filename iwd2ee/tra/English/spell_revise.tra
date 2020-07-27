@@ -2801,6 +2801,17 @@ Area of Effect: 1 creature
 Saving Throw: None
 
 In a shocking display that is bound to cow your enemies, this spell drops a cow from the sky onto the target creature. The cow deals 10d8 bludgeoning damage to the creature. There is no Saving Throw, and Spell Resistance cannot stop the cow.~
+@33306     = ~Hold Person~
+@34306     = ~Hold Person
+(Enchantment) 
+Level: Brd 2, Clr 2, Sor/Wiz 3, Helm 2
+Range: Sight of Caster
+Duration: 1 round/2 levels
+Casting Time: 3
+Area of Effect: Special
+Saving Throw: Will negates 
+
+This spell holds 1-4 humans, demihumans, or humanoid creatures immobile for a short duration. The Hold Person spell affects any bipedal human, demihuman, or humanoid of man size or smaller, including dwarves, elves, gnolls, gnomes, goblins, half-elves, halflings, half-orcs, hobgoblins, humans, lizard men, orcs, troglodytes, and others. Thus, a 10th-level fighter could be held, while an ogre could not. The effect selects the enemies closest to the target and holds them. Enemies making their Will saves are totally unaffected by the spell. Undead creatures cannot be held. Held creatures cannot move or speak, but they remain aware of events around them and can use abilities not requiring motion or speech. Being held does not prevent the worsening of the subject's condition due to wounds, disease, or poison.  A successful Will save negates any effect.~
 @33322     = ~Melf's Minute Meteors~
 @34322     = ~Melf's Minute Meteors
 (Evocation)
