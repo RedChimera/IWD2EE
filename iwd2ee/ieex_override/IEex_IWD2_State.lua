@@ -1,13 +1,17 @@
 
 function IEex_Reload()
-	dofile("override/IEex_IWD2.lua")
+	dofile("override/IEex_IWD2_State.lua")
 end
+
+dofile("override/IEex_Core_State.lua")
+dofile("override/IEex_Creature_State.lua")
+dofile("override/IEex_Opcode_State.lua")
+dofile("override/IEex_Gui_State.lua")
+dofile("override/IEex_Key_State.lua")
 
 dofile("override/IEex_TRA.lua")
 dofile("override/IEex_WEIDU.lua")
 dofile("override/IEex_INI.lua")
-dofile("override/IEex_Core.lua")
---dofile("override/IEex_Key.lua")
 
 for module, tf in pairs(IEex_Modules) do
 	if tf then
@@ -134,14 +138,14 @@ function IEex_AlterSpellInfo(actorID, casterType, spellLevel, resref, memorizeMo
 		IEex_WriteDword(ptrMem + 0x4, memorizeMod)
 		IEex_WriteDword(ptrMem + 0x8, castableMod)
 		IEex_WriteDword(ptrMem + 0xC, 0x0)
-	
+
 		IEex_Call(0x725950, {
 			ptrMem + 0xC,
 			ptrMem + 0x8,
 			ptrMem + 0x4,
 			ptrMem
 		}, address, 0x0)
-		
+
 		IEex_Free(ptrMem)
 	else
 		local currentEntryBase = IEex_ReadDword(address + 0x4)
@@ -951,6 +955,11 @@ function IEex_GetGameDifficulty()
 	return IEex_ReadByte(IEex_GetGameData() + 0x4456, 0x0)
 end
 
+function IEex_GetActiveEngine()
+	local g_pBaldurChitin = IEex_ReadDword(0x8CF6DC)
+	return IEex_ReadDword(g_pBaldurChitin + 0x3C4)
+end
+
 function IEex_GetEngineWorld()
 	local g_pBaldurChitin = IEex_ReadDword(0x8CF6DC)
 	return IEex_ReadDword(g_pBaldurChitin + 0x1C88)
@@ -1012,7 +1021,7 @@ function IEex_ToString(string)
 		else
 			return string
 		end
-		
+
 	end
 end
 
@@ -1693,7 +1702,7 @@ function EXDAMAGE(effectData, creatureData)
 	if IEex_CheckForEffectRepeat(effectData, creatureData) then return end
 	local sourceID = IEex_ReadDword(effectData + 0x10C)
 	local targetID = IEex_GetActorIDShare(creatureData)
-	local sourceData = IEex_GetActorShare(sourceID)
+	local sourceData = 0
 	local damage = IEex_ReadByte(effectData + 0x18, 0x0)
 	local dicesize = IEex_ReadByte(effectData + 0x19, 0x0)
 	local dicenumber = IEex_ReadByte(effectData + 0x1A, 0x0)
@@ -1735,23 +1744,24 @@ function EXDAMAGE(effectData, creatureData)
 			end
 		end
 	end
+	if bit32.band(savingthrow, 0x40) > 0 then
+		savebonus = savebonus + IEex_ReadByte(sourceData + 0x784, 0x0) * 2
+	end
+	if bit32.band(savingthrow, 0x80) > 0 then
+		savebonus = savebonus + IEex_ReadByte(sourceData + 0x785, 0x0) * 2
+	end
+	if bit32.band(savingthrow, 0x100) > 0 then
+		savebonus = savebonus + IEex_ReadByte(sourceData + 0x786, 0x0) * 2
+	end
+	if bit32.band(savingthrow, 0x200) > 0 then
+		savebonus = savebonus + IEex_ReadByte(sourceData + 0x787, 0x0) * 2
+	end
 	local rogueLevel = 0
 	local isSneakAttack = false
 	local isTrueBackstab = false
 	local hasProtection = false
 	if IEex_IsSprite(sourceID, true) then
-		if bit32.band(savingthrow, 0x40) > 0 then
-			savebonus = savebonus + IEex_ReadByte(sourceData + 0x784, 0x0) * 2
-		end
-		if bit32.band(savingthrow, 0x80) > 0 then
-			savebonus = savebonus + IEex_ReadByte(sourceData + 0x785, 0x0) * 2
-		end
-		if bit32.band(savingthrow, 0x100) > 0 then
-			savebonus = savebonus + IEex_ReadByte(sourceData + 0x786, 0x0) * 2
-		end
-		if bit32.band(savingthrow, 0x200) > 0 then
-			savebonus = savebonus + IEex_ReadByte(sourceData + 0x787, 0x0) * 2
-		end
+		sourceData = IEex_GetActorShare(sourceID)
 		if proficiency > 0 and ex_feat_id_offset[proficiency] ~= nil then
 			local proficiencyDamage = ex_proficiency_damage[IEex_ReadByte(sourceData + ex_feat_id_offset[proficiency], 0x0)]
 			if proficiencyDamage ~= nil then
@@ -3354,50 +3364,6 @@ function MEBARRAG(effectData, creatureData)
 })
 	end
 --]]
-end
-
-function MEGARGOY(effectData, creatureData)
-	if IEex_CheckForEffectRepeat(effectData, creatureData) then return end
-	IEex_WriteDword(effectData + 0x110, 1)
-	local targetID = IEex_GetActorIDShare(creatureData)
-	local savingthrow = bit32.band(IEex_ReadDword(effectData + 0x3C), 0xFFFFFFE3)
-	local parent_resource = IEex_ReadLString(effectData + 0x90, 8)
-	local currentAction = IEex_ReadWord(creatureData + 0x476, 0x0)
-	if currentAction == 0 and not IEex_GetActorSpellState(targetID, 18) then
-		IEex_ApplyEffectToActor(targetID, {
-["opcode"] = 402,
-["target"] = 2,
-["timing"] = 4,
-["duration"] = 6,
-["resource"] = "USGARGO1",
-["parent_resource"] = "USGARGO1",
-["source_target"] = targetID,
-["source_id"] = targetID
-})
-	else
-		IEex_ApplyEffectToActor(targetID, {
-["opcode"] = 254,
-["target"] = 2,
-["timing"] = 1,
-["resource"] = "USGARGO1",
-["parent_resource"] = "USGARGO1",
-["source_target"] = targetID,
-["source_id"] = targetID
-})
-	end
-end
-
-function MEGARGOS(effectData, creatureData)
-	if IEex_CheckForEffectRepeat(effectData, creatureData) then return end
-	IEex_WriteDword(effectData + 0x110, 1)
-	local targetID = IEex_GetActorIDShare(creatureData)
-	local parameter1 = IEex_ReadDword(effectData + 0x18)
-	IEex_IterateActorEffects(targetID, function(eData)
-		local theopcode = IEex_ReadDword(eData + 0x10)
-		if theopcode == 218 then
-			IEex_WriteDword(eData + 0x60, parameter1)
-		end
-	end)
 end
 
 function MEREDIRE(effectData, creatureData)
@@ -6120,14 +6086,7 @@ ex_animation_size = {}
 MESPLPR2 works similarly to opcodes 206 and 290. It grants immunity to the spell if the target satisfies a condition.
 
 parameter2 - Determines the condition. If it's true, the target is immune to the spell. The conditions are the same as with
- opcodes 206 and 290, but will take things like Better Racial Enemies into account. There are some extras added at the end, though.
- Here are some of them:
- 55: Unnatural (undead, construct, object, or extraplanar creature)
- 94: Nonliving (undead, construct, or object)
- 96: Mindless (undead, construct, object, shambling mound, or ooze)
- 98: Drow or duergar
- 100: Light-sensitive (drow, duergar, fungi, shadows, wights, and wraiths)
- 
+ opcodes 206 and 290, but will take things like Better Racial Enemies into account.
 
 --]]
 function MESPLPR2(effectData, creatureData)
@@ -6316,27 +6275,8 @@ function MESPLPR2(effectData, creatureData)
 		if IEex_ReadByte(creatureData + 0x26, 0x0) == ex_fiend_race or IEex_ReadByte(creatureData + 0x26, 0x0) == 152 or IEex_ReadByte(creatureData + 0x26, 0x0) == 161 then
 			hasProtection = true
 		end
-	elseif protectionType == 94 then
-		local animation = IEex_ReadDword(creatureData + 0x5C4)
-		if IEex_ReadByte(creatureData + 0x25, 0x0) == 4 or IEex_ReadByte(creatureData + 0x26, 0x0) == ex_construct_race then
-			hasProtection = true
-		end
-	elseif protectionType == 96 then
-		local animation = IEex_ReadDword(creatureData + 0x5C4)
-		if IEex_ReadByte(creatureData + 0x25, 0x0) == 4 or IEex_ReadByte(creatureData + 0x26, 0x0) == ex_construct_race or animation == 29442 or (animation >= 30976 and animation <= 30979) then
-			hasProtection = true
-		end
-	elseif protectionType == 98 then
-		if IEex_ReadByte(creatureData + 0x26, 0x0) == 183 or (IEex_ReadByte(creatureData + 0x26, 0x0) == 2 and IEex_ReadByte(creatureData + 0x7FF, 0x0) == 1) or IEex_ReadByte(creatureData + 0x26, 0x0) == 185 or (IEex_ReadByte(creatureData + 0x26, 0x0) == 4 and IEex_ReadByte(creatureData + 0x7FF, 0x0) == 2) then
-			hasProtection = true
-		end
-	elseif protectionType == 100 then
-		local animation = IEex_ReadDword(creatureData + 0x5C4)
-		if IEex_ReadByte(creatureData + 0x26, 0x0) == 183 or (IEex_ReadByte(creatureData + 0x26, 0x0) == 2 and IEex_ReadByte(creatureData + 0x7FF, 0x0) == 1) or IEex_ReadByte(creatureData + 0x26, 0x0) == 185 or (IEex_ReadByte(creatureData + 0x26, 0x0) == 4 and IEex_ReadByte(creatureData + 0x7FF, 0x0) == 2) or animation == 58153 or animation == 58201 or animation == 58217 or animation == 59656 or animation == 59672 or animation == 60313 or animation == 60329 or animation == 60337 then
-			hasProtection = true
-		end
 	end
-	
+
 	if (hasProtection == true and invert == false) or (hasProtection == false and invert == true) then
 		if bit32.band(savingthrow, 0x10000) == 0 then
 			IEex_ApplyEffectToActor(targetID, {
@@ -6394,7 +6334,7 @@ function MESPLSAV(effectData, creatureData)
 	if IEex_CheckForEffectRepeat(effectData, creatureData) then return end
 	local sourceID = IEex_ReadDword(effectData + 0x10C)
 	local targetID = IEex_GetActorIDShare(creatureData)
-	local sourceData = IEex_GetActorShare(sourceID)
+	local sourceData = 0
 	local spellRES = IEex_ReadLString(effectData + 0x18, 8)
 	local savingthrow = bit32.band(IEex_ReadDword(effectData + 0x3C), 0xFFFFFFE3)
 	local savebonus = IEex_ReadDword(effectData + 0x40)
@@ -6435,20 +6375,21 @@ function MESPLSAV(effectData, creatureData)
 			savebonus = savebonus + state_save_penalties[parent_resource][2]
 		end
 	end
+	if bit32.band(savingthrow, 0x40) > 0 then
+		savebonus = savebonus + IEex_ReadByte(sourceData + 0x784, 0x0) * 2
+	end
+	if bit32.band(savingthrow, 0x80) > 0 then
+		savebonus = savebonus + IEex_ReadByte(sourceData + 0x785, 0x0) * 2
+	end
+	if bit32.band(savingthrow, 0x100) > 0 then
+		savebonus = savebonus + IEex_ReadByte(sourceData + 0x786, 0x0) * 2
+	end
+	if bit32.band(savingthrow, 0x200) > 0 then
+		savebonus = savebonus + IEex_ReadByte(sourceData + 0x787, 0x0) * 2
+	end
 	local saveBonusStatValue = 0
 	if IEex_IsSprite(sourceID, true) then
-		if bit32.band(savingthrow, 0x40) > 0 then
-			savebonus = savebonus + IEex_ReadByte(sourceData + 0x784, 0x0) * 2
-		end
-		if bit32.band(savingthrow, 0x80) > 0 then
-			savebonus = savebonus + IEex_ReadByte(sourceData + 0x785, 0x0) * 2
-		end
-		if bit32.band(savingthrow, 0x100) > 0 then
-			savebonus = savebonus + IEex_ReadByte(sourceData + 0x786, 0x0) * 2
-		end
-		if bit32.band(savingthrow, 0x200) > 0 then
-			savebonus = savebonus + IEex_ReadByte(sourceData + 0x787, 0x0) * 2
-		end
+		sourceData = IEex_GetActorShare(sourceID)
 		if casterClass == 11 then
 			savebonus = savebonus - math.floor((IEex_GetActorStat(sourceID, 38) - 10) / 2)
 		elseif casterClass == 3 or casterClass == 4 or casterClass == 7 or casterClass == 8 then
@@ -6457,7 +6398,7 @@ function MESPLSAV(effectData, creatureData)
 			savebonus = savebonus - math.floor((IEex_GetActorStat(sourceID, 42) - 10) / 2)
 		end
 		if saveBonusStat > 0 then
-			if (saveBonusStat == 120 or saveBonusStat == 160) and casterClass == 0 then	
+			if (saveBonusStat == 120 or saveBonusStat == 160) and casterClass == 0 then
 				local highestStatValue = IEex_GetActorStat(sourceID, 38)
 				saveBonusStat = 38
 				if IEex_GetActorStat(sourceID, 39) > highestStatValue then
@@ -8368,7 +8309,7 @@ function MEOPCSPL(originatingEffectData, effectData, creatureData)
 	local match_parent_resource = IEex_ReadLString(originatingEffectData + 0x18, 8)
 	local opcode = IEex_ReadDword(effectData + 0xC)
 	local parent_resource = IEex_ReadLString(effectData + 0x90, 8)
-	
+
 	if opcode == match_opcode and parent_resource == match_parent_resource then
 		return true
 	end
@@ -8416,9 +8357,9 @@ function MEDEFLEC(originatingEffectData, effectData, creatureData)
 		isOnHitEffect = true
 	end
 	if opcode ~= 12 and isOnHitEffect == false then return false end
-	
 
-	
+
+
 
 	if isOnHitEffect or (damage_type == 0 and bit32.band(types_blocked, 0x4000) > 0) or (damage_type ~= 0 and bit32.band(types_blocked, damage_type) > 0) then
 		if doDeflect or isOnHitEffect then
@@ -8555,7 +8496,7 @@ function MEREBOUN(originatingEffectData, effectData, creatureData)
 					return false
 				end
 			end
-			
+
 			if bit32.band(savingthrow, 0x10000) == 0 and delay ~= -1 then
 				IEex_ApplyEffectToActor(targetID, {
 ["opcode"] = 288,
@@ -8637,736 +8578,3 @@ function MEKAERVA(originatingEffectData, effectData, creatureData)
 	end
 	return false
 end
-
----------------
--- Lua Hooks --
----------------
-
------------
--- Feats --
------------
-
-function IEex_IsFeatTaken(baseStats, featID)
-	local mask = bit32.lshift(1, bit32.band(featID, 0x1F))
-	local offset = bit32.rshift(featID, 5)
-	--IEex_DisplayString(tostring(featID.." => "..IEex_ToHex(offset*4+0x1B8).." => "..IEex_ToHex(mask)))
-	local featField = IEex_ReadDword(baseStats+offset*4+0x1B8)
-	return IEex_IsMaskSet(featField, mask)
-end
-
-function IEex_GetFeatCount(baseStats, featID)
-	-- Abuse function's simple indexing to treat in terms of baseStats and not CGameSprite
-	return IEex_Call(0x762E20, {featID}, baseStats - 0x5A4, 0x0)
-end
-
-function IEex_FeatHook(share, oldBaseStats, oldDerivedStats)
-
-	--IEex_MessageBox("share: "..IEex_ToHex(share))
-	--IEex_MessageBox("oldBaseStats: "..IEex_ToHex(oldBaseStats))
-	--IEex_MessageBox("oldDerivedStats: "..IEex_ToHex(oldDerivedStats))
-
-	local newBaseStats = share + 0x5A4
-	for featID = 0, IEex_NEW_FEATS_MAXID, 1 do
-		if IEex_IsFeatTaken(newBaseStats, featID) then
-			local oldFeatCount = IEex_GetFeatCount(oldBaseStats, featID)
-			local newFeatCount = IEex_GetFeatCount(newBaseStats, featID)
-			if oldFeatCount ~= newFeatCount then
-				for featLevel = oldFeatCount + 1, newFeatCount, 1 do
-					IEex_ApplyResref("FE_"..featID.."_"..featLevel, IEex_GetActorIDShare(share))
-					--IEex_DisplayString("You took featID "..featID.." with level "..featLevel)
-				end
-			end
-		end
-	end
-
-end
-
---------------------
--- Initialization --
---------------------
-
----------------
--- CONSTANTS --
----------------
-
-IEex_NEW_FEATS_MAXID = nil
-IEex_NEW_FEATS_SIZE  = nil
-
----------------
--- Functions --
----------------
-
-function IEex_Stage1Startup()
-	IEex_IndexAllResources()
-	IEex_MapSpellsToScrolls()
-	IEex_LoadInitial2DAs()
-	IEex_WriteDelayedPatches()
-end
-
-function IEex_Stage2Startup()
-	IEex_IndexMasterSpellLists()
-end
-
-function IEex_IndexMasterSpellLists()
-
-	local index = function(address, t, r)
-
-		local currentAddress = IEex_ReadDword(address)
-		local limit = IEex_ReadDword(address + 0x4) - 1
-
-		if limit >= 0 then
-			local resref = IEex_ReadLString(currentAddress, 8)
-			t[0] = resref
-			r[resref] = 0
-			currentAddress = currentAddress + 0x8
-		end
-
-		for i = 1, limit, 1 do
-			local resref = IEex_ReadLString(currentAddress, 8)
-			table.insert(t, resref)
-			r[resref] = i
-			currentAddress = currentAddress + 0x8
-		end
-
-	end
-
-	local data = IEex_GetGameData()
-
-	IEex_LISTSPLL = {}
-	IEex_LISTSPLL_Reverse = {}
-	index(data + 0x4BF8, IEex_LISTSPLL, IEex_LISTSPLL_Reverse)
-
-	IEex_LISTINNT = {}
-	IEex_LISTINNT_Reverse = {}
-	index(data + 0x4C00, IEex_LISTINNT, IEex_LISTINNT_Reverse)
-
-	IEex_LISTSONG = {}
-	IEex_LISTSONG_Reverse = {}
-	index(data + 0x4C08, IEex_LISTSONG, IEex_LISTSONG_Reverse)
-
-	IEex_LISTSHAP = {}
-	IEex_LISTSHAP_Reverse = {}
-	index(data + 0x4C10, IEex_LISTSHAP, IEex_LISTSHAP_Reverse)
-
-end
-
-function IEex_IndexAllResources()
-
-	IEex_IndexedResources = {}
-
-	local unknownSubstruct = IEex_GetResourceManager() + 0x24C
-	local unknownSubstruct2 = IEex_ReadDword(unknownSubstruct + 0x10)
-
-	local limit = IEex_ReadDword(unknownSubstruct + 0xC)
-	local currentIndex = 0
-	local currentAddress = 0
-
-	while currentIndex ~= limit do
-		local resref = IEex_ReadLString(unknownSubstruct2 + currentAddress, 8)
-		if resref ~= "" then
-			local type = IEex_ReadWord(unknownSubstruct2 + currentAddress + 0x12, 0)
-			local typeBucket = IEex_IndexedResources[type]
-			if not typeBucket then
-				typeBucket = {}
-				IEex_IndexedResources[type] = typeBucket
-			end
-			table.insert(typeBucket, resref)
-		end
-		currentIndex = currentIndex + 1
-		currentAddress = currentAddress + 0x18
-	end
-
-	for type, bucket in pairs(IEex_IndexedResources) do
-		table.sort(bucket)
-	end
-
-end
-
-function IEex_MapSpellsToScrolls()
-
-	IEex_SpellToScroll = {}
-
-	for i, resref in ipairs(IEex_IndexedResources[IEex_FileExtensionToType("ITM")]) do
-
-		local prefix = resref:sub(1, 4)
-		if prefix == "SPWI" or prefix == "SPPR" or prefix == "USWI" or prefix == "USPR" then
-
-			local resWrapper = IEex_DemandRes(resref, "ITM")
-
-			if resWrapper:isValid() then
-
-				local data = resWrapper:getData()
-				local category = IEex_ReadWord(data + 0x1C, 0)
-				local abilitiesNum = IEex_ReadWord(data + 0x68, 0)
-
-				if category == 11 and abilitiesNum >= 2 then
-
-					local secondAbilityAddress = data + IEex_ReadDword(data + 0x64) + 0x38
-					local secondAbilityEffectCount = IEex_ReadWord(secondAbilityAddress + 0x1E, 0)
-
-					if secondAbilityEffectCount >= 1 then
-						local effectIndex = IEex_ReadWord(secondAbilityAddress + 0x20, 0)
-						local effectAddress = data + IEex_ReadDword(data + 0x6A) + effectIndex * 0x30
-						if IEex_ReadWord(effectAddress, 0) == 147 then
-							local spellResref = IEex_ReadLString(effectAddress + 0x14, 8)
-							IEex_SpellToScroll[spellResref:upper()] = resref
-						end
-					end
-				end
-
-				resWrapper:free()
-
-			else
-				local message = "[IEex_MapSpellsToScrolls] Critical Error: "..resref..".ITM couldn't be accessed."
-				print(message)
-				IEex_MessageBox(message)
-			end
-		end
-	end
-end
-
-function IEex_LoadInitial2DAs()
-
-	IEex_Loaded2DAs = {}
-
-	local feats2DA = IEex_2DADemand("B3FEATS")
-
-	local idColumn = IEex_2DAFindColumn(feats2DA, "ID")
-	local maxRowIndex = IEex_ReadWord(feats2DA + 0x20, 1) - 1
-
-	local previousID = 74
-	for rowIndex = 0, maxRowIndex, 1 do
-		local myID = tonumber(IEex_2DAGetAt(feats2DA, idColumn, rowIndex))
-		if (previousID + 1) ~= myID then
-			IEex_TracebackMessage("IEex CRITICAL ERROR - B3FEATS.2DA contains hole at ID = "..(previousID + 1).."; Fix this!")
-		end
-		previousID = myID
-	end
-
-	IEex_NEW_FEATS_MAXID = previousID
-	IEex_NEW_FEATS_SIZE = IEex_NEW_FEATS_MAXID + 1
-
-end
-
-function IEex_WriteDelayedPatches()
-
-	IEex_DisableCodeProtection()
-
-	--------------------
-	-- FeatList Hooks --
-	--------------------
-
-	IEex_FeatPanelStringHook = function(featID)
-		local foundMax = tonumber(IEex_2DAGetAtRelated("B3FEATS", "ID", "MAX", function(id) return tonumber(id) == featID end))
-		return foundMax > 1
-	end
-
-	IEex_FeatPipsHook = function(featID)
-		return tonumber(IEex_2DAGetAtRelated("B3FEATS", "ID", "MAX", function(id) return tonumber(id) == featID	end))
-	end
-
-	IEex_GetFeatCountHook = function(sprite, featID)
-		return IEex_ReadByte(sprite + 0x78F + (featID - 0x4B), 0)
-	end
-
-	IEex_SetFeatCountHook = function(sprite, featID, count)
-		IEex_WriteByte(sprite + 0x78F + (featID - 0x4B), count)
-	end
-
-	IEex_FeatIncrementableHook = function (sprite, featID)
-
-		local featCount = IEex_ReadByte(sprite + 0x78F + (featID - 0x4B), 0)
-		local foundMax = tonumber(IEex_2DAGetAtRelated("B3FEATS", "ID", "MAX", function(id) return tonumber(id) == featID end))
-		if featCount >= foundMax then return false end
-
-		local actorID = IEex_GetActorIDShare(sprite)
-
-		local prerequisiteFunc = IEex_2DAGetAtRelated("B3FEATS", "ID", "PREREQUISITE_FUNCTION", function(id) return tonumber(id) == featID end)
-		if prerequisiteFunc ~= "*" and prerequisiteFunc ~= "" and not _G[prerequisiteFunc](actorID, featID) then return false end
-
-		local incrementableFunc = IEex_2DAGetAtRelated("B3FEATS", "ID", "INCREMENTABLE_FUNCTION", function(id) return tonumber(id) == featID end)
-		if incrementableFunc ~= "*" and incrementableFunc ~= "" and not _G[incrementableFunc](actorID, featID) then return false end
-
-		return true
-	end
-
-	IEex_MeetsFeatRequirementsHook = function(sprite, featID)
-		local foundFunc = IEex_2DAGetAtRelated("B3FEATS", "ID", "PREREQUISITE_FUNCTION", function(id) return tonumber(id) == featID end)
-		if foundFunc ~= "*" and foundFunc ~= "" and not _G[foundFunc](IEex_GetActorIDShare(sprite), featID) then return false end
-		return true
-	end
-
-	------------------------
-	-- FeatList Hooks ASM --
-	------------------------
-
-	--------------------------------
-	-- FIX CHARGEN ARRAY OVERFLOW --
-	--------------------------------
-
-	local chargenBeforeFeatCounts = IEex_Malloc(IEex_NEW_FEATS_SIZE * 0x4)
-	for i = 0, IEex_NEW_FEATS_MAXID, 1 do
-		IEex_WriteDword(chargenBeforeFeatCounts + i * 4, 0x0)
-	end
-
-	------------------------
-	-- Chargen_Init_Feats --
-	------------------------
-
-	IEex_WriteAssembly(0x60CD6C, {"!mov_[edx*4+dword]_eax", {chargenBeforeFeatCounts, 4}})
-
-	-----------------------------
-	-- Chargen_Update_FeatList --
-	-----------------------------
-
-	IEex_WriteAssembly(0x60E689, {"!cmp_[ecx*4+dword]_eax", {chargenBeforeFeatCounts, 4}})
-
-	-------------------------------
-	-- Chargen_OnFeatCountChange --
-	-------------------------------
-
-	IEex_WriteAssembly(0x623447, {"!cmp_[esi*4+dword]_eax", {chargenBeforeFeatCounts, 4}})
-
-	------------------------------
-	-- CGameSprite_SetFeatCount --
-	------------------------------
-
-	IEex_WriteByte(0x762897 + 2, IEex_NEW_FEATS_SIZE)
-
-	local featGetCountHookAddress = 0x76290B
-	local featGetCountHook = IEex_WriteAssemblyAuto({[[
-
-		!jbe_dword ]], {featGetCountHookAddress + 0x6, 4, 4}, [[
-		!cmp_eax_byte 47
-		!jle_dword :762D5E
-
-		!push_all_registers_iwd2
-
-		!push_dword ]], {IEex_WriteStringAuto("IEex_SetFeatCountHook"), 4}, [[
-		!push_dword *_g_lua
-		!call >_lua_getglobal
-		!add_esp_byte 08
-
-		; sprite ;
-		!push_esi
-		!fild_[esp]
-		!sub_esp_byte 04
-		!fstp_qword:[esp]
-		!push_dword *_g_lua
-		!call >_lua_pushnumber
-		!add_esp_byte 0C
-
-		; featID ;
-		!push_edi
-		!fild_[esp]
-		!sub_esp_byte 04
-		!fstp_qword:[esp]
-		!push_dword *_g_lua
-		!call >_lua_pushnumber
-		!add_esp_byte 0C
-
-		; count ;
-		!push_ebx
-		!fild_[esp]
-		!sub_esp_byte 04
-		!fstp_qword:[esp]
-		!push_dword *_g_lua
-		!call >_lua_pushnumber
-		!add_esp_byte 0C
-
-		!push_byte 00
-		!push_byte 00
-		!push_byte 00
-		!push_byte 00
-		!push_byte 03
-		!push_dword *_g_lua
-		!call >_lua_pcallk
-		!add_esp_byte 18
-		!call >IEex_CheckCallError
-
-		!pop_all_registers_iwd2
-		!jmp_dword :762D5E
-
-	]]})
-	IEex_WriteAssembly(featGetCountHookAddress, {"!jmp_dword", {featGetCountHook, 4, 4}, "!nop"})
-
-	---------------------------
-	-- FeatList_GetFeatCount --
-	---------------------------
-
-	IEex_WriteByte(0x762E26 + 2, IEex_NEW_FEATS_SIZE)
-
-	local featGetCountHookAddress = 0x762E6A
-	local featGetCountHook = IEex_WriteAssemblyAuto({[[
-
-		!jbe_dword ]], {featGetCountHookAddress + 0x6, 4, 4}, [[
-		!cmp_eax_byte 47
-		!jle_dword :762FD1
-
-		!push_registers_iwd2
-
-		!push_dword ]], {IEex_WriteStringAuto("IEex_GetFeatCountHook"), 4}, [[
-		!push_dword *_g_lua
-		!call >_lua_getglobal
-		!add_esp_byte 08
-
-		; sprite ;
-		!push_esi
-		!fild_[esp]
-		!sub_esp_byte 04
-		!fstp_qword:[esp]
-		!push_dword *_g_lua
-		!call >_lua_pushnumber
-		!add_esp_byte 0C
-
-		; featID ;
-		!push_edi
-		!fild_[esp]
-		!sub_esp_byte 04
-		!fstp_qword:[esp]
-		!push_dword *_g_lua
-		!call >_lua_pushnumber
-		!add_esp_byte 0C
-
-		!push_byte 00
-		!push_byte 00
-		!push_byte 00
-		!push_byte 01
-		!push_byte 02
-		!push_dword *_g_lua
-		!call >_lua_pcallk
-		!add_esp_byte 18
-		!call >IEex_CheckCallError
-
-		!push_byte 00
-		!push_byte FF
-		!push_dword *_g_lua
-		!call >_lua_tonumberx
-		!add_esp_byte 0C
-
-		!call >__ftol2_sse
-		!push_eax
-
-		!push_byte FE
-		!push_dword *_g_lua
-		!call >_lua_settop
-		!add_esp_byte 08
-
-		!pop_eax
-
-		!pop_registers_iwd2
-		!pop_edi
-		!pop_esi
-		!ret_word 04 00
-
-	]]})
-	IEex_WriteAssembly(featGetCountHookAddress, {"!jmp_dword", {featGetCountHook, 4, 4}, "!nop"})
-
-	--------------------------
-	-- Feat_Get_Number_Pips --
-	--------------------------
-
-	IEex_WriteByte(0x7630A5 + 2, IEex_NEW_FEATS_SIZE)
-
-	local featNumberPipsHookAddress = 0x7630C6
-	local featNumberPipsHook = IEex_WriteAssemblyAuto({[[
-
-		!cmp_eax_byte 42
-		!pop_esi
-		!jbe_dword ]], {featNumberPipsHookAddress + 0x6, 4, 4}, [[
-
-		!cmp_eax_byte 47
-		!jle_dword :7630F3
-
-		!push_registers_iwd2
-
-		!push_dword ]], {IEex_WriteStringAuto("IEex_FeatPipsHook"), 4}, [[
-		!push_dword *_g_lua
-		!call >_lua_getglobal
-		!add_esp_byte 08
-
-		; featID ;
-		!mov_eax_[esp+byte] 1C
-		!push_eax
-		!fild_[esp]
-		!sub_esp_byte 04
-		!fstp_qword:[esp]
-		!push_dword *_g_lua
-		!call >_lua_pushnumber
-		!add_esp_byte 0C
-
-		!push_byte 00
-		!push_byte 00
-		!push_byte 00
-		!push_byte 01
-		!push_byte 01
-		!push_dword *_g_lua
-		!call >_lua_pcallk
-		!add_esp_byte 18
-		!call >IEex_CheckCallError
-
-		!push_byte 00
-		!push_byte FF
-		!push_dword *_g_lua
-		!call >_lua_tonumberx
-		!add_esp_byte 0C
-
-		!call >__ftol2_sse
-		!push_eax
-
-		!push_byte FE
-		!push_dword *_g_lua
-		!call >_lua_settop
-		!add_esp_byte 08
-
-		!pop_eax
-
-		!pop_registers_iwd2
-		!ret_word 04 00
-
-	]]})
-	IEex_WriteAssembly(featNumberPipsHookAddress, {"!jmp_dword", {featNumberPipsHook, 4, 4}, "!nop"})
-
-	---------------------------------------
-	-- CGameSprite_MeetsFeatRequirements --
-	---------------------------------------
-
-	IEex_WriteByte(0x763206 + 2, IEex_NEW_FEATS_SIZE)
-
-	local meetsFeatRequirementsHookAddress = 0x763270
-	local meetsFeatRequirementsHook = IEex_WriteAssemblyAuto({[[
-
-		!cmp_ebp_byte 4A
-		!jbe_dword ]], {meetsFeatRequirementsHookAddress + 0x6, 4, 4}, [[
-
-		!push_eax
-		!push_ecx
-		!push_edx
-		!push_ebp
-		!push_esi
-		!push_edi
-
-		!push_dword ]], {IEex_WriteStringAuto("IEex_MeetsFeatRequirementsHook"), 4}, [[
-		!push_dword *_g_lua
-		!call >_lua_getglobal
-		!add_esp_byte 08
-
-		; sprite ;
-		!push_esi
-		!fild_[esp]
-		!sub_esp_byte 04
-		!fstp_qword:[esp]
-		!push_dword *_g_lua
-		!call >_lua_pushnumber
-		!add_esp_byte 0C
-
-		; featID ;
-		!push_ebp
-		!fild_[esp]
-		!sub_esp_byte 04
-		!fstp_qword:[esp]
-		!push_dword *_g_lua
-		!call >_lua_pushnumber
-		!add_esp_byte 0C
-
-		!push_byte 00
-		!push_byte 00
-		!push_byte 00
-		!push_byte 01
-		!push_byte 02
-		!push_dword *_g_lua
-		!call >_lua_pcallk
-		!add_esp_byte 18
-		!call >IEex_CheckCallError
-
-		!push_byte FF
-		!push_dword *_g_lua
-		!call >_lua_toboolean
-		!add_esp_byte 08
-
-		!push_eax
-
-		!push_byte FE
-		!push_dword *_g_lua
-		!call >_lua_settop
-		!add_esp_byte 08
-
-		!pop_ebx
-
-		!pop_edi
-		!pop_esi
-		!pop_ebp
-		!pop_edx
-		!pop_ecx
-		!pop_eax
-		!jmp_dword :7638FD
-
-	]]})
-	IEex_WriteAssembly(meetsFeatRequirementsHookAddress, {"!jmp_dword", {meetsFeatRequirementsHook, 4, 4}, "!nop"})
-
-	------------------------
-	-- Feat_Incrementable --
-	------------------------
-
-	IEex_WriteByte(0x763A46 + 2, IEex_NEW_FEATS_SIZE)
-
-	local featIncrementableHookAddress = 0x763A6C
-	local featIncrementableHook = IEex_WriteAssemblyAuto({[[
-
-		!jbe_dword ]], {featIncrementableHookAddress + 0x6, 4, 4}, [[
-		!cmp_eax_byte 47
-		!jle_dword :763BB7
-
-		!push_registers_iwd2
-
-		!push_dword ]], {IEex_WriteStringAuto("IEex_FeatIncrementableHook"), 4}, [[
-		!push_dword *_g_lua
-		!call >_lua_getglobal
-		!add_esp_byte 08
-
-		; sprite ;
-		!push_esi
-		!fild_[esp]
-		!sub_esp_byte 04
-		!fstp_qword:[esp]
-		!push_dword *_g_lua
-		!call >_lua_pushnumber
-		!add_esp_byte 0C
-
-		; featID ;
-		!push_edi
-		!fild_[esp]
-		!sub_esp_byte 04
-		!fstp_qword:[esp]
-		!push_dword *_g_lua
-		!call >_lua_pushnumber
-		!add_esp_byte 0C
-
-		!push_byte 00
-		!push_byte 00
-		!push_byte 00
-		!push_byte 01
-		!push_byte 02
-		!push_dword *_g_lua
-		!call >_lua_pcallk
-		!add_esp_byte 18
-		!call >IEex_CheckCallError
-
-		!push_byte FF
-		!push_dword *_g_lua
-		!call >_lua_toboolean
-		!add_esp_byte 08
-
-		!push_eax
-
-		!push_byte FE
-		!push_dword *_g_lua
-		!call >_lua_settop
-		!add_esp_byte 08
-
-		!pop_eax
-
-		!pop_registers_iwd2
-
-		!test_eax_eax
-		!jz_dword :763A9D
-		!jmp_dword :763BDD
-
-	]]})
-	IEex_WriteAssembly(featIncrementableHookAddress, {"!jmp_dword", {featIncrementableHook, 4, 4}, "!nop"})
-
-	----------------------------------
-	-- Feat_Update_Panel_With_Taken --
-	----------------------------------
-
-	IEex_WriteByte(0x765CE8 + 2, IEex_NEW_FEATS_SIZE)
-	IEex_WriteByte(0x765DC8 + 2, IEex_NEW_FEATS_SIZE)
-
-	local featPanelStringHookAddress = 0x765D27
-	local featPanelStringHook = IEex_WriteAssemblyAuto({[[
-
-		!cmp_eax_byte 42
-		!jbe_dword ]], {featPanelStringHookAddress + 0x5, 4, 4}, [[
-		!cmp_eax_byte 47
-		!jle_dword :765D7E
-
-		!push_all_registers_iwd2
-
-		!push_dword ]], {IEex_WriteStringAuto("IEex_FeatPanelStringHook"), 4}, [[
-		!push_dword *_g_lua
-		!call >_lua_getglobal
-		!add_esp_byte 08
-
-		; featID ;
-		!push_esi
-		!fild_[esp]
-		!sub_esp_byte 04
-		!fstp_qword:[esp]
-		!push_dword *_g_lua
-		!call >_lua_pushnumber
-		!add_esp_byte 0C
-
-		!push_byte 00
-		!push_byte 00
-		!push_byte 00
-		!push_byte 01
-		!push_byte 01
-		!push_dword *_g_lua
-		!call >_lua_pcallk
-		!add_esp_byte 18
-		!call >IEex_CheckCallError
-
-		!push_byte FF
-		!push_dword *_g_lua
-		!call >_lua_toboolean
-		!add_esp_byte 08
-
-		!push_eax
-
-		!push_byte FE
-		!push_dword *_g_lua
-		!call >_lua_settop
-		!add_esp_byte 08
-
-		!pop_eax
-		!test_eax_eax
-
-		!pop_all_registers_iwd2
-
-		!jz_dword :765D7E
-		!jmp_dword :765D3B
-
-	]]})
-	IEex_WriteAssembly(featPanelStringHookAddress, {"!jmp_dword", {featPanelStringHook, 4, 4}})
-
-	-------------------------------------
-	-- Has_Feat_And_Meets_Requirements --
-	-------------------------------------
-
-	IEex_WriteByte(0x763156 + 2, IEex_NEW_FEATS_SIZE)
-
-	----------------------------
-	-- Level_Up_Accept_Skills --
-	----------------------------
-
-	IEex_WriteByte(0x5E1251 + 2, IEex_NEW_FEATS_SIZE)
-
-	---------------
-	-- nNumItems --
-	---------------
-
-	IEex_WriteWord(0x84EA66, IEex_NEW_FEATS_SIZE)
-
-
-
-	IEex_EnableCodeProtection()
-
-end
-
-IEex_Once("IEex_Memory_Fix", function()
-
-	-- Actually IWD2's "operator_new" and "operator_delete", (needed for IEex memory to interact with engine)
-	-- NOTE: THESE NEED TO BE THE LAST LINES EXECUTED DURING INITIAL STARTUP!
-	IEex_DefineAssemblyLabel("_malloc", 0x7FC95B)
-	IEex_DefineAssemblyLabel("_free", 0x7FC984)
-end)

@@ -1,35 +1,63 @@
 
-function IEex_Crashing(excCode, EXCEPTION_POINTERS)
+(function()
 
-	print(debug.traceback("IEex detected crash; Lua traceback ->", 2))
+	-- Special Async globals required to spin up Async state.
+	IEex_AsyncState = IEex_Call(IEex_Label("_luaL_newstate"), {}, nil, 0x0)
+	IEex_Call(IEex_Label("_luaL_openlibs"), {IEex_AsyncState}, nil, 0x4)
+	IEex_DefineAssemblyLabel("_g_lua_async", IEex_AsyncState)
 
-	local timeFormat = "%x_%X"
-	local timeString = os.date(timeFormat):gsub("/", "_"):gsub(":", "_")
-	local logPath = "crash\\IEex_"..timeString..".log"
-	local dmpPath = "crash\\IEex_"..timeString..".dmp"
+	IEex_AsyncInitialLock = IEex_Malloc(0x4)
+	IEex_WriteDword(IEex_AsyncInitialLock, 0x0)
 
-	-- Lua can't make directories itself :(
-	os.execute("mkdir crash")
+	----------------------------------
+	-- IEex_DefineAssemblyFunctions --
+	----------------------------------
 
-	local logFile = io.open("IEex.log", "r")
-	local logCopy = logFile:read("*a")
-	logFile:close()
-	local logCopyFile = io.open(logPath, "w")
-	logCopyFile:write(logCopy)
-	logCopyFile:close()
+	IEex_WriteAssemblyAuto({[[
 
-	local dmpPathMem = IEex_WriteStringAuto(dmpPath)
-	IEex_DllCall("CrashHelper", "WriteDump", {dmpPathMem, EXCEPTION_POINTERS, excCode, 0x41}, nil, 0x10)
-	IEex_Free(dmpPathMem)
+		$IEex_CheckCallError_Async
 
-	IEex_MessageBox("Crash detected with error code "..IEex_ToHex(excCode).."\n\nIEex.log saved to \""..logPath.."\"\nDMP file saved to \""..dmpPath.."\"\n\nPlease upload files to the Red Chimera Discord for assistance", 0x10)
-end
+		!test_eax_eax
+		!jnz_dword >error
+		!ret
 
-----------------------------------
--- IEex_DefineAssemblyFunctions --
-----------------------------------
+		@error
+		!push_byte 00
+		!push_byte FF
+		!push_dword *_g_lua_async
+		!call >_lua_tolstring
+		!add_esp_byte 0C
 
-function IEex_DefineAssemblyFunctions()
+		; _lua_pushstring arg ;
+		!push_eax
+
+		!push_dword ]], {IEex_WriteStringAuto("print"), 4}, [[
+		!push_dword *_g_lua_async
+		!call >_lua_getglobal
+		!add_esp_byte 08
+
+		!push_dword *_g_lua_async
+		!call >_lua_pushstring
+		!add_esp_byte 08
+
+		!push_byte 00
+		!push_byte 00
+		!push_byte 00
+		!push_byte 00
+		!push_byte 01
+		!push_dword *_g_lua_async
+		!call >_lua_pcallk
+		!add_esp_byte 18
+
+		; Clear error string off of stack ;
+		!push_byte FE
+		!push_dword *_g_lua_async
+		!call >_lua_settop
+		!add_esp_byte 08
+
+		!mov_eax #1
+		!ret
+	]]})
 
 	IEex_WriteAssemblyAuto({[[
 
@@ -143,26 +171,152 @@ function IEex_DefineAssemblyFunctions()
 		!restore_stack_frame
 		!ret_word 08 00
 	]]})
-end
 
------------------------
--- IEex_WritePatches --
------------------------
-
-function IEex_WritePatches()
+	-----------------------
+	-- IEex_WritePatches --
+	-----------------------
 
 	IEex_DisableCodeProtection()
+
+	-----------------
+	-- Async State --
+	-----------------
+
+	-- This spins the Sync thread until the Async state is done initializing.
+	-- Unsure if this is needed, but let's keep it just in case.
+	IEex_HookAfterCall(0x7901FE, {[[
+		@wait
+		!cmp_[dword]_byte ]], {IEex_AsyncInitialLock, 4}, [[ 00
+		!jz_dword >wait
+	]]})
+
+	-- Both invokes IEex_Async.lua and calls IEex_Extern_SetupAsyncState()
+	-- using the Async state. Also directly exposes IEex_ReadDword, IEex_ReadString,
+	-- and IEex_ExposeToLua so the Async state can initialize itself.
+	IEex_WriteAssemblyFunction("IEex_CallSetupAsyncState", {[[
+
+		!push_registers_iwd2
+
+		!push_byte 00
+		!push_dword *IEex_ReadDword
+		!push_dword *_g_lua_async
+		!call >_lua_pushcclosure
+		!add_esp_byte 0C
+
+		!push_dword ]], {IEex_WriteStringAuto("IEex_ReadDword"), 4}, [[
+		!push_dword *_g_lua_async
+		!call >_lua_setglobal
+		!add_esp_byte 08
+
+		!push_byte 00
+		!push_dword *IEex_ReadString
+		!push_dword *_g_lua_async
+		!call >_lua_pushcclosure
+		!add_esp_byte 0C
+
+		!push_dword ]], {IEex_WriteStringAuto("IEex_ReadString"), 4}, [[
+		!push_dword *_g_lua_async
+		!call >_lua_setglobal
+		!add_esp_byte 08
+
+		!push_byte 00
+		!push_dword *IEex_ExposeToLua
+		!push_dword *_g_lua_async
+		!call >_lua_pushcclosure
+		!add_esp_byte 0C
+
+		!push_dword ]], {IEex_WriteStringAuto("IEex_ExposeToLua"), 4}, [[
+		!push_dword *_g_lua_async
+		!call >_lua_setglobal
+		!add_esp_byte 08
+
+		!push_byte 00
+		!push_byte 01
+		!push_dword *_g_lua
+		!call >_lua_tonumberx
+		!add_esp_byte 0C
+		!call >__ftol2_sse
+		; asyncSharedMemory ;
+		!push_eax
+
+		!push_byte 00
+		!push_dword ]], {IEex_WriteStringAuto("override\\IEex_Async.lua"), 4}, [[
+		!push_dword *_g_lua_async
+		!call >_luaL_loadfilex
+		!add_esp_byte 0C
+
+		!push_byte 00
+		!push_byte 00
+		!push_byte 00
+		!push_byte 00
+		!push_byte 00
+		!push_dword *_g_lua_async
+		!call >_lua_pcallk
+		!add_esp_byte 18
+		!call >IEex_CheckCallError_Async
+
+		!push_dword ]], {IEex_WriteStringAuto("IEex_Extern_SetupAsyncState"), 4}, [[
+		!push_dword *_g_lua_async
+		!call >_lua_getglobal
+		!add_esp_byte 08
+
+		; asyncSharedMemory ;
+		!fild_[esp]
+		!sub_esp_byte 04
+		!fstp_qword:[esp]
+		!push_dword *_g_lua_async
+		!call >_lua_pushnumber
+		!add_esp_byte 0C
+
+		!push_byte 00
+		!push_byte 00
+		!push_byte 00
+		!push_byte 00
+		!push_byte 01
+		!push_dword *_g_lua_async
+		!call >_lua_pcallk
+		!add_esp_byte 18
+		!call >IEex_CheckCallError_Async
+
+		!xor_eax_eax
+		!pop_registers_iwd2
+		!ret
+
+	]]})
+
+	-- Redirects the start of the Async thread to IEex's Async state initialization.
+	IEex_HookRestore(0x7928E0, 0, 6, {[[
+
+		!push_all_registers
+
+		!push_dword ]], {IEex_WriteStringAuto("IEex_Extern_CreateAsyncState"), 4}, [[
+		!push_dword *_g_lua
+		!call >_lua_getglobal
+		!add_esp_byte 08
+
+		!push_byte 00
+		!push_byte 00
+		!push_byte 00
+		!push_byte 00
+		!push_byte 00
+		!push_dword *_g_lua
+		!call >_lua_pcallk
+		!add_esp_byte 18
+		!call >IEex_CheckCallError
+
+		!pop_all_registers
+
+	]]})
 
 	--------------------
 	-- Crash Handling --
 	--------------------
 
-	--IEex_HookRestore(0x7EFF40, 0, 5, {[[
 	IEex_HookBeforeCall(0x7F0C76, {[[
 
 		!push_all_registers_iwd2
 
-		!push_dword ]], {IEex_WriteStringAuto("IEex_Crashing"), 4}, [[
+		!push_dword ]], {IEex_WriteStringAuto("IEex_Extern_Crashing"), 4}, [[
 		!push_dword *_g_lua
 		!call >_lua_getglobal
 		!add_esp_byte 08
@@ -454,53 +608,6 @@ function IEex_WritePatches()
 	-- Spell writability is now determined by scroll usability --
 	-------------------------------------------------------------
 
-	IEex_Extern_CSpell_UsableBySprite = function(CSpell, sprite)
-
-		local resref = IEex_ReadLString(CSpell + 0x8, 8)
-
-		local scrollResref = IEex_SpellToScroll[resref]
-		local resWrapper = nil
-		local scrollError = false
-
-		if scrollResref then
-			resWrapper = IEex_DemandRes(scrollResref, "ITM")
-			if not resWrapper:isValid() then scrollError = true end
-		else
-			scrollError = true
-		end
-
-		if scrollError then
-			local message = "[IEex_Extern_CSpell_UsableBySprite] Critical Error: "..resref..".SPL doesn't have a valid scroll!"
---			print(message)
---			IEex_MessageBox(message)
-			return true
-		end
-
-		local itemResRef = resWrapper:getResRef()
-		local itemRes = resWrapper:getRes()
-		local itemData = resWrapper:getData()
-
-		local kit = IEex_GetActorStat(IEex_GetActorIDShare(sprite), 89)
-
-		local mageKits = bit32.band(kit, 0x7FC0)
-		local unusableKits = IEex_Flags({
-			bit32.lshift(IEex_ReadByte(itemData + 0x29, 0), 24),
-			bit32.lshift(IEex_ReadByte(itemData + 0x2B, 0), 16),
-			bit32.lshift(IEex_ReadByte(itemData + 0x2D, 0), 8),
-			IEex_ReadByte(itemData + 0x2F, 0)
-		})
-
-		resWrapper:free()
-
-		if bit32.band(unusableKits, mageKits) ~= 0x0 then
-			-- Mage kit was explicitly excluded
-			return false
-		end
-
-		return IEex_CanSpriteUseItem(sprite, itemResRef)
-
-	end
-
 	local writableCheckAddress = 0x54AA40
 	local writableCheckHook = IEex_WriteAssemblyAuto({[[
 
@@ -608,11 +715,6 @@ function IEex_WritePatches()
 	-- CRuleTables_GetRaceName():                          --
 	--   Pull out-of-bounds race strings from B3RACEST.2DA --
 	---------------------------------------------------------
-
-	IEex_Extern_CRuleTables_GetRaceName = function(race)
-		local result = IEex_2DAGetAtStrings("B3RACE", "STRREF", tostring(race))
-		return result ~= "*" and tonumber(result) or ex_tra_5000
-	end
 
 	IEex_HookJump(0x544DFA, 0, {[[
 
@@ -738,11 +840,6 @@ function IEex_WritePatches()
 	--   Pull out-of-bounds racial classes from B3RACE.2DA --
 	---------------------------------------------------------
 
-	IEex_Extern_CGameSprite_GetRacialFavoredClass = function(race)
-		local result = IEex_2DAGetAtStrings("B3RACE", "FAVORED_CLASS", tostring(race))
-		return result ~= "*" and tonumber(result) or 1
-	end
-
 	IEex_HookJump(0x7645A9, 0, {[[
 
 		!ja_dword >extended_race
@@ -839,12 +936,5 @@ function IEex_WritePatches()
 	]]})
 
 	IEex_EnableCodeProtection()
-end
 
-IEex_Once("IEex_Core", function()
-	IEex_DefineAssemblyFunctions()
-	IEex_WritePatches()
-	dofile("override/IEex_Cre.lua")
-	dofile("override/IEex_Opc.lua")
-	dofile("override/IEex_Gui.lua")
-end)
+end)()

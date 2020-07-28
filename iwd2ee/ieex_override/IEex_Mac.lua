@@ -151,6 +151,7 @@ for _, macroEntry in ipairs({
 	{"mov_ax_[ecx+byte]", "66 8B 41"},
 	{"mov_bx", "66 BB"},
 	{"mov_byte:[ebp+byte]_byte", "C6 45"},
+	{"mov_byte:[edi]_al", "88 07"},
 	{"mov_byte:[edi]_byte", "C6 07"},
 	{"mov_byte:[esi+dword]_byte", "C6 86"},
 	{"mov_cx_[ebx+byte]", "66 8B 4B"},

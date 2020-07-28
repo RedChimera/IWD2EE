@@ -183,20 +183,24 @@ end
 -- Quickloot Functions --
 -------------------------
 
-IEex_Quickloot_On = false
+-- Thread: Shared
+IEex_DefineBridge("IEex_Bridge_Quickloot_On", 0)
+IEex_DefineBridge("IEex_Bridge_Quickloot_HighlightContainerID", -1)
+IEex_DefineStringBridge("IEex_Bridge_Quickloot_SimpleAsyncOrder", "")
+
+-- Thread: Synchronous
 IEex_Quickloot_Items = {}
 IEex_Quickloot_ItemsAccessIndex = 1
-IEex_Quickloot_HighlightContainerID = -1
 IEex_Quickloot_DefaultContainerID = -1
 IEex_Quickloot_OldActorX = -1
 IEex_Quickloot_OldActorY = -1
 
 function IEex_Quickloot_Start()
-	IEex_Quickloot_On = true
+	IEex_SetBridge("IEex_Bridge_Quickloot_On", 1)
 end
 
 function IEex_Quickloot_Stop()
-	IEex_Quickloot_On = false
+	IEex_SetBridge("IEex_Bridge_Quickloot_On", 0)
 	IEex_Quickloot_Hide()
 end
 
@@ -244,7 +248,8 @@ function IEex_Quickloot_UpdateItems()
 	IEex_Quickloot_OldActorY = actorY
 
 	-- Update container highlight on hover
-	IEex_Quickloot_HighlightContainerID = -1
+
+	local highlightContainerID = -1
 	local panel = IEex_Quickloot_GetPanel()
 	local cursorX, cursorY = IEex_GetCursorXY()
 
@@ -252,10 +257,12 @@ function IEex_Quickloot_UpdateItems()
 		if IEex_IsPointOverControlID(panel, i, cursorX, cursorY) then
 			local overSlotData = IEex_Quickloot_GetSlotData(i)
 			if not overSlotData.isFallback then
-				IEex_Quickloot_HighlightContainerID = overSlotData.containerID
+				highlightContainerID = overSlotData.containerID
 			end
 		end
 	end
+
+	IEex_SetBridge("IEex_Bridge_Quickloot_HighlightContainerID", highlightContainerID)
 
 	-- Redraw panel
 	IEex_Quickloot_InvalidatePanel()
@@ -296,11 +303,11 @@ function IEex_Quickloot_IsControlOnPanel(control)
 	return IEex_IsControlOnPanel(control, IEex_Quickloot_GetPanel())
 end
 
-function IEex_Quickloot_ScrollLeft(control)
+function IEex_Quickloot_ScrollLeft()
 	IEex_Quickloot_ItemsAccessIndex = math.max(1, IEex_Quickloot_ItemsAccessIndex - 10)
 end
 
-function IEex_Quickloot_ScrollRight(control)
+function IEex_Quickloot_ScrollRight()
 	local maxIndex = math.max(1, #IEex_Quickloot_Items - 10 + 1)
 	IEex_Quickloot_ItemsAccessIndex = math.min(IEex_Quickloot_ItemsAccessIndex + 10, maxIndex)
 end
@@ -461,113 +468,13 @@ function IEex_DefineCustomButtonControl(controlName, args)
 	}
 end
 
-(function()
-
-	-------------------------------
-	-- IEex_Quickloot_ScrollLeft --
-	-------------------------------
-
-	local IEex_Quickloot_ScrollLeft_OnLButtonClick = IEex_WriteAssemblyAuto({[[
-
-		!push_complete_state
-
-		; control ;
-		!push_ecx
-
-		!push_dword ]], {IEex_WriteStringAuto("IEex_Quickloot_ScrollLeft"), 4}, [[
-		!push_dword *_g_lua
-		!call >_lua_getglobal
-		!add_esp_byte 08
-
-		; control ;
-		!fild_[esp]
-		!sub_esp_byte 04
-		!fstp_qword:[esp]
-		!push_dword *_g_lua
-		!call >_lua_pushnumber
-		!add_esp_byte 0C
-
-		!push_byte 00
-		!push_byte 00
-		!push_byte 00
-		!push_byte 00
-		!push_byte 01
-		!push_dword *_g_lua
-		!call >_lua_pcallk
-		!add_esp_byte 18
-		!call >IEex_CheckCallError
-
-		!pop_complete_state
-		!ret_word 08 00
-
-	]]})
-
-	IEex_DefineCustomButtonControl("IEex_Quickloot_ScrollLeft", {
-		["OnLButtonClick"] = IEex_Quickloot_ScrollLeft_OnLButtonClick,
-		["OnLButtonDoubleClick"] = 0x4D4D70, -- CUIControlButton_OnLButtonDown; prevents double-click cooldown.
-	})
-
-	--------------------------------
-	-- IEex_Quickloot_ScrollRight --
-	--------------------------------
-
-	local IEex_Quickloot_ScrollRight_OnLButtonClick = IEex_WriteAssemblyAuto({[[
-
-		!push_complete_state
-
-		; control ;
-		!push_ecx
-
-		!push_dword ]], {IEex_WriteStringAuto("IEex_Quickloot_ScrollRight"), 4}, [[
-		!push_dword *_g_lua
-		!call >_lua_getglobal
-		!add_esp_byte 08
-
-		; control ;
-		!fild_[esp]
-		!sub_esp_byte 04
-		!fstp_qword:[esp]
-		!push_dword *_g_lua
-		!call >_lua_pushnumber
-		!add_esp_byte 0C
-
-		!push_byte 00
-		!push_byte 00
-		!push_byte 00
-		!push_byte 00
-		!push_byte 01
-		!push_dword *_g_lua
-		!call >_lua_pcallk
-		!add_esp_byte 18
-		!call >IEex_CheckCallError
-
-		!pop_complete_state
-		!ret_word 08 00
-
-	]]})
-
-	IEex_DefineCustomButtonControl("IEex_Quickloot_ScrollRight", {
-		["OnLButtonClick"] = IEex_Quickloot_ScrollRight_OnLButtonClick,
-		["OnLButtonDoubleClick"] = 0x4D4D70, -- CUIControlButton_OnLButtonDown; prevents double-click cooldown.
-	})
-
-	-------------------------------
-	-- Dynamic Control Overrides --
-	-------------------------------
-
-	IEex_AddControlOverride("GUIW08", 23, 10, IEex_ControlType.IEex_Quickloot_ScrollLeft)
-	IEex_AddControlOverride("GUIW10", 23, 10, IEex_ControlType.IEex_Quickloot_ScrollLeft)
-	IEex_AddControlOverride("GUIW08", 23, 11, IEex_ControlType.IEex_Quickloot_ScrollRight)
-	IEex_AddControlOverride("GUIW10", 23, 11, IEex_ControlType.IEex_Quickloot_ScrollRight)
-
-end)()
-
 ------------------------
 -- GUI Hook Functions --
 ------------------------
 
 -- Helpful comment: The following function names are too long.
 
+-- Thread: Synchronous
 function IEex_Extern_CUIControlBase_CreateControl(resrefPointer, panel, controlInfo)
 
 	local resref = IEex_ReadLString(resrefPointer, 8)
@@ -596,6 +503,7 @@ function IEex_Extern_CUIControlBase_CreateControl(resrefPointer, panel, controlI
 	return control
 end
 
+-- Thread: Synchronous
 function IEex_Extern_CUIManager_fInit_CHUInitialized(CUIManager, resrefPointer)
 
 	local resref = IEex_ReadLString(resrefPointer, 8)
@@ -609,6 +517,7 @@ function IEex_Extern_CUIManager_fInit_CHUInitialized(CUIManager, resrefPointer)
 	end
 end
 
+-- Thread: Synchronous
 function IEex_Extern_CUIControlButtonWorldContainerSlot_OnLButtonClick_GetActiveContainerID(control)
 	if IEex_Quickloot_IsControlOnPanel(control) then
 		return IEex_Quickloot_GetSlotData(IEex_GetControlID(control)).containerID
@@ -617,6 +526,7 @@ function IEex_Extern_CUIControlButtonWorldContainerSlot_OnLButtonClick_GetActive
 	end
 end
 
+-- Thread: Synchronous
 function IEex_Extern_CUIControlButtonWorldContainerSlot_OnLButtonClick_GetActiveContainerSpriteID(control)
 	if IEex_Quickloot_IsControlOnPanel(control) then
 		return IEex_Quickloot_GetValidPartyMember()
@@ -625,6 +535,7 @@ function IEex_Extern_CUIControlButtonWorldContainerSlot_OnLButtonClick_GetActive
 	end
 end
 
+-- Thread: Synchronous
 function IEex_Extern_CUIControlButtonWorldContainerSlot_OnLButtonClick_GetContainerItemIndex(control)
 	if IEex_Quickloot_IsControlOnPanel(control) then
 		return IEex_Quickloot_GetSlotData(IEex_GetControlID(control)).slotIndex
@@ -633,43 +544,23 @@ function IEex_Extern_CUIControlButtonWorldContainerSlot_OnLButtonClick_GetContai
 	end
 end
 
-function IEex_Extern_CUIControlButtonWorldContainerSlot_OnLButtonClick_Done(control)
+-- Thread: Synchronous
+function IEex_Extern_Sync_CUIControlButtonWorldContainerSlot_OnLButtonClick_Done()
 	local maxIndex = math.max(1, #IEex_Quickloot_Items - 10)
 	IEex_Quickloot_ItemsAccessIndex = math.min(IEex_Quickloot_ItemsAccessIndex, maxIndex)
 	IEex_Quickloot_InvalidatePanel()
 end
 
-function IEex_Extern_CUIControlButtonWorldContainerSlot_OnLButtonClick_GetOnlyUpdateSlot(control)
-	return IEex_Quickloot_IsControlOnPanel(control)
-end
-
-IEex_Extern_CScreenWorld_ScheduledTasks = {
-	["blocks"] = {},
-	["tasks"] = {
-		-- {["tickDelay"] = 1, ["func"] = function() end},
-	},
-}
-
-function IEex_Extern_CScreenWorld_ScheduleTask(blockingKey, tickDelay, func)
-
-	if blockingKey then
-		if IEex_Extern_CScreenWorld_ScheduledTasks.blocks[blockingKey] then
-			return
-		else
-			IEex_Extern_CScreenWorld_ScheduledTasks.blocks[blockingKey] = true
-		end
-	end
-
-	table.insert(IEex_Extern_CScreenWorld_ScheduledTasks.tasks, {
-		["blockingKey"] = blockingKey,
-		["tickDelay"] = tickDelay,
-		["func"] = func,
-	})
-end
-
+-- Thread: Synchronous
 function IEex_Extern_CScreenWorld_TimerSynchronousUpdate()
 
-	if IEex_Quickloot_On then
+	if IEex_GetBridge("IEex_Bridge_Quickloot_On") == 1 then
+
+		local asyncOrder = IEex_GetStringBridge("IEex_Bridge_Quickloot_SimpleAsyncOrder")
+		if asyncOrder ~= "" then
+			IEex_SetStringBridge("IEex_Bridge_Quickloot_SimpleAsyncOrder", "")
+			_G[asyncOrder]()
+		end
 
 		local worldScreen = IEex_GetEngineWorld()
 		local panelActive = IEex_Quickloot_IsPanelActive()
@@ -689,526 +580,37 @@ function IEex_Extern_CScreenWorld_TimerSynchronousUpdate()
 			IEex_Quickloot_Show()
 		end
 
-		-- The following allows some ability to schedule tasks for later, (while the worldscreen is active).
-		-- For future use.
-
-		local runningTasks = IEex_Extern_CScreenWorld_ScheduledTasks
-		IEex_Extern_CScreenWorld_ScheduledTasks = {
-			["blocks"] = {},
-			["tasks"] = {},
-		}
-
-		for i, scheduledTask in ipairs(runningTasks.tasks) do
-			if scheduledTask.tickDelay <= 0 then
-				if scheduledTask.blockingKey then
-					IEex_Extern_CScreenWorld_ScheduledTasks.blocks[blockingKey] = nil
-				end
-				scheduledTask.func()
-			else
-				scheduledTask.tickDelay = scheduledTask.tickDelay - 1
-				table.insert(IEex_Extern_CScreenWorld_ScheduledTasks, scheduledTask)
-			end
-		end
-
 	end
 end
 
+-- Thread: Asynchronous
 function IEex_Extern_CScreenWorld_OnInventoryButtonRClick()
-	if IEex_Quickloot_On then
+	if IEex_GetBridge("IEex_Bridge_Quickloot_On") == 1 then
 		IEex_Quickloot_Stop()
 	else
 		IEex_Quickloot_Start()
 	end
 end
 
-(function()
-
-	IEex_DisableCodeProtection()
-
-	local activeContainerIDFuncName = IEex_WriteStringAuto("IEex_Extern_CUIControlButtonWorldContainerSlot_OnLButtonClick_GetActiveContainerID")
-	local activeContainerSpriteIDFuncName = IEex_WriteStringAuto("IEex_Extern_CUIControlButtonWorldContainerSlot_OnLButtonClick_GetActiveContainerSpriteID")
-	local containerItemIndexFuncName = IEex_WriteStringAuto("IEex_Extern_CUIControlButtonWorldContainerSlot_OnLButtonClick_GetContainerItemIndex")
-	local onlyUpdateSlotFuncName = IEex_WriteStringAuto("IEex_Extern_CUIControlButtonWorldContainerSlot_OnLButtonClick_GetOnlyUpdateSlot")
-
-	--------------------
-	--- GUI Hooks ASM --
-	--------------------
-
-	-- CUIControlBase_CreateControl
-	IEex_HookJump(0x76D41B, 0, {[[
-
-		!push_registers_iwd2
-
-		!xor_ebx_ebx
-		!jnz_dword >original_fail
-		!mov_ebx #1
-
-		@original_fail
-
-		; CHU resref ;
-		!push_edx
-
-		!push_dword ]], {IEex_WriteStringAuto("IEex_Extern_CUIControlBase_CreateControl"), 4}, [[
-		!push_dword *_g_lua
-		!call >_lua_getglobal
-		!add_esp_byte 08
-
-		; CHU resref ;
-		!fild_[esp]
-		!sub_esp_byte 04
-		!fstp_qword:[esp]
-		!push_dword *_g_lua
-		!call >_lua_pushnumber
-		!add_esp_byte 0C
-
-		; panel ;
-		!push_edi
-		!fild_[esp]
-		!sub_esp_byte 04
-		!fstp_qword:[esp]
-		!push_dword *_g_lua
-		!call >_lua_pushnumber
-		!add_esp_byte 0C
-
-		; controlInfo ;
-		!push_esi
-		!fild_[esp]
-		!sub_esp_byte 04
-		!fstp_qword:[esp]
-		!push_dword *_g_lua
-		!call >_lua_pushnumber
-		!add_esp_byte 0C
-
-		!push_byte 00
-		!push_byte 00
-		!push_byte 00
-		!push_byte 01
-		!push_byte 03
-		!push_dword *_g_lua
-		!call >_lua_pcallk
-		!add_esp_byte 18
-		!call >IEex_CheckCallError
-		!test_eax_eax
-		!jz_dword >ok
-		!xor_eax_eax
-		!jmp_dword >error
-
-		@ok
-		!push_byte 00
-		!push_byte FF
-		!push_dword *_g_lua
-		!call >_lua_tonumberx
-		!add_esp_byte 0C
-		!call >__ftol2_sse
-		!push_eax
-		!push_byte FE
-		!push_dword *_g_lua
-		!call >_lua_settop
-		!add_esp_byte 08
-		!pop_eax
-
-		@error
-		!test_eax_eax
-		!jz_dword >not_custom
-		!pop_registers_iwd2
-		!jmp_dword :76E93F
-
-		@not_custom
-		!test_ebx_ebx
-		!pop_registers_iwd2
-		!jnz_dword >jmp_success
-		!jmp_dword >jmp_fail
-	]]})
-
-	-- CUIManager_fInit
-	IEex_HookBeforeCall(0x4D3D55, {[[
-
-		!push_all_registers_iwd2
-
-		; resref ;
-		!push_[ecx+byte] 10
-
-		!push_dword ]], {IEex_WriteStringAuto("IEex_Extern_CUIManager_fInit_CHUInitialized"), 4}, [[
-		!push_dword *_g_lua
-		!call >_lua_getglobal
-		!add_esp_byte 08
-
-		; CUIManager ;
-		!push_esi
-		!fild_[esp]
-		!sub_esp_byte 04
-		!fstp_qword:[esp]
-		!push_dword *_g_lua
-		!call >_lua_pushnumber
-		!add_esp_byte 0C
-
-		; resref ;
-		!fild_[esp]
-		!sub_esp_byte 04
-		!fstp_qword:[esp]
-		!push_dword *_g_lua
-		!call >_lua_pushnumber
-		!add_esp_byte 0C
-
-		!push_byte 00
-		!push_byte 00
-		!push_byte 00
-		!push_byte 00
-		!push_byte 02
-		!push_dword *_g_lua
-		!call >_lua_pcallk
-		!add_esp_byte 18
-		!call >IEex_CheckCallError
-
-		!pop_all_registers_iwd2
-	]]})
-
-	IEex_WriteAssemblyAuto({[[
-
-		$IEex_Extern_CUIControlButtonWorldContainerSlot_OnLButtonClick_GetOnlyUpdateSlot
-		!push_state
-
-		!push_dword ]], {onlyUpdateSlotFuncName, 4}, [[
-		!push_dword *_g_lua
-		!call >_lua_getglobal
-		!add_esp_byte 08
-
-		; arg ;
-		!push_[ebp+byte] 08
-		!fild_[esp]
-		!sub_esp_byte 04
-		!fstp_qword:[esp]
-		!push_dword *_g_lua
-		!call >_lua_pushnumber
-		!add_esp_byte 0C
-
-		!push_byte 00
-		!push_byte 00
-		!push_byte 00
-		!push_byte 01
-		!push_byte 01
-		!push_dword *_g_lua
-		!call >_lua_pcallk
-		!add_esp_byte 18
-		!call >IEex_CheckCallError
-		!jz_dword >ok
-		!xor_eax_eax
-		!jmp_dword >error
-
-		@ok
-		!push_byte FF
-		!push_dword *_g_lua
-		!call >_lua_toboolean
-		!add_esp_byte 08
-		!push_eax
-		!push_byte FE
-		!push_dword *_g_lua
-		!call >_lua_settop
-		!add_esp_byte 08
-		!pop_eax
-
-		@error
-		!pop_state
-		!ret_word 04 00
-	]]})
-
-	-- 0x695C8E OnLButtonClick - CUIControlScrollBarWorldContainer_UpdateScrollBar
-	IEex_HookBeforeCall(0x695C8E, {[[
-		!push_[esp+byte] 18
-		!call >IEex_Extern_CUIControlButtonWorldContainerSlot_OnLButtonClick_GetOnlyUpdateSlot
-		!test_eax_eax
-		!jnz_dword >return
-	]]})
-
-	-- 0x696080 OnLButtonClick - CUIControlEncumbrance_SetVolume
-	IEex_HookBeforeCall(0x696080, {[[
-		!push_[esp+byte] 20
-		!call >IEex_Extern_CUIControlButtonWorldContainerSlot_OnLButtonClick_GetOnlyUpdateSlot
-		!test_eax_eax
-		!jz_dword >call
-		!add_esp_byte 08
-		!jmp_dword >return
-	]]})
-
-	-- 0x69608D OnLButtonClick - CUIControlEncumbrance_SetEncumbrance
-	IEex_HookBeforeCall(0x69608D, {[[
-		!push_[esp+byte] 20
-		!call >IEex_Extern_CUIControlButtonWorldContainerSlot_OnLButtonClick_GetOnlyUpdateSlot
-		!test_eax_eax
-		!jz_dword >call
-		!add_esp_byte 08
-		!jmp_dword >return
-	]]})
-
-	-- 0x69608D OnLButtonClick - CUIControlLabel_SetText
-	IEex_HookBeforeCall(0x6960EE, {[[
-		!push_[esp+byte] 1C
-		!call >IEex_Extern_CUIControlButtonWorldContainerSlot_OnLButtonClick_GetOnlyUpdateSlot
-		!test_eax_eax
-		!jz_dword >call
-		!add_esp_byte 04
-		!jmp_dword >return
-	]]})
-
-	-- push func_name
-	-- push arg
-	IEex_WriteAssemblyAuto({[[
-
-		$IEex_CallIntsOneArgOneReturn
-		!push_state
-
-		!push_[ebp+byte] 0C
-		!push_dword *_g_lua
-		!call >_lua_getglobal
-		!add_esp_byte 08
-
-		; arg ;
-		!push_[ebp+byte] 08
-		!fild_[esp]
-		!sub_esp_byte 04
-		!fstp_qword:[esp]
-		!push_dword *_g_lua
-		!call >_lua_pushnumber
-		!add_esp_byte 0C
-
-		!push_byte 00
-		!push_byte 00
-		!push_byte 00
-		!push_byte 01
-		!push_byte 01
-		!push_dword *_g_lua
-		!call >_lua_pcallk
-		!add_esp_byte 18
-		!call >IEex_CheckCallError
-		!jz_dword >ok
-		!mov_eax #FFFFFFFF
-		!jmp_dword >error
-
-		@ok
-		!push_byte 00
-		!push_byte FF
-		!push_dword *_g_lua
-		!call >_lua_tonumberx
-		!add_esp_byte 0C
-		!call >__ftol2_sse
-		!push_eax
-		!push_byte FE
-		!push_dword *_g_lua
-		!call >_lua_settop
-		!add_esp_byte 08
-		!pop_eax
-
-		@error
-		!pop_state
-		!ret_word 08 00
-	]]})
-
-	-- 0x69589C OnLButtonClick - activeContainerID
-	IEex_HookRestore(0x69589C, 0, 6, {[[
-		!push_dword ]], {activeContainerIDFuncName, 4}, [[
-		!push_[esp+byte] 08
-		!call >IEex_CallIntsOneArgOneReturn
-		!cmp_eax_byte FF
-		!jne_dword >return_skip
-	]]})
-
-	-- 0x6958C7 OnLButtonClick - activeContainerSpriteID
-	IEex_HookRestore(0x6958C7, 0, 6, {[[
-		!push_dword ]], {activeContainerSpriteIDFuncName, 4}, [[
-		!push_[esp+byte] 08
-		!call >IEex_CallIntsOneArgOneReturn
-		!mov_esi_eax
-		!cmp_eax_byte FF
-		!jne_dword >return_skip
-	]]})
-
-	-- 0x6959A3 OnLButtonClick - m_nTopContainerRow
-	IEex_HookRestore(0x6959A3, 0, 8, {[[
-
-		; save eax because I clobber it ;
-		!push_eax
-
-		!push_dword ]], {containerItemIndexFuncName, 4}, [[
-		!push_[esp+byte] 0C
-		!call >IEex_CallIntsOneArgOneReturn
-		!cmp_eax_byte FF
-
-		!jne_dword >override
-		; restore eax ;
-		!pop_eax
-		!jmp_dword >return
-
-		@override
-		!mov_edi_eax
-		; clear eax off of stack (only matters when running normal code) ;
-		!add_esp_byte 04
-		!mov_[esp+byte]_edi 34
-		!jmp_dword >return_skip
-	]]})
-
-	-- 0x696208 Render - activeContainerSpriteID
-	IEex_HookRestore(0x696208, 0, 6, {[[
-		!push_dword ]], {activeContainerSpriteIDFuncName, 4}, [[
-		!push_esi
-		!call >IEex_CallIntsOneArgOneReturn
-		!cmp_eax_byte FF
-		!jne_dword >return_skip
-	]]})
-
-	-- 0x69623F Render - activeContainerID
-	IEex_HookRestore(0x69623F, 0, 6, {[[
-		!push_dword ]], {activeContainerIDFuncName, 4}, [[
-		!push_esi
-		!call >IEex_CallIntsOneArgOneReturn
-		!mov_ebx_eax
-		!cmp_eax_byte FF
-		!jne_dword >return_skip
-	]]})
-
-	-- 0x69627D Render - m_nTopContainerRow
-	IEex_HookRestore(0x69627D, 0, 8, {[[
-
-		; save eax because I clobber it ;
-		!push_eax
-
-		!push_dword ]], {containerItemIndexFuncName, 4}, [[
-		!push_esi
-		!call >IEex_CallIntsOneArgOneReturn
-		!cmp_eax_byte FF
-		!jne_dword >override
-
-		; restore eax ;
-		!pop_eax
-		!jmp_dword >return
-
-		@override
-		; clear eax off of stack (I'm overriding it) ;
-		!add_esp_byte 04
-		!lea_ecx_[esp+byte] 2C
-		!mov_[esp+byte]_edi 34
-		!jmp_dword >return_skip
-	]]})
-
-	IEex_HookRestore(0x696107, 0, 7, {[[
-
-		!push_complete_state
-
-		!push_dword ]], {IEex_WriteStringAuto("IEex_Extern_CUIControlButtonWorldContainerSlot_OnLButtonClick_Done"), 4}, [[
-		!push_dword *_g_lua
-		!call >_lua_getglobal
-		!add_esp_byte 08
-
-		; control ;
-		!push_[ebp+byte] 08
-		!fild_[esp]
-		!sub_esp_byte 04
-		!fstp_qword:[esp]
-		!push_dword *_g_lua
-		!call >_lua_pushnumber
-		!add_esp_byte 0C
-
-		!push_byte 00
-		!push_byte 00
-		!push_byte 00
-		!push_byte 01
-		!push_byte 01
-		!push_dword *_g_lua
-		!call >_lua_pcallk
-		!add_esp_byte 18
-		!call >IEex_CheckCallError
-
-		!pop_complete_state
-	]]})
-
-	IEex_HookBeforeCall(0x68DF87, {[[
-
-		!push_all_registers_iwd2
-
-		!push_dword ]], {IEex_WriteStringAuto("IEex_Extern_CScreenWorld_TimerSynchronousUpdate"), 4}, [[
-		!push_dword *_g_lua
-		!call >_lua_getglobal
-		!add_esp_byte 08
-
-		!push_byte 00
-		!push_byte 00
-		!push_byte 00
-		!push_byte 00
-		!push_byte 00
-		!push_dword *_g_lua
-		!call >_lua_pcallk
-		!add_esp_byte 18
-		!call >IEex_CheckCallError
-
-		!pop_all_registers_iwd2
-	]]})
-
-	-- Enable right-click on inventory button
-	IEex_WriteAssembly(0x77CFD6, {"!mov_eax 03"})
-
-	IEex_WriteDword(0x85D798, IEex_WriteAssemblyAuto({[[
-
-		!push_all_registers_iwd2
-
-		!push_dword ]], {IEex_WriteStringAuto("IEex_Extern_CScreenWorld_OnInventoryButtonRClick"), 4}, [[
-		!push_dword *_g_lua
-		!call >_lua_getglobal
-		!add_esp_byte 08
-
-		!push_byte 00
-		!push_byte 00
-		!push_byte 00
-		!push_byte 00
-		!push_byte 00
-		!push_dword *_g_lua
-		!call >_lua_pcallk
-		!add_esp_byte 18
-		!call >IEex_CheckCallError
-
-		!pop_all_registers_iwd2
-		!ret_word 08 00
-	]]}))
-
-	IEex_HookAfterRestore(0x47F954, 0, 5, {[[
-
-		!test_eax_eax
-		!jnz_dword >return
-
-		!push_registers_iwd2
-
-		!push_dword ]], {IEex_WriteStringAuto("IEex_Quickloot_HighlightContainerID"), 4}, [[
-		!push_dword *_g_lua
-		!call >_lua_getglobal
-		!add_esp_byte 08
-
-		!push_byte 00
-		!push_byte FF
-		!push_dword *_g_lua
-		!call >_lua_tonumberx
-		!add_esp_byte 0C
-		!call >__ftol2_sse
-		!push_eax
-		!push_byte FE
-		!push_dword *_g_lua
-		!call >_lua_settop
-		!add_esp_byte 08
-		!pop_edx
-
-		!xor_eax_eax
-		!cmp_edx_[esi+byte] 5C
-		!jne_dword >no_highlight
-		!mov_eax #1
-
-		@no_highlight
-		!pop_registers_iwd2
-	]]})
-
-	-- Redirect empty CUIControlButtonWorldContainerSlot_OnLButtonDoubleClick to CUIControlButton_OnLButtonDown.
-	-- Prevents double-click cooldown.
-	IEex_WriteDword(0x85A3E4, 0x4D4D70)
-
-	IEex_EnableCodeProtection()
-
-end)()
+-- Thread: Asynchronous
+function IEex_Extern_Async_CUIControlButtonWorldContainerSlot_OnLButtonClick_Done(control)
+	IEex_SetStringBridge("IEex_Bridge_Quickloot_SimpleAsyncOrder", "IEex_Extern_Sync_CUIControlButtonWorldContainerSlot_OnLButtonClick_Done")
+end
+
+-- Thread: Asynchronous
+function IEex_Extern_CUIControlButtonWorldContainerSlot_OnLButtonClick_GetOnlyUpdateSlot(control)
+	return IEex_Quickloot_IsControlOnPanel(control)
+end
+
+-- Thread: Asynchronous
+function IEex_Extern_Async_Quickloot_ScrollLeft(control)
+	IEex_SetStringBridge("IEex_Bridge_Quickloot_SimpleAsyncOrder", "IEex_Quickloot_ScrollLeft")
+end
+
+-- Thread: Asynchronous
+function IEex_Extern_Async_Quickloot_ScrollRight(control)
+	IEex_SetStringBridge("IEex_Bridge_Quickloot_SimpleAsyncOrder", "IEex_Quickloot_ScrollRight")
+end
 
 ---------
 -- Dev --
