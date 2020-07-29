@@ -269,11 +269,27 @@ function IEex_Quickloot_UpdateItems()
 end
 
 function IEex_Quickloot_GetSlotData(controlID)
-	return IEex_Quickloot_Items[IEex_Quickloot_ItemsAccessIndex + controlID] or {
-		["containerID"] = IEex_Quickloot_DefaultContainerID,
-		["slotIndex"] = IEex_GetContainerIDNumItems(IEex_Quickloot_DefaultContainerID),
-		["isFallback"] = true,
-	}
+
+	local slotData = IEex_Quickloot_Items[IEex_Quickloot_ItemsAccessIndex + controlID]
+
+	if not slotData then
+		-- Empty quickloot slots will request slot data on main-area transitions.
+		-- IEex_Quickloot_DefaultContainerID will still be pointing to a container
+		-- in the old area, causing a crash. If we detect an invalid default container,
+		-- force a IEex_Quickloot_UpdateItems() call to get quickloot in sync with the
+		-- new area.
+		if IEex_GetActorShare(IEex_Quickloot_DefaultContainerID) == 0x0 then
+			IEex_Quickloot_UpdateItems()
+		end
+
+		slotData = {
+			["containerID"] = IEex_Quickloot_DefaultContainerID,
+			["slotIndex"] = IEex_GetContainerIDNumItems(IEex_Quickloot_DefaultContainerID),
+			["isFallback"] = true,
+		}
+	end
+
+	return slotData
 end
 
 function IEex_Quickloot_GetValidPartyMember()
