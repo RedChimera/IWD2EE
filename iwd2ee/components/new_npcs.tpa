@@ -834,6 +834,9 @@ COPY_EXISTING ~USREIG.cre~ ~override~
 	READ_SHORT maxhp themaxhp
 	WRITE_SHORT currenthp themaxhp
 
+COPY_EXISTING ~USVEIR.cre~ ~override~
+	LPF	IWD2_REMOVE_CRE_ITEM STR_VAR item=~11VEIRA4~ END
+
 COPY_EXISTING ~USVREK.cre~ ~override~
 	LPF	IWD2_REMOVE_CRE_ITEM STR_VAR item=~RT02_R~ END
 

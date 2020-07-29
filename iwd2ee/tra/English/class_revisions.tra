@@ -497,22 +497,22 @@ Level 21-30: 1d8+5
 * Ki Strike: At level 8, the monk's unarmed attack is empowered with ki. The unarmed strike damage from such an attack can deal damage to a creature with damage reduction, such as a wight, as if the blow were made with a weapon with an enhancement bonus equal to the monk's damage bonus. Thus, a level 12 monk's fists strike as a +3 weapon.
 * A monk's natural armor class starts at 10, and then increases by +1 at 5th level and every 5 levels thereafter.
 * When not wearing armor a monk adds his Wisdom bonus to his AC in the same manner as his Dexterity bonus.
-* Stunning Attacks: When this ability is used, all of the monk's attacks in the next round force the victim to make a saving throw or be stunned. A monk can make a stunning attack 1/day/level.
-* Evasion: Monks have the ability to evade damage from area affect spells. Whenever a monk makes a successful reflex save against an area effect spell that allows a reflex save for half damage, he or she takes no damage.
-* 2nd level: Deflect Arrows. The monk gains the Deflect Arrows feat, yielding a +1 miscellanous bonus against missile weapons.
+* Stunning Attacks: When this ability is used, all of the monk's attacks in the next round force the victim to make a Fortitude save (DC 10 + Wisdom modifier + half total level) or be stunned for 1 round. A monk can make a stunning attack 1/day/level.
+* Evasion: Monks have the ability to evade damage from area affect spells. Whenever a monk makes a successful Reflex save against an area effect spell that allows a reflex save for half damage, he or she takes no damage.
+* 2nd level: Deflect Arrows. The monk gains the Deflect Arrows feat, yielding a +1 miscellanous bonus against missile weapons. In addition, the monk automatically blocks the first instance of missile damage that would hit them each round. The monk must have a hand free to block missiles this way.
 * 3rd level: Still Mind. The monk gains a +2 bonus to saving throws against spells and effects from the Enchantment school. Unarmored movement speed increases.
 * 5th level: Purity of Body. The monk gains control over his body's immune system. He gains immunity to all diseases.
 * 6th level: Unarmored movement speed increases.
-* 7th level: Wholeness of Body. The monk can regain hit points equal to their monk level times their Wisdom modifier once each day.
+* 7th level: Wholeness of Body. The monk can regain hit points equal to their monk level times their Wisdom modifier once each day per seven levels.
 * 9th level: Improved Evasion. The monk gains the Improved Evasion feat that is normally only available to rogues.
 * 10th level: Unarmored movement speed increases.
 * 10th level: Abundant Step. The monk may teleport to any location in sight once per day.
 * 11th level: Diamond Body. The monk is in such control of his own metabolism that he gains immunity to poison of all kinds.
 * 12th level: Unarmored movement speed increases.
 * 13th level: Diamond Soul. The monk gains spell resistance. His spell resistance equals his level + 10. In order to affect the monk with a spell, a spellcaster must roll the monk's spell resistance or higher on 1d20 + the spellcaster's level.
-* 15th level: Quivering Palm. This terrifying attack allows the monk to set up vibrations within the body of another creature that can be fatal. The monk can use the quivering palm attack once per day. The next time the monk hits a creature with an unarmed attack, the target dies unless it makes a Fortitude saving throw (DC 10 + one-half the monk's level + Wisdom modifier). Constructs and undead cannot be affected. Unarmored movement speed increases. The monk gains additional uses of Quivering Palm at levels 21 and 27.
+* 15th level: Quivering Palm. This terrifying attack allows the monk to set up vibrations within the body of another creature that can be fatal. The monk can use the quivering palm attack once per day. The next time the monk hits a creature with an unarmed attack, the target dies unless it makes a Fortitude saving throw (DC 10 + one-half the monk's level + Wisdom modifier). Constructs and undead cannot be affected. Unarmored movement speed increases. The monk gains additional uses of Quivering Palm every six levels thereafter.
 * 18th level: Unarmored movement speed increases.
-* 19th level: Empty Body. The monk can assume an ethereal state for 2 rounds a number of times a day equal to his level divided by 2.
+* 19th level: Empty Body. The monk can assume an ethereal state for 5 rounds a number of times a day equal to his level divided by 2. While ethereal, the monk can move through walls, and half the attacks that would have hit the monk instead miss.
 * 20th level: Perfect Self. The monk has tuned his body with skill and quasi-magical abilities to the point that he becomes a magical creature. He is forevermore treated as an outsider (extraplanar creature) rather than as a humanoid. For instance, charm person does not affect him. Additionally, the monk gains damage reduction 20/+1. This means that the monk ignores (instantly regenerates) the first 20 points of damage from any attack unless the damage is dealt by a weapon with a +1 enhancement bonus (or better), by a spell, or by a form of energy (fire, cold, etc.). As an outsider, a 20th level monk is subject to spells that repel enchanted creatures, such as protection from law.
 
 Disadvantages:
@@ -572,7 +572,7 @@ Hit Points per Level: 1-6
 Advantages:
 * Proficient with all simple weapons, the martial weapon bows, and light armor.
 * Rogues receive a larger number of skill points per level than any other character class. They can use these extra skill points to buy class skills like Disable Device to remove traps, Hide, Pick Pockets, and Use Magic Device.
-* Sneak Attack: To use Sneak Attack, attack an enemy's back when you have a melee weapon equipped. Your first successful attack at the creature's back will do normal damage plus 1-6 points of damage with an additional 1-6 points at 3rd level and every two levels thereafter.
+* Sneak Attack: Rogues can sneak attack enemies to deal an additional 1d6 damage, plus 1d6 per 2 levels after level 1. An attack counts as a sneak attack if it hits an enemy in the back, if it occurs within 2 seconds of coming out of stealth or invisibility, or if the target is paralyzed, held, stunned, sleeping, confused, or feebleminded.
 * 2nd level: Evasion. When a rogue reaches 2nd level, he or she gains the ability to evade damage from area affect spells. Whenever a rogue makes a successful reflex save against an area effect spell that allows a reflex save for half damage, he or she takes no damage.
 * 3rd level: Uncanny Dodge. Rogues retain their Dexterity bonus to Armor Class if they are attacked by invisible foes.
 * 6th level: Uncanny Dodge: Rogues can't be Sneak Attacked by another rogue unless the attacker is four or more levels higher.
@@ -1050,7 +1050,17 @@ You are especially skilled at using daggers, short swords and unarmed strikes, w
 Prerequisite: Proficient with small blade/touch attack, base attack bonus +1.
 
 Benefit: With daggers, short swords, unarmed attacks and natural weapons, you may use your Dexterity modifier instead of your Strength modifier on attack rolls.  Since you need your second hand for balance, if you carry a shield, apply the shield's armor check penalty to your attack rolls.~
+@708    = ~DEFLECT ARROWS:
 
+You can deflect incoming arrows, as well as crossbow bolts, spears, and other shot or thrown weapons.
+
+Prerequisite: Dex 13+
+
+Benefit: The character gains a +1 miscellanous bonus against missile weapons.
+
+In addition, if the character is a monk or has at least 19 Dexterity, they will automatically block the first instance of missile damage that would hit them each round. Any other damage the projectile would deal (such as fire damage from Arrows of Fire) still gets through. The character must have a free hand to gain this benefit.
+
+Special: Monks automatically gain the Deflect Arrows feat at level 2.~
 @785    = ~Aasimar~
 @786    = ~AASIMAR:
 
@@ -1600,7 +1610,7 @@ Disadvantages:
 @918    = ~Feint~
 @919    = ~Grapple~
 @920    = ~Whirlwind Attack~
-@921    = ~~
+@921    = ~Deflected a missile~
 @922    = ~~
 @923    = ~~
 @924    = ~~

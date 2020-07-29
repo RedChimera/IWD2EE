@@ -649,6 +649,40 @@ BEGIN
 		PATCH_WARN ~No door called %door_name% was found.~
 	END
 END
+/*
+DEFINE_PATCH_FUNCTION ~ADD_AREA_ITEM_IWD2~
+	INT_VAR
+		container_to_add_to=~1~
+		charges1=0
+		charges2=0
+		charges3=0
+	STR_VAR
+		item_to_add=~~
+		flags=~~
+BEGIN
+	READ_LONG 0x64 actoroffset
+	READ_LONG 0x6C triggeroffset
+	READ_LONG 0x70 spawnpointoffset
+	READ_LONG 0x78 entranceoffset
+	READ_LONG 0x80 containeroffset
+	READ_LONG 0x88 itemoffset
+	READ_LONG 0x8C vertexoffset
+	READ_LONG 0x94 ambientoffset
+	READ_LONG 0x98 variableoffset
+	READ_LONG 0xA0 objectflagoffset
+	READ_LONG 0xB0 bitmapoffset
+	READ_LONG 0xB8 dooroffset
+	READ_LONG 0xC0 animationoffset
+	READ_LONG 0xC8 actoroffset
+END
+*/
+
+
+
+
+
+
+
 
 	//	v1.0
 	DEFINE_ACTION_MACRO	IWD2_INDEX_LISTS	BEGIN

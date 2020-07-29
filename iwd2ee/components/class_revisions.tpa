@@ -564,6 +564,10 @@ COPY_EXISTING ~feats.2da~ ~override~
         SET strref = RESOLVE_STR_REF(@707)
         SET_2DA_ENTRY_LATER rows_out row 3 ~%strref%~
       END
+      ~DEFLECT_ARROWS~ BEGIN
+        SET strref = RESOLVE_STR_REF(@708)
+        SET_2DA_ENTRY_LATER rows_out row 3 ~%strref%~
+      END
       DEFAULT
     END
   END
@@ -1469,6 +1473,9 @@ COPY_EXISTING ~SPIN231.spl~ ~override~
   SAY NAME2 @699
   SAY UNIDENTIFIED_DESC @699
   SAY IDENTIFIED_DESC @699
+
+COPY_EXISTING ~FE_13_1.spl~ ~override~
+	LPF ALTER_EFFECT INT_VAR silent=1 match_opcode=502 parameter1=RESOLVE_STR_REF(@921) STR_VAR match_resource=~MEDEFLEC~ END
 
 COPY ~%mod_folder%/dlg/USALCP01.d~ ~override/USALCP01.dlg~
 	COMPILE_D_TO_DLG

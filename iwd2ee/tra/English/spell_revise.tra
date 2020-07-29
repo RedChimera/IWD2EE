@@ -3100,6 +3100,17 @@ Area of Effect: 1 creature
 Saving Throw: None
 
 This spell steals memorized spells from the target and grants their spell slots to the caster. The caster makes a Pick Pockets roll, adding their caster level (and any normal bonuses to Pick Pockets). For every 10 points of the total roll, the target loses one memorized spell of 5th-level or lower, and the caster regains one spell of 4th-level or lower (prioritizing the highest-level spells that can be lost or regained this way). There is no Saving Throw, though Magic Resistance may prevent the theft.~
+@37552     = ~Ethereal Jaunt~
+@38552     = ~Ethereal Jaunt
+(Transmutation)
+Level: Brd 5, Clr 5, Sor/Wiz 5
+Range: Touch
+Duration: 3 rounds/level
+Casting Time: 5
+Area of Effect: 1 creature
+Saving Throw: None
+
+This spell turns the recipient partially ethereal for a limited period of time. While partially ethereal, the character gets damage reduction 5/+1, but is still tangible enough to be able to attack and cast spells. The recipient can also move through walls while partially ethereal. Simply click on a point to move to, and the character will float to that point, bypassing normally impassable obstacles in the way.~
 @37652     = ~Isaac's Greater Missile Storm~
 @38652     = ~Isaac's Greater Missile Storm
 (Evocation)

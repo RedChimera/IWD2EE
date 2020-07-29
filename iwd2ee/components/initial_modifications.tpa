@@ -387,6 +387,13 @@ COPY_EXISTING ~AR2000.are~ ~override~
 COPY_EXISTING ~AR6200.are~ ~override~
 	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR actor_name=~Saablic_Tan~ script_special3=~USSAABL1~ END
 	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR actor_name=~Wanmok~ script_special3=~USSAABL1~ END
+
+
+COPY_EXISTING ~41HPORIA.bcs~ ~override~ ~41PARES1.bcs~ ~override~
+	DECOMPILE_AND_PATCH BEGIN
+		REPLACE_TEXTUALLY CASE_INSENSITIVE ~SetCreatureAreaFlag(\"OriaEssence\", ?INVULNERABLE.*~ ~~
+	END
+
 /*
 COPY_EXISTING ~animate.ids~ ~override~
 	REPLACE_TEXTUALLY ~0x1001 Wyvern, White (Big)~ ~0x1000 Wyvern (Big)
