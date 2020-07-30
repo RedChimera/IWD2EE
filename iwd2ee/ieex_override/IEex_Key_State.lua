@@ -1,10 +1,87 @@
-
+IEex_KeyIDS = {
+["LEFT_MOUSE_CLICK"] = 1,
+["RIGHT_MOUSE_CLICK"] = 2,
+["MIDDLE_MOUSE_CLICK"] = 4,
+["BACKSPACE"] = 8,
+["TAB"] = 9,
+["ENTER"] = 13,
+["ESC"] = 27,
+["SPACE_BAR"] = 32,
+["PAGE_UP"] = 33,
+["PAGE_DOWN"] = 34,
+["END"] = 35,
+["HOME"] = 36,
+["LEFT"] = 37,
+["UP"] = 38,
+["RIGHT"] = 39,
+["DOWN"] = 40,
+["PRINT_SCREEN"] = 44,
+["DELETE"] = 46,
+["0"] = 48,
+["1"] = 49,
+["2"] = 50,
+["3"] = 51,
+["4"] = 52,
+["5"] = 53,
+["6"] = 54,
+["7"] = 55,
+["8"] = 56,
+["9"] = 57,
+["A"] = 65,
+["B"] = 66,
+["C"] = 67,
+["D"] = 68,
+["E"] = 69,
+["F"] = 70,
+["G"] = 71,
+["H"] = 72,
+["I"] = 73,
+["J"] = 74,
+["K"] = 75,
+["L"] = 76,
+["M"] = 77,
+["N"] = 78,
+["O"] = 79,
+["P"] = 80,
+["Q"] = 81,
+["R"] = 82,
+["S"] = 83,
+["T"] = 84,
+["U"] = 85,
+["V"] = 86,
+["W"] = 87,
+["X"] = 88,
+["Y"] = 89,
+["Z"] = 90,
+["F1"] = 112,
+["F2"] = 113,
+["F3"] = 114,
+["F4"] = 115,
+["F5"] = 116,
+["F6"] = 117,
+["F7"] = 118,
+["F8"] = 119,
+["F9"] = 120,
+["F10"] = 121,
+["F11"] = 122,
+["F12"] = 123,
+["LEFT_SHIFT"] = 160,
+["RIGHT_SHIFT"] = 160,
+["LEFT_CTRL"] = 160,
+["RIGHT_CTRL"] = 160,
+["LEFT_ALT"] = 160,
+["RIGHT_ALT"] = 160,
+["LEFT_SHIFT"] = 160,
+}
 IEex_Keys = IEex_Default( {}, IEex_Keys)
 
 -- These need to be readded every IEex_Reload()
 IEex_KeyPressedListeners = {}
 IEex_KeyReleasedListeners = {}
 IEex_InputStateListeners = {}
+for i = 1, 254, 1 do
+	IEex_DefineBridge("IEex_KeyDown" .. i, 0)
+end
 
 function IEex_AddKeyPressedListener(func)
 	table.insert(IEex_KeyPressedListeners, func)
@@ -19,9 +96,9 @@ function IEex_AddInputStateListener(func)
 end
 
 function IEex_IsKeyDown(key)
-	return IEex_Keys[key].isDown
+	return (IEex_GetBridge("IEex_KeyDown" .. key) == 1)
+--	return IEex_Keys[key].isDown
 end
-
 ----------------------------
 -- Middle-mouse scrolling --
 ----------------------------
@@ -31,6 +108,7 @@ IEex_MiddleScroll_OldX = 0
 IEex_MiddleScroll_OldY = 0
 
 IEex_AddKeyPressedListener(function(key)
+	IEex_SetBridge("IEex_KeyDown" .. key,1)
 	if key == 0x4 then
 		IEex_MiddleScroll_IsDown = true
 		IEex_MiddleScroll_OldX, IEex_MiddleScroll_OldY = IEex_GetCursorXY()
@@ -38,6 +116,7 @@ IEex_AddKeyPressedListener(function(key)
 end)
 
 IEex_AddKeyReleasedListener(function(key)
+	IEex_SetBridge("IEex_KeyDown" .. key,0)
 	if key == 0x4 then
 		IEex_MiddleScroll_IsDown = false
 	end

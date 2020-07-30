@@ -1962,6 +1962,32 @@ COPY_EXISTING ~uswi352.spl~ ~override~
 	SAY UNIDENTIFIED_DESC @38352
 	SAY IDENTIFIED_DESC @38352
 
+COPY_EXISTING ~uswi353.spl~ ~override~
+	SAY NAME1 @37353
+	SAY NAME2 @37353
+	SAY UNIDENTIFIED_DESC @38353
+	SAY IDENTIFIED_DESC @38353
+	READ_SHORT 0x68 numheaders
+	FOR (i = numheaders; i < 15; ++i) BEGIN
+		LPF ADD_SPELL_HEADER INT_VAR copy_header=i insert_point=i END
+		numheaders = numheaders + 1
+	END
+	FOR (i = 1; i <= numheaders; ++i) BEGIN
+		LPF ALTER_SPELL_HEADER INT_VAR header=i min_level=i END
+		LPF ALTER_EFFECT INT_VAR silent=1 header=(i - 1) match_opcode=500 match_special=1 parameter1=(((i / 2) * 3) + 37) STR_VAR match_resource=~MEHGTST~ END
+	END
+
+COPY_EXISTING ~uswi353d.spl~ ~override~
+	READ_SHORT 0x68 numheaders
+	FOR (i = numheaders; i < 15; ++i) BEGIN
+		LPF ADD_SPELL_HEADER INT_VAR copy_header=i insert_point=i END
+		numheaders = numheaders + 1
+	END
+	FOR (i = 1; i <= numheaders; ++i) BEGIN
+		LPF ALTER_SPELL_HEADER INT_VAR header=i min_level=i END
+		LPF ALTER_EFFECT INT_VAR silent=1 header=(i - 1) match_opcode=500 match_special=1 parameter1=((((i + 1) / 2) * 3) + 6) STR_VAR match_resource=~MEHGTST~ END
+	END
+
 COPY_EXISTING ~uswi451.spl~ ~override~
 	SAY NAME1 @37451
 	SAY NAME2 @37451
@@ -2760,6 +2786,8 @@ COPY_EXISTING ~11RAGNIB.sto~ ~override~
 COPY_EXISTING ~11ELYTHA.sto~ ~override~
 	ADD_STORE_ITEM ~SPWI402Z~ AFTER ~SPWI105Z~ #1 #1 #0 ~IDENTIFIED~ #2
 	ADD_STORE_ITEM ~USWI151Z~ AFTER ~SPWI116Z~ #1 #1 #0 ~IDENTIFIED~ #2
+	ADD_STORE_ITEM ~USWI353Z~ AFTER ~SPWI308Z~ #1 #1 #0 ~IDENTIFIED~ #1
+
 
 COPY_EXISTING ~20DERETH.sto~ ~override~
 	ADD_STORE_ITEM ~SPPR410Z~ #1 #0 #0 ~IDENTIFIED~ #1
@@ -2785,6 +2813,9 @@ COPY_EXISTING ~50LIMHA.sto~ ~override~
 	ADD_STORE_ITEM ~SPPR410Z~ AFTER ~SPWI407Z~ #1 #1 #0 ~IDENTIFIED~ #1
 	ADD_STORE_ITEM ~USWI452Z~ AFTER ~SPPR410Z~ #1 #1 #0 ~IDENTIFIED~ #1
 	ADD_STORE_ITEM ~USWI552Z~ AFTER ~USWI452Z~ #1 #1 #0 ~IDENTIFIED~ #1
+
+COPY_EXISTING ~52BERED.sto~ ~override~
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~SPWI320Z~ ~USWI353Z~
 
 COPY_EXISTING ~53MALAVO.sto~ ~override~
 	ADD_STORE_ITEM ~SPWI526Z~ AFTER ~SPWI412Z~ #1 #1 #0 ~IDENTIFIED~ #1
@@ -2818,6 +2849,7 @@ COPY_EXISTING ~60SPELLS.sto~ ~override~
 	ADD_STORE_ITEM ~SPPR519Z~ AFTER ~SPWI610Z~ #1 #1 #0 ~IDENTIFIED~ #1
 	ADD_STORE_ITEM ~USWI652Z~ AFTER ~SPWI629Z~ #1 #1 #0 ~IDENTIFIED~ #1
 	REPLACE_TEXTUALLY CASE_INSENSITIVE ~SPWI410Z~ ~SPPR307Z~
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~SPWI320Z~ ~USWI353Z~
 
 COPY_EXISTING ~60CHEAP.sto~ ~override~
 	ADD_STORE_ITEM ~SPPR719Z~ #1 #1 #0 ~IDENTIFIED~ #1
@@ -2827,6 +2859,9 @@ COPY_EXISTING ~60CHEAP.sto~ ~override~
 COPY_EXISTING ~61RAKSHA.sto~ ~override~
 	ADD_STORE_ITEM ~USPR653Z~ AFTER ~SPWI709Z~ #1 #1 #0 ~IDENTIFIED~ #1
 	ADD_STORE_ITEM ~USPR755Z~ AFTER ~SPWI709Z~ #1 #1 #0 ~IDENTIFIED~ #1
+
+COPY_EXISTING ~AR4000.are~ ~override~
+	LPF fj_are_structure INT_VAR fj_charge0=1 fj_flags=0x1 fj_con_itm_idx=0 STR_VAR fj_structure_type=~itm~ fj_name=~USWI353Z~ END
 
 COPY_EXISTING ~AR4100.are~ ~override~
 	LPF fj_are_structure INT_VAR fj_charge0=1 fj_flags=0x1 fj_con_itm_idx=4 STR_VAR fj_structure_type=~itm~ fj_name=~USWI552Z~ END

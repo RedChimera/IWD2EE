@@ -605,6 +605,8 @@ COPY_EXISTING ~41XHAAN.cre~ ~override~
 	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelfighter=2 newlevelsorcerer=6 STR_VAR updatehp=~max~ END
 	WRITE_LONG xp 22597
 	WRITE_SHORT armorclass 10
+	WRITE_ASCII smallportrait ~USXHAA_S~ #8
+	WRITE_ASCII largeportrait ~USXHAA_L~ #8
 	WRITE_BYTE fortitudesave 5
 	WRITE_BYTE reflexsave 4
 	WRITE_BYTE willsave 4

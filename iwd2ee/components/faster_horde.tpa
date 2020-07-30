@@ -230,8 +230,8 @@ COPY_EXISTING ~us31pwd0.bcs~ ~override/31pward0.bcs~
 
 <<<<<<<< .../script.baf
 IF
-	PartyHasItem("30sstone")  // Black Ward Stone
 	Entered([PC])
+	PartyHasItem("30sstone")
 THEN
 	RESPONSE #100
 		NoAction()

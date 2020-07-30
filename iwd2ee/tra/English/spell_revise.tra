@@ -3067,6 +3067,17 @@ Area of Effect: 15-foot radius
 Saving Throw: Will negates
 
 Remove Magic is like Dispel Magic, except it only affects enemies. When cast, it dispels most magical effects on enemies in the area of effect who fail a Will save. For every 5 levels of the caster, enemies make their saves at an additional -1 penalty.~
+@37353     = ~Throw~
+@38353     = ~Throw
+(Transmutation)
+Level: Brd 4, Sor/Wiz 3
+Range: Touch
+Duration: Instantaneous
+Casting Time: 1
+Area of Effect: 1 creature
+Saving Throw: Reflex half
+
+This spell throws the target into the air with incredible force. The target is knocked back as it is sent hurtling through the air. When it lands or hits the ceiling, it takes bludgeoning damage based on how fast it was moving right before the collision, up to 5d6 plus 1d6 per caster level (max 20d6 total from a level 15 caster). If the target succeeds on a Reflex save, it is thrown with less force and will only take about half damage.~
 @37451     = ~Teleport Field~
 @38451     = ~Teleport Field
 (Transmutation) 

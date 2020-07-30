@@ -394,6 +394,93 @@ COPY_EXISTING ~41HPORIA.bcs~ ~override~ ~41PARES1.bcs~ ~override~
 		REPLACE_TEXTUALLY CASE_INSENSITIVE ~SetCreatureAreaFlag(\"OriaEssence\", ?INVULNERABLE.*~ ~~
 	END
 
+COPY_EXISTING ~61PVROOT.bcs~ override
+DECOMPILE_AND_PATCH BEGIN
+REPLACE_TEXTUALLY CASE_INSENSITIVE EXACT_MATCH ~Global("61NheeroMissionQuest","GLOBAL",2)~
+~Global("61NheeroMissionQuest","GLOBAL",2)
+See([PC],0)~
+END
+
+COPY_EXISTING ~30PWARD1.bcs~ override
+DECOMPILE_AND_PATCH BEGIN
+REPLACE_TEXTUALLY CASE_INSENSITIVE EXACT_MATCH ~!PartyHasItem("30BStone")
+  Entered([PC])~
+~Entered([PC])
+  !PartyHasItem("30BSTONE")~
+REPLACE_TEXTUALLY CASE_INSENSITIVE EXACT_MATCH ~PartyHasItem("30BStone")
+  Entered([PC])~
+~Entered([PC])
+  PartyHasItem("30BSTONE")~
+END
+
+COPY_EXISTING ~30PWARD2.bcs~ override
+DECOMPILE_AND_PATCH BEGIN
+REPLACE_TEXTUALLY CASE_INSENSITIVE EXACT_MATCH ~ !PartyHasItem("30BStone")
+  PartyHasItem("30IStone")
+  Entered([PC])~
+~Entered([PC])
+  !PartyHasItem("30BSTONE")
+  PartyHasItem("30ISTONE")~
+REPLACE_TEXTUALLY CASE_INSENSITIVE EXACT_MATCH ~!PartyHasItem("30IStone")
+  PartyHasItem("30BStone")
+  Entered([PC])~
+~Entered([PC])
+  !PartyHasItem("30ISTONE")
+  PartyHasItem("30BSTONE")~
+ REPLACE_TEXTUALLY CASE_INSENSITIVE EXACT_MATCH ~PartyHasItem("30BStone")
+  PartyHasItem("30IStone")
+  Entered([PC])~ ~Entered([PC])
+  PartyHasItem("30BSTONE")
+  PartyHasItem("30ISTONE")~
+END
+
+COPY_EXISTING ~30PWARD3.bcs~ override
+DECOMPILE_AND_PATCH BEGIN
+REPLACE_TEXTUALLY CASE_INSENSITIVE EXACT_MATCH ~!PartyHasItem("30IStone")
+  Entered([PC])~
+~Entered([PC])
+  !PartyHasItem("30ISTONE")~
+REPLACE_TEXTUALLY CASE_INSENSITIVE EXACT_MATCH ~PartyHasItem("30IStone")
+  Entered([PC])~
+~Entered([PC])
+  PartyHasItem("30ISTONE")~
+END
+
+COPY_EXISTING ~60PEDES1.bcs~ override
+DECOMPILE_AND_PATCH BEGIN
+REPLACE_TEXTUALLY CASE_INSENSITIVE EXACT_MATCH ~PartyHasItem("60Stele1")
+  OpenState("AR6050_IntPillar1",FALSE)~ ~OpenState("AR6050_IntPillar1",FALSE)
+  PartyHasItem("60STELE1")~
+END
+
+COPY_EXISTING ~60PEDES2.bcs~ override
+DECOMPILE_AND_PATCH BEGIN
+REPLACE_TEXTUALLY CASE_INSENSITIVE EXACT_MATCH ~PartyHasItem("60Stele2")
+  OpenState("AR6050_IntPillar2",FALSE)~ ~OpenState("AR6050_IntPillar2",FALSE)
+  PartyHasItem("60STELE2")~
+END
+
+COPY_EXISTING ~60PEDES3.bcs~ override
+DECOMPILE_AND_PATCH BEGIN
+REPLACE_TEXTUALLY CASE_INSENSITIVE EXACT_MATCH ~PartyHasItem("60Stele3")
+  OpenState("AR6050_IntPillar3",FALSE)~ ~OpenState("AR6050_IntPillar3",FALSE)
+  PartyHasItem("60STELE3")~
+END
+
+COPY_EXISTING ~60PEDES4.bcs~ override
+DECOMPILE_AND_PATCH BEGIN
+REPLACE_TEXTUALLY CASE_INSENSITIVE EXACT_MATCH ~PartyHasItem("60Stele4")
+  OpenState("AR6050_IntPillar4",FALSE)~ ~OpenState("AR6050_IntPillar4",FALSE)
+  PartyHasItem("60STELE4")~
+END
+
+COPY_EXISTING ~60PEDES5.bcs~ override
+DECOMPILE_AND_PATCH BEGIN
+REPLACE_TEXTUALLY CASE_INSENSITIVE EXACT_MATCH ~PartyHasItem("60Stele5")
+  OpenState("AR6050_IntPillar5",FALSE)~ ~OpenState("AR6050_IntPillar5",FALSE)
+  PartyHasItem("60STELE5")~
+END
+
 /*
 COPY_EXISTING ~animate.ids~ ~override~
 	REPLACE_TEXTUALLY ~0x1001 Wyvern, White (Big)~ ~0x1000 Wyvern (Big)

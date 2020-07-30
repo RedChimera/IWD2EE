@@ -421,7 +421,6 @@ Global("S_R_2","GLOBAL",0)
 END
 
 IF ~  Global("31bugGut_Dead","GLOBAL",1)
-!Global("USGUTHMA_FRIEND","GLOBAL",1)
 ~ THEN BEGIN 44
   SAY #36688
   IF ~  Global("S_R_1","GLOBAL",0)
@@ -493,20 +492,20 @@ Global("S_R_2","GLOBAL",0)
 Global("S_R_3","GLOBAL",0)
 !ClassEx(Protagonist,PALADIN)
 !ClassEx(Protagonist,MONK)
-~ THEN REPLY ~We came for payment for our ork at the fortress, Shawford... and any of the other missions you have yet to pay us for.~ DO ~SetGlobal("S_R_1", "GLOBAL", 1)
+~ THEN REPLY ~We came for payment for our work at the fortress, Shawford... and any of the other missions you have yet to pay us for.~ DO ~SetGlobal("S_R_1", "GLOBAL", 1)
 SetGlobal("S_R_2", "GLOBAL", 1)SetGlobal("S_R_3", "GLOBAL", 1)GiveItemCreate("Misc07", Protagonist, 10000, 0, 0)~ GOTO 37
   IF ~  Global("S_R_1","GLOBAL",1)
 Global("S_R_2","GLOBAL",0)
 Global("S_R_3","GLOBAL",0)
 !ClassEx(Protagonist,PALADIN)
 !ClassEx(Protagonist,MONK)
-~ THEN REPLY ~We came for payment for our ork at the fortress, Shawford... and any of the other missions you have yet to pay us for.~ DO ~SetGlobal("S_R_2", "GLOBAL", 1)SetGlobal("S_R_3", "GLOBAL", 1)GiveItemCreate("Misc07", Protagonist, 9000, 0, 0)~ GOTO 37
+~ THEN REPLY ~We came for payment for our work at the fortress, Shawford... and any of the other missions you have yet to pay us for.~ DO ~SetGlobal("S_R_2", "GLOBAL", 1)SetGlobal("S_R_3", "GLOBAL", 1)GiveItemCreate("Misc07", Protagonist, 9000, 0, 0)~ GOTO 37
   IF ~  Global("S_R_1","GLOBAL",1)
 Global("S_R_2","GLOBAL",1)
 Global("S_R_3","GLOBAL",0)
 !ClassEx(Protagonist,PALADIN)
 !ClassEx(Protagonist,MONK)
-~ THEN REPLY ~We came for payment for our ork at the fortress, Shawford... and any of the other missions you have yet to pay us for.~ DO ~SetGlobal("S_R_3", "GLOBAL", 1)GiveItemCreate("Misc07", Protagonist, 6000, 0, 0)~ GOTO 37
+~ THEN REPLY ~We came for payment for our work at the fortress, Shawford... and any of the other missions you have yet to pay us for.~ DO ~SetGlobal("S_R_3", "GLOBAL", 1)GiveItemCreate("Misc07", Protagonist, 6000, 0, 0)~ GOTO 37
   IF ~~ THEN REPLY #36715 EXIT
 END
 
