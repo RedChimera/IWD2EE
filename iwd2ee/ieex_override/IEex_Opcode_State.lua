@@ -1,24 +1,34 @@
 
+IEex_Debug_DisableOpcodes = false
+IEex_Debug_DisableScreenEffects = false
+
 IEex_ScreenEffectsGlobalFunctions = {}
 
 function IEex_AddScreenEffectsGlobal(func_name, func)
 	IEex_ScreenEffectsGlobalFunctions[func_name] = func
 end
 
-function IEex_ScreenEffectsFunc(pEffect, pSprite)
+function IEex_Extern_ScreenEffectsFunc(pEffect, pSprite)
+
+	IEex_AssertThread(IEex_Thread.Async, true)
+	if IEex_Debug_DisableScreenEffects then return end
 
 	local actorID = IEex_GetActorIDShare(pSprite)
 	local effectResource = IEex_ReadLString(pEffect + 0x2C, 8)
 
-	local stats = IEex_AccessLuaStats(actorID)
-	table.insert(IEex_GameObjectData[actorID].luaDerivedStats.screenEffects, {
-		["pOriginatingEffect"] = pEffect,
-		["functionName"] = effectResource,
-	})
-
+	IEex_Helper_SynchronizedBridgeOperation("IEex_GameObjectData", function()
+		local screenEffects = IEex_Helper_GetBridgeNL("IEex_GameObjectData", actorID, "luaDerivedStats", "screenEffects")
+		local newEntry = IEex_AppendBridgeTableNL(screenEffects)
+		IEex_Helper_SetBridgeNL(newEntry, "pOriginatingEffect", pEffect)
+		IEex_Helper_SetBridgeNL(newEntry, "functionName", effectResource)
+	end)
 end
 
-function IEex_OnCheckAddScreenEffectsHook(pEffect, pSprite)
+function IEex_Extern_OnCheckAddScreenEffectsHook(pEffect, pSprite)
+
+	IEex_AssertThread(IEex_Thread.Async, true)
+	if IEex_Debug_DisableScreenEffects then return end
+
 	IEex_WriteDword(pEffect + 0x68, IEex_GetGameTick())
 	for func_name, func in pairs(IEex_ScreenEffectsGlobalFunctions) do
 		if func(pEffect, pSprite) then
@@ -27,13 +37,12 @@ function IEex_OnCheckAddScreenEffectsHook(pEffect, pSprite)
 	end
 
 	local actorID = IEex_GetActorIDShare(pSprite)
-	local screenList = IEex_AccessLuaStats(actorID).screenEffects
+	local screenList = IEex_Helper_GetBridge(IEex_AccessLuaStats(actorID), "screenEffects")
+	local numEntries = IEex_Helper_GetBridgeNumInts(screenList)
 
-	for _, entry in ipairs(screenList) do
-
-		local immunityFunction = _G[entry.functionName]
-
-		if immunityFunction and immunityFunction(entry.pOriginatingEffect, pEffect, pSprite) then
+	for i = 1, numEntries, 1 do
+		local immunityFunction = _G[IEex_Helper_GetBridge(screenList, i, "functionName")]
+		if immunityFunction and immunityFunction(IEex_Helper_GetBridge(screenList, i, "pOriginatingEffect"), pEffect, pSprite) then
 			return true
 		end
 	end
@@ -134,16 +143,22 @@ end
 		return false
 	end)
 
-	IEex_RegisterLuaStat({
-		["reload"] = function(stats)
-			stats.screenEffects = {}
-		end,
-		["copy"] = function(sourceStats, destStats)
-			destStats.screenEffects = {}
-			for _, entry in ipairs(sourceStats.screenEffects) do
-				table.insert(destStats.screenEffects, entry)
-			end
-		end,
-	})
+	IEex_ScreenEffectsStats_Reload = function(stats)
+		IEex_Helper_GetBridgeCreateNL(stats, "screenEffects")
+	end
+
+	IEex_ScreenEffectsStats_Copy = function(sourceStats, destStats)
+
+		IEex_Helper_ClearBridgeNL(destStats, "screenEffects")
+
+		local sourceScreenEffects = IEex_Helper_GetBridgeNL(sourceStats, "screenEffects")
+		local destScreenEffects = IEex_Helper_GetBridgeNL(destStats, "screenEffects")
+
+		local numEntries = IEex_Helper_GetBridgeNumIntsNL(sourceStats)
+		for i = 1, numEntries, 1 do
+			IEex_Helper_SetBridgeNL(destScreenEffects, i, "pOriginatingEffect", IEex_Helper_GetBridgeNL(sourceScreenEffects, i, "pOriginatingEffect"))
+			IEex_Helper_SetBridgeNL(destScreenEffects, i, "functionName", IEex_Helper_GetBridgeNL(sourceScreenEffects, i, "functionName"))
+		end
+	end
 
 end)()

@@ -1,8 +1,32 @@
 
 function IEex_Reload()
 	dofile("override/IEex_IWD2_State.lua")
+	IEex_Helper_SynchronizedBridgeOperation("IEex_ReloadListeners", function()
+		IEex_Helper_ReadDataFromBridgeNL("IEex_ReloadListeners")
+		IEex_Helper_ClearBridgeNL("IEex_ReloadListeners")
+		local limit = #IEex_ReloadListeners
+		for i = 1, limit, 1 do
+			local funcName = IEex_ReloadListeners[i]
+			_G[IEex_ReloadListeners[i]]()
+end
+	end)
 end
 
+function IEex_AddReloadListener(funcName)
+	IEex_Helper_SynchronizedBridgeOperation("IEex_ReloadListeners", function()
+		IEex_AppendBridgeNL("IEex_ReloadListeners", funcName)
+	end)
+end
+
+function IEex_ReaddReloadListener(funcName)
+	IEex_AppendBridgeNL("IEex_ReloadListeners", funcName)
+end
+
+---------------------
+-- Specific States --
+---------------------
+
+dofile("override/IEex_Bridge.lua")
 dofile("override/IEex_Core_State.lua")
 dofile("override/IEex_Creature_State.lua")
 dofile("override/IEex_Opcode_State.lua")

@@ -1,7 +1,7 @@
 
 (function()
 
-	-- Special Async globals required to spin up Async state.
+	-- Special globals required to spin up Async state.
 	IEex_AsyncState = IEex_Call(IEex_Label("_luaL_newstate"), {}, nil, 0x0)
 	IEex_Call(IEex_Label("_luaL_openlibs"), {IEex_AsyncState}, nil, 0x4)
 	IEex_DefineAssemblyLabel("_g_lua_async", IEex_AsyncState)
@@ -9,53 +9,47 @@
 	IEex_AsyncInitialLock = IEex_Malloc(0x4)
 	IEex_WriteDword(IEex_AsyncInitialLock, 0x0)
 
+	IEex_AsyncSharedMemoryPtr = IEex_Malloc(0x4)
+	IEex_WriteDword(IEex_AsyncSharedMemoryPtr, 0x0)
+
 	----------------------------------
 	-- IEex_DefineAssemblyFunctions --
 	----------------------------------
 
 	IEex_WriteAssemblyAuto({[[
 
-		$IEex_CheckCallError_Async
+		$IEex_GetLuaState
+		!push_registers_iwd2
 
-		!test_eax_eax
-		!jnz_dword >error
-		!ret
+		!call >IEex_GetCurrentThread
+		!mov_ebx_eax
 
-		@error
-		!push_byte 00
-		!push_byte FF
-		!push_dword *_g_lua_async
-		!call >_lua_tolstring
-		!add_esp_byte 0C
-
-		; _lua_pushstring arg ;
-		!push_eax
-
-		!push_dword ]], {IEex_WriteStringAuto("print"), 4}, [[
-		!push_dword *_g_lua_async
-		!call >_lua_getglobal
+		!push_dword ]], {IEex_WriteStringAuto("Sync"), 4}, [[
+		!push_dword ]], {IEex_WriteStringAuto("IEex_ThreadBridge"), 4}, [[
+		!call >IEex_Helper_GetBridgeDirect
 		!add_esp_byte 08
 
-		!push_dword *_g_lua_async
-		!call >_lua_pushstring
+		!cmp_ebx_eax
+		!jne_dword >not_sync
+		!mov_eax *_g_lua
+		!jmp_dword >return
+
+		@not_sync
+		!push_dword ]], {IEex_WriteStringAuto("Async"), 4}, [[
+		!push_dword ]], {IEex_WriteStringAuto("IEex_ThreadBridge"), 4}, [[
+		!call >IEex_Helper_GetBridgeDirect
 		!add_esp_byte 08
 
-		!push_byte 00
-		!push_byte 00
-		!push_byte 00
-		!push_byte 00
-		!push_byte 01
-		!push_dword *_g_lua_async
-		!call >_lua_pcallk
-		!add_esp_byte 18
+		!cmp_ebx_eax
+		!jne_dword >not_async
+		!mov_eax *_g_lua_async
+		!jmp_dword >return
 
-		; Clear error string off of stack ;
-		!push_byte FE
-		!push_dword *_g_lua_async
-		!call >_lua_settop
-		!add_esp_byte 08
+		@not_async
+		!xor_eax_eax
 
-		!mov_eax #1
+		@return
+		!pop_registers_iwd2
 		!ret
 	]]})
 
@@ -65,12 +59,14 @@
 
 		!test_eax_eax
 		!jnz_dword >error
-		!ret
+		!ret_word 04 00
 
 		@error
+		!build_stack_frame
+
 		!push_byte 00
 		!push_byte FF
-		!push_dword *_g_lua
+		!push_[ebp+byte] 08
 		!call >_lua_tolstring
 		!add_esp_byte 0C
 
@@ -78,11 +74,11 @@
 		!push_eax
 
 		!push_dword ]], {IEex_WriteStringAuto("print"), 4}, [[
-		!push_dword *_g_lua
+		!push_[ebp+byte] 08
 		!call >_lua_getglobal
 		!add_esp_byte 08
 
-		!push_dword *_g_lua
+		!push_[ebp+byte] 08
 		!call >_lua_pushstring
 		!add_esp_byte 08
 
@@ -91,18 +87,19 @@
 		!push_byte 00
 		!push_byte 00
 		!push_byte 01
-		!push_dword *_g_lua
+		!push_[ebp+byte] 08
 		!call >_lua_pcallk
 		!add_esp_byte 18
 
 		; Clear error string off of stack ;
 		!push_byte FE
-		!push_dword *_g_lua
+		!push_[ebp+byte] 08
 		!call >_lua_settop
 		!add_esp_byte 08
 
 		!mov_eax #1
-		!ret
+		!destroy_stack_frame
+		!ret_word 04 00
 	]]})
 
 	-- push resref
@@ -182,20 +179,44 @@
 	-- Async State --
 	-----------------
 
-	-- This spins the Sync thread until the Async state is done initializing.
-	-- Unsure if this is needed, but let's keep it just in case.
-	IEex_HookAfterCall(0x7901FE, {[[
+	IEex_HookRestore(0x7901FE, 5, 0, {[[
+
+		!push_all_registers_iwd2
+
+		!push_dword ]], {IEex_WriteStringAuto("IEex_Extern_CreateAsyncState"), 4}, [[
+		!push_dword *_g_lua
+		!call >_lua_getglobal
+		!add_esp_byte 08
+
+		!push_byte 00
+		!push_byte 00
+		!push_byte 00
+		!push_byte 00
+		!push_byte 00
+		!push_dword *_g_lua
+		!call >_lua_pcallk
+		!add_esp_byte 18
+		!push_dword *_g_lua
+		!call >IEex_CheckCallError
+
+		!pop_all_registers_iwd2
+
+		!call :7E9429
+
+		; This spins the Sync thread until the Async state is done initializing.
+		Unsure if this is needed, but let's keep it just in case. ;
 		@wait
 		!cmp_[dword]_byte ]], {IEex_AsyncInitialLock, 4}, [[ 00
 		!jz_dword >wait
+
 	]]})
 
 	-- Both invokes IEex_Async.lua and calls IEex_Extern_SetupAsyncState()
 	-- using the Async state. Also directly exposes IEex_ReadDword, IEex_ReadString,
 	-- and IEex_ExposeToLua so the Async state can initialize itself.
-	IEex_WriteAssemblyFunction("IEex_CallSetupAsyncState", {[[
+	IEex_HookRestore(0x7928E0, 0, 6, {[[
 
-		!push_registers_iwd2
+		!push_all_registers_iwd2
 
 		!push_byte 00
 		!push_dword *IEex_ReadDword
@@ -231,15 +252,6 @@
 		!add_esp_byte 08
 
 		!push_byte 00
-		!push_byte 01
-		!push_dword *_g_lua
-		!call >_lua_tonumberx
-		!add_esp_byte 0C
-		!call >__ftol2_sse
-		; asyncSharedMemory ;
-		!push_eax
-
-		!push_byte 00
 		!push_dword ]], {IEex_WriteStringAuto("override\\IEex_Async.lua"), 4}, [[
 		!push_dword *_g_lua_async
 		!call >_luaL_loadfilex
@@ -253,7 +265,8 @@
 		!push_dword *_g_lua_async
 		!call >_lua_pcallk
 		!add_esp_byte 18
-		!call >IEex_CheckCallError_Async
+		!push_dword *_g_lua_async
+		!call >IEex_CheckCallError
 
 		!push_dword ]], {IEex_WriteStringAuto("IEex_Extern_SetupAsyncState"), 4}, [[
 		!push_dword *_g_lua_async
@@ -261,6 +274,7 @@
 		!add_esp_byte 08
 
 		; asyncSharedMemory ;
+		!push_[dword] ]], {IEex_AsyncSharedMemoryPtr, 4}, [[
 		!fild_[esp]
 		!sub_esp_byte 04
 		!fstp_qword:[esp]
@@ -276,35 +290,10 @@
 		!push_dword *_g_lua_async
 		!call >_lua_pcallk
 		!add_esp_byte 18
-		!call >IEex_CheckCallError_Async
-
-		!xor_eax_eax
-		!pop_registers_iwd2
-		!ret
-
-	]]})
-
-	-- Redirects the start of the Async thread to IEex's Async state initialization.
-	IEex_HookRestore(0x7928E0, 0, 6, {[[
-
-		!push_all_registers
-
-		!push_dword ]], {IEex_WriteStringAuto("IEex_Extern_CreateAsyncState"), 4}, [[
-		!push_dword *_g_lua
-		!call >_lua_getglobal
-		!add_esp_byte 08
-
-		!push_byte 00
-		!push_byte 00
-		!push_byte 00
-		!push_byte 00
-		!push_byte 00
-		!push_dword *_g_lua
-		!call >_lua_pcallk
-		!add_esp_byte 18
+		!push_dword *_g_lua_async
 		!call >IEex_CheckCallError
 
-		!pop_all_registers
+		!pop_all_registers_iwd2
 
 	]]})
 
@@ -316,8 +305,11 @@
 
 		!push_all_registers_iwd2
 
+		!call >IEex_GetLuaState
+		!mov_ebx_eax
+
 		!push_dword ]], {IEex_WriteStringAuto("IEex_Extern_Crashing"), 4}, [[
-		!push_dword *_g_lua
+		!push_ebx
 		!call >_lua_getglobal
 		!add_esp_byte 08
 
@@ -326,7 +318,7 @@
 		!fild_[esp]
 		!sub_esp_byte 04
 		!fstp_qword:[esp]
-		!push_dword *_g_lua
+		!push_ebx
 		!call >_lua_pushnumber
 		!add_esp_byte 0C
 
@@ -335,7 +327,7 @@
 		!fild_[esp]
 		!sub_esp_byte 04
 		!fstp_qword:[esp]
-		!push_dword *_g_lua
+		!push_ebx
 		!call >_lua_pushnumber
 		!add_esp_byte 0C
 
@@ -344,9 +336,10 @@
 		!push_byte 00
 		!push_byte 00
 		!push_byte 02
-		!push_dword *_g_lua
+		!push_ebx
 		!call >_lua_pcallk
 		!add_esp_byte 18
+		!push_ebx
 		!call >IEex_CheckCallError
 
 		!pop_all_registers_iwd2
@@ -369,7 +362,7 @@
 		!call :53CB60
 		!push_all_registers_iwd2
 
-		!push_dword ]], {IEex_WriteStringAuto("IEex_Stage1Startup"), 4}, [[
+		!push_dword ]], {IEex_WriteStringAuto("IEex_Extern_Stage1Startup"), 4}, [[
 		!push_dword *_g_lua
 		!call >_lua_getglobal
 		!add_esp_byte 08
@@ -382,6 +375,7 @@
 		!push_dword *_g_lua
 		!call >_lua_pcallk
 		!add_esp_byte 18
+		!push_dword *_g_lua
 		!call >IEex_CheckCallError
 
 		!pop_all_registers_iwd2
@@ -400,7 +394,7 @@
 		!call :423800
 		!push_all_registers_iwd2
 
-		!push_dword ]], {IEex_WriteStringAuto("IEex_Stage2Startup"), 4}, [[
+		!push_dword ]], {IEex_WriteStringAuto("IEex_Extern_Stage2Startup"), 4}, [[
 		!push_dword *_g_lua
 		!call >_lua_getglobal
 		!add_esp_byte 08
@@ -413,6 +407,7 @@
 		!push_dword *_g_lua
 		!call >_lua_pcallk
 		!add_esp_byte 18
+		!push_dword *_g_lua
 		!call >IEex_CheckCallError
 
 		!pop_all_registers_iwd2
@@ -510,7 +505,7 @@
 	-- Feats should apply our spells when taken --
 	----------------------------------------------
 
-	local featHookName = "IEex_FeatHook"
+	local featHookName = "IEex_Extern_FeatHook"
 	local featHookNameAddress = IEex_Malloc(#featHookName + 1)
 	IEex_WriteString(featHookNameAddress, featHookName)
 
@@ -520,7 +515,7 @@
 		!push_registers
 
 		!push_dword ]], {featHookNameAddress, 4}, [[
-		!push_dword *_g_lua
+		!push_dword *_g_lua_async
 		!call >_lua_getglobal
 		!add_esp_byte 08
 
@@ -529,7 +524,7 @@
 		!fild_[esp]
 		!sub_esp_byte 04
 		!fstp_qword:[esp]
-		!push_dword *_g_lua
+		!push_dword *_g_lua_async
 		!call >_lua_pushnumber
 		!add_esp_byte 0C
 
@@ -538,7 +533,7 @@
 		!fild_[esp]
 		!sub_esp_byte 04
 		!fstp_qword:[esp]
-		!push_dword *_g_lua
+		!push_dword *_g_lua_async
 		!call >_lua_pushnumber
 		!add_esp_byte 0C
 
@@ -547,7 +542,7 @@
 		!fild_[esp]
 		!sub_esp_byte 04
 		!fstp_qword:[esp]
-		!push_dword *_g_lua
+		!push_dword *_g_lua_async
 		!call >_lua_pushnumber
 		!add_esp_byte 0C
 
@@ -556,9 +551,10 @@
 		!push_byte 00
 		!push_byte 00
 		!push_byte 03
-		!push_dword *_g_lua
+		!push_dword *_g_lua_async
 		!call >_lua_pcallk
 		!add_esp_byte 18
+		!push_dword *_g_lua_async
 		!call >IEex_CheckCallError
 
 		!pop_registers
@@ -619,7 +615,7 @@
 		!push_ecx
 
 		!push_dword ]], {IEex_WriteStringAuto("IEex_Extern_CSpell_UsableBySprite"), 4}, [[
-		!push_dword *_g_lua
+		!push_dword *_g_lua_async
 		!call >_lua_getglobal
 		!add_esp_byte 08
 
@@ -627,7 +623,7 @@
 		!fild_[esp]
 		!sub_esp_byte 04
 		!fstp_qword:[esp]
-		!push_dword *_g_lua
+		!push_dword *_g_lua_async
 		!call >_lua_pushnumber
 		!add_esp_byte 0C
 
@@ -635,7 +631,7 @@
 		!fild_[esp]
 		!sub_esp_byte 04
 		!fstp_qword:[esp]
-		!push_dword *_g_lua
+		!push_dword *_g_lua_async
 		!call >_lua_pushnumber
 		!add_esp_byte 0C
 
@@ -644,20 +640,21 @@
 		!push_byte 00
 		!push_byte 01
 		!push_byte 02
-		!push_dword *_g_lua
+		!push_dword *_g_lua_async
 		!call >_lua_pcallk
 		!add_esp_byte 18
+		!push_dword *_g_lua_async
 		!call >IEex_CheckCallError
 
 		!push_byte FF
-		!push_dword *_g_lua
+		!push_dword *_g_lua_async
 		!call >_lua_toboolean
 		!add_esp_byte 08
 
 		!push_eax
 
 		!push_byte FE
-		!push_dword *_g_lua
+		!push_dword *_g_lua_async
 		!call >_lua_settop
 		!add_esp_byte 08
 
@@ -727,8 +724,11 @@
 		; race ;
 		!push_ecx
 
+		!call >IEex_GetLuaState
+		!mov_ebx_eax
+
 		!push_dword ]], {IEex_WriteStringAuto("IEex_Extern_CRuleTables_GetRaceName"), 4}, [[
-		!push_dword *_g_lua
+		!push_ebx
 		!call >_lua_getglobal
 		!add_esp_byte 08
 
@@ -736,7 +736,7 @@
 		!fild_[esp]
 		!sub_esp_byte 04
 		!fstp_qword:[esp]
-		!push_dword *_g_lua
+		!push_ebx
 		!call >_lua_pushnumber
 		!add_esp_byte 0C
 
@@ -745,9 +745,10 @@
 		!push_byte 00
 		!push_byte 01
 		!push_byte 01
-		!push_dword *_g_lua
+		!push_ebx
 		!call >_lua_pcallk
 		!add_esp_byte 18
+		!push_ebx
 		!call >IEex_CheckCallError
 		!test_eax_eax
 		!jz_dword >ok
@@ -757,13 +758,13 @@
 		@ok
 		!push_byte 00
 		!push_byte FF
-		!push_dword *_g_lua
+		!push_ebx
 		!call >_lua_tonumberx
 		!add_esp_byte 0C
 		!call >__ftol2_sse
 		!push_eax
 		!push_byte FE
-		!push_dword *_g_lua
+		!push_ebx
 		!call >_lua_settop
 		!add_esp_byte 08
 		!pop_eax
@@ -857,8 +858,11 @@
 		!inc_eax
 		!push_eax
 
+		!call >IEex_GetLuaState
+		!mov_ebx_eax
+
 		!push_dword ]], {IEex_WriteStringAuto("IEex_Extern_CGameSprite_GetRacialFavoredClass"), 4}, [[
-		!push_dword *_g_lua
+		!push_ebx
 		!call >_lua_getglobal
 		!add_esp_byte 08
 
@@ -866,7 +870,7 @@
 		!fild_[esp]
 		!sub_esp_byte 04
 		!fstp_qword:[esp]
-		!push_dword *_g_lua
+		!push_ebx
 		!call >_lua_pushnumber
 		!add_esp_byte 0C
 
@@ -875,9 +879,10 @@
 		!push_byte 00
 		!push_byte 01
 		!push_byte 01
-		!push_dword *_g_lua
+		!push_ebx
 		!call >_lua_pcallk
 		!add_esp_byte 18
+		!push_ebx
 		!call >IEex_CheckCallError
 		!test_eax_eax
 		!jz_dword >ok
@@ -887,13 +892,13 @@
 		@ok
 		!push_byte 00
 		!push_byte FF
-		!push_dword *_g_lua
+		!push_ebx
 		!call >_lua_tonumberx
 		!add_esp_byte 0C
 		!call >__ftol2_sse
 		!push_eax
 		!push_byte FE
-		!push_dword *_g_lua
+		!push_ebx
 		!call >_lua_settop
 		!add_esp_byte 08
 		!pop_edi

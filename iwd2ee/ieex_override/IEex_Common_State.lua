@@ -7,7 +7,6 @@ IEex_MinimalStartup = false
 IEex_InitialMemory = nil
 
 IEex_OnceTable = {}
-IEex_ReadDwordDebug_Suppress = false
 IEex_GlobalAssemblyLabels = {}
 IEex_GlobalAssemblyMacros = {}
 IEex_CodePageAllocations = {}
@@ -74,6 +73,19 @@ function IEex_WriteStringAuto(string)
 end
 
 -- OS:WINDOWS
+function IEex_GetProcAddress(dll, proc)
+	local procaddress = #dll + 1
+	local dlladdress = IEex_Malloc(procaddress + #proc + 1)
+	procaddress = dlladdress + procaddress
+	IEex_WriteString(dlladdress, dll)
+	IEex_WriteString(procaddress, proc)
+	local dllhandle = IEex_Call(IEex_Label("__imp__LoadLibraryA"), {dlladdress}, nil, 0x0)
+	local procfunc = IEex_Call(IEex_Label("__imp__GetProcAddress"), {procaddress, dllhandle}, nil, 0x0)
+	IEex_Free(dlladdress)
+	return procfunc
+end
+
+-- OS:WINDOWS
 function IEex_DllCall(dll, proc, args, ecx, pop)
 	local procaddress = #dll + 1
 	local dlladdress = IEex_Malloc(procaddress + #proc + 1)
@@ -101,21 +113,19 @@ function IEex_Error(message)
 	error(message.." "..debug.traceback())
 end
 
+function IEex_TracebackPrint(message, levelMod)
+	message = debug.traceback(message, 3 + levelMod or 0)
+	print(message)
+end
+
 function IEex_TracebackMessage(message)
 	message = message.."\n"..debug.traceback()
 	print(message)
 	IEex_MessageBox(message)
 end
 
-function IEex_ReadDwordDebug(reading, read)
-	if not IEex_ReadDwordDebug_Suppress then
-		--print("[IEex] IEex_ReadDwordDebug: "..IEex_ToHex(reading).." => "..IEex_ToHex(read))
-	end
-end
-
 function IEex_DumpLuaStack()
 	IEex_FunctionLog("Lua Stack =>")
-	IEex_ReadDwordDebug_Suppress = true
 	local lua_State = IEex_Label("_g_lua")
 	local top = IEex_Call(IEex_Label("_lua_gettop"), {lua_State}, nil, 0x4)
 	for i = 1, top, 1 do
@@ -136,11 +146,9 @@ function IEex_DumpLuaStack()
 			IEex_FunctionLog("    type: "..t..", typeName: "..IEex_ReadString(typeName))
 		end
 	end
-	IEex_ReadDwordDebug_Suppress = false
 end
 
 function IEex_DumpDynamicCode()
-	IEex_ReadDwordDebug_Suppress = true
 	IEex_FunctionLog("IEex => Dynamic Code")
 	for i, codePage in ipairs(IEex_CodePageAllocations) do
 		IEex_FunctionLog(i)
@@ -167,7 +175,6 @@ function IEex_DumpDynamicCode()
 			end
 		end
 	end
-	IEex_ReadDwordDebug_Suppress = false
 end
 
 -- OS:WINDOWS
@@ -261,44 +268,12 @@ end
 -- Assembly Writing --
 ----------------------
 
-function IEex_DefineBridge(name, initialValue)
-	if IEex_GlobalAssemblyLabels[name] then return end
-	local mem = IEex_Malloc(0x4)
-	IEex_WriteDword(mem, initialValue)
-	IEex_DefineAssemblyLabel(name, mem)
-end
-
-function IEex_DefineStringBridge(name, defaultValue)
-	if IEex_GlobalAssemblyLabels[name] then return end
-	local mem = IEex_Malloc(0x8)
-	IEex_WriteDword(mem, 0x0)
-	IEex_WriteDword(mem + 0x4, IEex_WriteStringAuto(defaultValue))
-	IEex_DefineAssemblyLabel(name, mem)
-end
-
-function IEex_SetStringBridge(name, value)
-	local mem = IEex_Label(name)
-	local existingVal = IEex_ReadDword(mem)
-	if existingVal ~= 0x0 then IEex_Free(existingVal) end
-	IEex_WriteDword(mem, IEex_WriteStringAuto(value))
-end
-
-function IEex_GetStringBridge(name)
-	local mem = IEex_Label(name)
-	local val = IEex_ReadDword(mem)
-	return IEex_ReadString(val ~= 0x0 and val or IEex_ReadDword(mem + 0x4))
-end
-
-function IEex_SetBridge(name, value)
-	IEex_WriteDword(IEex_Label(name), value)
-end
-
-function IEex_GetBridge(name)
-	return IEex_ReadDword(IEex_Label(name))
-end
-
 function IEex_DefineAssemblyLabel(label, value)
 	IEex_GlobalAssemblyLabels[label] = value
+end
+
+function IEex_LabelDefault(label, default)
+	return IEex_GlobalAssemblyLabels[label] or default
 end
 
 function IEex_Label(label)
@@ -1317,3 +1292,6 @@ function IEex_EnableCodeProtection()
 	IEex_DllCall("Kernel32", "VirtualProtect", {temp, 0x20, 0x49F000, 0x401000}, nil, 0x0)
 	IEex_Free(temp)
 end
+
+-- Assembly Macros
+dofile("override/IEex_Mac.lua")

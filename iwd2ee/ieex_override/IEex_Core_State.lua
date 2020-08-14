@@ -1,5 +1,6 @@
 
-IEex_NEW_FEATS_MAXID = nil
+-- Refactor: Now bridge "IEex_Feats", "NEW_FEATS_MAXID"
+-- IEex_NEW_FEATS_MAXID = nil
 IEex_NEW_FEATS_SIZE  = nil
 
 IEex_LISTSPLL = {}
@@ -20,21 +21,23 @@ IEex_Loaded2DAs = {}
 
 function IEex_Extern_CreateAsyncState()
 
-	-- Figure size of IEex_AsyncSharedMemory
+	IEex_AssertThread(IEex_Thread.Sync, true)
+
+	-- Figure size of asyncSharedMemory
 	IEex_LabelCount = 0
 	IEex_LabelTotalKeyLength = 0
 	for key, _ in pairs(IEex_GlobalAssemblyLabels) do
 		IEex_LabelCount = IEex_LabelCount + 1
 		IEex_LabelTotalKeyLength = IEex_LabelTotalKeyLength + #key + 1
 	end
-	IEex_AsyncSharedMemory = IEex_Malloc(0xC + IEex_LabelCount * 0x8)
+	local asyncSharedMemory = IEex_Malloc(0xC + IEex_LabelCount * 0x8)
 
-	IEex_WriteDword(IEex_AsyncSharedMemory, IEex_AsyncState)
-	IEex_WriteDword(IEex_AsyncSharedMemory + 0x4, IEex_LabelCount)
-	IEex_WriteDword(IEex_AsyncSharedMemory + 0x8, IEex_AsyncInitialLock)
+	IEex_WriteDword(asyncSharedMemory, IEex_AsyncState)
+	IEex_WriteDword(asyncSharedMemory + 0x4, IEex_LabelCount)
+	IEex_WriteDword(asyncSharedMemory + 0x8, IEex_AsyncInitialLock)
 
 	-- Write all Sync labels to shared memory so the Async state can initialize itself
-	local currentEntryPointer = IEex_AsyncSharedMemory + 0xC
+	local currentEntryPointer = asyncSharedMemory + 0xC
 	local currentKeysMemPointer = IEex_Malloc(IEex_LabelTotalKeyLength)
 
 	for key, val in pairs(IEex_GlobalAssemblyLabels) do
@@ -45,13 +48,13 @@ function IEex_Extern_CreateAsyncState()
 		currentKeysMemPointer = currentKeysMemPointer + #key + 1
 	end
 
-	-- This is a hardcoded function that (via the Async state)
-	-- invokes IEex_Async.lua and calls IEex_Extern_SetupAsyncState()
-	IEex_CallSetupAsyncState(IEex_AsyncSharedMemory)
+	IEex_WriteDword(IEex_AsyncSharedMemoryPtr, asyncSharedMemory)
+
 end
 
 function IEex_Extern_Crashing(excCode, EXCEPTION_POINTERS)
 
+	IEex_AssertThread(IEex_Thread.Both, true)
 	print(debug.traceback("IEex detected crash; Lua traceback ->", 2))
 
 	local timeFormat = "%x_%X"
@@ -70,7 +73,7 @@ function IEex_Extern_Crashing(excCode, EXCEPTION_POINTERS)
 	logCopyFile:close()
 
 	local dmpPathMem = IEex_WriteStringAuto(dmpPath)
-	IEex_DllCall("CrashHelper", "WriteDump", {dmpPathMem, EXCEPTION_POINTERS, excCode, 0x41}, nil, 0x10)
+	IEex_DllCall("IEexHelper", "WriteDump", {dmpPathMem, EXCEPTION_POINTERS, excCode, 0x41}, nil, 0x10)
 	IEex_Free(dmpPathMem)
 
 	IEex_MessageBox("Crash detected with error code "..IEex_ToHex(excCode).."\n\nIEex.log saved to \""..logPath.."\"\nDMP file saved to \""..dmpPath.."\"\n\nPlease upload files to the Red Chimera Discord for assistance", 0x10)
@@ -78,6 +81,7 @@ end
 
 function IEex_Extern_CSpell_UsableBySprite(CSpell, sprite)
 
+	IEex_AssertThread(IEex_Thread.Async, true)
 	local resref = IEex_ReadLString(CSpell + 0x8, 8)
 
 	local scrollResref = IEex_SpellToScroll[resref]
@@ -124,11 +128,13 @@ function IEex_Extern_CSpell_UsableBySprite(CSpell, sprite)
 end
 
 function IEex_Extern_CRuleTables_GetRaceName(race)
+	IEex_AssertThread(IEex_Thread.Both, true)
 	local result = IEex_2DAGetAtStrings("B3RACE", "STRREF", tostring(race))
 	return result ~= "*" and tonumber(result) or ex_tra_5000
 end
 
 function IEex_Extern_CGameSprite_GetRacialFavoredClass(race)
+	IEex_AssertThread(IEex_Thread.Both, true)
 	local result = IEex_2DAGetAtStrings("B3RACE", "FAVORED_CLASS", tostring(race))
 	return result ~= "*" and tonumber(result) or 1
 end
@@ -153,9 +159,11 @@ function IEex_GetFeatCount(baseStats, featID)
 	return IEex_Call(0x762E20, {featID}, baseStats - 0x5A4, 0x0)
 end
 
-function IEex_FeatHook(share, oldBaseStats, oldDerivedStats)
+function IEex_Extern_FeatHook(share, oldBaseStats, oldDerivedStats)
+	IEex_AssertThread(IEex_Thread.Async, true)
 	local newBaseStats = share + 0x5A4
-	for featID = 0, IEex_NEW_FEATS_MAXID, 1 do
+	local maxID = IEex_Helper_GetBridge("IEex_Feats", "NEW_FEATS_MAXID")
+	for featID = 0, maxID, 1 do
 		if IEex_IsFeatTaken(newBaseStats, featID) then
 			local oldFeatCount = IEex_GetFeatCount(oldBaseStats, featID)
 			local newFeatCount = IEex_GetFeatCount(newBaseStats, featID)
@@ -172,24 +180,30 @@ end
 -- FeatList Hooks --
 --------------------
 
-function IEex_FeatPanelStringHook(featID)
+function IEex_Extern_FeatPanelStringHook(featID)
+	IEex_AssertThread(IEex_Thread.Async, true)
 	local foundMax = tonumber(IEex_2DAGetAtRelated("B3FEATS", "ID", "MAX", function(id) return tonumber(id) == featID end))
 	return foundMax > 1
 end
 
-function IEex_FeatPipsHook(featID)
+function IEex_Extern_FeatPipsHook(featID)
+	IEex_AssertThread(IEex_Thread.Sync, true)
 	return tonumber(IEex_2DAGetAtRelated("B3FEATS", "ID", "MAX", function(id) return tonumber(id) == featID	end))
 end
 
-function IEex_GetFeatCountHook(sprite, featID)
+function IEex_Extern_GetFeatCountHook(sprite, featID)
+	IEex_AssertThread(IEex_Thread.Both, true)
 	return IEex_ReadByte(sprite + 0x78F + (featID - 0x4B), 0)
 end
 
-function IEex_SetFeatCountHook(sprite, featID, count)
+function IEex_Extern_SetFeatCountHook(sprite, featID, count)
+	IEex_AssertThread(IEex_Thread.Async, true)
 	IEex_WriteByte(sprite + 0x78F + (featID - 0x4B), count)
 end
 
-function IEex_FeatIncrementableHook(sprite, featID)
+function IEex_Extern_FeatIncrementableHook(sprite, featID)
+
+	IEex_AssertThread(IEex_Thread.Both, true)
 
 	local featCount = IEex_ReadByte(sprite + 0x78F + (featID - 0x4B), 0)
 	local foundMax = tonumber(IEex_2DAGetAtRelated("B3FEATS", "ID", "MAX", function(id) return tonumber(id) == featID end))
@@ -206,7 +220,8 @@ function IEex_FeatIncrementableHook(sprite, featID)
 	return true
 end
 
-function IEex_MeetsFeatRequirementsHook(sprite, featID)
+function IEex_Extern_MeetsFeatRequirementsHook(sprite, featID)
+	IEex_AssertThread(IEex_Thread.Both, true)
 	local foundFunc = IEex_2DAGetAtRelated("B3FEATS", "ID", "PREREQUISITE_FUNCTION", function(id) return tonumber(id) == featID end)
 	if foundFunc ~= "*" and foundFunc ~= "" and not _G[foundFunc](IEex_GetActorIDShare(sprite), featID) then return false end
 	return true
@@ -216,14 +231,24 @@ end
 -- Functions --
 ---------------
 
-function IEex_Stage1Startup()
-	IEex_IndexAllResources()
-	IEex_MapSpellsToScrolls()
+function IEex_Extern_Stage1Startup()
+	IEex_Helper_SetBridge("IEex_ThreadBridge", "Sync", IEex_GetCurrentThread())
+	IEex_DoStage1Indexing()
 	IEex_LoadInitial2DAs()
 	IEex_WriteDelayedPatches()
 end
 
-function IEex_Stage2Startup()
+function IEex_Extern_Stage2Startup()
+	IEex_AssertThread(IEex_Thread.Sync, true)
+	IEex_DoStage2Indexing()
+end
+
+function IEex_DoStage1Indexing()
+	IEex_IndexAllResources()
+	IEex_MapSpellsToScrolls()
+end
+
+function IEex_DoStage2Indexing()
 	IEex_IndexMasterSpellLists()
 end
 
@@ -363,8 +388,8 @@ function IEex_LoadInitial2DAs()
 		previousID = myID
 	end
 
-	IEex_NEW_FEATS_MAXID = previousID
-	IEex_NEW_FEATS_SIZE = IEex_NEW_FEATS_MAXID + 1
+	IEex_Helper_SetBridge("IEex_Feats", "NEW_FEATS_MAXID", previousID)
+	IEex_NEW_FEATS_SIZE = previousID + 1
 
 end
 
@@ -381,7 +406,8 @@ function IEex_WriteDelayedPatches()
 	--------------------------------
 
 	local chargenBeforeFeatCounts = IEex_Malloc(IEex_NEW_FEATS_SIZE * 0x4)
-	for i = 0, IEex_NEW_FEATS_MAXID, 1 do
+	local maxID = IEex_Helper_GetBridge("IEex_Feats", "NEW_FEATS_MAXID")
+	for i = 0, maxID, 1 do
 		IEex_WriteDword(chargenBeforeFeatCounts + i * 4, 0x0)
 	end
 
@@ -418,8 +444,8 @@ function IEex_WriteDelayedPatches()
 
 		!push_all_registers_iwd2
 
-		!push_dword ]], {IEex_WriteStringAuto("IEex_SetFeatCountHook"), 4}, [[
-		!push_dword *_g_lua
+		!push_dword ]], {IEex_WriteStringAuto("IEex_Extern_SetFeatCountHook"), 4}, [[
+		!push_dword *_g_lua_async
 		!call >_lua_getglobal
 		!add_esp_byte 08
 
@@ -428,7 +454,7 @@ function IEex_WriteDelayedPatches()
 		!fild_[esp]
 		!sub_esp_byte 04
 		!fstp_qword:[esp]
-		!push_dword *_g_lua
+		!push_dword *_g_lua_async
 		!call >_lua_pushnumber
 		!add_esp_byte 0C
 
@@ -437,7 +463,7 @@ function IEex_WriteDelayedPatches()
 		!fild_[esp]
 		!sub_esp_byte 04
 		!fstp_qword:[esp]
-		!push_dword *_g_lua
+		!push_dword *_g_lua_async
 		!call >_lua_pushnumber
 		!add_esp_byte 0C
 
@@ -446,7 +472,7 @@ function IEex_WriteDelayedPatches()
 		!fild_[esp]
 		!sub_esp_byte 04
 		!fstp_qword:[esp]
-		!push_dword *_g_lua
+		!push_dword *_g_lua_async
 		!call >_lua_pushnumber
 		!add_esp_byte 0C
 
@@ -455,9 +481,10 @@ function IEex_WriteDelayedPatches()
 		!push_byte 00
 		!push_byte 00
 		!push_byte 03
-		!push_dword *_g_lua
+		!push_dword *_g_lua_async
 		!call >_lua_pcallk
 		!add_esp_byte 18
+		!push_dword *_g_lua_async
 		!call >IEex_CheckCallError
 
 		!pop_all_registers_iwd2
@@ -481,8 +508,11 @@ function IEex_WriteDelayedPatches()
 
 		!push_registers_iwd2
 
-		!push_dword ]], {IEex_WriteStringAuto("IEex_GetFeatCountHook"), 4}, [[
-		!push_dword *_g_lua
+		!call >IEex_GetLuaState
+		!mov_ebx_eax
+
+		!push_dword ]], {IEex_WriteStringAuto("IEex_Extern_GetFeatCountHook"), 4}, [[
+		!push_ebx
 		!call >_lua_getglobal
 		!add_esp_byte 08
 
@@ -491,7 +521,7 @@ function IEex_WriteDelayedPatches()
 		!fild_[esp]
 		!sub_esp_byte 04
 		!fstp_qword:[esp]
-		!push_dword *_g_lua
+		!push_ebx
 		!call >_lua_pushnumber
 		!add_esp_byte 0C
 
@@ -500,7 +530,7 @@ function IEex_WriteDelayedPatches()
 		!fild_[esp]
 		!sub_esp_byte 04
 		!fstp_qword:[esp]
-		!push_dword *_g_lua
+		!push_ebx
 		!call >_lua_pushnumber
 		!add_esp_byte 0C
 
@@ -509,14 +539,15 @@ function IEex_WriteDelayedPatches()
 		!push_byte 00
 		!push_byte 01
 		!push_byte 02
-		!push_dword *_g_lua
+		!push_ebx
 		!call >_lua_pcallk
 		!add_esp_byte 18
+		!push_ebx
 		!call >IEex_CheckCallError
 
 		!push_byte 00
 		!push_byte FF
-		!push_dword *_g_lua
+		!push_ebx
 		!call >_lua_tonumberx
 		!add_esp_byte 0C
 
@@ -524,7 +555,7 @@ function IEex_WriteDelayedPatches()
 		!push_eax
 
 		!push_byte FE
-		!push_dword *_g_lua
+		!push_ebx
 		!call >_lua_settop
 		!add_esp_byte 08
 
@@ -556,7 +587,7 @@ function IEex_WriteDelayedPatches()
 
 		!push_registers_iwd2
 
-		!push_dword ]], {IEex_WriteStringAuto("IEex_FeatPipsHook"), 4}, [[
+		!push_dword ]], {IEex_WriteStringAuto("IEex_Extern_FeatPipsHook"), 4}, [[
 		!push_dword *_g_lua
 		!call >_lua_getglobal
 		!add_esp_byte 08
@@ -579,6 +610,7 @@ function IEex_WriteDelayedPatches()
 		!push_dword *_g_lua
 		!call >_lua_pcallk
 		!add_esp_byte 18
+		!push_dword *_g_lua
 		!call >IEex_CheckCallError
 
 		!push_byte 00
@@ -622,8 +654,11 @@ function IEex_WriteDelayedPatches()
 		!push_esi
 		!push_edi
 
-		!push_dword ]], {IEex_WriteStringAuto("IEex_MeetsFeatRequirementsHook"), 4}, [[
-		!push_dword *_g_lua
+		!call >IEex_GetLuaState
+		!mov_ebx_eax
+
+		!push_dword ]], {IEex_WriteStringAuto("IEex_Extern_MeetsFeatRequirementsHook"), 4}, [[
+		!push_ebx
 		!call >_lua_getglobal
 		!add_esp_byte 08
 
@@ -632,7 +667,7 @@ function IEex_WriteDelayedPatches()
 		!fild_[esp]
 		!sub_esp_byte 04
 		!fstp_qword:[esp]
-		!push_dword *_g_lua
+		!push_ebx
 		!call >_lua_pushnumber
 		!add_esp_byte 0C
 
@@ -641,7 +676,7 @@ function IEex_WriteDelayedPatches()
 		!fild_[esp]
 		!sub_esp_byte 04
 		!fstp_qword:[esp]
-		!push_dword *_g_lua
+		!push_ebx
 		!call >_lua_pushnumber
 		!add_esp_byte 0C
 
@@ -650,20 +685,21 @@ function IEex_WriteDelayedPatches()
 		!push_byte 00
 		!push_byte 01
 		!push_byte 02
-		!push_dword *_g_lua
+		!push_ebx
 		!call >_lua_pcallk
 		!add_esp_byte 18
+		!push_ebx
 		!call >IEex_CheckCallError
 
 		!push_byte FF
-		!push_dword *_g_lua
+		!push_ebx
 		!call >_lua_toboolean
 		!add_esp_byte 08
 
 		!push_eax
 
 		!push_byte FE
-		!push_dword *_g_lua
+		!push_ebx
 		!call >_lua_settop
 		!add_esp_byte 08
 
@@ -695,8 +731,11 @@ function IEex_WriteDelayedPatches()
 
 		!push_registers_iwd2
 
-		!push_dword ]], {IEex_WriteStringAuto("IEex_FeatIncrementableHook"), 4}, [[
-		!push_dword *_g_lua
+		!call >IEex_GetLuaState
+		!mov_ebx_eax
+
+		!push_dword ]], {IEex_WriteStringAuto("IEex_Extern_FeatIncrementableHook"), 4}, [[
+		!push_ebx
 		!call >_lua_getglobal
 		!add_esp_byte 08
 
@@ -705,7 +744,7 @@ function IEex_WriteDelayedPatches()
 		!fild_[esp]
 		!sub_esp_byte 04
 		!fstp_qword:[esp]
-		!push_dword *_g_lua
+		!push_ebx
 		!call >_lua_pushnumber
 		!add_esp_byte 0C
 
@@ -714,7 +753,7 @@ function IEex_WriteDelayedPatches()
 		!fild_[esp]
 		!sub_esp_byte 04
 		!fstp_qword:[esp]
-		!push_dword *_g_lua
+		!push_ebx
 		!call >_lua_pushnumber
 		!add_esp_byte 0C
 
@@ -723,20 +762,21 @@ function IEex_WriteDelayedPatches()
 		!push_byte 00
 		!push_byte 01
 		!push_byte 02
-		!push_dword *_g_lua
+		!push_ebx
 		!call >_lua_pcallk
 		!add_esp_byte 18
+		!push_ebx
 		!call >IEex_CheckCallError
 
 		!push_byte FF
-		!push_dword *_g_lua
+		!push_ebx
 		!call >_lua_toboolean
 		!add_esp_byte 08
 
 		!push_eax
 
 		!push_byte FE
-		!push_dword *_g_lua
+		!push_ebx
 		!call >_lua_settop
 		!add_esp_byte 08
 
@@ -768,7 +808,7 @@ function IEex_WriteDelayedPatches()
 
 		!push_all_registers_iwd2
 
-		!push_dword ]], {IEex_WriteStringAuto("IEex_FeatPanelStringHook"), 4}, [[
+		!push_dword ]], {IEex_WriteStringAuto("IEex_Extern_FeatPanelStringHook"), 4}, [[
 		!push_dword *_g_lua
 		!call >_lua_getglobal
 		!add_esp_byte 08
@@ -790,6 +830,7 @@ function IEex_WriteDelayedPatches()
 		!push_dword *_g_lua
 		!call >_lua_pcallk
 		!add_esp_byte 18
+		!push_dword *_g_lua
 		!call >IEex_CheckCallError
 
 		!push_byte FF

@@ -31,6 +31,7 @@
 		!push_dword *_g_lua_async
 		!call >_lua_pcallk
 		!add_esp_byte 18
+		!push_dword *_g_lua_async
 		!call >IEex_CheckCallError
 
 		!push_byte FF
@@ -68,6 +69,7 @@
 		!push_dword *_g_lua_async
 		!call >_lua_pcallk
 		!add_esp_byte 18
+		!push_dword *_g_lua_async
 		!call >IEex_CheckCallError
 
 		!pop_all_registers_iwd2

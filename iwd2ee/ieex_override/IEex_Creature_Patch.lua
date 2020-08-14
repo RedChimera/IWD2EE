@@ -20,8 +20,8 @@
 
 		!push_all_registers_iwd2
 
-		!push_dword ]], {IEex_WriteStringAuto("IEex_OnGameObjectAdded"), 4}, [[
-		!push_dword *_g_lua
+		!push_dword ]], {IEex_WriteStringAuto("IEex_Extern_OnGameObjectAdded"), 4}, [[
+		!push_dword *_g_lua_async
 		!call >_lua_getglobal
 		!add_esp_byte 08
 
@@ -33,7 +33,7 @@
 		!fild_[esp]
 		!sub_esp_byte 04
 		!fstp_qword:[esp]
-		!push_dword *_g_lua
+		!push_dword *_g_lua_async
 		!call >_lua_pushnumber
 		!add_esp_byte 0C
 
@@ -42,9 +42,10 @@
 		!push_byte 00
 		!push_byte 00
 		!push_byte 01
-		!push_dword *_g_lua
+		!push_dword *_g_lua_async
 		!call >_lua_pcallk
 		!add_esp_byte 18
+		!push_dword *_g_lua_async
 		!call >IEex_CheckCallError
 
 		!pop_all_registers_iwd2
@@ -59,8 +60,8 @@
 
 		!push_complete_state
 
-		!push_dword ]], {IEex_WriteStringAuto("IEex_OnGameObjectBeingDeleted"), 4}, [[
-		!push_dword *_g_lua
+		!push_dword ]], {IEex_WriteStringAuto("IEex_Extern_OnGameObjectBeingDeleted"), 4}, [[
+		!push_dword *_g_lua_async
 		!call >_lua_getglobal
 		!add_esp_byte 08
 
@@ -69,7 +70,7 @@
 		!fild_[esp]
 		!sub_esp_byte 04
 		!fstp_qword:[esp]
-		!push_dword *_g_lua
+		!push_dword *_g_lua_async
 		!call >_lua_pushnumber
 		!add_esp_byte 0C
 
@@ -78,9 +79,10 @@
 		!push_byte 00
 		!push_byte 00
 		!push_byte 01
-		!push_dword *_g_lua
+		!push_dword *_g_lua_async
 		!call >_lua_pcallk
 		!add_esp_byte 18
+		!push_dword *_g_lua_async
 		!call >IEex_CheckCallError
 
 		!pop_complete_state
@@ -95,8 +97,8 @@
 
 		!push_all_registers_iwd2
 
-		!push_dword ]], {IEex_WriteStringAuto("IEex_OnGameObjectsBeingCleaned"), 4}, [[
-		!push_dword *_g_lua
+		!push_dword ]], {IEex_WriteStringAuto("IEex_Extern_OnGameObjectsBeingCleaned"), 4}, [[
+		!push_dword *_g_lua_async
 		!call >_lua_getglobal
 		!add_esp_byte 08
 
@@ -105,9 +107,10 @@
 		!push_byte 00
 		!push_byte 00
 		!push_byte 00
-		!push_dword *_g_lua
+		!push_dword *_g_lua_async
 		!call >_lua_pcallk
 		!add_esp_byte 18
+		!push_dword *_g_lua_async
 		!call >IEex_CheckCallError
 
 		!pop_all_registers_iwd2
@@ -122,8 +125,8 @@
 
 		!push_complete_state
 
-		!push_dword ]], {IEex_WriteStringAuto("IEex_OnReloadStats"), 4}, [[
-		!push_dword *_g_lua
+		!push_dword ]], {IEex_WriteStringAuto("IEex_Extern_OnReloadStats"), 4}, [[
+		!push_dword *_g_lua_async
 		!call >_lua_getglobal
 		!add_esp_byte 08
 
@@ -132,7 +135,7 @@
 		!fild_[esp]
 		!sub_esp_byte 04
 		!fstp_qword:[esp]
-		!push_dword *_g_lua
+		!push_dword *_g_lua_async
 		!call >_lua_pushnumber
 		!add_esp_byte 0C
 
@@ -141,9 +144,10 @@
 		!push_byte 00
 		!push_byte 00
 		!push_byte 01
-		!push_dword *_g_lua
+		!push_dword *_g_lua_async
 		!call >_lua_pcallk
 		!add_esp_byte 18
+		!push_dword *_g_lua_async
 		!call >IEex_CheckCallError
 
 		!pop_complete_state
@@ -158,8 +162,8 @@
 
 		!push_all_registers_iwd2
 
-		!push_dword ]], {IEex_WriteStringAuto("IEex_OnUpdateTempStats"), 4}, [[
-		!push_dword *_g_lua
+		!push_dword ]], {IEex_WriteStringAuto("IEex_Extern_OnUpdateTempStats"), 4}, [[
+		!push_dword *_g_lua_async
 		!call >_lua_getglobal
 		!add_esp_byte 08
 
@@ -168,7 +172,7 @@
 		!fild_[esp]
 		!sub_esp_byte 04
 		!fstp_qword:[esp]
-		!push_dword *_g_lua
+		!push_dword *_g_lua_async
 		!call >_lua_pushnumber
 		!add_esp_byte 0C
 
@@ -177,9 +181,10 @@
 		!push_byte 00
 		!push_byte 00
 		!push_byte 01
-		!push_dword *_g_lua
+		!push_dword *_g_lua_async
 		!call >_lua_pcallk
 		!add_esp_byte 18
+		!push_dword *_g_lua_async
 		!call >IEex_CheckCallError
 
 		!pop_all_registers_iwd2

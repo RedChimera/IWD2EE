@@ -43,9 +43,6 @@
 		end
 		print("")
 
-		-- Assembly Macros
-		dofile("override/IEex_Mac.lua")
-
 		------------------------
 		--  Default Functions --
 		------------------------
@@ -247,10 +244,6 @@
 
 		]]})
 
-		local debugHookName = "IEex_ReadDwordDebug"
-		local debugHookAddress = IEex_Malloc(#debugHookName + 1)
-		IEex_WriteString(debugHookAddress, debugHookName)
-
 		-- Reads a dword at the given address. What more is there to say.
 
 		-- SIGNATURE:
@@ -258,57 +251,16 @@
 		IEex_WriteAssemblyFunction("IEex_ReadDword", {[[
 
 			$IEex_ReadDword
-			!push_ebp
-			!mov_ebp_esp
-			!push_ebx
-			!push_ecx
-			!push_edx
-			!push_esi
-			!push_edi
+			!push_state
 
 			!push_byte 00
 			!push_byte 01
 			!push_[ebp+byte] 08
 			!call >_lua_tonumberx
 			!add_esp_byte 0C
+			!call >__ftol2_sse
 
-			!call >__ftol2_sse ; Put address from _lua_tonumberx in eax ;
-			!push_[eax] ; Store read value on stack ;
-			!push_eax ; Store address on stack ;
-
-			!push_dword ]], {debugHookAddress, 4}, [[
-			!push_[ebp+byte] 08
-			!call >_lua_getglobal
-			!add_esp_byte 08
-
-			; Push address ;
-			!fild_[esp]
-			!sub_esp_byte 04
-			!fstp_qword:[esp]
-			!push_[ebp+byte] 08
-			!call >_lua_pushnumber
-			!add_esp_byte 0C
-
-			; Push copy of read value ;
-			!push_[esp]
-			!fild_[esp]
-			!sub_esp_byte 04
-			!fstp_qword:[esp]
-			!push_[ebp+byte] 08
-			!call >_lua_pushnumber
-			!add_esp_byte 0C
-
-			; Call IEex_ReadDwordDebug ;
-			!push_byte 00
-			!push_byte 00
-			!push_byte 00
-			!push_byte 00
-			!push_byte 02
-			!push_[ebp+byte] 08
-			!call >_lua_pcallk
-			!add_esp_byte 18
-
-			; Return read value ;
+			!push_[eax]
 			!fild_[esp]
 			!sub_esp_byte 04
 			!fstp_qword:[esp]
@@ -317,12 +269,7 @@
 			!add_esp_byte 0C
 
 			!mov_eax #1
-			!pop_edi
-			!pop_esi
-			!pop_edx
-			!pop_ecx
-			!pop_ebx
-			!pop_ebp
+			!pop_state
 			!ret
 		]]})
 
@@ -433,6 +380,37 @@
 			83 C4 08 B8 01 00 00 00 5F 5E 5A 59 5B 5D C3"
 		})
 
+		IEex_WriteAssemblyAuto({[[
+			$IEex_GetCurrentThread
+			!push_registers_iwd2
+			!mov_eax_[dword] #847288
+			!call_eax
+			!pop_registers_iwd2
+			!ret
+		]]})
+
+		IEex_WriteAssemblyFunction("IEex_GetCurrentThread", {[[
+
+			$IEex_GetCurrentThreadLua
+			!push_state
+
+			!mov_eax_[dword] #847288
+			!call_eax
+
+			; Return read value ;
+			!push_eax
+			!fild_[esp]
+			!sub_esp_byte 04
+			!fstp_qword:[esp]
+			!push_[ebp+byte] 08
+			!call >_lua_pushnumber
+			!add_esp_byte 0C
+
+			!mov_eax #1
+			!pop_state
+			!ret
+		]]})
+
 		-- The following are implemented in IEex.dll by default.
 		-- Due to having to spin up an Async state, I need to know
 		-- their actual addresses. Only way is to rewrite them myself.
@@ -499,12 +477,32 @@
 			!pop_state
 			!ret
 		]]})
+
+		IEex_WriteAssemblyFunction("IEex_GetMilliseconds", {[[
+
+			$IEex_GetMilliseconds
+			!build_stack_frame
+
+			!call ]], {IEex_GetProcAddress("Kernel32", "GetTickCount"), 4, 4}, [[
+
+			!push_eax
+			!fild_[esp]
+			!sub_esp_byte 04
+			!fstp_qword:[esp]
+			!push_[ebp+byte] 08
+			!call >_lua_pushnumber
+			!add_esp_byte 0C
+
+			!mov_eax #1
+			!destroy_stack_frame
+			!ret
+		]]})
 	end)
 
 	if not mainStatus then
 		-- Failed to initialize IEex, clean up junk.
 		IEex_MinimalStartup = nil
-		error(mainError)
+		error(mainError.."\n"..debug.traceback())
 	end
 
 end)()

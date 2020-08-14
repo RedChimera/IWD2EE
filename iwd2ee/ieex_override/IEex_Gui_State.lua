@@ -183,24 +183,20 @@ end
 -- Quickloot Functions --
 -------------------------
 
--- Thread: Shared
-IEex_DefineBridge("IEex_Bridge_Quickloot_On", 0)
-IEex_DefineBridge("IEex_Bridge_Quickloot_HighlightContainerID", -1)
-IEex_DefineStringBridge("IEex_Bridge_Quickloot_SimpleAsyncOrder", "")
-
--- Thread: Synchronous
-IEex_Quickloot_Items = {}
-IEex_Quickloot_ItemsAccessIndex = 1
-IEex_Quickloot_DefaultContainerID = -1
-IEex_Quickloot_OldActorX = -1
-IEex_Quickloot_OldActorY = -1
+IEex_Helper_InitBridgeFromTable("IEex_Quickloot", {
+	["on"] = false,
+	["itemsAccessIndex"] = 1,
+	["highlightContainerID"] = -1,
+	["oldActorX"] = nil,
+	["oldActorY"] = nil,
+})
 
 function IEex_Quickloot_Start()
-	IEex_SetBridge("IEex_Bridge_Quickloot_On", 1)
+	IEex_Helper_SetBridge("IEex_Quickloot", "on", true)
 end
 
 function IEex_Quickloot_Stop()
-	IEex_SetBridge("IEex_Bridge_Quickloot_On", 0)
+	IEex_Helper_SetBridge("IEex_Quickloot", "on", false)
 	IEex_Quickloot_Hide()
 end
 
@@ -223,70 +219,92 @@ end
 
 function IEex_Quickloot_UpdateItems()
 
-	-- Build IEex_Quickloot_Items
-	local actorID = IEex_Quickloot_GetValidPartyMember()
-	local piles = IEex_GetGroundPilesAroundActor(actorID)
+	IEex_Helper_SynchronizedBridgeOperation("IEex_Quickloot", function()
 
-	IEex_Quickloot_Items = {}
-	IEex_Quickloot_DefaultContainerID = piles.defaultContainerID
+		local items = IEex_Helper_GetBridgeCreateNL("IEex_Quickloot", "items")
+		IEex_Helper_ClearBridgeNL(items)
 
-	for _, pile in ipairs(piles) do
-		local maxIndex = IEex_GetContainerIDNumItems(pile.containerID) - 1
-		for i = 0, maxIndex, 1 do
-			table.insert(IEex_Quickloot_Items, {["containerID"] = pile.containerID, ["slotIndex"] = i})
-		end
-	end
+		-- Build IEex_Quickloot
+		local actorID = IEex_Quickloot_GetValidPartyMember()
+		local piles = IEex_GetGroundPilesAroundActor(actorID)
 
-	-- If actor moved, force list back to start
-	local actorX, actorY = IEex_GetActorLocation(actorID)
+		IEex_Helper_SetBridgeNL("IEex_Quickloot", "defaultContainerID", piles.defaultContainerID)
 
-	if actorX ~= IEex_Quickloot_OldActorX or IEex_Quickloot_OldActorY ~= actorY then
-		IEex_Quickloot_ItemsAccessIndex = 1
-	end
-
-	IEex_Quickloot_OldActorX = actorX
-	IEex_Quickloot_OldActorY = actorY
-
-	-- Update container highlight on hover
-
-	local highlightContainerID = -1
-	local panel = IEex_Quickloot_GetPanel()
-	local cursorX, cursorY = IEex_GetCursorXY()
-
-	for i = 0, 9, 1 do
-		if IEex_IsPointOverControlID(panel, i, cursorX, cursorY) then
-			local overSlotData = IEex_Quickloot_GetSlotData(i)
-			if not overSlotData.isFallback then
-				highlightContainerID = overSlotData.containerID
+		for _, pile in ipairs(piles) do
+			local maxIndex = IEex_GetContainerIDNumItems(pile.containerID) - 1
+			for i = 0, maxIndex, 1 do
+				local newEntry = IEex_AppendBridgeTable(items)
+				IEex_Helper_SetBridgeNL(newEntry, "containerID", pile.containerID)
+				IEex_Helper_SetBridgeNL(newEntry, "slotIndex", i)
 			end
 		end
-	end
 
-	IEex_SetBridge("IEex_Bridge_Quickloot_HighlightContainerID", highlightContainerID)
+		-- If actor moved, force list back to start
+		local actorX, actorY = IEex_GetActorLocation(actorID)
+		local oldX = IEex_Helper_GetBridgeNL("IEex_Quickloot", "oldActorX")
+		local oldY = IEex_Helper_GetBridgeNL("IEex_Quickloot", "oldActorY")
+
+		if actorX ~= oldX or actorY ~= oldY then
+			IEex_Helper_SetBridgeNL("IEex_Quickloot", "itemsAccessIndex", 1)
+		end
+
+		IEex_Helper_SetBridgeNL("IEex_Quickloot", "oldActorX", actorX)
+		IEex_Helper_SetBridgeNL("IEex_Quickloot", "oldActorY", actorY)
+
+		-- Update container highlight on hover
+
+		local highlightContainerID = -1
+		local panel = IEex_Quickloot_GetPanel()
+		local cursorX, cursorY = IEex_GetCursorXY()
+
+		for i = 0, 9, 1 do
+			if IEex_IsPointOverControlID(panel, i, cursorX, cursorY) then
+				local overSlotData = IEex_Quickloot_GetSlotData(i, true)
+				if not overSlotData.isFallback then
+					highlightContainerID = overSlotData.containerID
+				end
+			end
+		end
+
+		IEex_Helper_SetBridgeNL("IEex_Quickloot", "highlightContainerID", highlightContainerID)
+
+	end)
 
 	-- Redraw panel
 	IEex_Quickloot_InvalidatePanel()
 end
 
-function IEex_Quickloot_GetSlotData(controlID)
+function IEex_Quickloot_GetSlotData(controlID, alreadyLocked)
 
-	local slotData = IEex_Quickloot_Items[IEex_Quickloot_ItemsAccessIndex + controlID]
+	local slotData = nil
 
-	if not slotData then
-		-- Empty quickloot slots will request slot data on main-area transitions.
-		-- IEex_Quickloot_DefaultContainerID will still be pointing to a container
-		-- in the old area, causing a crash. If we detect an invalid default container,
-		-- force a IEex_Quickloot_UpdateItems() call to get quickloot in sync with the
-		-- new area.
-		if IEex_GetActorShare(IEex_Quickloot_DefaultContainerID) == 0x0 then
-			IEex_Quickloot_UpdateItems()
+	local getSlotData = function()
+
+		local accessIndex = IEex_Helper_GetBridgeNL("IEex_Quickloot", "itemsAccessIndex") + controlID
+		local maxItemIndex = IEex_Helper_GetBridgeNumIntsNL("IEex_Quickloot", "items")
+
+		if accessIndex > maxItemIndex then
+
+			local defaultContainerID = IEex_Helper_GetBridgeNL("IEex_Quickloot", "defaultContainerID")
+
+			slotData = {
+				["containerID"] = defaultContainerID,
+				["slotIndex"] = IEex_GetContainerIDNumItems(defaultContainerID),
+				["isFallback"] = true,
+			}
+		else
+			local entry = IEex_Helper_GetBridgeNL("IEex_Quickloot", "items", accessIndex)
+			slotData = {
+				["containerID"] = IEex_Helper_GetBridgeNL(entry, "containerID"),
+				["slotIndex"] = IEex_Helper_GetBridgeNL(entry, "slotIndex"),
+			}
 		end
+	end
 
-		slotData = {
-			["containerID"] = IEex_Quickloot_DefaultContainerID,
-			["slotIndex"] = IEex_GetContainerIDNumItems(IEex_Quickloot_DefaultContainerID),
-			["isFallback"] = true,
-		}
+	if not alreadyLocked then
+		IEex_Helper_SynchronizedBridgeOperation("IEex_Quickloot", getSlotData)
+	else
+		getSlotData(IEex_Bridge_LockFunctions)
 	end
 
 	return slotData
@@ -319,67 +337,62 @@ function IEex_Quickloot_IsControlOnPanel(control)
 	return IEex_IsControlOnPanel(control, IEex_Quickloot_GetPanel())
 end
 
-function IEex_Quickloot_ScrollLeft()
-	IEex_Quickloot_ItemsAccessIndex = math.max(1, IEex_Quickloot_ItemsAccessIndex - 10)
-end
-
-function IEex_Quickloot_ScrollRight()
-	local maxIndex = math.max(1, #IEex_Quickloot_Items - 10 + 1)
-	IEex_Quickloot_ItemsAccessIndex = math.min(IEex_Quickloot_ItemsAccessIndex + 10, maxIndex)
-end
-
 -------------------
 -- GUI Constants --
 -------------------
 
-IEex_PanelActiveByDefault = {
-	["GUIW08"] = {
-		[23] = false,
-	},
-	["GUIW10"] = {
-		[23] = false,
-	},
-}
+IEex_Once("IEex_GuiConstants", function()
 
-IEex_ControlTypeMaxIndex = 0
-IEex_ControlType = {
-	["ButtonWorldContainerSlot"] = 0,
-}
-
-IEex_ControlTypeMeta = {
-	[IEex_ControlType.ButtonWorldContainerSlot] = { ["constructor"] = 0x6956F0, ["size"] = 0x666 },
-}
-
-IEex_ControlOverrides = {
-	["GUIW08"] = {
-		[23] = {
-			[0] = IEex_ControlType.ButtonWorldContainerSlot,
-			[1] = IEex_ControlType.ButtonWorldContainerSlot,
-			[2] = IEex_ControlType.ButtonWorldContainerSlot,
-			[3] = IEex_ControlType.ButtonWorldContainerSlot,
-			[4] = IEex_ControlType.ButtonWorldContainerSlot,
-			[5] = IEex_ControlType.ButtonWorldContainerSlot,
-			[6] = IEex_ControlType.ButtonWorldContainerSlot,
-			[7] = IEex_ControlType.ButtonWorldContainerSlot,
-			[8] = IEex_ControlType.ButtonWorldContainerSlot,
-			[9] = IEex_ControlType.ButtonWorldContainerSlot,
+	IEex_PanelActiveByDefault = {
+		["GUIW08"] = {
+			[23] = false,
 		},
-	},
-	["GUIW10"] = {
-		[23] = {
-			[0] = IEex_ControlType.ButtonWorldContainerSlot,
-			[1] = IEex_ControlType.ButtonWorldContainerSlot,
-			[2] = IEex_ControlType.ButtonWorldContainerSlot,
-			[3] = IEex_ControlType.ButtonWorldContainerSlot,
-			[4] = IEex_ControlType.ButtonWorldContainerSlot,
-			[5] = IEex_ControlType.ButtonWorldContainerSlot,
-			[6] = IEex_ControlType.ButtonWorldContainerSlot,
-			[7] = IEex_ControlType.ButtonWorldContainerSlot,
-			[8] = IEex_ControlType.ButtonWorldContainerSlot,
-			[9] = IEex_ControlType.ButtonWorldContainerSlot,
+		["GUIW10"] = {
+			[23] = false,
 		},
-	},
-}
+	}
+
+	IEex_ControlTypeMaxIndex = 0
+	IEex_ControlType = {
+		["ButtonWorldContainerSlot"] = 0,
+	}
+
+	IEex_ControlTypeMeta = {
+		[IEex_ControlType.ButtonWorldContainerSlot] = { ["constructor"] = 0x6956F0, ["size"] = 0x666 },
+	}
+
+	IEex_ControlOverrides = {
+		["GUIW08"] = {
+			[23] = {
+				[0] = IEex_ControlType.ButtonWorldContainerSlot,
+				[1] = IEex_ControlType.ButtonWorldContainerSlot,
+				[2] = IEex_ControlType.ButtonWorldContainerSlot,
+				[3] = IEex_ControlType.ButtonWorldContainerSlot,
+				[4] = IEex_ControlType.ButtonWorldContainerSlot,
+				[5] = IEex_ControlType.ButtonWorldContainerSlot,
+				[6] = IEex_ControlType.ButtonWorldContainerSlot,
+				[7] = IEex_ControlType.ButtonWorldContainerSlot,
+				[8] = IEex_ControlType.ButtonWorldContainerSlot,
+				[9] = IEex_ControlType.ButtonWorldContainerSlot,
+			},
+		},
+		["GUIW10"] = {
+			[23] = {
+				[0] = IEex_ControlType.ButtonWorldContainerSlot,
+				[1] = IEex_ControlType.ButtonWorldContainerSlot,
+				[2] = IEex_ControlType.ButtonWorldContainerSlot,
+				[3] = IEex_ControlType.ButtonWorldContainerSlot,
+				[4] = IEex_ControlType.ButtonWorldContainerSlot,
+				[5] = IEex_ControlType.ButtonWorldContainerSlot,
+				[6] = IEex_ControlType.ButtonWorldContainerSlot,
+				[7] = IEex_ControlType.ButtonWorldContainerSlot,
+				[8] = IEex_ControlType.ButtonWorldContainerSlot,
+				[9] = IEex_ControlType.ButtonWorldContainerSlot,
+			},
+		},
+	}
+
+end)
 
 -- The following functions / definitions are just enough for simple on-click buttons.
 
@@ -484,14 +497,131 @@ function IEex_DefineCustomButtonControl(controlName, args)
 	}
 end
 
+-------------------------------
+-- Quickloot custom controls --
+-------------------------------
+
+IEex_Once("IEex_QuicklootCustomControls", function()
+
+	if not IEex_InAsyncState then return end
+
+	-------------------------------
+	-- IEex_Quickloot_ScrollLeft --
+	-------------------------------
+
+	local IEex_Quickloot_ScrollLeft_OnLButtonClick = IEex_WriteAssemblyAuto({[[
+
+		!push_complete_state
+
+		; control ;
+		!push_ecx
+
+		!push_dword ]], {IEex_WriteStringAuto("IEex_Extern_Quickloot_ScrollLeft"), 4}, [[
+		!push_dword *_g_lua_async
+		!call >_lua_getglobal
+		!add_esp_byte 08
+
+		; control ;
+		!fild_[esp]
+		!sub_esp_byte 04
+		!fstp_qword:[esp]
+		!push_dword *_g_lua_async
+		!call >_lua_pushnumber
+		!add_esp_byte 0C
+
+		!push_byte 00
+		!push_byte 00
+		!push_byte 00
+		!push_byte 00
+		!push_byte 01
+		!push_dword *_g_lua_async
+		!call >_lua_pcallk
+		!add_esp_byte 18
+		!push_dword *_g_lua_async
+		!call >IEex_CheckCallError
+
+		!pop_complete_state
+		!ret_word 08 00
+
+	]]})
+
+	--------------------------------
+	-- IEex_Quickloot_ScrollRight --
+	--------------------------------
+
+	local IEex_Quickloot_ScrollRight_OnLButtonClick = IEex_WriteAssemblyAuto({[[
+
+		!push_complete_state
+
+		; control ;
+		!push_ecx
+
+		!push_dword ]], {IEex_WriteStringAuto("IEex_Extern_Quickloot_ScrollRight"), 4}, [[
+		!push_dword *_g_lua_async
+		!call >_lua_getglobal
+		!add_esp_byte 08
+
+		; control ;
+		!fild_[esp]
+		!sub_esp_byte 04
+		!fstp_qword:[esp]
+		!push_dword *_g_lua_async
+		!call >_lua_pushnumber
+		!add_esp_byte 0C
+
+		!push_byte 00
+		!push_byte 00
+		!push_byte 00
+		!push_byte 00
+		!push_byte 01
+		!push_dword *_g_lua_async
+		!call >_lua_pcallk
+		!add_esp_byte 18
+		!push_dword *_g_lua_async
+		!call >IEex_CheckCallError
+
+		!pop_complete_state
+		!ret_word 08 00
+
+	]]})
+
+	IEex_DefineCustomButtonControl("IEex_Quickloot_ScrollLeft", {
+		["OnLButtonClick"] = IEex_Quickloot_ScrollLeft_OnLButtonClick,
+		["OnLButtonDoubleClick"] = 0x4D4D70, -- CUIControlButton_OnLButtonDown; prevents double-click cooldown.
+	})
+
+	IEex_DefineCustomButtonControl("IEex_Quickloot_ScrollRight", {
+		["OnLButtonClick"] = IEex_Quickloot_ScrollRight_OnLButtonClick,
+		["OnLButtonDoubleClick"] = 0x4D4D70, -- CUIControlButton_OnLButtonDown; prevents double-click cooldown.
+	})
+
+	IEex_AddControlOverride("GUIW08", 23, 10, IEex_ControlType.IEex_Quickloot_ScrollLeft)
+	IEex_AddControlOverride("GUIW10", 23, 10, IEex_ControlType.IEex_Quickloot_ScrollLeft)
+	IEex_AddControlOverride("GUIW08", 23, 11, IEex_ControlType.IEex_Quickloot_ScrollRight)
+	IEex_AddControlOverride("GUIW10", 23, 11, IEex_ControlType.IEex_Quickloot_ScrollRight)
+
+end)
+
 ------------------------
 -- GUI Hook Functions --
 ------------------------
 
--- Helpful comment: The following function names are too long.
+------------------
+-- Thread: Both --
+------------------
 
--- Thread: Synchronous
+function IEex_Extern_GetHighlightContainerID()
+	IEex_AssertThread(IEex_Thread.Both, true)
+	return IEex_Helper_GetBridge("IEex_Quickloot", "highlightContainerID")
+end
+
+-------------------
+-- Thread: Async --
+-------------------
+
 function IEex_Extern_CUIControlBase_CreateControl(resrefPointer, panel, controlInfo)
+
+	IEex_AssertThread(IEex_Thread.Async, true)
 
 	local resref = IEex_ReadLString(resrefPointer, 8)
 	local panelID = IEex_ReadDword(panel + 0x20)
@@ -519,9 +649,9 @@ function IEex_Extern_CUIControlBase_CreateControl(resrefPointer, panel, controlI
 	return control
 end
 
--- Thread: Synchronous
 function IEex_Extern_CUIManager_fInit_CHUInitialized(CUIManager, resrefPointer)
 
+	IEex_AssertThread(IEex_Thread.Async, true)
 	local resref = IEex_ReadLString(resrefPointer, 8)
 
 	local resrefOverride = IEex_PanelActiveByDefault[resref]
@@ -533,50 +663,11 @@ function IEex_Extern_CUIManager_fInit_CHUInitialized(CUIManager, resrefPointer)
 	end
 end
 
--- Thread: Synchronous
-function IEex_Extern_CUIControlButtonWorldContainerSlot_OnLButtonClick_GetActiveContainerID(control)
-	if IEex_Quickloot_IsControlOnPanel(control) then
-		return IEex_Quickloot_GetSlotData(IEex_GetControlID(control)).containerID
-	else
-		return -1
-	end
-end
+function IEex_Extern_CScreenWorld_AsynchronousUpdate()
 
--- Thread: Synchronous
-function IEex_Extern_CUIControlButtonWorldContainerSlot_OnLButtonClick_GetActiveContainerSpriteID(control)
-	if IEex_Quickloot_IsControlOnPanel(control) then
-		return IEex_Quickloot_GetValidPartyMember()
-	else
-		return -1
-	end
-end
+	IEex_AssertThread(IEex_Thread.Async, true)
 
--- Thread: Synchronous
-function IEex_Extern_CUIControlButtonWorldContainerSlot_OnLButtonClick_GetContainerItemIndex(control)
-	if IEex_Quickloot_IsControlOnPanel(control) then
-		return IEex_Quickloot_GetSlotData(IEex_GetControlID(control)).slotIndex
-	else
-		return -1
-	end
-end
-
--- Thread: Synchronous
-function IEex_Extern_Sync_CUIControlButtonWorldContainerSlot_OnLButtonClick_Done()
-	local maxIndex = math.max(1, #IEex_Quickloot_Items - 10)
-	IEex_Quickloot_ItemsAccessIndex = math.min(IEex_Quickloot_ItemsAccessIndex, maxIndex)
-	IEex_Quickloot_InvalidatePanel()
-end
-
--- Thread: Synchronous
-function IEex_Extern_CScreenWorld_TimerSynchronousUpdate()
-
-	if IEex_GetBridge("IEex_Bridge_Quickloot_On") == 1 then
-
-		local asyncOrder = IEex_GetStringBridge("IEex_Bridge_Quickloot_SimpleAsyncOrder")
-		if asyncOrder ~= "" then
-			IEex_SetStringBridge("IEex_Bridge_Quickloot_SimpleAsyncOrder", "")
-			_G[asyncOrder]()
-		end
+	if IEex_Helper_GetBridge("IEex_Quickloot", "on") then
 
 		local worldScreen = IEex_GetEngineWorld()
 		local panelActive = IEex_Quickloot_IsPanelActive()
@@ -595,37 +686,76 @@ function IEex_Extern_CScreenWorld_TimerSynchronousUpdate()
 			-- with the viewport.
 			IEex_Quickloot_Show()
 		end
-
 	end
 end
 
--- Thread: Asynchronous
+function IEex_Extern_Quickloot_ScrollLeft()
+	IEex_AssertThread(IEex_Thread.Async, true)
+	local itemsAccessIndex = IEex_Helper_GetBridge("IEex_Quickloot", "itemsAccessIndex")
+	IEex_Helper_SetBridge("IEex_Quickloot", "itemsAccessIndex", math.max(1, itemsAccessIndex - 10))
+end
+
+function IEex_Extern_Quickloot_ScrollRight()
+	IEex_AssertThread(IEex_Thread.Async, true)
+	local itemsAccessIndex = IEex_Helper_GetBridge("IEex_Quickloot", "itemsAccessIndex")
+	local maxIndex = math.max(1, IEex_Helper_GetBridgeNumInts("IEex_Quickloot", "items") - 10 + 1)
+	IEex_Helper_SetBridge("IEex_Quickloot", "itemsAccessIndex", math.min(itemsAccessIndex + 10, maxIndex))
+end
+
 function IEex_Extern_CScreenWorld_OnInventoryButtonRClick()
-	if IEex_GetBridge("IEex_Bridge_Quickloot_On") == 1 then
+	IEex_AssertThread(IEex_Thread.Async, true)
+	if IEex_Helper_GetBridge("IEex_Quickloot", "on") then
 		IEex_Quickloot_Stop()
 	else
 		IEex_Quickloot_Start()
 	end
 end
 
--- Thread: Asynchronous
-function IEex_Extern_Async_CUIControlButtonWorldContainerSlot_OnLButtonClick_Done(control)
-	IEex_SetStringBridge("IEex_Bridge_Quickloot_SimpleAsyncOrder", "IEex_Extern_Sync_CUIControlButtonWorldContainerSlot_OnLButtonClick_Done")
+function IEex_Extern_CUIControlButtonWorldContainerSlot_OnLButtonClick_Done(control)
+	IEex_AssertThread(IEex_Thread.Async, true)
+	local itemsAccessIndex = IEex_Helper_GetBridge("IEex_Quickloot", "itemsAccessIndex")
+	local maxIndex = math.max(1, IEex_Helper_GetBridgeNumInts("IEex_Quickloot", "items") - 10)
+	IEex_Helper_SetBridge("IEex_Quickloot", "itemsAccessIndex", math.min(itemsAccessIndex, maxIndex))
+	IEex_Quickloot_InvalidatePanel()
 end
 
--- Thread: Asynchronous
 function IEex_Extern_CUIControlButtonWorldContainerSlot_OnLButtonClick_GetOnlyUpdateSlot(control)
+	IEex_AssertThread(IEex_Thread.Async, true)
 	return IEex_Quickloot_IsControlOnPanel(control)
 end
 
--- Thread: Asynchronous
-function IEex_Extern_Async_Quickloot_ScrollLeft(control)
-	IEex_SetStringBridge("IEex_Bridge_Quickloot_SimpleAsyncOrder", "IEex_Quickloot_ScrollLeft")
+------------------
+-- Thread: Both --
+------------------
+
+-- (Render->Sync, OnLClick->Async)
+function IEex_Extern_CUIControlButtonWorldContainerSlot_GetActiveContainerID(control)
+	IEex_AssertThread(IEex_Thread.Both, true)
+	if IEex_Quickloot_IsControlOnPanel(control) then
+		return IEex_Quickloot_GetSlotData(IEex_GetControlID(control)).containerID
+	else
+		return -1
+	end
 end
 
--- Thread: Asynchronous
-function IEex_Extern_Async_Quickloot_ScrollRight(control)
-	IEex_SetStringBridge("IEex_Bridge_Quickloot_SimpleAsyncOrder", "IEex_Quickloot_ScrollRight")
+-- (Render->Sync, OnLClick->Async)
+function IEex_Extern_CUIControlButtonWorldContainerSlot_GetActiveContainerSpriteID(control)
+	IEex_AssertThread(IEex_Thread.Both, true)
+	if IEex_Quickloot_IsControlOnPanel(control) then
+		return IEex_Quickloot_GetValidPartyMember()
+	else
+		return -1
+	end
+end
+
+-- (Render->Sync, OnLClick->Async)
+function IEex_Extern_CUIControlButtonWorldContainerSlot_GetContainerItemIndex(control)
+	IEex_AssertThread(IEex_Thread.Both, true)
+	if IEex_Quickloot_IsControlOnPanel(control) then
+		return IEex_Quickloot_GetSlotData(IEex_GetControlID(control)).slotIndex
+	else
+		return -1
+	end
 end
 
 ---------
