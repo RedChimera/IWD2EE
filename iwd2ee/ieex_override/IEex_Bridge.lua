@@ -82,13 +82,13 @@ function IEex_AssertThread(thread, once)
 	local printMessage = function(message, onceType)
 		IEex_Helper_SynchronizedBridgeOperation("IEex_AssertCount", function()
 			if not once then
-				IEex_TracebackPrint(message, 3)
+				IEex_TracebackPrint(message, 4)
 			else
 				local info = debug.getinfo(2, "Sl")
 				local onceID = info.source.."_"..info.currentline
 				local log = IEex_Helper_GetBridgeNL("IEex_AssertCount", onceID, "log")
 				if (not log) or (not IEex_Helper_GetBridgeNL(log, onceType)) then
-					IEex_TracebackPrint(message, 3)
+					IEex_TracebackPrint(message, 4)
 				end
 				IEex_Helper_SetBridgeNL("IEex_AssertCount", onceID, "log", onceType, true)
 			end

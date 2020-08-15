@@ -217,9 +217,9 @@ function IEex_Quickloot_Hide(changeViewport)
 	end
 end
 
-function IEex_Quickloot_UpdateItems()
+function IEex_Quickloot_UpdateItems(alreadyLocked)
 
-	IEex_Helper_SynchronizedBridgeOperation("IEex_Quickloot", function()
+	local doUpdate = function()
 
 		local items = IEex_Helper_GetBridgeCreateNL("IEex_Quickloot", "items")
 		IEex_Helper_ClearBridgeNL(items)
@@ -268,7 +268,13 @@ function IEex_Quickloot_UpdateItems()
 
 		IEex_Helper_SetBridgeNL("IEex_Quickloot", "highlightContainerID", highlightContainerID)
 
-	end)
+	end
+
+	if not alreadyLocked then
+		IEex_Helper_SynchronizedBridgeOperation("IEex_Quickloot", doUpdate)
+	else
+		doUpdate()
+	end
 
 	-- Redraw panel
 	IEex_Quickloot_InvalidatePanel()
@@ -286,6 +292,11 @@ function IEex_Quickloot_GetSlotData(controlID, alreadyLocked)
 		if accessIndex > maxItemIndex then
 
 			local defaultContainerID = IEex_Helper_GetBridgeNL("IEex_Quickloot", "defaultContainerID")
+
+			if IEex_GetActorShare(defaultContainerID) == 0x0 then
+				IEex_Quickloot_UpdateItems(true)
+				defaultContainerID = IEex_Helper_GetBridgeNL("IEex_Quickloot", "defaultContainerID")
+			end
 
 			slotData = {
 				["containerID"] = defaultContainerID,

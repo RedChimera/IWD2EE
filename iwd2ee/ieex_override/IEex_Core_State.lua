@@ -55,7 +55,7 @@ end
 function IEex_Extern_Crashing(excCode, EXCEPTION_POINTERS)
 
 	IEex_AssertThread(IEex_Thread.Both, true)
-	print(debug.traceback("IEex detected crash; Lua traceback ->", 2))
+	IEex_TracebackPrint("IEex detected crash; Lua traceback ->", 1)
 
 	local timeFormat = "%x_%X"
 	local timeString = os.date(timeFormat):gsub("/", "_"):gsub(":", "_")

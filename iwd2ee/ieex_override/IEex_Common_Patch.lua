@@ -502,7 +502,7 @@
 	if not mainStatus then
 		-- Failed to initialize IEex, clean up junk.
 		IEex_MinimalStartup = nil
-		error(mainError.."\n"..debug.traceback())
+		IEex_Error(mainError)
 	end
 
 end)()

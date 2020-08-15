@@ -110,16 +110,15 @@ function IEex_FunctionLog(message)
 end
 
 function IEex_Error(message)
-	error(message.." "..debug.traceback())
+	error(debug.traceback(message))
 end
 
 function IEex_TracebackPrint(message, levelMod)
-	message = debug.traceback(message, 3 + levelMod or 0)
-	print(message)
+	print(debug.traceback("["..IEex_GetMilliseconds().."] "..message, 2 + (levelMod or 0)))
 end
 
-function IEex_TracebackMessage(message)
-	message = message.."\n"..debug.traceback()
+function IEex_TracebackMessage(message, levelMod)
+	local message = debug.traceback("["..IEex_GetMilliseconds().."] "..message, 2 + (levelMod or 0))
 	print(message)
 	IEex_MessageBox(message)
 end

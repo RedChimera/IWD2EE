@@ -8,7 +8,7 @@ function IEex_Reload()
 		for i = 1, limit, 1 do
 			local funcName = IEex_ReloadListeners[i]
 			_G[IEex_ReloadListeners[i]]()
-end
+		end
 	end)
 end
 
@@ -1120,7 +1120,7 @@ function IEex_2DADemand(arrayName)
 		C2DArray = IEex_2DALoad(arrayName)
 		if IEex_ReadDword(C2DArray + 0x18) == 0x0 then
 			IEex_Free(C2DArray)
-			IEex_TracebackMessage("IEex CRITICAL ERROR - Couldn't find "..arrayName..".2DA!\n"..debug.traceback())
+			IEex_TracebackMessage("IEex CRITICAL ERROR - Couldn't find "..arrayName..".2DA!")
 			return nil
 		end
 		IEex_Loaded2DAs[arrayName] = C2DArray
