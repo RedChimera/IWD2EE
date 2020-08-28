@@ -144,7 +144,8 @@ end
 	end)
 
 	IEex_ScreenEffectsStats_Reload = function(stats)
-		IEex_Helper_GetBridgeCreateNL(stats, "screenEffects")
+		local screenEffects = IEex_Helper_GetBridgeCreateNL(stats, "screenEffects")
+		IEex_Helper_ClearBridgeNL(screenEffects)
 	end
 
 	IEex_ScreenEffectsStats_Copy = function(sourceStats, destStats)

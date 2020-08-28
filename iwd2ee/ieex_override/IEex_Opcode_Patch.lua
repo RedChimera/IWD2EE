@@ -16,7 +16,8 @@
 		["ApplyEffect"] = {[[
 
 			!mov_eax_[dword] *IEex_Debug_DisableOpcodes
-			!jmp_dword >normal
+			!test_eax_eax
+			!jz_dword >normal
 			!mov_eax #1
 			!ret_word 04 00
 
@@ -83,6 +84,7 @@
 		["OnAddSpecific"] = {[[
 
 			!mov_eax_[dword] *IEex_Debug_DisableOpcodes
+			!test_eax_eax
 			!jz_dword >normal
 			!mov_eax #1
 			!ret_word 04 00
@@ -130,6 +132,7 @@
 		["OnRemove"] = {[[
 
 			!mov_eax_[dword] *IEex_Debug_DisableOpcodes
+			!test_eax_eax
 			!jz_dword >normal
 			!mov_eax #1
 			!ret_word 04 00
@@ -183,6 +186,7 @@
 		["ApplyEffect"] = {[[
 
 			!mov_eax_[dword] *IEex_Debug_DisableOpcodes
+			!test_eax_eax
 			!jz_dword >normal
 			!mov_eax #1
 			!ret_word 04 00
@@ -194,7 +198,7 @@
 			!push_ecx
 
 			!push_dword ]], {IEex_WriteStringAuto("IEex_Extern_ScreenEffectsFunc"), 4}, [[
-			!push_dword *_g_lua
+			!push_dword *_g_lua_async
 			!call >_lua_getglobal
 			!add_esp_byte 08
 
@@ -202,7 +206,7 @@
 			!fild_[esp]
 			!sub_esp_byte 04
 			!fstp_qword:[esp]
-			!push_dword *_g_lua
+			!push_dword *_g_lua_async
 			!call >_lua_pushnumber
 			!add_esp_byte 0C
 
@@ -211,7 +215,7 @@
 			!fild_[esp]
 			!sub_esp_byte 04
 			!fstp_qword:[esp]
-			!push_dword *_g_lua
+			!push_dword *_g_lua_async
 			!call >_lua_pushnumber
 			!add_esp_byte 0C
 
@@ -220,10 +224,10 @@
 			!push_byte 00
 			!push_byte 00
 			!push_byte 02
-			!push_dword *_g_lua
+			!push_dword *_g_lua_async
 			!call >_lua_pcallk
 			!add_esp_byte 18
-			!push_dword *_g_lua
+			!push_dword *_g_lua_async
 			!call >IEex_CheckCallError
 
 			@ret

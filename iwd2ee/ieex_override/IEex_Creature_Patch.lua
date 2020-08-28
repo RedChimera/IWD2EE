@@ -97,8 +97,11 @@
 
 		!push_all_registers_iwd2
 
+		!call >IEex_GetLuaState
+		!mov_ebx_eax		
+
 		!push_dword ]], {IEex_WriteStringAuto("IEex_Extern_OnGameObjectsBeingCleaned"), 4}, [[
-		!push_dword *_g_lua_async
+		!push_ebx
 		!call >_lua_getglobal
 		!add_esp_byte 08
 
@@ -107,10 +110,10 @@
 		!push_byte 00
 		!push_byte 00
 		!push_byte 00
-		!push_dword *_g_lua_async
+		!push_ebx
 		!call >_lua_pcallk
 		!add_esp_byte 18
-		!push_dword *_g_lua_async
+		!push_ebx
 		!call >IEex_CheckCallError
 
 		!pop_all_registers_iwd2

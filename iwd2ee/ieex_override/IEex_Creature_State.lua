@@ -86,33 +86,6 @@ function IEex_Extern_OnGameObjectBeingDeleted(actorID)
 	end)
 end
 
-function IEex_Extern_OnGameObjectsBeingCleaned()
-
-	IEex_AssertThread(IEex_Thread.Async, true)
-
-	IEex_Helper_SynchronizedBridgeOperation("IEex_GameObjectData", function()
-
-		IEex_Helper_IterateBridgeNL("IEex_GameObjectData", function(actorID, data)
-
-			local share = IEex_GetActorShare(actorID)
-			if share == 0x0 or IEex_ReadByte(share + 0x4, 0) ~= 0x31 then return end
-
-			local luaDerivedStats = IEex_Helper_GetBridgeNL("IEex_GameObjectData", actorID, "luaDerivedStats")
-			local luaTempStats = IEex_Helper_GetBridgeNL("IEex_GameObjectData", actorID, "luaTempStats")
-
-			local numStats = IEex_Helper_GetBridgeNumIntsNL("IEex_RegisteredLuaStats")
-			for i = 1, numStats, 1 do
-				local cleanupFunc = _G[IEex_Helper_GetBridgeNL("IEex_RegisteredLuaStats", i, "cleanup")]
-				if cleanupFunc then
-					cleanupFunc(luaDerivedStats)
-					cleanupFunc(luaTempStats)
-				end
-			end
-		end)
-		IEex_Helper_ClearBridgeNL("IEex_GameObjectData")
-	end)
-end
-
 function IEex_Extern_OnReloadStats(share)
 
 	IEex_AssertThread(IEex_Thread.Async, true)
@@ -151,5 +124,36 @@ function IEex_Extern_OnUpdateTempStats(share)
 				copyFunc(luaDerivedStats, luaTempStats)
 			end
 		end
+	end)
+end
+
+------------------
+-- Thread: Both --
+------------------
+
+function IEex_Extern_OnGameObjectsBeingCleaned()
+
+	IEex_AssertThread(IEex_Thread.Both, true)
+
+	IEex_Helper_SynchronizedBridgeOperation("IEex_GameObjectData", function()
+
+		IEex_Helper_IterateBridgeNL("IEex_GameObjectData", function(actorID, data)
+
+			local share = IEex_GetActorShare(actorID)
+			if share == 0x0 or IEex_ReadByte(share + 0x4, 0) ~= 0x31 then return end
+
+			local luaDerivedStats = IEex_Helper_GetBridgeNL("IEex_GameObjectData", actorID, "luaDerivedStats")
+			local luaTempStats = IEex_Helper_GetBridgeNL("IEex_GameObjectData", actorID, "luaTempStats")
+
+			local numStats = IEex_Helper_GetBridgeNumIntsNL("IEex_RegisteredLuaStats")
+			for i = 1, numStats, 1 do
+				local cleanupFunc = _G[IEex_Helper_GetBridgeNL("IEex_RegisteredLuaStats", i, "cleanup")]
+				if cleanupFunc then
+					cleanupFunc(luaDerivedStats)
+					cleanupFunc(luaTempStats)
+				end
+			end
+		end)
+		IEex_Helper_ClearBridgeNL("IEex_GameObjectData")
 	end)
 end
