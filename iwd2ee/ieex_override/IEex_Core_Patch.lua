@@ -940,6 +940,52 @@
 		!pop_eax
 	]]})
 
+	-----------------------------------------------------------------------
+	-- Inventory shouldn't crash if character has non-standard animation --
+	-----------------------------------------------------------------------
+
+	IEex_HookRestore(0x62EFA1, 0, 6, {[[
+
+		!push_eax
+
+		!mov_eax_edi
+		!and_eax_dword #F000
+		!cmp_eax_dword #5000
+		!je_dword >character_animation
+		!cmp_eax_dword #6000
+		!jne_dword >skip
+
+		@character_animation
+		!mov_eax_edi
+		!and_eax_dword #F00
+		!cmp_eax_dword #400
+		!jne_dword >no_skip
+
+		!mov_eax_edi
+		!and_eax_byte 0F
+		!cmp_eax_byte 01
+		!je_dword >no_skip
+		!cmp_eax_byte 05
+		!ja_dword >no_skip
+
+		; The following use the OLD character animation type, (which is invalid for this flag):
+		      0x6400 <unlisted>
+		      0x6402 MONK
+		      0x6403 Skeleton (BG)
+		      0x6404 <unlisted>
+		      0x6405 Doom Guard
+		;
+
+		@skip
+		!pop_eax
+		!jmp_dword >return_skip
+
+		@no_skip
+		!pop_eax
+		; fall through to restore/return ;
+
+	]]})
+
 	IEex_EnableCodeProtection()
 
 end)()
