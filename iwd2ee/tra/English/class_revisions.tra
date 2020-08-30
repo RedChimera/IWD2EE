@@ -94,7 +94,7 @@ You have learned the art of crafting potions. As you wander the world of Faerun 
 
 Prerequisite: Alchemy 10 or greater
 
-Benefit: You gain the Concoct Potions ability, which allows you to spend resources creating potions. For every 2 points of Alchemy above 10, you are able to create a broader variety of potions, and the cost of each potion is reduced by 5%.~
+Benefit: You gain the Concoct Potions ability, which allows you to spend resources creating potions. For every 2 points of Alchemy above 10, you are able to create a broader variety of potions.~
 @303    = ~Defensive Stance~
 @304    = ~DEFENSIVE STANCE:
 
@@ -204,7 +204,7 @@ You can dodge attacks particularly well while moving.
 
 Prerequisites: Dex 13+, Dodge
 
-Benefit: While moving, you gain a +2 Armor Class bonus.~
+Benefit: While moving, you gain a +4 Armor Class bonus.~
 @325    = ~Quicken Spell~
 @326    = ~METAMAGIC, QUICKEN SPELL:
 
@@ -264,7 +264,7 @@ You excel at moving while fighting.
 
 Prerequisites: Dex 13+, Dodge, Mobility, Base attack bonus +4 or higher
 
-Benefit: Whenever you hit a creature with a melee attack, you move 50% quicker for 1 second.~
+Benefit: Whenever you hit a creature with a melee attack, you move twice as fast for 1 second.~
 @335    = ~Terrifying Rage~
 @336    = ~TERRIFYING RAGE:
 

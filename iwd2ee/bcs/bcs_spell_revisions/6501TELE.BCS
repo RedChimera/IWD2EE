@@ -1573,6 +1573,10 @@ TR
 16399 1 0 0 0 "LOCALSPlayer6ReadyForTransport" "" OB
 0 0 0 0 0 0 0 0 0 0 0 0 0 [-1.-1.-1.-1] "" 0 0 OB
 TR
+TR
+16399 0 0 0 0 "GLOBALUS_Brutai_Encounter" "" OB
+0 0 0 0 0 0 0 0 0 0 0 0 0 [-1.-1.-1.-1] "" 0 0 OB
+TR
 CO
 RS
 RE
@@ -1606,17 +1610,81 @@ CR
 CR
 CO
 TR
-16399 1 0 0 0 "MYAREASaveGame" "" OB
+16399 0 0 0 0 "MYAREASaveGame" "" OB
 0 0 0 0 0 0 0 0 0 0 0 0 0 [-1.-1.-1.-1] "" 0 0 OB
 TR
 TR
-16399 0 0 0 0 "GLOBAL65Party_Teleported" "" OB
+16535 93 1 0 0 "" "" OB
+0 0 0 0 0 0 0 0 0 0 0 0 0 [-1.-1.-1.-1] "" 0 0 OB
+TR
+TR
+16399 1 0 0 0 "LOCALSPlayer1ReadyForTransport" "" OB
+0 0 0 0 0 0 0 0 0 0 0 0 0 [-1.-1.-1.-1] "" 0 0 OB
+TR
+TR
+16399 1 0 0 0 "LOCALSPlayer2ReadyForTransport" "" OB
+0 0 0 0 0 0 0 0 0 0 0 0 0 [-1.-1.-1.-1] "" 0 0 OB
+TR
+TR
+16399 1 0 0 0 "LOCALSPlayer3ReadyForTransport" "" OB
+0 0 0 0 0 0 0 0 0 0 0 0 0 [-1.-1.-1.-1] "" 0 0 OB
+TR
+TR
+16399 1 0 0 0 "LOCALSPlayer4ReadyForTransport" "" OB
+0 0 0 0 0 0 0 0 0 0 0 0 0 [-1.-1.-1.-1] "" 0 0 OB
+TR
+TR
+16399 1 0 0 0 "LOCALSPlayer5ReadyForTransport" "" OB
+0 0 0 0 0 0 0 0 0 0 0 0 0 [-1.-1.-1.-1] "" 0 0 OB
+TR
+TR
+16399 1 0 0 0 "LOCALSPlayer6ReadyForTransport" "" OB
+0 0 0 0 0 0 0 0 0 0 0 0 0 [-1.-1.-1.-1] "" 0 0 OB
+TR
+TR
+16399 1 0 0 0 "GLOBALUS_Brutai_Encounter" "" OB
 0 0 0 0 0 0 0 0 0 0 0 0 0 [-1.-1.-1.-1] "" 0 0 OB
 TR
 CO
 RS
 RE
 100AC
+30OB
+0 0 0 0 0 0 0 0 0 0 0 0 0 [-1.-1.-1.-1] "" 0 0 OB
+OB
+0 0 0 0 0 0 0 0 0 0 0 0 0 [-1.-1.-1.-1] "" 0 0 OB
+OB
+0 0 0 0 0 0 0 0 0 0 0 0 0 [-1.-1.-1.-1] "" 0 0 OB
+1 0 0 0 0"MYAREASaveGame" "" AC
+AC
+36OB
+0 0 0 0 0 0 0 0 0 0 0 0 0 [-1.-1.-1.-1] "" 0 0 OB
+OB
+0 0 0 0 0 0 0 0 0 0 0 0 0 [-1.-1.-1.-1] "" 0 0 OB
+OB
+0 0 0 0 0 0 0 0 0 0 0 0 0 [-1.-1.-1.-1] "" 0 0 OB
+0 0 0 0 0"" "" AC
+RE
+RS
+CR
+CR
+CO
+TR
+16399 1 0 0 0 "MYAREASaveGame" "" OB
+0 0 0 0 0 0 0 0 0 0 0 0 0 [-1.-1.-1.-1] "" 0 0 OB
+TR
+CO
+RS
+RE
+100AC
+30OB
+0 0 0 0 0 0 0 0 0 0 0 0 0 [-1.-1.-1.-1] "" 0 0 OB
+OB
+0 0 0 0 0 0 0 0 0 0 0 0 0 [-1.-1.-1.-1] "" 0 0 OB
+OB
+0 0 0 0 0 0 0 0 0 0 0 0 0 [-1.-1.-1.-1] "" 0 0 OB
+0 0 0 0 0"MYAREASaveGame" "" AC
+AC
 30OB
 0 0 0 0 0 0 0 0 0 0 0 0 0 [-1.-1.-1.-1] "" 0 0 OB
 OB

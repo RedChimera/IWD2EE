@@ -42,7 +42,12 @@ STATISTICS:
 Luck: +1
 Weight: 0 lb.~
 //@10030    = ~Young Ned's Knucky~
-//@10031    = ~Item description can remain the same; if new description is needed put it here~
+@10031    = ~This barely recognizable lump of fish bone has been carried as good luck charm in Targos for almost twenty years. The item's history started with the sailor Young Ned of Lonelywood. On one of his fishing trips near Targos, his small boat capsized near the Maer Dualdon shore. He held onto his prize catch, an "unbelievably massive" knucklehead trout, despite being charged by a hungry bear when he reached shore. The bear snatched the majority of the trout away from Ned, leaving him holding the poor fish's tooth-severed head. Ned walked the rest of the way to Targos and kept the head as evidence of his encounter. Over time, Ned started to attribute his good fortune as a sailor to his "lucky knucky". The brigand Marg the Trembler "won" Ned's lucky knucky away from him in a rigged card game. Ned was bitter over being cheated, but he wasn't willing to stand up to Marg to get it back. Marg later used the fish head as currency to buy supplies as he hastily fled from Targos. The man who received the piece of bone held on to it for a few months before handing it off to a friend at the docks. In the years that followed up to the current date, Ned's "lucky knucky" has been traded, won, or sold to over a dozen people in Targos and, once, in Bremen.
+
+STATISTICS:
+
+Luck: +2
+Weight: 0 lb.~
 //@10032    = ~Yeti Skin Scarf~
 //@10033    = ~Item description can remain the same; if new description is needed put it here~
 //@10034    = ~Winter Wolf Scarf~
@@ -625,7 +630,7 @@ The organization and the forging of the rings was sponsored by a merchant from W
 
 There was one wizard slayer named Martek, however, who ignored the rings offered by the merchant, and knowing the danger and guile of the Hosttower, instead commissioned a special ring from a dwarven ally that would provide him additional wards against spells and charms. Once the other members of the Circle of Ice began to be murdered in Luskan after the Hosttower learned their identities, Martek used the power of his enhanced ring to shield himself from the scrying of the Hosttower wizards and escape southwards. He eventually returned the ring to his dwarven ally, who sold it to a merchant making his way for Bryn Shander. 
 
-This Cold Steel Reflection ring differs from the other Circle of Ice rings in that it seems to have a ring of steel beneath the icy exterior of the ring - much like Martek himself.   
+This Cold Steel Reflection ring differs from the other Circle of Ice rings in that it seems to have a ring of steel beneath the icy exterior of the ring - much like Martek himself.  
 
 STATISTICS:
 
@@ -634,14 +639,14 @@ Special:
   Spell Power:  Can cast the 6th level Wizard Spell Globe of Invulnerability (at level 30) once per day
 Weight: 0 lb.~
 @10176    = ~Harshom's Ring of Summoning~
-@10177    = ~This ring was fashioned from a piece of smooth, dark-stained oak.  Twin rings of gold line the outer edges of the wooden torus.  In all other respects, the ring appears to be well kept but mundane.  It previously belonged to the self-titled Beastlord Harshom, a member of Luskan's Hosttower of the Arcane.
+@10177    = ~This ring was fashioned from a piece of smooth, dark-stained oak. Twin rings of gold line the outer edges of the wooden torus. In all other respects, the ring appears to be well kept but mundane. It previously belonged to the self-titled Beastlord Harshom, a member of Luskan's Hosttower of the Arcane.
 
 STATISTICS:
 
 Creatures summoned by the wearer gain +2 to damage and +20 maximum Hit Points
 Weight: 1 lb.~
 @10178    = ~Beastlord's Ring~
-@10179    = ~This ring was fashioned from a piece of smooth, dark-stained oak.  Twin rings of gold line the outer edges of the wooden torus.  In all other respects, the ring appears to be well kept but mundane.  It previously belonged to the self-titled Beastlord Harshom, a member of Luskan's Hosttower of the Arcane.
+@10179    = ~This ring was fashioned from a piece of smooth, dark-stained oak. Twin rings of gold line the outer edges of the wooden torus. In all other respects, the ring appears to be well kept but mundane. It previously belonged to the self-titled Beastlord Harshom, a member of Luskan's Hosttower of the Arcane.
 
 STATISTICS:
 
@@ -1179,7 +1184,7 @@ Weight: 1 lb.~
 //@10336    = ~Nature's Vengeance~
 @10337    = ~The avengers are members of a special sect within a druidic order. They are devoted to fighting those who defile nature, and these cloaks were sometimes worn by members of their sect when embarking on their crusades against those who had inflicted grievous wounds upon the land. It is reported that several of these cloaks were worn by druids who followed the trail of the Dark Horde many long years ago during their attack on the elven fortress of the Severed Hand. The Horde had felled many trees and laid waste to vast sections of the North while building siege engines, and the avengers declared war on them, attempting to use turn the power of nature against its attackers. Although the avengers were eventually slain by an orcish clan along the Spine of the World, their cloaks remain and occasionally resurface across the North. 
 
-When worn by a druid, these cloaks have a chance of calling bright fire any enemy who dares to commit violence upon the wearer. It has blinded many a foe... only to have them die with an avenger's blade in their throat.   
+When worn by a druid, these cloaks have a chance of calling bright fire any enemy who dares to commit violence upon the wearer. It has blinded many a foe... only to have them die with an avenger's blade in their throat.  
 
 STATISTICS:
 
@@ -1583,7 +1588,7 @@ Armor Check Penalty:  -1
 Arcane Spell Failure:  15%
 Weight: 15 lb.~
 @10429    = ~Mourner's Armor +3~
-@10430    = ~This unique suit of armor is of foreign design, created for a Kara-Turian samurai from the Baika Clan.  The armor, crafted from thin, stiff leather, is dyed black, but features the insignia of the plum blossom, the mon of the Baika Clan. It was only worn into battle once, when Baika Himuro fought a hopeless battle against the enemy samurai that flooded into his ancestral estate. It is believed that the enemy clan captured the armor and later traded it for siege equipment.
+@10430    = ~This unique suit of armor is of foreign design, created for a Kara-Turian samurai from the Baika Clan. The armor, crafted from thin, stiff leather, is dyed black, but features the insignia of the plum blossom, the mon of the Baika Clan. It was only worn into battle once, when Baika Himuro fought a hopeless battle against the enemy samurai that flooded into his ancestral estate. It is believed that the enemy clan captured the armor and later traded it for siege equipment.
 
 STATISTICS:
 
@@ -1923,7 +1928,7 @@ Max Dex Bonus:  +5
 Armor Check Penalty:  -0
 Arcane Spell Failure:  15%
 Special:
-  Cursed: Once donned, this armor cannot be removed without a Remove Curse spell.  
+  Cursed: Once donned, this armor cannot be removed without a Remove Curse spell. 
   Charisma: Set to 70% of current value
   Wearer under the effects of the spell Death Ward
   Freedom of Movement: The wearer is immune to everything, magical and otherwise, that affects mobility in any way, although can still be hasted.
@@ -2220,7 +2225,7 @@ Special:
   While under the effect of Barbarian Rage, Animal Rage, or Blood Rage, the wearer gains 5/- resistance to all damage.
 Weight: 20 lb.~
 @10525    = ~Mercenary's Lot +2~
-@10526    = ~The mercenary's lot has been a difficult one in the lands of Icewind Dale, for there is little to occupy one's fighting skills in the far north... at least until recently. This armor was worn by a mercenary company called the Silver Band who was driven from the north after a heated debate at the Ten-Towns council (a debate that barred further mercenary service from most of the Ten-Towns for a period not exceeding three seasons).  According to the debate, the mercenaries were not seen as effective combatants, and certainly not worth the gold they were paid for their meager weapon skills.
+@10526    = ~The mercenary's lot has been a difficult one in the lands of Icewind Dale, for there is little to occupy one's fighting skills in the far north... at least until recently. This armor was worn by a mercenary company called the Silver Band who was driven from the north after a heated debate at the Ten-Towns council (a debate that barred further mercenary service from most of the Ten-Towns for a period not exceeding three seasons). According to the debate, the mercenaries were not seen as effective combatants, and certainly not worth the gold they were paid for their meager weapon skills.
 
 In order to pay for their passage back south, the Silver Band was forced to sell several suits of their armor in order to transport their mounts and siege engines, and the Band swore they would never return to the North, even if the region perished under an avalanche of goblins and other freakish monsters. Apparently, their ability to predict the future was not listed in their company annals. 
 
@@ -2622,7 +2627,7 @@ Weight: 50 lb.~
 @10583    = ~Diamond Cutter +3~
 @10584    = ~Plate and full plate are arguably the toughest armor in any realm. However, no one can deny that full plate is susceptible to bludgeoning damage. In fact, most bludgeoning weapons were created with the intention of blowing through full plate armor. 
 
-With this thought in mind, the armor known as Diamond Cutter was forged. No one is exactly sure how Diamond Cutter came into existence, but what is known is that the renowned Mirabar armorsmith, Cutter Boomstock, one day unveiled the armor to a well-to-do knight who traveled all the way from Amn. Diamond Cutter glistened in the firelight like a thousand diamonds, almost blinding was the intensity of the sheen. And, in a remarkable demonstration, Cutter Boomstock lifted his anvil high in the air and struck the armor. To everyone's amazement, the strike left no mark on the sparkling armor.  
+With this thought in mind, the armor known as Diamond Cutter was forged. No one is exactly sure how Diamond Cutter came into existence, but what is known is that the renowned Mirabar armorsmith, Cutter Boomstock, one day unveiled the armor to a well-to-do knight who traveled all the way from Amn. Diamond Cutter glistened in the firelight like a thousand diamonds, almost blinding was the intensity of the sheen. And, in a remarkable demonstration, Cutter Boomstock lifted his anvil high in the air and struck the armor. To everyone's amazement, the strike left no mark on the sparkling armor. 
 
 The knight happily took the armor and left Mirabar forever, never to be seen again. However, his armor, Diamond Cutter, has been seen from time to time, leading people to speculate that the elaborate knight met an untimely death.
 
@@ -3829,7 +3834,7 @@ Weight: 3 lb.
 Feat Requirement:  Simple Weapon, Small Blade
 Type:  One-handed~
 @10813    = ~Thy-Dunag Blade +1~
-@10814    = ~"Thy-Dunag" is an expression used in the distant realms of Kara-Tur to signify "more respect than is due," and this expression has been inscribed upon the hilt of this sword so that it may be seen even while the blade is sheathed. This blade was reputedly given to a local warlord who sought to challenge the shogun, but the shogun was so contemptuous of the warlord's pretensions of being a threat that he invited him to his court and gave him the blade to both insult the man and as a warning for him to know his place.  
+@10814    = ~"Thy-Dunag" is an expression used in the distant realms of Kara-Tur to signify "more respect than is due," and this expression has been inscribed upon the hilt of this sword so that it may be seen even while the blade is sheathed. This blade was reputedly given to a local warlord who sought to challenge the shogun, but the shogun was so contemptuous of the warlord's pretensions of being a threat that he invited him to his court and gave him the blade to both insult the man and as a warning for him to know his place. 
 
 When drawn, this short, silvered blade has a broad base that tapers to a sharp point, but despite its apparent lightness, it is actually quite heavy. It always looks like it is standing at attention and it has a curious way of drawing the eye in combat, unbalancing and distracting any opponents it meets in combat.
 
@@ -3843,7 +3848,7 @@ Weight:  5 lb.
 Feat Requirement:  Simple Weapon, Small Blade
 Type:  One-handed~
 @10815    = ~Shame of Thy-Dunag +3~
-@10816    = ~"Thy-Dunag" is an expression used in the distant realms of Kara-Tur to signify "more respect than is due," and this expression has been inscribed upon the hilt of this sword so that it may be seen even while the blade is sheathed. This blade was reputedly given to a local warlord who sought to challenge the shogun, but the shogun was so contemptuous of the warlord's pretensions of being a threat that he invited him to his court and gave him the blade to both insult the man and as a warning for him to know his place.  
+@10816    = ~"Thy-Dunag" is an expression used in the distant realms of Kara-Tur to signify "more respect than is due," and this expression has been inscribed upon the hilt of this sword so that it may be seen even while the blade is sheathed. This blade was reputedly given to a local warlord who sought to challenge the shogun, but the shogun was so contemptuous of the warlord's pretensions of being a threat that he invited him to his court and gave him the blade to both insult the man and as a warning for him to know his place. 
 
 When drawn, this short, silvered blade has a broad base that tapers to a sharp point, but despite its apparent lightness, it is actually quite heavy. It always looks like it is standing at attention and it has a curious way of drawing the eye in combat, unbalancing and distracting any opponents it meets in combat.
 
@@ -4439,7 +4444,7 @@ Weight: 5 lb.
 Feat Requirement:  Exotic Weapon, Bastard Sword
 Type:  One-handed~
 //@10917    = ~Miasmic Bastard Sword~
-@10918    = ~Also known as the hand-and-a-half sword, the bastard sword derives its name from the fact that it is halfway between the greatsword and the longsword. The bastard sword has a double-edged blade and a long grip, which can accommodate both hands if preferred. The overall length of the bastard sword ranges between four feet and four feet ten inches.  
+@10918    = ~Also known as the hand-and-a-half sword, the bastard sword derives its name from the fact that it is halfway between the greatsword and the longsword. The bastard sword has a double-edged blade and a long grip, which can accommodate both hands if preferred. The overall length of the bastard sword ranges between four feet and four feet ten inches. 
 
 STATISTICS:
 
@@ -4455,7 +4460,7 @@ Weight:  9 lb.
 Feat Requirement:  Exotic Weapon, Bastard Sword
 Type:  One-handed~
 @10919    = ~Bastard Sword +3: Conflagration~
-@10920    = ~Also known as the hand-and-a-half sword, the bastard sword derives its name from the fact that it is halfway between the greatsword and the longsword. The bastard sword has a double-edged blade and a long grip, which can accommodate both hands if preferred. The overall length of the bastard sword ranges between four feet and four feet ten inches.  
+@10920    = ~Also known as the hand-and-a-half sword, the bastard sword derives its name from the fact that it is halfway between the greatsword and the longsword. The bastard sword has a double-edged blade and a long grip, which can accommodate both hands if preferred. The overall length of the bastard sword ranges between four feet and four feet ten inches. 
 
 STATISTICS:
 
@@ -4470,7 +4475,7 @@ Weight:  9 lb.
 Feat Requirement:  Exotic Weapon, Bastard Sword
 Type:  One-handed~
 //@10921    = ~Bastard Sword +3: Cold Fire~
-@10922    = ~Also known as the hand-and-a-half sword, the bastard sword derives its name from the fact that it is halfway between the greatsword and the longsword. The bastard sword has a double-edged blade and a long grip, which can accommodate both hands if preferred. The overall length of the bastard sword ranges between four feet and four feet ten inches.  
+@10922    = ~Also known as the hand-and-a-half sword, the bastard sword derives its name from the fact that it is halfway between the greatsword and the longsword. The bastard sword has a double-edged blade and a long grip, which can accommodate both hands if preferred. The overall length of the bastard sword ranges between four feet and four feet ten inches. 
 
 STATISTICS:
 
@@ -4502,7 +4507,7 @@ Weight:  9 lb.
 Feat Requirement:  Exotic Weapon, Bastard Sword 
 Type:  One-handed~
 @10925    = ~Bastard Sword of Slashing Weakness +2~
-@10926    = ~Also known as the hand-and-a-half sword, the bastard sword derives its name from the fact that it is halfway between the greatsword and the longsword. The bastard sword has a double-edged blade and a long grip, which can accommodate both hands if preferred. The overall length of the bastard sword ranges between four feet and four feet ten inches.  
+@10926    = ~Also known as the hand-and-a-half sword, the bastard sword derives its name from the fact that it is halfway between the greatsword and the longsword. The bastard sword has a double-edged blade and a long grip, which can accommodate both hands if preferred. The overall length of the bastard sword ranges between four feet and four feet ten inches. 
 
 STATISTICS:
 
@@ -4547,7 +4552,7 @@ Weight:  3 lb.
 Feat Requirement:  Exotic Weapon, Bastard Sword
 Type:  One-handed~
 @10933    = ~Know Thy Family +3~
-@10934    = ~The great warlord of the North, Kresselack the Black Wolf, is said to have sired many children during his long reign, and so it came that one of these, a sickly young man by the name of Thomas, sought out his father after his mother died and bequeathed an ugly sword of iron to Thomas in her legacy. Upon the blade was inscribed "Know thy family," and Thomas took the motto to heart. Bolstered by the sword and his mother's loss, he became determined to find Kresselack - whether out of a need for a new family to belong to or to take revenge on Kresselack for abandoning his mother, it is not known.  
+@10934    = ~The great warlord of the North, Kresselack the Black Wolf, is said to have sired many children during his long reign, and so it came that one of these, a sickly young man by the name of Thomas, sought out his father after his mother died and bequeathed an ugly sword of iron to Thomas in her legacy. Upon the blade was inscribed "Know thy family," and Thomas took the motto to heart. Bolstered by the sword and his mother's loss, he became determined to find Kresselack - whether out of a need for a new family to belong to or to take revenge on Kresselack for abandoning his mother, it is not known. 
  
 When he found the Black Wolf, Kresselack spurned the young man, claiming that the sickly and weak-looking Thomas shared no blood with him, then ordered him beaten and left beneath the shadow of Kelvin's Cairn to die. After two days in the freezing cold, Thomas was rescued by a tribe of Uthgart barbarians fleeing Kresselack's army. Nursing the man back to health, the barbarians adopted Thomas into their tribe and he eventually became one of their greatest hunters. When he passed away from winter chill many years later, he left his sword to his youngest son to help him find his way in the world.
 
@@ -5541,7 +5546,7 @@ Weight: 6 lb.
 Feat Requirement:  Martial Weapon, Polearm
 Type:  Two-handed~
 //@11129    = ~Nine Paces~
-@11130    = ~This long spear is made of a thick shaft of oak, and it looks like it has been used extensively in hunting arctic boars.  It bears numerous sigils and runes along its haft to help it strike straight and true, and when held in a life or death situation, the spear can lash out at an opponent up to five lengths from the wielder, taking the victim down before they can even enter close combat.  While the spear seems to confer no wounding enchantments, it does look capable of harming creatures only affected by magic weapons.
+@11130    = ~This long spear is made of a thick shaft of oak, and it looks like it has been used extensively in hunting arctic boars. It bears numerous sigils and runes along its haft to help it strike straight and true, and when held in a life or death situation, the spear can lash out at an opponent up to five lengths from the wielder, taking the victim down before they can even enter close combat. While the spear seems to confer no wounding enchantments, it does look capable of harming creatures only affected by magic weapons.
 
 STATISTICS:
 
@@ -6833,9 +6838,9 @@ Special:
 Required Feat:  Simple Weapon, Mace
 Type:  One-handed~
 //@11389    = ~Memories of Kuldahar~
-@11390    = ~This huge gnarled tree limb is a broken bough from the great tree of Kuldahar, a mighty oak far to the southeast of Targos.  The great oak is believed to be a gift of the God of Nature, Silvanus, and it is an awe-inspiring sight, towering hundreds of feet into the sky and providing a great circle of warmth to all who live beneath its sheltering limbs.  For many, the tree represents a peaceful symbiosis between town and nature, and the tree is revered as a holy site by druids throughout Faerun.
+@11390    = ~This huge gnarled tree limb is a broken bough from the great tree of Kuldahar, a mighty oak far to the southeast of Targos. The great oak is believed to be a gift of the God of Nature, Silvanus, and it is an awe-inspiring sight, towering hundreds of feet into the sky and providing a great circle of warmth to all who live beneath its sheltering limbs. For many, the tree represents a peaceful symbiosis between town and nature, and the tree is revered as a holy site by druids throughout Faerun.
 
-When the town of Kuldahar was laid siege by the great evil from the Spine of the World Mountains in the Year of the Cold Soul, 1281 DR, the great tree of Kuldahar was buffeted by the great winds and howling storms blasting the region, causing its circle of warmth to recede and snapping off several limbs from the top of the tree.  These limbs were gathered up by the town's residents after the town of Kuldahar was saved, and they were kept in many houses as a symbol of the town's persistence in the face of adversity.  Some of these pieces of the great tree have found their way throughout the Ten-Towns, and the limbs still carry some of the warmth and enchantment of the great tree within them, making them powerful weapons. 
+When the town of Kuldahar was laid siege by the great evil from the Spine of the World Mountains in the Year of the Cold Soul, 1281 DR, the great tree of Kuldahar was buffeted by the great winds and howling storms blasting the region, causing its circle of warmth to recede and snapping off several limbs from the top of the tree. These limbs were gathered up by the town's residents after the town of Kuldahar was saved, and they were kept in many houses as a symbol of the town's persistence in the face of adversity. Some of these pieces of the great tree have found their way throughout the Ten-Towns, and the limbs still carry some of the warmth and enchantment of the great tree within them, making them powerful weapons. 
 
 STATISTICS:
 
@@ -7270,7 +7275,7 @@ Enchantment:  +5
 Damage Type:  Bludgeoning
 Special:
   Vicious Spikes: +2d4 piercing damage
-  Venom: +4 points of poison damage every second for 6 seconds, Fortitude save for half (DC 22)
+  Venom: +4 points of poison damage every second for 6 seconds (Fortitude DC 22)
 Weight: 8 lb.
 Required Feat:  Simple Weapon, Mace
 Type:  One-handed~
@@ -7469,7 +7474,7 @@ Type:  One-handed~
 @11529    = ~The Shackles of Roa +3~
 @11530    = ~Lady Roa was a woman thrice betrayed. First by her lord father, who married her to Duke Sorim for political gain despite knowing that he would relentlessly torment young Roa. Second by her abusive husband the duke, who planted assassins amongst her handmaidens... when Roa visited her dearest brother Remin - a powerful baron - the assassins murdered him as he slept and so his lands passed to the duke. The third and final betrayal was at the hands of her sister Rana, who longed to take the duke, his riches, and eventually the royal crown for her own. Rana entwined herself in a plot with Duke Sorim to slay the king, discredit the true heir as his bastard child with Roa, and thereby steal the throne.
 
-Roa, still less than sixteen summers old, was bound with a ball and chain and cast into the duke's infamous dungeons to await the completion of her husband and sister's terrible scheme. She sobbed and moaned day and night, her voice echoing through the keep's halls.  The duke soon grew incensed at her constant wailing and sent one of his Ducal Guard to beat little Roa into silence. When the man arrived at the cell, he struck her across the face, shoved her to the ground and made to kick at her belly - but quick as that, Roa sprung up and strangled the man with her chains.
+Roa, still less than sixteen summers old, was bound with a ball and chain and cast into the duke's infamous dungeons to await the completion of her husband and sister's terrible scheme. She sobbed and moaned day and night, her voice echoing through the keep's halls. The duke soon grew incensed at her constant wailing and sent one of his Ducal Guard to beat little Roa into silence. When the man arrived at the cell, he struck her across the face, shoved her to the ground and made to kick at her belly - but quick as that, Roa sprung up and strangled the man with her chains.
 
 Moments later the willowy young girl burst into the duke's court and attacked him savagely. His guards pelted her with bolts from their crossbows, but onwards she charged. When she reached the Ducal Throne she tossed Sorim's champion aside like a broken doll, swinging the iron ball of her shackles with such strength that it stove in the shocked duke's thrice-enchanted breastplate of meteoric iron, driving shards of shattered ribs into his lungs and heart and killing him instantly.
 
@@ -7491,7 +7496,7 @@ Type:  One-handed~
 @11531    = ~Chains of Righteous Strength +5~
 @11532    = ~Lady Roa was a woman thrice betrayed. First by her lord father, who married her to Duke Sorim for political gain despite knowing that he would relentlessly torment young Roa. Second by her abusive husband the duke, who planted assassins amongst her handmaidens... when Roa visited her dearest brother Remin - a powerful baron - the assassins murdered him as he slept and so his lands passed to the duke. The third and final betrayal was at the hands of her sister Rana, who longed to take the duke, his riches, and eventually the royal crown for her own. Rana entwined herself in a plot with Duke Sorim to slay the king, discredit the true heir as his bastard child with Roa, and thereby steal the throne.
 
-Roa, still less than sixteen summers old, was bound with a ball and chain and cast into the duke's infamous dungeons to await the completion of her husband and sister's terrible scheme. She sobbed and moaned day and night, her voice echoing through the keep's halls.  The duke soon grew incensed at her constant wailing and sent one of his Ducal Guard to beat little Roa into silence. When the man arrived at the cell, he struck her across the face, shoved her to the ground and made to kick at her belly - but quick as that, Roa sprung up and strangled the man with her chains.
+Roa, still less than sixteen summers old, was bound with a ball and chain and cast into the duke's infamous dungeons to await the completion of her husband and sister's terrible scheme. She sobbed and moaned day and night, her voice echoing through the keep's halls. The duke soon grew incensed at her constant wailing and sent one of his Ducal Guard to beat little Roa into silence. When the man arrived at the cell, he struck her across the face, shoved her to the ground and made to kick at her belly - but quick as that, Roa sprung up and strangled the man with her chains.
 
 Moments later the willowy young girl burst into the duke's court and attacked him savagely. His guards pelted her with bolts from their crossbows, but onwards she charged. When she reached the Ducal Throne she tossed Sorim's champion aside like a broken doll, swinging the iron ball of her shackles with such strength that it stove in the shocked duke's thrice-enchanted breastplate of meteoric iron, driving shards of shattered ribs into his lungs and heart and killing him instantly.
 
@@ -8529,7 +8534,7 @@ Type:  Two-handed~
 
 
 //@11735    = ~Longbow~
-@11736    = ~The longbow is similar to the shortbow, except that the staff is about as high as the archer is, usually 6 to 6.5 feet.  It has two advantages over the shortbow: better range and hence, it is much more accurate.
+@11736    = ~The longbow is similar to the shortbow, except that the staff is about as high as the archer is, usually 6 to 6.5 feet. It has two advantages over the shortbow: better range and hence, it is much more accurate.
 
 STATISTICS:
 
@@ -8538,7 +8543,7 @@ Weight: 3 lb.
 Feat Requirement:  Martial Weapon, Bow
 Type:  Two-handed~
 //@11737    = ~Masterwork Longbow~
-@11738    = ~The longbow is similar to the shortbow, except that the staff is about as high as the archer is, usually 6 to 6.5 feet.  It has two advantages over the shortbow: better range and hence, it is much more accurate.
+@11738    = ~The longbow is similar to the shortbow, except that the staff is about as high as the archer is, usually 6 to 6.5 feet. It has two advantages over the shortbow: better range and hence, it is much more accurate.
 
 STATISTICS:
 
@@ -8548,7 +8553,7 @@ Weight: 3 lb.
 Feat Requirement:  Martial Weapon, Bow
 Type:  Two-handed~
 //@11739    = ~Longbow +1~
-@11740    = ~The longbow is similar to the shortbow, except that the staff is about as high as the archer is, usually 6 to 6.5 feet.  It has two advantages over the shortbow: better range and hence, it is much more accurate.  This one has been enhanced with magical properties, giving it an air of perfection.
+@11740    = ~The longbow is similar to the shortbow, except that the staff is about as high as the archer is, usually 6 to 6.5 feet. It has two advantages over the shortbow: better range and hence, it is much more accurate. This one has been enhanced with magical properties, giving it an air of perfection.
 
 STATISTICS:
 
@@ -8558,7 +8563,7 @@ Weight: 3 lb.
 Feat Requirement:  Martial Weapon, Bow
 Type:  Two-handed~
 //@11741    = ~Longbow +5~
-@11742    = ~The longbow is similar to the shortbow, except that the staff is about as high as the archer is, usually 6 to 6.5 feet.  It has two advantages over the shortbow: better range and hence, it is much more accurate.  This one has been enhanced with magical properties, giving it an air of perfection.
+@11742    = ~The longbow is similar to the shortbow, except that the staff is about as high as the archer is, usually 6 to 6.5 feet. It has two advantages over the shortbow: better range and hence, it is much more accurate. This one has been enhanced with magical properties, giving it an air of perfection.
 
 STATISTICS:
 
@@ -8568,7 +8573,7 @@ Weight: 3 lb.
 Feat Requirement:  Martial Weapon, Bow
 Type:  Two-handed~
 //@11743    = ~Longbow +4~
-@11744    = ~The longbow is similar to the shortbow, except that the staff is about as high as the archer is, usually 6 to 6.5 feet.  It has two advantages over the shortbow: better range and hence, it is much more accurate.  This one has been enhanced with magical properties, giving it an air of perfection.
+@11744    = ~The longbow is similar to the shortbow, except that the staff is about as high as the archer is, usually 6 to 6.5 feet. It has two advantages over the shortbow: better range and hence, it is much more accurate. This one has been enhanced with magical properties, giving it an air of perfection.
 
 STATISTICS:
 
@@ -8578,7 +8583,7 @@ Weight: 3 lb.
 Feat Requirement:  Martial Weapon, Bow
 Type:  Two-handed~
 //@11745    = ~Longbow +3~
-@11746    = ~The longbow is similar to the shortbow, except that the staff is about as high as the archer is, usually 6 to 6.5 feet.  It has two advantages over the shortbow: better range and hence, it is much more accurate.  This one has been enhanced with magical properties, giving it an air of perfection.
+@11746    = ~The longbow is similar to the shortbow, except that the staff is about as high as the archer is, usually 6 to 6.5 feet. It has two advantages over the shortbow: better range and hence, it is much more accurate. This one has been enhanced with magical properties, giving it an air of perfection.
 
 STATISTICS:
 
@@ -8588,7 +8593,7 @@ Weight: 3 lb.
 Feat Requirement:  Martial Weapon, Bow
 Type:  Two-handed~
 //@11747    = ~Longbow +2~
-@11748    = ~The longbow is similar to the shortbow, except that the staff is about as high as the archer is, usually 6 to 6.5 feet.  It has two advantages over the shortbow: better range and hence, it is much more accurate.  This one has been enhanced with magical properties, giving it an air of perfection.
+@11748    = ~The longbow is similar to the shortbow, except that the staff is about as high as the archer is, usually 6 to 6.5 feet. It has two advantages over the shortbow: better range and hence, it is much more accurate. This one has been enhanced with magical properties, giving it an air of perfection.
 
 STATISTICS:
 
@@ -8738,7 +8743,7 @@ Type:  Two-handed~
 
 
 //@11771    = ~Composite Longbow~
-@11772    = ~Composite bows are longbows or shortbows whose staves are made from more than one type of material.  This gives greater flexibility, and thus better range.  These were developed after the normal longbow.
+@11772    = ~Composite bows are longbows or shortbows whose staves are made from more than one type of material. This gives greater flexibility, and thus better range. These were developed after the normal longbow.
 
 STATISTICS:
 
@@ -8749,7 +8754,7 @@ Weight: 3 lb.
 Feat Requirement:  Martial Weapon, Bow
 Type:  Two-handed~
 //@11773    = ~Masterwork Composite Longbow~
-@11774    = ~Composite bows are longbows or shortbows whose staves are made from more than one type of material.  This gives greater flexibility, and thus better range.  These were developed after the normal longbow.
+@11774    = ~Composite bows are longbows or shortbows whose staves are made from more than one type of material. This gives greater flexibility, and thus better range. These were developed after the normal longbow.
 
 STATISTICS:
 
@@ -8761,7 +8766,7 @@ Weight: 3 lb.
 Feat Requirement:  Martial Weapon, Bow
 Type:  Two-handed~
 //@11775    = ~Composite Longbow +1~
-@11776    = ~Composite bows are longbows or shortbows whose staves are made from more than one type of material.  This gives greater flexibility, and thus better range.  These were developed after the normal longbow.
+@11776    = ~Composite bows are longbows or shortbows whose staves are made from more than one type of material. This gives greater flexibility, and thus better range. These were developed after the normal longbow.
 
 STATISTICS:
 
@@ -8823,7 +8828,7 @@ Weight: 9 lb.
 Feat Requirement:  Martial Weapon, Bow
 Type:  Two-handed~
 //@11785    = ~Composite Longbow +5~
-@11786    = ~Composite bows are longbows or shortbows whose staves are made from more than one type of material.  This gives greater flexibility, and thus better range.  These were developed after the normal longbow.
+@11786    = ~Composite bows are longbows or shortbows whose staves are made from more than one type of material. This gives greater flexibility, and thus better range. These were developed after the normal longbow.
 
 STATISTICS:
 
@@ -8835,7 +8840,7 @@ Weight: 3 lb.
 Feat Requirement:  Martial Weapon, Bow
 Type:  Two-handed~
 //@11787    = ~Composite Longbow +4~
-@11788    = ~Composite bows are longbows or shortbows whose staves are made from more than one type of material.  This gives greater flexibility, and thus better range.  These were developed after the normal longbow.
+@11788    = ~Composite bows are longbows or shortbows whose staves are made from more than one type of material. This gives greater flexibility, and thus better range. These were developed after the normal longbow.
 
 STATISTICS:
 
@@ -8847,7 +8852,7 @@ Weight: 3 lb.
 Feat Requirement:  Martial Weapon, Bow
 Type:  Two-handed~
 //@11789    = ~Composite Longbow +3~
-@11790    = ~Composite bows are longbows or shortbows whose staves are made from more than one type of material.  This gives greater flexibility, and thus better range.  These were developed after the normal longbow.
+@11790    = ~Composite bows are longbows or shortbows whose staves are made from more than one type of material. This gives greater flexibility, and thus better range. These were developed after the normal longbow.
 STATISTICS:
 
 Damage:  +4 (missile)
@@ -8858,7 +8863,7 @@ Weight: 3 lb.
 Feat Requirement:  Martial Weapon, Bow
 Type:  Two-handed~
 //@11791    = ~Composite Longbow +2~
-@11792    = ~Composite bows are longbows or shortbows whose staves are made from more than one type of material.  This gives greater flexibility, and thus better range.  These were developed after the normal longbow.
+@11792    = ~Composite bows are longbows or shortbows whose staves are made from more than one type of material. This gives greater flexibility, and thus better range. These were developed after the normal longbow.
 
 STATISTICS:
 
@@ -9339,7 +9344,7 @@ Weight: 14 lb.
 Feat Requirement:  Simple Weapon, Crossbow
 Type:  Two-handed~
 @11873    = ~Mailripper +1~
-@11874    = ~An arbalest of dwarven manufacture, Mailripper has been seen in use across Icewind Dale for at least a hundred years. On the rare occasions that groups of dwarves appear on the tundra, they are typically gathered for battle.  The leader of the Warcrest clan always kept a keen-eyed warrior armed with Mailripper by his side. The warrior's instructions were simple: shoot the most heavily armored opponent you see approaching the king.
+@11874    = ~An arbalest of dwarven manufacture, Mailripper has been seen in use across Icewind Dale for at least a hundred years. On the rare occasions that groups of dwarves appear on the tundra, they are typically gathered for battle. The leader of the Warcrest clan always kept a keen-eyed warrior armed with Mailripper by his side. The warrior's instructions were simple: shoot the most heavily armored opponent you see approaching the king.
 
 When the Warcrest clan was wiped out in a woeful conflict with barbarians, some warriors from Bryn Shander used it for idle target practice before they died en route to Redwaters.
 
@@ -9353,7 +9358,7 @@ Weight: 10 lb.
 Feat Requirement:  Simple Weapon, Crossbow
 Type:  Two-handed~
 @11875    = ~Sundering Mailripper +4~
-@11876    = ~An arbalest of dwarven manufacture, Sundering Mailripper has been seen in use across Icewind Dale for at least a hundred years. On the rare occasions that groups of dwarves appear on the tundra, they are typically gathered for battle.  The leader of the Warcrest clan always kept a keen-eyed warrior armed with Sundering Mailripper by his side. The warrior's instructions were simple: shoot the most heavily armored opponent you see approaching the king.
+@11876    = ~An arbalest of dwarven manufacture, Sundering Mailripper has been seen in use across Icewind Dale for at least a hundred years. On the rare occasions that groups of dwarves appear on the tundra, they are typically gathered for battle. The leader of the Warcrest clan always kept a keen-eyed warrior armed with Sundering Mailripper by his side. The warrior's instructions were simple: shoot the most heavily armored opponent you see approaching the king.
 
 When the Warcrest clan was wiped out in a woeful conflict with barbarians, some warriors from Bryn Shander used it for idle target practice before they died en route to Redwaters.
 
@@ -9555,7 +9560,7 @@ Type:  One-handed~
 //@11923    = ~Rol-Sayid's Left Hand of Darkness~
 @11924    = ~To the northeast of the great tree-town of Kuldahar lies the Vale of Shadows, a valley of crypts and tombs where Kresselack the Black Wolf is said to be buried. Almost thirty years past, a band of adventurers entered the Vale of Shadows and returned with many relics and treasures taken from the tombs there. Rol-Sayid's Left Hand of Darkness is one such item, though its true purpose was not realized when it was discovered. Considered nothing more than the cast-off bandage of a mummy, it had been used to wrap a gold necklace lying in one of the sarcophagi in the tombs. 
 
-The necklace's wrapping was discarded as soon as the band of adventurers returned to Kuldahar, and as they cast it away, the adventurers joked that it could serve some little boy as a sling if need be. One of the children of Kuldahar was quick to pick up on this comment, and he kept the sling both for hunting and as a good luck charm for several years. It is not known if he knew if the wrapping was magical or not, and he attributed the accuracy of the stones cast from it as his own natural ability rather than that of the sling.  
+The necklace's wrapping was discarded as soon as the band of adventurers returned to Kuldahar, and as they cast it away, the adventurers joked that it could serve some little boy as a sling if need be. One of the children of Kuldahar was quick to pick up on this comment, and he kept the sling both for hunting and as a good luck charm for several years. It is not known if he knew if the wrapping was magical or not, and he attributed the accuracy of the stones cast from it as his own natural ability rather than that of the sling. 
 
 In truth, Rol-Sayid's Left Hand of Darkness is one of the wrappings from the left hand of one of Kresselack's lieutenants, who had been resurrected as a mummy within the tomb of his lord and served as a guardian against trespassers. When a stone is placed within the wrapping and spun with great force, the stone will fly straight and true at an enemy. Furthermore, as long as the wrapping is held in the hand, the wielder is immune to diseases, both magical and mundane. 
 
@@ -10483,7 +10488,7 @@ It is suspected that either Craug drank the mixture too fast, or else Aznee had 
 
 When the loggers came to break down the dragon a day later, they discovered that Craum's bones still carried echoes of his coughing fits, and his entire skeleton creaked and wheezed, even after death. They struck a deal with a local mage, who bought the dragon's bones and fashioned a series of musical instruments with them, dubbed the "Pipes of the Wheezing Dragon."  These yellow bone pipes are famous throughout the Realms and, when used by a bard, they can be used to spit bursts of flames at opponents. Unfortunately, even when not in use, the pipes tend to creak and wheeze, attracting the attention of anyone nearby and making attempts at stealth and pick pocketing useless. 
 
-A thin cord made of dragon gut is strung through the pipes, so they can be worn around the neck and can be easily played when danger threatens. The cord looks charred, as if it was burned recently, and is surprisingly tough.    
+A thin cord made of dragon gut is strung through the pipes, so they can be worn around the neck and can be easily played when danger threatens. The cord looks charred, as if it was burned recently, and is surprisingly tough.   
 
 STATISTICS:
 
@@ -10507,7 +10512,7 @@ It is suspected that either Craug drank the mixture too fast, or else Aznee had 
 
 When the loggers came to break down the dragon a day later, they discovered that Craum's bones still carried echoes of his coughing fits, and his entire skeleton creaked and wheezed, even after death. They struck a deal with a local mage, who bought the dragon's bones and fashioned a series of musical instruments with them, dubbed the "Pipes of the Wheezing Dragon."  These yellow bone pipes are famous throughout the Realms and, when used by a bard, they can be used to spit bursts of flames at opponents. Unfortunately, even when not in use, the pipes tend to creak and wheeze, attracting the attention of anyone nearby and making attempts at stealth and pick pocketing useless. 
 
-A thin cord made of dragon gut is strung through the pipes, so they can be worn around the neck and can be easily played when danger threatens. The cord looks charred, as if it was burned recently, and is surprisingly tough.    
+A thin cord made of dragon gut is strung through the pipes, so they can be worn around the neck and can be easily played when danger threatens. The cord looks charred, as if it was burned recently, and is surprisingly tough.   
 
 STATISTICS:
 
@@ -11170,7 +11175,12 @@ Can set a creature's Spell Resistance to 24 for 20 rounds. Has no effect on enem
 Range: 100 ft.
 Weight: 1 lb.~
 //@12309    = ~Wand of Remove Paralysis~
-//@12310    = ~Item description can remain the same; if new description is needed put it here~
+@12310    = ~This wand is striking, being crafted from solid silver.  At each end, a small glass globe rests within a four-armed silver prong.  When used, the wand duplicates the effects of the priest spell Remove Paralysis, curing paralysis, hold and stun.
+
+STATISTICS:
+
+Can cast the spell Remove Paralysis
+Weight: 1 lb.~
 @12311    = ~Wand of Bursts of Strength~
 @12312    = ~Wands are 1 1/4 feet long and slender. They are made of ivory, bone, or wood and are usually tipped with something - metal, crystal, stone, etc. They are fragile and tend to break easily. Because of this, they are often kept in cases. 
 
@@ -12233,6 +12243,7 @@ Type:  Two-handed~
 
 STATISTICS:
 
+Cursed: While equipped, cannot be removed without a spell that removes curses
 Constant Effect: User under the effects of the spell Tenser's Transformation while equipped
 
 Weight: 0 lb.~
@@ -13061,7 +13072,7 @@ STATISTICS:
 The drinker permanently becomes immune to critical hits
 Weight:  1 lb.~
 @12749    = ~Namji's Robe~
-@12750    = ~A wizard from Thesk named Namji was the creator of this powerful robe.  While it does not impart a host of magical resistances to the wearer, it is extremely useful for spellcasters who find themselves in dangerous situations often.  Namji himself was a reckless battle wizard who delighted in hurling spells from the midst of the fray.  He was feared for his use of Namji's Burning Hands, an adaptation of the common Burning Hands spell.
+@12750    = ~A wizard from Thesk named Namji was the creator of this powerful robe. While it does not impart a host of magical resistances to the wearer, it is extremely useful for spellcasters who find themselves in dangerous situations often. Namji himself was a reckless battle wizard who delighted in hurling spells from the midst of the fray. He was feared for his use of Namji's Burning Hands, an adaptation of the common Burning Hands spell.
 
 STATISTICS:
 
@@ -13069,7 +13080,7 @@ Regeneration: Regain 2 hit points per round
 Regenerative Casting: The wearer regains 3 hit points whenever they cast a spell
 Weight:  3 lb.~
 @12751    = ~Namji's Regenerative Robe~
-@12752    = ~A wizard from Thesk named Namji was the creator of this powerful robe.  While it does not impart a host of magical resistances to the wearer, it is extremely useful for spellcasters who find themselves in dangerous situations often.  Namji himself was a reckless battle wizard who delighted in hurling spells from the midst of the fray.  He was feared for his use of Namji's Burning Hands, an adaptation of the common Burning Hands spell.
+@12752    = ~A wizard from Thesk named Namji was the creator of this powerful robe. While it does not impart a host of magical resistances to the wearer, it is extremely useful for spellcasters who find themselves in dangerous situations often. Namji himself was a reckless battle wizard who delighted in hurling spells from the midst of the fray. He was feared for his use of Namji's Burning Hands, an adaptation of the common Burning Hands spell.
 
 STATISTICS:
 
@@ -13122,7 +13133,7 @@ Armor Check Penalty:  -10
 Arcane Spell Failure:  50%
 Weight: 7 lb.~
 @12765    = ~Staff of Besieging~
-@12766    = ~A favorite among abjurers, this particular staff was created by a wizard named Gulph the Tiny.  A diminutive human mage, Gulph didn't want to be stuck in a situation where he would have to rely on his physical abilities.  This staff helped him have the upper hand in magical duels.  Gulph met his end when he foolishly went looking for Ibenian Mushrooms in a grove full of quicklings.  The staff remained among the quicklings for several years until a passing party of adventurers slaughtered the evil fae creatures and took the staff as their own.
+@12766    = ~A favorite among abjurers, this particular staff was created by a wizard named Gulph the Tiny. A diminutive human mage, Gulph didn't want to be stuck in a situation where he would have to rely on his physical abilities. This staff helped him have the upper hand in magical duels. Gulph met his end when he foolishly went looking for Ibenian Mushrooms in a grove full of quicklings. The staff remained among the quicklings for several years until a passing party of adventurers slaughtered the evil fae creatures and took the staff as their own.
 
 STATISTICS:
 
@@ -13136,7 +13147,7 @@ Weight: 4 lb.
 Feat Requirement:  Simple Weapon, Quarterstaff
 Type:  Two-handed~
 @12767    = ~Staff of Greater Besieging~
-@12768    = ~A favorite among abjurers, this particular staff was created by a wizard named Gulph the Tiny.  A diminutive human mage, Gulph didn't want to be stuck in a situation where he would have to rely on his physical abilities.  This staff helped him have the upper hand in magical duels.  Gulph met his end when he foolishly went looking for Ibenian Mushrooms in a grove full of quicklings.  The staff remained among the quicklings for several years until a passing party of adventurers slaughtered the evil fae creatures and took the staff as their own.
+@12768    = ~A favorite among abjurers, this particular staff was created by a wizard named Gulph the Tiny. A diminutive human mage, Gulph didn't want to be stuck in a situation where he would have to rely on his physical abilities. This staff helped him have the upper hand in magical duels. Gulph met his end when he foolishly went looking for Ibenian Mushrooms in a grove full of quicklings. The staff remained among the quicklings for several years until a passing party of adventurers slaughtered the evil fae creatures and took the staff as their own.
 
 STATISTICS:
 
@@ -13158,7 +13169,7 @@ Deflection Bonus:  +10
 Saving Throw:  +10 bonus
 Weight:  3 lb.~
 @12771    = ~Whirlwind Cloak~
-@12772    = ~The cloak can be made in every possible shape with just about every type of fabric.  The most common forms are a circular piece of fabric with a hole in the center for the head, and fabric draped from neck, connected by a chain, brooch, cord, or pins.
+@12772    = ~The cloak can be made in every possible shape with just about every type of fabric. The most common forms are a circular piece of fabric with a hole in the center for the head, and fabric draped from neck, connected by a chain, brooch, cord, or pins.
 
 STATISTICS:
 
@@ -13186,7 +13197,7 @@ STATISTICS:
 The wearer's illusion spells gain +10 DC
 Weight:  3 lb.~
 @12779    = ~Girdle of the Poisoner~
-@12780    = ~Girdles are generally similar to belts.  Unlike belts, girdles are not used to hold up pants and dungarees, but to carry pouches, scabbards, and the like.
+@12780    = ~Girdles are generally similar to belts. Unlike belts, girdles are not used to hold up pants and dungarees, but to carry pouches, scabbards, and the like.
 
 STATISTICS:
 

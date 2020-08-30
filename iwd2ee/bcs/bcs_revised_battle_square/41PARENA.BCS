@@ -839,7 +839,7 @@ OB
 0 0 0 0 0 0 0 0 0 0 0 0 0 [-1.-1.-1.-1] "" 0 0 OB
 OB
 0 0 0 0 0 0 0 0 0 0 0 0 0 [-1.-1.-1.-1] "" 0 0 OB
-10 0 0 0 0"MYAREABattleSquareLevel" "" AC
+0 0 0 0 0"MYAREABattleSquareLevel" "" AC
 AC
 36OB
 0 0 0 0 0 0 0 0 0 0 0 0 0 [-1.-1.-1.-1] "" 0 0 OB
@@ -871,7 +871,7 @@ OB
 0 0 0 0 0 0 0 0 0 0 0 0 0 [-1.-1.-1.-1] "" 0 0 OB
 OB
 0 0 0 0 0 0 0 0 0 0 0 0 0 [-1.-1.-1.-1] "" 0 0 OB
--4 0 0 0 0"MYAREABattleSquareLevel" "" AC
+0 0 0 0 0"MYAREABattleSquareLevel" "" AC
 AC
 36OB
 0 0 0 0 0 0 0 0 0 0 0 0 0 [-1.-1.-1.-1] "" 0 0 OB
@@ -903,7 +903,7 @@ OB
 0 0 0 0 0 0 0 0 0 0 0 0 0 [-1.-1.-1.-1] "" 0 0 OB
 OB
 0 0 0 0 0 0 0 0 0 0 0 0 0 [-1.-1.-1.-1] "" 0 0 OB
--2 0 0 0 0"MYAREABattleSquareLevel" "" AC
+0 0 0 0 0"MYAREABattleSquareLevel" "" AC
 AC
 36OB
 0 0 0 0 0 0 0 0 0 0 0 0 0 [-1.-1.-1.-1] "" 0 0 OB
@@ -935,7 +935,7 @@ OB
 0 0 0 0 0 0 0 0 0 0 0 0 0 [-1.-1.-1.-1] "" 0 0 OB
 OB
 0 0 0 0 0 0 0 0 0 0 0 0 0 [-1.-1.-1.-1] "" 0 0 OB
-2 0 0 0 0"MYAREABattleSquareLevel" "" AC
+0 0 0 0 0"MYAREABattleSquareLevel" "" AC
 AC
 36OB
 0 0 0 0 0 0 0 0 0 0 0 0 0 [-1.-1.-1.-1] "" 0 0 OB
@@ -967,7 +967,7 @@ OB
 0 0 0 0 0 0 0 0 0 0 0 0 0 [-1.-1.-1.-1] "" 0 0 OB
 OB
 0 0 0 0 0 0 0 0 0 0 0 0 0 [-1.-1.-1.-1] "" 0 0 OB
-4 0 0 0 0"MYAREABattleSquareLevel" "" AC
+0 0 0 0 0"MYAREABattleSquareLevel" "" AC
 AC
 36OB
 0 0 0 0 0 0 0 0 0 0 0 0 0 [-1.-1.-1.-1] "" 0 0 OB
@@ -986,8 +986,12 @@ TR
 0 0 0 0 0 0 0 0 0 0 0 0 0 [-1.-1.-1.-1] "" 0 0 OB
 TR
 TR
-16583 2 0 0 0 "" "" OB
-0 0 0 0 0 0 0 0 0 0 0 0 0 [-1.-1.-1.-1] "" 0 0 OB
+16533 9 0 0 0 "" "" OB
+0 0 0 0 0 0 0 0 21 0 0 0 0 [-1.-1.-1.-1] "" 0 0 OB
+TR
+TR
+16534 20 0 0 0 "" "" OB
+0 0 0 0 0 0 0 0 21 0 0 0 0 [-1.-1.-1.-1] "" 0 0 OB
 TR
 CO
 RS
@@ -999,7 +1003,7 @@ OB
 0 0 0 0 0 0 0 0 0 0 0 0 0 [-1.-1.-1.-1] "" 0 0 OB
 OB
 0 0 0 0 0 0 0 0 0 0 0 0 0 [-1.-1.-1.-1] "" 0 0 OB
-2 0 0 0 0"MYAREABattleSquareLevel" "" AC
+5 0 0 0 0"MYAREABattleSquareLevel" "" AC
 AC
 36OB
 0 0 0 0 0 0 0 0 0 0 0 0 0 [-1.-1.-1.-1] "" 0 0 OB
@@ -1018,8 +1022,8 @@ TR
 0 0 0 0 0 0 0 0 0 0 0 0 0 [-1.-1.-1.-1] "" 0 0 OB
 TR
 TR
-16583 3 0 0 0 "" "" OB
-0 0 0 0 0 0 0 0 0 0 0 0 0 [-1.-1.-1.-1] "" 0 0 OB
+16533 19 0 0 0 "" "" OB
+0 0 0 0 0 0 0 0 21 0 0 0 0 [-1.-1.-1.-1] "" 0 0 OB
 TR
 CO
 RS
@@ -1031,7 +1035,7 @@ OB
 0 0 0 0 0 0 0 0 0 0 0 0 0 [-1.-1.-1.-1] "" 0 0 OB
 OB
 0 0 0 0 0 0 0 0 0 0 0 0 0 [-1.-1.-1.-1] "" 0 0 OB
-4 0 0 0 0"MYAREABattleSquareLevel" "" AC
+10 0 0 0 0"MYAREABattleSquareLevel" "" AC
 AC
 36OB
 0 0 0 0 0 0 0 0 0 0 0 0 0 [-1.-1.-1.-1] "" 0 0 OB
@@ -1063,7 +1067,7 @@ OB
 0 0 0 0 0 0 0 0 0 0 0 0 0 [-1.-1.-1.-1] "" 0 0 OB
 OB
 0 0 0 0 0 0 0 0 0 0 0 0 0 [-1.-1.-1.-1] "" 0 0 OB
-3 0 0 0 0"MYAREABattleSquareLevel" "" AC
+2 0 0 0 0"MYAREABattleSquareLevel" "" AC
 AC
 30OB
 0 0 0 0 0 0 0 0 0 0 0 0 0 [-1.-1.-1.-1] "" 0 0 OB
@@ -1095,7 +1099,7 @@ OB
 0 0 0 0 0 0 0 0 0 0 0 0 0 [-1.-1.-1.-1] "" 0 0 OB
 OB
 0 0 0 0 0 0 0 0 0 0 0 0 0 [-1.-1.-1.-1] "" 0 0 OB
-6 0 0 0 0"MYAREABattleSquareLevel" "" AC
+4 0 0 0 0"MYAREABattleSquareLevel" "" AC
 AC
 30OB
 0 0 0 0 0 0 0 0 0 0 0 0 0 [-1.-1.-1.-1] "" 0 0 OB
@@ -1127,7 +1131,7 @@ OB
 0 0 0 0 0 0 0 0 0 0 0 0 0 [-1.-1.-1.-1] "" 0 0 OB
 OB
 0 0 0 0 0 0 0 0 0 0 0 0 0 [-1.-1.-1.-1] "" 0 0 OB
-9 0 0 0 0"MYAREABattleSquareLevel" "" AC
+6 0 0 0 0"MYAREABattleSquareLevel" "" AC
 AC
 30OB
 0 0 0 0 0 0 0 0 0 0 0 0 0 [-1.-1.-1.-1] "" 0 0 OB
@@ -1159,7 +1163,7 @@ OB
 0 0 0 0 0 0 0 0 0 0 0 0 0 [-1.-1.-1.-1] "" 0 0 OB
 OB
 0 0 0 0 0 0 0 0 0 0 0 0 0 [-1.-1.-1.-1] "" 0 0 OB
-12 0 0 0 0"MYAREABattleSquareLevel" "" AC
+8 0 0 0 0"MYAREABattleSquareLevel" "" AC
 AC
 30OB
 0 0 0 0 0 0 0 0 0 0 0 0 0 [-1.-1.-1.-1] "" 0 0 OB
@@ -1191,7 +1195,7 @@ OB
 0 0 0 0 0 0 0 0 0 0 0 0 0 [-1.-1.-1.-1] "" 0 0 OB
 OB
 0 0 0 0 0 0 0 0 0 0 0 0 0 [-1.-1.-1.-1] "" 0 0 OB
-15 0 0 0 0"MYAREABattleSquareLevel" "" AC
+10 0 0 0 0"MYAREABattleSquareLevel" "" AC
 AC
 30OB
 0 0 0 0 0 0 0 0 0 0 0 0 0 [-1.-1.-1.-1] "" 0 0 OB
@@ -1223,7 +1227,7 @@ OB
 0 0 0 0 0 0 0 0 0 0 0 0 0 [-1.-1.-1.-1] "" 0 0 OB
 OB
 0 0 0 0 0 0 0 0 0 0 0 0 0 [-1.-1.-1.-1] "" 0 0 OB
-18 0 0 0 0"MYAREABattleSquareLevel" "" AC
+13 0 0 0 0"MYAREABattleSquareLevel" "" AC
 AC
 30OB
 0 0 0 0 0 0 0 0 0 0 0 0 0 [-1.-1.-1.-1] "" 0 0 OB
@@ -1255,7 +1259,7 @@ OB
 0 0 0 0 0 0 0 0 0 0 0 0 0 [-1.-1.-1.-1] "" 0 0 OB
 OB
 0 0 0 0 0 0 0 0 0 0 0 0 0 [-1.-1.-1.-1] "" 0 0 OB
-21 0 0 0 0"MYAREABattleSquareLevel" "" AC
+16 0 0 0 0"MYAREABattleSquareLevel" "" AC
 AC
 30OB
 0 0 0 0 0 0 0 0 0 0 0 0 0 [-1.-1.-1.-1] "" 0 0 OB
@@ -1287,7 +1291,7 @@ OB
 0 0 0 0 0 0 0 0 0 0 0 0 0 [-1.-1.-1.-1] "" 0 0 OB
 OB
 0 0 0 0 0 0 0 0 0 0 0 0 0 [-1.-1.-1.-1] "" 0 0 OB
-24 0 0 0 0"MYAREABattleSquareLevel" "" AC
+19 0 0 0 0"MYAREABattleSquareLevel" "" AC
 AC
 30OB
 0 0 0 0 0 0 0 0 0 0 0 0 0 [-1.-1.-1.-1] "" 0 0 OB
@@ -1319,7 +1323,7 @@ OB
 0 0 0 0 0 0 0 0 0 0 0 0 0 [-1.-1.-1.-1] "" 0 0 OB
 OB
 0 0 0 0 0 0 0 0 0 0 0 0 0 [-1.-1.-1.-1] "" 0 0 OB
-27 0 0 0 0"MYAREABattleSquareLevel" "" AC
+22 0 0 0 0"MYAREABattleSquareLevel" "" AC
 AC
 30OB
 0 0 0 0 0 0 0 0 0 0 0 0 0 [-1.-1.-1.-1] "" 0 0 OB
@@ -1351,7 +1355,7 @@ OB
 0 0 0 0 0 0 0 0 0 0 0 0 0 [-1.-1.-1.-1] "" 0 0 OB
 OB
 0 0 0 0 0 0 0 0 0 0 0 0 0 [-1.-1.-1.-1] "" 0 0 OB
-30 0 0 0 0"MYAREABattleSquareLevel" "" AC
+25 0 0 0 0"MYAREABattleSquareLevel" "" AC
 AC
 30OB
 0 0 0 0 0 0 0 0 0 0 0 0 0 [-1.-1.-1.-1] "" 0 0 OB

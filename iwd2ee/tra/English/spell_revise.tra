@@ -279,7 +279,7 @@ Casting Time: 3
 Area of Effect: 15-foot radius 
 Saving Throw: Will negates
 
-A Dispel Magic spell removes magical effects upon anyone within the area of effect. This includes the effects of spells, potions and magical items. It does not, however, affect magical items themselves. Enemy creatures are allowed a Will save to resist, friendly creatures are automatically affected. For every 5 levels of the caster, enemies make their saves at an additional -1 penalty.~
+A Dispel Magic spell removes magical effects upon anyone within the area of effect. This includes the effects of spells, potions and magical items. It does not, however, affect magical items themselves. Enemy creatures are allowed a Will save at a -8 penalty to resist, while friendly creatures are automatically affected.~
 @1046    = ~Remove Disease~
 @1047    = ~Remove Disease 
 (Abjuration)
@@ -667,9 +667,9 @@ Range: Sight of Caster
 Duration: 10 rounds
 Casting Time: 5
 Area of Effect: 1 creature
-Saving Throw: Special
+Saving Throw: None
 
-This spell causes a creature to burst into flames. The creature will burn for 3d6 points of damage every round, and gouts of flame erupt from the burning target, causing any creatures within ten feet of the target to take 1d6 points of damage from the flames. Anyone hit by the victim's flames must also make a Reflex save to avoid contracting the shroud themselves.~
+This spell causes a creature to burst into flames. The creature will burn for 3d6 points of damage every round, and gouts of flame erupt from the burning target, causing any creatures within ten feet of the target to take 1d6 points of damage from the flames.~
 @1114    = ~Lower Resistance~
 @1115    = ~Lower Resistance 
 (Transmutation) 
@@ -748,7 +748,7 @@ Casting Time: 8
 Area of Effect: Caster
 Saving Throw: None
 
-This spell transforms the caster's body into living iron, granting him several powerful resistances and abilities. While the spell is in effect, the caster has 15/- resistance to fire, acid, electricity, and all forms of physical damage. Spells that affect respiration or the physiology of the caster are ignored completely, such as poison, blindness, deafness, and disease to name a few. In addition, the caster gains a +8 bonus to strength and constitution and a -8 dexterity penalty. Unfortunately, the caster's movement becomes slow and awkward under the weight of his new body, setting his movement rate to half its normal rate, and he receives a -2 penalty to casting speed.~
+This spell transforms the caster's body into living iron, granting him several powerful resistances and abilities. While the spell is in effect, the caster has 15/- resistance to fire, cold, and all forms of physical damage, but also +15 vulnerability to electricity. Spells that affect respiration or the physiology of the caster are ignored completely, such as poison, blindness, deafness, and disease to name a few. In addition, the caster gains a +8 bonus to strength and constitution and a -8 dexterity penalty. Unfortunately, the caster's movement becomes slow and awkward under the weight of his new body, setting his movement rate to half its normal rate, and he receives a -2 penalty to casting speed.~
 @1128    = ~Black Blade of Disaster~
 @1129    = ~Black Blade of Disaster
 (Conjuration) 
@@ -2420,13 +2420,13 @@ This spell outlines all enemies in the area of effect with a pale glow, making t
 @1914     = ~Aegis
 (Abjuration)
 Level: Sor/Wiz 9, Helm 9
-Range: Caster 
+Range: Caster
 Duration: 20 rounds
 Casting Time: 1
 Area of Effect: Caster
 Saving Throw: None 
 
-This spell grants the caster a 15/- bonus to all damage resistances, a +10 generic armor bonus, +20 spell resistance, and +5 to all saves.~
+This spell grants the caster a 5/- bonus to all damage resistances, a +15 armor bonus, +15 spell resistance, and +5 to all saves.~
 
 @1977     = ~1 round~
 @1978     = ~Instant~
@@ -3066,7 +3066,7 @@ Casting Time: 5
 Area of Effect: 15-foot radius 
 Saving Throw: Will negates
 
-Remove Magic is like Dispel Magic, except it only affects enemies. When cast, it dispels most magical effects on enemies in the area of effect who fail a Will save. For every 5 levels of the caster, enemies make their saves at an additional -1 penalty.~
+Remove Magic is like Dispel Magic, except it only affects enemies. When cast, it dispels most magical effects on enemies in the area of effect who fail a Will save at -8.~
 @37353     = ~Throw~
 @38353     = ~Throw
 (Transmutation)

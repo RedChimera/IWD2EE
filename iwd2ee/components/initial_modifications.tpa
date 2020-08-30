@@ -277,6 +277,9 @@ COPY_EXISTING ~IEex_TRA.lua~ ~override~
 	REPLACE_TEXTUALLY ~ex_str_9th_level *=.*~ ~ex_str_9th_level = "%ex_str_9th_level%"~
 	IF_EXISTS
 
+STRING_SET_EVALUATE 32702 @980
+STRING_SET_EVALUATE 32703 @983
+
  //Turning the "test" creatures into regular creatures because their irregular CRE format can crash WeiDU when patching all creatures.
 COPY_EXISTING ~00gob.cre~ ~override/test_01.cre~ ~00gob.cre~ ~override/test_02.cre~ ~00gob.cre~ ~override/test_03.cre~ ~00gob.cre~ ~override/testocle.cre~
 
@@ -378,7 +381,6 @@ COPY_EXISTING ~62PSAABG.bcs~ ~override~
 Entered(~
 	END
 
-
 COPY_EXISTING ~AR2000.are~ ~override~
 	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR actor_name=~Torak2~ script_special1=~00HIDE0~ END
 	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR actor_name=~Torak3~ script_special1=~00HIDE0~ END
@@ -392,6 +394,23 @@ COPY_EXISTING ~AR6200.are~ ~override~
 COPY_EXISTING ~41HPORIA.bcs~ ~override~ ~41PARES1.bcs~ ~override~
 	DECOMPILE_AND_PATCH BEGIN
 		REPLACE_TEXTUALLY CASE_INSENSITIVE ~SetCreatureAreaFlag(\"OriaEssence\", ?INVULNERABLE.*~ ~~
+	END
+
+COPY_EXISTING ~AR6503.bcs~ ~override~
+	DECOMPILE_AND_PATCH BEGIN
+		REPLACE_TEXTUALLY ~\([^t]\)Global(\"ShowCutscene\", *\"MYAREA\", *0)~ ~\1Global("ShowCutscene","MYAREA",0)
+Global("US_Brutai_Encounter","GLOBAL",0)~
+		REPLACE_TEXTUALLY ~\([^t]\)Global(\"ShowCutscene\", *\"MYAREA\", *1)~ ~Or(2)
+	\1Global("ShowCutscene","MYAREA",1)
+	Global("US_Brutai_Encounter","GLOBAL",1)~
+		REPLACE_TEXTUALLY ~SetGlobal(\"ShowCutscene\", *\"MYAREA\", *1)~ ~SetGlobal("ShowCutscene","MYAREA",1)
+SetGlobal("US_Brutai_Encounter","GLOBAL",1)~
+	END
+
+COPY_EXISTING ~65BRUTAI.dlg~ ~override~
+	DECOMPILE_AND_PATCH BEGIN
+		REPLACE_TEXTUALLY CASE_INSENSITIVE ~Enemy()~ ~SetGlobal("US_Brutai_Encounter","GLOBAL",1)
+Enemy()~
 	END
 
 COPY_EXISTING ~61PVROOT.bcs~ override
@@ -481,6 +500,8 @@ REPLACE_TEXTUALLY CASE_INSENSITIVE EXACT_MATCH ~PartyHasItem("60Stele5")
   PartyHasItem("60STELE5")~
 END
 
+COPY_EXISTING ~63CEDRIN.cre~ override
+	LPF	IWD2_REMOVE_CRE_ITEM STR_VAR item=~00AMUL14~ END
 /*
 COPY_EXISTING ~animate.ids~ ~override~
 	REPLACE_TEXTUALLY ~0x1001 Wyvern, White (Big)~ ~0x1000 Wyvern (Big)

@@ -281,6 +281,14 @@ COPY_EXISTING_REGEXP ~[123].*\.cre~ ~override~ ~00GOB.*\.cre~ ~override~  ~00HAG
 COPY_EXISTING ~20EMMA.cre~ ~override~ ~20ORCCHF.cre~ ~override~ ~20VREK.cre~ ~override~ ~21GAERNT.cre~ ~override~ ~21SPDQN.cre~ ~override~ ~21XUKI.cre~ ~override~ ~30BEETQ.cre~ ~override~ ~30GOBKRU.cre~ ~override~ ~30GOBMOK.cre~ ~override~ ~30GOBOGR.cre~ ~override~ ~30GOBOV1.cre~ ~override~ ~30GOBVUN.cre~ ~override~ ~30GOBWR2.cre~ ~override~ ~30GOBWR4.cre~ ~override~ ~30GOBWR6.cre~ ~override~ ~30GOBWRC.cre~ ~override~ ~30HOBGUM.cre~ ~override~ ~30ILQUAG.cre~ ~override~ ~30OGRCH.cre~ ~override~ ~30OGRGAR.cre~ ~override~ ~30ORCGOT.cre~ ~override~ ~30ORCTRU.cre~ ~override~ ~30OROCA.cre~ ~override~ ~30OROPUS.cre~ ~override~ ~30OROTAS.cre~ ~override~ ~30OTY.cre~ ~override~ ~30SPIWOQ.cre~ ~override~ ~30TEQUAG.cre~ ~override~ ~30YQUOGG.cre~ ~override~ ~31BUGGUT.cre~ ~override~ ~31BUGJAI.cre~ ~override~ ~31GOBHC.cre~ ~override~ ~31GOBOV1.cre~ ~override~ ~31HOBCH.cre~ ~override~ ~31HOBSER.cre~ ~override~ ~31ORCHC.cre~ ~override~ ~31ORCHSB.cre~ ~override~ ~31ORCHSH.cre~ ~override~ ~31ORCOLD.cre~ ~override~ ~31OROCH.cre~ ~override~ ~31OROCO.cre~ ~override~
 	WRITE_BYTE luck 0
 
+COPY_EXISTING ~00SWAT20.cre~ ~override~
+	SAY NAME1 @23026
+	SAY NAME2 @23026
+
+COPY_EXISTING ~00SWAT24.cre~ ~override~ ~41SWAT24.cre~ ~override~
+	SAY NAME1 @23027
+	SAY NAME2 @23027
+
 COPY_EXISTING ~11PHAEN.cre~ ~override~ ~12PHAEN.cre~ ~override~
 	WRITE_BYTE skillconcentration 6
 	WRITE_BYTE skillspellcraft 6
@@ -2029,7 +2037,7 @@ COPY_EXISTING ~60CCABAL.cre~ ~override~
 	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~SPWI717~ END
 	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~SPWI902~ END
 	PATCH_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~2~ BEGIN
-		LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~SPPR519~ END
+//		LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~SPPR519~ END
 		LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~USWI952~ END
 	END
 
@@ -2060,7 +2068,7 @@ COPY_EXISTING ~60INHATR.cre~ ~override~
 	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~SPWI802~ END
 	LPF	IWD2_CRE_SPELL INT_VAR num=2 STR_VAR class=~wizard~ resource=~SPWI902~ END
 	PATCH_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~2~ BEGIN
-		LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~SPPR519~ END
+//		LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~SPPR519~ END
 		LPF	IWD2_CRE_SPELL INT_VAR num=3 STR_VAR class=~wizard~ resource=~USWI952~ END
 	END
 
@@ -4163,6 +4171,9 @@ COPY_EXISTING ~AR6003.are~ ~override~
 COPY_EXISTING ~AR6051.are~ ~override~
 	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR match_cre_file=~60JESZRA~ script_special2=~60YTSORC~ END
 
+COPY_EXISTING ~AR6100.are~ ~override~
+	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR actor_name=~Izbelah~ script_special2=~~ END
+
 COPY_EXISTING ~AR6103.are~ ~override~
 	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR actor_name=~Snake_16~ cre_file=~USMARILI~ script_combat=~USMARILI~ END
 	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR actor_name=~02_EliteGuard_04~ match_cre_file=~61GOLIRO~ cre_file=~USMARILI~ script_special2=~~ script_combat=~USMARILI~ END
@@ -4190,6 +4201,7 @@ COPY_EXISTING ~AR6304.are~ ~override~
 	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR actor_name=~GB_YuanTiHalfbreed1~ script_combat=~60YTPRIC~ END
 	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR actor_name=~GB_YuanTiHalfbreed2~ script_combat=~60YTPRIC~ END
 	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR actor_name=~GB_ThayvianMage1~ cre_file=~66RHDR~ script_special3=~00HADRRD~ END
+	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR match_cre_file=~63GLBXP~ cre_file=~65CORN~ script_combat=~00CRNE~ END
 
 COPY_EXISTING ~AR6305.are~ ~override~
 	LPF ALTER_AREA_ACTOR_IWD2 INT_VAR flag_difficulty_1=0 flag_difficulty_2=0 flag_difficulty_3=1 STR_VAR script_combat=~USHDRBLU~ actor_name=~Serak~ END

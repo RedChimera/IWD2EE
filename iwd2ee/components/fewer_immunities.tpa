@@ -530,6 +530,16 @@ COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
 	UNLESS ~00CIDRI2~
 	BUT_ONLY_IF_IT_CHANGES
 
+COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
+	READ_LONG animation theanimation
+	READ_BYTE race therace
+	PATCH_IF theanimation = 61264 OR theanimation = 61280 OR theanimation = 61296 BEGIN
+		REPLACE_TEXTUALLY CASE_INSENSITIVE ~00CIBAR1~ ~USCIBAR2~
+	END ELSE PATCH_IF therace = 156 BEGIN
+		REPLACE_TEXTUALLY CASE_INSENSITIVE ~00CIBAR1~ ~00CIGOL1~
+	END
+	BUT_ONLY_IF_IT_CHANGES
+
 // Patching trolls so they have more HP but are vulnerable to fire and acid
 
 COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
