@@ -5,6 +5,8 @@ IEex_Debug_Stutter = false
 (function()
 
 	dofile("override/IEex_Core_Patch.lua")
+
+	dofile("override/IEex_Action_Patch.lua")
 	dofile("override/IEex_Creature_Patch.lua")
 	dofile("override/IEex_Opcode_Patch.lua")
 	dofile("override/IEex_Gui_Patch.lua")

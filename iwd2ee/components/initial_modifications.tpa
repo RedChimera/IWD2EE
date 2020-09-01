@@ -8,6 +8,20 @@ COPY ~%mod_folder%/ieex_override~ ~override~
 COPY ~%mod_folder%/ieex_main_folder~ ~./~
 INCLUDE ~%mod_folder%/components/quickloot.tpa~
 
+ACTION_FOR_EACH file IN ACTION BEGIN
+	COPY ~%mod_folder%/patches/%file%.IDS~ ~%mod_folder%/patches~
+		COUNT_2DA_ROWS 2 rows
+		FOR (i = 0; i <= rows; ++i) BEGIN
+			READ_2DA_ENTRY i 0 2 "col1"
+			READ_2DA_ENTRY i 1 2 "col2"
+			DEFINE_ASSOCIATIVE_ARRAY IEex_append_array BEGIN ~%file%~ , ~%col1%~ , ~%col2%~ => ~~ END
+		END
+	BUT_ONLY
+END
+ACTION_PHP_EACH IEex_append_array AS data => ~~ BEGIN
+	APPEND ~%data%.IDS~ ~%data_1% %data_2%~ UNLESS ~^%data_1% ~
+END
+
 COPY_EXISTING ~IEex_TRA.lua~ ~override~
 	ex_tra_5000 = RESOLVE_STR_REF(@5000)
 	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_tra_5000 *=.*~ ~ex_tra_5000 = %ex_tra_5000%~

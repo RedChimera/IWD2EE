@@ -28,6 +28,8 @@ end
 
 dofile("override/IEex_Bridge.lua")
 dofile("override/IEex_Core_State.lua")
+
+dofile("override/IEex_Action_State.lua")
 dofile("override/IEex_Creature_State.lua")
 dofile("override/IEex_Opcode_State.lua")
 dofile("override/IEex_Gui_State.lua")
@@ -41,6 +43,17 @@ for module, tf in pairs(IEex_Modules) do
 	if tf then
 		dofile("override/" .. module .. ".lua")
 	end
+end
+
+-----------------------------------
+-- Common Engine Structures Util --
+-----------------------------------
+
+function IEex_CString_Set(CString, newString)
+	local newStringMem = IEex_WriteStringAuto(newString)
+	-- CString_operator_equ_<char_const_ptr>
+	IEex_Call(0x7FCD57, {newStringMem}, CString, 0x0)
+	IEex_Free(newStringMem)
 end
 
 ----------------
