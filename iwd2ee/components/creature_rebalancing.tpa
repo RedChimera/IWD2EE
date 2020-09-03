@@ -893,11 +893,11 @@ COPY_EXISTING ~41CLERIM.cre~ ~override~ ~41RCLERM.cre~ ~override~
 	LPF	IWD2_ADD_CRE_ITEM INT_VAR cq1=15 equip=1 STR_VAR item=~00BULL94~ slot=~quiver1~ END
 
 COPY_EXISTING ~41SHAMAF.cre~ ~override~ ~41RSHAMF.cre~ ~override~
-	LPF	IWD2_REMOVE_CRE_ITEM STR_VAR item=~00POTN03 00BULL02 RAMO_01~ END
+	LPF	IWD2_REMOVE_CRE_ITEM STR_VAR item=~00POTN03 USPNHF03 00BULL02 RAMO_01~ END
 	LPF	IWD2_ADD_CRE_ITEM INT_VAR cq1=10 equip=1 STR_VAR item=~00BULL94~ slot=~quiver1~ END
 
 COPY_EXISTING ~41SHAMAM.cre~ ~override~ ~41RSHAMM.cre~ ~override~
-	LPF	IWD2_REMOVE_CRE_ITEM STR_VAR item=~00POTN03~ END
+	LPF	IWD2_REMOVE_CRE_ITEM STR_VAR item=~00POTN03 USPNHF03~ END
 	LPF	IWD2_ADD_CRE_ITEM INT_VAR equip=1 STR_VAR item=~00CWSLG1~ slot=~weapon1~ mode=~replace~ END
 	LPF	IWD2_ADD_CRE_ITEM INT_VAR cq1=10 equip=1 STR_VAR item=~00BULL94~ slot=~quiver1~ END
 
@@ -4258,6 +4258,21 @@ COPY_EXISTING ~AR6703.are~ ~override~
 	WRITE_LONG (songsoffset + 0xC) 21
 	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR actor_name=~Nalakora~ script_combat=~USNALAK~ END
 	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR actor_name=~TrsoslMalign~ script_combat=~00AATBN~ END
+
+COPY_EXISTING ~AR4000.are~ ~override~
+	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR actor_name=~Odea~ cre_file=~40ODEA~ END
+	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR actor_name=~Illium~ cre_file=~40ILIUM~ END
+
+COPY_EXISTING ~AR4100.are~ ~override~
+	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR actor_name=~Sherincal~ cre_file=~41SHERI~ END
+
+COPY_EXISTING ~AR4101.are~ ~override~
+	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR actor_name=~Cathin~ cre_file=~41CATHIN~ END
+	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR actor_name=~Lysara~ cre_file=~41LYSARA~ END
+
+COPY_EXISTING ~AR4102.are~ ~override~
+	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR actor_name=~Oria~ cre_file=~41ORIA~ END
+	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR actor_name=~OriaEssence~ cre_file=~41ORIAES~ script_combat=~~ END
 
 STRING_SET 36757 @23019
 STRING_SET 36759 @23020

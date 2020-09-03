@@ -221,6 +221,9 @@ COPY_EXISTING ~LISTINNT.2da~ ~override~
 	READ_2DA_ENTRY (numrows - 1) 0 2 lastindex
 	lastindex += 1
 	INSERT_2DA_ROW numrows 2 ~%lastindex% USZACK1~
+	numrows += 1
+	lastindex += 1
+	INSERT_2DA_ROW numrows 2 ~%lastindex% USXHAAT~
 /*
 COPY_EXISTING ~LISTSPLL.2da~ ~override~
 	COUNT_2DA_ROWS 9 numrows
@@ -671,6 +674,7 @@ COPY_EXISTING ~41XHAAN.cre~ ~override~
 	WRITE_LONG (sorcereroffset1 + (sorcerercount1 * 0x10)) 7
 	WRITE_LONG (sorcereroffset2 + (sorcerercount2 * 0x10)) 6
 	WRITE_LONG (sorcereroffset3 + (sorcerercount3 * 0x10)) 3
+	LPF	IWD2_CRE_ABILITY INT_VAR num=1 STR_VAR resource=~USXHAAT~ END
 //	WRITE_BYTE levelsorcerer 14
 //	LPF	IWD2_CRE_SPELL INT_VAR num=1 forcelevel=7 STR_VAR class=~sorcerer~ resource=~USWI751~ END
 //	REPLACE_TEXTUALLY CASE_INSENSITIVE ~SPWI702~ ~USWI751~
@@ -874,6 +878,12 @@ COPY_EXISTING ~USWI751.spl~ ~override~
   SAY UNIDENTIFIED_DESC @4863
   SAY IDENTIFIED_DESC @4863
 */
+
+COPY_EXISTING ~USXHAAT.spl~ ~override~
+  SAY NAME1 @4864
+  SAY NAME2 @4864
+  SAY UNIDENTIFIED_DESC @4865
+  SAY IDENTIFIED_DESC @4865
 
 COPY_EXISTING ~USEMMA.cre~ ~override~
 	WRITE_ASCII teamscript ~USEMMABL~ #8

@@ -9,6 +9,18 @@ function IEex_ReaddActionHook(funcName)
 	IEex_AppendBridgeNL("IEex_ActionHooks", funcName)
 end
 
+function IEex_AddActionHookOpcode(funcName)
+	IEex_Helper_SynchronizedBridgeOperation("IEex_OpcodeActionHooks", function()
+		IEex_AppendBridgeNL("IEex_OpcodeActionHooks", funcName)
+	end)
+end
+
+function IEex_AddActionHookGlobal(funcName)
+	IEex_Helper_SynchronizedBridgeOperation("IEex_GlobalActionHooks", function()
+		IEex_AppendBridgeNL("IEex_GlobalActionHooks", funcName)
+	end)
+end
+
 --[[
 
 CAIAction =>
@@ -211,4 +223,76 @@ function IEex_Extern_CGameSprite_SetCurrAction(actionData)
 			_G[IEex_ActionHooks[i]](IEex_WrapAction(actionData))
 		end
 	end)
+	local creatureData = actionData - 0x476
+	local actorID = IEex_GetActorIDShare(creatureData)
+	if IEex_GetActorSpellState(actorID, 250) then
+		local actorActionHookOpcodeList = {}
+		IEex_IterateActorEffects(actorID, function(eData)
+			local theopcode = IEex_ReadDword(eData + 0x10)
+			local theparameter2 = IEex_ReadDword(eData + 0x20)
+			if theopcode == 288 and theparameter2 == 250 then
+				actorActionHookOpcodeList[IEex_ReadLString(eData + 0x30, 8)] = eData + 0x4
+			end
+		end)
+		IEex_Helper_SynchronizedBridgeOperation("IEex_OpcodeActionHooks", function()
+			IEex_Helper_ReadDataFromBridgeNL("IEex_OpcodeActionHooks")
+			local limit = #IEex_OpcodeActionHooks
+			for i = 1, limit, 1 do
+				local originatingEffectData = actorActionHookOpcodeList[IEex_OpcodeActionHooks[i]]
+				if originatingEffectData ~= nil then
+					_G[IEex_OpcodeActionHooks[i]](originatingEffectData, actionData, creatureData)
+				end
+			end
+		end)
+	end
+	IEex_Helper_SynchronizedBridgeOperation("IEex_GlobalActionHooks", function()
+		IEex_Helper_ReadDataFromBridgeNL("IEex_GlobalActionHooks")
+		local limit = #IEex_GlobalActionHooks
+		for i = 1, limit, 1 do
+			_G[IEex_GlobalActionHooks[i]](actionData, creatureData)
+		end
+	end)
 end
+
+function EXAPPLSP(actionData, creatureData)
+	local actionID = IEex_GetActionID(actionData)
+	local sourceID = IEex_GetActorIDShare(creatureData)
+	if actionID == 31 or actionID == 95 then
+		local spellRES = IEex_GetActionString1(actionData)
+--		IEex_DisplayString(spellRES)
+		local resWrapper = IEex_DemandRes(spellRES, "SPL")
+		if resWrapper:isValid() then
+			local spellData = resWrapper:getData()
+			if bit32.band(IEex_ReadDword(spellData + 0x18), 0x10000000) > 0 then
+				local targetID = IEex_GetActionObjectID(actionData)
+				local targetX = IEex_GetActionPointX(actionData)
+				local targetY = IEex_GetActionPointY(actionData)
+				if actionID == 31 then
+					targetX = IEex_ReadDword(IEex_GetActorShare(targetID) + 0x6)
+					targetY = IEex_ReadDword(IEex_GetActorShare(targetID) + 0xA)
+				elseif actionID == 95 then
+					targetID = sourceID
+				end
+	--			local casterLevel = 1
+				IEex_SetActionID(actionData, 0)
+				IEex_SetActionObjectID(actionData, IEex_GetActionInt2(actionData))
+				IEex_ApplyEffectToActor(targetID, {
+					["opcode"] = 402,
+					["target"] = 2,
+					["timing"] = 1,
+					["casterlvl"] = casterLevel,
+					["resource"] = spellRES,
+					["source_x"] = IEex_ReadDword(creatureData + 0x6),
+					["source_y"] = IEex_ReadDword(creatureData + 0xA),
+					["target_x"] = targetX,
+					["target_y"] = targetY,
+					["source_target"] = targetID,
+					["source_id"] = sourceID
+				})
+			end
+		end
+		resWrapper:free()
+	end
+end
+
+IEex_AddActionHookGlobal("EXAPPLSP")

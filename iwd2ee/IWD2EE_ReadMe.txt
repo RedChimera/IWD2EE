@@ -332,3 +332,83 @@ Normally once a rogue sneak attacks a creature, that creature becomes immune to 
 This component increases the level cap to 40 or to 50 (your choice). You'll only reach such high levels if you're soloing or playing Heart of Fury Mode.
 
 Much of the credit for the inspiration for this mod goes to the makers of Light of Selune, IWD2-Ease, and Tactics4IWD2, which provided the groundwork for this mod and the changes it makes. I would also like to thank Firecrow, who provided indispensable feedback and played an instrumental role in inspiring many of the mod's features, and subtledoctor, bubb, and Gwendolyne for providing invaluable technical support during the construction of the mod.
+
+
+Compatibility Notes:
+
+--Tactics4IWD2--
+
+Tactics4IWD2 is not compatible with IWD2EE, since IWD2EE already modifies the AI of almost all the enemies in the game.
+
+--IWD2-Ease--
+
+Here is a list of the components in IWD2-Ease that says which components are compatible with IWD2EE and which aren't. IWD2-Ease should be installed AFTER IWD2EE, not before!
+
+Bugfixes: 
+Unnecessary as IWD2EE should already fix these bugs.
+
+Infinite Stacking: 
+Compatible.
+
+Non-Combat War Chant of Sith: 
+Unnecessary as IWD2EE already allows War Chant of Sith outside of combat.
+
+Improved Holy Avenger: 
+Incompatible as IWD2EE already has its own version of the Holy Avenger.
+
+Two-Handed Holy Avenger: 
+Compatible (unlike the previous component, this just patches the Holy Avenger rather than overwriting it).
+
+No Fists for Iron Body:
+Unnecessary as IWD2EE already allows you to use weapons while Iron Body is active.
+
+Deep Gnome Starting XP:
+Unnecessary as IWD2EE already revises the level adjustment/ECL system and fixes this bug.
+
+Improved Moonblades:
+Unnecessary as IWD2EE already revises the Moonblades in a similar way.
+
+Improved Monk Fists:
+Unnecessary as IWD2EE already allows Monk Fists to be used with Weapon Finesse.
+
+Collector's Edition Bonus Items:
+Unnecessary as IWD2EE already adds these items to the game.
+
+No Alignment Class Restrictions:
+Unnecessary as IWD2EE already has an option to loosen alignment class restrictions.
+
+Magic Weapon Finesse:
+Unnecessary as IWD2EE already allows certain conjured weapons to be used with Weapon Finesse.
+
+Always Get Some XP Per Kill:
+Unnecessary as IWD2EE already includes components that make the game's XP system more reasonable.
+
+Some Heart of Fury Items in Normal Mode:
+Compatible, but this component could potentially be unbalanced.
+
+Stronger Bastard Swords:
+Incompatible, as IWD2EE already improves bastard swords (the stronger bastard swords from the component are also ridiculously overpowered - you can buy a bastard sword in Targos that deals +5d6 acid damage per hit!).
+
+All Items Identified:
+Compatible.
+
+Non-Linear Teleporting:
+Compatible.
+
+Armor and Shields Provide Damage Resistance:
+Incompatible with IWD2EE's component that also gives armor and shields damage resistance.
+
+Include Forgotten Armor and Shields:
+Incompatible as IWD2EE already adds most of these items to the game (this component is also unbalanced, as it hands you multiple +3 items for free in the prologue!).
+
+Additional Druid Spells:
+Unnecessary as IWD2EE already gives druids a lot of new spells, including many of the same spells that this component gives them.
+
+Alternate Shapeshifting:
+Incompatible as IWD2EE already revises druid shapeshifting.
+
+Skip Battle Square:
+Unnecessary as IWD2EE already includes a component that greatly reduces the amount of time needed to earn the main Battle Square rewards.
+
+Randomized Treasure:
+Compatible, but not recommended, as it could potentially hand you an overpowered weapon early on.
