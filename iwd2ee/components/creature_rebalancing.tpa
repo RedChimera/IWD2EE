@@ -4172,7 +4172,7 @@ COPY_EXISTING ~AR6051.are~ ~override~
 	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR match_cre_file=~60JESZRA~ script_special2=~60YTSORC~ END
 
 COPY_EXISTING ~AR6100.are~ ~override~
-	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR actor_name=~Izbelah~ script_special2=~~ END
+	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR actor_name=~Izbelah~ script_special1=~~ script_special2=~~ END
 
 COPY_EXISTING ~AR6103.are~ ~override~
 	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR actor_name=~Snake_16~ cre_file=~USMARILI~ script_combat=~USMARILI~ END

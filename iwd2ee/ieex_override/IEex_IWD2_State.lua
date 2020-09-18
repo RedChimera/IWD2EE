@@ -5025,19 +5025,21 @@ function MEROTATE(effectData, creatureData)
 	local sourceID = IEex_ReadDword(effectData + 0x10C)
 	if IEex_ReadDword(effectData + 0x1C) > 0 and IEex_IsSprite(sourceID) then
 		local sourceData = IEex_GetActorShare(sourceID)
-		local orientation1 = IEex_ReadByte(sourceData + 0x537E, 0x0)
-		orientation1 = (orientation1 + 1) % 16
+--[[
+		IEex_WriteWord(sourceData + 0x537C, -1)
+		local orientation1 = IEex_ReadByte(sourceData + 0x5380, 0x0)
 		IEex_WriteByte(sourceData + 0x537E, orientation1)
---		local orientation2 = IEex_ReadByte(sourceData + 0x5380, 0x0)
---		orientation2 = (orientation2 + 1) % 16
---		IEex_WriteByte(sourceData + 0x5380, orientation2)
+		IEex_WriteByte(sourceData + 0x5380, (orientation1 - 1) % 16)
+--]]
+		IEex_WriteWord(sourceData + 0x537C, 1)
+		local orientation1 = IEex_ReadByte(sourceData + 0x5380, 0x0)
+		IEex_WriteByte(sourceData + 0x537E, (orientation1 - 1) % 16)
+--		IEex_WriteByte(sourceData + 0x5380, (orientation1 + 1) % 16)
 	else
-		local orientation1 = IEex_ReadByte(creatureData + 0x537E, 0x0)
-		orientation1 = (orientation1 + 1) % 16
+		IEex_WriteWord(creatureData + 0x537C, -1)
+		local orientation1 = IEex_ReadByte(creatureData + 0x5380, 0x0)
 		IEex_WriteByte(creatureData + 0x537E, orientation1)
---		local orientation2 = IEex_ReadByte(creatureData + 0x5380, 0x0)
---		orientation2 = (orientation2 + 1) % 16
---		IEex_WriteByte(creatureData + 0x5380, orientation2)
+		IEex_WriteByte(creatureData + 0x5380, (orientation1 - 1) % 16)
 	end
 
 end
@@ -8798,8 +8800,8 @@ function MEEAFIEN(effectData, creatureData)
 	if sourceID <= 0 then return end
 	local summonerID = IEex_ReadDword(creatureData + 0x72C)
 --	IEex_WriteWord(creatureData + 0x730, 0)
-	if summonerID <= 0 then return end
 	local summonerData = IEex_GetActorShare(summonerID)
+	if summonererData <= 0 then return end
 	local summonerIsEnemy = false
 	local summonerAllegiance = IEex_ReadByte(summonerData + 0x24, 0x0)
 	if summonerAllegiance == 255 or summonerAllegiance == 254 or summonerAllegiance == 200 then
