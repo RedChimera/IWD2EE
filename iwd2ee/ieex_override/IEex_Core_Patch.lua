@@ -297,6 +297,55 @@
 
 	]]})
 
+	------------------------
+	-- Assertion Handling --
+	------------------------
+
+	-- Log assertion info
+	IEex_HookRestore(0x780C4E, 0, 6, {[[
+
+		!push_all_registers_iwd2
+
+		!call >IEex_GetLuaState
+		!mov_ebx_eax
+
+		!push_dword ]], {IEex_WriteStringAuto("IEex_Extern_AssertFailed"), 4}, [[
+		!push_ebx
+		!call >_lua_getglobal
+		!add_esp_byte 08
+
+		!lea_eax_[esp+byte] 40
+		!push_eax
+		!fild_[esp]
+		!sub_esp_byte 04
+		!fstp_qword:[esp]
+		!push_ebx
+		!call >_lua_pushnumber
+		!add_esp_byte 0C
+
+		!push_byte 00
+		!push_byte 00
+		!push_byte 00
+		!push_byte 00
+		!push_byte 01
+		!push_ebx
+		!call >_lua_pcallk
+		!add_esp_byte 18
+		!push_ebx
+		!call >IEex_CheckCallError
+
+		!pop_all_registers_iwd2
+
+	]]})
+
+	-- Edit assertion strings
+	IEex_WriteDword(0x790A9A, IEex_WriteStringAuto("An Assertion failed in %s at line number %d\n\n[IEex] The game will crash after you press OK..."))
+	IEex_WriteDword(0x790AB1, IEex_WriteStringAuto("An Assertion failed in %s at line number %d \n Programmer says: %s\n\n[IEex] The game will crash after you press OK..."))
+
+	-- Apparently it's very hard to get the stack trace without a real crash.
+	-- If the log wants a crash, let's give it a crash...
+	IEex_HookAfterRestore(0x790AF4, 0, 6, {"!mov_eax_[dword] #0"})
+
 	--------------------
 	-- Crash Handling --
 	--------------------
