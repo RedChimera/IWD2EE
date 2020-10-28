@@ -22,6 +22,7 @@ for _, macroEntry in ipairs({
 	{"and_eax_dword", "25"},
 	{"build_stack_frame", "55 8B EC"},
 	{"call", "E8"},
+	{"call_[dword]", "FF 15"},
 	{"call_[eax+byte]", "FF 50"},
 	{"call_[eax+dword]", "FF 90"},
 	{"call_[ecx+dword]", "FF 91"},

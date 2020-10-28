@@ -342,9 +342,27 @@
 	IEex_WriteDword(0x790A9A, IEex_WriteStringAuto("An Assertion failed in %s at line number %d\n\n[IEex] The game will crash after you press OK..."))
 	IEex_WriteDword(0x790AB1, IEex_WriteStringAuto("An Assertion failed in %s at line number %d \n Programmer says: %s\n\n[IEex] The game will crash after you press OK..."))
 
-	-- Apparently it's very hard to get the stack trace without a real crash.
-	-- If the log wants a crash, let's give it a crash...
-	IEex_HookAfterRestore(0x790AF4, 0, 6, {"!mov_eax_[dword] #0"})
+	-- Three things:
+	--     1) Apparently it's hard to get the stack trace without a real 
+	--        crash. If the log wants a crash, let's give it a crash...
+	--
+	--     2) The stack unwind gets confused if the program 
+	--        crashes in dynamically allocated memory, so use
+	--        IEex_Helper_Crash() to crash in a known stack-frame.
+	--
+	--     3) The messagebox string is put onto the stack. Since
+	--        the stack unwind has no symbols, it tries to use random
+	--        character data as return pointers. Zero out that message
+	--        so we get at least a few stack frames correct in the dmp. 
+	IEex_WriteAssembly(0x790AF4, {"!jmp_dword", {IEex_WriteAssemblyAuto({[[
+		!call_[dword] #8474E8
+		!push_dword #400
+		!push_byte 00
+		!lea_eax_[esp+byte] 68
+		!push_eax
+		!call >IEex_Helper_Memset
+		!jmp_dword >IEex_Helper_Crash
+	]]}), 4, 4}, "!nop"})
 
 	--------------------
 	-- Crash Handling --
