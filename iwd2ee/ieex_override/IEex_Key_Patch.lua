@@ -76,6 +76,9 @@
 
 	]]})
 
+	-- Enable window-edge scrolling in windowed mode
+	IEex_WriteAssembly(0x78F43F, {"!jmp_byte"})
+
 	IEex_EnableCodeProtection()
 
 end)()
