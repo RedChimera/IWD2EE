@@ -45,6 +45,148 @@ for module, tf in pairs(IEex_Modules) do
 	end
 end
 
+----------------------------
+-- Start Memory Interface --
+----------------------------
+
+IEex_MemoryManagerStructMeta = {
+
+	["CAIScriptFile"] = {
+		["constructors"] = {
+			["#default"] = {["address"] = 0x40FDC0},
+		},
+		["destructor"] = {["address"] = 0x40FEB0},
+		["size"] = 0xEE,
+	},
+
+	["CString"] = {
+		["constructors"] = {
+			["fromString"] = {["address"] = 0x7FCC88},
+		},
+		["destructor"] = {["address"] = 0x7FCC1A},
+		["size"] = 0x4,
+	},
+
+	["string"] = {
+		["constructors"] = {
+			["#default"] = function(startPtr, luaString)
+				IEex_WriteString(startPtr, luaString)
+			end,
+		},
+		["size"] = function(luaString)
+			return #luaString + 1
+		end,
+	},
+}
+
+IEex_MemoryManager = {}
+IEex_MemoryManager.__index = IEex_MemoryManager
+
+function IEex_NewMemoryManager(structEntries)
+	return IEex_MemoryManager:new(structEntries)
+end
+
+function IEex_MemoryManager:init(structEntries)
+
+	local getConstructor = function(structEntry)
+		return structEntry.constructor or {}
+	end
+
+	local nameToEntry = {}
+	local currentOffset = 0
+
+	for _, structEntry in ipairs(structEntries) do
+
+		nameToEntry[structEntry.name] = structEntry
+		local structMeta = IEex_MemoryManagerStructMeta[structEntry.struct]
+		local size = structMeta.size
+		local sizeType = type(size)
+
+		structEntry.offset = currentOffset
+		structEntry.structMeta = structMeta
+		
+		if sizeType == "function" then
+			currentOffset = currentOffset + size(table.unpack(getConstructor(structEntry).luaArgs or {}))
+		elseif sizeType == "number" then
+			currentOffset = currentOffset + size
+		else
+			IEex_TracebackMessage("[IEex_MemoryManager] Invalid size type!")
+		end
+	end
+
+	self.nameToEntry = nameToEntry
+	local startAddress = IEex_Malloc(currentOffset)
+	self.address = startAddress
+
+	for _, structEntry in ipairs(structEntries) do
+
+		local entryName = structEntry.name
+		local offset = structEntry.offset
+		local address = startAddress + offset
+		structEntry.address = address
+
+		local entryConstructor = getConstructor(structEntry)
+		local constructor = structEntry.structMeta.constructors[entryConstructor.variant or "#default"]
+		local constructorType = type(constructor)
+
+		if constructorType == "function" then
+			constructor(address, table.unpack(entryConstructor.luaArgs or {}))
+		elseif constructorType == "table" then
+			local args = entryConstructor.args or {}
+			local argsToUse = {}
+			for i = #args, 1, -1 do
+				local arg = args[i]
+				local argType = type(arg)
+				if argType == "number" then
+					table.insert(argsToUse, arg)
+				elseif argType == "string" then
+					local entry = nameToEntry[arg]
+					if not entry then
+						IEex_TracebackMessage("[IEex_MemoryManager] Invalid arg name!")
+					end
+					table.insert(argsToUse, startAddress + entry.offset)
+				else
+					IEex_TracebackMessage("[IEex_MemoryManager] Invalid arg type!")
+				end
+			end
+			IEex_Call(constructor.address, argsToUse, address, constructor.popSize or 0x0)
+		end
+	end
+end
+
+function IEex_MemoryManager:getAddress(name)
+	return self.nameToEntry[name].address
+end
+
+function IEex_MemoryManager:getAddresses()
+	local nameToAddress = {}
+	for name, entry in pairs(self.nameToEntry) do
+		nameToAddress[name] = entry.address
+	end
+	return nameToAddress
+end
+
+function IEex_MemoryManager:free()
+	for entryName, entry in pairs(self.nameToEntry) do
+		local destructor = entry.structMeta.destructor
+		if (not entry.noDestruct) and destructor then
+			IEex_Call(destructor.address, {}, entry.address, destructor.popSize or 0x0)
+		end
+	end
+	IEex_Free(self.address)
+end
+
+function IEex_MemoryManager:new(structEntries)
+	local o = {}
+	setmetatable(o, self)
+	o:init(structEntries)
+	return o
+end
+
+----------------------------
+-- End Memory Interface --
+----------------------------
+
 -----------------------------------
 -- Common Engine Structures Util --
 -----------------------------------
@@ -958,6 +1100,71 @@ end
 ----------------
 -- Game State --
 ----------------
+
+function IEex_Eval(actionString, portraitIndex)
+
+	local manager = IEex_NewMemoryManager({
+		{
+			["name"] = "scriptFile",
+			["struct"] = "CAIScriptFile",
+		},
+		{
+			["name"] = "actionStringChars",
+			["struct"] = "string",
+			["constructor"] = {
+				["luaArgs"] = {actionString},
+			},
+		},
+		{
+			["name"] = "actionCString",
+			["struct"] = "CString",
+			["constructor"] = {
+				["variant"] = "fromString",
+				["args"] = {"actionStringChars"},
+			},
+			["noDestruct"] = true,
+		},
+	})
+
+	local CAIScriptFile = manager:getAddress("scriptFile")
+	local actionCString = manager:getAddress("actionCString")
+
+	-- CAIScriptFile_ParseResponseString
+	IEex_Call(0x410120, {IEex_ReadDword(actionCString)}, CAIScriptFile, 0x0)
+
+	-- m_errors
+	local errors = IEex_ReadString(IEex_ReadDword(CAIScriptFile + 0x16))
+	if errors == "" then
+
+		local actorID = -1
+		if portraitIndex then
+			actorID = IEex_GetActorIDPortrait(portraitIndex)
+		else
+			actorID = IEex_GetActorIDCursor()
+		end
+	
+		if actorID == -1 then
+			-- pGame->m_gameAreas[pGame->m_visibleArea]->m_nAIIndex
+			local m_pObjectGame = IEex_GetGameData()
+			local m_visibleArea = IEex_ReadByte(m_pObjectGame + 0x37E0, 0)
+			local CGameArea = IEex_ReadDword(m_pObjectGame + m_visibleArea * 0x4 + 0x37E2)
+			actorID = IEex_ReadDword(CGameArea + 0x41A)
+		end
+	
+		local share = IEex_GetActorShare(actorID)
+		local CGameAIBase_InsertAction = IEex_ReadDword(IEex_ReadDword(share) + 0x88)
+	
+		local m_actionList = IEex_ReadDword(CAIScriptFile + 0x12) + 0x8
+		IEex_IterateCPtrList(m_actionList, function(CAIAction)
+			IEex_Call(CGameAIBase_InsertAction, {CAIAction}, share, 0x0)
+		end)
+	else
+		IEex_DisplayString("Action Errors:: "..errors)
+	end
+
+	manager:free()
+
+end
 
 function IEex_CreateCreature(resref)
 	local mem = IEex_Malloc(0xC)
