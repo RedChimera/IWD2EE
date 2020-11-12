@@ -1,23 +1,27 @@
 
--- Refactor: Now bridge "IEex_Feats", "NEW_FEATS_MAXID"
--- IEex_NEW_FEATS_MAXID = nil
-IEex_NEW_FEATS_SIZE  = nil
+IEex_Once("IEex_CoreInitializeVariables", function()
 
-IEex_LISTSPLL = {}
-IEex_LISTSPLL_Reverse = {}
+	-- Refactored: Now bridge ("IEex_Feats", "NEW_FEATS_MAXID")
+	-- IEex_NEW_FEATS_MAXID = nil 
+	IEex_NEW_FEATS_SIZE  = nil
 
-IEex_LISTINNT = {}
-IEex_LISTINNT_Reverse = {}
+	IEex_LISTSPLL = {}
+	IEex_LISTSPLL_Reverse = {}
 
-IEex_LISTSONG = {}
-IEex_LISTSONG_Reverse = {}
+	IEex_LISTINNT = {}
+	IEex_LISTINNT_Reverse = {}
 
-IEex_LISTSHAP = {}
-IEex_LISTSHAP_Reverse = {}
+	IEex_LISTSONG = {}
+	IEex_LISTSONG_Reverse = {}
 
-IEex_IndexedResources = {}
-IEex_SpellToScroll = {}
-IEex_Loaded2DAs = {}
+	IEex_LISTSHAP = {}
+	IEex_LISTSHAP_Reverse = {}
+
+	IEex_IndexedResources = {}
+	IEex_SpellToScroll = {}
+	IEex_Loaded2DAs = {}
+
+end)
 
 function IEex_Extern_CreateAsyncState()
 
