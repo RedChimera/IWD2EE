@@ -1547,6 +1547,12 @@ COPY_EXISTING ~sppr115.spl~ ~override~
 	SAY UNIDENTIFIED_DESC @32115
 	SAY IDENTIFIED_DESC @32115
 
+COPY_EXISTING ~sppr202.spl~ ~override~
+	SAY NAME1 @31202
+	SAY NAME2 @31202
+	SAY UNIDENTIFIED_DESC @32202
+	SAY IDENTIFIED_DESC @32202
+
 COPY_EXISTING ~sppr212.spl~ ~override~
 	LPF ALTER_SPELL_HEADER INT_VAR speed=0 END
 	LPF ALTER_EFFECT INT_VAR silent=1 check_headers=1 check_globals=1 match_opcode=239 opcode=11 parameter1=0 END
@@ -2744,6 +2750,14 @@ COPY_EXISTING_REGEXP ~sppr[0-9][0-9][0-9]\.spl~ ~override~ ~spwi[0-9][0-9][0-9]\
 	READ_LONG 0x6A effectoffset
 	WRITE_ASCIIE (effectoffset + 0x4) ~%SOURCE_RES%~ #8
 	UNLESS ~MEONCAST~
+
+//Patching all dispel effects on spells and items to dispel shapeshifting completely.
+
+COPY_EXISTING_REGEXP ~.*\.itm~ ~override~ ~.*\.spl~ ~override~
+	LPF CLONE_EFFECT INT_VAR silent=1 check_headers=1 check_globals=0 match_opcode=58 timing=0 duration=0 opcode=500 parameter1=0 parameter2=0 STR_VAR resource=~MEPOLYBA~ END
+	IF ~:~
+	UNLESS ~MEPOLYBA~
+	BUT_ONLY_IF_IT_CHANGES
 
 COPY_EXISTING ~sppr117.spl~ ~override~ ~sppr221.spl~ ~override~ ~sppr226.spl~ ~override~ ~sppr304.spl~ ~override~ ~sppr319.spl~ ~override~ ~sppr320.spl~ ~override~ ~sppr324.spl~ ~override~ ~sppr325.spl~ ~override~ ~sppr411.spl~ ~override~ ~sppr417.spl~ ~override~ ~sppr422.spl~ ~override~ ~sppr423.spl~ ~override~ ~sppr427.spl~ ~override~ ~sppr503.spl~ ~override~ ~sppr510.spl~ ~override~ ~sppr512.spl~ ~override~ ~sppr522.spl~ ~override~ ~sppr610.spl~ ~override~ ~sppr612.spl~ ~override~ ~sppr613.spl~ ~override~ ~sppr705.spl~ ~override~ ~sppr707.spl~ ~override~ ~spwi101.spl~ ~override~ ~spwi103.spl~ ~override~ ~spwi105.spl~ ~override~ ~spwi213.spl~ ~override~ ~spwi215.spl~ ~override~ ~spwi220.spl~ ~override~ ~spwi227.spl~ ~override~ ~spwi304.spl~ ~override~ ~spwi308.spl~ ~override~ ~spwi313.spl~ ~override~ ~spwi319.spl~ ~override~ ~spwi404.spl~ ~override~ ~spwi411.spl~ ~override~ ~spwi420.spl~ ~override~ ~spwi423.spl~ ~override~ ~spwi503.spl~ ~override~ ~spwi504.spl~ ~override~ ~spwi519.spl~ ~override~ ~spwi603.spl~ ~override~ ~spwi605.spl~ ~override~ ~spwi706.spl~ ~override~ ~spwi707.spl~ ~override~ ~spwi708.spl~ ~override~ ~spwi711.spl~ ~override~ ~spwi714.spl~ ~override~ ~spwi802.spl~ ~override~ ~spwi806.spl~ ~override~ ~spwi908.spl~ ~override~ ~uswi751.spl~ ~override~
 	LPF ADD_SPELL_EFFECT INT_VAR insert_point=0 opcode=500 target=2 timing=0 STR_VAR resource=~MESAFESP~ END

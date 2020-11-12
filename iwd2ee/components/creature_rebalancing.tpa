@@ -431,7 +431,7 @@ COPY_EXISTING ~21XUKI.cre~ ~override~
 	WRITE_BYTE skillconcentration 8
 	WRITE_BYTE skillspellcraft 8
 	WRITE_BYTE challengerating 7
-	LPF	IWD2_ADD_CRE_ITEM INT_VAR equip=1 STR_VAR item=~00ROBE02~ slot=~armor~ mode=~replace~ END
+	LPF	IWD2_ADD_CRE_ITEM INT_VAR equip=1 STR_VAR item=~00ROBE04~ slot=~armor~ mode=~replace~ END
 	LPF	IWD2_REMOVE_SPELLS_KNOWN STR_VAR class=~wizard~ END
 	LPF	IWD2_CRE_SPELL INT_VAR num=4 STR_VAR class=~wizard~ resource=~SPWI112~ END
 	LPF	IWD2_CRE_SPELL INT_VAR num=2 STR_VAR class=~wizard~ resource=~SPWI211~ END
@@ -619,37 +619,45 @@ COPY_EXISTING ~40GBLKA.cre~ ~override~
 COPY_EXISTING ~40GIAFOM.cre~ ~override~ ~40RGIAFO.cre~ ~override~ ~41GIAFOM.cre~ ~override~
 	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelbarbarian=10 STR_VAR updatehp=~average~ END
 	WRITE_SHORT armorclass 12
+	WRITE_BYTE dexterity 12
 	READ_LONG feats2 ulgiash
 	ulgiash|=0x80
 	WRITE_LONG feats2 ulgiash
-	WRITE_BYTE proficiencybow 1
+	WRITE_BYTE proficiencybow 2
 	WRITE_BYTE challengerating 10
 	WRITE_ASCII specialscript2 ~00BRBRG0~ #8
-
-COPY_EXISTING ~40GIAFOM.cre~ ~override~ ~40RGIAFO.cre~ ~override~ ~41GIAFOM.cre~ ~override~
-	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelbarbarian=10 STR_VAR updatehp=~average~ END
-	WRITE_SHORT armorclass 12
-	READ_LONG feats2 ulgiash
-	ulgiash|=0x80
-	WRITE_LONG feats2 ulgiash
-	WRITE_BYTE proficiencybow 1
-	WRITE_BYTE challengerating 10
-	WRITE_ASCII specialscript2 ~00BRBRG0~ #8
+	LPF	IWD2_ADD_CRE_ITEM INT_VAR equip=1 STR_VAR item=~USCWHFFO~ slot=~weapon1~ mode=~replace~ END
 
 COPY_EXISTING ~53FOMOTH.cre~ ~override~ ~50GNTFO.cre~ ~override~
 	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelbarbarian=12 STR_VAR updatehp=~max~ END
 	WRITE_SHORT armorclass 12
+	WRITE_BYTE dexterity 14
 	READ_LONG feats2 ulgiash
 	ulgiash|=0x80
 	WRITE_LONG feats2 ulgiash
 	WRITE_BYTE proficiencybow 2
 	WRITE_BYTE challengerating 12
 	WRITE_ASCII specialscript2 ~00BRBRG0~ #8
-	LPF	IWD2_ADD_CRE_ITEM INT_VAR equip=1 STR_VAR item=~00CWFOR3~ slot=~weapon2~ mode=~replace~ END
+	LPF	IWD2_ADD_CRE_ITEM INT_VAR equip=1 STR_VAR item=~USCWFOR4~ slot=~weapon2~ mode=~replace~ END
 
 COPY_EXISTING ~USFOMGRN.cre~ ~override~
 	SAY NAME1 @23015
 	SAY NAME2 @23015
+
+COPY_EXISTING ~41REMHZR.cre~ ~override~
+	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelfighter=7 STR_VAR updatehp=~max~ END
+	WRITE_SHORT armorclass 22
+	WRITE_BYTE challengerating 7
+
+COPY_EXISTING ~41REMHZA.cre~ ~override~ ~41REMHZZ.cre~ ~override~
+	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelfighter=11 STR_VAR updatehp=~max~ END
+	WRITE_SHORT armorclass 25
+	WRITE_BYTE challengerating 11
+
+COPY_EXISTING ~41REMHZQ.cre~ ~override~
+	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelfighter=15 STR_VAR updatehp=~max~ END
+	WRITE_SHORT armorclass 28
+	WRITE_BYTE challengerating 15
 
 COPY_EXISTING ~40DRUIDF.cre~ ~override~ ~40DRUIDM.cre~ ~override~
 	WRITE_BYTE skillconcentration 7
@@ -1903,9 +1911,10 @@ COPY_EXISTING ~60KHREE.cre~ ~override~
 
 COPY_EXISTING ~60GUARDI.cre~ ~override~
 	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelfighter=21 newlevelsorcerer=8 END
-	WRITE_SHORT currenthp 700
-	WRITE_SHORT maxhp 700
+	WRITE_SHORT currenthp 400
+	WRITE_SHORT maxhp 400
 	WRITE_SHORT armorclass 20
+	WRITE_BYTE constitution 32
 	WRITE_BYTE slashingresistance 0
 	WRITE_BYTE piercingresistance 0
 	WRITE_BYTE crushingresistance 0
@@ -4096,6 +4105,9 @@ COPY_EXISTING ~AR4100.are~ ~override~
 	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR actor_name=~Wandering_Postulant_01~ cre_file=~41CLERIM~ script_special2=~41CLERIC~ END
 	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR actor_name=~Wandering_Postulant_02~ cre_file=~41CLERIF~ script_special2=~41CLERIC~ END
 	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR actor_name=~Wandering_Postulant_03~ cre_file=~41CLERIF~ script_special2=~41CLERIC~ END
+	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR actor_name=~Wandering_Postulant_01~ cre_file=~41CLERIM~ script_special2=~41CLERIC~ END
+	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR actor_name=~Queen_Master_01~ cre_file=~41SHAMAM~ script_team=~41SHAMAN~ END
+	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR actor_name=~Queen_Master_02~ cre_file=~41SHAMAM~ script_team=~41SHAMAN~ END
 	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR actor_name=~01_Frosttouch_04~ cre_file=~41SHAMAF~ script_special2=~41SHAMAN~ END
 	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR actor_name=~01_Frosttouch_05~ cre_file=~41SHAMAF~ script_special2=~41SHAMAN~ END
 	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR actor_name=~01_Frosttouch_06~ cre_file=~41SHAMAF~ script_special2=~41SHAMAN~ END
@@ -4107,6 +4119,7 @@ COPY_EXISTING ~AR4101.are~ ~override~
 	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR actor_name=~01_Postulant_24~ cre_file=~USBIKNIG~ script_special2=~41RENGAR~ END
 */
 	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR actor_name=~01_Stormsister_39~ cre_file=~USBIKNIG~ script_special2=~41RENGAR~ END
+	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR actor_name=~Cathin~ flag_invulnerable=0 END
 
 COPY_EXISTING ~AR4102.are~ ~override~
 	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR actor_name=~01_Postulant_22~ cre_file=~41SHAMAF~ script_special2=~41SHAMAN~ END
@@ -4201,7 +4214,7 @@ COPY_EXISTING ~AR6304.are~ ~override~
 	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR actor_name=~GB_YuanTiHalfbreed1~ script_combat=~60YTPRIC~ END
 	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR actor_name=~GB_YuanTiHalfbreed2~ script_combat=~60YTPRIC~ END
 	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR actor_name=~GB_ThayvianMage1~ cre_file=~66RHDR~ script_special3=~00HADRRD~ END
-	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR match_cre_file=~63GLBXP~ cre_file=~65CORN~ script_combat=~00CRNE~ END
+	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR match_cre_file=~63GLBXP~ cre_file=~65CORN~ script_combat=~00CRNE~ script_special1=~00UHIDE0~ END
 
 COPY_EXISTING ~AR6305.are~ ~override~
 	LPF ALTER_AREA_ACTOR_IWD2 INT_VAR flag_difficulty_1=0 flag_difficulty_2=0 flag_difficulty_3=1 STR_VAR script_combat=~USHDRBLU~ actor_name=~Serak~ END
@@ -4365,6 +4378,7 @@ USCWHFGL	USCWGLB1
 USCWHFLG	USCWGLB2
 USCWHFF1	USCWFEY1
 USCWHFF2	USCWFEY3
+USCWHFFO	00CWFOR3
 ~
 UNLESS ~USCWHFMO~
 
@@ -4394,6 +4408,7 @@ USCWHFGL	USCWGLB2
 USCWHFLG	USCWGLB3
 USCWHFF1	USCWFEY2
 USCWHFF2	USCWFEY4
+USCWHFFO	USCWFOR4
 ~
 UNLESS ~USCWHFMO~
 

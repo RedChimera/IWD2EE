@@ -1,0 +1,3 @@
+//NOTES
+
+COPY ~%mod_folder%/tables/tables_always_learn~ ~override~

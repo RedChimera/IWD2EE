@@ -421,3 +421,9 @@ BEGIN @72 DESIGNATED 82
 SUBCOMPONENT @70
 
       INCLUDE ~%mod_folder%/components/xp_cap_50.tpa~ //~Increase it to 50~
+
+//Always learn spells from scrolls successfully
+
+BEGIN @75 DESIGNATED 85
+
+      INCLUDE ~%mod_folder%/components/always_learn.tpa~ //~Always learn spells from scrolls successfully~

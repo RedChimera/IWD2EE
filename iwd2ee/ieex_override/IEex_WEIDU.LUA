@@ -5,6 +5,7 @@ ex_no_sneak_attack_delay = false
 ex_spell_focus_component_installed = false
 ex_construct_race = 156
 ex_fiend_race = 164
+ex_reanimation_level_check_bonus = 5
 ex_feat_name_id = {}
 ex_listspll = {}
 ex_listdomn = {}

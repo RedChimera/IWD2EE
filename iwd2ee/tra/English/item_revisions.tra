@@ -718,7 +718,7 @@ Weight:  1 lb.~
 //@10198    = ~Boots of Grounding~
 //@10199    = ~Item description can remain the same; if new description is needed put it here~
 //@10200    = ~Witherbranch Boots~
-@10201    = ~The edges of these near-rotted leather boots still have dead vines and twigs draped from them. These magical boots were fashioned and enchanted  by several members of the Hosttower of the Arcane during their brief crusade against various nature worshippers in the Icewind Dale region and passed along to their agents scouting the region. While the boots were known to cause any plant touching them to wither instantly, it also left a noticeable trail through the wilds of Icewind Dale... a trail that the druids followed in polar bear form and devoured the agents one by one. These boots are all that remain.
+@10201    = ~The edges of these near-rotted leather boots still have dead vines and twigs draped from them. These magical boots were fashioned and enchanted by several members of the Hosttower of the Arcane during their brief crusade against various nature worshippers in the Icewind Dale region and passed along to their agents scouting the region. While the boots were known to cause any plant touching them to wither instantly, it also left a noticeable trail through the wilds of Icewind Dale... a trail that the druids followed in polar bear form and devoured the agents one by one. These boots are all that remain.
 
 These boots kill any vegetation they touch, and they cannot be worn by a ranger or druid.
 
@@ -2922,7 +2922,7 @@ STATISTICS:
 Shield Bonus: +2
 Armor Bonus: +1 vs. missile weapons
 Armor Check Penalty:  -1
-Arcane Spell Failure:  15%
+Arcane Spell Failure:  5%
 Special:
   Attack Bonus: +1
 Weight: 6 lb.~
@@ -7263,7 +7263,7 @@ Weight: 8 lb.
 Required Feat:  Simple Weapon, Mace
 Type:  One-handed~
 @11485    = ~Star of Talona +5~
-@11486    = ~The morningstar is a wooden shaft topped with a metal head made up of a spiked iron sheath. Morningstars have an overall length of about four feet. Some such weapons have a round, oval, or cylindrical shaped head studded with spikes. Extending from most morningstar heads, regardless of design, is a long point for thrusting. 
+@11486    = ~The morningstar is a wooden shaft topped with a metal head made up of a spiked iron sheath. Morningstars have an overall length of about four feet. Some such weapons have a round, oval, or cylindrical shaped head studded with spikes. Extending from most morningstar heads, regardless of design, is a long point for thrusting.
 
 This particular weapon was apparantly created for use by some Talonite cleric, but was lost over the years. It is now the personal weapon of the bugbear leader, Guthma... until you slew him, that is.
 
@@ -7883,7 +7883,17 @@ Weight: 7 lb.
 Feat Requirement:  Martial Weapon, Hammer
 Type:  One-handed~
 //@11591    = ~Craftsman's Hammer~
-//@11592    = ~Item description can remain the same; if new description is needed put it here~
+@11592    = ~This heavy-headed hammer looks like it was used for construction on the Palisade, and it's possible that none of the workers were aware of its enchanted nature.  While this weapon is a little slower and heavier than a warhammer, its swing is true and does more damage when it hits.  A single tap from this hammer creates a clear, ringing note.
+
+STATISTICS:
+
+Damage:  1d8 + 1
+Attack Bonus:  +1 
+Enchantment:  +3
+Damage Type:  Bludgeoning
+Weight: 9 lb.
+Feat Requirement:  Martial Weapon, Hammer
+Type:  One-handed~
 //@11593    = ~Slow and Steady~
 @11594    = ~This heavy-headed hammer looks like it was used for construction on the Palisade, and it's possible that none of the workers were aware of its enchanted nature. While this weapon is a little slower and heavier than a warhammer, its swing is true and does more damage when it hits. A single tap from this hammer creates a clear, ringing note.
 
@@ -7891,7 +7901,7 @@ STATISTICS:
 
 Damage:  1d8 + 4
 Attack Bonus:  +4 
-Enchantment:  +4
+Enchantment:  +6
 Damage Type:  Bludgeoning
 Special:
   Strength: +5

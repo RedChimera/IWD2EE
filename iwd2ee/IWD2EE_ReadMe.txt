@@ -29,29 +29,28 @@ Components:
 16. Alternative Dragon's Eye
 17. Mage Scrolls for New Spells
 18. Revised Creature Immunities
-19. Shapeshifting Sound Fix
-20. More Accurate Saving Throws for Enemies
-21. Revise Critical Hit Immunity
-22. Sudden Death Mode
-23. Better Racial Enemies for Rangers
-24. Cosmetic Tweaks
-25-34. More Persuasion Options
-35. NPC Core
-36. NPCs start with experience
-37. New GUI
-38. Looping Main Theme
-39. Revised Battle Square
-40. Minor Damage Resistance for Armor and Shields
-41. ChangeAIScript Fix
-42. Race Revisions
-43. Enemies give the same amount of experience regardless of the party's level
-44. Adjust encounter level-scaling
-45. Reduce enemy HP bonuses in Heart of Fury Mode
-46. Reduce enemy attack bonuses in Heart of Fury Mode
-47. Reduce enemy saving throw bonuses in Heart of Fury Mode
-48. Weaken allied summoned creatures in Heart of Fury Mode
-49. Have the party start with experience in Heart of Fury Mode
-50. Remove the delay between sneak attacks
+19. More Accurate Saving Throws for Enemies
+20. Revise Critical Hit Immunity
+21. Better Racial Enemies for Rangers
+22. Cosmetic Tweaks
+23-32. More Persuasion Options
+33. NPC Core
+34. NPCs start with experience
+35. New GUI
+36. Looping Main Theme
+37. Revised Battle Square
+38. Minor Damage Resistance for Armor and Shields
+39. Race Revisions
+40. Enemies give the same amount of experience regardless of the party's level
+41. Adjust encounter level-scaling
+42. Reduce enemy HP bonuses in Heart of Fury Mode
+43. Reduce enemy attack bonuses in Heart of Fury Mode
+44. Reduce enemy saving throw bonuses in Heart of Fury Mode
+45. Weaken allied summoned creatures in Heart of Fury Mode
+46. Have the party start with experience in Heart of Fury Mode
+47. Remove the delay between sneak attacks
+48. Increase the level cap
+49. Always learn spells from scrolls successfully
 
 --Class Revisions--
 
@@ -220,10 +219,6 @@ Elementals now have regular elemental immunities rather than undead immunities. 
 
 Trolls no longer fall down and have to be finished off by fire or acid; instead they regenerate faster and have more HP but take significantly more damage from fire and acid.
 
---Shapeshifting Sound Fix--
-
-Testing found that shapeshifting in a previous version of semiOverhaul could result in a weird sound loop. This component should fix the problem if it comes up, but is not otherwise necessary.
-
 --More Accurate Saving Throws for Enemies--
 
 This component adjusts all enemy saving throws in the game, making them roughly equal to the player's saving throws at the same level. Thus, a level 10 enemy fighter will have similar saving throws to a level 10 fighter in the party.
@@ -231,10 +226,6 @@ This component adjusts all enemy saving throws in the game, making them roughly 
 --Revise Critical Hit Immunity--
 
 The vanilla game gives out immunity to critical hits to enemies that shouldn't have it, including fiends and certain random enemies. This component has two options: either you can give critical hit immunity to all undead, constructs, objects, elementals and oozes and remove it for all other creatures, or you can make all creatures vulnerable to critical hits.
-
---Sudden Death Mode--
-
-This is a simple component designed to speed up the pace of combat. Both enemies and party members get half of their normal HP. Clerics get 1d4 HP per level instead of 1d8, an 18 Constitution only grants +2 HP per level instead of +4, and an enemy with 50 base HP will have 25 HP. The game balance should otherwise be identical, since enemies and party members are equally affected (overall difficulty should be roughly the same), but death will be much closer for both. The +80 HP from Heart of Fury mode is not affected by this component, so this component will work in the enemy's favor in HoF mode. Install this component if you're looking to make the game faster or more dangerous.
 
 --Better Racial Enemies for Rangers--
 
@@ -333,6 +324,9 @@ This component increases the level cap to 40 or to 50 (your choice). You'll only
 
 Much of the credit for the inspiration for this mod goes to the makers of Light of Selune, IWD2-Ease, and Tactics4IWD2, which provided the groundwork for this mod and the changes it makes. I would also like to thank Firecrow, who provided indispensable feedback and played an instrumental role in inspiring many of the mod's features, and subtledoctor, bubb, and Gwendolyne for providing invaluable technical support during the construction of the mod.
 
+--Always learn spells from scrolls successfully--
+
+This component lets all wizards successfully learn spells from scrolls 100% of the time.
 
 Compatibility Notes:
 

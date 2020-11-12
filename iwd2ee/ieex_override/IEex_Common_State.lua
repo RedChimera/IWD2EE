@@ -205,7 +205,7 @@ end
 function IEex_IterateCPtrList(CPtrList, func)
 	local m_pNext = IEex_ReadDword(CPtrList + 0x4)
 	while m_pNext ~= 0x0 do
-		if func(IEex_ReadDword(m_pNext + 0x8)) then
+		if IEex_ReadDword(m_pNext + 0x8) > 0 and func(IEex_ReadDword(m_pNext + 0x8)) then
 			break
 		end
 		m_pNext = IEex_ReadDword(m_pNext)

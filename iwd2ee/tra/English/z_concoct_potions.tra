@@ -686,18 +686,18 @@ STATISTICS:
 Immunity to charm, domination, feeblemind, fear, confusion, hopelessness, and stun
 Weight: 1 lb.~
 @4785     = ~Treant Sap~
-@4786     = ~Hardened treant sap mixed with holy water and mashed peas sits inside this firm wooden container.  The hard sap must be chewed thoroughly unless it is heated before consumption.  The sap turns the user's skin to a stiff, woody substance, granting a +3 natural bonus to AC for 1 hour.
+@4786     = ~Hardened treant sap mixed with holy water and mashed peas sits inside this firm wooden container.  The hard sap must be chewed thoroughly unless it is heated before consumption.  The sap turns the user's skin to a stiff, woody substance, granting a +4 natural bonus to AC for 1 hour.
 
 STATISTICS:
 
-Barkskin (+3 AC)
+Barkskin (+4 AC)
 Weight: 1 lb.~
 @54785     = ~Treant Sap~
-@54786     = ~Hardened treant sap mixed with holy water and mashed peas sits inside this firm wooden container.  The hard sap must be chewed thoroughly unless it is heated before consumption.  The sap turns the user's skin to a stiff, woody substance, granting a +6 natural bonus to AC for 1 hour.
+@54786     = ~Hardened treant sap mixed with holy water and mashed peas sits inside this firm wooden container.  The hard sap must be chewed thoroughly unless it is heated before consumption.  The sap turns the user's skin to a stiff, woody substance, granting a +7 natural bonus to AC for 1 hour.
 
 STATISTICS:
 
-Barkskin (+6 AC)
+Barkskin (+7 AC)
 Weight: 1 lb.~
 @4787     = ~Troll Serum~
 @4788     = ~Made of concentrated troll blood leeched through perforated otyugh skin, this sour mixture will temporarily grant the drinker the regenerative abilities of a troll.  For 10 rounds after imbibing this potion, the drinker will heal 5 hit points every round.

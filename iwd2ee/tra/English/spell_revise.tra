@@ -424,7 +424,7 @@ Casting Time: 3
 Area of Effect: 1 creature
 Saving Throw: None
 
-By means of this spell, the wizard creates a magical field of force that serves as if it were scale mail armor (Armor Bonus: 4). It is cumulative with Dexterity and with a shield bonus. The armor spell does not hinder movement, adds no weight or encumbrance, nor does it prevent spellcasting. It lasts until successfully dispelled or until the duration runs out.~
+By means of this spell, the wizard creates a magical field of force that serves as if it were scale mail armor (Armor Bonus: +4). It is cumulative with Dexterity and with a shield bonus. The armor spell does not hinder movement and adds no weight or encumbrance, nor does it prevent spellcasting. It lasts until successfully dispelled or until the duration runs out.~
 @1072    = ~Sleep~
 @1073    = ~Sleep
 (Enchantment) 
@@ -446,7 +446,7 @@ Casting Time: 1
 Area of Effect: 1 creature
 Saving Throw: Special
 
-When the caster completes this spell, a blue glow encompasses his hand. This energy attacks the life force of any creature the wizard touches (no attack roll is required). The touched creature suffers 1d6 cold damage per level (max 5d6) and receives a -3 attack bonus modifier for 10 rounds after being struck. If the creature is undead creature, it is affected by panic (Will negates) for 10 rounds. The Will DC is equal to 10 plus the caster's level divided by 3. Undead suffer no damage or attack bonus penalty from Chill Touch.~
+When the caster completes this spell, a blue glow encompasses his hand. This energy attacks the life force of any creature the wizard touches (no attack roll is required). The touched creature suffers 1d6 cold damage per level (max 5d6) and receives a -3 attack penalty for 10 rounds after being struck. If the creature is undead creature, it is affected by panic (Will negates) for 10 rounds. The Will DC is equal to 10 plus the caster's level divided by 3. Undead suffer no damage or attack bonus penalty from Chill Touch.~
 @1076    = ~Chromatic Orb~
 @1077    = ~Chromatic Orb 
 (Evocation) 
@@ -1170,12 +1170,12 @@ This spell instills courage within allies in the area of effect, yielding increa
 (Divination)
 Level: Clr 2, Oghma 3
 Range: Sight of Caster
-Duration: 10 rounds 
+Duration: 30 rounds
 Casting Time: 5
 Area of Effect: Caster
 Saving Throw: None 
 
-This spell imbues the caster with a heightened awareness for danger around him or her. For the duration, he or she gains a +5 bonus to his or her Search skill.~
+This spell imbues the caster with a heightened awareness for danger around him or her. For the duration, he or she will automatically detect any traps within visual range.~
 @1573    = ~Giant Vermin~
 @1574    = ~Giant Vermin
 (Transmutation)
@@ -1519,7 +1519,7 @@ This spell empowers the attacks of any animal, granting it +3 to hit and damage 
 Level: Clr 2, Pal 1
 Casting Time: 5
 Range: Caster
-Duration: 3 rounds + 1 round / level
+Duration: 10 rounds + 1 round / level
 Saving Throw: None 
 
 By calling upon his deity, the caster brings into existence a magical hammer which may be used as a weapon, striking as a +1 weapon. This hammer is composed of pure force and can be used to strike targets from a safe distance, dealing 1d8 bludgeoning damage per strike. At level 8, the hammer strikes as a +2 weapon and deals an additional 1d4 electricity damage per hit. At level 12, the hammer strikes as a +3 weapon and the electricity damage increases to 1d8. The Spiritual Hammer uses the Martial Weapon: Hammer proficiency.
@@ -2620,6 +2620,17 @@ Area of Effect: Caster
 Saving Throw: None 
 
 The armor of faith is a force of energy that absorbs a portion of the damage intended for the caster. The caster gains a 1/- resistance to all non-poison damage for the duration of the spell. For every five caster levels, they get another 1/- resistance.~
+@31202     = ~Barkskin~
+@32202     = ~Barkskin
+(Transmutation) 
+Level: Drd 2, Rgr 2
+Range: Touch 
+Duration: 10 rounds + 2 rounds/level
+Casting Time: 5
+Area of Effect: 1 creature
+Saving Throw: None 
+
+Barkskin causes a creature's skin to become as tough as bark, granting a +3 generic AC bonus (+4 at 6th Level and +5 at 12th level) for the duration of the spell.~
 @31212     = ~Slow Poison~
 @32212     = ~Slow Poison
 (Conjuration) 
@@ -2645,7 +2656,7 @@ Saving Throw: None
 
 The caster calls upon their god to grant them power for a short period. The caster's Strength, Dexterity and Constitution are all raised by 1 point for every 3 levels of the caster. A third level caster would have their abilities raised by 1, while a 12th level caster would have their abilities raised by 4.
 
-When cast as a paladin spell, Draw Upon Holy Might gives additional bonuses. The paladin's Strength, Dexterity and Constitution are raised an additional number of points equal to the paladin's Charisma bonus. However, the total stat bonuses granted (from both level and Charisma) cannot be higher than +10.~
+Although paladins normally cast spells at half their caster level, Draw Upon Holy Might will be cast at a paladin's full caster level.~
 @31226     = ~Moon Motes~
 @32226     = ~Moon Motes
 (Conjuration) 
@@ -2910,7 +2921,9 @@ Casting Time: 1
 Area of Effect: 1 creature
 Saving Throw: None
 
-By casting Hunter's Mark, the ranger magically marks a creature as their quarry. For the duration, all physical damage that would be dealt to the marked creature is increased by 3, plus an additional 3 for every 10 ranger levels. In addition, the creature cannot become invisible while marked. Hunter's Mark can be cast on any creature the party sees, even if the ranger does not see it.~
+By casting Hunter's Mark, the ranger magically marks a creature as their quarry. For the duration, all physical damage that would be dealt to the marked creature is increased by 3, plus an additional 3 for every 10 ranger levels. In addition, the creature cannot become invisible while marked. Hunter's Mark can be cast on any creature the party sees, even if the ranger does not see it.
+
+Although rangers normally cast spells at half their caster level, Hunter's Mark will be cast at a ranger's full caster level.~
 @35252     = ~Null Healing~
 @36252     = ~Null Healing
 (Necromancy)
@@ -2933,6 +2946,8 @@ Area of Effect: Caster
 Saving Throw: None
 
 This spell temporarily gives the ranger a quiver containing an unlimited supply of magical arrows. The arrows have an additional +1 to attack and damage for every 4 ranger levels. The quiver cannot be dropped or given to another character.
+
+Although rangers normally cast spells at half their caster level, Quiver of Plenty will be cast at a ranger's full caster level.
 
 Note: The quiver is created in the ranger's first ammunition slot. Any ammunition that was previously in that slot will be unavailable until the spell ends.~
 @35551     = ~Supreme Speed~
