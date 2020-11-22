@@ -318,6 +318,147 @@
 		})
 	end
 
+	IEex_HookBeforeCall(0x55F787, {[[
+
+		!push_registers_iwd2
+
+		!push_dword ]], {IEex_WriteStringAuto("IEex_Extern_OnCheckSummonLimitHook"), 4}, [[
+		!push_dword *_g_lua_async
+		!call >_lua_getglobal
+		!add_esp_byte 08
+
+		; effectData ;
+		!push_esi
+		!fild_[esp]
+		!sub_esp_byte 04
+		!fstp_qword:[esp]
+		!push_dword *_g_lua_async
+		!call >_lua_pushnumber
+		!add_esp_byte 0C
+
+		; summonerData ;
+		!push_[esp+byte] 18
+		!fild_[esp]
+		!sub_esp_byte 04
+		!fstp_qword:[esp]
+		!push_dword *_g_lua_async
+		!call >_lua_pushnumber
+		!add_esp_byte 0C
+
+		!push_byte 00
+		!push_byte 00
+		!push_byte 00
+		!push_byte 01
+		!push_byte 02
+		!push_dword *_g_lua_async
+		!call >_lua_pcallk
+		!add_esp_byte 18
+		!push_dword *_g_lua_async
+		!call >IEex_CheckCallError
+		!jnz_dword >error
+
+		!push_byte FF
+		!push_dword *_g_lua_async
+		!call >_lua_type
+		!add_esp_byte 08
+		!test_eax_eax
+		!jz_dword >continueNormally
+		
+		!push_byte FF
+		!push_dword *_g_lua_async
+		!call >_lua_toboolean
+		!add_esp_byte 08
+		!push_eax
+		!push_byte FE
+		!push_dword *_g_lua_async
+		!call >_lua_settop
+		!add_esp_byte 08
+		!pop_eax
+		
+		!pop_registers_iwd2
+		!add_esp_byte 04
+		!jmp_dword >return
+
+		@continueNormally
+		!push_byte FE
+		!push_dword *_g_lua_async
+		!call >_lua_settop
+		!add_esp_byte 08
+
+		@error
+		!pop_registers_iwd2
+	]]})
+
+	IEex_HookBeforeCall(0x55FE99, {[[
+
+		!push_registers_iwd2
+
+		!push_dword ]], {IEex_WriteStringAuto("IEex_Extern_OnAddSummonToLimitHook"), 4}, [[
+		!push_dword *_g_lua_async
+		!call >_lua_getglobal
+		!add_esp_byte 08
+
+		; effectData ;
+		!push_esi
+		!fild_[esp]
+		!sub_esp_byte 04
+		!fstp_qword:[esp]
+		!push_dword *_g_lua_async
+		!call >_lua_pushnumber
+		!add_esp_byte 0C
+
+		; summonerData ;
+		!push_[esp+byte] 18
+		!fild_[esp]
+		!sub_esp_byte 04
+		!fstp_qword:[esp]
+		!push_dword *_g_lua_async
+		!call >_lua_pushnumber
+		!add_esp_byte 0C
+
+		; summonedData ;
+		!push_[esp+byte] 1C
+		!fild_[esp]
+		!sub_esp_byte 04
+		!fstp_qword:[esp]
+		!push_dword *_g_lua_async
+		!call >_lua_pushnumber
+		!add_esp_byte 0C
+
+		!push_byte 00
+		!push_byte 00
+		!push_byte 00
+		!push_byte 01
+		!push_byte 03
+		!push_dword *_g_lua_async
+		!call >_lua_pcallk
+		!add_esp_byte 18
+		!push_dword *_g_lua_async
+		!call >IEex_CheckCallError
+		!jnz_dword >continueNormally
+
+		!push_byte FF
+		!push_dword *_g_lua_async
+		!call >_lua_toboolean
+		!add_esp_byte 08
+		!push_eax
+		!push_byte FE
+		!push_dword *_g_lua_async
+		!call >_lua_settop
+		!add_esp_byte 08
+		!pop_eax
+
+		!test_eax_eax
+		!jz_dword >continueNormally
+
+		!pop_registers_iwd2
+		!add_esp_byte 08
+		!jmp_dword >return
+		
+		@continueNormally
+		!pop_registers_iwd2
+	]]})
+
 	-----------------------------
 	-- Opcode Definitions Hook --
 	-----------------------------

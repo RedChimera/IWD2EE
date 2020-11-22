@@ -50,6 +50,24 @@ function IEex_Extern_OnCheckAddScreenEffectsHook(pEffect, pSprite)
 	return false
 end
 
+-- return:
+--   nil   -> to fallback to hardcoded engine implementation
+--   false -> to force summon limit
+--   true  -> to bypass summon limit
+
+function IEex_Extern_OnCheckSummonLimitHook(effectData, summonerData)
+	IEex_AssertThread(IEex_Thread.Async, true)
+	return nil
+end
+
+-- return:
+--   false -> to prevent summon from counting towards hardcoded limit
+--   true  -> to make summon count towards hardcoded limit
+function IEex_Extern_OnAddSummonToLimitHook(effectData, summonerData, summonedData)
+	IEex_AssertThread(IEex_Thread.Async, true)
+	return true
+end
+
 (function()
 
 	IEex_AddScreenEffectsGlobal("EXEFFMOD", function(effectData, creatureData)
