@@ -13221,6 +13221,13 @@ STATISTICS:
 
 Special: If the wearer stands still for 6 seconds without doing anything, they gain a single skin of Stoneskin (absorbing the next 10 points of physical damage from a +4 or lower weapon) for 8 hours
 Weight: 3 lb.~
+@12783    = ~Ring of Life~
+@12784    = ~A ring is a small band of precious metal that is used as jewelry.  Some rare rings have had enchantments placed upon them that confer various magical abilities.  These rings are highly sought after, especially by those of the adventuring profession. For no apparent reason, this ring feels warm to the touch.
+
+STATISTICS:
+
+Wearer regenerates .5% of their max HP (rounded down) each second
+Weight:  0 lb.~
 @12901    = ~Drink this Rainwater Brew, Ennelia. It should help your condition.~
 @12902    = ~Drink this Sour Draught, Ennelia. It should help your condition.~
 @12903    = ~This rainwater brew may help - drink it down.~

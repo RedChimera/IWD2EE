@@ -78,7 +78,7 @@ USRT14_V		RMEW_09	RMIW_09	RARM_09	RSHD_09	RRNG_09	RMSC_09	EOL
 USRT15_V		RMEW_10	RMIW_10	RARM_10	RSHD_10	RRNG_10	RMSC_10	EOL
 USRT16_V	00ax1h84	00ax1h87	00ax2h93	00Club89	USDagg59	USArow59	USRing57	USPlat59	USBwlx59	EOL
 USRT17_V	00ax1h85	00ax2h94	00Club88	USSwdT59	USLeat59	USBrac57	USBwhx57	USClck58	USShld52	EOL
-USRT18_V	00ax1h83	00ax2h85	USFlal59	USPlat58	USShld52	USBelt58	USHelm59	00SwdT96	EOL
+USRT18_V	00ax1h83	00ax2h85	USFlal59	USPlat58	USShld52	USBelt58	USHelm59	00SwdT96	USRing60	EOL
 USRT19_V	00ax2h86	00Club86	USSwdK59	USChan59	USBelt59	USRing58	USRobe59	USStaf59	EOL																						
 
 USNOITEM	No_Drop
@@ -190,7 +190,7 @@ RRNG_09	00Ring88	USRing56	USAmul56	EOL
 RRNG_10	USRing49	USRing52	USRing59	USAmul58	EOL																																										
 RRNG_11	USRing57	EOL																																									
 RRNG_12																																												
-RRNG_13																																												
+RRNG_13	USRing60																																											
 RRNG_14	USRing58	EOL																																												
 																																												
 RMSC_01	00Brac02	00Brac09	00Clck01	00Helm07	USBrac35	EOL																																					

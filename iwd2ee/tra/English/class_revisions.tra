@@ -133,11 +133,11 @@ Benefit: Your sneak attacks deal an additional 1d6 damage. This feat may be take
 
 You are an expert at fighting with two weapons. You can attack even more quickly with them.
 
-Prerequisite: Base attack bonus +16 or higher, must have Ambidexterity and Two-Weapon Fighting or be a ranger
+Prerequisite: Base attack bonus +16 or higher, must have Ambidexterity and Two-Weapon Fighting
 
 Benefit: While wielding two weapons, with each hit you have a 20% chance to immediately make another attack.
 
-Special: Rangers do not need the Ambidexterity and Two-Weapon Fighting feats to gain this feat. However, if a ranger does not have those two feats, they cannot use Improved Two-Weapon Fighting unless they wear light or no armor.~
+Special: A character with 9 levels of ranger can take this feat even if they don't meet the prerequisites. However, if a ranger does not meet the prerequisites, they cannot use Improved Two-Weapon Fighting unless they wear light or no armor.~
 @311    = ~Improved Unarmed Abilities~
 @312    = ~IMPROVED UNARMED ABILITIES:
 
@@ -229,7 +229,7 @@ This feat may be taken up to five times. Each time, you become able to quicken a
 
 You are especially quick with crossbows. You can reload a crossbow faster.
 
-Prerequisites: Base attack bonus +11 or higher, Weapon Focus in crossbows
+Prerequisites: Base attack bonus +6 or higher, Weapon Focus in crossbows
 
 Benefit: Crossbows which would normally restrict you to one attack per round instead restrict you to two attacks per round. Rapid Reload has no effect on crossbows that already allow more than one attack per round.~
 @329    = ~Safe Spell~
@@ -345,7 +345,7 @@ Hit points per level: 1-12
 
 Advantages:
 * Proficient with all simple and martial weapons, light armor, medium armor, and shields.
-* Barbarian Rage: Can rage once per day per every 4 levels (starts at 1st level with one use). Rage gives them +4 to constitution and strength for 5 rounds, as well as 2 point armor class penalty, +2 to Will saves, and immunity to fear, stun, sleep, unconsciousness, paralysis, and hopelessness. After raging the barbarian will be fatigued for a period of time which will lower some of his abilities.
+* Barbarian Rage: Can rage once per day per every 4 levels (starts at 1st level with one use). Rage gives them +4 to constitution and strength for 5 rounds, as well as 2 point armor class penalty, +2 to Will saves, and immunity to fear, stun, sleep, confusion, unconsciousness, paralysis, and hopelessness. After raging the barbarian will be fatigued for a period of time which will lower some of his abilities.
 * Fast Movement: Barbarians can move 10 feet faster than a standard character.
 * 2nd level: Damage Reduction. The barbarian gains 1/- point of resistance to slashing, piercing, bludgeoning and missile damage. He or she gains 1/- additional point of resistance at levels 5, 8, 11, 14, 17, 20, and every 1 level after.
 * 2nd level: Uncanny Dodge. Barbarians retain their Dexterity bonus to Armor Class if they are attacked by invisible foes.
@@ -570,9 +570,9 @@ To accomplish his goals, for good or ill, the rogue is a skilled pilferer. Cunni
 Hit Points per Level: 1-6
 
 Advantages:
-* Proficient with all simple weapons, the martial weapon bows, and light armor.
+* Proficient with all simple weapons, bows, and light armor.
 * Rogues receive a larger number of skill points per level than any other character class. They can use these extra skill points to buy class skills like Disable Device to remove traps, Hide, Pick Pockets, and Use Magic Device.
-* Sneak Attack: Rogues can sneak attack enemies to deal an additional 1d6 damage, plus 1d6 per 2 levels after level 1. An attack counts as a sneak attack if it hits an enemy in the back, if it occurs within 2 seconds of coming out of stealth or invisibility, or if the target is paralyzed, held, stunned, sleeping, confused, or feebleminded.
+* Sneak Attack: Rogues can sneak attack enemies to deal an additional 1d6 damage, plus 1d6 per 2 levels after level 1. An attack counts as a sneak attack if it hits an enemy in the back, if it occurs within 2 seconds of coming out of stealth or invisibility, or if the target is paralyzed, held, stunned, sleeping, confused, feebleminded, grappled, or feinted.
 * 2nd level: Evasion. When a rogue reaches 2nd level, he or she gains the ability to evade damage from area affect spells. Whenever a rogue makes a successful reflex save against an area effect spell that allows a reflex save for half damage, he or she takes no damage.
 * 3rd level: Uncanny Dodge. Rogues retain their Dexterity bonus to Armor Class if they are attacked by invisible foes.
 * 6th level: Uncanny Dodge: Rogues can't be Sneak Attacked by another rogue unless the attacker is four or more levels higher.

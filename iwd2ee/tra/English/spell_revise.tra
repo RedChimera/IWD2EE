@@ -1572,7 +1572,7 @@ Casting Time: 6
 Area of Effect: 1 Creature
 Saving Throw: Fortitude partial
 
-The spell makes a creature... vanish. When cast, a ball of green energy shoots forth from the caster to the target, who will be disintegrated unless they make a Fortitude save. This spell works on undead creatures. If the victim makes its saving throw, it will only suffer 6d6 damage. If it fails, however, it will suffer 2d8 slashing damage per caster level, almost assuredly resulting in the victim's death. This increases to 2d10 at level 20, 2d12 at level 25, and finally 2d20 at level 30. Thus, a level 15 caster would deal 30d8 damage, while a level 30 caster would deal 60d20 damage.
+The spell makes a creature... vanish. When cast, a ball of green energy shoots forth from the caster to the target, who will be disintegrated unless they make a Fortitude save. This spell works on undead creatures. If the victim makes its saving throw, it will only suffer 6d6 damage. If it fails, however, it will suffer 2d10 slashing damage per caster level, almost assuredly resulting in the victim's death.
 ~
 @1696    = ~Power Word: Blind~
 @1697    = ~Power Word: Blind
@@ -1774,7 +1774,7 @@ Casting Time: 2
 Area of Effect: 30-foot radius
 Saving Throw: Fortitude negates
 
-Stinking Cloud creates a billowing mass of noxious vapors up to 30 feet away from the wizard. Any living creature caught within the cloud must roll a successful Fortitude save or become nauseated, making them unable to attack, cast spells, concentrate on spells, and so on. These effects last for as long as the character remains in the cloud.
+Stinking Cloud creates a billowing mass of noxious vapors up to 30 feet away from the wizard. Any living creature caught within the cloud must roll a successful Fortitude save with a +2 bonus or become nauseated, making them unable to attack, cast spells, concentrate on spells, and so on. These effects last for as long as the character remains in the cloud.
 ~
 
 @1755    = ~Unholy Blight~
@@ -2239,7 +2239,7 @@ Casting Time: 2
 Area of Effect: 15-foot radius
 Saving Throw: Reflex negates
 
-Web creates a many-layered mass of strong, sticky strands, similar to spider webs, but much larger and tougher. Creatures within the area of effect who fail a Reflex save suffer a -2 penalty to attack rolls, -4 penalty to Dexterity, and can't move. An entangled character who attempts to cast a spell must make a Concentration check or lose the spell.~
+Web creates a many-layered mass of strong, sticky strands, similar to spider webs, but much larger and tougher. Creatures within the area of effect who fail a Reflex save at +2 suffer a -2 penalty to attack rolls, -4 penalty to Dexterity, and can't move. An entangled character who attempts to cast a spell must make a Concentration check or lose the spell.~
 @1881     = ~Fiery Cloud~
 @1882     = ~Fiery Cloud
 (Conjuration)
@@ -2755,7 +2755,7 @@ Casting Time: 3
 Area of Effect: 1 creature
 Saving Throw: None
 
-Chaotic Commands renders a creature immune to magical commands. Charm, Dominate Person, Command, Sleep, Confusion, Feeblemind, and Symbol spells all fit into this category.~
+Chaotic Commands renders a creature immune to magical commands. Charm, Dominate Person, Command, Sleep, Fear, Confusion, Feeblemind, Hopelessness, and Symbol spells all fit into this category.~
 @31523     = ~Static Charge~
 @32523     = ~Static Charge
 (Transmutation)
@@ -2877,7 +2877,7 @@ Casting Time: 1
 Area of Effect: 1 creature
 Saving Throw: None
 
-In the interests of one's self-control and privacy, Mind Blank shields a creature's mind from almost any mental effect - Charm, Command, Dominate Person, Fear, Feeblemind, and any scrying by crystal balls or other divination methods.~
+In the interests of one's self-control and privacy, Mind Blank shields a creature's mind from almost any mental effect - Charm, Command, Dominate Person, Fear, Feeblemind, Sleep, and any scrying by crystal balls or other divination methods.~
 @33809     = ~Summon Fiend~
 @34809     = ~Summon Fiend
 (Conjuration) 

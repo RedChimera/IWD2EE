@@ -13,7 +13,7 @@ COPY_EXISTING_REGEXP ~sppr.*\.spl~ ~override~ ~spwi.*\.spl~ ~override~ ~uspr.*\.
 			PATCH_IF (theunusability BAND 0x00000400) = 0 BEGIN
 				READ_BYTE 0x2D thekitunusability3
 				READ_BYTE 0x2F thekitunusability4
-				thekitunusability3&=0xC0
+				thekitunusability3&=0x80
 				thekitunusability4&=0x3F
 
 				PATCH_IF theschool = 1 BEGIN
