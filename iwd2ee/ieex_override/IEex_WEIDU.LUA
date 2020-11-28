@@ -3,9 +3,12 @@ ex_proficiency_attack = {[0] = -4, [1] = 0, [2] = 1, [3] = 1, [4] = 1, [5] = 1}
 ex_sneak_attack_delay = 21
 ex_no_sneak_attack_delay = false
 ex_spell_focus_component_installed = false
+ex_no_summoning_limit = false
 ex_construct_race = 156
 ex_fiend_race = 164
 ex_reanimation_level_check_bonus = 5
+ex_due_south_spells = {["USWI653"] = true, }
+ex_bypass_spell_deflection = {}
 ex_feat_name_id = {}
 ex_listspll = {}
 ex_listdomn = {}

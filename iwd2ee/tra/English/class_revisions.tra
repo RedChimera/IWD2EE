@@ -310,7 +310,9 @@ Prerequisites: Dex 13+, Int 13+, Expertise, Dodge, Mobility, Spring Attack, base
 
 Benefit: You gain the Whirlwind Attack ability, usable once per round. By using the ability, you make an attack with each of your weapons against each nearby enemy, forgoing all other attacks for the round. All attacks made this way have a -4 attack penalty and cannot critically hit. The radius of the attack depends on the reach of your weapon.
 
-When taken a second time, the feat is Improved Whirlwind Attack, which increases the radius of the attack by 5 feet.~
+When taken a second time, the feat is Improved Whirlwind Attack, which increases the radius of the attack by 5 feet.
+
+Special: A character with 6 levels of ranger can take this feat as long as they meet the Dexterity requirement, ignoring all the other prerequisites.~
 @345    = ~Natural Spell~
 @346    = ~NATURAL SPELL:
 

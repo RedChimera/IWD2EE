@@ -2250,7 +2250,7 @@ Casting Time: 2
 Area of Effect: 10-foot radius
 Saving Throw: Reflex half
 
-This spell brings forth a thin, smoky cloud that fills the area of effect and initially appears harmless. However, one round later it sparks and flames, dealing 1d4 fire damage per level to anyone caught in the area of effect. The cloud will continue to flare at regular one round intervals for the duration of the spell.~
+This spell brings forth a thin, smoky cloud that fills the area of effect and initially appears harmless. However, one round later it sparks and flames, dealing 1d4 fire damage per level (max 25d4) to anyone caught in the area of effect. The cloud will continue to flare at regular one round intervals for the duration of the spell.~
 @1883     = ~Trollish Fortitude~
 @1884     = ~Trollish Fortitude
 (Necromancy)
@@ -2608,6 +2608,7 @@ Launcher:  Bow~
 @30047=~Protected by Aegis~
 @30048=~Created by the Goodberry spell, these simple looking blueberries will heal 1d4+5 points of damage for each bunch of berries eaten.~
 @30049=~Reflected the attack~
+@30050=~Protected by Spell Trap~
 
 @31115     = ~Armor of Faith~
 @32115     = ~Armor of Faith
@@ -3027,6 +3028,17 @@ Area of Effect: All enemies within 30 ft.
 Saving Throw: Fortitude negates
 
 Mass Harm releases destructive negative energy upon all enemies in the area of effect. Those creatures must Save vs. Fortitude or lose all but 1d4 of their hit points. This spell has no effect on undead or constructs.~
+@35953     = ~Volcanic Eruption~
+@36953     = ~Volcanic Eruption
+(Evocation)
+Level: Drd 9
+Range: Caster
+Duration: Instantaneous
+Casting Time: 12
+Area of Effect: Special
+Saving Throw: Reflex half
+
+This spell triggers a small volcanic eruption centered on the caster. Multiple balls of lava (one per two caster levels) fly through the area in random directions and hit the ground in random spots. Each ball of lava deals 6d6 fire damage (Reflex save for half) to all creatures within 20 feet of its landing point. The caster is completely unharmed by this spell, but their allies are still in danger.~
 @37151     = ~True Strike~
 @38151     = ~True Strike
 (Divination) 
@@ -3099,7 +3111,7 @@ This spell throws the target into the air with incredible force. The target is k
 Level: Brd 5, Sor/Wiz 4
 Range: Sight of Caster
 Duration: 4 rounds
-Casting Time: 4
+Casting Time: 1
 Area of Effect: 15-foot radius
 Saving Throw: None
 
@@ -3125,7 +3137,7 @@ Casting Time: 5
 Area of Effect: 1 creature
 Saving Throw: None
 
-This spell steals memorized spells from the target and grants their spell slots to the caster. The caster makes a Pick Pockets roll, adding their caster level (and any normal bonuses to Pick Pockets). For every 10 points of the total roll, the target loses one memorized spell of 5th-level or lower, and the caster regains one spell of 4th-level or lower (prioritizing the highest-level spells that can be lost or regained this way). There is no Saving Throw, though Magic Resistance may prevent the theft.~
+This spell steals memorized spells from the target and grants their spell slots to the caster. The caster makes a Pick Pockets roll, adding their caster level (and any normal bonuses to Pick Pockets). For every 10 points of the total roll, the target loses one memorized spell of 5th-level or lower, and the caster regains one spell of 4th-level or lower (prioritizing the highest-level spells that can be lost or regained this way). There is no Saving Throw, though Spell Resistance may prevent the theft.~
 @37552     = ~Ethereal Jaunt~
 @38552     = ~Ethereal Jaunt
 (Transmutation)
@@ -3148,6 +3160,17 @@ Area of Effect: 1 creature
 Saving Throw: None 
 
 This spell creates a large number of projectiles akin to those created by the Magic Missile spell, which hit a single target. Each missile deals 1d4+1 magic damage with no saving throw. The spell fires one missile per level of the wizard, to a maximum of 30 missiles at level 30.~
+@37653     = ~Boulder Roll~
+@38653     = ~Boulder Roll
+(Conjuration)
+Level: Drd 6, Sor/Wiz 6
+Range: Special
+Duration: Instantaneous
+Casting Time: 4
+Area of Effect: All creatures in path of boulder
+Saving Throw: Reflex partial
+
+Boulder Roll creates a large boulder, which rolls forward from the caster, crushing creatures in its path, until it hits a wall. Creatures hit take 12d8 crushing damage and are knocked down for 2 rounds. A successful Reflex save halves the damage and prevents one from being knocked down. The boulder always travels due south from the caster.~
 @37751     = ~Stygian Ice Storm~
 @38751     = ~Stygian Ice Storm
 (Conjuration)
@@ -3156,7 +3179,7 @@ Range: Sight of Caster
 Duration: Instantaneous
 Casting Time: 4
 Area of Effect: 20-foot radius
-Saving Throw: Will negates
+Saving Throw: Will partial
 
 Stygian Ice Storm is the signature spell of gelugons. When cast, it summons a storm of hellish ice from Stygia, the fifth layer of the Nine Hells. All creatures in the area of effect take 12d6 cold damage with no save, and must make a Will saving throw or be effectively feebleminded for 3 rounds due to the severe memory loss caused by Stygian ice. The caster is unaffected, as are undead creatures.~
 @37752     = ~Mantle~
@@ -3243,17 +3266,28 @@ Area of Effect: 1 creature
 Saving Throw: None 
 
 Among the greatest teleportation spells, Teleport Step lets the recipient teleport anywhere in the area simply by moving. Click on a destination for the character, and they will teleport there. The character can teleport any number of times with this spell.~
+@37856     = ~Spell Trap~
+@38856     = ~Spell Trap
+(Abjuration)
+Level: Brd 8, Sor/Wiz 8
+Range: Caster
+Duration: 10 rounds/level or until depleted
+Casting Time: 2
+Area of Effect: Caster
+Saving Throw: None
+
+Spell Trap absorbs incoming hostile spells and grants their spell slots to the caster. While Spell Trap is active, if the caster would be hit by a harmful spell, that spell is nullified, and the caster regains a previously cast spell of a level less than or equal to that of the absorbed spell. Spells regained this way must also be 7th-level or lower, even if the absorbed spell was higher than 7th-level. Spell Trap can absorb a total of 18 spell levels before it ends, though as long as there is at least one spell level remaining, the next spell will be absorbed. Spell Trap does not absorb spells cast by allies. It does not absorb Dispel Magic either, though it cannot be dispelled itself.~
 @37952     = ~Perfect Invisibility~
 @38952     = ~Perfect Invisibility
 (Illusion)
 Level: Sor/Wiz 9
 Range: Touch
-Duration: 3 rounds
+Duration: 2 rounds
 Casting Time: 4
 Area of Effect: 1 creature
 Saving Throw: None
 
-This spell is the ultimate form of invisibility. While under the effect of Perfect Invisibility, a creature can attack, cast a spell or otherwise interact with another creature or object while remaining completely invisible. However, Perfect Invisibility can still be dispelled by effects that would dispel regular invisibility, such as True Seeing or Dispel Magic. Barring such removal, the spell will last for 3 rounds.~
+This spell is the ultimate form of invisibility. While under the effect of Perfect Invisibility, a creature can attack, cast a spell or otherwise interact with another creature or object while remaining completely invisible. However, Perfect Invisibility can still be dispelled by effects that would dispel regular invisibility, such as True Seeing or Dispel Magic. Barring such removal, the spell will last for 2 rounds.~
 @37953     = ~Improved Alacrity~
 @38953     = ~Improved Alacrity
 (Transmutation)
@@ -3276,3 +3310,14 @@ Area of Effect: Random creatures within 20 feet
 Saving Throw: Reflex half
 
 Living Lightning is essentially a spell that repeatedly casts itself. When cast, a lightning bolt shoots out of the caster, targeting a random enemy within 20 feet (if there are no enemies within 20 feet of the caster, nothing happens immediately). The bolt deals 10d6 damage, with a Reflex save for half. Every round thereafter for the duration of the spell, another lightning bolt is released, requiring no further action by the caster.~
+@37955     = ~Malavon's Corrosive Fog~
+@38955     = ~Malavon's Corrosive Fog
+(Conjuration)
+Level: Sor/Wiz 9
+Range: Sight of Caster
+Duration: 30 rounds
+Casting Time: 12
+Area of Effect: 40-foot radius
+Saving Throw: Fortitude half
+
+Malavon's Corrosive Fog is another spell created by the dark elf sorcerer Malavon. It creates an enormous cloud of acid fog that lingers for a long time. Each round, any creature in the fog takes 10d6 acid damage (Fortitude save for half).~

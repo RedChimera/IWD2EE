@@ -902,20 +902,20 @@ COPY_EXISTING ~41CLERIM.cre~ ~override~ ~41RCLERM.cre~ ~override~
 
 COPY_EXISTING ~41SHAMAF.cre~ ~override~ ~41RSHAMF.cre~ ~override~
 	LPF	IWD2_REMOVE_CRE_ITEM STR_VAR item=~00POTN03 USPNHF03 00BULL02 RAMO_01~ END
-	LPF	IWD2_ADD_CRE_ITEM INT_VAR cq1=10 equip=1 STR_VAR item=~00BULL94~ slot=~quiver1~ END
+	LPF	IWD2_ADD_CRE_ITEM INT_VAR cq1=15 equip=1 STR_VAR item=~00BULL01~ slot=~quiver1~ END
 
 COPY_EXISTING ~41SHAMAM.cre~ ~override~ ~41RSHAMM.cre~ ~override~
 	LPF	IWD2_REMOVE_CRE_ITEM STR_VAR item=~00POTN03 USPNHF03~ END
 	LPF	IWD2_ADD_CRE_ITEM INT_VAR equip=1 STR_VAR item=~00CWSLG1~ slot=~weapon1~ mode=~replace~ END
-	LPF	IWD2_ADD_CRE_ITEM INT_VAR cq1=10 equip=1 STR_VAR item=~00BULL94~ slot=~quiver1~ END
+	LPF	IWD2_ADD_CRE_ITEM INT_VAR cq1=15 equip=1 STR_VAR item=~00BULL01~ slot=~quiver1~ END
 
 COPY_EXISTING ~41PRIESF.cre~ ~override~ ~41RPRIEF.cre~ ~override~
 	LPF	IWD2_REMOVE_CRE_ITEM STR_VAR item=~00BULL91 RAMO_01~ END
-	LPF	IWD2_ADD_CRE_ITEM INT_VAR cq1=10 equip=1 STR_VAR item=~00BULL94~ slot=~quiver1~ END
+	LPF	IWD2_ADD_CRE_ITEM INT_VAR cq1=15 equip=1 STR_VAR item=~00BULL01~ slot=~quiver1~ END
 
 COPY_EXISTING ~41PRIESM.cre~ ~override~ ~41RPRIEM.cre~ ~override~
 	LPF	IWD2_REMOVE_CRE_ITEM STR_VAR item=~00BULL90 RAMO_01~ END
-	LPF	IWD2_ADD_CRE_ITEM INT_VAR cq1=10 equip=1 STR_VAR item=~00BULL94~ slot=~quiver1~ END
+	LPF	IWD2_ADD_CRE_ITEM INT_VAR cq1=15 equip=1 STR_VAR item=~00BULL01~ slot=~quiver1~ END
 
 COPY_EXISTING ~41CLERIF.cre~ ~override~ ~41CLERIM.cre~ ~override~ ~41RCLERF.cre~ ~override~ ~41RCLERM.cre~ ~override~
 	WRITE_BYTE coldresistance 100

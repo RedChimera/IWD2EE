@@ -60,7 +60,7 @@
 @59   = ~Have the party start the game with extra experience in Heart of Fury Mode~
 @60   = ~Start with a total of 36000 experience divided among the party, enough for a six-character party to start at level 4 (recommended if you've installed some of the components that weaken HoF creatures)~
 @61   = ~Start with a total of 90000 experience divided among the party, enough for a six-character party to start at level 6~
-@62   = ~Start with a total of 270000 experience divided among the party, enough for a six-character party to start at level 10 (recommended if you haven't installed the components that weaken HoF creatures)~
+@62   = ~Start with a total of 270000 experience divided among the party, enough for a six-character party to start at level 10~
 @63   = ~Reduce the delay after a sneak attack before the creature can be sneak attacked again~
 @64   = ~Revise opposing schools for specialist wizards~
 @65   = ~Remove it~
@@ -74,3 +74,8 @@
 @73   = ~Let aasimars, tieflings, drow, duergar, and svirfneblin level up just as fast as other races (no ECL/level adjustment) but weaken them to the power level of other races~
 @74   = ~Revise racial level adjustment/ECL~
 @75   = ~Always learn spells from scrolls successfully~
+@76   = ~Each party member starts HoF with 6000 experience, enough to reach level 4~
+@77   = ~Each party member starts HoF with 15000 experience, enough to reach level 6~
+@78   = ~Each party member starts HoF with 28000 experience, enough to reach level 8 (recommended if you've installed some of the components that weaken HoF creatures)~
+@79   = ~Each party member starts HoF with 45000 experience, enough to reach level 10~
+@80   = ~Each party member starts HoF with 78000 experience, enough to reach level 13 (recommended if you haven't installed the components that weaken HoF creatures)~

@@ -57,6 +57,7 @@ end
 
 function IEex_Extern_OnCheckSummonLimitHook(effectData, summonerData)
 	IEex_AssertThread(IEex_Thread.Async, true)
+	if ex_no_summoning_limit or bit32.band(IEex_ReadDword(effectData + 0x3C), 0x10000) > 0 then return true end
 	return nil
 end
 
@@ -65,17 +66,24 @@ end
 --   true  -> to make summon count towards hardcoded limit
 function IEex_Extern_OnAddSummonToLimitHook(effectData, summonerData, summonedData)
 	IEex_AssertThread(IEex_Thread.Async, true)
+	IEex_WriteDword(summonedData + 0x72C, IEex_GetActorIDShare(summonerData))
+	if ex_no_summoning_limit or bit32.band(IEex_ReadDword(effectData + 0x3C), 0x10000) > 0 then return false end
 	return true
 end
 
 (function()
 
 	IEex_AddScreenEffectsGlobal("EXEFFMOD", function(effectData, creatureData)
-		local targetID = IEex_ReadDword(creatureData + 0x34)
+		local targetID = IEex_GetActorIDShare(creatureData)
 		local sourceID = IEex_ReadDword(effectData + 0x10C)
-		if not IEex_IsSprite(sourceID, true) then return false end
-		local internal_flags = IEex_ReadDword(effectData + 0xC8)
 		local opcode = IEex_ReadDword(effectData + 0xC)
+		if not IEex_IsSprite(sourceID, true) then return false end
+		print("Opcode " .. opcode .. " on " .. IEex_GetActorName(targetID))
+		if opcode == 500 then
+			print(IEex_ReadLString(effectData + 0x2C, 8))
+		end
+		local internal_flags = IEex_ReadDword(effectData + 0xC8)
+
 		local parameter1 = IEex_ReadDword(effectData + 0x18)
 		local parameter2 = IEex_ReadDword(effectData + 0x1C)
 		local timing = IEex_ReadDword(effectData + 0x20)

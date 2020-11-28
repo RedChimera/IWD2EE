@@ -383,20 +383,20 @@ BEGIN @49 DESIGNATED 50
 
 //Have the party start with more experience on Heart of Fury Mode
 
-BEGIN @60 DESIGNATED 64
+BEGIN @78 DESIGNATED 64
 SUBCOMPONENT @59
 
-      INCLUDE ~%mod_folder%/components/hof_start_xp_4.tpa~ //~Start with a total of 36000 experience divided among the party, enough for a six-character party to start at level 4~
+      INCLUDE ~%mod_folder%/components/hof_start_xp_8.tpa~ //~Each party member starts HoF with 28000 experience, enough to reach level 8~
 
-BEGIN @61 DESIGNATED 66
+BEGIN @79 DESIGNATED 66
 SUBCOMPONENT @59
 
-      INCLUDE ~%mod_folder%/components/hof_start_xp_6.tpa~ //~Start with a total of 90000 experience divided among the party, enough for a six-character party to start at level 6~
+      INCLUDE ~%mod_folder%/components/hof_start_xp_10.tpa~ //~Each party member starts HoF with 45000 experience, enough to reach level 10~
 
-BEGIN @62 DESIGNATED 70
+BEGIN @80 DESIGNATED 70
 SUBCOMPONENT @59
 
-      INCLUDE ~%mod_folder%/components/hof_start_xp_10.tpa~ //~Start with a total of 270000 experience divided among the party, enough for a six-character party to start at level 10~
+      INCLUDE ~%mod_folder%/components/hof_start_xp_13.tpa~ //~Each party member starts HoF with 78000 experience, enough to reach level 13~
 
 //Reduce the delay after a sneak attack before the creature can be sneak attacked again
 

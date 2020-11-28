@@ -327,7 +327,7 @@ In Heart of Fury Mode, allied summoned creatures also get HoF bonuses, and since
 
 ## Have the party start with more experience on Heart of Fury Mode
 
-The beginning of Heart of Fury Mode is absolutely brutal if you start at level 1 - even with some of those components installed that weaken HoF creatures. This component gives the party some experience at the start of the game. The experience is divided among party members, so a smaller party will start at a higher level. You have choices of how much experience to start with.
+The beginning of Heart of Fury Mode is absolutely brutal if you start at level 1 - even with some of those components installed that weaken HoF creatures. This component gives each party member some experience at the start of the game. The experience each character starts with is the same regardless of party size. You have choices of how much experience to start with.
 
 ## Remove the delay after a sneak attack before the creature can be sneak attacked again
 

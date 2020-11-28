@@ -141,7 +141,7 @@ RSHD_10	USShld54	USShld58	EOL
 RSHD_11																																												
 RSHD_12	USShld59	EOL																																													
 RSHD_13	USShld52	EOL																																											
-RSHD_14																																												
+RSHD_14	USShld60	EOL																																											
 																																												
 RAMO_01	00Arow03	00Arow89	00Arow90	00Arow96	00Arow97	00Bolt03	00Bull02	00Bull91	00Dart02	00Dart04	00Dart87	00Dart88	EOL																																
 RAMO_02	00Arow04	00Arow05	00Arow08	00Arow09	00Arow87	00Arow88	00Arow95	00Arow99	00Bolt04	00Bolt05	00Bolt08	00Bolt94	00Bolt95	00Bolt96	00Bull03	00Bull87	00Bull88	00Bull93	00Bull94	00Bull95	00Bull96	00Dart85	00Dart93	EOL																																		
@@ -190,7 +190,7 @@ RRNG_09	00Ring88	USRing56	USAmul56	EOL
 RRNG_10	USRing49	USRing52	USRing59	USAmul58	EOL																																										
 RRNG_11	USRing57	EOL																																									
 RRNG_12																																												
-RRNG_13	USRing60																																											
+RRNG_13	USRing60	EOL																																										
 RRNG_14	USRing58	EOL																																												
 																																												
 RMSC_01	00Brac02	00Brac09	00Clck01	00Helm07	USBrac35	EOL																																					

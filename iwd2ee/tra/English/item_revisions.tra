@@ -11968,7 +11968,7 @@ Special:
   Resistance: 5/- Poison Resistance
 Armor Check Penalty:  -10
 Arcane Spell Failure:  50%
-Weight: 25 lb.~
+Weight: 10 lb.~
 @12543    = ~Large Shield of the Sun +6~
 @12544    = ~A large shield is carried in the same manner as a small shield. Its weight prevents the character from using his shield hand for anything other than carrying the large shield. Large shields are usually made of metal, range from 3'-4' in diameter, and can be of any shape, from round to square to a spread dragon's wings. A typical medieval shield resembles a triangle with one point facing downward. This shield has runes scribed onto it that glow eerily in dim light. 
 
@@ -12406,10 +12406,10 @@ Max Dex Bonus:  +4
 Armor Check Penalty:  -3
 Arcane Spell Failure:  20%
 Special:
-  Resistance: 15/- Fire Resistance
-  Resistance: 15/- Cold Resistance
-  Resistance: 15/- Electrical Resistance
-  Resistance: 15/- Acid Resistance
+  Resistance: 40/- Fire Resistance
+  Resistance: 40/- Cold Resistance
+  Resistance: 40/- Electrical Resistance
+  Resistance: 40/- Acid Resistance
 Weight: 10 lb.~
 @12615    = ~Amulet of Willpower~
 @12616    = ~Amulets are some of the most favored items to enchant by wizards because of their ability to be worn without interfering with the delicate rituals of spell casting. This particular amulet increases the wearer's ability to shrug off harmful mental effects.
@@ -13213,7 +13213,6 @@ STATISTICS:
 
 All poison damage dealt by the character is increased by 50%
 Weight:  2 lb.~
-@12900    = ~Hrm - you are powerful allies, indeed. More gold and gems to line your pockets, then - also, a suit of plate armor, a warhammer, a helmet, all crafted and enchanted by great duergar artisans. They are well deserved, outsider.~
 @12781    = ~Gargoyle Boots~
 @12782    = ~Legend holds that the Mage who created this magical footwear trapped the spirit of an actual gargoyle within these boots. Unfortunately, they couldn't protect the nameless wizard from the vengeance of the gargoyle's mate.
 
@@ -13228,9 +13227,51 @@ STATISTICS:
 
 Wearer regenerates .5% of their max HP (rounded down) each second
 Weight:  0 lb.~
+@12785    = ~Malakar +2~
+@12786    = ~This sleek katana radiates magical energy when carried. The Malakar, or "Dueling Steel," was used by a less-than-honorable samurai during duels against other samurai. As if of its own volition, it will swoop down and deflect the slashing attacks of other weapons. It is perfect for the warrior concerned about defense as well as offense.
+
+STATISTICS:
+
+Damage:  1d10 + 2
+Attack Bonus: +2
+Enchantment:  +2
+Damage Type:  Slashing
+Special:
+  Malakar deflects the first instance of slashing damage that would hit the wielder each round
+Weight: 4 lb.
+Feat Requirement:  Exotic Weapon, Bastard Sword
+Type:  One-handed~
+@12787    = ~Malakar +5~
+@12788    = ~This sleek katana radiates magical energy when carried. The Malakar, or "Dueling Steel," was used by a less-than-honorable samurai during duels against other samurai. As if of its own volition, it will swoop down and deflect the slashing attacks of other weapons. It is perfect for the warrior concerned about defense as well as offense.
+
+STATISTICS:
+
+Damage:  1d10 + 5
+Attack Bonus: +5
+Enchantment:  +5
+Damage Type:  Slashing
+Special:
+  Malakar deflects the first instance of slashing damage that would hit the wielder each round
+Weight: 4 lb.
+Feat Requirement:  Exotic Weapon, Bastard Sword
+Type:  One-handed~
+@12789    = ~Greater Shield of Reflection +6~
+@12790    = ~This massive shield is nearly as tall as the wielder. Basically, it is a portable wall meant to provide cover. It can provide up to total cover, depending on how far you come out from behind it. A tower shield, however, does not provide cover against targeted spells; a spellcaster can cast a spell on you by targeting the shield you are holding. This shield has runes scribed onto it that glow eerily in dim light.
+
+STATISTICS:
+
+Shield Bonus: +8
+Armor Bonus:  +1 vs. missile weapons
+Special:  
+  The first instance of physical damage that would hit the character each turn is reflected back at the source. If the damage was from an attack, any on-hit effects of the attack are also reflected.
+Armor Check Penalty:  -2
+Arcane Spell Failure:  15%
+Weight: 8 lb.~
+@12900    = ~Hrm - you are powerful allies, indeed. More gold and gems to line your pockets, then - also, a suit of plate armor, a warhammer, a helmet, all crafted and enchanted by great duergar artisans. They are well deserved, outsider.~
 @12901    = ~Drink this Rainwater Brew, Ennelia. It should help your condition.~
 @12902    = ~Drink this Sour Draught, Ennelia. It should help your condition.~
 @12903    = ~This rainwater brew may help - drink it down.~
 @12904    = ~Perhaps a sour draught can help your wounds.~
 @12905    = ~This rainwater brew may help - drink it down.~
 @12906    = ~Perhaps a sour draught can help your wounds.~
+@12907    = ~Malakar deflected a slashing attack~
