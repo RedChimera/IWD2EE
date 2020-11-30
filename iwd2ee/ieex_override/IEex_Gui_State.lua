@@ -322,14 +322,23 @@ function IEex_Quickloot_GetSlotData(controlID, alreadyLocked)
 end
 
 function IEex_Quickloot_GetValidPartyMember()
-	local actorID = IEex_GetActorIDSelected()
-	if actorID == -1 then
-		for i = 0, 5, 1 do
-			actorID = IEex_GetActorIDPortrait(i)
-			if IEex_IsSprite(actorID) then break end
-		end
+
+	local validate = function(actorID)
+		if actorID == -1 then return false end
+		local share = IEex_GetActorShare(actorID)
+		if share == 0x0 then return false end
+		local area = IEex_ReadDword(share + 0x12)
+		return area ~= 0x0
 	end
-	return actorID
+
+	local selectedID = IEex_GetActorIDSelected()
+	if validate(selectedID) then return selectedID end
+
+	for i = 0, 5, 1 do
+		local portraitID = IEex_GetActorIDPortrait(i)
+		if validate(portraitID) then return portraitID end
+	end
+	return -1
 end
 
 function IEex_Quickloot_GetPanel()

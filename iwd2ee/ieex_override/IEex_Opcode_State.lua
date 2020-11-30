@@ -78,9 +78,9 @@ end
 		local sourceID = IEex_ReadDword(effectData + 0x10C)
 		local opcode = IEex_ReadDword(effectData + 0xC)
 		if not IEex_IsSprite(sourceID, true) then return false end
-		print("Opcode " .. opcode .. " on " .. IEex_GetActorName(targetID))
+		--print("Opcode " .. opcode .. " on " .. IEex_GetActorName(targetID))
 		if opcode == 500 then
-			print(IEex_ReadLString(effectData + 0x2C, 8))
+			--print(IEex_ReadLString(effectData + 0x2C, 8))
 		end
 		local internal_flags = IEex_ReadDword(effectData + 0xC8)
 
