@@ -57,7 +57,7 @@ end
 
 function IEex_Extern_OnCheckSummonLimitHook(effectData, summonerData)
 	IEex_AssertThread(IEex_Thread.Async, true)
-	if ex_no_summoning_limit or bit32.band(IEex_ReadDword(effectData + 0x3C), 0x10000) > 0 then return true end
+	if ex_no_summoning_limit or bit.band(IEex_ReadDword(effectData + 0x3C), 0x10000) > 0 then return true end
 	return nil
 end
 
@@ -67,7 +67,7 @@ end
 function IEex_Extern_OnAddSummonToLimitHook(effectData, summonerData, summonedData)
 	IEex_AssertThread(IEex_Thread.Async, true)
 	IEex_WriteDword(summonedData + 0x72C, IEex_GetActorIDShare(summonerData))
-	if ex_no_summoning_limit or bit32.band(IEex_ReadDword(effectData + 0x3C), 0x10000) > 0 then return false end
+	if ex_no_summoning_limit or bit.band(IEex_ReadDword(effectData + 0x3C), 0x10000) > 0 then return false end
 	return true
 end
 
@@ -89,7 +89,7 @@ end
 		local timing = IEex_ReadDword(effectData + 0x20)
 		local duration = IEex_ReadDword(effectData + 0x24)
 		local time_applied = IEex_ReadDword(effectData + 0x68)
-		if bit32.band(internal_flags, 0x2000000) > 0 then return false end
+		if bit.band(internal_flags, 0x2000000) > 0 then return false end
 		local savingthrow = IEex_ReadDword(effectData + 0x3C)
 		local savebonus = IEex_ReadDword(effectData + 0x40)
 		local school = IEex_ReadDword(effectData + 0x48)

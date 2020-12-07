@@ -26,12 +26,10 @@
 	
 		!push_byte 00
 		!push_byte 00
-		!push_byte 00
-		!push_byte 00
 		!push_byte 01
 		!push_ebx
-		!call >_lua_pcallk
-		!add_esp_byte 18
+		!call >_lua_pcall
+		!add_esp_byte 10
 		!push_ebx
 		!call >IEex_CheckCallError
 	
@@ -70,12 +68,10 @@
 	
 		!push_byte 00
 		!push_byte 00
-		!push_byte 00
-		!push_byte 00
 		!push_byte 02
 		!push_ebx
-		!call >_lua_pcallk
-		!add_esp_byte 18
+		!call >_lua_pcall
+		!add_esp_byte 10
 		!push_ebx
 		!call >IEex_CheckCallError
 	
@@ -113,13 +109,11 @@
 		!add_esp_byte 0C
 	
 		!push_byte 00
-		!push_byte 00
-		!push_byte 00
 		!push_byte 01
 		!push_byte 02
 		!push_ebx
-		!call >_lua_pcallk
-		!add_esp_byte 18
+		!call >_lua_pcall
+		!add_esp_byte 10
 		!push_ebx
 		!call >IEex_CheckCallError
 		!test_eax_eax

@@ -24,12 +24,12 @@ function IEex_Free(address)
 end
 
 function IEex_ReadByte(address, index)
-	return bit32.extract(IEex_ReadDword(address), index * 0x8, 0x8)
+	return bit.extract(IEex_ReadDword(address), index * 0x8, 0x8)
 end
 
 -- Reads a dword from the given address, extracting and returning the "index"th signed byte.
 function IEex_ReadSignedByte(address, index)
-	local readValue = bit32.extract(IEex_ReadDword(address), index * 0x8, 0x8)
+	local readValue = bit.extract(IEex_ReadDword(address), index * 0x8, 0x8)
 	-- TODO: Implement better conversion code.
 	if readValue >= 128 then
 		return -256 + readValue
@@ -39,12 +39,12 @@ function IEex_ReadSignedByte(address, index)
 end
 
 function IEex_ReadWord(address, index)
-	return bit32.extract(IEex_ReadDword(address), index * 0x10, 0x10)
+	return bit.extract(IEex_ReadDword(address), index * 0x10, 0x10)
 end
 
 -- Reads a signed 2-byte word at the given address, shifted over by 2*index bytes.
 function IEex_ReadSignedWord(address, index)
-	local readValue = bit32.extract(IEex_ReadDword(address), index * 0x10, 0x10)
+	local readValue = bit.extract(IEex_ReadDword(address), index * 0x10, 0x10)
 	-- TODO: This is definitely not the right way to do the conversion,
 	-- but I have at least 32 bits to play around with; will do for now.
 	if readValue >= 32768 then
@@ -56,13 +56,13 @@ end
 
 function IEex_WriteWord(address, value)
 	for i = 0, 1, 1 do
-		IEex_WriteByte(address + i, bit32.extract(value, i * 0x8, 0x8))
+		IEex_WriteByte(address + i, bit.extract(value, i * 0x8, 0x8))
 	end
 end
 
 function IEex_WriteDword(address, value)
 	for i = 0, 3, 1 do
-		IEex_WriteByte(address + i, bit32.extract(value, i * 0x8, 0x8))
+		IEex_WriteByte(address + i, bit.extract(value, i * 0x8, 0x8))
 	end
 end
 
@@ -135,7 +135,7 @@ function IEex_DumpLuaStack()
 			local boolean = IEex_Call(IEex_Label("_lua_toboolean"), {i, lua_State}, nil, 0x8)
 			IEex_FunctionLog("    boolean: "..boolean)
 		elseif t == 3 then
-			local number = IEex_Call(IEex_Label("_lua_tonumberx"), {0x0, i, lua_State}, nil, 0xC)
+			local number = IEex_Call(IEex_Label("_lua_tonumber"), {i, lua_State}, nil, 0x8)
 			IEex_FunctionLog("    number: "..IEex_ToHex(number))
 		elseif t == 4 then
 			local string = IEex_Call(IEex_Label("_lua_tolstring"), {0x0, i, lua_State}, nil, 0x8)
@@ -165,7 +165,7 @@ function IEex_DumpDynamicCode()
 					for k = 0, 3, 1 do
 						local byteAddress = address + k
 						if byteAddress < limit then
-							local byte = bit32.extract(currentDword, k * 8, 8)
+							local byte = bit.extract(currentDword, k * 8, 8)
 							byteDump = byteDump..IEex_ToHex(byte, 2, true).." "
 						end
 					end
@@ -582,21 +582,21 @@ function IEex_WriteAssembly(address, args, funcOverride)
 						local targetOffset = tonumber(string.sub(section, 2, #section), 16)
 						local relativeOffsetNeeded = targetOffset - (currentWriteAddress + 4)
 						for i = 0, 3, 1 do
-							local byte = bit32.extract(relativeOffsetNeeded, i * 8, 8)
+							local byte = bit.extract(relativeOffsetNeeded, i * 8, 8)
 							funcOverride(currentWriteAddress, byte)
 							currentWriteAddress = currentWriteAddress + 1
 						end
 					elseif prefix == "#" then
 						local toWrite = tonumber(string.sub(section, 2, #section), 16)
 						for i = 0, 3, 1 do
-							local byte = bit32.extract(toWrite, i * 8, 8)
+							local byte = bit.extract(toWrite, i * 8, 8)
 							funcOverride(currentWriteAddress, byte)
 							currentWriteAddress = currentWriteAddress + 1
 						end
 					elseif prefix == "+" then -- Writes absolute address of relative offset
 						local targetOffset = currentWriteAddress + 4 + tonumber(string.sub(section, 2, #section), 16)
 						for i = 0, 3, 1 do
-							local byte = bit32.extract(targetOffset, i * 8, 8)
+							local byte = bit.extract(targetOffset, i * 8, 8)
 							funcOverride(currentWriteAddress, byte)
 							currentWriteAddress = currentWriteAddress + 1
 						end
@@ -614,7 +614,7 @@ function IEex_WriteAssembly(address, args, funcOverride)
 						end
 						local relativeOffsetNeeded = targetOffset - (currentWriteAddress + 4)
 						for i = 0, 3, 1 do
-							local byte = bit32.extract(relativeOffsetNeeded, i * 8, 8)
+							local byte = bit.extract(relativeOffsetNeeded, i * 8, 8)
 							funcOverride(currentWriteAddress, byte)
 							currentWriteAddress = currentWriteAddress + 1
 						end
@@ -631,7 +631,7 @@ function IEex_WriteAssembly(address, args, funcOverride)
 							end
 						end
 						for i = 0, 3, 1 do
-							local byte = bit32.extract(targetOffset, i * 8, 8)
+							local byte = bit.extract(targetOffset, i * 8, 8)
 							funcOverride(currentWriteAddress, byte)
 							currentWriteAddress = currentWriteAddress + 1
 						end
@@ -684,7 +684,7 @@ function IEex_WriteAssembly(address, args, funcOverride)
 					if relativeFromOffset then address = address - currentWriteAddress - relativeFromOffset end
 					local limit = length - 1
 					for i = 0, limit, 1 do
-						local byte = bit32.extract(address, i * 8, 8)
+						local byte = bit.extract(address, i * 8, 8)
 						funcOverride(currentWriteAddress, byte)
 						currentWriteAddress = currentWriteAddress + 1
 					end
@@ -1085,13 +1085,23 @@ end
 function IEex_Flags(flags)
 	local result = 0x0
 	for _, flag in ipairs(flags) do
-		result = bit32.bor(result, flag)
+		result = bit.bor(result, flag)
 	end
 	return result
 end
 
+-- LuaJIT doesn't include this :(
+function bit.extract(num, start, len)
+	local mask = 0x0
+	for i = 1, len, 1 do
+		mask = bit.lshift(mask, 1)
+		mask = bit.bor(mask, 1)
+	end
+	return bit.band(bit.rshift(num, start), mask)
+end
+
 function IEex_IsBitSet(original, isSetIndex)
-	return bit32.band(original, bit32.lshift(0x1, isSetIndex)) ~= 0x0
+	return bit.band(original, bit.lshift(0x1, isSetIndex)) ~= 0x0
 end
 
 function IEex_AreBitsSet(original, bitsString)
@@ -1099,11 +1109,11 @@ function IEex_AreBitsSet(original, bitsString)
 end
 
 function IEex_IsMaskSet(original, isSetMask)
-	return bit32.band(original, isSetMask) == isSetMask
+	return bit.band(original, isSetMask) == isSetMask
 end
 
 function IEex_IsBitUnset(original, isUnsetIndex)
-	return bit32.band(original, bit32.lshift(0x1, isUnsetIndex)) == 0x0
+	return bit.band(original, bit.lshift(0x1, isUnsetIndex)) == 0x0
 end
 
 function IEex_AreBitsUnset(original, bitsString)
@@ -1111,11 +1121,11 @@ function IEex_AreBitsUnset(original, bitsString)
 end
 
 function IEex_IsMaskUnset(original, isUnsetMask)
-	return bit32.band(original, isUnsetMask) == 0x0
+	return bit.band(original, isUnsetMask) == 0x0
 end
 
 function IEex_SetBit(original, toSetIndex)
-	return bit32.bor(original, bit32.lshift(0x1, toSetIndex))
+	return bit.bor(original, bit.lshift(0x1, toSetIndex))
 end
 
 function IEex_SetBits(original, bitsString)
@@ -1123,11 +1133,11 @@ function IEex_SetBits(original, bitsString)
 end
 
 function IEex_SetMask(original, toSetMask)
-	return bit32.bor(original, toSetMask)
+	return bit.bor(original, toSetMask)
 end
 
 function IEex_UnsetBit(original, toUnsetIndex)
-	return bit32.band(original, bit32.bnot(bit32.lshift(0x1, toUnsetIndex)))
+	return bit.band(original, bit.bnot(bit.lshift(0x1, toUnsetIndex)))
 end
 
 function IEex_UnsetBits(original, bitsString)
@@ -1135,7 +1145,7 @@ function IEex_UnsetBits(original, bitsString)
 end
 
 function IEex_UnsetMask(original, toUnsetmask)
-	return bit32.band(original, bit32.bnot(toUnsetmask))
+	return bit.band(original, bit.bnot(toUnsetmask))
 end
 
 function IEex_ToHex(number, minLength, suppressPrefix)
@@ -1149,8 +1159,8 @@ function IEex_ToHex(number, minLength, suppressPrefix)
 		-- string.format can't handle "negative" numbers for some reason
 		hexString = ""
 		while number ~= 0x0 do
-			hexString = string.format("%x", bit32.extract(number, 0, 4)):upper()..hexString
-			number = bit32.rshift(number, 4)
+			hexString = string.format("%x", bit.extract(number, 0, 4)):upper()..hexString
+			number = bit.rshift(number, 4)
 		end
 	else
 		hexString = string.format("%x", number):upper()

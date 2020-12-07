@@ -204,9 +204,9 @@ function IEex_Extern_CChitin_ProcessEvents_CheckKeys()
 	for key = 0x1, 0xFE, 1 do
 
 		-- USER32.DLL::GetAsyncKeyState
-		local result = bit32.band(IEex_Call(IEex_ReadDword(0x8474A8), {key}, nil, 0x0), 0xFFFF)
-		local isPhysicallyDown = bit32.band(result, 0x8000) ~= 0x0
-		local pressedSinceLastPoll = bit32.band(result, 0x1) ~= 0x0
+		local result = bit.band(IEex_Call(IEex_ReadDword(0x8474A8), {key}, nil, 0x0), 0xFFFF)
+		local isPhysicallyDown = bit.band(result, 0x8000) ~= 0x0
+		local pressedSinceLastPoll = bit.band(result, 0x1) ~= 0x0
 
 		local keyData = IEex_Helper_GetBridge("IEex_Keys", key)
 		local isDown = IEex_Helper_GetBridge(keyData, "isDown")

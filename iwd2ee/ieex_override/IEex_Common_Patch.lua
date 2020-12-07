@@ -47,6 +47,33 @@
 		--  Default Functions --
 		------------------------
 
+		-- LuaJIT doesn't export these :(
+		IEex_WriteAssemblyAuto({[[
+			$_lua_getglobal
+			!build_stack_frame
+			!push_[ebp+byte] 0C
+			!push_dword #FFFFD8EE ; LUA_GLOBALSINDEX ;
+			!push_[ebp+byte] 08
+			!call >_lua_getfield
+			!add_esp_byte 0C
+			!xor_eax_eax
+			!destroy_stack_frame
+			!ret
+		]]})
+
+		IEex_WriteAssemblyAuto({[[
+			$_lua_setglobal
+			!build_stack_frame
+			!push_[ebp+byte] 0C
+			!push_dword #FFFFD8EE ; LUA_GLOBALSINDEX ;
+			!push_[ebp+byte] 08
+			!call >_lua_setfield
+			!add_esp_byte 0C
+			!xor_eax_eax
+			!destroy_stack_frame
+			!ret
+		]]})
+
 		-- Calls an internal function at the given address.
 
 		-- stackArgs: Includes the values to be pushed before the function is called.
@@ -68,7 +95,7 @@
 			!push_state
 			!push_byte 02
 			!push_[ebp+byte] 08
-			!call >_lua_rawlen
+			!call >_lua_objlen
 			!add_esp_byte 08
 			!test_eax_eax
 			!je_dword >no_args
@@ -80,11 +107,10 @@
 			!push_[ebp+byte] 08
 			!call >_lua_rawgeti
 			!add_esp_byte 0C
-			!push_byte 00
 			!push_byte FF
 			!push_[ebp+byte] 08
-			!call >_lua_tonumberx
-			!add_esp_byte 0C
+			!call >_lua_tonumber
+			!add_esp_byte 08
 			!call >__ftol2_sse
 			!push_eax
 			!push_byte FE
@@ -95,18 +121,16 @@
 			!cmp_esi_edi
 			!jle_dword >arg_loop
 			@no_args
-			!push_byte 00
 			!push_byte 03
 			!push_[ebp+byte] 08
-			!call >_lua_tonumberx
-			!add_esp_byte 0C
+			!call >_lua_tonumber
+			!add_esp_byte 08
 			!call >__ftol2_sse
 			!push_eax
-			!push_byte 00
 			!push_byte 01
 			!push_[ebp+byte] 08
-			!call >_lua_tonumberx
-			!add_esp_byte 0C
+			!call >_lua_tonumber
+			!add_esp_byte 08
 			!call >__ftol2_sse
 			!pop_ecx
 			!call_eax
@@ -117,11 +141,10 @@
 			!push_[ebp+byte] 08
 			!call >_lua_pushnumber
 			!add_esp_byte 0C
-			!push_byte 00
 			!push_byte 04
 			!push_[ebp+byte] 08
-			!call >_lua_tonumberx
-			!add_esp_byte 0C
+			!call >_lua_tonumber
+			!add_esp_byte 08
 			!call >__ftol2_sse
 			!add_esp_eax
 			!mov_eax #01
@@ -140,11 +163,10 @@
 			!build_stack_frame
 			!push_registers
 
-			!push_byte 00
 			!push_byte 01
 			!push_[ebp+byte] 08
-			!call >_lua_tonumberx
-			!add_esp_byte 0C
+			!call >_lua_tonumber
+			!add_esp_byte 08
 			!call >__ftol2_sse
 			!mov_edi_eax
 
@@ -184,11 +206,10 @@
 			!build_stack_frame
 			!push_registers
 
-			!push_byte 00
 			!push_byte 01
 			!push_[ebp+byte] 08
-			!call >_lua_tonumberx
-			!add_esp_byte 0C
+			!call >_lua_tonumber
+			!add_esp_byte 08
 			!call >__ftol2_sse
 			!mov_edi_eax
 
@@ -199,11 +220,10 @@
 			!add_esp_byte 0C
 			!mov_esi_eax
 
-			!push_byte 00
 			!push_byte 03
 			!push_[ebp+byte] 08
-			!call >_lua_tonumberx
-			!add_esp_byte 0C
+			!call >_lua_tonumber
+			!add_esp_byte 08
 			!call >__ftol2_sse
 			!mov_ebx_eax
 
@@ -253,11 +273,10 @@
 			$IEex_ReadDword
 			!push_state
 
-			!push_byte 00
 			!push_byte 01
 			!push_[ebp+byte] 08
-			!call >_lua_tonumberx
-			!add_esp_byte 0C
+			!call >_lua_tonumber
+			!add_esp_byte 08
 			!call >__ftol2_sse
 
 			!push_[eax]
@@ -286,11 +305,10 @@
 		IEex_WriteAssemblyFunction("IEex_ReadString", {[[
 			$IEex_ReadString
 			!push_state
-			!push_byte 00
 			!push_byte 01
 			!push_[ebp+byte] 08
-			!call >_lua_tonumberx
-			!add_esp_byte 0C
+			!call >_lua_tonumber
+			!add_esp_byte 08
 			!call >__ftol2_sse
 			!push_eax
 			!push_[ebp+byte] 08
@@ -312,18 +330,16 @@
 			!build_stack_frame
 			!sub_esp_byte 08
 			!push_registers
-			!push_byte 00
 			!push_byte 01
 			!push_[ebp+byte] 08
-			!call >_lua_tonumberx
-			!add_esp_byte 0C
+			!call >_lua_tonumber
+			!add_esp_byte 08
 			!call >__ftol2_sse
 			!mov_esi_eax
-			!push_byte 00
 			!push_byte 02
 			!push_[ebp+byte] 08
-			!call >_lua_tonumberx
-			!add_esp_byte 0C
+			!call >_lua_tonumber
+			!add_esp_byte 08
 			!call >__ftol2_sse
 			!mov_ebx_eax
 			!and_eax_byte FC
@@ -371,9 +387,9 @@
 		-- SIGNATURE:
 		-- userdata result = IEex_ToLightUserdata(number address)
 		IEex_WriteAssemblyFunction("IEex_ToLightUserdata", {
-			"$IEex_ToLightUserdata 55 8B EC 53 51 52 56 57 6A 00 6A 01 FF 75 08 \z
-			!call >_lua_tonumberx \z
-			83 C4 0C \z
+			"$IEex_ToLightUserdata 55 8B EC 53 51 52 56 57 6A 01 FF 75 08 \z
+			!call >_lua_tonumber \z
+			83 C4 08 \z
 			!call >__ftol2_sse \z
 			50 FF 75 08 \z
 			!call >_lua_pushlightuserdata \z
@@ -419,19 +435,17 @@
 			$IEex_WriteByte
 			!push_state
 
-			!push_byte 00
 			!push_byte 01
 			!push_[ebp+byte] 08
-			!call >_lua_tonumberx
-			!add_esp_byte 0C
+			!call >_lua_tonumber
+			!add_esp_byte 08
 			!call >__ftol2_sse
 			!mov_edi_eax
 
-			!push_byte 00
 			!push_byte 02
 			!push_[ebp+byte] 08
-			!call >_lua_tonumberx
-			!add_esp_byte 0C
+			!call >_lua_tonumber
+			!add_esp_byte 08
 			!call >__ftol2_sse
 
 			!mov_byte:[edi]_al
@@ -454,11 +468,10 @@
 			; name ;
 			!push_eax
 
-			!push_byte 00
 			!push_byte 01
 			!push_[ebp+byte] 08
-			!call >_lua_tonumberx
-			!add_esp_byte 0C
+			!call >_lua_tonumber
+			!add_esp_byte 08
 			!call >__ftol2_sse
 
 			; function ;
