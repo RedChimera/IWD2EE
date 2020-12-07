@@ -35,6 +35,7 @@ dofile("override/IEex_Opcode_State.lua")
 dofile("override/IEex_Gui_State.lua")
 dofile("override/IEex_Key_State.lua")
 dofile("override/IEex_Resource_State.lua")
+dofile("override/IEex_Projectile_State.lua")
 
 dofile("override/IEex_TRA.lua")
 dofile("override/IEex_WEIDU.lua")

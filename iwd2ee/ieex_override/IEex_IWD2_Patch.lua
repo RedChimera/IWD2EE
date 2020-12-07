@@ -11,8 +11,7 @@ IEex_Debug_Stutter = false
 	dofile("override/IEex_Opcode_Patch.lua")
 	dofile("override/IEex_Gui_Patch.lua")
 	dofile("override/IEex_Key_Patch.lua")
-
-	IEex_DisableCodeProtection()
+	dofile("override/IEex_Projectile_Patch.lua")
 
 	if IEex_Debug_Stutter then
 
@@ -20,6 +19,7 @@ IEex_Debug_Stutter = false
 		IEex_WriteDword(inAreaRender, 0x0)
 		IEex_DefineAssemblyLabel("inAreaRender", inAreaRender)
 
+		IEex_DisableCodeProtection()
 		IEex_HookRestore(0x790DC6, 6, 0, {[[
 			!push_all_registers_iwd2
 			!push_ecx
@@ -46,10 +46,9 @@ IEex_Debug_Stutter = false
 			@no_log
 			!pop_all_registers_iwd2
 		]]})
+		IEex_EnableCodeProtection()
 
 	end
-
-	IEex_EnableCodeProtection()
 
 	-- Actually IWD2's "operator_new" and "operator_delete", (needed for IEex memory to interact with engine)
 	-- NOTE: THESE NEED TO BE THE LAST LINES EXECUTED DURING INITIAL STARTUP!

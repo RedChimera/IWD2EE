@@ -927,6 +927,10 @@ function IEex_HookJumpNoReturn(address, assembly)
 	IEex_WriteAssembly(address, {"!jmp_dword", {IEex_WriteAssemblyAuto(assembly), 4, 4}})
 end
 
+function IEex_HookChangeCallDest(address, dest)
+	IEex_WriteAssembly(address + 0x1, {{dest, 4, 4}})
+end
+
 function IEex_WriteOpcode(opcodeFunctions)
 
 	local IEex_RunOpcodeDecode = function(vftable)
