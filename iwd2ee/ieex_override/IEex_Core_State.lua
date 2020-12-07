@@ -116,17 +116,17 @@ function IEex_Extern_CSpell_UsableBySprite(CSpell, sprite)
 
 	local kit = IEex_GetActorStat(IEex_GetActorIDShare(sprite), 89)
 
-	local mageKits = bit32.band(kit, 0x7FC0)
+	local mageKits = bit.band(kit, 0x7FC0)
 	local unusableKits = IEex_Flags({
-		bit32.lshift(IEex_ReadByte(itemData + 0x29, 0), 24),
-		bit32.lshift(IEex_ReadByte(itemData + 0x2B, 0), 16),
-		bit32.lshift(IEex_ReadByte(itemData + 0x2D, 0), 8),
+		bit.lshift(IEex_ReadByte(itemData + 0x29, 0), 24),
+		bit.lshift(IEex_ReadByte(itemData + 0x2B, 0), 16),
+		bit.lshift(IEex_ReadByte(itemData + 0x2D, 0), 8),
 		IEex_ReadByte(itemData + 0x2F, 0)
 	})
 
 	resWrapper:free()
 
-	if bit32.band(unusableKits, mageKits) ~= 0x0 then
+	if bit.band(unusableKits, mageKits) ~= 0x0 then
 		-- Mage kit was explicitly excluded
 		return false
 	end
@@ -156,8 +156,8 @@ end
 -----------
 
 function IEex_IsFeatTaken(baseStats, featID)
-	local mask = bit32.lshift(1, bit32.band(featID, 0x1F))
-	local offset = bit32.rshift(featID, 5)
+	local mask = bit.lshift(1, bit.band(featID, 0x1F))
+	local offset = bit.rshift(featID, 5)
 	local featField = IEex_ReadDword(baseStats+offset*4+0x1B8)
 	return IEex_IsMaskSet(featField, mask)
 end
@@ -486,12 +486,10 @@ function IEex_WriteDelayedPatches()
 
 		!push_byte 00
 		!push_byte 00
-		!push_byte 00
-		!push_byte 00
 		!push_byte 03
 		!push_dword *_g_lua_async
-		!call >_lua_pcallk
-		!add_esp_byte 18
+		!call >_lua_pcall
+		!add_esp_byte 10
 		!push_dword *_g_lua_async
 		!call >IEex_CheckCallError
 
@@ -543,21 +541,19 @@ function IEex_WriteDelayedPatches()
 		!add_esp_byte 0C
 
 		!push_byte 00
-		!push_byte 00
-		!push_byte 00
 		!push_byte 01
 		!push_byte 02
 		!push_ebx
-		!call >_lua_pcallk
-		!add_esp_byte 18
+		!call >_lua_pcall
+		!add_esp_byte 10
 		!push_ebx
 		!call >IEex_CheckCallError
 
-		!push_byte 00
+
 		!push_byte FF
 		!push_ebx
-		!call >_lua_tonumberx
-		!add_esp_byte 0C
+		!call >_lua_tonumber
+		!add_esp_byte 08
 
 		!call >__ftol2_sse
 		!push_eax
@@ -611,21 +607,18 @@ function IEex_WriteDelayedPatches()
 		!add_esp_byte 0C
 
 		!push_byte 00
-		!push_byte 00
-		!push_byte 00
 		!push_byte 01
 		!push_byte 01
 		!push_dword *_g_lua
-		!call >_lua_pcallk
-		!add_esp_byte 18
+		!call >_lua_pcall
+		!add_esp_byte 10
 		!push_dword *_g_lua
 		!call >IEex_CheckCallError
 
-		!push_byte 00
 		!push_byte FF
 		!push_dword *_g_lua
-		!call >_lua_tonumberx
-		!add_esp_byte 0C
+		!call >_lua_tonumber
+		!add_esp_byte 08
 
 		!call >__ftol2_sse
 		!push_eax
@@ -689,13 +682,11 @@ function IEex_WriteDelayedPatches()
 		!add_esp_byte 0C
 
 		!push_byte 00
-		!push_byte 00
-		!push_byte 00
 		!push_byte 01
 		!push_byte 02
 		!push_ebx
-		!call >_lua_pcallk
-		!add_esp_byte 18
+		!call >_lua_pcall
+		!add_esp_byte 10
 		!push_ebx
 		!call >IEex_CheckCallError
 
@@ -766,13 +757,11 @@ function IEex_WriteDelayedPatches()
 		!add_esp_byte 0C
 
 		!push_byte 00
-		!push_byte 00
-		!push_byte 00
 		!push_byte 01
 		!push_byte 02
 		!push_ebx
-		!call >_lua_pcallk
-		!add_esp_byte 18
+		!call >_lua_pcall
+		!add_esp_byte 10
 		!push_ebx
 		!call >IEex_CheckCallError
 
@@ -831,13 +820,11 @@ function IEex_WriteDelayedPatches()
 		!add_esp_byte 0C
 
 		!push_byte 00
-		!push_byte 00
-		!push_byte 00
 		!push_byte 01
 		!push_byte 01
 		!push_dword *_g_lua
-		!call >_lua_pcallk
-		!add_esp_byte 18
+		!call >_lua_pcall
+		!add_esp_byte 10
 		!push_dword *_g_lua
 		!call >IEex_CheckCallError
 

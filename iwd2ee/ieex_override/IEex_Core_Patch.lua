@@ -84,12 +84,10 @@
 
 		!push_byte 00
 		!push_byte 00
-		!push_byte 00
-		!push_byte 00
 		!push_byte 01
 		!push_[ebp+byte] 08
-		!call >_lua_pcallk
-		!add_esp_byte 18
+		!call >_lua_pcall
+		!add_esp_byte 10
 
 		; Clear error string off of stack ;
 		!push_byte FE
@@ -191,11 +189,9 @@
 		!push_byte 00
 		!push_byte 00
 		!push_byte 00
-		!push_byte 00
-		!push_byte 00
 		!push_dword *_g_lua
-		!call >_lua_pcallk
-		!add_esp_byte 18
+		!call >_lua_pcall
+		!add_esp_byte 10
 		!push_dword *_g_lua
 		!call >IEex_CheckCallError
 
@@ -260,11 +256,9 @@
 		!push_byte 00
 		!push_byte 00
 		!push_byte 00
-		!push_byte 00
-		!push_byte 00
 		!push_dword *_g_lua_async
-		!call >_lua_pcallk
-		!add_esp_byte 18
+		!call >_lua_pcall
+		!add_esp_byte 10
 		!push_dword *_g_lua_async
 		!call >IEex_CheckCallError
 
@@ -284,12 +278,10 @@
 
 		!push_byte 00
 		!push_byte 00
-		!push_byte 00
-		!push_byte 00
 		!push_byte 01
 		!push_dword *_g_lua_async
-		!call >_lua_pcallk
-		!add_esp_byte 18
+		!call >_lua_pcall
+		!add_esp_byte 10
 		!push_dword *_g_lua_async
 		!call >IEex_CheckCallError
 
@@ -325,12 +317,10 @@
 
 		!push_byte 00
 		!push_byte 00
-		!push_byte 00
-		!push_byte 00
 		!push_byte 01
 		!push_ebx
-		!call >_lua_pcallk
-		!add_esp_byte 18
+		!call >_lua_pcall
+		!add_esp_byte 10
 		!push_ebx
 		!call >IEex_CheckCallError
 
@@ -400,12 +390,10 @@
 
 		!push_byte 00
 		!push_byte 00
-		!push_byte 00
-		!push_byte 00
 		!push_byte 02
 		!push_ebx
-		!call >_lua_pcallk
-		!add_esp_byte 18
+		!call >_lua_pcall
+		!add_esp_byte 10
 		!push_ebx
 		!call >IEex_CheckCallError
 
@@ -437,11 +425,9 @@
 		!push_byte 00
 		!push_byte 00
 		!push_byte 00
-		!push_byte 00
-		!push_byte 00
 		!push_dword *_g_lua
-		!call >_lua_pcallk
-		!add_esp_byte 18
+		!call >_lua_pcall
+		!add_esp_byte 10
 		!push_dword *_g_lua
 		!call >IEex_CheckCallError
 
@@ -469,11 +455,9 @@
 		!push_byte 00
 		!push_byte 00
 		!push_byte 00
-		!push_byte 00
-		!push_byte 00
 		!push_dword *_g_lua
-		!call >_lua_pcallk
-		!add_esp_byte 18
+		!call >_lua_pcall
+		!add_esp_byte 10
 		!push_dword *_g_lua
 		!call >IEex_CheckCallError
 
@@ -532,11 +516,9 @@
 		!push_byte 00
 		!push_byte 00
 		!push_byte 00
-		!push_byte 00
-		!push_byte 00
 		!push_dword *_g_lua
-		!call >_lua_pcallk
-		!add_esp_byte 18
+		!call >_lua_pcall
+		!add_esp_byte 10
 
 		!test_eax_eax
 		!jnz_dword >error
@@ -615,12 +597,10 @@
 
 		!push_byte 00
 		!push_byte 00
-		!push_byte 00
-		!push_byte 00
 		!push_byte 03
 		!push_dword *_g_lua_async
-		!call >_lua_pcallk
-		!add_esp_byte 18
+		!call >_lua_pcall
+		!add_esp_byte 10
 		!push_dword *_g_lua_async
 		!call >IEex_CheckCallError
 
@@ -703,13 +683,11 @@
 		!add_esp_byte 0C
 
 		!push_byte 00
-		!push_byte 00
-		!push_byte 00
 		!push_byte 01
 		!push_byte 02
 		!push_dword *_g_lua_async
-		!call >_lua_pcallk
-		!add_esp_byte 18
+		!call >_lua_pcall
+		!add_esp_byte 10
 		!push_dword *_g_lua_async
 		!call >IEex_CheckCallError
 
@@ -808,13 +786,11 @@
 		!add_esp_byte 0C
 
 		!push_byte 00
-		!push_byte 00
-		!push_byte 00
 		!push_byte 01
 		!push_byte 01
 		!push_ebx
-		!call >_lua_pcallk
-		!add_esp_byte 18
+		!call >_lua_pcall
+		!add_esp_byte 10
 		!push_ebx
 		!call >IEex_CheckCallError
 		!test_eax_eax
@@ -823,11 +799,10 @@
 		!jmp_dword >error
 
 		@ok
-		!push_byte 00
 		!push_byte FF
 		!push_ebx
-		!call >_lua_tonumberx
-		!add_esp_byte 0C
+		!call >_lua_tonumber
+		!add_esp_byte 08
 		!call >__ftol2_sse
 		!push_eax
 		!push_byte FE
@@ -942,13 +917,11 @@
 		!add_esp_byte 0C
 
 		!push_byte 00
-		!push_byte 00
-		!push_byte 00
 		!push_byte 01
 		!push_byte 01
 		!push_ebx
-		!call >_lua_pcallk
-		!add_esp_byte 18
+		!call >_lua_pcall
+		!add_esp_byte 10
 		!push_ebx
 		!call >IEex_CheckCallError
 		!test_eax_eax
@@ -957,11 +930,10 @@
 		!jmp_dword >error
 
 		@ok
-		!push_byte 00
 		!push_byte FF
 		!push_ebx
-		!call >_lua_tonumberx
-		!add_esp_byte 0C
+		!call >_lua_tonumber
+		!add_esp_byte 08
 		!call >__ftol2_sse
 		!push_eax
 		!push_byte FE

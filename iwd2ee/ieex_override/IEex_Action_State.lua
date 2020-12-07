@@ -263,7 +263,7 @@ function EXAPPLSP(actionData, creatureData)
 		local resWrapper = IEex_DemandRes(spellRES, "SPL")
 		if resWrapper:isValid() then
 			local spellData = resWrapper:getData()
-			if bit32.band(IEex_ReadDword(spellData + 0x18), 0x10000000) > 0 then
+			if bit.band(IEex_ReadDword(spellData + 0x18), 0x10000000) > 0 then
 				local targetID = IEex_GetActionObjectID(actionData)
 				local targetX = IEex_GetActionPointX(actionData)
 				local targetY = IEex_GetActionPointY(actionData)

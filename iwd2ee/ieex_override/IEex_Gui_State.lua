@@ -551,12 +551,10 @@ IEex_Once("IEex_QuicklootCustomControls", function()
 
 		!push_byte 00
 		!push_byte 00
-		!push_byte 00
-		!push_byte 00
 		!push_byte 01
 		!push_dword *_g_lua_async
-		!call >_lua_pcallk
-		!add_esp_byte 18
+		!call >_lua_pcall
+		!add_esp_byte 10
 		!push_dword *_g_lua_async
 		!call >IEex_CheckCallError
 
@@ -591,12 +589,10 @@ IEex_Once("IEex_QuicklootCustomControls", function()
 
 		!push_byte 00
 		!push_byte 00
-		!push_byte 00
-		!push_byte 00
 		!push_byte 01
 		!push_dword *_g_lua_async
-		!call >_lua_pcallk
-		!add_esp_byte 18
+		!call >_lua_pcall
+		!add_esp_byte 10
 		!push_dword *_g_lua_async
 		!call >IEex_CheckCallError
 
