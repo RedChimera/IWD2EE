@@ -25,6 +25,8 @@ COPY_EXISTING_REGEXP ~00FIST\.itm~ ~override~ ~00MFIST.*\.itm~ ~override~ ~CHILL
 COPY_EXISTING_REGEXP ~.*\.itm~ ~override~
 	READ_SHORT 0x68 thenumheaders
 	PATCH_IF thenumheaders > 0 BEGIN
+		READ_SHORT 0x1C theitemtype
+		READ_ASCII 0x22 theappearance (2)
 		offset = 0x82
 		FOR (i = 0; i < thenumheaders; ++i) BEGIN
 			READ_BYTE offset theheadertype
@@ -37,10 +39,16 @@ COPY_EXISTING_REGEXP ~.*\.itm~ ~override~
 			END ELSE BEGIN
 				damageeffecttype = 0x1000000
 			END
+			newdamage = 0
+			PATCH_IF theitemtype = 16 AND theheadertype = 1 AND (~%theappearance%~ STRING_EQUAL_CASE ~DD~ OR ~%theappearance%~ STRING_EQUAL_CASE ~SS~) BEGIN
+				newdamage = 0x20600
+			END ELSE PATCH_IF theitemtype = 0 OR theitemtype = 16 OR theitemtype = 19 OR theitemtype = 24 OR theitemtype = 28 OR theitemtype = 44 BEGIN
+				newdamage = 0x10600
+			END
 			PATCH_IF theheadertype = 1 AND thedicenumber > 0 BEGIN
-				LPF ADD_ITEM_EFFECT INT_VAR header=(i + 1) type=1 opcode=500 target=2 timing=0 parameter2=damageeffecttype savingthrow=0x1884000 STR_VAR resource=~EXDAMAGE~ END
+				LPF ADD_ITEM_EFFECT INT_VAR header=(i + 1) type=1 opcode=500 target=2 timing=0 parameter1=newdamage parameter2=damageeffecttype savingthrow=0x1884000 STR_VAR resource=~EXDAMAGE~ END
 			END ELSE PATCH_IF theheadertype = 2 AND thedicenumber > 0 BEGIN
-				LPF ADD_ITEM_EFFECT INT_VAR header=(i + 1) type=2 opcode=500 target=2 timing=0 parameter2=damageeffecttype savingthrow=0x884000 STR_VAR resource=~EXDAMAGE~ END
+				LPF ADD_ITEM_EFFECT INT_VAR header=(i + 1) type=2 opcode=500 target=2 timing=0 parameter1=newdamage parameter2=damageeffecttype savingthrow=0x1884000 STR_VAR resource=~EXDAMAGE~ END
 			END
 			offset += 0x38
 		END
@@ -102,6 +110,16 @@ COPY_EXISTING_REGEXP ~.*\.itm~ ~override~
 		END
 	END
 	UNLESS ~EXDAMAGE~
+	BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING_REGEXP ~..BOWS..\.itm~ ~override~ ~..BOWP..\.itm~ ~override~ ~..BWLX..\.itm~ ~override~ ~..HFBS..\.itm~ ~override~ ~..HFBP..\.itm~ ~override~ ~..HFLX..\.itm~ ~override~
+	READ_SHORT 0x68 thenumheaders
+	READ_SHORT 0x1C theitemtype
+	PATCH_IF thenumheaders > 0 AND (theitemtype = 15 OR theitemtype = 27) BEGIN
+		LPF ADD_ITEM_EQEFFECT INT_VAR opcode=288 target=1 timing=2 parameter1=1 parameter2=192 STR_VAR resource=~USSNEAKX~ END
+	END
+	IF_EXISTS
+	UNLESS ~USSNEAKX~
 	BUT_ONLY_IF_IT_CHANGES
 
 COPY_EXISTING_REGEXP ~.*\.itm~ ~override~

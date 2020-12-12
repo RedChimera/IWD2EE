@@ -574,7 +574,7 @@ Hit Points per Level: 1-6
 Advantages:
 * Proficient with all simple weapons, bows, and light armor.
 * Rogues receive a larger number of skill points per level than any other character class. They can use these extra skill points to buy class skills like Disable Device to remove traps, Hide, Pick Pockets, and Use Magic Device.
-* Sneak Attack: Rogues can sneak attack enemies to deal an additional 1d6 damage, plus 1d6 per 2 levels after level 1. An attack counts as a sneak attack if it hits an enemy in the back, if it occurs within 2 seconds of coming out of stealth or invisibility, or if the target is paralyzed, held, stunned, sleeping, confused, feebleminded, grappled, or feinted.
+* Sneak Attack: Rogues can sneak attack enemies to deal an additional 1d6 damage, plus 1d6 per 2 levels after level 1. An attack counts as a sneak attack if it hits an enemy in the back, if it occurs within 2 seconds of coming out of stealth or invisibility, or if the target is paralyzed, held, stunned, sleeping, confused, feebleminded, grappled, or feinted. Shortswords, throwing daggers, darts, shortbows, composite shortbows, light crossbows, slings, clubs and unarmed attacks deal +1d6 sneak attack damage. Melee daggers deal +2d6 sneak attack damage.
 * 2nd level: Evasion. When a rogue reaches 2nd level, he or she gains the ability to evade damage from area affect spells. Whenever a rogue makes a successful reflex save against an area effect spell that allows a reflex save for half damage, he or she takes no damage.
 * 3rd level: Uncanny Dodge. Rogues retain their Dexterity bonus to Armor Class if they are attacked by invisible foes.
 * 6th level: Uncanny Dodge: Rogues can't be Sneak Attacked by another rogue unless the attacker is four or more levels higher.
@@ -702,7 +702,7 @@ Domain Spells:
 4: Cloak of Fear, Emotion: Despair
 5: Domination, Greater Command
 6: Feeblemind, Power Word: Silence
-7: Control Undead, Gate
+7: Control Undead, Cacofiend
 8: Enslave, Great Shout
 9: Mass Dominate, Power Word: Kill~
 @581    = ~
@@ -773,10 +773,10 @@ Domain Spells:
 3: Summon Cow, Wall of Moonlight
 4: Emotion: Rage, Ghost Armor
 5: Protection from Magic Energy, Suffocate
-6: Antimagic Field, Divine Shell
-7: Lutzaen's Local Teleport, Planar Binding: Air Elemental
-8: Improved Alacrity, Planar Ally: Fire Elemental
-9: Elemental Legion, Prismatic Spray~
+6: Boulder Roll, Divine Shell
+7: Lutzaen's Local Teleport, Antimagic Field
+8: Improved Alacrity, Prismatic Spray
+9: Elemental Legion, Teleport Step~
 @587    = ~
 
 Domain Spells:

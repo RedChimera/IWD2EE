@@ -4162,6 +4162,18 @@ COPY_EXISTING ~USSHLD60.itm~ ~override~
 	SAY NAME2 @12789
 	SAY IDENTIFIED_DESC @12790
 
+COPY_EXISTING ~USSTAF54.itm~ ~override~
+	PATCH_IF FILE_EXISTS_IN_GAME ~WQLGSA1.BAM~ BEGIN
+		WRITE_ASCII 0x22 ~GS~ #2
+	END
+	SAY NAME2 @12791
+	SAY IDENTIFIED_DESC @12792
+
+COPY_EXISTING ~USSWDC50.itm~ ~override~
+	SAY NAME2 @12793
+	SAY IDENTIFIED_DESC @12794
+
+
 //General patch changes
 
 /*
@@ -4950,6 +4962,7 @@ COPY_EXISTING ~00BASHS3.sto~ ~override~ //Avarine Decanter genie store
 	ADD_STORE_ITEM ~USAROW52~ AFTER ~00AROW07~ #1 #1 #1 ~IDENTIFIED~ #30 //Arrows of Detonation
 //	ADD_STORE_ITEM ~USRINGTH~ AFTER ~00RING18~ #1 #1 #1 ~IDENTIFIED~ #1 //Ring of Thex
 //	ADD_STORE_ITEM ~USRTHF39~ AFTER ~00RING18~ #1 #1 #1 ~IDENTIFIED~ #1 //Celestial Fury
+	ADD_STORE_ITEM ~USSWDC50~ AFTER ~00RING18~ #1 #1 #1 ~IDENTIFIED~ #1 //Translocation Scimitar
 	ADD_STORE_ITEM ~USRTHF50~ AFTER ~00RING18~ #1 #1 #1 ~IDENTIFIED~ #1 //Malakar
 	ADD_STORE_ITEM ~USPERM50~ AFTER ~00POTN01~ #1 #1 #1 ~IDENTIFIED~ #1 //Impervious Elixir
 	ADD_STORE_ITEM ~00POTN97~ AFTER ~00POTN01~ #1 #1 #1 ~IDENTIFIED~ #1 //Potion of Resistance
@@ -5047,7 +5060,9 @@ COPY_EXISTING ~60CHEAP.sto~ ~override~ //Bonus store
 	ADD_STORE_ITEM ~00RTHF68~ AFTER ~00RTKT15~ #1 #1 #1 ~IDENTIFIED~ #1 //Delnar's Delight
 	ADD_STORE_ITEM ~USRTHF48~ AFTER ~00RTKT15~ #1 #1 #1 ~IDENTIFIED~ #1 //Namji's Robe
 	ADD_STORE_ITEM ~00ROBE06~ AFTER ~00RTKT15~ #1 #1 #1 ~IDENTIFIED~ #1 //Robe of the Neutral Archmagi
+	ADD_STORE_ITEM ~00ROBE05~ AFTER ~00RTKT15~ #1 #1 #1 ~IDENTIFIED~ #1 //Robe of the Good Archmagi
 	ADD_STORE_ITEM ~00RTHF77~ AFTER ~00RTKT15~ #1 #1 #1 ~IDENTIFIED~ #1 //The Unstrung Harp
+	ADD_STORE_ITEM ~USSTAF54~ AFTER ~USSTAF48~ #1 #1 #1 ~IDENTIFIED~ #1 //Staff of Widening
 
 COPY_EXISTING ~60NATHAN.sto~ ~override~ //Kuldahar Nathaniel store
 	REMOVE_STORE_ITEM ~00AMUL12~
@@ -5187,10 +5202,10 @@ COPY_EXISTING ~ar4102.are~ ~override~ //Ice Temple level 2
 
 COPY_EXISTING ~ar5002.are~ ~override~ //Limha's home
 	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR charges1=1  charges2=0  charges3=0 single_match=1 STR_VAR old_item=~00POTN11~ new_item=~00POTN78~ END
-
+/*
 COPY_EXISTING ~ar5030.are~ ~override~ //Fell Wood, Will o' Wisp lair
 	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR charges2=1 charges3=1 single_match=1 STR_VAR old_item=~RT08_R~ new_item=~USRTHF37~ END
-
+*/
 COPY_EXISTING ~ar5100.are~ ~override~ //Hook Horror caves
 	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR container=1 charges1=3000 charges2=6000 charges3=0 single_match=1 STR_VAR old_item=~MISC07~ new_item=~MISC07~ END
 

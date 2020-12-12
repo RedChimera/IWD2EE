@@ -2615,17 +2615,28 @@ Launcher:  Bow~
 (Abjuration) 
 Level: Clr 1, Pal, Helm 1
 Range: Caster
-Duration: 3 rounds + 1 round/level 
+Duration: 10 rounds + 1 round/level
 Casting Time: 1
 Area of Effect: Caster
 Saving Throw: None 
 
 The armor of faith is a force of energy that absorbs a portion of the damage intended for the caster. The caster gains a 1/- resistance to all non-poison damage for the duration of the spell. For every five caster levels, they get another 1/- resistance.~
+@31150     = ~Summon Nature's Ally I~
+@32150     = ~Summon Nature's Ally I
+(Conjuration) 
+Level: Drd 1, Rgr 1
+Range: Sight of Caster
+Duration: 10 rounds + 5 rounds/level
+Casting Time: 6 
+Area of Effect: Special 
+Saving Throw: None 
+
+This spell summons one or more creatures of nature who will aid the caster for the duration of the spell. The type of creatures that comes is random.~
 @31202     = ~Barkskin~
 @32202     = ~Barkskin
 (Transmutation) 
 Level: Drd 2, Rgr 2
-Range: Touch 
+Range: Touch
 Duration: 10 rounds + 2 rounds/level
 Casting Time: 5
 Area of Effect: 1 creature
@@ -2669,6 +2680,17 @@ Area of Effect: 5' x 20' x 20' cone
 Saving Throw: Reflex half
 
 This spell calls upon Selune's connection with moonlight and magic to invoke a spray of glowing spheres. The spell causes 1d6 magic damage per level (max 5d6) to every creature caught in its path. Creatures can make a Reflex save for half damage.~
+@31250     = ~Summon Nature's Ally II~
+@32250     = ~Summon Nature's Ally II
+(Conjuration) 
+Level: Drd 2, Rgr 2
+Range: Sight of Caster
+Duration: 10 rounds + 5 rounds/level
+Casting Time: 6 
+Area of Effect: Special 
+Saving Throw: None 
+
+This spell summons one or more creatures of nature who will aid the caster for the duration of the spell.  The type of creatures that come is random.  The creatures summoned are more powerful than creatures summoned by lesser versions of this spell.~
 @31308     = ~Remove Paralysis~
 @32308     = ~Remove Paralysis
 (Conjuration) 
@@ -2713,6 +2735,28 @@ Area of Effect: 1 creature
 Saving Throw: None 
 
 This spell employs positive energy to ward off the effects of negative energy from attacks such as those employed by wights, spectres and vampires.  The target creature is immune to energy drain for the duration of the spell.~
+@31350     = ~Summon Nature's Ally III~
+@32350     = ~Summon Nature's Ally III
+(Conjuration) 
+Level: Drd 3, Rgr 3
+Range: Sight of Caster
+Duration: 10 rounds + 5 rounds/level
+Casting Time: 6 
+Area of Effect: Special 
+Saving Throw: None 
+
+This spell summons one or more creatures of nature who will aid the caster for the duration of the spell.  The type of creatures that come is random.  The creatures summoned are more powerful than creatures summoned by lesser versions of this spell.~
+@31402     = ~Summon Nature's Ally IV~
+@32402     = ~Summon Nature's Ally IV
+(Conjuration) 
+Level: Drd 4, Rgr 4
+Range: Sight of Caster
+Duration: 10 rounds + 5 rounds/level
+Casting Time: 6 
+Area of Effect: Special 
+Saving Throw: None
+
+This spell summons one or more creatures of nature who will aid the caster for the duration of the spell.  The type of creatures that come is random.  The creatures summoned are more powerful than creatures summoned by lesser versions of this spell.~
 @31409     = ~Cloak of Fear~
 @32409     = ~Cloak of Fear
 (Conjuration)
@@ -2746,6 +2790,17 @@ Area of Effect: 20-foot long, 5-foot wide wall
 Saving Throw: None 
 
 This spell brings into existence an immobile, blazing curtain of shimmering fire. Any creature passing through the wall takes 9d6 fire damage. Only one wall of fire may be active at any one time.~
+@31501     = ~Summon Nature's Ally V~
+@32501     = ~Summon Nature's Ally V
+(Conjuration) 
+Level: Drd 5, Rgr 5
+Range: Sight of Caster
+Duration: 10 rounds + 5 rounds/level
+Casting Time: 6 
+Area of Effect: Special 
+Saving Throw: None 
+
+This spell summons one or more creatures of nature who will aid the caster for the duration of the spell.  The type of creatures that come is random.  The creatures summoned are more powerful than creatures summoned by lesser versions of this spell.~
 @31508     = ~Chaotic Commands~
 @32508     = ~Chaotic Commands
 (Enchantment) [Chaos]
@@ -2767,6 +2822,17 @@ Area of Effect: Sight of Caster
 Saving Throw: Reflex half
 
 Static Charge is similar to Call Lightning except it can be used indoors. Upon completion of this spell an enemy creature within the area of effect is fried by a static discharge for 1d8 electricity damage per caster level, to a maximum of 16d8 electricity damage.  Once released the static charge will build up again on the caster, discharging once per 5 rounds for the duration of the spell.~
+@31602     = ~Summon Nature's Ally VI~
+@32602     = ~Summon Nature's Ally VI
+(Conjuration) 
+Level: Drd 6, Rgr 6
+Range: Sight of Caster
+Duration: 10 rounds + 5 rounds/level
+Casting Time: 6 
+Area of Effect: Special 
+Saving Throw: None 
+
+This spell summons one or more creatures of nature who will aid the caster for the duration of the spell.  The type of creatures that come is random.  The creatures summoned are more powerful than creatures summoned by lesser versions of this spell.~
 @31616     = ~Dolorous Decay~
 @32616     = ~Dolorous Decay
 (Necromancy) 
@@ -2778,6 +2844,50 @@ Area of Effect: 1 creature
 Saving Throw: Fortitude negates
 
 Dolorous decay is a rotting and withering of the body that spreads quickly and painfully throughout the afflicted creature.  Afflicted creatures take 1 point of damage per second and are slowed for 1 round per level.  The target creature can resist the disease with a successful Fortitude save at a -8 penalty.~
+@31750     = ~Summon Nature's Ally VII~
+@32750     = ~Summon Nature's Ally VII
+(Conjuration) 
+Level: Drd 7
+Range: Sight of Caster
+Duration: 10 rounds + 5 rounds/level
+Casting Time: 6 
+Area of Effect: Special 
+Saving Throw: None 
+
+This spell summons one or more creatures of nature who will aid the caster for the duration of the spell.  The type of creatures that come is random.  The creatures summoned are more powerful than creatures summoned by lesser versions of this spell.~
+@31850     = ~Summon Nature's Ally VIII~
+@32850     = ~Summon Nature's Ally VIII
+(Conjuration) 
+Level: Drd 8
+Range: Sight of Caster
+Duration: 10 rounds + 5 rounds/level
+Casting Time: 6 
+Area of Effect: Special 
+Saving Throw: None 
+
+This spell summons one or more creatures of nature who will aid the caster for the duration of the spell.  The type of creatures that come is random.  The creatures summoned are more powerful than creatures summoned by lesser versions of this spell.~
+@31901     = ~Elemental Legion~
+@32901     = ~Elemental Legion
+(Conjuration)
+Level: Drd 9, Selune 9
+Range: Sight of Caster
+Duration: 3 rounds + 1 round/level
+Casting Time: 15
+Area of Effect: Special 
+Saving Throw: None
+
+This spell allows the caster to summon four elementals, one from each of the elemental planes. The spell always summons 12 hit dice elementals.~
+@31950     = ~Summon Nature's Ally IX~
+@32950     = ~Summon Nature's Ally IX
+(Conjuration) 
+Level: Drd 9
+Range: Sight of Caster
+Duration: 10 rounds + 5 rounds/level
+Casting Time: 6 
+Area of Effect: Special 
+Saving Throw: None 
+
+This spell summons one or more creatures of nature who will aid the caster for the duration of the spell.  The type of creatures that come is random.  The creatures summoned are more powerful than creatures summoned by lesser versions of this spell.~
 @33122     = ~Ice Dagger~
 @34122     = ~Ice Dagger
 (Evocation)
@@ -2786,7 +2896,7 @@ Range: Sight of Caster
 Duration: Instantaneous 
 Casting Time: 1
 Area of Effect: 1 creature
-Saving Throw: None 
+Saving Throw: None
 
 Upon completion of this spell, the caster hurls a magical shard of ice imbued with deep freezing cold, dealing 1d4 cold damage to the target creature per caster level (5d4 maximum). Other creatures within 5 feet also take the same amount of damage, except that they may make a Reflex save for half damage.~
 @33209     = ~Luck~
@@ -2797,9 +2907,9 @@ Range: Sight of Caster
 Duration: 10 rounds
 Casting Time: 2
 Area of Effect: 1 creature
-Saving Throw: None 
+Saving Throw: None
 
-The recipient of this spell gains a +2 bonus to luck for the duration of the spell, with another +1 per 10 caster levels (max +5).
+The recipient of this spell gains a +2 bonus to luck for the duration of the spell.
 
 Luck influences damage dice rolls, attack rolls, saving throws, and skill checks. For instance, if a character with +2 luck would roll 18 on an attack, the luck bonus adds 2 to the roll, making it a 20 and resulting in a critical hit.~
 @33299     = ~Summon Cow~
@@ -2835,6 +2945,116 @@ Area of Effect: Caster
 Saving Throw: Reflex half
 
 This spell creates fifteen small meteors, which can be thrown by the caster. Each meteor bursts into a 1-foot-diameter sphere upon impact and inflicts 1d4+6 points of fire damage (plus Strength bonus). The meteors use the Simple Weapon: Missile proficiency, gain a +5 bonus to attack rolls, and strike as +3 weapons. The wizard may discharge up to five missiles per round.~
+@33504     = ~Cone of Cold~
+@34504     = ~Cone of Cold
+(Evocation)
+Level: Sor/Wiz 5
+Range: Caster
+Duration: Instantaneous 
+Casting Time: 5
+Area of Effect: Cone
+Saving Throw: Reflex half
+
+This spell releases a cone-shaped blast of extreme cold from the caster, doing 1d6 hit points of cold damage per level of the caster (15d6 maximum, 12d6 minimum).~
+@33514     = ~Lesser Planar Binding: Fire Elemental~
+@34514     = ~Lesser Planar Binding: Fire Elemental
+(Conjuration) 
+Level: Sor/Wiz 5
+Range: Sight of Caster
+Duration: 3 rounds + 1 round/level
+Casting Time: 8
+Area of Effect: Special 
+Saving Throw: None 
+
+This spell summons an 8 Hit Dice elemental from the Elemental Plane of Fire. This lesser fire elemental serves the caster for the duration.~
+@33515     = ~Lesser Planar Binding: Earth Elemental~
+@34515     = ~Lesser Planar Binding: Earth Elemental
+(Conjuration) 
+Level: Sor/Wiz 5
+Range: Sight of Caster
+Duration: 3 rounds + 1 round/level
+Casting Time: 8
+Area of Effect: Special 
+Saving Throw: None 
+
+This spell summons an 8 Hit Dice elemental from the Elemental Plane of Earth. This lesser earth elemental serves the caster for the duration.~
+@33516     = ~Lesser Planar Binding: Water Elemental~
+@34516     = ~Lesser Planar Binding: Water Elemental
+(Conjuration) 
+Level: Sor/Wiz 5
+Range: Sight of Caster
+Duration: 3 rounds + 1 round/level
+Casting Time: 8
+Area of Effect: Special
+Saving Throw: None 
+
+This spell summons an 8 Hit Dice elemental from the Elemental Plane of Water. This lesser water elemental serves the caster for the duration.~
+@33519     = ~Sunfire~
+@34519     = ~Sunfire
+(Evocation) 
+Level: Sor/Wiz 5
+Range: Caster
+Duration: Instantaneous
+Casting Time: 3
+Area of Effect: 30-foot radius
+Saving Throw: Reflex half
+
+A sunfire is an explosive burst of flame similar to a fireball, but centered on the caster.  All creatures in the area of effect except for the caster are burned for 1d6 fire damage per caster level (15d6 maximum, 12d6 minimum).  A successful Reflex save halves the damage.  This spell blinds drow and gray dwarves if a Fortitude save is failed.~
+@33520     = ~Lesser Planar Binding: Air Elemental~
+@34520     = ~Lesser Planar Binding: Air Elemental
+(Conjuration) 
+Level: Sor/Wiz 5
+Range: Sight of Caster
+Duration: 3 rounds + 1 round/level
+Casting Time: 8
+Area of Effect: Special 
+Saving Throw: None 
+
+This spell summons an 8 Hit Dice elemental from the Elemental Plane of Air. This lesser air elemental serves the caster for the duration.~
+@33622     = ~Planar Binding: Air Elemental~
+@34622     = ~Planar Binding: Air Elemental
+(Conjuration)
+Level: Sor/Wiz 6
+Range: Sight of Caster
+Duration: 3 rounds + 1 round/level
+Casting Time: 1 round
+Area of Effect: Special
+Saving Throw: None
+
+This spell summons a 12 Hit Dice elemental from the Elemental Plane of Air. The air elemental serves the caster for the duration.~
+@33627     = ~Planar Binding: Fire Elemental~
+@34627     = ~Planar Binding: Fire Elemental
+(Conjuration)
+Level: Sor/Wiz 6
+Range: Sight of Caster
+Duration: 3 rounds + 1 round/level
+Casting Time: 1 round
+Area of Effect: Special
+Saving Throw: None
+
+This spell summons a 12 Hit Dice elemental from the Elemental Plane of Fire. The fire elemental serves the caster for the duration.~
+@33628     = ~Planar Binding: Earth Elemental~
+@34628     = ~Planar Binding: Earth Elemental
+(Conjuration)
+Level: Sor/Wiz 6
+Range: Sight of Caster
+Duration: 3 rounds + 1 round/level
+Casting Time: 1 round
+Area of Effect: Special
+Saving Throw: None
+
+This spell summons a 12 Hit Dice elemental from the Elemental Plane of Earth. The earth elemental serves the caster for the duration.~
+@33629     = ~Planar Binding: Water Elemental~
+@34629     = ~Planar Binding: Water Elemental
+(Conjuration)
+Level: Sor/Wiz 6
+Range: Sight of Caster
+Duration: 3 rounds + 1 round/level
+Casting Time: 1 round
+Area of Effect: Special
+Saving Throw: None
+
+This spell summons a 12 Hit Dice elemental from the Elemental Plane of Water. The water elemental serves the caster for the duration.~
 @33708     = ~Acid Storm~
 @34708     = ~Acid Storm
 (Evocation)
@@ -2951,9 +3171,26 @@ This spell temporarily gives the ranger a quiver containing an unlimited supply 
 Although rangers normally cast spells at half their caster level, Quiver of Plenty will be cast at a ranger's full caster level.
 
 Note: The quiver is created in the ranger's first ammunition slot. Any ammunition that was previously in that slot will be unavailable until the spell ends.~
+@35451     = ~Curing Contingency~
+@36451     = ~Curing Contingency
+(Transmutation)
+Level: Clr 4
+Range: Special
+Duration: 8 hours
+Casting Time: 8
+Area of Effect: Special
+Saving Throw: None
+
+Curing Contigency stores a healing or curing spell in a creature, which will be automatically cast on that creature when they need it. After casting this spell, the caster must then attempt to cast another spell of 4th-level or lower on a creature they can see. Instead of being cast, that spell is stored in the creature for 8 hours (expending one use of the spell).
+
+If the stored spell was a healing spell, it will be automatically cast when the creature has less than 40% of its maximum Hit Points remaining. If the stored spell was one that cures a status ailment (e.g. Remove Paralysis or Neutralize Poison), it will be cast when the creature is affected by an ailment it can cure.
+
+The caster can cast this spell multiple times on different creatures, but a single creature cannot have more than one stored spell at once.
+
+The following spells can be stored: Cure Light Wounds, Remove Fear, Slow Poison, Cure Moderate Wounds, Break Enchantment, Remove Paralysis, Remove Disease, Exaltation, Cure Serious Wounds, Neutralize Poison, Restoration, and Cure Critical Wounds.~
 @35551     = ~Supreme Speed~
 @36551     = ~Supreme Speed
-(Alteration)
+(Transmutation)
 Level: Rgr 5
 Range: Caster
 Duration: 15 rounds
@@ -3016,7 +3253,7 @@ Casting Time: 9
 Area of Effect: Caster
 Saving Throw: None
 
-This spell calls upon the power of Auril to amplify the caster's cold spells. For the duration, cold damage dealt by the caster is increased by 50%. If the caster is level 30 or higher, their cold damage is instead increased by 100%.~
+This spell calls upon the power of Auril to amplify the caster's cold spells. For the duration, cold damage dealt by the caster is increased by 50%, or by 100% if cast at level 30 or higher. In addition, the spell Cone of Cold has +4 DC and a much larger area of effect, as does the Winter Wolf shapeshift form's cold breath.~
 @35952     = ~Mass Harm~
 @36952     = ~Mass Harm
 (Necromancy)
@@ -3170,7 +3407,7 @@ Casting Time: 4
 Area of Effect: All creatures in path of boulder
 Saving Throw: Reflex partial
 
-Boulder Roll creates a large boulder, which rolls forward from the caster, crushing creatures in its path, until it hits a wall. Creatures hit take 12d8 crushing damage and are knocked down for 2 rounds. A successful Reflex save halves the damage and prevents one from being knocked down. The boulder always travels due south from the caster.~
+Boulder Roll creates a large boulder, which rolls forward from the caster, crushing creatures in its path, until it hits a wall. Creatures hit take 12d8 bludgeoning damage and are knocked down for 2 rounds. A successful Reflex save halves the damage and prevents one from being knocked down. The boulder always travels due south from the caster.~
 @37751     = ~Stygian Ice Storm~
 @38751     = ~Stygian Ice Storm
 (Conjuration)
@@ -3222,6 +3459,17 @@ Area of Effect: Special
 Saving Throw: Reflex half
 
 This spell fires a flurry of small lightning bolts at the target. One bolt is fired per level (max 30), each one dealing 1d8 electrical damage (with a Reflex save for half) to all creatures in its path. The bolts will bounce off walls, potentially hitting the same creature multiple times per bolt.~
+@37757     = ~Skeleton Horde~
+@38757     = ~Skeleton Horde
+(Necromancy) 
+Level: Clr 7, Sor/Wiz 7
+Range: Sight of Caster
+Duration: 8 hours
+Casting Time: 7
+Area of Effect: Special 
+Saving Throw: None 
+
+This spell animates 1 skeleton per caster level. The skeletons ignore the summoning limit. Skeleton Horde cannot be cast by good characters.~
 @37852     = ~Energy Drain~
 @38852     = ~Energy Drain
 (Necromancy)
