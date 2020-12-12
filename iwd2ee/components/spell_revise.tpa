@@ -3076,10 +3076,10 @@ COPY_EXISTING ~ar4102.are~ ~override~
 
 COPY_EXISTING ~ar4103.are~ ~override~
 	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR actor_name=~BossFiend~ script_special1=~USDW751~ END
-
+/*
 COPY_EXISTING ~AR5030.are~ ~override~
 	LPF fj_are_structure INT_VAR fj_charge0=1 fj_flags=0x1 fj_con_itm_idx=0 STR_VAR fj_structure_type=~itm~ fj_name=~USWI757Z~ END
-
+*/
 COPY_EXISTING ~AR6102.are~ ~override~
 	LPF fj_are_structure INT_VAR fj_charge0=1 fj_flags=0x1 fj_con_itm_idx=4 STR_VAR fj_structure_type=~itm~ fj_name=~USWI856Z~ END
 
