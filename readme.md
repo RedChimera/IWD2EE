@@ -341,4 +341,8 @@ This component increases the level cap to 40 or to 50 (your choice). You'll only
 
 This component lets all wizards successfully learn spells from scrolls 100% of the time.
 
+## Remove the summoning limit
+
+This component allows you to summon any number of creatures at once.
+
 Much of the credit for the inspiration for this mod goes to the makers of Light of Selune, IWD2-Ease, and Tactics4IWD2, which provided the groundwork for this mod and the changes it makes. I would also like to thank Firecrow, who provided indispensable feedback and played an instrumental role in inspiring many of the mod's features, and subtledoctor, bubb, and Gwendolyne for providing invaluable technical support during the construction of the mod.

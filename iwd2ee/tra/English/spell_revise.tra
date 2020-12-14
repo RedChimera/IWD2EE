@@ -3550,7 +3550,7 @@ This spell eliminates the interval between spellcasting, allowing the caster to 
 @37954     = ~Living Lightning~
 @38954     = ~Living Lightning
 (Evocation)
-Level: Drd 9, Sor/Wiz 9
+Level: Drd 8, Sor/Wiz 8, Talos 8
 Range: Caster
 Duration: 1 round/level
 Casting Time: 10
@@ -3569,3 +3569,14 @@ Area of Effect: 40-foot radius
 Saving Throw: Fortitude half
 
 Malavon's Corrosive Fog is another spell created by the dark elf sorcerer Malavon. It creates an enormous cloud of acid fog that lingers for a long time. Each round, any creature in the fog takes 10d6 acid damage (Fortitude save for half).~
+@37956     = ~Lightning Spiral~
+@38956     = ~Lightning Spiral
+(Evocation)
+Level: Drd 9, Sor/Wiz 9, Talos 9
+Range: Caster
+Duration: Instantaneous
+Casting Time: 5
+Area of Effect: Special
+Saving Throw: Reflex half
+
+This spell envelops the caster in a spiral of lightning, releasing lightning bolts in all directions. Eight bolts are released per level (four at a time), each dealing 1d8 electrical damage (Reflex save for half). Lightning Spiral does significantly more damage to creatures close to the caster.~

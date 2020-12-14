@@ -427,3 +427,9 @@ SUBCOMPONENT @70
 BEGIN @75 DESIGNATED 85
 
       INCLUDE ~%mod_folder%/components/always_learn.tpa~ //~Always learn spells from scrolls successfully~
+
+//Remove the summoning limit
+
+BEGIN @81 DESIGNATED 86
+
+      INCLUDE ~%mod_folder%/components/remove_summoning_limit.tpa~ //~Remove the summoning limit~

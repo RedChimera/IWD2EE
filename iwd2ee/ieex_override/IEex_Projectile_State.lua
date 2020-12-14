@@ -148,9 +148,19 @@ function IEex_Extern_OnProjectileDecode(esp)
 	if source == nil then return end
 	local CGameAIBase = IEex_ReadDword(esp + 0x8)
 	local originalMissileIndex = missileIndex
-	if source == 8 then
-		originalMissileIndex = IEex_ReadWord(IEex_ReadDword(esp + 0x10) + 0x6E, 0x0)
+	if source == 5 then
 		CGameAIBase = IEex_ReadDword(esp + 0x20)
+	elseif source == 7 then
+		CGameAIBase = IEex_ReadDword(esp + 0x18)
+	elseif source == 8 then
+		CGameAIBase = IEex_ReadDword(esp + 0xDC)
+		local originalCProjectile = IEex_ReadDword(esp + 0x10)
+		if originalCProjectile > 65535 then
+			originalMissileIndex = IEex_ReadWord(originalCProjectile + 0x6E, 0x0) + 1
+			if CGameAIBase <= 65535 then
+				CGameAIBase = IEex_GetActorShare(IEex_ReadDword(originalCProjectile + 0x72))
+			end
+		end
 	end
 	local sourceID = IEex_GetActorIDShare(CGameAIBase)
 	if IEex_GetActorSpellState(sourceID, 251) then
@@ -224,8 +234,14 @@ function IEex_Extern_OnPostProjectileCreation(CProjectile, esp)
 	elseif source == 7 then
 		CGameAIBase = IEex_ReadDword(esp + 0x18)
 	elseif source == 8 then
-		originalMissileIndex = IEex_ReadWord(IEex_ReadDword(esp + 0x10) + 0x6E, 0x0) + 1
 		CGameAIBase = IEex_ReadDword(esp + 0xDC)
+		local originalCProjectile = IEex_ReadDword(esp + 0x10)
+		if originalCProjectile > 65535 then
+			originalMissileIndex = IEex_ReadWord(originalCProjectile + 0x6E, 0x0) + 1
+			if CGameAIBase <= 65535 then
+				CGameAIBase = IEex_GetActorShare(IEex_ReadDword(originalCProjectile + 0x72))
+			end
+		end
 	end
 	local sourceID = IEex_GetActorIDShare(CGameAIBase)
 

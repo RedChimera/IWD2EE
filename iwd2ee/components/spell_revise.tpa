@@ -2273,6 +2273,21 @@ COPY_EXISTING ~uswi955.spl~ ~override~
 	SAY UNIDENTIFIED_DESC @38955
 	SAY IDENTIFIED_DESC @38955
 
+COPY_EXISTING ~uswi956.spl~ ~override~
+	SAY NAME1 @37956
+	SAY NAME2 @37956
+	SAY UNIDENTIFIED_DESC @38956
+	SAY IDENTIFIED_DESC @38956
+	READ_SHORT 0x68 numheaders
+	FOR (i = numheaders; i < 50; ++i) BEGIN
+		LPF ADD_SPELL_HEADER INT_VAR copy_header=i insert_point=i END
+		numheaders = numheaders + 1
+	END
+	FOR (i = 1; i <= numheaders; ++i) BEGIN
+		LPF ALTER_SPELL_HEADER INT_VAR header=i min_level=i END
+		LPF ALTER_EFFECT INT_VAR silent=1 header=(i - 1) match_opcode=500 special=(i * 2) STR_VAR match_resource=~MEBARRAM~ END
+	END
+
 OUTER_FOR (i = 1; i < 30; ++i) BEGIN
 	OUTER_SET ones_digit = (i + 1) MODULO 10
 	OUTER_SET tens_digit = (i + 1) / 10
@@ -2976,7 +2991,7 @@ COPY_EXISTING ~effsof1.spl~ ~override~ ~effsof2.spl~ ~override~
 //Adding scrolls for new spells to the game
 
 COPY_EXISTING ~00BASHS1.sto~ ~override~ ~00BASHS2.sto~ ~override~ ~00BASHS3.sto~ ~override~
-	ADD_STORE_ITEM ~USWI954Z~ #1 #1 #0 ~IDENTIFIED~ #1
+	ADD_STORE_ITEM ~USWI956Z~ #1 #1 #0 ~IDENTIFIED~ #1
 
 COPY_EXISTING ~11RAGNIB.sto~ ~override~
 	ADD_STORE_ITEM ~SPPR108Z~ BEFORE ~SPPR403Z~ #1 #0 #0 ~IDENTIFIED~ #4
@@ -3058,6 +3073,7 @@ COPY_EXISTING ~60SPELLS.sto~ ~override~
 
 COPY_EXISTING ~60CHEAP.sto~ ~override~
 	ADD_STORE_ITEM ~SPPR719Z~ #1 #1 #0 ~IDENTIFIED~ #1
+	ADD_STORE_ITEM ~USWI954Z~ #1 #1 #0 ~IDENTIFIED~ #1
 	ADD_STORE_ITEM ~USWI855Z~ #1 #1 #0 ~IDENTIFIED~ #1
 	ADD_STORE_ITEM ~USWI752Z~ #1 #1 #0 ~IDENTIFIED~ #1
 
@@ -3082,6 +3098,7 @@ COPY_EXISTING ~AR5030.are~ ~override~
 */
 COPY_EXISTING ~AR6102.are~ ~override~
 	LPF fj_are_structure INT_VAR fj_charge0=1 fj_flags=0x1 fj_con_itm_idx=4 STR_VAR fj_structure_type=~itm~ fj_name=~USWI856Z~ END
+	LPF fj_are_structure INT_VAR fj_charge0=1 fj_flags=0x1 fj_con_itm_idx=5 STR_VAR fj_structure_type=~itm~ fj_name=~USWI954Z~ END
 
 COPY_EXISTING ~ar6200.are~ ~override~
 	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR container=5 charges1=0 charges2=0 charges3=0 single_match=1 STR_VAR old_item=~00RG12~ new_item=~SPPR424Z~ END

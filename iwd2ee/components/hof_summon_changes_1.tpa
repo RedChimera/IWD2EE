@@ -31,6 +31,12 @@ ACTION_IF NOT FILE_EXISTS_IN_GAME ~ushfmoda.itm~ BEGIN
 		READ_SSHORT 0x26 themaxhp
 		PATCH_IF themaxhp <= 60 BEGIN
 			TEXT_SPRINT hofitem ~USHFMODA~
+			READ_BYTE 0x8a thelevel
+			READ_BYTE 0x26a theconstitution
+			PATCH_IF (themaxhp * 3 - 100 + (thelevel + 12) * (theconstitution / 2)) = 0 BEGIN
+				themaxhp += 1
+				WRITE_SHORT 0x26 themaxhp
+			END
 		END
 		ELSE BEGIN
 			TEXT_SPRINT hofitem ~USHFMODB~

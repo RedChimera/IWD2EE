@@ -1310,7 +1310,7 @@ end
 ----------------------
 
 function IEex_GetActorIDShare(share)
-	if share == 0 or share == nil then return 0 end
+	if share <= 65535 or share == nil then return 0 end
 	return IEex_ReadDword(share + 0x5C)
 end
 
@@ -1913,7 +1913,7 @@ special - The first byte determines which stat should be used to determine an ex
 ex_item_type_proficiency = {[15] = 39, [16] = 57, [17] = 54, [18] = 55, [19] = 57, [20] = 43, [21] = 42, [22] = 54, [23] = 40, [24] = 55, [25] = 38, [26] = 56, [27] = 53, [29] = 44, [30] = 44, [44] = 4, [57] = 41, [69] = 18}
 ex_crippling_strike = {ex_tra_905, ex_tra_905, ex_tra_905, ex_tra_905, ex_tra_905, ex_tra_906, ex_tra_906, ex_tra_906, ex_tra_907, ex_tra_907, ex_tra_907, ex_tra_908, ex_tra_908, ex_tra_908, ex_tra_909, ex_tra_909, ex_tra_909, ex_tra_910, ex_tra_910, ex_tra_910, ex_tra_911, ex_tra_911, ex_tra_911, ex_tra_912, ex_tra_912, ex_tra_912, ex_tra_913, ex_tra_913, ex_tra_913, ex_tra_914}
 ex_arterial_strike = {1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4, 4, 5, 5, 5, 5, 5, 5}
-ex_damage_source_spell = {["EFFAS1"] = "SPWI217", ["EFFAS2"] = "SPWI217", ["EFFCL"] = "SPPR302", ["EFFCT1"] = "SPWI117", ["EFFDA3"] = "SPWI228", ["EFFFS1"] = "SPWI427", ["EFFFS2"] = "SPWI426", ["EFFIK"] = "SPWI122", ["EFFMB1"] = "SPPR318", ["EFFMB2"] = "SPPR318", ["EFFMT1"] = "SPPR322", ["EFFPB1"] = "SPWI521", ["EFFPB2"] = "SPWI521", ["EFFS1"] = "SPPR113", ["EFFS2"] = "SPPR113", ["EFFS3"] = "SPPR113", ["EFFSC"] = "SPPR523", ["EFFSOF1"] = "SPWI511", ["EFFSOF2"] = "SPWI511", ["EFFSR1"] = "SPPR707", ["EFFSR2"] = "SPPR707", ["EFFSSO1"] = "SPPR608", ["EFFSSO2"] = "SPPR608", ["EFFSSO3"] = "SPPR608", ["EFFSSS1"] = "SPWI220", ["EFFSSS2"] = "SPWI220", ["EFFVS1"] = "SPWI424", ["EFFVS2"] = "SPWI424", ["EFFVS3"] = "SPWI424", ["EFFWOM1"] = "SPPR423", ["EFFWOM2"] = "SPPR423", ["EFFHW15"] = "SPWI805", ["EFFHW16"] = "SPWI805", ["EFFHW17"] = "SPWI805", ["EFFHW18"] = "SPWI805", ["EFFHW19"] = "SPWI805", ["EFFHW20"] = "SPWI805", ["EFFHW21"] = "SPWI805", ["EFFHW22"] = "SPWI805", ["EFFHW23"] = "SPWI805", ["EFFHW24"] = "SPWI805", ["EFFHW25"] = "SPWI805", ["EFFWT15"] = "SPWI805", ["EFFWT16"] = "SPWI805", ["EFFWT17"] = "SPWI805", ["EFFWT18"] = "SPWI805", ["EFFWT19"] = "SPWI805", ["EFFWT20"] = "SPWI805", ["EFFWT21"] = "SPWI805", ["EFFWT22"] = "SPWI805", ["EFFWT23"] = "SPWI805", ["EFFWT24"] = "SPWI805", ["EFFWT25"] = "SPWI805", ["USWI422D"] = "SPWI422", ["USWI452D"] = "USWI452", ["USWI652D"] = "USWI652", ["USWI755D"] = "USWI755", ["USWI954F"] = "USWI954", ["USDESTRU"] = "SPPR717", ["USPR953D"] = "USPR953", ["USWI653D"] = "USWI653", }
+ex_damage_source_spell = {["EFFAS1"] = "SPWI217", ["EFFAS2"] = "SPWI217", ["EFFCL"] = "SPPR302", ["EFFCT1"] = "SPWI117", ["EFFDA3"] = "SPWI228", ["EFFFS1"] = "SPWI427", ["EFFFS2"] = "SPWI426", ["EFFIK"] = "SPWI122", ["EFFMB1"] = "SPPR318", ["EFFMB2"] = "SPPR318", ["EFFMT1"] = "SPPR322", ["EFFPB1"] = "SPWI521", ["EFFPB2"] = "SPWI521", ["EFFS1"] = "SPPR113", ["EFFS2"] = "SPPR113", ["EFFS3"] = "SPPR113", ["EFFSC"] = "SPPR523", ["EFFSOF1"] = "SPWI511", ["EFFSOF2"] = "SPWI511", ["EFFSR1"] = "SPPR707", ["EFFSR2"] = "SPPR707", ["EFFSSO1"] = "SPPR608", ["EFFSSO2"] = "SPPR608", ["EFFSSO3"] = "SPPR608", ["EFFSSS1"] = "SPWI220", ["EFFSSS2"] = "SPWI220", ["EFFVS1"] = "SPWI424", ["EFFVS2"] = "SPWI424", ["EFFVS3"] = "SPWI424", ["EFFWOM1"] = "SPPR423", ["EFFWOM2"] = "SPPR423", ["EFFHW15"] = "SPWI805", ["EFFHW16"] = "SPWI805", ["EFFHW17"] = "SPWI805", ["EFFHW18"] = "SPWI805", ["EFFHW19"] = "SPWI805", ["EFFHW20"] = "SPWI805", ["EFFHW21"] = "SPWI805", ["EFFHW22"] = "SPWI805", ["EFFHW23"] = "SPWI805", ["EFFHW24"] = "SPWI805", ["EFFHW25"] = "SPWI805", ["EFFWT15"] = "SPWI805", ["EFFWT16"] = "SPWI805", ["EFFWT17"] = "SPWI805", ["EFFWT18"] = "SPWI805", ["EFFWT19"] = "SPWI805", ["EFFWT20"] = "SPWI805", ["EFFWT21"] = "SPWI805", ["EFFWT22"] = "SPWI805", ["EFFWT23"] = "SPWI805", ["EFFWT24"] = "SPWI805", ["EFFWT25"] = "SPWI805", ["USWI422D"] = "SPWI422", ["USWI452D"] = "USWI452", ["USWI652D"] = "USWI652", ["USWI755D"] = "USWI755", ["USWI954F"] = "USWI954", ["USDESTRU"] = "SPPR717", ["USPR953D"] = "USPR953", ["USWI653D"] = "USWI653", ["USWI956D"] = "USWI956", }
 ex_feat_id_offset = {[18] = 0x78D, [38] = 0x777, [39] = 0x774, [40] = 0x779, [41] = 0x77D, [42] = 0x77B, [43] = 0x77E, [44] = 0x77A, [53] = 0x775, [54] = 0x778, [55] = 0x776, [56] = 0x77C, [57] = 0x77F}
 ex_damage_multiplier_type = {[0] = 9, [0x10000] = 4, [0x20000] = 2, [0x40000] = 3, [0x80000] = 1, [0x100000] = 8, [0x200000] = 6, [0x400000] = 5, [0x800000] = 10, [0x1000000] = 7, [0x2000000] = 1, [0x4000000] = 2, [0x8000000] = 9, [0x10000000] = 5}
 ex_damage_resistance_stat = {[0] = 22, [0x10000] = 17, [0x20000] = 15, [0x40000] = 16, [0x80000] = 14, [0x100000] = 23, [0x200000] = 74, [0x400000] = 73, [0x800000] = 24, [0x1000000] = 21, [0x2000000] = 19, [0x4000000] = 20, [0x8000000] = 22, [0x10000000] = 73}
@@ -3638,6 +3638,121 @@ function MEBARRAG(effectData, creatureData)
 --]]
 end
 
+function MEBARRAM(effectData, creatureData)
+	if IEex_CheckForEffectRepeat(effectData, creatureData) then return end
+	IEex_WriteDword(effectData + 0x110, 1)
+	local sourceID = IEex_ReadDword(effectData + 0x10C)
+	local targetID = IEex_GetActorIDShare(creatureData)
+	local targetX = IEex_ReadDword(creatureData + 0x6)
+	local targetY = IEex_ReadDword(creatureData + 0xA)
+--	local targetX = IEex_ReadDword(effectData + 0x84)
+--	local targetY = IEex_ReadDword(effectData + 0x88)
+	local spellRES = IEex_ReadLString(effectData + 0x18, 8)
+	if spellRES == "" then
+		spellRES = parent_resource .. "D"
+	end
+	local savingthrow = bit.band(IEex_ReadDword(effectData + 0x3C), 0xFFFFFFE3)
+	local parent_resource = IEex_ReadLString(effectData + 0x90, 8)
+	local casterlvl = IEex_ReadDword(effectData + 0xC4)
+	local casterClass = IEex_ReadByte(effectData + 0xC5, 0x0)
+	local barrageCount = IEex_ReadWord(effectData + 0x44, 0x0)
+	local parameter4 = IEex_ReadDword(effectData + 0x60)
+	if barrageCount == 0 then
+		barrageCount = 1
+	end
+--	local projectile = IEex_ReadWord(effectData + 0x46, 0x0)
+	local currentAngle = 0
+	local angleIncrement = 6
+	local delta = 100
+	local deltaX = 0
+	local deltaY = 0
+	if bit.band(savingthrow, 0x10000000) > 0 then
+		parent_resource = spellRES
+	end
+	if parameter4 == 0 then
+		IEex_ApplyEffectToActor(sourceID, {
+["opcode"] = 288,
+["target"] = 2,
+["timing"] = 0,
+["duration"] = math.floor(barrageCount / 10) + 1,
+["parameter2"] = 250,
+["special"] = barrageCount,
+["target_x"] = targetX,
+["target_y"] = targetY,
+["casterlvl"] = casterlvl,
+["resource"] = "MEBARRAA",
+["vvcresource"] = spellRES,
+["parent_resource"] = parent_resource,
+["source_id"] = sourceID
+})
+	end
+	for i = 1, barrageCount, 1 do
+		if i > parameter4 then
+			deltaX = math.floor(math.cos(currentAngle) * delta)
+			deltaY = math.floor(math.sin(currentAngle) * delta)
+			IEex_ApplyEffectToActor(sourceID, {
+["opcode"] = 148,
+["target"] = 2,
+["timing"] = 1,
+--["duration"] = IEex_GetGameTick() + i - 1,
+["parameter1"] = IEex_ReadByte(effectData + 0xC4, 0x0),
+["parameter2"] = 1,
+["source_x"] = targetX,
+["source_y"] = targetY,
+["target_x"] = targetX + deltaX,
+["target_y"] = targetY + deltaY,
+["casterlvl"] = casterlvl,
+["resource"] = spellRES,
+["parent_resource"] = parent_resource,
+["source_id"] = sourceID
+})
+		end
+		currentAngle = currentAngle + angleIncrement
+	end
+
+end
+
+function MEBARRAA(originatingEffectData, actionData, creatureData)
+	local actionID = IEex_GetActionID(actionData)
+	local sourceID = IEex_GetActorIDShare(creatureData)
+	local special = IEex_ReadDword(originatingEffectData + 0x44) * 2
+	local parameter4 = IEex_ReadDword(originatingEffectData + 0x60)
+	local spellRES = IEex_ReadLString(originatingEffectData + 0x6C, 8)
+	local parent_resource = IEex_ReadLString(originatingEffectData + 0x90, 8)
+	local targetX = IEex_ReadDword(originatingEffectData + 0x84)
+	local targetY = IEex_ReadDword(originatingEffectData + 0x88)
+	if spellRES == "" then
+		spellRES = parent_resource .. "D"
+		IEex_WriteLString(originatingEffectData + 0x6C, spellRES, 8)
+	end
+	if actionID == 114 and IEex_ReadString(IEex_ReadDword(creatureData + 0x538)) == spellRES then
+		parameter4 = parameter4 + 1
+--		IEex_DS(parameter4)
+		IEex_WriteDword(originatingEffectData + 0x60, parameter4)
+	elseif parameter4 < special then
+--		IEex_DS(actionID)
+		IEex_SetActionID(actionData, 0)
+		local casterlvl = IEex_ReadDword(originatingEffectData + 0xC4)
+		IEex_ApplyEffectToActor(sourceID, {
+["opcode"] = 500,
+["target"] = 2,
+["timing"] = 0,
+["parameter1"] = IEex_ReadDword(originatingEffectData + 0x6C),
+["parameter2"] = IEex_ReadDword(originatingEffectData + 0x70),
+["parameter4"] = parameter4,
+["special"] = special,
+["casterlvl"] = casterlvl,
+["resource"] = "MEBARRAM",
+["parent_resource"] = parent_resource,
+["target_x"] = targetX,
+["target_y"] = targetY,
+["source_id"] = sourceID
+})
+	end
+end
+
+IEex_AddActionHookOpcode("MEBARRAA")
+
 function MEGARGOY(effectData, creatureData)
 	if IEex_CheckForEffectRepeat(effectData, creatureData) then return end
 	IEex_WriteDword(effectData + 0x110, 1)
@@ -4924,6 +5039,7 @@ function MEWHIRLA(effectData, creatureData)
 	local sourceY = IEex_ReadDword(sourceData + 0xA)
 	local targetX = IEex_ReadDword(creatureData + 0x6)
 	local targetY = IEex_ReadDword(creatureData + 0xA)
+	local savingthrow = IEex_ReadDword(effectData + 0x3C)
 	local weaponRES = {"", ""}
 	local wearingLightArmor = true
 	if IEex_GetActorSpellState(sourceID, 241) then
@@ -10010,6 +10126,77 @@ function EXCHARGE(effectData, creatureData)
 	end
 end
 
+function MEHOFSUM(effectData, creatureData)
+	IEex_WriteDword(effectData + 0x110, 1)
+	if IEex_CheckForEffectRepeat(effectData, creatureData) then return end
+	local targetID = IEex_GetActorIDShare(creatureData)
+		IEex_ApplyEffectToActor(targetID, {
+["opcode"] = 44,
+["target"] = 2,
+["parameter1"] = -10,
+["timing"] = 1,
+["parent_resource"] = "USHOFSUM",
+["source_id"] = targetID
+})
+		IEex_ApplyEffectToActor(targetID, {
+["opcode"] = 15,
+["target"] = 2,
+["parameter1"] = -10,
+["timing"] = 1,
+["parent_resource"] = "USHOFSUM",
+["source_id"] = targetID
+})
+		IEex_ApplyEffectToActor(targetID, {
+["opcode"] = 10,
+["target"] = 2,
+["parameter1"] = -10,
+["timing"] = 1,
+["parent_resource"] = "USHOFSUM",
+["source_id"] = targetID
+})
+		IEex_ApplyEffectToActor(targetID, {
+["opcode"] = 19,
+["target"] = 2,
+["parameter1"] = -10,
+["timing"] = 1,
+["parent_resource"] = "USHOFSUM",
+["source_id"] = targetID
+})
+		IEex_ApplyEffectToActor(targetID, {
+["opcode"] = 49,
+["target"] = 2,
+["parameter1"] = -10,
+["timing"] = 1,
+["parent_resource"] = "USHOFSUM",
+["source_id"] = targetID
+})
+		IEex_ApplyEffectToActor(targetID, {
+["opcode"] = 6,
+["target"] = 2,
+["parameter1"] = -10,
+["timing"] = 1,
+["parent_resource"] = "USHOFSUM",
+["source_id"] = targetID
+})
+		IEex_ApplyEffectToActor(targetID, {
+["opcode"] = 17,
+["target"] = 2,
+["parameter1"] = 100,
+["parameter2"] = 2,
+["timing"] = 1,
+["parent_resource"] = "USHOFSUM",
+["source_id"] = targetID
+})
+		IEex_ApplyEffectToActor(targetID, {
+["opcode"] = 206,
+["target"] = 2,
+["timing"] = 1,
+["resource"] = "USHOFSUM",
+["parent_resource"] = "USHOFSUM",
+["source_id"] = targetID
+})
+end
+
 function IEex_GetNth(n)
 	local nth = "" .. n
 	if n < 0 then
@@ -11346,7 +11533,6 @@ function MEAILCO2(effectData, creatureData)
 ["parameter1"] = ex_tra_55599,
 ["source_id"] = targetID
 })
-	IEex_DS(casterlvl)
 	IEex_ApplyEffectToActor(targetID, {
 ["opcode"] = 430,
 ["target"] = 2,

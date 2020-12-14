@@ -62,13 +62,13 @@ function IEex_Extern_OnCheckSummonLimitHook(effectData, summonerData)
 end
 
 -- return:
---   false -> to prevent summon from counting towards hardcoded limit
---   true  -> to make summon count towards hardcoded limit
+--   false -> to make summon count towards hardcoded limit
+--   true  -> to prevent summon from counting towards hardcoded limit
 function IEex_Extern_OnAddSummonToLimitHook(effectData, summonerData, summonedData)
 	IEex_AssertThread(IEex_Thread.Async, true)
 	IEex_WriteDword(summonedData + 0x72C, IEex_GetActorIDShare(summonerData))
-	if ex_no_summoning_limit or bit.band(IEex_ReadDword(effectData + 0x3C), 0x10000) > 0 then return false end
-	return true
+	if ex_no_summoning_limit or bit.band(IEex_ReadDword(effectData + 0x3C), 0x10000) > 0 then return true end
+	return false
 end
 
 (function()

@@ -322,11 +322,17 @@ Normally once a rogue sneak attacks a creature, that creature becomes immune to 
 
 This component increases the level cap to 40 or to 50 (your choice). You'll only reach such high levels if you're soloing or playing Heart of Fury Mode.
 
-Much of the credit for the inspiration for this mod goes to the makers of Light of Selune, IWD2-Ease, and Tactics4IWD2, which provided the groundwork for this mod and the changes it makes. I would also like to thank Firecrow, who provided indispensable feedback and played an instrumental role in inspiring many of the mod's features, and subtledoctor, bubb, and Gwendolyne for providing invaluable technical support during the construction of the mod.
-
 --Always learn spells from scrolls successfully--
 
 This component lets all wizards successfully learn spells from scrolls 100% of the time.
+
+--Remove the summoning limit--
+
+This component allows you to summon any number of creatures at once.
+
+
+Much of the credit for the inspiration for this mod goes to the makers of Light of Selune, IWD2-Ease, and Tactics4IWD2, which provided the groundwork for this mod and the changes it makes. I would also like to thank Firecrow, who provided indispensable feedback and played an instrumental role in inspiring many of the mod's features, and subtledoctor, bubb, and Gwendolyne for providing invaluable technical support during the construction of the mod.
+
 
 Compatibility Notes:
 

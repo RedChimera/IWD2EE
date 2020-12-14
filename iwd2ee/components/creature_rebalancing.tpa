@@ -3665,7 +3665,7 @@ COPY_EXISTING ~65IYTXM.cre~ ~override~
 	WRITE_BYTE willsave 16
 	WRITE_BYTE fireresistance 40
 	WRITE_BYTE coldresistance 20
-	WRITE_BYTE electricityresistance 0
+	WRITE_BYTE electricityresistance 20
 	WRITE_BYTE acidresistance 100
 	WRITE_BYTE spellresistance 25
 	WRITE_BYTE magicfireresistance 40

@@ -10249,7 +10249,7 @@ STATISTICS:
 Permanent +4 Strength
 Permanent -4 Constitution
 Weight:  1 lb.~
-//@12109    = ~Potion of Arcane Absorption~
+@12109    = ~Potion of Arcane Absorption~
 @12110    = ~Potions are typically found in ceramic, crystal, glass, or metal flasks or vials. Flasks or other containers generally contain enough fluid to provide one person with one complete dose to achieve the effects of the potion. 
 
 STATISTICS:
@@ -13296,6 +13296,24 @@ Special:
 Weight:  4 lb.
 Feat Requirement:  Martial Weapon, Large Sword
 Type:  One-handed~
+@12795    = ~Potion of Physical Enhancement~
+@12796    = ~Potions are typically found in ceramic, crystal, glass, or metal flasks or vials. Flasks or other containers generally contain enough fluid to provide one person with one complete dose to achieve the effects of the potion.
+
+STATISTICS:
+
+Permanent +1 Strength
+Permanent +1 Dexterity
+Permanent +1 Constitution
+Weight:  1 lb.~
+@12797    = ~Potion of Mental Enhancement~
+@12798    = ~Potions are typically found in ceramic, crystal, glass, or metal flasks or vials. Flasks or other containers generally contain enough fluid to provide one person with one complete dose to achieve the effects of the potion.
+
+STATISTICS:
+
+Permanent +1 Intelligence
+Permanent +1 Wisdom
+Permanent +1 Charisma
+Weight:  1 lb.~
 @12900    = ~Hrm - you are powerful allies, indeed. More gold and gems to line your pockets, then - also, a suit of plate armor, a warhammer, a helmet, all crafted and enchanted by great duergar artisans. They are well deserved, outsider.~
 @12901    = ~Drink this Rainwater Brew, Ennelia. It should help your condition.~
 @12902    = ~Drink this Sour Draught, Ennelia. It should help your condition.~
