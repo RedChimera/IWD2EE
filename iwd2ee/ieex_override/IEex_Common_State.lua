@@ -263,6 +263,48 @@ function IEex_SplitByChar(string, char)
 	return splits
 end
 
+function IEex_SplitByWhitespace(text)
+	local toReturn = {}
+	IEex_SplitByWhitespaceFill(text, toReturn)
+	return toReturn
+end
+
+function IEex_SplitByWhitespaceFill(text, toFill)
+
+	text = text:gsub("%s+", " ")
+	local limit = #text
+	local captureStart = (limit > 0 and text:sub(1, 1) == " ") and 2 or 1
+
+	for i = captureStart + 1, limit do
+		if text:sub(i, i) == " " then
+			table.insert(toFill, text:sub(captureStart, i - 1))
+			captureStart = i + 1
+		end
+	end
+
+	if captureStart <= limit then
+		table.insert(toFill, text:sub(captureStart, limit))
+	end
+end
+
+function IEex_SplitByWhitespaceProcess(text, func)
+
+	text = text:gsub("%s+", " ")
+	local limit = #text
+	local captureStart = (limit > 0 and text:sub(1, 1) == " ") and 2 or 1
+
+	for i = captureStart + 1, limit do
+		if text:sub(i, i) == " " then
+			func(text:sub(captureStart, i - 1))
+			captureStart = i + 1
+		end
+	end
+
+	if captureStart <= limit then
+		func(text:sub(captureStart, limit))
+	end
+end
+
 ----------------------
 -- Assembly Writing --
 ----------------------
@@ -285,242 +327,6 @@ end
 
 function IEex_DefineAssemblyMacro(macroName, macroValue)
 	IEex_GlobalAssemblyMacros[macroName] = macroValue
-end
-
--- Some more complex assembly solutions require special macro functions
--- to generate the correct bytes on the fly
-function IEex_ResolveMacro(address, args, currentWriteAddress, section, func)
-	func = func or function() end
-	local sectionSplit = IEex_SplitByChar(section, ",")
-	local macro = sectionSplit[1]
-	local macroName = string.sub(macro, 2, #macro)
-	local macroValue = IEex_GlobalAssemblyMacros[macroName]
-	if not macroValue then
-		IEex_Error("Macro "..macro.." not defined!")
-	end
-	local macroType = type(macroValue)
-	if macroType == "string" then
-		return macroValue
-	elseif macroType == "function" then
-		local macroArgs = {}
-		local limit = #sectionSplit
-		for i = 2, limit, 1 do
-			local resolvedArg = IEex_ResolveMacroArg(address, args, currentWriteAddress, sectionSplit[i])
-			table.insert(macroArgs, resolvedArg)
-		end
-		return macroValue(currentWriteAddress, macroArgs, func)
-	else
-		IEex_Error("Invalid macro type in \""..macroName.."\": \""..macroType.."\"!")
-	end
-end
-
-function IEex_ResolveMacroArg(address, args, currentWriteAddress, section)
-	local toReturn = nil
-	local prefix = string.sub(section, 1, 1)
-	if prefix == ":" then
-		local targetOffset = tonumber(string.sub(section, 2, #section), 16)
-		toReturn = targetOffset - (currentWriteAddress + 4)
-	elseif prefix == "#" then
-		toReturn = tonumber(string.sub(section, 2, #section), 16)
-	elseif prefix == "+" then
-		toReturn = currentWriteAddress + 4 + tonumber(string.sub(section, 2, #section), 16)
-	elseif prefix == ">" then
-		local label = string.sub(section, 2, #section)
-		local offset = IEex_CalcLabelOffset(address, args, label)
-		local targetOffset = nil
-		if offset then
-			targetOffset = address + offset
-		else
-			targetOffset = IEex_GlobalAssemblyLabels[label]
-			if not targetOffset then
-				IEex_Error("Label @"..label.." is not defined in current scope!")
-			end
-		end
-		toReturn = targetOffset - (currentWriteAddress + 4)
-	elseif prefix == "*" then
-		local label = string.sub(section, 2, #section)
-		local offset = IEex_CalcLabelOffset(address, args, label)
-		local targetOffset = nil
-		if offset then
-			targetOffset = address + offset
-		else
-			targetOffset = IEex_GlobalAssemblyLabels[label]
-			if not targetOffset then
-				IEex_Error("Label @"..label.." is not defined in current scope!")
-			end
-		end
-		toReturn = targetOffset
-	elseif prefix == "!" then
-		IEex_Error("Nested macros are not implemented! (did you really expect me to implement proper bracket matching?)")
-	elseif prefix == "@" then
-		IEex_Error("Why have you passed a label to a macro?")
-	else
-		toReturn = tonumber(section, 16)
-	end
-	return toReturn
-end
-
-function IEex_CalcWriteLength(address, args)
-	local toReturn = 0
-	for _, arg in ipairs(args) do
-		local argType = type(arg)
-		if argType == "string" then
-			-- processTextArg needs to be "defined" up here to have processSection see it.
-			local processTextArg = nil
-			local inComment = false
-			local processSection = function(section)
-				local prefix = string.sub(section, 1, 1)
-				if prefix == ";" then
-					inComment = not inComment
-				elseif not inComment then
-					if prefix == ":" or prefix == "#" or prefix == "+" then
-						toReturn = toReturn + 4
-					elseif prefix == ">" or prefix == "*" then
-						local label = string.sub(section, 2, #section)
-						if
-							not IEex_CalcLabelOffset(address, args, label)
-							and not IEex_GlobalAssemblyLabels[label]
-						then
-							IEex_Error("Label @"..label.." is not defined in current scope!")
-						end
-						toReturn = toReturn + 4
-					elseif prefix == "!" then -- Processes a macro
-						local macroResult = IEex_ResolveMacro(address, args, toReturn, section)
-						if type(macroResult) == "string" then
-							if processTextArg(macroResult) then
-								return true
-							end
-						else
-							toReturn = toReturn + macroResult
-						end
-					elseif prefix ~= "@" and prefix ~= "$" then
-						toReturn = toReturn + 1
-					end
-				end
-			end
-			processTextArg = function(innerArg)
-				innerArg = innerArg:gsub("%s+", " ")
-				local limit = #innerArg
-				local lastSpace = 0
-				for i = 1, limit, 1 do
-					local char = string.sub(innerArg, i, i)
-					if char == " " then
-						if i - lastSpace > 1 then
-							local section = string.sub(innerArg, lastSpace + 1, i - 1)
-							processSection(section)
-						end
-						lastSpace = i
-					end
-				end
-				if limit - lastSpace > 0 then
-					local lastSection = string.sub(innerArg, lastSpace + 1, limit)
-					processSection(lastSection)
-				end
-			end
-			processTextArg(arg)
-		elseif argType == "table" then
-			local argSize = #arg
-			if argSize == 2 or argSize == 3 then
-				local address = arg[1]
-				local length = arg[2]
-				local relativeFromOffset = arg[3]
-				if type(address) == "number" and type(length) == "number"
-					and (not relativeFromOffset or type(relativeFromOffset) == "number")
-				then
-					toReturn = toReturn + length
-				else
-					IEex_Error("Variable write argument included invalid data-type!")
-				end
-			else
-				IEex_Error("Variable write argument did not have at 2-3 args!")
-			end
-		else
-			IEex_Error("Illegal data-type in assembly declaration!")
-		end
-	end
-	return toReturn
-end
-
-function IEex_CalcLabelOffset(address, args, label)
-	local toReturn = 0
-	for _, arg in ipairs(args) do
-		local argType = type(arg)
-		if argType == "string" then
-			-- processTextArg needs to be "defined" up here to have processSection see it.
-			local processTextArg = nil
-			local inComment = false
-			local processSection = function(section)
-				local prefix = string.sub(section, 1, 1)
-				if prefix == ";" then
-					inComment = not inComment
-				elseif not inComment then
-					if prefix == ":" or prefix == "#" or prefix == "+" or prefix == ">" or prefix == "*" then
-						toReturn = toReturn + 4
-					elseif prefix == "!" then -- Processes a macro
-						local macroResult = IEex_ResolveMacro(address, args, toReturn, section)
-						if type(macroResult) == "string" then
-							if processTextArg(macroResult) then
-								return true
-							end
-						else
-							toReturn = toReturn + macroResult
-						end
-					elseif prefix == "@" or prefix == "$" then
-						local argLabel = string.sub(section, 2, #section)
-						if argLabel == label then
-							return true
-						end
-					else
-						toReturn = toReturn + 1
-					end
-				end
-			end
-			processTextArg = function(innerArg)
-				innerArg = innerArg:gsub("%s+", " ")
-				local limit = #innerArg
-				local lastSpace = 0
-				for i = 1, limit, 1 do
-					local char = string.sub(innerArg, i, i)
-					if char == " " then
-						if i - lastSpace > 1 then
-							local section = string.sub(innerArg, lastSpace + 1, i - 1)
-							if processSection(section) then
-								return true
-							end
-						end
-						lastSpace = i
-					end
-				end
-				if limit - lastSpace > 0 then
-					local lastSection = string.sub(innerArg, lastSpace + 1, limit)
-					if processSection(lastSection) then
-						return true
-					end
-				end
-			end
-			if processTextArg(arg) then
-				return toReturn
-			end
-		elseif argType == "table" then
-			local argSize = #arg
-			if argSize == 2 or argSize == 3 then
-				local address = arg[1]
-				local length = arg[2]
-				local relativeFromOffset = arg[3]
-				if type(address) == "number" and type(length) == "number"
-					and (not relativeFromOffset or type(relativeFromOffset) == "number")
-				then
-					toReturn = toReturn + length
-				else
-					IEex_Error("Variable write argument included invalid data-type!")
-				end
-			else
-				IEex_Error("Variable write argument did not have at 2-3 args!")
-			end
-		else
-			IEex_Error("Illegal data-type in assembly declaration!")
-		end
-	end
 end
 
 --[[
@@ -555,139 +361,55 @@ Core function that writes assembly declarations into memory. args syntax =>
 
 --]]
 
-function IEex_WriteAssembly(address, args, funcOverride)
-	local currentWriteAddress = address
-	if not funcOverride then
-		local writeDump = ""
-		IEex_WriteAssembly(address, args, function(writeAddress, byte)
-			writeDump = writeDump..IEex_ToHex(byte, 2, true).." "
+function IEex_WriteAssembly(address, assembly)
+	IEex_WriteSanitizedAssembly(address, IEex_SanitizeAssembly(assembly))
+end
+
+function IEex_SanitizeAssembly(assembly)
+
+	local state = {
+		["sanitizedStructure"] = {},
+		["seenLabelAddresses"] = {},
+		["firstUnexploredSection"] = {
+			["address"] = 0,
+			["index"] = 0,
+			["inComment"] = false,
+		},
+	}
+
+	local sanitizedStructure = state.sanitizedStructure
+
+	-- For some reason unrollTextArg has to be split up so it can see itself
+	local unrollTextArg
+	unrollTextArg = function(arg)
+		IEex_SplitByWhitespaceProcess(arg, function(section)
+			if section:sub(1, 1) == "!" then
+				local macroName = section:sub(2)
+				local macro = IEex_GlobalAssemblyMacros[section:sub(2)]
+				if macro then
+					-- Return is for tail call, not for returning a value
+					return unrollTextArg(macro)
+				else
+					IEex_Error("Macro \""..macroName.."\" not defined in the global scope!")
+				end
+			else
+				table.insert(sanitizedStructure, section)
+			end
 		end)
-		IEex_FunctionLog("\n\nWriting Assembly at "..IEex_ToHex(address).." => "..writeDump.."\n")
-		funcOverride = function(writeAddress, byte)
-			IEex_WriteByte(writeAddress, byte)
-		end
 	end
-	for _, arg in ipairs(args) do
+
+	for _, arg in ipairs(assembly) do
 		local argType = type(arg)
 		if argType == "string" then
-			-- processTextArg needs to be "defined" up here to have processSection see it.
-			local processTextArg = nil
-			local inComment = false
-			local processSection = function(section)
-				local prefix = string.sub(section, 1, 1)
-				if prefix == ";" then
-					inComment = not inComment
-				elseif not inComment then
-					if prefix == ":" then -- Writes relative offset to known address
-						local targetOffset = tonumber(string.sub(section, 2, #section), 16)
-						local relativeOffsetNeeded = targetOffset - (currentWriteAddress + 4)
-						for i = 0, 3, 1 do
-							local byte = bit.extract(relativeOffsetNeeded, i * 8, 8)
-							funcOverride(currentWriteAddress, byte)
-							currentWriteAddress = currentWriteAddress + 1
-						end
-					elseif prefix == "#" then
-						local toWrite = tonumber(string.sub(section, 2, #section), 16)
-						for i = 0, 3, 1 do
-							local byte = bit.extract(toWrite, i * 8, 8)
-							funcOverride(currentWriteAddress, byte)
-							currentWriteAddress = currentWriteAddress + 1
-						end
-					elseif prefix == "+" then -- Writes absolute address of relative offset
-						local targetOffset = currentWriteAddress + 4 + tonumber(string.sub(section, 2, #section), 16)
-						for i = 0, 3, 1 do
-							local byte = bit.extract(targetOffset, i * 8, 8)
-							funcOverride(currentWriteAddress, byte)
-							currentWriteAddress = currentWriteAddress + 1
-						end
-					elseif prefix == ">" then -- Writes relative offset to label
-						local label = string.sub(section, 2, #section)
-						local offset = IEex_CalcLabelOffset(address, args, label)
-						local targetOffset = nil
-						if offset then
-							targetOffset = address + offset
-						else
-							targetOffset = IEex_GlobalAssemblyLabels[label]
-							if not targetOffset then
-								IEex_Error("Label @"..label.." is not defined in current scope!")
-							end
-						end
-						local relativeOffsetNeeded = targetOffset - (currentWriteAddress + 4)
-						for i = 0, 3, 1 do
-							local byte = bit.extract(relativeOffsetNeeded, i * 8, 8)
-							funcOverride(currentWriteAddress, byte)
-							currentWriteAddress = currentWriteAddress + 1
-						end
-					elseif prefix == "*" then -- Writes absolute address of label
-						local label = string.sub(section, 2, #section)
-						local offset = IEex_CalcLabelOffset(address, args, label)
-						local targetOffset = nil
-						if offset then
-							targetOffset = address + offset
-						else
-							targetOffset = IEex_GlobalAssemblyLabels[label]
-							if not targetOffset then
-								IEex_Error("Label @"..label.." is not defined in current scope!")
-							end
-						end
-						for i = 0, 3, 1 do
-							local byte = bit.extract(targetOffset, i * 8, 8)
-							funcOverride(currentWriteAddress, byte)
-							currentWriteAddress = currentWriteAddress + 1
-						end
-					elseif prefix == "!" then -- Processes a macro
-						local macroResult = IEex_ResolveMacro(address, args, toReturn, section, func)
-						if type(macroResult) == "string" then
-							processTextArg(macroResult)
-						else
-							currentWriteAddress = currentWriteAddress + macroResult
-						end
-					elseif prefix == "$" then
-						local label = string.sub(section, 2, #section)
-						IEex_DefineAssemblyLabel(label, currentWriteAddress)
-					elseif prefix ~= "@" then
-						local byte = tonumber(section, 16)
-						funcOverride(currentWriteAddress, byte)
-						currentWriteAddress = currentWriteAddress + 1
-					end
-				end
-			end
-			processTextArg = function(innerArg)
-				innerArg = innerArg:gsub("%s+", " ")
-				local limit = #innerArg
-				local lastSpace = 0
-				for i = 1, limit, 1 do
-					local char = string.sub(innerArg, i, i)
-					if char == " " then
-						if i - lastSpace > 1 then
-							local section = string.sub(innerArg, lastSpace + 1, i - 1)
-							processSection(section)
-						end
-						lastSpace = i
-					end
-				end
-				if limit - lastSpace > 0 then
-					local lastSection = string.sub(innerArg, lastSpace + 1, limit)
-					processSection(lastSection)
-				end
-			end
-			processTextArg(arg)
+			unrollTextArg(arg)
 		elseif argType == "table" then
 			local argSize = #arg
 			if argSize == 2 or argSize == 3 then
-				local address = arg[1]
-				local length = arg[2]
 				local relativeFromOffset = arg[3]
-				if type(address) == "number" and type(length) == "number"
+				if type(arg[1]) == "number" and type(arg[2]) == "number"
 					and (not relativeFromOffset or type(relativeFromOffset) == "number")
 				then
-					if relativeFromOffset then address = address - currentWriteAddress - relativeFromOffset end
-					local limit = length - 1
-					for i = 0, limit, 1 do
-						local byte = bit.extract(address, i * 8, 8)
-						funcOverride(currentWriteAddress, byte)
-						currentWriteAddress = currentWriteAddress + 1
-					end
+					table.insert(sanitizedStructure, arg)
 				else
 					IEex_Error("Variable write argument included invalid data-type!")
 				end
@@ -698,15 +420,293 @@ function IEex_WriteAssembly(address, args, funcOverride)
 			IEex_Error("Illegal data-type in assembly declaration!")
 		end
 	end
+
+	return state
+
+end
+
+function IEex_WriteSanitizedAssembly(address, state, funcOverride)
+
+	if not funcOverride then
+
+		-- Print a hex-dump of what is about to be written to the log
+		local writeDump = ""
+		IEex_WriteSanitizedAssembly(address, state, function(writeAddress, byte)
+			writeDump = writeDump..IEex_ToHex(byte, 2, true).." "
+		end)
+		IEex_FunctionLog("\n\nWriting Assembly at "..IEex_ToHex(address).." => "..writeDump.."\n")
+
+		funcOverride = function(writeAddress, byte)
+			IEex_WriteByte(writeAddress, byte)
+		end
+	end
+
+	local firstUnexploredSection = state.firstUnexploredSection
+	local currentWriteAddress = address
+	local inComment = false
+
+	local prefixProcessing = {
+		[":"] = function(section)
+			local targetOffset = tonumber(section, 16)
+			local relativeOffsetNeeded = targetOffset - (currentWriteAddress + 4)
+			for i = 0, 3, 1 do
+				local byte = bit.extract(relativeOffsetNeeded, i * 8, 8)
+				funcOverride(currentWriteAddress, byte)
+				currentWriteAddress = currentWriteAddress + 1
+			end
+		end,
+		["+"] = function(section)
+			local targetOffset = currentWriteAddress + 4 + tonumber(section, 16)
+			for i = 0, 3, 1 do
+				local byte = bit.extract(targetOffset, i * 8, 8)
+				funcOverride(currentWriteAddress, byte)
+				currentWriteAddress = currentWriteAddress + 1
+			end
+		end,
+		["#"] = function(section)
+			local toWrite = tonumber(section, 16)
+			for i = 0, 3, 1 do
+				local byte = bit.extract(toWrite, i * 8, 8)
+				funcOverride(currentWriteAddress, byte)
+				currentWriteAddress = currentWriteAddress + 1
+			end
+		end,
+		["*"] = function(label)
+			local targetOffset = IEex_CalcLabelAddress(state, label)
+			if not targetOffset then
+				targetOffset = IEex_GlobalAssemblyLabels[label]
+				if not targetOffset then
+					IEex_Error("Label @"..label.." is not defined in current scope!")
+				end
+			end
+			for i = 0, 3, 1 do
+				local byte = bit.extract(targetOffset, i * 8, 8)
+				funcOverride(currentWriteAddress, byte)
+				currentWriteAddress = currentWriteAddress + 1
+			end
+		end,
+		[">"] = function(label)
+			local targetOffset = IEex_CalcLabelAddress(state, label)
+			if not targetOffset then
+				targetOffset = IEex_GlobalAssemblyLabels[label]
+				if not targetOffset then
+					IEex_Error("Label @"..label.." is not defined in current scope!")
+				end
+			end
+			local relativeOffsetNeeded = targetOffset - (currentWriteAddress + 4)
+			for i = 0, 3, 1 do
+				local byte = bit.extract(relativeOffsetNeeded, i * 8, 8)
+				funcOverride(currentWriteAddress, byte)
+				currentWriteAddress = currentWriteAddress + 1
+			end
+		end,
+		["$"] = function(label)
+			IEex_DefineAssemblyLabel(label, currentWriteAddress)
+			state.seenLabelAddresses[label] = currentWriteAddress
+		end,
+		["@"] = function(label)
+			state.seenLabelAddresses[label] = currentWriteAddress
+		end,
+	}
+
+	-----------------------
+	-- Process Structure --
+	-----------------------
+
+	local sanitizedStructure = state.sanitizedStructure
+
+	-- Structure is sanitized so I can make assumptions
+	for i = 1, #sanitizedStructure do
+
+		local arg = sanitizedStructure[i]
+		if type(arg) == "string" then
+			local prefix = string.sub(arg, 1, 1)
+			if prefix == ";" then
+				inComment = not inComment
+			elseif not inComment then
+				local prefixFunc = prefixProcessing[prefix]
+				if prefixFunc then
+					prefixFunc(arg:sub(2))
+				else
+					local byte = tonumber(arg, 16)
+					funcOverride(currentWriteAddress, byte)
+					currentWriteAddress = currentWriteAddress + 1
+				end
+			end
+		else
+			local address = arg[1]
+			local relativeFromOffset = arg[3]
+			if relativeFromOffset then address = address - currentWriteAddress - relativeFromOffset end
+			for i = 0, arg[2] - 1 do
+				local byte = bit.extract(address, i * 8, 8)
+				funcOverride(currentWriteAddress, byte)
+				currentWriteAddress = currentWriteAddress + 1
+			end
+		end
+
+		if i > firstUnexploredSection.index then
+			firstUnexploredSection.address = currentWriteAddress
+			firstUnexploredSection.index = i + 1
+			firstUnexploredSection.inComment = inComment
+		end
+
+	end
+end
+
+function IEex_InvalidateAssemblyState(state)
+	state.seenLabelAddresses = {}
+	state.firstUnexploredSection.address = 0
+	state.firstUnexploredSection.index = 0
+	state.firstUnexploredSection.inComment = false
+end
+
+function IEex_CalcWriteLength(address, state)
+
+	local firstUnexploredSection = state.firstUnexploredSection
+	local curAddress = address
+	local inComment = false
+
+	local prefixProcessing = {
+		[":"] = function(section)
+			curAddress = curAddress + 4
+		end,
+		["+"] = function(section)
+			curAddress = curAddress + 4
+		end,
+		["#"] = function(section)
+			curAddress = curAddress + 4
+		end,
+		["*"] = function(label)
+			curAddress = curAddress + 4
+		end,
+		[">"] = function(label)
+			curAddress = curAddress + 4
+		end,
+		["$"] = function(label)
+			state.seenLabelAddresses[label] = curAddress
+		end,
+		["@"] = function(label)
+			state.seenLabelAddresses[label] = curAddress
+		end,
+	}
+
+	-----------------------
+	-- Process Structure --
+	-----------------------
+
+	local sanitizedStructure = state.sanitizedStructure
+
+	for i = 1, #sanitizedStructure do
+
+		local arg = sanitizedStructure[i]
+		if type(arg) == "string" then
+			local prefix = string.sub(arg, 1, 1)
+			if prefix == ";" then
+				inComment = not inComment
+			elseif not inComment then
+				local prefixFunc = prefixProcessing[prefix]
+				if prefixFunc then
+					prefixFunc(arg:sub(2))
+				else
+					curAddress = curAddress + 1
+				end
+			end
+		else
+			curAddress = curAddress + arg[2]
+		end
+
+		if i > firstUnexploredSection.index then
+			firstUnexploredSection.address = curAddress
+			firstUnexploredSection.index = i + 1
+			firstUnexploredSection.inComment = inComment
+		end
+
+	end
+
+	return curAddress - address
+end
+
+function IEex_CalcLabelAddress(state, toFind)
+
+	local knownAddress = state.seenLabelAddresses[toFind]
+	if knownAddress then return knownAddress end
+
+	local firstUnexploredSection = state.firstUnexploredSection
+	local curAddress = firstUnexploredSection.address
+	local inComment = state.firstUnexploredSection.inComment
+
+	local prefixProcessing = {
+		[":"] = function(section)
+			curAddress = curAddress + 4
+		end,
+		["+"] = function(section)
+			curAddress = curAddress + 4
+		end,
+		["#"] = function(section)
+			curAddress = curAddress + 4
+		end,
+		["*"] = function(label)
+			curAddress = curAddress + 4
+		end,
+		[">"] = function(label)
+			curAddress = curAddress + 4
+		end,
+		["$"] = function(label)
+			state.seenLabelAddresses[label] = curAddress
+			return label == toFind
+		end,
+		["@"] = function(label)
+			state.seenLabelAddresses[label] = curAddress
+			return label == toFind
+		end,
+	}
+
+	-----------------------
+	-- Process Structure --
+	-----------------------
+
+	local sanitizedStructure = state.sanitizedStructure
+
+	for i = firstUnexploredSection.index, #sanitizedStructure do
+
+		local found = false
+
+		local arg = sanitizedStructure[i]
+		if type(arg) == "string" then
+			local prefix = string.sub(arg, 1, 1)
+			if prefix == ";" then
+				inComment = not inComment
+			elseif not inComment then
+				local prefixFunc = prefixProcessing[prefix]
+				if prefixFunc then
+					found = prefixFunc(arg:sub(2))
+				else
+					curAddress = curAddress + 1
+				end
+			end
+		else
+			curAddress = curAddress + arg[2]
+		end
+
+		if i > firstUnexploredSection.index then
+			firstUnexploredSection.address = curAddress
+			firstUnexploredSection.index = i + 1
+			firstUnexploredSection.inComment = inComment
+		end
+
+		if found then return curAddress end
+		
+	end
 end
 
 -- NOTE: Same as IEex_WriteAssembly(), but writes to a dynamically
 -- allocated memory space instead of a provided address.
 -- Very useful for writing new executable code into memory.
 function IEex_WriteAssemblyAuto(assembly)
-	local reservedAddress, reservedLength = IEex_ReserveCodeMemory(assembly)
+	local state = IEex_SanitizeAssembly(assembly)
+	local reservedAddress, reservedLength = IEex_ReserveCodeMemory(state)
 	IEex_FunctionLog("Reserved "..IEex_ToHex(reservedLength).." bytes at "..IEex_ToHex(reservedAddress))
-	IEex_WriteAssembly(reservedAddress, assembly)
+	IEex_WriteSanitizedAssembly(reservedAddress, state)
 	return reservedAddress
 end
 
@@ -1214,13 +1214,13 @@ end
 -- Supports filling holes caused by freeing code reservations,
 -- (if you would ever want to do that?...), though freeing is not
 -- currently implemented.
-function IEex_ReserveCodeMemory(assembly)
+function IEex_ReserveCodeMemory(state)
 	local reservedAddress = -1
 	local writeLength = -1
 	local processCodePageEntry = function(codePage)
 		for i, allocEntry in ipairs(codePage) do
 			if not allocEntry.reserved then
-				writeLength = IEex_CalcWriteLength(allocEntry.address, assembly)
+				writeLength = IEex_CalcWriteLength(allocEntry.address, state)
 				if writeLength <= allocEntry.size then
 					local memLeftOver = allocEntry.size - writeLength
 					if memLeftOver > 0 then
@@ -1250,6 +1250,8 @@ function IEex_ReserveCodeMemory(assembly)
 					allocEntry.reserved = true
 					reservedAddress = allocEntry.address
 					return true
+				else
+					IEex_InvalidateAssemblyState(state)
 				end
 			end
 		end
