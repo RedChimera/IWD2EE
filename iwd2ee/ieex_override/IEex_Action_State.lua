@@ -257,7 +257,7 @@ end
 function EXAPPLSP(actionData, creatureData)
 	local actionID = IEex_GetActionID(actionData)
 	local sourceID = IEex_GetActorIDShare(creatureData)
-	if actionID == 31 or actionID == 95 then
+	if actionID == 31 or actionID == 95 or actionID == 191 or actionID == 192 then
 		local spellRES = IEex_GetActionString1(actionData)
 --		IEex_DisplayString(spellRES)
 		local resWrapper = IEex_DemandRes(spellRES, "SPL")
@@ -289,6 +289,12 @@ function EXAPPLSP(actionData, creatureData)
 					["source_target"] = targetID,
 					["source_id"] = sourceID
 				})
+			elseif bit.band(IEex_ReadDword(spellData + 0x18), 0x20000000) > 0 then
+				if actionID == 31 or actionID == 191 then
+					IEex_SetActionID(actionData, 113)
+				elseif actionID == 95 or actionID == 192 then
+					IEex_SetActionID(actionData, 114)
+				end
 			end
 		end
 		resWrapper:free()

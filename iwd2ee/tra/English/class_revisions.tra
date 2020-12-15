@@ -321,6 +321,14 @@ You are able to replicate the verbal and somatic components of spells while shap
 Prerequisites: Cha 13+, Wild Shape.
 
 Benefit: You can cast spells while in any shapeshifted form. However, the awkwardness of replicating the verbal and somatic components gives you a +4 penalty to casting time (you can still cast spells without penalty in your natural form).~
+@347    = ~Counterspell~
+@348    = ~Counterspell:
+
+You know how to negate an opponent's spell by expending the same spell.
+
+Prerequisites: The ability to cast 2nd-level spells.
+
+Benefit: You gain the Counterspell ability, usable once per round. If you use it on an enemy spellcaster when they are casting a spell you also have memorized, you can expend one use of that spell to counter the enemy's spell, causing it to fail.~
 
 @522    = ~Wizard~
 @523    = ~WIZARD:
@@ -1613,7 +1621,7 @@ Disadvantages:
 @919    = ~Grapple~
 @920    = ~Whirlwind Attack~
 @921    = ~Deflected a missile~
-@922    = ~~
+@922    = ~Counterspell~
 @923    = ~~
 @924    = ~~
 @925    = ~~

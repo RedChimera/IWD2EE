@@ -600,6 +600,7 @@ LAF ADD_FEAT_IWD2 INT_VAR nameref=RESOLVE_STR_REF(@335) descref=RESOLVE_STR_REF(
 LAF ADD_FEAT_IWD2 INT_VAR nameref=RESOLVE_STR_REF(@337) descref=RESOLVE_STR_REF(@338) max=2 STR_VAR name=~ME_TWO_WEAPON_DEFENSE~ script=~Feats_TwoWeaponDefense~ featspl_1=~USFTWDF1~ END
 LAF ADD_FEAT_IWD2 INT_VAR nameref=RESOLVE_STR_REF(@343) descref=RESOLVE_STR_REF(@344) max=2 STR_VAR name=~ME_WHIRLWIND_ATTACK~ script=~Feats_WhirlwindAttack~ prerequisite_script=~Prereq_WhirlwindAttack~ featspl_1=~USFWHRA1~ END
 LAF ADD_FEAT_IWD2 INT_VAR nameref=RESOLVE_STR_REF(@345) descref=RESOLVE_STR_REF(@346) max=1 STR_VAR name=~ME_NATURAL_SPELL~ script=~Feats_NaturalSpell~ featspl_1=~USFNASP1~ END
+LAF ADD_FEAT_IWD2 INT_VAR nameref=RESOLVE_STR_REF(@347) descref=RESOLVE_STR_REF(@348) max=1 STR_VAR name=~ME_COUNTERSPELL~ script=~Feats_Counterspell~ featspl_1=~USFCOUN1~ END
 
 // New descriptions for classes
 COPY_EXISTING ~help02.2da~ ~override~
@@ -1471,6 +1472,12 @@ COPY_EXISTING ~USWHIRLA.spl~ ~override~
   SAY UNIDENTIFIED_DESC @920
   SAY IDENTIFIED_DESC @920
 
+COPY_EXISTING ~USCOUNTE.spl~ ~override~
+  SAY NAME1 @922
+  SAY NAME2 @922
+  SAY UNIDENTIFIED_DESC @922
+  SAY IDENTIFIED_DESC @922
+
 COPY_EXISTING ~SPIN231.spl~ ~override~
   SAY NAME1 @699
   SAY NAME2 @699
@@ -2169,5 +2176,8 @@ COPY_EXISTING ~LISTINNT.2da~ ~override~
 	numrows += 1
 	lastindex += 1
 	INSERT_2DA_ROW numrows 2 ~%lastindex% USWHIRLA~
+	numrows += 1
+	lastindex += 1
+	INSERT_2DA_ROW numrows 2 ~%lastindex% USCOUNTE~
 
 INCLUDE ~%mod_folder%/components/final_patches.tpa~

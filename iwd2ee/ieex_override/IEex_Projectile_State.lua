@@ -147,13 +147,14 @@ function IEex_Extern_OnProjectileDecode(esp)
 	local source = IEex_DecodeProjectileSources[IEex_ReadDword(esp)]
 	if source == nil then return end
 	local CGameAIBase = IEex_ReadDword(esp + 0x8)
-	local originalMissileIndex = missileIndex
+--	local originalMissileIndex = missileIndex
 	if source == 5 then
 		CGameAIBase = IEex_ReadDword(esp + 0x20)
 	elseif source == 7 then
 		CGameAIBase = IEex_ReadDword(esp + 0x18)
 	elseif source == 8 then
 		CGameAIBase = IEex_ReadDword(esp + 0xDC)
+--[[
 		local originalCProjectile = IEex_ReadDword(esp + 0x10)
 		if originalCProjectile > 65535 then
 			originalMissileIndex = IEex_ReadWord(originalCProjectile + 0x6E, 0x0) + 1
@@ -161,6 +162,7 @@ function IEex_Extern_OnProjectileDecode(esp)
 				CGameAIBase = IEex_GetActorShare(IEex_ReadDword(originalCProjectile + 0x72))
 			end
 		end
+--]]
 	end
 	local sourceID = IEex_GetActorIDShare(CGameAIBase)
 	if IEex_GetActorSpellState(sourceID, 251) then
@@ -202,7 +204,7 @@ function IEex_Extern_OnProjectileDecode(esp)
 				local thesavingthrow = IEex_ReadDword(eData + 0x40)
 				local thecondition = IEex_ReadWord(eData + 0x48, 0x0)
 				local thelimit = IEex_ReadWord(eData + 0x4A, 0x0)
-				if (bit.band(thesavingthrow, 0x10000) == 0 or thecondition + 1 == originalMissileIndex) and (bit.band(thesavingthrow, 0x20000) == 0 or thecondition == generalProjectileType) and (bit.band(thesavingthrow, 0x40000) == 0 or thecondition == source) and (bit.band(thesavingthrow, 0x80000) == 0 or thelimit > 0) then
+				if (bit.band(thesavingthrow, 0x10000) == 0 or thecondition + 1 == missileIndex) and (bit.band(thesavingthrow, 0x20000) == 0 or thecondition == generalProjectileType) and (bit.band(thesavingthrow, 0x40000) == 0 or thecondition == source) and (bit.band(thesavingthrow, 0x80000) == 0 or thelimit > 0) then
 					if bit.band(thesavingthrow, 0x4000000) > 0 then
 						newProjectile = theparameter1
 						if bit.band(thesavingthrow, 0x80000) > 0 then
@@ -228,13 +230,14 @@ function IEex_Extern_OnPostProjectileCreation(CProjectile, esp)
 	local source = IEex_DecodeProjectileSources[IEex_ReadDword(esp)]
 	if source == nil then return end
 	local CGameAIBase = IEex_ReadDword(esp + 0x8)
-	local originalMissileIndex = missileIndex
+--	local originalMissileIndex = missileIndex
 	if source == 5 then
 		CGameAIBase = IEex_ReadDword(esp + 0x20)
 	elseif source == 7 then
 		CGameAIBase = IEex_ReadDword(esp + 0x18)
 	elseif source == 8 then
 		CGameAIBase = IEex_ReadDword(esp + 0xDC)
+--[[
 		local originalCProjectile = IEex_ReadDword(esp + 0x10)
 		if originalCProjectile > 65535 then
 			originalMissileIndex = IEex_ReadWord(originalCProjectile + 0x6E, 0x0) + 1
@@ -242,6 +245,7 @@ function IEex_Extern_OnPostProjectileCreation(CProjectile, esp)
 				CGameAIBase = IEex_GetActorShare(IEex_ReadDword(originalCProjectile + 0x72))
 			end
 		end
+--]]
 	end
 	local sourceID = IEex_GetActorIDShare(CGameAIBase)
 
@@ -288,7 +292,7 @@ function IEex_Extern_OnPostProjectileCreation(CProjectile, esp)
 				local thesavingthrow = IEex_ReadDword(eData + 0x40)
 				local thecondition = IEex_ReadWord(eData + 0x48, 0x0)
 				local thelimit = IEex_ReadWord(eData + 0x4A, 0x0)
-				if (bit.band(thesavingthrow, 0x10000) == 0 or thecondition + 1 == originalMissileIndex) and (bit.band(thesavingthrow, 0x20000) == 0 or thecondition == generalProjectileType) and (bit.band(thesavingthrow, 0x40000) == 0 or thecondition == source) and (bit.band(thesavingthrow, 0x80000) == 0 or thelimit > 0) then
+				if (bit.band(thesavingthrow, 0x10000) == 0 or thecondition + 1 == missileIndex) and (bit.band(thesavingthrow, 0x20000) == 0 or thecondition == generalProjectileType) and (bit.band(thesavingthrow, 0x40000) == 0 or thecondition == source) and (bit.band(thesavingthrow, 0x80000) == 0 or thelimit > 0) then
 					if bit.band(thesavingthrow, 0x1000000) > 0 and generalProjectileType >= 6 and generalProjectileType <= 8 then
 						areaMult = math.floor(areaMult * theparameter1 / 100)
 						if bit.band(thesavingthrow, 0x80000) > 0 then

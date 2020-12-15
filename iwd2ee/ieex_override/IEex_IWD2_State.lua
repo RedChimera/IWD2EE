@@ -799,6 +799,24 @@ function IEex_GetActorCurrentAction(actorID)
 	return IEex_ReadDword(share + 0x4BE)
 end
 
+IEex_SpellIDSPrefix = {[1] = "SPPR", [2] = "SPWI", [3] = "SPIN"}
+function IEex_GetActorSpellRES(actorID)
+	if not IEex_IsSprite(actorID, false) then return "" end
+	local share = IEex_GetActorShare(actorID)
+	local actionID = IEex_ReadWord(share + 0x476, 0x0)
+	local spellRES = ""
+	if actionID == 31 or actionID == 95 or actionID == 113 or actionID == 114 or actionID == 191 or actionID == 192 then
+		spellRES = IEex_ReadString(IEex_ReadDword(share + 0x538))
+		if spellRES == "" then
+			local spellIDS = IEex_ReadWord(share + 0x52C, 0x0)
+			if IEex_SpellIDSPrefix[math.floor(spellIDS / 1000)] ~= nil then
+				spellRES = IEex_SpellIDSPrefix[math.floor(spellIDS / 1000)] .. (spellIDS % 1000)
+			end
+		end
+	end
+	return spellRES
+end
+
 -- Returns the actor's direction (from DIR.IDS).
 function IEex_GetActorDirection(actorID)
 	if not IEex_IsSprite(actorID, true) then return 0 end
@@ -1455,6 +1473,11 @@ end
 function Feats_ConcoctPotions(actorID, featID)
 	local creatureData = IEex_GetActorShare(actorID)
 	return (IEex_ReadByte(creatureData + 0x7B4, 0x0) >= 10)
+end
+
+function Feats_Counterspell(actorID, featID)
+	local creatureData = IEex_GetActorShare(actorID)
+	return (IEex_ReadByte(creatureData + 0x628, 0x0) > 3 or IEex_ReadByte(creatureData + 0x629, 0x0) > 2 or IEex_ReadByte(creatureData + 0x62A, 0x0) > 2 or IEex_ReadByte(creatureData + 0x62D, 0x0) > 4 or IEex_ReadByte(creatureData + 0x62E, 0x0) > 4 or IEex_ReadByte(creatureData + 0x630, 0x0) > 3 or IEex_ReadByte(creatureData + 0x631, 0x0) > 2)
 end
 
 function Feats_DefensiveStance(actorID, featID)
@@ -3725,7 +3748,7 @@ function MEBARRAA(originatingEffectData, actionData, creatureData)
 		spellRES = parent_resource .. "D"
 		IEex_WriteLString(originatingEffectData + 0x6C, spellRES, 8)
 	end
-	if actionID == 114 and IEex_ReadString(IEex_ReadDword(creatureData + 0x538)) == spellRES then
+	if actionID == 114 and IEex_GetActorSpellRES(sourceID) == spellRES then
 		parameter4 = parameter4 + 1
 --		IEex_DS(parameter4)
 		IEex_WriteDword(originatingEffectData + 0x60, parameter4)
@@ -4598,6 +4621,144 @@ function MESPELLT(effectData, creatureData)
 ["source_id"] = sourceID
 })
 		end
+	end
+end
+
+function MECOUNTE(effectData, creatureData)
+	if IEex_CheckForEffectRepeat(effectData, creatureData) then return end
+	local targetID = IEex_GetActorIDShare(creatureData)
+	IEex_SetToken("EXCSNAM1", IEex_GetActorName(targetID))
+	local sourceID = IEex_ReadDword(effectData + 0x10C)
+	local actionID = IEex_ReadWord(creatureData + 0x476, 0x0)
+	if actionID == 31 or actionID == 95 or actionID == 113 or actionID == 114 or actionID == 191 or actionID == 192 then
+		local casterClass = IEex_ReadSignedByte(creatureData + 0x530, 0x0)
+		local classSpellLevel = IEex_ReadSignedByte(creatureData + 0x534, 0x0)
+		local spellRES = IEex_GetActorSpellRES(targetID)
+		if classSpellLevel <= 0 and (ex_listspll[spellRES] ~= nil or ex_listdomn[spellRES] ~= nil) then
+			if casterClass <= 0 then
+				if IEex_GetActorStat(targetID, 97) > 0 and ex_listspll[spellRES][1] > 0 then
+					casterClass = 2
+				elseif IEex_GetActorStat(targetID, 98) > 0 and ex_listspll[spellRES][2] > 0 then
+					casterClass = 3
+				elseif IEex_GetActorStat(targetID, 99) > 0 and ex_listspll[spellRES][3] > 0 then
+					casterClass = 4
+				elseif IEex_GetActorStat(targetID, 102) > 0 and ex_listspll[spellRES][4] > 0 then
+					casterClass = 7
+				elseif IEex_GetActorStat(targetID, 103) > 0 and ex_listspll[spellRES][5] > 0 then
+					casterClass = 8
+				elseif IEex_GetActorStat(targetID, 105) > 0 and ex_listspll[spellRES][6] > 0 then
+					casterClass = 10
+				elseif IEex_GetActorStat(targetID, 105) > 0 and ex_listspll[spellRES][6] > 0 then
+					casterClass = 11
+				end
+			end
+			classSpellLevel = IEex_GetClassSpellLevel(targetID, casterClass, spellRES)
+		end
+		if classSpellLevel <= 0 then
+			local resWrapper = IEex_DemandRes(spellRES, "SPL")
+			if resWrapper:isValid() then
+				local spellData = resWrapper:getData()
+				if IEex_ReadWord(spellData + 0x1C, 0x0) == 1 or IEex_ReadWord(spellData + 0x1C, 0x0) == 2 then
+					classSpellLevel = IEex_ReadDword(spellData + 0x34)
+				end
+			end
+			resWrapper:free()
+		end
+		IEex_ApplyEffectToActor(sourceID, {
+["opcode"] = 139,
+["target"] = 2,
+["timing"] = 0,
+["parameter1"] = ex_tra_55483,
+["source_id"] = sourceID
+})
+		local spells = IEex_FetchSpellInfo(sourceID, {1, 2, 3, 4, 5, 6, 7, 8})
+		local sourceHasSpell = false
+		if classSpellLevel > 0 then
+			for i = 1, 9, 1 do
+				for cType, levelList in pairs(spells) do
+					if #levelList >= i then
+						local levelI = levelList[i]
+						local maxCastable = levelI[1]
+						local sorcererCastableCount = levelI[2]
+						local levelISpells = levelI[3]
+						if #levelISpells > 0 then
+							for i2, spell in ipairs(levelISpells) do
+								if spellRES == spell["resref"] then
+									if cType == 1 or cType == 6 then
+										if sorcererCastableCount > 0 then
+											sourceHasSpell = true
+										end
+									else
+										if spell["castableCount"] > 0 then
+											sourceHasSpell = true
+										end
+									end
+								end
+							end
+						end
+					end
+				end
+			end
+		end
+		if sourceHasSpell then
+			IEex_WriteWord(creatureData + 0x476, 0)
+			IEex_ApplyEffectToActor(targetID, {
+["opcode"] = 138,
+["target"] = 2,
+["timing"] = 0,
+["parameter2"] = 4,
+["source_id"] = sourceID
+})
+			IEex_ApplyEffectToActor(targetID, {
+["opcode"] = 233,
+["target"] = 2,
+["timing"] = 0,
+["parameter2"] = 67,
+["source_id"] = sourceID
+})
+			IEex_ApplyEffectToActor(targetID, {
+["opcode"] = 174,
+["target"] = 2,
+["timing"] = 0,
+["resource"] = "CASTB",
+["source_id"] = sourceID
+})
+			IEex_ApplyEffectToActor(sourceID, {
+["opcode"] = 500,
+["target"] = 2,
+["timing"] = 0,
+["parameter1"] = -1,
+["parameter2"] = 9,
+["special"] = 1,
+["savingthrow"] = 0x2FF0000,
+["resource"] = "EXMODMEM",
+["vvcresource"] = spellRES,
+["source_id"] = sourceID
+})
+			IEex_ApplyEffectToActor(targetID, {
+["opcode"] = 139,
+["target"] = 2,
+["timing"] = 0,
+["parameter1"] = ex_tra_55481,
+["source_id"] = sourceID
+})
+		else
+			IEex_ApplyEffectToActor(sourceID, {
+["opcode"] = 139,
+["target"] = 2,
+["timing"] = 0,
+["parameter1"] = ex_tra_55482,
+["source_id"] = sourceID
+})
+		end
+	else
+		IEex_ApplyEffectToActor(sourceID, {
+["opcode"] = 139,
+["target"] = 2,
+["timing"] = 0,
+["parameter1"] = ex_tra_55484,
+["source_id"] = sourceID
+})
 	end
 end
 
@@ -6203,26 +6364,37 @@ function EXMODMEM(effectData, creatureData)
 				local levelISpells = levelI[3]
 				if #levelISpells > 0 then
 					if cType == 1 or cType == 6 then
-						if not subtractSpells then
-							local modifyNum = maxCastable - sorcererCastableCount
-							if modifyNum > modifyRemaining then
-								modifyNum = modifyRemaining
+						local matchSpellFound = true
+						if bit.band(savingthrow, 0x2000000) > 0 then
+							matchSpellFound = false
+							for i2, spell in ipairs(levelISpells) do
+								if matchSpell == spell["resref"] then
+									matchSpellFound = true
+								end
 							end
-							if modifyNum > 0 then
-								modifyRemaining = modifyRemaining - modifyNum
-								table.insert(modifyList, {i, modifyNum, ""})
-								IEex_AlterSpellInfo(targetID, cType, i, "", 0, modifyNum)
-							end
-						else
-							local modifyNum = sorcererCastableCount
-							if modifyNum > modifyRemaining then
-								modifyNum = modifyRemaining
-							end
-							if modifyNum > 0 then
-								modifyRemaining = modifyRemaining - modifyNum
-								spellsStolen = spellsStolen + modifyNum
-								table.insert(modifyList, {i, modifyNum, ""})
-								IEex_AlterSpellInfo(targetID, cType, i, "", 0, modifyNum * -1)
+						end
+						if matchSpellFound then
+							if not subtractSpells then
+								local modifyNum = maxCastable - sorcererCastableCount
+								if modifyNum > modifyRemaining then
+									modifyNum = modifyRemaining
+								end
+								if modifyNum > 0 then
+									modifyRemaining = modifyRemaining - modifyNum
+									table.insert(modifyList, {i, modifyNum, ""})
+									IEex_AlterSpellInfo(targetID, cType, i, "", 0, modifyNum)
+								end
+							else
+								local modifyNum = sorcererCastableCount
+								if modifyNum > modifyRemaining then
+									modifyNum = modifyRemaining
+								end
+								if modifyNum > 0 then
+									modifyRemaining = modifyRemaining - modifyNum
+									spellsStolen = spellsStolen + modifyNum
+									table.insert(modifyList, {i, modifyNum, ""})
+									IEex_AlterSpellInfo(targetID, cType, i, "", 0, modifyNum * -1)
+								end
 							end
 						end
 					else
@@ -8159,7 +8331,7 @@ function MEGHOSTW(effectData, creatureData)
 			destinationY = IEex_ReadDword(IEex_GetActorShare(targetID) + 0xA)
 		end
 --]]
-		local resWrapper = IEex_DemandRes(IEex_ReadLString(IEex_ReadDword(creatureData + 0x538), 8), "SPL")
+		local resWrapper = IEex_DemandRes(IEex_GetActorSpellRES(sourceID), "SPL")
 		if resWrapper:isValid() then
 			local spellData = resWrapper:getData()
 			actionRange = IEex_ReadWord(spellData + 0x90, 0x0)
@@ -11332,7 +11504,7 @@ function MEAILCON(originatingEffectData, actionData, creatureData)
 		
 		local targetID = IEex_ReadDword(creatureData + 0x4BE)
 		if not IEex_IsSprite(targetID, false) then return end
-		local spellRES = IEex_ReadString(IEex_ReadDword(creatureData + 0x538))
+		local spellRES = IEex_GetActorSpellRES(sourceID)
 		local resWrapper = IEex_DemandRes(spellRES, "SPL")
 		if resWrapper:isValid() then
 			local spellData = resWrapper:getData()
@@ -11442,7 +11614,7 @@ function MEAILCON(originatingEffectData, actionData, creatureData)
 ["source_id"] = sourceID
 })
 	elseif actionID == 95 or actionID == 114 or actionID == 192 then
-		local spellRES = IEex_ReadString(IEex_ReadDword(creatureData + 0x538))
+		local spellRES = IEex_GetActorSpellRES(sourceID)
 		local resWrapper = IEex_DemandRes(spellRES, "SPL")
 		if resWrapper:isValid() then
 			local spellData = resWrapper:getData()
@@ -11566,7 +11738,7 @@ function MEBOULDR(actionData, creatureData)
 	}
 --	IEex_DS(actionID)
 	
-	if spellActions[actionID] ~= nil and ex_due_south_spells[IEex_ReadString(IEex_ReadDword(creatureData + 0x538))] ~= nil then
+	if spellActions[actionID] ~= nil and ex_due_south_spells[IEex_GetActorSpellRES(sourceID)] ~= nil then
 --		IEex_DS("[" .. IEex_ReadDword(creatureData + 0x540) .. "." .. IEex_ReadDword(creatureData + 0x544) .. "]")
 		local sourceX, sourceY = IEex_GetActorLocation(sourceID)
 		local areaRES = ""
