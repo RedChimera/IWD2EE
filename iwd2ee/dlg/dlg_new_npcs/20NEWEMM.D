@@ -38,35 +38,43 @@ END
 IF ~~ THEN BEGIN 4
   SAY #36418
   IF ~  !PartyHasItem("00SWDL09")
+  !PartyHasItem("USHFSL09")
 ~ THEN REPLY #36419 GOTO 5
   IF ~  !PartyHasItem("00SWDL09")
+  !PartyHasItem("USHFSL09")
 ~ THEN REPLY #36420 GOTO 6
   IF ~  !Global("SR_Emma_Heal","GLOBAL",1)
 !ClassEx(Protagonist,PALADIN)
 !ClassEx(Protagonist,MONK)
 !PartyHasItem("00SWDL09")
+!PartyHasItem("USHFSL09")
 Global("US_THIS_PREVENTS_THE_EMMA_HEALING_EXPLOIT","GLOBAL",5)
 ~ THEN REPLY #36421 DO ~SetGlobal("SR_Recover_Blade","GLOBAL", 3)~ JOURNAL #36401 GOTO 7
   IF ~  Global("SR_Emma_Heal","GLOBAL",1)
 !ClassEx(Protagonist,PALADIN)
 !ClassEx(Protagonist,MONK)
 !PartyHasItem("00SWDL09")
+!PartyHasItem("USHFSL09")
 Global("US_THIS_PREVENTS_THE_EMMA_HEALING_TRICK","GLOBAL",5)
 ~ THEN REPLY #36422 DO ~SetGlobal("SR_Recover_Blade","GLOBAL", 3)~ JOURNAL #36401 GOTO 8
   IF ~  ClassEx(Protagonist,PALADIN)
 !PartyHasItem("00SWDL09")
 ~ THEN REPLY #36423 DO ~SetGlobal("SR_Recover_Blade","GLOBAL", 3)~ JOURNAL #36400 GOTO 9
-  IF ~  PartyHasItem("00SWDL09")
+  IF ~  Or(2)
+  PartyHasItem("00SWDL09")
+  PartyHasItem("USHFSL09")
 !Global("SR_Kaitlin_Fled","GLOBAL",1)
 !Global("SR_Kaitlin_Dead","GLOBAL",1)
 ~ THEN REPLY #2313 DO ~SetGlobal("SR_Recover_Blade","GLOBAL", 4)
 SetGlobal("SR_Emma_Has_Blade","GLOBAL", 1)~ GOTO 17
-  IF ~  PartyHasItem("00SWDL09")
+  IF ~  Or(2)
+  PartyHasItem("00SWDL09")
+  PartyHasItem("USHFSL09")
 Global("SR_Kaitlin_Fled","GLOBAL",1)
 ~ THEN REPLY #2313 DO ~SetGlobal("SR_Recover_Blade","GLOBAL", 4)
 SetGlobal("SR_Emma_Revenge","GLOBAL", 2)
 SetGlobal("SR_Emma_Has_Blade","GLOBAL", 1)~ GOTO 27
-  IF ~  PartyHasItem("00SWDL09")
+  IF ~  
 Global("SR_Kaitlin_Dead","GLOBAL",1)
 ~ THEN REPLY #2313 DO ~SetGlobal("SR_Recover_Blade","GLOBAL", 4)
 SetGlobal("SR_Emma_Revenge","GLOBAL", 3)
@@ -129,6 +137,12 @@ END
 
 IF ~~ THEN BEGIN 13
   SAY #36439
+  IF ~!NumInParty(6)
+!Global("US_VREK_JOIN","GLOBAL",1)
+GlobalLT("SR_Recover_Blade","GLOBAL",4)
+!Global("SR_Kaitlin_Fled","GLOBAL",1)
+!Global("SR_Kaitlin_Dead","GLOBAL",1)
+~ THEN REPLY ~Join us and we'll help those villagers together.~ GOTO EmmaJoin1
   IF ~~ THEN REPLY #36440 EXIT
 END
 
@@ -137,24 +151,32 @@ IF WEIGHT #7 ~  NumTimesTalkedToGT(0)
   SAY #36441
   IF ~  Global("SR_Kaitlin_Fled","GLOBAL",1)
 !PartyHasItem("00SWDL09")
+!PartyHasItem("USHFSL09")
 ~ THEN REPLY #36442 DO ~SetGlobal("SR_Emma_Revenge","GLOBAL", 2)~ JOURNAL #36403 GOTO 15
   IF ~  Global("SR_Kaitlin_Dead","GLOBAL",1)
 !PartyHasItem("00SWDL09")
+!PartyHasItem("USHFSL09")
 ~ THEN REPLY #36442 DO ~SetGlobal("SR_Emma_Revenge","GLOBAL", 3)~ JOURNAL #36404 GOTO 16
   IF ~  Global("SR_Recover_Blade","GLOBAL",3)
-PartyHasItem("00SWDL09")
+Or(2)
+  PartyHasItem("00SWDL09")
+  PartyHasItem("USHFSL09")
 !Global("SR_Kaitlin_Fled","GLOBAL",1)
 !Global("SR_Kaitlin_Dead","GLOBAL",1)
 ~ THEN REPLY #36443 DO ~SetGlobal("SR_Recover_Blade","GLOBAL", 4)
 SetGlobal("SR_Emma_Has_Blade","GLOBAL", 1)~ GOTO 17
   IF ~  Global("SR_Recover_Blade","GLOBAL",3)
-PartyHasItem("00SWDL09")
+Or(2)
+  PartyHasItem("00SWDL09")
+  PartyHasItem("USHFSL09")
 Global("SR_Kaitlin_Fled","GLOBAL",1)
 ~ THEN REPLY #36443 DO ~SetGlobal("SR_Recover_Blade","GLOBAL", 4)
 SetGlobal("SR_Emma_Revenge","GLOBAL", 2)
 SetGlobal("SR_Emma_Has_Blade","GLOBAL", 1)~ JOURNAL #36403 GOTO 27
   IF ~  Global("SR_Recover_Blade","GLOBAL",3)
-PartyHasItem("00SWDL09")
+Or(2)
+  PartyHasItem("00SWDL09")
+  PartyHasItem("USHFSL09")
 Global("SR_Kaitlin_Dead","GLOBAL",1)
 ~ THEN REPLY #36443 DO ~SetGlobal("SR_Recover_Blade","GLOBAL", 4)
 SetGlobal("SR_Emma_Revenge","GLOBAL", 3)
@@ -172,6 +194,12 @@ Global("SR_Recover_Blade","GLOBAL",4)
 !Global("SR_Kaitlin_Fled","GLOBAL",1)
 !Global("SR_Kaitlin_Dead","GLOBAL",1)
 ~ THEN REPLY ~Would you consider joining us?  The horde has laid claim to Shaengarne Bridge, and Lord Ulbrec has asked us to retake the bridge.  We would be grateful if you would lend us your assistance.~ GOTO EmmaJoin1
+  IF ~!NumInParty(6)
+!Global("US_VREK_JOIN","GLOBAL",1)
+GlobalLT("SR_Recover_Blade","GLOBAL",4)
+!Global("SR_Kaitlin_Fled","GLOBAL",1)
+!Global("SR_Kaitlin_Dead","GLOBAL",1)
+~ THEN REPLY ~How about you join us?  We'll find your blade together.~ GOTO EmmaJoin5
   IF ~~ THEN REPLY #36446 EXIT
 END
 
@@ -191,16 +219,19 @@ IF ~~ THEN BEGIN 17
 !ClassEx(Protagonist,MONK)
 ~ THEN REPLY #36450 DO ~AddXpVar("Level_3_Hard",36407)
 TakePartyItem("00SWDL09")
+TakePartyItem("USHFSL09")
 GiveItemCreate("Misc07", Protagonist, 2000, 0, 0)~ JOURNAL #36405 GOTO 18
   IF ~  !ClassEx(Protagonist,PALADIN)
 ClassEx(Protagonist,MONK)
 ~ THEN REPLY #36451 DO ~AddXpVar("Level_3_Hard",36407)
 TakePartyItem("00SWDL09")
+TakePartyItem("USHFSL09")
 ~ JOURNAL #36405 GOTO 19
   IF ~  ClassEx(Protagonist,PALADIN)
 !ClassEx(Protagonist,MONK)
 ~ THEN REPLY #36451 DO ~AddXpVar("Level_3_Hard",36407)
 TakePartyItem("00SWDL09")
+TakePartyItem("USHFSL09")
 ~ JOURNAL #36405 GOTO 19
   IF ~  Global("SR_Dereth_Freed","GLOBAL",4)
 Global("SR_Sabrina_Freed","GLOBAL",4)
@@ -285,7 +316,8 @@ END
 
 IF ~~ THEN BEGIN 27
   SAY #36468
-  IF ~~ THEN REPLY #36469 DO ~TakePartyItem("00SWDL09")~ GOTO 28
+  IF ~~ THEN REPLY #36469 DO ~TakePartyItem("00SWDL09")
+TakePartyItem("USHFSL09")~ GOTO 28
 END
 
 IF ~~ THEN BEGIN 28
@@ -295,7 +327,8 @@ END
 
 IF ~~ THEN BEGIN 29
   SAY #36468
-  IF ~~ THEN REPLY #36469 DO ~TakePartyItem("00SWDL09")~ GOTO 30
+  IF ~~ THEN REPLY #36469 DO ~TakePartyItem("00SWDL09")
+TakePartyItem("USHFSL09")~ GOTO 30
 END
 
 IF ~~ THEN BEGIN 30
@@ -321,8 +354,20 @@ IF ~~ THEN BEGIN EmmaJoin3
 ApplySpellRES("USEMMAC",Myself)~ EXIT
 END
 
+IF ~~ THEN BEGIN EmmaJoin4
+  SAY ~Yes. It would be wrong for me to just stay here and ignore their plight, even though I lack my moonblade. I will travel with you.~
+  IF ~~ THEN DO ~SetGlobal("US_Emma_Joined", "GLOBAL", 1)
+ApplySpellRES("USEMMAC",Myself)~ EXIT
+END
+
+IF ~~ THEN BEGIN EmmaJoin5
+  SAY ~Very well. Even without my moonblade, I can put up a fight. Let us go.~
+  IF ~~ THEN DO ~SetGlobal("US_Emma_Joined", "GLOBAL", 1)
+ApplySpellRES("USEMMAC",Myself)~ EXIT
+END
+
 IF ~~ THEN BEGIN EmmaAttack
-  SAY ~You traded my moonblade for the loyalty of a *troll?*  Return my sword, dog, or I will take it by force!~
+  SAY ~You traded my moonblade for the loyalty of a *troll?*  Return my sword, pig, or I will take it by force!~
   IF ~~ THEN REPLY ~I cannot do that, priestess.  Vrek and I had a deal, and I have to set priorities.  The sword is ours now.~ DO ~Enemy()~ EXIT
   IF ~~ THEN REPLY ~I'd like to see you try.  Vrek, shall we?~ DO ~Enemy()~ EXIT
 END

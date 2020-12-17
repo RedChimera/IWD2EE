@@ -9,9 +9,11 @@ Gender(Protagonist,MALE)
   IF ~~ THEN REPLY #13992 GOTO 3
   IF ~~ THEN REPLY #13993 DO ~SetGlobal("50Pairi", "GLOBAL", 1)~ GOTO 6
   IF ~  Class(Protagonist,SORCERER)
-~ THEN REPLY #13994 GOTO 10
+Global("50Sorcery","GLOBAL",0)
+~ THEN REPLY #13994 DO ~SetGlobal("50Sorcery", "GLOBAL", 1)~ GOTO 10
   IF ~  !Class(Protagonist,SORCERER)
-~ THEN REPLY #13994 EXIT
+Global("50Sorcery","GLOBAL",0)
+~ THEN REPLY #13994 DO ~SetGlobal("50Sorcery", "GLOBAL", 1)~ GOTO PairiSorceryNew
 END
 
 IF WEIGHT #2 ~  NumberOfTimesTalkedTo(0)
@@ -22,9 +24,11 @@ Race(Protagonist,HALF_ELF)
 ~ THEN REPLY #13997 DO ~SetGlobal("50PairiQ", "GLOBAL", 1)~ GOTO 4
   IF ~~ THEN REPLY #13998 GOTO 3
   IF ~  Class(Protagonist,SORCERER)
-~ THEN REPLY #14135 GOTO 10
+Global("50Sorcery","GLOBAL",0)
+~ THEN REPLY #14135 DO ~SetGlobal("50Sorcery", "GLOBAL", 1)~ GOTO 10
   IF ~  !Class(Protagonist,SORCERER)
-~ THEN REPLY #14135 EXIT
+Global("50Sorcery","GLOBAL",0)
+~ THEN REPLY #14135 DO ~SetGlobal("50Sorcery", "GLOBAL", 1)~ GOTO PairiSorceryNew
 END
 
 IF WEIGHT #3 ~  NumberOfTimesTalkedTo(0)
@@ -34,9 +38,11 @@ IF WEIGHT #3 ~  NumberOfTimesTalkedTo(0)
 ~ THEN REPLY #14137 DO ~SetGlobal("50PairiQ", "GLOBAL", 1)~ GOTO 4
   IF ~~ THEN REPLY #14138 GOTO 3
   IF ~  Class(Protagonist,SORCERER)
-~ THEN REPLY #14135 GOTO 10
+Global("50Sorcery","GLOBAL",0)
+~ THEN REPLY #14135 DO ~SetGlobal("50Sorcery", "GLOBAL", 1)~ GOTO 10
   IF ~  !Class(Protagonist,SORCERER)
-~ THEN REPLY #14135 EXIT
+Global("50Sorcery","GLOBAL",0)
+~ THEN REPLY #14135 DO ~SetGlobal("50Sorcery", "GLOBAL", 1)~ GOTO PairiSorceryNew
 END
 
 IF ~~ THEN BEGIN 3
@@ -70,10 +76,10 @@ Global("50Carynara_Help","Global",0)
   IF ~  Class(Protagonist,SORCERER)
 Global("50Sorcery","GLOBAL",0)
 ~ THEN REPLY #14142 DO ~SetGlobal("50Sorcery", "GLOBAL", 1)~ GOTO 10
-  IF ~  Class(Protagonist,SORCERER)
-GlobalGT("50Sorcery","GLOBAL",0)
-~ THEN REPLY #14142 EXIT
   IF ~  !Class(Protagonist,SORCERER)
+Global("50Sorcery","GLOBAL",0)
+~ THEN REPLY #14142 DO ~SetGlobal("50Sorcery", "GLOBAL", 1)~ GOTO PairiSorceryNew
+  IF ~GlobalGT("50Sorcery","GLOBAL",0)
 ~ THEN REPLY #14142 EXIT
 END
 
@@ -93,10 +99,10 @@ Global("50Pairi","GLOBAL",1)
   IF ~  Class(Protagonist,SORCERER)
 Global("50Sorcery","GLOBAL",0)
 ~ THEN REPLY #14160 DO ~SetGlobal("50Sorcery", "GLOBAL", 1)~ GOTO 10
-  IF ~  Class(Protagonist,SORCERER)
-GlobalGT("50Sorcery","GLOBAL",0)
-~ THEN REPLY #14160 EXIT
   IF ~  !Class(Protagonist,SORCERER)
+Global("50Sorcery","GLOBAL",0)
+~ THEN REPLY #14160 DO ~SetGlobal("50Sorcery", "GLOBAL", 1)~ GOTO PairiSorceryNew
+  IF ~GlobalGT("50Sorcery","GLOBAL",0)
 ~ THEN REPLY #14160 EXIT
 END
 
@@ -119,10 +125,10 @@ Global("50PairiQ","GLOBAL",0)
   IF ~  Class(Protagonist,SORCERER)
 Global("50Sorcery","GLOBAL",0)
 ~ THEN REPLY #14160 DO ~SetGlobal("50Sorcery", "GLOBAL", 1)~ GOTO 10
-  IF ~  Class(Protagonist,SORCERER)
-GlobalGT("50Sorcery","GLOBAL",0)
-~ THEN REPLY #14160 EXIT
   IF ~  !Class(Protagonist,SORCERER)
+Global("50Sorcery","GLOBAL",0)
+~ THEN REPLY #14160 DO ~SetGlobal("50Sorcery", "GLOBAL", 1)~ GOTO PairiSorceryNew
+  IF ~GlobalGT("50Sorcery","GLOBAL",0)
 ~ THEN REPLY #14160 EXIT
   IF ~!NumInParty(6)
 Global("50Sorcery", "GLOBAL", 2)~ THEN REPLY ~Actually, I was wondering if you would be willing to join our group.  We have room for a budding sorceress.~ GOTO PairiJoin1
@@ -147,10 +153,10 @@ Global("50PairiQ","GLOBAL",0)
   IF ~  Class(Protagonist,SORCERER)
 Global("50Sorcery","GLOBAL",0)
 ~ THEN REPLY #14190 DO ~SetGlobal("50Sorcery", "GLOBAL", 1)~ GOTO 10
-  IF ~  Class(Protagonist,SORCERER)
-GlobalGT("50Sorcery","GLOBAL",0)
-~ THEN REPLY #14190 EXIT
   IF ~  !Class(Protagonist,SORCERER)
+Global("50Sorcery","GLOBAL",0)
+~ THEN REPLY #14190 DO ~SetGlobal("50Sorcery", "GLOBAL", 1)~ GOTO PairiSorceryNew
+  IF ~GlobalGT("50Sorcery","GLOBAL",0)
 ~ THEN REPLY #14190 EXIT
 END
 
@@ -163,10 +169,10 @@ Global("50PairiQ","GLOBAL",0)
   IF ~  Class(Protagonist,SORCERER)
 Global("50Sorcery","GLOBAL",0)
 ~ THEN REPLY #14190 DO ~SetGlobal("50Sorcery", "GLOBAL", 1)~ GOTO 10
-  IF ~  Class(Protagonist,SORCERER)
-GlobalGT("50Sorcery","GLOBAL",0)
-~ THEN REPLY #14190 EXIT
   IF ~  !Class(Protagonist,SORCERER)
+Global("50Sorcery","GLOBAL",0)
+~ THEN REPLY #14190 DO ~SetGlobal("50Sorcery", "GLOBAL", 1)~ GOTO PairiSorceryNew
+  IF ~GlobalGT("50Sorcery","GLOBAL",0)
 ~ THEN REPLY #14190 EXIT
 END
 
@@ -179,10 +185,10 @@ Global("50PairiQ","GLOBAL",0)
   IF ~  Class(Protagonist,SORCERER)
 Global("50Sorcery","GLOBAL",0)
 ~ THEN REPLY #14190 DO ~SetGlobal("50Sorcery", "GLOBAL", 1)~ GOTO 10
-  IF ~  Class(Protagonist,SORCERER)
-GlobalGT("50Sorcery","GLOBAL",0)
-~ THEN REPLY #14190 EXIT
   IF ~  !Class(Protagonist,SORCERER)
+Global("50Sorcery","GLOBAL",0)
+~ THEN REPLY #14190 DO ~SetGlobal("50Sorcery", "GLOBAL", 1)~ GOTO PairiSorceryNew
+  IF ~GlobalGT("50Sorcery","GLOBAL",0)
 ~ THEN REPLY #14190 EXIT
   IF ~!NumInParty(6)
 Global("50Sorcery", "GLOBAL", 2)~ THEN REPLY ~If you want to learn more about magic, we have room for another sorcerer in our group.  You could come along with us.~ GOTO PairiJoin1
@@ -194,6 +200,7 @@ IF ~~ THEN BEGIN 10
 ~ THEN REPLY #14194 DO ~SetGlobal("50Sorcery", "GLOBAL", 0)~ GOTO 11
   IF ~  CheckStatGT(Protagonist,8,CLASSLEVELSORCERER)
 ~ THEN REPLY #14195 GOTO 12
+  IF ~!NumInParty(6)~ THEN REPLY ~If you want to learn more about magic, we have room for another sorcerer in our group.  You could come along with us.~ GOTO PairiJoin1
   IF ~~ THEN REPLY #14196 GOTO 11
   IF ~~ THEN REPLY #14197 DO ~SetGlobal("50Sorcery", "GLOBAL", 0)~ EXIT
 END
@@ -255,10 +262,10 @@ Global("50PairiQ","GLOBAL",0)
   IF ~  Class(Protagonist,SORCERER)
 Global("50Sorcery","GLOBAL",0)
 ~ THEN REPLY #14206 DO ~SetGlobal("50Sorcery", "GLOBAL", 1)~ GOTO 10
-  IF ~  Class(Protagonist,SORCERER)
-GlobalGT("50Sorcery","GLOBAL",0)
-~ THEN REPLY #14206 EXIT
   IF ~  !Class(Protagonist,SORCERER)
+Global("50Sorcery","GLOBAL",0)
+~ THEN REPLY #14206 DO ~SetGlobal("50Sorcery", "GLOBAL", 1)~ GOTO PairiSorceryNew
+  IF ~GlobalGT("50Sorcery","GLOBAL",0)
 ~ THEN REPLY #14206 EXIT
 END
 
@@ -279,10 +286,10 @@ Global("50PairiQ","GLOBAL",0)
   IF ~  Class(Protagonist,SORCERER)
 Global("50Sorcery","GLOBAL",0)
 ~ THEN REPLY #14206 DO ~SetGlobal("50Sorcery", "GLOBAL", 1)~ GOTO 10
-  IF ~  Class(Protagonist,SORCERER)
-GlobalGT("50Sorcery","GLOBAL",0)
-~ THEN REPLY #14206 EXIT
   IF ~  !Class(Protagonist,SORCERER)
+Global("50Sorcery","GLOBAL",0)
+~ THEN REPLY #14206 DO ~SetGlobal("50Sorcery", "GLOBAL", 1)~ GOTO PairiSorceryNew
+  IF ~GlobalGT("50Sorcery","GLOBAL",0)
 ~ THEN REPLY #14206 EXIT
 END
 
@@ -296,10 +303,10 @@ Global("50PairiQ","GLOBAL",0)
   IF ~  Class(Protagonist,SORCERER)
 Global("50Sorcery","GLOBAL",0)
 ~ THEN REPLY #24531 DO ~SetGlobal("50Sorcery", "GLOBAL", 1)~ GOTO 10
-  IF ~  Class(Protagonist,SORCERER)
-GlobalGT("50Sorcery","GLOBAL",0)
-~ THEN REPLY #24531 EXIT
   IF ~  !Class(Protagonist,SORCERER)
+Global("50Sorcery","GLOBAL",0)
+~ THEN REPLY #24531 DO ~SetGlobal("50Sorcery", "GLOBAL", 1)~ GOTO PairiSorceryNew
+  IF ~GlobalGT("50Sorcery","GLOBAL",0)
 ~ THEN REPLY #24531 EXIT
 END
 
@@ -312,10 +319,10 @@ Global("50PairiQ","GLOBAL",0)
   IF ~  Class(Protagonist,SORCERER)
 Global("50Sorcery","GLOBAL",0)
 ~ THEN REPLY #14190 DO ~SetGlobal("50Sorcery", "GLOBAL", 1)~ GOTO 10
-  IF ~  Class(Protagonist,SORCERER)
-GlobalGT("50Sorcery","GLOBAL",0)
-~ THEN REPLY #14190 EXIT
   IF ~  !Class(Protagonist,SORCERER)
+Global("50Sorcery","GLOBAL",0)
+~ THEN REPLY #14190 DO ~SetGlobal("50Sorcery", "GLOBAL", 1)~ GOTO PairiSorceryNew
+  IF ~GlobalGT("50Sorcery","GLOBAL",0)
 ~ THEN REPLY #14190 EXIT
 END
 
@@ -330,10 +337,10 @@ IF ~~ THEN BEGIN 19
   IF ~  Class(Protagonist,SORCERER)
 Global("50Sorcery","GLOBAL",0)
 ~ THEN REPLY #14160 DO ~SetGlobal("50Sorcery", "GLOBAL", 1)~ GOTO 10
-  IF ~  Class(Protagonist,SORCERER)
-GlobalGT("50Sorcery","GLOBAL",0)
-~ THEN REPLY #14160 EXIT
   IF ~  !Class(Protagonist,SORCERER)
+Global("50Sorcery","GLOBAL",0)
+~ THEN REPLY #14160 DO ~SetGlobal("50Sorcery", "GLOBAL", 1)~ GOTO PairiSorceryNew
+  IF ~GlobalGT("50Sorcery","GLOBAL",0)
 ~ THEN REPLY #14160 EXIT
 END
 
@@ -343,10 +350,10 @@ IF ~~ THEN BEGIN 20
   IF ~  Class(Protagonist,SORCERER)
 Global("50Sorcery","GLOBAL",0)
 ~ THEN REPLY #13994 DO ~SetGlobal("50Sorcery", "GLOBAL", 1)~ GOTO 10
-  IF ~  Class(Protagonist,SORCERER)
-GlobalGT("50Sorcery","GLOBAL",0)
-~ THEN REPLY #13994 EXIT
   IF ~  !Class(Protagonist,SORCERER)
+Global("50Sorcery","GLOBAL",0)
+~ THEN REPLY #13994 DO ~SetGlobal("50Sorcery", "GLOBAL", 1)~ GOTO PairiSorceryNew
+  IF ~GlobalGT("50Sorcery","GLOBAL",0)
 ~ THEN REPLY #13994 EXIT
 END
 
@@ -356,11 +363,18 @@ IF ~~ THEN BEGIN 21
   IF ~  Class(Protagonist,SORCERER)
 Global("50Sorcery","GLOBAL",0)
 ~ THEN REPLY #13994 DO ~SetGlobal("50Sorcery", "GLOBAL", 1)~ GOTO 10
-  IF ~  Class(Protagonist,SORCERER)
-GlobalGT("50Sorcery","GLOBAL",0)
-~ THEN REPLY #13994 EXIT
   IF ~  !Class(Protagonist,SORCERER)
+Global("50Sorcery","GLOBAL",0)
+~ THEN REPLY #13994 DO ~SetGlobal("50Sorcery", "GLOBAL", 1)~ GOTO PairiSorceryNew
+  IF ~GlobalGT("50Sorcery","GLOBAL",0)
 ~ THEN REPLY #13994 EXIT
+END
+
+IF ~~ THEN BEGIN PairiSorceryNew
+  SAY ~Wait!  I must ask... there is magic - sorcery - coursing through my blood.  No one here can teach me, but I don't wish to leave the village on my own just yet.  Can you help me?~
+  IF ~!NumInParty(6)~ THEN REPLY ~If you want to learn more about magic, we have room for a sorcerer in our group.  You could come along with us.~ GOTO PairiJoin1
+  IF ~~ THEN REPLY #14196 GOTO 11
+  IF ~~ THEN REPLY #14197 DO ~SetGlobal("50Sorcery", "GLOBAL", 0)~ EXIT
 END
 
 IF ~~ THEN BEGIN PairiJoin1

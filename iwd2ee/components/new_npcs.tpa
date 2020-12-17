@@ -155,6 +155,7 @@ USCWHFAO	USCWAOCH
 USCWHFVR	USCWVREK
 USCWHFVU	USCWVUNA
 USCWHFXH	USCWXHAA
+USCWHFMB	00SWDL09
 
 ~
 UNLESS ~USCWHFVR~
@@ -168,6 +169,7 @@ USCWHFAO	USHFCWAO
 USCWHFVR	USHFCWVR
 USCWHFVU	USHFCWVU
 USCWHFXH	USHFCWXH
+USCWHFMB	USHFSL09
 ~
 UNLESS ~USCWHFVR~
 
@@ -318,6 +320,10 @@ COPY_EXISTING ~USHFCWAO.itm~ ~override~
 	SAY NAME2 @4828
 	SAY UNIDENTIFIED_DESC @4829
 	SAY IDENTIFIED_DESC @4829
+
+COPY_EXISTING ~USHFSL09.itm~ ~override~
+	SAY UNIDENTIFIED_DESC @10836
+	SAY IDENTIFIED_DESC @10836
 /*
 COPY_EXISTING ~10BLACK.cre~ ~override~
 	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelfighter=3 END
@@ -407,9 +413,8 @@ COPY_EXISTING ~10REIG.cre~ ~override~
 	WRITE_BYTE intelligence 11
 	WRITE_BYTE wisdom 12
 	WRITE_BYTE charisma 8
-	WRITE_BYTE skillhide 1
+	WRITE_BYTE skillconcentration 1
 	WRITE_BYTE skillintimidate 4
-	WRITE_BYTE skillsearch 2
 	WRITE_BYTE challengerating 1
 	WRITE_BYTE alignment 33
 	READ_LONG feats1 ulgiash
@@ -446,9 +451,12 @@ COPY_EXISTING ~11VEIRA.cre~ ~override~
 	WRITE_BYTE charisma 11
 	WRITE_BYTE coldresistance 0
 	WRITE_BYTE magiccoldresistance 0
-	WRITE_BYTE skillhide 4
+	WRITE_BYTE skillconcentration 4
+	WRITE_BYTE skilldiplomacy 4
+	WRITE_BYTE skillhide 0
 	WRITE_BYTE skilllore 4
-	WRITE_BYTE skillmovesilently 12
+	WRITE_BYTE skillmovesilently 0
+	WRITE_BYTE skillspellcraft 4
 	WRITE_BYTE challengerating 1
 	WRITE_BYTE alignment 17
 	WRITE_BYTE race 3
@@ -536,6 +544,7 @@ COPY_EXISTING ~20EMMA.cre~ ~override~
 		LPF	IWD2_CRE_SPELL INT_VAR num=1 forcelevel=3 STR_VAR class=~domain~ resource=~SPPR318~ END
 	END
 	LPF	IWD2_REMOVE_SPELLS_MEMORIZED STR_VAR class=~domain~ END
+	LPF GIVE_CORRECT_DIVINE_SPELLS END
 	LPF	IWD2_CRE_ABILITY INT_VAR num=1 STR_VAR resource=~SPIN268~ END
 	LPF	IWD2_CRE_ABILITY INT_VAR num=1 STR_VAR resource=~SPIN269~ END
 
@@ -600,6 +609,7 @@ COPY_EXISTING ~30GOBVUN.cre~ ~override~
 	WRITE_BYTE armorproficiency 2
 	WRITE_BYTE proficiencyaxe 3
 	LPF	IWD2_REMOVE_SPELLS_KNOWN STR_VAR class=~ranger~ END
+	LPF GIVE_CORRECT_DIVINE_SPELLS END
 	LPF	IWD2_ADD_CRE_ITEM INT_VAR equip=0 STR_VAR item=~00HELM03~ slot=~helmet~ mode=~move~ END
 	LPF	IWD2_ADD_CRE_ITEM INT_VAR equip=0 STR_VAR item=~00HIDE06~ slot=~armor~ mode=~move~ END
 	LPF	IWD2_ADD_CRE_ITEM INT_VAR equip=1 STR_VAR item=~USCWHFVU~ slot=~weapon1~ mode=~replace~ END
@@ -786,13 +796,14 @@ COPY_EXISTING ~52SERSA.cre~ ~override~
 	WRITE_BYTE willsave 8
 	WRITE_BYTE strength 14
 	WRITE_BYTE dexterity 16
-	WRITE_BYTE constitution 9
+	WRITE_BYTE constitution 10
 	WRITE_BYTE intelligence 10
 	WRITE_BYTE wisdom 20
-	WRITE_BYTE charisma 10
-	WRITE_BYTE skilldiplomacy 3
-	WRITE_BYTE skillhide 12
+	WRITE_BYTE charisma 9
+	WRITE_BYTE skilldiplomacy 6
+	WRITE_BYTE skillhide 15
 	WRITE_BYTE skillmovesilently 15
+	WRITE_BYTE skillsearch 7
 	WRITE_BYTE challengerating 12
 	WRITE_BYTE general 1
 	WRITE_LONG kit 0
@@ -894,7 +905,7 @@ COPY_EXISTING ~USXHAAT.spl~ ~override~
 
 COPY_EXISTING ~USEMMA.cre~ ~override~
 	WRITE_ASCII teamscript ~USEMMABL~ #8
-	LPF	IWD2_ADD_CRE_ITEM INT_VAR equip=0 STR_VAR item=~00SWDL09~ slot=~inv1~ mode=~replace~ END
+	LPF	IWD2_ADD_CRE_ITEM INT_VAR equip=0 STR_VAR item=~USCWHFMB~ slot=~inv1~ mode=~replace~ END
 
 COPY_EXISTING ~AR1000.bcs~ ~override~
 	DECOMPILE_AND_PATCH BEGIN
@@ -916,5 +927,8 @@ END
 
 >>>>>>>>
 EXTEND_BOTTOM ~AR1200.bcs~ ~.../script.baf~
+
+COPY_EXISTING ~ar2002.are~ ~override~ //Shaengarne Vrek cave
+	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR charges1=1 charges2=1 charges3=1 single_match=1 STR_VAR old_item=~00SWDL09~ new_item=~USCWHFMB~ END
 
 INCLUDE ~%mod_folder%/components/final_patches.tpa~

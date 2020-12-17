@@ -5922,6 +5922,11 @@ function MEREPERM(effectData, creatureData)
 			end
 		end
 	end
+	local extraFlags = IEex_ReadDword(creatureData + 0x740)
+	if extraFlags == -1 then
+		extraFlags = 0
+		IEex_WriteDword(creatureData + 0x740, extraFlags)
+	end
 	if IEex_GetActorSpellState(targetID, 224) then
 		IEex_IterateActorEffects(targetID, function(eData)
 			local theopcode = IEex_ReadDword(eData + 0x10)
@@ -5974,7 +5979,39 @@ function MEREPERM(effectData, creatureData)
 })
 		end
 	end
-	
+	if bit.band(extraFlags, 0x10000) == 0 and (IEex_GetActorStat(targetID, 97) > 12 or IEex_GetActorStat(targetID, 105) > 9 or IEex_GetActorStat(targetID, 106) > 8) then
+		local spells = IEex_FetchSpellInfo(targetID, {1, 6, 7})
+		local sourceHasSpell = false
+		for i = 1, 9, 1 do
+			for cType, levelList in pairs(spells) do
+				if #levelList >= i then
+					local levelI = levelList[i]
+					local maxCastable = levelI[1]
+					local sorcererCastableCount = levelI[2]
+					local levelISpells = levelI[3]
+					if #levelISpells > 0 then
+						for i2, spell in ipairs(levelISpells) do
+							if spell["resref"] == "USWI553" then
+								sourceHasSpell = true
+							end
+						end
+					end
+				end
+			end
+		end
+		if sourceHasSpell then
+			extraFlags = bit.bor(extraFlags, 0x10000)
+			IEex_WriteDword(creatureData + 0x740, extraFlags)
+			IEex_ApplyEffectToActor(targetID, {
+["opcode"] = 402,
+["target"] = 2,
+["timing"] = 1,
+["resource"] = "USTIMELS",
+["parent_resource"] = "USTIMELS",
+["source_id"] = targetID,
+})
+		end
+	end
 	if IEex_ReadByte(creatureData + 0x24, 0x0) <= 30 and (IEex_GetActorStat(targetID, 101) > 0 or IEex_GetActorStat(targetID, 102) > 0) then
 		local specialFlags = IEex_ReadByte(creatureData + 0x89F, 0x0)
 		local kit = IEex_GetActorStat(targetID, 89)
@@ -8238,6 +8275,24 @@ function METELMOV(effectData, creatureData)
 ["source_id"] = targetID
 })
 			end
+			local repermCounter = IEex_ReadSignedByte(creatureData + 0x731, 0x0)
+			if repermCounter == -1 then
+				repermCounter = 0
+			end
+			repermCounter = repermCounter + 1
+			if repermCounter >= 15 then
+				repermCounter = 0
+				IEex_WriteByte(creatureData + 0x731, repermCounter)
+				IEex_ApplyEffectToActor(sourceID, {
+["opcode"] = 500,
+["target"] = 2,
+["timing"] = 0,
+["resource"] = "MEREPERM",
+["source_id"] = sourceID
+})
+			else
+				IEex_WriteByte(creatureData + 0x731, repermCounter)
+			end
 		else
 --[[
 			IEex_ApplyEffectToActor(targetID, {
@@ -8548,6 +8603,24 @@ function MEGHOSTW(effectData, creatureData)
 ["parent_resource"] = parent_resource,
 ["source_id"] = sourceID
 })
+		local repermCounter = IEex_ReadSignedByte(creatureData + 0x731, 0x0)
+		if repermCounter == -1 then
+			repermCounter = 0
+		end
+		repermCounter = repermCounter + 1
+		if repermCounter >= 15 then
+			repermCounter = 0
+			IEex_WriteByte(creatureData + 0x731, repermCounter)
+			IEex_ApplyEffectToActor(sourceID, {
+["opcode"] = 500,
+["target"] = 2,
+["timing"] = 0,
+["resource"] = "MEREPERM",
+["source_id"] = sourceID
+})
+		else
+			IEex_WriteByte(creatureData + 0x731, repermCounter)
+		end
 	end
 --[[
 	IEex_WriteDword(effectData + 0x110, 0x1)
@@ -9741,6 +9814,337 @@ function MESUMCAS(effectData, creatureData)
 ["target_y"] = IEex_ReadDword(effectData + 0x88),
 ["source_id"] = summonerID
 })
+end
+
+me_past_seconds = {}
+me_past_seconds_count = 18
+me_past_effects = {}
+function METIMELG(effectData, creatureData)
+	IEex_WriteDword(effectData + 0x110, 0x1)
+	local targetID = IEex_GetActorIDShare(creatureData)
+	local time_applied = IEex_ReadDword(effectData + 0x24)
+	local me_current_effects = {}
+	IEex_IterateActorEffects(targetID, function(eData)
+		local the_opcode = IEex_ReadDword(eData + 0x10)
+		local the_timing = IEex_ReadDword(eData + 0x24)
+		local the_duration = IEex_ReadDword(eData + 0x28)
+		local the_internal_flags = IEex_ReadDword(eData + 0xCC)
+--[[
+		if IEex_ReadLString(eData + 0x94, 8) == "SPPR406" then
+			Infinity_DisplayString("the_duration: " .. the_duration .. ", time_applied: " .. time_applied)
+		end
+--]]
+		if the_timing ~= 1 and the_timing ~= 2 and the_timing ~= 9 and the_opcode ~= 124 and the_opcode ~= 500 and ((the_duration - time_applied < 15 and bit.band(the_internal_flags, 0x200000) == 0) or the_opcode == 119 or the_opcode == 218) then
+			IEex_WriteDword(eData + 0xCC, bit.bor(the_internal_flags, 0x200000))
+			table.insert(me_current_effects, {
+["opcode"] = IEex_ReadDword(eData + 0x10),
+["target"] = IEex_ReadDword(eData + 0x14),
+["power"] = IEex_ReadDword(eData + 0x18),
+["parameter1"] = IEex_ReadDword(eData + 0x1C),
+["parameter2"] = IEex_ReadDword(eData + 0x20),
+["timing"] = IEex_ReadDword(eData + 0x24),
+["duration"] = IEex_ReadDword(eData + 0x28),
+["resource"] = IEex_ReadLString(eData + 0x30, 8),
+["dicenumber"] = IEex_ReadDword(eData + 0x38),
+["dicesize"] = IEex_ReadDword(eData + 0x3C),
+["savingthrow"] = IEex_ReadDword(eData + 0x40),
+["savebonus"] = IEex_ReadDword(eData + 0x44),
+["special"] = IEex_ReadDword(eData + 0x48),
+["school"] = IEex_ReadDword(eData + 0x4C),
+["parameter3"] = IEex_ReadDword(eData + 0x60),
+["parameter4"] = IEex_ReadDword(eData + 0x64),
+["parameter5"] = IEex_ReadDword(eData + 0x68),
+["time_applied"] = IEex_ReadDword(eData + 0x6C),
+["vvcresource"] = IEex_ReadLString(eData + 0x70, 8),
+["resource2"] = IEex_ReadLString(eData + 0x78, 8),
+["source_x"] = IEex_ReadDword(eData + 0x80),
+["source_y"] = IEex_ReadDword(eData + 0x84),
+["target_x"] = IEex_ReadDword(eData + 0x88),
+["target_y"] = IEex_ReadDword(eData + 0x8C),
+["restype"] = IEex_ReadDword(eData + 0x90),
+["parent_resource"] = IEex_ReadLString(eData + 0x94, 8),
+["resource_flags"] = bit.band(IEex_ReadDword(eData + 0x9C), 0xFFFFF9FF),
+["impact_projectile"] = IEex_ReadDword(eData + 0xA0),
+["sourceslot"] = IEex_ReadDword(eData + 0xA4),
+["effvar"] = IEex_ReadLString(eData + 0xA8, 32),
+["casterlvl"] = IEex_ReadDword(eData + 0xC8),
+["internal_flags"] = the_internal_flags,
+["sectype"] = IEex_ReadDword(eData + 0xD0),
+["source_id"] = IEex_ReadDword(eData + 0x110),
+})
+		end
+	end)
+	if me_past_seconds["" .. targetID] == nil or (me_past_seconds["" .. targetID][1][6] ~= nil and me_past_seconds["" .. targetID][1][6] > time_applied) then
+--		me_past_seconds["" .. targetID] = {{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{}}
+		me_past_seconds["" .. targetID] = {{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{}}	
+	end
+	for i = me_past_seconds_count, 2, -1 do
+		me_past_seconds["" .. targetID][i] = me_past_seconds["" .. targetID][i - 1]
+	end
+--[[
+	Infinity_DisplayString(#me_current_effects)
+	if #me_current_effects > 0 then
+		Infinity_DisplayString(me_current_effects[1]["parent_resource"])
+	end
+--]]
+	local areaRES = ""
+	if IEex_ReadDword(creatureData + 0x12) > 0 then
+		areaRES = IEex_ReadLString(IEex_ReadDword(creatureData + 0x12), 8)
+	end
+	
+	me_past_seconds["" .. targetID][1] = {IEex_ReadSignedWord(creatureData + 0x5C0, 0x0), IEex_ReadDword(creatureData + 0x6), IEex_ReadDword(creatureData + 0xA), areaRES, me_current_effects, time_applied}
+end
+
+function METIMETR(effectData, creatureData)
+	IEex_WriteDword(effectData + 0x110, 0x1)
+	local targetID = IEex_GetActorIDShare(creatureData)
+	local parameter1 = IEex_ReadDword(effectData + 0x18)
+	local time_applied = IEex_ReadDword(effectData + 0x24)
+	local parent_resource = IEex_ReadLString(effectData + 0x90, 8)
+	local previous_second = {}
+	local game_tick = IEex_GetGameTick()
+	if parameter1 <= 0 then return end
+	if parameter1 > me_past_seconds_count then
+		parameter1 = me_past_seconds_count
+	end
+	IEex_ApplyEffectToActor(targetID, {
+["opcode"] = 288,
+["target"] = 2,
+["timing"] = 9,
+["parameter1"] = 1,
+["parameter2"] = 224,
+["resource"] = "USTIMELG",
+["parent_resource"] = "USTIMELS",
+["internal_flags"] = 0x600000,
+["source_target"] = targetID,
+["source_id"] = targetID
+})
+	IEex_ApplyEffectToActor(targetID, {
+["opcode"] = 139,
+["target"] = 2,
+["timing"] = 9,
+["parameter1"] = ex_tra_55701,
+["parent_resource"] = "USTIMELS",
+["internal_flags"] = 0x600000,
+["source_target"] = targetID,
+["source_id"] = targetID
+})
+	IEex_ApplyEffectToActor(targetID, {
+["opcode"] = 206,
+["target"] = 2,
+["timing"] = 9,
+["resource"] = "USTIMELS",
+["parent_resource"] = "USTIMELS",
+["internal_flags"] = 0x600000,
+["source_target"] = targetID,
+["source_id"] = targetID
+})
+--	local current_past_seconds = me_past_seconds
+	if me_past_seconds["" .. targetID] == nil then
+--		me_past_seconds["" .. targetID] = {{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{}}
+		me_past_seconds["" .. targetID] = {{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{}}
+	end
+--	me_past_effects["" .. targetID] = {}
+	local areaRES = ""
+	local areaType = 0x800
+	if IEex_ReadDword(creatureData + 0x12) > 0 then
+		areaRES = IEex_ReadLString(IEex_ReadDword(creatureData + 0x12), 8)
+		areaType = IEex_ReadWord(IEex_ReadDword(creatureData + 0x12) + 0x40, 0x0)
+	end
+	local currentHP = IEex_ReadSignedWord(creatureData + 0x5C0, 0x0)
+	local currentX = IEex_ReadDword(creatureData + 0x6)
+	local currentY = IEex_ReadDword(creatureData + 0xA)
+	local seconds_ago = 0
+	local the_effect = {}
+	local effect_opcode = 0
+	local effect_duration = 0
+	local effect_timing = 0
+	for i = 1, parameter1, 1 do
+		if #me_past_seconds["" .. targetID][i] > 0 then
+			seconds_ago = seconds_ago + 1
+		end
+	end
+	for i = 1, parameter1, 1 do
+		previous_second = me_past_seconds["" .. targetID][1]
+		for j = 1, me_past_seconds_count - 1, 1 do
+			me_past_seconds["" .. targetID][j] = me_past_seconds["" .. targetID][j + 1]
+		end
+		me_past_seconds["" .. targetID][me_past_seconds_count] = {}
+--		me_past_effects["" .. targetID]["" .. i] = previous_second[5]
+		if #previous_second > 0 then
+--			Infinity_DisplayString(i .. " second(s) before: " .. previous_second[1] .. " HP, [" .. previous_second[2] .. "." .. previous_second[3] .. "], " .. previous_second[4]) 
+			IEex_ApplyEffectToActor(targetID, {
+["opcode"] = 17,
+["target"] = 2,
+["timing"] = 6,
+["duration"] = game_tick + i,
+["parameter1"] = previous_second[1],
+["parameter2"] = 1,
+["parent_resource"] = parent_resource,
+["internal_flags"] = 0x600000,
+["source_target"] = targetID,
+["source_id"] = targetID
+})
+			currentHP = previous_second[1]
+			if bit.band(areaType, 0x800) == 0 and areaRES ~= "" and areaRES == previous_second[4] then
+--[[
+				IEex_ApplyEffectToActor(targetID, {
+["opcode"] = 124,
+["target"] = 2,
+["timing"] = 1,
+["duration"] = game_tick + i,
+["parent_resource"] = parent_resource,
+["source_x"] = currentX,
+["source_y"] = currentY,
+["target_x"] = previous_second[2],
+["target_y"] = previous_second[3],
+["internal_flags"] = 0x600000,
+["source_target"] = targetID,
+["source_id"] = targetID
+})
+--]]
+				IEex_ApplyEffectToActor(targetID, {
+["opcode"] = 402,
+["target"] = 2,
+["timing"] = 6,
+["duration"] = game_tick + i,
+["resource"] = "USINTELE",
+["parent_resource"] = parent_resource,
+["source_x"] = currentX,
+["source_y"] = currentY,
+["target_x"] = previous_second[2],
+["target_y"] = previous_second[3],
+["internal_flags"] = 0x600000,
+["source_target"] = targetID,
+["source_id"] = targetID
+})
+--				currentX = previous_second[2]
+--				currentY = previous_second[3]
+			end
+			for j = 1, #previous_second[5], 1 do
+				the_effect = previous_second[5][j]
+				effect_opcode = the_effect["opcode"]
+				effect_timing = the_effect["timing"]
+				effect_duration = the_effect["duration"]
+				if the_effect["time_applied"] + seconds_ago * 15 < time_applied and (effect_duration < time_applied or (effect_opcode == 218 and the_effect["parameter1"] > 0 and not IEex_GetActorSpellState(targetID, 18) and not IEex_GetActorSpellState(targetID, 19)) or (effect_opcode == 119 and the_effect["parameter1"] > 0 and not IEex_GetActorSpellState(targetID, 63) and not IEex_GetActorSpellState(targetID, 66))) then
+					
+					if effect_timing == 4096 then
+						effect_timing = 10
+						effect_duration = the_effect["duration"] - time_applied + (seconds_ago * 15)
+					else
+						effect_duration = game_tick + the_effect["duration"] - time_applied + (seconds_ago * 15)
+					end		
+					IEex_ApplyEffectToActor(targetID, {
+["opcode"] = the_effect["opcode"],
+["target"] = the_effect["target"],
+["power"] = the_effect["power"],
+["parameter1"] = the_effect["parameter1"],
+["parameter2"] = the_effect["parameter2"],
+["timing"] = effect_timing,
+["duration"] = effect_duration,
+["resource"] = the_effect["resource"],
+["dicenumber"] = the_effect["dicenumber"],
+["dicesize"] = the_effect["dicesize"],
+["savingthrow"] = the_effect["savingthrow"],
+["savebonus"] = the_effect["savebonus"],
+["special"] = the_effect["special"],
+["school"] = the_effect["school"],
+["parameter3"] = the_effect["parameter3"],
+["parameter4"] = the_effect["parameter4"],
+["parameter5"] = the_effect["parameter5"],
+["vvcresource"] = the_effect["vvcresource"],
+["resource2"] = the_effect["resource2"],
+["source_x"] = the_effect["source_x"],
+["source_y"] = the_effect["source_y"],
+["target_x"] = the_effect["target_x"],
+["target_y"] = the_effect["target_y"],
+["restype"] = the_effect["restype"],
+["parent_resource"] = the_effect["parent_resource"],
+["resource_flags"] = the_effect["resource_flags"],
+["impact_projectile"] = the_effect["impact_projectile"],
+["sourceslot"] = the_effect["sourceslot"],
+["effvar"] = the_effect["effvar"],
+["casterlvl"] = the_effect["casterlvl"],
+["internal_flags"] = bit.bor(the_effect["internal_flags"], 0x600000),
+["sectype"] = the_effect["sectype"],
+["source_id"] = the_effect["source_id"],
+})
+					if effect_opcode == 119 then
+						IEex_IterateActorEffects(targetID, function(eData)
+							local the_opcode = IEex_ReadDword(eData + 0x10)
+							if the_opcode == effect_opcode then
+								IEex_WriteDword(eData + 0x1C, the_effect["parameter1"])
+							end
+						end)
+					end
+				elseif effect_opcode == 119 and the_effect["parameter1"] > 0 then
+					IEex_IterateActorEffects(targetID, function(eData)
+						local the_opcode = IEex_ReadDword(eData + 0x10)
+						if the_opcode == effect_opcode then
+							IEex_WriteDword(eData + 0x1C, the_effect["parameter1"])
+						end
+					end)
+				elseif effect_opcode == 218 then
+					if the_effect["parameter2"] == 0 and the_effect["parameter3"] > 0 then
+						IEex_IterateActorEffects(targetID, function(eData)
+							local the_opcode = IEex_ReadDword(eData + 0x10)
+							local the_parameter2 = IEex_ReadDword(eData + 0x20)
+							if the_opcode == effect_opcode and the_parameter2 == 0 then
+								IEex_WriteDword(eData + 0x1C, the_effect["parameter1"])
+								IEex_WriteDword(eData + 0x60, the_effect["parameter3"])
+							end
+						end)
+					elseif the_effect["parameter2"] == 1 and the_effect["parameter1"] > 0 then
+						IEex_IterateActorEffects(targetID, function(eData)
+							local the_opcode = IEex_ReadDword(eData + 0x10)
+							local the_parameter2 = IEex_ReadDword(eData + 0x20)
+							if the_opcode == effect_opcode and the_parameter2 == 1 then
+								IEex_WriteDword(eData + 0x1C, the_effect["parameter1"])
+							end
+						end)
+					end
+				end
+			end
+--[[
+			IEex_ApplyEffectToActor(targetID, {
+["opcode"] = 500,
+["target"] = 2,
+["timing"] = 6,
+["duration"] = game_tick + i,
+["parameter1"] = i,
+["parameter2"] = time_applied,
+["special"] = game_tick,
+["resource"] = "METIMEEF",
+["parent_resource"] = parent_resource,
+["source_target"] = targetID,
+["source_id"] = targetID
+})
+--]]
+		end
+	end
+
+	if seconds_ago > 0 then
+
+		IEex_IterateActorEffects(targetID, function(eData)
+			local the_opcode = IEex_ReadDword(eData + 0x10)
+			local the_timing = IEex_ReadDword(eData + 0x24)
+			local the_parent_resource = IEex_ReadLString(eData + 0x94, 8)
+			local the_internal_flags = IEex_ReadDword(eData + 0xCC)
+			local the_time_applied = IEex_ReadDword(eData + 0x6C)
+			if the_time_applied < time_applied and the_timing ~= 1 and the_timing ~= 2 and the_timing ~= 9 and the_parent_resource ~= parent_resource and the_opcode ~= 500 and bit.band(the_internal_flags, 0x400000) == 0 then
+				local the_duration = IEex_ReadDword(eData + 0x28)
+				the_duration = the_duration + (seconds_ago * 15)
+				the_time_applied = the_time_applied + (seconds_ago * 15)
+				IEex_WriteDword(eData + 0x28, the_duration)
+				IEex_WriteDword(eData + 0x6C, the_time_applied)
+				if the_time_applied >= time_applied then
+					IEex_WriteDword(eData + 0x28, 0)
+					IEex_WriteDword(eData + 0x114, 1)
+				end
+			end
+		end)
+
+	end
 end
 
 function MEREANIM(effectData, creatureData)
@@ -11695,7 +12099,7 @@ function MEAILCO2(effectData, creatureData)
 	local projectile = 0
 	if resWrapper:isValid() then
 		local spellData = resWrapper:getData()
-		projectile = IEex_ReadWord(spellData + 0xA8, 0x0)
+		projectile = IEex_ReadWord(spellData + 0xA8, 0x0) - 1
 	end
 	resWrapper:free()
 	IEex_ApplyEffectToActor(targetID, {
@@ -11716,6 +12120,198 @@ function MEAILCO2(effectData, creatureData)
 ["source_id"] = sourceID
 })
 	IEex_ApplyEffectToActor(targetID, {
+["opcode"] = 254,
+["target"] = 2,
+["timing"] = 9,
+["resource"] = internalContingencyRES,
+["parent_resource"] = internalContingencyRES,
+["casterlvl"] = casterlvl,
+["source_id"] = sourceID
+})
+	IEex_WriteDword(effectData + 0x110, 1)
+end
+
+function MESPLSEQ(originatingEffectData, actionData, creatureData)
+	local actionID = IEex_GetActionID(actionData)
+	local sourceID = IEex_GetActorIDShare(creatureData)
+	local numSpells = IEex_ReadWord(originatingEffectData + 0x18, 0x0)
+	local maxSpellLevel = IEex_ReadWord(originatingEffectData + 0x1A, 0x0)
+	if maxSpellLevel == 0 then
+		maxSpellLevel = 9
+	end
+	local special = IEex_ReadDword(originatingEffectData + 0x44)
+	if numSpells <= 0 then return end
+	if actionID == 31 or actionID == 95 or actionID == 113 or actionID == 114 or actionID == 181 or actionID == 191 or actionID == 192 then
+		
+		local spellRES = IEex_GetActorSpellRES(sourceID)
+		local resWrapper = IEex_DemandRes(spellRES, "SPL")
+		if resWrapper:isValid() then
+			local spellData = resWrapper:getData()
+			IEex_SetToken("EXACVAL1", IEex_FetchString(IEex_ReadDword(spellData + 0x8)))
+		end
+		resWrapper:free()
+		local casterClass = IEex_ReadSignedByte(creatureData + 0x530, 0x0)
+		local classSpellLevel = IEex_ReadSignedByte(creatureData + 0x534, 0x0)
+		if classSpellLevel <= 0 then
+			classSpellLevel = IEex_GetClassSpellLevel(sourceID, IEex_ReadByte(originatingEffectData + 0xC5, 0x0), spellRES)
+		end
+		if classSpellLevel > maxSpellLevel or classSpellLevel == 0 then
+			IEex_ApplyEffectToActor(sourceID, {
+["opcode"] = 139,
+["target"] = 2,
+["timing"] = 9,
+["parameter1"] = ex_tra_55596,
+["source_id"] = sourceID
+})
+			return
+		end
+		numSpells = numSpells - 1
+		IEex_WriteWord(originatingEffectData + 0x18, numSpells)
+		local casterlvl = IEex_ReadDword(originatingEffectData + 0xC4)
+		local parent_resource = IEex_ReadLString(originatingEffectData + 0x90, 8)
+		local internalContingencyRES = parent_resource .. "S"
+		if #internalContingencyRES > 8 then
+			internalContingencyRES = "MESPLSEQ"
+		end
+		
+		IEex_SetActionID(actionData, 0)
+		local newTiming = 0
+		if special == 0 then
+			newTiming = 9
+		end
+		IEex_ApplyEffectToActor(sourceID, {
+["opcode"] = 233,
+["target"] = 2,
+["timing"] = 9,
+["parameter2"] = 69,
+["parent_resource"] = internalContingencyRES,
+["casterlvl"] = casterlvl,
+["source_id"] = sourceID
+})
+		IEex_ApplyEffectToActor(sourceID, {
+["opcode"] = 500,
+["target"] = 2,
+["timing"] = 0,
+["parameter1"] = -1,
+["parameter2"] = classSpellLevel,
+["special"] = classSpellLevel,
+["savingthrow"] = 0x2000000,
+["resource"] = "EXMODMEM",
+["vvcresource"] = spellRES,
+["parent_resource"] = internalContingencyRES,
+["casterlvl"] = casterlvl,
+["source_id"] = sourceID
+})
+		IEex_ApplyEffectToActor(sourceID, {
+["opcode"] = 0,
+["target"] = 2,
+["timing"] = newTiming,
+["duration"] = special,
+["savingthrow"] = 0x4000000,
+["vvcresource"] = spellRES,
+["resource2"] = parent_resource,
+["parent_resource"] = internalContingencyRES,
+["casterlvl"] = IEex_GetActorStat(sourceID, casterClass + 95) + (casterClass * 0x100),
+["source_id"] = sourceID
+})
+		IEex_ApplyEffectToActor(sourceID, {
+["opcode"] = 172,
+["target"] = 2,
+["timing"] = 0,
+["duration"] = special,
+["resource"] = internalContingencyRES,
+["parent_resource"] = internalContingencyRES,
+["casterlvl"] = casterlvl,
+["source_id"] = sourceID
+})
+		IEex_ApplyEffectToActor(sourceID, {
+["opcode"] = 171,
+["target"] = 2,
+["timing"] = 0,
+["duration"] = special,
+["resource"] = internalContingencyRES,
+["parent_resource"] = internalContingencyRES,
+["casterlvl"] = casterlvl,
+["source_id"] = sourceID
+})
+		if newTiming == 0 then
+			IEex_ApplyEffectToActor(sourceID, {
+["opcode"] = 172,
+["target"] = 2,
+["timing"] = 4,
+["duration"] = special,
+["resource"] = internalContingencyRES,
+["parent_resource"] = internalContingencyRES,
+["casterlvl"] = casterlvl,
+["source_id"] = sourceID
+})
+		end
+		IEex_ApplyEffectToActor(sourceID, {
+["opcode"] = 139,
+["target"] = 2,
+["timing"] = 9,
+["parameter1"] = ex_tra_55597,
+["source_id"] = sourceID
+})
+	end
+end
+
+IEex_AddActionHookOpcode("MESPLSEQ")
+
+function MESPLSE2(effectData, creatureData)
+	if IEex_CheckForEffectRepeat(effectData, creatureData) then return end
+	local targetID = IEex_GetActorIDShare(creatureData)
+	local sourceID = IEex_ReadDword(effectData + 0x10C)
+	local spellRES = ""
+	local parent_resource = IEex_ReadLString(effectData + 0x90, 8)
+	local spellList = {}
+	IEex_IterateActorEffects(sourceID, function(eData)
+		local theopcode = IEex_ReadDword(eData + 0x10)
+		local thesavingthrow = IEex_ReadDword(eData + 0x40)
+		local theparent_resource = IEex_ReadLString(eData + 0x94, 8)
+		if theopcode == 0 and bit.band(thesavingthrow, 0x4000000) > 0 and theparent_resource == parent_resource then
+			table.insert(spellList, {IEex_ReadLString(eData + 0x70, 8), IEex_ReadDword(eData + 0xC8)})
+		end
+	end)
+	local sourceX, sourceY = IEex_GetActorLocation(sourceID)
+	local targetX, targetY = IEex_GetActorLocation(targetID)
+	local distance = math.floor(((((sourceX - targetX) / 16) ^ 2) + (((sourceY - targetY) / 12) ^ 2)) ^ .5) - 2
+	for i = 1, #spellList, 1 do
+		local resWrapper = IEex_DemandRes(spellList[i][1], "SPL")
+		local projectile = 0
+		local range = 1
+		local target = 1
+		if resWrapper:isValid() then
+			local spellData = resWrapper:getData()
+			target = IEex_ReadByte(spellData + 0x8E, 0x0)
+			range = IEex_ReadWord(spellData + 0x90, 0x0)
+			projectile = IEex_ReadWord(spellData + 0xA8, 0x0) - 1
+			IEex_SetToken("EXACVAL1", IEex_FetchString(IEex_ReadDword(spellData + 0x8)))
+		end
+		resWrapper:free()
+		local newTargetID = targetID
+		if target == 5 then
+			newTargetID = sourceID
+		end
+		local newTargetX, newTargetY = IEex_GetActorLocation(newTargetID)
+		if distance <= range or newTargetID == sourceID then
+			IEex_ApplyEffectToActor(newTargetID, {
+["opcode"] = 430,
+["target"] = 2,
+["timing"] = 9,
+["parameter2"] = projectile,
+["resource"] = spellList[i][1],
+["parent_resource"] = spellList[i][1],
+["source_x"] = sourceX,
+["source_y"] = sourceY,
+["target_x"] = newTargetX,
+["target_y"] = newTargetY,
+["casterlvl"] = spellList[i][2],
+["source_id"] = sourceID
+})
+		end
+	end
+	IEex_ApplyEffectToActor(sourceID, {
 ["opcode"] = 254,
 ["target"] = 2,
 ["timing"] = 9,

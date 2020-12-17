@@ -10,7 +10,7 @@ Veira remains only partly corporeal so long as she clings to the Material Plane.
 STATISTICS:
 
 Regeneration: 1 hit point per round
-Damage Reduction: 5/+1 Damage Reduction
+Damage Reduction: 5/+1
 Resistance: 25/- Cold Resistance
 Resistance: 5/- Acid, Electricity, and Fire Resistance
 Immunity to healing spells, fatigue, poison, disease, bleeding wounds, stun, web, entangle, intoxication, nausea, vampiric touch, energy drain, Stoneskin, Iron Skins, Barkskin, enfeeblement, Otiluke's Resilient Sphere, Tortoise Shell, Horrid Wilting, death magic, petrification, polymorph, critical hits, and most potions.
@@ -22,32 +22,32 @@ Veira remains only partly corporeal so long as she clings to the Material Plane.
 
 STATISTICS:
 
-Regeneration: 1 hit point per round
-Damage Reduction: 5/+1 Damage Reduction
-Resistance: 25/- Cold Resistance
-Resistance: 5/- Acid, Electricity, and Fire Resistance
+Regeneration: 2 hit points per round
+Damage Reduction: 10/+2
+Resistance: 50/- Cold Resistance
+Resistance: 10/- Acid, Electricity, and Fire Resistance
 Immunity to healing spells, fatigue, poison, disease, bleeding wounds, stun, web, entangle, intoxication, nausea, vampiric touch, energy drain, Stoneskin, Iron Skins, Barkskin, enfeeblement, Otiluke's Resilient Sphere, Tortoise Shell, Horrid Wilting, death magic, petrification, polymorph, critical hits, and most potions.
 Weight: 0 lb.~
 @4806     = ~Vrek's Claw~
-@4807     = ~Vrek prefers to use his jagged claws in combat, finding conventional weapons designed for humanoid hands to be clumsy in his grip.  Vrek may still use a shield or a weapon in his off hand, but he uses his claws as his primary attack.  As a magical being, Vrek's claws strike as a +1 weapon for the purposes of overcoming damage reduction.
+@4807     = ~Vrek prefers to use his jagged claws in combat, finding conventional weapons designed for humanoid hands to be clumsy in his grip.  Vrek may still use a shield or a weapon in his off hand, but he uses his claws as his primary attack.  Vrek's claws strike as +1 weapons for the purposes of overcoming damage reduction.
 
 STATISTICS: 
 
-Damage: 1d8 + 1 
-Attack Bonus: +1  
+Damage: 2d6 + 1 
+Attack Bonus: +1
 Enchantment:  +1
 Damage Type: Slashing
 Weight: 0 lb.
 Required Feat:  Simple Weapons, Touch Attack
 Type:  One-handed~
 @4808     = ~Vrek's Claw~
-@4809     = ~Vrek prefers to use his jagged claws in combat, finding conventional weapons designed for humanoid hands to be clumsy in his grip.  Vrek may still use a shield or a weapon in his off hand, but he uses his claws as his primary attack.  As a magical being, Vrek's claws strike as a +1 weapon for the purposes of overcoming damage reduction.
+@4809     = ~Vrek prefers to use his jagged claws in combat, finding conventional weapons designed for humanoid hands to be clumsy in his grip.  Vrek may still use a shield or a weapon in his off hand, but he uses his claws as his primary attack.  Vrek's claws strike as +5 weapons for the purposes of overcoming damage reduction.
 
 STATISTICS: 
 
-Damage: 1d8 + 1 
-Attack Bonus: +1  
-Enchantment:  +1
+Damage: 2d6 + 5
+Attack Bonus: +5
+Enchantment:  +5
 Damage Type: Slashing
 Weight: 0 lb.
 Required Feat:  Simple Weapons, Touch Attack
@@ -69,11 +69,11 @@ Weight: 0 lb.~
 
 STATISTICS:
 
-Armor Bonus: +6
+Armor Bonus: +10
 Max Dex Bonus:  None
 Special:
   Resistance: -20 weakness to fire and acid damage
-  Regeneration: Regenerates 1 hit point per second
+  Regeneration: Regenerates 2 hit points per second
   Resistance: 5/- resistance to cold damage
 Weight: 0 lb.~
 @4814     = ~Vunarg's Throwing Axe~
@@ -103,9 +103,9 @@ Be never proud
 
 STATISTICS:
 
-Damage:  1d6  +1
-Attack Bonus:  +1
-Enchantment:  +1
+Damage:  1d6  +5
+Attack Bonus:  +5
+Enchantment:  +5
 Damage Type:  Missile (piercing)
 Special:
   Returning: Returns to user's hand once thrown
@@ -117,24 +117,26 @@ Type:  One-handed~
  
 STATISTICS: 
  
-Damage: 1d4
+Damage:  1d6  +1
+Attack Bonus:  +1
 Enchantment:  +1
-Damage Type: Slashing 
+Damage Type: Slashing
 Special:
   Frost: +1d6 cold damage
 Weight: 0 lb. 
 Feat Requirement:  None
 Type:  One-handed~
 @4820     = ~Xhaan's Claw~
-@4821     = ~Xhaan prefers to fight with his claws, as he has had no need for weapons in the countless lifetimes he has lived in the Nine Hells.  He may still use a shield or a weapon in his off hand, but he uses his claws as his primary attack.  As an extraplanar being, Xhaan's claws strike as a +1 weapon for the purposes of overcoming damage reduction.
+@4821     = ~Xhaan prefers to fight with his claws, as he has had no need for weapons in the countless lifetimes he has lived in the Nine Hells.  He may still use a shield or a weapon in his off hand, but he uses his claws as his primary attack.  As an extraplanar being, Xhaan's claws strike as a +5 weapon for the purposes of overcoming damage reduction.
  
 STATISTICS: 
  
-Damage: 1d4
-Enchantment:  +1
+Damage:  1d6  +5
+Attack Bonus:  +5
+Enchantment:  +5
 Damage Type: Slashing 
 Special:
-  Frost: +1d6 cold damage
+  Frost: +2d6 cold damage
 Weight: 0 lb. 
 Feat Requirement:  None
 Type:  One-handed~
@@ -143,13 +145,14 @@ Type:  One-handed~
 
 STATISTICS:
 
-Armor Bonus: +4
+Armor Bonus: +5
 Max Dex Bonus:  None
 Special:
   Resistance: 10/- Acid Resistance
-  Resistance: 15/- Fire Resistance
-  Resistance: 20/- Cold Resistance
-  Resistance: 10/- Spell Resistance
+  Resistance: 100/- Fire Resistance
+  Resistance: 50/- Cold Resistance
+  Resistance: 18/- Spell Resistance
+  Damage Reduction: 5/+1
   Regeneration: Regenerates 1 hit point per round
   Immunity to disease, poison, charm, and fear effects
 Weight: 0 lb.~
@@ -158,14 +161,15 @@ Weight: 0 lb.~
 
 STATISTICS:
 
-Armor Bonus: +4
+Armor Bonus: +9
 Max Dex Bonus:  None
 Special:
   Resistance: 10/- Acid Resistance
-  Resistance: 15/- Fire Resistance
-  Resistance: 20/- Cold Resistance
-  Resistance: 10/- Spell Resistance
-  Regeneration: Regenerates 1 hit point per round
+  Resistance: 100/- Fire Resistance
+  Resistance: 50/- Cold Resistance
+  Resistance: 26/- Spell Resistance
+  Damage Reduction: 10/+2
+  Regeneration: Regenerates 2 hit points per round
   Immunity to disease, poison, charm, and fear effects
 Weight: 0 lb.~
 @4826     = ~Aocha's Venom~

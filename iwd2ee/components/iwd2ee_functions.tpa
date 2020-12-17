@@ -784,35 +784,32 @@ END
 						ab_off ab_num sng_off shp_off	slt_off	itm_off	fx_off	END
 					SET	splnum = EVAL ~%splnum%~
 					SET	sploff = EVAL ~%sploff%~
-					SET	spl_add = 0
+					SET	spl_add = 1
 					FOR	(i = 0; i < splnum; ++i)	BEGIN
 						READ_LONG	(sploff + i * 0x10)	ability
 						PATCH_IF	ability = index	BEGIN
 							READ_LONG	(sploff + i * 0x10 + 0x4) kn_num
 							READ_LONG	(sploff + i * 0x10 + 0x8) mz_num
-							PATCH_IF	(num = 0)	BEGIN
+							PATCH_IF	(num <= ~-2~)	BEGIN
 								DELETE_BYTES	(sploff + i * 0x10)	0x10
 								SET	spl_add = ~-1~
 							END	ELSE	BEGIN
-								PATCH_IF	(kn_num + num) <= 0 BEGIN
+								PATCH_IF	(num = ~-1~) BEGIN
 									WRITE_LONG	(sploff + i * 0x10 + 0x4)	0
-								END	ELSE	BEGIN
-									WRITE_LONG	(sploff + i * 0x10 + 0x4)	(THIS + num)
-								END
-								PATCH_IF	mz_num + num <= 0	BEGIN
 									WRITE_LONG	(sploff + i * 0x10 + 0x8)	0
 								END	ELSE	BEGIN
+									WRITE_LONG	(sploff + i * 0x10 + 0x4)	(THIS + num)
 									WRITE_LONG	(sploff + i * 0x10 + 0x8)	(THIS + num)
 								END
+								SET spl_add = 0
 							END
 						END
 					END
-					PATCH_IF	spl_add = 0	AND num > 0 BEGIN
+					PATCH_IF	spl_add = 1	AND num >= 0 BEGIN
 						INSERT_BYTES	(sploff + splnum * 0x10)	0x10
 						WRITE_LONG		(sploff + splnum * 0x10)	index
 						WRITE_LONG		(sploff + splnum * 0x10 + 0x4)	num
 						WRITE_LONG		(sploff + splnum * 0x10 + 0x8)	num
-						SET	spl_add = 1
 					END
 					SET	update = 0
 					PATCH_IF	spl_add	!= 0	BEGIN
@@ -897,6 +894,120 @@ END
 			WRITE_LONG	0x61e	(THIS - offset * 0x10)	//	Effects offset
 		END
 	END
+
+	DEFINE_PATCH_FUNCTION	GIVE_CORRECT_DIVINE_SPELLS
+	BEGIN
+		READ_BYTE 0x8D theclericlevel
+		READ_BYTE 0x8E thedruidlevel
+		READ_BYTE 0x91 thepaladinlevel
+		READ_BYTE 0x92 therangerlevel
+		READ_BYTE 0x38F thealignment
+		maxclericspelllevel = 0
+		maxdruidspelllevel = 0
+		maxpaladinspelllevel = 0
+		maxrangerspelllevel = 0
+		PATCH_IF theclericlevel > 0 BEGIN
+			INNER_ACTION BEGIN
+				COPY_EXISTING ~mxsplclr.2da~ ~override~
+					COUNT_2DA_COLS numcols
+					READ_2DA_ENTRY 0 0 numcols firstspellcastinglevel
+					row = theclericlevel - firstspellcastinglevel
+					PATCH_IF row >= 0 BEGIN
+						FOR (i = 1; i < numcols; ++i) BEGIN
+							READ_2DA_ENTRY row i numcols thenumspells
+							PATCH_IF thenumspells > 0 BEGIN
+								maxclericspelllevel = i
+							END
+						END
+					END
+					BUT_ONLY_IF_IT_CHANGES
+			END
+		END
+		PATCH_IF thedruidlevel > 0 BEGIN
+			INNER_ACTION BEGIN
+				COPY_EXISTING ~mxspldrd.2da~ ~override~
+					COUNT_2DA_COLS numcols
+					READ_2DA_ENTRY 0 0 numcols firstspellcastinglevel
+					row = thedruidlevel - firstspellcastinglevel
+					PATCH_IF row >= 0 BEGIN
+						FOR (i = 1; i < numcols; ++i) BEGIN
+							READ_2DA_ENTRY row i numcols thenumspells
+							PATCH_IF thenumspells > 0 BEGIN
+								maxdruidspelllevel = i
+							END
+						END
+					END
+					BUT_ONLY_IF_IT_CHANGES
+			END
+		END
+		PATCH_IF thepaladinlevel > 0 BEGIN
+			INNER_ACTION BEGIN
+				COPY_EXISTING ~mxsplpal.2da~ ~override~
+					COUNT_2DA_COLS numcols
+					READ_2DA_ENTRY 0 0 numcols firstspellcastinglevel
+					row = thepaladinlevel - firstspellcastinglevel
+					PATCH_IF row >= 0 BEGIN
+						FOR (i = 1; i < numcols; ++i) BEGIN
+							READ_2DA_ENTRY row i numcols thenumspells
+							PATCH_IF thenumspells > 0 BEGIN
+								maxpaladinspelllevel = i
+							END
+						END
+					END
+					BUT_ONLY_IF_IT_CHANGES
+			END
+		END
+		PATCH_IF therangerlevel > 0 BEGIN
+			INNER_ACTION BEGIN
+				COPY_EXISTING ~mxsplrgr.2da~ ~override~
+					COUNT_2DA_COLS numcols
+					READ_2DA_ENTRY 0 0 numcols firstspellcastinglevel
+					row = therangerlevel - firstspellcastinglevel
+					PATCH_IF row >= 0 BEGIN
+						FOR (i = 1; i < numcols; ++i) BEGIN
+							READ_2DA_ENTRY row i numcols thenumspells
+							PATCH_IF thenumspells > 0 BEGIN
+								maxrangerspelllevel = i
+							END
+						END
+					END
+					BUT_ONLY_IF_IT_CHANGES
+			END
+		END
+		FOR	(i = 0; i < IDX_LISTSPLL; ++i) BEGIN
+			READ_2DA_ENTRY_FORMER	~IDX_LISTSPLL~	i 2	currentclericspelllevel
+			READ_2DA_ENTRY_FORMER	~IDX_LISTSPLL~	i 3	currentdruidspelllevel
+			READ_2DA_ENTRY_FORMER	~IDX_LISTSPLL~	i 4	currentpaladinspelllevel
+			READ_2DA_ENTRY_FORMER	~IDX_LISTSPLL~	i 5	currentrangerspelllevel
+			READ_2DA_ENTRY_FORMER	~IDX_LISTSPLL~	i 8	resource
+			matchesalignment = 1
+			PATCH_IF FILE_EXISTS_IN_GAME ~%resource%.spl~ BEGIN
+				INNER_ACTION BEGIN
+					COPY_EXISTING ~%resource%.spl~ ~override~
+						READ_LONG 0x1E theunusabilityflags
+						PATCH_IF ((theunusabilityflags BAND 0x00000001) > 0) AND ((thealignment BAND 0x00000030) > 0) OR ((theunusabilityflags BAND 0x00000002) > 0) AND ((thealignment BAND 0x00000003) > 0) OR ((theunusabilityflags BAND 0x00000004) > 0) AND ((thealignment BAND 0x00000001) > 0) OR ((theunusabilityflags BAND 0x00000008) > 0) AND ((thealignment BAND 0x00000002) > 0) OR ((theunusabilityflags BAND 0x00000010) > 0) AND ((thealignment BAND 0x00000010) > 0) OR ((theunusabilityflags BAND 0x00000020) > 0) AND ((thealignment BAND 0x00000020) > 0) BEGIN
+							matchesalignment = 0
+						END
+						BUT_ONLY_IF_IT_CHANGES
+				END
+				PATCH_IF matchesalignment = 1 BEGIN
+					PATCH_IF currentclericspelllevel > 0 AND currentclericspelllevel <= maxclericspelllevel BEGIN
+						LPF	IWD2_CRE_SPELL INT_VAR num=0 STR_VAR class=~cleric~ resource= EVAL ~%resource%~ END
+					END
+					PATCH_IF currentdruidspelllevel > 0 AND currentdruidspelllevel <= maxdruidspelllevel BEGIN
+						LPF	IWD2_CRE_SPELL INT_VAR num=0 STR_VAR class=~druid~ resource= EVAL ~%resource%~ END
+					END
+					PATCH_IF currentpaladinspelllevel > 0 AND currentpaladinspelllevel <= maxpaladinspelllevel BEGIN
+						LPF	IWD2_CRE_SPELL INT_VAR num=0 STR_VAR class=~paladin~ resource= EVAL ~%resource%~ END
+					END
+					PATCH_IF currentrangerspelllevel > 0 AND currentrangerspelllevel <= maxrangerspelllevel BEGIN
+						LPF	IWD2_CRE_SPELL INT_VAR num=0 STR_VAR class=~ranger~ resource= EVAL ~%resource%~ END
+					END
+				END
+			END
+		END
+	END
+
 
 	//	v1.0
 	DEFINE_PATCH_FUNCTION	IWD2_REMOVE_SPELLS_MEMORIZED

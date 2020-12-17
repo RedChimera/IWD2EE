@@ -322,7 +322,7 @@ Prerequisites: Cha 13+, Wild Shape.
 
 Benefit: You can cast spells while in any shapeshifted form. However, the awkwardness of replicating the verbal and somatic components gives you a +4 penalty to casting time (you can still cast spells without penalty in your natural form).~
 @347    = ~Counterspell~
-@348    = ~Counterspell:
+@348    = ~COUNTERSPELL:
 
 You know how to negate an opponent's spell by expending the same spell.
 
@@ -390,7 +390,7 @@ Advantages:
 * 13th level: The War Chant of Sith. When played, the bard's allies gain a +2 generic armor bonus, physical damage resistance of 3/-, and they regenerate 3 points of damage per round in combat. At level 25, this song grants an additional +2 to AC, 3/- physical damage resistance, 3 hit points healed per round.
 * 16th level: The Ballad of Three Heroes. When played, the bard's allies gain +5 spell resistance, 5/- resistance to all forms of magical damage, and the effects of the Tale of Curran Strongheart, Tymora's Melody, and the War Chant of Sith. At level 28, this song grants an additional +5 spell resistance and 5/- resistance to magical damage.
 
-All songs do not stack unless otherwise specified. Until the bard learns the Ballad of Three Heroes, the songs are mutually exclusive; the party cannot benefit from more than one song at a time. Summoned creatures do not benefit from bard songs.
+A bard cannot benefit the party with more than one song at once. But if the party has multiple bards, the effects of each bard's song will stack. Summoned creatures do not benefit from bard songs.
 
 Disadvantages:
 * Bards are not as effective in hand-to-hand combat as warriors or priests.
@@ -769,7 +769,7 @@ Domain Spells:
 3: Clairvoyance, True Seeing
 4: Malison, Shout
 5: Power Word: Heal, Power Word: Silence
-6: Power Word: Stun, Symbol of Fear
+6: Power Word: Stun, Spell Sequencer
 7: Great Shout, Symbol of Hopelessness
 8: Power Word: Kill, Symbol of Death
 9: Executioner's Eyes, Wail of the Banshee~

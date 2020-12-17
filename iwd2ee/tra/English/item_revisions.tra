@@ -3941,8 +3941,24 @@ Special:
 Weight: 2 lb.
 Feat Requirement:  Simple Weapon, Small Blade
 Type:  One-handed~
-//@10835    = ~Moonblade of Selune +4~
-//@10836    = ~If we decide to make a HoF version of this item, we should put its description here~
+//@10835    = ~Moonblade of Selune +5~
+@10836    = ~The blade of this sword is constructed of a pale white material. It is slightly translucent and appears to glow in dim light. The edge of the blade appears dull and unable to cut even the softest of materials. When used in combat, however, a moonblade is a formidable weapon.
+A moonblade bypasses armor and strikes at a target directly. The weapon drains life force and leaves no visible wounds, unless the creature is undead. Undead suffer terrible wounds from a moonblade. Their substance actually seems to boil away, and they suffer double damage.
+Moonblade's of Selune are the favored weapons of the priestesses of Selune. They are usually granted only to priestesses who serve the church beyond the call of duty. This weapon was given to Emma Moonblade for her unswerving dedication to the church.
+
+STATISTICS:
+
+Damage:  1d8 + 5
+Attack Bonus:  +5
+Enchantment:  +5
+Damage Type:  Magic
+Special:
+  Deals double damage to undead
+  Bypasses armor and shield bonuses
+  Each hit scrambles magic, causing any spell cast by the target in the next round to have a 50% chance of failing
+Weight: 2 lb.
+Feat Requirement:  Simple Weapon, Small Blade
+Type:  One-handed~
 //@10837    = ~Stunning Longsword +2~
 @10838    = ~These swords are usually referred to as doubled-edged swords, war swords, or military swords. In many cases, the longsword has a single-edged blade. There is no single version of the longsword; the design and length vary from culture to culture, and may vary within the same culture depending on the era. Among the most common characteristics of all longswords is their length, which ranges from 35 inches to 47 inches. In the latter case, the blade is known to take up 40 inches of the total length. Most longswords have a double-edged blade and a sharp point at the tip. Despite the tip, the longsword is designed for slashing, not thrusting. 
 

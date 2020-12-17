@@ -2609,6 +2609,8 @@ Launcher:  Bow~
 @30048=~Created by the Goodberry spell, these simple looking blueberries will heal 1d4+5 points of damage for each bunch of berries eaten.~
 @30049=~Reflected the attack~
 @30050=~Protected by Spell Trap~
+@30051=~Release Spell Sequencer~
+@30052=~You ghostwalked through the door and opened it from the inside.~
 
 @31115     = ~Armor of Faith~
 @32115     = ~Armor of Faith
@@ -3386,6 +3388,17 @@ Area of Effect: 1 creature
 Saving Throw: None
 
 This spell turns the recipient partially ethereal for a limited period of time. While partially ethereal, the character gets damage reduction 5/+1, but is still tangible enough to be able to attack and cast spells. The recipient can also move through walls while partially ethereal. Simply click on a point to move to, and the character will float to that point, bypassing normally impassable obstacles in the way.~
+@37553     = ~Rewind Time~
+@38553     = ~Rewind Time
+(Transmutation)
+Level: Brd 5, Sor/Wiz 5
+Range: Caster
+Duration: -2 rounds
+Casting Time: 0
+Area of Effect: Caster
+Saving Throw: None
+
+This spell briefly reverses time for the caster, reverting them to the state they were in two rounds ago. The caster's HP is restored to what it was two rounds ago, as is their location in the area. The caster also regains the magical effects they had two rounds ago, while losing effects gained in the past two rounds (including harmful status effects). Rewind Time does not restore memorized spells expended in the last two rounds. ~
 @37652     = ~Isaac's Greater Missile Storm~
 @38652     = ~Isaac's Greater Missile Storm
 (Evocation)
@@ -3470,6 +3483,19 @@ Area of Effect: Special
 Saving Throw: None 
 
 This spell animates 1 skeleton per caster level. The skeletons ignore the summoning limit. Skeleton Horde cannot be cast by good characters.~
+@37758     = ~Spell Sequencer~
+@38758     = ~Spell Sequencer
+(Universal)
+Level: Brd 7, Sor/Wiz 7, Oghma 6
+Range: Special
+Duration: Permanent until triggered
+Casting Time: 15
+Area of Effect: Special
+Saving Throw: None
+
+Spell Sequencer lets the caster store three spells to be released later on. After casting Spell Sequencer, the caster must attempt to cast up to three spells of 4th-level or lower. Instead of being cast, those spells are stored in the sequencer (expending one use of each spell). The caster then gains the innate ability "Release Spell Sequencer." Using that ability immediately casts all three spells on the target of the ability.
+
+Spells with a range of "Caster" will be cast on the caster, regardless of the target of the ability. Spells with limited range will fail if the target is outside the spell's range.~
 @37852     = ~Energy Drain~
 @38852     = ~Energy Drain
 (Necromancy)

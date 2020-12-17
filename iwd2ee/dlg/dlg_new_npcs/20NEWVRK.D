@@ -50,13 +50,15 @@ END
 IF ~~ THEN BEGIN 5
   SAY #36282
   IF ~~ THEN REPLY #36283 GOTO 7
-  IF ~!ClassEx(Protagonist, Paladin)~ THEN REPLY ~That's quite clever, Vrek.  You've created your own little kingdom, set up a food supply, removed an important threat... You're a very intelligent troll.~ GOTO VrekJoin1
+  IF ~Global("US_Emma_Joined", "GLOBAL", 0)
+  !ClassEx(Protagonist, Paladin)~ THEN REPLY ~That's quite clever, Vrek.  You've created your own little kingdom, set up a food supply, removed an important threat... You're a very intelligent troll.~ GOTO VrekJoin1
 END
 
 IF ~~ THEN BEGIN 6
   SAY #36284
   IF ~~ THEN REPLY #36283 GOTO 7
-  IF ~!ClassEx(Protagonist, Paladin)~ THEN REPLY ~That's quite clever, Vrek.  You've created your own little kingdom, set up a food supply, removed an important threat... You're a very intelligent troll.~ GOTO VrekJoin1
+  IF ~Global("US_Emma_Joined", "GLOBAL", 0)
+  !ClassEx(Protagonist, Paladin)~ THEN REPLY ~That's quite clever, Vrek.  You've created your own little kingdom, set up a food supply, removed an important threat... You're a very intelligent troll.~ GOTO VrekJoin1
 END
 
 IF ~~ THEN BEGIN 7

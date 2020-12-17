@@ -281,13 +281,75 @@ COPY_EXISTING_REGEXP ~[123].*\.cre~ ~override~ ~00GOB.*\.cre~ ~override~  ~00HAG
 COPY_EXISTING ~20EMMA.cre~ ~override~ ~20ORCCHF.cre~ ~override~ ~20VREK.cre~ ~override~ ~21GAERNT.cre~ ~override~ ~21SPDQN.cre~ ~override~ ~21XUKI.cre~ ~override~ ~30BEETQ.cre~ ~override~ ~30GOBKRU.cre~ ~override~ ~30GOBMOK.cre~ ~override~ ~30GOBOGR.cre~ ~override~ ~30GOBOV1.cre~ ~override~ ~30GOBVUN.cre~ ~override~ ~30GOBWR2.cre~ ~override~ ~30GOBWR4.cre~ ~override~ ~30GOBWR6.cre~ ~override~ ~30GOBWRC.cre~ ~override~ ~30HOBGUM.cre~ ~override~ ~30ILQUAG.cre~ ~override~ ~30OGRCH.cre~ ~override~ ~30OGRGAR.cre~ ~override~ ~30ORCGOT.cre~ ~override~ ~30ORCTRU.cre~ ~override~ ~30OROCA.cre~ ~override~ ~30OROPUS.cre~ ~override~ ~30OROTAS.cre~ ~override~ ~30OTY.cre~ ~override~ ~30SPIWOQ.cre~ ~override~ ~30TEQUAG.cre~ ~override~ ~30YQUOGG.cre~ ~override~ ~31BUGGUT.cre~ ~override~ ~31BUGJAI.cre~ ~override~ ~31GOBHC.cre~ ~override~ ~31GOBOV1.cre~ ~override~ ~31HOBCH.cre~ ~override~ ~31HOBSER.cre~ ~override~ ~31ORCHC.cre~ ~override~ ~31ORCHSB.cre~ ~override~ ~31ORCHSH.cre~ ~override~ ~31ORCOLD.cre~ ~override~ ~31OROCH.cre~ ~override~ ~31OROCO.cre~ ~override~
 	WRITE_BYTE luck 0
 
-COPY_EXISTING ~00SWAT20.cre~ ~override~
+// Giving elementals the correct names
+
+COPY_EXISTING ~00SFIR16.cre~ ~override~ ~41SFIR16.cre~ ~override~
 	SAY NAME1 @23026
 	SAY NAME2 @23026
 
-COPY_EXISTING ~00SWAT24.cre~ ~override~ ~41SWAT24.cre~ ~override~
+COPY_EXISTING ~00SFIR24.cre~ ~override~ ~41SFIR24.cre~ ~override~
 	SAY NAME1 @23027
 	SAY NAME2 @23027
+
+COPY_EXISTING ~00SEAR16.cre~ ~override~ ~41SEAR16.cre~ ~override~ ~50ELEEA.cre~ ~override~ ~63EELE.cre~ ~override~
+	SAY NAME1 @23028
+	SAY NAME2 @23028
+
+COPY_EXISTING ~63EELE2.cre~ ~override~
+	SAY NAME1 #2853
+	SAY NAME2 #2853
+
+COPY_EXISTING ~63EELE3.cre~ ~override~
+	SAY NAME1 #39731
+	SAY NAME2 #39731
+
+COPY_EXISTING ~00SWAT16.cre~ ~override~ ~41SWAT16.cre~ ~override~
+	SAY NAME1 @23029
+	SAY NAME2 @23029
+
+COPY_EXISTING ~00SWAT20.cre~ ~override~
+	SAY NAME1 @23030
+	SAY NAME2 @23030
+
+COPY_EXISTING ~00SWAT24.cre~ ~override~ ~41SWAT24.cre~ ~override~
+	SAY NAME1 @23031
+	SAY NAME2 @23031
+
+COPY_EXISTING ~00SAIR16.cre~ ~override~ ~41SAIR16.cre~ ~override~
+	SAY NAME1 #39796
+	SAY NAME2 #39796
+
+COPY_EXISTING ~00SDSAL.cre~ ~override~ ~00SSAL.cre~ ~override~ ~00SSHSAL.cre~ ~override~ ~00SSSAL.cre~ ~override~ ~41SDSAL.cre~ ~override~ ~00SSSAL.cre~ ~override~
+	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelfighter=9 END
+	WRITE_SHORT currenthp 70
+	WRITE_SHORT maxhp 70
+	WRITE_SHORT armorclass 20
+	WRITE_BYTE strength 18
+	WRITE_BYTE dexterity 14
+	WRITE_BYTE constitution 15
+	WRITE_BYTE fireresistance 100
+	WRITE_BYTE coldresistance (0 - 10)
+	WRITE_BYTE magicfireresistance 100
+	WRITE_BYTE magiccoldresistance (0 - 10)
+	WRITE_BYTE enchantmentlevel 1
+	WRITE_BYTE proficiencypolearm 2
+	LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item=~USCWHFSA~ slot=~weapon1~ mode=~replace~ END
+
+COPY_EXISTING ~00SFSAL.cre~ ~override~ ~61SALFRO.cre~ ~override~
+	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelfighter=9 END
+	WRITE_SHORT currenthp 70
+	WRITE_SHORT maxhp 70
+	WRITE_SHORT armorclass 20
+	WRITE_BYTE strength 18
+	WRITE_BYTE dexterity 14
+	WRITE_BYTE constitution 15
+	WRITE_BYTE fireresistance (0 - 10)
+	WRITE_BYTE coldresistance 100
+	WRITE_BYTE magicfireresistance (0 - 10)
+	WRITE_BYTE magiccoldresistance 100
+	WRITE_BYTE enchantmentlevel 1
+	WRITE_BYTE proficiencypolearm 2
+	LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item=~USCWHFFS~ slot=~weapon1~ mode=~replace~ END
 
 COPY_EXISTING ~11PHAEN.cre~ ~override~ ~12PHAEN.cre~ ~override~
 	WRITE_BYTE skillconcentration 6
@@ -643,6 +705,18 @@ COPY_EXISTING ~53FOMOTH.cre~ ~override~ ~50GNTFO.cre~ ~override~
 COPY_EXISTING ~USFOMGRN.cre~ ~override~
 	SAY NAME1 @23015
 	SAY NAME2 @23015
+
+COPY_EXISTING ~30FBEET.cre~ ~override~ ~51BEEFI.cre~ ~override~ ~00SBTL7.cre~ ~override~
+	WRITE_BYTE dexterity 12
+	WRITE_BYTE proficiencymissile 2
+	LPF	IWD2_ADD_CRE_ITEM INT_VAR cq1=1 equip=0 STR_VAR item=~USCWHFFB~ slot=~weapon2~ mode=~replace~ END
+
+COPY_EXISTING ~30BEETQ.cre~ ~override~
+	WRITE_BYTE proficiencymissile 3
+	LPF	IWD2_ADD_CRE_ITEM INT_VAR cq1=1 equip=0 STR_VAR item=~USCWHFFQ~ slot=~weapon2~ mode=~replace~ END
+
+COPY_EXISTING ~30FBEET.cre~ ~override~ ~00SBTL7.cre~ ~override~ ~30BEETQ.cre~ ~override~
+	WRITE_ASCII combatscript ~00AATBN~ #8
 
 COPY_EXISTING ~41REMHZR.cre~ ~override~
 	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelfighter=7 STR_VAR updatehp=~max~ END
@@ -4084,6 +4158,8 @@ COPY_EXISTING ~AR3001.are~ ~override~ ~AR3002.are~ ~override~
 
 COPY_EXISTING ~AR3002.are~ ~override~
 	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR match_cre_file=~00BUG~ script_combat=~00AATGXN~ script_special2=~USBUGBEA~ END
+	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR match_cre_file=~30FBEET~ script_combat=~00AATBN~ script_special2=~~ END
+	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR match_cre_file=~30BEETQ~ script_combat=~00AATBN~ script_special2=~~ END
 
 COPY_EXISTING ~AR3100.are~ ~override~
 	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR match_cre_file=~31GOBSH1~ script_team=~31GOBSH4~ END
@@ -4155,6 +4231,7 @@ COPY_EXISTING ~AR5101.are~ ~override~
 	REPLACE_TEXTUALLY CASE_INSENSITIVE ~00T02V~ ~USHH02~
 	REPLACE_TEXTUALLY CASE_INSENSITIVE ~00T06V~ ~USHH06~
 	REPLACE_TEXTUALLY CASE_INSENSITIVE ~00T07V~ ~USHH07~
+	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR match_cre_file=~51BEEFI~ script_combat=~00AATBN~ END
 
 COPY_EXISTING ~AR5303.are~ ~override~
 	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR actor_name=~Harpy8~ cre_file=~USHRPINF~ script_special2=~USHRPINF~ END
@@ -4379,6 +4456,10 @@ USCWHFLG	USCWGLB2
 USCWHFF1	USCWFEY1
 USCWHFF2	USCWFEY3
 USCWHFFO	00CWFOR3
+USCWHFSA	USCWSALA
+USCWHFFS	USCWFSAL
+USCWHFFB	USCWFIBE
+USCWHFFQ	USCWFIQU
 ~
 UNLESS ~USCWHFMO~
 
@@ -4409,6 +4490,10 @@ USCWHFLG	USCWGLB3
 USCWHFF1	USCWFEY2
 USCWHFF2	USCWFEY4
 USCWHFFO	USCWFOR4
+USCWHFSA	USHFCWSA
+USCWHFFS	USHFCWFS
+USCWHFFB	USHFCWFB
+USCWHFFQ	USHFCWFQ
 ~
 UNLESS ~USCWHFMO~
 

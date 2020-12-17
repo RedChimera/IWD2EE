@@ -180,5 +180,9 @@
 @55484=~Counterspell failed: <EXCSNAM1> is not casting a spell~
 
 @55500=~<EXACVAL1> is not a valid spell for Curing Contingency~
+@55596=~<EXACVAL1> cannot be stored in this sequencer~
+@55597=~<EXACVAL1> has been stored in the sequencer~
 @55598=~The spell <EXACVAL1> has been stored in this character, to be released under the right conditions~
 @55599=~Contingency triggered~
+
+@55701=~Spell Failed: Rewind Time had not been initialized to start tracking effects on this character. Now it has, so it should work the next time the character casts the spell.~

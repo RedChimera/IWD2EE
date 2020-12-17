@@ -302,6 +302,7 @@ IF WEIGHT #2 ~  GlobalGT("Veira_Happy","GLOBAL",0)
   IF ~  PartyHasItem("10GenGBo ")
 ItemIsIdentified("10GenGBo",Nothing)
 ~ THEN REPLY #28428 GOTO 21
+  IF ~!NumInParty(6)~ THEN REPLY ~Perhaps you could come with us.  It's always good to have another head and another pair of eyes, especially someone who won't die to a single stray arrow.~ GOTO VeiraJoin1
   IF ~~ THEN REPLY #30760 EXIT
 END
 
