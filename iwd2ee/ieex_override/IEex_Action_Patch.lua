@@ -85,7 +85,7 @@ local IEex_Lua = {[[
 -- Action Definitions Hook --
 -----------------------------
 
-IEex_HookJump(0x44DC87, 0, IEex_ConcatTables({[[
+IEex_HookJump(0x44DC87, 0, IEex_FlattenTable({[[
 	!jbe_dword >jmp_fail
 	!cmp_ebp_dword #146
 	!jne_dword >jmp_success ; not defined ;

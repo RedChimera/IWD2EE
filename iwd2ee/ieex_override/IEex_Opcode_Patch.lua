@@ -453,7 +453,7 @@
 	-- Opcode Definitions Hook --
 	-----------------------------
 
-	local opcodesHook = IEex_WriteAssemblyAuto(IEex_ConcatTables({[[
+	local opcodesHook = IEex_WriteAssemblyAuto(IEex_FlattenTable({[[
 
 		!cmp_eax_dword #1F4
 		!jne_dword >501

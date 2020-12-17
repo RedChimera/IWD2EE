@@ -212,15 +212,19 @@ function IEex_IterateCPtrList(CPtrList, func)
 	end
 end
 
-function IEex_ConcatTables(tables)
+function IEex_FlattenTable(table)
 	local toReturn = {}
-	for _, _table in ipairs(tables) do
-		if type(_table) == "table" then
-			for _, element in ipairs(_table) do
-				table.insert(toReturn, element)
+	local insertionIndex = 1
+	for i = 1, #table do
+		local element = table[i]
+		if type(element) == "table" then
+			for j = 1, #element do
+				toReturn[insertionIndex] = element[j]
+				insertionIndex = insertionIndex + 1
 			end
 		else
-			table.insert(toReturn, _table)
+			toReturn[insertionIndex] = element
+			insertionIndex = insertionIndex + 1
 		end
 	end
 	return toReturn
@@ -263,28 +267,32 @@ function IEex_SplitByChar(string, char)
 	return splits
 end
 
-function IEex_SplitByWhitespace(text)
+function IEex_Split(text, splitBy, usePattern, allowEmptyCapture)
+	
 	local toReturn = {}
-	IEex_SplitByWhitespaceFill(text, toReturn)
-	return toReturn
-end
+	local matchedPatterns = {}
 
-function IEex_SplitByWhitespaceFill(text, toFill)
+	local plain = usePattern == nil or not usePattern
+	local insertionIndex = 1
+	local captureStart = 1
+	local foundStart, foundEnd = text:find(splitBy, 1, plain)
 
-	text = text:gsub("%s+", " ")
-	local limit = #text
-	local captureStart = (limit > 0 and text:sub(1, 1) == " ") and 2 or 1
-
-	for i = captureStart + 1, limit do
-		if text:sub(i, i) == " " then
-			table.insert(toFill, text:sub(captureStart, i - 1))
-			captureStart = i + 1
+	while foundStart do
+		if allowEmptyCapture or (foundStart > captureStart) then
+			toReturn[insertionIndex] = text:sub(captureStart, foundStart - 1)
+			matchedPatterns[insertionIndex] = text:sub(foundStart, foundEnd)
+			insertionIndex = insertionIndex + 1
 		end
+		captureStart = foundEnd + 1
+		foundStart, foundEnd = text:find(splitBy, captureStart, plain)
 	end
 
+	local limit = #text
 	if captureStart <= limit then
-		table.insert(toFill, text:sub(captureStart, limit))
+		toReturn[insertionIndex] = text:sub(captureStart, limit)
 	end
+
+	return toReturn, matchedPatterns
 end
 
 function IEex_SplitByWhitespaceProcess(text, func)
@@ -302,6 +310,183 @@ function IEex_SplitByWhitespaceProcess(text, func)
 
 	if captureStart <= limit then
 		func(text:sub(captureStart, limit))
+	end
+end
+
+function IEex_ExpandToBytes(num, length)
+	local toReturn = {}
+	for i = 1, length do
+		toReturn[i] = bit.band(num, 0xFF)
+		num = bit.rshift(num, 8)
+	end
+	return unpack(toReturn)
+end
+
+function IEex_ProcessNumberAsBytes(num, length, func)
+	for i = 1, length do
+		func(bit.band(num, 0xFF), i)
+		num = bit.rshift(num, 8)
+	end
+end
+
+---------------
+-- IEex_Dump --
+---------------
+
+function IEex_AlphanumericSortEntries(o)
+	local function conv(s)
+		local res, dot = "", ""
+		for n, m, c in tostring(s):gmatch"(0*(%d*))(.?)" do
+			if n == "" then
+				dot, c = "", dot..c
+			else
+				res = res..(dot == "" and ("%03d%s"):format(#m, m) or "."..n)
+				dot, c = c:match"(%.?)(.*)"
+			end
+			res = res..c:gsub(".", "\0%0")
+		end
+		return res
+	end
+	table.sort(o,
+		function (a, b)
+			local ca, cb = conv(a.string), conv(b.string)
+			return ca < cb or ca == cb and a.string < b.string
+		end)
+	return o
+end
+
+function IEex_FillDumpLevel(tableName, levelTable, levelToFill, levelTableKey)
+	local tableKey, tableValue = next(levelTable, levelTableKey)
+	while tableValue ~= nil do
+		local tableValueType = type(tableValue)
+		if tableValueType == 'string' or tableValueType == 'number' or tableValueType == 'boolean' then
+			local entry = {}
+			entry.string = tableValueType..' '..tableKey..' = '
+			entry.value = tableValue
+			table.insert(levelToFill, entry)
+		elseif tableValueType == 'table' then
+			if tableKey ~= '_G' then
+				local entry = {}
+				entry.string = tableValueType..' '..tableKey..':'
+				entry.value = {} --entry.value is a levelToFill
+				entry.value.previous = {}
+				entry.value.previous.tableName = tableName
+				entry.value.previous.levelTable = levelTable
+				entry.value.previous.levelToFill = levelToFill
+				entry.value.previous.levelTableKey = tableKey
+				table.insert(levelToFill, entry)
+				return IEex_FillDumpLevel(tableKey, tableValue, entry.value)
+			end
+		elseif tableValueType == 'userdata' then
+			local metatable = getmetatable(tableValue)
+			local entry = {}
+			if metatable ~= nil then
+				entry.string = tableValueType..' '..tableKey..':\n'
+				entry.value = {} --entry.value is a levelToFill
+				entry.value.previous = {}
+				entry.value.previous.tableName = tableName
+				entry.value.previous.levelTable = levelTable
+				entry.value.previous.levelToFill = levelToFill
+				entry.value.previous.levelTableKey = tableKey
+				table.insert(levelToFill, entry)
+				return IEex_FillDumpLevel(tableKey, metatable, entry.value)
+			else
+				entry.string = tableValueType..' '..tableKey..' = '
+				entry.value = 'nil'
+				table.insert(levelToFill, entry)
+			end
+		else
+			local entry = {}
+			entry.string = tableValueType..' '..tableKey
+			entry.value = nil
+			table.insert(levelToFill, entry)
+		end
+		--Iteration
+		tableKey, tableValue = next(levelTable, tableKey)
+		--Iteration
+	end
+	--Sort the now finished level
+	IEex_AlphanumericSortEntries(levelToFill)
+	--Sort the now finished level
+	local previous = levelToFill.previous
+	if previous ~= nil then
+		--Clear out "previous" metadata, as it is no longer needed.
+		local previousTableName = previous.tableName
+		local previousLevelTable = previous.levelTable
+		local previousLevelToFill = previous.levelToFill
+		local previousLevelTableKey = previous.levelTableKey
+		levelToFill.previous = nil
+		--Clear out "previous" metadata, as it is no longer needed.
+		return IEex_FillDumpLevel(previousTableName, previousLevelTable,
+								  previousLevelToFill, previousLevelTableKey)
+	else
+		return levelToFill
+	end
+end
+
+IEex_DumpFunction = print
+
+function IEex_PrintEntries(entriesTable, indentLevel, indentStrings, previousState, levelTableKey)
+	local tableEntryKey, tableEntry = next(entriesTable, levelTableKey)
+	while(tableEntry ~= nil) do
+		local tableEntryString = tableEntry.string
+		local tableEntryValue = tableEntry.value
+		local indentString = indentStrings[indentLevel]
+		if tableEntryValue ~= nil then
+			if type(tableEntryValue) ~= 'table' then
+				local valueToPrint = string.gsub(tostring(tableEntryValue), '\n', '\\n')
+				IEex_DumpFunction(indentString..tableEntryString..valueToPrint)
+			else
+				IEex_DumpFunction(indentString..tableEntryString)
+				IEex_DumpFunction(indentString..'{')
+				local previous = {}
+				previous.entriesTable = entriesTable
+				previous.indentLevel = indentLevel
+				previous.levelTableKey = tableEntryKey
+				previous.previousState = previousState
+				indentLevel = indentLevel + 1
+				local indentStringsSize = #indentStrings
+				if indentLevel > indentStringsSize then
+					indentStrings[indentStringsSize + 1] = indentStrings[indentStringsSize]..'	'
+				end
+				return IEex_PrintEntries(tableEntryValue, indentLevel, indentStrings, previous)
+			end
+		else
+			IEex_DumpFunction(indentString..tableEntryString)
+		end
+		--Increment
+		tableEntryKey, tableEntry = next(entriesTable, tableEntryKey)
+		--Increment
+	end
+	IEex_DumpFunction(indentStrings[indentLevel - 1]..'}')
+	--Finish previous levels
+	if previousState ~= nil then
+		return IEex_PrintEntries(previousState.entriesTable, previousState.indentLevel, indentStrings,
+								 previousState.previousState, previousState.levelTableKey)
+	end
+end
+
+function IEex_Dump(key, valueToDump)
+	local valueToDumpType = type(valueToDump)
+	if valueToDumpType == 'string' or valueToDumpType == 'number' or valueToDumpType == 'boolean' then
+		IEex_DumpFunction(valueToDumpType..' '..key..' = '..tostring(valueToDump))
+	elseif valueToDumpType == 'table' then
+		IEex_DumpFunction(valueToDumpType..' '..key..':')
+		IEex_DumpFunction('{')
+		local entries = IEex_FillDumpLevel(key, valueToDump, {})
+		IEex_PrintEntries(entries, 1, {[0] = '', [1] = '	'})
+	elseif valueToDumpType == 'userdata' then
+		local metatable = getmetatable(valueToDump)
+		if metatable ~= nil then
+			IEex_DumpFunction(valueToDumpType..' '..key..':')
+			IEex_DumpFunction('{')
+			local entries = IEex_FillDumpLevel(key, metatable, {})
+			IEex_PrintEntries(entries, 1, {[0] = '', [1] = '	'})
+		else
+			IEex_DumpFunction(valueToDumpType..' '..key..' = nil')
+		end
+	else
+		IEex_DumpFunction(valueToDumpType..' '..key)
 	end
 end
 
@@ -365,6 +550,32 @@ function IEex_WriteAssembly(address, assembly)
 	IEex_WriteSanitizedAssembly(address, IEex_SanitizeAssembly(assembly))
 end
 
+function IEex_CollectSanitizedMacroName(section, hasPrefix)
+	local macroArgsStart = section:find("(", 1, true)
+	local macroName = section:sub(hasPrefix and 2 or 1, macroArgsStart - 1)
+	return macroName, macroArgsStart
+end
+
+function IEex_CollectSanitizedMacroArgs(section, macroArgsStart)
+	macroArgsStart = macroArgsStart or section:find("(", 1, true)
+	local macroArgsEnd = section:find(")", 1, true)
+	return IEex_Split(section:sub(macroArgsStart + 1, macroArgsEnd - 1), ",")
+end
+
+function IEex_GetSanitizedMacroLength(state, address, section)
+	local macroName, macroArgsStart = IEex_CollectSanitizedMacroName(section, false)
+	local lengthVal = IEex_GlobalAssemblyMacros[macroName].length
+	local lengthType = type(lengthVal)
+	if lengthType == "function" then
+		local args = IEex_CollectSanitizedMacroArgs(section, macroArgsStart)
+		return lengthVal(state, address, args)
+	elseif lengthType == "number" then
+		return lengthVal
+	else
+		return 0
+	end
+end
+
 function IEex_SanitizeAssembly(assembly)
 
 	local state = {
@@ -375,6 +586,8 @@ function IEex_SanitizeAssembly(assembly)
 			["index"] = 0,
 			["inComment"] = false,
 		},
+		["unroll"] = {},
+		["write"] = {},
 	}
 
 	local sanitizedStructure = state.sanitizedStructure
@@ -382,15 +595,76 @@ function IEex_SanitizeAssembly(assembly)
 	-- For some reason unrollTextArg has to be split up so it can see itself
 	local unrollTextArg
 	unrollTextArg = function(arg)
+
 		IEex_SplitByWhitespaceProcess(arg, function(section)
+
 			if section:sub(1, 1) == "!" then
+
 				local macroName = section:sub(2)
-				local macro = IEex_GlobalAssemblyMacros[section:sub(2)]
-				if macro then
+				local macroArgsStart = section:find("(", 1, true)
+				if macroArgsStart then macroName = section:sub(2, macroArgsStart - 1) end
+
+				local macro = IEex_GlobalAssemblyMacros[macroName]
+				if not macro then
+					IEex_Error("Macro \""..macroName.."\" not defined in the current scope!")
+				end
+
+				local macroType = type(macro)
+				if macroType == "string" then
 					-- Return is for tail call, not for returning a value
 					return unrollTextArg(macro)
+				elseif macroType == "table" then
+
+					local addMacroTextToStructure = true
+					local unrollFunc = macro.unroll
+
+					if unrollFunc then
+
+						local macroArgsEnd = section:find(")", 1, true)
+						if not macroArgsEnd then
+							IEex_Error("No closing parentheses for macro function \""..macroName.."\"!")
+						end
+
+						if macroArgsEnd ~= #section then
+							IEex_Error("Invalid closing parentheses for macro function \""..macroName.."\"!")
+						end
+
+						local args = IEex_Split(section:sub(macroArgsStart + 1, macroArgsEnd - 1), ",")
+						local unrollResult = unrollFunc(state, args)
+						
+						if unrollResult then
+							
+							addMacroTextToStructure = false
+							local unrollResultType = type(unrollResult)
+
+							if unrollResultType == "string" then
+								return unrollTextArg(unrollResult)
+							elseif unrollResultType == "table" then
+								for _, val in ipairs(unrollResult) do
+									local valType = type(val)
+									if valType == "string" then
+										return unrollTextArg(val)
+									elseif valType == "table" then
+										table.insert(sanitizedStructure, val)
+									else
+										IEex_Error("Invalid macro return type \""..valType.."\" for macro \""..macroName.."\"!")
+									end
+								end
+							else
+								IEex_Error("Invalid macro return type \""..macroType.."\" for macro \""..macroName.."\"!")
+							end
+						end
+					end
+
+					if addMacroTextToStructure then
+						local lengthType = type(macro.length)
+						if lengthType ~= "function" and lengthType ~= "number" and lengthType ~= "nil" then
+							IEex_Error("Invalid macro length type \""..lengthType.."\" for macro \""..macroName.."\"!")
+						end
+						table.insert(sanitizedStructure, section)
+					end
 				else
-					IEex_Error("Macro \""..macroName.."\" not defined in the global scope!")
+					IEex_Error("Invalid macro type \""..macroType.."\" for macro \""..macroName.."\"!")
 				end
 			else
 				table.insert(sanitizedStructure, section)
@@ -422,7 +696,6 @@ function IEex_SanitizeAssembly(assembly)
 	end
 
 	return state
-
 end
 
 function IEex_WriteSanitizedAssembly(address, state, funcOverride)
@@ -431,13 +704,20 @@ function IEex_WriteSanitizedAssembly(address, state, funcOverride)
 
 		-- Print a hex-dump of what is about to be written to the log
 		local writeDump = ""
-		IEex_WriteSanitizedAssembly(address, state, function(writeAddress, byte)
-			writeDump = writeDump..IEex_ToHex(byte, 2, true).." "
+		IEex_WriteSanitizedAssembly(address, state, function(writeAddress, ...)
+			local bytes = {...}
+			for i = 1, #bytes do
+				writeDump = writeDump..IEex_ToHex(bytes[i], 2, true).." "
+			end
 		end)
 		IEex_FunctionLog("\n\nWriting Assembly at "..IEex_ToHex(address).." => "..writeDump.."\n")
 
-		funcOverride = function(writeAddress, byte)
-			IEex_WriteByte(writeAddress, byte)
+		funcOverride = function(writeAddress, ...)
+			local bytes = {...}
+			for i = 1, #bytes do
+				IEex_WriteByte(writeAddress, bytes[i])
+				writeAddress = writeAddress + 1
+			end
 		end
 	end
 
@@ -446,6 +726,14 @@ function IEex_WriteSanitizedAssembly(address, state, funcOverride)
 	local inComment = false
 
 	local prefixProcessing = {
+		["!"] = function(section)
+			local macroName, macroArgsStart = IEex_CollectSanitizedMacroName(section, false)
+			local writeVal = IEex_GlobalAssemblyMacros[macroName].write
+			if type(writeVal) == "function" then
+				local args = IEex_CollectSanitizedMacroArgs(section, macroArgsStart)
+				currentWriteAddress = currentWriteAddress + writeVal(state, currentWriteAddress, args, funcOverride)
+			end
+		end,
 		[":"] = function(section)
 			local targetOffset = tonumber(section, 16)
 			local relativeOffsetNeeded = targetOffset - (currentWriteAddress + 4)
@@ -560,13 +848,16 @@ function IEex_InvalidateAssemblyState(state)
 	state.firstUnexploredSection.inComment = false
 end
 
-function IEex_CalcWriteLength(address, state)
+function IEex_CalcWriteLength(state, address)
 
 	local firstUnexploredSection = state.firstUnexploredSection
 	local curAddress = address
 	local inComment = false
 
 	local prefixProcessing = {
+		["!"] = function(section)
+			curAddress = curAddress + IEex_GetSanitizedMacroLength(state, address, section)
+		end,
 		[":"] = function(section)
 			curAddress = curAddress + 4
 		end,
@@ -636,6 +927,9 @@ function IEex_CalcLabelAddress(state, toFind)
 	local inComment = state.firstUnexploredSection.inComment
 
 	local prefixProcessing = {
+		["!"] = function(section)
+			curAddress = curAddress + IEex_GetSanitizedMacroLength(state, address, section)
+		end,
 		[":"] = function(section)
 			curAddress = curAddress + 4
 		end,
@@ -718,7 +1012,7 @@ end
 
 function IEex_HookBeforeCall(address, assembly)
 	IEex_WriteAssembly(address, {"!jmp_dword", {IEex_WriteAssemblyAuto(
-		IEex_ConcatTables({
+		IEex_FlattenTable({
 			assembly,
 			{[[
 				@call
@@ -734,7 +1028,7 @@ end
 
 function IEex_HookAfterCall(address, assembly)
 	IEex_WriteAssembly(address, {"!jmp_dword", {IEex_WriteAssemblyAuto(
-		IEex_ConcatTables({
+		IEex_FlattenTable({
 			{
 				"!call", {address + IEex_ReadDword(address + 0x1) + 0x5, 4, 4},
 			},
@@ -752,7 +1046,7 @@ function IEex_HookReturnNOPs(address, nopCount, assembly)
 	local afterInstruction = address + 0x5 + nopCount
 	IEex_DefineAssemblyLabel("return", afterInstruction)
 
-	local hookCode = IEex_WriteAssemblyAuto(IEex_ConcatTables({
+	local hookCode = IEex_WriteAssemblyAuto(IEex_FlattenTable({
 		assembly,
 		{
 			"!jmp_dword", {afterInstruction, 4, 4},
@@ -765,7 +1059,7 @@ function IEex_HookReturnNOPs(address, nopCount, assembly)
 		table.insert(nops, {0x90, 1})
 	end
 
-	IEex_WriteAssembly(address, IEex_ConcatTables({
+	IEex_WriteAssembly(address, IEex_FlattenTable({
 		{
 			"!jmp_dword", {hookCode, 4, 4}
 		},
@@ -793,7 +1087,7 @@ function IEex_HookRestore(address, restoreDelay, restoreSize, assembly)
 		table.insert(nops, {0x90, 1})
 	end
 
-	local hookCode = IEex_WriteAssemblyAuto(IEex_ConcatTables({
+	local hookCode = IEex_WriteAssemblyAuto(IEex_FlattenTable({
 		assembly,
 		"@return",
 		restoreBytes,
@@ -803,7 +1097,7 @@ function IEex_HookRestore(address, restoreDelay, restoreSize, assembly)
 		},
 	}))
 
-	IEex_WriteAssembly(address, IEex_ConcatTables({
+	IEex_WriteAssembly(address, IEex_FlattenTable({
 		{
 			"!jmp_dword", {hookCode, 4, 4}
 		},
@@ -831,7 +1125,7 @@ function IEex_HookAfterRestore(address, restoreDelay, restoreSize, assembly)
 		table.insert(nops, {0x90, 1})
 	end
 
-	local hookCode = IEex_WriteAssemblyAuto(IEex_ConcatTables({
+	local hookCode = IEex_WriteAssemblyAuto(IEex_FlattenTable({
 		restoreBytes,
 		assembly,
 		"@return",
@@ -840,7 +1134,7 @@ function IEex_HookAfterRestore(address, restoreDelay, restoreSize, assembly)
 		},
 	}))
 
-	IEex_WriteAssembly(address, IEex_ConcatTables({
+	IEex_WriteAssembly(address, IEex_FlattenTable({
 		{
 			"!jmp_dword", {hookCode, 4, 4}
 		},
@@ -906,7 +1200,7 @@ function IEex_HookJump(address, restoreSize, assembly)
 
 	IEex_DefineAssemblyLabel("jmp_success", jmpDest)
 
-	local hookCode = IEex_WriteAssemblyAuto(IEex_ConcatTables({
+	local hookCode = IEex_WriteAssemblyAuto(IEex_FlattenTable({
 		assembly,
 		"@jmp",
 		instructionBytes,
@@ -929,6 +1223,129 @@ end
 
 function IEex_HookChangeCallDest(address, dest)
 	IEex_WriteAssembly(address + 0x1, {{dest, 4, 4}})
+end
+
+IEex_LuaCallReturnType = {
+	["Boolean"] = 0,
+	["Number"] = 1,
+}
+
+function IEex_GenLuaCall(funcName, meta)
+
+	local pushNumberTemplate = {[[
+		!fild_[esp]
+		!sub_esp_byte 04
+		!fstp_qword:[esp]
+		!push_ebx
+		!call >_lua_pushnumber
+		!add_esp_byte 0C
+	]]}
+
+	local returnBooleanTemplate = {[[
+		!push_byte FF
+		!push_ebx
+		!call >_lua_toboolean
+		!add_esp_byte 08
+		!push_eax
+		!push_byte FE
+		!push_ebx
+		!call >_lua_settop
+		!add_esp_byte 08
+		!pop_eax
+	]]}
+
+	local returnNumberTemplate = {[[
+		!push_byte FF
+		!push_ebx
+		!call >_lua_tonumber
+		!add_esp_byte 08
+		!call >__ftol2_sse
+		!push_eax
+		!push_byte FE
+		!push_ebx
+		!call >_lua_settop
+		!add_esp_byte 08
+		!pop_eax
+	]]}
+
+	local numRet = ((meta or {}).returnType) and 1 or 0
+	local numArgs = #((meta or {}).args or {})
+
+	local genArgPushes1 = function()
+
+		local toReturn = {}
+		local insertionIndex = 1
+
+		if not meta then return toReturn end
+		local args = meta.args
+		if not args then return toReturn end
+
+		for i = 1, numArgs do
+			toReturn[insertionIndex] = args[i]
+			insertionIndex = insertionIndex + 1
+		end
+
+		return IEex_FlattenTable(toReturn)
+	end
+
+	local genArgPushes2 = function()
+
+		local toReturn = {}
+		local insertionIndex = 1
+
+		if not meta then return toReturn end
+		local args = meta.args
+		if not args then return toReturn end
+
+		for i = 1, numArgs do
+			toReturn[insertionIndex] = pushNumberTemplate
+			insertionIndex = insertionIndex + 1
+		end
+
+		return IEex_FlattenTable(toReturn)
+	end
+
+	local genReturnHandling = function()
+
+		if not meta then return {} end
+		local returnType = meta.returnType
+		if not returnType then return {} end
+
+		if returnType == IEex_LuaCallReturnType.Boolean then
+			return returnBooleanTemplate
+		elseif returnType == IEex_LuaCallReturnType.Number then
+			return returnNumberTemplate
+		else
+			IEex_Error("Invalid")
+		end
+	end
+
+	return IEex_FlattenTable({
+		genArgPushes1(),
+		{[[
+			!call >IEex_GetLuaState
+			!mov_ebx_eax
+
+			!push_dword ]], {IEex_WriteStringAuto(funcName), 4}, [[
+			!push_ebx
+			!call >_lua_getglobal
+			!add_esp_byte 08
+		]]},
+		genArgPushes2(),
+		{[[
+			!push_byte 00
+			!push_byte ]], {numRet, 1}, [[
+			!push_byte ]], {numArgs, 1}, [[
+			!push_ebx
+			!call >_lua_pcall
+			!add_esp_byte 10
+			!push_ebx
+			!call >IEex_CheckCallError
+			!test_eax_eax
+			!jnz_dword >call_error
+		]]},
+		genReturnHandling(),
+	})
 end
 
 function IEex_WriteOpcode(opcodeFunctions)
@@ -1220,7 +1637,7 @@ function IEex_ReserveCodeMemory(state)
 	local processCodePageEntry = function(codePage)
 		for i, allocEntry in ipairs(codePage) do
 			if not allocEntry.reserved then
-				writeLength = IEex_CalcWriteLength(allocEntry.address, state)
+				writeLength = IEex_CalcWriteLength(state, allocEntry.address)
 				if writeLength <= allocEntry.size then
 					local memLeftOver = allocEntry.size - writeLength
 					if memLeftOver > 0 then
