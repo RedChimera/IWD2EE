@@ -371,7 +371,7 @@ COPY_EXISTING_REGEXP ~50CVENl0\.bcs~ ~override~ ~61PCFLOR\.bcs~ ~override~ //Fix
 
 COPY_EXISTING_REGEXP ~52CC[1-8]P[1-6]\.bcs~ ~override~
 	DECOMPILE_AND_PATCH BEGIN
-		REPLACE_TEXTUALLY EXACT_MATCH ~ClearSpriteEffects(.*~ ~~
+		REPLACE_TEXTUALLY ~ClearSpriteEffects(.*~ ~~
 	END
 
 COPY_EXISTING ~52MOROH3.bcs~ ~override~

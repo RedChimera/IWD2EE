@@ -807,7 +807,7 @@ COPY_EXISTING ~52SERSA.cre~ ~override~
 	WRITE_BYTE challengerating 12
 	WRITE_BYTE general 1
 	WRITE_LONG kit 0
-	WRITE_LONG feats1 0x40012100
+	WRITE_LONG feats1 0xC0012100
 	READ_LONG feats2 ulgiash
 	ulgiash|=0x8000
 	WRITE_LONG feats2 ulgiash
