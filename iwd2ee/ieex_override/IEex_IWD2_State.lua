@@ -108,7 +108,7 @@ function IEex_MemoryManager:init(structEntries)
 		structEntry.structMeta = structMeta
 
 		if sizeType == "function" then
-			currentOffset = currentOffset + size(table.unpack(getConstructor(structEntry).luaArgs or {}))
+			currentOffset = currentOffset + size(unpack(getConstructor(structEntry).luaArgs or {}))
 		elseif sizeType == "number" then
 			currentOffset = currentOffset + size
 		else
@@ -132,7 +132,7 @@ function IEex_MemoryManager:init(structEntries)
 		local constructorType = type(constructor)
 
 		if constructorType == "function" then
-			constructor(address, table.unpack(entryConstructor.luaArgs or {}))
+			constructor(address, unpack(entryConstructor.luaArgs or {}))
 		elseif constructorType == "table" then
 			local args = entryConstructor.args or {}
 			local argsToUse = {}

@@ -62,6 +62,9 @@ end
 
 function IEex_Extern_Crashing(excCode, EXCEPTION_POINTERS)
 
+	if IEex_Helper_GetBridge("IEex_Extern_Crashing", "alreadyCrashed") then return end
+	IEex_Helper_SetBridge("IEex_Extern_Crashing", "alreadyCrashed", true)
+
 	IEex_AssertThread(IEex_Thread.Both, true)
 	IEex_TracebackPrint("IEex detected crash; Lua traceback ->", 1)
 
@@ -69,6 +72,8 @@ function IEex_Extern_Crashing(excCode, EXCEPTION_POINTERS)
 	local timeString = os.date(timeFormat):gsub("/", "_"):gsub(":", "_")
 	local logPath = "crash\\IEex_"..timeString..".log"
 	local dmpPath = "crash\\IEex_"..timeString..".dmp"
+	local bigPath = "crash\\IEex_"..timeString.."_big.dmp"
+	local crashSaveName = "crash_"..timeString
 
 	-- Lua can't make directories itself :(
 	os.execute("mkdir crash")
@@ -80,11 +85,32 @@ function IEex_Extern_Crashing(excCode, EXCEPTION_POINTERS)
 	logCopyFile:write(logCopy)
 	logCopyFile:close()
 
+	local bigPathMem = IEex_WriteStringAuto(bigPath)
+	IEex_DllCall("IEexHelper", "WriteDump", {bigPathMem, EXCEPTION_POINTERS, excCode, IEex_Flags({
+		0x2,     -- MiniDumpWithFullMemory
+		0x4,     -- MiniDumpWithHandleData
+		0x20,    -- MiniDumpWithUnloadedModules
+		0x100,   -- MiniDumpWithProcessThreadData
+		0x800,   -- MiniDumpWithFullMemoryInfo
+		0x1000,  -- MiniDumpWithThreadInfo
+		0x8000,  -- MiniDumpWithFullAuxiliaryState
+		0x20000, -- MiniDumpIgnoreInaccessibleMemory
+		0x40000, -- MiniDumpWithTokenInformation
+	})}, nil, 0x10)
+	IEex_Free(bigPathMem)
+
 	local dmpPathMem = IEex_WriteStringAuto(dmpPath)
-	IEex_DllCall("IEexHelper", "WriteDump", {dmpPathMem, EXCEPTION_POINTERS, excCode, 0x41}, nil, 0x10)
+	IEex_DllCall("IEexHelper", "WriteDump", {dmpPathMem, EXCEPTION_POINTERS, excCode, IEex_Flags({
+		0x1,  -- MiniDumpWithDataSegs
+		0x40, -- MiniDumpWithIndirectlyReferencedMemory
+	})}, nil, 0x10)
 	IEex_Free(dmpPathMem)
 
-	IEex_MessageBox("Crash detected with error code "..IEex_ToHex(excCode).."\n\nIEex.log saved to \""..logPath.."\"\nDMP file saved to \""..dmpPath.."\"\n\nPlease upload files to the Red Chimera Discord for assistance", 0x10)
+	IEex_MessageBox("Crash detected with error code "..IEex_ToHex(excCode).."\n\nIEex.log saved to:\n    \""..logPath.."\"\n\nDMP files saved to:\n    \""..dmpPath.."\"\n    \""..bigPath.."\"\n\nYour game will attempt to save under the following name after you press OK, though it may be corrupted:\n    \""..crashSaveName.."\"\n\nPlease upload files to the Red Chimera Discord for assistance", 0x10)
+
+	IEex_CString_Set(IEex_GetGameData() + 0x4220, crashSaveName)
+	IEex_CString_Set(0x8F3338, crashSaveName)
+	IEex_Call(0x5AC430, {1, 0, 0}, IEex_GetGameData(), 0x0)
 end
 
 function IEex_Extern_CSpell_UsableBySprite(CSpell, sprite)
