@@ -1,6 +1,17 @@
 
 function IEex_Reload()
+
+	IEex_AssertThread(IEex_Thread.Async, true)
+
 	dofile("override/IEex_IWD2_State.lua")
+
+	IEex_Helper_SetBridge("IEex_NeedSyncTick", "val", 1)
+	while IEex_Helper_GetBridge("IEex_NeedSyncTick", "val") == 1 do
+		-- Spin until sync state is reloaded
+		-- Need sleep call so this thread doesn't (effectively) keep IEex_NeedSyncTick locked
+		IEex_Helper_Sleep(1)
+	end
+
 	IEex_Helper_SynchronizedBridgeOperation("IEex_ReloadListeners", function()
 		IEex_Helper_ReadDataFromBridgeNL("IEex_ReloadListeners")
 		IEex_Helper_ClearBridgeNL("IEex_ReloadListeners")
@@ -10,6 +21,11 @@ function IEex_Reload()
 			_G[IEex_ReloadListeners[i]]()
 		end
 	end)
+end
+
+function IEex_Extern_SyncTick()
+	dofile("override/IEex_IWD2_State.lua")
+	IEex_Helper_SetBridge("IEex_NeedSyncTick", "val", 0)
 end
 
 function IEex_AddReloadListener(funcName)
@@ -995,6 +1011,78 @@ end
 -- Game State --
 ----------------
 
+function IEex_GetCVariable(CVariableHash, name)
+
+	local manager = IEex_NewMemoryManager({
+		{
+			["name"] = "varChars",
+			["struct"] = "string",
+			["constructor"] = {
+				["luaArgs"] = {name},
+			},
+		},
+		{
+			["name"] = "varString",
+			["struct"] = "CString",
+			["constructor"] = {
+				["variant"] = "fromString",
+				["args"] = {"varChars"},
+			},
+			["noDestruct"] = true,
+		},
+	})
+
+	local varString = IEex_ReadDword(manager:getAddress("varString"))
+
+	-- CVariableHash_FindKey
+	local CVariable = IEex_Call(IEex_ReadDword(IEex_ReadDword(CVariableHash) + 0x4), {varString}, CVariableHash, 0x0)
+	manager:free()
+	return CVariable
+end
+
+function IEex_GetVariable(CVariableHash, name)
+	local CVariable = IEex_GetCVariable(CVariableHash, name)
+	if CVariable == 0x0 then return 0 end
+	return IEex_ReadDword(CVariable + 0x28)
+end
+
+function IEex_SetVariable(CVariableHash, name, val)
+
+	local CVariable = IEex_GetCVariable(CVariableHash, name)
+
+	if CVariable == 0x0 then
+
+		CVariable = IEex_Malloc(0x54)
+		IEex_Call(0x452BD0, {}, CVariable, 0x0)
+		IEex_WriteLString(CVariable, name:upper(), 32)
+		IEex_WriteDword(CVariable + 0x28, val)
+
+		-- CVariableHash_AddKey
+		IEex_Call(IEex_ReadDword(IEex_ReadDword(CVariableHash)), {CVariable}, CVariableHash, 0x0)
+		IEex_Free(CVariable)
+	else
+		IEex_WriteDword(CVariable + 0x28, val)
+	end
+end
+
+function IEex_GetGlobal(name)
+	return IEex_GetVariable(IEex_GetGameData() + 0x47FC, name)
+end
+
+function IEex_SetGlobal(name, val)
+	IEex_SetVariable(IEex_GetGameData() + 0x47FC, name, val)
+end
+
+function IEex_GetActorLocal(actorID, name)
+	if not IEex_IsSprite(actorID, true) then return 0 end
+	return IEex_GetVariable(IEex_ReadDword(IEex_GetActorShare(actorID) + 0x72B2), name)
+end
+
+function IEex_SetActorLocal(actorID, name, val)
+	if not IEex_IsSprite(actorID, true) then return 0 end
+	return IEex_SetVariable(IEex_ReadDword(IEex_GetActorShare(actorID) + 0x72B2), name, val)
+end
+
 function IEex_Eval(actionString, portraitIndex)
 
 	local manager = IEex_NewMemoryManager({
@@ -1359,6 +1447,15 @@ function IEex_GetActorIDPortrait(portraitNum)
 		local g_pBaldurChitin = IEex_ReadDword(0x8CF6DC)
 		local m_pObjectGame = IEex_ReadDword(g_pBaldurChitin + 0x1C54)
 		return IEex_ReadDword(m_pObjectGame + 0x382E + portraitNum * 0x4)
+	end
+	return -1
+end
+
+function IEex_GetActorPortraitNum(actorID)
+	local curAddress = IEex_GetGameData() + 0x382E
+	for i = 0, 5 do
+		if IEex_ReadDword(curAddress) == actorID then return i end
+		curAddress = curAddress + 0x4
 	end
 	return -1
 end

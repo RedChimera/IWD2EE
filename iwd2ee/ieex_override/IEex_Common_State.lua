@@ -1011,16 +1011,15 @@ function IEex_WriteAssemblyFunction(functionName, assembly)
 end
 
 function IEex_HookBeforeCall(address, assembly)
+	local returnAddress = address + 0x5
+	IEex_DefineAssemblyLabel("return", returnAddress)
 	IEex_WriteAssembly(address, {"!jmp_dword", {IEex_WriteAssemblyAuto(
 		IEex_FlattenTable({
 			assembly,
 			{[[
 				@call
-				!call ]], {address + IEex_ReadDword(address + 0x1) + 0x5, 4, 4},
-			},
-			{[[
-				@return
-				!jmp_dword ]], {address + 0x5, 4, 4},
+				!call ]], {address + IEex_ReadDword(address + 0x1) + 0x5, 4, 4}, [[
+				!jmp_dword ]], {returnAddress, 4, 4},
 			},
 		})
 	), 4, 4}})
@@ -1087,12 +1086,13 @@ function IEex_HookRestore(address, restoreDelay, restoreSize, assembly)
 		table.insert(nops, {0x90, 1})
 	end
 
+	IEex_DefineAssemblyLabel("return_skip", afterInstruction)
+
 	local hookCode = IEex_WriteAssemblyAuto(IEex_FlattenTable({
 		assembly,
 		"@return",
 		restoreBytes,
 		{[[
-			@return_skip
 			!jmp_dword ]], {afterInstruction, 4, 4},
 		},
 	}))
@@ -1280,7 +1280,7 @@ function IEex_GenLuaCall(funcName, meta)
 		local args = meta.args
 		if not args then return toReturn end
 
-		for i = 1, numArgs do
+		for i = numArgs, 1, -1 do
 			toReturn[insertionIndex] = args[i]
 			insertionIndex = insertionIndex + 1
 		end

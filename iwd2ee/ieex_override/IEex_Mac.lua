@@ -225,7 +225,7 @@ function IEex_EncodeRM(args, func)
 	end
 end
 
-function IEex_EncodeRMOpcode(opcode, args, opcodeExtension, encodingArgs)
+function IEex_EncodeRMOpcode(opcode, args, encodingArgs)
 
 	local firstArg = args[1]
 	local secondArg = args[2]
@@ -239,7 +239,7 @@ function IEex_EncodeRMOpcode(opcode, args, opcodeExtension, encodingArgs)
 		rm = firstArg
 	else
 		-- Set direction bit of opcode
-		opcode = opcode + 0x2
+		opcode = (encodingArgs and encodingArgs.noDirectionBit) and (opcode) or (opcode + 0x2)
 		reg = firstArg
 		rm = secondArg
 	end
@@ -249,7 +249,6 @@ function IEex_EncodeRMOpcode(opcode, args, opcodeExtension, encodingArgs)
 	}
 
 	encodingArgs = encodingArgs or {}
-	encodingArgs.opcodeExtension = opcodeExtension
 	encodingArgs.reg = reg
 	encodingArgs.rm = rm
 
@@ -603,7 +602,6 @@ IEex_GlobalAssemblyMacros = {
 	["or_ebx_byte"] = "83 CB",
 	["or_edx_eax"] = "0B D0",
 	["pop_all_registers"] = "5F 5E 5A 59 5B 58",
-	["pop_all_registers_iwd2"] = "5F 5E 5D 5A 59 5B 58",
 	["pop_complete_state"] = "5F 5E 5A 59 5B 58 5D",
 	["pop_eax"] = "58",
 	["pop_ebp"] = "5D",
@@ -632,7 +630,6 @@ IEex_GlobalAssemblyMacros = {
 	["push_[esp+byte]"] = "FF 74 24",
 	["push_[esp]"] = "FF 34 24",
 	["push_all_registers"] = "50 53 51 52 56 57",
-	["push_all_registers_iwd2"] = "50 53 51 52 55 56 57",
 	["push_byte"] = "6A",
 	["push_complete_state"] = "55 8B EC 50 53 51 52 56 57",
 	["push_dword"] = "68",
@@ -694,6 +691,44 @@ IEex_GlobalAssemblyMacros = {
 	["xor_edx_edx"] = "33 D2",
 	["xor_esi_esi"] = "33 F6",
 
+	["push_all_registers_iwd2"] = [[
+		!push(eax)
+		!push(ebx)
+		!push(ecx)
+		!push(edx)
+		!push(ebp)
+		!push(esi)
+		!push(edi)
+	]],
+
+	["pop_all_registers_iwd2"] = [[
+		!pop(edi)
+		!pop(esi)
+		!pop(ebp)
+		!pop(edx)
+		!pop(ecx)
+		!pop(ebx)
+		!pop(eax)
+	]],
+
+	["push_registers_iwd2"] = [[
+		!push(ebx)
+		!push(ecx)
+		!push(edx)
+		!push(ebp)
+		!push(esi)
+		!push(edi)
+	]],
+
+	["pop_registers_iwd2"] = [[
+		!pop(edi)
+		!pop(esi)
+		!pop(ebp)
+		!pop(edx)
+		!pop(ecx)
+		!pop(ebx)
+	]],
+
 	["mark_esp"] = {
 		["unroll"] = function(state, args)
 			local arg = args[1]
@@ -707,12 +742,32 @@ IEex_GlobalAssemblyMacros = {
 
 	["push"] = {
 		["unroll"] = function(state, args)
-			state.unroll.markedEspAdjustment = state.unroll.markedEspAdjustment + 4
+			state.unroll.markedEspAdjustment = (state.unroll.markedEspAdjustment or 0) + 4
 			local toPushOrdinal = IEex_RegToOrdinal[args[1]]
 			if toPushOrdinal then
 				return {{0x50 + toPushOrdinal, 1}}
 			else
-				return IEex_EncodeRMOpcode(0xFF, args, 6)
+				return IEex_EncodeRMOpcode(0xFF, args, {
+					["opcodeExtension"] = 6,
+				})
+			end
+		end,
+	},
+
+	["mov"] = {
+		["unroll"] = function(state, args)
+			return IEex_EncodeRMOpcode(0x89, args)
+		end,
+	},
+
+	["pop"] = {
+		["unroll"] = function(state, args)
+			state.unroll.markedEspAdjustment = state.unroll.markedEspAdjustment - 4
+			local toPushOrdinal = IEex_RegToOrdinal[args[1]]
+			if toPushOrdinal then
+				return {{0x58 + toPushOrdinal, 1}}
+			else
+				return IEex_EncodeRMOpcode(0x8F, args)
 			end
 		end,
 	},
@@ -721,8 +776,20 @@ IEex_GlobalAssemblyMacros = {
 		["unroll"] = function(state, args)
 			local oldAdjust = state.unroll.markedEspAdjustment
 			state.unroll.markedEspAdjustment = oldAdjust + 4
-			return IEex_EncodeRMOpcode(0xFF, args, 6, {
+			return IEex_EncodeRMOpcode(0xFF, args, {
 				["offsetAdjustment"] = oldAdjust,
+				["opcodeExtension"] = 6,
+			})
+		end,
+	},
+
+	["lea_using_marked_esp"] = {
+		["unroll"] = function(state, args)
+			local oldAdjust = state.unroll.markedEspAdjustment
+			state.unroll.markedEspAdjustment = oldAdjust + 4
+			return IEex_EncodeRMOpcode(0x8D, args, {
+				["offsetAdjustment"] = oldAdjust,
+				["noDirectionBit"] = true,
 			})
 		end,
 	},

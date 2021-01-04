@@ -12,9 +12,13 @@
 	IEex_AsyncSharedMemoryPtr = IEex_Malloc(0x4)
 	IEex_WriteDword(IEex_AsyncSharedMemoryPtr, 0x0)
 
-	----------------------------------
-	-- IEex_DefineAssemblyFunctions --
-	----------------------------------
+	-------------------------------
+	-- Define Assembly Functions --
+	-------------------------------
+
+	----------------------
+	-- IEex_GetLuaState --
+	----------------------
 
 	IEex_WriteAssemblyAuto({[[
 
@@ -52,6 +56,10 @@
 		!pop_registers_iwd2
 		!ret
 	]]})
+
+	-------------------------
+	-- IEex_CheckCallError --
+	-------------------------
 
 	IEex_WriteAssemblyAuto({[[
 
@@ -99,6 +107,10 @@
 		!destroy_stack_frame
 		!ret_word 04 00
 	]]})
+
+	----------------------
+	-- IEex_ApplyResref --
+	----------------------
 
 	-- push resref
 	-- push share
@@ -167,9 +179,9 @@
 		!ret_word 08 00
 	]]})
 
-	-----------------------
-	-- IEex_WritePatches --
-	-----------------------
+	-------------------
+	-- Write Patches --
+	-------------------
 
 	IEex_DisableCodeProtection()
 
@@ -288,6 +300,29 @@
 		!pop_all_registers_iwd2
 
 	]]})
+
+	-----------------------
+	-- IEex_NeedSyncTick --
+	-----------------------
+
+	IEex_HookRestore(0x7927F2, 0, 7, IEex_FlattenTable({[[
+
+		!push_all_registers_iwd2
+
+		!push_dword ]], {{IEex_WriteStringAuto("val"), 4}}, [[
+		!push_dword ]], {{IEex_WriteStringAuto("IEex_NeedSyncTick"), 4}}, [[
+		!call >IEex_Helper_GetBridgeDirect
+		!add_esp_byte 08
+
+		!test_eax_eax
+		!jz_dword >dont_tick
+		
+		]], IEex_GenLuaCall("IEex_Extern_SyncTick"), [[
+
+		@call_error
+		@dont_tick
+		!pop_all_registers_iwd2
+	]]}))
 
 	------------------------
 	-- Assertion Handling --
@@ -503,9 +538,14 @@
 	local niceTryCheaterCall = 0x58398E
 	local niceTryCheaterHook = IEex_WriteAssemblyAuto({[[
 
+		!push_all_registers_iwd2
+
+		!call >IEex_GetLuaState
+		!mov_ebx_eax
+
 		!add_esp_byte 08
 		!push_ebp
-		!push_dword *_g_lua
+		!push_ebx
 		; TODO: Cache Lua chunks ;
 		!call >_luaL_loadstring
 		!add_esp_byte 08
@@ -516,24 +556,24 @@
 		!push_byte 00
 		!push_byte 00
 		!push_byte 00
-		!push_dword *_g_lua
+		!push_ebx
 		!call >_lua_pcall
 		!add_esp_byte 10
 
 		!test_eax_eax
 		!jnz_dword >error
-		!jmp_dword ]], {niceTryCheaterCall + 0x5, 4, 4}, [[
+		!jmp_dword >return
 
 		@error
 		!push_byte 00
 		!push_byte FF
-		!push_dword *_g_lua
+		!push_ebx
 		!call >_lua_tolstring
 		!add_esp_byte 0C
 
 		!push_eax
 		!push_byte FE
-		!push_dword *_g_lua
+		!push_ebx
 		!call >_lua_settop
 		!add_esp_byte 08
 		!pop_eax
@@ -544,6 +584,8 @@
 		!call :7FCC88
 		!call :4EC1C0
 
+		@return
+		!pop_all_registers_iwd2
 		!jmp_dword ]], {niceTryCheaterCall + 0x5, 4, 4}, [[
 
 	]]})
