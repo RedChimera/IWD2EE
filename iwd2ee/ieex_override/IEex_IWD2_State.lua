@@ -1079,8 +1079,8 @@ function IEex_GetActorLocal(actorID, name)
 end
 
 function IEex_SetActorLocal(actorID, name, val)
-	if not IEex_IsSprite(actorID, true) then return 0 end
-	return IEex_SetVariable(IEex_ReadDword(IEex_GetActorShare(actorID) + 0x72B2), name, val)
+	if not IEex_IsSprite(actorID, true) then return end
+	IEex_SetVariable(IEex_ReadDword(IEex_GetActorShare(actorID) + 0x72B2), name, val)
 end
 
 function IEex_Eval(actionString, portraitIndex)

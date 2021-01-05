@@ -139,6 +139,8 @@ function IEex_MiddleScroll_InputStateListener()
 	if IEex_MiddleScroll_IsDown and IEex_GetActiveEngine() == IEex_GetEngineWorld() then
 
 		local cursorX, cursorY = IEex_GetCursorXY()
+		if cursorX == -1 or cursorY == -1 then return end
+
 		local deltaX = IEex_MiddleScroll_OldX - cursorX
 		local deltaY = IEex_MiddleScroll_OldY - cursorY
 
@@ -151,6 +153,7 @@ function IEex_MiddleScroll_InputStateListener()
 		IEex_WriteDword(infinity + 0x164, m_ptCurrentPosExact_x)
 		IEex_WriteDword(infinity + 0x168, m_ptCurrentPosExact_y)
 
+		-- CInfinity_SetViewPosition
 		IEex_Call(0x5D11F0, {0, math.floor(m_ptCurrentPosExact_y / 10000), math.floor(m_ptCurrentPosExact_x / 10000)}, infinity, 0x0)
 
 		IEex_MiddleScroll_OldX = cursorX
