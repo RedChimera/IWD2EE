@@ -236,7 +236,7 @@ function IEex_Extern_CGameSprite_SetCurrAction(actionData)
 		end)
 		IEex_Helper_SynchronizedBridgeOperation("IEex_OpcodeActionHooks", function()
 			IEex_Helper_ReadDataFromBridgeNL("IEex_OpcodeActionHooks")
-			local limit = #IEex_OpcodeActionHooks
+			local limit = math.floor(#IEex_OpcodeActionHooks / 2)
 			for i = 1, limit, 1 do
 				local originatingEffectData = actorActionHookOpcodeList[IEex_OpcodeActionHooks[i]]
 				if originatingEffectData ~= nil then
@@ -258,8 +258,7 @@ function EXAPPLSP(actionData, creatureData)
 	local actionID = IEex_GetActionID(actionData)
 	local sourceID = IEex_GetActorIDShare(creatureData)
 	if actionID == 31 or actionID == 95 or actionID == 191 or actionID == 192 then
-		local spellRES = IEex_GetActionString1(actionData)
---		IEex_DisplayString(spellRES)
+		local spellRES = IEex_GetActorSpellRES(sourceID)
 		local resWrapper = IEex_DemandRes(spellRES, "SPL")
 		if resWrapper:isValid() then
 			local spellData = resWrapper:getData()
@@ -275,7 +274,7 @@ function EXAPPLSP(actionData, creatureData)
 				end
 	--			local casterLevel = 1
 				IEex_SetActionID(actionData, 0)
-				IEex_SetActionObjectID(actionData, IEex_GetActionInt2(actionData))
+--				IEex_SetActionObjectID(actionData, IEex_GetActionInt2(actionData))
 				IEex_ApplyEffectToActor(targetID, {
 					["opcode"] = 402,
 					["target"] = 2,

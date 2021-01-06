@@ -487,7 +487,7 @@ Weight: 0 lb.~
 
 STATISTICS:
 
-The wearer's 1st-level spells have twice the normal duration. If the wearer has the Extend Spell feat, the maximum spell level they can extend is increased by 1.
+Extension: The wearer's spells last 15% longer
 Weight: 0 lb.~
 @10140    = ~Lesser Ring of Force Resistance~
 @10141    = ~A ring is a small band of precious metal that is used as jewelry. Some rare rings have had enchantments placed upon them that confer various magical abilities. These rings are highly sought after, especially by those of the adventuring profession. For no apparent reason, this ring feels warm to the touch.
@@ -1434,7 +1434,7 @@ STATISTICS:
 
 Armor Class:  +5 vs. Bludgeoning
 Saving Throw Bonus:  +5 on Will saves
-Safe Spells: When the wearer casts an area of effect spell of 3rd-level or lower, it will not harm allies. If the wearer already has the Safe Spell feat, the maximum level for safe spells is increased by 3.
+Safe Spells: When the wearer casts an area of effect spell of 5th-level or lower, it will not harm allies.
 Weight:  4 lb.~
 //@10391    = ~Robe of the Good Archmagi~
 @10392    = ~This powerful Wizard Robe offers protection from all forms of physical attack while at the same time increasing one's magical resistance and saving throws. Due to the nature of its enchantment, it can only be worn by those of good alignment.
@@ -11861,7 +11861,7 @@ Weight: 0 lb.~
 
 STATISTICS:
 
-Maximizing: The wearer's spells of 5th-level or lower deal maximum damage. If the wearer already has the Maximize Spell feat, the maximum spell level that can be maximized is increased by 5.
+Maximizing: Casting a spell with the Maximize Spell feat only uses a spell slot one level higher.
 Weight: 0 lb.~
 @12523    = ~Robe of Fire Mastery~
 @12524    = ~Since the age of Netheril, wizards have learned to bestow a wide variety of magical properties upon the everyday objects that surround them. A favorite item of such enchantment is the common robe. It is lightweight, affordable, and holds its enchantment well, thereby making it ideal equipment for a wizard.
@@ -12390,7 +12390,7 @@ Minimum Intelligence of 15 Required~
 
 STATISTICS:
 
-Quickening: After the wearer casts a spell of 4th-level or lower, they may begin casting another spell without waiting for the round to end. Only one quickened spell may be cast per round. If the wearer already has the Quicken Spell feat, the maximum spell level that can be quickened is increased by 4.
+Quickening: Casting a spell with the Quicken Spell feat only uses a spell slot one level higher.
 Weight: 0 lb.~
 @12609    = ~Heavy Crossbow of Destruction +6~
 @12610    = ~A crossbow is a bow mounted crosswise on a wooden or metal shaft, the latter called a tiller. The bow is usually made of ash or yew. The crossbow fires a quarrel (also called a bolt). A slight blue glow can be seen emanating from the crossbar.
@@ -13125,7 +13125,7 @@ Weight: 3 lb.~
 
 STATISTICS:
 
-Maximizing: The wearer's 1st-level spells deal maximum damage. If the wearer already has the Maximize Spell feat, the maximum spell level that can be maximized is increased by 1.
+Maximizing: The wearer's 1st-level spells deal maximum damage.
 Weight: 3 lb.~
 @12757    = ~Ring of the Ram~
 @12758    = ~Also known as the Breaker of Castles, with one word, this ring can unleash fantastic and deadly powers. When it is triggered, a barely discernible, ram-like shape billows forth from the ring. This force can potentially knock opponents off of walls, destroy castle gates, or crush enemies, but it is damaging as well in its own right.
@@ -13139,14 +13139,14 @@ Weight: 0 lb.~
 
 STATISTICS:
 
-Maximizing: The wearer's spells of 2nd-level or lower deal maximum damage. If the wearer already has the Maximize Spell feat, the maximum spell level that can be maximized is increased by 2.
+Maximizing: The wearer's spells of 2nd-level or lower deal maximum damage.
 Weight: 3 lb.~
 @12761    = ~Greater Robe of Maximizing~
 @12762    = ~Since the age of Netheril, wizards have learned to bestow a wide variety of magical properties upon the everyday objects that surround them. A favorite item of such enchantment is the common robe. It is lightweight, affordable, and holds its enchantment well, thereby making it ideal equipment for a wizard.
 
 STATISTICS:
 
-Maximizing: The wearer's spells of 3rd-level or lower deal maximum damage. If the wearer already has the Maximize Spell feat, the maximum spell level that can be maximized is increased by 3.
+Maximizing: The wearer's spells of 3rd-level or lower deal maximum damage.
 Weight: 3 lb.~
 @12763    = ~Tower Shield +8~
 @12764    = ~This massive shield is nearly as tall as the wielder. Basically, it is a portable wall meant to provide cover. It can provide up to total cover, depending on how far you come out from behind it. A tower shield, however, does not provide cover against targeted spells; a spellcaster can cast a spell on you by targeting the shield you are holding. This shield has runes scribed onto it that glow eerily in dim light.

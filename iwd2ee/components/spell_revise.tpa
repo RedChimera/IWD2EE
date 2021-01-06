@@ -1334,7 +1334,7 @@ COPY_EXISTING ~sppr112.spl~ ~override~
 		tens_digit = (i + 1) / 10
 		LPF ALTER_EFFECT INT_VAR header=i silent=1 check_headers=1 check_globals=0 match_opcode=111 parameter1=1 STR_VAR resource= EVAL ~ILW%tens_digit%%ones_digit%~ END
 	END
-
+/*
 COPY_EXISTING ~sppr112.spl~ ~override/uswp112.spl~
 
 COPY_EXISTING ~sppr112.spl~ ~override~
@@ -1347,7 +1347,7 @@ COPY_EXISTING ~sppr112.spl~ ~override~
 	FOR (i = 0; i < numheaders; ++i) BEGIN
 		LPF CLONE_EFFECT INT_VAR header=i silent=1 check_headers=1 check_globals=0 multi_match=1 match_opcode=233 opcode=12 parameter1=(i + 1) parameter2=0x400000 dicenumber=1 dicesize=8 END
 	END
-
+*/
 COPY_EXISTING ~sppr218.spl~ ~override~
 	LPF ALTER_SPELL_HEADER INT_VAR speed=1 END
 	READ_SHORT 0x68 numheaders
@@ -1706,10 +1706,10 @@ COPY_EXISTING ~spwi209.spl~ ~override~
 	SAY NAME2 @33209
 	SAY UNIDENTIFIED_DESC @34209
 	SAY IDENTIFIED_DESC @34209
-
+/*
 COPY_EXISTING ~spwi211.spl~ ~override~
 	LPF ALTER_EFFECT INT_VAR silent=1 check_headers=1 check_globals=1 match_opcode=12 opcode=402 parameter1=0 parameter2=0 dicenumber=0 dicesize=0 STR_VAR resource=~USWI211D~ END
-
+*/
 COPY_EXISTING ~spwi299.spl~ ~override~
 	SAY NAME1 @33299
 	SAY NAME2 @33299
@@ -2315,26 +2315,6 @@ COPY_EXISTING ~uswi956.spl~ ~override~
 		LPF ALTER_EFFECT INT_VAR silent=1 header=(i - 1) match_opcode=500 special=(i * 2) STR_VAR match_resource=~MEBARRAM~ END
 	END
 
-OUTER_FOR (i = 1; i < 30; ++i) BEGIN
-	OUTER_SET ones_digit = (i + 1) MODULO 10
-	OUTER_SET tens_digit = (i + 1) / 10
-	COPY_EXISTING ~ilw01.itm~ ~override/ilw%tens_digit%%ones_digit%.itm~
-		LPF ALTER_EFFECT INT_VAR silent=1 check_headers=1 check_globals=0 match_opcode=12 parameter1=(i + 1) dicenumber=1 dicesize=8 END
-		LPF ALTER_EFFECT INT_VAR silent=1 check_headers=1 check_globals=1 STR_VAR match_resource=~ilw01~ resource= EVAL ~ilw%tens_digit%%ones_digit%~ END
-
-	COPY_EXISTING ~imw01.itm~ ~override/imw%tens_digit%%ones_digit%.itm~
-		LPF ALTER_EFFECT INT_VAR silent=1 check_headers=1 check_globals=0 match_opcode=12 parameter1=((i + 1) * 2) dicenumber=2 dicesize=8 END
-		LPF ALTER_EFFECT INT_VAR silent=1 check_headers=1 check_globals=1 STR_VAR match_resource=~imw01~ resource= EVAL ~imw%tens_digit%%ones_digit%~ END
-
-	COPY_EXISTING ~isw01.itm~ ~override/isw%tens_digit%%ones_digit%.itm~
-		LPF ALTER_EFFECT INT_VAR silent=1 check_headers=1 check_globals=0 match_opcode=12 parameter1=((i + 1) * 3) dicenumber=3 dicesize=8 END
-		LPF ALTER_EFFECT INT_VAR silent=1 check_headers=1 check_globals=1 STR_VAR match_resource=~isw01~ resource= EVAL ~isw%tens_digit%%ones_digit%~ END
-
-	COPY_EXISTING ~icw01.itm~ ~override/icw%tens_digit%%ones_digit%.itm~
-		LPF ALTER_EFFECT INT_VAR silent=1 check_headers=1 check_globals=0 match_opcode=12 parameter1=((i + 1) * 4) dicenumber=4 dicesize=8 END
-		LPF ALTER_EFFECT INT_VAR silent=1 check_headers=1 check_globals=1 STR_VAR match_resource=~icw01~ resource= EVAL ~icw%tens_digit%%ones_digit%~ END
-
-END
 /*
 COPY_EXISTING ~AR4102.are~ ~override~
 	LPF fj_are_structure INT_VAR fj_trap_active=1 STR_VAR fj_structure_type=~region~ fj_name=~US_Battle_Square_Teleport~ fj_reg_script=~USBSNTEL~ END
@@ -2764,7 +2744,7 @@ COPY_EXISTING_REGEXP ~.*\.spl~ ~override~
 			READ_SHORT offset theopcode
 			READ_LONG (offset + 0x8) theparameter2
 			READ_BYTE (offset + 0xC) thetiming
-			PATCH_IF (theopcode = 12 OR (theopcode = 241 AND theparameter2 = 0)) AND thetiming != 3 AND thetiming != 4 BEGIN
+			PATCH_IF (theopcode = 12 OR (theopcode = 241 AND theparameter2 = 0)) BEGIN
 				READ_BYTE (offset + 0x4) theparameter1
 				READ_SBYTE (offset + 0x1C) thedicenumber
 				PATCH_IF thedicenumber < 0 BEGIN
@@ -2795,7 +2775,11 @@ COPY_EXISTING_REGEXP ~.*\.spl~ ~override~
 				END
 				WRITE_SHORT offset 500
 				WRITE_LONG (offset + 0x4) (theparameter1 + (thedicesize << 8) + (thedicenumber << 16))
-				WRITE_BYTE (offset + 0xC) 0
+				PATCH_IF thetiming = 1 OR thetiming = 9 BEGIN
+					WRITE_BYTE (offset + 0xC) 0
+				END ELSE PATCH_IF thetiming = 4 BEGIN
+					WRITE_BYTE (offset + 0xC) 3
+				END
 				WRITE_LONG (offset + 0xE) 0
 				WRITE_ASCII (offset + 0x14) ~EXDAMAGE~ #8
 				WRITE_LONG (offset + 0x1C) 0
@@ -2920,6 +2904,31 @@ COPY_EXISTING ~sppr103.spl~ ~override~ ~sppr214.spl~ ~override~ ~sppr401.spl~ ~o
 		END
 	END
 	BUT_ONLY_IF_IT_CHANGES
+
+OUTER_FOR (i = 1; i < 30; ++i) BEGIN
+	OUTER_SET ones_digit = (i + 1) MODULO 10
+	OUTER_SET tens_digit = (i + 1) / 10
+	COPY_EXISTING ~ilw01.itm~ ~override/ilw%tens_digit%%ones_digit%.itm~
+//		LPF ALTER_EFFECT INT_VAR silent=1 check_headers=1 check_globals=0 match_opcode=12 parameter1=(i + 1) dicenumber=1 dicesize=8 END
+		LPF ALTER_EFFECT INT_VAR silent=1 check_headers=1 check_globals=0 match_opcode=500 match_parameter2=0x400000 parameter1=(0x10800 + i + 1) STR_VAR match_resource=~EXDAMAGE~ END
+		LPF ALTER_EFFECT INT_VAR silent=1 check_headers=1 check_globals=1 STR_VAR match_resource=~ilw01~ resource= EVAL ~ilw%tens_digit%%ones_digit%~ END
+
+	COPY_EXISTING ~imw01.itm~ ~override/imw%tens_digit%%ones_digit%.itm~
+//		LPF ALTER_EFFECT INT_VAR silent=1 check_headers=1 check_globals=0 match_opcode=12 parameter1=((i + 1) * 2) dicenumber=2 dicesize=8 END
+		LPF ALTER_EFFECT INT_VAR silent=1 check_headers=1 check_globals=0 match_opcode=500 match_parameter2=0x400000 parameter1=(0x20800 + (i + 1) * 2) STR_VAR match_resource=~EXDAMAGE~ END
+		LPF ALTER_EFFECT INT_VAR silent=1 check_headers=1 check_globals=1 STR_VAR match_resource=~imw01~ resource= EVAL ~imw%tens_digit%%ones_digit%~ END
+
+	COPY_EXISTING ~isw01.itm~ ~override/isw%tens_digit%%ones_digit%.itm~
+//		LPF ALTER_EFFECT INT_VAR silent=1 check_headers=1 check_globals=0 match_opcode=12 parameter1=((i + 1) * 3) dicenumber=3 dicesize=8 END
+		LPF ALTER_EFFECT INT_VAR silent=1 check_headers=1 check_globals=0 match_opcode=500 match_parameter2=0x400000 parameter1=(0x30800 + (i + 1) * 3) STR_VAR match_resource=~EXDAMAGE~ END
+		LPF ALTER_EFFECT INT_VAR silent=1 check_headers=1 check_globals=1 STR_VAR match_resource=~isw01~ resource= EVAL ~isw%tens_digit%%ones_digit%~ END
+
+	COPY_EXISTING ~icw01.itm~ ~override/icw%tens_digit%%ones_digit%.itm~
+//		LPF ALTER_EFFECT INT_VAR silent=1 check_headers=1 check_globals=0 match_opcode=12 parameter1=((i + 1) * 4) dicenumber=4 dicesize=8 END
+		LPF ALTER_EFFECT INT_VAR silent=1 check_headers=1 check_globals=0 match_opcode=500 match_parameter2=0x400000 parameter1=(0x40800 + (i + 1) * 4) STR_VAR match_resource=~EXDAMAGE~ END
+		LPF ALTER_EFFECT INT_VAR silent=1 check_headers=1 check_globals=1 STR_VAR match_resource=~icw01~ resource= EVAL ~icw%tens_digit%%ones_digit%~ END
+
+END
 
 //Patching all scrolls to be usable by the correct wizard kits.
 /*
@@ -3054,7 +3063,7 @@ COPY_EXISTING ~50SUOMA.sto~ ~override~
 	ADD_STORE_ITEM ~SPWI526Z~ AFTER ~SPWI525Z~ #1 #1 #0 ~IDENTIFIED~ #1
 	ADD_STORE_ITEM ~USWI653Z~ AFTER ~SPWI525Z~ #1 #1 #0 ~IDENTIFIED~ #1
 
-COPY_EXISTING ~50LIMHA.sto~ ~override~ ~00SBGA03.sto~ ~override~ ~00SBGB03.sto~ ~override~
+COPY_EXISTING ~50LIMHA.sto~ ~override~ ~00SBAG03.sto~ ~override~ ~00SBGA03.sto~ ~override~ ~00SBGB03.sto~ ~override~
 	ADD_STORE_ITEM ~SPPR410Z~ AFTER ~SPWI407Z~ #1 #1 #0 ~IDENTIFIED~ #1
 	ADD_STORE_ITEM ~USWI452Z~ AFTER ~SPPR410Z~ #1 #1 #0 ~IDENTIFIED~ #1
 	ADD_STORE_ITEM ~USWI552Z~ AFTER ~SPWI524Z~ #1 #1 #0 ~IDENTIFIED~ #1

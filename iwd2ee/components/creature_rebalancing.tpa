@@ -161,6 +161,10 @@ COPY_EXISTING ~usms009.spl~ ~override~
 	SAY NAME1 @24009
 	SAY NAME2 @24009
 
+COPY_EXISTING ~usms011.spl~ ~override~
+	SAY NAME1 @24011
+	SAY NAME2 @24011
+
 COPY_EXISTING ~usms012.spl~ ~override~
 	SAY NAME1 @24012
 	SAY NAME2 @24012
@@ -3192,6 +3196,9 @@ COPY_EXISTING_REGEXP ~[04][01]SGFYR\.cre~ ~override~ ~[04][01]S[DS]HRP\.cre~ ~ov
 	WRITE_BYTE challengerating 16
 	LPF	IWD2_ADD_CRE_ITEM INT_VAR equip=0 STR_VAR item=~USCWHFF2~ slot=~weapon1~ mode=~replace~ END
 
+COPY_EXISTING ~67GFYR.cre~ ~override~
+	WRITE_BYTE defaultvisibility 1
+
 COPY_EXISTING ~67DEKNT.cre~ ~override~ ~67DEKNT2.cre~ ~override~ ~67DEKNT3.cre~ ~override~
 	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelpaladin=17 STR_VAR updatehp=~max~ END
 	WRITE_SHORT armorclass 17
@@ -4335,6 +4342,9 @@ COPY_EXISTING ~AR6603.are~ ~override~
 COPY_EXISTING ~AR6700.are~ ~override~
 	LPF ALTER_AREA_ACTOR_IWD2 INT_VAR x_coord=556 y_coord=485 orient=0 STR_VAR actor_name=~EliteNeoOrog1~ cre_file=~USFOMGRN~ script_combat=~00AATBN~ END
 	LPF ALTER_AREA_ACTOR_IWD2 INT_VAR x_coord=659 y_coord=485 orient=0 STR_VAR actor_name=~EliteNeoOrog2~ cre_file=~USFOMGRN~ script_combat=~00AATBN~ END
+	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR actor_name=~GreaterFeyr~ script_special1=~USHOFNOT~ END
+	LPF fj_are_structure INT_VAR fj_loc_x=439 fj_loc_y=505 fj_orientation=6 STR_VAR fj_structure_type=~actor~ fj_name=~US_Dream_Larva~ fj_dlg_resref=~67GFEYR~ fj_cre_resref=~USDREAML~ END
+	LPF ALTER_AREA_ACTOR_IWD2 INT_VAR flag_cre_unattached=1 flag_difficulty_1=1 flag_difficulty_2=1 flag_difficulty_3=1 STR_VAR actor_name=~US_Dream_Larva~ script_team=~00T03ET~ script_movement=~00T03M~ script_combat=~USDREAML~ script_special2=~67GFEYF2~ script_special1=~USHOFONL~ END
 
 COPY_EXISTING ~AR6701.are~ ~override~
 	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR match_cre_file=~67SPLMRS~ cre_file=~67FEYR~ script_special2=~USFEYR~ END
@@ -4354,7 +4364,8 @@ COPY_EXISTING ~AR4000.are~ ~override~
 	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR actor_name=~Illium~ cre_file=~40ILIUM~ END
 
 COPY_EXISTING ~AR4100.are~ ~override~
-	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR actor_name=~Sherincal~ cre_file=~41SHERI~ END
+	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR match_cre_file=~41SHERI2~ cre_file=~41SHERI~ END
+	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR match_cre_file=~41SHERI3~ cre_file=~41SHERI2~ END
 
 COPY_EXISTING ~AR4101.are~ ~override~
 	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR actor_name=~Cathin~ cre_file=~41CATHIN~ END
@@ -4599,6 +4610,30 @@ COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
 		WRITE_BYTE armoredarcana 20
 	END
 	BUT_ONLY_IF_IT_CHANGES
+
+APPEND ~EXPTABLE.2da~
+~Level_20_Very_Hard	30000
+~
+UNLESS ~Level_20_Very_Hard~
+
+OUTER_SET ref_23036 = RESOLVE_STR_REF(@23036)
+
+<<<<<<<< .../script.baf
+IF
+	Global("US_Iyachtu_Xvim_XP","GLOBAL",0)
+	Global("SH_Iyachtu_Dead","GLOBAL",1)
+THEN
+	RESPONSE #100
+		SetGlobal("US_Iyachtu_Xvim_XP","GLOBAL",1)
+		AddXPVar("Level_20_Very_Hard",%ref_23036%)
+END
+
+>>>>>>>>
+EXTEND_BOTTOM ~AR6500.bcs~ ~.../script.baf~ EVAL
+
+STRING_SET_EVALUATE 23163 @23037
+STRING_SET_EVALUATE 23111 @23038
+STRING_SET_EVALUATE 27201 @23038
 
 INCLUDE ~%mod_folder%/components/final_patches.tpa~
 

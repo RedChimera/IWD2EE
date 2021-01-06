@@ -930,5 +930,11 @@ EXTEND_BOTTOM ~AR1200.bcs~ ~.../script.baf~
 
 COPY_EXISTING ~ar2002.are~ ~override~ //Shaengarne Vrek cave
 	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR charges1=1 charges2=1 charges3=1 single_match=1 STR_VAR old_item=~00SWDL09~ new_item=~USCWHFMB~ END
-
+/*
+COPY_EXISTING ~20VREKC.bcs~ ~override~
+	DECOMPILE_AND_PATCH BEGIN
+		REPLACE_TEXTUALLY CASE_INSENSITIVE ~!HasItem(\"00swdL09\",\"Container_1\")~ ~!HasItem("00SWDL09","Container_1")
+!HasItem("USHFSL09","Container_1")~
+	END
+*/
 INCLUDE ~%mod_folder%/components/final_patches.tpa~

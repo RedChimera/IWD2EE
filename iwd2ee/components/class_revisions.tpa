@@ -584,7 +584,8 @@ BUT_ONLY
 LAF ADD_FEAT_IWD2 INT_VAR nameref=RESOLVE_STR_REF(@339) descref=RESOLVE_STR_REF(@340) max=1 STR_VAR name=~ME_AUGMENT_SUMMONING~ script=~Feats_AugmentSummoning~ featspl_1=~USFAUGS1~ END
 LAF ADD_FEAT_IWD2 INT_VAR nameref=RESOLVE_STR_REF(@301) descref=RESOLVE_STR_REF(@302) max=1 STR_VAR name=~ME_CONCOCT_POTIONS~ script=~Feats_ConcoctPotions~ featspl_1=~USFALCP1~ END
 LAF ADD_FEAT_IWD2 INT_VAR nameref=RESOLVE_STR_REF(@303) descref=RESOLVE_STR_REF(@304) max=1 STR_VAR name=~ME_DEFENSIVE_STANCE~ script=~Feats_DefensiveStance~ featspl_1=~USFDSTA1~ END
-LAF ADD_FEAT_IWD2 INT_VAR nameref=RESOLVE_STR_REF(@305) descref=RESOLVE_STR_REF(@306) max=4 STR_VAR name=~ME_EXTEND_SPELL~ script=~Feats_ExtendSpell~ prerequisite_script=~Prereq_ExtendSpell~ featspl_1=~USFEXSP1~ featspl_2=~USFEXSP1~ featspl_3=~USFEXSP1~ featspl_4=~USFEXSP1~ END
+//LAF ADD_FEAT_IWD2 INT_VAR nameref=RESOLVE_STR_REF(@305) descref=RESOLVE_STR_REF(@306) max=4 STR_VAR name=~ME_EXTEND_SPELL~ script=~Feats_ExtendSpell~ prerequisite_script=~Prereq_ExtendSpell~ featspl_1=~USFEXSP1~ featspl_2=~USFEXSP1~ featspl_3=~USFEXSP1~ featspl_4=~USFEXSP1~ END
+LAF ADD_FEAT_IWD2 INT_VAR nameref=RESOLVE_STR_REF(@351) descref=RESOLVE_STR_REF(@352) max=1 STR_VAR name=~ME_EXTEND_SPELL~ script=~Feats_ExtendSpell~ featspl_1=~USFEXSP1~ END
 LAF ADD_FEAT_IWD2 INT_VAR nameref=RESOLVE_STR_REF(@341) descref=RESOLVE_STR_REF(@342) max=2 STR_VAR name=~ME_FEINT~ script=~Feats_Feint~ featspl_1=~USFFEIN1~ featspl_2=~USFFEIN2~ END
 LAF ADD_FEAT_IWD2 INT_VAR nameref=RESOLVE_STR_REF(@307) descref=RESOLVE_STR_REF(@308) max=5 STR_VAR name=~ME_IMPROVED_SNEAK_ATTACK~ script=~Feats_ImprovedSneakAttack~ END
 LAF ADD_FEAT_IWD2 INT_VAR nameref=RESOLVE_STR_REF(@309) descref=RESOLVE_STR_REF(@310) max=1 STR_VAR name=~ME_IMPROVED_TWO_WEAPON_FIGHTING~ script=~Feats_ImprovedTwoWeaponFighting~ featspl_1=~USFITWF1~ END
@@ -593,11 +594,14 @@ LAF ADD_FEAT_IWD2 INT_VAR nameref=RESOLVE_STR_REF(@313) descref=RESOLVE_STR_REF(
 LAF ADD_FEAT_IWD2 INT_VAR nameref=RESOLVE_STR_REF(@315) descref=RESOLVE_STR_REF(@316) max=2 STR_VAR name=~ME_KNOCKDOWN~ script=~Feats_Knockdown~ featspl_1=~USFKNKD1~ featspl_2=~USFKNKD2~ END
 LAF ADD_FEAT_IWD2 INT_VAR nameref=RESOLVE_STR_REF(@317) descref=RESOLVE_STR_REF(@318) max=1 STR_VAR name=~ME_LIGHT_ARMOR_MASTERY~ script=~Feats_LightArmorMastery~ featspl_1=~USFARMA1~ END
 LAF ADD_FEAT_IWD2 INT_VAR nameref=RESOLVE_STR_REF(@319) descref=RESOLVE_STR_REF(@320) max=1 STR_VAR name=~ME_MASTER_OF_MAGIC_FORCE~ script=~Feats_MasterOfMagicForce~ featspl_1=~USFMOMF1~ END
-LAF ADD_FEAT_IWD2 INT_VAR nameref=RESOLVE_STR_REF(@321) descref=RESOLVE_STR_REF(@322) max=3 STR_VAR name=~ME_MAXIMIZE_SPELL~ script=~Feats_MaximizeSpell~ prerequisite_script=~Prereq_MaximizeSpell~ featspl_1=~USFMASP1~ featspl_2=~USFMASP1~ featspl_3=~USFMASP1~ featspl_4=~USFMASP1~ featspl_5=~USFMASP1~ END
+//LAF ADD_FEAT_IWD2 INT_VAR nameref=RESOLVE_STR_REF(@321) descref=RESOLVE_STR_REF(@322) max=3 STR_VAR name=~ME_MAXIMIZE_SPELL~ script=~Feats_MaximizeSpell~ prerequisite_script=~Prereq_MaximizeSpell~ featspl_1=~USFMASP1~ featspl_2=~USFMASP1~ featspl_3=~USFMASP1~ featspl_4=~USFMASP1~ featspl_5=~USFMASP1~ END
+LAF ADD_FEAT_IWD2 INT_VAR nameref=RESOLVE_STR_REF(@353) descref=RESOLVE_STR_REF(@354) max=1 STR_VAR name=~ME_MAXIMIZE_SPELL~ script=~Feats_MaximizeSpell~ featspl_1=~USFMASP1~ END
 LAF ADD_FEAT_IWD2 INT_VAR nameref=RESOLVE_STR_REF(@323) descref=RESOLVE_STR_REF(@324) max=1 STR_VAR name=~ME_MOBILITY~ script=~Feats_Mobility~ featspl_1=~USFMOBI1~ END
-LAF ADD_FEAT_IWD2 INT_VAR nameref=RESOLVE_STR_REF(@325) descref=RESOLVE_STR_REF(@326) max=5 STR_VAR name=~ME_QUICKEN_SPELL~ script=~Feats_QuickenSpell~ prerequisite_script=~Prereq_QuickenSpell~ featspl_1=~USFQUSP1~ featspl_2=~USFQUSP1~ featspl_3=~USFQUSP1~ featspl_4=~USFQUSP1~ featspl_5=~USFQUSP1~ END
+//LAF ADD_FEAT_IWD2 INT_VAR nameref=RESOLVE_STR_REF(@325) descref=RESOLVE_STR_REF(@326) max=5 STR_VAR name=~ME_QUICKEN_SPELL~ script=~Feats_QuickenSpell~ prerequisite_script=~Prereq_QuickenSpell~ featspl_1=~USFQUSP1~ featspl_2=~USFQUSP1~ featspl_3=~USFQUSP1~ featspl_4=~USFQUSP1~ featspl_5=~USFQUSP1~ END
+LAF ADD_FEAT_IWD2 INT_VAR nameref=RESOLVE_STR_REF(@357) descref=RESOLVE_STR_REF(@358) max=1 STR_VAR name=~ME_QUICKEN_SPELL~ script=~Feats_QuickenSpell~ featspl_1=~USFQUSP1~ END
 LAF ADD_FEAT_IWD2 INT_VAR nameref=RESOLVE_STR_REF(@327) descref=RESOLVE_STR_REF(@328) max=1 STR_VAR name=~ME_RAPID_RELOAD~ script=~Feats_RapidReload~ featspl_1=~USFRARL1~ END
-LAF ADD_FEAT_IWD2 INT_VAR nameref=RESOLVE_STR_REF(@329) descref=RESOLVE_STR_REF(@330) max=4 STR_VAR name=~ME_SAFE_SPELL~ script=~Feats_SafeSpell~ prerequisite_script=~Prereq_SafeSpell~ featspl_1=~USFSASP1~ featspl_2=~USFSASP1~ featspl_3=~USFSASP1~ featspl_4=~USFSASP1~ featspl_5=~USFSASP1~ END
+//LAF ADD_FEAT_IWD2 INT_VAR nameref=RESOLVE_STR_REF(@329) descref=RESOLVE_STR_REF(@330) max=4 STR_VAR name=~ME_SAFE_SPELL~ script=~Feats_SafeSpell~ prerequisite_script=~Prereq_SafeSpell~ featspl_1=~USFSASP1~ featspl_2=~USFSASP1~ featspl_3=~USFSASP1~ featspl_4=~USFSASP1~ featspl_5=~USFSASP1~ END
+LAF ADD_FEAT_IWD2 INT_VAR nameref=RESOLVE_STR_REF(@359) descref=RESOLVE_STR_REF(@360) max=1 STR_VAR name=~ME_SAFE_SPELL~ script=~Feats_SafeSpell~ featspl_1=~USFSASP1~ END
 LAF ADD_FEAT_IWD2 INT_VAR nameref=RESOLVE_STR_REF(@331) descref=RESOLVE_STR_REF(@332) max=2 STR_VAR name=~ME_SHIELD_FOCUS~ script=~Feats_ShieldFocus~ prerequisite_script=~Prereq_ShieldFocus~ featspl_1=~USFSHLF1~ END
 LAF ADD_FEAT_IWD2 INT_VAR nameref=RESOLVE_STR_REF(@333) descref=RESOLVE_STR_REF(@334) max=1 STR_VAR name=~ME_SPRING_ATTACK~ script=~Feats_SpringAttack~ featspl_1=~USFSPRA1~ END
 LAF ADD_FEAT_IWD2 INT_VAR nameref=RESOLVE_STR_REF(@335) descref=RESOLVE_STR_REF(@336) max=1 STR_VAR name=~ME_TERRIFYING_RAGE~ script=~Feats_TerrifyingRage~ featspl_1=~USFTERG1~ END
@@ -605,7 +609,10 @@ LAF ADD_FEAT_IWD2 INT_VAR nameref=RESOLVE_STR_REF(@337) descref=RESOLVE_STR_REF(
 LAF ADD_FEAT_IWD2 INT_VAR nameref=RESOLVE_STR_REF(@343) descref=RESOLVE_STR_REF(@344) max=2 STR_VAR name=~ME_WHIRLWIND_ATTACK~ script=~Feats_WhirlwindAttack~ prerequisite_script=~Prereq_WhirlwindAttack~ featspl_1=~USFWHRA1~ END
 LAF ADD_FEAT_IWD2 INT_VAR nameref=RESOLVE_STR_REF(@345) descref=RESOLVE_STR_REF(@346) max=1 STR_VAR name=~ME_NATURAL_SPELL~ script=~Feats_NaturalSpell~ featspl_1=~USFNASP1~ END
 LAF ADD_FEAT_IWD2 INT_VAR nameref=RESOLVE_STR_REF(@347) descref=RESOLVE_STR_REF(@348) max=1 STR_VAR name=~ME_COUNTERSPELL~ script=~Feats_Counterspell~ featspl_1=~USFCOUN1~ END
-
+LAF ADD_FEAT_IWD2 INT_VAR nameref=RESOLVE_STR_REF(@349) descref=RESOLVE_STR_REF(@350) max=1 STR_VAR name=~ME_EMPOWER_SPELL~ script=~Feats_EmpowerSpell~ featspl_1=~USFEMSP1~ END
+LAF ADD_FEAT_IWD2 INT_VAR nameref=RESOLVE_STR_REF(@355) descref=RESOLVE_STR_REF(@356) max=1 STR_VAR name=~ME_PERSISTENT_SPELL~ script=~Feats_PersistentSpell~ featspl_1=~USFPESP1~ END
+LAF ADD_FEAT_IWD2 INT_VAR nameref=RESOLVE_STR_REF(@361) descref=RESOLVE_STR_REF(@362) max=1 STR_VAR name=~ME_WIDEN_SPELL~ script=~Feats_WidenSpell~ featspl_1=~USFWISP1~ END
+LAF ADD_FEAT_IWD2 INT_VAR nameref=RESOLVE_STR_REF(@363) descref=RESOLVE_STR_REF(@364) max=1 STR_VAR name=~ME_MASS_SPELL~ script=~Feats_MassSpell~ featspl_1=~USFMSSP1~ END
 // New descriptions for classes
 COPY_EXISTING ~help02.2da~ ~override~
   COUNT_2DA_COLS num_cols
@@ -1482,6 +1489,54 @@ COPY_EXISTING ~USCOUNTE.spl~ ~override~
   SAY UNIDENTIFIED_DESC @922
   SAY IDENTIFIED_DESC @922
 
+COPY_EXISTING ~USMM001.spl~ ~override~
+  SAY NAME1 @361
+  SAY NAME2 @361
+  SAY UNIDENTIFIED_DESC @361
+  SAY IDENTIFIED_DESC @361
+
+COPY_EXISTING ~USMM002.spl~ ~override~
+  SAY NAME1 @353
+  SAY NAME2 @353
+  SAY UNIDENTIFIED_DESC @353
+  SAY IDENTIFIED_DESC @353
+
+COPY_EXISTING ~USMM003.spl~ ~override~
+  SAY NAME1 @351
+  SAY NAME2 @351
+  SAY UNIDENTIFIED_DESC @351
+  SAY IDENTIFIED_DESC @351
+
+COPY_EXISTING ~USMM004.spl~ ~override~
+  SAY NAME1 @359
+  SAY NAME2 @359
+  SAY UNIDENTIFIED_DESC @359
+  SAY IDENTIFIED_DESC @359
+
+COPY_EXISTING ~USMM006.spl~ ~override~
+  SAY NAME1 @349
+  SAY NAME2 @349
+  SAY UNIDENTIFIED_DESC @349
+  SAY IDENTIFIED_DESC @349
+
+COPY_EXISTING ~USMM007.spl~ ~override~
+  SAY NAME1 @357
+  SAY NAME2 @357
+  SAY UNIDENTIFIED_DESC @357
+  SAY IDENTIFIED_DESC @357
+
+COPY_EXISTING ~USMM008.spl~ ~override~
+  SAY NAME1 @355
+  SAY NAME2 @355
+  SAY UNIDENTIFIED_DESC @355
+  SAY IDENTIFIED_DESC @355
+
+COPY_EXISTING ~USMM009.spl~ ~override~
+  SAY NAME1 @363
+  SAY NAME2 @363
+  SAY UNIDENTIFIED_DESC @363
+  SAY IDENTIFIED_DESC @363
+
 COPY_EXISTING ~SPIN231.spl~ ~override~
   SAY NAME1 @699
   SAY NAME2 @699
@@ -2183,5 +2238,29 @@ COPY_EXISTING ~LISTINNT.2da~ ~override~
 	numrows += 1
 	lastindex += 1
 	INSERT_2DA_ROW numrows 2 ~%lastindex% USCOUNTE~
+	numrows += 1
+	lastindex += 1
+	INSERT_2DA_ROW numrows 2 ~%lastindex% USMM001~
+	numrows += 1
+	lastindex += 1
+	INSERT_2DA_ROW numrows 2 ~%lastindex% USMM002~
+	numrows += 1
+	lastindex += 1
+	INSERT_2DA_ROW numrows 2 ~%lastindex% USMM003~
+	numrows += 1
+	lastindex += 1
+	INSERT_2DA_ROW numrows 2 ~%lastindex% USMM004~
+	numrows += 1
+	lastindex += 1
+	INSERT_2DA_ROW numrows 2 ~%lastindex% USMM006~
+	numrows += 1
+	lastindex += 1
+	INSERT_2DA_ROW numrows 2 ~%lastindex% USMM007~
+	numrows += 1
+	lastindex += 1
+	INSERT_2DA_ROW numrows 2 ~%lastindex% USMM008~
+	numrows += 1
+	lastindex += 1
+	INSERT_2DA_ROW numrows 2 ~%lastindex% USMM009~
 
 INCLUDE ~%mod_folder%/components/final_patches.tpa~

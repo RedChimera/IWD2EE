@@ -2,6 +2,10 @@ SC
 CR
 CO
 TR
+16399 0 0 0 0 "LOCALSUS_NPC_Moonblade" "" OB
+0 0 0 0 0 0 0 0 0 0 0 0 0 [-1.-1.-1.-1] "" 0 0 OB
+TR
+TR
 16521 3 0 0 0 "" "" OB
 0 0 0 0 0 0 0 0 0 0 0 0 0 [-1.-1.-1.-1] "" 0 0 OB
 TR
@@ -15,10 +19,6 @@ TR
 TR
 TR
 16437 4 0 0 0 "GLOBALSR_Recover_Blade" "" OB
-0 0 0 0 0 0 0 0 0 0 0 0 0 [-1.-1.-1.-1] "" 0 0 OB
-TR
-TR
-16399 0 0 0 0 "LOCALSUS_NPC_Moonblade" "" OB
 0 0 0 0 0 0 0 0 0 0 0 0 0 [-1.-1.-1.-1] "" 0 0 OB
 TR
 CO
@@ -54,6 +54,10 @@ CR
 CR
 CO
 TR
+16399 0 0 0 0 "LOCALSUS_NPC_Moonblade" "" OB
+0 0 0 0 0 0 0 0 0 0 0 0 0 [-1.-1.-1.-1] "" 0 0 OB
+TR
+TR
 16450 0 1 0 0 "00SWDL09" "" OB
 0 0 0 0 0 0 0 0 0 0 0 0 0 [-1.-1.-1.-1] "" 0 0 OB
 TR
@@ -63,10 +67,6 @@ TR
 TR
 TR
 16436 3 0 0 0 "GLOBALSR_Recover_Blade" "" OB
-0 0 0 0 0 0 0 0 0 0 0 0 0 [-1.-1.-1.-1] "" 0 0 OB
-TR
-TR
-16399 0 0 0 0 "LOCALSUS_NPC_Moonblade" "" OB
 0 0 0 0 0 0 0 0 0 0 0 0 0 [-1.-1.-1.-1] "" 0 0 OB
 TR
 CO

@@ -557,6 +557,9 @@ COPY_EXISTING ~AR6100.bcs~ ~override~
 	DECOMPILE_AND_PATCH BEGIN
 		REPLACE_TEXTUALLY CASE_INSENSITIVE ~SetCreatureAreaFlag(\"Izbelah\", ?INVULNERABLE.*~ ~~
 	END
+
+COPY_EXISTING ~00SBAG03.sto~ ~override~ ~00SBGA03.sto~ ~override~ ~00SBGB03.sto~ ~override~
+	WRITE_SHORT 0x9C 100
 /*
 COPY_EXISTING ~animate.ids~ ~override~
 	REPLACE_TEXTUALLY ~0x1001 Wyvern, White (Big)~ ~0x1000 Wyvern (Big)

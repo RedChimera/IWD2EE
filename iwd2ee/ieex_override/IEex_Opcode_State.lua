@@ -70,7 +70,16 @@ function IEex_Extern_OnAddSummonToLimitHook(effectData, summonerData, summonedDa
 	if ex_no_summoning_limit or bit.band(IEex_ReadDword(effectData + 0x3C), 0x10000) > 0 then return true end
 	return false
 end
-
+ex_apply_effects_flags = {}
+ex_empowerable_opcodes = {[0] = true, [1] = true, [6] = true, [10] = true, [12] = true, [15] = true, [17] = true, [18] = true,
+[19] = true, [21] = true, [22] = true, [25] = true, [27] = true, [28] = true, [29] = true, [30] = true, [31] = true, 
+[33] = true, [34] = true, [35] = true, [36] = true, [37] = true, [44] = true, [49] = true, [54] = true, [59] = true, 
+[60] = true, [67] = true, [73] = true, [78] = true, [84] = true, [85] = true, [86] = true, [87] = true, [88] = true, [89] = true,
+[90] = true, [91] = true, [92] = true, [93] = true, [94] = true, [95] = true, [97] = true, [98] = true, [111] = true, 
+[126] = true, [127] = true, [129] = true, [130] = true, [131] = true, [132] = true, [137] = true, [166] = true, [167] = true, 
+[173] = true, [176] = true, [189] = true, [190] = true, [191] = true, [218] = true, 
+[238] = true, [239] = true, [247] = true, [255] = true, [266] = true, 
+[281] = true, [297] = true, [298] = true, [410] = true, [411] = true, [416] = true, [431] = true, [432] = true, [436] = true,}
 (function()
 
 	IEex_AddScreenEffectsGlobal("EXEFFMOD", function(effectData, creatureData)
@@ -78,23 +87,29 @@ end
 		local sourceID = IEex_ReadDword(effectData + 0x10C)
 		local opcode = IEex_ReadDword(effectData + 0xC)
 		if not IEex_IsSprite(sourceID, true) then return false end
-		--print("Opcode " .. opcode .. " on " .. IEex_GetActorName(targetID))
+--[[
+		print("Opcode " .. opcode .. " on " .. IEex_GetActorName(targetID))
 		if opcode == 500 then
-			--print(IEex_ReadLString(effectData + 0x2C, 8))
+			print(IEex_ReadLString(effectData + 0x2C, 8))
 		end
-		local internal_flags = IEex_ReadDword(effectData + 0xC8)
+--]]
+		local internalFlags = IEex_ReadDword(effectData + 0xC8)
 
 		local parameter1 = IEex_ReadDword(effectData + 0x18)
 		local parameter2 = IEex_ReadDword(effectData + 0x1C)
+		local dicenumber = IEex_ReadDword(effectData + 0x34)
+		local dicesize = IEex_ReadDword(effectData + 0x38)
+		local special = IEex_ReadDword(effectData + 0x44)
 		local timing = IEex_ReadDword(effectData + 0x20)
 		local duration = IEex_ReadDword(effectData + 0x24)
 		local time_applied = IEex_ReadDword(effectData + 0x68)
-		if bit.band(internal_flags, 0x2000000) > 0 then return false end
+		if bit.band(internalFlags, 0x2000000) > 0 then return false end
 		local savingthrow = IEex_ReadDword(effectData + 0x3C)
 		local savebonus = IEex_ReadDword(effectData + 0x40)
 		local school = IEex_ReadDword(effectData + 0x48)
 		local restype = IEex_ReadDword(effectData + 0x8C)
 		local casterClass = IEex_ReadByte(effectData + 0xC5, 0x0)
+		local resource = IEex_ReadLString(effectData + 0x2C, 8)
 		local parent_resource = IEex_ReadLString(effectData + 0x90, 8)
 		local sourceSpell = ex_damage_source_spell[parent_resource]
 		if sourceSpell == nil then
@@ -145,6 +160,65 @@ end
 				end
 				IEex_WriteDword(effectData + 0x18, parameter1)
 			end
+		end
+		if bit.band(internalFlags, 0x20) == 0 and ex_apply_effects_flags[targetID .. sourceID .. parent_resource] ~= nil then
+			internalFlags = ex_apply_effects_flags[targetID .. sourceID .. parent_resource]
+			IEex_WriteDword(effectData + 0xC8, internalFlags)
+		end
+		if opcode == 402 then
+			if bit.band(internalFlags, 0x20) > 0 and internalFlags >= 0x1000 then
+				ex_apply_effects_flags[targetID .. sourceID .. parent_resource] = internalFlags
+			else
+				ex_apply_effects_flags[targetID .. sourceID .. parent_resource] = nil
+			end
+		end
+		if bit.band(internalFlags, 0x10000) > 0 and (timing == 0 or timing == 3 or timing == 4) and duration >= 30 then
+			duration = 2400
+			IEex_WriteDword(effectData + 0x24, duration)
+			if opcode == 256 then
+				parameter1 = 2400
+				IEex_WriteDword(effectData + 0x18, parameter1)
+			elseif opcode == 264 or opcode == 265 or opcode == 449 then
+				parameter1 = 400
+				IEex_WriteDword(effectData + 0x18, parameter1)
+			end
+		end
+		if bit.band(internalFlags, 0x20000) > 0 and (timing == 0 or timing == 3 or timing == 4) and duration >= 2 then
+			duration = duration * 2
+			IEex_WriteDword(effectData + 0x24, duration)
+			if opcode == 256 or opcode == 264 or opcode == 265 or opcode == 449 then
+				parameter1 = parameter1 * 2
+				IEex_WriteDword(effectData + 0x18, parameter1)
+			end
+		end
+		if bit.band(internalFlags, 0x100000) > 0 then
+			if opcode == 288 then
+				if parameter2 == 191 or parameter2 == 192 or parameter2 == 193 or parameter2 == 194 or parameter2 == 207 or parameter2 == 236 or parameter2 == 237 or parameter2 == 242 or parameter2 == 243 or parameter2 == 246 then
+					parameter1 = math.floor(parameter1 * 1.5)
+					IEex_WriteDword(effectData + 0x18, parameter1)
+				end
+--[[
+			elseif opcode == 500 then
+				if resource == "MEHGTST" and special == 1 then
+					parameter1 = math.floor(parameter1 * 1.5)
+					IEex_WriteDword(effectData + 0x18, parameter1)
+				end
+--]]
+			elseif ex_empowerable_opcodes[opcode] ~= nil then
+				if opcode == 12 or opcode == 17 or opcode == 18 or opcode == 255 then
+					parameter1 = math.floor(parameter1 * 1.5)
+					IEex_WriteDword(effectData + 0x18, parameter1)
+					dicenumber = math.floor(dicenumber * 1.5)
+					IEex_WriteDword(effectData + 0x34, dicenumber)
+				elseif opcode == 436 then
+					parameter2 = math.floor(parameter2 * 1.5)
+					IEex_WriteDword(effectData + 0x1C, parameter2)
+				else
+					parameter1 = math.floor(parameter1 * 1.5)
+					IEex_WriteDword(effectData + 0x18, parameter1)
+				end
+			end
+
 		end
 		--[[
 		if IEex_GetActorSpellState(sourceID, 195) and timing ~= 1 and timing ~= 2 and timing ~= 9 and (ex_listspll[sourceSpell] ~= nil or ex_listdomn[sourceSpell] ~= nil) and (opcode ~= 500 or math.abs(duration - time_applied) > 16) then

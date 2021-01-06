@@ -91,6 +91,14 @@ Weight:  0 lb.~
 @23029=~Huge Water Elemental~
 @23030=~Greater Water Elemental~
 @23031=~Elder Water Elemental~
+@23032=~ENOUGH!~
+@23033=~You fight impressively, mortal. You have dealt a moderate blow to my essence. It shall be some time before I can manifest my avatar again.~
+@23034=~You fight impressively, mortals. You have dealt a moderate blow to my essence. It shall be some time before I can manifest my avatar again.~
+@23035=~BUT DON'T THINK YOU WILL GET AWAY WITH THIS! I HATE YOU, AND WHEN I RECOVER, I WILL SEEK YOU OUT TO GET MY REVENGE!~
+@23036=~You have defeated the avatar of a god, one of the most powerful foes in existence. Well done.~
+@23037=~At first, in their great rage, they said they were going to rip me to shreds for such an insult.  Then, when they regained some of their composure, they decided to lock me up down here in the dark and torture me with illusions created by that horrible monster!  There were times that I wished they had ripped me apart...~
+@23038=~We freed a gnome, named Puddy Talltale, from the torturing of a creature of nightmares.  However, even though we unlocked his prison cell, he said he would not leave unless there was a safe way to get him to his home in Bryn Shander.  We promised to find safe passage for Puddy, for we agreed that he would not survive long in the frigid Dales by himself.~
+@23039=~Pull yourself together!  Look, the monster is dead!  I am not an illusion!~
 
 @24002=~Call Slayer Knights~
 @24003=~Call Gelugon~
@@ -100,6 +108,7 @@ Weight:  0 lb.~
 @24007=~Nightmare~
 @24008=~Greater Nightmare~
 @24009=~Remove Magic~
+@24011=~Worst Nightmare~
 @24012=~Smite Good~
 @24013=~Xvimian Smite~
 @24014=~Animate Cold Bones~

@@ -232,3 +232,21 @@ COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
 		WRITE_LONG animation 61280
 	END
 	BUT_ONLY_IF_IT_CHANGES
+
+ACTION_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~0~ BEGIN
+
+COPY_EXISTING_REGEXP ~sppr[0-9][0-9][0-9]\.spl~ ~override~ ~spwi[0-9][0-9][0-9]\.spl~ ~override~ ~uspr[0-9][0-9][0-9]\.spl~ ~override~ ~uswi[0-9][0-9][0-9]\.spl~ ~override~
+	LPF ADD_SPELL_CFEFFECT INT_VAR insert_point=0 opcode=500 target=1 timing=0 STR_VAR resource=~EXMETALV~ END
+	IF_EXISTS
+	UNLESS ~EXMETALV~
+
+COPY_EXISTING_REGEXP ~sppr[0-9][0-9][0-9]\.spl~ ~override~ ~spwi[0-9][0-9][0-9]\.spl~ ~override~ ~uspr[0-9][0-9][0-9]\.spl~ ~override~ ~uswi[0-9][0-9][0-9]\.spl~ ~override~
+	READ_BYTE 0x8E thetarget
+	READ_SHORT 0xA8 theprojectile
+	PATCH_IF thetarget = 5 AND (theprojectile = 1 OR theprojectile = 66) BEGIN
+		LPF ALTER_EFFECT INT_VAR silent=1 check_headers=1 check_globals=0 match_target=1 target=2 END
+	END
+	IF_EXISTS
+	BUT_ONLY_IF_IT_CHANGES
+
+END

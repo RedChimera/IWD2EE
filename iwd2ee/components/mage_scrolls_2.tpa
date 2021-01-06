@@ -90,7 +90,7 @@ COPY_EXISTING ~50SUOMA.sto~ ~override~
 	ADD_STORE_ITEM ~SPWI629Z~ AFTER ~SPWI525Z~ #1 #1 #0 ~IDENTIFIED~ #1
 
 
-COPY_EXISTING ~50LIMHA.sto~ ~override~ ~00SBGA03.sto~ ~override~ ~00SBGB03.sto~ ~override~
+COPY_EXISTING ~50LIMHA.sto~ ~override~ ~00SBAG03.sto~ ~override~ ~00SBGA03.sto~ ~override~ ~00SBGB03.sto~ ~override~
 	ADD_STORE_ITEM ~SPWI907Z~ AFTER ~SPWI524Z~ #1 #1 #0 ~IDENTIFIED~ #1
 
 	PATCH_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~2~ BEGIN

@@ -329,7 +329,70 @@ You know how to negate an opponent's spell by expending the same spell.
 Prerequisites: The ability to cast 2nd-level spells.
 
 Benefit: You gain the Counterspell ability, usable once per round. If you use it on an enemy spellcaster when they are casting a spell you also have memorized, you can expend one use of that spell to counter the enemy's spell, causing it to fail.~
+@349    = ~Empower Spell~
+@350    = ~METAMAGIC, EMPOWER SPELL:
 
+You may increase the power of your spells.
+
+Prerequisites: The ability to cast 3rd-level spells.
+
+Benefit: You gain the Empower Spell ability, usable at will as a free action. Using it increases the damage, healing, and most stat bonuses of the next spell you cast by 50%, but causes it to take up a spell slot two levels higher.~
+@351    = ~Extend Spell~
+@352    = ~METAMAGIC, EXTEND SPELL:
+
+You may lengthen the duration of your spells.
+
+Prerequisites: The ability to cast 2nd-level spells.
+
+Benefit: You gain the Extend Spell ability, usable at will as a free action. Using it doubles the duration of the next spell you cast, but causes it to take up a spell slot one level higher.~
+@353    = ~Maximize Spell~
+@354    = ~METAMAGIC, MAXIMIZE SPELL:
+
+You may maximize the power of your spells.
+
+Prerequisites: The ability to cast 4th-level spells.
+
+Benefit: You gain the Maximize Spell ability, usable at will as a free action. Using it causes your next spell to deal maximum damage and heal the maximum number of hit points, but also causes it to take up a spell slot three levels higher.~
+@355    = ~Persistent Spell~
+@356    = ~METAMAGIC, PERSISTENT SPELL:
+
+You may increase the duration of your spells to a full 8 hours.
+
+Prerequisites: The ability to cast 5th-level spells.
+
+Benefit: You gain the Persistent Spell ability, usable at will as a free action. Using it increases the duration of your next spell to 8 hours, but causes it to take up a spell slot four levels higher. Persistent Spell has no effect on spells with a base duration of less than 5 rounds.~
+@357    = ~Quicken Spell~
+@358    = ~METAMAGIC, QUICKEN SPELL:
+
+You may quickly cast an extra spell each round.
+
+Prerequisites: The ability to cast 3rd-level spells.
+
+Benefit: You gain the Quicken Spell ability, usable at will as a free action. Using it allows you to instantly cast a spell, even if you've already cast a spell for the round. The quickened spell takes up a spell slot two levels higher. Only one spell can be quickened per round.~
+@359    = ~Safe Spell~
+@360    = ~METAMAGIC, SAFE SPELL:
+
+You may shape the area of effect of your spells to avoid harming allies.
+
+Prerequisites: The ability to cast 2nd-level spells.
+
+Benefit: You gain the Safe Spell ability, usable at will as a free action. Using it prevents the next spell you cast from harming allies, but causes it to take up a spell slot one level higher.~
+@361    = ~Widen Spell~
+@362    = ~METAMAGIC, WIDEN SPELL:
+
+You may increase the area of effect of your spells.
+
+Prerequisites: The ability to cast 2nd-level spells.
+
+Benefit: You gain the Widen Spell ability, usable at will as a free action. Using it increases the area of effect of your next spell by 50%, but causes it to take up a spell slot one level higher.~
+@363    = ~Mass Spell~
+@364    = ~METAMAGIC, MASS SPELL:
+
+You may have your spells affect an area rather than a single target.
+
+Prerequisites: The ability to cast 6th-level spells.
+
+Benefit: You gain the Mass Spell ability, usable at will as a free action. Using it makes your next spell affect all creatures within 20 feet of the target, but causes it to take up a spell slot five levels higher. Even spells that normally only affect the caster can now affect other creatures. Mass Spell replaces the spell's normal area of effect, so it should only be used with spells that normally target a single creature.~
 @522    = ~Wizard~
 @523    = ~WIZARD:
 
