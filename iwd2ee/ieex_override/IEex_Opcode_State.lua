@@ -8,6 +8,53 @@ function IEex_AddScreenEffectsGlobal(func_name, func)
 	IEex_ScreenEffectsGlobalFunctions[func_name] = func
 end
 
+function IEex_Extern_OnWeaponDamageCRE(sourceShare, CGameEffect, esp)
+
+	IEex_AssertThread(IEex_Thread.Async, true)
+
+	local curWeaponIn = IEex_ReadDword(esp + 0x4)
+	local pLauncher = IEex_ReadDword(esp + 0x8)
+	local bCriticalDamage = IEex_ReadDword(esp + 0x10) ~= 0
+	local bLastSwing = IEex_ReadDword(esp + 0x24) ~= 0
+
+	-- curWeaponIn.helper.cResRef
+	local weaponRes = IEex_ReadLString(curWeaponIn + 0xC, 8)
+	local launcherRes = pLauncher ~= 0x0
+		-- pLauncher.helper.cResRef
+		and IEex_ReadLString(pLauncher + 0xC, 8)
+		or ""
+
+	-- CGameSprite_GetSelectedOffhandWeaponIndex
+	local offhandIndex = IEex_Call(0x726800, {}, sourceShare, 0x0)
+	-- m_equipment[offhandIndex]
+	local offhandItem = IEex_ReadDword(sourceShare + 0x4AD8 + offhandIndex * 4)
+	local m_curItemSlotNum = IEex_ReadByte(sourceShare + 0x4BA4, 0)
+
+	local bIsOffhand = false
+
+	if bLastSwing and m_curItemSlotNum ~= 0x2A and offhandItem ~= 0 then
+		-- CItem_GetItemType
+		local offhandItemType = bit.band(IEex_Call(0x4E97E0, {}, offhandItem, 0x0), 0xFFFF)
+		bIsOffhand = offhandItemType ~= 41 -- Bucklers
+				 and offhandItemType ~= 47 -- Large shields
+				 and offhandItemType ~= 49 -- Medium shields
+				 and offhandItemType ~= 53 -- Small shields
+	end
+
+	-- m_sourceRes = "IEEX_DAM"
+	IEex_WriteLString(CGameEffect + 0x90, "IEEX_DAM", 8)
+	-- m_res2 = weaponRes
+	IEex_WriteLString(CGameEffect + 0x6C, weaponRes, 8)
+	-- m_res3 = launcherRes
+	IEex_WriteLString(CGameEffect + 0x74, launcherRes, 8)
+
+	-- m_savingThrow: bit16 = bCriticalDamage, bit17 = bIsOffhand
+	IEex_WriteDword(CGameEffect + 0x3C, IEex_Flags({
+		bit.lshift(bCriticalDamage and 1 or 0, 16),
+		bit.lshift(bIsOffhand and 1 or 0, 17),
+	}))
+end
+
 function IEex_Extern_ScreenEffectsFunc(pEffect, pSprite)
 
 	IEex_AssertThread(IEex_Thread.Async, true)

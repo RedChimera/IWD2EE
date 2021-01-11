@@ -7,6 +7,32 @@
 
 	IEex_DisableCodeProtection()
 
+	--------------------
+	-- Opcode Changes --
+	--------------------
+
+	-----------------------------------------------------
+	-- Add metadata to hardcoded weapon damage effects --
+	-----------------------------------------------------
+
+	IEex_HookRestore(0x73EA38, 0, 7, IEex_FlattenTable({[[
+		!mark_esp()
+		!push_all_registers_iwd2
+		]], IEex_GenLuaCall("IEex_Extern_OnWeaponDamageCRE", {
+			["args"] = {
+				{"!push(ebp)"},
+				{"!push(esi)"},
+				{"!lea_using_marked_esp(eax,[esp+E4]) !push(eax)"},
+			},
+		}), [[
+		@call_error
+		!pop_all_registers_iwd2
+	]]}))
+
+	-----------------
+	-- New Opcodes --
+	-----------------
+
 	---------------------------------
 	-- New Opcode #500 (InvokeLua) --
 	---------------------------------
