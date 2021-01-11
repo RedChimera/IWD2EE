@@ -1728,6 +1728,12 @@ COPY_EXISTING ~spwi322.spl~ ~override~
 	SAY UNIDENTIFIED_DESC @34322
 	SAY IDENTIFIED_DESC @34322
 
+COPY_EXISTING ~spwi503.spl~ ~override~
+	SAY NAME1 @33503
+	SAY NAME2 @33503
+	SAY UNIDENTIFIED_DESC @34503
+	SAY IDENTIFIED_DESC @34503
+
 COPY_EXISTING ~spwi504.spl~ ~override~
 	SAY NAME1 @33504
 	SAY NAME2 @33504
@@ -1979,6 +1985,12 @@ COPY_EXISTING ~uspr252.spl~ ~override~
 	SAY NAME2 @35252
 	SAY UNIDENTIFIED_DESC @36252
 	SAY IDENTIFIED_DESC @36252
+
+COPY_EXISTING ~uspr253.spl~ ~override~
+	SAY NAME1 @35253
+	SAY NAME2 @35253
+	SAY UNIDENTIFIED_DESC @36253
+	SAY IDENTIFIED_DESC @36253
 
 COPY_EXISTING ~uspr351.spl~ ~override~
 	SAY NAME1 @35351
@@ -2275,6 +2287,12 @@ COPY_EXISTING ~uswi856.spl~ ~override~
 	SAY UNIDENTIFIED_DESC @38856
 	SAY IDENTIFIED_DESC @38856
 	LPF ALTER_EFFECT INT_VAR silent=1 check_headers=1 check_globals=1 match_opcode=139 match_parameter1=30050 parameter1=RESOLVE_STR_REF(@30050) END
+
+COPY_EXISTING ~uswi857.spl~ ~override~
+	SAY NAME1 @37857
+	SAY NAME2 @37857
+	SAY UNIDENTIFIED_DESC @38857
+	SAY IDENTIFIED_DESC @38857
 
 COPY_EXISTING ~uswi952.spl~ ~override~
 	SAY NAME1 @37952
@@ -3145,6 +3163,7 @@ COPY_EXISTING ~ar6200.are~ ~override~
 
 COPY_EXISTING ~ar6302.are~ ~override~
 	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR container=2 charges1=0 charges2=0 charges3=0 single_match=1 STR_VAR old_item=~00SCRL10~ new_item=~USWI853Z~ END
+	LPF fj_are_structure INT_VAR fj_charge0=1 fj_flags=0x1 fj_con_itm_idx=1 STR_VAR fj_structure_type=~itm~ fj_name=~USWI857Z~ END
 
 COPY_EXISTING ~53malavo.cre~ ~override~
 	LPF	IWD2_ADD_CRE_ITEM INT_VAR cq1=0 equip=0 STR_VAR item=~USWI955Z~ slot=~inv9~ mode=~replace~ END

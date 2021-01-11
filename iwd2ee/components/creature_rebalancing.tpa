@@ -40,6 +40,11 @@ COPY_EXISTING_REGEXP ~USCWMAR[123]\.itm~ ~override~
 	SAY NAME2 @23018
 	BUT_ONLY_IF_IT_CHANGES
 
+COPY_EXISTING ~uscwsfor.itm~ ~override~
+	SAY NAME1 @23040
+	SAY NAME2 @23040
+	BUT_ONLY_IF_IT_CHANGES
+
 COPY_EXISTING ~uses001.spl~ ~override~
 	SAY NAME1 @21001
 	SAY NAME2 @21001
@@ -354,6 +359,38 @@ COPY_EXISTING ~00SFSAL.cre~ ~override~ ~61SALFRO.cre~ ~override~
 	WRITE_BYTE enchantmentlevel 1
 	WRITE_BYTE proficiencypolearm 2
 	LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item=~USCWHFFS~ slot=~weapon1~ mode=~replace~ END
+
+COPY_EXISTING_REGEXP ~10KEG\.cre~ ~override~ ~10KEG[2346E]E?\.cre~ ~override~ ~20KEG.*\.cre~ ~override~ ~DYNOKEG\.cre~ ~override~
+	WRITE_BYTE allegiance 128
+	READ_BYTE attributes theattributes
+	theattributes|=0x1
+	WRITE_BYTE attributes theattributes
+	BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING ~AR1001.are~ ~override~
+	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR match_cre_file=~10KEG2~ flag_override_script_name=0 END
+	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR match_cre_file=~10KEG2E~ flag_override_script_name=0 END
+
+COPY_EXISTING ~AR1002.are~ ~override~
+	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR match_cre_file=~10KEG~ flag_override_script_name=0 END
+	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR match_cre_file=~10KEGE~ flag_override_script_name=0 END
+	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR match_cre_file=~10KEG3~ flag_override_script_name=0 END
+	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR match_cre_file=~10KEG3E~ flag_override_script_name=0 END
+
+COPY_EXISTING ~AR1007.are~ ~override~
+	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR match_cre_file=~10KEG~ flag_override_script_name=0 END
+	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR match_cre_file=~10KEGE~ flag_override_script_name=0 END
+	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR match_cre_file=~10KEG2~ flag_override_script_name=0 END
+	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR match_cre_file=~10KEG2E~ flag_override_script_name=0 END
+	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR match_cre_file=~10KEG3~ flag_override_script_name=0 END
+	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR match_cre_file=~10KEG3E~ flag_override_script_name=0 END
+	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR match_cre_file=~10KEG6~ flag_override_script_name=0 END
+
+COPY_EXISTING ~AR2000.are~ ~override~ ~AR2001.are~ ~override~
+	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR match_cre_file=~20KEG1~ flag_override_script_name=0 END
+	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR match_cre_file=~20KEG2~ flag_override_script_name=0 END
+	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR match_cre_file=~20KEG3~ flag_override_script_name=0 END
+	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR match_cre_file=~DYNOKEG~ flag_override_script_name=0 END
 
 COPY_EXISTING ~11PHAEN.cre~ ~override~ ~12PHAEN.cre~ ~override~
 	WRITE_BYTE skillconcentration 6
@@ -925,6 +962,7 @@ COPY_EXISTING ~41ORIA.cre~ ~override~
 	LPF	IWD2_CRE_SPELL INT_VAR num=2 STR_VAR class=~wizard~ resource=~SPPR715~ END
 	LPF	IWD2_CRE_SPELL INT_VAR num=2 STR_VAR class=~wizard~ resource=~SPWI905~ END
 	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~SPWI906~ END
+	LPF	IWD2_ADD_CRE_ITEM INT_VAR equip=1 STR_VAR item=~USCWSFOR~ slot=~weapon1~ mode=~replace~ END
 
 COPY_EXISTING ~41ORIA2.cre~ ~override~
 	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelcleric=5 newlevelwizard=13 END
@@ -947,6 +985,7 @@ COPY_EXISTING ~41ORIA2.cre~ ~override~
 	LPF	IWD2_CRE_SPELL INT_VAR num=2 STR_VAR class=~wizard~ resource=~SPPR715~ END
 	LPF	IWD2_CRE_SPELL INT_VAR num=2 STR_VAR class=~wizard~ resource=~SPWI905~ END
 	LPF	IWD2_CRE_SPELL INT_VAR num=2 STR_VAR class=~wizard~ resource=~SPWI906~ END
+	LPF	IWD2_ADD_CRE_ITEM INT_VAR equip=1 STR_VAR item=~USCWSFOR~ slot=~weapon1~ mode=~replace~ END
 
 COPY_EXISTING ~41ORIA3.cre~ ~override~
 	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelcleric=7 newlevelwizard=17 END
@@ -969,6 +1008,7 @@ COPY_EXISTING ~41ORIA3.cre~ ~override~
 	LPF	IWD2_CRE_SPELL INT_VAR num=2 STR_VAR class=~wizard~ resource=~SPPR715~ END
 	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~SPWI905~ END
 	LPF	IWD2_CRE_SPELL INT_VAR num=2 STR_VAR class=~wizard~ resource=~SPWI906~ END
+	LPF	IWD2_ADD_CRE_ITEM INT_VAR equip=1 STR_VAR item=~USCWSFOR~ slot=~weapon1~ mode=~replace~ END
 
 COPY_EXISTING ~41CLERIF.cre~ ~override~ ~41RCLERF.cre~ ~override~
 	LPF	IWD2_REMOVE_CRE_ITEM STR_VAR item=~00BULL90 00BULL02 RAMO_01~ END

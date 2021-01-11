@@ -531,6 +531,7 @@ Advantages:
 * Receives a bonus feat at first level, second level, and every two levels after that. This is in addition to the normal feat received by all character classes every three levels.
 * Characters with four or more levels of fighter may take the Weapon Specialization feat (three ranks in a weapon). This gives them +5 to damage with that weapon type.
 * Fighters get an additional +1 to weapon damage at levels 5, 10, 15, 20, 22, 24, 26, 28, and 30.
+* 21st level: Increased Multiplier. The fighter's critical hit damage multiplier is increased by 1 (x2 becomes x3, and x3 becomes x4).
 
 Disadvantages:
 * Fighters lack any spellcasting ability.~
@@ -1134,6 +1135,22 @@ Benefit: The character gains a +1 miscellanous bonus against missile weapons.
 In addition, if the character is a monk or has at least 19 Dexterity, they will automatically block the first instance of missile damage that would hit them each round. Any other damage the projectile would deal (such as fire damage from Arrows of Fire) still gets through. The character must have a free hand to gain this benefit.
 
 Special: Monks automatically gain the Deflect Arrows feat at level 2.~
+@709    = ~AMBIDEXTERITY:
+
+You are equally adept at using either hand.
+
+Prerequisite: Dex 15+
+
+Benefit: While dual-wielding, the attack penalty with the off hand weapon decreases by 4.
+
+Normal: Without the Ambidexterity and Two-Weapon Fighting feats, a character suffers a -6 attack penalty with the main hand weapon and a -10 penalty with the off hand weapon. These penalties are also decreased by 2 if the off hand weapon is a dagger or shortsword.~
+@710    = ~TWO-WEAPON FIGHTING:
+
+You can fight with a weapon in each hand.
+
+Benefit: While dual-wielding, the attack penalties of both the main hand and off hand weapon decrease by 2.
+
+Normal: Without the Ambidexterity and Two-Weapon Fighting feats, a character suffers a -6 attack penalty with the main hand weapon and a -10 penalty with the off hand weapon. These penalties are also decreased by 2 if the off hand weapon is a dagger or shortsword.~
 @785    = ~Aasimar~
 @786    = ~AASIMAR:
 

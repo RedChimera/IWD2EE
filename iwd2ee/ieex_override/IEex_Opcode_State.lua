@@ -16,7 +16,6 @@ function IEex_Extern_OnWeaponDamageCRE(sourceShare, CGameEffect, esp)
 	local pLauncher = IEex_ReadDword(esp + 0x8)
 	local bCriticalDamage = IEex_ReadDword(esp + 0x10) ~= 0
 	local bLastSwing = IEex_ReadDword(esp + 0x24) ~= 0
-
 	-- curWeaponIn.helper.cResRef
 	local weaponRes = IEex_ReadLString(curWeaponIn + 0xC, 8)
 	local launcherRes = pLauncher ~= 0x0
@@ -40,7 +39,65 @@ function IEex_Extern_OnWeaponDamageCRE(sourceShare, CGameEffect, esp)
 				 and offhandItemType ~= 49 -- Medium shields
 				 and offhandItemType ~= 53 -- Small shields
 	end
-
+	local sourceID = IEex_GetActorIDShare(sourceShare)
+	if bCriticalDamage and IEex_GetActorSpellState(sourceID, 195) then
+		local baseCriticalMultiplier = 2
+		local criticalMultiplier = baseCriticalMultiplier
+		local itemType = 0
+		local weaponWrapper = IEex_DemandRes(weaponRes, "ITM")
+		if weaponWrapper:isValid() then
+			local weaponData = weaponWrapper:getData()
+			itemType = IEex_ReadWord(weaponData + 0x1C, 0x0)
+			if ex_item_type_critical[itemType] ~= nil then
+				baseCriticalMultiplier = ex_item_type_critical[itemType][2]
+				criticalMultiplier = baseCriticalMultiplier
+			end
+			local effectOffset = IEex_ReadDword(weaponData + 0x6A)
+			local numGlobalEffects = IEex_ReadWord(weaponData + 0x70, 0x0)
+			for i = 0, numGlobalEffects - 1, 1 do
+				local offset = weaponData + effectOffset + i * 0x30
+				local theopcode = IEex_ReadWord(offset, 0x0)
+				local theparameter2 = IEex_ReadDword(offset + 0x8)
+				local thesavingthrow = IEex_ReadDword(offset + 0x24)
+				if theopcode == 288 and theparameter2 == 195 and bit.band(thesavingthrow, 0x10000) > 0 then
+					local theparameter1 = IEex_ReadDword(offset + 0x4)
+					criticalMultiplier = criticalMultiplier + theparameter1
+				end
+			end
+		end
+		if launcherRes ~= "" then
+			local launcherWrapper = IEex_DemandRes(launcherRes, "ITM")
+			if launcherWrapper:isValid() then
+				local launcherData = launcherWrapper:getData()
+				local effectOffset = IEex_ReadDword(launcherData + 0x6A)
+				local numGlobalEffects = IEex_ReadWord(launcherData + 0x70, 0x0)
+				for i = 0, numGlobalEffects - 1, 1 do
+					local offset = launcherData + effectOffset + i * 0x30
+					local theopcode = IEex_ReadWord(offset, 0x0)
+					local theparameter2 = IEex_ReadDword(offset + 0x8)
+					local thesavingthrow = IEex_ReadDword(offset + 0x24)
+					if theopcode == 288 and theparameter2 == 195 and bit.band(thesavingthrow, 0x10000) > 0 then
+						local theparameter1 = IEex_ReadDword(offset + 0x4)
+						criticalMultiplier = criticalMultiplier + theparameter1
+					end
+				end
+			end
+		end
+		IEex_IterateActorEffects(sourceID, function(eData)
+			local theopcode = IEex_ReadDword(eData + 0x10)
+			local theparameter2 = IEex_ReadDword(eData + 0x20)
+			local thesavingthrow = IEex_ReadDword(eData + 0x40)
+			local thespecial = IEex_ReadDword(eData + 0x48)
+			if theopcode == 288 and theparameter2 == 195 and bit.band(thesavingthrow, 0x10000) == 0 and (thespecial == -1 or thespecial == itemType) then
+				local theparameter1 = IEex_ReadDword(eData + 0x1C)
+				criticalMultiplier = criticalMultiplier + theparameter1
+			end
+		end)
+		local damage = IEex_ReadDword(CGameEffect + 0x18)
+		IEex_WriteDword(CGameEffect + 0x18, math.floor(damage / baseCriticalMultiplier) * criticalMultiplier)
+		weaponWrapper:free()
+		launcherWrapper:free()
+	end
 	-- m_sourceRes = "IEEX_DAM"
 	IEex_WriteLString(CGameEffect + 0x90, "IEEX_DAM", 8)
 	-- m_res2 = weaponRes

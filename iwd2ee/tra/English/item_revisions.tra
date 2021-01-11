@@ -3121,7 +3121,7 @@ Attack Bonus:  +2
 Enchantment:  +2
 Damage Type:  Piercing
 Special:
-  This weapon can reach out and attack at a range of 10 (a normal dagger has a reach of 0, a long sword has a reach of 1, and a two-handed sword has a reach of 2). It can even be used to sneak attack at long range.
+  This weapon can reach out and attack at a range of 10 (a normal dagger has a reach of 0, a long sword has a reach of 1, and a two-handed sword has a reach of 2).
 Weight: 2 lb.
 Feat Requirement:  Simple Weapon, Small Blade
 Type:  One-handed~
@@ -3139,7 +3139,7 @@ Damage Type: Missile (piercing)
 Damage Type: Melee (piercing)
 Special: 
   Returning: Returns to user
-  Flame: 50% chance +1d6 fire damage
+  Flame: +1d4 fire damage
 Weight: 0 lb.
 Feat Requirement:  Simple Weapon, Small Blade
 Type:  One-handed~
@@ -3683,9 +3683,10 @@ Type:  One-handed~
 STATISTICS:
 
 Damage:  1d6
+Enchantment:  +1
 Damage Type:  Piercing
 Special:
-  Frost: 50% chance of +1d6 cold damage
+  Frost: +1d4 cold damage
 Weight:  3 lb.
 Feat Requirement:  Simple Weapon, Small Blade
 Type:  One-handed~
@@ -11544,7 +11545,7 @@ Weight:  3 lb.~
 
 STATISTICS:
 
-While equipped, wearer emits a fiery aura identical to that of a salamander.~
+The wearer has 50% Cold Resistance, and anyone who hits the wearer in melee takes 1d6 fire damage. These effects do not stack with Fire Shield (Red).~
 @12467    = ~Ice Dagger +3~
 @12468    = ~The typical throwing dagger has a pointed, usually double-edged blade, as opposed to a knife, which has a single edge and is a bit shorter than the dagger. Unlike a dagger, this one has a smaller handle and is balanced differently. Runes of power have been etched into the blade and glow ominously.
 
@@ -13139,14 +13140,14 @@ Weight: 0 lb.~
 
 STATISTICS:
 
-Maximizing: The wearer's spells of 2nd-level or lower deal maximum damage.
+Maximizing: The wearer's spells of 3rd-level or lower deal maximum damage.
 Weight: 3 lb.~
 @12761    = ~Greater Robe of Maximizing~
 @12762    = ~Since the age of Netheril, wizards have learned to bestow a wide variety of magical properties upon the everyday objects that surround them. A favorite item of such enchantment is the common robe. It is lightweight, affordable, and holds its enchantment well, thereby making it ideal equipment for a wizard.
 
 STATISTICS:
 
-Maximizing: The wearer's spells of 3rd-level or lower deal maximum damage.
+Maximizing: The wearer's spells of 5th-level or lower deal maximum damage.
 Weight: 3 lb.~
 @12763    = ~Tower Shield +8~
 @12764    = ~This massive shield is nearly as tall as the wielder. Basically, it is a portable wall meant to provide cover. It can provide up to total cover, depending on how far you come out from behind it. A tower shield, however, does not provide cover against targeted spells; a spellcaster can cast a spell on you by targeting the shield you are holding. This shield has runes scribed onto it that glow eerily in dim light.
@@ -13330,6 +13331,28 @@ Permanent +1 Intelligence
 Permanent +1 Wisdom
 Permanent +1 Charisma
 Weight:  1 lb.~
+@12799    = ~Mantle of Hell's Furnace~
+@12800    = ~An extremely vivid piece of clothing, the Mantle of Hell's Furnace was woven from the beards of fiery azer. It was worn by a high priest of Kossuth named Ullabem for fifteen years before he was killed fighting a priestess of Istishia. When the priestess attempted to destroy it, efreet allies of Ullabem tracked her down and killed her. One of the efreeti kept the cloak until it was requested of him by a clever thief who summoned the genie out of an enchanted block of sandalwood.
+
+STATISTICS:
+
+The wearer has 50% Cold Resistance, and anyone who hits the wearer in melee takes 1d6+5 fire damage. These effects do not stack with Fire Shield (Red).~
+@12801    = ~Mantle of the Coming Storm~
+@12802    = ~Worn by the Aurilite priestess Lysan in the past, this seemingly threadbare robe had become "dormant" upon her command, so as not to expose herself as a priestess of Auril. When as much as a single snowflake falls upon the robe, it transforms into a scintillating cloak of white that allows the wielder to float above snow drifts and walk through even raging rivers with ease. Most merchants will not wish to purchase this item, or will do so at a very low price, as they see it as a sacred item of Auril the Frost-Maiden and likely to attract her followers... and her displeasure.
+
+Created during the ceremonies of the Coming Storm (the onset of winter) to Auril, these cloaks are specially created to resist flames. They also surround the wearer in an aura of cold, chilling any foe that would attack them.
+
+STATISTICS:
+
+The wearer has 50% Fire Resistance, and anyone who hits the wearer in melee takes 1d6 fire damage. These effects do not stack with Fire Shield (Blue).~
+@12803    = ~Mantle of the Coming Storm~
+@12804    = ~Worn by the Aurilite priestess Lysan in the past, this seemingly threadbare robe had become "dormant" upon her command, so as not to expose herself as a priestess of Auril. When as much as a single snowflake falls upon the robe, it transforms into a scintillating cloak of white that allows the wielder to float above snow drifts and walk through even raging rivers with ease. Most merchants will not wish to purchase this item, or will do so at a very low price, as they see it as a sacred item of Auril the Frost-Maiden and likely to attract her followers... and her displeasure.
+
+Created during the ceremonies of the Coming Storm (the onset of winter) to Auril, these cloaks are specially created to resist flames. They also surround the wearer in an aura of cold, chilling any foe that would attack them.
+
+STATISTICS:
+
+The wearer has 50% Fire Resistance, and anyone who hits the wearer in melee takes 1d6+5 fire damage. These effects do not stack with Fire Shield (Blue).~
 @12900    = ~Hrm - you are powerful allies, indeed. More gold and gems to line your pockets, then - also, a suit of plate armor, a warhammer, a helmet, all crafted and enchanted by great duergar artisans. They are well deserved, outsider.~
 @12901    = ~Drink this Rainwater Brew, Ennelia. It should help your condition.~
 @12902    = ~Drink this Sour Draught, Ennelia. It should help your condition.~

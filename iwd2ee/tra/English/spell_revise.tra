@@ -2721,11 +2721,11 @@ This spell holds animals rigidly immobile. Animals with magical powers such as w
 Level: Clr 3
 Range: Sight of Caster
 Duration: 20 rounds
-Casting Time: 3
+Casting Time: 2
 Area of Effect: 1 creature
-Saving Throw: Will negates 
+Saving Throw: Will negates
 
-Any spell casting creature that is affected by this spell has its casting ability severely disabled.  When the creature attempts to cast a spell, it has an 50% chance of failure.  Creatures can Will save to avoid the effect, but do so at -5.~
+Any spell casting creature that is affected by this spell has its casting ability severely disabled.  When the creature attempts to cast a spell, it has an 50% chance of failure.  Creatures can Will save to avoid the effect, but do so at -8.~
 @31326     = ~Negative Energy Protection~
 @32326     = ~Negative Energy Protection
 (Abjuration) 
@@ -2944,9 +2944,20 @@ Range: Caster
 Duration: 8 hours
 Casting Time: 3
 Area of Effect: Caster
-Saving Throw: Reflex half
+Saving Throw: None
 
 This spell creates fifteen small meteors, which can be thrown by the caster. Each meteor bursts into a 1-foot-diameter sphere upon impact and inflicts 1d4+6 points of fire damage (plus Strength bonus). The meteors use the Simple Weapon: Missile proficiency, gain a +5 bonus to attack rolls, and strike as +3 weapons. The wizard may discharge up to five missiles per round.~
+@33503     = ~Cloudkill~
+@34503     = ~Cloudkill
+(Necromancy)
+Level: Sor/Wiz 5
+Range: Sight of Caster
+Duration: 10 rounds
+Casting Time: 5
+Area of Effect: 15-foot radius
+Saving Throw: Fortitude partial
+
+This spell generates a billowing cloud of ghastly yellowish green vapors that is so toxic as to slay any creature with fewer than 4 Hit Dice with no save. Creatures with no more than half as many Hid Dice as the caster's level (rounded up) must make a Fortitude save or be slain. Holding one's breath has no effect on the lethality of the spell. Creatures in the cloud that don't die suffer 1d10 points of poison damage each round with no save.~
 @33504     = ~Cone of Cold~
 @34504     = ~Cone of Cold
 (Evocation)
@@ -3158,6 +3169,17 @@ Area of Effect: 1 creature
 Saving Throw: None
 
 This necromantic curse prevents a creature from healing. For 1 day, the cursed creature cannot regain Hit Points by items, spells, abilities, resting, or regeneration. There is no saving throw.~
+@35253     = ~Shield Other~
+@36253     = ~Shield Other
+(Abjuration)
+Level: Clr 2, Pal 2, Ilmater 1
+Range: Sight of Caster
+Duration: 3 rounds/level
+Casting Time: 5
+Area of Effect: 1 creature
+Saving Throw: None
+
+This spell creates a mystic connection between you and the target so that some of their wounds are transferred to the caster. Whenever the target would take damage, they only take half the damage; the other half is taken by the caster. The damage is only split this way if the caster and target can see each other.~
 @35351     = ~Quiver of Plenty~
 @36351     = ~Quiver of Plenty
 (Conjuration)
@@ -3409,7 +3431,7 @@ Casting Time: 4
 Area of Effect: 1 creature
 Saving Throw: None 
 
-This spell creates a large number of projectiles akin to those created by the Magic Missile spell, which hit a single target. Each missile deals 1d4+1 magic damage with no saving throw. The spell fires one missile per level of the wizard, to a maximum of 30 missiles at level 30.~
+This spell creates a large number of projectiles akin to those created by the Magic Missile spell, which hit a single target. Each missile deals 1d4+1 magic damage with no saving throw. The spell fires one missile per level of the wizard.~
 @37653     = ~Boulder Roll~
 @38653     = ~Boulder Roll
 (Conjuration)
@@ -3551,6 +3573,17 @@ Area of Effect: Caster
 Saving Throw: None
 
 Spell Trap absorbs incoming hostile spells and grants their spell slots to the caster. While Spell Trap is active, if the caster would be hit by a harmful spell, that spell is nullified, and the caster regains a previously cast spell of a level less than or equal to that of the absorbed spell. Spells regained this way must also be 7th-level or lower, even if the absorbed spell was higher than 7th-level. Spell Trap can absorb a total of 18 spell levels before it ends, though as long as there is at least one spell level remaining, the next spell will be absorbed. Spell Trap does not absorb spells cast by allies. It does not absorb Dispel Magic either, though it cannot be dispelled itself.~
+@37857     = ~Link Effects~
+@38857     = ~Link Effects
+(Enchantment)
+Level: Brd 7, Clr 8, Sor/Wiz 8
+Range: Sight of Caster
+Duration: 2 rounds/level
+Casting Time: 8
+Area of Effect: 1 creature
+Saving Throw: None
+
+This spell links the caster and the target such that any spell effect that would be applied to one creature is also applied to the other. Link Effects only duplicates effects from spells and certain abilities of monsters; effects of items and non-magical abilities are ignored.~
 @37952     = ~Perfect Invisibility~
 @38952     = ~Perfect Invisibility
 (Illusion)
