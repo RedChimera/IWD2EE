@@ -52,8 +52,6 @@ function IEex_Extern_SetupAsyncState(asyncSharedMemory)
 	IEex_DoStage1Indexing()
 	IEex_DoStage2Indexing()
 
-	--dofile("override/IEex_Debug.lua")
-
 	-- Resume Sync thread - (the Sync thread is spinning until I do this)
 	-- Not sure if the Sync thread needs to wait for me to finish initializing
 	IEex_WriteDword(IEex_ReadDword(asyncSharedMemory + 0x8), 0x1)

@@ -29,6 +29,44 @@
 		!pop_all_registers_iwd2
 	]]}))
 
+	--------------------------------------------------------
+	-- Fix persistent effects being able to crash when:   --
+	-- 1) The game is paused                              --
+	-- 2) AND the party attempts to rest                  --
+	-- 3) AND the party gets interrupted at an early time --
+	--------------------------------------------------------
+
+	-- Sets bAllowEffectListCall = 0 while the engine is
+	-- running CPersistantEffectListRegenerated_AIUpdate(),
+	-- so it can't call CGameSprite_ProcessEffectList()
+	-- and accidently reload its stats, invalidating the
+	-- function's local variables.
+	IEex_HookRestore(0x51E8B0, 0, 5, IEex_FlattenTable({[[
+		; bAllowEffectListCall = 0 ;
+		!mov(eax,[esp+4])
+		!mov([eax+72A4],0)
+	]]}))
+
+	-- Restores bAllowEffectListCall = 1 at the end of
+	-- CPersistantEffectListRegenerated_AIUpdate(), and 
+	-- runs CGameSprite_ProcessEffectList() if the engine
+	-- was blocked from calling it during the function.
+	IEex_HookRestore(0x51E926, 0, 7, IEex_FlattenTable({[[
+
+		!mov(ecx,[esp+14])
+
+		; bAllowEffectListCall = 1 ;
+		!mov([ecx+72A4],1)
+
+		; if (m_nEffectListCalls > 0) CGameSprite_ProcessEffectList() ;
+		!mov(ax,word:[ecx+72A2])
+		!test(ax,ax)
+		!jle_dword >return
+
+		; CGameSprite_ProcessEffectList ;
+		!call :72DE60
+	]]}))
+
 	-----------------
 	-- New Opcodes --
 	-----------------

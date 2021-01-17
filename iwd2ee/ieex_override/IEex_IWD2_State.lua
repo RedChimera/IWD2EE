@@ -52,6 +52,7 @@ dofile("override/IEex_Gui_State.lua")
 dofile("override/IEex_Key_State.lua")
 dofile("override/IEex_Resource_State.lua")
 dofile("override/IEex_Projectile_State.lua")
+dofile("override/IEex_Debug_State.lua")
 
 dofile("override/IEex_TRA.lua")
 dofile("override/IEex_WEIDU.lua")
@@ -440,20 +441,6 @@ function IEex_FetchSpellInfo(actorID, casterTypes)
 
 	return toReturn
 
-end
-
-function IEex_Debug_GiveAllWizardSpells()
-
-	local actorID = IEex_GetActorIDSelected()
-	if not IEex_IsSprite(actorID) then return end
-
-	local base = "SPWI"
-
-	for i = 100, 999, 1 do
-		local resref = base..string.format("%03d", i)
-		local level = math.floor(i / 100)
-		IEex_SetSpellInfo(actorID, IEex_CasterType.Wizard, level, resref, 999, 999)
-	end
 end
 
 ------------------------

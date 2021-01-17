@@ -1,6 +1,5 @@
 
 IEex_InSyncState = true
-IEex_Debug_Stutter = false
 
 (function()
 
@@ -12,43 +11,7 @@ IEex_Debug_Stutter = false
 	dofile("override/IEex_Gui_Patch.lua")
 	dofile("override/IEex_Key_Patch.lua")
 	dofile("override/IEex_Projectile_Patch.lua")
-
-	if IEex_Debug_Stutter then
-
-		local inAreaRender = IEex_Malloc(0x4)
-		IEex_WriteDword(inAreaRender, 0x0)
-		IEex_DefineAssemblyLabel("inAreaRender", inAreaRender)
-
-		IEex_DisableCodeProtection()
-		IEex_HookRestore(0x790DC6, 6, 0, {[[
-			!push_all_registers_iwd2
-			!push_ecx
-			!push_eax
-			!call >IEex_Helper_GetMicroseconds
-			!mov_ebx_eax
-			!pop_eax
-			!pop_ecx
-			!mov_[dword]_dword *inAreaRender #1
-			!call_[eax+dword] #C4
-			!mov_[dword]_dword *inAreaRender #0
-			!call >IEex_Helper_GetMicroseconds
-			!sub_eax_ebx
-
-			!cmp_eax_dword #8235
-			!jb_dword >no_log
-
-			!push_eax
-			!push_byte 01
-			!push_dword ]], {IEex_WriteStringAuto("Stutter -> %d"), 4}, [[
-			!call >_SDL_Log
-			!add_esp_byte 0C
-
-			@no_log
-			!pop_all_registers_iwd2
-		]]})
-		IEex_EnableCodeProtection()
-
-	end
+	dofile("override/IEex_Debug_Patch.lua")
 
 	-- Actually IWD2's "operator_new" and "operator_delete", (needed for IEex memory to interact with engine)
 	-- NOTE: THESE NEED TO BE THE LAST LINES EXECUTED DURING INITIAL STARTUP!

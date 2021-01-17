@@ -10,6 +10,13 @@ IEex_RegToOrdinal = {
 	["edi"] = 7,
 }
 
+IEex_RegWordToOrdinal = {
+	["ax"] = 0,
+	["cx"] = 1,
+	["dx"] = 2,
+	["bx"] = 3,
+}
+
 --[[
 
 args = {
@@ -36,6 +43,7 @@ function IEex_EncodeRM(args, func)
 	local argsRM = args.rm
 	local argsOffsetAdjustment = args.offsetAdjustment
 
+	local prefix
 	-- RM Byte Start
 	local rm
 	local regOrExtension = 0
@@ -43,6 +51,8 @@ function IEex_EncodeRM(args, func)
 	-- RM Byte End
 	local sibByte
 	local offset
+	local immediate = args.immediate
+	local immediateSize = args.immediateSize
 
 	-- Fill regOrExtension Start
 	if opcodeExtension then
@@ -55,19 +65,42 @@ function IEex_EncodeRM(args, func)
 		end
 		regOrExtension = IEex_RegToOrdinal[argsReg]
 		if not regOrExtension then
-			IEex_Error("Invalid RM")
+			regOrExtension = IEex_RegWordToOrdinal[argsReg]
+			if not regOrExtension then IEex_Error("Invalid reg") end
+			prefix = 0x66
 		end
 	end
 	-- Fill regOrExtension End
 
 	local simpleReg = IEex_RegToOrdinal[argsRM]
-	if simpleReg then
+	local simpleWordReg = IEex_RegWordToOrdinal[argsRM]
+
+	if simpleReg or simpleWordReg then
 		-- Direct reg, simple encoding
-		rm = simpleReg
+		if simpleWordReg then
+			if argsReg and not prefix then IEex_Error("reg and rm must agree on operand size") end
+			prefix = 0x66
+		end
+		rm = simpleReg or simpleWordReg
 		mod = 3
 	else
-		-- Indirect addressing, complex encoding
+
 		local argsRMLen = #argsRM
+		if argsRMLen >= 5 and argsRM:sub(1, 5) == "word:" then
+			if argsReg and not prefix then IEex_Error("reg and rm must agree on operand size") end
+			if immediateSize and immediateSize ~= 2 then IEex_Error("immediateSize mismatch") end
+			-- Word-size prefix
+			prefix = 0x66
+			immediateSize = 2
+			argsRM = argsRM:sub(6, #argsRM)
+		elseif argsRMLen >= 6 and argsRM:sub(1, 6) == "dword:" then
+			if immediateSize and immediateSize ~= 4 then IEex_Error("immediateSize mismatch") end
+			immediateSize = 4
+			argsRM = argsRM:sub(7, #argsRM)
+		end
+
+		-- Indirect addressing, complex encoding
+		argsRMLen = #argsRM
 		if argsRMLen < 3 or (argsRM:sub(1, 1) ~= "[" or argsRM:sub(argsRMLen) ~= "]") then
 			IEex_Error("Invalid RM")
 		end
@@ -209,6 +242,12 @@ function IEex_EncodeRM(args, func)
 		end
 	end
 
+	if prefix then
+		func(prefix)
+	end
+	
+	func(args.opcode)
+
 	-- rmByte
 	func(IEex_Flags({
 		rm,
@@ -223,35 +262,41 @@ function IEex_EncodeRM(args, func)
 	if offset then
 		IEex_ProcessNumberAsBytes(offset, mod == 1 and 1 or 4, func)
 	end
+
+	if immediate then
+		IEex_ProcessNumberAsBytes(immediate, immediateSize or 4, func)
+	end
 end
 
-function IEex_EncodeRMOpcode(opcode, args, encodingArgs)
+function IEex_EncodeRMOpcode(args, encodingArgs)
 
 	local firstArg = args[1]
 	local secondArg = args[2]
 	local firstOrdinal = IEex_RegToOrdinal[firstArg]
+	local firstWordOrdinal = IEex_RegWordToOrdinal[firstArg]
 
-	local reg
-	local rm
-	if not firstOrdinal then
-		opcode = opcode
-		reg = secondArg
-		rm = firstArg
+	local opcode = encodingArgs.opcode
+	if not opcode then IEex_Error("opcode must be defined") end
+
+	if (not firstOrdinal) and (not firstWordOrdinal) then
+		local numAttempt = tonumber(secondArg or "", 16)
+		if numAttempt then
+			local immediateOpcode = encodingArgs.immediateOpcode
+			if not immediateOpcode then IEex_Error("immediateOpcode must be defined when using immediate") end 
+			encodingArgs.opcode = immediateOpcode
+			encodingArgs.immediate = numAttempt
+		else
+			encodingArgs.reg = secondArg
+		end
+		encodingArgs.rm = firstArg
 	else
 		-- Set direction bit of opcode
-		opcode = (encodingArgs and encodingArgs.noDirectionBit) and (opcode) or (opcode + 0x2)
-		reg = firstArg
-		rm = secondArg
+		encodingArgs.opcode = (encodingArgs.noDirectionBit) and (opcode) or (opcode + 0x2)
+		encodingArgs.reg = firstArg
+		encodingArgs.rm = secondArg
 	end
 
-	local toReturn = {
-		{opcode, 1},
-	}
-
-	encodingArgs = encodingArgs or {}
-	encodingArgs.reg = reg
-	encodingArgs.rm = rm
-
+	local toReturn = {}
 	IEex_EncodeRM(encodingArgs, function(byte)
 		table.insert(toReturn, {byte, 1})
 	end)
@@ -361,6 +406,7 @@ IEex_GlobalAssemblyMacros = {
 	["jbe_dword"] = "0F 86",
 	["je_byte"] = "74",
 	["je_dword"] = "0F 84",
+	["jg_dword"] = "0F 8F",
 	["jl_byte"] = "7C",
 	["jl_dword"] = "0F 8C",
 	["jle_byte"] = "7E",
@@ -611,7 +657,6 @@ IEex_GlobalAssemblyMacros = {
 	["pop_edx"] = "5A",
 	["pop_esi"] = "5E",
 	["pop_registers"] = "5F 5E 5A 59 5B",
-	["pop_registers_iwd2"] = "5F 5E 5D 5A 59 5B",
 	["pop_state"] = "5F 5E 5A 59 5B 5D",
 	["push_[dword]"] = "FF 35",
 	["push_[eax]"] = "FF 30",
@@ -642,7 +687,6 @@ IEex_GlobalAssemblyMacros = {
 	["push_esi"] = "56",
 	["push_esp"] = "54",
 	["push_registers"] = "53 51 52 56 57",
-	["push_registers_iwd2"] = "53 51 52 55 56 57",
 	["push_state"] = "55 8B EC 53 51 52 56 57",
 	["push_word:[ebx+byte]"] = "66 FF 73",
 	["restore_stack_frame"] = "5F 5E 5A 59 5B 8B E5 5D",
@@ -747,7 +791,8 @@ IEex_GlobalAssemblyMacros = {
 			if toPushOrdinal then
 				return {{0x50 + toPushOrdinal, 1}}
 			else
-				return IEex_EncodeRMOpcode(0xFF, args, {
+				return IEex_EncodeRMOpcode(args, {
+					["opcode"] = 0xFF,
 					["opcodeExtension"] = 6,
 				})
 			end
@@ -756,7 +801,10 @@ IEex_GlobalAssemblyMacros = {
 
 	["mov"] = {
 		["unroll"] = function(state, args)
-			return IEex_EncodeRMOpcode(0x89, args)
+			return IEex_EncodeRMOpcode(args, {
+				["opcode"] = 0x89,
+				["immediateOpcode"] = 0xC7,
+			})
 		end,
 	},
 
@@ -767,7 +815,9 @@ IEex_GlobalAssemblyMacros = {
 			if toPushOrdinal then
 				return {{0x58 + toPushOrdinal, 1}}
 			else
-				return IEex_EncodeRMOpcode(0x8F, args)
+				return IEex_EncodeRMOpcode(args, {
+					["opcode"] = 0x8F,
+				})
 			end
 		end,
 	},
@@ -776,19 +826,28 @@ IEex_GlobalAssemblyMacros = {
 		["unroll"] = function(state, args)
 			local oldAdjust = state.unroll.markedEspAdjustment
 			state.unroll.markedEspAdjustment = oldAdjust + 4
-			return IEex_EncodeRMOpcode(0xFF, args, {
-				["offsetAdjustment"] = oldAdjust,
+			return IEex_EncodeRMOpcode(args, {
+				["opcode"] = 0xFF,
 				["opcodeExtension"] = 6,
+				["offsetAdjustment"] = oldAdjust,
 			})
 		end,
 	},
 
 	["lea_using_marked_esp"] = {
 		["unroll"] = function(state, args)
-			local oldAdjust = state.unroll.markedEspAdjustment
-			state.unroll.markedEspAdjustment = oldAdjust + 4
-			return IEex_EncodeRMOpcode(0x8D, args, {
-				["offsetAdjustment"] = oldAdjust,
+			return IEex_EncodeRMOpcode(args, {
+				["opcode"] = 0x8D,
+				["noDirectionBit"] = true,
+				["offsetAdjustment"] = state.unroll.markedEspAdjustment,
+			})
+		end,
+	},
+
+	["test"] = {
+		["unroll"] = function(state, args)
+			return IEex_EncodeRMOpcode(args, {
+				["opcode"] = 0x85,
 				["noDirectionBit"] = true,
 			})
 		end,
