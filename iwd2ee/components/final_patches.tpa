@@ -133,7 +133,7 @@ COPY_EXISTING_REGEXP ~.*\.itm~ ~override~
 		LPF ADD_ITEM_EQEFFECT INT_VAR opcode=288 target=1 timing=2 parameter1=thecategory parameter2=241 savingthrow=(theitemflags << 16) special=1 STR_VAR resource=~USEQTYPE~ END
 	END ELSE PATCH_IF thecategory = 67 BEGIN
 		LPF ADD_ITEM_EQEFFECT INT_VAR opcode=288 target=1 timing=2 parameter1=thecategory parameter2=241 savingthrow=(theitemflags << 16) special=2 STR_VAR resource=~USEQTYPE~ END
-	END ELSE PATCH_IF (~%theappearance%~ STRING_EQUAL_CASE ~D1~) OR (~%theappearance%~ STRING_EQUAL_CASE ~D2~) OR (~%theappearance%~ STRING_EQUAL_CASE ~D3~) OR (~%theappearance%~ STRING_EQUAL_CASE ~D4~) BEGIN
+	END ELSE PATCH_IF (~%theappearance%~ STRING_EQUAL_CASE ~D1~) OR (~%theappearance%~ STRING_EQUAL_CASE ~D2~) OR (~%theappearance%~ STRING_EQUAL_CASE ~D3~) OR (~%theappearance%~ STRING_EQUAL_CASE ~D4~) OR (~%theappearance%~ STRING_EQUAL_CASE ~C6~) BEGIN
 		LPF ADD_ITEM_EQEFFECT INT_VAR opcode=288 target=1 timing=2 parameter1=thecategory parameter2=241 savingthrow=(theitemflags << 16) special=3 STR_VAR resource=~USEQTYPE~ END
 	END ELSE BEGIN
 		READ_SHORT 0x68 thenumheaders

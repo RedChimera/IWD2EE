@@ -133,9 +133,9 @@ Benefit: Your sneak attacks deal an additional 1d6 damage. This feat may be take
 
 You are an expert at fighting with two weapons. You can attack even more quickly with them.
 
-Prerequisite: Base attack bonus +16 or higher, must have Ambidexterity and Two-Weapon Fighting
+Prerequisite: Dex 15+, Ambidexterity, Two-Weapon Fighting, Base attack bonus +16 or higher
 
-Benefit: While wielding two weapons, with each hit you have a 20% chance to immediately make another attack.
+Benefit: While wielding two weapons, you get a second attack per round with the off-hand weapon.
 
 Special: A character with 9 levels of ranger can take this feat even if they don't meet the prerequisites. However, if a ranger does not meet the prerequisites, they cannot use Improved Two-Weapon Fighting unless they wear light or no armor.~
 @311    = ~Improved Unarmed Abilities~
@@ -308,7 +308,7 @@ You can perform a spinning attack to hit multiple enemies around you.
 
 Prerequisites: Dex 13+, Int 13+, Expertise, Dodge, Mobility, Spring Attack, base attack bonus 4 or greater; taking the feat a second time requires Dex 21+.
 
-Benefit: You gain the Whirlwind Attack ability, usable once per round. By using the ability, you make an attack with each of your weapons against each nearby enemy, forgoing all other attacks for the round. All attacks made this way have a -4 attack penalty and cannot critically hit. The radius of the attack depends on the reach of your weapon.
+Benefit: You gain the Whirlwind Attack ability, usable once per round. By using the ability, you make an attack with each of your weapons against each nearby enemy, forgoing all other attacks for the round. The radius of the attack depends on the reach of your weapon.
 
 When taken a second time, the feat is Improved Whirlwind Attack, which increases the radius of the attack by 5 feet.
 
@@ -393,6 +393,16 @@ You may have your spells affect an area rather than a single target.
 Prerequisites: The ability to cast 6th-level spells.
 
 Benefit: You gain the Mass Spell ability, usable at will as a free action. Using it makes your next spell affect all creatures within 20 feet of the target, but causes it to take up a spell slot five levels higher. Even spells that normally only affect the caster can now affect other creatures. Mass Spell replaces the spell's normal area of effect, so it should only be used with spells that normally target a single creature.~
+@365    = ~Manyshot~
+@366    = ~MANYSHOT:
+
+You can fire multiple arrows simultaneously at a nearby target.
+
+Prerequisite: Dex 17+, Rapid Shot, Precise Shot, Base attack bonus +16 or higher
+
+Benefit: When you have Rapid Shot enabled and you attack with a bow for the first time in a round, you fire two arrows instead of one. Each of these is a separate attack roll made at a -5 penalty.
+
+Special: A character with 9 levels of ranger can take this feat even if they don't meet the prerequisites.~
 @522    = ~Wizard~
 @523    = ~WIZARD:
 
@@ -418,7 +428,7 @@ Hit points per level: 1-12
 
 Advantages:
 * Proficient with all simple and martial weapons, light armor, medium armor, and shields.
-* Barbarian Rage: Can rage once per day per every 4 levels (starts at 1st level with one use). Rage gives them +4 to constitution and strength for 5 rounds, as well as 2 point armor class penalty, +2 to Will saves, and immunity to fear, stun, sleep, confusion, unconsciousness, paralysis, and hopelessness. After raging the barbarian will be fatigued for a period of time which will lower some of his abilities.
+* Barbarian Rage: Can rage once per day per every 4 levels (starts at 1st level with one use). Rage gives them +4 to constitution and strength (which stack with other bonuses to constitution and strength) for 5 rounds, as well as 2 point armor class penalty, +2 to Will saves, and immunity to fear, stun, sleep, confusion, unconsciousness, paralysis, and hopelessness. After raging the barbarian will be fatigued for a period of time which will lower some of his abilities.
 * Fast Movement: Barbarians can move 10 feet faster than a standard character.
 * 2nd level: Damage Reduction. The barbarian gains 1/- point of resistance to slashing, piercing, bludgeoning and missile damage. He or she gains 1/- additional point of resistance at levels 5, 8, 11, 14, 17, 20, and every 1 level after.
 * 2nd level: Uncanny Dodge. Barbarians retain their Dexterity bonus to Armor Class if they are attacked by invisible foes.
@@ -530,8 +540,7 @@ Advantages:
 * Proficient with all simple and martial weapons, bastard swords, light armor, medium armor, heavy armor, and shields.
 * Receives a bonus feat at first level, second level, and every two levels after that. This is in addition to the normal feat received by all character classes every three levels.
 * Characters with four or more levels of fighter may take the Weapon Specialization feat (three ranks in a weapon). This gives them +5 to damage with that weapon type.
-* Fighters get an additional +1 to weapon damage at levels 5, 10, 15, 20, 22, 24, 26, 28, and 30.
-* 21st level: Increased Multiplier. The fighter's critical hit damage multiplier is increased by 1 (x2 becomes x3, and x3 becomes x4).
+* Fighters get an additional +1 to weapon damage per 5 levels, +1 critical threat range (e.g. 19-20 becomes 18-20) per 10 levels, and +1 critical hit damage multiplier (e.g. x2 becomes x3) per 20 levels.
 
 Disadvantages:
 * Fighters lack any spellcasting ability.~
@@ -553,10 +562,7 @@ Level 1-3: 2 attacks per round
 Level 4-6: 3 attacks
 Level 7-9: 4 attacks
 Level 10-12: 5 attacks
-Level 13-15: 5 attacks, plus a 20% chance after each hit to immediately make another attack
-Level 16-20: 5 attacks, plus a 40% chance after each hit to immediately make another attack
-Level 21-25: 5 attacks, plus a 70% chance after each hit to immediately make another attack
-Level 26-30: 5 attacks, plus a 100% chance after each hit to immediately make another attack
+Level 13-15: 6 attacks, exceeding the normal attacks per round limit. For every 3 levels after 13, the monk gains another attack per round.
 
 * As the monk increases in levels, the damage his fists inflicts does as well:
 

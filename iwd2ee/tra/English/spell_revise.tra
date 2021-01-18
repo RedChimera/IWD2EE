@@ -2611,6 +2611,8 @@ Launcher:  Bow~
 @30050=~Protected by Spell Trap~
 @30051=~Release Spell Sequencer~
 @30052=~You ghostwalked through the door and opened it from the inside.~
+@30053=~Ghoul~
+@30054=~Object of Sympathy~
 
 @31115     = ~Armor of Faith~
 @32115     = ~Armor of Faith
@@ -2957,7 +2959,7 @@ Casting Time: 5
 Area of Effect: 15-foot radius
 Saving Throw: Fortitude partial
 
-This spell generates a billowing cloud of ghastly yellowish green vapors that is so toxic as to slay any creature with fewer than 4 Hit Dice with no save. Creatures with no more than half as many Hid Dice as the caster's level (rounded up) must make a Fortitude save or be slain. Holding one's breath has no effect on the lethality of the spell. Creatures in the cloud that don't die suffer 1d10 points of poison damage each round with no save.~
+This spell generates a billowing cloud of ghastly yellowish green vapors that is so toxic as to slay any creature with fewer than 4 Hit Dice with no save. Creatures with no more than half as many Hit Dice as the caster's level (rounded up) must make a Fortitude save or be slain. Holding one's breath has no effect on the lethality of the spell. Creatures in the cloud that don't die suffer 1d10 points of poison damage each round with no save.~
 @33504     = ~Cone of Cold~
 @34504     = ~Cone of Cold
 (Evocation)
@@ -3179,7 +3181,7 @@ Casting Time: 5
 Area of Effect: 1 creature
 Saving Throw: None
 
-This spell creates a mystic connection between you and the target so that some of their wounds are transferred to the caster. Whenever the target would take damage, they only take half the damage; the other half is taken by the caster. The damage is only split this way if the caster and target can see each other.~
+This spell creates a mystic connection between the caster and the target so that some of their wounds are transferred to the caster. Whenever the target would take damage, they only take half the damage; the other half is taken by the caster. The damage is only split this way if the caster and target can see each other.~
 @35351     = ~Quiver of Plenty~
 @36351     = ~Quiver of Plenty
 (Conjuration)
@@ -3245,6 +3247,23 @@ Area of Effect: Caster
 Saving Throw: None
 
 This spell enables the caster to bring back to memory 2 spells that have been previously cast. If no spells have been cast yet, nothing happens. Wondrous Recall cannot recall 6th-level or higher spells.~
+@35655     = ~Bolt of Glory~
+@36655     = ~Bolt of Glory
+(Evocation)
+Level: Clr 6, Pal 6
+Range: Sight of Caster
+Duration: Instantaneous
+Casting Time: 5
+Area of Effect: 1 creature
+Saving Throw: None
+
+This spell launches a divine bolt at the target, dealing magic damage. The damage depends on the type of creature hit:
+
+Fiends: 20d6
+Undead: 15d6
+All other creatures: 10d6
+
+There is no Saving Throw, and the target's Spell Resistance matters not.~
 @35753     = ~Power Word: Heal~
 @36753     = ~Power Word: Heal
 (Divination)
@@ -3333,6 +3352,17 @@ Area of Effect: 1 creature
 Saving Throw: None
 
 Identify Creature reveals useful combat information about the target creature. The information includes the creature's level, current and maximum hit points, number of attacks per round, ability scores, resistances, saving throws, and various other traits that depend on the creature.~
+@37252     = ~Sound Burst~
+@38252     = ~Sound Burst
+(Evocation)
+Level: Brd 2
+Range: Sight of Caster
+Duration: 1 round
+Casting Time: 2
+Area of Effect: 15-foot radius
+Saving Throw: Fortitude partial
+
+This spell releases an extremely loud and jarring burst of sound. Creatures in the area of effect take 1d8 magic damage and must make a Fortitude save or be stunned for 1 round. Deaf creatures are not stunned but still take damage. The caster is unaffected by this spell.~
 @37351     = ~Clairvoyance~
 @38351     = ~Clairvoyance
 (Divination)
@@ -3388,6 +3418,17 @@ Area of Effect: 1 creature
 Saving Throw: Will or Fortitude negates
 
 Phantasmal Killer causes the target to be struck down by an embodiment of its worst fears. The target may make a Will save to disbelieve the illusion. On a failure, they must make a Fortitude save or die. Even on a successful Fortitude save, they still take 3d6 magic damage. If the target was panicking when they got hit by this spell, the DC of both saves is increased by 6.~
+@37453     = ~Ghoulish Feast~
+@38453     = ~Ghoulish Feast
+(Necromancy)
+Level: Clr 4, Sor/Wiz 4
+Range: Caster
+Duration: 5 rounds + 2 rounds/level
+Casting Time: 4
+Area of Effect: Caster
+Saving Throw: None
+
+This spell lets the caster summon undead by killing other creatures. During the duration of this spell, whenever the caster kills a creature, a ghoul rises to feast upon the remains. That ghoul will serve the caster for 8 hours. A ghoul will only be summoned if the caster dealt the killing damage to the creature; if the caster damaged the creature but another party member finished it off, the caster will not get a ghoul.~
 @37551     = ~Steal Spells~
 @38551     = ~Steal Spells
 (Transmutation)
@@ -3518,6 +3559,17 @@ Saving Throw: None
 Spell Sequencer lets the caster store three spells to be released later on. After casting Spell Sequencer, the caster must attempt to cast up to three spells of 4th-level or lower. Instead of being cast, those spells are stored in the sequencer (expending one use of each spell). The caster then gains the innate ability "Release Spell Sequencer." Using that ability immediately casts all three spells on the target of the ability.
 
 Spells with a range of "Caster" will be cast on the caster, regardless of the target of the ability. Spells with limited range will fail if the target is outside the spell's range.~
+@37759     = ~Sympathy~
+@38759     = ~Sympathy
+(Enchantment)
+Level: Brd 6, Drd 8, Sor/Wiz 7
+Range: Sight of Caster
+Duration: 1 round/level
+Casting Time: 7
+Area of Effect: Special
+Saving Throw: None 
+
+This spell brings forth a magical object that imbues creatures that see it with the desire to be near it. Any non-allied creature that sees the object of sympathy must make a Will save (with a +5 bonus) each round or be compelled to walk harmlessly toward the object for the round. Any creature immune to charm effects is also immune to this effect.~
 @37852     = ~Energy Drain~
 @38852     = ~Energy Drain
 (Necromancy)

@@ -200,6 +200,12 @@ COPY_EXISTING ~IEex_TRA.lua~ ~override~
 	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_tra_55391 *=.*~ ~ex_tra_55391 = %ex_tra_55391%~
 	ex_tra_55392 = RESOLVE_STR_REF(@55392)
 	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_tra_55392 *=.*~ ~ex_tra_55392 = %ex_tra_55392%~
+	ex_tra_55491 = RESOLVE_STR_REF(@55491)
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_tra_55491 *=.*~ ~ex_tra_55491 = %ex_tra_55491%~
+	ex_tra_55492 = RESOLVE_STR_REF(@55492)
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_tra_55492 *=.*~ ~ex_tra_55492 = %ex_tra_55492%~
+	ex_tra_55493 = RESOLVE_STR_REF(@55493)
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_tra_55493 *=.*~ ~ex_tra_55493 = %ex_tra_55493%~
 
 	SPRINT ex_str_hit @55398
 	REPLACE_TEXTUALLY ~ex_str_hit *=.*~ ~ex_str_hit = "%ex_str_hit%"~
@@ -274,15 +280,11 @@ COPY ~%mod_folder%/tables/XPLEVEL.2da~ ~override~
 
 // revised monk fists
 
-COPY ~%mod_folder%/itm/00MFIST1.itm~ ~override~
-COPY ~%mod_folder%/itm/00MFIST2.itm~ ~override~
-COPY ~%mod_folder%/itm/00MFIST3.itm~ ~override~
-COPY ~%mod_folder%/itm/00MFIST4.itm~ ~override~
-COPY ~%mod_folder%/itm/00MFIST5.itm~ ~override~
-COPY ~%mod_folder%/itm/00MFIST6.itm~ ~override~
-COPY ~%mod_folder%/itm/00MFIST7.itm~ ~override~
-COPY ~%mod_folder%/itm/00MFIST8.itm~ ~override~
-COPY ~%mod_folder%/itm/00MFIST9.itm~ ~override~
+COPY_EXISTING ~IEex_WEIDU.lua~ ~override~
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_monk_fist_progression *=.*~ ~ex_monk_fist_progression = {[1] = "USMFIS01", [2] = "USMFIS02", [3] = "USMFIS03", [4] = "USMFIS04", [5] = "USMFIS05", [6] = "USMFIS06", [7] = "USMFIS07", [8] = "USMFIS08", [9] = "USMFIS09", [10] = "USMFIS10", [11] = "USMFIS11", [12] = "USMFIS12", [13] = "USMFIS13", [14] = "USMFIS14", [15] = "USMFIS15", [16] = "USMFIS16", [17] = "USMFIS17", [18] = "USMFIS18", [19] = "USMFIS19", [20] = "USMFIS20", [21] = "USMFIS21", [22] = "USMFIS22", [23] = "USMFIS23", [24] = "USMFIS24", [25] = "USMFIS25", [26] = "USMFIS26", [27] = "USMFIS27", [28] = "USMFIS28", [29] = "USMFIS29", [30] = "USMFIS30", [31] = "USMFIS31", [32] = "USMFIS32", [33] = "USMFIS33", [34] = "USMFIS34", [35] = "USMFIS35", [36] = "USMFIS36", [37] = "USMFIS37", [38] = "USMFIS38", [39] = "USMFIS39", [40] = "USMFIS40", [41] = "USMFIS41", [42] = "USMFIS42", [43] = "USMFIS43", [44] = "USMFIS44", [45] = "USMFIS45", [46] = "USMFIS46", [47] = "USMFIS47", [48] = "USMFIS48", [49] = "USMFIS49", [50] = "USMFIS50", }~
+
+COPY_EXISTING_REGEXP ~USMFIS1[3-9]\.itm~ ~override~ ~USMFIS[2345][0-9]\.itm~ ~override~
+	LPF ADD_ITEM_EQEFFECT INT_VAR opcode=500 target=1 timing=2 STR_VAR resource=~MEAPRBON~ END
 
 // revised Animal Empathy and new strings
 
@@ -627,6 +629,7 @@ LAF ADD_FEAT_IWD2 INT_VAR nameref=RESOLVE_STR_REF(@349) descref=RESOLVE_STR_REF(
 LAF ADD_FEAT_IWD2 INT_VAR nameref=RESOLVE_STR_REF(@355) descref=RESOLVE_STR_REF(@356) max=1 STR_VAR name=~ME_PERSISTENT_SPELL~ script=~Feats_PersistentSpell~ featspl_1=~USFPESP1~ END
 LAF ADD_FEAT_IWD2 INT_VAR nameref=RESOLVE_STR_REF(@361) descref=RESOLVE_STR_REF(@362) max=1 STR_VAR name=~ME_WIDEN_SPELL~ script=~Feats_WidenSpell~ featspl_1=~USFWISP1~ END
 LAF ADD_FEAT_IWD2 INT_VAR nameref=RESOLVE_STR_REF(@363) descref=RESOLVE_STR_REF(@364) max=1 STR_VAR name=~ME_MASS_SPELL~ script=~Feats_MassSpell~ featspl_1=~USFMSSP1~ END
+LAF ADD_FEAT_IWD2 INT_VAR nameref=RESOLVE_STR_REF(@365) descref=RESOLVE_STR_REF(@366) max=1 STR_VAR name=~ME_MANYSHOT~ script=~Feats_Manyshot~ featspl_1=~USFMNSH1~ END
 // New descriptions for classes
 COPY_EXISTING ~help02.2da~ ~override~
   COUNT_2DA_COLS num_cols

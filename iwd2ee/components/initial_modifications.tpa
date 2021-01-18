@@ -291,24 +291,16 @@ COPY_EXISTING ~IEex_TRA.lua~ ~override~
 	REPLACE_TEXTUALLY ~ex_str_55454 *=.*~ ~ex_str_55454 = "%ex_str_55454%"~
 	SPRINT ex_str_55455 @55455
 	REPLACE_TEXTUALLY ~ex_str_55455 *=.*~ ~ex_str_55455 = "%ex_str_55455%"~
-	SPRINT ex_str_1st_level @55461
-	REPLACE_TEXTUALLY ~ex_str_1st_level *=.*~ ~ex_str_1st_level = "%ex_str_1st_level%"~
-	SPRINT ex_str_2nd_level @55462
-	REPLACE_TEXTUALLY ~ex_str_2nd_level *=.*~ ~ex_str_2nd_level = "%ex_str_2nd_level%"~
-	SPRINT ex_str_3rd_level @55463
-	REPLACE_TEXTUALLY ~ex_str_3rd_level *=.*~ ~ex_str_3rd_level = "%ex_str_3rd_level%"~
-	SPRINT ex_str_4th_level @55464
-	REPLACE_TEXTUALLY ~ex_str_4th_level *=.*~ ~ex_str_4th_level = "%ex_str_4th_level%"~
-	SPRINT ex_str_5th_level @55465
-	REPLACE_TEXTUALLY ~ex_str_5th_level *=.*~ ~ex_str_5th_level = "%ex_str_5th_level%"~
-	SPRINT ex_str_6th_level @55466
-	REPLACE_TEXTUALLY ~ex_str_6th_level *=.*~ ~ex_str_6th_level = "%ex_str_6th_level%"~
-	SPRINT ex_str_7th_level @55467
-	REPLACE_TEXTUALLY ~ex_str_7th_level *=.*~ ~ex_str_7th_level = "%ex_str_7th_level%"~
-	SPRINT ex_str_8th_level @55468
-	REPLACE_TEXTUALLY ~ex_str_8th_level *=.*~ ~ex_str_8th_level = "%ex_str_8th_level%"~
-	SPRINT ex_str_9th_level @55469
-	REPLACE_TEXTUALLY ~ex_str_9th_level *=.*~ ~ex_str_9th_level = "%ex_str_9th_level%"~
+	ex_spelllevel1 = RESOLVE_STR_REF(@55461)
+	ex_spelllevel2 = RESOLVE_STR_REF(@55462)
+	ex_spelllevel3 = RESOLVE_STR_REF(@55463)
+	ex_spelllevel4 = RESOLVE_STR_REF(@55464)
+	ex_spelllevel5 = RESOLVE_STR_REF(@55465)
+	ex_spelllevel6 = RESOLVE_STR_REF(@55466)
+	ex_spelllevel7 = RESOLVE_STR_REF(@55467)
+	ex_spelllevel8 = RESOLVE_STR_REF(@55468)
+	ex_spelllevel9 = RESOLVE_STR_REF(@55469)
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_spelllevelstrrefs *=.*~ ~ex_spelllevelstrrefs = {%ex_spelllevel1%, %ex_spelllevel2%, %ex_spelllevel3%, %ex_spelllevel4%, %ex_spelllevel5%, %ex_spelllevel6%, %ex_spelllevel7%, %ex_spelllevel8%, %ex_spelllevel9%}~
 	IF_EXISTS
 
 STRING_SET_EVALUATE 32702 @980
@@ -696,3 +688,97 @@ COPY_EXISTING ~LISTDOMN.2da~ ~override~
 	END
 
 VERBOSE
+
+<<<<<<<< .../script.baf
+IF
+	Global("US_Initialize","GLOBAL",0)
+	!InCutsceneMode()
+	GlobalGT("Know_Hedron","GLOBAL",0)
+THEN
+	RESPONSE #100
+		SetGlobal("US_Initialize","GLOBAL",1)
+		SetGlobalTimer("US_Initialize_Timer","GLOBAL",3)
+		ApplySpellRES("USRACEAB",Player1)  // No such index
+		ApplySpellRES("USAPRBON",Player1)  // No such index
+END
+
+IF
+	Exists(Player1)
+	!InCutsceneMode()
+	Global("US_Initialize_1","GLOBAL",0)
+	Global("US_Initialize","GLOBAL",1)
+	!GlobalTimerNotExpired("US_Initialize_Timer","GLOBAL")
+THEN
+	RESPONSE #100
+		SetGlobal("US_Initialize_1","GLOBAL",1)
+		ApplySpellRES("USRACEAB",Player1)  // No such index
+		ApplySpellRES("USAPRBON",Player1)  // No such index
+END
+
+IF
+	Exists(Player2)
+	!InCutsceneMode()
+	Global("US_Initialize_2","GLOBAL",0)
+	Global("US_Initialize","GLOBAL",1)
+	!GlobalTimerNotExpired("US_Initialize_Timer","GLOBAL")
+THEN
+	RESPONSE #100
+		SetGlobal("US_Initialize_2","GLOBAL",1)
+		ApplySpellRES("USRACEAB",Player2)  // No such index
+		ApplySpellRES("USAPRBON",Player2)  // No such index
+END
+
+IF
+	Exists(Player3)
+	!InCutsceneMode()
+	Global("US_Initialize_3","GLOBAL",0)
+	Global("US_Initialize","GLOBAL",1)
+	!GlobalTimerNotExpired("US_Initialize_Timer","GLOBAL")
+THEN
+	RESPONSE #100
+		SetGlobal("US_Initialize_3","GLOBAL",1)
+		ApplySpellRES("USRACEAB",Player3)  // No such index
+		ApplySpellRES("USAPRBON",Player3)  // No such index
+END
+
+IF
+	Exists(Player4)
+	!InCutsceneMode()
+	Global("US_Initialize_4","GLOBAL",0)
+	Global("US_Initialize","GLOBAL",1)
+	!GlobalTimerNotExpired("US_Initialize_Timer","GLOBAL")
+THEN
+	RESPONSE #100
+		SetGlobal("US_Initialize_4","GLOBAL",1)
+		ApplySpellRES("USRACEAB",Player4)  // No such index
+		ApplySpellRES("USAPRBON",Player4)  // No such index
+END
+
+IF
+	Exists(Player5)
+	!InCutsceneMode()
+	Global("US_Initialize_5","GLOBAL",0)
+	Global("US_Initialize","GLOBAL",1)
+	!GlobalTimerNotExpired("US_Initialize_Timer","GLOBAL")
+THEN
+	RESPONSE #100
+		SetGlobal("US_Initialize_5","GLOBAL",1)
+		ApplySpellRES("USRACEAB",Player5)  // No such index
+		ApplySpellRES("USAPRBON",Player5)  // No such index
+END
+
+IF
+	Exists(Player6)
+	!InCutsceneMode()
+	Global("US_Initialize_6","GLOBAL",0)
+	Global("US_Initialize","GLOBAL",1)
+	!GlobalTimerNotExpired("US_Initialize_Timer","GLOBAL")
+THEN
+	RESPONSE #100
+		SetGlobal("US_Initialize_6","GLOBAL",1)
+		ApplySpellRES("USRACEAB",Player6)  // No such index
+		ApplySpellRES("USAPRBON",Player6)  // No such index
+END
+
+>>>>>>>>
+EXTEND_BOTTOM ~baldur.bcs~ ~.../script.baf~

@@ -205,7 +205,7 @@
 
 @55401=~<EXSSFULL1>~
 @55402=~<EXSSFULL2>~
-@55431=~<EXSSREGAINEDLOSTAND><EXSSNUMSPELLS> <EXSSLEVELORNAME> spell~
+@55431=~<EXSSREGAINEDLOSTAND><EXSSNUMSPELLS> <EXSSLEVELORNAME> spell~ //e.g. ~Regained 1 Magic Missile spell~ or ~Lost 1 2nd-level spell~~
 @55432=~<EXSSREGAINEDLOSTAND><EXSSNUMSPELLS> <EXSSLEVELORNAME> spells~
 @55453=~Regained ~
 @55454=~Lost ~
@@ -223,6 +223,9 @@
 @55482=~You do not have a spell memorized that can counter that spell.~
 @55483=~Attempts to counter <EXCSNAM1>'s spell~
 @55484=~Counterspell failed: <EXCSNAM1> is not casting a spell~
+@55491=~Metamagic failed: You do not have any spells of <EXMMLEVEL> or higher memorized~
+@55492=~Metamagic failed: You do not have any spells of <EXMMLEVEL> or higher remaining~
+@55493=~Metamagic failed: The resulting spell is over 9th-level~
 
 @55500=~<EXACVAL1> is not a valid spell for Curing Contingency~
 @55596=~<EXACVAL1> cannot be stored in this sequencer~

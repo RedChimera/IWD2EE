@@ -100,7 +100,7 @@ IEex_ProjectileType = {
 [20] = 1, [21] = 1, [22] = 7, [23] = 2, [24] = 1, [25] = 7, [26] = 7, [27] = 1, [28] = 6, [29] = 1, [30] = 1, [31] = 1, [32] = 1, [33] = 6, [34] = 1, [35] = 1, [36] = 1, [37] = 1, [38] = 6, [39] = 1, 
 [40] = 5, [41] = 1, [42] = 6, [43] = 1, [44] = 1, [45] = 1, [46] = 1, [47] = 1, [48] = 1, [49] = 1, [50] = 1, [51] = 1, [52] = 1, [53] = 1, [54] = 1, [55] = 1, [56] = 1, [57] = 6, [58] = 1, [59] = 1, 
 [60] = 1, [61] = 1, [62] = 1, [63] = 6, [64] = 1, [65] = 1, [66] = 2, [67] = 6, [68] = 1, [69] = 3, [70] = 3, [71] = 3, [72] = 3, [73] = 3, [74] = 3, [75] = 3, [76] = 3, [77] = 3, [78] = 3, [79] = 1, 
-[80] = 6, [81] = 10, [82] = 10, [83] = 10, [84] = 10, [85] = 10, [86] = 10, [87] = 10, [88] = 10, [89] = 10, [90] = 10, [91] = 10, [92] = 6, [93] = 6, [94] = 6, [95] = 6, [96] = 8, [97] = 7, [98] = 6, [99] = 11, 
+[80] = 6, [81] = 10, [82] = 10, [83] = 10, [84] = 10, [85] = 10, [86] = 10, [87] = 10, [88] = 10, [89] = 10, [90] = 10, [91] = 10, [92] = 6, [93] = 6, [94] = 8, [95] = 6, [96] = 8, [97] = 7, [98] = 6, [99] = 11, 
 [100] = 8, [101] = 6, [102] = 1, [103] = 1, [104] = 1, [105] = 1, [106] = 1, [107] = 6, [108] = 1, [109] = 9, 
 [110] = 13, [111] = 1, [112] = 1, [113] = 1, [114] = 1, [115] = 1, [116] = 1, [117] = 1, [118] = 1, [119] = 1, 
 [120] = 1, [121] = 1, [122] = 1, [123] = 1, [124] = 1, [125] = 1, [126] = 1, [127] = 1, [128] = 1, [129] = 1, 
@@ -248,6 +248,7 @@ function IEex_Extern_OnPostProjectileCreation(CProjectile, esp)
 	if (source == 0 or source == 1 or source == 7) and IEex_Helper_GetBridge("IEex_RecordSpell", sourceID, "spellRES") ~= nil then
 		sourceRES = IEex_Helper_GetBridge("IEex_RecordSpell", sourceID, "spellRES")
 	end
+
 	if IEex_GetActorSpellState(sourceID, 251) then
 		local mutatorOpcodeList = {}
 		IEex_IterateActorEffects(sourceID, function(eData)
@@ -496,7 +497,8 @@ function EXMETAMA(originatingEffectData, actionData, creatureData)
 		local classSpellLevel = IEex_ReadByte(creatureData + 0x534, 0x0)
 		local newSpellLevel = classSpellLevel + metamagicLevelModifier
 		local spells = IEex_FetchSpellInfo(sourceID, casterTypes)
-		if hasMetamagic and classSpellLevel > 0 and metamagicLevelModifier <= 9 then
+		local noSpellsFound = true
+		if hasMetamagic and classSpellLevel > 0 and newSpellLevel <= 9 then
 			for i = newSpellLevel, 9, 1 do
 				for cType, levelList in pairs(spells) do
 					if #levelList >= i then
@@ -505,6 +507,7 @@ function EXMETAMA(originatingEffectData, actionData, creatureData)
 						local sorcererCastableCount = levelI[2]
 						local levelISpells = levelI[3]
 						if #levelISpells > 0 then
+							noSpellsFound = false
 							for i2, spell in ipairs(levelISpells) do
 								if not spellAvailable then
 									if cType == 1 or cType == 6 then
@@ -524,6 +527,34 @@ function EXMETAMA(originatingEffectData, actionData, creatureData)
 					end
 				end
 			end
+			if noSpellsFound then
+				IEex_ApplyEffectToActor(sourceID, {
+["opcode"] = 139,
+["target"] = 2,
+["timing"] = 1,
+["parameter1"] = ex_tra_55491,
+["source_target"] = sourceID,
+["source_id"] = sourceID,
+})
+			elseif not spellAvailable then
+				IEex_ApplyEffectToActor(sourceID, {
+["opcode"] = 139,
+["target"] = 2,
+["timing"] = 1,
+["parameter1"] = ex_tra_55492,
+["source_target"] = sourceID,
+["source_id"] = sourceID,
+})
+			end
+		elseif newSpellLevel > 9 then
+			IEex_ApplyEffectToActor(sourceID, {
+["opcode"] = 139,
+["target"] = 2,
+["timing"] = 1,
+["parameter1"] = ex_tra_55493,
+["source_target"] = sourceID,
+["source_id"] = sourceID,
+})
 		end
 	end
 	if spellAvailable and ex_quicken_spell[sourceID] then
@@ -1021,5 +1052,18 @@ IEex_MutatorOpcodeFunctions["EXWIDSPL"] = {
 				IEex_WriteDword(effectData + 0x18, math.floor(parameter1 * 1.5))
 			end
 		end
+    end,
+}
+
+IEex_MutatorGlobalFunctions["USWI252"] = {
+    ["typeMutator"] = function(source, creatureData, missileIndex, sourceRES)
+
+    end,
+    ["projectileMutator"] = function(source, creatureData, projectileData, sourceRES)
+		if sourceRES == "USWI252" then
+			IEex_WriteWord(projectileData + 0x2B2, 314)
+		end
+	end,
+    ["effectMutator"] = function(source, creatureData, projectileData, effectData)
     end,
 }

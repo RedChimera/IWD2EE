@@ -1801,7 +1801,6 @@ Armor Check Penalty:  -0
 Arcane Spell Failure:  10%
 Special:
   Strength: +2
-  If the wearer is using Barbarian Rage, the bonus Strength from this armor stacks with the bonus Strength from Barbarian Rage
 Weight: 15 lb.~
 @10461    = ~Uthgar's Great Blessing +1~
 @10462    = ~Crafted by the finest Barbarian armorer and proudly embroidered with Uthgar's large, beast totem spirit, the Blue Bear, this style of leather armor became the mainstay of the Blue Bear tribal warriors. 
@@ -1821,7 +1820,6 @@ Arcane Spell Failure:  10%
 Special:
   Strength: +4
   Constitution: +4
-  If the wearer is using Barbarian Rage, the bonus Strength and Constitution from this armor stack with the bonus Strength and Constitution from Barbarian Rage
 Weight: 15 lb.~
 @10463    = ~Dirty Bits +3~
 @10464    = ~It is often said that a person does not choose a profession, the profession chooses the person. So was the case with Nasty Phil, the local corpse cleaner for the Ten Towns many years ago. Nasty Phil, you see, was no undertaker - no, it was his responsibility, after a party of adventurers dispatched with a monster (or monsters) that was terrorizing a local community, to clean up the mess that was left over. 
@@ -8642,15 +8640,15 @@ Special:
 Weight: 3 lb.
 Feat Requirement:  Martial Weapon, Bow
 Type:  Two-handed~
-@11751    = ~Longbow of Fatigue +2~
+@11751    = ~Quadruple-Shot Longbow +5~
 @11752    = ~The longbow is similar to the shortbow, except that the staff is about as high as the archer is, usually 6 to 6.5 feet. It has two advantages over the shortbow: better range and hence, it is much more accurate. This one has been enhanced with magical properties, giving it an air of perfection.
 
 STATISTICS:
 
-Damage:  +3 (missile)
-Attack Bonus: +2
+Damage:  +6 (missile)
+Attack Bonus: +5
 Special:
-  Fatigue: Arrows fired from this bow inflict 2 points of fatigue (Fortitude DC 20). Once a creature has 6 points of fatigue, it thereafter receives a -1 luck penalty for every additional point of fatigue it gains.
+  The wielder can fire two additional arrows with Manyshot, but all arrows fired in the first volley suffer an additional -10 attack penalty.
 Weight: 3 lb.
 Feat Requirement:  Martial Weapon, Bow
 Type:  Two-handed~
@@ -8678,7 +8676,7 @@ Special:
 Weight: 3 lb.
 Feat Requirement:  Martial Weapon, Bow
 Type:  Two-handed~
-@11757    = ~Longbow of Movement +4~
+@11757    = ~Triple-Shot Longbow +4~
 @11758    = ~The longbow is similar to the shortbow, except that the staff is about as high as the archer is, usually 6 to 6.5 feet. It has two advantages over the shortbow: better range and hence, it is much more accurate. This one has been enhanced with magical properties, giving it an air of perfection.
 
 STATISTICS:
@@ -8686,8 +8684,7 @@ STATISTICS:
 Damage: +5 (missile)
 Attack Bonus: +4
 Special:
-  Movement Rate: +6
-  Crippling: Reduces target's movement rate by 6 for 1 round (no save)
+  The wielder can fire an additional arrow with Manyshot, but all arrows fired in the first volley suffer an additional -5 attack penalty.
 Weight: 3 lb.
 Feat Requirement:  Martial Weapon, Bow
 Type:  Two-handed~

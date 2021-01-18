@@ -2068,6 +2068,12 @@ COPY_EXISTING ~uspr654.spl~ ~override~
 	SAY UNIDENTIFIED_DESC @36654
 	SAY IDENTIFIED_DESC @36654
 
+COPY_EXISTING ~uspr655.spl~ ~override~
+	SAY NAME1 @35655
+	SAY NAME2 @35655
+	SAY UNIDENTIFIED_DESC @36655
+	SAY IDENTIFIED_DESC @36655
+
 COPY_EXISTING ~uspr753.spl~ ~override~
 	SAY NAME1 @35753
 	SAY NAME2 @35753
@@ -2121,6 +2127,12 @@ COPY_EXISTING ~uswi251.spl~ ~override~
 	SAY UNIDENTIFIED_DESC @38251
 	SAY IDENTIFIED_DESC @38251
 
+COPY_EXISTING ~uswi252.spl~ ~override~
+	SAY NAME1 @37252
+	SAY NAME2 @37252
+	SAY UNIDENTIFIED_DESC @38252
+	SAY IDENTIFIED_DESC @38252
+
 COPY_EXISTING ~uswi351.spl~ ~override~
 	SAY NAME1 @37351
 	SAY NAME2 @37351
@@ -2170,6 +2182,16 @@ COPY_EXISTING ~uswi452.spl~ ~override~
 	SAY NAME2 @37452
 	SAY UNIDENTIFIED_DESC @38452
 	SAY IDENTIFIED_DESC @38452
+
+COPY_EXISTING ~uswi453.spl~ ~override~
+	SAY NAME1 @37453
+	SAY NAME2 @37453
+	SAY UNIDENTIFIED_DESC @38453
+	SAY IDENTIFIED_DESC @38453
+
+COPY_EXISTING ~ussghoul.cre~ ~override~
+	SAY NAME1 @30053
+	SAY NAME2 @30053
 
 COPY_EXISTING ~uswi551.spl~ ~override~
 	SAY NAME1 @37551
@@ -2256,6 +2278,16 @@ COPY_EXISTING ~LISTINNT.2da~ ~override~
 	READ_2DA_ENTRY (numrows - 1) 0 2 lastindex
 	lastindex += 1
 	INSERT_2DA_ROW numrows 2 ~%lastindex% USWI758S~
+
+COPY_EXISTING ~uswi759.spl~ ~override~
+	SAY NAME1 @37759
+	SAY NAME2 @37759
+	SAY UNIDENTIFIED_DESC @38759
+	SAY IDENTIFIED_DESC @38759
+
+COPY_EXISTING ~ussympat.cre~ ~override~
+	SAY NAME1 @30054
+	SAY NAME2 @30054
 
 COPY_EXISTING ~uswi852.spl~ ~override~
 	SAY NAME1 @37852
@@ -3091,6 +3123,7 @@ COPY_EXISTING ~52BERED.sto~ ~override~
 	REPLACE_TEXTUALLY CASE_INSENSITIVE ~SPWI320Z~ ~USWI353Z~
 
 COPY_EXISTING ~53MALAVO.sto~ ~override~
+	ADD_STORE_ITEM ~USWI453Z~ BEFORE ~SPWI412Z~ #1 #1 #0 ~IDENTIFIED~ #1
 	ADD_STORE_ITEM ~SPWI526Z~ AFTER ~SPWI412Z~ #1 #1 #0 ~IDENTIFIED~ #1
 	ADD_STORE_ITEM ~SPPR519Z~ AFTER ~SPWI619Z~ #1 #1 #0 ~IDENTIFIED~ #1
 	ADD_STORE_ITEM ~USWI551Z~ AFTER ~SPPR519Z~ #1 #1 #0 ~IDENTIFIED~ #1
@@ -3113,6 +3146,8 @@ COPY_EXISTING ~60SPELLS.sto~ ~override~
 	ADD_STORE_ITEM ~SPWI630Z~ AFTER ~SPWI220Z~ #1 #1 #0 ~IDENTIFIED~ #2
 	ADD_STORE_ITEM ~SPPR410Z~ AFTER ~SPWI423Z~ #1 #1 #0 ~IDENTIFIED~ #2
 	ADD_STORE_ITEM ~USWI451Z~ AFTER ~SPWI424Z~ #1 #1 #0 ~IDENTIFIED~ #2
+	ADD_STORE_ITEM ~USWI452Z~ AFTER ~SPWI424Z~ #1 #1 #0 ~IDENTIFIED~ #2
+	ADD_STORE_ITEM ~USWI453Z~ AFTER ~SPWI424Z~ #1 #1 #0 ~IDENTIFIED~ #2
 	ADD_STORE_ITEM ~SPPR219Z~ AFTER ~SPWI518Z~ #1 #1 #0 ~IDENTIFIED~ #1
 	ADD_STORE_ITEM ~SPWI526Z~ AFTER ~SPWI525Z~ #1 #1 #0 ~IDENTIFIED~ #1
 	ADD_STORE_ITEM ~USWI553Z~ AFTER ~SPWI526Z~ #1 #1 #0 ~IDENTIFIED~ #1
@@ -3143,9 +3178,10 @@ COPY_EXISTING ~AR4000.are~ ~override~
 
 COPY_EXISTING ~AR4100.are~ ~override~
 	LPF fj_are_structure INT_VAR fj_charge0=1 fj_flags=0x1 fj_con_itm_idx=4 STR_VAR fj_structure_type=~itm~ fj_name=~USWI552Z~ END
+	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR container=3 charges1=0 charges2=0 charges3=0 single_match=1 STR_VAR old_item=~MISC07~ new_item=~SPPR301Z~ END
 
 COPY_EXISTING ~ar4102.are~ ~override~
-	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR container=22 charges1=0 charges2=0 charges3=0 single_match=1 STR_VAR old_item=~00SCRL15~ new_item=~SPPR301Z~ END
+	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR container=22 charges1=0 charges2=0 charges3=0 single_match=1 STR_VAR old_item=~00SCRL15~ new_item=~USWI453Z~ END
 
 COPY_EXISTING ~ar4103.are~ ~override~
 	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR actor_name=~BossFiend~ script_special1=~USDW751~ END
@@ -3153,6 +3189,10 @@ COPY_EXISTING ~ar4103.are~ ~override~
 COPY_EXISTING ~AR5030.are~ ~override~
 	LPF fj_are_structure INT_VAR fj_charge0=1 fj_flags=0x1 fj_con_itm_idx=0 STR_VAR fj_structure_type=~itm~ fj_name=~USWI757Z~ END
 */
+
+COPY_EXISTING ~AR6051.are~ ~override~
+	LPF fj_are_structure INT_VAR fj_charge0=1 fj_flags=0x1 fj_con_itm_idx=9 STR_VAR fj_structure_type=~itm~ fj_name=~USWI759Z~ END
+
 COPY_EXISTING ~AR6102.are~ ~override~
 	LPF fj_are_structure INT_VAR fj_charge0=1 fj_flags=0x1 fj_con_itm_idx=4 STR_VAR fj_structure_type=~itm~ fj_name=~USWI856Z~ END
 	LPF fj_are_structure INT_VAR fj_charge0=1 fj_flags=0x1 fj_con_itm_idx=5 STR_VAR fj_structure_type=~itm~ fj_name=~USWI954Z~ END
@@ -3176,6 +3216,7 @@ COPY_EXISTING ~63vese.cre~ ~override~
 	LPF	IWD2_ADD_CRE_ITEM INT_VAR cq1=0 equip=0 STR_VAR item=~USWI758Z~ slot=~inv7~ mode=~replace~ END
 	LPF	IWD2_ADD_CRE_ITEM INT_VAR cq1=0 equip=0 STR_VAR item=~USWI953Z~ slot=~inv8~ mode=~replace~ END
 
+//STRING_SET_EVALUATE 8810 @35653
 STRING_SET_EVALUATE 40239 @982
 
 INCLUDE ~%mod_folder%/components/final_patches.tpa~

@@ -1,14 +1,20 @@
 ex_proficiency_damage = {[0] = 0, [1] = 0, [2] = 0, [3] = 2, [4] = 2, [5] = 2}
 ex_proficiency_attack = {[0] = -4, [1] = 0, [2] = 1, [3] = 1, [4] = 1, [5] = 1}
+ex_monk_fist_progression = {[1] = "00MFIST1", [2] = "00MFIST1", [3] = "00MFIST1", [4] = "00MFIST2", [5] = "00MFIST2", [6] = "00MFIST2", [7] = "00MFIST2", [8] = "00MFIST3", [9] = "00MFIST3", [10] = "00MFIST4", [11] = "00MFIST4", [12] = "00MFIST5", [13] = "00MFIST6", [14] = "00MFIST6", [15] = "00MFIST6", [16] = "00MFIST7", [17] = "00MFIST7", [18] = "00MFIST7", [19] = "00MFIST7", [20] = "00MFIST7", [21] = "00MFIST8", [22] = "00MFIST8", [23] = "00MFIST8", [24] = "00MFIST8", [25] = "00MFIST8", [26] = "00MFIST9", [27] = "00MFIST9", [28] = "00MFIST9", [29] = "00MFIST9", [30] = "00MFIST9", [31] = "00MFIST9", [32] = "00MFIST9", [33] = "00MFIST9", [34] = "00MFIST9", [35] = "00MFIST9", [36] = "00MFIST9", [37] = "00MFIST9", [38] = "00MFIST9", [39] = "00MFIST9", [40] = "00MFIST9", [41] = "00MFIST9", [42] = "00MFIST9", [43] = "00MFIST9", [44] = "00MFIST9", [45] = "00MFIST9", [46] = "00MFIST9", [47] = "00MFIST9", [48] = "00MFIST9", [49] = "00MFIST9", [50] = "00MFIST9", }
 ex_sneak_attack_delay = 21
 ex_no_sneak_attack_delay = false
 ex_spell_focus_component_installed = false
 ex_no_summoning_limit = false
+ex_no_apr_limit = false
 ex_construct_race = 156
 ex_fiend_race = 164
 ex_reanimation_level_check_bonus = 5
 ex_due_south_spells = {["USWI653"] = true, }
 ex_bypass_spell_deflection = {}
+ex_linkable_self_spell_list = {["SPPR302"] = true, ["SPPR409"] = true, ["SPPR523"] = true, ["USPR953"] = true, ["USWI954"] = true, ["USWI956"] = true, }
+ex_not_linkable_spell_list = {["USPR102D"] = true, ["USPR204D"] = true, ["USPR211D"] = true, ["USPR302D"] = true, ["USPR305D"] = true, ["USPR310D"] = true, ["USPR311D"] = true, ["USPR320D"] = true, ["USPR322D"] = true, ["USPR324D"] = true, ["USPR325D"] = true, ["USPR405D"] = true, ["USPR417D"] = true, ["USPR418D"] = true, ["USPR510D"] = true, ["USPR512D"] = true, ["USPR518D"] = true, ["USPR522D"] = true, ["USPR523D"] = true, ["USPR613D"] = true, ["USPR616D"] = true, ["USPR653F"] = true, ["USPR715D"] = true, ["USPR719D"] = true, ["USPR726D"] = true, ["USPR727D"] = true, ["USPR728D"] = true, ["USWI101D"] = true, ["USWI104D"] = true, ["USWI105D"] = true, ["USWI116D"] = true, ["USWI118D"] = true, ["USWI121D"] = true, ["USWI205D"] = true, ["USWI211D"] = true, ["USWI213D"] = true, ["USWI215D"] = true, ["USWI218D"] = true, ["USWI222D"] = true, ["USWI226D"] = true, ["USWI227D"] = true, ["USWI252D"] = true, ["USWI302D"] = true, ["USWI306D"] = true, ["USWI312D"] = true, ["USWI316D"] = true, ["USWI320D"] = true, ["USWI352D"] = true, ["USWI353D"] = true, ["USWI422D"] = true, ["USWI423D"] = true, ["USWI425D"] = true, ["USWI452D"] = true, ["USWI452E"] = true, ["USWI453D"] = true, ["USWI503D"] = true, ["USWI507D"] = true, ["USWI508D"] = true, ["USWI509D"] = true, ["USWI510D"] = true, ["USWI524D"] = true, ["USWI652"] = true, ["USWI653D"] = true, ["USWI702D"] = true, ["USWI705D"] = true, ["USWI706D"] = true, ["USWI711D"] = true, ["USWI717D"] = true, ["USWI718D"] = true, ["USWI751D"] = true, ["USWI755"] = true, ["USWI759E"] = true, ["USWI806D"] = true, ["USWI810D"] = true, ["USWI852D"] = true, ["USWI853D"] = true, ["USWI906D"] = true, ["USWI911D"] = true, ["USWI954D"] = true, ["USWI954E"] = true, }
+ex_linkable_ability_list = {}
+ex_linkable_prefix_list = {"USIW", "USIP", "USMS", "USES"}
 ex_feat_name_id = {}
 ex_listspll = {}
 ex_listdomn = {}

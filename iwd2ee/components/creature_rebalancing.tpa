@@ -108,6 +108,10 @@ COPY_EXISTING ~uses015.spl~ ~override~
 	SAY NAME2 @21015
 	LPF ALTER_EFFECT INT_VAR silent=1 check_headers=1 check_globals=1 match_opcode=139 match_parameter1=20010 parameter1=RESOLVE_STR_REF(@20010) END
 
+COPY_EXISTING ~uses016.spl~ ~override~
+	SAY NAME1 @21016
+	SAY NAME2 @21016
+
 COPY_EXISTING ~usmantl3.spl~ ~override~
 	SAY NAME1 @37752
 	SAY NAME2 @38752
@@ -4547,56 +4551,6 @@ USCWHFFB	USHFCWFB
 USCWHFFQ	USHFCWFQ
 ~
 UNLESS ~USCWHFMO~
-
-// Patches monks so they use monk fists at 12 levels higher on Heart of Fury Mode (otherwise their fists are treated as if their level wasn't increased)
-
-COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
-	READ_BYTE levelmonk monklevel
-	PATCH_IF monklevel > 2 BEGIN
-		READ_LONG 0x612 itemslotsoffset
-		READ_SSHORT (itemslotsoffset + 0x6) theslot
-		PATCH_IF theslot = ~-1~ BEGIN
-			LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item=~USCWHFMO~ slot=~gloves~ END
-
-		END
-		ELSE BEGIN
-			READ_SSHORT (itemslotsoffset + 0x8) theslot
-			PATCH_IF theslot = ~-1~ BEGIN
-				LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item=~USCWHFMO~ slot=~lring~ END
-			END
-			ELSE BEGIN
-				READ_SSHORT (itemslotsoffset + 0xA) theslot
-				PATCH_IF theslot = ~-1~ BEGIN
-					LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item=~USCWHFMO~ slot=~rring~ END
-				END
-				ELSE BEGIN
-					READ_SSHORT (itemslotsoffset + 0xC) theslot
-					PATCH_IF theslot = ~-1~ BEGIN
-						LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item=~USCWHFMO~ slot=~amulet~ END
-					END
-					ELSE BEGIN
-						READ_SSHORT (itemslotsoffset + 0xE) theslot
-						PATCH_IF theslot = ~-1~ BEGIN
-							LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item=~USCWHFMO~ slot=~belt~ END
-						END
-						ELSE BEGIN
-							READ_SSHORT (itemslotsoffset + 0x10) theslot
-							PATCH_IF theslot = ~-1~ BEGIN
-								LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item=~USCWHFMO~ slot=~boots~ END
-							END
-							ELSE BEGIN
-								READ_SSHORT (itemslotsoffset + 0x2A) theslot
-								PATCH_IF theslot = ~-1~ BEGIN
-									LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item=~USCWHFMO~ slot=~cloak~ END
-								END
-							END
-						END
-					END
-				END
-			END
-		END
-	END
-	BUT_ONLY_IF_IT_CHANGES
 
 // Patches summoned creatures so they will gain HoF bonuses if an enemy summons them on Heart of Fury mode.
 

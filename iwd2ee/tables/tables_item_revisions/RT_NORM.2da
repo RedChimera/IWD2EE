@@ -100,14 +100,14 @@ RMEW_14	00ax2h86	00Club86	USSwdK59	USStaf59	EOL
 																																																
 RMIW_01	00ax1h76	00Slng02	00BowC02	00BowC04	00BowC93	00BowL03	00BowP02	00BowP98	00BowS03	00BowS90	00BowS91	00Bwhx03	00Bwhx97	00Bwlx03	00Bwlx97	00Slng02	00Slng94	00Arow91	EOL																												
 RMIW_02	00ax1h75	00BowC04	00Slng99	00BowC99	00BowL91	00BowL97	00BowL98	00BowS86	00BowS89	00BowS92	00BowS95	00BowS99	00Bwhx94	00Bwhx96	00Bwlx95	00Bwlx96	00Slng89	00Slng99	00Dart86	EOL																						
-RMIW_03	00ax1h06	00ax1h72	00HamT09	00Dagg81	00BowC92	00BowC98	00BowL90	00BowL95	00BowL96	00BowS87	00BowS88	00BowS98	00Bwhx93	00Bwhx95	00Bwlx91	00Bwlx94	00Slng93	00Slng98	00Dart83	00Dart84	EOL																						
+RMIW_03	00ax1h06	00ax1h72	00HamT09	00Dagg81	00BowC92	00BowC98	00BowL90	00BowL95	00BowS87	00BowS88	00BowS98	00Bwhx93	00Bwhx95	00Bwlx91	00Bwlx94	00Slng93	00Slng98	00Dart83	00Dart84	EOL																						
 RMIW_04 00ax1h73	00Dagg82	00BowC95	00BowC97	00BowL89	00BowS94	00BowS97	00Bwhx92	00Bwlx04	00Bwlx93	00Slng92	00Slng97	00Arow86	00Bull86	EOL																																			
 RMIW_05	00ax1h89	00ax1h98	00HamT10	00BowC96	00BowL88	00BowS96	00Bwhx04	00Bwhx91	00Bwlx92	00Slng96	EOL																																		
 RMIW_06	00BowP99	00Slng91	USax1h48	USHamT48	USArow49	EOL																																									
 RMIW_07	00BowL99	00BowS93	00Bwlx98	USBolt53	USBull53	EOL																																										
 RMIW_08	00BowC94	00Bwhx99	00Slng88	USDagg53	EOL																																							
 RMIW_09	00BowP97	00Bwhx98	00Slng90	EOL																																								
-RMIW_10 USBwhx58	USDart59	EOL
+RMIW_10 00BowL96	USBwhx58	USDart59	EOL
 RMIW_11 USArow59	USBwlx59	EOL
 RMIW_12 USBwhx57	EOL
 RMIW_13
