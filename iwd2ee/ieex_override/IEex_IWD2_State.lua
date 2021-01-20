@@ -744,7 +744,7 @@ function IEex_GetActorState(actorID, state)
 	if not IEex_IsSprite(actorID, true) then return false end
 	local share = IEex_GetActorShare(actorID)
 	local stateValue = bit.bor(IEex_ReadDword(share + 0x5BC), IEex_ReadDword(share + 0x920))
-	return (bit.band(stateValue, state) > 0)
+	return (bit.band(stateValue, state) ~= 0)
 end
 
 function IEex_GetActorSpellState(actorID, spellStateID)
@@ -8779,8 +8779,11 @@ function MECRIT(effectData, creatureData)
 --	if IEex_CheckForInfiniteLoop(targetID, IEex_GetGameTick(), "MECRIT", 5) then return end
 	local parameter1 = IEex_ReadDword(effectData + 0x18)
 	local savingthrow = IEex_ReadDword(effectData + 0x3C)
-	local special = IEex_ReadDword(effectData + 0x44)
-	if special > 0 or bit.band(savingthrow, 0x70000) > 0 then
+	local matchItemType = IEex_ReadWord(effectData + 0x44, 0x0)
+	local totalUses = IEex_ReadSignedWord(effectData + 0x46, 0x0)
+	local uses = IEex_ReadSignedWord(effectData + 0x5C, 0x0)
+	if totalUses > 0 and uses >= totalUses then return end
+	if matchItemType > 0 or bit.band(savingthrow, 0x70000) > 0 then
 		local weaponSlot = IEex_ReadByte(creatureData + 0x4BA4, 0x0)
 		local weaponHeader = IEex_ReadByte(creatureData + 0x4BA6, 0x0)
 		local slotData = IEex_ReadDword(creatureData + 0x4AD8 + weaponSlot * 0x4)
@@ -8796,7 +8799,7 @@ function MECRIT(effectData, creatureData)
 			local itemType = IEex_ReadWord(itemData + 0x1C, 0x0)
 			local equippedAppearance = IEex_ReadLString(itemData + 0x22, 2)
 			local headerType = IEex_ReadByte(itemData + 0x82 + weaponHeader * 0x38, 0x0)
-			if (bit.band(savingthrow, 0x10000) > 0 and headerType ~= 1) or (bit.band(savingthrow, 0x20000) > 0 and headerType ~= 2) or (bit.band(savingthrow, 0x40000) > 0 and (headerType ~= 1 or equippedAppearance ~= "" or (itemType ~= 0 and itemType ~= 16 and itemType ~= 19 and itemType ~= 28))) or (special > 0 and itemType ~= special) then
+			if (bit.band(savingthrow, 0x10000) > 0 and headerType ~= 1) or (bit.band(savingthrow, 0x20000) > 0 and headerType ~= 2) or (bit.band(savingthrow, 0x40000) > 0 and (headerType ~= 1 or equippedAppearance ~= "" or (itemType ~= 0 and itemType ~= 16 and itemType ~= 19 and itemType ~= 28))) or (matchItemType > 0 and matchItemType ~= special) then
 				resWrapper:free()
 				return
 			end
@@ -9225,6 +9228,7 @@ function MEWINGBU(effectData, creatureData)
 end
 
 function IEex_EvaluatePersistentEffects(actorID)
+	if not IEex_IsSprite(actorID, false) then return end
 	local creatureData = IEex_GetActorShare(actorID)
 	local temporaryFlags = IEex_ReadWord(creatureData + 0x9FA, 0x0)
 	if bit.band(temporaryFlags, 0x1) == 0 then
@@ -9403,7 +9407,7 @@ function MEAPRBON(effectData, creatureData)
 			local theparameter1 = IEex_ReadDword(eData + 0x1C)
 			local theparameter2 = IEex_ReadDword(eData + 0x20)
 			local thesavingthrow = IEex_ReadDword(eData + 0x40)
-			local thespecial = IEex_ReadDword(eData + 0x44)
+			local thespecial = IEex_ReadDword(eData + 0x48)
 			if theopcode == 1 then
 				if theparameter2 == 0 then
 					totalAttacks = totalAttacks + theparameter1
@@ -9429,7 +9433,21 @@ function MEAPRBON(effectData, creatureData)
 				elseif theparameter1 == 15 then
 					isBow = true
 				end
+--[[
+			elseif theopcode == 500 and IEex_ReadLString(eData + 0x30, 8) == "MECRIT" and IEex_ReadSignedWord(eData + 0x4A, 0x0) > 0 and then
+				local thegeneralitemcategory = IEex_ReadByte(eData + 0x48, 0x0)
+				if thegeneralitemcategory == 5 then
+					numWeapons = numWeapons + 1
+				elseif thegeneralitemcategory == 6 then
+					isFistWeapon = true
+				elseif (theparameter1 >= 62 and theparameter1 <= 66) or theparameter1 == 68 then
+					wearingLightArmor = false
+				elseif theparameter1 == 15 then
+					isBow = true
+				end
+--]]
 			end
+
 		end)
 
 		if not isBow or not rapidShotEnabled then
@@ -10040,7 +10058,7 @@ function MEGHOSTW(effectData, creatureData)
 	end
 	
 	if not disableTeleport then
-		IEex_EvaluatePersistentEffects(actorID)
+		IEex_EvaluatePersistentEffects(sourceID)
 		IEex_ApplyEffectToActor(sourceID, {
 ["opcode"] = 124,
 ["target"] = 2,

@@ -5151,7 +5151,7 @@ COPY_EXISTING ~61RAKSHA.sto~ ~override~ //Rakshasa Nathaniel store
 	WRITE_LONG 0x14 150
 	WRITE_LONG 0x18 40
 	WRITE_LONG 0x1C 20
-	ADD_STORE_ITEM ~USRTHF36~ #1 #1 #1 ~IDENTIFIED~ #1 //The Spear of White Ash
+//	ADD_STORE_ITEM ~USRTHF36~ #1 #1 #1 ~IDENTIFIED~ #1 //The Spear of White Ash
 	ADD_STORE_ITEM ~62RTHF01~ #1 #1 #1 ~IDENTIFIED~ #1 //Dirty Bits armor
 	ADD_STORE_ITEM ~00RING17~ #1 #1 #1 ~IDENTIFIED~ #1 //Ring of Most Twisted Strength
 	ADD_STORE_ITEM ~00BWHX04~ BEFORE ~00BOLT98~ #1 #1 #1 ~IDENTIFIED~ #1 //Heavy Crossbow of Missile Weakness +2

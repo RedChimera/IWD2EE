@@ -227,11 +227,12 @@ ex_empowerable_opcodes = {[0] = true, [1] = true, [6] = true, [10] = true, [12] 
 			sourceSpell = string.sub(parent_resource, 1, 7)
 		end
 		if opcode == 12 and parent_resource == "IEEX_DAM" then
-			if bit.band(savingthrow, 0x10000) > 0 and (IEex_GetActorSpellState(sourceID, 195) or IEex_GetActorSpellState(sourceID, 225)) then
+			if (bit.band(savingthrow, 0x10000) > 0 and (IEex_GetActorSpellState(sourceID, 195) or IEex_GetActorSpellState(sourceID, 225))) or bit.band(savingthrow, 0x40000) == 0 then
 				local weaponRES = IEex_ReadLString(effectData + 0x6C, 8)
 				local launcherRES = IEex_ReadLString(effectData + 0x74, 8)
 				local baseCriticalMultiplier = 2
 				local criticalMultiplier = baseCriticalMultiplier
+				local damageType = bit.band(parameter2, 0xFFFF0000)
 				local itemType = 0
 				local headerType = 0
 				local currentHeader = IEex_ReadByte(sourceData + 0x4BA6, 0x0)
@@ -256,10 +257,13 @@ ex_empowerable_opcodes = {[0] = true, [1] = true, [6] = true, [10] = true, [12] 
 					for i = 0, numHeaderEffects - 1, 1 do
 						local offset = weaponData + effectOffset + (headerFirstEffectIndex + i) * 0x30
 						local theopcode = IEex_ReadWord(offset, 0x0)
+						local theparameter2 = IEex_ReadDword(offset + 0x8)
 						local theresource = IEex_ReadLString(offset + 0x14, 8)
 						if theopcode == 500 and theresource == "MEEXHIT" then
-							local theparameter2 = IEex_ReadDword(offset + 0x8)
 							exhitIndexList[theparameter2] = true
+						elseif theopcode == 288 and theparameter2 == 213 then
+							damageType = IEex_ReadDword(offset + 0x4)
+							IEex_WriteWord(effectData + 0x1E, damageType)
 						end
 					end
 					for i = 0, numGlobalEffects - 1, 1 do
@@ -335,14 +339,16 @@ ex_empowerable_opcodes = {[0] = true, [1] = true, [6] = true, [10] = true, [12] 
 				end
 				IEex_IterateActorEffects(sourceID, function(eData)
 					local theopcode = IEex_ReadDword(eData + 0x10)
+					local theparameter1 = IEex_ReadDword(eData + 0x1C)
 					local theparameter2 = IEex_ReadDword(eData + 0x20)
 					local thesavingthrow = IEex_ReadDword(eData + 0x40)
 					local thespecial = IEex_ReadDword(eData + 0x48)
 					if theopcode == 288 and theparameter2 == 195 and bit.band(thesavingthrow, 0x10000) == 0 and (thespecial == -1 or thespecial == itemType) then
-						local theparameter1 = IEex_ReadDword(eData + 0x1C)
 						criticalMultiplier = criticalMultiplier + theparameter1
+					elseif theopcode == 288 and theparameter2 == 213 then
+						damageType = theparameter1
+						IEex_WriteWord(effectData + 0x1E, damageType)
 					elseif theopcode == 288 and theparameter2 == 225 and bit.band(thesavingthrow, 0x10000) == 0 and bit.band(thesavingthrow, 0x100000) == 0 and bit.band(thesavingthrow, 0x800000) > 0 then
-						local theparameter1 = IEex_ReadDword(eData + 0x1C)
 						local matchHeader = IEex_ReadWord(eData + 0x48, 0x0)
 						local spellRES = IEex_ReadLString(eData + 0x30, 8)
 						if (theparameter1 == 0 or exhitIndexList[theparameter1] ~= nil) and spellRES ~= "" and (matchHeader == 0 or matchHeader == headerType) and (bit.band(thesavingthrow, 0x4000000) == 0 or bit.band(IEex_ReadDword(effectData + 0xC8), 0x40) == 0) then
@@ -375,7 +381,29 @@ ex_empowerable_opcodes = {[0] = true, [1] = true, [6] = true, [10] = true, [12] 
 						end
 					end
 				end)
-				if criticalMultiplier ~= baseCriticalMultiplier then
+				if bit.band(savingthrow, 0x40000) == 0 then
+					savingthrow = bit.bor(savingthrow, 0x40000)
+					IEex_WriteDword(effectData + 0x3C, savingthrow)
+					local damageMultiplier = 100
+					IEex_IterateActorEffects(sourceID, function(eData)
+						local theopcode = IEex_ReadDword(eData + 0x10)
+						local theparameter1 = IEex_ReadDword(eData + 0x1C)
+						local theparameter2 = IEex_ReadDword(eData + 0x20)
+						if theopcode == 73 and theparameter2 > 0 then
+							if ex_damage_multiplier_type[damageType] == theparameter2 then
+								damageMultiplier = damageMultiplier + theparameter1
+								local theresource = IEex_ReadLString(eData + 0x30, 8)
+								if theresource == parent_resource then
+									local thespecial = IEex_ReadDword(eData + 0x48)
+									damageMultiplier = damageMultiplier + thespecial
+								end
+							end
+						end
+					end)
+					parameter1 = math.floor(parameter1 * damageMultiplier / 100)
+					IEex_WriteDword(effectData + 0x18, parameter1)
+				end
+				if bit.band(savingthrow, 0x10000) > 0 and criticalMultiplier ~= baseCriticalMultiplier then
 					parameter1 = math.floor(parameter1 / baseCriticalMultiplier) * criticalMultiplier
 					IEex_WriteDword(effectData + 0x18, parameter1)
 				end

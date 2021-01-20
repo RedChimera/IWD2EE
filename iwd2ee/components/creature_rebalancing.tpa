@@ -2381,6 +2381,7 @@ COPY_EXISTING ~60YTARCH.cre~ ~override~ ~60RANYTA.cre~ ~override~
 	END
 	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~ranger~ resource=~SPPR517~ END
 	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~ranger~ resource=~SPPR523~ END
+	LPF ADD_CRE_EXTENDED_FEAT INT_VAR points=1 STR_VAR name=~ME_MANYSHOT~ END
 
 COPY_EXISTING ~60YUANTI.cre~ ~override~
 	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelfighter=13 STR_VAR updatehp=~average~ END
@@ -2391,6 +2392,7 @@ COPY_EXISTING ~60YUANTI.cre~ ~override~
 	WRITE_BYTE wisdom 16
 	WRITE_BYTE charisma 18
 	WRITE_BYTE challengerating 15
+	WRITE_BYTE skillbluff 8
 	WRITE_BYTE proficiencyaxe 3
 	WRITE_BYTE proficiencygreatsword 3
 	WRITE_BYTE proficiencylargesword 3
@@ -2409,6 +2411,7 @@ COPY_EXISTING ~60YTELIT.cre~ ~override~
 	WRITE_BYTE wisdom 16
 	WRITE_BYTE charisma 18
 	WRITE_BYTE challengerating 15
+	WRITE_BYTE skillbluff 9
 	WRITE_BYTE proficiencyaxe 3
 	WRITE_BYTE proficiencygreatsword 3
 	WRITE_BYTE proficiencylargesword 3
@@ -2451,6 +2454,7 @@ COPY_EXISTING ~61YAARCH.cre~ ~override~ ~61DYAARC.cre~ ~override~
 	END
 	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~ranger~ resource=~SPPR517~ END
 	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~ranger~ resource=~SPPR523~ END
+	LPF ADD_CRE_EXTENDED_FEAT INT_VAR points=1 STR_VAR name=~ME_MANYSHOT~ END
 
 COPY_EXISTING ~61YASENT.cre~ ~override~
 	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelfighter=4 newlevelranger=13 STR_VAR updatehp=~max~ END
@@ -2485,6 +2489,7 @@ COPY_EXISTING ~61YASENT.cre~ ~override~
 	END
 	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~ranger~ resource=~SPPR517~ END
 	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~ranger~ resource=~SPPR523~ END
+	LPF ADD_CRE_EXTENDED_FEAT INT_VAR points=1 STR_VAR name=~ME_MANYSHOT~ END
 
 COPY_EXISTING ~61LIZLEA.cre~ ~override~ ~61LIZLER.cre~ ~override~
 	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelfighter=13 STR_VAR updatehp=~max~ END

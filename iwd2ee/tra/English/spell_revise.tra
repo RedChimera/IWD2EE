@@ -3567,9 +3567,9 @@ Range: Sight of Caster
 Duration: 1 round/level
 Casting Time: 7
 Area of Effect: Special
-Saving Throw: None 
+Saving Throw: Will negates
 
-This spell brings forth a magical object that imbues creatures that see it with the desire to be near it. Any non-allied creature that sees the object of sympathy must make a Will save (with a +5 bonus) each round or be compelled to walk harmlessly toward the object for the round. Any creature immune to charm effects is also immune to this effect.~
+This spell brings forth a magical object that imbues creatures that see it with the desire to be near it. Any non-allied creature that sees the object of sympathy must make a Will save (with a +3 bonus) each round or be compelled to walk harmlessly toward the object for the round. Any creature immune to charm effects is also immune to this effect.~
 @37852     = ~Energy Drain~
 @38852     = ~Energy Drain
 (Necromancy)
