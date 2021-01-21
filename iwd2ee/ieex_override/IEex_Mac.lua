@@ -175,12 +175,13 @@ function IEex_EncodeRM(args, func)
 			if didAsOffset then IEex_Error("Only one offset allowed") end
 			didAsOffset = true
 
-			if argsOffsetAdjustment then offsetIn = offsetIn + argsOffsetAdjustment end
-			if offsetIn == 0 then return true end
-			offset = offsetIn
+			local signedOffset = (tryIndex == 1 or matchedPatterns[tryIndex - 1] == "+")
+				and offsetIn or -offsetIn
+			if argsOffsetAdjustment then signedOffset = signedOffset + argsOffsetAdjustment end
+			if signedOffset == 0 then return true end
+			offset = math.abs(signedOffset)
 
-			local adding = tryIndex == 1 or matchedPatterns[tryIndex - 1] == "+"
-			if adding then
+			if signedOffset >= 0 then
 				if offset <= 0x7F then
 					mod = 1
 				elseif offset <= 0x7FFFFFFF then

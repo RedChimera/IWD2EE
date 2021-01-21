@@ -631,6 +631,16 @@ function IEex_Extern_GetHighlightContainerID()
 	return IEex_Helper_GetBridge("IEex_Quickloot", "highlightContainerID")
 end
 
+function IEex_Extern_OnUpdateRecordDescription(CScreenCharacter, CGameSprite, CUIControlEditMultiLine, m_plstStrings)
+	IEex_AssertThread(IEex_Thread.Both, true)
+	local descPanelNum = IEex_ReadByte(CScreenCharacter + 0x1844, 0)
+	IEex_IterateCPtrList(m_plstStrings, function(lineEntry)
+		local line = IEex_ReadString(IEex_ReadDword(lineEntry + 0x4))
+		-- do whatever changes you want to the line here
+		IEex_CString_Set(lineEntry + 0x4, line)
+	end)
+end
+
 -------------------
 -- Thread: Async --
 -------------------

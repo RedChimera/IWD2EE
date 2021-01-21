@@ -562,6 +562,24 @@
 
 	IEex_WriteDword(0x85A3E4, 0x4D4D70)
 
+	-------------------------------------------
+	-- IEex_Extern_OnUpdateRecordDescription --
+	-------------------------------------------
+
+	IEex_HookBeforeCall(0x5DC792, IEex_FlattenTable({[[
+		!mark_esp(50)
+		!push_all_registers_iwd2
+		]], IEex_GenLuaCall("IEex_Extern_OnUpdateRecordDescription", {
+			["args"] = {
+				{"!push(esi)"},
+				{"!push_using_marked_esp([esp-3C])"},
+				{"!push(ebx)"},
+				{"!push(ecx)"},
+			},
+		}), [[
+		@call_error
+		!pop_all_registers_iwd2
+	]]}))
 
 	IEex_EnableCodeProtection()
 
