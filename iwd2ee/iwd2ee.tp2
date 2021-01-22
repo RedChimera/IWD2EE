@@ -1,7 +1,7 @@
 BACKUP ~iwd2ee/backup~
-AUTHOR ~ced2168@columbia.edu~
+AUTHOR ~Red Chimera~
 
-VERSION ~2.6.8~
+VERSION ~2.8.5~
 
 //MODDER
 
@@ -39,6 +39,7 @@ LANGUAGE   ~English~
 		   ~iwd2ee/tra/English/npc_core.tra~
            ~iwd2ee/tra/English/revised_battle_square.tra~
            ~iwd2ee/tra/English/lua.tra~
+           ~iwd2ee/tra/English/racial_enemies.tra~
 
 
 

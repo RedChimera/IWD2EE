@@ -67,7 +67,7 @@ COPY_EXISTING_REGEXP ~.*\.itm~ ~override~
 				READ_SHORT offset theopcode
 				READ_LONG (offset + 0x8) theparameter2
 				READ_BYTE (offset + 0xC) thetiming
-				PATCH_IF (theopcode = 12 OR (theopcode = 241 AND theparameter2 = 0)) AND thetiming != 3 AND thetiming != 4 BEGIN
+				PATCH_IF (theopcode = 12 OR (theopcode = 241 AND theparameter2 = 0)) BEGIN
 //				PATCH_IF (theopcode = 241 AND theparameter2 = 0) AND thetiming != 3 AND thetiming != 4 BEGIN
 					READ_BYTE (offset + 0x4) theparameter1
 					READ_SBYTE (offset + 0x1C) thedicenumber
@@ -98,7 +98,7 @@ COPY_EXISTING_REGEXP ~.*\.itm~ ~override~
 					END
 					WRITE_SHORT offset 500
 					WRITE_LONG (offset + 0x4) (theparameter1 + (thedicesize << 8) + (thedicenumber << 16))
-					WRITE_BYTE (offset + 0xC) 0
+//					WRITE_BYTE (offset + 0xC) 0
 					WRITE_LONG (offset + 0xE) 0
 					WRITE_ASCII (offset + 0x14) ~EXDAMAGE~ #8
 					WRITE_LONG (offset + 0x1C) 0
@@ -110,6 +110,67 @@ COPY_EXISTING_REGEXP ~.*\.itm~ ~override~
 		END
 	END
 	UNLESS ~EXDAMAGE~
+	BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING_REGEXP ~.*\.spl~ ~override~
+	READ_LONG 0x18 thespellflags
+	PATCH_IF (thespellflags BAND 0x00004000) = 0 BEGIN
+		READ_LONG 0x64 headeroffset
+		READ_SHORT 0x68 numheaders
+		READ_LONG 0x6A effectoffset
+		READ_SHORT (headeroffset + 0x28 * (numheaders - 1) + 0x1E) lastheadernumeffects
+		READ_SHORT (headeroffset + 0x28 * (numheaders - 1) + 0x20) lastheaderfirsteffectindex
+		numeffects = lastheadernumeffects + lastheaderfirsteffectindex
+		offset = effectoffset
+		FOR (i = 0; i < numeffects; ++i) BEGIN
+			READ_SHORT offset theopcode
+			READ_LONG (offset + 0x8) theparameter2
+			READ_BYTE (offset + 0xC) thetiming
+			PATCH_IF (theopcode = 12 OR (theopcode = 241 AND theparameter2 = 0)) BEGIN
+				READ_BYTE (offset + 0x4) theparameter1
+				READ_SBYTE (offset + 0x1C) thedicenumber
+				PATCH_IF thedicenumber < 0 BEGIN
+					thedicenumber = 0
+				END
+				READ_SBYTE (offset + 0x20) thedicesize
+				PATCH_IF thedicesize < 0 BEGIN
+					thedicesize = 0
+				END
+				READ_LONG (offset + 0x24) thesavingthrow
+				thesavingthrow|=0x10000
+				thesavingthrow|=0x80000
+				PATCH_IF theopcode = 241 BEGIN
+					thesavingthrow|=0x200000
+					WRITE_LONG (offset + 0x8) 0x400000
+				END
+				PATCH_IF (thesavingthrow BAND 0x00000004) > 0 BEGIN
+					thesavingthrow&=0xFFFFFFFB
+					thesavingthrow|=0x400
+				END
+				PATCH_IF (thesavingthrow BAND 0x00000008) > 0 BEGIN
+					thesavingthrow&=0xFFFFFFF7
+					thesavingthrow|=0x800
+				END
+				PATCH_IF (thesavingthrow BAND 0x00000010) > 0 BEGIN
+					thesavingthrow&=0xFFFFFFEF
+					thesavingthrow|=0x1000
+				END
+				WRITE_SHORT offset 500
+				WRITE_LONG (offset + 0x4) (theparameter1 + (thedicesize << 8) + (thedicenumber << 16))
+				PATCH_IF thetiming = 1 OR thetiming = 9 BEGIN
+					WRITE_BYTE (offset + 0xC) 0
+				END ELSE PATCH_IF thetiming = 4 BEGIN
+					WRITE_BYTE (offset + 0xC) 3
+				END
+				WRITE_LONG (offset + 0xE) 0
+				WRITE_ASCII (offset + 0x14) ~EXDAMAGE~ #8
+				WRITE_LONG (offset + 0x1C) 0
+				WRITE_LONG (offset + 0x20) 0
+				WRITE_LONG (offset + 0x24) thesavingthrow
+			END
+			offset = offset + 0x30
+		END
+	END
 	BUT_ONLY_IF_IT_CHANGES
 
 COPY_EXISTING_REGEXP ~..BOWS..\.itm~ ~override~ ~..BOWP..\.itm~ ~override~ ~..BWLX..\.itm~ ~override~ ~..HFBS..\.itm~ ~override~ ~..HFBP..\.itm~ ~override~ ~..HFLX..\.itm~ ~override~

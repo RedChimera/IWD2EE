@@ -1423,6 +1423,7 @@ COPY_EXISTING ~spwi802.spl~ ~override~
 	FOR (i = 0; i < numheaders; ++i) BEGIN
 		LPF ALTER_SPELL_HEADER INT_VAR header=(i + 1) min_level=(i + 1) END
 		LPF ALTER_EFFECT INT_VAR header=i silent=1 check_headers=1 check_globals=0 match_opcode=12 dicenumber=(i + 1) dicesize=4 END
+		LPF ALTER_EFFECT INT_VAR header=i silent=1 check_headers=1 check_globals=0 match_opcode=500 parameter1=(0x10000 * (i + 1) + 0x400) STR_VAR match_resource=~EXDAMAGE~ END
 	END
 	SAY NAME1 @1881
 	SAY NAME2 @1881
@@ -2779,7 +2780,7 @@ COPY_EXISTING ~LISTDOMN.2da~ ~override~
 	END
 
 //Patching all damage effects on spells to call a Lua script that manually calculates the damage.
-
+/*
 COPY_EXISTING_REGEXP ~.*\.spl~ ~override~
 	READ_LONG 0x18 thespellflags
 	PATCH_IF (thespellflags BAND 0x00004000) = 0 BEGIN
@@ -2840,7 +2841,7 @@ COPY_EXISTING_REGEXP ~.*\.spl~ ~override~
 		END
 	END
 	BUT_ONLY_IF_IT_CHANGES
-
+*/
 COPY_EXISTING ~spwi022.spl~ ~override~ ~spwi112.spl~ ~override~
 	LPF ALTER_EFFECT INT_VAR silent=1 check_headers=1 check_globals=0 savingthrow=0x94000 STR_VAR match_resource=~EXDAMAGE~ END
 	BUT_ONLY_IF_IT_CHANGES

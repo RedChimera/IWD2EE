@@ -304,7 +304,9 @@ Weight: 0 lb.~
 
 STATISTICS:
 
-While equipped, the wearer is afflicted by a disease that grants +10 Strength but also -4 Dexterity and -4 Constitution. The Strength bonus will stack with Strength bonuses from other items or spells. Curing the disease will remove both the bonuses and penalties.
+Strength: +10
+Dexterity: -4
+Constitution: -4
 Special: Can only be removed by a Remove Curse spell
 Weight: 0 lb.~
 //@10090    = ~Ring of Invisibility~
@@ -4369,9 +4371,9 @@ Attack Bonus: +5
 Enchantment:  +5
 Damage Type:  Slashing
 Special:
- Holy: +2d6 against evil creatures.
- Resistance: +15 Spell Resistance
- Spell Power: Can cast the spell Dispel Magic (at level 15), No Limit per Day
+  Spell Resistance: Set to 26
+  Holy Avenger: +2d6 magic damage against evil creatures. This bonus damage is doubled against fiends and undead.
+  Dispelling: Dispel Magic on target with each hit (Will DC 21). Striking an ally dispels magic on them with no save.
 Weight:  5 lb.
 Feat Requirement:  Martial Weapon, Large Sword
 Type:  One-handed~
@@ -4398,7 +4400,7 @@ When the last of the Six had answered for their crimes upon the edge of the Cera
 
 Duke Ehld outlived his queen, living to the age of 107, at which point Ehld took his Cera Sumat and left the Barbed Kingdom... and is said to have traveled north. In time, the Barbed Kingdom rose to its former glory and its name was changed, and with it, the fate of Cera Sumat and the Medallion of the Lost Followers was forgotten... until your arrival in Kuldahar and the medallion and the Holy Avenger were united once again to meet the Lost Followers in battle one final time.
 
-But the story of Ehld and Cera Sumat was a story of another time, and of the adventures of another hero. This is now your time, and your epic. If your band counts a paladin among its number, then this ancient blade is yours to wield against the forces of evil... 
+But the story of Ehld and Cera Sumat was a story of another time, and of the adventures of another hero. This is now your time, and your epic. If your band counts a paladin among its number, then this ancient blade is yours to wield against the forces of evil...
 
 And perhaps, if your heart is true, save a land from destruction once again.
 
@@ -4409,9 +4411,9 @@ Attack Bonus: +10
 Enchantment:  +10
 Damage Type:  Slashing
 Special:
- Holy: +4d6 against evil creatures.
- Resistance: +30 Spell Resistance
- Spell Power: Can cast the spell Dispel Magic (at level 30), No Limit per Day
+  Spell Resistance: Set to 38
+  Holy Avenger: +4d6 magic damage against evil creatures. This bonus damage is doubled against fiends and undead.
+  Dispelling: Dispel Magic on target with each hit (Will DC 32). Striking an ally dispels magic on them with no save.
 Weight:  5 lb.
 Feat Requirement:  Martial Weapon, Large Sword
 Type:  One-handed~
@@ -7426,7 +7428,7 @@ Attack Bonus:  +5
 Enchantment:  +5
 Damage Type:  Bludgeoning
 Special:
-  Massive Weight: Deals +4d6 bludgeoning damage when swung down on a creature's head; creatures to large to be crushed are unaffected.
+  Massive Weight: Deals +4d6 bludgeoning damage when swung down on a creature's head; creatures too large to be crushed are unaffected.
 Weight: 120 lb.
 Required Feat:  Martial Weapon, Flail
 Type:  One-handed

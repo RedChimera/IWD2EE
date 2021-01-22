@@ -11,4 +11,5 @@
 30000-39999: Spell Revisions
 40000-49999: NPC dialogue
 54500-54799: Concoct Potions
+54900-54999: Better Racial Enemies
 55000-55999: Special Lua Strings

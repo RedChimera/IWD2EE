@@ -3258,7 +3258,6 @@ function METURNUN(effectData, creatureData)
 		turnLevel = turnLevel + math.floor((turnCheck - 1) / 3) - 3
 	end
 	if IEex_GetActorSpellState(sourceID, 194) then
-		local healingMultiplier = 100
 		IEex_IterateActorEffects(sourceID, function(eData)
 			local theopcode = IEex_ReadDword(eData + 0x10)
 			local theparameter2 = IEex_ReadDword(eData + 0x20)
@@ -5456,11 +5455,11 @@ function MEWHIRLA(effectData, creatureData)
 	if bit.band(savingthrow, 0x10000) > 0 then
 		weaponRES[1] = IEex_GetItemSlotRES(sourceID, equippedSlot)
 	end
-	if bit.band(savingthrow, 0x20000) > 0 and (equippedSlot == 43 or equippedSlot == 45 or equippedSlot == 47 or equippedSlot == 49) then
-		if IEex_GetActorStat(sourceID, 101) > 0 and IEex_GetItemSlotRES(sourceID, equippedSlot + 1) == "" then
-			weaponRES[2] = IEex_GetItemSlotRES(sourceID, 10)
-		else
+	if bit.band(savingthrow, 0x20000) > 0 then
+		if equippedSlot == 43 or equippedSlot == 45 or equippedSlot == 47 or equippedSlot == 49 then
 			weaponRES[2] = IEex_GetItemSlotRES(sourceID, equippedSlot + 1)
+		elseif equippedSlot == 10 and IEex_GetActorStat(sourceID, 101) > 0 then
+			weaponRES[2] = IEex_GetItemSlotRES(sourceID, 10)
 		end
 	end
 	if bit.band(savingthrow, 0x30000) == 0 then
@@ -7367,6 +7366,8 @@ parameter2 - Determines the condition. If it's true, the target is immune to the
  96: Mindless (undead, construct, object, shambling mound, or ooze)
  98: Drow or duergar
  100: Light-sensitive (drow, duergar, fungi, shadows, wights, and wraiths)
+ 102: Fiend
+ 104: Fiend or undead
  
 
 --]]
@@ -7417,16 +7418,12 @@ function MESPLPR2(effectData, creatureData)
 			hasProtection = true
 		end
 	elseif protectionType == 13 then
-		local animation = IEex_ReadDword(creatureData + 0x5C4)
 		if parameter1 == 0 then
 			parameter1 = 5
 		end
-		local animationSize = 3
-		if ex_animationSize[animation] ~= nil then
-			animationSize = ex_animationSize[animation]
-			if animationSize >= parameter1 then
-				hasProtection = true
-			end
+		local animationData = IEex_ReadDword(creatureData + 0x50F0)
+		if animationData > 0 and IEex_ReadByte(animationData + 0x3E4, 0x0) >= parameter1 then
+			hasProtection = true
 		end
 	elseif protectionType == 15 and (IEex_ReadByte(creatureData + 0x26, 0x0) == 2 or IEex_ReadByte(creatureData + 0x26, 0x0) == 183) then
 		hasProtection = true
@@ -7576,8 +7573,11 @@ function MESPLPR2(effectData, creatureData)
 			hasProtection = true
 		end
 	elseif protectionType == 102 then
-		local animation = IEex_ReadDword(creatureData + 0x5C4)
 		if IEex_ReadByte(creatureData + 0x26, 0x0) == ex_fiend_race then
+			hasProtection = true
+		end
+	elseif protectionType == 104 then
+		if IEex_ReadByte(creatureData + 0x26, 0x0) == ex_fiend_race or IEex_ReadByte(creatureData + 0x25, 0x0) == 4 then
 			hasProtection = true
 		end
 	end
@@ -9362,7 +9362,7 @@ function MEAPRBON(effectData, creatureData)
 	local manyshotFeatCount = IEex_ReadByte(creatureData + 0x744 + ex_feat_name_id["ME_MANYSHOT"], 0x0)
 	local rapidShotEnabled = (IEex_ReadByte(creatureData + 0x4C64, 0x0) > 0)
 	local monkLevel = IEex_GetActorStat(targetID, 101)
-	if ((normalAPR + imptwfFeatCount < 5) or (not IEex_GetActorSpellState(targetID, 196) and not IEex_GetActorSpellState(targetID, 138) and not ex_no_apr_limit and monkLevel < 13)) and (manyshotFeatCount == 0 or not rapidShotEnabled) then return end
+	if ((normalAPR + imptwfFeatCount < 5) or (not IEex_GetActorSpellState(targetID, 196) and not IEex_GetActorSpellState(targetID, 138) and not ex_no_apr_limit and monkLevel < 13 and false)) and (manyshotFeatCount == 0 or not rapidShotEnabled) then return end
 	local tempFlags = IEex_ReadWord(creatureData + 0x9FA, 0x0)
 	if bit.band(tempFlags, 0x2) == 0 then
 		IEex_WriteWord(creatureData + 0x9FA, bit.bor(tempFlags, 0x2))
@@ -9480,13 +9480,12 @@ function MEAPRBON(effectData, creatureData)
 		if bit.band(stateValue, 0x10000) > 0 then
 			totalAttacks = totalAttacks - 1
 		end
-		if totalAttacks > extraAttacks + extraMainhandAttacks + 5 then
-			totalAttacks = extraAttacks + extraMainhandAttacks + 5
-		end
-		
 		if ex_no_apr_limit or (isFistWeapon and monkLevel >= 13) then
 			extraAttacks = 1000
 			extraMainhandAttacks = 1000
+		end
+		if totalAttacks > extraAttacks + extraMainhandAttacks + 5 then
+			totalAttacks = extraAttacks + extraMainhandAttacks + 5
 		end
 		if extraAttacks > totalAttacks - normalAPR then
 			extraAttacks = totalAttacks - normalAPR
@@ -13261,6 +13260,7 @@ function MEKAERVA(originatingEffectData, effectData, creatureData)
 	if opcode == 12 and bit.band(internal_flags, 0x4000000) > 0 then
 		local damage = IEex_ReadDword(effectData + 0x18)
 		IEex_WriteDword(effectData + 0x18, damage * 3)
+		IEex_WriteDword(effectData + 0x1C, 0)
 	end
 	return false
 end

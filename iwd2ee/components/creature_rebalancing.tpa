@@ -1981,6 +1981,7 @@ COPY_EXISTING ~60INHEIN.cre~ ~override~
 	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelcleric=24 STR_VAR updatehp=~max~ END
 	WRITE_LONG animation 24592 //Cleric female human
 	WRITE_LONG kit 0x200000 //Priest of Bane
+	WRITE_BYTE slashingresistance (0 - 5)
 	WRITE_BYTE skillconcentration 27
 	WRITE_BYTE skillspellcraft 27
 	WRITE_BYTE challengerating 21
@@ -2002,8 +2003,9 @@ COPY_EXISTING ~60JAIGER.cre~ ~override~
 	WRITE_ASCII combatscript ~00AATGN~ #8
 	WRITE_BYTE dexterity 28
 	WRITE_BYTE challengerating 21
-	LPF	IWD2_REMOVE_CRE_ITEM STR_VAR item=~001D6P~ END
+	LPF	IWD2_REMOVE_CRE_ITEM STR_VAR item=~001D6P 00CWARWA~ END
 	LPF	IWD2_ADD_CRE_ITEM INT_VAR equip=1 STR_VAR item=~USCWJAI1~ slot=~weapon1~ mode=~replace~ END
+	LPF ADD_CRE_EXTENDED_FEAT INT_VAR points=1 STR_VAR name=~ME_MANYSHOT~ END
 
 COPY_EXISTING ~60KAERVA.cre~ ~override~
 	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelfighter=21 STR_VAR updatehp=~max~ END
@@ -2015,6 +2017,8 @@ COPY_EXISTING ~60KAIRN.cre~ ~override~
 	WRITE_ASCII combatscript ~00AATBN~ #8
 	WRITE_LONG animation 62216 //Fire giant
 	WRITE_BYTE constitution 25
+	WRITE_BYTE bludgeoningresistance (0 - 10)
+	WRITE_BYTE acidresistance 50
 	WRITE_BYTE proficiencyhammer 2
 	WRITE_BYTE proficiencymissile 2
 	WRITE_BYTE challengerating 21
@@ -2025,9 +2029,16 @@ COPY_EXISTING ~60KAIRN.cre~ ~override~
 COPY_EXISTING ~60KHREE.cre~ ~override~
 	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelmonk=21 STR_VAR updatehp=~max~ END
 	WRITE_SHORT armorclass 35
-	WRITE_BYTE dexterity 30
+	WRITE_BYTE general 4
+	WRITE_BYTE strength 17
+	WRITE_BYTE dexterity 24
+	WRITE_BYTE constitution 15
+	WRITE_BYTE missileresistance 5
 	WRITE_BYTE spellresistance 31
 	WRITE_BYTE proficiencysmallblade 2
+	READ_LONG feats3 ulgiash
+	ulgiash|=0x80
+	WRITE_LONG feats3 ulgiash
 	WRITE_BYTE challengerating 21
 	LPF ADD_CRE_EXTENDED_FEAT INT_VAR points=5 STR_VAR name=~ME_IMPROVED_UNARMED_ABILITIES~ END
 
