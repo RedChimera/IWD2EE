@@ -2,7 +2,7 @@
 IEex_Once("IEex_CoreInitializeVariables", function()
 
 	-- Refactored: Now bridge ("IEex_Feats", "NEW_FEATS_MAXID")
-	-- IEex_NEW_FEATS_MAXID = nil 
+	-- IEex_NEW_FEATS_MAXID = nil
 	IEex_NEW_FEATS_SIZE  = nil
 
 	IEex_LISTSPLL = {}
@@ -439,29 +439,65 @@ function IEex_WriteDelayedPatches()
 	-- FIX CHARGEN ARRAY OVERFLOW --
 	--------------------------------
 
-	local chargenBeforeFeatCounts = IEex_Malloc(IEex_NEW_FEATS_SIZE * 0x4)
-	local maxID = IEex_Helper_GetBridge("IEex_Feats", "NEW_FEATS_MAXID")
-	for i = 0, maxID, 1 do
-		IEex_WriteDword(chargenBeforeFeatCounts + i * 4, 0x0)
-	end
+		local featsArraySize = IEex_NEW_FEATS_SIZE * 0x4
 
-	------------------------
-	-- Chargen_Init_Feats --
-	------------------------
+		local chargenBeforeFeatCounts = IEex_Malloc(featsArraySize)
+		IEex_Helper_Memset(chargenBeforeFeatCounts, 0, featsArraySize)
 
-	IEex_WriteAssembly(0x60CD6C, {"!mov_[edx*4+dword]_eax", {chargenBeforeFeatCounts, 4}})
+		------------------------
+		-- Chargen_Init_Feats --
+		------------------------
 
-	-----------------------------
-	-- Chargen_Update_FeatList --
-	-----------------------------
+		IEex_WriteAssembly(0x60CD6C, {"!mov_[edx*4+dword]_eax", {chargenBeforeFeatCounts, 4}})
 
-	IEex_WriteAssembly(0x60E689, {"!cmp_[ecx*4+dword]_eax", {chargenBeforeFeatCounts, 4}})
+		-----------------------------
+		-- Chargen_Update_FeatList --
+		-----------------------------
 
-	-------------------------------
-	-- Chargen_OnFeatCountChange --
-	-------------------------------
+		IEex_WriteAssembly(0x60E689, {"!cmp_[ecx*4+dword]_eax", {chargenBeforeFeatCounts, 4}})
 
-	IEex_WriteAssembly(0x623447, {"!cmp_[esi*4+dword]_eax", {chargenBeforeFeatCounts, 4}})
+		-------------------------------
+		-- Chargen_OnFeatCountChange --
+		-------------------------------
+
+		IEex_WriteAssembly(0x623447, {"!cmp_[esi*4+dword]_eax", {chargenBeforeFeatCounts, 4}})
+
+	--------------------------------
+	-- FIX LEVELUP ARRAY OVERFLOW --
+	--------------------------------
+
+		local levelupBeforeFeatCounts = IEex_Malloc(featsArraySize)
+		IEex_Helper_Memset(levelupBeforeFeatCounts, 0, featsArraySize)
+
+		----------------------------------------
+		-- CScreenCharacter_OnBackButtonClick --
+		----------------------------------------
+
+		IEex_WriteAssembly(0x5E4311, {"!mov_edi", {levelupBeforeFeatCounts, 4}, "!nop"})
+
+		-----------------------------------------
+		-- CScreenCharacter_OnFeatPipTakenBack --
+		-----------------------------------------
+
+		IEex_WriteAssembly(0x5F89D5, {"!mov_ebp", {levelupBeforeFeatCounts, 4}, "!nop"})
+
+		-------------------------------------
+		-- CScreenCharacter_ResetFeatPanel --
+		-------------------------------------
+
+		IEex_WriteAssembly(0x5DA2DE, {"!mov_[ecx*4+dword]_eax", {levelupBeforeFeatCounts, 4}})
+
+		--------------------------------------
+		-- CScreenCharacter_UpdateFeatPanel --
+		--------------------------------------
+
+		IEex_WriteAssembly(0x5E8AD7, {"!cmp_[ecx*4+dword]_eax", {levelupBeforeFeatCounts, 4}})
+
+		-----------------------------------------------------------
+		-- CUIControlButtonFeatListPlusMinus_OnLButtonDownActive --
+		-----------------------------------------------------------
+
+		IEex_WriteAssembly(0x5F7156, {"!cmp_[esi*4+dword]_eax", {levelupBeforeFeatCounts, 4}})
 
 	------------------------------
 	-- CGameSprite_SetFeatCount --
@@ -525,9 +561,9 @@ function IEex_WriteDelayedPatches()
 	]]})
 	IEex_WriteAssembly(featGetCountHookAddress, {"!jmp_dword", {featGetCountHook, 4, 4}, "!nop"})
 
-	---------------------------
-	-- FeatList_GetFeatCount --
-	---------------------------
+	------------------------------
+	-- CGameSprite_GetFeatCount --
+	------------------------------
 
 	IEex_WriteByte(0x762E26 + 2, IEex_NEW_FEATS_SIZE)
 
@@ -599,9 +635,9 @@ function IEex_WriteDelayedPatches()
 	]]})
 	IEex_WriteAssembly(featGetCountHookAddress, {"!jmp_dword", {featGetCountHook, 4, 4}, "!nop"})
 
-	--------------------------
-	-- Feat_Get_Number_Pips --
-	--------------------------
+	-----------------------------------
+	-- CGameSprite_FeatGetNumMaxPips --
+	-----------------------------------
 
 	IEex_WriteByte(0x7630A5 + 2, IEex_NEW_FEATS_SIZE)
 
@@ -741,9 +777,9 @@ function IEex_WriteDelayedPatches()
 	]]})
 	IEex_WriteAssembly(meetsFeatRequirementsHookAddress, {"!jmp_dword", {meetsFeatRequirementsHook, 4, 4}, "!nop"})
 
-	------------------------
-	-- Feat_Incrementable --
-	------------------------
+	-----------------------------------
+	-- CGameSprite_FeatIncrementable --
+	-----------------------------------
 
 	IEex_WriteByte(0x763A46 + 2, IEex_NEW_FEATS_SIZE)
 
@@ -814,9 +850,9 @@ function IEex_WriteDelayedPatches()
 	]]})
 	IEex_WriteAssembly(featIncrementableHookAddress, {"!jmp_dword", {featIncrementableHook, 4, 4}, "!nop"})
 
-	----------------------------------
-	-- Feat_Update_Panel_With_Taken --
-	----------------------------------
+	-----------------------------------------
+	-- CGameSprite_UpdateSkillsAndFeatsTab --
+	-----------------------------------------
 
 	IEex_WriteByte(0x765CE8 + 2, IEex_NEW_FEATS_SIZE)
 	IEex_WriteByte(0x765DC8 + 2, IEex_NEW_FEATS_SIZE)
@@ -877,15 +913,15 @@ function IEex_WriteDelayedPatches()
 	]]})
 	IEex_WriteAssembly(featPanelStringHookAddress, {"!jmp_dword", {featPanelStringHook, 4, 4}})
 
-	-------------------------------------
-	-- Has_Feat_And_Meets_Requirements --
-	-------------------------------------
+	---------------------------------------------
+	-- CGameSprite_HasFeatAndMeetsRequirements --
+	---------------------------------------------
 
 	IEex_WriteByte(0x763156 + 2, IEex_NEW_FEATS_SIZE)
 
-	----------------------------
-	-- Level_Up_Accept_Skills --
-	----------------------------
+	---------------------------------------
+	-- CScreenCharacter_CheckSummonPopup --
+	---------------------------------------
 
 	IEex_WriteByte(0x5E1251 + 2, IEex_NEW_FEATS_SIZE)
 

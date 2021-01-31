@@ -246,7 +246,7 @@ function IEex_EncodeRM(args, func)
 	if prefix then
 		func(prefix)
 	end
-	
+
 	func(args.opcode)
 
 	-- rmByte
@@ -283,7 +283,7 @@ function IEex_EncodeRMOpcode(args, encodingArgs)
 		local numAttempt = tonumber(secondArg or "", 16)
 		if numAttempt then
 			local immediateOpcode = encodingArgs.immediateOpcode
-			if not immediateOpcode then IEex_Error("immediateOpcode must be defined when using immediate") end 
+			if not immediateOpcode then IEex_Error("immediateOpcode must be defined when using immediate") end
 			encodingArgs.opcode = immediateOpcode
 			encodingArgs.immediate = numAttempt
 		else
@@ -464,6 +464,7 @@ IEex_GlobalAssemblyMacros = {
 	["mov_[ebp]_edi"] = "89 7D 00",
 	["mov_[ebp]_esp"] = "89 65 00",
 	["mov_[ebx]_dword"] = "C7 03",
+	["mov_[ecx*4+dword]_eax"] = "89 04 8D",
 	["mov_[ecx+byte]_dword"] = "C7 41",
 	["mov_[ecx+dword]_dword"] = "C7 81",
 	["mov_[ecx+dword]_eax"] = "89 81",
@@ -545,6 +546,7 @@ IEex_GlobalAssemblyMacros = {
 	["mov_eax_esi"] = "8B C6",
 	["mov_eax_esp"] = "8B C4",
 	["mov_eax_fs:[0]"] = "64 A1 00 00 00 00",
+	["mov_ebp"] = "BD",
 	["mov_ebp_esp"] = "8B EC",
 	["mov_ebx"] = "BB",
 	["mov_ebx_[dword]"] = "8B 1D",
