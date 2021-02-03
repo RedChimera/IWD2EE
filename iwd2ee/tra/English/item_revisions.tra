@@ -1796,14 +1796,14 @@ It was Stogar's final wish that Uthgar's Blessing be passed on to another worthy
 
 STATISTICS:
 
-Light Armor
-Armor Bonus: +2
-Max Dex Bonus:  +6
-Armor Check Penalty:  -0
-Arcane Spell Failure:  10%
+Medium Armor
+Armor Bonus: +4
+Max Dex Bonus:  +4
+Armor Check Penalty:  -3
+Arcane Spell Failure:  20%
 Special:
   Strength: +2
-Weight: 15 lb.~
+Weight: 25 lb.~
 @10461    = ~Uthgar's Great Blessing +1~
 @10462    = ~Crafted by the finest Barbarian armorer and proudly embroidered with Uthgar's large, beast totem spirit, the Blue Bear, this style of leather armor became the mainstay of the Blue Bear tribal warriors. 
 
@@ -1815,14 +1815,14 @@ It was Stogar's final wish that Uthgar's Great Blessing be passed on to another 
 STATISTICS:
 
 Light Armor
-Armor Bonus: +3
-Max Dex Bonus:  +6
-Armor Check Penalty:  -0
-Arcane Spell Failure:  10%
+Armor Bonus: +5
+Max Dex Bonus:  +4
+Armor Check Penalty:  -3
+Arcane Spell Failure:  20%
 Special:
   Strength: +4
   Constitution: +4
-Weight: 15 lb.~
+Weight: 20 lb.~
 @10463    = ~Dirty Bits +3~
 @10464    = ~It is often said that a person does not choose a profession, the profession chooses the person. So was the case with Nasty Phil, the local corpse cleaner for the Ten Towns many years ago. Nasty Phil, you see, was no undertaker - no, it was his responsibility, after a party of adventurers dispatched with a monster (or monsters) that was terrorizing a local community, to clean up the mess that was left over. 
 
@@ -2053,33 +2053,42 @@ Resistance:
   20/-  Acid Resistance
 Weight: 10 lb.~
 //@10491    = ~Hide Armor~
-//@10492    = ~Item description can remain the same; if new description is needed put it here~
+@10492    = ~Hide armor is made from multiple layers of leather armor.  Though stiff and hard to move in, it is relatively simple to make and provides a good barrier against cold weather.  It is most commonly seen on the warriors and huntsmen of northern barbarian tribes.
+
+STATISTICS:
+
+Medium Armor
+Armor Bonus: +4
+Max Dex Bonus:  +4
+Armor Check Penalty:  -3
+Arcane Spell Failure:  20%
+Weight: 25 lb.~
 @10493    = ~Wandering Hunter's Armor +1~
 @10494    = ~Armor like this is painstakingly crafted for the use of the Wandering Village's best young hunters. It is lined with fur of the great white wolves of Fell Wood, and enchanted to resist winter's cold.
 
 STATISTICS:
 
-Light Armor
+Medium Armor
 Armor Bonus: +4
 Max Dex Bonus:  +4
 Armor Check Penalty:  -3
 Arcane Spell Failure:  20%
 Special:
   Resistance: 10/- Cold Resistance
-Weight: 30 lb.~
+Weight: 20 lb.~
 @10495    = ~Wandering Hunter's Armor +4~ //HoF
 @10496    = ~Armor like this is painstakingly crafted for the use of the Wandering Village's best young hunters. It is lined with fur of the great white wolves of Fell Wood, and enchanted to resist winter's cold.
 
 STATISTICS:
 
-Light Armor
+Medium Armor
 Armor Bonus: +7
 Max Dex Bonus:  +4
 Armor Check Penalty:  -3
-Arcane Spell Failure:  2
+Arcane Spell Failure:  20%
 Special:
   Resistance: 20/- Cold Resistance
-Weight: 30 lb.~
+Weight: 15 lb.~
 //@10497    = ~Abishai Hide Armor~
 @10498    = ~There is great mystery surrounding this leather armor. No one knows how or where it came into existence. What is known is that the leather was cut from the hide of an abishai, although it is impossible to tell what color abishai since the armor is colored a deep black. In addition, it has an unusual, very light, vinegary smell.
 
@@ -2088,7 +2097,7 @@ Those that have worn the Abishai Hide were bestowed with a slight invulnerabilit
 STATISTICS:
 
 Medium Armor
-Armor Bonus: +3
+Armor Bonus: +4
 Max Dex Bonus:  +4
 Armor Check Penalty:  -3
 Arcane Spell Failure:  20%
@@ -2103,7 +2112,7 @@ Those that have worn the Cornugon Hide were bestowed with a rather high invulner
 STATISTICS:
 
 Medium Armor
-Armor Bonus: +6
+Armor Bonus: +7
 Max Dex Bonus:  +4
 Armor Check Penalty:  -3
 Arcane Spell Failure:  20%
@@ -2168,7 +2177,7 @@ Max Dex Bonus:  None
 Armor Check Penalty:  -0
 Arcane Spell Failure:  0%
 Special:
- Spellcasting and Thieving abilities can be performed without penalties from wearing armor.
+  Spellcasting and Thieving abilities can be performed without penalties from wearing armor.
 Weight: 5 lb.~
 @10517    = ~Mail of Life +3~
 @10518    = ~This armor was crafted from meteoric iron by dwarven and elven smiths during the Time of Cooperation. A high priest of Moradin and a high priest of Labelas Enoreth enchanted the armor with its powers. Unfortunately, no elven or dwarven warrior ever wore the chain mail. When troubles arose between the Hand of the Seldarine and Dorn's Deep, the dwarves locked the armor in a vault, refusing to use anything the elves had a hand in creating.
@@ -10265,12 +10274,12 @@ STATISTICS:
 Permanent +4 Strength
 Permanent -4 Constitution
 Weight:  1 lb.~
-@12109    = ~Potion of Arcane Absorption~
+@12109    = ~Potion of Defense~
 @12110    = ~Potions are typically found in ceramic, crystal, glass, or metal flasks or vials. Flasks or other containers generally contain enough fluid to provide one person with one complete dose to achieve the effects of the potion. 
 
 STATISTICS:
 
-Permanent +3 Spell Resistance
+Permanent +1 Generic AC Bonus
 Weight:  1 lb.~
 //@12111    = ~Potion of Strength Transference~
 @12112    = ~Potions are typically found in ceramic, crystal, glass, or metal flasks or vials. Flasks or other containers generally contain enough fluid to provide one person with one complete dose to achieve the effects of the potion. 
@@ -11651,7 +11660,7 @@ Weight: 10 lb.~
 STATISTICS:
 
 Medium Armor
-Armor Bonus: +6
+Armor Bonus: +7
 Max Dex Bonus:  +4
 Armor Check Penalty:  -3
 Arcane Spell Failure:  20%
@@ -11664,7 +11673,7 @@ Weight: 10 lb.~
 STATISTICS:
 
 Medium Armor
-Armor Bonus: +8
+Armor Bonus: +9
 Max Dex Bonus:  +4
 Armor Check Penalty:  -3
 Arcane Spell Failure:  20%
@@ -12417,7 +12426,7 @@ Weight:  3 lb.~
 STATISTICS:
 
 Medium Armor
-Armor Bonus: +8
+Armor Bonus: +9
 Max Dex Bonus:  +4
 Armor Check Penalty:  -3
 Arcane Spell Failure:  20%
@@ -13352,6 +13361,20 @@ Created during the ceremonies of the Coming Storm (the onset of winter) to Auril
 STATISTICS:
 
 The wearer has 50% Fire Resistance, and anyone who hits the wearer in melee takes 1d6+5 fire damage. These effects do not stack with Fire Shield (Blue).~
+@12805    = ~Bracers of Blinding Strike~
+@12806    = ~Knight Wesic of the Most Noble Order of the Radiant Heart often said, "Attack swiftly and your enemy will be so overwhelmed that the battle will be yours." He lived this principle through these bracers. Before engaging in righteous battle, he would unlock the magic of the Blinding Strike and quickly rush at his enemy. More often than not, his opponent would fall within the first few seconds of battle.
+
+STATISTICS:
+
+Spell Power: Once per day, the wearer can double their attacks per round and increase their movement speed to the maximum for 3 rounds.
+Weight:  1 lb.~
+@12807    = ~Bracers of Blinding Strike~
+@12808    = ~Knight Wesic of the Most Noble Order of the Radiant Heart often said, "Attack swiftly and your enemy will be so overwhelmed that the battle will be yours." He lived this principle through these bracers. Before engaging in righteous battle, he would unlock the magic of the Blinding Strike and quickly rush at his enemy. More often than not, his opponent would fall within the first few seconds of battle.
+
+STATISTICS:
+
+Spell Power: Once per day, the wearer can double their attacks per round and increase their movement speed to the maximum for 10 rounds.
+Weight:  1 lb.~
 @12900    = ~Hrm - you are powerful allies, indeed. More gold and gems to line your pockets, then - also, a suit of plate armor, a warhammer, a helmet, all crafted and enchanted by great duergar artisans. They are well deserved, outsider.~
 @12901    = ~Drink this Rainwater Brew, Ennelia. It should help your condition.~
 @12902    = ~Drink this Sour Draught, Ennelia. It should help your condition.~

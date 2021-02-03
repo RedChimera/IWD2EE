@@ -2613,6 +2613,7 @@ Launcher:  Bow~
 @30052=~You ghostwalked through the door and opened it from the inside.~
 @30053=~Ghoul~
 @30054=~Object of Sympathy~
+@30055=~Copied Spell~
 
 @31115     = ~Armor of Faith~
 @32115     = ~Armor of Faith
@@ -3264,6 +3265,30 @@ Undead: 15d6
 All other creatures: 10d6
 
 There is no Saving Throw, and the target's Spell Resistance matters not.~
+@35656     = ~Supreme Speed~
+@36656     = ~Supreme Speed
+(Transmutation)
+Level: Rgr 6
+Range: Caster
+Duration: 1 second/level
+Casting Time: 1
+Area of Effect: Caster
+Saving Throw: None
+
+This spell drastically speeds up the ranger's attack speed. For the duration, the ranger attacks twice as many times per round. Attack bonuses will continue to decrease for attacks beyond the 5th one.
+
+Although rangers normally cast spells at half their caster level, Supreme Speed will be cast at a ranger's full caster level.~
+@35657     = ~Explosive Smite~
+@36657     = ~Explosive Smite
+(Evocation)
+Level: Pal 6
+Range: Caster
+Duration: 2 rounds or until triggered
+Casting Time: 0
+Area of Effect: Special
+Saving Throw: None
+
+This spell allows the paladin to apply their Smite Evil as an area of effect. Casting Explosive Smite automatically causes the paladin to ready Smite Evil without consuming a use of it. The paladin gains their Charisma bonus to their next attack roll, and their next successful attack generates an explosion. All evil creatures within 20 feet take damage equal to the paladin's regular Smite Evil damage (though only the creature that was hit by the actual attack takes the attack's damage).~
 @35753     = ~Power Word: Heal~
 @36753     = ~Power Word: Heal
 (Divination)
@@ -3429,6 +3454,17 @@ Area of Effect: Caster
 Saving Throw: None
 
 This spell lets the caster summon undead by killing other creatures. During the duration of this spell, whenever the caster kills a creature, a ghoul rises to feast upon the remains. That ghoul will serve the caster for 8 hours. A ghoul will only be summoned if the caster dealt the killing damage to the creature; if the caster damaged the creature but another party member finished it off, the caster will not get a ghoul.~
+@37454     = ~Copy Spell~
+@38454     = ~Copy Spell
+(Transmutation)
+Level: Brd 4
+Range: Sight of Caster
+Duration: Permanent until released
+Casting Time: 0
+Area of Effect: Special
+Saving Throw: None
+
+This spell copies a spell that another creature is casting, allowing the bard to cast that spell once. Copy Spell should be cast on another creature that is casting a spell. The bard gains a special ability that lets them cast that same spell. Once used, the ability is gone until Copy Spell is cast again. Copy Spell cannot copy innate abilities, nor can it copy spells of a higher spell level than the bard can currently cast.~
 @37551     = ~Steal Spells~
 @38551     = ~Steal Spells
 (Transmutation)
@@ -3440,17 +3476,17 @@ Area of Effect: 1 creature
 Saving Throw: None
 
 This spell steals memorized spells from the target and grants their spell slots to the caster. The caster makes a Pick Pockets roll, adding their caster level (and any normal bonuses to Pick Pockets). For every 10 points of the total roll, the target loses one memorized spell of 5th-level or lower, and the caster regains one spell of 4th-level or lower (prioritizing the highest-level spells that can be lost or regained this way). There is no Saving Throw, though Spell Resistance may prevent the theft.~
-@37552     = ~Ethereal Jaunt~
-@38552     = ~Ethereal Jaunt
+@37552     = ~Ghostform~
+@38552     = ~Ghostform
 (Transmutation)
 Level: Brd 5, Clr 5, Sor/Wiz 5
 Range: Touch
-Duration: 3 rounds/level
+Duration: 1 round/level
 Casting Time: 5
 Area of Effect: 1 creature
 Saving Throw: None
 
-This spell turns the recipient partially ethereal for a limited period of time. While partially ethereal, the character gets damage reduction 5/+1, but is still tangible enough to be able to attack and cast spells. The recipient can also move through walls while partially ethereal. Simply click on a point to move to, and the character will float to that point, bypassing normally impassable obstacles in the way.~
+This spell turns the recipient incorporeal for a limited period of time. While incorporeal, the character gets damage reduction 5/+1, and they have a 50% chance to ignore any instance of physical damage. They are still tangible enough to attack and cast spells. The recipient can also move through walls while incorporeal. Simply click on a point to move to, and the character will float to that point, bypassing normally impassable obstacles in the way.~
 @37553     = ~Rewind Time~
 @38553     = ~Rewind Time
 (Transmutation)

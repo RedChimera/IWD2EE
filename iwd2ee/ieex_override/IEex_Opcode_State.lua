@@ -151,7 +151,6 @@ function IEex_Extern_OnCheckAddScreenEffectsHook(pEffect, pSprite)
 			return true
 		end
 	end
-
 	return false
 end
 
@@ -191,13 +190,25 @@ ex_empowerable_opcodes = {[0] = true, [1] = true, [6] = true, [10] = true, [12] 
 		local targetID = IEex_GetActorIDShare(creatureData)
 		local sourceID = IEex_ReadDword(effectData + 0x10C)
 		local opcode = IEex_ReadDword(effectData + 0xC)
-		if not IEex_IsSprite(sourceID, true) then return false end
-		local sourceData = IEex_GetActorShare(sourceID)
 --[[
 		if targetID == IEex_GetActorIDCharacter(0) then
+
 			IEex_DS(opcode)
+			if opcode == 20 then
+				IEex_PrintData(effectData, 0xD0)
+			end
+
+			if opcode == 17 then
+				IEex_DS("parameter1: " .. IEex_ReadDword(effectData + 0x18) .. ", parameter2: " .. IEex_ReadDword(effectData + 0x1C) .. ", sourceID: " .. sourceID)
+			elseif opcode == 276 then
+				IEex_DS("parameter2: " .. IEex_ReadDword(effectData + 0x1C))
+			end
+
 		end
 --]]
+		if not IEex_IsSprite(sourceID, true) then return false end
+		local sourceData = IEex_GetActorShare(sourceID)
+
 --[[
 		print("Opcode " .. opcode .. " on " .. IEex_GetActorName(targetID))
 		if opcode == 500 then
@@ -226,6 +237,7 @@ ex_empowerable_opcodes = {[0] = true, [1] = true, [6] = true, [10] = true, [12] 
 		if sourceSpell == nil then
 			sourceSpell = string.sub(parent_resource, 1, 7)
 		end
+		
 		if opcode == 12 and parent_resource == "IEEX_DAM" then
 			if (bit.band(savingthrow, 0x10000) > 0 and (IEex_GetActorSpellState(sourceID, 195) or IEex_GetActorSpellState(sourceID, 225))) or bit.band(savingthrow, 0x40000) == 0 then
 				local weaponRES = IEex_ReadLString(effectData + 0x6C, 8)
@@ -403,14 +415,16 @@ ex_empowerable_opcodes = {[0] = true, [1] = true, [6] = true, [10] = true, [12] 
 					parameter1 = math.floor(parameter1 * damageMultiplier / 100)
 					IEex_WriteDword(effectData + 0x18, parameter1)
 				end
-				if bit.band(savingthrow, 0x10000) > 0 and criticalMultiplier ~= baseCriticalMultiplier then
-					parameter1 = math.floor(parameter1 / baseCriticalMultiplier) * criticalMultiplier
-					IEex_WriteDword(effectData + 0x18, parameter1)
-				end
 				weaponWrapper:free()
 				launcherWrapper:free()
-				for k, v in ipairs(onCriticalHitEffectList) do
-					IEex_ApplyEffectToActor(v[3], {
+				
+				if bit.band(savingthrow, 0x10000) > 0 then
+					if criticalMultiplier ~= baseCriticalMultiplier then
+						parameter1 = math.floor(parameter1 * criticalMultiplier / baseCriticalMultiplier)
+						IEex_WriteDword(effectData + 0x18, parameter1)
+					end
+					for k, v in ipairs(onCriticalHitEffectList) do
+						IEex_ApplyEffectToActor(v[3], {
 ["opcode"] = 402,
 ["target"] = 2,
 ["timing"] = 1,
@@ -424,7 +438,11 @@ ex_empowerable_opcodes = {[0] = true, [1] = true, [6] = true, [10] = true, [12] 
 ["source_target"] = v[3],
 ["source_id"] = v[4]
 })
+					end
 				end
+				
+				
+
 			end
 
 		end

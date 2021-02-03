@@ -98,8 +98,12 @@ COPY_EXISTING_REGEXP ~.*\.itm~ ~override~
 					END
 					WRITE_SHORT offset 500
 					WRITE_LONG (offset + 0x4) (theparameter1 + (thedicesize << 8) + (thedicenumber << 16))
-//					WRITE_BYTE (offset + 0xC) 0
-					WRITE_LONG (offset + 0xE) 0
+					PATCH_IF thetiming = 1 OR thetiming = 9 BEGIN
+						WRITE_BYTE (offset + 0xC) 0
+						WRITE_LONG (offset + 0xE) 0
+					END ELSE PATCH_IF thetiming = 3 OR thetiming = 4 BEGIN
+						WRITE_BYTE (offset + 0xC) 3
+					END
 					WRITE_ASCII (offset + 0x14) ~EXDAMAGE~ #8
 					WRITE_LONG (offset + 0x1C) 0
 					WRITE_LONG (offset + 0x20) 0
@@ -159,10 +163,10 @@ COPY_EXISTING_REGEXP ~.*\.spl~ ~override~
 				WRITE_LONG (offset + 0x4) (theparameter1 + (thedicesize << 8) + (thedicenumber << 16))
 				PATCH_IF thetiming = 1 OR thetiming = 9 BEGIN
 					WRITE_BYTE (offset + 0xC) 0
-				END ELSE PATCH_IF thetiming = 4 BEGIN
+					WRITE_LONG (offset + 0xE) 0
+				END ELSE PATCH_IF thetiming = 3 OR thetiming = 4 BEGIN
 					WRITE_BYTE (offset + 0xC) 3
 				END
-				WRITE_LONG (offset + 0xE) 0
 				WRITE_ASCII (offset + 0x14) ~EXDAMAGE~ #8
 				WRITE_LONG (offset + 0x1C) 0
 				WRITE_LONG (offset + 0x20) 0

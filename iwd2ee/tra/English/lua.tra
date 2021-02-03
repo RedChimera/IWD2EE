@@ -197,6 +197,9 @@
 @55339=~Attacks <EXWHNAME39> with <EXWHWEAP39> : <EXWHHITMISS39>~
 @55340=~Attacks <EXWHNAME40> with <EXWHWEAP40> : <EXWHHITMISS40>~
 */
+@55383=~Attack failed to connect due to difference in height~
+@55384=~Damage avoided due to etherealness~
+@55385=~Damage avoided due to incorporealness~
 @55390=~Using Feat: Blind-Fight - Successful~
 @55391=~Using Feat: Blind-Fight - Failed!~
 @55392=~Missed due to concealment.~
@@ -228,6 +231,11 @@
 @55493=~Metamagic failed: The resulting spell is over 9th-level~
 
 @55500=~<EXACVAL1> is not a valid spell for Curing Contingency~
+@55580=~Copy Spell failed: <EXCPNAM1> is not casting a spell~
+@55581=~Copy Spell failed: <EXCPVAL1> is too high level for you to copy~
+@55582=~Copy Spell failed: <EXCPVAL1> cannot be copied~
+@55583=~<EXCPVAL1> copied with Copy Spell~
+@55596=~<EXACVAL1> cannot be stored in this sequencer~
 @55596=~<EXACVAL1> cannot be stored in this sequencer~
 @55597=~<EXACVAL1> has been stored in the sequencer~
 @55598=~The spell <EXACVAL1> has been stored in this character, to be released under the right conditions~

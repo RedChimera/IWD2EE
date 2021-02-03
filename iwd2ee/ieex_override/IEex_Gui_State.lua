@@ -634,24 +634,33 @@ end
 ex_current_record_hand = 1
 function IEex_Extern_OnUpdateRecordDescription(CScreenCharacter, CGameSprite, CUIControlEditMultiLine, m_plstStrings)
 	IEex_AssertThread(IEex_Thread.Both, true)
+	local creatureData = CGameSprite
+	local targetID = IEex_GetActorIDShare(creatureData)
 	local descPanelNum = IEex_ReadByte(CScreenCharacter + 0x1844, 0)
+	local extraFlags = IEex_ReadDword(creatureData + 0x740)
+	if bit.band(extraFlags, 0x1000) > 0 then
+		IEex_WriteDword(creatureData + 0x740, bit.band(extraFlags, 0xFFFFEFFF))
+		local armoredArcanaFeatCount = IEex_ReadByte(creatureData + 0x781, 0x0)
+		IEex_WriteByte(creatureData + 0x781, math.floor(armoredArcanaFeatCount / ex_armored_arcana_multiplier))
+	end
+	local armoredArcanaString = IEex_FetchString(36352)
+	local sneakAttackDamageString = IEex_FetchString(24898)
+	local turnUndeadLevelString = IEex_FetchString(12126)
+	local wholenessOfBodyString = IEex_FetchString(39768)
+	local mainhandString = IEex_FetchString(734)
+	local offhandString = IEex_FetchString(733)
+	local rangedString = IEex_FetchString(41123)
+	local numberOfAttacksString = IEex_FetchString(9458)
+	local criticalHitString = IEex_FetchString(41122)
 	IEex_IterateCPtrList(m_plstStrings, function(lineEntry)
 		local line = IEex_ReadString(IEex_ReadDword(lineEntry + 0x4))
-		local sneakAttackDamageString = IEex_FetchString(24898)
-		local turnUndeadLevelString = IEex_FetchString(12126)
-		local mainhandString = IEex_FetchString(734)
-		local offhandString = IEex_FetchString(733)
-		local rangedString = IEex_FetchString(41123)
-		local numberOfAttacksString = IEex_FetchString(9458)
-		local criticalHitString = IEex_FetchString(41122)
+
 		if string.match(line, mainhandString) or string.match(line, rangedString) then
 			ex_current_record_hand = 1
 		elseif string.match(line, offhandString) then
 			ex_current_record_hand = 2
 		end
 		if string.match(line, sneakAttackDamageString .. ":") then
-			local creatureData = CGameSprite
-			local targetID = IEex_GetActorIDShare(creatureData)
 			local rogueLevel = IEex_GetActorStat(targetID, 104)
 			local sneakAttackDiceNumber = math.floor((rogueLevel + 1) / 2) + IEex_ReadByte(creatureData + 0x744 + ex_feat_name_id["ME_IMPROVED_SNEAK_ATTACK"], 0x0)
 			if IEex_GetActorSpellState(targetID, 192) then
@@ -670,8 +679,6 @@ function IEex_Extern_OnUpdateRecordDescription(CScreenCharacter, CGameSprite, CU
 			end
 			line = string.gsub(line, "%d+d6", sneakAttackDiceNumber .. "d6")
 		elseif string.match(line, turnUndeadLevelString .. ":") then
-			local creatureData = CGameSprite
-			local targetID = IEex_GetActorIDShare(creatureData)
 			local clericLevel = IEex_GetActorStat(targetID, 98)
 			local paladinLevel = IEex_GetActorStat(targetID, 102)
 			local charismaBonus = math.floor((IEex_GetActorStat(targetID, 42) - 10) / 2)
@@ -692,9 +699,17 @@ function IEex_Extern_OnUpdateRecordDescription(CScreenCharacter, CGameSprite, CU
 			local turningFeat = IEex_ReadByte(creatureData + 0x78C, 0)
 			turnLevel = turnLevel + turningFeat * 3
 			line = string.gsub(line, "%d+", turnLevel)
+		elseif string.match(line, wholenessOfBodyString .. ":") then
+			local monkLevel = IEex_GetActorStat(targetID, 101)
+			local wisdomBonus = math.floor((IEex_GetActorStat(targetID, 39) - 10) / 2)
+			if wisdomBonus < 1 then
+				wisdomBonus = 1
+			end
+			line = string.gsub(line, "%d+", monkLevel * wisdomBonus)
+		elseif descPanelNum == 1 and string.match(line, armoredArcanaString .. ":") then
+			local armoredArcanaFeatCount = IEex_ReadByte(creatureData + 0x781, 0x0)
+			line = string.gsub(line, "%d+", (armoredArcanaFeatCount * ex_armored_arcana_multiplier) * 5)
 		elseif string.match(line, mainhandString .. ":") or string.match(line, offhandString .. ":") or string.match(line, numberOfAttacksString) then
-			local creatureData = CGameSprite
-			local targetID = IEex_GetActorIDShare(creatureData)
 			local normalAPR = IEex_GetActorStat(targetID, 8)
 			local imptwfFeatCount = IEex_ReadByte(creatureData + 0x744 + ex_feat_name_id["ME_IMPROVED_TWO_WEAPON_FIGHTING"], 0x0)
 			local manyshotFeatCount = IEex_ReadByte(creatureData + 0x744 + ex_feat_name_id["ME_MANYSHOT"], 0x0)
@@ -891,8 +906,6 @@ function IEex_Extern_OnUpdateRecordDescription(CScreenCharacter, CGameSprite, CU
 				end
 			end
 		elseif string.match(line, criticalHitString .. ":") then
-			local creatureData = CGameSprite
-			local targetID = IEex_GetActorIDShare(creatureData)
 			local weaponRES = ""
 			local weaponSlot = IEex_ReadByte(creatureData + 0x4BA4, 0x0)
 			if ex_current_record_hand == 2 and weaponSlot >= 43 then

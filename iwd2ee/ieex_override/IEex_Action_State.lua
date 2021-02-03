@@ -262,7 +262,8 @@ function EXAPPLSP(actionData, creatureData)
 		local resWrapper = IEex_DemandRes(spellRES, "SPL")
 		if resWrapper:isValid() then
 			local spellData = resWrapper:getData()
-			if bit.band(IEex_ReadDword(spellData + 0x18), 0x10000000) > 0 then
+			local spellFlags = IEex_ReadDword(spellData + 0x18)
+			if bit.band(spellFlags, 0x10000000) > 0 then
 				local targetID = IEex_GetActionObjectID(actionData)
 				local targetX = IEex_GetActionPointX(actionData)
 				local targetY = IEex_GetActionPointY(actionData)
@@ -272,15 +273,20 @@ function EXAPPLSP(actionData, creatureData)
 				elseif actionID == 95 then
 					targetID = sourceID
 				end
-	--			local casterLevel = 1
+				local casterClass = IEex_ReadByte(creatureData + 0x530, 0x0)
+				if casterClass < 0 then 
+					casterClass = 0
+				end
+				local casterLevel = IEex_GetActorStat(sourceID, 95 + casterClass)
 				IEex_SetActionID(actionData, 0)
 --				IEex_SetActionObjectID(actionData, IEex_GetActionInt2(actionData))
 				IEex_ApplyEffectToActor(targetID, {
 					["opcode"] = 402,
 					["target"] = 2,
 					["timing"] = 1,
-					["casterlvl"] = casterLevel,
+					["casterlvl"] = casterLevel + casterClass * 0x100,
 					["resource"] = spellRES,
+					["parent_resource"] = spellRES,
 					["source_x"] = IEex_ReadDword(creatureData + 0x6),
 					["source_y"] = IEex_ReadDword(creatureData + 0xA),
 					["target_x"] = targetX,
@@ -288,12 +294,28 @@ function EXAPPLSP(actionData, creatureData)
 					["source_target"] = targetID,
 					["source_id"] = sourceID
 				})
-			elseif bit.band(IEex_ReadDword(spellData + 0x18), 0x20000000) > 0 then
+			elseif bit.band(spellFlags, 0x20000000) > 0 then
 				if actionID == 31 or actionID == 191 then
 					IEex_SetActionID(actionData, 113)
 				elseif actionID == 95 or actionID == 192 then
 					IEex_SetActionID(actionData, 114)
 				end
+			end
+			if bit.band(spellFlags, 0x40000000) > 0 then
+				local casterClass = IEex_ReadByte(creatureData + 0x530, 0x0)
+				IEex_ApplyEffectToActor(sourceID, {
+["opcode"] = 500,
+["target"] = 2,
+["timing"] = 0,
+["parameter1"] = -1,
+["parameter2"] = 9,
+["special"] = 1,
+["savingthrow"] = 0x2000000,
+["resource"] = "EXMODMEM",
+["vvcresource"] = spellRES,
+["casterlvl"] = 1 + casterClass * 0x100,
+["source_id"] = sourceID
+})
 			end
 		end
 		resWrapper:free()

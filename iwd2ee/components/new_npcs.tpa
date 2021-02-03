@@ -490,6 +490,8 @@ COPY_EXISTING ~20EMMA.cre~ ~override~
 	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelcleric=6 STR_VAR updatehp=~max~ END
 	WRITE_LONG xp 15642
 	WRITE_SHORT armorclass 10
+	WRITE_ASCII smallportrait ~EMMA1S~ #8
+	WRITE_ASCII largeportrait ~EMMA1L~ #8
 	WRITE_BYTE fortitudesave 3
 	WRITE_BYTE reflexsave 2
 	WRITE_BYTE willsave 5
@@ -914,6 +916,10 @@ Exists("Reig")~
 		REPLACE_TEXTUALLY CASE_INSENSITIVE ~Exists(\"Reig\")~ ~Exists("Reig")
 !Global("US_Reig_Joined","GLOBAL",1)~
 	END
+
+COPY_EXISTING ~AR1105.bcs~ ~override~
+		REPLACE_TEXTUALLY ~!GlobalGT(\"Veira_Quest\", *\"GLOBAL\", *1)~ ~!GlobalGT("Veira_Quest","GLOBAL",1)
+Global("US_Veira_Joined","GLOBAL",0)~
 
 <<<<<<<< .../script.baf
 IF

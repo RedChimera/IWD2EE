@@ -364,6 +364,20 @@ COPY_EXISTING ~00SFSAL.cre~ ~override~ ~61SALFRO.cre~ ~override~
 	WRITE_BYTE proficiencypolearm 2
 	LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item=~USCWHFFS~ slot=~weapon1~ mode=~replace~ END
 
+COPY_EXISTING ~00SSDW15.cre~ ~override~ ~00SSDW19.cre~ ~override~ ~00SSDW21.cre~ ~override~ ~41SSDW15.cre~ ~override~ ~41SSDW19.cre~ ~override~ ~41SSDW21.cre~ ~override~
+	SAY NAME1 @23042
+	SAY NAME2 @23042
+	WRITE_LONG animation 59672
+
+COPY_EXISTING ~41SHADOW.cre~ ~override~
+	LPF	IWD2_ADD_CRE_ITEM STR_VAR item=~11VEIRA1~ slot=~rring~ mode=~replace~ END
+
+COPY_EXISTING ~52MNKSH.cre~ ~override~ ~53DRACAH.cre~ ~override~
+	LPF	IWD2_ADD_CRE_ITEM STR_VAR item=~11VEIRA1~ slot=~lring~ mode=~replace~ END
+
+COPY_EXISTING ~60WRAITH.cre~ ~override~ ~60WRAITN.cre~ ~override~
+	LPF	IWD2_ADD_CRE_ITEM STR_VAR item=~USCIINCO~ slot=~lring~ mode=~replace~ END
+
 COPY_EXISTING_REGEXP ~10KEG\.cre~ ~override~ ~10KEG[2346E]E?\.cre~ ~override~ ~20KEG.*\.cre~ ~override~ ~DYNOKEG\.cre~ ~override~
 	WRITE_BYTE allegiance 128
 	READ_BYTE attributes theattributes
@@ -1013,6 +1027,9 @@ COPY_EXISTING ~41ORIA3.cre~ ~override~
 	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~SPWI905~ END
 	LPF	IWD2_CRE_SPELL INT_VAR num=2 STR_VAR class=~wizard~ resource=~SPWI906~ END
 	LPF	IWD2_ADD_CRE_ITEM INT_VAR equip=1 STR_VAR item=~USCWSFOR~ slot=~weapon1~ mode=~replace~ END
+
+COPY_EXISTING ~41ORIAES.cre~ ~override~
+	LPF	IWD2_ADD_CRE_ITEM INT_VAR equip=1 STR_VAR item=~USCLUBGH~ slot=~weapon1~ mode=~replace~ END
 
 COPY_EXISTING ~41CLERIF.cre~ ~override~ ~41RCLERF.cre~ ~override~
 	LPF	IWD2_REMOVE_CRE_ITEM STR_VAR item=~00BULL90 00BULL02 RAMO_01~ END

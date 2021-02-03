@@ -565,12 +565,10 @@ COPY_EXISTING ~feats.2da~ ~override~
         SET_2DA_ENTRY_LATER rows_out row 2 ~%title%~
 		SET_2DA_ENTRY_LATER rows_out row 3 ~%description%~
       END
-/*
       ~ARMORED_ARCANA~ BEGIN
         SET strref = RESOLVE_STR_REF(@705)
         SET_2DA_ENTRY_LATER rows_out row 3 ~%strref%~
       END
-*/
       ~IMPROVED_INITIATIVE~ BEGIN
         SET strref = RESOLVE_STR_REF(@706)
         SET_2DA_ENTRY_LATER rows_out row 3 ~%strref%~
@@ -604,7 +602,7 @@ LAF ADD_FEAT_IWD2 INT_VAR nameref=RESOLVE_STR_REF(@303) descref=RESOLVE_STR_REF(
 LAF ADD_FEAT_IWD2 INT_VAR nameref=RESOLVE_STR_REF(@351) descref=RESOLVE_STR_REF(@352) max=1 STR_VAR name=~ME_EXTEND_SPELL~ script=~Feats_ExtendSpell~ featspl_1=~USFEXSP1~ END
 LAF ADD_FEAT_IWD2 INT_VAR nameref=RESOLVE_STR_REF(@341) descref=RESOLVE_STR_REF(@342) max=2 STR_VAR name=~ME_FEINT~ script=~Feats_Feint~ featspl_1=~USFFEIN1~ featspl_2=~USFFEIN2~ END
 LAF ADD_FEAT_IWD2 INT_VAR nameref=RESOLVE_STR_REF(@307) descref=RESOLVE_STR_REF(@308) max=5 STR_VAR name=~ME_IMPROVED_SNEAK_ATTACK~ script=~Feats_ImprovedSneakAttack~ END
-LAF ADD_FEAT_IWD2 INT_VAR nameref=RESOLVE_STR_REF(@309) descref=RESOLVE_STR_REF(@310) max=1 STR_VAR name=~ME_IMPROVED_TWO_WEAPON_FIGHTING~ script=~Feats_ImprovedTwoWeaponFighting~ featspl_1=~USFITWF1~ END
+LAF ADD_FEAT_IWD2 INT_VAR nameref=RESOLVE_STR_REF(@309) descref=RESOLVE_STR_REF(@310) max=2 STR_VAR name=~ME_IMPROVED_TWO_WEAPON_FIGHTING~ script=~Feats_ImprovedTwoWeaponFighting~ prerequisite_script=~Prereq_ImprovedTwoWeaponFighting~ featspl_1=~USFITWF1~ END
 LAF ADD_FEAT_IWD2 INT_VAR nameref=RESOLVE_STR_REF(@311) descref=RESOLVE_STR_REF(@312) max=5 STR_VAR name=~ME_IMPROVED_UNARMED_ABILITIES~ script=~Feats_ImprovedUnarmedAbilities~ featspl_1=~USFUNAB1~ featspl_2=~USFUNAB1~ featspl_3=~USFUNAB1~ featspl_4=~USFUNAB1~ featspl_5=~USFUNAB1~ END
 LAF ADD_FEAT_IWD2 INT_VAR nameref=RESOLVE_STR_REF(@313) descref=RESOLVE_STR_REF(@314) max=1 STR_VAR name=~ME_KENSEI~ script=~Feats_Kensei~ featspl_1=~USFKENS1~ END
 LAF ADD_FEAT_IWD2 INT_VAR nameref=RESOLVE_STR_REF(@315) descref=RESOLVE_STR_REF(@316) max=2 STR_VAR name=~ME_KNOCKDOWN~ script=~Feats_Knockdown~ featspl_1=~USFKNKD1~ featspl_2=~USFKNKD2~ END
@@ -629,7 +627,7 @@ LAF ADD_FEAT_IWD2 INT_VAR nameref=RESOLVE_STR_REF(@349) descref=RESOLVE_STR_REF(
 LAF ADD_FEAT_IWD2 INT_VAR nameref=RESOLVE_STR_REF(@355) descref=RESOLVE_STR_REF(@356) max=1 STR_VAR name=~ME_PERSISTENT_SPELL~ script=~Feats_PersistentSpell~ featspl_1=~USFPESP1~ END
 LAF ADD_FEAT_IWD2 INT_VAR nameref=RESOLVE_STR_REF(@361) descref=RESOLVE_STR_REF(@362) max=1 STR_VAR name=~ME_WIDEN_SPELL~ script=~Feats_WidenSpell~ featspl_1=~USFWISP1~ END
 LAF ADD_FEAT_IWD2 INT_VAR nameref=RESOLVE_STR_REF(@363) descref=RESOLVE_STR_REF(@364) max=1 STR_VAR name=~ME_MASS_SPELL~ script=~Feats_MassSpell~ featspl_1=~USFMSSP1~ END
-LAF ADD_FEAT_IWD2 INT_VAR nameref=RESOLVE_STR_REF(@365) descref=RESOLVE_STR_REF(@366) max=1 STR_VAR name=~ME_MANYSHOT~ script=~Feats_Manyshot~ featspl_1=~USFMNSH1~ END
+LAF ADD_FEAT_IWD2 INT_VAR nameref=RESOLVE_STR_REF(@365) descref=RESOLVE_STR_REF(@366) max=2 STR_VAR name=~ME_MANYSHOT~ script=~Feats_Manyshot~ prerequisite_script=~Prereq_Manyshot~ featspl_1=~USFMNSH1~ END
 // New descriptions for classes
 COPY_EXISTING ~help02.2da~ ~override~
   COUNT_2DA_COLS num_cols

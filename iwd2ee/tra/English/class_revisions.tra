@@ -133,11 +133,11 @@ Benefit: Your sneak attacks deal an additional 1d6 damage. This feat may be take
 
 You are an expert at fighting with two weapons. You can attack even more quickly with them.
 
-Prerequisite: Dex 15+, Ambidexterity, Two-Weapon Fighting, Base attack bonus +16 or higher
+Prerequisite: Dex 15+, Ambidexterity, Two-Weapon Fighting, Base attack bonus +16 or higher; taking this feat a second time requires 16 levels of ranger.
 
-Benefit: While wielding two weapons, you get a second attack per round with the off-hand weapon.
+Benefit: While wielding two weapons, you get a second attack per round with the off-hand weapon (at -5 attack bonus). If you have two ranks in the feat, you get a third attack per round with it (at -10 attack bonus).
 
-Special: A character with 9 levels of ranger can take this feat even if they don't meet the prerequisites. However, if a ranger does not meet the prerequisites, they cannot use Improved Two-Weapon Fighting unless they wear light or no armor.~
+Special: A character with 9 levels of ranger can take the first rank in this feat (and can take the second rank at level 16) even if they don't meet the prerequisites. However, if a ranger does not meet the prerequisites, they cannot use Improved Two-Weapon Fighting unless they wear light or no armor.~
 @311    = ~Improved Unarmed Abilities~
 @312    = ~IMPROVED UNARMED ABILITIES:
 
@@ -398,11 +398,11 @@ Benefit: You gain the Mass Spell ability, usable at will as a free action. Using
 
 You can fire multiple arrows simultaneously at a nearby target.
 
-Prerequisite: Dex 17+, Rapid Shot, Precise Shot, Base attack bonus +16 or higher
+Prerequisite: Dex 17+, Rapid Shot, Precise Shot, Base attack bonus +16 or higher; taking the feat a second time requires 16 levels of ranger
 
-Benefit: When you have Rapid Shot enabled and you attack with a bow for the first time in a round, you fire two arrows instead of one. Each of these is a separate attack roll made at a -5 penalty.
+Benefit: When you have Rapid Shot enabled and you attack with a bow for the first time in a round, you fire two arrows instead of one. Each of these is a separate attack roll made at a -5 penalty. If you have two ranks in the feat, you fire three arrows instead of one, each made at a -10 penalty.
 
-Special: A character with 9 levels of ranger can take this feat even if they don't meet the prerequisites.~
+Special: A character with 9 levels of ranger can take the first rank in this feat (and can take the second rank at level 16) even if they don't meet the prerequisites.~
 @522    = ~Wizard~
 @523    = ~WIZARD:
 
@@ -420,7 +420,7 @@ Advantages:
 Disadvantages:
 * Starts with no proficiencies in armor and is a very poor at melee combat.~
 @524    = ~Barbarian~
-@525    = ~BARBARIAN: 
+@525    = ~BARBARIAN:
 
 From the frozen wastes of the north and the hellish jungles of the south come brave, even reckless, warriors. While not as disciplined or as skilled as a normal fighter, the barbarian can willingly throw himself into a berserker rage, becoming a tougher and stronger opponent.
 
@@ -430,7 +430,7 @@ Advantages:
 * Proficient with all simple and martial weapons, light armor, medium armor, and shields.
 * Barbarian Rage: Can rage once per day per every 4 levels (starts at 1st level with one use). Rage gives them +4 to constitution and strength (which stack with other bonuses to constitution and strength) for 5 rounds, as well as 2 point armor class penalty, +2 to Will saves, and immunity to fear, stun, sleep, confusion, unconsciousness, paralysis, and hopelessness. After raging the barbarian will be fatigued for a period of time which will lower some of his abilities.
 * Fast Movement: Barbarians can move 10 feet faster than a standard character.
-* 2nd level: Damage Reduction. The barbarian gains 1/- point of resistance to slashing, piercing, bludgeoning and missile damage. He or she gains 1/- additional point of resistance at levels 5, 8, 11, 14, 17, 20, and every 1 level after.
+* 2nd level: Damage Reduction. The barbarian gains 1/- point of resistance to slashing, piercing, bludgeoning and missile damage. He or she gains 1/- additional point of resistance at levels 5, 8, 11, and every 3 levels thereafter. If the barbarian wears medium armor, the damage reduction granted by this feature is doubled.
 * 2nd level: Uncanny Dodge. Barbarians retain their Dexterity bonus to Armor Class if they are attacked by invisible foes.
 * 5th level: Uncanny Dodge. Barbarians cannot be Sneak Attacked by rogues unless the attacker is at least four levels higher than the barbarian.
 * 15th level: Greater Rage. All of the barbarian's rages become greater rages, which increase the strength and constitution bonuses to +6 and the saving throw bonus to +3. He or she still receives the -2 armor penalty.
@@ -1113,11 +1113,11 @@ Benefit: You gain an ability that lets you grab an adjacent creature. The abilit
 To grapple, you must have at least one hand free. The target gains +4 to the save for each time someone has tried to grapple them in the past 10 rounds. If you grapple an ally or a paralyzed, stunned, sleeping, or knocked down creature, there is no save. Especially large creatures cannot be grappled.~
 @705    = ~ARMORED ARCANA:
 
-You are skilled at casting arcane spells while using certain armor and shields.
+You can cast spells with less chance of failure while wearing armor.
 
 Prerequisite: The ability to cast arcane spells.
 
-Benefit: Taking this feat allows you to cast arcane spells with light armor and/or a buckler or small shield equipped with no chance of spell failure. If you take this feat a second time, you gain no chance of spell failure from medium armor or large shields. If you take it a third time, you can cast arcane spells reliably with any armor or shield equipped.~
+Benefit: Each rank in this feat reduces the chances of casting failure by 35%.~
 @706    = ~IMPROVED INITIATIVE:
 
 You can react more quickly than normal in a fight.

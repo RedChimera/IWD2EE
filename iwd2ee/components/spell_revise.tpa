@@ -1415,7 +1415,6 @@ COPY_EXISTING ~spwi215.spl~ ~override~
 
 COPY_EXISTING ~spwi802.spl~ ~override~
 	READ_SHORT 0x68 numheaders
-	READ_SHORT 0x68 numheaders
 	FOR (i = numheaders; i < 25; ++i) BEGIN
 		LPF ADD_SPELL_HEADER INT_VAR copy_header=i insert_point=i END
 		numheaders = numheaders + 1
@@ -1605,6 +1604,12 @@ COPY_EXISTING ~sppr308.spl~ ~override~
 	SAY NAME2 @31308
 	SAY UNIDENTIFIED_DESC @32308
 	SAY IDENTIFIED_DESC @32308
+
+COPY_EXISTING ~sppr310.spl~ ~override~
+	SAY NAME1 @31310
+	SAY NAME2 @31310
+	SAY UNIDENTIFIED_DESC @32310
+	SAY IDENTIFIED_DESC @32310
 
 COPY_EXISTING ~sppr326.spl~ ~override~
 	SAY NAME1 @31326
@@ -2075,6 +2080,26 @@ COPY_EXISTING ~uspr655.spl~ ~override~
 	SAY UNIDENTIFIED_DESC @36655
 	SAY IDENTIFIED_DESC @36655
 
+COPY_EXISTING ~uspr656.spl~ ~override~
+	SAY NAME1 @35656
+	SAY NAME2 @35656
+	SAY UNIDENTIFIED_DESC @36656
+	SAY IDENTIFIED_DESC @36656
+	READ_SHORT 0x68 numheaders
+	FOR (i = numheaders; i < 25; ++i) BEGIN
+		LPF ADD_SPELL_HEADER INT_VAR copy_header=i insert_point=i END
+		numheaders = numheaders + 1
+	END
+	FOR (i = 1; i < numheaders; ++i) BEGIN
+		LPF ALTER_EFFECT INT_VAR header=i silent=1 check_headers=1 check_globals=0 match_duration=2 duration=((i + 1) * 2) END
+	END
+
+COPY_EXISTING ~uspr657.spl~ ~override~
+	SAY NAME1 @35657
+	SAY NAME2 @35657
+	SAY UNIDENTIFIED_DESC @36657
+	SAY IDENTIFIED_DESC @36657
+
 COPY_EXISTING ~uspr753.spl~ ~override~
 	SAY NAME1 @35753
 	SAY NAME2 @35753
@@ -2194,6 +2219,16 @@ COPY_EXISTING ~ussghoul.cre~ ~override~
 	SAY NAME1 @30053
 	SAY NAME2 @30053
 
+COPY_EXISTING ~uswi454.spl~ ~override~
+	SAY NAME1 @37454
+	SAY NAME2 @37454
+	SAY UNIDENTIFIED_DESC @38454
+	SAY IDENTIFIED_DESC @38454
+
+COPY_EXISTING ~uswi454d.spl~ ~override~ ~uswi454p.spl~ ~override~ ~uswi454s.spl~ ~override~
+	SAY NAME1 @30055
+	SAY NAME2 @30055
+
 COPY_EXISTING ~uswi551.spl~ ~override~
 	SAY NAME1 @37551
 	SAY NAME2 @37551
@@ -2279,6 +2314,15 @@ COPY_EXISTING ~LISTINNT.2da~ ~override~
 	READ_2DA_ENTRY (numrows - 1) 0 2 lastindex
 	lastindex += 1
 	INSERT_2DA_ROW numrows 2 ~%lastindex% USWI758S~
+	numrows += 1
+	lastindex += 1
+	INSERT_2DA_ROW numrows 2 ~%lastindex% USWI454D~
+	numrows += 1
+	lastindex += 1
+	INSERT_2DA_ROW numrows 2 ~%lastindex% USWI454P~
+	numrows += 1
+	lastindex += 1
+	INSERT_2DA_ROW numrows 2 ~%lastindex% USWI454S~
 
 COPY_EXISTING ~uswi759.spl~ ~override~
 	SAY NAME1 @37759

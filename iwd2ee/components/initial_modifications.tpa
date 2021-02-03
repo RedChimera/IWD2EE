@@ -25,6 +25,8 @@ END
 COPY_EXISTING ~IEex_TRA.lua~ ~override~
 	ex_tra_5000 = RESOLVE_STR_REF(@5000)
 	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_tra_5000 *=.*~ ~ex_tra_5000 = %ex_tra_5000%~
+	ex_tra_55385 = RESOLVE_STR_REF(@55385)
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_tra_55385 *=.*~ ~ex_tra_55385 = %ex_tra_55385%~
 	ex_tra_55481 = RESOLVE_STR_REF(@55481)
 	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_tra_55481 *=.*~ ~ex_tra_55481 = %ex_tra_55481%~
 	ex_tra_55482 = RESOLVE_STR_REF(@55482)
@@ -35,6 +37,14 @@ COPY_EXISTING ~IEex_TRA.lua~ ~override~
 	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_tra_55484 *=.*~ ~ex_tra_55484 = %ex_tra_55484%~
 	ex_tra_55500 = RESOLVE_STR_REF(@55500)
 	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_tra_55500 *=.*~ ~ex_tra_55500 = %ex_tra_55500%~
+	ex_tra_55580 = RESOLVE_STR_REF(@55580)
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_tra_55580 *=.*~ ~ex_tra_55580 = %ex_tra_55580%~
+	ex_tra_55581 = RESOLVE_STR_REF(@55581)
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_tra_55581 *=.*~ ~ex_tra_55581 = %ex_tra_55581%~
+	ex_tra_55582 = RESOLVE_STR_REF(@55582)
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_tra_55582 *=.*~ ~ex_tra_55582 = %ex_tra_55582%~
+	ex_tra_55583 = RESOLVE_STR_REF(@55583)
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_tra_55583 *=.*~ ~ex_tra_55583 = %ex_tra_55583%~
 	ex_tra_55596 = RESOLVE_STR_REF(@55596)
 	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_tra_55596 *=.*~ ~ex_tra_55596 = %ex_tra_55596%~
 	ex_tra_55597 = RESOLVE_STR_REF(@55597)
@@ -698,8 +708,6 @@ THEN
 	RESPONSE #100
 		SetGlobal("US_Initialize","GLOBAL",1)
 		SetGlobalTimer("US_Initialize_Timer","GLOBAL",3)
-		ApplySpellRES("USRACEAB",Player1)  // No such index
-		ApplySpellRES("USAPRBON",Player1)  // No such index
 END
 
 IF
