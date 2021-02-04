@@ -3388,6 +3388,19 @@ Area of Effect: 15-foot radius
 Saving Throw: Fortitude partial
 
 This spell releases an extremely loud and jarring burst of sound. Creatures in the area of effect take 1d8 magic damage and must make a Fortitude save or be stunned for 1 round. Deaf creatures are not stunned but still take damage. The caster is unaffected by this spell.~
+@37253     = ~Levitate~
+@38253     = ~Levitate
+(Evocation)
+Level: Brd 2, Sor/Wiz 2
+Range: Sight of Caster
+Duration: Special
+Casting Time: 2
+Area of Effect: 1 creature
+Saving Throw: Reflex negates
+
+This spell suspends the target in the air if it fails a Reflex save (Allies are affected with no saving throw necessary). While levitating, the target cannot move unless it can fly, and it gets a -20 attack penalty with melee weapons, but also gets +20 AC against melee weapons. If cast on an ally, that ally can levitate up and down as well. While the character is selected, hold Left Shift to lift them up or hold Right Shift to pull them down. While at ground level, the character can move and loses the bonuses and penalties, but the spell doesn't end immediately.
+
+When cast on an ally, Levitate lasts 4 rounds. When cast on a non-allied creature, it lasts 10 rounds.~
 @37351     = ~Clairvoyance~
 @38351     = ~Clairvoyance
 (Divination)

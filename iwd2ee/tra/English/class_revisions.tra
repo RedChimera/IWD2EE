@@ -510,6 +510,7 @@ Hit Points per Level: 1-8
 Advantages:
 * Proficient with all simple weapons except for the crossbow, the martial weapons largesword and polearm, plus light armor, medium armor, and shields.
 * Druids can cast powerful offensive and healing spells.
+* 2nd level: Woodland Stride. The druid becomes immune to Entangle, Web, and Spike Growth.
 * At 5th level, Druids start gaining Wild Shape abilities, which let them turn themselves into animals, magical beasts, elementals, and other forms. At higher levels, Druids gain additional options for forms and can use Wild Shape additional times per day.
 * 5th level: Wild Shape: Winter Wolf. The druid gains the ability to shapeshift into an winter wolf. While in winter wolf form, the Druid can is immune to cold and can attack once per round with the winter wolf's frost breath, which deals 4d4 cold damage (Reflex DC 10 for half). Every 5 levels thereafter, the breath damage increases by 2d4 and the save DC increases by 5.
 * 5th level: The Druid is high enough level to choose two special feats: Wild Shape: Blink Dog, and Wild Shape: Creeping Doom.
@@ -637,7 +638,11 @@ Advantages:
 * Rangers may select a Favored Enemy at first level. They gain +1 to attack and +4 to damage against creatures of that race type. Rangers gain an additional Favored Enemy every five levels, and the attack bonus against previous Favored Enemies increases by 1.
 * Rangers can fight with two weapons as if they had the feats Ambidexterity and Two-Weapon Fighting if they are wearing light or no armor only.
 * 2nd level: Spellcasting. Rangers gain the ability to cast spells.
-* Every 6 levels, rangers gain a use of the spell Set Natural Snare, which ensnares all targets for 5 rounds on a failed Reflex save. The save DC is 6 plus the ranger's Wilderness Lore skill.
+* 6th level: The ranger can take the Whirlwind Attack feat provided they meet the Dexterity requirement, ignoring all other requirements.
+* 6th level: Set Natural Snare. This ability sets a trap that, which triggered by an enemy, ensnares all enemies within 20 feet for 5 rounds on a failed Reflex save. The save DC is 6 plus the ranger's Wilderness Lore skill. The ranger gains an additional use of Set Natural Snare every 6 levels after 6.
+* 7th level: Woodland Stride. The ranger becomes immune to Entangle, Web, and Spike Growth.
+* 9th level: The ranger can take the Improved Two-Weapon Fighting and Manyshot feats, even if they don't meet the prerequisites.
+* 16th level: The ranger can take the Improved Two-Weapon Fighting and Manyshot feats a second time, which no other class can do.
 
 Disadvantages:
 * Rangers gain feats at a slower rate than fighters.
@@ -1157,6 +1162,11 @@ You can fight with a weapon in each hand.
 Benefit: While dual-wielding, the attack penalties of both the main hand and off hand weapon decrease by 2.
 
 Normal: Without the Ambidexterity and Two-Weapon Fighting feats, a character suffers a -6 attack penalty with the main hand weapon and a -10 penalty with the off hand weapon. These penalties are also decreased by 2 if the off hand weapon is a dagger or shortsword.~
+@711    = ~COURTEOUS MAGOCRACY:
+
+You were raised in a land where mighty wizards order affairs.  Where powerful spellcasters are common, cautious courtesy is the norm and everyone has an eye for magic goods.
+
+Benefit: You receive a +2 on all Diplomacy and Spellcraft checks. In addition, when buying goods from an NPC who is a wizard or sorcerer, you are treated as having +6 Charisma (which stacks with all other Charisma bonuses), reducing prices by about 9%.~
 @785    = ~Aasimar~
 @786    = ~AASIMAR:
 
@@ -1708,7 +1718,7 @@ Disadvantages:
 @920    = ~Whirlwind Attack~
 @921    = ~Deflected a missile~
 @922    = ~Counterspell~
-@923    = ~~
+@923    = ~Incorporeal Touch~
 @924    = ~~
 @925    = ~~
 @926    = ~~

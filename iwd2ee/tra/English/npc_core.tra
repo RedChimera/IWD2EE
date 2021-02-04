@@ -5,28 +5,32 @@
 @4802     = ~Veira's Wedding Ring~
 @4803     = ~This ring is the only part of Veira that remains truly tangible.  Bound in death as well as life, the ring never leaves Veira's finger.
 
-Veira remains only partly corporeal so long as she clings to the Material Plane.  She can interact with the world around her, but her partially ethereal form has no need for sleep, and she can neither enjoy the pleasure of food or drink, nor can she suffer the pain of illness and injury.  If her form is damaged, she can slowly regenerate over time, but she is otherwise immune to all biological effects, both positive and negative.  If her form is destroyed, she can be restored with a sufficient burst of positive energy, such as a Raise Dead spell.
+Veira remains only partly corporeal so long as she clings to the Material Plane.  She can interact with the world around her, but her partially ethereal form has no need for sleep, and she can neither enjoy the pleasure of food or drink, nor can she suffer the pain of illness and injury.  If her form is damaged, she can slowly regenerate over time.  If her form is destroyed, she can be restored with a sufficient burst of positive energy, such as a Raise Dead spell.
 
 STATISTICS:
 
 Regeneration: 1 hit point per round
 Damage Reduction: 5/+1
+Incorporeal: Veira has a 50% chance to avoid any instance of physical damage that would hit her
+Move Silently: +50
 Resistance: 25/- Cold Resistance
 Resistance: 5/- Acid, Electricity, and Fire Resistance
-Immunity to healing spells, fatigue, poison, disease, bleeding wounds, stun, web, entangle, intoxication, nausea, vampiric touch, energy drain, Stoneskin, Iron Skins, Barkskin, enfeeblement, Otiluke's Resilient Sphere, Tortoise Shell, Horrid Wilting, death magic, petrification, polymorph, critical hits, and most potions.
+Immunity to fatigue, poison, disease, bleeding wounds, stun, web, entangle, intoxication, nausea, vampiric touch, energy drain, Stoneskin, Iron Skins, Barkskin, enfeeblement, Otiluke's Resilient Sphere, Tortoise Shell, Horrid Wilting, death magic, petrification, polymorph, critical hits, and most potions.
 Weight: 0 lb.~
 @4804     = ~Veira's Wedding Ring~
 @4805     = ~This ring is the only part of Veira that remains truly tangible.  Bound in death as well as life, the ring never leaves Veira's finger.
 
-Veira remains only partly corporeal so long as she clings to the Material Plane.  She can interact with the world around her, but her partially ethereal form has no need for sleep, and she can neither enjoy the pleasure of food or drink, nor can she suffer the pain of illness and injury.  If her form is damaged, she can slowly regenerate over time, but she is otherwise immune to all biological effects, both positive and negative.  If her form is destroyed, she can be restored with a sufficient burst of positive energy, such as a Raise Dead spell.
+Veira remains only partly corporeal so long as she clings to the Material Plane.  She can interact with the world around her, but her partially ethereal form has no need for sleep, and she can neither enjoy the pleasure of food or drink, nor can she suffer the pain of illness and injury.  If her form is damaged, she can slowly regenerate over time.  If her form is destroyed, she can be restored with a sufficient burst of positive energy, such as a Raise Dead spell.
 
 STATISTICS:
 
 Regeneration: 2 hit points per round
 Damage Reduction: 10/+2
+Incorporeal: Veira has a 50% chance to avoid any instance of physical damage that would hit her
+Move Silently: +50
 Resistance: 50/- Cold Resistance
 Resistance: 10/- Acid, Electricity, and Fire Resistance
-Immunity to healing spells, fatigue, poison, disease, bleeding wounds, stun, web, entangle, intoxication, nausea, vampiric touch, energy drain, Stoneskin, Iron Skins, Barkskin, enfeeblement, Otiluke's Resilient Sphere, Tortoise Shell, Horrid Wilting, death magic, petrification, polymorph, critical hits, and most potions.
+Immunity to fatigue, poison, disease, bleeding wounds, stun, web, entangle, intoxication, nausea, vampiric touch, energy drain, Stoneskin, Iron Skins, Barkskin, enfeeblement, Otiluke's Resilient Sphere, Tortoise Shell, Horrid Wilting, death magic, petrification, polymorph, critical hits, and most potions.
 Weight: 0 lb.~
 @4806     = ~Vrek's Claw~
 @4807     = ~Vrek prefers to use his jagged claws in combat, finding conventional weapons designed for humanoid hands to be clumsy in his grip.  Vrek may still use a shield or a weapon in his off hand, but he uses his claws as his primary attack.  Vrek's claws strike as +1 weapons for the purposes of overcoming damage reduction.
