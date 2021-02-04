@@ -3390,7 +3390,7 @@ Saving Throw: Fortitude partial
 This spell releases an extremely loud and jarring burst of sound. Creatures in the area of effect take 1d8 magic damage and must make a Fortitude save or be stunned for 1 round. Deaf creatures are not stunned but still take damage. The caster is unaffected by this spell.~
 @37253     = ~Levitate~
 @38253     = ~Levitate
-(Evocation)
+(Transmutation)
 Level: Brd 2, Sor/Wiz 2
 Range: Sight of Caster
 Duration: Special

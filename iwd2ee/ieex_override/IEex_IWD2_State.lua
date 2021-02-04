@@ -11388,20 +11388,17 @@ function MEHGTMOD(effectData, creatureData)
 		end
 	end
 --	if bit.band(IEex_ReadDword(creatureData + 0x434), 0x2000) > 0 then return end
-
-	if ((minHeight > 0 and bit.band(savingthrow, 0x10000) == 0) or (height > minHeight)) and not (IEex_IsFlying(targetID)) then
-
+	if height > 5 and not (IEex_IsFlying(targetID)) then
 		IEex_ApplyEffectToActor(targetID, {
 ["opcode"] = 266,
 ["target"] = 2,
 ["timing"] = 4096,
 ["duration"] = IEex_GetGameTick(),
 ["parameter2"] = 1,
-["parent_resource"] = parent_resource,
+["parent_resource"] = "MEOVERAC",
 ["source_target"] = targetID,
 ["source_id"] = sourceID
 })
-
 	end
 
 	IEex_WriteWord(creatureData + 0x720, height)
