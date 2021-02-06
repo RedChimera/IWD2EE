@@ -787,6 +787,21 @@ IEex_GlobalAssemblyMacros = {
 		end,
 	},
 
+	["repeat"] = {
+		["unroll"] = function(state, args)
+			local resultTable = {}
+			local insertIndex = 1
+			local numArgs = #args
+			for i = 1, args[1] do
+				for j = 2, numArgs do
+					resultTable[insertIndex] = args[j]
+					insertIndex = insertIndex + 1
+				end
+			end
+			return resultTable
+		end,
+	},
+
 	["push"] = {
 		["unroll"] = function(state, args)
 			state.unroll.markedEspAdjustment = (state.unroll.markedEspAdjustment or 0) + 4

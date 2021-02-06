@@ -188,6 +188,22 @@
 	IEex_HookBeforeCall(0x72E1F9, {"!call", {callOnUpdateTempStats, 4, 4}})
 	IEex_HookBeforeCall(0x733179, {"!call", {callOnUpdateTempStats, 4, 4}})
 
+	-------------------------------------------------
+	-- IEex_Extern_OnPostCreatureProcessEffectList --
+	-------------------------------------------------
+
+	IEex_HookAfterCall(0x72DAC7, IEex_FlattenTable({[[
+		!mark_esp()
+		!push_all_registers_iwd2
+		]], IEex_GenLuaCall("IEex_Extern_OnPostCreatureProcessEffectList", {
+			["args"] = {
+				{"!push(esi)"},
+			},
+		}), [[
+		@call_error
+		!pop_all_registers_iwd2
+	]]}))
+
 	IEex_EnableCodeProtection()
 
 end)()

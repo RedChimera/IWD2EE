@@ -140,6 +140,10 @@ function IEex_Extern_OnUpdateTempStats(share)
 	end)
 end
 
+function IEex_Extern_OnPostCreatureProcessEffectList(CGameSprite)
+	IEex_AssertThread(IEex_Thread.Async, true)
+end
+
 ------------------
 -- Thread: Both --
 ------------------

@@ -643,7 +643,7 @@ function IEex_SanitizeAssembly(assembly)
 								for _, val in ipairs(unrollResult) do
 									local valType = type(val)
 									if valType == "string" then
-										return unrollTextArg(val)
+										unrollTextArg(val)
 									elseif valType == "table" then
 										table.insert(sanitizedStructure, val)
 									else
