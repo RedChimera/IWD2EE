@@ -1109,7 +1109,17 @@ Weight: 3 lb.~
 //@10306    = ~Sash of the Black Raven~
 //@10307    = ~Item description can remain the same; if new description is needed put it here~
 //@10308    = ~Binding Sash of the Black Raven~
-//@10309    = ~Item description can remain the same; if new description is needed put it here~
+@10309    = ~The Binding Sash of the Black Raven is rumored to be a symbol of one of the disciples of the Black Raven monastery, a sanctuary located deep within the heart of the Spine of the World Mountains.  According to legend, the Black Raven is a near mythical figure in Uthgardt legends, a punishing spirit from the underworld who emerged on the surface world many years ago to teach the barbarians humility and break their arrogance.  Described as a dark-skinned man with burning eyes and bloodied chains hanging from his wrists, the stories that circle the Black Raven frequently tell of his epic struggles against slavers and injustice throughout the North and the southern kingdoms.  Some historians speculate that the Black Raven may have been a drow or half-drow, but others claim that he was a minor or quasi-deity dedicated to ending slavery and oppression.
+
+This black sash is made of fine silk, perhaps spider silk, and it is worn looped around the waist.  While worn, it helps the wearer focus in combat, freeing his mind of all distractions and channeling his inner energies to defeat his foes.  When worn by any class other than a monk, it immediately unknots itself and falls to the ground. 
+
+
+STATISTICS:
+
+Special:
+  +2 Attack Bonus to all attacks
+  Immunity to Charm, Domination, Confusion, Feeblemind, and Fear
+Weight: 0~
 //@10310    = ~~
 //@10311    = ~~
 
@@ -10275,7 +10285,7 @@ Permanent +4 Strength
 Permanent -4 Constitution
 Weight:  1 lb.~
 @12109    = ~Potion of Defense~
-@12110    = ~Potions are typically found in ceramic, crystal, glass, or metal flasks or vials. Flasks or other containers generally contain enough fluid to provide one person with one complete dose to achieve the effects of the potion. 
+@12110    = ~Potions are typically found in ceramic, crystal, glass, or metal flasks or vials. Flasks or other containers generally contain enough fluid to provide one person with one complete dose to achieve the effects of the potion.
 
 STATISTICS:
 

@@ -403,6 +403,48 @@ Prerequisite: Dex 17+, Rapid Shot, Precise Shot, Base attack bonus +16 or higher
 Benefit: When you have Rapid Shot enabled and you attack with a bow for the first time in a round, you fire two arrows instead of one. Each of these is a separate attack roll made at a -5 penalty. If you have two ranks in the feat, you fire three arrows instead of one, each made at a -10 penalty.
 
 Special: A character with 9 levels of ranger can take the first rank in this feat (and can take the second rank at level 16) even if they don't meet the prerequisites.~
+@367    = ~Combat Reflexes~
+@368    = ~COMBAT REFLEXES:
+
+You know how to perform an attack of opportunity when a foe lets their guard down.
+
+Prerequisite: Base attack bonus +1 or higher
+
+Benefit: Once per round, if you are attacking an enemy with a melee weapon, there are certain conditions that could allow you to make an extra attack against them. These include:
+
+* If the enemy tries to step out of the reach of your weapon.
+* If the enemy fires or throws a ranged weapon within the reach of your weapon.
+* If the enemy tries to cast a spell within the reach of your weapon.
+
+When taken a second time, this feat lets you make a number of attacks of opportunity per round equal to your Dexterity bonus plus one. You cannot perform more than one attack of opportunity against a single enemy per two seconds.~
+@369    = ~Combat Reflexes~
+@370    = ~COMBAT REFLEXES:
+
+You can respond quickly and repeatedly to opponents who let their defenses down.
+
+Prerequisite: Base attack bonus +1 or higher
+
+Benefit: You can make a number of attacks of opportunity per round equal to your Dexterity bonus plus one. You cannot perform more than one attack of opportunity against a single enemy per two seconds.
+
+Normal: You can make a single attack of opportunity per round with a melee weapon if one of the following conditions is met:
+
+* If the enemy tries to step out of the reach of your weapon.
+* If the enemy fires or throws a ranged weapon within the reach of your weapon.
+* If the enemy tries to cast a spell within the reach of your weapon.~
+@371    = ~SPRING ATTACK:
+
+You excel at moving while fighting.
+
+Prerequisites: Dex 13+, Dodge, Mobility, Base attack bonus +4 or higher
+
+Benefit: Whenever you hit a creature with a melee attack, you move twice as fast for 1 second. During this time, you do not provoke an attack of opportunity by moving out of an enemy's melee range.~
+@372    = ~MOBILITY:
+
+You can dodge attacks particularly well while moving.
+
+Prerequisites: Dex 13+, Dodge
+
+Benefit: While moving, you gain a +4 Armor Class bonus. This bonus is doubled against attacks of opportunity due to moving out of an enemy's weapon range.~
 @522    = ~Wizard~
 @523    = ~WIZARD:
 
@@ -1167,6 +1209,16 @@ Normal: Without the Ambidexterity and Two-Weapon Fighting feats, a character suf
 You were raised in a land where mighty wizards order affairs.  Where powerful spellcasters are common, cautious courtesy is the norm and everyone has an eye for magic goods.
 
 Benefit: You receive a +2 on all Diplomacy and Spellcraft checks. In addition, when buying goods from an NPC who is a wizard or sorcerer, you are treated as having +6 Charisma (which stacks with all other Charisma bonuses), reducing prices by about 9%.~
+@712    = ~COMBAT CASTING:
+
+You are adept at casting spells in combat.
+
+Benefit: You get a +4 bonus to Concentration checks made to cast a spell while being injured. In addition, attacks of opportunity in response to you casting a spell are made at a -4 penalty.~
+@713    = ~PRECISE SHOT:
+
+You are skilled at timing and aiming ranged attacks.
+
+Benefit: Reduces the to hit penalty for firing in close quarters from -8 to -4. In addition, enemies get a -4 attack penalty on attacks of opportunity provoked by your ranged attacks.~
 @785    = ~Aasimar~
 @786    = ~AASIMAR:
 

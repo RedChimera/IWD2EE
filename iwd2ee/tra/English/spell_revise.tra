@@ -3510,7 +3510,18 @@ Casting Time: 0
 Area of Effect: Caster
 Saving Throw: None
 
-This spell briefly reverses time for the caster, reverting them to the state they were in two rounds ago. The caster's HP is restored to what it was two rounds ago, as is their location in the area. The caster also regains the magical effects they had two rounds ago, while losing effects gained in the past two rounds (including harmful status effects). Rewind Time does not restore memorized spells expended in the last two rounds. ~
+This spell briefly reverses time for the caster, reverting them to the state they were in two rounds ago. The caster's HP is restored to what it was two rounds ago, as is their location in the area. The caster also regains the magical effects they had two rounds ago, while losing effects gained in the past two rounds (including harmful status effects). Rewind Time does not restore memorized spells expended in the last two rounds.~
+@37554     = ~Wall of Force~
+@38554     = ~Wall of Force
+(Abjuration)
+Level: Sor/Wiz 5, Selune 5
+Range: Sight of Caster
+Duration: 5 rounds
+Casting Time: 7
+Area of Effect: 20-foot long, 5-foot wide wall
+Saving Throw: None
+
+This spell creates a wall of magical force, which stays for 5 rounds. Creatures cannot pass through the wall, though they can still fly over it, teleport past it, or float through it while incorporeal. The wall cannot be dispelled. Only one Wall of Force can be active at a time.~
 @37652     = ~Isaac's Greater Missile Storm~
 @38652     = ~Isaac's Greater Missile Storm
 (Evocation)

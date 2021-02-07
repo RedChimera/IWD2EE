@@ -25,3 +25,4 @@ ex_listdomn = {}
 ex_trueschool = {}
 ex_courteous_magocracy_classes = {[10] = true, [11] = true}
 ex_courteous_magocracy_charisma_bonus = 6
+ex_base_num_attacks_of_opportunity = 0

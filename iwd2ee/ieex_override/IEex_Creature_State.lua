@@ -140,8 +140,11 @@ function IEex_Extern_OnUpdateTempStats(share)
 	end)
 end
 
-function IEex_Extern_OnPostCreatureProcessEffectList(CGameSprite)
+function IEex_Extern_OnPostCreatureProcessEffectList(creatureData)
 	IEex_AssertThread(IEex_Thread.Async, true)
+	local targetID = IEex_GetActorIDShare(creatureData)
+	if not IEex_IsSprite(targetID, false) then return end
+	IEex_ExtraAttacks(creatureData)
 end
 
 ------------------

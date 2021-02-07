@@ -434,3 +434,15 @@ BEGIN @75 DESIGNATED 85
 BEGIN @81 DESIGNATED 86
 
       INCLUDE ~%mod_folder%/components/remove_summoning_limit.tpa~ //~Remove the summoning limit~
+
+//Add attacks of opportunity to the game
+
+BEGIN @83 DESIGNATED 87
+SUBCOMPONENT @82
+
+      INCLUDE ~%mod_folder%/components/attacks_of_opportunity_1.tpa~ //~Only characters with a certain feat can perform attacks of opportunity~
+
+BEGIN @84 DESIGNATED 88
+SUBCOMPONENT @82
+
+      INCLUDE ~%mod_folder%/components/attacks_of_opportunity_2.tpa~ //~Everyone can perform attacks of opportunity~

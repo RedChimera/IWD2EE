@@ -1,0 +1,31 @@
+COPY_EXISTING ~IEex_WEIDU.lua~ ~override~
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_base_num_attacks_of_opportunity.*~ ~ex_base_num_attacks_of_opportunity = 1~
+
+LAF ADD_FEAT_IWD2 INT_VAR nameref=RESOLVE_STR_REF(@369) descref=RESOLVE_STR_REF(@370) max=1 STR_VAR name=~ME_COMBAT_REFLEXES~ script=~Feats_CombatReflexes~ END
+
+COPY_EXISTING ~feats.2da~ ~override~
+  COUNT_2DA_COLS num_cols
+  READ_2DA_ENTRIES_NOW rows num_cols
+  FOR (row = 0; row < rows; ++row) BEGIN
+    READ_2DA_ENTRY_FORMER rows row 0 label
+    PATCH_MATCH ~%label%~ WITH
+      ~ME_SPRING_ATTACK~ BEGIN
+		SET description = RESOLVE_STR_REF(@371)
+		SET_2DA_ENTRY_LATER rows_out row 3 ~%description%~
+      END
+      ~ME_MOBILITY~ BEGIN
+		SET description = RESOLVE_STR_REF(@372)
+		SET_2DA_ENTRY_LATER rows_out row 3 ~%description%~
+      END
+      ~COMBAT_CASTING~ BEGIN
+		SET description = RESOLVE_STR_REF(@712)
+		SET_2DA_ENTRY_LATER rows_out row 3 ~%description%~
+      END
+      ~PRECISE_SHOT~ BEGIN
+		SET description = RESOLVE_STR_REF(@713)
+		SET_2DA_ENTRY_LATER rows_out row 3 ~%description%~
+      END
+      DEFAULT
+    END
+  END
+  SET_2DA_ENTRIES_NOW rows_out num_cols
