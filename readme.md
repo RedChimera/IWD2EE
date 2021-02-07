@@ -345,4 +345,8 @@ This component lets all wizards successfully learn spells from scrolls 100% of t
 
 This component allows you to summon any number of creatures at once.
 
+## Add attacks of opportunity to the game
+
+This component allows characters to make attacks of opportunity in melee under certain conditions: if the enemy steps out of your melee range, if they make a ranged attack, or if they cast a spell. There are two subcomponents: you can make it so only characters with a certain feat can perform attacks of opportunity, or you can allow everyone to make attacks of opportunity. 
+
 Much of the credit for the inspiration for this mod goes to the makers of Light of Selune, IWD2-Ease, and Tactics4IWD2, which provided the groundwork for this mod and the changes it makes. I would also like to thank Firecrow, who provided indispensable feedback and played an instrumental role in inspiring many of the mod's features, and subtledoctor, bubb, and Gwendolyne for providing invaluable technical support during the construction of the mod. Credit goes to Erephine for making the new animations from One Pixel Productions, which have been added to IWD2EE.
