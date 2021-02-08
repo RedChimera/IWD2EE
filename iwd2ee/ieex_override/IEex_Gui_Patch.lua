@@ -581,6 +581,58 @@
 		!pop_all_registers_iwd2
 	]]}))
 
+	------------------------------------------------------------------
+	-- Smooth Cursor Drawing                                        --
+	-- Unlock refresh rate to a maximum of 200fps and render cursor --
+	-- at true position; cursor logic still updates at 30fps.       --
+	------------------------------------------------------------------
+
+	IEex_HookRestore(0x79FA44, 12, 0, {[[
+		!push(eax)
+		!sub_esp_byte 08
+
+		!push_esp
+		!call_[dword] #8474D4 ; GetCursorPos ;
+
+		!push(esp)
+		!mov(eax,[8CF6DC])
+		!push([eax+94])
+		!call_[dword] #847470 ; ScreenToClient ;
+
+		!mov(ebx,[esp])
+		!mov(ecx,[esp+4])
+
+		!add_esp_byte 08
+		!pop(eax)
+	]]})
+
+	IEex_HookRestore(0x79F80F, 6, 0, {[[
+		!push(eax)
+		!sub_esp_byte 08
+
+		!push_esp
+		!call_[dword] #8474D4 ; GetCursorPos ;
+
+		!push(esp)
+		!mov(eax,[8CF6DC])
+		!push([eax+94])
+		!call_[dword] #847470 ; ScreenToClient ;
+
+		!mov(ecx,[esp])
+		!mov(edx,[esp+4])
+
+		!add_esp_byte 08
+		!pop(eax)
+	]]})
+
+	IEex_WriteAssembly(0x79F819, {"!repeat(6,!nop)"})
+
+	IEex_HookAfterRestore(0x79284D, 0, 6, {[[
+		!push_dword #5
+		!call >IEex_Helper_Sleep
+		!mov([esi+193A],1)
+	]]})
+
 	IEex_EnableCodeProtection()
 
 end)()
