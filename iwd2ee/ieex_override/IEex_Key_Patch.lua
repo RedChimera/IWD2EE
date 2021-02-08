@@ -1,6 +1,45 @@
 
 (function()
 
+	-----------------------------
+	-- IEex_GetCursorClientPos --
+	-----------------------------
+
+	IEex_WriteAssemblyFunction("IEex_GetCursorClientPos", {[[
+
+		!push_state
+		!sub_esp_byte 08
+
+		!push_esp
+		!call_[dword] #8474D4 ; GetCursorPos ;
+
+		!push(esp)
+		!mov(eax,[8CF6DC])
+		!push([eax+94])
+		!call_[dword] #847470 ; ScreenToClient ;
+
+		!push([esp])
+		!fild_[esp]
+		!sub_esp_byte 04
+		!fstp_qword:[esp]
+		!push([ebp+8])
+		!call >_lua_pushnumber
+		!add_esp_byte 0C
+
+		!push([esp+4])
+		!fild_[esp]
+		!sub_esp_byte 04
+		!fstp_qword:[esp]
+		!push([ebp+8])
+		!call >_lua_pushnumber
+		!add_esp_byte 0C
+
+		!add_esp_byte 08
+		!mov_eax #2
+		!pop_state
+		!ret
+	]]})
+
 	IEex_DisableCodeProtection()
 
 	IEex_HookRestore(0x78FBC9, 0, 5, {[[
@@ -74,6 +113,27 @@
 
 	-- Enable window-edge scrolling in windowed mode
 	IEex_WriteAssembly(0x78F43F, {"!jmp_byte"})
+
+	----------------------------------------------------
+	-- Smooth Scrolling                               --
+	-- Replace viewport scrolling with implementation --
+	-- that runs on sync thread, (at higher tps)      --
+	----------------------------------------------------
+
+	-- Disable inbuilt keyboard scrolling
+	IEex_WriteAssembly(0x4777EF, {"!xor_eax_eax !repeat(4,!nop)"})
+
+	-- Disable inbuilt cursor scrolling
+	IEex_WriteAssembly(0x477824, {"!xor_eax_eax !repeat(4,!nop)"})
+	IEex_WriteAssembly(0x47784B, {"!xor_edx_edx !repeat(4,!nop)"})
+
+	-- Redirect engine to Lua implementation
+	IEex_HookAfterCall(0x5CF0D7, IEex_FlattenTable({[[
+		!push_all_registers_iwd2
+		]], IEex_GenLuaCall("IEex_Extern_CheckScroll"), [[
+		@call_error
+		!pop_all_registers_iwd2
+	]]}))
 
 	IEex_EnableCodeProtection()
 

@@ -1238,6 +1238,12 @@ function IEex_GetGameData()
 	return m_pObjectGame
 end
 
+function IEex_GetVisibleArea()
+	local m_pObjectGame = IEex_GetGameData()
+	local m_visibleArea = IEex_ReadByte(m_pObjectGame + 0x37E0, 0)
+	return IEex_ReadDword(m_pObjectGame + m_visibleArea * 0x4 + 0x37E2)
+end
+
 function IEex_GetGameTick()
 	return IEex_ReadDword(IEex_GetGameData() + 0x1B78)
 end

@@ -1,3 +1,4 @@
+
 IEex_KeyIDS = {
 	["LEFT_MOUSE_CLICK"] = 1,
 	["RIGHT_MOUSE_CLICK"] = 2,
@@ -53,6 +54,16 @@ IEex_KeyIDS = {
 	["X"] = 88,
 	["Y"] = 89,
 	["Z"] = 90,
+	["NUMPAD0"] = 96,
+	["NUMPAD1"] = 97,
+	["NUMPAD2"] = 98,
+	["NUMPAD3"] = 99,
+	["NUMPAD4"] = 100,
+	["NUMPAD5"] = 101,
+	["NUMPAD6"] = 102,
+	["NUMPAD7"] = 103,
+	["NUMPAD8"] = 104,
+	["NUMPAD9"] = 105,
 	["F1"] = 112,
 	["F2"] = 113,
 	["F3"] = 114,
@@ -75,7 +86,6 @@ IEex_KeyIDS = {
 }
 
 IEex_Keys = IEex_Default( {}, IEex_Keys)
-	
 IEex_Helper_InitBridgeFromTable("IEex_Keys", function()
 	for key = 0x1, 0xFE, 1 do
 		IEex_Keys[key] = {["isDown"] = false, ["pressedSinceLastPoll"] = false}
@@ -106,6 +116,36 @@ function IEex_IsKeyDown(key)
 	return IEex_Helper_GetBridge("IEex_Keys", key, "isDown")
 end
 
+function IEex_AdjustViewPosition(deltaX, deltaY)
+
+	local infinity = IEex_GetCInfinity()
+	local m_ptCurrentPosExact_x = IEex_ReadDword(infinity + 0x164)
+	local m_ptCurrentPosExact_y = IEex_ReadDword(infinity + 0x168)
+
+	m_ptCurrentPosExact_x = m_ptCurrentPosExact_x + deltaX * 10000
+	m_ptCurrentPosExact_y = m_ptCurrentPosExact_y + deltaY * 10000
+	IEex_WriteDword(infinity + 0x164, m_ptCurrentPosExact_x)
+	IEex_WriteDword(infinity + 0x168, m_ptCurrentPosExact_y)
+
+	-- CInfinity_SetViewPosition
+	IEex_Call(0x5D11F0, {0, math.floor(m_ptCurrentPosExact_y / 10000), math.floor(m_ptCurrentPosExact_x / 10000)}, infinity, 0x0)
+end
+
+function IEex_AdjustViewPositionFromScrollState(scrollState, delta)
+	if scrollState == 6 or scrollState == 7 or scrollState == 8 then
+		IEex_AdjustViewPosition(-delta, 0)
+	end
+	if scrollState == 2 or scrollState == 3 or scrollState == 4 then
+		IEex_AdjustViewPosition(delta, 0)
+	end
+	if scrollState == 1 or scrollState == 2 or scrollState == 8 then
+		IEex_AdjustViewPosition(0, -delta)
+	end
+	if scrollState == 4 or scrollState == 5 or scrollState == 6 then
+		IEex_AdjustViewPosition(0, delta)
+	end
+end
+
 function IEex_Key_ReloadListener()
 	IEex_Helper_ClearBridge("IEex_KeyPressedListeners")
 	IEex_Helper_ClearBridge("IEex_KeyReleasedListeners")
@@ -117,73 +157,210 @@ IEex_AbsoluteOnce("IEex_Key_RegisterReloadListener", function()
 	IEex_AddReloadListener("IEex_Key_ReloadListener")
 end)
 
-----------------------------
--- Middle-mouse scrolling --
-----------------------------
+---------------
+-- Scrolling --
+---------------
 
-function IEex_MiddleScroll_KeyPressedListener(key)
-	if key == 0x4 then
-		IEex_MiddleScroll_IsDown = true
-		IEex_MiddleScroll_OldX, IEex_MiddleScroll_OldY = IEex_GetCursorXY()
+IEex_Scroll_KeyLeft  = IEex_KeyIDS.LEFT
+IEex_Scroll_KeyRight = IEex_KeyIDS.RIGHT
+IEex_Scroll_KeyUp    = IEex_KeyIDS.UP
+IEex_Scroll_KeyDown  = IEex_KeyIDS.DOWN
+
+IEex_Helper_InitBridgeFromTable("IEex_Scroll_MiddleMouseState", {
+	["isDown"] = false,
+	["oldX"] = 0,
+	["oldY"] = 0,
+})
+
+function IEex_Scroll_CalculateDeltaFactor()
+	local toReturn = 1
+	IEex_Helper_StoreMicroseconds("curTick")
+	if IEex_Helper_ExistsMicroseconds("lastTick") then
+		local diff = IEex_Helper_GetMicrosecondsDiff("curTick", "lastTick")
+		toReturn = diff / 25000
+	end
+	IEex_Helper_AssignMicroseconds("lastTick", "curTick")
+	return toReturn
+end
+
+function IEex_Scroll_CheckMultiScrollState(m_nKeyScrollState)
+	if m_nKeyScrollState == 1 then
+		if IEex_IsKeyDown(IEex_Scroll_KeyLeft) or IEex_IsKeyDown(IEex_KeyIDS.NUMPAD4) then
+			m_nKeyScrollState = 8
+		elseif IEex_IsKeyDown(IEex_Scroll_KeyRight) or IEex_IsKeyDown(IEex_KeyIDS.NUMPAD6) then
+			m_nKeyScrollState = 2
+		end
+	elseif m_nKeyScrollState == 3 then
+		if IEex_IsKeyDown(IEex_Scroll_KeyUp) or IEex_IsKeyDown(IEex_KeyIDS.NUMPAD8) then
+			m_nKeyScrollState = 2
+		elseif IEex_IsKeyDown(IEex_Scroll_KeyDown) or IEex_IsKeyDown(IEex_KeyIDS.NUMPAD2) then
+			m_nKeyScrollState = 4
+		end
+	elseif m_nKeyScrollState == 5 then
+		if IEex_IsKeyDown(IEex_Scroll_KeyRight) or IEex_IsKeyDown(IEex_KeyIDS.NUMPAD6) then
+			m_nKeyScrollState = 4
+		elseif IEex_IsKeyDown(IEex_Scroll_KeyLeft) or IEex_IsKeyDown(IEex_KeyIDS.NUMPAD4) then
+			m_nKeyScrollState = 6
+		end
+	elseif m_nKeyScrollState == 7 then
+		if IEex_IsKeyDown(IEex_Scroll_KeyDown) or IEex_IsKeyDown(IEex_KeyIDS.NUMPAD2) then
+			m_nKeyScrollState = 6
+		elseif IEex_IsKeyDown(IEex_Scroll_KeyUp) or IEex_IsKeyDown(IEex_KeyIDS.NUMPAD8) then
+			m_nKeyScrollState = 8
+		end
+	end
+	return m_nKeyScrollState
+end
+
+function IEex_Scroll_KeyPressedListener(key)
+
+	if key == IEex_KeyIDS.MIDDLE_MOUSE_CLICK then
+		IEex_Helper_SynchronizedBridgeOperation("IEex_Scroll_MiddleMouseState", function()
+			IEex_Helper_SetBridgeNL("IEex_Scroll_MiddleMouseState", "isDown", true)
+			local oldX, oldY = IEex_GetCursorXY()
+			IEex_Helper_SetBridgeNL("IEex_Scroll_MiddleMouseState", "oldX", oldX)
+			IEex_Helper_SetBridgeNL("IEex_Scroll_MiddleMouseState", "oldY", oldY)
+		end)
+	end
+
+	if IEex_GetActiveEngine() == IEex_GetEngineWorld() then
+		local visibleArea = IEex_GetVisibleArea()
+		if visibleArea ~= 0x0 then
+			local m_nKeyScrollStateAddress = visibleArea + 0x23C
+			local m_nKeyScrollState = IEex_ReadDword(m_nKeyScrollStateAddress)
+			IEex_WriteDword(m_nKeyScrollStateAddress, IEex_Scroll_CheckMultiScrollState(m_nKeyScrollState))
+		end
 	end
 end
 
-function IEex_MiddleScroll_KeyReleasedListener(key)
-	if key == 0x4 then
-		IEex_MiddleScroll_IsDown = false
+function IEex_Scroll_KeyReleasedListener(key)
+
+	if key == IEex_KeyIDS.MIDDLE_MOUSE_CLICK then
+		IEex_Helper_SetBridge("IEex_Scroll_MiddleMouseState", "isDown", false)
+	end
+
+	if IEex_GetActiveEngine() == IEex_GetEngineWorld() then
+
+		local visibleArea = IEex_GetVisibleArea()
+		if visibleArea ~= 0x0 then
+
+			local m_nKeyScrollStateAddress = visibleArea + 0x23C
+			local m_nKeyScrollState = IEex_ReadDword(m_nKeyScrollStateAddress)
+
+			if key == IEex_Scroll_KeyLeft or key == IEex_KeyIDS.NUMPAD4 then
+				if IEex_IsKeyDown(IEex_Scroll_KeyRight) or IEex_IsKeyDown(IEex_KeyIDS.NUMPAD6) then
+					m_nKeyScrollState = IEex_Scroll_CheckMultiScrollState(3)
+				elseif m_nKeyScrollState == 6 and not IEex_IsKeyDown(IEex_KeyIDS.NUMPAD1) then
+					m_nKeyScrollState = 5
+				elseif m_nKeyScrollState == 7 then
+					m_nKeyScrollState = 0
+				elseif m_nKeyScrollState == 8 and not IEex_IsKeyDown(IEex_KeyIDS.NUMPAD7) then
+					m_nKeyScrollState = 1
+				end
+			elseif key == IEex_Scroll_KeyRight or key == IEex_KeyIDS.NUMPAD6 then
+				if IEex_IsKeyDown(IEex_Scroll_KeyLeft) or IEex_IsKeyDown(IEex_KeyIDS.NUMPAD4) then
+					m_nKeyScrollState = IEex_Scroll_CheckMultiScrollState(7)
+				elseif m_nKeyScrollState == 2 and not IEex_IsKeyDown(IEex_KeyIDS.NUMPAD9) then
+					m_nKeyScrollState = 1
+				elseif m_nKeyScrollState == 3 then
+					m_nKeyScrollState = 0
+				elseif m_nKeyScrollState == 4 and not IEex_IsKeyDown(IEex_KeyIDS.NUMPAD3) then
+					m_nKeyScrollState = 5
+				end
+			elseif key == IEex_Scroll_KeyUp or key == IEex_KeyIDS.NUMPAD8 then
+				if IEex_IsKeyDown(IEex_Scroll_KeyDown) or IEex_IsKeyDown(IEex_KeyIDS.NUMPAD2) then
+					m_nKeyScrollState = IEex_Scroll_CheckMultiScrollState(5)
+				elseif m_nKeyScrollState == 1 then
+					m_nKeyScrollState = 0
+				elseif m_nKeyScrollState == 2 and not IEex_IsKeyDown(IEex_KeyIDS.NUMPAD9) then
+					m_nKeyScrollState = 3
+				elseif m_nKeyScrollState == 8 and not IEex_IsKeyDown(IEex_KeyIDS.NUMPAD7) then
+					m_nKeyScrollState = 7
+				end
+			elseif key == IEex_Scroll_KeyDown or key == IEex_KeyIDS.NUMPAD2 then
+				if IEex_IsKeyDown(IEex_Scroll_KeyUp) or IEex_IsKeyDown(IEex_KeyIDS.NUMPAD8) then
+					m_nKeyScrollState = IEex_Scroll_CheckMultiScrollState(1)
+				elseif m_nKeyScrollState == 4 and not IEex_IsKeyDown(IEex_KeyIDS.NUMPAD3) then
+					m_nKeyScrollState = 3
+				elseif m_nKeyScrollState == 5 then
+					m_nKeyScrollState = 0
+				elseif m_nKeyScrollState == 6 and not IEex_IsKeyDown(IEex_KeyIDS.NUMPAD1) then
+					m_nKeyScrollState = 7
+				end
+			elseif (key == IEex_KeyIDS.NUMPAD7 and m_nKeyScrollState == 8)
+				or (key == IEex_KeyIDS.NUMPAD9 and m_nKeyScrollState == 2)
+				or (key == IEex_KeyIDS.NUMPAD3 and m_nKeyScrollState == 4)
+				or (key == IEex_KeyIDS.NUMPAD1 and m_nKeyScrollState == 6)
+			then
+				m_nKeyScrollState = 0
+			end
+
+			IEex_WriteDword(m_nKeyScrollStateAddress, m_nKeyScrollState)
+		end
 	end
 end
 
-function IEex_MiddleScroll_InputStateListener()
+function IEex_Scroll_InputStateListener()
 
-	if IEex_MiddleScroll_IsDown and IEex_GetActiveEngine() == IEex_GetEngineWorld() then
-
-		local cursorX, cursorY = IEex_GetCursorXY()
-		if cursorX == -1 or cursorY == -1 then return end
-
-		local deltaX = IEex_MiddleScroll_OldX - cursorX
-		local deltaY = IEex_MiddleScroll_OldY - cursorY
-
-		local infinity = IEex_GetCInfinity()
-		local m_ptCurrentPosExact_x = IEex_ReadDword(infinity + 0x164)
-		local m_ptCurrentPosExact_y = IEex_ReadDword(infinity + 0x168)
-
-		m_ptCurrentPosExact_x = m_ptCurrentPosExact_x + deltaX * 10000
-		m_ptCurrentPosExact_y = m_ptCurrentPosExact_y + deltaY * 10000
-		IEex_WriteDword(infinity + 0x164, m_ptCurrentPosExact_x)
-		IEex_WriteDword(infinity + 0x168, m_ptCurrentPosExact_y)
-
-		-- CInfinity_SetViewPosition
-		IEex_Call(0x5D11F0, {0, math.floor(m_ptCurrentPosExact_y / 10000), math.floor(m_ptCurrentPosExact_x / 10000)}, infinity, 0x0)
-
-		IEex_MiddleScroll_OldX = cursorX
-		IEex_MiddleScroll_OldY = cursorY
-	end
 end
 
-function IEex_MiddleScroll_RegisterListeners()
-	IEex_AddKeyPressedListener("IEex_MiddleScroll_KeyPressedListener")
-	IEex_AddKeyReleasedListener("IEex_MiddleScroll_KeyReleasedListener")
-	IEex_AddInputStateListener("IEex_MiddleScroll_InputStateListener")
+function IEex_Scroll_RegisterListeners()
+	IEex_AddKeyPressedListener("IEex_Scroll_KeyPressedListener")
+	IEex_AddKeyReleasedListener("IEex_Scroll_KeyReleasedListener")
+	IEex_AddInputStateListener("IEex_Scroll_InputStateListener")
 end
 
-function IEex_MiddleScroll_ReloadListener()
-	IEex_MiddleScroll_RegisterListeners()
-	IEex_ReaddReloadListener("IEex_MiddleScroll_ReloadListener")
+function IEex_Scroll_ReloadListener()
+	IEex_Scroll_RegisterListeners()
+	IEex_ReaddReloadListener("IEex_Scroll_ReloadListener")
 end
 
-IEex_AbsoluteOnce("IEex_MiddleScroll_Init", function()
-	if not IEex_InAsyncState then return false end
-	IEex_MiddleScroll_IsDown = false
-	IEex_MiddleScroll_OldX = 0
-	IEex_MiddleScroll_OldY = 0
-	IEex_MiddleScroll_RegisterListeners()
-	IEex_AddReloadListener("IEex_MiddleScroll_ReloadListener")
+IEex_AbsoluteOnce("IEex_Scroll_InitListeners", function()
+	IEex_Scroll_RegisterListeners()
+	IEex_AddReloadListener("IEex_Scroll_ReloadListener")
 end)
 
 -----------
 -- Hooks --
 -----------
+
+------------------
+-- Thread: Sync --
+------------------
+
+function IEex_Extern_CheckScroll()
+
+	IEex_AssertThread(IEex_Thread.Sync, true)
+
+	IEex_Helper_SynchronizedBridgeOperation("IEex_Scroll_MiddleMouseState", function()
+
+		if IEex_Helper_GetBridgeNL("IEex_Scroll_MiddleMouseState", "isDown") then
+
+			local cursorX, cursorY = IEex_GetCursorClientPos()
+			local deltaX = IEex_Helper_GetBridgeNL("IEex_Scroll_MiddleMouseState", "oldX") - cursorX
+			local deltaY = IEex_Helper_GetBridgeNL("IEex_Scroll_MiddleMouseState", "oldY") - cursorY
+			IEex_AdjustViewPosition(deltaX, deltaY)
+
+			IEex_Helper_SetBridgeNL("IEex_Scroll_MiddleMouseState", "oldX", cursorX)
+			IEex_Helper_SetBridgeNL("IEex_Scroll_MiddleMouseState", "oldY", cursorY)
+		end
+	end)
+
+	local visibleArea = IEex_GetVisibleArea()
+	if visibleArea ~= 0x0 then
+
+		local m_nScrollState = IEex_ReadDword(visibleArea + 0x238)
+		local m_nKeyScrollState = IEex_ReadDword(visibleArea + 0x23C)
+
+		local gameData = IEex_GetGameData()
+		local scrollSpeed = IEex_ReadDword(gameData + 0x43F2)
+		local keyboardScrollSpeed = IEex_ReadDword(gameData + 0x443E) / 3
+
+		local deltaFactor = IEex_Scroll_CalculateDeltaFactor()
+		IEex_AdjustViewPositionFromScrollState(m_nScrollState, scrollSpeed * deltaFactor)
+		IEex_AdjustViewPositionFromScrollState(m_nKeyScrollState, keyboardScrollSpeed * deltaFactor)
+	end
+end
 
 -------------------
 -- Thread: Async --
