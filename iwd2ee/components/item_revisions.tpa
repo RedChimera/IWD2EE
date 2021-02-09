@@ -2060,6 +2060,7 @@ COPY_EXISTING ~00DART05.itm~ ~override~
 	SAY IDENTIFIED_DESC @11636
 
 COPY_EXISTING ~00DART83.itm~ ~override~
+	SAY NAME2 @11637
 	SAY IDENTIFIED_DESC @11638
 
 COPY_EXISTING ~00DART84.itm~ ~override~
@@ -2140,6 +2141,7 @@ COPY_EXISTING ~00BOWS89.itm~ ~override~
 	SAY IDENTIFIED_DESC @11696
 
 COPY_EXISTING ~00BOWS90.itm~ ~override~
+	SAY NAME2 @11697
 	SAY IDENTIFIED_DESC @11698
 
 COPY_EXISTING ~00BOWS91.itm~ ~override~
@@ -4208,6 +4210,18 @@ COPY_EXISTING ~USHFBCBS.itm~ ~override~
 	SAY NAME2 @12807
 	SAY IDENTIFIED_DESC @12808
 
+COPY_EXISTING ~USAMUL54.itm~ ~override~
+	SAY NAME2 @12809
+	SAY IDENTIFIED_DESC @12810
+
+COPY_EXISTING ~USRING48.itm~ ~override~
+	SAY NAME2 @12811
+	SAY IDENTIFIED_DESC @12812
+
+COPY_EXISTING ~USRING61.itm~ ~override~
+	SAY NAME2 @12813
+	SAY IDENTIFIED_DESC @12814
+
 //General patch changes
 
 /*
@@ -4351,6 +4365,9 @@ COPY_EXISTING_REGEXP ~.*\.itm~ ~override~
 COPY_EXISTING ~00ax1hck.itm~ ~override~ ~00hfaxck.itm~ ~override~ ~ushamtdt.itm~ ~override~ ~ushfhtdt.itm~ ~override~
 	LPF ALTER_ITEM_HEADER INT_VAR header_type=2 range=30 END
 
+COPY_EXISTING ~00dart83.itm~ ~override~
+	LPF ALTER_ITEM_HEADER INT_VAR header_type=2 flag_strength=0 END
+
 COPY_EXISTING ~11bookde.itm~ ~override~ ~11hfbkde.itm~ ~override~
 	READ_BYTE 0x2b us_kit_unusability_2
 	READ_BYTE 0x2d us_kit_unusability_3
@@ -4365,6 +4382,19 @@ COPY_EXISTING_REGEXP ~..SWDC..\.itm~ ~override~ ~..HFSC..\.itm~ ~override~
 	PATCH_IF (us_item_category=20) BEGIN
 		WRITE_ASCII 0x22 ~SC~ #2
 	END
+	BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING_REGEXP ~.*\.itm~ ~override~
+	READ_SHORT 0x1c theitemtype
+	READ_ASCII 0x22 theequippedanimation
+	READ_SHORT 0x68 thenumheaders
+	PATCH_IF (theitemtype=16 OR theitemtype=19 OR theitemtype=20 OR theitemtype=57 OR theitemtype=69) AND NOT (~%theequippedanimation%~ STRING_EQUAL_CASE ~SC~) AND thenumheaders > 0 BEGIN
+		READ_LONG 0xA8 theheaderflags
+		PATCH_IF ((theheaderflags BAND 0x00020000) = 0x00020000) BEGIN
+			LPF ADD_ITEM_EQEFFECT INT_VAR opcode=500 target=1 timing=2 parameter1=1 savingthrow=0x100000 STR_VAR resource=~MECRIT~ END
+		END
+	END
+	UNLESS ~MECRIT~
 	BUT_ONLY_IF_IT_CHANGES
 
 ACTION_IF !(MOD_IS_INSTALLED ~Setup-IWD2-Ease.tp2~ ~1~) BEGIN
@@ -5013,6 +5043,7 @@ COPY_EXISTING ~00BASHS3.sto~ ~override~ //Avarine Decanter genie store
 //	ADD_STORE_ITEM ~USRTHF39~ AFTER ~00RING18~ #1 #1 #1 ~IDENTIFIED~ #1 //Celestial Fury
 	ADD_STORE_ITEM ~USSWDC50~ AFTER ~00RING18~ #1 #1 #1 ~IDENTIFIED~ #1 //Translocation Scimitar
 	ADD_STORE_ITEM ~USRTHF50~ AFTER ~00RING18~ #1 #1 #1 ~IDENTIFIED~ #1 //Malakar
+	ADD_STORE_ITEM ~USRING48~ AFTER ~00RING18~ #1 #1 #1 ~IDENTIFIED~ #1 //Ring of Persistence
 	ADD_STORE_ITEM ~USPERM50~ AFTER ~00POTN01~ #1 #1 #1 ~IDENTIFIED~ #1 //Impervious Elixir
 	ADD_STORE_ITEM ~00POTN97~ AFTER ~00POTN01~ #1 #1 #1 ~IDENTIFIED~ #1 //Potion of Resistance
 	ADD_STORE_ITEM ~00POTN95~ AFTER ~00POTN01~ #1 #1 #1 ~IDENTIFIED~ #1 //Potion of Resilience

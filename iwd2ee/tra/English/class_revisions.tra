@@ -358,9 +358,9 @@ Benefit: You gain the Maximize Spell ability, usable at will as a free action. U
 
 You may increase the duration of your spells to a full 8 hours.
 
-Prerequisites: The ability to cast 5th-level spells.
+Prerequisites: The ability to cast 7th-level spells.
 
-Benefit: You gain the Persistent Spell ability, usable at will as a free action. Using it increases the duration of your next spell to 8 hours, but causes it to take up a spell slot four levels higher. Persistent Spell has no effect on spells with a base duration of less than 5 rounds.~
+Benefit: You gain the Persistent Spell ability, usable at will as a free action. Using it increases the duration of your next spell to 8 hours, but causes it to take up a spell slot six levels higher. Persistent Spell has no effect on spells with a base duration of less than 5 rounds.~
 @357    = ~Quicken Spell~
 @358    = ~METAMAGIC, QUICKEN SPELL:
 
@@ -1679,7 +1679,7 @@ Disadvantages:
 ~
 @837    = ~TIEFLING:
 
-The infernal counterpart to aasimar, tieflings are humans with a hint of the diabolical in their bloodline. Though their appearance is mostly human, they often have telltale signs that belie their ancestry. Tieflings usually have dusky skin and dark or reddish hair. Though many sport small horns, cat eyes, or other bizarre features, most tieflings try to hide their abnormalities from humans.
+The infernal counterpart to aasimar, tieflings are humans with a hint of the diabolical in their bloodline. Though their appearance is mostly human, they often have telltale signs that belie their ancestry. Tieflings usually have dusky skin and dark or reddish hair. Though many sport small horns, cat eyes, or other bizarre features, most tieflings try to hide their abnormalities from humans. Tieflings are not to be confused with half-fiends, or cambions. While cambions are always evil, tieflings aren't necessarily.
 
 Favored Class: Rogue
 

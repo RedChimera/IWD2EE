@@ -3751,3 +3751,14 @@ Area of Effect: Special
 Saving Throw: Reflex half
 
 This spell envelops the caster in a spiral of lightning, releasing lightning bolts in all directions. Eight bolts are released per level (four at a time), each dealing 1d8 electrical damage (Reflex save for half). Lightning Spiral does significantly more damage to creatures close to the caster.~
+@37957     = ~Mass Omnivision~
+@38957     = ~Mass Omnivision
+(Divination)
+Level: Brd 8, Sor/Wiz 9
+Range: Special
+Duration: 2 rounds/level
+Casting Time: 3
+Area of Effect: Entire area
+Saving Throw: None 
+
+This spell increases the visual range of all creatures to the maximum, such that they can see anything in the area that isn't blocked by a wall. Creatures can also cast spells and fire ranged weapons at creatures from much farther away than normal.~

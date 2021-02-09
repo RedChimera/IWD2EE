@@ -715,6 +715,13 @@ function IEex_Extern_OnUpdateRecordDescription(CScreenCharacter, CGameSprite, CU
 			local manyshotFeatCount = IEex_ReadByte(creatureData + 0x744 + ex_feat_name_id["ME_MANYSHOT"], 0x0)
 			local rapidShotEnabled = (IEex_ReadByte(creatureData + 0x4C64, 0x0) > 0)
 			local monkLevel = IEex_GetActorStat(targetID, 101)
+			local handSpecificAttackBonus = IEex_ReadSignedByte(creatureData + 0x9F8, 0x0)
+			if ex_current_record_hand == 2 then
+				handSpecificAttackBonus = IEex_ReadSignedByte(creatureData + 0x9FC, 0x0)
+			end
+			for w in string.gmatch(line, "%d+") do
+				line = string.gsub(line, w, w + handSpecificAttackBonus)
+			end
 			if ((normalAPR + imptwfFeatCount >= 5) and (IEex_GetActorSpellState(targetID, 196) or IEex_GetActorSpellState(targetID, 138) or ex_no_apr_limit or monkLevel >= 13 or true)) or (manyshotFeatCount > 0 and rapidShotEnabled) then
 				local totalAttacks = IEex_ReadByte(creatureData + 0x5ED, 0x0)
 				local extraAttacks = 0
@@ -915,6 +922,7 @@ function IEex_Extern_OnUpdateRecordDescription(CScreenCharacter, CGameSprite, CU
 			local headerType = 0
 			local currentHeader = IEex_ReadByte(creatureData + 0x4BA6, 0x0)
 			local criticalMultiplier = 2
+			local specificCriticalHitBonus = 0
 			local slotData = IEex_ReadDword(creatureData + 0x4AD8 + weaponSlot * 0x4)
 			if slotData > 0 then
 				weaponRES = IEex_ReadLString(slotData + 0xC, 8)
@@ -935,11 +943,14 @@ function IEex_Extern_OnUpdateRecordDescription(CScreenCharacter, CGameSprite, CU
 				for i = 0, numGlobalEffects - 1, 1 do
 					local offset = weaponData + effectOffset + i * 0x30
 					local theopcode = IEex_ReadWord(offset, 0x0)
+					local theparameter1 = IEex_ReadDword(offset + 0x4)
 					local theparameter2 = IEex_ReadDword(offset + 0x8)
+					local theresource = IEex_ReadLString(offset + 0x14, 8)
 					local thesavingthrow = IEex_ReadDword(offset + 0x24)
 					if theopcode == 288 and theparameter2 == 195 and bit.band(thesavingthrow, 0x10000) > 0 then
-						local theparameter1 = IEex_ReadDword(offset + 0x4)
 						criticalMultiplier = criticalMultiplier + theparameter1
+					elseif theopcode == 500 and theresource == "MECRIT" and bit.band(thesavingthrow, 0x100000) > 0 then
+						specificCriticalHitBonus = specificCriticalHitBonus + theparameter1
 					end
 				end
 			end
@@ -963,11 +974,14 @@ function IEex_Extern_OnUpdateRecordDescription(CScreenCharacter, CGameSprite, CU
 				for i = 0, numGlobalEffects - 1, 1 do
 					local offset = launcherData + effectOffset + i * 0x30
 					local theopcode = IEex_ReadWord(offset, 0x0)
+					local theparameter1 = IEex_ReadDword(offset + 0x4)
 					local theparameter2 = IEex_ReadDword(offset + 0x8)
+					local theresource = IEex_ReadLString(offset + 0x14, 8)
 					local thesavingthrow = IEex_ReadDword(offset + 0x24)
 					if theopcode == 288 and theparameter2 == 195 and bit.band(thesavingthrow, 0x10000) > 0 then
-						local theparameter1 = IEex_ReadDword(offset + 0x4)
 						criticalMultiplier = criticalMultiplier + theparameter1
+					elseif theopcode == 500 and theresource == "MECRIT" and bit.band(thesavingthrow, 0x100000) > 0 then
+						specificCriticalHitBonus = specificCriticalHitBonus + theparameter1
 					end
 				end
 			end
@@ -982,6 +996,11 @@ function IEex_Extern_OnUpdateRecordDescription(CScreenCharacter, CGameSprite, CU
 				end
 			end)
 			line = string.gsub(line, "x%d+", "x" .. criticalMultiplier)
+			local newLowestCriticalHitRoll = string.match(line, "%d+") - specificCriticalHitBonus
+			if newLowestCriticalHitRoll < 1 then
+				newLowestCriticalHitRoll = 1
+			end
+			line = string.gsub(line, "%d+%-", newLowestCriticalHitRoll .. "-")
 		end
 		-- do whatever changes you want to the line here
 		IEex_CString_Set(lineEntry + 0x4, line)

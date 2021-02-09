@@ -2421,6 +2421,12 @@ COPY_EXISTING ~uswi956.spl~ ~override~
 		LPF ALTER_EFFECT INT_VAR silent=1 header=(i - 1) match_opcode=500 special=(i * 2) STR_VAR match_resource=~MEBARRAM~ END
 	END
 
+COPY_EXISTING ~uswi957.spl~ ~override~
+	SAY NAME1 @37957
+	SAY NAME2 @37957
+	SAY UNIDENTIFIED_DESC @38957
+	SAY IDENTIFIED_DESC @38957
+
 /*
 COPY_EXISTING ~AR4102.are~ ~override~
 	LPF fj_are_structure INT_VAR fj_trap_active=1 STR_VAR fj_structure_type=~region~ fj_name=~US_Battle_Square_Teleport~ fj_reg_script=~USBSNTEL~ END
@@ -3242,6 +3248,7 @@ COPY_EXISTING ~60SPELLS.sto~ ~override~
 
 COPY_EXISTING ~60CHEAP.sto~ ~override~
 	ADD_STORE_ITEM ~SPPR719Z~ #1 #1 #0 ~IDENTIFIED~ #1
+	ADD_STORE_ITEM ~USWI957Z~ #1 #1 #0 ~IDENTIFIED~ #1
 	ADD_STORE_ITEM ~USWI954Z~ #1 #1 #0 ~IDENTIFIED~ #1
 	ADD_STORE_ITEM ~USWI855Z~ #1 #1 #0 ~IDENTIFIED~ #1
 	ADD_STORE_ITEM ~USWI752Z~ #1 #1 #0 ~IDENTIFIED~ #1
@@ -3295,5 +3302,39 @@ COPY_EXISTING ~63vese.cre~ ~override~
 
 //STRING_SET_EVALUATE 8810 @35653
 STRING_SET_EVALUATE 40239 @982
+
+<<<<<<<< .../script.baf
+IF
+	Or(6)
+		CheckSpellState(Player1,ME_OMNIVISION_ENABLED)
+		CheckSpellState(Player2,ME_OMNIVISION_ENABLED)
+		CheckSpellState(Player3,ME_OMNIVISION_ENABLED)
+		CheckSpellState(Player4,ME_OMNIVISION_ENABLED)
+		CheckSpellState(Player5,ME_OMNIVISION_ENABLED)
+		CheckSpellState(Player6,ME_OMNIVISION_ENABLED)
+	!GlobalTimerNotExpired("US_Omnivision_Check","GLOBAL")
+THEN
+	RESPONSE #100
+		SetGlobal("US_Omnivision_Enabled","GLOBAL",1)
+		SetGlobalTimer("US_Omnivision_Check","GLOBAL",1)
+		SetVisualRange(255)
+END
+
+IF
+	!CheckSpellState(Player1,ME_OMNIVISION_ENABLED)
+	!CheckSpellState(Player2,ME_OMNIVISION_ENABLED)
+	!CheckSpellState(Player3,ME_OMNIVISION_ENABLED)
+	!CheckSpellState(Player4,ME_OMNIVISION_ENABLED)
+	!CheckSpellState(Player5,ME_OMNIVISION_ENABLED)
+	!CheckSpellState(Player6,ME_OMNIVISION_ENABLED)
+	Global("US_Omnivision_Enabled","GLOBAL",1)
+THEN
+	RESPONSE #100
+		SetGlobal("US_Omnivision_Enabled","GLOBAL",0)
+		SetVisualRange(0)
+END
+
+>>>>>>>>
+EXTEND_BOTTOM ~DPLAYER3.bcs~ ~.../script.baf~
 
 INCLUDE ~%mod_folder%/components/final_patches.tpa~

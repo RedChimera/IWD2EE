@@ -184,10 +184,10 @@ RRNG_03	00Ring15	00Ring20	00Ring69	00Ring70	00Ring90	00Ring94	00Ring95	00Amul15	
 RRNG_04	00Ring18	00Ring73	00Ring82	00Ring92	00Ring93	00Ring97	00Ring98	USRing45	EOL																																					
 RRNG_05	00Ring22	00Ring68	00Ring74	00Ring75	00Ring79	00Ring91	USRing44	EOL																																							
 RRNG_06	00Ring72	00Ring89	00Ring96	USAmul47	USAmul48	USRing50	EOL																																									
-RRNG_07	USRing53	USRing54	USAmul50	USAmul52	USAmul53	EOL																																									
+RRNG_07	USRing48	USRing53	USRing54	USAmul50	USAmul52	USAmul53	EOL																																									
 RRNG_08	00Ring81	USRing51	USRing55	USAmul51	USAmul59	EOL																																								
-RRNG_09	00Ring88	USRing56	USAmul56	EOL																																										
-RRNG_10	USRing49	USRing52	USRing59	USAmul58	EOL																																										
+RRNG_09	00Ring88	USRing56	USAmul56	USAmul54	EOL																																										
+RRNG_10	USRing49	USRing52	USRing54	USRing59	USRing61	USAmul58	EOL																																										
 RRNG_11	USRing57	EOL																																									
 RRNG_12																																												
 RRNG_13	USRing60	EOL																																										

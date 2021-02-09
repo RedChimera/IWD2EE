@@ -245,7 +245,7 @@ COPY_EXISTING_REGEXP ~.*\.itm~ ~override~
 	END
 	UNLESS ~USEQTYPE~
 	BUT_ONLY_IF_IT_CHANGES
-
+/*
 COPY_EXISTING_REGEXP ~.*\.itm~ ~override~
 	isweapon = 0
 	READ_SHORT 0x68 thenumheaders
@@ -264,7 +264,7 @@ COPY_EXISTING_REGEXP ~.*\.itm~ ~override~
 	END
 	UNLESS ~USREPERM~
 	BUT_ONLY_IF_IT_CHANGES
-
+*/
 COPY_EXISTING_REGEXP ~.*\.itm~ ~override~
 	isweapon = 0
 	READ_SHORT 0x68 thenumheaders

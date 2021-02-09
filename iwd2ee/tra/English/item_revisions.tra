@@ -8114,7 +8114,7 @@ Special:
 Weight: 0 lb.
 Required Feat:  Simple Weapons, Missile
 Type:  One-handed~
-//@11637    = ~Returning Stun Dart +1~
+@11637    = ~Returning Flurry Dart +1~
 @11638    = ~The dart is a small, easily concealable missile weapon that is thrown rather than fired from a bow or other launcher. Lines of power have been carefully scribed into the shaft of the weapon.
 
 STATISTICS:
@@ -8124,7 +8124,8 @@ Attack Bonus:  +1
 Enchantment:  +1
 Damage Type:  Missile (piercing)
 Special:
-  Stunning: 25% chance target is stunned for 1/2 combat round (Fortitude DC 18)
+  No Strength bonus to damage
+  Speed: Attacks per round doubled, potentially bypassing the limit of five attacks per round
   Returning: Returns to user
 Weight: 0 lb.
 Required Feat:  Simple Weapons, Missile
@@ -8388,29 +8389,34 @@ Special:
 Weight: 2 lb.
 Feat Requirement:  Martial Weapon, Bow
 Type:  Two-handed~
-//@11697    = ~Shortbow of Shadows~
+@11697    = ~Shortbow of Shadows +1~
 @11698    = ~Shortbows were the first to be developed, although they were not called such. This is more of a default term that refers to anything which is not a long bow. Shortbow staves are about 5 ' feet long on the average. As the years passed, attempts were made to increase bow ranges. Bows were either given longer staves or flexibility was increased with no change to the length. The former resulted in what is now called the longbow. 
 
 STATISTICS:
 
+Damage: +1 (missile)
+Attack Bonus: +1
 Special:
   Generic Armor Bonus: +1
   Shadowed: +5 to Hide skill
 Weight: 2 lb.
 Feat Requirement:  Martial Weapon, Bow
 Type:  Two-handed~
-@11699    = ~Shortbow of Dodging~
+@11699    = ~Shortbow of Dodging +1~
 @11700    = ~Shortbows were the first to be developed, although they were not called such. This is more of a default term that refers to anything which is not a longbow. Shortbow staves are about 5 ' feet long on the average. As the years passed, attempts were made to increase bow ranges. Bows were either given longer staves or flexibility was increased with no change to the length. The former resulted in what is now called the longbow. 
 
 STATISTICS:
 
+Damage: +1 (missile)
+Attack Bonus: +1
 Special:
-  Dodging: +5 Armor Class vs. Missiles
+  Dodging: +4 Armor Class vs. Missiles
+  Mobility: +4 Armor Class vs. Attacks of Opportunity
 Weight: 2 lb.
 Feat Requirement:  Martial Weapon, Bow
 Type:  Two-handed~
 @11701    = ~Rapid Shot Shortbow +1~
-@11702    = ~Shortbows were the first to be developed, although they were not called such. This is more of a default term that refers to anything which is not a long bow. Shortbow staves are about 5 ' feet long on the average. As the years passed, attempts were made to increase bow ranges. Bows were either given longer staves or flexibility was increased with no change to the length. The former resulted in what is now called the longbow. 
+@11702    = ~Shortbows were the first to be developed, although they were not called such. This is more of a default term that refers to anything which is not a long bow. Shortbow staves are about 5 ' feet long on the average. As the years passed, attempts were made to increase bow ranges. Bows were either given longer staves or flexibility was increased with no change to the length. The former resulted in what is now called the longbow.
 
 STATISTICS:
 
@@ -8446,14 +8452,14 @@ Weight: 2 lb.
 Feat Requirement:  Martial Weapon, Bow
 Type:  Two-handed~
 @11707    = ~Shortbow of Sneak Attacking +1~
-@11708    = ~Shortbows were the first to be developed, although they were not called such. This is more of a default term that refers to anything which is not a longbow. Shortbow staves are about 5 ' feet long on the average. As the years passed, attempts were made to increase bow ranges. Bows were either given longer staves or flexibility was increased with no change to the length. The former resulted in what is now called the longbow. 
+@11708    = ~Shortbows were the first to be developed, although they were not called such. This is more of a default term that refers to anything which is not a longbow. Shortbow staves are about 5 ' feet long on the average. As the years passed, attempts were made to increase bow ranges. Bows were either given longer staves or flexibility was increased with no change to the length. The former resulted in what is now called the longbow.
 
 STATISTICS:
 
 Damage:  +1 (missile)
 Attack Bonus:  +1
 Special:
-  Sneak attacks with this bow deal an additional 2d6 damage
+  Sneak attacks with this bow deal an additional 1d6 damage
 Weight: 2 lb.
 Feat Requirement:  Martial Weapon, Bow
 Type:  Two-handed~
@@ -8508,8 +8514,7 @@ STATISTICS:
 Damage: +5 (missile)
 Attack Bonus: +5 
 Special:
-  Luck: +1
-  Speed: 3 extra attacks per round
+  Speed: Attacks per round doubled; this allows the character to exceed the limit of 5 attacks per round
   Special: Reduced range compared to other bows
 Weight: 1 lb.
 Feat Requirement:  Martial Weapon, Bow
@@ -12040,12 +12045,11 @@ Minimum Strength of 25 Required~
 STATISTICS:
 
 Damage:  1d12 + 6
-Attack Bonus: +6 
+Attack Bonus: +6
 Enchantment:  +6
 Damage Type:  Slashing
 Special:
   Slaying: With each hit, target must make a Fortitude save (DC 20 + wielder's Dexterity bonus) or die instantly
-  Speed: 1 extra attack per combat round
   Keen: Increases chance of scoring a critical hit
 Weight: 1 lb.
 Feat Requirement:  Exotic Weapon, Bastard Sword
@@ -12060,8 +12064,7 @@ Attack Bonus:  +5
 Enchantment:  +5
 Damage Type:  Slashing
 Special:
-  Keen: Increases chance of scoring a critical hit
-  Constant Effect: Wielder is under the effects of Executioner's Eyes
+  Will critically hit on a roll of 12-20
 Weight: 12 lb.
 Feat Requirement:  Martial Weapon, Great Sword
 Type:  Two-handed~
@@ -12164,7 +12167,7 @@ STATISTICS:
 Damage:  6d6 (Reflex DC 26 for half)
 Enchantment:  +5
 Damage Type:  Electrical
-Special:  
+Special:
   Turns into a lightning bolt when fired and deals damage to all creatures in its path
 Weight:  0 lb.
 Launcher:  Crossbow~
@@ -13385,6 +13388,27 @@ STATISTICS:
 
 Spell Power: Once per day, the wearer can double their attacks per round and increase their movement speed to the maximum for 10 rounds.
 Weight:  1 lb.~
+@12809    = ~Amulet of Safe Casting~
+@12810    = ~Amulets are some of the most favored items to enchant by wizards because of their ability to be worn without interfering with the delicate rituals of spell casting. This amulet shapes the wearer's spells in such a way that they do not harm allies.
+
+STATISTICS:
+
+Safe Spells: The wearer's spells do not harm allies.
+Weight: 1 lb.~
+@12811    = ~Ring of Persistence~
+@12812    = ~A ring is a small band of precious metal that is used as jewelry. Some rare rings have had enchantments placed upon them that confer various magical abilities. These rings are highly sought after, especially by those of the adventuring profession. For no apparent reason, this ring feels warm to the touch.
+
+STATISTICS:
+
+Persistence: Casting a spell with the Persistent Spell feat uses up a spell slot five levels higher rather than six levels higher
+Weight: 0 lb.~
+@12813    = ~Ring of Greater Persistence~
+@12814    = ~A ring is a small band of precious metal that is used as jewelry. Some rare rings have had enchantments placed upon them that confer various magical abilities. These rings are highly sought after, especially by those of the adventuring profession. For no apparent reason, this ring feels warm to the touch.
+
+STATISTICS:
+
+Persistence: Casting a spell with the Persistent Spell feat uses up a spell slot four levels higher rather than six levels higher
+Weight: 0 lb.~
 @12900    = ~Hrm - you are powerful allies, indeed. More gold and gems to line your pockets, then - also, a suit of plate armor, a warhammer, a helmet, all crafted and enchanted by great duergar artisans. They are well deserved, outsider.~
 @12901    = ~Drink this Rainwater Brew, Ennelia. It should help your condition.~
 @12902    = ~Drink this Sour Draught, Ennelia. It should help your condition.~
