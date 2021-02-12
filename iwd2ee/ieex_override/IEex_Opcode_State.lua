@@ -453,7 +453,7 @@ ex_empowerable_opcodes = {[0] = true, [1] = true, [6] = true, [10] = true, [12] 
 					local theopcode = IEex_ReadDword(eData + 0x10)
 					local theparameter2 = IEex_ReadDword(eData + 0x20)
 					if theopcode == 288 and theparameter2 == 222 then
-						local theresource = IEex_ReadDword(eData + 0x1C)
+						local theresource = IEex_ReadLString(eData + 0x30, 8)
 						table.insert(onKillEffectList, theresource)
 					end
 				end)

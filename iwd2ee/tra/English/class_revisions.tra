@@ -306,13 +306,15 @@ This feat may be taken twice. When taken a second time, the feat is Improved Fei
 
 You can perform a spinning attack to hit multiple enemies around you.
 
-Prerequisites: Dex 13+, Int 13+, Expertise, Dodge, Mobility, Spring Attack, base attack bonus 4 or greater; taking the feat a second time requires Dex 21+.
+Prerequisites: Dex 13+, Int 13+, Expertise, Dodge, Mobility, Spring Attack, base attack bonus 4 or greater. Taking the feat a second time requires Dex 21+. Taking it a third time requires Dex 27+ and 30 levels of ranger.
 
 Benefit: You gain the Whirlwind Attack ability, usable once per round. By using the ability, you make an attack with each of your weapons against each nearby enemy, forgoing all other attacks for the round. The radius of the attack depends on the reach of your weapon.
 
 When taken a second time, the feat is Improved Whirlwind Attack, which increases the radius of the attack by 5 feet.
 
-Special: A character with 6 levels of ranger can take this feat as long as they meet the Dexterity requirement, ignoring all the other prerequisites.~
+When taken a third time, the feat is Automatic Whirlwind Attack, which lets the character attack in an area of effect with each melee attack they make.
+
+Special: A character with 6 levels of ranger can take the first two ranks in this feat as long as they meet the Dexterity requirement (and can take the third once they reach level 30), ignoring all the other prerequisites.~
 @345    = ~Natural Spell~
 @346    = ~NATURAL SPELL:
 
@@ -445,6 +447,14 @@ You can dodge attacks particularly well while moving.
 Prerequisites: Dex 13+, Dodge
 
 Benefit: While moving, you gain a +4 Armor Class bonus. This bonus is doubled against attacks of opportunity due to moving out of an enemy's weapon range.~
+@373    = ~Defensive Roll~
+@374    = ~DEFENSIVE ROLL:
+
+In a pinch, you can roll to dodge almost certain death.
+
+Prerequisite: 10 Levels of Rogue
+
+Benefit: If you would be hit by an attack or damaging spell that would kill you, you can roll to avoid the hit and take no damage. This ability is used automatically and cannot be used again for 10 rounds.~
 @522    = ~Wizard~
 @523    = ~WIZARD:
 
@@ -1771,7 +1781,7 @@ Disadvantages:
 @921    = ~Deflected a missile~
 @922    = ~Counterspell~
 @923    = ~Incorporeal Touch~
-@924    = ~~
+@924    = ~Dodged the attack via Defensive Roll~
 @925    = ~~
 @926    = ~~
 @927    = ~~

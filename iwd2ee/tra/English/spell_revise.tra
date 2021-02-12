@@ -3215,6 +3215,17 @@ If the stored spell was a healing spell, it will be automatically cast when the 
 The caster can cast this spell multiple times on different creatures, but a single creature cannot have more than one stored spell at once.
 
 The following spells can be stored: Cure Light Wounds, Remove Fear, Slow Poison, Cure Moderate Wounds, Break Enchantment, Remove Paralysis, Remove Disease, Exaltation, Cure Serious Wounds, Neutralize Poison, Restoration, and Cure Critical Wounds.~
+@35452     = ~Duel~
+@36452     = ~Duel
+(Evocation)
+Level: Pal 4
+Range: Sight of Caster
+Duration: 10 rounds or until someone dies
+Casting Time: 1
+Area of Effect: 1 creature
+Saving Throw: None
+
+This spell can only be cast on an enemy. Casting it causes everyone other than the paladin and the target to disappear temporarily. The paladin then has 10 rounds to duel the enemy without outside interference. After those 10 rounds, or if the paladin or the enemy dies, all creatures reappear where they were before.~
 @35551     = ~Supreme Speed~
 @36551     = ~Supreme Speed
 (Transmutation)
@@ -3226,6 +3237,28 @@ Area of Effect: Caster
 Saving Throw: None
 
 This spell drastically speeds up the ranger's movement. For the duration, the ranger moves at the fastest possible speed.~
+@35552     = ~Expose to the Elements~
+@36552     = ~Expose to the Elements
+(Transmutation)
+Level: Drd 5, Sor/Wiz 8
+Range: Sight of Caster
+Duration: 1 round/level
+Casting Time: 3
+Area of Effect: 1 creature
+Saving Throw: None
+
+This spell increases the harm that extreme conditions do to the target's body. For the duration, all fire, cold, electrical and acid damage dealt to the target is increased by 50%. This increase is applied before damage resistance. There is no saving throw.~
+@35553     = ~Thorn Shots~
+@36553     = ~Thorn Shots
+(Transmutation)
+Level: Rgr 5
+Range: Caster
+Duration: 15 rounds
+Casting Time: 5
+Area of Effect: Special
+Saving Throw: None
+
+This spell augments the ranger's missile attacks to deal damage in a cone. For the duration, whenever the ranger would make a missile attack, a spray of thorns is released instead, dealing the attack's damage to all creatures in a cone.~
 @35653     = ~Repulsion~
 @36653     = ~Repulsion
 (Abjuration)
@@ -3638,9 +3671,9 @@ Range: Sight of Caster
 Duration: Permanent
 Casting Time: 2
 Area of Effect: 1 creature
-Saving Throw: Fortitude negates
+Saving Throw: None
 
-Similar to the energy drain of a wight or wraith, except much more powerful, this spell drains multiple levels from a creature. If the target fails a Fortitude saving throw at -8, it is drained one level for every three levels of the caster, to a maximum energy drain of 10 levels for a 30th-level caster. The energy drain is permanent until cured with a Restoration spell. This spell has no effect on undead or constructs.~
+Similar to the energy drain of a wight or wraith, except much more powerful, this spell drains multiple levels from a creature. The target is drained one level for every three levels of the caster, to a maximum energy drain of 16 levels for a 48th-level caster. The energy drain is permanent until cured with a Restoration spell. This spell has no effect on undead or constructs.~
 @37853     = ~Enslave~
 @38853     = ~Enslave
 (Enchantment) 
@@ -3696,6 +3729,17 @@ Area of Effect: 1 creature
 Saving Throw: None
 
 This spell links the caster and the target such that any spell effect that would be applied to one creature is also applied to the other. Link Effects only duplicates effects from spells and certain abilities of monsters; effects of items and non-magical abilities are ignored.~
+@37858     = ~Metafireball~
+@38858     = ~Metafireball
+(Evocation)
+Level: Sor/Wiz 8
+Range: Sight of Caster
+Duration: Instantaneous
+Casting Time: 3
+Area of Effect: 20-foot radius
+Saving Throw: Reflex half
+
+Also known as Fireballball, this spell launches a fireball that explodes into other fireballs. After the Metafireball explodes, each creature in the area of effect is hit by a separate fireball with its own area of effect. Each of the secondary fireballs deals 5d6 fire damage (Reflex save with a +5 bonus for half). This spell is most effective when cast at a large group of creatures clumped together.~
 @37952     = ~Perfect Invisibility~
 @38952     = ~Perfect Invisibility
 (Illusion)
@@ -3762,3 +3806,14 @@ Area of Effect: Entire area
 Saving Throw: None 
 
 This spell increases the visual range of all creatures to the maximum, such that they can see anything in the area that isn't blocked by a wall. Creatures can also cast spells and fire ranged weapons at creatures from much farther away than normal.~
+@37958     = ~Improved Haste~
+@38958     = ~Improved Haste
+(Transmutation)
+Level: Brd 8, Rgr 6, Sor/Wiz 9
+Range: Sight of Caster
+Duration: 1 round/2 levels
+Casting Time: 3
+Area of Effect: 1 creature
+Saving Throw: None
+
+This spell drastically speeds up the target's movement and attack speed. For the duration, the target gains +8 AC, moves at the maximum possible speed, and attacks twice as many times per round. Attack bonuses will continue to decrease for attacks beyond the 5th one. This effect does not stack with Haste.~

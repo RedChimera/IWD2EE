@@ -199,8 +199,8 @@ RMSC_03	00Brac04	00Brac10	00Clck02	USBrac45	EOL
 RMSC_04	00Boot01	USBoot45	USBrac44	USBrac47	EOL																																								
 RMSC_05	00Robe99	USBelt45	USClck40	USClck48	USHelm45	USBrac43	EOL																																									
 RMSC_06	00Robe05	00Robe06	00Robe07	USBrac50	USClck50	USRobe47	EOL																																									
-RMSC_07	USClck55	USHelm50	USBrac52	USRobe56	USPerm50	EOL																																									
-RMSC_08	USBrac54	USBrac55	USClck52	USRobe51	USIoun52	EOL																																								
+RMSC_07	USClck52	USClck55	USHelm50	USBrac52	USRobe56	USPerm50	EOL																																									
+RMSC_08	USBrac54	USBrac55	USClck53	USRobe51	USIoun52	EOL																																								
 RMSC_09	USClck51	USRobe53	USRobe54	USHelm55	EOL																																									
 RMSC_10	USBrac59	USBoot59	USClck56	USIoun58	EOL																																							
 RMSC_11																																											

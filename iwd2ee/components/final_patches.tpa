@@ -231,15 +231,15 @@ COPY_EXISTING_REGEXP ~.*\.itm~ ~override~
 				offset += 0x38
 			END
 			PATCH_IF isranged = 1 BEGIN
-				LPF ADD_ITEM_EQEFFECT INT_VAR opcode=288 target=1 timing=2 parameter1=thecategory parameter2=241 savingthrow=(theitemflags << 16) special=(4 + (thedamagetype << 24)) STR_VAR resource=~USEQTYPE~ END
+				LPF ADD_ITEM_EQEFFECT INT_VAR opcode=288 target=1 timing=2 parameter1=thecategory parameter2=241 savingthrow=(theitemflags << 16) special=4 STR_VAR resource=~USEQTYPE~ END
 			END ELSE PATCH_IF ismelee = 1 BEGIN
 				PATCH_IF (~%theappearance%~ STRING_EQUAL_CASE ~  ~) BEGIN
-					LPF ADD_ITEM_EQEFFECT INT_VAR opcode=288 target=1 timing=2 parameter1=thecategory parameter2=241 savingthrow=(theitemflags << 16) special=(6 + (thedamagetype << 24)) STR_VAR resource=~USEQTYPE~ END
+					LPF ADD_ITEM_EQEFFECT INT_VAR opcode=288 target=1 timing=2 parameter1=thecategory parameter2=241 savingthrow=(theitemflags << 16) special=6 STR_VAR resource=~USEQTYPE~ END
 				END ELSE BEGIN
-					LPF ADD_ITEM_EQEFFECT INT_VAR opcode=288 target=1 timing=2 parameter1=thecategory parameter2=241 savingthrow=(theitemflags << 16) special=(5 + (thedamagetype << 24)) STR_VAR resource=~USEQTYPE~ END
+					LPF ADD_ITEM_EQEFFECT INT_VAR opcode=288 target=1 timing=2 parameter1=thecategory parameter2=241 savingthrow=(theitemflags << 16) special=5 STR_VAR resource=~USEQTYPE~ END
 				END
 			END ELSE PATCH_IF islauncher = 1 BEGIN
-				LPF ADD_ITEM_EQEFFECT INT_VAR opcode=288 target=1 timing=2 parameter1=thecategory parameter2=241 savingthrow=(theitemflags << 16) special=(7 + (thedamagetype << 24)) STR_VAR resource=~USEQTYPE~ END
+				LPF ADD_ITEM_EQEFFECT INT_VAR opcode=288 target=1 timing=2 parameter1=thecategory parameter2=241 savingthrow=(theitemflags << 16) special=7 STR_VAR resource=~USEQTYPE~ END
 			END
 		END
 	END
@@ -288,7 +288,7 @@ COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
 	WRITE_SHORT 0x184 0
 	WRITE_SHORT 0x186 0
 	WRITE_SHORT 0x188 (0 - 2)
-	WRITE_SHORT 0x1A4 0
+	WRITE_LONG 0x1A4 0
 	BUT_ONLY_IF_IT_CHANGES
 
 COPY_EXISTING_REGEXP ~.*\.cre~ ~override~

@@ -638,6 +638,9 @@ COPY_EXISTING ~feats.2da~ ~override~
   SET_2DA_ENTRIES_NOW rows_out num_cols
 BUT_ONLY
 
+COPY_EXISTING ~USFDEFR1.spl~ ~override~
+	LPF ALTER_EFFECT INT_VAR silent=1 match_opcode=502 parameter1=RESOLVE_STR_REF(@924) STR_VAR match_resource=~MEDEFLEC~ END
+
 LAF ADD_FEAT_IWD2 INT_VAR nameref=RESOLVE_STR_REF(@339) descref=RESOLVE_STR_REF(@340) max=1 STR_VAR name=~ME_AUGMENT_SUMMONING~ script=~Feats_AugmentSummoning~ featspl_1=~USFAUGS1~ END
 LAF ADD_FEAT_IWD2 INT_VAR nameref=RESOLVE_STR_REF(@301) descref=RESOLVE_STR_REF(@302) max=1 STR_VAR name=~ME_CONCOCT_POTIONS~ script=~Feats_ConcoctPotions~ featspl_1=~USFALCP1~ END
 LAF ADD_FEAT_IWD2 INT_VAR nameref=RESOLVE_STR_REF(@303) descref=RESOLVE_STR_REF(@304) max=1 STR_VAR name=~ME_DEFENSIVE_STANCE~ script=~Feats_DefensiveStance~ featspl_1=~USFDSTA1~ END
@@ -663,7 +666,7 @@ LAF ADD_FEAT_IWD2 INT_VAR nameref=RESOLVE_STR_REF(@331) descref=RESOLVE_STR_REF(
 LAF ADD_FEAT_IWD2 INT_VAR nameref=RESOLVE_STR_REF(@333) descref=RESOLVE_STR_REF(@334) max=1 STR_VAR name=~ME_SPRING_ATTACK~ script=~Feats_SpringAttack~ featspl_1=~USFSPRA1~ END
 LAF ADD_FEAT_IWD2 INT_VAR nameref=RESOLVE_STR_REF(@335) descref=RESOLVE_STR_REF(@336) max=1 STR_VAR name=~ME_TERRIFYING_RAGE~ script=~Feats_TerrifyingRage~ featspl_1=~USFTERG1~ END
 LAF ADD_FEAT_IWD2 INT_VAR nameref=RESOLVE_STR_REF(@337) descref=RESOLVE_STR_REF(@338) max=2 STR_VAR name=~ME_TWO_WEAPON_DEFENSE~ script=~Feats_TwoWeaponDefense~ featspl_1=~USFTWDF1~ END
-LAF ADD_FEAT_IWD2 INT_VAR nameref=RESOLVE_STR_REF(@343) descref=RESOLVE_STR_REF(@344) max=2 STR_VAR name=~ME_WHIRLWIND_ATTACK~ script=~Feats_WhirlwindAttack~ prerequisite_script=~Prereq_WhirlwindAttack~ featspl_1=~USFWHRA1~ END
+LAF ADD_FEAT_IWD2 INT_VAR nameref=RESOLVE_STR_REF(@343) descref=RESOLVE_STR_REF(@344) max=3 STR_VAR name=~ME_WHIRLWIND_ATTACK~ script=~Feats_WhirlwindAttack~ prerequisite_script=~Prereq_WhirlwindAttack~ featspl_1=~USFWHRA1~ featspl_3=~USFWHRA3~ END
 LAF ADD_FEAT_IWD2 INT_VAR nameref=RESOLVE_STR_REF(@345) descref=RESOLVE_STR_REF(@346) max=1 STR_VAR name=~ME_NATURAL_SPELL~ script=~Feats_NaturalSpell~ featspl_1=~USFNASP1~ END
 LAF ADD_FEAT_IWD2 INT_VAR nameref=RESOLVE_STR_REF(@347) descref=RESOLVE_STR_REF(@348) max=1 STR_VAR name=~ME_COUNTERSPELL~ script=~Feats_Counterspell~ featspl_1=~USFCOUN1~ END
 LAF ADD_FEAT_IWD2 INT_VAR nameref=RESOLVE_STR_REF(@349) descref=RESOLVE_STR_REF(@350) max=1 STR_VAR name=~ME_EMPOWER_SPELL~ script=~Feats_EmpowerSpell~ featspl_1=~USFEMSP1~ END
@@ -671,6 +674,7 @@ LAF ADD_FEAT_IWD2 INT_VAR nameref=RESOLVE_STR_REF(@355) descref=RESOLVE_STR_REF(
 LAF ADD_FEAT_IWD2 INT_VAR nameref=RESOLVE_STR_REF(@361) descref=RESOLVE_STR_REF(@362) max=1 STR_VAR name=~ME_WIDEN_SPELL~ script=~Feats_WidenSpell~ featspl_1=~USFWISP1~ END
 LAF ADD_FEAT_IWD2 INT_VAR nameref=RESOLVE_STR_REF(@363) descref=RESOLVE_STR_REF(@364) max=1 STR_VAR name=~ME_MASS_SPELL~ script=~Feats_MassSpell~ featspl_1=~USFMSSP1~ END
 LAF ADD_FEAT_IWD2 INT_VAR nameref=RESOLVE_STR_REF(@365) descref=RESOLVE_STR_REF(@366) max=2 STR_VAR name=~ME_MANYSHOT~ script=~Feats_Manyshot~ prerequisite_script=~Prereq_Manyshot~ featspl_1=~USFMNSH1~ END
+LAF ADD_FEAT_IWD2 INT_VAR nameref=RESOLVE_STR_REF(@373) descref=RESOLVE_STR_REF(@374) max=1 STR_VAR name=~ME_DEFENSIVE_ROLL~ script=~Feats_DefensiveRoll~ featspl_1=~USFDEFR1~ END
 // New descriptions for classes
 COPY_EXISTING ~help02.2da~ ~override~
   COUNT_2DA_COLS num_cols

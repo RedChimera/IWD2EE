@@ -20,6 +20,7 @@ ex_linkable_prefix_list = {["USIW"] = true, ["USIP"] = true, ["USMS"] = true, ["
 ex_true_spell = {["USIP114"] = "SPPR114", ["USIP250"] = "SPPR250", ["USIP251"] = "SPPR213", ["USIP302"] = "SPPR302", ["USIP350"] = "SPPR350", ["USIP428"] = "SPPR428", ["USIP517"] = "SPPR517", ["USIP602"] = "SPPR602", ["USIP704"] = "SPPR704", ["USIP729"] = "SPPR729", ["USIW211"] = "SPWI211", ["USIW220"] = "SPWI220", ["USIW316"] = "SPWI316", ["USIW318"] = "SPWI318", ["USIW404"] = "SPWI404", ["USIW405"] = "SPWI405", ["USIW411"] = "SPWI411", ["USIW419"] = "SPWI419", ["USIW424"] = "SPWI424", ["USIW504"] = "SPWI504", ["USIW507"] = "SPWI507", ["USIW509"] = "SPWI509", ["USIW605"] = "SPWI605", ["USIW612"] = "SPWI612", ["USIW615"] = "SPWI615", ["USIW617"] = "SPWI617", ["USIW705"] = "SPWI705", ["USIW708"] = "SPWI708", ["USIW719"] = "SPWI719", ["USIW808"] = "SPWI808", ["USIW810"] = "SPWI810", ["USIW910"] = "SPWI910", ["USIW951"] = "SPWI905", ["USIP152"] = "USPR152", ["USIP951"] = "USPR951", ["USIP952"] = "USPR952", ["USIW751"] = "USWI751", }
 ex_ethereal_sources = {["USCLUBGH"] = true, }
 ex_feat_name_id = {}
+ex_skill_name = {[0] = "ALCHEMY", [1] = "ANIMAL_EMPATHY", [2] = "BLUFF", [3] = "CONCENTRATION", [4] = "DIPLOMACY", [5] = "DISABLE_DEVICE", [6] = "HIDE", [7] = "INTIMIDATE", [8] = "KNOWLEDGE_ARCANA", [9] = "MOVE_SILENTLY", [10] = "OPEN_LOCK", [11] = "PICK_POCKET", [12] = "SEARCH", [13] = "SPELLCRAFT", [14] = "USE_MAGIC_DEVICE", [15] = "WILDERNESS_LORE",}
 ex_listspll = {}
 ex_listdomn = {}
 ex_trueschool = {}
