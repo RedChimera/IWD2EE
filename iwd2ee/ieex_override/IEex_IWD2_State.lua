@@ -637,10 +637,41 @@ function IEex_GetActorTooltip(actorID)
 end
 
 ex_class_base_attack_table = {"BAATFGT", "BAATNFG", "BAATNFG", "BAATNFG", "BAATFGT", "BAATMKU", "BAATFGT", "BAATFGT", "BAATNFG", "BAATMAG", "BAATMAG"}
-function IEex_GetActorBaseAttackBonus(actorID)
+function IEex_GetActorBaseAttackBonus(actorID, fixMonkAttackBonus)
 	if not IEex_IsSprite(actorID, true) then return 0 end
 	local creatureData = IEex_GetActorShare(actorID)
 	local baseAttackBonus = IEex_ReadSignedByte(creatureData + 0x5EC, 0x0)
+	local monkAttackBonusDisabled = false
+	local hasOtherClasses = false
+	local monkLevel = IEex_GetActorStat(actorID, 101)
+	if monkLevel > 0 then
+		if IEex_GetActorStat(actorID, 96) > 0 or IEex_GetActorStat(actorID, 97) > 0 or IEex_GetActorStat(actorID, 98) > 0 or IEex_GetActorStat(actorID, 99) > 0 or IEex_GetActorStat(actorID, 100) > 0 or IEex_GetActorStat(actorID, 102) > 0 or IEex_GetActorStat(actorID, 103) > 0 or IEex_GetActorStat(actorID, 104) > 0 or IEex_GetActorStat(actorID, 105) > 1 or IEex_GetActorStat(actorID, 106) > 1 then
+			monkAttackBonusDisabled = true
+			hasOtherClasses = true
+		end
+		if IEex_ReadByte(creatureData + 0x4BA4, 0x0) ~= 10 then
+			monkAttackBonusDisabled = true
+		end
+		IEex_IterateActorEffects(actorID, function(eData)
+			local theopcode = IEex_ReadDword(eData + 0x10)
+			local theparameter1 = IEex_ReadDword(eData + 0x1C)
+			local theparameter2 = IEex_ReadDword(eData + 0x20)
+			local thespecial = IEex_ReadByte(eData + 0x48, 0x0)
+			if theopcode == 288 and theparameter2 == 241 then
+				if thespecial ~= 6 then
+					monkAttackBonusDisabled = true
+					if (thespecial == 1 and (theparameter1 ~= 67 or not ex_elven_chainmail_counts_as_unarmored)) or thespecial == 3 or (thespecial >= 4 and ex_special_monk_weapon_types[theparameter1] == nil) then
+						fixMonkAttackBonus = false
+					end
+				end
+			end
+		end)
+	end
+	if monkAttackBonusDisabled and not fixMonkAttackBonus and not hasOtherClasses then
+		baseAttackBonus = baseAttackBonus + tonumber(IEex_2DAGetAtStrings("BAATNFG", "BASE_ATTACK", tostring(monkLevel))) - tonumber(IEex_2DAGetAtStrings("BAATMKU", "BASE_ATTACK", tostring(monkLevel)))
+	elseif fixMonkAttackBonus and hasOtherClasses then
+		baseAttackBonus = baseAttackBonus + tonumber(IEex_2DAGetAtStrings("BAATMKU", "BASE_ATTACK", tostring(monkLevel))) - tonumber(IEex_2DAGetAtStrings("BAATNFG", "BASE_ATTACK", tostring(monkLevel)))
+	end
 	if bit.band(IEex_ReadByte(creatureData + 0x89F, 0x0), 0x1) > 0 then
 		if IEex_ReadByte(creatureData + 0x24, 0x0) <= 30 then
 			baseAttackBonus = 0
@@ -4314,6 +4345,136 @@ function MERESTOR(effectData, creatureData)
 	end)
 end
 
+function MEMODDUR(effectData, creatureData)
+	if IEex_CheckForEffectRepeat(effectData, creatureData) then return end
+	local targetID = IEex_GetActorIDShare(creatureData)
+	local sourceID = IEex_ReadDword(effectData + 0x10C)
+	local parameter1 = IEex_ReadDword(effectData + 0x18)
+	local parameter2 = IEex_ReadDword(effectData + 0x1C)
+	local savingthrow = IEex_ReadDword(effectData + 0x3C)
+	local condition = IEex_ReadDword(effectData + 0x44)
+	IEex_IterateActorEffects(targetID, function(eData)
+		local theopcode = IEex_ReadDword(eData + 0x10)
+		local theparameter1 = IEex_ReadDword(eData + 0x1C)
+		local theparameter2 = IEex_ReadDword(eData + 0x20)
+		local thetiming = IEex_ReadDword(eData + 0x24)
+		local thesavingthrow = IEex_ReadDword(eData + 0x40)
+		local theresource = IEex_ReadLString(eData + 0x30, 8)
+		local theresourceflags = IEex_ReadDword(eData + 0x9C)
+		local theinternalflags = IEex_ReadDword(eData + 0xCC)
+		if thetiming ~= 2 and (bit.band(savingthrow, 0x10000) == 0 or bit.band(theinternalflags, 0x4000) == 0)then
+			if condition == 0 or (condition == 1 and (bit.band(theresourceflags, 0x400) > 0 or theopcode == 12)) or (condition == 2 and (bit.band(theresourceflags, 0x400) == 0 and theopcode ~= 12)) then
+				IEex_WriteDword(eData + 0xCC, bit.bor(theinternalflags, 0x4000))
+				local theduration = IEex_ReadDword(eData + 0x28)
+				local thetime_applied = IEex_ReadDword(eData + 0x6C)
+				if parameter2 == 0 then
+					IEex_WriteDword(eData + 0x28, theduration + parameter1)
+				elseif parameter2 == 1 then
+					IEex_WriteDword(eData + 0x28, theduration + parameter1)
+				elseif parameter2 == 2 then
+					IEex_WriteDword(eData + 0x28, thetime_applied + math.floor((theduration - thetime_applied) * parameter1 / 100))
+				end
+			end
+		end
+	end)
+end
+ex_monk_animation_conversion = {[0x6000] = 0x6500, [0x6005] = 0x6500, [0x6100] = 0x6500, [0x6105] = 0x6500, [0x6200] = 0x6500, [0x6205] = 0x6500, [0x6300] = 0x6500, [0x6305] = 0x6500, [0x6010] = 0x6510, [0x6015] = 0x6510, [0x6110] = 0x6510, [0x6115] = 0x6510, [0x6210] = 0x6510, [0x6215] = 0x6510, [0x6310] = 0x6510, [0x6315] = 0x6510, }
+function MEMONKAN(effectData, creatureData)
+	if IEex_CheckForEffectRepeat(effectData, creatureData) then return end
+	local targetID = IEex_GetActorIDShare(creatureData)
+	local special = IEex_ReadDword(effectData + 0x44)
+	local parent_resource = IEex_ReadLString(effectData + 0x90, 8)
+	local baseAnimation = IEex_ReadDword(creatureData + 0x5C4)
+	if special == 0 and ex_monk_animation_conversion[baseAnimation] ~= nil and not IEex_GetActorSpellState(targetID, 188) then
+		IEex_ApplyEffectToActor(targetID, {
+["opcode"] = 254,
+["target"] = 2,
+["timing"] = 9,
+["resource"] = "USMONKAN",
+["source_id"] = targetID
+})
+		IEex_ApplyEffectToActor(targetID, {
+["opcode"] = 288,
+["target"] = 2,
+["timing"] = 9,
+["parameter1"] = baseAnimation,
+["parameter2"] = 188,
+["savingthrow"] = 0x20000,
+["parent_resource"] = "USMONKAN",
+["source_id"] = targetID
+})
+		if IEex_ReadByte(creatureData + 0x4BA4, 0x0) ~= 43 then
+			IEex_WriteByte(creatureData + 0x4BA4, 43)
+			IEex_ApplyEffectToActor(targetID, {
+["opcode"] = 143,
+["target"] = 2,
+["timing"] = 9,
+["parameter1"] = 43,
+["resource"] = parent_resource,
+["parent_resource"] = "USMONKAN",
+["source_id"] = targetID
+})
+		end
+		IEex_ApplyEffectToActor(targetID, {
+["opcode"] = 53,
+["target"] = 2,
+["timing"] = 1,
+["parameter1"] = ex_monk_animation_conversion[baseAnimation],
+["parameter2"] = 2,
+["parent_resource"] = "USMONKAN",
+["source_id"] = targetID
+})
+		IEex_ApplyEffectToActor(targetID, {
+["opcode"] = 53,
+["target"] = 2,
+["timing"] = 0,
+["duration"] = 1,
+["parameter1"] = ex_monk_animation_conversion[baseAnimation],
+["parameter2"] = 0,
+["parent_resource"] = "USMONKAN",
+["source_id"] = targetID
+})
+	elseif special == 1 and (baseAnimation == 0x6500 or baseAnimation == 0x6510) then
+		local oldAnimation = 0
+		IEex_IterateActorEffects(targetID, function(eData)
+			local theopcode = IEex_ReadDword(eData + 0x10)
+			local theparameter2 = IEex_ReadDword(eData + 0x20)
+			local thesavingthrow = IEex_ReadDword(eData + 0x40)
+			if theopcode == 288 and theparameter2 == 188 and bit.band(thesavingthrow, 0x20000) > 0 then
+				oldAnimation = IEex_ReadDword(eData + 0x1C)
+			end
+		end)
+		if oldAnimation > 0 then
+			IEex_ApplyEffectToActor(targetID, {
+["opcode"] = 254,
+["target"] = 2,
+["timing"] = 9,
+["resource"] = "USMONKAN",
+["source_id"] = targetID
+})
+			IEex_ApplyEffectToActor(targetID, {
+["opcode"] = 53,
+["target"] = 2,
+["timing"] = 1,
+["parameter1"] = oldAnimation,
+["parameter2"] = 2,
+["parent_resource"] = "USMONKAN",
+["source_id"] = targetID
+})
+			IEex_ApplyEffectToActor(targetID, {
+["opcode"] = 53,
+["target"] = 2,
+["timing"] = 0,
+["duration"] = 1,
+["parameter1"] = oldAnimation,
+["parameter2"] = 0,
+["parent_resource"] = "USMONKAN",
+["source_id"] = targetID
+})
+		end
+	end
+end
+
 function MEPOLYMO(effectData, creatureData)
 	if IEex_CheckForEffectRepeat(effectData, creatureData) then return end
 	local targetID = IEex_GetActorIDShare(creatureData)
@@ -4356,11 +4517,14 @@ function MEPOLYMO(effectData, creatureData)
 })
 		return
 	end
+	local oldAnimationDataFound = false
 	if IEex_GetActorSpellState(targetID, 188) then
 		IEex_IterateActorEffects(targetID, function(eData)
 			local theopcode = IEex_ReadDword(eData + 0x10)
 			local theparameter2 = IEex_ReadDword(eData + 0x20)
-			if theopcode == 288 and theparameter2 == 188 then
+			local thesavingthrow = IEex_ReadDword(eData + 0x40)
+			if theopcode == 288 and theparameter2 == 188 and bit.band(thesavingthrow, 0x20000) == 0 then
+				oldAnimationDataFound = true
 				baseAnimation = IEex_ReadDword(eData + 0x1C)
 				baseStrength = IEex_ReadByte(eData + 0x44, 0x0)
 				baseDexterity = IEex_ReadByte(eData + 0x45, 0x0)
@@ -4370,7 +4534,8 @@ function MEPOLYMO(effectData, creatureData)
 				baseCharisma = IEex_ReadByte(eData + 0x49, 0x0)
 			end
 		end)
-	else
+	end
+	if not oldAnimationDataFound then
 		IEex_ApplyEffectToActor(targetID, {
 ["opcode"] = 288,
 ["target"] = 2,
@@ -4739,7 +4904,8 @@ function MEPOLYBA(effectData, creatureData)
 		IEex_IterateActorEffects(targetID, function(eData)
 			local theopcode = IEex_ReadDword(eData + 0x10)
 			local theparameter2 = IEex_ReadDword(eData + 0x20)
-			if theopcode == 288 and theparameter2 == 188 then
+			local thesavingthrow = IEex_ReadDword(eData + 0x40)
+			if theopcode == 288 and theparameter2 == 188 and bit.band(thesavingthrow, 0x20000) == 0 then
 				baseAnimation = IEex_ReadDword(eData + 0x1C)
 --				baseStrength = IEex_ReadByte(eData + 0x44, 0x0)
 --				baseDexterity = IEex_ReadByte(eData + 0x45, 0x0)
@@ -4747,7 +4913,7 @@ function MEPOLYBA(effectData, creatureData)
 --				baseIntelligence = IEex_ReadByte(eData + 0x47, 0x0)
 --				baseWisdom = IEex_ReadByte(eData + 0x48, 0x0)
 --				baseCharisma = IEex_ReadByte(eData + 0x49, 0x0)
-				if bit.band(IEex_ReadDword(eData + 0x40), 0x1000000) > 0 then
+				if bit.band(thesavingthrow, 0x1000000) > 0 then
 					IEex_WriteByte(creatureData + 0x89F, bit.bor(specialFlags, 0x2))
 				else
 					IEex_WriteByte(creatureData + 0x89F, bit.band(specialFlags, 0xFD))
@@ -5317,10 +5483,11 @@ function MEKENSE2(effectData, creatureData)
 		local hasMeleeWeapon = false
 		IEex_IterateActorEffects(targetID, function(eData)
 			local theopcode = IEex_ReadDword(eData + 0x10)
+			local theparameter1 = IEex_ReadDword(eData + 0x1C)
 			local theparameter2 = IEex_ReadDword(eData + 0x20)
 			if theopcode == 288 and theparameter2 == 241 then
 				local thespecialtype = IEex_ReadByte(eData + 0x48, 0x0)
-				if thespecialtype == 1 or thespecialtype == 3 then
+				if (thespecialtype == 1 and (theparameter1 ~= 67 or not ex_elven_chainmail_counts_as_unarmored)) or thespecialtype == 3 then
 					hasArmor = true
 				elseif thespecialtype == 5 then
 					hasMeleeWeapon = true
@@ -7033,6 +7200,16 @@ function IEex_EvaluatePermanentRepeatingEffects(creatureData)
 ["parent_resource"] = "USMFIST",
 ["source_id"] = targetID
 })
+--[[
+			IEex_ApplyEffectToActor(targetID, {
+["opcode"] = 500,
+["target"] = 2,
+["timing"] = 0,
+["resource"] = "MEMONKAN",
+["parent_resource"] = ex_monk_fist_progression[monkLevel],
+["source_id"] = targetID
+})
+--]]
 		end
 --	else
 	elseif bit.band(extraFlags, 0x2000000) > 0 then
@@ -7040,6 +7217,7 @@ function IEex_EvaluatePermanentRepeatingEffects(creatureData)
 		IEex_WriteDword(creatureData + 0x740, extraFlags)
 		if fistSlot > 0 and IEex_ReadLString(fistSlot + 0xC, 8) ~= ex_incorporeal_monk_fist_progression[monkLevel] and ex_incorporeal_monk_fist_progression[monkLevel] ~= nil then
 			IEex_ApplyEffectToActor(targetID, {
+
 ["opcode"] = 143,
 ["target"] = 2,
 ["timing"] = 1,
@@ -7048,6 +7226,16 @@ function IEex_EvaluatePermanentRepeatingEffects(creatureData)
 ["parent_resource"] = "USMFIST",
 ["source_id"] = targetID
 })
+--[[
+			IEex_ApplyEffectToActor(targetID, {
+["opcode"] = 500,
+["target"] = 2,
+["timing"] = 0,
+["resource"] = "MEMONKAN",
+["parent_resource"] = ex_monk_fist_progression[monkLevel],
+["source_id"] = targetID
+})
+--]]
 		end
 	end
 
@@ -8919,11 +9107,12 @@ function MEGRAPPL(effectData, creatureData)
 --	if IEex_GetActorSpellState(sourceID, 241) then
 		IEex_IterateActorEffects(sourceID, function(eData)
 			local theopcode = IEex_ReadDword(eData + 0x10)
+			local theparameter1 = IEex_ReadDword(eData + 0x20)
 			local theparameter2 = IEex_ReadDword(eData + 0x20)
 			if theopcode == 288 and theparameter2 == 241 then
 				local thesavingthrow = IEex_ReadDword(eData + 0x40)
 				local thespecial = IEex_ReadByte(eData + 0x48, 0x0)
-				if (thespecial >= 3 and thespecial <= 5) or thespecial == 85 then
+				if (thespecial >= 3 and thespecial <= 5 and theparameter1 ~= 41) then
 					if bit.band(thesavingthrow, 0x20000) == 0 then
 						handsUsed = handsUsed + 1
 					else
@@ -10094,19 +10283,126 @@ ex_attopp_repeat_timer = {}
 ex_attopp_casting = {}
 ex_attopp_target = {}
 
+function IEex_CheckMonkAttackBonus(creatureData)
+--	if IEex_CheckForEffectRepeat(effectData, creatureData) then return end
+	local targetID = IEex_GetActorIDShare(creatureData)
+	local fixMonkAttackBonus = false
+	local monkAttackBonusDisabled = false
+	local monkLevel = IEex_GetActorStat(targetID, 101)
+	if monkLevel > 0 then
+		fixMonkAttackBonus = true
+		if IEex_GetActorStat(targetID, 96) > 0 or IEex_GetActorStat(targetID, 97) > 0 or IEex_GetActorStat(targetID, 98) > 0 or IEex_GetActorStat(targetID, 99) > 0 or IEex_GetActorStat(targetID, 100) > 0 or IEex_GetActorStat(targetID, 102) > 0 or IEex_GetActorStat(targetID, 103) > 0 or IEex_GetActorStat(targetID, 104) > 0 or IEex_GetActorStat(targetID, 105) > 1 or IEex_GetActorStat(targetID, 106) > 1 then
+			monkAttackBonusDisabled = true
+		end
+		if IEex_ReadByte(creatureData + 0x4BA4, 0x0) ~= 10 then
+			monkAttackBonusDisabled = true
+		end
+		IEex_IterateActorEffects(targetID, function(eData)
+			local theopcode = IEex_ReadDword(eData + 0x10)
+			local theparameter1 = IEex_ReadDword(eData + 0x1C)
+			local theparameter2 = IEex_ReadDword(eData + 0x20)
+			local theresource = IEex_ReadLString(eData + 0x30, 8)
+			local thesavingthrow = IEex_ReadDword(eData + 0x40)
+			local thespecial = IEex_ReadDword(eData + 0x48)
+			if theopcode == 288 and theparameter2 == 241 then
+				local thegeneralitemcategory = IEex_ReadByte(eData + 0x48, 0x0)
+				if thegeneralitemcategory ~= 6 then
+					monkAttackBonusDisabled = true
+					if (thegeneralitemcategory == 1 and (theparameter1 ~= 67 or not ex_elven_chainmail_counts_as_unarmored)) or thegeneralitemcategory == 3 or (thegeneralitemcategory >= 4 and ex_special_monk_weapon_types[theparameter1] == nil) then
+						fixMonkAttackBonus = false
+					end
+				end
+			end
+		end)
+	end
+	return monkAttackBonusDisabled, fixMonkAttackBonus
+end
+
+function IEex_CheckMonkACBonus(creatureData)
+--	if IEex_CheckForEffectRepeat(effectData, creatureData) then return end
+	local targetID = IEex_GetActorIDShare(creatureData)
+	local fixMonkACBonus = false
+	local monkACBonusDisabled = false
+	local monkLevel = IEex_GetActorStat(targetID, 101)
+	if monkLevel > 0 then
+		fixMonkACBonus = true
+		IEex_IterateActorEffects(targetID, function(eData)
+			local theopcode = IEex_ReadDword(eData + 0x10)
+			local theparameter1 = IEex_ReadDword(eData + 0x1C)
+			local theparameter2 = IEex_ReadDword(eData + 0x20)
+			local theresource = IEex_ReadLString(eData + 0x30, 8)
+			local thesavingthrow = IEex_ReadDword(eData + 0x40)
+			local thespecial = IEex_ReadDword(eData + 0x48)
+			if theopcode == 288 and theparameter2 == 241 then
+				local thegeneralitemcategory = IEex_ReadByte(eData + 0x48, 0x0)
+				if thegeneralitemcategory >= 1 and thegeneralitemcategory <= 3 then
+					monkACBonusDisabled = true
+					if (thegeneralitemcategory == 1 and (theparameter1 ~= 67 or not ex_elven_chainmail_counts_as_unarmored)) or thegeneralitemcategory == 3 then
+						fixMonkACBonus = false
+					end
+				end
+			end
+		end)
+	end
+	return monkACBonusDisabled, fixMonkACBonus
+end
+
 function MEAPRBON(effectData, creatureData)
 --	if IEex_CheckForEffectRepeat(effectData, creatureData) then return end
 	local targetID = IEex_GetActorIDShare(creatureData)
 --	if IEex_CheckForInfiniteLoop(targetID, IEex_GetGameTick(), "MEAPRBON", 5) then return end
 	IEex_ApplyStatScaling(targetID)
+	local monkLevel = IEex_GetActorStat(targetID, 101)
+	local baseAPR = IEex_ReadByte(creatureData + 0x5ED, 0x0)
+	if monkLevel > 0 then
+		if baseAPR < 4 then
+			local monkAttackBonusDisabled, fixMonkAttackBonus = IEex_CheckMonkAttackBonus(creatureData)
+			if monkAttackBonusDisabled and fixMonkAttackBonus then
+				local trueBaseAPR = tonumber(IEex_2DAGetAtStrings("BAATMKU", "NUM_ATTACKS", tostring(monkLevel)))
+				if trueBaseAPR > 4 then
+					trueBaseAPR = 4
+				end
+				if trueBaseAPR > baseAPR then
+					IEex_WriteByte(creatureData + 0x5ED, trueBaseAPR)
+					IEex_WriteWord(creatureData + 0x93A, IEex_ReadSignedWord(creatureData + 0x93A, 0x0) + trueBaseAPR - baseAPR)
+					IEex_WriteWord(creatureData + 0x1792, IEex_ReadSignedWord(creatureData + 0x1792, 0x0) + trueBaseAPR - baseAPR)
+				end
+			end
+		end
+		local monkACBonusDisabled, fixMonkACBonus = IEex_CheckMonkACBonus(creatureData)
+		if monkACBonusDisabled and fixMonkACBonus then
+			local wisdomBonus = math.floor((IEex_GetActorStat(targetID, 39) - 10) / 2)
+			IEex_WriteWord(creatureData + 0x92C, IEex_ReadSignedWord(creatureData + 0x92C, 0x0) + wisdomBonus)
+		end
+	end
+	
 end
 ex_record_attack_stats = {}
+ex_record_attack_stats_hidden_difference = {}
 ex_record_attacks_made = {}
 function IEex_ExtraAttacks(creatureData)
 	local targetID = IEex_GetActorIDShare(creatureData)
---	IEex_ApplyStatScaling(targetID)
+	local tempFlags = IEex_ReadWord(creatureData + 0x9FA, 0x0)
+	local newEvaluation = false
+	local attackBonus = IEex_ReadSignedWord(creatureData + 0x938, 0x0)
+	local criticalHitBonus = IEex_ReadSignedWord(creatureData + 0x936, 0x0)
+	local attackPenaltyIncrement = 5
+	if bit.band(tempFlags, 0x2) > 0 and ex_record_attack_stats[targetID] ~= nil then
+		attackBonus = ex_record_attack_stats[targetID][1]
+		criticalHitBonus = ex_record_attack_stats[targetID][2]
+		IEex_WriteWord(creatureData + 0x936, criticalHitBonus)
+		IEex_WriteWord(creatureData + 0x938, attackBonus)
+		IEex_WriteWord(creatureData + 0x178E, criticalHitBonus)
+		IEex_WriteWord(creatureData + 0x1790, attackBonus)
+	end
 	local attackCounter = IEex_ReadSignedByte(creatureData + 0x5622, 0x0)
 	if attackCounter < 0 then return end
+	ex_record_attack_stats_hidden_difference[targetID] = {0, 0}
+	if bit.band(tempFlags, 0x2) == 0 then
+		IEex_WriteWord(creatureData + 0x9FA, bit.bor(tempFlags, 0x2))
+		newEvaluation = true
+		ex_record_attack_stats[targetID] = {attackBonus, criticalHitBonus}
+	end
 	local speedFactor = IEex_ReadByte(creatureData + 0x5604, 0x0)
 	local currentAttack = IEex_ReadByte(creatureData + 0x5636, 0x0)
 	local normalAPR = IEex_GetActorStat(targetID, 8)
@@ -10129,20 +10425,9 @@ function IEex_ExtraAttacks(creatureData)
 	local manyshotFeatCount = IEex_ReadByte(creatureData + 0x744 + ex_feat_name_id["ME_MANYSHOT"], 0x0)
 	local rapidShotEnabled = (IEex_ReadByte(creatureData + 0x4C64, 0x0) > 0)
 	local monkLevel = IEex_GetActorStat(targetID, 101)
-	local tempFlags = IEex_ReadWord(creatureData + 0x9FA, 0x0)
-	local newEvaluation = false
-	local attackBonus = IEex_ReadSignedWord(creatureData + 0x938, 0x0)
-	local criticalHitBonus = IEex_ReadSignedWord(creatureData + 0x936, 0x0)
-	if bit.band(tempFlags, 0x2) == 0 then
-		IEex_WriteWord(creatureData + 0x9FA, bit.bor(tempFlags, 0x2))
-		newEvaluation = true
-		ex_record_attack_stats[targetID] = {attackBonus, criticalHitBonus}
-	else
-		if ex_record_attack_stats[targetID] ~= nil then
-			attackBonus = ex_record_attack_stats[targetID][1]
-			criticalHitBonus = ex_record_attack_stats[targetID][2]
-		end
-	end
+
+	local monkAttackBonusDisabled, fixMonkAttackBonus = IEex_CheckMonkAttackBonus(creatureData)
+	local monkAttackBonusNowEnabled = (monkLevel > 0 and (not monkAttackBonusDisabled or fixMonkAttackBonus))
 	local isFistWeapon = false
 	local isBow = false
 	local isLauncher = false
@@ -10171,9 +10456,13 @@ function IEex_ExtraAttacks(creatureData)
 		end
 	end
 	local bitmapWrapper = IEex_DemandRes("RNDBASE" .. IEex_GetActorStat(targetID, 8), "BMP")
+	local aboutToAttack = false
+	local justAttacked = false
 	if bitmapWrapper:isValid() then
 		local bitmapData = bitmapWrapper:getData()
-		if IEex_GetBitmapPixelColor(bitmapData, attackCounter, speedFactor) == 0xFF0000 and IEex_GetActorSpellState(targetID, 246) then
+		aboutToAttack = (IEex_GetBitmapPixelColor(bitmapData, attackCounter + 1, speedFactor) == 0xFF0000)
+		justAttacked = (IEex_GetBitmapPixelColor(bitmapData, attackCounter, speedFactor) == 0xFF0000)
+		if justAttacked and IEex_GetActorSpellState(targetID, 246) then
 			local sourceAnimationSequence = IEex_ReadByte(creatureData + 0x50F4, 0x0)
 			if sourceAnimationSequence == 0 or sourceAnimationSequence == 8 or sourceAnimationSequence == 11 or sourceAnimationSequence == 12 or sourceAnimationSequence == 13 then
 				IEex_IterateActorEffects(targetID, function(eData)
@@ -10225,6 +10514,20 @@ function IEex_ExtraAttacks(creatureData)
 		if offhandSlotData > 0 then
 			offhandWrapper = IEex_DemandRes(IEex_ReadLString(offhandSlotData + 0xC, 8), "ITM")
 		end
+	end
+	if monkAttackBonusDisabled and fixMonkAttackBonus then
+		attackBonus = attackBonus + tonumber(IEex_2DAGetAtStrings("BAATMKU", "BASE_ATTACK", tostring(monkLevel))) - tonumber(IEex_2DAGetAtStrings("BAATNFG", "BASE_ATTACK", tostring(monkLevel)))
+		if currentAttack >= 2 then
+			attackBonus = attackBonus + 2 * (currentAttack - 1)
+		end
+		if currentAttack >= 5 then
+			attackBonus = attackBonus - 5
+		end
+	end
+	local extraMonkAttacks = 0
+	if monkAttackBonusNowEnabled then
+		attackPenaltyIncrement = 3
+		extraMonkAttacks = ex_monk_apr_progression[monkLevel]
 	end
 	local doAttackOfOpportunity = false
 	local opportunityAttackBonus = 0
@@ -10363,10 +10666,10 @@ function IEex_ExtraAttacks(creatureData)
 	if ex_record_attacks_made[targetID] == nil then
 		ex_record_attacks_made[targetID] = {0, 0, 0, 0}
 	end
-	if (normalAPR + imptwfFeatCount >= 5 or (manyshotFeatCount > 0 and rapidShotEnabled)) and attackCounter >= 0 then
+	if (normalAPR + imptwfFeatCount + extraMonkAttacks >= 5 or (manyshotFeatCount > 0 and rapidShotEnabled)) and attackCounter >= 0 then
 		IEex_WriteWord(creatureData + 0x9E6, 10)
 --		IEex_DS(attackCounter)
-		local totalAttacks = IEex_ReadByte(creatureData + 0x5ED, 0x0)
+		local totalAttacks = IEex_ReadByte(creatureData + 0x5ED, 0x0) + extraMonkAttacks
 		local extraAttacks = 0
 		local extraMainhandAttacks = 0
 		local manyshotAttacks = manyshotFeatCount
@@ -10495,7 +10798,7 @@ function IEex_ExtraAttacks(creatureData)
 			totalAttacks = normalAPR + extraAttacks + extraMainhandAttacks
 			manyshotAttacks = manyshotAttacks * 2
 		end
-		if totalAttacks >= 6 or usingImptwf or manyshotAttacks > 0 then
+		if totalAttacks >= 6 or usingImptwf or manyshotAttacks > 0 or extraMonkAttacks > 0 then
 			local totalAttacksMade = ex_record_attacks_made[targetID][1]
 			local extraAttacksMade = ex_record_attacks_made[targetID][2]
 			local extraMainhandAttacksMade = ex_record_attacks_made[targetID][3]
@@ -10504,7 +10807,7 @@ function IEex_ExtraAttacks(creatureData)
 			if normalAPR == 4 then
 				local counterCut = 0
 				local remainderCut = 0
-				if usingImptwf then
+				if usingImptwf or extraMonkAttacks > 0 then
 					counterCut = 3
 					remainderCut = 5
 					extraAttacks = 1
@@ -10553,10 +10856,10 @@ function IEex_ExtraAttacks(creatureData)
 				end
 				if attackCounter == 5 then
 					if manyshotAttacks > 0 then
-						attackBonus = attackBonus - 5 * manyshotAttacks
+						attackBonus = attackBonus - attackPenaltyIncrement * manyshotAttacks
 					end
 				elseif attackCounter == 64 then
-					attackBonus = attackBonus - 5 * extraAttacksMade
+					attackBonus = attackBonus - attackPenaltyIncrement * extraAttacksMade
 				end
 			elseif normalAPR == 5 then
 				local counterCut = math.floor((extraAttacks + extraMainhandAttacks) * 16 / (totalAttacks + 1))
@@ -10624,83 +10927,82 @@ function IEex_ExtraAttacks(creatureData)
 
 				if attackCounter == 5 then
 					if manyshotAttacks > 0 then
-						attackBonus = attackBonus - 5 * manyshotAttacks
+						attackBonus = attackBonus - attackPenaltyIncrement * manyshotAttacks
 					end
 				elseif attackCounter == 57 then
-					attackBonus = attackBonus - 5 * extraMainhandAttacksMade
+					attackBonus = attackBonus - attackPenaltyIncrement * extraMainhandAttacksMade
 				elseif attackCounter == 74 then
-					if IEex_GetActorStat(targetID, 101) > 0 and IEex_ReadByte(creatureData + 0x4BA4, 0x0) == 10 then
-						attackBonus = attackBonus - 3 * extraAttacksMade
-					else
-						attackBonus = attackBonus - 5 * extraAttacksMade
-					end
+					attackBonus = attackBonus - attackPenaltyIncrement * extraAttacksMade
 				end
 			end
 		end
 	end
 	attackCounter = IEex_ReadSignedByte(creatureData + 0x5622, 0x0)
-	if attackCounter >= 0 then
-		if bitmapWrapper:isValid() then
-			local bitmapData = bitmapWrapper:getData()
-			if IEex_GetBitmapPixelColor(bitmapData, attackCounter + 1, speedFactor) == 0xFF0000 then
-				if not isOffhandAttack then
-					attackBonus = attackBonus + IEex_ReadSignedByte(creatureData + 0x9F8, 0x0)
-				else
-					attackBonus = attackBonus + IEex_ReadSignedByte(creatureData + 0x9FC, 0x0)
-				end
-				if hasSpecificCritBonuses then
-					if not isOffhandAttack then
-						local weaponData = weaponWrapper:getData()
-						local effectOffset = IEex_ReadDword(weaponData + 0x6A)
-						local numGlobalEffects = IEex_ReadWord(weaponData + 0x70, 0x0)
-						for i = 0, numGlobalEffects - 1, 1 do
-							local offset = weaponData + effectOffset + i * 0x30
-							local theopcode = IEex_ReadWord(offset, 0x0)
-							local theresource = IEex_ReadLString(offset + 0x14, 8)
-							local thesavingthrow = IEex_ReadDword(offset + 0x24)
-							if theopcode == 500 and theresource == "MECRIT" and bit.band(thesavingthrow, 0x100000) > 0 then
-								local theparameter1 = IEex_ReadDword(offset + 0x4)
-								criticalHitBonus = criticalHitBonus + theparameter1
-							end
-						end
-					else
-						local weaponData = offhandWrapper:getData()
-						local effectOffset = IEex_ReadDword(weaponData + 0x6A)
-						local numGlobalEffects = IEex_ReadWord(weaponData + 0x70, 0x0)
-						for i = 0, numGlobalEffects - 1, 1 do
-							local offset = weaponData + effectOffset + i * 0x30
-							local theopcode = IEex_ReadWord(offset, 0x0)
-							local theresource = IEex_ReadLString(offset + 0x14, 8)
-							local thesavingthrow = IEex_ReadDword(offset + 0x24)
-							if theopcode == 500 and theresource == "MECRIT" and bit.band(thesavingthrow, 0x100000) > 0 then
-								local theparameter1 = IEex_ReadDword(offset + 0x4)
-								criticalHitBonus = criticalHitBonus + theparameter1
-							end
-						end
+	if aboutToAttack then
+		if not isOffhandAttack then
+			attackBonus = attackBonus + IEex_ReadSignedByte(creatureData + 0x9F8, 0x0)
+		else
+			attackBonus = attackBonus + IEex_ReadSignedByte(creatureData + 0x9FC, 0x0)
+		end
+		if hasSpecificCritBonuses then
+			if not isOffhandAttack then
+				local weaponData = weaponWrapper:getData()
+				local effectOffset = IEex_ReadDword(weaponData + 0x6A)
+				local numGlobalEffects = IEex_ReadWord(weaponData + 0x70, 0x0)
+				for i = 0, numGlobalEffects - 1, 1 do
+					local offset = weaponData + effectOffset + i * 0x30
+					local theopcode = IEex_ReadWord(offset, 0x0)
+					local theresource = IEex_ReadLString(offset + 0x14, 8)
+					local thesavingthrow = IEex_ReadDword(offset + 0x24)
+					if theopcode == 500 and theresource == "MECRIT" and bit.band(thesavingthrow, 0x100000) > 0 then
+						local theparameter1 = IEex_ReadDword(offset + 0x4)
+						criticalHitBonus = criticalHitBonus + theparameter1
 					end
-					if isLauncher then
-						local weaponData = launcherWrapper:getData()
-						local effectOffset = IEex_ReadDword(weaponData + 0x6A)
-						local numGlobalEffects = IEex_ReadWord(weaponData + 0x70, 0x0)
-						for i = 0, numGlobalEffects - 1, 1 do
-							local offset = weaponData + effectOffset + i * 0x30
-							local theopcode = IEex_ReadWord(offset, 0x0)
-							local theresource = IEex_ReadLString(offset + 0x14, 8)
-							local thesavingthrow = IEex_ReadDword(offset + 0x24)
-							if theopcode == 500 and theresource == "MECRIT" and bit.band(thesavingthrow, 0x100000) > 0 then
-								local theparameter1 = IEex_ReadDword(offset + 0x4)
-								criticalHitBonus = criticalHitBonus + theparameter1
-							end
-						end
+				end
+			else
+				local weaponData = offhandWrapper:getData()
+				local effectOffset = IEex_ReadDword(weaponData + 0x6A)
+				local numGlobalEffects = IEex_ReadWord(weaponData + 0x70, 0x0)
+				for i = 0, numGlobalEffects - 1, 1 do
+					local offset = weaponData + effectOffset + i * 0x30
+					local theopcode = IEex_ReadWord(offset, 0x0)
+					local theresource = IEex_ReadLString(offset + 0x14, 8)
+					local thesavingthrow = IEex_ReadDword(offset + 0x24)
+					if theopcode == 500 and theresource == "MECRIT" and bit.band(thesavingthrow, 0x100000) > 0 then
+						local theparameter1 = IEex_ReadDword(offset + 0x4)
+						criticalHitBonus = criticalHitBonus + theparameter1
+					end
+				end
+			end
+			if isLauncher then
+				local weaponData = launcherWrapper:getData()
+				local effectOffset = IEex_ReadDword(weaponData + 0x6A)
+				local numGlobalEffects = IEex_ReadWord(weaponData + 0x70, 0x0)
+				for i = 0, numGlobalEffects - 1, 1 do
+					local offset = weaponData + effectOffset + i * 0x30
+					local theopcode = IEex_ReadWord(offset, 0x0)
+					local theresource = IEex_ReadLString(offset + 0x14, 8)
+					local thesavingthrow = IEex_ReadDword(offset + 0x24)
+					if theopcode == 500 and theresource == "MECRIT" and bit.band(thesavingthrow, 0x100000) > 0 then
+						local theparameter1 = IEex_ReadDword(offset + 0x4)
+						criticalHitBonus = criticalHitBonus + theparameter1
 					end
 				end
 			end
 		end
+		if IEex_IsSprite(actionTargetID, false) then
+			local sourceVisualHeight = IEex_ReadDword(creatureData + 0xE)
+			local targetVisualHeight = IEex_ReadDword(actionTargetData + 0xE)
+			if math.abs(targetVisualHeight - sourceVisualHeight) > range * 20 + 40 then
+				attackBonus = attackBonus - 20
+			end
+		end
+		ex_record_attack_stats_hidden_difference[targetID] = {attackBonus - ex_record_attack_stats[targetID][1], criticalHitBonus - ex_record_attack_stats[targetID][2]}
+		IEex_WriteWord(creatureData + 0x936, criticalHitBonus)
+		IEex_WriteWord(creatureData + 0x938, attackBonus)
+		IEex_WriteWord(creatureData + 0x178E, criticalHitBonus)
+		IEex_WriteWord(creatureData + 0x1790, attackBonus)
 	end
-	IEex_WriteWord(creatureData + 0x936, criticalHitBonus)
-	IEex_WriteWord(creatureData + 0x938, attackBonus)
-	IEex_WriteWord(creatureData + 0x178E, criticalHitBonus)
-	IEex_WriteWord(creatureData + 0x1790, attackBonus)
 --	IEex_EvaluatePersistentEffects(targetID)
 	bitmapWrapper:free()
 	weaponWrapper:free()
@@ -11696,6 +11998,7 @@ function IEex_HeightMod(creatureData)
 	local height = IEex_ReadSignedWord(creatureData + 0x720, 0x0)
 	local speed = IEex_ReadSignedWord(creatureData + 0x722, 0x0)
 	local accel = IEex_ReadSignedWord(creatureData + 0x724, 0x0)
+	if height == -1 and speed == -1 and accel == -1 then return end
 	local extraSpeed = 0
 	local extraAccel = 0
 	local minHeight = 0
@@ -14315,7 +14618,7 @@ function MEDEFLEC(originatingEffectData, effectData, creatureData)
 				if theopcode == 288 and theparameter2 == 241 then
 					local thesavingthrow = IEex_ReadDword(eData + 0x40)
 					local thespecial = IEex_ReadByte(eData + 0x48, 0x0)
-					if (thespecial >= 3 and thespecial <= 5) or thespecial == 85 then
+					if (thespecial >= 3 and thespecial <= 5 and theparameter1 ~= 41) then
 						if bit.band(thesavingthrow, 0x20000) == 0 then
 							handsUsed = handsUsed + 1
 						else
@@ -15194,6 +15497,25 @@ function EXFORCDI(actionData, creatureData)
 		local targetID = IEex_GetActionObjectID(actionData)
 		local targetX = IEex_GetActionPointX(actionData)
 		local targetY = IEex_GetActionPointY(actionData)
+		local casterClass = IEex_ReadByte(creatureData + 0x530, 0x0)
+		local highestClassLevel = 0
+		local highestLevelClass = 0
+		local classSpellLevel = 1
+		if casterClass == 0 then
+			for i = 1, 11, 1 do
+				if IEex_GetActorStat(sourceID, 95 + i) > highestClassLevel and IEex_GetClassSpellLevel(sourceID, i, spellRES) > 0 then
+					highestLevelClass = i
+					highestClassLevel = IEex_GetActorStat(sourceID, 95 + i)
+					classSpellLevel = IEex_GetClassSpellLevel(sourceID, i, spellRES)
+				end
+			end
+			casterClass = highestLevelClass
+		end
+		if IEex_ReadDword(creatureData + 0x52C) == 0 then
+			IEex_WriteByte(creatureData + 0x530, casterClass)
+			IEex_WriteByte(creatureData + 0x534, classSpellLevel)
+			IEex_WriteDword(creatureData + 0x52C, IEex_GetActorStat(sourceID, 95 + casterClass))
+		end
 		if actionID == 113 then
 			targetX, targetY = IEex_GetActorLocation(targetID)
 			if ex_spell_no_dec_opcode[sourceID] == spellRES then
@@ -15235,7 +15557,7 @@ function EXFORCDI(actionData, creatureData)
 end
 
 IEex_AddActionHookGlobal("EXFORCDI")
-
+--[[
 function MEHIDDEN(actionData, creatureData)
 	local extraFlags = IEex_ReadDword(creatureData + 0x740)
 	if extraFlags > 0 then
@@ -15251,6 +15573,7 @@ function MEHIDDEN(actionData, creatureData)
 				IEex_SetActionInt3(actionData, 1)
 			end
 		else
+
 			if isHidden then
 				IEex_SetActionID(actionData, 233)
 				IEex_SetActionObjectID(actionData, IEex_GetActorIDShare(creatureData))
@@ -15258,11 +15581,12 @@ function MEHIDDEN(actionData, creatureData)
 				IEex_SetActionInt2(actionData, 0)
 				IEex_SetActionInt3(actionData, 0)
 			end
+
 		end
 	end
 end
-
-IEex_AddActionHookGlobal("EXFORCDI")
+--]]
+--IEex_AddActionHookGlobal("MEHIDDEN")
 
 
 function MEMAGOCR(actionData, creatureData)

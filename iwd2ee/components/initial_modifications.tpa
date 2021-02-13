@@ -23,6 +23,8 @@ ACTION_PHP_EACH IEex_append_array AS data => ~~ BEGIN
 END
 
 COPY_EXISTING ~IEex_TRA.lua~ ~override~
+	SPRINT ex_str_925 @925
+	REPLACE_TEXTUALLY ~ex_str_925 *=.*~ ~ex_str_925 = "%ex_str_925%"~
 	ex_tra_5000 = RESOLVE_STR_REF(@5000)
 	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_tra_5000 *=.*~ ~ex_tra_5000 = %ex_tra_5000%~
 	ex_tra_55385 = RESOLVE_STR_REF(@55385)

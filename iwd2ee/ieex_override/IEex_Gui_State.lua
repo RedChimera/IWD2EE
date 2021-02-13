@@ -647,8 +647,11 @@ function IEex_Extern_OnUpdateRecordDescription(CScreenCharacter, CGameSprite, CU
 	local sneakAttackDamageString = IEex_FetchString(24898)
 	local turnUndeadLevelString = IEex_FetchString(12126)
 	local wholenessOfBodyString = IEex_FetchString(39768)
+	local genericString = IEex_FetchString(33552)
+	local monkWisdomBonusString = ex_str_925
 	local mainhandString = IEex_FetchString(734)
 	local offhandString = IEex_FetchString(733)
+	local baseString = IEex_FetchString(31353)
 	local rangedString = IEex_FetchString(41123)
 	local numberOfAttacksString = IEex_FetchString(9458)
 	local criticalHitString = IEex_FetchString(41122)
@@ -706,6 +709,39 @@ function IEex_Extern_OnUpdateRecordDescription(CScreenCharacter, CGameSprite, CU
 				wisdomBonus = 1
 			end
 			line = string.gsub(line, "%d+", monkLevel * wisdomBonus)
+		elseif string.match(line, monkWisdomBonusString .. ":") or string.match(line, genericString .. ":") then
+			local monkLevel = IEex_GetActorStat(targetID, 101)
+			local wisdomBonus = math.floor((IEex_GetActorStat(targetID, 39) - 10) / 2)
+			local monkACBonusDisabled = false
+			local fixMonkACBonus = true
+			IEex_IterateActorEffects(targetID, function(eData)
+				local theopcode = IEex_ReadDword(eData + 0x10)
+				local theparameter1 = IEex_ReadDword(eData + 0x1C)
+				local theparameter2 = IEex_ReadDword(eData + 0x20)
+				if theopcode == 288 and theparameter2 == 241 then
+					local thegeneralitemcategory = IEex_ReadByte(eData + 0x48, 0x0)
+					if thegeneralitemcategory >= 1 and thegeneralitemcategory <= 3 then
+						monkACBonusDisabled = true
+						if (thegeneralitemcategory == 1 and (theparameter1 ~= 67 or not ex_elven_chainmail_counts_as_unarmored)) or thegeneralitemcategory == 3 then
+							fixMonkACBonus = false
+						end
+					end
+				end
+			end)
+			if monkACBonusDisabled and fixMonkACBonus then
+				if string.match(line, monkWisdomBonusString .. ":") then
+					line = string.gsub(line, "0", wisdomBonus)
+				elseif string.match(line, genericString .. ":") then
+					local genericAC = string.match(line, "%d+") - wisdomBonus
+					if genericAC > 0 then
+						line = string.gsub(line, "%+" .. "%d+", "+" .. genericAC)
+					elseif genericAC < 0 then
+						line = string.gsub(line, "." .. "%d+", "-" .. math.abs(genericAC))
+					else
+						line = ""
+					end
+				end
+			end
 		elseif descPanelNum == 1 and string.match(line, armoredArcanaString .. ":") then
 			local armoredArcanaFeatCount = IEex_ReadByte(creatureData + 0x781, 0x0)
 			line = string.gsub(line, "%d+", (armoredArcanaFeatCount * ex_armored_arcana_multiplier) * 5)
@@ -719,11 +755,35 @@ function IEex_Extern_OnUpdateRecordDescription(CScreenCharacter, CGameSprite, CU
 			if ex_current_record_hand == 2 then
 				handSpecificAttackBonus = IEex_ReadSignedByte(creatureData + 0x9FC, 0x0)
 			end
-			for w in string.gmatch(line, "%d+") do
-				line = string.gsub(line, w, w + handSpecificAttackBonus)
+			local baseAPR = IEex_ReadByte(creatureData + 0x5ED, 0x0)
+			local trueBaseAPR = baseAPR
+			local monkAttackBonusDisabled, fixMonkAttackBonus = IEex_CheckMonkAttackBonus(creatureData)
+			if monkAttackBonusDisabled and fixMonkAttackBonus then
+				trueBaseAPR = tonumber(IEex_2DAGetAtStrings("BAATMKU", "NUM_ATTACKS", tostring(monkLevel)))
+				handSpecificAttackBonus = handSpecificAttackBonus + tonumber(IEex_2DAGetAtStrings("BAATMKU", "BASE_ATTACK", tostring(monkLevel))) - tonumber(IEex_2DAGetAtStrings("BAATNFG", "BASE_ATTACK", tostring(monkLevel)))
 			end
-			if ((normalAPR + imptwfFeatCount >= 5) and (IEex_GetActorSpellState(targetID, 196) or IEex_GetActorSpellState(targetID, 138) or ex_no_apr_limit or monkLevel >= 13 or true)) or (manyshotFeatCount > 0 and rapidShotEnabled) then
-				local totalAttacks = IEex_ReadByte(creatureData + 0x5ED, 0x0)
+			if ex_record_attack_stats_hidden_difference[targetID] ~= nil then
+				handSpecificAttackBonus = handSpecificAttackBonus - ex_record_attack_stats_hidden_difference[targetID][1]
+			end
+			local attackPenaltyIncrement = 5
+			local monkAttackBonusNowEnabled = (monkLevel > 0 and (not monkAttackBonusDisabled or fixMonkAttackBonus))
+			local extraMonkAttacks = 0
+			if monkAttackBonusNowEnabled then
+				attackPenaltyIncrement = 3
+				extraMonkAttacks = ex_monk_apr_progression[monkLevel]
+			end
+			local attackI = 0
+			line = string.gsub(line, "(%d+)", "!%1!")
+			for w in string.gmatch(line, "%d+") do
+				attackI = attackI + 1
+				local monkAttackPenaltyIncrementFix = 0
+				if attackI >= 2 and monkAttackBonusDisabled and fixMonkAttackBonus then
+					monkAttackPenaltyIncrementFix = (attackI - 1) * 2
+				end
+				line = string.gsub(line, "!" .. w .. "!", w + handSpecificAttackBonus + monkAttackPenaltyIncrementFix)
+			end
+			if ((normalAPR + imptwfFeatCount + extraMonkAttacks >= 5) or ((trueBaseAPR + imptwfFeatCount + extraMonkAttacks >= 5))) or (manyshotFeatCount > 0 and rapidShotEnabled) then
+				local totalAttacks = IEex_ReadByte(creatureData + 0x5ED, 0x0) + extraMonkAttacks
 				local extraAttacks = 0
 				local extraMainhandAttacks = 0
 				local manyshotAttacks = manyshotFeatCount
@@ -830,7 +890,7 @@ function IEex_Extern_OnUpdateRecordDescription(CScreenCharacter, CGameSprite, CU
 				if bit.band(stateValue, 0x10000) > 0 then
 					totalAttacks = totalAttacks - 1
 				end
-				if ex_no_apr_limit or (isFistWeapon and monkLevel >= 13) then
+				if ex_no_apr_limit or (monkAttackBonusNowEnabled and monkLevel >= 13) then
 					extraAttacks = 1000
 					extraMainhandAttacks = 1000
 				end
@@ -864,20 +924,16 @@ function IEex_Extern_OnUpdateRecordDescription(CScreenCharacter, CGameSprite, CU
 					if numWeapons >= 2 then
 						line = string.gsub(line, "%d.%d", (normalAPR - 1 + extraMainhandAttacks) .. "+" .. (1 + extraAttacks))
 					else
-						line = string.gsub(line, "%d", totalAttacks)
+						line = string.gsub(line, "%d+", totalAttacks)
 					end
 				else
 					local lastAttackRollBonus = 0
 					for w in string.gmatch(line, "%d+") do
 						lastAttackRollBonus = w
 					end
-					local attackBonusDecrease = 5
-					if IEex_GetActorStat(targetID, 101) > 0 and IEex_ReadByte(creatureData + 0x4BA4, 0x0) == 10 then
-						attackBonusDecrease = 3
-					end
 					if manyshotAttacks > 0 then
 						local firstAttackRollBonus = string.match(line, "%d+")
-						local manyshotAttackRollBonus = firstAttackRollBonus - 5 * manyshotAttacks
+						local manyshotAttackRollBonus = firstAttackRollBonus - attackPenaltyIncrement * manyshotAttacks
 						local manyshotAttackListString = ""
 						if manyshotAttackRollBonus >= 0 then
 							for i = 1, manyshotAttacks, 1 do
@@ -893,7 +949,7 @@ function IEex_Extern_OnUpdateRecordDescription(CScreenCharacter, CGameSprite, CU
 					end
 					if string.match(line, mainhandString .. ":") and numWeapons >= 2 then
 						for i = 1, extraMainhandAttacks, 1 do
-							local nextAttackRollBonus = lastAttackRollBonus - i * attackBonusDecrease
+							local nextAttackRollBonus = lastAttackRollBonus - i * attackPenaltyIncrement
 							if nextAttackRollBonus >= 0 then
 								line = line .. "/+" .. nextAttackRollBonus
 							else
@@ -902,12 +958,49 @@ function IEex_Extern_OnUpdateRecordDescription(CScreenCharacter, CGameSprite, CU
 						end
 					else
 						for i = 1, extraAttacks, 1 do
-							local nextAttackRollBonus = lastAttackRollBonus - i * attackBonusDecrease
+							local nextAttackRollBonus = lastAttackRollBonus - i * attackPenaltyIncrement
 							if nextAttackRollBonus >= 0 then
 								line = line .. "/+" .. nextAttackRollBonus
 							else
 								line = line .. "/-" .. math.abs(nextAttackRollBonus)
 							end
+						end
+					end
+				end
+			end
+		elseif string.match(line, baseString .. ":") and string.match(line, "%+") then
+			local normalAPR = IEex_GetActorStat(targetID, 8)
+			local monkLevel = IEex_GetActorStat(targetID, 101)
+			local handSpecificAttackBonus = 0
+			local baseAPR = IEex_ReadByte(creatureData + 0x5ED, 0x0)
+			local trueBaseAPR = baseAPR
+			local monkAttackBonusDisabled, fixMonkAttackBonus = IEex_CheckMonkAttackBonus(creatureData)
+			if monkAttackBonusDisabled and fixMonkAttackBonus then
+				trueBaseAPR = tonumber(IEex_2DAGetAtStrings("BAATMKU", "NUM_ATTACKS", tostring(monkLevel)))
+				if trueBaseAPR > 4 then
+					trueBaseAPR = 4
+				end
+				handSpecificAttackBonus = handSpecificAttackBonus + tonumber(IEex_2DAGetAtStrings("BAATMKU", "BASE_ATTACK", tostring(monkLevel))) - tonumber(IEex_2DAGetAtStrings("BAATNFG", "BASE_ATTACK", tostring(monkLevel)))
+				local attackPenaltyIncrement = 3
+				local attackI = 0
+				local attackIBonus = 0
+				line = string.gsub(line, "(%d+)", "!%1!")
+				for w in string.gmatch(line, "%d+") do
+					attackI = attackI + 1
+					local monkAttackPenaltyIncrementFix = 0
+					if attackI >= 2 then
+						monkAttackPenaltyIncrementFix = (attackI - 1) * 2
+					end
+					attackIBonus = w + handSpecificAttackBonus + monkAttackPenaltyIncrementFix
+					line = string.gsub(line, "!" .. w .. "!", attackIBonus)
+				end
+				if trueBaseAPR > attackI then
+					for i = 1, trueBaseAPR - attackI, 1 do
+						local nextAttackRollBonus = attackIBonus - i * attackPenaltyIncrement
+						if nextAttackRollBonus >= 0 then
+							line = line .. "/+" .. nextAttackRollBonus
+						else
+							line = line .. "/-" .. math.abs(nextAttackRollBonus)
 						end
 					end
 				end
@@ -923,6 +1016,9 @@ function IEex_Extern_OnUpdateRecordDescription(CScreenCharacter, CGameSprite, CU
 			local currentHeader = IEex_ReadByte(creatureData + 0x4BA6, 0x0)
 			local criticalMultiplier = 2
 			local specificCriticalHitBonus = 0
+			if ex_record_attack_stats_hidden_difference[targetID] ~= nil then
+				specificCriticalHitBonus = specificCriticalHitBonus - ex_record_attack_stats_hidden_difference[targetID][2]
+			end
 			local slotData = IEex_ReadDword(creatureData + 0x4AD8 + weaponSlot * 0x4)
 			if slotData > 0 then
 				weaponRES = IEex_ReadLString(slotData + 0xC, 8)

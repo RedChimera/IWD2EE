@@ -3161,6 +3161,17 @@ Saving Throw: None
 By casting Hunter's Mark, the ranger magically marks a creature as their quarry. For the duration, all physical damage that would be dealt to the marked creature is increased by 3, plus an additional 3 for every 10 ranger levels. In addition, the creature cannot become invisible while marked. Hunter's Mark can be cast on any creature the party sees, even if the ranger does not see it.
 
 Although rangers normally cast spells at half their caster level, Hunter's Mark will be cast at a ranger's full caster level.~
+@35153     = ~Shortening~
+@36153     = ~Shortening
+(Abjuration)
+Level: Brd 1, Clr 1
+Range: Sight of Caster
+Duration: Instantaneous
+Casting Time: 1
+Area of Effect: 1 creature
+Saving Throw: None
+
+Shortening reduces the remaining duration of magical effects on the target. If the target is an ally, all hostile effects on them will have their duration reduced by 5 rounds. If the target is an enemy, all non-hostile effects on them will have their duration reduced by 5 rounds. If an effect's remaining duration is reduced to zero, the effect ends. Shortening is useful for dispelling effects with short durations, such as Hold Person.~
 @35252     = ~Null Healing~
 @36252     = ~Null Healing
 (Necromancy)
@@ -3739,7 +3750,7 @@ Casting Time: 3
 Area of Effect: 20-foot radius
 Saving Throw: Reflex half
 
-Also known as Fireballball, this spell launches a fireball that explodes into other fireballs. After the Metafireball explodes, each creature in the area of effect is hit by a separate fireball with its own area of effect. Each of the secondary fireballs deals 5d6 fire damage (Reflex save with a +5 bonus for half). This spell is most effective when cast at a large group of creatures clumped together.~
+Also known as Fireballball, this spell launches a fireball that explodes into other fireballs. After the Metafireball explodes, each creature in the area of effect is hit by a separate fireball with its own area of effect. Each of the secondary fireballs deals 3d6 fire damage (Reflex save with a +5 bonus for half). This spell is most effective when cast at a large group of creatures clumped together.~
 @37952     = ~Perfect Invisibility~
 @38952     = ~Perfect Invisibility
 (Illusion)

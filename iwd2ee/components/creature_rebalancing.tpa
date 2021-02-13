@@ -2404,7 +2404,7 @@ COPY_EXISTING ~60YTARCH.cre~ ~override~ ~60RANYTA.cre~ ~override~
 		LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~ranger~ resource=~SPWI305~ END
 		LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~ranger~ resource=~SPWI405~ END
 		LPF	IWD2_CRE_SPELL INT_VAR num=2 STR_VAR class=~ranger~ resource=~SPPR502~ END
-		LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~ranger~ resource=~USPR551~ END
+//		LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~ranger~ resource=~USPR551~ END
 		LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~ranger~ resource=~SPWI719~ END
 	END
 	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~ranger~ resource=~SPPR517~ END

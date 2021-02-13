@@ -604,7 +604,7 @@ Monks are warriors who pursue perfection through contemplation as well as action
 
 WARNING: A monk who multiclasses to a class other than monk or their order's favored class will never be allowed to advance in the monk class again.
 
-NOTE: Multiclassed monks ONLY use their monk levels when determining their base attack bonus and number of attacks when fighting unarmed.
+NOTE: Multiclassed monks ONLY use their monk levels when determining their number of attacks when fighting unarmed.
 
 Hit Points per Level: 1-8
 
@@ -616,6 +616,8 @@ Level 4-6: 3 attacks
 Level 7-9: 4 attacks
 Level 10-12: 5 attacks
 Level 13-15: 6 attacks, exceeding the normal attacks per round limit. For every 3 levels after 13, the monk gains another attack per round.
+
+* Monk Weapons: The monk can wield quarterstaves, daggers, throwing daggers, and darts with very few penalties (one fewer attack per round than with fists, but the monk will still get an extra attack per round every 3 levels).
 
 * As the monk increases in levels, the damage his fists inflicts does as well:
 
@@ -629,9 +631,9 @@ Level 21-30: 1d8+5
 
 * Ki Strike: At level 8, the monk's unarmed attack is empowered with ki. The unarmed strike damage from such an attack can deal damage to a creature with damage reduction, such as a wight, as if the blow were made with a weapon with an enhancement bonus equal to the monk's damage bonus. Thus, a level 12 monk's fists strike as a +3 weapon.
 * A monk's natural armor class starts at 10, and then increases by +1 at 5th level and every 5 levels thereafter.
-* When not wearing armor a monk adds his Wisdom bonus to his AC in the same manner as his Dexterity bonus.
+* When not wearing armor (robes are acceptable) a monk adds his Wisdom bonus to his AC in the same manner as his Dexterity bonus.
 * Stunning Attacks: When this ability is used, all of the monk's attacks in the next round force the victim to make a Fortitude save (DC 10 + Wisdom modifier + half total level) or be stunned for 1 round. A monk can make a stunning attack 1/day/level.
-* Evasion: Monks have the ability to evade damage from area affect spells. Whenever a monk makes a successful Reflex save against an area effect spell that allows a reflex save for half damage, he or she takes no damage.
+* Evasion: Monks have the ability to evade damage from area of effect spells. Whenever a monk makes a successful Reflex save against an area effect spell that allows a reflex save for half damage, he or she takes no damage.
 * 2nd level: Deflect Arrows. The monk gains the Deflect Arrows feat, yielding a +1 miscellanous bonus against missile weapons. In addition, the monk automatically blocks the first instance of missile damage that would hit them each round. The monk must have a hand free to block missiles this way.
 * 3rd level: Still Mind. The monk gains a +2 bonus to saving throws against spells and effects from the Enchantment school. Unarmored movement speed increases.
 * 5th level: Purity of Body. The monk gains control over his body's immune system. He gains immunity to all diseases.
@@ -1782,7 +1784,7 @@ Disadvantages:
 @922    = ~Counterspell~
 @923    = ~Incorporeal Touch~
 @924    = ~Dodged the attack via Defensive Roll~
-@925    = ~~
+@925    = ~Monk Wisdom Bonus~
 @926    = ~~
 @927    = ~~
 @928    = ~~
