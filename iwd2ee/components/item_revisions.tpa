@@ -5009,6 +5009,7 @@ COPY_EXISTING ~40BDAWN.sto~ ~override~ //Beodaewn the Werewolf Man store
 	ADD_STORE_ITEM ~USRTHF01~ AFTER ~00SPER99~ #1 #1 #1 ~IDENTIFIED~ #1 //Spear of Sorrows
 	ADD_STORE_ITEM ~11RTHF25~ AFTER ~USRTHF01~ #1 #1 #1 ~IDENTIFIED~ #1 //Haft Over Head
 	ADD_STORE_ITEM ~00RTHF47~ AFTER ~00BOOT02~ #1 #1 #1 ~IDENTIFIED~ #1 //Arcs of Disredain
+	ADD_STORE_ITEM ~00DART83~ AFTER ~00RTHF47~ #1 #1 #1 ~IDENTIFIED~ #1 //Returning Flurry Dart
 	REMOVE_STORE_ITEM ~00AMUL12~ ~00SPER99~
 
 COPY_EXISTING ~41ZACK1.sto~ ~override~ ~41ZACK2.sto~ ~override~ ~41ZACK3.sto~ ~override~ //Zack Boosenberry stores
@@ -5026,6 +5027,7 @@ COPY_EXISTING ~41ZACK1.sto~ ~override~ ~41ZACK2.sto~ ~override~ ~41ZACK3.sto~ ~o
 COPY_EXISTING ~50NYM2.sto~ ~override~ //Nym store
 	ADD_STORE_ITEM ~00DAGG93~ AFTER ~00ROBE03~ #1 #1 #1 ~IDENTIFIED~ #1 //Dagger of Speed +1
 	ADD_STORE_ITEM ~USBOOT42~ AFTER ~00BOOT03~ #1 #1 #1 ~IDENTIFIED~ #1 //Gargoyle Boots
+	ADD_STORE_ITEM ~00RTHF57~ AFTER ~00RTHF33~ #1 #1 #1 ~IDENTIFIED~ #1 //Geloise
 
 COPY_EXISTING ~00BASHS3.sto~ ~override~ //Avarine Decanter genie store
 	WRITE_LONG 0x14 155 //Buying stuff from him costs less money (since he actually has some good stuff now), though his goods are still overpriced
@@ -5347,6 +5349,7 @@ COPY_EXISTING ~ar6103.are~ ~override~ //Dragon's Eye third floor
 	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR charges1=1  charges2=1  charges3=1 single_match=1 STR_VAR old_item=~00RING18~ new_item=~USRT17_V~ END
 
 COPY_EXISTING ~ar6200.are~ ~override~ //Fields of Slaughter
+	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR charges1=1 single_match=1 STR_VAR old_item=~00RTHF57~ new_item=~00POTN95~ END
 	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR charges1=1 single_match=1 STR_VAR old_item=~00RTHF68~ new_item=~00MISC07~ END
 
 COPY_EXISTING ~ar6201.are~ ~override~ //Saablic Tan area

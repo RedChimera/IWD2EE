@@ -8110,7 +8110,7 @@ Attack Bonus:  +5
 Enchantment:  +5
 Damage Type:  Missile (piercing)
 Special: 
-  Speed: 5 attacks per combat round
+  Speed: 4 additional attacks per combat round. These attacks can bypass the cap of five attacks per round.
 Weight: 0 lb.
 Required Feat:  Simple Weapons, Missile
 Type:  One-handed~
@@ -8124,7 +8124,7 @@ Attack Bonus:  +1
 Enchantment:  +1
 Damage Type:  Missile (piercing)
 Special:
-  No Strength bonus to damage
+  No Strength bonus to damage (no Dexterity bonus to damage for lightfoot halflings either)
   Speed: Attacks per round doubled, potentially bypassing the limit of five attacks per round
   Returning: Returns to user
 Weight: 0 lb.
@@ -9314,15 +9314,15 @@ Special:
 Weight: 9 lb.
 Feat Requirement:  Simple Weapon, Crossbow
 Type:  Two-handed~
-@11861    = ~Geloise +3~
+@11861    = ~Geloise +2~
 @11862    = ~A human adventurer from the Dalelands named Arioth Cooper used this heavy crossbow on many of his journeys. Arioth had lived in a small community near the edge of Anauroch, the great desert. When a mysterious force emerged from the sands to destroy the village, Arioth's wife was killed. Through circumstance, Arioth became a wandering mercenary. Over time, Arioth became a great hero and champion for the innocents of Cormyr and the Dalelands, though he shied away from such praise. His worn, heavy crossbow was named after his dead wife, Geloise. When Arioth died of old age, his wishes were that his equipment be sold off at an auction in Essembra, Battledale, and the proceeds given to the citizens of that village.
 
 STATISTICS:
 
-Damage: +8 (missile)
-Attack Bonus: +3 
+Damage: +6 (missile)
+Attack Bonus: +2
 Special:
-  Shock: Bolts fired from this crossbow deal an additional 2d6 electrical damage
+  If the wielder has weapon specialization in crossbows, their proficiency attack and damage bonuses with Geloise are doubled.
 Weight: 10 lb.
 Feat Requirement:  Simple Weapon, Crossbow
 Type:  Two-handed~
@@ -9334,7 +9334,7 @@ STATISTICS:
 Damage: +12 (missile)
 Attack Bonus: +5 
 Special:
-  Shock: Bolts fired from this crossbow deal an additional 3d6 electrical damage
+  If the wielder has weapon specialization in crossbows, their proficiency attack and damage bonuses with Geloise are tripled.
 Weight: 10 lb.
 Feat Requirement:  Simple Weapon, Crossbow
 Type:  Two-handed~

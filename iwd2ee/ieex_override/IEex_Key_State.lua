@@ -77,12 +77,12 @@ IEex_KeyIDS = {
 	["F11"] = 122,
 	["F12"] = 123,
 	["LEFT_SHIFT"] = 160,
-	["RIGHT_SHIFT"] = 160,
-	["LEFT_CTRL"] = 160,
-	["RIGHT_CTRL"] = 160,
-	["LEFT_ALT"] = 160,
-	["RIGHT_ALT"] = 160,
-	["LEFT_SHIFT"] = 160,
+	["RIGHT_SHIFT"] = 161,
+	["LEFT_CTRL"] = 162,
+	["RIGHT_CTRL"] = 163,
+	["LEFT_ALT"] = 164,
+	["RIGHT_ALT"] = 165,
+	["LEFT_SHIFT"] = 166,
 }
 
 IEex_Keys = IEex_Default( {}, IEex_Keys)
@@ -300,11 +300,44 @@ function IEex_Scroll_KeyReleasedListener(key)
 	end
 end
 
+function IEex_ExtraCheatKeysListener(key)
+	if IEex_IsKeyDown(IEex_KeyIDS.LEFT_CTRL) or IEex_IsKeyDown(IEex_KeyIDS.RIGHT_CTRL) then
+		if key == IEex_KeyIDS.V then
+			local actorID = IEex_GetActorIDCursor()
+			if IEex_IsSprite(actorID, false) then
+				local share = IEex_GetActorShare(actorID)
+				local extraFlags = IEex_ReadDword(share + 0x740)
+				if bit.band(extraFlags, 0x1000000) == 0 then
+					IEex_DisplayString("Opcode printing on " .. IEex_GetActorName(actorID) .. " enabled")
+					IEex_WriteDword(share + 0x740, bit.bor(extraFlags, 0x1000000))
+				else
+					IEex_DisplayString("Opcode printing on " .. IEex_GetActorName(actorID) .. " disabled")
+					IEex_WriteDword(share + 0x740, bit.band(extraFlags, 0xFEFFFFFF))
+				end
+			end
+		elseif key == IEex_KeyIDS.N then
+			local actorID = IEex_GetActorIDCursor()
+			if IEex_IsSprite(actorID, false) then
+				local share = IEex_GetActorShare(actorID)
+				local extraFlags = IEex_ReadDword(share + 0x740)
+				if bit.band(extraFlags, 0x2000000) == 0 then
+					IEex_DisplayString("Action printing on " .. IEex_GetActorName(actorID) .. " enabled")
+					IEex_WriteDword(share + 0x740, bit.bor(extraFlags, 0x2000000))
+				else
+					IEex_DisplayString("Action printing on " .. IEex_GetActorName(actorID) .. " disabled")
+					IEex_WriteDword(share + 0x740, bit.band(extraFlags, 0xFDFFFFFF))
+				end
+			end
+		end
+	end
+end
+
 function IEex_Scroll_InputStateListener()
 
 end
 
 function IEex_Scroll_RegisterListeners()
+	IEex_AddKeyPressedListener("IEex_ExtraCheatKeysListener")
 	IEex_AddKeyPressedListener("IEex_Scroll_KeyPressedListener")
 	IEex_AddKeyReleasedListener("IEex_Scroll_KeyReleasedListener")
 	IEex_AddInputStateListener("IEex_Scroll_InputStateListener")

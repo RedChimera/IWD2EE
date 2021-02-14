@@ -225,6 +225,9 @@ function IEex_Extern_CGameSprite_SetCurrAction(actionData)
 	end)
 	local creatureData = actionData - 0x476
 	local actorID = IEex_GetActorIDShare(creatureData)
+	if creatureData > 0 and bit.band(IEex_ReadDword(creatureData + 0x740), 0x2000000) > 0 and IEex_ReadDword(creatureData + 0x740) > 0 then
+		IEex_DisplayString("Action ID " .. IEex_GetActionID(actionData) .. " from " .. IEex_GetActorName(actorID) .. " - Parameter 1: " .. IEex_GetActionInt1(actionData) .. ", Parameter2: " .. IEex_GetActionInt2(actionData) .. ", Parameter3: " .. IEex_GetActionInt3(actionData))
+	end
 	if IEex_GetActorSpellState(actorID, 250) then
 		local actorActionHookOpcodeList = {}
 		IEex_IterateActorEffects(actorID, function(eData)

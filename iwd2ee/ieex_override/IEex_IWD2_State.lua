@@ -11,7 +11,6 @@ function IEex_Reload()
 		-- Need sleep call so this thread doesn't (effectively) keep IEex_NeedSyncTick locked
 		IEex_Helper_Sleep(1)
 	end
-
 	IEex_Helper_SynchronizedBridgeOperation("IEex_ReloadListeners", function()
 		IEex_Helper_ReadDataFromBridgeNL("IEex_ReloadListeners")
 		IEex_Helper_ClearBridgeNL("IEex_ReloadListeners")
@@ -918,9 +917,9 @@ end
 
 -- Returns the resref of the actor's currently equipped weapon.
 -- If the actor has a launcher equipped, it returns the resref of the ammo.
-function IEex_GetEquippedWeaponRES(actorID, slot)
+function IEex_GetEquippedWeaponRES(actorID)
 	if not IEex_IsSprite(actorID, true) then return "" end
-	IEex_GetItemSlotRES(actorID, IEex_GetEquippedWeaponSlot(actorID))
+	return IEex_GetItemSlotRES(actorID, IEex_GetEquippedWeaponSlot(actorID))
 end
 
 -- Returns the current header number of the actor's currently equipped weapon.
@@ -1245,7 +1244,11 @@ function IEex_Eval(actionString, portraitIndex)
 
 		local actorID = -1
 		if portraitIndex then
-			actorID = IEex_GetActorIDPortrait(portraitIndex)
+			if portraitIndex >= 0 and portraitIndex <= 5 then
+				actorID = IEex_GetActorIDPortrait(portraitIndex)
+			else
+				actorID = portraitIndex
+			end
 		else
 			actorID = IEex_GetActorIDCursor()
 		end
@@ -4380,20 +4383,25 @@ function MEMODDUR(effectData, creatureData)
 end
 ex_monk_animation_conversion = {[0x6000] = 0x6500, [0x6005] = 0x6500, [0x6100] = 0x6500, [0x6105] = 0x6500, [0x6200] = 0x6500, [0x6205] = 0x6500, [0x6300] = 0x6500, [0x6305] = 0x6500, [0x6010] = 0x6510, [0x6015] = 0x6510, [0x6110] = 0x6510, [0x6115] = 0x6510, [0x6210] = 0x6510, [0x6215] = 0x6510, [0x6310] = 0x6510, [0x6315] = 0x6510, }
 function MEMONKAN(effectData, creatureData)
-	if IEex_CheckForEffectRepeat(effectData, creatureData) then return end
 	local targetID = IEex_GetActorIDShare(creatureData)
+	if IEex_IsGamePaused() then
+		if IEex_CheckForInfiniteLoop(targetID, IEex_GetGameTick(), "MEMONKAN", 5) then return end
+	else
+		if IEex_CheckForInfiniteLoop(targetID, IEex_GetGameTick(), "MEMONKAN", 5) then return end
+	end
 	local special = IEex_ReadDword(effectData + 0x44)
 	local parent_resource = IEex_ReadLString(effectData + 0x90, 8)
 	local baseAnimation = IEex_ReadDword(creatureData + 0x5C4)
-	if special == 0 and ex_monk_animation_conversion[baseAnimation] ~= nil and not IEex_GetActorSpellState(targetID, 188) then
-		IEex_ApplyEffectToActor(targetID, {
+	if special == 0 then
+		if ex_monk_animation_conversion[baseAnimation] ~= nil and not IEex_GetActorSpellState(targetID, 188) then
+			IEex_ApplyEffectToActor(targetID, {
 ["opcode"] = 254,
 ["target"] = 2,
 ["timing"] = 9,
 ["resource"] = "USMONKAN",
 ["source_id"] = targetID
 })
-		IEex_ApplyEffectToActor(targetID, {
+			IEex_ApplyEffectToActor(targetID, {
 ["opcode"] = 288,
 ["target"] = 2,
 ["timing"] = 9,
@@ -4403,19 +4411,7 @@ function MEMONKAN(effectData, creatureData)
 ["parent_resource"] = "USMONKAN",
 ["source_id"] = targetID
 })
-		if IEex_ReadByte(creatureData + 0x4BA4, 0x0) ~= 43 then
-			IEex_WriteByte(creatureData + 0x4BA4, 43)
 			IEex_ApplyEffectToActor(targetID, {
-["opcode"] = 143,
-["target"] = 2,
-["timing"] = 9,
-["parameter1"] = 43,
-["resource"] = parent_resource,
-["parent_resource"] = "USMONKAN",
-["source_id"] = targetID
-})
-		end
-		IEex_ApplyEffectToActor(targetID, {
 ["opcode"] = 53,
 ["target"] = 2,
 ["timing"] = 1,
@@ -4424,7 +4420,7 @@ function MEMONKAN(effectData, creatureData)
 ["parent_resource"] = "USMONKAN",
 ["source_id"] = targetID
 })
-		IEex_ApplyEffectToActor(targetID, {
+			IEex_ApplyEffectToActor(targetID, {
 ["opcode"] = 53,
 ["target"] = 2,
 ["timing"] = 0,
@@ -4434,6 +4430,27 @@ function MEMONKAN(effectData, creatureData)
 ["parent_resource"] = "USMONKAN",
 ["source_id"] = targetID
 })
+		end
+		if ex_monk_animation_conversion[baseAnimation] ~= nil or baseAnimation == 0x6500 or baseAnimation == 0x6510 then
+			if IEex_GetItemSlotRES(targetID, 10) ~= IEex_GetItemSlotRES(targetID, 43) then
+				IEex_ApplyEffectToActor(targetID, {
+["opcode"] = 143,
+["target"] = 2,
+["timing"] = 9,
+["parameter1"] = 43,
+["resource"] = IEex_GetItemSlotRES(targetID, 10),
+["parent_resource"] = "USMONKAN",
+["source_id"] = targetID
+})
+			end
+			if IEex_ReadByte(creatureData + 0x4BA4, 0x0) == 10 then
+--				IEex_Eval('SelectWeaponAbility(43,0)',targetID)
+				IEex_Eval('EquipMostDamagingMelee()',targetID)
+				IEex_WriteByte(creatureData + 0x3448, 43)
+				IEex_WriteByte(creatureData + 0x4BA4, 43)
+				IEex_WriteByte(creatureData + 0x569E, 43)
+			end
+		end
 	elseif special == 1 and (baseAnimation == 0x6500 or baseAnimation == 0x6510) then
 		local oldAnimation = 0
 		IEex_IterateActorEffects(targetID, function(eData)
@@ -5152,7 +5169,8 @@ IEex_AddScreenEffectsGlobal("MEREPLIT", function(effectData, creatureData)
 			resWrapper:free()
 			for i = 0, 3, 1 do
 				local weaponSetOffset = creatureData + 0x342C + i * 0x78
-				if IEex_ReadByte(weaponSetOffset + 0x1C, 0x0) == parameter1 then
+				if IEex_ReadByte(weaponSetOffset + 0x1C, 0x0) == parameter1 or 43 + i * 2 == parameter1 then
+					IEex_WriteByte(weaponSetOffset + 0x1C, parameter1)
 					IEex_WriteLString(weaponSetOffset, weaponIcon, 8)
 					IEex_WriteDword(weaponSetOffset + 0x8, weaponName)
 					IEex_WriteDword(weaponSetOffset + 0x2A, weaponName)
@@ -6640,6 +6658,9 @@ function MESPIN(effectData, creatureData, isSpecialCall)
 	local savingthrow = IEex_ReadDword(effectData + 0x3C)
 	local special = IEex_ReadDword(effectData + 0x44)
 	local doSpin = true
+	if bit.band(savingthrow, 0x80000) > 0 then
+		IEex_WriteWord(creatureData + 0x476, 0)
+	end
 	if bit.band(savingthrow, 0x20000) > 0 then
 		doSpin = false
 		local animationSequence = IEex_ReadByte(creatureData + 0x50F4, 0x0)
@@ -7120,13 +7141,17 @@ end
 function MEREPERM(effectData, creatureData)
 	if true then return end
 end
-ex_last_evaluation_tick = 0
+ex_last_evaluation_tick = {}
 function IEex_EvaluatePermanentRepeatingEffects(creatureData)
-	if IEex_GetGameTick() % 15 ~= 0 then return end
 --	if IEex_CheckForEffectRepeat(effectData, creatureData) then return end
 --	if IEex_ReadDword(effectData + 0x10C) <= 0 then return end
-
+	local tick = IEex_GetGameTick()
 	local targetID = IEex_GetActorIDShare(creatureData)
+	if ex_last_evaluation_tick[targetID] ~= nil then
+		timeSinceLastEvaluation = tick - ex_last_evaluation_tick[targetID]
+		if timeSinceLastEvaluation <= 0 and timeSinceLastEvaluation >= -2 then return end
+	end
+	ex_last_evaluation_tick[targetID] = tick
 --	if IEex_CheckForInfiniteLoop(targetID, IEex_ReadDword(effectData + 0x24), "MEREPERM", 5) then return end
 	if IEex_ReadSignedByte(creatureData + 0x603, 0x0) == -1 then
 		for i = 0, 5, 1 do
@@ -7155,7 +7180,17 @@ function IEex_EvaluatePermanentRepeatingEffects(creatureData)
 		if theopcode == 288 and theparameter2 == 224 then
 			local theresource = IEex_ReadLString(eData + 0x30, 8)
 			if theresource ~= "" then
-				table.insert(repermList, theresource)
+				local theparameter1 = IEex_ReadDword(eData + 0x1C)
+				local thesavingthrow = IEex_ReadDword(eData + 0x40)
+				if theparameter1 <= 0 then
+					theparameter1 = 1
+				end
+				if bit.band(thesavingthrow, 0x100000) == 0 then
+					theparameter1 = theparameter1 * 15
+				end
+				if tick % theparameter1 == 0 then
+					table.insert(repermList, theresource)
+				end
 			end
 		end
 	end)
@@ -7186,10 +7221,10 @@ function IEex_EvaluatePermanentRepeatingEffects(creatureData)
 
 	local monkLevel = IEex_GetActorStat(targetID, 101)
 	local fistSlot = IEex_ReadDword(creatureData + 0x4B00)
---	if not IEex_GetActorSpellState(targetID, 182) and not IEex_GetActorSpellState(targetID, 189) then
-	if bit.band(extraFlags, 0x1000000) > 0 then
-		extraFlags = bit.band(extraFlags, 0xFEFFFFFF)
-		IEex_WriteDword(creatureData + 0x740, extraFlags)
+	if not IEex_GetActorSpellState(targetID, 182) and not IEex_GetActorSpellState(targetID, 189) then
+--	if bit.band(extraFlags, 0x1000000) > 0 then
+--		extraFlags = bit.band(extraFlags, 0xFEFFFFFF)
+--		IEex_WriteDword(creatureData + 0x740, extraFlags)
 		if fistSlot > 0 and IEex_ReadLString(fistSlot + 0xC, 8) ~= ex_monk_fist_progression[monkLevel] and ex_monk_fist_progression[monkLevel] ~= nil then
 			IEex_ApplyEffectToActor(targetID, {
 ["opcode"] = 143,
@@ -7201,6 +7236,22 @@ function IEex_EvaluatePermanentRepeatingEffects(creatureData)
 ["source_id"] = targetID
 })
 --[[
+			if monkLevel > 0 and (ex_monk_animation_conversion[baseAnimation] ~= nil or baseAnimation == 0x6500 or baseAnimation == 0x6510) and IEex_GetItemSlotRES(targetID, 43) ~= ex_monk_fist_progression[monkLevel] then
+				IEex_ApplyEffectToActor(targetID, {
+["opcode"] = 143,
+["target"] = 2,
+["timing"] = 0,
+["parameter1"] = 43,
+["resource"] = ex_monk_fist_progression[monkLevel],
+["parent_resource"] = "USMFIST",
+["source_id"] = targetID
+})
+			end
+--]]
+			if IEex_ReadByte(creatureData + 0x4BA4, 0x0) == 10 then
+--				IEex_Eval('EquipMostDamagingMelee()',targetID)
+			end
+--[[
 			IEex_ApplyEffectToActor(targetID, {
 ["opcode"] = 500,
 ["target"] = 2,
@@ -7211,13 +7262,12 @@ function IEex_EvaluatePermanentRepeatingEffects(creatureData)
 })
 --]]
 		end
---	else
-	elseif bit.band(extraFlags, 0x2000000) > 0 then
-		extraFlags = bit.band(extraFlags, 0xFDFFFFFF)
-		IEex_WriteDword(creatureData + 0x740, extraFlags)
+	else
+--	elseif bit.band(extraFlags, 0x2000000) > 0 then
+--		extraFlags = bit.band(extraFlags, 0xFDFFFFFF)
+--		IEex_WriteDword(creatureData + 0x740, extraFlags)
 		if fistSlot > 0 and IEex_ReadLString(fistSlot + 0xC, 8) ~= ex_incorporeal_monk_fist_progression[monkLevel] and ex_incorporeal_monk_fist_progression[monkLevel] ~= nil then
 			IEex_ApplyEffectToActor(targetID, {
-
 ["opcode"] = 143,
 ["target"] = 2,
 ["timing"] = 1,
@@ -7227,12 +7277,28 @@ function IEex_EvaluatePermanentRepeatingEffects(creatureData)
 ["source_id"] = targetID
 })
 --[[
+			if monkLevel > 0 and (ex_monk_animation_conversion[baseAnimation] ~= nil or baseAnimation == 0x6500 or baseAnimation == 0x6510) and IEex_GetItemSlotRES(targetID, 43) ~= ex_incorporeal_monk_fist_progression[monkLevel] then
+				IEex_ApplyEffectToActor(targetID, {
+["opcode"] = 143,
+["target"] = 2,
+["timing"] = 0,
+["parameter1"] = 43,
+["resource"] = ex_incorporeal_monk_fist_progression[monkLevel],
+["parent_resource"] = "USMFIST",
+["source_id"] = targetID
+})
+			end
+--]]
+			if IEex_ReadByte(creatureData + 0x4BA4, 0x0) == 10 then
+--				IEex_Eval('EquipMostDamagingMelee()',targetID)
+			end
+--[[
 			IEex_ApplyEffectToActor(targetID, {
 ["opcode"] = 500,
 ["target"] = 2,
 ["timing"] = 0,
 ["resource"] = "MEMONKAN",
-["parent_resource"] = ex_monk_fist_progression[monkLevel],
+["parent_resource"] = ex_incorporeal_monk_fist_progression[monkLevel],
 ["source_id"] = targetID
 })
 --]]
@@ -10355,20 +10421,103 @@ function MEAPRBON(effectData, creatureData)
 	local monkLevel = IEex_GetActorStat(targetID, 101)
 	local baseAPR = IEex_ReadByte(creatureData + 0x5ED, 0x0)
 	if monkLevel > 0 then
-		if baseAPR < 4 then
+--		if baseAPR < 4 then
 			local monkAttackBonusDisabled, fixMonkAttackBonus = IEex_CheckMonkAttackBonus(creatureData)
+			local trueBaseAPR = tonumber(IEex_2DAGetAtStrings("BAATMKU", "NUM_ATTACKS", tostring(monkLevel)))
+			baseAPR = math.floor((IEex_GetActorBaseAttackBonus(targetID, false) - 1) / 5) + 1
+			if baseAPR > 4 then
+				baseAPR = 4
+			end
+			if trueBaseAPR > 4 then
+				trueBaseAPR = 4
+			end
 			if monkAttackBonusDisabled and fixMonkAttackBonus then
-				local trueBaseAPR = tonumber(IEex_2DAGetAtStrings("BAATMKU", "NUM_ATTACKS", tostring(monkLevel)))
-				if trueBaseAPR > 4 then
-					trueBaseAPR = 4
-				end
 				if trueBaseAPR > baseAPR then
 					IEex_WriteByte(creatureData + 0x5ED, trueBaseAPR)
-					IEex_WriteWord(creatureData + 0x93A, IEex_ReadSignedWord(creatureData + 0x93A, 0x0) + trueBaseAPR - baseAPR)
-					IEex_WriteWord(creatureData + 0x1792, IEex_ReadSignedWord(creatureData + 0x1792, 0x0) + trueBaseAPR - baseAPR)
 				end
 			end
-		end
+			local trueAPR = trueBaseAPR
+			local weaponSlot = IEex_ReadByte(creatureData + 0x4BA4, 0x0)
+			local slotData = IEex_ReadDword(creatureData + 0x4AD8 + weaponSlot * 0x4)
+			local rapidShotEnabled = (IEex_ReadByte(creatureData + 0x4C64, 0x0) > 0)
+
+			if slotData > 0 then
+				local weaponRES = IEex_ReadLString(slotData + 0xC, 8)
+				if fixMonkAttackBonus or not monkAttackBonusDisabled then
+					trueAPR = trueAPR + ex_monk_apr_progression[monkLevel]
+					if weaponRES == ex_monk_fist_progression[monkLevel] or weaponRES == ex_incorporeal_monk_fist_progression[monkLevel] or string.sub(weaponRES, 1, 7) == "00MFIST" then
+						trueAPR = trueAPR + 1
+					end
+				end
+				if weaponSlot ~= 10 and rapidShotEnabled then
+					local resWrapper = IEex_DemandRes(weaponRES, "ITM")
+					if resWrapper:isValid() then
+						local itemData = resWrapper:getData()
+						local numHeaders = IEex_ReadSignedWord(itemData + 0x68, 0x0)
+						if weaponHeader >= numHeaders then
+							weaponHeader = 0
+						end
+						local itemType = IEex_ReadWord(itemData + 0x1C, 0x0)
+						headerType = IEex_ReadByte(itemData + 0x82 + weaponHeader * 0x38, 0x0)
+						if rapidShotEnabled and headerType == 2 and itemType ~= 27 and itemType ~= 31 then
+							trueAPR = trueAPR + 1
+						end
+					end
+					resWrapper:free()
+				end
+
+			end
+			local numWeapons = 0
+			IEex_IterateActorEffects(targetID, function(eData)
+				local theopcode = IEex_ReadDword(eData + 0x10)
+				local theparameter1 = IEex_ReadDword(eData + 0x1C)
+				local theparameter2 = IEex_ReadDword(eData + 0x20)
+				local thesavingthrow = IEex_ReadDword(eData + 0x40)
+				local thespecial = IEex_ReadDword(eData + 0x48)
+				if theopcode == 1 then
+					if theparameter2 == 0 then
+						trueAPR = trueAPR + theparameter1
+					elseif theparameter2 == 1 then
+						trueAPR = theparameter1
+					elseif theparameter2 == 1 then
+						trueAPR = math.floor(trueAPR * theparameter1 / 100)
+					end
+				elseif theopcode == 288 and theparameter2 == 241 then
+					local thegeneralitemcategory = IEex_ReadByte(eData + 0x48, 0x0)
+					if thegeneralitemcategory == 5 then
+						numWeapons = numWeapons + 1
+					end
+				end
+			end)
+			local imptwfFeatCount = IEex_ReadByte(creatureData + 0x744 + ex_feat_name_id["ME_IMPROVED_TWO_WEAPON_FIGHTING"], 0x0)
+			local usingImptwf = false
+			if numWeapons >= 2 then
+				trueAPR = trueAPR + 1
+				extraMainhandAttacks = extraMainhandAttacks + 1
+				if imptwfFeatCount > 0 and (IEex_GetActorStat(targetID, 103) < 9 or wearingLightArmor or (IEex_ReadByte(creatureData + 0x5EC, 0x0) >= 16 and bit.band(IEex_ReadDword(creatureData + 0x75C), 0x2) > 0 and bit.band(IEex_ReadDword(creatureData + 0x764), 0x40) > 0)) then
+					trueAPR = trueAPR + 1
+					usingImptwf = true
+					if imptwfFeatCount > 1 and (IEex_GetActorStat(targetID, 103) < 14 or wearingLightArmor or (IEex_ReadByte(creatureData + 0x5EC, 0x0) >= 21 and bit.band(IEex_ReadDword(creatureData + 0x75C), 0x2) > 0 and bit.band(IEex_ReadDword(creatureData + 0x764), 0x40) > 0)) then
+						trueAPR = trueAPR + 1
+					end
+				end
+			end
+			if IEex_GetActorSpellState(targetID, 17) then
+				trueAPR = trueAPR + 1
+			end
+			local stateValue = bit.bor(IEex_ReadDword(creatureData + 0x5BC), IEex_ReadDword(creatureData + 0x920))
+			if bit.band(stateValue, 0x8000) > 0 then
+				trueAPR = trueAPR + 1
+			end
+			if bit.band(stateValue, 0x10000) > 0 then
+				trueAPR = trueAPR - 1
+			end
+			if trueAPR > 5 then
+				trueAPR = 5
+			end
+			IEex_WriteWord(creatureData + 0x93A, trueAPR)
+			IEex_WriteWord(creatureData + 0x1792, trueAPR)
+--		end
 		local monkACBonusDisabled, fixMonkACBonus = IEex_CheckMonkACBonus(creatureData)
 		if monkACBonusDisabled and fixMonkACBonus then
 			local wisdomBonus = math.floor((IEex_GetActorStat(targetID, 39) - 10) / 2)
@@ -10439,12 +10588,14 @@ function IEex_ExtraAttacks(creatureData)
 	local range = 1
 	local weaponSlot = IEex_ReadByte(creatureData + 0x4BA4, 0x0)
 	local weaponHeader = IEex_ReadByte(creatureData + 0x4BA6, 0x0)
+	local weaponRES = ""
 	local slotData = IEex_ReadDword(creatureData + 0x4AD8 + weaponSlot * 0x4)
 	local weaponWrapper = 0
 	local offhandWrapper = 0
 	local launcherWrapper = 0
 	if slotData > 0 then
-		weaponWrapper = IEex_DemandRes(IEex_ReadLString(slotData + 0xC, 8), "ITM")
+		weaponRES = IEex_ReadLString(slotData + 0xC, 8)
+		weaponWrapper = IEex_DemandRes(weaponRES, "ITM")
 		if weaponWrapper:isValid() then
 			local itemData = weaponWrapper:getData()
 			local numHeaders = IEex_ReadSignedWord(itemData + 0x68, 0x0)
@@ -10528,6 +10679,9 @@ function IEex_ExtraAttacks(creatureData)
 	if monkAttackBonusNowEnabled then
 		attackPenaltyIncrement = 3
 		extraMonkAttacks = ex_monk_apr_progression[monkLevel]
+		if weaponRES == ex_monk_fist_progression[monkLevel] or weaponRES == ex_incorporeal_monk_fist_progression[monkLevel] or string.sub(weaponRES, 1, 7) == "00MFIST" then
+			extraMonkAttacks = extraMonkAttacks + 1
+		end
 	end
 	local doAttackOfOpportunity = false
 	local opportunityAttackBonus = 0
@@ -10671,7 +10825,7 @@ function IEex_ExtraAttacks(creatureData)
 --		IEex_DS(attackCounter)
 		local totalAttacks = IEex_ReadByte(creatureData + 0x5ED, 0x0) + extraMonkAttacks
 		local extraAttacks = 0
-		local extraMainhandAttacks = 0
+		local extraMainhandAttacks = extraMonkAttacks
 		local manyshotAttacks = manyshotFeatCount
 		local slotData = IEex_ReadDword(creatureData + 0x4AD8 + weaponSlot * 0x4)
 		if slotData > 0 then
@@ -10771,22 +10925,25 @@ function IEex_ExtraAttacks(creatureData)
 		if bit.band(stateValue, 0x10000) > 0 then
 			totalAttacks = totalAttacks - 1
 		end
-		if ex_no_apr_limit or (isFistWeapon and monkLevel >= 13) then
-			extraAttacks = 1000
+		if ex_no_apr_limit then
 			extraMainhandAttacks = 1000
 		end
 		if totalAttacks > extraAttacks + extraMainhandAttacks + 5 then
 			totalAttacks = extraAttacks + extraMainhandAttacks + 5
 		end
-		if extraAttacks > totalAttacks - normalAPR then
-			extraAttacks = totalAttacks - normalAPR
+		if extraMainhandAttacks > totalAttacks - normalAPR then
+			extraMainhandAttacks = totalAttacks - normalAPR
 		end
-		if extraMainhandAttacks > totalAttacks - normalAPR - extraAttacks then
-			extraMainhandAttacks = totalAttacks - normalAPR - extraAttacks
+		if extraAttacks > totalAttacks - normalAPR - extraMainhandAttacks then
+			extraAttacks = totalAttacks - normalAPR - extraMainhandAttacks
 		end
-		if numWeapons >= 2 and ex_no_apr_limit then
+		if numWeapons < 2 then
+			extraAttacks = extraAttacks + extraMainhandAttacks
+			extraMainhandAttacks = 0
+--[[
 			extraAttacks = math.ceil((totalAttacks - normalAPR) / 2)
 			extraMainhandAttacks = math.floor((totalAttacks - normalAPR) / 2)
+--]]
 		end
 		if IEex_GetActorSpellState(targetID, 138) then
 			if numWeapons >= 2 then
@@ -15588,6 +15745,37 @@ end
 --]]
 --IEex_AddActionHookGlobal("MEHIDDEN")
 
+function MENOTHIN(originatingEffectData, actionData, creatureData)
+	IEex_WriteWord(creatureData + 0x476, 0)
+end
+
+IEex_AddActionHookOpcode("MENOTHIN")
+
+function IEex_DuelHide(creatureData)
+	local targetID = IEex_GetActorShare(targetID)
+	local inDuel = false
+	for i = 0, 5, 1 do
+		if IEex_GetActorSpellState(IEex_GetActorIDCharacter(i), 180) then
+			inDuel = true
+		end
+	end
+	if inDuel then
+		if not IEex_GetActorSpellState(targetID, 180) then
+			IEex_WriteWord(creatureData + 0x476, 0)
+			if IEex_ReadByte(creatureData + 0x838, 0x0) == 0 then
+				local extraFlags = IEex_ReadDword(creatureData + 0x740)
+				IEex_WriteDword(creatureData + 0x740, bit.bor(extraFlags, 0x2000))
+				IEex_WriteByte(creatureData + 0x838, 1)
+			end
+		end
+	else
+		local extraFlags = IEex_ReadDword(creatureData + 0x740)
+		if bit.band(extraFlags, 0x2000) > 0 and extraFlags ~= -1 and extraFlags ~= -65536 and extraFlags ~= -50393088 then
+			IEex_WriteDword(creatureData + 0x740, bit.band(extraFlags, 0xFFFFDFFF))
+			IEex_WriteByte(creatureData + 0x838, 0)
+		end
+	end
+end
 
 function MEMAGOCR(actionData, creatureData)
 	local actionID = IEex_GetActionID(actionData)

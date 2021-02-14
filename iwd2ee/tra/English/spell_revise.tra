@@ -3751,6 +3751,17 @@ Area of Effect: 20-foot radius
 Saving Throw: Reflex half
 
 Also known as Fireballball, this spell launches a fireball that explodes into other fireballs. After the Metafireball explodes, each creature in the area of effect is hit by a separate fireball with its own area of effect. Each of the secondary fireballs deals 3d6 fire damage (Reflex save with a +5 bonus for half). This spell is most effective when cast at a large group of creatures clumped together.~
+@37859     = ~Otto's Irresistible Spin~
+@38859     = ~Otto's Irresistible Spin
+(Enchantment)
+Level: Brd 7, Sor/Wiz 8
+Range: Sight of Caster
+Duration: 5 rounds
+Casting Time: 8
+Area of Effect: 20-foot radius
+Saving Throw: None
+
+Otto's Irresistible Spin forces multiple creatures to spin in place against their will for 5 rounds. Affected creatures will do nothing other than repeatedly spin in place, even if they see enemies. The spell is irresistible - there is no Saving Throw, and Spell Resistance will not block the spell. If an affected creature takes damage, the effects of the spell immediately end for that creature.~
 @37952     = ~Perfect Invisibility~
 @38952     = ~Perfect Invisibility
 (Illusion)

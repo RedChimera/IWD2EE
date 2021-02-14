@@ -93,7 +93,7 @@ function IEex_Extern_OnReloadStats(share)
 	if IEex_ReadByte(share + 0x4, 0) ~= 0x31 then return end
 
 	local actorID = IEex_GetActorIDShare(share)
-
+--[[
 	local monkLevel = IEex_GetActorStat(actorID, 101)
 	local fistSlot = IEex_ReadDword(share + 0x4B00)
 	if not IEex_GetActorSpellState(actorID, 182) and not IEex_GetActorSpellState(actorID, 189) then
@@ -107,7 +107,7 @@ function IEex_Extern_OnReloadStats(share)
 			IEex_WriteDword(share + 0x740, bit.bor(extraFlags, 0x2000000))
 		end
 	end
-
+--]]
 	IEex_Helper_SynchronizedBridgeOperation("IEex_GameObjectData", function()
 		local luaDerivedStats = IEex_Helper_GetBridgeNL("IEex_GameObjectData", actorID, "luaDerivedStats")
 		local numStats = IEex_Helper_GetBridgeNumIntsNL("IEex_RegisteredLuaStats")
@@ -143,28 +143,6 @@ function IEex_Extern_OnPostCreatureProcessEffectList(creatureData)
 	IEex_AssertThread(IEex_Thread.Async, true)
 	local targetID = IEex_GetActorIDShare(creatureData)
 	if not IEex_IsSprite(targetID, false) then return end
-	local inDuel = false
-	for i = 0, 5, 1 do
-		if IEex_GetActorSpellState(IEex_GetActorIDCharacter(i), 180) then
-			inDuel = true
-		end
-	end
-	if inDuel then
-		if not IEex_GetActorSpellState(targetID, 180) then
-			IEex_WriteWord(creatureData + 0x476, 0)
-			if IEex_ReadByte(creatureData + 0x838, 0x0) == 0 then
-				local extraFlags = IEex_ReadDword(creatureData + 0x740)
-				IEex_WriteDword(creatureData + 0x740, bit.bor(extraFlags, 0x2000))
-				IEex_WriteByte(creatureData + 0x838, 1)
-			end
-		end
-	else
-		local extraFlags = IEex_ReadDword(creatureData + 0x740)
-		if bit.band(extraFlags, 0x2000) > 0 and extraFlags ~= -1 and extraFlags ~= -65536 and extraFlags ~= -50393088 then
-			IEex_WriteDword(creatureData + 0x740, bit.band(extraFlags, 0xFFFFDFFF))
-			IEex_WriteByte(creatureData + 0x838, 0)
-		end
-	end
 	local onTickFunctionsCalled = {}
 	IEex_IterateActorEffects(targetID, function(eData)
 		local theopcode = IEex_ReadDword(eData + 0x10)

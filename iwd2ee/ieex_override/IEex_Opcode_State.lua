@@ -133,7 +133,20 @@ function IEex_Extern_OnCheckAddScreenEffectsHook(pEffect, pSprite)
 
 	IEex_AssertThread(IEex_Thread.Async, true)
 	if IEex_Debug_DisableScreenEffects then return end
-
+	local actorID = IEex_GetActorIDShare(pSprite)
+	if pSprite > 0 and bit.band(IEex_ReadDword(pSprite + 0x740), 0x1000000) > 0 and IEex_ReadDword(pSprite + 0x740) > 0 then
+		local opcode = IEex_ReadDword(pEffect + 0xC)
+		local parameter1 = IEex_ReadDword(pEffect + 0x18)
+		local parameter2 = IEex_ReadDword(pEffect + 0x1C)
+		local timing = IEex_ReadDword(pEffect + 0x20)
+		local duration = IEex_ReadDword(pEffect + 0x24)
+		local resource = IEex_ReadLString(pEffect + 0x2C, 8)
+		local savingthrow = IEex_ReadDword(pEffect + 0x3C)
+		local special = IEex_ReadDword(pEffect + 0x44)
+		local parent_resource = IEex_ReadLString(pEffect + 0x90, 8)
+		local sourceID = IEex_ReadDword(pEffect + 0x10C)
+		IEex_DisplayString(IEex_GetActorName(actorID) .. " - Opcode: " .. opcode .. ", Parameter1: " .. parameter1 .. ", Parameter2: " .. parameter2 .. ", Timing: " .. timing .. ", Duration: " .. duration .. ", Resource: \"" .. resource .. "\", Flags: " .. IEex_ToHex(savingthrow, 0, false) .. ", Parent resource: \"" .. parent_resource .. "\", Source: " .. IEex_GetActorName(sourceID))
+	end
 	IEex_WriteDword(pEffect + 0x68, IEex_GetGameTick())
 	for func_name, func in pairs(IEex_ScreenEffectsGlobalFunctions) do
 		if func(pEffect, pSprite) then
@@ -141,7 +154,6 @@ function IEex_Extern_OnCheckAddScreenEffectsHook(pEffect, pSprite)
 		end
 	end
 
-	local actorID = IEex_GetActorIDShare(pSprite)
 	local screenList = IEex_Helper_GetBridge(IEex_AccessLuaStats(actorID), "screenEffects")
 	local numEntries = IEex_Helper_GetBridgeNumInts(screenList)
 
@@ -237,14 +249,13 @@ ex_empowerable_opcodes = {[0] = true, [1] = true, [6] = true, [10] = true, [12] 
 		if sourceSpell == nil then
 			sourceSpell = string.sub(parent_resource, 1, 7)
 		end
-		
+		local damageType = bit.band(parameter2, 0xFFFF0000)
 		if opcode == 12 and parent_resource == "IEEX_DAM" then
 			if (bit.band(savingthrow, 0x10000) > 0 and (IEex_GetActorSpellState(sourceID, 195) or IEex_GetActorSpellState(sourceID, 225))) or bit.band(savingthrow, 0x40000) == 0 then
 				local weaponRES = IEex_ReadLString(effectData + 0x6C, 8)
 				local launcherRES = IEex_ReadLString(effectData + 0x74, 8)
 				local baseCriticalMultiplier = 2
 				local criticalMultiplier = baseCriticalMultiplier
-				local damageType = bit.band(parameter2, 0xFFFF0000)
 				local itemType = 0
 				local headerType = 0
 				local currentHeader = IEex_ReadByte(sourceData + 0x4BA6, 0x0)
@@ -460,6 +471,29 @@ ex_empowerable_opcodes = {[0] = true, [1] = true, [6] = true, [10] = true, [12] 
 			end
 			for k, v in ipairs(onKillEffectList) do
 				IEex_ApplyEffectToActor(sourceID, {
+["opcode"] = 402,
+["target"] = 2,
+["timing"] = 1,
+["resource"] = v,
+["target_x"] = IEex_ReadDword(creatureData + 0x6),
+["target_y"] = IEex_ReadDword(creatureData + 0xA),
+["source_id"] = sourceID
+})
+			end
+		end
+		if opcode == 12 then
+			local onDamageList = {}
+			IEex_IterateActorEffects(targetID, function(eData)
+				local theopcode = IEex_ReadDword(eData + 0x10)
+				local theparameter2 = IEex_ReadDword(eData + 0x20)
+				local thespecial = IEex_ReadDword(eData + 0x48)
+				if theopcode == 288 and theparameter2 == 226 and ((damageType == 0 and bit.band(thespecial, 0x2000) > 0) or bit.band(thespecial, damageType) > 0) then
+					local theresource = IEex_ReadLString(eData + 0x30, 8)
+					table.insert(onDamageList, theresource)
+				end
+			end)
+			for k, v in ipairs(onDamageList) do
+				IEex_ApplyEffectToActor(targetID, {
 ["opcode"] = 402,
 ["target"] = 2,
 ["timing"] = 1,
