@@ -283,9 +283,10 @@ COPY ~%mod_folder%/tables/XPLEVEL.2da~ ~override~
 COPY_EXISTING ~IEex_WEIDU.lua~ ~override~
 	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_monk_fist_progression *=.*~ ~ex_monk_fist_progression = {[0] = "00FIST", [1] = "USMFIS01", [2] = "USMFIS02", [3] = "USMFIS03", [4] = "USMFIS04", [5] = "USMFIS05", [6] = "USMFIS06", [7] = "USMFIS07", [8] = "USMFIS08", [9] = "USMFIS09", [10] = "USMFIS10", [11] = "USMFIS11", [12] = "USMFIS12", [13] = "USMFIS13", [14] = "USMFIS14", [15] = "USMFIS15", [16] = "USMFIS16", [17] = "USMFIS17", [18] = "USMFIS18", [19] = "USMFIS19", [20] = "USMFIS20", [21] = "USMFIS21", [22] = "USMFIS22", [23] = "USMFIS23", [24] = "USMFIS24", [25] = "USMFIS25", [26] = "USMFIS26", [27] = "USMFIS27", [28] = "USMFIS28", [29] = "USMFIS29", [30] = "USMFIS30", [31] = "USMFIS31", [32] = "USMFIS32", [33] = "USMFIS33", [34] = "USMFIS34", [35] = "USMFIS35", [36] = "USMFIS36", [37] = "USMFIS37", [38] = "USMFIS38", [39] = "USMFIS39", [40] = "USMFIS40", [41] = "USMFIS41", [42] = "USMFIS42", [43] = "USMFIS43", [44] = "USMFIS44", [45] = "USMFIS45", [46] = "USMFIS46", [47] = "USMFIS47", [48] = "USMFIS48", [49] = "USMFIS49", [50] = "USMFIS50", }~
 	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_incorporeal_monk_fist_progression *=.*~ ~ex_incorporeal_monk_fist_progression = {[0] = "USFISTIN", [1] = "USMFII01", [2] = "USMFII02", [3] = "USMFII03", [4] = "USMFII04", [5] = "USMFII05", [6] = "USMFII06", [7] = "USMFII07", [8] = "USMFII08", [9] = "USMFII09", [10] = "USMFII10", [11] = "USMFII11", [12] = "USMFII12", [13] = "USMFII13", [14] = "USMFII14", [15] = "USMFII15", [16] = "USMFII16", [17] = "USMFII17", [18] = "USMFII18", [19] = "USMFII19", [20] = "USMFII20", [21] = "USMFII21", [22] = "USMFII22", [23] = "USMFII23", [24] = "USMFII24", [25] = "USMFII25", [26] = "USMFII26", [27] = "USMFII27", [28] = "USMFII28", [29] = "USMFII29", [30] = "USMFII30", [31] = "USMFII31", [32] = "USMFII32", [33] = "USMFII33", [34] = "USMFII34", [35] = "USMFII35", [36] = "USMFII36", [37] = "USMFII37", [38] = "USMFII38", [39] = "USMFII39", [40] = "USMFII40", [41] = "USMFII41", [42] = "USMFII42", [43] = "USMFII43", [44] = "USMFII44", [45] = "USMFII45", [46] = "USMFII46", [47] = "USMFII47", [48] = "USMFII48", [49] = "USMFII49", [50] = "USMFII50", }~
-/*
+
 COPY_EXISTING_REGEXP ~USMFIS[0-5][0-9]\.itm~ ~override~
 	LPF DELETE_EFFECT INT_VAR silent=1 check_headers=0 check_globals=1 match_opcode=1 END
+/*
 	LPF ADD_ITEM_EQEFFECT INT_VAR opcode=1 target=1 timing=2 parameter1=1 END
 	LPF ADD_ITEM_EQEFFECT INT_VAR opcode=254 target=1 timing=2 STR_VAR resource=~00MFIST1~ END
 	LPF ADD_ITEM_EQEFFECT INT_VAR opcode=254 target=1 timing=2 STR_VAR resource=~00MFIST2~ END
@@ -640,6 +641,10 @@ COPY_EXISTING ~feats.2da~ ~override~
       END
       ~COURTEOUS_MAGOCRACY~ BEGIN
         SET strref = RESOLVE_STR_REF(@711)
+        SET_2DA_ENTRY_LATER rows_out row 3 ~%strref%~
+      END
+      ~DISCIPLINE~ BEGIN
+        SET strref = RESOLVE_STR_REF(@714)
         SET_2DA_ENTRY_LATER rows_out row 3 ~%strref%~
       END
       DEFAULT

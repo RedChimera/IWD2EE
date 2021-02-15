@@ -1169,7 +1169,7 @@ While anyone can grapple something, you have the skill to grapple even a hostile
 
 Benefit: You gain an ability that lets you grab an adjacent creature. The ability can be used once per round. The target must make a Reflex save (DC 12 + half your level + your Strength or Dexterity modifier (whichever is higher)) or be grappled by you for 2 rounds. While grappled, the creature gets a -4 attack penalty, a 50% chance of spell failure, and cannot move away from you. If you move, you may pull the creature along with you.
 
-To grapple, you must have at least one hand free. The target gains +4 to the save for each time someone has tried to grapple them in the past 10 rounds. If you grapple an ally or a paralyzed, stunned, sleeping, or knocked down creature, there is no save. Especially large creatures cannot be grappled.~
+To grapple, you must have at least one hand free. The save gains +4 DC if you have both hands free. It gets -4 DC for each time someone has tried to grapple the target in the past 10 rounds. If you grapple an ally or a paralyzed, stunned, sleeping, or knocked down creature, there is no save. Especially large creatures cannot be grappled.~
 @705    = ~ARMORED ARCANA:
 
 You can cast spells with less chance of failure while wearing armor.
@@ -1231,6 +1231,11 @@ Benefit: You get a +4 bonus to Concentration checks made to cast a spell while b
 You are skilled at timing and aiming ranged attacks.
 
 Benefit: Reduces the to hit penalty for firing in close quarters from -8 to -4. In addition, enemies get a -4 attack penalty on attacks of opportunity provoked by your ranged attacks.~
+@714    = ~DISCIPLINE:
+
+You are admired for your single-minded determination and clarity of purpose.  You are difficult to distract by spell or blow.
+
+Benefit: You gain a +1 bonus on Will saves and a +2 bonus on Concentration checks. You also gain a +6 bonus to saving throws against feints, grapples, and knockdowns/trip attacks.~
 @785    = ~Aasimar~
 @786    = ~AASIMAR:
 

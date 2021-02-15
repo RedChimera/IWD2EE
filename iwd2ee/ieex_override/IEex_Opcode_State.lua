@@ -105,7 +105,6 @@ function IEex_Extern_OnWeaponDamageCRE(sourceShare, CGameEffect, esp)
 	IEex_WriteLString(CGameEffect + 0x6C, weaponRes, 8)
 	-- m_res3 = launcherRes
 	IEex_WriteLString(CGameEffect + 0x74, launcherRes, 8)
-
 	-- m_savingThrow: bit16 = bCriticalDamage, bit17 = bIsOffhand
 	IEex_WriteDword(CGameEffect + 0x3C, IEex_Flags({
 		bit.lshift(bCriticalDamage and 1 or 0, 16),
@@ -482,12 +481,19 @@ ex_empowerable_opcodes = {[0] = true, [1] = true, [6] = true, [10] = true, [12] 
 			end
 		end
 		if opcode == 12 then
+--[[
+			IEex_WriteByte(creatureData + 0xA60, 0)
+			IEex_WriteByte(creatureData + 0x18B8, 0)
+			IEex_WriteDword(creatureData + 0x920, bit.band(IEex_ReadDword(creatureData + 0x920), 0xBFFFFFFF))
+			IEex_WriteDword(creatureData + 0x1778, bit.band(IEex_ReadDword(creatureData + 0x1778), 0xBFFFFFFF))
+--]]
 			local onDamageList = {}
 			IEex_IterateActorEffects(targetID, function(eData)
 				local theopcode = IEex_ReadDword(eData + 0x10)
+				local theparameter1 = IEex_ReadDword(eData + 0x1C)
 				local theparameter2 = IEex_ReadDword(eData + 0x20)
 				local thespecial = IEex_ReadDword(eData + 0x48)
-				if theopcode == 288 and theparameter2 == 226 and ((damageType == 0 and bit.band(thespecial, 0x2000) > 0) or bit.band(thespecial, damageType) > 0) then
+				if theopcode == 288 and theparameter1 <= parameter1 and theparameter2 == 226 and ((damageType == 0 and bit.band(thespecial, 0x2000) > 0) or bit.band(thespecial, damageType) > 0) then
 					local theresource = IEex_ReadLString(eData + 0x30, 8)
 					table.insert(onDamageList, theresource)
 				end

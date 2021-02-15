@@ -3478,6 +3478,17 @@ Area of Effect: 1 creature
 Saving Throw: Reflex half
 
 This spell throws the target into the air with incredible force. The target is knocked back as it is sent hurtling through the air. When it lands or hits the ceiling, it takes bludgeoning damage based on how fast it was moving right before the collision, up to 5d6 plus 1d6 per caster level (max 20d6 total from a level 15 caster). If the target succeeds on a Reflex save, it is thrown with less force and will only take about half damage.~
+@37354     = ~Moment of Prescience~
+@38354     = ~Moment of Prescience
+(Divination)
+Level: Brd 3, Drd 4, Sor/Wiz 3
+Range: 1000 ft.
+Duration: 1 round
+Casting Time: Instant
+Area of Effect: 1 creature
+Saving Throw: None
+
+The recipient of this spell momentarily gains the ability to see into the future, and can see any attack or spell coming. The target gains a +25 bonus to attack, AC and saving throws for 1 round. Moment of Prescience can be cast as a free action and on any creature in the area, even one out of sight.~
 @37451     = ~Teleport Field~
 @38451     = ~Teleport Field
 (Transmutation) 

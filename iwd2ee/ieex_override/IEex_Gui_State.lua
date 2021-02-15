@@ -875,15 +875,6 @@ function IEex_Extern_OnUpdateRecordDescription(CScreenCharacter, CGameSprite, CU
 				if numWeapons >= 2 then
 					totalAttacks = totalAttacks + 1
 					extraMainhandAttacks = extraMainhandAttacks + 1
-					if imptwfFeatCount > 0 and (IEex_GetActorStat(targetID, 103) < 9 or wearingLightArmor or (IEex_ReadByte(creatureData + 0x5EC, 0x0) >= 16 and bit.band(IEex_ReadDword(creatureData + 0x75C), 0x2) > 0 and bit.band(IEex_ReadDword(creatureData + 0x764), 0x40) > 0)) then
-						totalAttacks = totalAttacks + 1
-						extraAttacks = extraAttacks + 1
-						usingImptwf = true
-						if imptwfFeatCount > 1 and (IEex_GetActorStat(targetID, 103) < 14 or wearingLightArmor or (IEex_ReadByte(creatureData + 0x5EC, 0x0) >= 21 and bit.band(IEex_ReadDword(creatureData + 0x75C), 0x2) > 0 and bit.band(IEex_ReadDword(creatureData + 0x764), 0x40) > 0)) then
-							totalAttacks = totalAttacks + 1
-							extraAttacks = extraAttacks + 1
-						end
-					end
 				else
 					extraAttacks = extraAttacks + extraMainhandAttacks
 					extraMainhandAttacks = 0
@@ -910,13 +901,19 @@ function IEex_Extern_OnUpdateRecordDescription(CScreenCharacter, CGameSprite, CU
 				if extraAttacks > totalAttacks - normalAPR - extraMainhandAttacks then
 					extraAttacks = totalAttacks - normalAPR - extraMainhandAttacks
 				end
-				if numWeapons < 2 then
+				if numWeapons >= 2 then
+					if imptwfFeatCount > 0 and (IEex_GetActorStat(targetID, 103) < 9 or wearingLightArmor or (IEex_ReadByte(creatureData + 0x5EC, 0x0) >= 16 and bit.band(IEex_ReadDword(creatureData + 0x75C), 0x2) > 0 and bit.band(IEex_ReadDword(creatureData + 0x764), 0x40) > 0)) then
+						totalAttacks = totalAttacks + 1
+						extraAttacks = extraAttacks + 1
+						usingImptwf = true
+						if imptwfFeatCount > 1 and (IEex_GetActorStat(targetID, 103) < 14 or wearingLightArmor or (IEex_ReadByte(creatureData + 0x5EC, 0x0) >= 21 and bit.band(IEex_ReadDword(creatureData + 0x75C), 0x2) > 0 and bit.band(IEex_ReadDword(creatureData + 0x764), 0x40) > 0)) then
+							totalAttacks = totalAttacks + 1
+							extraAttacks = extraAttacks + 1
+						end
+					end
+				else
 					extraAttacks = extraAttacks + extraMainhandAttacks
 					extraMainhandAttacks = 0
---[[
-					extraAttacks = math.ceil((totalAttacks - normalAPR) / 2)
-					extraMainhandAttacks = math.floor((totalAttacks - normalAPR) / 2)
---]]
 				end
 				totalAttacks = totalAttacks + manyshotAttacks
 				if IEex_GetActorSpellState(targetID, 138) then
