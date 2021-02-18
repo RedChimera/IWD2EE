@@ -1285,6 +1285,7 @@ Advantages:
 * +2 racial bonus to Search checks.
 * Immunity to Sleep magic.
 * Proficient with longswords and bows (but not crossbows).
+* May use Weapon Finesse with large swords.
 
 Disadvantages:
 * -2 Constitution.
@@ -1305,7 +1306,8 @@ Advantages:
 * +2 to Search checks.
 * Spell resistance of 11 + character level.
 * Immunity to Sleep magic.
-* Proficient with large swords and crossbows (but not bows)
+* Proficient with large swords and crossbows (but not bows).
+* May use Weapon Finesse with large swords.
 * Faerie Fire 3/day.
 * Darkvision.
 
@@ -1327,6 +1329,7 @@ Advantages:
 * +2 to saves against Enchantment magic.
 * Immunity to Sleep magic.
 * Proficient with large swords and bows (but not crossbows).
+* May use Weapon Finesse with large swords.
 
 Disadvantages:
 * -2 Intelligence.
@@ -1344,7 +1347,7 @@ Advantages:
 * +1 to all saving throws.
 * +2 morale bonus on saving throws against fear.
 * +1 to hit with slings and thrown weapons.
-* May add their Dexterity modifier rather than their Strength modifier to the damage of a sling or thrown weapon (if the former is higher).
+* May add half their Dexterity modifier rather than their Strength modifier to the damage of a sling or thrown weapon (if the former is higher).
 
 Disadvantages:
 * -2 to Strength.

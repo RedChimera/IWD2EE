@@ -243,6 +243,9 @@ COPY_EXISTING_REGEXP ~.*\.itm~ ~override~
 			END
 		END
 	END
+	PATCH_IF ((theitemflags BAND 0x00000002) = 0x00000002) AND ismelee = 1 AND NOT (~%theappearance%~ STRING_EQUAL_CASE ~  ~) BEGIN
+		LPF ADD_ITEM_EQEFFECT INT_VAR opcode=500 target=1 timing=0 special=1 STR_VAR resource=~MEMONKAN~ END
+	END
 	UNLESS ~USEQTYPE~
 	BUT_ONLY_IF_IT_CHANGES
 /*

@@ -26,7 +26,6 @@ end
 -------------------
 -- Thread: Async --
 -------------------
-
 function IEex_Extern_OnGameObjectAdded(actorID)
 
 	IEex_AssertThread(IEex_Thread.Async, true)
@@ -36,7 +35,7 @@ function IEex_Extern_OnGameObjectAdded(actorID)
 		print("[IEex_OnGameObjectAdded] Engine attempted to add invalid object?")
 		return
 	end
-
+	local vfptr = IEex_ReadDword(share)
 	if IEex_ReadByte(share + 0x4, 0) ~= 0x31 then return end
 
 	IEex_Helper_SynchronizedBridgeOperation("IEex_GameObjectData", function()
@@ -93,21 +92,6 @@ function IEex_Extern_OnReloadStats(share)
 	if IEex_ReadByte(share + 0x4, 0) ~= 0x31 then return end
 
 	local actorID = IEex_GetActorIDShare(share)
---[[
-	local monkLevel = IEex_GetActorStat(actorID, 101)
-	local fistSlot = IEex_ReadDword(share + 0x4B00)
-	if not IEex_GetActorSpellState(actorID, 182) and not IEex_GetActorSpellState(actorID, 189) then
-		if fistSlot > 0 and IEex_ReadLString(fistSlot + 0xC, 8) ~= ex_monk_fist_progression[monkLevel] and ex_monk_fist_progression[monkLevel] ~= nil then
-			local extraFlags = IEex_ReadDword(share + 0x740)
-			IEex_WriteDword(share + 0x740, bit.bor(extraFlags, 0x1000000))
-		end
-	else
-		if fistSlot > 0 and IEex_ReadLString(fistSlot + 0xC, 8) ~= ex_incorporeal_monk_fist_progression[monkLevel] and ex_incorporeal_monk_fist_progression[monkLevel] ~= nil then
-			local extraFlags = IEex_ReadDword(share + 0x740)
-			IEex_WriteDword(share + 0x740, bit.bor(extraFlags, 0x2000000))
-		end
-	end
---]]
 	IEex_Helper_SynchronizedBridgeOperation("IEex_GameObjectData", function()
 		local luaDerivedStats = IEex_Helper_GetBridgeNL("IEex_GameObjectData", actorID, "luaDerivedStats")
 		local numStats = IEex_Helper_GetBridgeNumIntsNL("IEex_RegisteredLuaStats")

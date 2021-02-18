@@ -14,6 +14,7 @@ ex_no_apr_limit = false
 ex_construct_race = 156
 ex_fiend_race = 164
 ex_reanimation_level_check_bonus = 5
+ex_time_slow_speed_divisor = 4
 ex_due_south_spells = {["USWI653"] = true, }
 ex_bypass_spell_deflection = {}
 ex_linkable_self_spell_list = {["SPPR302"] = true, ["SPPR409"] = true, ["SPPR523"] = true, ["USPR953"] = true, ["USWI954"] = true, ["USWI956"] = true, }

@@ -490,8 +490,8 @@ COPY_EXISTING ~20EMMA.cre~ ~override~
 	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelcleric=6 STR_VAR updatehp=~max~ END
 	WRITE_LONG xp 15642
 	WRITE_SHORT armorclass 10
-	WRITE_ASCII smallportrait ~EMMA1S~ #8
-	WRITE_ASCII largeportrait ~EMMA1L~ #8
+//	WRITE_ASCII smallportrait ~EMMA1S~ #8
+//	WRITE_ASCII largeportrait ~EMMA1L~ #8
 	WRITE_BYTE fortitudesave 3
 	WRITE_BYTE reflexsave 2
 	WRITE_BYTE willsave 5

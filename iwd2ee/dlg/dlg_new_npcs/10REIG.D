@@ -207,7 +207,7 @@ END
 IF ~~ THEN BEGIN 20
   SAY #20867
   IF ~~ THEN REPLY #20887 EXIT
-  IF ~!NumInParty(6)~ THEN REPLY ~Why not come with us?  We'll treat you to an ale -- if you hadn't warned us about the goblins, we might have gotten take by surprise.~ GOTO ReigJoinPartyGoblinsDead
+  IF ~!NumInParty(6)~ THEN REPLY ~Why not come with us?  We'll treat you to an ale -- if you hadn't warned us about the goblins, we might have been taken by surprise.~ GOTO ReigJoinPartyGoblinsDead
 END
 
 IF WEIGHT #0 ~  Global("Told_Reig","GLOBAL",1)

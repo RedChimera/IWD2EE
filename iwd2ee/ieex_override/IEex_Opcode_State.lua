@@ -615,6 +615,26 @@ ex_empowerable_opcodes = {[0] = true, [1] = true, [6] = true, [10] = true, [12] 
 			end
 
 		end
+		if opcode == 235 and timing == 4096 then
+			local timeSlowed = false
+			for i = 0, 5, 1 do
+				if IEex_GetActorSpellState(IEex_GetActorIDCharacter(i), 230) then
+					timeSlowed = true
+				end
+			end
+			if timeSlowed then
+				IEex_IterateActorEffects(targetID, function(eData)
+					local theopcode = IEex_ReadDword(eData + 0x10)
+					local theresource = IEex_ReadLString(eData + 0x30, 8)
+					if theopcode == 206 and theresource == "METIMESL" then
+						timeSlowed = false
+					end
+				end)
+				if timeSlowed then
+					IEex_WriteDword(effectData + 0x24, (duration - time_applied) * ex_time_slow_speed_divisor + time_applied - 15)
+				end
+			end
+		end
 		--[[
 		if IEex_GetActorSpellState(sourceID, 195) and timing ~= 1 and timing ~= 2 and timing ~= 9 and (ex_listspll[sourceSpell] ~= nil or ex_listdomn[sourceSpell] ~= nil) and (opcode ~= 500 or math.abs(duration - time_applied) > 16) then
 			local durationMultiplier = 100

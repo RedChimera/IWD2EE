@@ -331,7 +331,7 @@ When this spell is placed upon a poisoned individual, it immediately neutralizes
 (Transmutation) 
 Level: Clr 5, Pal 4, Tempus 5
 Range: Sight of Caster
-Duration: 3 rounds / level
+Duration: 1 round / level
 Casting Time: 8
 Area of Effect: 1 creature
 Saving Throw: None
@@ -590,7 +590,7 @@ Casting Time: 4
 Area of Effect: 10-foot radius
 Saving Throw: None
 
-This spell creates the emotion of rage within the area of effect. All creatures affected by the spell gain +4 to damage, +2 attack bonus, a +2 bonus to Will Saves, and a -2 penalty to AC.~
+This spell creates the emotion of rage within the area of effect. All creatures affected by the spell gain +4 to damage, +2 attack bonus, a +2 bonus to Will Saves, and a -2 penalty to AC. Emotion: Rage cannot be active on a creature at the same time as Emotion: Hope.~
 
 
 @1100    = ~Emotion: Fear~
@@ -614,7 +614,7 @@ Casting Time: 4
 Area of Effect: Living creatures in 15' radius
 Saving Throw: None
 
-This spell creates the emotion of hope within the area of effect. All creatures affected by the spell gain a +2 on their saving throws, attack bonuses, and damage rolls. ~
+This spell creates the emotion of hope within the area of effect. All creatures affected by the spell gain a +2 on their saving throws, attack bonuses, and damage rolls. Emotion: Hope cannot be active on a creature at the same time as Emotion: Rage.~
 @1104    = ~Shout~
 @1105    = ~Shout 
 (Evocation)
@@ -2429,7 +2429,7 @@ Saving Throw: None
 This spell grants the caster a 5/- bonus to all damage resistances, a +15 armor bonus, +15 spell resistance, and +5 to all saves.~
 
 @1977     = ~1 round~
-@1978     = ~Instant~
+@1978     = ~Free action~
 @1979     = ~Casting Time:~
 @1980     = ~Level:~
 @1981     = ~Brd~
@@ -3209,9 +3209,20 @@ This spell temporarily gives the ranger a quiver containing an unlimited supply 
 Although rangers normally cast spells at half their caster level, Quiver of Plenty will be cast at a ranger's full caster level.
 
 Note: The quiver is created in the ranger's first ammunition slot. Any ammunition that was previously in that slot will be unavailable until the spell ends.~
+@35353     = ~Recall Party~
+@36353     = ~Recall Party
+(Conjuration)
+Level: Brd 3, Clr 3, Pal 3
+Range: Entire area
+Duration: Instantaneous
+Casting Time: 0
+Area of Effect: Party
+Saving Throw: None
+
+This spell teleports all party members to the caster's side. Party members in a different area are unaffected. Recall Party could be useful for getting allies out of dangerous situations.~
 @35451     = ~Curing Contingency~
 @36451     = ~Curing Contingency
-(Transmutation)
+(Universal)
 Level: Clr 4
 Range: Special
 Duration: 8 hours
@@ -3237,6 +3248,19 @@ Area of Effect: 1 creature
 Saving Throw: None
 
 This spell can only be cast on an enemy. Casting it causes everyone other than the paladin and the target to disappear temporarily. The paladin then has 10 rounds to duel the enemy without outside interference. After those 10 rounds, or if the paladin or the enemy dies, all creatures reappear where they were before.~
+@35453     = ~Snake's Swiftness~
+@36453     = ~Snake's Swiftness~
+@35454     = ~Pebbles to Boulders~
+@36454     = ~Pebbles to Boulders
+(Transmutation)
+Level: Clr 5, Drd 4, Rgr 4
+Range: Sight of Caster
+Duration: 5 rounds/level or until used up
+Casting Time: 4
+Area of Effect: Caster
+Saving Throw: None
+
+This spell turns the caster's sling bullets into boulders. While the spell is active, if the caster launches a bullet, it instantly turns into a large boulder that retains the speed of the original bullet. The boulder inflicts an additional 7d4 damage if it hits (on top of the former damage of the bullet). Only a limited number of bullets can be turned into boulders before the spell ends: up to one per 2 levels.~
 @35551     = ~Supreme Speed~
 @36551     = ~Supreme Speed
 (Transmutation)
@@ -3264,12 +3288,12 @@ This spell increases the harm that extreme conditions do to the target's body. F
 (Transmutation)
 Level: Rgr 5
 Range: Caster
-Duration: 15 rounds
+Duration: 10 rounds
 Casting Time: 5
 Area of Effect: Special
-Saving Throw: None
+Saving Throw: Reflex half
 
-This spell augments the ranger's missile attacks to deal damage in a cone. For the duration, whenever the ranger would make a missile attack, a spray of thorns is released instead, dealing the attack's damage to all creatures in a cone.~
+This spell augments the ranger's missile attacks to deal damage in a cone. For the duration, whenever the ranger would make a missile attack, a spray of thorns is released instead, dealing the attack's damage to all creatures in a cone. However, creatures in the cone can make a Reflex save to halve the damage of the attack.~
 @35653     = ~Repulsion~
 @36653     = ~Repulsion
 (Abjuration)
@@ -3333,6 +3357,17 @@ Area of Effect: Special
 Saving Throw: None
 
 This spell allows the paladin to apply their Smite Evil as an area of effect. Casting Explosive Smite automatically causes the paladin to ready Smite Evil without consuming a use of it. The paladin gains their Charisma bonus to their next attack roll, and their next successful attack generates an explosion. All evil creatures within 20 feet take damage equal to the paladin's regular Smite Evil damage (though only the creature that was hit by the actual attack takes the attack's damage).~
+@35658     = ~Trial by Fire~
+@36658     = ~Trial by Fire
+(Evocation)
+Level: Clr 6, Pal 6
+Range: Caster
+Duration: 5 rounds
+Casting Time: 6
+Area of Effect: 20-foot long, 5-foot wide wall
+Saving Throw: None
+
+This spell creates a wall of holy fire, which does not burn the innocent. Any non-good creature that passes through the wall takes 12d6 fire damage with no Saving Throw. Good creatures can pass through the wall unharmed. Only one such wall can be active at a time.~
 @35753     = ~Power Word: Heal~
 @36753     = ~Power Word: Heal
 (Divination)
@@ -3448,7 +3483,7 @@ When cast on an ally, Levitate lasts 4 rounds. When cast on a non-allied creatur
 @37351     = ~Clairvoyance~
 @38351     = ~Clairvoyance
 (Divination)
-Level: Drd 2, Rgr 3
+Level: Drd 2, Rgr 2
 Range: Caster
 Duration: Permanent
 Casting Time: 5
@@ -3484,7 +3519,7 @@ This spell throws the target into the air with incredible force. The target is k
 Level: Brd 3, Drd 4, Sor/Wiz 3
 Range: 1000 ft.
 Duration: 1 round
-Casting Time: Instant
+Casting Time: Free action
 Area of Effect: 1 creature
 Saving Throw: None
 
@@ -3524,15 +3559,15 @@ Saving Throw: None
 This spell lets the caster summon undead by killing other creatures. During the duration of this spell, whenever the caster kills a creature, a ghoul rises to feast upon the remains. That ghoul will serve the caster for 8 hours. A ghoul will only be summoned if the caster dealt the killing damage to the creature; if the caster damaged the creature but another party member finished it off, the caster will not get a ghoul.~
 @37454     = ~Copy Spell~
 @38454     = ~Copy Spell
-(Transmutation)
+(Universal)
 Level: Brd 4
 Range: Sight of Caster
 Duration: Permanent until released
-Casting Time: 0
+Casting Time: Free action
 Area of Effect: Special
 Saving Throw: None
 
-This spell copies a spell that another creature is casting, allowing the bard to cast that spell once. Copy Spell should be cast on another creature that is casting a spell. The bard gains a special ability that lets them cast that same spell. Once used, the ability is gone until Copy Spell is cast again. Copy Spell cannot copy innate abilities, nor can it copy spells of a higher spell level than the bard can currently cast.~
+This spell copies a spell that another creature is casting, allowing the bard to cast that spell once. Copy Spell should be cast on another creature that is casting a spell. The bard gains a special ability that lets them cast that same spell. Once used, the ability is gone until Copy Spell is cast again. Copy Spell cannot copy innate abilities, nor can it copy spells of a higher spell level than the bard can currently cast. Casting Copy Spell itself is a free action, but casting the copied spell could take some time.~
 @37551     = ~Steal Spells~
 @38551     = ~Steal Spells
 (Transmutation)
@@ -3685,6 +3720,19 @@ Area of Effect: Special
 Saving Throw: Will negates
 
 This spell brings forth a magical object that imbues creatures that see it with the desire to be near it. Any non-allied creature that sees the object of sympathy must make a Will save (with a +3 bonus) each round or be compelled to walk harmlessly toward the object for the round. Any creature immune to charm effects is also immune to this effect.~
+@37760     = ~Skip Time~
+@38760     = ~Skip Time
+(Transmutation)
+Level: Sor/Wiz 7
+Range: Special
+Duration: 10 rounds
+Casting Time: 2
+Area of Effect: Party
+Saving Throw: None
+
+Skip Time transports the party ten rounds into the future. From the point of view of other creatures, the party vanishes, then reappears in the same spot ten rounds later. However, no time has passed for the party.
+
+The main effect of this is to reduce the duration of all magical effects on creatures outside the party by ten rounds, ending effects like Mantle that have short durations and causing the rest to expire sooner. Lingering areas of effect such as Web and Stinking Cloud also have their duration reduced.~
 @37852     = ~Energy Drain~
 @38852     = ~Energy Drain
 (Necromancy)
@@ -3726,7 +3774,7 @@ Range: Sight of Caster
 Duration: 3 rounds/level
 Casting Time: 4
 Area of Effect: 1 creature
-Saving Throw: None 
+Saving Throw: None
 
 Among the greatest teleportation spells, Teleport Step lets the recipient teleport anywhere in the area simply by moving. Click on a destination for the character, and they will teleport there. The character can teleport any number of times with this spell.~
 @37856     = ~Spell Trap~
@@ -3773,6 +3821,17 @@ Area of Effect: 20-foot radius
 Saving Throw: None
 
 Otto's Irresistible Spin forces multiple creatures to spin in place against their will for 5 rounds. Affected creatures will do nothing other than repeatedly spin in place, even if they see enemies. The spell is irresistible - there is no Saving Throw, and Spell Resistance will not block the spell. If an affected creature takes damage, the effects of the spell immediately end for that creature.~
+@37860     = ~Omnipresence~
+@38860     = ~Omnipresence
+(Transmutation)
+Level: Brd 7, Cleric 8, Sor/Wiz 7
+Range: Sight of Caster
+Duration: 30 rounds
+Casting Time: 5
+Area of Effect: 1 creature
+Saving Throw: None
+
+The spell Omnipresence spreads the essence of the target creature throughout the area, allowing the creature to do actions at longer range than normal. For the duration or until dispelled, the creature can attack any creature in sight with any weapon, even with melee weapons. The creature can also target other creatures with touch spells at long range, and can cast spells at a target outside their visual range. However, these effects also go the other way. An omnipresent creature can be attacked with melee weapons and targeted by touch spells at long range. Since Omnipresence makes the creature's form less solid, the creature can move through other creatures while under the effects of the spell.~
 @37952     = ~Perfect Invisibility~
 @38952     = ~Perfect Invisibility
 (Illusion)
@@ -3850,3 +3909,14 @@ Area of Effect: 1 creature
 Saving Throw: None
 
 This spell drastically speeds up the target's movement and attack speed. For the duration, the target gains +8 AC, moves at the maximum possible speed, and attacks twice as many times per round. Attack bonuses will continue to decrease for attacks beyond the 5th one. This effect does not stack with Haste.~
+@37959     = ~Time Slow~
+@38959     = ~Time Slow
+(Transmutation)
+Level: Sor/Wiz 9
+Range: Caster
+Duration: 4 rounds
+Casting Time: 2
+Area of Effect: Entire area
+Saving Throw: None
+
+This spell slows time for everyone and everything except the caster. All other creatures move and attack at one quarter their normal rates.~

@@ -25,7 +25,7 @@ COPY_EXISTING_REGEXP ~.*\.itm~ ~override~
 	END
 	PATCH_IF is_thrown = 1 BEGIN
 //		LPF ADD_ITEM_EQEFFECT INT_VAR opcode=434 target=1 timing=2 parameter1=1 STR_VAR resource=~USHALFTH~ END
-		LPF ADD_ITEM_EQEFFECT INT_VAR opcode=500 target=1 timing=2 parameter1=0x24000028 parameter2=0x1050022 savingthrow=0x200000 special=50 STR_VAR resource=~MEHALFTH~ END
+//		LPF ADD_ITEM_EQEFFECT INT_VAR opcode=500 target=1 timing=2 parameter1=0x24000028 parameter2=0x1050022 savingthrow=0x200000 special=50 STR_VAR resource=~MEHALFTH~ END
 		LPF ADD_ITEM_EQEFFECT INT_VAR opcode=500 target=1 timing=2 parameter1=36 parameter2=0x3050016 savingthrow=0x200000 special=50 STR_VAR resource=~MEHALFTH~ END
 	END
 	UNLESS ~MEHALFTH~

@@ -3456,6 +3456,7 @@ Attack Bonus: +1, +5 vs. Spectral Undead
 Enchantment:  +2
 Damage Type:  Piercing
 Special:
+  Counts as a silver weapon
   Spectral Force: +1 magic damage per hit
   Cursed: Once equipped, cannot be unequipped without a Remove Curse spell
 Weight: 5 lb.
@@ -3471,6 +3472,7 @@ Attack Bonus: +3, +7 vs. Spectral Undead
 Enchantment:  +4
 Damage Type:  Piercing
 Special:  
+  Counts as a silver weapon
   Spectral Force: +3 magic damage per hit
   Cursed: Once equipped, cannot be unequipped without a Remove Curse spell
 Weight: 5 lb.
@@ -3486,6 +3488,7 @@ Attack Bonus: +1, +5 vs. Spectral Undead
 Enchantment:  +2
 Damage Type:  Piercing
 Special:
+  Counts as a silver weapon
   Spectral Force: +1 magic damage per hit
 Weight: 5 lb.
 Feat Requirement:  Simple Weapon, Small Blade
@@ -3500,6 +3503,7 @@ Attack Bonus: +3, +7 vs. Spectral Undead
 Enchantment:  +4
 Damage Type:  Piercing
 Special:  
+  Counts as a silver weapon
   Spectral Force: +3 magic damage per hit
 Weight: 5 lb.
 Feat Requirement:  Simple Weapon, Small Blade
@@ -3864,6 +3868,8 @@ Damage:  1d6 + 1
 Attack Bonus:  +3 
 Enchantment:  +1
 Damage Type:  Piercing
+Special:
+  Counts as a silver weapon
 Weight:  5 lb.
 Feat Requirement:  Simple Weapon, Small Blade
 Type:  One-handed~
@@ -3878,6 +3884,8 @@ Damage:  1d6 + 3
 Attack Bonus:  +7 
 Enchantment:  +3
 Damage Type:  Piercing
+Special:
+  Counts as a silver weapon
 Weight:  5 lb.
 Feat Requirement:  Simple Weapon, Small Blade
 Type:  One-handed~
@@ -3946,7 +3954,7 @@ Type:  One-handed~
 //@10832    = ~If we decide to make a HoF version of this item, we should put its description here~
 //@10833    = ~Moonblade of Selune~
 @10834    = ~The blade of this sword is constructed of a pale white material. It is slightly translucent and appears to glow in dim light. The edge of the blade appears dull and unable to cut even the softest of materials. When used in combat, however, a moonblade is a formidable weapon.
-A moonblade bypasses armor and strikes at a target directly. The weapon drains life force and leaves no visible wounds, unless the creature is undead. Undead suffer terrible wounds from a moonblade. Their substance actually seems to boil away, and they suffer double damage.
+A moonblade bypasses armor and strikes at a target directly. The weapon drains life force and leaves no visible wounds, unless the creature is undead. Undead suffer terrible wounds from a moonblade. Their substance actually seems to boil away, and they suffer double damage. While the blade is not actually made of silver, it has the exact same effect against lycanthropes as a silver weapon.
 Moonblade's of Selune are the favored weapons of the priestesses of Selune. They are usually granted only to priestesses who serve the church beyond the call of duty. This weapon was given to Emma Moonblade for her unswerving dedication to the church.
 
 STATISTICS:
@@ -3956,6 +3964,7 @@ Enchantment:  +2
 Damage Type:  Magic
 Special:
   Deals double damage to undead
+  Counts as a silver weapon
   Bypasses armor and shield bonuses
   Each hit scrambles magic, causing any spell cast by the target in the next round to have a 50% chance of failing
 Weight: 2 lb.
@@ -3963,7 +3972,7 @@ Feat Requirement:  Simple Weapon, Small Blade
 Type:  One-handed~
 //@10835    = ~Moonblade of Selune +5~
 @10836    = ~The blade of this sword is constructed of a pale white material. It is slightly translucent and appears to glow in dim light. The edge of the blade appears dull and unable to cut even the softest of materials. When used in combat, however, a moonblade is a formidable weapon.
-A moonblade bypasses armor and strikes at a target directly. The weapon drains life force and leaves no visible wounds, unless the creature is undead. Undead suffer terrible wounds from a moonblade. Their substance actually seems to boil away, and they suffer double damage.
+A moonblade bypasses armor and strikes at a target directly. The weapon drains life force and leaves no visible wounds, unless the creature is undead. Undead suffer terrible wounds from a moonblade. Their substance actually seems to boil away, and they suffer double damage. While the blade is not actually made of silver, it has the exact same effect against lycanthropes as a silver weapon.
 Moonblade's of Selune are the favored weapons of the priestesses of Selune. They are usually granted only to priestesses who serve the church beyond the call of duty. This weapon was given to Emma Moonblade for her unswerving dedication to the church.
 
 STATISTICS:
@@ -3974,6 +3983,7 @@ Enchantment:  +5
 Damage Type:  Magic
 Special:
   Deals double damage to undead
+  Counts as a silver weapon
   Bypasses armor and shield bonuses
   Each hit scrambles magic, causing any spell cast by the target in the next round to have a 50% chance of failing
 Weight: 2 lb.
@@ -4593,11 +4603,11 @@ Type:  One-handed~
 When he found the Black Wolf, Kresselack spurned the young man, claiming that the sickly and weak-looking Thomas shared no blood with him, then ordered him beaten and left beneath the shadow of Kelvin's Cairn to die. After two days in the freezing cold, Thomas was rescued by a tribe of Uthgart barbarians fleeing Kresselack's army. Nursing the man back to health, the barbarians adopted Thomas into their tribe and he eventually became one of their greatest hunters. When he passed away from winter chill many years later, he left his sword to his youngest son to help him find his way in the world.
 
 STATISTICS: 
- 
-Damage:  1d10 + 3 
-Attack Bonus:  +3  
-Enchantment:  +3 
-Damage Type:  Slashing 
+
+Damage:  1d10 + 3
+Attack Bonus:  +3
+Enchantment:  +3
+Damage Type:  Slashing
 Special:
   Quick: No delay before attacking
   Cleaving: When this weapon hits, it has a 40% chance of immediately making an additional attack, as if the wielder had just killed a creature with the Cleave feat.
@@ -4616,8 +4626,9 @@ STATISTICS:
 Damage: 1d10 + 3 
 Attack Bonus: +3  
 Enchantment:  +3
-Damage Type: Slashing 
+Damage Type: Slashing
 Special:
+  Counts as a silver weapon
   Spell Process: 33% chance per hit to confuse the target for 2 rounds (Will DC 18)
   Chaotic: +3d6 damage to lawful creatures
 Weight: 8 lb.
@@ -4637,6 +4648,7 @@ Attack Bonus: +5
 Enchantment:  +5 
 Damage Type: Slashing
 Special:
+  Counts as a silver weapon
   Constant Effect: Chaotic Commands while equipped 
   Spell Process: 50% chance per hit to confuse the target for 2 rounds (Will DC 27)
   Chaotic: +4d6 damage to lawful creatures
@@ -4821,21 +4833,22 @@ Type:  One-handed~
 //@10969    = ~Scimitar +1~
 //@10970    = ~Item description can remain the same; if new description is needed put it here~
 @10971    = ~Caernach's Sickle +1~
-@10972    = ~The arch-druid Caernach was known to carry a good many enchanted items, most of which he crafted with his own hands. Most famous were his boots, "Breath-of-Life," which left flowers and tiny saplings sprouting from the earth where Caernach strode. Still, the arch-druid's "lesser possessions" were nothing to scoff at - take, for instance, his silver sickle, fashioned to gather sacred mistletoe and the heads of enemies alike. This unusual weapon is actually a cross between a sickle and a proper sword, resembling a scimitar more than anything else. Both the oaken haft and silver blade are engraved with decorative swirls and patterns. Once per day the sickle may be used to scratch a small circle into the earth; digging in the spot so marked will reveal a handful of healing berries just beneath the soil's surface.
+@10972    = ~The arch-druid Caernach was known to carry a good many enchanted items, most of which he crafted with his own hands. Most famous were his boots, "Breath-of-Life," which left flowers and tiny saplings sprouting from the earth where Caernach strode. Still, the arch-druid's "lesser possessions" were nothing to scoff at - take, for instance, his silver sickle, fashioned to gather sacred mistletoe and the heads of enemies alike. This unusual weapon is actually a cross between a sickle and a proper sword, resembling a scimitar more than anything else. Both the oaken haft and silver blade are engraved with decorative swirls and patterns.
 
 STATISTICS:
 
 Damage:  1d6 + 1
-Attack Bonus: +1 
+Attack Bonus: +1
 Enchantment:  +1
 Damage Type:  Slashing
 Special: 
-  Goodberries: Can create 4 Goodberries 1/day
+  Counts as a silver weapon
+  Each hit creates a Goodberry in the wielder's third quick item slot
 Weight:  4 lb.
 Feat Requirement:  Martial Weapon, Large Sword
 Type:  One-handed~
 @10973    = ~Caernach's Silver Sickle +3~
-@10974    = ~The arch-druid Caernach was known to carry a good many enchanted items, most of which he crafted with his own hands. Most famous were his boots, "Breath-of-Life," which left flowers and tiny saplings sprouting from the earth where Caernach strode. Still, the arch-druid's "lesser possessions" were nothing to scoff at - take, for instance, his silver sickle, fashioned to gather sacred mistletoe and the heads of enemies alike. This unusual weapon is actually a cross between a sickle and a proper sword, resembling a scimitar more than anything else. Both the oaken haft and silver blade are engraved with decorative swirls and patterns. Once per day the sickle may be used to scratch a small circle into the earth; digging in the spot so marked will reveal a handful of healing berries just beneath the soil's surface.
+@10974    = ~The arch-druid Caernach was known to carry a good many enchanted items, most of which he crafted with his own hands. Most famous were his boots, "Breath-of-Life," which left flowers and tiny saplings sprouting from the earth where Caernach strode. Still, the arch-druid's "lesser possessions" were nothing to scoff at - take, for instance, his silver sickle, fashioned to gather sacred mistletoe and the heads of enemies alike. This unusual weapon is actually a cross between a sickle and a proper sword, resembling a scimitar more than anything else. Both the oaken haft and silver blade are engraved with decorative swirls and patterns.
 
 STATISTICS:
 
@@ -4844,7 +4857,8 @@ Attack Bonus: +3
 Enchantment:  +3
 Damage Type:  Slashing
 Special: 
-  Goodberries: Can create 20 Goodberries 1/day
+  Counts as a silver weapon
+  Each hit creates two Goodberries in the wielder's third quick item slot
 Weight:  4 lb.
 Feat Requirement:  Martial Weapon, Large Sword
 Type:  One-handed~
@@ -5311,18 +5325,31 @@ Weight: 4 lb.
 Feat Requirement:  Simple Weapon, Quarterstaff
 Type:  Two-handed~
 //@11083    = ~Phaen's Ironshod Staff~
-//@11084    = ~Item description can remain the same; if new description is needed put it here~
+@11084    = ~Phaen's oaken staff is capped with two iron bands of iron at the top and bottom, the bottom band carved to resemble the hoof of a horse or satyr, while the top band has been carved into a snarling bear with a spiked collar.  The staff carries a minor enchantment that allows the user to strike more accurately and allows the staff to harm creatures immune to normal weapons.
+
+STATISTICS:
+
+Damage:  1d6
+Attack Bonus:  +1 
+Enchantment:  +1
+Damage Type:  Bludgeoning
+Special:
+  Whenever the wielder casts a spell, they gain +1 damage for 3 rounds (cumulative)
+Weight: 3 lb.
+Feat Requirement:  Simple Weapon, Quarterstaff
+Type:  Two-handed~
 //@11085    = ~Iron-Banded Staff~
 @11086    = ~Phaen's oaken staff is capped with two iron bands of iron at the top and bottom, the bottom band carved to resemble the hoof of a horse or satyr, while the top band has been carved into a snarling bear with a spiked collar. The staff carries a minor enchantment that allows the user to strike more accurately and allows the staff to harm creatures immune to normal weapons.
 
 STATISTICS:
 
 Damage:  1d6 + 3
-Attack Bonus:  +5 
+Attack Bonus:  +5
 Enchantment:  +3
 Damage Type:  Bludgeoning
 Special:
   Intelligence:  +5
+  Whenever the wielder casts a spell, they gain +2 damage for 3 rounds (cumulative)
 Weight: 3 lb.
 Feat Requirement:  Simple Weapon, Quarterstaff
 Type:  Two-handed~
@@ -11628,7 +11655,7 @@ Special:
 Weight: 2 lb.
 Feat Requirement:  Martial Weapon, Hammer
 Type:  One-handed~
-@12475    = ~Helmet of Defense +5~
+@12475    = ~Helmet of Defense +4~
 @12476    = ~This class of decorative helmet, made of reinforced leather or metal, covers the face and head. Eye slits and breathing holes come highly recommended. 
 
 STATISTICS:
@@ -11720,7 +11747,7 @@ Max Dex Bonus:  +6
 Armor Check Penalty:  -0
 Arcane Spell Failure:  10%
 Special:
-  When wearer is hit, he or she has a 50% chance to turn invisible for 7 rounds.
+  When wearer takes damage, he or she has a 50% chance to turn invisible for 7 rounds.
 Weight: 3 lb.~
 @12491    = ~Studded Leather Armor of Swiftness +5~
 @12492    = ~Studded leather armor has little in common with normal leather armor. While leather armor is a hardened shell, studded leather armor is soft and supple with hundreds of metal rivets affixed. The rivets are so close together that they form a flexible coating of hard metal that turns aside slashing and cutting attacks. The soft leather backing is little more than a means of securing the rivets in place. Magical enchantments enhance the protective abilities of this leather armor.
@@ -11735,7 +11762,7 @@ Arcane Spell Failure:  15%
 Special:
   Movement Rate doubled
 Weight: 4 lb.~
-@12493    = ~Studded Leather Armor of Perfect Reflexes +6~
+@12493    = ~Studded Leather Armor of Limitless Speed +6~
 @12494    = ~Studded leather armor has little in common with normal leather armor. While leather armor is a hardened shell, studded leather armor is soft and supple with hundreds of metal rivets affixed. The rivets are so close together that they form a flexible coating of hard metal that turns aside slashing and cutting attacks. The soft leather backing is little more than a means of securing the rivets in place. Magical enchantments enhance the protective abilities of this leather armor.
 
 STATISTICS:
@@ -11746,7 +11773,8 @@ Max Dex Bonus:  +5
 Armor Check Penalty:  -1
 Arcane Spell Failure:  15%
 Special:
-  Reflex Saving Throw: +20
+  Speed: 1 additional attack per round
+  Limitless Speed: The wearer is not capped at five attacks per round
 Weight: 4 lb.~
 @12495    = ~Blinking Leathers +6~
 @12496    = ~At first glance this appears to be an ordinary suit of leather armor, a closer inspection reveals subtle clues of various arcane enhancements. The rivets holding the various pieces together shine brightly as if polished. The leather pieces are soft and supple to the touch, but instantly become rigid when struck with a heavy blow. And when worn, the creaking and stretching noises normally associated with such armors are mysteriously absent.
@@ -12392,7 +12420,7 @@ Arcane Spell Failure:  40%
 Special:
   Constant Effect: Wearer is under the effects of the spell Death Armor
 Weight: 32 lb.~
-@12603    = ~Helmet of Defense +3~
+@12603    = ~Helmet of Defense +2~
 @12604    = ~This class of decorative helmet, made of reinforced leather or metal, covers the face and head. Eye slits and breathing holes come highly recommended.
 
 STATISTICS:
@@ -12476,7 +12504,7 @@ Arcane Spell Failure:  35%
 Special:
   Resistance: 100/- Magic Damage Resistance
 Weight: 25 lb.~
-@12621    = ~Helmet of Defense +7~
+@12621    = ~Helmet of Defense +6~
 @12622    = ~This class of decorative helmet, made of reinforced leather or metal, covers the face and head. Eye slits and breathing holes come highly recommended.
 
 STATISTICS:
@@ -12914,8 +12942,8 @@ Special:
 Weight: 25 lb.~
 @12699    = ~Strange Sphere~
 @12700    = ~This sphere, colored half-red and half-blue, radiates powerful magic.~
-@12701    = ~Scarlet-Blue Ioun Stone~
-@12702    = ~This is an ioun stone - its powers are activated by placing the stone above ones head, causing it to float there until removed. This scarlet-blue sphere makes the wearer significantly more intelligent.
+@12701    = ~Greater Scarlet-Blue Ioun Stone~
+@12702    = ~This is an ioun stone - its powers are activated by placing the stone above one's head, causing it to float there until removed. This scarlet-blue sphere makes the wearer significantly more intelligent.
 
 STATISTICS:
 
@@ -12972,12 +13000,12 @@ Special: The wearer receives double the bonuses and penalties from Expertise
 Weight: 2 lb.~
 @12717    = ~Strange Stone~
 @12718    = ~This stone radiates powerful magic.~
-@12719    = ~Dusty Rose Ioun Stone~
-@12720    = ~This is an ioun stone - its powers are activated by placing the stone above ones head, causing it to float there until removed. This dusty rose ellipsoid makes the wearer harder to hit in combat.
+@12719    = ~Greater Dusty Rose Ioun Stone~
+@12720    = ~This is an ioun stone - its powers are activated by placing the stone above one's head, causing it to float there until removed. This dusty rose ellipsoid makes the wearer harder to hit in combat.
 
 STATISTICS:
 
-Generic Armor Bonus: +8
+Generic Armor Bonus: +10
 Weight: 1 lb.~
 @12721    = ~Staff of Goblin Summoning +1~
 @12722    = ~The simplest and humblest of staff weapons, the quarterstaff is a length of wood ranging six to nine feet in length. Masterwork quarterstaffs are made of stout oak and are shod with metal at both ends. This one is particularly special as it has been imbued with magical properties.
@@ -13365,7 +13393,7 @@ Created during the ceremonies of the Coming Storm (the onset of winter) to Auril
 
 STATISTICS:
 
-The wearer has 50% Fire Resistance, and anyone who hits the wearer in melee takes 1d6 fire damage. These effects do not stack with Fire Shield (Blue).~
+The wearer has 50% Fire Resistance, and anyone who hits the wearer in melee takes 1d6 cold damage. These effects do not stack with Fire Shield (Blue).~
 @12803    = ~Mantle of the Coming Storm~
 @12804    = ~Worn by the Aurilite priestess Lysan in the past, this seemingly threadbare robe had become "dormant" upon her command, so as not to expose herself as a priestess of Auril. When as much as a single snowflake falls upon the robe, it transforms into a scintillating cloak of white that allows the wielder to float above snow drifts and walk through even raging rivers with ease. Most merchants will not wish to purchase this item, or will do so at a very low price, as they see it as a sacred item of Auril the Frost-Maiden and likely to attract her followers... and her displeasure.
 
@@ -13373,7 +13401,7 @@ Created during the ceremonies of the Coming Storm (the onset of winter) to Auril
 
 STATISTICS:
 
-The wearer has 50% Fire Resistance, and anyone who hits the wearer in melee takes 1d6+5 fire damage. These effects do not stack with Fire Shield (Blue).~
+The wearer has 50% Fire Resistance, and anyone who hits the wearer in melee takes 1d6+5 cold damage. These effects do not stack with Fire Shield (Blue).~
 @12805    = ~Bracers of Blinding Strike~
 @12806    = ~Knight Wesic of the Most Noble Order of the Radiant Heart often said, "Attack swiftly and your enemy will be so overwhelmed that the battle will be yours." He lived this principle through these bracers. Before engaging in righteous battle, he would unlock the magic of the Blinding Strike and quickly rush at his enemy. More often than not, his opponent would fall within the first few seconds of battle.
 
@@ -13416,6 +13444,37 @@ STATISTICS:
 
 All electrical damage that would be dealt to the wearer is instead reflected back to the source
 Weight: 3 lb.~
+@12817    = ~Dusty Rose Ioun Stone~
+@12818    = ~This is an ioun stone - its powers are activated by placing the stone above one's head, causing it to float there until removed. This dusty rose ellipsoid makes the wearer harder to hit in combat.
+
+STATISTICS:
+
+Generic Armor Bonus: +2
+Weight: 1 lb.~
+@12819    = ~Greater Pale Green Ioun Stone~
+@12820    = ~This is an ioun stone - its powers are activated by placing the stone above one's head, causing it to float there until removed. This pale green ellipsoid greatly increases the wearer's combat skill.
+
+STATISTICS:
+
+Attack Bonus: +4
+Critical Threat Range: +4
+These effects stack with Executioner's Eyes
+Weight: 1 lb.~
+@12821    = ~Helmet of Defense +8~
+@12822    = ~This class of decorative helmet, made of reinforced leather or metal, covers the face and head. Eye slits and breathing holes come highly recommended.
+
+STATISTICS:
+
+Generic Armor Bonus: +9
+Weight: 2 lb.~
+@12823    = ~Helmet of Merciless Gaze~
+@12824    = ~This class of decorative helmet, made of reinforced leather or metal, covers the face and head. Eye slits and breathing holes come highly recommended.
+
+STATISTICS:
+
+Generic Armor Bonus: +1
+Merciless Gaze: If the wearer is attacking a creature within line of sight, that creature takes 2 magic damage per second.
+Weight: 2 lb.~
 @12900    = ~Hrm - you are powerful allies, indeed. More gold and gems to line your pockets, then - also, a suit of plate armor, a warhammer, a helmet, all crafted and enchanted by great duergar artisans. They are well deserved, outsider.~
 @12901    = ~Drink this Rainwater Brew, Ennelia. It should help your condition.~
 @12902    = ~Drink this Sour Draught, Ennelia. It should help your condition.~

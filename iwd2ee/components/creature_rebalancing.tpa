@@ -40,6 +40,18 @@ COPY_EXISTING_REGEXP ~USCWMAR[123]\.itm~ ~override~
 	SAY NAME2 @23018
 	BUT_ONLY_IF_IT_CHANGES
 
+COPY_EXISTING ~USLYCAN1.itm~ ~override~
+	LPF ALTER_EFFECT INT_VAR check_headers=0 check_globals=1 match_opcode=502 special=RESOLVE_STR_REF(@23043) STR_VAR match_resource=~MEDAMSLV~ END
+	BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING ~USLYCAN2.itm~ ~override~
+	LPF ALTER_EFFECT INT_VAR check_headers=0 check_globals=1 match_opcode=502 special=RESOLVE_STR_REF(@23044) STR_VAR match_resource=~MEDAMSLV~ END
+	BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING ~USLYCAN3.itm~ ~override~
+	LPF ALTER_EFFECT INT_VAR check_headers=0 check_globals=1 match_opcode=502 special=RESOLVE_STR_REF(@23045) STR_VAR match_resource=~MEDAMSLV~ END
+	BUT_ONLY_IF_IT_CHANGES
+
 COPY_EXISTING ~uscwsfor.itm~ ~override~
 	SAY NAME1 @23040
 	SAY NAME2 @23040
@@ -564,6 +576,97 @@ COPY_EXISTING ~21XUKI.cre~ ~override~
 	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~SPWI609~ END
 	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~SPWI707~ END
 	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~SPWI711~ END
+
+COPY_EXISTING ~21WERBGR.cre~ ~override~
+	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelbarbarian=3 STR_VAR updatehp=~max~ END
+	WRITE_BYTE strength 15
+	WRITE_BYTE dexterity 14
+	WRITE_BYTE constitution 16
+	WRITE_BYTE proficiencymace 2
+	WRITE_BYTE enchantmentlevel 0
+	LPF	IWD2_ADD_CRE_ITEM INT_VAR equip=1 STR_VAR item=~00CLUB01~ slot=~weapon1~ mode=~replace~ END
+	LPF	IWD2_ADD_CRE_ITEM INT_VAR equip=1 STR_VAR item=~USLYCAN1~ slot=~cloak~ mode=~replace~ END
+
+COPY_EXISTING ~21WERRAT.cre~ ~override~
+	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelrogue=3 STR_VAR updatehp=~max~ END
+	WRITE_BYTE strength 13
+	WRITE_BYTE constitution 14
+	WRITE_BYTE proficiencymace 2
+	WRITE_BYTE skillbluff 6
+	WRITE_BYTE enchantmentlevel 0
+	LPF	IWD2_ADD_CRE_ITEM INT_VAR equip=1 STR_VAR item=~00CLUB01~ slot=~weapon1~ mode=~replace~ END
+	LPF	IWD2_ADD_CRE_ITEM INT_VAR equip=1 STR_VAR item=~USLYCAN1~ slot=~cloak~ mode=~replace~ END
+	LPF ADD_CRE_EXTENDED_FEAT INT_VAR points=1 STR_VAR name=~ME_FEINT~ END
+
+COPY_EXISTING ~21GAERNT.cre~ ~override~
+	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelrogue=6 STR_VAR updatehp=~max~ END
+	WRITE_BYTE strength 15
+	WRITE_BYTE constitution 15
+	WRITE_BYTE proficiencymace 2
+	WRITE_BYTE skillbluff 9
+	WRITE_BYTE enchantmentlevel 0
+	LPF	IWD2_ADD_CRE_ITEM INT_VAR equip=1 STR_VAR item=~00CLUB94~ slot=~weapon1~ mode=~replace~ END
+	LPF	IWD2_ADD_CRE_ITEM INT_VAR equip=1 STR_VAR item=~USLYCAN1~ slot=~cloak~ mode=~replace~ END
+	LPF ADD_CRE_EXTENDED_FEAT INT_VAR points=1 STR_VAR name=~ME_KNOCKDOWN~ END
+	LPF ADD_CRE_EXTENDED_FEAT INT_VAR points=2 STR_VAR name=~ME_FEINT~ END
+
+COPY_EXISTING ~66DGAERN.cre~ ~override~
+	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelrogue=17 STR_VAR updatehp=~max~ END
+	WRITE_BYTE strength 19
+	WRITE_BYTE dexterity 30
+	WRITE_BYTE constitution 20
+	WRITE_BYTE proficiencymace 2
+	WRITE_BYTE skillbluff 20
+	WRITE_BYTE enchantmentlevel 0
+	LPF	IWD2_ADD_CRE_ITEM INT_VAR equip=1 STR_VAR item=~00CWBLUA~ slot=~weapon1~ mode=~replace~ END
+	LPF	IWD2_ADD_CRE_ITEM INT_VAR equip=1 STR_VAR item=~USLYCAN3~ slot=~cloak~ mode=~replace~ END
+	LPF ADD_CRE_EXTENDED_FEAT INT_VAR points=1 STR_VAR name=~ME_KNOCKDOWN~ END
+	LPF ADD_CRE_EXTENDED_FEAT INT_VAR points=2 STR_VAR name=~ME_FEINT~ END
+
+COPY_EXISTING ~40BCULTC.cre~ ~override~ ~40BDCULT.cre~ ~override~ ~40CULTWW.cre~ ~override~ ~00SWWLF.cre~ ~override~
+	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelfighter=4 newlevelcleric=1 STR_VAR updatehp=~max~ END
+	WRITE_BYTE strength 15
+	WRITE_BYTE dexterity 17
+	WRITE_BYTE constitution 17
+	WRITE_BYTE wisdom 11
+	WRITE_BYTE enchantmentlevel 0
+	WRITE_BYTE proficiencybastardsword 3
+	READ_LONG feats1 ulgiash
+	ulgiash|=0x2000000
+	WRITE_LONG feats1 ulgiash
+	PATCH_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~0~ BEGIN
+		LPF IWD2_ADD_CRE_EFFECT INT_VAR opcode=187 target=0 timing=1 parameter1=1 STR_VAR effvar= EVAL ~ME_GRAPPLE~ END
+	END
+	LPF	IWD2_ADD_CRE_ITEM INT_VAR equip=1 STR_VAR item=~USLYCAN1~ slot=~cloak~ mode=~replace~ END
+	LPF ADD_CRE_EXTENDED_FEAT INT_VAR points=1 STR_VAR name=~ME_KNOCKDOWN~ END
+
+COPY_EXISTING ~40BDAWN.cre~ ~override~
+	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelfighter=7 newlevelcleric=5 STR_VAR updatehp=~max~ END
+	WRITE_BYTE strength 20
+	WRITE_BYTE dexterity 22
+	WRITE_BYTE constitution 23
+	WRITE_BYTE wisdom 13
+	WRITE_BYTE enchantmentlevel 0
+	WRITE_BYTE proficiencybastardsword 3
+	READ_LONG feats1 ulgiash
+	ulgiash|=0x2000000
+	WRITE_LONG feats1 ulgiash
+	PATCH_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~0~ BEGIN
+		LPF IWD2_ADD_CRE_EFFECT INT_VAR opcode=187 target=0 timing=1 parameter1=1 STR_VAR effvar= EVAL ~ME_GRAPPLE~ END
+	END
+	LPF	IWD2_ADD_CRE_ITEM INT_VAR equip=1 STR_VAR item=~USLYCAN2~ slot=~cloak~ mode=~replace~ END
+	LPF ADD_CRE_EXTENDED_FEAT INT_VAR points=2 STR_VAR name=~ME_KNOCKDOWN~ END
+
+COPY_EXISTING ~00SDGWLF.cre~ ~override~ ~00SGWWLF.cre~ ~override~ ~00SSGWLF.cre~ ~override~ ~00SSHGWF.cre~ ~override~ ~41SDGWLF.cre~ ~override~ ~41SGWWLF.cre~ ~override~ ~41SSGWLF.cre~ ~override~ ~41SSHGWF.cre~ ~override~
+	WRITE_BYTE enchantmentlevel 0
+	READ_LONG feats1 ulgiash
+	ulgiash|=0x2000000
+	WRITE_LONG feats1 ulgiash
+	PATCH_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~0~ BEGIN
+		LPF IWD2_ADD_CRE_EFFECT INT_VAR opcode=187 target=0 timing=1 parameter1=1 STR_VAR effvar= EVAL ~ME_GRAPPLE~ END
+	END
+	LPF	IWD2_ADD_CRE_ITEM INT_VAR equip=1 STR_VAR item=~USLYCAN2~ slot=~cloak~ mode=~replace~ END
+	LPF ADD_CRE_EXTENDED_FEAT INT_VAR points=2 STR_VAR name=~ME_KNOCKDOWN~ END
 
 COPY_EXISTING ~30GOBHO.cre~ ~override~
 	WRITE_SHORT armorclass 10
@@ -1188,6 +1291,31 @@ COPY_EXISTING ~41NECROM.cre~ ~override~ ~41RNECRO.cre~ ~override~
 	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~SPWI717~ END
 	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~SPWI805~ END
 	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~SPWI808~ END
+
+COPY_EXISTING ~41DOOMGD.cre~ ~override~
+	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelfighter=6 STR_VAR updatehp=~max~ END
+	WRITE_BYTE dexterity 15
+	WRITE_BYTE slashingresistance 5
+	WRITE_BYTE piercingresistance 5
+	WRITE_BYTE bludgeoningresistance 5
+	WRITE_BYTE missileresistance 5
+	WRITE_BYTE spellresistance 22
+	WRITE_BYTE magicdamageresistance 100
+	WRITE_BYTE proficiencylargesword 3
+	WRITE_BYTE enchantmentlevel 2
+	LPF	IWD2_ADD_CRE_ITEM INT_VAR equip=1 STR_VAR item=~USCWDOGU~ slot=~weapon1~ mode=~replace~ END
+
+COPY_EXISTING ~41VRASSI.cre~ ~override~
+	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelfighter=10 STR_VAR updatehp=~max~ END
+	WRITE_BYTE dexterity 16
+	WRITE_BYTE slashingresistance 10
+	WRITE_BYTE piercingresistance 10
+	WRITE_BYTE bludgeoningresistance 10
+	WRITE_BYTE missileresistance 15
+	WRITE_BYTE spellresistance 22
+	WRITE_BYTE magicdamageresistance 100
+	WRITE_BYTE proficiencymace 3
+	WRITE_BYTE enchantmentlevel 2
 
 COPY_EXISTING ~41RENGAR.cre~ ~override~
 	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelpaladin=12 STR_VAR updatehp=~max~ END
