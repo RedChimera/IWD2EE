@@ -226,6 +226,9 @@ ex_empowerable_opcodes = {[0] = true, [1] = true, [6] = true, [10] = true, [12] 
 			print(IEex_ReadLString(effectData + 0x2C, 8))
 		end
 --]]
+		if opcode == 288 or opcode >= 500 then
+			IEex_WriteDword(creatureData + 0x740, bit.band(IEex_ReadDword(creatureData + 0x740), 0xFFFFBFFF))
+		end
 		local internalFlags = IEex_ReadDword(effectData + 0xC8)
 
 		local parameter1 = IEex_ReadDword(effectData + 0x18)
@@ -615,23 +618,18 @@ ex_empowerable_opcodes = {[0] = true, [1] = true, [6] = true, [10] = true, [12] 
 			end
 
 		end
-		if opcode == 235 and timing == 4096 then
-			local timeSlowed = false
-			for i = 0, 5, 1 do
-				if IEex_GetActorSpellState(IEex_GetActorIDCharacter(i), 230) then
-					timeSlowed = true
-				end
-			end
-			if timeSlowed then
-				IEex_IterateActorEffects(targetID, function(eData)
-					local theopcode = IEex_ReadDword(eData + 0x10)
-					local theresource = IEex_ReadLString(eData + 0x30, 8)
-					if theopcode == 206 and theresource == "METIMESL" then
-						timeSlowed = false
-					end
-				end)
-				if timeSlowed then
+		if (opcode == 235 and timing == 4096) or (opcode == 187 and parameter1 > 10000) then
+			local timeSlowed, targetNotSlowed = IEex_CheckGlobalEffectOnActor(targetID, 0x2)
+			if timeSlowed and not targetNotSlowed then
+				if (opcode == 235 and timing == 4096) then
 					IEex_WriteDword(effectData + 0x24, (duration - time_applied) * ex_time_slow_speed_divisor + time_applied - 15)
+				elseif (opcode == 187 and parameter1 > 10000) then
+					local tick = IEex_GetGameTick()
+					local timerDelay = parameter1 - tick
+					if timerDelay <= 255 then
+						parameter1 = timerDelay * ex_time_slow_speed_divisor + tick
+						IEex_WriteDword(effectData + 0x18, parameter1)
+					end
 				end
 			end
 		end

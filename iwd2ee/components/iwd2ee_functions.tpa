@@ -1476,6 +1476,7 @@ BEGIN
 	PATCH_IF theid > 0 BEGIN
 		READ_BYTE (0x1A8 + theid) currentpoints
 		FOR (i = currentpoints + 1; i <= points; ++i) BEGIN
+			thenumeffects = 0
 			theopcode = 0xDEFA
 			theparameter1 = 0xDEFA
 			theparameter2 = 0xDEFA
@@ -1485,21 +1486,34 @@ BEGIN
 			TEXT_SPRINT theresource ~DEFA~
 			INNER_ACTION BEGIN
 				COPY_EXISTING ~FE_%theid%_%i%.spl~ ~override~
-					READ_SHORT 0xAA theopcode ELSE 0xDEFA
-					READ_LONG 0xAE theparameter1 ELSE 0xDEFA
-					READ_LONG 0xB2 theparameter2 ELSE 0xDEFA
-					READ_LONG 0xD6 thespecial ELSE 0xDEFA
-					READ_BYTE 0xB6 thetiming ELSE 0xDE
-					READ_LONG 0xCE thesavingthrow ELSE 0xDEFA
-					READ_ASCII 0xBE theresource ELSE ~DEFA~
+					READ_LONG 0x6A theeffectoffset
+					READ_SHORT 0xA0 thenumeffects
+					READ_SHORT 0xA2 thefirsteffectindex
 					IF_EXISTS
 					BUT_ONLY_IF_IT_CHANGES
 			END
-			PATCH_IF theopcode = 171 BEGIN
-				LPF	IWD2_CRE_ABILITY INT_VAR num=1 STR_VAR resource= EVAL ~%theresource%~ END
-			END ELSE PATCH_IF theopcode != 0xDEFA BEGIN
-				LPF IWD2_ADD_CRE_EFFECT INT_VAR opcode=theopcode target=1 timing=thetiming parameter1=theparameter1 parameter2=theparameter2 special=thespecial savingthrow=thesavingthrow STR_VAR resource= EVAL ~%theresource%~ effsource= EVAL ~FE_%theid%_%i%~ END
+			FOR (j = 0; j < thenumeffects; ++j) BEGIN
+				INNER_ACTION BEGIN
+					COPY_EXISTING ~FE_%theid%_%i%.spl~ ~override~
+						thecurrenteffectoffset = (theeffectoffset + (thefirsteffectindex + j) * 0x30)
+						READ_SHORT thecurrenteffectoffset theopcode ELSE 0xDEFA
+						READ_LONG (thecurrenteffectoffset + 0x4) theparameter1 ELSE 0xDEFA
+						READ_LONG (thecurrenteffectoffset + 0x8) theparameter2 ELSE 0xDEFA
+						READ_LONG (thecurrenteffectoffset + 0x2C) thespecial ELSE 0xDEFA
+						READ_BYTE (thecurrenteffectoffset + 0xC) thetiming ELSE 0xDE
+						READ_LONG (thecurrenteffectoffset + 0x24) thesavingthrow ELSE 0xDEFA
+						READ_ASCII (thecurrenteffectoffset + 0x14) theresource ELSE ~DEFA~
+						IF_EXISTS
+						BUT_ONLY_IF_IT_CHANGES
+				END
+
+				PATCH_IF theopcode = 171 BEGIN
+					LPF	IWD2_CRE_ABILITY INT_VAR num=1 STR_VAR resource= EVAL ~%theresource%~ END
+				END ELSE PATCH_IF theopcode != 0xDEFA BEGIN
+					LPF IWD2_ADD_CRE_EFFECT INT_VAR opcode=theopcode target=1 timing=thetiming parameter1=theparameter1 parameter2=theparameter2 special=thespecial savingthrow=thesavingthrow STR_VAR resource= EVAL ~%theresource%~ effsource= EVAL ~FE_%theid%_%i%~ END
+				END
 			END
+
 		END
 		WRITE_BYTE (0x1A8 + theid) points
 		thebit = theid - 64

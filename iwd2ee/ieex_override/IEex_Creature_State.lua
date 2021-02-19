@@ -128,10 +128,21 @@ function IEex_Extern_OnPostCreatureProcessEffectList(creatureData)
 	local targetID = IEex_GetActorIDShare(creatureData)
 	if not IEex_IsSprite(targetID, false) then return end
 	local onTickFunctionsCalled = {}
+	local extraFlags = IEex_ReadDword(creatureData + 0x740)
+	if extraFlags == -1 or extraFlags == -65536 or extraFlags == -50393088 then
+		extraFlags = 0
+		IEex_WriteDword(creatureData + 0x740, extraFlags)
+	elseif extraFlags < 0 then
+		extraFlags = bit.band(extraFlags, 0x31000)
+		IEex_WriteDword(creatureData + 0x740, extraFlags)
+	end
+	if bit.band(extraFlags, 0x6000) == 0x4000 and IEex_ReadSignedByte(creatureData + 0x5622, 0x0) < 0 and not IEex_IsPartyMember(targetID) and IEex_CheckGlobalEffect(0xFFFFFFFF) == false then return end
+	local usedFunction = false
 	IEex_IterateActorEffects(targetID, function(eData)
 		local theopcode = IEex_ReadDword(eData + 0x10)
 		local theresource = IEex_ReadLString(eData + 0x30, 8)
 		if theopcode == 500 and ((ex_on_tick_functions[theresource] == 1 and onTickFunctionsCalled[theresource] == nil) or ex_on_tick_functions[theresource] == 2) then
+			usedFunction = true
 			onTickFunctionsCalled[theresource] = true
 			_G[theresource](eData + 0x4, creatureData, true)
 		end
@@ -176,8 +187,13 @@ function IEex_Extern_OnPostCreatureProcessEffectList(creatureData)
 --]]
 	for funcName, funcCondition in pairs(ex_on_tick_functions) do
 		if funcCondition == 0 then
-			_G[funcName](creatureData)
+			if _G[funcName](creatureData) == true then
+				usedFunction = true
+			end
 		end
+	end
+	if not usedFunction then
+		IEex_WriteDword(creatureData + 0x740, bit.bor(IEex_ReadDword(creatureData + 0x740), 0x4000))
 	end
 end
 

@@ -1171,12 +1171,7 @@ IEex_MutatorGlobalFunctions["METIMESL"] = {
 
     end,
     ["projectileMutator"] = function(source, creatureData, projectileData, sourceRES)
-    	local timeSlowed = false
-		for i = 0, 5, 1 do
-			if IEex_GetActorSpellState(IEex_GetActorIDCharacter(i), 230) then
-				timeSlowed = true
-			end
-		end
+		local timeSlowed = IEex_CheckGlobalEffect(0x2)
 		if timeSlowed then
 			IEex_WriteWord(projectileData + 0x70, math.ceil(IEex_ReadWord(projectileData + 0x70, 0x0) / ex_time_slow_speed_divisor))
 		end

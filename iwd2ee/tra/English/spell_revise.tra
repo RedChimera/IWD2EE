@@ -314,7 +314,7 @@ Saving Throw: None
 
 This spell summons forth a silent, weightless sword-like construct made of moonlight that extends 4 feet from the caster's hand. The moonblade is considered a +4 weapon for determining what creatures it can damage, though the bonus does not apply to attack bonus. In addition, due to the insubstantial nature of the moonblade, the blade bypasses armor and shield bonuses to AC, though it still gains damage bonuses from Strength, proficiency, and any other damage bonus a melee weapon could gain. It uses the Simple Weapon: Small Blade proficiency.
 
-The strike of a moonblade drains a target's vitality, inflicting 1d12+4 points of damage, and an additional 1d12 points to undead, who are particularly susceptible. A successful strike also temporarily scrambles magic, causing any spells the target casts in the next round to fail.~
+The strike of a moonblade drains a target's vitality, inflicting 1d12+4 points of damage, and an additional 1d12 points to undead, who are particularly susceptible. A successful strike also temporarily scrambles magic, causing any spells the target casts in the next round to fail. Though it is not made of silver, the moonblade has the same effect against lycanthropes as a silver weapon, dealing full damage to them.~
 @1052    = ~Neutralize Poison~
 @1053    = ~Neutralize Poison
 (Conjuration)
@@ -1186,21 +1186,19 @@ Casting Time: 7
 Area of Effect: Special
 Saving Throw: None
 
-This spell summons a small insect to the caster, then enlarges it to giant size, creating a fearsome ally. The strength and kind of the insects varies according to the caster's level; the higher level the caster, the stronger the insect that is summoned. 
-~
+This spell summons a small insect to the caster, then enlarges it to giant size, creating a fearsome ally. The strength and kind of the insects varies according to the caster's level; the higher level the caster, the stronger the insect that is summoned. ~
 
 @1589    = ~Translocation Trick~
 @1590    = ~Translocation Trick
 (Transmutation)
 Level: Sor/Wiz 2, Brd 2
-Range: Sight of Caster
+Range: Anywhere in current area
 Duration: Instantaneous
-Casting Time: 0
-Area of Effect: Special
+Casting Time: Free action
+Area of Effect: 1 creature
 Saving Throw: None
 
-This spell allows the caster to pull another creature to them - there is no Saving Throw. Stationary creatures that are part of a structure are unaffected by this spell.
-~
+Translocation Trick allows the caster to switch places with another creature - there is no Saving Throw. Any missiles or magical projectiles in mid-flight that were aimed at the caster are redirected to the target, while projectiles aimed at the target are redirected to the caster. Translocation Trick can be cast on any creature the party sees, even if the caster does not see them. Creatures and objects that are part of a structure are unaffected by this spell.~
 @1591    = ~Sunbeam~
 @1592    = ~Sunbeam
 (Evocation)
@@ -3445,6 +3443,19 @@ Area of Effect: Caster
 Saving Throw: None
 
 After this spell is cast, the next instance of physical damage the caster would receive is reflected back at the attacker, damaging them instead. If the physical damage came from a weapon, any on-hit effects of the weapon will also be reflected back at the attacker.~
+@37154     = ~Simple Summoning~
+@38154     = ~Simple Summoning
+(Conjuration)
+Level: Brd 2, Clr 2, Sor/Wiz 1
+Range: 1000 ft.
+Duration: Instantaneous
+Casting Time: 1
+Area of Effect: 1 creature
+Saving Throw: None
+
+Simple Summoning summons the target of the spell. The target is instantly teleported to the caster's side. Unlike most other summoning spells, Simple Summoning gives no control over the creature. This spell could either be used to rescue an ally (e.g. if the ally was paralyzed and being attacked by enemies), or to transport an enemy into a vulnerable position. Creatures and objects that are part of a structure (e.g. support beams) are unaffected.
+
+Simple Summoning can be cast on any creature the party sees, even one outside of the caster's visual range.~
 @37251     = ~Identify Creature~
 @38251     = ~Identify Creature
 (Divination)
@@ -3832,6 +3843,17 @@ Area of Effect: 1 creature
 Saving Throw: None
 
 The spell Omnipresence spreads the essence of the target creature throughout the area, allowing the creature to do actions at longer range than normal. For the duration or until dispelled, the creature can attack any creature in sight with any weapon, even with melee weapons. The creature can also target other creatures with touch spells at long range, and can cast spells at a target outside their visual range. However, these effects also go the other way. An omnipresent creature can be attacked with melee weapons and targeted by touch spells at long range. Since Omnipresence makes the creature's form less solid, the creature can move through other creatures while under the effects of the spell.~
+@37861     = ~The Jester's Party~
+@38861     = ~The Jester's Party
+(Conjuration)
+Level: Brd 8
+Range: Entire area
+Duration: Instantaneous
+Casting Time: 1
+Area of Effect: Everyone in current area
+Saving Throw: None
+
+This spell teleports every creature in the current area next to the caster. Casting this spell in a dungeon could lead to a massive fight, so the caster had better be prepared.~
 @37952     = ~Perfect Invisibility~
 @38952     = ~Perfect Invisibility
 (Illusion)
