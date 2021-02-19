@@ -1140,13 +1140,17 @@ end
 -- Game State --
 ----------------
 
+function IEex_GetActionbarState()
+	return IEex_ReadDword(IEex_GetGameData() + 0x1C78 + 0x1982)
+end
+
 function IEex_SetActionbarButton(actorID, customizableButtonIndex, buttonType)
 
-    if not IEex_IsSprite(actorID, true) then return end
+	if not IEex_IsSprite(actorID, true) then return end
 	local customizableActionbarSlotTypes = IEex_GetActorShare(actorID) + 0x3D14
 	IEex_WriteDword(customizableActionbarSlotTypes + customizableButtonIndex * 0x4, buttonType)
 
-	if IEex_IsActorSolelySelected(actorID) then
+	if IEex_GetActionbarState() == 0x72 and IEex_IsActorSolelySelected(actorID) then
 		-- CInfGame_UpdateActionbar
 		IEex_Call(0x5ADAE0, {}, IEex_GetGameData(), 0x0)
 	end
