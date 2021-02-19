@@ -204,6 +204,46 @@
 		!pop_all_registers_iwd2
 	]]}))
 
+	--------------------------------------------------------------------------
+	-- Allow actionbar buttons to be programatically customized for non-PCs --
+	--------------------------------------------------------------------------
+
+	-- All creatures should use the customizable actionbar state
+	IEex_WriteAssembly(0x5ADBAE, {"!repeat(2,!nop)"})
+
+	-- Assign empty buttons to all creatures
+	IEex_HookAfterRestore(0x6F2967, 0, 6, IEex_FlattenTable({[[
+		!xor_ecx_ecx
+		@loop
+		!mov([esi+ecx*4+3D14],64)
+		!inc_ecx
+		!cmp_ecx_byte 09
+		!jl_dword >loop
+	]]}))
+
+	-- IEex_Extern_RestrictCreatureActionbar()
+	IEex_HookJump(0x594831, 0, IEex_FlattenTable({[[
+
+		!mark_esp(38)
+		!push_all_registers_iwd2
+		!add_eax_byte 02
+		]], IEex_GenLuaCall("IEex_Extern_RestrictCreatureActionbar", {
+			["args"] = {
+				{"!push_using_marked_esp([esp-18])"},
+				{"!push(eax)"},
+			},
+			["returnType"] = IEex_LuaCallReturnType.Boolean,
+		}), [[
+
+		!test_eax_eax
+		!pop_all_registers_iwd2
+		!jnz_dword >jmp_success
+		!jmp_dword >jmp
+
+		@call_error
+		!pop_all_registers_iwd2
+	]]}))
+
 	IEex_EnableCodeProtection()
 
 end)()

@@ -181,6 +181,15 @@ function IEex_Extern_OnPostCreatureProcessEffectList(creatureData)
 	end
 end
 
+-- Return:
+--	 true  - To restrict actionbar
+--	 false - To allow actionbar customization
+function IEex_Extern_RestrictCreatureActionbar(creatureData, buttonType)
+	IEex_AssertThread(IEex_Thread.Async, true)
+	-- Restrict customization if not PC
+	return IEex_ReadByte(creatureData + 0x24, 0x0) ~= 2
+end
+
 ------------------
 -- Thread: Both --
 ------------------

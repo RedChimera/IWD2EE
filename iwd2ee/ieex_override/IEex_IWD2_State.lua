@@ -587,6 +587,11 @@ end
 -- Actor Details --
 -------------------
 
+function IEex_IsActorSolelySelected(actorID)
+	local pGame = IEex_GetGameData()
+	return IEex_ReadDword(pGame + 0x3896) == 1 and IEex_ReadDword(IEex_ReadDword(pGame + 0x388E) + 0x8) == actorID
+end
+
 function IEex_CanSpriteUseItem(sprite, resref)
 	local CItem = IEex_DemandCItem(resref)
 	local junkPtr = IEex_Malloc(0x4)
@@ -1134,6 +1139,18 @@ end
 ----------------
 -- Game State --
 ----------------
+
+function IEex_SetActionbarButton(actorID, customizableButtonIndex, buttonType)
+
+    if not IEex_IsSprite(actorID, true) then return end
+	local customizableActionbarSlotTypes = IEex_GetActorShare(actorID) + 0x3D14
+	IEex_WriteDword(customizableActionbarSlotTypes + customizableButtonIndex * 0x4, buttonType)
+
+	if IEex_IsActorSolelySelected(actorID) then
+		-- CInfGame_UpdateActionbar
+		IEex_Call(0x5ADAE0, {}, IEex_GetGameData(), 0x0)
+	end
+end
 
 function IEex_GetCVariable(CVariableHash, name)
 
@@ -2139,6 +2156,14 @@ end
 ------------------------------------------------------------
 -- Functions which can be used by Opcode 500 (Invoke Lua) --
 ------------------------------------------------------------
+
+-- Changes the actionbar button at index [parameter1]
+--  to the type in [parameter2].
+function EXBUTTON(effectData, creatureData)
+	local parameter1 = IEex_ReadDword(effectData + 0x18)
+	local parameter2 = IEex_ReadDword(effectData + 0x1C)
+	IEex_SetActionbarButton(IEex_GetActorIDShare(creatureData), parameter1, parameter2)
+end
 
 -- Does a search through the creature's data for the
 --  number specified by parameter1. Each time it finds the number,
