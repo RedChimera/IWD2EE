@@ -1549,6 +1549,21 @@ COPY_EXISTING ~ilw01.itm~ ~override~ ~imw01.itm~ ~override~ ~isw01.itm~ ~overrid
 
 */
 
+COPY_EXISTING ~sppr106.spl~ ~override~
+	SAY NAME1 @31106
+	SAY NAME2 @31106
+	SAY UNIDENTIFIED_DESC @32106
+	SAY IDENTIFIED_DESC @32106
+	READ_SHORT 0x68 numheaders
+	FOR (i = numheaders; i < 10; ++i) BEGIN
+		LPF ADD_SPELL_HEADER INT_VAR copy_header=i insert_point=i END
+		numheaders = numheaders + 1
+	END
+	FOR (i = 0; i < numheaders; ++i) BEGIN
+		LPF ALTER_SPELL_HEADER INT_VAR header=(i + 1) min_level=(i + 1) END
+		LPF ALTER_EFFECT INT_VAR header=i silent=1 check_headers=1 check_globals=0 special=(12 + (i + 6) * 0x10000) END
+	END
+
 COPY_EXISTING ~sppr115.spl~ ~override~
 	SAY NAME1 @31115
 	SAY NAME2 @31115
@@ -2092,7 +2107,7 @@ COPY_EXISTING ~uspr454.spl~ ~override~
 	END
 	FOR (i = 0; i < numheaders; ++i) BEGIN
 		LPF ALTER_SPELL_HEADER INT_VAR header=(i + 1) min_level=(i + 1) END
-		LPF ALTER_EFFECT INT_VAR header=i silent=1 check_headers=1 check_globals=0 special=((i + 1) / 2) END
+		LPF ALTER_EFFECT INT_VAR header=i silent=1 check_headers=1 check_globals=0 special=(11 + ((i + 1) / 2) * 0x10000) END
 	END
 
 COPY_EXISTING ~uspr551.spl~ ~override~
@@ -2482,6 +2497,16 @@ COPY_EXISTING ~uswi861.spl~ ~override~
 	SAY UNIDENTIFIED_DESC @38861
 	SAY IDENTIFIED_DESC @38861
 
+COPY_EXISTING ~uswi862.spl~ ~override~
+	SAY NAME1 @37862
+	SAY NAME2 @37862
+	SAY UNIDENTIFIED_DESC @38862
+	SAY IDENTIFIED_DESC @38862
+
+COPY_EXISTING ~ussimula.cre~ ~override~
+	SAY NAME1 @37862
+	SAY NAME2 @37862
+
 COPY_EXISTING ~uswi952.spl~ ~override~
 	SAY NAME1 @37952
 	SAY NAME2 @37952
@@ -2584,11 +2609,6 @@ COPY_EXISTING ~sppr504.spl~ ~override~ ~sppr712.spl~ ~override~
 	LPF CLONE_EFFECT INT_VAR multi_match=1 opcode=112 timing=9 STR_VAR resource=~USQUIP09~ insert=~last~ END
 	LPF CLONE_EFFECT INT_VAR multi_match=1 opcode=112 timing=9 STR_VAR resource=~USQUIP10~ insert=~last~ END
 	UNLESS ~USQUIP01~
-
-COPY_EXISTING ~ar5202.are~ ~override~
-	READ_SHORT 0x48 theareatype
-	theareatype|=0x800
-	WRITE_SHORT 0x48 theareatype
 
 COPY_EXISTING ~spwi402.spl~ ~override~ ~spwi526.spl~ ~override~
 	LPF CLONE_EFFECT INT_VAR multi_match=1 match_opcode=124 opcode=500 timing=0 duration=0 STR_VAR resource=~MENOTEL~ insert=~first~ END
@@ -3333,6 +3353,7 @@ COPY_EXISTING ~53MALAVO.sto~ ~override~
 	ADD_STORE_ITEM ~USWI554Z~ AFTER ~SPPR519Z~ #1 #1 #0 ~IDENTIFIED~ #1
 	ADD_STORE_ITEM ~USWI551Z~ AFTER ~SPPR519Z~ #1 #1 #0 ~IDENTIFIED~ #1
 	ADD_STORE_ITEM ~USWI652Z~ AFTER ~SPWI623Z~ #1 #1 #0 ~IDENTIFIED~ #1
+	ADD_STORE_ITEM ~USWI862Z~ #1 #1 #0 ~IDENTIFIED~ #1
 	ADD_STORE_ITEM ~USWI955Z~ #1 #1 #0 ~IDENTIFIED~ #2
 
 COPY_EXISTING ~53MYRVEK.sto~ ~override~

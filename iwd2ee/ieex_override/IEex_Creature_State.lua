@@ -35,7 +35,6 @@ function IEex_Extern_OnGameObjectAdded(actorID)
 		print("[IEex_OnGameObjectAdded] Engine attempted to add invalid object?")
 		return
 	end
-	local vfptr = IEex_ReadDword(share)
 	if IEex_ReadByte(share + 0x4, 0) ~= 0x31 then return end
 
 	IEex_Helper_SynchronizedBridgeOperation("IEex_GameObjectData", function()
@@ -203,7 +202,7 @@ end
 function IEex_Extern_RestrictCreatureActionbar(creatureData, buttonType)
 	IEex_AssertThread(IEex_Thread.Async, true)
 	-- Restrict customization if not PC
-	return IEex_ReadByte(creatureData + 0x24, 0x0) ~= 2
+	return (IEex_ReadByte(creatureData + 0x24, 0x0) ~= 2 and bit.band(IEex_ReadDword(creatureData + 0x740), 0x400000) == 0)
 end
 
 ------------------

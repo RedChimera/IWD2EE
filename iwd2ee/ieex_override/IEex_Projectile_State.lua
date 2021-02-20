@@ -138,7 +138,6 @@ IEex_ProjectileType = {
 ex_original_projectile = {}
 function IEex_Extern_OnProjectileDecode(esp)
 	IEex_AssertThread(IEex_Thread.Async)
-	local newProjectile = -1
 	local missileIndex = IEex_ReadWord(esp + 0x4, 0)
 	local generalProjectileType = IEex_ProjectileType[missileIndex]
 	local source = IEex_DecodeProjectileSources[IEex_ReadDword(esp)]
@@ -182,7 +181,7 @@ function IEex_Extern_OnProjectileDecode(esp)
 				local originatingEffectData = v[2]
 				local possibleProjectile = IEex_MutatorOpcodeFunctions[funcName]["typeMutator"](source, originatingEffectData, CGameAIBase, missileIndex, sourceRES)
 				if possibleProjectile ~= nil then
-					newProjectile = possibleProjectile
+					missileIndex = possibleProjectile
 				end
 			end
 		end
@@ -190,7 +189,7 @@ function IEex_Extern_OnProjectileDecode(esp)
 	for funcName, funcList in pairs(IEex_MutatorGlobalFunctions) do
 		local possibleProjectile = funcList["typeMutator"](source, CGameAIBase, missileIndex, sourceRES)
 		if possibleProjectile ~= nil then
-			newProjectile = possibleProjectile
+			missileIndex = possibleProjectile
 		end
 	end
 	if IEex_GetActorSpellState(sourceID, 246) then
@@ -215,9 +214,9 @@ function IEex_Extern_OnProjectileDecode(esp)
 			end
 		end)
 	end
-	if newProjectile ~= -1 then
-		IEex_WriteWord(esp + 0x4, newProjectile)
-	end
+--	if newProjectile ~= missileIndex then
+		IEex_WriteWord(esp + 0x4, missileIndex)
+--	end
 end
 
 function IEex_Extern_OnPostProjectileCreation(CProjectile, esp)
@@ -1104,7 +1103,6 @@ IEex_MutatorOpcodeFunctions["MEATKSAV"] = {
 			IEex_WriteWord(effectData + 0x1C, 3)
 			IEex_WriteDword(effectData + 0x3C, bit.bor(IEex_ReadDword(effectData + 0x3C), 0x8))
 			IEex_WriteDword(effectData + 0x40, savebonus)
-			IEex_DS(savebonus)
 		end
     end,
 }
@@ -1112,18 +1110,33 @@ IEex_MutatorOpcodeFunctions["MEATKSAV"] = {
 ex_is_boulder_shot = {}
 IEex_MutatorOpcodeFunctions["MEBOULSH"] = {
     ["typeMutator"] = function(source, originatingEffectData, creatureData, missileIndex, sourceRES)
-   		local actorID = IEex_GetActorIDShare(creatureData)
-   		local thelimit = IEex_ReadDword(originatingEffectData + 0x44)
-   		if missileIndex < 17 or missileIndex > 21 or thelimit == 0 then 
-   			ex_is_boulder_shot[actorID] = nil
-   			return missileIndex
-   		elseif thelimit > 0 and source ~= 11 then
-   			thelimit = thelimit - 1
-   			IEex_WriteDword(originatingEffectData + 0x44, thelimit)
-   		end
-		ex_is_boulder_shot[actorID] = missileIndex
-    	if thelimit == 0 then
-    		IEex_WriteWord(creatureData + 0x476, 0)
+		local actorID = IEex_GetActorIDShare(creatureData)
+		if ex_is_boulder_shot[actorID] == nil then
+			ex_is_boulder_shot[actorID] = {}
+		end
+		local matchMissileIndexTable = IEex_ReadWord(originatingEffectData + 0x44, 0x0)
+		local functionIdentifier = IEex_ReadLString(originatingEffectData + 0x90, 8)
+		local newMissileIndex = missileIndex
+		local savingthrow = IEex_ReadDword(originatingEffectData + 0x3C)
+		local projectileMatched = false
+		if matchMissileIndexTable <= 0 then
+			projectileMatched = true
+		elseif ex_match_missile_index[matchMissileIndexTable] ~= nil and ex_match_missile_index[matchMissileIndexTable][missileIndex] ~= nil then
+			projectileMatched = true
+			newMissileIndex = ex_match_missile_index[matchMissileIndexTable][missileIndex]
+		end
+		local thelimit = IEex_ReadSignedWord(originatingEffectData + 0x46, 0x0)
+		if (bit.band(savingthrow, 0x80000) > 0 and thelimit == 0) or not projectileMatched then
+			ex_is_boulder_shot[actorID][functionIdentifier] = nil
+			return missileIndex
+		elseif bit.band(savingthrow, 0x80000) > 0 and thelimit > 0 and source ~= 11 and source ~= 13 then
+			thelimit = thelimit - 1
+			IEex_WriteWord(originatingEffectData + 0x46, thelimit)
+		end
+		ex_is_boulder_shot[actorID][functionIdentifier] = true
+		
+		if (bit.band(savingthrow, 0x80000) > 0 and thelimit == 0) then
+			IEex_WriteWord(creatureData + 0x476, 0)
 			IEex_ApplyEffectToActor(actorID, {
 ["opcode"] = 254,
 ["target"] = 2,
@@ -1133,7 +1146,7 @@ IEex_MutatorOpcodeFunctions["MEBOULSH"] = {
 ["source_id"] = actorID,
 })
 		end
-		return 375
+		return newMissileIndex
 	end,
     ["projectileMutator"] = function(source, originatingEffectData, creatureData, projectileData, sourceRES)
     
@@ -1143,8 +1156,15 @@ IEex_MutatorOpcodeFunctions["MEBOULSH"] = {
 		local actorID = IEex_GetActorIDShare(creatureData)
 		local opcode = IEex_ReadDword(effectData + 0xC)
 		local damageType = IEex_ReadWord(effectData + 0x1E, 0x0)
-		if ex_is_boulder_shot[actorID] ~= nil and opcode == 12 and (damageType == 0 or damageType == 0x400 or damageType == 0x800) then
-			ex_is_boulder_shot[actorID] = nil
+		local damageEnchantment = IEex_ReadWord(effectData + 0x44, 0x0)
+		local functionIdentifier = IEex_ReadLString(originatingEffectData + 0x90, 8)
+		local matchMissileIndexTable = IEex_ReadWord(originatingEffectData + 0x44, 0x0)
+		if ex_is_boulder_shot[actorID][functionIdentifier] ~= nil and opcode == 12 and IEex_ReadLString(effectData + 0x90, 8) == "IEEX_DAM" then
+			ex_is_boulder_shot[actorID][functionIdentifier] = nil
+			if ex_new_projectile_damage_type[matchMissileIndexTable] ~= nil and ex_new_projectile_damage_type[matchMissileIndexTable][damageType] ~= nil then
+				damageType = ex_new_projectile_damage_type[matchMissileIndexTable][damageType]
+				IEex_WriteWord(effectData + 0x1E, damageType)
+			end
 			local damageBonus = IEex_ReadByte(originatingEffectData + 0x18, 0x0)
 			local dicesize = IEex_ReadByte(originatingEffectData + 0x19, 0x0)
 			local dicenumber = IEex_ReadByte(originatingEffectData + 0x1A, 0x0)
@@ -1161,7 +1181,27 @@ IEex_MutatorOpcodeFunctions["MEBOULSH"] = {
 				end
 				damageBonus = damageBonus + diceRoll
 			end
+			if damageEnchantment == 0 then
+				IEex_WriteWord(effectData + 0x44, 1)
+			end
 			IEex_WriteDword(effectData + 0x18, IEex_ReadDword(effectData + 0x18) + damageBonus)
+		end
+    end,
+}
+
+IEex_MutatorOpcodeFunctions["MEMODDTP"] = {
+    ["typeMutator"] = function(source, originatingEffectData, creatureData, missileIndex, sourceRES)
+    
+	end,
+    ["projectileMutator"] = function(source, originatingEffectData, creatureData, projectileData, sourceRES)
+    
+    end,
+
+    ["effectMutator"] = function(source, originatingEffectData, creatureData, projectileData, effectData)
+		local opcode = IEex_ReadDword(effectData + 0xC)
+		if opcode == 12 and IEex_ReadLString(effectData + 0x90, 8) == "IEEX_DAM" and (IEex_ReadLString(effectData + 0x6C, 8) == IEex_ReadLString(originatingEffectData + 0x90, 8) or IEex_ReadLString(effectData + 0x74, 8) == IEex_ReadLString(originatingEffectData + 0x90, 8)) then
+			local newDamageType = IEex_ReadWord(originatingEffectData + 0x18, 0x0)
+			IEex_WriteWord(effectData + 0x1A, newDamageType)
 		end
     end,
 }

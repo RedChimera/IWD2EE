@@ -253,7 +253,7 @@ ex_empowerable_opcodes = {[0] = true, [1] = true, [6] = true, [10] = true, [12] 
 		end
 		local damageType = bit.band(parameter2, 0xFFFF0000)
 		if opcode == 12 and parent_resource == "IEEX_DAM" then
-			if (bit.band(savingthrow, 0x10000) > 0 and (IEex_GetActorSpellState(sourceID, 195) or IEex_GetActorSpellState(sourceID, 225))) or bit.band(savingthrow, 0x40000) == 0 then
+--			if (bit.band(savingthrow, 0x10000) > 0 and (IEex_GetActorSpellState(sourceID, 195) or IEex_GetActorSpellState(sourceID, 225))) or bit.band(savingthrow, 0x40000) == 0 then
 				local weaponRES = IEex_ReadLString(effectData + 0x6C, 8)
 				local launcherRES = IEex_ReadLString(effectData + 0x74, 8)
 				local baseCriticalMultiplier = 2
@@ -286,9 +286,6 @@ ex_empowerable_opcodes = {[0] = true, [1] = true, [6] = true, [10] = true, [12] 
 						local theresource = IEex_ReadLString(offset + 0x14, 8)
 						if theopcode == 500 and theresource == "MEEXHIT" then
 							exhitIndexList[theparameter2] = true
-						elseif theopcode == 288 and theparameter2 == 213 then
-							damageType = IEex_ReadDword(offset + 0x4)
-							IEex_WriteWord(effectData + 0x1E, damageType)
 						end
 					end
 					for i = 0, numGlobalEffects - 1, 1 do
@@ -299,6 +296,9 @@ ex_empowerable_opcodes = {[0] = true, [1] = true, [6] = true, [10] = true, [12] 
 						if theopcode == 288 and theparameter2 == 195 and bit.band(thesavingthrow, 0x10000) > 0 then
 							local theparameter1 = IEex_ReadDword(offset + 0x4)
 							criticalMultiplier = criticalMultiplier + theparameter1
+						elseif theopcode == 288 and theparameter2 == 213 and bit.band(thesavingthrow, 0x10000) > 0 then
+							damageType = IEex_ReadDword(offset + 0x4)
+							IEex_WriteWord(effectData + 0x1E, damageType)
 						elseif theopcode == 288 and theparameter2 == 225 and bit.band(thesavingthrow, 0x10000) > 0 and bit.band(thesavingthrow, 0x100000) == 0 and bit.band(thesavingthrow, 0x800000) > 0 then
 							local spellRES = IEex_ReadLString(offset + 0x14, 8)
 							if spellRES ~= "" and (bit.band(thesavingthrow, 0x4000000) == 0 or bit.band(IEex_ReadDword(effectData + 0xC8), 0x40) == 0) then
@@ -337,6 +337,9 @@ ex_empowerable_opcodes = {[0] = true, [1] = true, [6] = true, [10] = true, [12] 
 						if theopcode == 288 and theparameter2 == 195 and bit.band(thesavingthrow, 0x10000) > 0 then
 							local theparameter1 = IEex_ReadDword(offset + 0x4)
 							criticalMultiplier = criticalMultiplier + theparameter1
+						elseif theopcode == 288 and theparameter2 == 213 and bit.band(thesavingthrow, 0x10000) > 0 then
+							damageType = IEex_ReadDword(offset + 0x4)
+							IEex_WriteWord(effectData + 0x1E, damageType)
 						elseif theopcode == 288 and theparameter2 == 225 and bit.band(thesavingthrow, 0x10000) > 0 and bit.band(thesavingthrow, 0x100000) == 0 and bit.band(thesavingthrow, 0x800000) > 0 then
 							local spellRES = IEex_ReadLString(offset + 0x14, 8)
 							if spellRES ~= "" and (bit.band(thesavingthrow, 0x4000000) == 0 or bit.band(IEex_ReadDword(effectData + 0xC8), 0x40) == 0) then
@@ -370,7 +373,7 @@ ex_empowerable_opcodes = {[0] = true, [1] = true, [6] = true, [10] = true, [12] 
 					local thespecial = IEex_ReadDword(eData + 0x48)
 					if theopcode == 288 and theparameter2 == 195 and bit.band(thesavingthrow, 0x10000) == 0 and (thespecial == -1 or thespecial == itemType) then
 						criticalMultiplier = criticalMultiplier + theparameter1
-					elseif theopcode == 288 and theparameter2 == 213 then
+					elseif theopcode == 288 and theparameter2 == 213 and bit.band(thesavingthrow, 0x10000) == 0 then
 						damageType = theparameter1
 						IEex_WriteWord(effectData + 0x1E, damageType)
 					elseif theopcode == 288 and theparameter2 == 225 and bit.band(thesavingthrow, 0x10000) == 0 and bit.band(thesavingthrow, 0x100000) == 0 and bit.band(thesavingthrow, 0x800000) > 0 then
@@ -456,7 +459,7 @@ ex_empowerable_opcodes = {[0] = true, [1] = true, [6] = true, [10] = true, [12] 
 				
 				
 
-			end
+--			end
 
 		end
 		if opcode == 13 and parent_resource == "" then

@@ -314,7 +314,9 @@ Saving Throw: None
 
 This spell summons forth a silent, weightless sword-like construct made of moonlight that extends 4 feet from the caster's hand. The moonblade is considered a +4 weapon for determining what creatures it can damage, though the bonus does not apply to attack bonus. In addition, due to the insubstantial nature of the moonblade, the blade bypasses armor and shield bonuses to AC, though it still gains damage bonuses from Strength, proficiency, and any other damage bonus a melee weapon could gain. It uses the Simple Weapon: Small Blade proficiency.
 
-The strike of a moonblade drains a target's vitality, inflicting 1d12+4 points of damage, and an additional 1d12 points to undead, who are particularly susceptible. A successful strike also temporarily scrambles magic, causing any spells the target casts in the next round to fail. Though it is not made of silver, the moonblade has the same effect against lycanthropes as a silver weapon, dealing full damage to them.~
+The strike of a moonblade drains a target's vitality, inflicting 1d12+4 points of damage, and an additional 1d12+4 points to undead, who are particularly susceptible. A successful strike also temporarily scrambles magic, causing any spells the target casts in the next round to fail. Though it is not made of silver, the moonblade has the same effect against lycanthropes as a silver weapon, dealing full damage to them.
+
+If the caster is already wielding a non-conjured moonblade at the time that they cast this spell, instead of conjuring a new moonblade, the spell will give the current moonblade +3 to attack and damage for the duration.~
 @1052    = ~Neutralize Poison~
 @1053    = ~Neutralize Poison
 (Conjuration)
@@ -2612,10 +2614,25 @@ Launcher:  Bow~
 @30053=~Ghoul~
 @30054=~Object of Sympathy~
 @30055=~Copied Spell~
+@30056=~Incorporeal~
+@30057=~Ethereal~
+@30058=~Levitating~
+@30059=~Resistance Lowered~
 
+@31106     = ~Magic Stone~
+@32106     = ~Magic Stone
+(Enchantment)
+Level: Clr 1, Drd 1, Rgr 1
+Range: Caster
+Duration: 30 rounds or until used up
+Casting Time: 1
+Area of Effect: Caster
+Saving Throw: None
+
+This spell enhances the caster's sling bullets. Any bullet the caster throws will deal magic damage instead of physical damage, and will deal an additional 1d4+1 damage. The spell ends once the caster has thrown a certain number of bullets: five plus one per caster level (maximum of 15 at level 10).~
 @31115     = ~Armor of Faith~
 @32115     = ~Armor of Faith
-(Abjuration) 
+(Abjuration)
 Level: Clr 1, Pal, Helm 1
 Range: Caster
 Duration: 10 rounds + 1 round/level
@@ -2947,7 +2964,7 @@ Casting Time: 3
 Area of Effect: Caster
 Saving Throw: None
 
-This spell creates fifteen small meteors, which can be thrown by the caster. Each meteor bursts into a 1-foot-diameter sphere upon impact and inflicts 1d4+6 points of fire damage (plus Strength bonus). The meteors use the Simple Weapon: Missile proficiency, gain a +5 bonus to attack rolls, and strike as +3 weapons. The wizard may discharge up to five missiles per round.~
+This spell creates fifteen small meteors, which can be thrown by the caster. Each meteor bursts into a 1-foot-diameter sphere upon impact and inflicts 1d4+6 points of fire damage (plus Strength bonus). The meteors use the Simple Weapon: Missile proficiency (they count as darts), gain a +5 bonus to attack rolls, and strike as +3 weapons. The wizard may attack four additional times per round while throwing the meteors.~
 @33503     = ~Cloudkill~
 @34503     = ~Cloudkill
 (Necromancy)
@@ -3252,7 +3269,7 @@ This spell can only be cast on an enemy. Casting it causes everyone other than t
 @36454     = ~Pebbles to Boulders
 (Transmutation)
 Level: Clr 5, Drd 4, Rgr 4
-Range: Sight of Caster
+Range: Caster
 Duration: 5 rounds/level or until used up
 Casting Time: 4
 Area of Effect: Caster
@@ -3854,6 +3871,17 @@ Area of Effect: Everyone in current area
 Saving Throw: None
 
 This spell teleports every creature in the current area next to the caster. Casting this spell in a dungeon could lead to a massive fight, so the caster had better be prepared.~
+@37862     = ~Simulacrum~
+@38862     = ~Simulacrum
+(Illusion)
+Level: Brd 8, Sor/Wiz 8
+Range: Sight of Caster
+Duration: 1 round/level
+Casting Time: 8
+Area of Effect: Special
+Saving Throw: None
+
+Simulacrum creates a duplicate of the caster, which will serve the caster for the duration. It has half the caster's hit points and half the caster's level (rounded up) in each of the caster's classes. The simulacrum retains the memorized spells of the caster, which it can cast as well (but only those of a low enough level). It has no equipment, so it is useful primarily as an extra spellcaster.~
 @37952     = ~Perfect Invisibility~
 @38952     = ~Perfect Invisibility
 (Illusion)

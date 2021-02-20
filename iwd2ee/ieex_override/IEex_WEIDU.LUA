@@ -108,3 +108,12 @@ ex_stat_scaling = {
 [95] = {[12] = 1, [14] = 2, [16] = 3, [18] = 4, [20] = 5, [22] = 6, [24] = 7, [26] = 8, [28] = 9, [30] = 10, [32] = 11, [34] = 12, [36] = 13, [38] = 14, [40] = 15, },
 [121] = {[3] = 5, }
 }
+ex_match_missile_index = {
+[10] = {[6] = 2, [11] = 7, [16] = 12, [21] = 17, [31] = 27, [36] = 32, [60] = 56, }, -- Turn nonmagical projectiles into magical ones
+[11] = {[17] = 375, [19] = 375, [20] = 375, [21] = 375, }, -- Turn bullets into boulders
+[12] = {[17] = 17, [18] = 18, [19] = 19, [20] = 20, [21] = 17, [375] = 375}, -- Turn bullets into Magic Stones
+}
+ex_new_projectile_damage_type = {
+[11] = {[0x10] = 0x0, [0x80] = 0x0, [0x200] = 0x0, [0x400] = 0x0, [0x800] = 0x0}, -- Turn bullets into boulders
+[12] = {[0x0] = 0x40, [0x10] = 0x40, [0x80] = 0x40, [0x200] = 0x40, [0x400] = 0x40, [0x800] = 0x40}, -- Turn bullets into Magic Stones
+}

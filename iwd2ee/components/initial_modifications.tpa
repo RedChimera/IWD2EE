@@ -390,6 +390,31 @@ COPY_EXISTING ~52MOROH6.bcs~ ~override~
 		REPLACE_TEXTUALLY EXACT_MATCH ~AdvanceTime(900)~ ~~
 	END
 
+COPY_EXISTING ~52MOROHE.dlg~ ~override~
+	DECOMPILE_AND_PATCH BEGIN
+		REPLACE_TEXTUALLY ~!TotalItemCnt(LastTalkedToBy, *0)~ ~Or(2)
+	TotalItemCntGT(LastTalkedToBy,1)
+	TotalItemCntGT(LastTalkedToBy,0)
+Or(2)
+	TotalItemCntGT(LastTalkedToBy,1)
+	!IsAnimationID(LastTalkedToBy,MONK_MALE_HUMAN)
+Or(2)
+	TotalItemCntGT(LastTalkedToBy,1)
+	!IsAnimationID(LastTalkedToBy,MONK_FEMALE_HUMAN)~
+		REPLACE_TEXTUALLY ~TotalItemCnt(LastTalkedToBy, *0)~ ~TotalItemCntLT(LastTalkedToBy,2)
+TotalItemCntLT(LastTalkedToBy,2)
+Or(3)
+	TotalItemCnt(LastTalkedToBy,0)
+	IsAnimationID(LastTalkedToBy,MONK_MALE_HUMAN)
+	IsAnimationID(LastTalkedToBy,MONK_FEMALE_HUMAN)~
+		REPLACE_TEXTUALLY ~TotalItemCnt(Protagonist, *0)~ ~TotalItemCntLT(LastTalkedToBy,2)
+TotalItemCntLT(LastTalkedToBy,2)
+Or(3)
+	TotalItemCnt(LastTalkedToBy,0)
+	IsAnimationID(LastTalkedToBy,MONK_MALE_HUMAN)
+	IsAnimationID(LastTalkedToBy,MONK_FEMALE_HUMAN)~
+	END
+
 COPY_EXISTING ~60C6000A.bcs~ ~override~ ~64ORRICC.bcs~ ~override~
 	DECOMPILE_AND_PATCH BEGIN
 		REPLACE_TEXTUALLY EXACT_MATCH ~ClearPartyEffects()~ ~~
@@ -700,6 +725,64 @@ COPY_EXISTING ~LISTDOMN.2da~ ~override~
 			END
 		END
 	END
+
+OUTER_SET ref_incorporeal = RESOLVE_STR_REF(@30056)
+OUTER_SET ref_reflect_attack = RESOLVE_STR_REF(@37152)
+
+COPY_EXISTING ~STATDESC.2da~ ~override~
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~\([%MNL%%LNL%]\)113.*~ ~\1113%TAB%%ref_reflect_attack%~
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~\([%MNL%%LNL%]\)145.*~ ~\1145%TAB%%ref_incorporeal%~
+
+OUTER_SET ref_magic_stone = RESOLVE_STR_REF(@31106)
+OUTER_SET ref_pebbles_to_boulders = RESOLVE_STR_REF(@35454)
+OUTER_SET ref_thorn_shots = RESOLVE_STR_REF(@35553)
+OUTER_SET ref_moment_of_prescience = RESOLVE_STR_REF(@37354)
+OUTER_SET ref_ghoulish_feast = RESOLVE_STR_REF(@37453)
+OUTER_SET ref_ethereal = RESOLVE_STR_REF(@30057)
+OUTER_SET ref_improved_haste = RESOLVE_STR_REF(@37958)
+OUTER_SET ref_omnipresence = RESOLVE_STR_REF(@37860)
+OUTER_SET ref_link_effects = RESOLVE_STR_REF(@37857)
+OUTER_SET ref_spell_trap = RESOLVE_STR_REF(@37856)
+OUTER_SET ref_teleport_step = RESOLVE_STR_REF(@37855)
+OUTER_SET ref_mantle = RESOLVE_STR_REF(@37752)
+OUTER_SET ref_true_strike = RESOLVE_STR_REF(@37151)
+OUTER_SET ref_divine_shield = RESOLVE_STR_REF(@35151)
+OUTER_SET ref_hunters_mark = RESOLVE_STR_REF(@35152)
+OUTER_SET ref_shield_other = RESOLVE_STR_REF(@35253)
+OUTER_SET ref_quiver_of_plenty = RESOLVE_STR_REF(@35351)
+OUTER_SET ref_curing_contingency = RESOLVE_STR_REF(@35451)
+OUTER_SET ref_resistance_lowered = RESOLVE_STR_REF(@30059)
+OUTER_SET ref_repulsion = RESOLVE_STR_REF(@35653)
+OUTER_SET ref_aurils_blessing = RESOLVE_STR_REF(@35951)
+OUTER_SET ref_spell_sequencer = RESOLVE_STR_REF(@37758)
+OUTER_SET ref_levitating = RESOLVE_STR_REF(@30058)
+OUTER_SET ref_living_lightning = RESOLVE_STR_REF(@37954)
+APPEND ~STATDESC.2da~
+~146	%ref_magic_stone%
+147	%ref_pebbles_to_boulders%
+148	%ref_thorn_shots%
+149	%ref_moment_of_prescience%
+150	%ref_ghoulish_feast%
+151	%ref_ethereal%
+152	%ref_improved_haste%
+153	%ref_omnipresence%
+154 %ref_link_effects%
+155	%ref_spell_trap%
+156	%ref_teleport_step%
+157	%ref_mantle%
+158	%ref_true_strike%
+159 %ref_divine_shield%
+160	%ref_hunters_mark%
+161	%ref_shield_other%
+162	%ref_quiver_of_plenty%
+163	%ref_curing_contingency%
+164	%ref_resistance_lowered%
+165	%ref_repulsion%
+166	%ref_aurils_blessing%
+167	%ref_spell_sequencer%
+168	%ref_levitating%
+169	%ref_living_lightning%
+~
 
 VERBOSE
 
