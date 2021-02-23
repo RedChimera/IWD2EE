@@ -2338,12 +2338,6 @@ COPY_EXISTING ~LISTINNT.2da~ ~override~
 	INSERT_2DA_ROW numrows 2 ~%lastindex% USCOUNTE~
 	numrows += 1
 	lastindex += 1
-	INSERT_2DA_ROW numrows 2 ~%lastindex% USMNKLAY~
-	numrows += 1
-	lastindex += 1
-	INSERT_2DA_ROW numrows 2 ~%lastindex% USPALSHO~
-	numrows += 1
-	lastindex += 1
 	INSERT_2DA_ROW numrows 2 ~%lastindex% USMM001~
 	numrows += 1
 	lastindex += 1
@@ -2366,5 +2360,11 @@ COPY_EXISTING ~LISTINNT.2da~ ~override~
 	numrows += 1
 	lastindex += 1
 	INSERT_2DA_ROW numrows 2 ~%lastindex% USMM009~
+	numrows += 1
+	lastindex += 1
+	INSERT_2DA_ROW numrows 2 ~%lastindex% USMNKLAY~
+	numrows += 1
+	lastindex += 1
+	INSERT_2DA_ROW numrows 2 ~%lastindex% USPALSHO~
 
 INCLUDE ~%mod_folder%/components/final_patches.tpa~
