@@ -114,6 +114,15 @@
 @55113=~energy drain~
 @55114=~<EXICNAME> cannot be turned~
 @55115=~Iron skins remaining: ~
+@55190=~Spells Active On <EXASNAME>:~
+@55191=~  <EXASVAL1> - 1 second remaining~
+@55192=~  <EXASVAL1> - <EXASVAL2> seconds remaining~
+@55193=~  <EXASVAL1> - 1 round remaining~
+@55194=~  <EXASVAL1> - <EXASVAL2> rounds remaining~
+@55195=~  <EXASVAL1> - 1 hour remaining~
+@55196=~  <EXASVAL1> - <EXASVAL2> hours remaining~
+@55197=~  <EXASVAL1> - 1 day remaining~
+@55198=~  <EXASVAL1> - <EXASVAL2> days remaining~
 
 @55301=~<EXWHACTION1>: <EXWHROLL1> <EXWHBONUS1> = <EXWHTOTAL1> : <EXWHHITMISS1>~
 @55302=~<EXWHACTION2>: <EXWHROLL2> <EXWHBONUS2> = <EXWHTOTAL2> : <EXWHHITMISS2>~
@@ -243,3 +252,8 @@
 @55599=~Contingency triggered~
 
 @55701=~Spell Failed: Rewind Time had not been initialized to start tracking effects on this character. Now it has, so it should work the next time the character casts the spell.~
+@55702=~Uninjured~
+@55703=~Barely injured~
+@55704=~Hurt~
+@55705=~Badly wounded~
+@55706=~Almost dead~

@@ -344,6 +344,10 @@ COPY_EXISTING ~00SAIR16.cre~ ~override~ ~41SAIR16.cre~ ~override~
 	SAY NAME1 #39796
 	SAY NAME2 #39796
 
+COPY_EXISTING ~USCFURY2.cre~ ~override~
+	SAY NAME1 @23046
+	SAY NAME2 @23046
+
 COPY_EXISTING ~00SDSAL.cre~ ~override~ ~00SSAL.cre~ ~override~ ~00SSHSAL.cre~ ~override~ ~00SSSAL.cre~ ~override~ ~41SDSAL.cre~ ~override~ ~00SSSAL.cre~ ~override~
 	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelfighter=9 END
 	WRITE_SHORT currenthp 70
@@ -2028,7 +2032,10 @@ COPY_EXISTING ~53MIRABE.cre~ ~override~
 	LPF	IWD2_CRE_SPELL INT_VAR num=2 STR_VAR class=~wizard~ resource=~SPPR715~ END
 	LPF	IWD2_CRE_SPELL INT_VAR num=2 STR_VAR class=~wizard~ resource=~SPPR726~ END
 	LPF	IWD2_CRE_SPELL INT_VAR num=3 STR_VAR class=~wizard~ resource=~SPWI903~ END
-	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~SPWI910~ END
+//	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~SPWI910~ END
+	PATCH_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~2~ BEGIN
+		LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~USWI957~ END
+	END
 
 COPY_EXISTING ~60HARPY.cre~ ~override~
 	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelwizard=12 END

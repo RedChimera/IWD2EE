@@ -22,9 +22,25 @@ ACTION_PHP_EACH IEex_append_array AS data => ~~ BEGIN
 	APPEND ~%data%.IDS~ ~%data_1% %data_2%~ UNLESS ~^%data_1% ~
 END
 
+STRING_SET_EVALUATE 2943 ~<EXHPSTATE1>~
+STRING_SET_EVALUATE 2944 ~<EXHPSTATE2>~
+STRING_SET_EVALUATE 2945 ~<EXHPSTATE3>~
+STRING_SET_EVALUATE 2946 ~<EXHPSTATE4>~
+STRING_SET_EVALUATE 2947 ~<EXHPSTATE5>~
+
 COPY_EXISTING ~IEex_TRA.lua~ ~override~
 	SPRINT ex_str_925 @925
 	REPLACE_TEXTUALLY ~ex_str_925 *=.*~ ~ex_str_925 = "%ex_str_925%"~
+	SPRINT ex_str_uninjured @55702
+	REPLACE_TEXTUALLY ~ex_str_uninjured *=.*~ ~ex_str_uninjured = "%ex_str_uninjured%"~
+	SPRINT ex_str_barely_injured @55703
+	REPLACE_TEXTUALLY ~ex_str_barely_injured *=.*~ ~ex_str_barely_injured = "%ex_str_barely_injured%"~
+	SPRINT ex_str_hurt @55704
+	REPLACE_TEXTUALLY ~ex_str_hurt *=.*~ ~ex_str_hurt = "%ex_str_hurt%"~
+	SPRINT ex_str_badly_wounded @55705
+	REPLACE_TEXTUALLY ~ex_str_badly_wounded *=.*~ ~ex_str_badly_wounded = "%ex_str_badly_wounded%"~
+	SPRINT ex_str_almost_dead @55706
+	REPLACE_TEXTUALLY ~ex_str_almost_dead *=.*~ ~ex_str_almost_dead = "%ex_str_almost_dead%"~
 	ex_tra_5000 = RESOLVE_STR_REF(@5000)
 	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_tra_5000 *=.*~ ~ex_tra_5000 = %ex_tra_5000%~
 	ex_tra_55385 = RESOLVE_STR_REF(@55385)
@@ -291,6 +307,24 @@ COPY_EXISTING ~IEex_TRA.lua~ ~override~
 	REPLACE_TEXTUALLY ~ex_str_energydrain *=.*~ ~ex_str_energydrain = "%ex_str_energydrain%"~ 
 	SPRINT ex_str_55114 @55114
 	REPLACE_TEXTUALLY ~ex_str_55114 *=.*~ ~ex_str_55114 = "%ex_str_55114%"~
+	SPRINT ex_str_arcane_sight_a @55190
+	REPLACE_TEXTUALLY ~ex_str_arcane_sight_a *=.*~ ~ex_str_arcane_sight_a = "%ex_str_arcane_sight_a%"~
+	SPRINT ex_str_arcane_sight_b_second @55191
+	REPLACE_TEXTUALLY ~ex_str_arcane_sight_b_second *=.*~ ~ex_str_arcane_sight_b_second = "%ex_str_arcane_sight_b_second%"~
+	SPRINT ex_str_arcane_sight_b_seconds @55192
+	REPLACE_TEXTUALLY ~ex_str_arcane_sight_b_seconds *=.*~ ~ex_str_arcane_sight_b_seconds = "%ex_str_arcane_sight_b_seconds%"~
+	SPRINT ex_str_arcane_sight_b_round @55193
+	REPLACE_TEXTUALLY ~ex_str_arcane_sight_b_round *=.*~ ~ex_str_arcane_sight_b_round = "%ex_str_arcane_sight_b_round%"~
+	SPRINT ex_str_arcane_sight_b_rounds @55194
+	REPLACE_TEXTUALLY ~ex_str_arcane_sight_b_rounds *=.*~ ~ex_str_arcane_sight_b_rounds = "%ex_str_arcane_sight_b_rounds%"~
+	SPRINT ex_str_arcane_sight_b_hour @55195
+	REPLACE_TEXTUALLY ~ex_str_arcane_sight_b_hour *=.*~ ~ex_str_arcane_sight_b_hour = "%ex_str_arcane_sight_b_hour%"~
+	SPRINT ex_str_arcane_sight_b_hours @55196
+	REPLACE_TEXTUALLY ~ex_str_arcane_sight_b_hours *=.*~ ~ex_str_arcane_sight_b_hours = "%ex_str_arcane_sight_b_hours%"~
+	SPRINT ex_str_arcane_sight_b_day @55197
+	REPLACE_TEXTUALLY ~ex_str_arcane_sight_b_day *=.*~ ~ex_str_arcane_sight_b_day = "%ex_str_arcane_sight_b_day%"~
+	SPRINT ex_str_arcane_sight_b_days @55198
+	REPLACE_TEXTUALLY ~ex_str_arcane_sight_b_days *=.*~ ~ex_str_arcane_sight_b_days = "%ex_str_arcane_sight_b_days%"~
 	ex_tra_55401 = RESOLVE_STR_REF(@55401)
 	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_tra_55401 *=.*~ ~ex_tra_55401 = %ex_tra_55401%~
 	ex_tra_55402 = RESOLVE_STR_REF(@55402)
@@ -757,6 +791,9 @@ OUTER_SET ref_aurils_blessing = RESOLVE_STR_REF(@35951)
 OUTER_SET ref_spell_sequencer = RESOLVE_STR_REF(@37758)
 OUTER_SET ref_levitating = RESOLVE_STR_REF(@30058)
 OUTER_SET ref_living_lightning = RESOLVE_STR_REF(@37954)
+OUTER_SET ref_deathwatch = RESOLVE_STR_REF(@37155)
+OUTER_SET ref_arcane_sight = RESOLVE_STR_REF(@37254)
+
 APPEND ~STATDESC.2da~
 ~146	%ref_magic_stone%
 147	%ref_pebbles_to_boulders%
@@ -782,6 +819,8 @@ APPEND ~STATDESC.2da~
 167	%ref_spell_sequencer%
 168	%ref_levitating%
 169	%ref_living_lightning%
+170	%ref_deathwatch%
+171	%ref_arcane_sight%
 ~
 
 VERBOSE

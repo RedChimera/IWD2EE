@@ -1100,6 +1100,33 @@ IEex_MutatorOpcodeFunctions["MEATKSAV"] = {
 		local matchProjectile = IEex_ReadDword(originatingEffectData + 0x18)
 		if opcode == 12 and IEex_ReadLString(effectData + 0x90, 8) == "IEEX_DAM" and (matchProjectile == -1 or IEex_ReadWord(projectileData + 0x6E, 0x0) == matchProjectile) then
 			local savebonus = IEex_ReadDword(originatingEffectData + 0x40)
+			local sourceSpell = IEex_ReadLString(originatingEffectData + 0x90, 8)
+			if ex_damage_source_spell[sourceSpell] ~= nil then
+				sourceSpell = ex_damage_source_spell[sourceSpell]
+			end
+			local trueschool = IEex_ReadDword(originatingEffectData + 0x48)
+			if ex_trueschool[sourceSpell] ~= nil then
+				trueschool = ex_trueschool[sourceSpell]
+			end
+			IEex_IterateActorEffects(actorID, function(eData)
+				local theopcode = IEex_ReadDword(eData + 0x10)
+				local theparameter2 = IEex_ReadDword(eData + 0x20)
+				local thesavingthrow = IEex_ReadDword(eData + 0x40)
+				if theopcode == 288 and theparameter2 == 236 and bit.band(thesavingthrow, 0x10000) == 0 then
+					local theparameter1 = IEex_ReadDword(eData + 0x1C)
+					local theresource = IEex_ReadLString(eData + 0x30, 8)
+					local thespecial = IEex_ReadDword(eData + 0x48)
+					if bit.band(thesavingthrow, 0x20000) == 0 then
+						if theresource == "" or theresource == sourceSpell then
+							savebonus = savebonus + theparameter1
+						end
+					else
+						if thespecial == trueschool or thespecial == -1 then
+							savebonus = savebonus + theparameter1
+						end
+					end
+				end
+			end)
 			IEex_WriteWord(effectData + 0x1C, 3)
 			IEex_WriteDword(effectData + 0x3C, bit.bor(IEex_ReadDword(effectData + 0x3C), 0x8))
 			IEex_WriteDword(effectData + 0x40, savebonus)

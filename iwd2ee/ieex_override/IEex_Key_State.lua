@@ -332,14 +332,155 @@ function IEex_ExtraCheatKeysListener(key)
 	end
 end
 
+function IEex_DeathwatchListener()
+	local actorID = IEex_GetActorIDCursor()
+	if actorID > 0 then
+		local share = IEex_GetActorShare(actorID)
+		if share > 0 then
+			local deathwatchActive = false
+			for i = 0, 5, 1 do
+				local id = IEex_GetActorIDCharacter(i)
+				if id > 0 and IEex_GetActorSpellState(id, 211) and not IEex_GetActorState(id, 0x80140FED) then
+					IEex_IterateActorEffects(id, function(eData)
+						local theopcode = IEex_ReadDword(eData + 0x10)
+						local theparameter2 = IEex_ReadDword(eData + 0x20)
+						local thesavingthrow = IEex_ReadDword(eData + 0x40)
+						if theopcode == 288 and theparameter2 == 211 and bit.band(thesavingthrow, 0x10000) > 0 then
+							deathwatchActive = true
+						end
+					end)
+				end
+			end
+			if deathwatchActive then
+				IEex_SetToken("EXHPSTATE1", IEex_ReadSignedWord(share + 0x5C0, 0x0) .. "/" .. IEex_GetActorStat(actorID, 1))
+				IEex_SetToken("EXHPSTATE2", IEex_ReadSignedWord(share + 0x5C0, 0x0) .. "/" .. IEex_GetActorStat(actorID, 1))
+				IEex_SetToken("EXHPSTATE3", IEex_ReadSignedWord(share + 0x5C0, 0x0) .. "/" .. IEex_GetActorStat(actorID, 1))
+				IEex_SetToken("EXHPSTATE4", IEex_ReadSignedWord(share + 0x5C0, 0x0) .. "/" .. IEex_GetActorStat(actorID, 1))
+				IEex_SetToken("EXHPSTATE5", IEex_ReadSignedWord(share + 0x5C0, 0x0) .. "/" .. IEex_GetActorStat(actorID, 1))
+			else
+				IEex_SetToken("EXHPSTATE1", ex_str_uninjured)
+				IEex_SetToken("EXHPSTATE2", ex_str_barely_injured)
+				IEex_SetToken("EXHPSTATE3", ex_str_hurt)
+				IEex_SetToken("EXHPSTATE4", ex_str_badly_wounded)
+				IEex_SetToken("EXHPSTATE5", ex_str_almost_dead)
+			end
+		end
+	end
+end
+ex_arcane_sight_previous_tick = 0
+ex_arcane_sight_actors_viewed = {}
+function IEex_ArcaneSightListener(key)
+	if key ~= IEex_KeyIDS.TAB then return end
+	local actorID = IEex_GetActorIDCursor()
+	local share = IEex_GetActorShare(actorID)
+	if share <= 0 then return end
+	local tick = IEex_GetGameTick()
+	if tick ~= ex_arcane_sight_previous_tick then
+		ex_arcane_sight_actors_viewed = {}
+		ex_arcane_sight_previous_tick = tick
+	end
+	if ex_arcane_sight_actors_viewed[actorID] ~= nil then return end
+	ex_arcane_sight_actors_viewed[actorID] = true
+	local arcaneSightActive = false
+	for i = 0, 5, 1 do
+		local id = IEex_GetActorIDCharacter(i)
+		if id > 0 and IEex_GetActorSpellState(id, 211) and not IEex_GetActorState(id, 0x80140FED) then
+			IEex_IterateActorEffects(id, function(eData)
+				local theopcode = IEex_ReadDword(eData + 0x10)
+				local theparameter2 = IEex_ReadDword(eData + 0x20)
+				local thesavingthrow = IEex_ReadDword(eData + 0x40)
+				if theopcode == 288 and theparameter2 == 211 and bit.band(thesavingthrow, 0x20000) > 0 then
+					arcaneSightActive = true
+				end
+			end)
+		end
+	end
+	if arcaneSightActive then
+		local detectedSpells = {}
+		local detectedSpellResrefs = {}
+		local iSpell = 0
+		local atLeastOneSpellActive = false
+		IEex_IterateActorEffects(actorID, function(eData)
+			local thetiming = IEex_ReadDword(eData + 0x24)
+			local theduration = IEex_ReadDword(eData + 0x28)
+			local theparent_resource = IEex_ReadLString(eData + 0x94, 8)
+			local theTrueDuration = math.floor((theduration - tick) / 15)
+			if theTrueDuration >= 3600000 then
+				theduration = -1
+			end
+			if (thetiming == 6 or thetiming == 7 or thetiming == 4096) then
+				if ex_damage_source_spell[theparent_resource] ~= nil then
+					theparent_resource = ex_damage_source_spell[theparent_resource]
+				end
+--				if detectedSpells[theparent_resource] == nil then
+				if detectedSpellResrefs[theparent_resource] == nil then
+					iSpell = iSpell + 1
+					detectedSpellResrefs[theparent_resource] = iSpell
+					local resWrapper = IEex_DemandRes(theparent_resource, "SPL")
+					if resWrapper:isValid() then
+						local spellData = resWrapper:getData()
+--						local spellType = IEex_ReadWord(spellData + 0x1C, 0x0)
+--						local spellLevel = IEex_ReadDword(spellData + 0x34)
+						local spellNameRef = IEex_ReadDword(spellData + 0x8)
+
+						table.insert(detectedSpells, {spellNameRef, theduration})
+
+						if spellNameRef > 0 and theduration > 0 then
+							atLeastOneSpellActive = true
+						end
+					else
+						table.insert(detectedSpells, {-1, -1})
+					end
+					resWrapper:free()
+				elseif theduration > detectedSpells[detectedSpellResrefs[theparent_resource]][2] then
+					detectedSpells[detectedSpellResrefs[theparent_resource]][2] = theduration
+				end
+			end
+		end)
+		if atLeastOneSpellActive then
+			IEex_DisplayString(string.gsub(ex_str_arcane_sight_a, "<EXASNAME>", IEex_GetActorName(actorID)))
+			table.sort(detectedSpells, function(i1, i2)
+				return (i1[2] < i2[2])
+			end)
+			for k, spell in ipairs(detectedSpells) do
+				if spell[1] > 0 and spell[2] > 0 then
+					local spellName = IEex_FetchString(spell[1])
+					local trueDuration = (spell[2] - tick) / 15
+					if trueDuration >= 14400 then
+						IEex_DisplayString(string.gsub(string.gsub(ex_str_arcane_sight_b_days, "<EXASVAL1>", spellName), "<EXASVAL2>", math.floor(trueDuration / 7200)))
+					elseif trueDuration >= 7200 then
+						IEex_DisplayString(string.gsub(ex_str_arcane_sight_b_day, "<EXASVAL1>", spellName))
+					elseif trueDuration >= 600 then
+						IEex_DisplayString(string.gsub(string.gsub(ex_str_arcane_sight_b_hours, "<EXASVAL1>", spellName), "<EXASVAL2>", math.floor(trueDuration / 300)))
+					elseif trueDuration >= 300 then
+						IEex_DisplayString(string.gsub(ex_str_arcane_sight_b_hour, "<EXASVAL1>", spellName))
+					elseif trueDuration >= 14 then
+						IEex_DisplayString(string.gsub(string.gsub(ex_str_arcane_sight_b_rounds, "<EXASVAL1>", spellName), "<EXASVAL2>", math.floor(trueDuration / 7)))
+					elseif trueDuration >= 7 then
+						IEex_DisplayString(string.gsub(ex_str_arcane_sight_b_round, "<EXASVAL1>", spellName))
+					elseif trueDuration >= 2 then
+						IEex_DisplayString(string.gsub(string.gsub(ex_str_arcane_sight_b_seconds, "<EXASVAL1>", spellName), "<EXASVAL2>", math.floor(trueDuration)))
+					elseif trueDuration >= 1 then
+						IEex_DisplayString(string.gsub(ex_str_arcane_sight_b_second, "<EXASVAL1>", spellName))
+					else
+						IEex_DisplayString(string.gsub(string.gsub(ex_str_arcane_sight_b_seconds, "<EXASVAL1>", spellName), "<EXASVAL2>", math.floor(trueDuration * 100) / 100))
+					end
+				end
+			end
+		end
+	end
+end
+
 function IEex_Scroll_InputStateListener()
 
 end
 
 function IEex_Scroll_RegisterListeners()
 	IEex_AddKeyPressedListener("IEex_ExtraCheatKeysListener")
+	IEex_AddKeyPressedListener("IEex_ArcaneSightListener")
 	IEex_AddKeyPressedListener("IEex_Scroll_KeyPressedListener")
 	IEex_AddKeyReleasedListener("IEex_Scroll_KeyReleasedListener")
+	IEex_AddInputStateListener("IEex_DeathwatchListener")
 	IEex_AddInputStateListener("IEex_Scroll_InputStateListener")
 end
 
@@ -443,5 +584,4 @@ function IEex_Extern_CChitin_ProcessEvents_CheckKeys()
 	IEex_Helper_IterateBridge("IEex_InputStateListeners", function(_, funcName)
 		_G[funcName](key)
 	end)
-
 end

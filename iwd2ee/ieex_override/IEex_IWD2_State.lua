@@ -47,7 +47,7 @@ dofile("override/IEex_INI.lua")
 
 dofile("override/IEex_Bridge.lua")
 dofile("override/IEex_Core_State.lua")
-
+dofile("override/IEex_Debug_State.lua")
 dofile("override/IEex_Action_State.lua")
 dofile("override/IEex_Creature_State.lua")
 dofile("override/IEex_Opcode_State.lua")
@@ -55,7 +55,7 @@ dofile("override/IEex_Gui_State.lua")
 dofile("override/IEex_Key_State.lua")
 dofile("override/IEex_Resource_State.lua")
 dofile("override/IEex_Projectile_State.lua")
-dofile("override/IEex_Debug_State.lua")
+
 
 
 
@@ -1597,7 +1597,10 @@ function IEex_GetActorIDCursor()
 	local m_visibleArea = IEex_ReadByte(m_pObjectGame + 0x37E0, 0)
 	-- m_gameAreas[m_visibleArea]
 	local CGameArea = IEex_ReadDword(m_pObjectGame + m_visibleArea * 0x4 + 0x37E2)
-	local m_iPicked = IEex_ReadDword(CGameArea + 0x246)
+	local m_iPicked = -1
+	if CGameArea > 0 then
+		m_iPicked = IEex_ReadDword(CGameArea + 0x246)
+	end
 
 	return m_iPicked
 end
@@ -1913,6 +1916,10 @@ function Feats_Kensei(actorID, featID)
 	local mysteriousData = IEex_ReadDword(g_pBaldurChitin + 0x1C64)
 	if mysteriousData > 0 then
 		IEex_Search_Change_Log(1, mysteriousData, 0x1000, false)
+		print("Searching for actorID")
+		IEex_Search_Log(actorID, mysteriousData, 0x1000, false)
+		print("Searching for creatureData")
+		IEex_Search_Log(creatureData, mysteriousData, 0x1000, false)
 	end
 --]]
 	return (IEex_ReadByte(creatureData + 0x626, 0x0) < 2 and IEex_ReadByte(creatureData + 0x62B, 0x0) > 0)
@@ -2722,60 +2729,45 @@ function EXDAMAGE(effectData, creatureData)
 			end
 			savebonus = savebonus + saveBonusStatValue
 		end
---		if IEex_GetActorSpellState(sourceID, 236) then
-			IEex_IterateActorEffects(sourceID, function(eData)
-				local theopcode = IEex_ReadDword(eData + 0x10)
-				local theparameter2 = IEex_ReadDword(eData + 0x20)
-				if theopcode == 288 and theparameter2 == 236 then
-					local theparameter1 = IEex_ReadDword(eData + 0x1C)
-					local theresource = IEex_ReadLString(eData + 0x30, 8)
-					if theresource == parent_resource then
-						savebonus = savebonus + theparameter1
-					end
-				end
-			end)
---		end
---		if IEex_GetActorSpellState(sourceID, 242) then
-			IEex_IterateActorEffects(sourceID, function(eData)
-				local theopcode = IEex_ReadDword(eData + 0x10)
-				local theparameter2 = IEex_ReadDword(eData + 0x20)
-				if theopcode == 288 and theparameter2 == 242 then
-					local theparameter1 = IEex_ReadDword(eData + 0x1C)
-					local thespecial = IEex_ReadDword(eData + 0x48)
-					if thespecial == trueschool or thespecial == -1 or ((thespecial == 4 or thespecial == 5) and bit.band(savingthrow, 0x40) > 0) or ((thespecial == 2 or thespecial == 6) and bit.band(savingthrow, 0x80) > 0) or ((thespecial == 3 or thespecial == 7) and bit.band(savingthrow, 0x100) > 0) or ((thespecial == 1 or thespecial == 8) and bit.band(savingthrow, 0x200) > 0) then
-						savebonus = savebonus + theparameter1
-					end
-				end
-			end)
---		end
 	end
---	if IEex_GetActorSpellState(targetID, 237) then
-		IEex_IterateActorEffects(targetID, function(eData)
-			local theopcode = IEex_ReadDword(eData + 0x10)
-			local theparameter2 = IEex_ReadDword(eData + 0x20)
-			if theopcode == 288 and theparameter2 == 237 then
-				local theparameter1 = IEex_ReadDword(eData + 0x1C)
-				local theresource = IEex_ReadLString(eData + 0x30, 8)
-				if theresource == parent_resource then
+	IEex_IterateActorEffects(sourceID, function(eData)
+		local theopcode = IEex_ReadDword(eData + 0x10)
+		local theparameter2 = IEex_ReadDword(eData + 0x20)
+		local thesavingthrow = IEex_ReadDword(eData + 0x40)
+		if theopcode == 288 and theparameter2 == 236 and bit.band(thesavingthrow, 0x10000) == 0 then
+			local theparameter1 = IEex_ReadDword(eData + 0x1C)
+			local theresource = IEex_ReadLString(eData + 0x30, 8)
+			local thespecial = IEex_ReadDword(eData + 0x48)
+			if bit.band(thesavingthrow, 0x20000) == 0 then
+				if theresource == "" or theresource == sourceSpell then
 					savebonus = savebonus + theparameter1
 				end
-			end
-		end)
---	end
---	if IEex_GetActorSpellState(targetID, 243) then
-		IEex_IterateActorEffects(targetID, function(eData)
-			local theopcode = IEex_ReadDword(eData + 0x10)
-			local theparameter2 = IEex_ReadDword(eData + 0x20)
-			if theopcode == 288 and theparameter2 == 242 then
-				local theparameter1 = IEex_ReadDword(eData + 0x1C)
-				local thespecial = IEex_ReadDword(eData + 0x48)
+			else
 				if thespecial == trueschool or thespecial == -1 or ((thespecial == 4 or thespecial == 5) and bit.band(savingthrow, 0x40) > 0) or ((thespecial == 2 or thespecial == 6) and bit.band(savingthrow, 0x80) > 0) or ((thespecial == 3 or thespecial == 7) and bit.band(savingthrow, 0x100) > 0) or ((thespecial == 1 or thespecial == 8) and bit.band(savingthrow, 0x200) > 0) then
 					savebonus = savebonus + theparameter1
 				end
 			end
-		end)
---	end
---	IEex_DS("savebonus E: " .. savebonus)
+		end
+	end)
+	IEex_IterateActorEffects(targetID, function(eData)
+		local theopcode = IEex_ReadDword(eData + 0x10)
+		local theparameter2 = IEex_ReadDword(eData + 0x20)
+		local thesavingthrow = IEex_ReadDword(eData + 0x40)
+		if theopcode == 288 and theparameter2 == 236 and bit.band(thesavingthrow, 0x10000) > 0 then
+			local theparameter1 = IEex_ReadDword(eData + 0x1C)
+			local theresource = IEex_ReadLString(eData + 0x30, 8)
+			local thespecial = IEex_ReadDword(eData + 0x48)
+			if bit.band(thesavingthrow, 0x20000) == 0 then
+				if theresource == "" or theresource == sourceSpell then
+					savebonus = savebonus + theparameter1
+				end
+			else
+				if thespecial == trueschool or thespecial == -1 or ((thespecial == 4 or thespecial == 5) and bit.band(savingthrow, 0x40) > 0) or ((thespecial == 2 or thespecial == 6) and bit.band(savingthrow, 0x80) > 0) or ((thespecial == 3 or thespecial == 7) and bit.band(savingthrow, 0x100) > 0) or ((thespecial == 1 or thespecial == 8) and bit.band(savingthrow, 0x200) > 0) then
+					savebonus = savebonus + theparameter1
+				end
+			end
+		end
+	end)
 	local newSavingThrow = 0
 	if bit.band(savingthrow, 0x400) > 0 then
 		newSavingThrow = bit.bor(newSavingThrow, 0x4)
@@ -3201,11 +3193,14 @@ function MEHEALIN(effectData, creatureData)
 				local theparameter2 = IEex_ReadDword(eData + 0x20)
 				if theopcode == 288 and theparameter2 == 191 then
 					local theparameter1 = IEex_ReadDword(eData + 0x1C)
+					local thesavingthrow = IEex_ReadDword(eData + 0x40)
 					local thespecial = IEex_ReadDword(eData + 0x48)
-					if thespecial == 0 then
-						healing = healing + theparameter1
-					elseif thespecial == 2 then
-						healingMultiplier = healingMultiplier + theparameter1
+					if bit.band(thesavingthrow, 0x100000) == 0 or targetID ~= sourceID then
+						if thespecial == 0 then
+							healing = healing + theparameter1
+						elseif thespecial == 2 then
+							healingMultiplier = healingMultiplier + theparameter1
+						end
 					end
 				end
 			end)
@@ -3255,27 +3250,76 @@ ex_feat_bit_location = {
 [0x78D] = {0x75C, 0x40000},
 }
 
+ex_feat_location = {
+[3] = {0x783, 3},
+[4] = {0x781, 3},
+[8] = {0x782, 2},
+[18] = {0x78D, 3},
+[20] = {0x789, 3},
+[21] = {0x78A, 3},
+[22] = {0x78B, 3},
+[23] = {0x78C, 3},
+[38] = {0x777, 3},
+[39] = {0x774, 3},
+[40] = {0x779, 3},
+[41] = {0x77D, 3},
+[42] = {0x77B, 3},
+[43] = {0x77E, 3},
+[44] = {0x77A, 3},
+[53] = {0x775, 3},
+[54] = {0x778, 3},
+[55] = {0x776, 3},
+[56] = {0x77C, 3},
+[57] = {0x77F, 3},
+[60] = {0x784, 2},
+[61] = {0x785, 2},
+[62] = {0x786, 2},
+[63] = {0x787, 2},
+[64] = {0x788, 2},
+[69] = {0x780, 5},
+}
+
 function MEMODFEA(effectData, creatureData)
 	if IEex_CheckForEffectRepeat(effectData, creatureData) then return end
 	local targetID = IEex_GetActorIDShare(creatureData)
 	local parameter1 = IEex_ReadDword(effectData + 0x18)
-	local parameter2 = IEex_ReadDword(effectData + 0x1C)
-	local stat = IEex_ReadByte(creatureData + parameter2, 0x0)
-	stat = stat + parameter1
-	if stat < 0 then
-		stat = 0
+	local savingthrow = IEex_ReadDword(effectData + 0x3C)
+	local featID = IEex_ReadDword(effectData + 0x44)
+	local featBitLocation = 0x75C + math.floor(featID / 32) * 0x4
+	local featBits = IEex_ReadDword(creatureData + featBitLocation)
+	local featBit = 2 ^ (featID % 32)
+	local featValue = 0
+	local featMax = 1
+	if ex_feat_location[featID] ~= nil then
+		featValue = IEex_ReadByte(creatureData + ex_feat_location[featID][1], 0x0)
+		featMax = ex_feat_location[featID][2]
+	elseif featID <= 74 then
+		if bit.band(featBits, featBit) > 0 then
+			featValue = 1
+		end
+	else
+		featValue = IEex_ReadByte(creatureData + 0x744 + featID, 0x0)
+		featMax = tonumber(IEex_2DAGetAtRelated("B3FEATS", "ID", "MAX", function(id) return tonumber(id) == featID end))
 	end
-	if ex_feat_bit_location[parameter2] ~= nil then
-		local bitLocation = ex_feat_bit_location[parameter2][1]
-		local bit = ex_feat_bit_location[parameter2][2]
-		local bitList = IEex_ReadDword(creatureData + bitLocation)
-		if stat == 0 then
-			bitList = bit.band(bitList, 0xFFFFFFFF - bit)
-		else
-			bitList = bit.bor(bitList, bit)
+	if featID == 4 and bit.band(IEex_ReadDword(creatureData + 0x740), 0x1000) > 0 then
+		parameter1 = parameter1 * ex_armored_arcana_multiplier
+		featMax = featMax * ex_armored_arcana_multiplier
+	end
+	featValue = featValue + parameter1
+	if featValue <= 0 then
+		featValue = 0
+		IEex_WriteDword(creatureData + featBitLocation, bit.band(featBits, 0xFFFFFFFF - featBit))
+	else
+		IEex_WriteDword(creatureData + featBitLocation, bit.bor(featBits, featBit))
+		if featValue > featMax and bit.band(savingthrow, 0x10000) == 0 then
+			featValue = featMax
 		end
 	end
-	IEex_WriteByte(creatureData + parameter2, stat)
+	if ex_feat_location[featID] ~= nil then
+		IEex_WriteByte(creatureData + ex_feat_location[featID][1], featValue)
+	elseif featID >= 75 then
+		IEex_WriteByte(creatureData + 0x744 + featID, featValue)
+	end
 end
 --[[
 function MECRITIM(effectData, creatureData)
@@ -3519,6 +3563,40 @@ function MESTATSP(effectData, creatureData)
 			if statValue >= key and key > highest then
 				spellRES = value
 				highest = key
+			end
+		end
+		if spellRES ~= "" then
+			IEex_ApplyEffectToActor(targetID, {
+["opcode"] = 402,
+["target"] = 2,
+["timing"] = 0,
+["resource"] = spellRES,
+["parent_resource"] = spellRES,
+["casterlvl"] = IEex_ReadDword(effectData + 0xC4),
+["internal_flags"] = IEex_ReadDword(effectData + 0xC8),
+["source_target"] = targetID,
+["source_id"] = sourceID,
+})
+		end
+	end
+end
+
+function MEKITSPL(effectData, creatureData)
+	if IEex_CheckForEffectRepeat(effectData, creatureData) then return end
+	local targetID = IEex_GetActorIDShare(creatureData)
+	local sourceID = IEex_ReadDword(effectData + 0x10C)
+	if not IEex_IsSprite(sourceID, false) then 
+		sourceID = targetID
+	end
+	local kit = IEex_GetActorStat(sourceID, 89)
+	local index = IEex_ReadWord(effectData + 0x1C, 0)
+	local savingthrow = bit.band(IEex_ReadDword(effectData + 0x3C), 0xFFFFFFE3)
+	local kitSpellList = ex_kit_spells[index]
+	if kitSpellList ~= nil then
+		local spellRES = ""
+		for key,value in pairs(kitSpellList) do
+			if bit.band(kit, key) > 0 then
+				spellRES = value
 			end
 		end
 		if spellRES ~= "" then
@@ -7789,41 +7867,7 @@ function IEex_EvaluatePermanentRepeatingEffects(creatureData)
 })
 		end
 	end
-	if IEex_ReadByte(creatureData + 0x24, 0x0) <= 30 and (IEex_GetActorStat(targetID, 101) > 0 or IEex_GetActorStat(targetID, 102) > 0) then
-		local specialFlags = IEex_ReadByte(creatureData + 0x89F, 0x0)
-		local kit = IEex_GetActorStat(targetID, 89)
-		for k, v in pairs(ex_order_multiclass) do
-			if bit.band(kit, k) > 0 then
-				local acceptable = true
-				local acceptable_classes = {}
-				for i, c in ipairs(v) do
-					acceptable_classes["" .. c[1]] = c[2]
-				end
-				for i = 1, 11, 1 do
-					if IEex_GetActorStat(targetID, 95 + i) > 0 then
-						if acceptable_classes["" .. i] == nil then
-							acceptable = false
-						elseif acceptable_classes["" .. i] ~= -1 and bit.band(kit, acceptable_classes["" .. i]) == 0 then
-							acceptable = false
-						end
-					end
-				end
-				if acceptable then
-					if k <= 4 and bit.band(specialFlags, 0x4) > 0 then
-						IEex_WriteByte(creatureData + 0x89F, bit.band(specialFlags, 0xFB))
-					elseif k > 4 and bit.band(specialFlags, 0x8) > 0 then
-						IEex_WriteByte(creatureData + 0x89F, bit.band(specialFlags, 0xF7))
-					end
-				else
-					if k <= 4 and bit.band(specialFlags, 0x4) == 0 then
-						IEex_WriteByte(creatureData + 0x89F, bit.bor(specialFlags, 0x4))
-					elseif k > 4 and bit.band(specialFlags, 0x8) == 0 then
-						IEex_WriteByte(creatureData + 0x89F, bit.bor(specialFlags, 0x8))
-					end
-				end
-			end
-		end
-	end
+	IEex_WriteByte(creatureData + 0x89F, bit.band(IEex_ReadByte(creatureData + 0x89F, 0x0), 0xF3))
 	return usedFunction
 end
 
@@ -9113,59 +9157,45 @@ function MESPLSAV(effectData, creatureData)
 			end
 			savebonus = savebonus + saveBonusStatValue
 		end
---		if IEex_GetActorSpellState(sourceID, 236) then
-			IEex_IterateActorEffects(sourceID, function(eData)
-				local theopcode = IEex_ReadDword(eData + 0x10)
-				local theparameter2 = IEex_ReadDword(eData + 0x20)
-				if theopcode == 288 and theparameter2 == 236 then
-					local theparameter1 = IEex_ReadDword(eData + 0x1C)
-					local theresource = IEex_ReadLString(eData + 0x30, 8)
-					if theresource == parent_resource then
-						savebonus = savebonus + theparameter1
-					end
-				end
-			end)
---		end
---		if IEex_GetActorSpellState(sourceID, 242) then
-			IEex_IterateActorEffects(sourceID, function(eData)
-				local theopcode = IEex_ReadDword(eData + 0x10)
-				local theparameter2 = IEex_ReadDword(eData + 0x20)
-				if theopcode == 288 and theparameter2 == 242 then
-					local theparameter1 = IEex_ReadDword(eData + 0x1C)
-					local thespecial = IEex_ReadDword(eData + 0x48)
-					if thespecial == trueschool or thespecial == -1 or ((thespecial == 4 or thespecial == 5) and bit.band(savingthrow, 0x40) > 0) or ((thespecial == 2 or thespecial == 6) and bit.band(savingthrow, 0x80) > 0) or ((thespecial == 3 or thespecial == 7) and bit.band(savingthrow, 0x100) > 0) or ((thespecial == 1 or thespecial == 8) and bit.band(savingthrow, 0x200) > 0) then
-						savebonus = savebonus + theparameter1
-					end
-				end
-			end)
---		end
 	end
---	if IEex_GetActorSpellState(targetID, 237) then
-		IEex_IterateActorEffects(targetID, function(eData)
-			local theopcode = IEex_ReadDword(eData + 0x10)
-			local theparameter2 = IEex_ReadDword(eData + 0x20)
-			if theopcode == 288 and theparameter2 == 237 then
-				local theparameter1 = IEex_ReadDword(eData + 0x1C)
-				local theresource = IEex_ReadLString(eData + 0x30, 8)
-				if theresource == parent_resource then
+	IEex_IterateActorEffects(sourceID, function(eData)
+		local theopcode = IEex_ReadDword(eData + 0x10)
+		local theparameter2 = IEex_ReadDword(eData + 0x20)
+		local thesavingthrow = IEex_ReadDword(eData + 0x40)
+		if theopcode == 288 and theparameter2 == 236 and bit.band(thesavingthrow, 0x10000) == 0 then
+			local theparameter1 = IEex_ReadDword(eData + 0x1C)
+			local theresource = IEex_ReadLString(eData + 0x30, 8)
+			local thespecial = IEex_ReadDword(eData + 0x48)
+			if bit.band(thesavingthrow, 0x20000) == 0 then
+				if theresource == "" or theresource == sourceSpell then
 					savebonus = savebonus + theparameter1
 				end
-			end
-		end)
---	end
---	if IEex_GetActorSpellState(targetID, 243) then
-		IEex_IterateActorEffects(targetID, function(eData)
-			local theopcode = IEex_ReadDword(eData + 0x10)
-			local theparameter2 = IEex_ReadDword(eData + 0x20)
-			if theopcode == 288 and theparameter2 == 242 then
-				local theparameter1 = IEex_ReadDword(eData + 0x1C)
-				local thespecial = IEex_ReadDword(eData + 0x48)
+			else
 				if thespecial == trueschool or thespecial == -1 or ((thespecial == 4 or thespecial == 5) and bit.band(savingthrow, 0x40) > 0) or ((thespecial == 2 or thespecial == 6) and bit.band(savingthrow, 0x80) > 0) or ((thespecial == 3 or thespecial == 7) and bit.band(savingthrow, 0x100) > 0) or ((thespecial == 1 or thespecial == 8) and bit.band(savingthrow, 0x200) > 0) then
 					savebonus = savebonus + theparameter1
 				end
 			end
-		end)
---	end
+		end
+	end)
+	IEex_IterateActorEffects(targetID, function(eData)
+		local theopcode = IEex_ReadDword(eData + 0x10)
+		local theparameter2 = IEex_ReadDword(eData + 0x20)
+		local thesavingthrow = IEex_ReadDword(eData + 0x40)
+		if theopcode == 288 and theparameter2 == 236 and bit.band(thesavingthrow, 0x10000) > 0 then
+			local theparameter1 = IEex_ReadDword(eData + 0x1C)
+			local theresource = IEex_ReadLString(eData + 0x30, 8)
+			local thespecial = IEex_ReadDword(eData + 0x48)
+			if bit.band(thesavingthrow, 0x20000) == 0 then
+				if theresource == "" or theresource == sourceSpell then
+					savebonus = savebonus + theparameter1
+				end
+			else
+				if thespecial == trueschool or thespecial == -1 or ((thespecial == 4 or thespecial == 5) and bit.band(savingthrow, 0x40) > 0) or ((thespecial == 2 or thespecial == 6) and bit.band(savingthrow, 0x80) > 0) or ((thespecial == 3 or thespecial == 7) and bit.band(savingthrow, 0x100) > 0) or ((thespecial == 1 or thespecial == 8) and bit.band(savingthrow, 0x200) > 0) then
+					savebonus = savebonus + theparameter1
+				end
+			end
+		end
+	end)
 	local newSavingThrow = 0
 	if bit.band(savingthrow, 0x400) > 0 then
 		newSavingThrow = bit.bor(newSavingThrow, 0x4)
@@ -9206,22 +9236,44 @@ function MEQUIVPA(effectData, creatureData)
 	local savebonus = IEex_ReadDword(effectData + 0x40)
 	local saveBonusStat = IEex_ReadByte(effectData + 0x44, 0x0)
 	local saveBonusLevel = IEex_ReadByte(effectData + 0x45, 0x0)
+	local requiredOldOrderLevel = IEex_ReadByte(effectData + 0x46, 0x0)
+	local saveBonusStatDivisor = 2
+	if bit.band(IEex_GetActorStat(sourceID, 89), 0x8) > 0 and IEex_GetActorStat(sourceID, 101) >= requiredOldOrderLevel then
+		saveBonusStatDivisor = 1
+	end
 	local parent_resource = IEex_ReadLString(effectData + 0x90, 8)
 	local casterlvl = IEex_ReadDword(effectData + 0xC4)
-	savebonus = savebonus + math.floor(IEex_GetActorStat(sourceID, saveBonusLevel) / 2) + math.floor((IEex_GetActorStat(sourceID, saveBonusStat) - 10) / 2)
---	if IEex_GetActorSpellState(sourceID, 236) then
-		IEex_IterateActorEffects(sourceID, function(eData)
-			local theopcode = IEex_ReadDword(eData + 0x10)
-			local theparameter2 = IEex_ReadDword(eData + 0x20)
-			if theopcode == 288 and theparameter2 == 236 then
-				local theparameter1 = IEex_ReadDword(eData + 0x1C)
-				local theresource = IEex_ReadLString(eData + 0x30, 8)
-				if theresource == parent_resource then
+	savebonus = savebonus + math.floor(IEex_GetActorStat(sourceID, saveBonusLevel) / 2) + math.floor((IEex_GetActorStat(sourceID, saveBonusStat) - 10) / saveBonusStatDivisor)
+	IEex_IterateActorEffects(sourceID, function(eData)
+		local theopcode = IEex_ReadDword(eData + 0x10)
+		local theparameter2 = IEex_ReadDword(eData + 0x20)
+		local thesavingthrow = IEex_ReadDword(eData + 0x40)
+		if theopcode == 288 and theparameter2 == 236 and bit.band(thesavingthrow, 0x10000) == 0 then
+			local theparameter1 = IEex_ReadDword(eData + 0x1C)
+			local theresource = IEex_ReadLString(eData + 0x30, 8)
+			local thespecial = IEex_ReadDword(eData + 0x48)
+			if bit.band(thesavingthrow, 0x20000) == 0 then
+				if theresource == "" or theresource == parent_resource then
 					savebonus = savebonus + theparameter1
 				end
 			end
-		end)
---	end
+		end
+	end)
+	IEex_IterateActorEffects(targetID, function(eData)
+		local theopcode = IEex_ReadDword(eData + 0x10)
+		local theparameter2 = IEex_ReadDword(eData + 0x20)
+		local thesavingthrow = IEex_ReadDword(eData + 0x40)
+		if theopcode == 288 and theparameter2 == 236 and bit.band(thesavingthrow, 0x10000) > 0 then
+			local theparameter1 = IEex_ReadDword(eData + 0x1C)
+			local theresource = IEex_ReadLString(eData + 0x30, 8)
+			local thespecial = IEex_ReadDword(eData + 0x48)
+			if bit.band(thesavingthrow, 0x20000) == 0 then
+				if theresource == "" or theresource == parent_resource then
+					savebonus = savebonus + theparameter1
+				end
+			end
+		end
+	end)
 	local newSavingThrow = 0
 	if bit.band(savingthrow, 0x400) > 0 then
 		newSavingThrow = bit.bor(newSavingThrow, 0x4)
@@ -9287,32 +9339,36 @@ function MEKNOCKD(effectData, creatureData)
 })
 	end
 	savebonus = savebonus + math.floor(IEex_GetActorStat(sourceID, 95) / 2) + math.floor((saveBonusStatBonus - 10) / 2)
---	if IEex_GetActorSpellState(sourceID, 236) then
-		IEex_IterateActorEffects(sourceID, function(eData)
-			local theopcode = IEex_ReadDword(eData + 0x10)
-			local theparameter2 = IEex_ReadDword(eData + 0x20)
-			if theopcode == 288 and theparameter2 == 236 then
-				local theparameter1 = IEex_ReadDword(eData + 0x1C)
-				local theresource = IEex_ReadLString(eData + 0x30, 8)
-				if theresource == parent_resource then
+	IEex_IterateActorEffects(sourceID, function(eData)
+		local theopcode = IEex_ReadDword(eData + 0x10)
+		local theparameter2 = IEex_ReadDword(eData + 0x20)
+		local thesavingthrow = IEex_ReadDword(eData + 0x40)
+		if theopcode == 288 and theparameter2 == 236 and bit.band(thesavingthrow, 0x10000) == 0 then
+			local theparameter1 = IEex_ReadDword(eData + 0x1C)
+			local theresource = IEex_ReadLString(eData + 0x30, 8)
+			local thespecial = IEex_ReadDword(eData + 0x48)
+			if bit.band(thesavingthrow, 0x20000) == 0 then
+				if theresource == "" or theresource == parent_resource then
 					savebonus = savebonus + theparameter1
 				end
 			end
-		end)
---	end
---	if IEex_GetActorSpellState(targetID, 237) then
-		IEex_IterateActorEffects(targetID, function(eData)
-			local theopcode = IEex_ReadDword(eData + 0x10)
-			local theparameter2 = IEex_ReadDword(eData + 0x20)
-			if theopcode == 288 and theparameter2 == 237 then
-				local theparameter1 = IEex_ReadDword(eData + 0x1C)
-				local theresource = IEex_ReadLString(eData + 0x30, 8)
-				if theresource == parent_resource then
+		end
+	end)
+	IEex_IterateActorEffects(targetID, function(eData)
+		local theopcode = IEex_ReadDword(eData + 0x10)
+		local theparameter2 = IEex_ReadDword(eData + 0x20)
+		local thesavingthrow = IEex_ReadDword(eData + 0x40)
+		if theopcode == 288 and theparameter2 == 236 and bit.band(thesavingthrow, 0x10000) > 0 then
+			local theparameter1 = IEex_ReadDword(eData + 0x1C)
+			local theresource = IEex_ReadLString(eData + 0x30, 8)
+			local thespecial = IEex_ReadDword(eData + 0x48)
+			if bit.band(thesavingthrow, 0x20000) == 0 then
+				if theresource == "" or theresource == parent_resource then
 					savebonus = savebonus + theparameter1
 				end
 			end
-		end)
---	end
+		end
+	end)
 	IEex_ApplyEffectToActor(targetID, {
 ["opcode"] = 288,
 ["target"] = 2,
@@ -9320,6 +9376,7 @@ function MEKNOCKD(effectData, creatureData)
 ["duration"] = 70,
 ["parameter1"] = -4,
 ["parameter2"] = 237,
+["savingthrow"] = 0x10000,
 ["resource"] = parent_resource,
 ["parent_resource"] = parent_resource,
 ["source_target"] = targetID,
@@ -9368,39 +9425,44 @@ function MEFEINT(effectData, creatureData)
 		feintFeatCount = IEex_ReadByte(sourceData + 0x744 + feintFeatID, 0x0)
 	end
 	savebonus = savebonus + IEex_ReadByte(sourceData + 0x7B6, 0x0) + math.floor((IEex_GetActorStat(sourceID, 38) - 10) / 2)
---	if IEex_GetActorSpellState(sourceID, 236) then
-		IEex_IterateActorEffects(sourceID, function(eData)
-			local theopcode = IEex_ReadDword(eData + 0x10)
-			local theparameter2 = IEex_ReadDword(eData + 0x20)
-			if theopcode == 288 and theparameter2 == 236 then
-				local theparameter1 = IEex_ReadDword(eData + 0x1C)
-				local theresource = IEex_ReadLString(eData + 0x30, 8)
-				if theresource == parent_resource then
+	IEex_IterateActorEffects(sourceID, function(eData)
+		local theopcode = IEex_ReadDword(eData + 0x10)
+		local theparameter2 = IEex_ReadDword(eData + 0x20)
+		local thesavingthrow = IEex_ReadDword(eData + 0x40)
+		if theopcode == 288 and theparameter2 == 236 and bit.band(thesavingthrow, 0x10000) == 0 then
+			local theparameter1 = IEex_ReadDword(eData + 0x1C)
+			local theresource = IEex_ReadLString(eData + 0x30, 8)
+			local thespecial = IEex_ReadDword(eData + 0x48)
+			if bit.band(thesavingthrow, 0x20000) == 0 then
+				if theresource == "" or theresource == parent_resource then
 					savebonus = savebonus + theparameter1
 				end
 			end
-		end)
---	end
---	if IEex_GetActorSpellState(targetID, 237) then
-		IEex_IterateActorEffects(targetID, function(eData)
-			local theopcode = IEex_ReadDword(eData + 0x10)
-			local theparameter2 = IEex_ReadDword(eData + 0x20)
-			if theopcode == 288 and theparameter2 == 237 then
-				local theparameter1 = IEex_ReadDword(eData + 0x1C)
-				local theresource = IEex_ReadLString(eData + 0x30, 8)
-				if theresource == parent_resource then
+		end
+	end)
+	IEex_IterateActorEffects(targetID, function(eData)
+		local theopcode = IEex_ReadDword(eData + 0x10)
+		local theparameter2 = IEex_ReadDword(eData + 0x20)
+		local thesavingthrow = IEex_ReadDword(eData + 0x40)
+		if theopcode == 288 and theparameter2 == 236 and bit.band(thesavingthrow, 0x10000) > 0 then
+			local theparameter1 = IEex_ReadDword(eData + 0x1C)
+			local theresource = IEex_ReadLString(eData + 0x30, 8)
+			local thespecial = IEex_ReadDword(eData + 0x48)
+			if bit.band(thesavingthrow, 0x20000) == 0 then
+				if theresource == "" or theresource == parent_resource then
 					savebonus = savebonus + theparameter1
 				end
 			end
-		end)
---	end
+		end
+	end)
 	IEex_ApplyEffectToActor(targetID, {
 ["opcode"] = 288,
 ["target"] = 2,
 ["timing"] = 0,
 ["duration"] = 70,
 ["parameter1"] = -4,
-["parameter2"] = 237,
+["parameter2"] = 236,
+["savingthrow"] = 0x10000,
 ["resource"] = parent_resource,
 ["parent_resource"] = parent_resource,
 ["source_target"] = targetID,
@@ -9602,39 +9664,44 @@ function MEGRAPPL(effectData, creatureData)
 	if handsUsed == 0 then
 		savebonus = savebonus + 4
 	end
---	if IEex_GetActorSpellState(sourceID, 236) then
-		IEex_IterateActorEffects(sourceID, function(eData)
-			local theopcode = IEex_ReadDword(eData + 0x10)
-			local theparameter2 = IEex_ReadDword(eData + 0x20)
-			if theopcode == 288 and theparameter2 == 236 then
-				local theparameter1 = IEex_ReadDword(eData + 0x1C)
-				local theresource = IEex_ReadLString(eData + 0x30, 8)
-				if theresource == parent_resource then
+	IEex_IterateActorEffects(sourceID, function(eData)
+		local theopcode = IEex_ReadDword(eData + 0x10)
+		local theparameter2 = IEex_ReadDword(eData + 0x20)
+		local thesavingthrow = IEex_ReadDword(eData + 0x40)
+		if theopcode == 288 and theparameter2 == 236 and bit.band(thesavingthrow, 0x10000) == 0 then
+			local theparameter1 = IEex_ReadDword(eData + 0x1C)
+			local theresource = IEex_ReadLString(eData + 0x30, 8)
+			local thespecial = IEex_ReadDword(eData + 0x48)
+			if bit.band(thesavingthrow, 0x20000) == 0 then
+				if theresource == "" or theresource == parent_resource then
 					savebonus = savebonus + theparameter1
 				end
 			end
-		end)
---	end
---	if IEex_GetActorSpellState(targetID, 237) then
-		IEex_IterateActorEffects(targetID, function(eData)
-			local theopcode = IEex_ReadDword(eData + 0x10)
-			local theparameter2 = IEex_ReadDword(eData + 0x20)
-			if theopcode == 288 and theparameter2 == 237 then
-				local theparameter1 = IEex_ReadDword(eData + 0x1C)
-				local theresource = IEex_ReadLString(eData + 0x30, 8)
-				if theresource == parent_resource then
+		end
+	end)
+	IEex_IterateActorEffects(targetID, function(eData)
+		local theopcode = IEex_ReadDword(eData + 0x10)
+		local theparameter2 = IEex_ReadDword(eData + 0x20)
+		local thesavingthrow = IEex_ReadDword(eData + 0x40)
+		if theopcode == 288 and theparameter2 == 236 and bit.band(thesavingthrow, 0x10000) > 0 then
+			local theparameter1 = IEex_ReadDword(eData + 0x1C)
+			local theresource = IEex_ReadLString(eData + 0x30, 8)
+			local thespecial = IEex_ReadDword(eData + 0x48)
+			if bit.band(thesavingthrow, 0x20000) == 0 then
+				if theresource == "" or theresource == parent_resource then
 					savebonus = savebonus + theparameter1
 				end
 			end
-		end)
---	end
+		end
+	end)
 	IEex_ApplyEffectToActor(targetID, {
 ["opcode"] = 288,
 ["target"] = 2,
 ["timing"] = 0,
 ["duration"] = 70,
 ["parameter1"] = -4,
-["parameter2"] = 237,
+["parameter2"] = 236,
+["savingthrow"] = 0x10000,
 ["resource"] = parent_resource,
 ["parent_resource"] = parent_resource,
 ["source_target"] = targetID,
@@ -10863,10 +10930,36 @@ function IEex_SetAttackAnimationFrame(creatureData, value)
 	end
 end
 
+ex_class_name = {"BARBARIAN", "BARD", "CLERIC", "DRUID", "FIGHTER", "MONK", "PALADIN", "RANGER", "ROGUE", "SORCERER", "WIZARD"}
+
 function MEAPRBON(effectData, creatureData)
 --	if IEex_CheckForEffectRepeat(effectData, creatureData) then return end
 	local targetID = IEex_GetActorIDShare(creatureData)
 --	if IEex_CheckForInfiniteLoop(targetID, IEex_GetGameTick(), "MEAPRBON", 5) then return end
+	local savingthrow = IEex_ReadDword(effectData + 0x3C)
+	if bit.band(savingthrow, 0x10000000) == 0 then
+		savingthrow = bit.bor(savingthrow, 0x10000000)
+		IEex_WriteDword(effectData + 0x3C, savingthrow)
+		local allBlank = true
+		for i = 1, 9, 1 do
+			if IEex_ReadDword(creatureData + 0x3D10 + i * 0x4) ~= 100 then
+				allBlank = false
+			end
+		end
+		if allBlank then
+			local class = 1
+			for i = 1, 11, 1 do
+				if IEex_GetActorStat(targetID, 95 + i) > 0 then
+					class = i
+				end
+			end
+			local classString = ex_class_name[class]
+			for i = 1, 9, 1 do
+				IEex_WriteDword(creatureData + 0x3D10 + i * 0x4, tonumber(IEex_2DAGetAtStrings("QSLOTS", "SLOT" .. i, classString)))
+			end
+		end
+	end
+	
 	IEex_ApplyStatScaling(targetID)
 	local monkLevel = IEex_GetActorStat(targetID, 101)
 	local baseAPR = IEex_ReadByte(creatureData + 0x5ED, 0x0)

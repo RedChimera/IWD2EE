@@ -1567,6 +1567,18 @@ COPY_EXISTING ~USCOUNTE.spl~ ~override~
   SAY UNIDENTIFIED_DESC @922
   SAY IDENTIFIED_DESC @922
 
+COPY_EXISTING ~USMNKLAY.spl~ ~override~
+  SAY NAME1 @926
+  SAY NAME2 @926
+  SAY UNIDENTIFIED_DESC @926
+  SAY IDENTIFIED_DESC @926
+
+COPY_EXISTING ~USPALSHO.spl~ ~override~
+  SAY NAME1 @927
+  SAY NAME2 @927
+  SAY UNIDENTIFIED_DESC @927
+  SAY IDENTIFIED_DESC @927
+
 COPY_EXISTING ~USMM001.spl~ ~override~
 	LPF ADD_SPELL_EFFECT INT_VAR insert_point=1 opcode=139 target=2 timing=1 parameter1=RESOLVE_STR_REF(@361) END
   SAY NAME1 @361
@@ -2324,6 +2336,12 @@ COPY_EXISTING ~LISTINNT.2da~ ~override~
 	numrows += 1
 	lastindex += 1
 	INSERT_2DA_ROW numrows 2 ~%lastindex% USCOUNTE~
+	numrows += 1
+	lastindex += 1
+	INSERT_2DA_ROW numrows 2 ~%lastindex% USMNKLAY~
+	numrows += 1
+	lastindex += 1
+	INSERT_2DA_ROW numrows 2 ~%lastindex% USPALSHO~
 	numrows += 1
 	lastindex += 1
 	INSERT_2DA_ROW numrows 2 ~%lastindex% USMM001~

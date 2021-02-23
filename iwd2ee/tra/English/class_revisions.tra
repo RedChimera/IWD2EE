@@ -602,8 +602,6 @@ Disadvantages:
 
 Monks are warriors who pursue perfection through contemplation as well as action. They are versatile fighters, especially skilled in combat without weapons or armor. Though monks cannot cast spells, they have a unique magic of their own. They channel a subtle energy, called ki, which allows them to perform amazing feats. The monk's best-known feat is their ability to stun an opponent with an unarmed blow.
 
-WARNING: A monk who multiclasses to a class other than monk or their order's favored class will never be allowed to advance in the monk class again.
-
 NOTE: Multiclassed monks ONLY use their monk levels when determining their number of attacks when fighting unarmed.
 
 Hit Points per Level: 1-8
@@ -658,8 +656,6 @@ Disadvantages:
 A paladin is a warrior bold and pure, the exemplar of everything good and true. Like the fighter, the paladin is a man of combat. However, the paladin lives for the ideals of righteousness, justice, honesty, piety, and chivalry. He strives to be a living example of these virtues so that others might learn from him as well as gain by his actions.
 
 NOTE: Wisdom is the casting statistic for a paladin. It affects their maximum spellcasting level, spell saving throw DCs, and number of bonus spells.
-
-WARNING: A paladin who multiclasses to a class other than paladin or their order's favored class will never be allowed to advance in the paladin class again.
 
 Hit Points per Level: 1-10
 
@@ -791,44 +787,46 @@ Advantages:
 
 Paladins of Ilmater venerate the god of suffering. They willingly take the most horrible wounds in any battle just to prevent the suffering of others. They are typically known for their humility.
 
-Favored Classes: Can multiclass to a Painbearer of Ilmater or a Monk of the Broken Ones without losing the ability to advance in the paladin class.
-
-WARNING: A paladin who multiclasses to a class other than paladin or one of their order's favored classes will never be allowed to advance in the paladin class again.~
+Advantages:
+* 2nd-level: The paladin can cast Shield Other (which halves the damage an ally takes, causing the paladin to take the other half) at will.
+* 6th-level: The paladin's healing spells and abilities heal 50% more hit points if used on an ally other than the paladin.
+* 11th-level: The bonus to healing spells and abilities is increased from 50% to 100%.~
 @561    = ~PALADIN OF HELM:
 
 Paladins of Helm follow the teachings of the god of guardians. They are dedicated to defending the weak and protecting important places against assault.
 
-Favored Classes: Can multiclass to a fighter or a Watcher of Helm without losing the ability to advance in the paladin class.
-
-WARNING: A paladin who multiclasses to a class other than paladin or one of their order's favored classes will never be allowed to advance in the paladin class again.~
+Advantages:
+* 2nd-level: While using the Guard action, the paladin and all allies within 20 feet gain a +2 AC bonus.
+* 6th-level: The AC bonus from using the Guard action increases to +4.
+* 11th-level: While using the Guard action, the paladin can see through illusions as per True Sight.~
 @562    = ~PALADIN OF MYSTRA:
 
 Paladins of Mystra insure that the powers of the goddess of magic are not used for evil. They seek out evil spellcasters all over Faerun for the protection of civilization and to protect benign wizards from the repercussions of irresponsible magic use.
 
-Favored Classes: Can multiclass to a wizard or a sorcerer without losing the ability to advance in the paladin class.
-
-WARNING: A paladin who multiclasses to a class other than paladin or one of their order's favored classes will never be allowed to advance in the paladin class again.~
+Advantages:
+* 2nd-level: The paladin gains one rank in Armored Arcana, reducing their arcane spell failure by 35%.
+* 6th-level: The paladin gains two more ranks in Armored Arcana, reducing their arcane spell failure by a total of 105% (allowing them to cast arcane spells with no chance of failure while wearing the heaviest armor and shields).
+* 11th-level: All fire, cold, electricity, acid, and magic damage dealt by the paladin is increased by 20%. This stacks with feats like Spirit of Flame and Master of Magic Force. This bonus applies to both spells like Fireball and abilities like Smite Evil.~
 @563    = ~MONK OF THE OLD ORDER:
 
 Members of the Old Order do not worship any particular deity, but are fond of philosophical debates and introspection.
 
-Favored Classes: Can multiclass to a rogue or a druid without losing the ability to advance in the monk class.
-
-WARNING: A monk who multiclasses to a class other than monk or one of their order's favored classes will never be allowed to advance in the monk class again.~
+Advantages:
+* 2nd-level: The monk now adds their Wisdom bonus again to the DC of Stunning Attack.
+* 18th-level: The monk now adds their Wisdom bonus again to the DC of Quivering Palm.~
 @564    = ~MONK OF THE BROKEN ONES:
 
 Members of the Order of the Broken Ones venerate Ilmater, god of suffering. They strive to endure the pain of their training as well as the pain of others.
 
-Favored Classes: Can multiclass to a Painbearer of Ilmater or a Paladin of Ilmater without losing the ability to advance in the monk class.
-
-WARNING: A monk who multiclasses to a class other than monk or one of their order's favored classes will never be allowed to advance in the monk class again.~
+Advantages:
+* 2nd-level: The monk gains one use of Lay on Hands per day. Any level that would give the monk a use of Wholeness of Body instead gives them another use of Lay on Hands. When used by a Monk of the Broken Ones, Lay on Hands restores the same amount of HP as Wholeness of Body (monk level * Wisdom bonus) but can be used on other creatures as well.
+* 6th-level: The monk gains 2/- resistance to all physical damage. Another 1/- resistance is gained every 4 levels thereafter.~
 @565    = ~MONK OF THE DARK MOON:
 
 Members of the Order of the Dark Moon worship Shar, goddess of darkness and loss. They use their monastic training as a route to personal and spiritual power.
 
-Favored Classes: Can multiclass to a rogue or a sorcerer without losing the ability to advance in the monk class.
-
-WARNING: A monk who multiclasses to a class other than monk or one of their order's favored classes will never be allowed to advance in the monk class again.~
+Advantages:
+* 2nd-level: The monk gains a sneak attack bonus of 1d6. For every 4 additional monk levels after level 2, the monk gains another 1d6 sneak attack damage.~
 
 @580    = ~
 
@@ -888,15 +886,15 @@ Domain Spells:
 5: Lutzaen's Local Teleport, Steal Spells
 6: Darts of Bone, Greater Shadow Conjuration
 7: Mass Haste, Shades
-8: Army of Images, Mass Invisibility
+8: Mass Invisibility, Simulacrum
 9: Black Blade of Disaster, Perfect Invisibility~
 @585    = ~
 
 Domain Spells:
 1: Identify, Identify Creature
 2: Dispel Magic, Remove Magic
-3: Clairvoyance, True Seeing
-4: Malison, Shout
+3: Arcane Sight, Clairvoyance
+4: True Seeing, Shout
 5: Power Word: Heal, Power Word: Silence
 6: Power Word: Stun, Spell Sequencer
 7: Great Shout, Symbol of Hopelessness
@@ -909,7 +907,7 @@ Domain Spells:
 2: Moonblade, Otiluke's Resilient Sphere
 3: Summon Cow, Wall of Moonlight
 4: Emotion: Rage, Ghost Armor
-5: Protection from Magic Energy, Suffocate
+5: Protection from Magic Energy, Wall of Force
 6: Boulder Roll, Divine Shell
 7: Lutzaen's Local Teleport, Antimagic Field
 8: Improved Alacrity, Prismatic Spray
@@ -1731,6 +1729,7 @@ Advantages:
 * Spell resistance of 6 + character level.
 * Immunity to Sleep magic.
 * Proficient with large swords and crossbows (but not bows)
+* May use Weapon Finesse with large swords.
 * Faerie Fire 3/day.
 * Darkvision.
 
@@ -1793,8 +1792,8 @@ Disadvantages:
 @923    = ~Incorporeal Touch~
 @924    = ~Dodged the attack via Defensive Roll~
 @925    = ~Monk Wisdom Bonus~
-@926    = ~~
-@927    = ~~
+@926    = ~Lay on Hands (Monk)~
+@927    = ~Shield Other~
 @928    = ~~
 @929    = ~~
 @930    = ~~

@@ -3339,7 +3339,7 @@ Enchantment:  +1
 Damage Type: Missile (piercing)
 Damage Type: Melee (piercing)
 Special:
-  Spell Process:  Target is Silenced for 6 rounds (Will DC 14). This effect only occurs when the dagger is thrown.
+  Spell Process:  Target is Silenced for 1 round (no save). This effect only occurs when the dagger is thrown.
 Weight: 0 lb.
 Feat Requirement:  Simple Weapon, Small Blade
 Type:  One-handed~
@@ -3354,7 +3354,7 @@ Enchantment:  +3
 Damage Type: Missile (piercing)
 Damage Type: Melee (piercing)
 Special:
-  Spell Process:  Target is Silenced for 7 rounds (Will DC 28). This effect only occurs when the dagger is thrown.
+  Spell Process:  Target is Silenced for 2 rounds (no save). This effect only occurs when the dagger is thrown.
 Weight: 0 lb.
 Feat Requirement:  Simple Weapon, Small Blade
 Type:  One-handed~
@@ -4874,6 +4874,7 @@ Attack Bonus:  +5
 Enchantment:  +5
 Damage Type:  Slashing
 Special:  
+  Keen: Increased chance of scoring a critical hit
   Dispelling: Dispel Magic on target (Will DC 20)
   Energy Drain: -2 to Attack Bonus / -2 to damage, -10 to max hit points (Fortitude DC 30) 
 Weight: 5 lb.
@@ -4893,6 +4894,7 @@ Attack Bonus:  +10
 Enchantment:  +10
 Damage Type:  Slashing
 Special:  
+  Keen: Increased chance of scoring a critical hit
   Dispelling: Dispel Magic on target (Will DC 30)
   Energy Drain: -4 to Attack Bonus / -4 to damage, -20 to max hit points (Fortitude DC 45)
   Corrosive: +2d6 acid damage per hit
@@ -6588,7 +6590,7 @@ STATISTICS:
 Damage: 1d10 + 3
 Attack Bonus:  +3 
 Enchantment:  +3
-Damage Type: Slashing 
+Damage Type: Slashing
 Special:  
   Quick: No delay before attacking
   Spell Process: 50% chance target succumbs to Fear (Will DC 17)
@@ -7428,15 +7430,17 @@ Required Feat:  Martial Weapon, Flail
 Type:  One-handed~
 //@11503    = ~Flail of Corrosive Spikes~
 //@11504    = ~Item description can remain the same; if new description is needed put it here~
-@11505    = ~Flail of Faith~
+@11505    = ~Flail of Impact +1~
 @11506    = ~The flail is a sturdy wooden handle attached to an iron rod, a wooden rod with spikes, or a spiked iron ball. Between the handle and its implement is either a hinge or chain link. The weapon has been enhanced magically, effectively forming a bond between the weapon and its wielder.
 
 STATISTICS:
 
-Damage:  1d8
+Damage:  1d8  +1
+Attack Bonus:  +1
+Enchantment:  +1
 Damage Type:  Bludgeoning
 Special:
-  Constant Effect: Wielder is under the effects of the spell Armor of Faith
+  Impact: Increased chance of scoring a critical hit
 Weight: 5 lb.
 Required Feat:  Martial Weapon, Flail
 Type:  One-handed~
@@ -7448,19 +7452,17 @@ Type:  One-handed~
 //@11512    = ~Item description can remain the same; if new description is needed put it here~
 //@11513    = ~Flail +2~
 //@11514    = ~Item description can remain the same; if new description is needed put it here~
-@11515    = ~Flail of Flame +5~
+@11515    = ~Shattering Flail +5~
 @11516    = ~The flail is a sturdy wooden handle attached to an iron rod, a wooden rod with spikes, or a spiked iron ball. Between the handle and its implement is either a hinge or chain link. The weapon was originally used as a tool for threshing grain. This flail has been enhanced magically. Runes can be seen glowing on every surface.
 
 STATISTICS:
 
 Damage:  1d8  +5
-Attack Bonus:  +5 
+Attack Bonus:  +5
 Enchantment:  +5
 Damage Type:  Bludgeoning
 Special: 
-  Flame:  +1d6 fire damage
-  Shroud of Flame: 25% chance per hit of casting Shroud of Flame (at level 10) on the target
-  Wielder is unaffected by the spell Shroud of Flame; a Shroud of Flame on an adjacent creature cannot spread to the wielder
+  Deals x4 damage on a critical hit
 Weight: 5 lb.
 Required Feat:  Martial Weapon, Flail
 Type:  One-handed~
@@ -7552,7 +7554,7 @@ Attack Bonus:  +3
 Enchantment:  +3
 Damage Type:  Bludgeoning
 Special:
-  33% chance of  +8 Strength on wielder for 2 rounds when struck (non cumulative)
+  Whenever the wielder takes damage, they have a 33% chance to gain +20 Strength for 2 rounds.
 Weight: 5 lb.
 Required Feat:  Martial Weapon, Flail
 Type:  One-handed~
@@ -7570,11 +7572,11 @@ The chains of Roa's shackles have been looped and wound together in such a way t
 STATISTICS:
 
 Damage:  1d8  +5
-Attack Bonus:  +5 
+Attack Bonus:  +5
 Enchantment:  +5
 Damage Type:  Bludgeoning
 Special:
-  50% chance of  +12 Strength on wielder when struck (non cumulative)
+  Whenever the wielder takes damage, they have a 50% chance to gain +24 Strength for 2 rounds.
 Weight: 5 lb.
 Required Feat:  Martial Weapon, Flail
 Type:  One-handed~
@@ -12240,20 +12242,22 @@ Special:
   Brilliant Energy: Bypasses armor and shield bonuses
 Weight: 0 lb.
 Launcher:  Sling~
-@12575    = ~Pan-Elemental Flail +5~
-@12576    = ~The flail is a sturdy wooden handle attached to an iron rod, a wooden rod with spikes, or a spiked iron ball. Between the handle and its implement is either a hinge or chain link. The weapon has been enhanced magically, effectively forming a bond between the weapon and its wielder.
+@12575    = ~Flail of Ages +5~
+@12576    = ~A trail of destruction has followed this flail through history, leading straight back to the original owners. The flail was the creation of the warlike rakshasa, a race of vengeful spirits that crave human meat, and used as an adaptable weapon that could suit any battle. During a particularly violent hunt, the flail was lost, only to be returned when they used their affinity for magic to locate its powerful aura. They discovered that the weapon had found its way into the hands of a great human warrior, and the battle that followed was truly splendid. They have since used the item as bait countless times, "losing" it again and again. Powerful items gravitate toward powerful people, and powerful people yield the most glorious battles.
 
 STATISTICS:
 
 Damage:  1d8  +5
-Attack Bonus:  +5 
+Attack Bonus:  +5
 Enchantment:  +5
 Damage Type:  Bludgeoning
 Special:
-  Flame: +1d6 fire damage
-  Frost: +1d6 cold damage
-  Shock: +1d6 electric damage
-  Corrosion: +1d6 acid damage
+  Constant Effect: User is under effect of the spell Freedom of Movement while equipped
+  Flame: +2 fire damage
+  Frost: +2 cold damage
+  Shock: +2 electric damage
+  Corrosion: +2 acid damage
+  Poison: +2 poison damage
 Weight: 5 lb.
 Required Feat:  Martial Weapon, Flail
 Type:  One-handed~

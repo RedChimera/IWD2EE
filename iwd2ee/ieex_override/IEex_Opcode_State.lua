@@ -523,8 +523,9 @@ ex_empowerable_opcodes = {[0] = true, [1] = true, [6] = true, [10] = true, [12] 
 				local theparameter2 = IEex_ReadDword(eData + 0x20)
 				if theopcode == 288 and theparameter2 == 191 then
 					local theparameter1 = IEex_ReadDword(eData + 0x1C)
+					local thesavingthrow = IEex_ReadDword(eData + 0x40)
 					local thespecial = IEex_ReadDword(eData + 0x48)
-					if thespecial == 2 then
+					if thespecial == 2 and (bit.band(thesavingthrow, 0x100000) == 0 or targetID ~= sourceID) then
 						healingMultiplier = healingMultiplier + theparameter1
 					end
 				end
