@@ -204,6 +204,21 @@
 		!pop_all_registers_iwd2
 	]]}))
 
+	---------------------------------------------
+	-- IEex_Extern_OnPostCreatureHandleEffects --
+	---------------------------------------------
+
+	IEex_HookAfterCall(0x72E754, IEex_FlattenTable({[[
+		!push_all_registers_iwd2
+		]], IEex_GenLuaCall("IEex_Extern_OnPostCreatureHandleEffects", {
+			["args"] = {
+				{"!push(esi)"},
+			},
+		}), [[
+		@call_error
+		!pop_all_registers_iwd2
+	]]}))
+
 	--------------------------------------------------------------------------
 	-- Allow actionbar buttons to be programatically customized for non-PCs --
 	--------------------------------------------------------------------------
@@ -212,14 +227,14 @@
 	IEex_WriteAssembly(0x5ADBAE, {"!repeat(2,!nop)"})
 
 	-- Assign empty buttons to all creatures
-	IEex_HookAfterRestore(0x6F2967, 0, 6, IEex_FlattenTable({[[
+	IEex_HookAfterRestore(0x6F2967, 0, 6, {[[
 		!xor_ecx_ecx
 		@loop
 		!mov([esi+ecx*4+3D14],64)
 		!inc_ecx
 		!cmp_ecx_byte 09
 		!jl_dword >loop
-	]]}))
+	]]})
 
 	-- IEex_Extern_RestrictCreatureActionbar()
 	IEex_HookJump(0x594831, 0, IEex_FlattenTable({[[
@@ -243,6 +258,55 @@
 		@call_error
 		!pop_all_registers_iwd2
 	]]}))
+
+	-- Add local to CGameSprite_AssignDefaultButtons() that signals
+	-- an override to the normal buttonType=0 restriction
+	IEex_HookRestore(0x724610, 0, 5, IEex_FlattenTable({[[
+
+		!mark_esp()
+		!sub_esp_byte 04
+
+		!push_all_registers_iwd2
+		]], IEex_GenLuaCall("IEex_Extern_ShouldForceDefaultButtons", {
+			["args"] = {
+				{"!push(ecx)"},
+			},
+			["returnType"] = IEex_LuaCallReturnType.Boolean,
+		}), [[
+		!jmp_dword >call_success
+		
+		@call_error
+		!mov_eax #1
+
+		@call_success
+		!marked_esp() !mov([esp-4],eax)
+		!pop_all_registers_iwd2
+	]]}))
+
+	-- Check new local to override buttonType restriction
+	IEex_HookJumpNoReturn(0x724637, {[[
+		!cmp([ebx],0)
+		!jz_dword :72463C
+		!mark_esp(14)
+		!marked_esp() !cmp([esp-4],1)
+		!je_dword :72463C
+		!jmp_dword :72467D
+	]]})
+
+	-- Cleanup new local and return
+	IEex_HookAfterRestore(0x724686, 0, 4, {[[
+		!add_esp_byte 04
+		!ret
+	]]})
+
+	-- Global creature unmarshalling should use function
+	-- to assign default buttons, not its inlined version,
+	-- (that I haven't changed).
+	IEex_HookJumpNoReturn(0x70C8E6, {[[
+		!mov_ecx_ebp
+		!call :724610 ; CGameSprite_AssignDefaultButtons ;
+		!jmp_dword :70C970		
+	]]})
 
 	IEex_EnableCodeProtection()
 

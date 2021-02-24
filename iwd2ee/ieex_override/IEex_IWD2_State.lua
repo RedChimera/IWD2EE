@@ -1227,7 +1227,19 @@ function IEex_SetGlobal(name, val)
 end
 
 function IEex_GetActorLocal(actorID, name)
+
 	if not IEex_IsSprite(actorID, true) then return 0 end
+
+	-- Force the creature's effects list to be evaluated if it hasn't already.
+	-- Since locals are stored as effects on the creature the engine won't report them
+	-- until the creature has been processed at least once.
+	if not IEex_Helper_GetBridge("IEex_GameObjectData", actorID, "bEffectsHandled") then
+		local share = IEex_GetActorShare(actorID)
+		-- m_newEffect = 1, to force an effects list process
+		IEex_WriteDword(share + 0x562C, 1)
+		-- CGameSprite_ProcessEffectList
+		IEex_Call(0x72DE60, {}, share, 0x0)
+	end
 	return IEex_GetVariable(IEex_ReadDword(IEex_GetActorShare(actorID) + 0x72B2), name)
 end
 

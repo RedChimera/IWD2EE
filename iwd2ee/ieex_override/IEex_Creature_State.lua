@@ -191,9 +191,10 @@ function IEex_Extern_OnPostCreatureProcessEffectList(creatureData)
 			end
 		end
 	end
-	if not usedFunction then
-		IEex_WriteDword(creatureData + 0x740, bit.bor(IEex_ReadDword(creatureData + 0x740), 0x4000))
-	end
+
+function IEex_Extern_OnPostCreatureHandleEffects(creatureData)
+	IEex_AssertThread(IEex_Thread.Async, true)
+	IEex_Helper_SetBridge("IEex_GameObjectData", IEex_GetActorIDShare(creatureData), "bEffectsHandled", true)
 end
 
 -- Return:
@@ -203,6 +204,20 @@ function IEex_Extern_RestrictCreatureActionbar(creatureData, buttonType)
 	IEex_AssertThread(IEex_Thread.Async, true)
 	-- Restrict customization if not PC
 	return (IEex_ReadByte(creatureData + 0x24, 0x0) ~= 2 and bit.band(IEex_ReadDword(creatureData + 0x740), 0x400000) == 0)
+end
+
+-- Return:
+--	 true  - To force default actionbar buttons on global creature unmarshal
+--	 false - To keep existing actionbar buttons
+function IEex_Extern_ShouldForceDefaultButtons(creatureData)
+	IEex_AssertThread(IEex_Thread.Async, true)
+	local actorID = IEex_GetActorIDShare(creatureData)
+	if IEex_GetActorLocal(actorID, "IEex_Actionbar_Initialized") == 0 then
+		IEex_SetActorLocal(actorID, "IEex_Actionbar_Initialized", 1)
+		return true
+	else
+		return false
+	end
 end
 
 ------------------
