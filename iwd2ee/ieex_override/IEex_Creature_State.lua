@@ -191,6 +191,7 @@ function IEex_Extern_OnPostCreatureProcessEffectList(creatureData)
 			end
 		end
 	end
+end
 
 function IEex_Extern_OnPostCreatureHandleEffects(creatureData)
 	IEex_AssertThread(IEex_Thread.Async, true)
