@@ -135,6 +135,16 @@
 		!pop_all_registers_iwd2
 	]]}))
 
+	---------------------------------------------------
+	-- Fullscreen should respect minimizing the game --
+	---------------------------------------------------
+
+	IEex_HookRestore(0x78D960, 0, 6, {[[
+		!pop_esi
+		!call ]], {IEex_GetProcAddress("IEexHelper", "WindowProcHook"), 4, 4}, [[
+		!push_esi
+	]]})
+
 	IEex_EnableCodeProtection()
 
 end)()
