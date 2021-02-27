@@ -555,12 +555,13 @@
 		!pop_registers_iwd2
 	]]})
 
-	----------------------------------------------------------------------------
-	-- Redirect empty CUIControlButtonWorldContainerSlot_OnLButtonDoubleClick --
-	-- to CUIControlButton_OnLButtonDown. Prevents double-click cooldown.     --
-	----------------------------------------------------------------------------
+	------------------------------------------------------------------------------
+	-- Redirect empty CUIControlButtonWorldContainerSlot_OnLButtonDoubleClick() --
+	-- to CUIControlButtonWorldContainerSlot_OnLButtonDown().                   --
+	-- Prevents double-click cooldown.                                          --
+	------------------------------------------------------------------------------
 
-	IEex_WriteDword(0x85A3E4, 0x4D4D70)
+	IEex_WriteDword(0x85A3E4, 0x66D760)
 
 	-------------------------------------------
 	-- IEex_Extern_OnUpdateRecordDescription --
@@ -632,6 +633,12 @@
 		!call >IEex_Helper_Sleep
 		!mov([esi+193A],1)
 	]]})
+
+	--------------------------------------------------
+	-- Remove click cooldown from actionbar buttons --
+	--------------------------------------------------
+
+	IEex_WriteDword(0x85C518, 0x4D4D70)
 
 	IEex_EnableCodeProtection()
 
