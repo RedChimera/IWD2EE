@@ -455,6 +455,21 @@ In a pinch, you can roll to dodge almost certain death.
 Prerequisite: 10 Levels of Rogue
 
 Benefit: If you would be hit by an attack or damaging spell that would kill you, you can roll to avoid the hit and take no damage. This ability is used automatically and cannot be used again for 10 rounds.~
+@375    = ~Opportunist~
+@376    = ~OPPORTUNIST:
+
+You know how to take advantage of an ally's distraction of your enemy to land an additional attack on the enemy.
+
+Prerequisite: 10 Levels of Rogue, Combat Reflexes
+
+Benefit: If an ally would hit an enemy in melee while you are also attacking that enemy in melee, you may make an attack of opportunity against that enemy.~
+@377    = ~OPPORTUNIST:
+
+You know how to take advantage of an ally's distraction of your enemy to land an additional attack on the enemy.
+
+Prerequisite: 10 Levels of Rogue
+
+Benefit: If an ally would hit an enemy in melee while you are also attacking that enemy in melee, you may make an attack of opportunity against that enemy.~
 @522    = ~Wizard~
 @523    = ~WIZARD:
 
@@ -923,7 +938,7 @@ Domain Spells:
 6: Acid Storm, Whirlwind
 7: Fire Storm, Lightning Barrage
 8: Earthquake, Living Lightning
-9: Lightning Spiral, Meteor Swarm~
+9: Lightning Spiral, Storm of Vengeance~
 @588    = ~
 
 Domain Spells:

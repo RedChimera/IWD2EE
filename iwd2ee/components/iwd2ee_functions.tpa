@@ -14,6 +14,8 @@ OUTER_PATCH creature_constants BEGIN
 	armorcolor=0x31
 	haircolor=0x32
 	armorclass=0x46
+	baseattackbonus=0x50
+	attacksperround=0x51
 	fortitudesave=0x52
 	reflexsave=0x53
 	willsave=0x54

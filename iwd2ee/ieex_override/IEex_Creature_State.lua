@@ -26,6 +26,8 @@ end
 -------------------
 -- Thread: Async --
 -------------------
+ex_cre_initializing = {}
+ex_cre_effects_initializing = {}
 function IEex_Extern_OnGameObjectAdded(actorID)
 
 	IEex_AssertThread(IEex_Thread.Async, true)
@@ -36,7 +38,8 @@ function IEex_Extern_OnGameObjectAdded(actorID)
 		return
 	end
 	if IEex_ReadByte(share + 0x4, 0) ~= 0x31 then return end
-
+	ex_cre_initializing[actorID] = true
+	ex_cre_effects_initializing[actorID] = true
 	IEex_Helper_SynchronizedBridgeOperation("IEex_GameObjectData", function()
 		local luaDerivedStats = IEex_Helper_GetBridgeCreateNL("IEex_GameObjectData", actorID, "luaDerivedStats")
 		local luaTempStats = IEex_Helper_GetBridgeCreateNL("IEex_GameObjectData", actorID, "luaTempStats")
@@ -68,7 +71,12 @@ function IEex_Extern_OnGameObjectBeingDeleted(actorID)
 	end
 
 	if IEex_ReadByte(share + 0x4, 0) ~= 0x31 then return end
-
+	ex_cre_initializing[actorID] = nil
+	ex_cre_effects_initializing[actorID] = nil
+	local constantID = IEex_ReadDword(share + 0x700)
+	if constantID ~= -1 then
+		IEex_Helper_EraseBridgeKey("IEex_ConstantID", constantID)
+	end
 	IEex_Helper_SynchronizedBridgeOperation("IEex_GameObjectData", function()
 		local luaDerivedStats = IEex_Helper_GetBridgeNL("IEex_GameObjectData", actorID, "luaDerivedStats")
 		local luaTempStats = IEex_Helper_GetBridgeNL("IEex_GameObjectData", actorID, "luaTempStats")
@@ -128,14 +136,41 @@ function IEex_Extern_OnPostCreatureProcessEffectList(creatureData)
 	if not IEex_IsSprite(targetID, false) then return end
 	local onTickFunctionsCalled = {}
 	local extraFlags = IEex_ReadDword(creatureData + 0x740)
-	if extraFlags == -1 or extraFlags == -65536 or extraFlags == -50393088 then
-		extraFlags = 0
-		IEex_WriteDword(creatureData + 0x740, extraFlags)
-	elseif extraFlags < 0 then
-		extraFlags = bit.band(extraFlags, 0x31000)
-		IEex_WriteDword(creatureData + 0x740, extraFlags)
+	if ex_cre_initializing[targetID] then
+		ex_cre_initializing[targetID] = nil
+		if extraFlags == -1 or extraFlags == -65536 or extraFlags == -50393088 then
+			extraFlags = 0
+			IEex_WriteDword(creatureData + 0x740, extraFlags)
+		elseif extraFlags < 0 then
+			extraFlags = bit.band(extraFlags, 0x31000)
+			IEex_WriteDword(creatureData + 0x740, extraFlags)
+		end
+		local constantID = IEex_ReadDword(creatureData + 0x700)
+		if constantID == -1 then
+			constantID = IEex_GetGlobal("EX_CONSTANT_ID") + 1
+			IEex_WriteDword(creatureData + 0x700, constantID)
+			IEex_SetGlobal("EX_CONSTANT_ID", constantID)
+		end
+		IEex_Helper_SetBridge("IEex_ConstantID", constantID, targetID)
 	end
-	if bit.band(extraFlags, 0x6000) == 0x4000 and IEex_ReadSignedByte(creatureData + 0x5622, 0x0) < 0 and not IEex_IsPartyMember(targetID) and IEex_CheckGlobalEffect(0xFFFFFFFF) == false then return end
+	if ex_cre_effects_initializing[targetID] then
+		local unknownSourceEffectsRemaining = false
+		IEex_IterateActorTimedEffects(targetID, function(eData)
+			local theconstantID = IEex_ReadDword(eData + 0x68)
+			local thesourceID = IEex_ReadDword(eData + 0x110)
+			if theconstantID > 0 and thesourceID <= 0 then
+				local realSourceID = IEex_Helper_GetBridge("IEex_ConstantID", theconstantID)
+				if realSourceID ~= nil then
+					IEex_WriteDword(eData + 0x110, realSourceID)
+				else
+					unknownSourceEffectsRemaining = true
+				end
+			end
+		end)
+		if not unknownSourceEffectsRemaining then
+			ex_cre_effects_initializing[targetID] = nil
+		end
+	end
 	local usedFunction = false
 	IEex_IterateActorEffects(targetID, function(eData)
 		local theopcode = IEex_ReadDword(eData + 0x10)
@@ -146,6 +181,9 @@ function IEex_Extern_OnPostCreatureProcessEffectList(creatureData)
 			_G[theresource](eData + 0x4, creatureData, true)
 		end
 	end)
+	extraFlags = IEex_ReadDword(creatureData + 0x740)
+	if bit.band(extraFlags, 0x6000) == 0x4000 and IEex_ReadSignedByte(creatureData + 0x5622, 0x0) < 0 and not usedFunction and not IEex_IsPartyMember(targetID) and IEex_CheckGlobalEffect(0xFFFFFFFF) == false then return end
+
 --[[
 	local areaData = IEex_ReadDword(creatureData + 0x12)
 	if areaData > 0 then
@@ -191,6 +229,10 @@ function IEex_Extern_OnPostCreatureProcessEffectList(creatureData)
 			end
 		end
 	end
+	if not usedFunction then
+		extraFlags = IEex_ReadDword(creatureData + 0x740)
+		IEex_WriteDword(creatureData + 0x740, bit.bor(extraFlags, 0x4000))
+	end
 end
 
 function IEex_Extern_OnPostCreatureHandleEffects(creatureData)
@@ -228,7 +270,6 @@ end
 function IEex_Extern_OnGameObjectsBeingCleaned()
 
 	IEex_AssertThread(IEex_Thread.Both, true)
-
 	IEex_Helper_SynchronizedBridgeOperation("IEex_GameObjectData", function()
 
 		IEex_Helper_IterateBridgeNL("IEex_GameObjectData", function(actorID, data)

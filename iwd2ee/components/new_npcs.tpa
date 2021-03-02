@@ -452,7 +452,7 @@ COPY_EXISTING ~11VEIRA.cre~ ~override~
 	WRITE_BYTE coldresistance 0
 	WRITE_BYTE magiccoldresistance 0
 	WRITE_BYTE skillconcentration 4
-	WRITE_BYTE skilldiplomacy 4
+	WRITE_BYTE skilldiplomacy 2
 	WRITE_BYTE skillhide 0
 	WRITE_BYTE skilllore 4
 	WRITE_BYTE skillmovesilently 0
@@ -501,8 +501,9 @@ COPY_EXISTING ~20EMMA.cre~ ~override~
 	WRITE_BYTE intelligence 10
 	WRITE_BYTE wisdom 18
 	WRITE_BYTE charisma 12
-	WRITE_BYTE skillconcentration 9
-	WRITE_BYTE skilldiplomacy 7
+	WRITE_BYTE skillconcentration 7
+	WRITE_BYTE skilldiplomacy 5
+	WRITE_BYTE skillspellcraft 4
 	WRITE_BYTE challengerating 6
 	WRITE_LONG kit 0x20000 //Silverstar of Selune
 	WRITE_LONG feats1 0x208
@@ -549,6 +550,7 @@ COPY_EXISTING ~20EMMA.cre~ ~override~
 	LPF GIVE_CORRECT_DIVINE_SPELLS END
 	LPF	IWD2_CRE_ABILITY INT_VAR num=1 STR_VAR resource=~SPIN268~ END
 	LPF	IWD2_CRE_ABILITY INT_VAR num=1 STR_VAR resource=~SPIN269~ END
+	LPF	IWD2_CRE_ABILITY INT_VAR num=3 STR_VAR resource=~SPIN970~ END
 
 COPY_EXISTING ~20VREK.cre~ ~override~
 	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelbarbarian=6 STR_VAR updatehp=~max~ END

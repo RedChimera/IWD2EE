@@ -181,7 +181,25 @@ end
 --   true  -> to prevent summon from counting towards hardcoded limit
 function IEex_Extern_OnAddSummonToLimitHook(effectData, summonerData, summonedData)
 	IEex_AssertThread(IEex_Thread.Async, true)
-	IEex_WriteDword(summonedData + 0x72C, IEex_GetActorIDShare(summonerData))
+	if IEex_ReadByte(summonerData + 0x4, 0x0) == 0x31 then
+		IEex_WriteDword(summonedData + 0x72C, IEex_ReadDword(summonerData + 0x700))
+		if bit.band(IEex_ReadDword(effectData + 0x3C), 0x100000) > 0 then
+			IEex_WriteDword(summonedData + 0x740, bit.bor(IEex_ReadDword(summonedData + 0x740), 0x100000))
+		end
+	end
+	IEex_WriteByte(summonedData + 0x730, IEex_ReadByte(effectData + 0xC4, 0x0))
+	IEex_WriteByte(summonedData + 0x731, IEex_ReadByte(effectData + 0xC5, 0x0))
+	IEex_WriteByte(summonedData + 0x732, IEex_ReadByte(effectData + 0xC6, 0x0))
+	local summonedID = IEex_GetActorIDShare(summonedData)
+	local summonerID = IEex_GetActorIDShare(summonerData)
+	IEex_ApplyEffectToActor(summonedID, {
+["opcode"] = 500,
+["target"] = 2,
+["timing"] = 1,
+["resource"] = "MESUCREA",
+["parent_resource"] = "USSUCREA",
+["source_id"] = summonerID
+})
 	if ex_no_summoning_limit or bit.band(IEex_ReadDword(effectData + 0x3C), 0x10000) > 0 then return true end
 	return false
 end
@@ -219,7 +237,10 @@ ex_empowerable_opcodes = {[0] = true, [1] = true, [6] = true, [10] = true, [12] 
 --]]
 		if not IEex_IsSprite(sourceID, true) then return false end
 		local sourceData = IEex_GetActorShare(sourceID)
-
+		local constantID = IEex_ReadDword(sourceData + 0x700)
+		if constantID ~= -1 then
+			IEex_WriteDword(effectData + 0x64, constantID)
+		end
 --[[
 		print("Opcode " .. opcode .. " on " .. IEex_GetActorName(targetID))
 		if opcode == 500 then
@@ -468,7 +489,19 @@ ex_empowerable_opcodes = {[0] = true, [1] = true, [6] = true, [10] = true, [12] 
 				IEex_IterateActorEffects(sourceID, function(eData)
 					local theopcode = IEex_ReadDword(eData + 0x10)
 					local theparameter2 = IEex_ReadDword(eData + 0x20)
-					if theopcode == 288 and theparameter2 == 222 then
+					local thesavingthrow = IEex_ReadDword(eData + 0x40)
+					if theopcode == 288 and theparameter2 == 222 and bit.band(thesavingthrow, 0x100000) == 0 then
+						local theresource = IEex_ReadLString(eData + 0x30, 8)
+						table.insert(onKillEffectList, theresource)
+					end
+				end)
+			end
+			if IEex_GetActorSpellState(targetID, 222) then
+				IEex_IterateActorEffects(targetID, function(eData)
+					local theopcode = IEex_ReadDword(eData + 0x10)
+					local theparameter2 = IEex_ReadDword(eData + 0x20)
+					local thesavingthrow = IEex_ReadDword(eData + 0x40)
+					if theopcode == 288 and theparameter2 == 222 and bit.band(thesavingthrow, 0x100000) > 0 then
 						local theresource = IEex_ReadLString(eData + 0x30, 8)
 						table.insert(onKillEffectList, theresource)
 					end

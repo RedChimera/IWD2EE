@@ -192,7 +192,7 @@ COPY_EXISTING ~51OCH.cre~ ~override~ ~51OCHH.cre~ ~override~ ~51OCHX.cre~ ~overr
 	WRITE_BYTE bludgeoningresistance 30
 	WRITE_BYTE piercingresistance 20
 	WRITE_BYTE missileresistance 0
-
+/*
 COPY_EXISTING ~52GOLIR.cre~ ~override~ ~61GOLIRO.cre~ ~override~ ~64IGOLEM.cre~ ~override~
 	WRITE_BYTE fireresistance 100
 	WRITE_BYTE coldresistance 50
@@ -204,7 +204,7 @@ COPY_EXISTING ~52GOLIR.cre~ ~override~ ~61GOLIRO.cre~ ~override~ ~64IGOLEM.cre~ 
 	WRITE_BYTE bludgeoningresistance 5
 	WRITE_BYTE piercingresistance 10
 	WRITE_BYTE missileresistance 10
-
+*/
 COPY_EXISTING ~52MNKBR.cre~ ~override~
 	WRITE_BYTE fireresistance 100
 	WRITE_BYTE coldresistance 0
@@ -548,16 +548,14 @@ COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
 		LPF	IWD2_REMOVE_CRE_ITEM STR_VAR item=~00CIDED1 00CIDEAD~ END
 		READ_SSHORT currenthp thecurrenthp
 		READ_SSHORT maxhp themaxhp
-		WRITE_SHORT currenthp (thecurrenthp * 2)
-		WRITE_SHORT maxhp (themaxhp * 2)
-
+		WRITE_SHORT currenthp ((thecurrenthp * 2) + 60)
+		WRITE_SHORT maxhp ((themaxhp * 2) + 60)
 		READ_SBYTE fireresistance thefireresistance
 		READ_SBYTE coldresistance thecoldresistance
 		READ_SBYTE acidresistance theacidresistance
 		PATCH_IF thefireresistance < 20 BEGIN
 			WRITE_BYTE fireresistance (thefireresistance - 20)
-		END
-		ELSE BEGIN
+		END ELSE BEGIN
 			WRITE_BYTE coldresistance (thecoldresistance - 20)
 		END
 		WRITE_BYTE acidresistance (theacidresistance - 20)

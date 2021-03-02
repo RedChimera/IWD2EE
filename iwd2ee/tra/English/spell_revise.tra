@@ -36,7 +36,7 @@ Saving Throw: None
 Casting a Goodberry spell creates four sprigs of magical berries that the caster can give to allies or carry themselves. These berries cure 1d4+5 points of damage when eaten. The sprig will only last one day per level of the caster, so it's not advisable to carry them around for too long.~
 @1006    = ~Spell Shield~
 @1007    = ~Spell Shield
-(Abjuration) 
+(Abjuration)
 Level: Clr 2, Helm 2
 Range: Sight of Caster
 Duration: 5 rounds
@@ -49,7 +49,7 @@ This spell grants a +3 bonus to Will saves and immunity to charm and stun effect
 @1009    = ~Tortoise Shell
 (Abjuration) 
 Level: Drd 3, Rgr 3
-Range: Close
+Range: Sight of Caster
 Duration: 10 rounds
 Casting Time: 2
 Area of Effect: 1 creature
@@ -1457,7 +1457,7 @@ This spell brings forth a long-dead skeleton from deep within the earth and rean
 Level: Brd 3, Clr 3, Sor/Wiz 4
 Range: Touch 
 Duration: Permanent 
-Casting Time: 6 
+Casting Time: 0
 Area of Effect: Special 
 Saving Throw: None
 
@@ -1517,9 +1517,10 @@ This spell empowers the attacks of any animal, granting it +3 to hit and damage 
 @1687    = ~Spiritual Weapon 
 (Evocation)
 Level: Clr 2, Pal 1
-Casting Time: 5
 Range: Caster
 Duration: 10 rounds + 1 round / level
+Casting Time: 5
+Area of Effect: Caster
 Saving Throw: None 
 
 By calling upon his deity, the caster brings into existence a magical hammer which may be used as a weapon, striking as a +1 weapon. This hammer is composed of pure force and can be used to strike targets from a safe distance, dealing 1d8 bludgeoning damage per strike. At level 8, the hammer strikes as a +2 weapon and deals an additional 1d4 electricity damage per hit. At level 12, the hammer strikes as a +3 weapon and the electricity damage increases to 1d8. The Spiritual Hammer uses the Martial Weapon: Hammer proficiency.
@@ -1652,7 +1653,7 @@ Blur causes the wizard's body to become blurred, shifting and wavering. This dis
 @1721    = ~Dispel Illusions
 (Divination)
 Level: Clr 3, Sor/Wiz 3, Brd 3, Drd 4
-Range: Personal
+Range: Caster
 Duration: Instantaneous
 Casting Time: 2
 Area of Effect: Sight of Caster
@@ -2864,6 +2865,17 @@ Area of Effect: 1 creature
 Saving Throw: Fortitude negates
 
 Dolorous decay is a rotting and withering of the body that spreads quickly and painfully throughout the afflicted creature.  Afflicted creatures take 1 point of damage per second and are slowed for 1 round per level.  The target creature can resist the disease with a successful Fortitude save at a -8 penalty.~
+@31727     = ~Contagious Fear~
+@32727     = ~Contagious Fear
+(Necromancy)
+Level: Brd 7, Clr 8, Sor/Wiz 8
+Range: Sight of Caster
+Duration: 10 rounds
+Casting Time: 8
+Area of Effect: 30-foot radius
+Saving Throw: Will negates
+
+Contagious Fear causes panic among enemies in the area of effect, and the panic then spreads to other creatures. Each enemy in the initial area of effect must make a Will save or run in fear for 10 rounds. Any enemy that comes within 10 feet of one of the panicking creatures must make the save as well, or else the contagion will spread to that creature. Creatures immune to fear will not transmit the contagion. A creature that makes a save against this spell is immune to the spell for 2 rounds. After the spell expires on a creature, that creature is immune to the contagion for 8 hours.~
 @31750     = ~Summon Nature's Ally VII~
 @32750     = ~Summon Nature's Ally VII
 (Conjuration) 
@@ -2965,6 +2977,17 @@ Area of Effect: Caster
 Saving Throw: None
 
 This spell creates fifteen small meteors, which can be thrown by the caster. Each meteor bursts into a 1-foot-diameter sphere upon impact and inflicts 1d4+6 points of fire damage (plus Strength bonus). The meteors use the Simple Weapon: Missile proficiency (they count as darts), gain a +5 bonus to attack rolls, and strike as +3 weapons. The wizard may attack four additional times per round while throwing the meteors.~
+@33417     = ~Beltyn's Burning Blood~
+@34417     = ~Beltyn's Burning Blood
+(Necromancy)
+Level: Sor/Wiz 4
+Range: Sight of Caster
+Duration: 1 round/2 levels
+Casting Time: 2
+Area of Effect: 1 creature
+Saving Throw: Fortitude partial
+
+This spell turns a target's blood to flame, doing 3d4 hit points of damage every round and driving the victim berserk with pain. The target gets to make a Fortitude save every round; if successful, the berserk state is negated, but the damage is still dealt.  This spell does not work against creatures that do not have blood, such as the undead, elementals, and plants. Creatures with at least 15/- fire resistance are immune to the berserk effect.~
 @33503     = ~Cloudkill~
 @34503     = ~Cloudkill
 (Necromancy)
@@ -3438,6 +3461,22 @@ Area of Effect: Special
 Saving Throw: Reflex half
 
 This spell triggers a small volcanic eruption centered on the caster. Multiple balls of lava (one per two caster levels) fly through the area in random directions and hit the ground in random spots. Each ball of lava deals 6d6 fire damage (Reflex save for half) to all creatures within 20 feet of its landing point. The caster is completely unharmed by this spell, but their allies are still in danger.~
+@35954     = ~Storm of Vengeance~
+@36954     = ~Storm of Vengeance
+(Conjuration)
+Level: Clr 9, Drd 9, Talos 9
+Range: Caster
+Duration: 4 rounds
+Casting Time: 12
+Area of Effect: 25-foot radius
+Saving Throw: Reflex half
+
+This spell conjures a divine storm cloud which releases damaging torrents upon creatures in the area of effect. Each round, the nature of the storm is different:
+
+1st round: Fire Storm - Deals 1d6 fire damage per level (max 20d6) with a Reflex save for half.
+2nd round: Acid Storm - Deals 3d6 acid damage per round for 1 round per 3 levels (max 24d6 and 8 rounds). A Reflex save halves the number of rounds.
+3rd round: Lightning Storm - Deals 10d10 electricity damage with a Reflex save for half.
+4th round: Ice Storm - Deals 4d6 bludgeoning damage and 4d6 cold damage with no save.~
 @37151     = ~True Strike~
 @38151     = ~True Strike
 (Divination) 
@@ -3992,3 +4031,14 @@ Area of Effect: Entire area
 Saving Throw: None
 
 This spell slows time for everyone and everything except the caster. All other creatures move and attack at one quarter their normal rates.~
+@37960     = ~Mordenkainen's Disjunction~
+@38960     = ~Mordenkainen's Disjunction
+(Abjuration)
+Level: Sor/Wiz 9
+Range: Sight of Caster
+Duration: Instantaneous
+Casting Time: 4
+Area of Effect: 1 creature
+Saving Throw: None
+
+Mordenkainen's Disjunction dispels all dispellable effects on the target. There is no saving throw. This spell can even remove the effects of Spell Trap, Antimagic Field, or a Protection from Magic scroll.~

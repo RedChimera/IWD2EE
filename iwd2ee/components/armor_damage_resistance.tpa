@@ -17,7 +17,7 @@ END
 COPY_EXISTING_REGEXP ~.*\.itm~ ~override~
 //Armor and shields grant resistance to physical damage equal to half their armor/shield bonus, rounded down
 	READ_SHORT 0x1c us_item_category
-	PATCH_IF (us_item_category >= 60 AND us_item_category <= 68) OR (us_item_category = 2) BEGIN
+	PATCH_IF (us_item_category >= 60 AND us_item_category <= 68) OR (us_item_category = 2) OR (us_item_category = 6) BEGIN
 		us_bonus = 0
 		READ_LONG 0x6a us_offset
 		READ_SHORT 0x70 us_num_effects

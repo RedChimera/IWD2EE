@@ -272,9 +272,12 @@ function IEex_Extern_OnPostProjectileCreation(CProjectile, esp)
 		funcList["projectileMutator"](source, CGameAIBase, CProjectile, sourceRES)
 	end
 	if IEex_GetActorSpellState(sourceID, 246) then
+		local areaSet = -1
+		local durationSet = -1
 		local areaMult = 100
 		local rangeMult = 100
 		local speedMult = 100
+		local durationMult = 100
 		IEex_IterateActorEffects(sourceID, function(eData)
 			local theopcode = IEex_ReadDword(eData + 0x10)
 			local theparameter2 = IEex_ReadDword(eData + 0x20)
@@ -287,7 +290,11 @@ function IEex_Extern_OnPostProjectileCreation(CProjectile, esp)
 				local thelimit = IEex_ReadWord(eData + 0x4A, 0x0)
 				if (bit.band(thesavingthrow, 0x10000) == 0 or thecondition + 1 == missileIndex) and (bit.band(thesavingthrow, 0x20000) == 0 or thecondition == generalProjectileType) and (bit.band(thesavingthrow, 0x40000) == 0 or thecondition == source) and (bit.band(thesavingthrow, 0x80000) == 0 or thelimit > 0) then
 					if bit.band(thesavingthrow, 0x1000000) > 0 and generalProjectileType >= 6 and generalProjectileType <= 8 then
-						areaMult = math.floor(areaMult * theparameter1 / 100)
+						if bit.band(thesavingthrow, 0x100) > 0 then
+							areaSet = theparameter1
+						else
+							areaMult = math.floor(areaMult * theparameter1 / 100)
+						end
 						if bit.band(thesavingthrow, 0x80000) > 0 and bit.band(thesavingthrow, 0x100000) == 0 then
 							thelimit = thelimit - 1
 							IEex_WriteWord(eData + 0x4A, thelimit)
@@ -304,10 +311,29 @@ function IEex_Extern_OnPostProjectileCreation(CProjectile, esp)
 							thelimit = thelimit - 1
 							IEex_WriteWord(eData + 0x4A, thelimit)
 						end
+					elseif bit.band(thesavingthrow, 0x10000000) > 0 and generalProjectileType == 6 then
+						if bit.band(thesavingthrow, 0x100) > 0 then
+							durationSet = theparameter1
+						else
+							durationMult = math.floor(durationMult * theparameter1 / 100)
+						end
+						if bit.band(thesavingthrow, 0x80000) > 0 and bit.band(thesavingthrow, 0x100000) == 0 then
+							thelimit = thelimit - 1
+							IEex_WriteWord(eData + 0x4A, thelimit)
+						end
 					end
 				end
 			end
 		end)
+		if areaSet ~= -1 then
+			if generalProjectileType == 6 then
+				IEex_WriteWord(CProjectile + 0x2AE, areaSet)
+			elseif generalProjectileType == 7 then
+				IEex_WriteWord(CProjectile + 0x2CE, areaSet)
+			elseif generalProjectileType == 8 then
+				IEex_WriteWord(CProjectile + 0x2A0, areaSet)
+			end
+		end
 		if areaMult ~= 100 then
 			if generalProjectileType == 6 then
 				IEex_WriteWord(CProjectile + 0x2AE, math.floor(IEex_ReadWord(CProjectile + 0x2AE, 0x0) * areaMult / 100))
@@ -327,6 +353,16 @@ function IEex_Extern_OnPostProjectileCreation(CProjectile, esp)
 				IEex_WriteWord(CProjectile + 0x2D2, math.floor(IEex_ReadWord(CProjectile + 0x2D2, 0x0) * rangeMult / 100))
 			elseif generalProjectileType == 8 then
 				IEex_WriteWord(CProjectile + 0x2A2, math.floor(IEex_ReadWord(CProjectile + 0x2A2, 0x0) * rangeMult / 100))
+			end
+		end
+		if durationSet ~= -1 then
+			if generalProjectileType == 6 and IEex_ReadSignedWord(CProjectile + 0x4C0, 0x0) > 0 then
+				IEex_WriteWord(CProjectile + 0x4C0, durationSet)
+			end
+		end
+		if durationMult ~= 100 then
+			if generalProjectileType == 6 and IEex_ReadSignedWord(CProjectile + 0x4C0, 0x0) > 0 then
+				IEex_WriteWord(CProjectile + 0x4C0, math.floor(IEex_ReadSignedWord(CProjectile + 0x4C0, 0x0) * durationMult / 100))
 			end
 		end
 	end
@@ -1086,7 +1122,6 @@ IEex_MutatorOpcodeFunctions["EXWIDSPL"] = {
     end,
 }
 
-
 IEex_MutatorOpcodeFunctions["MEATKSAV"] = {
     ["typeMutator"] = function(source, originatingEffectData, creatureData, missileIndex, sourceRES)
 	end,
@@ -1133,6 +1168,8 @@ IEex_MutatorOpcodeFunctions["MEATKSAV"] = {
 		end
     end,
 }
+
+
 
 ex_is_boulder_shot = {}
 IEex_MutatorOpcodeFunctions["MEBOULSH"] = {
@@ -1228,7 +1265,7 @@ IEex_MutatorOpcodeFunctions["MEMODDTP"] = {
 		local opcode = IEex_ReadDword(effectData + 0xC)
 		if opcode == 12 and IEex_ReadLString(effectData + 0x90, 8) == "IEEX_DAM" and (IEex_ReadLString(effectData + 0x6C, 8) == IEex_ReadLString(originatingEffectData + 0x90, 8) or IEex_ReadLString(effectData + 0x74, 8) == IEex_ReadLString(originatingEffectData + 0x90, 8)) then
 			local newDamageType = IEex_ReadWord(originatingEffectData + 0x18, 0x0)
-			IEex_WriteWord(effectData + 0x1A, newDamageType)
+			IEex_WriteWord(effectData + 0x1E, newDamageType)
 		end
     end,
 }
@@ -1246,12 +1283,32 @@ IEex_MutatorGlobalFunctions["METIMESL"] = {
     ["effectMutator"] = function(source, creatureData, projectileData, effectData)
     end,
 }
+--[[
+IEex_MutatorGlobalFunctions["USPR954"] = {
+    ["typeMutator"] = function(source, creatureData, missileIndex, sourceRES)
 
+    end,
+    ["projectileMutator"] = function(source, creatureData, projectileData, sourceRES)
+    	if ex_true_spell[sourceRES] ~= nil then
+    		sourceRES = ex_true_spell[sourceRES]
+    	end
+    	local projectileIndex = IEex_ReadWord(projectileData + 0x6E, 0x0)
+--		if sourceRES == "USPR954" and source ~= 8 then
+		if projectileIndex == 308 then
+		end
+	end,
+    ["effectMutator"] = function(source, creatureData, projectileData, effectData)
+    end,
+}
+--]]
 IEex_MutatorGlobalFunctions["USWI252"] = {
     ["typeMutator"] = function(source, creatureData, missileIndex, sourceRES)
 
     end,
     ["projectileMutator"] = function(source, creatureData, projectileData, sourceRES)
+    	if ex_true_spell[sourceRES] ~= nil then
+    		sourceRES = ex_true_spell[sourceRES]
+    	end
 		if sourceRES == "USWI252" then
 			IEex_WriteWord(projectileData + 0x2B2, 314)
 		end
@@ -1265,6 +1322,9 @@ IEex_MutatorGlobalFunctions["USWI858"] = {
 
     end,
     ["projectileMutator"] = function(source, creatureData, projectileData, sourceRES)
+    	if ex_true_spell[sourceRES] ~= nil then
+    		sourceRES = ex_true_spell[sourceRES]
+    	end
 		if sourceRES == "USWI858" and source ~= 8 then
 			IEex_WriteWord(projectileData + 0x2B2, 37)
 		end

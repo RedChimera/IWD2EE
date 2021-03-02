@@ -1062,6 +1062,30 @@ function IEex_IterateActorEffects(actorID, func)
 	end
 end
 
+function IEex_IterateActorTimedEffects(actorID, func)
+	if not IEex_IsSprite(actorID, true) then return end
+	local esi = IEex_ReadDword(IEex_GetActorShare(actorID) + 0x552A)
+	while esi ~= 0x0 do
+		local edi = IEex_ReadDword(esi + 0x8) - 0x4
+		if edi > 0x0 then
+			func(edi)
+		end
+		esi = IEex_ReadDword(esi)
+	end
+end
+
+function IEex_IterateActorEquippedEffects(actorID, func)
+	if not IEex_IsSprite(actorID, true) then return end
+	local esi = IEex_ReadDword(IEex_GetActorShare(actorID) + 0x54FE)
+	while esi ~= 0x0 do
+		local edi = IEex_ReadDword(esi + 0x8) - 0x4
+		if edi > 0x0 then
+			func(edi)
+		end
+		esi = IEex_ReadDword(esi)
+	end
+end
+
 ex_kit_unusability_locations = {
 [0x40] = {0x2F, 0x40},
 [0x80] = {0x2F, 0x80},
@@ -1229,7 +1253,7 @@ end
 function IEex_GetActorLocal(actorID, name)
 
 	if not IEex_IsSprite(actorID, true) then return 0 end
-
+	
 	-- Force the creature's effects list to be evaluated if it hasn't already.
 	-- Since locals are stored as effects on the creature the engine won't report them
 	-- until the creature has been processed at least once.
@@ -1631,6 +1655,16 @@ function IEex_GetActorIDPortrait(portraitNum)
 	return -1
 end
 
+function IEex_GetActorSummonerID(actorID)
+	if not IEex_IsSprite(actorID, true) then return -1 end
+	local summonerID = IEex_Helper_GetBridge("IEex_ConstantID", IEex_ReadDword(IEex_GetActorShare(actorID) + 0x72C))
+	if not IEex_IsSprite(summonerID, true) then
+		return -1
+	else
+		return summonerID
+	end
+end
+
 function IEex_GetActorPortraitNum(actorID)
 	local curAddress = IEex_GetGameData() + 0x382E
 	for i = 0, 5 do
@@ -2029,6 +2063,17 @@ function Feats_NaturalSpell(actorID, featID)
 	return (IEex_ReadByte(creatureData + 0x62A, 0x0) > 4 and IEex_ReadByte(creatureData + 0x807, 0x0) >= 13)
 end
 
+function Feats_Opportunist(actorID, featID)
+	local creatureData = IEex_GetActorShare(actorID)
+	local combatReflexesCount = IEex_ReadByte(creatureData + 0x744 + ex_feat_name_id["ME_COMBAT_REFLEXES"], 0x0)
+	return (IEex_ReadByte(creatureData + 0x62F, 0x0) > 9 and combatReflexesCount > 0)
+end
+
+function Feats_Opportunist2(actorID, featID)
+	local creatureData = IEex_GetActorShare(actorID)
+	return (IEex_ReadByte(creatureData + 0x62F, 0x0) > 9)
+end
+
 function Feats_PersistentSpell(actorID, featID)
 	local creatureData = IEex_GetActorShare(actorID)
 	return (IEex_ReadByte(creatureData + 0x628, 0x0) > 18 or IEex_ReadByte(creatureData + 0x629, 0x0) > 12 or IEex_ReadByte(creatureData + 0x62A, 0x0) > 12 or IEex_ReadByte(creatureData + 0x630, 0x0) > 13 or IEex_ReadByte(creatureData + 0x631, 0x0) > 12)
@@ -2418,7 +2463,7 @@ ex_item_type_proficiency = {[5] = 39, [14] = 55, [15] = 39, [16] = 57, [17] = 54
 ex_item_type_critical = {[0] = {0, 2}, [5] = {0, 3}, [14] = {0, 2}, [15] = {0, 3}, [16] = {1, 2}, [17] = {0, 2}, [18] = {0, 2}, [19] = {1, 2}, [20] = {1, 2}, [21] = {0, 3}, [22] = {0, 3}, [23] = {0, 3}, [24] = {0, 2}, [25] = {0, 3}, [26] = {0, 2}, [27] = {0, 2}, [28] = {0, 2}, [29] = {0, 3}, [30] = {0, 3}, [31] = {0, 2}, [44] = {0, 2}, [57] = {1, 2}, [69] = {1, 2}}
 ex_crippling_strike = {ex_tra_905, ex_tra_905, ex_tra_905, ex_tra_905, ex_tra_905, ex_tra_906, ex_tra_906, ex_tra_906, ex_tra_907, ex_tra_907, ex_tra_907, ex_tra_908, ex_tra_908, ex_tra_908, ex_tra_909, ex_tra_909, ex_tra_909, ex_tra_910, ex_tra_910, ex_tra_910, ex_tra_911, ex_tra_911, ex_tra_911, ex_tra_912, ex_tra_912, ex_tra_912, ex_tra_913, ex_tra_913, ex_tra_913, ex_tra_914}
 ex_arterial_strike = {1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4, 4, 5, 5, 5, 5, 5, 5}
-ex_damage_source_spell = {["EFFAS1"] = "SPWI217", ["EFFAS2"] = "SPWI217", ["EFFCL"] = "SPPR302", ["EFFCT1"] = "SPWI117", ["EFFDA3"] = "SPWI228", ["EFFFS1"] = "SPWI427", ["EFFFS2"] = "SPWI426", ["EFFIK"] = "SPWI122", ["EFFMB1"] = "SPPR318", ["EFFMB2"] = "SPPR318", ["EFFMT1"] = "SPPR322", ["EFFPB1"] = "SPWI521", ["EFFPB2"] = "SPWI521", ["EFFS1"] = "SPPR113", ["EFFS2"] = "SPPR113", ["EFFS3"] = "SPPR113", ["EFFSC"] = "SPPR523", ["EFFSOF1"] = "SPWI511", ["EFFSOF2"] = "SPWI511", ["EFFSR1"] = "SPPR707", ["EFFSR2"] = "SPPR707", ["EFFSSO1"] = "SPPR608", ["EFFSSO2"] = "SPPR608", ["EFFSSO3"] = "SPPR608", ["EFFSSS1"] = "SPWI220", ["EFFSSS2"] = "SPWI220", ["EFFVS1"] = "SPWI424", ["EFFVS2"] = "SPWI424", ["EFFVS3"] = "SPWI424", ["EFFWOM1"] = "SPPR423", ["EFFWOM2"] = "SPPR423", ["EFFHW15"] = "SPWI805", ["EFFHW16"] = "SPWI805", ["EFFHW17"] = "SPWI805", ["EFFHW18"] = "SPWI805", ["EFFHW19"] = "SPWI805", ["EFFHW20"] = "SPWI805", ["EFFHW21"] = "SPWI805", ["EFFHW22"] = "SPWI805", ["EFFHW23"] = "SPWI805", ["EFFHW24"] = "SPWI805", ["EFFHW25"] = "SPWI805", ["EFFWT15"] = "SPWI805", ["EFFWT16"] = "SPWI805", ["EFFWT17"] = "SPWI805", ["EFFWT18"] = "SPWI805", ["EFFWT19"] = "SPWI805", ["EFFWT20"] = "SPWI805", ["EFFWT21"] = "SPWI805", ["EFFWT22"] = "SPWI805", ["EFFWT23"] = "SPWI805", ["EFFWT24"] = "SPWI805", ["EFFWT25"] = "SPWI805", ["USWI422D"] = "SPWI422", ["USWI452D"] = "USWI452", ["USWI652D"] = "USWI652", ["USWI755D"] = "USWI755", ["USWI954F"] = "USWI954", ["USDESTRU"] = "SPPR717", ["USPR953D"] = "USPR953", ["USWI653D"] = "USWI653", ["USWI956D"] = "USWI956", ["USWI759D"] = "USWI759", ["USWI759E"] = "USWI759", }
+ex_damage_source_spell = {["EFFAS1"] = "SPWI217", ["EFFAS2"] = "SPWI217", ["EFFCL"] = "SPPR302", ["EFFCT1"] = "SPWI117", ["EFFDA3"] = "SPWI228", ["EFFFS1"] = "SPWI427", ["EFFFS2"] = "SPWI426", ["EFFIK"] = "SPWI122", ["EFFMB1"] = "SPPR318", ["EFFMB2"] = "SPPR318", ["EFFMT1"] = "SPPR322", ["EFFPB1"] = "SPWI521", ["EFFPB2"] = "SPWI521", ["EFFS1"] = "SPPR113", ["EFFS2"] = "SPPR113", ["EFFS3"] = "SPPR113", ["EFFSC"] = "SPPR523", ["EFFSOF1"] = "SPWI511", ["EFFSOF2"] = "SPWI511", ["EFFSR1"] = "SPPR707", ["EFFSR2"] = "SPPR707", ["EFFSSO1"] = "SPPR608", ["EFFSSO2"] = "SPPR608", ["EFFSSO3"] = "SPPR608", ["EFFSSS1"] = "SPWI220", ["EFFSSS2"] = "SPWI220", ["EFFVS1"] = "SPWI424", ["EFFVS2"] = "SPWI424", ["EFFVS3"] = "SPWI424", ["EFFWOM1"] = "SPPR423", ["EFFWOM2"] = "SPPR423", ["EFFHW15"] = "SPWI805", ["EFFHW16"] = "SPWI805", ["EFFHW17"] = "SPWI805", ["EFFHW18"] = "SPWI805", ["EFFHW19"] = "SPWI805", ["EFFHW20"] = "SPWI805", ["EFFHW21"] = "SPWI805", ["EFFHW22"] = "SPWI805", ["EFFHW23"] = "SPWI805", ["EFFHW24"] = "SPWI805", ["EFFHW25"] = "SPWI805", ["EFFWT15"] = "SPWI805", ["EFFWT16"] = "SPWI805", ["EFFWT17"] = "SPWI805", ["EFFWT18"] = "SPWI805", ["EFFWT19"] = "SPWI805", ["EFFWT20"] = "SPWI805", ["EFFWT21"] = "SPWI805", ["EFFWT22"] = "SPWI805", ["EFFWT23"] = "SPWI805", ["EFFWT24"] = "SPWI805", ["EFFWT25"] = "SPWI805", ["USWI417D"] = "SPWI417", ["USWI422D"] = "SPWI422", ["USWI452D"] = "USWI452", ["USWI652D"] = "USWI652", ["USWI755D"] = "USWI755", ["USWI954F"] = "USWI954", ["USDESTRU"] = "SPPR717", ["USPR953D"] = "USPR953", ["USSTOV2D"] = "USPR954", ["USSTOV3D"] = "USPR954", ["USSTOV4D"] = "USPR954", ["USSTOV5D"] = "USPR954", ["USWI653D"] = "USWI653", ["USWI956D"] = "USWI956", ["USWI759D"] = "USWI759", ["USWI759E"] = "USWI759", }
 ex_feat_id_offset = {[18] = 0x78D, [38] = 0x777, [39] = 0x774, [40] = 0x779, [41] = 0x77D, [42] = 0x77B, [43] = 0x77E, [44] = 0x77A, [53] = 0x775, [54] = 0x778, [55] = 0x776, [56] = 0x77C, [57] = 0x77F}
 ex_damage_multiplier_type = {[0] = 9, [0x10000] = 4, [0x20000] = 2, [0x40000] = 3, [0x80000] = 1, [0x100000] = 8, [0x200000] = 6, [0x400000] = 5, [0x800000] = 10, [0x1000000] = 7, [0x2000000] = 1, [0x4000000] = 2, [0x8000000] = 9, [0x10000000] = 5}
 ex_damage_resistance_stat = {[0] = 22, [0x10000] = 17, [0x20000] = 15, [0x40000] = 16, [0x80000] = 14, [0x100000] = 23, [0x200000] = 74, [0x400000] = 73, [0x800000] = 24, [0x1000000] = 21, [0x2000000] = 19, [0x4000000] = 20, [0x8000000] = 22, [0x10000000] = 73}
@@ -3755,16 +3800,28 @@ function METURNUN(effectData, creatureData)
 	else
 		turnLevel = turnLevel + math.floor((turnCheck - 1) / 3) - 3
 	end
---	if IEex_GetActorSpellState(sourceID, 194) then
+	if IEex_GetActorSpellState(sourceID, 194) then
 		IEex_IterateActorEffects(sourceID, function(eData)
 			local theopcode = IEex_ReadDword(eData + 0x10)
 			local theparameter2 = IEex_ReadDword(eData + 0x20)
-			if theopcode == 288 and theparameter2 == 194 then
+			local thesavingthrow = IEex_ReadDword(eData + 0x40)
+			if theopcode == 288 and theparameter2 == 194 and bit.band(thesavingthrow, 0x10000) == 0 then
 				local theparameter1 = IEex_ReadDword(eData + 0x1C)
 				turnLevel = turnLevel + theparameter1
 			end
 		end)
---	end
+	end
+	if IEex_GetActorSpellState(targetID, 194) then
+		IEex_IterateActorEffects(targetID, function(eData)
+			local theopcode = IEex_ReadDword(eData + 0x10)
+			local theparameter2 = IEex_ReadDword(eData + 0x20)
+			local thesavingthrow = IEex_ReadDword(eData + 0x40)
+			if theopcode == 288 and theparameter2 == 194 and bit.band(thesavingthrow, 0x10000) > 0 then
+				local theparameter1 = IEex_ReadDword(eData + 0x1C)
+				turnLevel = turnLevel - theparameter1
+			end
+		end)
+	end
 	local turningFeat = IEex_ReadByte(sourceData + 0x78C, 0)
 	turnLevel = turnLevel + turningFeat * 3
 	local sourceAlignment = IEex_ReadByte(sourceData + 0x35, 0)
@@ -3825,6 +3882,229 @@ function METURNUN(effectData, creatureData)
 ["parent_resource"] = "USTURNUN",
 ["source_id"] = sourceID
 })
+	end
+end
+
+function METURNU2(effectData, creatureData)
+	if IEex_CheckForEffectRepeat(effectData, creatureData) then return end
+	local sourceID = IEex_ReadDword(effectData + 0x10C)
+	if not IEex_IsSprite(sourceID, false) then return end
+	local sourceData = IEex_GetActorShare(sourceID)
+	local targetID = IEex_GetActorIDShare(creatureData)
+	local duration = IEex_ReadDword(effectData + 0x44)
+	local parent_resource = IEex_ReadLString(effectData + 0x90, 8)
+	local sourceLevel = IEex_GetActorStat(sourceID, 98)
+	local paladinLevel = IEex_GetActorStat(sourceID, 102)
+	if paladinLevel >= 3 then
+		sourceLevel = sourceLevel + paladinLevel - 2
+	end
+	local charismaBonus = math.floor((IEex_GetActorStat(sourceID, 42) - 10) / 2)
+	local turnLevel = math.random(6) + math.random(6) + sourceLevel + charismaBonus + IEex_ReadDword(effectData + 0x18)
+	local maxUndeadLevel = sourceLevel
+
+	local turnCheck = math.random(20) + charismaBonus
+	if turnCheck <= 0 then
+		maxUndeadLevel = maxUndeadLevel - 4
+	elseif turnCheck >= 22 then
+		maxUndeadLevel = maxUndeadLevel + 4
+	else
+		maxUndeadLevel = maxUndeadLevel + math.floor((turnCheck - 1) / 3) - 3
+	end
+	if IEex_GetActorSpellState(sourceID, 194) then
+		IEex_IterateActorEffects(sourceID, function(eData)
+			local theopcode = IEex_ReadDword(eData + 0x10)
+			local theparameter2 = IEex_ReadDword(eData + 0x20)
+			local thesavingthrow = IEex_ReadDword(eData + 0x40)
+			if theopcode == 288 and theparameter2 == 194 and bit.band(thesavingthrow, 0x10000) == 0 then
+				local theparameter1 = IEex_ReadDword(eData + 0x1C)
+				turnLevel = turnLevel + theparameter1
+				maxUndeadLevel = maxUndeadLevel + theparameter1
+			end
+		end)
+	end
+	local turningFeat = IEex_ReadByte(sourceData + 0x78C, 0)
+	turnLevel = turnLevel + turningFeat * 3
+	maxUndeadLevel = maxUndeadLevel + turningFeat * 3
+	local sourceAlignment = IEex_ReadByte(sourceData + 0x35, 0)
+	local sourceKit = IEex_GetActorStat(sourceID, 89)
+	if sourceID ~= targetID then
+		local targetGeneral = IEex_ReadByte(creatureData + 0x25, 0)
+		local targetRace = IEex_ReadByte(creatureData + 0x26, 0)
+		if targetGeneral ~= 4 and (targetRace ~= ex_fiend_race or bit.band(IEex_ReadDword(sourceData + 0x760), 0x2) == 0) then return end
+		local targetLevel = IEex_GetActorStat(targetID, 95) + IEex_ReadSignedByte(creatureData + 0x731, 0x0)
+		if IEex_GetActorSpellState(targetID, 194) then
+			IEex_IterateActorEffects(targetID, function(eData)
+				local theopcode = IEex_ReadDword(eData + 0x10)
+				local theparameter2 = IEex_ReadDword(eData + 0x20)
+				local thesavingthrow = IEex_ReadDword(eData + 0x40)
+				if theopcode == 288 and theparameter2 == 194 and bit.band(thesavingthrow, 0x10000) > 0 then
+					local theparameter1 = IEex_ReadDword(eData + 0x1C)
+					targetLevel = targetLevel + theparameter1
+				end
+			end)
+		end
+		if turnLevel >= targetLevel then
+			if maxUndeadLevel >= targetLevel * 2 then
+				if bit.band(sourceAlignment, 0x3) == 0x3 or (bit.band(sourceAlignment, 0x3) == 0x2 and (sourceKit == 0x200000 or sourceKit == 0x400000 or sourceKit == 0x800000)) then
+					IEex_ApplyEffectToActor(targetID, {
+		["opcode"] = 233,
+		["target"] = 2,
+		["timing"] = 1,
+		["parameter2"] = 8,
+		["parent_resource"] = "USTURNUN",
+		["source_id"] = sourceID
+		})
+					IEex_ApplyEffectToActor(targetID, {
+		["opcode"] = 263,
+		["target"] = 2,
+		["timing"] = 0,
+		["duration"] = duration,
+		["parameter2"] = 4,
+		["parent_resource"] = "USTURNUN",
+		["source_id"] = sourceID
+		})
+				elseif IEex_GetActorSpellState(targetID, 8) == false then
+					IEex_ApplyEffectToActor(targetID, {
+		["opcode"] = 233,
+		["target"] = 2,
+		["timing"] = 1,
+		["parameter2"] = 8,
+		["parent_resource"] = "USTURNUN",
+		["source_id"] = sourceID
+		})
+					IEex_ApplyEffectToActor(targetID, {
+		["opcode"] = 13,
+		["target"] = 2,
+		["timing"] = 1,
+		["parameter2"] = 1,
+		["parameter2"] = 0x4,
+		["parent_resource"] = "USTURNUN",
+		["source_id"] = sourceID
+		})
+				end
+			elseif maxUndeadLevel >= targetLevel then
+				IEex_ApplyEffectToActor(targetID, {
+		["opcode"] = 233,
+		["target"] = 2,
+		["timing"] = 1,
+		["parameter2"] = 8,
+		["parent_resource"] = "USTURNUN",
+		["source_id"] = sourceID
+		})
+				IEex_ApplyEffectToActor(targetID, {
+		["opcode"] = 236,
+		["target"] = 2,
+		["timing"] = 0,
+		["duration"] = duration,
+		["parent_resource"] = "USTURNUN",
+		["source_id"] = sourceID
+		})
+			end
+		end
+	else
+		local maxradius = IEex_ReadDword(effectData + 0x44)
+		if maxradius == 0 then
+			maxradius = 384
+		end
+		local ids = {}
+		if IEex_ReadDword(sourceData + 0x12) > 0 then
+			ids = IEex_GetIDArea(sourceID, 0x31, true, true)
+		end
+		local possibleTargets = {}
+		local sourceX, sourceY = IEex_GetActorLocation(sourceID)
+		for k, currentID in ipairs(ids) do
+			local currentShare = IEex_GetActorShare(currentID)
+			if currentShare > 0 then
+				local currentX, currentY = IEex_GetActorLocation(currentID)
+				local currentDistance = IEex_GetDistance(targetX, targetY, currentX, currentY)
+				local states = IEex_ReadDword(currentShare + 0x5BC)
+				local animation = IEex_ReadDword(currentShare + 0x5C4)
+				local cea = IEex_CompareActorAllegiances(sourceID, currentID)
+				local targetGeneral = IEex_ReadByte(currentShare + 0x25, 0)
+				local targetRace = IEex_ReadByte(currentShare + 0x26, 0)
+
+				if currentDistance < maxradius and cea == -1 and IEex_CheckActorLOSObject(sourceID, currentID) and animation >= 0x1000 and (animation < 0xD000 or animation >= 0xE000) and bit.band(states, 0x800) == 0 and IEex_ReadByte(currentShare + 0x838, 0x0) == 0 and (targetGeneral == 4 or (targetRace == ex_fiend_race and bit.band(IEex_ReadDword(sourceData + 0x760), 0x2) > 0)) then
+					table.insert(possibleTargets, {currentID, currentDistance})
+				end
+			end
+		end
+		table.sort(possibleTargets, function(i1, i2) return (i1[2] < i2[2]) end)
+		for k, current in ipairs(possibleTargets) do
+			local currentID = current[1]
+			local currentShare = IEex_GetActorShare(currentID)
+			local targetLevel = IEex_GetActorStat(currentID, 95) + IEex_ReadSignedByte(currentShare + 0x731, 0x0)
+			if IEex_GetActorSpellState(currentID, 194) then
+				IEex_IterateActorEffects(currentID, function(eData)
+					local theopcode = IEex_ReadDword(eData + 0x10)
+					local theparameter2 = IEex_ReadDword(eData + 0x20)
+					local thesavingthrow = IEex_ReadDword(eData + 0x40)
+					if theopcode == 288 and theparameter2 == 194 and bit.band(thesavingthrow, 0x10000) > 0 then
+						local theparameter1 = IEex_ReadDword(eData + 0x1C)
+						targetLevel = targetLevel + theparameter1
+					end
+				end)
+			end
+			if turnLevel >= targetLevel then
+				if maxUndeadLevel >= targetLevel * 2 then
+					turnLevel = turnLevel - targetLevel
+					if bit.band(sourceAlignment, 0x3) == 0x3 or (bit.band(sourceAlignment, 0x3) == 0x2 and (sourceKit == 0x200000 or sourceKit == 0x400000 or sourceKit == 0x800000)) then
+						IEex_ApplyEffectToActor(targetID, {
+			["opcode"] = 233,
+			["target"] = 2,
+			["timing"] = 1,
+			["parameter2"] = 8,
+			["parent_resource"] = "USTURNUN",
+			["source_id"] = sourceID
+			})
+						IEex_ApplyEffectToActor(targetID, {
+			["opcode"] = 263,
+			["target"] = 2,
+			["timing"] = 0,
+			["duration"] = duration,
+			["parameter2"] = 4,
+			["parent_resource"] = "USTURNUN",
+			["source_id"] = sourceID
+			})
+					elseif IEex_GetActorSpellState(targetID, 8) == false then
+						IEex_ApplyEffectToActor(targetID, {
+			["opcode"] = 233,
+			["target"] = 2,
+			["timing"] = 1,
+			["parameter2"] = 8,
+			["parent_resource"] = "USTURNUN",
+			["source_id"] = sourceID
+			})
+						IEex_ApplyEffectToActor(targetID, {
+			["opcode"] = 13,
+			["target"] = 2,
+			["timing"] = 1,
+			["parameter2"] = 1,
+			["parameter2"] = 0x4,
+			["parent_resource"] = "USTURNUN",
+			["source_id"] = sourceID
+			})
+					end
+				elseif maxUndeadLevel >= targetLevel then
+					turnLevel = turnLevel - targetLevel
+					IEex_ApplyEffectToActor(targetID, {
+			["opcode"] = 233,
+			["target"] = 2,
+			["timing"] = 1,
+			["parameter2"] = 8,
+			["parent_resource"] = "USTURNUN",
+			["source_id"] = sourceID
+			})
+					IEex_ApplyEffectToActor(targetID, {
+			["opcode"] = 236,
+			["target"] = 2,
+			["timing"] = 0,
+			["duration"] = duration,
+			["parent_resource"] = "USTURNUN",
+			["source_id"] = sourceID
+			})
+				end
+			end
+		end
 	end
 end
 
@@ -7179,6 +7459,13 @@ function MEONHIT(effectData, creatureData)
 	if not IEex_IsSprite(sourceID, false) then return end
 	local index = IEex_ReadDword(effectData + 0x1C)
 	local headerType = IEex_ReadDword(effectData + 0x44)
+	if headerType == 1 then
+		if ex_attopp_opportunist[targetID] == nil then
+			ex_attopp_opportunist[targetID] = {[sourceID] = IEex_GetGameTick()}
+		else
+			ex_attopp_opportunist[targetID][sourceID] = IEex_GetGameTick()
+		end
+	end
 	local sourceExpired = {}
 	local onHitEffectList = {}
 --	if IEex_GetActorSpellState(sourceID, 225) then
@@ -7653,8 +7940,14 @@ function IEex_EvaluatePermanentRepeatingEffects(creatureData)
 				if bit.band(thesavingthrow, 0x100000) == 0 then
 					theparameter1 = theparameter1 * 15
 				end
+				local thecasterlvl = IEex_ReadDword(eData + 0xC8)
 				if tick % theparameter1 == 0 then
-					table.insert(repermList, theresource)
+					local thesourceid = IEex_ReadDword(eData + 0x110)
+					if thesourceid > 0 then
+						table.insert(repermList, {theresource, thesourceid, thecasterlvl})
+					else
+						table.insert(repermList, {theresource, targetID, thecasterlvl})
+					end
 				end
 			end
 		end
@@ -7664,9 +7957,10 @@ function IEex_EvaluatePermanentRepeatingEffects(creatureData)
 ["opcode"] = 402,
 ["target"] = 2,
 ["timing"] = 1,
-["resource"] = v,
-["parent_resource"] = v,
-["source_id"] = targetID,
+["resource"] = v[1],
+["parent_resource"] = v[1],
+["casterlvl"] = v[3],
+["source_id"] = v[2],
 })
 	end
 	local castingSpeedModifier = 0
@@ -10425,6 +10719,7 @@ ex_stat_offset = {
 [54] = {0x9AE, 2},
 [55] = {0x9B0, 2},
 [56] = {0x9B2, 2},
+[60] = {0x9D2, 2},
 [71] = {0x9D4, 2},
 [72] = {0x9D6, 2},
 [73] = {0x9D8, 2},
@@ -10818,6 +11113,7 @@ ex_attopp_timer = {}
 ex_attopp_repeat_timer = {}
 ex_attopp_casting = {}
 ex_attopp_target = {}
+ex_attopp_opportunist = {}
 
 function IEex_CheckMonkAttackBonus(creatureData)
 --	if IEex_CheckForEffectRepeat(effectData, creatureData) then return end
@@ -10949,6 +11245,7 @@ function MEAPRBON(effectData, creatureData)
 	local targetID = IEex_GetActorIDShare(creatureData)
 --	if IEex_CheckForInfiniteLoop(targetID, IEex_GetGameTick(), "MEAPRBON", 5) then return end
 	local savingthrow = IEex_ReadDword(effectData + 0x3C)
+--[[
 	if bit.band(savingthrow, 0x10000000) == 0 then
 		savingthrow = bit.bor(savingthrow, 0x10000000)
 		IEex_WriteDword(effectData + 0x3C, savingthrow)
@@ -10971,7 +11268,7 @@ function MEAPRBON(effectData, creatureData)
 			end
 		end
 	end
-	
+--]]
 	IEex_ApplyStatScaling(targetID)
 	local monkLevel = IEex_GetActorStat(targetID, 101)
 	local baseAPR = IEex_ReadByte(creatureData + 0x5ED, 0x0)
@@ -10993,6 +11290,7 @@ function MEAPRBON(effectData, creatureData)
 			end
 			local trueAPR = trueBaseAPR
 			local weaponSlot = IEex_ReadByte(creatureData + 0x4BA4, 0x0)
+			local weaponHeader = IEex_ReadByte(creatureData + 0x4BA6, 0x0)
 			local slotData = IEex_ReadDword(creatureData + 0x4AD8 + weaponSlot * 0x4)
 			local rapidShotEnabled = (IEex_ReadByte(creatureData + 0x4C64, 0x0) > 0)
 
@@ -11190,6 +11488,11 @@ function IEex_ExtraAttacks(creatureData)
 	if combatReflexesFeatID ~= nil then
 		combatReflexesFeatCount = IEex_ReadByte(creatureData + 0x744 + combatReflexesFeatID, 0x0)
 	end
+	local opportunistFeatID = ex_feat_name_id["ME_OPPORTUNIST"]
+	local opportunistFeatCount = 0
+	if opportunistFeatID ~= nil then
+		opportunistFeatCount = IEex_ReadByte(creatureData + 0x744 + opportunistFeatID, 0x0)
+	end
 	local maxAttacksOfOpportunity = ex_base_num_attacks_of_opportunity
 	if combatReflexesFeatCount > 0 and ex_base_num_attacks_of_opportunity == 0 then
 		maxAttacksOfOpportunity = 1
@@ -11342,9 +11645,11 @@ function IEex_ExtraAttacks(creatureData)
 			local ignoreFleeingOpportunity = ex_no_attacks_of_opportunity_on_fleeing
 			local ignoreRangedWeaponOpportunity = ex_no_attacks_of_opportunity_on_ranged_attack
 			local ignoreSpellCastOpportunity = ex_no_attacks_of_opportunity_on_spell_cast
+			local ignoreOpportunistOpportunity = (opportunistFeatCount == 0)
 			local fleeingOpportunityAttackBonus = 0
 			local rangedWeaponOpportunityAttackBonus = 0
 			local spellCastOpportunityAttackBonus = 0
+			local opportunistOpportunityAttackBonus = 0
 			IEex_IterateActorEffects(actionTargetID, function(eData)
 				local theopcode = IEex_ReadDword(eData + 0x10)
 				local theparameter1 = IEex_ReadDword(eData + 0x1C)
@@ -11372,17 +11677,25 @@ function IEex_ExtraAttacks(creatureData)
 							ignoreSpellCastOpportunity = true
 						end
 					end
-					if bit.band(thesavingthrow, 0x70000) == 0 then
+					if bit.band(thesavingthrow, 0x80000) > 0 then
+						if theparameter1 ~= 0 then
+							opportunistOpportunityAttackBonus = opportunistOpportunityAttackBonus - theparameter1
+						else
+							ignoreOpportunistOpportunity = true
+						end
+					end
+					if bit.band(thesavingthrow, 0xF0000) == 0 then
 						if theparameter1 ~= 0 then
 							fleeingOpportunityAttackBonus = fleeingOpportunityAttackBonus - theparameter1
 							rangedWeaponOpportunityAttackBonus = rangedWeaponOpportunityAttackBonus - theparameter1
 							spellCastOpportunityAttackBonus = spellCastOpportunityAttackBonus - theparameter1
+							opportunistOpportunityAttackBonus = opportunistOpportunityAttackBonus - theparameter1
 						else
 							ignoreFleeingOpportunity = true
 							ignoreRangedWeaponOpportunity = true
 							ignoreSpellCastOpportunity = true
+							ignoreOpportunistOpportunity = true
 						end
-
 					end
 				end
 			end)
@@ -11444,6 +11757,25 @@ function IEex_ExtraAttacks(creatureData)
 							ex_attopp_repeat_timer[targetID][actionTargetID] = tick
 							opportunityAttackBonus = rangedWeaponOpportunityAttackBonus
 							doAttackOfOpportunity = true
+						end
+					elseif not ignoreOpportunistOpportunity and ex_attopp_opportunist[actionTargetID] ~= nil and (ex_attopp_repeat_timer[targetID][actionTargetID] == nil or tick - ex_attopp_repeat_timer[targetID][actionTargetID] >= 30) then
+						local doOpportunist = false
+						for k, v in pairs(ex_attopp_opportunist[actionTargetID]) do
+							if k ~= targetID and tick - v <= 4 and IEex_CompareActorAllegiances(targetID, k) == 1 then
+								doOpportunist = true
+							end
+						end
+						if doOpportunist then
+							if ex_attopp_count[targetID] == nil or (ex_attopp_timer[targetID] ~= nil and tick - ex_attopp_timer[targetID] >= 100) then
+								ex_attopp_count[targetID] = 0
+								ex_attopp_timer[targetID] = tick
+							end
+							if ex_attopp_count[targetID] < maxAttacksOfOpportunity then
+								ex_attopp_count[targetID] = ex_attopp_count[targetID] + 1
+								ex_attopp_repeat_timer[targetID][actionTargetID] = tick
+								opportunityAttackBonus = opportunistOpportunityAttackBonus
+								doAttackOfOpportunity = true
+							end
 						end
 					end
 				else
@@ -11802,11 +12134,33 @@ function IEex_ExtraAttacks(creatureData)
 			end
 		end
 		if IEex_IsSprite(actionTargetID, false) then
+			if isLauncher then
+				local weaponData = launcherWrapper:getData()
+				range = range + IEex_ReadWord(weaponData + 0x90, 0x0)
+			end
 			local sourceVisualHeight = IEex_ReadDword(creatureData + 0xE)
 			local targetVisualHeight = IEex_ReadDword(actionTargetData + 0xE)
 			if math.abs(targetVisualHeight - sourceVisualHeight) > range * 20 + 40 then
 				attackBonus = attackBonus - 20
 			end
+			IEex_IterateActorEffects(actionTargetID, function(eData)
+				local theopcode = IEex_ReadDword(eData + 0x10)
+				local theparameter1 = IEex_ReadDword(eData + 0x1C)
+				local theparameter2 = IEex_ReadDword(eData + 0x20)
+				local theresource = IEex_ReadLString(eData + 0x30, 8)
+				local thesavingthrow = IEex_ReadDword(eData + 0x40)
+				local thespecial = IEex_ReadDword(eData + 0x48)
+				if theopcode == 502 and theresource == "MEACVTYP" then
+					if (theparameter2 == 2 and IEex_ReadByte(creatureData + 0x24, 0x0) == theparameter1) or (theparameter2 == 3 and IEex_ReadByte(creatureData + 0x25, 0x0) == theparameter1) or (theparameter2 == 4 and IEex_ReadByte(creatureData + 0x26, 0x0) == theparameter1) or (theparameter2 == 5 and bit.band(IEex_ReadDword(creatureData + 0x38), theparameter1) > 0) or (theparameter2 == 6 and IEex_ReadByte(creatureData + 0x27, 0x0) == theparameter1) or (theparameter2 == 7 and IEex_ReadByte(creatureData + 0x34, 0x0) == theparameter1) then
+						attackBonus = attackBonus - thespecial
+					elseif theparameter2 == 8 then
+						local alignment = IEex_ReadByte(creatureData + 0x35, 0x0)
+						if alignment == theparameter1 or bit.band(alignment, 0x3) == theparameter1 or bit.band(alignment, 0x30) == theparameter1 then
+							attackBonus = attackBonus - thespecial
+						end
+					end
+				end
+			end)
 		end
 		ex_record_attack_stats_hidden_difference[targetID] = {attackBonus - ex_record_attack_stats[targetID][1], criticalHitBonus - ex_record_attack_stats[targetID][2]}
 		IEex_WriteWord(creatureData + 0x936, criticalHitBonus)
@@ -12492,6 +12846,26 @@ function MEGHOSTW(effectData, creatureData, isSpecialCall)
 	if IEex_GetGameTick() % ex_time_slow_speed_divisor ~= 0 then
 		if timeSlowed and not targetNotSlowed then return end
 	end
+	local actionID = IEex_ReadWord(creatureData + 0x476, 0x0)
+	local actionX = IEex_ReadDword(creatureData + 0x540)
+	local actionY = IEex_ReadDword(creatureData + 0x544)
+	local destinationX = IEex_ReadDword(creatureData + 0x556E)
+	local destinationY = IEex_ReadDword(creatureData + 0x5572)
+	local targetID = IEex_ReadDword(creatureData + 0x4BE)
+	if actionID == 95 or actionID == 97 then
+		destinationX = actionX
+		destinationY = actionY
+		ex_ghostwalk_dest["" .. sourceID] = nil
+--		IEex_DS(actionID .. ", [" .. actionX .. "." .. actionY .. "], [" .. destinationX .. "." .. destinationY .. "]")
+--		IEex_DS(IEex_CheckActorLOS(sourceID, actionX, actionY))
+--[[
+	elseif IEex_IsSprite(targetID, false) then
+		actionX, actionY = IEex_GetActorLocation(targetID)
+		destinationX = actionX
+		destinationY = actionY
+--]]
+	end
+	if ((actionID == 95 or actionID == 97 or actionID == 192) and IEex_CheckActorLOS(sourceID, actionX, actionY)) or actionID == 114 or actionID == 34 or (actionID == 31 and destinationX <= 0) then return end
 --	if IEex_CheckForInfiniteLoop(sourceID, IEex_GetGameTick(), "MEGHOSTW", 0) then return end
 --	if not IEex_GetActorSpellState(sourceID, 184) and not IEex_GetActorSpellState(sourceID, 189) then return end
 	local parameter1 = IEex_ReadDword(effectData + 0x18)
@@ -12547,8 +12921,8 @@ function MEGHOSTW(effectData, creatureData, isSpecialCall)
 --]]
 		end
 	end
-	if parameter4 == 0 or (areaRES ~= "" and ex_ghostwalk_area["" .. sourceID] ~= areaRES) then
-		IEex_WriteDword(effectData + 0x60, 1)
+	local animationSequence = IEex_ReadByte(creatureData + 0x50F4, 0x0)
+	if (areaRES ~= "" and ex_ghostwalk_area["" .. sourceID] ~= areaRES) or animationSequence == 2 or animationSequence == 3 then
 		ex_ghostwalk_dest["" .. sourceID] = {0, 0}
 	end
 	if areaRES ~= "" then
@@ -12564,47 +12938,38 @@ function MEGHOSTW(effectData, creatureData, isSpecialCall)
 	local time_applied = IEex_ReadDword(effectData + 0x68)
 	local special = IEex_ReadDword(effectData + 0x44)
 	local parent_resource = IEex_ReadLString(effectData + 0x90, 8)
-
-	local destinationX = IEex_ReadDword(creatureData + 0x556E)
-	local destinationY = IEex_ReadDword(creatureData + 0x5572)
-	local targetID = IEex_ReadDword(creatureData + 0x4BE)
 	local action = IEex_ReadWord(creatureData + 0x476, 0x0)
 	local actionRange = 1
 	local moveType = 3
 	if action == 29 or action == 184 or action == 250 then
 		moveType = 1
 	end
-	if (IEex_IsSprite(targetID, true) and (action == 31 or action == 113 or action == 191)) or action == 95 or action == 114 or action == 192 then
---[[
-		if action == 31 or action == 113 or action == 191 then
-			destinationX = IEex_ReadDword(IEex_GetActorShare(targetID) + 0x6)
-			destinationY = IEex_ReadDword(IEex_GetActorShare(targetID) + 0xA)
-		end
---]]
-		local resWrapper = IEex_DemandRes(IEex_GetActorSpellRES(sourceID), "SPL")
-		if resWrapper:isValid() then
-			local spellData = resWrapper:getData()
-			actionRange = IEex_ReadWord(spellData + 0x90, 0x0)
-		end
-		resWrapper:free()
-		if actionRange > 28 then
-			actionRange = 28
-		end
-		if actionRange >= 6 and ((destinationX - targetX) / 16) ^ 2 + ((destinationY - targetY) / 12) ^ 2 <= actionRange ^ 2 then
-			destinationX = targetX
-			destinationY = targetY
-		elseif targetID ~= sourceID and IEex_GetDistance(destinationX, destinationY, storedX, storedY) < 20 then
-			destinationX = 0
-			destinationY = 0
+	local withinRange = false
+	if ((IEex_IsSprite(targetID, true) and (action == 31 or action == 113 or action == 191)) or action == 95 or action == 114 or action == 192) then
+		if IEex_ReadSignedWord(creatureData + 0x54E8, 0x0) > 0 then
+			local resWrapper = IEex_DemandRes(IEex_GetActorSpellRES(sourceID), "SPL")
+			if resWrapper:isValid() then
+				local spellData = resWrapper:getData()
+				actionRange = IEex_ReadWord(spellData + 0x90, 0x0)
+			end
+			resWrapper:free()
+			if actionRange > 28 then
+				actionRange = 28
+			end
+			if actionRange >= 6 and ((destinationX - targetX) / 16) ^ 2 + ((destinationY - targetY) / 12) ^ 2 <= actionRange ^ 2 then
+				withinRange = true
+				destinationX = targetX
+				destinationY = targetY
+			elseif targetID ~= sourceID and IEex_GetDistance(destinationX, destinationY, storedX, storedY) < 20 then
+				destinationX = 0
+				destinationY = 0
+			end
 		end
 	elseif (IEex_IsSprite(targetID, true) and targetID ~= sourceID) or (action == 3 or action == 98 or action == 105 or action == 134) then
 --[[
 		if IEex_IsSprite(targetID, true) then
 			destinationX = IEex_ReadDword(IEex_GetActorShare(targetID) + 0x6)
 			destinationY = IEex_ReadDword(IEex_GetActorShare(targetID) + 0xA)
-		else
-			targetX = destx
-			targetY = desty
 		end
 --]]
 		if (action == 3 or action == 98 or action == 105 or action == 134) then
@@ -12640,20 +13005,13 @@ function MEGHOSTW(effectData, creatureData, isSpecialCall)
 			actionRange = 28
 		end
 		if actionRange >= 6 and ((destinationX - targetX) / 16) ^ 2 + ((destinationY - targetY) / 12) ^ 2 <= actionRange ^ 2 then
+			withinRange = true
 			destinationX = targetX
 			destinationY = targetY
 		elseif targetID ~= sourceID and IEex_GetDistance(destinationX, destinationY, storedX, storedY) < 20 then
 			destinationX = 0
 			destinationY = 0
 		end
---[[
-	elseif destx > 0 and desty > 0 and (destx ~= storedx or desty ~= storedy) then
-		targetX = destx
-		targetY = desty
-	elseif destx2 > 0 and desty2 > 0 and (destx2 ~= storedx or desty2 ~= storedy) and action ~= 0 then
-		targetX = destx2
-		targetY = desty2
---]]
 	end
 	if ((IEex_IsSprite(targetID, true) and targetID ~= sourceID) or action == 3 or action == 134) then
 		local targetLocX = destinationX
@@ -12734,8 +13092,7 @@ function MEGHOSTW(effectData, creatureData, isSpecialCall)
 			destinationY = targetY
 		end
 	else
-		ex_ghostwalk_dest["" .. sourceID][1] = destinationX
-		ex_ghostwalk_dest["" .. sourceID][2] = destinationY
+		ex_ghostwalk_dest["" .. sourceID] = {destinationX, destinationY}
 	end
 	local distX = destinationX - targetX
 	local distY = destinationY - targetY
@@ -12769,24 +13126,26 @@ function MEGHOSTW(effectData, creatureData, isSpecialCall)
 			end
 		end)
 	end
-	if IEex_IsSprite(targetID, true) and targetID ~= sourceID then
-		local targetShare = IEex_GetActorShare(targetID)
-		local newDirection = IEex_GetActorRequiredDirection(sourceID, IEex_ReadDword(targetShare + 0x6), IEex_ReadDword(targetShare + 0xA))
-		ex_ghostwalk_direction[sourceID] = newDirection
-		IEex_WriteWord(creatureData + 0x537C, 0)
-		IEex_WriteByte(creatureData + 0x537E, (newDirection + 1) % 16)
-		IEex_WriteByte(creatureData + 0x5380, newDirection)
-	elseif math.abs(destinationX - targetX) > 50 or math.abs(destinationY - targetY) > 50 then
-		local newDirection = IEex_GetActorRequiredDirection(sourceID, destinationX, destinationY)
-		ex_ghostwalk_direction[sourceID] = newDirection
-		IEex_WriteWord(creatureData + 0x537C, 0)
-		IEex_WriteByte(creatureData + 0x537E, (newDirection + 1) % 16)
-		IEex_WriteByte(creatureData + 0x5380, newDirection)
-	elseif ex_ghostwalk_direction[sourceID] ~= nil then
-		local newDirection = ex_ghostwalk_direction[sourceID]
-		IEex_WriteWord(creatureData + 0x537C, 0)
-		IEex_WriteByte(creatureData + 0x537E, (newDirection + 1) % 16)
-		IEex_WriteByte(creatureData + 0x5380, newDirection)
+	if (actionID ~= 31 and actionID ~= 95) or not withinRange then
+		if IEex_IsSprite(targetID, true) and targetID ~= sourceID then
+			local targetShare = IEex_GetActorShare(targetID)
+			local newDirection = IEex_GetActorRequiredDirection(sourceID, IEex_ReadDword(targetShare + 0x6), IEex_ReadDword(targetShare + 0xA))
+			ex_ghostwalk_direction[sourceID] = newDirection
+			IEex_WriteWord(creatureData + 0x537C, 0)
+			IEex_WriteByte(creatureData + 0x537E, (newDirection + 1) % 16)
+			IEex_WriteByte(creatureData + 0x5380, newDirection)
+		elseif math.abs(destinationX - targetX) > 50 or math.abs(destinationY - targetY) > 50 then
+			local newDirection = IEex_GetActorRequiredDirection(sourceID, destinationX, destinationY)
+			ex_ghostwalk_direction[sourceID] = newDirection
+			IEex_WriteWord(creatureData + 0x537C, 0)
+			IEex_WriteByte(creatureData + 0x537E, (newDirection + 1) % 16)
+			IEex_WriteByte(creatureData + 0x5380, newDirection)
+		elseif ex_ghostwalk_direction[sourceID] ~= nil then
+			local newDirection = ex_ghostwalk_direction[sourceID]
+			IEex_WriteWord(creatureData + 0x537C, 0)
+			IEex_WriteByte(creatureData + 0x537E, (newDirection + 1) % 16)
+			IEex_WriteByte(creatureData + 0x5380, newDirection)
+		end
 	end
 
 	local finalX = targetX + deltaX
@@ -12808,6 +13167,7 @@ function MEGHOSTW(effectData, creatureData, isSpecialCall)
 	elseif finalY >= areaY then
 		finalY = areaY - 1
 	end
+--	if ((actionID == 95 or actionID == 97 or actionID == 192) and IEex_CheckActorLOS(sourceID, actionX, actionY)) or actionID == 114 or actionID == 34 then return end
 	if ex_specific_teleport_zone[areaRES] ~= nil then
 		local noTeleportMapWrapper = IEex_DemandRes(areaRES .. "NT", "BMP")
 		if noTeleportMapWrapper:isValid() then
@@ -12871,22 +13231,19 @@ ex_flying_animation = {[0xC000] = true, [0xC500] = true, [0x7F02] = true, [0xD30
 ex_can_fly_animation = {[0xC000] = true, [0xC500] = true, [0x7F02] = true, [0xD300] = true, [0xD000] = true, [0xD400] = true, [0xD200] = true, [0x7F05] = true, [0x6405] = true, [0x7320] = true, [0x7321] = true, [0xE269] = true, [0xE289] = true, [0xE928] = true, [0x7F03] = true, [0xE908] = true, [0xE918] = true, [0xE249] = true, [0xE3BB] = true, [0xEF91] = true, [0xA000] = true, [0x1001] = true, [0xEA20] = true, [0xE7C9] = true, [0xEC33] = true, [0xED09] = true, [0x7F06] = true, [0x1201] = true, [0xEC0B] = true, [0xEC4B] = true, [0xEC5B] = true, [0xEF0D] = true, [0xEF1D] = true, [0xEBCD] = true, }
 function IEex_IsFlying(actorID)
 	if not IEex_IsSprite(actorID, false) then return false end
-	local isFlying = false
 	local animation = IEex_ReadDword(IEex_GetActorShare(actorID) + 0x5C4)
-	if ex_flying_animation[animation] ~= nil or IEex_GetActorSpellState(actorID, 181) or IEex_GetActorSpellState(actorID, 182) or IEex_GetActorSpellState(actorID, 184) or IEex_GetActorSpellState(actorID, 189) then
-		isFlying = true
-	end
-	return isFlying
+	return (ex_flying_animation[animation] ~= nil or IEex_GetActorSpellState(actorID, 181) or IEex_GetActorSpellState(actorID, 182) or IEex_GetActorSpellState(actorID, 184) or IEex_GetActorSpellState(actorID, 189))
+end
+
+function IEex_IsIncorporeal(actorID)
+	if not IEex_IsSprite(actorID, false) then return false end
+	return (IEex_GetActorSpellState(actorID, 182) or IEex_GetActorSpellState(actorID, 189))
 end
 
 function IEex_CanFly(actorID)
 	if not IEex_IsSprite(actorID, false) then return false end
-	local isFlying = false
 	local animation = IEex_ReadDword(IEex_GetActorShare(actorID) + 0x5C4)
-	if ex_can_fly_animation[animation] ~= nil or IEex_GetActorSpellState(actorID, 181) or IEex_GetActorSpellState(actorID, 182) or IEex_GetActorSpellState(actorID, 184) or IEex_GetActorSpellState(actorID, 189) then
-		isFlying = true
-	end
-	return isFlying
+	return (ex_can_fly_animation[animation] ~= nil or IEex_GetActorSpellState(actorID, 181) or IEex_GetActorSpellState(actorID, 182) or IEex_GetActorSpellState(actorID, 184) or IEex_GetActorSpellState(actorID, 189))
 end
 
 function MEHGTSET(effectData, creatureData)
@@ -12981,6 +13338,7 @@ ex_ceiling_height = {["AR1000"] = 32767, ["AR1001"] = 140, ["AR1002"] = 140, ["A
 ex_specific_floor_height = {["AR3000"] = {[0xFF00] = -750}, ["AR5200"] = {[0xFF00] = -500}, ["AR5300"] = {[0xFF00] = -1500}, ["AR5303"] = {[0xFF00] = -4000}, ["AR6000"] = {[0xFF00] = -900}, ["AR6001"] = {[0xFF00] = -4800}, ["AR6051"] = {[0xFF00] = -300}, ["AR6104"] = {[0xFF00] = -20}, ["AR6300"] = {[0xFF00] = -120}, ["AR6302"] = {[0xFF00] = -900}, ["AR6303"] = {[0xFF00] = -900}, ["AR6304"] = {[0xFF00] = -900}, ["AR6305"] = {[0xFF00] = -900}, ["AR6400"] = {[0xFF00] = -3500}, ["AR6703"] = {[0xFF00] = -5800}, ["AR6800"] = {[0xFF00] = -5000}, }
 ex_specific_floor_spell = {["AR6051"] = {[0xFF00] = "USFL6051"}, ["AR6104"] = {[0xFF00] = "USFL6104"}, ["AR6300"] = {[0xFF00] = "USFL6300"}, }
 ex_specific_teleport_zone = {["AR4102"] = true, ["AR5202"] = true, }
+ex_record_translucency = {}
 function MEHGTMOD(effectData, creatureData)
 	if true then return end
 end
@@ -13039,6 +13397,8 @@ function IEex_HeightMod(creatureData)
 	local previousHeight = height
 	local floorSpellRES = ""
 	local targetX, targetY = IEex_GetActorLocation(targetID)
+	local isFlying = IEex_IsFlying(targetID)
+	local isIncorporeal = IEex_IsIncorporeal(targetID)
 	if ex_specific_floor_height[areaRES] ~= nil and not IEex_IsFlying(targetID) then
 		local resWrapper = IEex_DemandRes(areaRES .. "H2", "BMP")
 		if resWrapper:isValid() then
@@ -13046,7 +13406,7 @@ function IEex_HeightMod(creatureData)
 			
 			local specificFloorHeight = IEex_GetBitmapPixelColor(bitmapData, math.floor(targetX / 16), math.floor(targetY / 12))
 			if ex_specific_floor_height[areaRES][specificFloorHeight] ~= nil then
-				minHeight = ex_specific_floor_height[areaRES][specificFloorHeight]
+				minHeight = ex_specific_floor_height[areaRES][specificFloorHeight] * 2
 			end
 			if ex_specific_floor_spell[areaRES] ~= nil and ex_specific_floor_spell[areaRES][specificFloorHeight] ~= nil then
 				floorSpellRES = ex_specific_floor_spell[areaRES][specificFloorHeight]
@@ -13089,7 +13449,7 @@ function IEex_HeightMod(creatureData)
 			end
 		end
 	end)
-	if IEex_GetActorSpellState(targetID, 181) or IEex_GetActorSpellState(targetID, 182) or IEex_GetActorSpellState(targetID, 184) or IEex_GetActorSpellState(targetID, 189) then
+	if isFlying then
 		local isSelected = false
 		for i, id in ipairs(IEex_GetAllActorIDSelected()) do
 			if id == targetID then
@@ -13122,6 +13482,7 @@ function IEex_HeightMod(creatureData)
 	end
 	if height > minHeight then
 		IEex_WriteByte(creatureData + 0x9DC, 1)
+		IEex_WriteByte(IEex_ReadDword(creatureData + 0x50F0) + 0x7, 0)
 	end
 	if height == 0 and speed + extraSpeed == 0 and accel <= 0 and minHeight == 0 and not IEex_GetActorSpellState(targetID, 190) then return end
 	local timeSlowed, targetNotSlowed = IEex_CheckGlobalEffectOnActor(targetID, 0x2)
@@ -13131,7 +13492,7 @@ function IEex_HeightMod(creatureData)
 			return true
 		end
 	end
-	if ((bit.band(areaType, 0x1) == 0 and not IEex_GetActorSpellState(targetID, 182) and not IEex_GetActorSpellState(targetID, 189)) or disableTeleport) and IEex_GetActorStat(targetID, 75) > 0 then
+	if ((bit.band(areaType, 0x1) == 0 and not isIncorporeal) or disableTeleport) and IEex_GetActorStat(targetID, 75) > 0 then
 		IEex_IterateActorEffects(targetID, function(eData)
 			local theopcode = IEex_ReadDword(eData + 0x10)
 			local theparent_resource = IEex_ReadLString(eData + 0x94, 8)
@@ -13140,7 +13501,7 @@ function IEex_HeightMod(creatureData)
 				IEex_WriteByte(creatureData + 0x9DC, 0)
 			end
 		end)
-	elseif (bit.band(areaType, 0x1) > 0 or IEex_GetActorSpellState(targetID, 182) or IEex_GetActorSpellState(targetID, 189)) and not disableTeleport and IEex_GetActorStat(targetID, 75) == 0 then
+	elseif (bit.band(areaType, 0x1) > 0 or isIncorporeal) and not disableTeleport and IEex_GetActorStat(targetID, 75) == 0 then
 		IEex_IterateActorEffects(targetID, function(eData)
 			local theopcode = IEex_ReadDword(eData + 0x10)
 			local theparent_resource = IEex_ReadLString(eData + 0x94, 8)
@@ -13158,7 +13519,7 @@ function IEex_HeightMod(creatureData)
 	if maxHeight <= 0 or maxHeight > 10000 then
 		maxHeight = 10000
 	end
-	if maxHeight > (roofHeight - targetHeight) and not IEex_GetActorSpellState(targetID, 182) and not IEex_GetActorSpellState(targetID, 189) then
+	if maxHeight > (roofHeight - targetHeight) and not isIncorporeal then
 		if targetHeight >= roofHeight then
 			maxHeight = 1
 		else
@@ -13177,7 +13538,7 @@ function IEex_HeightMod(creatureData)
 	elseif height >= maxHeight then
 		height = maxHeight - 1
 		if speed > 0 then
-			if speed >= 33 and maxHeight < 10000 and not IEex_GetActorSpellState(targetID, 182) and not IEex_GetActorSpellState(targetID, 189) then
+			if speed >= 33 and maxHeight < 10000 and not isIncorporeal then
 				local damageDice = math.floor((speed - 30) / 3)
 				if damageDice > 100 then
 					damageDice = 100
@@ -13221,7 +13582,7 @@ function IEex_HeightMod(creatureData)
 		height = minHeight
 		
 		if speed < 0 then
-			if speed <= -33 and (minHeight <= 0 or bit.band(savingthrow, 0x10000) > 0) and not IEex_GetActorSpellState(targetID, 182) and not IEex_GetActorSpellState(targetID, 189) then
+			if speed <= -33 and (minHeight <= 0 or bit.band(savingthrow, 0x10000) > 0) and not isIncorporeal then
 				local damageDice = math.floor(math.abs(speed + 30) / 3)
 				if damageDice > 100 then
 					damageDice = 100
@@ -13263,7 +13624,7 @@ function IEex_HeightMod(creatureData)
 	elseif height >= maxHeight then
 		height = maxHeight - 1
 		if speed > 0 then
-			if speed >= 33 and maxHeight < 10000 and not IEex_GetActorSpellState(targetID, 182) and not IEex_GetActorSpellState(targetID, 189) then
+			if speed >= 33 and maxHeight < 10000 and not isIncorporeal then
 				local damageDice = math.floor((speed - 30) / 3)
 				if damageDice > 100 then
 					damageDice = 100
@@ -13358,7 +13719,7 @@ function IEex_HeightMod(creatureData)
 		if minHeight <= 0 and IEex_IsSprite(targetID, false) then
 --			height = 0
 		end
-		if (not IEex_GetActorSpellState(targetID, 182) and not IEex_GetActorSpellState(targetID, 189)) and targetID ~= IEex_GetActorIDCharacter(0) and targetID ~= IEex_GetActorIDCharacter(1) and targetID ~= IEex_GetActorIDCharacter(2) and targetID ~= IEex_GetActorIDCharacter(3) and targetID ~= IEex_GetActorIDCharacter(4) and targetID ~= IEex_GetActorIDCharacter(5) then
+		if not isIncorporeal and targetID ~= IEex_GetActorIDCharacter(0) and targetID ~= IEex_GetActorIDCharacter(1) and targetID ~= IEex_GetActorIDCharacter(2) and targetID ~= IEex_GetActorIDCharacter(3) and targetID ~= IEex_GetActorIDCharacter(4) and targetID ~= IEex_GetActorIDCharacter(5) then
 			IEex_WriteByte(creatureData + 0x9DC, 0)
 --			IEex_JumpActorToPoint(targetID, targetX, targetY, true)
 
@@ -13382,11 +13743,50 @@ function IEex_HeightMod(creatureData)
 	end
 
 	IEex_WriteDword(creatureData + 0xE, visualHeight)
+
+	if height < -1 and ex_specific_floor_height[areaRES] ~= nil then
+		local resWrapper = IEex_DemandRes(areaRES .. "H2", "BMP")
+		if resWrapper:isValid() then
+			local bitmapData = resWrapper:getData()
+			local visualCoverHeight = 0
+			local visualCoverHeightColor = IEex_GetBitmapPixelColor(bitmapData, math.floor(targetX / 16), math.floor((targetY + visualHeight) / 12))
+			if ex_specific_floor_height[areaRES][visualCoverHeightColor] ~= nil then
+				visualCoverHeight = ex_specific_floor_height[areaRES][visualCoverHeightColor] * 2
+			end
+			if height < visualCoverHeight then
+				if ex_record_translucency[targetID] == nil then
+					ex_record_translucency[targetID] = IEex_ReadWord(creatureData + 0x9D2, 0x0)
+				end
+				if IEex_ReadWord(creatureData + 0x9D2, 0x0) < 180 then
+					IEex_WriteWord(creatureData + 0x9D2, 180)
+				end
+			elseif ex_record_translucency[targetID] ~= nil then
+				IEex_WriteWord(creatureData + 0x9D2, ex_record_translucency[targetID])
+				ex_record_translucency[targetID] = nil
+				
+			end
+		end
+		resWrapper:free()
+	end
+--[[
+	local extraFlags = IEex_ReadDword(creatureData + 0x740)
+	local eyeHeight = height + targetHeight
+	if eyeHeight < minHeight then
+		IEex_WriteDword(creatureData + 0x740, bit.bor(extraFlags, 0x800))
+		IEex_ModifyTerrainTable(creatureData + 0x50CB, ex_no_vision_terrain_table)
+	elseif eyeHeight < 0 then
+		IEex_WriteDword(creatureData + 0x740, bit.bor(extraFlags, 0x800))
+		IEex_ModifyTerrainTable(creatureData + 0x50CB, ex_underground_vision_terrain_table)
+	end
+--]]
 	return true
 end
 
 ex_outdoor_flight_terrain_table = {5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, -1, 5}
 ex_indoor_flight_terrain_table = {-1, 5, 5, 5, 5, 5, 5, 5, 5, 5, -1, 5, 5, -1, -1, 5}
+ex_xray_vision_terrain_table = {5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5}
+ex_no_vision_terrain_table = {-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1}
+ex_underground_vision_terrain_table = {-1, -1, -1, -1, -1, -1, -1, -1, 5, -1, -1, -1, 5, -1, -1, 5}
 
 ex_default_terrain_table_1 = {-1, 5, 5, 5, 5, 5, 5, 5, -1, 5, -1, 5, -1, -1, -1, 5}
 ex_default_terrain_table_2 = {-1, 5, 5, 5, 5, 5, 5, 5, 5, 5, -1, 5, 5, -1, 5, 5}
@@ -13536,7 +13936,7 @@ function MENOSUST(effectData, creatureData)
 	IEex_WriteDword(creatureData + 0x5BC, bit.band(IEex_ReadDword(creatureData + 0x5BC), 0xEFFFFFFF))
 	IEex_WriteDword(creatureData + 0x920, bit.band(IEex_ReadDword(creatureData + 0x920), 0xEFFFFFFF))
 end
-
+--[[
 function MESUCREA(effectData, creatureData)
 	if IEex_CheckForEffectRepeat(effectData, creatureData) then return end
 	local sourceID = IEex_ReadDword(effectData + 0x10C)
@@ -13692,15 +14092,136 @@ function MESUCREA(effectData, creatureData)
 })
 	end
 end
+--]]
+function MESUCREA(effectData, creatureData)
+--	IEex_WriteDword(effectData + 0x110, 1)
+--	if IEex_CheckForEffectRepeat(effectData, creatureData) then return end
+	local sourceID = IEex_GetActorIDShare(creatureData)
+	local summonerID = IEex_GetActorSummonerID(sourceID)
+	if not IEex_IsSprite(summonerID, true) then return end
+	local summonerData = IEex_GetActorShare(summonerID)
+	if IEex_ReadDword(effectData + 0x10C) <= 0 or bit.band(IEex_ReadDword(effectData + 0xC8), 0x10) == 0 then
+		IEex_WriteDword(effectData + 0x10C, sourceID)
+		IEex_WriteDword(effectData + 0xC8, bit.bor(IEex_ReadDword(effectData + 0xC8), 0x10))
+	else
+		return
+	end
+	local creatureName = IEex_ReadLString(creatureData + 0x598, 8)
+	local isReload = false
+	if creatureName == "" then 
+		isReload = true
+	end
+	if IEex_GetActorSpellState(summonerID, 228) then
+		IEex_IterateActorEffects(summonerID, function(eData)
+			local theopcode = IEex_ReadDword(eData + 0x10)
+			local theparameter2 = IEex_ReadDword(eData + 0x20)
+			if theopcode == 288 and theparameter2 == 228 then
+				local theparameter1 = IEex_ReadDword(eData + 0x1C)
+				local thesavingthrow = IEex_ReadDword(eData + 0x40)
+				local applyOnReload = (bit.band(thesavingthrow, 0x100000) > 0)
+				local matchRace = IEex_ReadByte(eData + 0x48, 0x0)
+				local spellRES = IEex_ReadLString(eData + 0x30, 8)
+				if spellRES ~= "" and (matchRace == 0 or matchRace == IEex_ReadByte(creatureData + 0x26, 0x0)) and (isReload == false or applyOnReload == true) then
+					local casterLevel = IEex_ReadDword(effectData + 0xC4)
+					if casterLevel == 0 then
+						casterLevel = 1
+					end
+					local newEffectTarget = sourceID
+					local newEffectTargetX = IEex_ReadDword(effectData + 0x7C)
+					local newEffectTargetY = IEex_ReadDword(effectData + 0x80)
+					if (bit.band(thesavingthrow, 0x200000) > 0) then
+						newEffectTarget = summonerID
+						newEffectTargetX = IEex_ReadDword(effectData + 0x84)
+						newEffectTargetY = IEex_ReadDword(effectData + 0x88)
+					end
+					local newEffectSource = summonerID
+					local newEffectSourceX = IEex_ReadDword(effectData + 0x84)
+					local newEffectSourceY = IEex_ReadDword(effectData + 0x88)
+					if (bit.band(thesavingthrow, 0x400000) > 0) then
+						newEffectSource = sourceID
+						newEffectSourceX = IEex_ReadDword(effectData + 0x7C)
+						newEffectSourceY = IEex_ReadDword(effectData + 0x80)
+					end
+					if isReload == false then
+						local usesLeft = IEex_ReadByte(eData + 0x49, 0x0)
+						if usesLeft == 1 then
+							local theparent_resource = IEex_ReadLString(eData + 0x94, 8)
+							IEex_ApplyEffectToActor(summonerID, {
+["opcode"] = 254,
+["target"] = 2,
+["timing"] = 1,
+["resource"] = theparent_resource,
+["source_id"] = sourceID
+})
+						elseif usesLeft > 0 then
+							usesLeft = usesLeft - 1
+							IEex_WriteByte(eData + 0x49, usesLeft)
+						end
+					end
+					IEex_ApplyEffectToActor(newEffectTarget, {
+["opcode"] = 402,
+["target"] = 2,
+["timing"] = 1,
+["resource"] = spellRES,
+["source_x"] = newEffectSourceX,
+["source_y"] = newEffectSourceY,
+["target_x"] = newEffectTargetX,
+["target_y"] = newEffectTargetY,
+["casterlvl"] = casterLevel,
+["parent_resource"] = spellRES,
+["source_target"] = newEffectTarget,
+["source_id"] = newEffectSource
+})
+				end
+			end
+		end)
+	end
+	local isSummonedFiend = (bit.band(IEex_ReadDword(creatureData + 0x740), 0x100000) > 0)
+	if isSummonedFiend and isReload == false then
+		local summonerIsEnemy = false
+		local summonerAllegiance = IEex_ReadByte(summonerData + 0x24, 0x0)
+		if summonerAllegiance == 255 or summonerAllegiance == 254 or summonerAllegiance == 200 then
+			summonerIsEnemy = true
+		end
+		local summonerHasProtection = IEex_GetActorSpellState(summonerID, 1)
+
+		if (summonerIsEnemy and summonerHasProtection) or (summonerIsEnemy == false and summonerHasProtection == false) then
+			IEex_ApplyEffectToActor(sourceID, {
+["opcode"] = 254,
+["target"] = 2,
+["timing"] = 1,
+["resource"] = "USPCFIEN",
+["source_id"] = sourceID
+})
+		else
+			IEex_ApplyEffectToActor(sourceID, {
+["opcode"] = 288,
+["target"] = 2,
+["timing"] = 1,
+["parameter2"] = 208,
+["parent_resource"] = "USPCFIEN",
+["source_id"] = sourceID
+})
+		end
+		IEex_ApplyEffectToActor(sourceID, {
+["opcode"] = 288,
+["target"] = 2,
+["timing"] = 1,
+["parameter1"] = 1,
+["parameter2"] = 224,
+["resource"] = "USEAFIEN",
+["parent_resource"] = "USEAFIEN",
+["source_id"] = sourceID
+})
+	end
+end
 
 function MEEAFIEN(effectData, creatureData)
 	if IEex_CheckForEffectRepeat(effectData, creatureData) then return end
-	local sourceID = IEex_ReadDword(effectData + 0x10C)
-	if sourceID <= 0 then return end
-	local summonerID = IEex_ReadDword(creatureData + 0x72C)
---	IEex_WriteWord(creatureData + 0x730, 0)
+	local sourceID = IEex_GetActorIDShare(creatureData)
+	local summonerID = IEex_GetActorSummonerID(sourceID)
+	if not IEex_IsSprite(summonerID, false) then return end
 	local summonerData = IEex_GetActorShare(summonerID)
-	if summonerData <= 0 or IEex_GetActorState(summonerID, 0xFC0) then return end
 	local summonerIsEnemy = false
 	local summonerAllegiance = IEex_ReadByte(summonerData + 0x24, 0x0)
 	if summonerAllegiance == 255 or summonerAllegiance == 254 or summonerAllegiance == 200 then
@@ -13760,7 +14281,7 @@ function MESIMULA(effectData, creatureData)
 	IEex_WriteDword(effectData + 0x110, 1)
 	if IEex_CheckForEffectRepeat(effectData, creatureData) then return end
 	local targetID = IEex_GetActorIDShare(creatureData)
-	local summonerID = IEex_ReadDword(creatureData + 0x72C)
+	local summonerID = IEex_GetActorSummonerID(targetID)
 	local summonerData = IEex_GetActorShare(summonerID)
 	if not IEex_IsSprite(summonerID, false) then return end
 	local extraFlags = IEex_ReadDword(creatureData + 0x740)
@@ -14074,7 +14595,7 @@ function MEERUPT(effectData, creatureData)
 	local spellRES = IEex_ReadLString(effectData + 0x18, 8)
 	local sourceID = IEex_GetActorIDShare(creatureData)
 	if sourceID <= 0 then return end
-	local summonerID = IEex_ReadDword(creatureData + 0x72C)
+	local summonerID = IEex_GetActorSummonerID(sourceID)
 --	IEex_WriteWord(creatureData + 0x730, 0)
 	local summonerData = IEex_GetActorShare(summonerID)
 	if summonerData <= 0 then return end
@@ -14113,7 +14634,7 @@ function MEERUPT2(effectData, creatureData)
 	local sourceID = IEex_ReadDword(effectData + 0x10C)
 	local sourceData = IEex_GetActorShare(sourceID)
 	if sourceData <= 0 then return end
-	local summonerID = IEex_ReadDword(sourceData + 0x72C)
+	local summonerID = IEex_GetActorSummonerID(sourceID)
 --	IEex_WriteWord(creatureData + 0x730, 0)
 	local summonerData = IEex_GetActorShare(summonerID)
 	if summonerData <= 0 then return end
@@ -14177,7 +14698,7 @@ function MEERUPT3(effectData, creatureData)
 	local sourceID = IEex_ReadDword(effectData + 0x10C)
 	local sourceData = IEex_GetActorShare(sourceID)
 	if sourceData <= 0 then return end
-	local summonerID = IEex_ReadDword(sourceData + 0x72C)
+	local summonerID = IEex_GetActorSummonerID(sourceID)
 	local summonerData = IEex_GetActorShare(summonerID)
 	if summonerData <= 0 then return end
 	local summonerX, summonerY = IEex_GetActorLocation(summonerID)
@@ -14227,17 +14748,30 @@ function MESUMCAS(effectData, creatureData)
 	local sourceID = IEex_ReadDword(effectData + 0x10C)
 	local sourceData = IEex_GetActorShare(sourceID)
 	if sourceData <= 0 then return end
-	local summonerID = IEex_ReadDword(sourceData + 0x72C)
+	local summonerID = IEex_GetActorSummonerID(sourceID)
 --	IEex_WriteWord(creatureData + 0x730, 0)
 	local summonerData = IEex_GetActorShare(summonerID)
 	if summonerData <= 0 then return end
 	local summonerX, summonerY = IEex_GetActorLocation(summonerID)
+	local casterLevel = IEex_ReadSignedByte(sourceData + 0x730, 0x0)
+	if casterLevel == -1 then
+		casterLevel = 1
+	end
+	local casterClass = IEex_ReadSignedByte(sourceData + 0x731, 0x0)
+	if casterClass == -1 then
+		casterClass = 0
+	end
+	local casterDomain = IEex_ReadSignedByte(sourceData + 0x732, 0x0)
+	if casterDomain == -1 then
+		casterDomain = 0
+	end
 	IEex_ApplyEffectToActor(targetID, {
 ["opcode"] = 402,
 ["target"] = 2,
 ["timing"] = 0,
 ["resource"] = spellRES,
 ["parent_resource"] = spellRES,
+["casterlvl"] = casterLevel + casterClass * 0x100 + casterDomain * 0x10000,
 ["source_x"] = summonerX,
 ["source_y"] = summonerY,
 ["target_x"] = IEex_ReadDword(effectData + 0x84),
@@ -15868,6 +16402,22 @@ function MESUMMOD(originatingEffectData, effectData, creatureData)
 	return false
 end
 
+function METELEBL(originatingEffectData, effectData, creatureData)
+	if IEex_CheckForEffectRepeat(effectData, creatureData) then return end
+	local targetID = IEex_GetActorIDShare(creatureData)
+	local parent_resource = IEex_ReadLString(effectData + 0x90, 8)
+	local opcode = IEex_ReadDword(effectData + 0xC)
+	local savingthrow = IEex_ReadDword(effectData + 0x3C)
+	if opcode == 124 and bit.band(savingthrow, 0x10000) == 0 then
+		return true
+	end
+	return false
+end
+
+function MEACVTYP(originatingEffectData, effectData, creatureData)
+	if true then return false end
+end
+
 function MEOPCSPL(originatingEffectData, effectData, creatureData)
 	local targetID = IEex_GetActorIDShare(creatureData)
 	local match_opcode = IEex_ReadDword(originatingEffectData + 0x44)
@@ -16448,6 +16998,7 @@ IEex_AddScreenEffectsGlobal("METELGWK", function(effectData, creatureData)
 		end
 		local parent_resource = IEex_ReadLString(effectData + 0x90, 8)
 		if destinationHeight < 0 then
+			IEex_WriteByte(creatureData + 0x9DC, 1)
 			IEex_ApplyEffectToActor(targetID, {
 ["opcode"] = 184,
 ["target"] = 2,
@@ -16773,6 +17324,24 @@ function MEHIDEPS(originatingEffectData, actionData, creatureData)
 end
 
 IEex_AddActionHookOpcode("MEHIDEPS")
+
+function MESTOV1(originatingEffectData, actionData, creatureData)
+	local actionID = IEex_GetActionID(actionData)
+	local sourceID = IEex_GetActorIDShare(creatureData)
+	local parameter1 = IEex_ReadDword(originatingEffectData + 0x18)
+	if actionID == 114 and IEex_GetActorSpellRES(sourceID) == "USSTOV1" then
+		local sourceX, sourceY = IEex_GetActorLocation(sourceID)
+		sourceY = sourceY - 200
+		if sourceY < 3 then
+			IEex_SetActionID(actionData, 0)
+			return
+		end
+		IEex_WriteDword(creatureData + 0x540, sourceX)
+		IEex_WriteDword(creatureData + 0x544, sourceY)
+	end
+end
+
+IEex_AddActionHookOpcode("MESTOV1")
 
 function MESYMPAT(originatingEffectData, actionData, creatureData)
 	local actionID = IEex_GetActionID(actionData)

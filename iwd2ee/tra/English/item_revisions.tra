@@ -519,7 +519,7 @@ Weight: 0 lb.~
 STATISTICS:
 
 Resistance:  50/- Cold Resistance
-All cold damage dealt by the wearer is increased by 50%
+All cold damage dealt by the wearer is increased by 30%
 Weight: 0 lb.~
 //@10148    = ~Ring of Greater Regeneration~
 @10149    = ~A ring is a small band of precious metal that is used as jewelry. Some rare rings have had enchantments placed upon them that confer various magical abilities. These rings are highly sought after, especially by those of the adventuring profession. For no apparent reason, this ring feels warm to the touch.
@@ -825,8 +825,8 @@ After several months of studying the various effects of wilting magic, elemental
 STATISTICS:
 
 Armor Class:  +5 (armor)
-Special:  
-  Cold and magic damage dealt by the wearer from most sources is increased by 30%
+Special:
+  Cold and magic damage dealt by the wearer from most sources is increased by 20%
 Weight:  3 lb.~
 //@10238    = ~Elven Sewn Gloves~
 //@10239    = ~Item description can remain the same; if new description is needed put it here~
@@ -998,28 +998,28 @@ Weight: 2 lb.~
 
 STATISTICS:
 
-Electrical damage dealt by wearer from most sources is increased by 30%
+Electrical damage dealt by wearer from most sources is increased by 20%
 Weight: 3 lb.~
 @10284    = ~Conductive Arcs of Disredain~
 @10285    = ~Disredain was an eccentric wizard who became enthralled with the manipulation of electricity. In addition to the wands he created, Disredain made a number of experimental magic items during a fifteen-year period of frenzied research. This belt was one of the items he did not think highly of. Consisting of large, crescent-shaped slices of mottled copper sitting back to back, the belt is quite thick and unique in appearance. A cleric of Talos named Ylkath wore the Arcs for three decades before he died of old age. His companion, the Umberlant priestess Ashalla of the Jade Tide, kept the belt for barely three years before she was shot dead by pirates that survived one of her nautical attacks. The pirates sold the belt to a fence. Its history past that point is unknown.
 
 STATISTICS:
 
-Electrical damage dealt by wearer from most sources is increased by 60%
+Electrical damage dealt by wearer from most sources is increased by 40%
 Weight: 3 lb.~
 //@10286    = ~Black Goat Girdle~
 @10287    = ~Made by halflings, the Black Goat Girdle is sacred to all of their religious sects. Legends say that the Black Goat appeared to a nameless halfling village that had been sacked by goblins during a terrible winter. The tribe of warriors slew most of the halfling men, burned the fields, and took all of the town's livestock. Broken but not hopeless, the villagers congregated for prayer in the burned chapel at the center of town. Out of the smoke drifting over the edge of town, a black goat appeared with six kids, five black, one white. Over the course of six days, the kids grew, gave birth to more kids, and each previous generation died in the night. The milk, meat, and hide provided by the goats helped the halflings survive through their harsh winter. After the six days of miracles had passed, the town tanner made a belt from the hide of the mother goat that had appeared out of the smoke. Halfling tales often contain stories of halfling heroes wearing the Black Goat Girdle on their adventures, though no one has yet determined exactly where the legend truly originated.
 
 STATISTICS:
 
-Regeneration: Wearer heals 1 hit point every 4 seconds
+Regeneration: Wearer heals 1 hit point every 2 seconds
 Weight: 3 lb.~
 //@10288    = ~Blessed Black Goat Girdle~
 @10289    = ~Made by halflings, the Blessed Black Goat Girdle is sacred to all of their religious sects. Legends say that the Blessed Black Goat appeared to a nameless halfling village that had been sacked by goblins during a terrible winter. The tribe of warriors slew most of the halfling men, burned the fields, and took all of the town's livestock. Broken but not hopeless, the villagers congregated for prayer in the burned chapel at the center of town. Out of the smoke drifting over the edge of town, a black goat appeared with six kids, five black, one white. Over the course of six weeks, the kids miraculously grew, gave birth to six more kids, and then died in the night. The milk, meat, and hide provided by the goats helped the halflings survive through their harsh winter. After the six weeks of miracles had passed, the town tanner made a belt from the hide of the mother goat that had appeared out of the smoke. Halfling tales often contain stories of halfling heroes wearing the Blessed Black Goat Girdle on their adventures, though no one has yet determined exactly where the legend truly originated.
 
 STATISTICS:
 
-Regeneration: Wearer heals 1 hit point every 2 seconds
+Regeneration: Wearer heals 1 hit point every second
 Saving Throw: +2 bonus
 Weight: 3 lb.~
 @10290    = ~Dragon Belt~
@@ -2480,9 +2480,9 @@ STATISTICS:
 
 Heavy Armor
 Armor Bonus: +7
-Max Dex Bonus:  +0
-Armor Check Penalty:  -6
-Arcane Spell Failure:  40%
+Max Dex Bonus:  +1
+Armor Check Penalty:  -5
+Arcane Spell Failure:  35%
 Special:
   Lightweight: Armor is half normal weight of half-plate mail.
 Weight: 25 lb.~
@@ -2494,9 +2494,9 @@ STATISTICS:
 
 Heavy Armor
 Armor Bonus: +10
-Max Dex Bonus:  +0
-Armor Check Penalty:  -6
-Arcane Spell Failure:  40%
+Max Dex Bonus:  +1
+Armor Check Penalty:  -5
+Arcane Spell Failure:  35%
 Special:
   Lightweight: Armor is one fifth normal weight of half-plate mail
   Strength: +5 
@@ -5059,7 +5059,22 @@ Type:  Two-handed~
 //@11023    = ~Winged Blight~
 //@11024    = ~Item description can remain the same; if new description is needed put it here~
 //@11025    = ~Thunder's Shock~
-//@11026    = ~Item description can remain the same; if new description is needed put it here~
+@11026    = ~This massive sword, fashioned to be wielded by a person of great strength, is as elegant as it is repulsive.  Though coated in metal, its blade has been reinforced with human bones.  Its hilt, and accompanying scabbard, have been stylishly made from tanned human flesh and skin.
+
+Little is known about the origins of this weapon, but it is rumored to have been passed down from generation to generation by human Mulhorandi woman.  According to legend, whenever these women gave birth to a girl while being forced into slavery, they would, on the night of the first full moon, pray to the ancient pharaoh Tyrish for guidance.  Hearing their prayers, Tyrish would send "floating down from the heavens" this sword, and the woman would use it to severely disfigure their children.  Once the deed was done, the sword would float away as gracefully as it had arrived.  These children, now deemed undesirable by their slavers, would be sold for a quick profit, thus sparing them the horrors of slavery.
+
+STATISTICS:
+
+Damage:  2d6 + 5
+Attack Bonus:  +5
+Enchantment:  +5
+Damage Type:  Slashing
+Special 
+  Bane: +3 Attack Bonus vs Humans and +2d6+3 vs Humans
+  Shocking Burst: +1d6 electrical damage and 10% chance of +1d10 extra electrical damage
+Weight:  12 lb.
+Feat Requirement:  Martial Weapon, Great Sword
+Type:  Two-handed~
 
 
 //@11027    = ~Quarterstaff~
@@ -5920,12 +5935,14 @@ Type:  One-handed~
 //@11208    = ~Item description can remain the same; if new description is needed put it here~
 //@11209    = ~Corrosive Axe +1~
 //@11210    = ~Item description can remain the same; if new description is needed put it here~
-@11211    = ~Axe of the Irritating Glow~
+@11211    = ~Axe of the Irritating Glow +1~
 @11212    = ~The most common version of the battleaxe is a stout pole about four feet in length with a single-edged, trumpet-shaped blade mounted on one end. Battleaxes are also called broad axes. 
 
 STATISTICS:
 
-Damage:  1d8
+Damage:  1d8  +1
+Attack Bonus:  +1
+Enchantment:  +1
 Damage Type:  Slashing
 Special:
   The Irritating Glow: Each hit casts Faerie Fire on the target, giving a non-cumulative -2 AC penalty.
@@ -6247,7 +6264,7 @@ Damage Type (thrown):  Missile (piercing)
 Special:  
   Slashing: +2d6 Slashing damage
   Spellward: Immunity to silence spells
-  Returning: Returns to weilder
+  Returning: Returns to wielder
 Weight: 1 lb.
 Required Feat:  Martial Weapon, Axe
 Type:  One-handed~
@@ -8902,7 +8919,8 @@ Damage:  +3 (missile)
 Attack Bonus:  +2
 Special:
   Composite: Gains Strength bonus to damage, up to a maximum of +3
-  Dodging: +6 Armor Class vs. missile attacks
+  Dodging: +4 Armor Class vs. melee attacks
+  The wielder does not provoke attacks of opportunity when firing this bow in melee
 Weight: 9 lb.
 Feat Requirement:  Martial Weapon, Bow
 Type:  Two-handed~
@@ -10671,7 +10689,7 @@ Duration: Permanent~
 
 STATISTICS:
 
-Vulnerability:  -30 Acid Resistance
+Vulnerability: Target takes double damage from acid
 Range:  20 ft.
 Area:  1 creature
 Duration: 24 hours~
@@ -10680,7 +10698,7 @@ Duration: 24 hours~
 
 STATISTICS:
 
-Vulnerability:  -30 Fire Resistance
+Vulnerability: Target takes double damage from fire
 Range:  20 ft.
 Area:  1 creature
 Duration: 24 hours~
@@ -10689,7 +10707,7 @@ Duration: 24 hours~
 
 STATISTICS:
 
-Vulnerability:  -30 Electricity Resistance
+Vulnerability: Target takes double damage from electricity
 Range:  20 ft.
 Area:  1 creature
 Duration: 24 hours~
@@ -10716,7 +10734,7 @@ Duration: 24 hours~
 
 STATISTICS:
 
-Vulnerability:  -30 Cold Resistance
+Vulnerability: Target takes double damage from cold
 Range:  20 ft.
 Area:  1 creature
 Duration: 24 hours~
@@ -11357,12 +11375,12 @@ STATISTICS:
 
 Spell Power: Can create an Antimagic Shell around the user for 7 rounds 1/day
 Weight: 1 lb.~
-@12417    = ~Translocation Necklace~
-@12418    = ~This necklace allows the wearer to switch places with any creature he or she sees.
+@12417    = ~Necklace of Spell Focus~
+@12418    = ~While magical amulets typically have defensive enchantments, magical necklaces often have offensive powers. This particular necklace makes the wearer's spells harder to resist.
 
 STATISTICS:
 
-Translocation: Wearer can switch places with another creature. This ability can be used at will.
+The wearer's spells gain +3 DC
 Weight: 1 lb.~
 @12419    = ~Amulet of Protection from Great Magic~
 @12420    = ~Amulets are usually magical devices that are commonly worn around the neck, suspended from a chain. The type of chain that comes with an amulet generally increases the item's aesthetic value, not its magical properties. Only one amulet can be dangled from the neck.
@@ -12575,7 +12593,7 @@ Enchantment:  +5
 Damage Type:  Slashing
 Special:
   Keen: Increased chance of scoring a critical hit on target
-  Constant Effect: The character is under the effect of Executioner's Eyes while these arrows are equipped
+  Deals x4 damage on a critical hit
 Weight: 0 lb.
 Launcher:  Bow~
 @12633    = ~Vorpal Throwing Axe +5~
@@ -12670,7 +12688,7 @@ Unlike most anti-giant weapons, which are designed to hit giants in the legs and
 
 STATISTICS:
 
-Damage:  2d4 + 3, + an additional 7 vs. giants
+Damage:  2d8 + 3, + an additional 7 vs. giants
 Attack Bonus:  +3
 Enchantment:  +3
 Damage Type (melee):  Bludgeoning
@@ -12689,7 +12707,7 @@ Unlike most anti-giant weapons, which are designed to hit giants in the legs and
 
 STATISTICS:
 
-Damage:  2d4 + 5, + an additional 7 vs. giants
+Damage:  2d8 + 5, + an additional 7 vs. giants
 Attack Bonus:  +5
 Enchantment:  +5
 Damage Type (melee):  Bludgeoning
@@ -12865,7 +12883,7 @@ STATISTICS:
 The wearer gains an additional 30/- resistance to slashing, piercing, and bludgeoning damage as long as they are under the effect of the spell Iron Skins.
 Weight:  9 lb.~
 @12683    = ~Necklace of Combat Stealth~
-@12684    = ~Amulets are some of the most favored items to enchant by wizards because of their ability to be worn without interfering with the delicate rituals of spell casting. This particular amulet increases the wearer's ability to shrug off harmful mental effects.
+@12684    = ~While magical amulets typically have defensive enchantments, magical necklaces often have offensive powers. This particular necklace allows the wearer to repeatedly hide in plain sight, provided they are already good at hiding.
 
 STATISTICS:
 
@@ -12916,7 +12934,7 @@ STATISTICS:
 
 Armor Class:  +10 (armor)
 Special:  
-  Cold and magic damage dealt by the wearer from most sources is increased by 50%
+  Cold and magic damage dealt by the wearer from most sources is increased by 40%
 Weight:  3 lb.~
 @12695    = ~Chainmail of the Shield +2~
 @12696    = ~Chain mail is made of interlocking metal rings. It is always worn over a layer of padded fabric or soft leather to prevent chafing and lessen the impact of blows. A faint blue glow can be seen emanating from the armor.
@@ -13479,6 +13497,13 @@ STATISTICS:
 Generic Armor Bonus: +1
 Merciless Gaze: If the wearer is attacking a creature within line of sight, that creature takes 2 magic damage per second.
 Weight: 2 lb.~
+@12825    = ~Amulet of Defensive Regeneration~
+@12826    = ~Amulets are usually magical devices that are commonly worn around the neck, suspended from a chain. The type of chain that comes with an amulet generally increases the item's aesthetic value, not its magical properties. Only one amulet can be dangled from the neck.
+
+STATISTICS:
+
+Defensive Regeneration: Wearer regains 2d4 hit points each time they take damage
+Weight: 1 lb.~
 @12900    = ~Hrm - you are powerful allies, indeed. More gold and gems to line your pockets, then - also, a suit of plate armor, a warhammer, a helmet, all crafted and enchanted by great duergar artisans. They are well deserved, outsider.~
 @12901    = ~Drink this Rainwater Brew, Ennelia. It should help your condition.~
 @12902    = ~Drink this Sour Draught, Ennelia. It should help your condition.~
