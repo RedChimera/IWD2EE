@@ -186,6 +186,8 @@ end
 IEex_Helper_InitBridgeFromTable("IEex_Quickloot", {
 	["on"] = false,
 	["itemsAccessIndex"] = 1,
+	["pendingItemsAccessChange"] = 0,
+	["pendingItemsAccessChangeDelayCounter"] = 0,
 	["highlightContainerID"] = -1,
 	["oldActorX"] = nil,
 	["oldActorY"] = nil,
@@ -243,6 +245,22 @@ function IEex_Quickloot_UpdateItems(alreadyLocked)
 		local actorX, actorY = IEex_GetActorLocation(actorID)
 		local oldX = IEex_Helper_GetBridgeNL("IEex_Quickloot", "oldActorX")
 		local oldY = IEex_Helper_GetBridgeNL("IEex_Quickloot", "oldActorY")
+
+		-- Fixes weird flicker when performing right-side adjustment; unknown why this occurs
+		-- without a 2 tick delay on itemsAccessIndex modification when picking up an item.
+		local pendingItemsAccessChange = IEex_Helper_GetBridgeNL("IEex_Quickloot", "pendingItemsAccessChange")
+		if pendingItemsAccessChange ~= 0 then
+			local pendingItemsAccessChangeDelayCounter = IEex_Helper_GetBridgeNL("IEex_Quickloot", "pendingItemsAccessChangeDelayCounter") + 1
+			if pendingItemsAccessChangeDelayCounter == 2 then
+				IEex_Helper_SetBridgeNL("IEex_Quickloot", "pendingItemsAccessChange", 0)
+				IEex_Helper_SetBridgeNL("IEex_Quickloot", "pendingItemsAccessChangeDelayCounter", 0)
+				local newItemsAccessIndex = IEex_Helper_GetBridgeNL("IEex_Quickloot", "itemsAccessIndex") + pendingItemsAccessChange
+				local maxIndex = math.max(1, IEex_Helper_GetBridgeNumIntsNL("IEex_Quickloot", "items") - 10 + 1)
+				IEex_Helper_SetBridgeNL("IEex_Quickloot", "itemsAccessIndex", math.max(1, math.min(newItemsAccessIndex, maxIndex)))
+			else
+				IEex_Helper_SetBridgeNL("IEex_Quickloot", "pendingItemsAccessChangeDelayCounter", pendingItemsAccessChangeDelayCounter)
+			end
+		end
 
 		if actorX ~= oldX or actorY ~= oldY then
 			IEex_Helper_SetBridgeNL("IEex_Quickloot", "itemsAccessIndex", 1)
@@ -1186,15 +1204,19 @@ end
 
 function IEex_Extern_Quickloot_ScrollLeft()
 	IEex_AssertThread(IEex_Thread.Async, true)
-	local itemsAccessIndex = IEex_Helper_GetBridge("IEex_Quickloot", "itemsAccessIndex")
-	IEex_Helper_SetBridge("IEex_Quickloot", "itemsAccessIndex", math.max(1, itemsAccessIndex - 10))
+	IEex_Helper_SynchronizedBridgeOperation("IEex_Quickloot", function()
+		local itemsAccessIndex = IEex_Helper_GetBridgeNL("IEex_Quickloot", "itemsAccessIndex")
+		IEex_Helper_SetBridgeNL("IEex_Quickloot", "itemsAccessIndex", math.max(1, itemsAccessIndex - 10))
+	end)
 end
 
 function IEex_Extern_Quickloot_ScrollRight()
 	IEex_AssertThread(IEex_Thread.Async, true)
-	local itemsAccessIndex = IEex_Helper_GetBridge("IEex_Quickloot", "itemsAccessIndex")
-	local maxIndex = math.max(1, IEex_Helper_GetBridgeNumInts("IEex_Quickloot", "items") - 10 + 1)
-	IEex_Helper_SetBridge("IEex_Quickloot", "itemsAccessIndex", math.min(itemsAccessIndex + 10, maxIndex))
+	IEex_Helper_SynchronizedBridgeOperation("IEex_Quickloot", function()
+		local itemsAccessIndex = IEex_Helper_GetBridgeNL("IEex_Quickloot", "itemsAccessIndex")
+		local maxIndex = math.max(1, IEex_Helper_GetBridgeNumIntsNL("IEex_Quickloot", "items") - 10 + 1)
+		IEex_Helper_SetBridgeNL("IEex_Quickloot", "itemsAccessIndex", math.min(itemsAccessIndex + 10, maxIndex))
+	end)
 end
 
 function IEex_Extern_CScreenWorld_OnInventoryButtonRClick()
@@ -1208,10 +1230,10 @@ end
 
 function IEex_Extern_CUIControlButtonWorldContainerSlot_OnLButtonClick_Done(control)
 	IEex_AssertThread(IEex_Thread.Async, true)
-	local itemsAccessIndex = IEex_Helper_GetBridge("IEex_Quickloot", "itemsAccessIndex")
-	local maxIndex = math.max(1, IEex_Helper_GetBridgeNumInts("IEex_Quickloot", "items") - 10)
-	IEex_Helper_SetBridge("IEex_Quickloot", "itemsAccessIndex", math.min(itemsAccessIndex, maxIndex))
-	IEex_Quickloot_InvalidatePanel()
+	IEex_Helper_SynchronizedBridgeOperation("IEex_Quickloot", function()
+		local pendingItemsAccessChange = IEex_Helper_GetBridgeNL("IEex_Quickloot", "pendingItemsAccessChange") - 1
+		IEex_Helper_SetBridgeNL("IEex_Quickloot", "pendingItemsAccessChange", pendingItemsAccessChange)
+	end)
 end
 
 function IEex_Extern_CUIControlButtonWorldContainerSlot_OnLButtonClick_GetOnlyUpdateSlot(control)
