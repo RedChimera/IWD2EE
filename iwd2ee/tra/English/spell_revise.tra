@@ -2619,6 +2619,7 @@ Launcher:  Bow~
 @30057=~Ethereal~
 @30058=~Levitating~
 @30059=~Resistance Lowered~
+@30060=~Enlarged~
 
 @31106     = ~Magic Stone~
 @32106     = ~Magic Stone
@@ -3569,6 +3570,17 @@ Area of Effect: Caster
 Saving Throw: None
 
 Arcane Sight lets the caster see what magical effects are on a creature. While the spell is in effect and the caster isn't incapacitated, if you hover the cursor over a creature and press Tab, a list of all the magical effects on the creature from spells and abilities will be displayed, along with their remaining durations.~
+@37255     = ~Enlarge Creature~
+@38255     = ~Enlarge Creature
+(Transmutation)
+Level: Sor/Wiz 3
+Range: Sight of Caster
+Duration: 1 round/level
+Casting Time: 6
+Area of Effect: 1 creature
+Saving Throw: None
+
+This spell causes the target to temporarily grow twice as large in each dimension. The target gains +8 Strength and Constitution; these are size bonuses which stack with other bonuses to these attributes. However, the target also gets a -4 penalty to Dexterity, AC, and attack rolls due to increased size. The target cannot benefit from invisibility, blur, or mirror image.~
 @37351     = ~Clairvoyance~
 @38351     = ~Clairvoyance
 (Divination)

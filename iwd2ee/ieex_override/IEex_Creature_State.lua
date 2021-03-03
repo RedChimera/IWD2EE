@@ -75,8 +75,9 @@ function IEex_Extern_OnGameObjectBeingDeleted(actorID)
 	ex_cre_effects_initializing[actorID] = nil
 	local constantID = IEex_ReadDword(share + 0x700)
 	if constantID ~= -1 then
-		IEex_Helper_EraseBridgeKey("IEex_ConstantID", constantID)
+		IEex_Helper_SetBridge("IEex_ConstantID", constantID, nil)
 	end
+	IEex_Helper_SetBridge("IEex_EnlargedAnimation", actorID, nil)
 	IEex_Helper_SynchronizedBridgeOperation("IEex_GameObjectData", function()
 		local luaDerivedStats = IEex_Helper_GetBridgeNL("IEex_GameObjectData", actorID, "luaDerivedStats")
 		local luaTempStats = IEex_Helper_GetBridgeNL("IEex_GameObjectData", actorID, "luaTempStats")
@@ -130,6 +131,7 @@ function IEex_Extern_OnUpdateTempStats(share)
 		end
 	end)
 end
+
 function IEex_Extern_OnPostCreatureProcessEffectList(creatureData)
 	IEex_AssertThread(IEex_Thread.Async, true)
 	local targetID = IEex_GetActorIDShare(creatureData)
@@ -181,6 +183,11 @@ function IEex_Extern_OnPostCreatureProcessEffectList(creatureData)
 			_G[theresource](eData + 0x4, creatureData, true)
 		end
 	end)
+	for funcName, funcCondition in pairs(ex_on_tick_functions) do
+		if funcCondition > 0 and not onTickFunctionsCalled[funcName] and ex_on_tick_default_functions[funcName] then
+			_G[ex_on_tick_default_functions[funcName]](creatureData)
+		end
+	end
 	extraFlags = IEex_ReadDword(creatureData + 0x740)
 	if bit.band(extraFlags, 0x6000) == 0x4000 and IEex_ReadSignedByte(creatureData + 0x5622, 0x0) < 0 and not usedFunction and not IEex_IsPartyMember(targetID) and IEex_CheckGlobalEffect(0xFFFFFFFF) == false then return end
 

@@ -1579,6 +1579,12 @@ COPY_EXISTING ~USPALSHO.spl~ ~override~
   SAY UNIDENTIFIED_DESC @927
   SAY IDENTIFIED_DESC @927
 
+COPY_EXISTING ~USDUEREN.spl~ ~override~
+  SAY NAME1 @928
+  SAY NAME2 @928
+  SAY UNIDENTIFIED_DESC @928
+  SAY IDENTIFIED_DESC @928
+
 COPY_EXISTING ~USMM001.spl~ ~override~
 	LPF ADD_SPELL_EFFECT INT_VAR insert_point=1 opcode=139 target=2 timing=1 parameter1=RESOLVE_STR_REF(@361) END
   SAY NAME1 @361
@@ -2366,5 +2372,8 @@ COPY_EXISTING ~LISTINNT.2da~ ~override~
 	numrows += 1
 	lastindex += 1
 	INSERT_2DA_ROW numrows 2 ~%lastindex% USPALSHO~
+	numrows += 1
+	lastindex += 1
+	INSERT_2DA_ROW numrows 2 ~%lastindex% USDUEREN~
 
 INCLUDE ~%mod_folder%/components/final_patches.tpa~

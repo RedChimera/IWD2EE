@@ -321,6 +321,14 @@ function IEex_Extern_OnPostProjectileCreation(CProjectile, esp)
 							thelimit = thelimit - 1
 							IEex_WriteWord(eData + 0x4A, thelimit)
 						end
+					elseif bit.band(thesavingthrow, 0x20000000) > 0 then
+						if IEex_ReadDword(CProjectile + 0x192) > 0 then
+							IEex_WriteDword(IEex_ReadDword(CProjectile + 0x192) + 0xD6, 1)
+						end
+						if bit.band(thesavingthrow, 0x80000) > 0 and bit.band(thesavingthrow, 0x100000) == 0 then
+							thelimit = thelimit - 1
+							IEex_WriteWord(eData + 0x4A, thelimit)
+						end
 					end
 				end
 			end

@@ -32,7 +32,8 @@ ex_courteous_magocracy_classes = {[10] = true, [11] = true}
 ex_courteous_magocracy_charisma_bonus = 6
 ex_base_num_attacks_of_opportunity = 0
 ex_stat_scaling_functions = {["MESTATSC"] = true, ["MEHALFTH"] = true, ["MEPERFEC"] = true, }
-ex_on_tick_functions = {["MEGHOSTW"] = 1, ["METELMOV"] = 1, ["MEWINGBU"] = 2, ["MESPIN"] = 2, ["IEex_EvaluatePermanentRepeatingEffects"] = 0, ["IEex_HeightMod"] = 0, ["IEex_ExtraAttacks"] = 0, ["IEex_DuelHide"] = 0, }
+ex_on_tick_functions = {["MEGHOSTW"] = 1, ["METELMOV"] = 1, ["MEENLARG"] = 1, ["MEWINGBU"] = 2, ["MESPIN"] = 2, ["IEex_EvaluatePermanentRepeatingEffects"] = 0, ["IEex_HeightMod"] = 0, ["IEex_ExtraAttacks"] = 0, ["IEex_DuelHide"] = 0, }
+ex_on_tick_default_functions = {["MEENLARG"] = "IEex_ResetSize", }
 ex_stat_spells = {
 [1] = {[21] = "USRAGE3", [25] = "USRAGE4", [29] = "USRAGE5"}, -- Barbarian Rage
 [2] = {[0] = "USMAXIM1", [12] = "USMAXIM2"}, -- Maximized Attacks

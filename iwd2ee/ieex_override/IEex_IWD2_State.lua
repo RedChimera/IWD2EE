@@ -579,6 +579,31 @@ function IEex_ApplyResref(resref, actorID)
 
 end
 
+function IEex_Enlarge(actorID)
+	if not IEex_IsSprite(actorID, true) then return end
+	local share = IEex_GetActorShare(actorID)
+	local animationData = IEex_ReadDword(share + 0x50F0)
+	IEex_WriteDword(animationData + 0x4F2, 1)
+	IEex_WriteDword(animationData + 0x5CC, 1)
+	IEex_WriteDword(animationData + 0x6A6, 1)
+	IEex_WriteDword(animationData + 0x780, 1)
+	IEex_WriteDword(animationData + 0x85A, 1)
+	IEex_WriteDword(animationData + 0x964, 1)
+	IEex_WriteDword(animationData + 0xA3E, 1)
+	IEex_WriteDword(animationData + 0xB18, 1)
+	IEex_WriteDword(animationData + 0xBF2, 1)
+	IEex_WriteDword(animationData + 0xCFC, 1)
+	IEex_WriteDword(animationData + 0xDD6, 1)
+	IEex_WriteDword(animationData + 0xEB0, 1)
+	IEex_WriteDword(animationData + 0xF8A, 1)
+	IEex_WriteDword(animationData + 0x1094, 1)
+	IEex_WriteDword(animationData + 0x116E, 1)
+	IEex_WriteDword(animationData + 0x1248, 1)
+	IEex_WriteDword(animationData + 0x1322, 1)
+	IEex_WriteDword(animationData + 0x13FC, 1)
+	IEex_WriteDword(animationData + 0x1444, 1)
+end
+
 function IEex_SetActorName(actorID, strref)
 	if not IEex_IsSprite(actorID, true) then return end
 	local share = IEex_GetActorShare(actorID)
@@ -5112,6 +5137,130 @@ function MEMONKAN(effectData, creatureData)
 })
 		end
 	end
+end
+
+ex_animation_vidcells = {
+[0x5000] = {0x41C, 0x4F6, 0x5D0, 0x6AA, 0x784, 0x88E, 0x968, 0xA42, 0xB1C, 0xC26, 0xD00, 0xDDA, 0xEB4, 0xFBE, 0x1098, 0x1172, 0x124C, 0x1326},
+[0x7000] = {0x40E, 0x4E8, 0x5C2, 0x69C},
+[0x7F00] = {0x40A, 0x4E4},
+[0x8000] = {0x40E, 0x4E8, 0x5C2, 0x69C, 0x7A6, 0x880, 0x95A, 0xA34},
+[0xE000] = {0x40E, 0x4E8, 0x5C2, 0x69C, 0x776, 0x850, 0x92A, 0xA04, 0xADE, 0xBB8, 0xC92, 0xD6C, 0xE46, 0xF20, 0xFFA, 0x10D4, 0x11AE, 0x1288, 0x1362, 0x143C, 0x1516, 0x15F0, 0x16CA, 0x17A4, 0x187E, 0x1958, 0x1A32, 0x1B0C},
+[0xF000] = {0x40E, 0x4E8, 0x5C2, 0x69C, 0x776, 0x850, 0x92A, 0xA04, 0xADE, 0xBB8, 0xC92, 0xD6C, 0xE46, 0xF20, 0xFFA, 0x10D4, 0x11AE, 0x1288, 0x1362, 0x143C, 0x1516, 0x15F0, 0x16CA, 0x17A4, 0x187E, 0x1958, 0x1A32, 0x1B0C, 0x1C16, 0x1CF0, 0x1DCA, 0x1EA4, 0x1F7E, 0x2058, 0x2132, 0x220C, 0x22E6, 0x23C0, 0x249A, 0x2574, 0x264E, 0x2728, 0x2802, 0x28DC, 0x29B6, 0x2A90, 0x2B6A, 0x2C44, 0x2D1E, 0x2DF8, 0x2ED2, 0x2FAC, 0x3086, 0x3160, 0x323A, 0x3314},
+}
+
+function MEENLARG(effectData, creatureData, isSpecialCall)
+	if not isSpecialCall then return end
+	local targetID = IEex_GetActorIDShare(creatureData)
+	local sourceID = IEex_ReadDword(effectData + 0x10C)
+	local animationData = IEex_ReadDword(creatureData + 0x50F0)
+	local animationID = IEex_ReadWord(animationData + 0x4, 0x0)
+	if IEex_Helper_GetBridge("IEex_EnlargedAnimation", targetID) ~= animationID then
+		IEex_Helper_SetBridge("IEex_EnlargedAnimation", targetID, animationID)
+		IEex_WriteByte(animationData + 0x6, IEex_ReadByte(animationData + 0x6, 0x0) * 2)
+		IEex_WriteDword(animationData + 0x8, IEex_ReadDword(animationData + 0x8) * 2)
+		IEex_WriteDword(animationData + 0xC, IEex_ReadDword(animationData + 0xC) * 2)
+		IEex_WriteDword(animationData + 0x10, IEex_ReadDword(animationData + 0x10) * 2)
+		IEex_WriteDword(animationData + 0x14, IEex_ReadDword(animationData + 0x14) * 2)
+		local personalSpace = IEex_ReadByte(animationData + 0x3E4, 0x0)
+		if personalSpace > 0 then
+			IEex_WriteByte(animationData + 0x3E4, personalSpace + 1)
+		end
+	end
+	IEex_WriteDword(creatureData + 0x740, bit.bor(IEex_ReadDword(creatureData + 0x740), 0x400))
+	local vidcellList = {}
+	if animationID >= 0x5000 and animationID <= 0x6FFF then
+		vidcellList = ex_animation_vidcells[0x5000]
+		IEex_WriteDword(animationData + 0x1444, 1)
+	elseif animationID >= 0x7000 and animationID <= 0x7EFF then
+		vidcellList = ex_animation_vidcells[0x7000]
+	elseif animationID >= 0x7F00 and animationID <= 0x7FFF then
+		vidcellList = ex_animation_vidcells[0x7F00]
+	elseif animationID >= 0x8000 and animationID <= 0x8FFF then
+		vidcellList = ex_animation_vidcells[0x8000]
+	elseif animationID >= 0xE000 and animationID <= 0xEFFF then
+		vidcellList = ex_animation_vidcells[0xE000]
+	elseif animationID >= 0xF000 and animationID <= 0xFFFF then
+		vidcellList = ex_animation_vidcells[0xF000]
+	end
+	if #vidcellList > 0 then
+		for k, v in ipairs(vidcellList) do
+			IEex_WriteDword(animationData + v + 0xD6, 1)
+		end
+	end
+end
+
+function IEex_ResetSize(creatureData)
+	local targetID = IEex_GetActorIDShare(creatureData)
+	if IEex_Helper_GetBridge("IEex_EnlargedAnimation", targetID) ~= nil then
+		IEex_Helper_SetBridge("IEex_EnlargedAnimation", targetID, nil)
+		local animationData = IEex_ReadDword(creatureData + 0x50F0)
+		local animationID = IEex_ReadWord(animationData + 0x4, 0x0)
+		local extraFlags = IEex_ReadDword(creatureData + 0x740)
+		if bit.band(extraFlags, 0x400) > 0 then
+			IEex_WriteDword(creatureData + 0x740, bit.band(extraFlags, 0xFFFFFBFF))
+			IEex_WriteByte(animationData + 0x6, math.floor(IEex_ReadByte(animationData + 0x6, 0x0) / 2))
+			IEex_WriteDword(animationData + 0x8, math.floor(IEex_ReadDword(animationData + 0x8) / 2))
+			IEex_WriteDword(animationData + 0xC, math.floor(IEex_ReadDword(animationData + 0xC) / 2))
+			IEex_WriteDword(animationData + 0x10, math.floor(IEex_ReadDword(animationData + 0x10) / 2))
+			IEex_WriteDword(animationData + 0x14, math.floor(IEex_ReadDword(animationData + 0x14) / 2))
+			local personalSpace = IEex_ReadByte(animationData + 0x3E4, 0x0)
+			if personalSpace > 3 then
+				IEex_WriteByte(animationData + 0x3E4, personalSpace - 1)
+			end
+		end
+		local vidcellList = {}
+		if animationID >= 0x5000 and animationID <= 0x6FFF then
+			vidcellList = ex_animation_vidcells[0x5000]
+			IEex_WriteDword(animationData + 0x1444, 0)
+		elseif animationID >= 0x7000 and animationID <= 0x7EFF then
+			vidcellList = ex_animation_vidcells[0x7000]
+		elseif animationID >= 0x7F00 and animationID <= 0x7FFF then
+			vidcellList = ex_animation_vidcells[0x7F00]
+		elseif animationID >= 0x8000 and animationID <= 0x8FFF then
+			vidcellList = ex_animation_vidcells[0x8000]
+		elseif animationID >= 0xE000 and animationID <= 0xEFFF then
+			vidcellList = ex_animation_vidcells[0xE000]
+		elseif animationID >= 0xF000 and animationID <= 0xFFFF then
+			vidcellList = ex_animation_vidcells[0xF000]
+		end
+		if #vidcellList > 0 then
+			for k, v in ipairs(vidcellList) do
+				IEex_WriteDword(animationData + v + 0xD6, 0)
+			end
+		end
+		IEex_ApplyEffectToActor(targetID, {
+["opcode"] = 0,
+["target"] = 2,
+["timing"] = 0,
+["source_id"] = targetID
+})
+	end
+
+end
+
+function IEex_Enlarge(actorID)
+	if not IEex_IsSprite(actorID, true) then return end
+	local share = IEex_GetActorShare(actorID)
+	local animationData = IEex_ReadDword(share + 0x50F0)
+	IEex_WriteDword(animationData + 0x4F2, 1)
+	IEex_WriteDword(animationData + 0x5CC, 1)
+	IEex_WriteDword(animationData + 0x6A6, 1)
+	IEex_WriteDword(animationData + 0x780, 1)
+	IEex_WriteDword(animationData + 0x85A, 1)
+	IEex_WriteDword(animationData + 0x964, 1)
+	IEex_WriteDword(animationData + 0xA3E, 1)
+	IEex_WriteDword(animationData + 0xB18, 1)
+	IEex_WriteDword(animationData + 0xBF2, 1)
+	IEex_WriteDword(animationData + 0xCFC, 1)
+	IEex_WriteDword(animationData + 0xDD6, 1)
+	IEex_WriteDword(animationData + 0xEB0, 1)
+	IEex_WriteDword(animationData + 0xF8A, 1)
+	IEex_WriteDword(animationData + 0x1094, 1)
+	IEex_WriteDword(animationData + 0x116E, 1)
+	IEex_WriteDword(animationData + 0x1248, 1)
+	IEex_WriteDword(animationData + 0x1322, 1)
+	IEex_WriteDword(animationData + 0x13FC, 1)
+	IEex_WriteDword(animationData + 0x1444, 1)
 end
 
 function MEPOLYMO(effectData, creatureData)
@@ -13334,6 +13483,8 @@ function MEUNSTUC(effectData, creatureData)
 })
 end
 
+ex_no_teleport_animations = {[61347] = true, [61363] = true, [61379] = true, [61395] = true, [61411] = true, [61427] = true, }
+
 ex_ceiling_height = {["AR1000"] = 32767, ["AR1001"] = 140, ["AR1002"] = 140, ["AR1003"] = 55, ["AR1004"] = 75, ["AR1005"] = 65, ["AR1006"] = 75, ["AR1007"] = 110, ["AR1100"] = 32767, ["AR1101"] = 85, ["AR1102"] = 75, ["AR1103"] = 60, ["AR1104"] = 70, ["AR1105"] = 0, ["AR1106"] = 70, ["AR1107"] = 70, ["AR1200"] = 32767, ["AR1201"] = 75, ["AR2000"] = 32767, ["AR2001"] = 32767, ["AR2002"] = 180, ["AR2100"] = 32767, ["AR2101"] = 32767, ["AR2102"] = 32767, ["AR3000"] = 32767, ["AR3001"] = 160, ["AR3002"] = 170, ["AR3100"] = 32767, ["AR3101"] = 80, ["AR4000"] = 32767, ["AR4001"] = 70, ["AR4100"] = 32767, ["AR4101"] = 90, ["AR4102"] = 90, ["AR4103"] = 90, ["AR5000"] = 32767, ["AR5001"] = 32767, ["AR5002"] = 80, ["AR5004"] = 32767, ["AR5005"] = 32767, ["AR5010"] = 32767, ["AR5011"] = 32767, ["AR5012"] = 32767, ["AR5013"] = 32767, ["AR5014"] = 32767, ["AR5015"] = 32767, ["AR5016"] = 32767, ["AR5017"] = 32767, ["AR5018"] = 32767, ["AR5019"] = 32767, ["AR5020"] = 32767, ["AR5021"] = 32767, ["AR5022"] = 32767, ["AR5023"] = 32767, ["AR5024"] = 32767, ["AR5025"] = 32767, ["AR5026"] = 32767, ["AR5027"] = 32767, ["AR5028"] = 32767, ["AR5029"] = 32767, ["AR5030"] = 32767, ["AR5100"] = 200, ["AR5101"] = 170, ["AR5102"] = 110, ["AR5200"] = 32767, ["AR5201"] = 120, ["AR5202"] = 110, ["AR5203"] = 300, ["AR5300"] = 200, ["AR5301"] = 160, ["AR5302"] = 80, ["AR5303"] = 32767, ["AR6000"] = 32767, ["AR6001"] = 32767, ["AR6002"] = 32767, ["AR6003"] = 160, ["AR6004"] = 75, ["AR6005"] = 130, ["AR6006"] = 110, ["AR6007"] = 70, ["AR6008"] = 320, ["AR6009"] = 250, ["AR6010"] = 110, ["AR6050"] = 32767, ["AR6051"] = 150, ["AR6100"] = 32767, ["AR6101"] = 190, ["AR6102"] = 170, ["AR6103"] = 140, ["AR6104"] = 220, ["AR6200"] = 32767, ["AR6201"] = 32767, ["AR6300"] = 32767, ["AR6301"] = 310, ["AR6302"] = 320, ["AR6303"] = 170, ["AR6304"] = 200, ["AR6305"] = 170, ["AR6400"] = 32767, ["AR6401"] = 100, ["AR6402"] = 270, ["AR6403"] = 140, ["AR6500"] = 250, ["AR6501"] = 320, ["AR6502"] = 120, ["AR6503"] = 100, ["AR6600"] = 200, ["AR6601"] = 160, ["AR6602"] = 110, ["AR6603"] = 215, ["AR6700"] = 95, ["AR6701"] = 110, ["AR6702"] = 230, ["AR6703"] = 32767, ["AR6800"] = 32767, }
 ex_specific_floor_height = {["AR3000"] = {[0xFF00] = -750}, ["AR5200"] = {[0xFF00] = -500}, ["AR5300"] = {[0xFF00] = -1500}, ["AR5303"] = {[0xFF00] = -4000}, ["AR6000"] = {[0xFF00] = -900}, ["AR6001"] = {[0xFF00] = -4800}, ["AR6051"] = {[0xFF00] = -300}, ["AR6104"] = {[0xFF00] = -20}, ["AR6300"] = {[0xFF00] = -120}, ["AR6302"] = {[0xFF00] = -900}, ["AR6303"] = {[0xFF00] = -900}, ["AR6304"] = {[0xFF00] = -900}, ["AR6305"] = {[0xFF00] = -900}, ["AR6400"] = {[0xFF00] = -3500}, ["AR6703"] = {[0xFF00] = -5800}, ["AR6800"] = {[0xFF00] = -5000}, }
 ex_specific_floor_spell = {["AR6051"] = {[0xFF00] = "USFL6051"}, ["AR6104"] = {[0xFF00] = "USFL6104"}, ["AR6300"] = {[0xFF00] = "USFL6300"}, }
@@ -13344,6 +13495,7 @@ function MEHGTMOD(effectData, creatureData)
 end
 function IEex_HeightMod(creatureData)
 --	print(IEex_ReadDword(effectData + 0xC))
+	if ex_no_teleport_animations[IEex_ReadDword(creatureData + 0x5C4)] then return end
 	local targetID = IEex_GetActorIDShare(creatureData)
 	local sourceID = targetID
 	local savingthrow = 0
@@ -14255,7 +14407,7 @@ ex_simulacrum_copied_fields = {
 {0x5C8, 0x5CE, 1},
 {0x5E2, 0x5EA, 2},
 {0x5F0, 0x604, 1},
-{0x648, 0x744, 4},
+{0x648, 0x6FC, 4},
 {0x758, 0x758, 2},
 {0x75C, 0x770, 4},
 {0x774, 0x7B3, 1},
@@ -14332,7 +14484,25 @@ function MESIMULA(effectData, creatureData)
 			end
 		end
 	end
-
+	for i = 0, 50, 1 do
+		if i <= 8 or i >= 42 then
+			local currentSlotRES = IEex_GetItemSlotRES(summonerID, i)
+			local resWrapper = IEex_DemandRes(currentSlotRES, "ITM")
+			if resWrapper:isValid() then
+				if bit.band(IEex_ReadDword(resWrapper:getData() + 0x18), 0x4) == 0 then
+					IEex_ApplyEffectToActor(targetID, {
+["opcode"] = 143,
+["target"] = 2,
+["timing"] = 1,
+["parameter1"] = i,
+["resource"] = currentSlotRES,
+["source_id"] = targetID
+})
+				end
+			end
+			resWrapper:free()
+		end
+	end
 	IEex_IterateActorEffects(summonerID, function(eData)
 		local theopcode = IEex_ReadDword(eData + 0x10)
 		local thetiming = IEex_ReadDword(eData + 0x24)
@@ -14375,6 +14545,7 @@ function MESIMULA(effectData, creatureData)
 })
 		end
 	end)
+	
 --[[
 	for iCasterType = 1, 7, 1 do
 		local newLevel = newCasterLevels[iCasterType]

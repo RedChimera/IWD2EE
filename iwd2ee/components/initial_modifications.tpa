@@ -623,6 +623,9 @@ COPY_EXISTING ~AR6100.bcs~ ~override~
 		REPLACE_TEXTUALLY CASE_INSENSITIVE ~SetCreatureAreaFlag(\"Izbelah\", ?INVULNERABLE.*~ ~~
 	END
 
+COPY_EXISTING ~61ARCHON.cre~ ~override~
+	LPF	IWD2_ADD_CRE_ITEM INT_VAR equip=0 STR_VAR item=~USMINHT1~ slot=~boots~ mode=~replace~ END
+
 COPY_EXISTING ~00SBAG03.sto~ ~override~ ~00SBGA03.sto~ ~override~ ~00SBGB03.sto~ ~override~
 	WRITE_SHORT 0x9C 100
 /*
@@ -793,6 +796,7 @@ OUTER_SET ref_levitating = RESOLVE_STR_REF(@30058)
 OUTER_SET ref_living_lightning = RESOLVE_STR_REF(@37954)
 OUTER_SET ref_deathwatch = RESOLVE_STR_REF(@37155)
 OUTER_SET ref_arcane_sight = RESOLVE_STR_REF(@37254)
+OUTER_SET ref_enlarged = RESOLVE_STR_REF(@30060)
 
 APPEND ~STATDESC.2da~
 ~146	%ref_magic_stone%
@@ -821,6 +825,7 @@ APPEND ~STATDESC.2da~
 169	%ref_living_lightning%
 170	%ref_deathwatch%
 171	%ref_arcane_sight%
+172	%ref_enlarged%
 ~
 
 VERBOSE

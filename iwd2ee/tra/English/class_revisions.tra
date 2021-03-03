@@ -1484,6 +1484,7 @@ Advantages:
 * +4 dodge bonus against giants.
 * Immune to paralysis (still vulnerable to stunning attacks).
 * Invisibility 1/day.
+* Enlarge Self 1/day.
 * Proficient with axes and hammers.
 * Darkvision.
 
@@ -1664,6 +1665,7 @@ Advantages:
 * +4 dodge bonus against giants.
 * Immune to paralysis (still vulnerable to stunning attacks).
 * Invisibility 1/day.
+* Enlarge Self 1/day.
 * Proficient with axes and hammers.
 * Darkvision.
 
@@ -1809,7 +1811,7 @@ Disadvantages:
 @925    = ~Monk Wisdom Bonus~
 @926    = ~Lay on Hands (Monk)~
 @927    = ~Shield Other~
-@928    = ~~
+@928    = ~Enlarge Self~
 @929    = ~~
 @930    = ~~
 @931    = ~~
