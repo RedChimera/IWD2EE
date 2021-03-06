@@ -75,9 +75,9 @@ function IEex_Extern_OnGameObjectBeingDeleted(actorID)
 	ex_cre_effects_initializing[actorID] = nil
 	local constantID = IEex_ReadDword(share + 0x700)
 	if constantID ~= -1 then
-		IEex_Helper_SetBridge("IEex_ConstantID", constantID, nil)
+		IEex_Helper_EraseBridgeKey("IEex_ConstantID", constantID)
 	end
-	IEex_Helper_SetBridge("IEex_EnlargedAnimation", actorID, nil)
+	IEex_Helper_EraseBridgeKey("IEex_EnlargedAnimation", actorID)
 	IEex_Helper_SynchronizedBridgeOperation("IEex_GameObjectData", function()
 		local luaDerivedStats = IEex_Helper_GetBridgeNL("IEex_GameObjectData", actorID, "luaDerivedStats")
 		local luaTempStats = IEex_Helper_GetBridgeNL("IEex_GameObjectData", actorID, "luaTempStats")
@@ -174,19 +174,40 @@ function IEex_Extern_OnPostCreatureProcessEffectList(creatureData)
 		end
 	end
 	local usedFunction = false
-	IEex_IterateActorEffects(targetID, function(eData)
-		local theopcode = IEex_ReadDword(eData + 0x10)
-		local theresource = IEex_ReadLString(eData + 0x30, 8)
-		if theopcode == 500 and ((ex_on_tick_functions[theresource] == 1 and onTickFunctionsCalled[theresource] == nil) or ex_on_tick_functions[theresource] == 2) then
-			usedFunction = true
-			onTickFunctionsCalled[theresource] = true
-			_G[theresource](eData + 0x4, creatureData, true)
-		end
-	end)
+	local foundOpcodeFunction = true
+	while foundOpcodeFunction do
+		foundOpcodeFunction = false
+		IEex_IterateActorEffects(targetID, function(eData)
+			if not foundOpcodeFunction then
+				local theopcode = IEex_ReadDword(eData + 0x10)
+				local theresource = IEex_ReadLString(eData + 0x30, 8)
+				local theinternal_flags = IEex_ReadDword(eData + 0xCC)
+				if theopcode == 500 and ((ex_on_tick_functions[theresource] == 1 and onTickFunctionsCalled[theresource] == nil) or ex_on_tick_functions[theresource] == 2) and bit.band(theinternal_flags, 0x80) == 0 then
+					usedFunction = true
+					foundOpcodeFunction = true
+					onTickFunctionsCalled[theresource] = true
+					IEex_WriteDword(eData + 0xCC, bit.bor(theinternal_flags, 0x80))
+					_G[theresource](eData + 0x4, creatureData, true)
+				end
+			end
+		end)
+	end
 	for funcName, funcCondition in pairs(ex_on_tick_functions) do
 		if funcCondition > 0 and not onTickFunctionsCalled[funcName] and ex_on_tick_default_functions[funcName] then
 			_G[ex_on_tick_default_functions[funcName]](creatureData)
 		end
+	end
+	if usedFunction then
+		IEex_IterateActorEffects(targetID, function(eData)
+			if not foundOpcodeFunction then
+				local theopcode = IEex_ReadDword(eData + 0x10)
+				local theresource = IEex_ReadLString(eData + 0x30, 8)
+				local theinternal_flags = IEex_ReadDword(eData + 0xCC)
+				if theopcode == 500 and bit.band(theinternal_flags, 0x80) > 0 then
+					IEex_WriteDword(eData + 0xCC, bit.band(theinternal_flags, 0xFFFFFF7F))
+				end
+			end
+		end)
 	end
 	extraFlags = IEex_ReadDword(creatureData + 0x740)
 	if bit.band(extraFlags, 0x6000) == 0x4000 and IEex_ReadSignedByte(creatureData + 0x5622, 0x0) < 0 and not usedFunction and not IEex_IsPartyMember(targetID) and IEex_CheckGlobalEffect(0xFFFFFFFF) == false then return end

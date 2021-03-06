@@ -305,7 +305,7 @@ This spell enables a cleric to aid and protect any one being. By touch, the cast
 @1050    = ~Moonblade~
 @1051    = ~Moonblade 
 (Evocation)
-Level: Drd 3, Rgr 2, Selune 2
+Level: Drd 3, Rgr 3, Selune 2
 Range: Caster
 Duration: 10 rounds
 Casting Time: 6
@@ -316,7 +316,9 @@ This spell summons forth a silent, weightless sword-like construct made of moonl
 
 The strike of a moonblade drains a target's vitality, inflicting 1d12+4 points of damage, and an additional 1d12+4 points to undead, who are particularly susceptible. A successful strike also temporarily scrambles magic, causing any spells the target casts in the next round to fail. Though it is not made of silver, the moonblade has the same effect against lycanthropes as a silver weapon, dealing full damage to them.
 
-If the caster is already wielding a non-conjured moonblade at the time that they cast this spell, instead of conjuring a new moonblade, the spell will give the current moonblade +3 to attack and damage for the duration.~
+If the caster is already wielding a non-conjured moonblade at the time that they cast this spell, instead of conjuring a new moonblade, the spell will give the current moonblade +3 to attack and damage for the duration.
+
+When cast as a ranger spell, this spell creates a moonblade in each hand.~
 @1052    = ~Neutralize Poison~
 @1053    = ~Neutralize Poison
 (Conjuration)
@@ -488,7 +490,7 @@ This spell grants the target creature a +4 strength bonus for the duration of th
 (Evocation) 
 Level: Sor/Wiz 2, Lathander 3
 Range: Sight of Caster
-Duration:  1 round
+Duration: 1 round
 Casting Time: 2
 Area of Effect: 2-foot by 60-foot jet. 
 Saving Throw: Reflex Half
@@ -498,13 +500,13 @@ Upon completion of this spell, a jet of flame shoots from the caster's fingertip
 @1083    = ~Decastave 
 (Evocation)
 Level: Sor/Wiz 2
-Range: Caster 
+Range: Caster
 Duration: 10 rounds
 Casting Time: 10
 Area of Effect: Caster
 Saving Throw: None
 
-This spell creates a staff of force in the caster's hand which can be wielded as a weapon, using the Simple Weapon: Quarterstaff proficiency. The Decastave deals 10 bludgeoning damage per hit, and strikes as a +1 weapon, though it has no attack bonus. The staff also drains an additional 10 hit points per strike and heals the wielder that many Hit Points.~
+This spell creates a staff of force in the caster's hand which can be wielded as a weapon, using the Simple Weapon: Quarterstaff proficiency. The Decastave deals 1d10 bludgeoning damage per hit, and strikes as a +1 weapon, though it has no attack bonus. The staff also drains an additional 1d10 hit points per strike and heals the wielder that many Hit Points.~
 @1084    = ~Lightning Bolt~
 @1085    = ~Lightning Bolt
 (Evocation)
@@ -1325,11 +1327,11 @@ Saving Throw: Reflex half
 When a Call Lightning spell is cast, it must be cast outside, otherwise it will not work and the spell is wasted. The caster is able to call down bolts of lightning. The caster can call down one bolt per 5 rounds. The spell has a duration of 5 rounds per caster level. Each bolt causes 1d10 points of electrical damage for each of the caster's experience levels (maximum of 10d10). The bolt of lightning flashes down in a vertical stroke at any of the caster's enemies. The caster does not choose the targets of the spell, though the lightning will not strike any of his allies.~
 
 @1653    = ~Minor Globe of Invulnerability~
-@1654    = ~Minor Globe of Invulnerability 
+@1654    = ~Minor Globe of Invulnerability
 (Abjuration) 
 Level: Sor/Wiz 4
 Range: Caster
-Duration: 1 round/level 
+Duration: 3 rounds/level
 Casting Time: 4 
 Area of Effect: Caster
 Saving Throw: None 
@@ -1340,12 +1342,12 @@ This spell creates an immobile, faintly shimmering magical sphere around the cas
 (Abjuration) 
 Level: Sor/Wiz 6, Helm 6
 Range: Caster
-Duration: 1 round/level 
-Casting Time: 1 round
+Duration: 3 rounds/level
+Casting Time: 6
 Area of Effect: Caster
 Saving Throw: None 
 
-This spell is similar to the 4th level wizard spell, Minor Globe of Invulnerability, except that it protects the caster from 4th level spells as well.~
+This spell is similar to the 4th level wizard spell, Minor Globe of Invulnerability, except that it protects the caster from 4th- and 5th-level spells as well.~
 @1657    = ~Conjure Animals~
 @1658    = ~Conjure Animals
 (Conjuration) 
@@ -1407,7 +1409,7 @@ This spell allows the caster to switch positions with another creature - there i
 ~
 @1667    = ~Lutzaen's Local Teleport~
 @1668    = ~Lutzaen's Local Teleport
-(Transmutation) 
+(Transmutation)
 Level: Brd 5, Sor/Wiz 5
 Range: Anywhere in current area
 Duration: Instantaneous
@@ -1590,9 +1592,9 @@ This spell blinds enemy creatures within the area of effect. The duration of the
 @1698    = ~Blindness~
 @1699    = ~Blindness 
 (Illusion)
-Level: Brd 2, Clr 3, Sor/Wiz 3, Mask 2
+Level: Brd 2, Sor/Wiz 2, Mask 2
 Range: Sight of Caster
-Duration: 8 hours
+Duration: 15 rounds
 Casting Time: 2
 Area of Effect: 1 creature 
 Saving Throw: Fortitude negates
@@ -1601,7 +1603,7 @@ This spell blinds one creature. Blind creatures are at a significant disadvantag
 ~
 @1700    = ~Deafness~
 @1701    = ~Deafness
-(Transmutation) 
+(Illusion)
 Level: Brd 2, Sor/Wiz 2
 Range: Sight of Caster
 Duration: 1 day
@@ -1816,16 +1818,17 @@ This spell imbues the caster's hands with destructive negative energy that will 
 ~
 @1762    = ~Ice Blade~
 @1763    = ~Ice Blade
-(Evocation) 
+(Evocation)
 Level: Clr 3, Drd 2, Rgr 1
 Range: Caster
-Duration: 4 rounds + 1 round/level
+Duration: 5 rounds + 1 round/level
 Casting Time: 4 
 Area of Effect: Caster
 Saving Throw: Reflex
 
-This spell creates a segment of deep chilling cold that springs forth from the casters hand, taking the shape of a scimitar and wielded as one. Attacks with the Ice Blade are melee touch attacks. The blade deals 2d6 cold damage and bypasses armor and shield bonuses, and the victim must make a Reflex save or be slowed for 2 rounds. The Reflex DC is equal to 12 plus the caster's Wisdom and Spell Focus bonuses. The Ice Blade uses the Martial Weapon: Large Sword proficiency. It cannot critically hit, but it does gain bonuses to attack and damage from Strength, proficiency, spells, items, and other effects.
-~
+This spell creates a segment of deep chilling cold that springs forth from the casters hand, taking the shape of a scimitar and wielded as one. The blade is a +2 weapon. It deals 2d6+2 cold damage and bypasses armor and shield bonuses, and the victim must make a Reflex save or be slowed for 2 rounds. The Reflex DC is equal to 12 plus the caster's Wisdom and Spell Focus bonuses. The Ice Blade uses the Martial Weapon: Large Sword proficiency, and gains bonuses to attack and damage from Strength, proficiency, spells, items, and other effects.
+
+When cast as a ranger spell, this spell creates an Ice Blade in each hand.~
 @1764    = ~Star Metal Cudgel~
 @1765    = ~Star Metal Cudgel
 (Conjuration)
@@ -1877,7 +1880,7 @@ Saving Throw: None
 This spell grants the recipient near-total immunity to elemental damage. For the duration, the target gains 100/- resistance to fire, cold, electricity, and acid damage.
 ~
 @1771    = ~Wall of Moonlight~
-@1772    = ~Wall of Moonlight 
+@1772    = ~Wall of Moonlight
 (Evocation)
 Level: Drd 4, Selune 5
 Range: Sight of Caster
@@ -2079,7 +2082,7 @@ Upon completion of this spell, meteors bombard the area of effect, dealing devas
 ~
 @1853    = ~Prismatic Spray~
 @1854    = ~Prismatic Spray
-(Transmutation)
+(Illusion)
 Level: Brd 7, Sor/Wiz 7, Selune 9
 Range: Caster 
 Duration: Instantaneous
@@ -2277,9 +2280,9 @@ This spell provides the caster with a damage reduction of 10/- to bludgeoning, p
 @1887     = ~Ray of Enfeeblement~
 @1888     = ~Ray of Enfeeblement
 (Necromancy) 
-Level: Clr 2, Sor/Wiz 2
+Level: Clr 1, Sor/Wiz 1
 Range: Sight of Caster
-Duration: 2 rounds / level
+Duration: 8 rounds
 Casting Time: 2
 Area of Effect: 1 creature
 Saving Throw: Fortitude negates
@@ -2309,7 +2312,7 @@ Saving Throw: Reflex half
 Upon completion of this spell a ring of electricity erupts from the caster, dealing 1d6 electricity damage per every two caster levels (maximum 5d6 electricity damage) to every creature within the area of effect. In addition, creatures struck by the ring are stunned for 1 round. A successful Reflex save halves the damage and negates the stunning effect.~
 @1893     = ~Burning Hands~
 @1894     = ~Burning Hands
-(Transmutation) 
+(Transmutation)
 Level: Drd 1, Sor/Wiz 1
 Range: Caster
 Duration: Instantaneous 
@@ -2321,14 +2324,16 @@ When the wizard casts this spell, a jet of searing flame shoots from his fingert
 @1895     = ~Flame Blade~
 @1896     = ~Flame Blade
 (Evocation)
-Level: Drd 2, Rgr 1
+Level: Drd 2, Rgr 2
 Range: Caster
-Duration: 2 rounds / level
+Duration: 5 rounds + 1 round / level
 Casting Time: 4 
 Area of Effect: Caster
 Saving Throw: None
 
-With this spell, the caster causes a blazing ray of red-hot fire to spring forth from their hand. This blade-like ray is wielded as if it were a scimitar, and uses the Martial Weapon: Large Sword proficiency. Attacks with the Flame Blade deal 2d8 fire damage and bypass armor and shield bonuses. The Flame Blade cannot critically hit or be used in sneak attacks, but it does gain bonuses to attack and damage from Strength, proficiency, spells, items, and other effects.~
+With this spell, the caster causes a blazing ray of red-hot fire to spring forth from their hand. This blade-like ray is wielded as if it were a scimitar, and uses the Martial Weapon: Large Sword proficiency. The Flame Blade is a +2 weapon. Attacks with it deal 2d8+2 fire damage and bypass armor and shield bonuses. It does gain bonuses to attack and damage from Strength, proficiency, spells, items, and other effects.
+
+When cast as a ranger spell, this spell creates a Flame Blade in each hand.~
 @1897     = ~Shillelagh~
 @1898     = ~Shillelagh
 (Transmutation) 
@@ -3333,6 +3338,17 @@ Area of Effect: Special
 Saving Throw: Reflex half
 
 This spell augments the ranger's missile attacks to deal damage in a cone. For the duration, whenever the ranger would make a missile attack, a spray of thorns is released instead, dealing the attack's damage to all creatures in a cone. However, creatures in the cone can make a Reflex save to halve the damage of the attack.~
+@35554     = ~Animal Growth~
+@36554     = ~Animal Growth
+(Transmutation)
+Level: Drd 5, Rgr 5
+Range: Caster
+Duration: 1 round/level
+Casting Time: 7
+Area of Effect: 20-foot radius
+Saving Throw: None
+
+Animal Growth causes allied animals in the area of effect to temporarily grow twice as large in each dimension. The animals gains +8 Strength and Constitution; these are size bonuses which stack with other bonuses to these attributes. The animals' speed is doubled. However, they also get a -4 penalty to Dexterity, AC, and attack rolls due to increased size.~
 @35653     = ~Repulsion~
 @36653     = ~Repulsion
 (Abjuration)
@@ -3580,7 +3596,7 @@ Casting Time: 6
 Area of Effect: 1 creature
 Saving Throw: None
 
-This spell causes the target to temporarily grow twice as large in each dimension. The target gains +8 Strength and Constitution; these are size bonuses which stack with other bonuses to these attributes. However, the target also gets a -4 penalty to Dexterity, AC, and attack rolls due to increased size. The target cannot benefit from invisibility, blur, or mirror image.~
+This spell causes the target to temporarily grow twice as large in each dimension. The target gains +8 Strength and Constitution; these are size bonuses which stack with other bonuses to these attributes. The target's speed is also increased (since they cover more distance with each stride). However, the target also gets a -4 penalty to Dexterity, AC, and attack rolls due to increased size. The target cannot benefit from invisibility, blur, or mirror image.~
 @37351     = ~Clairvoyance~
 @38351     = ~Clairvoyance
 (Divination)

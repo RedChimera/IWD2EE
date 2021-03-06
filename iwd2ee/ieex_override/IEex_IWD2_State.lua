@@ -5192,7 +5192,7 @@ end
 function IEex_ResetSize(creatureData)
 	local targetID = IEex_GetActorIDShare(creatureData)
 	if IEex_Helper_GetBridge("IEex_EnlargedAnimation", targetID) ~= nil then
-		IEex_Helper_SetBridge("IEex_EnlargedAnimation", targetID, nil)
+		IEex_Helper_EraseBridgeKey("IEex_EnlargedAnimation", targetID)
 		local animationData = IEex_ReadDword(creatureData + 0x50F0)
 		local animationID = IEex_ReadWord(animationData + 0x4, 0x0)
 		local extraFlags = IEex_ReadDword(creatureData + 0x740)
@@ -5792,6 +5792,7 @@ function MEMOONBL(effectData, creatureData)
 			duration = math.floor((duration - time_applied) / 15)
 		end
 		IEex_WriteDword(effectData + 0x110, 1)
+--[[
 		IEex_ApplyEffectToActor(targetID, {
 ["opcode"] = 111,
 ["target"] = 2,
@@ -5804,8 +5805,155 @@ function MEMOONBL(effectData, creatureData)
 ["source_target"] = targetID,
 ["source_id"] = sourceID,
 })
+--]]
+		IEex_ApplyEffectToActor(targetID, {
+["opcode"] = 500,
+["target"] = 2,
+["timing"] = timing,
+["duration"] = duration,
+["parameter1"] = IEex_ReadDword(effectData + 0x18),
+["parameter2"] = IEex_ReadDword(effectData + 0x1C),
+["resource"] = "MECRWEAP",
+["parent_resource"] = IEex_ReadLString(effectData + 0x90, 8),
+["casterlvl"] = IEex_ReadDword(effectData + 0xC4),
+["internal_flags"] = internalFlags,
+["source_target"] = targetID,
+["source_id"] = sourceID,
+})
 	end
 	IEex_WriteDword(effectData + 0xC8, bit.bor(internalFlags, 0x10))
+end
+
+function MECRWEAP(effectData, creatureData)
+	IEex_WriteDword(effectData + 0x110, 1)
+	local targetID = IEex_GetActorIDShare(creatureData)
+	local sourceID = IEex_ReadDword(effectData + 0x10C)
+	local timing = IEex_ReadDword(effectData + 0x20)
+	local duration = IEex_ReadDword(effectData + 0x24)
+	local time_applied = IEex_ReadDword(effectData + 0x68)
+	if timing == 4096 then
+		timing = 0
+		duration = math.floor((duration - time_applied) / 15)
+	end
+	local weaponRES = IEex_ReadLString(effectData + 0x18, 8)
+	local casterClass = IEex_ReadByte(effectData + 0xC5, 0x0)
+	local internalFlags = IEex_ReadDword(effectData + 0xC8)
+	if casterClass == 8 then
+		if timing == 0 then
+			IEex_ApplyEffectToActor(targetID, {
+["opcode"] = 112,
+["target"] = 2,
+["timing"] = 4,
+["duration"] = duration,
+["resource"] = weaponRES,
+["parent_resource"] = IEex_ReadLString(effectData + 0x90, 8),
+["casterlvl"] = IEex_ReadDword(effectData + 0xC4),
+["internal_flags"] = internalFlags,
+["source_target"] = targetID,
+["source_id"] = sourceID,
+})
+			IEex_ApplyEffectToActor(targetID, {
+["opcode"] = 112,
+["target"] = 2,
+["timing"] = 4,
+["duration"] = duration,
+["resource"] = weaponRES,
+["parent_resource"] = IEex_ReadLString(effectData + 0x90, 8),
+["casterlvl"] = IEex_ReadDword(effectData + 0xC4),
+["internal_flags"] = internalFlags,
+["source_target"] = targetID,
+["source_id"] = sourceID,
+})
+			IEex_ApplyEffectToActor(targetID, {
+["opcode"] = 500,
+["target"] = 2,
+["timing"] = 4,
+["duration"] = duration,
+["parameter1"] = 50,
+["resource"] = "MEERASEW",
+["parent_resource"] = IEex_ReadLString(effectData + 0x90, 8),
+["casterlvl"] = IEex_ReadDword(effectData + 0xC4),
+["internal_flags"] = internalFlags,
+["source_target"] = targetID,
+["source_id"] = sourceID,
+})
+		end
+		IEex_ApplyEffectToActor(targetID, {
+["opcode"] = 143,
+["target"] = 2,
+["timing"] = timing,
+["duration"] = duration,
+["parameter1"] = 49,
+["resource"] = weaponRES,
+["parent_resource"] = IEex_ReadLString(effectData + 0x90, 8),
+["casterlvl"] = IEex_ReadDword(effectData + 0xC4),
+["internal_flags"] = internalFlags,
+["source_target"] = targetID,
+["source_id"] = sourceID,
+})
+		IEex_ApplyEffectToActor(targetID, {
+["opcode"] = 143,
+["target"] = 2,
+["timing"] = timing,
+["duration"] = duration,
+["parameter1"] = 50,
+["resource"] = weaponRES,
+["parent_resource"] = IEex_ReadLString(effectData + 0x90, 8),
+["casterlvl"] = IEex_ReadDword(effectData + 0xC4),
+["internal_flags"] = internalFlags,
+["source_target"] = targetID,
+["source_id"] = sourceID,
+})
+
+--		local currentWeaponSet = IEex_ReadByte(creatureData + 0x4C68, 0x0)
+--		if currentWeaponSet == 3 and IEex_ReadByte(creatureData + 0x4BA4, 0x0) < 49 then
+			IEex_Eval('EquipMostDamagingMelee()',targetID)
+--		end
+	else
+		IEex_ApplyEffectToActor(targetID, {
+["opcode"] = 111,
+["target"] = 2,
+["timing"] = timing,
+["duration"] = duration,
+["resource"] = weaponRES,
+["parent_resource"] = IEex_ReadLString(effectData + 0x90, 8),
+["casterlvl"] = IEex_ReadDword(effectData + 0xC4),
+["internal_flags"] = internalFlags,
+["source_target"] = targetID,
+["source_id"] = sourceID,
+})
+	end
+end
+
+function MEERASEW(effectData, creatureData)
+	IEex_WriteDword(effectData + 0x110, 1)
+	local targetID = IEex_GetActorIDShare(creatureData)
+	local parameter1 = IEex_ReadDword(effectData + 0x18)
+	if parameter1 >= 43 then
+		local weaponSlotIndex = parameter1 - 43
+		local weaponSlotOffset = creatureData + 0x342C + weaponSlotIndex * 0x3C
+		if parameter1 % 2 == 1 then
+			local fistWeaponRES = IEex_GetItemSlotRES(targetID, 10)
+			local resWrapper = IEex_DemandRes(fistWeaponRES, "ITM")
+			if resWrapper:isValid() then
+				local itemData = resWrapper:getData()
+				IEex_WriteLString(weaponSlotOffset, IEex_ReadLString(itemData + 0x86, 8), 8)
+				IEex_WriteDword(weaponSlotOffset + 0x8, IEex_ReadDword(itemData + 0x8))
+				IEex_WriteDword(weaponSlotOffset + 0x2A, IEex_ReadDword(itemData + 0x8))
+			end
+			resWrapper:free()
+			IEex_WriteWord(weaponSlotOffset + 0x1A, 0)
+			IEex_WriteWord(weaponSlotOffset + 0x1C, 10)
+			IEex_WriteWord(weaponSlotOffset + 0x1E, 0)
+		else
+			IEex_WriteLString(weaponSlotOffset, "", 8)
+			IEex_WriteDword(weaponSlotOffset + 0x8, -1)
+			IEex_WriteWord(weaponSlotOffset + 0x1A, -1)
+			IEex_WriteWord(weaponSlotOffset + 0x1C, -1)
+			IEex_WriteWord(weaponSlotOffset + 0x1E, -1)
+			IEex_WriteDword(weaponSlotOffset + 0x2A, -1)
+		end
+	end
 end
 
 function MEQUIPLE(effectData, creatureData)
@@ -5997,9 +6145,9 @@ IEex_AddScreenEffectsGlobal("MEREPLIT", function(effectData, creatureData)
 					IEex_WriteWord(quickItemOffset + 0x18, 1)
 				end
 			else
-				for i = 0, 3, 1 do
-					local weaponSetOffset = creatureData + 0x342C + i * 0x78
-					if IEex_ReadByte(weaponSetOffset + 0x1C, 0x0) == parameter1 or 43 + i * 2 == parameter1 then
+				for i = 0, 7, 1 do
+					local weaponSetOffset = creatureData + 0x342C + i * 0x3C
+					if IEex_ReadByte(weaponSetOffset + 0x1C, 0x0) == parameter1 or 43 + i == parameter1 then
 						IEex_WriteDword(weaponSetOffset + 0x1C, parameter1)
 						IEex_WriteLString(weaponSetOffset, itemIcon, 8)
 						IEex_WriteDword(weaponSetOffset + 0x8, itemName)
@@ -12851,6 +12999,10 @@ function MEWINGBU(effectData, creatureData, isSpecialCall)
 		IEex_WriteDword(effectData + 0x18, parameter1 + special)
 	end
 	if not disableTeleport then
+		if ex_ghostwalk_dest["" .. targetID] ~= nil and ex_ghostwalk_dest["" .. targetID][1] == targetX and ex_ghostwalk_dest["" .. targetID][2] == targetY then
+			ex_ghostwalk_dest["" .. targetID][1] = finalX
+			ex_ghostwalk_dest["" .. targetID][2] = finalY
+		end
 		IEex_JumpActorToPoint(targetID, finalX, finalY, true)
 --[[
 		IEex_ApplyEffectToActor(targetID, {
