@@ -213,6 +213,20 @@ end
 -- End Action Hooks --
 ----------------------
 
+function IEex_Extern_FindScriptingStringClosingParen(actionCString)
+	local actionString = IEex_ReadString(IEex_ReadDword(actionCString))
+	local inString = false
+	for i = 1, #actionString do
+		local char = actionString:sub(i, i)
+		if char == '"' then
+			inString = not inString
+		elseif not inString and char == ')' then
+			return i - 1
+		end
+	end
+	return -1
+end
+
 function IEex_Extern_CGameSprite_SetCurrAction(actionData)
 	IEex_AssertThread(IEex_Thread.Both, true)
 	IEex_Helper_SynchronizedBridgeOperation("IEex_ActionHooks", function()
