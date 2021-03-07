@@ -640,6 +640,18 @@
 
 	IEex_WriteDword(0x85C518, 0x4D4D70)
 
+	-------------------------------------------
+	-- Remove cooldown from dialog responses --
+	-------------------------------------------
+
+	IEex_WriteAssembly(0x687606, {"!repeat(2,!nop)"}) -- Number key
+	IEex_WriteAssembly(0x68746A, {"!repeat(6,!nop)"}) -- Enter
+	IEex_WriteAssembly(0x6968E0, {"!repeat(2,!nop)"}) -- Left click (continue)
+	IEex_WriteAssembly(0x77BCC8, {"!repeat(2,!nop)"}) -- Left click (reply)
+
+	-- Redirect empty Continue button OnLButtonDoubleClick() => OnLButtonDown()
+	IEex_WriteDword(0x85A45C, 0x4D4D70)
+
 	IEex_EnableCodeProtection()
 
 end)()
