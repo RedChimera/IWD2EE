@@ -308,6 +308,18 @@
 		!jmp_dword :70C970		
 	]]})
 
+	-------------------------------------------------------------
+	-- Rapid Shot shouldn't crash when game is paused and      --
+	-- m_selectedWeaponAbility = -1. Note that this is just    --
+	-- a band-aid on top of Rapid Shot; the underlying problem --
+	-- of m_selectedWeaponAbility = -1 is not fixed.           --
+	-------------------------------------------------------------
+
+	IEex_HookRestore(0x444C31, 0, 7, {[[
+		!test_eax_eax
+		!jz_dword :444C49
+	]]})
+
 	IEex_EnableCodeProtection()
 
 end)()
