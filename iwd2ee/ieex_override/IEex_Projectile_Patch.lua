@@ -154,6 +154,18 @@
 		IEex_HookChangeCallDest(address, onAddEffectHook)
 	end
 
+	----------------------------------------------------------------------
+	-- Fix out-of-bounds array indexing in CSearchBitmap_GetLOSCost()   --
+	-- when certain projectiles pass -1 as either the x or y coordinate --
+	----------------------------------------------------------------------
+
+	IEex_HookRestore(0x547A09, 0, 8, {[[
+		!cmp([esi],0)
+		!jl_dword :547A26
+		!cmp([esi+4],0)
+		!jl_dword :547A26
+	]]})
+
 	IEex_EnableCodeProtection()
 
 end)()
