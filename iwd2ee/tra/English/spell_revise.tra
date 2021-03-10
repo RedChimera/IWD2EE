@@ -3494,6 +3494,17 @@ This spell conjures a divine storm cloud which releases damaging torrents upon c
 2nd round: Acid Storm - Deals 3d6 acid damage per round for 1 round per 3 levels (max 24d6 and 8 rounds). A Reflex save halves the number of rounds.
 3rd round: Lightning Storm - Deals 10d10 electricity damage with a Reflex save for half.
 4th round: Ice Storm - Deals 4d6 bludgeoning damage and 4d6 cold damage with no save.~
+@35955     = ~Contingent Resurrection~
+@36955     = ~Contingent Resurrection
+(Conjuration)
+Level: Clr 9
+Range: Touch
+Duration: 8 hours or until triggered
+Casting Time: 18
+Area of Effect: 1 creature
+Saving Throw: None
+
+This spell stores a Resurrection spell in the target, which will be triggered the next time the target dies within 8 hours. The target will be brought back to life and will regain all hit points.~
 @37151     = ~True Strike~
 @38151     = ~True Strike
 (Divination) 

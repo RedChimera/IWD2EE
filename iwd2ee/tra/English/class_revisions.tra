@@ -722,7 +722,7 @@ Hit Points per Level: 1-6
 Advantages:
 * Proficient with all simple weapons, bows, and light armor.
 * Rogues receive a larger number of skill points per level than any other character class. They can use these extra skill points to buy class skills like Disable Device to remove traps, Hide, Pick Pockets, and Use Magic Device.
-* Sneak Attack: Rogues can sneak attack enemies to deal an additional 1d6 damage, plus 1d6 per 2 levels after level 1. An attack counts as a sneak attack if it hits an enemy in the back, if it occurs within 2 seconds of coming out of stealth or invisibility, or if the target is paralyzed, held, stunned, sleeping, confused, feebleminded, grappled, or feinted. Shortswords, throwing daggers, darts, shortbows, composite shortbows, light crossbows, slings, clubs and unarmed attacks deal +1d6 sneak attack damage. Melee daggers deal +2d6 sneak attack damage.
+* Sneak Attack: Rogues can sneak attack enemies to deal an additional 1d6 damage, plus 1d6 per 2 levels after level 1. An attack counts as a sneak attack if it hits an enemy in the back, if it occurs within 2 seconds of coming out of stealth or invisibility, or if the target is paralyzed, held, stunned, sleeping, confused, feebleminded, grappled, or feinted. Shortswords, throwing daggers, darts, shortbows, composite shortbows, light crossbows, slings, clubs and unarmed attacks deal an extra die of sneak attack damage. Melee daggers deal two extra dice of sneak attack damage.
 * 2nd level: Evasion. When a rogue reaches 2nd level, he or she gains the ability to evade damage from area affect spells. Whenever a rogue makes a successful reflex save against an area effect spell that allows a reflex save for half damage, he or she takes no damage.
 * 3rd level: Uncanny Dodge. Rogues retain their Dexterity bonus to Armor Class if they are attacked by invisible foes.
 * 6th level: Uncanny Dodge: Rogues can't be Sneak Attacked by another rogue unless the attacker is four or more levels higher.
@@ -1508,6 +1508,18 @@ Disadvantages:
 * -2 Intelligence.
 * -2 Charisma.
 ~
+@811    = ~Half-elf~
+@812    = ~HALF-ELVES:
+
+Half-elves are a mix of human and elven blood. They are handsome folk, with good features of each of their races. A half-elf has the curiosity, inventiveness, and ambition of their human ancestors, and the refined senses, love of nature, and artistic tastes of their elven ancestors. From their elven blood, they gain immunity to sleep from spells and a bonus to saving against Enchantment magic.
+
+Favored Class: Any
+
+Advantages:
+* 1 extra feat at 1st level.
+* +1 to Search checks.
+* +2 to saves against Enchantment magic.
+* Immune to Sleep magic.~
 
 @895    = ~Animal Empathy~
 @896    = ~ANIMAL EMPATHY (Cha; Trained Only; Druid, Ranger Only):

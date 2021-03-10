@@ -353,6 +353,7 @@ COPY_EXISTING ~IEex_TRA.lua~ ~override~
 
 STRING_SET_EVALUATE 32702 @980
 STRING_SET_EVALUATE 32703 @983
+STRING_SET_EVALUATE 34007 @23048
 
  //Turning the "test" creatures into regular creatures because their irregular CRE format can crash WeiDU when patching all creatures.
 COPY_EXISTING ~00gob.cre~ ~override/test_01.cre~ ~00gob.cre~ ~override/test_02.cre~ ~00gob.cre~ ~override/test_03.cre~ ~00gob.cre~ ~override/testocle.cre~
@@ -503,6 +504,11 @@ COPY_EXISTING ~AR6200.are~ ~override~
 COPY_EXISTING ~41HPORIA.bcs~ ~override~ ~41PARES1.bcs~ ~override~
 	DECOMPILE_AND_PATCH BEGIN
 		REPLACE_TEXTUALLY CASE_INSENSITIVE ~SetCreatureAreaFlag(\"OriaEssence\", ?INVULNERABLE.*~ ~~
+	END
+
+COPY_EXISTING ~41PARES1.bcs~ ~override~
+	DECOMPILE_AND_PATCH BEGIN
+		REPLACE_TEXTUALLY CASE_INSENSITIVE ~ApplySpell(\"OriaEssence\",.*~ ~~
 	END
 
 COPY_EXISTING ~41PDOORS.bcs~ ~override~
@@ -797,6 +803,7 @@ OUTER_SET ref_living_lightning = RESOLVE_STR_REF(@37954)
 OUTER_SET ref_deathwatch = RESOLVE_STR_REF(@37155)
 OUTER_SET ref_arcane_sight = RESOLVE_STR_REF(@37254)
 OUTER_SET ref_enlarged = RESOLVE_STR_REF(@30060)
+OUTER_SET ref_contingent_resurrection = RESOLVE_STR_REF(@35955)
 
 APPEND ~STATDESC.2da~
 ~146	%ref_magic_stone%
@@ -826,6 +833,7 @@ APPEND ~STATDESC.2da~
 170	%ref_deathwatch%
 171	%ref_arcane_sight%
 172	%ref_enlarged%
+173	%ref_contingent_resurrection%
 ~
 
 VERBOSE

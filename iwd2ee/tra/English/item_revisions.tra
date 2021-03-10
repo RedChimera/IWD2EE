@@ -13504,6 +13504,39 @@ STATISTICS:
 
 Defensive Regeneration: Wearer regains 2d4 hit points each time they take damage
 Weight: 1 lb.~
+@12827    = ~Reliance~
+@12828    = ~The halfling warrior Ket Stillpond was known as an upright man who kept his wits about him at all times. Bards sing about the various near-death experiences he escaped from in the simple, if long-winded, tune, "The One Hundred Lives of Ket the Keen."  He was also known for two of the weapons he carried. One was his short sword, Bloodfarmer. The other was his dagger, Reliance. It is said that Ket kept this dagger on his person for all of his days, never turning it over to any man, nor keeping it out of arm's reach at any time. The dagger is cursed, and Ket's unwillingness to set it aside likely stemmed from the curse. He was actually kicked out of the Cormyrean royal court for his stubborn insistence on keeping Reliance, unbound, by his side. After he died, Ket's extremely large family decided to donate the dagger to the church of Arvoreen. The church later gave it to a promising young halfling warrior. The warrior was killed later when he turned over the dagger (after using magic to remove the cursed item) upon entering a seemingly friendly camp. His hosts turned out to be a pack of bandits. They killed the poor halfling on the spot.
+
+STATISTICS:
+
+Damage:  1d4 + 5
+Attack Bonus:  +5 
+Enchantment:  +5
+Damage Type: Piercing
+Special: Can only be removed by a Remove Curse spell
+Weight: 1 lb.
+Feat Requirement:  Simple Weapon, Small Blade
+Type:  One-handed~
+@12829    = ~Reliance~ //HoF
+@12830    = ~The halfling warrior Ket Stillpond was known as an upright man who kept his wits about him at all times. Bards sing about the various near-death experiences he escaped from in the simple, if long-winded, tune, "The One Hundred Lives of Ket the Keen."  He was also known for two of the weapons he carried. One was his short sword, Bloodfarmer. The other was his dagger, Reliance. It is said that Ket kept this dagger on his person for all of his days, never turning it over to any man, nor keeping it out of arm's reach at any time. The dagger is cursed, and Ket's unwillingness to set it aside likely stemmed from the curse. He was actually kicked out of the Cormyrean royal court for his stubborn insistence on keeping Reliance, unbound, by his side. After he died, Ket's extremely large family decided to donate the dagger to the church of Arvoreen. The church later gave it to a promising young halfling warrior. The warrior was killed later when he turned over the dagger (after using magic to remove the cursed item) upon entering a seemingly friendly camp. His hosts turned out to be a pack of bandits. They killed the poor halfling on the spot.
+
+STATISTICS:
+
+Damage:  1d4 + 10
+Attack Bonus:  +10
+Enchantment:  +10
+Damage Type: Piercing
+Special: Can only be removed by a Remove Curse spell
+Weight: 1 lb.
+Feat Requirement:  Simple Weapon, Small Blade
+Type:  One-handed~
+@12831    = ~Lesser Dusty Rose Ioun Stone~
+@12832    = ~This is an ioun stone - its powers are activated by placing the stone above one's head, causing it to float there until removed. This dusty rose ellipsoid makes the wearer harder to hit in combat.
+
+STATISTICS:
+
+Generic Armor Bonus: +1
+Weight: 1 lb.~
 @12900    = ~Hrm - you are powerful allies, indeed. More gold and gems to line your pockets, then - also, a suit of plate armor, a warhammer, a helmet, all crafted and enchanted by great duergar artisans. They are well deserved, outsider.~
 @12901    = ~Drink this Rainwater Brew, Ennelia. It should help your condition.~
 @12902    = ~Drink this Sour Draught, Ennelia. It should help your condition.~

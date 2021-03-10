@@ -331,6 +331,40 @@ function IEex_ExtraCheatKeysListener(key)
 		end
 	end
 end
+ex_debugging_tick = 0
+function IEex_Chargen_ExtraFeatListener()
+	local g_pBaldurChitin = IEex_ReadDword(0x8CF6DC)
+	local chargenData = IEex_ReadDword(g_pBaldurChitin + 0x1C64)
+	if chargenData > 0 then
+		local actorID = IEex_ReadDword(chargenData + 0x4E2)
+		if actorID > 0 then
+			local share = IEex_GetActorShare(actorID)
+--[[
+			if ex_debugging_tick % 15 == 0 then
+				IEex_Search_Change_Log(1, share, 0x7200, false)
+			end
+			ex_debugging_tick = ex_debugging_tick + 1
+--]]
+			local featsRemaining = IEex_ReadDword(chargenData + 0x4E6)
+			local skillPointsRemaining = IEex_ReadDword(chargenData + 0x4F2)
+			local racePlusSub = IEex_ReadByte(share + 0x26, 0x0) * 0x10000 + IEex_ReadByte(share + 0x3E3D, 0x0)
+			local extraFlags = IEex_ReadDword(share + 0x740)
+			if skillPointsRemaining > 0 and bit.band(extraFlags, 0x10) > 0 then
+				extraFlags = bit.band(extraFlags, 0xFFFFFFEF)
+				IEex_WriteDword(chargenData + 0x4E6, 0)
+			elseif ex_extra_feat_races[racePlusSub] ~= nil and featsRemaining > 0 and bit.band(extraFlags, 0x10) == 0 then
+				extraFlags = bit.bor(extraFlags, 0x10)
+				featsRemaining = featsRemaining + ex_extra_feat_races[racePlusSub]
+				if racePlusSub == 0x10000 or racePlusSub == 0x50001 then
+					featsRemaining = featsRemaining - 1
+				end
+				IEex_WriteDword(chargenData + 0x4E6, featsRemaining)
+				IEex_EngineCreateCharUpdatePopupPanel()
+			end
+			IEex_WriteDword(share + 0x740, extraFlags)
+		end
+	end
+end
 
 function IEex_DeathwatchListener()
 	local actorID = IEex_GetActorIDCursor()
@@ -481,6 +515,7 @@ function IEex_Scroll_RegisterListeners()
 	IEex_AddKeyPressedListener("IEex_Scroll_KeyPressedListener")
 	IEex_AddKeyReleasedListener("IEex_Scroll_KeyReleasedListener")
 	IEex_AddInputStateListener("IEex_DeathwatchListener")
+	IEex_AddInputStateListener("IEex_Chargen_ExtraFeatListener")
 	IEex_AddInputStateListener("IEex_Scroll_InputStateListener")
 end
 

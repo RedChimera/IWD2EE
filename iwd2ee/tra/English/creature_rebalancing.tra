@@ -45,15 +45,15 @@
 
 @23001=~Shadow of the Void~
 @23002=~Blightfire~
-@23003=~It's difficult to tell but this badly burned note was carefully written on a piece of fine parchment.  It reads as follows:
+@23003=~It's difficult to tell but this badly burned note was carefully written on a piece of fine parchment. It reads as follows:
 
 Thagro:
 
 Once you've read this message distribute it to your workers:
 
-The queen has been acting strangely as of late - I believe her mating season may be approaching.  Ergo, from now on keep all males away from her until further notice.  Have her guard the blockade if you'd like.
+The queen has been acting strangely as of late - I believe her mating season may be approaching. Ergo, from now on keep all males away from her until further notice. Have her guard the blockade if you'd like.
 
-Regarding the males, keep training them to dig through the ice.  We'll need to excavate larger areas while Nickademus regains his strength so he can build Legionnaire outposts.  Always remember to keep them well rested and well fed; otherwise they'll be useless to us, and may pose a serious threat.  Feel free to train one of them to attack or follow you if you feel in need of protection.
+Regarding the males, keep training them to dig through the ice. We'll need to excavate larger areas while Nickademus regains his strength so he can build Legionnaire outposts. Always remember to keep them well rested and well fed; otherwise they'll be useless to us, and may pose a serious threat. Feel free to train one of them to attack or follow you if you feel in need of protection.
 
 Furthermore, my DELICATE crystal golems are rather expensive and are NOT sources of your amusement!  If I catch ANY of your stormsisters launching rocks at them again you'll have to answer to me personally!
 
@@ -80,12 +80,12 @@ Weight:  0 lb.~
 @23017=~Dream Larva~
 @23018=~Marilith Blade~
 @23019=~Foul beast!  I'll not utter my name to you!  Back to the burning fires of the Nine Hells with you!~
-@23020=~Yes, you're a gelugon.  You are second in power only to the formidable pit fiends of the baatezu. Gelugons hail from the icy layers of Stygia and Cania in the Nine Hells; I can tell by your lighter coloring that you're from Cania. Your main duties include spying and being elite guards. If you prove yourself to be a formidable gelugon, which I'm sure you have, you will be given the honor of being cast into the Pit of Hellfrost for 1001 days, then...~
-@23021=~From what I can tell, you're a devil.  I believe devils come from the Nine Hells.  Why is this relevant?~
-@23022=~I must say, I have never met a mortal who was so knowledgeable about the Blood War and the denizens of Baator.  I respect this.  In fact, I shall let you live, as a reward for your impressive knowledge.  Now, I have things I must attend to.  Farewell, <CHARNAME>, but know that if we meet again, I will consume you.~
-@23023=~Typical mortal hero.  Oh well, I was getting a bit hungry anyways.  Gentle-devils, after you...~
+@23020=~Yes, you're a gelugon. You are second in power only to the formidable pit fiends of the baatezu. Gelugons hail from the icy layers of Stygia and Cania in the Nine Hells; I can tell by your lighter coloring that you're from Cania. Your main duties include spying and being elite guards. If you prove yourself to be a formidable gelugon, which I'm sure you have, you will be given the honor of being cast into the Pit of Hellfrost for 1001 days, then...~
+@23021=~From what I can tell, you're a devil. I believe devils come from the Nine Hells. Why is this relevant?~
+@23022=~I must say, I have never met a mortal who was so knowledgeable about the Blood War and the denizens of Baator. I respect this. In fact, I shall let you live, as a reward for your impressive knowledge. Now, I have things I must attend to. Farewell, <CHARNAME>, but know that if we meet again, I will consume you.~
+@23023=~Typical mortal hero. Oh well, I was getting a bit hungry anyways. Gentle-devils, after you...~
 @23024=~Death Knight Greatsword~
-@23025=~Hmph.  He was chieftain but Vrek defeat him in battle.  Now he mock chieftain.  Vrek rule here now!~
+@23025=~Hmph. He was chieftain but Vrek defeat him in battle. Now he mock chieftain. Vrek rule here now!~
 @23026=~Huge Fire Elemental~
 @23027=~Elder Fire Elemental~
 @23028=~Huge Earth Elemental~
@@ -97,8 +97,8 @@ Weight:  0 lb.~
 @23034=~You fight impressively, mortals. You have dealt a moderate blow to my essence. It shall be some time before I can manifest my avatar again.~
 @23035=~BUT DON'T THINK YOU WILL GET AWAY WITH THIS! I HATE YOU, AND WHEN I RECOVER, I WILL SEEK YOU OUT TO GET MY REVENGE!~
 @23036=~You have defeated the avatar of a god, one of the most powerful foes in existence. Well done.~
-@23037=~At first, in their great rage, they said they were going to rip me to shreds for such an insult.  Then, when they regained some of their composure, they decided to lock me up down here in the dark and torture me with illusions created by that horrible monster!  There were times that I wished they had ripped me apart...~
-@23038=~We freed a gnome, named Puddy Talltale, from the torturing of a creature of nightmares.  However, even though we unlocked his prison cell, he said he would not leave unless there was a safe way to get him to his home in Bryn Shander.  We promised to find safe passage for Puddy, for we agreed that he would not survive long in the frigid Dales by himself.~
+@23037=~At first, in their great rage, they said they were going to rip me to shreds for such an insult. Then, when they regained some of their composure, they decided to lock me up down here in the dark and torture me with illusions created by that horrible monster!  There were times that I wished they had ripped me apart...~
+@23038=~We freed a gnome, named Puddy Talltale, from the torturing of a creature of nightmares. However, even though we unlocked his prison cell, he said he would not leave unless there was a safe way to get him to his home in Bryn Shander. We promised to find safe passage for Puddy, for we agreed that he would not survive long in the frigid Dales by himself.~
 @23039=~Pull yourself together!  Look, the monster is dead!  I am not an illusion!~
 @23040=~Staff of Power~
 @23041=~Devour brain~
@@ -108,6 +108,7 @@ Weight:  0 lb.~
 @23045=~20 damage resisted from non-silver weapon~
 @23046=~Aeij-Kllenzr't~
 @23047=~Ice Golem~
+@23048=~The white abishai narrows its hungry sapphire eyes, examining you from head to toe. Its lips curl in what might be a cruel sneer, but it says nothing.~
 
 @24002=~Call Slayer Knights~
 @24003=~Call Gelugon~
@@ -124,3 +125,4 @@ Weight:  0 lb.~
 @24015=~Fell Soul Eater~
 @24016=~Hellfireball~
 @24018=~Lower Electricity Resistance~
+@24019=~Dark Thorn Growth~

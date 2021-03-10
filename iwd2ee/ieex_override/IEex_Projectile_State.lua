@@ -204,7 +204,7 @@ function IEex_Extern_OnProjectileDecode(esp)
 				local thelimit = IEex_ReadWord(eData + 0x4A, 0x0)
 				if (bit.band(thesavingthrow, 0x10000) == 0 or thecondition + 1 == missileIndex) and (bit.band(thesavingthrow, 0x20000) == 0 or thecondition == generalProjectileType) and (bit.band(thesavingthrow, 0x40000) == 0 or thecondition == source) and (bit.band(thesavingthrow, 0x80000) == 0 or thelimit > 0) then
 					if bit.band(thesavingthrow, 0x4000000) > 0 then
-						newProjectile = theparameter1 + 1
+						missileIndex = theparameter1 + 1
 						if bit.band(thesavingthrow, 0x80000) > 0 and bit.band(thesavingthrow, 0x100000) == 0 then
 							thelimit = thelimit - 1
 							IEex_WriteWord(eData + 0x4A, thelimit)
@@ -393,10 +393,10 @@ function IEex_Extern_OnAddEffectToProjectile(CProjectile, esp)
 		sourceRES = IEex_Helper_GetBridge("IEex_RecordSpell", sourceID, "spellRES")
 	end
 --]]
-	local internalFlags = IEex_ReadDword(CGameEffect + 0xC8)
+	local internalFlags = IEex_ReadDword(CGameEffect + 0xD4)
 	if bit.band(internalFlags, 0x20) == 0 then
 		internalFlags = bit.bor(internalFlags, 0x20)
-		IEex_WriteDword(CGameEffect + 0xC8, internalFlags)
+		IEex_WriteDword(CGameEffect + 0xD4, internalFlags)
 		if IEex_ReadDword(CGameEffect + 0xC) == 500 and IEex_ReadLString(CGameEffect + 0x2C, 8) == "METELEFI" and IEex_GetActorSpellState(sourceID, 246) then
 			local areaMult = 100
 			local missileIndex = IEex_ReadWord(CProjectile + 0x6E, 0x0)
@@ -751,9 +751,9 @@ IEex_MutatorOpcodeFunctions["EXEMPSPL"] = {
     ["effectMutator"] = function(source, originatingEffectData, creatureData, projectileData, effectData)
 		local actorID = IEex_GetActorIDShare(creatureData)
 		if ex_empower_spell[actorID] == 1 then
-			local internalFlags = IEex_ReadDword(effectData + 0xC8)
+			local internalFlags = IEex_ReadDword(effectData + 0xD4)
 			internalFlags = bit.bor(internalFlags, 0x100000)
-			IEex_WriteDword(effectData + 0xC8, internalFlags)
+			IEex_WriteDword(effectData + 0xD4, internalFlags)
 		end
     end,
 }
@@ -805,9 +805,9 @@ IEex_MutatorOpcodeFunctions["EXEXTSPL"] = {
     ["effectMutator"] = function(source, originatingEffectData, creatureData, projectileData, effectData)
 		local actorID = IEex_GetActorIDShare(creatureData)
 		if ex_extend_spell[actorID] == 1 then
-			local internalFlags = IEex_ReadDword(effectData + 0xC8)
+			local internalFlags = IEex_ReadDword(effectData + 0xD4)
 			internalFlags = bit.bor(internalFlags, 0x20000)
-			IEex_WriteDword(effectData + 0xC8, internalFlags)
+			IEex_WriteDword(effectData + 0xD4, internalFlags)
 		end
     end,
 }
@@ -907,9 +907,9 @@ IEex_MutatorOpcodeFunctions["EXMAXSPL"] = {
     ["effectMutator"] = function(source, originatingEffectData, creatureData, projectileData, effectData)
 		local actorID = IEex_GetActorIDShare(creatureData)
 		if ex_maximize_spell[actorID] == 1 then
-			local internalFlags = IEex_ReadDword(effectData + 0xC8)
+			local internalFlags = IEex_ReadDword(effectData + 0xD4)
 			internalFlags = bit.bor(internalFlags, 0x200000)
-			IEex_WriteDword(effectData + 0xC8, internalFlags)
+			IEex_WriteDword(effectData + 0xD4, internalFlags)
 		end
     end,
 }
@@ -961,9 +961,9 @@ IEex_MutatorOpcodeFunctions["EXPERSPL"] = {
     ["effectMutator"] = function(source, originatingEffectData, creatureData, projectileData, effectData)
 		local actorID = IEex_GetActorIDShare(creatureData)
 		if ex_persistent_spell[actorID] == 1 then
-			local internalFlags = IEex_ReadDword(effectData + 0xC8)
+			local internalFlags = IEex_ReadDword(effectData + 0xD4)
 			internalFlags = bit.bor(internalFlags, 0x10000)
-			IEex_WriteDword(effectData + 0xC8, internalFlags)
+			IEex_WriteDword(effectData + 0xD4, internalFlags)
 		end
     end,
 }
@@ -1028,9 +1028,9 @@ IEex_MutatorOpcodeFunctions["EXSAFSPL"] = {
     ["effectMutator"] = function(source, originatingEffectData, creatureData, projectileData, effectData)
 		local actorID = IEex_GetActorIDShare(creatureData)
 		if ex_safe_spell[actorID] == 1 then
-			local internalFlags = IEex_ReadDword(effectData + 0xC8)
+			local internalFlags = IEex_ReadDword(effectData + 0xD4)
 			internalFlags = bit.bor(internalFlags, 0x80000)
-			IEex_WriteDword(effectData + 0xC8, internalFlags)
+			IEex_WriteDword(effectData + 0xD4, internalFlags)
 		end
     end,
 }
@@ -1047,7 +1047,7 @@ IEex_MutatorOpcodeFunctions["EXWIDSPL"] = {
     		IEex_IterateActorEffects(sourceID, function(eData)
 				local theopcode = IEex_ReadDword(eData + 0x10)
 				local theparameter2 = IEex_ReadDword(eData + 0x20)
-				local theinternalFlags = IEex_ReadDword(eData + 0xCC)
+				local theinternalFlags = IEex_ReadDword(eData + 0xD8)
 				if theopcode == 288 and theparameter2 == 246 and bit.band(theinternalFlags, 0x40000) > 0 then
 					local theparameter1 = IEex_ReadDword(eData + 0x1C)
 					local theresource = IEex_ReadLString(eData + 0x30, 8)
@@ -1119,9 +1119,9 @@ IEex_MutatorOpcodeFunctions["EXWIDSPL"] = {
     ["effectMutator"] = function(source, originatingEffectData, creatureData, projectileData, effectData)
 		local actorID = IEex_GetActorIDShare(creatureData)
 		if ex_widen_spell[actorID] == 1 then
-			local internalFlags = IEex_ReadDword(effectData + 0xC8)
+			local internalFlags = IEex_ReadDword(effectData + 0xD4)
 			internalFlags = bit.bor(internalFlags, 0x40000)
-			IEex_WriteDword(effectData + 0xC8, internalFlags)
+			IEex_WriteDword(effectData + 0xD4, internalFlags)
 			if IEex_ReadDword(effectData + 0xC) == 500 and IEex_ReadLString(effectData + 0x2C, 8) == "METELEFI" then
 				local parameter1 = IEex_ReadDword(effectData + 0x18)
 				IEex_WriteDword(effectData + 0x18, math.floor(parameter1 * 1.5))

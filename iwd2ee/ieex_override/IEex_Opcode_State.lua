@@ -99,6 +99,7 @@ function IEex_Extern_OnWeaponDamageCRE(sourceShare, CGameEffect, esp)
 		launcherWrapper:free()
 	end
 --]]
+
 	-- m_sourceRes = "IEEX_DAM"
 	IEex_WriteLString(CGameEffect + 0x90, "IEEX_DAM", 8)
 	-- m_res2 = weaponRes
@@ -106,10 +107,21 @@ function IEex_Extern_OnWeaponDamageCRE(sourceShare, CGameEffect, esp)
 	-- m_res3 = launcherRes
 	IEex_WriteLString(CGameEffect + 0x74, launcherRes, 8)
 	-- m_savingThrow: bit16 = bCriticalDamage, bit17 = bIsOffhand
+
+	local parameter3 = IEex_ReadDword(CGameEffect + 0x5C)
+	if bCriticalDamage then
+		parameter3 = bit.bor(parameter3, 0x10000)
+	end
+	if bIsOffhand then
+		parameter3 = bit.bor(parameter3, 0x20000)
+	end
+	IEex_WriteDword(CGameEffect + 0x5C, parameter3)
+--[[
 	IEex_WriteDword(CGameEffect + 0x3C, IEex_Flags({
 		bit.lshift(bCriticalDamage and 1 or 0, 16),
 		bit.lshift(bIsOffhand and 1 or 0, 17),
 	}))
+--]]
 end
 
 function IEex_Extern_ScreenEffectsFunc(pEffect, pSprite)
@@ -133,6 +145,7 @@ function IEex_Extern_OnCheckAddScreenEffectsHook(pEffect, pSprite)
 	IEex_AssertThread(IEex_Thread.Async, true)
 	if IEex_Debug_DisableScreenEffects then return end
 	local actorID = IEex_GetActorIDShare(pSprite)
+	local sourceID = IEex_ReadDword(pEffect + 0x10C)
 	if pSprite > 0 and bit.band(IEex_ReadDword(pSprite + 0x740), 0x1000000) > 0 and IEex_ReadDword(pSprite + 0x740) > 0 then
 		local opcode = IEex_ReadDword(pEffect + 0xC)
 		local parameter1 = IEex_ReadDword(pEffect + 0x18)
@@ -143,10 +156,17 @@ function IEex_Extern_OnCheckAddScreenEffectsHook(pEffect, pSprite)
 		local savingthrow = IEex_ReadDword(pEffect + 0x3C)
 		local special = IEex_ReadDword(pEffect + 0x44)
 		local parent_resource = IEex_ReadLString(pEffect + 0x90, 8)
-		local sourceID = IEex_ReadDword(pEffect + 0x10C)
 		IEex_DisplayString(IEex_GetActorName(actorID) .. " - Opcode: " .. opcode .. ", Parameter1: " .. parameter1 .. ", Parameter2: " .. parameter2 .. ", Timing: " .. timing .. ", Duration: " .. duration .. ", Resource: \"" .. resource .. "\", Flags: " .. IEex_ToHex(savingthrow, 0, false) .. ", Parent resource: \"" .. parent_resource .. "\", Source: " .. IEex_GetActorName(sourceID))
 	end
+	if IEex_IsSprite(sourceID, true) then
+		local sourceData = IEex_GetActorShare(sourceID)
+		local constantID = IEex_ReadDword(sourceData + 0x700)
+		if constantID ~= -1 then
+			IEex_WriteDword(pEffect + 0x64, constantID)
+		end
+	end
 	IEex_WriteDword(pEffect + 0x68, IEex_GetGameTick())
+	IEex_WriteDword(pEffect + 0xD0, math.random(0x7FFFFFFF))
 	for func_name, func in pairs(IEex_ScreenEffectsGlobalFunctions) do
 		if func(pEffect, pSprite) then
 			return true
@@ -235,25 +255,23 @@ ex_empowerable_opcodes = {[0] = true, [1] = true, [6] = true, [10] = true, [12] 
 
 		end
 --]]
-		if not IEex_IsSprite(sourceID, true) then return false end
-		local sourceData = IEex_GetActorShare(sourceID)
-		local constantID = IEex_ReadDword(sourceData + 0x700)
-		if constantID ~= -1 then
-			IEex_WriteDword(effectData + 0x64, constantID)
-		end
+
 --[[
 		print("Opcode " .. opcode .. " on " .. IEex_GetActorName(targetID))
 		if opcode == 500 then
 			print(IEex_ReadLString(effectData + 0x2C, 8))
 		end
 --]]
+		if not IEex_IsSprite(sourceID, true) then return false end
+		local sourceData = IEex_GetActorShare(sourceID)
 		if opcode == 288 or opcode >= 500 then
 			IEex_WriteDword(creatureData + 0x740, bit.band(IEex_ReadDword(creatureData + 0x740), 0xFFFFBFFF))
 		end
-		local internalFlags = IEex_ReadDword(effectData + 0xC8)
+		local internalFlags = IEex_ReadDword(effectData + 0xD4)
 
 		local parameter1 = IEex_ReadDword(effectData + 0x18)
 		local parameter2 = IEex_ReadDword(effectData + 0x1C)
+		local parameter3 = IEex_ReadDword(effectData + 0x5C)
 		local dicenumber = IEex_ReadDword(effectData + 0x34)
 		local dicesize = IEex_ReadDword(effectData + 0x38)
 		local special = IEex_ReadDword(effectData + 0x44)
@@ -273,6 +291,7 @@ ex_empowerable_opcodes = {[0] = true, [1] = true, [6] = true, [10] = true, [12] 
 			sourceSpell = string.sub(parent_resource, 1, 7)
 		end
 		local damageType = bit.band(parameter2, 0xFFFF0000)
+--		if false then
 		if opcode == 12 and parent_resource == "IEEX_DAM" then
 --			if (bit.band(savingthrow, 0x10000) > 0 and (IEex_GetActorSpellState(sourceID, 195) or IEex_GetActorSpellState(sourceID, 225))) or bit.band(savingthrow, 0x40000) == 0 then
 				local weaponRES = IEex_ReadLString(effectData + 0x6C, 8)
@@ -322,7 +341,7 @@ ex_empowerable_opcodes = {[0] = true, [1] = true, [6] = true, [10] = true, [12] 
 							IEex_WriteWord(effectData + 0x1E, damageType)
 						elseif theopcode == 288 and theparameter2 == 225 and bit.band(thesavingthrow, 0x10000) > 0 and bit.band(thesavingthrow, 0x100000) == 0 and bit.band(thesavingthrow, 0x800000) > 0 then
 							local spellRES = IEex_ReadLString(offset + 0x14, 8)
-							if spellRES ~= "" and (bit.band(thesavingthrow, 0x4000000) == 0 or bit.band(IEex_ReadDword(effectData + 0xC8), 0x40) == 0) then
+							if spellRES ~= "" and (bit.band(thesavingthrow, 0x4000000) == 0 or bit.band(IEex_ReadDword(effectData + 0xD4), 0x40) == 0) then
 								local thecasterlvl = 10
 								local newEffectTarget = targetID
 								local newEffectTargetX = IEex_ReadDword(effectData + 0x84)
@@ -363,7 +382,7 @@ ex_empowerable_opcodes = {[0] = true, [1] = true, [6] = true, [10] = true, [12] 
 							IEex_WriteWord(effectData + 0x1E, damageType)
 						elseif theopcode == 288 and theparameter2 == 225 and bit.band(thesavingthrow, 0x10000) > 0 and bit.band(thesavingthrow, 0x100000) == 0 and bit.band(thesavingthrow, 0x800000) > 0 then
 							local spellRES = IEex_ReadLString(offset + 0x14, 8)
-							if spellRES ~= "" and (bit.band(thesavingthrow, 0x4000000) == 0 or bit.band(IEex_ReadDword(effectData + 0xC8), 0x40) == 0) then
+							if spellRES ~= "" and (bit.band(thesavingthrow, 0x4000000) == 0 or bit.band(IEex_ReadDword(effectData + 0xD4), 0x40) == 0) then
 								local thecasterlvl = 10
 								local newEffectTarget = targetID
 								local newEffectTargetX = IEex_ReadDword(effectData + 0x84)
@@ -400,7 +419,7 @@ ex_empowerable_opcodes = {[0] = true, [1] = true, [6] = true, [10] = true, [12] 
 					elseif theopcode == 288 and theparameter2 == 225 and bit.band(thesavingthrow, 0x10000) == 0 and bit.band(thesavingthrow, 0x100000) == 0 and bit.band(thesavingthrow, 0x800000) > 0 then
 						local matchHeader = IEex_ReadWord(eData + 0x48, 0x0)
 						local spellRES = IEex_ReadLString(eData + 0x30, 8)
-						if (theparameter1 == 0 or exhitIndexList[theparameter1] ~= nil) and spellRES ~= "" and (matchHeader == 0 or matchHeader == headerType) and (bit.band(thesavingthrow, 0x4000000) == 0 or bit.band(IEex_ReadDword(effectData + 0xC8), 0x40) == 0) then
+						if (theparameter1 == 0 or exhitIndexList[theparameter1] ~= nil) and spellRES ~= "" and (matchHeader == 0 or matchHeader == headerType) and (bit.band(thesavingthrow, 0x4000000) == 0 or bit.band(IEex_ReadDword(effectData + 0xD4), 0x40) == 0) then
 							local thecasterlvl = 10
 							local newEffectTarget = targetID
 							local newEffectTargetX = IEex_ReadDword(effectData + 0x84)
@@ -430,9 +449,9 @@ ex_empowerable_opcodes = {[0] = true, [1] = true, [6] = true, [10] = true, [12] 
 						end
 					end
 				end)
-				if bit.band(savingthrow, 0x40000) == 0 then
-					savingthrow = bit.bor(savingthrow, 0x40000)
-					IEex_WriteDword(effectData + 0x3C, savingthrow)
+				if bit.band(parameter3, 0x40000) == 0 then
+					parameter3 = bit.bor(parameter3, 0x40000)
+					IEex_WriteDword(effectData + 0x5C, parameter3)
 					local damageMultiplier = 100
 					IEex_IterateActorEffects(sourceID, function(eData)
 						local theopcode = IEex_ReadDword(eData + 0x10)
@@ -449,13 +468,15 @@ ex_empowerable_opcodes = {[0] = true, [1] = true, [6] = true, [10] = true, [12] 
 							end
 						end
 					end)
-					parameter1 = math.floor(parameter1 * damageMultiplier / 100)
-					IEex_WriteDword(effectData + 0x18, parameter1)
+					if damageMultiplier ~= 100 then
+						parameter1 = math.floor(parameter1 * damageMultiplier / 100)
+						IEex_WriteDword(effectData + 0x18, parameter1)
+					end
 				end
 				weaponWrapper:free()
 				launcherWrapper:free()
 				
-				if bit.band(savingthrow, 0x10000) > 0 then
+				if bit.band(parameter3, 0x10000) > 0 then
 					if criticalMultiplier ~= baseCriticalMultiplier then
 						parameter1 = math.floor(parameter1 * criticalMultiplier / baseCriticalMultiplier)
 						IEex_WriteDword(effectData + 0x18, parameter1)
@@ -484,6 +505,9 @@ ex_empowerable_opcodes = {[0] = true, [1] = true, [6] = true, [10] = true, [12] 
 
 		end
 		if opcode == 13 and parent_resource == "" then
+			if parameter2 == 0x8 and IEex_GetActorSpellState(targetID, 210) then
+				IEex_WriteDword(effectData + 0x1C, 0x4)
+			end
 			local onKillEffectList = {}
 			if IEex_GetActorSpellState(sourceID, 222) then
 				IEex_IterateActorEffects(sourceID, function(eData)
@@ -532,7 +556,7 @@ ex_empowerable_opcodes = {[0] = true, [1] = true, [6] = true, [10] = true, [12] 
 				local theparameter1 = IEex_ReadDword(eData + 0x1C)
 				local theparameter2 = IEex_ReadDword(eData + 0x20)
 				local thespecial = IEex_ReadDword(eData + 0x48)
-				if theopcode == 288 and theparameter1 <= parameter1 and theparameter2 == 226 and ((damageType == 0 and bit.band(thespecial, 0x2000) > 0) or bit.band(thespecial, damageType) > 0) then
+				if theopcode == 288 and theparameter2 == 226 and theparameter1 <= parameter1 and ((damageType == 0 and bit.band(thespecial, 0x2000) > 0) or bit.band(thespecial, damageType) > 0) then
 					local theresource = IEex_ReadLString(eData + 0x30, 8)
 					table.insert(onDamageList, theresource)
 				end
@@ -598,7 +622,7 @@ ex_empowerable_opcodes = {[0] = true, [1] = true, [6] = true, [10] = true, [12] 
 		end
 		if bit.band(internalFlags, 0x20) == 0 and ex_apply_effects_flags[targetID .. sourceID .. parent_resource] ~= nil then
 			internalFlags = ex_apply_effects_flags[targetID .. sourceID .. parent_resource]
-			IEex_WriteDword(effectData + 0xC8, internalFlags)
+			IEex_WriteDword(effectData + 0xD4, internalFlags)
 		end
 		if opcode == 402 then
 			if bit.band(internalFlags, 0x20) > 0 and internalFlags >= 0x1000 then

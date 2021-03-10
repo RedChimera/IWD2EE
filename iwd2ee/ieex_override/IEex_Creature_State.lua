@@ -135,6 +135,17 @@ end
 function IEex_Extern_OnPostCreatureProcessEffectList(creatureData)
 	IEex_AssertThread(IEex_Thread.Async, true)
 	local targetID = IEex_GetActorIDShare(creatureData)
+--[[
+	if not IEex_IsPartyMember(targetID) and IEex_GetActorState(targetID, 0x800) then
+		IEex_ApplyEffectToActor(targetID, {
+["opcode"] = 32,
+["target"] = 2,
+["timing"] = 9,
+["source_target"] = targetID,
+["source_id"] = targetID
+})
+	end
+--]]
 	if not IEex_IsSprite(targetID, false) then return end
 	local onTickFunctionsCalled = {}
 	local extraFlags = IEex_ReadDword(creatureData + 0x740)
@@ -181,13 +192,15 @@ function IEex_Extern_OnPostCreatureProcessEffectList(creatureData)
 			if not foundOpcodeFunction then
 				local theopcode = IEex_ReadDword(eData + 0x10)
 				local theresource = IEex_ReadLString(eData + 0x30, 8)
-				local theinternal_flags = IEex_ReadDword(eData + 0xCC)
-				if theopcode == 500 and ((ex_on_tick_functions[theresource] == 1 and onTickFunctionsCalled[theresource] == nil) or ex_on_tick_functions[theresource] == 2) and bit.band(theinternal_flags, 0x80) == 0 then
+				local theinternal_flags = IEex_ReadDword(eData + 0xD8)
+				if theopcode == 500 and ((ex_on_tick_functions[theresource] == 1 and onTickFunctionsCalled[theresource] == nil) or ex_on_tick_functions[theresource] == 2) then
 					usedFunction = true
-					foundOpcodeFunction = true
-					onTickFunctionsCalled[theresource] = true
-					IEex_WriteDword(eData + 0xCC, bit.bor(theinternal_flags, 0x80))
-					_G[theresource](eData + 0x4, creatureData, true)
+					if bit.band(theinternal_flags, 0x80) == 0 then
+						foundOpcodeFunction = true
+						onTickFunctionsCalled[theresource] = true
+						IEex_WriteDword(eData + 0xD8, bit.bor(theinternal_flags, 0x80))
+						_G[theresource](eData + 0x4, creatureData, true)
+					end
 				end
 			end
 		end)
@@ -197,18 +210,20 @@ function IEex_Extern_OnPostCreatureProcessEffectList(creatureData)
 			_G[ex_on_tick_default_functions[funcName]](creatureData)
 		end
 	end
+
 	if usedFunction then
 		IEex_IterateActorEffects(targetID, function(eData)
 			if not foundOpcodeFunction then
 				local theopcode = IEex_ReadDword(eData + 0x10)
 				local theresource = IEex_ReadLString(eData + 0x30, 8)
-				local theinternal_flags = IEex_ReadDword(eData + 0xCC)
+				local theinternal_flags = IEex_ReadDword(eData + 0xD8)
 				if theopcode == 500 and bit.band(theinternal_flags, 0x80) > 0 then
-					IEex_WriteDword(eData + 0xCC, bit.band(theinternal_flags, 0xFFFFFF7F))
+					IEex_WriteDword(eData + 0xD8, bit.band(theinternal_flags, 0xFFFFFF7F))
 				end
 			end
 		end)
 	end
+
 	extraFlags = IEex_ReadDword(creatureData + 0x740)
 	if bit.band(extraFlags, 0x6000) == 0x4000 and IEex_ReadSignedByte(creatureData + 0x5622, 0x0) < 0 and not usedFunction and not IEex_IsPartyMember(targetID) and IEex_CheckGlobalEffect(0xFFFFFFFF) == false then return end
 

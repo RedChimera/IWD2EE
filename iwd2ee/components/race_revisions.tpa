@@ -51,6 +51,9 @@ COPY_EXISTING ~feats.2da~ ~override~
 COPY_EXISTING ~racespab.2da~ ~override~
 	REPLACE_TEXTUALLY CASE_INSENSITIVE ~HALFLING_GHOSTWISE[%TAB% ]+.*~ ~HALFLING_GHOSTWISE    *~
 
+COPY_EXISTING ~IEex_WEIDU.lua~ ~override~
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_extra_feat_races = {\(.*\)\[0x30000\] = [0-9]+~ ~ex_extra_feat_races = {\1[0x30000] = 1~
+
 COPY_EXISTING ~help04.2da~ ~override~
   COUNT_2DA_COLS num_cols
   READ_2DA_ENTRIES_NOW rows num_cols
@@ -97,6 +100,10 @@ COPY_EXISTING ~help04.2da~ ~override~
         SET strref = RESOLVE_STR_REF(@802)
         SET_2DA_ENTRY_LATER rows_out row 2 ~%strref%~
       END
+      ~12~ BEGIN
+        SET strref = RESOLVE_STR_REF(@812)
+        SET_2DA_ENTRY_LATER rows_out row 2 ~%strref%~
+      END
       ~13~ BEGIN
         SET strref = RESOLVE_STR_REF(@804)
         SET_2DA_ENTRY_LATER rows_out row 2 ~%strref%~
@@ -134,3 +141,4 @@ STRING_SET 9554 @796
 STRING_SET 9553 @800
 STRING_SET 9552 @790
 STRING_SET 9551 @804
+STRING_SET 9555 @812
