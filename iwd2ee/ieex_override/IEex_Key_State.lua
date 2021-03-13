@@ -519,7 +519,7 @@ function IEex_Chargen_RerollListener(key)
 							if ex_new_ability_score_system == 2 then
 								ex_recorded_remaining_points = IEex_ReadDword(chargenData + 0x4EA)
 							end
-						elseif key == ex_chargen_recall_key then
+						elseif key == ex_chargen_recall_key and (recordedAbilityScores[1] > 0 or #recordedUnallocatedAbilityScores > 0) then
 							currentAbilityScores = recordedAbilityScores
 							unallocatedAbilityScores = recordedUnallocatedAbilityScores
 							if ex_new_ability_score_system == 2 then
