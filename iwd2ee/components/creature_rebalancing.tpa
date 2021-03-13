@@ -407,6 +407,12 @@ COPY_EXISTING ~52MNKSH.cre~ ~override~ ~53DRACAH.cre~ ~override~
 COPY_EXISTING ~60WRAITH.cre~ ~override~ ~60WRAITN.cre~ ~override~
 	LPF	IWD2_ADD_CRE_ITEM STR_VAR item=~USCIINCO~ slot=~lring~ mode=~replace~ END
 
+COPY_EXISTING ~00SAIR04.cre~ ~override~ ~00SASERV.cre~ ~override~ ~00SLAIR.cre~ ~override~ ~00SLWAT.cre~ ~override~ ~00SWAT04.cre~ ~override~ ~00SWAT12.cre~ ~override~ ~00SWAT16.cre~ ~override~ ~00SWAT20.cre~ ~override~ ~00SWAT24.cre~ ~override~ ~41SASERV.cre~ ~override~ ~41SLAIR.cre~ ~override~ ~41SLWAT.cre~ ~override~ ~41SWAT16.cre~ ~override~ ~41SWAT24.cre~ ~override~
+	LPF	IWD2_REMOVE_CRE_ITEM STR_VAR item=~11VEIRA1~ END
+
+COPY_EXISTING ~00SINV.cre~ ~override~ ~41SINV.cre~ ~override~ ~63INVSTK.cre~ ~override~
+	LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item=~USCIINVS~ slot=~rring~ END
+
 COPY_EXISTING_REGEXP ~10KEG\.cre~ ~override~ ~10KEG[2346E]E?\.cre~ ~override~ ~20KEG.*\.cre~ ~override~ ~DYNOKEG\.cre~ ~override~
 	WRITE_BYTE allegiance 128
 	READ_BYTE attributes theattributes

@@ -1,0 +1,26 @@
+COPY_EXISTING ~IEex_WEIDU.lua~ ~override~
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_new_ability_score_system.*~ ~ex_new_ability_score_system = 2~
+
+COPY_EXISTING ~IEex_TRA.lua~ ~override~
+	SPRINT ex_str_ability_roll_total @55751
+	REPLACE_TEXTUALLY ~ex_str_ability_roll_total *=.*~ ~ex_str_ability_roll_total = "%ex_str_ability_roll_total%"~
+//	SPRINT ex_str_ability_roll_unallocated @55752
+//	REPLACE_TEXTUALLY ~ex_str_ability_roll_unallocated *=.*~ ~ex_str_ability_roll_unallocated = "%ex_str_ability_roll_unallocated%"~
+	SPRINT ex_str_ability_roll_help_1 @55754
+	REPLACE_TEXTUALLY ~ex_str_ability_roll_help_1 *=.*~ ~ex_str_ability_roll_help_1 = "%ex_str_ability_roll_help_1%"~
+//	SPRINT ex_str_ability_roll_help_2 @55755
+//	REPLACE_TEXTUALLY ~ex_str_ability_roll_help_2 *=.*~ ~ex_str_ability_roll_help_2 = "%ex_str_ability_roll_help_2%"~
+
+LAF ACTION_APPEND_TO_STRING INT_VAR strref=17247 append_top=1 STR_VAR newtext=~<EXRRINFO>~ END
+
+ACTION_GET_STRREF 17247 thedefaultdescription
+
+STRING_SET_EVALUATE 14838 ~%thedefaultdescription%~
+STRING_SET_EVALUATE 14840 ~%thedefaultdescription%~
+
+LAF ACTION_APPEND_TO_STRING INT_VAR strref=9582 append_top=1 STR_VAR newtext=~<EXRRINFO>~ END
+LAF ACTION_APPEND_TO_STRING INT_VAR strref=9583 append_top=1 STR_VAR newtext=~<EXRRINFO>~ END
+LAF ACTION_APPEND_TO_STRING INT_VAR strref=9584 append_top=1 STR_VAR newtext=~<EXRRINFO>~ END
+LAF ACTION_APPEND_TO_STRING INT_VAR strref=9585 append_top=1 STR_VAR newtext=~<EXRRINFO>~ END
+LAF ACTION_APPEND_TO_STRING INT_VAR strref=9586 append_top=1 STR_VAR newtext=~<EXRRINFO>~ END
+LAF ACTION_APPEND_TO_STRING INT_VAR strref=9587 append_top=1 STR_VAR newtext=~<EXRRINFO>~ END

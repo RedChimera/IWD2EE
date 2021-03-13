@@ -1739,6 +1739,7 @@ DEFINE_ACTION_FUNCTION ~ACTION_APPEND_TO_STRING~
 	INT_VAR
 		strref=(0 - 1)
 		new_string=0
+		append_top=0
 	STR_VAR
 		newtext=~~
 	RET
@@ -1746,7 +1747,11 @@ DEFINE_ACTION_FUNCTION ~ACTION_APPEND_TO_STRING~
 		description_new
 BEGIN
 	ACTION_GET_STRREF strref description_old
-	OUTER_SPRINT description_new ~%description_old%~ ^ ~%newtext%~
+	ACTION_IF append_top = 0 BEGIN
+		OUTER_SPRINT description_new ~%description_old%~ ^ ~%newtext%~
+	END ELSE BEGIN
+		OUTER_SPRINT description_new ~%newtext%~ ^ ~%description_old%~
+	END
 	ACTION_IF new_string = 0 BEGIN
 		STRING_SET_EVALUATE strref ~%description_new%~
 	END
@@ -1757,6 +1762,7 @@ DEFINE_PATCH_FUNCTION ~PATCH_APPEND_TO_STRING~
 	INT_VAR
 		strref=(0 - 1)
 		new_string=0
+		append_top=0
 	STR_VAR
 		newtext=~~
 	RET
@@ -1764,7 +1770,11 @@ DEFINE_PATCH_FUNCTION ~PATCH_APPEND_TO_STRING~
 		description_new
 BEGIN
 	GET_STRREF strref description_old
-	SPRINT description_new ~%description_old%~ ^ ~%newtext%~
+	PATCH_IF append_top = 0 BEGIN
+		SPRINT description_new ~%description_old%~ ^ ~%newtext%~
+	END ELSE BEGIN
+		SPRINT description_new ~%newtext%~ ^ ~%description_old%~
+	END
 	PATCH_IF new_string = 0 BEGIN
 		INNER_ACTION BEGIN
 			STRING_SET_EVALUATE strref ~%description_new%~
@@ -1827,6 +1837,59 @@ BEGIN
 		END
 	END
 	new_strref = RESOLVE_STR_REF(~%description_new%~)
+END
+
+DEFINE_PATCH_FUNCTION	ADD_CHU_CONTROL
+	INT_VAR
+		panel = ~-1~
+		x_coord = 0
+		y_coord = 0
+		width = 0
+		height = 0
+		type = 0
+	STR_VAR
+		image = ~~
+	RET
+		index
+BEGIN
+	controlsize = 0x20
+	PATCH_IF type = 2 BEGIN
+		controlsize = 0x34
+	END ELSE PATCH_IF type = 3 BEGIN
+		controlsize = 0x6A
+	END ELSE PATCH_IF type = 5 BEGIN
+		controlsize = 0x2E
+	END ELSE PATCH_IF type = 6 BEGIN
+		controlsize = 0x24
+	END ELSE PATCH_IF type = 7 BEGIN
+		controlsize = 0x28
+	END
+	READ_LONG 0x8 numpanels
+	READ_LONG 0xC controlsoffset
+	READ_LONG 0x10 panelsoffset
+	READ_SHORT (panelsoffset + (panel * 0x1C) + 0xE) thepanelnumcontrols
+	READ_SHORT (panelsoffset + (panel * 0x1C) + 0x18) thepanelfirstcontrolindex
+	newcontrolindex = thepanelnumcontrols + thepanelfirstcontrolindex
+	READ_LONG (controlsoffset + ((newcontrolindex - 1) * 0x8)) previouscontroloffset
+	READ_LONG (controlsoffset + ((newcontrolindex - 1) * 0x8) + 0x4) previouscontrolsize
+	newcontroloffset = previouscontroloffset + previouscontrolsize
+	INSERT_BYTES newcontroloffset controlsize
+	INSERT_BYTES (controlsoffset + (newcontrolindex * 0x8)) 0x8
+	WRITE_LONG (controlsoffset + (newcontrolindex * 0x8)) newcontroloffset
+	WRITE_LONG (controlsoffset + (newcontrolindex * 0x8) + 0x4) controlsize
+	WRITE_SHORT (panelsoffset + (panel * 0x1C) + 0xE) (THIS + 1)
+	FOR (i = panel + 1; i < numpanels; ++i) BEGIN
+		WRITE_SHORT (panelsoffset + (i * 0x1C) + 0x18) (THIS + 1)
+	END
+	READ_SHORT (panelsoffset + ((numpanels - 1) * 0x1C) + 0xE) lastpanelnumcontrols
+	READ_SHORT (panelsoffset + ((numpanels - 1) * 0x1C) + 0x18) lastpanelfirstcontrolindex
+	numcontrols = lastpanelnumcontrols + lastpanelfirstcontrolindex
+	FOR (i = 0; i < numcontrols; ++i) BEGIN
+		WRITE_LONG (controlsoffset + (i * 0x8)) (THIS + 0x8)
+	END
+	FOR (i = newcontrolindex + 1; i < numcontrols; ++i) BEGIN
+		WRITE_LONG (controlsoffset + (i * 0x8)) (THIS + controlsize)
+	END
 END
 
 DEFINE_PATCH_FUNCTION ~ADD_ITEM_HEADER~

@@ -60,6 +60,10 @@ COPY_EXISTING ~help04.2da~ ~override~
   FOR (row = 0; row < rows; ++row) BEGIN
     READ_2DA_ENTRY_FORMER rows row 0 label
     PATCH_MATCH ~%label%~ WITH
+      ~1~ BEGIN
+        SET strref = RESOLVE_STR_REF(@784)
+        SET_2DA_ENTRY_LATER rows_out row 2 ~%strref%~
+      END
       ~2~ BEGIN
         SET strref = RESOLVE_STR_REF(@786)
         SET_2DA_ENTRY_LATER rows_out row 2 ~%strref%~
@@ -142,3 +146,4 @@ STRING_SET 9553 @800
 STRING_SET 9552 @790
 STRING_SET 9551 @804
 STRING_SET 9555 @812
+STRING_SET 9550 @784

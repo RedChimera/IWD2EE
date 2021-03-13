@@ -446,3 +446,15 @@ BEGIN @84 DESIGNATED 88
 SUBCOMPONENT @82
 
       INCLUDE ~%mod_folder%/components/attacks_of_opportunity_2.tpa~ //~Everyone can perform attacks of opportunity~
+
+//Roll for stats at character creation
+
+BEGIN @86 DESIGNATED 89
+SUBCOMPONENT @85
+
+      INCLUDE ~%mod_folder%/components/roll_for_stats_1.tpa~ //~Plus/minus buttons disabled, but you can choose which ability score each number rolled goes to~
+
+BEGIN @87 DESIGNATED 90
+SUBCOMPONENT @85
+
+      INCLUDE ~%mod_folder%/components/roll_for_stats_2.tpa~ //~Plus/minus buttons enabled~

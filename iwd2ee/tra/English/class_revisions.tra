@@ -1249,6 +1249,17 @@ Benefit: Reduces the to hit penalty for firing in close quarters from -8 to -4. 
 You are admired for your single-minded determination and clarity of purpose.  You are difficult to distract by spell or blow.
 
 Benefit: You gain a +1 bonus on Will saves and a +2 bonus on Concentration checks. You also gain a +6 bonus to saving throws against feints, grapples, and knockdowns/trip attacks.~
+@783    = ~Human~
+@784    = ~HUMAN:
+
+Humans are the predominant race in Faerun. Humans rule most of the significant empires and kingdoms in the Forgotten Realms. They are the most social and tolerant of races, excepting perhaps the halflings.
+
+Favored Class: Any
+
+Advantages:
+* 1 extra feat at 1st level.
+* 4 extra skill points at 1st level.
+* 1 extra skill point per level after 1st.~
 @785    = ~Aasimar~
 @786    = ~AASIMAR:
 

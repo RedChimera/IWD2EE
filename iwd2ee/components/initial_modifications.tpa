@@ -307,6 +307,22 @@ COPY_EXISTING ~IEex_TRA.lua~ ~override~
 	REPLACE_TEXTUALLY ~ex_str_energydrain *=.*~ ~ex_str_energydrain = "%ex_str_energydrain%"~ 
 	SPRINT ex_str_55114 @55114
 	REPLACE_TEXTUALLY ~ex_str_55114 *=.*~ ~ex_str_55114 = "%ex_str_55114%"~
+	SPRINT ex_str_arcane_sight_b_mirror_image @55180
+	REPLACE_TEXTUALLY ~ex_str_arcane_sight_b_mirror_image *=.*~ ~ex_str_arcane_sight_b_mirror_image = "%ex_str_arcane_sight_b_mirror_image%"~
+	SPRINT ex_str_arcane_sight_b_mirror_images @55181
+	REPLACE_TEXTUALLY ~ex_str_arcane_sight_b_mirror_images *=.*~ ~ex_str_arcane_sight_b_mirror_images = "%ex_str_arcane_sight_b_mirror_images%"~
+	SPRINT ex_str_arcane_sight_b_stoneskin @55182
+	REPLACE_TEXTUALLY ~ex_str_arcane_sight_b_stoneskin *=.*~ ~ex_str_arcane_sight_b_stoneskin = "%ex_str_arcane_sight_b_stoneskin%"~
+	SPRINT ex_str_arcane_sight_b_stoneskins @55183
+	REPLACE_TEXTUALLY ~ex_str_arcane_sight_b_stoneskins *=.*~ ~ex_str_arcane_sight_b_stoneskins = "%ex_str_arcane_sight_b_stoneskins%"~
+	SPRINT ex_str_arcane_sight_b_iron_skin @55184
+	REPLACE_TEXTUALLY ~ex_str_arcane_sight_b_iron_skin *=.*~ ~ex_str_arcane_sight_b_iron_skin = "%ex_str_arcane_sight_b_iron_skin%"~
+	SPRINT ex_str_arcane_sight_b_iron_skins @55185
+	REPLACE_TEXTUALLY ~ex_str_arcane_sight_b_iron_skins *=.*~ ~ex_str_arcane_sight_b_iron_skins = "%ex_str_arcane_sight_b_iron_skins%"~
+	SPRINT ex_str_arcane_sight_b_magic_stone @55186
+	REPLACE_TEXTUALLY ~ex_str_arcane_sight_b_magic_stone *=.*~ ~ex_str_arcane_sight_b_magic_stone = "%ex_str_arcane_sight_b_magic_stone%"~
+	SPRINT ex_str_arcane_sight_b_magic_stones @55187
+	REPLACE_TEXTUALLY ~ex_str_arcane_sight_b_magic_stones *=.*~ ~ex_str_arcane_sight_b_magic_stones = "%ex_str_arcane_sight_b_magic_stones%"~
 	SPRINT ex_str_arcane_sight_a @55190
 	REPLACE_TEXTUALLY ~ex_str_arcane_sight_a *=.*~ ~ex_str_arcane_sight_a = "%ex_str_arcane_sight_a%"~
 	SPRINT ex_str_arcane_sight_b_second @55191
@@ -804,6 +820,7 @@ OUTER_SET ref_deathwatch = RESOLVE_STR_REF(@37155)
 OUTER_SET ref_arcane_sight = RESOLVE_STR_REF(@37254)
 OUTER_SET ref_enlarged = RESOLVE_STR_REF(@30060)
 OUTER_SET ref_contingent_resurrection = RESOLVE_STR_REF(@35955)
+OUTER_SET ref_jump_distance_increased = RESOLVE_STR_REF(@30061)
 
 APPEND ~STATDESC.2da~
 ~146	%ref_magic_stone%
@@ -834,6 +851,7 @@ APPEND ~STATDESC.2da~
 171	%ref_arcane_sight%
 172	%ref_enlarged%
 173	%ref_contingent_resurrection%
+174	%ref_jump_distance_increased%
 ~
 
 VERBOSE
@@ -929,3 +947,57 @@ END
 
 >>>>>>>>
 EXTEND_BOTTOM ~baldur.bcs~ ~.../script.baf~
+
+SILENT
+COPY_EXISTING_REGEXP ~.*\.are~ ~override~
+	TEXT_SPRINT theareares ~%SOURCE_RES%~
+	PATCH_IF FILE_EXISTS_IN_GAME ~%theareares%H2.bmp~ BEGIN
+		INNER_ACTION BEGIN
+
+			COPY_EXISTING ~%theareares%H2.bmp~ ~override~
+				READ_LONG 0x2 thefilesize
+				READ_LONG 0xA thedataoffset
+				pitindex = (0 - 1)
+				FOR (i = 0; i < 16; ++i) BEGIN
+					READ_LONG (0x36 + i * 0x4) current
+					PATCH_IF (current BAND 0x00FFFFFF) = 0x0000FF00 BEGIN
+						pitindex = i
+						i = 16
+					END
+				END
+				FOR (i = thedataoffset; i < thefilesize; ++i) BEGIN
+					READ_BYTE i current
+					currentA = current / 16
+					currentB = current MODULO 16
+
+					PATCH_IF currentA = pitindex AND currentB = pitindex BEGIN
+						SET $pit_index_list(~%i%~) = 3
+					END ELSE PATCH_IF currentA = pitindex BEGIN
+						SET $pit_index_list(~%i%~) = 1
+					END ELSE PATCH_IF currentB = pitindex BEGIN
+						SET $pit_index_list(~%i%~) = 2
+					END
+
+				END
+				BUT_ONLY_IF_IT_CHANGES
+
+			COPY_EXISTING ~%theareares%SR.bmp~ ~override~
+				PHP_EACH pit_index_list AS i => setcurrent BEGIN
+					READ_BYTE i current
+					currentA = current / 16
+					currentB = current MODULO 16
+					PATCH_IF setcurrent = 1 OR setcurrent = 3 BEGIN
+						currentA = 12
+					END
+					PATCH_IF setcurrent = 2 OR setcurrent = 3 BEGIN
+						currentB = 12
+					END
+    				WRITE_BYTE i (currentA * 16 + currentB)
+				END
+				CLEAR_ARRAY pit_index_list
+
+
+		END
+	END
+	BUT_ONLY_IF_IT_CHANGES
+VERBOSE

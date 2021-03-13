@@ -114,6 +114,14 @@
 @55113=~energy drain~
 @55114=~<EXICNAME> cannot be turned~
 @55115=~Iron skins remaining: ~
+@55180=~, 1 image remaining~
+@55181=~, <EXASVAL3> images remaining~
+@55182=~, 1 damage remaining~
+@55183=~, <EXASVAL3> damage remaining~
+@55184=~, 1 skin remaining~
+@55185=~, <EXASVAL3> skins remaining~
+@55186=~, 1 shot remaining~
+@55187=~, <EXASVAL3> shots remaining~
 @55190=~Spells Active On <EXASNAME>:~
 @55191=~  <EXASVAL1> - 1 second remaining~
 @55192=~  <EXASVAL1> - <EXASVAL2> seconds remaining~
@@ -257,3 +265,9 @@
 @55704=~Hurt~
 @55705=~Badly wounded~
 @55706=~Almost dead~
+@55751=~Total Roll: <EXRRTOTAL>\nStored Total: <EXRRRECTOTAL>\n\n~
+@55752=~Unallocated Ability Scores:\n<EXRRUNALLOCATED>\n\n~
+@55753=~Press Z to reroll, X to store, C to recall, and V to reallocate ability scores.\n\n~
+@55754=~Press Z to reroll, X to store, and C to recall.\n\n~
+@55755=~Click the plus button on an ability score to allocate the highest remaining number to that ability score. Click the minus button to unallocate the number.\n\n~
+@55756=~Next Ability Score~

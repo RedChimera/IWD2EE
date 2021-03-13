@@ -2625,6 +2625,7 @@ Launcher:  Bow~
 @30058=~Levitating~
 @30059=~Resistance Lowered~
 @30060=~Enlarged~
+@30061=~Jump Distance Increased~
 
 @31106     = ~Magic Stone~
 @32106     = ~Magic Stone
@@ -3551,6 +3552,19 @@ Area of Effect: Caster
 Saving Throw: None
 
 Deathwatch lets the caster learn precisely how close other creatures are to death. As long as a party member has Deathwatch and isn't incapacitated, if you hover the cursor over an enemy until it displays the tooltip, it will show the enemy's current and maximum Hit Points.~
+@37156     = ~Jump~
+@38156     = ~Jump
+(Transmutation)
+Level: Brd 1, Rgr 1, Sor/Wiz 1
+Range: Touch
+Duration: 30 rounds
+Casting Time: 4
+Area of Effect: 1 creature
+Saving Throw: None
+
+This spell greatly increases the recipient's jump distance, allowing them to jump over obstacles or across large gaps. For the duration, the recipient gains the Jump ability, usable at will. By using this ability, the character jumps to a target point up to 20 feet away.
+
+In addition, while this spell is active, the recipient is immune to falling damage from all sources.~
 @37251     = ~Identify Creature~
 @38251     = ~Identify Creature
 (Divination)

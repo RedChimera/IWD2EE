@@ -540,6 +540,9 @@ COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
 	END
 	BUT_ONLY_IF_IT_CHANGES
 
+COPY_EXISTING ~50TROSG.cre~ ~override~ ~50TROSGR.cre~ ~override~
+	LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item=~USCIHFTG~ slot=~lring~ mode=~replace~ END
+
 // Patching trolls so they have more HP but are vulnerable to fire and acid
 
 COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
@@ -559,6 +562,7 @@ COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
 			WRITE_BYTE coldresistance (thecoldresistance - 20)
 		END
 		WRITE_BYTE acidresistance (theacidresistance - 20)
+		REPLACE_TEXTUALLY ~00TROLL1~ ~USCIHFTR~
 	END
 	BUT_ONLY_IF_IT_CHANGES
 
@@ -574,3 +578,17 @@ COPY ~%mod_folder%/itm/11VEIRA3.itm~ ~override~
 COPY ~%mod_folder%/itm/00CIDEAD.itm~ ~override~
 COPY ~%mod_folder%/itm/00CIDED1.itm~ ~override~
 */
+
+APPEND ~RT_NORM.2da~
+~
+USCIHFTR	00TROLL1
+USCIHFTG	USTROLL4
+~
+UNLESS ~USCIHFTR~
+
+APPEND ~RT_FURY.2da~
+~
+USCIHFTR	USTROLL3
+USCIHFTG	USTROLL5
+~
+UNLESS ~USCIHFTR~

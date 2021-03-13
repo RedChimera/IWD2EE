@@ -336,6 +336,9 @@ This component allows characters to make attacks of opportunity in melee under c
 
 Much of the credit for the inspiration for this mod goes to the makers of Light of Selune, IWD2-Ease, and Tactics4IWD2, which provided the groundwork for this mod and the changes it makes. I would also like to thank Firecrow, who provided indispensable feedback and played an instrumental role in inspiring many of the mod's features, and subtledoctor, bubb, and Gwendolyne for providing invaluable technical support during the construction of the mod.
 
+--Roll for stats at character creation--
+
+This component lets you roll for stats rather than use IWD2's normal point-buy system. There are two subcomponents. The first one doesn't allow you to increment or decrement stats with the plus/minus buttons, but you can choose which ability score each number rolled is assigned to (like in The Temple of Elemental Evil). The second subcomponent lets you use the plus/minus buttons.
 
 Compatibility Notes:
 

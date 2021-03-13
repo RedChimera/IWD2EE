@@ -1458,6 +1458,17 @@ function IEex_EngineCreateCharUpdatePopupPanel()
     IEex_Call(0x60CEB0, {share, panelID}, createCharScreen, 0x0)
 end
 
+function IEex_GetEngineCreateCharPanelID()
+    local createCharScreen = IEex_GetEngineCreateChar()
+    local pTail = IEex_ReadDword(createCharScreen + 0x53E) -- m_lPopupStack.m_pNodeTail
+    local panelID = pTail ~= 0x0 and IEex_ReadDword(IEex_ReadDword(pTail + 0x8) + 0x20) or 0
+	return panelID
+end
+
+function IEex_SetTextAreaToStrref(engine, panelID, controlID, strref)
+    IEex_Call(0x6103A0, {strref, controlID, panelID}, engine, 0x0)
+end
+
 function IEex_GetVisibleArea()
 	local m_pObjectGame = IEex_GetGameData()
 	local m_visibleArea = IEex_ReadByte(m_pObjectGame + 0x37E0, 0)
@@ -2499,6 +2510,12 @@ function IEex_PrintData(search_start, search_length)
 	end
 end
 
+function IEex_PrintData_Log(search_start, search_length)
+	for i = 0, search_length, 1 do
+		print(IEex_ToHex(i, 0, true) .. ": " .. IEex_ReadByte(search_start + i, 0x0) .. ", " .. IEex_ReadWord(search_start + i, 0x0) .. ", " .. IEex_ReadDword(search_start + i) .. ", \"" .. IEex_ReadLString(search_start + i, 8) .. "\"")
+	end
+end
+
 ex_order_multiclass = {
 [1] = {{3, 0x8000}, {6, 0x10}, {7, -1}},
 [2] = {{3, 0x40000}, {5, -1}, {7, -1}},
@@ -2556,7 +2573,7 @@ ex_item_type_proficiency = {[5] = 39, [14] = 55, [15] = 39, [16] = 57, [17] = 54
 ex_item_type_critical = {[0] = {0, 2}, [5] = {0, 3}, [14] = {0, 2}, [15] = {0, 3}, [16] = {1, 2}, [17] = {0, 2}, [18] = {0, 2}, [19] = {1, 2}, [20] = {1, 2}, [21] = {0, 3}, [22] = {0, 3}, [23] = {0, 3}, [24] = {0, 2}, [25] = {0, 3}, [26] = {0, 2}, [27] = {0, 2}, [28] = {0, 2}, [29] = {0, 3}, [30] = {0, 3}, [31] = {0, 2}, [44] = {0, 2}, [57] = {1, 2}, [69] = {1, 2}}
 ex_crippling_strike = {ex_tra_905, ex_tra_905, ex_tra_905, ex_tra_905, ex_tra_905, ex_tra_906, ex_tra_906, ex_tra_906, ex_tra_907, ex_tra_907, ex_tra_907, ex_tra_908, ex_tra_908, ex_tra_908, ex_tra_909, ex_tra_909, ex_tra_909, ex_tra_910, ex_tra_910, ex_tra_910, ex_tra_911, ex_tra_911, ex_tra_911, ex_tra_912, ex_tra_912, ex_tra_912, ex_tra_913, ex_tra_913, ex_tra_913, ex_tra_914}
 ex_arterial_strike = {1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4, 4, 5, 5, 5, 5, 5, 5}
-ex_damage_source_spell = {["EFFAS1"] = "SPWI217", ["EFFAS2"] = "SPWI217", ["EFFCL"] = "SPPR302", ["EFFCT1"] = "SPWI117", ["EFFDA3"] = "SPWI228", ["EFFFS1"] = "SPWI427", ["EFFFS2"] = "SPWI426", ["EFFIK"] = "SPWI122", ["EFFMB1"] = "SPPR318", ["EFFMB2"] = "SPPR318", ["EFFMT1"] = "SPPR322", ["EFFPB1"] = "SPWI521", ["EFFPB2"] = "SPWI521", ["EFFS1"] = "SPPR113", ["EFFS2"] = "SPPR113", ["EFFS3"] = "SPPR113", ["EFFSC"] = "SPPR523", ["EFFSOF1"] = "SPWI511", ["EFFSOF2"] = "SPWI511", ["EFFSR1"] = "SPPR707", ["EFFSR2"] = "SPPR707", ["EFFSSO1"] = "SPPR608", ["EFFSSO2"] = "SPPR608", ["EFFSSO3"] = "SPPR608", ["EFFSSS1"] = "SPWI220", ["EFFSSS2"] = "SPWI220", ["EFFVS1"] = "SPWI424", ["EFFVS2"] = "SPWI424", ["EFFVS3"] = "SPWI424", ["EFFWOM1"] = "SPPR423", ["EFFWOM2"] = "SPPR423", ["EFFHW15"] = "SPWI805", ["EFFHW16"] = "SPWI805", ["EFFHW17"] = "SPWI805", ["EFFHW18"] = "SPWI805", ["EFFHW19"] = "SPWI805", ["EFFHW20"] = "SPWI805", ["EFFHW21"] = "SPWI805", ["EFFHW22"] = "SPWI805", ["EFFHW23"] = "SPWI805", ["EFFHW24"] = "SPWI805", ["EFFHW25"] = "SPWI805", ["EFFWT15"] = "SPWI805", ["EFFWT16"] = "SPWI805", ["EFFWT17"] = "SPWI805", ["EFFWT18"] = "SPWI805", ["EFFWT19"] = "SPWI805", ["EFFWT20"] = "SPWI805", ["EFFWT21"] = "SPWI805", ["EFFWT22"] = "SPWI805", ["EFFWT23"] = "SPWI805", ["EFFWT24"] = "SPWI805", ["EFFWT25"] = "SPWI805", ["USWI417D"] = "SPWI417", ["USWI422D"] = "SPWI422", ["USWI452D"] = "USWI452", ["USWI652D"] = "USWI652", ["USWI755D"] = "USWI755", ["USWI954F"] = "USWI954", ["USDESTRU"] = "SPPR717", ["USPR953D"] = "USPR953", ["USSTOV2D"] = "USPR954", ["USSTOV3D"] = "USPR954", ["USSTOV4D"] = "USPR954", ["USSTOV5D"] = "USPR954", ["USWI653D"] = "USWI653", ["USWI956D"] = "USWI956", ["USWI759D"] = "USWI759", ["USWI759E"] = "USWI759", }
+ex_damage_source_spell = {["EFFAS1"] = "SPWI217", ["EFFAS2"] = "SPWI217", ["EFFCL"] = "SPPR302", ["EFFCT1"] = "SPWI117", ["EFFDA3"] = "SPWI228", ["EFFFS1"] = "SPWI427", ["EFFFS2"] = "SPWI426", ["EFFIK"] = "SPWI122", ["EFFMB1"] = "SPPR318", ["EFFMB2"] = "SPPR318", ["EFFMT1"] = "SPPR322", ["EFFPB1"] = "SPWI521", ["EFFPB2"] = "SPWI521", ["EFFS1"] = "SPPR113", ["EFFS2"] = "SPPR113", ["EFFS3"] = "SPPR113", ["EFFSC"] = "SPPR523", ["EFFSOF1"] = "SPWI511", ["EFFSOF2"] = "SPWI511", ["EFFSR1"] = "SPPR707", ["EFFSR2"] = "SPPR707", ["EFFSSO1"] = "SPPR608", ["EFFSSO2"] = "SPPR608", ["EFFSSO3"] = "SPPR608", ["EFFSSS1"] = "SPWI220", ["EFFSSS2"] = "SPWI220", ["EFFVS1"] = "SPWI424", ["EFFVS2"] = "SPWI424", ["EFFVS3"] = "SPWI424", ["EFFWOM1"] = "SPPR423", ["EFFWOM2"] = "SPPR423", ["EFFHW15"] = "SPWI805", ["EFFHW16"] = "SPWI805", ["EFFHW17"] = "SPWI805", ["EFFHW18"] = "SPWI805", ["EFFHW19"] = "SPWI805", ["EFFHW20"] = "SPWI805", ["EFFHW21"] = "SPWI805", ["EFFHW22"] = "SPWI805", ["EFFHW23"] = "SPWI805", ["EFFHW24"] = "SPWI805", ["EFFHW25"] = "SPWI805", ["EFFWT15"] = "SPWI805", ["EFFWT16"] = "SPWI805", ["EFFWT17"] = "SPWI805", ["EFFWT18"] = "SPWI805", ["EFFWT19"] = "SPWI805", ["EFFWT20"] = "SPWI805", ["EFFWT21"] = "SPWI805", ["EFFWT22"] = "SPWI805", ["EFFWT23"] = "SPWI805", ["EFFWT24"] = "SPWI805", ["EFFWT25"] = "SPWI805", ["USWI417D"] = "SPWI417", ["USWI422D"] = "SPWI422", ["USWI452D"] = "USWI452", ["USWI652D"] = "USWI652", ["USWI755D"] = "USWI755", ["USWI954F"] = "USWI954", ["USDVSH01"] = "USPR151", ["USDVSH02"] = "USPR151", ["USDVSH03"] = "USPR151", ["USDVSH04"] = "USPR151", ["USDVSH05"] = "USPR151", ["USDVSH06"] = "USPR151", ["USDVSH07"] = "USPR151", ["USDVSH08"] = "USPR151", ["USDVSH09"] = "USPR151", ["USDVSH10"] = "USPR151", ["USDVSH11"] = "USPR151", ["USDVSH12"] = "USPR151", ["USDVSH13"] = "USPR151", ["USDVSH14"] = "USPR151", ["USDVSH15"] = "USPR151", ["USPR215D"] = "SPPR215", ["USPR452D"] = "USPR452", ["USDESTRU"] = "SPPR717", ["USPR953D"] = "USPR953", ["USSTOV2D"] = "USPR954", ["USSTOV3D"] = "USPR954", ["USSTOV4D"] = "USPR954", ["USSTOV5D"] = "USPR954", ["USWI653D"] = "USWI653", ["USWI956D"] = "USWI956", ["USWI759D"] = "USWI759", ["USWI759E"] = "USWI759", ["USPR102D"] = "SPPR102", ["USPR204D"] = "SPPR204", ["USPR211D"] = "SPPR211", ["USPR305D"] = "SPPR305", ["USPR310D"] = "SPPR310", ["USPR311D"] = "SPPR311", ["USPR320D"] = "SPPR320", ["USPR322D"] = "SPPR322", ["USPR324D"] = "SPPR324", ["USPR325D"] = "SPPR325", ["USPR405D"] = "SPPR405", ["USPR417D"] = "SPPR417", ["USPR418D"] = "SPPR418", ["USPR510D"] = "SPPR510", ["USPR512D"] = "SPPR512", ["USPR518D"] = "SPPR518", ["USPR522D"] = "SPPR522", ["USPR613D"] = "SPPR613", ["USPR616D"] = "SPPR616", ["USPR715D"] = "SPPR715", ["USPR719D"] = "SPPR719", ["USPR726D"] = "SPPR726", ["USPR727D"] = "SPPR727", ["USPR728D"] = "SPPR728", ["USWI101D"] = "SPWI101", ["USWI104D"] = "SPWI104", ["USWI105D"] = "SPWI105", ["USWI116D"] = "SPWI116", ["USWI118D"] = "SPWI118", ["USWI121D"] = "SPWI121", ["USWI205D"] = "SPWI205", ["USWI213D"] = "SPWI213", ["USWI215D"] = "SPWI215", ["USWI218D"] = "SPWI218", ["USWI222D"] = "SPWI222", ["USWI226D"] = "SPWI226", ["USWI227D"] = "SPWI227", ["USWI252D"] = "USWI252", ["USWI253D"] = "USWI253", ["USWI253E"] = "USWI253", ["USWI306D"] = "SPWI306", ["USWI312D"] = "SPWI312", ["USWI316D"] = "SPWI316", ["USWI320D"] = "SPWI320", ["USWI420D"] = "SPWI420", ["USWI423D"] = "SPWI423", ["USWI425D"] = "SPWI425", ["USWI507D"] = "SPWI507", ["USWI508D"] = "SPWI508", ["USWI509D"] = "SPWI509", ["USWI510D"] = "SPWI510", ["USWI605D"] = "SPWI605", ["USWI612D"] = "SPWI612", ["USWI653D"] = "USWI653", ["USWI705D"] = "SPWI705", ["USWI711D"] = "SPWI711", ["USWI717D"] = "SPWI717", ["USWI751D"] = "USWI751", ["USWI759E"] = "USWI759", ["USWI806D"] = "SPWI806", ["USWI810D"] = "SPWI810", ["USWI911D"] = "SPWI911", }
 ex_feat_id_offset = {[18] = 0x78D, [38] = 0x777, [39] = 0x774, [40] = 0x779, [41] = 0x77D, [42] = 0x77B, [43] = 0x77E, [44] = 0x77A, [53] = 0x775, [54] = 0x778, [55] = 0x776, [56] = 0x77C, [57] = 0x77F}
 ex_damage_multiplier_type = {[0] = 9, [0x10000] = 4, [0x20000] = 2, [0x40000] = 3, [0x80000] = 1, [0x100000] = 8, [0x200000] = 6, [0x400000] = 5, [0x800000] = 10, [0x1000000] = 7, [0x2000000] = 1, [0x4000000] = 2, [0x8000000] = 9, [0x10000000] = 5}
 ex_damage_resistance_stat = {[0] = 22, [0x10000] = 17, [0x20000] = 15, [0x40000] = 16, [0x80000] = 14, [0x100000] = 23, [0x200000] = 74, [0x400000] = 73, [0x800000] = 24, [0x1000000] = 21, [0x2000000] = 19, [0x4000000] = 20, [0x8000000] = 22, [0x10000000] = 73}
@@ -5894,6 +5911,7 @@ function MEMOONBL(effectData, creatureData)
 	local weaponRES = IEex_ReadLString(effectData + 0x18, 8)
 	local special = IEex_ReadDword(effectData + 0x44)
 	local equippedSlot = IEex_ReadByte(creatureData + 0x4BA4, 0x0)
+	local savingthrow = IEex_ReadDword(effectData + 0x3C)
 	if ex_moonblade_items[IEex_GetItemSlotRES(targetID, equippedSlot)] ~= nil then
 		IEex_WriteDword(creatureData + 0xA00, IEex_ReadDword(creatureData + 0xA00) + special)
 		IEex_WriteByte(creatureData + 0x9F8, IEex_ReadSignedByte(creatureData + 0x9F8, 0x0) + special)
@@ -5932,6 +5950,7 @@ function MEMOONBL(effectData, creatureData)
 ["parameter1"] = IEex_ReadDword(effectData + 0x18),
 ["parameter2"] = IEex_ReadDword(effectData + 0x1C),
 ["resource"] = "MERNWEAP",
+["savingthrow"] = savingthrow,
 ["parent_resource"] = IEex_ReadLString(effectData + 0x90, 8),
 ["casterlvl"] = IEex_ReadDword(effectData + 0xC4),
 ["internal_flags"] = internalFlags,
@@ -14177,6 +14196,29 @@ function MEHGTST(effectData, creatureData)
 	end
 end
 
+function MEJUMPST(effectData, creatureData)
+	local targetID = IEex_GetActorIDShare(creatureData)
+	local animation = IEex_ReadDword(creatureData + 0x5C4)
+	local parameter1 = IEex_ReadDword(effectData + 0x18)
+	local parameter2 = IEex_ReadDword(effectData + 0x1C)
+	local special = IEex_ReadDword(effectData + 0x44)
+	local sourceX, sourceY = IEex_GetActorLocation(targetID)
+	local targetX = IEex_ReadDword(effectData + 0x84)
+	local targetY = IEex_ReadDword(effectData + 0x88)
+	local speedIncrease = math.floor((IEex_GetDistance(sourceX, sourceY, targetX, targetY) * special / 2) / parameter1) - special
+	if speedIncrease < 1 then
+		speedIncrease = 1
+	end
+	local speed = IEex_ReadSignedWord(creatureData + 0x722, 0x0)
+	if parameter2 == 0 then
+		IEex_WriteWord(creatureData + 0x722, speed + speedIncrease)
+	elseif parameter2 == 1 then
+		IEex_WriteWord(creatureData + 0x722, speedIncrease)
+	elseif parameter2 == 2 then
+		IEex_WriteWord(creatureData + 0x722, math.floor(speed * (speedIncrease / 100)))
+	end
+end
+
 function MEUNSTUC(effectData, creatureData)
 	IEex_WriteDword(effectData + 0x110, 1)
 	if IEex_CheckForEffectRepeat(effectData, creatureData) then return end
@@ -14195,7 +14237,7 @@ end
 ex_no_teleport_animations = {[61347] = true, [61363] = true, [61379] = true, [61395] = true, [61411] = true, [61427] = true, }
 
 ex_ceiling_height = {["AR1000"] = 32767, ["AR1001"] = 140, ["AR1002"] = 140, ["AR1003"] = 55, ["AR1004"] = 75, ["AR1005"] = 65, ["AR1006"] = 75, ["AR1007"] = 110, ["AR1100"] = 32767, ["AR1101"] = 85, ["AR1102"] = 75, ["AR1103"] = 60, ["AR1104"] = 70, ["AR1105"] = 0, ["AR1106"] = 70, ["AR1107"] = 70, ["AR1200"] = 32767, ["AR1201"] = 75, ["AR2000"] = 32767, ["AR2001"] = 32767, ["AR2002"] = 180, ["AR2100"] = 32767, ["AR2101"] = 32767, ["AR2102"] = 32767, ["AR3000"] = 32767, ["AR3001"] = 160, ["AR3002"] = 170, ["AR3100"] = 32767, ["AR3101"] = 80, ["AR4000"] = 32767, ["AR4001"] = 70, ["AR4100"] = 32767, ["AR4101"] = 90, ["AR4102"] = 90, ["AR4103"] = 90, ["AR5000"] = 32767, ["AR5001"] = 32767, ["AR5002"] = 80, ["AR5004"] = 32767, ["AR5005"] = 32767, ["AR5010"] = 32767, ["AR5011"] = 32767, ["AR5012"] = 32767, ["AR5013"] = 32767, ["AR5014"] = 32767, ["AR5015"] = 32767, ["AR5016"] = 32767, ["AR5017"] = 32767, ["AR5018"] = 32767, ["AR5019"] = 32767, ["AR5020"] = 32767, ["AR5021"] = 32767, ["AR5022"] = 32767, ["AR5023"] = 32767, ["AR5024"] = 32767, ["AR5025"] = 32767, ["AR5026"] = 32767, ["AR5027"] = 32767, ["AR5028"] = 32767, ["AR5029"] = 32767, ["AR5030"] = 32767, ["AR5100"] = 200, ["AR5101"] = 170, ["AR5102"] = 110, ["AR5200"] = 32767, ["AR5201"] = 120, ["AR5202"] = 110, ["AR5203"] = 300, ["AR5300"] = 200, ["AR5301"] = 160, ["AR5302"] = 80, ["AR5303"] = 32767, ["AR6000"] = 32767, ["AR6001"] = 32767, ["AR6002"] = 32767, ["AR6003"] = 160, ["AR6004"] = 75, ["AR6005"] = 130, ["AR6006"] = 110, ["AR6007"] = 70, ["AR6008"] = 320, ["AR6009"] = 250, ["AR6010"] = 110, ["AR6050"] = 32767, ["AR6051"] = 150, ["AR6100"] = 32767, ["AR6101"] = 190, ["AR6102"] = 170, ["AR6103"] = 140, ["AR6104"] = 220, ["AR6200"] = 32767, ["AR6201"] = 32767, ["AR6300"] = 32767, ["AR6301"] = 310, ["AR6302"] = 320, ["AR6303"] = 170, ["AR6304"] = 200, ["AR6305"] = 170, ["AR6400"] = 32767, ["AR6401"] = 100, ["AR6402"] = 270, ["AR6403"] = 140, ["AR6500"] = 250, ["AR6501"] = 320, ["AR6502"] = 120, ["AR6503"] = 100, ["AR6600"] = 200, ["AR6601"] = 160, ["AR6602"] = 110, ["AR6603"] = 215, ["AR6700"] = 95, ["AR6701"] = 110, ["AR6702"] = 230, ["AR6703"] = 32767, ["AR6800"] = 32767, }
-ex_specific_floor_height = {["AR3000"] = {[0xFF00] = -750}, ["AR5200"] = {[0xFF00] = -500}, ["AR5300"] = {[0xFF00] = -1500}, ["AR5303"] = {[0xFF00] = -4000}, ["AR6000"] = {[0xFF00] = -900}, ["AR6001"] = {[0xFF00] = -4800}, ["AR6051"] = {[0xFF00] = -300}, ["AR6104"] = {[0xFF00] = -20}, ["AR6300"] = {[0xFF00] = -120}, ["AR6302"] = {[0xFF00] = -900}, ["AR6303"] = {[0xFF00] = -900}, ["AR6304"] = {[0xFF00] = -900}, ["AR6305"] = {[0xFF00] = -900}, ["AR6400"] = {[0xFF00] = -3500}, ["AR6703"] = {[0xFF00] = -5800}, ["AR6800"] = {[0xFF00] = -5000}, }
+ex_specific_floor_height = {["AR3000"] = {[0xFF00] = -750}, ["AR5200"] = {[0xFF00] = -360}, ["AR5300"] = {[0xFF00] = -1500}, ["AR5303"] = {[0xFF00] = -4000}, ["AR6000"] = {[0xFF00] = -900}, ["AR6001"] = {[0xFF00] = -4800}, ["AR6051"] = {[0xFF00] = -300}, ["AR6104"] = {[0xFF00] = -20}, ["AR6300"] = {[0xFF00] = -120}, ["AR6302"] = {[0xFF00] = -900}, ["AR6303"] = {[0xFF00] = -900}, ["AR6304"] = {[0xFF00] = -900}, ["AR6305"] = {[0xFF00] = -900}, ["AR6400"] = {[0xFF00] = -3500}, ["AR6703"] = {[0xFF00] = -5800}, ["AR6800"] = {[0xFF00] = -5000}, }
 ex_specific_floor_spell = {["AR6051"] = {[0xFF00] = "USFL6051"}, ["AR6104"] = {[0xFF00] = "USFL6104"}, ["AR6300"] = {[0xFF00] = "USFL6300"}, }
 ex_specific_teleport_zone = {["AR4102"] = true, ["AR5202"] = true, }
 ex_record_translucency = {}
@@ -14302,6 +14344,7 @@ function IEex_HeightMod(creatureData)
 			parent_resource = IEex_ReadLString(eData + 0x94, 8)
 			casterlvl = IEex_ReadDword(eData + 0xC8)
 			internalFlags = IEex_ReadDword(eData + 0xD8)
+--			IEex_DS(height .. ", " .. IEex_GetDistance(targetX, targetY, IEex_ReadDword(eData + 0x88), IEex_ReadDword(eData + 0x8C)))
 			if spellRES == "" and #parent_resource < 8 then
 				spellRES = parent_resource .. "E"
 			end
@@ -14649,9 +14692,16 @@ function IEex_HeightMod(creatureData)
 		end
 		resWrapper:free()
 	end
---[[
+
 	local extraFlags = IEex_ReadDword(creatureData + 0x740)
+--[[
 	local eyeHeight = height + targetHeight
+	if eyeHeight < 0 then
+		IEex_WriteDword(creatureData + 0x740, bit.bor(extraFlags, 0x800))
+		IEex_ModifyTerrainTable(creatureData + 0x50BB, ex_pit_terrain_table)
+	end
+--]]
+--[[
 	if eyeHeight < minHeight then
 		IEex_WriteDword(creatureData + 0x740, bit.bor(extraFlags, 0x800))
 		IEex_ModifyTerrainTable(creatureData + 0x50CB, ex_no_vision_terrain_table)
@@ -14663,6 +14713,7 @@ function IEex_HeightMod(creatureData)
 	return true
 end
 
+ex_pit_terrain_table = {-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 5, -1, -1, -1}
 ex_outdoor_flight_terrain_table = {5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, -1, 5}
 ex_indoor_flight_terrain_table = {-1, 5, 5, 5, 5, 5, 5, 5, 5, 5, -1, 5, 5, -1, -1, 5}
 ex_xray_vision_terrain_table = {5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5}
