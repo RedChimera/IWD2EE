@@ -1190,13 +1190,13 @@ END
 			WRITE_SHORT		(fx_off + insert_point * 0x108 + 0x24)	probability1
 			WRITE_SHORT		(fx_off + insert_point * 0x108 + 0x26)	probability2
 			WRITE_ASCIIE	(fx_off + insert_point * 0x108 + 0x28)	~%resource%~	#8
-			WRITE_LONG		(fx_off + insert_point * 0x108 + 0x30)	savingthrow
-			WRITE_LONG		(fx_off + insert_point * 0x108 + 0x34)	savebonus
-			WRITE_LONG		(fx_off + insert_point * 0x108 + 0x38)	dicenumber
-			WRITE_LONG		(fx_off + insert_point * 0x108 + 0x3c)	dicesize
+			WRITE_LONG		(fx_off + insert_point * 0x108 + 0x30)	dicenumber
+			WRITE_LONG		(fx_off + insert_point * 0x108 + 0x34)	dicesize
+			WRITE_LONG		(fx_off + insert_point * 0x108 + 0x38)	savingthrow
+			WRITE_LONG		(fx_off + insert_point * 0x108 + 0x3c)	savebonus
 			WRITE_LONG		(fx_off + insert_point * 0x108 + 0x40)	special
 			WRITE_LONG		(fx_off + insert_point * 0x108 + 0x44)	school
-	//		WRITE_LONG		(fx_off + insert_point * 0x108 + 0x48)	internal
+			WRITE_LONG		(fx_off + insert_point * 0x108 + 0x48)	sectype
 			WRITE_LONG		(fx_off + insert_point * 0x108 + 0x4c)	lowestefflvl
 			WRITE_LONG		(fx_off + insert_point * 0x108 + 0x50)	highestefflvl
 			WRITE_LONG		(fx_off + insert_point * 0x108 + 0x54)	resist_dispel
@@ -1218,7 +1218,6 @@ END
 			WRITE_ASCIIE	(fx_off + insert_point * 0x108 + 0xa0)	~%effvar%~	#32
 			WRITE_LONG		(fx_off + insert_point * 0x108 + 0xc0)	casterlvl
 	//		WRITE_LONG		(fx_off + insert_point * 0x108 + 0xc4)	internalflags
-			WRITE_LONG		(fx_off + insert_point * 0x108 + 0xc8)	sectype
 			WRITE_LONG	0x622 (THIS + 1)
 		END
 	END

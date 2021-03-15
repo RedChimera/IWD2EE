@@ -3622,6 +3622,17 @@ Area of Effect: 1 creature
 Saving Throw: None
 
 This spell causes the target to temporarily grow twice as large in each dimension. The target gains +8 Strength and Constitution; these are size bonuses which stack with other bonuses to these attributes. The target's speed is also increased (since they cover more distance with each stride). However, the target also gets a -4 penalty to Dexterity, AC, and attack rolls due to increased size. The target cannot benefit from invisibility, blur, or mirror image.~
+@37256     = ~Darkness~
+@38256     = ~Darkness
+(Illusion)
+Level: Brd 2, Clr 2, Sor/Wiz 2
+Range: Sight of Caster
+Duration: 4 rounds
+Casting Time: 4
+Area of Effect: 20-foot radius
+Saving Throw: Fortitude negates
+
+This spell creates magical darkness in the area of effect. Creatures without darkvision must make a Fortitude saving throw or be effectively blinded. Creatures with darkvision aren't blinded, but even they have only a limited ability to see through magical darkness, getting a -4 attack penalty on a failed save. Creatures with superior 120 foot darkvision (e.g. drow, gray dwarves or deep gnomes) only get a -2 attack penalty. Devils and creatures immune to blindness are unaffected.~
 @37351     = ~Clairvoyance~
 @38351     = ~Clairvoyance
 (Divination)

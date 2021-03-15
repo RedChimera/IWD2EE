@@ -343,6 +343,7 @@ ex_extra_feats_granted = false
 ex_extra_skill_points_granted = false
 ex_current_remaining_points = 0
 ex_recorded_remaining_points = 0
+racialAbilityBonuses = {0, 0, 0, 0, 0, 0}
 currentAbilityScores = {0, 0, 0, 0, 0, 0}
 recordedAbilityScores = {0, 0, 0, 0, 0, 0}
 unallocatedAbilityScores = {}
@@ -354,11 +355,21 @@ function IEex_Chargen_ExtraFeatListener()
 		local actorID = IEex_ReadDword(chargenData + 0x4E2)
 		local share = IEex_GetActorShare(actorID)
 		if share > 0 then
+			ex_randomizer = math.random(6)
 			local panelID = IEex_GetEngineCreateCharPanelID()
 			local racePlusSub = IEex_ReadByte(share + 0x26, 0x0) * 0x10000 + IEex_ReadByte(share + 0x3E3D, 0x0)
 			if panelID == 4 or panelID == 53 then
 				if not ex_ability_scores_initialized then
 					ex_ability_scores_initialized = true
+					if ex_subrace_name[racePlusSub] ~= nil then
+						local racePlusSubName = ex_subrace_name[racePlusSub]
+						racialAbilityBonuses[1] = tonumber(IEex_2DAGetAtStrings("ABRACEAD", "MOD_STR", racePlusSubName))
+						racialAbilityBonuses[2] = tonumber(IEex_2DAGetAtStrings("ABRACEAD", "MOD_DEX", racePlusSubName))
+						racialAbilityBonuses[3] = tonumber(IEex_2DAGetAtStrings("ABRACEAD", "MOD_CON", racePlusSubName))
+						racialAbilityBonuses[4] = tonumber(IEex_2DAGetAtStrings("ABRACEAD", "MOD_INT", racePlusSubName))
+						racialAbilityBonuses[5] = tonumber(IEex_2DAGetAtStrings("ABRACEAD", "MOD_WIS", racePlusSubName))
+						racialAbilityBonuses[6] = tonumber(IEex_2DAGetAtStrings("ABRACEAD", "MOD_CHR", racePlusSubName))
+					end
 					if ex_new_ability_score_system == 2 then
 						IEex_WriteDword(chargenData + 0x4EA, ex_current_remaining_points)
 						for i = 1, 6, 1 do
@@ -385,12 +396,12 @@ function IEex_Chargen_ExtraFeatListener()
 								if controlIndex == 16 or controlIndex == 18 or controlIndex == 20 or controlIndex == 22 or controlIndex == 24 or controlIndex == 26 then
 									local a = math.floor(controlIndex / 2) - 7
 									if currentAbilityScores[a] == 0 and #unallocatedAbilityScores > 0 then
-										currentAbilityScores[a] = table.remove(unallocatedAbilityScores)
+										currentAbilityScores[a] = table.remove(unallocatedAbilityScores) + racialAbilityBonuses[a]
 									end
 								elseif controlIndex == 17 or controlIndex == 19 or controlIndex == 21 or controlIndex == 23 or controlIndex == 25 or controlIndex == 27 then
 									local a = math.floor(controlIndex / 2) - 7
 									if currentAbilityScores[a] > 0 and #unallocatedAbilityScores < 6 then
-										table.insert(unallocatedAbilityScores, currentAbilityScores[a])
+										table.insert(unallocatedAbilityScores, currentAbilityScores[a] - racialAbilityBonuses[a])
 										table.sort(unallocatedAbilityScores)
 										currentAbilityScores[a] = 0
 									end
@@ -420,6 +431,7 @@ function IEex_Chargen_ExtraFeatListener()
 				end
 			else
 				if (panelID == 2 or panelID == 8) and (currentAbilityScores[1] > 0 or #unallocatedAbilityScores > 0) then
+					racialAbilityBonuses = {0, 0, 0, 0, 0, 0}
 					currentAbilityScores = {0, 0, 0, 0, 0, 0}
 					recordedAbilityScores = {0, 0, 0, 0, 0, 0}
 					unallocatedAbilityScores = {}
@@ -469,7 +481,7 @@ function IEex_Chargen_ExtraFeatListener()
 end
 
 function IEex_Chargen_RerollListener(key)
-	if key == ex_chargen_reroll_key or key == ex_chargen_store_key or key == ex_chargen_recall_key or key == ex_chargen_reallocate_key or key == IEex_KeyIDS.P then
+	if key == ex_chargen_reroll_key or key == ex_chargen_store_key or key == ex_chargen_recall_key or key == ex_chargen_reallocate_key or key == IEex_KeyIDS.T or key == IEex_KeyIDS.P then
 		local g_pBaldurChitin = IEex_ReadDword(0x8CF6DC)
 		local chargenData = IEex_ReadDword(g_pBaldurChitin + 0x1C64)
 		if chargenData > 0 then
@@ -478,8 +490,11 @@ function IEex_Chargen_RerollListener(key)
 			if share > 0 then
 
 				local panelID = IEex_GetEngineCreateCharPanelID()
+				if key == IEex_KeyIDS.T then
+					IEex_Search_Change_Log(1, chargenData, 0xA00, true) 
+				end
 				if key == IEex_KeyIDS.P then
---					IEex_Search_Change_Log(1, chargenData, 0xA00, false) 
+					IEex_Search_Change_Log(1, chargenData, 0xA00, false) 
 					if panelID > 0 then
 						local panelData = IEex_ReadDword(IEex_ReadDword(chargenData + 0x53E) + 0x8)
 						IEex_IterateCPtrList(panelData + 0x4, function(thingData)
@@ -496,9 +511,13 @@ function IEex_Chargen_RerollListener(key)
 --								print(IEex_ReadString(IEex_ReadDword(thingData + 0x52)))
 							end
 --]]
-							if IEex_ReadByte(thingData + 0xA, 0x0) == 16 then
+							if IEex_ReadDword(thingData) == 8703188 then
 --								print(IEex_ReadDword(thingData + 0xA))
+--								IEex_PrintData_Log(IEex_ReadDword(thingData + 0x4E), 0x8)
+--								IEex_PrintData_Log(IEex_ReadDword(thingData + 0x68), 0x8)
 --								IEex_Search_Change_Log(1, thingData, 0x200, false)
+--								print(IEex_ReadString(IEex_ReadDword(thingData + 0x52)))
+--								print(IEex_ReadString(IEex_ReadDword(thingData + 0x4E)))
 							elseif IEex_ReadDword(thingData) == 8732244 then
 --								print(IEex_ReadDword(thingData + 0xA))
 --								IEex_Search_Change_Log(1, thingData, 0x200, false)
@@ -532,7 +551,7 @@ function IEex_Chargen_RerollListener(key)
 						elseif key == ex_chargen_reallocate_key and ex_new_ability_score_system == 1 then
 							for i = 1, 6, 1 do
 								if currentAbilityScores[i] > 0 then
-									table.insert(unallocatedAbilityScores, currentAbilityScores[i])
+									table.insert(unallocatedAbilityScores, currentAbilityScores[i] - racialAbilityBonuses[i])
 									currentAbilityScores[i] = 0
 								end
 								table.sort(unallocatedAbilityScores)
@@ -559,21 +578,11 @@ function IEex_Chargen_Reroll()
 				if ex_new_ability_score_system == 1 or ex_new_ability_score_system == 2 then
 					IEex_WriteDword(chargenData + 0x4EA, 0)
 					unallocatedAbilityScores = {}
-					local abilityScoreTotal = 0
 					local doNewReroll = true
 					while doNewReroll do
 						doNewReroll = false
-						abilityScoreTotal = 0
+						local baseAbilityScoreTotal = 0
 						currentAbilityScores = {0, 0, 0, 0, 0, 0}
-						if ex_subrace_name[racePlusSub] ~= nil then
-							local racePlusSubName = ex_subrace_name[racePlusSub]
-							currentAbilityScores[1] = tonumber(IEex_2DAGetAtStrings("ABRACEAD", "MOD_STR", racePlusSubName))
-							currentAbilityScores[2] = tonumber(IEex_2DAGetAtStrings("ABRACEAD", "MOD_DEX", racePlusSubName))
-							currentAbilityScores[3] = tonumber(IEex_2DAGetAtStrings("ABRACEAD", "MOD_CON", racePlusSubName))
-							currentAbilityScores[4] = tonumber(IEex_2DAGetAtStrings("ABRACEAD", "MOD_INT", racePlusSubName))
-							currentAbilityScores[5] = tonumber(IEex_2DAGetAtStrings("ABRACEAD", "MOD_WIS", racePlusSubName))
-							currentAbilityScores[6] = tonumber(IEex_2DAGetAtStrings("ABRACEAD", "MOD_CHR", racePlusSubName))
-						end
 						local metMinimumStat = false
 						for i = 1, 6, 1 do
 							local currentAbilityDice = {}
@@ -584,20 +593,23 @@ function IEex_Chargen_Reroll()
 							for j = ex_new_ability_score_ignored_dice + 1, ex_new_ability_score_dicenumber, 1 do
 								currentAbilityScores[i] = currentAbilityScores[i] + currentAbilityDice[j]
 							end
-							if currentAbilityScores[i] < 1 then
-								currentAbilityScores[i] = 1
-							elseif currentAbilityScores[i] > 40 then
-								currentAbilityScores[i] = 40
-							end
-							abilityScoreTotal = abilityScoreTotal + currentAbilityScores[i]
+							baseAbilityScoreTotal = baseAbilityScoreTotal + currentAbilityScores[i]
 							if currentAbilityScores[i] >= ex_automatic_reroll_minimum_stat then
 								metMinimumStat = true
 							end
-							IEex_WriteByte(share + ex_base_ability_score_cre_offset[i], currentAbilityScores[i])
 						end
-						if (abilityScoreTotal < ex_automatic_reroll_minimum_total and ex_automatic_reroll_minimum_total > 0) or (not metMinimumStat and ex_automatic_reroll_minimum_stat > 0) then
+						if (baseAbilityScoreTotal < ex_automatic_reroll_minimum_total and ex_automatic_reroll_minimum_total > 0) or (not metMinimumStat and ex_automatic_reroll_minimum_stat > 0) then
 							doNewReroll = true
 						end
+					end
+					for i = 1, 6, 1 do
+						currentAbilityScores[i] = currentAbilityScores[i] + racialAbilityBonuses[i]
+						if currentAbilityScores[i] < 1 then
+							currentAbilityScores[i] = 1
+						elseif currentAbilityScores[i] > 40 then
+							currentAbilityScores[i] = 40
+						end
+						IEex_WriteByte(share + ex_base_ability_score_cre_offset[i], currentAbilityScores[i])
 					end
 					IEex_Chargen_UpdateAbilityScores(chargenData, share)
 				end
@@ -611,7 +623,13 @@ function IEex_Chargen_UpdateAbilityScores(chargenData, share)
 	local recordedAbilityScoreTotal = 0
 	for i = 1, 6, 1 do
 		abilityScoreTotal = abilityScoreTotal + currentAbilityScores[i]
+		if currentAbilityScores[i] == 0 then
+			abilityScoreTotal = abilityScoreTotal + racialAbilityBonuses[i]
+		end
 		recordedAbilityScoreTotal = recordedAbilityScoreTotal + recordedAbilityScores[i]
+		if recordedAbilityScores[i] == 0 then
+			recordedAbilityScoreTotal = recordedAbilityScoreTotal + racialAbilityBonuses[i]
+		end
 		if ex_new_ability_score_system == 1 then
 			if #unallocatedAbilityScores == 0 then
 				IEex_WriteDword(chargenData + 0x4EA, 0)

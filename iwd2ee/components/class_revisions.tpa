@@ -152,6 +152,7 @@ COPY ~%mod_folder%/tables/SAVEWAR.2da~ ~override~
 COPY ~%mod_folder%/tables/SAVEWIZ.2da~ ~override~
 COPY ~%mod_folder%/tables/SKILCOST.2da~ ~override~
 COPY ~%mod_folder%/tables/SPCD_GR.2da~ ~override~
+COPY ~%mod_folder%/tables/SPCE_D.2da~ ~override~
 COPY ~%mod_folder%/tables/SPCHF_GW.2da~ ~override~
 COPY ~%mod_folder%/tables/SPLBRDKN.2da~ ~override~
 COPY ~%mod_folder%/tables/SPLSRCKN.2da~ ~override~

@@ -3550,12 +3550,19 @@ end
 
 function IEex_ApplyStatScaling(targetID)
 	local creatureData = IEex_GetActorShare(targetID)
+	local noncumulativeOpcodeFunctionsCalled = {}
 	IEex_IterateActorEffects(targetID, function(eData)
 		local theopcode = IEex_ReadDword(eData + 0x10)
 		local theresource = IEex_ReadLString(eData + 0x30, 8)
 
-		if theopcode == 500 and ex_stat_scaling_functions[theresource] ~= nil then
-			_G[theresource](eData + 0x4, creatureData, true)
+		if theopcode == 500 then
+			if ex_noncumulative_opcode_functions[theresource] ~= nil and noncumulativeOpcodeFunctionsCalled[theresource] == nil then
+				noncumulativeOpcodeFunctionsCalled[theresource] = true
+				_G[theresource](eData + 0x4, creatureData, true)
+			end
+			if ex_stat_scaling_functions[theresource] ~= nil then
+				_G[theresource](eData + 0x4, creatureData, true)
+			end
 		end
 
 	end)
@@ -3579,6 +3586,24 @@ function IEex_ApplyStatSpell(targetID, index, statValue)
 			IEex_ApplyResref(spellRES, targetID)
 		end
 	end
+end
+
+function MEOP16(effectData, creatureData, isSpecialCall)
+	if not isSpecialCall then return end
+	local targetID = IEex_GetActorIDShare(creatureData)
+	if not IEex_IsSprite(targetID, false) then return end
+	local attacksPerRound = IEex_ReadSignedWord(creatureData + 0x93A, 0x0) + 1
+	if attacksPerRound > 5 then
+		attacksPerRound = 5
+	end
+	IEex_WriteWord(creatureData + 0x93A, attacksPerRound)
+	IEex_WriteWord(creatureData + 0x92C, IEex_ReadSignedWord(creatureData + 0x92C, 0x0) + 4)
+	local animationData = IEex_ReadDword(creatureData + 0x50F0)
+	local movementRate = IEex_ReadByte(animationData + 0x7, 0x0) * 2
+	if movementRate > 255 then
+		movementRate = 255
+	end
+	IEex_WriteByte(animationData + 0x7, movementRate)
 end
 
 function MESTATSC(effectData, creatureData, isSpecialCall)
@@ -5396,6 +5421,63 @@ function IEex_Enlarge(actorID)
 	IEex_WriteDword(animationData + 0x1322, 1)
 	IEex_WriteDword(animationData + 0x13FC, 1)
 	IEex_WriteDword(animationData + 0x1444, 1)
+end
+
+function MEDARKNE(effectData, creatureData)
+	IEex_WriteDword(effectData + 0x110, 1)
+	if IEex_CheckForEffectRepeat(effectData, creatureData) then return end
+	local targetID = IEex_GetActorIDShare(creatureData)
+	local sourceID = IEex_ReadDword(effectData + 0x10C)
+	local timing = IEex_ReadDword(effectData + 0x20)
+	local duration = IEex_ReadDword(effectData + 0x24)
+	local time_applied = IEex_ReadDword(effectData + 0x68)
+	if timing == 4096 then
+		timing = 0
+		duration = math.floor((duration - time_applied) / 15)
+	end
+	local weaponRES = IEex_ReadLString(effectData + 0x18, 8)
+	local savingthrow = IEex_ReadDword(effectData + 0x3C)
+	local casterClass = IEex_ReadByte(effectData + 0xC5, 0x0)
+	local internalFlags = IEex_ReadDword(effectData + 0xD4)
+	local darkvisionLevel = 0
+	local animation = IEex_ReadDword(creatureData + 0x5C4)
+	local racePlusSub = IEex_ReadByte(creatureData + 0x26, 0x0) * 0x10000 + IEex_GetActorStat(targetID, 93)
+	if ex_darkvision_animations[animation] ~= nil then
+		darkvisionLevel = ex_darkvision_animations[animation]
+	elseif ex_darkvision_races[racePlusSub] ~= nil then
+		darkvisionLevel = ex_darkvision_races[racePlusSub]
+	elseif IEex_GetActorState(targetID,0x20000) then
+		darkvisionLevel = 1
+	end
+	local attackPenalty = ex_darkvision_attack_penalty[darkvisionLevel]
+	if attackPenalty == -99 then
+		IEex_ApplyEffectToActor(targetID, {
+["opcode"] = 74,
+["target"] = 2,
+["timing"] = timing,
+["duration"] = duration,
+["parent_resource"] = IEex_ReadLString(effectData + 0x90, 8),
+["casterlvl"] = IEex_ReadDword(effectData + 0xC4),
+["internal_flags"] = internalFlags,
+["source_target"] = targetID,
+["source_id"] = sourceID,
+})
+	elseif attackPenalty > 0 then
+		IEex_ApplyEffectToActor(targetID, {
+["opcode"] = 54,
+["target"] = 2,
+["timing"] = timing,
+["duration"] = duration,
+["parameter1"] = attackPenalty,
+["parent_resource"] = IEex_ReadLString(effectData + 0x90, 8),
+["casterlvl"] = IEex_ReadDword(effectData + 0xC4),
+["internal_flags"] = internalFlags,
+["source_target"] = targetID,
+["source_id"] = sourceID,
+})
+	end
+
+
 end
 
 function MEPOLYMO(effectData, creatureData)
@@ -8670,6 +8752,12 @@ function IEex_EvaluatePermanentRepeatingEffects(creatureData)
 					IEex_WriteWord(staticData + 0x17E, staticFrame - 1)
 				end
 			end)
+		end
+		if IEex_ReadWord(creatureData + 0x476, 0x0) == 97 then
+			local actionParameter1 = IEex_ReadDword(creatureData + 0x52C)
+			if actionParameter1 >= 15 and actionParameter1 <= 17 and IEex_ReadDword(creatureData + 0x4AD8 + actionParameter1 * 0x4) <= 0 then
+				IEex_WriteWord(creatureData + 0x476, 0)
+			end
 		end
 --[[
 		if tick % 3 == 0 and not ex_done_reading then

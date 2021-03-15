@@ -1834,6 +1834,9 @@ COPY_EXISTING ~USGOLADA.cre~ ~override~
 	SAY NAME1 @23014
 	SAY NAME2 @23014
 
+COPY_EXISTING ~52PROXI.cre~ ~override~
+	LPF IWD2_ADD_CRE_EFFECT INT_VAR opcode=288 target=1 timing=9 parameter1=44 parameter2=246 special=66 savingthrow=0x1010100 END
+
 COPY_EXISTING ~53CELEDR.cre~ ~override~
 	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelwizard=13 END
 	READ_LONG feats2 ulgiash
@@ -2246,6 +2249,7 @@ COPY_EXISTING ~60ATALA.cre~ ~override~
 	WRITE_BYTE skillconcentration 27
 	WRITE_BYTE skillspellcraft 27
 	WRITE_BYTE challengerating 21
+	LPF	IWD2_REMOVE_CRE_ITEM STR_VAR item=~11VEIRA~ END
 	LPF	IWD2_REMOVE_SPELLS_KNOWN STR_VAR class=~wizard~ END
 	LPF	IWD2_CRE_SPELL INT_VAR num=6 STR_VAR class=~wizard~ resource=~SPWI112~ END
 	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~SPWI212~ END
@@ -2272,6 +2276,7 @@ COPY_EXISTING ~60INHEIN.cre~ ~override~
 	WRITE_BYTE skillconcentration 27
 	WRITE_BYTE skillspellcraft 27
 	WRITE_BYTE challengerating 21
+	LPF	IWD2_REMOVE_CRE_ITEM STR_VAR item=~11VEIRA~ END
 	LPF	IWD2_REMOVE_SPELLS_KNOWN STR_VAR class=~cleric~ END
 	LPF	IWD2_REMOVE_SPELLS_KNOWN STR_VAR class=~domain~ END
 	LPF	IWD2_CRE_SPELL INT_VAR num=3 STR_VAR class=~cleric~ resource=~SPPR301~ END
@@ -2289,13 +2294,15 @@ COPY_EXISTING ~60JAIGER.cre~ ~override~
 	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelranger=21 STR_VAR updatehp=~max~ END
 	WRITE_ASCII combatscript ~00AATGN~ #8
 	WRITE_BYTE dexterity 28
+	WRITE_BYTE proficiencybow 2
 	WRITE_BYTE challengerating 21
-	LPF	IWD2_REMOVE_CRE_ITEM STR_VAR item=~001D6P 00CWARWA~ END
+	LPF	IWD2_REMOVE_CRE_ITEM STR_VAR item=~001D6P 00CWARWA 11VEIRA~ END
 	LPF	IWD2_ADD_CRE_ITEM INT_VAR equip=1 STR_VAR item=~USCWJAI1~ slot=~weapon1~ mode=~replace~ END
-	LPF ADD_CRE_EXTENDED_FEAT INT_VAR points=1 STR_VAR name=~ME_MANYSHOT~ END
+	LPF ADD_CRE_EXTENDED_FEAT INT_VAR points=2 STR_VAR name=~ME_MANYSHOT~ END
 
 COPY_EXISTING ~60KAERVA.cre~ ~override~
 	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelfighter=21 STR_VAR updatehp=~max~ END
+	LPF	IWD2_REMOVE_CRE_ITEM STR_VAR item=~11VEIRA~ END
 	WRITE_ASCII combatscript ~00AATGN~ #8
 	WRITE_BYTE challengerating 21
 
@@ -2309,6 +2316,7 @@ COPY_EXISTING ~60KAIRN.cre~ ~override~
 	WRITE_BYTE proficiencyhammer 2
 	WRITE_BYTE proficiencymissile 2
 	WRITE_BYTE challengerating 21
+	LPF	IWD2_REMOVE_CRE_ITEM STR_VAR item=~11VEIRA~ END
 	LPF	IWD2_ADD_CRE_ITEM INT_VAR equip=1 STR_VAR item=~USCWKAI2~ slot=~weapon2~ mode=~replace~ END
 	LPF	IWD2_ADD_CRE_ITEM INT_VAR equip=1 STR_VAR item=~USCWKAI1~ slot=~weapon1~ mode=~replace~ END
 	LPF ADD_CRE_EXTENDED_FEAT INT_VAR points=1 STR_VAR name=~ME_TERRIFYING_RAGE~ END
@@ -2327,6 +2335,7 @@ COPY_EXISTING ~60KHREE.cre~ ~override~
 	ulgiash|=0x80
 	WRITE_LONG feats3 ulgiash
 	WRITE_BYTE challengerating 21
+	LPF	IWD2_REMOVE_CRE_ITEM STR_VAR item=~11VEIRA~ END
 	LPF ADD_CRE_EXTENDED_FEAT INT_VAR points=5 STR_VAR name=~ME_IMPROVED_UNARMED_ABILITIES~ END
 
 COPY_EXISTING ~60GUARDI.cre~ ~override~
