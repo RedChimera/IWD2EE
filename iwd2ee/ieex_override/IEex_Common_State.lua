@@ -110,7 +110,7 @@ function IEex_FunctionLog(message)
 end
 
 function IEex_Error(message)
-	error(debug.traceback(message))
+	error(message)
 end
 
 function IEex_TracebackPrint(message, levelMod)
@@ -268,7 +268,7 @@ function IEex_SplitByChar(string, char)
 end
 
 function IEex_Split(text, splitBy, usePattern, allowEmptyCapture)
-	
+
 	local toReturn = {}
 	local matchedPatterns = {}
 
@@ -586,7 +586,9 @@ function IEex_SanitizeAssembly(assembly)
 			["index"] = 0,
 			["inComment"] = false,
 		},
-		["unroll"] = {},
+		["unroll"] = {
+			["forceIgnore"] = false,
+		},
 		["write"] = {},
 	}
 
@@ -594,7 +596,7 @@ function IEex_SanitizeAssembly(assembly)
 
 	-- For some reason unrollTextArg has to be split up so it can see itself
 	local unrollTextArg
-	unrollTextArg = function(arg)
+	unrollTextArg = function(arg, nextArg)
 
 		IEex_SplitByWhitespaceProcess(arg, function(section)
 
@@ -630,10 +632,20 @@ function IEex_SanitizeAssembly(assembly)
 						end
 
 						local args = IEex_Split(section:sub(macroArgsStart + 1, macroArgsEnd - 1), ",")
+						for i = 1, #args do
+							local funcArg = args[i]
+							if funcArg:sub(1, 1) == "$" then
+								if type(nextArg) ~= "table" then IEex_Error("Invalid variable-arg") end
+								if #nextArg < i then IEex_Error("Invalid variable-arg") end
+								args[i] = nextArg[tonumber(funcArg:sub(2))]
+								nextArg.skipVarArg = true
+							end
+						end
+
 						local unrollResult = unrollFunc(state, args)
-						
+
 						if unrollResult then
-							
+
 							addMacroTextToStructure = false
 							local unrollResultType = type(unrollResult)
 
@@ -645,7 +657,9 @@ function IEex_SanitizeAssembly(assembly)
 									if valType == "string" then
 										unrollTextArg(val)
 									elseif valType == "table" then
-										table.insert(sanitizedStructure, val)
+										if not state.unroll.forceIgnore then
+											table.insert(sanitizedStructure, val)
+										end
 									else
 										IEex_Error("Invalid macro return type \""..valType.."\" for macro \""..macroName.."\"!")
 									end
@@ -661,37 +675,45 @@ function IEex_SanitizeAssembly(assembly)
 						if lengthType ~= "function" and lengthType ~= "number" and lengthType ~= "nil" then
 							IEex_Error("Invalid macro length type \""..lengthType.."\" for macro \""..macroName.."\"!")
 						end
-						table.insert(sanitizedStructure, section)
+						if not state.unroll.forceIgnore then
+							table.insert(sanitizedStructure, section)
+						end
 					end
 				else
 					IEex_Error("Invalid macro type \""..macroType.."\" for macro \""..macroName.."\"!")
 				end
-			else
+			elseif not state.unroll.forceIgnore then
 				table.insert(sanitizedStructure, section)
 			end
 		end)
 	end
 
-	for _, arg in ipairs(assembly) do
+	local limit = #assembly
+	for i = 1, limit do
+		local arg = assembly[i]
 		local argType = type(arg)
 		if argType == "string" then
-			unrollTextArg(arg)
+			unrollTextArg(arg, i < limit and assembly[i + 1] or nil)
 		elseif argType == "table" then
-			local argSize = #arg
-			if argSize == 2 or argSize == 3 then
-				local relativeFromOffset = arg[3]
-				if type(arg[1]) == "number" and type(arg[2]) == "number"
-					and (not relativeFromOffset or type(relativeFromOffset) == "number")
-				then
-					table.insert(sanitizedStructure, arg)
+			if not arg.skipVarArg then
+				local argSize = #arg
+				if argSize == 2 or argSize == 3 then
+					local relativeFromOffset = arg[3]
+					if type(arg[1]) == "number" and type(arg[2]) == "number"
+						and (not relativeFromOffset or type(relativeFromOffset) == "number")
+					then
+						if not state.unroll.forceIgnore then
+							table.insert(sanitizedStructure, arg)
+						end
+					else
+						IEex_Error("Variable write argument included invalid data-type!")
+					end
 				else
-					IEex_Error("Variable write argument included invalid data-type!")
+					IEex_Error("Variable write argument did not have at 2-3 args!")
 				end
-			else
-				IEex_Error("Variable write argument did not have at 2-3 args!")
 			end
 		else
-			IEex_Error("Illegal data-type in assembly declaration!")
+			IEex_Error("Arg with illegal data-type in assembly declaration: \""..tostring(arg).."\"")
 		end
 	end
 
@@ -989,7 +1011,7 @@ function IEex_CalcLabelAddress(state, toFind)
 		end
 
 		if found then return curAddress end
-		
+
 	end
 end
 
@@ -1217,6 +1239,14 @@ function IEex_HookJump(address, restoreSize, assembly)
 	IEex_WriteAssembly(address, {"!jmp_dword", {hookCode, 4, 4}})
 end
 
+function IEex_HookJumpOnSuccess(address, assembly)
+	local jmpFailDest = address + 6
+	local jmpDest = jmpFailDest + IEex_ReadDword(address + 2)
+	IEex_DefineAssemblyLabel("jmp_success", jmpDest)
+	IEex_DefineAssemblyLabel("jmp_fail", jmpFailDest)
+	IEex_WriteAssembly(address + 2, {{IEex_WriteAssemblyAuto(assembly), 4, 4}})
+end
+
 function IEex_HookJumpNoReturn(address, assembly)
 	IEex_WriteAssembly(address, {"!jmp_dword", {IEex_WriteAssemblyAuto(assembly), 4, 4}})
 end
@@ -1247,11 +1277,6 @@ function IEex_GenLuaCall(funcName, meta)
 		!call >_lua_toboolean
 		!add_esp_byte 08
 		!push_eax
-		!push_byte FE
-		!push_ebx
-		!call >_lua_settop
-		!add_esp_byte 08
-		!pop_eax
 	]]}
 
 	local returnNumberTemplate = {[[
@@ -1261,16 +1286,9 @@ function IEex_GenLuaCall(funcName, meta)
 		!add_esp_byte 08
 		!call >__ftol2_sse
 		!push_eax
-		!push_byte FE
-		!push_ebx
-		!call >_lua_settop
-		!add_esp_byte 08
-		!pop_eax
 	]]}
 
-	local numRet = ((meta or {}).returnType) and 1 or 0
 	local numArgs = #((meta or {}).args or {})
-
 	local genArgPushes1 = function()
 
 		local toReturn = {}
@@ -1286,6 +1304,85 @@ function IEex_GenLuaCall(funcName, meta)
 		end
 
 		return IEex_FlattenTable(toReturn)
+	end
+
+	local errorFunc
+	local errorFuncLuaStackPopAmount
+	if (meta or {}).errorFunction then
+		errorFunc = meta.errorFunction.func
+		errorFuncLuaStackPopAmount = errorFunc and (1 + (meta.errorFunction.precursorAmount or 0)) or 0
+	else
+		errorFunc = {[[
+			!push_dword ]], {IEex_WriteStringAuto("debug"), 4}, [[
+			!push_ebx
+			!call >_lua_getglobal
+			!add_esp_byte 08
+
+			!push_dword ]], {IEex_WriteStringAuto("traceback"), 4}, [[
+			!push_byte FF
+			!push_ebx
+			!call >_lua_getfield
+			!add_esp_byte 0C
+		]]}
+		errorFuncLuaStackPopAmount = 2
+	end
+
+	local genFunc = function()
+		if funcName then
+			if (meta or {}).functionChunk then IEex_Error("[IEex_GenLuaCall] funcName and meta.functionChunk are exclusive") end
+			return {[[
+				!push_dword ]], {IEex_WriteStringAuto(funcName), 4}, [[
+				!push_ebx
+				!call >_lua_getglobal
+				!add_esp_byte 08
+			]]}
+		elseif meta and meta.functionChunk then
+			if numArgs > 0 then IEex_Error("[IEex_GenLuaCall] Lua chunks can't be passed arguments") end
+			return IEex_FlattenTable({
+				meta.functionChunk,
+				{[[
+					!push_ebx
+					!call >_luaL_loadstring
+					!add_esp_byte 08
+					!test_eax_eax
+					!jz_dword >IEex_GenLuaCall_loadstring_no_error
+
+					!IF($1) ]], {errorFunc ~= nil}, [[
+						; Call error function with loadstring message ;
+						!push_byte 00
+						!push_byte 01
+						!push_byte 01
+						!push_ebx
+						!call >_lua_pcall
+						!add_esp_byte 10
+						!push_ebx
+						!call >IEex_CheckCallError
+						!test_eax_eax
+						!jnz_dword >IEex_GenLuaCall_error_in_error_handling
+						!push_ebx
+						!call >IEex_PrintPopLuaString
+
+						@IEex_GenLuaCall_error_in_error_handling
+						; Clear error function precursors off of Lua stack ;
+						!push_byte ]], {-errorFuncLuaStackPopAmount, 1}, [[
+						!push_ebx
+						!call >_lua_settop
+						!add_esp_byte 08
+						!jmp_dword >call_error
+					!ENDIF()
+
+					!IF($1) ]], {errorFunc == nil}, [[
+						!push_ebx
+						!call >IEex_PrintPopLuaString
+						!jmp_dword >call_error
+					!ENDIF()
+
+					@IEex_GenLuaCall_loadstring_no_error
+				]]},
+			})
+		else
+			IEex_Error("[IEex_GenLuaCall] meta.functionChunk must be defined when funcName = nil")
+		end
 	end
 
 	local genArgPushes2 = function()
@@ -1316,24 +1413,22 @@ function IEex_GenLuaCall(funcName, meta)
 		elseif returnType == IEex_LuaCallReturnType.Number then
 			return returnNumberTemplate
 		else
-			IEex_Error("Invalid")
+			IEex_Error("[IEex_GenLuaCall] meta.returnType invalid")
 		end
 	end
 
+	local numRet = (meta or {}).returnType and 1 or 0
 	return IEex_FlattenTable({
 		genArgPushes1(),
 		{[[
 			!call >IEex_GetLuaState
 			!mov_ebx_eax
-
-			!push_dword ]], {IEex_WriteStringAuto(funcName), 4}, [[
-			!push_ebx
-			!call >_lua_getglobal
-			!add_esp_byte 08
 		]]},
+		errorFunc or {},
+		genFunc(),
 		genArgPushes2(),
 		{[[
-			!push_byte 00
+			!push_byte ]], {errorFunc and -(2 + numArgs) or 0, 1}, [[
 			!push_byte ]], {numRet, 1}, [[
 			!push_byte ]], {numArgs, 1}, [[
 			!push_ebx
@@ -1342,9 +1437,35 @@ function IEex_GenLuaCall(funcName, meta)
 			!push_ebx
 			!call >IEex_CheckCallError
 			!test_eax_eax
-			!jnz_dword >call_error
+
+			!IF($1) ]], {errorFunc ~= nil}, [[
+				!jz_dword >IEex_GenLuaCall_no_error
+				; Clear error function and its precursors off of Lua stack ;
+				!push_byte ]], {-(1 + errorFuncLuaStackPopAmount), 1}, [[
+				!push_ebx
+				!call >_lua_settop
+				!add_esp_byte 08
+				!jmp_dword >call_error
+			!ENDIF()
+
+			!IF($1) ]], {errorFunc == nil}, [[
+				!jnz_dword >call_error
+			!ENDIF()
+
+			@IEex_GenLuaCall_no_error
 		]]},
 		genReturnHandling(),
+		{[[
+			; Clear return values and error function (+ its precursors) off of Lua stack ;
+			!push_byte ]], {-(1 + errorFuncLuaStackPopAmount + numRet), 1}, [[
+			!push_ebx
+			!call >_lua_settop
+			!add_esp_byte 08
+
+			!IF($1) ]], {numRet > 0}, [[
+				!pop_eax
+			!ENDIF()
+		]]},
 	})
 end
 
