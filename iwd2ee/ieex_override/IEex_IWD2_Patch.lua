@@ -5,6 +5,7 @@ IEex_InSyncState = true
 
 	dofile("override/IEex_Core_Patch.lua")
 
+	dofile("override/IEex_Trigger_Patch.lua")
 	dofile("override/IEex_Action_Patch.lua")
 	dofile("override/IEex_Creature_Patch.lua")
 	dofile("override/IEex_Opcode_Patch.lua")

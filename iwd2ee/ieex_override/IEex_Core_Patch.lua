@@ -57,19 +57,13 @@
 		!ret
 	]]})
 
-	-------------------------
-	-- IEex_CheckCallError --
-	-------------------------
+	----------------------------
+	-- IEex_PrintErrorMessage --
+	----------------------------
 
 	IEex_WriteAssemblyAuto({[[
 
-		$IEex_CheckCallError
-
-		!test_eax_eax
-		!jnz_dword >error
-		!ret_word 04 00
-
-		@error
+		$IEex_PrintPopLuaString
 		!build_stack_frame
 
 		!push_byte 00
@@ -103,8 +97,26 @@
 		!call >_lua_settop
 		!add_esp_byte 08
 
-		!mov_eax #1
 		!destroy_stack_frame
+		!ret_word 04 00
+	]]})
+
+	-------------------------
+	-- IEex_CheckCallError --
+	-------------------------
+
+	IEex_WriteAssemblyAuto({[[
+
+		$IEex_CheckCallError
+		!test_eax_eax
+		!jnz_dword >error
+		!ret_word 04 00
+
+		@error
+		!push_[esp+byte] 04
+		!call >IEex_PrintPopLuaString
+
+		!mov_eax #1
 		!ret_word 04 00
 	]]})
 
@@ -536,59 +548,28 @@
 	---------------------------------------------------------
 
 	local niceTryCheaterCall = 0x58398E
-	local niceTryCheaterHook = IEex_WriteAssemblyAuto({[[
-
-		!push_all_registers_iwd2
-
-		!call >IEex_GetLuaState
-		!mov_ebx_eax
-
-		!add_esp_byte 08
-		!push_ebp
-		!push_ebx
-		; TODO: Cache Lua chunks ;
-		!call >_luaL_loadstring
-		!add_esp_byte 08
-
-		!test_eax_eax
-		!jnz_dword >error
-
-		!push_byte 00
-		!push_byte 00
-		!push_byte 00
-		!push_ebx
-		!call >_lua_pcall
-		!add_esp_byte 10
-
-		!test_eax_eax
-		!jnz_dword >error
-		!jmp_dword >return
-
-		@error
-		!push_byte 00
-		!push_byte FF
-		!push_ebx
-		!call >_lua_tolstring
-		!add_esp_byte 0C
-
-		!push_eax
-		!push_byte FE
-		!push_ebx
-		!call >_lua_settop
-		!add_esp_byte 08
-		!pop_eax
-
-		!push_ecx
-		!mov_ecx_esp
-		!push_eax
-		!call :7FCC88
-		!call :4EC1C0
-
-		@return
-		!pop_all_registers_iwd2
-		!jmp_dword ]], {niceTryCheaterCall + 0x5, 4, 4}, [[
-
-	]]})
+	local niceTryCheaterHook = IEex_WriteAssemblyAuto(IEex_FlattenTable({
+		{[[
+			!add_esp_byte 08
+			!push_all_registers_iwd2
+		]]},
+		IEex_GenLuaCall(nil, {
+			["functionChunk"] = {"!push(ebp)"},
+			["errorFunction"] = {
+				["func"] = {[[
+					!push_dword ]], {IEex_WriteStringAuto("IEex_Extern_ConsoleErrorFunc"), 4}, [[
+					!push_ebx
+					!call >_lua_getglobal
+					!add_esp_byte 08
+				]]},
+			}
+		}),
+		{[[
+			@call_error
+			!pop_all_registers_iwd2
+			!jmp_dword ]], {niceTryCheaterCall + 0x5, 4, 4}, [[
+		]]},
+	}))
 	IEex_WriteAssembly(niceTryCheaterCall, {"!jmp_dword", {niceTryCheaterHook, 4, 4}})
 	IEex_WriteAssembly(0x583996, {"!nop !nop !nop !nop !nop"})
 

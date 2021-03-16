@@ -1,7 +1,7 @@
 
 (function()
 
-	local mainStatus, mainError = pcall(function()
+	local mainStatus, mainError = xpcall(function()
 
 		dofile("override/IEex_Common_State.lua")
 		dofile("override/IEex_Common_Patch.lua")
@@ -16,10 +16,10 @@
 		dofile("override/IEex_IWD2_State.lua")
 		dofile("override/IEex_IWD2_Patch.lua")
 		print("IEex startup completed successfully!")
-	end)
+	end, debug.traceback)
 
 	if not mainStatus then
-		print(mainError)
+		print("ERROR: "..mainError)
 		IEex_MessageBox("ERROR: "..mainError)
 	end
 

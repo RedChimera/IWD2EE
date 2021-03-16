@@ -56,6 +56,12 @@ function IEex_Extern_CreateAsyncState()
 
 end
 
+function IEex_Extern_ConsoleErrorFunc(message)
+	message = debug.traceback(message, 2)
+	IEex_DisplayString(tostring(message))
+	return message
+end
+
 function IEex_Extern_AssertFailed(assertStringPtr)
 	print("["..IEex_GetMilliseconds().."] IEex detected assertion failure; dumping info:\n    "..IEex_ReadLString(assertStringPtr, 1024):gsub("\n", "\n    "))
 end

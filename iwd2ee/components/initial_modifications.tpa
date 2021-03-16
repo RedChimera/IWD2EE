@@ -8,7 +8,7 @@ COPY ~%mod_folder%/ieex_override~ ~override~
 COPY ~%mod_folder%/ieex_main_folder~ ~./~
 INCLUDE ~%mod_folder%/components/quickloot.tpa~
 
-ACTION_FOR_EACH file IN ACTION BEGIN
+ACTION_FOR_EACH file IN ACTION TRIGGER BEGIN
 	COPY ~%mod_folder%/patches/%file%.IDS~ ~%mod_folder%/patches~
 		COUNT_2DA_ROWS 2 rows
 		FOR (i = 0; i <= rows; ++i) BEGIN

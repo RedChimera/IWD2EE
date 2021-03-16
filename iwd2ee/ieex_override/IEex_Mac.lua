@@ -944,4 +944,17 @@ IEex_GlobalAssemblyMacros = {
 			state.unroll.nextEspAdjustment = state.unroll.markedEspAdjustment
 		end,
 	},
+
+	["IF"] = {
+		["unroll"] = function(state, args)
+			if not args[1] then
+				state.unroll.forceIgnore = true
+			end
+		end,
+	},
+	["ENDIF"] = {
+		["unroll"] = function(state, args)
+			state.unroll.forceIgnore = false
+		end
+	},
 }
