@@ -25,6 +25,7 @@ function IEex_Extern_SetupAsyncState(asyncSharedMemory)
 	-- Expose standard IEex functions to the Async state from the restored labels
 	IEex_ExposeToLua(IEex_Label("IEex_Call"), "IEex_Call")
 	IEex_ExposeToLua(IEex_Label("IEex_WriteString"), "IEex_WriteString")
+	IEex_ExposeToLua(IEex_Label("IEex_RunWithStack"), "IEex_RunWithStack")
 	IEex_ExposeToLua(IEex_Label("IEex_WriteLString"), "IEex_WriteLString")
 	IEex_ExposeToLua(IEex_Label("IEex_ReadLString"), "IEex_ReadLString")
 	IEex_ExposeToLua(IEex_Label("IEex_ReadUserdata"), "IEex_ReadUserdata")

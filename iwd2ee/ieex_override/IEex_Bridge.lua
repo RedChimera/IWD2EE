@@ -6,6 +6,7 @@ IEex_Bridge_LockFunctions = {
 	["IEex_Helper_PrintBridgeData"]     = IEex_Helper_PrintBridgeData,
 	["IEex_Helper_SetBridge"]           = IEex_Helper_SetBridge,
 	["IEex_Helper_GetBridge"]           = IEex_Helper_GetBridge,
+	["IEex_Helper_GetBridgePtr"]        = IEex_Helper_GetBridgePtr,
 	["IEex_Helper_IterateBridge"]       = IEex_Helper_IterateBridge,
 	["IEex_Helper_GetBridgeNumInts"]    = IEex_Helper_GetBridgeNumInts,
 	["IEex_Helper_EraseBridgeKey"]      = IEex_Helper_EraseBridgeKey,
@@ -20,7 +21,7 @@ IEex_Bridge_NoLockFunctions = {
 	["IEex_Helper_ReadDataFromBridge"]  = IEex_Helper_ReadDataFromBridgeNL,
 	["IEex_Helper_PrintBridgeData"]     = IEex_Helper_PrintBridgeDataNL,
 	["IEex_Helper_SetBridge"]           = IEex_Helper_SetBridgeNL,
-	["IEex_Helper_GetBridge"]           = IEex_Helper_GetBridgeNL,
+	["IEex_Helper_GetBridgePtr"]        = IEex_Helper_GetBridgePtrNL,
 	["IEex_Helper_IterateBridge"]       = IEex_Helper_IterateBridgeNL,
 	["IEex_Helper_GetBridgeNumInts"]    = IEex_Helper_GetBridgeNumIntsNL,
 	["IEex_Helper_EraseBridgeKey"]      = IEex_Helper_EraseBridgeKeyNL,
@@ -104,31 +105,35 @@ function IEex_AssertThread(thread, once)
 		if currentThread == asyncThread then thread = IEex_Thread.Async end
 	end
 
-	local tripped = false
-
 	if thread == IEex_Thread.Sync then
 		if syncThread ~= -1 then
 			if currentThread ~= syncThread then
 				printMessage("[ASSERT FAILED] Not in Sync THREAD", 1)
-				tripped = true
+				return true
 			end
 			if not IEex_InSyncState then
 				printMessage("[ASSERT FAILED] Not in Sync STATE", 2)
-				tripped = true
+				return true
 			end
+		else
+			printMessage("[ASSERT FAILED] Sync THREAD not yet discovered", 4)
+			return true
 		end
 	elseif thread == IEex_Thread.Async then
 		if asyncThread ~= -1 then
 			if currentThread ~= asyncThread then
 				printMessage("[ASSERT FAILED] Not in Async THREAD", 3)
-				tripped = true
+				return true
 			end
 			if not IEex_InAsyncState then
 				printMessage("[ASSERT FAILED] Not in Async STATE", 4)
-				tripped = true
+				return true
 			end
+		else
+			printMessage("[ASSERT FAILED] Async THREAD not yet discovered", 4)
+			return true
 		end
 	end
 
-	return tripped
+	return false
 end

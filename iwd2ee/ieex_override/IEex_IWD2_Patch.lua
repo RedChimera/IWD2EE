@@ -10,6 +10,7 @@ IEex_InSyncState = true
 	dofile("override/IEex_Creature_Patch.lua")
 	dofile("override/IEex_Opcode_Patch.lua")
 	dofile("override/IEex_Gui_Patch.lua")
+	dofile("override/IEex_Render_Patch.lua")
 	dofile("override/IEex_Key_Patch.lua")
 	dofile("override/IEex_Projectile_Patch.lua")
 	dofile("override/IEex_Debug_Patch.lua")

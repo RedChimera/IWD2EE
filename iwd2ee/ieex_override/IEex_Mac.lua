@@ -17,24 +17,35 @@ IEex_RegWordToOrdinal = {
 	["bx"] = 3,
 }
 
-function IEex_EncodeGetImmediateLength(immediate)
-	local absoluteImmediate = math.abs(immediate)
-	if immediate >= 0 then
-		if absoluteImmediate <= 0x7F then
-			return 1
-		elseif absoluteImmediate <= 0x7FFFFFFF then
-			return 4
-		else
-			IEex_Error("Invalid RM")
-		end
+function IEex_GetImmediateLength(immediate)
+
+	local absoluteImmediate = bit.band(immediate, 0x80000000) ~= 0x0
+		and bit.bnot(immediate) + 1
+		or immediate + 1
+
+	if absoluteImmediate <= 0x80 then
+		return 1
+	elseif absoluteImmediate <= 0x8000 then
+		return 2
+	elseif absoluteImmediate <= 0x80000000 then
+		return 4
 	else
-		if absoluteImmediate <= 0x80 then
-			return 1
-		elseif absoluteImmediate <= 0x80000000 then
-			return 4
-		else
-			IEex_Error("Invalid RM")
-		end
+		IEex_Error("Invalid")
+	end
+end
+
+function IEex_EncodeGetImmediateLength(immediate)
+
+	local absoluteImmediate = bit.band(immediate, 0x80000000) ~= 0x0
+		and bit.bnot(immediate) + 1
+		or immediate + 1
+
+	if absoluteImmediate <= 0x80 then
+		return 1
+	elseif absoluteImmediate <= 0x80000000 then
+		return 4
+	else
+		IEex_Error("Invalid RM")
 	end
 end
 
@@ -122,7 +133,7 @@ function IEex_EncodeRM(args, func)
 		-- Indirect addressing, complex encoding
 		argsRMLen = #argsRM
 		if argsRMLen < 3 or (argsRM:sub(1, 1) ~= "[" or argsRM:sub(argsRMLen) ~= "]") then
-			IEex_Error("Invalid RM")
+			IEex_Error("Invalid RM: \""..argsRM.."\"")
 		end
 
 		local plusMinusSplit, matchedPatterns = IEex_Split(argsRM:sub(2, argsRMLen - 1), "[%-+]", true, true)
@@ -300,8 +311,8 @@ function IEex_EncodeRMOpcode(args, encodingArgs)
 	local opcode = encodingArgs.opcode
 	if not opcode then IEex_Error("opcode must be defined") end
 
-	if (not firstOrdinal) and (not firstWordOrdinal) then
-		local numAttempt = tonumber(secondArg or "", 16)
+	local attemptAsImmediate = function(arg)
+		local numAttempt = type(arg) == "number" and arg or tonumber(arg or "", 16)
 		if numAttempt then
 
 			local immediateOpcodes = encodingArgs.immediateOpcodes
@@ -329,15 +340,25 @@ function IEex_EncodeRMOpcode(args, encodingArgs)
 			encodingArgs.opcode = foundImmediateOpcodeDef.opcode
 			encodingArgs.opcodeExtension = foundImmediateOpcodeDef.extension
 			encodingArgs.immediate = numAttempt
-		else
+			return true
+		end
+		return false
+	end
+
+	if (not firstOrdinal) and (not firstWordOrdinal) then
+		if not attemptAsImmediate(secondArg) then
 			encodingArgs.reg = secondArg
 		end
 		encodingArgs.rm = firstArg
 	else
-		-- Set direction bit of opcode
-		encodingArgs.opcode = (encodingArgs.noDirectionBit) and (opcode) or (opcode + 0x2)
-		encodingArgs.reg = firstArg
-		encodingArgs.rm = secondArg
+		if not attemptAsImmediate(secondArg) then
+			-- Set direction bit of opcode
+			encodingArgs.opcode = (encodingArgs.noDirectionBit) and (opcode) or (opcode + 0x2)
+			encodingArgs.reg = firstArg
+			encodingArgs.rm = secondArg
+		else
+			encodingArgs.rm = firstArg
+		end
 	end
 
 	local toReturn = {}
@@ -391,6 +412,7 @@ IEex_GlobalAssemblyMacros = {
 	["cmovnz_edi_ecx"] = "0F 45 F9",
 	["cmp_[dword]_byte"] = "83 3D",
 	["cmp_[eax+dword]_byte"] = "80 B8",
+	["cmp_[eax]_byte"] = "83 38",
 	["cmp_[ebp+byte]_byte"] = "83 7D",
 	["cmp_[ebp+byte]_dword"] = "81 7D",
 	["cmp_[ebp+byte]_ebx"] = "39 5D",
@@ -563,6 +585,7 @@ IEex_GlobalAssemblyMacros = {
 	["mov_al_[esi+byte]"] = "8A 46",
 	["mov_al_[esi+dword]"] = "8A 86",
 	["mov_al_[esi]"] = "8A 46 00",
+	["mov_al_[esp+byte]"] = "8A 44 24",
 	["mov_ax_[ecx+byte]"] = "66 8B 41",
 	["mov_bx"] = "66 BB",
 	["mov_byte:[ebp+byte]_byte"] = "C6 45",
@@ -857,13 +880,27 @@ IEex_GlobalAssemblyMacros = {
 	["push"] = {
 		["unroll"] = function(state, args)
 			state.unroll.markedEspAdjustment = (state.unroll.markedEspAdjustment or 0) + 4
-			local toPushOrdinal = IEex_RegToOrdinal[args[1]]
-			if toPushOrdinal then
-				return {{0x50 + toPushOrdinal, 1}}
+			local firstArg = args[1]
+			local toPushOrdinal = IEex_RegToOrdinal[firstArg]
+			if toPushOrdinal then return {{0x50 + toPushOrdinal, 1}} end
+			local numAttempt = type(firstArg) == "number" and firstArg or tonumber(firstArg, 16)
+			if numAttempt then
+				if IEex_GetImmediateLength(numAttempt) == 1 then
+					return {{0x6A, 1}, {numAttempt, 1}}
+				else
+					local toReturn = {{0x68, 1}}
+					local i = 2
+					IEex_ProcessNumberAsBytes(numAttempt, 4, function(byte)
+						toReturn[i] = {byte, 1}
+						i = i + 1
+					end)
+					return toReturn
+				end
 			else
 				return IEex_EncodeRMOpcode(args, {
 					["opcode"] = 0xFF,
 					["opcodeExtension"] = 6,
+					["offsetAdjustment"] = IEex_GetOffsetAdjustment(state),
 				})
 			end
 		end,
@@ -917,6 +954,62 @@ IEex_GlobalAssemblyMacros = {
 		end,
 	},
 
+	["add"] = {
+		["unroll"] = function(state, args)
+			return IEex_EncodeRMOpcode(args, {
+				["opcode"] = 0x3,
+				["offsetAdjustment"] = IEex_GetOffsetAdjustment(state),
+				["immediateOpcodes"] = {
+					["imm16/32"] = {["opcode"] = 0x81, ["extension"] = 0},
+					["imm8"] = {["opcode"] = 0x83, ["extension"] = 0},
+				},
+				["noDirectionBit"] = true,
+			})
+		end,
+	},
+
+	["and"] = {
+		["unroll"] = function(state, args)
+			return IEex_EncodeRMOpcode(args, {
+				["opcode"] = 0x23,
+				["offsetAdjustment"] = IEex_GetOffsetAdjustment(state),
+				["immediateOpcodes"] = {
+					["imm16/32"] = {["opcode"] = 0x81, ["extension"] = 4},
+					["imm8"] = {["opcode"] = 0x83, ["extension"] = 4},
+				},
+				["noDirectionBit"] = true,
+			})
+		end,
+	},
+
+	["sub"] = {
+		["unroll"] = function(state, args)
+			return IEex_EncodeRMOpcode(args, {
+				["opcode"] = 0x2B,
+				["offsetAdjustment"] = IEex_GetOffsetAdjustment(state),
+				["immediateOpcodes"] = {
+					["imm16/32"] = {["opcode"] = 0x81, ["extension"] = 5},
+					["imm8"] = {["opcode"] = 0x83, ["extension"] = 5},
+				},
+				["noDirectionBit"] = true,
+			})
+		end,
+	},
+
+	["xor"] = {
+		["unroll"] = function(state, args)
+			return IEex_EncodeRMOpcode(args, {
+				["opcode"] = 0x33,
+				["offsetAdjustment"] = IEex_GetOffsetAdjustment(state),
+				["immediateOpcodes"] = {
+					["imm16/32"] = {["opcode"] = 0x81, ["extension"] = 6},
+					["imm8"] = {["opcode"] = 0x83, ["extension"] = 6},
+				},
+				["noDirectionBit"] = true,
+			})
+		end,
+	},
+
 	["cmp"] = {
 		["unroll"] = function(state, args)
 			return IEex_EncodeRMOpcode(args, {
@@ -942,6 +1035,25 @@ IEex_GlobalAssemblyMacros = {
 	["marked_esp"] = {
 		["unroll"] = function(state, args)
 			state.unroll.nextEspAdjustment = state.unroll.markedEspAdjustment
+		end,
+	},
+
+	["ret"] = {
+		["unroll"] = function(state, args)
+			local firstArg = args[1]
+			local amount = firstArg and (type(firstArg) == "number" and firstArg or tonumber(firstArg, 16)) or 0
+			if amount == 0 then return {{0xC3, 1}} end
+			if IEex_GetImmediateLength(amount) <= 2 then
+				local toReturn = {{0xC2, 1}}
+				local i = 2
+				IEex_ProcessNumberAsBytes(amount, 2, function(byte)
+					toReturn[i] = {byte, 1}
+					i = i + 1
+				end)
+				return toReturn
+			else
+				IEex_Error("!ret() cannot return > 0xFFFF")
+			end
 		end,
 	},
 

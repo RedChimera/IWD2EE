@@ -46,6 +46,7 @@ dofile("override/IEex_WEIDU.lua")
 dofile("override/IEex_INI.lua")
 
 dofile("override/IEex_Bridge.lua")
+dofile("override/IEex_IWD2_Common_State.lua")
 dofile("override/IEex_Core_State.lua")
 dofile("override/IEex_Debug_State.lua")
 dofile("override/IEex_Action_State.lua")
@@ -64,148 +65,6 @@ for module, tf in pairs(IEex_Modules) do
 		dofile("override/" .. module .. ".lua")
 	end
 end
-
-----------------------------
--- Start Memory Interface --
-----------------------------
-
-IEex_MemoryManagerStructMeta = {
-
-	["CAIScriptFile"] = {
-		["constructors"] = {
-			["#default"] = {["address"] = 0x40FDC0},
-		},
-		["destructor"] = {["address"] = 0x40FEB0},
-		["size"] = 0xEE,
-	},
-
-	["CString"] = {
-		["constructors"] = {
-			["fromString"] = {["address"] = 0x7FCC88},
-		},
-		["destructor"] = {["address"] = 0x7FCC1A},
-		["size"] = 0x4,
-	},
-
-	["string"] = {
-		["constructors"] = {
-			["#default"] = function(startPtr, luaString)
-				IEex_WriteString(startPtr, luaString)
-			end,
-		},
-		["size"] = function(luaString)
-			return #luaString + 1
-		end,
-	},
-}
-
-IEex_MemoryManager = {}
-IEex_MemoryManager.__index = IEex_MemoryManager
-
-function IEex_NewMemoryManager(structEntries)
-	return IEex_MemoryManager:new(structEntries)
-end
-
-function IEex_MemoryManager:init(structEntries)
-
-	local getConstructor = function(structEntry)
-		return structEntry.constructor or {}
-	end
-
-	local nameToEntry = {}
-	local currentOffset = 0
-
-	for _, structEntry in ipairs(structEntries) do
-
-		nameToEntry[structEntry.name] = structEntry
-		local structMeta = IEex_MemoryManagerStructMeta[structEntry.struct]
-		local size = structMeta.size
-		local sizeType = type(size)
-
-		structEntry.offset = currentOffset
-		structEntry.structMeta = structMeta
-
-		if sizeType == "function" then
-			currentOffset = currentOffset + size(unpack(getConstructor(structEntry).luaArgs or {}))
-		elseif sizeType == "number" then
-			currentOffset = currentOffset + size
-		else
-			IEex_TracebackMessage("[IEex_MemoryManager] Invalid size type!")
-		end
-	end
-
-	self.nameToEntry = nameToEntry
-	local startAddress = IEex_Malloc(currentOffset)
-	self.address = startAddress
-
-	for _, structEntry in ipairs(structEntries) do
-
-		local entryName = structEntry.name
-		local offset = structEntry.offset
-		local address = startAddress + offset
-		structEntry.address = address
-
-		local entryConstructor = getConstructor(structEntry)
-		local constructor = structEntry.structMeta.constructors[entryConstructor.variant or "#default"]
-		local constructorType = type(constructor)
-
-		if constructorType == "function" then
-			constructor(address, unpack(entryConstructor.luaArgs or {}))
-		elseif constructorType == "table" then
-			local args = entryConstructor.args or {}
-			local argsToUse = {}
-			for i = #args, 1, -1 do
-				local arg = args[i]
-				local argType = type(arg)
-				if argType == "number" then
-					table.insert(argsToUse, arg)
-				elseif argType == "string" then
-					local entry = nameToEntry[arg]
-					if not entry then
-						IEex_TracebackMessage("[IEex_MemoryManager] Invalid arg name!")
-					end
-					table.insert(argsToUse, startAddress + entry.offset)
-				else
-					IEex_TracebackMessage("[IEex_MemoryManager] Invalid arg type!")
-				end
-			end
-			IEex_Call(constructor.address, argsToUse, address, constructor.popSize or 0x0)
-		end
-	end
-end
-
-function IEex_MemoryManager:getAddress(name)
-	return self.nameToEntry[name].address
-end
-
-function IEex_MemoryManager:getAddresses()
-	local nameToAddress = {}
-	for name, entry in pairs(self.nameToEntry) do
-		nameToAddress[name] = entry.address
-	end
-	return nameToAddress
-end
-
-function IEex_MemoryManager:free()
-	for entryName, entry in pairs(self.nameToEntry) do
-		local destructor = entry.structMeta.destructor
-		if (not entry.noDestruct) and destructor then
-			IEex_Call(destructor.address, {}, entry.address, destructor.popSize or 0x0)
-		end
-	end
-	IEex_Free(self.address)
-end
-
-function IEex_MemoryManager:new(structEntries)
-	local o = {}
-	setmetatable(o, self)
-	o:init(structEntries)
-	return o
-end
-
-----------------------------
--- End Memory Interface --
-----------------------------
 
 -----------------------------------
 -- Common Engine Structures Util --
@@ -1463,10 +1322,6 @@ function IEex_GetEngineCreateCharPanelID()
     local pTail = IEex_ReadDword(createCharScreen + 0x53E) -- m_lPopupStack.m_pNodeTail
     local panelID = pTail ~= 0x0 and IEex_ReadDword(IEex_ReadDword(pTail + 0x8) + 0x20) or 0
 	return panelID
-end
-
-function IEex_SetTextAreaToStrref(engine, panelID, controlID, strref)
-    IEex_Call(0x6103A0, {strref, controlID, panelID}, engine, 0x0)
 end
 
 function IEex_GetVisibleArea()

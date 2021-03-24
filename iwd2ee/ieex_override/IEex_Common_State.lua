@@ -103,6 +103,163 @@ end
 -- Debug Utility --
 -------------------
 
+function B3AlphanumericSortEntries(o)
+	local function conv(s)
+		local res, dot = "", ""
+		for n, m, c in tostring(s):gmatch"(0*(%d*))(.?)" do
+			if n == "" then
+				dot, c = "", dot..c
+			else
+				res = res..(dot == "" and ("%03d%s"):format(#m, m) or "."..n)
+				dot, c = c:match"(%.?)(.*)"
+			end
+			res = res..c:gsub(".", "\0%0")
+		end
+		return res
+	end
+	table.sort(o,
+		function (a, b)
+			local ca, cb = conv(a.string), conv(b.string)
+			return ca < cb or ca == cb and a.string < b.string
+		end)
+	return o
+end
+
+function B3FillDumpLevel(tableName, levelTable, levelToFill, levelTableKey)
+	local tableKey, tableValue = next(levelTable, levelTableKey)
+	while tableValue ~= nil do
+		local tableValueType = type(tableValue)
+		if tableValueType == 'string' or tableValueType == 'number' or tableValueType == 'boolean' then
+			local entry = {}
+			entry.string = tableValueType..' '..tableKey..' = '
+			entry.value = tableValue
+			table.insert(levelToFill, entry)
+		elseif tableValueType == 'table' then
+			if tableKey ~= '_G' then
+				local entry = {}
+				entry.string = tableValueType..' '..tableKey..':'
+				entry.value = {} --entry.value is a levelToFill
+				entry.value.previous = {}
+				entry.value.previous.tableName = tableName
+				entry.value.previous.levelTable = levelTable
+				entry.value.previous.levelToFill = levelToFill
+				entry.value.previous.levelTableKey = tableKey
+				table.insert(levelToFill, entry)
+				return B3FillDumpLevel(tableKey, tableValue, entry.value)
+			end
+		elseif tableValueType == 'userdata' then
+			local metatable = getmetatable(tableValue)
+			local entry = {}
+			if metatable ~= nil then
+				entry.string = tableValueType..' '..tableKey..':\n'
+				entry.value = {} --entry.value is a levelToFill
+				entry.value.previous = {}
+				entry.value.previous.tableName = tableName
+				entry.value.previous.levelTable = levelTable
+				entry.value.previous.levelToFill = levelToFill
+				entry.value.previous.levelTableKey = tableKey
+				table.insert(levelToFill, entry)
+				return B3FillDumpLevel(tableKey, metatable, entry.value)
+			else
+				entry.string = tableValueType..' '..tableKey..' = '
+				entry.value = 'nil'
+				table.insert(levelToFill, entry)
+			end
+		else
+			local entry = {}
+			entry.string = tableValueType..' '..tableKey
+			entry.value = nil
+			table.insert(levelToFill, entry)
+		end
+		--Iteration
+		tableKey, tableValue = next(levelTable, tableKey)
+		--Iteration
+	end
+	--Sort the now finished level
+	B3AlphanumericSortEntries(levelToFill)
+	--Sort the now finished level
+	local previous = levelToFill.previous
+	if previous ~= nil then
+		--Clear out "previous" metadata, as it is no longer needed.
+		local previousTableName = previous.tableName
+		local previousLevelTable = previous.levelTable
+		local previousLevelToFill = previous.levelToFill
+		local previousLevelTableKey = previous.levelTableKey
+		levelToFill.previous = nil
+		--Clear out "previous" metadata, as it is no longer needed.
+		return B3FillDumpLevel(previousTableName, previousLevelTable,
+							   previousLevelToFill, previousLevelTableKey)
+	else
+		return levelToFill
+	end
+end
+
+B3DumpFunction = print
+
+function B3PrintEntries(entriesTable, indentLevel, indentStrings, previousState, levelTableKey)
+	local tableEntryKey, tableEntry = next(entriesTable, levelTableKey)
+	while(tableEntry ~= nil) do
+		local tableEntryString = tableEntry.string
+		local tableEntryValue = tableEntry.value
+		local indentString = indentStrings[indentLevel]
+		if tableEntryValue ~= nil then
+			if type(tableEntryValue) ~= 'table' then
+				local valueToPrint = string.gsub(tostring(tableEntryValue), '\n', '\\n')
+				B3DumpFunction(indentString..tableEntryString..valueToPrint)
+			else
+				B3DumpFunction(indentString..tableEntryString)
+				B3DumpFunction(indentString..'{')
+				local previous = {}
+				previous.entriesTable = entriesTable
+				previous.indentLevel = indentLevel
+				previous.levelTableKey = tableEntryKey
+				previous.previousState = previousState
+				indentLevel = indentLevel + 1
+				local indentStringsSize = #indentStrings
+				if indentLevel > indentStringsSize then
+					indentStrings[indentStringsSize + 1] = indentStrings[indentStringsSize]..'	'
+				end
+				return B3PrintEntries(tableEntryValue, indentLevel, indentStrings, previous)
+			end
+		else
+			B3DumpFunction(indentString..tableEntryString)
+		end
+		--Increment
+		tableEntryKey, tableEntry = next(entriesTable, tableEntryKey)
+		--Increment
+	end
+	B3DumpFunction(indentStrings[indentLevel - 1]..'}')
+	--Finish previous levels
+	if previousState ~= nil then
+		return B3PrintEntries(previousState.entriesTable, previousState.indentLevel, indentStrings,
+							  previousState.previousState, previousState.levelTableKey)
+	end
+end
+
+function B3Dump(key, valueToDump)
+	local valueToDumpType = type(valueToDump)
+	if valueToDumpType == 'string' or valueToDumpType == 'number' or valueToDumpType == 'boolean' then
+		B3DumpFunction(valueToDumpType..' '..key..' = '..tostring(valueToDump))
+	elseif valueToDumpType == 'table' then
+		B3DumpFunction(valueToDumpType..' '..key..':')
+		B3DumpFunction('{')
+		local entries = B3FillDumpLevel(key, valueToDump, {})
+		B3PrintEntries(entries, 1, {[0] = '', [1] = '	'})
+	elseif valueToDumpType == 'userdata' then
+		local metatable = getmetatable(valueToDump)
+		if metatable ~= nil then
+			B3DumpFunction(valueToDumpType..' '..key..':')
+			B3DumpFunction('{')
+			local entries = B3FillDumpLevel(key, metatable, {})
+			B3PrintEntries(entries, 1, {[0] = '', [1] = '	'})
+		else
+			B3DumpFunction(valueToDumpType..' '..key..' = nil')
+		end
+	else
+		B3DumpFunction(valueToDumpType..' '..key)
+	end
+end
+
 function IEex_FunctionLog(message)
 	local name = debug.getinfo(2, "n").name
 	if name == nil then name = "(Unknown)" end
@@ -329,6 +486,46 @@ function IEex_ProcessNumberAsBytes(num, length, func)
 	end
 end
 
+IEex_WriteType = {
+	["BYTE"]   = 0,
+	["WORD"]   = 1,
+	["DWORD"]  = 2,
+	["RESREF"] = 3,
+}
+
+IEex_WriteFailType = {
+	["ERROR"]   = 0,
+	["DEFAULT"] = 1,
+	["NOTHING"] = 2,
+}
+
+function IEex_WriteArgs(address, args, writeDefs)
+	writeTypeFunc = {
+		[IEex_WriteType.BYTE]   = IEex_WriteByte,
+		[IEex_WriteType.WORD]   = IEex_WriteWord,
+		[IEex_WriteType.DWORD]  = IEex_WriteDword,
+		[IEex_WriteType.RESREF] = function(address, arg) IEex_WriteLString(address, arg, 0x8) end,
+	}
+	for _, writeDef in ipairs(writeDefs) do
+		local argKey = writeDef[1]
+		local arg = args[argKey]
+		local skipWrite = false
+		if not arg then
+			local failType = writeDef[4]
+			if failType == IEex_WriteFailType.DEFAULT then
+				arg = writeDef[5]
+			elseif failType == IEex_WriteFailType.ERROR then
+				IEex_Error(argKey.." must be defined!")
+			else
+				skipWrite = true
+			end
+		end
+		if not skipWrite then
+			writeTypeFunc[writeDef[3]](address + writeDef[2], arg)
+		end
+	end
+end
+
 ---------------
 -- IEex_Dump --
 ---------------
@@ -552,7 +749,7 @@ end
 
 function IEex_CollectSanitizedMacroName(section, hasPrefix)
 	local macroArgsStart = section:find("(", 1, true)
-	local macroName = section:sub(hasPrefix and 2 or 1, macroArgsStart - 1)
+	local macroName = section:sub(hasPrefix and 2 or 1, macroArgsStart and (macroArgsStart - 1) or #section)
 	return macroName, macroArgsStart
 end
 
@@ -622,28 +819,32 @@ function IEex_SanitizeAssembly(assembly)
 
 					if unrollFunc then
 
-						local macroArgsEnd = section:find(")", 1, true)
-						if not macroArgsEnd then
-							IEex_Error("No closing parentheses for macro function \""..macroName.."\"!")
-						end
+						local args
+						if macroArgsStart then
 
-						if macroArgsEnd ~= #section then
-							IEex_Error("Invalid closing parentheses for macro function \""..macroName.."\"!")
-						end
-
-						local args = IEex_Split(section:sub(macroArgsStart + 1, macroArgsEnd - 1), ",")
-						for i = 1, #args do
-							local funcArg = args[i]
-							if funcArg:sub(1, 1) == "$" then
-								if type(nextArg) ~= "table" then IEex_Error("Invalid variable-arg") end
-								if #nextArg < i then IEex_Error("Invalid variable-arg") end
-								args[i] = nextArg[tonumber(funcArg:sub(2))]
-								nextArg.skipVarArg = true
+							local macroArgsEnd = section:find(")", 1, true)
+							if not macroArgsEnd then
+								IEex_Error("No closing parentheses for macro function \""..macroName.."\"!")
+							elseif macroArgsEnd ~= #section then
+								IEex_Error("Invalid closing parentheses for macro function \""..macroName.."\"!")
 							end
+
+							args = IEex_Split(section:sub(macroArgsStart + 1, macroArgsEnd - 1), ",")
+							for i = 1, #args do
+								local funcArg = args[i]
+								if funcArg:sub(1, 1) == "$" then
+									if type(nextArg) ~= "table" then IEex_Error("Invalid variable-arg") end
+									local varArgIndex = tonumber(funcArg:sub(2))
+									if (not varArgIndex) or #nextArg < varArgIndex then IEex_Error("Invalid variable-arg") end
+									args[i] = nextArg[varArgIndex]
+									nextArg.skipVarArg = true
+								end
+							end
+						else
+							args = {}
 						end
 
 						local unrollResult = unrollFunc(state, args)
-
 						if unrollResult then
 
 							addMacroTextToStructure = false
@@ -713,7 +914,8 @@ function IEex_SanitizeAssembly(assembly)
 				end
 			end
 		else
-			IEex_Error("Arg with illegal data-type in assembly declaration: \""..tostring(arg).."\"")
+			B3Dump("assembly", assembly)
+			IEex_Error("Arg with illegal data-type in assembly declaration: \""..tostring(arg).."\" at index "..i)
 		end
 	end
 
@@ -1329,60 +1531,69 @@ function IEex_GenLuaCall(funcName, meta)
 
 	local genFunc = function()
 		if funcName then
-			if (meta or {}).functionChunk then IEex_Error("[IEex_GenLuaCall] funcName and meta.functionChunk are exclusive") end
+			if meta then
+				if meta.functionChunk then IEex_Error("[IEex_GenLuaCall] funcName and meta.functionChunk are exclusive") end
+				if meta.pushFunction then IEex_Error("[IEex_GenLuaCall] funcName and meta.pushFunction are exclusive") end
+			end
 			return {[[
 				!push_dword ]], {IEex_WriteStringAuto(funcName), 4}, [[
 				!push_ebx
 				!call >_lua_getglobal
 				!add_esp_byte 08
 			]]}
-		elseif meta and meta.functionChunk then
-			if numArgs > 0 then IEex_Error("[IEex_GenLuaCall] Lua chunks can't be passed arguments") end
-			return IEex_FlattenTable({
-				meta.functionChunk,
-				{[[
-					!push_ebx
-					!call >_luaL_loadstring
-					!add_esp_byte 08
-					!test_eax_eax
-					!jz_dword >IEex_GenLuaCall_loadstring_no_error
-
-					!IF($1) ]], {errorFunc ~= nil}, [[
-						; Call error function with loadstring message ;
-						!push_byte 00
-						!push_byte 01
-						!push_byte 01
+		elseif meta then
+			if meta.functionChunk then
+				if numArgs > 0 then IEex_Error("[IEex_GenLuaCall] Lua chunks can't be passed arguments") end
+				if meta.pushFunction then IEex_Error("[IEex_GenLuaCall] meta.functionChunk and meta.pushFunction are exclusive") end
+				return IEex_FlattenTable({
+					meta.functionChunk,
+					{[[
 						!push_ebx
-						!call >_lua_pcall
-						!add_esp_byte 10
-						!push_ebx
-						!call >IEex_CheckCallError
-						!test_eax_eax
-						!jnz_dword >IEex_GenLuaCall_error_in_error_handling
-						!push_ebx
-						!call >IEex_PrintPopLuaString
-
-						@IEex_GenLuaCall_error_in_error_handling
-						; Clear error function precursors off of Lua stack ;
-						!push_byte ]], {-errorFuncLuaStackPopAmount, 1}, [[
-						!push_ebx
-						!call >_lua_settop
+						!call >_luaL_loadstring
 						!add_esp_byte 08
-						!jmp_dword >call_error
-					!ENDIF()
+						!test_eax_eax
+						!jz_dword >IEex_GenLuaCall_loadstring_no_error
 
-					!IF($1) ]], {errorFunc == nil}, [[
-						!push_ebx
-						!call >IEex_PrintPopLuaString
-						!jmp_dword >call_error
-					!ENDIF()
+						!IF($1) ]], {errorFunc ~= nil}, [[
+							; Call error function with loadstring message ;
+							!push_byte 00
+							!push_byte 01
+							!push_byte 01
+							!push_ebx
+							!call >_lua_pcall
+							!add_esp_byte 10
+							!push_ebx
+							!call >IEex_CheckCallError
+							!test_eax_eax
+							!jnz_dword >IEex_GenLuaCall_error_in_error_handling
+							!push_ebx
+							!call >IEex_PrintPopLuaString
 
-					@IEex_GenLuaCall_loadstring_no_error
-				]]},
-			})
-		else
-			IEex_Error("[IEex_GenLuaCall] meta.functionChunk must be defined when funcName = nil")
+							@IEex_GenLuaCall_error_in_error_handling
+							; Clear error function precursors off of Lua stack ;
+							!push_byte ]], {-errorFuncLuaStackPopAmount, 1}, [[
+							!push_ebx
+							!call >_lua_settop
+							!add_esp_byte 08
+							!jmp_dword >call_error
+						!ENDIF()
+
+						!IF($1) ]], {errorFunc == nil}, [[
+							!push_ebx
+							!call >IEex_PrintPopLuaString
+							!jmp_dword >call_error
+						!ENDIF()
+
+						@IEex_GenLuaCall_loadstring_no_error
+					]]},
+				})
+			elseif meta.pushFunction then
+				if meta.functionChunk then IEex_Error("[IEex_GenLuaCall] meta.pushFunction and meta.functionChunk are exclusive") end
+				return meta.pushFunction
+			end
 		end
+
+		IEex_Error("[IEex_GenLuaCall] meta.functionChunk or meta.pushFunction must be defined when funcName = nil")
 	end
 
 	local genArgPushes2 = function()
@@ -1420,7 +1631,7 @@ function IEex_GenLuaCall(funcName, meta)
 	local numRet = (meta or {}).returnType and 1 or 0
 	return IEex_FlattenTable({
 		genArgPushes1(),
-		{[[
+		(meta or {}).luaState or {[[
 			!call >IEex_GetLuaState
 			!mov_ebx_eax
 		]]},

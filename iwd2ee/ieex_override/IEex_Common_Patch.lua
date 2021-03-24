@@ -5,7 +5,7 @@
 
 (function()
 
-	local mainStatus, mainError = pcall(function()
+	local mainStatus, mainError = xpcall(function()
 
 		-- !!!----------------------------------------------------------------!!!
 		--  | IEex_Init() is the only new function that is exposed by default. |
@@ -193,6 +193,107 @@
 			!ret
 
 		]]})
+
+		IEex_WriteAssemblyAuto({[[
+
+			$IEex_PrintPopLuaString
+			!build_stack_frame
+
+			!push_byte 00
+			!push_byte FF
+			!push_[ebp+byte] 08
+			!call >_lua_tolstring
+			!add_esp_byte 0C
+
+			; _lua_pushstring arg ;
+			!push_eax
+
+			!push_dword ]], {IEex_WriteStringAuto("print"), 4}, [[
+			!push_[ebp+byte] 08
+			!call >_lua_getglobal
+			!add_esp_byte 08
+
+			!push_[ebp+byte] 08
+			!call >_lua_pushstring
+			!add_esp_byte 08
+
+			!push_byte 00
+			!push_byte 00
+			!push_byte 01
+			!push_[ebp+byte] 08
+			!call >_lua_pcall
+			!add_esp_byte 10
+
+			; Clear error string off of stack ;
+			!push_byte FE
+			!push_[ebp+byte] 08
+			!call >_lua_settop
+			!add_esp_byte 08
+
+			!destroy_stack_frame
+			!ret_word 04 00
+		]]})
+
+		IEex_WriteAssemblyAuto({[[
+
+			$IEex_CheckCallError
+			!test_eax_eax
+			!jnz_dword >error
+			!ret_word 04 00
+
+			@error
+			!push_[esp+byte] 04
+			!call >IEex_PrintPopLuaString
+
+			!mov_eax #1
+			!ret_word 04 00
+		]]})
+
+		IEex_WriteAssemblyFunction("IEex_RunWithStack", IEex_FlattenTable({
+			{[[
+				$IEex_RunWithStack
+				!mark_esp
+				!push(ebx)
+				!push(esi)
+				!marked_esp !mov(ebx,[esp+4])
+				!push(1)
+				!push(ebx)
+				!call >_lua_tonumber
+				!add(esp,8)
+				!call >__ftol2_sse
+
+				; ROUND UP TO 32-BIT STACK ALIGNMENT ;
+				!mov(ecx,eax)
+				!and(ecx,FFFFFFFC)
+				!cmp(eax,ecx)
+				!je_dword >rounding_done
+				!add(ecx,4)
+
+				@rounding_done
+				!mov(esi,ecx)
+				!sub(esp,esi)
+			]]},
+			IEex_GenLuaCall(nil, {
+				["luaState"] = {},
+				["pushFunction"] = {[[
+					!push(2)
+					!push(ebx)
+					!call >_lua_pushvalue
+					!add(esp,8)
+				]]},
+				["args"] = {
+					{"!push(esp)"},
+				},
+			}),
+			{[[
+				@call_error
+				!add(esp,esi)
+				!xor(eax,eax)
+				!pop(esi)
+				!pop(ebx)
+				!ret
+			]]},
+		}))
 
 		-- Writes a string to the given address, padding any remaining space with null bytes to achieve desired length.
 		-- If #toWrite >= to maxLength, terminating null is not written.
@@ -510,7 +611,7 @@
 			!destroy_stack_frame
 			!ret
 		]]})
-	end)
+	end, debug.traceback)
 
 	if not mainStatus then
 		-- Failed to initialize IEex, clean up junk.

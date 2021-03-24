@@ -13,133 +13,56 @@
 	-- IEex_Extern_CUIControlBase_CreateControl --
 	----------------------------------------------
 
-	IEex_HookJump(0x76D41B, 0, {[[
+	IEex_HookJump(0x76D41B, 0, IEex_FlattenTable({
+		{[[
+			!push_registers_iwd2
 
-		!push_registers_iwd2
+			!xor_ebx_ebx
+			!jnz_dword >original_fail
+			!mov_ebx #1
 
-		!xor_ebx_ebx
-		!jnz_dword >original_fail
-		!mov_ebx #1
+			@original_fail
+		]]},
+		IEex_GenLuaCall("IEex_Extern_CUIControlBase_CreateControl", {
+			["args"] = {
+				{"!push(edx)"}, -- CHU resref
+				{"!push(edi)"}, -- panel
+				{"!push(esi)"}, -- controlInfo
+			},
+			["returnType"] = IEex_LuaCallReturnType.Number,
+		}),
+		{[[
+			@call_error
+			!test_eax_eax
+			!jz_dword >not_custom
+			!pop_registers_iwd2
+			!jmp_dword :76E93F
 
-		@original_fail
-
-		; CHU resref ;
-		!push_edx
-
-		!push_dword ]], {IEex_WriteStringAuto("IEex_Extern_CUIControlBase_CreateControl"), 4}, [[
-		!push_dword *_g_lua_async
-		!call >_lua_getglobal
-		!add_esp_byte 08
-
-		; CHU resref ;
-		!fild_[esp]
-		!sub_esp_byte 04
-		!fstp_qword:[esp]
-		!push_dword *_g_lua_async
-		!call >_lua_pushnumber
-		!add_esp_byte 0C
-
-		; panel ;
-		!push_edi
-		!fild_[esp]
-		!sub_esp_byte 04
-		!fstp_qword:[esp]
-		!push_dword *_g_lua_async
-		!call >_lua_pushnumber
-		!add_esp_byte 0C
-
-		; controlInfo ;
-		!push_esi
-		!fild_[esp]
-		!sub_esp_byte 04
-		!fstp_qword:[esp]
-		!push_dword *_g_lua_async
-		!call >_lua_pushnumber
-		!add_esp_byte 0C
-
-		!push_byte 00
-		!push_byte 01
-		!push_byte 03
-		!push_dword *_g_lua_async
-		!call >_lua_pcall
-		!add_esp_byte 10
-		!push_dword *_g_lua_async
-		!call >IEex_CheckCallError
-		!test_eax_eax
-		!jz_dword >ok
-		!xor_eax_eax
-		!jmp_dword >error
-
-		@ok
-		!push_byte FF
-		!push_dword *_g_lua_async
-		!call >_lua_tonumber
-		!add_esp_byte 08
-		!call >__ftol2_sse
-		!push_eax
-		!push_byte FE
-		!push_dword *_g_lua_async
-		!call >_lua_settop
-		!add_esp_byte 08
-		!pop_eax
-
-		@error
-		!test_eax_eax
-		!jz_dword >not_custom
-		!pop_registers_iwd2
-		!jmp_dword :76E93F
-
-		@not_custom
-		!test_ebx_ebx
-		!pop_registers_iwd2
-		!jnz_dword >jmp_success
-		!jmp_dword >jmp_fail
-	]]})
+			@not_custom
+			!test_ebx_ebx
+			!pop_registers_iwd2
+			!jnz_dword >jmp_success
+			!jmp_dword >jmp_fail
+		]]},
+	}))
 
 	-------------------------------------------------
 	-- IEex_Extern_CUIManager_fInit_CHUInitialized --
 	-------------------------------------------------
 
-	IEex_HookBeforeCall(0x4D3D55, {[[
-
-		!push_all_registers_iwd2
-
-		; resref ;
-		!push_[ecx+byte] 10
-
-		!push_dword ]], {IEex_WriteStringAuto("IEex_Extern_CUIManager_fInit_CHUInitialized"), 4}, [[
-		!push_dword *_g_lua_async
-		!call >_lua_getglobal
-		!add_esp_byte 08
-
-		; CUIManager ;
-		!push_esi
-		!fild_[esp]
-		!sub_esp_byte 04
-		!fstp_qword:[esp]
-		!push_dword *_g_lua_async
-		!call >_lua_pushnumber
-		!add_esp_byte 0C
-
-		; resref ;
-		!fild_[esp]
-		!sub_esp_byte 04
-		!fstp_qword:[esp]
-		!push_dword *_g_lua_async
-		!call >_lua_pushnumber
-		!add_esp_byte 0C
-
-		!push_byte 00
-		!push_byte 00
-		!push_byte 02
-		!push_dword *_g_lua_async
-		!call >_lua_pcall
-		!add_esp_byte 10
-		!push_dword *_g_lua_async
-		!call >IEex_CheckCallError
-
-		!pop_all_registers_iwd2
-	]]})
+	IEex_HookBeforeCall(0x4D3D55, IEex_FlattenTable({
+		{"!push_all_registers_iwd2"},
+		IEex_GenLuaCall("IEex_Extern_CUIManager_fInit_CHUInitialized", {
+			["args"] = {
+				{"!push(esi)"},
+				{"!push([ecx+10])"},
+			},
+		}),
+		{[[
+			@call_error
+			!pop_all_registers_iwd2
+		]]},
+	}))
 
 	-------------------------------------------------------------------------------------
 	-- IEex_Extern_CUIControlButtonWorldContainerSlot_OnLButtonClick_GetOnlyUpdateSlot --
@@ -651,6 +574,34 @@
 
 	-- Redirect empty Continue button OnLButtonDoubleClick() => OnLButtonDown()
 	IEex_WriteDword(0x85A45C, 0x4D4D70)
+
+	--------------------------------------
+	-- IEex_Extern_OnOptionsScreenESC() --
+	--------------------------------------
+
+	IEex_HookBeforeCall(0x654446, IEex_FlattenTable({
+		{[[
+			!push_registers_iwd2
+		]]},
+		IEex_GenLuaCall("IEex_Extern_OnOptionsScreenESC", {
+			["args"] = {
+				{"!push(ecx)"}, -- CScreenOptions
+			},
+			["returnType"] = IEex_LuaCallReturnType.Boolean,
+		}),
+		{[[
+			@call_error
+			!test_eax_eax
+			!pop_registers_iwd2
+			!jnz_dword >return
+		]]},
+	}))
+
+	-----------------------------------------------------------------------------
+	-- Don't throw assert when restoring CVidMode on non-vanilla options panel --
+	-----------------------------------------------------------------------------
+
+	IEex_WriteAssembly(0x6554FB, {"!repeat(5,!nop)"})
 
 	IEex_EnableCodeProtection()
 

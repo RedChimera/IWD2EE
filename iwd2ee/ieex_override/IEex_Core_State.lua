@@ -433,6 +433,58 @@ function IEex_LoadInitial2DAs()
 
 end
 
+-- This is special and is needed in some IEex_Gui_State calls;
+-- it SHOULD be in a Patch file, but some major refactoring would
+-- have to take place to make that happen.
+IEex_AbsoluteOnce("IEex_GetLuaState", function()
+
+	-- Rest of special async globals in IEex_Core_Patch
+	IEex_AsyncState = IEex_Call(IEex_Label("_luaL_newstate"), {}, nil, 0x0)
+	IEex_Call(IEex_Label("_luaL_openlibs"), {IEex_AsyncState}, nil, 0x4)
+	IEex_DefineAssemblyLabel("_g_lua_async", IEex_AsyncState)
+
+	----------------------
+	-- IEex_GetLuaState --
+	----------------------
+
+	IEex_WriteAssemblyAuto({[[
+
+		$IEex_GetLuaState
+		!push_registers_iwd2
+
+		!call >IEex_GetCurrentThread
+		!mov_ebx_eax
+
+		!push_dword ]], {IEex_WriteStringAuto("Sync"), 4}, [[
+		!push_dword ]], {IEex_WriteStringAuto("IEex_ThreadBridge"), 4}, [[
+		!call >IEex_Helper_GetBridgeDirect
+		!add_esp_byte 08
+
+		!cmp_ebx_eax
+		!jne_dword >not_sync
+		!mov_eax *_g_lua
+		!jmp_dword >return
+
+		@not_sync
+		!push_dword ]], {IEex_WriteStringAuto("Async"), 4}, [[
+		!push_dword ]], {IEex_WriteStringAuto("IEex_ThreadBridge"), 4}, [[
+		!call >IEex_Helper_GetBridgeDirect
+		!add_esp_byte 08
+
+		!cmp_ebx_eax
+		!jne_dword >not_async
+		!mov_eax *_g_lua_async
+		!jmp_dword >return
+
+		@not_async
+		!xor_eax_eax
+
+		@return
+		!pop_registers_iwd2
+		!ret
+	]]})
+end)
+
 function IEex_WriteDelayedPatches()
 
 	IEex_DisableCodeProtection()
