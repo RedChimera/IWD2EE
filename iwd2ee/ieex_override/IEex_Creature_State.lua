@@ -146,7 +146,7 @@ function IEex_Extern_OnPostCreatureProcessEffectList(creatureData)
 })
 	end
 --]]
-	if not IEex_IsSprite(targetID, false) then return end
+	if not IEex_IsSprite(targetID, true) then return end
 	local onTickFunctionsCalled = {}
 	local extraFlags = IEex_ReadDword(creatureData + 0x740)
 	if ex_cre_initializing[targetID] then
@@ -191,9 +191,10 @@ function IEex_Extern_OnPostCreatureProcessEffectList(creatureData)
 		IEex_IterateActorEffects(targetID, function(eData)
 			if not foundOpcodeFunction then
 				local theopcode = IEex_ReadDword(eData + 0x10)
+				local thetiming = IEex_ReadDword(eData + 0x24)
 				local theresource = IEex_ReadLString(eData + 0x30, 8)
 				local theinternal_flags = IEex_ReadDword(eData + 0xD8)
-				if theopcode == 500 and ((ex_on_tick_functions[theresource] == 1 and onTickFunctionsCalled[theresource] == nil) or ex_on_tick_functions[theresource] == 2) then
+				if theopcode == 500 and ((ex_on_tick_functions[theresource] == 1 and onTickFunctionsCalled[theresource] == nil) or ex_on_tick_functions[theresource] == 2) and (thetiming == 1 or thetiming == 2 or thetiming == 9 or thetiming == 4096) then
 					usedFunction = true
 					if bit.band(theinternal_flags, 0x80) == 0 then
 						foundOpcodeFunction = true

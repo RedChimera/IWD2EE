@@ -53,6 +53,7 @@ COPY_EXISTING ~racespab.2da~ ~override~
 
 COPY_EXISTING ~IEex_WEIDU.lua~ ~override~
 	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_extra_feat_races = {\(.*\)\[0x30000\] = [0-9]+~ ~ex_extra_feat_races = {\1[0x30000] = 1~
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_extra_feat_races = {\(.*\)\[0x70000\] = [0-9]+~ ~ex_extra_feat_races = {\1[0x70000] = 1~
 
 COPY_EXISTING ~help04.2da~ ~override~
   COUNT_2DA_COLS num_cols

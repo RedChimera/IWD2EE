@@ -3348,6 +3348,53 @@ function MEMODFEA(effectData, creatureData)
 		IEex_WriteByte(creatureData + 0x744 + featID, featValue)
 	end
 end
+
+function MEMODOFF(effectData, creatureData)
+	local targetID = IEex_GetActorIDShare(creatureData)
+	local parameter1 = IEex_ReadDword(effectData + 0x18)
+	local parameter2 = IEex_ReadDword(effectData + 0x1C)
+	local special = IEex_ReadWord(effectData + 0x44, 0x0)
+	local readSize = IEex_ReadWord(effectData + 0x46, 0x0)
+	if (parameter1 > 65535 or parameter1 < -65536) and readSize < 4 then
+		readSize = 4
+	elseif (parameter1 > 255 or parameter1 < -256) and readSize < 2 then
+		readSize = 2
+	elseif readSize < 1 then
+		readSize = 1
+	end
+	if readSize == 1 then
+		local value = IEex_ReadSignedByte(creatureData + special, 0x0)
+		if parameter2 == 0 then
+			value = value + parameter1
+		elseif parameter2 == 1 then
+			value = parameter1
+		elseif parameter2 == 2 then
+			value = math.floor(value * parameter1 / 100)
+		end
+		IEex_WriteByte(creatureData + special, value)
+	elseif readSize == 2 then
+		local value = IEex_ReadSignedWord(creatureData + special, 0x0)
+		if parameter2 == 0 then
+			value = value + parameter1
+		elseif parameter2 == 1 then
+			value = parameter1
+		elseif parameter2 == 2 then
+			value = math.floor(value * parameter1 / 100)
+		end
+		IEex_WriteWord(creatureData + special, value)
+	elseif readSize == 4 then
+		local value = IEex_ReadDword(creatureData + special)
+		if parameter2 == 0 then
+			value = value + parameter1
+		elseif parameter2 == 1 then
+			value = parameter1
+		elseif parameter2 == 2 then
+			value = math.floor(value * parameter1 / 100)
+		end
+		IEex_WriteDword(creatureData + special, value)
+	else
+	end
+end
 --[[
 function MECRITIM(effectData, creatureData)
 	if IEex_CheckForEffectRepeat(effectData, creatureData) then return end
@@ -5002,6 +5049,17 @@ function MEMONKAN(effectData, creatureData)
 	local parent_resource = IEex_ReadLString(effectData + 0x90, 8)
 	local baseAnimation = IEex_ReadDword(creatureData + 0x5C4)
 	if special == 0 or special == 2 then
+		local shieldRES = IEex_GetItemSlotRES(targetID, 44 + IEex_ReadByte(creatureData + 0x4C68, 0x0) * 2)
+		if shieldRES ~= "" then
+			local resWrapper = IEex_DemandRes(shieldRES, "ITM")
+			local itemData = resWrapper:getData()
+			local itemType = IEex_ReadWord(itemData + 0x1C, 0x0)
+			local equippedAnimation = IEex_ReadLString(itemData + 0x22, 2)
+			if (itemType == 41 or itemType == 47 or itemType == 49 or itemType == 53) and equippedAnimation ~= "  " then
+				resWrapper:free()
+				return
+			end
+		end
 		if ex_monk_animation_conversion[baseAnimation] ~= nil and not IEex_GetActorSpellState(targetID, 188) then
 			IEex_ApplyEffectToActor(targetID, {
 ["opcode"] = 254,
@@ -5117,7 +5175,7 @@ ex_animation_vidcells = {
 [0xE000] = {0x40E, 0x4E8, 0x5C2, 0x69C, 0x776, 0x850, 0x92A, 0xA04, 0xADE, 0xBB8, 0xC92, 0xD6C, 0xE46, 0xF20, 0xFFA, 0x10D4, 0x11AE, 0x1288, 0x1362, 0x143C, 0x1516, 0x15F0, 0x16CA, 0x17A4, 0x187E, 0x1958, 0x1A32, 0x1B0C},
 [0xF000] = {0x40E, 0x4E8, 0x5C2, 0x69C, 0x776, 0x850, 0x92A, 0xA04, 0xADE, 0xBB8, 0xC92, 0xD6C, 0xE46, 0xF20, 0xFFA, 0x10D4, 0x11AE, 0x1288, 0x1362, 0x143C, 0x1516, 0x15F0, 0x16CA, 0x17A4, 0x187E, 0x1958, 0x1A32, 0x1B0C, 0x1C16, 0x1CF0, 0x1DCA, 0x1EA4, 0x1F7E, 0x2058, 0x2132, 0x220C, 0x22E6, 0x23C0, 0x249A, 0x2574, 0x264E, 0x2728, 0x2802, 0x28DC, 0x29B6, 0x2A90, 0x2B6A, 0x2C44, 0x2D1E, 0x2DF8, 0x2ED2, 0x2FAC, 0x3086, 0x3160, 0x323A, 0x3314},
 }
-ex_animation_size = {[61395] = {48, 5, 7, }, [57976] = {48, 5, 10, }, [25872] = {16, 3, 9, }, [29696] = {16, 3, 8, }, [29952] = {16, 3, 6, }, [59545] = {36, 5, 7, }, [61213] = {24, 3, 7, }, [60313] = {24, 3, 7, }, [58504] = {24, 3, 11, }, [24848] = {16, 3, 9, }, [28672] = {16, 3, 7, }, [24592] = {16, 3, 9, }, [61411] = {12, 3, 7, }, [58248] = {16, 3, 4, }, [29184] = {24, 3, 10, }, [25104] = {16, 3, 9, }, [20739] = {16, 3, 9, }, [24852] = {16, 3, 9, }, [29473] = {16, 3, 7, }, [20483] = {16, 3, 9, }, [24596] = {16, 3, 9, }, [59528] = {24, 3, 7, }, [21251] = {16, 3, 9, }, [32256] = {24, 3, 10, }, [60329] = {24, 3, 7, }, [25108] = {16, 3, 9, }, [58520] = {16, 3, 7, }, [30976] = {24, 3, 2, }, [61427] = {64, 7, 7, }, [31232] = {24, 3, 5, }, [58008] = {24, 3, 7, }, [32516] = {36, 7, 13, }, [17920] = {16, 3, 0, }, [18176] = {16, 3, 0, }, [31236] = {24, 3, 5, }, [17408] = {16, 3, 0, }, [32520] = {24, 3, 4, }, [17664] = {16, 3, 0, }, [32553] = {16, 3, 9, }, [63384] = {16, 3, 7, }, [59337] = {24, 3, 7, }, [58280] = {24, 3, 4, }, [58924] = {24, 3, 7, }, [16384] = {16, 3, 0, }, [24835] = {16, 3, 9, }, [29456] = {24, 3, 10, }, [16640] = {16, 3, 0, }, [20755] = {16, 3, 9, }, [24579] = {16, 3, 9, }, [60427] = {36, 5, 9, }, [25347] = {16, 3, 9, }, [21267] = {16, 3, 9, }, [32528] = {16, 3, 10, }, [59320] = {24, 3, 9, }, [4610] = {72, 5, 14, }, [59353] = {16, 3, 7, }, [62731] = {48, 3, 7, }, [18432] = {16, 3, 0, }, [4097] = {36, 5, 8, }, [18192] = {16, 3, 0, }, [59609] = {24, 3, 7, }, [17424] = {16, 3, 0, }, [32536] = {24, 3, 8, }, [62491] = {24, 3, 7, }, [20736] = {16, 3, 9, }, [62747] = {48, 3, 7, }, [20480] = {16, 3, 9, }, [21248] = {16, 3, 9, }, [24851] = {16, 3, 9, }, [29472] = {24, 3, 10, }, [16656] = {16, 3, 0, }, [20992] = {16, 3, 9, }, [58386] = {16, 3, 7, }, [60459] = {24, 3, 7, }, [25363] = {16, 3, 9, }, [29187] = {24, 3, 10, }, [59592] = {28, 3, 7, }, [57362] = {16, 3, 7, }, [59385] = {24, 3, 7, }, [60467] = {48, 5, 7, }, [32515] = {16, 3, 11, }, [60401] = {16, 3, 7, }, [50688] = {16, 3, 6, }, [50944] = {16, 3, 5, }, [30979] = {24, 3, 2, }, [50432] = {16, 3, 8, }, [49664] = {12, 3, 10, }, [49920] = {12, 3, 4, }, [59641] = {16, 3, 7, }, [49152] = {16, 3, 8, }, [49408] = {12, 3, 4, }, [25602] = {16, 3, 9, }, [59368] = {24, 3, 7, }, [20752] = {16, 3, 9, }, [51712] = {16, 3, 6, }, [51968] = {16, 3, 6, }, [59244] = {24, 3, 7, }, [32523] = {28, 3, 15, }, [59426] = {16, 3, 7, }, [51456] = {16, 3, 6, }, [21264] = {16, 3, 9, }, [50704] = {16, 3, 6, }, [60681] = {24, 3, 7, }, [50960] = {16, 3, 5, }, [54272] = {16, 3, 8, }, [25346] = {16, 3, 9, }, [58418] = {16, 3, 7, }, [16641] = {16, 3, 0, }, [60491] = {24, 3, 7, }, [25090] = {16, 3, 9, }, [59624] = {28, 3, 7, }, [53248] = {16, 3, 8, }, [60392] = {16, 3, 7, }, [54016] = {16, 3, 8, }, [53760] = {16, 3, 8, }, [51728] = {16, 3, 6, }, [51216] = {16, 3, 5, }, [51472] = {16, 3, 6, }, [60697] = {24, 3, 7, }, [60507] = {24, 3, 7, }, [57344] = {24, 3, 7, }, [29698] = {16, 3, 8, }, [58376] = {16, 3, 7, }, [59144] = {24, 3, 7, }, [57608] = {48, 5, 7, }, [61465] = {16, 3, 5, }, [58120] = {16, 3, 7, }, [24850] = {16, 3, 9, }, [59458] = {16, 3, 7, }, [20481] = {16, 3, 9, }, [24594] = {16, 3, 9, }, [21249] = {16, 3, 9, }, [25362] = {16, 3, 9, }, [29186] = {24, 3, 10, }, [20993] = {16, 3, 9, }, [25106] = {16, 3, 9, }, [59400] = {16, 3, 7, }, [60168] = {24, 3, 7, }, [57938] = {36, 3, 7, }, [59160] = {24, 3, 7, }, [57624] = {48, 5, 7, }, [32514] = {36, 5, 8, }, [61481] = {16, 3, 15, }, [58136] = {16, 3, 7, }, [57880] = {36, 3, 7, }, [62216] = {48, 3, 5, }, [30978] = {24, 3, 2, }, [58268] = {16, 3, 4, }, [60952] = {24, 3, 7, }, [59672] = {16, 3, 7, }, [32518] = {16, 3, 11, }, [59416] = {16, 3, 7, }, [60184] = {24, 3, 7, }, [32551] = {16, 3, 9, }, [60217] = {36, 3, 7, }, [58664] = {36, 3, 7, }, [58408] = {16, 3, 7, }, [32768] = {24, 3, 5, }, [33024] = {16, 3, 5, }, [24833] = {16, 3, 9, }, [32548] = {16, 3, 9, }, [58153] = {16, 3, 7, }, [20753] = {16, 3, 9, }, [61976] = {24, 3, 6, }, [59936] = {24, 3, 7, }, [59553] = {16, 3, 7, }, [57929] = {24, 3, 7, }, [20497] = {16, 3, 9, }, [59577] = {16, 3, 7, }, [61726] = {24, 3, 5, }, [21265] = {16, 3, 9, }, [25089] = {16, 3, 9, }, [61710] = {16, 3, 5, }, [60337] = {24, 3, 0, }, [21009] = {16, 3, 9, }, [24837] = {16, 3, 9, }, [61224] = {24, 3, 13, }, [16642] = {16, 3, 0, }, [60200] = {24, 3, 7, }, [32559] = {16, 3, 9, }, [24581] = {16, 3, 9, }, [31491] = {16, 3, 15, }, [31488] = {16, 3, 15, }, [25349] = {16, 3, 9, }, [36864] = {24, 5, 6, }, [60712] = {24, 3, 7, }, [58457] = {16, 3, 7, }, [25093] = {16, 3, 9, }, [59225] = {24, 3, 7, }, [60365] = {24, 3, 7, }, [57656] = {48, 5, 7, }, [58217] = {16, 3, 7, }, [58201] = {16, 3, 7, }, [57400] = {16, 3, 7, }, [58168] = {16, 3, 3, }, [32257] = {24, 3, 10, }, [57912] = {36, 3, 7, }, [60936] = {24, 3, 7, }, [58299] = {16, 3, 4, }, [59192] = {24, 3, 7, }, [59176] = {24, 3, 7, }, [8960] = {24, 5, 7, }, [58441] = {16, 3, 7, }, [50176] = {12, 3, 4, }, [31235] = {24, 3, 5, }, [31234] = {24, 3, 5, }, [51200] = {16, 3, 5, }, [32531] = {24, 3, 13, }, [59448] = {16, 3, 7, }, [20498] = {16, 3, 9, }, [59481] = {16, 3, 7, }, [20737] = {16, 3, 9, }, [29953] = {16, 3, 6, }, [61448] = {16, 3, 5, }, [25603] = {16, 3, 9, }, [40960] = {24, 3, 8, }, [59656] = {16, 3, 7, }, [60241] = {16, 3, 5, }, [60376] = {16, 3, 7, }, [58489] = {16, 3, 7, }, [62475] = {24, 3, 7, }, [57424] = {64, 5, 9, }, [57672] = {36, 5, 7, }, [24849] = {16, 3, 9, }, [4609] = {72, 5, 14, }, [61347] = {16, 3, 7, }, [58184] = {16, 3, 3, }, [59512] = {24, 3, 7, }, [24593] = {16, 3, 9, }, [20482] = {16, 3, 9, }, [57961] = {24, 3, 7, }, [25361] = {16, 3, 9, }, [29185] = {24, 3, 10, }, [46592] = {16, 3, 0, }, [24595] = {16, 3, 9, }, [25105] = {16, 3, 9, }, [59249] = {16, 3, 7, }, [46080] = {16, 3, 0, }, [16402] = {16, 3, 0, }, [46336] = {16, 3, 0, }, [57416] = {64, 7, 7, }, [16658] = {16, 3, 0, }, [20994] = {16, 3, 9, }, [45824] = {16, 3, 0, }, [60265] = {16, 3, 5, }, [45056] = {24, 5, 0, }, [46096] = {16, 3, 0, }, [45312] = {24, 5, 0, }, [24853] = {16, 3, 9, }, [25345] = {16, 3, 9, }, [61264] = {16, 3, 0, }, [32513] = {16, 3, 8, }, [59688] = {16, 3, 7, }, [29442] = {36, 3, 10, }, [24580] = {16, 3, 9, }, [4608] = {72, 5, 14, }, [63370] = {16, 3, 7, }, [61363] = {24, 3, 7, }, [25605] = {16, 3, 9, }, [30977] = {24, 3, 2, }, [21008] = {16, 3, 9, }, [24578] = {16, 3, 9, }, [25088] = {16, 3, 9, }, [31233] = {24, 3, 5, }, [16896] = {16, 3, 0, }, [46608] = {16, 3, 0, }, [60233] = {16, 3, 7, }, [32517] = {16, 3, 11, }, [24834] = {16, 3, 9, }, [59265] = {16, 3, 7, }, [16386] = {16, 3, 0, }, [46352] = {16, 3, 0, }, [45568] = {16, 3, 0, }, [45584] = {16, 3, 0, }, [16400] = {16, 3, 0, }, [45840] = {16, 3, 0, }, [60281] = {16, 3, 5, }, [41216] = {24, 5, 6, }, [57378] = {16, 3, 7, }, [20496] = {16, 3, 9, }, [58472] = {24, 3, 11, }, [25856] = {16, 3, 9, }, [61280] = {16, 3, 0, }, [24832] = {16, 3, 9, }, [20738] = {16, 3, 9, }, [21250] = {16, 3, 9, }, [25109] = {16, 3, 9, }, [32554] = {24, 3, 5, }, [24576] = {16, 3, 9, }, [57448] = {24, 3, 7, }, [25360] = {16, 3, 9, }, [25344] = {16, 3, 9, }, [24597] = {16, 3, 9, }, [46848] = {16, 3, 0, }, [20754] = {16, 3, 9, }, [57993] = {24, 3, 7, }, [63354] = {16, 3, 7, }, [32522] = {28, 3, 15, }, [20499] = {16, 3, 9, }, [24836] = {16, 3, 9, }, [29697] = {16, 3, 8, }, [59281] = {16, 3, 7, }, [21266] = {16, 3, 9, }, [32558] = {36, 5, 9, }, [59496] = {24, 3, 7, }, [57896] = {36, 3, 7, }, [21010] = {16, 3, 9, }, [25348] = {16, 3, 9, }, [61197] = {24, 3, 7, }, [57690] = {36, 5, 7, }, [30208] = {16, 3, 6, }, [25092] = {16, 3, 9, }, [24577] = {16, 3, 9, }, [59308] = {24, 3, 7, }, [61296] = {16, 3, 0, }, [32519] = {24, 3, 13, }, [61379] = {36, 3, 7, }, [61329] = {16, 3, 10, }, [61961] = {24, 3, 6, }, [32562] = {24, 3, 9, }, [58653] = {36, 3, 7, }, }
+ex_animation_size = {[61395] = {48, 5, 7, }, [57976] = {48, 5, 10, }, [25872] = {16, 3, 9, }, [29696] = {16, 3, 8, }, [29952] = {16, 3, 6, }, [59545] = {36, 5, 7, }, [61213] = {24, 3, 7, }, [60313] = {24, 3, 7, }, [58504] = {24, 3, 11, }, [24848] = {16, 3, 9, }, [28672] = {16, 3, 7, }, [24592] = {16, 3, 9, }, [61411] = {12, 3, 7, }, [58248] = {16, 3, 4, }, [29184] = {24, 3, 10, }, [25104] = {16, 3, 9, }, [20739] = {16, 3, 9, }, [24852] = {16, 3, 9, }, [29473] = {16, 3, 7, }, [20483] = {16, 3, 9, }, [24596] = {16, 3, 9, }, [59528] = {24, 3, 7, }, [21251] = {16, 3, 9, }, [32256] = {24, 3, 10, }, [60329] = {24, 3, 7, }, [25108] = {16, 3, 9, }, [58520] = {16, 3, 7, }, [30976] = {24, 3, 2, }, [61427] = {64, 7, 7, }, [31232] = {24, 3, 5, }, [58008] = {24, 3, 7, }, [32516] = {36, 7, 13, }, [17920] = {16, 3, 0, }, [18176] = {16, 3, 0, }, [31236] = {24, 3, 5, }, [17408] = {16, 3, 0, }, [32520] = {24, 3, 4, }, [17664] = {16, 3, 0, }, [32553] = {16, 3, 9, }, [63384] = {16, 3, 7, }, [59337] = {24, 3, 7, }, [58280] = {24, 3, 4, }, [58924] = {24, 3, 7, }, [16384] = {16, 3, 0, }, [24835] = {16, 3, 9, }, [29456] = {24, 3, 10, }, [16640] = {16, 3, 0, }, [20755] = {16, 3, 9, }, [24579] = {16, 3, 9, }, [60427] = {36, 5, 9, }, [25347] = {16, 3, 9, }, [21267] = {16, 3, 9, }, [32528] = {16, 3, 10, }, [59320] = {24, 3, 9, }, [4610] = {72, 5, 14, }, [59353] = {16, 3, 7, }, [62731] = {48, 3, 7, }, [18432] = {16, 3, 0, }, [4096] = {36, 5, 8, }, [4097] = {36, 5, 8, }, [18192] = {16, 3, 0, }, [59609] = {24, 3, 7, }, [17424] = {16, 3, 0, }, [32536] = {24, 3, 8, }, [62491] = {24, 3, 7, }, [20736] = {16, 3, 9, }, [62747] = {48, 3, 7, }, [20480] = {16, 3, 9, }, [21248] = {16, 3, 9, }, [24851] = {16, 3, 9, }, [29472] = {24, 3, 10, }, [16656] = {16, 3, 0, }, [20992] = {16, 3, 9, }, [58386] = {16, 3, 7, }, [60459] = {24, 3, 7, }, [25363] = {16, 3, 9, }, [29187] = {24, 3, 10, }, [59592] = {28, 3, 7, }, [57362] = {16, 3, 7, }, [59385] = {24, 3, 7, }, [60467] = {48, 5, 7, }, [32515] = {16, 3, 11, }, [60401] = {16, 3, 7, }, [50688] = {16, 3, 6, }, [50944] = {16, 3, 5, }, [30979] = {24, 3, 2, }, [50432] = {16, 3, 8, }, [49664] = {12, 3, 10, }, [49920] = {12, 3, 4, }, [59641] = {16, 3, 7, }, [49152] = {16, 3, 8, }, [49408] = {12, 3, 4, }, [25602] = {16, 3, 9, }, [59368] = {24, 3, 7, }, [20752] = {16, 3, 9, }, [51712] = {16, 3, 6, }, [51968] = {16, 3, 6, }, [59244] = {24, 3, 7, }, [32523] = {28, 3, 15, }, [59426] = {16, 3, 7, }, [51456] = {16, 3, 6, }, [21264] = {16, 3, 9, }, [50704] = {16, 3, 6, }, [60681] = {24, 3, 7, }, [50960] = {16, 3, 5, }, [54272] = {16, 3, 8, }, [25346] = {16, 3, 9, }, [58418] = {16, 3, 7, }, [16641] = {16, 3, 0, }, [60491] = {24, 3, 7, }, [25090] = {16, 3, 9, }, [59624] = {28, 3, 7, }, [53248] = {16, 3, 8, }, [60392] = {16, 3, 7, }, [54016] = {16, 3, 8, }, [53760] = {16, 3, 8, }, [51728] = {16, 3, 6, }, [51216] = {16, 3, 5, }, [51472] = {16, 3, 6, }, [60697] = {24, 3, 7, }, [60507] = {24, 3, 7, }, [57344] = {24, 3, 7, }, [29698] = {16, 3, 8, }, [58376] = {16, 3, 7, }, [59144] = {24, 3, 7, }, [57608] = {48, 5, 7, }, [61465] = {16, 3, 5, }, [58120] = {16, 3, 7, }, [24850] = {16, 3, 9, }, [59458] = {16, 3, 7, }, [20481] = {16, 3, 9, }, [24594] = {16, 3, 9, }, [21249] = {16, 3, 9, }, [25362] = {16, 3, 9, }, [29186] = {24, 3, 10, }, [20993] = {16, 3, 9, }, [25106] = {16, 3, 9, }, [59400] = {16, 3, 7, }, [60168] = {24, 3, 7, }, [57938] = {36, 3, 7, }, [59160] = {24, 3, 7, }, [57624] = {48, 5, 7, }, [32514] = {36, 5, 8, }, [61481] = {16, 3, 15, }, [58136] = {16, 3, 7, }, [57880] = {36, 3, 7, }, [62216] = {48, 3, 5, }, [30978] = {24, 3, 2, }, [58268] = {16, 3, 4, }, [60952] = {24, 3, 7, }, [59672] = {16, 3, 7, }, [32518] = {16, 3, 11, }, [59416] = {16, 3, 7, }, [60184] = {24, 3, 7, }, [32551] = {16, 3, 9, }, [60217] = {36, 3, 7, }, [58664] = {36, 3, 7, }, [58408] = {16, 3, 7, }, [32768] = {24, 3, 5, }, [33024] = {16, 3, 5, }, [24833] = {16, 3, 9, }, [32548] = {16, 3, 9, }, [58153] = {16, 3, 7, }, [20753] = {16, 3, 9, }, [61976] = {24, 3, 6, }, [59936] = {24, 3, 7, }, [59553] = {16, 3, 7, }, [57929] = {24, 3, 7, }, [20497] = {16, 3, 9, }, [59577] = {16, 3, 7, }, [61726] = {24, 3, 5, }, [21265] = {16, 3, 9, }, [25089] = {16, 3, 9, }, [61710] = {16, 3, 5, }, [60337] = {24, 3, 0, }, [21009] = {16, 3, 9, }, [24837] = {16, 3, 9, }, [61224] = {24, 3, 13, }, [16642] = {16, 3, 0, }, [60200] = {24, 3, 7, }, [32559] = {16, 3, 9, }, [24581] = {16, 3, 9, }, [31491] = {16, 3, 15, }, [31488] = {16, 3, 15, }, [25349] = {16, 3, 9, }, [36864] = {24, 5, 6, }, [60712] = {24, 3, 7, }, [58457] = {16, 3, 7, }, [25093] = {16, 3, 9, }, [59225] = {24, 3, 7, }, [60365] = {24, 3, 7, }, [57656] = {48, 5, 7, }, [58217] = {16, 3, 7, }, [58201] = {16, 3, 7, }, [57400] = {16, 3, 7, }, [58168] = {16, 3, 3, }, [32257] = {24, 3, 10, }, [57912] = {36, 3, 7, }, [60936] = {24, 3, 7, }, [58299] = {16, 3, 4, }, [59192] = {24, 3, 7, }, [59176] = {24, 3, 7, }, [8960] = {24, 3, 7, }, [58441] = {16, 3, 7, }, [50176] = {12, 3, 4, }, [31235] = {24, 3, 5, }, [31234] = {24, 3, 5, }, [51200] = {16, 3, 5, }, [32531] = {24, 3, 13, }, [59448] = {16, 3, 7, }, [20498] = {16, 3, 9, }, [59481] = {16, 3, 7, }, [20737] = {16, 3, 9, }, [29953] = {16, 3, 6, }, [61448] = {16, 3, 5, }, [25603] = {16, 3, 9, }, [40960] = {24, 3, 8, }, [59656] = {16, 3, 7, }, [60241] = {16, 3, 5, }, [60376] = {16, 3, 7, }, [58489] = {16, 3, 7, }, [62475] = {24, 3, 7, }, [57424] = {64, 5, 9, }, [57672] = {36, 5, 7, }, [24849] = {16, 3, 9, }, [4609] = {72, 5, 14, }, [61347] = {16, 3, 7, }, [58184] = {16, 3, 3, }, [59512] = {24, 3, 7, }, [24593] = {16, 3, 9, }, [20482] = {16, 3, 9, }, [57961] = {24, 3, 7, }, [25361] = {16, 3, 9, }, [29185] = {24, 3, 10, }, [46592] = {16, 3, 0, }, [24595] = {16, 3, 9, }, [25105] = {16, 3, 9, }, [59249] = {16, 3, 7, }, [46080] = {16, 3, 0, }, [16402] = {16, 3, 0, }, [46336] = {16, 3, 0, }, [57416] = {64, 7, 7, }, [16658] = {16, 3, 0, }, [20994] = {16, 3, 9, }, [45824] = {16, 3, 0, }, [60265] = {16, 3, 5, }, [45056] = {24, 5, 0, }, [46096] = {16, 3, 0, }, [45312] = {24, 5, 0, }, [24853] = {16, 3, 9, }, [25345] = {16, 3, 9, }, [61264] = {16, 3, 0, }, [32513] = {16, 3, 8, }, [59688] = {16, 3, 7, }, [29442] = {36, 3, 10, }, [24580] = {16, 3, 9, }, [4608] = {72, 5, 14, }, [63370] = {16, 3, 7, }, [61363] = {24, 3, 7, }, [25605] = {16, 3, 9, }, [30977] = {24, 3, 2, }, [21008] = {16, 3, 9, }, [24578] = {16, 3, 9, }, [25088] = {16, 3, 9, }, [31233] = {24, 3, 5, }, [16896] = {16, 3, 0, }, [46608] = {16, 3, 0, }, [60233] = {16, 3, 7, }, [32517] = {16, 3, 11, }, [24834] = {16, 3, 9, }, [59265] = {16, 3, 7, }, [16386] = {16, 3, 0, }, [46352] = {16, 3, 0, }, [45568] = {16, 3, 0, }, [45584] = {16, 3, 0, }, [16400] = {16, 3, 0, }, [45840] = {16, 3, 0, }, [60281] = {16, 3, 5, }, [41216] = {24, 5, 6, }, [57378] = {16, 3, 7, }, [20496] = {16, 3, 9, }, [58472] = {24, 3, 11, }, [25856] = {16, 3, 9, }, [61280] = {16, 3, 0, }, [24832] = {16, 3, 9, }, [20738] = {16, 3, 9, }, [21250] = {16, 3, 9, }, [25109] = {16, 3, 9, }, [32554] = {24, 3, 5, }, [24576] = {16, 3, 9, }, [57448] = {24, 3, 7, }, [25360] = {16, 3, 9, }, [25344] = {16, 3, 9, }, [24597] = {16, 3, 9, }, [46848] = {16, 3, 0, }, [20754] = {16, 3, 9, }, [57993] = {24, 3, 7, }, [63354] = {16, 3, 7, }, [32522] = {28, 3, 15, }, [20499] = {16, 3, 9, }, [24836] = {16, 3, 9, }, [29697] = {16, 3, 8, }, [59281] = {16, 3, 7, }, [21266] = {16, 3, 9, }, [32558] = {36, 5, 9, }, [59496] = {24, 3, 7, }, [57896] = {36, 3, 7, }, [21010] = {16, 3, 9, }, [25348] = {16, 3, 9, }, [61197] = {24, 3, 7, }, [57690] = {36, 5, 7, }, [30208] = {16, 3, 6, }, [25092] = {16, 3, 9, }, [24577] = {16, 3, 9, }, [59308] = {24, 3, 7, }, [61296] = {16, 3, 0, }, [32519] = {24, 3, 13, }, [61379] = {36, 3, 7, }, [61329] = {16, 3, 10, }, [61961] = {24, 3, 6, }, [32562] = {24, 3, 9, }, [58653] = {36, 3, 7, }, }
 ex_modified_default_animations = {[57976] = true, } 
 function MEENLARG(effectData, creatureData, isSpecialCall)
 	if not isSpecialCall then return end
@@ -8550,7 +8608,8 @@ function IEex_EvaluatePermanentRepeatingEffects(creatureData)
 		IEex_IterateActorEffects(targetID, function(eData)
 			local theopcode = IEex_ReadDword(eData + 0x10)
 			local theparameter2 = IEex_ReadDword(eData + 0x20)
-			if theopcode == 288 and theparameter2 == 230 and IEex_ReadDword(eData + 0x114) == 0 then
+			local thesavingthrow = IEex_ReadDword(eData + 0x40)
+			if theopcode == 288 and theparameter2 == 230 and bit.band(thesavingthrow, 0x10000) == 0 and IEex_ReadDword(eData + 0x114) == 0 then
 				local thespecial = IEex_ReadDword(eData + 0x48)
 				globalEffectFlags = bit.bor(globalEffectFlags, thespecial)
 			end
@@ -10037,8 +10096,10 @@ function MEAOESP2(effectData, creatureData)
 ["source_id"] = sourceID,
 ["source_x"] = sourceX,
 ["source_y"] = sourceY,
-["target_x"] = randomTarget[2],
-["target_y"] = randomTarget[3]
+--["target_x"] = randomTarget[2],
+--["target_y"] = randomTarget[3]
+["target_x"] = targetX,
+["target_y"] = targetY
 })
 		else
 			for k, currentTarget in ipairs(possibleTargets) do
@@ -10053,8 +10114,10 @@ function MEAOESP2(effectData, creatureData)
 ["source_id"] = sourceID,
 ["source_x"] = sourceX,
 ["source_y"] = sourceY,
-["target_x"] = currentTarget[2],
-["target_y"] = currentTarget[3]
+--["target_x"] = randomTarget[2],
+--["target_y"] = randomTarget[3]
+["target_x"] = targetX,
+["target_y"] = targetY
 })
 			end
 		end
@@ -11106,6 +11169,7 @@ function MEWOFOST(effectData, creatureData)
 			wallAlreadyExists = true
 		end
 	end)
+	ex_woforc_positions = {0, {}}
 	if spellRES ~= "" and not wallAlreadyExists then
 		IEex_ApplyEffectToActor(targetID, {
 ["opcode"] = 402,
@@ -11140,10 +11204,7 @@ function MEWOFORC(effectData, creatureData)
 	if numCreatures == 0 then return end
 	local savingthrow = IEex_ReadDword(effectData + 0x3C)
 	local wallAnimation = ""
-	local wallDeltaBase = IEex_ReadWord(effectData + 0x46, 0x0)
-	if wallDeltaBase == 0 then
-		wallDeltaBase = 30
-	end
+	local wallDeltaBase = 30
 	local sourceX, sourceY = IEex_GetActorLocation(sourceID)
 	local targetX = IEex_ReadDword(effectData + 0x84)
 	local targetY = IEex_ReadDword(effectData + 0x88)
@@ -11166,7 +11227,10 @@ function MEWOFORC(effectData, creatureData)
 
 		end
 	end)
-	
+	if bit.band(savingthrow, 0x20000000) > 0 then
+		orientation = IEex_ReadWord(effectData + 0x46, 0x0)
+		creatureRES = "USCOFORC"
+	end
 	local duration = IEex_ReadDword(effectData + 0x5C)
 	local timing = 0
 	if duration == 0 then
@@ -11209,7 +11273,7 @@ function MEWOFORC(effectData, creatureData)
 	local x = 0
 	local y = 0
 	local trueBitmapX = math.floor(bitmapX / 2) + padding
-	ex_woforc_positions = {0, {}}
+--	ex_woforc_positions = {0, {}}
 	if numCreatures % 2 == 1 then
 --[[
 		x = math.floor(targetX / pixelSizeX)
@@ -11223,7 +11287,7 @@ function MEWOFORC(effectData, creatureData)
 		end
 --]]
 		table.insert(ex_woforc_positions[2], {targetX, targetY + 7})
-		IEex_Eval('CreateCreature(\"' .. creatureRES .. '\", \"USWOFORC\", [' .. targetX .. '.' .. targetY + 7 .. '], ' .. 0, sourceID)
+		IEex_Eval('CreateCreature(\"' .. creatureRES .. '\", \"' .. creatureRES .. '\", [' .. targetX .. '.' .. targetY + 7 .. '], ' .. 0, sourceID)
 --[[
 		IEex_ApplyEffectToActor(sourceID, {
 ["opcode"] = 67,
@@ -11256,7 +11320,7 @@ function MEWOFORC(effectData, creatureData)
 			end
 --]]
 			table.insert(ex_woforc_positions[2], {targetX + (wallDeltaX * i), targetY + (wallDeltaY * i) + 7})
-			IEex_Eval('CreateCreature(\"' .. creatureRES .. '\", \"USWOFORC\", [' .. targetX + (wallDeltaX * i) .. '.' .. targetY + (wallDeltaY * i) + 7 .. '], ' .. 0, sourceID)
+			IEex_Eval('CreateCreature(\"' .. creatureRES .. '\", \"' .. creatureRES .. '\", [' .. targetX + (wallDeltaX * i) .. '.' .. targetY + (wallDeltaY * i) + 7 .. '], ' .. 0, sourceID)
 
 			
 --[[
@@ -11290,7 +11354,7 @@ function MEWOFORC(effectData, creatureData)
 			end
 --]]
 			table.insert(ex_woforc_positions[2], {targetX - (wallDeltaX * i), targetY - (wallDeltaY * i) + 7})
-			IEex_Eval('CreateCreature(\"' .. creatureRES .. '\", \"USWOFORC\", [' .. targetX - (wallDeltaX * i) .. '.' .. targetY - (wallDeltaY * i) + 7 .. '], ' .. 0, sourceID)
+			IEex_Eval('CreateCreature(\"' .. creatureRES .. '\", \"' .. creatureRES .. '\", [' .. targetX - (wallDeltaX * i) .. '.' .. targetY - (wallDeltaY * i) + 7 .. '], ' .. 0, sourceID)
 --[[
 			IEex_ApplyEffectToActor(sourceID, {
 	["opcode"] = 67,
@@ -11313,7 +11377,7 @@ function MEWOFORC(effectData, creatureData)
 	else
 		for i = 1, numCreatures, 1 do
 			table.insert(ex_woforc_positions[2], {targetX + math.floor(wallDeltaX / 2) + (wallDeltaX * i), targetY + math.floor(wallDeltaY / 2) + (wallDeltaY * i) + 7})
-			IEex_Eval('CreateCreature(\"' .. creatureRES .. '\", \"USWOFORC\", [' .. targetX + math.floor(wallDeltaX / 2) + (wallDeltaX * i) .. '.' .. targetY + math.floor(wallDeltaY / 2) + (wallDeltaY * i) + 7 .. '], ' .. 0, sourceID)
+			IEex_Eval('CreateCreature(\"' .. creatureRES .. '\", \"' .. creatureRES .. '\", [' .. targetX + math.floor(wallDeltaX / 2) + (wallDeltaX * i) .. '.' .. targetY + math.floor(wallDeltaY / 2) + (wallDeltaY * i) + 7 .. '], ' .. 0, sourceID)
 --[[
 			IEex_ApplyEffectToActor(sourceID, {
 	["opcode"] = 67,
@@ -11333,7 +11397,7 @@ function MEWOFORC(effectData, creatureData)
 	})
 --]]
 			table.insert(ex_woforc_positions[2], {targetX - math.floor(wallDeltaX / 2) - (wallDeltaX * i), targetY - math.floor(wallDeltaY / 2) - (wallDeltaY * i) + 7})
-			IEex_Eval('CreateCreature(\"' .. creatureRES .. '\", \"USWOFORC\", [' .. targetX - math.floor(wallDeltaX / 2) - (wallDeltaX * i) .. '.' .. targetY - math.floor(wallDeltaY / 2) - (wallDeltaY * i) + 7 .. '], ' .. 0, sourceID)
+			IEex_Eval('CreateCreature(\"' .. creatureRES .. '\", \"' .. creatureRES .. '\", [' .. targetX - math.floor(wallDeltaX / 2) - (wallDeltaX * i) .. '.' .. targetY - math.floor(wallDeltaY / 2) - (wallDeltaY * i) + 7 .. '], ' .. 0, sourceID)
 --[[
 			IEex_ApplyEffectToActor(sourceID, {
 	["opcode"] = 67,
@@ -11367,6 +11431,7 @@ function MEWOFOR2(effectData, creatureData)
 			wallAlreadyExists = true
 		end
 	end)
+
 	local extraFlags = IEex_ReadDword(creatureData + 0x740)
 	if bit.band(extraFlags, 0x800000) == 0 and IEex_GetGameTick() - IEex_ReadDword(effectData + 0x68) >= 1 then
 		IEex_WriteDword(creatureData + 0x740, bit.bor(extraFlags, 0x800000))
@@ -11374,6 +11439,8 @@ function MEWOFOR2(effectData, creatureData)
 		local numPositions = #ex_woforc_positions[2]
 		ex_woforc_positions[1] = nextPosition
 		if nextPosition <= numPositions then
+			IEex_JumpActorToPoint(targetID, ex_woforc_positions[2][nextPosition][1], ex_woforc_positions[2][nextPosition][2], true)
+--[[
 			IEex_ApplyEffectToActor(targetID, {
 ["opcode"] = 124,
 ["target"] = 2,
@@ -11384,9 +11451,818 @@ function MEWOFOR2(effectData, creatureData)
 ["source_target"] = targetID,
 ["source_id"] = targetID,
 })
+--]]
 		end
 	elseif not wallAlreadyExists then
 		IEex_WriteByte(creatureData + 0x25, 105)
+	end
+end
+
+function MECOFORC(effectData, creatureData)
+	IEex_WriteDword(effectData + 0x110, 0x1)
+	local targetID = IEex_GetActorIDShare(creatureData)
+	local sourceID = IEex_ReadDword(effectData + 0x10C)
+	local parameter1 = IEex_ReadDword(effectData + 0x18)
+	local parameter2 = IEex_ReadDword(effectData + 0x1C)
+	local special = IEex_ReadDword(effectData + 0x44)
+	local casterlvl = IEex_ReadDword(effectData + 0xC4)
+	local targetX = IEex_ReadDword(effectData + 0x84)
+	local targetY = IEex_ReadDword(effectData + 0x88)
+	local timing = IEex_ReadDword(effectData + 0x20)
+	local duration = IEex_ReadDword(effectData + 0x24)
+	local time_applied = IEex_ReadDword(effectData + 0x68)
+	if timing == 4096 then
+		timing = 0
+		duration = math.floor((duration - time_applied) / 15)
+	end
+	local areaData = IEex_ReadDword(creatureData + 0x12)
+	if areaData <= 0 then return end
+	local areaRES = IEex_ReadLString(areaData, 8)
+	local alreadyActive = false
+	local notLoaded = true
+	IEex_IterateIDs(areaData, 0x30, true, true, function(staticID)
+		local staticData = IEex_GetActorShare(staticID)
+		local scriptName = IEex_ReadLString(staticData + 0x6E, 32)
+		if scriptName == areaRES .. "COFL" then
+			notLoaded = false
+			if bit.band(IEex_ReadWord(staticData + 0xA2, 0x0), 0x1) > 0 then
+				alreadyActive = true
+			end
+		end
+	end)
+	if alreadyActive or notLoaded then return end
+
+	IEex_IterateIDs(areaData, 0x31, true, true, function(currentID)
+		local currentShare = IEex_GetActorShare(currentID)
+		local scriptName = IEex_ReadLString(currentShare + 0x554, 32)
+		if scriptName == areaRES .. "AREAGL" then
+			IEex_ApplyEffectToActor(currentID, {
+["opcode"] = 288,
+["target"] = 2,
+["timing"] = timing,
+["duration"] = duration,
+["parameter2"] = 230,
+["special"] = 0x10000,
+["savingthrow"] = 0x10000,
+["casterlvl"] = casterlvl,
+["source_target"] = currentID,
+["source_id"] = currentID,
+})
+		end
+	end)
+
+	IEex_Eval('Activate(\"' .. areaRES .. 'COFL' .. '\")',sourceID)
+	IEex_Eval('Activate(\"' .. areaRES .. 'COFR' .. '\")',sourceID)
+	IEex_Eval('Activate(\"' .. areaRES .. 'COFB' .. '\")',sourceID)
+	IEex_Eval('Activate(\"' .. areaRES .. 'COFT' .. '\")',sourceID)
+	IEex_IterateIDs(areaData, 0x30, true, true, function(staticID)
+		local staticData = IEex_GetActorShare(staticID)
+		local scriptName = IEex_ReadLString(staticData + 0x6E, 32)
+		if scriptName == areaRES .. "COFL" then
+			IEex_WriteDword(staticData + 0x6, targetX - 65)
+			IEex_WriteDword(staticData + 0xA, targetY)
+			IEex_WriteWord(staticData + 0x8E, targetX - 65)
+			IEex_WriteWord(staticData + 0x90, targetY)
+		elseif scriptName == areaRES .. "COFR" then
+			IEex_WriteDword(staticData + 0x6, targetX + 65)
+			IEex_WriteDword(staticData + 0xA, targetY)
+			IEex_WriteWord(staticData + 0x8E, targetX + 65)
+			IEex_WriteWord(staticData + 0x90, targetY)
+		elseif scriptName == areaRES .. "COFB" then
+			IEex_WriteDword(staticData + 0x6, targetX)
+			IEex_WriteDword(staticData + 0xA, targetY + 45)
+			IEex_WriteWord(staticData + 0x8E, targetX)
+			IEex_WriteWord(staticData + 0x90, targetY + 45)
+		elseif scriptName == areaRES .. "COFT" then
+			IEex_WriteDword(staticData + 0x6, targetX)
+			IEex_WriteDword(staticData + 0xA, targetY - 65)
+			IEex_WriteWord(staticData + 0x8E, targetX)
+			IEex_WriteWord(staticData + 0x90, targetY - 65)
+		end
+	end)
+	ex_woforc_positions = {0, {}}
+	IEex_ApplyEffectToActor(targetID, {
+["opcode"] = 500,
+["target"] = 2,
+["timing"] = 0,
+["special"] = 0x5,
+["savingthrow"] = 0x20000000,
+["resource"] = "MEWOFORC",
+["casterlvl"] = casterlvl,
+["source_target"] = targetID,
+["source_id"] = sourceID,
+["source_x"] = targetX,
+["source_y"] = targetY,
+["target_x"] = targetX,
+["target_y"] = targetY + 45
+})
+	IEex_ApplyEffectToActor(targetID, {
+["opcode"] = 500,
+["target"] = 2,
+["timing"] = 0,
+["special"] = 0x80005,
+["savingthrow"] = 0x20000000,
+["resource"] = "MEWOFORC",
+["casterlvl"] = casterlvl,
+["source_target"] = targetID,
+["source_id"] = sourceID,
+["source_x"] = targetX,
+["source_y"] = targetY,
+["target_x"] = targetX,
+["target_y"] = targetY - 65
+})
+	IEex_ApplyEffectToActor(targetID, {
+["opcode"] = 500,
+["target"] = 2,
+["timing"] = 0,
+["special"] = 0x40003,
+["savingthrow"] = 0x20000000,
+["resource"] = "MEWOFORC",
+["casterlvl"] = casterlvl,
+["source_target"] = targetID,
+["source_id"] = sourceID,
+["source_x"] = targetX,
+["source_y"] = targetY,
+["target_x"] = targetX + 65,
+["target_y"] = targetY
+})
+	IEex_ApplyEffectToActor(targetID, {
+["opcode"] = 500,
+["target"] = 2,
+["timing"] = 0,
+["special"] = 0x40003,
+["savingthrow"] = 0x20000000,
+["resource"] = "MEWOFORC",
+["casterlvl"] = casterlvl,
+["source_target"] = targetID,
+["source_id"] = sourceID,
+["source_x"] = targetX,
+["source_y"] = targetY,
+["target_x"] = targetX - 65,
+["target_y"] = targetY
+})
+end
+
+function MECOFOR2(effectData, creatureData)
+	local targetID = IEex_GetActorIDShare(creatureData)
+--	if IEex_CheckForInfiniteLoop(targetID, IEex_GetGameTick(), "MEWOFOR2", 5) then return end
+--[[
+	local wallAlreadyExists = false
+
+	local areaData = IEex_ReadDword(creatureData + 0x12)
+
+	if areaData <= 0 then
+		wallAlreadyExists = true
+	else
+		local areaRES = IEex_ReadLString(areaData, 8)
+		IEex_IterateIDs(areaData, 0x30, true, true, function(staticID)
+			local staticData = IEex_GetActorShare(staticID)
+			local scriptName = IEex_ReadLString(staticData + 0x6E, 32)
+			if scriptName == areaRES .. "COFL" and bit.band(IEex_ReadWord(staticData + 0xA2, 0x0), 0x1) > 0 then
+				wallAlreadyExists = true
+			end
+		end)
+	end
+--]]
+
+	local extraFlags = IEex_ReadDword(creatureData + 0x740)
+	if bit.band(extraFlags, 0x800000) == 0 and IEex_GetGameTick() - IEex_ReadDword(effectData + 0x68) >= 1 then
+		IEex_WriteDword(creatureData + 0x740, bit.bor(extraFlags, 0x800000))
+		local nextPosition = ex_woforc_positions[1] + 1
+		local numPositions = #ex_woforc_positions[2]
+		ex_woforc_positions[1] = nextPosition
+		if nextPosition <= numPositions then
+			IEex_JumpActorToPoint(targetID, ex_woforc_positions[2][nextPosition][1], ex_woforc_positions[2][nextPosition][2], true)
+--[[
+			IEex_ApplyEffectToActor(targetID, {
+["opcode"] = 124,
+["target"] = 2,
+["timing"] = 1,
+["savingthrow"] = 0x10000,
+["target_x"] = ex_woforc_positions[2][nextPosition][1],
+["target_y"] = ex_woforc_positions[2][nextPosition][2],
+["source_target"] = targetID,
+["source_id"] = targetID,
+})
+--]]
+		end
+--	elseif not wallAlreadyExists then
+--		IEex_WriteByte(creatureData + 0x25, 105)
+	end
+end
+
+function METORNAD(effectData, creatureData)
+	IEex_WriteDword(effectData + 0x110, 0x1)
+	local targetID = IEex_GetActorIDShare(creatureData)
+	local sourceID = IEex_ReadDword(effectData + 0x10C)
+	local parameter1 = IEex_ReadDword(effectData + 0x18)
+	local parameter2 = IEex_ReadDword(effectData + 0x1C)
+	local spellRES = IEex_ReadLString(effectData + 0x18, 8)
+	local special = IEex_ReadDword(effectData + 0x44)
+	local casterlvl = IEex_ReadDword(effectData + 0xC4)
+	local targetX = IEex_ReadDword(effectData + 0x84)
+	local targetY = IEex_ReadDword(effectData + 0x88)
+	local timing = IEex_ReadDword(effectData + 0x20)
+	local duration = IEex_ReadDword(effectData + 0x24)
+	local time_applied = IEex_ReadDword(effectData + 0x68)
+	if timing == 4096 then
+		timing = 0
+		duration = math.floor((duration - time_applied) / 15)
+	end
+	local areaData = IEex_ReadDword(creatureData + 0x12)
+	if areaData <= 0 then return end
+	local areaRES = IEex_ReadLString(areaData, 8)
+	local alreadyActive = false
+	local notLoaded = true
+	IEex_IterateIDs(areaData, 0x30, true, true, function(staticID)
+		local staticData = IEex_GetActorShare(staticID)
+		local scriptName = IEex_ReadLString(staticData + 0x6E, 32)
+		if scriptName == areaRES .. "TORNAD" then
+			notLoaded = false
+			if bit.band(IEex_ReadWord(staticData + 0xA2, 0x0), 0x1) > 0 then
+				alreadyActive = true
+			end
+		end
+	end)
+	if alreadyActive or notLoaded then return end
+	
+	IEex_IterateIDs(areaData, 0x31, true, true, function(currentID)
+		local currentShare = IEex_GetActorShare(currentID)
+		local scriptName = IEex_ReadLString(currentShare + 0x554, 32)
+		if scriptName == areaRES .. "AREAGL" then
+			IEex_ApplyEffectToActor(currentID, {
+["opcode"] = 288,
+["target"] = 2,
+["timing"] = timing,
+["duration"] = duration,
+["resource"] = spellRES,
+["parameter2"] = 230,
+["special"] = 0x20000,
+["savingthrow"] = 0x10000,
+["casterlvl"] = casterlvl,
+["internal_flags"] = IEex_ReadDword(effectData + 0xD4),
+["source_target"] = currentID,
+["source_id"] = sourceID,
+})
+		end
+	end)
+
+	IEex_Eval('Activate(\"' .. areaRES .. 'TORNAD' .. '\")',sourceID)
+	IEex_IterateIDs(areaData, 0x30, true, true, function(staticID)
+		local staticData = IEex_GetActorShare(staticID)
+		local scriptName = IEex_ReadLString(staticData + 0x6E, 32)
+		if scriptName == areaRES .. "TORNAD" then
+			IEex_WriteDword(staticData + 0x6, targetX)
+			IEex_WriteDword(staticData + 0xA, targetY)
+			IEex_WriteWord(staticData + 0x8E, targetX)
+			IEex_WriteWord(staticData + 0x90, targetY)
+			IEex_WriteDword(staticData + 0x190, 1)
+		end
+	end)
+end
+
+--ex_tornado_teleport_offsets = {{0, -2}, {1, -2}, {2, -2}, {2, -1}, {2, 0}, {2, 1}, {2, 2}, {1, 2}, {0, 2}, {-1, 2}, {-2, 2}, {-2, 1}, {-2, 0}, {-2, -1}, {-2, -2}, {-1, -2}}
+ex_tornado_teleport_offsets = {{0, -1.41}, {.54, -1.31}, {1, -1}, {1.31, -.54}, {1.41, 0}, {1.31, .54}, {1, 1}, {.54, 1.31}, {0, 1.41}, {-.54, 1.31}, {-1, 1}, {-1.31, .54}, {-1.41, 0}, {-1.31, -.54}, {-1, -1}, {-.54, -1.31}}
+ex_tornado_teleport_index = {}
+function METORNAT(effectData, creatureData)
+	IEex_WriteDword(effectData + 0x110, 1)
+	local sourceID = IEex_ReadDword(effectData + 0x10C)
+	local targetID = IEex_GetActorIDShare(creatureData)
+	local targetX = IEex_ReadDword(creatureData + 0x6)
+	local targetY = IEex_ReadDword(creatureData + 0xA)
+	local animation = IEex_ReadDword(creatureData + 0x5C4)
+	local savingthrow = IEex_ReadDword(effectData + 0x3C)
+	local projectileX = IEex_ReadDword(effectData + 0x84)
+	local projectileY = IEex_ReadDword(effectData + 0x88)
+	local shortestDistance = 0x7FFFFFFF
+--[[
+	IEex_IterateIDs(IEex_ReadDword(creatureData + 0x14), 80, true, true, function(actorID)
+		local projectileData = IEex_GetActorShare(actorID)
+		if IEex_ReadWord(projectileData + 0x48, 0x0) + 1 == ex_tornado_projectile then
+			local currentX = IEex_ReadDword(projectileData + 0x8)
+			local currentY = IEex_ReadDword(projectileData + 0xC)
+			local currentDistance = IEex_GetDistance(targetX, targetY, currentX, currentY)
+			if currentDistance < shortestDistance then
+				shortestDistance = currentDistance
+				projectileX = currentX
+				projectileY = currentY
+			end
+		end
+	end)
+--]]
+	local deltaX = targetX - projectileX
+	local deltaY = targetY - projectileY
+	if ex_tornado_teleport_index[targetID] == nil then
+		local closestOffset = 0
+		local closestOffsetDistance = 0x7FFFFFFF
+		for i = 1, 16, 1 do
+			local currentOffsetDistance = IEex_GetDistance(targetX, targetY, projectileX + math.floor(ex_tornado_teleport_offsets[i][1] * 10), projectileY + math.floor(ex_tornado_teleport_offsets[i][2] * 10))
+			if currentOffsetDistance < closestOffsetDistance then
+				closestOffsetDistance = currentOffsetDistance
+				closestOffset = i
+			end
+		end
+		ex_tornado_teleport_index[targetID] = closestOffset
+	elseif ex_tornado_teleport_index[targetID] >= 16 then
+		ex_tornado_teleport_index[targetID] = 1
+	else
+		ex_tornado_teleport_index[targetID] = ex_tornado_teleport_index[targetID] + 1
+	end
+	local targetHeight = IEex_ReadDword(creatureData + 0xE) * -1
+	local newX = projectileX + math.floor(ex_tornado_teleport_offsets[ex_tornado_teleport_index[targetID]][1] * 2 * (targetHeight / 10 + 5))
+	local newY = projectileY + math.floor(ex_tornado_teleport_offsets[ex_tornado_teleport_index[targetID]][2] * 2 * (targetHeight / 10 + 5))
+--[[
+	IEex_ApplyEffectToActor(targetID, {
+["opcode"] = 254,
+["target"] = 2,
+["timing"] = 1,
+["resource"] = "METORNAT",
+["source_target"] = targetID,
+["source_id"] = sourceID
+})
+--]]
+	IEex_JumpActorToPoint(targetID, newX, newY, true)
+--[[
+	IEex_ApplyEffectToActor(targetID, {
+["opcode"] = 124,
+["target"] = 2,
+["timing"] = 1,
+["source_x"] = targetX,
+["source_y"] = targetY,
+["target_x"] = newX,
+["target_y"] = newY,
+["parent_resource"] = "METORNAT",
+["source_target"] = targetID,
+["source_id"] = sourceID
+})
+--]]
+	if IEex_GetGameTick() % 15 == 0 then
+		IEex_ApplyEffectToActor(targetID, {
+["opcode"] = 500,
+["target"] = 2,
+["timing"] = 0,
+["parameter1"] = 0x30800,
+["parameter2"] = 0x1000000,
+["savingthrow"] = 0x10000,
+["resource"] = "EXDAMAGE",
+["parent_resource"] = IEex_ReadLString(effectData + 0x90, 8),
+["source_target"] = targetID,
+["source_id"] = sourceID
+})
+	end
+	IEex_ApplyEffectToActor(targetID, {
+["opcode"] = 500,
+["target"] = 2,
+["timing"] = 0,
+["parameter1"] = 5,
+["parameter2"] = 13,
+["savingthrow"] = 0x10000,
+["resource"] = "MESPLPR2",
+["parent_resource"] = IEex_ReadLString(effectData + 0x90, 8),
+["source_target"] = targetID,
+["source_id"] = sourceID
+})
+	IEex_ApplyEffectToActor(targetID, {
+["opcode"] = 500,
+["target"] = 2,
+["timing"] = 7,
+["duration"] = IEex_GetGameTick(),
+["parameter1"] = 30,
+["parameter2"] = 1,
+["special"] = -100,
+["source_x"] = targetX,
+["source_y"] = targetY,
+["target_x"] = newX + ex_tornado_teleport_offsets[((ex_tornado_teleport_index[targetID] - 5) % 16) + 1][1] * 20,
+["target_y"] = newY + ex_tornado_teleport_offsets[((ex_tornado_teleport_index[targetID] - 5) % 16) + 1][2] * 20,
+["resource"] = "MEWINGBU",
+["parent_resource"] = IEex_ReadLString(effectData + 0x90, 8),
+["source_target"] = targetID,
+["source_id"] = sourceID
+})
+end
+
+function MEREVGRV(effectData, creatureData)
+	IEex_WriteDword(effectData + 0x110, 0x1)
+	local targetID = IEex_GetActorIDShare(creatureData)
+	local sourceID = IEex_ReadDword(effectData + 0x10C)
+	local parameter1 = IEex_ReadDword(effectData + 0x18)
+	local parameter2 = IEex_ReadDword(effectData + 0x1C)
+	local spellRES = IEex_ReadLString(effectData + 0x18, 8)
+	local special = IEex_ReadDword(effectData + 0x44)
+	local casterlvl = IEex_ReadDword(effectData + 0xC4)
+	local targetX = IEex_ReadDword(effectData + 0x84)
+	local targetY = IEex_ReadDword(effectData + 0x88)
+	local timing = IEex_ReadDword(effectData + 0x20)
+	local duration = IEex_ReadDword(effectData + 0x24)
+	local time_applied = IEex_ReadDword(effectData + 0x68)
+	if timing == 4096 then
+		timing = 0
+		duration = math.floor((duration - time_applied) / 15)
+	end
+	local areaData = IEex_ReadDword(creatureData + 0x12)
+	if areaData <= 0 then return end
+	local areaRES = IEex_ReadLString(areaData, 8)
+	local alreadyActive = false
+	local notLoaded = true
+	IEex_IterateIDs(areaData, 0x30, true, true, function(staticID)
+		local staticData = IEex_GetActorShare(staticID)
+		local scriptName = IEex_ReadLString(staticData + 0x6E, 32)
+		if scriptName == areaRES .. "GRVGLB" then
+			notLoaded = false
+			if bit.band(IEex_ReadWord(staticData + 0xA2, 0x0), 0x1) > 0 then
+				alreadyActive = true
+			end
+		end
+	end)
+	if alreadyActive or notLoaded then return end
+	
+	IEex_IterateIDs(areaData, 0x31, true, true, function(currentID)
+		local currentShare = IEex_GetActorShare(currentID)
+		local scriptName = IEex_ReadLString(currentShare + 0x554, 32)
+		if scriptName == areaRES .. "AREAGL" then
+			IEex_ApplyEffectToActor(currentID, {
+["opcode"] = 288,
+["target"] = 2,
+["timing"] = timing,
+["duration"] = duration,
+["resource"] = spellRES,
+["parameter2"] = 230,
+["special"] = 0x40000,
+["savingthrow"] = 0x10000,
+["casterlvl"] = casterlvl,
+["internal_flags"] = IEex_ReadDword(effectData + 0xD4),
+["source_target"] = currentID,
+["source_id"] = sourceID,
+})
+		end
+	end)
+	IEex_Eval('Activate(\"' .. areaRES .. 'GRVGLB' .. '\")',sourceID)
+--	IEex_Eval('Activate(\"' .. areaRES .. 'GRVGL1' .. '\")',sourceID)
+--	IEex_Eval('Activate(\"' .. areaRES .. 'GRVGL2' .. '\")',sourceID)
+--	IEex_Eval('Activate(\"' .. areaRES .. 'GRVGL3' .. '\")',sourceID)
+--	IEex_Eval('Activate(\"' .. areaRES .. 'GRVGL4' .. '\")',sourceID)
+	IEex_IterateIDs(areaData, 0x30, true, true, function(staticID)
+		local staticData = IEex_GetActorShare(staticID)
+		local scriptName = IEex_ReadLString(staticData + 0x6E, 32)
+		if scriptName == areaRES .. "GRVGLB" then
+--		if scriptName == areaRES .. "GRVGL1" or scriptName == areaRES .. "GRVGL2" or scriptName == areaRES .. "GRVGL3" or scriptName == areaRES .. "GRVGL4" then
+			IEex_WriteDword(staticData + 0x6, targetX)
+			IEex_WriteDword(staticData + 0xA, targetY)
+			IEex_WriteWord(staticData + 0x8E, targetX)
+			IEex_WriteWord(staticData + 0x90, targetY)
+			IEex_WriteDword(staticData + 0x190, 1)
+		end
+	end)
+end
+ex_grvglb_radius = 224
+function MEGRVGLB(effectData, creatureData)
+	IEex_WriteDword(effectData + 0x110, 0x1)
+	local targetID = IEex_GetActorIDShare(creatureData)
+	local sourceID = IEex_ReadDword(effectData + 0x10C)
+	local casterlvl = IEex_ReadDword(effectData + 0xC4)
+	local targetX = IEex_ReadDword(creatureData + 0x6)
+	local targetY = IEex_ReadDword(creatureData + 0xA)
+	local centerX = IEex_ReadDword(effectData + 0x84)
+	local centerY = IEex_ReadDword(effectData + 0x88)
+	local horizontalDistance = math.floor((((targetX - centerX) ^ 2) + (((targetY - centerY) * 1.5) ^ 2)) ^ .5)
+	if horizontalDistance > ex_grvglb_radius then
+		horizontalDistance = ex_grvglb_radius
+	end
+--	IEex_DS(IEex_GetActorName(targetID) .. ": " .. horizontalDistance)
+	local globeYRadius = math.floor(((ex_grvglb_radius ^ 2) - (horizontalDistance ^ 2)) ^ .5)
+	local globeHeight = globeYRadius + ex_grvglb_radius * .8
+	local globeBottom = ex_grvglb_radius * .8 - globeYRadius
+
+	local height = IEex_ReadSignedWord(creatureData + 0x720, 0x0)
+--	IEex_DS(IEex_GetActorName(targetID) .. "-> globeHeight: " .. globeHeight .. "; globeBottom: " .. globeBottom .. "; fullHeight: " .. fullHeight)
+	if height >= globeBottom and (height <= globeHeight or horizontalDistance <= ex_grvglb_radius * .6) then
+		IEex_ApplyEffectToActor(targetID, {
+["opcode"] = 288,
+["target"] = 2,
+["timing"] = 0,
+["duration"] = 1,
+["parameter1"] = 5,
+["parameter2"] = 190,
+["special"] = 3,
+["parent_resource"] = "MEGRVGLA",
+["source_target"] = targetID,
+["source_id"] = sourceID
+})
+	IEex_ApplyEffectToActor(targetID, {
+["opcode"] = 206,
+["target"] = 2,
+["timing"] = 0,
+["duration"] = 1,
+--["duration"] = IEex_GetGameTick() + 1,
+["resource"] = "MEGRVGLA",
+["parent_resource"] = "MEGRVGLA",
+["source_target"] = targetID,
+["source_id"] = sourceID
+})
+	else
+		IEex_ApplyEffectToActor(targetID, {
+["opcode"] = 254,
+["target"] = 2,
+["timing"] = 9,
+["resource"] = "MEGRVGLA",
+["parent_resource"] = parent_resource,
+["source_target"] = targetID,
+["source_id"] = sourceID
+})
+	end
+	if height <= globeHeight and height >= globeBottom then
+
+		if IEex_IsFlying(targetID) then return end
+
+		IEex_ApplyEffectToActor(targetID, {
+["opcode"] = 288,
+["target"] = 2,
+["timing"] = 0,
+["duration"] = 1,
+["parameter1"] = globeHeight,
+["parameter2"] = 190,
+["special"] = 5,
+["parent_resource"] = "MEGRVGLB",
+["source_target"] = targetID,
+["source_id"] = sourceID
+})
+		IEex_ApplyEffectToActor(targetID, {
+["opcode"] = 206,
+["target"] = 2,
+["timing"] = 0,
+["duration"] = 1,
+--["duration"] = IEex_GetGameTick() + 1,
+["resource"] = "MEGRVGLB",
+["parent_resource"] = "MEGRVGLB",
+["source_target"] = targetID,
+["source_id"] = sourceID
+})
+--		if IEex_ReadDword(creatureData + 0x556E) > 0 then
+			IEex_ApplyEffectToActor(targetID, {
+["opcode"] = 500,
+["target"] = 2,
+["timing"] = 0,
+["duration"] = 70,
+["parameter1"] = IEex_ReadByte(creatureData + 0x72EA, 0x0),
+["parameter2"] = 1,
+--["special"] = -10000,
+["resource"] = "MEWINGBU",
+["parent_resource"] = "MEGRVGLC",
+["target_x"] = targetX,
+["target_y"] = targetY,
+["source_target"] = targetID,
+["source_id"] = sourceID
+})
+--[[
+		else
+			IEex_ApplyEffectToActor(targetID, {
+["opcode"] = 500,
+["target"] = 2,
+["timing"] = 0,
+["duration"] = 70,
+["parameter1"] = IEex_ReadByte(creatureData + 0x72EA, 0x0),
+["parameter2"] = 3,
+--["special"] = -10000,
+["resource"] = "MEWINGBU",
+["parent_resource"] = "MEGRVGLC",
+["target_x"] = targetX,
+["target_y"] = targetY,
+["source_target"] = targetID,
+["source_id"] = sourceID
+})
+		end
+--]]
+			IEex_ApplyEffectToActor(targetID, {
+["opcode"] = 500,
+["target"] = 2,
+["timing"] = 3,
+["parameter1"] = -3,
+["parameter2"] = 1,
+["special"] = 2,
+["resource"] = "MEHGTST",
+["parent_resource"] = "MEGRVGLC",
+["source_target"] = targetID,
+["source_id"] = sourceID
+})
+
+			IEex_ApplyEffectToActor(targetID, {
+["opcode"] = 500,
+["target"] = 2,
+["timing"] = 0,
+["duration"] = 70,
+["parameter1"] = globeHeight,
+["parameter2"] = 1,
+["resource"] = "MEHGTMOD",
+["parent_resource"] = "MEGRVGLC",
+["source_target"] = targetID,
+["source_id"] = sourceID
+})
+			IEex_ApplyEffectToActor(targetID, {
+["opcode"] = 206,
+["target"] = 2,
+["timing"] = 0,
+["duration"] = 70,
+--["duration"] = IEex_GetGameTick() + 1,
+["resource"] = "MEGRVGLC",
+["parent_resource"] = "MEGRVGLC",
+["source_target"] = targetID,
+["source_id"] = sourceID
+})
+--[[
+		IEex_ApplyEffectToActor(targetID, {
+["opcode"] = 254,
+["target"] = 2,
+["timing"] = 4,
+["duration"] = 1,
+["resource"] = "MEGRVGLB",
+["parent_resource"] = "MEGRVGLB",
+["source_target"] = targetID,
+["source_id"] = targetID
+})
+--]]
+	else
+		IEex_ApplyEffectToActor(targetID, {
+["opcode"] = 254,
+["target"] = 2,
+["timing"] = 9,
+["resource"] = "MEGRVGLB",
+["parent_resource"] = parent_resource,
+["source_target"] = targetID,
+["source_id"] = sourceID
+})
+	end
+end
+
+ex_tornado_speed = 15
+ex_current_tornado_delta = nil
+function MEAREAGL(effectData, creatureData, isSpecialCall)
+	if not isSpecialCall then return end
+	local targetID = IEex_GetActorIDShare(creatureData)
+	local areaData = IEex_ReadDword(creatureData + 0x12)
+	if areaData <= 0 then return end
+	local areaRES = IEex_ReadLString(areaData, 8)
+	local areaX = IEex_ReadDword(areaData + 0x54C)
+	local areaY = IEex_ReadDword(areaData + 0x550)
+	local globalEffectFlags = 0
+	local previousGlobalEffectFlags = IEex_ReadDword(creatureData + 0x738)
+	local globalEffectInfo = {}
+	IEex_IterateActorEffects(targetID, function(eData)
+		local theopcode = IEex_ReadDword(eData + 0x10)
+		local theparameter2 = IEex_ReadDword(eData + 0x20)
+		local thesavingthrow = IEex_ReadDword(eData + 0x40)
+		if theopcode == 288 and theparameter2 == 230 and bit.band(thesavingthrow, 0x10000) > 0 and IEex_ReadDword(eData + 0x114) == 0 then
+			local thespecial = IEex_ReadDword(eData + 0x48)
+			globalEffectFlags = bit.bor(globalEffectFlags, thespecial)
+			local theresource = IEex_ReadLString(eData + 0x30, 8)
+			local thecasterlvl = IEex_ReadDword(eData + 0xC8)
+			local theinternalFlags = IEex_ReadDword(eData + 0xD8)
+			local thesourceID = IEex_ReadDword(eData + 0x110)
+			globalEffectInfo[thespecial] = {{IEex_ReadDword(eData + 0x30), IEex_ReadDword(eData + 0x34)}, thecasterlvl, theinternalFlags, thesourceID}
+--[[
+			globalEffectInfo[thespecial] = {theresource, thecasterlvl, theinternalFlags, thesourceID}
+			if thespecial == 0x20000 then
+				globalEffectInfo[thespecial][1] = {IEex_ReadDword(eData + 0x30), IEex_ReadDword(eData + 0x34)}
+			end
+--]]
+		end
+	end)
+	IEex_WriteDword(creatureData + 0x738, globalEffectFlags)
+--	IEex_DS(previousGlobalEffectFlags .. " -> " .. globalEffectFlags)
+	if bit.band(previousGlobalEffectFlags, 0x10000) > 0 and bit.band(globalEffectFlags, 0x10000) == 0 then
+		IEex_Eval('Deactivate(\"' .. areaRES .. 'COFL' .. '\")',targetID)
+		IEex_Eval('Deactivate(\"' .. areaRES .. 'COFR' .. '\")',targetID)
+		IEex_Eval('Deactivate(\"' .. areaRES .. 'COFB' .. '\")',targetID)
+		IEex_Eval('Deactivate(\"' .. areaRES .. 'COFT' .. '\")',targetID)
+		IEex_IterateIDs(areaData, 0x31, true, true, function(currentID)
+			local currentShare = IEex_GetActorShare(currentID)
+			local scriptName = IEex_ReadLString(currentShare + 0x554, 32)
+			if scriptName == "USCOFORC" then
+				IEex_Eval('DestroySelf()',currentID)
+			end
+		end)
+	end
+	if bit.band(globalEffectFlags, 0x20000) > 0 then
+		local targetX = 0
+		local targetY = 0
+		IEex_IterateIDs(areaData, 0x30, true, true, function(staticID)
+			local staticData = IEex_GetActorShare(staticID)
+			local scriptName = IEex_ReadLString(staticData + 0x6E, 32)
+			if scriptName == areaRES .. "TORNAD" then
+				targetX = IEex_ReadDword(staticData + 0x6)
+				targetY = IEex_ReadDword(staticData + 0xA)
+				local searchMapWrapper = IEex_DemandRes(areaRES .. "SR", "BMP")
+				local searchMapData = searchMapWrapper:getData()
+				local randomWalkSpeed = ex_tornado_speed
+				local deltaX = math.random(randomWalkSpeed * 2 + 1) - randomWalkSpeed - 1
+				local deltaY = math.random(randomWalkSpeed * 2 + 1) - randomWalkSpeed - 1
+				local finalX = targetX + deltaX
+				local finalY = targetY + deltaY
+				if finalX < 0 then
+					finalX = 1
+				elseif finalX >= areaX then
+					finalX = areaX - 1
+				end
+				if finalY < 0 then
+					finalY = 1
+				elseif finalY >= areaY then
+					finalY = areaY - 1
+				end
+				if ex_current_tornado_delta == nil or IEex_GetGameTick() % 5 == 0 then
+					local currentDistance = math.floor((deltaX ^ 2 + deltaY ^ 2) ^ .5)
+					local currentPixelIndex = IEex_GetBitmapPixelIndex(searchMapData, math.floor((finalX) / 16), math.floor((finalY) / 12))
+					local numTries = 0
+					while numTries <= 20 and (currentDistance >= randomWalkSpeed or ex_default_terrain_table_1[currentPixelIndex] == -1) do
+						deltaX = math.random(randomWalkSpeed * 2 + 1) - randomWalkSpeed - 1
+						deltaY = math.random(randomWalkSpeed * 2 + 1) - randomWalkSpeed - 1
+						finalX = targetX + deltaX
+						finalY = targetY + deltaY
+						if finalX < 0 then
+							finalX = 1
+						elseif finalX >= areaX then
+							finalX = areaX - 1
+						end
+						if finalY < 0 then
+							finalY = 1
+						elseif finalY >= areaY then
+							finalY = areaY - 1
+						end
+						currentDistance = math.floor((deltaX ^ 2 + deltaY ^ 2) ^ .5)
+						currentPixelIndex = IEex_GetBitmapPixelIndex(searchMapData, math.floor((finalX) / 16), math.floor((finalY) / 12))
+						numTries = numTries + 1
+					end
+					ex_current_tornado_delta = {deltaX, deltaY}
+				else
+					deltaX = ex_current_tornado_delta[1]
+					deltaY = ex_current_tornado_delta[2]
+				end
+				targetX = finalX
+				targetY = finalY
+				IEex_WriteDword(staticData + 0x6, targetX)
+				IEex_WriteDword(staticData + 0xA, targetY)
+				IEex_WriteWord(staticData + 0x8E, targetX)
+				IEex_WriteWord(staticData + 0x90, targetY)
+				IEex_WriteDword(staticData + 0x190, 1)
+				searchMapWrapper:free()
+			end
+		end)
+		IEex_ApplyEffectToActor(targetID, {
+["opcode"] = 500,
+["target"] = 2,
+["timing"] = 0,
+["parameter1"] = globalEffectInfo[0x20000][1][1],
+["parameter2"] = globalEffectInfo[0x20000][1][2],
+["special"] = 160,
+["savingthrow"] = 0x1010000,
+["resource"] = "MEAOESP2",
+["casterlvl"] = globalEffectInfo[0x20000][2],
+["internal_flags"] = globalEffectInfo[0x20000][3],
+["source_target"] = targetID,
+["source_id"] = globalEffectInfo[0x20000][4],
+["source_x"] = targetX,
+["source_y"] = targetY,
+["target_x"] = targetX,
+["target_y"] = targetY
+})
+	elseif bit.band(previousGlobalEffectFlags, 0x20000) > 0 then
+		IEex_Eval('Deactivate(\"' .. areaRES .. 'TORNAD' .. '\")',targetID)
+	end
+	if bit.band(globalEffectFlags, 0x40000) > 0 then
+		local targetX = 0
+		local targetY = 0
+		IEex_IterateIDs(areaData, 0x30, true, true, function(staticID)
+			local staticData = IEex_GetActorShare(staticID)
+			local scriptName = IEex_ReadLString(staticData + 0x6E, 32)
+			if scriptName == areaRES .. "GRVGLB" then
+--			if scriptName == areaRES .. "GRVGL1" or scriptName == areaRES .. "GRVGL2" or scriptName == areaRES .. "GRVGL3" or scriptName == areaRES .. "GRVGL4" then
+				targetX = IEex_ReadDword(staticData + 0x6)
+				targetY = IEex_ReadDword(staticData + 0xA)
+				IEex_WriteDword(staticData + 0x190, 1)
+			end
+		end)
+		IEex_ApplyEffectToActor(targetID, {
+["opcode"] = 500,
+["target"] = 2,
+["timing"] = 0,
+["parameter1"] = globalEffectInfo[0x40000][1][1],
+["parameter2"] = globalEffectInfo[0x40000][1][2],
+["special"] = 224,
+["savingthrow"] = 0x1010000,
+["resource"] = "MEAOESP2",
+["casterlvl"] = globalEffectInfo[0x40000][2],
+["internal_flags"] = globalEffectInfo[0x40000][3],
+["source_target"] = targetID,
+["source_id"] = globalEffectInfo[0x40000][4],
+["source_x"] = targetX,
+["source_y"] = targetY,
+["target_x"] = targetX,
+["target_y"] = targetY
+})
+	elseif bit.band(previousGlobalEffectFlags, 0x40000) > 0 then
+		IEex_Eval('Deactivate(\"' .. areaRES .. 'GRVGLB' .. '\")',targetID)
+--		IEex_Eval('Deactivate(\"' .. areaRES .. 'GRVGL1' .. '\")',targetID)
+--		IEex_Eval('Deactivate(\"' .. areaRES .. 'GRVGL2' .. '\")',targetID)
+--		IEex_Eval('Deactivate(\"' .. areaRES .. 'GRVGL3' .. '\")',targetID)
+--		IEex_Eval('Deactivate(\"' .. areaRES .. 'GRVGL4' .. '\")',targetID)
 	end
 end
 
@@ -13539,6 +14415,173 @@ function MEPSTAIR(effectData, creatureData)
 })
 end
 
+function MERECTSP(effectData, creatureData)
+	IEex_WriteDword(effectData + 0x110, 1)
+	if IEex_CheckForEffectRepeat(effectData, creatureData) then return end
+	local targetID = IEex_GetActorIDShare(creatureData)
+	local sourceID = IEex_ReadDword(effectData + 0x10C)
+	local timing = IEex_ReadDword(effectData + 0x20)
+	local duration = IEex_ReadDword(effectData + 0x24)
+	local time_applied = IEex_ReadDword(effectData + 0x68)
+	if timing == 4096 then
+		timing = 0
+		duration = math.floor((duration - time_applied) / 15)
+	end
+	local sourceX = IEex_ReadDword(effectData + 0x7C)
+	local sourceY = IEex_ReadDword(effectData + 0x80)
+	local targetX = IEex_ReadDword(effectData + 0x84)
+	local targetY = IEex_ReadDword(effectData + 0x88)
+	local sourceData = IEex_GetActorShare(sourceID)
+	if sourceData > 0 then
+		sourceX = IEex_ReadDword(sourceData + 0x6)
+		sourceY = IEex_ReadDword(sourceData + 0xA)
+		if targetID ~= sourceID then
+			targetX = IEex_ReadDword(creatureData + 0x6)
+			targetY = IEex_ReadDword(creatureData + 0xA)
+		end
+	end
+	local parameter1 = IEex_ReadDword(effectData + 0x18)
+	if parameter1 <= 0 then return end
+	local length = IEex_ReadWord(effectData + 0x44, 0x0)
+	local width = IEex_ReadWord(effectData + 0x46, 0x0)
+	local savingthrow = IEex_ReadDword(effectData + 0x3C)
+	local casterlvl = IEex_ReadDword(effectData + 0xC4)
+	local internalFlags = IEex_ReadDword(effectData + 0xD4)
+	local parent_resource = IEex_ReadLString(effectData + 0x90, 8)
+	local distX = targetX - sourceX
+	local distY = targetY - sourceY
+	local dist = math.floor((distX ^ 2 + distY ^ 2) ^ .5)
+	local deltaX = 0
+	local deltaY = 0
+	local cornerDeltaX = 0
+	local cornerDeltaY = 0
+	if dist ~= 0 then
+		deltaX = math.floor(length * distX / dist)
+		deltaY = math.floor(length * distY / dist)
+		cornerDeltaX = math.floor(width * distY / dist)
+		cornerDeltaY = math.floor(width * distX / dist) * -1
+	end
+	local slope = 0x7FFFFFFF
+	local cornerSlope = 0x7FFFFFFF
+	if deltaX ~= 0 then
+		slope = math.abs(deltaY / deltaX)
+	end
+	if cornerDeltaX ~= 0 then
+		cornerSlope = math.abs(cornerDeltaY / cornerDeltaX)
+	end
+	local finalX = sourceX + deltaX
+	local finalY = sourceY + deltaY
+	local corners = {{sourceX + cornerDeltaX, sourceY + cornerDeltaY, -1}, {sourceX - cornerDeltaX, sourceY - cornerDeltaY, -1}, {finalX + cornerDeltaX, finalY + cornerDeltaY, -1}, {finalX - cornerDeltaX, finalY - cornerDeltaY, -1}, }
+	local highestXCorner = {-65536, -65536}
+	local highestYCorner = {-65536, -65536}
+	local lowestXCorner = {65535, 65535}
+	local lowestYCorner = {65535, 65535}
+--	IEex_DS("[" .. finalX .. "." .. finalY .. "]")
+	for k, v in ipairs(corners) do
+--		IEex_DS("[" .. v[1] .. "." .. v[2] .. "]")
+		if v[1] > highestXCorner[1] then
+			highestXCorner = v
+		end
+		if v[2] > highestYCorner[2] then
+			highestYCorner = v
+		end
+		if v[1] < lowestXCorner[1] then
+			lowestXCorner = v
+		end
+		if v[2] < lowestYCorner[2] then
+			lowestYCorner = v
+		end
+	end
+	if math.abs(lowestYCorner[1] - lowestXCorner[1]) == math.abs(deltaX) then
+		highestXCorner[3] = cornerSlope
+		highestYCorner[3] = cornerSlope
+		lowestXCorner[3] = slope
+		lowestYCorner[3] = cornerSlope
+	else
+		highestXCorner[3] = slope
+		highestYCorner[3] = slope
+		lowestXCorner[3] = cornerSlope
+		lowestYCorner[3] = slope
+	end
+	IEex_IterateIDs(IEex_ReadDword(creatureData + 0x12), 0x31, true, true, function(currentID)
+		local currentShare = IEex_GetActorShare(currentID)
+		if IEex_IsSprite(currentID, false) and IEex_ReadByte(currentShare + 0x838, 0x0) == 0 then
+			local currentX, currentY = IEex_GetActorLocation(currentID)
+			local inAOE = true
+			if currentX < lowestXCorner[1] or currentX > highestXCorner[1] or currentY < lowestYCorner[2] or currentY > highestYCorner[2] then
+				inAOE = false
+			else
+--				IEex_DS(IEex_GetActorName(currentID) .. ": [" .. currentX .. "." .. currentY .. "]")
+				if highestYCorner[1] - currentX ~= 0 then
+					local currentHYSlope = math.abs((currentY - highestYCorner[2]) / (highestYCorner[1] - currentX))
+					if currentX < highestYCorner[1] then
+						if currentHYSlope < highestYCorner[3] then
+							inAOE = false
+--							IEex_DS("A")
+						end
+					else
+						if (highestYCorner[3] == slope and currentHYSlope < cornerSlope) or (highestYCorner[3] == cornerSlope and currentHYSlope < slope) then
+							inAOE = false
+--							IEex_DS("B")
+						end
+					end
+				end
+
+				if lowestXCorner[1] - currentX ~= 0 and currentY < lowestXCorner[2] then
+					local currentLXSlope = math.abs((currentY - lowestXCorner[2]) / (lowestXCorner[1] - currentX))
+					if currentLXSlope > lowestXCorner[3] then
+						inAOE = false
+--						IEex_DS("C")
+					end
+				end
+				if highestXCorner[1] - currentX ~= 0 and currentY < highestXCorner[2] then
+					local currentHXSlope = math.abs((currentY - highestXCorner[2]) / (highestXCorner[1] - currentX))
+					if currentHXSlope > highestXCorner[3] then
+						inAOE = false
+--						IEex_DS("D")
+					end
+				end
+				if inAOE then
+					IEex_ApplyEffectToActor(currentID, {
+["opcode"] = 402,
+["target"] = 2,
+["timing"] = timing,
+["duration"] = duration,
+["source_x"] = sourceX,
+["source_y"] = sourceY,
+["target_x"] = currentX - deltaX,
+["target_y"] = currentY - deltaY,
+["resource"] = IEex_ReadLString(effectData + 0x18, 8),
+["casterlvl"] = casterlvl,
+["internal_flags"] = internalFlags,
+["parent_resource"] = parent_resource,
+["source_id"] = sourceID
+})
+--[[
+					IEex_ApplyEffectToActor(currentID, {
+["opcode"] = 500,
+["target"] = 2,
+["timing"] = timing,
+["duration"] = duration,
+["parameter1"] = parameter1,
+["parameter2"] = 1,
+["special"] = special,
+["source_x"] = sourceX,
+["source_y"] = sourceY,
+["target_x"] = currentX - deltaX,
+["target_y"] = currentY - deltaY,
+["resource"] = "MEWINGBU",
+["casterlvl"] = casterlvl,
+["parent_resource"] = parent_resource,
+["source_id"] = sourceID
+})
+--]]
+				end
+			end
+		end
+	end)
+end
+
 function METELMOV(effectData, creatureData, isSpecialCall)
 	if not isSpecialCall then return end
 --	if IEex_CheckForEffectRepeat(effectData, creatureData) then return end
@@ -13652,6 +14695,7 @@ ex_ghostwalk_area = {}
 ex_ghostwalk_offsets = {{-20, -20}, {0, -20}, {20, -20}, {20, 0}, {20, 20}, {0, 20}, {-20, 20}, {-20, 0}, {-10, -30}, {10, -30}, {30, -10}, {30, 10}, {10, 30}, {-10, 30}, {-30, 10}, {-30, -10}}
 ex_ghostwalk_positions = {}
 ex_ghostwalk_actors = {}
+ex_previous_ghostwalk_tick = {}
 function MEGHOSTW(effectData, creatureData, isSpecialCall)
 	if not isSpecialCall then return end
 --	if IEex_CheckForEffectRepeat(effectData, creatureData) then return end
@@ -13724,6 +14768,8 @@ function MEGHOSTW(effectData, creatureData, isSpecialCall)
 	local areaRES = ""
 	local areaX = 32767
 	local areaY = 32767
+	local extraFlags = IEex_ReadDword(creatureData + 0x740)
+	local disableFlight = false
 	if areaData > 0 then
 		areaRES = IEex_ReadLString(areaData, 8)
 		areaX = IEex_ReadDword(areaData + 0x54C)
@@ -13731,14 +14777,18 @@ function MEGHOSTW(effectData, creatureData, isSpecialCall)
 		local areaType = IEex_ReadWord(areaData + 0x40, 0x0)
 		if bit.band(areaType, 0x800) > 0 then
 			disableTeleport = true
-		elseif bit.band(areaType, 0x1) == 0 and not IEex_GetActorSpellState(sourceID, 182) and not IEex_GetActorSpellState(sourceID, 189) then
-			disableTeleport = true
---[[
-		else
-			if areaRES == "AR4102" and (targetX >= 400 and targetX <= 970 and targetY >= 1030 and targetY <= 1350) then
+			disableFlight = true
+		elseif not IEex_GetActorSpellState(sourceID, 182) and not IEex_GetActorSpellState(sourceID, 189) then
+			if bit.band(areaType, 0x1) > 0 then
+--				IEex_WriteDword(creatureData + 0x740, bit.bor(extraFlags, 0x800))
+--				IEex_ModifyTerrainTable(creatureData + 0x50BB, ex_outdoor_flight_terrain_table)
+			else
+				disableFlight = true
 				disableTeleport = true
+--				IEex_WriteDword(creatureData + 0x740, bit.bor(extraFlags, 0x800))
+--				IEex_ModifyTerrainTable(creatureData + 0x50BB, ex_indoor_flight_terrain_table)
 			end
---]]
+
 		end
 	end
 	local animationSequence = IEex_ReadByte(creatureData + 0x50F4, 0x0)
@@ -13775,6 +14825,9 @@ function MEGHOSTW(effectData, creatureData, isSpecialCall)
 			resWrapper:free()
 			if actionRange > 28 then
 				actionRange = 28
+			end
+			if ((destinationX - targetX) / 16) ^ 2 + ((destinationY - targetY) / 12) ^ 2 <= (actionRange + 2) ^ 2 then
+				withinRange = true
 			end
 			if actionRange >= 6 and ((destinationX - targetX) / 16) ^ 2 + ((destinationY - targetY) / 12) ^ 2 <= actionRange ^ 2 then
 				withinRange = true
@@ -13824,7 +14877,10 @@ function MEGHOSTW(effectData, creatureData, isSpecialCall)
 		if actionRange > 28 then
 			actionRange = 28
 		end
-		if actionRange >= 6 and ((destinationX - targetX) / 16) ^ 2 + ((destinationY - targetY) / 12) ^ 2 <= actionRange ^ 2 then
+		if ((destinationX - targetX) / 16) ^ 2 + ((destinationY - targetY) / 12) ^ 2 <= (actionRange + 2) ^ 2 then
+			withinRange = true
+		end
+		if actionRange >= 6 and ((destinationX - targetX) / 16) ^ 2 + ((destinationY - targetY) / 12) ^ 2 <= actionRange ^ 2 and IEex_CheckActorLOSObject(sourceID, targetID) then
 			withinRange = true
 			destinationX = targetX
 			destinationY = targetY
@@ -13898,7 +14954,7 @@ function MEGHOSTW(effectData, creatureData, isSpecialCall)
 			end
 		end
 
-		if actionRange >= 6 and ((destinationX - targetX) / 16) ^ 2 + ((destinationY - targetY) / 12) ^ 2 <= actionRange ^ 2 then
+		if actionRange >= 6 and ((destinationX - targetX) / 16) ^ 2 + ((destinationY - targetY) / 12) ^ 2 <= actionRange ^ 2 and IEex_CheckActorLOSObject(sourceID, targetID) then
 			destinationX = targetX
 			destinationY = targetY
 		end
@@ -13929,20 +14985,22 @@ function MEGHOSTW(effectData, creatureData, isSpecialCall)
 	if math.abs(deltaY) > math.abs(distY) then
 		deltaY = distY
 	end
-	if disableTeleport and IEex_GetActorStat(sourceID, 75) > 0 then
+	if (disableTeleport or disableFlight) and IEex_GetActorStat(sourceID, 75) > 0 then
 		IEex_IterateActorEffects(sourceID, function(eData)
 			local theopcode = IEex_ReadDword(eData + 0x10)
 			local theparent_resource = IEex_ReadLString(eData + 0x94, 8)
 			if theopcode == 184 and theparent_resource == parent_resource then
 				IEex_WriteDword(eData + 0x20, 0)
+				IEex_WriteByte(creatureData + 0x9DC, 0)
 			end
 		end)
-	elseif not disableTeleport and IEex_GetActorStat(sourceID, 75) == 0 then
+	elseif not disableTeleport and not disableFlight and IEex_GetActorStat(sourceID, 75) == 0 then
 		IEex_IterateActorEffects(sourceID, function(eData)
 			local theopcode = IEex_ReadDword(eData + 0x10)
 			local theparent_resource = IEex_ReadLString(eData + 0x94, 8)
 			if theopcode == 184 and theparent_resource == parent_resource then
 				IEex_WriteDword(eData + 0x20, 1)
+				IEex_WriteByte(creatureData + 0x9DC, 1)
 			end
 		end)
 	end
@@ -14001,21 +15059,11 @@ function MEGHOSTW(effectData, creatureData, isSpecialCall)
 		noTeleportMapWrapper:free()
 	end
 	if not disableTeleport then
---		IEex_EvaluatePersistentEffects(sourceID)
+		IEex_WriteByte(IEex_ReadDword(creatureData + 0x50F0) + 0x7, 0)
+		if finalX ~= targetX or finalY ~= targetY or withinRange then
+			ex_previous_ghostwalk_tick[sourceID] = IEex_GetGameTick()
+		end
 		IEex_JumpActorToPoint(sourceID, finalX, finalY, true)
---[[
-		IEex_ApplyEffectToActor(sourceID, {
-["opcode"] = 124,
-["target"] = 2,
-["timing"] = 1,
-["source_x"] = targetX,
-["source_y"] = targetY,
-["target_x"] = finalX,
-["target_y"] = finalY,
-["parent_resource"] = parent_resource,
-["source_id"] = sourceID
-})
---]]
 	end
 end
 
@@ -14202,22 +15250,21 @@ function IEex_HeightMod(creatureData)
 	local targetX = IEex_ReadDword(creatureData + 0x6)
 	local targetY = IEex_ReadDword(creatureData + 0xA)
 	local disableTeleport = false
+	local disableFlight = false
 	local areaData = IEex_ReadDword(creatureData + 0x12)
 	local areaRES = ""
 	local areaType = 0
+	local isFlying = IEex_IsFlying(targetID)
+	local isIncorporeal = IEex_IsIncorporeal(targetID)
 	if areaData > 0 then
 		areaRES = IEex_ReadLString(areaData, 8)
 		areaType = IEex_ReadWord(areaData + 0x40, 0x0)
 		if bit.band(areaType, 0x800) > 0 then
 			disableTeleport = true
---		elseif bit.band(areaType, 0x1) == 0 and not IEex_GetActorSpellState(sourceID, 189) then
---			disableTeleport = true
---[[
-		else
-			if areaRES == "AR4102" and (targetX >= 400 and targetX <= 970 and targetY >= 1030 and targetY <= 1350) then
-				disableTeleport = true
-			end
---]]
+			disableFlight = true
+		elseif bit.band(areaType, 0x1) == 0 and not isIncorporeal then
+			disableTeleport = true
+			disableFlight = true
 		end
 	end
 	if ex_ceiling_height[areaRES] ~= nil then
@@ -14243,8 +15290,6 @@ function IEex_HeightMod(creatureData)
 	local previousHeight = height
 	local floorSpellRES = ""
 	local targetX, targetY = IEex_GetActorLocation(targetID)
-	local isFlying = IEex_IsFlying(targetID)
-	local isIncorporeal = IEex_IsIncorporeal(targetID)
 	if ex_specific_floor_height[areaRES] ~= nil and not IEex_IsFlying(targetID) then
 		local resWrapper = IEex_DemandRes(areaRES .. "H2", "BMP")
 		if resWrapper:isValid() then
@@ -14261,6 +15306,7 @@ function IEex_HeightMod(creatureData)
 		resWrapper:free()
 	end
 	local centerHeight = minHeight
+	local doNotModifyHeight = false
 	IEex_IterateActorEffects(targetID, function(eData)
 		local theopcode = IEex_ReadDword(eData + 0x10)
 		local theparameter2 = IEex_ReadDword(eData + 0x20)
@@ -14294,30 +15340,136 @@ function IEex_HeightMod(creatureData)
 			if IEex_ReadDword(eData + 0x110) > 0 then
 				sourceID = IEex_ReadDword(eData + 0x110)
 			end
+		elseif theopcode == 206 and theresource == "MEHGTMOD" then
+			doNotModifyHeight = true
 		end
 	end)
+	if doNotModifyHeight then return false end
 	if isFlying then
-		local isSelected = false
-		for i, id in ipairs(IEex_GetAllActorIDSelected()) do
-			if id == targetID then
-				isSelected = true
+		if isIncorporeal then
+			local isSelected = false
+			for i, id in ipairs(IEex_GetAllActorIDSelected()) do
+				if id == targetID then
+					isSelected = true
+				end
 			end
-		end
-		if IEex_IsKeyDown(160) and isSelected and height <= 500 then
-			extraSpeed = extraSpeed + 5
-			if accel == -1 or accel == -2 then
+			if IEex_IsKeyDown(160) and isSelected and height <= 500 then
+				extraSpeed = extraSpeed + 5
+				if accel == -1 or accel == -2 then
+					accel = 0
+				end
+			end
+			if IEex_IsKeyDown(161) and isSelected then
+				extraSpeed = extraSpeed - 5
+				if accel == -1 or accel == -2 then
+					accel = 0
+				end
+			end
+			if speed <= 0 and (accel == -1 or accel == -2) then
+				speed = 0
 				accel = 0
 			end
-		end
-		if IEex_IsKeyDown(161) and isSelected then
-			extraSpeed = extraSpeed - 5
-			if accel == -1 or accel == -2 then
+		elseif not disableFlight then
+			local action = IEex_ReadWord(creatureData + 0x476, 0x0)
+			local actionTargetID = IEex_ReadDword(creatureData + 0x4BE)
+			local actionTargetShare = IEex_GetActorShare(actionTargetID)
+			local actionTargetHeight = 0
+			local destinationX = IEex_ReadDword(creatureData + 0x556E)
+			local destinationY = IEex_ReadDword(creatureData + 0x5572)
+			local movementRate = 9
+			IEex_IterateActorEffects(sourceID, function(eData)
+				local theopcode = IEex_ReadDword(eData + 0x10)
+				if theopcode == 266 then
+					local theparameter1 = IEex_ReadDword(eData + 0x1C)
+					local theparameter2 = IEex_ReadDword(eData + 0x20)
+					local thesavingthrow = IEex_ReadDword(eData + 0x40)
+					if bit.band(thesavingthrow, 0x100000) == 0 then
+						if theparameter2 == 0 then
+							movementRate = movementRate + theparameter1
+						elseif theparameter2 == 1 then
+							movementRate = theparameter1
+						elseif theparameter2 == 2 then
+							movementRate = math.floor(movementRate * theparameter1 / 100)
+						end
+					end
+				end
+			end)
+			local actionRange = 1
+			if ((IEex_IsSprite(actionTargetID, true) and actionTargetID ~= targetID and (action == 31 or action == 113 or action == 191)) or action == 95 or action == 114 or action == 192) then
+				if IEex_IsSprite(actionTargetID, true) then
+					destinationX = IEex_ReadDword(actionTargetShare + 0x6)
+					destinationY = IEex_ReadDword(actionTargetShare + 0xA)
+					actionTargetHeight = IEex_ReadSignedWord(actionTargetShare + 0x720, 0x0)
+				else
+					destinationX = IEex_ReadDword(creatureData + 0x540)
+					destinationY = IEex_ReadDword(creatureData + 0x544)
+				end
+				if IEex_ReadSignedWord(creatureData + 0x54E8, 0x0) > 0 then
+					local resWrapper = IEex_DemandRes(IEex_GetActorSpellRES(sourceID), "SPL")
+					if resWrapper:isValid() then
+						local spellData = resWrapper:getData()
+						actionRange = IEex_ReadWord(spellData + 0x90, 0x0)
+					end
+					resWrapper:free()
+				end
+				local targetDistance = IEex_GetDistance(targetX, targetY, destinationX, destinationY)
+				if actionRange <= 5 and targetDistance ~= 0 and movementRate ~= 0 and (ex_previous_ghostwalk_tick[targetID] == IEex_GetGameTick() or targetDistance < 60) then
+					extraSpeed = extraSpeed + math.ceil((actionTargetHeight - height) / (targetDistance / movementRate))
+				elseif actionRange > 5 and height <= 200 then
+					extraSpeed = extraSpeed + 15
+				end
+			elseif (IEex_IsSprite(actionTargetID, true) and actionTargetID ~= targetID) or (action == 3 or action == 98 or action == 105 or action == 134) then
+				if IEex_IsSprite(actionTargetID, true) then
+					destinationX = IEex_ReadDword(actionTargetShare + 0x6)
+					destinationY = IEex_ReadDword(actionTargetShare + 0xA)
+					actionTargetHeight = IEex_ReadSignedWord(actionTargetShare + 0x720, 0x0)
+				end
+				if (action == 3 or action == 98 or action == 105 or action == 134) then
+					local equippedWeaponSlot = IEex_ReadByte(creatureData + 0x4BA4, 0x0)
+					local equippedWeaponHeader = IEex_ReadByte(creatureData + 0x4BA6, 0x0)
+					if equippedWeaponSlot < 11 or equippedWeaponSlot > 14 then
+						if IEex_ReadDword(creatureData + 0x4DA8 + equippedWeaponSlot * 0x4) > 0 then
+							local resWrapper = IEex_DemandRes(IEex_ReadLString(IEex_ReadDword(creatureData + 0x4DA8 + equippedWeaponSlot * 0x4) + 0xC, 8), "ITM")
+							if resWrapper:isValid() then
+								local itemData = resWrapper:getData()
+								actionRange = IEex_ReadWord(itemData + 0x90 + equippedWeaponHeader * 0x38, 0x0)
+							end
+							resWrapper:free()
+						end
+					else
+						IEex_IterateActorEffects(sourceID, function(eData)
+							local theopcode = IEex_ReadDword(eData + 0x10)
+							local theparameter2 = IEex_ReadDword(eData + 0x20)
+							local thespecial = IEex_ReadDword(eData + 0x48)
+							if theopcode == 288 and theparameter2 == 241 and thespecial == 7 then
+								local theresource = IEex_ReadLString(eData + 0x94, 8)
+								local resWrapper = IEex_DemandRes(theresource, "ITM")
+								if resWrapper:isValid() then
+									local itemData = resWrapper:getData()
+									actionRange = IEex_ReadWord(itemData + 0x90, 0x0)
+								end
+								resWrapper:free()
+							end
+						end)
+					end
+				end
+				local targetDistance = IEex_GetDistance(targetX, targetY, destinationX, destinationY)
+				if actionRange <= 5 and targetDistance ~= 0 and movementRate ~= 0 and (ex_previous_ghostwalk_tick[targetID] == IEex_GetGameTick() or targetDistance < 60) then
+					extraSpeed = extraSpeed + math.ceil((actionTargetHeight - height) / (targetDistance / movementRate))
+				elseif actionRange > 5 and height <= 200 then
+					extraSpeed = extraSpeed + 15
+				end
+			elseif height <= 200 then
+				extraSpeed = extraSpeed + 15
+			end
+			if speed <= 0 and (accel == -1 or accel == -2) then
+				speed = 0
 				accel = 0
 			end
-		end
-		if speed <= 0 and (accel == -1 or accel == -2) and IEex_GetActorSpellState(targetID, 189) then
-			speed = 0
-			accel = 0
+		else
+			if speed == 0 and accel == 0 then
+				accel = -2
+			end
 		end
 	end
 	accel = accel + extraAccel
@@ -14546,7 +15698,7 @@ function IEex_HeightMod(creatureData)
 ["target"] = 2,
 ["timing"] = 9,
 ["resource"] = parent_resource,
-["parent_resource"] = parent_resource,
+--["parent_resource"] = parent_resource,
 ["source_target"] = targetID,
 ["source_id"] = sourceID
 })
@@ -15156,9 +16308,22 @@ function MESIMULA(effectData, creatureData)
 	IEex_WriteDword(effectData + 0x110, 1)
 	if IEex_CheckForEffectRepeat(effectData, creatureData) then return end
 	local targetID = IEex_GetActorIDShare(creatureData)
+--	if IEex_CheckForInfiniteLoop(targetID, IEex_GetGameTick(), "MESIMULA", 3) then return end
 	local summonerID = IEex_GetActorSummonerID(targetID)
 	local summonerData = IEex_GetActorShare(summonerID)
-	if not IEex_IsSprite(summonerID, false) then return end
+	if not IEex_IsSprite(summonerID, false) then
+		IEex_ApplyEffectToActor(targetID, {
+["opcode"] = 500,
+["target"] = 2,
+["timing"] = 6,
+["duration"] = IEex_GetGameTick() + 1,
+["resource"] = "MESIMULA",
+["source_target"] = targetID,
+["source_id"] = targetID
+})
+
+		return
+	end
 	local extraFlags = IEex_ReadDword(creatureData + 0x740)
 	extraFlags = bit.bor(extraFlags, 0x400000)
 	IEex_WriteDword(creatureData + 0x740, extraFlags)
@@ -15365,6 +16530,16 @@ function MESIMULA(effectData, creatureData)
 ["parameter1"] = IEex_ReadDword(summonerData + 0x5C4),
 ["parameter2"] = 0,
 ["parent_resource"] = "USPOLYMO",
+["source_id"] = targetID
+})
+	IEex_ApplyEffectToActor(targetID, {
+["opcode"] = 288,
+["target"] = 2,
+["timing"] = 9,
+["parameter1"] = buttonIndex,
+["parameter2"] = 222,
+["savingthrow"] = 0x8500000,
+["resource"] = "USWI862E",
 ["source_id"] = targetID
 })
 	for buttonIndex = 0, 8, 1 do
@@ -15659,6 +16834,10 @@ function MESUMCAS(effectData, creatureData)
 	if casterDomain == -1 then
 		casterDomain = 0
 	end
+	local savingthrow = IEex_ReadDword(effectData + 0x3C)
+	if bit.band(savingthrow, 0x100000) > 0 then
+		targetID = summonerID
+	end
 	IEex_ApplyEffectToActor(targetID, {
 ["opcode"] = 402,
 ["target"] = 2,
@@ -15672,6 +16851,7 @@ function MESUMCAS(effectData, creatureData)
 ["target_y"] = IEex_ReadDword(effectData + 0x88),
 ["source_id"] = summonerID
 })
+	
 end
 
 me_past_seconds = {}
@@ -16007,7 +17187,7 @@ end
 
 function MEREANIM(effectData, creatureData)
 	local nonliving_race = {["" .. ex_construct_race] = 1, ["" .. ex_fiend_race] = 1, ["108"] = 1, ["115"] = 1, ["120"] = 1, ["152"] = 1, ["156"] = 1, ["164"] = 1, ["167"] = 1, ["175"] = 1, ["178"] = 1, ["190"] = 1, ["192"] = 1, ["201"] = 1, ["202"] = 1, ["203"] = 1, ["204"] = 1, ["205"] = 1, ["206"] = 1, ["207"] = 1, ["208"] = 1, ["209"] = 1, ["210"] = 1, ["211"] = 1, ["212"] = 1, ["213"] = 1, ["214"] = 1, ["215"] = 1, ["255"] = 1, }
---	IEex_WriteDword(effectData + 0x110, 0x1)
+	IEex_WriteDword(effectData + 0x110, 0x1)
 	local sourceID = IEex_ReadDword(effectData + 0x10C)
 	if not IEex_IsSprite(sourceID, false) then return end
 	local sourceData = IEex_GetActorShare(sourceID)
@@ -16050,16 +17230,19 @@ function MEREANIM(effectData, creatureData)
 		end
 	end
 	if chosenID > 0 then
-		
 		currentShare = IEex_GetActorShare(chosenID)
 		actorX = IEex_ReadDword(currentShare + 0x6)
 		actorY = IEex_ReadDword(currentShare + 0xA)
 
 		currentStates = IEex_ReadDword(currentShare + 0x5BC)
---		IEex_WriteDword(currentShare + 0x5BC, bit.band(currentStates, 0xFFFFFAFF)) 
---		IEex_WriteDword(currentShare + 0x920, bit.band(IEex_ReadDword(currentShare + 0x920), 0xFFFFFAFF)) 
-		IEex_WriteWord(currentShare + 0x5C0, 0)
-		IEex_WriteLString(currentShare + 0x56DC, "", 8)
+		IEex_WriteByte(currentShare + 0x24, 2)
+		IEex_WriteByte(currentShare + 0x25, 4)
+		IEex_WriteByte(currentShare + 0x3E3A, 2)
+		IEex_WriteByte(currentShare + 0x3E3B, 4)
+		IEex_WriteDword(currentShare + 0x5BC, bit.band(currentStates, 0xFFFFFAFF)) 
+		IEex_WriteDword(currentShare + 0x920, bit.band(IEex_ReadDword(currentShare + 0x920), 0xFFFFFAFF)) 
+		IEex_WriteWord(currentShare + 0x5C0, 1)
+--[[
 		IEex_ApplyEffectToActor(chosenID, {
 ["opcode"] = 32,
 ["target"] = 2,
@@ -16069,6 +17252,8 @@ function MEREANIM(effectData, creatureData)
 ["source_target"] = chosenID,
 ["source_id"] = sourceID
 })
+--]]
+		IEex_WriteLString(currentShare + 0x56DC, "", 8)
 		IEex_ApplyEffectToActor(chosenID, {
 ["opcode"] = 17,
 ["target"] = 2,
@@ -16202,7 +17387,7 @@ function MEREANIM(effectData, creatureData)
 		local closestContainer = 0
 		currentDistance = 0
 		shortestDistance = 32767
-		IEex_IterateIDs(IEex_ReadDword(currentShare + 0x14), 0x11, false, true, function(containerID)
+		IEex_IterateIDs(IEex_ReadDword(currentShare + 0x12), 0x11, false, true, function(containerID)
 			local containerData = IEex_GetActorShare(containerID)
 			containerX = IEex_ReadDword(containerData + 0x6)
 			containerY = IEex_ReadDword(containerData + 0xA)
@@ -19313,3 +20498,300 @@ function MERECACT(actionData, creatureData)
 end
 
 IEex_AddActionHookGlobal("MERECACT")
+
+ex_ea_wildcards = {
+[0] = {[0] = true, [1] = true, [2] = true, [3] = true, [4] = true, [5] = true, [6] = true, [7] = true, [28] = true, [29] = true, [30] = true, [31] = true, [126] = true, [128] = true, [199] = true, [200] = true, [201] = true, [202] = true, [255] = true},
+[30] = {[0] = true, [2] = true, [3] = true, [4] = true, [5] = true, [6] = true, [7] = true, [28] = true, [29] = true, [30] = true},
+[31] = {[0] = true, [1] = true, [31] = true, [126] = true, [128] = true, [200] = true, [201] = true, [202] = true, [255] = true},
+[126] = {[0] = true, [1] = true, [2] = true, [3] = true, [4] = true, [5] = true, [6] = true, [7] = true, [28] = true, [29] = true, [30] = true, [31] = true, [126] = true, [128] = true, [199] = true, [200] = true, [201] = true, [202] = true, [255] = true},
+[199] = {[0] = true, [1] = true, [2] = true, [3] = true, [4] = true, [5] = true, [6] = true, [7] = true, [28] = true, [29] = true, [30] = true, [126] = true, [128] = true, [199] = true},
+[200] = {[0] = true, [200] = true, [201] = true, [202] = true, [255] = true}
+}
+
+function IEex_MatchAOE(minTargets, radius, check)
+--	IEex_DS(IEex_GetActorName(IEex_LuaTriggerActorID))
+--	IEex_Search(IEex_GetActorIDCharacter(3), IEex_GetActorShare(IEex_LuaTriggerActorID), 0x476, false)
+	local sourceID = IEex_LuaTriggerActorID
+	local creatureData = IEex_GetActorShare(sourceID)
+	if check["pconly"] == true then
+		local numInParty = 0
+		for i = 0, 5, 1 do
+			if IEex_IsSprite(IEex_GetActorIDCharacter(i), false) then 
+				numInParty = numInParty + 1
+			end
+		end
+		if numInParty < minTargets then
+			minTargets = numInParty
+		end
+	end
+	if minTargets <= 0 then
+		minTargets = 1
+	end
+
+	if check["cea"] == nil then
+		check["cea"] = {-1, true}
+	end
+
+	if check["ea"] == nil then
+		local allegiance = IEex_ReadByte(creatureData + 0x24, 0x0)
+		local checkCEA = check["cea"]
+		if checkCEA[1] == 0 or allegiance == 128 then
+			check["ea"] = {0, checkCEA[2]}
+		elseif allegiance <= 30 then	
+			if checkCEA[1] == -1 then
+				check["ea"] = {200, checkCEA[2]}
+			elseif checkCEA[1] == 0 then
+				check["ea"] = {128, checkCEA[2]}
+			elseif checkCEA[1] == 1 then
+				check["ea"] = {30, checkCEA[2]}
+			end
+		elseif allegiance >= 200 then
+			if checkCEA[1] == -1 then
+				check["ea"] = {30, checkCEA[2]}
+			elseif checkCEA[1] == 0 then
+				check["ea"] = {128, checkCEA[2]}
+			elseif checkCEA[1] == 1 then
+				check["ea"] = {200, checkCEA[2]}
+			end
+		end
+	end
+
+
+
+	local matchEA = {[check["ea"][1]] = true}
+	if ex_ea_wildcards[check["ea"][1]] ~= nil then
+		matchEA = ex_ea_wildcards[check["ea"][1]]
+	end
+
+	local ids = {}
+	local areaData = IEex_ReadDword(creatureData + 0x12)
+	IEex_IterateIDs(areaData, 0x31, true, true, function(currentID)
+		local currentShare = IEex_GetActorShare(currentID)
+		if IEex_IsSprite(currentID, false) and IEex_ReadByte(currentShare + 0x838, 0x0) == 0 and (matchEA[IEex_ReadByte(currentShare + 0x24, 0x0)] ~= nil) == check["ea"][2] and IEex_CheckActorLOSObject(sourceID, currentID) and IEex_CheckTarget(currentID, check) then
+			table.insert(ids, currentID)
+		end
+	end)
+	local highestTargetCount = 0
+	local highestTargetCountID = 0
+	for k, id in ipairs(ids) do
+		local targetCount = 1
+		local targetX, targetY = IEex_GetActorLocation(id)
+		IEex_DS(IEex_GetActorName(id) .. " - 1")
+		IEex_IterateIDs(areaData, 0x31, true, true, function(currentID)
+			local currentShare = IEex_GetActorShare(currentID)
+			if IEex_IsSprite(currentID, false) and currentID ~= id and IEex_ReadByte(currentShare + 0x838, 0x0) == 0 then
+				local currentX, currentY = IEex_GetActorLocation(currentID)
+				local currentDistance = IEex_GetDistanceIsometric(targetX, targetY, currentX, currentY)
+				if (currentDistance < radius or radius == -1) and (matchEA[IEex_ReadByte(currentShare + 0x24, 0x0)] ~= nil) == check["ea"][2] and IEex_CheckActorLOSObject(id, currentID) then
+					if IEex_CheckTarget(currentID, check) then
+--						IEex_DS(IEex_GetActorName(currentID) .. " - 2")
+						targetCount = targetCount + 1
+					end
+				end
+			end
+		end)
+		if targetCount > highestTargetCount then
+			highestTargetCount = targetCount
+			highestTargetCountID = id
+		end
+	end
+	if highestTargetCount >= minTargets then
+		IEex_WriteDword(creatureData + 0x34C, highestTargetCountID)
+		return true
+	else
+		return false
+	end
+end
+
+function IEex_MatchAOE_Self(minTargets, radius, check)
+--	IEex_DS(IEex_GetActorName(IEex_LuaTriggerActorID))
+--	IEex_Search(IEex_GetActorIDCharacter(3), IEex_GetActorShare(IEex_LuaTriggerActorID), 0x476, false)
+	local sourceID = IEex_LuaTriggerActorID
+	local creatureData = IEex_GetActorShare(sourceID)
+	if check["pconly"] == true then
+		local numInParty = 0
+		for i = 0, 5, 1 do
+			if IEex_IsSprite(IEex_GetActorIDCharacter(i), false) then 
+				numInParty = numInParty + 1
+			end
+		end
+		if numInParty < minTargets then
+			minTargets = numInParty
+		end
+	end
+	if minTargets <= 0 then
+		minTargets = 1
+	end
+
+	if check["cea"] == nil then
+		check["cea"] = {-1, true}
+	end
+
+	if check["ea"] == nil then
+		local allegiance = IEex_ReadByte(creatureData + 0x24, 0x0)
+		local checkCEA = check["cea"]
+		if checkCEA[1] == 0 or allegiance == 128 then
+			check["ea"] = {0, checkCEA[2]}
+		elseif allegiance <= 30 then	
+			if checkCEA[1] == -1 then
+				check["ea"] = {200, checkCEA[2]}
+			elseif checkCEA[1] == 0 then
+				check["ea"] = {128, checkCEA[2]}
+			elseif checkCEA[1] == 1 then
+				check["ea"] = {30, checkCEA[2]}
+			end
+		elseif allegiance >= 200 then
+			if checkCEA[1] == -1 then
+				check["ea"] = {30, checkCEA[2]}
+			elseif checkCEA[1] == 0 then
+				check["ea"] = {128, checkCEA[2]}
+			elseif checkCEA[1] == 1 then
+				check["ea"] = {200, checkCEA[2]}
+			end
+		end
+	end
+
+
+
+	local matchEA = {[check["ea"][1]] = true}
+	if ex_ea_wildcards[check["ea"][1]] ~= nil then
+		matchEA = ex_ea_wildcards[check["ea"][1]]
+	end
+
+	local ids = {}
+	local areaData = IEex_ReadDword(creatureData + 0x12)
+	local sourceX, sourceY = IEex_GetActorLocation(sourceID)
+	local targetCount = 0
+	IEex_IterateIDs(areaData, 0x31, true, true, function(currentID)
+		local currentShare = IEex_GetActorShare(currentID)
+		local currentX, currentY = IEex_GetActorLocation(currentID)
+		local currentDistance = IEex_GetDistanceIsometric(sourceX, sourceY, currentX, currentY)
+		if IEex_IsSprite(currentID, false) and IEex_ReadByte(currentShare + 0x838, 0x0) == 0 and (currentDistance < radius or radius == -1) and (matchEA[IEex_ReadByte(currentShare + 0x24, 0x0)] ~= nil) == check["ea"][2] and IEex_CheckActorLOSObject(sourceID, currentID) and IEex_CheckTarget(currentID, check) then
+			targetCount = targetCount + 1
+		end
+	end)
+	if targetCount >= minTargets then
+		return true
+	else
+		return false
+	end
+end
+
+function IEex_CheckTarget(currentID, check)
+	local currentShare = IEex_GetActorShare(currentID)
+	local states = bit.bor(IEex_ReadDword(currentShare + 0x434), IEex_ReadDword(currentShare + 0xB30))
+--	IEex_DS(IEex_GetActorName(currentID) .. " - 1")
+	if check["pconly"] == true and not IEex_IsPartyMember(currentID) then return end
+--	IEex_DS(IEex_GetActorName(currentID) .. " - 2")
+
+--	local ea = IEex_ReadByte(currentShare + 0x24, 0x0)
+--	local matchEA = {[check["ea"][1]] = true}
+--	if me_ea_wildcards[check["ea"][1]] ~= nil then
+--		matchEA = me_ea_wildcards[check["ea"][1]]
+--	end
+--	if (matchEA[ea] ~= nil) ~= check["ea"][2] then return false end
+
+--	IEex_DS(IEex_GetActorName(currentID) .. " - 3")
+	if check["general"] ~= nil then
+		local general = IEex_ReadByte(currentShare + 0x25, 0x0)
+		local hasOne = nil
+		for i, iGeneral in ipairs(check["general"]) do
+			if iGeneral[1] == general then
+				if iGeneral[2] == true then
+					hasOne = true
+				else
+					return false
+				end
+			elseif iGeneral[2] == true and hasOne == nil then
+				hasOne = false
+			end
+		end
+		if hasOne == false then return false end
+	end
+	if check["race"] ~= nil then
+		local race = IEex_ReadByte(currentShare + 0x26, 0x0)
+		local hasOne = nil
+		for i, iRace in ipairs(check["race"]) do
+			if iRace[1] == race then
+				if iRace[2] == true then
+					hasOne = true
+				else
+					return false
+				end
+			elseif iRace[2] == true and hasOne == nil then
+				hasOne = false
+			end
+		end
+		if hasOne == false then return false end
+	end
+	if check["alignment"] ~= nil then
+		local alignment = IEex_ReadByte(currentShare + 0x35, 0x0)
+		if (bit.band(check["alignment"][1], alignment) == check["alignment"][1]) ~= check["alignment"][2] then return false end
+	end
+	if check["stat"] ~= nil then
+		for i, iStat in ipairs(check["stat"]) do
+			local check_stat = IEex_GetActorStat(currentID, iStat[1])
+			local check_value = iStat[2]
+			local check_relation = iStat[3]
+			if check_relation == 0 and check_stat > check_value then return false
+			elseif check_relation == 1 and check_stat ~= check_value then return false
+			elseif check_relation == 2 and check_stat >= check_value then return false
+			elseif check_relation == 3 and check_stat <= check_value then return false
+			elseif check_relation == 4 and check_stat < check_value then return false
+			elseif check_relation == 5 and check_stat == check_value then return false
+			elseif check_relation == 6 and bit.bor(check_stat, check_value) ~= check_value then return false
+			elseif check_relation == 7 and bit.band(check_stat, check_value) < check_value then return false
+			elseif check_relation == 8 and bit.band(check_stat, check_value) == 0 then return false
+			elseif check_relation == 9 and bit.band(check_stat, check_value) > 0 then return false
+			elseif check_relation == 10 and bit.bor(check_stat, check_value) <= check_value then return false
+			elseif check_relation == 11 and bit.band(check_stat, check_value) >= check_value then return false
+			end
+		end
+	end
+--	IEex_DS(IEex_GetActorName(currentID) .. " - 4")
+	if check["state"] ~= nil then
+		if (IEex_GetActorState(currentID, check["state"][1])) ~= check["state"][2] then return false end
+	end
+	if check["spellState"] ~= nil then
+		for i, iSpellState in ipairs(check["spellState"]) do
+			if (IEex_GetActorSpellState(currentID, iSpellState[1])) ~= iSpellState[2] then return false end
+		end
+	end
+	if check["opcode"] ~= nil then
+		local match_opcode = check["opcode"]
+		local targetRace = IEex_ReadByte(checkData + 0x26, 0x0)
+		local targetSubrace = IEex_ReadByte(checkData + 0x7FF, 0x0)
+		local hasProtection = false
+		if (match_opcode == 39 and (targetRace == 2 or targetRace == 3 or targetRace == 183)) or ((match_opcode == 109 or match_opcode == 175) and ((targetRace == 4 and targetSubrace == 2) or targetRace == 185)) then
+			hasProtection = true
+		elseif ((match_opcode == 55 or match_opcode == 420) and IEex_GetActorSpellState(checkID, 8)) or ((match_opcode == 40 or match_opcode == 109 or match_opcode == 154 or match_opcode == 157 or match_opcode == 158 or match_opcode == 175 or match_opcode == 176) and IEex_GetActorSpellState(checkID, 29)) then
+			hasProtection = true
+		elseif ((match_opcode == 24 or match_opcode == 236) and IEex_GetActorStat(checkID, 102) >= 2) or (match_opcode == 25 and (IEex_GetActorStat(checkID, 99) >= 9 or IEex_GetActorStat(checkID, 101) >= 11)) or (match_opcode == 78 and (IEex_GetActorStat(checkID, 101) >= 5 or IEex_GetActorStat(checkID, 102) >= 1)) then
+			hasProtection = true
+		else
+			IEex_IterateActorEffects(checkID, function(eData)
+				local theopcode = IEex_ReadDword(eData + 0x10)
+				local theparameter2 = IEex_ReadDword(eData + 0x20)
+				if (theopcode == 101 or theopcode == 261) and theparameter2 == match_opcode then
+					hasProtection = true
+				end
+			end)
+		end
+		if hasProtection then return false end
+	end
+--	IEex_DS(IEex_GetActorName(currentID) .. " - 5")
+	if check["spell"] ~= nil then
+		local protectionRES = check["spell"]
+		local hasProtection = false
+		IEex_IterateActorEffects(checkID, function(eData)
+			local theopcode = IEex_ReadDword(eData + 0x10)
+			local theresource = IEex_ReadLString(eData + 0x30, 8)
+			if (theopcode == 206 or theopcode == 290) and theresource == protectionRES then
+				hasProtection = true
+			end
+		end)
+		if hasProtection then return false end
+	end
+--	IEex_DS(IEex_GetActorName(currentID) .. " - 6")
+	return true
+end

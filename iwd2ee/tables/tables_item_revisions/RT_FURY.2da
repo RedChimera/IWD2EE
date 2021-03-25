@@ -113,7 +113,7 @@ RMIW_12 USBwhx57	EOL
 RMIW_13
 RMIW_14																																								
 																																												
-RARM_01	00Leat02	00Leat94	00Leat95	00Leat96	00Leat97	00Leat98	00Leat99	00Chan05	00Plat10	EOL																																				
+RARM_01	00Leat02	00Leat94	00Leat95	00Leat96	00Leat97	00Leat98	00Leat99	00Chan05	00Plat10	USHide07	EOL																																				
 RARM_02	00Leat03	00Leat05	00Leat06	00Leat90	00Leat91	00Leat92	00Leat93	50Hide06	00Chan02	00Plat02	00Plat12	EOL																																			
 RARM_03	00Leat07	00Leat88	00Leat89	00Chan03	00Plat04	USChan41	EOL																																			
 RARM_04	00Leat86	00Chan07	00Plat03	USChan40	USPlat35	EOL																																							
@@ -184,11 +184,11 @@ RRNG_03	00Ring15	00Ring20	00Ring69	00Ring70	00Ring90	00Ring94	00Ring95	00Amul15	
 RRNG_04	00Ring18	00Ring73	00Ring82	00Ring92	00Ring93	00Ring97	00Ring98	USAmul48	USRing45	EOL																																					
 RRNG_05	00Ring22	00Ring68	00Ring74	00Ring75	00Ring79	00Ring91	USRing44	EOL																																							
 RRNG_06	00Ring72	00Ring89	00Ring96	USAmul47	USRing50	EOL																																									
-RRNG_07	USRing48	USRing53	USRing54	USAmul50	USAmul52	USAmul53	EOL																																									
-RRNG_08	00Ring81	USRing51	USRing55	USAmul51	USAmul59	EOL																																								
+RRNG_07	USRing53	USRing54	USAmul50	USAmul52	USAmul53	EOL																																									
+RRNG_08	00Ring81	USRing48	USRing51	USRing55	USAmul51	USAmul59	EOL																																								
 RRNG_09	00Ring88	USRing56	USAmul54	USAmul56	EOL																																										
-RRNG_10	USRing49	USRing52	USRing59	USRing61	USAmul58	EOL																																										
-RRNG_11	USRing57	EOL																																									
+RRNG_10	USRing49	USRing52	USRing59	USRing57	USAmul58	EOL																																										
+RRNG_11	USRing61	EOL																																									
 RRNG_12																																												
 RRNG_13	USRing60																																											
 RRNG_14	USRing58	EOL																																												

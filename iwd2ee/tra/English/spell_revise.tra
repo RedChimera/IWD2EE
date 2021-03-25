@@ -2626,6 +2626,7 @@ Launcher:  Bow~
 @30059=~Resistance Lowered~
 @30060=~Enlarged~
 @30061=~Jump Distance Increased~
+@30062=~Flying~
 
 @31106     = ~Magic Stone~
 @32106     = ~Magic Stone
@@ -2675,7 +2676,7 @@ Barkskin causes a creature's skin to become as tough as bark, granting a +3 gene
 @32212     = ~Slow Poison
 (Conjuration) 
 Level: Brd 2, Clr 2, Drd 2, Pal 2, Rgr 1
-Range: Touch 
+Range: Touch
 Duration: Instantaneous
 Casting Time: 0
 Area of Effect: 1 creature 
@@ -3239,6 +3240,17 @@ Area of Effect: 1 creature
 Saving Throw: None
 
 This spell creates a mystic connection between the caster and the target so that some of their wounds are transferred to the caster. Whenever the target would take damage, they only take half the damage; the other half is taken by the caster. The damage is only split this way if the caster and target can see each other.~
+@35255     = ~Gust of Wind~
+@36255     = ~Gust of Wind
+(Evocation)
+Level: Drd 2
+Range: Sight of Caster
+Duration: Instantaneous
+Casting Time: 2
+Area of Effect: 40-foot cube
+Saving Throw: None
+
+This spell releases an extremely strong gust of wind starting at the caster and blowing outward in the target direction. Creatures in the area of effect are blown back, potentially taking damage if they hit a wall or fall into a pit. The damage dealt depends on how fast the creatures were moving when they hit the wall or the ground.~
 @35351     = ~Quiver of Plenty~
 @36351     = ~Quiver of Plenty
 (Conjuration)
@@ -3254,6 +3266,7 @@ This spell temporarily gives the ranger a quiver containing an unlimited supply 
 Although rangers normally cast spells at half their caster level, Quiver of Plenty will be cast at a ranger's full caster level.
 
 Note: The quiver is created in the ranger's first ammunition slot. Any ammunition that was previously in that slot will be unavailable until the spell ends.~
+
 @35353     = ~Recall Party~
 @36353     = ~Recall Party
 (Conjuration)
@@ -3483,7 +3496,7 @@ This spell triggers a small volcanic eruption centered on the caster. Multiple b
 @36954     = ~Storm of Vengeance
 (Conjuration)
 Level: Clr 9, Drd 9, Talos 9
-Range: Caster
+Range: Sight of Caster
 Duration: 4 rounds
 Casting Time: 12
 Area of Effect: 25-foot radius
@@ -3506,6 +3519,17 @@ Area of Effect: 1 creature
 Saving Throw: None
 
 This spell stores a Resurrection spell in the target, which will be triggered the next time the target dies within 8 hours. The target will be brought back to life and will regain all hit points.~
+@35956     = ~Tornado~
+@36956     = ~Tornado
+(Evocation)
+Level: Drd 9
+Range: Sight of Caster
+Duration: 5 rounds
+Casting Time: 9
+Area of Effect: 15-foot radius
+Saving Throw: None
+
+A more powerful version of the spell Whirlwind, the spell creates a tornado at the target point that moves randomly. Creatures that come within 15 feet of the tornado get sucked up into it, taking 3d8 slashing damage per second that they stay inside it. Creatures are usually ejected from the tornado after about a round. Huge creatures such as frost giants and dragons aren't sucked up into the tornado but still take damage while in the area of effect. Only one tornado may be active at a time.~
 @37151     = ~True Strike~
 @38151     = ~True Strike
 (Divination) 
@@ -3677,6 +3701,17 @@ Area of Effect: 1 creature
 Saving Throw: None
 
 The recipient of this spell momentarily gains the ability to see into the future, and can see any attack or spell coming. The target gains a +25 bonus to attack, AC and saving throws for 1 round. Moment of Prescience can be cast as a free action and on any creature in the area, even one out of sight.~
+@37355     = ~Fly~
+@38355     = ~Fly
+(Transmutation)
+Level: Brd 3, Rgr 3, Sor/Wiz 3
+Range: Sight of Caster
+Duration: 1 round/level
+Casting Time: 3
+Area of Effect: 1 creature
+Saving Throw: None
+
+This wondrous spell gives the recipient the power to fly. For the duration, the character can fly over normally impassable gaps and obstacles. In addition, unless the character is fighting in melee or casting a touch spell, they will be flying far enough above the ground that most melee attacks against them will be made at a -20 penalty. The effects of Fly are suppressed as long as the character is indoors.~
 @37451     = ~Teleport Field~
 @38451     = ~Teleport Field
 (Transmutation) 
@@ -3721,6 +3756,23 @@ Area of Effect: Special
 Saving Throw: None
 
 This spell copies a spell that another creature is casting, allowing the bard to cast that spell once. Copy Spell should be cast on another creature that is casting a spell. The bard gains a special ability that lets them cast that same spell. Once used, the ability is gone until Copy Spell is cast again. Copy Spell cannot copy innate abilities, nor can it copy spells of a higher spell level than the bard can currently cast. Casting Copy Spell itself is a free action, but casting the copied spell could take some time.~
+@37455     = ~Polymorph Self~
+@38455     = ~Polymorph Self
+(Transmutation) 
+Level: Sor/Wiz 4
+Range: Caster
+Duration: 1 minute/level
+Casting Time: 4
+Area of Effect: Caster
+Saving Throw: None
+
+Polymorph Self allows the caster to assume the form of a creature of moderate power. While in another form, the caster has its Strength, Dexterity, Constitution, base Armor Class, resistances, immunities, attacks, and special abilities. The caster can polymorph into one of the following forms:
+
+Fomorian Giant
+Troll
+Umber Hulk
+Wyvern
+Red Half-Dragon~
 @37551     = ~Steal Spells~
 @38551     = ~Steal Spells
 (Transmutation)
@@ -3787,6 +3839,17 @@ Area of Effect: All creatures in path of boulder
 Saving Throw: Reflex partial
 
 Boulder Roll creates a large boulder, which rolls forward from the caster, crushing creatures in its path, until it hits a wall. Creatures hit take 12d8 bludgeoning damage and are knocked down for 2 rounds. A successful Reflex save halves the damage and prevents one from being knocked down. The boulder always travels due south from the caster.~
+@37654     = ~Bardic Sequencer~
+@38654     = ~Bardic Sequencer
+(Universal)
+Level: Brd 6
+Range: Special
+Duration: 1 round/level
+Casting Time: 10
+Area of Effect: Special
+Saving Throw: None
+
+Bardic Sequencer lets the bard store a spell, which has a chance of being cast automatically each round that the bard sings their bard song. Immediately after casting this spell, the bard should attempt to cast another spell of 2nd-level or lower. Instead of being cast, this spell will be stored (expending one use of the spell). Each round for the duration, if the bard is singing a bard song, there is a chance (1% per bard level) that the spell will be cast on each creature the bard song affects. Even spells with a range of Caster can target other creatures this way. The sequencer can potentially be triggered multiple times over many rounds.~
 @37751     = ~Stygian Ice Storm~
 @38751     = ~Stygian Ice Storm
 (Conjuration)
@@ -3886,6 +3949,17 @@ Saving Throw: None
 Skip Time transports the party ten rounds into the future. From the point of view of other creatures, the party vanishes, then reappears in the same spot ten rounds later. However, no time has passed for the party.
 
 The main effect of this is to reduce the duration of all magical effects on creatures outside the party by ten rounds, ending effects like Mantle that have short durations and causing the rest to expire sooner. Lingering areas of effect such as Web and Stinking Cloud also have their duration reduced.~
+@37761     = ~Forcecage~
+@38761     = ~Forcecage
+(Abjuration)
+Level: Sor/Wiz 7
+Range: Sight of Caster
+Duration: 5 rounds
+Casting Time: 1
+Area of Effect: 15-foot cube
+Saving Throw: None
+
+This spell creates a cage of force - a cube with walls of force on each side. Creatures that were in the area of effect when the spell was cast are trapped in the forcecage for the duration. Creatures cannot enter or pass through the area of effect. Only one forcecage may be active at a time.~
 @37852     = ~Energy Drain~
 @38852     = ~Energy Drain
 (Necromancy)
@@ -4006,7 +4080,18 @@ Casting Time: 8
 Area of Effect: Special
 Saving Throw: None
 
-Simulacrum creates a duplicate of the caster, which will serve the caster for the duration. It has half the caster's hit points and half the caster's level (rounded up) in each of the caster's classes. The simulacrum retains the memorized spells of the caster, which it can cast as well (but only those of a low enough level). It has no equipment, so it is useful primarily as an extra spellcaster.~
+Simulacrum creates a duplicate of the caster, which will serve the caster for the duration. It has half the caster's hit points and half the caster's level (rounded up) in each of the caster's classes. The simulacrum retains the memorized spells of the caster, which it can cast as well (but only those of a low enough level). It has no equipment, so it is useful primarily as an extra spellcaster. A character can only have one simulacrum at a time.~
+@37863     = ~Reverse Gravity~
+@38863     = ~Reverse Gravity
+(Transmutation)
+Level: Drd 8, Sor/Wiz 8, Selune 8
+Range: Sight of Caster
+Duration: 1 round/level
+Casting Time: 8
+Area of Effect: 20-foot radius sphere
+Saving Throw: None
+
+This spell creates a large spherical area that reverses the gravity of creatures inside it. Any creature that enters the area of effect will start falling up. While in the air, the creature cannot move unless it can fly. Creatures that hit the ceiling (if indoors) could potentially take bludgeoning damage depending on how fast they were rising. Only one sphere of reversed gravity may be active at a time.~
 @37952     = ~Perfect Invisibility~
 @38952     = ~Perfect Invisibility
 (Illusion)

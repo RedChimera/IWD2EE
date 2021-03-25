@@ -1892,7 +1892,7 @@ function IEex_LoadOptions()
 
 	local options = IEex_Helper_GetBridge("IEex_Options", "options")
 	IEex_Helper_SetBridge(options, "transparentFogOfWar",
-		IEex_GetPrivateProfileInt("IEex Options", "Transparent Fog of War", 0, ".\\Icewind2.ini") == 0 and false or true)
+    	IEex_GetPrivateProfileInt("IEex Options", "Transparent Fog of War", 0, ".\\Icewind2.ini") ~= 0 and true or false)
 
 	IEex_InitOptionButtons()
 end

@@ -337,8 +337,9 @@ ex_empowerable_opcodes = {[0] = true, [1] = true, [6] = true, [10] = true, [12] 
 							local theparameter1 = IEex_ReadDword(offset + 0x4)
 							criticalMultiplier = criticalMultiplier + theparameter1
 						elseif theopcode == 288 and theparameter2 == 213 and bit.band(thesavingthrow, 0x10000) > 0 then
-							damageType = IEex_ReadDword(offset + 0x4)
-							IEex_WriteWord(effectData + 0x1E, damageType)
+							IEex_WriteWord(effectData + 0x1E, IEex_ReadWord(offset + 0x4, 0x0))
+							parameter2 = IEex_ReadDword(effectData + 0x1C)
+							damageType = bit.band(parameter2, 0xFFFF0000)
 						elseif theopcode == 288 and theparameter2 == 225 and bit.band(thesavingthrow, 0x10000) > 0 and bit.band(thesavingthrow, 0x100000) == 0 and bit.band(thesavingthrow, 0x800000) > 0 then
 							local spellRES = IEex_ReadLString(offset + 0x14, 8)
 							if spellRES ~= "" and (bit.band(thesavingthrow, 0x4000000) == 0 or bit.band(IEex_ReadDword(effectData + 0xD4), 0x40) == 0) then
@@ -378,8 +379,9 @@ ex_empowerable_opcodes = {[0] = true, [1] = true, [6] = true, [10] = true, [12] 
 							local theparameter1 = IEex_ReadDword(offset + 0x4)
 							criticalMultiplier = criticalMultiplier + theparameter1
 						elseif theopcode == 288 and theparameter2 == 213 and bit.band(thesavingthrow, 0x10000) > 0 then
-							damageType = IEex_ReadDword(offset + 0x4)
-							IEex_WriteWord(effectData + 0x1E, damageType)
+							IEex_WriteWord(effectData + 0x1E, IEex_ReadWord(offset + 0x4, 0x0))
+							parameter2 = IEex_ReadDword(effectData + 0x1C)
+							damageType = bit.band(parameter2, 0xFFFF0000)
 						elseif theopcode == 288 and theparameter2 == 225 and bit.band(thesavingthrow, 0x10000) > 0 and bit.band(thesavingthrow, 0x100000) == 0 and bit.band(thesavingthrow, 0x800000) > 0 then
 							local spellRES = IEex_ReadLString(offset + 0x14, 8)
 							if spellRES ~= "" and (bit.band(thesavingthrow, 0x4000000) == 0 or bit.band(IEex_ReadDword(effectData + 0xD4), 0x40) == 0) then
@@ -414,8 +416,9 @@ ex_empowerable_opcodes = {[0] = true, [1] = true, [6] = true, [10] = true, [12] 
 					if theopcode == 288 and theparameter2 == 195 and bit.band(thesavingthrow, 0x10000) == 0 and (thespecial == -1 or thespecial == itemType) then
 						criticalMultiplier = criticalMultiplier + theparameter1
 					elseif theopcode == 288 and theparameter2 == 213 and bit.band(thesavingthrow, 0x10000) == 0 then
-						damageType = theparameter1
-						IEex_WriteWord(effectData + 0x1E, damageType)
+						IEex_WriteWord(effectData + 0x1E, theparameter1)
+						parameter2 = IEex_ReadDword(effectData + 0x1C)
+						damageType = bit.band(parameter2, 0xFFFF0000)
 					elseif theopcode == 288 and theparameter2 == 225 and bit.band(thesavingthrow, 0x10000) == 0 and bit.band(thesavingthrow, 0x100000) == 0 and bit.band(thesavingthrow, 0x800000) > 0 then
 						local matchHeader = IEex_ReadWord(eData + 0x48, 0x0)
 						local spellRES = IEex_ReadLString(eData + 0x30, 8)
@@ -458,7 +461,7 @@ ex_empowerable_opcodes = {[0] = true, [1] = true, [6] = true, [10] = true, [12] 
 						local theparameter1 = IEex_ReadDword(eData + 0x1C)
 						local theparameter2 = IEex_ReadDword(eData + 0x20)
 						if theopcode == 73 and theparameter2 > 0 then
-							if ex_damage_multiplier_type[damageType] == theparameter2 then
+							if ex_damage_multiplier_type[IEex_ReadDword(effectData + 0x1C)] == theparameter2 then
 								damageMultiplier = damageMultiplier + theparameter1
 								local theresource = IEex_ReadLString(eData + 0x30, 8)
 								if theresource == parent_resource then
@@ -515,31 +518,75 @@ ex_empowerable_opcodes = {[0] = true, [1] = true, [6] = true, [10] = true, [12] 
 					local theparameter2 = IEex_ReadDword(eData + 0x20)
 					local thesavingthrow = IEex_ReadDword(eData + 0x40)
 					if theopcode == 288 and theparameter2 == 222 and bit.band(thesavingthrow, 0x100000) == 0 then
-						local theresource = IEex_ReadLString(eData + 0x30, 8)
-						table.insert(onKillEffectList, theresource)
+						if spellRES ~= "" then
+							local thecasterlvl = IEex_ReadDword(eData + 0xC8)
+							local newEffectTarget = sourceID
+							local newEffectTargetX = IEex_ReadDword(effectData + 0x7C)
+							local newEffectTargetY = IEex_ReadDword(effectData + 0x80)
+							if (bit.band(thesavingthrow, 0x200000) > 0) then
+								newEffectTarget = targetID
+								newEffectTargetX = IEex_ReadDword(effectData + 0x84)
+								newEffectTargetY = IEex_ReadDword(effectData + 0x88)
+							end
+							local newEffectSource = sourceID
+							local newEffectSourceX = IEex_ReadDword(effectData + 0x7C)
+							local newEffectSourceY = IEex_ReadDword(effectData + 0x80)
+							if (bit.band(thesavingthrow, 0x400000) > 0) then
+								newEffectSource = targetID
+								newEffectSourceX = IEex_ReadDword(effectData + 0x84)
+								newEffectSourceY = IEex_ReadDword(effectData + 0x88)
+							end
+							table.insert(onKillEffectList, {spellRES, thecasterlvl, newEffectTarget, newEffectSource, newEffectTargetX, newEffectTargetY, newEffectSourceX, newEffectSourceY})
+						end
 					end
 				end)
 			end
-			if IEex_GetActorSpellState(targetID, 222) then
+--			if IEex_GetActorSpellState(targetID, 222) then
 				IEex_IterateActorEffects(targetID, function(eData)
 					local theopcode = IEex_ReadDword(eData + 0x10)
 					local theparameter2 = IEex_ReadDword(eData + 0x20)
 					local thesavingthrow = IEex_ReadDword(eData + 0x40)
 					if theopcode == 288 and theparameter2 == 222 and bit.band(thesavingthrow, 0x100000) > 0 then
-						local theresource = IEex_ReadLString(eData + 0x30, 8)
-						table.insert(onKillEffectList, theresource)
+						local spellRES = IEex_ReadLString(eData + 0x30, 8)
+						if spellRES ~= "" then
+							local thecasterlvl = IEex_ReadDword(eData + 0xC8)
+							local newEffectTarget = targetID
+							local newEffectTargetX = IEex_ReadDword(effectData + 0x84)
+							local newEffectTargetY = IEex_ReadDword(effectData + 0x88)
+							if (bit.band(thesavingthrow, 0x200000) > 0) then
+								newEffectTarget = sourceID
+								newEffectTargetX = IEex_ReadDword(effectData + 0x7C)
+								newEffectTargetY = IEex_ReadDword(effectData + 0x80)
+							elseif (bit.band(thesavingthrow, 0x8000000) > 0) then
+								newEffectTarget = IEex_GetActorSummonerID(targetID)
+							end
+							local newEffectSource = sourceID
+							local newEffectSourceX = IEex_ReadDword(effectData + 0x7C)
+							local newEffectSourceY = IEex_ReadDword(effectData + 0x80)
+							if (bit.band(thesavingthrow, 0x400000) > 0) then
+								newEffectSource = targetID
+								newEffectSourceX = IEex_ReadDword(effectData + 0x84)
+								newEffectSourceY = IEex_ReadDword(effectData + 0x88)
+							end
+							table.insert(onKillEffectList, {spellRES, thecasterlvl, newEffectTarget, newEffectSource, newEffectTargetX, newEffectTargetY, newEffectSourceX, newEffectSourceY})
+						end
 					end
 				end)
-			end
+--			end
 			for k, v in ipairs(onKillEffectList) do
-				IEex_ApplyEffectToActor(sourceID, {
+				IEex_ApplyEffectToActor(v[3], {
 ["opcode"] = 402,
 ["target"] = 2,
 ["timing"] = 1,
-["resource"] = v,
-["target_x"] = IEex_ReadDword(creatureData + 0x6),
-["target_y"] = IEex_ReadDword(creatureData + 0xA),
-["source_id"] = sourceID
+["resource"] = v[1],
+["source_x"] = v[7],
+["source_y"] = v[8],
+["target_x"] = v[5],
+["target_y"] = v[6],
+["casterlvl"] = v[2],
+["parent_resource"] = v[1],
+["source_target"] = v[3],
+["source_id"] = v[4]
 })
 			end
 		end

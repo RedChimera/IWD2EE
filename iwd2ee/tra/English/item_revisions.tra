@@ -1391,7 +1391,7 @@ Kellem's helm is made from thick hide, bone, and heavy gray-white scales. It cov
 
 STATISTICS:
 
-Generic Armor Bonus:  +1
+Generic Armor Bonus:  +2
 Special:
   White Wyrm's Breath: breathe a cone of frost for 8d8 points of cold damage (Reflex DC 16 + twice wearer's Charisma bonus for half) 1/day
 Weight: 3 lb.~
@@ -1406,7 +1406,7 @@ Kellem's helm is made from thick hide, bone, and heavy gray-white scales. It cov
 
 STATISTICS:
 
-Generic Armor Bonus:  +2 
+Generic Armor Bonus:  +4
 Special:
   Resistance: 15/- Cold Resistance
   White Wyrm's Breath: breathe a cone of frost for 16d8 points of cold damage (Reflex DC 24 + twice wearer's Charisma bonus for half) 1/day
@@ -2980,7 +2980,7 @@ Arcane Spell Failure:  15%
 Special:
   Dexterity: +5
 Weight: 15 lb.~
-@10647    = ~Myo-Myo's Gong +1~
+@10647    = ~Myo-Myo's Gong +2~
 @10648    = ~Myo-Myo was a famous ghost hunter from T'u Lung in Kara Tur, and made her living by slaying or banishing all manner of demons and foul spirits. Myo-Myo's so-called gong is but one of her many pieces of fantastic equipment, a round black shield ringed with geometric patterns and infused with sacred power by the seven stone monks of Seven Stone Monk Temple. Once per day the shield's bearer may strike his or her weapon against Myo-Myo's gong, the resulting "CLASH!" sending out a wave of spiritual energy that rends at the forms of any evil creatures.
 
 STATISTICS:
@@ -3002,7 +3002,7 @@ Special:
 Armor Check Penalty:  -2
 Arcane Spell Failure:  15%
 Weight: 15 lb.~
-@10651    = ~Red Fang's Tomb +3~
+@10651    = ~Red Fang's Tomb +4~
 @10652    = ~This red iron tower shield reaches nearly from the chin to the toe of the user. It is heavy even for a shield of its size, much of the weight coming from a large sculpted dragon's head set into its face - the head, wrought in the same red metal as the rest of the shield, protrudes almost like a gargoyle from a castle wall.
 
 The head is the likeness of Red Fang, one-time mount of a tyrannical warrior-king from a land long ago forgotten. When Red Fang was slain in battle, the warrior-king had the beast's soul bound to this shield so that the faithful dragon could still accompany him into battle. Once per day Red Fang's iron head can breathe a cone of searing flame at the shield-bearer's command.
@@ -3011,7 +3011,7 @@ The warrior-king was eventually slain himself by a trio of brave heroes. Though 
 
 STATISTICS:
 
-Shield Bonus: +5
+Shield Bonus: +6
 Armor Bonus: +1 vs. missile weapons
 Special:
   Resistance: 20/- fire resistance
@@ -3019,7 +3019,7 @@ Special:
 Armor Check Penalty:  -10
 Arcane Spell Failure:  50%
 Weight: 30 lb.~
-@10653    = ~The Death-Adder's Dragon Shield +5~
+@10653    = ~The Death-Adder's Dragon Shield +6~
 @10654    = ~This red iron tower shield reaches nearly from the chin to the toe of the user. It is heavy even for a shield of its size, much of the weight coming from a large sculpted dragon's head set into its face - the head, wrought in the same red metal as the rest of the shield, protrudes almost like a gargoyle from a castle wall.
 
 The head is the likeness of Red Fang, one-time mount of a tyrannical warrior-king from a land long ago forgotten. When Red Fang was slain in battle, the warrior-king had the beast's soul bound to this shield so that the faithful dragon could still accompany him into battle. Once per day Red Fang's iron head can breathe a gout of searing flame at the shield-bearer's command.
@@ -3028,11 +3028,11 @@ The warrior-king was eventually slain himself by a trio of brave heroes. Though 
 
 STATISTICS:
 
-Shield Bonus: +7
+Shield Bonus: +8
 Armor Bonus: +1 vs. missile weapons
 Special:
   Resistance: 30/- fire resistance
-  Red Fang's Breath: Once per day, can breathe fire in a large cone, dealing 20d6 fire damage (Reflex DC 40 for half)
+  Red Fang's Breath: Once per day, can breathe fire in a large cone, dealing 25d6 fire damage (Reflex DC 40 for half)
 Armor Check Penalty:  -10
 Arcane Spell Failure:  50%
 Weight: 30 lb.~
@@ -13536,6 +13536,30 @@ Type:  One-handed~
 STATISTICS:
 
 Generic Armor Bonus: +1
+Weight: 1 lb.~
+@12833    = ~Hide Armor +1~
+@12834    = ~Hide armor is made from multiple layers of leather armor. Though stiff and hard to move in, it is relatively simple to make and provides a good barrier against cold weather. It is most commonly seen on the warriors and huntsmen of northern barbarian tribes.
+
+STATISTICS:
+
+Medium Armor
+Armor Bonus: +5
+Max Dex Bonus:  +4
+Armor Check Penalty:  -3
+Arcane Spell Failure:  20%
+Weight: 20 lb.~
+@12835    = ~Wings~
+@12836    = ~These soft and feathered wings seem to be fashioned in a celestial design. Upon closer inspection they turn out to be dummies worn on two satin ribbons attached to their base. The wings do seem to move with their bearer in a way that defies their supposed mechanism.
+
+STATISTICS:
+
+Weight: 1 lb.~
+@12837    = ~Wings of Flying~
+@12838    = ~These soft and feathered wings seem to be fashioned in a celestial design. Upon being fastened to a creature's back, the wings give the creature the power to fly.
+
+STATISTICS:
+
+Flight: Wearer gains the ability to fly while outdoors
 Weight: 1 lb.~
 @12900    = ~Hrm - you are powerful allies, indeed. More gold and gems to line your pockets, then - also, a suit of plate armor, a warhammer, a helmet, all crafted and enchanted by great duergar artisans. They are well deserved, outsider.~
 @12901    = ~Drink this Rainwater Brew, Ennelia. It should help your condition.~
