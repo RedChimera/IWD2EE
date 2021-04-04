@@ -65,6 +65,10 @@ COPY_EXISTING ~IEex_TRA.lua~ ~override~
 	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_tra_55582 *=.*~ ~ex_tra_55582 = %ex_tra_55582%~
 	ex_tra_55583 = RESOLVE_STR_REF(@55583)
 	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_tra_55583 *=.*~ ~ex_tra_55583 = %ex_tra_55583%~
+	ex_tra_55594 = RESOLVE_STR_REF(@55594)
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_tra_55594 *=.*~ ~ex_tra_55594 = %ex_tra_55594%~
+	ex_tra_55595 = RESOLVE_STR_REF(@55595)
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_tra_55595 *=.*~ ~ex_tra_55595 = %ex_tra_55595%~
 	ex_tra_55596 = RESOLVE_STR_REF(@55596)
 	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_tra_55596 *=.*~ ~ex_tra_55596 = %ex_tra_55596%~
 	ex_tra_55597 = RESOLVE_STR_REF(@55597)
@@ -822,6 +826,8 @@ OUTER_SET ref_enlarged = RESOLVE_STR_REF(@30060)
 OUTER_SET ref_contingent_resurrection = RESOLVE_STR_REF(@35955)
 OUTER_SET ref_jump_distance_increased = RESOLVE_STR_REF(@30061)
 OUTER_SET ref_flying = RESOLVE_STR_REF(@30062)
+OUTER_SET ref_spell_turning = RESOLVE_STR_REF(@37763)
+OUTER_SET ref_songcasting = RESOLVE_STR_REF(@37654)
 
 APPEND ~STATDESC.2da~
 ~146	%ref_magic_stone%
@@ -854,6 +860,8 @@ APPEND ~STATDESC.2da~
 173	%ref_contingent_resurrection%
 174	%ref_jump_distance_increased%
 175	%ref_flying%
+176	%ref_spell_turning%
+177	%ref_songcasting%
 ~
 
 VERBOSE

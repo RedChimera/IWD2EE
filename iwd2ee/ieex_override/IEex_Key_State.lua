@@ -885,6 +885,28 @@ function IEex_ArcaneSightListener(key)
 	end
 end
 
+function IEex_AbilityScoreCapListener()
+	if ex_full_ability_score_cap > 40 then
+		for i = 0, 5, 1 do
+			local actorID = IEex_GetActorIDCharacter(i)
+			local share = IEex_GetActorShare(actorID)
+			if share > 0 then
+				for j = 0, 5, 1 do
+					local statID = 37 + j
+					if statID == 37 then
+						statID = 36
+					end
+					if IEex_ReadSignedWord(share + 0x974 + j * 0x2, 0x0) == 40 then
+						local fullStatValue = IEex_GetActorFullStat(actorID, statID)
+						IEex_WriteWord(share + 0x974 + j * 0x2, fullStatValue)
+						IEex_WriteWord(share + 0x17CC + j * 0x2, fullStatValue)
+					end
+				end
+			end
+		end
+	end
+end
+
 function IEex_Scroll_InputStateListener()
 
 end
@@ -896,6 +918,7 @@ function IEex_Scroll_RegisterListeners()
 	IEex_AddKeyReleasedListener("IEex_Scroll_KeyReleasedListener")
 	IEex_AddKeyReleasedListener("IEex_Chargen_RerollListener")
 	IEex_AddInputStateListener("IEex_DeathwatchListener")
+	IEex_AddInputStateListener("IEex_AbilityScoreCapListener")
 	IEex_AddInputStateListener("IEex_Chargen_ExtraFeatListener")
 	IEex_AddInputStateListener("IEex_Scroll_InputStateListener")
 end

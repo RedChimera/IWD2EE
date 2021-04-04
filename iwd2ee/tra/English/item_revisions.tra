@@ -1061,8 +1061,8 @@ These sashes were carried from his tomb by fortune seekers many years past, and 
 STATISTICS:
 
 Special:
- Generic Armor Bonus: +1
- Shadowed: +5 to Hide skill
+ Generic Armor Bonus: +2
+ Shadowed: +10 to Hide skill
  Constant Effect:  Non-detection while equipped.
 Weight: 1 lb.~
 //@10300    = ~Sash of Hidden Shadows~
@@ -1073,8 +1073,8 @@ When this sash is tied about the waist, it vanishes completely, and the wearer v
 STATISTICS:
 
 Special:
- Generic Armor Bonus: +2
- Shadowed: +10 to Hide skill
+ Generic Armor Bonus: +3
+ Shadowed: +15 to Hide skill
  Constant Effect:  Non-detection while equipped.
  Constant Effect:  Freedom of Movement while equipped.
 Weight: 1 lb.~
@@ -2663,7 +2663,7 @@ Special:
   Resistance: 5/- Piercing Resistance
   Resistance: 5/- Missile Resistance
 Weight: 50 lb.~
-@10585    = ~Aasimar's Aura +2~
+@10585    = ~Aasimar's Aura~
 @10586    = ~Aasimars are direct offspring from a union between mortal and celestial minion. While normally carrying innate powers, it is not unusual for an Aasimar to don blessed armor. Such is the case for this unique armor known as Aasimar's Aura. The armor shimmers with a silvery glow and is adorned with exquisite blue etchings across the breast. One look at the armor and it is simple to see that it possesses powerful protections.
 
 Long ago, the Blood War between the Baazetu and the Tanar'ri spilled over to the material plane. Luckily for most of the world, the battle was far away from any major towns or cities. However, this was still no comfort for the Celestial beings that watched over the material plane. So, it was quickly decided to amass as many Celestial and Aasimar beings as possible and drive the Blood War back into its own abyssal planes. However, because of the great numbers of Tanar'ri and Baatezu, the Celestial beings permanently blessed all the Aasimars' armor with Protection from Evil. This spell allowed the Aasimars to get in close to the evil creatures without getting attacked. Once all the Aasimars were in position, the Celestials gave the order to attack, which completely surprised the hordes of Baazetu and Tanar'ri. The ensuing battle raged for days, with high casualties on both sides, but eventually the evil hordes were pushed back into their abyssal planes.
@@ -2673,18 +2673,18 @@ As a result of the high Aasimar casualties, it was not uncommon for looters to t
 STATISTICS:
 
 Heavy Armor
-Armor Bonus: +10
+Armor Bonus: +11
 Max Dex Bonus:  +1
 Armor Check Penalty:  -5
 Arcane Spell Failure:  35%
 Special:
-  Wearer is under the effect of the spell Protection from Evil
+  +2 AC and saving throws vs. evil creatures (stacks with Protection from Evil)
   Spellward: Immunity to Unholy Blight and Blasphemy
 Weight: 50 lb.~
-@10587    = ~Celestial Aura +5~
+@10587    = ~Celestial Aura~
 @10588    = ~Aasimars are direct offspring from a union between mortal and celestial minion. While normally carrying innate powers, it is not unusual for an Aasimar to don blessed armor. Such is the case for this unique armor known as Celestial Aura. The armor shimmers with a silvery glow and is adorned with exquisite blue etchings across the breast. One look at the armor and it is simple to see that it possesses powerful protections. 
 
-Long ago, the Blood War between the Baatezu and the Tanar'ri spilled over to the material plane. Luckily for most of the world, the battle was far away from any major towns or cities. However, this was still no comfort for the Celestial beings that watched over the material plane. So, it was quickly decided to amass as many Celestial and Aasimar beings as possible and drive the Blood War back into its own abyssal planes. However, because of the great numbers of Tanar'ri and Baatezu, the Celestial beings permanently blessed all the Aasimars' armor with Protection from Evil. In addition, the Celestials made the armor immune to fire damage, as well as improving its resistances to paralyze and death magics, and poison. These spells allowed the Aasimar's to get in close to the evil creatures without getting attacked, and provided enough protection to effectively fight the evil hordes. Once all the Aasimars were in position, the Celestials gave the order to attack, which completely surprised the hordes of Baatezu and Tanar'ri. The ensuing battle raged for days, with high casualties on both sides, but eventually the evil hordes were pushed back into their abyssal planes. 
+Long ago, the Blood War between the Baatezu and the Tanar'ri spilled over to the material plane. Luckily for most of the world, the battle was far away from any major towns or cities. However, this was still no comfort for the Celestial beings that watched over the material plane. So, it was quickly decided to amass as many Celestial and Aasimar beings as possible and drive the Blood War back into its own abyssal planes. However, because of the great numbers of Tanar'ri and Baatezu, the Celestial beings permanently blessed all the Aasimars' armor with Protection from Evil. In addition, the Celestials made the armor immune to fire damage, as well as improving its resistances to paralyze and death magics, and poison. These spells allowed the Aasimar's to get in close to the evil creatures without getting attacked, and provided enough protection to effectively fight the evil hordes. Once all the Aasimars were in position, the Celestials gave the order to attack, which completely surprised the hordes of Baatezu and Tanar'ri. The ensuing battle raged for days, with high casualties on both sides, but eventually the evil hordes were pushed back into their abyssal planes.
 
 As a result of the high Aasimar casualties, it was not uncommon for looters to take the armor off the dead. So, from time to time, a set of Celestial Aura will pop up in a shop, or on an adventurer who could afford the high purchase price.
 
@@ -2696,7 +2696,7 @@ Max Dex Bonus:  +1
 Armor Check Penalty:  -5
 Arcane Spell Failure:  35%
 Special:
-  Wearer is under the effect of Protection from Evil
+  +4 AC and saving throws vs. evil creatures (stacks with Protection from Evil)
   Wearer is under the effect of Holy Aura
   Resistance: 20/- Fire Resistance
   Saving Throw Bonus: +3 to Fortitude saves
@@ -13560,6 +13560,15 @@ Weight: 1 lb.~
 STATISTICS:
 
 Flight: Wearer gains the ability to fly while outdoors
+Weight: 1 lb.~
+@12839    = ~Wings of Flying~
+@12840    = ~These soft and feathered wings seem to be fashioned in a celestial design. Upon being fastened to a creature's back, the wings give the creature the power to fly.
+
+STATISTICS:
+
+Flight: Wearer gains the ability to fly while outdoors
+Constant Effect: Freedom of Movement while equipped
+Constant Effect: Haste while equipped
 Weight: 1 lb.~
 @12900    = ~Hrm - you are powerful allies, indeed. More gold and gems to line your pockets, then - also, a suit of plate armor, a warhammer, a helmet, all crafted and enchanted by great duergar artisans. They are well deserved, outsider.~
 @12901    = ~Drink this Rainwater Brew, Ennelia. It should help your condition.~

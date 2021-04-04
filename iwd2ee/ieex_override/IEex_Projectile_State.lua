@@ -1284,17 +1284,25 @@ IEex_MutatorOpcodeFunctions["MEMODDTP"] = {
 
 IEex_MutatorGlobalFunctions["METIMESL"] = {
     ["typeMutator"] = function(source, creatureData, missileIndex, sourceRES)
-
+		if missileIndex == 335 and ex_time_slow_speed_divisor == 0x7FFFFFFF then
+			local timeSlowed = IEex_CheckGlobalEffect(0x2)
+			if timeSlowed then
+				return 1
+			end
+		end
     end,
     ["projectileMutator"] = function(source, creatureData, projectileData, sourceRES)
-		local timeSlowed = IEex_CheckGlobalEffect(0x2)
-		if timeSlowed then
-			IEex_WriteWord(projectileData + 0x70, math.ceil(IEex_ReadWord(projectileData + 0x70, 0x0) / ex_time_slow_speed_divisor))
+    	if ex_time_slow_speed_divisor ~= 0x7FFFFFFF then
+			local timeSlowed = IEex_CheckGlobalEffect(0x2)
+			if timeSlowed then
+				IEex_WriteWord(projectileData + 0x70, math.ceil(IEex_ReadWord(projectileData + 0x70, 0x0) / ex_time_slow_speed_divisor))
+			end
 		end
 	end,
     ["effectMutator"] = function(source, creatureData, projectileData, effectData)
     end,
 }
+
 --[[
 IEex_MutatorGlobalFunctions["USPR954"] = {
     ["typeMutator"] = function(source, creatureData, missileIndex, sourceRES)

@@ -414,7 +414,7 @@ TR
 0 0 0 0 0 0 0 0 1 50 0 0 0 [-1.-1.-1.-1] "" 0 0 OB
 TR
 TR
-16633 0 0 0 0 "return IEex_MatchAOE(2,200,{['pconly'] = true, ['stat'] = {{15,15,2}}, ['opcode'] = 12, ['spell'] = 'USIW404'}})" "" OB
+16633 0 0 0 0 "return IEex_MatchAOE(2,200,{['pconly'] = true, ['stat'] = {{15,15,2}}, ['opcode'] = 12, ['spell'] = 'USIW404'})" "" OB
 0 0 0 0 0 0 0 0 0 0 0 0 0 [-1.-1.-1.-1] "" 0 0 OB
 TR
 TR
@@ -862,7 +862,7 @@ TR
 0 0 0 0 0 0 0 0 1 50 0 0 0 [-1.-1.-1.-1] "" 0 0 OB
 TR
 TR
-16633 0 0 0 0 "return IEex_MatchAOE(1,200,{['pconly'] = true, ['stat'] = {{15,15,2}}, ['opcode'] = 12, ['spell'] = 'USIW404'}})" "" OB
+16633 0 0 0 0 "return IEex_MatchAOE(1,200,{['pconly'] = true, ['stat'] = {{15,15,2}}, ['opcode'] = 12, ['spell'] = 'USIW404'})" "" OB
 0 0 0 0 0 0 0 0 0 0 0 0 0 [-1.-1.-1.-1] "" 0 0 OB
 TR
 TR
@@ -958,7 +958,7 @@ TR
 0 0 0 0 0 0 0 0 1 50 0 0 0 [-1.-1.-1.-1] "" 0 0 OB
 TR
 TR
-16633 0 0 0 0 "return IEex_MatchAOE(2,200,{['stat'] = {{15,10,2}}, ['opcode'] = 12, ['spell'] = 'USIW220'}})" "" OB
+16633 0 0 0 0 "return IEex_MatchAOE(2,200,{['stat'] = {{15,10,2}}, ['opcode'] = 12, ['spell'] = 'USIW220'})" "" OB
 0 0 0 0 0 0 0 0 0 0 0 0 0 [-1.-1.-1.-1] "" 0 0 OB
 TR
 TR

@@ -146,7 +146,18 @@ function IEex_Extern_OnPostCreatureProcessEffectList(creatureData)
 })
 	end
 --]]
-	if not IEex_IsSprite(targetID, true) then return end
+	if not IEex_IsSprite(targetID, false) and targetID ~= IEex_GetActorIDCharacter(0) then return end
+	if ex_full_ability_score_cap > 40 then
+		for i = 0, 5, 1 do
+			local statID = 37 + i
+			if statID == 37 then
+				statID = 36
+			end
+			if IEex_ReadSignedWord(creatureData + 0x974 + i * 0x2, 0x0) == 40 then
+				IEex_WriteWord(creatureData + 0x974 + i * 0x2, IEex_GetActorFullStat(targetID, statID))
+			end
+		end
+	end
 	local onTickFunctionsCalled = {}
 	local extraFlags = IEex_ReadDword(creatureData + 0x740)
 	if ex_cre_initializing[targetID] then

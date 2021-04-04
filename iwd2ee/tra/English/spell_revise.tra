@@ -646,7 +646,7 @@ The domination spell enables the caster to control the actions of any creature w
 (Enchantment)
 Level: Brd 4, Clr 4, Sor/Wiz 5
 Range: Sight of Caster
-Duration: 1 round / level 
+Duration: 1 round / 2 levels
 Casting Time: 5 
 Area of Effect: 15' radius
 Saving Throw: Will negates
@@ -832,7 +832,7 @@ Saving Throw: Partial
 Power Word: Kill is the deadliest word of power. The moment the word is spoken, the victim is instantly killed on a failed Will save at a -4 penalty. Those who survive still suffer 60 magic damage. This spell has no effect on deaf creatures.~
 @1142    = ~Wail of the Banshee~
 @1143    = ~Wail of the Banshee 
-(Transmutation) 
+(Necromancy)
 Level: Brd 8, Sor/Wiz 9, Oghma 9, Talos 9
 Range: Caster
 Duration: Instantaneous
@@ -925,12 +925,11 @@ This spell creates a corporeal barrier around the target's body by tapping into 
 Level: Drd 6, Rgr 6, Sor/Wiz 6
 Range: Sight of Caster
 Duration: 5 rounds / level
-Casting Time: 1 round
+Casting Time: 6
 Area of Effect: Special 
 Saving Throw: None 
 
-When this spell is cast, the wizard opens up a magical channel that will summon a wyvern to his aid. The wyvern will remain under the wizard's control and will live and die at his command until the spell duration expires.
-~
+When this spell is cast, the wizard opens up a magical channel that will summon a wyvern to his aid. The wyvern will remain under the wizard's control and will live and die at his command until the spell duration expires. The DC of the poison from the wyvern's stinger is equal to the DC of this spell as cast by the caster.~
 @1510    = ~Mordenkainen's Sword~
 @1511    = ~Mordenkainen's Sword
 (Evocation)
@@ -1121,8 +1120,7 @@ This spell conjures a large spider which is brought under the caster's telepathi
 
 5th : Giant spider
 9th : Phase spider
-12th+ : Sword spider
-~
+12th+ : Sword spider~
 @1563    = ~Carrion Summons~
 @1564    = ~Carrion Summons 
 (Conjuration) 
@@ -1131,10 +1129,9 @@ Range: Sight of Caster
 Duration: 1 round / level
 Casting Time: 4
 Area of Effect: Special 
-Saving Throw: None 
+Saving Throw: Special
 
-This spell conjures forth a mutated carrion crawler of enormous size that is under the caster's control.
-~
+This spell conjures forth a mutated carrion crawler of enormous size that is under the caster's control. As with a normal carrion crawler, it has 8 attacks per round and each attack paralyzes the target on a failed Fortitude save.  The DC is equal to the DC of this spell as cast by the caster.~
 @1565    = ~Mass Invisibility~
 @1566    = ~Mass Invisibility 
 (Illusion)
@@ -1145,8 +1142,7 @@ Casting Time: 7
 Area of Effect: 30-foot radius
 Saving Throw: None
 
-Mass Invisibility hides all allied creatures within its area of effect as per the Improved Invisibility spell for 10 rounds.
-~
+Mass Invisibility hides all allied creatures within its area of effect as per the Improved Invisibility spell for 10 rounds.~
 @1567    = ~Suffocate~
 @1568    = ~Suffocate 
 (Transmutation)
@@ -1312,8 +1308,7 @@ Casting Time: 8
 Area of Effect: 30-foot radius
 Saving Throw: None
 
-This spell bestows a form of divine madness upon the priest's allies, improving their combat skills. All the priest's allies in the area of effect gain a +2 to attack rolls, damage rolls, and saving throws, and all creatures of the same alignment as the caster gain an extra attack every round.
-~
+This spell bestows a form of divine madness upon the priest's allies, improving their combat skills. All the priest's allies in the area of effect gain a +2 to attack rolls, damage rolls, and saving throws, and all creatures of the same alignment as the caster gain an extra attack every round.~
 @1641    = ~Call Lightning~
 @1642    = ~Call Lightning
 (Transmutation) 
@@ -1324,7 +1319,7 @@ Casting Time: 1 round
 Area of Effect: Sight of Caster
 Saving Throw: Reflex half
 
-When a Call Lightning spell is cast, it must be cast outside, otherwise it will not work and the spell is wasted. The caster is able to call down bolts of lightning. The caster can call down one bolt per 5 rounds. The spell has a duration of 5 rounds per caster level. Each bolt causes 1d10 points of electrical damage for each of the caster's experience levels (maximum of 10d10). The bolt of lightning flashes down in a vertical stroke at any of the caster's enemies. The caster does not choose the targets of the spell, though the lightning will not strike any of his allies.~
+When a Call Lightning spell is cast, it must be cast outside, otherwise it will not work and the spell is wasted. The caster is able to call down bolts of lightning. The caster can call down one bolt per 5 rounds. The spell has a duration of 5 rounds per caster level. Each bolt causes 2d10 points of electrical damage plus 1d10 per level (maximum of 12d10 at level 10). A successful Reflex save made at a -4 penalty halves the damage. The bolt of lightning flashes down in a vertical stroke at any of the caster's enemies. The caster does not choose the targets of the spell, though the lightning will not strike any of their allies.~
 
 @1653    = ~Minor Globe of Invulnerability~
 @1654    = ~Minor Globe of Invulnerability
@@ -1338,8 +1333,8 @@ Saving Throw: None
 
 This spell creates an immobile, faintly shimmering magical sphere around the caster that prevents any 1st-, 2nd-, or 3rd-level spell effects from affecting the caster. This includes innate abilities and effects from devices. However, any type of spell can be cast out of the magical sphere with no penalty, and strictly defensive mage spells that only impact the caster, such as Mirror Image, may still be cast (non-defensive spells and those which can be cast on other characters, such as Death Armor and Protection from Evil, will be blocked). The globe can be brought down by a successful Dispel Magic spell.~
 @1655    = ~Globe of Invulnerability~
-@1656    = ~Globe of Invulnerability 
-(Abjuration) 
+@1656    = ~Globe of Invulnerability
+(Abjuration)
 Level: Sor/Wiz 6, Helm 6
 Range: Caster
 Duration: 3 rounds/level
@@ -2010,14 +2005,14 @@ Upon completion of this spell, a brilliant ray of scorching heat fires down from
 @1835    = ~Sol's Searing Orb~
 @1836    = ~Sol's Searing Orb 
 (Evocation)
-Level: Clr 6, Drd 6, Rgr 6
+Level: Clr 6, Drd 5, Rgr 5
 Range: Sight of Caster
-Duration: Instantaneous 
+Duration: Instantaneous
 Casting Time: 6
 Area of Effect: 1 creature
 Saving Throw: Reflex half
 
-Upon completion of this spell the caster hurls a brilliant, blazing sphere at a target creature. When it hits it explodes in a flash of light, blinding the target creature and dealing 6d12 points of fire damage. A successful Reflex save avoids the blindness and halves the damage. Drow and gray dwarves must make their Reflex save against blindness at a -4 penalty. Undead creatures are particularly vulnerable to this spell and take double damage.
+Upon completion of this spell the caster hurls a brilliant, blazing sphere at a target creature. When it hits it explodes in a flash of light, blinding the target creature and dealing 9d12 points of fire damage. A successful Reflex save avoids the blindness and halves the damage. Drow and gray dwarves must make their Reflex save against blindness at a -4 penalty. Undead creatures are particularly vulnerable to this spell and take double damage.
 ~
 @1837    = ~Holy Word~
 @1838    = ~Holy Word 
@@ -2627,6 +2622,10 @@ Launcher:  Bow~
 @30060=~Enlarged~
 @30061=~Jump Distance Increased~
 @30062=~Flying~
+@30063=~Mutated Crawler~
+@30064=~Protected by Spell Turning~
+@30065=~Skeleton Bomb~
+@30066=~Explode~
 
 @31106     = ~Magic Stone~
 @32106     = ~Magic Stone
@@ -2639,10 +2638,21 @@ Area of Effect: Caster
 Saving Throw: None
 
 This spell enhances the caster's sling bullets. Any bullet the caster throws will deal magic damage instead of physical damage, and will deal an additional 1d4+1 damage. The spell ends once the caster has thrown a certain number of bullets: five plus one per caster level (maximum of 15 at level 10).~
+@31107     = ~Protection from Evil~
+@32107     = ~Protection from Evil
+(Abjuration) [Good]
+Level: Clr 1, Pal 1, Sor/Wiz 1
+Range: Touch 
+Duration: 1 minute/level
+Casting Time: 1
+Area of Effect: 1 creature 
+Saving Throw: None
+
+This spell forms a magic barrier around the target creature, granting a bonus of +2 generic bonus to AC and saving throws against attacks, spells and abilities from evil creatures. In additions, the creature is immune to charm and domination effects. Summoned fiends will not attack their summoner or their summoner's allies if their summoner has Protection from Evil.~
 @31115     = ~Armor of Faith~
 @32115     = ~Armor of Faith
 (Abjuration)
-Level: Clr 1, Pal, Helm 1
+Level: Clr 1, Pal 1, Helm 1
 Range: Caster
 Duration: 10 rounds + 1 round/level
 Casting Time: 1
@@ -2771,7 +2781,7 @@ Level: Drd 3, Rgr 3
 Range: Sight of Caster
 Duration: 10 rounds + 5 rounds/level
 Casting Time: 6 
-Area of Effect: Special 
+Area of Effect: Special
 Saving Throw: None 
 
 This spell summons one or more creatures of nature who will aid the caster for the duration of the spell.  The type of creatures that come is random.  The creatures summoned are more powerful than creatures summoned by lesser versions of this spell.~
@@ -2781,11 +2791,22 @@ This spell summons one or more creatures of nature who will aid the caster for t
 Level: Drd 4, Rgr 4
 Range: Sight of Caster
 Duration: 10 rounds + 5 rounds/level
-Casting Time: 6 
-Area of Effect: Special 
+Casting Time: 6
+Area of Effect: Special
 Saving Throw: None
 
 This spell summons one or more creatures of nature who will aid the caster for the duration of the spell.  The type of creatures that come is random.  The creatures summoned are more powerful than creatures summoned by lesser versions of this spell.~
+@31408     = ~Magic Circle Against Evil~
+@32408     = ~Magic Circle Against Evil
+(Abjuration) [Good]
+Level: Clr 4, Pal 4, Sor/Wiz 4, Ilmater 3
+Range: Touch 
+Duration: 1 minute/level
+Casting Time: 7
+Area of Effect: 10-foot radius
+Saving Throw: None
+
+When this spell is cast, all creatures within a 10' radius are affected individually by Protection from Evil, giving them +2 AC and +2 to Saving Throws against evil creatures, as well as immunity to charm and domination effects from such creatures.~
 @31409     = ~Cloak of Fear~
 @32409     = ~Cloak of Fear
 (Conjuration)
@@ -2796,7 +2817,7 @@ Casting Time: 6
 Area of Effect: Caster
 Saving Throw: Will negates
 
-Cloak of Fear bestows the caster with an aura of fear in a 5-foot radius.  All creatures that enter the cloak's area of effect must make a Will save or flee in panic for 1 round, and must continue to make Will saves twice a round as long as they are in the cloak of fear's area of effect.  The aura does not affect undead creatures.~
+Cloak of Fear bestows the caster with an aura of fear in a 5-foot radius.  All enemies that enter the cloak's area of effect must make a Will save or flee in panic for 1 round, and must continue to make Will saves twice a round as long as they are in the cloak of fear's area of effect.  The aura does not affect undead creatures.~
 @31423     = ~Wall of Moonlight~
 @32423     = ~Wall of Moonlight
 (Evocation)
@@ -2850,7 +2871,7 @@ Casting Time: 1 round
 Area of Effect: Sight of Caster
 Saving Throw: Reflex half
 
-Static Charge is similar to Call Lightning except it can be used indoors. Upon completion of this spell an enemy creature within the area of effect is fried by a static discharge for 1d8 electricity damage per caster level, to a maximum of 16d8 electricity damage.  Once released the static charge will build up again on the caster, discharging once per 5 rounds for the duration of the spell.~
+Static Charge is similar to Call Lightning except it can be used indoors. Upon completion of this spell an enemy creature within the area of effect is fried by a static discharge for 1d8 electricity damage per caster level, to a maximum of 16d8 electricity damage. A successful Reflex save made at a -4 penalty halves the damage. Once released the static charge will build up again on the caster, discharging once per 5 rounds for the duration of the spell.~
 @31602     = ~Summon Nature's Ally VI~
 @32602     = ~Summon Nature's Ally VI
 (Conjuration) 
@@ -2923,11 +2944,23 @@ This spell allows the caster to summon four elementals, one from each of the ele
 Level: Drd 9
 Range: Sight of Caster
 Duration: 10 rounds + 5 rounds/level
-Casting Time: 6 
+Casting Time: 6
 Area of Effect: Special 
 Saving Throw: None 
 
 This spell summons one or more creatures of nature who will aid the caster for the duration of the spell.  The type of creatures that come is random.  The creatures summoned are more powerful than creatures summoned by lesser versions of this spell.~
+@33104     = ~Charm Person~
+@34104     = ~Charm Person
+(Enchantment)
+Level: Brd 1, Sor/Wiz 1
+Range: Sight of Caster
+Duration: 5 rounds
+Casting Time: 1
+Area of Effect: 1 creature
+Saving Throw: Will negates 
+
+This spell affects any single person it is cast upon. The term person includes any bipedal human, demihuman, or humanoid of man-size or smaller, such as brownies, dryads, dwarves, elves, gnolls, gnomes, goblins, half-elves, halflings, half-orcs, hobgoblins, humans, kobolds, lizard men, nixies, orcs, pixies, sprites, troglodytes, and others. Thus, a 10th-level fighter could be charmed, but an ogre could not. The person receives a Will save to avoid the effect.  If the spell recipient fails his saving throw, he regards the caster as a trusted friend and ally to be heeded and protected.  The caster may give him orders, and the charmed individual will carry them out as quickly as possible.
+If the caster harms, or attempts to harm, the charmed person by some overt action, or if a dispel magic spell is successfully cast upon the charmed person, the charm spell is broken.  If two or more charm effects simultaneously affect a creature, the most recent charm takes precedence.  Note that the subject has full memory of the events that took place while he was charmed. Also note that you cannot have a charmed creature leave the area where he was charmed.~
 @33122     = ~Ice Dagger~
 @34122     = ~Ice Dagger
 (Evocation)
@@ -2974,6 +3007,17 @@ Area of Effect: Special
 Saving Throw: Will negates 
 
 This spell holds 1-4 humans, demihumans, or humanoid creatures immobile for a short duration. The Hold Person spell affects any bipedal human, demihuman, or humanoid of man size or smaller, including dwarves, elves, gnolls, gnomes, goblins, half-elves, halflings, half-orcs, hobgoblins, humans, lizard men, orcs, troglodytes, and others. Thus, a 10th-level fighter could be held, while an ogre could not. The effect selects the enemies closest to the target and holds them. Enemies making their Will saves are totally unaffected by the spell. Undead creatures cannot be held. Held creatures cannot move or speak, but they remain aware of events around them and can use abilities not requiring motion or speech. Being held does not prevent the worsening of the subject's condition due to wounds, disease, or poison.  A successful Will save negates any effect.~
+@33316     = ~Dire Charm~
+@34316     = ~Dire Charm
+(Enchantment)
+Level: Brd 2, Sor/Wiz 3, Bane 3
+Range: Sight of Caster
+Duration: 8 rounds
+Casting Time: 3 
+Area of Effect: 1 creature
+Saving Throw: Will negates 
+
+This spell is similar to the Charm Person spell. However, the affected creature goes into a berserk state, wanting no one to harm his master (the spell caster). Thus, the creature will fight enemies of the caster, even former allies. Dire Charm can affect both humanoids and giants.~
 @33322     = ~Melf's Minute Meteors~
 @34322     = ~Melf's Minute Meteors
 (Evocation)
@@ -3182,7 +3226,7 @@ Casting Time: 9
 Area of Effect: Special
 Saving Throw: None
 
-By means of this spell, the caster summons an especially powerful devil called a gelugon. The gelugon will fight for the party as long as the caster is under Protection from Evil. However, if the caster loses Protection from Evil, the devil tear the caster and their companions apart piece by piece, and then feast on the remains.~
+By means of this spell, the caster summons an especially powerful devil called a gelugon. The gelugon will fight for the party as long as the caster is under Protection from Evil. However, if the caster loses Protection from Evil, the devil will tear the caster and their companions apart piece by piece, and then feast on the remains.~
 @35151     = ~Divine Shield~
 @36151     = ~Divine Shield
 (Abjuration)
@@ -3506,7 +3550,7 @@ This spell conjures a divine storm cloud which releases damaging torrents upon c
 
 1st round: Fire Storm - Deals 1d6 fire damage per level (max 20d6) with a Reflex save for half.
 2nd round: Acid Storm - Deals 3d6 acid damage per round for 1 round per 3 levels (max 24d6 and 8 rounds). A Reflex save halves the number of rounds.
-3rd round: Lightning Storm - Deals 10d10 electricity damage with a Reflex save for half.
+3rd round: Lightning Storm - Deals 12d10 electricity damage with a Reflex save made at a -4 penalty for half.
 4th round: Ice Storm - Deals 4d6 bludgeoning damage and 4d6 cold damage with no save.~
 @35955     = ~Contingent Resurrection~
 @36955     = ~Contingent Resurrection
@@ -3742,9 +3786,9 @@ Range: Caster
 Duration: 5 rounds + 2 rounds/level
 Casting Time: 4
 Area of Effect: Caster
-Saving Throw: None
+Saving Throw: Special
 
-This spell lets the caster summon undead by killing other creatures. During the duration of this spell, whenever the caster kills a creature, a ghoul rises to feast upon the remains. That ghoul will serve the caster for 8 hours. A ghoul will only be summoned if the caster dealt the killing damage to the creature; if the caster damaged the creature but another party member finished it off, the caster will not get a ghoul.~
+This spell lets the caster summon undead by killing other creatures. During the duration of this spell, whenever the caster kills a creature, a ghoul rises to feast upon the remains. That ghoul will serve the caster for 8 hours. A ghoul will only be summoned if the caster dealt the killing damage to the creature; if the caster damaged the creature but another party member finished it off, the caster will not get a ghoul. The ghouls' paralyzing touch uses the DC of this spell as cast by the caster.~
 @37454     = ~Copy Spell~
 @38454     = ~Copy Spell
 (Universal)
@@ -3839,17 +3883,17 @@ Area of Effect: All creatures in path of boulder
 Saving Throw: Reflex partial
 
 Boulder Roll creates a large boulder, which rolls forward from the caster, crushing creatures in its path, until it hits a wall. Creatures hit take 12d8 bludgeoning damage and are knocked down for 2 rounds. A successful Reflex save halves the damage and prevents one from being knocked down. The boulder always travels due south from the caster.~
-@37654     = ~Bardic Sequencer~
-@38654     = ~Bardic Sequencer
+@37654     = ~Songcasting~
+@38654     = ~Songcasting
 (Universal)
 Level: Brd 6
 Range: Special
-Duration: 1 round/level
+Duration: 15 rounds
 Casting Time: 10
 Area of Effect: Special
 Saving Throw: None
 
-Bardic Sequencer lets the bard store a spell, which has a chance of being cast automatically each round that the bard sings their bard song. Immediately after casting this spell, the bard should attempt to cast another spell of 2nd-level or lower. Instead of being cast, this spell will be stored (expending one use of the spell). Each round for the duration, if the bard is singing a bard song, there is a chance (1% per bard level) that the spell will be cast on each creature the bard song affects. Even spells with a range of Caster can target other creatures this way. The sequencer can potentially be triggered multiple times over many rounds.~
+Songcasting lets the bard store a spell, which has a chance of being cast automatically each round that the bard sings their bard song. Immediately after casting this spell, the bard should attempt to cast another spell of 2nd-level or lower. Instead of being cast, this spell will be stored (expending one use of the spell). Each round for the duration, if the bard is singing a bard song, there is a chance (1% per bard level) that the spell will be cast on each creature the bard song affects. Even spells with a range of Caster can target other creatures this way. If the spell is 1st-level, the chance is doubled. The spell can potentially be triggered multiple times over many rounds.~
 @37751     = ~Stygian Ice Storm~
 @38751     = ~Stygian Ice Storm
 (Conjuration)
@@ -3900,7 +3944,7 @@ Casting Time: 4
 Area of Effect: Special
 Saving Throw: Reflex half
 
-This spell fires a flurry of small lightning bolts at the target. One bolt is fired per level (max 30), each one dealing 1d8 electrical damage (with a Reflex save for half) to all creatures in its path. The bolts will bounce off walls, potentially hitting the same creature multiple times per bolt.~
+This spell fires a flurry of small lightning bolts at the target. One bolt is fired per level, each one dealing 1d8 electrical damage (with a Reflex save at -4 for half) to all creatures in its path. The bolts will bounce off walls, potentially hitting the same creature multiple times per bolt.~
 @37757     = ~Skeleton Horde~
 @38757     = ~Skeleton Horde
 (Necromancy) 
@@ -3960,6 +4004,28 @@ Area of Effect: 15-foot cube
 Saving Throw: None
 
 This spell creates a cage of force - a cube with walls of force on each side. Creatures that were in the area of effect when the spell was cast are trapped in the forcecage for the duration. Creatures cannot enter or pass through the area of effect. Only one forcecage may be active at a time.~
+@37762     = ~Skeleton Traps~
+@38762     = ~Skeleton Traps
+(Necromancy)
+Level: Sor/Wiz 7
+Range: Sight of Caster
+Duration: 8 hours
+Casting Time: 7
+Area of Effect: Special 
+Saving Throw: Reflex half
+
+This spell animates two skeletons which can be detonated on command to deal damage. When you have a skeleton use its special or ability, or the skeleton takes damage, its skull explodes like a Skull Trap, dealing 10d6 slashing damage to all creatures within 15 feet (Reflex save for half), and the skeleton is destroyed. At 24th level, the spell animates three skeletons instead of two.~
+@37763     = ~Spell Turning~
+@38763     = ~Spell Turning
+(Abjuration)
+Level: Brd 7, Sor/Wiz 7
+Range: Caster
+Duration: 10 rounds/level or until depleted
+Casting Time: 2
+Area of Effect: Caster
+Saving Throw: None
+
+Spell Turning reflects incoming hostile spells back at the source. While Spell Turning is active, if the caster would be hit by a harmful, single-target spell of any level, that spell is reflected back at its own caster. Spell Turning can reflect a total of 15 spell levels before it ends, though as long as there is at least one spell level remaining, the next spell will be reflected. It does not reflect Dispel Magic either, though it cannot be dispelled itself.~
 @37852     = ~Energy Drain~
 @38852     = ~Energy Drain
 (Necromancy)
@@ -4124,7 +4190,7 @@ Casting Time: 10
 Area of Effect: Random creatures within 20 feet
 Saving Throw: Reflex half
 
-Living Lightning is essentially a spell that repeatedly casts itself. When cast, a lightning bolt shoots out of the caster, targeting a random enemy within 20 feet (if there are no enemies within 20 feet of the caster, nothing happens immediately). The bolt deals 10d6 damage, with a Reflex save for half. Every round thereafter for the duration of the spell, another lightning bolt is released, requiring no further action by the caster.~
+Living Lightning is essentially a spell that repeatedly casts itself. When cast, a lightning bolt shoots out of the caster, targeting a random enemy within 20 feet (if there are no enemies within 20 feet of the caster, nothing happens immediately). The bolt deals 10d8 damage, with a Reflex save at -4 for half. Every round thereafter for the duration of the spell, another lightning bolt is released, requiring no further action by the caster.~
 @37955     = ~Malavon's Corrosive Fog~
 @38955     = ~Malavon's Corrosive Fog
 (Conjuration)
@@ -4146,7 +4212,7 @@ Casting Time: 5
 Area of Effect: Special
 Saving Throw: Reflex half
 
-This spell envelops the caster in a spiral of lightning, releasing lightning bolts in all directions. Eight bolts are released per level (four at a time), each dealing 1d8 electrical damage (Reflex save for half). Lightning Spiral does significantly more damage to creatures close to the caster.~
+This spell envelops the caster in a spiral of lightning, releasing lightning bolts in all directions. Eight bolts are released per level (four at a time), each dealing 1d8 electrical damage (Reflex save at -4 for half). Lightning Spiral does significantly more damage to creatures close to the caster.~
 @37957     = ~Mass Omnivision~
 @38957     = ~Mass Omnivision
 (Divination)
@@ -4161,7 +4227,7 @@ This spell increases the visual range of all creatures to the maximum, such that
 @37958     = ~Improved Haste~
 @38958     = ~Improved Haste
 (Transmutation)
-Level: Brd 8, Rgr 6, Sor/Wiz 9
+Level: Brd 8, Sor/Wiz 9
 Range: Sight of Caster
 Duration: 1 round/2 levels
 Casting Time: 3
@@ -4169,17 +4235,17 @@ Area of Effect: 1 creature
 Saving Throw: None
 
 This spell drastically speeds up the target's movement and attack speed. For the duration, the target gains +8 AC, moves at the maximum possible speed, and attacks twice as many times per round. Attack bonuses will continue to decrease for attacks beyond the 5th one. This effect does not stack with Haste.~
-@37959     = ~Time Slow~
-@38959     = ~Time Slow
+@37959     = ~Time Stop~
+@38959     = ~Time Stop
 (Transmutation)
 Level: Sor/Wiz 9
 Range: Caster
-Duration: 4 rounds
-Casting Time: 2
+Duration: 3 rounds
+Casting Time: 9
 Area of Effect: Entire area
 Saving Throw: None
 
-This spell slows time for everyone and everything except the caster. All other creatures move and attack at one quarter their normal rates.~
+This spell stops time for everyone and everything except the caster. All other creatures cannot move or act, while the caster can act for three rounds of apparent time.~
 @37960     = ~Mordenkainen's Disjunction~
 @38960     = ~Mordenkainen's Disjunction
 (Abjuration)
@@ -4190,4 +4256,4 @@ Casting Time: 4
 Area of Effect: 1 creature
 Saving Throw: None
 
-Mordenkainen's Disjunction dispels all dispellable effects on the target. There is no saving throw. This spell can even remove the effects of Spell Trap, Antimagic Field, or a Protection from Magic scroll.~
+Mordenkainen's Disjunction dispels all dispellable effects on the target. There is no saving throw. This spell can even remove the effects of Spell Turning, Spell Trap, Antimagic Field, or a Protection from Magic scroll.~

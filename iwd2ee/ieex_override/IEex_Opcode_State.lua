@@ -201,9 +201,10 @@ end
 --   true  -> to prevent summon from counting towards hardcoded limit
 function IEex_Extern_OnAddSummonToLimitHook(effectData, summonerData, summonedData)
 	IEex_AssertThread(IEex_Thread.Async, true)
+	local savingthrow = IEex_ReadDword(effectData + 0x3C)
 	if IEex_ReadByte(summonerData + 0x4, 0x0) == 0x31 then
 		IEex_WriteDword(summonedData + 0x72C, IEex_ReadDword(summonerData + 0x700))
-		if bit.band(IEex_ReadDword(effectData + 0x3C), 0x100000) > 0 then
+		if bit.band(savingthrow, 0x100000) > 0 then
 			IEex_WriteDword(summonedData + 0x740, bit.bor(IEex_ReadDword(summonedData + 0x740), 0x100000))
 		end
 	end
@@ -215,9 +216,11 @@ function IEex_Extern_OnAddSummonToLimitHook(effectData, summonerData, summonedDa
 	IEex_ApplyEffectToActor(summonedID, {
 ["opcode"] = 500,
 ["target"] = 2,
-["timing"] = 1,
+["timing"] = 9,
 ["resource"] = "MESUCREA",
 ["parent_resource"] = "USSUCREA",
+["savingthrow"] = savingthrow,
+["casterlvl"] = IEex_ReadDword(effectData + 0xC4),
 ["source_id"] = summonerID
 })
 	if ex_no_summoning_limit or bit.band(IEex_ReadDword(effectData + 0x3C), 0x10000) > 0 then return true end
@@ -518,7 +521,8 @@ ex_empowerable_opcodes = {[0] = true, [1] = true, [6] = true, [10] = true, [12] 
 					local theparameter2 = IEex_ReadDword(eData + 0x20)
 					local thesavingthrow = IEex_ReadDword(eData + 0x40)
 					if theopcode == 288 and theparameter2 == 222 and bit.band(thesavingthrow, 0x100000) == 0 then
-						if spellRES ~= "" then
+						local theresource = IEex_ReadLString(eData + 0x30, 8)
+						if theresource ~= "" then
 							local thecasterlvl = IEex_ReadDword(eData + 0xC8)
 							local newEffectTarget = sourceID
 							local newEffectTargetX = IEex_ReadDword(effectData + 0x7C)
@@ -536,7 +540,7 @@ ex_empowerable_opcodes = {[0] = true, [1] = true, [6] = true, [10] = true, [12] 
 								newEffectSourceX = IEex_ReadDword(effectData + 0x84)
 								newEffectSourceY = IEex_ReadDword(effectData + 0x88)
 							end
-							table.insert(onKillEffectList, {spellRES, thecasterlvl, newEffectTarget, newEffectSource, newEffectTargetX, newEffectTargetY, newEffectSourceX, newEffectSourceY})
+							table.insert(onKillEffectList, {theresource, thecasterlvl, newEffectTarget, newEffectSource, newEffectTargetX, newEffectTargetY, newEffectSourceX, newEffectSourceY})
 						end
 					end
 				end)
@@ -547,8 +551,8 @@ ex_empowerable_opcodes = {[0] = true, [1] = true, [6] = true, [10] = true, [12] 
 					local theparameter2 = IEex_ReadDword(eData + 0x20)
 					local thesavingthrow = IEex_ReadDword(eData + 0x40)
 					if theopcode == 288 and theparameter2 == 222 and bit.band(thesavingthrow, 0x100000) > 0 then
-						local spellRES = IEex_ReadLString(eData + 0x30, 8)
-						if spellRES ~= "" then
+						local theresource = IEex_ReadLString(eData + 0x30, 8)
+						if theresource ~= "" then
 							local thecasterlvl = IEex_ReadDword(eData + 0xC8)
 							local newEffectTarget = targetID
 							local newEffectTargetX = IEex_ReadDword(effectData + 0x84)
@@ -568,7 +572,7 @@ ex_empowerable_opcodes = {[0] = true, [1] = true, [6] = true, [10] = true, [12] 
 								newEffectSourceX = IEex_ReadDword(effectData + 0x84)
 								newEffectSourceY = IEex_ReadDword(effectData + 0x88)
 							end
-							table.insert(onKillEffectList, {spellRES, thecasterlvl, newEffectTarget, newEffectSource, newEffectTargetX, newEffectTargetY, newEffectSourceX, newEffectSourceY})
+							table.insert(onKillEffectList, {theresource, thecasterlvl, newEffectTarget, newEffectSource, newEffectTargetX, newEffectTargetY, newEffectSourceX, newEffectSourceY})
 						end
 					end
 				end)
@@ -597,26 +601,53 @@ ex_empowerable_opcodes = {[0] = true, [1] = true, [6] = true, [10] = true, [12] 
 			IEex_WriteDword(creatureData + 0x920, bit.band(IEex_ReadDword(creatureData + 0x920), 0xBFFFFFFF))
 			IEex_WriteDword(creatureData + 0x1778, bit.band(IEex_ReadDword(creatureData + 0x1778), 0xBFFFFFFF))
 --]]
-			local onDamageList = {}
+			local onDamageEffectList = {}
 			IEex_IterateActorEffects(targetID, function(eData)
 				local theopcode = IEex_ReadDword(eData + 0x10)
 				local theparameter1 = IEex_ReadDword(eData + 0x1C)
 				local theparameter2 = IEex_ReadDword(eData + 0x20)
-				local thespecial = IEex_ReadDword(eData + 0x48)
-				if theopcode == 288 and theparameter2 == 226 and theparameter1 <= parameter1 and ((damageType == 0 and bit.band(thespecial, 0x2000) > 0) or bit.band(thespecial, damageType) > 0) then
+				local thesavingthrow = IEex_ReadDword(eData + 0x40)
+				local thetypesChecked = IEex_ReadDword(eData + 0x48) * 0x10000
+				if theopcode == 288 and theparameter2 == 226 and theparameter1 <= parameter1 and ((damageType == 0 and bit.band(thetypesChecked, 0x20000000) > 0) or bit.band(thetypesChecked, damageType) > 0) then
 					local theresource = IEex_ReadLString(eData + 0x30, 8)
-					table.insert(onDamageList, theresource)
+					if theresource ~= "" then
+						local thecasterlvl = IEex_ReadDword(eData + 0xC8)
+						local newEffectTarget = targetID
+						local newEffectTargetX = IEex_ReadDword(effectData + 0x84)
+						local newEffectTargetY = IEex_ReadDword(effectData + 0x88)
+						if (bit.band(thesavingthrow, 0x200000) > 0) then
+							newEffectTarget = sourceID
+							newEffectTargetX = IEex_ReadDword(effectData + 0x7C)
+							newEffectTargetY = IEex_ReadDword(effectData + 0x80)
+						elseif (bit.band(thesavingthrow, 0x8000000) > 0) then
+							newEffectTarget = IEex_GetActorSummonerID(targetID)
+						end
+						local newEffectSource = sourceID
+						local newEffectSourceX = IEex_ReadDword(effectData + 0x7C)
+						local newEffectSourceY = IEex_ReadDword(effectData + 0x80)
+						if (bit.band(thesavingthrow, 0x400000) > 0) then
+							newEffectSource = targetID
+							newEffectSourceX = IEex_ReadDword(effectData + 0x84)
+							newEffectSourceY = IEex_ReadDword(effectData + 0x88)
+						end
+						table.insert(onDamageEffectList, {theresource, thecasterlvl, newEffectTarget, newEffectSource, newEffectTargetX, newEffectTargetY, newEffectSourceX, newEffectSourceY})
+					end
 				end
 			end)
-			for k, v in ipairs(onDamageList) do
-				IEex_ApplyEffectToActor(targetID, {
+			for k, v in ipairs(onDamageEffectList) do
+				IEex_ApplyEffectToActor(v[3], {
 ["opcode"] = 402,
 ["target"] = 2,
 ["timing"] = 1,
-["resource"] = v,
-["target_x"] = IEex_ReadDword(creatureData + 0x6),
-["target_y"] = IEex_ReadDword(creatureData + 0xA),
-["source_id"] = sourceID
+["resource"] = v[1],
+["source_x"] = v[7],
+["source_y"] = v[8],
+["target_x"] = v[5],
+["target_y"] = v[6],
+["casterlvl"] = v[2],
+["parent_resource"] = v[1],
+["source_target"] = v[3],
+["source_id"] = v[4]
 })
 			end
 		end

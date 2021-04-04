@@ -253,7 +253,8 @@
 @55581=~Copy Spell failed: <EXCPVAL1> is too high level for you to copy~
 @55582=~Copy Spell failed: <EXCPVAL1> cannot be copied~
 @55583=~<EXCPVAL1> copied with Copy Spell~
-@55596=~<EXACVAL1> cannot be stored in this sequencer~
+@55594=~<EXACVAL1> cannot be stored with Songcasting~
+@55595=~<EXACVAL1> has been stored in this character, to be released occasionally when the bard sings their bard song.~
 @55596=~<EXACVAL1> cannot be stored in this sequencer~
 @55597=~<EXACVAL1> has been stored in the sequencer~
 @55598=~The spell <EXACVAL1> has been stored in this character, to be released under the right conditions~

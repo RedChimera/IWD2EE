@@ -855,6 +855,9 @@ COPY_EXISTING ~10BLACK.cre~ ~override/USGEOF.cre~ ~10REIG.cre~ ~override/USREIG.
 		WRITE_BYTE armoredarcana 0
 	END
 
+COPY_EXISTING ~USGEOF.cre~ ~override~
+	LPF	IWD2_REMOVE_CRE_ITEM STR_VAR item=~USAHFI3~ END
+
 COPY_EXISTING ~USREIG.cre~ ~override~ ~USEMMA.cre~ ~override~ ~USSERS.cre~ ~override~
 	WRITE_BYTE race 1
 

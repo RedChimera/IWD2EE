@@ -24,10 +24,11 @@ ex_no_sneak_attack_delay = false
 ex_spell_focus_component_installed = false
 ex_no_summoning_limit = false
 ex_no_apr_limit = false
+ex_full_ability_score_cap = 40
 ex_construct_race = 156
 ex_fiend_race = 164
 ex_reanimation_level_check_bonus = 5
-ex_time_slow_speed_divisor = 4
+ex_time_slow_speed_divisor = 0x7FFFFFFF
 ex_due_south_spells = {["USWI653"] = true, }
 ex_bypass_spell_deflection = {}
 ex_linkable_self_spell_list = {["SPPR302"] = true, ["SPPR409"] = true, ["SPPR523"] = true, ["USPR953"] = true, ["USWI954"] = true, ["USWI956"] = true, }
