@@ -1352,6 +1352,41 @@ function IEex_CreateCreature(resref)
 	IEex_Free(mem)
 end
 
+function IEex_CreateStatic(CGameArea, args)
+	local CGameStatic
+	IEex_RunWithStack(0x4C, function(esp)
+		IEex_WriteArgs(esp, args, {
+			{ "name",            0x0,  IEex_WriteType.LSTRING, 32, IEex_WriteFailType.ERROR               },
+			{ "locX",            0x20, IEex_WriteType.WORD,        IEex_WriteFailType.DEFAULT, 0          },
+			{ "locY",            0x22, IEex_WriteType.WORD,        IEex_WriteFailType.DEFAULT, 0          },
+			{ "activeAtFlags",   0x24, IEex_WriteType.DWORD,       IEex_WriteFailType.DEFAULT, 0xFFFFFFFF },
+			{ "animationResRef", 0x28, IEex_WriteType.RESREF,      IEex_WriteFailType.ERROR               },
+			{ "animationNum",    0x30, IEex_WriteType.WORD,        IEex_WriteFailType.DEFAULT, 0          },
+			{ "frameNum",        0x32, IEex_WriteType.WORD,        IEex_WriteFailType.DEFAULT, 0          },
+			{ "appearanceFlags", 0x34, IEex_WriteType.DWORD,       IEex_WriteFailType.DEFAULT, 0          },
+			{ "locZ",            0x38, IEex_WriteType.WORD,        IEex_WriteFailType.DEFAULT, 0          },
+			{ "translucency",    0x3A, IEex_WriteType.WORD,        IEex_WriteFailType.DEFAULT, 0          },
+			{ "startRange",      0x3C, IEex_WriteType.WORD,        IEex_WriteFailType.DEFAULT, 0          },
+			{ "loopProb",        0x3E, IEex_WriteType.BYTE,        IEex_WriteFailType.DEFAULT, 0          },
+			{ "startDelay",      0x3F, IEex_WriteType.BYTE,        IEex_WriteFailType.DEFAULT, 0          },
+			{ "paletteResRef",   0x40, IEex_WriteType.RESREF,      IEex_WriteFailType.DEFAULT, ""         },
+			{ "unknown",         0x48, IEex_WriteType.DWORD,       IEex_WriteFailType.DEFAULT, 0          },
+		})
+		CGameStatic = IEex_Malloc(0x194)
+		-- CGameStatic_Construct()
+		IEex_Call(0x4CA530, {esp, CGameArea}, CGameStatic, 0x0)
+	end)
+	return CGameStatic
+end
+
+function IEex_MoveStatic(CGameStatic, x, y)
+	y = y + IEex_ReadWord(CGameStatic + 0xA6, 0)
+	IEex_WriteDword(CGameStatic + 0x6, x)
+	IEex_WriteDword(CGameStatic + 0xA, y)
+	IEex_WriteWord(CGameStatic + 0x8E, x)
+	IEex_WriteWord(CGameStatic + 0x90, y)
+end
+
 function IEex_GetCInfinity()
 	local m_pObjectGame = IEex_GetGameData()
 	local m_visibleArea = IEex_ReadByte(m_pObjectGame + 0x37E0, 0)

@@ -487,10 +487,11 @@ function IEex_ProcessNumberAsBytes(num, length, func)
 end
 
 IEex_WriteType = {
-	["BYTE"]   = 0,
-	["WORD"]   = 1,
-	["DWORD"]  = 2,
-	["RESREF"] = 3,
+	["BYTE"]    = 0,
+	["WORD"]    = 1,
+	["DWORD"]   = 2,
+	["RESREF"]  = 3,
+	["LSTRING"] = 4,
 }
 
 IEex_WriteFailType = {
@@ -505,15 +506,18 @@ function IEex_WriteArgs(address, args, writeDefs)
 		[IEex_WriteType.WORD]   = IEex_WriteWord,
 		[IEex_WriteType.DWORD]  = IEex_WriteDword,
 		[IEex_WriteType.RESREF] = function(address, arg) IEex_WriteLString(address, arg, 0x8) end,
+		[IEex_WriteType.LSTRING] = function(address, arg, len) IEex_WriteLString(address, arg, len) end,
 	}
 	for _, writeDef in ipairs(writeDefs) do
 		local argKey = writeDef[1]
+		local writeType = writeDef[3]
 		local arg = args[argKey]
 		local skipWrite = false
 		if not arg then
-			local failType = writeDef[4]
+			local startFailedFields = writeType == IEex_WriteType.LSTRING and 5 or 4
+			local failType = writeDef[startFailedFields]
 			if failType == IEex_WriteFailType.DEFAULT then
-				arg = writeDef[5]
+				arg = writeDef[startFailedFields + 1]
 			elseif failType == IEex_WriteFailType.ERROR then
 				IEex_Error(argKey.." must be defined!")
 			else
@@ -521,7 +525,11 @@ function IEex_WriteArgs(address, args, writeDefs)
 			end
 		end
 		if not skipWrite then
-			writeTypeFunc[writeDef[3]](address + writeDef[2], arg)
+			if writeType == IEex_WriteType.LSTRING then
+				writeTypeFunc[writeType](address + writeDef[2], arg, writeDef[4])
+			else
+				writeTypeFunc[writeType](address + writeDef[2], arg)
+			end
 		end
 	end
 end
