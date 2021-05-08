@@ -42,6 +42,15 @@ COPY_EXISTING ~LISTINNT.2da~ ~override~
 	numrows += 1
 	lastindex += 1
 	INSERT_2DA_ROW numrows 2 ~%lastindex% USSKLBMB~
+	numrows += 1
+	lastindex += 1
+	INSERT_2DA_ROW numrows 2 ~%lastindex% USWI456D~
+	numrows += 1
+	lastindex += 1
+	INSERT_2DA_ROW numrows 2 ~%lastindex% USWI456P~
+	numrows += 1
+	lastindex += 1
+	INSERT_2DA_ROW numrows 2 ~%lastindex% USWI456S~
 
 SILENT
 LAM IWD2_INDEX_LISTS
@@ -1019,6 +1028,7 @@ COPY_EXISTING ~SPWI203.spl~ ~override~
   SAY IDENTIFIED_DESC @1725
 
 COPY_EXISTING ~SPWI203Z.itm~ ~override~
+	WRITE_LONG 0x34 600
 	WRITE_ASCII 0x3A ~SPPR309A~
 	LPF ALTER_ITEM_HEADER STR_VAR icon=~SPPR309A~ END
 
@@ -2513,6 +2523,16 @@ COPY_EXISTING ~uswi454d.spl~ ~override~ ~uswi454p.spl~ ~override~ ~uswi454s.spl~
 	SAY NAME1 @30055
 	SAY NAME2 @30055
 
+COPY_EXISTING ~uswi456.spl~ ~override~
+	SAY NAME1 @37456
+	SAY NAME2 @37456
+	SAY UNIDENTIFIED_DESC @38456
+	SAY IDENTIFIED_DESC @38456
+
+COPY_EXISTING ~uswi456d.spl~ ~override~ ~uswi456p.spl~ ~override~ ~uswi456s.spl~ ~override~
+	SAY NAME1 @30067
+	SAY NAME2 @30067
+
 COPY_EXISTING ~uswi551.spl~ ~override~
 	SAY NAME1 @37551
 	SAY NAME2 @37551
@@ -2818,6 +2838,13 @@ COPY ~%mod_folder%/bam/USCOLDC.bam~ ~override~
 COPY_EXISTING ~sppr504.spl~ ~override~ ~sppr712.spl~ ~override~
 	LPF CLONE_EFFECT INT_VAR multi_match=1 opcode=172 timing=9 STR_VAR resource=~USBLINKT~ insert=~last~ END
 	LPF CLONE_EFFECT INT_VAR multi_match=1 opcode=172 timing=9 STR_VAR resource=~USJUMP~ insert=~last~ END
+	LPF CLONE_EFFECT INT_VAR multi_match=1 opcode=172 timing=9 STR_VAR resource=~USWI454D~ insert=~last~ END
+	LPF CLONE_EFFECT INT_VAR multi_match=1 opcode=172 timing=9 STR_VAR resource=~USWI454P~ insert=~last~ END
+	LPF CLONE_EFFECT INT_VAR multi_match=1 opcode=172 timing=9 STR_VAR resource=~USWI454S~ insert=~last~ END
+	LPF CLONE_EFFECT INT_VAR multi_match=1 opcode=172 timing=9 STR_VAR resource=~USWI456D~ insert=~last~ END
+	LPF CLONE_EFFECT INT_VAR multi_match=1 opcode=172 timing=9 STR_VAR resource=~USWI456P~ insert=~last~ END
+	LPF CLONE_EFFECT INT_VAR multi_match=1 opcode=172 timing=9 STR_VAR resource=~USWI456S~ insert=~last~ END
+	LPF CLONE_EFFECT INT_VAR multi_match=1 opcode=172 timing=9 STR_VAR resource=~USWI758S~ insert=~last~ END
 	UNLESS ~USBLINKT~
 
 COPY_EXISTING ~sppr504.spl~ ~override~ ~sppr712.spl~ ~override~
@@ -3049,8 +3076,9 @@ COPY_EXISTING ~LISTSPLL.2da~ ~override~
 
 //Patching all spell descriptions to display the correct casting time.
 
+OUTER_SPRINT stringinstant @1976
 OUTER_SPRINT stringoneround @1977
-OUTER_SPRINT stringinstant @1978
+OUTER_SPRINT stringfreeaction @1978
 OUTER_SPRINT stringcastingtime @1979
 COPY_EXISTING ~LISTSPLL.2da~ ~override~
 	COUNT_2DA_COLS numcolumns
@@ -3060,15 +3088,17 @@ COPY_EXISTING ~LISTSPLL.2da~ ~override~
 		PATCH_IF FILE_EXISTS_IN_GAME ~%spell_res_ref%.spl~ BEGIN
 			INNER_ACTION BEGIN
 				COPY_EXISTING ~%spell_res_ref%.spl~ ~override~
+					READ_LONG 0x18 thespellflags
 					READ_BYTE 0x8E thetarget ELSE (0 - 1)
 					READ_SHORT 0x90 therange ELSE 100
 					READ_SSHORT 0x94 thecastingtime ELSE 0
 //					READ_LONG NAME1 name_ref
 					READ_LONG UNIDENTIFIED_DESC description_ref
-					PATCH_IF thecastingtime < 0 BEGIN
+					PATCH_IF ((thespellflags BAND 0x10000000) = 0x10000000) BEGIN
+						LPF PATCH_REPLACE_IN_STRING INT_VAR strref=description_ref match_case=1 new_string=1 STR_VAR match= EVAL ~%stringcastingtime%.*~ replace_with= EVAL ~%stringcastingtime% %stringfreeaction%~ RET description_new=description_new END
+					END ELSE PATCH_IF thecastingtime < 0 BEGIN
 						LPF PATCH_REPLACE_IN_STRING INT_VAR strref=description_ref match_case=1 new_string=1 STR_VAR match= EVAL ~%stringcastingtime%.*~ replace_with= EVAL ~%stringcastingtime% %stringinstant%~ RET description_new=description_new END
-					END
-					ELSE BEGIN
+					END ELSE BEGIN
 						LPF PATCH_REPLACE_IN_STRING INT_VAR strref=description_ref match_case=1 new_string=1 STR_VAR match= EVAL ~%stringcastingtime%.*~ replace_with= EVAL ~%stringcastingtime% %thecastingtime%~ RET description_new=description_new END
 					END
 					SAY_EVALUATED UNIDENTIFIED_DESC ~%description_new%~
@@ -3540,17 +3570,18 @@ COPY_EXISTING ~11ELYTHA.sto~ ~override~
 	ADD_STORE_ITEM ~USWI156Z~ AFTER ~SPWI110Z~ #1 #1 #0 ~IDENTIFIED~ #3
 	ADD_STORE_ITEM ~USWI253Z~ BEFORE ~SPWI209Z~ #1 #1 #0 ~IDENTIFIED~ #1
 	ADD_STORE_ITEM ~USWI254Z~ AFTER ~USWI253Z~ #1 #1 #0 ~IDENTIFIED~ #1
-	ADD_STORE_ITEM ~USWI353Z~ AFTER ~SPWI308Z~ #1 #1 #0 ~IDENTIFIED~ #1
+	ADD_STORE_ITEM ~USWI353Z~ BEFORE ~SPWI308Z~ #1 #1 #0 ~IDENTIFIED~ #1
 	ADD_STORE_ITEM ~USWI355Z~ BEFORE ~SPWI305Z~ #1 #1 #0 ~IDENTIFIED~ #1
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~SPWI203Z~ ~SPPR309Z~
 
 COPY_EXISTING ~20DERETH.sto~ ~override~
 	ADD_STORE_ITEM ~SPPR410Z~ #1 #0 #0 ~IDENTIFIED~ #1
 
 COPY_EXISTING ~20SABRIN.sto~ ~override~
-	ADD_STORE_ITEM ~USWI653Z~ AFTER ~SPWI226Z~ #1 #1 #0 ~IDENTIFIED~ #1
 	ADD_STORE_ITEM ~USWI354Z~ AFTER ~SPWI226Z~ #1 #1 #0 ~IDENTIFIED~ #1
 	ADD_STORE_ITEM ~USWI255Z~ AFTER ~USWI354Z~ #1 #1 #0 ~IDENTIFIED~ #1
 	ADD_STORE_ITEM ~USWI355Z~ AFTER ~USWI255Z~ #1 #1 #0 ~IDENTIFIED~ #1
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~SPWI203Z~ ~SPPR309Z~
 
 COPY_EXISTING ~40BDAWN.sto~ ~override~
 	ADD_STORE_ITEM ~SPPR306Z~ BEFORE ~SPWI412Z~ #1 #1 #0 ~IDENTIFIED~ #1
@@ -3578,6 +3609,7 @@ COPY_EXISTING ~50SUOMA.sto~ ~override~
 	ADD_STORE_ITEM ~USWI554Z~ AFTER ~SPWI525Z~ #1 #1 #0 ~IDENTIFIED~ #1
 	ADD_STORE_ITEM ~SPWI526Z~ AFTER ~SPWI525Z~ #1 #1 #0 ~IDENTIFIED~ #1
 	ADD_STORE_ITEM ~USWI653Z~ AFTER ~SPWI525Z~ #1 #1 #0 ~IDENTIFIED~ #1
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~SPWI203Z~ ~SPPR309Z~
 
 COPY_EXISTING ~50LIMHA.sto~ ~override~ ~00SBAG03.sto~ ~override~ ~00SBGA03.sto~ ~override~ ~00SBGB03.sto~ ~override~
 	ADD_STORE_ITEM ~SPPR410Z~ AFTER ~SPWI407Z~ #1 #1 #0 ~IDENTIFIED~ #1
@@ -3647,6 +3679,8 @@ COPY_EXISTING ~60SPELLS.sto~ ~override~
 	ADD_STORE_ITEM ~USWI653Z~ AFTER ~USWI652Z~ #1 #1 #0 ~IDENTIFIED~ #1
 	REPLACE_TEXTUALLY CASE_INSENSITIVE ~SPWI410Z~ ~SPPR307Z~
 	REPLACE_TEXTUALLY CASE_INSENSITIVE ~SPWI320Z~ ~USWI353Z~
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~SPWI203Z~ ~SPPR309Z~
+	ADD_STORE_ITEM ~SPWI203Z~ AFTER ~SPWI611Z~ #1 #1 #0 ~IDENTIFIED~ #1
 
 COPY_EXISTING ~60CHEAP.sto~ ~override~
 	ADD_STORE_ITEM ~SPPR719Z~ #1 #1 #0 ~IDENTIFIED~ #1

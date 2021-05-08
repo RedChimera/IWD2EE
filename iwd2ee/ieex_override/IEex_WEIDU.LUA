@@ -45,7 +45,7 @@ ex_trueschool = {}
 ex_courteous_magocracy_classes = {[10] = true, [11] = true}
 ex_courteous_magocracy_charisma_bonus = 6
 ex_base_num_attacks_of_opportunity = 0
-ex_noncumulative_opcode_functions = {["MEOP16"] = true, ["MEOP401"] = true, ["MEOP403"] = true, ["MEOP408"] = true, ["MEOP415"] = true, ["MEOP421"] = true, ["MEOP427"] = true, }
+ex_noncumulative_opcode_functions = {["MEOP16"] = true, ["MEOP40"] = true, ["MEOP130"] = true, ["MEOP401"] = true, ["MEOP403"] = true, ["MEOP408"] = true, ["MEOP415"] = true, ["MEOP421"] = true, ["MEOP427"] = true, }
 ex_stat_scaling_functions = {["MESTATSC"] = true, ["MEHALFTH"] = true, ["MEPERFEC"] = true, }
 ex_on_tick_functions = {["MEAREAGL"] = 1, ["MEGHOSTW"] = 1, ["METELMOV"] = 1, ["MEENLARG"] = 1, ["MEWINGBU"] = 2, ["MESPIN"] = 2, ["IEex_EvaluatePermanentRepeatingEffects"] = 0, ["IEex_HeightMod"] = 0, ["IEex_ExtraAttacks"] = 0, ["IEex_DuelHide"] = 0, }
 ex_on_tick_default_functions = {["MEENLARG"] = "IEex_ResetSize", }
@@ -143,4 +143,12 @@ ex_kit_spells = {
 [101] = {[0x1] = "USPAL01L", [0x2] = "USPAL01M", [0x4] = "USPAL01N"},
 [106] = {[0x1] = "USPAL06L", [0x2] = "USPAL06M", [0x4] = "USPAL06N"},
 [111] = {[0x1] = "USPAL11L", [0x2] = "USPAL11M", [0x4] = "USPAL11N"},
+}
+ex_global_statics = {
+["COFL"] = {["locZ"] = 1, ["animationResRef"] = "USCOFORL", ["appearanceFlags"] = 0x2, },
+["COFR"] = {["locZ"] = 1, ["animationResRef"] = "USCOFORR", ["appearanceFlags"] = 0x2, },
+["COFB"] = {["locZ"] = 1, ["animationResRef"] = "USCOFORB", ["appearanceFlags"] = 0x2, },
+["COFT"] = {["locZ"] = 1, ["animationResRef"] = "USCOFORT", ["appearanceFlags"] = 0x2, },
+["TORNAD"] = {["locZ"] = 1, ["animationResRef"] = "WHIRLWX", ["appearanceFlags"] = 0x2, },
+["GRVGLB"] = {["locZ"] = 1, ["animationResRef"] = "USGRVGLB", ["appearanceFlags"] = 0x2, },
 }

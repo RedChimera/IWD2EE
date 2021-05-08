@@ -50,6 +50,30 @@ COPY_EXISTING_REGEXP ~USCWMAR[123]\.itm~ ~override~
 	SAY NAME2 @23018
 	BUT_ONLY_IF_IT_CHANGES
 
+COPY_EXISTING ~USDEMON1.itm~ ~override~
+	LPF ALTER_EFFECT INT_VAR check_headers=0 check_globals=1 match_opcode=502 special=RESOLVE_STR_REF(@23060) STR_VAR match_resource=~MEDAMSLV~ END
+	BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING ~USDEMON2.itm~ ~override~
+	LPF ALTER_EFFECT INT_VAR check_headers=0 check_globals=1 match_opcode=502 special=RESOLVE_STR_REF(@23061) STR_VAR match_resource=~MEDAMSLV~ END
+	BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING ~USDEMON3.itm~ ~override~
+	LPF ALTER_EFFECT INT_VAR check_headers=0 check_globals=1 match_opcode=502 special=RESOLVE_STR_REF(@23062) STR_VAR match_resource=~MEDAMSLV~ END
+	BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING ~USDEVIL1.itm~ ~override~
+	LPF ALTER_EFFECT INT_VAR check_headers=0 check_globals=1 match_opcode=502 special=RESOLVE_STR_REF(@23056) STR_VAR match_resource=~MEDAMSLV~ END
+	BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING ~USDEVIL2.itm~ ~override~
+	LPF ALTER_EFFECT INT_VAR check_headers=0 check_globals=1 match_opcode=502 special=RESOLVE_STR_REF(@23057) STR_VAR match_resource=~MEDAMSLV~ END
+	BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING ~USDEVIL3.itm~ ~override~
+	LPF ALTER_EFFECT INT_VAR check_headers=0 check_globals=1 match_opcode=502 special=RESOLVE_STR_REF(@23058) STR_VAR match_resource=~MEDAMSLV~ END
+	BUT_ONLY_IF_IT_CHANGES
+
 COPY_EXISTING ~USLYCAN1.itm~ ~override~
 	LPF ALTER_EFFECT INT_VAR check_headers=0 check_globals=1 match_opcode=502 special=RESOLVE_STR_REF(@23043) STR_VAR match_resource=~MEDAMSLV~ END
 	BUT_ONLY_IF_IT_CHANGES
@@ -1420,6 +1444,9 @@ COPY_EXISTING ~50TROSS.cre~ ~override~ ~50TROSSH.cre~ ~override~
 COPY_EXISTING ~41BARWAR.cre~ ~override~ ~41RBAWAR.cre~ ~override~
 	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelbarbarian=5 END
 	LPF	IWD2_ADD_CRE_ITEM STR_VAR item=~00HIDE06~ slot=~armor~ mode=~replace~ END
+
+COPY_EXISTING ~00SBRSK1.cre~ ~override~ ~00SBRSK2.cre~ ~override~ ~00SBRSK3.cre~ ~override~
+	LPF	IWD2_ADD_CRE_ITEM STR_VAR item=~00CISHLC~ slot=~shield1~ mode=~replace~ END
 
 COPY_EXISTING ~41BARSHA.cre~ ~override~ ~41RBASHA.cre~ ~override~
 	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelbarbarian=3 newlevelcleric=5 END

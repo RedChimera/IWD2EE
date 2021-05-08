@@ -1674,8 +1674,8 @@ By casting this spell, the wizard makes the creature touched undetectable by div
 (Divination)
 Level: Brd 6, Clr 5, Drd 6, Pal 5, Sor/Wiz 5, Oghma 3
 Range: Sight of Caster
-Duration: 5 rounds
-Casting Time: 5
+Duration: 3 rounds/level
+Casting Time: 3
 Area of Effect: 30' radius
 Saving Throw: None 
 
@@ -2429,6 +2429,7 @@ Saving Throw: None
 
 This spell grants the caster a 5/- bonus to all damage resistances, a +15 armor bonus, +15 spell resistance, and +5 to all saves.~
 
+@1976     = ~Instant~
 @1977     = ~1 round~
 @1978     = ~Free action~
 @1979     = ~Casting Time:~
@@ -2626,6 +2627,7 @@ Launcher:  Bow~
 @30064=~Protected by Spell Turning~
 @30065=~Skeleton Bomb~
 @30066=~Explode~
+@30067=~Imbued Spell~
 
 @31106     = ~Magic Stone~
 @32106     = ~Magic Stone
@@ -3817,6 +3819,17 @@ Troll
 Umber Hulk
 Wyvern
 Red Half-Dragon~
+@37456     = ~Imbue with Spell Ability~
+@38456     = ~Imbue with Spell Ability
+(Universal)
+Level: Clr 4, Brd 4
+Range: Sight of Caster
+Duration: 8 hours or until released
+Casting Time: 4
+Area of Effect: Special
+Saving Throw: None
+
+By casting Imbue with Spell Ability, the caster grants another creature the ability to cast one of the caster's spells once. Immediately after casting this spell, the caster must attempt to cast another spell of any level. Instead of being cast, that spell is stored in the creature on which Imbue with Spell Ability was just cast (consuming one use of the spell). That creature gains a special ability that lets them cast the spell once. If unused, that ability disappears after 8 hours.~
 @37551     = ~Steal Spells~
 @38551     = ~Steal Spells
 (Transmutation)
@@ -3992,7 +4005,7 @@ Saving Throw: None
 
 Skip Time transports the party ten rounds into the future. From the point of view of other creatures, the party vanishes, then reappears in the same spot ten rounds later. However, no time has passed for the party.
 
-The main effect of this is to reduce the duration of all magical effects on creatures outside the party by ten rounds, ending effects like Mantle that have short durations and causing the rest to expire sooner. Lingering areas of effect such as Web and Stinking Cloud also have their duration reduced.~
+The main effect of this is to reduce the duration of all magical effects on creatures outside the party by ten rounds, ending effects like Mantle that have short durations and causing the rest to expire sooner. Lingering areas of effect such as Web and Stinking Cloud also have their duration reduced. Skip Time can also allow the party to evade area of effect spells and abilities when timed right.~
 @37761     = ~Forcecage~
 @38761     = ~Forcecage
 (Abjuration)
@@ -4014,7 +4027,7 @@ Casting Time: 7
 Area of Effect: Special 
 Saving Throw: Reflex half
 
-This spell animates two skeletons which can be detonated on command to deal damage. When you have a skeleton use its special or ability, or the skeleton takes damage, its skull explodes like a Skull Trap, dealing 10d6 slashing damage to all creatures within 15 feet (Reflex save for half), and the skeleton is destroyed. At 24th level, the spell animates three skeletons instead of two.~
+This spell animates two skeletons which can be detonated on command to deal damage. When you have a skeleton use its special ability, or the skeleton takes damage, its skull explodes like a Skull Trap, dealing 10d6 slashing damage to all creatures within 15 feet (Reflex save for half), and the skeleton is destroyed. At 24th level, the spell animates three skeletons instead of two.~
 @37763     = ~Spell Turning~
 @38763     = ~Spell Turning
 (Abjuration)

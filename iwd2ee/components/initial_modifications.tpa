@@ -65,6 +65,12 @@ COPY_EXISTING ~IEex_TRA.lua~ ~override~
 	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_tra_55582 *=.*~ ~ex_tra_55582 = %ex_tra_55582%~
 	ex_tra_55583 = RESOLVE_STR_REF(@55583)
 	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_tra_55583 *=.*~ ~ex_tra_55583 = %ex_tra_55583%~
+	ex_tra_55591 = RESOLVE_STR_REF(@55591)
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_tra_55591 *=.*~ ~ex_tra_55591 = %ex_tra_55591%~
+	ex_tra_55592 = RESOLVE_STR_REF(@55592)
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_tra_55592 *=.*~ ~ex_tra_55592 = %ex_tra_55592%~
+	ex_tra_55593 = RESOLVE_STR_REF(@55593)
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_tra_55593 *=.*~ ~ex_tra_55593 = %ex_tra_55593%~
 	ex_tra_55594 = RESOLVE_STR_REF(@55594)
 	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_tra_55594 *=.*~ ~ex_tra_55594 = %ex_tra_55594%~
 	ex_tra_55595 = RESOLVE_STR_REF(@55595)
@@ -1013,14 +1019,14 @@ COPY_EXISTING_REGEXP ~.*\.are~ ~override~
 VERBOSE
 */
 
-PRINT @88
+//PRINT @88
 COPY_EXISTING_REGEXP ~.*\.are~ ~override~
 	LPF fj_are_structure INT_VAR fj_loc_x=0 fj_loc_y=0 STR_VAR fj_structure_type=~actor~ fj_name= EVAL ~%SOURCE_RES%AREAGL~ fj_cre_resref=~USAREAGL~ END
-	LPF fj_are_structure INT_VAR fj_loc_x=0 fj_loc_y=0 fj_flags=0x2 STR_VAR fj_structure_type=~animation~ fj_name= EVAL ~%SOURCE_RES%COFL~ fj_bam_resref=~USCOFORL~ END
-	LPF fj_are_structure INT_VAR fj_loc_x=0 fj_loc_y=0 fj_flags=0x2 STR_VAR fj_structure_type=~animation~ fj_name= EVAL ~%SOURCE_RES%COFR~ fj_bam_resref=~USCOFORR~ END
-	LPF fj_are_structure INT_VAR fj_loc_x=0 fj_loc_y=0 fj_flags=0x2 STR_VAR fj_structure_type=~animation~ fj_name= EVAL ~%SOURCE_RES%COFB~ fj_bam_resref=~USCOFORB~ END
-	LPF fj_are_structure INT_VAR fj_loc_x=0 fj_loc_y=0 fj_flags=0x2 STR_VAR fj_structure_type=~animation~ fj_name= EVAL ~%SOURCE_RES%COFT~ fj_bam_resref=~USCOFORT~ END
-	LPF fj_are_structure INT_VAR fj_loc_x=0 fj_loc_y=0 fj_flags=0x2 STR_VAR fj_structure_type=~animation~ fj_name= EVAL ~%SOURCE_RES%TORNAD~ fj_bam_resref=~WHIRLWX~ END
-	LPF fj_are_structure INT_VAR fj_loc_x=0 fj_loc_y=0 fj_flags=0x2 STR_VAR fj_structure_type=~animation~ fj_name= EVAL ~%SOURCE_RES%GRVGLB~ fj_bam_resref=~USGRVGLB~ END
+//	LPF fj_are_structure INT_VAR fj_loc_x=0 fj_loc_y=0 fj_flags=0x2 STR_VAR fj_structure_type=~animation~ fj_name= EVAL ~%SOURCE_RES%COFL~ fj_bam_resref=~USCOFORL~ END
+//	LPF fj_are_structure INT_VAR fj_loc_x=0 fj_loc_y=0 fj_flags=0x2 STR_VAR fj_structure_type=~animation~ fj_name= EVAL ~%SOURCE_RES%COFR~ fj_bam_resref=~USCOFORR~ END
+//	LPF fj_are_structure INT_VAR fj_loc_x=0 fj_loc_y=0 fj_flags=0x2 STR_VAR fj_structure_type=~animation~ fj_name= EVAL ~%SOURCE_RES%COFB~ fj_bam_resref=~USCOFORB~ END
+//	LPF fj_are_structure INT_VAR fj_loc_x=0 fj_loc_y=0 fj_flags=0x2 STR_VAR fj_structure_type=~animation~ fj_name= EVAL ~%SOURCE_RES%COFT~ fj_bam_resref=~USCOFORT~ END
+//	LPF fj_are_structure INT_VAR fj_loc_x=0 fj_loc_y=0 fj_flags=0x2 STR_VAR fj_structure_type=~animation~ fj_name= EVAL ~%SOURCE_RES%TORNAD~ fj_bam_resref=~WHIRLWX~ END
+//	LPF fj_are_structure INT_VAR fj_loc_x=0 fj_loc_y=0 fj_flags=0x2 STR_VAR fj_structure_type=~animation~ fj_name= EVAL ~%SOURCE_RES%GRVGLB~ fj_bam_resref=~USGRVGLB~ END
 	LPF ALTER_AREA_ACTOR_IWD2 INT_VAR flag_cre_unattached=1 flag_difficulty_1=1 flag_difficulty_2=1 flag_difficulty_3=1 STR_VAR actor_name= EVAL ~%SOURCE_RES%AREAGL~ END
 	UNLESS ~USAREAGL~

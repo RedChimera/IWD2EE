@@ -2,6 +2,6 @@
 // patches a door so you can force it open
 
 COPY_EXISTING ~AR5300.are~ ~override~
- WRITE_BYTE 0xa018 99
- WRITE_BYTE 0xa0e0 99
+	LPF ALTER_AREA_DOOR_IWD2 INT_VAR lock_difficulty=99 unlock_message=(0 - 1) STR_VAR door_name=~AR5300_Door3~ END
+	LPF ALTER_AREA_DOOR_IWD2 INT_VAR lock_difficulty=99 unlock_message=(0 - 1) STR_VAR door_name=~AR5300_Door4~ END
 BUT_ONLY

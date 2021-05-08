@@ -2473,6 +2473,8 @@ COPY_EXISTING ~00SLNG89.itm~ ~override~
 	SAY NAME2 @11891
 	SAY IDENTIFIED_DESC @11892
 
+COPY_EXISTING ~00SLNG91.itm~ ~override~
+	SAY IDENTIFIED_DESC @11896
 
 COPY_EXISTING ~00SLNG92.itm~ ~override~
 	SAY NAME2 @11897
@@ -4283,6 +4285,14 @@ COPY_EXISTING ~USHFWGFL.itm~ ~override~
 	SAY NAME2 @12839
 	SAY IDENTIFIED_DESC @12840
 
+COPY_EXISTING ~USSTAFPO.itm~ ~override~
+	SAY NAME2 @12841
+	SAY IDENTIFIED_DESC @12842
+/*
+COPY_EXISTING ~USSTAFMG.itm~ ~override~
+	SAY NAME2 @12843
+	SAY IDENTIFIED_DESC @12844
+*/
 //General patch changes
 
 /*
@@ -5352,7 +5362,6 @@ COPY_EXISTING ~63RIKI.sto~ ~override~ //Severed Hand thief store
 
 COPY_EXISTING ~ar2002.are~ ~override~ //Shaengarne Vrek cave
 	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR charges1=1 charges2=1 charges3=1 single_match=1 STR_VAR old_item=~11RTHF25~ new_item=~USRT02_V~ END
-	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR charges1=4 charges2=1 charges3=1 container=1 single_match=1 STR_VAR old_item=~RT02_L~ new_item=~00POTN88~ END
 
 COPY_EXISTING ~ar2101.are~ ~override~ //Shaengarne, the Malarite dam
 	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR charges1=2 charges2=1 charges3=1 container=1 single_match=1 STR_VAR old_item=~00MISC31~ new_item=~00POTN21~ END
@@ -5546,6 +5555,12 @@ COPY_EXISTING ~12ghotra.cre~ ~override~ //Ghotrag
 
 COPY_EXISTING ~20orcchf.cre~ ~override~ //Torak
 	LPF IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item=~USHIDE07~ slot=~armor~ mode=~replace~ END
+
+COPY_EXISTING ~30gobvun.cre~ ~override~ //Vunarg
+	LPF IWD2_REMOVE_CRE_ITEM STR_VAR item=~RT02_V~ END
+
+COPY_EXISTING ~41necrom.cre~ ~override~ ~41rnecro.cre~ ~override~ //Cult of the Dragon Necromancer
+	LPF IWD2_ADD_CRE_ITEM INT_VAR cq1=1  cq2=1  cq3=1 STR_VAR item=~00POTN47~ slot=~qitem1~ mode=~replace~ END
 
 COPY_EXISTING ~51harsho.cre~ ~override~ //The Beastlord Harshom
 	LPF IWD2_ADD_CRE_ITEM INT_VAR cq1=1  cq2=1  cq3=1 STR_VAR item=~00RTHF41~ slot=~rring~ END

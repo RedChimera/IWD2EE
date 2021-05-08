@@ -7327,19 +7327,18 @@ Special:
 Weight: 8 lb.
 Required Feat:  Simple Weapon, Mace
 Type:  One-handed~
-@11483    = ~Talona's Gift +1~
+@11483    = ~Talona's Gift +2~
 @11484    = ~The morningstar is a wooden shaft topped with a metal head made up of a spiked iron sheath. Morningstars have an overall length of about four feet. Some such weapons have a round, oval, or cylindrical shaped head studded with spikes. Extending from most morningstar heads, regardless of design, is a long point for thrusting. 
 
 This particular weapon was apparantly created for use by some Talonite cleric, but was lost over the years. It is now the personal weapon of the bugbear leader, Guthma... until you slew him, that is.
 
 STATISTICS:
 
-Damage:  1d8  +1
-Attack Bonus:  +1
-Enchantment:  +1
+Damage:  1d8  +2
+Attack Bonus:  +2
+Enchantment:  +2
 Damage Type:  Bludgeoning
 Special:
-  Vicious Spikes: +1d4 piercing damage
   Venom: +2 points of poison damage every second for 6 seconds (Fortitude DC 10)
 Weight: 8 lb.
 Required Feat:  Simple Weapon, Mace
@@ -9558,7 +9557,15 @@ Type:  One-handed~
 //@11893    = ~Sling of Pain +5~
 //@11894    = ~Item description can remain the same; if new description is needed put it here~
 //@11895    = ~Sling of Accuracy +5~
-//@11896    = ~Item description can remain the same; if new description is needed put it here~
+@11896    = ~Slings have existed since the beginning of recorded history.  The basic sling consists of a leather or fabric strap with a pouch for holding the missile, however this one has been imbued with a small magical enchantment.  The weapon is held by both ends of the strap and twirled around the wielder's head.  When top speed is attained, the missile is launched by releasing one of the strap's ends.
+
+STATISTICS:
+
+Damage: +5 (missile)
+Attack Bonus: +7
+Weight: 0 lb.
+Feat Requirement:  Simple Weapon, Missile
+Type:  One-handed~
 @11897    = ~Sling of Holy Might +3~
 @11898    = ~Slings have existed since the beginning of recorded history. The basic sling consists of a leather or fabric strap with a pouch for holding the missile, however this one has been imbued with a small magical enchantment. The weapon is held by both ends of the strap and twirled around the wielder's head. When top speed is attained, the missile is launched by releasing one of the strap's ends. 
 
@@ -13570,6 +13577,22 @@ Flight: Wearer gains the ability to fly while outdoors
 Constant Effect: Freedom of Movement while equipped
 Constant Effect: Haste while equipped
 Weight: 1 lb.~
+@12841    = ~Staff of Power~
+@12842    = ~A wizard's staff is far more than just a gilded walking stick, most being enchanted to an impressive degree. This one is no exception, and whoever the previous owner was, they were powerful indeed. It enables a wizard to better escape hostile magic and avoid physical blows, and empowers the wizard's own spells.
+
+STATISTICS:
+
+Damage:  1d6 + 2
+Attack Bonus:  +2
+Enchantment:  +2
+Damage Type:  Bludgeoning
+Special:
+  Generic Armor Bonus: +2
+  Saving Throws: +2
+  Spells cast by the wielder gain +2 DC
+Weight: 4 lb.
+Feat Requirement:  Simple Weapon, Quarterstaff
+Type:  Two-handed~
 @12900    = ~Hrm - you are powerful allies, indeed. More gold and gems to line your pockets, then - also, a suit of plate armor, a warhammer, a helmet, all crafted and enchanted by great duergar artisans. They are well deserved, outsider.~
 @12901    = ~Drink this Rainwater Brew, Ennelia. It should help your condition.~
 @12902    = ~Drink this Sour Draught, Ennelia. It should help your condition.~
