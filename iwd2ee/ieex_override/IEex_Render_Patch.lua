@@ -68,6 +68,15 @@
 		!test_al_al
 	]]})
 
+	--------------------------------------------------------------
+	-- Don't crash when attempting to dither a sprite           --
+	-- effect on a creature with a large posZ                   --
+	-- (engine failed to calculate rClip correctly, subtracting --
+	--  posZ out of rClip.bottom when it should keep it)        -- 
+	--------------------------------------------------------------
+
+	IEex_WriteAssembly(0x709AA7, {"!repeat(3,!nop)"})
+
 	IEex_EnableCodeProtection()
 
 end)()

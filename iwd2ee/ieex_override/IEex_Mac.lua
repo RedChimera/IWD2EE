@@ -944,6 +944,16 @@ IEex_GlobalAssemblyMacros = {
 		end,
 	},
 
+	["lea"] = {
+		["unroll"] = function(state, args)
+			return IEex_EncodeRMOpcode(args, {
+				["opcode"] = 0x8D,
+				["noDirectionBit"] = true,
+				["offsetAdjustment"] = IEex_GetOffsetAdjustment(state),
+			})
+		end,
+	},
+
 	["lea_using_marked_esp"] = {
 		["unroll"] = function(state, args)
 			return IEex_EncodeRMOpcode(args, {
