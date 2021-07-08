@@ -158,6 +158,11 @@ function IEex_Extern_OnPostCreatureProcessEffectList(creatureData)
 			end
 		end
 	end
+	local tempFlags = IEex_ReadWord(creatureData + 0x9FA, 0x0)
+	if bit.band(tempFlags, 0x4) > 0 then
+		IEex_WriteWord(creatureData + 0x9FA, bit.band(tempFlags, 0xFFFB))
+		IEex_WriteWord(creatureData + 0x97E, IEex_ReadSignedWord(creatureData + 0x97E, 0x0) - ex_courteous_magocracy_charisma_bonus)
+	end
 	local onTickFunctionsCalled = {}
 	local extraFlags = IEex_ReadDword(creatureData + 0x740)
 	if ex_cre_initializing[targetID] then
@@ -235,7 +240,73 @@ function IEex_Extern_OnPostCreatureProcessEffectList(creatureData)
 			end
 		end)
 	end
-
+	local tick = IEex_GetGameTick()
+	if IEex_GetActorState(targetID, 0x1) and tick % 3 == 0 then
+--[[
+		IEex_ApplyEffectToActor(targetID, {
+["opcode"] = 254,
+["target"] = 2,
+["timing"] = 1,
+["resource"] = "MEINCAPA",
+["parent_resource"] = "MEINCAPA",
+["source_id"] = targetID,
+})
+--]]
+		IEex_ApplyEffectToActor(targetID, {
+["opcode"] = 288,
+["target"] = 2,
+["timing"] = 0,
+["duration"] = 1,
+["parameter2"] = 216,
+["special"] = 4,
+["parent_resource"] = "MEINCAPA",
+["source_id"] = targetID,
+})
+--[[
+		IEex_ApplyEffectToActor(targetID, {
+["opcode"] = 206,
+["target"] = 2,
+["timing"] = 0,
+["duration"] = 1,
+["resource"] = "MEINCAPA",
+["parent_resource"] = "MEINCAPA",
+["source_id"] = targetID,
+})
+--]]
+	end
+	if IEex_GetActorState(targetID, 0x10) and bit.band(IEex_ReadByte(creatureData + 0x8A0, 0x0), 0x1) == 0 and tick % 3 == 0 then
+		if IEex_GetActorStat(targetID, 104) > 0 or IEex_GetActorSpellState(targetID, 192) then
+			IEex_ApplyEffectToActor(targetID, {
+["opcode"] = 254,
+["target"] = 2,
+["timing"] = 1,
+["resource"] = "USINVSNA",
+["parent_resource"] = "USINVSNA",
+["source_id"] = targetID,
+})
+			IEex_ApplyEffectToActor(targetID, {
+["opcode"] = 288,
+["target"] = 2,
+["timing"] = 0,
+["duration"] = 2,
+["parameter2"] = 216,
+["special"] = 2,
+["parent_resource"] = "USINVSNA",
+["source_id"] = targetID,
+})
+--[[
+			IEex_ApplyEffectToActor(targetID, {
+["opcode"] = 206,
+["target"] = 2,
+["timing"] = 0,
+["duration"] = 1,
+["resource"] = "USINVSNA",
+["parent_resource"] = "USINVSNA",
+["source_id"] = targetID,
+})
+--]]
+		end
+	end
 	extraFlags = IEex_ReadDword(creatureData + 0x740)
 	if bit.band(extraFlags, 0x6000) == 0x4000 and IEex_ReadSignedByte(creatureData + 0x5622, 0x0) < 0 and not usedFunction and not IEex_IsPartyMember(targetID) and IEex_CheckGlobalEffect(0xFFFFFFFF) == false then return end
 

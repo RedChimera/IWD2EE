@@ -1,5 +1,6 @@
 ex_proficiency_damage = {[0] = 0, [1] = 0, [2] = 0, [3] = 2, [4] = 2, [5] = 2}
 ex_proficiency_attack = {[0] = -4, [1] = 0, [2] = 1, [3] = 1, [4] = 1, [5] = 1}
+ex_caster_max_spell_level = {[2] = {22, 8}, [3] = {17, 9}, [4] = {17, 9}, [7] = {17, 6}, [8] = {17, 6}, [10] = {18, 9}, [11] = {17, 9}}
 ex_subrace_name = {[0x10000] = "HUMAN", [0x10001] = "HUMAN_AASIMAR", [0x10002] = "HUMAN_TIEFLING", [0x20000] = "ELF", [0x20001] = "ELF_DROW", [0x20002] = "ELF_WILD", [0x30000] = "HALF_ELF", [0x40000] = "DWARF", [0x40001] = "DWARF_GOLD", [0x40002] = "DWARF_GRAY", [0x50000] = "HALFLING", [0x50001] = "HALFLING_STRONGHEART", [0x50002] = "HALFLING_GHOSTWISE", [0x60000] = "GNOME", [0x60001] = "GNOME_DEEP", [0x70000] = "HALF_ORC", }
 ex_extra_feat_races = {[0x10000] = 1, [0x10001] = 0, [0x10002] = 0, [0x20000] = 0, [0x20001] = 0, [0x20002] = 0, [0x30000] = 0, [0x40000] = 0, [0x40001] = 0, [0x40002] = 0, [0x50000] = 0, [0x50001] = 1, [0x50002] = 0, [0x60000] = 0, [0x60001] = 0, [0x70000] = 0, }
 ex_extra_skill_point_races = {[0x10000] = 4, [0x10001] = 0, [0x10002] = 0, [0x20000] = 0, [0x20001] = 0, [0x20002] = 0, [0x30000] = 0, [0x40000] = 0, [0x40001] = 0, [0x40002] = 0, [0x50000] = 0, [0x50001] = 0, [0x50002] = 0, [0x60000] = 0, [0x60001] = 0, [0x70000] = 0, }
@@ -21,6 +22,7 @@ ex_elven_chainmail_counts_as_unarmored = false
 ex_armored_arcana_multiplier = 7
 ex_sneak_attack_delay = 21
 ex_no_sneak_attack_delay = false
+ex_anyone_immune_to_critical_hits_is_immune_to_sneak_attacks = false
 ex_spell_focus_component_installed = false
 ex_no_summoning_limit = false
 ex_no_apr_limit = false
@@ -31,6 +33,7 @@ ex_reanimation_level_check_bonus = 5
 ex_time_slow_speed_divisor = 0x7FFFFFFF
 ex_due_south_spells = {["USWI653"] = true, }
 ex_bypass_spell_deflection = {}
+ex_fixed_duration_spell_list = {["SPWI105"] = true, ["SPWI101"] = true, ["SPWI213"] = true, ["SPWI215"] = true, }
 ex_linkable_self_spell_list = {["SPPR302"] = true, ["SPPR409"] = true, ["SPPR523"] = true, ["USPR953"] = true, ["USWI954"] = true, ["USWI956"] = true, }
 ex_not_linkable_spell_list = {["USPR102D"] = true, ["USPR204D"] = true, ["USPR211D"] = true, ["USPR302D"] = true, ["USPR305D"] = true, ["USPR310D"] = true, ["USPR311D"] = true, ["USPR320D"] = true, ["USPR322D"] = true, ["USPR324D"] = true, ["USPR325D"] = true, ["USPR405D"] = true, ["USPR417D"] = true, ["USPR418D"] = true, ["USPR510D"] = true, ["USPR512D"] = true, ["USPR518D"] = true, ["USPR522D"] = true, ["USPR523D"] = true, ["USPR613D"] = true, ["USPR616D"] = true, ["USPR653F"] = true, ["USPR715D"] = true, ["USPR719D"] = true, ["USPR726D"] = true, ["USPR727D"] = true, ["USPR728D"] = true, ["USWI101D"] = true, ["USWI104D"] = true, ["USWI105D"] = true, ["USWI116D"] = true, ["USWI118D"] = true, ["USWI121D"] = true, ["USWI205D"] = true, ["USWI211D"] = true, ["USWI213D"] = true, ["USWI215D"] = true, ["USWI218D"] = true, ["USWI222D"] = true, ["USWI226D"] = true, ["USWI227D"] = true, ["USWI252D"] = true, ["USWI302D"] = true, ["USWI306D"] = true, ["USWI312D"] = true, ["USWI316D"] = true, ["USWI320D"] = true, ["USWI352D"] = true, ["USWI353D"] = true, ["USWI422D"] = true, ["USWI423D"] = true, ["USWI425D"] = true, ["USWI452D"] = true, ["USWI452E"] = true, ["USWI453D"] = true, ["USWI503D"] = true, ["USWI507D"] = true, ["USWI508D"] = true, ["USWI509D"] = true, ["USWI510D"] = true, ["USWI524D"] = true, ["USWI652"] = true, ["USWI653D"] = true, ["USWI702D"] = true, ["USWI705D"] = true, ["USWI706D"] = true, ["USWI711D"] = true, ["USWI717D"] = true, ["USWI718D"] = true, ["USWI751D"] = true, ["USWI755"] = true, ["USWI759E"] = true, ["USWI806D"] = true, ["USWI810D"] = true, ["USWI852D"] = true, ["USWI853D"] = true, ["USWI862"] = true, ["USWI906D"] = true, ["USWI911D"] = true, ["USWI954D"] = true, ["USWI954E"] = true, }
 ex_linkable_ability_list = {}
@@ -47,7 +50,7 @@ ex_courteous_magocracy_charisma_bonus = 6
 ex_base_num_attacks_of_opportunity = 0
 ex_noncumulative_opcode_functions = {["MEOP16"] = true, ["MEOP40"] = true, ["MEOP130"] = true, ["MEOP401"] = true, ["MEOP403"] = true, ["MEOP408"] = true, ["MEOP415"] = true, ["MEOP421"] = true, ["MEOP427"] = true, }
 ex_stat_scaling_functions = {["MESTATSC"] = true, ["MEHALFTH"] = true, ["MEPERFEC"] = true, }
-ex_on_tick_functions = {["MEAREAGL"] = 1, ["MEGHOSTW"] = 1, ["METELMOV"] = 1, ["MEENLARG"] = 1, ["MEWINGBU"] = 2, ["MESPIN"] = 2, ["IEex_EvaluatePermanentRepeatingEffects"] = 0, ["IEex_HeightMod"] = 0, ["IEex_ExtraAttacks"] = 0, ["IEex_DuelHide"] = 0, }
+ex_on_tick_functions = {["MEAREAGL"] = 1, ["MEGHOSTW"] = 1, ["METELMOV"] = 1, ["MEENLARG"] = 1, ["MEANSUP2"] = 2, ["MEWINGBU"] = 2, ["MESPIN"] = 2, ["IEex_EvaluatePermanentRepeatingEffects"] = 0, ["IEex_HeightMod"] = 0, ["IEex_ExtraAttacks"] = 0, ["IEex_DuelHide"] = 0, }
 ex_on_tick_default_functions = {["MEENLARG"] = "IEex_ResetSize", }
 ex_stat_spells = {
 [1] = {[21] = "USRAGE3", [25] = "USRAGE4", [29] = "USRAGE5"}, -- Barbarian Rage

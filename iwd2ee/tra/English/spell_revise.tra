@@ -840,7 +840,7 @@ Casting Time: 9
 Area of Effect: 30-foot radius
 Saving Throw: Fortitude negates
 
-The caster emits a terrible scream that kills creatures who hear it (except for the caster). The spell affects up to one creature per caster level. Wail of the Banshee does not bypass spell resistance.~
+The caster emits a terrible scream that kills creatures who hear it (except for the caster). The spell affects up to one creature per caster level. A successful Fortitude save made at a +4 bonus prevents the effects.~
 @1144    = ~Lich Touch~
 @1145    = ~Lich Touch 
 (Necromancy)
@@ -1033,7 +1033,7 @@ Casting Time: 1 round
 Area of Effect: 30-foot radius 
 Saving Throw: Fortitude Negates
 
-This spell conjures forth a magical glyph imbued with magical power that channels its effects through anyone capable of seeing it. Any living creature will instantly die upon seeing the symbol on a failed Fortitude save. This spell has no effect on blind creatures.
+This spell conjures forth a magical glyph imbued with magical power that channels its effects through anyone capable of seeing it. Any living creature will instantly die upon seeing the symbol on a failed Fortitude save with a +6 bonus. This spell has no effect on blind creatures.
 ~
 @1548    = ~Symbol of Stunning~
 @1549    = ~Symbol of Stunning
@@ -1458,7 +1458,7 @@ Casting Time: 0
 Area of Effect: Special 
 Saving Throw: None
 
-Upon casting this spell, the caster is able to removed cursed items from the target. Break Enchantment also dispels all spells from the Enchantment school, whether their effects are positive or negative.~
+Upon casting this spell, the caster is able to remove cursed items from the target. Break Enchantment also dispels all spells from the Enchantment school, whether their effects are positive or negative.~
 @1678    = ~Otiluke's Resilient Sphere~
 @1679    = ~Otiluke's Resilient Sphere 
 (Evocation) 
@@ -1527,7 +1527,7 @@ By calling upon his deity, the caster brings into existence a magical hammer whi
 (Transmutation) 
 Level: Sor/Wiz 1, Talos 1
 Range: Touch
-Duration: Special
+Duration: 8 hours or until discharged
 Casting Time: 1 
 Area of Effect: 1 creature
 Saving Throw: None
@@ -2002,18 +2002,6 @@ Area of Effect: 1 creature
 Saving Throw: Reflex half
 
 Upon completion of this spell, a brilliant ray of scorching heat fires down from the sky and burns the target creature for 1d6 + 1 fire damage per level of the caster (to a maximum of 1d6 + 15). Undead creatures and monsters vulnerable to bright light take 1d6 + 2 fire damage per level of the caster (to a maximum of 1d6 + 30). Victims must make a successful Reflex save or be blinded for 3 rounds. Drow and gray dwarves are blinded from the spell for 3 rounds (no save).~
-@1835    = ~Sol's Searing Orb~
-@1836    = ~Sol's Searing Orb 
-(Evocation)
-Level: Clr 6, Drd 5, Rgr 5
-Range: Sight of Caster
-Duration: Instantaneous
-Casting Time: 6
-Area of Effect: 1 creature
-Saving Throw: Reflex half
-
-Upon completion of this spell the caster hurls a brilliant, blazing sphere at a target creature. When it hits it explodes in a flash of light, blinding the target creature and dealing 9d12 points of fire damage. A successful Reflex save avoids the blindness and halves the damage. Drow and gray dwarves must make their Reflex save against blindness at a -4 penalty. Undead creatures are particularly vulnerable to this spell and take double damage.
-~
 @1837    = ~Holy Word~
 @1838    = ~Holy Word 
 (Conjuration) [Good]
@@ -2238,7 +2226,7 @@ Casting Time: 2
 Area of Effect: 15-foot radius
 Saving Throw: Reflex negates
 
-Web creates a many-layered mass of strong, sticky strands, similar to spider webs, but much larger and tougher. Creatures within the area of effect who fail a Reflex save at +2 suffer a -2 penalty to attack rolls, -4 penalty to Dexterity, and can't move. An entangled character who attempts to cast a spell must make a Concentration check or lose the spell.~
+Web creates a many-layered mass of strong, sticky strands, similar to spider webs, but much larger and tougher. Creatures within the area of effect who fail a Reflex save at +2 suffer a -2 penalty to Armor Class and attack rolls, a 50% chance of spell failure, and can't move.~
 @1881     = ~Fiery Cloud~
 @1882     = ~Fiery Cloud
 (Conjuration)
@@ -2629,6 +2617,17 @@ Launcher:  Bow~
 @30066=~Explode~
 @30067=~Imbued Spell~
 
+@31105     = ~Entangle~
+@32105     = ~Entangle
+(Transmutation) 
+Level: Drd 1, Rgr 1
+Range: Sight of Caster
+Duration: 10 rounds 
+Casting Time: 4
+Area of Effect: 20-foot radius
+Saving Throw: Reflex partial
+
+When an Entangle spell is cast, it must be cast outside, otherwise it will not work and the spell is wasted. It causes vines to sprout forth from the ground to wrap, twist, and entwine any creatures in the area of effect, preventing movement. Creatures must make a Reflex save every round in order to move through the entangled area. Entangled creatures can still perform normal actions but cannot move and suffer a -2 penalty to Armor Class and attack rolls, as well as a 50% chance of spell failure. All creatures within the area of effect who make their Reflex save move at half rate.~
 @31106     = ~Magic Stone~
 @32106     = ~Magic Stone
 (Enchantment)
@@ -2885,6 +2884,17 @@ Area of Effect: Special
 Saving Throw: None 
 
 This spell summons one or more creatures of nature who will aid the caster for the duration of the spell.  The type of creatures that come is random.  The creatures summoned are more powerful than creatures summoned by lesser versions of this spell.~
+@31608    = ~Sol's Searing Orb~
+@32608    = ~Sol's Searing Orb
+(Evocation)
+Level: Clr 6, Drd 5, Rgr 5
+Range: Sight of Caster
+Duration: Instantaneous
+Casting Time: 6
+Area of Effect: 1 creature
+Saving Throw: Reflex half
+
+Upon completion of this spell the caster hurls a brilliant, blazing sphere at a target creature. When it hits it explodes in a flash of light, blinding the target creature and dealing 9d12 points of fire damage. A successful Reflex save avoids the blindness and halves the damage. Drow and gray dwarves must make their Reflex save against blindness at a -4 penalty. Undead creatures are particularly vulnerable to this spell and take double damage.~
 @31616     = ~Dolorous Decay~
 @32616     = ~Dolorous Decay
 (Necromancy) 
@@ -3009,6 +3019,17 @@ Area of Effect: Special
 Saving Throw: Will negates 
 
 This spell holds 1-4 humans, demihumans, or humanoid creatures immobile for a short duration. The Hold Person spell affects any bipedal human, demihuman, or humanoid of man size or smaller, including dwarves, elves, gnolls, gnomes, goblins, half-elves, halflings, half-orcs, hobgoblins, humans, lizard men, orcs, troglodytes, and others. Thus, a 10th-level fighter could be held, while an ogre could not. The effect selects the enemies closest to the target and holds them. Enemies making their Will saves are totally unaffected by the spell. Undead creatures cannot be held. Held creatures cannot move or speak, but they remain aware of events around them and can use abilities not requiring motion or speech. Being held does not prevent the worsening of the subject's condition due to wounds, disease, or poison.  A successful Will save negates any effect.~
+@33312     = ~Slow~
+@34312     = ~Slow
+(Transmutation) 
+Level: Brd 3, Sor/Wiz 3
+Range: Sight of Caster
+Duration: 1 round/level
+Casting Time: 3
+Area of Effect: 20-foot radius
+Saving Throw: Will negates
+
+A creature affected by Slow loses an attack every round (but will not drop below 1 attack per round), has -4 to AC, and moves at half its base movement rate. A successful Will save made at a -4 penalty prevents the effects.~
 @33316     = ~Dire Charm~
 @34316     = ~Dire Charm
 (Enchantment)
@@ -3063,7 +3084,7 @@ Casting Time: 5
 Area of Effect: Cone
 Saving Throw: Reflex half
 
-This spell releases a cone-shaped blast of extreme cold from the caster, doing 1d6 hit points of cold damage per level of the caster (15d6 maximum, 12d6 minimum).~
+This spell releases a cone-shaped blast of frost from the caster, doing 1d6 hit points of cold damage per level of the caster (15d6 maximum, 12d6 minimum).~
 @33514     = ~Lesser Planar Binding: Fire Elemental~
 @34514     = ~Lesser Planar Binding: Fire Elemental
 (Conjuration) 
@@ -3526,7 +3547,7 @@ Casting Time: 9
 Area of Effect: All enemies within 30 ft.
 Saving Throw: Fortitude negates
 
-Mass Harm releases destructive negative energy upon all enemies in the area of effect. Those creatures must Save vs. Fortitude or lose all but 1d4 of their hit points. This spell has no effect on undead or constructs.~
+Mass Harm releases destructive negative energy upon all enemies in the area of effect. Those creatures must Save vs. Fortitude at +3 or lose all but 1d4 of their hit points. This spell has no effect on undead or constructs.~
 @35953     = ~Volcanic Eruption~
 @36953     = ~Volcanic Eruption
 (Evocation)
@@ -3570,12 +3591,12 @@ This spell stores a Resurrection spell in the target, which will be triggered th
 (Evocation)
 Level: Drd 9
 Range: Sight of Caster
-Duration: 5 rounds
+Duration: 3 rounds
 Casting Time: 9
 Area of Effect: 15-foot radius
 Saving Throw: None
 
-A more powerful version of the spell Whirlwind, the spell creates a tornado at the target point that moves randomly. Creatures that come within 15 feet of the tornado get sucked up into it, taking 3d8 slashing damage per second that they stay inside it. Creatures are usually ejected from the tornado after about a round. Huge creatures such as frost giants and dragons aren't sucked up into the tornado but still take damage while in the area of effect. Only one tornado may be active at a time.~
+A more powerful version of the spell Whirlwind, the spell creates a tornado at the target point that moves randomly. Creatures that come within 15 feet of the tornado get sucked up into it, taking 3d8 slashing damage per second that they stay inside it. Creatures are usually ejected from the tornado after about a round. Huge creatures such as frost giants and dragons aren't sucked up into the tornado but still take damage while in the area of effect. Only one tornado may be active at a time. This spell can only be cast outdoors.~
 @37151     = ~True Strike~
 @38151     = ~True Strike
 (Divination) 
@@ -3635,6 +3656,19 @@ Saving Throw: None
 This spell greatly increases the recipient's jump distance, allowing them to jump over obstacles or across large gaps. For the duration, the recipient gains the Jump ability, usable at will. By using this ability, the character jumps to a target point up to 20 feet away.
 
 In addition, while this spell is active, the recipient is immune to falling damage from all sources.~
+@37157     = ~Vanish~
+@38157     = ~Vanish
+(Illusion)
+Level: Brd 1, Sor/Wiz 1
+Range: Caster
+Duration: 3 rounds
+Casting Time: 1
+Area of Effect: Caster
+Saving Throw: None
+
+A lesser version of Invisibility, this spell causes the caster to become invisible for a short time, or until the caster attacks or casts a spell on another creature.
+
+Vanish is less effective for sneaking past groups of enemies, and better suited for getting out of tight spots in combat. Wizard/rogues can use this spell as an easy way to prepare for another sneak attack.~
 @37251     = ~Identify Creature~
 @38251     = ~Identify Creature
 (Divination)
@@ -3758,6 +3792,19 @@ Area of Effect: 1 creature
 Saving Throw: None
 
 This wondrous spell gives the recipient the power to fly. For the duration, the character can fly over normally impassable gaps and obstacles. In addition, unless the character is fighting in melee or casting a touch spell, they will be flying far enough above the ground that most melee attacks against them will be made at a -20 penalty. The effects of Fly are suppressed as long as the character is indoors.~
+@37356     = ~Perception Filter~
+@38356     = ~Perception Filter
+(Illusion)
+Level: Brd 3, Sor/Wiz 3
+Range: Touch
+Duration: 10 rounds/level
+Casting Time: 3
+Area of Effect: 1 creature
+Saving Throw: None
+
+Perception Filter causes the recipient to attract less notice without actually being invisible. Enemies will ignore the character, not attacking or casting spells on them, as long as there is someone else they can target instead (who isn't affected by this spell). If there are no other allies they can target instead, the enemies will notice the character and attack them.
+
+If a character under the effect of this spell attacks or casts a spell, that does not cause the spell to end, but the enemy they are currently targeting can still notice them.~
 @37451     = ~Teleport Field~
 @38451     = ~Teleport Field
 (Transmutation) 

@@ -133,7 +133,7 @@ Benefit: Your sneak attacks deal an additional 1d6 damage. This feat may be take
 
 You are an expert at fighting with two weapons. You can attack even more quickly with them.
 
-Prerequisite: Dex 15+, Ambidexterity, Two-Weapon Fighting, Base attack bonus +16 or higher; taking this feat a second time requires 16 levels of ranger.
+Prerequisite: Dex 17+, Ambidexterity, Two-Weapon Fighting, Base attack bonus +16 or higher; taking this feat a second time requires 16 levels of ranger.
 
 Benefit: While wielding two weapons, you get a second attack per round with the off-hand weapon (at -5 attack bonus). If you have two ranks in the feat, you get a third attack per round with it (at -10 attack bonus).
 
@@ -470,6 +470,41 @@ You know how to take advantage of an ally's distraction of your enemy to land an
 Prerequisite: 10 Levels of Rogue
 
 Benefit: If an ally would hit an enemy in melee while you are also attacking that enemy in melee, you may make an attack of opportunity against that enemy.~
+@378    = ~Damage Reduction~
+@379    = ~DAMAGE REDUCTION:
+
+You can shrug off some damage from attacks.
+
+Prerequisite: Con 21+. The second and third ranks require Con 23+ and Con 25+ respectively.
+
+Benefit: You gain 3/- resistance to physical damage for each rank in the feat.
+
+Special: This feat may be taken up to three times.~
+@380    = ~Blinding Speed~
+@381    = ~Blinding Speed:
+
+You are capable of short bursts of great speed.
+
+Prerequisite: Dex 23+
+
+Benefit: You gain the Blinding Speed ability, which gives you the effects of Improved Haste for 5 rounds. You gain +8 AC, your attacks per round are doubled, and you move significantly faster. Attack bonuses will continue to fall for the additional attacks.~
+@382    = ~Advanced Spell Capacity~
+@383    = ~ADVANCED SPELL CAPACITY:
+
+You may cast higher-level spells than is normally allowed for your class.
+
+Prerequisite: 19 levels of cleric, druid or wizard, 20 levels of paladin, ranger or sorcerer, or 25 levels of bard. Taking the feat a third time requires 2 additional levels of cleric, druid, sorcerer or wizard, or 3 additional levels of bard, paladin or ranger. Taking the feat a fifth time requires another 2 or 3 levels.
+
+Benefit: You gain a spell slot one level higher than the normal maximum for your class. Clerics, druids, sorcerers and wizards gain a 10th-level slot, bards gain a 9th-level slot, and paladins and rangers gain a 7th-level slot. This slot can only be used to cast lower-level spells via metamagic.
+
+Special: This feat may be taken up to five times. The progression is shown below:
+
+Rank Level +1 Level +2 Level +3
+1    1        0        0
+2    2        0        0
+3    2        1        0
+4    2        2        0
+5    2        2        1~
 @522    = ~Wizard~
 @523    = ~WIZARD:
 
@@ -496,7 +531,7 @@ Hit points per level: 1-12
 Advantages:
 * Proficient with all simple and martial weapons, light armor, medium armor, and shields.
 * Barbarian Rage: Can rage once per day per every 4 levels (starts at 1st level with one use). Rage gives them +4 to constitution and strength (which stack with other bonuses to constitution and strength) for 5 rounds, as well as 2 point armor class penalty, +2 to Will saves, and immunity to fear, stun, sleep, confusion, unconsciousness, paralysis, and hopelessness. After raging the barbarian will be fatigued for a period of time which will lower some of his abilities.
-* Fast Movement: Barbarians can move 10 feet faster than a standard character.
+* Fast Movement: Barbarians can move 10 feet faster than a standard character, provided they are not encumbered or wearing heavy armor.
 * 2nd level: Damage Reduction. The barbarian gains 1/- point of resistance to slashing, piercing, bludgeoning and missile damage. He or she gains 1/- additional point of resistance at levels 5, 8, 11, and every 3 levels thereafter. If the barbarian wears medium armor, the damage reduction granted by this feature is doubled.
 * 2nd level: Uncanny Dodge. Barbarians retain their Dexterity bonus to Armor Class if they are attacked by invisible foes.
 * 5th level: Uncanny Dodge. Barbarians cannot be Sneak Attacked by rogues unless the attacker is at least four levels higher than the barbarian.
@@ -523,12 +558,12 @@ Advantages:
 * 2nd level: Spellcasting. Bards gain the ability to cast minor wizard spells. Wearing a suit of armor imposes a chance of spell failure.
 * Many rogue like skills are class skills of the Bard.
 * Bard Songs. Bards have the ability to sing melodies that have magical effects on creatures within thirty feet. As they advance in level, they gain additional songs. The songs are described in detail below.
-* 1st level: The Tale of Curran Strongheart. When played, all the bard's allies gain +1 attack bonus, +1 damage, and immunity to fear. At level 19, this song grants an additional +1 to hit and damage and immunity to hopelessness.
-* 4th level: Tymora's Melody. When played, Tymora's Melody gives the bard's allies +1 luck, +1 saving throws, and +2 to their Knowledge(arcana), Alchemy, and rogue skills. At level 22, this song grants an additional +1 to luck and saving throws and +2 to skill checks.
-* 7th level: The Siren's Yearning. When played, every creature that hears the song suffers a cumulative -1 penalty to their Will saves for 10 rounds and must make a Will save or be entralled, unable to take action for one round or until they take damage. The Will save DC is equal to the bard's level. Thus, a level 15 bard's song has a DC of 15. The song has a 25% chance of affecting the bard's allies.
-* 10th level: The Song of Kaudies. When played, the bard's allies are affected by the Blink spell for one round. All enemies have a 50% miss chance against the party, but the party also suffers a 20% miss chance against enemies and a 20% rate of spell failure.
-* 13th level: The War Chant of Sith. When played, the bard's allies gain a +2 generic armor bonus, physical damage resistance of 3/-, and they regenerate 3 points of damage per round in combat. At level 25, this song grants an additional +2 to AC, 3/- physical damage resistance, 3 hit points healed per round.
-* 16th level: The Ballad of Three Heroes. When played, the bard's allies gain +5 spell resistance, 5/- resistance to all forms of magical damage, and the effects of the Tale of Curran Strongheart, Tymora's Melody, and the War Chant of Sith. At level 28, this song grants an additional +5 spell resistance and 5/- resistance to magical damage.
+* 1st level: The Tale of Curran Strongheart. When played, all the bard's allies gain +1 attack bonus, +1 damage, and immunity to fear and hopelessness. The attack and damage bonuses increase by 1 at levels 10, 25 and 40.
+* 3th level: The Song of Kaudies. When played, the bard's allies are immune to harmful sound-based spells and abilities, including Command, Silence, Greater Command, Holy Word, Blasphemy, Power Word: Sleep, Sound Burst, Shout, Power Word: Silence, Power Word: Stun, Power Word: Blind, Great Shout, Wail of the Banshee, Power Word: Kill, harpy wails, and the enemy-only effects of Chant, Prayer, and Recitation.
+* 5th level: Tymora's Melody. When played, Tymora's Melody gives the bard's allies +1 luck, +1 saving throws, and +2 to their Knowledge(arcana), Alchemy, and rogue skills. At levels 15 and 35, this song grants an additional +1 to luck and saving throws and +2 to skill checks.
+* 9th level: The Siren's Yearning. When played, every creature that hears the song suffers a cumulative -1 penalty to their Will saves for 10 rounds and must make a Will save or be entralled, unable to take action for one round or until they take damage. The Will save DC is equal to the bard's level. Thus, a level 15 bard's song has a DC of 15. The song has a 25% chance of affecting the bard's allies.
+* 13th level: The War Chant of Sith. When played, the bard's allies gain a +2 generic armor bonus, physical damage resistance of 3/-, and they regenerate 3 points of damage per round in combat. At levels 28 and 45, this song grants an additional +2 to AC, 3/- physical damage resistance, 3 hit points healed per round.
+* 20th level: The Ballad of Three Heroes. When played, the bard's allies gain +5 spell resistance, 5/- resistance to all forms of magical damage, and the effects of the Tale of Curran Strongheart, Tymora's Melody, and the War Chant of Sith. At levels 30 and 50, this song grants an additional +5 spell resistance and 5/- resistance to magical damage.
 
 A bard cannot benefit the party with more than one song at once. But if the party has multiple bards, the effects of each bard's song will stack. Summoned creatures do not benefit from bard songs.
 
@@ -649,18 +684,15 @@ Level 21-30: 1d8+5
 * Stunning Attacks: When this ability is used, all of the monk's attacks in the next round force the victim to make a Fortitude save (DC 10 + Wisdom modifier + half total level) or be stunned for 1 round. A monk can make a stunning attack 1/day/level.
 * Evasion: Monks have the ability to evade damage from area of effect spells. Whenever a monk makes a successful Reflex save against an area effect spell that allows a reflex save for half damage, he or she takes no damage.
 * 2nd level: Deflect Arrows. The monk gains the Deflect Arrows feat, yielding a +1 miscellanous bonus against missile weapons. In addition, the monk automatically blocks the first instance of missile damage that would hit them each round. The monk must have a hand free to block missiles this way.
-* 3rd level: Still Mind. The monk gains a +2 bonus to saving throws against spells and effects from the Enchantment school. Unarmored movement speed increases.
+* 3rd level: Fast Movement. The monk moves 10 feet faster than a normal character (normal movement speed is 30 feet), but only as long as the monk is not encumbered or wearing armor. The monk gains another 10 feet of movement every 3 levels thereafter.
+* 3rd level: Still Mind. The monk gains a +2 bonus to saving throws against spells and effects from the Enchantment school.
 * 5th level: Purity of Body. The monk gains control over his body's immune system. He gains immunity to all diseases.
-* 6th level: Unarmored movement speed increases.
 * 7th level: Wholeness of Body. The monk can regain hit points equal to their monk level times their Wisdom modifier once each day per seven levels.
 * 9th level: Improved Evasion. The monk gains the Improved Evasion feat that is normally only available to rogues.
-* 10th level: Unarmored movement speed increases.
 * 10th level: Abundant Step. The monk may teleport to any location in sight once per day.
 * 11th level: Diamond Body. The monk is in such control of his own metabolism that he gains immunity to poison of all kinds.
-* 12th level: Unarmored movement speed increases.
 * 13th level: Diamond Soul. The monk gains spell resistance. His spell resistance equals his level + 10. In order to affect the monk with a spell, a spellcaster must roll the monk's spell resistance or higher on 1d20 + the spellcaster's level.
-* 15th level: Quivering Palm. This terrifying attack allows the monk to set up vibrations within the body of another creature that can be fatal. The monk can use the quivering palm attack once per day. The next time the monk hits a creature with an unarmed attack, the target dies unless it makes a Fortitude saving throw (DC 10 + one-half the monk's level + Wisdom modifier). Constructs and undead cannot be affected. Unarmored movement speed increases. The monk gains additional uses of Quivering Palm every six levels thereafter.
-* 18th level: Unarmored movement speed increases.
+* 15th level: Quivering Palm. This terrifying attack allows the monk to set up vibrations within the body of another creature that can be fatal. The monk can use the quivering palm attack once per day. The next time the monk hits a creature with an unarmed attack, the target dies unless it makes a Fortitude saving throw (DC 10 + one-half the monk's level + Wisdom modifier). Constructs and undead cannot be affected. The monk gains additional uses of Quivering Palm every six levels thereafter.
 * 19th level: Empty Body. The monk can assume an incorporeal state for 5 rounds a number of times a day equal to his level divided by 2. While incorporeal, the monk can move through walls, and half the attacks that hit the monk deal no physical damage.
 * 20th level: Perfect Self. The monk has tuned his body with skill and quasi-magical abilities to the point that he becomes a magical creature. He is forevermore treated as an outsider (extraplanar creature) rather than as a humanoid. For instance, charm person does not affect him. Additionally, the monk gains damage reduction 20/+1. This means that the monk ignores (instantly regenerates) the first 20 points of damage from any attack unless the damage is dealt by a weapon with a +1 enhancement bonus (or better), by a spell, or by a form of energy (fire, cold, etc.). As an outsider, a 20th level monk is subject to spells that repel enchanted creatures, such as protection from law.
 
@@ -804,45 +836,45 @@ Advantages:
 Paladins of Ilmater venerate the god of suffering. They willingly take the most horrible wounds in any battle just to prevent the suffering of others. They are typically known for their humility.
 
 Advantages:
-* 2nd-level: The paladin can cast Shield Other (which halves the damage an ally takes, causing the paladin to take the other half) at will.
-* 6th-level: The paladin's healing spells and abilities heal 50% more hit points if used on an ally other than the paladin.
-* 11th-level: The bonus to healing spells and abilities is increased from 50% to 100%.~
+* 2nd level: The paladin can cast Shield Other (which halves the damage an ally takes, causing the paladin to take the other half) at will.
+* 6th level: The paladin's healing spells and abilities heal 50% more hit points if used on an ally other than the paladin.
+* 11th level: The bonus to healing spells and abilities is increased from 50% to 100%.~
 @561    = ~PALADIN OF HELM:
 
 Paladins of Helm follow the teachings of the god of guardians. They are dedicated to defending the weak and protecting important places against assault.
 
 Advantages:
-* 2nd-level: While using the Guard action, the paladin and all allies within 20 feet gain a +2 AC bonus.
-* 6th-level: The AC bonus from using the Guard action increases to +4.
-* 11th-level: While using the Guard action, the paladin can see through illusions as per True Sight.~
+* 2nd level: While using the Guard action, the paladin and all allies within 20 feet gain a +2 AC bonus.
+* 6th level: The AC bonus from using the Guard action increases to +4.
+* 11th level: While using the Guard action, the paladin can see through illusions as per True Sight.~
 @562    = ~PALADIN OF MYSTRA:
 
 Paladins of Mystra insure that the powers of the goddess of magic are not used for evil. They seek out evil spellcasters all over Faerun for the protection of civilization and to protect benign wizards from the repercussions of irresponsible magic use.
 
 Advantages:
-* 2nd-level: The paladin gains one rank in Armored Arcana, reducing their arcane spell failure by 35%.
-* 6th-level: The paladin gains two more ranks in Armored Arcana, reducing their arcane spell failure by a total of 105% (allowing them to cast arcane spells with no chance of failure while wearing the heaviest armor and shields).
-* 11th-level: All fire, cold, electricity, acid, and magic damage dealt by the paladin is increased by 20%. This stacks with feats like Spirit of Flame and Master of Magic Force. This bonus applies to both spells like Fireball and abilities like Smite Evil.~
+* 2nd level: The paladin gains one rank in Armored Arcana, reducing their arcane spell failure by 35%.
+* 6th level: The paladin gains two more ranks in Armored Arcana, reducing their arcane spell failure by a total of 105% (allowing them to cast arcane spells with no chance of failure while wearing the heaviest armor and shields).
+* 11th level: All fire, cold, electricity, acid, and magic damage dealt by the paladin is increased by 20%. This stacks with feats like Spirit of Flame and Master of Magic Force. This bonus applies to both spells like Fireball and abilities like Smite Evil.~
 @563    = ~MONK OF THE OLD ORDER:
 
 Members of the Old Order do not worship any particular deity, but are fond of philosophical debates and introspection.
 
 Advantages:
-* 2nd-level: The monk now adds their Wisdom bonus again to the DC of Stunning Attack.
-* 18th-level: The monk now adds their Wisdom bonus again to the DC of Quivering Palm.~
+* 2nd level: The monk now adds their Wisdom bonus again to the DC of Stunning Attack.
+* 18th level: The monk now adds their Wisdom bonus again to the DC of Quivering Palm.~
 @564    = ~MONK OF THE BROKEN ONES:
 
 Members of the Order of the Broken Ones venerate Ilmater, god of suffering. They strive to endure the pain of their training as well as the pain of others.
 
 Advantages:
-* 2nd-level: The monk gains one use of Lay on Hands per day. Any level that would give the monk a use of Wholeness of Body instead gives them another use of Lay on Hands. When used by a Monk of the Broken Ones, Lay on Hands restores the same amount of HP as Wholeness of Body (monk level * Wisdom bonus) but can be used on other creatures as well.
-* 6th-level: The monk gains 2/- resistance to all physical damage. Another 1/- resistance is gained every 4 levels thereafter.~
+* 2nd level: The monk gains one use of Lay on Hands per day. Any level that would give the monk a use of Wholeness of Body instead gives them another use of Lay on Hands. When used by a Monk of the Broken Ones, Lay on Hands restores the same amount of HP as Wholeness of Body (monk level * Wisdom bonus) but can be used on other creatures as well.
+* 6th level: The monk gains 2/- resistance to all physical damage. Another 1/- resistance is gained every 4 levels thereafter.~
 @565    = ~MONK OF THE DARK MOON:
 
 Members of the Order of the Dark Moon worship Shar, goddess of darkness and loss. They use their monastic training as a route to personal and spiritual power.
 
 Advantages:
-* 2nd-level: The monk gains a sneak attack bonus of 1d6. For every 4 additional monk levels after level 2, the monk gains another 1d6 sneak attack damage.~
+* 2nd level: The monk gains a sneak attack bonus of 1d6. For every 4 additional monk levels after level 2, the monk gains another 1d6 sneak attack damage.~
 
 @580    = ~
 
@@ -871,7 +903,7 @@ Domain Spells:
 @582    = ~
 
 Domain Spells:
-1: Minor Elemental Barrier, Ox's Fortitude
+1: Ox's Fortitude, Shield Other
 2: Aid, Exaltation
 3: Cure Serious Wounds, Magic Circle Against Evil
 4: Emotion: Hope, Otiluke's Resilient Sphere
@@ -926,7 +958,7 @@ Domain Spells:
 5: Protection from Magic Energy, Wall of Force
 6: Boulder Roll, Divine Shell
 7: Lutzaen's Local Teleport, Antimagic Field
-8: Improved Alacrity, Prismatic Spray
+8: Prismatic Spray, Reverse Gravity
 9: Elemental Legion, Teleport Step~
 @587    = ~
 
@@ -1808,7 +1840,7 @@ Disadvantages:
 * -4 Charisma.
 * -25% Experience Penalty: Deep gnomes are slightly more powerful and gain 25% less experience than other races.
 ~
-@897    = ~The Song of Kaudies - Blink~
+@897    = ~The Song of Kaudies - Resistant to Sound Attacks~
 @898    = ~Additional attack~
 @899    = ~Sneak Attack~
 @900    = ~Knocked Down~

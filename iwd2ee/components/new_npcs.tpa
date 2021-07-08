@@ -445,7 +445,7 @@ COPY_EXISTING ~11VEIRA.cre~ ~override~
 	WRITE_BYTE fortitudesave 1
 	WRITE_BYTE reflexsave 1
 	WRITE_BYTE willsave 1
-	WRITE_BYTE strength 8
+	WRITE_BYTE strength 5
 	WRITE_BYTE dexterity 14
 	WRITE_BYTE constitution 8
 	WRITE_BYTE intelligence 17
@@ -816,6 +816,7 @@ COPY_EXISTING ~52SERSA.cre~ ~override~
 	WRITE_LONG feats1 0xC0012100
 	READ_LONG feats2 ulgiash
 	ulgiash|=0x8000
+	ulgiash&=0x10000
 	WRITE_LONG feats2 ulgiash
 	WRITE_LONG feats3 0x8
 	WRITE_BYTE proficiencymissile 1

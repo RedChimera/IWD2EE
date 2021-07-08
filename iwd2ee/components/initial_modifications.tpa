@@ -47,6 +47,8 @@ COPY_EXISTING ~IEex_TRA.lua~ ~override~
 	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_tra_55385 *=.*~ ~ex_tra_55385 = %ex_tra_55385%~
 	ex_tra_55395 = RESOLVE_STR_REF(@55395)
 	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_tra_55395 *=.*~ ~ex_tra_55395 = %ex_tra_55395%~
+	ex_tra_55460 = RESOLVE_STR_REF(@55460)
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_tra_55460 *=.*~ ~ex_tra_55460 = %ex_tra_55460%~
 	ex_tra_55481 = RESOLVE_STR_REF(@55481)
 	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_tra_55481 *=.*~ ~ex_tra_55481 = %ex_tra_55481%~
 	ex_tra_55482 = RESOLVE_STR_REF(@55482)
@@ -374,7 +376,18 @@ COPY_EXISTING ~IEex_TRA.lua~ ~override~
 	ex_spelllevel7 = RESOLVE_STR_REF(@55467)
 	ex_spelllevel8 = RESOLVE_STR_REF(@55468)
 	ex_spelllevel9 = RESOLVE_STR_REF(@55469)
-	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_spelllevelstrrefs *=.*~ ~ex_spelllevelstrrefs = {%ex_spelllevel1%, %ex_spelllevel2%, %ex_spelllevel3%, %ex_spelllevel4%, %ex_spelllevel5%, %ex_spelllevel6%, %ex_spelllevel7%, %ex_spelllevel8%, %ex_spelllevel9%}~
+	ex_spelllevel10 = RESOLVE_STR_REF(@55470)
+	ex_spelllevel11 = RESOLVE_STR_REF(@55471)
+	ex_spelllevel12 = RESOLVE_STR_REF(@55472)
+	ex_spelllevel13 = RESOLVE_STR_REF(@55473)
+	ex_spelllevel14 = RESOLVE_STR_REF(@55474)
+	ex_spelllevel15 = RESOLVE_STR_REF(@55475)
+	ex_spelllevel16 = RESOLVE_STR_REF(@55476)
+	ex_spelllevel17 = RESOLVE_STR_REF(@55477)
+	ex_spelllevel18 = RESOLVE_STR_REF(@55478)
+	ex_spelllevel19 = RESOLVE_STR_REF(@55479)
+	ex_spelllevel20 = RESOLVE_STR_REF(@55480)
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_spelllevelstrrefs *=.*~ ~ex_spelllevelstrrefs = {%ex_spelllevel1%, %ex_spelllevel2%, %ex_spelllevel3%, %ex_spelllevel4%, %ex_spelllevel5%, %ex_spelllevel6%, %ex_spelllevel7%, %ex_spelllevel8%, %ex_spelllevel9%, %ex_spelllevel10%, %ex_spelllevel11%, %ex_spelllevel12%, %ex_spelllevel13%, %ex_spelllevel14%, %ex_spelllevel15%, %ex_spelllevel16%, %ex_spelllevel17%, %ex_spelllevel18%, %ex_spelllevel19%, %ex_spelllevel20%}~
 	IF_EXISTS
 
 STRING_SET_EVALUATE 32702 @980
@@ -1030,3 +1043,6 @@ COPY_EXISTING_REGEXP ~.*\.are~ ~override~
 //	LPF fj_are_structure INT_VAR fj_loc_x=0 fj_loc_y=0 fj_flags=0x2 STR_VAR fj_structure_type=~animation~ fj_name= EVAL ~%SOURCE_RES%GRVGLB~ fj_bam_resref=~USGRVGLB~ END
 	LPF ALTER_AREA_ACTOR_IWD2 INT_VAR flag_cre_unattached=1 flag_difficulty_1=1 flag_difficulty_2=1 flag_difficulty_3=1 STR_VAR actor_name= EVAL ~%SOURCE_RES%AREAGL~ END
 	UNLESS ~USAREAGL~
+
+COPY_EXISTING ~60KHREE.cre~ ~override~ ~63FORMIS.cre~ ~override~ ~65MNK.cre~ ~override~ ~66MNK.cre~ ~override~ ~66MNK1.cre~ ~override~ ~66MNK2.cre~ ~override~ ~66MORVYN.cre~ ~override~ ~67ORMIS.cre~ ~override~
+	WRITE_LONG animation 25856

@@ -131,7 +131,7 @@ Weight: 1 lb.~
 
 STATISTICS:
 
-Armor Class:  +1 (generic)
+Generic Armor Bonus: +1
 Special:
  Spell Power:  Can cast the spell Fireball (at level 10) three times per day
 Weight: 1 lb.~
@@ -140,7 +140,7 @@ Weight: 1 lb.~
 
 STATISTICS:
 
-Armor Class:  +3 (generic)
+Generic Armor Bonus: +3
 Special:
  Spell Power:  Can instantly cast the spell Sunfire (at level 15, save DC 40) three times per day
  Resistance: 20/-  Fire Resistance
@@ -1287,13 +1287,13 @@ Weight:  1 lb.~
 
 STATISTICS:
 
-Armor Class:  +1 (generic)
+Generic Armor Bonus: +1
 Weight: 2 lb.~
 @10358    = ~This class of decorative helmet, made of reinforced leather or metal, covers the face and head. Eye slits and breathing holes come highly recommended. 
 
 STATISTICS:
 
-Armor Class:  +1 (generic)
+Generic Armor Bonus: +1
 Weight: 2 lb.~
 //@10359    = ~Yeti Skin Hat~
 //@10360    = ~Item description can remain the same; if new description is needed put it here~
@@ -1311,7 +1311,7 @@ Weight: 1 lb.~
 
 STATISTICS:
 
-Armor Class:  +1 (generic)
+Generic Armor Bonus: +1
 Special:  
   Constant Effect: User under the effects of the spell Death Ward while equipped
 Weight: 1 lb.~
@@ -1331,7 +1331,7 @@ Weight: 1 lb.~
 
 STATISTICS:
 
-Armor Class:  +1 (generic)
+Generic Armor Bonus: +1
 Invisibility Detection: Wearer can see invisible creatures, attack them, and target them with spells. However, this effect does not dispel the invisibility of those creatures.
 Weight:  2 lb.~
 //@10369    = ~Dragon's Gaze~
@@ -1339,7 +1339,7 @@ Weight:  2 lb.~
 
 STATISTICS:
 
-Armor Class:  +1 (generic)
+Generic Armor Bonus: +1
 Spell Power: Can cast the spell Seven Eyes (at level 30) 1/day
 Invisibility Detection: Wearer can see invisible creatures, attack them, and target them with spells. However, this effect does not dispel the invisibility of those creatures.
 Weight:  2 lb.~
@@ -1453,7 +1453,7 @@ Weight:  4 lb.~
 
 STATISTICS:
 
-Armor Class:  +5 (generic)
+Generic Armor Bonus: +5
 Spell Resistance: +10
 Saving Throw:  +3 bonus
 The wearer's spells gain +3 DC
@@ -1463,7 +1463,7 @@ Weight:  6 lb.~
 
 STATISTICS:
 
-Armor Class:  +5 (generic)
+Generic Armor Bonus: +5
 Spell Resistance: +10
 Saving Throw:  +3 bonus
 The wearer's spells gain +3 DC
@@ -1473,7 +1473,7 @@ Weight:  6 lb.~
 
 STATISTICS:
 
-Armor Class:  +5 (generic)
+Generic Armor Bonus: +5
 Spell Resistance: +10
 Saving Throw:  +3 bonus
 The wearer's spells gain +3 DC
@@ -1536,7 +1536,7 @@ Damage Resistance: 5/- Slashing, Piercing, Bludgeoning, and Missile
 Spell Power: Can cast the spell Iron Body (at level 15) 1/Day
 Weight:  3 lb.~
 //@10411    = ~Phaen's Robe of Rags~
-@10412    = ~Phaen's robe is made of hundreds of ragged strips of cloth, and it looks more like something one would find on a beggar on the streets of Luskan than on a wizard. Despite its mangy appearance, however, a closer examination reveals that some magic has been woven into the cloth itself, so subtle it would be difficult for even an accomplished mage to detect the enchantments. The interior of the robe of rags appears to be lined with the pelt of a great bear, but despite its bulk, it's surprisingly light and warm, and it seems ideally suited to the Targos climate. 
+@10412    = ~Phaen's robe is made of hundreds of ragged strips of cloth, and it looks more like something one would find on a beggar on the streets of Luskan than on a wizard. Despite its mangy appearance, however, a closer examination reveals that some magic has been woven into the cloth itself, so subtle it would be difficult for even an accomplished mage to detect the enchantments. The interior of the robe of rags appears to be lined with the pelt of a great bear, but despite its bulk, it's surprisingly light and warm, and it seems ideally suited to the Targos climate.
 
 STATISTICS:
 
@@ -4674,7 +4674,7 @@ Enchantment:  +1
 Damage Type:  Slashing
 Special:
   Cursed: Can only be unequipped with a Remove Curse spell
-  Wrathful Blood: Wielder has a 25% chance of going berserk for 2 rounds each time he or she is wounded (melee only). This berserk state has the following effects:
+  Wrathful Blood: Wielder has a 25% chance of going berserk for 2 rounds each time he or she takes damage. This berserk state has the following effects:
     Damage: +6
     Attack Bonus: +3
     Attacks per round: +1
@@ -4705,7 +4705,7 @@ Enchantment:  +3
 Damage Type:  Slashing
 Special:
   Cursed: Can only be unequipped with a Remove Curse spell
-  Wrathful Blood: Wielder has a 50% chance of going berserk for 2 rounds each time he or she is wounded (melee only). This berserk state has the following effects:
+  Wrathful Blood: Wielder has a 50% chance of going berserk for 2 rounds each time he or she takes damage. This berserk state has the following effects:
     Damage: +12
     Attack Bonus: +6
     Attacks per round: +2
@@ -11069,14 +11069,14 @@ Weight: 1 lb.~
 //@12258    = ~Item description can remain the same; if new description is needed put it here~
 //@12259    = ~Spider Wand~
 //@12260    = ~Item description can remain the same; if new description is needed put it here~
-@12261    = ~Ice Dagger Wand~
+@12261    = ~Identify Creature Wand~
 @12262    = ~Wands are 1 1/4 feet long and slender. They are made of ivory, bone, or wood and are usually tipped with something - metal, crystal, stone, etc. They are fragile and tend to break easily. Because of this, they are often kept in cases. 
 
 Wands are powered by charges, each use costing one or more charges (depending on the item). When a wand runs out of charges, it is consumed and destroyed.
 
 STATISTICS:
 
-Can shoot an Ice Dagger at a creature, dealing 5d4 cold damage with no save, and dealing 5d4 cold damage (Reflex save for half) to adjacent enemies
+Can cast the spell Identify Creature
 Weight: 1 lb.~
 //@12263    = ~Wand of Burning Hands~
 @12264    = ~Wands are 1 1/4 feet long and slender. They are made of ivory, bone, or wood and are usually tipped with something - metal, crystal, stone, etc. They are fragile and tend to break easily. Because of this, they are often kept in cases. 
@@ -11301,7 +11301,7 @@ Weight: 1 lb.~
 
 STATISTICS:
 
-Armor Class: +1 (generic)
+Generic Armor Bonus: +1
 Special:
   Wearer is immune to all charm and domination effects
 Weight: 4 lb.~
@@ -11694,7 +11694,7 @@ Weight: 2 lb.~
 
 STATISTICS:
 
-Armor Class:  +1 (generic)
+Generic Armor Bonus: +1
 Constant Effect: Wearer is under the effect of the spell Executioner's Eyes
 Weight: 2 lb.~
 @12479    = ~Guardian Dragon Scale~
@@ -11803,7 +11803,7 @@ Special:
   Speed: 1 additional attack per round
   Limitless Speed: The wearer is not capped at five attacks per round
 Weight: 4 lb.~
-@12495    = ~Blinking Leathers +6~
+@12495    = ~Leather Armor of Epic Avoidance +6~
 @12496    = ~At first glance this appears to be an ordinary suit of leather armor, a closer inspection reveals subtle clues of various arcane enhancements. The rivets holding the various pieces together shine brightly as if polished. The leather pieces are soft and supple to the touch, but instantly become rigid when struck with a heavy blow. And when worn, the creaking and stretching noises normally associated with such armors are mysteriously absent.
 
 STATISTICS:
@@ -11814,7 +11814,7 @@ Max Dex Bonus:  +6
 Armor Check Penalty:  -0
 Arcane Spell Failure:  10%
 Special:
-  Constant Effect: Wearer is under the effect of the spell Blink
+  Epic Avoidance: The wearer has a 50% chance to automatically dodge any instance of non-poison damage. If this damage came from a weapon attack, all on-hit effects of that attack are avoided as well.
 Weight: 2 lb.~
 @12497    = ~Heroic Full Plate +1~
 @12498    = ~Full plate armor is the best armor a warrior can buy, both in appearance and protection. The perfectly fitted interlocking plates are specially angled to deflect arrows and blows, and the entire suit is carefully adorned with rich engraving and embossed detail. With its magical enchantments, this suit of full plate is ideal for warriors.
@@ -12253,7 +12253,7 @@ Special:
   Vampiric: 2d4 hit points drained from target and temporarily added to wielder (Fortitude DC 24)
 Weight: 0 lb.
 Launcher:  Sling~
-@12573    = ~ Brilliant Returning Bullet +5~
+@12573    = ~Brilliant Returning Bullet +5~
 @12574    = ~Magical currents are embedded inside this bullet so that it seems a little more balanced and lighter as it jumps towards an opponent. 
 
 STATISTICS:
@@ -13593,6 +13593,70 @@ Special:
 Weight: 4 lb.
 Feat Requirement:  Simple Weapon, Quarterstaff
 Type:  Two-handed~
+@12843    = ~Staff of the Magi~
+@12844    = ~~
+@12845    = ~The Icon of Power +3~
+@12846    = ~The temple of Loviatar in the Vale of Wailing Women, called the Black Spires of the Maiden, has always enjoyed the freedom from good-aligned churches that so many other evil temples long for. However, the large temple requires a huge body of standing soldiers to protect it from attackers and spies. The head of the temple guard is known as the Whip of Obedience. He used to be traditionally equipped with a magical halberd called the Icon of Power. When the temple guards saw the Icon pass them on their rounds, they took a little more care in their duties. Unfortunately for the Whip, a clever human thief from Elturel decided to capture the Icon as a personal challenge. The thief, whose name is still unknown, succeeded at his task and sold the Icon to the church of Bane. The Banites held the Icon out of contempt for the late Whip's incompetence. Eventually, the Icon was lost when the desert temple where it was held, the Obsidian Chapel, was sacked by Bedine raiders.
+
+STATISTICS:
+
+Damage:  1d10 + 3
+Attack Bonus:  +3
+Enchantment:  +3
+Damage Type:  Piercing
+Special:
+  Sadistic: +3d6 magic damage against foes in pain
+  Spell Power: User may cast Symbol of Pain 1/day
+  Spellward: Immune to the spell Symbol of Pain
+Weight: 14 lb.
+Feat Requirement:  Simple Weapon, Polearm
+Type:  Two-handed~
+@12847    = ~The Icon of Pain +5~
+@12848    = ~The temple of Loviatar in the Vale of Wailing Women, called the Black Spires of the Maiden, has always enjoyed the freedom from good-aligned churches that so many other evil temples long for. However, the large temple requires a huge body of standing soldiers to protect it from attackers and spies. The head of the temple guard is known as the Whip of Obedience. He used to be traditionally equipped with a magical halberd called the Icon of Pain. When the temple guards saw the Icon pass them on their rounds, they took a little more care in their duties. Unfortunately for the Whip, a clever human thief from Elturel decided to capture the Icon as a personal challenge. The thief, whose name is still unknown, succeeded at his task and sold the Icon to the church of Bane. The Banites held the Icon out of contempt for the late Whip's incompetence. Eventually, the Icon was lost when the desert temple where it was held, the Obsidian Chapel, was sacked by Bedine raiders.
+
+STATISTICS:
+
+Damage:  1d10 + 5
+Attack Bonus:  +5
+Enchantment:  +5
+Damage Type:  Piercing
+Special:
+  Sadistic: +4d6 magic damage against foes in pain
+  Spell Power: User may cast Symbol of Pain 3/day
+  Spellward: Immune to the spell Symbol of Pain
+Weight: 14 lb.
+Feat Requirement:  Simple Weapon, Polearm
+Type:  Two-handed~
+@12849    = ~Robe of the Watcher~
+@12850    = ~Made for a dark elf wizard from Rilauven, the Robe of the Watcher is recognized among drow as a sign of great power. It is traditionally worn by the most talented practitioner of divination magic in Rilauven's academy of sorcery. Malavon was awarded the robe when he was still in good graces with his city. He imbued it with additional enchantments to synergize with his personal spells.
+
+STATISTICS:
+
+Generic Armor Bonus:  +4
+Spell Resistance: +8
+Immunity to blindness and confusion
+Spell Power: Can cast True Seeing 1/day
+When cast by the wearer, the spells Malavon's Rage and Malavon's Corrosive Fog do not harm allies
+Weight:  3 lb.~
+@12851    = ~Robe of the Dark Watcher~
+@12852    = ~Made for a dark elf wizard from Rilauven, the Robe of the Watcher is recognized among drow as a sign of great power. It is traditionally worn by the most talented practitioner of divination magic in Rilauven's academy of sorcery. Malavon was awarded the robe when he was still in good graces with his city. He imbued it with additional enchantments to synergize with his personal spells.
+
+STATISTICS:
+
+Generic Armor Bonus:  +6
+Spell Resistance: +12
+Immunity to blindness and confusion
+Spell Power: Can cast True Seeing 1/day
+When cast by the wearer, the spells Malavon's Rage and Malavon's Corrosive Fog deal maximum damage and do not harm allies
+Weight:  3 lb.~
+@12853    = ~Boots of Perfect Speed~
+@12854    = ~These boots have been magically enhanced so that wearer is able to travel extremely fast, much faster than regular boots of speed. They are much prized by those whose profession involves traveling long distances.
+
+STATISTICS:
+
+Improved Haste
+Teleport Step
+Weight: 1 lb.~
 @12900    = ~Hrm - you are powerful allies, indeed. More gold and gems to line your pockets, then - also, a suit of plate armor, a warhammer, a helmet, all crafted and enchanted by great duergar artisans. They are well deserved, outsider.~
 @12901    = ~Drink this Rainwater Brew, Ennelia. It should help your condition.~
 @12902    = ~Drink this Sour Draught, Ennelia. It should help your condition.~
@@ -13601,3 +13665,4 @@ Type:  Two-handed~
 @12905    = ~This rainwater brew may help - drink it down.~
 @12906    = ~Perhaps a sour draught can help your wounds.~
 @12907    = ~Malakar deflected a slashing attack~
+@12908    = ~Avoided damage~

@@ -391,6 +391,7 @@ function IEex_Extern_OnAddEffectToProjectile(CProjectile, esp)
 	local sourceID = IEex_ReadDword(CGameEffect + 0x10C)
 	local CGameAIBase = IEex_GetActorShare(sourceID)
 	local source = 0
+--	IEex_DS("missileIndex: " .. IEex_ReadWord(CProjectile + 0x6E, 0x0) + 1)
 --[[
 	local sourceRES = ""
 	if (source == 0 or source == 1 or source == 7) and IEex_Helper_GetBridge("IEex_RecordSpell", sourceID, "spellRES") ~= nil then
@@ -403,7 +404,7 @@ function IEex_Extern_OnAddEffectToProjectile(CProjectile, esp)
 		IEex_WriteDword(CGameEffect + 0xD4, internalFlags)
 		if IEex_ReadDword(CGameEffect + 0xC) == 500 and IEex_ReadLString(CGameEffect + 0x2C, 8) == "METELEFI" and IEex_GetActorSpellState(sourceID, 246) then
 			local areaMult = 100
-			local missileIndex = IEex_ReadWord(CProjectile + 0x6E, 0x0)
+			local missileIndex = IEex_ReadWord(CProjectile + 0x6E, 0x0) + 1
 			local generalProjectileType = IEex_ProjectileType[missileIndex]
 			IEex_IterateActorEffects(sourceID, function(eData)
 				local theopcode = IEex_ReadDword(eData + 0x10)
@@ -546,7 +547,7 @@ function EXMETAMA(originatingEffectData, actionData, creatureData)
 		local newSpellLevel = classSpellLevel + metamagicLevelModifier
 		local spells = IEex_FetchSpellInfo(sourceID, casterTypes)
 		local noSpellsFound = true
-		if hasMetamagic and classSpellLevel > 0 and newSpellLevel <= 9 then
+		if hasMetamagic and classSpellLevel > 0 then
 			for i = newSpellLevel, 9, 1 do
 				for cType, levelList in pairs(spells) do
 					if #levelList >= i then
@@ -575,6 +576,32 @@ function EXMETAMA(originatingEffectData, actionData, creatureData)
 					end
 				end
 			end
+			if not spellAvailable and casterType > 0 and IEex_GetActorStat(sourceID, 95 + casterClass) >= ex_caster_max_spell_level[casterClass][1] then
+				local lowestAvailableExtraSpellLevel = 0x7FFFFFFF
+				IEex_IterateActorEffects(sourceID, function(eData)
+					local theopcode = IEex_ReadDword(eData + 0x10)
+					local theparameter1 = IEex_ReadDword(eData + 0x1C)
+					local theparameter2 = IEex_ReadDword(eData + 0x20)
+					local theparameter3 = IEex_ReadDword(eData + 0x60)
+					local thesavingthrow = IEex_ReadDword(eData + 0x40)
+					local thespecial = IEex_ReadDword(eData + 0x48)
+					if theopcode == 288 and theparameter2 == 197 and theparameter3 < theparameter1 then
+						local extraSlotSpellLevel = thespecial
+						if bit.band(thesavingthrow, 0x10000) > 0 then
+							extraSlotSpellLevel = ex_caster_max_spell_level[casterClass][2] + thespecial
+						end
+						if extraSlotSpellLevel < lowestAvailableExtraSpellLevel and extraSlotSpellLevel >= newSpellLevel then
+							lowestAvailableExtraSpellLevel = extraSlotSpellLevel
+							spellAvailable = true
+							noSpellsFound = false
+						end
+					end
+				end)
+				if spellAvailable then
+					ex_can_use_metamagic[sourceID] = {currentSpellRES, classSpellLevel, lowestAvailableExtraSpellLevel, casterClass}
+				end
+			end
+			IEex_SetToken("EXMMLEVEL", IEex_FetchString(ex_spelllevelstrrefs[newSpellLevel]))
 			if noSpellsFound then
 				IEex_ApplyEffectToActor(sourceID, {
 ["opcode"] = 139,
@@ -679,6 +706,35 @@ function EXMETALV(effectData, creatureData)
 	if originalSpellLevel == newSpellLevel then return end
 	local casterClass = ex_can_use_metamagic[targetID][4]
 	local savingthrow = 0
+	local foundExtraMetamagicSlot = false
+	if newSpellLevel > 9 then
+		IEex_IterateActorEffects(targetID, function(eData)
+			local theopcode = IEex_ReadDword(eData + 0x10)
+			local theparameter1 = IEex_ReadDword(eData + 0x1C)
+			local theparameter2 = IEex_ReadDword(eData + 0x20)
+			local theparameter3 = IEex_ReadDword(eData + 0x60)
+			local thesavingthrow = IEex_ReadDword(eData + 0x40)
+			local thespecial = IEex_ReadDword(eData + 0x48)
+			if theopcode == 288 and theparameter2 == 197 and theparameter3 < theparameter1 and not foundExtraMetamagicSlot then
+				local extraSlotSpellLevel = thespecial
+				if bit.band(thesavingthrow, 0x10000) > 0 then
+					extraSlotSpellLevel = ex_caster_max_spell_level[casterClass][2] + thespecial
+				end
+				if extraSlotSpellLevel == newSpellLevel then
+					foundExtraMetamagicSlot = true
+					IEex_WriteDword(eData + 0x60, theparameter3 + 1)
+				end
+			end
+		end)
+		IEex_SetToken("EXMMLEVEL", IEex_FetchString(ex_spelllevelstrrefs[newSpellLevel]))
+		IEex_ApplyEffectToActor(targetID, {
+["opcode"] = 139,
+["target"] = 2,
+["timing"] = 1,
+["parameter1"] = ex_tra_55460,
+["source_id"] = targetID,
+})
+	end
 	IEex_ApplyEffectToActor(targetID, {
 ["opcode"] = 500,
 ["target"] = 2,
@@ -693,7 +749,8 @@ function EXMETALV(effectData, creatureData)
 ["source_target"] = targetID,
 ["source_id"] = targetID,
 })
-	IEex_ApplyEffectToActor(targetID, {
+	if not foundExtraMetamagicSlot and newSpellLevel <= 9 then
+		IEex_ApplyEffectToActor(targetID, {
 ["opcode"] = 500,
 ["target"] = 2,
 ["timing"] = 0,
@@ -706,6 +763,7 @@ function EXMETALV(effectData, creatureData)
 ["source_target"] = targetID,
 ["source_id"] = targetID,
 })
+	end
 end
 
 ex_empower_spell = {}
