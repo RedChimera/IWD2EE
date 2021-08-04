@@ -632,7 +632,7 @@ The organization and the forging of the rings was sponsored by a merchant from W
 
 There was one wizard slayer named Martek, however, who ignored the rings offered by the merchant, and knowing the danger and guile of the Hosttower, instead commissioned a special ring from a dwarven ally that would provide him additional wards against spells and charms. Once the other members of the Circle of Ice began to be murdered in Luskan after the Hosttower learned their identities, Martek used the power of his enhanced ring to shield himself from the scrying of the Hosttower wizards and escape southwards. He eventually returned the ring to his dwarven ally, who sold it to a merchant making his way for Bryn Shander. 
 
-This Cold Steel Reflection ring differs from the other Circle of Ice rings in that it seems to have a ring of steel beneath the icy exterior of the ring - much like Martek himself.  
+This Cold Steel Reflection ring differs from the other Circle of Ice rings in that it seems to have a ring of steel beneath the icy exterior of the ring - much like Martek himself. 
 
 STATISTICS:
 
@@ -739,13 +739,18 @@ Resistance: 2/- Cold Resistance
 Charisma: +1
 Weight:  4~
 //@10206    = ~Chimandrae's Slippers~
-//@10207    = ~Item description can remain the same; if new description is needed put it here~
+@10207    = ~Crafted of fine red and black silk, soft cotton, and gold filigree, these exquisite slippers could be worth a large sum of money even without their enchantments. The slippers were enchanted by the burglar and wizard Chimandrae of Black Veils. Chimandrae was legendary throughout the ancient empires of the south. Her powers of trickery, seduction, and acrobatics were praised and cursed with equal frequency. She wore these slippers in her home in case unexpected visitors dropped in. Chimandrae mysteriously disappeared in 742 DR, leaving most of her possessions behind in her large Untherian estate.
+
+STATISTICS:
+
+Dexterity: +5 bonus (stacks with other bonuses to Dexterity)
+Weight: 3 lb.~
 @10208    = ~Chimandrae's Quick Slippers~
 @10209    = ~Crafted of fine red and black silk, soft cotton, and gold filigree, these exquisite slippers could be worth a large sum of money even without their enchantments. The slippers were enchanted by the burglar and wizard Chimandrae of Black Veils. Chimandrae was legendary throughout the ancient empires of the south. Her powers of trickery, seduction, and acrobatics were praised and cursed with equal frequency. She wore these slippers in her home in case unexpected visitors dropped in. Chimandrae mysteriously disappeared in 742 DR, leaving most of her possessions behind in her large Untherian estate.
 
 STATISTICS:
 
-Ability Score Modifier: +8 to Dexterity
+Dexterity: +8 bonus (stacks with other bonuses to Dexterity)
 Spellward: Immunity to the spells Slow, Web and Entangle
 Special: Increases movement rate by 50%
 Weight: 0 lb.~
@@ -1109,9 +1114,9 @@ Weight: 3 lb.~
 //@10306    = ~Sash of the Black Raven~
 //@10307    = ~Item description can remain the same; if new description is needed put it here~
 //@10308    = ~Binding Sash of the Black Raven~
-@10309    = ~The Binding Sash of the Black Raven is rumored to be a symbol of one of the disciples of the Black Raven monastery, a sanctuary located deep within the heart of the Spine of the World Mountains.  According to legend, the Black Raven is a near mythical figure in Uthgardt legends, a punishing spirit from the underworld who emerged on the surface world many years ago to teach the barbarians humility and break their arrogance.  Described as a dark-skinned man with burning eyes and bloodied chains hanging from his wrists, the stories that circle the Black Raven frequently tell of his epic struggles against slavers and injustice throughout the North and the southern kingdoms.  Some historians speculate that the Black Raven may have been a drow or half-drow, but others claim that he was a minor or quasi-deity dedicated to ending slavery and oppression.
+@10309    = ~The Binding Sash of the Black Raven is rumored to be a symbol of one of the disciples of the Black Raven monastery, a sanctuary located deep within the heart of the Spine of the World Mountains. According to legend, the Black Raven is a near mythical figure in Uthgardt legends, a punishing spirit from the underworld who emerged on the surface world many years ago to teach the barbarians humility and break their arrogance. Described as a dark-skinned man with burning eyes and bloodied chains hanging from his wrists, the stories that circle the Black Raven frequently tell of his epic struggles against slavers and injustice throughout the North and the southern kingdoms. Some historians speculate that the Black Raven may have been a drow or half-drow, but others claim that he was a minor or quasi-deity dedicated to ending slavery and oppression.
 
-This black sash is made of fine silk, perhaps spider silk, and it is worn looped around the waist.  While worn, it helps the wearer focus in combat, freeing his mind of all distractions and channeling his inner energies to defeat his foes.  When worn by any class other than a monk, it immediately unknots itself and falls to the ground. 
+This black sash is made of fine silk, perhaps spider silk, and it is worn looped around the waist. While worn, it helps the wearer focus in combat, freeing his mind of all distractions and channeling his inner energies to defeat his foes. When worn by any class other than a monk, it immediately unknots itself and falls to the ground. 
 
 
 STATISTICS:
@@ -1167,7 +1172,7 @@ In the evening, three farmers approached Behem's field and saw the farmer asleep
 
 STATISTICS:
 
-Constitution: +4 bonus
+Constitution: +4 bonus (stacks with other bonuses to Constitution)
 Special: When wearer is hit, there is a 30% chance that the attacker will be entangled for 1 round
 Weight: 3 lb.~
 @10330    = ~Chauntea's Cloak~
@@ -1177,7 +1182,7 @@ In the evening, three farmers approached Behem's field and saw the farmer asleep
 
 STATISTICS:
 
-Constitution: +6 bonus
+Constitution: +6 bonus (stacks with other bonuses to Constitution)
 Special: When wearer is hit, there is a 40% chance that the attacker will be entangled for 1 round. In addition, if the target fails a DC 30 Fortitude saving throw, it will be engulfed by the entangling plants, taking 3d4 bludgeoning damage over the round.
 Weight: 3 lb.~
 //@10332    = ~Mystra's Blessing~
@@ -1196,7 +1201,7 @@ Weight: 1 lb.~
 //@10336    = ~Nature's Vengeance~
 @10337    = ~The avengers are members of a special sect within a druidic order. They are devoted to fighting those who defile nature, and these cloaks were sometimes worn by members of their sect when embarking on their crusades against those who had inflicted grievous wounds upon the land. It is reported that several of these cloaks were worn by druids who followed the trail of the Dark Horde many long years ago during their attack on the elven fortress of the Severed Hand. The Horde had felled many trees and laid waste to vast sections of the North while building siege engines, and the avengers declared war on them, attempting to use turn the power of nature against its attackers. Although the avengers were eventually slain by an orcish clan along the Spine of the World, their cloaks remain and occasionally resurface across the North. 
 
-When worn by a druid, these cloaks have a chance of calling bright fire any enemy who dares to commit violence upon the wearer. It has blinded many a foe... only to have them die with an avenger's blade in their throat.  
+When worn by a druid, these cloaks have a chance of calling bright fire any enemy who dares to commit violence upon the wearer. It has blinded many a foe... only to have them die with an avenger's blade in their throat. 
 
 STATISTICS:
 
@@ -2063,7 +2068,7 @@ Resistance:
   20/-  Acid Resistance
 Weight: 10 lb.~
 //@10491    = ~Hide Armor~
-@10492    = ~Hide armor is made from multiple layers of leather armor.  Though stiff and hard to move in, it is relatively simple to make and provides a good barrier against cold weather.  It is most commonly seen on the warriors and huntsmen of northern barbarian tribes.
+@10492    = ~Hide armor is made from multiple layers of leather armor. Though stiff and hard to move in, it is relatively simple to make and provides a good barrier against cold weather. It is most commonly seen on the warriors and huntsmen of northern barbarian tribes.
 
 STATISTICS:
 
@@ -2279,9 +2284,46 @@ Special:
   Spell Power: Dispel party fatigue 1/day
 Weight: 10 lb.~
 @10529    = ~Chain of Drakkas +2~
-//@10530    = ~Item description can remain the same; if new description is needed put it here~
+@10530    = ~Drakkas Ranul was an outcast Moon Elf with a huge chip on his shoulder.  At a very young age, Drakkas was kidnapped by a Drow raiding party and brought up by the Drow to be a pit fighter.  At first he fought his fellow kidnap victims in the pits.  However, over time, his fellow abductees died from their wounds and poor treatment, thus leaving Drakkas alone to eventually fight monsters of the Drow's choosing.  Drakkas persevered, fueled by his ever-growing hatred for his captors, the hopes of one day escaping and then taking revenge on his kidnappers.
+
+One day Drakkas got his wish - he was able to escape by stealing his jail cell keys from his lazy night guard, and then stealthfully slipping out into the unforgiving Underdark.  He managed to steal a couple of scimitars on his way out, which he put to good use while circumventing the twisted corridors of the Underdark.  When he emerged on the surface, he immediately sought out his Moon Elf kin. 
+
+Unfortunately, when he found his kin, they ostracized him due to his horrendous battle scars.  Embittered and outcast, he made it his mission in life to exact the most painful revenge possible on his kidnappers.  Drakkas diligently trained in the dark magics, and continued his formidable weapons training as well.  When he got to the point where he felt he was ready, he began to sell his services as a mercenary to earn coin and buy better equipment.  One thing in particular he eventually wanted was lightweight chain mail that would not interfere with his spell casting.  Luck was with him the day he found a Dwarven armorsmith who could accommodate Drakkas' needs.  It was not long after until the armor was finished and Drakkas was ready for his mission of revenge.  
+
+Drakkas disappeared from the people who knew him and utilized his mercenary services, and ventured into the depths of the Underdark, where he was never heard from again.  However, his special armor did somehow make it out of the Underdark.  No one knows how, but speculation has it that the return of Drakkas' chain mail to the surface world was a subtle message from the Drow.  The message, of course, was left to the imagination of the interpreter. 
+
+STATISTICS:
+
+No Armor Proficiency Required
+Armor Bonus: +7
+Max Dex Bonus:  None
+Armor Check Penalty:  -0
+Arcane Spell Failure:  0%
+Special:
+  Spellcasting and Thieving abilities can be performed without penalties from wearing armor.
+  Attack Bonus: +2 bonus
+Weight: 5 lb.~
 @10531    = ~Chain of Drakkas' Fury +3~
-//@10532    = ~Item description can remain the same; if new description is needed put it here~
+@10532    = ~Drakkas Ranul was an outcast Moon Elf with a huge chip on his shoulder.  At a very young age, Drakkas was kidnapped by a Drow raiding party and brought up by the Drow to be a pit fighter.  At first he fought his fellow kidnap victims in the pits.  However, over time, his fellow abductees died from their wounds and poor treatment, thus leaving Drakkas alone to eventually fight monsters of the Drow's choosing.  Drakkas persevered, fueled by his ever-growing hatred for his captors, the hopes of one day escaping and then taking revenge on his kidnappers.
+
+One day Drakkas got his wish - he was able to escape by stealing his jail cell keys from his lazy night guard, and then stealthfully slipping out into the unforgiving Underdark.  He managed to steal a couple of scimitars on his way out, which he put to good use while circumventing the twisted corridors of the Underdark.  When he emerged on the surface, he immediately sought out his Moon Elf kin.
+
+Unfortunately, when he found his kin, they ostracized him due to his horrendous battle scars.  Embittered and outcast, he made it his mission in life to exact the most painful revenge possible on his kidnappers.  Drakkas diligently trained in the dark magics, and continued his formidable weapons training as well.  When he got to the point where he felt he was ready, he began to sell his services as a mercenary to earn coin and buy better equipment.  One thing in particular he eventually wanted was lightweight chain mail that would not interfere with his spell casting.  In addition, he wanted his chain mail to actually enhance his fighting abilities.  Luck was with him the day he found a Dwarven armorsmith who could accommodate Drakkas' needs.  It was not long after until the armor was finished and Drakkas was ready for his mission of revenge.  
+
+Drakkas disappeared from the people who knew him and utilized his mercenary services, and ventured into the depths of the Underdark, where he was never heard from again.  However, his special armor did somehow make it out of the Underdark.  No one knows how, but speculation has it that the return of Drakkas' chain mail to the surface world was a subtle message from the Drow.  The message, of course, was left to the imagination of the interpreter. 
+
+STATISTICS:
+
+No Armor Proficiency Required
+Armor Bonus: +8
+Max Dex Bonus:  None
+Armor Check Penalty:  -0
+Arcane Spell Failure:  0%
+Special:
+  Spellcasting and Thieving abilities can be performed without penalties from wearing armor.
+  Attack Bonus: +3 bonus
+  Speed: 1 additional attack per combat round
+Weight: 5 lb.~
 @10533    = ~Sanctity +1~
 @10534    = ~Maya Selvinis was a solitary half-elf ranger who lived on the outskirts of Neverwinter. Feeling different and un-whole due to her breeding, she rarely had any interaction with other people except when she was summoned to aid in a crisis. Although she did not care for the company of others, she was more than eager to aid those in peril. However, after helping others, she would quickly return to her solitary ways, despite the general tolerance exhibited by the locals in Neverwinter.
 
@@ -5057,11 +5099,25 @@ Type:  Two-handed~
 //@11021    = ~Saga of Wandering Sky~
 //@11022    = ~Item description can remain the same; if new description is needed put it here~
 //@11023    = ~Winged Blight~
-//@11024    = ~Item description can remain the same; if new description is needed put it here~
-//@11025    = ~Thunder's Shock~
-@11026    = ~This massive sword, fashioned to be wielded by a person of great strength, is as elegant as it is repulsive.  Though coated in metal, its blade has been reinforced with human bones.  Its hilt, and accompanying scabbard, have been stylishly made from tanned human flesh and skin.
+@11024    = ~This massive sword, presumably fashioned to be wielded by a person of great strength, is as elegant as it is repulsive. Though coated in metal, its blade has been reinforced with human bones. Furthermore its hilt, and accompanying scabbard, have been stylishly made from tanned human flesh and skin.
 
-Little is known about the origins of this weapon, but it is rumored to have been passed down from generation to generation by human Mulhorandi woman.  According to legend, whenever these women gave birth to a girl while being forced into slavery, they would, on the night of the first full moon, pray to the ancient pharaoh Tyrish for guidance.  Hearing their prayers, Tyrish would send "floating down from the heavens" this sword, and the woman would use it to severely disfigure their children.  Once the deed was done, the sword would float away as gracefully as it had arrived.  These children, now deemed undesirable by their slavers, would be sold for a quick profit, thus sparing them the horrors of slavery.
+Little is known about the origins of this sword, but Mulhorandi aristocrats have passed its rumor from generation to generation. According to legend, whenever a human Mulhorandi woman gave birth to a girl after having been forced into slavery, she would, on the night of the first full moon, pray to the ancient pharaoh Tyrish for guidance. Hearing her prayers, Tyrish would send "floating down from the heavens" this weapon, originally no larger than a stiletto, and the woman would use it to severely disfigure her child. Once the deed was done, the weapon would enlarge slightly before floating away as gracefully as it had arrived. These "marked" children, now deemed undesirable by their male overseers, would be allowed to purchase their freedom, thus sparing them the horrors of slavery. The scars inflicted upon these children - those physical in nature at least - would eventually heal over time.
+
+STATISTICS:
+
+Damage:  2d6 + 2
+Attack Bonus:  +2
+Enchantment:  +2
+Damage Type:  Slashing
+Special 
+  Bane: +3 Attack Bonus vs Humans and +2d6+3 Damage Bonus vs Humans
+Weight:  12 lb.
+Feat Requirement:  Martial Weapon, Great Sword
+Type:  Two-handed~
+//@11025    = ~Thunder's Shock~
+@11026    = ~This massive sword, fashioned to be wielded by a person of great strength, is as elegant as it is repulsive. Though coated in metal, its blade has been reinforced with human bones. Its hilt, and accompanying scabbard, have been stylishly made from tanned human flesh and skin.
+
+Little is known about the origins of this weapon, but it is rumored to have been passed down from generation to generation by human Mulhorandi woman. According to legend, whenever these women gave birth to a girl while being forced into slavery, they would, on the night of the first full moon, pray to the ancient pharaoh Tyrish for guidance. Hearing their prayers, Tyrish would send "floating down from the heavens" this sword, and the woman would use it to severely disfigure their children. Once the deed was done, the sword would float away as gracefully as it had arrived. These children, now deemed undesirable by their slavers, would be sold for a quick profit, thus sparing them the horrors of slavery.
 
 STATISTICS:
 
@@ -5070,7 +5126,7 @@ Attack Bonus:  +5
 Enchantment:  +5
 Damage Type:  Slashing
 Special 
-  Bane: +3 Attack Bonus vs Humans and +2d6+3 vs Humans
+  Bane: +3 Attack Bonus vs Humans and +2d6+3 Damage Bonus vs Humans
   Shocking Burst: +1d6 electrical damage and 10% chance of +1d10 extra electrical damage
 Weight:  12 lb.
 Feat Requirement:  Martial Weapon, Great Sword
@@ -5342,7 +5398,7 @@ Weight: 4 lb.
 Feat Requirement:  Simple Weapon, Quarterstaff
 Type:  Two-handed~
 //@11083    = ~Phaen's Ironshod Staff~
-@11084    = ~Phaen's oaken staff is capped with two iron bands of iron at the top and bottom, the bottom band carved to resemble the hoof of a horse or satyr, while the top band has been carved into a snarling bear with a spiked collar.  The staff carries a minor enchantment that allows the user to strike more accurately and allows the staff to harm creatures immune to normal weapons.
+@11084    = ~Phaen's oaken staff is capped with two iron bands of iron at the top and bottom, the bottom band carved to resemble the hoof of a horse or satyr, while the top band has been carved into a snarling bear with a spiked collar. The staff carries a minor enchantment that allows the user to strike more accurately and allows the staff to harm creatures immune to normal weapons.
 
 STATISTICS:
 
@@ -7964,7 +8020,7 @@ Weight: 7 lb.
 Feat Requirement:  Martial Weapon, Hammer
 Type:  One-handed~
 //@11591    = ~Craftsman's Hammer~
-@11592    = ~This heavy-headed hammer looks like it was used for construction on the Palisade, and it's possible that none of the workers were aware of its enchanted nature.  While this weapon is a little slower and heavier than a warhammer, its swing is true and does more damage when it hits.  A single tap from this hammer creates a clear, ringing note.
+@11592    = ~This heavy-headed hammer looks like it was used for construction on the Palisade, and it's possible that none of the workers were aware of its enchanted nature. While this weapon is a little slower and heavier than a warhammer, its swing is true and does more damage when it hits. A single tap from this hammer creates a clear, ringing note.
 
 STATISTICS:
 
@@ -9557,7 +9613,7 @@ Type:  One-handed~
 //@11893    = ~Sling of Pain +5~
 //@11894    = ~Item description can remain the same; if new description is needed put it here~
 //@11895    = ~Sling of Accuracy +5~
-@11896    = ~Slings have existed since the beginning of recorded history.  The basic sling consists of a leather or fabric strap with a pouch for holding the missile, however this one has been imbued with a small magical enchantment.  The weapon is held by both ends of the strap and twirled around the wielder's head.  When top speed is attained, the missile is launched by releasing one of the strap's ends.
+@11896    = ~Slings have existed since the beginning of recorded history. The basic sling consists of a leather or fabric strap with a pouch for holding the missile, however this one has been imbued with a small magical enchantment. The weapon is held by both ends of the strap and twirled around the wielder's head. When top speed is attained, the missile is launched by releasing one of the strap's ends.
 
 STATISTICS:
 
@@ -9618,7 +9674,7 @@ STATISTICS:
 Damage: +1 (missile)
 Attack Bonus: +1
 Special:
-  Dexterity: +2 bonus
+  Dexterity: +2 bonus (stacks with other bonuses to Dexterity)
 Weight: 0 lb.
 Feat Requirement:  Simple Weapon, Missile
 Type:  One-handed~
@@ -9630,7 +9686,7 @@ STATISTICS:
 Damage: +4 (missile)
 Attack Bonus: +4 
 Special:
-  Dexterity: +6 bonus
+  Dexterity: +6 bonus (stacks with other bonuses to Dexterity)
 Weight: 0 lb.
 Feat Requirement:  Simple Weapon, Missile
 Type:  One-handed~
@@ -10592,7 +10648,7 @@ It is suspected that either Craug drank the mixture too fast, or else Aznee had 
 
 When the loggers came to break down the dragon a day later, they discovered that Craum's bones still carried echoes of his coughing fits, and his entire skeleton creaked and wheezed, even after death. They struck a deal with a local mage, who bought the dragon's bones and fashioned a series of musical instruments with them, dubbed the "Pipes of the Wheezing Dragon."  These yellow bone pipes are famous throughout the Realms and, when used by a bard, they can be used to spit bursts of flames at opponents. Unfortunately, even when not in use, the pipes tend to creak and wheeze, attracting the attention of anyone nearby and making attempts at stealth and pick pocketing useless. 
 
-A thin cord made of dragon gut is strung through the pipes, so they can be worn around the neck and can be easily played when danger threatens. The cord looks charred, as if it was burned recently, and is surprisingly tough.   
+A thin cord made of dragon gut is strung through the pipes, so they can be worn around the neck and can be easily played when danger threatens. The cord looks charred, as if it was burned recently, and is surprisingly tough.  
 
 STATISTICS:
 
@@ -10616,7 +10672,7 @@ It is suspected that either Craug drank the mixture too fast, or else Aznee had 
 
 When the loggers came to break down the dragon a day later, they discovered that Craum's bones still carried echoes of his coughing fits, and his entire skeleton creaked and wheezed, even after death. They struck a deal with a local mage, who bought the dragon's bones and fashioned a series of musical instruments with them, dubbed the "Pipes of the Wheezing Dragon."  These yellow bone pipes are famous throughout the Realms and, when used by a bard, they can be used to spit bursts of flames at opponents. Unfortunately, even when not in use, the pipes tend to creak and wheeze, attracting the attention of anyone nearby and making attempts at stealth and pick pocketing useless. 
 
-A thin cord made of dragon gut is strung through the pipes, so they can be worn around the neck and can be easily played when danger threatens. The cord looks charred, as if it was burned recently, and is surprisingly tough.   
+A thin cord made of dragon gut is strung through the pipes, so they can be worn around the neck and can be easily played when danger threatens. The cord looks charred, as if it was burned recently, and is surprisingly tough.  
 
 STATISTICS:
 
@@ -11279,7 +11335,7 @@ Can set a creature's Spell Resistance to 24 for 20 rounds. Has no effect on enem
 Range: 100 ft.
 Weight: 1 lb.~
 //@12309    = ~Wand of Remove Paralysis~
-@12310    = ~This wand is striking, being crafted from solid silver.  At each end, a small glass globe rests within a four-armed silver prong.  When used, the wand duplicates the effects of the priest spell Remove Paralysis, curing paralysis, hold and stun.
+@12310    = ~This wand is striking, being crafted from solid silver. At each end, a small glass globe rests within a four-armed silver prong. When used, the wand duplicates the effects of the priest spell Remove Paralysis, curing paralysis, hold and stun.
 
 STATISTICS:
 
@@ -13316,7 +13372,7 @@ STATISTICS:
 Special: If the wearer stands still for 6 seconds without doing anything, they gain a single skin of Stoneskin (absorbing the next 10 points of physical damage from a +4 or lower weapon) for 8 hours
 Weight: 3 lb.~
 @12783    = ~Ring of Life~
-@12784    = ~A ring is a small band of precious metal that is used as jewelry.  Some rare rings have had enchantments placed upon them that confer various magical abilities.  These rings are highly sought after, especially by those of the adventuring profession. For no apparent reason, this ring feels warm to the touch.
+@12784    = ~A ring is a small band of precious metal that is used as jewelry. Some rare rings have had enchantments placed upon them that confer various magical abilities. These rings are highly sought after, especially by those of the adventuring profession. For no apparent reason, this ring feels warm to the touch.
 
 STATISTICS:
 
@@ -13654,9 +13710,37 @@ Weight:  3 lb.~
 
 STATISTICS:
 
-Improved Haste
-Teleport Step
+Constant Effect: Improved Haste while equipped
+Constant Effect: Teleport Step while equipped
 Weight: 1 lb.~
+@12855    = ~Boots of Arcane Evasion~
+@12856    = ~These boots grant the wearer the ability to dodge spells that normally cannot be dodged.
+
+STATISTICS:
+
+Arcane Evasion: If the wearer would be hit by an evocation or conjuration spell that normally deals damage without a save (such as Magic Missile, Melf's Acid Arrow or Ice Storm), the wearer can make a Reflex save for half damage. This works with Evasion or Improved Evasion.
+Weight: 1 lb.~
+@12857    = ~Boots of Mobile Regeneration~
+@12858    = ~Boots are normally hand-made by cobblers. Common boots are made by using a form, but good boots are designed for the foot of an individual.
+
+STATISTICS:
+
+Mobile Regeneration: While moving, the wearer regenerates 1 HP per second.
+Weight: 1 lb.~
+@12859    = ~Boots of Greater Dodging~
+@12860    = ~Boots are normally hand-made by cobblers. Common boots are made by using a form, but good boots are designed for the foot of an individual.
+
+STATISTICS:
+
+Generic Armor Bonus: +8
+Weight: 1 lb.~
+@12861    = ~Earplugs~
+@12862    = ~This is a pair of earplugs made of beeswax. The main practical application of earplugs is to protect against monsters such as harpies or sirens that sing magical songs in combat.
+
+STATISTICS:
+
+While equipped, the wearer is effectively deaf, which gives them a 20% chance of spell failure, but also makes them immune to sound-based spells and abilities such as Shout and harpy wails.
+Weight: 0 lb.~
 @12900    = ~Hrm - you are powerful allies, indeed. More gold and gems to line your pockets, then - also, a suit of plate armor, a warhammer, a helmet, all crafted and enchanted by great duergar artisans. They are well deserved, outsider.~
 @12901    = ~Drink this Rainwater Brew, Ennelia. It should help your condition.~
 @12902    = ~Drink this Sour Draught, Ennelia. It should help your condition.~

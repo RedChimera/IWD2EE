@@ -47,6 +47,7 @@ OUTER_PATCH creature_constants BEGIN
 	levelrogue=0x93
 	levelsorcerer=0x94
 	levelwizard=0x95
+	extraflags=0x1a4
 	teamscript=0x1ac
 	specialscript1=0x1b4
 	enchantmentlevel=0x1bc

@@ -434,6 +434,18 @@ COPY ~%mod_folder%/bam/USSTDRBI.bam~ ~override~
 COPY ~%mod_folder%/bam/USSTDRBJ.bam~ ~override~
 COPY ~%mod_folder%/bam/USSTDRBL.bam~ ~override~
 
+COPY ~Characters~ ~Characters~
+	PATCH_IF ~%SOURCE_EXT%~ STRING_EQUAL_CASE ~CHR~ BEGIN
+		READ_BYTE 0x2B0 thebardlevel
+		READ_LONG 0x826 thesongoffset
+		thesongoffset = thesongoffset + 0x224
+		READ_LONG 0x82A thesongcount
+		PATCH_IF thebardlevel = 1 AND thesongcount = 1 BEGIN
+			WRITE_LONG thesongoffset 0
+		END
+	END
+	BUT_ONLY_IF_IT_CHANGES
+
 // New descriptions for feats
 COPY_EXISTING ~feats.2da~ ~override~
   COUNT_2DA_COLS num_cols
@@ -692,7 +704,7 @@ LAF ADD_FEAT_IWD2 INT_VAR nameref=RESOLVE_STR_REF(@361) descref=RESOLVE_STR_REF(
 LAF ADD_FEAT_IWD2 INT_VAR nameref=RESOLVE_STR_REF(@363) descref=RESOLVE_STR_REF(@364) max=1 STR_VAR name=~ME_MASS_SPELL~ script=~Feats_MassSpell~ featspl_1=~USFMSSP1~ END
 LAF ADD_FEAT_IWD2 INT_VAR nameref=RESOLVE_STR_REF(@365) descref=RESOLVE_STR_REF(@366) max=2 STR_VAR name=~ME_MANYSHOT~ script=~Feats_Manyshot~ prerequisite_script=~Prereq_Manyshot~ featspl_1=~USFMNSH1~ END
 LAF ADD_FEAT_IWD2 INT_VAR nameref=RESOLVE_STR_REF(@373) descref=RESOLVE_STR_REF(@374) max=1 STR_VAR name=~ME_DEFENSIVE_ROLL~ script=~Feats_DefensiveRoll~ featspl_1=~USFDEFR1~ END
-LAF ADD_FEAT_IWD2 INT_VAR nameref=RESOLVE_STR_REF(@378) descref=RESOLVE_STR_REF(@379) max=3 STR_VAR name=~ME_DAMAGE_REDUCTION~ script=~Feats_DamageReduction~ prerequisite_script=~Prereq_DamageReduction~ featspl_1=~USFDAMR1~ END
+LAF ADD_FEAT_IWD2 INT_VAR nameref=RESOLVE_STR_REF(@378) descref=RESOLVE_STR_REF(@379) max=3 STR_VAR name=~ME_DAMAGE_REDUCTION~ script=~Feats_DamageReduction~ prerequisite_script=~Prereq_DamageReduction~ featspl_1=~USFDAMR1~ featspl_1=~USFDAMR1~ featspl_1=~USFDAMR1~ END
 LAF ADD_FEAT_IWD2 INT_VAR nameref=RESOLVE_STR_REF(@382) descref=RESOLVE_STR_REF(@383) max=5 STR_VAR name=~ME_ADVANCED_SPELL_CAPACITY~ script=~Feats_AdvancedSpellCapacity~ prerequisite_script=~Prereq_AdvancedSpellCapacity~ featspl_1=~USFIMSC1~ featspl_2=~USFIMSC2~ featspl_3=~USFIMSC3~ featspl_4=~USFIMSC4~ featspl_5=~USFIMSC5~ END
 // New descriptions for classes
 COPY_EXISTING ~help02.2da~ ~override~
@@ -783,6 +795,15 @@ COPY_EXISTING ~help03.2da~ ~override~
   SET_2DA_ENTRIES_NOW rows_out num_cols
 BUT_ONLY
 */
+
+COPY_EXISTING ~help03.2da~ ~override~
+	black_raven_order_name = RESOLVE_STR_REF(@566)
+	black_raven_order_description = RESOLVE_STR_REF(@567)
+	REPLACE_TEXTUALLY ~15\([ %TAB%]+[0-9]+[ %TAB%]+[0-9]+\)~ ~16\1~
+	REPLACE_TEXTUALLY ~14\([ %TAB%]+[0-9]+[ %TAB%]+[0-9]+\)~ ~15\1~
+	REPLACE_TEXTUALLY ~13\([ %TAB%]+[0-9]+[ %TAB%]+[0-9]+\)~ ~13	%black_raven_order_name%	%black_raven_order_description%
+14\1~
+
 /*
 COPY_EXISTING ~help04.2da~ ~override~
   COUNT_2DA_COLS num_cols
@@ -1527,7 +1548,7 @@ COPY_EXISTING ~USFEINT.spl~ ~override~
   SAY UNIDENTIFIED_DESC @918
   SAY IDENTIFIED_DESC @918
 
-COPY_EXISTING ~USGRAPP.spl~ ~override~
+COPY_EXISTING ~USGRAPP.spl~ ~override~ ~USGRAPPD.spl~ ~override~
   SAY NAME1 @919
   SAY NAME2 @919
   SAY UNIDENTIFIED_DESC @919
@@ -2353,5 +2374,9 @@ COPY_EXISTING ~LISTINNT.2da~ ~override~
 	numrows += 1
 	lastindex += 1
 	INSERT_2DA_ROW numrows 2 ~%lastindex% USDUEREN~
+
+COPY_EXISTING_REGEXP ~52MNK[FM].*\.cre~ ~override~ ~52ARUMA.cre~ ~override~ ~52BERED.cre~ ~override~ ~52MOROHE.cre~ ~override~ ~52NONIN.cre~ ~override~ ~52SALISA.cre~ ~override~ ~52SALISX.cre~ ~override~ ~52SERSA.cre~ ~override~ ~52SVALTI.cre~ ~override~ ~63FORMIS.cre~ ~override~ ~63MNK[FM].*\.cre~ ~override~ ~67ORMIS.cre~ ~override~ ~67ORMISL.cre~ ~override~
+		LPF IWD2_ADD_CRE_EFFECT INT_VAR opcode=500 target=1 timing=9 parameter1=RESOLVE_STR_REF(@566) parameter2=6 STR_VAR resource=~MECLSNAM~ END
+		LPF IWD2_ADD_CRE_EFFECT INT_VAR opcode=288 target=1 timing=9 parameter2=225 STR_VAR resource=~USBLARV~ END
 
 INCLUDE ~%mod_folder%/components/final_patches.tpa~

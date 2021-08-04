@@ -301,6 +301,10 @@ Inspired by Weimer's similar component from IWD2-Ease, this component patches ev
 
 Race Revisions gives some new abilities to certain races, to make them fit their archetypes better. For example, lightfoot halflings gain their Dexterity modifier (if higher than their Strength modifier) to the damage of slings and other throwing weapons. Rock gnomes gain a bonus to Intelligence rather than Constitution.
 
+## Revise racial level adjustment/ECL
+
+This component makes it so rather than certain subraces being one or more "levels behind" other characters, they get a certain penalty to XP. In practice, this means that these subraces don't level up that much slower than other characters early on, though at very high levels they lag behind a more.
+
 ## Enemies give the same amount of experience regardless of the party's level
 
 This component makes killing enemies give the same amount of experience no matter the party's level. This way, leveling up doesn't come with the dissatifaction of enemies giving less experience, and there's no incentive to delay leveling up to increase experience gain. There are two options: either you can have enemies give experience equal to 25 \* their challenge rating (a six-character party will reach about level 15 by the end of the game), or it can be 35 \* their challenge rating (a six-character party will reach about level 18 by the end of the game).

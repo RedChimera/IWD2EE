@@ -74,6 +74,7 @@
 158 ChangeGender(O:Object*,I:Value*Gender)
 159 ChangeAlignment(O:Object*,I:Value*Align)
 160 ApplySpell(O:Target,I:Spell*Spell)
+160 ApplySpellRES(S:RES*,O:Target)
 161 IncrementChapter(I:STRREF*)
 162 ReputationSet(I:Reputation*)
 163 ReputationInc(I:Reputation*)

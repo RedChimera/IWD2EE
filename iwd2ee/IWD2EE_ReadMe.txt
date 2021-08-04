@@ -280,11 +280,15 @@ This component makes it so one only has to beat a rank once (with 3 or more squa
 
 --Minor Damage Resistance for Armor and Shields--
 
-Inspired by Weimer's similar component from IWD2-Ease, this component patches every armor and shield in the game so they give physical damage resistance equal to half their Armor Class bonus, rounded down. 
+Inspired by Weimer's similar component from IWD2-Ease, this component patches every armor and shield in the game so they give physical damage resistance equal to half their Armor Class bonus, rounded down.
 
 --Race Revisions--
 
 Race Revisions gives some new abilities to certain races, to make them fit their archetypes better. For example, lightfoot halflings gain their Dexterity modifier (if higher than their Strength modifier) to the damage of slings and other throwing weapons. Rock gnomes gain a bonus to Intelligence rather than Constitution.
+
+--Revise racial level adjustment/ECL--
+
+This component makes it so rather than certain subraces being one or more "levels behind" other characters, they get a certain penalty to XP. In practice, this means that these subraces don't level up that much slower than other characters early on, though at very high levels they lag behind a more.
 
 --Enemies give the same amount of experience regardless of the party's level--
 

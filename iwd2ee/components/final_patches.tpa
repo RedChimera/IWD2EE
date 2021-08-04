@@ -297,6 +297,25 @@ COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
 	WRITE_LONG 0x1A8 0
 	BUT_ONLY_IF_IT_CHANGES
 
+COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
+	READ_BYTE race therace
+	READ_BYTE subrace thesubrace
+	READ_BYTE alignment thealignment
+	READ_BYTE levelcleric theclericlevel
+	READ_LONG kit thekit
+	READ_LONG animation theanimation
+	PATCH_IF (theanimation = 59337 OR theanimation = 60184 OR theanimation = 60217 OR theanimation = 60233 OR theanimation = 60681 OR theanimation = 60712 OR theanimation = 61197 OR theanimation = 61213) OR therace = 168 OR therace = 182 OR therace = 183 OR therace = 184 OR therace = 185 OR (theclericlevel > 0 AND (thekit BAND 0x00200000) = 0x00200000) BEGIN
+		READ_LONG extraflags theextraflags
+		theextraflags|=0x200000
+		WRITE_LONG extraflags theextraflags
+	END
+	BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING_REGEXP ~53ELDERB.cre~ ~override~ ~53IMPHRA.cre~ ~override~ ~53MAJRAS.cre~ ~override~ ~53MIRABE.cre~ ~override~ ~6[27]REDWI.*\.cre~ ~override~ ~62SAABL.*\.cre~ ~override~ ~63BUVAI.cre~ ~override~ ~63FYNNE.cre~ ~override~ ~63TASHA.cre~ ~override~ ~63VESE.cre~ ~override~ ~63THAYM.*\.cre~ ~override~
+	READ_LONG extraflags theextraflags
+	theextraflags|=0x200000
+	WRITE_LONG extraflags theextraflags
+
 COPY_EXISTING ~USSIMULA.cre~ ~override~
 	WRITE_LONG 0x1A4 0x400000
 	IF_EXISTS

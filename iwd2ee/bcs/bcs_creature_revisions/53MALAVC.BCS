@@ -22,7 +22,7 @@ CR
 CR
 CO
 TR
-16633 0 0 0 0 "return IEex_CheckHeightBelow(10)" "" OB
+16633 0 0 0 0 "return IEex_CheckHeightBelow(-20)" "" OB
 0 0 0 0 0 0 0 0 0 0 0 0 0 [-1.-1.-1.-1] "" 0 0 OB
 TR
 TR

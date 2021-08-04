@@ -87,6 +87,22 @@ COPY_EXISTING ~IEex_TRA.lua~ ~override~
 	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_tra_55599 *=.*~ ~ex_tra_55599 = %ex_tra_55599%~
 	ex_tra_55701 = RESOLVE_STR_REF(@55701)
 	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_tra_55701 *=.*~ ~ex_tra_55701 = %ex_tra_55701%~
+	ex_tra_55801 = RESOLVE_STR_REF(@55801)
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_tra_55801 *=.*~ ~ex_tra_55801 = %ex_tra_55801%~
+	ex_tra_55802 = RESOLVE_STR_REF(@55802)
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_tra_55802 *=.*~ ~ex_tra_55802 = %ex_tra_55802%~
+	ex_tra_55803 = RESOLVE_STR_REF(@55803)
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_tra_55803 *=.*~ ~ex_tra_55803 = %ex_tra_55803%~
+	ex_tra_55804 = RESOLVE_STR_REF(@55804)
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_tra_55804 *=.*~ ~ex_tra_55804 = %ex_tra_55804%~
+	ex_tra_55805 = RESOLVE_STR_REF(@55805)
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_tra_55805 *=.*~ ~ex_tra_55805 = %ex_tra_55805%~
+	ex_tra_55806 = RESOLVE_STR_REF(@55806)
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_tra_55806 *=.*~ ~ex_tra_55806 = %ex_tra_55806%~
+	ex_tra_55807 = RESOLVE_STR_REF(@55807)
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_tra_55807 *=.*~ ~ex_tra_55807 = %ex_tra_55807%~
+	ex_tra_55808 = RESOLVE_STR_REF(@55808)
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_tra_55808 *=.*~ ~ex_tra_55808 = %ex_tra_55808%~
 	SPRINT ex_str_level @55000
 	REPLACE_TEXTUALLY ~ex_str_level *=.*~ ~ex_str_level = "%ex_str_level%"~
 	SPRINT ex_str_barbarian @55001
@@ -1046,3 +1062,10 @@ COPY_EXISTING_REGEXP ~.*\.are~ ~override~
 
 COPY_EXISTING ~60KHREE.cre~ ~override~ ~63FORMIS.cre~ ~override~ ~65MNK.cre~ ~override~ ~66MNK.cre~ ~override~ ~66MNK1.cre~ ~override~ ~66MNK2.cre~ ~override~ ~66MORVYN.cre~ ~override~ ~67ORMIS.cre~ ~override~
 	WRITE_LONG animation 25856
+
+COPY_EXISTING_REGEXP ~.*\.bcs~ ~override~
+	DECOMPILE_AND_PATCH BEGIN
+		REPLACE_TEXTUALLY CASE_SENSITIVE ~PickPocketFailed.*~ ~GlobalGT("IEEX_PICK_POCKET_FAILED","LOCALS",0)~
+	END
+	IF ~93 0 0 0 0~
+	BUT_ONLY_IF_IT_CHANGES

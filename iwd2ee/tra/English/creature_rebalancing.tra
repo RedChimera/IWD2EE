@@ -124,6 +124,14 @@ Weight:  0 lb.~
 @23061=~10 damage resisted from non-good, non-cold-iron weapon~
 @23062=~15 damage resisted from non-good, non-cold-iron weapon~
 @23063=~20 damage resisted from non-good, non-cold-iron weapon~
+@23064=~YOU KNOW MY NAME?!~
+@23065=~Aeij-Kllenzr't, I invoke your true name, Caged Fury, and command you to come out from the altar and face us in battle!~
+@23066=~Yes, I do, apparently.  Farewell.~
+@23067=~*THAT* IS ALL YOU ARE WILLING TO DO WITH MY TRUE NAME?  VERY WELL!  IT IS TIME FOR A DEMONSTRATION OF MY POWER!~
+@23068=~WHO ARE *YOU* TO SPEAK TO A GODDESS IN THAT MANNER?!  I WILL PUNISH YOUR HUBRIS RIGHT HERE AND NOW!~
+@23069=~You defeated Aeij-Kllenzr't, banishing him from Auril's altar.~
+@23070=~As Aeij-Kllenzr't dies, you feel a rush of energy through your bodies, giving you a burst of health and vitality - and additional resistance to electrical attacks.~
+@23071=~We found one of Auril's altars in a secluded room on the bottom floor of the ice temple.  The altar contained the spirit of a tempest named Aeij-Kllenzr't who was pretending to be Auril, and we banished him from it by invoking his true name, Caged Fury.~
 
 @24002=~Call Slayer Knights~
 @24003=~Call Gelugon~
@@ -141,3 +149,4 @@ Weight:  0 lb.~
 @24016=~Hellfireball~
 @24018=~Lower Electricity Resistance~
 @24019=~Dark Thorn Growth~
+@24020=~Chilling Gaze~

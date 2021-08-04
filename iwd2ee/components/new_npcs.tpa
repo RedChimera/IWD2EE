@@ -816,7 +816,7 @@ COPY_EXISTING ~52SERSA.cre~ ~override~
 	WRITE_LONG feats1 0xC0012100
 	READ_LONG feats2 ulgiash
 	ulgiash|=0x8000
-	ulgiash&=0x10000
+	ulgiash&=0xFFFEFFFF
 	WRITE_LONG feats2 ulgiash
 	WRITE_LONG feats3 0x8
 	WRITE_BYTE proficiencymissile 1
@@ -837,7 +837,6 @@ COPY_EXISTING ~52SERSA.cre~ ~override~
 	LPF	IWD2_CRE_ABILITY INT_VAR num=1 STR_VAR resource=~SPIN272~ END
 	LPF	IWD2_CRE_ABILITY INT_VAR num=1 STR_VAR resource=~SPIN274~ END
 	LPF	IWD2_CRE_ABILITY INT_VAR num=1 STR_VAR resource=~SPIN275~ END
-
 
 COPY_EXISTING ~10BLACK.cre~ ~override/USGEOF.cre~ ~10REIG.cre~ ~override/USREIG.cre~ ~11VEIRA.cre~ ~override/USVEIR.cre~ ~20EMMA.cre~ ~override/USEMMA.cre~ ~20VREK.cre~ ~override/USVREK.cre~ ~30GOBVUN.cre~ ~override/USVUNA.cre~ ~41XHAAN.cre~ ~override/USXHAA.cre~ ~41ZACK.cre~ ~override/USZACK.cre~ ~50PAIRI.cre~ ~override/USPAIR.cre~ ~52SERSA.cre~ ~override/USSERS.cre~
 	WRITE_BYTE luck 0

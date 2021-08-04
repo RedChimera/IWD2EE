@@ -1030,7 +1030,19 @@ end
 ------------------
 -- Thread: Both --
 ------------------
-
+ex_class_name_strings = {
+{34},
+{1083},
+{1079, 38097, 38098, 38099, 38100, 38101, 38102, 38103, 38106, 38107},
+{1080},
+{10174},
+{33, 36877, 36878, 36879},
+{1078, 36875, 36872, 36873},
+{1077},
+{1082},
+{32, 40352},
+{9987, 502, 504, 2012, 2022, 3015, 2862, 12744, 12745},
+}
 ex_current_record_hand = 1
 function IEex_Extern_OnUpdateRecordDescription(CScreenCharacter, CGameSprite, CUIControlEditMultiLine, m_plstStrings)
 	IEex_AssertThread(IEex_Thread.Both, true)
@@ -1057,6 +1069,8 @@ function IEex_Extern_OnUpdateRecordDescription(CScreenCharacter, CGameSprite, CU
 	local rangedString = IEex_FetchString(41123)
 	local numberOfAttacksString = IEex_FetchString(9458)
 	local criticalHitString = IEex_FetchString(41122)
+	local favoredClassString = IEex_FetchString(40310)
+	local lookForClassNames = (descPanelNum == 0)
 	IEex_IterateCPtrList(m_plstStrings, function(lineEntry)
 		local line = IEex_ReadString(IEex_ReadDword(lineEntry + 0x4))
 
@@ -1065,7 +1079,27 @@ function IEex_Extern_OnUpdateRecordDescription(CScreenCharacter, CGameSprite, CU
 		elseif string.match(line, offhandString) then
 			ex_current_record_hand = 2
 		end
-		if string.match(line, sneakAttackDamageString .. ":") then
+		if lookForClassNames then
+			IEex_IterateActorEffects(targetID, function(eData)
+				local theopcode = IEex_ReadDword(eData + 0x10)
+				local theresource = IEex_ReadLString(eData + 0x30, 8)
+				if theopcode == 500 and theresource == "MECLSNAM" then
+					local theparameter1 = IEex_ReadDword(eData + 0x1C)
+					local theparameter2 = IEex_ReadDword(eData + 0x20)
+					local found_it = false
+					for k, v in ipairs(ex_class_name_strings[theparameter2]) do
+						local classString = IEex_FetchString(v)
+						if not found_it and string.match(line, classString .. ":") then
+							found_it = true
+							line = string.gsub(line, classString, IEex_FetchString(theparameter1))
+						end
+					end
+				end
+			end)
+			if string.match(line, favoredClassString) then
+				lookForClassNames = false
+			end
+		elseif string.match(line, sneakAttackDamageString .. ":") then
 			local rogueLevel = IEex_GetActorStat(targetID, 104)
 			local sneakAttackDiceNumber = math.floor((rogueLevel + 1) / 2) + IEex_ReadByte(creatureData + 0x744 + ex_feat_name_id["ME_IMPROVED_SNEAK_ATTACK"], 0x0)
 			if IEex_GetActorSpellState(targetID, 192) then

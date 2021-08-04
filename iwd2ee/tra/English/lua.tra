@@ -287,3 +287,12 @@
 @55754=~Press Z to reroll, X to store, and C to recall.\n\n~
 @55755=~Click the plus button on an ability score to allocate the highest remaining number to that ability score. Click the minus button to unallocate the number.\n\n~
 @55756=~Next Ability Score~
+
+@55801=~Pick pocket successful and was not detected~
+@55802=~Pick pocket successful but was detected~
+@55803=~Pick pocket failed but was not detected~
+@55804=~Pick pocket failed and was detected~
+@55805=~Pick pocket failed because target has nothing to steal, but you were not detected~
+@55806=~Pick pocket failed because target has nothing to steal, and you were detected~
+@55807=~Pick pocket failed because target has nothing you can steal with your current skill level, but you were not detected~
+@55808=~Pick pocket failed because target has nothing you can steal with your current skill level, and you were detected~

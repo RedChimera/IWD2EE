@@ -924,7 +924,7 @@ This spell creates a corporeal barrier around the target's body by tapping into 
 (Conjuration) 
 Level: Drd 6, Rgr 6, Sor/Wiz 6
 Range: Sight of Caster
-Duration: 5 rounds / level
+Duration: 2 rounds / level
 Casting Time: 6
 Area of Effect: Special 
 Saving Throw: None 
@@ -2616,6 +2616,8 @@ Launcher:  Bow~
 @30065=~Skeleton Bomb~
 @30066=~Explode~
 @30067=~Imbued Spell~
+@30068=~Deva~
+@30069=~Stunning Mace of Disruption +3~
 
 @31105     = ~Entangle~
 @32105     = ~Entangle
@@ -3597,6 +3599,17 @@ Area of Effect: 15-foot radius
 Saving Throw: None
 
 A more powerful version of the spell Whirlwind, the spell creates a tornado at the target point that moves randomly. Creatures that come within 15 feet of the tornado get sucked up into it, taking 3d8 slashing damage per second that they stay inside it. Creatures are usually ejected from the tornado after about a round. Huge creatures such as frost giants and dragons aren't sucked up into the tornado but still take damage while in the area of effect. Only one tornado may be active at a time. This spell can only be cast outdoors.~
+@35957     = ~Summon Deva~
+@36957     = ~Summon Deva
+(Conjuration)
+Level: Clr 9
+Range: Sight of Caster
+Duration: 50 rounds
+Casting Time: 12
+Area of Effect: Special
+Saving Throw: None
+
+This spell summons an angelic deva to assist the party. The deva has a variety of priest spells, can fly, and wields a mace that forces creatures it hits to make a Fortitude save or be stunned. The party can only summon one deva per 8 hours. This spell may only be cast by good characters.~
 @37151     = ~True Strike~
 @38151     = ~True Strike
 (Divination) 

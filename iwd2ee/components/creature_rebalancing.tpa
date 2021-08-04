@@ -248,6 +248,10 @@ COPY_EXISTING ~usms019.spl~ ~override~
 	SAY NAME1 @24019
 	SAY NAME2 @24019
 
+COPY_EXISTING ~usms020.spl~ ~override~
+	SAY NAME1 @24020
+	SAY NAME2 @24020
+
 COPY_EXISTING ~sppr114.spl~ ~override/usip114.spl~ ~sppr250.spl~ ~override/usip250.spl~ ~sppr302.spl~ ~override/usip302.spl~ ~sppr350.spl~ ~override/usip350.spl~ ~sppr428.spl~ ~override/usip428.spl~ ~sppr517.spl~ ~override/usip517.spl~ ~sppr602.spl~ ~override/usip602.spl~ ~sppr704.spl~ ~override/usip704.spl~ ~sppr729.spl~ ~override/usip729.spl~ ~spwi211.spl~ ~override/usiw211.spl~ ~spwi220.spl~ ~override/usiw220.spl~ ~spwi316.spl~ ~override/usiw316.spl~ ~spwi318.spl~ ~override/usiw318.spl~ ~spwi404.spl~ ~override/usiw404.spl~ ~spwi405.spl~ ~override/usiw405.spl~ ~spwi411.spl~ ~override/usiw411.spl~ ~spwi419.spl~ ~override/usiw419.spl~ ~spwi424.spl~ ~override/usiw424.spl~ ~spwi504.spl~ ~override/usiw504.spl~ ~spwi507.spl~ ~override/usiw507.spl~ ~spwi509.spl~ ~override/usiw509.spl~ ~spwi605.spl~ ~override/usiw605.spl~ ~spwi612.spl~ ~override/usiw612.spl~ ~spwi615.spl~ ~override/usiw615.spl~ ~spwi617.spl~ ~override/usiw617.spl~ ~spwi705.spl~ ~override/usiw705.spl~ ~spwi708.spl~ ~override/usiw708.spl~ ~spwi808.spl~ ~override/usiw808.spl~ ~spwi810.spl~ ~override/usiw810.spl~ ~spwi910.spl~ ~override/usiw910.spl~
 	WRITE_SHORT 0x1c 2
 //	LPF ALTER_SPELL_HEADER INT_VAR location=4 END
@@ -864,6 +868,78 @@ COPY_EXISTING ~31BUGGUT.cre~ ~override~
 	END
 	LPF ADD_CRE_EXTENDED_FEAT INT_VAR points=2 STR_VAR name=~ME_KNOCKDOWN~ END
 
+COPY_EXISTING ~00SDYET.cre~ ~override~ ~00SSHYET.cre~ ~override~ ~00SSYET.cre~ ~override~ ~00SYETI.cre~ ~override~ ~41SDYET.cre~ ~override~
+	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelfighter=6 END
+	WRITE_SHORT armorclass 15
+	WRITE_BYTE strength 19
+	WRITE_BYTE constitution 17
+	READ_LONG feats2 ulgiash
+	ulgiash|=0x2000000
+	WRITE_LONG feats2 ulgiash
+	WRITE_BYTE proficiencysmallblade 3
+	WRITE_ASCII specialscript2 ~USYETI~ #8
+	LPF	IWD2_ADD_CRE_ITEM INT_VAR equip=1 STR_VAR item=~USCWYETI~ slot=~weapon1~ mode=~replace~ END
+
+COPY_EXISTING ~40YETITU.cre~ ~override~ ~40RYETIT.cre~ ~override~
+	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelfighter=4 newlevelrogue=3 END
+	WRITE_SHORT currenthp 56
+	WRITE_SHORT maxhp 56
+	WRITE_SHORT armorclass 15
+	WRITE_BYTE strength 19
+	WRITE_BYTE constitution 17
+	READ_LONG feats2 ulgiash
+	ulgiash|=0x2000000
+	WRITE_LONG feats2 ulgiash
+	WRITE_BYTE proficiencysmallblade 3
+	WRITE_BYTE challengerating 8
+	WRITE_ASCII specialscript2 ~USYETI~ #8
+	LPF	IWD2_ADD_CRE_ITEM INT_VAR equip=1 STR_VAR item=~USCWYETI~ slot=~weapon1~ mode=~replace~ END
+
+COPY_EXISTING ~52YETTU.cre~ ~override~ ~52YETTUR.cre~ ~override~ ~52YETUH.cre~ ~override~
+	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelfighter=5 newlevelrogue=5 END
+	WRITE_SHORT currenthp 72
+	WRITE_SHORT maxhp 72
+	WRITE_SHORT armorclass 16
+	WRITE_BYTE strength 21
+	WRITE_BYTE constitution 19
+	READ_LONG feats2 ulgiash
+	ulgiash|=0x2000000
+	WRITE_LONG feats2 ulgiash
+	WRITE_BYTE proficiencysmallblade 3
+	WRITE_BYTE challengerating 10
+	WRITE_ASCII specialscript2 ~USYETI~ #8
+	LPF	IWD2_ADD_CRE_ITEM INT_VAR equip=1 STR_VAR item=~USCWYETI~ slot=~weapon1~ mode=~replace~ END
+
+COPY_EXISTING ~52YETGH.cre~ ~override~ ~52YETTG.cre~ ~override~ ~52YETTGR.cre~ ~override~
+	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelbarbarian=7 newlevelfighter=5 END
+	WRITE_SHORT currenthp 96
+	WRITE_SHORT maxhp 96
+	WRITE_SHORT armorclass 16
+	WRITE_BYTE strength 22
+	WRITE_BYTE constitution 20
+	READ_LONG feats2 ulgiash
+	ulgiash|=0x2000000
+	WRITE_LONG feats2 ulgiash
+	WRITE_BYTE proficiencysmallblade 3
+	WRITE_BYTE challengerating 12
+	WRITE_ASCII specialscript2 ~USYETI~ #8
+	LPF	IWD2_ADD_CRE_ITEM INT_VAR equip=1 STR_VAR item=~USCWYETI~ slot=~weapon1~ mode=~replace~ END
+
+COPY_EXISTING ~50ABOMIN.cre~ ~override~
+	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelbarbarian=15 STR_VAR updatehp=~max~ END
+	WRITE_SHORT armorclass 25
+	WRITE_BYTE strength 29
+	WRITE_BYTE dexterity 21
+	WRITE_BYTE constitution 24
+	READ_LONG feats2 ulgiash
+	ulgiash|=0x2000000
+	WRITE_LONG feats2 ulgiash
+	WRITE_BYTE proficiencysmallblade 2
+	WRITE_BYTE challengerating 16
+	WRITE_ASCII specialscript2 ~USYETI~ #8
+	LPF	IWD2_ADD_CRE_ITEM INT_VAR equip=1 STR_VAR item=~USCWAYET~ slot=~weapon1~ mode=~replace~ END
+	LPF	IWD2_ADD_CRE_ITEM INT_VAR equip=0 STR_VAR item=~USCWHFWB~ slot=~weapon2~ mode=~replace~ END
+
 COPY_EXISTING ~21VERB.cre~ ~override~
 	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelbarbarian=5 STR_VAR updatehp=~max~ END
 	WRITE_SHORT armorclass 11
@@ -1386,11 +1462,12 @@ COPY_EXISTING ~41DOOMGD.cre~ ~override~
 	WRITE_BYTE slashingresistance 5
 	WRITE_BYTE piercingresistance 5
 	WRITE_BYTE bludgeoningresistance 5
-	WRITE_BYTE missileresistance 5
-	WRITE_BYTE spellresistance 22
+	WRITE_BYTE missileresistance 10
+	WRITE_BYTE bludgeoningresistance 5
+	WRITE_BYTE spellresistance 12
 	WRITE_BYTE magicdamageresistance 100
 	WRITE_BYTE proficiencylargesword 3
-	WRITE_BYTE enchantmentlevel 2
+	WRITE_BYTE enchantmentlevel 1
 	READ_LONG feats2 ulgiash
 	ulgiash|=0x100800
 	WRITE_LONG feats2 ulgiash
@@ -1402,11 +1479,13 @@ COPY_EXISTING ~41VRASSI.cre~ ~override~
 	WRITE_BYTE slashingresistance 10
 	WRITE_BYTE piercingresistance 10
 	WRITE_BYTE bludgeoningresistance 10
-	WRITE_BYTE missileresistance 15
-	WRITE_BYTE spellresistance 22
+	WRITE_BYTE missileresistance 10
+	WRITE_BYTE fireresistance 10
+	WRITE_BYTE coldresistance 10
+	WRITE_BYTE spellresistance 14
 	WRITE_BYTE magicdamageresistance 100
 	WRITE_BYTE proficiencymace 3
-	WRITE_BYTE enchantmentlevel 2
+	WRITE_BYTE enchantmentlevel 1
 	READ_LONG feats2 ulgiash
 	ulgiash|=0x500100
 	WRITE_LONG feats2 ulgiash
@@ -1425,7 +1504,8 @@ COPY_EXISTING ~41RENGAR.cre~ ~override~
 	LPF	IWD2_REMOVE_SPELLS_KNOWN STR_VAR class=~paladin~ END
 	LPF	IWD2_REMOVE_CRE_ITEM STR_VAR item=~00CISHLC~ END
 	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~paladin~ resource=~SPPR425~ END
-	LPF	IWD2_ADD_CRE_ITEM INT_VAR equip=1 STR_VAR item=~USCIFP01~ slot=~armor~ mode=~replace~ END
+	LPF	IWD2_ADD_CRE_ITEM INT_VAR equip=0 STR_VAR item=~USCIFP01~ slot=~armor~ mode=~replace~ END
+	LPF	IWD2_ADD_CRE_ITEM INT_VAR equip=0 STR_VAR item=~USPS3~ slot=~boots~ mode=~replace~ END
 
 COPY_EXISTING ~41RENGAR.cre~ ~override/USBIKNIG.cre~
 	SAY NAME1 @23012
@@ -5011,6 +5091,113 @@ STRING_SET 36761 @23019
 STRING_SET 36764 @23022
 STRING_SET 37653 @23023
 STRING_SET 28505 @23025
+STRING_SET 18557 @23071
+
+OUTER_SET ref_23069 = RESOLVE_STR_REF(@23069)
+OUTER_SET ref_23070 = RESOLVE_STR_REF(@23070)
+
+COMPILE ~%mod_folder%/dlg/dlg_creature_revisions/41ALTAR.d~
+
+<<<<<<<< .../script.baf
+IF
+	Global("US_CagedFuryDeadSpecial","GLOBAL",1)
+	Global("CagedFury_dead","GLOBAL",0)
+THEN
+	RESPONSE #100
+		SetGlobal("CagedFury_dead","GLOBAL",1)
+		AddXpVar("Level_8_Very_Hard",%ref_23069%)
+		Continue()
+END
+
+IF
+	Global("US_CagedFuryDeadSpecial","GLOBAL",1)
+	Global("US_CagedFuryPlayer1","MYAREA",0)
+	Exists(Player1)
+THEN
+	RESPONSE #100
+		SetGlobal("US_CagedFuryPlayer1","MYAREA",1)
+		ActionOverride(Player1,ChangeStat(Player1,MAXHITPOINTS,5,ADD))
+		ActionOverride(Player1,ChangeStat(Player1,RESISTELECTRICITY,5,ADD))
+		Continue()
+END
+
+IF
+	Global("US_CagedFuryDeadSpecial","GLOBAL",1)
+	Global("US_CagedFuryPlayer2","MYAREA",0)
+	Exists(Player1)
+THEN
+	RESPONSE #100
+		SetGlobal("US_CagedFuryPlayer2","MYAREA",1)
+		ActionOverride(Player2,ChangeStat(Player2,MAXHITPOINTS,5,ADD))
+		ActionOverride(Player2,ChangeStat(Player2,RESISTELECTRICITY,5,ADD))
+		Continue()
+END
+
+IF
+	Global("US_CagedFuryDeadSpecial","GLOBAL",1)
+	Global("US_CagedFuryPlayer3","MYAREA",0)
+	Exists(Player1)
+THEN
+	RESPONSE #100
+		SetGlobal("US_CagedFuryPlayer3","MYAREA",1)
+		ActionOverride(Player3,ChangeStat(Player3,MAXHITPOINTS,5,ADD))
+		ActionOverride(Player3,ChangeStat(Player3,RESISTELECTRICITY,5,ADD))
+		Continue()
+END
+
+IF
+	Global("US_CagedFuryDeadSpecial","GLOBAL",1)
+	Global("US_CagedFuryPlayer4","MYAREA",0)
+	Exists(Player1)
+THEN
+	RESPONSE #100
+		SetGlobal("US_CagedFuryPlayer4","MYAREA",1)
+		ActionOverride(Player4,ChangeStat(Player4,MAXHITPOINTS,5,ADD))
+		ActionOverride(Player4,ChangeStat(Player4,RESISTELECTRICITY,5,ADD))
+		Continue()
+END
+
+IF
+	Global("US_CagedFuryDeadSpecial","GLOBAL",1)
+	Global("US_CagedFuryPlayer5","MYAREA",0)
+	Exists(Player1)
+THEN
+	RESPONSE #100
+		SetGlobal("US_CagedFuryPlayer5","MYAREA",1)
+		ActionOverride(Player5,ChangeStat(Player5,MAXHITPOINTS,5,ADD))
+		ActionOverride(Player5,ChangeStat(Player5,RESISTELECTRICITY,5,ADD))
+		Continue()
+END
+
+IF
+	Global("US_CagedFuryDeadSpecial","GLOBAL",1)
+	Global("US_CagedFuryPlayer6","MYAREA",0)
+	Exists(Player1)
+THEN
+	RESPONSE #100
+		SetGlobal("US_CagedFuryPlayer6","MYAREA",1)
+		ActionOverride(Player6,ChangeStat(Player6,MAXHITPOINTS,5,ADD))
+		ActionOverride(Player6,ChangeStat(Player6,RESISTELECTRICITY,5,ADD))
+		Continue()
+END
+
+IF
+	Global("US_CagedFuryPowerString","GLOBAL",0)
+	Or(6)
+		Global("US_CagedFuryPlayer1","MYAREA",1)
+		Global("US_CagedFuryPlayer2","MYAREA",1)
+		Global("US_CagedFuryPlayer3","MYAREA",1)
+		Global("US_CagedFuryPlayer4","MYAREA",1)
+		Global("US_CagedFuryPlayer5","MYAREA",1)
+		Global("US_CagedFuryPlayer6","MYAREA",1)
+THEN
+	RESPONSE #100
+		SetGlobal("US_CagedFuryPowerString","GLOBAL",1)
+		DisplayMessage(%ref_23070%)
+END
+
+>>>>>>>>
+EXTEND_BOTTOM ~ar4102.bcs~ ~.../script.baf~ EVAL
 
 COPY_EXISTING ~65IYTXM.dlg~ ~override~ //Iyachtu Xvim dialogue
 	DECOMPILE_DLG_TO_D
@@ -5263,6 +5450,18 @@ EXTEND_BOTTOM ~AR6500.bcs~ ~.../script.baf~ EVAL
 STRING_SET_EVALUATE 23163 @23037
 STRING_SET_EVALUATE 23111 @23038
 STRING_SET_EVALUATE 27201 @23038
+
+COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
+	READ_BYTE race therace
+	READ_BYTE general thegeneral
+	READ_BYTE alignment thealignment
+	READ_LONG animation theanimation
+	PATCH_IF (theanimation = 59337 OR theanimation = 60184 OR theanimation = 60217 OR theanimation = 60233 OR theanimation = 60681 OR theanimation = 60712 OR theanimation = 61197 OR theanimation = 61213) BEGIN
+		WRITE_BYTE alignment 19
+	END ELSE PATCH_IF (thegeneral = 4 OR therace = 167) AND thealignment = 34 BEGIN
+		WRITE_BYTE alignment 35
+	END
+	BUT_ONLY_IF_IT_CHANGES
 
 ACTION_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~0~ BEGIN
 

@@ -163,7 +163,7 @@ You are trained to knock down or trip enemies in melee combat.
 
 Prerequisite: Base attack bonus +5 or higher
 
-Benefit: You gain an ability that lets you knock down or trip an adjacent creature. The ability can be used once per round. If your Dexterity is higher than your Strength, you attempt to trip the target, which must make a Reflex save (DC 10 + half your level + your Dexterity modifier) or fall down for 4 seconds. Otherwise, you try to knock down your target, which must make a Fortitude save (DC 10 + half your level + your Strength modifier) or fall down for 4 seconds. A creature gains a +4 bonus to the save for each time someone has tried to knock down or trip them in the past 10 rounds. Especially large creatures cannot be knocked down or tripped.
+Benefit: You gain an ability that lets you knock down or trip an adjacent creature. The ability can be used once per round. If your Dexterity is higher than your Strength, you attempt to trip the target, which must make a Reflex save (DC 10 + half your level + your Dexterity modifier) or fall down for 4 seconds. Otherwise, you try to knock down your target, which must make a Fortitude save (DC 10 + half your level + your Strength modifier) or fall down for 4 seconds. The DC gets -4 for each time someone has tried to knock down or trip the target in the past 10 rounds. Especially large creatures cannot be knocked down or tripped.
 
 This feat may be taken twice. When taken a second time, the feat is Improved Knockdown, which allows you to knock down or trip even large creatures, and adds a +2 bonus to the DC.~
 @317    = ~Light Armor Mastery~
@@ -298,7 +298,7 @@ In melee combat, you are skilled at using trickery to gain the upper hand agains
 
 Prerequisites: Bluff 4 or greater
 
-Benefit: You gain an ability that lets you feint an adjacent creature. The ability can be used once per round. The target must make a Will save (DC 10 + your Bluff skill). On a failure, for 4 seconds, the target loses its Dexterity bonus to AC, and it gains additional penalties to Armor Class and attack rolls equal to one third of your Bluff skill, rounded down. A creature gains a +4 bonus to the save for each time someone has tried to feint them in the past 10 rounds.
+Benefit: You gain an ability that lets you feint an adjacent creature. The ability can be used once per round. The target must make a Will save (DC 10 + your Bluff skill). The DC gets -4 for each time someone has tried to feint the target in the past 10 rounds. On a failure, for 4 seconds, the target loses its Dexterity bonus to AC, and it gains additional penalties to Armor Class and attack rolls equal to one third of your Bluff skill, rounded down.
 
 This feat may be taken twice. When taken a second time, the feat is Improved Feint, which lets you feint as a free action once per round. After you feint for the first time in a round, you may use another ability or cast a spell before the round is over. Improved Feint also adds +2 to the save DC.~
 @343    = ~Whirlwind Attack~
@@ -624,7 +624,7 @@ Advantages:
 * 11th level: Elemental Shape: Frost Salamander. While in frost salamander form, the Druid is immune to cold, weak to fire, and radiates an aura of extreme cold that deals 2d6 cold damage to nearby creatures per round. Every 5 levels thereafter, the damage of the frost salamander form's cold aura is increased by 1d6.
 * 13th level: Wild Shape: Shambling Mound. While in shambling mound form, the Druid is immune to electricity, resistant to bludgeoning damage, and has a 50% chance with each attack to engulf the target (Fortitude DC 17),  immobilizing them, blinding them, and dealing 3d4 extra damage over the next round. Every 3 levels thereafter, the shambler form gains +1 Strength, +2 Constitution, +3 AC, the chance to engulf is increased by 10%, and the save DC against it is increased by 3.
 * 15th level: Elemental Shape: Fire Elemental. While in fire elemental form, the Druid is immune to fire, weak to cold, and has damage reduction 5/+1. It has one fewer attack per round compared to the Druid's natural form, but it deals high damage per hit. Every 5 levels thereafter, the fire elemental form gains +2 Strength, +1 Dexterity, +2 Constitution, and +5 AC, its attack damage increases, and its damage reduction increases (to 10/+2, then 15/+3, then 20/+4).
-* 15th level: Elemental Shape: Earth Elemental. While in earth elemental form, the Druid has 5/- physical damage resistance as well as damage reduction 5/+1. It has one fewer attack per round compared to the Druid's natural form, but it deals high damage per hit. Every 5 levels thereafter, the earth elemental form gains +2 Strength, +1 Dexterity, +2 Constitution, and +5 AC, its attack damage increases, and its damage reduction increases (to 10/+2, then 15/+3, then 20/+4).
+* 15th level: Elemental Shape: Earth Elemental. While in earth elemental form, the Druid has 5/- physical damage resistance as well as damage reduction 5/+1. It has one fewer attack per round compared to the Druid's natural form, but it deals high damage per hit. In addition, whenever the Druid is above a stone floor, they can burrow into the floor to avoid attacks, coming up to attack or cast a spell. Every 5 levels thereafter, the earth elemental form gains +2 Strength, +1 Dexterity, +2 Constitution, and +5 AC, its attack damage increases, and its damage reduction increases (to 10/+2, then 15/+3, then 20/+4).
 * 15th level: Elemental Shape: Water Elemental. While in water elemental form, the Druid is immune to fire and acid, weak to electricity, and has damage reduction 5/+1. It has one fewer attack per round compared to the Druid's natural form, but it deals high damage per hit. Every 5 levels thereafter, the water elemental form gains +2 Strength, +1 Dexterity, +2 Constitution, and +5 AC, its attack damage increases, and its damage reduction increases (to 10/+2, then 15/+3, then 20/+4).
 * 15th level: Elemental Shape: Air Elemental. While in air elemental form, the Druid is resistant to electricity and has damage reduction 5/+1. It deals less damage than the other elemental forms but has very high AC and Dexterity. Every 5 levels thereafter, the air elemental form gains +2 Strength, +2 Dexterity, +1 Constitution, and +5 AC, its attack damage increases, and its damage reduction increases (to 10/+2, then 15/+3, then 20/+4).
 * 30th level: Dragon Shape: Black Dragon. The Druid gains the ability to shapeshift into an adult black dragon. While in black dragon form, the Druid is immune to acid and has extremely high AC. The Druid will only attack twice per round but will deal massive damage per hit at long range. 
@@ -875,6 +875,13 @@ Members of the Order of the Dark Moon worship Shar, goddess of darkness and loss
 
 Advantages:
 * 2nd level: The monk gains a sneak attack bonus of 1d6. For every 4 additional monk levels after level 2, the monk gains another 1d6 sneak attack damage.~
+@566    = ~Monk of the Black Raven~
+@567    = ~MONK OF THE BLACK RAVEN:
+
+The Order of the Black Raven was founded by Valas the Black Raven, a half-drow formerly enslaved in the Underdark. Using his legendary martial arts skills, he escaped slavery and fought his way to the surface world. Monks who follow the Black Raven's example have a central goal: to fight against slavery.
+
+Advantages:
+* 2nd level: The monk gains +2 to damage against enemy groups that commonly practice slavery, such as drow, duergar, mind flayers, yuan-ti, devils, and followers of Bane and Iyachtu Xvim. For every 4 monk levels after level 2, the monk gains another +1 damage against these enemies.~
 
 @580    = ~
 
