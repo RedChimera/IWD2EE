@@ -150,13 +150,14 @@ function IEex_Extern_OnCheckAddScreenEffectsHook(pEffect, pSprite)
 		local opcode = IEex_ReadDword(pEffect + 0xC)
 		local parameter1 = IEex_ReadDword(pEffect + 0x18)
 		local parameter2 = IEex_ReadDword(pEffect + 0x1C)
+		local parameter3 = IEex_ReadDword(pEffect + 0x5C)
 		local timing = IEex_ReadDword(pEffect + 0x20)
 		local duration = IEex_ReadDword(pEffect + 0x24)
 		local resource = IEex_ReadLString(pEffect + 0x2C, 8)
 		local savingthrow = IEex_ReadDword(pEffect + 0x3C)
 		local special = IEex_ReadDword(pEffect + 0x44)
 		local parent_resource = IEex_ReadLString(pEffect + 0x90, 8)
-		IEex_DisplayString(IEex_GetActorName(actorID) .. " - Opcode: " .. opcode .. ", Parameter1: " .. parameter1 .. ", Parameter2: " .. parameter2 .. ", Timing: " .. timing .. ", Duration: " .. duration .. ", Resource: \"" .. resource .. "\", Flags: " .. IEex_ToHex(savingthrow, 0, false) .. ", Parent resource: \"" .. parent_resource .. "\", Source: " .. IEex_GetActorName(sourceID))
+		IEex_DisplayString(IEex_GetActorName(actorID) .. " - Opcode: " .. opcode .. ", Parameter1: " .. parameter1 .. ", Parameter2: " .. parameter2 .. ", Parameter3: " .. parameter3 .. ", Special: " .. special .. ", Timing: " .. timing .. ", Duration: " .. duration .. ", Resource: \"" .. resource .. "\", Flags: " .. IEex_ToHex(savingthrow, 0, false) .. ", Parent resource: \"" .. parent_resource .. "\", Source: " .. IEex_GetActorName(sourceID))
 	end
 	if IEex_IsSprite(sourceID, true) then
 		local sourceData = IEex_GetActorShare(sourceID)
@@ -294,7 +295,6 @@ ex_empowerable_opcodes = {[0] = true, [1] = true, [6] = true, [10] = true, [12] 
 			sourceSpell = string.sub(parent_resource, 1, 7)
 		end
 		local damageType = bit.band(parameter2, 0xFFFF0000)
---		if false then
 		if opcode == 12 and parent_resource == "IEEX_DAM" then
 --			if (bit.band(savingthrow, 0x10000) > 0 and (IEex_GetActorSpellState(sourceID, 195) or IEex_GetActorSpellState(sourceID, 225))) or bit.band(savingthrow, 0x40000) == 0 then
 				local weaponRES = IEex_ReadLString(effectData + 0x6C, 8)
@@ -414,6 +414,7 @@ ex_empowerable_opcodes = {[0] = true, [1] = true, [6] = true, [10] = true, [12] 
 					local theopcode = IEex_ReadDword(eData + 0x10)
 					local theparameter1 = IEex_ReadDword(eData + 0x1C)
 					local theparameter2 = IEex_ReadDword(eData + 0x20)
+					local theresource = IEex_ReadLString(eData + 0x30, 8)
 					local thesavingthrow = IEex_ReadDword(eData + 0x40)
 					local thespecial = IEex_ReadDword(eData + 0x48)
 					if theopcode == 288 and theparameter2 == 195 and bit.band(thesavingthrow, 0x10000) == 0 and (thespecial == -1 or thespecial == itemType) then
@@ -452,6 +453,14 @@ ex_empowerable_opcodes = {[0] = true, [1] = true, [6] = true, [10] = true, [12] 
 								IEex_WriteWord(eData + 0x4A, usesLeft)
 							end
 							table.insert(onCriticalHitEffectList, {spellRES, thecasterlvl, newEffectTarget, newEffectSource, newEffectTargetX, newEffectTargetY, newEffectSourceX, newEffectSourceY})
+						end
+					elseif theopcode == 500 and theresource == "MEWEPENC" then
+						local theweaponRES = IEex_ReadLString(eData + 0x1C, 8)
+						local theenchantment = IEex_ReadWord(eData + 0x48, 0x0)
+						local theheaderType = IEex_ReadWord(eData + 0x4A, 0x0)
+						if (theweaponRES == "" or theweaponRES == weaponRES or theweaponRES == launcherRES) and (theheaderType == 0 or theheaderType == headerType) and theenchantment > special then
+							special = theenchantment
+							IEex_WriteDword(effectData + 0x44, special)
 						end
 					end
 				end)

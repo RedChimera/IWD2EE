@@ -62,6 +62,10 @@ COPY_EXISTING ~USDEMON3.itm~ ~override~
 	LPF ALTER_EFFECT INT_VAR check_headers=0 check_globals=1 match_opcode=502 special=RESOLVE_STR_REF(@23062) STR_VAR match_resource=~MEDAMSLV~ END
 	BUT_ONLY_IF_IT_CHANGES
 
+COPY_EXISTING ~USDEMON4.itm~ ~override~
+	LPF ALTER_EFFECT INT_VAR check_headers=0 check_globals=1 match_opcode=502 special=RESOLVE_STR_REF(@23063) STR_VAR match_resource=~MEDAMSLV~ END
+	BUT_ONLY_IF_IT_CHANGES
+
 COPY_EXISTING ~USDEVIL1.itm~ ~override~
 	LPF ALTER_EFFECT INT_VAR check_headers=0 check_globals=1 match_opcode=502 special=RESOLVE_STR_REF(@23056) STR_VAR match_resource=~MEDAMSLV~ END
 	BUT_ONLY_IF_IT_CHANGES
@@ -72,6 +76,10 @@ COPY_EXISTING ~USDEVIL2.itm~ ~override~
 
 COPY_EXISTING ~USDEVIL3.itm~ ~override~
 	LPF ALTER_EFFECT INT_VAR check_headers=0 check_globals=1 match_opcode=502 special=RESOLVE_STR_REF(@23058) STR_VAR match_resource=~MEDAMSLV~ END
+	BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING ~USDEVIL4.itm~ ~override~
+	LPF ALTER_EFFECT INT_VAR check_headers=0 check_globals=1 match_opcode=502 special=RESOLVE_STR_REF(@23059) STR_VAR match_resource=~MEDAMSLV~ END
 	BUT_ONLY_IF_IT_CHANGES
 
 COPY_EXISTING ~USLYCAN1.itm~ ~override~
@@ -90,6 +98,10 @@ COPY_EXISTING ~uscwsfor.itm~ ~override~
 	SAY NAME1 @23040
 	SAY NAME2 @23040
 	BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING ~USCWABIW.itm~ ~override~ ~USHFCWAW.itm~ ~override~ ~USCWABIR.itm~ ~override~ ~USHFCWAR.itm~ ~override~
+	SAY NAME1 @23072
+	SAY NAME2 @23072
 
 COPY_EXISTING ~uses001.spl~ ~override~
 	SAY NAME1 @21001
@@ -734,6 +746,9 @@ COPY_EXISTING ~00SDGWLF.cre~ ~override~ ~00SGWWLF.cre~ ~override~ ~00SSGWLF.cre~
 	END
 	LPF	IWD2_ADD_CRE_ITEM INT_VAR equip=1 STR_VAR item=~USLYCAN2~ slot=~cloak~ mode=~replace~ END
 	LPF ADD_CRE_EXTENDED_FEAT INT_VAR points=2 STR_VAR name=~ME_KNOCKDOWN~ END
+
+COPY_EXISTING_REGEXP ~30DRUM.*.cre~ ~override~
+	WRITE_BYTE race 156
 
 COPY_EXISTING ~30GOBHO.cre~ ~override~
 	WRITE_SHORT armorclass 10
@@ -3385,12 +3400,181 @@ COPY_EXISTING ~63VESE.cre~ ~override~
 	END
 	LPF ADD_CRE_EXTENDED_FEAT INT_VAR points=1 STR_VAR name=~ME_AUGMENT_SUMMONING~ END
 
+COPY_EXISTING ~00SLMR.cre~ ~override~ ~41LEMURE.cre~ ~override~
+	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelfighter=3 STR_VAR updatehp=~max~ END
+	WRITE_SHORT armorclass 14
+	WRITE_BYTE fireresistance 100
+	WRITE_BYTE coldresistance 10
+	WRITE_BYTE elecresistance 0
+	WRITE_BYTE acidresistance 10
+	WRITE_BYTE magicfireresistance 100
+	WRITE_BYTE magiccoldresistance 10
+	WRITE_BYTE magicdamageresistance 0
+	WRITE_BYTE slashingresistance 0
+	WRITE_BYTE piercingresistance 0
+	WRITE_BYTE bludgeoningresistance 0
+	WRITE_BYTE missileresistance 0
+	WRITE_BYTE enchantmentlevel 0
+	READ_LONG feats2 ulgiash
+	ulgiash|=0x2000000
+	WRITE_LONG feats2 ulgiash
+	WRITE_BYTE proficiencysmallblade 1
+	LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item=~USDEVIL1~ slot=~boots~ mode=~replace~ END
+	LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item=~USCWLEMU~ slot=~weapon1~ mode=~replace~ END
+
+COPY_EXISTING_REGEXP ~65LEMURE\.cre~ ~override~ ~67LMRS.*\.cre~ ~override~
+	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelfighter=5 STR_VAR updatehp=~max~ END
+	WRITE_SHORT armorclass 15
+	WRITE_BYTE fireresistance 100
+	WRITE_BYTE coldresistance 10
+	WRITE_BYTE elecresistance 0
+	WRITE_BYTE acidresistance 10
+	WRITE_BYTE magicfireresistance 100
+	WRITE_BYTE magiccoldresistance 10
+	WRITE_BYTE magicdamageresistance 0
+	WRITE_BYTE slashingresistance 0
+	WRITE_BYTE piercingresistance 0
+	WRITE_BYTE bludgeoningresistance 0
+	WRITE_BYTE missileresistance 0
+	WRITE_BYTE enchantmentlevel 0
+	READ_LONG feats2 ulgiash
+	ulgiash|=0x2000000
+	WRITE_LONG feats2 ulgiash
+	WRITE_BYTE proficiencysmallblade 3
+	LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item=~USDEVIL1~ slot=~boots~ mode=~replace~ END
+	LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item=~USCWLEMU~ slot=~weapon1~ mode=~replace~ END
+
+COPY_EXISTING ~63SPLMR.cre~ ~override~ ~63SSPLMR.cre~ ~override~ ~67SPLMRS.cre~ ~override~ ~63SWLMR.cre~ ~override~ ~63WLMR.cre~ ~override~ ~65WLMR.cre~ ~override~ ~67WLMRS.cre~ ~override~
+	WRITE_SHORT armorclass 17
+	WRITE_BYTE fireresistance 100
+	WRITE_BYTE coldresistance 100
+	WRITE_BYTE elecresistance 0
+	WRITE_BYTE acidresistance 10
+	WRITE_BYTE magicfireresistance 100
+	WRITE_BYTE magiccoldresistance 100
+	WRITE_BYTE magicdamageresistance 0
+	WRITE_BYTE slashingresistance 0
+	WRITE_BYTE piercingresistance 0
+	WRITE_BYTE bludgeoningresistance 0
+	WRITE_BYTE missileresistance 0
+	WRITE_BYTE enchantmentlevel 0
+	READ_LONG feats2 ulgiash
+	ulgiash|=0x2000000
+	WRITE_LONG feats2 ulgiash
+	WRITE_BYTE proficiencysmallblade 3
+	LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item=~USDEVIL1~ slot=~boots~ mode=~replace~ END
+	LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item=~USCWLEMW~ slot=~weapon1~ mode=~replace~ END
+/*
 COPY_EXISTING ~00SCRN.cre~ ~override~ ~00SGLB.cre~ ~override~ ~00SPITFI.cre~ ~override~
 	LPF	IWD2_ADD_CRE_ITEM STR_VAR item=~USSUCREA~ slot=~cloak~ END
 	UNLESS ~USSUCREA~
+*/
+
+COPY_EXISTING ~00SABISW.cre~ ~override~ ~41ABISHW.cre~ ~override~ ~41WABISH.cre~ ~override~
+	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelfighter=2 newlevelsorcerer=6 STR_VAR updatehp=~max~ END
+	WRITE_SHORT armorclass 15
+	WRITE_BYTE strength 16
+	WRITE_BYTE dexterity 15
+	WRITE_BYTE constitution 14
+	WRITE_BYTE intelligence 14
+	WRITE_BYTE wisdom 13
+	WRITE_BYTE charisma 17
+	WRITE_BYTE fireresistance 100
+	WRITE_BYTE coldresistance 50
+	WRITE_BYTE elecresistance 0
+	WRITE_BYTE acidresistance 10
+	WRITE_BYTE spellresistance 16
+	WRITE_BYTE magicfireresistance 100
+	WRITE_BYTE magiccoldresistance 50
+	WRITE_BYTE magicdamageresistance 0
+	WRITE_BYTE slashingresistance 0
+	WRITE_BYTE piercingresistance 0
+	WRITE_BYTE bludgeoningresistance 0
+	WRITE_BYTE missileresistance 0
+	WRITE_BYTE enchantmentlevel 0
+	READ_LONG feats1 ulgiash
+	ulgiash|=0x1
+	WRITE_LONG feats1 ulgiash
+	WRITE_BYTE skillconcentration 10
+	WRITE_BYTE skillspellcraft 10
+	WRITE_BYTE proficiencysmallblade 2
+	WRITE_BYTE challengerating 8
+	LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item=~USDVLHF1~ slot=~boots~ mode=~replace~ END
+	LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item=~USCWHFAW~ slot=~weapon1~ mode=~replace~ END
+	LPF	IWD2_REMOVE_SPELLS_KNOWN STR_VAR class=~bard~ END
+	LPF	IWD2_REMOVE_SPELLS_KNOWN STR_VAR class=~cleric~ END
+	LPF	IWD2_REMOVE_SPELLS_KNOWN STR_VAR class=~sorcerer~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=7 STR_VAR class=~sorcerer~ resource=~SPWI104~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=7 STR_VAR class=~sorcerer~ resource=~SPWI114~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=7 STR_VAR class=~sorcerer~ resource=~SPWI117~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=7 STR_VAR class=~sorcerer~ resource=~SPWI122~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=6 STR_VAR class=~sorcerer~ resource=~SPWI205~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=6 STR_VAR class=~sorcerer~ resource=~SPWI220~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=4 STR_VAR class=~sorcerer~ resource=~SPWI318~ END
+
+COPY_EXISTING ~00SDRABA.cre~ ~override~ ~00SRABA.cre~ ~override~ ~00SSHRAB.cre~ ~override~ ~00SSRABA.cre~ ~override~ ~41RABISH.cre~ ~override~ ~41SDRABA.cre~ ~override~ ~41SRABA.cre~ ~override~ ~41SSHRAB.cre~ ~override~ ~41SSRABA.cre~ ~override~ ~63ABASH.cre~ ~override~ ~63SABASH.cre~ ~override~
+	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelfighter=4 newlevelwizard=9 STR_VAR updatehp=~max~ END
+	WRITE_SHORT armorclass 25
+	WRITE_BYTE strength 24
+	WRITE_BYTE dexterity 19
+	WRITE_BYTE constitution 18
+	WRITE_BYTE intelligence 17
+	WRITE_BYTE wisdom 17
+	WRITE_BYTE charisma 17
+	WRITE_BYTE fireresistance 100
+	WRITE_BYTE coldresistance 10
+	WRITE_BYTE elecresistance 0
+	WRITE_BYTE acidresistance 10
+	WRITE_BYTE spellresistance 21
+	WRITE_BYTE magicfireresistance 100
+	WRITE_BYTE magiccoldresistance 50
+	WRITE_BYTE magicdamageresistance 0
+	WRITE_BYTE slashingresistance 0
+	WRITE_BYTE piercingresistance 0
+	WRITE_BYTE bludgeoningresistance 0
+	WRITE_BYTE missileresistance 0
+	WRITE_BYTE enchantmentlevel 0
+	WRITE_ASCII combatscript ~USRABISH~ #8
+	READ_LONG feats1 ulgiash
+	ulgiash|=0x1
+	WRITE_LONG feats1 ulgiash
+	WRITE_BYTE skillconcentration 14
+	WRITE_BYTE skillspellcraft 14
+	WRITE_BYTE proficiencysmallblade 2
+	WRITE_BYTE challengerating 13
+	LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item=~USDVLHF1~ slot=~boots~ mode=~replace~ END
+	LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item=~USCWHFAW~ slot=~weapon1~ mode=~replace~ END
+	LPF	IWD2_REMOVE_SPELLS_KNOWN STR_VAR class=~bard~ END
+	LPF	IWD2_REMOVE_SPELLS_KNOWN STR_VAR class=~cleric~ END
+	LPF	IWD2_REMOVE_SPELLS_KNOWN STR_VAR class=~sorcerer~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=7 STR_VAR class=~sorcerer~ resource=~SPWI104~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=7 STR_VAR class=~sorcerer~ resource=~SPWI114~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=7 STR_VAR class=~sorcerer~ resource=~SPWI117~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=7 STR_VAR class=~sorcerer~ resource=~SPWI122~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=6 STR_VAR class=~sorcerer~ resource=~SPWI205~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=6 STR_VAR class=~sorcerer~ resource=~SPWI220~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=4 STR_VAR class=~sorcerer~ resource=~SPWI318~ END
+
+	COPY_EXISTING ~00SSRABA.cre~ ~override~ ~41SSRABA.cre~ ~override~
+		READ_SHORT currenthp thecurrenthp
+		thecurrenthp = thecurrenthp * 2 / 10
+		WRITE_SHORT currenthp thecurrenthp
+		WRITE_SHORT maxhp thecurrenthp
+
+	COPY_EXISTING ~00SDRABA.cre~ ~override~ ~41SDRABA.cre~ ~override~
+		READ_SHORT currenthp thecurrenthp
+		thecurrenthp = thecurrenthp * 4 / 10
+		WRITE_SHORT currenthp thecurrenthp
+		WRITE_SHORT maxhp thecurrenthp
+
+	COPY_EXISTING ~00SSHRAB.cre~ ~override~ ~41SSHRAB.cre~ ~override~
+		READ_SHORT currenthp thecurrenthp
+		thecurrenthp = thecurrenthp * 6 / 10
+		WRITE_SHORT currenthp thecurrenthp
+		WRITE_SHORT maxhp thecurrenthp
 
 ACTION_IF NOT (MOD_IS_INSTALLED ~iwd2ee.tp2~ ~2~) BEGIN
-	COPY_EXISTING ~00SCRN.cre~ ~override~
+	COPY_EXISTING ~00SCRN.cre~ ~override~ ~00SDCRN.cre~ ~override~ ~00SSCRN.cre~ ~override~ ~00SSHCRN.cre~ ~override~
 		LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelfighter=7 newlevelwizard=7 STR_VAR updatehp=~max~ END
 		WRITE_SHORT armorclass 31
 		WRITE_BYTE strength 29
@@ -3406,7 +3590,7 @@ ACTION_IF NOT (MOD_IS_INSTALLED ~iwd2ee.tp2~ ~2~) BEGIN
 		WRITE_BYTE coldresistance 10
 		WRITE_BYTE elecresistance 0
 		WRITE_BYTE acidresistance 10
-		WRITE_BYTE spellresistance 16
+		WRITE_BYTE spellresistance 21
 		WRITE_BYTE magicfireresistance 100
 		WRITE_BYTE magiccoldresistance 10
 		WRITE_BYTE magicdamageresistance 0
@@ -3414,7 +3598,7 @@ ACTION_IF NOT (MOD_IS_INSTALLED ~iwd2ee.tp2~ ~2~) BEGIN
 		WRITE_BYTE piercingresistance 0
 		WRITE_BYTE bludgeoningresistance 0
 		WRITE_BYTE missileresistance 0
-		WRITE_BYTE enchantmentlevel 2
+		WRITE_BYTE enchantmentlevel 0
 		READ_LONG feats2 ulgiash
 		ulgiash|=0x80000
 		WRITE_LONG feats2 ulgiash
@@ -3425,12 +3609,31 @@ ACTION_IF NOT (MOD_IS_INSTALLED ~iwd2ee.tp2~ ~2~) BEGIN
 		WRITE_BYTE skillspellcraft 13
 		WRITE_BYTE proficiencyflail 2
 		WRITE_BYTE challengerating 14
+		LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item=~USDVLHF2~ slot=~boots~ mode=~replace~ END
 		LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item=~USCWHFCO~ slot=~weapon1~ mode=~replace~ END
 		LPF	IWD2_REMOVE_SPELLS_KNOWN STR_VAR class=~wizard~ END
 		LPF	IWD2_CRE_ABILITY INT_VAR num=1 STR_VAR resource=~SPIN197~ END
+
+	COPY_EXISTING ~00SSCRN.cre~ ~override~
+		READ_SHORT currenthp thecurrenthp
+		thecurrenthp = thecurrenthp * 2 / 10
+		WRITE_SHORT currenthp thecurrenthp
+		WRITE_SHORT maxhp thecurrenthp
+
+	COPY_EXISTING ~00SDCRN.cre~ ~override~
+		READ_SHORT currenthp thecurrenthp
+		thecurrenthp = thecurrenthp * 4 / 10
+		WRITE_SHORT currenthp thecurrenthp
+		WRITE_SHORT maxhp thecurrenthp
+
+	COPY_EXISTING ~00SSHCRN.cre~ ~override~
+		READ_SHORT currenthp thecurrenthp
+		thecurrenthp = thecurrenthp * 6 / 10
+		WRITE_SHORT currenthp thecurrenthp
+		WRITE_SHORT maxhp thecurrenthp
 END
 
-COPY_EXISTING ~00SDCRN.cre~ ~override~ ~00SSCRN.cre~ ~override~ ~00SSHCRN.cre~ ~override~ ~41CORNUG.cre~ ~override~ ~41SDCRN.cre~ ~override~ ~41SCRN.cre~ ~override~  ~41SSCRN.cre~ ~override~ ~41SSHCRN.cre~ ~override~ ~65CORN.cre~ ~override~ ~63PFIN.cre~ ~override~
+COPY_EXISTING ~41CORNUG.cre~ ~override~ ~41SDCRN.cre~ ~override~ ~41SCRN.cre~ ~override~  ~41SSCRN.cre~ ~override~ ~41SSHCRN.cre~ ~override~ ~65CORN.cre~ ~override~ ~63PFIN.cre~ ~override~
 	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelfighter=7 newlevelwizard=7 STR_VAR updatehp=~max~ END
 	WRITE_SHORT armorclass 31
 	WRITE_BYTE strength 29
@@ -3446,7 +3649,7 @@ COPY_EXISTING ~00SDCRN.cre~ ~override~ ~00SSCRN.cre~ ~override~ ~00SSHCRN.cre~ ~
 	WRITE_BYTE coldresistance 10
 	WRITE_BYTE elecresistance 0
 	WRITE_BYTE acidresistance 10
-	WRITE_BYTE spellresistance 16
+	WRITE_BYTE spellresistance 21
 	WRITE_BYTE magicfireresistance 100
 	WRITE_BYTE magiccoldresistance 10
 	WRITE_BYTE magicdamageresistance 0
@@ -3454,7 +3657,7 @@ COPY_EXISTING ~00SDCRN.cre~ ~override~ ~00SSCRN.cre~ ~override~ ~00SSHCRN.cre~ ~
 	WRITE_BYTE piercingresistance 0
 	WRITE_BYTE bludgeoningresistance 0
 	WRITE_BYTE missileresistance 0
-	WRITE_BYTE enchantmentlevel 2
+	WRITE_BYTE enchantmentlevel 0
 	READ_LONG feats2 ulgiash
 	ulgiash|=0x80000
 	WRITE_LONG feats2 ulgiash
@@ -3465,9 +3668,31 @@ COPY_EXISTING ~00SDCRN.cre~ ~override~ ~00SSCRN.cre~ ~override~ ~00SSHCRN.cre~ ~
 	WRITE_BYTE skillspellcraft 13
 	WRITE_BYTE proficiencyflail 2
 	WRITE_BYTE challengerating 14
+	LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item=~USDVLHF2~ slot=~boots~ mode=~replace~ END
 	LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item=~USCWHFCO~ slot=~weapon1~ mode=~replace~ END
 	LPF	IWD2_REMOVE_SPELLS_KNOWN STR_VAR class=~wizard~ END
 	LPF	IWD2_CRE_ABILITY INT_VAR num=1 STR_VAR resource=~SPIN197~ END
+
+COPY_EXISTING ~41SSCRN.cre~ ~override~
+	READ_SHORT currenthp thecurrenthp
+	thecurrenthp = thecurrenthp * 2 / 10
+	WRITE_SHORT currenthp thecurrenthp
+	WRITE_SHORT maxhp thecurrenthp
+
+COPY_EXISTING ~41SDCRN.cre~ ~override~
+	READ_SHORT currenthp thecurrenthp
+	thecurrenthp = thecurrenthp * 4 / 10
+	WRITE_SHORT currenthp thecurrenthp
+	WRITE_SHORT maxhp thecurrenthp
+
+COPY_EXISTING ~41SSHCRN.cre~ ~override~
+	READ_SHORT currenthp thecurrenthp
+	thecurrenthp = thecurrenthp * 6 / 10
+	WRITE_SHORT currenthp thecurrenthp
+	WRITE_SHORT maxhp thecurrenthp
+
+COPY_EXISTING ~41CORNUG.cre~ ~override~ ~65CORN.cre~ ~override~ ~63PFIN.cre~ ~override~
+	WRITE_BYTE proficiencyflail 3
 
 COPY_EXISTING ~63INSTRC.cre~ ~override~ ~63PFINN.cre~ ~override~ ~63PFINH.cre~ ~override~
 	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelfighter=9 newlevelwizard=9 STR_VAR updatehp=~max~ END
@@ -3485,7 +3710,7 @@ COPY_EXISTING ~63INSTRC.cre~ ~override~ ~63PFINN.cre~ ~override~ ~63PFINH.cre~ ~
 	WRITE_BYTE coldresistance 20
 	WRITE_BYTE elecresistance 0
 	WRITE_BYTE acidresistance 20
-	WRITE_BYTE spellresistance 21
+	WRITE_BYTE spellresistance 25
 	WRITE_BYTE magicfireresistance 100
 	WRITE_BYTE magiccoldresistance 20
 	WRITE_BYTE magicdamageresistance 0
@@ -3493,7 +3718,7 @@ COPY_EXISTING ~63INSTRC.cre~ ~override~ ~63PFINN.cre~ ~override~ ~63PFINH.cre~ ~
 	WRITE_BYTE piercingresistance 0
 	WRITE_BYTE bludgeoningresistance 0
 	WRITE_BYTE missileresistance 0
-	WRITE_BYTE enchantmentlevel 3
+	WRITE_BYTE enchantmentlevel 0
 	READ_LONG feats2 ulgiash
 	ulgiash|=0x80000
 	WRITE_LONG feats2 ulgiash
@@ -3504,12 +3729,13 @@ COPY_EXISTING ~63INSTRC.cre~ ~override~ ~63PFINN.cre~ ~override~ ~63PFINH.cre~ ~
 	WRITE_BYTE skillspellcraft 16
 	WRITE_BYTE proficiencyflail 3
 	WRITE_BYTE challengerating 16
+	LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item=~USDVLHF2~ slot=~boots~ mode=~replace~ END
 	LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item=~USCWHFCG~ slot=~weapon1~ mode=~replace~ END
 	LPF	IWD2_REMOVE_SPELLS_KNOWN STR_VAR class=~wizard~ END
 	LPF	IWD2_CRE_ABILITY INT_VAR num=1 STR_VAR resource=~SPIN197~ END
 
 ACTION_IF NOT (MOD_IS_INSTALLED ~iwd2ee.tp2~ ~2~) BEGIN
-	COPY_EXISTING ~00SGLB.cre~ ~override~
+	COPY_EXISTING ~00SGLB.cre~ ~override~ ~00SDGLB.cre~ ~override~ ~00SSGLB.cre~ ~override~ ~00SSHGLB.cre~ ~override~
 		LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelfighter=8 newlevelwizard=8 STR_VAR updatehp=~max~ END
 		WRITE_SHORT armorclass 27
 		WRITE_BYTE strength 31
@@ -3525,30 +3751,50 @@ ACTION_IF NOT (MOD_IS_INSTALLED ~iwd2ee.tp2~ ~2~) BEGIN
 		WRITE_BYTE coldresistance 10
 		WRITE_BYTE elecresistance 100
 		WRITE_BYTE acidresistance 10
-		WRITE_BYTE spellresistance 21
+		WRITE_BYTE spellresistance 24
 		WRITE_BYTE magicfireresistance 10
 		WRITE_BYTE magiccoldresistance 10
-		WRITE_BYTE magicdamageresistance 10
+		WRITE_BYTE magicdamageresistance 0
 		WRITE_BYTE slashingresistance 0
 		WRITE_BYTE piercingresistance 0
 		WRITE_BYTE bludgeoningresistance 0
 		WRITE_BYTE missileresistance 0
-		WRITE_BYTE enchantmentlevel 2
+		WRITE_BYTE enchantmentlevel 0
 		READ_LONG feats3 ulgiash
 		ulgiash|=0x2
 		WRITE_LONG feats3 ulgiash
 		WRITE_BYTE skillconcentration 15
 		WRITE_BYTE skillspellcraft 15
 		WRITE_BYTE proficiencysmallblade 2
+		WRITE_BYTE alignment 51
 		WRITE_BYTE challengerating 16
+		LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item=~USDMNHF2~ slot=~boots~ mode=~replace~ END
 		LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item=~USCWHFGL~ slot=~weapon1~ mode=~replace~ END
 		LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item=~USCWHFGL~ slot=~shield1~ mode=~replace~ END
 		LPF	IWD2_REMOVE_SPELLS_KNOWN STR_VAR class=~wizard~ END
 		LPF	IWD2_CRE_ABILITY INT_VAR num=1 STR_VAR resource=~SPIN197~ END
+
+	COPY_EXISTING ~00SSGLB.cre~ ~override~
+		READ_SHORT currenthp thecurrenthp
+		thecurrenthp = thecurrenthp * 2 / 10
+		WRITE_SHORT currenthp thecurrenthp
+		WRITE_SHORT maxhp thecurrenthp
+
+	COPY_EXISTING ~00SDGLB.cre~ ~override~
+		READ_SHORT currenthp thecurrenthp
+		thecurrenthp = thecurrenthp * 4 / 10
+		WRITE_SHORT currenthp thecurrenthp
+		WRITE_SHORT maxhp thecurrenthp
+
+	COPY_EXISTING ~00SSHGLB.cre~ ~override~
+		READ_SHORT currenthp thecurrenthp
+		thecurrenthp = thecurrenthp * 6 / 10
+		WRITE_SHORT currenthp thecurrenthp
+		WRITE_SHORT maxhp thecurrenthp
 END
 
-COPY_EXISTING ~00SDGLB.cre~ ~override~ ~00SSGLB.cre~ ~override~ ~00SSHGLB.cre~ ~override~ ~41GLABRE.cre~ ~override~ ~41SDGLB.cre~ ~override~ ~41SGLB.cre~ ~override~  ~41SSGLB.cre~ ~override~  ~41SSHGLB.cre~ ~override~ ~63GLBNXP.cre~ ~override~ ~63GLBXP.cre~ ~override~ ~65GLAB.cre~ ~override~
-	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelfighter=8 newlevelwizard=8 END
+COPY_EXISTING ~41GLABRE.cre~ ~override~ ~41SDGLB.cre~ ~override~ ~41SGLB.cre~ ~override~  ~41SSGLB.cre~ ~override~  ~41SSHGLB.cre~ ~override~ ~63GLBNXP.cre~ ~override~ ~63GLBXP.cre~ ~override~ ~65GLAB.cre~ ~override~
+	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelfighter=8 newlevelwizard=8 STR_VAR updatehp=~max~ END
 	WRITE_SHORT armorclass 27
 	WRITE_BYTE strength 31
 	WRITE_BYTE dexterity 10
@@ -3563,26 +3809,49 @@ COPY_EXISTING ~00SDGLB.cre~ ~override~ ~00SSGLB.cre~ ~override~ ~00SSHGLB.cre~ ~
 	WRITE_BYTE coldresistance 10
 	WRITE_BYTE elecresistance 100
 	WRITE_BYTE acidresistance 10
-	WRITE_BYTE spellresistance 21
+	WRITE_BYTE spellresistance 24
 	WRITE_BYTE magicfireresistance 10
 	WRITE_BYTE magiccoldresistance 10
-	WRITE_BYTE magicdamageresistance 10
+	WRITE_BYTE magicdamageresistance 0
 	WRITE_BYTE slashingresistance 0
 	WRITE_BYTE piercingresistance 0
 	WRITE_BYTE bludgeoningresistance 0
 	WRITE_BYTE missileresistance 0
-	WRITE_BYTE enchantmentlevel 2
+	WRITE_BYTE enchantmentlevel 0
 	READ_LONG feats3 ulgiash
 	ulgiash|=0x2
 	WRITE_LONG feats3 ulgiash
 	WRITE_BYTE skillconcentration 15
 	WRITE_BYTE skillspellcraft 15
 	WRITE_BYTE proficiencysmallblade 2
+	WRITE_BYTE alignment 51
 	WRITE_BYTE challengerating 16
+	LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item=~USDMNHF2~ slot=~boots~ mode=~replace~ END
 	LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item=~USCWHFGL~ slot=~weapon1~ mode=~replace~ END
 	LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item=~USCWHFGL~ slot=~shield1~ mode=~replace~ END
 	LPF	IWD2_REMOVE_SPELLS_KNOWN STR_VAR class=~wizard~ END
 	LPF	IWD2_CRE_ABILITY INT_VAR num=1 STR_VAR resource=~SPIN197~ END
+
+COPY_EXISTING ~41SSGLB.cre~ ~override~
+	READ_SHORT currenthp thecurrenthp
+	thecurrenthp = thecurrenthp * 2 / 10
+	WRITE_SHORT currenthp thecurrenthp
+	WRITE_SHORT maxhp thecurrenthp
+
+COPY_EXISTING ~41SDGLB.cre~ ~override~
+	READ_SHORT currenthp thecurrenthp
+	thecurrenthp = thecurrenthp * 4 / 10
+	WRITE_SHORT currenthp thecurrenthp
+	WRITE_SHORT maxhp thecurrenthp
+
+COPY_EXISTING ~41SSHGLB.cre~ ~override~
+	READ_SHORT currenthp thecurrenthp
+	thecurrenthp = thecurrenthp * 6 / 10
+	WRITE_SHORT currenthp thecurrenthp
+	WRITE_SHORT maxhp thecurrenthp
+
+COPY_EXISTING ~41GLABRE.cre~ ~override~ ~63GLBNXP.cre~ ~override~ ~63GLBXP.cre~ ~override~ ~65GLAB.cre~ ~override~
+	WRITE_BYTE proficiencysmallblade 3
 
 COPY_EXISTING_REGEXP ~63GLABS.*\.cre~ ~override~
 	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelfighter=10 newlevelwizard=10 STR_VAR updatehp=~max~ END
@@ -3603,12 +3872,12 @@ COPY_EXISTING_REGEXP ~63GLABS.*\.cre~ ~override~
 	WRITE_BYTE spellresistance 26
 	WRITE_BYTE magicfireresistance 20
 	WRITE_BYTE magiccoldresistance 20
-	WRITE_BYTE magicdamageresistance 20
+	WRITE_BYTE magicdamageresistance 0
 	WRITE_BYTE slashingresistance 0
 	WRITE_BYTE piercingresistance 0
 	WRITE_BYTE bludgeoningresistance 0
 	WRITE_BYTE missileresistance 0
-	WRITE_BYTE enchantmentlevel 3
+	WRITE_BYTE enchantmentlevel 0
 	READ_LONG feats3 ulgiash
 	ulgiash|=0x2
 	WRITE_LONG feats3 ulgiash
@@ -3616,6 +3885,7 @@ COPY_EXISTING_REGEXP ~63GLABS.*\.cre~ ~override~
 	WRITE_BYTE skillspellcraft 18
 	WRITE_BYTE proficiencysmallblade 3
 	WRITE_BYTE challengerating 18
+	LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item=~USDMNHF2~ slot=~boots~ mode=~replace~ END
 	LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item=~USCWHFLG~ slot=~weapon1~ mode=~replace~ END
 	LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item=~USCWHFLG~ slot=~shield1~ mode=~replace~ END
 	LPF	IWD2_REMOVE_SPELLS_KNOWN STR_VAR class=~wizard~ END
@@ -3642,7 +3912,7 @@ ACTION_IF NOT (MOD_IS_INSTALLED ~iwd2ee.tp2~ ~2~) BEGIN
 		WRITE_BYTE spellresistance 25
 		WRITE_BYTE magicfireresistance 100
 		WRITE_BYTE magiccoldresistance 100
-		WRITE_BYTE magicdamageresistance 10
+		WRITE_BYTE magicdamageresistance 0
 		WRITE_BYTE slashingresistance 0
 		WRITE_BYTE piercingresistance 0
 		WRITE_BYTE bludgeoningresistance 0
@@ -3660,6 +3930,7 @@ ACTION_IF NOT (MOD_IS_INSTALLED ~iwd2ee.tp2~ ~2~) BEGIN
 		WRITE_BYTE proficiencypolearm 3
 		WRITE_BYTE challengerating 18
 		LPF	IWD2_REMOVE_CRE_ITEM STR_VAR item=~00CWGLG1~ END
+		LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item=~USDVLHF2~ slot=~boots~ mode=~replace~ END
 		LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item=~USCWHFGE~ slot=~weapon1~ mode=~replace~ END
 	//	LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item=~USCWHFGE~ slot=~shield1~ mode=~replace~ END
 		LPF	IWD2_REMOVE_SPELLS_KNOWN STR_VAR class=~wizard~ END
@@ -3688,7 +3959,7 @@ COPY_EXISTING ~41PFIEND.cre~ ~override~ ~41SPITFI.cre~ ~override~ ~63PITFND.cre~
 	WRITE_BYTE spellresistance 25
 	WRITE_BYTE magicfireresistance 100
 	WRITE_BYTE magiccoldresistance 100
-	WRITE_BYTE magicdamageresistance 10
+	WRITE_BYTE magicdamageresistance 0
 	WRITE_BYTE slashingresistance 0
 	WRITE_BYTE piercingresistance 0
 	WRITE_BYTE bludgeoningresistance 0
@@ -3707,6 +3978,7 @@ COPY_EXISTING ~41PFIEND.cre~ ~override~ ~41SPITFI.cre~ ~override~ ~63PITFND.cre~
 	WRITE_BYTE challengerating 18
 	LPF	IWD2_REMOVE_CRE_ITEM STR_VAR item=~00CWGLG1~ END
 	LPF	IWD2_REMOVE_CRE_ITEM STR_VAR item=~00CIPFND~ END
+	LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item=~USDVLHF2~ slot=~boots~ mode=~replace~ END
 	LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item=~USCWHFGE~ slot=~weapon1~ mode=~replace~ END
 //	LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item=~USCWHFGE~ slot=~shield1~ mode=~replace~ END
 	LPF	IWD2_REMOVE_SPELLS_KNOWN STR_VAR class=~wizard~ END
@@ -3730,10 +4002,10 @@ COPY_EXISTING ~63YXBUN.cre~ ~override~ ~63YXBUH.cre~ ~override~
 	WRITE_BYTE coldresistance 100
 	WRITE_BYTE elecresistance 15
 	WRITE_BYTE acidresistance 15
-	WRITE_BYTE spellresistance 25
+	WRITE_BYTE spellresistance 30
 	WRITE_BYTE magicfireresistance 100
 	WRITE_BYTE magiccoldresistance 100
-	WRITE_BYTE magicdamageresistance 10
+	WRITE_BYTE magicdamageresistance 0
 	WRITE_BYTE slashingresistance 0
 	WRITE_BYTE piercingresistance 0
 	WRITE_BYTE bludgeoningresistance 0
@@ -3752,6 +4024,7 @@ COPY_EXISTING ~63YXBUN.cre~ ~override~ ~63YXBUH.cre~ ~override~
 	WRITE_BYTE challengerating 21
 	LPF	IWD2_REMOVE_CRE_ITEM STR_VAR item=~00CWABI1~ END
 	LPF	IWD2_REMOVE_CRE_ITEM STR_VAR item=~00CWGLG1~ END
+	LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item=~USDVLHF3~ slot=~boots~ mode=~replace~ END
 	LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item=~USCWHFGG~ slot=~weapon1~ mode=~replace~ END
 //	LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item=~USCWHFGG~ slot=~shield1~ mode=~replace~ END
 	LPF	IWD2_REMOVE_SPELLS_KNOWN STR_VAR class=~wizard~ END
@@ -3795,11 +4068,13 @@ COPY_EXISTING ~USMARILI.cre~ ~override~
 	LPF ADD_CRE_EXTENDED_FEAT INT_VAR points=1 STR_VAR name=~ME_WHIRLWIND_ATTACK~ END
 	SAY NAME1 @23005
 	SAY NAME2 @23005
+	LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item=~USDMNHF2~ slot=~rring~ mode=~replace~ END
 
 COPY_EXISTING ~USMARIGR.cre~ ~override~
 	LPF ADD_CRE_EXTENDED_FEAT INT_VAR points=2 STR_VAR name=~ME_WHIRLWIND_ATTACK~ END
 	SAY NAME1 @23006
 	SAY NAME2 @23006
+	LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item=~USDMNHF3~ slot=~rring~ mode=~replace~ END
 
 COPY_EXISTING ~USMARILI.cre~ ~override/USSMARIL.cre~ ~USMARIGR.cre~ ~override/USSMARGR.cre~
 	WRITE_BYTE defaultvisibility 1
@@ -3920,6 +4195,7 @@ COPY_EXISTING ~67DEKNT.cre~ ~override~ ~67DEKNT2.cre~ ~override~ ~67DEKNT3.cre~ 
 	LPF	IWD2_ADD_CRE_ITEM INT_VAR equip=1 STR_VAR item=~USCWDEKN~ slot=~weapon1~ mode=~replace~ END
 
 COPY_EXISTING_REGEXP ~6[257]SKXVM.*\.cre~ ~override~ ~633SSXVM.cre~ ~override~ ~63KNTXVM.cre~ ~override~ ~63SSKXVM.cre~ ~override~ ~66RSKXVM.cre~ ~override~ ~673SKXVM.cre~ ~override~ ~USSKXVM.cre~ ~override~
+	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelcleric=1 newlevelpaladin=18 END
 	WRITE_ASCII specialscript2 ~USSKXVIM~ #8
 	WRITE_SHORT armorclass 19
 	WRITE_BYTE strength 24
@@ -4982,8 +5258,12 @@ COPY_EXISTING ~AR6100.are~ ~override~
 
 COPY_EXISTING ~AR6103.are~ ~override~
 	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR actor_name=~Snake_16~ cre_file=~USMARILI~ script_combat=~USMARILI~ END
-	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR actor_name=~02_EliteGuard_04~ match_cre_file=~61GOLIRO~ cre_file=~USMARILI~ script_special2=~~ script_combat=~USMARILI~ END
+	LPF ALTER_AREA_ACTOR_IWD2 INT_VAR flag_difficulty_1=0 flag_difficulty_2=0 flag_difficulty_3=0 STR_VAR actor_name=~02_EliteGuard_04~ match_cre_file=~61YASENT~ END
+	LPF ALTER_AREA_ACTOR_IWD2 INT_VAR flag_difficulty_1=1 flag_difficulty_2=1 flag_difficulty_3=1 STR_VAR actor_name=~02_EliteGuard_04~ match_cre_file=~61GOLIRO~ cre_file=~USMARILI~ script_special2=~~ script_combat=~USMARILI~ END
 	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR actor_name=~02_EliteGuard_09~ script_override=~00ASTIVN~ END
+	LPF ALTER_AREA_ACTOR_IWD2 INT_VAR flag_difficulty_1=1 flag_difficulty_2=0 flag_difficulty_3=0 STR_VAR actor_name=~02_EliteGuard_08~ match_cre_file=~61GOLIRO~ cre_file=~USMARILI~ script_special2=~~ script_combat=~USMARILI~ END
+	LPF fj_are_structure INT_VAR fj_loc_x=1508 fj_loc_y=1971 fj_orientation=10 STR_VAR fj_structure_type=~actor~ fj_name=~02_EliteGuard_08~ fj_cre_resref=~USMARIGR~ END
+	LPF ALTER_AREA_ACTOR_IWD2 INT_VAR flag_difficulty_1=0 flag_difficulty_2=1 flag_difficulty_3=1 STR_VAR actor_name=~02_EliteGuard_08~ match_cre_file=~USMARIGR~ script_override=~00HIDE0~ script_special1=~00ASTIVN~ script_special3=~00T02M~ script_combat=~USMARILI~ END
 
 COPY_EXISTING ~AR6200.are~ ~override~
 	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR match_cre_file=~62SKXVM~ cre_file=~67DEKNT~ script_special2=~USDEATHK~ END
@@ -5001,7 +5281,7 @@ COPY_EXISTING ~AR6201.are~ ~override~
 
 COPY_EXISTING ~AR6300.are~ ~override~
 	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR actor_name=~Guard_Commander~ script_combat=~USHDRBLU~ END
-	LPF ALTER_AREA_ACTOR_IWD2 INT_VAR flag_difficulty_1=1 flag_difficulty_2=1 flag_difficulty_3=1 STR_VAR actor_name=~ApocalypticBoneguar_3~ cre_file=~63KNTXVM~ END
+	LPF ALTER_AREA_ACTOR_IWD2 INT_VAR flag_difficulty_1=1 flag_difficulty_2=1 flag_difficulty_3=1 STR_VAR actor_name=~ApocalypticBoneguar_3~ cre_file=~67SKXVM~ dlg_file=~67BLOOK~ END
 
 COPY_EXISTING ~AR6304.are~ ~override~
 	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR actor_name=~GB_YuanTiHalfbreed1~ script_combat=~60YTPRIC~ END
@@ -5304,6 +5584,14 @@ USCHFWI1	00CWWIT1
 USCHFWI2	00CWWIT2
 USCHFWR1	00CWWRA1
 USCHFWR2	USCWWRA2
+USDMNHF1	USDEMON1
+USDMNHF2	USDEMON2
+USDMNHF3	USDEMON3
+USDVLHF1	USDEVIL1
+USDVLHF2	USDEVIL2
+USDVLHF3	USDEVIL3
+USCWHFAW	USCWABIW
+USCWHFAR	USCWABIR
 ~
 UNLESS ~USCWHFMO~
 
@@ -5355,6 +5643,14 @@ USCHFWI1	USCWWIT1
 USCHFWI2	USCWWIT2
 USCHFWR1	USCWWRA1
 USCHFWR2	USCWWRA3
+USDMNHF1	USDEMON2
+USDMNHF2	USDEMON3
+USDMNHF3	USDEMON4
+USDVLHF1	USDEVIL2
+USDVLHF2	USDEVIL3
+USDVLHF3	USDEVIL4
+USCWHFAW	USHFCWAW
+USCWHFAR	USHFCWAR
 ~
 UNLESS ~USCWHFMO~
 
@@ -5468,9 +5764,11 @@ ACTION_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~0~ BEGIN
 COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
 	READ_SBYTE luck theluck
 	PATCH_IF theluck >= 0 BEGIN
+		READ_BYTE alignment thealignment
 		READ_BYTE levelbarbarian barbarianlevel
 		READ_BYTE leveldruid druidlevel
 		READ_BYTE levelfighter fighterlevel
+		READ_BYTE levelpaladin paladinlevel
 		READ_BYTE levelranger rangerlevel
 		READ_BYTE levelrogue roguelevel
 		PATCH_IF barbarianlevel > 0 BEGIN
@@ -5556,6 +5854,45 @@ COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
 				TEXT_SPRINT hofitem ~USABFI30~
 			END ELSE BEGIN
 				TEXT_SPRINT hofitem ~USAHFI%fighterlevel%~
+			END
+			READ_LONG 0x612 itemslotsoffset
+			READ_SSHORT (itemslotsoffset + 0xE) theslot
+			PATCH_IF theslot < 0 BEGIN
+				LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item= EVAL ~%hofitem%~ slot=~belt~ END
+			END ELSE BEGIN
+				READ_SSHORT (itemslotsoffset + 0x8) theslot
+				PATCH_IF theslot < 0 BEGIN
+					LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item= EVAL ~%hofitem%~ slot=~lring~ END
+				END ELSE BEGIN
+					READ_SSHORT (itemslotsoffset + 0xA) theslot
+					PATCH_IF theslot < 0 BEGIN
+						LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item= EVAL ~%hofitem%~ slot=~rring~ END
+					END ELSE BEGIN
+						READ_SSHORT (itemslotsoffset + 0xC) theslot
+						PATCH_IF theslot < 0 BEGIN
+							LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item= EVAL ~%hofitem%~ slot=~amulet~ END
+						END ELSE BEGIN
+							READ_SSHORT (itemslotsoffset + 0x6) theslot
+							PATCH_IF theslot < 0 BEGIN
+								LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item= EVAL ~%hofitem%~ slot=~gloves~ END
+							END ELSE BEGIN
+								READ_SSHORT (itemslotsoffset + 0x10) theslot
+								PATCH_IF theslot < 0 BEGIN
+									LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item= EVAL ~%hofitem%~ slot=~boots~ END
+								END ELSE BEGIN
+									LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item= EVAL ~%hofitem%~ slot=~cloak~ mode=~move~ END
+								END
+							END
+						END
+					END
+				END
+			END
+		END
+		PATCH_IF paladinlevel > 0 AND (thealignment BAND 0x00000003) = 0x00000003 BEGIN
+			PATCH_IF paladinlevel >= 30 BEGIN
+				TEXT_SPRINT hofitem ~USABBG30~
+			END ELSE BEGIN
+				TEXT_SPRINT hofitem ~USAHBG%paladinlevel%~
 			END
 			READ_LONG 0x612 itemslotsoffset
 			READ_SSHORT (itemslotsoffset + 0xE) theslot
@@ -5712,6 +6049,36 @@ USAHBB5		USABBB05
 USAHBB6		USABBB05
 USAHBB7		USABBB05
 USAHBB8		USABBB08
+USAHBG1		No_Drop
+USAHBG2		USABBG02
+USAHBG3		USABBG02
+USAHBG4		USABBG02
+USAHBG5		USABBG02
+USAHBG6		USABBG06
+USAHBG7		USABBG06
+USAHBG8		USABBG06
+USAHBG9		USABBG06
+USAHBG10	USABBG10
+USAHBG11	USABBG10
+USAHBG12	USABBG10
+USAHBG13	USABBG10
+USAHBG14	USABBG14
+USAHBG15	USABBG14
+USAHBG16	USABBG14
+USAHBG17	USABBG14
+USAHBG18	USABBG18
+USAHBG19	USABBG18
+USAHBG20	USABBG18
+USAHBG21	USABBG18
+USAHBG22	USABBG22
+USAHBG23	USABBG22
+USAHBG24	USABBG22
+USAHBG25	USABBG22
+USAHBG26	USABBG26
+USAHBG27	USABBG26
+USAHBG28	USABBG26
+USAHBG29	USABBG26
+USAHBG30	USABBG30
 USAHDR1		No_Drop
 USAHFI1		No_Drop
 USAHFI2		No_Drop
@@ -5787,6 +6154,36 @@ USAHBB5		USABBB08
 USAHBB6		USABBB08
 USAHBB7		USABBB08
 USAHBB8		USABBB08
+USAHBG1		USABBG10
+USAHBG2		USABBG14
+USAHBG3		USABBG14
+USAHBG4		USABBG14
+USAHBG5		USABBG14
+USAHBG6		USABBG18
+USAHBG7		USABBG18
+USAHBG8		USABBG18
+USAHBG9		USABBG18
+USAHBG10	USABBG22
+USAHBG11	USABBG22
+USAHBG12	USABBG22
+USAHBG13	USABBG22
+USAHBG14	USABBG26
+USAHBG15	USABBG26
+USAHBG16	USABBG26
+USAHBG17	USABBG26
+USAHBG18	USABBG30
+USAHBG19	USABBG30
+USAHBG20	USABBG30
+USAHBG21	USABBG30
+USAHBG22	USABBG30
+USAHBG23	USABBG30
+USAHBG24	USABBG30
+USAHBG25	USABBG30
+USAHBG26	USABBG30
+USAHBG27	USABBG30
+USAHBG28	USABBG30
+USAHBG29	USABBG30
+USAHBG30	USABBG30
 USAHDR1		USABDR03
 USAHFI1		USABFI10
 USAHFI2		USABFI10

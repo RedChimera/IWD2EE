@@ -1986,8 +1986,8 @@ COPY_EXISTING ~spwi713.spl~ ~override~
 	SAY UNIDENTIFIED_DESC @34713
 	SAY IDENTIFIED_DESC @34713
 
-ACTION_IF NOT (MOD_IS_INSTALLED ~iwd2ee.tp2~ ~5~) BEGIN
-	COPY_EXISTING ~00SCRN.cre~ ~override~
+ACTION_IF NOT (MOD_IS_INSTALLED ~iwd2ee.tp2~ ~2~) BEGIN
+	COPY_EXISTING ~00SCRN.cre~ ~override~ ~00SDCRN.cre~ ~override~ ~00SSCRN.cre~ ~override~ ~00SSHCRN.cre~ ~override~
 		LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelfighter=7 newlevelwizard=7 STR_VAR updatehp=~max~ END
 		WRITE_SHORT armorclass 31
 		WRITE_BYTE strength 29
@@ -2011,7 +2011,7 @@ ACTION_IF NOT (MOD_IS_INSTALLED ~iwd2ee.tp2~ ~5~) BEGIN
 		WRITE_BYTE piercingresistance 0
 		WRITE_BYTE bludgeoningresistance 0
 		WRITE_BYTE missileresistance 0
-		WRITE_BYTE enchantmentlevel 2
+		WRITE_BYTE enchantmentlevel 0
 		READ_LONG feats2 ulgiash
 		ulgiash|=0x80000
 		WRITE_LONG feats2 ulgiash
@@ -2022,10 +2022,28 @@ ACTION_IF NOT (MOD_IS_INSTALLED ~iwd2ee.tp2~ ~5~) BEGIN
 		WRITE_BYTE skillspellcraft 13
 		WRITE_BYTE proficiencyflail 2
 		WRITE_BYTE challengerating 14
+		LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item=~USDVLHF2~ slot=~boots~ mode=~replace~ END
 		LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item=~USCWHFCO~ slot=~weapon1~ mode=~replace~ END
 		LPF	IWD2_REMOVE_SPELLS_KNOWN STR_VAR class=~wizard~ END
 		LPF	IWD2_CRE_ABILITY INT_VAR num=1 STR_VAR resource=~SPIN197~ END
-//		LPF	IWD2_ADD_CRE_ITEM STR_VAR item=~USSUCREA~ slot=~cloak~ END
+
+	COPY_EXISTING ~00SSCRN.cre~ ~override~
+		READ_SHORT currenthp thecurrenthp
+		thecurrenthp = thecurrenthp * 2 / 10
+		WRITE_SHORT currenthp thecurrenthp
+		WRITE_SHORT maxhp thecurrenthp
+
+	COPY_EXISTING ~00SDCRN.cre~ ~override~
+		READ_SHORT currenthp thecurrenthp
+		thecurrenthp = thecurrenthp * 4 / 10
+		WRITE_SHORT currenthp thecurrenthp
+		WRITE_SHORT maxhp thecurrenthp
+
+	COPY_EXISTING ~00SSHCRN.cre~ ~override~
+		READ_SHORT currenthp thecurrenthp
+		thecurrenthp = thecurrenthp * 6 / 10
+		WRITE_SHORT currenthp thecurrenthp
+		WRITE_SHORT maxhp thecurrenthp
 END
 
 COPY_EXISTING ~spwi714.spl~ ~override~
@@ -2047,8 +2065,8 @@ COPY_EXISTING ~spwi809.spl~ ~override~
 	SAY UNIDENTIFIED_DESC @34809
 	SAY IDENTIFIED_DESC @34809
 
-ACTION_IF NOT (MOD_IS_INSTALLED ~iwd2ee.tp2~ ~5~) BEGIN
-	COPY_EXISTING ~00SGLB.cre~ ~override~
+ACTION_IF NOT (MOD_IS_INSTALLED ~iwd2ee.tp2~ ~2~) BEGIN
+	COPY_EXISTING ~00SGLB.cre~ ~override~ ~00SDGLB.cre~ ~override~ ~00SSGLB.cre~ ~override~ ~00SSHGLB.cre~ ~override~
 		LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelfighter=8 newlevelwizard=8 STR_VAR updatehp=~max~ END
 		WRITE_SHORT armorclass 27
 		WRITE_BYTE strength 31
@@ -2072,19 +2090,38 @@ ACTION_IF NOT (MOD_IS_INSTALLED ~iwd2ee.tp2~ ~5~) BEGIN
 		WRITE_BYTE piercingresistance 0
 		WRITE_BYTE bludgeoningresistance 0
 		WRITE_BYTE missileresistance 0
-		WRITE_BYTE enchantmentlevel 2
+		WRITE_BYTE enchantmentlevel 0
 		READ_LONG feats3 ulgiash
 		ulgiash|=0x2
 		WRITE_LONG feats3 ulgiash
 		WRITE_BYTE skillconcentration 15
 		WRITE_BYTE skillspellcraft 15
 		WRITE_BYTE proficiencysmallblade 2
+		WRITE_BYTE alignment 51
 		WRITE_BYTE challengerating 16
+		LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item=~USDMNHF2~ slot=~boots~ mode=~replace~ END
 		LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item=~USCWHFGL~ slot=~weapon1~ mode=~replace~ END
 		LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item=~USCWHFGL~ slot=~shield1~ mode=~replace~ END
 		LPF	IWD2_REMOVE_SPELLS_KNOWN STR_VAR class=~wizard~ END
 		LPF	IWD2_CRE_ABILITY INT_VAR num=1 STR_VAR resource=~SPIN197~ END
-//		LPF	IWD2_ADD_CRE_ITEM STR_VAR item=~USSUCREA~ slot=~cloak~ END
+
+	COPY_EXISTING ~00SSGLB.cre~ ~override~
+		READ_SHORT currenthp thecurrenthp
+		thecurrenthp = thecurrenthp * 2 / 10
+		WRITE_SHORT currenthp thecurrenthp
+		WRITE_SHORT maxhp thecurrenthp
+
+	COPY_EXISTING ~00SDGLB.cre~ ~override~
+		READ_SHORT currenthp thecurrenthp
+		thecurrenthp = thecurrenthp * 4 / 10
+		WRITE_SHORT currenthp thecurrenthp
+		WRITE_SHORT maxhp thecurrenthp
+
+	COPY_EXISTING ~00SSHGLB.cre~ ~override~
+		READ_SHORT currenthp thecurrenthp
+		thecurrenthp = thecurrenthp * 6 / 10
+		WRITE_SHORT currenthp thecurrenthp
+		WRITE_SHORT maxhp thecurrenthp
 END
 
 COPY_EXISTING ~spwi905.spl~ ~override~
@@ -2093,7 +2130,7 @@ COPY_EXISTING ~spwi905.spl~ ~override~
 	SAY UNIDENTIFIED_DESC @34905
 	SAY IDENTIFIED_DESC @34905
 
-ACTION_IF NOT (MOD_IS_INSTALLED ~iwd2ee.tp2~ ~5~) BEGIN
+ACTION_IF NOT (MOD_IS_INSTALLED ~iwd2ee.tp2~ ~2~) BEGIN
 	COPY_EXISTING ~00SPITFI.cre~ ~override~
 		LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelfighter=12 newlevelwizard=8 STR_VAR updatehp=~max~ END
 		WRITE_LONG animation 60184
@@ -2132,12 +2169,13 @@ ACTION_IF NOT (MOD_IS_INSTALLED ~iwd2ee.tp2~ ~5~) BEGIN
 		WRITE_BYTE proficiencypolearm 3
 		WRITE_BYTE challengerating 18
 		LPF	IWD2_REMOVE_CRE_ITEM STR_VAR item=~00CWGLG1~ END
+		LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item=~USDVLHF2~ slot=~boots~ mode=~replace~ END
 		LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item=~USCWHFGE~ slot=~weapon1~ mode=~replace~ END
 	//	LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item=~USCWHFGE~ slot=~shield1~ mode=~replace~ END
 		LPF	IWD2_REMOVE_SPELLS_KNOWN STR_VAR class=~wizard~ END
 	//	LPF	IWD2_CRE_SPELL INT_VAR num=4 STR_VAR class=~wizard~ resource=~SPWI402~ END
 		LPF	IWD2_CRE_ABILITY INT_VAR num=1 STR_VAR resource=~SPIN197~ END
-//		LPF	IWD2_ADD_CRE_ITEM STR_VAR item=~USSUCREA~ slot=~cloak~ END
+
 END
 
 COPY_EXISTING ~uspr151.spl~ ~override~
@@ -2291,6 +2329,12 @@ COPY_EXISTING ~uspr554.spl~ ~override~
 	SAY UNIDENTIFIED_DESC @36554
 	SAY IDENTIFIED_DESC @36554
 
+COPY_EXISTING ~uspr555.spl~ ~override~
+	SAY NAME1 @35555
+	SAY NAME2 @35555
+	SAY UNIDENTIFIED_DESC @36555
+	SAY IDENTIFIED_DESC @36555
+
 COPY_EXISTING ~uspr653.spl~ ~override~
 	SAY NAME1 @35653
 	SAY NAME2 @35653
@@ -2406,6 +2450,9 @@ COPY_EXISTING ~uspr957.spl~ ~override~
 COPY_EXISTING ~ussdeva.cre~ ~override~
 	SAY NAME1 @30068
 	SAY NAME2 @30068
+
+COPY_EXISTING ~uscideva.itm~ ~override~
+	LPF ALTER_EFFECT INT_VAR check_headers=0 check_globals=1 match_opcode=502 special=RESOLVE_STR_REF(@30070) STR_VAR match_resource=~MEDAMSLV~ END
 
 COPY_EXISTING ~uscwdeva.itm~ ~override~
 	SAY NAME1 @30069
@@ -2552,6 +2599,12 @@ COPY_EXISTING ~uswi356.spl~ ~override~
 	SAY UNIDENTIFIED_DESC @38356
 	SAY IDENTIFIED_DESC @38356
 
+COPY_EXISTING ~uswi357.spl~ ~override~
+	SAY NAME1 @37357
+	SAY NAME2 @37357
+	SAY UNIDENTIFIED_DESC @38357
+	SAY IDENTIFIED_DESC @38357
+
 COPY_EXISTING ~uswi451.spl~ ~override~
 	SAY NAME1 @37451
 	SAY NAME2 @37451
@@ -2620,6 +2673,12 @@ COPY_EXISTING ~uswi554.spl~ ~override~
 	SAY UNIDENTIFIED_DESC @38554
 	SAY IDENTIFIED_DESC @38554
 
+COPY_EXISTING ~uswi555.spl~ ~override~
+	SAY NAME1 @37555
+	SAY NAME2 @37555
+	SAY UNIDENTIFIED_DESC @38555
+	SAY IDENTIFIED_DESC @38555
+
 COPY_EXISTING ~uswi652.spl~ ~override~
 	SAY NAME1 @37652
 	SAY NAME2 @37652
@@ -2637,6 +2696,170 @@ COPY_EXISTING ~uswi654.spl~ ~override~
 	SAY NAME2 @37654
 	SAY UNIDENTIFIED_DESC @38654
 	SAY IDENTIFIED_DESC @38654
+
+COPY_EXISTING ~uswi655.spl~ ~override~
+	SAY NAME1 @37655
+	SAY NAME2 @37655
+	SAY UNIDENTIFIED_DESC @38655
+	SAY IDENTIFIED_DESC @38655
+
+COPY_EXISTING ~uswi656.spl~ ~override~
+	SAY NAME1 @37656
+	SAY NAME2 @37656
+	SAY UNIDENTIFIED_DESC @38656
+	SAY IDENTIFIED_DESC @38656
+
+COPY_EXISTING ~spwi101s.itm~ ~override~
+	SAY NAME1 @30073
+	SAY NAME2 @30073
+
+COPY_EXISTING ~spwi102s.itm~ ~override~
+	SAY NAME1 @30074
+	SAY NAME2 @30074
+
+COPY_EXISTING ~spwi103s.itm~ ~override~
+	SAY NAME1 @30075
+	SAY NAME2 @30075
+
+COPY_EXISTING ~spwi104s.itm~ ~override~
+	SAY NAME1 @30076
+	SAY NAME2 @30076
+
+COPY_EXISTING ~spwi105s.itm~ ~override~
+	SAY NAME1 @30077
+	SAY NAME2 @30077
+
+COPY_EXISTING ~spwi108s.itm~ ~override~
+	SAY NAME1 @30078
+	SAY NAME2 @30078
+
+COPY_EXISTING ~spwi112s.itm~ ~override~
+	SAY NAME1 @30079
+	SAY NAME2 @30079
+
+COPY_EXISTING ~spwi115s.itm~ ~override~
+	SAY NAME1 @30080
+	SAY NAME2 @30080
+
+COPY_EXISTING ~spwi116s.itm~ ~override~
+	SAY NAME1 @30081
+	SAY NAME2 @30081
+
+COPY_EXISTING ~spwi117s.itm~ ~override~
+	SAY NAME1 @30082
+	SAY NAME2 @30082
+
+COPY_EXISTING ~spwi118s.itm~ ~override~
+	SAY NAME1 @30083
+	SAY NAME2 @30083
+
+COPY_EXISTING ~spwi119s.itm~ ~override~
+	SAY NAME1 @30084
+	SAY NAME2 @30084
+
+COPY_EXISTING ~spwi120s.itm~ ~override~
+	SAY NAME1 @30085
+	SAY NAME2 @30085
+
+COPY_EXISTING ~spwi121s.itm~ ~override~
+	SAY NAME1 @30086
+	SAY NAME2 @30086
+
+COPY_EXISTING ~spwi122s.itm~ ~override~
+	SAY NAME1 @30087
+	SAY NAME2 @30087
+
+COPY_EXISTING ~spwi124s.itm~ ~override~
+	SAY NAME1 @30088
+	SAY NAME2 @30088
+
+COPY_EXISTING ~spwi224s.itm~ ~override~
+	SAY NAME1 @30089
+	SAY NAME2 @30089
+
+COPY_EXISTING ~spwi226s.itm~ ~override~
+	SAY NAME1 @30090
+	SAY NAME2 @30090
+
+COPY_EXISTING ~spwi402s.itm~ ~override~
+	SAY NAME1 @30091
+	SAY NAME2 @30091
+
+COPY_EXISTING ~uswi154s.itm~ ~override~
+	SAY NAME1 @30092
+	SAY NAME2 @30092
+
+COPY_EXISTING ~uswi156s.itm~ ~override~
+	SAY NAME1 @30093
+	SAY NAME2 @30093
+
+COPY_EXISTING ~uswi251s.itm~ ~override~
+	SAY NAME1 @30094
+	SAY NAME2 @30094
+
+COPY_EXISTING ~sppr101s.itm~ ~override~
+	SAY NAME1 @30095
+	SAY NAME2 @30095
+
+COPY_EXISTING ~sppr102s.itm~ ~override~
+	SAY NAME1 @30096
+	SAY NAME2 @30096
+
+COPY_EXISTING ~sppr103s.itm~ ~override~
+	SAY NAME1 @30097
+	SAY NAME2 @30097
+
+COPY_EXISTING ~sppr105s.itm~ ~override~
+	SAY NAME1 @30098
+	SAY NAME2 @30098
+
+COPY_EXISTING ~sppr107s.itm~ ~override~
+	SAY NAME1 @30099
+	SAY NAME2 @30099
+
+COPY_EXISTING ~sppr108s.itm~ ~override~
+	SAY NAME1 @30100
+	SAY NAME2 @30100
+
+COPY_EXISTING ~sppr109s.itm~ ~override~
+	SAY NAME1 @30101
+	SAY NAME2 @30101
+
+COPY_EXISTING ~sppr111s.itm~ ~override~
+	SAY NAME1 @30102
+	SAY NAME2 @30102
+
+COPY_EXISTING ~sppr112s.itm~ ~override~
+	SAY NAME1 @30103
+	SAY NAME2 @30103
+
+COPY_EXISTING ~sppr113s.itm~ ~override~
+	SAY NAME1 @30104
+	SAY NAME2 @30104
+
+COPY_EXISTING ~sppr114s.itm~ ~override~
+	SAY NAME1 @30105
+	SAY NAME2 @30105
+
+COPY_EXISTING ~sppr116s.itm~ ~override~
+	SAY NAME1 @30106
+	SAY NAME2 @30106
+
+COPY_EXISTING ~sppr117s.itm~ ~override~
+	SAY NAME1 @30107
+	SAY NAME2 @30107
+
+COPY_EXISTING ~sppr150s.itm~ ~override~
+	SAY NAME1 @30108
+	SAY NAME2 @30108
+
+COPY_EXISTING ~uspr152s.itm~ ~override~
+	SAY NAME1 @30109
+	SAY NAME2 @30109
+
+COPY_EXISTING ~uspr153s.itm~ ~override~
+	SAY NAME1 @30110
+	SAY NAME2 @30110
 
 COPY_EXISTING ~uswi751.spl~ ~override~
 	SAY NAME1 @37751
@@ -3701,6 +3924,7 @@ COPY_EXISTING ~53MALAVO.sto~ ~override~
 	ADD_STORE_ITEM ~USWI554Z~ AFTER ~SPPR519Z~ #1 #1 #0 ~IDENTIFIED~ #1
 	ADD_STORE_ITEM ~USWI551Z~ AFTER ~SPPR519Z~ #1 #1 #0 ~IDENTIFIED~ #1
 	ADD_STORE_ITEM ~USWI652Z~ AFTER ~SPWI623Z~ #1 #1 #0 ~IDENTIFIED~ #1
+	ADD_STORE_ITEM ~USWI656Z~ AFTER ~USWI652Z~ #1 #1 #0 ~IDENTIFIED~ #1
 	ADD_STORE_ITEM ~USWI862Z~ #1 #1 #0 ~IDENTIFIED~ #1
 	ADD_STORE_ITEM ~USWI955Z~ #1 #1 #0 ~IDENTIFIED~ #2
 
@@ -3750,6 +3974,7 @@ COPY_EXISTING ~60SPELLS.sto~ ~override~
 	ADD_STORE_ITEM ~SPPR519Z~ AFTER ~SPWI610Z~ #1 #1 #0 ~IDENTIFIED~ #1
 	ADD_STORE_ITEM ~USWI652Z~ AFTER ~SPWI629Z~ #1 #1 #0 ~IDENTIFIED~ #1
 	ADD_STORE_ITEM ~USWI653Z~ AFTER ~USWI652Z~ #1 #1 #0 ~IDENTIFIED~ #1
+	ADD_STORE_ITEM ~USWI656Z~ AFTER ~USWI653Z~ #1 #1 #0 ~IDENTIFIED~ #1
 	REPLACE_TEXTUALLY CASE_INSENSITIVE ~SPWI410Z~ ~SPPR307Z~
 	REPLACE_TEXTUALLY CASE_INSENSITIVE ~SPWI320Z~ ~USWI353Z~
 	REPLACE_TEXTUALLY CASE_INSENSITIVE ~SPWI203Z~ ~SPPR309Z~

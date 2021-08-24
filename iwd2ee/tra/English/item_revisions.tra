@@ -3943,7 +3943,7 @@ Attack Bonus:  +1
 Enchantment:  +1
 Damage Type:  slashing
 Special:
-  Unholy: Deals +2d6 damage to good creatures
+  Unholy: Deals +2d6 damage to good creatures. Counts as an evil-aligned weapon.
   Venom: 10% chance to poison target, dealing 2 damage per second for 12 seconds (no save)
   Fortitude Saving Throw: -1 penalty
 Weight: 3 lb.
@@ -3961,7 +3961,7 @@ Attack Bonus:  +5
 Enchantment:  +5
 Damage Type:  Slashing
 Special:  
-  Unholy: Deals +3d6 damage to good creatures
+  Unholy: Deals +3d6 damage to good creatures. Counts as an evil-aligned weapon.
   Venom: 25% chance to poison target, dealing 2 damage per second for 12 seconds (no save)
   Immune to Poison while equipped
 Weight: 1 lb.
@@ -4443,7 +4443,7 @@ Enchantment:  +5
 Damage Type:  Slashing
 Special:
   Spell Resistance: Set to 26
-  Holy Avenger: +2d6 magic damage against evil creatures. This bonus damage is doubled against fiends and undead.
+  Holy Avenger: +2d6 magic damage against evil creatures. This bonus damage is doubled against fiends and undead. Counts as a good-aligned weapon.
   Dispelling: Dispel Magic on target with each hit (Will DC 21). Striking an ally dispels magic on them with no save.
 Weight:  5 lb.
 Feat Requirement:  Martial Weapon, Large Sword
@@ -4483,7 +4483,7 @@ Enchantment:  +10
 Damage Type:  Slashing
 Special:
   Spell Resistance: Set to 38
-  Holy Avenger: +4d6 magic damage against evil creatures. This bonus damage is doubled against fiends and undead.
+  Holy Avenger: +4d6 magic damage against evil creatures. This bonus damage is doubled against fiends and undead. Counts as a good-aligned weapon.
   Dispelling: Dispel Magic on target with each hit (Will DC 32). Striking an ally dispels magic on them with no save.
 Weight:  5 lb.
 Feat Requirement:  Martial Weapon, Large Sword
@@ -4672,7 +4672,7 @@ Damage Type: Slashing
 Special:
   Counts as a silver weapon
   Spell Process: 33% chance per hit to confuse the target for 2 rounds (Will DC 18)
-  Chaotic: +3d6 damage to lawful creatures
+  Chaotic: +3d6 damage to lawful creatures. Counts as a chaotic-aligned weapon.
 Weight: 8 lb.
 Feat Requirement:  Exotic Weapon, Bastard Sword
 Type:  One-handed~
@@ -4693,7 +4693,7 @@ Special:
   Counts as a silver weapon
   Constant Effect: Chaotic Commands while equipped 
   Spell Process: 50% chance per hit to confuse the target for 2 rounds (Will DC 27)
-  Chaotic: +4d6 damage to lawful creatures
+  Chaotic: +4d6 damage to lawful creatures. Counts as a chaotic-aligned weapon.
 Weight: 8 lb. 
 Feat Requirement:  Exotic Weapon, Bastard Sword 
 Type:  One-handed~
@@ -4915,15 +4915,16 @@ Damage:  1d6 + 5
 Attack Bonus:  +5 
 Enchantment:  +5
 Damage Type:  Slashing
-Special:  
+Special:
   Keen: Increased chance of scoring a critical hit
   Dispelling: Dispel Magic on target (Will DC 20)
-  Energy Drain: -2 to Attack Bonus / -2 to damage, -10 to max hit points (Fortitude DC 30) 
+  Energy Drain: -2 to Attack Bonus / -2 to damage, -10 to max hit points (Fortitude DC 30)
+  Counts as an evil-aligned weapon
 Weight: 5 lb.
 Feat Requirement:  Martial Weapon, Large Sword
 Type:  One-handed~
 @10977    = ~Scimitar of the Soulless +10~
-@10978    = ~In honor of Iyachtu Xvim, Madae had one of her most skilled weapon smiths create a replica of Iyachtu Xvim's scimitar, the Scimitar of Souls, and called it the Scimitar of the Soulless. When it was complete, she had it put into the hands of Iyachtu Xvim's statue, in the hopes that if one day Iyachtu Xvim materialized as one of his avatars, he would use the weapon she had made for him in battle. 
+@10978    = ~In honor of Iyachtu Xvim, Madae had one of her most skilled weapon smiths create a replica of Iyachtu Xvim's scimitar, the Scimitar of Souls, and called it the Scimitar of the Soulless. When it was complete, she had it put into the hands of Iyachtu Xvim's statue, in the hopes that if one day Iyachtu Xvim materialized as one of his avatars, he would use the weapon she had made for him in battle.
 
 The mainstay weapon of Iyachtu Xvim, the Scimitar of Souls has the power to literally suck the life out from its victims, as does this replica. Its large, black polished blade is serrated on the back side of its curve, wraps around the lethal tip, and etches its jagged way one quarter the blade's length down the sharpened side. 
 
@@ -4940,6 +4941,7 @@ Special:
   Dispelling: Dispel Magic on target (Will DC 30)
   Energy Drain: -4 to Attack Bonus / -4 to damage, -20 to max hit points (Fortitude DC 45)
   Corrosive: +2d6 acid damage per hit
+  Counts as an evil-aligned weapon
 Weight: 5 lb
 Feat Requirement:  Martial Weapon, Large Sword
 Type:  One-handed~
@@ -4989,6 +4991,7 @@ Enchantment:  +5
 Damage Type:  Slashing
 Special:
   Vampiric: 2d4 hit points drained from target and temporarily added to wielder (Fortitude DC 25)
+  Counts as an evil-aligned weapon
 Weight: 12 lb.
 Feat Requirement:  Martial Weapon, Great Sword
 Type:  Two-handed~
@@ -5003,6 +5006,7 @@ Enchantment:  +5
 Damage Type:  Slashing
 Special:
   Vampiric: 3d4 hit points drained from target and temporarily added to wielder (Fortitude DC 35)
+  Counts as an evil-aligned weapon
 Weight: 12 lb.
 Feat Requirement:  Martial Weapon, Great Sword
 Type:  Two-handed~
@@ -5021,7 +5025,21 @@ Weight: 12 lb.
 Feat Requirement:  Martial Weapon, Great Sword
 Type:  Two-handed~
 //@11005    = ~Greatsword of Righteousness +2~
-//@11006    = ~Item description can remain the same; if new description is needed put it here~
+@11006    = ~The greatsword is a derivative of the longsword.  Weaponsmiths have always looked for ways to improve existing weapons.  In an effort to improve the longsword, the blade was lengthened.  Eventually, the handle had to be extended and two hands became necessary to properly swing the sword.  The primary function of greatswords is cleaving mounted knights and breaking up pike formations.  This one is particularly good at its job as it has been enchanted with a few magical properties.
+
+STATISTICS:
+
+Damage:  2d6 + 2
+Attack Bonus:  +2 
+Enchantment:  +2
+Damage Type:  Slashing
+Special:
+  Holy: +2d6 damage to evil creatures. Counts as a good-aligned weapon.
+  Lawful: +2d6 damage to chaotic creatures. Counts as a lawful-aligned weapon.
+Weight: 12 lb.
+Feat Requirement:  Martial Weapon, Great Sword
+Type:  Two-handed
+Minimum Strength of 18 Required~
 @11007    = ~Greatsword of Perfection~
 @11008    = ~The greatsword is a derivative of the longsword. Weaponsmiths have always looked for ways to improve existing weapons. In an effort to improve the longsword, the blade was lengthened. Eventually, the handle had to be extended and two hands became necessary to properly swing the sword. The primary function of greatswords is cleaving mounted knights and breaking up pike formations. This one is particularly good at its job as it has been enchanted with a few magical properties.
 
@@ -5893,6 +5911,7 @@ Attack Bonus:  +1
 Enchantment:  +1
 Damage Type:  Piercing
 Special:
+  Counts as a good-aligned weapon
   Disruption: all undead and outsiders struck must make a Fortitude save (DC 14) or be destroyed
 Weight: 15 lb.
 Feat Requirement:  Martial Weapon, Polearm
@@ -5915,6 +5934,7 @@ Attack Bonus:  +3
 Enchantment:  +3
 Damage Type:  Piercing
 Special:
+  Counts as a good-aligned weapon
   Disruption: all undead and outsiders struck must make a Fortitude save (DC 24) or be destroyed
   Spell Process: 25% chance of casting a variant Holy Smite on target with each successful hit (6d6 magic damage and blindness for one round; Reflex DC 30 for half and to negate blindness)
 Weight: 15 lb.
@@ -6029,7 +6049,7 @@ Damage type:  Slashing
 Special:
   Decay: Target is under the effects of Dolorous Decay for 5 rounds (Fortitude DC 42)
   Keen: Increases chance of scoring a critical hit
-  Chaotic: +2d6 damage against lawful creatures 
+  Chaotic: +2d6 damage against lawful creatures. Counts as a chaotic-aligned weapon.
 Weight: 7 lb.
 Required Feat:  Martial Weapon, Axe
 Type:  One-handed~
@@ -6121,7 +6141,17 @@ Type:  One-handed~
 //@11231    = ~Battleaxe +5~
 //@11232    = ~Item description can remain the same; if new description is needed put it here~
 //@11233    = ~Battleaxe +4~
-//@11234    = ~Item description can remain the same; if new description is needed put it here~
+@11234    = ~Besides its superb craftsmanship, tiny runes of power can be seen etched all along the surface. It's obvious a lot of time and effort went into its creation and although not apparent at first, a slight blue glow can be seen emanating from the runes.
+
+STATISTICS:
+
+Damage:  1d8  +4
+Attack Bonus:  +4 
+Enchantment:  +4
+Damage Type:  Slashing
+Weight: 7 lb.
+Required Feat:  Martial Weapon, Axe
+Type:  One-handed~
 //@11235    = ~Battleaxe +3~
 //@11236    = ~Item description can remain the same; if new description is needed put it here~
 @11237    = ~Battleaxe of Killing Sprees +4~
@@ -6512,7 +6542,7 @@ Enchantment:  +5
 Damage Type:  Slashing
 Special:
   Constant Effect: Wielder is under the effects of the spell Holy Aura
-  Holy: +4d6 damage against evil creatures
+  Holy: +4d6 damage against evil creatures. Counts as a good-aligned weapon.
 Weight:  20 lb.
 Required Feat:  Martial Weapon, Axe
 Type:  Two-handed
@@ -6709,6 +6739,7 @@ Enchantment:  +1
 Damage Type: Slashing
 Special:
   Returning: returns to wielder's hand after being thrown
+  Counts as a cold iron weapon
 Weight: 10 lb.
 Required Feat:  Martial Weapon, Axe
 Type:  Two-handed
@@ -6730,6 +6761,7 @@ Enchantment:  +3
 Damage Type: Slashing
 Special:
   Returning: returns to wielder's hand after being thrown
+  Counts as a cold iron weapon
 Weight: 10 lb.
 Required Feat:  Martial Weapon, Axe
 Type:  Two-handed
@@ -6737,7 +6769,19 @@ Minimum Strengh of 18 Required~
 @11335    = ~Widow-Through +1~
 //@11336    = ~Item description can remain the same; if new description is needed put it here~
 @11337    = ~Grim Widow-Through +3~
-//@11338    = ~Item description can remain the same; if new description is needed put it here~
+@11338    = ~Black Donald was a grim man with a twisted sense of humor.  Though not quite malicious, he had little regard for human life.  When his adventuring band, Winnowing Drake Company, asked him to fell an opponent, he did so without question.  In addition to his wiry brawn and even temper, Donald was known for his fastidious care of his weapons and armor.  He kept his great axe keen and shining at all times.  When he waded into battle, crimson blood flew out in all directions from the gleaming blade.  Donald's halfling friend, Tim Rootfield, commented that the axe was so sharp that it would make widows out of half the wives in Faerun.  Black Donald smiled at the halfling and said that his blade was sharp enough to cut through the husband and back to village to get the wife on the follow-through.
+
+STATISTICS:
+
+Damage: 1d12 + 3
+Attack Bonus:  +3 
+Enchantment:  +3
+  Keen: Increases chance of scoring a critical hit
+  Chaotic: +2d6 damage against lawful creatures. Counts as a chaotic-aligned weapon.
+Damage Type:  Slashing
+Weight:  20 lb.
+Required Feat:  Martial Weapon, Axe
+Type:  Two-handed~
 //@11339    = ~The Executioner's Wife~
 //@11340    = ~Item description can remain the same; if new description is needed put it here~
 //@11341    = ~Tale of the Executioner's Wife~
@@ -6843,7 +6887,7 @@ Attack Bonus:  +5
 Enchantment:  +5
 Damage Type:  Bludgeoning
 Special:
-  Lawful: +4d6 damage against chaotic creatures
+  Lawful: +4d6 damage against chaotic creatures. Counts as a lawful-aligned weapon.
   Spell Power: Can cast Greater Command (at level 30) 3/day
 Weight: 3 lb.
 Required Feat:  Simple Weapon, Mace
@@ -7129,6 +7173,7 @@ Attack Bonus:  +1
 Enchantment:  +5
 Damage Type:  Bludgeoning
 Special:
+  Counts as a good-aligned weapon
   Spell Process: 33% chance of casting a variant Holy Smite on target with each successful hit (evil creatures only; 6d6 magic damage and blindness for one round; Reflex DC 30 for half and to negate blindness)
   Sure Striking: Weapon is treated as having a +5 enchantment for the purpose of hitting creatures that require magical weapons to hit
 Weight: 12 lb.
@@ -7144,6 +7189,7 @@ Attack Bonus:  +3
 Enchantment:  +5
 Damage Type:  Bludgeoning
 Special:
+  Counts as a good-aligned weapon
   Undead Burning: +2d6 fire damage vs. undead
   Disruption: All undead and outsiders hit by weapon must make a Fortitude save (DC 17) or be destroyed
   Sure Striking: Weapon is treated as having a +5 enchantment for the purpose of hitting creatures that require magical weapons to hit
@@ -7170,7 +7216,7 @@ Attack Bonus:  +1
 Enchantment:  +1
 Damage Type:  Bludgeoning
 Special:
-  Sacred: +1d6 damage to evil creatures
+  Sacred: +1d6 damage to evil creatures. Counts as a good-aligned weapon.
   Invigoration: Each hit heals wielder 1d2 hit points
 Weight: 5 lb.
 Required Feat:  Simple Weapon, Mace
@@ -7187,7 +7233,7 @@ Attack Bonus:  +3
 Enchantment:  +3
 Damage Type:  Bludgeoning
 Special:
-  Sacred: +2d6 damage to evil creatures
+  Sacred: +2d6 damage to evil creatures. Counts as a good-aligned weapon.
   Invigoration: Each hit heals wielder 1d8 hit points
 Weight: 5 lb.
 Required Feat:  Simple Weapon, Mace
@@ -7208,6 +7254,7 @@ Enchantment:  +4
 Damage Type:  Bludgeoning
 Special: 
   +2d6 magic damage vs. Undead
+  Counts as a silver weapon
 Weight: 10 lb.
 Required Feat:  Simple Weapon, Mace
 Type:  One-handed~
@@ -7223,6 +7270,7 @@ Enchantment:  +5
 Damage Type:  Bludgeoning
 Special: 
   +3d6 magic damage vs. Undead
+  Counts as a silver weapon
 Weight: 10 lb.
 Required Feat:  Simple Weapon, Mace
 Type:  One-handed~
@@ -7348,7 +7396,19 @@ Weight: 8 lb.
 Required Feat:  Simple Weapon, Mace
 Type:  One-handed~
 //@11477    = ~Holy Morningstar +1~
-//@11478    = ~Item description can remain the same; if new description is needed put it here~
+@11478    = ~The morningstar is a wooden shaft topped with a metal head made up of a spiked iron sheath.  Morningstars have an overall length of about four feet.  This particular one is mounted with a golden head that has been magically enhanced so as to improve performance and escape the malleability of gold.
+
+STATISTICS:
+
+Damage:  1d8  +1
+Attack Bonus:  +1 
+Enchantment:  +1
+Damage Type:  Bludgeoning
+Special:
+  Holy: +2d6 damage to evil creatures. Counts as a good-aligned weapon.
+Weight: 8 lb.
+Required Feat:  Simple Weapon, Mace
+Type:  One-handed~
 @11479    = ~Morning Glory +2~
 @11480    = ~Morning Glory is a finely crafted weapon. The head is constructed of mithril with blunted steel spikes of a golden color. The haft is fashioned from highly polished oak with a reinforced steel center. The pommel of the weapon is capped with a seal depicting the rising sun. 
 
@@ -11423,7 +11483,22 @@ Special:
 Weight: 14 lb.
 Feat Requirement:  Martial Weapon, Polearm
 Type:  Two-handed~
+//@12329    = ~Unholy Halberd of Chaos~
+@12330    = ~Like others of its type, this halberd consists of a cleaver-like axe blade mounted on a staff approximately six feet in length. It has also been bestowed with a small number of magical properties, however, thus making it more effective in combat. Its keen blade, for instance, will shear through your opponent's flesh to find the bone while its barbed tip will seek out gaps in their armor.
 
+STATISTICS:
+
+Damage:  1d10
+Enchantment:  +2
+Damage Type:  Piercing
+Special:
+  Unholy: +2d6 damage vs Good creatures. Counts as an evil-aligned weapon.
+  Chaotic: +2d6 damage vs Lawful creatures. Counts as a chaotic-aligned weapon.
+  Bane: +2 Attack Bonus vs Elves and +2d6+2 vs Elves
+  Vampiric: 1d4 hit points drained from target and added to wielder (Fortitude save for none)
+Weight: 14 lb.
+Feat Requirement:  Martial Weapon, Polearm
+Type:  Two-handed~
 @12413    = ~Storm Shell Amulet~
 @12414    = ~Amulets are usually magical devices that are commonly worn around the neck, suspended from a chain. The type of chain that comes with an amulet generally increases the item's aesthetic value, not its magical properties. Only one amulet can be dangled from the neck.
 

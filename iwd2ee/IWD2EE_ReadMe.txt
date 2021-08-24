@@ -48,31 +48,36 @@ Components:
 44. Reduce enemy saving throw bonuses in Heart of Fury Mode
 45. Weaken allied summoned creatures in Heart of Fury Mode
 46. Have the party start with experience in Heart of Fury Mode
-47. Remove the delay between sneak attacks
+47. Reduce the delay between sneak attacks
 48. Increase the level cap
 49. Always learn spells from scrolls successfully
+50. Remove the summoning limit
+51. Add attacks of opportunity to the game
+52. Roll for stats at character creation
 
 --Class Revisions--
 
-This component dramatically rebalances the game to make warriors and rogues much more viable, while slightly nerfing some aspects of the typical powergaming classes (clerics, sorcerers, and druids). This component is most balanced when combined with the Spell Revisions component.
+This component revises the game's classes to make warriors and rogues much more viable. This component is most balanced when combined with the Spell Revisions component.
 
-Barbarians: Barbarian rage now grants immunity to fear, hopelessness, stun, paralysis, sleep, and unconsciousness. Also, Barbarians get an additional 1- physical damage resistance for every 1 level after level 20, instead of every 3 levels. Barbarian Rage now keeps improving after level 20.
+Barbarians: Barbarian rage now grants immunity to fear, hopelessness, stun, paralysis, sleep, and unconsciousness. Also, Barbarians start gaining damage resistance at level 2 rather than level 11, and their damage resistance from their class is doubled if they're wearing medium armor (hide armor or chain mail). Barbarian Rage now keeps improving after level 20.
 
-Bards: The Lingering Song exploit is now closed, but bard songs are now more convenient, and all of them have practical uses (even the Song of Kaudies). They're also spread out over more levels and scale with levels so bards no longer reach their peak at level 11. All songs do not stack unless otherwise specified:
+Bards: Bard songs should be more useful now. They're also spread out over more levels and scale with levels so bards no longer reach their peak at level 11. The songs can stack, but only if multiple bards sing at the same time.
 
-Level 1: The Tale of Currant Strongheart: +1 to hit and damage and immunity to fear. Increases to +2 to hit and damage and grants immunity to hopelessness at level 19.
+Level 1: The Tale of Currant Strongheart: +1 to hit and damage and immunity to fear and hopelessness. Gains another +1 to hit and damage at levels 10, 25 and 40.
 
-Level 5: Tymora's Melody: +1 luck, +2 to saving throws and rogue skills. Increases to +2 to luck and +4 to saving throws and rogue skills at level 22.
+Level 3: The Song of Kaudies: All allies are immune to harmful sound-based spells and abilities.
 
-Level 10: The Siren's Yearning: All enemies must make a Will save or be stunned for 1 round or until they take damage. The save DC is equal to the bard's level. This song also imposes a cumulative -1 penalty to Will saves for 10 rounds, every round. Allies have a 25% chance of being affected by this spell.
+Level 5: Tymora's Melody: +1 luck, +2 to saving throws and rogue skills. Gives another +1 to luck and +2 to saving throws and rogue skills at levels 15 and 35.
 
-Level 15: The Song of Kaudies: All allies are affected by the Blink spell for 1 round (enemies have a 50% miss chance on party members, while the party has a 20% miss chance and 20% spell failure).
+Level 9: The Siren's Yearning: All enemies must make a Will save or be stunned for 1 round or until they take damage. The save DC is equal to the bard's level. This song also imposes a cumulative -1 penalty to Will saves for 10 rounds, every round.
 
-Level 20: The War Chant of Sith: +2 generic armor bonus, physical damage resistance of 3/-, and 3 HP healed every round. Increases to +4 AC, 6/- damage resistance, and 6 HP healed every round at level 25.
+Level 13: The War Chant of Sith: +2 generic armor bonus, physical damage resistance of 3/-, and 3 HP healed every round. Increases to +4 AC, 6/- damage resistance, and 6 HP healed every round at level 25.
 
-Level 25: The Ballad of Three Heroes: +5 spell resistance, 5/- resistance to all forms of magical damage, and the effects of the Tale of Curran Strongheart, Tymora's Melody, and the War Chant of Sith. Increases to +10 spell resistance and 10/- resistance to magical damage at level 28.
+Level 20: The Ballad of Three Heroes: +5 spell resistance, 5/- resistance to all forms of magical damage, and the effects of the Tale of Curran Strongheart, Tymora's Melody, and the War Chant of Sith. Increases to +10 spell resistance and 10/- resistance to magical damage at level 28.
 
-Clerics: Clerics, druid, and mages all use the same spell tables; they gain spell slots at the same rate. Spontaneous casting scales beyond level 4 (you can now cast Healing Circle, Heal, Greater Restoration, and Mass Heal via spontaneous casting).
+Creature Revisions also makes it so enemies early on use more sound-based spells and abilities (such as harpy wails in Chapter 1), which makes the Song of Kaudies more useful.
+
+Clerics: Clerics, druid, and mages all gain spell slots at the same rate. Spontaneous casting scales beyond level 4 (you can now cast Healing Circle, Heal, Greater Restoration, and Mass Heal via spontaneous casting).
 
 Druids: Druids get a new set of shapeshifting forms. The abilities of each form scale with the druid's level.
 
@@ -88,15 +93,47 @@ The druid shapeshifting feats are also changed. They now allow druids to shapesh
 
 Rogues: Rogues get +1 luck every 5 levels. They won't have the sustained damage output a warrior has, but they'll be able to land some very wicked sneak attacks (luck in IWD2 increases the chance of a critical hit).
 
-Monks: Monks now get much faster and more accurate unarmed attacks, and their attack damage progresses more logically. Their base damage caps at 1d8, but they gain more attacks per round than other classes, eventually becoming able to attack more than five times per round. Monks also get Abundant Step at level 10, a teleportation effect.
+Monks: Monks now get much faster and more accurate unarmed attacks, and their attack damage progresses more logically. Their base damage caps at 1d8+5, but they start with 2 attacks per round and gain an additional attack per round every 3 levels (up to 18 attacks per round at level 49). Their Deflect Arrows ability now lets them take no damage from the first missile attack that would hit them each round. Wholeness of Body now restores HP equal to the character's monk level * their Wisdom bonus, and can be used once per 7 levels. Quivering Palm can affect enemies higher level than the monk, and monks gain an additional use of Quivering Palm every 6 levels after level 15. Monks also get Abundant Step at level 10, a teleportation effect.
 
-Fighters: Fighters get +1 to damage every 5 levels (increasing to every 2 levels after level 20), and now the fighter-exclusive Weapon Specialization feats give +5 to hit and damage. All warriors get better saving throws and stronger attacks.
+In addition, monk orders no longer limit multiclassing, and they have extra abilities.
 
-Rangers: Rangers get more spell slots, and they get them at lower levels. They are also able to use Set Natural Snare every 6 levels, which snares enemies for 5 rounds on a failed Reflex save. Set Natural Snare is much more effective than in the original game; the save DC now improves by 1 for every level and will work reliably even in Heart of Fury mode.
+Monk of the Old Order:
+2nd level: The monk now adds their Wisdom bonus again to the DC of Stunning Attack.
+18th level: The monk now adds their Wisdom bonus again to the DC of Quivering Palm.
 
-Paladins: Paladins get more spell slots, and they get them at lower levels. Paladins get an additional casting of Lay on Hands every 5 levels.
+Monk of the Broken Ones:
+2nd level: The monk gains one use of Lay on Hands per day. Any level that would give the monk a use of Wholeness of Body instead gives them another use of Lay on Hands. When used by a Monk of the Broken Ones, Lay on Hands restores the same amount of HP as Wholeness of Body (monk level * Wisdom bonus) but can be used on other creatures as well.
+6th level: The monk gains 2/- resistance to all physical damage. Another 1/- resistance is gained every 4 levels thereafter.
 
-Sorcerers: Sorcerers get slightly slower spell growth and slightly slower access to new spell picks. They will no longer hit their peak at level 20 and then experience near-zero growth.
+Monk of the Dark Moon:
+2nd level: The monk gains a sneak attack bonus of 1d6. For every 4 additional monk levels after level 2, the monk gains another 1d6 sneak attack damage.
+
+Fighters: Fighters get +1 to damage every 5 levels and +5% critical hit chance every 10 levels, and now the fighter-exclusive Weapon Specialization feats give +5 to hit and damage. All warriors get better saving throws and stronger attacks.
+
+Rangers: Rangers get more spell slots, and they get them at lower levels. They can gain the feats Improved Two-Weapon Fighting and Manyshot at lower levels than other classes, and they can gain a second rank in those feats for another attack per round. They are also able to use Set Natural Snare every 6 levels, which snares enemies for 5 rounds on a failed Reflex save. Set Natural Snare is much more effective than in the original game; the save DC now improves by 1 for every level and will work reliably even in Heart of Fury mode.
+
+Paladins: Paladins get more spell slots, and they get them at lower levels. Paladins get an additional casting of Lay on Hands every 5 levels. Smite Evil is more powerful, and they get an additional casting of Smite Evil every 10 levels.
+
+In addition, paladin orders no longer limit multiclassing, and they have extra abilities.
+
+Paladin of Ilmater:
+2nd level: The paladin can cast Shield Other (which halves the damage an ally takes, causing the paladin to take the other half) at will.
+6th level: The paladin's healing spells and abilities heal 50% more hit points if used on an ally other than the paladin.
+11th level: The bonus to healing spells and abilities is increased from 50% to 100%.
+
+Paladin of Helm:
+2nd level: While using the Guard action, the paladin and all allies within 20 feet gain a +2 AC bonus.
+6th level: The AC bonus from using the Guard action increases to +4.
+11th level: While using the Guard action, the paladin can see through illusions as per True Sight.
+
+Paladin of Mystra:
+2nd level: The paladin gains one rank in Armored Arcana, reducing their arcane spell failure by 35%.
+6th level: The paladin gains two more ranks in Armored Arcana, reducing their arcane spell failure by a total of 105% (allowing them to cast arcane spells with no chance of failure while wearing the heaviest armor and shields).
+11th level: All fire, cold, electricity, acid, and magic damage dealt by the paladin is increased by 20%. This stacks with feats like Spirit of Flame. This bonus applies to both spells like Fireball and abilities like Smite Evil.
+
+Sorcerers: Sorcerers will no longer hit their peak at level 20 and then experience near-zero growth. They get slightly slower spell growth and slightly slower access to new spell picks.
+
+Class Revisions also adds over 30 new skills to the game and modifies several existing skills to make them more useful.
 
 --Looser Alignment Restrictions for Classes--
 
@@ -112,15 +149,15 @@ Rogues can be Lawful Good
 
 --Spell Revisions--
 
-This component significantly strengthens many underpowered spells while slightly weakening the most powerful options. It also switches some spells to lower or higher levels and grants some spells to classes that previously could not cast them. Here are the main changes:
+This component significantly strengthens many underpowered spells. It also switches some spells to lower or higher levels and grants some spells to classes that previously could not cast them. Here are the main changes:
 
-- Over 30 new spells are added to the game. These include unused spells like Dimension Door, spells from other games like Mantle and True Strike, as well as unusual ones like Identify Creature (a divination spell that tells you the stats of the target creature) and Auril's Blessing (which increases the power of your cold spells).
+- Over 90 new spells are added to the game. These include unused spells like Dimension Door, spells from other games like Mantle and True Strike, as well as unusual ones like Identify Creature (a divination spell that tells you the stats of the target creature) and Auril's Blessing (which increases the power of your cold spells).
 
 - Cleric domains have better spell choices. If a spell is in-theme with the kit (e.g. Moonblade and Wall of Moonlight for priests of Selune), they can cast it at a particularly low level as a domain spell.
 
 - Certain spells are available to more classes. Rangers and Paladins have much better spell choices. Spells that create magical weapons or give combat bonuses can be cast as lower-level spells by Rangers or Paladins than by Druids or Clerics (e.g. Rangers can cast Fire Seeds as a 4th-level spell, and Paladins can cast Spiritual Weapon as a 1st-level spell and Holy Power as a 3rd-level spell).
 
-- Magical weapons like Flame Blade and Decastave have been improved. Most of them gain bonuses from Strength and proficiency (even ones that deal non-physical damage). Saving throws on magical weapons and touch attacks (e.g. Snakebite poison, Slay Living instant death) now have DCs that scale with the character's spellcasting ability and Spell Focus bonuses. Touch attacks that are one-use (e.g. Inflict Light Wounds, Harm) are not used up until they hit a creature.
+- Magical weapons like Flame Blade and Decastave have been improved. Most of them gain bonuses from Strength and proficiency (even ones that deal non-physical damage). Saving throws on magical weapons and touch attacks (e.g. Snakebite poison, Slay Living instant death) now have DCs that scale with the character's spellcasting ability and Spell Focus bonuses.
 
 - Spells that weaken a creature rather than disabling it have a higher DC or no save at all (e.g. Deafness has no save since it simply gives 20% spell failure).
 
@@ -135,7 +172,7 @@ Spell Focus: Transmutation/Abjuration
 
 --Item Revisions--
 
-Normally, Icewind Dale 2's items are balanced terribly. There are a handful of ridiculously overpowered magic items (e.g. Winged Blight, Massive Halberd of Hate) towering over hundreds of almost useless magic items (e.g. items that just provide +1 Hide skill or 1/- Spell Resistance). It's not even a low-magic game: one gets tons of magic items, but most of them suck.
+Normally, Icewind Dale 2's items are balanced terribly. There are just a few good items towering over hundreds of almost useless magic items (e.g. items that just provide +1 Hide skill or 1/- Spell Resistance). It's not even a low-magic game: one gets tons of magic items, but most of them suck.
 
 Item Revisions enhances most of the magical items in Icewind Dale 2, giving them a much larger variety of useful abilities. The purpose is primarily to empower weak items rather than to weaken strong items. Overall, the total number of magical items you obtain as loot in the game won't change much, but those items are more likely to be useful.
 
@@ -288,7 +325,7 @@ Race Revisions gives some new abilities to certain races, to make them fit their
 
 --Revise racial level adjustment/ECL--
 
-This component makes it so rather than certain subraces being one or more "levels behind" other characters, they get a certain penalty to XP. In practice, this means that these subraces don't level up that much slower than other characters early on, though at very high levels they lag behind a more.
+This component makes it so rather than certain subraces being one or more "levels behind" other characters, they get a certain penalty to XP. In practice, this means that these subraces don't level up that much slower than other characters early on, though at very high levels they lag behind a bit more.
 
 --Enemies give the same amount of experience regardless of the party's level--
 
@@ -312,19 +349,19 @@ Early on in Heart of Fury Mode, it can be very difficult to get enemies to fail 
 
 --Remove ability score bonuses of allied summoned creatures in Heart of Fury Mode--
 
-In Heart of Fury Mode, allied summoned creatures also get HoF bonuses, and since you reach high level more quickly, summoned creature can be quite overpowered. This component makes it so summoned creatures don't gain the normal +10 to all ability scores that creatures on Heart of Fury Mode get, unless they are summoned by an enemy.
+In Heart of Fury Mode, allied summoned creatures also get HoF bonuses, and since you reach high level more quickly, summoned creature can be quite overpowered. This component makes it so summoned creatures don't gain the normal +10 to all ability scores that creatures on Heart of Fury Mode get (with the exception of +10 Constitution, which should at least make them decent meatshields), unless they are summoned by an enemy.
 
 --Have the party start with more experience on Heart of Fury Mode--
 
 The beginning of Heart of Fury Mode is absolutely brutal if you start at level 1 - even with some of those components installed that weaken HoF creatures. This component gives each party member some experience at the start of the game. The experience each character starts with is the same regardless of party size. You have choices of how much experience to start with.
 
---Remove the delay after a sneak attack before the creature can be sneak attacked again--
+--Reduce the delay after a sneak attack before the creature can be sneak attacked again--
 
-Normally once a rogue sneak attacks a creature, that creature becomes immune to sneak attacks for about 3 rounds. This component removes that immunity, allowing the creature to be sneak attacked again.
+Normally once a rogue sneak attacks a creature, that creature becomes immune to sneak attacks for about 3 rounds. This component can either remove that immunity, allowing the creature to be sneak attacked again immediately, or reduce its duration to 1 round.
 
 --Increase the level cap--
 
-This component increases the level cap to 40 or to 50 (your choice). You'll only reach such high levels if you're soloing or playing Heart of Fury Mode.
+This component increases the level cap to 40 or to 50 (your choice). You'll only reach such high levels if you're soloing or playing Heart of Fury Mode with a small party.
 
 --Always learn spells from scrolls successfully--
 

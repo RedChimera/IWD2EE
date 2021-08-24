@@ -114,6 +114,7 @@
 @55113=~energy drain~
 @55114=~<EXICNAME> cannot be turned~
 @55115=~Iron skins remaining: ~
+@55116=~Blackguard~
 @55180=~, 1 image remaining~
 @55181=~, <EXASVAL3> images remaining~
 @55182=~, 1 damage remaining~
@@ -265,6 +266,11 @@
 @55581=~Copy Spell failed: <EXCPVAL1> is too high level for you to copy~
 @55582=~Copy Spell failed: <EXCPVAL1> cannot be copied~
 @55583=~<EXCPVAL1> copied with Copy Spell~
+@55584=~<EXACVAL1> is too high level to be stored in a Spellstaff~
+@55585=~Innate abilities cannot be stored in a Spellstaff~
+@55586=~<EXACVAL1> can only target the caster and thus cannot be stored in a Spellstaff~
+@55587=~<EXACVAL1> cannot be stored in a Spellstaff~
+@55588=~<EXACVAL1> has been stored in a Spellstaff, to be released by attacking with it~
 @55591=~<EXACVAL1> is too high level for Imbue with Spell Ability~
 @55592=~<EXACVAL1> does not work with Imbue with Spell Ability~
 @55593=~This character has been imbued with <EXACVAL1>; they can cast it once~

@@ -1719,7 +1719,7 @@ The caster utters the finger of death incantation, points his index finger at th
 @1733    = ~Reflected Image 
 (Illusion) 
 Level: Brd 1, Sor/Wiz 1, Mask 1
-Range: Caster
+Range: Sight of Caster
 Duration: 24 hours
 Casting Time: 0
 Area of Effect: 1 creature
@@ -1834,7 +1834,7 @@ Casting Time: 7
 Area of Effect: Caster
 Saving Throw: None
 
-This spell creates a meteoric iron magical club (1d6) that has +3 to attack and damage, and is treated as a +6 weapon for purposes of what it can hit. It does an additional 3d6 points of magic damage against all forms of unnatural creatures. The Star Metal Cudgel uses the Simple Weapon: Mace proficiency.~
+This spell creates a meteoric iron magical club (1d6) that has +4 to attack and damage, and is treated as a +6 weapon for purposes of what it can hit. It does an additional 3d6 points of magic damage against all forms of unnatural creatures. For purposes of damage reduction, it counts as a cold iron weapon, dealing full damage to demons. The Star Metal Cudgel uses the Simple Weapon: Mace proficiency.~
 @1767    = ~Animate Skeleton/Zombie~
 @1768    = ~This scroll contains the knowledge of two spells, Animate Skeleton and Animate Zombie:
 
@@ -2618,6 +2618,47 @@ Launcher:  Bow~
 @30067=~Imbued Spell~
 @30068=~Deva~
 @30069=~Stunning Mace of Disruption +3~
+@30070=~Damage from non-evil weapon reduced by 10~
+@30071=~Damage from non-evil weapon reduced by 15~
+@30072=~Mislead Clone~
+@30073=~Spellstaff (Grease)~
+@30074=~Spellstaff (Mage Armor)~
+@30075=~Spellstaff (Burning Hands)~
+@30076=~Spellstaff (Charm Person)~
+@30077=~Spellstaff (Color Spray)~
+@30078=~Spellstaff (Protection from Petrification)~
+@30079=~Spellstaff (Magic Missile)~
+@30080=~Spellstaff (Shocking Grasp)~
+@30081=~Spellstaff (Sleep)~
+@30082=~Spellstaff (Chill Touch)~
+@30083=~Spellstaff (Chromatic Orb)~
+@30084=~Spellstaff (Larloch's Minor Drain)~
+@30085=~Spellstaff (Reflected Image)~
+@30086=~Spellstaff (Spook)~
+@30087=~Spellstaff (Ice Dagger)~
+@30088=~Spellstaff (Summon Monster I)~
+@30089=~Spellstaff (Deafness)~
+@30090=~Spellstaff (Ray of Enfeeblement)~
+@30091=~Spellstaff (Dimension Door)~
+@30092=~Spellstaff (Simple Summoning)~
+@30093=~Spellstaff (Jump)~
+@30094=~Spellstaff (Identify Creature)~
+@30095=~Spellstaff (Bless)~
+@30096=~Spellstaff (Command)~
+@30097=~Spellstaff (Cure Light Wounds)~
+@30098=~Spellstaff (Entangle)~
+@30099=~Spellstaff (Protection from Evil)~
+@30100=~Spellstaff (Remove Fear)~
+@30101=~Spellstaff (Sanctuary)~
+@30102=~Spellstaff (Bane)~
+@30103=~Spellstaff (Inflict Light Wounds)~
+@30104=~Spellstaff (Sunscorch)~
+@30105=~Spellstaff (Doom)~
+@30106=~Spellstaff (Faerie Fire)~
+@30107=~Spellstaff (Frost Fingers)~
+@30108=~Spellstaff (Summon Nature's Ally I)~
+@30109=~Spellstaff (Hunter's Mark)~
+@30110=~Spellstaff (Shortening)~
 
 @31105     = ~Entangle~
 @32105     = ~Entangle
@@ -3431,7 +3472,20 @@ Casting Time: 7
 Area of Effect: 20-foot radius
 Saving Throw: None
 
-Animal Growth causes allied animals in the area of effect to temporarily grow twice as large in each dimension. The animals gains +8 Strength and Constitution; these are size bonuses which stack with other bonuses to these attributes. The animals' speed is doubled. However, they also get a -4 penalty to Dexterity, AC, and attack rolls due to increased size.~
+Animal Growth causes allied animals in the area of effect to temporarily grow twice as large in each dimension. The animals gains +8 Strength and Constitution; these are size bonuses which stack with other bonuses to these attributes. The animals' movement speed is doubled, because they cover more distance with each stride. However, they also get a -4 penalty to Dexterity, AC, and attack rolls due to increased size.~
+@35555     = ~Holy Weapon~
+@36555     = ~Holy Weapon
+(Evocation)
+Level: Pal 5
+Range: Caster
+Duration: 1 round/level
+Casting Time: 5
+Area of Effect: Caster
+Saving Throw: None
+
+This spell imbues the paladin's weapons with holy power. Any melee weapon the paladin wields for the duration is considered good-aligned and +5 for purposes of overcoming damage reduction, and deals an additional 2d6 magic damage to evil creatures.
+
+Although paladins normally cast spells at half their caster level, Holy Weapon will be cast at a paladin's full caster level.~
 @35653     = ~Repulsion~
 @36653     = ~Repulsion
 (Abjuration)
@@ -3818,6 +3872,17 @@ Saving Throw: None
 Perception Filter causes the recipient to attract less notice without actually being invisible. Enemies will ignore the character, not attacking or casting spells on them, as long as there is someone else they can target instead (who isn't affected by this spell). If there are no other allies they can target instead, the enemies will notice the character and attack them.
 
 If a character under the effect of this spell attacks or casts a spell, that does not cause the spell to end, but the enemy they are currently targeting can still notice them.~
+@37357     = ~Legend Lore~
+@38357     = ~Legend Lore
+(Divination) 
+Level: Brd 3, Oghma 3
+Range: Caster
+Duration: 10 rounds/level
+Casting Time: 3
+Area of Effect: Caster
+Saving Throw: None
+
+A more powerful version of the spell Identify, Legend Lore temporarily increases the lore of the caster, allowing them to identify multiple magical items. For the duration, the caster's Knowledge (Arcana) is increased by 30.~
 @37451     = ~Teleport Field~
 @38451     = ~Teleport Field
 (Transmutation) 
@@ -3934,6 +3999,17 @@ Area of Effect: 20-foot long, 5-foot wide wall
 Saving Throw: None
 
 This spell creates a wall of magical force, which stays for 5 rounds. Creatures cannot pass through the wall, though they can still fly over it, teleport past it, or float through it while incorporeal. The wall cannot be dispelled. Only one Wall of Force can be active at a time.~
+@37555     = ~Second Chance~
+@38555     = ~Second Chance
+(Enchantment)
+Level: Brd 5, Clr 6
+Range: Touch
+Duration: 8 hours or until triggered
+Casting Time: 9
+Area of Effect: 1 creature
+Saving Throw: None
+
+This spell gives the target the miraculous ability to avoid death once. The next time the target would die in the next 8 hours, they are instead reduced to one hit point.~
 @37652     = ~Isaac's Greater Missile Storm~
 @38652     = ~Isaac's Greater Missile Storm
 (Evocation)
@@ -3966,7 +4042,33 @@ Casting Time: 10
 Area of Effect: Special
 Saving Throw: None
 
-Songcasting lets the bard store a spell, which has a chance of being cast automatically each round that the bard sings their bard song. Immediately after casting this spell, the bard should attempt to cast another spell of 2nd-level or lower. Instead of being cast, this spell will be stored (expending one use of the spell). Each round for the duration, if the bard is singing a bard song, there is a chance (1% per bard level) that the spell will be cast on each creature the bard song affects. Even spells with a range of Caster can target other creatures this way. If the spell is 1st-level, the chance is doubled. The spell can potentially be triggered multiple times over many rounds.~
+Songcasting lets the bard store a spell, which has a chance of being cast automatically each round that the bard sings their bard song. Immediately after casting this spell, the bard should attempt to cast another spell of 2nd-level or lower. Instead of being cast, this spell will be stored (expending one use of the spell).
+
+Each round for the duration, if the bard is singing a bard song, there is a chance (1% per bard level) that the spell will be cast on each creature the bard song affects. Even spells with a range of Caster can target other creatures this way. If the spell is 1st-level, the chance is doubled. The spell can potentially be triggered multiple times over many rounds.~
+@37655     = ~Void Sound~
+@38655     = ~Void Sound
+(Necromancy)
+Level: Brd 7
+Range: Caster
+Duration: Instantaneous
+Casting Time: 5
+Area of Effect: 30-feet long, 10-foot diameter cone
+Saving Throw: Fortitude half
+
+By casting this spell, the caster emits a Void Sound, a horrific sound that can somehow be heard by the deaf and by no one else, and which carries negative energy with it. All deaf creatures in the area of effect take 1d8 magic damage per level (max 30d8). This spell has no effect on undead or constructs.~
+@37656     = ~Spellstaff~
+@38656     = ~Spellstaff
+(Universal)
+Level: Drd 6, Sor/Wiz 6
+Range: Special
+Duration: 8 hours or until all charges are expended
+Casting Time: 10
+Area of Effect: Special
+Saving Throw: None
+
+This spell lets the caster store a spell in a staff, which casts the spell each time it is used to attack a creature. Immediately after casting this spell, the caster should attempt to cast a 1st-level spell that can target a point or a creature other than the caster (or one that gives the caster a weapon to make a touch attack against a creature). Instead of being cast, this spell will be stored in a Spellstaff, which is wielded by the caster.
+
+The Spellstaff has a number of charges equal to the caster's level. Each time the caster attacks with the staff, a charge is used to cast the stored spell on the target of the attack. The stored spell is always cast with a caster level of 10, regardless of the caster's actual level. The staff has a range equal to the range of the spell, deals no physical damage, and automatically hits (unless the stored spell is one like Shocking Grasp that requires an attack roll, in which case the staff requires an attack roll to hit).~
 @37751     = ~Stygian Ice Storm~
 @38751     = ~Stygian Ice Storm
 (Conjuration)

@@ -3,9 +3,9 @@
 @4800     = ~Summon Aocha~
 @4801     = ~Reform Party~
 @4802     = ~Veira's Wedding Ring~
-@4803     = ~This ring is the only part of Veira that remains truly tangible.  Bound in death as well as life, the ring never leaves Veira's finger.
+@4803     = ~This ring is the only part of Veira that remains truly tangible. Bound in death as well as life, the ring never leaves Veira's finger.
 
-Veira remains only partly corporeal so long as she clings to the Material Plane.  She can interact with the world around her, but her partially ethereal form has no need for sleep, and she can neither enjoy the pleasure of food or drink, nor can she suffer the pain of illness and injury.  If her form is damaged, she can slowly regenerate over time.  If her form is destroyed, she can be restored with a sufficient burst of positive energy, such as a Raise Dead spell.
+Veira remains only partly corporeal so long as she clings to the Material Plane. She can interact with the world around her, but her partially ethereal form has no need for sleep, and she can neither enjoy the pleasure of food or drink, nor can she suffer the pain of illness and injury. If her form is damaged, she can slowly regenerate over time. If her form is destroyed, she can be restored with a sufficient burst of positive energy, such as a Raise Dead spell.
 
 STATISTICS:
 
@@ -18,9 +18,9 @@ Resistance: 5/- Acid, Electricity, and Fire Resistance
 Immunity to fatigue, poison, disease, bleeding wounds, stun, web, entangle, intoxication, nausea, vampiric touch, energy drain, Stoneskin, Iron Skins, Barkskin, enfeeblement, Otiluke's Resilient Sphere, Tortoise Shell, Horrid Wilting, death magic, petrification, polymorph, critical hits, and most potions.
 Weight: 0 lb.~
 @4804     = ~Veira's Wedding Ring~
-@4805     = ~This ring is the only part of Veira that remains truly tangible.  Bound in death as well as life, the ring never leaves Veira's finger.
+@4805     = ~This ring is the only part of Veira that remains truly tangible. Bound in death as well as life, the ring never leaves Veira's finger.
 
-Veira remains only partly corporeal so long as she clings to the Material Plane.  She can interact with the world around her, but her partially ethereal form has no need for sleep, and she can neither enjoy the pleasure of food or drink, nor can she suffer the pain of illness and injury.  If her form is damaged, she can slowly regenerate over time.  If her form is destroyed, she can be restored with a sufficient burst of positive energy, such as a Raise Dead spell.
+Veira remains only partly corporeal so long as she clings to the Material Plane. She can interact with the world around her, but her partially ethereal form has no need for sleep, and she can neither enjoy the pleasure of food or drink, nor can she suffer the pain of illness and injury. If her form is damaged, she can slowly regenerate over time. If her form is destroyed, she can be restored with a sufficient burst of positive energy, such as a Raise Dead spell.
 
 STATISTICS:
 
@@ -33,7 +33,7 @@ Resistance: 10/- Acid, Electricity, and Fire Resistance
 Immunity to fatigue, poison, disease, bleeding wounds, stun, web, entangle, intoxication, nausea, vampiric touch, energy drain, Stoneskin, Iron Skins, Barkskin, enfeeblement, Otiluke's Resilient Sphere, Tortoise Shell, Horrid Wilting, death magic, petrification, polymorph, critical hits, and most potions.
 Weight: 0 lb.~
 @4806     = ~Vrek's Claw~
-@4807     = ~Vrek prefers to use his jagged claws in combat, finding conventional weapons designed for humanoid hands to be clumsy in his grip.  Vrek may still use a shield or a weapon in his off hand, but he uses his claws as his primary attack.  Vrek's claws strike as +1 weapons for the purposes of overcoming damage reduction.
+@4807     = ~Vrek prefers to use his jagged claws in combat, finding conventional weapons designed for humanoid hands to be clumsy in his grip. Vrek may still use a shield or a weapon in his off hand, but he uses his claws as his primary attack. Vrek's claws strike as +1 weapons for the purposes of overcoming damage reduction.
 
 STATISTICS: 
 
@@ -42,10 +42,10 @@ Attack Bonus: +1
 Enchantment:  +1
 Damage Type: Slashing
 Weight: 0 lb.
-Required Feat:  Simple Weapons, Touch Attack
+Required Feat:  Simple Weapon, Touch Attack
 Type:  One-handed~
 @4808     = ~Vrek's Claw~
-@4809     = ~Vrek prefers to use his jagged claws in combat, finding conventional weapons designed for humanoid hands to be clumsy in his grip.  Vrek may still use a shield or a weapon in his off hand, but he uses his claws as his primary attack.  Vrek's claws strike as +5 weapons for the purposes of overcoming damage reduction.
+@4809     = ~Vrek prefers to use his jagged claws in combat, finding conventional weapons designed for humanoid hands to be clumsy in his grip. Vrek may still use a shield or a weapon in his off hand, but he uses his claws as his primary attack. Vrek's claws strike as +5 weapons for the purposes of overcoming damage reduction.
 
 STATISTICS: 
 
@@ -54,10 +54,10 @@ Attack Bonus: +5
 Enchantment:  +5
 Damage Type: Slashing
 Weight: 0 lb.
-Required Feat:  Simple Weapons, Touch Attack
+Required Feat:  Simple Weapon, Touch Attack
 Type:  One-handed~
 @4810     = ~Vrek's Hide~
-@4811     = ~Vrek's hide is unique among trolls.  His entire body is covered with a strange growth of unknown origin, and as a river troll born in the frozen North, he is naturally resistant to cold temperatures.  Combined with his thick, scaly skin and innate regeneration, Vrek is extremely resilient to natural attacks.
+@4811     = ~Vrek's hide is unique among trolls. His entire body is covered with a strange growth of unknown origin, and as a river troll born in the frozen North, he is naturally resistant to cold temperatures. Combined with his thick, scaly skin and innate regeneration, Vrek is extremely resilient to natural attacks.
 
 STATISTICS:
 
@@ -69,7 +69,7 @@ Special:
   Resistance: 5/- resistance to cold damage
 Weight: 0 lb.~
 @4812     = ~Vrek's Hide~
-@4813     = ~Vrek's hide is unique among trolls.  His entire body is covered with a strange growth of unknown origin, and as a river troll born in the frozen North, he is naturally resistant to cold temperatures.  Combined with his thick, scaly skin and innate regeneration, Vrek is extremely resilient to natural attacks.
+@4813     = ~Vrek's hide is unique among trolls. His entire body is covered with a strange growth of unknown origin, and as a river troll born in the frozen North, he is naturally resistant to cold temperatures. Combined with his thick, scaly skin and innate regeneration, Vrek is extremely resilient to natural attacks.
 
 STATISTICS:
 
@@ -81,7 +81,7 @@ Special:
   Resistance: 5/- resistance to cold damage
 Weight: 0 lb.~
 @4814     = ~Vunarg's Throwing Axe~
-@4815     = ~This throwing axe is Vunarg's most prized possession, won during a fight with a band of adventurers who failed to defeat the Vunarg Clan.  The blade is engraved with shallow runes that make it fly more accurately and also return to the wielder's hand when thrown.  It still contains an etching on the handle written in Common, presumably from the axe's former, human owner:
+@4815     = ~This throwing axe is Vunarg's most prized possession, won during a fight with a band of adventurers who failed to defeat the Vunarg Clan. The blade is engraved with shallow runes that make it fly more accurately and also return to the wielder's hand when thrown. It still contains an etching on the handle written in Common, presumably from the axe's former, human owner:
 
 Be always worthy
 Be never proud
@@ -99,7 +99,7 @@ Weight: 4 lb.
 Required Feat:  Martial Weapon, Axe
 Type:  One-handed~
 @4816     = ~Vunarg's Throwing Axe~
-@4817     = ~This throwing axe is Vunarg's most prized possession, won during a fight with a band of adventurers who failed to defeat the Vunarg Clan.  The blade is engraved with shallow runes that make it fly more accurately and also return to the wielder's hand when thrown.  It still contains an etching on the handle written in Common, presumably from the axe's former, human owner:
+@4817     = ~This throwing axe is Vunarg's most prized possession, won during a fight with a band of adventurers who failed to defeat the Vunarg Clan. The blade is engraved with shallow runes that make it fly more accurately and also return to the wielder's hand when thrown. It still contains an etching on the handle written in Common, presumably from the axe's former, human owner:
 
 Be always worthy
 Be never proud
@@ -117,7 +117,7 @@ Weight: 4 lb.
 Required Feat:  Martial Weapon, Axe
 Type:  One-handed~
 @4818     = ~Xhaan's Claw~
-@4819     = ~Xhaan prefers to fight with his claws, as he has had no need for weapons in the countless lifetimes he has lived in the Nine Hells.  He may still use a shield or a weapon in his off hand, but he uses his claws as his primary attack.  As an extraplanar being, Xhaan's claws strike as a +1 weapon for the purposes of overcoming damage reduction.
+@4819     = ~Xhaan prefers to fight with his claws, as he has had no need for weapons in the countless lifetimes he has lived in the Nine Hells. He may still use a shield or a weapon in his off hand, but he uses his claws as his primary attack. As an extraplanar being, Xhaan's claws strike as a +1 weapon for the purposes of overcoming damage reduction.
  
 STATISTICS: 
  
@@ -126,12 +126,13 @@ Attack Bonus:  +1
 Enchantment:  +1
 Damage Type: Slashing
 Special:
+  Counts as evil-aligned and lawful-aligned for purposes of overcoming damage reduction
   Frost: +1d6 cold damage
 Weight: 0 lb. 
 Feat Requirement:  None
 Type:  One-handed~
 @4820     = ~Xhaan's Claw~
-@4821     = ~Xhaan prefers to fight with his claws, as he has had no need for weapons in the countless lifetimes he has lived in the Nine Hells.  He may still use a shield or a weapon in his off hand, but he uses his claws as his primary attack.  As an extraplanar being, Xhaan's claws strike as a +5 weapon for the purposes of overcoming damage reduction.
+@4821     = ~Xhaan prefers to fight with his claws, as he has had no need for weapons in the countless lifetimes he has lived in the Nine Hells. He may still use a shield or a weapon in his off hand, but he uses his claws as his primary attack. As an extraplanar being, Xhaan's claws strike as a +5 weapon for the purposes of overcoming damage reduction.
  
 STATISTICS: 
  
@@ -140,12 +141,13 @@ Attack Bonus:  +5
 Enchantment:  +5
 Damage Type: Slashing 
 Special:
+  Counts as evil-aligned and lawful-aligned for purposes of overcoming damage reduction
   Frost: +2d6 cold damage
 Weight: 0 lb. 
 Feat Requirement:  None
 Type:  One-handed~
 @4822     = ~Abishai Hide~
-@4823     = ~As a white abishai, Xhaan is innately resistant to spells and elemental damage.  His thick hide and extraplanar biology also grants him immunity to poison and disease and the ability to regenerate from his wounds.  As a baatezu, he feels no fear, and minor charms are useless on his alien mind.
+@4823     = ~As a white abishai, Xhaan is innately resistant to spells and elemental damage. His thick hide and extraplanar biology also grants him immunity to poison and disease and the ability to regenerate from his wounds. As a baatezu, he feels no fear, and minor charms are useless on his alien mind.
 
 STATISTICS:
 
@@ -156,12 +158,12 @@ Special:
   Resistance: 100/- Fire Resistance
   Resistance: 50/- Cold Resistance
   Resistance: 18/- Spell Resistance
-  Damage Reduction: 5/+1
+  Damage Reduction: 5/good or silver
   Regeneration: Regenerates 1 hit point per round
   Immunity to disease, poison, charm, and fear effects
 Weight: 0 lb.~
 @4824     = ~Abishai Hide~
-@4825     = ~As a white abishai, Xhaan is innately resistant to spells and elemental damage.  His thick hide and extraplanar biology also grants him immunity to poison and disease and the ability to regenerate from his wounds.  As a baatezu, he feels no fear, and minor charms are useless on his alien mind.
+@4825     = ~As a white abishai, Xhaan is innately resistant to spells and elemental damage. His thick hide and extraplanar biology also grants him immunity to poison and disease and the ability to regenerate from his wounds. As a baatezu, he feels no fear, and minor charms are useless on his alien mind.
 
 STATISTICS:
 
@@ -172,7 +174,7 @@ Special:
   Resistance: 100/- Fire Resistance
   Resistance: 50/- Cold Resistance
   Resistance: 26/- Spell Resistance
-  Damage Reduction: 10/+2
+  Damage Reduction: 10/good or silver
   Regeneration: Regenerates 2 hit points per round
   Immunity to disease, poison, charm, and fear effects
 Weight: 0 lb.~
@@ -191,7 +193,7 @@ Casting Time: 5
 Area of Effect: Special 
 Saving Throw: None 
 
-For 10 rounds per level, Zack Boosenburry may call his loyal mount Aocha to battle.  Aocha is a big furry spider and is far more sweet and cuddly than one might expect (or want), but in combat, she is no less dangerous than her wild relatives.  She is innately immune to web effects and possesses a powerful venom, and will gladly rush to Zack's defense in times of danger.
+For 10 rounds per level, Zack Boosenburry may call his loyal mount Aocha to battle. Aocha is a big furry spider and is far more sweet and cuddly than one might expect (or want), but in combat, she is no less dangerous than her wild relatives. She is innately immune to web effects and possesses a powerful venom, and will gladly rush to Zack's defense in times of danger.
 
 If she should perish in the line of duty, Zack has a special formula in his pocket that can restore her to normal health, but she still needs 8 hours of rest to recover before Zack may summon her again.
 ~

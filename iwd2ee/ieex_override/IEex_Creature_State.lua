@@ -146,7 +146,7 @@ function IEex_Extern_OnPostCreatureProcessEffectList(creatureData)
 })
 	end
 --]]
-	if not IEex_IsSprite(targetID, false) and targetID ~= IEex_GetActorIDCharacter(0) then return end
+	if not IEex_IsSprite(targetID, false) and not IEex_IsPartyMember(targetID) then return end
 	if ex_full_ability_score_cap > 40 then
 		for i = 0, 5, 1 do
 			local statID = 37 + i

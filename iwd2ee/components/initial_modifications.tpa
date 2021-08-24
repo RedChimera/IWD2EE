@@ -67,6 +67,16 @@ COPY_EXISTING ~IEex_TRA.lua~ ~override~
 	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_tra_55582 *=.*~ ~ex_tra_55582 = %ex_tra_55582%~
 	ex_tra_55583 = RESOLVE_STR_REF(@55583)
 	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_tra_55583 *=.*~ ~ex_tra_55583 = %ex_tra_55583%~
+	ex_tra_55584 = RESOLVE_STR_REF(@55584)
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_tra_55584 *=.*~ ~ex_tra_55584 = %ex_tra_55584%~
+	ex_tra_55585 = RESOLVE_STR_REF(@55585)
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_tra_55585 *=.*~ ~ex_tra_55585 = %ex_tra_55585%~
+	ex_tra_55586 = RESOLVE_STR_REF(@55586)
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_tra_55586 *=.*~ ~ex_tra_55586 = %ex_tra_55586%~
+	ex_tra_55587 = RESOLVE_STR_REF(@55587)
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_tra_55587 *=.*~ ~ex_tra_55587 = %ex_tra_55587%~
+	ex_tra_55588 = RESOLVE_STR_REF(@55588)
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_tra_55588 *=.*~ ~ex_tra_55588 = %ex_tra_55588%~
 	ex_tra_55591 = RESOLVE_STR_REF(@55591)
 	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_tra_55591 *=.*~ ~ex_tra_55591 = %ex_tra_55591%~
 	ex_tra_55592 = RESOLVE_STR_REF(@55592)
@@ -330,11 +340,13 @@ COPY_EXISTING ~IEex_TRA.lua~ ~override~
 	SPRINT ex_str_controlundead @55111
 	REPLACE_TEXTUALLY ~ex_str_controlundead *=.*~ ~ex_str_controlundead = "%ex_str_controlundead%"~ 
 	SPRINT ex_str_banishment @55112
-	REPLACE_TEXTUALLY ~ex_str_banishment *=.*~ ~ex_str_banishment = "%ex_str_banishment%"~ 
+	REPLACE_TEXTUALLY ~ex_str_banishment *=.*~ ~ex_str_banishment = "%ex_str_banishment%"~
 	SPRINT ex_str_energydrain @55113
 	REPLACE_TEXTUALLY ~ex_str_energydrain *=.*~ ~ex_str_energydrain = "%ex_str_energydrain%"~ 
 	SPRINT ex_str_55114 @55114
 	REPLACE_TEXTUALLY ~ex_str_55114 *=.*~ ~ex_str_55114 = "%ex_str_55114%"~
+	SPRINT ex_str_blackguard @55116
+	REPLACE_TEXTUALLY ~ex_str_blackguard *=.*~ ~ex_str_blackguard = "%ex_str_blackguard%"~
 	SPRINT ex_str_arcane_sight_b_mirror_image @55180
 	REPLACE_TEXTUALLY ~ex_str_arcane_sight_b_mirror_image *=.*~ ~ex_str_arcane_sight_b_mirror_image = "%ex_str_arcane_sight_b_mirror_image%"~
 	SPRINT ex_str_arcane_sight_b_mirror_images @55181
@@ -863,6 +875,8 @@ OUTER_SET ref_jump_distance_increased = RESOLVE_STR_REF(@30061)
 OUTER_SET ref_flying = RESOLVE_STR_REF(@30062)
 OUTER_SET ref_spell_turning = RESOLVE_STR_REF(@37763)
 OUTER_SET ref_songcasting = RESOLVE_STR_REF(@37654)
+OUTER_SET ref_second_chance = RESOLVE_STR_REF(@37555)
+OUTER_SET ref_holy_weapon = RESOLVE_STR_REF(@35555)
 
 APPEND ~STATDESC.2da~
 ~146	%ref_magic_stone%
@@ -897,6 +911,8 @@ APPEND ~STATDESC.2da~
 175	%ref_flying%
 176	%ref_spell_turning%
 177	%ref_songcasting%
+178	%ref_second_chance%
+179	%ref_holy_weapon%
 ~
 
 VERBOSE
