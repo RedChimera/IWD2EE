@@ -13,6 +13,7 @@ ex_tra_915 = 0
 ex_tra_916 = 0
 ex_tra_917 = 0
 ex_tra_5000 = 0
+ex_tra_55382 = 0
 ex_tra_55385 = 0
 ex_tra_55390 = 0
 ex_tra_55391 = 0

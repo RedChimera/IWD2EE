@@ -505,6 +505,18 @@ Rank Level +1 Level +2 Level +3
 3    2        1        0
 4    2        2        0
 5    2        2        1~
+@384    = ~Assassin~
+@385    = ~ASSASSIN:
+
+You have trained as an assassin. You know how to make especially debilitating sneak attacks.
+
+Prerequisite: 1 level of rogue, Hide and Move Silently 4 or higher, evil alignment
+
+Benefit: Your sneak attacks become death attacks, which also paralyze the target for two rounds on a failed Fortitude save (DC 10 + half your rogue level + your Dexterity modifier).
+
+However, you only gain 2 + Int modifier skill points per rogue level after the first.
+
+Special: You may only take this feat as a 1st-level character.~
 @522    = ~Wizard~
 @523    = ~WIZARD:
 

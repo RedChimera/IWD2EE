@@ -1630,13 +1630,46 @@ BEGIN
 		newhp = (newlevelbarbarian * 6 + newlevelbard * 3 + newlevelcleric * 4 + newleveldruid * 4 + newlevelfighter * 5 + newlevelmonk * 4 + newlevelpaladin * 5 + newlevelranger * 5 + newlevelrogue * 3 + newlevelsorcerer * 2 + newlevelwizard * 2 + newleveltotal / 2)
 		WRITE_SHORT currenthp newhp
 		WRITE_SHORT maxhp newhp
-	END	ELSE BEGIN
-	PATCH_IF ~%updatehp%~ STRING_EQUAL_CASE ~max~ OR ~%updatehp%~ STRING_EQUAL_CASE ~maximum~ BEGIN
+	END	ELSE PATCH_IF ~%updatehp%~ STRING_EQUAL_CASE ~max~ OR ~%updatehp%~ STRING_EQUAL_CASE ~maximum~ BEGIN
 		newhp = (newlevelbarbarian * 12 + newlevelbard * 6 + newlevelcleric * 8 + newleveldruid * 8 + newlevelfighter * 10 + newlevelmonk * 8 + newlevelpaladin * 10 + newlevelranger * 10 + newlevelrogue * 6 + newlevelsorcerer * 4 + newlevelwizard * 4)
 		WRITE_SHORT currenthp newhp
 		WRITE_SHORT maxhp newhp
 	END
+	newclassmask = 0
+	PATCH_IF newlevelbarbarian > 0 BEGIN
+		newclassmask|=0x1
 	END
+	PATCH_IF newlevelbard > 0 BEGIN
+		newclassmask|=0x2
+	END
+	PATCH_IF newlevelcleric > 0 BEGIN
+		newclassmask|=0x4
+	END
+	PATCH_IF newleveldruid > 0 BEGIN
+		newclassmask|=0x8
+	END
+	PATCH_IF newlevelfighter > 0 BEGIN
+		newclassmask|=0x10
+	END
+	PATCH_IF newlevelmonk > 0 BEGIN
+		newclassmask|=0x20
+	END
+	PATCH_IF newlevelpaladin > 0 BEGIN
+		newclassmask|=0x40
+	END
+	PATCH_IF newlevelranger > 0 BEGIN
+		newclassmask|=0x80
+	END
+	PATCH_IF newlevelrogue > 0 BEGIN
+		newclassmask|=0x100
+	END
+	PATCH_IF newlevelsorcerer > 0 BEGIN
+		newclassmask|=0x200
+	END
+	PATCH_IF newlevelwizard > 0 BEGIN
+		newclassmask|=0x400
+	END
+	WRITE_LONG 0x3B6 newclassmask
 END
 
 DEFINE_ACTION_FUNCTION ~ADD_FEAT_IWD2~

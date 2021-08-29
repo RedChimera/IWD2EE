@@ -215,6 +215,7 @@
 @55339=~Attacks <EXWHNAME39> with <EXWHWEAP39> : <EXWHHITMISS39>~
 @55340=~Attacks <EXWHNAME40> with <EXWHWEAP40> : <EXWHHITMISS40>~
 */
+@55382=~Spell Disrupted : Off hand in use.~
 @55383=~Attack failed to connect due to difference in height~
 @55384=~Damage avoided due to etherealness~
 @55385=~Damage avoided due to incorporealness~

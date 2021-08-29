@@ -479,6 +479,184 @@ function IEex_Chargen_ExtraFeatListener()
 		end
 	end
 end
+ex_starting_level = {-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1}
+ex_starting_skill_points = -1
+ex_class_level_up = {["numLevelUps"] = -1, ["class"] = -1}
+function IEex_LevelUp_ExtraFeatListener()
+	local g_pBaldurChitin = IEex_ReadDword(0x8CF6DC)
+	local levelUpData = IEex_ReadDword(g_pBaldurChitin + 0x1C60)
+	if levelUpData > 0 then
+		local actorID = IEex_ReadDword(levelUpData + 0x136)
+		local share = IEex_GetActorShare(actorID)
+		local panelID = IEex_GetEngineCharacterPanelID()
+		if panelID == 2 and ex_starting_level[1] ~= -1 then
+			ex_starting_level = {-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1}
+			ex_starting_skill_points = -1
+			ex_class_level_up["numLevelUps"] = -1
+			ex_class_level_up["class"] = -1
+		end
+		if share > 0 then
+			if panelID == 54 then
+				if ex_starting_level[1] == -1 then
+					for i = 1, 12, 1 do
+						ex_starting_level[i] = IEex_ReadByte(share + i + 0x625, 0x0)
+					end
+					ex_starting_skill_points = IEex_ReadByte(share + 0x8A3, 0x0)
+				end
+				if ex_class_level_up["numLevelUps"] ~= -1 then
+					ex_class_level_up["numLevelUps"] = -1
+					ex_class_level_up["class"] = -1
+				end
+			elseif panelID ~= 2 then
+				if IEex_ReadByte(share + 0x626, 0x0) > ex_starting_level[1] and ex_starting_level[1] ~= -1 and ex_class_level_up["numLevelUps"] == -1 then
+					ex_class_level_up["numLevelUps"] = IEex_ReadByte(share + 0x626, 0x0) - ex_starting_level[1]
+					for i = 2, 12, 1 do
+						if IEex_ReadByte(share + i + 0x625, 0x0) > ex_starting_level[i] then
+							ex_class_level_up["class"] = i - 1
+						end
+					end
+				end
+			end
+			local racePlusSub = IEex_ReadByte(share + 0x26, 0x0) * 0x10000 + IEex_ReadByte(share + 0x3E3D, 0x0)
+--[[
+			if panelID == 7 then
+				if not ex_ability_scores_initialized then
+					ex_ability_scores_initialized = true
+					if ex_subrace_name[racePlusSub] ~= nil then
+						local racePlusSubName = ex_subrace_name[racePlusSub]
+						racialAbilityBonuses[1] = tonumber(IEex_2DAGetAtStrings("ABRACEAD", "MOD_STR", racePlusSubName))
+						racialAbilityBonuses[2] = tonumber(IEex_2DAGetAtStrings("ABRACEAD", "MOD_DEX", racePlusSubName))
+						racialAbilityBonuses[3] = tonumber(IEex_2DAGetAtStrings("ABRACEAD", "MOD_CON", racePlusSubName))
+						racialAbilityBonuses[4] = tonumber(IEex_2DAGetAtStrings("ABRACEAD", "MOD_INT", racePlusSubName))
+						racialAbilityBonuses[5] = tonumber(IEex_2DAGetAtStrings("ABRACEAD", "MOD_WIS", racePlusSubName))
+						racialAbilityBonuses[6] = tonumber(IEex_2DAGetAtStrings("ABRACEAD", "MOD_CHR", racePlusSubName))
+					end
+					if ex_new_ability_score_system == 2 then
+						IEex_WriteDword(chargenData + 0x4EA, ex_current_remaining_points)
+						for i = 1, 6, 1 do
+							IEex_WriteByte(share + ex_base_ability_score_cre_offset[i], currentAbilityScores[i])
+						end
+					end
+					if ex_new_ability_score_system == 1 or ex_new_ability_score_system == 2 then
+						if currentAbilityScores[1] == 0 and #unallocatedAbilityScores == 0 then
+							IEex_Chargen_Reroll()
+						else
+							IEex_Chargen_UpdateAbilityScores(chargenData, share)
+						end
+					end
+					IEex_EngineCreateCharUpdatePopupPanel()
+				end
+				if panelID == 4 and ex_new_ability_score_system == 1 then
+					local panelData = IEex_ReadDword(IEex_ReadDword(chargenData + 0x53E) + 0x8)
+					IEex_IterateCPtrList(panelData + 0x4, function(controlData)
+						local controlIndex = IEex_ReadByte(controlData + 0xA, 0x0)
+						if ex_chargen_ability_buttons_pressed[controlIndex] ~= nil then
+							local buttonWasPressed = ex_chargen_ability_buttons_pressed[controlIndex]
+							local buttonIsPressed = (IEex_ReadByte(controlData + 0x134, 0x0) > 0)
+							if buttonWasPressed and not buttonIsPressed then
+								if controlIndex == 16 or controlIndex == 18 or controlIndex == 20 or controlIndex == 22 or controlIndex == 24 or controlIndex == 26 then
+									local a = math.floor(controlIndex / 2) - 7
+									if currentAbilityScores[a] == 0 and #unallocatedAbilityScores > 0 then
+										currentAbilityScores[a] = table.remove(unallocatedAbilityScores) + racialAbilityBonuses[a]
+									end
+								elseif controlIndex == 17 or controlIndex == 19 or controlIndex == 21 or controlIndex == 23 or controlIndex == 25 or controlIndex == 27 then
+									local a = math.floor(controlIndex / 2) - 7
+									if currentAbilityScores[a] > 0 and #unallocatedAbilityScores < 6 then
+										table.insert(unallocatedAbilityScores, currentAbilityScores[a] - racialAbilityBonuses[a])
+										table.sort(unallocatedAbilityScores)
+										currentAbilityScores[a] = 0
+									end
+								end
+								IEex_Chargen_UpdateAbilityScores(chargenData, share)
+							end
+							ex_chargen_ability_buttons_pressed[controlIndex] = buttonIsPressed
+						end
+					end)
+					if #unallocatedAbilityScores > 0 then
+						IEex_IterateCPtrList(panelData + 0x4, function(controlData)
+							if IEex_ReadDword(controlData) == 8732244 then
+								IEex_WriteByte(controlData + 0x1E, 0)
+								IEex_WriteByte(controlData + 0x32, 1)
+								IEex_WriteByte(controlData + 0x116, 3)
+							end
+						end)
+					else
+						IEex_IterateCPtrList(panelData + 0x4, function(controlData)
+							if IEex_ReadDword(controlData) == 8732244 then
+								IEex_WriteByte(controlData + 0x1E, 1)
+								IEex_WriteByte(controlData + 0x32, 0)
+								IEex_WriteByte(controlData + 0x116, 1)
+							end
+						end)
+					end
+				end
+			else
+				if (panelID == 2 or panelID == 8) and (currentAbilityScores[1] > 0 or #unallocatedAbilityScores > 0) then
+					racialAbilityBonuses = {0, 0, 0, 0, 0, 0}
+					currentAbilityScores = {0, 0, 0, 0, 0, 0}
+					recordedAbilityScores = {0, 0, 0, 0, 0, 0}
+					unallocatedAbilityScores = {}
+					recordedUnallocatedAbilityScores = {}
+				end
+				if ex_ability_scores_initialized then
+					ex_ability_scores_initialized = false
+--					IEex_WriteDword(chargenData + 0x4EA, 0)
+				end
+			end
+--]]
+			if panelID == 55 then
+				if not ex_extra_skill_points_granted then
+					ex_extra_skill_points_granted = true
+					local skillPointsRemaining = IEex_ReadByte(levelUpData + 0x798, 0x0)
+					IEex_IterateActorEffects(actorID, function(eData)
+						local theopcode = IEex_ReadDword(eData + 0x10)
+						local theresource = IEex_ReadLString(eData + 0x30, 8)
+						if theopcode == 500 and theresource == "MESKLPTC" then
+							local theparameter1 = IEex_ReadDword(eData + 0x1C)
+							local thesavingthrow = IEex_ReadDword(eData + 0x40)
+							if bit.band(thesavingthrow, 2 ^ (ex_class_level_up["class"] + 15)) > 0 then
+								skillPointsRemaining = skillPointsRemaining + theparameter1 * ex_class_level_up["numLevelUps"]
+								local baseSkillPoints = ex_starting_skill_points + ex_class_level_up["numLevelUps"]
+								if ex_subrace_name[racePlusSub] == "HUMAN" then
+									baseSkillPoints = baseSkillPoints + ex_class_level_up["numLevelUps"]
+								end
+								if skillPointsRemaining < baseSkillPoints then
+									skillPointsRemaining = baseSkillPoints
+								end
+							end
+						end
+					end)
+					IEex_WriteByte(levelUpData + 0x798, skillPointsRemaining)
+					IEex_EngineCharacterUpdatePopupPanel()
+				end
+			elseif panelID == 54 or panelID == 7 then
+				if ex_extra_skill_points_granted then
+					ex_extra_skill_points_granted = false
+					IEex_WriteByte(levelUpData + 0x798, 0)
+				end
+			end
+--[[
+			if panelID == 56 then
+				if not ex_extra_feats_granted and ex_extra_feat_races[racePlusSub] ~= nil then
+					ex_extra_feats_granted = true
+					local featsRemaining = IEex_ReadDword(levelUpData + 0x646)
+					featsRemaining = featsRemaining + ex_extra_feat_races[racePlusSub]
+					if racePlusSub == 0x10000 or racePlusSub == 0x50001 then
+						featsRemaining = featsRemaining - 1
+					end
+					IEex_WriteDword(levelUpData + 0x646, featsRemaining)
+					IEex_EngineCreateCharUpdatePopupPanel()
+				end
+			else
+				if ex_extra_feats_granted then
+					ex_extra_feats_granted = false
+					IEex_WriteDword(levelUpData + 0x646, 0)
+				end
+			end
+--]]
+		end
+	end
+end
 
 function IEex_Chargen_RerollListener(key)
 	if key == ex_chargen_reroll_key or key == ex_chargen_store_key or key == ex_chargen_recall_key or key == ex_chargen_reallocate_key or key == IEex_KeyIDS.T or key == IEex_KeyIDS.P then
@@ -920,6 +1098,7 @@ function IEex_Scroll_RegisterListeners()
 	IEex_AddInputStateListener("IEex_DeathwatchListener")
 	IEex_AddInputStateListener("IEex_AbilityScoreCapListener")
 	IEex_AddInputStateListener("IEex_Chargen_ExtraFeatListener")
+	IEex_AddInputStateListener("IEex_LevelUp_ExtraFeatListener")
 	IEex_AddInputStateListener("IEex_Scroll_InputStateListener")
 end
 

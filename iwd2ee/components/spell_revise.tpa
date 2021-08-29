@@ -2890,6 +2890,12 @@ COPY_EXISTING ~uswi755.spl~ ~override~
 	SAY UNIDENTIFIED_DESC @38755
 	SAY IDENTIFIED_DESC @38755
 
+COPY_EXISTING ~uswi756.spl~ ~override~
+	SAY NAME1 @37756
+	SAY NAME2 @37756
+	SAY UNIDENTIFIED_DESC @38756
+	SAY IDENTIFIED_DESC @38756
+
 COPY_EXISTING ~uswi757.spl~ ~override~
 	SAY NAME1 @37757
 	SAY NAME2 @37757
@@ -3925,6 +3931,8 @@ COPY_EXISTING ~53MALAVO.sto~ ~override~
 	ADD_STORE_ITEM ~USWI551Z~ AFTER ~SPPR519Z~ #1 #1 #0 ~IDENTIFIED~ #1
 	ADD_STORE_ITEM ~USWI652Z~ AFTER ~SPWI623Z~ #1 #1 #0 ~IDENTIFIED~ #1
 	ADD_STORE_ITEM ~USWI656Z~ AFTER ~USWI652Z~ #1 #1 #0 ~IDENTIFIED~ #1
+	ADD_STORE_ITEM ~USWI756Z~ AFTER ~SPWI713Z~ #1 #1 #0 ~IDENTIFIED~ #1
+	ADD_STORE_ITEM ~USWI762Z~ AFTER ~SPWI713Z~ #1 #1 #0 ~IDENTIFIED~ #1
 	ADD_STORE_ITEM ~USWI862Z~ #1 #1 #0 ~IDENTIFIED~ #1
 	ADD_STORE_ITEM ~USWI955Z~ #1 #1 #0 ~IDENTIFIED~ #2
 
@@ -4015,7 +4023,7 @@ COPY_EXISTING ~ar4103.are~ ~override~
 	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR actor_name=~BossFiend~ script_special1=~USDW751~ END
 
 COPY_EXISTING ~AR5030.are~ ~override~
-	LPF fj_are_structure INT_VAR fj_charge0=1 fj_flags=0x1 fj_con_itm_idx=0 STR_VAR fj_structure_type=~itm~ fj_name=~USWI762Z~ END
+	LPF fj_are_structure INT_VAR fj_charge0=1 fj_flags=0x1 fj_con_itm_idx=0 STR_VAR fj_structure_type=~itm~ fj_name=~USWI756Z~ END
 
 COPY_EXISTING ~AR6051.are~ ~override~
 	LPF fj_are_structure INT_VAR fj_charge0=1 fj_flags=0x1 fj_con_itm_idx=5 STR_VAR fj_structure_type=~itm~ fj_name=~USWI763Z~ END

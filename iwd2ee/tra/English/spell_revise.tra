@@ -3573,7 +3573,7 @@ Saving Throw: None
 Power Word: Heal is one of the beneficial words of power. When uttered, it heals a creature to their maximum hit points and cures poison, disease, blindness, deafness, feeblemindedness, intoxication, and bleeding. Power Word: Heal has no effect on undead.~
 @35754     = ~Regeneration~
 @36754     = ~Regeneration
-(Divination)
+(Necromancy)
 Level: Clr 7, Drd 8
 Range: Touch
 Duration: 1 round / 2 levels
@@ -3915,7 +3915,7 @@ Casting Time: 4
 Area of Effect: Caster
 Saving Throw: Special
 
-This spell lets the caster summon undead by killing other creatures. During the duration of this spell, whenever the caster kills a creature, a ghoul rises to feast upon the remains. That ghoul will serve the caster for 8 hours. A ghoul will only be summoned if the caster dealt the killing damage to the creature; if the caster damaged the creature but another party member finished it off, the caster will not get a ghoul. The ghouls' paralyzing touch uses the DC of this spell as cast by the caster.~
+This spell lets the caster summon undead by killing other creatures. During the duration of this spell, whenever the caster kills a creature, a ghoul rises to feast upon the remains. That ghoul will serve the caster for 8 hours. A ghoul will only be summoned if the caster dealt the killing damage to the creature; if the caster damaged the creature but another party member finished it off, the caster will not get a ghoul. The ghouls' paralyzing touch uses the DC of this spell as cast by the caster. Ghoulish Feast cannot be cast by good characters.~
 @37454     = ~Copy Spell~
 @38454     = ~Copy Spell
 (Universal)
@@ -4120,6 +4120,17 @@ Area of Effect: Special
 Saving Throw: Reflex half
 
 This spell fires a flurry of small lightning bolts at the target. One bolt is fired per level, each one dealing 1d8 electrical damage (with a Reflex save at -4 for half) to all creatures in its path. The bolts will bounce off walls, potentially hitting the same creature multiple times per bolt.~
+@37756     = ~Reanimate~
+@38756     = ~Reanimate
+(Necromancy)
+Level: Clr 7, Sor/Wiz 7
+Range: Sight of Caster
+Duration: Permanent
+Casting Time: 7
+Area of Effect: Nearest corpse in 5-ft. radius
+Saving Throw: None
+
+This spell "resurrects" the target as an undead creature under the caster's control, retaining the stats and spells it had in life. The nearest dead creature to the target point, excluding undead, constructs, most extraplanar creatures, and creatures more than five levels higher than the caster, will be reanimated. It picks up and re-equips items it dropped when it died, unless the party took those items. Creatures that exploded into chunks cannot be reanimated. Reanimate cannot be cast by good characters.~
 @37757     = ~Skeleton Horde~
 @38757     = ~Skeleton Horde
 (Necromancy) 
@@ -4189,7 +4200,7 @@ Casting Time: 7
 Area of Effect: Special 
 Saving Throw: Reflex half
 
-This spell animates two skeletons which can be detonated on command to deal damage. When you have a skeleton use its special ability, or the skeleton takes damage, its skull explodes like a Skull Trap, dealing 10d6 slashing damage to all creatures within 15 feet (Reflex save for half), and the skeleton is destroyed. At 24th level, the spell animates three skeletons instead of two.~
+This spell animates two skeletons which can be detonated on command to deal damage. When you have a skeleton use its special ability, or the skeleton takes damage, its skull explodes like a Skull Trap, dealing 10d6 slashing damage to all creatures within 15 feet (Reflex save for half), and the skeleton is destroyed. At 24th level, the spell animates three skeletons instead of two. Skeleton Traps cannot be cast by good characters.~
 @37763     = ~Spell Turning~
 @38763     = ~Spell Turning
 (Abjuration)

@@ -103,6 +103,10 @@ COPY_EXISTING ~USCWABIW.itm~ ~override~ ~USHFCWAW.itm~ ~override~ ~USCWABIR.itm~
 	SAY NAME1 @23072
 	SAY NAME2 @23072
 
+COPY_EXISTING ~USCWWOWI.itm~ ~override~ ~USHFCWWW.itm~ ~override~
+	SAY NAME1 @23073
+	SAY NAME2 @23073
+
 COPY_EXISTING ~uses001.spl~ ~override~
 	SAY NAME1 @21001
 	SAY NAME2 @21001
@@ -922,7 +926,6 @@ COPY_EXISTING ~52YETTU.cre~ ~override~ ~52YETTUR.cre~ ~override~ ~52YETUH.cre~ ~
 	WRITE_LONG feats2 ulgiash
 	WRITE_BYTE proficiencysmallblade 3
 	WRITE_BYTE challengerating 10
-	WRITE_ASCII specialscript2 ~USYETI~ #8
 	LPF	IWD2_ADD_CRE_ITEM INT_VAR equip=1 STR_VAR item=~USCWYETI~ slot=~weapon1~ mode=~replace~ END
 
 COPY_EXISTING ~52YETGH.cre~ ~override~ ~52YETTG.cre~ ~override~ ~52YETTGR.cre~ ~override~
@@ -5224,6 +5227,12 @@ COPY_EXISTING ~AR5101.are~ ~override~
 	REPLACE_TEXTUALLY CASE_INSENSITIVE ~00T06V~ ~USHH06~
 	REPLACE_TEXTUALLY CASE_INSENSITIVE ~00T07V~ ~USHH07~
 	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR match_cre_file=~51BEEFI~ script_combat=~00AATBN~ END
+
+COPY_EXISTING ~AR5200.are~ ~override~
+	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR match_cre_file=~52YETTG~ script_team=~USYETI~ END
+	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR match_cre_file=~52YETTU~ script_team=~USYETI~ END
+	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR match_cre_file=~52YETGH~ script_team=~USYETI~ END
+	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR match_cre_file=~52YETUH~ script_team=~USYETI~ END
 
 COPY_EXISTING ~AR5303.are~ ~override~
 	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR actor_name=~Harpy8~ cre_file=~USHRPINF~ script_special2=~USHRPINF~ END

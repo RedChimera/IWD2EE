@@ -10456,8 +10456,8 @@ Weight:  1 lb.~
 
 STATISTICS:
 
-Permanent +4 Strength
-Permanent -4 Constitution
+Permanent +2 Strength
+Permanent -2 Constitution
 Weight:  1 lb.~
 @12109    = ~Potion of Defense~
 @12110    = ~Potions are typically found in ceramic, crystal, glass, or metal flasks or vials. Flasks or other containers generally contain enough fluid to provide one person with one complete dose to achieve the effects of the potion.
@@ -10471,8 +10471,8 @@ Weight:  1 lb.~
 
 STATISTICS:
 
-Permanent +4 Dexterity
-Permanent -4 Strength
+Permanent +2 Dexterity
+Permanent -2 Strength
 Weight:  1 lb.~
 @12113    = ~Potion of Wisdom Transference~
 @12114    = ~Potions are typically found in ceramic, crystal, glass, or metal flasks or vials. Flasks or other containers generally contain enough fluid to provide one person with one complete dose to achieve the effects of the potion. 

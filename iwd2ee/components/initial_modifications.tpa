@@ -43,6 +43,8 @@ COPY_EXISTING ~IEex_TRA.lua~ ~override~
 	REPLACE_TEXTUALLY ~ex_str_almost_dead *=.*~ ~ex_str_almost_dead = "%ex_str_almost_dead%"~
 	ex_tra_5000 = RESOLVE_STR_REF(@5000)
 	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_tra_5000 *=.*~ ~ex_tra_5000 = %ex_tra_5000%~
+	ex_tra_55382 = RESOLVE_STR_REF(@55382)
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_tra_55382 *=.*~ ~ex_tra_55382 = %ex_tra_55382%~
 	ex_tra_55385 = RESOLVE_STR_REF(@55385)
 	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_tra_55385 *=.*~ ~ex_tra_55385 = %ex_tra_55385%~
 	ex_tra_55395 = RESOLVE_STR_REF(@55395)

@@ -270,6 +270,7 @@ COPY_EXISTING ~60SPELLS.sto~ ~override~
 		ADD_STORE_ITEM ~USWI860Z~ AFTER ~SPWI629Z~ #1 #1 #0 ~IDENTIFIED~ #1
 		ADD_STORE_ITEM ~USWI759Z~ AFTER ~SPWI629Z~ #1 #1 #0 ~IDENTIFIED~ #1
 		ADD_STORE_ITEM ~USWI758Z~ AFTER ~SPWI629Z~ #1 #1 #0 ~IDENTIFIED~ #1
+		ADD_STORE_ITEM ~USWI756Z~ AFTER ~SPWI629Z~ #1 #1 #0 ~IDENTIFIED~ #1
 		ADD_STORE_ITEM ~USWI751Z~ AFTER ~SPWI629Z~ #1 #1 #0 ~IDENTIFIED~ #1
 		ADD_STORE_ITEM ~USPR653Z~ AFTER ~SPWI629Z~ #1 #1 #0 ~IDENTIFIED~ #1
 		ADD_STORE_ITEM ~USWI752Z~ AFTER ~SPWI629Z~ #1 #1 #0 ~IDENTIFIED~ #1
@@ -305,6 +306,11 @@ COPY_EXISTING ~ar4101.are~ ~override~
 COPY_EXISTING ~ar4102.are~ ~override~
 	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR charges1=0  charges2=0  charges3=0 single_match=1 STR_VAR old_item=~SPPR502Z~ new_item=~SPWI610Z~ END
 
+ACTION_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~2~ BEGIN
+	COPY_EXISTING ~ar4102.are~ ~override~
+		LPF fj_are_structure INT_VAR fj_charge0=1 fj_flags=0x1 fj_con_itm_idx=17 STR_VAR fj_structure_type=~itm~ fj_name=~USWI762Z~ END
+END
+
 COPY_EXISTING ~AR5301.are~ ~override~
 	LPF fj_are_structure INT_VAR fj_charge0=1 fj_flags=0x1 fj_con_itm_idx=3 STR_VAR fj_structure_type=~itm~ fj_name=~SPWI614Z~ END
 	LPF fj_are_structure INT_VAR fj_charge0=1 fj_flags=0x1 fj_con_itm_idx=4 STR_VAR fj_structure_type=~itm~ fj_name=~SPWI607Z~ END
@@ -315,6 +321,7 @@ ACTION_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~2~ BEGIN
 	COPY_EXISTING ~ar5302.are~ ~override~
 		LPF REPLACE_AREA_ITEM_IWD2 INT_VAR container=7 charges1=0 charges2=0 charges3=0 single_match=1 STR_VAR old_item=~RT11_L~ new_item=~USWI853Z~ END
 END
+
 COPY_EXISTING ~ar6051.are~ ~override~
 	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR charges1=0  charges2=0  charges3=0 single_match=1 STR_VAR old_item=~SPWI424Z~ new_item=~SPWI719Z~ END
 

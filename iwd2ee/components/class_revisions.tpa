@@ -704,7 +704,7 @@ LAF ADD_FEAT_IWD2 INT_VAR nameref=RESOLVE_STR_REF(@361) descref=RESOLVE_STR_REF(
 LAF ADD_FEAT_IWD2 INT_VAR nameref=RESOLVE_STR_REF(@363) descref=RESOLVE_STR_REF(@364) max=1 STR_VAR name=~ME_MASS_SPELL~ script=~Feats_MassSpell~ featspl_1=~USFMSSP1~ END
 LAF ADD_FEAT_IWD2 INT_VAR nameref=RESOLVE_STR_REF(@365) descref=RESOLVE_STR_REF(@366) max=2 STR_VAR name=~ME_MANYSHOT~ script=~Feats_Manyshot~ prerequisite_script=~Prereq_Manyshot~ featspl_1=~USFMNSH1~ END
 LAF ADD_FEAT_IWD2 INT_VAR nameref=RESOLVE_STR_REF(@373) descref=RESOLVE_STR_REF(@374) max=1 STR_VAR name=~ME_DEFENSIVE_ROLL~ script=~Feats_DefensiveRoll~ featspl_1=~USFDEFR1~ END
-LAF ADD_FEAT_IWD2 INT_VAR nameref=RESOLVE_STR_REF(@378) descref=RESOLVE_STR_REF(@379) max=3 STR_VAR name=~ME_DAMAGE_REDUCTION~ script=~Feats_DamageReduction~ prerequisite_script=~Prereq_DamageReduction~ featspl_1=~USFDAMR1~ featspl_1=~USFDAMR1~ featspl_1=~USFDAMR1~ END
+LAF ADD_FEAT_IWD2 INT_VAR nameref=RESOLVE_STR_REF(@378) descref=RESOLVE_STR_REF(@379) max=3 STR_VAR name=~ME_DAMAGE_REDUCTION~ script=~Feats_DamageReduction~ prerequisite_script=~Prereq_DamageReduction~ featspl_1=~USFDAMR1~ featspl_2=~USFDAMR1~ featspl_3=~USFDAMR1~ END
 LAF ADD_FEAT_IWD2 INT_VAR nameref=RESOLVE_STR_REF(@382) descref=RESOLVE_STR_REF(@383) max=5 STR_VAR name=~ME_ADVANCED_SPELL_CAPACITY~ script=~Feats_AdvancedSpellCapacity~ prerequisite_script=~Prereq_AdvancedSpellCapacity~ featspl_1=~USFIMSC1~ featspl_2=~USFIMSC2~ featspl_3=~USFIMSC3~ featspl_4=~USFIMSC4~ featspl_5=~USFIMSC5~ END
 // New descriptions for classes
 COPY_EXISTING ~help02.2da~ ~override~
