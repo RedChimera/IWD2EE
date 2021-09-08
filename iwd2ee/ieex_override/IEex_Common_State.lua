@@ -942,7 +942,7 @@ function IEex_WriteSanitizedAssembly(address, state, funcOverride)
 				writeDump = writeDump..IEex_ToHex(bytes[i], 2, true).." "
 			end
 		end)
-		IEex_FunctionLog("\n\nWriting Assembly at "..IEex_ToHex(address).." => "..writeDump.."\n")
+		--IEex_FunctionLog("\n\nWriting Assembly at "..IEex_ToHex(address).." => "..writeDump.."\n")
 
 		funcOverride = function(writeAddress, ...)
 			local bytes = {...}
@@ -1231,7 +1231,7 @@ end
 function IEex_WriteAssemblyAuto(assembly)
 	local state = IEex_SanitizeAssembly(assembly)
 	local reservedAddress, reservedLength = IEex_ReserveCodeMemory(state)
-	IEex_FunctionLog("Reserved "..IEex_ToHex(reservedLength).." bytes at "..IEex_ToHex(reservedAddress))
+	--IEex_FunctionLog("Reserved "..IEex_ToHex(reservedLength).." bytes at "..IEex_ToHex(reservedAddress))
 	IEex_WriteSanitizedAssembly(reservedAddress, state)
 	return reservedAddress
 end

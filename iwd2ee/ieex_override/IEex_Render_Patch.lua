@@ -3,6 +3,17 @@
 
 	IEex_DisableCodeProtection()
 
+	--------------------------------------------------------------------------
+	-- wined3d.dll + WINEDEBUG environment variable should log debug output --
+	--------------------------------------------------------------------------
+
+	IEex_HookAfterCall(0x7952FB, IEex_FlattenTable({[[
+		!push_all_registers_iwd2
+		]], IEex_GenLuaCall("IEex_Extern_AfterDirectDrawCreate"), [[
+		@call_error
+		!pop_all_registers_iwd2
+	]]}))
+
 	----------------------------------
 	-- Transparent Fog of War Hooks --
 	----------------------------------
