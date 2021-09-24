@@ -1,6 +1,7 @@
 
 IEex_Debug_CompressTime = false
 IEex_Debug_Stutter = false
+IEex_Debug_BadSoundDestructor = true
 
 if IEex_Debug_CompressTime then
 	IEex_DisableCodeProtection()
@@ -49,4 +50,16 @@ if IEex_Debug_Stutter then
 	]]})
 	IEex_EnableCodeProtection()
 
+end
+
+if IEex_Debug_BadSoundDestructor then
+	IEex_DisableCodeProtection()
+	IEex_HookAfterCall(0x7A8E66, {[[
+		!push_all_registers_iwd2
+		!push(esp)
+		!push(edi)
+		!call ]], {IEex_GetProcAddress("IEexHelper", "CSoundImp_Destruct"), 4, 4}, [[
+		!pop_all_registers_iwd2
+	]]})
+	IEex_EnableCodeProtection()
 end
