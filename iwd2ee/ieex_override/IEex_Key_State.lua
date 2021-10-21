@@ -1141,16 +1141,20 @@ function IEex_Extern_CheckScroll()
 	local visibleArea = IEex_GetVisibleArea()
 	if visibleArea ~= 0x0 then
 
-		local m_nScrollState = IEex_ReadDword(visibleArea + 0x238)
-		local m_nKeyScrollState = IEex_ReadDword(visibleArea + 0x23C)
-
-		local gameData = IEex_GetGameData()
-		local scrollSpeed = IEex_ReadDword(gameData + 0x43F2)
-		local keyboardScrollSpeed = IEex_ReadDword(gameData + 0x443E) / 3
-
 		local deltaFactor = IEex_Scroll_CalculateDeltaFactor()
-		IEex_AdjustViewPositionFromScrollState(m_nScrollState, scrollSpeed * deltaFactor)
-		IEex_AdjustViewPositionFromScrollState(m_nKeyScrollState, keyboardScrollSpeed * deltaFactor)
+
+		if not IEex_Helper_GetBridgeNL("IEex_Scroll_MiddleMouseState", "isDown") then
+			
+			local m_nScrollState = IEex_ReadDword(visibleArea + 0x238)
+			local m_nKeyScrollState = IEex_ReadDword(visibleArea + 0x23C)
+	
+			local gameData = IEex_GetGameData()
+			local scrollSpeed = IEex_ReadDword(gameData + 0x43F2)
+			local keyboardScrollSpeed = IEex_ReadDword(gameData + 0x443E) / 3
+	
+			IEex_AdjustViewPositionFromScrollState(m_nScrollState, scrollSpeed * deltaFactor)
+			IEex_AdjustViewPositionFromScrollState(m_nKeyScrollState, keyboardScrollSpeed * deltaFactor)
+		end
 	end
 end
 
