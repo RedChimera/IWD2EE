@@ -658,18 +658,18 @@ STATISTICS:
 +100 Maximum Hit Points
 Weight: 1 lb.~
 @4781     = ~Oil of Speed~
-@4782     = ~A pale oil made from crushed pearls, shark teeth, and rabbit's blood, this potion will quickly spread through the user's body.  The oil will dramatically improve the user's movement and attack rates, granting haste as per the mage spell for 10 rounds.
+@4782     = ~A pale oil made from crushed pearls, shark teeth, and rabbit's blood, this potion will quickly spread through the user's body.  The oil will dramatically improve the user's movement and attack rates, granting Haste as per the mage spell for 10 rounds.
 
 STATISTICS:
 
 Haste
 Weight: 1 lb.~
 @54781     = ~Oil of Speed~
-@54782     = ~A pale oil made from crushed pearls, shark teeth, and rabbit's blood, this potion will quickly spread through the user's body.  The oil will dramatically improve the user's movement and attack rates, granting a more powerful form of the mage spell Haste for 10 rounds.
+@54782     = ~A pale oil made from crushed pearls, shark teeth, and rabbit's blood, this potion will quickly spread through the user's body.  The oil will dramatically improve the user's movement and attack rates, granting Improved Haste for 5 rounds.
 
 STATISTICS:
 
-Greater Haste (+2 attacks per round rather than +1)
+Improved Haste
 Weight: 1 lb.~
 @4783     = ~Potion of Clarity~
 @4784     = ~This potion is a pleasant-smelling concoction of olive oil spiked with powdered nereid nose and crushed lapis lazuli.  Drinking this odd-tasting potion will temporarily grant the user immunity to most mind-affect spells, including charm, domination, feeblemind, fear, and confusion effects for 10 rounds.

@@ -118,7 +118,7 @@ END
 
 IF ~~ THEN BEGIN DiplomacyGuthma11
   SAY ~You can go, but the ranger stays here. I'm not letting a spy escape. If you're only here for gold, you'll take your reward here and leave him.~
-  IF ~!ClassEx(Protagonist,PALADIN)~ THEN REPLY ~Very well. I'll tell his wife the bad news.~ DO ~AddExperienceParty(10000)
+  IF ~!ClassEx(Protagonist,PALADIN)~ THEN REPLY ~Very well. I'll tell his wife the bad news.~ DO ~AddExperienceParty(4175)
 GiveItemCreate("Misc07",Protagonist,100,0,0)
 SetGlobal("USGUTHMA_FRIEND", "GLOBAL", 1)
 SetGlobal("Fortress_Quest","GLOBAL",1)
@@ -128,7 +128,7 @@ END
 
 IF ~~ THEN BEGIN DiplomacyGuthma12
   SAY ~No.~
-  IF ~!ClassEx(Protagonist,PALADIN)~ THEN REPLY ~Very well. I'll tell his wife the bad news.~ DO ~AddExperienceParty(10000)
+  IF ~!ClassEx(Protagonist,PALADIN)~ THEN REPLY ~Very well. I'll tell his wife the bad news.~ DO ~AddExperienceParty(4175)
 SetGlobal("USGUTHMA_FRIEND", "GLOBAL", 1)
 SetGlobal("Fortress_Quest","GLOBAL",1)
 ~ EXIT

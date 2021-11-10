@@ -130,9 +130,9 @@ RARM_14	USChan59	EOL
 																																												
 RSHD_01	00Shld11	00Shld16	00Shld90	00Shld93	00Shld99	EOL																																							
 RSHD_02	00Shld17	00Shld88	00Shld94	00Shld95	00Shld97	00Shld98	EOL																																				
-RSHD_03	00Shld85	00Shld86	00Shld91	USShld40	EOL																																					
-RSHD_04	00Shld88	00Shld92	00Shld96	EOL																																								
-RSHD_05	00Shld87	00Shld89	USShld47	EOL																																								
+RSHD_03	00Shld85	00Shld86	00Shld91	USShld40	USShld44	EOL																																					
+RSHD_04	00Shld88	00Shld92	00Shld96	USShld41	USShld46	EOL																																								
+RSHD_05	00Shld87	00Shld89	USShld42	USShld47	EOL																																								
 RSHD_06	USShld45	USShld48	USShld49	EOL																																											
 RSHD_07	USShld50	USShld51	EOL																																											
 RSHD_08	USShld53	USShld55	EOL																																											
@@ -179,9 +179,9 @@ RPRI_06	SPPR606Z	SPPR607Z	SPPR608Z	SPPR610Z	SPPR611Z	SPPR612Z	SPPR613Z	SPPR615Z	
 RPRI_07	SPPR704Z	SPPR705Z	SPPR707Z	SPPR712Z	SPPR714Z	SPPR717Z	SPPR718Z	SPPR719Z	SPPR720Z	SPPR721Z	SPPR722Z	SPPR715Z	SPPR725Z	SPPR726Z	SPPR727Z	SPPR728Z	SPPR729Z	EOL																											
 																																												
 RRNG_01	00Ring19	00Ring21	00Ring67	00Ring76	00Ring77	00Ring80	00Ring84	00Ring85	00Ring86	00Ring99	EOL																														
-RRNG_02	00Ring23	00Ring71	00Ring73	00Ring78	00Ring83	00Ring87	00Amul13	00Amul14	EOL																																
+RRNG_02	00Ring23	00Ring71	00Ring73	00Ring78	00Ring83	00Ring87	00Amul13	EOL																																
 RRNG_03	00Ring15	00Ring20	00Ring69	00Ring70	00Ring90	00Ring94	00Ring95	00Amul15	USRing42	EOL																													
-RRNG_04	00Ring18	00Ring73	00Ring82	00Ring92	00Ring93	00Ring97	00Ring98	USAmul48	USRing45	EOL																																					
+RRNG_04	00Ring18	00Ring73	00Ring82	00Ring92	00Ring93	00Ring97	00Ring98	00Amul14	USAmul48	USRing45	EOL																																					
 RRNG_05	00Ring22	00Ring68	00Ring74	00Ring75	00Ring79	00Ring91	USRing44	EOL																																							
 RRNG_06	00Ring72	00Ring89	00Ring96	USAmul47	USRing50	EOL																																									
 RRNG_07	USRing53	USRing54	USAmul50	USAmul52	USAmul53	EOL																																									
@@ -194,9 +194,9 @@ RRNG_13	USRing60	EOL
 RRNG_14	USRing58	EOL																																												
 																																												
 RMSC_01	00Brac02	00Brac09	00Clck01	00Helm07	USBrac35	EOL																																					
-RMSC_02	00Brac03	00Brac05	00Belt02	00Belt03	00Belt04	USBoot44	USBrac37	USIoun45	USRobe41	EOL																																			
+RMSC_02	00Brac03	00Brac05	00Belt02	00Belt03	00Belt04	USBoot44	USBrac36	USBrac37	USBrac44	USIoun45	USRobe41	EOL																																			
 RMSC_03	00Brac04	00Brac10	00Clck02	USBrac45	USHelm45	EOL																																							
-RMSC_04	00Boot01	USBoot45	USBrac44	USBrac47	EOL																																								
+RMSC_04	00Boot01	USBoot45	USBrac47	EOL																																								
 RMSC_05	00Boot01	00Robe99	USBelt45	USBrac43	USClck40	USClck48	USHelm50	EOL																																									
 RMSC_06	00Robe05	00Robe06	00Robe07	USBoot59	USBrac50	USClck50	USRobe47	EOL																																									
 RMSC_07	USBoot46	USBrac52	USClck52	USClck55	USHelm55	USPerm50	USRobe56	EOL																																									

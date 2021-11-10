@@ -195,6 +195,28 @@ COPY_EXISTING ~IEex_TRA.lua~ ~override~
 	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_tra_916 *=.*~ ~ex_tra_916 = %ex_tra_916%~
 	ex_tra_917 = RESOLVE_STR_REF(@917)
 	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_tra_917 *=.*~ ~ex_tra_917 = %ex_tra_917%~
+	ex_tra_929 = RESOLVE_STR_REF(@929)
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_tra_929 *=.*~ ~ex_tra_929 = %ex_tra_929%~
+	ex_tra_930 = RESOLVE_STR_REF(@930)
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_tra_930 *=.*~ ~ex_tra_930 = %ex_tra_930%~
+	ex_tra_931 = RESOLVE_STR_REF(@931)
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_tra_931 *=.*~ ~ex_tra_931 = %ex_tra_931%~
+	ex_tra_932 = RESOLVE_STR_REF(@932)
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_tra_932 *=.*~ ~ex_tra_932 = %ex_tra_932%~
+	ex_tra_933 = RESOLVE_STR_REF(@933)
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_tra_933 *=.*~ ~ex_tra_933 = %ex_tra_933%~
+	ex_tra_934 = RESOLVE_STR_REF(@934)
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_tra_934 *=.*~ ~ex_tra_934 = %ex_tra_934%~
+	ex_tra_935 = RESOLVE_STR_REF(@935)
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_tra_935 *=.*~ ~ex_tra_935 = %ex_tra_935%~
+	ex_tra_936 = RESOLVE_STR_REF(@936)
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_tra_936 *=.*~ ~ex_tra_936 = %ex_tra_936%~
+	ex_tra_937 = RESOLVE_STR_REF(@937)
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_tra_937 *=.*~ ~ex_tra_937 = %ex_tra_937%~
+	ex_tra_938 = RESOLVE_STR_REF(@938)
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_tra_938 *=.*~ ~ex_tra_938 = %ex_tra_938%~
+	ex_tra_939 = RESOLVE_STR_REF(@939)
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_tra_939 *=.*~ ~ex_tra_939 = %ex_tra_939%~
 	ex_tra_55390 = RESOLVE_STR_REF(@55390)
 	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_tra_55390 *=.*~ ~ex_tra_55390 = %ex_tra_55390%~
 	ex_tra_55391 = RESOLVE_STR_REF(@55391)
@@ -445,7 +467,12 @@ COPY ~Characters~ ~Characters~
 		END
 	END
 	BUT_ONLY_IF_IT_CHANGES
-
+/*
+COPY ~Characters/AKCHAR2.CHR~ ~Characters/AKCHAR2.CHR~
+	LPF	IWD2_ADD_CRE_ITEM INT_VAR equip=1 STR_VAR item=~00SWDL01~ slot=~weapon1~ mode=~replace~ END
+	LPF	IWD2_ADD_CRE_ITEM INT_VAR equip=1 cq1=10 STR_VAR item=~00AROW01~ slot=~weapon2~ mode=~replace~ END
+	LPF	IWD2_ADD_CRE_ITEM INT_VAR equip=1 STR_VAR item=~00BOWL01~ slot=~weapon2~ mode=~replace~ END
+*/
 // New descriptions for feats
 COPY_EXISTING ~feats.2da~ ~override~
   COUNT_2DA_COLS num_cols
@@ -706,6 +733,7 @@ LAF ADD_FEAT_IWD2 INT_VAR nameref=RESOLVE_STR_REF(@365) descref=RESOLVE_STR_REF(
 LAF ADD_FEAT_IWD2 INT_VAR nameref=RESOLVE_STR_REF(@373) descref=RESOLVE_STR_REF(@374) max=1 STR_VAR name=~ME_DEFENSIVE_ROLL~ script=~Feats_DefensiveRoll~ featspl_1=~USFDEFR1~ END
 LAF ADD_FEAT_IWD2 INT_VAR nameref=RESOLVE_STR_REF(@378) descref=RESOLVE_STR_REF(@379) max=3 STR_VAR name=~ME_DAMAGE_REDUCTION~ script=~Feats_DamageReduction~ prerequisite_script=~Prereq_DamageReduction~ featspl_1=~USFDAMR1~ featspl_2=~USFDAMR1~ featspl_3=~USFDAMR1~ END
 LAF ADD_FEAT_IWD2 INT_VAR nameref=RESOLVE_STR_REF(@382) descref=RESOLVE_STR_REF(@383) max=5 STR_VAR name=~ME_ADVANCED_SPELL_CAPACITY~ script=~Feats_AdvancedSpellCapacity~ prerequisite_script=~Prereq_AdvancedSpellCapacity~ featspl_1=~USFIMSC1~ featspl_2=~USFIMSC2~ featspl_3=~USFIMSC3~ featspl_4=~USFIMSC4~ featspl_5=~USFIMSC5~ END
+LAF ADD_FEAT_IWD2 INT_VAR nameref=RESOLVE_STR_REF(@384) descref=RESOLVE_STR_REF(@385) max=1 STR_VAR name=~ME_ASSASSIN~ script=~Feats_Assassin~ featspl_1=~USFASSA1~ END
 // New descriptions for classes
 COPY_EXISTING ~help02.2da~ ~override~
   COUNT_2DA_COLS num_cols
@@ -1583,6 +1611,12 @@ COPY_EXISTING ~USDUEREN.spl~ ~override~
   SAY NAME2 @928
   SAY UNIDENTIFIED_DESC @928
   SAY IDENTIFIED_DESC @928
+
+COPY_EXISTING ~USDEATA1.spl~ ~override~ ~USDEATA2.spl~ ~override~
+  SAY NAME1 @929
+  SAY NAME2 @929
+  SAY UNIDENTIFIED_DESC @929
+  SAY IDENTIFIED_DESC @929
 
 COPY_EXISTING ~USMM001.spl~ ~override~
 	LPF ADD_SPELL_EFFECT INT_VAR insert_point=1 opcode=139 target=2 timing=1 parameter1=RESOLVE_STR_REF(@361) END

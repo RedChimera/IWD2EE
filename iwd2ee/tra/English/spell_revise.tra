@@ -379,7 +379,7 @@ This spell conjures forth a glyph imbued with magical power that channels its ef
 (Abjuration)
 Level: Clr 7, Ilmater 7, Helm 7
 Range: Caster
-Duration: 10 rounds / level
+Duration: 10 rounds/level
 Casting Time: 7
 Area of Effect: Caster
 Saving Throw: None
@@ -412,18 +412,18 @@ Upon casting this spell, the caster exudes magical energy that imbues all allies
 (Abjuration)
 Level: Sor/Wiz 1
 Range: Caster
-Duration: 5 rounds / level
+Duration: 10 rounds/level
 Casting Time: 1 
 Area of Effect: Caster
 Saving Throw: None
 
-Shield creates an invisible, mobile disk of force that hovers in front of the caster. It negates Magic Missile attacks directed at the caster. The disk also intercepts attacks, providing a +5 shield bonus.~
+Shield creates an invisible, mobile disk of force that hovers in front of the caster. It negates Magic Missile attacks directed at the caster. The disk also intercepts attacks, providing a +4 shield bonus.~
 @1070    = ~Mage Armor~
 @1071    = ~Mage Armor
 (Conjuration) 
 Level: Brd 1, Sor/Wiz 1
 Range: Touch
-Duration: 10 rounds + 2 rounds/level
+Duration: 1 hour/level
 Casting Time: 3
 Area of Effect: 1 creature
 Saving Throw: None
@@ -927,7 +927,7 @@ Range: Sight of Caster
 Duration: 2 rounds / level
 Casting Time: 6
 Area of Effect: Special 
-Saving Throw: None 
+Saving Throw: Fortitude negates on-hit effect
 
 When this spell is cast, the wizard opens up a magical channel that will summon a wyvern to his aid. The wyvern will remain under the wizard's control and will live and die at his command until the spell duration expires. The DC of the poison from the wyvern's stinger is equal to the DC of this spell as cast by the caster.~
 @1510    = ~Mordenkainen's Sword~
@@ -1129,7 +1129,7 @@ Range: Sight of Caster
 Duration: 1 round / level
 Casting Time: 4
 Area of Effect: Special 
-Saving Throw: Special
+Saving Throw: Fortitude negates on-hit effect
 
 This spell conjures forth a mutated carrion crawler of enormous size that is under the caster's control. As with a normal carrion crawler, it has 8 attacks per round and each attack paralyzes the target on a failed Fortitude save.  The DC is equal to the DC of this spell as cast by the caster.~
 @1565    = ~Mass Invisibility~
@@ -2734,7 +2734,7 @@ Range: Touch
 Duration: Instantaneous
 Casting Time: 0
 Area of Effect: 1 creature 
-Saving Throw: None 
+Saving Throw: None
 
 When this spell is placed upon a poisoned individual, it greatly slows the effects of venom, actually neutralizing all but the most deadly poisons.
 
@@ -2774,17 +2774,17 @@ Area of Effect: Special
 Saving Throw: None 
 
 This spell summons one or more creatures of nature who will aid the caster for the duration of the spell.  The type of creatures that come is random.  The creatures summoned are more powerful than creatures summoned by lesser versions of this spell.~
-@31308     = ~Remove Paralysis~
-@32308     = ~Remove Paralysis
-(Conjuration) 
-Level: Clr 2, Pal 2
-Range: Close
-Duration: Permanent 
-Casting Time: 1
-Area of Effect: 25' Radius
-Saving Throw: None 
+@31304     = ~Glyph of Warding~
+@32304     = ~Glyph of Warding
+(Abjuration) 
+Level: Clr 3, Helm 3
+Range: Sight of Caster
+Duration: Special
+Casting Time: 9
+Area of Effect: Special 
+Saving Throw: Reflex half
 
-The caster can free creatures from the effects of any paralysis, stunning, or related magic (such as a ghoul touch, or a Hold Person spell).~
+A Glyph of Warding is a powerful inscription, magically drawn to prevent unauthorized or hostile creatures from passing, entering, or opening.  It can be used to guard a small bridge, to ward an entry, or as a trap on a chest or box.  Any creature violating the warded area sets off the glyph. It deals 1d8 electrical damage per two levels (max 5d8) to the victims, though they may make a Reflex save for half damage.~
 @31305     = ~Hold Animal~
 @32305     = ~Hold Animal
 (Enchantment) 
@@ -2796,6 +2796,17 @@ Area of Effect: 20-foot radius
 Saving Throw: Will negates 
 
 This spell holds animals rigidly immobile. Animals with magical powers such as winter wolves do count as animals, as do some of the more animalistic monsters such as wyverns. The effect is centered on a point selected by the caster, and 1-4 animals within 20 feet of the target point are affected. Those who succeed on their Will save are unaffected by the spell. Being held does not prevent the worsening of the subject's condition due to wounds, disease, or poison.~
+@31308     = ~Remove Paralysis~
+@32308     = ~Remove Paralysis
+(Conjuration) 
+Level: Clr 2, Pal 2
+Range: Close
+Duration: Permanent 
+Casting Time: 1
+Area of Effect: 25' Radius
+Saving Throw: None 
+
+The caster can free creatures from the effects of any paralysis, stunning, or related magic (such as a ghoul touch, or a Hold Person spell).~
 @31310     = ~Miscast Magic~
 @32310     = ~Miscast Magic
 (Enchantment) 
@@ -3388,6 +3399,17 @@ Area of Effect: Party
 Saving Throw: None
 
 This spell teleports all party members to the caster's side. Party members in a different area are unaffected. Recall Party could be useful for getting allies out of dangerous situations.~
+@35354     = ~Flame Shots~
+@36354     = ~Flame Shots
+(Transmutation)
+Level: Rgr 3
+Range: Caster
+Duration: 20 rounds/level or until used up
+Casting Time: 3
+Area of Effect: Caster
+Saving Throw: None
+
+This spell turns the ranger's missile attacks into flaming projectiles. The ranger's next 20 missile attacks deal an additional 1d6 fire damage.~
 @35451     = ~Curing Contingency~
 @36451     = ~Curing Contingency
 (Universal)

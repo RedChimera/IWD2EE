@@ -22,6 +22,8 @@ ex_monk_apr_progression = {[0] = 0, [1] = 0, [2] = 0, [3] = 0, [4] = 0, [5] = 0,
 ex_special_monk_weapon_types = {[0] = true, [16] = true, [24] = true, [26] = true, [28] = true, }
 ex_elven_chainmail_counts_as_unarmored = false
 ex_armored_arcana_multiplier = 7
+ex_lockpicking_xp_multiplier = 2
+ex_disarm_trap_xp_multiplier = 2
 ex_sneak_attack_delay = 21
 ex_no_sneak_attack_delay = false
 ex_anyone_immune_to_critical_hits_is_immune_to_sneak_attacks = false
@@ -53,7 +55,7 @@ ex_courteous_magocracy_charisma_bonus = 6
 ex_base_num_attacks_of_opportunity = 0
 ex_noncumulative_opcode_functions = {["MEOP16"] = true, ["MEOP40"] = true, ["MEOP130"] = true, ["MEOP401"] = true, ["MEOP403"] = true, ["MEOP408"] = true, ["MEOP415"] = true, ["MEOP421"] = true, ["MEOP427"] = true, }
 ex_stat_scaling_functions = {["MESTATSC"] = true, ["MEHALFTH"] = true, ["MEPERFEC"] = true, }
-ex_on_tick_functions = {["MEAREAGL"] = 1, ["MEGHOSTW"] = 1, ["METELMOV"] = 1, ["MEENLARG"] = 1, ["MEANSUP2"] = 2, ["MEWINGBU"] = 2, ["MESPIN"] = 2, ["IEex_EvaluatePermanentRepeatingEffects"] = 0, ["IEex_HeightMod"] = 0, ["IEex_ExtraAttacks"] = 0, ["IEex_DuelHide"] = 0, }
+ex_on_tick_functions = {["MEAREAGL"] = 1, ["MEGHOSTW"] = 1, ["METELMOV"] = 1, ["MEENLARG"] = 1, ["MEANSUP2"] = 2, ["MEWINGBU"] = 2, ["MESPIN"] = 2, ["MEINTERI"] = 2, ["IEex_EvaluatePermanentRepeatingEffects"] = 0, ["IEex_HeightMod"] = 0, ["IEex_ExtraAttacks"] = 0, ["IEex_DuelHide"] = 0, }
 ex_on_tick_default_functions = {["MEENLARG"] = "IEex_ResetSize", }
 ex_stat_spells = {
 [1] = {[21] = "USRAGE3", [25] = "USRAGE4", [29] = "USRAGE5"}, -- Barbarian Rage

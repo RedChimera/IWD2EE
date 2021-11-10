@@ -28,6 +28,16 @@ COPY_EXISTING ~strtxp.2da~ ~override~
 	LPF GET_2DA_ROW INT_VAR numcolumns=2 match_column=0 STR_VAR match=~GNOME_DEEP~ RET svirfrow=matched END
 	SET_2DA_ENTRY svirfrow 1 2 ~0~
 
+COPY ~Characters~ ~Characters~
+	PATCH_IF ~%SOURCE_EXT%~ STRING_EQUAL_CASE ~CHR~ BEGIN
+		READ_BYTE 0x2AE thetotallevel
+		READ_LONG 0x23C thexp
+		PATCH_IF thetotallevel = 1 AND (thexp = 2000 OR thexp = 5000 OR thexp = 9000) BEGIN
+			WRITE_LONG 0x23C 0
+		END
+	END
+	BUT_ONLY_IF_IT_CHANGES
+
 COPY_EXISTING ~help04.2da~ ~override~
   COUNT_2DA_COLS num_cols
   READ_2DA_ENTRIES_NOW rows num_cols

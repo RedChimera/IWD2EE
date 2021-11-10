@@ -489,7 +489,7 @@ function IEex_LevelUp_ExtraFeatListener()
 		local actorID = IEex_ReadDword(levelUpData + 0x136)
 		local share = IEex_GetActorShare(actorID)
 		local panelID = IEex_GetEngineCharacterPanelID()
-		if panelID == 2 and ex_starting_level[1] ~= -1 then
+		if panelID == 0 and ex_starting_level[1] ~= -1 then
 			ex_starting_level = {-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1}
 			ex_starting_skill_points = -1
 			ex_class_level_up["numLevelUps"] = -1
@@ -507,7 +507,7 @@ function IEex_LevelUp_ExtraFeatListener()
 					ex_class_level_up["numLevelUps"] = -1
 					ex_class_level_up["class"] = -1
 				end
-			elseif panelID ~= 2 then
+			elseif panelID ~= 0 and panelID ~= 2 then
 				if IEex_ReadByte(share + 0x626, 0x0) > ex_starting_level[1] and ex_starting_level[1] ~= -1 and ex_class_level_up["numLevelUps"] == -1 then
 					ex_class_level_up["numLevelUps"] = IEex_ReadByte(share + 0x626, 0x0) - ex_starting_level[1]
 					for i = 2, 12, 1 do
@@ -517,7 +517,7 @@ function IEex_LevelUp_ExtraFeatListener()
 					end
 				end
 			end
-			local racePlusSub = IEex_ReadByte(share + 0x26, 0x0) * 0x10000 + IEex_ReadByte(share + 0x3E3D, 0x0)
+--			local racePlusSub = IEex_ReadByte(share + 0x26, 0x0) * 0x10000 + IEex_ReadByte(share + 0x3E3D, 0x0)
 --[[
 			if panelID == 7 then
 				if not ex_ability_scores_initialized then
@@ -605,6 +605,7 @@ function IEex_LevelUp_ExtraFeatListener()
 			end
 --]]
 			if panelID == 55 then
+				local racePlusSub = IEex_ReadByte(share + 0x26, 0x0) * 0x10000 + IEex_ReadByte(share + 0x3E3D, 0x0)
 				if not ex_extra_skill_points_granted then
 					ex_extra_skill_points_granted = true
 					local skillPointsRemaining = IEex_ReadByte(levelUpData + 0x798, 0x0)
@@ -825,6 +826,9 @@ function IEex_Chargen_UpdateAbilityScores(chargenData, share)
 			IEex_WriteByte(share + ex_base_ability_score_cre_offset[i], currentAbilityScores[i])
 		end
 
+	end
+	if recordedAbilityScoreTotal >= -4 and recordedAbilityScoreTotal <= 4 then
+		recordedAbilityScoreTotal = 0
 	end
 	if ex_new_ability_score_system == 2 then
 		for i = 1, 6, 1 do
@@ -1144,14 +1148,14 @@ function IEex_Extern_CheckScroll()
 		local deltaFactor = IEex_Scroll_CalculateDeltaFactor()
 
 		if not IEex_Helper_GetBridgeNL("IEex_Scroll_MiddleMouseState", "isDown") then
-			
+
 			local m_nScrollState = IEex_ReadDword(visibleArea + 0x238)
 			local m_nKeyScrollState = IEex_ReadDword(visibleArea + 0x23C)
-	
+
 			local gameData = IEex_GetGameData()
 			local scrollSpeed = IEex_ReadDword(gameData + 0x43F2)
 			local keyboardScrollSpeed = IEex_ReadDword(gameData + 0x443E) / 3
-	
+
 			IEex_AdjustViewPositionFromScrollState(m_nScrollState, scrollSpeed * deltaFactor)
 			IEex_AdjustViewPositionFromScrollState(m_nKeyScrollState, keyboardScrollSpeed * deltaFactor)
 		end

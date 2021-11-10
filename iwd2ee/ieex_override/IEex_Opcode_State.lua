@@ -266,12 +266,12 @@ ex_empowerable_opcodes = {[0] = true, [1] = true, [6] = true, [10] = true, [12] 
 			print(IEex_ReadLString(effectData + 0x2C, 8))
 		end
 --]]
-		if not IEex_IsSprite(sourceID, true) then return false end
+--		if not IEex_IsSprite(sourceID, true) then return false end
 		local sourceData = IEex_GetActorShare(sourceID)
 		if opcode == 288 or opcode >= 500 then
 			IEex_WriteDword(creatureData + 0x740, bit.band(IEex_ReadDword(creatureData + 0x740), 0xFFFFBFFF))
 		end
-		local internalFlags = IEex_ReadDword(effectData + 0xD4)
+		local internalFlags = bit.bor(IEex_ReadDword(effectData + 0xCC), IEex_ReadDword(effectData + 0xD4))
 
 		local parameter1 = IEex_ReadDword(effectData + 0x18)
 		local parameter2 = IEex_ReadDword(effectData + 0x1C)
@@ -295,7 +295,7 @@ ex_empowerable_opcodes = {[0] = true, [1] = true, [6] = true, [10] = true, [12] 
 			sourceSpell = string.sub(parent_resource, 1, 7)
 		end
 		local damageType = bit.band(parameter2, 0xFFFF0000)
-		if opcode == 12 and parent_resource == "IEEX_DAM" then
+		if opcode == 12 and parent_resource == "IEEX_DAM" and IEex_IsSprite(sourceID, true) then
 --			if (bit.band(savingthrow, 0x10000) > 0 and (IEex_GetActorSpellState(sourceID, 195) or IEex_GetActorSpellState(sourceID, 225))) or bit.band(savingthrow, 0x40000) == 0 then
 				local weaponRES = IEex_ReadLString(effectData + 0x6C, 8)
 				local launcherRES = IEex_ReadLString(effectData + 0x74, 8)
@@ -523,6 +523,35 @@ ex_empowerable_opcodes = {[0] = true, [1] = true, [6] = true, [10] = true, [12] 
 			if parameter2 == 0x8 and IEex_GetActorSpellState(targetID, 210) then
 				IEex_WriteDword(effectData + 0x1C, 0x4)
 			end
+			local oldItemSlotList = {}
+			IEex_IterateActorEffects(targetID, function(eData)
+				local theopcode = IEex_ReadDword(eData + 0x10)
+				local theparameter2 = IEex_ReadDword(eData + 0x20)
+				local theparent_resource = IEex_ReadLString(eData + 0x94, 8)
+				if theopcode == 288 and theparameter2 == 187 and theparent_resource == "MEOLDITM" then
+					local thesavingthrow = IEex_ReadDword(eData + 0x40)
+					local thevvcresource = IEex_ReadLString(eData + 0x70, 8)
+					local theoldItemSlot = IEex_ReadWord(eData + 0x62, 0x0)
+					local thecasterlvl = IEex_ReadDword(eData + 0xC8)
+					local theinternalFlags = bit.bor(IEex_ReadDword(eData + 0xD0), IEex_ReadDword(eData + 0xD8))
+					table.insert(oldItemSlotList, {theoldItemSlot, thevvcresource, thecasterlvl, thesavingthrow, theinternalFlags})
+				end
+			end)
+			for k, v in ipairs(oldItemSlotList) do
+				IEex_ApplyEffectToActor(targetID, {
+["opcode"] = 500,
+["target"] = 2,
+["timing"] = 9,
+["parameter1"] = v[1],
+["resource"] = "MEERASEW",
+["savingthrow"] = v[4],
+["parent_resource"] = v[2],
+["casterlvl"] = v[3],
+["internal_flags"] = v[5],
+["source_target"] = targetID,
+["source_id"] = targetID,
+})
+			end
 			local onKillEffectList = {}
 			if IEex_GetActorSpellState(sourceID, 222) then
 				IEex_IterateActorEffects(sourceID, function(eData)
@@ -554,7 +583,7 @@ ex_empowerable_opcodes = {[0] = true, [1] = true, [6] = true, [10] = true, [12] 
 					end
 				end)
 			end
---			if IEex_GetActorSpellState(targetID, 222) then
+			if IEex_GetActorSpellState(targetID, 222) then
 				IEex_IterateActorEffects(targetID, function(eData)
 					local theopcode = IEex_ReadDword(eData + 0x10)
 					local theparameter2 = IEex_ReadDword(eData + 0x20)
@@ -585,7 +614,7 @@ ex_empowerable_opcodes = {[0] = true, [1] = true, [6] = true, [10] = true, [12] 
 						end
 					end
 				end)
---			end
+			end
 			for k, v in ipairs(onKillEffectList) do
 				IEex_ApplyEffectToActor(v[3], {
 ["opcode"] = 402,

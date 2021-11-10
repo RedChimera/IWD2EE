@@ -365,7 +365,7 @@ COPY_EXISTING ~usiw851.spl~ ~override~
 COPY_EXISTING_REGEXP ~[123].*\.cre~ ~override~ ~00GOB.*\.cre~ ~override~  ~00HAGOB\.cre~ ~override~ ~00HOB.*\.cre~ ~override~ ~00ORC.*\.cre~ ~override~ ~00OROBLA\.cre~ ~override~
 	WRITE_BYTE luck 255 //-1
 
-COPY_EXISTING ~20EMMA.cre~ ~override~ ~20ORCCHF.cre~ ~override~ ~20VREK.cre~ ~override~ ~21GAERNT.cre~ ~override~ ~21SPDQN.cre~ ~override~ ~21XUKI.cre~ ~override~ ~30BEETQ.cre~ ~override~ ~30GOBKRU.cre~ ~override~ ~30GOBMOK.cre~ ~override~ ~30GOBOGR.cre~ ~override~ ~30GOBOV1.cre~ ~override~ ~30GOBVUN.cre~ ~override~ ~30GOBWR2.cre~ ~override~ ~30GOBWR4.cre~ ~override~ ~30GOBWR6.cre~ ~override~ ~30GOBWRC.cre~ ~override~ ~30HOBGUM.cre~ ~override~ ~30ILQUAG.cre~ ~override~ ~30OGRCH.cre~ ~override~ ~30OGRGAR.cre~ ~override~ ~30ORCGOT.cre~ ~override~ ~30ORCTRU.cre~ ~override~ ~30OROCA.cre~ ~override~ ~30OROPUS.cre~ ~override~ ~30OROTAS.cre~ ~override~ ~30OTY.cre~ ~override~ ~30SPIWOQ.cre~ ~override~ ~30TEQUAG.cre~ ~override~ ~30YQUOGG.cre~ ~override~ ~31BUGGUT.cre~ ~override~ ~31BUGJAI.cre~ ~override~ ~31GOBHC.cre~ ~override~ ~31GOBOV1.cre~ ~override~ ~31HOBCH.cre~ ~override~ ~31HOBSER.cre~ ~override~ ~31ORCHC.cre~ ~override~ ~31ORCHSB.cre~ ~override~ ~31ORCHSH.cre~ ~override~ ~31ORCOLD.cre~ ~override~ ~31OROCH.cre~ ~override~ ~31OROCO.cre~ ~override~
+COPY_EXISTING ~20EMMA.cre~ ~override~ ~20VREK.cre~ ~override~ ~30BEETQ.cre~ ~override~ ~30GOBKRU.cre~ ~override~ ~30GOBMOK.cre~ ~override~ ~30GOBOGR.cre~ ~override~ ~30GOBOV1.cre~ ~override~ ~30GOBVUN.cre~ ~override~ ~30GOBWR2.cre~ ~override~ ~30GOBWR4.cre~ ~override~ ~30GOBWR6.cre~ ~override~ ~30GOBWRC.cre~ ~override~ ~30HOBGUM.cre~ ~override~ ~30ILQUAG.cre~ ~override~ ~30OGRCH.cre~ ~override~ ~30OGRGAR.cre~ ~override~ ~30ORCGOT.cre~ ~override~ ~30ORCTRU.cre~ ~override~ ~30OROCA.cre~ ~override~ ~30OROPUS.cre~ ~override~ ~30OROTAS.cre~ ~override~ ~30OTY.cre~ ~override~ ~30SPIWOQ.cre~ ~override~ ~30TEQUAG.cre~ ~override~ ~30YQUOGG.cre~ ~override~ ~31BUGGUT.cre~ ~override~ ~31BUGJAI.cre~ ~override~ ~31GOBHC.cre~ ~override~ ~31GOBOV1.cre~ ~override~ ~31HOBCH.cre~ ~override~ ~31HOBSER.cre~ ~override~ ~31ORCHC.cre~ ~override~ ~31ORCHSB.cre~ ~override~ ~31ORCHSH.cre~ ~override~ ~31ORCOLD.cre~ ~override~ ~31OROCH.cre~ ~override~ ~31OROCO.cre~ ~override~
 	WRITE_BYTE luck 0
 
 // Giving elementals the correct names
@@ -559,7 +559,7 @@ COPY_EXISTING ~20ORCSHM.cre~ ~override~ ~20ORCSHV.cre~ ~override~
 	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~cleric~ resource=~SPPR502~ END
 
 COPY_EXISTING ~20ORCCHF.cre~ ~override~
-	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelbarbarian=7 STR_VAR updatehp=~max~ END
+	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelbarbarian=6 STR_VAR updatehp=~max~ END
 	WRITE_BYTE strength 18
 	WRITE_BYTE constitution 15
 	WRITE_BYTE proficiencyaxe 2
@@ -569,6 +569,37 @@ COPY_EXISTING ~20ORCCHF.cre~ ~override~
 		LPF	IWD2_ADD_CRE_ITEM INT_VAR cq1=1 equip=0 STR_VAR item=~USPNHF05~ slot=~inv4~ mode=~replace~ END
 		LPF	IWD2_ADD_CRE_ITEM INT_VAR cq1=1 equip=0 STR_VAR item=~USPNHF81~ slot=~inv5~ mode=~replace~ END
 	END
+
+COPY_EXISTING ~20VREK.cre~ ~override~
+	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelbarbarian=6 STR_VAR updatehp=~max~ END
+	WRITE_LONG xp 9468
+	WRITE_SHORT armorclass 10
+	WRITE_ASCII smallportrait ~VREK1S~ #8
+	WRITE_ASCII largeportrait ~VREK1L~ #8
+	WRITE_BYTE fortitudesave 8
+	WRITE_BYTE reflexsave 4
+	WRITE_BYTE willsave 2
+	WRITE_BYTE strength 23
+	WRITE_BYTE dexterity 14
+	WRITE_BYTE constitution 23
+	WRITE_BYTE intelligence 10
+	WRITE_BYTE wisdom 9
+	WRITE_BYTE charisma 6
+	WRITE_BYTE class 1
+	WRITE_BYTE class2 1
+	WRITE_BYTE classmask 1
+	WRITE_BYTE fireresistance 0
+	WRITE_BYTE magicfireresistance 0
+	WRITE_BYTE acidresistance 0
+	WRITE_BYTE skillintimidate 9
+	WRITE_BYTE skillwildernesslore 9
+	WRITE_LONG feats1 0x4004008
+	READ_LONG feats2 ulgiash
+	ulgiash|=0x8000
+	WRITE_LONG feats2 ulgiash
+	WRITE_BYTE armorproficiency 2
+	LPF	IWD2_CRE_ABILITY INT_VAR num=2 STR_VAR resource=~SPIN236~ END
+	LPF	IWD2_CRE_ABILITY INT_VAR num=1 STR_VAR resource=~SPIN275~ END
 
 COPY_EXISTING ~20RNDHRP.cre~ ~override~
 	WRITE_ASCII specialscript2 ~00HARPY0~ #8
@@ -5413,7 +5444,7 @@ END
 IF
 	Global("US_CagedFuryDeadSpecial","GLOBAL",1)
 	Global("US_CagedFuryPlayer2","MYAREA",0)
-	Exists(Player1)
+	Exists(Player2)
 THEN
 	RESPONSE #100
 		SetGlobal("US_CagedFuryPlayer2","MYAREA",1)
@@ -5425,7 +5456,7 @@ END
 IF
 	Global("US_CagedFuryDeadSpecial","GLOBAL",1)
 	Global("US_CagedFuryPlayer3","MYAREA",0)
-	Exists(Player1)
+	Exists(Player3)
 THEN
 	RESPONSE #100
 		SetGlobal("US_CagedFuryPlayer3","MYAREA",1)
@@ -5437,7 +5468,7 @@ END
 IF
 	Global("US_CagedFuryDeadSpecial","GLOBAL",1)
 	Global("US_CagedFuryPlayer4","MYAREA",0)
-	Exists(Player1)
+	Exists(Player4)
 THEN
 	RESPONSE #100
 		SetGlobal("US_CagedFuryPlayer4","MYAREA",1)
@@ -5449,7 +5480,7 @@ END
 IF
 	Global("US_CagedFuryDeadSpecial","GLOBAL",1)
 	Global("US_CagedFuryPlayer5","MYAREA",0)
-	Exists(Player1)
+	Exists(Player5)
 THEN
 	RESPONSE #100
 		SetGlobal("US_CagedFuryPlayer5","MYAREA",1)
@@ -5461,7 +5492,7 @@ END
 IF
 	Global("US_CagedFuryDeadSpecial","GLOBAL",1)
 	Global("US_CagedFuryPlayer6","MYAREA",0)
-	Exists(Player1)
+	Exists(Player6)
 THEN
 	RESPONSE #100
 		SetGlobal("US_CagedFuryPlayer6","MYAREA",1)
@@ -5731,6 +5762,25 @@ COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
 COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
 	WRITE_BYTE baseattackbonus 0
 	BUT_ONLY_IF_IT_CHANGES
+
+<<<<<<<< .../script.baf
+IF
+	Global("SH_Teleported_To_6303","GLOBAL",2)
+	Global("US_Party_Dispel_Final","GLOBAL",0)
+	Difficulty(NORMAL,GREATER_THAN)
+THEN
+	RESPONSE #100
+		SetGlobal("US_Party_Dispel_Final","GLOBAL",1)
+		ReallyForceSpellRES("USDISPEA",Player1)
+		ReallyForceSpellRES("USDISPEA",Player2)
+		ReallyForceSpellRES("USDISPEA",Player3)
+		ReallyForceSpellRES("USDISPEA",Player4)
+		ReallyForceSpellRES("USDISPEA",Player5)
+		ReallyForceSpellRES("USDISPEA",Player6)
+END
+
+>>>>>>>>
+EXTEND_BOTTOM ~AR6305.bcs~ ~.../script.baf~ EVAL
 
 APPEND ~EXPTABLE.2da~
 ~Level_20_Very_Hard	30000

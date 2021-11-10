@@ -510,9 +510,11 @@ Rank Level +1 Level +2 Level +3
 
 You have trained as an assassin. You know how to make especially debilitating sneak attacks.
 
-Prerequisite: 1 level of rogue, Hide and Move Silently 4 or higher, evil alignment
+Prerequisite: 1 level of rogue, Alchemy, Hide and Move Silently 4 or higher, evil alignment
 
-Benefit: Your sneak attacks become death attacks, which also paralyze the target for two rounds on a failed Fortitude save (DC 10 + half your rogue level + your Dexterity modifier).
+Benefit: Your sneak attacks become death attacks, which also paralyze the target for one round on a failed Fortitude save (DC 10 + half your rogue level + your Dexterity modifier).
+
+You also gain a use of Envenom Weapon. Taking the Envenom Weapon feat gives you a second use of this ability.
 
 However, you only gain 2 + Int modifier skill points per rogue level after the first.
 
@@ -1893,17 +1895,17 @@ Disadvantages:
 @926    = ~Lay on Hands (Monk)~
 @927    = ~Shield Other~
 @928    = ~Enlarge Self~
-@929    = ~~
-@930    = ~~
-@931    = ~~
-@932    = ~~
-@933    = ~~
-@934    = ~~
-@935    = ~~
-@936    = ~~
-@937    = ~~
-@938    = ~~
-@939    = ~~
+@929    = ~Death Attack~
+@930    = ~Death Attack with Crippling Strike (-1 Str)~
+@931    = ~Death Attack with Crippling Strike (-2 Str)~
+@932    = ~Death Attack with Crippling Strike (-3 Str)~
+@933    = ~Death Attack with Crippling Strike (-4 Str)~
+@934    = ~Death Attack with Crippling Strike (-5 Str)~
+@935    = ~Death Attack with Crippling Strike (-6 Str)~
+@936    = ~Death Attack with Crippling Strike (-7 Str)~
+@937    = ~Death Attack with Crippling Strike (-8 Str)~
+@938    = ~Death Attack with Crippling Strike (-9 Str)~
+@939    = ~Death Attack with Crippling Strike (-10 Str)~
 @940    = ~~
 @941    = ~~
 @942    = ~~

@@ -1,5 +1,7 @@
 OUTER_PATCH creature_constants BEGIN
 	creflags=0x10
+	killxp=0x14
+	xp=0x18
 	gold=0x1c
 	states=0x20
 	currenthp=0x24
@@ -13,6 +15,8 @@ OUTER_PATCH creature_constants BEGIN
 	leathercolor=0x30
 	armorcolor=0x31
 	haircolor=0x32
+	smallportrait=0x34
+	largeportrait=0x3c
 	armorclass=0x46
 	baseattackbonus=0x50
 	attacksperround=0x51
