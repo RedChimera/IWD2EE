@@ -301,6 +301,10 @@ function IEex_Extern_OnPostProjectileCreation(CProjectile, esp)
 	if (source == 0 or source == 1 or source == 5 or source == 7) and IEex_Helper_GetBridge("IEex_RecordSpell", sourceID, "spellRES") ~= nil then
 		sourceRES = IEex_Helper_GetBridge("IEex_RecordSpell", sourceID, "spellRES")
 	end
+	if source == 5 and IEex_Helper_GetBridge("IEex_RecordOpcode430Spell", sourceID, "spellRES") ~= nil then
+		sourceRES = IEex_Helper_GetBridge("IEex_RecordOpcode430Spell", sourceID, "spellRES")
+		IEex_WriteLString(CProjectile + 0x18A, sourceRES, 8)
+	end
 
 	if IEex_GetActorSpellState(sourceID, 251) then
 		local mutatorOpcodeList = {}
@@ -1243,7 +1247,7 @@ IEex_MutatorGlobalFunctions["MEMETAGL"] = {
     ["effectMutator"] = function(source, creatureData, projectileData, effectData)
 		if ex_projectile_flags[projectileData] ~= nil then
 
-			local internalFlags = IEex_ReadDword(effectData + 0xCC)
+			local internalFlags = bit.bor(IEex_ReadDword(effectData + 0xCC), IEex_ReadDword(effectData + 0xD4))
 			internalFlags = bit.bor(internalFlags, ex_projectile_flags[projectileData]["Metamagic"])
 			if bit.band(internalFlags, 0x40000) > 0 then
 				if IEex_ReadDword(effectData + 0xC) == 500 and IEex_ReadLString(effectData + 0x2C, 8) == "METELEFI" then
@@ -1252,6 +1256,7 @@ IEex_MutatorGlobalFunctions["MEMETAGL"] = {
 				end
 			end
 			IEex_WriteDword(effectData + 0xCC, internalFlags)
+			IEex_WriteDword(effectData + 0xD4, internalFlags)
 		end
     end,
 }

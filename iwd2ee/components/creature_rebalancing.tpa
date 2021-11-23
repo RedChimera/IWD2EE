@@ -1533,11 +1533,16 @@ COPY_EXISTING ~41VRASSI.cre~ ~override~
 	WRITE_BYTE coldresistance 10
 	WRITE_BYTE spellresistance 14
 	WRITE_BYTE magicdamageresistance 100
-	WRITE_BYTE proficiencymace 3
 	WRITE_BYTE enchantmentlevel 1
 	READ_LONG feats2 ulgiash
 	ulgiash|=0x500100
 	WRITE_LONG feats2 ulgiash
+	PATCH_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~4~ BEGIN
+		LPF	IWD2_ADD_CRE_ITEM INT_VAR equip=1 STR_VAR item=~USFLAL36~ slot=~weapon1~ mode=~replace~ END
+		WRITE_BYTE proficiencyflail 3
+	END ELSE BEGIN
+		WRITE_BYTE proficiencymace 3
+	END
 
 COPY_EXISTING ~41RENGAR.cre~ ~override~
 	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelpaladin=12 STR_VAR updatehp=~max~ END

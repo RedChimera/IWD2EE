@@ -163,7 +163,7 @@ You are trained to knock down or trip enemies in melee combat.
 
 Prerequisite: Base attack bonus +5 or higher
 
-Benefit: You gain an ability that lets you knock down or trip an adjacent creature. The ability can be used once per round. If your Dexterity is higher than your Strength, you attempt to trip the target, which must make a Reflex save (DC 10 + half your level + your Dexterity modifier) or fall down for 4 seconds. Otherwise, you try to knock down your target, which must make a Fortitude save (DC 10 + half your level + your Strength modifier) or fall down for 4 seconds. The DC gets -4 for each time someone has tried to knock down or trip the target in the past 10 rounds. Especially large creatures cannot be knocked down or tripped.
+Benefit: You gain an ability that lets you knock down or trip an adjacent creature. The ability can be used once per round. If your Dexterity is higher than your Strength, you attempt to trip the target, which must make a Reflex save (DC 10 + half your level + your Dexterity modifier) or fall down for 4 seconds. Otherwise, you try to knock down your target, which must make a Fortitude save (DC 10 + half your level + your Strength modifier) or fall down for 4 seconds. The DC gets -4 for each time someone has tried to knock down or trip the target in the past 10 rounds. Especially large creatures cannot be knocked down or tripped. The time spent to perform this ability causes the character to have one fewer attack in the following round.
 
 This feat may be taken twice. When taken a second time, the feat is Improved Knockdown, which allows you to knock down or trip even large creatures, and adds a +2 bonus to the DC.~
 @317    = ~Light Armor Mastery~
@@ -998,10 +998,10 @@ Domain Spells:
 @588    = ~
 
 Domain Spells:
-1: Magic Stone, True Strike
-2: Chant, Draw Upon Holy Might
-3: Animate Zombie, Prayer
-4: Emotion: Rage, Recitation
+1: Chant, True Strike
+2: Draw Upon Holy Might, Prayer
+3: Recitation, Steel Wind Strike
+4: Emotion: Rage, Duel
 5: Champion's Strength, Chaotic Commands
 6: Circle of Blades, Spiritual Wrath
 7: Mordenkainen's Sword, Tenser's Transformation
@@ -1362,7 +1362,7 @@ Favored Class: Wizard
 Advantages:
 * +2 Dexterity.
 * +2 racial bonus to saves against Enchantment magic.
-* +2 racial bonus to Search checks.
+* +2 racial bonus to Search checks, and will search for traps even when not actively using the Search skill.
 * Immunity to Sleep magic.
 * Proficient with longswords and bows (but not crossbows).
 * May use Weapon Finesse with large swords.
@@ -1383,7 +1383,7 @@ Advantages:
 * +2 to Charisma.
 * +2 racial bonus to saves against Enchantment magic.
 * +2 racial bonus on Will saves against spells and spell-like abilities.
-* +2 to Search checks.
+* +2 racial bonus to Search checks, and will search for traps even when not actively using the Search skill.
 * Spell resistance of 11 + character level.
 * Immunity to Sleep magic.
 * Proficient with large swords and crossbows (but not bows).
@@ -1406,8 +1406,8 @@ Favored Class: Sorcerer
 
 Advantages:
 * +2 Dexterity.
-* +2 to Search checks.
 * +2 to saves against Enchantment magic.
+* +2 racial bonus to Search checks, and will search for traps even when not actively using the Search skill.
 * Immunity to Sleep magic.
 * Proficient with large swords and bows (but not crossbows).
 * May use Weapon Finesse with large swords.
@@ -1906,7 +1906,7 @@ Disadvantages:
 @937    = ~Death Attack with Crippling Strike (-8 Str)~
 @938    = ~Death Attack with Crippling Strike (-9 Str)~
 @939    = ~Death Attack with Crippling Strike (-10 Str)~
-@940    = ~~
+@940    = ~Skills represent a variety of abilities, and you get better at them as you go up in level.  You have been given skill points to distribute among your skills.~
 @941    = ~~
 @942    = ~~
 @943    = ~~

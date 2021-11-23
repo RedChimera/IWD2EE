@@ -747,6 +747,9 @@ ex_empowerable_opcodes = {[0] = true, [1] = true, [6] = true, [10] = true, [12] 
 				ex_apply_effects_flags[targetID .. sourceID .. parent_resource] = nil
 			end
 		end
+		if opcode == 430 then
+			IEex_Helper_SetBridge("IEex_RecordOpcode430Spell", sourceID, "spellRES", resource)
+		end
 		if bit.band(internalFlags, 0x10000) > 0 and (timing == 0 or timing == 3 or timing == 4) and duration >= 30 then
 			duration = 2400
 			IEex_WriteDword(effectData + 0x24, duration)

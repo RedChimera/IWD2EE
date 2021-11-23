@@ -299,8 +299,20 @@ function IEex_Scroll_KeyReleasedListener(key)
 		end
 	end
 end
-
+ex_debug_counter = 0
 function IEex_ExtraCheatKeysListener(key)
+--[[
+	if ex_debug_counter == 30 then
+		ex_debug_counter = 0
+
+		local gameData = IEex_GetGameData()
+		if gameData > 0 then
+			IEex_DS(IEex_ReadDword(gameData + 0x3328))
+		end
+	else
+		ex_debug_counter = ex_debug_counter + 1
+	end
+--]]
 	if IEex_IsKeyDown(IEex_KeyIDS.LEFT_CTRL) or IEex_IsKeyDown(IEex_KeyIDS.RIGHT_CTRL) then
 		if key == IEex_KeyIDS.V then
 			local actorID = IEex_GetActorIDCursor()
@@ -482,6 +494,7 @@ end
 ex_starting_level = {-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1}
 ex_starting_skill_points = -1
 ex_class_level_up = {["numLevelUps"] = -1, ["class"] = -1}
+ex_levelup_extra_skill_points_granted = false
 function IEex_LevelUp_ExtraFeatListener()
 	local g_pBaldurChitin = IEex_ReadDword(0x8CF6DC)
 	local levelUpData = IEex_ReadDword(g_pBaldurChitin + 0x1C60)
@@ -606,8 +619,8 @@ function IEex_LevelUp_ExtraFeatListener()
 --]]
 			if panelID == 55 then
 				local racePlusSub = IEex_ReadByte(share + 0x26, 0x0) * 0x10000 + IEex_ReadByte(share + 0x3E3D, 0x0)
-				if not ex_extra_skill_points_granted then
-					ex_extra_skill_points_granted = true
+				if not ex_levelup_extra_skill_points_granted then
+					ex_levelup_extra_skill_points_granted = true
 					local skillPointsRemaining = IEex_ReadByte(levelUpData + 0x798, 0x0)
 					IEex_IterateActorEffects(actorID, function(eData)
 						local theopcode = IEex_ReadDword(eData + 0x10)
@@ -631,8 +644,8 @@ function IEex_LevelUp_ExtraFeatListener()
 					IEex_EngineCharacterUpdatePopupPanel()
 				end
 			elseif panelID == 54 or panelID == 7 then
-				if ex_extra_skill_points_granted then
-					ex_extra_skill_points_granted = false
+				if ex_levelup_extra_skill_points_granted then
+					ex_levelup_extra_skill_points_granted = false
 					IEex_WriteByte(levelUpData + 0x798, 0)
 				end
 			end

@@ -115,6 +115,8 @@ COPY_EXISTING ~IEex_TRA.lua~ ~override~
 	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_tra_55807 *=.*~ ~ex_tra_55807 = %ex_tra_55807%~
 	ex_tra_55808 = RESOLVE_STR_REF(@55808)
 	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_tra_55808 *=.*~ ~ex_tra_55808 = %ex_tra_55808%~
+	ex_tra_55809 = RESOLVE_STR_REF(@55809)
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_tra_55809 *=.*~ ~ex_tra_55809 = %ex_tra_55809%~
 	SPRINT ex_str_level @55000
 	REPLACE_TEXTUALLY ~ex_str_level *=.*~ ~ex_str_level = "%ex_str_level%"~
 	SPRINT ex_str_barbarian @55001
@@ -879,6 +881,8 @@ OUTER_SET ref_spell_turning = RESOLVE_STR_REF(@37763)
 OUTER_SET ref_songcasting = RESOLVE_STR_REF(@37654)
 OUTER_SET ref_second_chance = RESOLVE_STR_REF(@37555)
 OUTER_SET ref_holy_weapon = RESOLVE_STR_REF(@35555)
+OUTER_SET ref_flame_shots = RESOLVE_STR_REF(@35354)
+OUTER_SET ref_guidance = RESOLVE_STR_REF(@35154)
 
 APPEND ~STATDESC.2da~
 ~146	%ref_magic_stone%
@@ -915,6 +919,8 @@ APPEND ~STATDESC.2da~
 177	%ref_songcasting%
 178	%ref_second_chance%
 179	%ref_holy_weapon%
+180	%ref_flame_shots%
+181	%ref_guidance%
 ~
 
 VERBOSE
@@ -933,12 +939,12 @@ END
 IF
 	Exists(Player1)
 	!InCutsceneMode()
-	Global("US_Initialize_1","GLOBAL",0)
 	Global("US_Initialize","GLOBAL",1)
 	!GlobalTimerNotExpired("US_Initialize_Timer","GLOBAL")
+	!IEex_LuaTrigger("return IEex_IsPartyMemberInitialized(0)")
 THEN
 	RESPONSE #100
-		SetGlobal("US_Initialize_1","GLOBAL",1)
+		IEex_Lua("IEex_InitializePartyMember(0)")
 		ApplySpellRES("USRACEAB",Player1)  // No such index
 		ApplySpellRES("USAPRBON",Player1)  // No such index
 END
@@ -946,12 +952,12 @@ END
 IF
 	Exists(Player2)
 	!InCutsceneMode()
-	Global("US_Initialize_2","GLOBAL",0)
 	Global("US_Initialize","GLOBAL",1)
 	!GlobalTimerNotExpired("US_Initialize_Timer","GLOBAL")
+	!IEex_LuaTrigger("return IEex_IsPartyMemberInitialized(1)")
 THEN
 	RESPONSE #100
-		SetGlobal("US_Initialize_2","GLOBAL",1)
+		IEex_Lua("IEex_InitializePartyMember(1)")
 		ApplySpellRES("USRACEAB",Player2)  // No such index
 		ApplySpellRES("USAPRBON",Player2)  // No such index
 END
@@ -959,12 +965,12 @@ END
 IF
 	Exists(Player3)
 	!InCutsceneMode()
-	Global("US_Initialize_3","GLOBAL",0)
 	Global("US_Initialize","GLOBAL",1)
 	!GlobalTimerNotExpired("US_Initialize_Timer","GLOBAL")
+	!IEex_LuaTrigger("return IEex_IsPartyMemberInitialized(2)")
 THEN
 	RESPONSE #100
-		SetGlobal("US_Initialize_3","GLOBAL",1)
+		IEex_Lua("IEex_InitializePartyMember(2)")
 		ApplySpellRES("USRACEAB",Player3)  // No such index
 		ApplySpellRES("USAPRBON",Player3)  // No such index
 END
@@ -972,12 +978,12 @@ END
 IF
 	Exists(Player4)
 	!InCutsceneMode()
-	Global("US_Initialize_4","GLOBAL",0)
 	Global("US_Initialize","GLOBAL",1)
 	!GlobalTimerNotExpired("US_Initialize_Timer","GLOBAL")
+	!IEex_LuaTrigger("return IEex_IsPartyMemberInitialized(3)")
 THEN
 	RESPONSE #100
-		SetGlobal("US_Initialize_4","GLOBAL",1)
+		IEex_Lua("IEex_InitializePartyMember(3)")
 		ApplySpellRES("USRACEAB",Player4)  // No such index
 		ApplySpellRES("USAPRBON",Player4)  // No such index
 END
@@ -985,12 +991,12 @@ END
 IF
 	Exists(Player5)
 	!InCutsceneMode()
-	Global("US_Initialize_5","GLOBAL",0)
 	Global("US_Initialize","GLOBAL",1)
 	!GlobalTimerNotExpired("US_Initialize_Timer","GLOBAL")
+	!IEex_LuaTrigger("return IEex_IsPartyMemberInitialized(4)")
 THEN
 	RESPONSE #100
-		SetGlobal("US_Initialize_5","GLOBAL",1)
+		IEex_Lua("IEex_InitializePartyMember(4)")
 		ApplySpellRES("USRACEAB",Player5)  // No such index
 		ApplySpellRES("USAPRBON",Player5)  // No such index
 END
@@ -998,12 +1004,12 @@ END
 IF
 	Exists(Player6)
 	!InCutsceneMode()
-	Global("US_Initialize_6","GLOBAL",0)
 	Global("US_Initialize","GLOBAL",1)
 	!GlobalTimerNotExpired("US_Initialize_Timer","GLOBAL")
+	!IEex_LuaTrigger("return IEex_IsPartyMemberInitialized(5)")
 THEN
 	RESPONSE #100
-		SetGlobal("US_Initialize_6","GLOBAL",1)
+		IEex_Lua("IEex_InitializePartyMember(5)")
 		ApplySpellRES("USRACEAB",Player6)  // No such index
 		ApplySpellRES("USAPRBON",Player6)  // No such index
 END
@@ -1076,6 +1082,37 @@ COPY_EXISTING_REGEXP ~.*\.are~ ~override~
 //	LPF fj_are_structure INT_VAR fj_loc_x=0 fj_loc_y=0 fj_flags=0x2 STR_VAR fj_structure_type=~animation~ fj_name= EVAL ~%SOURCE_RES%TORNAD~ fj_bam_resref=~WHIRLWX~ END
 //	LPF fj_are_structure INT_VAR fj_loc_x=0 fj_loc_y=0 fj_flags=0x2 STR_VAR fj_structure_type=~animation~ fj_name= EVAL ~%SOURCE_RES%GRVGLB~ fj_bam_resref=~USGRVGLB~ END
 	LPF ALTER_AREA_ACTOR_IWD2 INT_VAR flag_cre_unattached=1 flag_difficulty_1=1 flag_difficulty_2=1 flag_difficulty_3=1 STR_VAR actor_name= EVAL ~%SOURCE_RES%AREAGL~ END
+	READ_SHORT 0x6A numtriggers
+	READ_LONG 0x6C triggeroffset
+	FOR (i = 0; i < numtriggers; ++i) BEGIN
+		READ_SHORT (triggeroffset + 0x20) triggertype
+		READ_SHORT (triggeroffset + 0x68) trapdetectiondifficulty
+		READ_SHORT (triggeroffset + 0x6C) istrapped
+		PATCH_IF istrapped > 0 AND triggertype = 0 AND trapdetectiondifficulty != 100 BEGIN
+			WRITE_SHORT (triggeroffset + 0x68) (trapdetectiondifficulty + 1000)
+		END
+		triggeroffset += 0xC4
+	END
+	READ_SHORT 0x84 numcontainers
+	READ_LONG 0x80 containeroffset
+	FOR (i = 0; i < numcontainers; ++i) BEGIN
+		READ_SHORT (containeroffset + 0x2C) trapdetectiondifficulty
+		READ_SHORT (containeroffset + 0x30) istrapped
+		PATCH_IF istrapped > 0 AND trapdetectiondifficulty != 100 BEGIN
+			WRITE_SHORT (containeroffset + 0x2C) (trapdetectiondifficulty + 1000)
+		END
+		containeroffset += 0xC0
+	END
+	READ_SHORT 0xB4 numdoors
+	READ_LONG 0xB8 dooroffset
+	FOR (i = 0; i < numdoors; ++i) BEGIN
+		READ_SHORT (dooroffset + 0x6C) trapdetectiondifficulty
+		READ_SHORT (dooroffset + 0x70) istrapped
+		PATCH_IF istrapped > 0 AND trapdetectiondifficulty != 100 BEGIN
+			WRITE_SHORT (dooroffset + 0x6C) (trapdetectiondifficulty + 1000)
+		END
+		dooroffset += 0xC8
+	END
 	UNLESS ~USAREAGL~
 
 COPY_EXISTING ~60KHREE.cre~ ~override~ ~63FORMIS.cre~ ~override~ ~65MNK.cre~ ~override~ ~66MNK.cre~ ~override~ ~66MNK1.cre~ ~override~ ~66MNK2.cre~ ~override~ ~66MORVYN.cre~ ~override~ ~67ORMIS.cre~ ~override~

@@ -66,6 +66,7 @@ ex_tra_55805 = 0
 ex_tra_55806 = 0
 ex_tra_55807 = 0
 ex_tra_55808 = 0
+ex_tra_55809 = 0
 ex_str_arcane_sight_a = "Spells Active On <EXASNAME>:"
 ex_str_arcane_sight_b_second = "  <EXASVAL1> - 1 second remaining"
 ex_str_arcane_sight_b_seconds = "  <EXASVAL1> - <EXASVAL2> seconds remaining"

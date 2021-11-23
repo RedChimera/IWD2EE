@@ -13435,7 +13435,7 @@ Weight:  3 lb.~
 
 STATISTICS:
 
-When the wearer performs a Whirlwind Attack, they can still make their full number of attacks in the following round.
+When the wearer performs a Whirlwind Attack or casts Steel Wind Strike, they can still make their full number of attacks in the following round.
 Weight:  1 lb.~
 @12773    = ~Ring of Protection +10~
 @12774    = ~This magical ring provides the wearer with amazing protection.
@@ -13889,6 +13889,20 @@ STATISTICS:
 The spell Burning Hands deals 50% more damage and has +4 DC
 The wearer's unarmed attacks deal +1d4 fire damage
 Weight:  1 lb.~
+@12873    = ~Flail of Flame +2~
+@12874    = ~The flail is a sturdy wooden handle attached to an iron rod, a wooden rod with spikes, or a spiked iron ball. Between the handle and its implement is either a hinge or chain link.  The weapon has been enhanced magically, effectively forming a bond between the weapon and its wielder.
+
+STATISTICS:
+
+Damage:  1d8  +2
+Attack Bonus:  +2 
+Enchantment:  +2
+Damage Type:  Bludgeoning
+Special:
+  Flame: +1d6 fire damage
+Weight: 5 lb.
+Required Feat:  Martial Weapon, Flail
+Type:  One-handed~
 @12900    = ~Hrm - you are powerful allies, indeed. More gold and gems to line your pockets, then - also, a suit of plate armor, a warhammer, a helmet, all crafted and enchanted by great duergar artisans. They are well deserved, outsider.~
 @12901    = ~Drink this Rainwater Brew, Ennelia. It should help your condition.~
 @12902    = ~Drink this Sour Draught, Ennelia. It should help your condition.~

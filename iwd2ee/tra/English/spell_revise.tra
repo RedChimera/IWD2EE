@@ -618,7 +618,7 @@ Casting Time: 4
 Area of Effect: Living creatures in 15' radius
 Saving Throw: None
 
-This spell creates the emotion of hope within the area of effect. All creatures affected by the spell gain a +2 on their saving throws, attack bonuses, and damage rolls. Emotion: Hope cannot be active on a creature at the same time as Emotion: Rage.~
+This spell creates the emotion of hope within the area of effect. All creatures affected by the spell gain a +2 on their saving throws, skill checks, attack bonuses, and damage rolls. Emotion: Hope cannot be active on a creature at the same time as Emotion: Rage.~
 @1104    = ~Shout~
 @1105    = ~Shout 
 (Evocation)
@@ -711,7 +711,7 @@ Saving Throw: None
 Through this spell, the caster creates five balls of electricity that can be hurled in combat. When a ball lightning is thrown at an enemy, it deals 2d6 electrical damage, and other ball lightnings will similtaneously shoot at every enemy within 8 feet of the target, dealing the same damage. The ball lightnings automatically hit, and they gain any damage bonuses a dart would gain (they use the Simple Weapon: Missile proficiency).~
 @1120    = ~Flesh to Stone~
 @1121    = ~Flesh to Stone 
-(Transmutation) 
+(Transmutation)
 Level: Sor/Wiz 6
 Range: Sight of Caster
 Duration: Permanent
@@ -2790,12 +2790,12 @@ A Glyph of Warding is a powerful inscription, magically drawn to prevent unautho
 (Enchantment) 
 Level: Drd 2, Rgr 2
 Range: Sight of Caster
-Duration: 1 round/level 
+Duration: 1 round/level
 Casting Time: 6
 Area of Effect: 20-foot radius
 Saving Throw: Will negates 
 
-This spell holds animals rigidly immobile. Animals with magical powers such as winter wolves do count as animals, as do some of the more animalistic monsters such as wyverns. The effect is centered on a point selected by the caster, and 1-4 animals within 20 feet of the target point are affected. Those who succeed on their Will save are unaffected by the spell. Being held does not prevent the worsening of the subject's condition due to wounds, disease, or poison.~
+This spell holds animals rigidly immobile. Animals with magical powers such as winter wolves do count as animals, as do some of the more animalistic monsters such as remorhazes. The effect is centered on a point selected by the caster, and 1-4 animals within 20 feet of the target point are affected. Those who succeed on their Will save are unaffected by the spell. Being held does not prevent the worsening of the subject's condition due to wounds, disease, or poison.~
 @31308     = ~Remove Paralysis~
 @32308     = ~Remove Paralysis
 (Conjuration) 
@@ -2835,7 +2835,7 @@ This spell employs positive energy to ward off the effects of negative energy fr
 Level: Drd 3, Rgr 3
 Range: Sight of Caster
 Duration: 10 rounds + 5 rounds/level
-Casting Time: 6 
+Casting Time: 6
 Area of Effect: Special
 Saving Throw: None 
 
@@ -2973,7 +2973,7 @@ Saving Throw: Will negates
 Contagious Fear causes panic among enemies in the area of effect, and the panic then spreads to other creatures. Each enemy in the initial area of effect must make a Will save or run in fear for 10 rounds. Any enemy that comes within 10 feet of one of the panicking creatures must make the save as well, or else the contagion will spread to that creature. Creatures immune to fear will not transmit the contagion. A creature that makes a save against this spell is immune to the spell for 2 rounds. After the spell expires on a creature, that creature is immune to the contagion for 8 hours.~
 @31750     = ~Summon Nature's Ally VII~
 @32750     = ~Summon Nature's Ally VII
-(Conjuration) 
+(Conjuration)
 Level: Drd 7
 Range: Sight of Caster
 Duration: 10 rounds + 5 rounds/level
@@ -3339,6 +3339,17 @@ Area of Effect: 1 creature
 Saving Throw: None
 
 Shortening reduces the remaining duration of magical effects on the target. If the target is an ally, all hostile effects on them will have their duration reduced by 5 rounds. If the target is an enemy, all non-hostile effects on them will have their duration reduced by 5 rounds. If an effect's remaining duration is reduced to zero, the effect ends. Shortening is useful for dispelling effects with short durations, such as Hold Person.~
+@35154     = ~Guidance~
+@36154     = ~Guidance
+(Divination)
+Level: Clr 1, Drd 1
+Range: Touch
+Duration: 5 rounds
+Casting Time: 1
+Area of Effect: 1 creature
+Saving Throw: None
+
+This spell imbues the recipient with a touch of divine guidance. For the duration, the target gains a +3 bonus to all skill checks they make.~
 @35252     = ~Null Healing~
 @36252     = ~Null Healing
 (Necromancy)
@@ -3462,6 +3473,28 @@ Area of Effect: Caster
 Saving Throw: None
 
 This spell drastically speeds up the ranger's movement. For the duration, the ranger moves at the fastest possible speed.~
+@35455     = ~Crumble~
+@36455     = ~Crumble
+(Transmutation)
+Level: Drd 4
+Range: Sight of Caster
+Duration: Instantaneous
+Casting Time: 4
+Area of Effect: 1 creature
+Saving Throw: None
+
+Crumble is a spell specialized in destroying unnatural objects and constructs. When cast on an object or construct, it deals 1d8 bludgeoning damage per level (max 15d8), with no saving throw. The target's Spell Resistance does not affect this spell.~
+@35456     = ~Steel Wind Strike~
+@36456     = ~Steel Wind Strike
+(Transmutation)
+Level: Rgr 4, Tempus 3
+Range: Sight of Caster
+Duration: Instantaneous
+Casting Time: 0
+Area of Effect: 20-foot radius
+Saving Throw: None
+
+Steel Wind Strike enables the caster to zoom between each enemy in the area of effect, making attacks against each enemy with each equipped weapon. The caster must have one or more melee weapons equipped for this spell to function; ranged weapons won't work. Attacks made this way can critically hit and will apply any on-hit effects of the weapons. Like with Whirlwind Attack, the time spent casting this spell prevents the character from making any other attacks for the round.~
 @35552     = ~Expose to the Elements~
 @36552     = ~Expose to the Elements
 (Transmutation)
@@ -4366,6 +4399,17 @@ Area of Effect: 20-foot radius sphere
 Saving Throw: None
 
 This spell creates a large spherical area that reverses the gravity of creatures inside it. Any creature that enters the area of effect will start falling up. While in the air, the creature cannot move unless it can fly. Creatures that hit the ceiling (if indoors) could potentially take bludgeoning damage depending on how fast they were rising. Only one sphere of reversed gravity may be active at a time.~
+@37864     = ~Polar Ray~
+@38864     = ~Polar Ray
+(Evocation)
+Level: Drd 8, Sor/Wiz 8
+Range: Sight of Caster
+Duration: 1 round
+Casting Time: 6
+Area of Effect: 2-foot by 1000-foot jet
+Saving Throw: Reflex half
+
+Upon casting this spell, the caster emits a freezing beam in the direction of the target point. The beam continues past the target point all the way to the end of the area. All creatures in the beam's path take 1d6 cold damage per level (max 25d6), with a Reflex save for half. The beam deals this damage again half a round later.~
 @37952     = ~Perfect Invisibility~
 @38952     = ~Perfect Invisibility
 (Illusion)

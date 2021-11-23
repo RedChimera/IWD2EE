@@ -1687,7 +1687,7 @@ COPY ~%mod_folder%/dlg/USALCP01.d~ ~override/USALCP01.dlg~
 	COMPILE_D_TO_DLG
 	LPF CONVERT_DLG_TO_IWD2_FORMAT END
 
-
+STRING_SET 17248 @940
 
 COPY ~%mod_folder%/bam/USALCP02.bam~ ~override~
 
