@@ -450,7 +450,7 @@ Casting Time: 1
 Area of Effect: 1 creature
 Saving Throw: Special
 
-When the caster completes this spell, a blue glow encompasses his hand. This energy attacks the life force of any creature the wizard touches (no attack roll is required). The touched creature suffers 1d6 cold damage per level (max 5d6) and receives a -3 attack penalty for 10 rounds after being struck. If the creature is undead creature, it is affected by panic (Will negates) for 10 rounds. The Will DC is equal to 10 plus the caster's level divided by 3. Undead suffer no damage or attack bonus penalty from Chill Touch.~
+When the caster completes this spell, a blue glow encompasses his hand. This energy attacks the life force of any creature the wizard touches (no attack roll is required). The touched creature suffers 1d6 cold damage per level (max 5d6) and receives a -3 attack penalty for 10 rounds after being struck. If the creature is undead creature, it is affected by panic (Will negates) for 10 rounds. Undead suffer no damage or attack bonus penalty from Chill Touch.~
 @1076    = ~Chromatic Orb~
 @1077    = ~Chromatic Orb 
 (Evocation) 
@@ -537,7 +537,7 @@ Range: Sight of Caster
 Duration: Instantaneous 
 Casting Time: 3
 Area of Effect: 1 creature
-Saving Throw: Fortitude half
+Saving Throw: Fortitude partial
 
 This spell fires a magical lance of ice at a target of the caster's choosing. It automatically hits, inflicting 5d6 points of cold damage and forcing the target to make a Fortitude save or be stunned for 3 rounds.~
 @1090    = ~Lance of Disruption~
@@ -1744,15 +1744,15 @@ This spell creates a magical field of force with the strength of half-plate armo
 Level: Sor/Wiz 2
 Range: Sight of Caster
 Duration: Special 
-Casting Time: 1 
-Area of Effect: Locked door, container, or construct
+Casting Time: 1
+Area of Effect: Locked door or container
 Saving Throw: None
 
-The Knock spell opens locked, held or arcane locked doors. It opens secret doors, as well as locked boxes or chests. It does not raise barred gates or similar impediments. Enemy constructs suffer 1d6 magic damage per caster level, up to a maximum of 20d6 at level 20.
+The Knock spell opens locked, held or arcane locked doors. It opens secret doors, as well as locked boxes or chests. It does not raise barred gates or similar impediments.
 ~
 @1747    = ~Horrid Wilting~
 @1748    = ~Horrid Wilting
-(Necromancy) 
+(Necromancy)
 Level: Sor/Wiz 8, Ilmater 9, Talos 9
 Range: Sight of Caster
 Duration: Instantaneous
@@ -1789,7 +1789,7 @@ This spell calls upon unholy power to smite your enemies. Any creatures of non-e
 ~
 @1757    = ~Ice Wall Fault~
 @1758    = ~Slay Living~
-@1759    = ~Slay Living 
+@1759    = ~Slay Living
 (Necromancy) 
 Level: Clr 5, Talos 5
 Range: Touch 
@@ -1798,7 +1798,7 @@ Casting Time: 1 round
 Area of Effect: 1 creature
 Saving Throw: Fortitude partial
 
-This spell imbues the caster's hands with destructive negative energy that will release when a successful touch attack is made. This attack will instantly slay a living creature unless a Fortitude save is made, in which case the creature takes 3d6 + 1/level points of magic damage instead. The Fortitude DC is equal to 15 plus the caster's Wisdom and Spell Focus bonuses. Thus, a level 10 Slay Living attack has a Fortitude DC of 20. This spell has no affect on undead or constructs.~
+This spell imbues the caster's hands with destructive negative energy that will release when a successful touch attack is made. This attack will instantly slay a living creature unless a Fortitude save is made, in which case the creature takes 3d6 + 1/level points of magic damage instead. The Fortitude DC is equal to 15 plus the caster's Wisdom and Spell Focus bonuses. This spell has no effect on undead or constructs.~
 @1760    = ~Harm~
 @1761    = ~Harm 
 (Necromancy) 
@@ -1809,7 +1809,7 @@ Casting Time: 1 round
 Area of Effect: 1 creature
 Saving Throw: Fortitude negates
 
-This spell imbues the caster's hands with destructive negative energy that will release when a successful touch attack is made at +2. This attack deals magic damage equal to all but 1d4 of the target's current hit points on a failed Fortitude save. The save DC is equal to 18 plus the caster's Wisdom and Spell Focus bonuses. Thus, a level 12 Harm spell has a Fortitude DC of 22. This spell has no effect on undead or constructs.
+This spell imbues the caster's hands with destructive negative energy that will release when a successful touch attack is made at +2. This attack deals magic damage equal to all but 1d4 of the target's current hit points on a failed Fortitude save. The save DC is equal to 18 plus the caster's Wisdom and Spell Focus bonuses. This spell has no effect on undead or constructs.
 ~
 @1762    = ~Ice Blade~
 @1763    = ~Ice Blade
@@ -1887,7 +1887,7 @@ Saving Throw: None
 This spell invokes a shimmering tapestry of blue-white force. This wall is intangible, requiring no physical anchor, and can easily be passed through. Evil creatures passing through the wall take 2d10 magic damage. Undead creatures passing through the wall take 5d10 magic damage. A creature that has passed through the wall can only take damage from it once. Only one Wall of Moonlight may be in effect at any time.
 ~
 @1773    = ~Destruction~
-@1774    = ~Destruction 
+@1774    = ~Destruction
 (Necromancy)
 Level: Clr 7, Talos 7
 Range: Close
@@ -3117,6 +3117,28 @@ Area of Effect: 1 creature
 Saving Throw: Fortitude partial
 
 This spell turns a target's blood to flame, doing 3d4 hit points of damage every round and driving the victim berserk with pain. The target gets to make a Fortitude save every round; if successful, the berserk state is negated, but the damage is still dealt.  This spell does not work against creatures that do not have blood, such as the undead, elementals, and plants. Creatures with at least 15/- fire resistance are immune to the berserk effect.~
+@33426     = ~Fire Shield (Blue)~
+@34426     = ~Fire Shield (Blue)
+(Evocation)
+Level: Sor/Wiz 4
+Range: Caster
+Duration: 1 round/level
+Casting Time: 4
+Area of Effect: Caster
+Saving Throw: None 
+
+The Blue Fireshield protects the user from fire damage by surrounding the caster with a shield of ice flames, which reduce all fire damage taken by 50%. Opponents striking the caster with melee attacks also suffer 1d6 + 1 per level (max 1d6+15) cold damage per hit.~
+@33427     = ~Fire Shield (Red)~
+@34427     = ~Fire Shield (Red)
+(Evocation)
+Level: Sor/Wiz 4
+Range: Caster
+Duration: 1 round/level
+Casting Time: 4
+Area of Effect: Caster
+Saving Throw: None 
+
+The Red Fire Shield protects the user from cold damage by surrounding the caster with a shield of burning flames, which reduce all cold damage taken by 50%.  Opponents striking the caster with melee attacks suffer 1d6 + 1 per level (max 1d6+15) fire damage per hit.~
 @33503     = ~Cloudkill~
 @34503     = ~Cloudkill
 (Necromancy)
@@ -4267,6 +4289,17 @@ Area of Effect: Caster
 Saving Throw: None
 
 Spell Turning reflects incoming hostile spells back at the source. While Spell Turning is active, if the caster would be hit by a harmful, single-target spell of any level, that spell is reflected back at its own caster. Spell Turning can reflect a total of 15 spell levels before it ends, though as long as there is at least one spell level remaining, the next spell will be reflected. It does not reflect Dispel Magic either, though it cannot be dispelled itself.~
+@37764     = ~Steal Effects~
+@38764     = ~Steal Effects
+(Abjuration)
+Level: Brd 6, Sor/Wiz 7, Mask 6
+Range: Sight of Caster
+Duration: Instantaneous
+Casting Time: 5
+Area of Effect: 1 creature
+Saving Throw: Will negates
+
+This spell steals the effects of spells from the target and grants them to the caster. If the target fails a Will save at -5, all dispellable effects on them (such as from Mirror Image or Stoneskin) are dispelled, and the caster gains those effects for their remaining durations. Effects of items and innate abilities cannot be stolen. If an ally is targeted, they are affected with no save.~
 @37852     = ~Energy Drain~
 @38852     = ~Energy Drain
 (Necromancy)
@@ -4431,7 +4464,7 @@ Casting Time: 5
 Area of Effect: Caster
 Saving Throw: None
 
-This spell eliminates the interval between spellcasting, allowing the caster to begin a new spell as soon as he or she finishes casting the previous one. A spellcaster under the effects of Improved Alacrity can cast multiple spells in the space of a single round, but the concentration involved imposes a -3 penalty to casting speed for the duration of the spell.~
+This spell eliminates the interval between spellcasting, allowing the caster to begin a new spell as soon as he or she finishes casting the previous one. A spellcaster under the effects of Improved Alacrity can cast multiple spells in the space of a single round, but the concentration involved prevents the caster from benefitting from decreased casting time effects (such as Improved Initiative) for the duration of the spell.~
 @37954     = ~Living Lightning~
 @38954     = ~Living Lightning
 (Evocation)

@@ -955,7 +955,7 @@ Domain Spells:
 3: Invisibility Sphere, Mirror Image
 4: Blink, Improved Invisibility
 5: Lutzaen's Local Teleport, Steal Spells
-6: Darts of Bone, Greater Shadow Conjuration
+6: Greater Shadow Conjuration, Steal Effects
 7: Mass Haste, Shades
 8: Mass Invisibility, Simulacrum
 9: Black Blade of Disaster, Perfect Invisibility~
@@ -1019,9 +1019,9 @@ Benefit: All attacks do maximum damage for 5 rounds. If you are a level 12 Fight
 
 You are tougher than normal.
 
-Benefit: You gain +10 hit points.
+Benefit: Each time you take this feat, you gain +3 hit points, plus another hit point per level. Barbarians gain +3 hit points per barbarian level instead of +1. In future level ups, you will gain additional hit points.
 
-Special: You may gain this feat up to 5 times in Icewind Dale 2. Taking Toughness a second time grants +15 hit points (+25 total). Taking it a third time grants +20 HP (+45 total). Taking it a fourth time grants +25 HP (+70 total), and taking it a fifth time grants +30 HP (+100 total).~
+Special: You may gain this feat up to 5 times in Icewind Dale 2.~
 @671    = ~GREAT FORTITUDE:
 
 You are tougher than normal.
@@ -1720,6 +1720,7 @@ Advantages:
 * +2 to Dexterity.
 * +2 racial bonus to saves against Enchantment magic.
 * +2 racial bonus on Will saves against spells and spell-like abilities.
+* +2 racial bonus to Search checks, and will search for traps even when not actively using the Search skill.
 * +2 to Search checks.
 * Spell resistance of 6 + character level.
 * Immunity to Sleep magic.
@@ -1824,6 +1825,7 @@ Advantages:
 * +2 to Charisma.
 * +2 racial bonus to saves against Enchantment magic.
 * +2 racial bonus on Will saves against spells and spell-like abilities.
+* +2 racial bonus to Search checks, and will search for traps even when not actively using the Search skill.
 * +2 to Search checks.
 * Spell resistance of 6 + character level.
 * Immunity to Sleep magic.

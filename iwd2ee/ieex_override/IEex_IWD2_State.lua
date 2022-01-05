@@ -3956,6 +3956,16 @@ function MEOP452(effectData, creatureData, isSpecialCall)
 	IEex_WriteWord(creatureData + 0x940, IEex_ReadSignedWord(creatureData + 0x940, 0x0) - parameter1)
 end
 
+function MEIMPALA(effectData, creatureData, isSpecialCall)
+	if not isSpecialCall then return end
+	local targetID = IEex_GetActorIDShare(creatureData)
+	if not IEex_IsSprite(targetID, false) then return end
+	local castingSpeed = IEex_ReadSignedWord(creatureData + 0x9E4, 0x0)
+	if castingSpeed > 0 then
+		IEex_WriteWord(creatureData + 0x9E4, 0)
+	end
+end
+
 function MESTATSC(effectData, creatureData, isSpecialCall)
 	if not isSpecialCall then return end
 	local targetID = IEex_GetActorIDShare(creatureData)
@@ -7679,6 +7689,33 @@ function MESPELLT(effectData, creatureData)
 	end
 end
 
+function METOUGHN(effectData, creatureData)
+	if not IEex_IsSprite(IEex_ReadDword(effectData + 0x10C), false) then return end
+	local targetID = IEex_GetActorIDShare(creatureData)
+	local totalLevel = IEex_ReadByte(creatureData + 0x626, 0x0)
+	local barbarianLevel = IEex_ReadByte(creatureData + 0x627, 0x0)
+	local totalLevelNoted = IEex_ReadDword(effectData + 0x5C)
+	local barbarianLevelNoted = IEex_ReadDword(effectData + 0x60)
+	local extraHP = 0
+	if totalLevel > totalLevelNoted then
+		extraHP = totalLevel - totalLevelNoted
+		IEex_WriteDword(effectData + 0x5C, totalLevel)
+		if barbarianLevel > barbarianLevelNoted then
+			extraHP = extraHP + (barbarianLevel - barbarianLevelNoted)
+			IEex_WriteDword(effectData + 0x60, barbarianLevel)
+		end
+	end
+	if extraHP > 0 then
+		IEex_ApplyEffectToActor(targetID, {
+["opcode"] = 18,
+["target"] = 2,
+["timing"] = 1,
+["parameter1"] = extraHP,
+["source_id"] = targetID
+})
+	end
+end
+
 function MECOUNTE(effectData, creatureData)
 	if IEex_CheckForEffectRepeat(effectData, creatureData) then return end
 	local targetID = IEex_GetActorIDShare(creatureData)
@@ -9723,7 +9760,8 @@ function IEex_EvaluatePermanentRepeatingEffects(creatureData)
 		end)
 		IEex_IterateIDs(areaData, 0x41, function(id)
 			local share = IEex_GetActorShare(id)
-			if IEex_ReadWord(share + 0x612, 0x0) > 0 then
+			local triggerFlags = IEex_ReadDword(share + 0x5D6)
+			if IEex_ReadWord(share + 0x612, 0x0) > 0 and bit.band(triggerFlags, 0x8) > 0 then
 				local trapX = math.floor((IEex_ReadDword(share + 0x59A) + IEex_ReadDword(share + 0x5A2)) / 2)
 				local trapY = math.floor((IEex_ReadDword(share + 0x59E) + IEex_ReadDword(share + 0x5A6)) / 2)
 				local trapDetectDifficulty = IEex_ReadSignedWord(share + 0x60E, 0x0)
@@ -10028,10 +10066,12 @@ function IEex_EvaluatePermanentRepeatingEffects(creatureData)
 })
 	end
 	local castingSpeedModifier = 0
+	local disableCastingSpeed = false
 --	if IEex_GetActorSpellState(targetID, 193) then
 		IEex_IterateActorEffects(targetID, function(eData)
 			local theopcode = IEex_ReadDword(eData + 0x10)
 			local theparameter2 = IEex_ReadDword(eData + 0x20)
+			local theresource = IEex_ReadLString(eData + 0x30, 8)
 			if theopcode == 288 and theparameter2 == 193 then
 				local theparameter1 = IEex_ReadDword(eData + 0x1C)
 				local thespecial = IEex_ReadDword(eData + 0x48)
@@ -10039,6 +10079,8 @@ function IEex_EvaluatePermanentRepeatingEffects(creatureData)
 					usedFunction = true
 					castingSpeedModifier = castingSpeedModifier + theparameter1
 				end
+			elseif theopcode == 500 and theresource == "MEIMPALA" then
+				disableCastingSpeed = true
 			end
 		end)
 --	end
@@ -10108,7 +10150,11 @@ function IEex_EvaluatePermanentRepeatingEffects(creatureData)
 			end
 		end
 	end
-
+	if disableCastingSpeed then
+		if castingSpeedModifier > 0 then
+			castingSpeedModifier = 0
+		end
+	end
 	if castingSpeedModifier ~= IEex_GetActorStat(targetID, 77) then
 		IEex_ApplyEffectToActor(targetID, {
 ["opcode"] = 254,
@@ -10535,6 +10581,120 @@ function MESAFESP(effectData, creatureData)
 		end
 	end
 end
+
+function MESTEALE(effectData, creatureData)
+	if IEex_CheckForEffectRepeat(effectData, creatureData) then return end
+	local sourceID = IEex_ReadDword(effectData + 0x10C)
+	local targetID = IEex_GetActorIDShare(creatureData)
+	if not IEex_IsSprite(sourceID, false) or sourceID == targetID then return end
+	local effectsStolen = {}
+	IEex_IterateActorEffects(targetID, function(eData)
+		local theopcode = IEex_ReadDword(eData + 0x10)
+		local thepower = IEex_ReadDword(eData + 0x18)
+		local theparameter1 = IEex_ReadDword(eData + 0x1C)
+		local theparameter2 = IEex_ReadDword(eData + 0x20)
+		local thetiming = IEex_ReadDword(eData + 0x24)
+		local theduration = IEex_ReadDword(eData + 0x28)
+		local theresource = IEex_ReadLString(eData + 0x30, 8)
+		local thesavingthrow = IEex_ReadDword(eData + 0x40)
+		local thesavebonus = IEex_ReadDword(eData + 0x44)
+		local thespecial = IEex_ReadDword(eData + 0x48)
+		local theresist_dispel = IEex_ReadDword(eData + 0x5C)
+		local thetime_applied = IEex_ReadDword(eData + 0x6C)
+		local theparent_resource = IEex_ReadLString(eData + 0x94, 8)
+		if (thetiming == 6 or thetiming == 7 or thetiming == 4096) and (theresist_dispel == 1 or theresist_dispel == 3) and (ex_listspll[theparent_resource] ~= nil or ex_true_spell[theparent_resource] ~= nil or ex_damage_source_spell[theparent_resource] ~= nil) then
+			if thetiming == 6 then
+				thetiming = 3
+			elseif thetiming == 7 then
+				thetiming = 4
+			elseif thetiming == 4096 then
+				thetiming = 0
+			end
+			theduration = math.floor((theduration - thetime_applied) / 15)
+			if theopcode == 119 then
+				theopcode = 500
+				theresource = "MEMIRRIM"
+				thespecial = theduration
+				theduration = 0
+			end
+			table.insert(effectsStolen, {
+["opcode"] = theopcode,
+["target"] = 2,
+["power"] = IEex_ReadDword(eData + 0x18),
+["parameter1"] = theparameter1,
+["parameter2"] = theparameter2,
+["timing"] = thetiming,
+["duration"] = theduration,
+["resource"] = theresource,
+["dicenumber"] = IEex_ReadDword(eData + 0x38),
+["dicesize"] = IEex_ReadDword(eData + 0x3C),
+["savingthrow"] = IEex_ReadDword(eData + 0x40),
+["savebonus"] = IEex_ReadDword(eData + 0x44),
+["special"] = thespecial,
+["school"] = IEex_ReadDword(eData + 0x4C),
+["resist_dispel"] = 3,
+["parameter3"] = IEex_ReadDword(eData + 0x60),
+["parameter4"] = IEex_ReadDword(eData + 0x64),
+["parameter5"] = IEex_ReadDword(eData + 0x68),
+["time_applied"] = thetime_applied,
+["vvcresource"] = IEex_ReadLString(eData + 0x70, 8),
+["resource2"] = IEex_ReadLString(eData + 0x78, 8),
+["source_x"] = IEex_ReadDword(eData + 0x80),
+["source_y"] = IEex_ReadDword(eData + 0x84),
+["target_x"] = IEex_ReadDword(eData + 0x88),
+["target_y"] = IEex_ReadDword(eData + 0x8C),
+["restype"] = IEex_ReadDword(eData + 0x90),
+["parent_resource"] = IEex_ReadLString(eData + 0x94, 8),
+["resource_flags"] = bit.band(IEex_ReadDword(eData + 0x9C), 0xFFFFF9FF),
+["impact_projectile"] = IEex_ReadDword(eData + 0xA0),
+["sourceslot"] = IEex_ReadDword(eData + 0xA4),
+["effvar"] = IEex_ReadLString(eData + 0xA8, 32),
+["casterlvl"] = IEex_ReadDword(eData + 0xC8),
+["internal_flags"] = bit.bor(IEex_ReadDword(eData + 0xD0), IEex_ReadDword(eData + 0xD8)),
+["sectype"] = IEex_ReadDword(eData + 0xD8),
+["source_id"] = IEex_ReadDword(eData + 0x110),
+})
+		end
+	end)
+	for k, the_effect in ipairs(effectsStolen) do
+		IEex_ApplyEffectToActor(sourceID, {
+["opcode"] = the_effect["opcode"],
+["target"] = the_effect["target"],
+["power"] = the_effect["power"],
+["parameter1"] = the_effect["parameter1"],
+["parameter2"] = the_effect["parameter2"],
+["timing"] = the_effect["timing"],
+["duration"] = the_effect["duration"],
+["resource"] = the_effect["resource"],
+["dicenumber"] = the_effect["dicenumber"],
+["dicesize"] = the_effect["dicesize"],
+["savingthrow"] = the_effect["savingthrow"],
+["savebonus"] = the_effect["savebonus"],
+["special"] = the_effect["special"],
+["school"] = the_effect["school"],
+["parameter3"] = the_effect["parameter3"],
+["parameter4"] = the_effect["parameter4"],
+["parameter5"] = the_effect["parameter5"],
+["vvcresource"] = the_effect["vvcresource"],
+["resource2"] = the_effect["resource2"],
+["source_x"] = the_effect["source_x"],
+["source_y"] = the_effect["source_y"],
+["target_x"] = the_effect["target_x"],
+["target_y"] = the_effect["target_y"],
+["restype"] = the_effect["restype"],
+["parent_resource"] = the_effect["parent_resource"],
+["resource_flags"] = the_effect["resource_flags"],
+["impact_projectile"] = the_effect["impact_projectile"],
+["sourceslot"] = the_effect["sourceslot"],
+["effvar"] = the_effect["effvar"],
+["casterlvl"] = the_effect["casterlvl"],
+["internal_flags"] = the_effect["internal_flags"],
+["sectype"] = the_effect["sectype"],
+["source_id"] = the_effect["source_id"],
+})
+	end
+end
+
 --[[
 To use the EXMODMEM function, create an opcode 500 effect in an item or spell, set the resource to EXMODMEM (all capitals),
  set the timing to instant, limited and the duration to 0, and choose parameters.
@@ -10684,6 +10844,36 @@ function EXMODMEM(effectData, creatureData)
 								end
 							end
 						end
+					end
+				end
+			end
+		end
+	end
+	if bit.band(savingthrow, 0x2000000) > 0 then
+		local abilities = IEex_FetchSpellInfo(targetID, {9})
+		local levelList = abilities[9]
+		local levelISpells = levelList[1]
+		for i2, spell in ipairs(levelISpells) do
+			if matchSpell == spell["resref"] then
+				if not subtractSpells then
+					local modifyNum = spell["memorizedCount"] - spell["castableCount"]
+					if modifyNum > modifyRemaining then
+						modifyNum = modifyRemaining
+					end
+					if modifyNum > 0 then
+						modifyRemaining = modifyRemaining - modifyNum
+--						table.insert(modifyList, {i, modifyNum, spell["resref"]})
+						IEex_AlterSpellInfo(targetID, 9, 1, spell["resref"], 0, modifyNum)
+					end
+				else
+					local modifyNum = spell["castableCount"]
+					if modifyNum > modifyRemaining then
+						modifyNum = modifyRemaining
+					end
+					if modifyNum > 0 then
+						modifyRemaining = modifyRemaining - modifyNum
+--						table.insert(modifyList, {i, modifyNum, spell["resref"]})
+						IEex_AlterSpellInfo(targetID, 9, 1, spell["resref"], 0, modifyNum * -1)
 					end
 				end
 			end
@@ -15947,6 +16137,7 @@ function IEex_ExtraAttacks(creatureData)
 ["parent_resource"] = "USAPRBON",
 ["source_id"] = targetID
 })
+--[[
 		IEex_ApplyEffectToActor(targetID, {
 ["opcode"] = 174,
 ["target"] = 2,
@@ -15955,6 +16146,7 @@ function IEex_ExtraAttacks(creatureData)
 ["parent_resource"] = "USAPRBON",
 ["source_id"] = targetID
 })
+--]]
 		IEex_ApplyEffectToActor(actionTargetID, {
 ["opcode"] = 500,
 ["target"] = 2,
@@ -20940,6 +21132,763 @@ function MEGetStat(targetID, pre, stat, post)
 	end
 end
 
+function MEASSESS(effectData, creatureData)
+	if IEex_CheckForEffectRepeat(effectData, creatureData) then return end
+	local targetID = IEex_GetActorIDShare(creatureData)
+	local sourceID = IEex_ReadDword(effectData + 0x10C)
+	local armorClassList = IEex_GetActorArmorClass(targetID)
+	local ac = armorClassList[1]
+	local acslashing = armorClassList[2]
+	local acpiercing = armorClassList[3]
+	local acbludgeoning = armorClassList[4]
+	local acmissile = armorClassList[5]
+	local saves = {[1024] = IEex_GetActorStat(targetID, 9), [2048] = IEex_GetActorStat(targetID, 10), [4096] = IEex_GetActorStat(targetID, 11)}
+	local spellResistance = IEex_GetActorStat(targetID, 18)
+	local opcodeImmunities = {}
+	local spellImmunities = {}
+	IEex_IterateActorEffects(targetID, function(eData)
+		local theopcode = IEex_ReadDword(eData + 0x10)
+		local thesavingthrow = IEex_ReadDword(eData + 0x40)
+		if theopcode == 101 or theopcode == 261 then
+			local theparameter2 = IEex_ReadDword(eData + 0x20)
+			opcodeImmunities[theparameter2] = true
+		elseif theopcode == 206 or theopcode == 290 then
+			local theresource = IEex_ReadLString(eData + 0x30, 8)
+			spellImmunities[theresource] = true
+		end
+	end)
+	for characterSlot = 0, 5, 1 do
+		local playerID = IEex_GetActorIDCharacter(characterSlot)
+		local playerData = IEex_GetActorShare(playerID)
+		if IEex_IsSprite(playerID, false) then
+--[[
+			local weaponRES = {"", ""}
+			local weaponHand = {1, 2}
+			local wearingLightArmor = true
+			local equippedSlot = IEex_ReadByte(playerData + 0x4BA4, 0x0)
+			local currentAttack = IEex_ReadSignedByte(playerData + 0x5636, 0x0)
+
+			local numWeapons = 0
+			if ex_record_attacks_made[playerID] == nil then
+				ex_record_attacks_made[playerID] = {0, 0, 0, 0}
+			end
+			local extraAttacksMade = ex_record_attacks_made[playerID][2]
+			local extraMainhandAttacksMade = ex_record_attacks_made[playerID][3]
+			local currentAttackPenalty = 0
+			IEex_IterateActorEffects(playerID, function(eData)
+				local theopcode = IEex_ReadDword(eData + 0x10)
+				local theparameter1 = IEex_ReadDword(eData + 0x1C)
+				local theparameter2 = IEex_ReadDword(eData + 0x20)
+				local theresource = IEex_ReadLString(eData + 0x30, 8)
+				local thesavingthrow = IEex_ReadDword(eData + 0x40)
+				local thespecial = IEex_ReadByte(eData + 0x48, 0x0)
+				if theopcode == 288 and theparameter2 == 241 then
+					if thespecial == 5 or thespecial == 6 then
+						numWeapons = numWeapons + 1
+						if weaponRES[1] == "" then
+							weaponRES[1] = IEex_ReadLString(eData + 0x94, 8)
+						else
+							weaponRES[2] = IEex_ReadLString(eData + 0x94, 8)
+						end
+					end
+
+					if (theparameter1 >= 62 and theparameter1 <= 66) or theparameter1 == 68 then
+						wearingLightArmor = false
+					end
+				end
+			end)
+			if equippedSlot ~= 44 and equippedSlot ~= 46 and equippedSlot ~= 48 and equippedSlot ~= 50 then
+				weaponRES[1] = IEex_GetItemSlotRES(playerID, equippedSlot)
+			elseif IEex_GetActorStat(playerID, 101) > 0 then
+				weaponRES[1] = IEex_GetItemSlotRES(playerID, 10)
+			end
+			if bit.band(savingthrow, 0x20000) > 0 then
+				if IEex_GetActorStat(playerID, 101) > 0 and (equippedSlot == 10 or (equippedSlot == 43 and IEex_GetItemSlotRES(playerID, 10) == IEex_GetItemSlotRES(playerID, 43))) then
+					weaponRES[2] = IEex_GetItemSlotRES(playerID, 10)
+				elseif equippedSlot == 43 or equippedSlot == 45 or equippedSlot == 47 or equippedSlot == 49 then
+					weaponRES[2] = IEex_GetItemSlotRES(playerID, equippedSlot + 1)
+				elseif equippedSlot == 44 or equippedSlot == 46 or equippedSlot == 48 or equippedSlot == 50 then
+					weaponRES[2] = IEex_GetItemSlotRES(playerID, equippedSlot)
+				end
+			end
+		--	IEex_DS(currentAttack .. ", " .. extraMainhandAttacksMade .. ", " .. extraAttacksMade)
+			if bit.band(savingthrow, 0x30000) == 0 then
+				weaponRES[1] = IEex_ReadLString(effectData + 0x18, 8)
+				local attackPenaltyIncrement = 5
+				if IEex_GetActorStat(playerID, 101) > 0 and equippedSlot == 10 then
+					attackPenaltyIncrement = 3
+				end
+				if weaponRES[1] == "" then
+					if numWeapons >= 2 and currentAttack == IEex_GetActorStat(playerID, 8) then
+		--				currentAttackPenalty = extraAttacksMade * attackPenaltyIncrement
+						if equippedSlot == 43 or equippedSlot == 45 or equippedSlot == 47 or equippedSlot == 49 then
+							weaponRES[2] = IEex_GetItemSlotRES(playerID, equippedSlot + 1)
+						elseif IEex_GetActorStat(playerID, 101) > 0 and (equippedSlot == 10 or IEex_GetItemSlotRES(playerID, 10) == IEex_GetItemSlotRES(playerID, 43)) then
+							weaponRES[2] = IEex_GetItemSlotRES(playerID, 10)
+						end
+					elseif currentAttack >= 1 then
+						currentAttackPenalty = (currentAttack - 1) * attackPenaltyIncrement
+						if numWeapons >= 2 and currentAttack == IEex_GetActorStat(playerID, 8) - 1 then
+		--					currentAttackPenalty = currentAttackPenalty + extraMainhandAttacksMade * attackPenaltyIncrement
+						elseif numWeapons < 2 then
+		--					currentAttackPenalty = currentAttackPenalty + extraAttacksMade * attackPenaltyIncrement
+						end
+						weaponRES[1] = IEex_GetItemSlotRES(playerID, equippedSlot)
+					else
+						weaponRES[1] = parent_resource
+					end
+				end
+			end
+			local dualWielding = false
+			local dualWieldingPenalty = {0, 0}
+		--	if weaponRES[1] ~= "" and weaponRES[2] ~= "" then
+			if numWeapons >= 2 then
+				dualWielding = true
+				dualWieldingPenalty = {6, 10}
+				local resWrapper = IEex_DemandRes(weaponRES[2], "ITM")
+				if resWrapper:isValid() then
+					local itemData = resWrapper:getData()
+					local itemType = IEex_ReadWord(itemData + 0x1C, 0x0)
+					if itemType == 16 or itemType == 19 then
+						dualWieldingPenalty[1] = dualWieldingPenalty[1] - 2
+						dualWieldingPenalty[2] = dualWieldingPenalty[2] - 2
+					end
+				end
+				resWrapper:free()
+				if IEex_GetActorStat(playerID, 103) > 0 and wearingLightArmor then
+					dualWieldingPenalty[1] = dualWieldingPenalty[1] - 2
+					dualWieldingPenalty[2] = dualWieldingPenalty[2] - 6
+				else
+					if bit.band(IEex_ReadDword(playerData + 0x75C), 0x2) > 0 then
+						dualWieldingPenalty[1] = dualWieldingPenalty[1] - 2
+						dualWieldingPenalty[2] = dualWieldingPenalty[2] - 2
+					end
+					if bit.band(IEex_ReadDword(playerData + 0x764), 0x40) > 0 then
+						dualWieldingPenalty[2] = dualWieldingPenalty[2] - 4
+					end
+				end
+			end
+			local spriteHands = 2
+			local animation = IEex_ReadDword(playerData + 0x5C4)
+			if extra_hands[animation] ~= nil then
+				spriteHands = extra_hands[animation]
+			end
+			if spriteHands == 4 then
+				if weaponRES[2] == "" then
+					weaponRES = {weaponRES[1], weaponRES[1], weaponRES[1], weaponRES[1]}
+					weaponHand = {1, 1, 1, 1}
+				else
+					weaponRES = {weaponRES[1], weaponRES[1], weaponRES[2], weaponRES[2]}
+					weaponHand = {1, 1, 2, 2}
+				end
+			elseif spriteHands == 6 then
+				if weaponRES[2] == "" then
+					weaponRES = {weaponRES[1], weaponRES[1], weaponRES[1], weaponRES[1], weaponRES[1], weaponRES[1]}
+					weaponHand = {1, 1, 1, 1, 1, 1}
+				else
+					weaponRES = {weaponRES[1], weaponRES[1], weaponRES[1], weaponRES[2], weaponRES[2], weaponRES[2]}
+					weaponHand = {1, 1, 1, 2, 2, 2}
+				end
+			end
+			local numAttacks = spriteHands
+			local hand = 1
+			while hand <= numAttacks do
+				local res = weaponRES[hand]
+				local resWrapper = IEex_DemandRes(res, "ITM")
+				if resWrapper:isValid() then
+					local itemData = resWrapper:getData()
+					local proficiencyFeat = 0
+					local isTwoHanded = (bit.band(IEex_ReadDword(itemData + 0x18), 0x2) > 0)
+					local itemType = IEex_ReadWord(itemData + 0x1C, 0x0)
+					if ex_item_type_proficiency[itemType] ~= nil then
+						proficiencyFeat = ex_item_type_proficiency[itemType]
+					end
+					local criticalHitBonus = 0
+					local baseCriticalMultiplier = 2
+					if ex_item_type_critical[itemType] ~= nil then
+						criticalHitBonus = ex_item_type_critical[itemType][1]
+						baseCriticalMultiplier = ex_item_type_critical[itemType][2]
+					end
+					local effectOffset = IEex_ReadDword(itemData + 0x6A)
+					local numHeaders = IEex_ReadWord(itemData + 0x68, 0x0)
+					for header = 1, numHeaders, 1 do
+						local offset = itemData + 0x4A + header * 0x38
+						local headerFlags = IEex_ReadDword(offset + 0x26)
+		--				local itemRange = 20 * IEex_ReadWord(offset + 0xE, 0x0) + 40
+						local itemRange = 16 * IEex_ReadWord(offset + 0xE, 0x0) + 38
+						local whirlwindAttackFeatID = ex_feat_name_id["ME_WHIRLWIND_ATTACK"]
+						if bit.band(savingthrow, 0x2000000) > 0 and whirlwindAttackFeatID ~= nil and IEex_ReadByte(playerData + 0x744 + whirlwindAttackFeatID, 0x0) >= 2 then
+							itemRange = itemRange + 32
+						end
+						local itemDamageType = IEex_ReadWord(offset + 0x1C, 0x0)
+						if IEex_ReadByte(offset, 0x0) == 1 and ((distX <= itemRange and distY <= itemRange) or bit.band(savingthrow, 0x1000000) == 0) then
+							local attackRoll = math.random(20) + IEex_GetActorStat(playerID, 32)
+							if attackRoll > 20 then
+								attackRoll = 20
+							elseif attackRoll < 1 then
+								attackRoll = 1
+							end
+							local hit = 0
+							local stateValue = bit.bor(IEex_ReadDword(creatureData + 0x5BC), IEex_ReadDword(creatureData + 0x920))
+							local sourceStateValue = bit.bor(IEex_ReadDword(playerData + 0x5BC), IEex_ReadDword(playerData + 0x920))
+							local concealment = 0
+							if bit.band(stateValue, 0x20000000) > 0 then
+								concealment = 20
+							end
+							if (bit.band(stateValue, 0x10) > 0 and IEex_GetActorStat(playerID, 81) == 0) or bit.band(sourceStateValue, 0x40000) > 0 then
+								concealment = 50
+							end
+							if bit.band(stateValue, 0xE9) > 0 or IEex_ReadSignedWord(offset + 0x14, 0x0) == 32767 then
+								hit = 5
+							elseif IEex_GetActorSpellState(playerID, 59) and math.random(100) <= 20 then
+								IEex_ApplyEffectToActor(playerID, {
+		["opcode"] = 139,
+		["target"] = 2,
+		["timing"] = 0,
+		["duration"] = 0,
+		["parameter1"] = 18352,
+		["source_id"] = playerID
+		})
+							elseif IEex_GetActorSpellState(targetID, 59) and math.random(100) <= 50 then
+								IEex_ApplyEffectToActor(targetID, {
+		["opcode"] = 139,
+		["target"] = 2,
+		["timing"] = 0,
+		["duration"] = 0,
+		["parameter1"] = 18353,
+		["source_id"] = targetID
+		})
+							else
+								local concealed = false
+								if math.random(100) <= concealment then
+									concealed = true
+								end
+								if concealment > 0 and bit.band(IEex_ReadDword(playerData + 0x75C), 0x40) > 0 then
+									if not concealed or math.random(100) > concealment then
+										IEex_ApplyEffectToActor(playerID, {
+		["opcode"] = 139,
+		["target"] = 2,
+		["timing"] = 0,
+		["duration"] = 0,
+		["parameter1"] = ex_tra_55390,
+		["source_id"] = playerID
+		})
+										concealed = false
+									else
+										IEex_ApplyEffectToActor(playerID, {
+		["opcode"] = 139,
+		["target"] = 2,
+		["timing"] = 0,
+		["duration"] = 0,
+		["parameter1"] = ex_tra_55391,
+		["source_id"] = playerID
+		})
+									end
+								end
+								if concealed then
+									IEex_ApplyEffectToActor(playerID, {
+		["opcode"] = 139,
+		["target"] = 2,
+		["timing"] = 0,
+		["duration"] = 0,
+		["parameter1"] = ex_tra_55392,
+		["source_id"] = playerID
+		})
+								else
+									local attackBonus = IEex_GetActorBaseAttackBonus(playerID) + IEex_GetActorStat(playerID, 7) + IEex_ReadSignedWord(offset + 0x14, 0x0) - IEex_ReadSignedWord(effectData + 0x44, 0x0) - currentAttackPenalty
+									if proficiencyFeat > 0 then
+										attackBonus = attackBonus + tonumber(IEex_2DAGetAtStrings("WSPECIAL", "HIT", tostring(IEex_ReadByte(playerData + ex_feat_id_offset[proficiencyFeat], 0x0))))
+		--								attackBonus = attackBonus + ex_proficiency_attack[IEex_ReadByte(playerData + ex_feat_id_offset[proficiencyFeat], 0x0)]
+									end
+									if IEex_ReadByte(playerData + 0x24, 0x0) >= 200 then
+										attackBonus = attackBonus + ex_difficulty_attack_bonus[IEex_GetGameDifficulty()]
+									end
+									if IEex_GetActorStat(playerID, 103) > 0 then
+										local favoredEnemyBonus = 0
+										local enemyRace = IEex_ReadByte(creatureData + 0x26, 0x0)
+										for i = 7, 0, -1 do
+											local favoredEnemy = IEex_ReadByte(playerData + 0x7F7 + i, 0x0)
+											if favoredEnemy ~= 255 then
+												favoredEnemyBonus = favoredEnemyBonus + 1
+											end
+											if favoredEnemy == enemyRace then
+												attackBonus = attackBonus + favoredEnemyBonus
+											end
+										end
+									end
+									if weaponHand[hand] == 1 then
+										attackBonus = attackBonus - dualWieldingPenalty[1] + IEex_ReadSignedByte(playerData + 0x9F8, 0x0)
+									else
+										attackBonus = attackBonus - dualWieldingPenalty[2] + IEex_ReadSignedByte(playerData + 0x9FC, 0x0)
+									end
+									if bit.band(headerFlags, 0x20000) > 0 then
+										criticalHitBonus = criticalHitBonus + 1
+									end
+									if bit.band(IEex_ReadDword(playerData + 0x75C), 0x40000000) > 0 then
+										criticalHitBonus = criticalHitBonus + 1
+									end
+		--							if IEex_GetActorSpellState(playerID, 56) then
+										criticalHitBonus = criticalHitBonus + IEex_ReadSignedByte(playerData + 0x936, 0x0)
+		--							end
+									local attackStatBonus = 0
+									if bit.band(headerFlags, 0x1) > 0 then
+										attackStatBonus = math.floor((IEex_GetActorStat(playerID, 36) - 10) / 2)
+									end
+									if (itemType == 16 or itemType == 19) and bit.band(IEex_ReadDword(playerData + 0x764), 0x80) > 0 then
+										local dexterityBonus = math.floor((IEex_GetActorStat(playerID, 40) - 10) / 2)
+										if dexterityBonus > attackStatBonus then
+											attackStatBonus = dexterityBonus
+										end
+									end
+									attackBonus = attackBonus + attackStatBonus
+									for i = 1, 5, 1 do
+										if IEex_GetActorSpellState(playerID, i + 75) or IEex_GetActorSpellState(playerID, i + 80) then
+											attackBonus = attackBonus - i
+										end
+									end
+									local armorClassList = IEex_GetActorArmorClass(targetID)
+									local ac = armorClassList[1]
+									local acslashing = armorClassList[2]
+									local acpiercing = armorClassList[3]
+									local acbludgeoning = armorClassList[4]
+									local acmissile = armorClassList[5]
+									if itemDamageType == 3 or (itemDamageType == 7 and acslashing <= acpiercing) or (itemDamageType == 8 and acslashing <= acbludgeoning) then
+										ac = ac + acslashing
+									elseif itemDamageType == 1 or (itemDamageType == 6 and acpiercing <= acbludgeoning) or (itemDamageType == 7 and acpiercing <= acslashing) then
+										ac = ac + acpiercing
+									elseif itemDamageType == 2 or (itemDamageType == 6 and acbludgeoning <= acpiercing) or (itemDamageType == 8 and acbludgeoning <= acslashing) then
+										ac = ac + acbludgeoning
+									elseif itemDamageType == 4 or itemDamageType == 9 then
+										ac = ac + acmissile
+									end
+--]]
+			local schoolDCAdjust = {IEex_GetActorStat(playerID, 222) * 2, IEex_GetActorStat(playerID, 220) * 2, IEex_GetActorStat(playerID, 221) * 2, IEex_GetActorStat(playerID, 219) * 2, IEex_GetActorStat(playerID, 219) * 2, IEex_GetActorStat(playerID, 220) * 2, IEex_GetActorStat(playerID, 221) * 2, IEex_GetActorStat(playerID, 222) * 2}
+			local kit = IEex_GetActorStat(playerID, 89)
+			for i = 1, 8, 1 do
+				if bit.band(kit, 2 ^ (i + 5)) > 0 then
+					schoolDCAdjust[i] = schoolDCAdjust[i] + 2
+				end
+			end
+			local specificSpellDCAdjust = {}
+			IEex_IterateActorEffects(playerID, function(eData)
+				local theopcode = IEex_ReadDword(eData + 0x10)
+				local theparameter2 = IEex_ReadDword(eData + 0x20)
+				local thesavingthrow = IEex_ReadDword(eData + 0x40)
+				if theopcode == 288 and theparameter2 == 236 and bit.band(thesavingthrow, 0x10000) == 0 then
+					local theparameter1 = IEex_ReadDword(eData + 0x1C)
+					local theresource = IEex_ReadLString(eData + 0x30, 8)
+					local thespecial = IEex_ReadDword(eData + 0x48)
+					if bit.band(thesavingthrow, 0x20000) == 0 then
+						if theresource == "" then
+							for i = 1, 8, 1 do
+								schoolDCAdjust[i] = schoolDCAdjust[i] + theparameter1
+							end
+						else
+							if specificSpellDCAdjust[theresource] == nil then
+								specificSpellDCAdjust[theresource] = theparameter1
+							else
+								specificSpellDCAdjust[theresource] = specificSpellDCAdjust[theresource] + theparameter1
+							end
+						end
+					else
+						if thespecial == -1 then
+							for i = 1, 8, 1 do
+								schoolDCAdjust[i] = schoolDCAdjust[i] + theparameter1
+							end
+						elseif thespecial >= 1 and thespecial <= 8 then
+							schoolDCAdjust[thespecial] = schoolDCAdjust[thespecial] + theparameter1
+						end
+					end
+				end
+			end)
+			local statDCAdjust = {math.floor((IEex_GetActorStat(playerID, 42) - 10) / 2), math.floor((IEex_GetActorStat(playerID, 39) - 10) / 2), math.floor((IEex_GetActorStat(playerID, 39) - 10) / 2), math.floor((IEex_GetActorStat(playerID, 39) - 10) / 2), math.floor((IEex_GetActorStat(playerID, 39) - 10) / 2), math.floor((IEex_GetActorStat(playerID, 42) - 10) / 2), math.floor((IEex_GetActorStat(playerID, 38) - 10) / 2), math.floor((IEex_GetActorStat(playerID, 39) - 10) / 2), }
+			local spells = IEex_FetchSpellInfo(playerID, {1, 2, 3, 4, 5, 6, 7, 8})
+			for cType, levelList in pairs(spells) do
+				for i = 1, 9, 1 do
+					if #levelList >= i then
+						local levelI = levelList[i]
+						local maxCastable = levelI[1]
+						local sorcererCastableCount = levelI[2]
+						local levelISpells = levelI[3]
+						if #levelISpells > 0 and (sorcererCastableCount > 0 or (cType ~= 1 and cType ~= 6)) then
+							for i2, spell in ipairs(levelISpells) do
+								local resref = spell["resref"]
+								local extraSpellInfo = ex_augury_spells[resref]
+								if extraSpellInfo ~= nil then
+									local dc = 10 + i + statDCAdjust[cType]
+									if extraSpellInfo["savebonus"] ~= nil then
+										dc = dc + extraSpellInfo["savebonus"]
+									end
+									if specificSpellDCAdjust[resref] ~= nil then
+										dc = dc + specificSpellDCAdjust[resref]
+									end
+									if state_save_penalties[resref] ~= nil then
+										if IEex_GetActorState(targetID, state_save_penalties[resref][1]) then
+											dc = dc + state_save_penalties[resref][2]
+										end
+									end
+									local resWrapper = IEex_DemandRes(resref, "SPL")
+									local spellData = 0
+									if resWrapper:isValid() then
+										spellData = resWrapper:getData()
+										local nameRef = IEex_ReadDword(spellData + 0x8)
+										local school = IEex_ReadByte(spellData + 0x25, 0x0)
+										if ex_trueschool[resref] ~= nil then
+											school = ex_trueschool[resref]
+										end
+										if school >= 1 and school <= 8 then
+											dc = dc + schoolDCAdjust[school]
+										end
+										local percentChance = -1
+										if extraSpellInfo["savingthrow"] ~= nil then
+											percentChance = (dc - saves[extraSpellInfo["savingthrow"]] - 1) * 5
+											if percentChance > 95 then
+												percentChance = 95
+											elseif percentChance < 5 then
+												percentChance = 5
+											end
+											if extraSpellInfo["savingthrow2"] ~= nil then
+												local percentChance2 = (dc - saves[extraSpellInfo["savingthrow2"]] - 1) * 5
+												if percentChance2 > 95 then
+													percentChance2 = 95
+												elseif percentChance2 < 5 then
+													percentChance2 = 5
+												end
+												percentChance = math.floor(percentChance * percentChance2)
+											end
+										end
+										if opcodeImmunities[extraSpellInfo["opcode"]] ~= nil or spellImmunities[resref] ~= nil then
+											percentChance = 0
+										end
+										if extraSpellInfo["MESPLPRT"] ~= nil then
+											for k, v in ipairs(extraSpellInfo["MESPLPRT"]) do
+												local protectionType = v[3]
+												local checkID = targetID
+												local checkData = IEex_GetActorShare(checkID)
+												if protectionType == 0 then
+													local match_opcode = v[2]
+													local targetRace = IEex_ReadByte(checkData + 0x26, 0x0)
+													local targetSubrace = IEex_ReadByte(checkData + 0x7FF, 0x0)
+													if (match_opcode == 39 and (targetRace == 2 or targetRace == 3 or targetRace == 183)) or ((match_opcode == 109 or match_opcode == 175) and ((targetRace == 4 and targetSubrace == 2) or targetRace == 185)) then
+														percentChance = 0
+													elseif ((match_opcode == 55 or match_opcode == 420) and IEex_GetActorSpellState(checkID, 8)) or ((match_opcode == 40 or match_opcode == 109 or match_opcode == 154 or match_opcode == 157 or match_opcode == 158 or match_opcode == 175 or match_opcode == 176) and IEex_GetActorSpellState(checkID, 29)) then
+														percentChance = 0
+													elseif ((match_opcode == 24 or match_opcode == 236) and IEex_GetActorStat(checkID, 102) >= 2) or (match_opcode == 25 and (IEex_GetActorStat(checkID, 99) >= 9 or IEex_GetActorStat(checkID, 101) >= 11)) or (match_opcode == 78 and (IEex_GetActorStat(checkID, 101) >= 5 or IEex_GetActorStat(checkID, 102) >= 1)) then
+														percentChance = 0
+													elseif (match_opcode == 5 or match_opcode == 412) and IEex_GetActorSpellState(checkID, 1) and playerData > 0 and bit.band(IEex_ReadByte(playerData + 0x35, 0x0), 0x3) == 0x3 then
+														percentChance = 0
+													else
+														IEex_IterateActorEffects(checkID, function(eData)
+															local theopcode = IEex_ReadDword(eData + 0x10)
+															local theparameter2 = IEex_ReadDword(eData + 0x20)
+															if (theopcode == 101 or theopcode == 261) and theparameter2 == match_opcode then
+																percentChance = 0
+															end
+														end)
+													end
+												elseif protectionType == 1 then
+													local protectionRES = v[1]
+													IEex_IterateActorEffects(checkID, function(eData)
+														local theopcode = IEex_ReadDword(eData + 0x10)
+														local theresource = IEex_ReadLString(eData + 0x30, 8)
+														if (theopcode == 206 or theopcode == 290) and theresource == protectionRES then
+															percentChance = 0
+														end
+													end)
+												elseif protectionType == 2 then
+													local match_state = v[2]
+													local stateValue = bit.bor(IEex_ReadDword(checkData + 0x5BC), IEex_ReadDword(checkData + 0x920))
+													if bit.band(stateValue, match_state) > 0 then
+														percentChance = 0
+													end
+												elseif protectionType == 3 then
+													local match_spellState = v[2]
+													if IEex_GetActorSpellState(checkID, match_spellState) then
+														percentChance = 0
+													end
+												elseif protectionType == 4 then
+													local match_value = v[1]
+													local match_stat = bit.band(v[2], 0xFFFF)
+													local statOperator = bit.band(v[2], 0xFF000000)
+													local statValue = IEex_GetActorStat(checkID, match_stat)
+													if (statOperator == 0 and statValue >= match_value) or (statOperator == 1 and statValue == match_value) or (statOperator == 2 and bit.band(statValue, match_value) == match_value) or (statOperator == 3 and bit.band(statValue, match_value) > 0) then
+														percentChance = 0
+													end
+												elseif protectionType == 5 then
+													local match_value = v[1]
+													local match_offset = bit.band(v[2], 0xFFFF)
+													local readSize = bit.band(v[2], 0xFF0000)
+													local statOperator = bit.band(v[2], 0xFF000000)
+													local statValue = 0
+													if readSize == 2 then
+														statValue = IEex_ReadSignedWord(checkData + match_offset, 0x0)
+													elseif readSize == 4 then
+														statValue = IEex_ReadDword(checkData + match_offset)
+													elseif readSize > 4 then
+														statValue = IEex_ReadLString(checkData + match_offset, readSize)
+													else
+														statValue = IEex_ReadSignedByte(checkData + match_offset, 0x0)
+													end
+													if (statOperator == 0 and statValue >= match_value) or (statOperator == 1 and statValue == match_value) or (statOperator == 2 and bit.band(statValue, match_value) == match_value) or (statOperator == 3 and bit.band(statValue, match_value) > 0) then
+														percentChance = 0
+													end
+												elseif protectionType == 6 then
+													local race = IEex_ReadByte(checkData + 0x26, 0x0)
+													local match_race1 = bit.band(v[2], 0xFF)
+													local match_race2 = bit.band(v[2], 0xFF00)
+													local match_race3 = bit.band(v[2], 0xFF0000)
+													local match_race4 = bit.band(v[2], 0xFF000000)
+													if race == match_race1 or race == match_race2 or race == match_race3 or race == match_race4 then
+														percentChance = 0
+													end
+												elseif protectionType == 7 then
+													local general = IEex_ReadByte(checkData + 0x25, 0x0)
+													local match_general1 = bit.band(v[2], 0xFF)
+													local match_general2 = bit.band(v[2], 0xFF00)
+													local match_general3 = bit.band(v[2], 0xFF0000)
+													local match_general4 = bit.band(v[2], 0xFF000000)
+													if general == match_general1 or general == match_general2 or general == match_general3 or general == match_general4 then
+														percentChance = 0
+													end
+												elseif protectionType == 8 then
+													local match_value = v[1]
+													local match_stat = bit.band(v[2], 0xFFFF)
+													local statOperator = bit.band(v[2], 0xFF000000)
+													local statValue = math.abs(IEex_GetActorStat(targetID, match_stat) - IEex_GetActorStat(playerID, match_stat))
+													if (statOperator == 0 and statValue >= match_value) or (statOperator == 1 and statValue == match_value) or (statOperator == 2 and bit.band(statValue, match_value) == match_value) or (statOperator == 3 and bit.band(statValue, match_value) > 0) then
+														percentChance = 0
+													end
+												end
+											end
+										end
+										if extraSpellInfo["MESPLPR2"] ~= nil then
+											for k, v in ipairs(extraSpellInfo["MESPLPR2"]) do
+												local protectionType = v[2]
+												local checkID = targetID
+												local checkData = IEex_GetActorShare(checkID)
+												local general = IEex_ReadByte(checkData + 0x25, 0x0)
+												local race = IEex_ReadByte(checkData + 0x26, 0x0)
+												local gender = IEex_ReadByte(checkData + 0x34, 0x0)
+												local alignment = IEex_ReadByte(checkData + 0x35, 0x0)
+												local animation = IEex_ReadDword(checkData + 0x5C4)
+												local subrace = IEex_ReadByte(checkData + 0x7FF, 0x0)
+												local stateValue = bit.bor(IEex_ReadDword(checkData + 0x5BC), IEex_ReadDword(checkData + 0x920))
+												if protectionType == 0 then
+													percentChance = 0
+												elseif protectionType == 1 and general == 4 then
+													percentChance = 0
+												elseif protectionType == 3 then
+													local baseFireResistance = IEex_ReadByte(checkData + 0x5F1, 0x0)
+													if animation == 29456 or animation == 57896 or animation == 60376 or ((animation == 32517 or animation == 32518 or animation == 59176 or animation == 60507 or animation == 62216) and baseFireResistance >= 50) then
+														percentChance = 0
+													end
+												elseif protectionType == 5 and general == 1 then
+													percentChance = 0
+												elseif protectionType == 7 and general == 2 then
+													percentChance = 0
+												elseif protectionType == 9 and (race == 152 or race == 161) then
+													percentChance = 0
+												elseif protectionType == 11 then
+													if animation == 60313 or animation == 60329 or animation == 60337 then
+														percentChance = 0
+													end
+												elseif protectionType == 13 then
+													if v[1] == 0 then
+														v[1] = 5
+													end
+													local animationData = IEex_ReadDword(checkData + 0x50F0)
+													if animationData > 0 and IEex_ReadByte(animationData + 0x3E4, 0x0) >= v[1] then
+														percentChance = 0
+													end
+												elseif protectionType == 15 and (race == 2 or race == 183) then
+													percentChance = 0
+												elseif protectionType == 17 then
+													if animation == 59225 or animation == 59385 then
+														percentChance = 0
+													end
+												elseif protectionType == 19 and race == 3 then
+													percentChance = 0
+												elseif protectionType == 21 and (general == 1 or general == 2) then
+													percentChance = 0
+												elseif protectionType == 23 then
+													if bit.band(stateValue, 0x40000) > 0 then
+														percentChance = 0
+													end
+												elseif protectionType == 25 then
+													local baseColdResistance = IEex_ReadByte(checkData + 0x5F2, 0x0)
+													if animation == 29187 or animation == 31491 or animation == 57656 or animation == 58201 or animation == 58664 or animation == 59192 or animation == 59244 or animation == 59337 or animation == 60184 or animation == 60392 or animation == 60427 or ((animation == 4097 or animation == 59176) and baseColdResistance >= 50) then
+														percentChance = 0
+													end
+												elseif protectionType == 27 and race == ex_construct_race then
+													percentChance = 0
+												elseif protectionType == 29 then
+													if animation == 59144 then
+														percentChance = 0
+													end
+												elseif protectionType == 31 then
+													if animation == 60313 or animation == 60329 or animation == 60337 or general == 4 then
+														percentChance = 0
+													end
+												elseif protectionType == 33 and bit.band(alignment, 0x3) == 0x1 then
+													percentChance = 0
+												elseif protectionType == 35 and bit.band(alignment, 0x3) == 0x2 then
+													percentChance = 0
+												elseif protectionType == 37 and bit.band(alignment, 0x3) == 0x3 then
+													percentChance = 0
+												elseif protectionType == 39 and IEex_GetActorStat(targetID, 102) > 0 then
+													percentChance = 0
+												elseif protectionType == 41 and IEex_IsSprite(playerID, true) then
+													local targetAlignment = IEex_ReadByte(creatureData + 0x35, 0x0)
+													local sourceAlignment = IEex_ReadByte(playerData + 0x35, 0x0)
+													if bit.band(targetAlignment, 0x3) == bit.band(sourceAlignment, 0x3) then
+														percentChance = 0
+													end
+												elseif protectionType == 43 and targetID == playerID then
+													percentChance = 0
+												elseif protectionType == 45 then
+													if animation == 58280 or animation == 57912 or animation == 57938 or animation == 58008 or animation == 59368 or animation == 59385 or animation == 62475 or animation == 62491 then
+														percentChance = 0
+													end
+												elseif protectionType == 47 then
+													if general == 4 or race == ex_construct_race then
+														percentChance = 0
+													end
+												elseif protectionType == 49 and IEex_IsSprite(playerID, true) then
+													if IEex_CompareActorAllegiances(targetID, playerID) == 1 then
+														percentChance = 0
+													end
+												elseif protectionType == 51 and IEex_IsSprite(sourceID, true) then
+													if IEex_CompareActorAllegiances(targetID, playerID) == -1 then
+														percentChance = 0
+													end
+												elseif protectionType == 53 then
+													local baseFireResistance = IEex_ReadByte(checkData + 0x5F1, 0x0)
+													local baseColdResistance = IEex_ReadByte(checkData + 0x5F2, 0x0)
+													if animation == 29456 or animation == 57896 or animation == 60376 or ((animation == 32517 or animation == 32518 or animation == 59176 or animation == 60507 or animation == 62216) and baseFireResistance >= 50) or animation == 29187 or animation == 31491 or animation == 57656 or animation == 58201 or animation == 58664 or animation == 59192 or animation == 59244 or animation == 59337 or animation == 60184 or animation == 60392 or animation == 60427 or ((animation == 4097 or animation == 59176) and baseColdResistance >= 50) then
+														percentChance = 0
+													end
+												elseif protectionType == 55 then
+													if general == 4 or race == ex_construct_race or race == ex_fiend_race or race == 152 or race == 161 or race == 210 or race == 190 then
+														percentChance = 0
+													end
+												elseif protectionType == 57 and gender == 1 then
+													percentChance = 0
+												elseif protectionType == 59 and bit.band(alignment, 0x30) == 0x10 then
+													percentChance = 0
+												elseif protectionType == 61 and bit.band(alignment, 0x30) == 0x30 then
+													percentChance = 0
+												elseif protectionType == 64 then
+													if animation == 59400 or animation == 59416 or animation == 59426 or animation == 59448 or animation == 59458 or animation == 59481 or animation == 59496 or animation == 59512 or animation == 59528 or animation == 59609 or animation == 59641 then
+														percentChance = 0
+													end
+												elseif protectionType == 66 and IEex_GetActorSpellState(checkID, 38) then
+													percentChance = 0
+												elseif protectionType == 68 then
+													if bit.band(stateValue, 0x10000000) > 0 then
+														percentChance = 0
+													end
+												elseif protectionType == 70 then
+													if animation == 32513 or animation == 61427 then
+														percentChance = 0
+													end
+												elseif protectionType == 72 then
+													if bit.band(stateValue, 0x1000) > 0 then
+														percentChance = 0
+													end
+												elseif protectionType == 82 then
+													if race == 183 or (race == 2 and subrace == 1) then
+														percentChance = 0
+													end
+												elseif protectionType == 84 then
+													if race == 185 or (race == 4 and subrace == 2) then
+														percentChance = 0
+													end
+												elseif protectionType == 88 then
+													local areaData = IEex_ReadDword(checkData + 0x12)
+													if areaData > 0 and bit.band(IEex_ReadWord(areaData + 0x40, 0x0), 0x1) > 0 then
+														percentChance = 0
+													end
+												elseif protectionType == 90 then
+													if animation == 61264 or animation == 61280 or animation == 61296 then
+														percentChance = 0
+													end
+												elseif protectionType == 92 then
+													if race == ex_fiend_race or race == 152 or race == 161 or race == 210 then
+														percentChance = 0
+													end
+												elseif protectionType == 94 then
+													if general == 4 or race == ex_construct_race or race == 190 then
+														percentChance = 0
+													end
+												elseif protectionType == 96 then
+													if general == 4 or race == ex_construct_race or animation == 29442 or (animation >= 30976 and animation <= 30979) or race == 190 then
+														percentChance = 0
+													end
+												elseif protectionType == 98 then
+													if race == 183 or (race == 2 and subrace == 1) or race == 185 or (race == 4 and subrace == 2) then
+														percentChance = 0
+													end
+												elseif protectionType == 100 then
+													if race == 183 or (race == 2 and subrace == 1) or race == 185 or (race == 4 and subrace == 2) or animation == 58153 or animation == 58201 or animation == 58217 or animation == 59656 or animation == 59672 or animation == 60313 or animation == 60329 or animation == 60337 then
+														percentChance = 0
+													end
+												elseif protectionType == 102 then
+													if race == ex_fiend_race then
+														percentChance = 0
+													end
+												elseif protectionType == 104 then
+													if race == ex_fiend_race or general == 4 then
+														percentChance = 0
+													end
+												elseif protectionType == 106 then
+													if parameter1 == 0 then
+														parameter1 = 50
+													end
+													if IEex_ReadSignedWord(checkData + 0x720, 0x0) >= parameter1 or IEex_GetActorSpellState(checkID, 184) then
+														percentChance = 0
+													end
+												elseif protectionType == 108 then
+													if IEex_GetActorSpellState(checkID, 182) or IEex_GetActorSpellState(checkID, 189) then
+														percentChance = 0
+													end
+												elseif protectionType == 110 then
+													if race == 168 and animation ~= 59545 and animation ~= 61961 and animation ~= 61976 then
+														percentChance = 0
+													end
+												elseif protectionType == 112 then
+													if general == 1 or general == 5 then
+														percentChance = 0
+													end
+												elseif protectionType == 114 then
+													if general == 4 or race == ex_construct_race or (race == ex_fiend_race and alignment == 0x33) then
+														percentChance = 0
+													end
+												elseif protectionType == 116 then
+													if IEex_GetItemSlotRES(checkID, 44 + IEex_ReadByte(checkData + 0x4C68, 0x0) * 2) ~= "" then
+														percentChance = 0
+													end
+												elseif protectionType == 118 then
+													if race == ex_construct_race or race == 190 then
+														percentChance = 0
+													end
+												end
+											end
+										end
+										
+										
+									end
+									resWrapper:free()
+								end
+							end
+						end
+					end
+				end
+			end
+		end
+	end
+
+end
+
 ----------------------------------------------------------------
 -- Functions which can be used by Opcode 502 (Screen Effects) --
 ----------------------------------------------------------------
@@ -23136,15 +24085,18 @@ function MEINTERI(effectData, creatureData, isSpecialCall)
 	local sourceY = IEex_ReadDword(creatureData + 0xA)
 	local targetX = IEex_ReadDword(creatureData + 0x556E)
 	local targetY = IEex_ReadDword(creatureData + 0x5572)
+	if targetX <= 0 and targetY <= 0 then
+		targetX = IEex_ReadDword(effectData + 0x84)
+		targetY = IEex_ReadDword(effectData + 0x88)
+	end
 	local distance = IEex_GetDistanceIsometric(sourceX, sourceY, targetX, targetY)
 	local animationData = IEex_ReadDword(creatureData + 0x50F0)
 	local reachX = IEex_ReadDword(animationData + 0x10)
 	local reachY = IEex_ReadDword(animationData + 0x14)
-	if reachX == 0 or reachY == 0 then
+	if reachX == 0 or reachY == 0 or IEex_ReadByte(animationData + 0x3E4, 0x0) == 0 then
 		reachX = 65535
 		reachY = 65535
 	end
---	IEex_DS("Distance: " .. distance)
 	local objectType = IEex_ReadByte(targetShare + 0x4, 0x0)
 	local boxLeft = 0
 	local boxTop = 0
@@ -23168,7 +24120,9 @@ function MEINTERI(effectData, creatureData, isSpecialCall)
 	end
 	if realActionID == 25 then
 		local castCounter = IEex_ReadSignedWord(creatureData + 0x54E8, 0x0)
-		if distance <= (reachY + 12) and castCounter == -1 then
+--		IEex_DS(distance .. ", " .. ((reachY * 3) + 12))
+--		IEex_DS(castCounter)
+		if distance <= ((reachY * 3) + 12) and castCounter == -1 then
 			IEex_WriteWord(creatureData + 0x54E8, 0)
 			IEex_ApplyEffectToActor(actionTargetID, {
 ["opcode"] = 146,
@@ -23721,7 +24675,8 @@ function IEex_BashLock(sourceID, targetID)
 })
 				return
 			end
-			if strengthBonus + math.random(4) >= math.floor(lockDifficulty / 5) then
+			local roll = math.random(4)
+			if strengthBonus + roll >= math.floor(lockDifficulty / 5) or roll == 4 and lockDifficulty <= 5 then
 				objectFlags = bit.band(objectFlags, 0xFFFFFFFE)
 				IEex_WriteDword(creatureData + 0x88E, objectFlags)
 				IEex_ApplyEffectToActor(sourceID, {

@@ -1541,7 +1541,6 @@ COPY_EXISTING ~sppr520.spl~ ~override~
 	SAY IDENTIFIED_DESC @1886
 
 COPY_EXISTING ~spwi226.spl~ ~override~
-	LPF ALTER_EFFECT INT_VAR silent=1 check_headers=1 check_globals=0 savebonus=3 END
 	SAY NAME1 @1887
 	SAY NAME2 @1887
 	SAY UNIDENTIFIED_DESC @1888
@@ -2916,6 +2915,11 @@ COPY_EXISTING ~uspr153s.itm~ ~override~
 COPY_EXISTING_REGEXP ~spwi[1-9][1-9][1-9]s\.itm~ ~override~ ~sppr[1-9][1-9][1-9]s\.itm~ ~override~ ~uswi[1-9][1-9][1-9]s\.itm~ ~override~ ~uspr[1-9][1-9][1-9]s\.itm~ ~override~
 	LPF ADD_ITEM_EQEFFECT INT_VAR opcode=1 target=1 timing=2 parameter1=1 parameter2=1 END
 
+COPY_EXISTING ~uswi751.spl~ ~override~
+	SAY NAME1 @37751
+	SAY NAME2 @37751
+	SAY UNIDENTIFIED_DESC @38751
+	SAY IDENTIFIED_DESC @38751
 
 COPY_EXISTING ~uswi752.spl~ ~override~
 	SAY NAME1 @37752
@@ -3009,6 +3013,12 @@ COPY_EXISTING ~uswi763.spl~ ~override~
 	SAY UNIDENTIFIED_DESC @38763
 	SAY IDENTIFIED_DESC @38763
 	LPF ALTER_EFFECT INT_VAR silent=1 check_headers=1 check_globals=1 match_opcode=139 match_parameter1=30064 parameter1=RESOLVE_STR_REF(@30064) END
+
+COPY_EXISTING ~uswi764.spl~ ~override~
+	SAY NAME1 @37764
+	SAY NAME2 @37764
+	SAY UNIDENTIFIED_DESC @38764
+	SAY IDENTIFIED_DESC @38764
 
 COPY_EXISTING ~uswi852.spl~ ~override~
 	SAY NAME1 @37852
@@ -3995,6 +4005,7 @@ COPY_EXISTING ~53MALAVO.sto~ ~override~
 COPY_EXISTING ~53MYRVEK.sto~ ~override~
 	ADD_STORE_ITEM ~USWI858Z~ #1 #1 #0 ~IDENTIFIED~ #1
 	ADD_STORE_ITEM ~USWI860Z~ #1 #1 #0 ~IDENTIFIED~ #1
+	ADD_STORE_ITEM ~USWI764Z~ #1 #1 #0 ~IDENTIFIED~ #1
 	ADD_STORE_ITEM ~USWI755Z~ #1 #1 #0 ~IDENTIFIED~ #1
 	ADD_STORE_ITEM ~USWI758Z~ #1 #1 #0 ~IDENTIFIED~ #1
 

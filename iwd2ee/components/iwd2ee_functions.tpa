@@ -477,6 +477,92 @@ BEGIN
 
 END
 
+DEFINE_PATCH_FUNCTION ~ALTER_AREA_CONTAINER_IWD2~
+	INT_VAR
+		x_coord=~-1~
+		y_coord=~-1~
+		type=~-1~
+		lock_difficulty=~-1~
+		trap_detect=~-1~
+		trap_remove=~-1~
+		trapped=~-1~
+		detected=~-1~
+		all_flags=~-1~
+		launch_x=~-1~
+		launch_y=~-1~
+		unlock_message=99999999
+	STR_VAR
+		container_name=~~
+		container_open_sound=~same~
+		container_close_sound=~same~
+		container_key=~same~
+		container_script=~same~
+		travel_trigger=~same~
+		dialogue=~same~
+BEGIN
+	SET container_name_length = (STRING_LENGTH ~%container_name%~)
+		PATCH_IF (container_name_length = 0) BEGIN
+			PATCH_FAIL ~No container name given for function ALTER_AREA_CONTAINER_IWD2 ~
+		END
+	SET container_found = 0
+	READ_LONG 0x80 containeroffset
+	READ_SHORT 0x84 containernumber
+	FOR (i = 0; i < containernumber; ++i) BEGIN
+		SET offset = containeroffset + (i * 0xc8)
+		READ_ASCII offset name_of_container (container_name_length)
+		PATCH_IF (~%name_of_container%~ STRING_EQUAL_CASE ~%container_name%~) BEGIN
+			container_found = 1
+			PATCH_IF (x_coord != (0 - 1)) BEGIN
+				WRITE_SHORT (offset + 0x20) x_coord
+			END
+			PATCH_IF (y_coord != (0 - 1)) BEGIN
+				WRITE_SHORT (offset + 0x22) y_coord
+			END
+			PATCH_IF (type != (0 - 1)) BEGIN
+				WRITE_SHORT (offset + 0x24) type
+			END
+			PATCH_IF (lock_difficulty != (0 - 1)) BEGIN
+				WRITE_SHORT (offset + 0x26) lock_difficulty
+			END
+			PATCH_IF (all_flags != (0 - 1)) BEGIN
+				WRITE_LONG (offset + 0x28) all_flags
+			END
+			PATCH_IF (trap_detect != (0 - 1)) BEGIN
+				WRITE_SHORT (offset + 0x2c) trap_detect
+			END
+			PATCH_IF (trap_remove != (0 - 1)) BEGIN
+				WRITE_SHORT (offset + 0x2e) trap_remove
+			END
+			PATCH_IF (trapped != (0 - 1)) BEGIN
+				WRITE_SHORT (offset + 0x30) trapped
+			END
+			PATCH_IF (detected != (0 - 1)) BEGIN
+				WRITE_SHORT (offset + 0x32) detected
+			END
+			PATCH_IF (launch_x != (0 - 1)) BEGIN
+				WRITE_SHORT (offset + 0x34) launch_x
+			END
+			PATCH_IF (launch_y != (0 - 1)) BEGIN
+				WRITE_SHORT (offset + 0x36) launch_y
+			END
+			PATCH_IF (!(~%container_key%~ STRING_EQUAL ~same~)) BEGIN
+				WRITE_ASCIIE (offset + 0x78) ~%container_key%~ #8
+			END
+			PATCH_IF (!(~%container_script%~ STRING_EQUAL ~same~)) BEGIN
+				WRITE_ASCIIE (offset + 0x48) ~%container_script%~ #8
+			END
+			PATCH_IF (unlock_message != 99999999) BEGIN
+				WRITE_LONG (offset + 0x84) unlock_message
+			END
+
+			i = containernumber
+		END
+	END
+	PATCH_IF (container_found = 0) BEGIN
+		PATCH_WARN ~No container called %container_name% was found.~
+	END
+END
+
 DEFINE_PATCH_FUNCTION ~ALTER_AREA_DOOR_IWD2~
 	INT_VAR
 		cursor=~-1~

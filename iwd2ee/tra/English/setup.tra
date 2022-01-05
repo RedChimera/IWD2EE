@@ -74,11 +74,11 @@
 @73   = ~Let aasimars, tieflings, drow, duergar, and svirfneblin level up just as fast as other races (no ECL/level adjustment) but weaken them to the power level of other races~
 @74   = ~Revise racial level adjustment/ECL~
 @75   = ~Always learn spells from scrolls successfully~
-@76   = ~Each party member starts HoF with 6000 experience, enough to reach level 4~
-@77   = ~Each party member starts HoF with 15000 experience, enough to reach level 6~
-@78   = ~Each party member starts HoF with 28000 experience, enough to reach level 8 (recommended if you've installed some of the components that weaken HoF creatures)~
+@76   = ~Each party member starts HoF with 28000 experience, enough to reach level 8~
+@77   = ~Each party member starts HoF with 78000 experience, enough to reach level 13 (recommended)~
+@78   = ~Each party member starts HoF with 28000 experience, enough to reach level 8 (recommended)~
 @79   = ~Each party member starts HoF with 45000 experience, enough to reach level 10~
-@80   = ~Each party member starts HoF with 78000 experience, enough to reach level 13 (recommended if you haven't installed the components that weaken HoF creatures)~
+@80   = ~Each party member starts HoF with 78000 experience, enough to reach level 13~
 @81   = ~Remove the summoning limit~
 @82   = ~Add attacks of opportunity to the game~
 @83   = ~Only characters with a certain feat can perform attacks of opportunity~
