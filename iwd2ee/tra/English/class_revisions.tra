@@ -143,9 +143,9 @@ Special: A character with 9 levels of ranger can take the first rank in this fea
 
 Your unarmed abilities are particularly effective.
 
-Prerequisite: Stunning Attack
+Prerequisite: Stunning Attack or Grapple
 
-Benefit: The Stunning Attack and Quivering Palm abilities gain +2 DC. This feat may be taken up to five times.~
+Benefit: The Grapple, Stunning Attack and Quivering Palm abilities gain +2 DC. This feat may be taken up to five times.~
 @313    = ~Kensei~
 @314    = ~KENSEI:
 
@@ -775,7 +775,7 @@ Advantages:
 * 2nd level: Evasion. When a rogue reaches 2nd level, he or she gains the ability to evade damage from area affect spells. Whenever a rogue makes a successful reflex save against an area effect spell that allows a reflex save for half damage, he or she takes no damage.
 * 3rd level: Uncanny Dodge. Rogues retain their Dexterity bonus to Armor Class if they are attacked by invisible foes.
 * 6th level: Uncanny Dodge: Rogues can't be Sneak Attacked by another rogue unless the attacker is four or more levels higher.
-* 10th level: Special Abilities: The rogue now gains access to a number of new feats available only to rogues. These include Crippling Strike, Improved Evasion, and Slippery Mind.
+* 10th level: Special Abilities: The rogue now gains access to a number of new feats available only to rogues. These include Crippling Strike, Improved Evasion, Slippery Mind, Defensive Roll, and Opportunist.
 * Rogues gain +1 to luck every 5 levels.
 
 Disadvantages:
@@ -1014,7 +1014,7 @@ You have learned how to maximize the effect of your attacks while performing a s
 
 Prerequisites: 4 ranks in Concentration and Weapon Specialization in 2 weapons.
 
-Benefit: All attacks do maximum damage for 5 rounds. If you are a level 12 Fighter or higher, you also gain a +4 attack bonus and +4 critical threat range for the duration.~
+Benefit: All attacks do maximum damage for 5 rounds. If you have 12 or more fighter levels, you also gain a +4 attack bonus and +4 critical threat range for the duration.~
 @670    = ~TOUGHNESS:
 
 You are tougher than normal.
@@ -1192,7 +1192,7 @@ You may use your Smite Evil ability more often and with greater power.
 
 Prerequisite: 2 levels of paladin
 
-Benefit: You gain an additional use of Smite Evil per day. In addition, your Charisma modifier is added again to the damage of Smite Evil. This feat may be taken up to three times.~
+Benefit: You gain an additional use of Smite Evil per day. In addition, a number of d4s equal to your Charisma modifier is added again to the damage of Smite Evil. This feat may be taken up to three times.~
 @695    = ~Improved Turning~
 @696    = ~IMPROVED TURNING:
 

@@ -508,7 +508,7 @@ BEGIN
 	READ_LONG 0x80 containeroffset
 	READ_SHORT 0x84 containernumber
 	FOR (i = 0; i < containernumber; ++i) BEGIN
-		SET offset = containeroffset + (i * 0xc8)
+		SET offset = containeroffset + (i * 0xc0)
 		READ_ASCII offset name_of_container (container_name_length)
 		PATCH_IF (~%name_of_container%~ STRING_EQUAL_CASE ~%container_name%~) BEGIN
 			container_found = 1

@@ -1225,12 +1225,50 @@ function IEex_Extern_OnUpdateRecordDescription(CScreenCharacter, CGameSprite, CU
 			local baseAPR = IEex_ReadByte(creatureData + 0x5ED, 0x0)
 			local trueBaseAPR = baseAPR
 			local monkAttackBonusDisabled, fixMonkAttackBonus = IEex_CheckMonkAttackBonus(creatureData)
+			local firstFiveAttacksDisabled = {0, 0, 0, 0, 0}
+			local firstFiveAttacksFixed = {0, 0, 0, 0, 0}
+			local weaponSlot = IEex_ReadByte(creatureData + 0x4BA4, 0x0)
+			local weaponHeader = IEex_ReadByte(creatureData + 0x4BA6, 0x0)
+			local slotData = IEex_ReadDword(creatureData + 0x4AD8 + weaponSlot * 0x4)
+			local weaponRES = ""
+			local weaponWrapper = 0
+			local rapidShotActive = false
+			if slotData > 0 then
+				weaponRES = IEex_ReadLString(slotData + 0xC, 8)
+				weaponWrapper = IEex_DemandRes(weaponRES, "ITM")
+				if weaponWrapper:isValid() then
+					local weaponData = weaponWrapper:getData()
+					local numHeaders = IEex_ReadSignedWord(weaponData + 0x68, 0x0)
+					if weaponHeader >= numHeaders then
+						weaponHeader = 0
+					end
+					local itemType = IEex_ReadWord(weaponData + 0x1C, 0x0)
+					headerType = IEex_ReadByte(weaponData + 0x82 + weaponHeader * 0x38, 0x0)
+					if rapidShotEnabled and headerType == 2 and itemType ~= 27 and itemType ~= 31 then
+						rapidShotActive = true
+					end
+				end
+			end
 			if monkAttackBonusDisabled and fixMonkAttackBonus then
 				trueBaseAPR = tonumber(IEex_2DAGetAtStrings("BAATMKU", "NUM_ATTACKS", tostring(monkLevel)))
 				if trueBaseAPR > 4 then
 					trueBaseAPR = 4
 				end
-				handSpecificAttackBonus = handSpecificAttackBonus + tonumber(IEex_2DAGetAtStrings("BAATMKU", "BASE_ATTACK", tostring(monkLevel))) - tonumber(IEex_2DAGetAtStrings("BAATNFG", "BASE_ATTACK", tostring(monkLevel)))
+				firstFiveAttacksDisabled[1] = tonumber(IEex_2DAGetAtStrings("BAATNFG", "BASE_ATTACK", tostring(monkLevel)))
+				firstFiveAttacksFixed[1] = tonumber(IEex_2DAGetAtStrings("BAATMKU", "BASE_ATTACK", tostring(monkLevel)))
+				for i = 2, 5, 1 do
+					if i == 2 and rapidShotActive then
+						firstFiveAttacksDisabled[i] = firstFiveAttacksDisabled[i - 1]
+						firstFiveAttacksFixed[i] = firstFiveAttacksFixed[i - 1]
+					else
+						firstFiveAttacksDisabled[i] = firstFiveAttacksDisabled[i - 1] - 5
+						if firstFiveAttacksDisabled[i] < 0 then
+							firstFiveAttacksDisabled[i] = 0
+						end
+						firstFiveAttacksFixed[i] = firstFiveAttacksFixed[i - 1] - 3
+					end
+				end
+--				handSpecificAttackBonus = handSpecificAttackBonus + tonumber(IEex_2DAGetAtStrings("BAATMKU", "BASE_ATTACK", tostring(monkLevel))) - tonumber(IEex_2DAGetAtStrings("BAATNFG", "BASE_ATTACK", tostring(monkLevel)))
 			end
 			if ex_record_attack_stats_hidden_difference[targetID] ~= nil then
 				handSpecificAttackBonus = handSpecificAttackBonus - ex_record_attack_stats_hidden_difference[targetID][1]
@@ -1246,17 +1284,19 @@ function IEex_Extern_OnUpdateRecordDescription(CScreenCharacter, CGameSprite, CU
 				end
 			end
 			local attackI = 0
+
 			if not string.match(line, numberOfAttacksString) then
 				line = string.gsub(line, "(%d+)", "!%1!")
 				for w in string.gmatch(line, "%d+") do
 					attackI = attackI + 1
 					local monkAttackPenaltyIncrementFix = 0
-					if attackI >= 2 and monkAttackBonusDisabled and fixMonkAttackBonus then
-						monkAttackPenaltyIncrementFix = (attackI - 1) * 2
+					if monkAttackBonusDisabled and fixMonkAttackBonus then
+						monkAttackPenaltyIncrementFix = firstFiveAttacksFixed[attackI] - firstFiveAttacksDisabled[attackI]
 					end
-					line = string.gsub(line, "!" .. w .. "!", w + handSpecificAttackBonus + monkAttackPenaltyIncrementFix)
+					line = string.gsub(line, "!" .. w .. "!", w + handSpecificAttackBonus + monkAttackPenaltyIncrementFix, 1)
 				end
 			end
+
 			if ((normalAPR + imptwfFeatCount + extraMonkAttacks >= 5) or ((trueBaseAPR + imptwfFeatCount + extraMonkAttacks >= 5))) or (manyshotFeatCount > 0 and rapidShotEnabled) then
 				local totalAttacks = trueBaseAPR + extraMonkAttacks
 				local extraAttacks = 0
@@ -1264,25 +1304,36 @@ function IEex_Extern_OnUpdateRecordDescription(CScreenCharacter, CGameSprite, CU
 				local manyshotAttacks = manyshotFeatCount
 				local numWeapons = 0
 				local headerType = 1
-				local weaponSlot = IEex_ReadByte(creatureData + 0x4BA4, 0x0)
-				local weaponHeader = IEex_ReadByte(creatureData + 0x4BA6, 0x0)
-				local slotData = IEex_ReadDword(creatureData + 0x4AD8 + weaponSlot * 0x4)
+				local offhandSlotData = 0
+				local offhandRES = ""
 				if slotData > 0 then
-					local weaponRES = IEex_ReadLString(slotData + 0xC, 8)
-					local resWrapper = IEex_DemandRes(weaponRES, "ITM")
-					if resWrapper:isValid() then
-						local itemData = resWrapper:getData()
-						local numHeaders = IEex_ReadSignedWord(itemData + 0x68, 0x0)
+					weaponRES = IEex_ReadLString(slotData + 0xC, 8)
+					local weaponWrapper = IEex_DemandRes(weaponRES, "ITM")
+					if weaponWrapper:isValid() then
+						local weaponData = weaponWrapper:getData()
+						local numHeaders = IEex_ReadSignedWord(weaponData + 0x68, 0x0)
 						if weaponHeader >= numHeaders then
 							weaponHeader = 0
 						end
-						local itemType = IEex_ReadWord(itemData + 0x1C, 0x0)
-						headerType = IEex_ReadByte(itemData + 0x82 + weaponHeader * 0x38, 0x0)
+						local itemType = IEex_ReadWord(weaponData + 0x1C, 0x0)
+						headerType = IEex_ReadByte(weaponData + 0x82 + weaponHeader * 0x38, 0x0)
 						if rapidShotEnabled and headerType == 2 and itemType ~= 27 and itemType ~= 31 then
 							totalAttacks = totalAttacks + 1
+							extraMainhandAttacks = extraMainhandAttacks + 1
+						end
+						local effectOffset = IEex_ReadDword(weaponData + 0x6A)
+						local numGlobalEffects = IEex_ReadWord(weaponData + 0x70, 0x0)
+						for i = 0, numGlobalEffects - 1, 1 do
+							local offset = weaponData + effectOffset + i * 0x30
+							local theopcode = IEex_ReadWord(offset, 0x0)
+							local theparameter2 = IEex_ReadDword(offset + 0x8)
+							if theopcode == 1 and theparameter2 == 0 then
+								local theparameter1 = IEex_ReadDword(offset + 0x4)
+								totalAttacks = totalAttacks + theparameter1
+								extraMainhandAttacks = extraMainhandAttacks + theparameter1
+							end
 						end
 					end
-					resWrapper:free()
 				end
 				local isFistWeapon = false
 				local isBow = false
@@ -1293,80 +1344,87 @@ function IEex_Extern_OnUpdateRecordDescription(CScreenCharacter, CGameSprite, CU
 					local theparameter2 = IEex_ReadDword(eData + 0x20)
 					local thesavingthrow = IEex_ReadDword(eData + 0x40)
 					local thespecial = IEex_ReadDword(eData + 0x48)
+					if theopcode == 288 and theparameter2 == 241 then
+						local thegeneralitemcategory = IEex_ReadByte(eData + 0x48, 0x0)
+						if thegeneralitemcategory == 5 then
+							numWeapons = numWeapons + 1
+						elseif thegeneralitemcategory == 6 then
+							isFistWeapon = true
+						elseif (theparameter1 >= 62 and theparameter1 <= 66) or theparameter1 == 68 then
+							wearingLightArmor = false
+						elseif theparameter1 == 15 then
+							isBow = true
+						end
+					end
+				end)
+				if weaponSlot == 42 and numWeapons >= 2 then
+					numWeapons = 1
+				end
+				if numWeapons >= 2 and weaponSlot >= 43 then
+					offhandSlotData = IEex_ReadDword(creatureData + 0x4AD8 + (weaponSlot + 1) * 0x4)
+					if offhandSlotData > 0 then
+						offhandRES = IEex_ReadLString(offhandSlotData + 0xC, 8)
+						local offhandWrapper = IEex_DemandRes(offhandRES, "ITM")
+						if offhandWrapper:isValid() then
+							local weaponData = offhandWrapper:getData()
+							local effectOffset = IEex_ReadDword(weaponData + 0x6A)
+							local numGlobalEffects = IEex_ReadWord(weaponData + 0x70, 0x0)
+							for i = 0, numGlobalEffects - 1, 1 do
+								local offset = weaponData + effectOffset + i * 0x30
+								local theopcode = IEex_ReadWord(offset, 0x0)
+								local theparameter2 = IEex_ReadDword(offset + 0x8)
+								if theopcode == 1 and theparameter2 == 0 then
+									local theparameter1 = IEex_ReadDword(offset + 0x4)
+									totalAttacks = totalAttacks + theparameter1
+									extraAttacks = extraAttacks + theparameter1
+								end
+							end
+						end
+						offhandWrapper:free()
+					end
+				end
+				IEex_IterateActorEffects(targetID, function(eData)
+					local theopcode = IEex_ReadDword(eData + 0x10)
+					local theparameter1 = IEex_ReadDword(eData + 0x1C)
+					local theparameter2 = IEex_ReadDword(eData + 0x20)
+					local thesavingthrow = IEex_ReadDword(eData + 0x40)
+					local thespecial = IEex_ReadDword(eData + 0x48)
+					local theparent_resource = IEex_ReadLString(eData + 0x94, 8)
 					if theopcode == 1 then
-						if theparameter2 == 0 then
+						if theparameter2 == 0 and theparent_resource ~= weaponRES and theparent_resource ~= offhandRES then
 							totalAttacks = totalAttacks + theparameter1
+							if bit.band(thesavingthrow, 0x100000) > 0 and offhandRES ~= "" then
+								extraAttacks = extraAttacks + theparameter1
+							else
+								extraMainhandAttacks = extraMainhandAttacks + theparameter1
+							end
 						elseif theparameter2 == 1 then
 							totalAttacks = theparameter1
+							if setAPR ~= 0 then
+								setAPR = theparameter1
+							end
 						end
 					elseif theopcode == 288 and theparameter2 == 196 and (thespecial == 0 or thespecial == headerType) then
-						if bit.band(thesavingthrow, 0x10000) > 0 then
-							extraMainhandAttacks = extraMainhandAttacks + theparameter1
-						elseif bit.band(thesavingthrow, 0x20000) > 0 then
+						if bit.band(thesavingthrow, 0x20000) > 0 then
 							manyshotAttacks = manyshotAttacks + theparameter1
-						else
-							extraAttacks = extraAttacks + theparameter1
 						end
-					elseif theopcode == 288 and theparameter2 == 241 then
-						local thegeneralitemcategory = IEex_ReadByte(eData + 0x48, 0x0)
-						if thegeneralitemcategory == 5 then
-							numWeapons = numWeapons + 1
-						elseif thegeneralitemcategory == 6 then
-							isFistWeapon = true
-						elseif (theparameter1 >= 62 and theparameter1 <= 66) or theparameter1 == 68 then
-							wearingLightArmor = false
-						elseif theparameter1 == 15 then
-							isBow = true
-						end
-		--[[
-					elseif theopcode == 500 and IEex_ReadLString(eData + 0x30, 8) == "MECRIT" and IEex_ReadSignedWord(eData + 0x4A, 0x0) > 0 and then
-						local thegeneralitemcategory = IEex_ReadByte(eData + 0x48, 0x0)
-						if thegeneralitemcategory == 5 then
-							numWeapons = numWeapons + 1
-						elseif thegeneralitemcategory == 6 then
-							isFistWeapon = true
-						elseif (theparameter1 >= 62 and theparameter1 <= 66) or theparameter1 == 68 then
-							wearingLightArmor = false
-						elseif theparameter1 == 15 then
-							isBow = true
-						end
-		--]]
 					end
-
 				end)
-
 				if not isBow or not rapidShotEnabled then
 					manyshotAttacks = 0
 				end
 				local usingImptwf = false
 				if numWeapons >= 2 then
 					totalAttacks = totalAttacks + 1
-					extraMainhandAttacks = extraMainhandAttacks + 1
-				else
-					extraAttacks = extraAttacks + extraMainhandAttacks
-					extraMainhandAttacks = 0
-				end
-				if IEex_GetActorSpellState(targetID, 17) then
-					totalAttacks = totalAttacks + 1
 				end
 				local stateValue = bit.bor(IEex_ReadDword(creatureData + 0x5BC), IEex_ReadDword(creatureData + 0x920))
 				if bit.band(stateValue, 0x8000) > 0 then
 					totalAttacks = totalAttacks + 1
+					extraMainhandAttacks = extraMainhandAttacks + 1
 				end
 				if bit.band(stateValue, 0x10000) > 0 then
 					totalAttacks = totalAttacks - 1
-				end
-				if ex_no_apr_limit then
-					extraMainhandAttacks = 1000
-				end
-				if totalAttacks > extraAttacks + extraMainhandAttacks + 5 then
-					totalAttacks = extraAttacks + extraMainhandAttacks + 5
-				end
-				if extraMainhandAttacks > totalAttacks - normalAPR then
-					extraMainhandAttacks = totalAttacks - normalAPR
-				end
-				if extraAttacks > totalAttacks - normalAPR - extraMainhandAttacks then
-					extraAttacks = totalAttacks - normalAPR - extraMainhandAttacks
+					extraMainhandAttacks = extraMainhandAttacks - 1
 				end
 				if numWeapons >= 2 then
 					if imptwfFeatCount > 0 and (IEex_GetActorStat(targetID, 103) < 9 or wearingLightArmor or (IEex_ReadByte(creatureData + 0x5EC, 0x0) >= 16 and bit.band(IEex_ReadDword(creatureData + 0x75C), 0x2) > 0 and bit.band(IEex_ReadDword(creatureData + 0x764), 0x40) > 0)) then
@@ -1381,6 +1439,12 @@ function IEex_Extern_OnUpdateRecordDescription(CScreenCharacter, CGameSprite, CU
 				else
 					extraAttacks = extraAttacks + extraMainhandAttacks
 					extraMainhandAttacks = 0
+					if normalAPR == 5 then
+						extraAttacks = extraAttacks + IEex_ReadByte(creatureData + 0x5ED, 0x0) - normalAPR
+						if extraAttacks < 0 then
+							extraAttacks = 0
+						end
+					end
 				end
 				totalAttacks = totalAttacks + manyshotAttacks
 				if IEex_GetActorSpellState(targetID, 138) then
@@ -1442,6 +1506,7 @@ function IEex_Extern_OnUpdateRecordDescription(CScreenCharacter, CGameSprite, CU
 					end
 				end
 			end
+			weaponWrapper:free()
 		elseif string.match(line, baseString .. ":") and string.match(line, "%+") and ex_current_record_hand == 1 then
 			local normalAPR = IEex_GetActorStat(targetID, 8)
 			local monkLevel = IEex_GetActorStat(targetID, 101)
@@ -1575,6 +1640,40 @@ function IEex_Extern_OnUpdateRecordDescription(CScreenCharacter, CGameSprite, CU
 		-- do whatever changes you want to the line here
 		IEex_CString_Set(lineEntry + 0x4, line)
 	end)
+	local bardLevel = IEex_ReadByte(creatureData + 0x628, 0x0)
+	if bardLevel > 0 then
+		local baseSpellSlots = {0, 0, 0, 0, 0, 0, 0, 0}
+		for level, baseNumSlots in ipairs(baseSpellSlots) do
+			baseNumSlots = tonumber(IEex_2DAGetAtStrings("MXSPLBRD", tostring(level), tostring(bardLevel)))
+			if baseNumSlots > 0 then
+				local spellListOffset = IEex_ReadDword(creatureData + 0x4288 + 0x1C * (level - 1))
+				local spellListEnd = IEex_ReadDword(creatureData + 0x428C + 0x1C * (level - 1))
+				while spellListOffset < spellListEnd do
+					if IEex_ReadDword(spellListOffset + 0x8) > baseNumSlots then
+						IEex_WriteDword(spellListOffset + 0x8, baseNumSlots)
+					end
+					spellListOffset = spellListOffset + 0x10
+				end
+			end
+		end
+	end
+	local sorcererLevel = IEex_ReadByte(creatureData + 0x630, 0x0)
+	if sorcererLevel > 0 then
+		local baseSpellSlots = {0, 0, 0, 0, 0, 0, 0, 0, 0}
+		for level, baseNumSlots in ipairs(baseSpellSlots) do
+			baseNumSlots = tonumber(IEex_2DAGetAtStrings("MXSPLSOR", tostring(level), tostring(sorcererLevel)))
+			if baseNumSlots > 0 then
+				local spellListOffset = IEex_ReadDword(creatureData + 0x4788 + 0x1C * (level - 1))
+				local spellListEnd = IEex_ReadDword(creatureData + 0x478C + 0x1C * (level - 1))
+				while spellListOffset < spellListEnd do
+					if IEex_ReadDword(spellListOffset + 0x8) > baseNumSlots then
+						IEex_WriteDword(spellListOffset + 0x8, baseNumSlots)
+					end
+					spellListOffset = spellListOffset + 0x10
+				end
+			end
+		end
+	end
 end
 
 ---------------

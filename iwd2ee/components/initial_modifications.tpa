@@ -79,6 +79,8 @@ COPY_EXISTING ~IEex_TRA.lua~ ~override~
 	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_tra_55587 *=.*~ ~ex_tra_55587 = %ex_tra_55587%~
 	ex_tra_55588 = RESOLVE_STR_REF(@55588)
 	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_tra_55588 *=.*~ ~ex_tra_55588 = %ex_tra_55588%~
+	ex_tra_55590 = RESOLVE_STR_REF(@55590)
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_tra_55590 *=.*~ ~ex_tra_55590 = %ex_tra_55590%~
 	ex_tra_55591 = RESOLVE_STR_REF(@55591)
 	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_tra_55591 *=.*~ ~ex_tra_55591 = %ex_tra_55591%~
 	ex_tra_55592 = RESOLVE_STR_REF(@55592)
@@ -598,6 +600,8 @@ COPY_EXISTING ~AR6200.are~ ~override~
 	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR actor_name=~Saablic_Tan~ script_special3=~USSAABL1~ END
 	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR actor_name=~Wanmok~ script_special3=~USSAABL1~ END
 
+COPY_EXISTING ~41ORIA.itm~ ~override~
+	LPF ADD_ITEM_EQEFFECT INT_VAR opcode=502 target=1 timing=2 parameter1=(0 - 1) savingthrow=0x30000 STR_VAR resource=~MERESCON~ END
 
 COPY_EXISTING ~41HPORIA.bcs~ ~override~ ~41PARES1.bcs~ ~override~
 	DECOMPILE_AND_PATCH BEGIN

@@ -71,7 +71,7 @@ ACTION_IF NOT FILE_EXISTS_IN_GAME ~ushfmoda.itm~ BEGIN
 		END
 		BUT_ONLY_IF_IT_CHANGES
 
-	COPY_EXISTING ~CHARBASE.cre~ ~override~ ~USGEOF.cre~ ~override~ ~USREIG.cre~ ~override~ ~USVEIR.cre~ ~override~ ~USEMMA.cre~ ~override~ ~USVREK.cre~ ~override~ ~USVUNA.cre~ ~override~ ~USXHAA.cre~ ~override~ ~USZACK.cre~ ~override~ ~USPAIR.cre~ ~override~ ~USSERS.cre~ ~override~
+	COPY_EXISTING ~CHARBASE.cre~ ~override~ ~USGEOF.cre~ ~override~ ~USREIG.cre~ ~override~ ~USVEIR.cre~ ~override~ ~USEMMA.cre~ ~override~ ~USVREK.cre~ ~override~ ~USVUNA.cre~ ~override~ ~USXHAA.cre~ ~override~ ~USZACK.cre~ ~override~ ~USPAIR.cre~ ~override~ ~USSERS.cre~ ~override~ ~USSIMULA.cre~ ~override~
 		LPF	IWD2_REMOVE_CRE_ITEM STR_VAR item=~USHFMODA USHFMODB~ END
 		IF_EXISTS
 END

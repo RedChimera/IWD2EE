@@ -519,10 +519,15 @@ ex_empowerable_opcodes = {[0] = true, [1] = true, [6] = true, [10] = true, [12] 
 --			end
 
 		end
-		if opcode == 13 and parent_resource == "" then
-			if parameter2 == 0x8 and IEex_GetActorSpellState(targetID, 210) then
-				IEex_WriteDword(effectData + 0x1C, 0x4)
+		if opcode == 13 or opcode == 420 then
+			local timeSlowed, targetNotSlowed = IEex_CheckGlobalEffectOnActor(targetID, 0x2)
+			local noChunkedDeath, targetYesChunkedDeath = IEex_CheckGlobalEffectOnActor(targetID, 0x4)
+			if (parameter2 == 0x8 or parameter2 == 0x400) and (IEex_GetActorSpellState(targetID, 210) or timeSlowed or noChunkedDeath) then
+				parameter2 = 0x4
+				IEex_WriteDword(effectData + 0x1C, parameter2)
 			end
+		end
+		if opcode == 13 and parent_resource == "" then
 			local oldItemSlotList = {}
 			IEex_IterateActorEffects(targetID, function(eData)
 				local theopcode = IEex_ReadDword(eData + 0x10)
@@ -630,6 +635,19 @@ ex_empowerable_opcodes = {[0] = true, [1] = true, [6] = true, [10] = true, [12] 
 ["source_target"] = v[3],
 ["source_id"] = v[4]
 })
+			end
+			local minHP = 0
+			IEex_IterateActorEffects(targetID, function(eData)
+				local theopcode = IEex_ReadDword(eData + 0x10)
+				local theparameter1 = IEex_ReadDword(eData + 0x1C)
+				if theopcode == 208 and theparameter1 > minHP then
+					minHP = theparameter1
+				end
+			end)
+			if minHP > 0 then
+				IEex_WriteWord(creatureData + 0x5C0, minHP)
+				IEex_DS(minHP)
+				return true
 			end
 		end
 		if opcode == 12 then

@@ -296,7 +296,7 @@ COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
 	WRITE_LONG 0x1A4 0
 	BUT_ONLY_IF_IT_CHANGES
 
-COPY ~Characters~ ~Characters~
+COPY + ~Characters~ ~Characters~
 	PATCH_IF ~%SOURCE_EXT%~ STRING_EQUAL_CASE ~CHR~ BEGIN
 		WRITE_SHORT 0x3A8 0
 		WRITE_SHORT 0x3AA 0

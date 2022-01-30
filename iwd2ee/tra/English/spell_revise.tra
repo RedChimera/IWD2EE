@@ -2042,7 +2042,7 @@ There is no saving throw, and the effects last for the duration of the spell or 
 @1849    = ~Greater Shield of Lathander~
 @1850    = ~Greater Shield of Lathander
 (Conjuration) [Good]
-Level: Clr 7
+Level: Clr 7, Pal 6, Lathander 6
 Range: Touch
 Duration: 3 rounds
 Casting Time: 7
@@ -2659,6 +2659,18 @@ Launcher:  Bow~
 @30108=~Spellstaff (Summon Nature's Ally I)~
 @30109=~Spellstaff (Hunter's Mark)~
 @30110=~Spellstaff (Shortening)~
+@30111=~Release Eclectic Sequencer~
+@30112=~Projecting Body~
+@30113=~Spellstaff (Perception Filter)~
+@30114=~Spellstaff (Guidance)~
+@30115=~Polymorph: Fomorian Giant~
+@30116=~Polymorph: Troll~
+@30117=~Polymorph: Umber Hulk~
+@30118=~Polymorph: Wyvern~
+@30119=~Fomorian Giant Boulder~
+@30120=~Troll Attack~
+@30121=~Umber Hulk Attack~
+@30122=~Wyvern Stinger~
 
 @31105     = ~Entangle~
 @32105     = ~Entangle
@@ -2873,6 +2885,17 @@ Area of Effect: Caster
 Saving Throw: Will negates
 
 Cloak of Fear bestows the caster with an aura of fear in a 5-foot radius.  All enemies that enter the cloak's area of effect must make a Will save or flee in panic for 1 round, and must continue to make Will saves twice a round as long as they are in the cloak of fear's area of effect.  The aura does not affect undead creatures.~
+@31417     = ~Cloud of Pestilence~
+@32417     = ~Cloud of Pestilence
+(Necromancy) [Evil]
+Level: Clr 4
+Range: Sight of Caster
+Duration: 4 rounds
+Casting Time: 7
+Area of Effect: 20-foot radius
+Saving Throw: Fortitude negates
+
+This spell transforms the air in a 20-foot radius into sickening, grayish mists.  The caster and non-living creatures are immune to the effects of the cloud.  Every round of exposure to the disease-ridden air causes the loss of 4 points of Strength, Dexterity, and Constitution. Creatures within the afflicted area must make a Fortitude save every round to avoid the debilitating effects of the cloud. The effects will last 1 turn.  Cloud of Pestilence can only be cast by evil characters.~
 @31423     = ~Wall of Moonlight~
 @32423     = ~Wall of Moonlight
 (Evocation)
@@ -3939,7 +3962,7 @@ This wondrous spell gives the recipient the power to fly. For the duration, the 
 @37356     = ~Perception Filter~
 @38356     = ~Perception Filter
 (Illusion)
-Level: Brd 3, Sor/Wiz 3
+Level: Brd 1, Sor/Wiz 1
 Range: Touch
 Duration: 10 rounds/level
 Casting Time: 3
@@ -3960,6 +3983,23 @@ Area of Effect: Caster
 Saving Throw: None
 
 A more powerful version of the spell Identify, Legend Lore temporarily increases the lore of the caster, allowing them to identify multiple magical items. For the duration, the caster's Knowledge (Arcana) is increased by 30.~
+@37358     = ~Project Image~
+@38358     = ~Project Image
+(Illusion)
+Level: Brd 3, Sor/Wiz 3
+Range: Sight of Caster
+Duration: 1 round/level
+Casting Time: 6
+Area of Effect: Special
+Saving Throw: None
+
+This spell creates an illusory duplicate of the caster. For the duration, the caster controls this image instead of their body, can see through its eyes, and can command it to attack or cast spells. Spells cast this way use up the caster's spell slots.
+
+Importantly, any damage the image takes will not harm the caster when the spell is over, and any status ailments inflicted on the image will not affect the caster. Thus, this spell can be used to send the image into risky situations that would be unwise to send the actual character into. 
+
+While Project Image is active, the character record screen and HP bar record the stats of the image rather than the caster. When the image takes damage or is killed, the HP bar will go down, but the caster will be fine afterwards as long as their body didn't take damage.
+
+The spell ends early if the image is destroyed (it starts with the same HP as the caster), if it's dispelled, if the caster is killed, or if the party moves to another area.~
 @37451     = ~Teleport Field~
 @38451     = ~Teleport Field
 (Transmutation) 
@@ -4006,7 +4046,7 @@ Saving Throw: None
 This spell copies a spell that another creature is casting, allowing the bard to cast that spell once. Copy Spell should be cast on another creature that is casting a spell. The bard gains a special ability that lets them cast that same spell. Once used, the ability is gone until Copy Spell is cast again. Copy Spell cannot copy innate abilities, nor can it copy spells of a higher spell level than the bard can currently cast. Casting Copy Spell itself is a free action, but casting the copied spell could take some time.~
 @37455     = ~Polymorph Self~
 @38455     = ~Polymorph Self
-(Transmutation) 
+(Transmutation)
 Level: Sor/Wiz 4
 Range: Caster
 Duration: 1 minute/level
@@ -4016,11 +4056,10 @@ Saving Throw: None
 
 Polymorph Self allows the caster to assume the form of a creature of moderate power. While in another form, the caster has its Strength, Dexterity, Constitution, base Armor Class, resistances, immunities, attacks, and special abilities. The caster can polymorph into one of the following forms:
 
-Fomorian Giant
-Troll
-Umber Hulk
-Wyvern
-Red Half-Dragon~
+* Fomorian Giant (can throw boulders at long range)
+* Troll (regenerates 1 HP per second)
+* Umber Hulk (nearby enemies must make Will save each round or be confused)
+* Wyvern (can fly, and each hit poisons the target on a failed Fortitude save)~
 @37456     = ~Imbue with Spell Ability~
 @38456     = ~Imbue with Spell Ability
 (Universal)
@@ -4313,7 +4352,7 @@ Saving Throw: None
 Similar to the energy drain of a wight or wraith, except much more powerful, this spell drains multiple levels from a creature. The target is drained one level for every three levels of the caster, to a maximum energy drain of 16 levels for a 48th-level caster. The energy drain is permanent until cured with a Restoration spell. This spell has no effect on undead or constructs.~
 @37853     = ~Enslave~
 @38853     = ~Enslave
-(Enchantment) 
+(Enchantment)
 Level: Brd 7, Sor/Wiz 8
 Range: Sight of Caster
 Duration: Permanent
@@ -4542,3 +4581,16 @@ Area of Effect: 1 creature
 Saving Throw: None
 
 Mordenkainen's Disjunction dispels all dispellable effects on the target. There is no saving throw. This spell can even remove the effects of Spell Turning, Spell Trap, Antimagic Field, or a Protection from Magic scroll.~
+@37961     = ~Eclectic Sequencer~
+@38961     = ~Eclectic Sequencer
+(Universal)
+Level: Wiz 9
+Range: Special
+Duration: Permanent until triggered
+Casting Time: 15
+Area of Effect: Special
+Saving Throw: None
+
+Eclectic Sequencer may only be cast by generalist wizards. It lets the caster store eight spells to be released later on. After casting Eclectic Sequencer, the caster must attempt to cast up to eight spells of 7th-level or lower, each of which must be of a different school. Instead of being cast, those spells are stored in the sequencer (expending one use of each spell). The caster then gains the innate ability "Release Eclectic Sequencer." Using that ability immediately casts all eight spells on the target of the ability.
+
+Spells with a range of "Caster" will be cast on the caster, regardless of the target of the ability. Spells with limited range will fail if the target is outside the spell's range.~

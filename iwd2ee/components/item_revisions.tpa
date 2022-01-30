@@ -926,6 +926,7 @@ COPY_EXISTING ~00SHLD92.itm~ ~override~
 	SAY IDENTIFIED_DESC @10620
 
 COPY_EXISTING ~00SHLD93.itm~ ~override~
+	SAY NAME2 @10621
 	SAY IDENTIFIED_DESC @10622
 
 COPY_EXISTING ~00SHLD94.itm~ ~override~
@@ -1402,6 +1403,7 @@ COPY_EXISTING ~00SWDT94.itm~ ~override~
 	SAY IDENTIFIED_DESC @11004
 
 COPY_EXISTING ~00SWDT95.itm~ ~override~
+	SAY NAME2 @11005
 	SAY IDENTIFIED_DESC @11006
 
 COPY_EXISTING ~00SWDT96.itm~ ~override~
@@ -4383,6 +4385,22 @@ COPY_EXISTING ~USFLAL36.itm~ ~override~
 	SAY NAME2 @12873
 	SAY IDENTIFIED_DESC @12874
 
+COPY_EXISTING ~USHFSFPO.itm~ ~override~
+	SAY NAME2 @12875
+	SAY IDENTIFIED_DESC @12876
+
+COPY_EXISTING ~USCLUBST.itm~ ~override~
+	SAY NAME2 @12877
+	SAY IDENTIFIED_DESC @12878
+
+COPY_EXISTING ~USHFCBST.itm~ ~override~
+	SAY NAME2 @12879
+	SAY IDENTIFIED_DESC @12880
+
+COPY_EXISTING ~USBOOKSP.itm~ ~override~
+	SAY NAME2 @12881
+	SAY IDENTIFIED_DESC @12882
+
 //General patch changes
 
 /*
@@ -4644,6 +4662,7 @@ COPY_EXISTING ~TOOLTIP.2DA~ ~override~
 	REPLACE_TEXTUALLY CASE_INSENSITIVE ~\(41RingRa\).*~ ~\1	12131	%ex_tra_1726%	21421~
 	REPLACE_TEXTUALLY CASE_INSENSITIVE ~\(41HFRgRa\).*~ ~\1	25347	23194	25366~
 	REPLACE_TEXTUALLY CASE_INSENSITIVE ~\(52BookSV\).*~ ~\1	10022	-1	-1~
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~\(00HFHmBH\).*~ ~\1	7559	-1	-1~
 
 APPEND ~RT_NORM.2da~
 ~
@@ -4704,6 +4723,8 @@ USRTHF54	USDAGGRL
 USRTHF55	USWINGFL
 USRTHF56	USHALBIP
 USRTHF57	USROBEWA
+USRTHF58	USSTAFPO
+USRTHF59	USCLUBST
 
 USRHF001	USAROW47
 USRHF002	00AROW06
@@ -4773,6 +4794,8 @@ USDVLHF2	USDEVIL2
 USDVLHF3	USDEVIL3
 USCWHFAW	USCWABIW
 USCWHFAR	USCWABIR
+USCIHFTR	USCITROL
+USCIHFTG	USCITROG
 
 USAFBEET	USALBEET
 USAFBEHO	USALBEHO
@@ -4945,6 +4968,8 @@ USRTHF54	USHFDGRL
 USRTHF55	USHFWGFL
 USRTHF56	USHFHBIP
 USRTHF57	USHFRBWA
+USRTHF58	USHFSFPO
+USRTHF59	USHFCBST
 
 USRHF001	USAROW57
 USRHF002	USAROW54
@@ -5014,6 +5039,8 @@ USDVLHF2	USDEVIL3
 USDVLHF3	USDEVIL4
 USCWHFAW	USHFCWAW
 USCWHFAR	USHFCWAR
+USCIHFTR	USHFCITR
+USCIHFTG	USHFCITG
 
 USAFBEET	USHFBEET
 USAFBEHO	USHFBEHO
@@ -5216,6 +5243,7 @@ COPY_EXISTING ~11deird.sto~ ~override~ //Gallaway Trading Post
 COPY_EXISTING ~11elytha.sto~ ~override~ //Elytharra store
 	REMOVE_STORE_ITEM ~11RTHF04~
 	ADD_STORE_ITEM ~11RTHF04~ BEFORE ~00AMUL14~ #1 #1 #1 ~IDENTIFIED~ #1 //Book of Leaves
+	ADD_STORE_ITEM ~USBOOKSP~ AFTER ~11RTHF04~ #1 #1 #1 ~IDENTIFIED~ #1 //Tome of the Dedicated Specialist
 //	ADD_STORE_ITEM ~11RTHF07~ AFTER ~00AMUL13~ #1 #1 #1 ~IDENTIFIED~ #1 //Dreisbach's Iron Hoop
 	ADD_STORE_ITEM ~00RING87~ AFTER ~00RING75~ #1 #1 #1 ~IDENTIFIED~ #1 //Lesser Chameleon Ring
 	ADD_STORE_ITEM ~00RING21~ AFTER ~00RING87~ #1 #1 #1 ~IDENTIFIED~ #1 //Wizard's Ring
@@ -5486,6 +5514,7 @@ COPY_EXISTING ~63ERADRU.sto~ ~override~ //Xvim priest temple
 	ulgiash |= 0x1
 	WRITE_LONG 0x10 ulgiash //Can buy items from this store
 	ADD_STORE_ITEM ~00HALB96~ #1 #1 #1 ~IDENTIFIED~ #1 //Massive Halberd of Hate +4
+	ADD_STORE_ITEM ~USRTHF59~ AFTER ~00HALB96~ #1 #1 #1 ~IDENTIFIED~ #1 //Sceptre of Tyranny
 
 COPY_EXISTING ~63RIKI.sto~ ~override~ //Severed Hand thief store
 //	ADD_STORE_ITEM ~00RING81~ BEFORE ~00BOOT02~ #1 #1 #1 ~IDENTIFIED~ #1 //Tymora's Loop
@@ -5511,6 +5540,9 @@ COPY_EXISTING ~63RIKI.sto~ ~override~ //Severed Hand thief store
 	ADD_STORE_ITEM ~00DART91~ AFTER ~00DART92~ #20 #20 #20 ~IDENTIFIED~ #6
 	ADD_STORE_ITEM ~00DART90~ AFTER ~00DART91~ #20 #20 #20 ~IDENTIFIED~ #4
 	REMOVE_STORE_ITEM ~00CLCK03~
+
+COPY_EXISTING ~ar2001.are~ ~override~ //Shaengarne village
+	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR charges1=1  charges2=1  charges3=0 single_match=1 STR_VAR old_item=~00RTHF17~ new_item=~00RTHF17~ END
 
 COPY_EXISTING ~ar2002.are~ ~override~ //Shaengarne Vrek cave
 	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR charges1=1 charges2=1 charges3=1 single_match=1 STR_VAR old_item=~11RTHF25~ new_item=~USRT02_V~ END
@@ -5563,6 +5595,20 @@ COPY_EXISTING ~ar5100.are~ ~override~ //Hook Horror caves
 
 COPY_EXISTING ~ar5101.are~ ~override~ //Hook Horror caves
 	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR container=2 charges1=1 charges2=1 charges3=1 single_match=1 STR_VAR old_item=~RT10_M~ new_item=~USRT10_V~ END
+
+COPY_EXISTING ~AR5200.are~ ~override~ //Black Raven Monastery, outside
+	LPF fj_are_structure INT_VAR fj_loc_x=777 fj_loc_y=170 fj_type=8 fj_trap_loc_x=777 fj_trap_loc_y=170 fj_box_left=796 fj_box_top=220 fj_box_right=810 fj_box_bottom=239 fj_vertex_0=(809 + 222 * 0x10000) fj_vertex_1=(800 + 220 * 0x10000) fj_vertex_2=(796 + 237 * 0x10000) fj_vertex_3=(810 + 239 * 0x10000) STR_VAR fj_structure_type=~container~ fj_name=~US_Full_Nest~ END
+	READ_SHORT 0x6A triggernumber
+	READ_LONG 0x6C triggeroffset
+	FOR (i = 0; i < triggernumber; ++i) BEGIN
+		SET offset = triggeroffset + (i * 0xC4)
+		READ_ASCII offset triggername (9)
+		PATCH_IF (~%triggername%~ STRING_EQUAL ~Full_Nest~) BEGIN
+			LPF fj_are_structure INT_VAR fj_delete_mode=i STR_VAR fj_structure_type=~region~ END
+			--triggernumber
+			--i
+		END
+	END
 
 COPY_EXISTING ~ar5203.are~ ~override~ //Black Raven Tomb
 	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR single_match=1 STR_VAR old_item=~00RTHF28~ new_item=~00RTKT19~ END
@@ -5713,6 +5759,26 @@ COPY_EXISTING ~30gobvun.cre~ ~override~ //Vunarg
 
 COPY_EXISTING ~41necrom.cre~ ~override~ ~41rnecro.cre~ ~override~ //Cult of the Dragon Necromancer
 	LPF IWD2_ADD_CRE_ITEM INT_VAR cq1=1  cq2=1  cq3=1 STR_VAR item=~00POTN47~ slot=~qitem1~ mode=~replace~ END
+
+COPY_EXISTING ~41oria.cre~ ~override~ ~41oria2.cre~ ~override~ ~41oria3.cre~ ~override~
+	LPF	IWD2_REMOVE_CRE_ITEM STR_VAR item=~RT07_M~ END
+	LPF	IWD2_ADD_CRE_ITEM INT_VAR equip=0 cq1=44 cq2=85 STR_VAR item=~MISC07~ slot=~qitem2~ flags=~unstealable~ mode=~replace~ END
+	LPF	IWD2_ADD_CRE_ITEM INT_VAR equip=0 cq1=1 STR_VAR item=~00POTN19~ slot=~inv1~ flags=~unstealable~ mode=~replace~ END
+	LPF	IWD2_ADD_CRE_ITEM INT_VAR equip=0 cq1=1 STR_VAR item=~00POTN36~ slot=~inv3~ flags=~unstealable~ mode=~replace~ END
+	LPF	IWD2_ADD_CRE_ITEM INT_VAR equip=0 cq1=1 cq2=1 STR_VAR item=~SPWI404Z~ slot=~inv5~ flags=~unstealable~ mode=~replace~ END
+	LPF	IWD2_ADD_CRE_ITEM INT_VAR equip=1 cq2=10 cq3=10 STR_VAR item=~USRTHF58~ slot=~weapon1~ mode=~replace~ END
+
+COPY_EXISTING ~41oria.cre~ ~override~
+	WRITE_SHORT currenthp 63
+	WRITE_SHORT maxhp 63
+
+COPY_EXISTING ~41oria2.cre~ ~override~
+	WRITE_SHORT currenthp 96
+	WRITE_SHORT maxhp 96
+
+COPY_EXISTING ~41oria3.cre~ ~override~
+	WRITE_SHORT currenthp 112
+	WRITE_SHORT maxhp 112
 
 COPY_EXISTING ~51harsho.cre~ ~override~ //The Beastlord Harshom
 	LPF IWD2_ADD_CRE_ITEM INT_VAR cq1=1  cq2=1  cq3=1 STR_VAR item=~00RTHF41~ slot=~rring~ END

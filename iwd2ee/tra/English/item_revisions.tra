@@ -2813,7 +2813,6 @@ Special:
   Resistance: 2/- bludgeoning resistance
   Resistance: 2/- missile resistance
   Attack Penalty: -2
-  Cover: As long as the wielder is not moving, attacking, or casting a spell, they take cover behind the shield, gaining an additional +4 AC
 Armor Check Penalty:  -10
 Arcane Spell Failure:  50%
 Weight: 25 lb.~
@@ -5046,18 +5045,18 @@ Special:
 Weight: 12 lb.
 Feat Requirement:  Martial Weapon, Great Sword
 Type:  Two-handed~
-//@11005    = ~Greatsword of Righteousness +2~
+@11005    = ~Greatsword of Righteousness~
 @11006    = ~The greatsword is a derivative of the longsword. Weaponsmiths have always looked for ways to improve existing weapons. In an effort to improve the longsword, the blade was lengthened. Eventually, the handle had to be extended and two hands became necessary to properly swing the sword. The primary function of greatswords is cleaving mounted knights and breaking up pike formations. This one is particularly good at its job as it has been enchanted with a few magical properties.
 
 STATISTICS:
 
-Damage:  2d6 + 2
-Attack Bonus:  +2 
-Enchantment:  +2
+Damage:  2d6 + 3
+Attack Bonus:  +3
+Enchantment:  +3
 Damage Type:  Slashing
 Special:
-  Holy: +2d6 damage to evil creatures. Counts as a good-aligned weapon.
-  Lawful: +2d6 damage to chaotic creatures. Counts as a lawful-aligned weapon.
+  Holy: +1d6 damage to evil creatures. Counts as a good-aligned weapon.
+  Lawful: +1d6 damage to chaotic creatures. Counts as a lawful-aligned weapon.
 Weight: 12 lb.
 Feat Requirement:  Martial Weapon, Great Sword
 Type:  Two-handed
@@ -5379,7 +5378,7 @@ Attack Bonus:  +2
 Enchantment:  +2
 Damage Type:  Bludgeoning
 Special:
-  Banishing: Banishes summoned creatures on hit (Will DC 19)
+  Banishing: Banishes summoned creatures on hit (Will DC 26)
 Weight: 4 lb.
 Feat Requirement:  Simple Weapon, Quarterstaff
 Type:  Two-handed~
@@ -13746,6 +13745,8 @@ Special:
   Generic Armor Bonus: +2
   Saving Throws: +2
   Spells cast by the wielder gain +2 DC
+  Spell Power: Can cast the spell Cone of Cold (at level 12)
+  Spell Power: Can cast the spell Globe of Invulnerability (at level 12)
 Weight: 4 lb.
 Feat Requirement:  Simple Weapon, Quarterstaff
 Type:  Two-handed~
@@ -13903,6 +13904,64 @@ Special:
 Weight: 5 lb.
 Required Feat:  Martial Weapon, Flail
 Type:  One-handed~
+@12875    = ~Improved Staff of Power~
+@12876    = ~A wizard's staff is far more than just a gilded walking stick, most being enchanted to an impressive degree. This one is no exception, and whoever the previous owner was, they were powerful indeed. It enables a wizard to better escape hostile magic and avoid physical blows, and empowers the wizard's own spells.
+
+STATISTICS:
+
+Damage:  1d6 + 3
+Attack Bonus:  +3
+Enchantment:  +3
+Damage Type:  Bludgeoning
+Special:
+  Generic Armor Bonus: +3
+  Saving Throws: +3
+  Spells cast by the wielder gain +3 DC
+  Spell Power: Can cast the spell Otiluke's Freezing Sphere (at level 20)
+  Spell Power: Can cast the spell Globe of Invulnerability (at level 20)
+Weight: 4 lb.
+Feat Requirement:  Simple Weapon, Quarterstaff
+Type:  Two-handed~
+@12877    = ~Scepter of Tyranny~
+@12878    = ~Owned and enchanted by an archetypical priest of Bane, the Scepter of Tyranny was at the forefront of many terrible battles. Archendros of Bane was a snide, malicious man of almost perfect mental and physical abilities. He could be found leading groups of impressionable young fighters, rogues, and other assorted thugs in press gangs wandering Waterdeep. Faced with opposition, Archendros would simply employ the power of the black and red scepter and urge his minions into the retreating crowds. The charismatic Banite was eventually killed in battle by a priest of Torm and his paladin comrades.
+
+STATISTICS:
+
+Damage:  1d6  +3
+Attack Bonus:  +3
+Enchantment:  +3
+Damage Type:  Bludgeoning
+Special:
+  Charisma: +3
+  The wielder's enchantment spells gain +2 DC
+Weight: 3 lb.
+Required Feat:  Simple Weapon, Mace
+Type:  One-handed
+Minimum Wisdom of 13 required~
+@12879    = ~Scepter of Domination~
+@12880    = ~Owned and enchanted by an archetypical priest of Bane, the Scepter of Tyranny was at the forefront of many terrible battles. Archendros of Bane was a snide, malicious man of almost perfect mental and physical abilities. He could be found leading groups of impressionable young fighters, rogues, and other assorted thugs in press gangs wandering Waterdeep. Faced with opposition, Archendros would simply employ the power of the black and red scepter and urge his minions into the retreating crowds. The charismatic Banite was eventually killed in battle by a priest of Torm and his paladin comrades.
+
+STATISTICS:
+
+Damage:  1d6  +5
+Attack Bonus:  +5
+Enchantment:  +5
+Damage Type:  Bludgeoning
+Special:
+  Charisma: +5
+  The wielder's enchantment spells gain +3 DC
+Weight: 3 lb.
+Required Feat:  Simple Weapon, Mace
+Type:  One-handed
+Minimum Wisdom of 13 required~
+@12881    = ~Tome of the Dedicated Specialist~
+@12882    = ~The text in this tome shifts and changes depending on which person is reading it, though only a wizard will see any text at all. For any specialist wizard, this text contains great magical knowledge, but it comes with an unbreakable curse: the wizard must forever rely on the spells they learned in the book, foregoing all others.
+
+STATISTICS:
+
+Special:
+  A specialist wizard who reads this book learns every wizard spell of their school, but cannot cast wizard spells of any other school.
+Weight: 8 lb.~
 @12900    = ~Hrm - you are powerful allies, indeed. More gold and gems to line your pockets, then - also, a suit of plate armor, a warhammer, a helmet, all crafted and enchanted by great duergar artisans. They are well deserved, outsider.~
 @12901    = ~Drink this Rainwater Brew, Ennelia. It should help your condition.~
 @12902    = ~Drink this Sour Draught, Ennelia. It should help your condition.~
