@@ -3,7 +3,8 @@ IEex_Once("IEex_CoreInitializeVariables", function()
 
 	-- Refactored: Now bridge ("IEex_Feats", "NEW_FEATS_MAXID")
 	-- IEex_NEW_FEATS_MAXID = nil
-	IEex_NEW_FEATS_SIZE  = nil
+	IEex_NEW_FEATS_SIZE = nil
+	IEex_NEW_SKILLS_SIZE = nil
 
 	IEex_LISTSPLL = {}
 	IEex_LISTSPLL_Reverse = {}
@@ -431,7 +432,13 @@ function IEex_LoadInitial2DAs()
 	IEex_Helper_SetBridge("IEex_Feats", "NEW_FEATS_MAXID", previousID)
 	IEex_NEW_FEATS_SIZE = previousID + 1
 
+	local skills2DA = IEex_2DADemand("SKILLS")
+
+	IEex_NEW_SKILLS_SIZE = tonumber(IEex_2DAGetAt(skills2DA, IEex_2DAFindColumn(skills2DA, "ID"), IEex_ReadWord(skills2DA + 0x20, 1) - 1)) + 1
+	print(IEex_NEW_SKILLS_SIZE)
 end
+
+
 
 -- This is special and is needed in some IEex_Gui_State calls;
 -- it SHOULD be in a Patch file, but some major refactoring would
@@ -988,6 +995,14 @@ function IEex_WriteDelayedPatches()
 	---------------
 
 	IEex_WriteWord(0x84EA66, IEex_NEW_FEATS_SIZE)
+
+
+	--This code prevents the game from crashing when there are more than 16 skills in SKILLS.2DA, but the additional skills still aren't displayed on the skills screen.
+	IEex_WriteByte(0x763E9D + 2, IEex_NEW_SKILLS_SIZE)
+	IEex_WriteByte(0x76429A + 2, IEex_NEW_SKILLS_SIZE)
+	IEex_WriteByte(0x7642D6 + 2, IEex_NEW_SKILLS_SIZE)
+	IEex_WriteByte(0x764313 + 4, IEex_NEW_SKILLS_SIZE)
+	IEex_WriteByte(0x7644C6 + 2, IEex_NEW_SKILLS_SIZE)
 
 	IEex_EnableCodeProtection()
 

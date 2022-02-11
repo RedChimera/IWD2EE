@@ -161,7 +161,7 @@ Special: You may only take this feat as a 1st-level character.~
 
 You are trained to knock down or trip enemies in melee combat.
 
-Prerequisite: Base attack bonus +5 or higher
+Prerequisite: Base attack bonus +6 or higher
 
 Benefit: You gain an ability that lets you knock down or trip an adjacent creature. The ability can be used once per round. If your Dexterity is higher than your Strength, you attempt to trip the target, which must make a Reflex save (DC 10 + half your level + your Dexterity modifier) or fall down for 4 seconds. Otherwise, you try to knock down your target, which must make a Fortitude save (DC 10 + half your level + your Strength modifier) or fall down for 4 seconds. The DC gets -4 for each time someone has tried to knock down or trip the target in the past 10 rounds. Especially large creatures cannot be knocked down or tripped. The time spent to perform this ability causes the character to have one fewer attack in the following round.
 
@@ -346,7 +346,7 @@ You may lengthen the duration of your spells.
 
 Prerequisites: The ability to cast 2nd-level spells.
 
-Benefit: You gain the Extend Spell ability, usable at will as a free action. Using it doubles the duration of the next spell you cast, but causes it to take up a spell slot one level higher.~
+Benefit: You gain the Extend Spell ability, usable at will as a free action. Using it doubles the duration of the next spell you cast, but causes it to take up a spell slot one level higher. Extend Spell has no effect on spells with a base duration of less than 5 rounds.~
 @353    = ~Maximize Spell~
 @354    = ~METAMAGIC, MAXIMIZE SPELL:
 
@@ -775,7 +775,11 @@ Advantages:
 * 2nd level: Evasion. When a rogue reaches 2nd level, he or she gains the ability to evade damage from area affect spells. Whenever a rogue makes a successful reflex save against an area effect spell that allows a reflex save for half damage, he or she takes no damage.
 * 3rd level: Uncanny Dodge. Rogues retain their Dexterity bonus to Armor Class if they are attacked by invisible foes.
 * 6th level: Uncanny Dodge: Rogues can't be Sneak Attacked by another rogue unless the attacker is four or more levels higher.
-* 10th level: Special Abilities: The rogue now gains access to a number of new feats available only to rogues. These include Crippling Strike, Improved Evasion, Slippery Mind, Defensive Roll, and Opportunist.
+* 10th level: Bonus Feat. The rogue gains a bonus feat, and also gains access to a number of new feats available only to rogues. These include Crippling Strike, Improved Evasion, Slippery Mind, Defensive Roll, and Opportunist.
+* 13th level: Bonus Feat.
+* 16th level: Bonus Feat.
+* 19th level: Bonus Feat.
+* 22th level: Bonus Feat. This is the last bonus feat, as by this point the rogue can obtain all five of the special feats first obtainable at level 10.
 * Rogues gain +1 to luck every 5 levels.
 
 Disadvantages:

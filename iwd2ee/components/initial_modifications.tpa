@@ -491,7 +491,7 @@ COPY_EXISTING ~AR1002.are~ ~override~
 	LPF ALTER_AREA_CONTAINER_IWD2 INT_VAR lock_difficulty=5 STR_VAR container_name=~Crate 1~ END
 
 COPY_EXISTING ~AR1006.are~ ~override~
-	LPF ALTER_AREA_CONTAINER_IWD2 INT_VAR trap_detect=5 STR_VAR container_name=~Steel Locker~ END
+	LPF ALTER_AREA_CONTAINER_IWD2 INT_VAR trap_detect=5 trap_remove=20 STR_VAR container_name=~Steel Locker~ END
 
 COPY_EXISTING ~AR1101.are~ ~override~
 	LPF ALTER_AREA_CONTAINER_IWD2 INT_VAR lock_difficulty=5 STR_VAR container_name=~Nightstand~ END
@@ -504,6 +504,9 @@ COPY_EXISTING ~AR1105.are~ ~override~
 
 COPY_EXISTING ~AR1107.are~ ~override~
 	LPF ALTER_AREA_CONTAINER_IWD2 INT_VAR lock_difficulty=25 STR_VAR container_name=~Locked Desk Drawer~ END
+
+COPY_EXISTING ~AR4102.are~ ~override~
+	LPF ALTER_AREA_DOOR_IWD2 INT_VAR lock_difficulty=65 STR_VAR door_name=~AR4102_Door1~ END
 
 COPY_EXISTING_REGEXP ~50CVENl0\.bcs~ ~override~ ~61PCFLOR\.bcs~ ~override~ //Fixing a bug where permanent effects would be removed from PCs via certain scripts
 	DECOMPILE_AND_PATCH BEGIN
@@ -914,6 +917,7 @@ OUTER_SET ref_second_chance = RESOLVE_STR_REF(@37555)
 OUTER_SET ref_holy_weapon = RESOLVE_STR_REF(@35555)
 OUTER_SET ref_flame_shots = RESOLVE_STR_REF(@35354)
 OUTER_SET ref_guidance = RESOLVE_STR_REF(@35154)
+OUTER_SET ref_perception_filter = RESOLVE_STR_REF(@37356)
 
 APPEND ~STATDESC.2da~
 ~146	%ref_magic_stone%
@@ -952,6 +956,7 @@ APPEND ~STATDESC.2da~
 179	%ref_holy_weapon%
 180	%ref_flame_shots%
 181	%ref_guidance%
+182	%ref_perception_filter%
 ~
 
 VERBOSE

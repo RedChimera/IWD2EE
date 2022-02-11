@@ -4401,6 +4401,10 @@ COPY_EXISTING ~USBOOKSP.itm~ ~override~
 	SAY NAME2 @12881
 	SAY IDENTIFIED_DESC @12882
 
+COPY_EXISTING ~USSPER03.itm~ ~override~
+	SAY NAME2 @12883
+	SAY IDENTIFIED_DESC @12884
+
 //General patch changes
 
 /*
@@ -4487,13 +4491,13 @@ COPY_EXISTING_REGEXP ~.*\.itm~ ~override~
 	PATCH_IF (us_item_category=25 AND ((us_item_flags BAND 0x00000002) = 0x00000002)) BEGIN
 		LPF ALTER_ITEM_HEADER INT_VAR header_type=1 animation_overhand=50 animation_backhand=50 animation_thrust=0 END
 	END
-//Making sure spears and 3 range and always thrust (sure, spears sometimes can slash, but there are already plenty of other weapons with slashing animations)
+//Making sure spears have 3 range and always thrust (sure, spears sometimes can slash, but there are already plenty of other weapons with slashing animations)
 	PATCH_IF (us_item_category=29) BEGIN
 		LPF ALTER_ITEM_HEADER INT_VAR header_type=1 animation_overhand=0 animation_backhand=0 animation_thrust=100 END
 		READ_SHORT 0x68 numheaders
 		FOR (i = 0; i < numheaders; ++i) BEGIN
 			offset = 0x82 + i * 0x38
-			READ_BYTE i theheadertype
+			READ_BYTE offset theheadertype
 			PATCH_IF theheadertype = 1 BEGIN
 				READ_SHORT (offset + 0xE) therange
 				PATCH_IF therange <= 2 BEGIN
@@ -4796,6 +4800,7 @@ USCWHFAW	USCWABIW
 USCWHFAR	USCWABIR
 USCIHFTR	USCITROL
 USCIHFTG	USCITROG
+USRAKSHF	USRAKSH1
 
 USAFBEET	USALBEET
 USAFBEHO	USALBEHO
@@ -5041,6 +5046,7 @@ USCWHFAW	USHFCWAW
 USCWHFAR	USHFCWAR
 USCIHFTR	USHFCITR
 USCIHFTG	USHFCITG
+USRAKSHF	USRAKSH2
 
 USAFBEET	USHFBEET
 USAFBEHO	USHFBEHO
@@ -5542,13 +5548,17 @@ COPY_EXISTING ~63RIKI.sto~ ~override~ //Severed Hand thief store
 	REMOVE_STORE_ITEM ~00CLCK03~
 
 COPY_EXISTING ~ar2001.are~ ~override~ //Shaengarne village
-	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR charges1=1  charges2=1  charges3=0 single_match=1 STR_VAR old_item=~00RTHF17~ new_item=~00RTHF17~ END
+	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR charges1=1  charges2=1  charges3=0 single_match=1 STR_VAR old_item=~00RTHF17~ new_item=~00RTHF21~ END
 
 COPY_EXISTING ~ar2002.are~ ~override~ //Shaengarne Vrek cave
 	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR charges1=1 charges2=1 charges3=1 single_match=1 STR_VAR old_item=~11RTHF25~ new_item=~USRT02_V~ END
 
+COPY_EXISTING ~ar2100.are~ ~override~ //Shaengarne, highlands
+	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR container=1 single_match=1 STR_VAR old_item=~RT02_M~ new_item=~USSPER03~ END
+
 COPY_EXISTING ~ar2101.are~ ~override~ //Shaengarne, the Malarite dam
 	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR charges1=2 charges2=1 charges3=1 container=1 single_match=1 STR_VAR old_item=~00MISC31~ new_item=~00POTN21~ END
+	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR charges1=1  charges2=1  charges3=0 single_match=1 STR_VAR old_item=~00RTHF21~ new_item=~00RTHF17~ END
 
 COPY_EXISTING ~ar3000.are~ ~override~ //Horde Fortress outside
 	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR charges1=4 single_match=1 STR_VAR old_item=~SPPR115Z~ new_item=~00POTN22~ END
@@ -6127,5 +6137,13 @@ COPY_EXISTING_REGEXP ~.*\.are~ ~override~ ~.*\.cre~ ~override~ ~.*\.sto~ ~overri
 	BUT_ONLY_IF_IT_CHANGES
 
 STRING_SET_EVALUATE 40237 @981
+
+COPY_EXISTING_REGEXP ~00.*\.sto~ ~override~
+	READ_LONG 0x8 thestoretype
+	READ_SHORT 0x9C thestoragecapacity
+	PATCH_IF thestoretype = 4 AND thestoragecapacity < 100 BEGIN
+		WRITE_SHORT 0x9C 100
+	END
+	BUT_ONLY_IF_IT_CHANGES
 
 INCLUDE ~%mod_folder%/components/final_patches.tpa~

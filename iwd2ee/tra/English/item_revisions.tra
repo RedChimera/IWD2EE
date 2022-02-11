@@ -10907,7 +10907,7 @@ This book gains power when the passages within are read aloud by a priest of Tem
 
 STATISTICS:
 
-Spell Power: Casts the spell Champion's Strength (at level 10) on all allies within 25 feet once per day
+Spell Power: Grants all allies in a 20-foot radius +6 Strength for 10 rounds once per day
 
 Weight: 1 lb.~
 //@12201    = ~Heart of Winter~ //HoF
@@ -13067,7 +13067,7 @@ Weight:  2 lb.~
 
 STATISTICS:
 
-Shield Bonus:  +14
+Shield Bonus:  +16
 Armor Bonus:  +1 vs. missile weapons
 Armor Check Penalty:  -1
 Arcane Spell Failure:  5%
@@ -13962,6 +13962,19 @@ STATISTICS:
 Special:
   A specialist wizard who reads this book learns every wizard spell of their school, but cannot cast wizard spells of any other school.
 Weight: 8 lb.~
+@12883    = ~Silvered Masterwork Spear~
+@12884    = ~One of man's earliest weapons, dating back to the most primitive of times, the first spears were simply wooden poles or sticks sharpened at one end. When man mastered metals, spearheads were made from iron and steel. Having reached this end, weaponers began experimenting with different types of spear heads, thus leading to the development of certain polearm types. This particular spear has a head of silver, making it effective against lycanthropes and devils.
+
+STATISTICS:
+
+Damage:  1d8
+Attack Bonus: +1 
+Damage Type:  Piercing
+Special:
+  Counts as a silver weapon
+Weight: 6 lb.
+Feat Requirement:  Martial Weapon, Polearm
+Type:  Two-handed~
 @12900    = ~Hrm - you are powerful allies, indeed. More gold and gems to line your pockets, then - also, a suit of plate armor, a warhammer, a helmet, all crafted and enchanted by great duergar artisans. They are well deserved, outsider.~
 @12901    = ~Drink this Rainwater Brew, Ennelia. It should help your condition.~
 @12902    = ~Drink this Sour Draught, Ennelia. It should help your condition.~

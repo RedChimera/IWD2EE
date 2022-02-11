@@ -168,6 +168,8 @@ DEFINE_PATCH_FUNCTION ~ALTER_AREA_ACTOR_IWD2~
 		flag_difficulty_3=~-1~
 		flag_time_set=0
 		flag_time_unset=0
+		match_x_coord=~0xDEFA~
+		match_y_coord=~0xDEFA~
 		x_coord=~-1~
 		y_coord=~-1~
 		dest_x=~-1~
@@ -200,8 +202,9 @@ BEGIN
 		offset = actoroffset + (i * 0x110)
 		READ_ASCII offset name_of_actor (actor_name_length)
 		READ_ASCII (offset + 0x80) cre_file_of_actor (cre_file_length)
-
-		PATCH_IF ((actor_name_length = 0) OR (~%name_of_actor%~ STRING_EQUAL_CASE ~%actor_name%~)) AND ((cre_file_length = 0) OR (~%cre_file_of_actor%~ STRING_EQUAL_CASE ~%match_cre_file%~)) BEGIN
+		READ_SHORT (offset + 0x20) the_x_coord
+		READ_SHORT (offset + 0x22) the_y_coord
+		PATCH_IF ((actor_name_length = 0) OR (~%name_of_actor%~ STRING_EQUAL_CASE ~%actor_name%~)) AND ((cre_file_length = 0) OR (~%cre_file_of_actor%~ STRING_EQUAL_CASE ~%match_cre_file%~)) AND (match_x_coord = 0xDEFA OR match_x_coord = the_x_coord) AND (match_y_coord = 0xDEFA OR match_y_coord = the_y_coord) BEGIN
 			actor_found = 1
 			PATCH_IF (x_coord != (0 - 1)) BEGIN
 				WRITE_SHORT (offset + 0x20) x_coord

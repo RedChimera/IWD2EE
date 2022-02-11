@@ -456,9 +456,10 @@ ex_empowerable_opcodes = {[0] = true, [1] = true, [6] = true, [10] = true, [12] 
 						end
 					elseif theopcode == 500 and theresource == "MEWEPENC" then
 						local theweaponRES = IEex_ReadLString(eData + 0x1C, 8)
+						local thesavingthrow = IEex_ReadDword(eData + 0x40)
 						local theenchantment = IEex_ReadWord(eData + 0x48, 0x0)
-						local theheaderType = IEex_ReadWord(eData + 0x4A, 0x0)
-						if (theweaponRES == "" or theweaponRES == weaponRES or theweaponRES == launcherRES) and (theheaderType == 0 or theheaderType == headerType) and theenchantment > special then
+						local theheaderType = IEex_ReadSignedByte(eData + 0x4A, 0x0)
+						if (theweaponRES == "" or theweaponRES == weaponRES or theweaponRES == launcherRES) and (bit.band(thesavingthrow, 0x20000000) == 0 or theheaderType == -1 or theheaderType == itemType) and (bit.band(thesavingthrow, 0x20000000) > 0 or theheaderType == 0 or theheaderType == headerType) and theenchantment > special and (bit.band(thesavingthrow, 0x10000000) == 0 or not exhitIndexList[2001]) then
 							special = theenchantment
 							IEex_WriteDword(effectData + 0x44, special)
 						end
@@ -779,7 +780,7 @@ ex_empowerable_opcodes = {[0] = true, [1] = true, [6] = true, [10] = true, [12] 
 				IEex_WriteDword(effectData + 0x18, parameter1)
 			end
 		end
-		if bit.band(internalFlags, 0x20000) > 0 and (timing == 0 or timing == 3 or timing == 4) and duration >= 2 then
+		if bit.band(internalFlags, 0x20000) > 0 and (timing == 0 or timing == 3 or timing == 4) and duration >= 30 then
 			duration = duration * 2
 			IEex_WriteDword(effectData + 0x24, duration)
 			if opcode == 256 or opcode == 264 or opcode == 265 or opcode == 449 then

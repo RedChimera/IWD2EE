@@ -3594,9 +3594,9 @@ Range: Caster
 Duration: 10 rounds
 Casting Time: 6
 Area of Effect: 20-foot radius
-Saving Throw: Will negates
+Saving Throw: Fortitude negates
 
-This spell grants the caster an aura that repels nearby enemies, sending them hurtling away from the caster. Any enemy that comes within the area of effect must make a Will save at -3 or be knocked back.~
+This spell grants the caster an aura that repels nearby enemies, sending them hurtling away from the caster. Any enemy that comes within the area of effect must make a Fortitude save at -3 or be knocked back.~
 @35654     = ~Wondrous Recall~
 @36654     = ~Wondrous Recall
 (Enchantment)
@@ -4027,7 +4027,7 @@ Phantasmal Killer causes the target to be struck down by an embodiment of its wo
 (Necromancy)
 Level: Clr 4, Sor/Wiz 4
 Range: Caster
-Duration: 5 rounds + 2 rounds/level
+Duration: 10 rounds/level
 Casting Time: 4
 Area of Effect: Caster
 Saving Throw: Special
@@ -4594,3 +4594,24 @@ Saving Throw: None
 Eclectic Sequencer may only be cast by generalist wizards. It lets the caster store eight spells to be released later on. After casting Eclectic Sequencer, the caster must attempt to cast up to eight spells of 7th-level or lower, each of which must be of a different school. Instead of being cast, those spells are stored in the sequencer (expending one use of each spell). The caster then gains the innate ability "Release Eclectic Sequencer." Using that ability immediately casts all eight spells on the target of the ability.
 
 Spells with a range of "Caster" will be cast on the caster, regardless of the target of the ability. Spells with limited range will fail if the target is outside the spell's range.~
+@37962     = ~Wish~
+@38962     = ~Wish
+(Universal)
+Level: Sor/Wiz 9
+Range: Special
+Duration: Instantaneous
+Casting Time: 1
+Area of Effect: Special
+Saving Throw: Special
+
+Wish is among the mightiest spells a wizard or sorcerer can cast. By simply speaking aloud, they can alter reality to better suit them. Even a Wish spell, however, has its limits.
+
+In casting Wish, the caster has two initial choices. The first choice is to duplicate a wizard spell of 8th-level or lower (including one of a specialist wizard's opposing school), which will target the caster. The other choice is to make a more powerful, one-time wish. There are several choices of a one-time wish:
+
+* Permanently raise one of the caster's ability scores by 1 (there is a separate one-time wish for each ability score).
+* Create a powerful magic item.
+* Create 100000 gold.
+* Make it as if the caster has rested 8 hours and re-memorized all their spells.
+* Duplicate an epic spell, which will target the caster (there is a separate one-time wish for each spell).
+
+Each one-time wish cannot be chosen more than once by a single character, and a character may make no more than three one-time wishes, no matter how many times they cast Wish.~
