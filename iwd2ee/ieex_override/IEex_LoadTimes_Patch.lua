@@ -30,8 +30,8 @@
 	IEex_WriteAssembly(0x54FD8F, {"!add(esp,8) !repeat(3,!nop)"})
 
 	-- CCacheStatus_Update()
-	IEex_WriteAssembly(0x4408A9, {"!add(esp,8) !repeat(3,!nop)"})
-	IEex_WriteAssembly(0x4413AF, {"!add(esp,8) !repeat(3,!nop)"})
+	IEex_WriteAssembly(0x4408A6, {"!repeat(5,!nop)"})
+	IEex_WriteAssembly(0x4413AC, {"!repeat(5,!nop)"})
 
 	-- CGameSprite_Construct()
 	IEex_HookRestore(0x6F242F, 2, 7, {"!add(esp,8)"})
