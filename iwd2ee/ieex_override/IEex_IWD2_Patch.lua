@@ -14,6 +14,7 @@ IEex_InSyncState = true
 	dofile("override/IEex_Key_Patch.lua")
 	dofile("override/IEex_Projectile_Patch.lua")
 	dofile("override/IEex_Sound_Patch.lua")
+	dofile("override/IEex_LoadTimes_Patch.lua")
 	dofile("override/IEex_Debug_Patch.lua")
 
 	-- Actually IWD2's "operator_new" and "operator_delete", (needed for IEex memory to interact with engine)

@@ -751,8 +751,8 @@ Core function that writes assembly declarations into memory. args syntax =>
 
 --]]
 
-function IEex_WriteAssembly(address, assembly)
-	IEex_WriteSanitizedAssembly(address, IEex_SanitizeAssembly(assembly))
+function IEex_WriteAssembly(address, assembly, bLog)
+	IEex_WriteSanitizedAssembly(address, IEex_SanitizeAssembly(assembly), nil, bLog)
 end
 
 function IEex_CollectSanitizedMacroName(section, hasPrefix)
@@ -930,19 +930,21 @@ function IEex_SanitizeAssembly(assembly)
 	return state
 end
 
-function IEex_WriteSanitizedAssembly(address, state, funcOverride)
+function IEex_WriteSanitizedAssembly(address, state, funcOverride, bLog)
 
 	if not funcOverride then
 
-		-- Print a hex-dump of what is about to be written to the log
-		local writeDump = ""
-		IEex_WriteSanitizedAssembly(address, state, function(writeAddress, ...)
-			local bytes = {...}
-			for i = 1, #bytes do
-				writeDump = writeDump..IEex_ToHex(bytes[i], 2, true).." "
-			end
-		end)
-		--IEex_FunctionLog("\n\nWriting Assembly at "..IEex_ToHex(address).." => "..writeDump.."\n")
+		if bLog then
+			-- Print a hex-dump of what is about to be written to the log
+			local writeDump = ""
+			IEex_WriteSanitizedAssembly(address, state, function(writeAddress, ...)
+				local bytes = {...}
+				for i = 1, #bytes do
+					writeDump = writeDump..IEex_ToHex(bytes[i], 2, true).." "
+				end
+			end)
+			IEex_FunctionLog("\n\nWriting Assembly at "..IEex_ToHex(address).." => "..writeDump.."\n")
+		end
 
 		funcOverride = function(writeAddress, ...)
 			local bytes = {...}
@@ -1228,11 +1230,13 @@ end
 -- NOTE: Same as IEex_WriteAssembly(), but writes to a dynamically
 -- allocated memory space instead of a provided address.
 -- Very useful for writing new executable code into memory.
-function IEex_WriteAssemblyAuto(assembly)
+function IEex_WriteAssemblyAuto(assembly, bLog)
 	local state = IEex_SanitizeAssembly(assembly)
 	local reservedAddress, reservedLength = IEex_ReserveCodeMemory(state)
-	--IEex_FunctionLog("Reserved "..IEex_ToHex(reservedLength).." bytes at "..IEex_ToHex(reservedAddress))
-	IEex_WriteSanitizedAssembly(reservedAddress, state)
+	if bLog then
+		IEex_FunctionLog("Reserved "..IEex_ToHex(reservedLength).." bytes at "..IEex_ToHex(reservedAddress))
+	end
+	IEex_WriteSanitizedAssembly(reservedAddress, state, nil, bLog)
 	return reservedAddress
 end
 
@@ -1372,6 +1376,30 @@ function IEex_HookAfterRestore(address, restoreDelay, restoreSize, assembly)
 		},
 		nops,
 	}))
+end
+
+function IEex_AttemptHook(address, hookPart, attemptRestorePart, expectedBytes)
+
+	if IEex_ReadByte(address, 0) == 0xE9 then
+		local dest = address + 0x5 + IEex_ReadDword(address + 0x1)
+		attemptRestorePart = {"!jmp_dword", {dest, 4, 4}}
+	else
+		local checkAddress = address
+		for _, expectedByte in ipairs(expectedBytes) do
+			if IEex_ReadByte(checkAddress, 0) ~= expectedByte then
+				IEex_MessageBox("Unexpected byte during IEex_AttemptHook at "..IEex_ToHex(address).." ("..IEex_ToHex(checkAddress)..") - not tracing.")
+				return
+			end
+			checkAddress = checkAddress + 1
+		end
+	end
+
+	IEex_WriteAssembly(address, {"!jmp_dword", {
+		IEex_WriteAssemblyAuto(IEex_FlattenTable({
+			hookPart,
+			attemptRestorePart,
+		})), 4, 4
+	}})
 end
 
 function IEex_HookJump(address, restoreSize, assembly)
