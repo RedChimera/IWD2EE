@@ -554,7 +554,16 @@
 	IEex_HookAfterRestore(0x79284D, 0, 6, {[[
 		!push_dword #5
 		!call >IEex_Helper_Sleep
-		!mov([esi+193A],1)
+		!mov([esi+193A],1) ; m_displayStale = 1 ;
+	]]})
+
+	-- Don't crash in CScreenWorld_TimerSynchronousUpdate() if m_displayStale
+	-- was set to 1 by the above patch when in the middle of a quickload.
+	-- TODO: Review other cases of m_displayStale being used to block while
+	-- waiting for another thread to finish a task.
+	IEex_HookRestore(0x68DEC9, 0, 7, {[[
+		!cmp([ebp+4],0) ; m_UIManager->m_resLoaded ;
+		!jz_dword :68DF04
 	]]})
 
 	--------------------------------------------------
