@@ -584,6 +584,15 @@
 	-- Redirect empty Continue button OnLButtonDoubleClick() => OnLButtonDown()
 	IEex_WriteDword(0x85A45C, 0x4D4D70)
 
+	-----------------------------------------
+	-- Also use space to "Continue" dialog --
+	-----------------------------------------
+
+	IEex_HookJump(0x687434, 5, {[[
+		!je_dword >jmp_fail
+		!cmp_al_byte 20 ; spacebar ;
+	]]})
+	
 	--------------------------------------
 	-- IEex_Extern_OnOptionsScreenESC() --
 	--------------------------------------
