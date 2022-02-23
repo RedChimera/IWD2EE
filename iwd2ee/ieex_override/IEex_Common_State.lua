@@ -270,8 +270,10 @@ function IEex_Error(message)
 	error(message)
 end
 
-function IEex_TracebackPrint(message, levelMod)
-	print(debug.traceback("["..IEex_GetMilliseconds().."] "..message, 2 + (levelMod or 0)))
+function IEex_TracebackPrint(prefix, bodyPrefix, message, levelMod)
+	local traceback = debug.traceback(prefix.." ["..IEex_GetMilliseconds().."] "..message, 2 + (levelMod or 0))
+	traceback = traceback:gsub("\t", "    "):gsub("\n", "\nINFO: "..bodyPrefix.." ")
+	print(traceback)
 end
 
 function IEex_TracebackMessage(message, levelMod)

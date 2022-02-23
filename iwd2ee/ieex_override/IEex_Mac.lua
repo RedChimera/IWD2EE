@@ -396,7 +396,6 @@ IEex_GlobalAssemblyMacros = {
 	["add_esp_eax"] = "03 E0",
 	["and_eax_byte"] = "83 E0",
 	["and_eax_dword"] = "25",
-	["build_stack_frame"] = "55 8B EC",
 	["call"] = "E8",
 	["call_[dword]"] = "FF 15",
 	["call_[eax+byte]"] = "FF 50",
@@ -457,7 +456,6 @@ IEex_GlobalAssemblyMacros = {
 	["cmp_esi_edx"] = "3B F2",
 	["dec_[ebp+byte]"] = "FF 4D",
 	["dec_eax"] = "48",
-	["destroy_stack_frame"] = "8B E5 5D",
 	["fild_[esp+byte]"] = "DB 44 24",
 	["fild_[esp+dword]"] = "DB 84 24",
 	["fild_[esp]"] = "DB 04 24",
@@ -814,6 +812,16 @@ IEex_GlobalAssemblyMacros = {
 	["xor_edi_edi"] = "33 FF",
 	["xor_edx_edx"] = "33 D2",
 	["xor_esi_esi"] = "33 F6",
+
+	["build_stack_frame"] = [[
+		!push(ebp)
+		!mov(ebp,esp)
+	]],
+
+	["destroy_stack_frame"] = [[
+		!mov(esp,ebp)
+		!pop(ebp)
+	]],
 
 	["push_all_registers_iwd2"] = [[
 		!push(eax)

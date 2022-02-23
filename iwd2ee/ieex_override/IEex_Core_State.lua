@@ -69,11 +69,18 @@ end
 
 function IEex_Extern_Crashing(excCode, EXCEPTION_POINTERS)
 
-	if IEex_Helper_GetBridge("IEex_Extern_Crashing", "alreadyCrashed") then return end
-	IEex_Helper_SetBridge("IEex_Extern_Crashing", "alreadyCrashed", true)
+	local needReturn = false
+	IEex_Helper_SynchronizedBridgeOperation("IEex_Extern_Crashing", function()
+		if IEex_Helper_GetBridgeNL("IEex_Extern_Crashing", "alreadyCrashed") then
+			needReturn = true
+			return
+		end
+		IEex_Helper_SetBridgeNL("IEex_Extern_Crashing", "alreadyCrashed", true)
+	end)
+	if needReturn then return end
 
-	IEex_AssertThread(IEex_Thread.Both, true)
-	IEex_TracebackPrint("IEex detected crash; Lua traceback ->", 1)
+	IEex_TracebackPrint("[!]", "[!]    ", "IEex detected crash; debug info:", 1)
+	IEex_DumpThreadStack("[!]     ")
 
 	local timeFormat = "%x_%X"
 	local timeString = os.date(timeFormat):gsub("/", "_"):gsub(":", "_")
@@ -82,8 +89,8 @@ function IEex_Extern_Crashing(excCode, EXCEPTION_POINTERS)
 	local bigPath = "crash\\IEex_"..timeString.."_big.dmp"
 	local crashSaveName = "crash_"..timeString
 
-	-- Lua can't make directories itself :(
-	os.execute("mkdir crash")
+	-- Lua can't make directories itself
+	os.execute("if not exist crash mkdir crash")
 
 	local logFile = io.open("IEex.log", "r")
 	local logCopy = logFile:read("*a")
@@ -117,7 +124,7 @@ function IEex_Extern_Crashing(excCode, EXCEPTION_POINTERS)
 
 	IEex_CString_Set(IEex_GetGameData() + 0x4220, crashSaveName)
 	IEex_CString_Set(0x8F3338, crashSaveName)
-	IEex_Call(0x5AC430, {1, 0, 0}, IEex_GetGameData(), 0x0)
+	IEex_Call(0x5AC430, {1, 0, 0}, IEex_GetGameData(), 0x0) -- CInfGame_SaveGame()
 end
 
 function IEex_Extern_CSpell_UsableBySprite(CSpell, sprite)
