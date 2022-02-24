@@ -4,6 +4,11 @@ function IEex_GetEngineOptions()
     return IEex_ReadDword(g_pBaldurChitin + 0x1C78)
 end
 
+function IEex_GetEngineWorld()
+	local g_pBaldurChitin = IEex_ReadDword(0x8CF6DC)
+	return IEex_ReadDword(g_pBaldurChitin + 0x1C88)
+end
+
 ----------------------------
 -- Start Memory Interface --
 ----------------------------
@@ -35,6 +40,15 @@ IEex_MemoryManagerStructMeta = {
 		["size"] = function(luaString)
 			return #luaString + 1
 		end,
+	},
+
+	["CResRef"] = {
+		["constructors"] = {
+			["#default"] = function(startPtr, luaString)
+				IEex_WriteLString(startPtr, luaString:upper(), 8)
+			end,
+		},
+		["size"] = 8,
 	},
 
 	["uninitialized"] = {
@@ -180,14 +194,14 @@ end
 -- End Memory Interface --
 --------------------------
 
-function IEex_SetControlEditMultiLineText(CUIControlEditMultiLine, text)
+function IEex_SetControlTextDisplay(CUIControlTextDisplay, text)
 	IEex_RunWithStackManager({
 		{["name"] = "text",  ["struct"] = "string", ["constructor"] = {["luaArgs"] = {text} }}, },
 		function(manager)
-			-- CUIControlEditMultiLine_ClearText()
-			IEex_Call(0x4E2B50, {}, CUIControlEditMultiLine, 0x0)
-			-- CBaldurEngine_AppendFormattedToTextArea()
-			IEex_Call(0x427C20, {manager:getAddress("text"), 0x8A6A68, CUIControlEditMultiLine, 0x0}, nil, 0x10)
+			-- CUIControlTextDisplay_RemoveAll()
+			IEex_Call(0x4E2B50, {}, CUIControlTextDisplay, 0x0)
+			-- CBaldurEngine_AppendTextDisplay()
+			IEex_Call(0x427C20, {manager:getAddress("text"), 0x8A6A68, CUIControlTextDisplay, 0x0}, nil, 0x10)
 		end)
 end
 
@@ -196,6 +210,6 @@ function IEex_SetTextAreaToStrref(engine, panelID, controlID, strref)
 end
 
 function IEex_SetTextAreaToString(engine, panelID, controlID, string)
-	local CUIControlEditMultiLine = IEex_GetControlFromPanel(IEex_GetPanelFromEngine(engine, panelID), controlID)
-	IEex_SetControlEditMultiLineText(CUIControlEditMultiLine, string)
+	local CUIControlTextDisplay = IEex_GetControlFromPanel(IEex_GetPanelFromEngine(engine, panelID), controlID)
+	IEex_SetControlTextDisplay(CUIControlTextDisplay, string)
 end

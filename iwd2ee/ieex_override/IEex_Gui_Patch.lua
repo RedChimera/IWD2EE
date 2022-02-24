@@ -557,15 +557,6 @@
 		!mov([esi+193A],1) ; m_displayStale = 1 ;
 	]]})
 
-	-- Don't crash in CScreenWorld_TimerSynchronousUpdate() if m_displayStale
-	-- was set to 1 by the above patch when in the middle of a quickload.
-	-- TODO: Review other cases of m_displayStale being used to block while
-	-- waiting for another thread to finish a task.
-	IEex_HookRestore(0x68DEC9, 0, 7, {[[
-		!cmp([ebp+4],0) ; m_UIManager->m_resLoaded ;
-		!jz_dword :68DF04
-	]]})
-
 	--------------------------------------------------
 	-- Remove click cooldown from actionbar buttons --
 	--------------------------------------------------
@@ -592,7 +583,7 @@
 		!je_dword >jmp_fail
 		!cmp_al_byte 20 ; spacebar ;
 	]]})
-	
+
 	--------------------------------------
 	-- IEex_Extern_OnOptionsScreenESC() --
 	--------------------------------------
@@ -620,6 +611,229 @@
 	-----------------------------------------------------------------------------
 
 	IEex_WriteAssembly(0x6554FB, {"!repeat(5,!nop)"})
+
+	--------------------------------------------------
+	-- Render CScreenWorld UI AFTER the worldscreen --
+	--------------------------------------------------
+
+	IEex_WriteAssembly(0x68DF87, {"!repeat(5,!nop)"})
+	IEex_HookRestore(0x68DFB6, 0, 5, IEex_FlattenTable({
+		{[[
+			!push_registers_iwd2
+		]]},
+		IEex_GenLuaCall("IEex_Extern_AfterWorldRender"),
+		{[[
+			@call_error
+			!pop_registers_iwd2
+			!mov(ecx,ebp)
+			!call :4D4540 ; CUIManager_Render ;
+		]]},
+	}))
+
+	---------------------------------------
+	-- IEex_Extern_MouseInAreaViewport() --
+	---------------------------------------
+
+	IEex_HookReturnNOPs(0x46E45F, 0x4A, IEex_FlattenTable({
+		{[[
+			!mark_esp
+			!push_registers_iwd2
+		]]},
+		IEex_GenLuaCall("IEex_Extern_MouseInAreaViewport", {
+			["args"] = {
+				{"!push_esi"},
+			},
+			["returnType"] = IEex_LuaCallReturnType.Boolean,
+		}),
+		{[[
+			!jmp_dword >no_error
+
+			@call_error
+			!mov(eax,1)
+
+			@no_error
+			!marked_esp !mov([esp+1C],eax)
+			!pop_registers_iwd2
+		]]},
+	}))
+
+	---------------------------------------------
+	-- IEex_Extern_RejectGetWorldCoordinates() --
+	---------------------------------------------
+
+	IEex_HookJump(0x5CDFCE, 3, IEex_FlattenTable({
+		{[[
+			!push_all_registers_iwd2
+		]]},
+		IEex_GenLuaCall("IEex_Extern_RejectGetWorldCoordinates", {
+			["args"] = {
+				{"!push_ecx"},
+				{"!push([eax])"},
+				{"!push([eax+4])"},
+			},
+			["returnType"] = IEex_LuaCallReturnType.Boolean,
+		}),
+		{[[
+			!jmp_dword >no_error
+
+			@call_error
+			!xor_eax_eax
+
+			@no_error
+			!test_eax_eax
+			!pop_all_registers_iwd2
+			!jnz_dword >jmp_success
+			!cmp(edi,ebx)
+		]]},
+	}))
+
+	IEex_HookJump(0x4765DC, 0, IEex_FlattenTable({
+		{[[
+			!push_all_registers_iwd2
+		]]},
+		IEex_GenLuaCall("IEex_Extern_RejectGetWorldCoordinates", {
+			["args"] = {
+				{"!lea(eax,[edi+4CC]) !push_eax"},
+				{"!push([ebp])"},
+				{"!push([ebp+4])"},
+			},
+			["returnType"] = IEex_LuaCallReturnType.Boolean,
+		}),
+		{[[
+			!jmp_dword >no_error
+
+			@call_error
+			!xor_eax_eax
+
+			@no_error
+			!test_eax_eax
+			!pop_all_registers_iwd2
+			!jnz_dword >jmp_success
+			!cmp(ecx,edx)
+		]]},
+	}))
+
+	IEex_HookJump(0x475465, 0, IEex_FlattenTable({
+		{[[
+			!push_all_registers_iwd2
+		]]},
+		IEex_GenLuaCall("IEex_Extern_RejectGetWorldCoordinates", {
+			["args"] = {
+				{"!lea(eax,[esi+4CC]) !push_eax"},
+				{"!push([edi])"},
+				{"!push([edi+4])"},
+			},
+			["returnType"] = IEex_LuaCallReturnType.Boolean,
+		}),
+		{[[
+			!jmp_dword >no_error
+
+			@call_error
+			!xor_eax_eax
+
+			@no_error
+			!test_eax_eax
+			!pop_all_registers_iwd2
+			!jnz_dword >jmp_success
+			!cmp(eax,[esi+514])
+		]]},
+	}))
+
+	-----------------------------------------------------
+	-- IEex_Extern_OverrideWorldScreenScrollbarFocus() --
+	-----------------------------------------------------
+
+	-- [Before !push_all_registers_iwd2]
+	-- Don't crash in CScreenWorld_TimerSynchronousUpdate() if m_displayStale
+	-- was set to 1 by the above patch when in the middle of a quickload.
+	-- TODO: Review other cases of m_displayStale being used to block while
+	-- waiting for another thread to finish a task.
+	IEex_HookAfterRestore(0x68DECB, 0, 5, IEex_FlattenTable({
+		{[[
+			!cmp([ebp+4],0) ; m_UIManager->m_resLoaded ;
+			!jz_dword :68DF04
+			!push_all_registers_iwd2
+		]]},
+		IEex_GenLuaCall("IEex_Extern_OverrideWorldScreenScrollbarFocus", {
+			["returnType"] = IEex_LuaCallReturnType.Boolean,
+		}),
+		{[[
+			!jmp_dword >no_error
+
+			@call_error
+			!xor_eax_eax
+
+			@no_error
+			!test_eax_eax
+			!pop_all_registers_iwd2
+			!jnz_dword :68DF04
+		]]},
+	}))
+
+	---------------------------------------
+	-- IEex_Extern_OnSetActionbarState() --
+	---------------------------------------
+
+	IEex_HookRestore(0x589110, 0, 5, IEex_FlattenTable({
+		{[[
+			!mark_esp
+			!push_all_registers_iwd2
+		]]},
+		IEex_GenLuaCall("IEex_Extern_OnSetActionbarState", {
+			["args"] = {
+				{"!marked_esp !push([esp+4])"}, -- nState
+			},
+		}),
+		{[[
+			@call_error
+			!pop_all_registers_iwd2
+		]]},
+	}))
+
+	----------------------------------------------------
+	-- IEex_Extern_OnActionbarUnhandledRButtonClick() --
+	----------------------------------------------------
+
+	IEex_HookJumpOnSuccess(0x5947DA, IEex_FlattenTable({
+		{[[
+			!mark_esp
+			!push_all_registers_iwd2
+		]]},
+		IEex_GenLuaCall("IEex_Extern_OnActionbarUnhandledRButtonClick", {
+			["args"] = {
+				{"!push_esi"}, -- nIndex
+			},
+		}),
+		{[[
+			@call_error
+			!pop_all_registers_iwd2
+			!jmp_dword >jmp_success
+		]]},
+	}))
+
+	----------------------------------------
+	-- IEex_Extern_RejectWorldScreenEsc() --
+	----------------------------------------
+
+	IEex_HookRestore(0x68785E, 0, 6, IEex_FlattenTable({
+		{[[
+			!push_all_registers_iwd2
+		]]},
+		IEex_GenLuaCall("IEex_Extern_RejectWorldScreenEsc", {
+			["returnType"] = IEex_LuaCallReturnType.Boolean,
+		}),
+		{[[
+			!jmp_dword >no_error
+
+			@call_error
+			!xor_eax_eax
+
+			@no_error
+			!test_eax_eax
+			!pop_all_registers_iwd2
+			!jnz_dword :689504
+		]]},
+	}))
 
 	IEex_EnableCodeProtection()
 

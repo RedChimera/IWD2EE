@@ -1,7 +1,7 @@
 
----------------
--- Functions --
----------------
+-----------------------
+-- General Functions --
+-----------------------
 
 function IEex_WritePrivateProfileString(lpAppName, lpKeyName, lpString, lpFileName)
 	IEex_RunWithStackManager({
@@ -72,6 +72,18 @@ function IEex_GetCursorXY()
 	local x = IEex_ReadDword(g_pBaldurChitin + 0x1906)
 	local y = IEex_ReadDword(g_pBaldurChitin + 0x190A)
 	return x, y
+end
+
+function IEex_GetViewportRectFromCInfinity(CInfinity)
+	local rViewPort = CInfinity + 0x48
+	return IEex_ReadDword(rViewPort),       -- left
+		   IEex_ReadDword(rViewPort + 0x4), -- top
+		   IEex_ReadDword(rViewPort + 0x8), -- right
+		   IEex_ReadDword(rViewPort + 0xC)  -- bottom
+end
+
+function IEex_GetViewportRect()
+	return IEex_GetViewportRectFromCInfinity(IEex_GetCInfinity())
 end
 
 function IEex_SetViewportBottom(bottom)
@@ -175,6 +187,11 @@ function IEex_IsControlOnPanel(CUIControl, CUIPanel)
 	return IEex_GetControlPanel(CUIControl) == CUIPanel
 end
 
+function IEex_IsPointOverPanel(CUIPanel, x, y)
+	local panelX, panelY, panelW, panelH = IEex_GetPanelArea(CUIPanel)
+	return x >= panelX and x <= (panelX + panelW) and y >= panelY and y <= (panelY + panelH)
+end
+
 function IEex_IsPointOverControl(CUIControl, x, y)
 	local controlX, controlY, controlW, controlH = IEex_GetControlAreaAbsolute(CUIControl)
 	return x >= controlX and x <= (controlX + controlW) and y >= controlY and y <= (controlY + controlH)
@@ -249,9 +266,17 @@ function IEex_SetControlButtonFrameUpForce(CUIControlButton, frame)
 	IEex_SetControlButtonFrame(CUIControlButton, frame)
 end
 
+function IEex_SetControlButtonMageSpellInfoIcon(CUIControlButtonMageSpellInfoIcon, resref)
+	IEex_RunWithStackManager({
+		{["name"] = "resref",  ["struct"] = "CResRef", ["constructor"] = {["luaArgs"] = {resref}  }}, },
+		function(manager)
+			IEex_Call(0x66E500, {manager:getAddress("resref")}, CUIControlButtonMageSpellInfoIcon, 0x0)
+		end)
+end
+
 function IEex_SetPanelXY(CUIPanel, x, y)
-	IEex_WriteDword(CUIPanel + 0x24, x)
-	IEex_WriteDword(CUIPanel + 0x28, y)
+	if x then IEex_WriteDword(CUIPanel + 0x24, x) end
+	if y then IEex_WriteDword(CUIPanel + 0x28, y) end
 end
 
 function IEex_SetControlXY(CUIControl, x, y)
@@ -526,8 +551,215 @@ function IEex_Quickloot_IsControlOnPanel(control)
 	return IEex_IsControlOnPanel(control, IEex_Quickloot_GetPanel())
 end
 
+---------------------------------------
+-- World Screen Spell Info Functions --
+---------------------------------------
+
+function IEex_LaunchWorldScreenSpellInfo(spellResref)
+
+	local spellWrapper = IEex_DemandRes(spellResref, "SPL")
+	if not spellWrapper:isValid() then
+		return
+	end
+
+	local worldScreen = IEex_GetEngineWorld()
+	local newSpellInfoPanel = IEex_GetPanelFromEngine(worldScreen, IEex_WorldScreenSpellInfoPanelID)
+
+	local spellData = spellWrapper:getData()
+	local spellName = IEex_FetchString(IEex_ReadDword(spellData + 0x8))
+	local spellDesc = IEex_FetchString(IEex_ReadDword(spellData + 0x50))
+	spellWrapper:free()
+
+	local nameLabel = IEex_GetControlFromPanel(newSpellInfoPanel, 1)
+	IEex_SetControlLabelText(nameLabel, spellName)
+
+	local iconControl = IEex_GetControlFromPanel(newSpellInfoPanel, 2)
+	IEex_SetControlButtonMageSpellInfoIcon(iconControl, spellResref)
+	IEex_SetPanelActive(newSpellInfoPanel, true)
+
+	local descTextDisplay = IEex_GetControlFromPanel(newSpellInfoPanel, 3)
+	IEex_SetControlTextDisplay(descTextDisplay, spellDesc)
+end
+
+---------------
+-- Listeners --
+---------------
+
+function IEex_GuiKeyPressedListener(key)
+	local worldScreen = IEex_GetEngineWorld()
+	if IEex_GetActiveEngine() == worldScreen then
+		if key == IEex_KeyIDS.ESC then
+			local newSpellInfoPanel = IEex_GetPanelFromEngine(worldScreen, IEex_WorldScreenSpellInfoPanelID)
+			IEex_SetPanelActive(newSpellInfoPanel, false)
+		end
+	end
+end
+
+IEex_AbsoluteOnce("IEex_GuiKeyPressedListener", function()
+	if not IEex_InAsyncState then return false end
+	IEex_AddKeyPressedListener("IEex_GuiKeyPressedListener")
+end)
+
+------------------------
+-- GUI Hook Functions --
+------------------------
+
+function IEex_IsUIBlockingViewport(nCursorX, nCursorY)
+	local worldScreen = IEex_GetEngineWorld()
+	if IEex_GetActiveEngine() == worldScreen then
+		local newSpellInfoPanel = IEex_GetPanelFromEngine(worldScreen, IEex_WorldScreenSpellInfoPanelID)
+		if IEex_IsPanelActive(newSpellInfoPanel) and IEex_IsPointOverPanel(newSpellInfoPanel, nCursorX, nCursorY) then
+			return true
+		end
+	end
+	return false
+end
+
+function IEex_MouseInViewport(CInfinity, nCursorX, nCursorY)
+
+	if IEex_IsUIBlockingViewport(nCursorX, nCursorY) then
+		return false
+	end
+
+	local rViewPortLeft, rViewPortTop, rViewPortRight, rViewPortBottom = IEex_GetViewportRectFromCInfinity(CInfinity)
+	return nCursorX >= rViewPortLeft and nCursorX < rViewPortRight
+	   and nCursorY >= rViewPortTop  and nCursorY < rViewPortBottom
+end
+
+------------------
+-- Thread: Sync --
+------------------
+
+function IEex_Extern_AfterWorldRender()
+
+	IEex_AssertThread(IEex_Thread.Sync, true)
+
+	local worldScreen = IEex_GetEngineWorld()
+	local newSpellInfoPanel = IEex_GetPanelFromEngine(worldScreen, IEex_WorldScreenSpellInfoPanelID)
+
+	if IEex_IsPanelActive(newSpellInfoPanel) then
+
+		local rViewPortLeft, rViewPortTop, rViewPortRight, rViewPortBottom = IEex_GetViewportRect()
+		local _, _, panelWidth, panelHeight = IEex_GetPanelArea(newSpellInfoPanel)
+		local centeredX = rViewPortLeft + (rViewPortRight - rViewPortLeft) / 2 - panelWidth / 2
+		local centeredY = rViewPortTop + (rViewPortBottom - rViewPortTop) / 2 - panelHeight / 2
+
+		IEex_SetPanelXY(newSpellInfoPanel, centeredX, centeredY)
+		IEex_PanelInvalidate(newSpellInfoPanel)
+	end
+end
+
+function IEex_Extern_OverrideWorldScreenScrollbarFocus()
+
+	IEex_AssertThread(IEex_Thread.Sync, true)
+
+	local worldScreen = IEex_GetEngineWorld()
+	local newSpellInfoPanel = IEex_GetPanelFromEngine(worldScreen, IEex_WorldScreenSpellInfoPanelID)
+
+	if IEex_IsPanelActive(newSpellInfoPanel) then
+		local descTextDisplayScrollbar = IEex_GetControlFromPanel(newSpellInfoPanel, 4)
+		IEex_SetEngineScrollbarFocus(worldScreen, descTextDisplayScrollbar)
+		return true
+	end
+
+	return false
+end
+
 -------------------
--- GUI Constants --
+-- Thread: Async --
+-------------------
+
+function IEex_Extern_MouseInAreaViewport(CGameArea)
+
+	IEex_AssertThread(IEex_Thread.Async, true)
+
+	if IEex_GetActiveEngine() ~= IEex_GetEngineWorld() then
+		return false
+	end
+
+	local nCursorX = IEex_ReadDword(CGameArea + 0x256)
+	local nCursorY = IEex_ReadDword(CGameArea + 0x25A)
+	return IEex_MouseInViewport(IEex_GetCInfinityFromArea(CGameArea), nCursorX, nCursorY)
+end
+
+function IEex_Extern_RejectGetWorldCoordinates(CInfinity, x, y)
+	IEex_AssertThread(IEex_Thread.Async, true)
+	return IEex_IsUIBlockingViewport(x, y)
+end
+
+function IEex_Extern_OnActionbarUnhandledRButtonClick(nIndex)
+	IEex_AssertThread(IEex_Thread.Async, true)
+	local nState = IEex_GetActionbarState()
+	if nState == 0x66 or nState == 0x67 or nState == 0x6A or nState == 0x6B then
+		local nButtonType = IEex_GetActionbarButtonType(nIndex)
+		if nButtonType >= 0x15 and nButtonType <= 0x20 then
+			local nScrollIndex = IEex_GetActionbarScrollIndex()
+			local nSpellButtonIndex = nScrollIndex + (nButtonType - 0x15)
+			local buttonData = IEex_GetAtCPtrListIndex(IEex_GetCurrentActionbarQuickButtons(), nSpellButtonIndex)
+			local resref = IEex_ReadLString(buttonData + 0x1A + 0x6, 8) -- CButtonData.m_abilityId.m_res
+			IEex_LaunchWorldScreenSpellInfo(resref)
+		end
+	end
+end
+
+function IEex_Extern_RejectWorldScreenEsc()
+	IEex_AssertThread(IEex_Thread.Async, true)
+	local newSpellInfoPanel = IEex_GetPanelFromEngine(IEex_GetEngineWorld(), IEex_WorldScreenSpellInfoPanelID)
+	return IEex_IsPanelActive(newSpellInfoPanel)
+end
+
+------------------
+-- Thread: Both --
+------------------
+
+function IEex_Extern_OnSetActionbarState(nState)
+	IEex_AssertThread(IEex_Thread.Both, true)
+	if IEex_GetGameData() == 0x0 then return end
+end
+
+function IEex_Extern_CUIManager_fInit_CHUInitialized(CUIManager, resrefPointer)
+
+	IEex_AssertThread(IEex_Thread.Both, true)
+	local resref = IEex_ReadLString(resrefPointer, 8)
+
+	IEex_OnCHUInitialized(resref)
+
+	local resrefOverride = IEex_Helper_GetBridge("IEex_GUIConstants", "panelActiveByDefault", resref)
+	if not resrefOverride then return end
+
+	IEex_Helper_IterateBridge(resrefOverride, function(panelID, active)
+		local panel = IEex_GetPanel(CUIManager, panelID)
+		if panel ~= 0x0 then
+			IEex_SetPanelActive(panel, active)
+		end
+	end)
+end
+
+function IEex_Extern_CUIControlBase_CreateControl(resrefPointer, panel, controlInfo)
+
+	IEex_AssertThread(IEex_Thread.Both, true)
+
+	local resref = IEex_ReadLString(resrefPointer, 8)
+	local panelID = IEex_ReadDword(panel + 0x20)
+	local controlID = IEex_ReadDword(controlInfo)
+
+	local controlOverride = IEex_Helper_GetBridge("IEex_GUIConstants", "controlOverrides", resref, panelID, controlID)
+	if not controlOverride then return 0x0 end
+
+	local controlMeta = IEex_Helper_GetBridge("IEex_GUIConstants", "controlTypeMeta", controlOverride)
+	if not controlMeta then
+		IEex_TracebackMessage("IEex Critical Error - No metadata defined for IEex_ControlType "..controlOverride)
+		return 0x0
+	end
+
+	local control = IEex_Malloc(IEex_Helper_GetBridge(controlMeta, "size"))
+	IEex_Call(IEex_Helper_GetBridge(controlMeta, "constructor"), {controlInfo, panel}, control, 0x0)
+
+	return control
+end
+
+-------------------
+-- GUI Additions --
 -------------------
 
 IEex_Helper_InitBridgeFromTable("IEex_GUIConstants", {
@@ -543,6 +775,7 @@ IEex_Helper_InitBridgeFromTable("IEex_GUIConstants", {
 
 	["controlTypeMeta"] = {
 		["ButtonWorldContainerSlot"] = { ["constructor"] = 0x6956F0, ["size"] = 0x666 },
+		["ButtonMageSpellInfoIcon"] =  { ["constructor"] = 0x66E3A0, ["size"] = 0x676 },
 	},
 
 	["controlOverrides"] = {
@@ -653,7 +886,7 @@ function IEex_DefineCustomControl(controlName, controlStructType, args)
 			!marked_esp !push([esp+8]) ; pControlInfo ;
 			!marked_esp !push([esp+4]) ; pPanel ;
 			!mov(ecx,esi)
-			!call :4E1A90 ; CUIControlEditMultiLine_Construct ;
+			!call :4E1A90 ; CUIControlTextDisplay_Construct ;
 			!mov([esi],$1) ]], {newVFTable}, [[
 			!mov(eax,esi)
 			!pop(esi)
@@ -672,7 +905,7 @@ function IEex_DefineCustomControl(controlName, controlStructType, args)
 			!marked_esp !push([esp+8]) ; pControlInfo ;
 			!marked_esp !push([esp+4]) ; pPanel ;
 			!mov(ecx,esi)
-			!call :4E47C0 ; CUIControlEditMultiLine_Construct ;
+			!call :4E47C0 ; CUIControlTextDisplay_Construct ;
 			!mov([esi],$1) ]], {newVFTable}, [[
 			!mov(eax,esi)
 			!pop(esi)
@@ -825,56 +1058,9 @@ function IEex_AddPanelToEngine(CBaldurEngine, args)
 	return CUIPanel
 end
 
-------------------------
--- GUI Hook Functions --
-------------------------
-
-------------------
--- Thread: Both --
-------------------
-
-function IEex_Extern_CUIManager_fInit_CHUInitialized(CUIManager, resrefPointer)
-
-	IEex_AssertThread(IEex_Thread.Both, true)
-	local resref = IEex_ReadLString(resrefPointer, 8)
-
-	local resrefOverride = IEex_Helper_GetBridge("IEex_GUIConstants", "panelActiveByDefault", resref)
-	if not resrefOverride then return end
-
-	IEex_Helper_IterateBridge(resrefOverride, function(panelID, active)
-		local panel = IEex_GetPanel(CUIManager, panelID)
-		if panel ~= 0x0 then
-			IEex_SetPanelActive(panel, active)
-		end
-	end)
-end
-
-function IEex_Extern_CUIControlBase_CreateControl(resrefPointer, panel, controlInfo)
-
-	IEex_AssertThread(IEex_Thread.Both, true)
-
-	local resref = IEex_ReadLString(resrefPointer, 8)
-	local panelID = IEex_ReadDword(panel + 0x20)
-	local controlID = IEex_ReadDword(controlInfo)
-
-	local controlOverride = IEex_Helper_GetBridge("IEex_GUIConstants", "controlOverrides", resref, panelID, controlID)
-	if not controlOverride then return 0x0 end
-
-	local controlMeta = IEex_Helper_GetBridge("IEex_GUIConstants", "controlTypeMeta", controlOverride)
-	if not controlMeta then
-		IEex_TracebackMessage("IEex Critical Error - No metadata defined for IEex_ControlType "..controlOverride)
-		return 0x0
-	end
-
-	local control = IEex_Malloc(IEex_Helper_GetBridge(controlMeta, "size"))
-	IEex_Call(IEex_Helper_GetBridge(controlMeta, "constructor"), {controlInfo, panel}, control, 0x0)
-
-	return control
-end
-
---------------------------------
--- General Custom UI Controls --
---------------------------------
+----------------------------------------
+-- General Custom UI Control Handlers --
+----------------------------------------
 
 -------------------
 -- Thread: Async --
@@ -904,6 +1090,15 @@ function IEex_Extern_UI_ButtonLClick(CUIControlButton)
 		IEex_SetPanelEnabled(IEex_GetPanelFromEngine(engine, 1), enabled)
 		IEex_SetPanelEnabled(IEex_GetPanelFromEngine(engine, 2), enabled)
 	end
+
+	local worldHandler = {
+		[IEex_WorldScreenSpellInfoPanelID] = {
+			[5] = function()
+				local newSpellInfoPanel = IEex_GetPanelFromEngine(IEex_GetEngineWorld(), IEex_WorldScreenSpellInfoPanelID)
+				IEex_SetPanelActive(newSpellInfoPanel, false)
+			end
+		}
+	}
 
 	local handlers = {
 		["GUIOPT"] = {
@@ -981,6 +1176,8 @@ function IEex_Extern_UI_ButtonLClick(CUIControlButton)
 				end,
 			},
 		},
+		["GUIW08"] = worldHandler,
+		["GUIW10"] = worldHandler,
 	}
 
 	local resrefHandler = handlers[resref]
@@ -1021,6 +1218,562 @@ function IEex_Extern_UI_LabelLDown(CUIControlLabel)
 	if controlHandler then
 		controlHandler()
 	end
+end
+
+---------------------
+-- Quickloot Hooks --
+---------------------
+
+-------------------
+-- Thread: Async --
+-------------------
+
+function IEex_Extern_CScreenWorld_AsynchronousUpdate()
+
+	IEex_AssertThread(IEex_Thread.Async, true)
+
+	if IEex_Helper_GetBridge("IEex_Quickloot", "on") then
+
+		local worldScreen = IEex_GetEngineWorld()
+		local panelActive = IEex_Quickloot_IsPanelActive()
+
+		-- Need to hide if dialog / container is present
+		if panelActive and (
+			   IEex_IsPanelActive(IEex_GetPanelFromEngine(worldScreen, 7))
+			or IEex_IsPanelActive(IEex_GetPanelFromEngine(worldScreen, 8)))
+		then
+			IEex_Quickloot_Hide(false)
+		elseif IEex_IsPanelActive(IEex_GetPanelFromEngine(worldScreen, 1)) then
+			-- This calls IEex_Quickloot_UpdateItems() internally.
+			-- It's a little ineffecient to call this every tick,
+			-- but this is the only way I've found to maintain state
+			-- correctly when dialog / opening containers screws around
+			-- with the viewport.
+			IEex_Quickloot_Show()
+		end
+	end
+end
+
+function IEex_Extern_Quickloot_ScrollLeft()
+	IEex_AssertThread(IEex_Thread.Async, true)
+	IEex_Helper_SynchronizedBridgeOperation("IEex_Quickloot", function()
+		local itemsAccessIndex = IEex_Helper_GetBridgeNL("IEex_Quickloot", "itemsAccessIndex")
+		IEex_Helper_SetBridgeNL("IEex_Quickloot", "itemsAccessIndex", math.max(1, itemsAccessIndex - 10))
+	end)
+end
+
+function IEex_Extern_Quickloot_ScrollRight()
+	IEex_AssertThread(IEex_Thread.Async, true)
+	IEex_Helper_SynchronizedBridgeOperation("IEex_Quickloot", function()
+		local itemsAccessIndex = IEex_Helper_GetBridgeNL("IEex_Quickloot", "itemsAccessIndex")
+		local maxIndex = math.max(1, IEex_Helper_GetBridgeNumIntsNL("IEex_Quickloot", "items") - 10 + 1)
+		IEex_Helper_SetBridgeNL("IEex_Quickloot", "itemsAccessIndex", math.min(itemsAccessIndex + 10, maxIndex))
+	end)
+end
+
+function IEex_Extern_CScreenWorld_OnInventoryButtonRClick()
+	IEex_AssertThread(IEex_Thread.Async, true)
+	if IEex_Helper_GetBridge("IEex_Quickloot", "on") then
+		IEex_Quickloot_Stop()
+	else
+		IEex_Quickloot_Start()
+	end
+end
+
+function IEex_Extern_CUIControlButtonWorldContainerSlot_OnLButtonClick_Done(control)
+	IEex_AssertThread(IEex_Thread.Async, true)
+	IEex_Helper_SynchronizedBridgeOperation("IEex_Quickloot", function()
+		local pendingItemsAccessChange = IEex_Helper_GetBridgeNL("IEex_Quickloot", "pendingItemsAccessChange") - 1
+		IEex_Helper_SetBridgeNL("IEex_Quickloot", "pendingItemsAccessChange", pendingItemsAccessChange)
+	end)
+end
+
+function IEex_Extern_CUIControlButtonWorldContainerSlot_OnLButtonClick_GetOnlyUpdateSlot(control)
+	IEex_AssertThread(IEex_Thread.Async, true)
+	return IEex_Quickloot_IsControlOnPanel(control)
+end
+
+------------------
+-- Thread: Both --
+------------------
+
+function IEex_Extern_GetHighlightContainerID()
+	IEex_AssertThread(IEex_Thread.Both, true)
+	return IEex_Helper_GetBridge("IEex_Quickloot", "highlightContainerID")
+end
+
+-- (Render->Sync, OnLClick->Async)
+function IEex_Extern_CUIControlButtonWorldContainerSlot_GetActiveContainerID(control)
+	IEex_AssertThread(IEex_Thread.Both, true)
+	if IEex_Quickloot_IsControlOnPanel(control) then
+		return IEex_Quickloot_GetSlotData(IEex_GetControlID(control)).containerID
+	else
+		return -1
+	end
+end
+
+-- (Render->Sync, OnLClick->Async)
+function IEex_Extern_CUIControlButtonWorldContainerSlot_GetActiveContainerSpriteID(control)
+	IEex_AssertThread(IEex_Thread.Both, true)
+	if IEex_Quickloot_IsControlOnPanel(control) then
+		return IEex_Quickloot_GetValidPartyMember()
+	else
+		return -1
+	end
+end
+
+-- (Render->Sync, OnLClick->Async)
+function IEex_Extern_CUIControlButtonWorldContainerSlot_GetContainerItemIndex(control)
+	IEex_AssertThread(IEex_Thread.Both, true)
+	if IEex_Quickloot_IsControlOnPanel(control) then
+		return IEex_Quickloot_GetSlotData(IEex_GetControlID(control)).slotIndex
+	else
+		return -1
+	end
+end
+
+----------------------------
+-- Define Custom Controls --
+----------------------------
+
+IEex_AbsoluteOnce("IEex_CustomControls", function()
+
+	if not IEex_InAsyncState then return false end
+
+	---------------
+	-- Quickloot --
+	---------------
+
+	-------------------------------
+	-- IEex_Quickloot_ScrollLeft --
+	-------------------------------
+
+	IEex_DefineCustomControl("IEex_Quickloot_ScrollLeft", IEex_ControlStructType.BUTTON, {
+		["OnLButtonClick"] = IEex_WriteAssemblyAuto(IEex_FlattenTable({
+			{"!push_all_registers_iwd2"},
+			IEex_GenLuaCall("IEex_Extern_Quickloot_ScrollLeft", {
+				["args"] = {
+					{"!push(ecx)"},
+				},
+			}),
+			{[[
+				@call_error
+				!pop_all_registers_iwd2
+				!ret_word 08 00
+			]]}
+		})),
+		["OnLButtonDoubleClick"] = 0x4D4D70, -- CUIControlButton_OnLButtonDown; prevents double-click cooldown.
+	})
+
+	IEex_AddControlOverride("GUIW08", 23, 10, "IEex_Quickloot_ScrollLeft")
+	IEex_AddControlOverride("GUIW10", 23, 10, "IEex_Quickloot_ScrollLeft")
+
+	--------------------------------
+	-- IEex_Quickloot_ScrollRight --
+	--------------------------------
+
+	IEex_DefineCustomControl("IEex_Quickloot_ScrollRight", IEex_ControlStructType.BUTTON, {
+		["OnLButtonClick"] = IEex_WriteAssemblyAuto(IEex_FlattenTable({
+			{"!push_all_registers_iwd2"},
+			IEex_GenLuaCall("IEex_Extern_Quickloot_ScrollRight", {
+				["args"] = {
+					{"!push(ecx)"},
+				},
+			}),
+			{[[
+				@call_error
+				!pop_all_registers_iwd2
+				!ret_word 08 00
+			]]}
+		})),
+		["OnLButtonDoubleClick"] = 0x4D4D70, -- CUIControlButton_OnLButtonDown; prevents double-click cooldown.
+	})
+
+
+	IEex_AddControlOverride("GUIW08", 23, 11, "IEex_Quickloot_ScrollRight")
+	IEex_AddControlOverride("GUIW10", 23, 11, "IEex_Quickloot_ScrollRight")
+
+	--------------------------------
+	-- General Custom UI Controls --
+	--------------------------------
+
+	IEex_DefineCustomControl("IEex_UI_Button", IEex_ControlStructType.BUTTON, {
+		["OnLButtonClick"] = IEex_WriteAssemblyAuto(IEex_FlattenTable({
+			{"!push_all_registers_iwd2"},
+			IEex_GenLuaCall("IEex_Extern_UI_ButtonLClick", {
+				["args"] = {
+					{"!push(ecx)"},
+				},
+			}),
+			{[[
+				@call_error
+				!pop_all_registers_iwd2
+				!ret_word 08 00
+			]]}
+		})),
+		["OnLButtonDoubleClick"] = 0x4D4D70, -- CUIControlButton_OnLButtonDown; prevents double-click cooldown.
+	})
+
+	IEex_DefineCustomControl("IEex_UI_Label", IEex_ControlStructType.LABEL, {
+		["OnLButtonDown"] = IEex_WriteAssemblyAuto(IEex_FlattenTable({
+			{"!push_all_registers_iwd2"},
+			IEex_GenLuaCall("IEex_Extern_UI_LabelLDown", {
+				["args"] = {
+					{"!push(ecx)"},
+				},
+			}),
+			{[[
+				@call_error
+				!pop_all_registers_iwd2
+				!ret_word 08 00
+			]]}
+		})),
+	})
+
+	IEex_DefineCustomControl("IEex_UI_TextArea", IEex_ControlStructType.TEXT_AREA, {})
+	IEex_DefineCustomControl("IEex_UI_Scrollbar", IEex_ControlStructType.SCROLL_BAR, {})
+
+	------------------
+	-- IEex Options --
+	------------------
+
+	local screenOptions = IEex_GetEngineOptions()
+	local worldOptionsPanel = IEex_GetPanelFromEngine(screenOptions, 2)
+
+	-- Move the normal "Return" button over to make room
+	IEex_SetControlXY(IEex_GetControlFromPanel(worldOptionsPanel, 11), 612, 338)
+
+	IEex_AddControlOverride("GUIOPT", 2, 15, "IEex_UI_Button")
+	IEex_AddControlToPanel(worldOptionsPanel, {
+		["type"] = IEex_ControlStructType.BUTTON,
+		["id"] = 15,
+		["x"] = 497,
+		["y"] = 338,
+		["width"] = 117,
+		["height"] = 25,
+		["bam"] = "GBTNSTD",
+		["frameUnpressed"] = 1,
+		["framePressed"] = 2,
+		["frameDisabled"] = 3,
+	})
+	IEex_SetControlButtonText(IEex_GetControlFromPanel(worldOptionsPanel, 15), "IEex Options")
+
+	-- IEex Options panel - ID 14
+	local newOptionsPanel = IEex_AddPanelToEngine(screenOptions, {
+		["id"] = 14,
+		["width"] = 800,
+		["height"] = 433,
+		["hasBackground"] = 1,
+		["backgroundImage"] = "GOPPAUB",
+	})
+
+	-- "IEex Options" Label - ID 0
+	IEex_AddControlOverride("GUIOPT", 14, 0, "IEex_UI_Label")
+	IEex_AddControlToPanel(newOptionsPanel, {
+		["type"] = IEex_ControlStructType.LABEL,
+		["id"] = 0,
+		["x"] = 279,
+		["y"] = 23,
+		["width"] = 242,
+		["height"] = 30,
+		["fontBam"] = "STONEBIG",
+		["textFlags"] = 0x44, -- Center justify(4) | Middle justify(6)
+	})
+	IEex_SetControlLabelText(IEex_GetControlFromPanel(newOptionsPanel, 0), "IEex Options")
+
+	-- "Done" Button - ID 1
+	IEex_AddControlOverride("GUIOPT", 14, 1, "IEex_UI_Button")
+	IEex_AddControlToPanel(newOptionsPanel, {
+		["type"] = IEex_ControlStructType.BUTTON,
+		["id"] = 1,
+		["x"] = 614,
+		["y"] = 338,
+		["width"] = 117,
+		["height"] = 25,
+		["bam"] = "GBTNSTD",
+		["frameUnpressed"] = 1,
+		["framePressed"] = 2,
+		["frameDisabled"] = 3,
+	})
+	IEex_SetControlButtonText(IEex_GetControlFromPanel(newOptionsPanel, 1), "Done")
+
+	-- "Cancel" Button - ID 2
+	IEex_AddControlOverride("GUIOPT", 14, 2, "IEex_UI_Button")
+	IEex_AddControlToPanel(newOptionsPanel, {
+		["type"] = IEex_ControlStructType.BUTTON,
+		["id"] = 2,
+		["x"] = 491,
+		["y"] = 338,
+		["width"] = 117,
+		["height"] = 25,
+		["bam"] = "GBTNSTD",
+		["frameUnpressed"] = 1,
+		["framePressed"] = 2,
+		["frameDisabled"] = 3,
+	})
+	IEex_SetControlButtonText(IEex_GetControlFromPanel(newOptionsPanel, 2), "Cancel")
+
+	-- Description Area - ID 3
+	IEex_AddControlOverride("GUIOPT", 14, 3, "IEex_UI_TextArea")
+	IEex_AddControlToPanel(newOptionsPanel, {
+		["type"] = IEex_ControlStructType.TEXT_AREA,
+		["id"] = 3,
+		["x"] = 438,
+		["y"] = 71,
+		["width"] = 270,
+		["height"] = 253,
+		["fontBam"] = "NORMAL",
+		["scrollbarID"] = 4,
+	})
+
+	-- Description Area Scrollbar - ID 4
+	IEex_AddControlOverride("GUIOPT", 14, 4, "IEex_UI_Scrollbar")
+	IEex_AddControlToPanel(newOptionsPanel, {
+		["type"] = IEex_ControlStructType.SCROLL_BAR,
+		["id"] = 4,
+		["x"] = 717,
+		["y"] = 69,
+		["width"] = 12,
+		["height"] = 257,
+		["graphicsBam"] = "GBTNSCRL",
+		["animationNumber"] = 0,
+		["upArrowFrameUnpressed"] = 0,
+		["upArrowFramePressed"] = 1,
+		["downArrowFrameUnpressed"] = 2,
+		["downArrowFramePressed"] = 3,
+		["troughFrame"] = 4,
+		["sliderFrame"] = 5,
+		["textAreaID"] = 3,
+	})
+
+	-- "Transparent Fog of War" Label - ID 5
+	IEex_AddControlOverride("GUIOPT", 14, 5, "IEex_UI_Label")
+	IEex_AddControlToPanel(newOptionsPanel, {
+		["type"] = IEex_ControlStructType.LABEL,
+		["id"] = 5,
+		["x"] = 74,
+		["y"] = 70,
+		["width"] = 308,
+		["height"] = 18,
+		["fontBam"] = "NORMAL",
+		["textFlags"] = 0x51, -- Use color(0) | Right justify(4) | Middle justify(6)
+	})
+	IEex_SetControlLabelText(IEex_GetControlFromPanel(newOptionsPanel, 5), "Transparent Fog of War")
+
+	-- "Transparent Fog of War" Toggle - ID 6
+	IEex_AddControlOverride("GUIOPT", 14, 6, "IEex_UI_Button")
+	IEex_AddControlToPanel(newOptionsPanel, {
+		["type"] = IEex_ControlStructType.BUTTON,
+		["id"] = 6,
+		["x"] = 394,
+		["y"] = 67,
+		["width"] = 23,
+		["height"] = 24,
+		["bam"] = "GBTNOPT3",
+		["frameUnpressed"] = 1,
+		["framePressed"] = 2,
+	})
+
+	IEex_SetPanelActive(newOptionsPanel, false)
+
+end)
+
+IEex_WorldScreenSpellInfoPanelID = 50
+
+-- Use this function to modify existing panels / controls
+function IEex_OnCHUInitialized(chuResref)
+
+	if chuResref == "GUIW08" or chuResref == "GUIW10" then
+
+		----------------------------------
+		-- Worldscreen Spell Info Popup --
+		----------------------------------
+
+		local worldScreen = IEex_GetEngineWorld()
+
+		-- IEex Spell Info - Panel ID <IEex_WorldScreenSpellInfoPanelID>
+		local newSpellInfoPanel = IEex_AddPanelToEngine(worldScreen, {
+			["id"] = IEex_WorldScreenSpellInfoPanelID,
+			["width"] = 429,
+			["height"] = 446,
+			["hasBackground"] = 1,
+			["backgroundImage"] = "GUISPLHB",
+		})
+
+		-- "Spell information" label - Control ID 0
+		IEex_AddControlOverride(chuResref, IEex_WorldScreenSpellInfoPanelID, 0, "IEex_UI_Label")
+		IEex_AddControlToPanel(newSpellInfoPanel, {
+			["type"] = IEex_ControlStructType.LABEL,
+			["id"] = 0,
+			["x"] = 22,
+			["y"] = 22,
+			["width"] = 343,
+			["height"] = 20,
+			["initialTextStrref"] = 16189, -- "Spell Information"
+			["fontBam"] = "NORMAL",
+			["fontColor1"] = 0xFFFFFF,
+			["textFlags"] = 0x45, -- Use color(0) | Center justify(4) | Middle justify(6)
+		})
+
+		-- Spell name label - Control ID 1
+		IEex_AddControlOverride(chuResref, IEex_WorldScreenSpellInfoPanelID, 1, "IEex_UI_Label")
+		IEex_AddControlToPanel(newSpellInfoPanel, {
+			["type"] = IEex_ControlStructType.LABEL,
+			["id"] = 1,
+			["x"] = 22,
+			["y"] = 52,
+			["width"] = 343,
+			["height"] = 20,
+			["fontBam"] = "NORMAL",
+			["fontColor1"] = 0xFFFFFF,
+			["textFlags"] = 0x45, -- Use color(0) | Center justify(4) | Middle justify(6)
+		})
+
+		-- Spell icon - Control ID 2
+		IEex_AddControlOverride(chuResref, IEex_WorldScreenSpellInfoPanelID, 2, "ButtonMageSpellInfoIcon")
+		IEex_AddControlToPanel(newSpellInfoPanel, {
+			["type"] = IEex_ControlStructType.BUTTON,
+			["id"] = 2,
+			["x"] = 375,
+			["y"] = 22,
+			["bam"] = "",
+			["width"] = 32,
+			["height"] = 32,
+		})
+
+		-- Spell description area - Control ID 3
+		IEex_AddControlOverride(chuResref, IEex_WorldScreenSpellInfoPanelID, 3, "IEex_UI_TextArea")
+		IEex_AddControlToPanel(newSpellInfoPanel, {
+			["type"] = IEex_ControlStructType.TEXT_AREA,
+			["id"] = 3,
+			["x"] = 23,
+			["y"] = 83,
+			["width"] = 363,
+			["height"] = 312,
+			["fontBam"] = "NORMAL",
+			["scrollbarID"] = 4,
+		})
+
+		-- Spell description area scrollbar - Control ID 4
+		IEex_AddControlOverride(chuResref, IEex_WorldScreenSpellInfoPanelID, 4, "IEex_UI_Scrollbar")
+		IEex_AddControlToPanel(newSpellInfoPanel, {
+			["type"] = IEex_ControlStructType.SCROLL_BAR,
+			["id"] = 4,
+			["x"] = 396,
+			["y"] = 82,
+			["width"] = 12,
+			["height"] = 313,
+			["graphicsBam"] = "GBTNSCRL",
+			["animationNumber"] = 0,
+			["upArrowFrameUnpressed"] = 0,
+			["upArrowFramePressed"] = 1,
+			["downArrowFrameUnpressed"] = 2,
+			["downArrowFramePressed"] = 3,
+			["troughFrame"] = 4,
+			["sliderFrame"] = 5,
+			["textAreaID"] = 3,
+		})
+
+		-- "Done" - Control ID 5
+		IEex_AddControlOverride(chuResref, IEex_WorldScreenSpellInfoPanelID, 5, "IEex_UI_Button")
+		IEex_AddControlToPanel(newSpellInfoPanel, {
+			["type"] = IEex_ControlStructType.BUTTON,
+			["id"] = 5,
+			["x"] = 135,
+			["y"] = 402,
+			["width"] = 156,
+			["height"] = 24,
+			["bam"] = "GBTNMED",
+			["frameUnpressed"] = 1,
+			["framePressed"] = 2,
+			["frameDisabled"] = 3,
+		})
+		IEex_SetControlButtonText(IEex_GetControlFromPanel(newSpellInfoPanel, 5), IEex_FetchString(11973))
+
+		IEex_SetPanelActive(newSpellInfoPanel, false)
+	end
+end
+
+------------------
+-- IEex Options --
+------------------
+
+IEex_Helper_InitBridgeFromTable("IEex_Options", {
+	["options"] = {
+		["transparentFogOfWar"] = false,
+	},
+	["workingOptions"] = {},
+	["fogTypePtr"] = 0x0,
+})
+
+IEex_AbsoluteOnce("IEex_InitFogTypePtr", function()
+	IEex_FogTypePtr = IEex_Malloc(0x4)
+	IEex_WriteDword(IEex_FogTypePtr, IEex_Helper_GetBridgePtr("IEex_Options", "options", "transparentFogOfWar"))
+	IEex_Helper_SetBridge("IEex_Options", "fogTypePtr", IEex_FogTypePtr)
+end)
+IEex_FogTypePtr = IEex_FogTypePtr or IEex_Helper_GetBridge("IEex_Options", "fogTypePtr")
+
+function IEex_LoadOptions()
+
+	local options = IEex_Helper_GetBridge("IEex_Options", "options")
+	IEex_Helper_SetBridge(options, "transparentFogOfWar",
+    	IEex_GetPrivateProfileInt("IEex Options", "Transparent Fog of War", 0, ".\\Icewind2.ini") ~= 0 and true or false)
+
+	IEex_InitOptionButtons()
+end
+
+function IEex_WriteOptions()
+	IEex_WritePrivateProfileString("IEex Options", "Transparent Fog of War",
+		IEex_Helper_GetBridge("IEex_Options", "options", "transparentFogOfWar") and "1" or "0", ".\\Icewind2.ini")
+end
+
+function IEex_InitOptionButtons()
+
+	local screenOptions = IEex_GetEngineOptions()
+	local newOptionsPanel = IEex_GetPanelFromEngine(screenOptions, 14)
+	local options = IEex_Helper_GetBridge("IEex_Options", "options")
+
+	IEex_SetTextAreaToString(screenOptions, 14, 3, "")
+
+	IEex_SetControlButtonFrameUpForce(IEex_GetControlFromPanel(newOptionsPanel, 6),
+		IEex_Helper_GetBridge(options, "transparentFogOfWar") and 3 or 1)
+end
+
+IEex_AbsoluteOnce("IEex_InitOptions", function()
+	if not IEex_InAsyncState then return false end
+	IEex_LoadOptions()
+end)
+
+function IEex_Extern_OnOptionsScreenESC(CScreenOptions)
+
+	local trySetPanelEnabled = function(panel, enabled)
+		if panel ~= 0x0 then
+			IEex_SetPanelEnabled(panel, enabled)
+		end
+	end
+
+	local setCommonPanelsEnabled = function(engine, enabled)
+		trySetPanelEnabled(IEex_GetPanelFromEngine(engine, -2), enabled)
+		trySetPanelEnabled(IEex_GetPanelFromEngine(engine, -3), enabled)
+		trySetPanelEnabled(IEex_GetPanelFromEngine(engine, -4), enabled)
+		trySetPanelEnabled(IEex_GetPanelFromEngine(engine, -5), enabled)
+		IEex_SetPanelEnabled(IEex_GetPanelFromEngine(engine, 0), enabled)
+		IEex_SetPanelEnabled(IEex_GetPanelFromEngine(engine, 1), enabled)
+		IEex_SetPanelEnabled(IEex_GetPanelFromEngine(engine, 2), enabled)
+	end
+
+	local lastPanel = IEex_ReadDword(IEex_ReadDword(CScreenOptions + 0x43C) + 0x8)
+	if IEex_GetPanelID(lastPanel) == 14 then
+		IEex_Call(0x7FB343, {}, CScreenOptions + 0x434, 0x0) -- CPtrList_RemoveTail()
+		local screenOptions = IEex_GetEngineOptions()
+		local worldOptionsPanel = IEex_GetPanelFromEngine(screenOptions, 2)
+		local newOptionsPanel = IEex_GetPanelFromEngine(screenOptions, 14)
+		IEex_SetPanelActive(newOptionsPanel, false)
+		setCommonPanelsEnabled(screenOptions, true)
+		IEex_SetPanelEnabled(worldOptionsPanel, true)
+		return true
+	end
+	return false
 end
 
 ------------------------------------
@@ -1674,447 +2427,6 @@ function IEex_Extern_OnUpdateRecordDescription(CScreenCharacter, CGameSprite, CU
 			end
 		end
 	end
-end
-
----------------
--- Quickloot --
----------------
-
--------------------
--- Thread: Async --
--------------------
-
-function IEex_Extern_CScreenWorld_AsynchronousUpdate()
-
-	IEex_AssertThread(IEex_Thread.Async, true)
-
-	if IEex_Helper_GetBridge("IEex_Quickloot", "on") then
-
-		local worldScreen = IEex_GetEngineWorld()
-		local panelActive = IEex_Quickloot_IsPanelActive()
-
-		-- Need to hide if dialog / container is present
-		if panelActive and (
-			   IEex_IsPanelActive(IEex_GetPanelFromEngine(worldScreen, 7))
-			or IEex_IsPanelActive(IEex_GetPanelFromEngine(worldScreen, 8)))
-		then
-			IEex_Quickloot_Hide(false)
-		elseif IEex_IsPanelActive(IEex_GetPanelFromEngine(worldScreen, 1)) then
-			-- This calls IEex_Quickloot_UpdateItems() internally.
-			-- It's a little ineffecient to call this every tick,
-			-- but this is the only way I've found to maintain state
-			-- correctly when dialog / opening containers screws around
-			-- with the viewport.
-			IEex_Quickloot_Show()
-		end
-	end
-end
-
-function IEex_Extern_Quickloot_ScrollLeft()
-	IEex_AssertThread(IEex_Thread.Async, true)
-	IEex_Helper_SynchronizedBridgeOperation("IEex_Quickloot", function()
-		local itemsAccessIndex = IEex_Helper_GetBridgeNL("IEex_Quickloot", "itemsAccessIndex")
-		IEex_Helper_SetBridgeNL("IEex_Quickloot", "itemsAccessIndex", math.max(1, itemsAccessIndex - 10))
-	end)
-end
-
-function IEex_Extern_Quickloot_ScrollRight()
-	IEex_AssertThread(IEex_Thread.Async, true)
-	IEex_Helper_SynchronizedBridgeOperation("IEex_Quickloot", function()
-		local itemsAccessIndex = IEex_Helper_GetBridgeNL("IEex_Quickloot", "itemsAccessIndex")
-		local maxIndex = math.max(1, IEex_Helper_GetBridgeNumIntsNL("IEex_Quickloot", "items") - 10 + 1)
-		IEex_Helper_SetBridgeNL("IEex_Quickloot", "itemsAccessIndex", math.min(itemsAccessIndex + 10, maxIndex))
-	end)
-end
-
-function IEex_Extern_CScreenWorld_OnInventoryButtonRClick()
-	IEex_AssertThread(IEex_Thread.Async, true)
-	if IEex_Helper_GetBridge("IEex_Quickloot", "on") then
-		IEex_Quickloot_Stop()
-	else
-		IEex_Quickloot_Start()
-	end
-end
-
-function IEex_Extern_CUIControlButtonWorldContainerSlot_OnLButtonClick_Done(control)
-	IEex_AssertThread(IEex_Thread.Async, true)
-	IEex_Helper_SynchronizedBridgeOperation("IEex_Quickloot", function()
-		local pendingItemsAccessChange = IEex_Helper_GetBridgeNL("IEex_Quickloot", "pendingItemsAccessChange") - 1
-		IEex_Helper_SetBridgeNL("IEex_Quickloot", "pendingItemsAccessChange", pendingItemsAccessChange)
-	end)
-end
-
-function IEex_Extern_CUIControlButtonWorldContainerSlot_OnLButtonClick_GetOnlyUpdateSlot(control)
-	IEex_AssertThread(IEex_Thread.Async, true)
-	return IEex_Quickloot_IsControlOnPanel(control)
-end
-
-------------------
--- Thread: Both --
-------------------
-
-function IEex_Extern_GetHighlightContainerID()
-	IEex_AssertThread(IEex_Thread.Both, true)
-	return IEex_Helper_GetBridge("IEex_Quickloot", "highlightContainerID")
-end
-
--- (Render->Sync, OnLClick->Async)
-function IEex_Extern_CUIControlButtonWorldContainerSlot_GetActiveContainerID(control)
-	IEex_AssertThread(IEex_Thread.Both, true)
-	if IEex_Quickloot_IsControlOnPanel(control) then
-		return IEex_Quickloot_GetSlotData(IEex_GetControlID(control)).containerID
-	else
-		return -1
-	end
-end
-
--- (Render->Sync, OnLClick->Async)
-function IEex_Extern_CUIControlButtonWorldContainerSlot_GetActiveContainerSpriteID(control)
-	IEex_AssertThread(IEex_Thread.Both, true)
-	if IEex_Quickloot_IsControlOnPanel(control) then
-		return IEex_Quickloot_GetValidPartyMember()
-	else
-		return -1
-	end
-end
-
--- (Render->Sync, OnLClick->Async)
-function IEex_Extern_CUIControlButtonWorldContainerSlot_GetContainerItemIndex(control)
-	IEex_AssertThread(IEex_Thread.Both, true)
-	if IEex_Quickloot_IsControlOnPanel(control) then
-		return IEex_Quickloot_GetSlotData(IEex_GetControlID(control)).slotIndex
-	else
-		return -1
-	end
-end
-
-----------------------------
--- Define Custom Controls --
-----------------------------
-
-IEex_AbsoluteOnce("IEex_CustomControls", function()
-
-	if not IEex_InAsyncState then return false end
-
-	---------------
-	-- Quickloot --
-	---------------
-
-	-------------------------------
-	-- IEex_Quickloot_ScrollLeft --
-	-------------------------------
-
-	IEex_DefineCustomControl("IEex_Quickloot_ScrollLeft", IEex_ControlStructType.BUTTON, {
-		["OnLButtonClick"] = IEex_WriteAssemblyAuto(IEex_FlattenTable({
-			{"!push_all_registers_iwd2"},
-			IEex_GenLuaCall("IEex_Extern_Quickloot_ScrollLeft", {
-				["args"] = {
-					{"!push(ecx)"},
-				},
-			}),
-			{[[
-				@call_error
-				!pop_all_registers_iwd2
-				!ret_word 08 00
-			]]}
-		})),
-		["OnLButtonDoubleClick"] = 0x4D4D70, -- CUIControlButton_OnLButtonDown; prevents double-click cooldown.
-	})
-
-	IEex_AddControlOverride("GUIW08", 23, 10, "IEex_Quickloot_ScrollLeft")
-	IEex_AddControlOverride("GUIW10", 23, 10, "IEex_Quickloot_ScrollLeft")
-
-	--------------------------------
-	-- IEex_Quickloot_ScrollRight --
-	--------------------------------
-
-	IEex_DefineCustomControl("IEex_Quickloot_ScrollRight", IEex_ControlStructType.BUTTON, {
-		["OnLButtonClick"] = IEex_WriteAssemblyAuto(IEex_FlattenTable({
-			{"!push_all_registers_iwd2"},
-			IEex_GenLuaCall("IEex_Extern_Quickloot_ScrollRight", {
-				["args"] = {
-					{"!push(ecx)"},
-				},
-			}),
-			{[[
-				@call_error
-				!pop_all_registers_iwd2
-				!ret_word 08 00
-			]]}
-		})),
-		["OnLButtonDoubleClick"] = 0x4D4D70, -- CUIControlButton_OnLButtonDown; prevents double-click cooldown.
-	})
-
-
-	IEex_AddControlOverride("GUIW08", 23, 11, "IEex_Quickloot_ScrollRight")
-	IEex_AddControlOverride("GUIW10", 23, 11, "IEex_Quickloot_ScrollRight")
-
-	--------------------------------
-	-- General Custom UI Controls --
-	--------------------------------
-
-	IEex_DefineCustomControl("IEex_UI_Button", IEex_ControlStructType.BUTTON, {
-		["OnLButtonClick"] = IEex_WriteAssemblyAuto(IEex_FlattenTable({
-			{"!push_all_registers_iwd2"},
-			IEex_GenLuaCall("IEex_Extern_UI_ButtonLClick", {
-				["args"] = {
-					{"!push(ecx)"},
-				},
-			}),
-			{[[
-				@call_error
-				!pop_all_registers_iwd2
-				!ret_word 08 00
-			]]}
-		})),
-		["OnLButtonDoubleClick"] = 0x4D4D70, -- CUIControlButton_OnLButtonDown; prevents double-click cooldown.
-	})
-
-	IEex_DefineCustomControl("IEex_UI_Label", IEex_ControlStructType.LABEL, {
-		["OnLButtonDown"] = IEex_WriteAssemblyAuto(IEex_FlattenTable({
-			{"!push_all_registers_iwd2"},
-			IEex_GenLuaCall("IEex_Extern_UI_LabelLDown", {
-				["args"] = {
-					{"!push(ecx)"},
-				},
-			}),
-			{[[
-				@call_error
-				!pop_all_registers_iwd2
-				!ret_word 08 00
-			]]}
-		})),
-	})
-
-	IEex_DefineCustomControl("IEex_UI_TextArea", IEex_ControlStructType.TEXT_AREA, {})
-	IEex_DefineCustomControl("IEex_UI_Scrollbar", IEex_ControlStructType.SCROLL_BAR, {})
-
-	------------------
-	-- IEex Options --
-	------------------
-
-	local screenOptions = IEex_GetEngineOptions()
-	local worldOptionsPanel = IEex_GetPanelFromEngine(screenOptions, 2)
-
-	-- Move the normal "Return" button over to make room
-	IEex_SetControlXY(IEex_GetControlFromPanel(worldOptionsPanel, 11), 612, 338)
-
-	IEex_AddControlOverride("GUIOPT", 2, 15, "IEex_UI_Button")
-	IEex_AddControlToPanel(worldOptionsPanel, {
-		["type"] = IEex_ControlStructType.BUTTON,
-		["id"] = 15,
-		["x"] = 497,
-		["y"] = 338,
-		["width"] = 117,
-		["height"] = 25,
-		["bam"] = "GBTNSTD",
-		["frameUnpressed"] = 1,
-		["framePressed"] = 2,
-		["frameDisabled"] = 3,
-	})
-	IEex_SetControlButtonText(IEex_GetControlFromPanel(worldOptionsPanel, 15), "IEex Options")
-
-	-- IEex Options panel - ID 14
-	local newOptionsPanel = IEex_AddPanelToEngine(screenOptions, {
-		["id"] = 14,
-		["width"] = 800,
-		["height"] = 433,
-		["hasBackground"] = 1,
-		["backgroundImage"] = "GOPPAUB",
-	})
-
-	-- "IEex Options" Label - ID 0
-	IEex_AddControlOverride("GUIOPT", 14, 0, "IEex_UI_Label")
-	IEex_AddControlToPanel(newOptionsPanel, {
-		["type"] = IEex_ControlStructType.LABEL,
-		["id"] = 0,
-		["x"] = 279,
-		["y"] = 23,
-		["width"] = 242,
-		["height"] = 30,
-		["fontBam"] = "STONEBIG",
-		["textFlags"] = 0x44, -- Center justify(4) | Middle justify(6)
-	})
-	IEex_SetControlLabelText(IEex_GetControlFromPanel(newOptionsPanel, 0), "IEex Options")
-
-	-- "Done" Button - ID 1
-	IEex_AddControlOverride("GUIOPT", 14, 1, "IEex_UI_Button")
-	IEex_AddControlToPanel(newOptionsPanel, {
-		["type"] = IEex_ControlStructType.BUTTON,
-		["id"] = 1,
-		["x"] = 614,
-		["y"] = 338,
-		["width"] = 117,
-		["height"] = 25,
-		["bam"] = "GBTNSTD",
-		["frameUnpressed"] = 1,
-		["framePressed"] = 2,
-		["frameDisabled"] = 3,
-	})
-	IEex_SetControlButtonText(IEex_GetControlFromPanel(newOptionsPanel, 1), "Done")
-
-	-- "Cancel" Button - ID 2
-	IEex_AddControlOverride("GUIOPT", 14, 2, "IEex_UI_Button")
-	IEex_AddControlToPanel(newOptionsPanel, {
-		["type"] = IEex_ControlStructType.BUTTON,
-		["id"] = 2,
-		["x"] = 491,
-		["y"] = 338,
-		["width"] = 117,
-		["height"] = 25,
-		["bam"] = "GBTNSTD",
-		["frameUnpressed"] = 1,
-		["framePressed"] = 2,
-		["frameDisabled"] = 3,
-	})
-	IEex_SetControlButtonText(IEex_GetControlFromPanel(newOptionsPanel, 2), "Cancel")
-
-	-- Description Area - ID 3
-	IEex_AddControlOverride("GUIOPT", 14, 3, "IEex_UI_TextArea")
-	IEex_AddControlToPanel(newOptionsPanel, {
-		["type"] = IEex_ControlStructType.TEXT_AREA,
-		["id"] = 3,
-		["x"] = 438,
-		["y"] = 71,
-		["width"] = 270,
-		["height"] = 253,
-		["fontBam"] = "NORMAL",
-		["scrollbarID"] = 4,
-	})
-
-	-- Description Area Scrollbar - ID 4
-	IEex_AddControlOverride("GUIOPT", 14, 4, "IEex_UI_Scrollbar")
-	IEex_AddControlToPanel(newOptionsPanel, {
-		["type"] = IEex_ControlStructType.SCROLL_BAR,
-		["id"] = 4,
-		["x"] = 717,
-		["y"] = 69,
-		["width"] = 12,
-		["height"] = 257,
-		["graphicsBam"] = "GBTNSCRL",
-		["animationNumber"] = 0,
-		["upArrowFrameUnpressed"] = 0,
-		["upArrowFramePressed"] = 1,
-		["downArrowFrameUnpressed"] = 2,
-		["downArrowFramePressed"] = 3,
-		["troughFrame"] = 4,
-		["sliderFrame"] = 5,
-		["textAreaID"] = 3,
-	})
-
-	-- "Transparent Fog of War" Label - ID 5
-	IEex_AddControlOverride("GUIOPT", 14, 5, "IEex_UI_Label")
-	IEex_AddControlToPanel(newOptionsPanel, {
-		["type"] = IEex_ControlStructType.LABEL,
-		["id"] = 5,
-		["x"] = 74,
-		["y"] = 70,
-		["width"] = 308,
-		["height"] = 18,
-		["fontBam"] = "NORMAL",
-		["textFlags"] = 0x51, -- Use color(0) | Right justify(4) | Middle justify(6)
-	})
-	IEex_SetControlLabelText(IEex_GetControlFromPanel(newOptionsPanel, 5), "Transparent Fog of War")
-
-	-- "Transparent Fog of War" Toggle - ID 6
-	IEex_AddControlOverride("GUIOPT", 14, 6, "IEex_UI_Button")
-	IEex_AddControlToPanel(newOptionsPanel, {
-		["type"] = IEex_ControlStructType.BUTTON,
-		["id"] = 6,
-		["x"] = 394,
-		["y"] = 67,
-		["width"] = 23,
-		["height"] = 24,
-		["bam"] = "GBTNOPT3",
-		["frameUnpressed"] = 1,
-		["framePressed"] = 2,
-	})
-
-
-	IEex_SetPanelActive(newOptionsPanel, false)
-
-end)
-
-------------------
--- IEex Options --
-------------------
-
-IEex_Helper_InitBridgeFromTable("IEex_Options", {
-	["options"] = {
-		["transparentFogOfWar"] = false,
-	},
-	["workingOptions"] = {},
-	["fogTypePtr"] = 0x0,
-})
-
-IEex_AbsoluteOnce("IEex_InitFogTypePtr", function()
-	IEex_FogTypePtr = IEex_Malloc(0x4)
-	IEex_WriteDword(IEex_FogTypePtr, IEex_Helper_GetBridgePtr("IEex_Options", "options", "transparentFogOfWar"))
-	IEex_Helper_SetBridge("IEex_Options", "fogTypePtr", IEex_FogTypePtr)
-end)
-IEex_FogTypePtr = IEex_FogTypePtr or IEex_Helper_GetBridge("IEex_Options", "fogTypePtr")
-
-function IEex_LoadOptions()
-
-	local options = IEex_Helper_GetBridge("IEex_Options", "options")
-	IEex_Helper_SetBridge(options, "transparentFogOfWar",
-    	IEex_GetPrivateProfileInt("IEex Options", "Transparent Fog of War", 0, ".\\Icewind2.ini") ~= 0 and true or false)
-
-	IEex_InitOptionButtons()
-end
-
-function IEex_WriteOptions()
-	IEex_WritePrivateProfileString("IEex Options", "Transparent Fog of War",
-		IEex_Helper_GetBridge("IEex_Options", "options", "transparentFogOfWar") and "1" or "0", ".\\Icewind2.ini")
-end
-
-function IEex_InitOptionButtons()
-
-	local screenOptions = IEex_GetEngineOptions()
-	local newOptionsPanel = IEex_GetPanelFromEngine(screenOptions, 14)
-	local options = IEex_Helper_GetBridge("IEex_Options", "options")
-
-	IEex_SetTextAreaToString(screenOptions, 14, 3, "")
-
-	IEex_SetControlButtonFrameUpForce(IEex_GetControlFromPanel(newOptionsPanel, 6),
-		IEex_Helper_GetBridge(options, "transparentFogOfWar") and 3 or 1)
-end
-
-IEex_AbsoluteOnce("IEex_InitOptions", function()
-	if not IEex_InAsyncState then return false end
-	IEex_LoadOptions()
-end)
-
-function IEex_Extern_OnOptionsScreenESC(CScreenOptions)
-
-	local trySetPanelEnabled = function(panel, enabled)
-		if panel ~= 0x0 then
-			IEex_SetPanelEnabled(panel, enabled)
-		end
-	end
-
-	local setCommonPanelsEnabled = function(engine, enabled)
-		trySetPanelEnabled(IEex_GetPanelFromEngine(engine, -2), enabled)
-		trySetPanelEnabled(IEex_GetPanelFromEngine(engine, -3), enabled)
-		trySetPanelEnabled(IEex_GetPanelFromEngine(engine, -4), enabled)
-		trySetPanelEnabled(IEex_GetPanelFromEngine(engine, -5), enabled)
-		IEex_SetPanelEnabled(IEex_GetPanelFromEngine(engine, 0), enabled)
-		IEex_SetPanelEnabled(IEex_GetPanelFromEngine(engine, 1), enabled)
-		IEex_SetPanelEnabled(IEex_GetPanelFromEngine(engine, 2), enabled)
-	end
-
-	local lastPanel = IEex_ReadDword(IEex_ReadDword(CScreenOptions + 0x43C) + 0x8)
-	if IEex_GetPanelID(lastPanel) == 14 then
-		IEex_Call(0x7FB343, {}, CScreenOptions + 0x434, 0x0) -- CPtrList_RemoveTail()
-		local screenOptions = IEex_GetEngineOptions()
-		local worldOptionsPanel = IEex_GetPanelFromEngine(screenOptions, 2)
-		local newOptionsPanel = IEex_GetPanelFromEngine(screenOptions, 14)
-		IEex_SetPanelActive(newOptionsPanel, false)
-		setCommonPanelsEnabled(screenOptions, true)
-		IEex_SetPanelEnabled(worldOptionsPanel, true)
-		return true
-	end
-	return false
 end
 
 ---------

@@ -371,6 +371,16 @@ function IEex_IterateCPtrList(CPtrList, func)
 	end
 end
 
+function IEex_GetAtCPtrListIndex(CPtrList, index)
+	local pNode = IEex_ReadDword(CPtrList + 0x4)
+	for i = 0, index - 1 do
+		if pNode == 0x0 then return nil end
+		pNode = IEex_ReadDword(pNode)
+	end
+	if pNode == 0x0 then return nil end
+	return IEex_ReadDword(pNode + 0x8)
+end
+
 function IEex_FlattenTable(table)
 	local toReturn = {}
 	local insertionIndex = 1
