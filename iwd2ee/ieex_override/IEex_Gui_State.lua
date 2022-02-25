@@ -595,9 +595,18 @@ function IEex_GuiKeyPressedListener(key)
 	end
 end
 
-IEex_AbsoluteOnce("IEex_GuiKeyPressedListener", function()
-	if not IEex_InAsyncState then return false end
+function IEex_GuiRegisterListeners()
 	IEex_AddKeyPressedListener("IEex_GuiKeyPressedListener")
+end
+
+function IEex_GuiReloadListener()
+	IEex_GuiRegisterListeners()
+	IEex_ReaddReloadListener("IEex_GuiReloadListener")
+end
+
+IEex_AbsoluteOnce("IEex_GuiInitListeners", function()
+	IEex_GuiRegisterListeners()
+	IEex_AddReloadListener("IEex_GuiReloadListener")
 end)
 
 ------------------------
