@@ -24,12 +24,12 @@ function IEex_Free(address)
 end
 
 function IEex_ReadByte(address, index)
-	return bit.extract(IEex_ReadDword(address), index * 0x8, 0x8)
+	return bit.extract(IEex_ReadDword(address), (index or 0) * 0x8, 0x8)
 end
 
 -- Reads a dword from the given address, extracting and returning the "index"th signed byte.
 function IEex_ReadSignedByte(address, index)
-	local readValue = bit.extract(IEex_ReadDword(address), index * 0x8, 0x8)
+	local readValue = bit.extract(IEex_ReadDword(address), (index or 0) * 0x8, 0x8)
 	-- TODO: Implement better conversion code.
 	if readValue >= 128 then
 		return -256 + readValue
@@ -39,12 +39,12 @@ function IEex_ReadSignedByte(address, index)
 end
 
 function IEex_ReadWord(address, index)
-	return bit.extract(IEex_ReadDword(address), index * 0x10, 0x10)
+	return bit.extract(IEex_ReadDword(address), (index or 0) * 0x10, 0x10)
 end
 
 -- Reads a signed 2-byte word at the given address, shifted over by 2*index bytes.
 function IEex_ReadSignedWord(address, index)
-	local readValue = bit.extract(IEex_ReadDword(address), index * 0x10, 0x10)
+	local readValue = bit.extract(IEex_ReadDword(address), (index or 0) * 0x10, 0x10)
 	-- TODO: This is definitely not the right way to do the conversion,
 	-- but I have at least 32 bits to play around with; will do for now.
 	if readValue >= 32768 then
@@ -513,11 +513,11 @@ IEex_WriteFailType = {
 }
 
 function IEex_WriteArgs(address, args, writeDefs)
-	writeTypeFunc = {
-		[IEex_WriteType.BYTE]   = IEex_WriteByte,
-		[IEex_WriteType.WORD]   = IEex_WriteWord,
-		[IEex_WriteType.DWORD]  = IEex_WriteDword,
-		[IEex_WriteType.RESREF] = function(address, arg) IEex_WriteLString(address, arg, 0x8) end,
+	local writeTypeFunc = {
+		[IEex_WriteType.BYTE]    = IEex_WriteByte,
+		[IEex_WriteType.WORD]    = IEex_WriteWord,
+		[IEex_WriteType.DWORD]   = IEex_WriteDword,
+		[IEex_WriteType.RESREF]  = function(address, arg) IEex_WriteLString(address, arg, 0x8) end,
 		[IEex_WriteType.LSTRING] = function(address, arg, len) IEex_WriteLString(address, arg, len) end,
 	}
 	for _, writeDef in ipairs(writeDefs) do
@@ -544,6 +544,33 @@ function IEex_WriteArgs(address, args, writeDefs)
 			end
 		end
 	end
+end
+
+IEex_ReadType = {
+	["BYTE"]    = 0,
+	["WORD"]    = 1,
+	["DWORD"]   = 2,
+	["RESREF"]  = 3,
+	["LSTRING"] = 4,
+}
+
+function IEex_FillArgs(toFill, address, readDefs)
+	local readTypeFunc = {
+		[IEex_ReadType.BYTE]    = function(address, readDef) return IEex_ReadByte(address) end,
+		[IEex_ReadType.WORD]    = function(address, readDef) return IEex_ReadWord(address) end,
+		[IEex_ReadType.DWORD]   = function(address, readDef) return IEex_ReadDword(address) end,
+		[IEex_ReadType.RESREF]  = function(address, readDef) return IEex_ReadLString(address, 0x8) end,
+		[IEex_ReadType.LSTRING] = function(address, readDef) return IEex_ReadLString(address, readDef[4]) end,
+	}
+	for _, readDef in ipairs(readDefs) do
+		toFill[readDef[1]] = readTypeFunc[readDef[3]](address + readDef[2], readDef)
+	end
+end
+
+function IEex_ReadArgs(address, readDefs)
+	local toReturn = {}
+	IEex_FillArgs(toReturn, address, readDefs)
+	return toReturn
 end
 
 ---------------

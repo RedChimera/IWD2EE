@@ -257,6 +257,10 @@ function IEex_SetControlButtonFrameUp(CUIControlButton, frame)
 	IEex_WriteWord(CUIControlButton + 0x12C, frame)
 end
 
+function IEex_SetControlButtonFrameDown(CUIControlButton, frame)
+	IEex_WriteWord(CUIControlButton + 0x12E, frame)
+end
+
 function IEex_SetControlButtonFrame(CUIControlButton, frame)
 	IEex_WriteWord(CUIControlButton + 0x116, frame)
 end
@@ -353,6 +357,47 @@ function IEex_GetGroundPilesAroundActor(actorID)
 
 	toReturn.defaultContainerID = defaultContainerID
 	return toReturn
+end
+
+function IEex_MapCHU(chuWrapper)
+
+	local chuData = chuWrapper:getData()
+
+	local panelIDToAddress = {}
+	local panelIDToControlIDToAddress = {}
+
+	local curPanelAddress = chuData + IEex_ReadDword(chuData + 0x10)
+	local numPanels = IEex_ReadDword(chuData + 0x8)
+
+	for i = 1, numPanels do
+
+		local panelID = IEex_ReadWord(curPanelAddress, 0)
+		panelIDToAddress[panelID] = curPanelAddress
+
+		local controlIDToAddress = {}
+		panelIDToControlIDToAddress[panelID] = controlIDToAddress
+
+		local firstControlIndex = IEex_ReadWord(curPanelAddress + 0x18)
+		local currentListingIndex = chuData + IEex_ReadDword(chuData + 0xC) + (firstControlIndex * 0x8)
+		local numControls = IEex_ReadWord(curPanelAddress + 0xE)
+
+		for j = 1, numControls do
+			local currentControlAddress = chuData + IEex_ReadDword(currentListingIndex)
+			local controlID = IEex_ReadWord(currentControlAddress)
+			controlIDToAddress[controlID] = currentControlAddress
+			currentListingIndex = currentListingIndex + 0x8
+		end
+
+		curPanelAddress = curPanelAddress + 0x1C
+	end
+
+	chuWrapper.getPanel = function(panelID)
+		return panelIDToAddress[panelID]
+	end
+
+	chuWrapper.getControl = function(panelID, controlID)
+		return (panelIDToControlIDToAddress[panelID] or {})[controlID]
+	end
 end
 
 -------------------------
@@ -961,23 +1006,29 @@ IEex_ControlStructType = {
 	["SCROLL_BAR"] = 7,
 }
 
+IEex_ControlStructTypeLength = {
+	[IEex_ControlStructType.BUTTON]     = 0x20,
+	[IEex_ControlStructType.UNKNOWN1]   = 0xE,
+	[IEex_ControlStructType.SLIDER]     = 0x34,
+	[IEex_ControlStructType.TEXT_FIELD] = 0x6A,
+	[IEex_ControlStructType.UNKNOWN2]   = 0xE,
+	[IEex_ControlStructType.TEXT_AREA]  = 0x2E,
+	[IEex_ControlStructType.LABEL]      = 0x24,
+	[IEex_ControlStructType.SCROLL_BAR] = 0x28,
+}
+
+function IEex_AddControlStToPanel(CUIPanel, UI_Control_st)
+	IEex_Call(0x4D2AE0, {UI_Control_st}, CUIPanel, 0x0)
+end
+
 function IEex_AddControlToPanel(CUIPanel, args)
 
 	local type = args.type
 	if not type then IEex_Error("type must be defined") end
 
-	local typeLength = ({
-		[IEex_ControlStructType.BUTTON]     = 0x20,
-		[IEex_ControlStructType.UNKNOWN1]   = 0xE,
-		[IEex_ControlStructType.SLIDER]     = 0x34,
-		[IEex_ControlStructType.TEXT_FIELD] = 0x6A,
-		[IEex_ControlStructType.UNKNOWN2]   = 0xE,
-		[IEex_ControlStructType.TEXT_AREA]  = 0x2E,
-		[IEex_ControlStructType.LABEL]      = 0x24,
-		[IEex_ControlStructType.SCROLL_BAR] = 0x28,
-	})[type]
-
+	local typeLength = IEex_ControlStructTypeLength[type]
 	if not typeLength then IEex_Error("Invalid type") end
+
 	local UI_Control_st = IEex_Malloc(typeLength)
 
 	IEex_WriteArgs(UI_Control_st, args, {
@@ -1038,8 +1089,74 @@ function IEex_AddControlToPanel(CUIPanel, args)
 		IEex_Error("type unimplemented")
 	end
 
-	IEex_Call(0x4D2AE0, {UI_Control_st}, CUIPanel, 0x0)
+	IEex_AddControlStToPanel(CUIPanel, UI_Control_st)
 	IEex_Free(UI_Control_st)
+end
+
+function IEex_ReadControlSt(UI_Control_st)
+
+	local toReturn = {}
+
+	IEex_FillArgs(toReturn, UI_Control_st, {
+		{ "id",           0x0, IEex_ReadType.WORD },
+		{ "bufferLength", 0x2, IEex_ReadType.WORD },
+		{ "x",            0x4, IEex_ReadType.WORD },
+		{ "y",            0x6, IEex_ReadType.WORD },
+		{ "width",        0x8, IEex_ReadType.WORD },
+		{ "height",       0xA, IEex_ReadType.WORD },
+		{ "type",         0xC, IEex_ReadType.BYTE },
+		{ "unknown",      0xD, IEex_ReadType.BYTE },
+	})
+
+	local type = toReturn.type
+	if type == IEex_ControlStructType.BUTTON then
+		IEex_FillArgs(toReturn, UI_Control_st, {
+			{ "bam",              0xE,  IEex_ReadType.RESREF },
+			{ "sequence",         0x16, IEex_ReadType.BYTE   },
+			{ "textFlags",        0x17, IEex_ReadType.BYTE   },
+			{ "frameUnpressed",   0x18, IEex_ReadType.BYTE   },
+			{ "textAnchorLeft",   0x19, IEex_ReadType.BYTE   },
+			{ "framePressed",     0x1A, IEex_ReadType.BYTE   },
+			{ "textAnchorRight",  0x1B, IEex_ReadType.BYTE   },
+			{ "frameSelected",    0x1C, IEex_ReadType.BYTE   },
+			{ "textAnchorTop",    0x1D, IEex_ReadType.BYTE   },
+			{ "frameDisabled",    0x1E, IEex_ReadType.BYTE   },
+			{ "textAnchorBottom", 0x1F, IEex_ReadType.BYTE   },
+		})
+	elseif type == IEex_ControlStructType.LABEL then
+		IEex_FillArgs(toReturn, UI_Control_st, {
+			{ "initialTextStrref", 0xE,  IEex_ReadType.DWORD  },
+			{ "fontBam",           0x12, IEex_ReadType.RESREF },
+			{ "fontColor1",        0x1A, IEex_ReadType.DWORD  },
+			{ "fontColor2",        0x1E, IEex_ReadType.DWORD  },
+			{ "textFlags",         0x22, IEex_ReadType.WORD   },
+		})
+	elseif type == IEex_ControlStructType.TEXT_AREA then
+		IEex_FillArgs(toReturn, UI_Control_st, {
+			{ "fontBam",         0xE,  IEex_ReadType.RESREF },
+			{ "fontBamInitials", 0x16, IEex_ReadType.RESREF },
+			{ "fontColor1",      0x1E, IEex_ReadType.DWORD  },
+			{ "fontColor2",      0x22, IEex_ReadType.DWORD  },
+			{ "fontColor3",      0x26, IEex_ReadType.DWORD  },
+			{ "scrollbarID",     0x2A, IEex_ReadType.DWORD  },
+		})
+	elseif type == IEex_ControlStructType.SCROLL_BAR then
+		IEex_FillArgs(toReturn, UI_Control_st, {
+			{ "graphicsBam",             0xE  },
+			{ "animationNumber",         0x16 },
+			{ "upArrowFrameUnpressed",   0x18 },
+			{ "upArrowFramePressed",     0x1A },
+			{ "downArrowFrameUnpressed", 0x1C },
+			{ "downArrowFramePressed",   0x1E },
+			{ "troughFrame",             0x20 },
+			{ "sliderFrame",             0x22 },
+			{ "textAreaID",              0x24 },
+		})
+	else
+		IEex_Error("type unimplemented")
+	end
+
+	return toReturn
 end
 
 function IEex_AddPanelToEngine(CBaldurEngine, args)
@@ -1594,11 +1711,66 @@ function IEex_OnCHUInitialized(chuResref)
 
 	if chuResref == "GUIW08" or chuResref == "GUIW10" then
 
+		local worldScreen = IEex_GetEngineWorld()
+
+		----------------------------------------
+		-- Fix incorrect vanilla press-frames --
+		----------------------------------------
+
+		local panel8Memory = IEex_GetPanelFromEngine(worldScreen, 8)
+		for i = 6, 9 do
+			local fixControl = IEex_GetControlFromPanel(panel8Memory, i)
+			IEex_SetControlButtonFrameDown(fixControl, 0)
+		end
+
+		---------------
+		-- Quickloot --
+		---------------
+
+		local chuWrapper = IEex_DemandRes(chuResref, "CHU")
+		IEex_MapCHU(chuWrapper)
+
+		local panel1 = chuWrapper.getPanel(1)
+		local panel1H = IEex_ReadWord(panel1 + 0xA, 0)
+		local quicklootPanel = IEex_AddPanelToEngine(worldScreen, {
+			["id"] = 23,
+			["x"] = IEex_ReadWord(panel1 + 0x4, 0),
+			["y"] = IEex_ReadWord(panel1 + 0x6, 0) - panel1H,
+			["width"] = IEex_ReadWord(panel1 + 0x8, 0),
+			["height"] = panel1H,
+			["hasBackground"] = 1,
+			["backgroundImage"] = IEex_ReadLString(panel1 + 0x10, 8)
+		})
+
+		for i = 7, 16 do
+			local test = chuWrapper.getControl(1, i)
+			local referenceControl = IEex_ReadControlSt(chuWrapper.getControl(1, i))
+			local copyControl = IEex_ReadControlSt(chuWrapper.getControl(8, i - 7))
+			copyControl.x = referenceControl.x + 1
+			copyControl.y = referenceControl.y + 1
+			copyControl.framePressed = 0 -- Don't copy bad nFrameDown from GUIW08->8->6-9
+			IEex_AddControlToPanel(quicklootPanel, copyControl)
+		end
+
+		local leftArrow = IEex_ReadControlSt(chuWrapper.getControl(1, 6))
+		leftArrow.id = 10
+		leftArrow.bam = "GUIBTACT"
+		leftArrow.frameUnpressed = 48
+		leftArrow.framePressed = 49
+		IEex_AddControlToPanel(quicklootPanel, leftArrow)
+
+		local rightArrow = IEex_ReadControlSt(chuWrapper.getControl(1, 17))
+		rightArrow.id = 11
+		rightArrow.bam = "GUIBTACT"
+		rightArrow.frameUnpressed = 52
+		rightArrow.framePressed = 53
+		IEex_AddControlToPanel(quicklootPanel, rightArrow)
+
+		chuWrapper:free()
+
 		----------------------------------
 		-- Worldscreen Spell Info Popup --
 		----------------------------------
-
-		local worldScreen = IEex_GetEngineWorld()
 
 		-- IEex Spell Info - Panel ID <IEex_WorldScreenSpellInfoPanelID>
 		local newSpellInfoPanel = IEex_AddPanelToEngine(worldScreen, {

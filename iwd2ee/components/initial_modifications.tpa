@@ -6,7 +6,6 @@ COPY ~%mod_folder%/initial~ ~override~
 
 COPY ~%mod_folder%/ieex_override~ ~override~
 COPY ~%mod_folder%/ieex_main_folder~ ~./~
-INCLUDE ~%mod_folder%/components/quickloot.tpa~
 
 ACTION_FOR_EACH file IN ACTION TRIGGER BEGIN
 	COPY ~%mod_folder%/patches/%file%.IDS~ ~%mod_folder%/patches~
