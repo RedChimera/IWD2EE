@@ -80,7 +80,7 @@ function IEex_Extern_Crashing(excCode, EXCEPTION_POINTERS)
 	if needReturn then return end
 
 	IEex_TracebackPrint("[!]", "[!]    ", "IEex detected crash; debug info:", 1)
-	IEex_DumpThreadStack("[!]     ")
+	IEex_DumpThreadStack(EXCEPTION_POINTERS, "[!]     ")
 
 	local timeFormat = "%x_%X"
 	local timeString = os.date(timeFormat):gsub("/", "_"):gsub(":", "_")

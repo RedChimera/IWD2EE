@@ -410,6 +410,55 @@ function IEex_RoundUp(numToRound, multiple)
 	return numToRound + multiple - remainder;
 end
 
+function IEex_AlphanumericConvert(s)
+	local res, dot = "", ""
+	for n, m, c in tostring(s):gmatch"(0*(%d*))(.?)" do
+		if n == "" then
+			dot, c = "", dot..c
+		else
+			res = res..(dot == "" and ("%03d%s"):format(#m, m) or "."..n)
+			dot, c = c:match"(%.?)(.*)"
+		end
+		res = res..c:gsub(".", "\0%0")
+	end
+	return res
+end
+
+function IEex_AlphanumericCompare(a, b)
+	local ca, cb = IEex_AlphanumericConvert(a), IEex_AlphanumericConvert(b)
+	return ca < cb or ca == cb and a < b
+end
+
+function IEex_GetOrCreate(t, k, default)
+	local v = t[k]
+	if v == nil then
+		t[k] = default
+		return default
+	end
+	return v
+end
+
+function IEex_IterateMapAsSorted(map, sortFunc, func)
+	local t = {}
+	local insertI = 1
+	for k, v in pairs(map) do
+		t[insertI] = { k, v }
+		insertI = insertI + 1
+	end
+	table.sort(t, sortFunc)
+	for i, v in ipairs(t) do
+		func(i, v[1], v[2])
+	end
+end
+
+function IEex_PrettyPrintHeader(str, indent)
+	indent = indent or ""
+	local topBottom = table.concat({ indent, string.rep("-", #str + 4) })
+	print(topBottom)
+	print(table.concat{ indent, "- ", str, " -" })
+	print(topBottom)
+end
+
 function IEex_CharFind(string, char, startingIndex)
 	local limit = #string
 	for i = startingIndex or 1, limit, 1 do
