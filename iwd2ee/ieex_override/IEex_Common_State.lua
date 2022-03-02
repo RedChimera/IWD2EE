@@ -513,6 +513,20 @@ function IEex_Split(text, splitBy, usePattern, allowEmptyCapture)
 	return toReturn, matchedPatterns
 end
 
+function IEex_LTrim(text)
+	text = text:gsub("^[ \t]+", "")
+	return text
+end
+
+function IEex_RTrim(text)
+	text = text:gsub("[ \t]+$", "")
+	return text
+end
+
+function IEex_Trim(text)
+	return IEex_RTrim(IEex_LTrim(text))
+end
+
 function IEex_SplitByWhitespaceProcess(text, func)
 
 	text = text:gsub("%s+", " ")
@@ -1414,7 +1428,7 @@ function IEex_HookRestore(address, restoreDelay, restoreSize, assembly)
 
 	local hookCode = IEex_WriteAssemblyAuto(IEex_FlattenTable({
 		assembly,
-		"@return",
+		"$return",
 		restoreBytes,
 		{[[
 			!jmp_dword ]], {afterInstruction, 4, 4},
@@ -1427,6 +1441,8 @@ function IEex_HookRestore(address, restoreDelay, restoreSize, assembly)
 		},
 		nops,
 	}))
+
+	return IEex_Label("return")
 end
 
 function IEex_HookAfterRestore(address, restoreDelay, restoreSize, assembly)
@@ -1452,7 +1468,7 @@ function IEex_HookAfterRestore(address, restoreDelay, restoreSize, assembly)
 	local hookCode = IEex_WriteAssemblyAuto(IEex_FlattenTable({
 		restoreBytes,
 		assembly,
-		"@return",
+		"$return",
 		{[[
 			!jmp_dword ]], {afterInstruction, 4, 4},
 		},
@@ -1464,6 +1480,8 @@ function IEex_HookAfterRestore(address, restoreDelay, restoreSize, assembly)
 		},
 		nops,
 	}))
+
+	return IEex_Label("return")
 end
 
 function IEex_AttemptHook(address, hookPart, attemptRestorePart, expectedBytes)
