@@ -51,6 +51,18 @@ IEex_MemoryManagerStructMeta = {
 		["size"] = 8,
 	},
 
+	["CRect"] = {
+		["constructors"] = {
+			["fill"] = function(ptr, left, top, right, bottom)
+				IEex_WriteDword(ptr, left)
+				IEex_WriteDword(ptr + 0x4, top)
+				IEex_WriteDword(ptr + 0x8, right)
+				IEex_WriteDword(ptr + 0xC, bottom)
+			end,
+		},
+		["size"] = 16,
+	},
+
 	["uninitialized"] = {
 		["constructors"] = {},
 		["size"] = function(luaSize)

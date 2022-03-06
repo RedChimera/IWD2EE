@@ -110,6 +110,10 @@ function IEex_PanelInvalidate(CUIPanel)
 	IEex_Call(0x4D3810, {0x0}, CUIPanel, 0x0)
 end
 
+function IEex_InvalidatePanelUIManager(panel)
+	IEex_InvalidateUIManagerRect(IEex_GetUIManagerFromPanel(panel), IEex_GetPanelArea(panel))
+end
+
 function IEex_GetPanelArea(CUIPanel)
 	local x = IEex_ReadDword(CUIPanel + 0x24)
 	local y = IEex_ReadDword(CUIPanel + 0x28)
@@ -132,6 +136,14 @@ end
 
 function IEex_GetUIManagerFromPanel(CUIPanel)
 	return IEex_ReadDword(CUIPanel)
+end
+
+function IEex_InvalidateUIManagerRect(CUIManager, l, r, t, b)
+	IEex_RunWithStackManager({
+		{["name"] = "rect", ["struct"] = "CRect", ["constructor"] = {["variant"] = "fill", ["luaArgs"] = {l, r, t, b} }}, },
+		function(manager)
+			IEex_Call(0x4D45E0, {manager:getAddress("rect")}, CUIManager, 0x0)
+		end)
 end
 
 function IEex_GetCHUResrefFromPanel(CUIPanel)
@@ -400,6 +412,19 @@ function IEex_MapCHU(chuWrapper)
 	end
 end
 
+function IEex_GetMainViewportBottom()
+	local _, _, _, minY = IEex_GetViewportRect()
+	local worldScreen = IEex_GetEngineWorld()
+	for _, panelID in ipairs({0, 1, 7, 8, 9, 6, 17, 19, 21, 22, 23}) do
+		local panel = IEex_GetPanelFromEngine(worldScreen, panelID)
+		if IEex_IsPanelActive(panel) then
+			local _, y = IEex_GetPanelArea(panel)
+			minY = math.min(minY, y)
+		end
+	end
+	return minY
+end
+
 -------------------------
 -- Quickloot Functions --
 -------------------------
@@ -626,6 +651,15 @@ function IEex_LaunchWorldScreenSpellInfo(spellResref)
 	IEex_SetControlTextDisplay(descTextDisplay, spellDesc)
 end
 
+function IEex_StopWorldScreenSpellInfo()
+	local worldScreen = IEex_GetEngineWorld()
+	local newSpellInfoPanel = IEex_GetPanelFromEngine(worldScreen, IEex_WorldScreenSpellInfoPanelID)
+	if IEex_IsPanelActive(newSpellInfoPanel) then
+		IEex_SetPanelActive(newSpellInfoPanel, false)
+		IEex_InvalidatePanelUIManager(newSpellInfoPanel)
+	end
+end
+
 ---------------
 -- Listeners --
 ---------------
@@ -634,8 +668,7 @@ function IEex_GuiKeyPressedListener(key)
 	local worldScreen = IEex_GetEngineWorld()
 	if IEex_GetActiveEngine() == worldScreen then
 		if key == IEex_KeyIDS.ESC then
-			local newSpellInfoPanel = IEex_GetPanelFromEngine(worldScreen, IEex_WorldScreenSpellInfoPanelID)
-			IEex_SetPanelActive(newSpellInfoPanel, false)
+			IEex_StopWorldScreenSpellInfo()
 		end
 	end
 end
@@ -696,7 +729,7 @@ function IEex_Extern_AfterWorldRender()
 		local rViewPortLeft, rViewPortTop, rViewPortRight, rViewPortBottom = IEex_GetViewportRect()
 		local _, _, panelWidth, panelHeight = IEex_GetPanelArea(newSpellInfoPanel)
 		local centeredX = rViewPortLeft + (rViewPortRight - rViewPortLeft) / 2 - panelWidth / 2
-		local centeredY = rViewPortTop + (rViewPortBottom - rViewPortTop) / 2 - panelHeight / 2
+		local centeredY = math.max(0, rViewPortTop + (IEex_GetMainViewportBottom() - rViewPortTop) / 2 - panelHeight / 2)
 
 		IEex_SetPanelXY(newSpellInfoPanel, centeredX, centeredY)
 		IEex_PanelInvalidate(newSpellInfoPanel)
@@ -1219,10 +1252,7 @@ function IEex_Extern_UI_ButtonLClick(CUIControlButton)
 
 	local worldHandler = {
 		[IEex_WorldScreenSpellInfoPanelID] = {
-			[5] = function()
-				local newSpellInfoPanel = IEex_GetPanelFromEngine(IEex_GetEngineWorld(), IEex_WorldScreenSpellInfoPanelID)
-				IEex_SetPanelActive(newSpellInfoPanel, false)
-			end
+			[5] = IEex_StopWorldScreenSpellInfo,
 		}
 	}
 
