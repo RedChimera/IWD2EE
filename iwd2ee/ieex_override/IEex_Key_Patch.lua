@@ -145,6 +145,86 @@
 		!push_esi
 	]]})
 
+	-----------------------------------------------------------------------------------
+	-- Viewport should be able to scroll out of bounds to expose world under the GUI --
+	-----------------------------------------------------------------------------------
+
+	IEex_HookReturnNOPs(0x5D129E, 9, IEex_FlattenTable({[[
+		!mark_esp
+		!push_registers_iwd2
+		]], IEex_GenLuaCall("IEex_Extern_EnforceViewportBottomBound", {
+			["args"] = {
+				{"!push(esi)"},
+				{"!push(eax)"},
+			},
+			["returnType"] = IEex_LuaCallReturnType.Number,
+		}), [[
+		@call_error
+		!pop_registers_iwd2
+		!jmp_dword :5D12C0
+	]]}))
+
+	IEex_HookJumpAutoFail(0x47742B, 6, IEex_FlattenTable({[[
+		!mark_esp
+		!push_all_registers_iwd2
+		]], IEex_GenLuaCall("IEex_Extern_AllowMouseScrollDown", {
+			["args"] = {
+				{"!push(esi)"},
+				{"!marked_esp !push([esp+20])"},
+			},
+			["returnType"] = IEex_LuaCallReturnType.Boolean,
+		}), [[
+		@call_error
+		!test_eax_eax
+		!pop_all_registers_iwd2
+		!jnz_dword >jmp_success
+	]]}))
+
+	IEex_HookJumpAutoFail(0x46E72A, 6, IEex_FlattenTable({[[
+		!mark_esp
+		!push_all_registers_iwd2
+		]], IEex_GenLuaCall("IEex_Extern_AllowMouseScrollDown", {
+			["args"] = {
+				{"!push(esi)"},
+				{"!marked_esp !push([esp+14])"},
+			},
+			["returnType"] = IEex_LuaCallReturnType.Boolean,
+		}), [[
+		@call_error
+		!test_eax_eax
+		!pop_all_registers_iwd2
+		!jnz_dword >jmp_success
+	]]}))
+
+	-----------------------------------------------------------------
+	-- Viewport should auto-scroll to center of main viewport rect --
+	-----------------------------------------------------------------
+
+	IEex_HookRestore(0x68D328, 0, 6, IEex_FlattenTable({[[
+		!push(ebx)
+		]], IEex_GenLuaCall("IEex_Extern_AdjustAutoScrollY", {
+			["args"] = {
+				{"!push(ebp)"},
+			},
+			["returnType"] = IEex_LuaCallReturnType.Number,
+		}), [[
+		@call_error
+		!mov(ebp,eax)
+		!pop(ebx)
+	]]}))
+
+	IEex_HookRestore(0x68C389, 0, 6, IEex_FlattenTable({[[
+		!push(ebx)
+		]], IEex_GenLuaCall("IEex_Extern_AdjustAutoScrollY", {
+			["args"] = {
+				{"!push(eax)"},
+			},
+			["returnType"] = IEex_LuaCallReturnType.Number,
+		}), [[
+		@call_error
+		!pop(ebx)
+	]]}))
+
 	IEex_EnableCodeProtection()
 
 end)()

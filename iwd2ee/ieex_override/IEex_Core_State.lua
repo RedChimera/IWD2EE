@@ -279,13 +279,26 @@ end
 -- Functions --
 ---------------
 
-function IEex_Extern_Stage1Startup()
+-- Earliest possible hook into engine
+-- Directly before CBaldurChitin_Construct()
+function IEex_Extern_Stage0Startup()
 	IEex_Helper_SetBridge("IEex_ThreadBridge", "Sync", IEex_GetCurrentThread())
+end
+
+-- CBaldurChitin = partially initialized
+-- Engines = constructed
+-- Directly before CInfGame_Construct()
+function IEex_Extern_Stage1Startup()
+	IEex_AssertThread(IEex_Thread.Sync, true)
 	IEex_DoStage1Indexing()
 	IEex_LoadInitial2DAs()
 	IEex_WriteDelayedPatches()
 end
 
+-- CBaldurChitin = initialized
+-- Engines = constructed
+-- CInfGame = constructed
+-- Directly after CBaldurChitin_Init()
 function IEex_Extern_Stage2Startup()
 	IEex_AssertThread(IEex_Thread.Sync, true)
 	IEex_DoStage2Indexing()
@@ -298,6 +311,7 @@ end
 
 function IEex_DoStage2Indexing()
 	IEex_IndexMasterSpellLists()
+	IEex_MoveHighResolutionPaddingPanels()
 end
 
 function IEex_IndexMasterSpellLists()

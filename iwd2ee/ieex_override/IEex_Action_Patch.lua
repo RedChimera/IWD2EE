@@ -115,7 +115,7 @@
 		!ret_word 04 00
 	]]}))
 	for _, address in ipairs({0x4830B4, 0x4832E7, 0x48358E}) do
-		IEex_HookChangeCallDest(address, closingParenHook)
+		IEex_HookChangeRel32(address, closingParenHook)
 	end
 
 	IEex_EnableCodeProtection()

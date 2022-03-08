@@ -122,6 +122,22 @@ function IEex_GetPanelArea(CUIPanel)
 	return x, y, w, h
 end
 
+function IEex_InvalidateUIManagerRect(CUIManager, l, r, t, b)
+	IEex_RunWithStackManager({
+		{["name"] = "rect", ["struct"] = "CRect", ["constructor"] = {["variant"] = "fill", ["luaArgs"] = {l, r, t, b} }}, },
+		function(manager)
+			IEex_Call(0x4D45E0, {manager:getAddress("rect")}, CUIManager, 0x0)
+		end)
+end
+
+function IEex_IsUIManagerHidden(CUIManager)
+	return IEex_ReadDword(CUIManager) == 1
+end
+
+function IEex_IsEngineUIManagerHidden(CBaldurEngine)
+	return IEex_ReadDword(IEex_GetUIManagerFromEngine(CBaldurEngine)) == 1
+end
+
 function IEex_GetPanel(CUIManager, panelID)
 	return IEex_Call(0x4D4000, {panelID}, CUIManager, 0x0)
 end
@@ -138,16 +154,30 @@ function IEex_GetUIManagerFromPanel(CUIPanel)
 	return IEex_ReadDword(CUIPanel)
 end
 
-function IEex_InvalidateUIManagerRect(CUIManager, l, r, t, b)
-	IEex_RunWithStackManager({
-		{["name"] = "rect", ["struct"] = "CRect", ["constructor"] = {["variant"] = "fill", ["luaArgs"] = {l, r, t, b} }}, },
-		function(manager)
-			IEex_Call(0x4D45E0, {manager:getAddress("rect")}, CUIManager, 0x0)
-		end)
-end
-
 function IEex_GetCHUResrefFromPanel(CUIPanel)
 	return IEex_ReadLString(IEex_GetUIManagerFromPanel(CUIPanel) + 0x8, 8)
+end
+
+function IEex_GetMainViewportBottom(excludeQuickloot, checkHidden)
+	local _, _, _, minY = IEex_GetViewportRect()
+	local worldScreen = IEex_GetEngineWorld()
+	if not checkHidden or not IEex_IsEngineUIManagerHidden(worldScreen) then
+		local ids = {0, 1, 7, 8, 9, 6, 17, 19, 21, 22}
+		if not excludeQuickloot then table.insert(ids, 23) end
+		for _, panelID in ipairs(ids) do
+			local panel = IEex_GetPanelFromEngine(worldScreen, panelID)
+			if IEex_IsPanelActive(panel) then
+				local _, y = IEex_GetPanelArea(panel)
+				minY = math.min(minY, y)
+			end
+		end
+	end
+	return minY
+end
+
+function IEex_GetPanelBackgroundImage(CUIPanel)
+	-- CUIPanel.m_mosaic.resHelper.cResRef
+	return IEex_ReadLString(CUIPanel + 0x3E + 0xA0 + 0x8, 8)
 end
 
 function IEex_GetPanelFromEngine(CBaldurEngine, panelID)
@@ -193,6 +223,19 @@ function IEex_GetControlAreaAbsolute(CUIControl)
 	local panelX, panelY, _, _ = IEex_GetPanelArea(IEex_GetControlPanel(CUIControl))
 	local controlX, controlY, controlW, controlH = IEex_GetControlArea(CUIControl)
 	return panelX + controlX, panelY + controlY, controlW, controlH
+end
+
+function IEex_GetControlButtonFrameUp(CUIControlButton)
+	return IEex_ReadWord(CUIControlButton + 0x12C)
+end
+
+function IEex_GetControlButtonFrameDown(CUIControlButton)
+	return IEex_ReadWord(CUIControlButton + 0x12E)
+end
+
+function IEex_GetControlButtonBAM(CUIControlButton)
+	-- CUIControlButton.m_vidCellButton.resHelper.cResRef
+	return IEex_ReadLString(CUIControlButton + 0x52 + 0xA4 + 0x8, 8)
 end
 
 function IEex_IsControlOnPanel(CUIControl, CUIPanel)
@@ -290,9 +333,21 @@ function IEex_SetControlButtonMageSpellInfoIcon(CUIControlButtonMageSpellInfoIco
 		end)
 end
 
-function IEex_SetPanelXY(CUIPanel, x, y)
-	if x then IEex_WriteDword(CUIPanel + 0x24, x) end
-	if y then IEex_WriteDword(CUIPanel + 0x28, y) end
+function IEex_SetPanelXY(CUIPanel, x, y, bSetOriginal)
+	if x then
+		IEex_WriteDword(CUIPanel + 0x24, x)
+		if bSetOriginal then IEex_WriteDword(CUIPanel + 0x2C, x) end
+	end
+	if y then
+		IEex_WriteDword(CUIPanel + 0x28, y)
+		if bSetOriginal then IEex_WriteDword(CUIPanel + 0x30, y) end
+	end
+end
+
+function IEex_SetPanelArea(CUIPanel, x, y, w, h, bSetOriginal)
+	IEex_SetPanelXY(CUIPanel, x, y, bSetOriginal)
+	if w then IEex_WriteDword(CUIPanel + 0x34, w) end
+	if h then IEex_WriteDword(CUIPanel + 0x38, h) end
 end
 
 function IEex_SetControlXY(CUIControl, x, y)
@@ -412,18 +467,12 @@ function IEex_MapCHU(chuWrapper)
 	end
 end
 
-function IEex_GetMainViewportBottom()
-	local _, _, _, minY = IEex_GetViewportRect()
-	local worldScreen = IEex_GetEngineWorld()
-	for _, panelID in ipairs({0, 1, 7, 8, 9, 6, 17, 19, 21, 22, 23}) do
-		local panel = IEex_GetPanelFromEngine(worldScreen, panelID)
-		if IEex_IsPanelActive(panel) then
-			local _, y = IEex_GetPanelArea(panel)
-			minY = math.min(minY, y)
-		end
-	end
-	return minY
-end
+-----------------------
+-- General Variables --
+-----------------------
+
+IEex_WorldScreenSpellInfoPanelID = 50
+IEex_AllWorldScreenPanelIDs = {0, 1, 7, 8, 9, 6, 17, 19, 21, 22, 23, IEex_WorldScreenSpellInfoPanelID}
 
 -------------------------
 -- Quickloot Functions --
@@ -449,20 +498,13 @@ function IEex_Quickloot_Stop()
 end
 
 function IEex_Quickloot_Show()
-	IEex_Quickloot_UpdateItems()
 	local panel = IEex_Quickloot_GetPanel()
 	IEex_SetPanelActive(panel, true)
-	local _, y, _, _ = IEex_GetPanelArea(panel)
-	IEex_SetViewportBottom(y)
 end
 
-function IEex_Quickloot_Hide(changeViewport)
+function IEex_Quickloot_Hide()
 	local panel = IEex_Quickloot_GetPanel()
 	IEex_SetPanelActive(panel, false)
-	if changeViewport or changeViewport == nil then
-		local _, y, _, h = IEex_GetPanelArea(panel)
-		IEex_SetViewportBottom(y + h)
-	end
 end
 
 function IEex_Quickloot_UpdateItems(alreadyLocked)
@@ -516,22 +558,20 @@ function IEex_Quickloot_UpdateItems(alreadyLocked)
 		IEex_Helper_SetBridgeNL("IEex_Quickloot", "oldActorY", actorY)
 
 		-- Update container highlight on hover
-
 		local highlightContainerID = -1
-		local panel = IEex_Quickloot_GetPanel()
-		local cursorX, cursorY = IEex_GetCursorXY()
-
-		for i = 0, 9, 1 do
-			if IEex_IsPointOverControlID(panel, i, cursorX, cursorY) then
-				local overSlotData = IEex_Quickloot_GetSlotData(i, true)
-				if not overSlotData.isFallback then
-					highlightContainerID = overSlotData.containerID
+		if IEex_Quickloot_IsPanelActive() then
+			local panel = IEex_Quickloot_GetPanel()
+			local cursorX, cursorY = IEex_GetCursorXY()
+			for i = 0, 9, 1 do
+				if IEex_IsPointOverControlID(panel, i, cursorX, cursorY) then
+					local overSlotData = IEex_Quickloot_GetSlotData(i, true)
+					if not overSlotData.isFallback then
+						highlightContainerID = overSlotData.containerID
+					end
 				end
 			end
 		end
-
 		IEex_Helper_SetBridgeNL("IEex_Quickloot", "highlightContainerID", highlightContainerID)
-
 	end
 
 	if not alreadyLocked then
@@ -691,12 +731,17 @@ end)
 -- GUI Hook Functions --
 ------------------------
 
+function IEex_IsPanelBlockingViewport(panel, nCursorX, nCursorY)
+	return IEex_IsPanelActive(panel) and IEex_IsPointOverPanel(panel, nCursorX, nCursorY)
+end
+
 function IEex_IsUIBlockingViewport(nCursorX, nCursorY)
 	local worldScreen = IEex_GetEngineWorld()
-	if IEex_GetActiveEngine() == worldScreen then
-		local newSpellInfoPanel = IEex_GetPanelFromEngine(worldScreen, IEex_WorldScreenSpellInfoPanelID)
-		if IEex_IsPanelActive(newSpellInfoPanel) and IEex_IsPointOverPanel(newSpellInfoPanel, nCursorX, nCursorY) then
-			return true
+	if IEex_GetActiveEngine() == worldScreen and not IEex_IsEngineUIManagerHidden(worldScreen) then
+		for _, i in ipairs(IEex_AllWorldScreenPanelIDs) do
+			if IEex_IsPanelBlockingViewport(IEex_GetPanelFromEngine(worldScreen, i), nCursorX, nCursorY) then
+				return true
+			end
 		end
 	end
 	return false
@@ -713,15 +758,67 @@ function IEex_MouseInViewport(CInfinity, nCursorX, nCursorY)
 	   and nCursorY >= rViewPortTop  and nCursorY < rViewPortBottom
 end
 
+function IEex_MoveHighResolutionPaddingPanels()
+
+	local g_pBaldurChitin = IEex_ReadDword(0x8CF6DC)
+	panelLeft_st = g_pBaldurChitin + 0x49B4
+	panelRight_st = g_pBaldurChitin + 0x49D0
+	panelTop_st = g_pBaldurChitin + 0x49EC
+	panelBottom_st = g_pBaldurChitin + 0x4A08
+
+	local getMosWidthHeight = function(resref)
+		local wrapper = IEex_DemandRes(resref, "MOS")
+		local data = wrapper:getData()
+		local w = IEex_ReadWord(data + 0x8)
+		local h = IEex_ReadWord(data + 0xA)
+		wrapper:free()
+		return w, h
+	end
+
+	local leftW, leftH = getMosWidthHeight("STON10L")
+	local rightW, rightH = getMosWidthHeight("STON10R")
+	local topW, topH = getMosWidthHeight("STON10T")
+	local bottomW, bottomH = getMosWidthHeight("STON10B")
+
+	local resW, resH = IEex_GetResolution()
+	local baseResolutionW = 800
+	local baseResolutionH = 600
+
+	IEex_WriteWord(panelLeft_st + 0x4, (resW - baseResolutionW) / 2 - leftW)
+	IEex_WriteWord(panelLeft_st + 0x6, (resH - leftH) / 2)
+	IEex_WriteWord(panelLeft_st + 0x8, leftW)
+	IEex_WriteWord(panelLeft_st + 0xA, leftH)
+
+	IEex_WriteWord(panelRight_st + 0x4, (resW + baseResolutionW) / 2)
+	IEex_WriteWord(panelRight_st + 0x6, (resH - rightH) / 2)
+	IEex_WriteWord(panelRight_st + 0x8, rightW)
+	IEex_WriteWord(panelRight_st + 0xA, rightH)
+
+	IEex_WriteWord(panelTop_st + 0x4, (resW - topW) / 2)
+	IEex_WriteWord(panelTop_st + 0x6, (resH - baseResolutionH) / 2 - topH)
+	IEex_WriteWord(panelTop_st + 0x8, topW)
+	IEex_WriteWord(panelTop_st + 0xA, topH)
+
+	IEex_WriteWord(panelBottom_st + 0x4, (resW - bottomW) / 2)
+	IEex_WriteWord(panelBottom_st + 0x6, (resH + baseResolutionH) / 2)
+	IEex_WriteWord(panelBottom_st + 0x8, bottomW)
+	IEex_WriteWord(panelBottom_st + 0xA, bottomH)
+end
+
 ------------------
 -- Thread: Sync --
 ------------------
 
-function IEex_Extern_AfterWorldRender()
+function IEex_Extern_BeforeWorldRender()
 
 	IEex_AssertThread(IEex_Thread.Sync, true)
 
 	local worldScreen = IEex_GetEngineWorld()
+
+	------------------------------------------------
+	-- Worldscreen spell info position processing --
+	------------------------------------------------
+
 	local newSpellInfoPanel = IEex_GetPanelFromEngine(worldScreen, IEex_WorldScreenSpellInfoPanelID)
 
 	if IEex_IsPanelActive(newSpellInfoPanel) then
@@ -734,6 +831,46 @@ function IEex_Extern_AfterWorldRender()
 		IEex_SetPanelXY(newSpellInfoPanel, centeredX, centeredY)
 		IEex_PanelInvalidate(newSpellInfoPanel)
 	end
+
+	------------------------------------
+	-- Quickloot show/hide processing --
+	------------------------------------
+
+	if IEex_Helper_GetBridge("IEex_Quickloot", "on") then
+
+		local quicklootPanel = IEex_GetPanelFromEngine(worldScreen, 23)
+
+		if IEex_IsPanelActive(quicklootPanel) and (
+			   IEex_IsPanelActive(IEex_GetPanelFromEngine(worldScreen, 6))  -- Debug Console
+			or IEex_IsPanelActive(IEex_GetPanelFromEngine(worldScreen, 7))  -- Dialog
+			or IEex_IsPanelActive(IEex_GetPanelFromEngine(worldScreen, 8))) -- Container
+		then
+			IEex_Quickloot_Hide()
+		elseif IEex_IsPanelActive(IEex_GetPanelFromEngine(worldScreen, 0)) then -- Main Panel
+			IEex_Quickloot_Show()
+		end
+
+		local _, _, _, panelHeight = IEex_GetPanelArea(quicklootPanel)
+		IEex_SetPanelXY(quicklootPanel, nil, IEex_GetMainViewportBottom(true) - panelHeight)
+	end
+
+	---------------------------------------
+	-- Invalidate all worldscreen panels --
+	-- (so they render above viewport)   --
+	---------------------------------------
+
+	for _, i in ipairs(IEex_AllWorldScreenPanelIDs) do
+		local panel = IEex_GetPanelFromEngine(worldScreen, i)
+		if IEex_IsPanelActive(panel) then
+			IEex_PanelInvalidate(panel)
+		end
+	end
+
+	-------------------------------------------------------------------
+	-- Adjust viewport if a panel state change exposed out-of-bounds --
+	-------------------------------------------------------------------
+
+	IEex_CheckViewPosition()
 end
 
 function IEex_Extern_OverrideWorldScreenScrollbarFocus()
@@ -750,6 +887,54 @@ function IEex_Extern_OverrideWorldScreenScrollbarFocus()
 	end
 
 	return false
+end
+
+function IEex_Extern_InitResolution()
+	IEex_AssertThread(IEex_Thread.Sync, true)
+	local nWidth, nHeight = IEex_Helper_AskResolution()
+	IEex_WriteWord(0x8BA31C, nWidth)  -- g_resolution.width
+	IEex_WriteWord(0x8BA31E, nHeight) -- g_resolution.height
+end
+
+function IEex_Extern_InitGUIConstants()
+	IEex_AssertThread(IEex_Thread.Sync, true)
+	local resW, resH = IEex_GetResolution()
+	IEex_SetCRect(0x8E7548, 0, 0, resW, resH) -- WorldScreenInterfaceHiddenViewPortRect
+	IEex_SetCRect(0x8E79B8, 0, 0, resW, resH) -- WorldScreenCurrentHiddenViewPortRect
+	IEex_SetCRect(0x8E7958, 0, 0, resW, resH) -- WorldScreenDialogViewPortRect
+	IEex_SetCRect(0x8E7988, 0, 0, resW, resH) -- WorldScreenDeathViewPortRect
+	IEex_WriteDword(0x8E79D4, resH)           -- WorldScreenConsoleBottom
+	IEex_WriteDword(0x8E79EC, resH)           -- WorldScreenToolbarBottom
+	IEex_SetCRect(0x8E79F8, 0, 0, resW, resH) -- WorldScreenContainerViewPortRect
+end
+
+function IEex_Extern_InitHighResolutionPaddingPanels(pBaldurChitin)
+
+	IEex_AssertThread(IEex_Thread.Sync, true)
+
+	-- Uncomment this block to force-disable the high-resolution panels
+	if false then
+
+		IEex_DisableCodeProtection()
+
+		-- Wipe out the hardcoded panel definitions. This is overkill, but they deserve it.
+		IEex_Helper_Memset(pBaldurChitin + 0x49B4, 0, 4 * 0x1C)
+
+		-- Common panels are disabled - skip code that assumes they are there
+		IEex_WriteAssembly(0x5DBC09, {"!jmp_byte"})
+		IEex_WriteAssembly(0x5FEDE9, {"!jmp_byte"})
+		IEex_WriteAssembly(0x607B57, {"!jmp_byte"})
+		IEex_WriteAssembly(0x626D59, {"!jmp_byte"})
+		IEex_WriteAssembly(0x63DBA9, {"!jmp_byte"})
+		IEex_WriteAssembly(0x641789, {"!jmp_byte"})
+		IEex_WriteAssembly(0x654F19, {"!jmp_byte"})
+		IEex_WriteAssembly(0x65CF09, {"!jmp_byte"})
+		IEex_WriteAssembly(0x661D29, {"!jmp_byte"})
+		IEex_WriteAssembly(0x66A854, {"!jmp_byte"})
+		IEex_WriteAssembly(0x672EED, {"!jmp_byte"})
+
+		IEex_EnableCodeProtection()
+	end
 end
 
 -------------------
@@ -793,6 +978,20 @@ function IEex_Extern_RejectWorldScreenEsc()
 	IEex_AssertThread(IEex_Thread.Async, true)
 	local newSpellInfoPanel = IEex_GetPanelFromEngine(IEex_GetEngineWorld(), IEex_WorldScreenSpellInfoPanelID)
 	return IEex_IsPanelActive(newSpellInfoPanel)
+end
+
+function IEex_Extern_StartDebugConsole()
+	IEex_AssertThread(IEex_Thread.Async, true)
+	local worldScreen = IEex_GetEngineWorld()
+	local panel1 = IEex_GetPanelFromEngine(worldScreen, 1)
+	IEex_SetPanelActive(panel1, false)
+end
+
+function IEex_Extern_StopDebugConsole()
+	IEex_AssertThread(IEex_Thread.Async, true)
+	local worldScreen = IEex_GetEngineWorld()
+	local panel1 = IEex_GetPanelFromEngine(worldScreen, 1)
+	IEex_SetPanelActive(panel1, true)
 end
 
 ------------------
@@ -1387,27 +1586,10 @@ end
 function IEex_Extern_CScreenWorld_AsynchronousUpdate()
 
 	IEex_AssertThread(IEex_Thread.Async, true)
+	-- For some reason the main menu's options screen ticks this function
+	if IEex_GetActiveEngine() ~= IEex_GetEngineWorld() then return end
 
-	if IEex_Helper_GetBridge("IEex_Quickloot", "on") then
-
-		local worldScreen = IEex_GetEngineWorld()
-		local panelActive = IEex_Quickloot_IsPanelActive()
-
-		-- Need to hide if dialog / container is present
-		if panelActive and (
-			   IEex_IsPanelActive(IEex_GetPanelFromEngine(worldScreen, 7))
-			or IEex_IsPanelActive(IEex_GetPanelFromEngine(worldScreen, 8)))
-		then
-			IEex_Quickloot_Hide(false)
-		elseif IEex_IsPanelActive(IEex_GetPanelFromEngine(worldScreen, 1)) then
-			-- This calls IEex_Quickloot_UpdateItems() internally.
-			-- It's a little ineffecient to call this every tick,
-			-- but this is the only way I've found to maintain state
-			-- correctly when dialog / opening containers screws around
-			-- with the viewport.
-			IEex_Quickloot_Show()
-		end
-	end
+	IEex_Quickloot_UpdateItems()
 end
 
 function IEex_Extern_Quickloot_ScrollLeft()
@@ -1734,7 +1916,71 @@ IEex_AbsoluteOnce("IEex_CustomControls", function()
 
 end)
 
-IEex_WorldScreenSpellInfoPanelID = 50
+function IEex_InstallQuickloot()
+
+	local worldScreen = IEex_GetEngineWorld()
+
+	local panel1Memory = IEex_GetPanelFromEngine(worldScreen, 1)
+	local panel8Memory = IEex_GetPanelFromEngine(worldScreen, 8)
+
+	local x1, y1, w1, h1 = IEex_GetPanelArea(panel1Memory)
+	local quicklootPanel = IEex_AddPanelToEngine(worldScreen, {
+		["id"]              = 23,
+		["x"]               = x1,
+		["y"]               = y1 - h1,
+		["width"]           = w1,
+		["height"]          = h1,
+		["hasBackground"]   = 1,
+		["backgroundImage"] = IEex_GetPanelBackgroundImage(panel1Memory)
+	})
+
+	for i = 7, 16 do
+
+		local referenceControl = IEex_GetControlFromPanel(panel1Memory, i)
+		local copyControl = IEex_GetControlFromPanel(panel8Memory, i - 7)
+
+		local referenceControlX, referenceControlY = IEex_GetControlArea(referenceControl)
+		local _, _, copyControlW, copyControlH = IEex_GetControlArea(copyControl)
+
+		IEex_AddControlToPanel(quicklootPanel, {
+			["id"]     = IEex_GetControlID(copyControl),
+			["x"]      = referenceControlX + 1,
+			["y"]      = referenceControlY + 1,
+			["width"]  = copyControlW,
+			["height"] = copyControlH,
+			["type"]   = IEex_ControlStructType.BUTTON,
+			["bam"]    = IEex_GetControlButtonBAM(copyControl),
+		})
+	end
+
+	local leftArrow = IEex_GetControlFromPanel(panel1Memory, 6)
+	local leftArrowX, leftArrowY, leftArrowW, leftArrowH = IEex_GetControlArea(leftArrow)
+	IEex_AddControlToPanel(quicklootPanel, {
+		["id"]             = 10,
+		["x"]              = leftArrowX,
+		["y"]              = leftArrowY,
+		["width"]          = leftArrowW,
+		["height"]         = leftArrowH,
+		["type"]           = IEex_ControlStructType.BUTTON,
+		["bam"]            = "GUIBTACT",
+		["frameUnpressed"] = 48,
+		["framePressed"]   = 49,
+	})
+
+	local rightArrow = IEex_GetControlFromPanel(panel1Memory, 17)
+	local rightArrowX, rightArrowY, rightArrowW, rightArrowH = IEex_GetControlArea(rightArrow)
+	IEex_AddControlToPanel(quicklootPanel, {
+		["id"]             = 11,
+		["x"]              = rightArrowX,
+		["y"]              = rightArrowY,
+		["width"]          = rightArrowW,
+		["height"]         = rightArrowH,
+		["type"]           = IEex_ControlStructType.BUTTON,
+		["bam"]            = "GUIBTACT",
+		["frameUnpressed"] = 52,
+		["framePressed"]   = 53,
+	})
+end
 
 -- Use this function to modify existing panels / controls
 function IEex_OnCHUInitialized(chuResref)
@@ -1753,49 +1999,44 @@ function IEex_OnCHUInitialized(chuResref)
 			IEex_SetControlButtonFrameDown(fixControl, 0)
 		end
 
+		----------------------------
+		-- Widescreen Adjustments --
+		----------------------------
+
+		local resW, resH = IEex_GetResolution()
+
+		local panel0Memory = IEex_GetPanelFromEngine(worldScreen, 0)
+		local panel1Memory = IEex_GetPanelFromEngine(worldScreen, 1)
+		local panel6Memory = IEex_GetPanelFromEngine(worldScreen, 6)
+		local panel7Memory = IEex_GetPanelFromEngine(worldScreen, 7)
+		local panel8Memory = IEex_GetPanelFromEngine(worldScreen, 8)
+		local panel9Memory = IEex_GetPanelFromEngine(worldScreen, 9)
+		local panel17Memory = IEex_GetPanelFromEngine(worldScreen, 17)
+
+		local x0, y0, w0, h0 = IEex_GetPanelArea(panel0Memory)
+		local x1, y1, w1, h1 = IEex_GetPanelArea(panel1Memory)
+		local x6, y6, w6, h6 = IEex_GetPanelArea(panel6Memory)
+		local x7, y7, w7, h7 = IEex_GetPanelArea(panel7Memory)
+		local x8, y8, w8, h8 = IEex_GetPanelArea(panel8Memory)
+		local x9, y9, w9, h9 = IEex_GetPanelArea(panel7Memory)
+		local x17, y17, w17, h17 = IEex_GetPanelArea(panel17Memory)
+
+		local toolbarBottom = resH - h0
+		local dialogTop = resH - h7
+
+		IEex_SetPanelXY(panel0Memory, (resW - w0) / 2, toolbarBottom)
+		IEex_SetPanelXY(panel1Memory, (resW - w1) / 2, toolbarBottom - h1, true)
+		IEex_SetPanelArea(panel6Memory, (resW - 800) / 2, resH - h6, 800)
+		IEex_SetPanelXY(panel7Memory, (resW - w7) / 2, dialogTop)
+		IEex_SetPanelXY(panel8Memory, (resW - w8) / 2, resH - h8)
+		IEex_SetPanelXY(panel9Memory, (resW - w9) / 2 + (resW ~= 800 and 112 or 0), dialogTop + 252)
+		IEex_SetPanelXY(panel17Memory, (resW - w17) / 2, resH - h17)
+
 		---------------
 		-- Quickloot --
 		---------------
 
-		local chuWrapper = IEex_DemandRes(chuResref, "CHU")
-		IEex_MapCHU(chuWrapper)
-
-		local panel1 = chuWrapper.getPanel(1)
-		local panel1H = IEex_ReadWord(panel1 + 0xA, 0)
-		local quicklootPanel = IEex_AddPanelToEngine(worldScreen, {
-			["id"] = 23,
-			["x"] = IEex_ReadWord(panel1 + 0x4, 0),
-			["y"] = IEex_ReadWord(panel1 + 0x6, 0) - panel1H,
-			["width"] = IEex_ReadWord(panel1 + 0x8, 0),
-			["height"] = panel1H,
-			["hasBackground"] = 1,
-			["backgroundImage"] = IEex_ReadLString(panel1 + 0x10, 8)
-		})
-
-		for i = 7, 16 do
-			local referenceControl = IEex_ReadControlSt(chuWrapper.getControl(1, i))
-			local copyControl = IEex_ReadControlSt(chuWrapper.getControl(8, i - 7))
-			copyControl.x = referenceControl.x + 1
-			copyControl.y = referenceControl.y + 1
-			copyControl.framePressed = 0 -- Don't copy bad nFrameDown from GUIW08->8->6-9
-			IEex_AddControlToPanel(quicklootPanel, copyControl)
-		end
-
-		local leftArrow = IEex_ReadControlSt(chuWrapper.getControl(1, 6))
-		leftArrow.id = 10
-		leftArrow.bam = "GUIBTACT"
-		leftArrow.frameUnpressed = 48
-		leftArrow.framePressed = 49
-		IEex_AddControlToPanel(quicklootPanel, leftArrow)
-
-		local rightArrow = IEex_ReadControlSt(chuWrapper.getControl(1, 17))
-		rightArrow.id = 11
-		rightArrow.bam = "GUIBTACT"
-		rightArrow.frameUnpressed = 52
-		rightArrow.framePressed = 53
-		IEex_AddControlToPanel(quicklootPanel, rightArrow)
-
-		chuWrapper:free()
+		IEex_InstallQuickloot()
 
 		----------------------------------
 		-- Worldscreen Spell Info Popup --

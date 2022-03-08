@@ -116,6 +116,14 @@ function IEex_IsKeyDown(key)
 	return IEex_Helper_GetBridge("IEex_Keys", key, "isDown")
 end
 
+function IEex_CheckViewPosition()
+	local pInfinity = IEex_GetCInfinity()
+	local nNewX = IEex_ReadDword(pInfinity + 0x40)
+	local nNewY = IEex_ReadDword(pInfinity + 0x44)
+	-- CInfinity_SetViewPosition
+	IEex_Call(0x5D11F0, {0, nNewY, nNewX}, pInfinity, 0x0)
+end
+
 function IEex_AdjustViewPosition(deltaX, deltaY)
 
 	local infinity = IEex_GetCInfinity()
@@ -683,10 +691,10 @@ function IEex_Chargen_RerollListener(key)
 
 				local panelID = IEex_GetEngineCreateCharPanelID()
 				if key == IEex_KeyIDS.T then
-					IEex_Search_Change_Log(1, chargenData, 0xA00, true) 
+					IEex_Search_Change_Log(1, chargenData, 0xA00, true)
 				end
 				if key == IEex_KeyIDS.P then
-					IEex_Search_Change_Log(1, chargenData, 0xA00, false) 
+					IEex_Search_Change_Log(1, chargenData, 0xA00, false)
 					if panelID > 0 then
 						local panelData = IEex_ReadDword(IEex_ReadDword(chargenData + 0x53E) + 0x8)
 						IEex_IterateCPtrList(panelData + 0x4, function(thingData)
@@ -1134,12 +1142,16 @@ end)
 -----------
 
 ------------------
--- Thread: Sync --
+-- Thread: Both --
 ------------------
 
 function IEex_Extern_CheckScroll()
 
-	IEex_AssertThread(IEex_Thread.Sync, true)
+	IEex_AssertThread(IEex_Thread.Both, true)
+
+	if IEex_Helper_GetBridge("IEex_Helper_SupressScrollCheck", "value") then
+		return
+	end
 
 	IEex_Helper_SynchronizedBridgeOperation("IEex_Scroll_MiddleMouseState", function()
 
@@ -1175,9 +1187,37 @@ function IEex_Extern_CheckScroll()
 	end
 end
 
+function IEex_GetEffectiveViewBottom(nViewY)
+	return nViewY + IEex_GetMainViewportBottom(false, true)
+end
+
+function IEex_Extern_EnforceViewportBottomBound(CInfinity, nViewY)
+	IEex_AssertThread(IEex_Thread.Both, true)
+	local nEffectiveViewBottom = IEex_GetEffectiveViewBottom(nViewY)
+	local nAreaHeight = IEex_ReadDword(CInfinity + 0x84)
+	if nEffectiveViewBottom > nAreaHeight then
+		local nNewY = nViewY - (nEffectiveViewBottom - nAreaHeight)
+		IEex_WriteDword(CInfinity + 0x168, nNewY * 10000)
+		return nNewY
+	end
+	return nViewY
+end
+
+function IEex_Extern_AdjustAutoScrollY(y)
+	local _, resH = IEex_GetResolution()
+	return y + (resH - IEex_GetMainViewportBottom(false, true)) / 2
+end
+
 -------------------
 -- Thread: Async --
 -------------------
+
+function IEex_Extern_AllowMouseScrollDown(CGameArea, nViewY)
+	IEex_AssertThread(IEex_Thread.Async, true)
+	local nEffectiveViewBottom = IEex_GetEffectiveViewBottom(nViewY)
+	local nAreaHeight = IEex_ReadDword(CGameArea + 0x550)
+	return nEffectiveViewBottom < nAreaHeight
+end
 
 function IEex_Extern_CChitin_ProcessEvents_CheckFlagClobber(key)
 	IEex_AssertThread(IEex_Thread.Async, true)

@@ -617,18 +617,22 @@
 	--------------------------------------------------
 
 	IEex_WriteAssembly(0x68DF87, {"!repeat(5,!nop)"})
-	IEex_HookRestore(0x68DFB6, 0, 5, IEex_FlattenTable({
+
+	IEex_HookBeforeCall(0x68DF9F, IEex_FlattenTable({
 		{[[
 			!push_registers_iwd2
 		]]},
-		IEex_GenLuaCall("IEex_Extern_AfterWorldRender"),
+		IEex_GenLuaCall("IEex_Extern_BeforeWorldRender"),
 		{[[
 			@call_error
 			!pop_registers_iwd2
-			!mov(ecx,ebp)
-			!call :4D4540 ; CUIManager_Render ;
 		]]},
 	}))
+
+	IEex_HookRestore(0x68DFB6, 0, 5, {[[
+		!mov(ecx,ebp)
+		!call :4D4540 ; CUIManager_Render ;
+	]]})
 
 	---------------------------------------
 	-- IEex_Extern_MouseInAreaViewport() --
@@ -834,6 +838,113 @@
 			!jnz_dword :689504
 		]]},
 	}))
+
+	------------------------
+	-- Widescreen Support --
+	------------------------
+
+	-- Select resolution on game start
+	IEex_HookReturnNOPs(0x42212A, 1, IEex_FlattenTable({[[
+		!push_all_registers_iwd2
+		]], IEex_GenLuaCall("IEex_Extern_InitResolution"), [[
+		@call_error
+		!pop_all_registers_iwd2
+	]]}))
+
+	-- If selected resolution is below 1024x768 use GUIW08, else use customized GUIW10
+	IEex_HookJumpNoReturn(0x42216E, IEex_FlattenTable({[[
+		!cmp(ecx,400)
+		!jb_dword :4224CC
+		!cmp(word:[8BA31E],300)
+		!jb_dword :4224CC
+		!jmp_dword :422198
+	]]}))
+
+	-- Don't set g_resolution[1] when using GUIW10
+	IEex_WriteAssembly(0x42228C, {"!repeat(7,!nop)"})
+
+	-- Used to tweak various GUI constants
+	IEex_HookRestore(0x422848,0, 6, IEex_FlattenTable({[[
+		!push_all_registers_iwd2
+		]], IEex_GenLuaCall("IEex_Extern_InitGUIConstants"), [[
+		@call_error
+		!pop_all_registers_iwd2
+	]]}))
+
+	-- Used to tweak the high resolution panels
+	IEex_HookAfterRestore(0x4229D5, 0, 7, IEex_FlattenTable({[[
+		!push_all_registers_iwd2
+		]], IEex_GenLuaCall("IEex_Extern_InitHighResolutionPaddingPanels", {["args"] = {{"!push(esi)"}}}), [[
+		@call_error
+		!pop_all_registers_iwd2
+	]]}))
+
+	-- Disable instances where the engine rendered the mouse at non-buffer-flip moments.
+	-- This renders the mouse before everything is drawn to the screen, yet blocks
+	-- the mouse from rendering again at buffer-flip, causing it to flicker.
+	IEex_WriteAssembly(0x79F6A0, {[[
+		!mov(eax,0)
+		!ret
+	]]})
+
+	-- On opening the debug console
+	IEex_HookAfterCall(0x69126A, IEex_FlattenTable({[[
+		!push_all_registers_iwd2
+		]], IEex_GenLuaCall("IEex_Extern_StartDebugConsole"), [[
+		@call_error
+		!pop_all_registers_iwd2
+	]]}))
+
+	-- On closing the debug console
+	IEex_HookAfterRestore(0x6913AF, 0, 10, IEex_FlattenTable({[[
+		!push_all_registers_iwd2
+		]], IEex_GenLuaCall("IEex_Extern_StopDebugConsole"), [[
+		@call_error
+		!pop_all_registers_iwd2
+	]]}))
+
+	-- Blank the back buffer after switching engines so that left-over junk isn't rendered
+	local pLastActiveEngine = IEex_Malloc(0x5)
+	IEex_WriteDword(pLastActiveEngine, 0x0)
+
+	IEex_HookAfterRestore(0x792845, 0, 6, {[[
+
+		!push(edx)
+
+		; pChitin->pActiveEngine != nullptr ;
+		!mov(eax,[esi+3C4])
+		!test(eax,eax)
+		!jz_dword >continue
+
+		; pActiveEngine->pVidMode != nullptr ;
+		!mov(edx,[eax+4])
+		!test(edx,edx)
+		!jz_dword >continue
+
+		; if in the middle of a multi-frame blank ;
+		!cmp_byte:[dword]_byte ]], {pLastActiveEngine + 0x4, 4}, [[ 00
+		!ja_dword >blank_back_buffer
+
+		; pActiveEngine != pLastActiveEngine ;
+		!cmp_eax_[dword] ]], {pLastActiveEngine, 4}, [[
+		!je_dword >continue
+
+		; start blank ;
+		!mov_[dword]_eax ]], {pLastActiveEngine, 4}, [[
+		!mov_al_byte:[dword] #8AB948 ; engine-defined blanking period ;
+		!mov_byte:[dword]_al ]], {pLastActiveEngine + 0x4, 4}, [[
+
+		@blank_back_buffer
+		!dec_byte:[dword] ]], {pLastActiveEngine + 0x4, 4}, [[
+
+		!push(ecx)
+		!push(edx)
+		!call >IEex_Helper_BlankBackBuffer
+		!pop(ecx)
+
+		@continue
+		!pop(edx)
+	]]})
 
 	IEex_EnableCodeProtection()
 

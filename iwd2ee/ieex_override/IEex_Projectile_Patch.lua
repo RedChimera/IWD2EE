@@ -151,7 +151,7 @@
 		0x533F9E,
 		0x581025,
 	}) do
-		IEex_HookChangeCallDest(address, onAddEffectHook)
+		IEex_HookChangeRel32(address, onAddEffectHook)
 	end
 
 	----------------------------------------------------------------------

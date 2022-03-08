@@ -381,6 +381,13 @@ function IEex_GetAtCPtrListIndex(CPtrList, index)
 	return IEex_ReadDword(pNode + 0x8)
 end
 
+function IEex_SetCRect(CRect, left, top, right, bottom)
+	if left then IEex_WriteDword(CRect, left) end
+	if top then IEex_WriteDword(CRect + 0x4, top) end
+	if right then IEex_WriteDword(CRect + 0x8, right) end
+	if bottom then IEex_WriteDword(CRect + 0xC, bottom) end
+end
+
 function IEex_FlattenTable(table)
 	local toReturn = {}
 	local insertionIndex = 1
@@ -900,6 +907,7 @@ function IEex_SanitizeAssembly(assembly)
 	}
 
 	local sanitizedStructure = state.sanitizedStructure
+	local inComment = false
 
 	-- For some reason unrollTextArg has to be split up so it can see itself
 	local unrollTextArg
@@ -907,94 +915,102 @@ function IEex_SanitizeAssembly(assembly)
 
 		IEex_SplitByWhitespaceProcess(arg, function(section)
 
-			if section:sub(1, 1) == "!" then
+			local prefix = section:sub(1, 1)
+			if prefix == ";" then
 
-				local macroName = section:sub(2)
-				local macroArgsStart = section:find("(", 1, true)
-				if macroArgsStart then macroName = section:sub(2, macroArgsStart - 1) end
+				inComment = not inComment
 
-				local macro = IEex_GlobalAssemblyMacros[macroName]
-				if not macro then
-					IEex_Error("Macro \""..macroName.."\" not defined in the current scope!")
-				end
+			elseif not inComment then
 
-				local macroType = type(macro)
-				if macroType == "string" then
-					-- Return is for tail call, not for returning a value
-					return unrollTextArg(macro)
-				elseif macroType == "table" then
+				if prefix == "!" then
 
-					local addMacroTextToStructure = true
-					local unrollFunc = macro.unroll
+					local macroName = section:sub(2)
+					local macroArgsStart = section:find("(", 1, true)
+					if macroArgsStart then macroName = section:sub(2, macroArgsStart - 1) end
 
-					if unrollFunc then
+					local macro = IEex_GlobalAssemblyMacros[macroName]
+					if not macro then
+						IEex_Error("Macro \""..macroName.."\" not defined in the current scope!")
+					end
 
-						local args
-						if macroArgsStart then
+					local macroType = type(macro)
+					if macroType == "string" then
+						-- Return is for tail call, not for returning a value
+						return unrollTextArg(macro)
+					elseif macroType == "table" then
 
-							local macroArgsEnd = section:find(")", 1, true)
-							if not macroArgsEnd then
-								IEex_Error("No closing parentheses for macro function \""..macroName.."\"!")
-							elseif macroArgsEnd ~= #section then
-								IEex_Error("Invalid closing parentheses for macro function \""..macroName.."\"!")
-							end
+						local addMacroTextToStructure = true
+						local unrollFunc = macro.unroll
 
-							args = IEex_Split(section:sub(macroArgsStart + 1, macroArgsEnd - 1), ",")
-							for i = 1, #args do
-								local funcArg = args[i]
-								if funcArg:sub(1, 1) == "$" then
-									if type(nextArg) ~= "table" then IEex_Error("Invalid variable-arg") end
-									local varArgIndex = tonumber(funcArg:sub(2))
-									if (not varArgIndex) or #nextArg < varArgIndex then IEex_Error("Invalid variable-arg") end
-									args[i] = nextArg[varArgIndex]
-									nextArg.skipVarArg = true
+						if unrollFunc then
+
+							local args
+							if macroArgsStart then
+
+								local macroArgsEnd = section:find(")", 1, true)
+								if not macroArgsEnd then
+									IEex_Error("No closing parentheses for macro function \""..macroName.."\"!")
+								elseif macroArgsEnd ~= #section then
+									IEex_Error("Invalid closing parentheses for macro function \""..macroName.."\"!")
 								end
-							end
-						else
-							args = {}
-						end
 
-						local unrollResult = unrollFunc(state, args)
-						if unrollResult then
-
-							addMacroTextToStructure = false
-							local unrollResultType = type(unrollResult)
-
-							if unrollResultType == "string" then
-								return unrollTextArg(unrollResult)
-							elseif unrollResultType == "table" then
-								for _, val in ipairs(unrollResult) do
-									local valType = type(val)
-									if valType == "string" then
-										unrollTextArg(val)
-									elseif valType == "table" then
-										if not state.unroll.forceIgnore then
-											table.insert(sanitizedStructure, val)
-										end
-									else
-										IEex_Error("Invalid macro return type \""..valType.."\" for macro \""..macroName.."\"!")
+								args = IEex_Split(section:sub(macroArgsStart + 1, macroArgsEnd - 1), ",")
+								for i = 1, #args do
+									local funcArg = args[i]
+									if funcArg:sub(1, 1) == "$" then
+										if type(nextArg) ~= "table" then IEex_Error("Invalid variable-arg") end
+										local varArgIndex = tonumber(funcArg:sub(2))
+										if (not varArgIndex) or #nextArg < varArgIndex then IEex_Error("Invalid variable-arg") end
+										args[i] = nextArg[varArgIndex]
+										nextArg.skipVarArg = true
 									end
 								end
 							else
-								IEex_Error("Invalid macro return type \""..macroType.."\" for macro \""..macroName.."\"!")
+								args = {}
+							end
+
+							local unrollResult = unrollFunc(state, args)
+							if unrollResult then
+
+								addMacroTextToStructure = false
+								local unrollResultType = type(unrollResult)
+
+								if unrollResultType == "string" then
+									return unrollTextArg(unrollResult)
+								elseif unrollResultType == "table" then
+									for _, val in ipairs(unrollResult) do
+										local valType = type(val)
+										if valType == "string" then
+											unrollTextArg(val)
+										elseif valType == "table" then
+											if not state.unroll.forceIgnore then
+												table.insert(sanitizedStructure, val)
+											end
+										else
+											IEex_Error("Invalid macro return type \""..valType.."\" for macro \""..macroName.."\"!")
+										end
+									end
+								else
+									IEex_Error("Invalid macro return type \""..macroType.."\" for macro \""..macroName.."\"!")
+								end
 							end
 						end
-					end
 
-					if addMacroTextToStructure then
-						local lengthType = type(macro.length)
-						if lengthType ~= "function" and lengthType ~= "number" and lengthType ~= "nil" then
-							IEex_Error("Invalid macro length type \""..lengthType.."\" for macro \""..macroName.."\"!")
+						if addMacroTextToStructure then
+							local lengthType = type(macro.length)
+							if lengthType ~= "function" and lengthType ~= "number" and lengthType ~= "nil" then
+								IEex_Error("Invalid macro length type \""..lengthType.."\" for macro \""..macroName.."\"!")
+							end
+							if not state.unroll.forceIgnore then
+								table.insert(sanitizedStructure, section)
+							end
 						end
-						if not state.unroll.forceIgnore then
-							table.insert(sanitizedStructure, section)
-						end
+					else
+						IEex_Error("Invalid macro type \""..macroType.."\" for macro \""..macroName.."\"!")
 					end
-				else
-					IEex_Error("Invalid macro type \""..macroType.."\" for macro \""..macroName.."\"!")
+				elseif not state.unroll.forceIgnore then
+					table.insert(sanitizedStructure, section)
 				end
-			elseif not state.unroll.forceIgnore then
-				table.insert(sanitizedStructure, section)
 			end
 		end)
 	end
@@ -1583,6 +1599,72 @@ function IEex_HookJump(address, restoreSize, assembly)
 	IEex_WriteAssembly(address, {"!jmp_dword", {hookCode, 4, 4}})
 end
 
+function IEex_HookJumpAutoFail(address, restoreSize, assembly)
+
+	local storeBytes = function(startAddress, size)
+		local bytes = {}
+		local limit = startAddress + size - 1
+		for i = startAddress, limit, 1 do
+			table.insert(bytes, {IEex_ReadByte(i, 0), 1})
+		end
+		return bytes
+	end
+
+	local byteToDwordJmp = {
+		[0x70] = {{0x0F, 1}, {0x80, 1}},
+		[0x71] = {{0x0F, 1}, {0x81, 1}},
+		[0x72] = {{0x0F, 1}, {0x82, 1}},
+		[0x73] = {{0x0F, 1}, {0x83, 1}},
+		[0x74] = {{0x0F, 1}, {0x84, 1}},
+		[0x75] = {{0x0F, 1}, {0x85, 1}},
+		[0x76] = {{0x0F, 1}, {0x86, 1}},
+		[0x77] = {{0x0F, 1}, {0x87, 1}},
+		[0x78] = {{0x0F, 1}, {0x88, 1}},
+		[0x79] = {{0x0F, 1}, {0x89, 1}},
+		[0x7A] = {{0x0F, 1}, {0x8A, 1}},
+		[0x7B] = {{0x0F, 1}, {0x8B, 1}},
+		[0x7C] = {{0x0F, 1}, {0x8C, 1}},
+		[0x7D] = {{0x0F, 1}, {0x8D, 1}},
+		[0x7E] = {{0x0F, 1}, {0x8E, 1}},
+		[0x7F] = {{0x0F, 1}, {0x8F, 1}},
+		[0xEB] = {{0xE9, 1}},
+	}
+
+	local instructionByte = IEex_ReadByte(address, 0)
+	local instructionSize = nil
+	local offset = nil
+
+	local switchBytes = byteToDwordJmp[instructionByte]
+	if switchBytes then
+		instructionSize = 2
+		offset = IEex_ReadByte(address + 1, 0)
+	elseif instructionByte == 0xE9 then
+		instructionSize = 5
+		offset = IEex_ReadDword(address + 1)
+	else
+		instructionSize = 6
+		offset = IEex_ReadDword(address + 2)
+	end
+
+	local afterInstruction = address + instructionSize
+	local jmpFailDest = afterInstruction + restoreSize
+	local restoreBytes = storeBytes(afterInstruction, restoreSize)
+	local jmpDest = afterInstruction + offset
+
+	IEex_DefineAssemblyLabel("jmp_success", jmpDest)
+
+	local hookCode = IEex_WriteAssemblyAuto(IEex_FlattenTable({
+		assembly,
+		"@jmp_fail",
+		restoreBytes,
+		{[[
+			!jmp_dword ]], {jmpFailDest, 4, 4},
+		},
+	}))
+
+	IEex_WriteAssembly(address, {"!jmp_dword", {hookCode, 4, 4}})
+end
+
 function IEex_HookJumpOnSuccess(address, assembly)
 	local jmpFailDest = address + 6
 	local jmpDest = jmpFailDest + IEex_ReadDword(address + 2)
@@ -1595,8 +1677,16 @@ function IEex_HookJumpNoReturn(address, assembly)
 	IEex_WriteAssembly(address, {"!jmp_dword", {IEex_WriteAssemblyAuto(assembly), 4, 4}})
 end
 
-function IEex_HookChangeCallDest(address, dest)
-	IEex_WriteAssembly(address + 0x1, {{dest, 4, 4}})
+function IEex_HookChangeRel32(address, dest)
+	local relAddress = address + 0x1
+	IEex_DefineAssemblyLabel("original_dest", relAddress + 4 + IEex_ReadDword(relAddress))
+	IEex_WriteAssembly(relAddress, {{dest, 4, 4}})
+end
+
+function IEex_HookChangeRel32Auto(address, assembly)
+	local relAddress = address + 0x1
+	IEex_DefineAssemblyLabel("original_dest", relAddress + 4 + IEex_ReadDword(relAddress))
+	IEex_WriteAssembly(relAddress, {{IEex_WriteAssemblyAuto(assembly), 4, 4}})
 end
 
 IEex_LuaCallReturnType = {

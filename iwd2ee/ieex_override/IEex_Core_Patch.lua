@@ -220,7 +220,7 @@
 
 		!test_eax_eax
 		!jz_dword >dont_tick
-		
+
 		]], IEex_GenLuaCall("IEex_Extern_SyncTick"), [[
 
 		@call_error
@@ -272,17 +272,17 @@
 	IEex_WriteDword(0x790AB1, IEex_WriteStringAuto("An Assertion failed in %s at line number %d \n Programmer says: %s\n\n[IEex] The game will crash after you press OK..."))
 
 	-- Three things:
-	--     1) Apparently it's hard to get the stack trace without a real 
+	--     1) Apparently it's hard to get the stack trace without a real
 	--        crash. If the log wants a crash, let's give it a crash...
 	--
-	--     2) The stack unwind gets confused if the program 
+	--     2) The stack unwind gets confused if the program
 	--        crashes in dynamically allocated memory, so use
 	--        IEex_Helper_Crash() to crash in a known stack-frame.
 	--
 	--     3) The messagebox string is put onto the stack. Since
 	--        the stack unwind has no symbols, it tries to use random
 	--        character data as return pointers. Zero out that message
-	--        so we get at least a few stack frames correct in the dmp. 
+	--        so we get at least a few stack frames correct in the dmp.
 	IEex_WriteAssembly(0x790AF4, {"!jmp_dword", {IEex_WriteAssemblyAuto({[[
 		!call_[dword] #8474E8
 		!push_dword #400
@@ -345,6 +345,17 @@
 		!leave
 		!ret
 	]]})
+
+	---------------------
+	-- Stage 0 Startup --
+	---------------------
+
+	IEex_HookRestore(0x421E40, 0, 7, IEex_FlattenTable({[[
+		!push_all_registers_iwd2
+		]], IEex_GenLuaCall("IEex_Extern_Stage0Startup", {["luaState"] = {"!mov_ebx *_g_lua"}}), [[
+		@call_error
+		!pop_all_registers_iwd2
+	]]}))
 
 	---------------------
 	-- Stage 1 Startup --
