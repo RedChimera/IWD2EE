@@ -946,6 +946,11 @@
 		!pop(edx)
 	]]})
 
+	-- Tab should always force tooltip regardless of where the cursor is in relation to the viewport
+	IEex_WriteAssembly(0x687AFB, {"!jmp_byte"})
+	IEex_WriteAssembly(0x68BC16, {"!jmp_byte"})
+	IEex_WriteAssembly(0x6873D5, {"!jmp_byte"})
+
 	IEex_EnableCodeProtection()
 
 end)()
