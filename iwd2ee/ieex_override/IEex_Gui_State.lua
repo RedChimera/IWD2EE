@@ -188,6 +188,11 @@ function IEex_IsPanelActive(CUIPanel)
 	return IEex_ReadDword(CUIPanel + 0xF4) == 1
 end
 
+-- Flagged when panel is not interactable yet should still render
+function IEex_IsPanelInactiveRender(CUIPanel)
+	return IEex_ReadDword(CUIPanel + 0x10A) == 1
+end
+
 function IEex_SetPanelActive(CUIPanel, active)
 	IEex_Call(0x4D3980, {active and 1 or 0}, CUIPanel, 0x0)
 end
@@ -861,7 +866,7 @@ function IEex_Extern_BeforeWorldRender()
 
 	for _, i in ipairs(IEex_AllWorldScreenPanelIDs) do
 		local panel = IEex_GetPanelFromEngine(worldScreen, i)
-		if IEex_IsPanelActive(panel) then
+		if IEex_IsPanelActive(panel) or IEex_IsPanelInactiveRender(panel) then
 			IEex_PanelInvalidate(panel)
 		end
 	end
