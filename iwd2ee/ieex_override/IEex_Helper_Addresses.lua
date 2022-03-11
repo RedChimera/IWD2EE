@@ -61,6 +61,7 @@ IEex_Helper_Addresses = {
 	["g_pSoundMixer"] = 0x9060EC,
 	["g_resolution_x"] = 0x8BA31C,
 	["g_resolution_y"] = 0x8BA31E,
+	["nInvalidatedRenderCount"] = 0x8AB948,
 	["nNeededVRamSurfaces"] = 0x8BA320,
 	["operator_delete"] = 0x7FC984,
 	["operator_new"] = 0x7FC95B,

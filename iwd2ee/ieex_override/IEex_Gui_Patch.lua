@@ -903,47 +903,34 @@
 		!pop_all_registers_iwd2
 	]]}))
 
-	-- Blank the back buffer after switching engines so that left-over junk isn't rendered
-	local pLastActiveEngine = IEex_Malloc(0x5)
-	IEex_WriteDword(pLastActiveEngine, 0x0)
-
-	IEex_HookAfterRestore(0x792845, 0, 6, {[[
-
-		!push(edx)
-
-		; pChitin->pActiveEngine != nullptr ;
-		!mov(eax,[esi+3C4])
-		!test(eax,eax)
-		!jz_dword >continue
-
-		; pActiveEngine->pVidMode != nullptr ;
-		!mov(edx,[eax+4])
-		!test(edx,edx)
-		!jz_dword >continue
-
-		; if in the middle of a multi-frame blank ;
-		!cmp_byte:[dword]_byte ]], {pLastActiveEngine + 0x4, 4}, [[ 00
-		!ja_dword >blank_back_buffer
-
-		; pActiveEngine != pLastActiveEngine ;
-		!cmp_eax_[dword] ]], {pLastActiveEngine, 4}, [[
-		!je_dword >continue
-
-		; start blank ;
-		!mov_[dword]_eax ]], {pLastActiveEngine, 4}, [[
-		!mov_al_byte:[dword] #8AB948 ; engine-defined blanking period ;
-		!mov_byte:[dword]_al ]], {pLastActiveEngine + 0x4, 4}, [[
-
-		@blank_back_buffer
-		!dec_byte:[dword] ]], {pLastActiveEngine + 0x4, 4}, [[
-
+	-- Blank the back buffer after switching engines (or on starting CCacheStatus)
+	-- so that left-over junk isn't rendered
+	IEex_HookRestore(0x790DC4, 0, 8, {[[
+		!push_all_registers_iwd2
 		!push(ecx)
-		!push(edx)
 		!call >IEex_Helper_BlankBackBuffer
-		!pop(ecx)
+		!pop_all_registers_iwd2
+	]]})
 
-		@continue
-		!pop(edx)
+	IEex_HookRestore(0x4408C2, 0, 5, {[[
+		!push_all_registers_iwd2
+		!call >IEex_Helper_BlankCCache1
+		!pop_all_registers_iwd2
+	]]})
+	IEex_HookAfterRestore(0x44208D, 0, 6, {[[
+		!push_all_registers_iwd2
+		!call >IEex_Helper_BlankCCache2
+		!pop_all_registers_iwd2
+	]]})
+	IEex_HookAfterRestore(0x4422AF, 0, 6, {[[
+		!push_all_registers_iwd2
+		!call >IEex_Helper_BlankCCache2
+		!pop_all_registers_iwd2
+	]]})
+	IEex_HookAfterRestore(0x4427FF, 0, 6, {[[
+		!push_all_registers_iwd2
+		!call >IEex_Helper_BlankCCache2
+		!pop_all_registers_iwd2
 	]]})
 
 	-- Tab should always force tooltip regardless of where the cursor is in relation to the viewport

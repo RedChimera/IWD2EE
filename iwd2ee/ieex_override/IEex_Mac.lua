@@ -433,6 +433,7 @@ IEex_GlobalAssemblyMacros = {
 	["cmp_byte:[edi+byte]_byte"] = "80 7F",
 	["cmp_byte:[edi+dword]_byte"] = "80 BF",
 	["cmp_byte:[edx+byte]_byte"] = "80 7A",
+	["cmp_byte:[esi+dword]_byte"] = "80 BE",
 	["cmp_byte:[esi]_byte"] = "80 3E",
 	["cmp_eax_[dword]"] = "3B 05",
 	["cmp_eax_[ebx+byte]"] = "3B 43",
