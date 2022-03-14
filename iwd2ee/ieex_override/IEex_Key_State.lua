@@ -1208,6 +1208,29 @@ function IEex_Extern_AdjustAutoScrollY(y)
 	return y + (resH - IEex_GetMainViewportBottom(false, true)) / 2
 end
 
+function IEex_Extern_AutoScroll(CInfinity, targetViewX, targetViewY, speed)
+
+	-- CInfinity_Scroll
+	IEex_Call(0x5D1380, {speed, targetViewY, targetViewX}, CInfinity, 0x0)
+
+	local resW, resH = IEex_GetResolution()
+
+	local nNewX = IEex_ReadDword(CInfinity + 0x40)
+	local nNewY = IEex_ReadDword(CInfinity + 0x44)
+
+	local nAreaWidth = IEex_ReadDword(CInfinity + 0x80)
+	local nAreaHeight = IEex_ReadDword(CInfinity + 0x84)
+
+	local xStuck = (targetViewX < nNewX and nNewX <= 0) or (targetViewX > nNewX and nNewX >= nAreaWidth - resW)
+	local yStuck = (targetViewY < nNewY and nNewY <= 0) or (targetViewY > nNewY and IEex_GetEffectiveViewBottom(nNewY) >= nAreaHeight)
+
+	if (xStuck and yStuck) or (xStuck and nNewY == targetViewY) or (yStuck and nNewX == targetViewX) then
+		IEex_WriteDword(CInfinity + 0x18E, -1) -- m_ptScrollDest.x
+		IEex_WriteDword(CInfinity + 0x192, -1) -- m_ptScrollDest.y
+		IEex_WriteDword(IEex_Extern_MoveViewUntilDone_Stuck, 1)
+	end
+end
+
 -------------------
 -- Thread: Async --
 -------------------

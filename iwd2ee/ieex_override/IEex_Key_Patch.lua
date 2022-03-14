@@ -225,6 +225,33 @@
 		!pop(ebx)
 	]]}))
 
+	IEex_Extern_MoveViewUntilDone_Stuck = IEex_Malloc(0x4)
+	IEex_WriteDword(IEex_Extern_MoveViewUntilDone_Stuck, 0)
+
+	IEex_HookJumpToAutoReturn(0x5CF0CD, IEex_FlattenTable({[[
+		!push_all_registers_iwd2
+		]], IEex_GenLuaCall("IEex_Extern_AutoScroll", {
+			["args"] = {
+				{"!push(ecx)"},
+				{"!push([esp+24])"},
+				{"!push([esp+24])"},
+				{"!movzx_eax_word:[esp+byte] 24 !push(eax)"},
+			},
+		}), [[
+		@call_error
+		!pop_all_registers_iwd2
+		!add(esp,C)
+	]]}))
+
+	IEex_HookBeforeCall(0x45F39A, {[[
+		!mov_[dword]_dword ]], {IEex_Extern_MoveViewUntilDone_Stuck, 4}, [[ #0
+	]]})
+
+	IEex_HookRestore(0x45F46B, 0, 6, {[[
+		!cmp_[dword]_byte ]], {IEex_Extern_MoveViewUntilDone_Stuck, 4}, [[ 00
+		!jnz_dword :45F45F
+	]]})
+
 	IEex_EnableCodeProtection()
 
 end)()

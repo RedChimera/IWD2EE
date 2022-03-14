@@ -725,6 +725,7 @@ IEex_GlobalAssemblyMacros = {
 	["movzx_eax_word:[dword]"] = "0F B7 05",
 	["movzx_eax_word:[edx+byte]"] = "0F B7 42",
 	["movzx_eax_word:[esi+byte]"] = "0F B7 46",
+	["movzx_eax_word:[esp+byte]"] = "0F B7 44 24",
 	["movzx_ecx_word:[esi+byte]"] = "0F B7 4E",
 	["movzx_esi_word:[ebp-byte]"] = "0F B7 75",
 	["neg_eax"] = "F7 D8",
