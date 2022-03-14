@@ -485,6 +485,7 @@ IEex_GlobalAssemblyMacros = {
 	["jbe_dword"] = "0F 86",
 	["je_byte"] = "74",
 	["je_dword"] = "0F 84",
+	["jg_byte"] = "7F",
 	["jg_dword"] = "0F 8F",
 	["jl_byte"] = "7C",
 	["jl_dword"] = "0F 8C",

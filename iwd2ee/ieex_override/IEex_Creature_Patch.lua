@@ -94,7 +94,7 @@
 		!push_all_registers_iwd2
 
 		!call >IEex_GetLuaState
-		!mov_ebx_eax		
+		!mov_ebx_eax
 
 		!push_dword ]], {IEex_WriteStringAuto("IEex_Extern_OnGameObjectsBeingCleaned"), 4}, [[
 		!push_ebx
@@ -274,7 +274,7 @@
 			["returnType"] = IEex_LuaCallReturnType.Boolean,
 		}), [[
 		!jmp_dword >call_success
-		
+
 		@call_error
 		!mov_eax #1
 
@@ -305,7 +305,7 @@
 	IEex_HookJumpNoReturn(0x70C8E6, {[[
 		!mov_ecx_ebp
 		!call :724610 ; CGameSprite_AssignDefaultButtons ;
-		!jmp_dword :70C970		
+		!jmp_dword :70C970
 	]]})
 
 	-------------------------------------------------------------
@@ -319,6 +319,13 @@
 		!test_eax_eax
 		!jz_dword :444C49
 	]]})
+
+	----------------------------------------------------------------------------
+	-- Fix inverted sound check in CGameSprite_Hide(), MOVESILENTLY shouldn't --
+	-- have inverse relationship with hide success when enemies are around.   --
+	----------------------------------------------------------------------------
+
+	IEex_WriteAssembly(0x757E5F, {"!jg_byte"})
 
 	IEex_EnableCodeProtection()
 
