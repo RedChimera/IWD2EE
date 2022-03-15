@@ -851,12 +851,29 @@
 		!pop_all_registers_iwd2
 	]]}))
 
-	-- If selected resolution is below 1024x768 use GUIW08, else use customized GUIW10
+	-- Reject non-32-bit bit depths
+	IEex_HookRestore(0x79B3DF, 0, 5, IEex_FlattenTable({[[
+		!push_all_registers_iwd2
+		]], IEex_GenLuaCall("IEex_Extern_CheckBitDepth", {
+			["returnType"] = IEex_LuaCallReturnType.Boolean,
+		}), [[
+		!jmp_dword >no_error
+		@call_error
+		!xor_eax_eax
+		@no_error
+		!test_eax_eax
+		!pop_all_registers_iwd2
+		!jnz_dword >return
+		!mov(ecx,[8CF6D8])
+		!jmp_dword :79B34B
+	]]}))
+
+	-- If selected resolution is 800x600 use GUIW08, else use customized GUIW10
 	IEex_HookJumpNoReturn(0x42216E, IEex_FlattenTable({[[
-		!cmp(ecx,400)
-		!jb_dword :4224CC
-		!cmp(word:[8BA31E],300)
-		!jb_dword :4224CC
+		!cmp(ecx,320)
+		!je_dword :4224CC
+		!cmp(word:[8BA31E],258)
+		!je_dword :4224CC
 		!jmp_dword :422198
 	]]}))
 

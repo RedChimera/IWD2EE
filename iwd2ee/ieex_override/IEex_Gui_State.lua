@@ -899,6 +899,17 @@ function IEex_Extern_InitResolution()
 	local nWidth, nHeight = IEex_Helper_AskResolution()
 	IEex_WriteWord(0x8BA31C, nWidth)  -- g_resolution.width
 	IEex_WriteWord(0x8BA31E, nHeight) -- g_resolution.height
+	IEex_WritePrivateProfileInt("Program Options", "BitsPerPixel", 32, ".\\Icewind2.ini")
+end
+
+function IEex_Extern_CheckBitDepth()
+	local g_pBaldurChitin = IEex_ReadDword(0x8CF6DC)
+	local nBitDepth = IEex_ReadWord(g_pBaldurChitin + 0x7EA)
+	if nBitDepth ~= 32 then
+		IEex_MessageBox("Error: Unable to find a display mode at the target resolution with a 32-bit color depth.\n\nThe game will exit after you press OK...")
+		return false
+	end
+	return true
 end
 
 function IEex_Extern_InitGUIConstants()
@@ -917,15 +928,20 @@ function IEex_Extern_InitHighResolutionPaddingPanels(pBaldurChitin)
 
 	IEex_AssertThread(IEex_Thread.Sync, true)
 
-	-- Uncomment this block to force-disable the high-resolution panels
-	if false then
+	local resW, resH = IEex_GetResolution()
+
+	-- If the selected resolution can't display the
+	-- high-resolution padding panels, remove them.
+	if resW < 1024 or resH < 768 then
 
 		IEex_DisableCodeProtection()
 
 		-- Wipe out the hardcoded panel definitions. This is overkill, but they deserve it.
 		IEex_Helper_Memset(pBaldurChitin + 0x49B4, 0, 4 * 0x1C)
 
-		-- Common panels are disabled - skip code that assumes they are there
+		-- Common panels are disabled - skip code that assumes they are there.
+		-- Note: Multiplayer panels HAVE NOT BEEN FIXED because IWD2:EE doesn't
+		-- support Multiplayer.
 		IEex_WriteAssembly(0x5DBC09, {"!jmp_byte"})
 		IEex_WriteAssembly(0x5FEDE9, {"!jmp_byte"})
 		IEex_WriteAssembly(0x607B57, {"!jmp_byte"})
