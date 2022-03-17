@@ -47,6 +47,7 @@ IEex_Helper_Addresses = {
 	["CVideoUnknownSub::BltFast"] = 0x7B68B0,
 	["CVidImage::rgbTempPal"] = 0x9064F8,
 	["CVidMode::CheckBltResult"] = 0x799F40,
+	["CVidMosaic::Render"] = 0x7B0C80,
 	["CVidPalette::Realize"] = 0x7BF150,
 	["CVidPalette::SetPalette"] = 0x7BF390,
 	["CVidTile::ReadyTexture"] = 0x7B1780,

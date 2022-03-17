@@ -955,6 +955,16 @@
 	IEex_WriteAssembly(0x68BC16, {"!jmp_byte"})
 	IEex_WriteAssembly(0x6873D5, {"!jmp_byte"})
 
+	------------------------------------------------
+	-- Disable Gamma-correction on mainscreen MOS --
+	------------------------------------------------
+
+	IEex_HookJumpToAutoReturn(0x4D3435, {[[
+		!push(ecx)
+		!push(edi)
+		!call >IEex_Helper_CUIPanel_Render_Override_CVidMosaic_Render
+	]]})
+
 	IEex_EnableCodeProtection()
 
 end)()
