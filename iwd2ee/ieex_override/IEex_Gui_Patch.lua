@@ -871,10 +871,10 @@
 	-- If selected resolution is 800x600 use GUIW08, else use customized GUIW10
 	IEex_HookJumpNoReturn(0x42216E, IEex_FlattenTable({[[
 		!cmp(ecx,320)
-		!je_dword :4224CC
+		!jne_dword :422198
 		!cmp(word:[8BA31E],258)
-		!je_dword :4224CC
-		!jmp_dword :422198
+		!jne_dword :422198
+		!jmp_dword :4224CC
 	]]}))
 
 	-- Don't set g_resolution[1] when using GUIW10
