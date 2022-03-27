@@ -17,11 +17,11 @@ function IEex_Dev_DumpEngineVFTables()
 		{ "CScreenSave",        0x857DA8 }, -- 0x659B32
 		{ "CScreenSelectParty", 0x858390 }, -- 0x65FAE2
 		{ "CScreenSpell",       0x858CB0 }, -- 0x667EE2
+		{ "CScreenStart",       0x851750 }, -- 0x5995BD
 		{ "CScreenStore",       0x859374 }, -- 0x670A02
 		{ "CScreenWorld",       0x85A250 }, -- 0x685632
 		{ "CScreenWorldMap",    0x85A768 }, -- 0x698882
 		{ "Unknown1",           0x848270 }, -- 0x43E662
-		{ "Unknown2",           0x851750 }, -- 0x5995BD
 		{ "Unknown3",           0x859124 }, -- 0x66F0E2
 	}
 
@@ -50,7 +50,7 @@ function IEex_Dev_DumpEngineVFTables()
 			function(_, k, v)
 				IEex_PrettyPrintHeader("["..IEex_ToHex(k).."]", "    ")
 				for _, v2 in ipairs(v) do
-					print(string.format("        %s [%s]", v2[1], IEex_ToHex(v2[2])))
+					print(string.format("        %s [%s+%s]", v2[1], IEex_ToHex(v2[2]), IEex_ToHex(offsetBucket[1])))
 				end
 			end)
 	end

@@ -965,6 +965,41 @@
 		!call >IEex_Helper_CUIPanel_Render_Override_CVidMosaic_Render
 	]]})
 
+	---------------------------------------------------------
+	-- m_lPopupStack shouldn't be modified while           --
+	-- CScreenSpell_TimerSynchronousUpdate is accessing it --
+	---------------------------------------------------------
+
+	local lock_IEex_CScreenSpell_m_lPopupStack = IEex_Helper_GetOrCreateGlobalLock("IEex_CScreenSpell_m_lPopupStack")
+
+	for _, address in ipairs({0x66B480, 0x66B71E}) do
+		IEex_HookJumpToAutoReturn(address, {[[
+			!push_all_registers_iwd2
+			!push_dword ]], {lock_IEex_CScreenSpell_m_lPopupStack, 4}, [[
+			!call >IEex_Helper_LockGlobalDirect
+			!pop_all_registers_iwd2
+			!call >original_dest
+			!push_all_registers_iwd2
+			!push_dword ]], {lock_IEex_CScreenSpell_m_lPopupStack, 4}, [[
+			!call >IEex_Helper_UnlockGlobalDirect
+			!pop_all_registers_iwd2
+		]]})
+	end
+
+	IEex_HookRestore(0x66A59C, 0, 6, {[[
+		!push_all_registers_iwd2
+		!push_dword ]], {lock_IEex_CScreenSpell_m_lPopupStack, 4}, [[
+		!call >IEex_Helper_LockGlobalDirect
+		!pop_all_registers_iwd2
+	]]})
+
+	IEex_HookRestore(0x66A6F5, 0, 5, {[[
+		!push_all_registers_iwd2
+		!push_dword ]], {lock_IEex_CScreenSpell_m_lPopupStack, 4}, [[
+		!call >IEex_Helper_UnlockGlobalDirect
+		!pop_all_registers_iwd2
+	]]})
+
 	IEex_EnableCodeProtection()
 
 end)()

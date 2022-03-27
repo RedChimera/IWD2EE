@@ -1678,8 +1678,9 @@ function IEex_HookJumpNoReturn(address, assembly)
 end
 
 function IEex_HookJumpToAutoReturn(address, assembly)
-	local auto = IEex_WriteAssemblyAuto(IEex_FlattenTable({assembly, {"!jmp_dword", {address + 5, 4, 4}}}))
-	IEex_WriteAssembly(address, {"!jmp_dword", {auto, 4, 4}})
+	local relAddress = address + 0x1
+	IEex_DefineAssemblyLabel("original_dest", relAddress + 4 + IEex_ReadDword(relAddress))
+	IEex_WriteAssembly(address, {"!jmp_dword", {IEex_WriteAssemblyAuto(IEex_FlattenTable({assembly, {"!jmp_dword", {relAddress + 4, 4, 4}}})), 4, 4}})
 end
 
 function IEex_HookChangeRel32(address, dest)
@@ -1692,6 +1693,12 @@ function IEex_HookChangeRel32Auto(address, assembly)
 	local relAddress = address + 0x1
 	IEex_DefineAssemblyLabel("original_dest", relAddress + 4 + IEex_ReadDword(relAddress))
 	IEex_WriteAssembly(relAddress, {{IEex_WriteAssemblyAuto(assembly), 4, 4}})
+end
+
+function IEex_HookChangeRel32AutoReturn(address, assembly)
+	local relAddress = address + 0x1
+	IEex_DefineAssemblyLabel("original_dest", relAddress + 4 + IEex_ReadDword(relAddress))
+	IEex_WriteAssembly(relAddress, {{IEex_WriteAssemblyAuto(IEex_FlattenTable({assembly, {"!jmp_dword", {relAddress + 4, 4, 4}}})), 4, 4}})
 end
 
 IEex_LuaCallReturnType = {
