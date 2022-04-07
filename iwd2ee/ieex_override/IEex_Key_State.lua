@@ -1213,6 +1213,15 @@ function IEex_Extern_AutoScroll(CInfinity, targetViewX, targetViewY, speed)
 	-- CInfinity_Scroll
 	IEex_Call(0x5D1380, {speed, targetViewY, targetViewX}, CInfinity, 0x0)
 
+	-- If (m_ptScrollDest.x == -1 && m_ptScrollDest.y == -1) auto-scrolling is done.
+	-- I might have adjusted m_ptScrollDest after MoveViewPointUntilDone() stored
+	-- the location, (and expects to end up there), so let's just pretend like
+	-- MoveViewPointUntilDone() hit a deadlock so the action terminates.
+	if IEex_ReadDword(CInfinity + 0x18E) == -1 and IEex_ReadDword(CInfinity + 0x192) == -1 then
+		IEex_WriteDword(IEex_Extern_MoveViewUntilDone_Stuck, 1)
+		return
+	end
+
 	local resW, resH = IEex_GetResolution()
 
 	local nNewX = IEex_ReadDword(CInfinity + 0x40)
