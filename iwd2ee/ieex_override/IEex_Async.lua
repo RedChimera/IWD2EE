@@ -33,12 +33,12 @@ function IEex_Extern_SetupAsyncState(asyncSharedMemory)
 	IEex_ExposeToLua(IEex_Label("IEex_WriteByte"), "IEex_WriteByte")
 	IEex_ExposeToLua(IEex_Label("IEex_GetCurrentThreadLua"), "IEex_GetCurrentThread")
 	IEex_ExposeToLua(IEex_Label("IEex_GetMilliseconds"), "IEex_GetMilliseconds")
+	IEex_ExposeToLua(IEex_Label("IEex_DumpCrashThreadStackLua"), "IEex_DumpCrashThreadStack")
 	IEex_ExposeToLua(IEex_Label("IEex_DumpThreadStackLua"), "IEex_DumpThreadStack")
 
 	-- Init helper dll for Async state
-	IEex_DllCall("IEexHelper", "ExposeFunctions", {IEex_Label("_g_lua_async")}, nil, 0x4)
-	IEex_Helper_ExportFunctions()
-	for name, address in pairs(IEex_Helper_Functions) do
+	IEex_DllCall("IEexHelper", "ExposeFunctions", {IEex_Label("_g_lua_async")}, nil, 0x0)
+	for name, address in pairs(IEex_Helper_ExportFunctions()) do
 		IEex_DefineAssemblyLabel(name, address)
 	end
 

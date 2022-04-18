@@ -17,6 +17,14 @@ IEex_RegWordToOrdinal = {
 	["bx"] = 3,
 }
 
+function IEex_SignedHexStringToNumber(hexStr)
+	local v = tonumber(hexStr, 16)
+	if string.sub(hexStr, 1, 1) == "-" then
+		return -(bit.bnot(v) + 1)
+	end
+	return v
+end
+
 function IEex_GetImmediateLength(immediate)
 
 	local absoluteImmediate = bit.band(immediate, 0x80000000) ~= 0x0
@@ -878,6 +886,17 @@ IEex_GlobalAssemblyMacros = {
 				state.unroll.markedEspAdjustment = tonumber(arg, 16)
 			else
 				state.unroll.markedEspAdjustment = 0
+			end
+		end,
+	},
+
+	["adjust_marked_esp"] = {
+		["unroll"] = function(state, args)
+			local arg = args[1]
+			if arg then
+				state.unroll.markedEspAdjustment = state.unroll.markedEspAdjustment + IEex_SignedHexStringToNumber(arg)
+			else
+				EEex_Error("Bad argument")
 			end
 		end,
 	},

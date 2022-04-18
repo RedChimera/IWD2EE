@@ -1167,11 +1167,11 @@ function IEex_DefineCustomControl(controlName, controlStructType, args)
 
 		structSize = 0x560
 		newConstructor = IEex_WriteAssemblyAuto({[[
-			!mark_esp()
+			!mark_esp
 			!push(esi)
 			!mov(esi,ecx)
-			!marked_esp() !push([esp+8]) ; pControlInfo ;
-			!marked_esp() !push([esp+4]) ; pPanel ;
+			!marked_esp !push([esp+8]) ; pControlInfo ;
+			!marked_esp !push([esp+4]) ; pPanel ;
 			!mov(ecx,esi)
 			!call :4E4000 ; CUIControlLabel_Construct ;
 			!mov([esi],$1) ]], {newVFTable}, [[

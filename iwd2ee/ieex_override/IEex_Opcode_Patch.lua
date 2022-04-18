@@ -16,7 +16,7 @@
 	-----------------------------------------------------
 
 	IEex_HookRestore(0x73EA38, 0, 7, IEex_FlattenTable({[[
-		!mark_esp()
+		!mark_esp
 		!push_all_registers_iwd2
 		]], IEex_GenLuaCall("IEex_Extern_OnWeaponDamageCRE", {
 			["args"] = {
@@ -48,7 +48,7 @@
 	]]}))
 
 	-- Restores bAllowEffectListCall = 1 at the end of
-	-- CPersistantEffectListRegenerated_AIUpdate(), and 
+	-- CPersistantEffectListRegenerated_AIUpdate(), and
 	-- runs CGameSprite_ProcessEffectList() if the engine
 	-- was blocked from calling it during the function.
 	IEex_HookRestore(0x51E926, 0, 7, IEex_FlattenTable({[[
@@ -425,7 +425,7 @@
 		!add_esp_byte 08
 		!test_eax_eax
 		!jz_dword >continueNormally
-		
+
 		!push_byte FF
 		!push_dword *_g_lua_async
 		!call >_lua_toboolean
@@ -436,7 +436,7 @@
 		!call >_lua_settop
 		!add_esp_byte 08
 		!pop_eax
-		
+
 		!pop_registers_iwd2
 		!add_esp_byte 04
 		!jmp_dword >return
@@ -514,7 +514,7 @@
 		!pop_registers_iwd2
 		!add_esp_byte 08
 		!jmp_dword >return
-		
+
 		@continueNormally
 		!pop_registers_iwd2
 	]]})

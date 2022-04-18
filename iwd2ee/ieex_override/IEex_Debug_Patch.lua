@@ -8,7 +8,6 @@ IEex_Debug_LoadTimes = false
 	if IEex_Debug_CompressTime then
 		IEex_DisableCodeProtection()
 		IEex_HookRestore(0x68CAAD, 0, 7, IEex_FlattenTable({[[
-			!mark_esp()
 			!push_all_registers_iwd2
 			]], IEex_GenLuaCall("IEex_Extern_Debug_OnCompressTime"), [[
 			@call_error

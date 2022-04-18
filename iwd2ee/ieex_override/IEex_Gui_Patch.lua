@@ -552,7 +552,7 @@
 	IEex_WriteAssembly(0x79F819, {"!repeat(6,!nop)"})
 
 	IEex_HookAfterRestore(0x79284D, 0, 6, {[[
-		!push_dword #5
+		!push_dword #1
 		!call >IEex_Helper_Sleep
 		!mov([esi+193A],1) ; m_displayStale = 1 ;
 	]]})
@@ -645,7 +645,7 @@
 		]]},
 		IEex_GenLuaCall("IEex_Extern_MouseInAreaViewport", {
 			["args"] = {
-				{"!push_esi"},
+				{"!push(esi)"},
 			},
 			["returnType"] = IEex_LuaCallReturnType.Boolean,
 		}),
@@ -800,7 +800,6 @@
 
 	IEex_HookJumpOnSuccess(0x5947DA, IEex_FlattenTable({
 		{[[
-			!mark_esp
 			!push_all_registers_iwd2
 		]]},
 		IEex_GenLuaCall("IEex_Extern_OnActionbarUnhandledRButtonClick", {
@@ -960,9 +959,8 @@
 	------------------------------------------------
 
 	IEex_HookJumpToAutoReturn(0x4D3435, {[[
-		!push(ecx)
 		!push(edi)
-		!call >IEex_Helper_CUIPanel_Render_Override_CVidMosaic_Render
+		!call >IEex_Helper__CUIPanel_Render__CVidMosaic_Render
 	]]})
 
 	---------------------------------------------------------

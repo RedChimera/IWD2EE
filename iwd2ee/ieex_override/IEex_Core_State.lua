@@ -80,7 +80,7 @@ function IEex_Extern_Crashing(excCode, EXCEPTION_POINTERS)
 	if needReturn then return end
 
 	IEex_TracebackPrint("[!]", "[!]    ", "IEex detected crash; debug info:", 1)
-	IEex_DumpThreadStack(EXCEPTION_POINTERS, "[!]     ")
+	IEex_DumpCrashThreadStack(EXCEPTION_POINTERS, "[!]     ")
 
 	local timeFormat = "%x_%X"
 	local timeString = os.date(timeFormat):gsub("/", "_"):gsub(":", "_")
@@ -99,8 +99,7 @@ function IEex_Extern_Crashing(excCode, EXCEPTION_POINTERS)
 	logCopyFile:write(logCopy)
 	logCopyFile:close()
 
-	local bigPathMem = IEex_WriteStringAuto(bigPath)
-	IEex_DllCall("IEexHelper", "WriteDump", {bigPathMem, EXCEPTION_POINTERS, excCode, IEex_Flags({
+	IEex_Helper_WriteDump(IEex_Flags({
 		0x2,     -- MiniDumpWithFullMemory
 		0x4,     -- MiniDumpWithHandleData
 		0x20,    -- MiniDumpWithUnloadedModules
@@ -110,15 +109,12 @@ function IEex_Extern_Crashing(excCode, EXCEPTION_POINTERS)
 		0x8000,  -- MiniDumpWithFullAuxiliaryState
 		0x20000, -- MiniDumpIgnoreInaccessibleMemory
 		0x40000, -- MiniDumpWithTokenInformation
-	})}, nil, 0x10)
-	IEex_Free(bigPathMem)
+	}), EXCEPTION_POINTERS, bigPath)
 
-	local dmpPathMem = IEex_WriteStringAuto(dmpPath)
-	IEex_DllCall("IEexHelper", "WriteDump", {dmpPathMem, EXCEPTION_POINTERS, excCode, IEex_Flags({
+	IEex_Helper_WriteDump(IEex_Flags({
 		0x1,  -- MiniDumpWithDataSegs
 		0x40, -- MiniDumpWithIndirectlyReferencedMemory
-	})}, nil, 0x10)
-	IEex_Free(dmpPathMem)
+	}), EXCEPTION_POINTERS, dmpPath)
 
 	IEex_MessageBox("Crash detected with error code "..IEex_ToHex(excCode).."\n\nIEex.log saved to:\n    \""..logPath.."\"\n\nDMP files saved to:\n    \""..dmpPath.."\"\n    \""..bigPath.."\"\n\nYour game will attempt to save under the following name after you press OK, though it may be corrupted:\n    \""..crashSaveName.."\"\n\nPlease upload files to the Red Chimera Discord for assistance", 0x10)
 
@@ -486,7 +482,6 @@ IEex_AbsoluteOnce("IEex_GetLuaState", function()
 		!push_dword ]], {IEex_WriteStringAuto("Sync"), 4}, [[
 		!push_dword ]], {IEex_WriteStringAuto("IEex_ThreadBridge"), 4}, [[
 		!call >IEex_Helper_GetBridgeDirect
-		!add_esp_byte 08
 
 		!cmp_ebx_eax
 		!jne_dword >not_sync
@@ -497,7 +492,6 @@ IEex_AbsoluteOnce("IEex_GetLuaState", function()
 		!push_dword ]], {IEex_WriteStringAuto("Async"), 4}, [[
 		!push_dword ]], {IEex_WriteStringAuto("IEex_ThreadBridge"), 4}, [[
 		!call >IEex_Helper_GetBridgeDirect
-		!add_esp_byte 08
 
 		!cmp_ebx_eax
 		!jne_dword >not_async

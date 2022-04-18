@@ -193,7 +193,6 @@
 	-------------------------------------------------
 
 	IEex_HookAfterCall(0x72DAC7, IEex_FlattenTable({[[
-		!mark_esp()
 		!push_all_registers_iwd2
 		]], IEex_GenLuaCall("IEex_Extern_OnPostCreatureProcessEffectList", {
 			["args"] = {
@@ -263,7 +262,7 @@
 	-- an override to the normal buttonType=0 restriction
 	IEex_HookRestore(0x724610, 0, 5, IEex_FlattenTable({[[
 
-		!mark_esp()
+		!mark_esp
 		!sub_esp_byte 04
 
 		!push_all_registers_iwd2
@@ -279,7 +278,7 @@
 		!mov_eax #1
 
 		@call_success
-		!marked_esp() !mov([esp-4],eax)
+		!marked_esp !mov([esp-4],eax)
 		!pop_all_registers_iwd2
 	]]}))
 
@@ -288,7 +287,7 @@
 		!cmp([ebx],0)
 		!jz_dword :72463C
 		!mark_esp(14)
-		!marked_esp() !cmp([esp-4],1)
+		!marked_esp !cmp([esp-4],1)
 		!je_dword :72463C
 		!jmp_dword :72467D
 	]]})

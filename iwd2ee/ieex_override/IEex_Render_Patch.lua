@@ -38,8 +38,8 @@
 	IEex_HookRestore(0x551FF0, 0, 5, {[[
 		!call ]], {getFogTypePtr, 4, 4}, [[
 		!cmp_[eax]_byte 00
-		!jnz_dword ]], {IEex_GetProcAddress("IEexHelper", "RenderFoWSolid"), 4, 4},
-	})
+		!jnz_dword >IEex_Helper_RenderFoWSolid
+	]]})
 
 	-- Install new transparent FoW rendering
 	IEex_HookBeforeCall(0x477B61, {[[
@@ -48,7 +48,7 @@
 		!jz_dword >no_hook
 		!push_ecx
 		!push_esi
-		!call ]], {IEex_GetProcAddress("IEexHelper", "RenderFoW"), 4, 4}, [[
+		!call >IEex_Helper_RenderFoW
 		!pop_ecx
 		@no_hook
 	]]})
@@ -83,7 +83,7 @@
 	-- Don't crash when attempting to dither a sprite           --
 	-- effect on a creature with a large posZ                   --
 	-- (engine failed to calculate rClip correctly, subtracting --
-	--  posZ out of rClip.bottom when it should keep it)        -- 
+	--  posZ out of rClip.bottom when it should keep it)        --
 	--------------------------------------------------------------
 
 	IEex_WriteAssembly(0x709AA7, {"!repeat(3,!nop)"})

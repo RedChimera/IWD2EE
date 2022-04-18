@@ -141,7 +141,7 @@
 
 	IEex_HookRestore(0x78D960, 0, 6, {[[
 		!pop_esi
-		!call ]], {IEex_GetProcAddress("IEexHelper", "WindowProcHook"), 4, 4}, [[
+		!call >IEex_Helper_WindowProcHook
 		!push_esi
 	]]})
 
@@ -150,7 +150,6 @@
 	-----------------------------------------------------------------------------------
 
 	IEex_HookReturnNOPs(0x5D129E, 9, IEex_FlattenTable({[[
-		!mark_esp
 		!push_registers_iwd2
 		]], IEex_GenLuaCall("IEex_Extern_EnforceViewportBottomBound", {
 			["args"] = {

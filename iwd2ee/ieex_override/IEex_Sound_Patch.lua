@@ -10,8 +10,7 @@
 
 	IEex_HookRestore(0x7A8E20, 0, 7, {[[
 		!push_all_registers_iwd2
-		!push(ecx)
-		!call ]], {IEex_GetProcAddress("IEexHelper", "CSoundImp_Destruct"), 4, 4}, [[
+		!call >IEex_Helper_CSoundImp_DestructHook
 		!pop_all_registers_iwd2
 	]]})
 

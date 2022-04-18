@@ -216,7 +216,6 @@
 		!push_dword ]], {{IEex_WriteStringAuto("val"), 4}}, [[
 		!push_dword ]], {{IEex_WriteStringAuto("IEex_NeedSyncTick"), 4}}, [[
 		!call >IEex_Helper_GetBridgeDirect
-		!add_esp_byte 08
 
 		!test_eax_eax
 		!jz_dword >dont_tick

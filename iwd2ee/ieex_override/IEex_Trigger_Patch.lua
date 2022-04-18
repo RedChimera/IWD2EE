@@ -21,10 +21,10 @@
 			!push_ebx
 			!call >_lua_setglobal
 			!add_esp_byte 08
-		]]}, 
+		]]},
 		IEex_GenLuaCall(nil, {
 			["functionChunk"] = {[[
-				!marked_esp() !mov(eax,[esp+4])
+				!marked_esp !mov(eax,[esp+4])
 				!push([eax+4E])
 			]]},
 			["returnType"] = IEex_LuaCallReturnType.Boolean,

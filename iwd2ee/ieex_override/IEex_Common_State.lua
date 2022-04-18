@@ -1714,7 +1714,7 @@ function IEex_GenLuaCall(funcName, meta)
 		!fstp_qword:[esp]
 		!push_ebx
 		!call >_lua_pushnumber
-		!add_esp_byte 0C
+		!add_esp_byte 0C !adjust_marked_esp(-4)
 	]]}
 
 	local returnBooleanTemplate = {[[
