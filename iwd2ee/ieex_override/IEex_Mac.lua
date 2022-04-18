@@ -896,7 +896,7 @@ IEex_GlobalAssemblyMacros = {
 			if arg then
 				state.unroll.markedEspAdjustment = state.unroll.markedEspAdjustment + IEex_SignedHexStringToNumber(arg)
 			else
-				EEex_Error("Bad argument")
+				IEex_Error("[!adjust_marked_esp] - Argument required!")
 			end
 		end,
 	},
