@@ -356,8 +356,8 @@ function IEex_SetPanelArea(CUIPanel, x, y, w, h, bSetOriginal)
 end
 
 function IEex_SetControlXY(CUIControl, x, y)
-	IEex_WriteDword(CUIControl + 0xE, x)
-	IEex_WriteDword(CUIControl + 0x12, y)
+	if x then IEex_WriteDword(CUIControl + 0xE, x) end
+	if y then IEex_WriteDword(CUIControl + 0x12, y) end
 end
 
 function IEex_SetEngineScrollbarFocus(CBaldurEngine, CUIControlScrollbar)
@@ -2034,6 +2034,8 @@ function IEex_OnCHUInitialized(chuResref)
 		local panel9Memory = IEex_GetPanelFromEngine(worldScreen, 9)
 		local panel17Memory = IEex_GetPanelFromEngine(worldScreen, 17)
 
+		local control_9_0_Memory = IEex_GetControlFromPanel(panel9Memory, 0)
+
 		local x0, y0, w0, h0 = IEex_GetPanelArea(panel0Memory)
 		local x1, y1, w1, h1 = IEex_GetPanelArea(panel1Memory)
 		local x6, y6, w6, h6 = IEex_GetPanelArea(panel6Memory)
@@ -2042,16 +2044,19 @@ function IEex_OnCHUInitialized(chuResref)
 		local x9, y9, w9, h9 = IEex_GetPanelArea(panel7Memory)
 		local x17, y17, w17, h17 = IEex_GetPanelArea(panel17Memory)
 
+		local x_9_0, y_9_0, w_9_0, h_9_0 = IEex_GetControlArea(control_9_0_Memory)
+
 		local toolbarBottom = resH - h0
-		local dialogTop = resH - h7
 
 		IEex_SetPanelXY(panel0Memory, (resW - w0) / 2, toolbarBottom)
 		IEex_SetPanelXY(panel1Memory, (resW - w1) / 2, toolbarBottom - h1, true)
 		IEex_SetPanelArea(panel6Memory, (resW - 800) / 2, resH - h6, 800)
-		IEex_SetPanelXY(panel7Memory, (resW - w7) / 2, dialogTop)
+		IEex_SetPanelXY(panel7Memory, (resW - w7) / 2, resH - h7)
 		IEex_SetPanelXY(panel8Memory, (resW - w8) / 2, resH - h8)
-		IEex_SetPanelXY(panel9Memory, (resW - w9) / 2 + (resW ~= 800 and 112 or 0), dialogTop + 252)
+		IEex_SetPanelArea(panel9Memory, (resW - w_9_0) / 2, resH - h_9_0 - 4, w_9_0, h_9_0)
 		IEex_SetPanelXY(panel17Memory, (resW - w17) / 2, resH - h17)
+
+		IEex_SetControlXY(control_9_0_Memory, 0, 0)
 
 		---------------
 		-- Quickloot --
