@@ -2,6 +2,8 @@
 IEex_Debug_CompressTime = false
 IEex_Debug_Stutter = false
 IEex_Debug_LoadTimes = false
+IEex_Debug_LogPanelInvalidations = false
+IEex_Debug_LogButtonInvalidations = false
 
 (function()
 
@@ -72,6 +74,58 @@ IEex_Debug_LoadTimes = false
 		end
 
 		parseLargeLua("override/IEex_Trace.lua")
+	end
+
+	if IEex_Debug_LogPanelInvalidations then
+		IEex_DisableCodeProtection()
+		IEex_HookRestore(0x4D394D, 0, 12, IEex_FlattenTable({[[
+			!mark_esp(44)
+			!push_all_registers_iwd2
+			]], IEex_GenLuaCall("IEex_Extern_Debug_LogPanelInvalidation", {
+				["args"] = {
+					{"!push(esi)"},                             -- panel
+					{"!marked_esp !push([esp+4])"},             -- rRect
+					{"!push(edi)"},                             -- m_rInvalid
+					{"!marked_esp !lea(eax,[esp]) !push(eax)"}, -- esp
+				},
+			}), [[
+			@call_error
+			!pop_all_registers_iwd2
+		]]}))
+		IEex_EnableCodeProtection()
+	end
+
+	if IEex_Debug_LogButtonInvalidations then
+
+		IEex_DisableCodeProtection()
+
+		IEex_HookRestore(0x4D56A0, 0, 6, IEex_FlattenTable({[[
+			!mark_esp
+			!push_all_registers_iwd2
+			]], IEex_GenLuaCall("IEex_Extern_Debug_LogButtonInvalidation", {
+				["args"] = {
+					{"!push(ecx)"},                             -- button
+					{"!marked_esp !lea(eax,[esp]) !push(eax)"}, -- esp
+				},
+			}), [[
+			@call_error
+			!pop_all_registers_iwd2
+		]]}))
+
+		IEex_HookRestore(0x4D5730, 0, 6, IEex_FlattenTable({[[
+			!mark_esp
+			!push_all_registers_iwd2
+			]], IEex_GenLuaCall("IEex_Extern_Debug_LogButtonInvalidationReset", {
+				["args"] = {
+					{"!push(ecx)"},                             -- button
+					{"!marked_esp !lea(eax,[esp]) !push(eax)"}, -- esp
+				},
+			}), [[
+			@call_error
+			!pop_all_registers_iwd2
+		]]}))
+
+		IEex_EnableCodeProtection()
 	end
 
 end)()

@@ -625,6 +625,7 @@ IEex_GlobalAssemblyMacros = {
 	["mov_eax_[edi+dword]"] = "8B 87",
 	["mov_eax_[edi]"] = "8B 07",
 	["mov_eax_[edx+byte]"] = "8B 42",
+	["mov_eax_[edx+dword]"] = "8B 82",
 	["mov_eax_[edx]"] = "8B 02",
 	["mov_eax_[esi+byte]"] = "8B 46",
 	["mov_eax_[esi+dword]"] = "8B 86",

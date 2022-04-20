@@ -47,3 +47,28 @@ function IEex_Debug_SpamRest(numTimes)
 		IEex_Call(0x5C1160, {0, 1}, IEex_GetGameData(), 0x0)
 	end)
 end
+
+function IEex_Extern_Debug_LogPanelInvalidation(panel, rRect, m_rInvalid, esp)
+
+	local rectString = function(rect)
+		return "("..IEex_ReadDword(rect)..","..IEex_ReadDword(rect + 0x4)..","..IEex_ReadDword(rect + 0x8)..","..IEex_ReadDword(rect + 0xC)..")"
+	end
+
+	if rRect == 0x0 then
+		print(IEex_GetCurrentThreadName().." ["..IEex_ToHex(IEex_ReadDword(esp)).."] panel "..IEex_GetPanelID(panel).." being completely invalidated, new m_rInvalid: "..rectString(m_rInvalid))
+	else
+		print(IEex_GetCurrentThreadName().." ["..IEex_ToHex(IEex_ReadDword(esp)).."] panel "..IEex_GetPanelID(panel).." being invalidated with "..rectString(rRect)..", new m_rInvalid: "..rectString(m_rInvalid))
+	end
+end
+
+function IEex_Extern_Debug_LogButtonInvalidation(button, esp)
+	local panelID = IEex_GetPanelID(IEex_GetControlPanel(button))
+	local controlID = IEex_GetControlID(button)
+	print(IEex_GetCurrentThreadName().." ["..IEex_ToHex(IEex_ReadDword(esp)).."] panel "..panelID.." control "..controlID.." being invalidated")
+end
+
+function IEex_Extern_Debug_LogButtonInvalidationReset(button, esp)
+	local panelID = IEex_GetPanelID(IEex_GetControlPanel(button))
+	local controlID = IEex_GetControlID(button)
+	print(IEex_GetCurrentThreadName().." ["..IEex_ToHex(IEex_ReadDword(esp)).."] panel "..panelID.." control "..controlID.." invalidation reset")
+end

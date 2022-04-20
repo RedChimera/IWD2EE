@@ -78,6 +78,13 @@ IEex_Thread = {
 	["Both"] = 2,
 }
 
+function IEex_GetCurrentThreadName()
+	local currentThread = IEex_GetCurrentThread()
+	if currentThread == IEex_Helper_GetBridge("IEex_ThreadBridge", "Sync") then return "Sync" end
+	if currentThread == IEex_Helper_GetBridge("IEex_ThreadBridge", "Async") then return "Async" end
+	return "Unknown"
+end
+
 function IEex_AssertThread(thread, once)
 
 	local printMessage = function(message, onceType)

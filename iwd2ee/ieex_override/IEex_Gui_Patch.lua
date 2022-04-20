@@ -1021,6 +1021,38 @@
 
 	IEex_WriteAssembly(0x484BE1, {"!jmp_byte"})
 
+	----------------------------------------------------------------------------
+	-- Prevent portraits / health bars from flickering above inventory popups --
+	----------------------------------------------------------------------------
+
+	local noNeedRenderWhenInventoryPopupOpen = IEex_WriteAssemblyAuto({[[
+
+		!mov_edx_[dword] #8CF6DC ; g_pBaldurChitin ;
+		!test_edx_edx
+		!jz_dword :4D4C20
+
+		!mov_eax_[edx+dword] #1C68 ; m_pEngineInventory ;
+		!test_eax_eax
+		!jz_dword :4D4C20
+
+		!mov_edx_[edx+dword] #3C4 ; pActiveEngine ;
+		!test_edx_edx
+		!jz_dword :4D4C20
+
+		!cmp_eax_edx
+		!jne_dword :4D4C20
+
+		!mov_eax_[eax+dword] #49C ; m_pEngineInventory.m_lPopupStack.m_nCount ;
+		!test_eax_eax
+		!jz_dword :4D4C20
+
+		!xor_eax_eax
+		!ret
+	]]})
+
+	IEex_WriteDword(0x855AC8, noNeedRenderWhenInventoryPopupOpen) -- Inventory Portraits
+	IEex_WriteDword(0x85C770, noNeedRenderWhenInventoryPopupOpen) -- Portrait Health Bars
+
 	IEex_EnableCodeProtection()
 
 end)()
