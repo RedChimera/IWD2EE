@@ -797,6 +797,7 @@ IEex_GlobalAssemblyMacros = {
 	["sub_[ecx+edi]_al"] = "28 04 39",
 	["sub_[ecx+edi]_ax"] = "66 29 04 39",
 	["sub_[ecx+edi]_eax"] = "29 04 39",
+	["sub_[esp]_eax"] = "29 04 24",
 	["sub_eax_byte"] = "83 E8",
 	["sub_eax_dword"] = "2D",
 	["sub_eax_ebx"] = "2B C3",

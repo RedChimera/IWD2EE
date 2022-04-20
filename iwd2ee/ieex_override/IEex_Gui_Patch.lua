@@ -998,6 +998,29 @@
 		!pop_all_registers_iwd2
 	]]})
 
+	----------------------------------------------------------------------------------
+	-- Dialog auto-scroll should be consistent for when it instantly moves viewport --
+	----------------------------------------------------------------------------------
+
+	IEex_HookRestore(0x484B94, 2, 3, IEex_FlattenTable({[[
+		!push_registers_iwd2
+		!push_eax
+		]], IEex_GenLuaCall("IEex_Extern_AdjustAutoScrollY", {
+			["args"] = {{"!push(esi)"}},
+			["returnType"] = IEex_LuaCallReturnType.Number,
+		}), [[
+		@call_error
+		!sub_[esp]_eax
+		!pop_eax
+		!pop_registers_iwd2
+	]]}))
+
+	-------------------------------------------------------------------------------------------------
+	-- Remove 1-second "message screen" (non-functional?) when instantly moving viewport to dialog --
+	-------------------------------------------------------------------------------------------------
+
+	IEex_WriteAssembly(0x484BE1, {"!jmp_byte"})
+
 	IEex_EnableCodeProtection()
 
 end)()

@@ -895,11 +895,26 @@ function IEex_Extern_OverrideWorldScreenScrollbarFocus()
 end
 
 function IEex_Extern_InitResolution()
+
 	IEex_AssertThread(IEex_Thread.Sync, true)
+
 	local nWidth, nHeight = IEex_Helper_AskResolution()
 	IEex_WriteWord(0x8BA31C, nWidth)  -- g_resolution.width
 	IEex_WriteWord(0x8BA31E, nHeight) -- g_resolution.height
 	IEex_WritePrivateProfileInt("Program Options", "BitsPerPixel", 32, ".\\Icewind2.ini")
+
+	------------------------------------------------------------------
+	-- Standardize when the engine non-instantaneously auto-scrolls --
+	-- to dialog to just outside of viewport range                  --
+	------------------------------------------------------------------
+
+	IEex_DisableCodeProtection()
+
+	local maxNonInstantRange = math.pow(nWidth / 2, 2) + math.pow(nHeight / 2, 2)
+	IEex_WriteDword(0x484BA2, maxNonInstantRange)
+	IEex_HookRestore(0x6902D4, 3, 2, {"!mov_ecx", {maxNonInstantRange, 4}})
+
+	IEex_EnableCodeProtection()
 end
 
 function IEex_Extern_CheckBitDepth()
