@@ -191,29 +191,187 @@ end
 -- Feats --
 -----------
 
-function IEex_IsFeatTaken(baseStats, featID)
+function IEex_GetSpriteHasFeatAndMeetsRequirements(sprite, featID)
+	return IEex_Call(0x763150, {featID}, sprite, 0x0) ~= 0
+end
+
+function IEex_GetActorHasFeatAndMeetsRequirements(actorID, featID)
+	return IEex_GetSpriteHasFeatAndMeetsRequirements(IEex_GetActorShare(actorID), featID)
+end
+
+function IEex_IsFeatTakenInBaseStats(baseStats, featID)
 	local mask = bit.lshift(1, bit.band(featID, 0x1F))
-	local offset = bit.rshift(featID, 5)
-	local featField = IEex_ReadDword(baseStats+offset*4+0x1B8)
+	local featFieldIndex = bit.rshift(featID, 5)
+	local featField = IEex_ReadDword(baseStats + 0x1B8 + featFieldIndex * 4)
 	return IEex_IsMaskSet(featField, mask)
 end
 
-function IEex_GetFeatCount(baseStats, featID)
-	-- Abuse function's simple indexing to treat in terms of baseStats and not CGameSprite
-	return IEex_Call(0x762E20, {featID}, baseStats - 0x5A4, 0x0)
+function IEex_GetFeatCountFromBaseStats(baseStats, featID)
+	if featID <= 74 then
+		-- Abuse function's simple indexing and pretend like I have a sprite
+		return IEex_Call(IEex_Label("CGameSprite::GetFeatCount"), {featID}, baseStats - 0x5A4, 0x0)
+	else
+		return IEex_ReadByte(baseStats + 0x1EB + (featID - 0x4B), 0)
+	end
 end
 
-function IEex_Extern_FeatHook(share, oldBaseStats, oldDerivedStats)
+function IEex_GetFeatCountFromDerivedStats(stats, featID)
+	local toReturn = nil
+	IEex_Helper_SynchronizedBridgeOperation("IEex_DerivedStatsData", function()
+		local feats = IEex_Helper_GetBridgeNL("IEex_DerivedStatsData", stats, "feats")
+		local featIndex = IEex_Helper_GetBridgeNL(feats, "feat_index_"..featID)
+		toReturn = featIndex and IEex_Helper_GetBridgeNL(feats, featIndex, "count") or 0
+	end)
+	return toReturn
+end
+
+IEex_Feats_DefaultMaxPips = {
+	[3]  = 3, [4]  = 3, [8]  = 2, [18] = 3, [20] = 3, [21] = 3, [22] = 3, [23] = 3,
+	[38] = 3, [39] = 3, [40] = 3, [41] = 3, [42] = 3, [43] = 3, [44] = 3, [53] = 3,
+	[54] = 3, [55] = 3, [56] = 3, [57] = 3, [60] = 2, [61] = 2, [62] = 2, [63] = 2,
+	[64] = 2, [69] = 5,
+}
+
+function IEex_GetSpriteFeatCount(sprite, featID)
+
+	local baseStats = IEex_GetSpriteBaseStats(sprite)
+	if not IEex_IsFeatTakenInBaseStats(baseStats, featID) then
+		return 0
+	end
+
+	if featID > 74 or IEex_Feats_DefaultMaxPips[featID] then
+		return IEex_GetFeatCountFromBaseStats(baseStats, featID)
+	else
+		return IEex_GetFeatCountFromDerivedStats(IEex_GetSpriteDerivedStats(sprite), featID)
+	end
+end
+
+function IEex_GetActorFeatCount(actorID, featID)
+	return IEex_GetSpriteFeatCount(IEex_GetActorShare(actorID), featID)
+end
+
+function IEex_SetSpriteFeatCount(sprite, featID, count)
+
+	local featField = sprite + 0x75C + bit.rshift(featID, 5) * 4 -- sprite.m_baseStats.m_feats
+	local featFieldVal = IEex_ReadDword(featField)
+	local featFieldBitIndex = bit.band(featID, 0x1F)
+	if count > 0 then
+		IEex_WriteDword(featField, IEex_SetBit(featFieldVal, featFieldBitIndex))
+	else
+		IEex_WriteDword(featField, IEex_UnsetBit(featFieldVal, featFieldBitIndex))
+	end
+
+	if featID <= 74 then
+		if not IEex_Feats_DefaultMaxPips[featID] then
+			local applyEffect = false
+			IEex_Helper_SynchronizedBridgeOperation("IEex_DerivedStatsData", function()
+				local feats = IEex_Helper_GetBridgeNL("IEex_DerivedStatsData", IEex_GetSpriteDerivedStats(sprite), "feats")
+				local featIndex = IEex_Helper_GetBridgeNL(feats, "feat_index_"..featID)
+				if featIndex then
+					IEex_WriteDword(IEex_Helper_GetBridgeNL(feats, featIndex, "pEffect") + 0x1C, count)
+					IEex_Helper_SetBridgeNL(feats, featIndex, "count", count)
+				else
+					applyEffect = true
+				end
+			end)
+			if applyEffect then
+				IEex_ApplyEffectToSprite(sprite, {
+					["opcode"] = 500,
+					["parameter1"] = featID,
+					["parameter2"] = count,
+					["timing"] = 9,
+					["resource"] = "B3FEAT",
+				})
+			end
+		else
+			IEex_Call(IEex_Label("CGameSprite::SetFeatCount"), {count, featID}, sprite, 0x0)
+		end
+	else
+		IEex_WriteByte(sprite + 0x78F + (featID - 0x4B), count)
+	end
+end
+
+function IEex_SetActorFeatCount(actorID, featID, count)
+	IEex_SetSpriteFeatCount(IEex_GetActorShare(actorID), featID, count)
+end
+
+function IEex_GetSpriteMeetsFeatRequirements(sprite, featID, bUseBaseAttributes)
+	local actorID = IEex_GetActorIDShare(sprite)
+	if featID <= 74 then
+		local prerequisiteFunc = IEex_2DAGetAtRelated("B3FEATEX", "ID", "PREREQUISITE_FUNCTION", function(id) return tonumber(id) == featID end)
+		if prerequisiteFunc ~= "*" and prerequisiteFunc ~= "" then
+			return _G[prerequisiteFunc](actorID, featID, bUseBaseAttributes)
+		else
+			return IEex_Call(IEex_Label("CGameSprite::MeetsFeatRequirements"), {bUseBaseAttributes, featID}, sprite, 0x0) ~= 0
+		end
+	else
+		local prerequisiteFunc = IEex_2DAGetAtRelated("B3FEATS", "ID", "PREREQUISITE_FUNCTION", function(id) return tonumber(id) == featID end)
+		return prerequisiteFunc == "*" or prerequisiteFunc == "" or _G[prerequisiteFunc](actorID, featID, bUseBaseAttributes)
+	end
+end
+
+function IEex_GetActorMeetsFeatRequirements(actorID, featID, bUseBaseAttributes)
+	return IEex_GetSpriteMeetsFeatRequirements(IEex_GetActorShare(actorID), featID, bUseBaseAttributes)
+end
+
+function IEex_GetFeatMaxPips(featID)
+	if featID <= 74 then
+		local newMax = tonumber(IEex_2DAGetAtRelated("B3FEATEX", "ID", "MAX", function(id) return tonumber(id) == featID end))
+		if newMax then
+			return newMax
+		else
+			return IEex_Feats_DefaultMaxPips[featID] or 1
+		end
+	else
+		return tonumber(IEex_2DAGetAtRelated("B3FEATS", "ID", "MAX", function(id) return tonumber(id) == featID end))
+	end
+end
+
+function IEex_GetSpriteFeatIncrementable(sprite, featID, bCheckOnePipRequirements)
+
+	local featCount = IEex_GetSpriteFeatCount(sprite, featID)
+	local featMaxPips = IEex_GetFeatMaxPips(featID)
+	if featCount >= featMaxPips then
+		return false
+	end
+
+	local actorID = IEex_GetActorIDShare(sprite)
+	if featID <= 74 then
+		local incrementableFunc = IEex_2DAGetAtRelated("B3FEATEX", "ID", "INCREMENTABLE_FUNCTION", function(id) return tonumber(id) == featID end)
+		if incrementableFunc ~= "*" and incrementableFunc ~= "" then
+			if not _G[incrementableFunc](actorID, featID) then
+				return false
+			end
+		elseif ((featID >= 38 and featID <= 44) or (featID >= 53 and featID <= 57)) and featCount == 2 and IEex_ReadByte(sprite + 0x62B) < 4 then -- sprite.m_baseStats.m_fighterLevel
+			return false
+		end
+	else
+		local incrementableFunc = IEex_2DAGetAtRelated("B3FEATS", "ID", "INCREMENTABLE_FUNCTION", function(id) return tonumber(id) == featID end)
+		if incrementableFunc ~= "*" and incrementableFunc ~= "" and not _G[incrementableFunc](actorID, featID) then
+			return false
+		end
+	end
+
+	return (featMaxPips == 1 and not bCheckOnePipRequirements) or IEex_GetSpriteMeetsFeatRequirements(sprite, featID, true)
+end
+
+function IEex_GetActorFeatIncrementable(actorID, featID, bCheckOnePipRequirements)
+	return IEex_GetSpriteFeatIncrementable(IEex_GetActorShare(actorID), featID, bCheckOnePipRequirements)
+end
+
+function IEex_Extern_FeatHook(sprite, oldBaseStats, oldDerivedStats)
 	IEex_AssertThread(IEex_Thread.Async, true)
-	local newBaseStats = share + 0x5A4
 	local maxID = IEex_Helper_GetBridge("IEex_Feats", "NEW_FEATS_MAXID")
-	for featID = 0, maxID, 1 do
-		if IEex_IsFeatTaken(newBaseStats, featID) then
-			local oldFeatCount = IEex_GetFeatCount(oldBaseStats, featID)
-			local newFeatCount = IEex_GetFeatCount(newBaseStats, featID)
+	for featID = 0, maxID do
+		if IEex_IsFeatTakenInBaseStats(IEex_GetSpriteBaseStats(sprite), featID) then
+			local oldFeatCount = (featID > 74 or IEex_Feats_DefaultMaxPips[featID])
+				and IEex_GetFeatCountFromBaseStats(oldBaseStats, featID)
+				or IEex_GetFeatCountFromDerivedStats(oldDerivedStats, featID)
+			local newFeatCount = IEex_GetSpriteFeatCount(sprite, featID)
 			if oldFeatCount ~= newFeatCount then
 				for featLevel = oldFeatCount + 1, newFeatCount, 1 do
-					IEex_ApplyResref("FE_"..featID.."_"..featLevel, IEex_GetActorIDShare(share))
+					print("Took ".."FE_"..featID.."_"..featLevel)
+					IEex_ApplyResref("FE_"..featID.."_"..featLevel, IEex_GetActorIDShare(sprite))
 				end
 			end
 		end
@@ -224,51 +382,76 @@ end
 -- FeatList Hooks --
 --------------------
 
-function IEex_Extern_FeatPanelStringHook(featID)
+function IEex_Extern_GetFeatStringHasCountHook(featID)
 	IEex_AssertThread(IEex_Thread.Async, true)
-	local foundMax = tonumber(IEex_2DAGetAtRelated("B3FEATS", "ID", "MAX", function(id) return tonumber(id) == featID end))
-	return foundMax > 1
+	return IEex_GetFeatMaxPips(featID) > 1
 end
 
-function IEex_Extern_FeatPipsHook(featID)
+function IEex_Extern_GetFeatMaxPipsHook(featID)
 	IEex_AssertThread(IEex_Thread.Sync, true)
-	return tonumber(IEex_2DAGetAtRelated("B3FEATS", "ID", "MAX", function(id) return tonumber(id) == featID	end))
+	return IEex_GetFeatMaxPips(featID)
 end
 
-function IEex_Extern_GetFeatCountHook(sprite, featID)
+function IEex_Extern_GetSpriteFeatCountHook(sprite, featID)
 	IEex_AssertThread(IEex_Thread.Both, true)
-	return IEex_ReadByte(sprite + 0x78F + (featID - 0x4B), 0)
+	return IEex_GetSpriteFeatCount(sprite, featID)
 end
 
-function IEex_Extern_SetFeatCountHook(sprite, featID, count)
+function IEex_Extern_SetSpriteFeatCountHook(sprite, featID, count)
 	IEex_AssertThread(IEex_Thread.Async, true)
-	IEex_WriteByte(sprite + 0x78F + (featID - 0x4B), count)
+	IEex_SetSpriteFeatCount(sprite, featID, count)
 end
 
-function IEex_Extern_FeatIncrementableHook(sprite, featID)
-
+function IEex_Extern_GetSpriteMeetsFeatRequirementsHook(sprite, featID, bUseBaseAttributes)
 	IEex_AssertThread(IEex_Thread.Both, true)
-
-	local featCount = IEex_ReadByte(sprite + 0x78F + (featID - 0x4B), 0)
-	local foundMax = tonumber(IEex_2DAGetAtRelated("B3FEATS", "ID", "MAX", function(id) return tonumber(id) == featID end))
-	if featCount >= foundMax then return false end
-
-	local actorID = IEex_GetActorIDShare(sprite)
-
-	local prerequisiteFunc = IEex_2DAGetAtRelated("B3FEATS", "ID", "PREREQUISITE_FUNCTION", function(id) return tonumber(id) == featID end)
-	if prerequisiteFunc ~= "*" and prerequisiteFunc ~= "" and not _G[prerequisiteFunc](actorID, featID) then return false end
-
-	local incrementableFunc = IEex_2DAGetAtRelated("B3FEATS", "ID", "INCREMENTABLE_FUNCTION", function(id) return tonumber(id) == featID end)
-	if incrementableFunc ~= "*" and incrementableFunc ~= "" and not _G[incrementableFunc](actorID, featID) then return false end
-
-	return true
+	return IEex_GetSpriteMeetsFeatRequirements(sprite, featID, bUseBaseAttributes ~= 0)
 end
 
-function IEex_Extern_MeetsFeatRequirementsHook(sprite, featID)
+function IEex_Extern_GetFeatIncrementableHook(sprite, featID, bCheckOnePipRequirements)
 	IEex_AssertThread(IEex_Thread.Both, true)
-	local foundFunc = IEex_2DAGetAtRelated("B3FEATS", "ID", "PREREQUISITE_FUNCTION", function(id) return tonumber(id) == featID end)
-	if foundFunc ~= "*" and foundFunc ~= "" and not _G[foundFunc](IEex_GetActorIDShare(sprite), featID) then return false end
-	return true
+	return IEex_GetSpriteFeatIncrementable(sprite, featID, bCheckOnePipRequirements ~= 0)
+end
+
+function IEex_FeatStat_Init(stats)
+	IEex_Helper_GetBridgeCreateNL(stats, "feats")
+end
+
+function IEex_FeatStat_Reload(stats)
+	IEex_Helper_ClearBridgeNL(stats, "feats")
+end
+
+function IEex_FeatStat_Copy(sourceStats, destStats)
+	IEex_Helper_ClearBridgeNL(destStats, "feats")
+	local sourceFeats = IEex_Helper_GetBridgeNL(sourceStats, "feats")
+	local destFeats = IEex_Helper_GetBridgeNL(destStats, "feats")
+	for i = 1, IEex_Helper_GetBridgeNumIntsNL(sourceFeats) do
+		local sourceFeat = IEex_Helper_GetBridgeNL(sourceFeats, i)
+		IEex_Helper_SetBridgeNL(destFeats, i, sourceFeat)
+		IEex_Helper_SetBridgeNL(destFeats, "feat_index_"..IEex_Helper_GetBridgeNL(sourceFeat, "featID"), i)
+	end
+end
+
+function B3FEAT(pEffect, pSprite)
+
+	IEex_AssertThread(IEex_Thread.Async, true)
+
+	local actorID = IEex_GetActorIDShare(pSprite)
+	local featID = IEex_ReadDword(pEffect + 0x18)
+	local count = IEex_ReadDword(pEffect + 0x1C)
+
+	IEex_Helper_SynchronizedBridgeOperation("IEex_DerivedStatsData", function()
+		local feats = IEex_Helper_GetBridgeNL("IEex_DerivedStatsData", IEex_GetSpriteDerivedStats(pSprite), "feats")
+		local featIndex = IEex_Helper_GetBridgeNL(feats, "feat_index_"..featID)
+		if featIndex then
+			IEex_Helper_SetBridgeNL(feats, featIndex, "count", count)
+		else
+			local newEntry, newEntryI = IEex_AppendBridgeTableNL(feats)
+			IEex_Helper_SetBridgeNL(newEntry, "pEffect", pEffect)
+			IEex_Helper_SetBridgeNL(newEntry, "featID", featID)
+			IEex_Helper_SetBridgeNL(newEntry, "count", count)
+			IEex_Helper_SetBridgeNL(feats, "feat_index_"..featID, newEntryI)
+		end
+	end)
 end
 
 ---------------
@@ -585,61 +768,38 @@ function IEex_WriteDelayedPatches()
 
 	IEex_WriteByte(0x762897 + 2, IEex_NEW_FEATS_SIZE)
 
-	local featGetCountHookAddress = 0x76290B
-	local featGetCountHook = IEex_WriteAssemblyAuto({[[
+	IEex_HookReplaceFunctionMaintainOriginal(0x762890, 7, "CGameSprite::SetFeatCount", IEex_FlattenTable({
+		{[[
+			!mark_esp
+			!push_registers_iwd2
+		]]},
+		IEex_GenLuaCall("IEex_Extern_SetSpriteFeatCountHook", {
+			["args"] = {
+				{"!push(ecx)"},                 -- sprite
+				{"!marked_esp !push([esp+4])"}, -- featID
+				{"!marked_esp !push([esp+8])"}, -- count
+			},
+		}),
+		{[[
+			@call_error
+			!pop_registers_iwd2
+			!ret(8)
+		]]},
+	}))
 
-		!jbe_dword ]], {featGetCountHookAddress + 0x6, 4, 4}, [[
-		!cmp_eax_byte 47
-		!jle_dword :762D5E
+	-- Disable default maximum-feat-count assertions
+	for _, address in ipairs({0x762923, 0x76294D, 0x762977, 0x7629A1, 0x7629CB, 0x7629F5, 0x762A1F, 0x762A49,
+		0x762A73, 0x762A9D, 0x762AC7, 0x762AF1, 0x762B1B, 0x762B45, 0x762B6F, 0x762B99, 0x762BC3, 0x762BED,
+		0x762C17, 0x762C41, 0x762C6B, 0x762C95, 0x762CBF, 0x762CE9, 0x762D13, 0x762D3D})
+	do
+		IEex_WriteAssembly(address, {"!jmp_byte"})
+	end
 
-		!push_all_registers_iwd2
-
-		!push_dword ]], {IEex_WriteStringAuto("IEex_Extern_SetFeatCountHook"), 4}, [[
-		!push_dword *_g_lua_async
-		!call >_lua_getglobal
-		!add_esp_byte 08
-
-		; sprite ;
-		!push_esi
-		!fild_[esp]
-		!sub_esp_byte 04
-		!fstp_qword:[esp]
-		!push_dword *_g_lua_async
-		!call >_lua_pushnumber
-		!add_esp_byte 0C
-
-		; featID ;
-		!push_edi
-		!fild_[esp]
-		!sub_esp_byte 04
-		!fstp_qword:[esp]
-		!push_dword *_g_lua_async
-		!call >_lua_pushnumber
-		!add_esp_byte 0C
-
-		; count ;
-		!push_ebx
-		!fild_[esp]
-		!sub_esp_byte 04
-		!fstp_qword:[esp]
-		!push_dword *_g_lua_async
-		!call >_lua_pushnumber
-		!add_esp_byte 0C
-
-		!push_byte 00
-		!push_byte 00
-		!push_byte 03
-		!push_dword *_g_lua_async
-		!call >_lua_pcall
-		!add_esp_byte 10
-		!push_dword *_g_lua_async
-		!call >IEex_CheckCallError
-
-		!pop_all_registers_iwd2
-		!jmp_dword :762D5E
-
-	]]})
-	IEex_WriteAssembly(featGetCountHookAddress, {"!jmp_dword", {featGetCountHook, 4, 4}, "!nop"})
+	IEex_RegisterLuaStat({
+		["init"] = "IEex_FeatStat_Init",
+		["reload"] = "IEex_FeatStat_Reload",
+		["copy"] = "IEex_FeatStat_Copy",
+	})
 
 	------------------------------
 	-- CGameSprite_GetFeatCount --
@@ -647,73 +807,29 @@ function IEex_WriteDelayedPatches()
 
 	IEex_WriteByte(0x762E26 + 2, IEex_NEW_FEATS_SIZE)
 
-	local featGetCountHookAddress = 0x762E6A
-	local featGetCountHook = IEex_WriteAssemblyAuto({[[
+	IEex_HookReplaceFunctionMaintainOriginal(0x762E20, 6, "CGameSprite::GetFeatCount", IEex_FlattenTable({
+		{[[
+			!mark_esp
+			!push_registers_iwd2
+		]]},
+		IEex_GenLuaCall("IEex_Extern_GetSpriteFeatCountHook", {
+			["args"] = {
+				{"!push(ecx)"},                 -- sprite
+				{"!marked_esp !push([esp+4])"}, -- featID
+			},
+			["returnType"] = IEex_LuaCallReturnType.Number,
+		}),
+		{[[
+			!jmp_dword >no_error
 
-		!jbe_dword ]], {featGetCountHookAddress + 0x6, 4, 4}, [[
-		!cmp_eax_byte 47
-		!jle_dword :762FD1
+			@call_error
+			!xor_eax_eax
 
-		!push_registers_iwd2
-
-		!call >IEex_GetLuaState
-		!mov_ebx_eax
-
-		!push_dword ]], {IEex_WriteStringAuto("IEex_Extern_GetFeatCountHook"), 4}, [[
-		!push_ebx
-		!call >_lua_getglobal
-		!add_esp_byte 08
-
-		; sprite ;
-		!push_esi
-		!fild_[esp]
-		!sub_esp_byte 04
-		!fstp_qword:[esp]
-		!push_ebx
-		!call >_lua_pushnumber
-		!add_esp_byte 0C
-
-		; featID ;
-		!push_edi
-		!fild_[esp]
-		!sub_esp_byte 04
-		!fstp_qword:[esp]
-		!push_ebx
-		!call >_lua_pushnumber
-		!add_esp_byte 0C
-
-		!push_byte 00
-		!push_byte 01
-		!push_byte 02
-		!push_ebx
-		!call >_lua_pcall
-		!add_esp_byte 10
-		!push_ebx
-		!call >IEex_CheckCallError
-
-
-		!push_byte FF
-		!push_ebx
-		!call >_lua_tonumber
-		!add_esp_byte 08
-
-		!call >__ftol2_sse
-		!push_eax
-
-		!push_byte FE
-		!push_ebx
-		!call >_lua_settop
-		!add_esp_byte 08
-
-		!pop_eax
-
-		!pop_registers_iwd2
-		!pop_edi
-		!pop_esi
-		!ret_word 04 00
-
-	]]})
-	IEex_WriteAssembly(featGetCountHookAddress, {"!jmp_dword", {featGetCountHook, 4, 4}, "!nop"})
+			@no_error
+			!pop_registers_iwd2
+			!ret(4)
+		]]},
+	}))
 
 	-----------------------------------
 	-- CGameSprite_FeatGetNumMaxPips --
@@ -721,62 +837,29 @@ function IEex_WriteDelayedPatches()
 
 	IEex_WriteByte(0x7630A5 + 2, IEex_NEW_FEATS_SIZE)
 
-	local featNumberPipsHookAddress = 0x7630C6
-	local featNumberPipsHook = IEex_WriteAssemblyAuto({[[
+	-- Complete function reimplementation
+	IEex_HookJumpNoReturn(0x7630A0, IEex_FlattenTable({
+		{[[
+			!mark_esp
+			!push_registers_iwd2
+		]]},
+		IEex_GenLuaCall("IEex_Extern_GetFeatMaxPipsHook", {
+			["args"] = {
+				{"!marked_esp !push([esp+4])"}, -- featID
+			},
+			["returnType"] = IEex_LuaCallReturnType.Number,
+		}),
+		{[[
+			!jmp_dword >no_error
 
-		!cmp_eax_byte 42
-		!pop_esi
-		!jbe_dword ]], {featNumberPipsHookAddress + 0x6, 4, 4}, [[
+			@call_error
+			!mov_eax #1
 
-		!cmp_eax_byte 47
-		!jle_dword :7630F3
-
-		!push_registers_iwd2
-
-		!push_dword ]], {IEex_WriteStringAuto("IEex_Extern_FeatPipsHook"), 4}, [[
-		!push_dword *_g_lua
-		!call >_lua_getglobal
-		!add_esp_byte 08
-
-		; featID ;
-		!mov_eax_[esp+byte] 1C
-		!push_eax
-		!fild_[esp]
-		!sub_esp_byte 04
-		!fstp_qword:[esp]
-		!push_dword *_g_lua
-		!call >_lua_pushnumber
-		!add_esp_byte 0C
-
-		!push_byte 00
-		!push_byte 01
-		!push_byte 01
-		!push_dword *_g_lua
-		!call >_lua_pcall
-		!add_esp_byte 10
-		!push_dword *_g_lua
-		!call >IEex_CheckCallError
-
-		!push_byte FF
-		!push_dword *_g_lua
-		!call >_lua_tonumber
-		!add_esp_byte 08
-
-		!call >__ftol2_sse
-		!push_eax
-
-		!push_byte FE
-		!push_dword *_g_lua
-		!call >_lua_settop
-		!add_esp_byte 08
-
-		!pop_eax
-
-		!pop_registers_iwd2
-		!ret_word 04 00
-
-	]]})
-	IEex_WriteAssembly(featNumberPipsHookAddress, {"!jmp_dword", {featNumberPipsHook, 4, 4}, "!nop"})
+			@no_error
+			!pop_registers_iwd2
+			!ret(4)
+		]]},
+	}))
 
 	---------------------------------------
 	-- CGameSprite_MeetsFeatRequirements --
@@ -784,78 +867,30 @@ function IEex_WriteDelayedPatches()
 
 	IEex_WriteByte(0x763206 + 2, IEex_NEW_FEATS_SIZE)
 
-	local meetsFeatRequirementsHookAddress = 0x763270
-	local meetsFeatRequirementsHook = IEex_WriteAssemblyAuto({[[
+	IEex_HookReplaceFunctionMaintainOriginal(0x763200, 6, "CGameSprite::MeetsFeatRequirements", IEex_FlattenTable({
+		{[[
+			!mark_esp
+			!push_registers_iwd2
+		]]},
+		IEex_GenLuaCall("IEex_Extern_GetSpriteMeetsFeatRequirementsHook", {
+			["args"] = {
+				{"!push(ecx)"},                 -- sprite
+				{"!marked_esp !push([esp+4])"}, -- featID
+				{"!marked_esp !push([esp+8])"}, -- bUseBaseAttributes
+			},
+			["returnType"] = IEex_LuaCallReturnType.Boolean,
+		}),
+		{[[
+			!jmp_dword >no_error
 
-		!cmp_ebp_byte 4A
-		!jbe_dword ]], {meetsFeatRequirementsHookAddress + 0x6, 4, 4}, [[
+			@call_error
+			!xor_eax_eax
 
-		!push_eax
-		!push_ecx
-		!push_edx
-		!push_ebp
-		!push_esi
-		!push_edi
-
-		!call >IEex_GetLuaState
-		!mov_ebx_eax
-
-		!push_dword ]], {IEex_WriteStringAuto("IEex_Extern_MeetsFeatRequirementsHook"), 4}, [[
-		!push_ebx
-		!call >_lua_getglobal
-		!add_esp_byte 08
-
-		; sprite ;
-		!push_esi
-		!fild_[esp]
-		!sub_esp_byte 04
-		!fstp_qword:[esp]
-		!push_ebx
-		!call >_lua_pushnumber
-		!add_esp_byte 0C
-
-		; featID ;
-		!push_ebp
-		!fild_[esp]
-		!sub_esp_byte 04
-		!fstp_qword:[esp]
-		!push_ebx
-		!call >_lua_pushnumber
-		!add_esp_byte 0C
-
-		!push_byte 00
-		!push_byte 01
-		!push_byte 02
-		!push_ebx
-		!call >_lua_pcall
-		!add_esp_byte 10
-		!push_ebx
-		!call >IEex_CheckCallError
-
-		!push_byte FF
-		!push_ebx
-		!call >_lua_toboolean
-		!add_esp_byte 08
-
-		!push_eax
-
-		!push_byte FE
-		!push_ebx
-		!call >_lua_settop
-		!add_esp_byte 08
-
-		!pop_ebx
-
-		!pop_edi
-		!pop_esi
-		!pop_ebp
-		!pop_edx
-		!pop_ecx
-		!pop_eax
-		!jmp_dword :7638FD
-
-	]]})
-	IEex_WriteAssembly(meetsFeatRequirementsHookAddress, {"!jmp_dword", {meetsFeatRequirementsHook, 4, 4}, "!nop"})
+			@no_error
+			!pop_registers_iwd2
+			!ret(8)
+		]]},
+	}))
 
 	-----------------------------------
 	-- CGameSprite_FeatIncrementable --
@@ -863,72 +898,31 @@ function IEex_WriteDelayedPatches()
 
 	IEex_WriteByte(0x763A46 + 2, IEex_NEW_FEATS_SIZE)
 
-	local featIncrementableHookAddress = 0x763A6C
-	local featIncrementableHook = IEex_WriteAssemblyAuto({[[
+	-- Complete function reimplementation
+	IEex_HookJumpNoReturn(0x763A40, IEex_FlattenTable({
+		{[[
+			!mark_esp
+			!push_registers_iwd2
+		]]},
+		IEex_GenLuaCall("IEex_Extern_GetFeatIncrementableHook", {
+			["args"] = {
+				{"!push(ecx)"},                 -- sprite
+				{"!marked_esp !push([esp+4])"}, -- featID
+				{"!marked_esp !push([esp+8])"}, -- bCheckOnePipRequirements
+			},
+			["returnType"] = IEex_LuaCallReturnType.Boolean,
+		}),
+		{[[
+			!jmp_dword >no_error
 
-		!jbe_dword ]], {featIncrementableHookAddress + 0x6, 4, 4}, [[
-		!cmp_eax_byte 47
-		!jle_dword :763BB7
+			@call_error
+			!xor_eax_eax
 
-		!push_registers_iwd2
-
-		!call >IEex_GetLuaState
-		!mov_ebx_eax
-
-		!push_dword ]], {IEex_WriteStringAuto("IEex_Extern_FeatIncrementableHook"), 4}, [[
-		!push_ebx
-		!call >_lua_getglobal
-		!add_esp_byte 08
-
-		; sprite ;
-		!push_esi
-		!fild_[esp]
-		!sub_esp_byte 04
-		!fstp_qword:[esp]
-		!push_ebx
-		!call >_lua_pushnumber
-		!add_esp_byte 0C
-
-		; featID ;
-		!push_edi
-		!fild_[esp]
-		!sub_esp_byte 04
-		!fstp_qword:[esp]
-		!push_ebx
-		!call >_lua_pushnumber
-		!add_esp_byte 0C
-
-		!push_byte 00
-		!push_byte 01
-		!push_byte 02
-		!push_ebx
-		!call >_lua_pcall
-		!add_esp_byte 10
-		!push_ebx
-		!call >IEex_CheckCallError
-
-		!push_byte FF
-		!push_ebx
-		!call >_lua_toboolean
-		!add_esp_byte 08
-
-		!push_eax
-
-		!push_byte FE
-		!push_ebx
-		!call >_lua_settop
-		!add_esp_byte 08
-
-		!pop_eax
-
-		!pop_registers_iwd2
-
-		!test_eax_eax
-		!jz_dword :763A9D
-		!jmp_dword :763BDD
-
-	]]})
-	IEex_WriteAssembly(featIncrementableHookAddress, {"!jmp_dword", {featIncrementableHook, 4, 4}, "!nop"})
+			@no_error
+			!pop_registers_iwd2
+			!ret(8)
+		]]},
+	}))
 
 	-----------------------------------------
 	-- CGameSprite_UpdateSkillsAndFeatsTab --
@@ -937,61 +931,29 @@ function IEex_WriteDelayedPatches()
 	IEex_WriteByte(0x765CE8 + 2, IEex_NEW_FEATS_SIZE)
 	IEex_WriteByte(0x765DC8 + 2, IEex_NEW_FEATS_SIZE)
 
-	local featPanelStringHookAddress = 0x765D27
-	local featPanelStringHook = IEex_WriteAssemblyAuto({[[
+	IEex_HookJumpNoReturn(0x765D24, IEex_FlattenTable({
+		{[[
+			!push_registers_iwd2
+		]]},
+		IEex_GenLuaCall("IEex_Extern_GetFeatStringHasCountHook", {
+			["args"] = {
+				{"!push(esi)"}, -- featID
+			},
+			["returnType"] = IEex_LuaCallReturnType.Boolean,
+		}),
+		{[[
+			!jmp_dword >no_error
 
-		!cmp_eax_byte 42
-		!jbe_dword ]], {featPanelStringHookAddress + 0x5, 4, 4}, [[
-		!cmp_eax_byte 47
-		!jle_dword :765D7E
+			@call_error
+			!xor_eax_eax
 
-		!push_all_registers_iwd2
-
-		!push_dword ]], {IEex_WriteStringAuto("IEex_Extern_FeatPanelStringHook"), 4}, [[
-		!push_dword *_g_lua
-		!call >_lua_getglobal
-		!add_esp_byte 08
-
-		; featID ;
-		!push_esi
-		!fild_[esp]
-		!sub_esp_byte 04
-		!fstp_qword:[esp]
-		!push_dword *_g_lua
-		!call >_lua_pushnumber
-		!add_esp_byte 0C
-
-		!push_byte 00
-		!push_byte 01
-		!push_byte 01
-		!push_dword *_g_lua
-		!call >_lua_pcall
-		!add_esp_byte 10
-		!push_dword *_g_lua
-		!call >IEex_CheckCallError
-
-		!push_byte FF
-		!push_dword *_g_lua
-		!call >_lua_toboolean
-		!add_esp_byte 08
-
-		!push_eax
-
-		!push_byte FE
-		!push_dword *_g_lua
-		!call >_lua_settop
-		!add_esp_byte 08
-
-		!pop_eax
-		!test_eax_eax
-
-		!pop_all_registers_iwd2
-
-		!jz_dword :765D7E
-		!jmp_dword :765D3B
-
-	]]})
-	IEex_WriteAssembly(featPanelStringHookAddress, {"!jmp_dword", {featPanelStringHook, 4, 4}})
+			@no_error
+			!pop_registers_iwd2
+			!test_eax_eax
+			!jz_dword :765D7E
+			!jmp_dword :765D3B
+		]]},
+	}))
 
 	---------------------------------------------
 	-- CGameSprite_HasFeatAndMeetsRequirements --

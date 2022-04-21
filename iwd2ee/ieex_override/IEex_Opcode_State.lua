@@ -129,11 +129,9 @@ function IEex_Extern_ScreenEffectsFunc(pEffect, pSprite)
 	IEex_AssertThread(IEex_Thread.Async, true)
 	if IEex_Debug_DisableScreenEffects then return end
 
-	local actorID = IEex_GetActorIDShare(pSprite)
 	local effectResource = IEex_ReadLString(pEffect + 0x2C, 8)
-
-	IEex_Helper_SynchronizedBridgeOperation("IEex_GameObjectData", function()
-		local screenEffects = IEex_Helper_GetBridgeNL("IEex_GameObjectData", actorID, "luaDerivedStats", "screenEffects")
+	IEex_Helper_SynchronizedBridgeOperation("IEex_DerivedStatsData", function()
+		local screenEffects = IEex_Helper_GetBridgeNL("IEex_DerivedStatsData", IEex_GetSpriteDerivedStats(pSprite), "screenEffects")
 		local newEntry = IEex_AppendBridgeTableNL(screenEffects)
 		IEex_Helper_SetBridgeNL(newEntry, "pOriginatingEffect", pEffect)
 		IEex_Helper_SetBridgeNL(newEntry, "functionName", effectResource)
@@ -229,13 +227,13 @@ function IEex_Extern_OnAddSummonToLimitHook(effectData, summonerData, summonedDa
 end
 ex_apply_effects_flags = {}
 ex_empowerable_opcodes = {[0] = true, [1] = true, [6] = true, [10] = true, [12] = true, [15] = true, [17] = true, [18] = true,
-[19] = true, [21] = true, [22] = true, [25] = true, [27] = true, [28] = true, [29] = true, [30] = true, [31] = true, 
-[33] = true, [34] = true, [35] = true, [36] = true, [37] = true, [44] = true, [49] = true, [54] = true, [59] = true, 
+[19] = true, [21] = true, [22] = true, [25] = true, [27] = true, [28] = true, [29] = true, [30] = true, [31] = true,
+[33] = true, [34] = true, [35] = true, [36] = true, [37] = true, [44] = true, [49] = true, [54] = true, [59] = true,
 [60] = true, [67] = true, [73] = true, [78] = true, [84] = true, [85] = true, [86] = true, [87] = true, [88] = true, [89] = true,
-[90] = true, [91] = true, [92] = true, [93] = true, [94] = true, [95] = true, [97] = true, [98] = true, [111] = true, 
-[126] = true, [127] = true, [129] = true, [130] = true, [131] = true, [132] = true, [137] = true, [166] = true, [167] = true, 
-[173] = true, [176] = true, [189] = true, [190] = true, [191] = true, [218] = true, 
-[238] = true, [239] = true, [247] = true, [255] = true, [266] = true, 
+[90] = true, [91] = true, [92] = true, [93] = true, [94] = true, [95] = true, [97] = true, [98] = true, [111] = true,
+[126] = true, [127] = true, [129] = true, [130] = true, [131] = true, [132] = true, [137] = true, [166] = true, [167] = true,
+[173] = true, [176] = true, [189] = true, [190] = true, [191] = true, [218] = true,
+[238] = true, [239] = true, [247] = true, [255] = true, [266] = true,
 [281] = true, [297] = true, [298] = true, [410] = true, [411] = true, [416] = true, [431] = true, [432] = true, [436] = true,}
 (function()
 
@@ -491,7 +489,7 @@ ex_empowerable_opcodes = {[0] = true, [1] = true, [6] = true, [10] = true, [12] 
 				end
 				weaponWrapper:free()
 				launcherWrapper:free()
-				
+
 				if bit.band(parameter3, 0x10000) > 0 then
 					if criticalMultiplier ~= baseCriticalMultiplier then
 						parameter1 = math.floor(parameter1 * criticalMultiplier / baseCriticalMultiplier)
@@ -514,8 +512,8 @@ ex_empowerable_opcodes = {[0] = true, [1] = true, [6] = true, [10] = true, [12] 
 })
 					end
 				end
-				
-				
+
+
 
 --			end
 
@@ -855,9 +853,12 @@ ex_empowerable_opcodes = {[0] = true, [1] = true, [6] = true, [10] = true, [12] 
 		return false
 	end)
 
+	IEex_ScreenEffectsStats_Init = function(stats)
+		IEex_Helper_GetBridgeCreateNL(stats, "screenEffects")
+	end
+
 	IEex_ScreenEffectsStats_Reload = function(stats)
-		local screenEffects = IEex_Helper_GetBridgeCreateNL(stats, "screenEffects")
-		IEex_Helper_ClearBridgeNL(screenEffects)
+		IEex_Helper_ClearBridgeNL(stats, "screenEffects")
 	end
 
 	IEex_ScreenEffectsStats_Copy = function(sourceStats, destStats)

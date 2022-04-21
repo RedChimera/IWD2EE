@@ -114,41 +114,6 @@
 
 	]]})
 
-	------------------------
-	-- IEex_OnReloadStats --
-	------------------------
-
-	IEex_HookRestore(0x4440F0, 0, 6, {[[
-
-		!push_complete_state
-
-		!push_dword ]], {IEex_WriteStringAuto("IEex_Extern_OnReloadStats"), 4}, [[
-		!push_dword *_g_lua_async
-		!call >_lua_getglobal
-		!add_esp_byte 08
-
-		; share ;
-		!push_[ebp+byte] 08
-		!fild_[esp]
-		!sub_esp_byte 04
-		!fstp_qword:[esp]
-		!push_dword *_g_lua_async
-		!call >_lua_pushnumber
-		!add_esp_byte 0C
-
-		!push_byte 00
-		!push_byte 00
-		!push_byte 01
-		!push_dword *_g_lua_async
-		!call >_lua_pcall
-		!add_esp_byte 10
-		!push_dword *_g_lua_async
-		!call >IEex_CheckCallError
-
-		!pop_complete_state
-
-	]]})
-
 	----------------------------
 	-- IEex_OnUpdateTempStats --
 	----------------------------
@@ -325,6 +290,86 @@
 	----------------------------------------------------------------------------
 
 	IEex_WriteAssembly(0x757E5F, {"!jg_byte"})
+
+	-----------------------------------------
+	-- IEex_Extern_OnConstructDerivedStats --
+	-----------------------------------------
+
+	IEex_HookRestore(0x443B30, 0, 7, IEex_FlattenTable({
+		{[[
+			!push_registers_iwd2
+		]]},
+		IEex_GenLuaCall("IEex_Extern_OnConstructDerivedStats", {
+			["args"] = {
+				{"!push(ecx)"}, -- stats
+			},
+		}),
+		{[[
+			@call_error
+			!pop_registers_iwd2
+		]]},
+	}))
+
+	--------------------------------------
+	-- IEex_Extern_OnReloadDerivedStats --
+	--------------------------------------
+
+	IEex_HookRestore(0x4440F0, 0, 6, IEex_FlattenTable({
+		{[[
+			!mark_esp
+			!push_registers_iwd2
+		]]},
+		IEex_GenLuaCall("IEex_Extern_OnReloadDerivedStats", {
+			["args"] = {
+				{"!push(ecx)"},                 -- stats
+				{"!marked_esp !push([esp+4])"}, -- sprite
+			},
+		}),
+		{[[
+			@call_error
+			!pop_registers_iwd2
+		]]},
+	}))
+
+	-------------------------------------------
+	-- IEex_Extern_OnDerivedStatsOperatorEqu --
+	-------------------------------------------
+
+	IEex_HookRestore(0x445330, 0, 6, IEex_FlattenTable({
+		{[[
+			!mark_esp
+			!push_registers_iwd2
+		]]},
+		IEex_GenLuaCall("IEex_Extern_OnDerivedStatsOperatorEqu", {
+			["args"] = {
+				{"!push(ecx)"},                 -- this
+				{"!marked_esp !push([esp+4])"}, -- that
+			},
+		}),
+		{[[
+			@call_error
+			!pop_registers_iwd2
+		]]},
+	}))
+
+	----------------------------------------
+	-- IEex_Extern_OnDestructDerivedStats --
+	----------------------------------------
+
+	IEex_HookRestore(0x5D6650, 0, 7, IEex_FlattenTable({
+		{[[
+			!push_registers_iwd2
+		]]},
+		IEex_GenLuaCall("IEex_Extern_OnDestructDerivedStats", {
+			["args"] = {
+				{"!push(ecx)"}, -- stats
+			},
+		}),
+		{[[
+			@call_error
+			!pop_registers_iwd2
+		]]},
+	}))
 
 	IEex_EnableCodeProtection()
 

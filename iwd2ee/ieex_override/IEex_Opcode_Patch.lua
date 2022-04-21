@@ -377,6 +377,7 @@
 
 	if (not IEex_Debug_DisableOpcodes) and (not IEex_Debug_DisableScreenEffects) then
 		IEex_RegisterLuaStat({
+			["init"] = "IEex_ScreenEffectsStats_Init",
 			["reload"] = "IEex_ScreenEffectsStats_Reload",
 			["copy"] = "IEex_ScreenEffectsStats_Copy",
 		})

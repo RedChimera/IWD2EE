@@ -16,18 +16,20 @@ function IEex_RegisterLuaStat(attributes)
 end
 
 function IEex_AccessLuaStats(actorID)
-	local share = IEex_GetActorShare(actorID)
-	local bAllowEffectListCall = IEex_ReadDword(share + 0x72A4) == 1
+	local sprite = IEex_GetActorShare(actorID)
+	local bAllowEffectListCall = IEex_ReadDword(sprite + 0x72A4) == 1
 	return bAllowEffectListCall
-		and IEex_Helper_GetBridge("IEex_GameObjectData", actorID, "luaDerivedStats")
-		or  IEex_Helper_GetBridge("IEex_GameObjectData", actorID, "luaTempStats")
+		and IEex_Helper_GetBridge("IEex_DerivedStatsData", sprite + 0x920)
+		or  IEex_Helper_GetBridge("IEex_DerivedStatsData", sprite + 0x1778)
 end
 
 -------------------
 -- Thread: Async --
 -------------------
+
 ex_cre_initializing = {}
 ex_cre_effects_initializing = {}
+
 function IEex_Extern_OnGameObjectAdded(actorID)
 
 	IEex_AssertThread(IEex_Thread.Async, true)
@@ -38,25 +40,9 @@ function IEex_Extern_OnGameObjectAdded(actorID)
 		return
 	end
 	if IEex_ReadByte(share + 0x4, 0) ~= 0x31 then return end
+
 	ex_cre_initializing[actorID] = true
 	ex_cre_effects_initializing[actorID] = true
-	IEex_Helper_SynchronizedBridgeOperation("IEex_GameObjectData", function()
-		local luaDerivedStats = IEex_Helper_GetBridgeCreateNL("IEex_GameObjectData", actorID, "luaDerivedStats")
-		local luaTempStats = IEex_Helper_GetBridgeCreateNL("IEex_GameObjectData", actorID, "luaTempStats")
-		local numStats = IEex_Helper_GetBridgeNumIntsNL("IEex_RegisteredLuaStats")
-		for i = 1, numStats, 1 do
-			local entry = IEex_Helper_GetBridgeNL("IEex_RegisteredLuaStats", i)
-			local initFunc = _G[IEex_Helper_GetBridgeNL(entry, "init")]
-			if initFunc then
-				initFunc(luaDerivedStats)
-				initFunc(luaTempStats)
-			end
-			local reloadFunc = _G[IEex_Helper_GetBridgeNL(entry, "reload")]
-			if reloadFunc then
-				reloadFunc(luaDerivedStats)
-			end
-		end
-	end)
 end
 
 function IEex_Extern_OnGameObjectBeingDeleted(actorID)
@@ -69,67 +55,108 @@ function IEex_Extern_OnGameObjectBeingDeleted(actorID)
 		IEex_Helper_EraseBridgeKey("IEex_GameObjectData", actorID)
 		return
 	end
-
 	if IEex_ReadByte(share + 0x4, 0) ~= 0x31 then return end
+
 	ex_cre_initializing[actorID] = nil
 	ex_cre_effects_initializing[actorID] = nil
+
 	local constantID = IEex_ReadDword(share + 0x700)
 	if constantID ~= -1 then
 		IEex_Helper_EraseBridgeKey("IEex_ConstantID", constantID)
 	end
 	IEex_Helper_EraseBridgeKey("IEex_EnlargedAnimation", actorID)
-	IEex_Helper_SynchronizedBridgeOperation("IEex_GameObjectData", function()
-		local luaDerivedStats = IEex_Helper_GetBridgeNL("IEex_GameObjectData", actorID, "luaDerivedStats")
-		local luaTempStats = IEex_Helper_GetBridgeNL("IEex_GameObjectData", actorID, "luaTempStats")
-		local numStats = IEex_Helper_GetBridgeNumIntsNL("IEex_RegisteredLuaStats")
-		for i = 1, numStats, 1 do
-			local cleanupFunc = _G[IEex_Helper_GetBridgeNL("IEex_RegisteredLuaStats", i, "cleanup")]
-			if cleanupFunc then
-				cleanupFunc(luaDerivedStats)
-				cleanupFunc(luaTempStats)
-			end
-		end
-		IEex_Helper_EraseBridgeKeyNL("IEex_GameObjectData", actorID)
-	end)
-end
-
-function IEex_Extern_OnReloadStats(share)
-
-	IEex_AssertThread(IEex_Thread.Async, true)
-	if share == 0x0 then return end
-	if IEex_ReadByte(share + 0x4, 0) ~= 0x31 then return end
-
-	local actorID = IEex_GetActorIDShare(share)
-	IEex_Helper_SynchronizedBridgeOperation("IEex_GameObjectData", function()
-		local luaDerivedStats = IEex_Helper_GetBridgeNL("IEex_GameObjectData", actorID, "luaDerivedStats")
-		local numStats = IEex_Helper_GetBridgeNumIntsNL("IEex_RegisteredLuaStats")
-		for i = 1, numStats, 1 do
-			local reloadFunc = _G[IEex_Helper_GetBridgeNL("IEex_RegisteredLuaStats", i, "reload")]
-			if reloadFunc then
-				reloadFunc(luaDerivedStats)
-			end
-		end
-	end)
+	IEex_Helper_EraseBridgeKey("IEex_GameObjectData", actorID)
 end
 
 function IEex_Extern_OnUpdateTempStats(share)
-
 	IEex_AssertThread(IEex_Thread.Async, true)
 	if share == 0x0 then return end
 	if IEex_ReadByte(share + 0x4, 0) ~= 0x31 then return end
+end
 
-	local actorID = IEex_GetActorIDShare(share)
-	IEex_Helper_SynchronizedBridgeOperation("IEex_GameObjectData", function()
-		local luaDerivedStats = IEex_Helper_GetBridgeNL("IEex_GameObjectData", actorID, "luaDerivedStats")
-		local luaTempStats = IEex_Helper_GetBridgeNL("IEex_GameObjectData", actorID, "luaTempStats")
+function IEex_Extern_OnPostCreatureHandleEffects(creatureData)
+	IEex_AssertThread(IEex_Thread.Async, true)
+	IEex_Helper_SetBridge("IEex_GameObjectData", IEex_GetActorIDShare(creatureData), "bEffectsHandled", true)
+end
+
+-- Return:
+--	 true  - To restrict actionbar
+--	 false - To allow actionbar customization
+function IEex_Extern_RestrictCreatureActionbar(creatureData, buttonType)
+	IEex_AssertThread(IEex_Thread.Async, true)
+	-- Restrict customization if not PC
+	return (IEex_ReadByte(creatureData + 0x24, 0x0) ~= 2 and bit.band(IEex_ReadDword(creatureData + 0x740), 0x400000) == 0)
+end
+
+-- Return:
+--	 true  - To force default actionbar buttons on global creature unmarshal
+--	 false - To keep existing actionbar buttons
+function IEex_Extern_ShouldForceDefaultButtons(creatureData)
+	IEex_AssertThread(IEex_Thread.Async, true)
+	local actorID = IEex_GetActorIDShare(creatureData)
+	if IEex_GetActorLocal(actorID, "IEex_Actionbar_Initialized") == 0 then
+		IEex_SetActorLocal(actorID, "IEex_Actionbar_Initialized", 1)
+		return true
+	else
+		return false
+	end
+end
+
+function IEex_Extern_OnConstructDerivedStats(stats)
+	IEex_AssertThread(IEex_Thread.Both, true)
+	IEex_Helper_SynchronizedBridgeOperation("IEex_DerivedStatsData", function()
+		local statsData = IEex_Helper_GetBridgeCreateNL("IEex_DerivedStatsData", stats)
 		local numStats = IEex_Helper_GetBridgeNumIntsNL("IEex_RegisteredLuaStats")
-		for i = 1, numStats, 1 do
-			local copyFunc = _G[IEex_Helper_GetBridgeNL("IEex_RegisteredLuaStats", i, "copy")]
-			if copyFunc then
-				copyFunc(luaDerivedStats, luaTempStats)
+		for i = 1, numStats do
+			local entry = IEex_Helper_GetBridgeNL("IEex_RegisteredLuaStats", i)
+			local initFunc = _G[IEex_Helper_GetBridgeNL(entry, "init")]
+			if initFunc then
+				initFunc(statsData)
 			end
 		end
 	end)
+end
+
+-- This is only called on m_derivedStats
+function IEex_Extern_OnReloadDerivedStats(stats, sprite)
+	IEex_AssertThread(IEex_Thread.Async, true)
+	IEex_Helper_SynchronizedBridgeOperation("IEex_DerivedStatsData", function()
+		local statsData = IEex_Helper_GetBridgeNL("IEex_DerivedStatsData", stats)
+		local numStats = IEex_Helper_GetBridgeNumIntsNL("IEex_RegisteredLuaStats")
+		for i = 1, numStats do
+			local reloadFunc = _G[IEex_Helper_GetBridgeNL("IEex_RegisteredLuaStats", i, "reload")]
+			if reloadFunc then
+				reloadFunc(statsData)
+			end
+		end
+	end)
+end
+
+function IEex_Extern_OnDerivedStatsOperatorEqu(this, that)
+	IEex_AssertThread(IEex_Thread.Both, true)
+	IEex_Helper_SynchronizedBridgeOperation("IEex_DerivedStatsData", function()
+		local destData = IEex_Helper_GetBridgeNL("IEex_DerivedStatsData", this)
+		local sourceData = IEex_Helper_GetBridgeNL("IEex_DerivedStatsData", that)
+		local numStats = IEex_Helper_GetBridgeNumIntsNL("IEex_RegisteredLuaStats")
+		for i = 1, numStats do
+			local copyFunc = _G[IEex_Helper_GetBridgeNL("IEex_RegisteredLuaStats", i, "copy")]
+			if copyFunc then
+				copyFunc(sourceData, destData)
+			end
+		end
+	end)
+end
+
+function IEex_Extern_OnDestructDerivedStats(stats)
+	IEex_AssertThread(IEex_Thread.Async, true)
+	local statsData = IEex_Helper_GetBridgeNL("IEex_DerivedStatsData", stats)
+	local numStats = IEex_Helper_GetBridgeNumIntsNL("IEex_RegisteredLuaStats")
+	for i = 1, numStats do
+		local cleanupFunc = _G[IEex_Helper_GetBridgeNL("IEex_RegisteredLuaStats", i, "cleanup")]
+		if cleanupFunc then
+			cleanupFunc(statsData)
+		end
+	end
 end
 
 function IEex_Extern_OnPostCreatureProcessEffectList(creatureData)
@@ -324,11 +351,11 @@ function IEex_Extern_OnPostCreatureProcessEffectList(creatureData)
 				IEex_WriteByte(areaData + 0x87A, 115)
 				IEex_WriteByte(areaData + 0xB16, 1)
 				local visualRange = IEex_ReadSignedWord(areaData + 0x86E, 0x0)
-				
+
 				if IEex_GetActorSpellState(targetID, 215) then
 					IEex_DS(visualRange)
 					if visualRange == 0 or visualRange == 14 then
-						
+
 						IEex_WriteWord(areaData + 0x86E, 255)
 					end
 				else
@@ -336,7 +363,7 @@ function IEex_Extern_OnPostCreatureProcessEffectList(creatureData)
 						IEex_WriteWord(areaData + 0x86E, 0)
 					end
 				end
-				
+
 			end
 		end
 		if not isPC then
@@ -361,60 +388,11 @@ function IEex_Extern_OnPostCreatureProcessEffectList(creatureData)
 	end
 end
 
-function IEex_Extern_OnPostCreatureHandleEffects(creatureData)
-	IEex_AssertThread(IEex_Thread.Async, true)
-	IEex_Helper_SetBridge("IEex_GameObjectData", IEex_GetActorIDShare(creatureData), "bEffectsHandled", true)
-end
-
--- Return:
---	 true  - To restrict actionbar
---	 false - To allow actionbar customization
-function IEex_Extern_RestrictCreatureActionbar(creatureData, buttonType)
-	IEex_AssertThread(IEex_Thread.Async, true)
-	-- Restrict customization if not PC
-	return (IEex_ReadByte(creatureData + 0x24, 0x0) ~= 2 and bit.band(IEex_ReadDword(creatureData + 0x740), 0x400000) == 0)
-end
-
--- Return:
---	 true  - To force default actionbar buttons on global creature unmarshal
---	 false - To keep existing actionbar buttons
-function IEex_Extern_ShouldForceDefaultButtons(creatureData)
-	IEex_AssertThread(IEex_Thread.Async, true)
-	local actorID = IEex_GetActorIDShare(creatureData)
-	if IEex_GetActorLocal(actorID, "IEex_Actionbar_Initialized") == 0 then
-		IEex_SetActorLocal(actorID, "IEex_Actionbar_Initialized", 1)
-		return true
-	else
-		return false
-	end
-end
-
 ------------------
 -- Thread: Both --
 ------------------
 
 function IEex_Extern_OnGameObjectsBeingCleaned()
-
 	IEex_AssertThread(IEex_Thread.Both, true)
-	IEex_Helper_SynchronizedBridgeOperation("IEex_GameObjectData", function()
-
-		IEex_Helper_IterateBridgeNL("IEex_GameObjectData", function(actorID, data)
-
-			local share = IEex_GetActorShare(actorID)
-			if share == 0x0 or IEex_ReadByte(share + 0x4, 0) ~= 0x31 then return end
-
-			local luaDerivedStats = IEex_Helper_GetBridgeNL("IEex_GameObjectData", actorID, "luaDerivedStats")
-			local luaTempStats = IEex_Helper_GetBridgeNL("IEex_GameObjectData", actorID, "luaTempStats")
-
-			local numStats = IEex_Helper_GetBridgeNumIntsNL("IEex_RegisteredLuaStats")
-			for i = 1, numStats, 1 do
-				local cleanupFunc = _G[IEex_Helper_GetBridgeNL("IEex_RegisteredLuaStats", i, "cleanup")]
-				if cleanupFunc then
-					cleanupFunc(luaDerivedStats)
-					cleanupFunc(luaTempStats)
-				end
-			end
-		end)
-		IEex_Helper_ClearBridgeNL("IEex_GameObjectData")
-	end)
+	IEex_Helper_ClearBridge("IEex_GameObjectData")
 end

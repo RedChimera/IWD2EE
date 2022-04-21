@@ -383,10 +383,11 @@ function IEex_SetActorScript(actorID, level, resref)
 	})
 end
 
--- Directly applies an effect to an actor based on the args table.
-function IEex_ApplyEffectToActor(actorID, args)
-	local share = IEex_GetActorShare(actorID)
-	if share <= 0 then return end
+-- Directly applies an effect to a sprite based on the args table.
+function IEex_ApplyEffectToSprite(sprite, args)
+
+	if sprite <= 0 then return end
+
 	local writeType = {
 		["BYTE"]   = 0,
 		["WORD"]   = 1,
@@ -479,7 +480,11 @@ function IEex_ApplyEffectToActor(actorID, args)
 		{ "internal_flags",    0xD4, writeType.DWORD,  argFailType.DEFAULT, 0  },
 	})
 	-- CGameSprite::AddEffect(CGameSprite *this, CGameEffect *pEffect, char list, int noSave, int immediateResolve)
-	IEex_Call(IEex_ReadDword(IEex_ReadDword(share) + 0x78), {1, 0, 1, CGameEffect}, share, 0x0)
+	IEex_Call(IEex_ReadDword(IEex_ReadDword(sprite) + 0x78), {1, 0, 1, CGameEffect}, sprite, 0x0)
+end
+
+function IEex_ApplyEffectToActor(actorID, args)
+	IEex_ApplyEffectToSprite(IEex_GetActorShare(actorID), args)
 end
 
 function IEex_ApplyResref(resref, actorID)
@@ -1160,6 +1165,22 @@ function IEex_IsSprite(actorID, allowDead)
 	return share ~= 0x0 -- share != NULL
 	   and IEex_ReadByte(share + 0x4, 0) == 0x31 -- m_objectType == TYPE_SPRITE
 	   and (allowDead or bit.band(IEex_ReadDword(share + 0x5BC), 0xFC0) == 0x0) -- allowDead or Status (not includes) STATE_*_DEATH
+end
+
+function IEex_GetSpriteBaseStats(sprite)
+	return sprite + 0x5A4
+end
+
+function IEex_GetActorBaseStats(actorID)
+	return IEex_GetSpriteBaseStats(IEex_GetActorShare(actorID))
+end
+
+function IEex_GetSpriteDerivedStats(sprite)
+	return sprite + 0x920
+end
+
+function IEex_GetActorDerivedStats(actorID)
+	return IEex_GetSpriteDerivedStats(IEex_GetActorShare(actorID))
 end
 
 ----------------

@@ -1524,6 +1524,33 @@ function IEex_AttemptHook(address, hookPart, attemptRestorePart, expectedBytes)
 	}})
 end
 
+function IEex_HookReplaceFunctionMaintainOriginal(address, restoreSize, originalLabel, assembly)
+
+	local storeBytes = function(startAddress, size)
+		local bytes = {}
+		local limit = startAddress + size - 1
+		for i = startAddress, limit, 1 do
+			table.insert(bytes, {IEex_ReadByte(i, 0), 1})
+		end
+		return bytes
+	end
+
+	local nops = {}
+	for i = 1, restoreSize - 5 do
+		table.insert(nops, {0x90, 1})
+	end
+
+	IEex_DefineAssemblyLabel(originalLabel, IEex_WriteAssemblyAuto(IEex_FlattenTable({
+		storeBytes(address, restoreSize),
+		{"!jmp_dword", {address + restoreSize, 4, 4}},
+	})))
+
+	IEex_WriteAssembly(address, IEex_FlattenTable({
+		{"!jmp_dword", {IEex_WriteAssemblyAuto(assembly), 4, 4}},
+		nops,
+	}))
+end
+
 function IEex_HookJump(address, restoreSize, assembly)
 
 	local storeBytes = function(startAddress, size)

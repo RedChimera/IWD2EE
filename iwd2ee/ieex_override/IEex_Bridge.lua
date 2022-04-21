@@ -44,8 +44,8 @@ function IEex_AppendBridgeTable(bridge)
 end
 
 function IEex_AppendBridgeTableNL(bridge)
-	local next = IEex_Helper_GetBridgeNumIntsNL(bridge) + 1
-	return IEex_Helper_GetBridgeCreateNL(bridge, next)
+	local nextI = IEex_Helper_GetBridgeNumIntsNL(bridge) + 1
+	return IEex_Helper_GetBridgeCreateNL(bridge, nextI), nextI
 end
 
 function IEex_AppendBridge(bridge, value)
