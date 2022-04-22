@@ -370,7 +370,6 @@ function IEex_Extern_FeatHook(sprite, oldBaseStats, oldDerivedStats)
 			local newFeatCount = IEex_GetSpriteFeatCount(sprite, featID)
 			if oldFeatCount ~= newFeatCount then
 				for featLevel = oldFeatCount + 1, newFeatCount, 1 do
-					print("Took ".."FE_"..featID.."_"..featLevel)
 					IEex_ApplyResref("FE_"..featID.."_"..featLevel, IEex_GetActorIDShare(sprite))
 				end
 			end
@@ -383,7 +382,7 @@ end
 --------------------
 
 function IEex_Extern_GetFeatStringHasCountHook(featID)
-	IEex_AssertThread(IEex_Thread.Async, true)
+	IEex_AssertThread(IEex_Thread.Both, true)
 	return IEex_GetFeatMaxPips(featID) > 1
 end
 

@@ -228,7 +228,7 @@
 	IEex_HookRestore(0x724610, 0, 5, IEex_FlattenTable({[[
 
 		!mark_esp
-		!sub_esp_byte 04
+		!sub_esp_byte 04 !adjust_marked_esp(4)
 
 		!push_all_registers_iwd2
 		]], IEex_GenLuaCall("IEex_Extern_ShouldForceDefaultButtons", {
