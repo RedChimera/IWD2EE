@@ -118,6 +118,26 @@
 		IEex_HookChangeRel32(address, closingParenHook)
 	end
 
+	--------------------------------------------------------------------------------
+	-- Dialog actions / triggers shouldn't remove whitespace in string parameters --
+	--------------------------------------------------------------------------------
+
+	local stripWhitespaceHook = IEex_WriteAssemblyAuto(IEex_FlattenTable({[[
+		!mark_esp
+		!push(ebx)
+		]], IEex_GenLuaCall("IEex_Extern_StripScriptingStringWhitespace", {
+			["args"] = {
+				{"!marked_esp !push([esp+4])"},
+				{"!marked_esp !lea(eax,[esp+8]) !push(eax)"},
+			},
+		}), [[
+		@call_error
+		!marked_esp !mov(eax,[esp+4])
+		!pop(ebx)
+		!ret
+	]]}))
+	IEex_WriteAssembly(0x4210E0, {"!jmp_dword", {stripWhitespaceHook, 4, 4}})
+
 	IEex_EnableCodeProtection()
 
 end)()

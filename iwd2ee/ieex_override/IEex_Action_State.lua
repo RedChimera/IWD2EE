@@ -24,17 +24,17 @@ end
 --[[
 
 CAIAction =>
-0x0     short            m_actionID    
-0x2     CAIObjectType    m_actorID    
-0x3e    CAIObjectType    m_acteeID    
-0x7a    CAIObjectType    m_acteeID2    
-0xb6    int              m_specificID    
-0xba    int              m_specificID2    
-0xbe    int              m_specificID3    
-0xc2    CString          m_string1    
-0xc6    CString          m_string2    
-0xca    CPoint           m_dest    
-0xd2    uint             m_internalFlags    
+0x0     short            m_actionID
+0x2     CAIObjectType    m_actorID
+0x3e    CAIObjectType    m_acteeID
+0x7a    CAIObjectType    m_acteeID2
+0xb6    int              m_specificID
+0xba    int              m_specificID2
+0xbe    int              m_specificID3
+0xc2    CString          m_string1
+0xc6    CString          m_string2
+0xca    CPoint           m_dest
+0xd2    uint             m_internalFlags
 
 --]]
 
@@ -227,6 +227,51 @@ function IEex_Extern_FindScriptingStringClosingParen(actionCString)
 	return -1
 end
 
+-- Contract:
+--    Construct resultCStringPtr
+--    Destruct inCStringPtr
+function IEex_Extern_StripScriptingStringWhitespace(resultCStringPtr, inCStringPtr)
+
+	local inString = IEex_ReadString(IEex_ReadDword(inCStringPtr))
+	local toBuild = {}
+	local insertI = 1
+	local IsCharAlphaNumericA = IEex_ReadDword(0x8474EC)
+	local inStringParam = false
+	local lastChar = nil
+
+	for i = 1, #inString do
+
+		local char = inString:sub(i, i)
+
+		if char == '"' then
+			inStringParam = not inStringParam
+		elseif not inStringParam and char == "/" and lastChar == "/" then
+			break
+		end
+
+		if inStringParam or IEex_Call(IsCharAlphaNumericA, {char:byte()}, nil, 0x0) ~= 0 or ({
+			["!"] = true, ['"'] = true, ["#"] = true, ["("] = true,
+			[")"] = true, ["*"] = true, [","] = true, ["-"] = true,
+			["."] = true, ["["] = true, ["]"] = true, ["_"] = true, })[char]
+		then
+			toBuild[insertI] = char
+			insertI = insertI + 1
+		end
+
+		lastChar = char
+	end
+
+	IEex_RunWithStackManager({
+		{ ["name"] = "result", ["struct"] = "string", ["constructor"] = { ["luaArgs"] = { table.concat(toBuild) } } }, },
+		function(manager)
+			-- CString_Construct
+			IEex_Call(0x7FCC88, {manager:getAddress("result")}, resultCStringPtr, 0x0)
+		end)
+
+	-- CString_Destruct
+	IEex_Call(0x7FCC1A, {}, inCStringPtr, 0x0)
+end
+
 function IEex_Extern_CGameSprite_SetCurrAction(actionData)
 	IEex_AssertThread(IEex_Thread.Both, true)
 	IEex_Helper_SynchronizedBridgeOperation("IEex_ActionHooks", function()
@@ -291,7 +336,7 @@ function EXAPPLSP(actionData, creatureData)
 					targetID = sourceID
 				end
 				local casterClass = IEex_ReadByte(creatureData + 0x530, 0x0)
-				if casterClass < 0 then 
+				if casterClass < 0 then
 					casterClass = 0
 				end
 				local casterLevel = IEex_GetActorStat(sourceID, 95 + casterClass)
