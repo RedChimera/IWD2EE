@@ -215,10 +215,13 @@
 @55339=~Attacks <EXWHNAME39> with <EXWHWEAP39> : <EXWHHITMISS39>~
 @55340=~Attacks <EXWHNAME40> with <EXWHWEAP40> : <EXWHHITMISS40>~
 */
+@55381=~That character has been dead too long to be raised by that spell.~
 @55382=~Spell Disrupted : Off hand in use.~
 @55383=~Attack failed to connect due to difference in height~
 @55384=~Damage avoided due to etherealness~
 @55385=~Damage avoided due to incorporealness~
+@55386=~fire~
+@55387=~holy fire~
 @55390=~Using Feat: Blind-Fight - Successful~
 @55391=~Using Feat: Blind-Fight - Failed!~
 @55392=~Missed due to concealment.~

@@ -21,7 +21,7 @@ COPY ~%mod_folder%/bcs/bcs_spell_revisions~ ~override~
 COPY ~%mod_folder%/cre/cre_spell_revisions~ ~override~
 
 COPY ~%mod_folder%/tables/LISTDOMN.2da~ ~override~
-
+/*
 COPY_EXISTING ~LISTINNT.2da~ ~override~
 	COUNT_2DA_ROWS 2 numrows
 	READ_2DA_ENTRY (numrows - 1) 0 2 lastindex
@@ -90,7 +90,7 @@ COPY_EXISTING ~LISTINNT.2da~ ~override~
 	numrows += 1
 	lastindex += 1
 	INSERT_2DA_ROW numrows 2 ~%lastindex% USP04L01~
-
+*/
 SILENT
 LAM IWD2_INDEX_LISTS
 VERBOSE
@@ -1814,6 +1814,12 @@ COPY_EXISTING ~sppr501.spl~ ~override~
 	SAY UNIDENTIFIED_DESC @32501
 	SAY IDENTIFIED_DESC @32501
 
+COPY_EXISTING ~sppr503.spl~ ~override~
+	SAY NAME1 @31503
+	SAY NAME2 @31503
+	SAY UNIDENTIFIED_DESC @32503
+	SAY IDENTIFIED_DESC @32503
+
 COPY_EXISTING ~sppr508.spl~ ~override~
 	SAY NAME1 @31508
 	SAY NAME2 @31508
@@ -1941,6 +1947,12 @@ COPY_EXISTING ~spwi322.spl~ ~override~
 	SAY NAME2 @33322
 	SAY UNIDENTIFIED_DESC @34322
 	SAY IDENTIFIED_DESC @34322
+
+COPY_EXISTING ~spwi323.spl~ ~override~
+	SAY NAME1 @33323
+	SAY NAME2 @33323
+	SAY UNIDENTIFIED_DESC @34323
+	SAY IDENTIFIED_DESC @34323
 
 COPY_EXISTING ~spwi417.spl~ ~override~
 	SAY NAME1 @33417
@@ -2277,6 +2289,17 @@ COPY_EXISTING ~uspr255.spl~ ~override~
 	SAY UNIDENTIFIED_DESC @36255
 	SAY IDENTIFIED_DESC @36255
 
+COPY_EXISTING ~uspr258.spl~ ~override~
+	SAY NAME1 @35258
+	SAY NAME2 @35258
+	SAY UNIDENTIFIED_DESC @36258
+	SAY IDENTIFIED_DESC @36258
+
+COPY_EXISTING ~USPLAT15.itm~ ~override~
+	SAY NAME1 @12891
+	SAY NAME2 @12891
+	SAY UNIDENTIFIED_DESC @12892
+
 COPY_EXISTING ~uspr351.spl~ ~override~
 	SAY NAME1 @35351
 	SAY NAME2 @35351
@@ -2415,6 +2438,12 @@ COPY_EXISTING ~uspr555.spl~ ~override~
 	SAY NAME2 @35555
 	SAY UNIDENTIFIED_DESC @36555
 	SAY IDENTIFIED_DESC @36555
+
+COPY_EXISTING ~uspr557.spl~ ~override~
+	SAY NAME1 @35557
+	SAY NAME2 @35557
+	SAY UNIDENTIFIED_DESC @36557
+	SAY IDENTIFIED_DESC @36557
 
 COPY_EXISTING ~uspr653.spl~ ~override~
 	SAY NAME1 @35653
@@ -2570,17 +2599,17 @@ COPY_EXISTING ~uswi156.spl~ ~override~
 	SAY UNIDENTIFIED_DESC @38156
 	SAY IDENTIFIED_DESC @38156
 
+COPY_EXISTING ~usjump.spl~ ~override~
+	SAY NAME1 @37156
+	SAY NAME2 @37156
+	SAY UNIDENTIFIED_DESC @30123
+	SAY IDENTIFIED_DESC @30123
+
 COPY_EXISTING ~uswi157.spl~ ~override~
 	SAY NAME1 @37157
 	SAY NAME2 @37157
 	SAY UNIDENTIFIED_DESC @38157
 	SAY IDENTIFIED_DESC @38157
-
-COPY_EXISTING ~usjump.spl~ ~override~
-	SAY NAME1 @37156
-	SAY NAME2 @37156
-	SAY UNIDENTIFIED_DESC @38156
-	SAY IDENTIFIED_DESC @38156
 
 COPY_EXISTING ~uswi251.spl~ ~override~
 	SAY NAME1 @37251
@@ -2696,6 +2725,12 @@ COPY_EXISTING ~USPROJIM.cre~ ~override~
 	SAY NAME1 @30112
 	SAY NAME2 @30112
 
+COPY_EXISTING ~uswi359.spl~ ~override~
+	SAY NAME1 @37359
+	SAY NAME2 @37359
+	SAY UNIDENTIFIED_DESC @38359
+	SAY IDENTIFIED_DESC @38359
+
 COPY_EXISTING ~uswi451.spl~ ~override~
 	SAY NAME1 @37451
 	SAY NAME2 @37451
@@ -2727,6 +2762,8 @@ COPY_EXISTING ~uswi454.spl~ ~override~
 COPY_EXISTING ~uswi454d.spl~ ~override~ ~uswi454p.spl~ ~override~ ~uswi454s.spl~ ~override~ ~uswi454t.spl~ ~override~
 	SAY NAME1 @30055
 	SAY NAME2 @30055
+	SAY UNIDENTIFIED_DESC @30124
+	SAY IDENTIFIED_DESC @30124
 
 COPY_EXISTING ~uswi455.spl~ ~override~
 	SAY NAME1 @37455
@@ -2737,6 +2774,8 @@ COPY_EXISTING ~uswi455.spl~ ~override~
 COPY_EXISTING ~usp01l01.spl~ ~override~
 	SAY NAME1 @30115
 	SAY NAME2 @30115
+	SAY UNIDENTIFIED_DESC @30125
+	SAY IDENTIFIED_DESC @30125
 
 COPY_EXISTING ~usp01l01.itm~ ~override~
 	SAY NAME1 @30119
@@ -2745,6 +2784,8 @@ COPY_EXISTING ~usp01l01.itm~ ~override~
 COPY_EXISTING ~usp02l01.spl~ ~override~
 	SAY NAME1 @30116
 	SAY NAME2 @30116
+	SAY UNIDENTIFIED_DESC @30126
+	SAY IDENTIFIED_DESC @30126
 
 COPY_EXISTING ~usp02l01.itm~ ~override~
 	SAY NAME1 @30120
@@ -2753,6 +2794,8 @@ COPY_EXISTING ~usp02l01.itm~ ~override~
 COPY_EXISTING ~usp03l01.spl~ ~override~
 	SAY NAME1 @30117
 	SAY NAME2 @30117
+	SAY UNIDENTIFIED_DESC @30127
+	SAY IDENTIFIED_DESC @30127
 
 COPY_EXISTING ~usp03l01.itm~ ~override~
 	SAY NAME1 @30121
@@ -2761,6 +2804,8 @@ COPY_EXISTING ~usp03l01.itm~ ~override~
 COPY_EXISTING ~usp04l01.spl~ ~override~
 	SAY NAME1 @30118
 	SAY NAME2 @30118
+	SAY UNIDENTIFIED_DESC @30128
+	SAY IDENTIFIED_DESC @30128
 
 COPY_EXISTING ~usp04l01.itm~ ~override~
 	SAY NAME1 @30122
@@ -2775,6 +2820,8 @@ COPY_EXISTING ~uswi456.spl~ ~override~
 COPY_EXISTING ~uswi456d.spl~ ~override~ ~uswi456p.spl~ ~override~ ~uswi456s.spl~ ~override~ ~uswi456t.spl~ ~override~
 	SAY NAME1 @30067
 	SAY NAME2 @30067
+	SAY UNIDENTIFIED_DESC @30129
+	SAY IDENTIFIED_DESC @30129
 
 COPY_EXISTING ~uswi551.spl~ ~override~
 	SAY NAME1 @37551
@@ -3051,8 +3098,8 @@ COPY_EXISTING ~uswi758.spl~ ~override~
 COPY_EXISTING ~uswi758d.spl~ ~override~ ~uswi758p.spl~ ~override~ ~uswi758s.spl~ ~override~ ~uswi758t.spl~ ~override~
 	SAY NAME1 @30051
 	SAY NAME2 @30051
-	SAY UNIDENTIFIED_DESC @30051
-	SAY IDENTIFIED_DESC @30051
+	SAY UNIDENTIFIED_DESC @30130
+	SAY IDENTIFIED_DESC @30130
 
 COPY_EXISTING ~uswi759.spl~ ~override~
 	SAY NAME1 @37759
@@ -3090,8 +3137,8 @@ COPY_EXISTING ~ussklbmb.cre~ ~override~
 COPY_EXISTING ~ussklbmb.spl~ ~override~
 	SAY NAME1 @30066
 	SAY NAME2 @30066
-	SAY UNIDENTIFIED_DESC @30066
-	SAY IDENTIFIED_DESC @30066
+	SAY UNIDENTIFIED_DESC @30131
+	SAY IDENTIFIED_DESC @30131
 
 COPY_EXISTING ~uswi763.spl~ ~override~
 	SAY NAME1 @37763
@@ -3189,6 +3236,12 @@ COPY_EXISTING ~uswi864.spl~ ~override~
 	SAY UNIDENTIFIED_DESC @38864
 	SAY IDENTIFIED_DESC @38864
 
+COPY_EXISTING ~uswi865.spl~ ~override~
+	SAY NAME1 @37865
+	SAY NAME2 @37865
+	SAY UNIDENTIFIED_DESC @38865
+	SAY IDENTIFIED_DESC @38865
+
 COPY_EXISTING ~uswi952.spl~ ~override~
 	SAY NAME1 @37952
 	SAY NAME2 @37952
@@ -3270,8 +3323,8 @@ COPY_EXISTING ~uswi961.spl~ ~override~
 COPY_EXISTING ~uswi961d.spl~ ~override~ ~uswi961p.spl~ ~override~ ~uswi961s.spl~ ~override~ ~uswi961t.spl~ ~override~
 	SAY NAME1 @30111
 	SAY NAME2 @30111
-	SAY UNIDENTIFIED_DESC @30111
-	SAY IDENTIFIED_DESC @30111
+	SAY UNIDENTIFIED_DESC @30132
+	SAY IDENTIFIED_DESC @30132
 
 COPY_EXISTING ~uswi962.spl~ ~override~
 	SAY NAME1 @37962
@@ -3280,6 +3333,36 @@ COPY_EXISTING ~uswi962.spl~ ~override~
 	SAY IDENTIFIED_DESC @38962
 
 COMPILE ~%mod_folder%/dlg/USWISH.d~
+
+COPY_EXISTING ~uswi963.spl~ ~override~
+	SAY NAME1 @37963
+	SAY NAME2 @37963
+	SAY UNIDENTIFIED_DESC @38963
+	SAY IDENTIFIED_DESC @38963
+
+COPY_EXISTING ~ussoulbi.cre~ ~override~
+	SAY NAME1 @30133
+	SAY NAME2 @30133
+
+COPY_EXISTING ~usgem28s.itm~ ~override~
+	SAY NAME1 @30134
+	SAY NAME2 @30134
+	SAY UNIDENTIFIED_DESC @30135
+	SAY IDENTIFIED_DESC @30135
+
+COPY_EXISTING ~usgem29s.itm~ ~override~
+	SAY NAME1 @30136
+	SAY NAME2 @30136
+	SAY UNIDENTIFIED_DESC @30137
+	SAY IDENTIFIED_DESC @30137
+
+COPY_EXISTING ~usgem30s.itm~ ~override~
+	SAY NAME1 @30138
+	SAY NAME2 @30138
+	SAY UNIDENTIFIED_DESC @30139
+	SAY IDENTIFIED_DESC @30139
+
+COMPILE ~%mod_folder%/dlg/USSOULBI.d~
 
 /*
 COPY_EXISTING ~AR4102.are~ ~override~
@@ -3297,23 +3380,20 @@ COPY ~%mod_folder%/bam/USCOLDA.bam~ ~override~
 COPY ~%mod_folder%/bam/USCOLDB.bam~ ~override~
 COPY ~%mod_folder%/bam/USCOLDC.bam~ ~override~
 
-COPY_EXISTING ~sppr504.spl~ ~override~ ~sppr712.spl~ ~override~
+COPY_EXISTING ~sppr504.spl~ ~override~ ~sppr712.spl~ ~override~ ~uspr355.spl~ ~override~
 	LPF CLONE_EFFECT INT_VAR multi_match=1 opcode=172 timing=9 STR_VAR resource=~USBLINKT~ insert=~last~ END
 	LPF CLONE_EFFECT INT_VAR multi_match=1 opcode=172 timing=9 STR_VAR resource=~USJUMP~ insert=~last~ END
-	LPF CLONE_EFFECT INT_VAR multi_match=1 opcode=172 timing=9 STR_VAR resource=~USWI454D~ insert=~last~ END
-	LPF CLONE_EFFECT INT_VAR multi_match=1 opcode=172 timing=9 STR_VAR resource=~USWI454P~ insert=~last~ END
-	LPF CLONE_EFFECT INT_VAR multi_match=1 opcode=172 timing=9 STR_VAR resource=~USWI454S~ insert=~last~ END
 	LPF CLONE_EFFECT INT_VAR multi_match=1 opcode=172 timing=9 STR_VAR resource=~USWI456D~ insert=~last~ END
 	LPF CLONE_EFFECT INT_VAR multi_match=1 opcode=172 timing=9 STR_VAR resource=~USWI456P~ insert=~last~ END
 	LPF CLONE_EFFECT INT_VAR multi_match=1 opcode=172 timing=9 STR_VAR resource=~USWI456S~ insert=~last~ END
-	LPF CLONE_EFFECT INT_VAR multi_match=1 opcode=172 timing=9 STR_VAR resource=~USWI758S~ insert=~last~ END
+	LPF CLONE_EFFECT INT_VAR multi_match=1 opcode=500 timing=0 STR_VAR resource=~MEPOLYBA~ insert=~last~ END
 	UNLESS ~USBLINKT~
 
-COPY_EXISTING ~sppr504.spl~ ~override~ ~sppr712.spl~ ~override~
+COPY_EXISTING ~sppr504.spl~ ~override~ ~sppr712.spl~ ~override~ ~uspr355.spl~ ~override~
 	LPF CLONE_EFFECT INT_VAR multi_match=1 opcode=276 parameter2=255 timing=9 STR_VAR resource=~USNOSALA~ insert=~last~ END
 	UNLESS ~USNOSALA~
 
-COPY_EXISTING ~sppr504.spl~ ~override~ ~sppr712.spl~ ~override~
+COPY_EXISTING ~sppr504.spl~ ~override~ ~sppr712.spl~ ~override~ ~uspr355.spl~ ~override~
 	LPF CLONE_EFFECT INT_VAR multi_match=1 opcode=172 timing=9 STR_VAR resource=~USP01L01~ insert=~last~ END
 	LPF CLONE_EFFECT INT_VAR multi_match=1 opcode=172 timing=9 STR_VAR resource=~USP02L01~ insert=~last~ END
 	LPF CLONE_EFFECT INT_VAR multi_match=1 opcode=172 timing=9 STR_VAR resource=~USP03L01~ insert=~last~ END
@@ -4117,6 +4197,7 @@ COPY_EXISTING ~53MALAVO.sto~ ~override~
 	ADD_STORE_ITEM ~USWI955Z~ #1 #1 #0 ~IDENTIFIED~ #2
 
 COPY_EXISTING ~53MYRVEK.sto~ ~override~
+	ADD_STORE_ITEM ~USWI865Z~ #1 #1 #0 ~IDENTIFIED~ #1
 	ADD_STORE_ITEM ~USWI858Z~ #1 #1 #0 ~IDENTIFIED~ #1
 	ADD_STORE_ITEM ~USWI860Z~ #1 #1 #0 ~IDENTIFIED~ #1
 	ADD_STORE_ITEM ~USWI764Z~ #1 #1 #0 ~IDENTIFIED~ #1
@@ -4243,6 +4324,9 @@ COPY_EXISTING ~53malavo.cre~ ~override~
 
 COPY_EXISTING ~61izbela.cre~ ~override~
 	LPF	IWD2_ADD_CRE_ITEM INT_VAR cq1=0 equip=0 STR_VAR item=~USWI959Z~ slot=~inv10~ mode=~replace~ END
+
+COPY_EXISTING ~62mdarf.cre~ ~override~
+	LPF	IWD2_ADD_CRE_ITEM INT_VAR cq1=0 equip=0 STR_VAR item=~USWI963Z~ slot=~inv1~ mode=~replace~ END
 
 COPY_EXISTING ~62saabl2.cre~ ~override~
 	LPF	IWD2_ADD_CRE_ITEM INT_VAR cq1=0 equip=0 STR_VAR item=~USWI752Z~ slot=~inv9~ mode=~replace~ END

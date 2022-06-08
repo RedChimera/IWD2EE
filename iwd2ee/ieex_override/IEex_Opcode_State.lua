@@ -164,8 +164,12 @@ function IEex_Extern_OnCheckAddScreenEffectsHook(pEffect, pSprite)
 			IEex_WriteDword(pEffect + 0x64, constantID)
 		end
 	end
-	IEex_WriteDword(pEffect + 0x68, IEex_GetGameTick())
-	IEex_WriteDword(pEffect + 0xD0, math.random(0x7FFFFFFF))
+	if IEex_ReadDword(pEffect + 0x68) == 0 then
+		IEex_WriteDword(pEffect + 0x68, IEex_GetGameTick())
+	end
+	if IEex_ReadDword(pEffect + 0xD0) == 0 then
+		IEex_WriteDword(pEffect + 0xD0, math.random(0x7FFFFFFF))
+	end
 	for func_name, func in pairs(IEex_ScreenEffectsGlobalFunctions) do
 		if func(pEffect, pSprite) then
 			return true
@@ -280,6 +284,23 @@ ex_empowerable_opcodes = {[0] = true, [1] = true, [6] = true, [10] = true, [12] 
 		local timing = IEex_ReadDword(effectData + 0x20)
 		local duration = IEex_ReadDword(effectData + 0x24)
 		local time_applied = IEex_ReadDword(effectData + 0x68)
+		local damageType = bit.band(parameter2, 0xFFFF0000)
+		if opcode == 12 then
+			if bit.band(parameter3, 0x40000) > 0 then
+				if damageType == 0x80000 then
+					IEex_SetToken("EXDAMFIR", IEex_FetchString(ex_tra_55387))
+					local fireResistance = IEex_ReadSignedWord(creatureData + 0x942, 0x0)
+					if fireResistance > 0 then
+						fireResistance = 0
+						IEex_WriteWord(creatureData + 0x942, fireResistance)
+					end
+				end
+			else
+				if damageType == 0x80000 then
+					IEex_SetToken("EXDAMFIR", IEex_FetchString(ex_tra_55386))
+				end
+			end
+		end
 		if bit.band(internalFlags, 0x2000000) > 0 then return false end
 		local savingthrow = IEex_ReadDword(effectData + 0x3C)
 		local savebonus = IEex_ReadDword(effectData + 0x40)
@@ -292,7 +313,6 @@ ex_empowerable_opcodes = {[0] = true, [1] = true, [6] = true, [10] = true, [12] 
 		if sourceSpell == nil then
 			sourceSpell = string.sub(parent_resource, 1, 7)
 		end
-		local damageType = bit.band(parameter2, 0xFFFF0000)
 		if opcode == 12 and parent_resource == "IEEX_DAM" and IEex_IsSprite(sourceID, true) then
 --			if (bit.band(savingthrow, 0x10000) > 0 and (IEex_GetActorSpellState(sourceID, 195) or IEex_GetActorSpellState(sourceID, 225))) or bit.band(savingthrow, 0x40000) == 0 then
 				local weaponRES = IEex_ReadLString(effectData + 0x6C, 8)
@@ -521,7 +541,7 @@ ex_empowerable_opcodes = {[0] = true, [1] = true, [6] = true, [10] = true, [12] 
 		if opcode == 13 or opcode == 420 then
 			local timeSlowed, targetNotSlowed = IEex_CheckGlobalEffectOnActor(targetID, 0x2)
 			local noChunkedDeath, targetYesChunkedDeath = IEex_CheckGlobalEffectOnActor(targetID, 0x4)
-			if (parameter2 == 0x8 or parameter2 == 0x400) and (IEex_GetActorSpellState(targetID, 210) or timeSlowed or noChunkedDeath) then
+			if bit.band(parameter2, 0x6F8) > 0 and (IEex_GetActorSpellState(targetID, 210) or timeSlowed or noChunkedDeath) then
 				parameter2 = 0x4
 				IEex_WriteDword(effectData + 0x1C, parameter2)
 			end
@@ -581,6 +601,11 @@ ex_empowerable_opcodes = {[0] = true, [1] = true, [6] = true, [10] = true, [12] 
 								newEffectSource = targetID
 								newEffectSourceX = IEex_ReadDword(effectData + 0x84)
 								newEffectSourceY = IEex_ReadDword(effectData + 0x88)
+							end
+							if (bit.band(thesavingthrow, 0x800000) > 0) then
+								newEffectSource = IEex_ReadDword(eData + 0x110)
+								newEffectSourceX = IEex_ReadDword(eData + 0x88)
+								newEffectSourceY = IEex_ReadDword(eData + 0x8C)
 							end
 							table.insert(onKillEffectList, {theresource, thecasterlvl, newEffectTarget, newEffectSource, newEffectTargetX, newEffectTargetY, newEffectSourceX, newEffectSourceY})
 						end
@@ -645,7 +670,6 @@ ex_empowerable_opcodes = {[0] = true, [1] = true, [6] = true, [10] = true, [12] 
 			end)
 			if minHP > 0 then
 				IEex_WriteWord(creatureData + 0x5C0, minHP)
-				IEex_DS(minHP)
 				return true
 			end
 		end
@@ -792,13 +816,14 @@ ex_empowerable_opcodes = {[0] = true, [1] = true, [6] = true, [10] = true, [12] 
 					parameter1 = math.floor(parameter1 * 1.5)
 					IEex_WriteDword(effectData + 0x18, parameter1)
 				end
---[[
 			elseif opcode == 500 then
 				if resource == "MEHGTST" and special == 1 then
 					parameter1 = math.floor(parameter1 * 1.5)
 					IEex_WriteDword(effectData + 0x18, parameter1)
+				elseif resource == "MEMODSKL" or resource == "MEMODSTA" then
+					parameter1 = math.floor(parameter1 * 1.5)
+					IEex_WriteDword(effectData + 0x18, parameter1)
 				end
---]]
 			elseif ex_empowerable_opcodes[opcode] ~= nil then
 				if opcode == 12 or opcode == 17 or opcode == 18 or opcode == 255 then
 					parameter1 = math.floor(parameter1 * 1.5)
@@ -856,6 +881,7 @@ ex_empowerable_opcodes = {[0] = true, [1] = true, [6] = true, [10] = true, [12] 
 	IEex_ScreenEffectsStats_Init = function(stats)
 		IEex_Helper_GetBridgeCreateNL(stats, "screenEffects")
 	end
+
 
 	IEex_ScreenEffectsStats_Reload = function(stats)
 		IEex_Helper_ClearBridgeNL(stats, "screenEffects")

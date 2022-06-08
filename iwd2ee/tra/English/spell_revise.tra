@@ -1561,17 +1561,16 @@ Saving Throw: None
 This spell grants incredible speed to all friendly creatures within the area of effect. All creatures affected by the spell will gain a +12 bonus to movement rate for the duration.
 ~
 @1694    = ~Disintegrate~
-@1695    = ~Disintegrate 
+@1695    = ~Disintegrate
 (Transmutation)
-Level: Sor/Wiz 8
+Level: Sor/Wiz 6
 Range: Sight of Caster
 Duration: Instantaneous
-Casting Time: 6
-Area of Effect: 1 Creature
+Casting Time: 5
+Area of Effect: 1 creature
 Saving Throw: Fortitude partial
 
-The spell makes a creature... vanish. When cast, a ball of green energy shoots forth from the caster to the target, who will be disintegrated unless they make a Fortitude save. This spell works on undead creatures. If the victim makes its saving throw, it will only suffer 6d6 damage. If it fails, however, it will suffer 2d10 slashing damage per caster level, almost assuredly resulting in the victim's death.
-~
+The spell turns a creature to dust. When cast, a ball of green energy shoots forth from the caster to the target, who will be disintegrated unless they make a Fortitude save at -2. If the victim makes their saving throw, they will only suffer 5d6 magic damage. If they fails, however, it will suffer 2d6 magic damage per caster level (max 40d6). This spell works on undead creatures.~
 @1696    = ~Power Word: Blind~
 @1697    = ~Power Word: Blind
 (Divination)
@@ -2671,6 +2670,49 @@ Launcher:  Bow~
 @30120=~Troll Attack~
 @30121=~Umber Hulk Attack~
 @30122=~Wyvern Stinger~
+@30123=~Jump
+
+By using this ability, the character jumps to a target point up to 20 feet away. This ability may be used at will until the Jump spell wears off.~
+@30124=~Copied Spell
+
+By using this ability, the character casts the copied spell.~
+@30125=~Polymorph: Fomorian Giant
+
+The character shapeshifts into a fomorian giant. While in fomorian giant form, the character can throw boulders at long range.~
+@30126=~Polymorph: Troll
+
+The character shapeshifts into a troll. While in troll form, the character regenerates 1 HP per second but is vulnerable to fire and acid.~
+@30127=~Polymorph: Umber Hulk
+
+The character shapeshifts into an umber hulk. While in umber hulk form, the character's gaze confuses nearby enemies if they fail a Will save.~
+@30128=~Polymorph: Wyvern
+
+The character shapeshifts into an wyvern. While in wyvern form, the character's attacks poison the target on a failed Fortitude save.~
+@30129=~Imbued Spell
+
+By using this ability, the character casts the imbued spell.~
+@30130=~Release Spell Sequencer
+
+By using this ability, the character instantly casts the spells that are stored in their sequencer.~
+@30131=~Explode
+
+Using this ability will detonate the skeleton immediately, dealing 10d6 slashing damage to all creatures within 15 feet (Reflex save for half).~
+@30132=~Release Eclectic Sequencer
+
+By using this ability, the character instantly casts the spells that are stored in their sequencer.~
+@30133=~Soul Gem~
+@30134=~Star Sapphire - With Soul~
+@30135=~Star Sapphire is a precious variation of the sapphire, however is more translucent, with a white star highlighted in its center. A star sapphire has been known to ornament devices which protect against magic.
+
+This gem has a soul trapped within through dark magic. One skilled in such magic could consume the soul utterly to become stronger or recharge a magic item. Doing so destroys the gem.~
+@30136=~King's Tears - With Soul~
+@30137=~King's Tears are very rare and found only in the Realms where they are sometimes called frozen tears. Clear, teardrop-shaped, smooth surfaced, and thought to be unbreakable. However, this gem can barely contain the soul inside it, and is almost ready to burst. These stones are said to be the crystallized tears of long-dead necromancer kings. In each gem can be seen that which the weeping king loved long ago. Their true nature is unknown but suffice it to say that sages prize these gems above all others.
+
+This gem has a soul trapped within through dark magic. One skilled in such magic could consume the soul utterly to become stronger or recharge a magic item. Doing so destroys the gem.~
+@30138=~Rogue Stone - With Soul~
+@30139=~A small, shifting, rainbow-colored, iridescent gemstone. The fluid shades of color appear almost liquid under normal sunlight, it is truly a beautiful sight to behold. Rogue stones are extremely rare and are used for the gemjump spell, hence one of the most sought after gems in the Realms.
+
+This gem has a soul trapped within through dark magic. One skilled in such magic could consume the soul utterly to become stronger or recharge a magic item. Doing so destroys the gem.~
 
 @31105     = ~Entangle~
 @32105     = ~Entangle
@@ -2763,7 +2805,7 @@ Saving Throw: None
 
 The caster calls upon their god to grant them power for a short period. The caster's Strength, Dexterity and Constitution are all raised by 1 point for every 3 levels of the caster. A third level caster would have their abilities raised by 1, while a 12th level caster would have their abilities raised by 4.
 
-Although paladins normally cast spells at half their caster level, Draw Upon Holy Might will be cast at a paladin's full caster level.~
+Draw Upon Holy Might is especially effective when cast as a paladin spell. Paladins cast this spell at their full caster level plus 6 (so a 9th-level paladin would have their abilities raised by 5).~
 @31226     = ~Moon Motes~
 @32226     = ~Moon Motes
 (Conjuration) 
@@ -2926,9 +2968,20 @@ Range: Sight of Caster
 Duration: 10 rounds + 5 rounds/level
 Casting Time: 6 
 Area of Effect: Special 
-Saving Throw: None 
+Saving Throw: None
 
 This spell summons one or more creatures of nature who will aid the caster for the duration of the spell.  The type of creatures that come is random.  The creatures summoned are more powerful than creatures summoned by lesser versions of this spell.~
+@31503     = ~Flame Strike~
+@32503     = ~Flame Strike
+(Evocation)
+Level: Clr 5, Drd 4, Rgr 4, Lathander 5
+Range: Sight of Caster
+Duration: Instantaneous 
+Casting Time: 8 
+Area of Effect: 10-foot radius
+Saving Throw: Reflex half
+
+When the caster evokes Flame Strike, a vertical column of fire blasts downward into the area of effect.  All creatures caught in the area of effect take 1d6 damage per caster level (maximum 15d6). Half the damage is fire damage while the other half is holy fire damage, which ignores fire resistance. A successful Reflex save halves both kinds of damage.~
 @31508     = ~Chaotic Commands~
 @32508     = ~Chaotic Commands
 (Enchantment) [Chaos]
@@ -3129,6 +3182,19 @@ Area of Effect: Caster
 Saving Throw: None
 
 This spell creates fifteen small meteors, which can be thrown by the caster. Each meteor bursts into a 1-foot-diameter sphere upon impact and inflicts 1d4+6 points of fire damage (plus Strength bonus). The meteors use the Simple Weapon: Missile proficiency (they count as darts), gain a +5 bonus to attack rolls, and strike as +3 weapons. The wizard may attack four additional times per round while throwing the meteors.~
+@33323     = ~Blink~
+@34323     = ~Blink
+(Transmutation)
+Level: Brd 3, Sor/Wiz 3, Mask 4
+Range: Caster
+Duration: 1 round/level
+Casting Time: 3
+Area of Effect: Caster
+Saving Throw: None
+
+Through this spell, the caster is able to enter a state where they are constantly phasing between the material and ethereal planes. Each second, the caster has a 50% chance to become ethereal and a 50% chance to stop being ethereal.
+
+While ethereal, the caster cannot be affected by attacks or spells from non-ethereal creatures, but the caster's attacks and spells also cannot affect non-ethereal creatures. The caster can still cast spells on themself while ethereal.~
 @33417     = ~Beltyn's Burning Blood~
 @34417     = ~Beltyn's Burning Blood
 (Necromancy)
@@ -3428,6 +3494,32 @@ Area of Effect: 40-foot cube
 Saving Throw: None
 
 This spell releases an extremely strong gust of wind starting at the caster and blowing outward in the target direction. Creatures in the area of effect are blown back, potentially taking damage if they hit a wall or fall into a pit. The damage dealt depends on how fast the creatures were moving when they hit the wall or the ground.~
+@35257     = ~Heat Metal~
+@36257     = ~Heat Metal
+(Transmutation)
+Level: Drd 2
+Range: Sight of Caster
+Duration: Instantaneous
+Casting Time: 6
+Area of Effect: 20-foot radius
+Saving Throw: None
+
+This spell makes all metal in the area of effect extremely hot. Creatures take 2d6 fire damage for each hand they are holding a metal weapon or shield in. In addition, they take 4d6 fire damage if they are wearing chainmail, splint mail, half-plate or full plate armor.
+
+A creature also takes 10d6 fire damage if they are under the effect of Iron Skins, and 20d6 fire damage if they are under the effect of Iron Body or are otherwise made of metal (though note that iron golems are immune to fire).~
+@35258     = ~Make Whole~
+@36258     = ~Make Whole
+(Transmutation)
+Level: Clr 2
+Range: Caster
+Duration: Instantaneous
+Casting Time: 6
+Area of Effect: Items in caster's inventory
+Saving Throw: None
+
+A mending spell of moderate power, Make Whole completely repairs and unrusts all broken equipment in the caster's inventory, restoring them to their former glory. Broken armor typically becomes half-plate, ancient armor typically becomes full plate, and broken weapons are often restored to masterwork quality. If nothing else, the restored equipment is more valuable than it was when broken.
+
+Make Whole cannot repair enormous objects like buildings, walls or airships. For those, more powerful mending spells are needed.~
 @35351     = ~Quiver of Plenty~
 @36351     = ~Quiver of Plenty
 (Conjuration)
@@ -3586,6 +3678,17 @@ Saving Throw: None
 This spell imbues the paladin's weapons with holy power. Any melee weapon the paladin wields for the duration is considered good-aligned and +5 for purposes of overcoming damage reduction, and deals an additional 2d6 magic damage to evil creatures.
 
 Although paladins normally cast spells at half their caster level, Holy Weapon will be cast at a paladin's full caster level.~
+@35557     = ~Mark of Justice~
+@36557     = ~Mark of Justice
+(Necromancy)
+Level: Clr 5, Pal 4
+Range: Touch
+Duration: Permanent until triggered
+Casting Time: 9
+Area of Effect: 1 creature
+Saving Throw: None
+
+In casting this spell, the caster marks the target, who will be automatically punished upon committing a serious crime. The next time the target kills someone, their Mark of Justice is triggered, and the target takes 20d10 magic damage with no saving throw. This spell can only be cast by lawful characters.~
 @35653     = ~Repulsion~
 @36653     = ~Repulsion
 (Abjuration)
@@ -3659,7 +3762,7 @@ Casting Time: 6
 Area of Effect: 20-foot long, 5-foot wide wall
 Saving Throw: None
 
-This spell creates a wall of holy fire, which does not burn the innocent. Any non-good creature that passes through the wall takes 12d6 fire damage with no Saving Throw. Good creatures can pass through the wall unharmed. Only one such wall can be active at a time.~
+This spell creates a wall of holy fire, which does not burn the innocent. Any non-good creature that passes through the wall takes 12d6 holy fire damage (which ignores fire resistance) with no Saving Throw. Good creatures can pass through the wall unharmed. Only one such wall can be active at a time.~
 @35753     = ~Power Word: Heal~
 @36753     = ~Power Word: Heal
 (Divination)
@@ -3995,11 +4098,22 @@ Saving Throw: None
 
 This spell creates an illusory duplicate of the caster. For the duration, the caster controls this image instead of their body, can see through its eyes, and can command it to attack or cast spells. Spells cast this way use up the caster's spell slots.
 
-Importantly, any damage the image takes will not harm the caster when the spell is over, and any status ailments inflicted on the image will not affect the caster. Thus, this spell can be used to send the image into risky situations that would be unwise to send the actual character into. 
+Importantly, any damage the image takes will not harm the caster when the spell is over, and any status ailments inflicted on the image will not affect the caster. Thus, this spell can be used to send the image into risky situations that would be unwise to send the actual character into.
 
 While Project Image is active, the character record screen and HP bar record the stats of the image rather than the caster. When the image takes damage or is killed, the HP bar will go down, but the caster will be fine afterwards as long as their body didn't take damage.
 
 The spell ends early if the image is destroyed (it starts with the same HP as the caster), if it's dispelled, if the caster is killed, or if the party moves to another area.~
+@37359     = ~Glibness~
+@38359     = ~Glibness
+(Enchantment)
+Level: Brd 3
+Range: Caster
+Duration: 10 rounds/level
+Casting Time: 3
+Area of Effect: Caster
+Saving Throw: None
+
+This spell greatly increases the character's ability to fool others. For the duration, the character's Bluff skill is increased by 30.~
 @37451     = ~Teleport Field~
 @38451     = ~Teleport Field
 (Transmutation) 
@@ -4185,6 +4299,17 @@ Saving Throw: None
 This spell lets the caster store a spell in a staff, which casts the spell each time it is used to attack a creature. Immediately after casting this spell, the caster should attempt to cast a 1st-level spell that can target a point or a creature other than the caster (or one that gives the caster a weapon to make a touch attack against a creature). Instead of being cast, this spell will be stored in a Spellstaff, which is wielded by the caster.
 
 The Spellstaff has a number of charges equal to the caster's level. Each time the caster attacks with the staff, a charge is used to cast the stored spell on the target of the attack. The stored spell is always cast with a caster level of 10, regardless of the caster's actual level. The staff has a range equal to the range of the spell, deals no physical damage, and automatically hits (unless the stored spell is one like Shocking Grasp that requires an attack roll, in which case the staff requires an attack roll to hit).~
+@37657     = ~Freeze Inanimates~
+@38657     = ~Freeze Inanimates
+(Transmutation)
+Level: Sor/Wiz 6
+Range: Caster
+Duration: 4 rounds
+Casting Time: 6
+Area of Effect: Entire area
+Saving Throw: None
+
+A lesser time manipulation spell, Freeze Inanimates stops time for all inanimate objects that are not being worn or carried by a creature. Any arrow, bolt, bullet, or other projectile that is fired or thrown by a creature during the duration of this spell will freeze in midair immediately, as it is no longer being carried. Magical projectiles are also frozen immediately after being conjured. All creatures can still move and do actions while time is stopped. Items can still be picked up from the ground, as the effects of this spell end for them when they are grasped by a creature. Once the spell ends, any projectile that had been frozen by the spell will resume flying toward its target.~
 @37751     = ~Stygian Ice Storm~
 @38751     = ~Stygian Ice Storm
 (Conjuration)
@@ -4358,7 +4483,7 @@ Range: Sight of Caster
 Duration: Permanent
 Casting Time: 8
 Area of Effect: 1 creature
-Saving Throw: Will negates 
+Saving Throw: Will negates
 
 This spell allows the caster to permanently gain full control of another creature. The target must make a Will saving throw at -4. If it fails, it is dominated by the caster until it dies or the effect is dispelled. Enslave can even affect undead and constructs.~
 @37854     = ~Army of Images~
@@ -4482,6 +4607,19 @@ Area of Effect: 2-foot by 1000-foot jet
 Saving Throw: Reflex half
 
 Upon casting this spell, the caster emits a freezing beam in the direction of the target point. The beam continues past the target point all the way to the end of the area. All creatures in the beam's path take 1d6 cold damage per level (max 25d6), with a Reflex save for half. The beam deals this damage again half a round later.~
+@37865     = ~True Polymorph~
+@38865     = ~True Polymorph
+(Transmutation)
+Level: Brd 7, Sor/Wiz 8
+Range: Sight of Caster
+Duration: Permanent
+Casting Time: 4
+Area of Effect: 1 creature
+Saving Throw: Fortitude negates
+
+Unlike lesser polymorph spells, True Polymorph can turn a creature into an inanimate object. If the target fails a Fortitude saving throw with a -4 penalty, it is transformed into a keg. While in keg form, the target cannot do anything, but their equipment can still be found inside the keg when it is split open. The effect lasts until dispelled.
+
+If True Polymorph is casting on a petrified creature, it will instead duplicate the effects of Stone to Flesh.~
 @37952     = ~Perfect Invisibility~
 @38952     = ~Perfect Invisibility
 (Illusion)
@@ -4615,3 +4753,21 @@ In casting Wish, the caster has two initial choices. The first choice is to dupl
 * Duplicate an epic spell, which will target the caster (there is a separate one-time wish for each spell).
 
 Each one-time wish cannot be chosen more than once by a single character, and a character may make no more than three one-time wishes, no matter how many times they cast Wish.~
+@37963     = ~Soul Bind~
+@38963     = ~Soul Bind
+(Necromancy)
+Level: Clr 9, Sor/Wiz 9
+Range: Touch
+Duration: 3 rounds
+Casting Time: 7
+Area of Effect: 1 creature
+Saving Throw: None
+
+This foul spell should be cast on a living creature that is about to die. If the target dies within 3 rounds, its soul is captured in a gem within the caster's inventory. The gem must be of great value - either a star sapphire, a king's tear, or a rogue stone - and cannot already contain a soul. A creature whose soul is captured this way cannot be resurrected.
+
+Any character who knows the spell Soul Bind (or any fiend, regardless of whether they know the spell) can use a gem with a soul as a consumable item. Doing so shatters the gem and consumes the soul utterly, but gives the character a benefit of their choice:
+
+* Permanently raise one of the character's ability scores by 1 (each ability score cannot be increased by more than 2 this way).
+* Fully restore the charges of a magic item in the character's inventory (items that give permanent bonuses cannot be recharged).
+
+Undead, constructs, summoned creatures, and creatures with less than 13 HD are unaffected by Soul Bind. This spell can only be cast by evil characters.~

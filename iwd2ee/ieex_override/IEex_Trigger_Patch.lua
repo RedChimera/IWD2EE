@@ -8,7 +8,7 @@
 			!call >IEex_GetLuaState
 			!mov_ebx_eax
 
-			; Set IEex_LuaTriggerActorID ;
+			; Set IEex_Lua_ActorID ;
 			!push_[edi+byte] 5C
 			!fild_[esp]
 			!sub_esp_byte 04
@@ -17,7 +17,7 @@
 			!call >_lua_pushnumber
 			!add_esp_byte 0C
 
-			!push_dword ]], {IEex_WriteStringAuto("IEex_LuaTriggerActorID"), 4}, [[
+			!push_dword ]], {IEex_WriteStringAuto("IEex_Lua_ActorID"), 4}, [[
 			!push_ebx
 			!call >_lua_setglobal
 			!add_esp_byte 08

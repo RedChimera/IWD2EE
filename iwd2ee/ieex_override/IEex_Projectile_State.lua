@@ -602,13 +602,21 @@ function EXMETAMA(actionData, creatureData)
 			end)
 		end
 		local casterClass = IEex_ReadByte(creatureData + 0x530, 0x0)
+		local casterDomain = IEex_ReadByte(creatureData + 0x531, 0x0)
 		local casterType = IEex_CasterClassToType[casterClass]
+--[[
+		if casterType == 2 and casterDomain > 0 then
+			casterType = 8
+		end
+--]]
 		local casterTypes = {}
 		if casterType ~= nil then
 			table.insert(casterTypes, casterType)
-			if casterType == 2 then
+
+			if casterType == 2 and casterDomain > 0 then
 				table.insert(casterTypes, 8)
 			end
+
 		end
 		local classSpellLevel = IEex_ReadByte(creatureData + 0x534, 0x0)
 		local newSpellLevel = classSpellLevel + metamagicLevelModifier
@@ -629,12 +637,17 @@ function EXMETAMA(actionData, creatureData)
 									if cType == 1 or cType == 6 then
 										if sorcererCastableCount > 0 then
 											spellAvailable = true
-											ex_can_use_metamagic[sourceID] = {currentSpellRES, classSpellLevel, i, casterClass}
+											ex_can_use_metamagic[sourceID] = {currentSpellRES, classSpellLevel, i, casterClass, casterDomain, false}
+										end
+									elseif cType == 8 then
+										if spell["castableCount"] > 0 then
+											spellAvailable = true
+											ex_can_use_metamagic[sourceID] = {currentSpellRES, classSpellLevel, i, casterClass, casterDomain, true}
 										end
 									else
 										if spell["castableCount"] > 0 then
 											spellAvailable = true
-											ex_can_use_metamagic[sourceID] = {currentSpellRES, classSpellLevel, i, casterClass}
+											ex_can_use_metamagic[sourceID] = {currentSpellRES, classSpellLevel, i, casterClass, casterDomain, false}
 										end
 									end
 								end
@@ -665,7 +678,7 @@ function EXMETAMA(actionData, creatureData)
 					end
 				end)
 				if spellAvailable then
-					ex_can_use_metamagic[sourceID] = {currentSpellRES, classSpellLevel, lowestAvailableExtraSpellLevel, casterClass}
+					ex_can_use_metamagic[sourceID] = {currentSpellRES, classSpellLevel, lowestAvailableExtraSpellLevel, casterClass, casterDomain, false}
 				end
 			end
 			IEex_SetToken("EXMMLEVEL", IEex_FetchString(ex_spelllevelstrrefs[newSpellLevel]))
@@ -704,13 +717,26 @@ function EXMETAMA(actionData, creatureData)
 		if castCounter ~= -1 then
 			ex_quicken_spell[sourceID] = nil
 		end
-
+--[[
 		IEex_ApplyEffectToActor(sourceID, {
 ["opcode"] = 189,
 ["target"] = 2,
 ["timing"] = 0,
 ["duration"] = 1,
 ["parameter1"] = 30,
+["parent_resource"] = "USMM007D",
+["source_target"] = sourceID,
+["source_id"] = sourceID,
+})
+--]]
+		IEex_ApplyEffectToActor(sourceID, {
+["opcode"] = 288,
+["target"] = 2,
+["timing"] = 0,
+["duration"] = 6,
+["parameter1"] = 30,
+["parameter2"] = 193,
+["special"] = 2,
 ["parent_resource"] = "USMM007D",
 ["source_target"] = sourceID,
 ["source_id"] = sourceID,
@@ -746,6 +772,7 @@ function EXMETAMA(actionData, creatureData)
 })
 	end
 	if not spellAvailable then
+		ex_metamagic_in_use[sourceID] = nil
 		ex_can_use_metamagic[sourceID] = nil
 	end
 end
@@ -772,6 +799,8 @@ function EXMETALV(effectData, creatureData)
 	local newSpellLevel = ex_can_use_metamagic[targetID][3]
 	if originalSpellLevel == newSpellLevel then return end
 	local casterClass = ex_can_use_metamagic[targetID][4]
+	local casterDomain = ex_can_use_metamagic[targetID][5]
+	local useDomainSlot = ex_can_use_metamagic[targetID][6]
 	local savingthrow = 0
 	IEex_IterateActorEffects(targetID, function(eData)
 		local theopcode = IEex_ReadDword(eData + 0x10)
@@ -813,7 +842,23 @@ function EXMETALV(effectData, creatureData)
 ["source_id"] = targetID,
 })
 	end
-	IEex_ApplyEffectToActor(targetID, {
+	if casterDomain > 0 then
+		IEex_ApplyEffectToActor(targetID, {
+["opcode"] = 500,
+["target"] = 2,
+["timing"] = 0,
+["parameter1"] = 1,
+["parameter2"] = originalSpellLevel,
+["special"] = originalSpellLevel,
+["savingthrow"] = 0x2800000,
+["resource"] = "EXMODMEM",
+["vvcresource"] = currentSpellRES,
+["casterlvl"] = 1,
+["source_target"] = targetID,
+["source_id"] = targetID,
+})
+	else
+		IEex_ApplyEffectToActor(targetID, {
 ["opcode"] = 500,
 ["target"] = 2,
 ["timing"] = 0,
@@ -823,12 +868,28 @@ function EXMETALV(effectData, creatureData)
 ["savingthrow"] = 0x2000000,
 ["resource"] = "EXMODMEM",
 ["vvcresource"] = currentSpellRES,
-["casterlvl"] = 1 + casterClass * 0x100,
+["casterlvl"] = 1 + casterClass * 0x100 + casterDomain * 0x10000,
 ["source_target"] = targetID,
 ["source_id"] = targetID,
 })
+	end
 	if not foundExtraMetamagicSlot and newSpellLevel <= 9 then
-		IEex_ApplyEffectToActor(targetID, {
+		if useDomainSlot then
+			IEex_ApplyEffectToActor(targetID, {
+["opcode"] = 500,
+["target"] = 2,
+["timing"] = 0,
+["parameter1"] = -1,
+["parameter2"] = newSpellLevel,
+["special"] = newSpellLevel,
+["savingthrow"] = 0x800000,
+["resource"] = "EXMODMEM",
+["casterlvl"] = 1,
+["source_target"] = targetID,
+["source_id"] = targetID,
+})
+		else
+			IEex_ApplyEffectToActor(targetID, {
 ["opcode"] = 500,
 ["target"] = 2,
 ["timing"] = 0,
@@ -837,10 +898,11 @@ function EXMETALV(effectData, creatureData)
 ["special"] = newSpellLevel,
 ["savingthrow"] = 0,
 ["resource"] = "EXMODMEM",
-["casterlvl"] = 1 + casterClass * 0x100,
+["casterlvl"] = 1 + casterClass * 0x100 + casterDomain * 0x10000,
 ["source_target"] = targetID,
 ["source_id"] = targetID,
 })
+		end
 	end
 end
 
@@ -969,6 +1031,7 @@ IEex_MutatorOpcodeFunctions["EXMASSPL"] = {
 			    		ex_mass_spell[actorID] = nil
 			    	end
 					if source ~= 4 and source < 11 and ex_mass_spell[actorID] ~= nil then
+						ex_projectile_flags[projectileData]["Metamagic"] = bit.bor(ex_projectile_flags[projectileData]["Metamagic"], 0x400000)
 						return 94
 					end
 				else

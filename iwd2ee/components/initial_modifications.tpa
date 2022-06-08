@@ -26,6 +26,7 @@ STRING_SET_EVALUATE 2944 ~<EXHPSTATE2>~
 STRING_SET_EVALUATE 2945 ~<EXHPSTATE3>~
 STRING_SET_EVALUATE 2946 ~<EXHPSTATE4>~
 STRING_SET_EVALUATE 2947 ~<EXHPSTATE5>~
+STRING_SET_EVALUATE 25024 ~<EXDAMFIR>~
 
 COPY_EXISTING ~IEex_TRA.lua~ ~override~
 	SPRINT ex_str_925 @925
@@ -42,10 +43,16 @@ COPY_EXISTING ~IEex_TRA.lua~ ~override~
 	REPLACE_TEXTUALLY ~ex_str_almost_dead *=.*~ ~ex_str_almost_dead = "%ex_str_almost_dead%"~
 	ex_tra_5000 = RESOLVE_STR_REF(@5000)
 	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_tra_5000 *=.*~ ~ex_tra_5000 = %ex_tra_5000%~
+	ex_tra_55381 = RESOLVE_STR_REF(@55381)
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_tra_55381 *=.*~ ~ex_tra_55381 = %ex_tra_55381%~
 	ex_tra_55382 = RESOLVE_STR_REF(@55382)
 	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_tra_55382 *=.*~ ~ex_tra_55382 = %ex_tra_55382%~
 	ex_tra_55385 = RESOLVE_STR_REF(@55385)
 	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_tra_55385 *=.*~ ~ex_tra_55385 = %ex_tra_55385%~
+	ex_tra_55386 = RESOLVE_STR_REF(@55386)
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_tra_55386 *=.*~ ~ex_tra_55386 = %ex_tra_55386%~
+	ex_tra_55387 = RESOLVE_STR_REF(@55387)
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_tra_55387 *=.*~ ~ex_tra_55387 = %ex_tra_55387%~
 	ex_tra_55395 = RESOLVE_STR_REF(@55395)
 	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_tra_55395 *=.*~ ~ex_tra_55395 = %ex_tra_55395%~
 	ex_tra_55460 = RESOLVE_STR_REF(@55460)
@@ -602,6 +609,22 @@ COPY_EXISTING ~AR6200.are~ ~override~
 	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR actor_name=~Saablic_Tan~ script_special3=~USSAABL1~ END
 	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR actor_name=~Wanmok~ script_special3=~USSAABL1~ END
 
+COPY_EXISTING ~30GOBKRU.dlg~ ~override~
+	DECOMPILE_AND_PATCH BEGIN
+		REPLACE_TEXTUALLY CASE_INSENSITIVE ~\"Krunbars_Bracers_Quest\",\"GLOBAL\",2)~ ~"Krunbars_Bracers_Quest","GLOBAL",0)
+Or(2)
+	Global("Krunbars_Bracers_Quest","GLOBAL",2)
+	PartyHasItem("00BracTB")~
+	END
+
+COPY_EXISTING ~30YQUOG.dlg~ ~override~
+	DECOMPILE_AND_PATCH BEGIN
+		REPLACE_TEXTUALLY CASE_INSENSITIVE ~Global(\"30Yquog_Quest\",\"GLOBAL\",2)~ ~GlobalGT("30Yquog_Quest","GLOBAL",0)
+Or(2)
+	Global("30Yquog_Quest","GLOBAL",2)
+	PartyHasItem("30YqMes")~
+	END
+
 COPY_EXISTING ~41ORIA.itm~ ~override~
 	LPF ADD_ITEM_EQEFFECT INT_VAR opcode=502 target=1 timing=2 parameter1=(0 - 1) savingthrow=0x30000 STR_VAR resource=~MERESCON~ END
 
@@ -725,6 +748,24 @@ REPLACE_TEXTUALLY CASE_INSENSITIVE EXACT_MATCH ~PartyHasItem("60Stele5")
   PartyHasItem("60STELE5")~
 END
 
+COPY_EXISTING_REGEXP ~.*\.bcs~ override
+	REPLACE_TEXTUALLY CASE_SENSITIVE ~TR[^0-9]*86[^T]*TR~ ~TR
+16633 0 0 0 0 "return IEex_WasJustDisarmed()" "" OB
+0 0 0 0 0 0 0 0 0 0 0 0 0 [-1.-1.-1.-1] "" 0 0 OB
+TR~
+	REPLACE_TEXTUALLY CASE_SENSITIVE ~TR[^0-9]*87[^T]*TR~ ~TR
+16633 0 0 0 0 "return IEex_WasJustUnlocked()" "" OB
+0 0 0 0 0 0 0 0 0 0 0 0 0 [-1.-1.-1.-1] "" 0 0 OB
+TR~
+	BUT_ONLY_IF_IT_CHANGES
+/*
+COPY_EXISTING_REGEXP ~.*\.bcs~ override
+	DECOMPILE_AND_PATCH BEGIN
+		REPLACE_TEXTUALLY CASE_SENSITIVE ~Disarmed(.*~ ~IEex_LuaTrigger("return IEex_WasJustDisarmed()")~
+		REPLACE_TEXTUALLY CASE_SENSITIVE ~Unlocked(.*~ ~IEex_LuaTrigger("return IEex_WasJustUnlocked()")~
+	END
+	BUT_ONLY_IF_IT_CHANGES
+*/
 COPY_EXISTING ~63CEDRIN.cre~ override
 	LPF	IWD2_REMOVE_CRE_ITEM STR_VAR item=~00AMUL14~ END
 

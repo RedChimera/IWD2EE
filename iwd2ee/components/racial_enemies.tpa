@@ -23,7 +23,7 @@ COPY_EXISTING_REGEXP ~.+\.cre~ ~override~
         WRITE_BYTE race 174
     END ELSE PATCH_IF therace = 164 BEGIN // turn demons and devils into hook horrors
         WRITE_BYTE race 181
-    END ELSE PATCH_IF therace = 156 OR therace = 190 OR therace = 215 BEGIN // turn constructs into orcs
+    END ELSE PATCH_IF therace = 156 OR therace = 215 BEGIN // turn constructs into orcs
         WRITE_BYTE race 160
     END ELSE PATCH_IF therace = 152 OR therace = 175 BEGIN // turn elementals into salamanders
         WRITE_BYTE race 161
@@ -262,6 +262,9 @@ ACTION_IF (MOD_IS_INSTALLED ~iwd2ee.tp2~ ~4~) BEGIN //If Item Revisions is insta
 			LPF ALTER_EFFECT INT_VAR check_headers=1 check_globals=0 match_opcode=177 match_parameter1=1 match_parameter2=4 parameter1=191 END
 	COPY_EXISTING ~USSWDTWD.eff~ ~override~ ~USSWDTWH.eff~ ~override~
 		WRITE_LONG 0x1c 191
+
+	COPY_EXISTING ~USAX1HK2.eff~ ~override~ ~USHFAXK2.eff~ ~override~
+		WRITE_LONG 0x1c 160
 END
 
 COPY_EXISTING ~SPPR113.spl~ ~override~

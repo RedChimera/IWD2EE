@@ -217,7 +217,7 @@ DestroyItem("USHFPN04")~
 	LPF CONVERT_DLG_TO_IWD2_FORMAT END
 
 END
-
+/*
 COPY_EXISTING ~LISTINNT.2da~ ~override~
 	COUNT_2DA_ROWS 2 numrows
 	READ_2DA_ENTRY (numrows - 1) 0 2 lastindex
@@ -226,6 +226,7 @@ COPY_EXISTING ~LISTINNT.2da~ ~override~
 	numrows += 1
 	lastindex += 1
 	INSERT_2DA_ROW numrows 2 ~%lastindex% USXHAAT~
+*/
 /*
 COPY_EXISTING ~LISTSPLL.2da~ ~override~
 	COUNT_2DA_ROWS 9 numrows
@@ -632,9 +633,9 @@ COPY_EXISTING ~41XHAAN.cre~ ~override~
 	WRITE_BYTE fortitudesave 5
 	WRITE_BYTE reflexsave 4
 	WRITE_BYTE willsave 4
-	WRITE_BYTE strength 16
+	WRITE_BYTE strength 20
 	WRITE_BYTE dexterity 15
-	WRITE_BYTE constitution 14
+	WRITE_BYTE constitution 17
 	WRITE_BYTE intelligence 14
 	WRITE_BYTE wisdom 13
 	WRITE_BYTE charisma 17

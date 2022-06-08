@@ -252,6 +252,82 @@ fj_vertex_1=(730 + (1143 << 16))
 fj_vertex_2=(1010 + (1182 << 16))
 fj_vertex_3=(977 + (1137 << 16))
 STR_VAR fj_structure_type=~region~ fj_name=~US_Trap_4~ fj_reg_script=~~ END
+
+COPY_EXISTING ~AR3001.are~ ~override~
+	LPF fj_are_structure INT_VAR
+fj_type=0
+fj_flags=0x8
+fj_trap_detect=1050
+fj_trap_remove=50
+fj_trap_active=1
+fj_cursor_idx=38
+fj_box_left=3360
+fj_box_right=3520
+fj_box_top=1534
+fj_box_bottom=1667
+fj_loc_x=3554
+fj_loc_y=1120
+fj_vertex_0=(3375 + (1534 << 16))
+fj_vertex_1=(3360 + (1557 << 16))
+fj_vertex_2=(3503 + (1667 << 16))
+fj_vertex_3=(3520 + (1645 << 16))
+STR_VAR fj_structure_type=~region~ fj_name=~US_Trap_1~ fj_reg_script=~~ END
+	LPF fj_are_structure INT_VAR
+fj_type=0
+fj_flags=0x8
+fj_trap_detect=1045
+fj_trap_remove=60
+fj_trap_active=1
+fj_cursor_idx=38
+fj_box_left=235
+fj_box_right=1003
+fj_box_top=611
+fj_box_bottom=772
+fj_loc_x=663
+fj_loc_y=700
+fj_vertex_0=(235 + (690 << 16))
+fj_vertex_1=(286 + (772 << 16))
+fj_vertex_2=(963 + (698 << 16))
+fj_vertex_3=(1003 + (611 << 16))
+STR_VAR fj_structure_type=~region~ fj_name=~US_Trap_2~ fj_reg_script=~~ END
+
+COPY_EXISTING ~AR3100.are~ ~override~
+	LPF fj_are_structure INT_VAR
+fj_type=0
+fj_flags=0x8
+fj_trap_detect=1040
+fj_trap_remove=50
+fj_trap_active=1
+fj_cursor_idx=38
+fj_box_left=484
+fj_box_right=596
+fj_box_top=883
+fj_box_bottom=932
+fj_loc_x=668
+fj_loc_y=636
+fj_vertex_0=(494 + (883 << 16))
+fj_vertex_1=(484 + (892 << 16))
+fj_vertex_2=(594 + (932 << 16))
+fj_vertex_3=(596 + (920 << 16))
+STR_VAR fj_structure_type=~region~ fj_name=~US_Trap_1~ fj_reg_script=~~ END
+	LPF fj_are_structure INT_VAR
+fj_type=0
+fj_flags=0x8
+fj_trap_detect=1040
+fj_trap_remove=50
+fj_trap_active=1
+fj_cursor_idx=38
+fj_box_left=1663
+fj_box_right=1776
+fj_box_top=894
+fj_box_bottom=939
+fj_loc_x=1826
+fj_loc_y=696
+fj_vertex_0=(1671 + (894 << 16))
+fj_vertex_1=(1663 + (901 << 16))
+fj_vertex_2=(1773 + (939 << 16))
+fj_vertex_3=(1776 + (930 << 16))
+STR_VAR fj_structure_type=~region~ fj_name=~US_Trap_2~ fj_reg_script=~~ END
 /*
 COPY_EXISTING ~AR3101.are~ ~override~
 	LPF ALTER_AREA_REGION_IWD2 INT_VAR type=2 cursor=28 all_flags=0x204 activate_x=2137 activate_y=586 info_point=(0 - 1) STR_VAR region_name=~Grate~ destination_area=~AR3101~ entrance_name=~USGR3101~ END

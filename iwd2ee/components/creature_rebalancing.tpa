@@ -376,10 +376,13 @@ COPY_EXISTING ~usiw851.spl~ ~override~
 
 COPY_EXISTING_REGEXP ~[123].*\.cre~ ~override~ ~00GOB.*\.cre~ ~override~  ~00HAGOB\.cre~ ~override~ ~00HOB.*\.cre~ ~override~ ~00ORC.*\.cre~ ~override~ ~00OROBLA\.cre~ ~override~
 	WRITE_BYTE luck 255 //-1
-
+	READ_LONG feats1 ulgiash
+	ulgiash&=0xBFFFFFFF
+	WRITE_LONG feats1 ulgiash
+/*
 COPY_EXISTING ~20EMMA.cre~ ~override~ ~20VREK.cre~ ~override~ ~30BEETQ.cre~ ~override~ ~30GOBKRU.cre~ ~override~ ~30GOBMOK.cre~ ~override~ ~30GOBOGR.cre~ ~override~ ~30GOBOV1.cre~ ~override~ ~30GOBVUN.cre~ ~override~ ~30GOBWR2.cre~ ~override~ ~30GOBWR4.cre~ ~override~ ~30GOBWR6.cre~ ~override~ ~30GOBWRC.cre~ ~override~ ~30HOBGUM.cre~ ~override~ ~30ILQUAG.cre~ ~override~ ~30OGRCH.cre~ ~override~ ~30OGRGAR.cre~ ~override~ ~30ORCGOT.cre~ ~override~ ~30ORCTRU.cre~ ~override~ ~30OROCA.cre~ ~override~ ~30OROPUS.cre~ ~override~ ~30OROTAS.cre~ ~override~ ~30OTY.cre~ ~override~ ~30SPIWOQ.cre~ ~override~ ~30TEQUAG.cre~ ~override~ ~30YQUOGG.cre~ ~override~ ~31BUGGUT.cre~ ~override~ ~31BUGJAI.cre~ ~override~ ~31GOBHC.cre~ ~override~ ~31GOBOV1.cre~ ~override~ ~31HOBCH.cre~ ~override~ ~31HOBSER.cre~ ~override~ ~31ORCHC.cre~ ~override~ ~31ORCHSB.cre~ ~override~ ~31ORCHSH.cre~ ~override~ ~31ORCOLD.cre~ ~override~ ~31OROCH.cre~ ~override~ ~31OROCO.cre~ ~override~
 	WRITE_BYTE luck 0
-
+*/
 // Giving elementals the correct names
 
 COPY_EXISTING ~00SFIR16.cre~ ~override~ ~41SFIR16.cre~ ~override~
@@ -1641,6 +1644,14 @@ COPY_EXISTING ~41RENGAR.cre~ ~override/USBIKNIG.cre~
 	LPF	IWD2_REMOVE_CRE_ITEM STR_VAR item=~SPWI423Z~ END
 	LPF	IWD2_ADD_CRE_ITEM STR_VAR item=~USCWSLBK~ slot=~weapon1~ mode=~replace~ END
 
+COPY_EXISTING ~41SHADOW.cre~ ~override~
+	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelfighter=6 STR_VAR updatehp=~max~ END
+	WRITE_BYTE proficiencysmallblade 3
+	WRITE_BYTE enchantmentlevel 1
+	READ_LONG feats2 ulgiash
+	ulgiash|=0x2000000
+	WRITE_LONG feats2 ulgiash
+
 COPY_EXISTING ~50TROSS.cre~ ~override~ ~50TROSSH.cre~ ~override~
 	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newleveldruid=8 END
 	WRITE_BYTE wisdom 14
@@ -2172,6 +2183,76 @@ COPY_EXISTING ~51ZAMA.cre~ ~override~ ~52ZAMA.cre~ ~override~
 	PATCH_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~2~ BEGIN
 		LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~cleric~ resource=~SPWI910~ END
 	END
+
+COPY_EXISTING ~51HHR.cre~ ~override~ ~51HHRH.cre~ ~override~
+	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelfighter=7 STR_VAR updatehp=~max~ END
+	WRITE_SHORT armorclass 19
+	WRITE_BYTE strength 18
+	WRITE_BYTE dexterity 15
+	WRITE_BYTE constitution 17
+	WRITE_BYTE proficiencysmallblade 2
+	READ_LONG feats1 ulgiash
+	ulgiash|=0x2000002
+	WRITE_LONG feats1 ulgiash
+	READ_LONG feats2 ulgiash
+	ulgiash|=0x2000000
+	WRITE_LONG feats2 ulgiash
+	READ_LONG feats3 ulgiash
+	ulgiash|=0x40
+	WRITE_LONG feats3 ulgiash
+	PATCH_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~0~ BEGIN
+		LPF IWD2_ADD_CRE_EFFECT INT_VAR opcode=187 target=0 timing=1 parameter1=1 STR_VAR effvar= EVAL ~ME_GRAPPLE~ END
+	END
+	LPF	IWD2_ADD_CRE_ITEM INT_VAR equip=1 STR_VAR item=~USCWHOH1~ slot=~weapon1~ mode=~replace~ END
+
+COPY_EXISTING ~51HHRGH.cre~ ~override~ ~51HHRGU.cre~ ~override~
+	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelfighter=9 STR_VAR updatehp=~max~ END
+	WRITE_SHORT armorclass 23
+	WRITE_BYTE strength 25
+	WRITE_BYTE dexterity 15
+	WRITE_BYTE constitution 18
+	WRITE_BYTE wisdom 11
+	WRITE_BYTE proficiencysmallblade 3
+	READ_LONG feats1 ulgiash
+	ulgiash|=0x2000002
+	WRITE_LONG feats1 ulgiash
+	READ_LONG feats2 ulgiash
+	ulgiash|=0x2000000
+	WRITE_LONG feats2 ulgiash
+	READ_LONG feats3 ulgiash
+	ulgiash|=0x40
+	WRITE_LONG feats3 ulgiash
+	PATCH_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~0~ BEGIN
+		LPF IWD2_ADD_CRE_EFFECT INT_VAR opcode=187 target=0 timing=1 parameter1=1 STR_VAR effvar= EVAL ~ME_GRAPPLE~ END
+	END
+	LPF	IWD2_ADD_CRE_ITEM INT_VAR equip=1 STR_VAR item=~USCWHOH2~ slot=~weapon1~ mode=~replace~ END
+
+COPY_EXISTING ~51HHRMA.cre~ ~override~
+	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelfighter=13 STR_VAR updatehp=~max~ END
+	WRITE_SHORT armorclass 25
+	WRITE_BYTE strength 27
+	WRITE_BYTE dexterity 19
+	WRITE_BYTE constitution 24
+	WRITE_BYTE intelligence 13
+	WRITE_BYTE wisdom 16
+	WRITE_BYTE proficiencysmallblade 3
+	READ_LONG feats1 ulgiash
+	ulgiash|=0x2090002
+	WRITE_LONG feats1 ulgiash
+	READ_LONG feats2 ulgiash
+	ulgiash|=0x2000000
+	WRITE_LONG feats2 ulgiash
+	READ_LONG feats3 ulgiash
+	ulgiash|=0x40
+	WRITE_LONG feats3 ulgiash
+	PATCH_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~0~ BEGIN
+		LPF IWD2_ADD_CRE_EFFECT INT_VAR opcode=187 target=0 timing=1 parameter1=1 STR_VAR effvar= EVAL ~ME_GRAPPLE~ END
+	LPF ADD_CRE_EXTENDED_FEAT INT_VAR points=1 STR_VAR name=~ME_MOBILITY~ END
+	LPF ADD_CRE_EXTENDED_FEAT INT_VAR points=1 STR_VAR name=~ME_SPRING_ATTACK~ END
+	LPF ADD_CRE_EXTENDED_FEAT INT_VAR points=1 STR_VAR name=~ME_WHIRLWIND_ATTACK~ END
+	LPF ADD_CRE_EXTENDED_FEAT INT_VAR points=1 STR_VAR name=~ME_IMPROVED_TWO_WEAPON_FIGHTING~ END
+	END
+	LPF	IWD2_ADD_CRE_ITEM INT_VAR equip=1 STR_VAR item=~USCWHOH2~ slot=~weapon1~ mode=~replace~ END
 
 COPY_EXISTING ~52ARUMA.cre~ ~override~
 	LPF ADD_CRE_EXTENDED_FEAT INT_VAR points=5 STR_VAR name=~ME_IMPROVED_UNARMED_ABILITIES~ END
@@ -5439,6 +5520,9 @@ COPY_EXISTING ~AR5001.are~ ~override~
 
 COPY_EXISTING ~AR5004.are~ ~override~
 	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR match_cre_file=~50TROSS~ script_special2=~USSTROLS~ END
+	LPF ALTER_AREA_ACTOR_IWD2 INT_VAR flag_difficulty_1=0 flag_difficulty_2=0 flag_difficulty_3=0 STR_VAR actor_name=~06_50WYV_02~ END
+	LPF ALTER_AREA_ACTOR_IWD2 INT_VAR flag_difficulty_1=0 flag_difficulty_2=0 flag_difficulty_3=0 STR_VAR actor_name=~06_50WYVH_06~ END
+	LPF ALTER_AREA_ACTOR_IWD2 INT_VAR flag_difficulty_1=0 flag_difficulty_2=0 flag_difficulty_3=0 STR_VAR actor_name=~06_50WYVH_08~ END
 
 COPY_EXISTING ~AR5015.are~ ~override~
 	LPF ALTER_AREA_ACTOR_IWD2 INT_VAR flag_difficulty_1=0 flag_difficulty_2=0 flag_difficulty_3=0 STR_VAR actor_name=~02_50TREDA_10~ END

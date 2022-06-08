@@ -2050,7 +2050,7 @@ function IEex_OnCHUInitialized(chuResref)
 		local panel17Memory = IEex_GetPanelFromEngine(worldScreen, 17)
 
 		local control_9_0_Memory = IEex_GetControlFromPanel(panel9Memory, 0)
-
+		
 		local x0, y0, w0, h0 = IEex_GetPanelArea(panel0Memory)
 		local x1, y1, w1, h1 = IEex_GetPanelArea(panel1Memory)
 		local x6, y6, w6, h6 = IEex_GetPanelArea(panel6Memory)
@@ -2396,6 +2396,7 @@ function IEex_Extern_OnUpdateRecordDescription(CScreenCharacter, CGameSprite, CU
 				local wisdomBonus = math.floor((IEex_GetActorStat(targetID, 39) - 10) / 2)
 				local monkACBonusDisabled = false
 				local fixMonkACBonus = true
+				local unfixMonkACBonus = (IEex_ReadByte(creatureData + 0x9D4, 0x0) > 0)
 				IEex_IterateActorEffects(targetID, function(eData)
 					local theopcode = IEex_ReadDword(eData + 0x10)
 					local theparameter1 = IEex_ReadDword(eData + 0x1C)
@@ -2410,7 +2411,24 @@ function IEex_Extern_OnUpdateRecordDescription(CScreenCharacter, CGameSprite, CU
 						end
 					end
 				end)
-				if monkACBonusDisabled and fixMonkACBonus then
+				if not monkACBonusDisabled and unfixMonkACBonus then
+					if string.match(line, monkWisdomBonusString .. ":") then
+						line = string.gsub(line, "%d+", 0)
+					elseif string.match(line, genericString .. ":") then
+						local genericAC = string.match(line, "%d+")
+						if string.match(line, "%-") then
+							genericAC = genericAC * -1
+						end
+						genericAC = genericAC + wisdomBonus
+						if genericAC > 0 then
+							line = string.gsub(line, "." .. "%d+", "+" .. genericAC)
+						elseif genericAC < 0 then
+							line = string.gsub(line, "." .. "%d+", "-" .. math.abs(genericAC))
+						else
+							line = ""
+						end
+					end
+				elseif monkACBonusDisabled and fixMonkACBonus then
 					if string.match(line, monkWisdomBonusString .. ":") then
 						line = string.gsub(line, "0", wisdomBonus)
 					elseif string.match(line, genericString .. ":") then

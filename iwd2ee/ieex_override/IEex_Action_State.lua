@@ -24,17 +24,17 @@ end
 --[[
 
 CAIAction =>
-0x0     short            m_actionID
-0x2     CAIObjectType    m_actorID
-0x3e    CAIObjectType    m_acteeID
-0x7a    CAIObjectType    m_acteeID2
-0xb6    int              m_specificID
-0xba    int              m_specificID2
-0xbe    int              m_specificID3
-0xc2    CString          m_string1
-0xc6    CString          m_string2
-0xca    CPoint           m_dest
-0xd2    uint             m_internalFlags
+0x0     short            m_actionID    
+0x2     CAIObjectType    m_actorID    
+0x3e    CAIObjectType    m_acteeID    
+0x7a    CAIObjectType    m_acteeID2    
+0xb6    int              m_specificID    
+0xba    int              m_specificID2    
+0xbe    int              m_specificID3    
+0xc2    CString          m_string1    
+0xc6    CString          m_string2    
+0xca    CPoint           m_dest    
+0xd2    uint             m_internalFlags    
 
 --]]
 
@@ -272,6 +272,8 @@ function IEex_Extern_StripScriptingStringWhitespace(resultCStringPtr, inCStringP
 	IEex_Call(0x7FCC1A, {}, inCStringPtr, 0x0)
 end
 
+
+
 function IEex_Extern_CGameSprite_SetCurrAction(actionData)
 	IEex_AssertThread(IEex_Thread.Both, true)
 	IEex_Helper_SynchronizedBridgeOperation("IEex_ActionHooks", function()
@@ -285,7 +287,7 @@ function IEex_Extern_CGameSprite_SetCurrAction(actionData)
 	local creatureData = actionData - 0x476
 	local actorID = IEex_GetActorIDShare(creatureData)
 	if creatureData > 0 and bit.band(IEex_ReadDword(creatureData + 0x740), 0x2000000) > 0 and IEex_ReadDword(creatureData + 0x740) > 0 then
-		IEex_DisplayString("Action ID " .. IEex_GetActionID(actionData) .. " from " .. IEex_GetActorName(actorID) .. " - Parameter 1: " .. IEex_GetActionInt1(actionData) .. ", Parameter2: " .. IEex_GetActionInt2(actionData) .. ", Parameter3: " .. IEex_GetActionInt3(actionData))
+		IEex_DisplayString("Action ID " .. IEex_GetActionID(actionData) .. " from " .. IEex_GetActorName(actorID) .. " - Parameter 1: " .. IEex_GetActionInt1(actionData) .. ", Parameter2: " .. IEex_GetActionInt2(actionData) .. ", Parameter3: " .. IEex_GetActionInt3(actionData) .. ", Target: " .. IEex_GetActionObjectID(actionData) .. ", Target X: " .. IEex_GetActionPointX(actionData) .. ", Target Y: " .. IEex_GetActionPointY(actionData))
 	end
 	if IEex_GetActorSpellState(actorID, 250) then
 		local actorActionHookOpcodeList = {}
@@ -297,21 +299,25 @@ function IEex_Extern_CGameSprite_SetCurrAction(actionData)
 			end
 		end)
 		IEex_Helper_SynchronizedBridgeOperation("IEex_OpcodeActionHooks", function()
+			local actorActionHookOpcodeListChecked = {}
 			IEex_Helper_ReadDataFromBridgeNL("IEex_OpcodeActionHooks")
-			local limit = math.floor(#IEex_OpcodeActionHooks / 2)
-			for i = 1, limit, 1 do
-				local originatingEffectData = actorActionHookOpcodeList[IEex_OpcodeActionHooks[i]]
-				if originatingEffectData ~= nil then
-					_G[IEex_OpcodeActionHooks[i]](originatingEffectData, actionData, creatureData)
+			for k, v in ipairs(IEex_OpcodeActionHooks) do
+				local originatingEffectData = actorActionHookOpcodeList[v]
+				if originatingEffectData ~= nil and actorActionHookOpcodeListChecked[v] == nil then
+					actorActionHookOpcodeListChecked[v] = true
+					_G[v](originatingEffectData, actionData, creatureData)
 				end
 			end
 		end)
 	end
 	IEex_Helper_SynchronizedBridgeOperation("IEex_GlobalActionHooks", function()
+		local actorActionHookGlobalListChecked = {}
 		IEex_Helper_ReadDataFromBridgeNL("IEex_GlobalActionHooks")
-		local limit = #IEex_GlobalActionHooks
-		for i = 1, limit, 1 do
-			_G[IEex_GlobalActionHooks[i]](actionData, creatureData)
+		for k, v in ipairs(IEex_GlobalActionHooks) do
+			if actorActionHookGlobalListChecked[v] == nil then
+				actorActionHookGlobalListChecked[v] = true
+				_G[v](actionData, creatureData)
+			end
 		end
 	end)
 end
@@ -336,7 +342,7 @@ function EXAPPLSP(actionData, creatureData)
 					targetID = sourceID
 				end
 				local casterClass = IEex_ReadByte(creatureData + 0x530, 0x0)
-				if casterClass < 0 then
+				if casterClass < 0 then 
 					casterClass = 0
 				end
 				local casterLevel = IEex_GetActorStat(sourceID, 95 + casterClass)

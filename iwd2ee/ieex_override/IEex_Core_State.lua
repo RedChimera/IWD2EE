@@ -220,7 +220,14 @@ function IEex_GetFeatCountFromDerivedStats(stats, featID)
 	IEex_Helper_SynchronizedBridgeOperation("IEex_DerivedStatsData", function()
 		local feats = IEex_Helper_GetBridgeNL("IEex_DerivedStatsData", stats, "feats")
 		local featIndex = IEex_Helper_GetBridgeNL(feats, "feat_index_"..featID)
-		toReturn = featIndex and IEex_Helper_GetBridgeNL(feats, featIndex, "count") or 0
+		toReturn = 0
+		-- For backwards compatibility with old saves, check if the character has the flag for the feat checked
+		if bit.band(IEex_ReadDword(stats - 0x1C4 + math.floor(featID / 32) * 0x4), 2 ^ (featID % 32)) > 0 then
+			toReturn = 1
+		end
+		if featIndex and IEex_Helper_GetBridgeNL(feats, featIndex, "count") > 0 then
+			toReturn = IEex_Helper_GetBridgeNL(feats, featIndex, "count")
+		end
 	end)
 	return toReturn
 end

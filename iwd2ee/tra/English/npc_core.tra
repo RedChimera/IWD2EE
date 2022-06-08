@@ -186,13 +186,6 @@ Weight: 0 lb.~
 @4860     = ~Summon Aocha~
 @4861     = ~Summon Aocha
 
-(Conjuration) 
-Range: Sight of Caster
-Duration: 10 rounds/level
-Casting Time: 5
-Area of Effect: Special 
-Saving Throw: None 
-
 For 10 rounds per level, Zack Boosenburry may call his loyal mount Aocha to battle. Aocha is a big furry spider and is far more sweet and cuddly than one might expect (or want), but in combat, she is no less dangerous than her wild relatives. She is innately immune to web effects and possesses a powerful venom, and will gladly rush to Zack's defense in times of danger.
 
 If she should perish in the line of duty, Zack has a special formula in his pocket that can restore her to normal health, but she still needs 8 hours of rest to recover before Zack may summon her again.
@@ -208,7 +201,9 @@ Saving Throw: Will negates
 
 Stygian Ice Storm is the signature spell of gelugons, though a lesser devil could also cast it upon growing powerful enough. When cast, it summons a storm of hellish ice from Stygia, the fifth layer of the Nine Hells. All creatures in the area of effect take 12d6 cold damage with no save, and must make a Will saving throw or be effectively feebleminded for 7 rounds due to the severe memory loss caused by Stygian ice. The caster is unaffected, as are undead creatures.~
 @4864     = ~Teleport Without Error~
-@4865     = ~~
+@4865     = ~Teleport Without Error
+
+By using this ability, Xhaan teleports to any location in sight. This ability may be used at will.~
 //TRA num range  @5000 to @5299
 
 

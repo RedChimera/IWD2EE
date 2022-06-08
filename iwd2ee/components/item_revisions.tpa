@@ -4405,6 +4405,23 @@ COPY_EXISTING ~USSPER03.itm~ ~override~
 	SAY NAME2 @12883
 	SAY IDENTIFIED_DESC @12884
 
+COPY_EXISTING ~USHELMRC.itm~ ~override~
+	SAY NAME2 @12885
+	SAY IDENTIFIED_DESC @12886
+
+COPY_EXISTING ~USHFHMRC.itm~ ~override~
+	SAY NAME2 @12887
+	SAY IDENTIFIED_DESC @12888
+
+COPY_EXISTING ~USAROWGA.itm~ ~override~
+	SAY NAME2 @12889
+	SAY IDENTIFIED_DESC @12890
+
+COPY_EXISTING ~USPLAT15.itm~ ~override~
+	SAY NAME1 @12891
+	SAY NAME2 @12891
+	SAY UNIDENTIFIED_DESC @12892
+
 //General patch changes
 
 /*
@@ -4729,6 +4746,7 @@ USRTHF56	USHALBIP
 USRTHF57	USROBEWA
 USRTHF58	USSTAFPO
 USRTHF59	USCLUBST
+USRTHF60	USHELMRC
 
 USRHF001	USAROW47
 USRHF002	00AROW06
@@ -4975,6 +4993,7 @@ USRTHF56	USHFHBIP
 USRTHF57	USHFRBWA
 USRTHF58	USHFSFPO
 USRTHF59	USHFCBST
+USRTHF60	USHFHMRC
 
 USRHF001	USAROW57
 USRHF002	USAROW54
@@ -5320,12 +5339,14 @@ COPY_EXISTING ~41ZACK1.sto~ ~override~ ~41ZACK2.sto~ ~override~ ~41ZACK3.sto~ ~o
 	ADD_STORE_ITEM ~USBOOT41~ AFTER ~00RING84~ #1 #1 #1 ~IDENTIFIED~ #1 //Boots of Arcane Evasion
 	ADD_STORE_ITEM ~00WAND13~ AFTER ~00WAND06~ #50 #1 #1 ~IDENTIFIED~ #1 //Wand of Trap Detection
 //	ADD_STORE_ITEM ~USBOOT44~ AFTER ~00BOOT04~ #1 #1 #1 ~IDENTIFIED~ #1 //Boots of Stealthy Speed
+	ADD_STORE_ITEM ~USAROWGA~ AFTER ~00AROW04~ #40 #1 #1 ~IDENTIFIED~ #1 //Goblin Arrows
 	REMOVE_STORE_ITEM ~00WAND06~ ~00AMUL14~
 
 COPY_EXISTING ~50NYM2.sto~ ~override~ //Nym store
 	ADD_STORE_ITEM ~00DAGG93~ AFTER ~00ROBE03~ #1 #1 #1 ~IDENTIFIED~ #1 //Dagger of Speed +1
 	ADD_STORE_ITEM ~USBOOT42~ AFTER ~00BOOT03~ #1 #1 #1 ~IDENTIFIED~ #1 //Gargoyle Boots
 	ADD_STORE_ITEM ~00RTHF57~ AFTER ~00RTHF33~ #1 #1 #1 ~IDENTIFIED~ #1 //Geloise
+	ADD_STORE_ITEM ~00RTHF60~ AFTER ~00RTHF57~ #1 #1 #1 ~IDENTIFIED~ #1 //Rogue's Cowl
 
 COPY_EXISTING ~00BASHS3.sto~ ~override~ //Avarine Decanter genie store
 	WRITE_LONG 0x14 155 //Buying stuff from him costs less money (since he actually has some good stuff now), though his goods are still overpriced
@@ -5440,6 +5461,7 @@ COPY_EXISTING ~53WODE.sto~ ~override~ //Underdark ranged ammunition store
 	ADD_STORE_ITEM ~00RTHF06~ #1 #1 #1 ~IDENTIFIED~ #1 //Delnar's Dart of Dispelling
 	ADD_STORE_ITEM ~00BOWS88~ BEFORE ~00AROW94~ #1 #1 #1 ~IDENTIFIED~ #1 //Shortbow of the Agile +1
 	ADD_STORE_ITEM ~USAROW47~ AFTER ~00AROW99~ #20 #1 #1 ~IDENTIFIED~ #4 //Arrows of Acid +4
+	ADD_STORE_ITEM ~USAROWGA~ AFTER ~00AROW99~ #20 #1 #1 ~IDENTIFIED~ #4 //Goblin Arrows
 	ADD_STORE_ITEM ~USAROW52~ AFTER ~USAROW47~ #1 #1 #1 ~IDENTIFIED~ #4 //Arrows of Detonation
 	ADD_STORE_ITEM ~USBULL48~ AFTER ~00BULL99~ #20 #1 #1 ~IDENTIFIED~ #4 //Greater Vampiric Bullet +3
 
@@ -5484,7 +5506,7 @@ COPY_EXISTING ~60SHEEMI.sto~ ~override~ //Conlan store
 	ADD_STORE_ITEM ~00RTHF65~ AFTER ~00SWDB87~ #1 #1 #1 ~IDENTIFIED~ #1 //Rage of Chaos
 	ADD_STORE_ITEM ~USRTHF39~ AFTER ~00RTHF65~ #1 #1 #1 ~IDENTIFIED~ #1 //Celestial Fury
 	ADD_STORE_ITEM ~00SWDC90~ AFTER ~00SWDC96~ #1 #1 #1 ~IDENTIFIED~ #1 //Scimitar: Blood Trails
-	REMOVE_STORE_ITEM ~00RTHF26~ ~00RTHF54~ ~00RTHF58~ ~00RTHF73~ ~00HALB94~ ~00HALB96~ ~00CLCK03~ ~00ROBE04~ ~00ROBE99~ ~00RING15~ ~00RING22~
+	REMOVE_STORE_ITEM ~00RTHF26~ ~00RTHF54~ ~00RTHF58~ ~00RTHF73~ ~00HALB94~ ~00HALB96~ ~00CLCK03~ ~00ROBE04~ ~00ROBE99~ ~00RING15~ ~00RING22~ ~00DAGG96~
 
 COPY_EXISTING ~61ARCHON.sto~ ~override~ //Dragon's Eye lava ferry store
 	READ_LONG 0x10 ulgiash
@@ -5668,7 +5690,8 @@ COPY_EXISTING ~ar6103.are~ ~override~ //Dragon's Eye third floor
 	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR container=15 charges1=7 charges2=0 charges3=0 single_match=1 STR_VAR old_item=~00RG13~ new_item=~00GEM27~ END
 	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR container=15 charges1=2 charges2=0 charges3=0 single_match=1 STR_VAR old_item=~00RG13~ new_item=~00GEM30~ END
 	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR container=17 charges1=3697 charges2=6410 charges3=0 single_match=1 STR_VAR old_item=~MISC07~ new_item=~MISC07~ END
-	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR container=14 charges1=1 charges2=1 charges3=1 single_match=1 STR_VAR old_item=~50MISC38~ new_item=~00POTN98~ END
+//	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR container=14 charges1=1 charges2=1 charges3=1 single_match=1 STR_VAR old_item=~50MISC38~ new_item=~00POTN98~ END
+	LPF fj_are_structure INT_VAR fj_charge0=1 fj_flags=0x1 fj_con_itm_idx=13 STR_VAR fj_structure_type=~itm~ fj_name=~00POTN98~ END
 	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR container=17 charges1=10 charges2=1 charges3=1 single_match=1 STR_VAR old_item=~00RG13~ new_item=~USAROW54~ END
 	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR charges1=1  charges2=1  charges3=1 single_match=1 STR_VAR old_item=~00RING18~ new_item=~USRT17_V~ END
 
@@ -5864,50 +5887,45 @@ COPY_EXISTING ~30yquog.dlg~ ~override~ //Yquog dialogue
 	END
 
 COPY_EXISTING ~50nym.dlg~ ~override~ //Nym dialogue
-	DECOMPILE_DLG_TO_D
-	REPLACE_TEXTUALLY CASE_INSENSITIVE ~StartStore(\"50Nym\"~ ~StartStore("50Nym2"~
-	COMPILE_D_TO_DLG
-	LPF CONVERT_DLG_TO_IWD2_FORMAT END
+	DECOMPILE_AND_PATCH BEGIN
+		REPLACE_TEXTUALLY CASE_INSENSITIVE ~StartStore(\"50Nym\"~ ~StartStore("50Nym2"~
+	END
 
 COPY_EXISTING ~51barud.dlg~ ~override~ //Barud Barzam (duergar leader) dialogue
-	DECOMPILE_DLG_TO_D
-	REPLACE_TEXTUALLY CASE_INSENSITIVE ~See(\[ENEMY\], ?FALSE)~ ~See([ENEMY],0)~
-	REPLACE_TEXTUALLY CASE_INSENSITIVE ~GiveItemCreate(\"Misc07\", ?Protagonist ?, ?326, ?0, ?0)~ ~GiveItemCreate("Misc07",Protagonist,6000,0,0)~
-	REPLACE_TEXTUALLY CASE_INSENSITIVE ~GiveItemCreate(\"00Gem20\", ?Protagonist ?, ?3, ?0, ?0)~ ~GiveItemCreate("00Gem26",Protagonist,5,0,0)~
-	REPLACE_TEXTUALLY CASE_INSENSITIVE ~GiveItemCreate(\"00Gem20\", ?Protagonist ?, ?4, ?0, ?0)~ ~GiveItemCreate("00Gem26",Protagonist,10,0,0)~
-	REPLACE_TEXTUALLY CASE_INSENSITIVE ~GiveItemCreate(\"Misc07\", ?Protagonist ?, ?298, ?0, ?0)~ ~GiveItemCreate("Misc07",Protagonist,12000,0,0)~
-	REPLACE_TEXTUALLY CASE_INSENSITIVE ~GiveItemCreate(\"51Plat10\", ?Protagonist ?, ?0, ?0, ?0)~ ~GiveItemCreate("USRTHF40",Protagonist,0,0,0)~
-	COMPILE_D_TO_DLG
-	LPF CONVERT_DLG_TO_IWD2_FORMAT END
+	DECOMPILE_AND_PATCH BEGIN
+		REPLACE_TEXTUALLY CASE_INSENSITIVE ~See(\[ENEMY\], ?FALSE)~ ~See([ENEMY],0)~
+		REPLACE_TEXTUALLY CASE_INSENSITIVE ~GiveItemCreate(\"Misc07\", ?Protagonist ?, ?326, ?0, ?0)~ ~GiveItemCreate("Misc07",Protagonist,6000,0,0)~
+		REPLACE_TEXTUALLY CASE_INSENSITIVE ~GiveItemCreate(\"00Gem20\", ?Protagonist ?, ?3, ?0, ?0)~ ~GiveItemCreate("00Gem26",Protagonist,5,0,0)~
+		REPLACE_TEXTUALLY CASE_INSENSITIVE ~GiveItemCreate(\"00Gem20\", ?Protagonist ?, ?4, ?0, ?0)~ ~GiveItemCreate("00Gem26",Protagonist,10,0,0)~
+		REPLACE_TEXTUALLY CASE_INSENSITIVE ~GiveItemCreate(\"Misc07\", ?Protagonist ?, ?298, ?0, ?0)~ ~GiveItemCreate("Misc07",Protagonist,12000,0,0)~
+		REPLACE_TEXTUALLY CASE_INSENSITIVE ~GiveItemCreate(\"51Plat10\", ?Protagonist ?, ?0, ?0, ?0)~ ~GiveItemCreate("USRTHF40",Protagonist,0,0,0)~
+	END
 
 STRING_SET_EVALUATE 9254 @12900
 
 COPY_EXISTING ~53ginafa.dlg~ ~override~ //Ginafae dialogue
 	REPLACE_TEXTUALLY CASE_INSENSITIVE ~53ClckHD~ ~USRTHF06~
 	REPLACE_TEXTUALLY CASE_INSENSITIVE ~53AmulHD~ ~USRTHF07~
-	LPF CONVERT_DLG_TO_IWD2_FORMAT END
 
 COPY_EXISTING ~53oincha.dlg~ ~override~
-	DECOMPILE_DLG_TO_D
-	REPLACE_TEXTUALLY CASE_INSENSITIVE ~PartyHasItem(\"53AMULBS\")~ ~Or(2)
-	PartyHasItem("53AMULBS")
-	PartyHasItem("USHFAMBS")~
-	REPLACE_TEXTUALLY CASE_INSENSITIVE ~TakePartyItem(\"53AMULBS\")~ ~TakePartyItem("53AMULBS")
-TakePartyItem("USHFAMBS")~
-	REPLACE_TEXTUALLY CASE_INSENSITIVE ~GiveItem(\"11BeltMK\", ?Protagonist)~ ~GiveItem("11BeltMK", Protagonist)
-GiveItem("USHFBTMK", Protagonist)~
-	COMPILE_D_TO_DLG
-	LPF CONVERT_DLG_TO_IWD2_FORMAT END
+	DECOMPILE_AND_PATCH BEGIN
+		REPLACE_TEXTUALLY CASE_INSENSITIVE ~PartyHasItem(\"53AMULBS\")~ ~Or(2)
+		PartyHasItem("53AMULBS")
+		PartyHasItem("USHFAMBS")~
+		REPLACE_TEXTUALLY CASE_INSENSITIVE ~TakePartyItem(\"53AMULBS\")~ ~TakePartyItem("53AMULBS")
+	TakePartyItem("USHFAMBS")~
+		REPLACE_TEXTUALLY CASE_INSENSITIVE ~GiveItem(\"11BeltMK\", ?Protagonist)~ ~GiveItem("11BeltMK", Protagonist)
+	GiveItem("USHFBTMK", Protagonist)~
+	END
 
 COPY_EXISTING ~00bahsh.dlg~ ~override~ //Avarine Decanter genie dialogue
 	REPLACE_TEXTUALLY CASE_INSENSITIVE ~StartStore(\"00Bashs1\"~ ~StartStore("00Bashs3"~
 	REPLACE_TEXTUALLY CASE_INSENSITIVE ~StartStore(\"00Bashs2\"~ ~StartStore("00Bashs3"~
 
 COPY_EXISTING ~60conla2.dlg~ ~override~ //Conlan dialogue
-	DECOMPILE_DLG_TO_D
-	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ChangeStoreMarkup(\"60Sheemi\", 110, 90, 20)~ ~ChangeStoreMarkup("60Sheemi",110,60,20)~
-	COMPILE_D_TO_DLG
-	LPF CONVERT_DLG_TO_IWD2_FORMAT END
+	DECOMPILE_AND_PATCH BEGIN
+		REPLACE_TEXTUALLY CASE_INSENSITIVE ~ChangeStoreMarkup(\"60Sheemi\", 110, 90, 20)~ ~ChangeStoreMarkup("60Sheemi",110,60,20)~
+	END
 
 COPY_EXISTING ~60jerms2.dlg~ ~override~ //Jermsy dialogue
 	REPLACE_TEXTUALLY CASE_INSENSITIVE ~00RTHF51~ ~00RTHF54~
@@ -5973,7 +5991,6 @@ TakePartyItemNum("USHFPN04",1)~
 		REPLACE_TEXTUALLY CASE_INSENSITIVE ~DestroyItem(\"00Potn04\")~ ~DestroyItem("00Potn04")
 DestroyItem("USHFPN04")~
 	END
-	LPF CONVERT_DLG_TO_IWD2_FORMAT END
 
 COPY_EXISTING ~11VALIN.dlg~ ~override~
 	DECOMPILE_AND_PATCH BEGIN
@@ -5983,7 +6000,6 @@ COPY_EXISTING ~11VALIN.dlg~ ~override~
 		REPLACE_TEXTUALLY CASE_INSENSITIVE ~TakePartyItemNum(\"00Potn55\", ?1)~ ~TakePartyItemNum("00Potn55",1)
 TakePartyItemNum("00HFPN55",1)~
 	END
-	LPF CONVERT_DLG_TO_IWD2_FORMAT END
 
 COPY_EXISTING ~12NILES.dlg~ ~override~
 	DECOMPILE_AND_PATCH BEGIN
@@ -5991,35 +6007,33 @@ COPY_EXISTING ~12NILES.dlg~ ~override~
 	PartyHasItem("00POTN55")
 	PartyHasItem("00HFPN55")~
 	END
-	LPF CONVERT_DLG_TO_IWD2_FORMAT END
 
 /*
 COPY_EXISTING ~20EMMA.dlg~ ~override~ ~20NEWEMM.dlg~ ~override~
 */
 
 COPY_EXISTING ~30ENNELI.dlg~ ~override~
-	DECOMPILE_DLG_TO_D
-	REPLACE_TEXTUALLY CASE_INSENSITIVE ~GiveItemCreate(\"RMIW_02\",Protagonist, ?1, ?1, ?0)~ ~GiveItemCreate("00RTHF13",Protagonist,1,1,0)~
-
-	REPLACE_TEXTUALLY CASE_INSENSITIVE ~PartyHasItem(\"00POTN03\")~ ~False()~
-
-	REPLACE_TEXTUALLY CASE_INSENSITIVE ~PartyHasItem(\"00POTN04\")~ ~Or(2)
-	PartyHasItem("00POTN04")
-	PartyHasItem("USHFPN04")~
-	REPLACE_TEXTUALLY CASE_INSENSITIVE ~TakePartyItemNum(\"00Potn04\", ?1)~ ~TakePartyItemNum("00Potn04",1)
-TakePartyItemNum("USHFPN04",1)~
-	REPLACE_TEXTUALLY CASE_INSENSITIVE ~UseItem(\"00Potn04\", ?Myself)~ ~UseItem("00Potn04",Myself)
-UseItem("USHFPN04",Myself)~
-
-	REPLACE_TEXTUALLY CASE_INSENSITIVE ~PartyHasItem(\"00POTN05\")~ ~Or(2)
-	PartyHasItem("00POTN05")
-	PartyHasItem("USHFPN05")~
-	REPLACE_TEXTUALLY CASE_INSENSITIVE ~TakePartyItemNum(\"00Potn05\", ?1)~ ~TakePartyItemNum("00Potn05",1)
-TakePartyItemNum("USHFPN05",1)~
-	REPLACE_TEXTUALLY CASE_INSENSITIVE ~UseItem(\"00Potn05\", ?Myself)~ ~UseItem("00Potn05",Myself)
-UseItem("USHFPN05",Myself)~
-	COMPILE_D_TO_DLG
-	LPF CONVERT_DLG_TO_IWD2_FORMAT END
+	DECOMPILE_AND_PATCH BEGIN
+		REPLACE_TEXTUALLY CASE_INSENSITIVE ~GiveItemCreate(\"RMIW_02\",Protagonist, ?1, ?1, ?0)~ ~GiveItemCreate("00RTHF13",Protagonist,1,1,0)~
+	
+		REPLACE_TEXTUALLY CASE_INSENSITIVE ~PartyHasItem(\"00POTN03\")~ ~False()~
+	
+		REPLACE_TEXTUALLY CASE_INSENSITIVE ~PartyHasItem(\"00POTN04\")~ ~Or(2)
+		PartyHasItem("00POTN04")
+		PartyHasItem("USHFPN04")~
+		REPLACE_TEXTUALLY CASE_INSENSITIVE ~TakePartyItemNum(\"00Potn04\", ?1)~ ~TakePartyItemNum("00Potn04",1)
+	TakePartyItemNum("USHFPN04",1)~
+		REPLACE_TEXTUALLY CASE_INSENSITIVE ~UseItem(\"00Potn04\", ?Myself)~ ~UseItem("00Potn04",Myself)
+	UseItem("USHFPN04",Myself)~
+	
+		REPLACE_TEXTUALLY CASE_INSENSITIVE ~PartyHasItem(\"00POTN05\")~ ~Or(2)
+		PartyHasItem("00POTN05")
+		PartyHasItem("USHFPN05")~
+		REPLACE_TEXTUALLY CASE_INSENSITIVE ~TakePartyItemNum(\"00Potn05\", ?1)~ ~TakePartyItemNum("00Potn05",1)
+	TakePartyItemNum("USHFPN05",1)~
+		REPLACE_TEXTUALLY CASE_INSENSITIVE ~UseItem(\"00Potn05\", ?Myself)~ ~UseItem("00Potn05",Myself)
+	UseItem("USHFPN05",Myself)~
+	END
 
 STRING_SET_EVALUATE 28729 @12901
 STRING_SET_EVALUATE 29042 @12902
@@ -6066,7 +6080,6 @@ UseItem("USHFPN53",Myself)~
 		REPLACE_TEXTUALLY CASE_INSENSITIVE ~TakePartyItem(\"40GenPWC\")~ ~TakePartyItem("40GenPWC")
 TakePartyItem("USHFGNWC")~
 	END
-	LPF CONVERT_DLG_TO_IWD2_FORMAT END
 
 STRING_SET_EVALUATE 28638 @12903
 STRING_SET_EVALUATE 28639 @12904
@@ -6081,7 +6094,6 @@ TakePartyItemNum("USHFPN04",1)~
 		REPLACE_TEXTUALLY CASE_INSENSITIVE ~DestroyItem(\"00Potn04\")~ ~DestroyItem("00Potn04")
 DestroyItem("USHFPN04")~
 	END
-	LPF CONVERT_DLG_TO_IWD2_FORMAT END
 
 COPY_EXISTING ~60GERBA2.dlg~ ~override~
 	DECOMPILE_AND_PATCH BEGIN
@@ -6111,7 +6123,6 @@ TakePartyItemNum("USHFPN07",1)~
 		REPLACE_TEXTUALLY CASE_INSENSITIVE ~UseItem(\"00Potn07\", ?Myself)~ ~UseItem("00Potn07",Myself)
 UseItem("USHFPN07",Myself)~
 	END
-	LPF CONVERT_DLG_TO_IWD2_FORMAT END
 
 STRING_SET_EVALUATE 38630 @12905
 STRING_SET_EVALUATE 38631 @12906
@@ -6126,7 +6137,6 @@ TakePartyItemNum("USHFPN10",1)~
 		REPLACE_TEXTUALLY CASE_INSENSITIVE ~!HasItem(\"00POTN10\", ?Myself)~ ~!HasItem("00POTN10",Myself)
 !HasItem("USHFPN10",Myself)~
 	END
-	LPF CONVERT_DLG_TO_IWD2_FORMAT END
 
 COPY_EXISTING_REGEXP ~.*\.are~ ~override~ ~.*\.cre~ ~override~ ~.*\.sto~ ~override~
 	REPLACE_TEXTUALLY CASE_INSENSITIVE ~00SCRL01~ ~USSCHF01~

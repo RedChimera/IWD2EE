@@ -59,6 +59,7 @@ COPY_EXISTING_REGEXP ~.*\.itm~ ~override~
 		READ_SHORT 0x68 numheaders
 		PATCH_IF numheaders > 0 BEGIN
 			READ_LONG 0x6A effectoffset
+			READ_SHORT (headeroffset + 0x2A) theprojectile
 			READ_SHORT (headeroffset + 0x38 * (numheaders - 1) + 0x1E) lastheadernumeffects
 			READ_SHORT (headeroffset + 0x38 * (numheaders - 1) + 0x20) lastheaderfirsteffectindex
 			numeffects = lastheadernumeffects + lastheaderfirsteffectindex
@@ -83,6 +84,9 @@ COPY_EXISTING_REGEXP ~.*\.itm~ ~override~
 					PATCH_IF theopcode = 241 BEGIN
 						thesavingthrow|=0x200000
 						WRITE_LONG (offset + 0x8) 0x400000
+					END
+					PATCH_IF theprojectile = 3 OR theprojectile = 8 OR theprojectile = 13 OR theprojectile = 18 OR theprojectile = 22 OR theprojectile = 25 OR theprojectile = 26 OR theprojectile = 28 OR theprojectile = 33 OR theprojectile = 38 OR theprojectile = 40 OR theprojectile = 42 OR theprojectile = 57 OR theprojectile = 64 OR theprojectile = 67 OR theprojectile = 92 OR theprojectile = 94 OR theprojectile = 95 OR theprojectile = 96 OR theprojectile = 97 OR theprojectile = 98 OR theprojectile = 99 OR theprojectile = 100 OR theprojectile = 101 OR theprojectile = 104 OR theprojectile = 107 OR theprojectile = 109 OR theprojectile = 158 OR theprojectile = 159 OR theprojectile = 186 OR theprojectile = 187 OR theprojectile = 190 OR theprojectile = 191 OR theprojectile = 204 OR theprojectile = 205 OR theprojectile = 206 OR theprojectile = 207 OR theprojectile = 209 OR theprojectile = 210 OR theprojectile = 211 OR theprojectile = 212 OR theprojectile = 213 OR theprojectile = 214 OR theprojectile = 215 OR theprojectile = 216 OR theprojectile = 217 OR theprojectile = 235 OR theprojectile = 270 OR theprojectile = 272 OR theprojectile = 274 OR theprojectile = 279 OR theprojectile = 280 OR theprojectile = 282 OR theprojectile = 283 OR theprojectile = 284 OR theprojectile = 286 OR theprojectile = 287 OR theprojectile = 288 OR theprojectile = 296 OR theprojectile = 299 OR theprojectile = 300 OR theprojectile = 301 OR theprojectile = 302 OR theprojectile = 303 OR theprojectile = 304 OR theprojectile = 305 OR theprojectile = 306 OR theprojectile = 308 OR theprojectile = 309 OR theprojectile = 310 OR theprojectile = 311 OR theprojectile = 312 OR theprojectile = 313 OR theprojectile = 315 OR theprojectile = 316 OR theprojectile = 317 OR theprojectile = 318 OR theprojectile = 319 OR theprojectile = 323 OR theprojectile = 335 OR theprojectile = 337 OR theprojectile = 338 OR theprojectile = 340 OR theprojectile = 341 OR theprojectile = 342 OR theprojectile = 343 OR theprojectile = 351 OR theprojectile = 360 OR theprojectile = 362 OR theprojectile = 366 OR theprojectile = 368 OR theprojectile = 369 OR theprojectile = 370 OR theprojectile = 374 OR theprojectile = 377 OR theprojectile = 379 OR theprojectile = 380 OR theprojectile = 381 OR theprojectile = 382 OR theprojectile = 383 OR theprojectile = 384 OR theprojectile = 385 OR theprojectile = 386 BEGIN
+						thesavingthrow|=0x4000000
 					END
 					PATCH_IF (thesavingthrow BAND 0x00000004) > 0 BEGIN
 						thesavingthrow&=0xFFFFFFFB
@@ -122,6 +126,7 @@ COPY_EXISTING_REGEXP ~.*\.spl~ ~override~
 		READ_LONG 0x64 headeroffset
 		READ_SHORT 0x68 numheaders
 		READ_LONG 0x6A effectoffset
+		READ_SHORT (headeroffset + 0x26) theprojectile
 		READ_SHORT (headeroffset + 0x28 * (numheaders - 1) + 0x1E) lastheadernumeffects
 		READ_SHORT (headeroffset + 0x28 * (numheaders - 1) + 0x20) lastheaderfirsteffectindex
 		numeffects = lastheadernumeffects + lastheaderfirsteffectindex
@@ -146,6 +151,9 @@ COPY_EXISTING_REGEXP ~.*\.spl~ ~override~
 				PATCH_IF theopcode = 241 BEGIN
 					thesavingthrow|=0x200000
 					WRITE_LONG (offset + 0x8) 0x400000
+				END
+				PATCH_IF theprojectile = 3 OR theprojectile = 8 OR theprojectile = 13 OR theprojectile = 18 OR theprojectile = 22 OR theprojectile = 25 OR theprojectile = 26 OR theprojectile = 28 OR theprojectile = 33 OR theprojectile = 38 OR theprojectile = 40 OR theprojectile = 42 OR theprojectile = 57 OR theprojectile = 64 OR theprojectile = 67 OR theprojectile = 92 OR theprojectile = 94 OR theprojectile = 95 OR theprojectile = 96 OR theprojectile = 97 OR theprojectile = 98 OR theprojectile = 99 OR theprojectile = 100 OR theprojectile = 101 OR theprojectile = 104 OR theprojectile = 107 OR theprojectile = 109 OR theprojectile = 158 OR theprojectile = 159 OR theprojectile = 186 OR theprojectile = 187 OR theprojectile = 190 OR theprojectile = 191 OR theprojectile = 204 OR theprojectile = 205 OR theprojectile = 206 OR theprojectile = 207 OR theprojectile = 209 OR theprojectile = 210 OR theprojectile = 211 OR theprojectile = 212 OR theprojectile = 213 OR theprojectile = 214 OR theprojectile = 215 OR theprojectile = 216 OR theprojectile = 217 OR theprojectile = 235 OR theprojectile = 270 OR theprojectile = 272 OR theprojectile = 274 OR theprojectile = 279 OR theprojectile = 280 OR theprojectile = 282 OR theprojectile = 283 OR theprojectile = 284 OR theprojectile = 286 OR theprojectile = 287 OR theprojectile = 288 OR theprojectile = 296 OR theprojectile = 299 OR theprojectile = 300 OR theprojectile = 301 OR theprojectile = 302 OR theprojectile = 303 OR theprojectile = 304 OR theprojectile = 305 OR theprojectile = 306 OR theprojectile = 308 OR theprojectile = 309 OR theprojectile = 310 OR theprojectile = 311 OR theprojectile = 312 OR theprojectile = 313 OR theprojectile = 315 OR theprojectile = 316 OR theprojectile = 317 OR theprojectile = 318 OR theprojectile = 319 OR theprojectile = 323 OR theprojectile = 335 OR theprojectile = 337 OR theprojectile = 338 OR theprojectile = 340 OR theprojectile = 341 OR theprojectile = 342 OR theprojectile = 343 OR theprojectile = 351 OR theprojectile = 360 OR theprojectile = 362 OR theprojectile = 366 OR theprojectile = 368 OR theprojectile = 369 OR theprojectile = 370 OR theprojectile = 374 OR theprojectile = 377 OR theprojectile = 379 OR theprojectile = 380 OR theprojectile = 381 OR theprojectile = 382 OR theprojectile = 383 OR theprojectile = 384 OR theprojectile = 385 OR theprojectile = 386 BEGIN
+					thesavingthrow|=0x4000000
 				END
 				PATCH_IF (thesavingthrow BAND 0x00000004) > 0 BEGIN
 					thesavingthrow&=0xFFFFFFFB
@@ -181,7 +189,7 @@ COPY_EXISTING_REGEXP ~..BOWS..\.itm~ ~override~ ~..BOWP..\.itm~ ~override~ ~..BW
 	READ_SHORT 0x68 thenumheaders
 	READ_SHORT 0x1C theitemtype
 	PATCH_IF thenumheaders > 0 AND (theitemtype = 15 OR theitemtype = 27) BEGIN
-		LPF ADD_ITEM_EQEFFECT INT_VAR opcode=288 target=1 timing=2 parameter1=1 parameter2=192 STR_VAR resource=~USSNEAKX~ END
+		LPF ADD_ITEM_EQEFFECT INT_VAR opcode=288 target=1 timing=2 parameter1=1 parameter2=192 savingthrow=0x10000 STR_VAR resource=~USSNEAKX~ END
 	END
 	IF_EXISTS
 	UNLESS ~USSNEAKX~
