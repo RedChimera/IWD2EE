@@ -389,39 +389,65 @@ end
 function IEex_GetGroundPilesAroundActor(actorID)
 
 	local toReturn = {}
+	local panic = false
 
 	local share = IEex_GetActorShare(actorID)
-	if share == 0x0 then return toReturn end
-	local area = IEex_ReadDword(share + 0x12)
-	if area == 0x0 then return toReturn end
+	local area = nil
+
+	if share ~= 0x0 then
+		area = IEex_ReadDword(share + 0x12)
+		if area == 0x0 then
+			panic = true
+		end
+	else
+		panic = true
+	end
+
+	if panic then
+		-- Actor is invalid, panic and use the area's AI runner just to have a valid object
+		actorID = IEex_ReadDword(IEex_GetVisibleArea() + 0x41A) -- m_nAIIndex
+		share = IEex_GetActorShare(actorID)
+		area = IEex_ReadDword(share + 0x12)
+	end
 
 	local actorX, actorY = IEex_GetActorLocation(actorID)
 	local m_lVertSortBack = area + 0x9AE
 
 	local defaultContainerID = -1
 
-	IEex_IterateCPtrList(m_lVertSortBack, function(containerID)
+	if not panic then
 
-		local containerShare = IEex_GetActorShare(containerID)
-		if containerShare == 0x0 then return end
-		if IEex_ReadByte(containerShare + 0x4, 0) ~= 0x11 then return end
+		IEex_IterateCPtrList(m_lVertSortBack, function(containerID)
 
-		defaultContainerID = containerID
+			local containerShare = IEex_GetActorShare(containerID)
+			if containerShare == 0x0 then return end
+			if IEex_ReadByte(containerShare + 0x4, 0) ~= 0x11 then return end
 
-		if IEex_GetContainerType(containerShare) ~= 4 then return end -- Only ground piles
-		if not IEex_CheckActorLOSObject(actorID, containerID) then return end
-		if IEex_GetContainerNumItems(containerShare) <= 0 then return end
+			defaultContainerID = containerID
 
-		local containerX, containerY = IEex_GetActorLocation(containerID)
-		local distance = IEex_GetDistanceIsometric(actorX, actorY, containerX, containerY)
-		table.insert(toReturn, {["containerID"] = containerID, ["distance"] = distance})
+			if IEex_GetContainerType(containerShare) ~= 4 then return end -- Only ground piles
+			if not IEex_CheckActorLOSObject(actorID, containerID) then return end
+			if IEex_GetContainerNumItems(containerShare) <= 0 then return end
 
-		IEex_UndoActorShare(containerID)
-	end)
+			local containerX, containerY = IEex_GetActorLocation(containerID)
+			local distance = IEex_GetDistanceIsometric(actorX, actorY, containerX, containerY)
+			table.insert(toReturn, {["containerID"] = containerID, ["distance"] = distance})
+		end)
 
-	table.sort(toReturn, function(a, b)
-		return a.distance < b.distance
-	end)
+		table.sort(toReturn, function(a, b)
+			return a.distance < b.distance
+		end)
+	else
+		IEex_IterateCPtrList(m_lVertSortBack, function(containerID)
+
+			local containerShare = IEex_GetActorShare(containerID)
+			if containerShare == 0x0 then return end
+			if IEex_ReadByte(containerShare + 0x4, 0) ~= 0x11 then return end
+
+			defaultContainerID = containerID
+			return true -- break loop
+		end)
+	end
 
 	if defaultContainerID == -1 then
 		defaultContainerID = IEex_Call(0x5B75C0, {actorID}, IEex_GetGameData(), 0x0)
@@ -2050,7 +2076,7 @@ function IEex_OnCHUInitialized(chuResref)
 		local panel17Memory = IEex_GetPanelFromEngine(worldScreen, 17)
 
 		local control_9_0_Memory = IEex_GetControlFromPanel(panel9Memory, 0)
-		
+
 		local x0, y0, w0, h0 = IEex_GetPanelArea(panel0Memory)
 		local x1, y1, w1, h1 = IEex_GetPanelArea(panel1Memory)
 		local x6, y6, w6, h6 = IEex_GetPanelArea(panel6Memory)
