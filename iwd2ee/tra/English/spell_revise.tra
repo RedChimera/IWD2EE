@@ -66,7 +66,7 @@ Casting Time: 3
 Area of Effect: 3-foot radius
 Saving Throw: None
 
-This spell conjures forth a barrier of floating bones that spin rapidly around the caster, granting a +2 bonus to AC. Anyone entering their path takes 2d6 bludgeoning damage and 2d6 slashing damage per round. The caster cannot move for the duration of the spell.~
+This spell conjures forth a barrier of floating bones that spin rapidly around the caster, granting a +2 bonus to AC. Anyone entering their path takes 2d6 bludgeoning damage and 2d6 slashing damage per round.~
 @1012    = ~Mold Touch~
 @1013    = ~Mold Touch 
 (Transmutation)
@@ -144,7 +144,7 @@ Casting Time: 9
 Area of Effect: 3-foot radius
 Saving Throw: Reflex half
 
-This spell conjures forth a wall of circling, razor-sharp blades that whirl and flash around the caster, creating an immobile barrier that grants +5 AC to the caster. Any creature attempting to pass through the blade barrier suffers 10d8 points of damage, with a successful Reflex save for half damage. The caster is immobile for the duration of the spell.~
+This spell conjures forth a wall of circling, razor-sharp blades that whirl and flash around the caster, creating a barrier that grants +5 AC to the caster. Any creature attempting to pass through the blade barrier suffers 10d8 points of damage, with a successful Reflex save for half damage.~
 @1024    = ~Spiritual Wrath~
 @1025    = ~Spiritual Wrath 
 (Evocation)
@@ -2326,7 +2326,7 @@ Casting Time: 2
 Area of Effect: Caster
 Saving Throw: None 
 
-This spell creates a magical cudgel that has a +1 attack bonus and inflicts 1d10+1 bludgeoning damage per strike. The enchantment, attack and damage bonuses of the Shillelagh increase to +2 at level 6, +3 at level 9, +4 at level 12, and +5 at level 15. The Shillelagh also gains an additional bonus to attack and damage equal to the character's Wisdom bonus. The Shillelagh uses the Simple Weapon: Mace proficiency.~
+This spell creates a magical cudgel that has a +1 attack bonus and inflicts 1d10+1 bludgeoning damage per strike. The enchantment, attack and damage bonuses of the Shillelagh increase to +2 at level 6, +3 at level 9, +4 at level 12, and +5 at level 15. The Shillelagh also gains the character's Wisdom bonus to attack and damage instead of Strength if their Wisdom is higher. The Shillelagh uses the Simple Weapon: Mace proficiency.~
 @1899     = ~Contagion~
 @1900     = ~Contagion
 (Necromancy) 
@@ -4696,7 +4696,7 @@ Casting Time: 3
 Area of Effect: 1 creature
 Saving Throw: None
 
-This spell drastically speeds up the target's movement and attack speed. For the duration, the target gains +8 AC, moves at the maximum possible speed, and attacks twice as many times per round. Attack bonuses will continue to decrease for attacks beyond the 5th one. This effect does not stack with Haste.~
+This spell drastically speeds up the target's movement and attack speed. For the duration, the target gains +8 AC, moves at quadruple speed, and attacks twice as many times per round. Attack bonuses will continue to decrease for attacks beyond the 5th one. This effect does not stack with Haste.~
 @37959     = ~Time Stop~
 @38959     = ~Time Stop
 (Transmutation)

@@ -374,7 +374,7 @@ COPY_EXISTING ~usiw851.spl~ ~override~
 
 // Patches all creatures in the prologue and Chapter 1 to have -1 luck, so they won't get critical hits (this is actually a buff to the non-elite goblins, which normally have -3 luck).
 
-COPY_EXISTING_REGEXP ~[123].*\.cre~ ~override~ ~00GOB.*\.cre~ ~override~  ~00HAGOB\.cre~ ~override~ ~00HOB.*\.cre~ ~override~ ~00ORC.*\.cre~ ~override~ ~00OROBLA\.cre~ ~override~
+COPY_EXISTING_REGEXP ~[123].*\.cre~ ~override~ ~40.*\.cre~ ~override~ ~41[^S].*\.cre~ ~override~ ~41SHADOW\.cre~ ~override~ ~41SHAMA[FM]\.cre~ ~override~ ~00GOB.*\.cre~ ~override~  ~00HAGOB\.cre~ ~override~ ~00HOB.*\.cre~ ~override~ ~00ORC.*\.cre~ ~override~ ~00OROBLA\.cre~ ~override~
 	WRITE_BYTE luck 255 //-1
 	READ_LONG feats1 ulgiash
 	ulgiash&=0xBFFFFFFF
@@ -383,6 +383,10 @@ COPY_EXISTING_REGEXP ~[123].*\.cre~ ~override~ ~00GOB.*\.cre~ ~override~  ~00HAG
 COPY_EXISTING ~20EMMA.cre~ ~override~ ~20VREK.cre~ ~override~ ~30BEETQ.cre~ ~override~ ~30GOBKRU.cre~ ~override~ ~30GOBMOK.cre~ ~override~ ~30GOBOGR.cre~ ~override~ ~30GOBOV1.cre~ ~override~ ~30GOBVUN.cre~ ~override~ ~30GOBWR2.cre~ ~override~ ~30GOBWR4.cre~ ~override~ ~30GOBWR6.cre~ ~override~ ~30GOBWRC.cre~ ~override~ ~30HOBGUM.cre~ ~override~ ~30ILQUAG.cre~ ~override~ ~30OGRCH.cre~ ~override~ ~30OGRGAR.cre~ ~override~ ~30ORCGOT.cre~ ~override~ ~30ORCTRU.cre~ ~override~ ~30OROCA.cre~ ~override~ ~30OROPUS.cre~ ~override~ ~30OROTAS.cre~ ~override~ ~30OTY.cre~ ~override~ ~30SPIWOQ.cre~ ~override~ ~30TEQUAG.cre~ ~override~ ~30YQUOGG.cre~ ~override~ ~31BUGGUT.cre~ ~override~ ~31BUGJAI.cre~ ~override~ ~31GOBHC.cre~ ~override~ ~31GOBOV1.cre~ ~override~ ~31HOBCH.cre~ ~override~ ~31HOBSER.cre~ ~override~ ~31ORCHC.cre~ ~override~ ~31ORCHSB.cre~ ~override~ ~31ORCHSH.cre~ ~override~ ~31ORCOLD.cre~ ~override~ ~31OROCH.cre~ ~override~ ~31OROCO.cre~ ~override~
 	WRITE_BYTE luck 0
 */
+
+COPY_EXISTING ~20EMMA.cre~ ~override~ ~20VREK.cre~ ~override~ ~31BUGGUT.cre~ ~override~ ~41ORIAES.cre~ ~override~ ~41XHAAN.cre~ ~override~ ~41ZACK.cre~ ~override~
+	WRITE_BYTE luck 0
+
 // Giving elementals the correct names
 
 COPY_EXISTING ~00SFIR16.cre~ ~override~ ~41SFIR16.cre~ ~override~
@@ -1112,7 +1116,7 @@ COPY_EXISTING ~40GIAFOM.cre~ ~override~ ~40RGIAFO.cre~ ~override~ ~41GIAFOM.cre~
 	READ_LONG feats2 ulgiash
 	ulgiash|=0x80
 	WRITE_LONG feats2 ulgiash
-	WRITE_BYTE proficiencybow 2
+	WRITE_BYTE proficiencybow 1
 	WRITE_BYTE challengerating 10
 	WRITE_ASCII specialscript2 ~00BRBRG0~ #8
 	LPF	IWD2_ADD_CRE_ITEM INT_VAR equip=1 STR_VAR item=~USCWHFFO~ slot=~weapon1~ mode=~replace~ END

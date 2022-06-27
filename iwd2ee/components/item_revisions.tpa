@@ -4567,6 +4567,15 @@ COPY_EXISTING_REGEXP ~.*\.itm~ ~override~
 	WRITE_BYTE 0x2f us_kit_unusability_4
 	BUT_ONLY_IF_IT_CHANGES
 
+COPY_EXISTING ~USWI961Z.itm~ ~override~
+	READ_BYTE 0x2d us_kit_unusability_3
+	READ_BYTE 0x2f us_kit_unusability_4
+	us_kit_unusability_3|=0x3F
+	us_kit_unusability_4|=0xC0
+	WRITE_BYTE 0x2d us_kit_unusability_3
+	WRITE_BYTE 0x2f us_kit_unusability_4
+	IF_EXISTS
+
 COPY_EXISTING ~00ax1hck.itm~ ~override~ ~00hfaxck.itm~ ~override~ ~ushamtdt.itm~ ~override~ ~ushfhtdt.itm~ ~override~
 	LPF ALTER_ITEM_HEADER INT_VAR header_type=2 range=30 END
 
@@ -5370,7 +5379,7 @@ COPY_EXISTING ~00BASHS3.sto~ ~override~ //Avarine Decanter genie store
 	ADD_STORE_ITEM ~USRTHF50~ AFTER ~00RING18~ #1 #1 #1 ~IDENTIFIED~ #1 //Malakar
 	ADD_STORE_ITEM ~USRTHF54~ AFTER ~USRTHF50~ #1 #1 #1 ~IDENTIFIED~ #1 //Reliance
 //	ADD_STORE_ITEM ~USRING48~ AFTER ~00RING18~ #1 #1 #1 ~IDENTIFIED~ #1 //Ring of Persistence
-	ADD_STORE_ITEM ~USPERM50~ AFTER ~00POTN01~ #1 #1 #1 ~IDENTIFIED~ #1 //Impervious Elixir
+//	ADD_STORE_ITEM ~USPERM50~ AFTER ~00POTN01~ #1 #1 #1 ~IDENTIFIED~ #1 //Impervious Elixir
 	ADD_STORE_ITEM ~00POTN97~ AFTER ~00POTN01~ #1 #1 #1 ~IDENTIFIED~ #1 //Potion of Resistance
 	ADD_STORE_ITEM ~00POTN95~ AFTER ~00POTN01~ #1 #1 #1 ~IDENTIFIED~ #1 //Potion of Resilience
 	ADD_STORE_ITEM ~00POTN45~ AFTER ~00POTN01~ #1 #1 #1 ~IDENTIFIED~ #10 //Potion of Invulnerability

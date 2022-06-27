@@ -3057,7 +3057,7 @@ Special:
 Armor Check Penalty:  -2
 Arcane Spell Failure:  15%
 Weight: 15 lb.~
-@10651    = ~Red Fang's Tomb +4~
+@10651    = ~Red Fang's Tomb +5~
 @10652    = ~This red iron tower shield reaches nearly from the chin to the toe of the user. It is heavy even for a shield of its size, much of the weight coming from a large sculpted dragon's head set into its face - the head, wrought in the same red metal as the rest of the shield, protrudes almost like a gargoyle from a castle wall.
 
 The head is the likeness of Red Fang, one-time mount of a tyrannical warrior-king from a land long ago forgotten. When Red Fang was slain in battle, the warrior-king had the beast's soul bound to this shield so that the faithful dragon could still accompany him into battle. Once per day Red Fang's iron head can breathe a cone of searing flame at the shield-bearer's command.
@@ -3066,15 +3066,16 @@ The warrior-king was eventually slain himself by a trio of brave heroes. Though 
 
 STATISTICS:
 
-Shield Bonus: +6
+Shield Bonus: +9
 Armor Bonus: +1 vs. missile weapons
 Special:
   Resistance: 20/- fire resistance
   Red Fang's Breath: Once per day, can breathe fire in a large cone, dealing 10d6 fire damage (Reflex DC 25 for half)
+  Attack Penalty: -2
 Armor Check Penalty:  -10
 Arcane Spell Failure:  50%
 Weight: 30 lb.~
-@10653    = ~The Death-Adder's Dragon Shield +6~
+@10653    = ~The Death-Adder's Dragon Shield +8~
 @10654    = ~This red iron tower shield reaches nearly from the chin to the toe of the user. It is heavy even for a shield of its size, much of the weight coming from a large sculpted dragon's head set into its face - the head, wrought in the same red metal as the rest of the shield, protrudes almost like a gargoyle from a castle wall.
 
 The head is the likeness of Red Fang, one-time mount of a tyrannical warrior-king from a land long ago forgotten. When Red Fang was slain in battle, the warrior-king had the beast's soul bound to this shield so that the faithful dragon could still accompany him into battle. Once per day Red Fang's iron head can breathe a gout of searing flame at the shield-bearer's command.
@@ -3083,11 +3084,12 @@ The warrior-king was eventually slain himself by a trio of brave heroes. Though 
 
 STATISTICS:
 
-Shield Bonus: +8
+Shield Bonus: +12
 Armor Bonus: +1 vs. missile weapons
 Special:
   Resistance: 30/- fire resistance
   Red Fang's Breath: Once per day, can breathe fire in a large cone, dealing 25d6 fire damage (Reflex DC 40 for half)
+  Attack Penalty: -2
 Armor Check Penalty:  -10
 Arcane Spell Failure:  50%
 Weight: 30 lb.~

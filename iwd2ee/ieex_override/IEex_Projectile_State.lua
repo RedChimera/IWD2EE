@@ -452,6 +452,7 @@ function IEex_Extern_OnAddEffectToProjectile(CProjectile, esp)
 		sourceRES = IEex_Helper_GetBridge("IEex_RecordSpell", sourceID, "spellRES")
 	end
 --]]
+
 	local internalFlags = IEex_ReadDword(CGameEffect + 0xD4)
 	if bit.band(internalFlags, 0x20) == 0 then
 		internalFlags = bit.bor(internalFlags, 0x20)
@@ -1031,7 +1032,7 @@ IEex_MutatorOpcodeFunctions["EXMASSPL"] = {
 			    		ex_mass_spell[actorID] = nil
 			    	end
 					if source ~= 4 and source < 11 and ex_mass_spell[actorID] ~= nil then
-						ex_projectile_flags[projectileData]["Metamagic"] = bit.bor(ex_projectile_flags[projectileData]["Metamagic"], 0x400000)
+--						ex_projectile_flags[projectileData]["Metamagic"] = bit.bor(ex_projectile_flags[projectileData]["Metamagic"], 0x400000)
 						return 94
 					end
 				else

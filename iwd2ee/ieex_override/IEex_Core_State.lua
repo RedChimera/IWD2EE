@@ -240,7 +240,8 @@ IEex_Feats_DefaultMaxPips = {
 }
 
 function IEex_GetSpriteFeatCount(sprite, featID)
-
+	if sprite <= 0 then return 0 end
+	
 	local baseStats = IEex_GetSpriteBaseStats(sprite)
 	if not IEex_IsFeatTakenInBaseStats(baseStats, featID) then
 		return 0
@@ -335,7 +336,7 @@ function IEex_GetFeatMaxPips(featID)
 end
 
 function IEex_GetSpriteFeatIncrementable(sprite, featID, bCheckOnePipRequirements)
-
+	if sprite <= 0 then return false end
 	local featCount = IEex_GetSpriteFeatCount(sprite, featID)
 	local featMaxPips = IEex_GetFeatMaxPips(featID)
 	if featCount >= featMaxPips then
@@ -367,6 +368,7 @@ function IEex_GetActorFeatIncrementable(actorID, featID, bCheckOnePipRequirement
 end
 
 function IEex_Extern_FeatHook(sprite, oldBaseStats, oldDerivedStats)
+	if sprite <= 0 then return end
 	IEex_AssertThread(IEex_Thread.Async, true)
 	local maxID = IEex_Helper_GetBridge("IEex_Feats", "NEW_FEATS_MAXID")
 	for featID = 0, maxID do

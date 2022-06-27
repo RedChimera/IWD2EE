@@ -659,6 +659,7 @@ COPY_EXISTING ~65BRUTAI.dlg~ ~override~
 	DECOMPILE_AND_PATCH BEGIN
 		REPLACE_TEXTUALLY CASE_INSENSITIVE ~Enemy()~ ~SetGlobal("US_Brutai_Encounter","GLOBAL",1)
 Enemy()~
+		REPLACE_TEXTUALLY CASE_INSENSITIVE ~StartCutScene(\" +~ ~StartCutScene("~
 	END
 
 COPY_EXISTING ~61PVROOT.bcs~ override
@@ -749,12 +750,12 @@ REPLACE_TEXTUALLY CASE_INSENSITIVE EXACT_MATCH ~PartyHasItem("60Stele5")
 END
 
 COPY_EXISTING_REGEXP ~.*\.bcs~ override
-	REPLACE_TEXTUALLY CASE_SENSITIVE ~TR[^0-9]*86[^T]*TR~ ~TR
-16633 0 0 0 0 "return IEex_WasJustDisarmed()" "" OB
+	REPLACE_TEXTUALLY CASE_SENSITIVE ~TR[^0-9]*86 \([0-9]+\) \([0-9]+\)[^T]*TR~ ~TR
+16633 \1 \2 0 0 "return IEex_WasJustDisarmed()" "" OB
 0 0 0 0 0 0 0 0 0 0 0 0 0 [-1.-1.-1.-1] "" 0 0 OB
 TR~
-	REPLACE_TEXTUALLY CASE_SENSITIVE ~TR[^0-9]*87[^T]*TR~ ~TR
-16633 0 0 0 0 "return IEex_WasJustUnlocked()" "" OB
+	REPLACE_TEXTUALLY CASE_SENSITIVE ~TR[^0-9]*87 \([0-9]+\) \([0-9]+\)[^T]*TR~ ~TR
+16633 \1 \2 0 0 "return IEex_WasJustUnlocked()" "" OB
 0 0 0 0 0 0 0 0 0 0 0 0 0 [-1.-1.-1.-1] "" 0 0 OB
 TR~
 	BUT_ONLY_IF_IT_CHANGES

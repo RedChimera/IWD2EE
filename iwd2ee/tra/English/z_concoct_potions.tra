@@ -512,20 +512,18 @@ STATISTICS:
 +8 to Reflex saves
 Weight: 1 lb.~
 @4761     = ~Beholder Sauce~
-@4762     = ~Comprised of the blood, lymph, tears, and eyeball juice of a (preferably) dead beholder, this tangy sauce will temporarily numb the user's eyes so that they can be transmuted into several blobby stalks.  Aside from blurry vision and no small amount of discomfort, this potion allows any spellcaster to begin casting a new spell as soon as he or she finishes casting the previous one, eliminating the normal delay between spellcasting.  This allows the user to cast more than one spell in a single round, though each one will suffer a -3 penalty to spellcasting speed.  After 2 rounds, the user's eyes will return to their normal form and the effect of the potion will wear off.
+@4762     = ~Comprised of the blood, lymph, tears, and eyeball juice of a (preferably) dead beholder, this tangy sauce will temporarily numb the user's eyes so that they can be transmuted into several blobby stalks.  Aside from blurry vision and no small amount of discomfort, this potion allows any spellcaster to begin casting a new spell as soon as he or she finishes casting the previous one, eliminating the normal delay between spellcasting.  This allows the user to cast more than one spell in a single round, though the character cannot benefit from reductions in casting time.  After 2 rounds, the user's eyes will return to their normal form and the effect of the potion will wear off.
 
 STATISTICS:
 
 Improved Alacrity
--3 to Casting Speed
 Weight: 1 lb.~
 @54761     = ~Beholder Sauce~
-@54762     = ~Comprised of the blood, lymph, tears, and eyeball juice of a (preferably) dead beholder, this tangy sauce will temporarily numb the user's eyes so that they can be transmuted into several blobby stalks.  Aside from blurry vision and no small amount of discomfort, this potion allows any spellcaster to begin casting a new spell as soon as he or she finishes casting the previous one, eliminating the normal delay between spellcasting.  This allows the user to cast more than one spell in a single round, though each one will suffer a -2 penalty to spellcasting speed.  After 2 rounds, the user's eyes will return to their normal form and the effect of the potion will wear off.
+@54762     = ~Comprised of the blood, lymph, tears, and eyeball juice of a (preferably) dead beholder, this tangy sauce will temporarily numb the user's eyes so that they can be transmuted into several blobby stalks.  Aside from blurry vision and no small amount of discomfort, this potion allows any spellcaster to begin casting a new spell as soon as he or she finishes casting the previous one, eliminating the normal delay between spellcasting.  This allows the user to cast more than one spell in a single round, though the character cannot benefit from reductions in casting time.  After 3 rounds, the user's eyes will return to their normal form and the effect of the potion will wear off.
 
 STATISTICS:
 
 Improved Alacrity
--2 to Casting Speed
 Weight: 1 lb.~
 @4763     = ~Coral Balm~
 @4764     = ~By tearing off chunks from a coral reef, crushing the coral into powder, and mixing it with sea cucumber paste, an alchemist may create a bluish balm.  When smeared over the user's body, the balm will expand into a powerful shield,  trapping the user inside but protecting them from all forms of attack.  The shield will absorb 100 hit points before shattering.
