@@ -220,14 +220,7 @@ function IEex_GetFeatCountFromDerivedStats(stats, featID)
 	IEex_Helper_SynchronizedBridgeOperation("IEex_DerivedStatsData", function()
 		local feats = IEex_Helper_GetBridgeNL("IEex_DerivedStatsData", stats, "feats")
 		local featIndex = IEex_Helper_GetBridgeNL(feats, "feat_index_"..featID)
-		toReturn = 0
-		-- For backwards compatibility with old saves, check if the character has the flag for the feat checked
-		if bit.band(IEex_ReadDword(stats - 0x1C4 + math.floor(featID / 32) * 0x4), 2 ^ (featID % 32)) > 0 then
-			toReturn = 1
-		end
-		if featIndex and IEex_Helper_GetBridgeNL(feats, featIndex, "count") > 0 then
-			toReturn = IEex_Helper_GetBridgeNL(feats, featIndex, "count")
-		end
+		toReturn = IEex_Helper_GetBridgeNL(feats, featIndex, "count") or 0
 	end)
 	return toReturn
 end
@@ -241,7 +234,7 @@ IEex_Feats_DefaultMaxPips = {
 
 function IEex_GetSpriteFeatCount(sprite, featID)
 	if sprite <= 0 then return 0 end
-	
+
 	local baseStats = IEex_GetSpriteBaseStats(sprite)
 	if not IEex_IsFeatTakenInBaseStats(baseStats, featID) then
 		return 0
@@ -258,6 +251,31 @@ function IEex_GetActorFeatCount(actorID, featID)
 	return IEex_GetSpriteFeatCount(IEex_GetActorShare(actorID), featID)
 end
 
+function IEex_SetSpriteFeatCountStat(sprite, featID, count, onlyIfNew)
+	local applyEffect = false
+	IEex_Helper_SynchronizedBridgeOperation("IEex_DerivedStatsData", function()
+		local feats = IEex_Helper_GetBridgeNL("IEex_DerivedStatsData", IEex_GetSpriteDerivedStats(sprite), "feats")
+		local featIndex = IEex_Helper_GetBridgeNL(feats, "feat_index_"..featID)
+		if featIndex then
+			if not onlyIfNew then
+				IEex_WriteDword(IEex_Helper_GetBridgeNL(feats, featIndex, "pEffect") + 0x1C, count)
+				IEex_Helper_SetBridgeNL(feats, featIndex, "count", count)
+			end
+		else
+			applyEffect = true
+		end
+	end)
+	if applyEffect then
+		IEex_ApplyEffectToSprite(sprite, {
+			["opcode"] = 500,
+			["parameter1"] = featID,
+			["parameter2"] = count,
+			["timing"] = 9,
+			["resource"] = "B3FEAT",
+		})
+	end
+end
+
 function IEex_SetSpriteFeatCount(sprite, featID, count)
 
 	local featField = sprite + 0x75C + bit.rshift(featID, 5) * 4 -- sprite.m_baseStats.m_feats
@@ -271,26 +289,7 @@ function IEex_SetSpriteFeatCount(sprite, featID, count)
 
 	if featID <= 74 then
 		if not IEex_Feats_DefaultMaxPips[featID] then
-			local applyEffect = false
-			IEex_Helper_SynchronizedBridgeOperation("IEex_DerivedStatsData", function()
-				local feats = IEex_Helper_GetBridgeNL("IEex_DerivedStatsData", IEex_GetSpriteDerivedStats(sprite), "feats")
-				local featIndex = IEex_Helper_GetBridgeNL(feats, "feat_index_"..featID)
-				if featIndex then
-					IEex_WriteDword(IEex_Helper_GetBridgeNL(feats, featIndex, "pEffect") + 0x1C, count)
-					IEex_Helper_SetBridgeNL(feats, featIndex, "count", count)
-				else
-					applyEffect = true
-				end
-			end)
-			if applyEffect then
-				IEex_ApplyEffectToSprite(sprite, {
-					["opcode"] = 500,
-					["parameter1"] = featID,
-					["parameter2"] = count,
-					["timing"] = 9,
-					["resource"] = "B3FEAT",
-				})
-			end
+			IEex_SetSpriteFeatCountStat(sprite, featID, count)
 		else
 			IEex_Call(IEex_Label("CGameSprite::SetFeatCount"), {count, featID}, sprite, 0x0)
 		end

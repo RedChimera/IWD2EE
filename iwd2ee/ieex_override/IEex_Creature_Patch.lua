@@ -371,6 +371,25 @@
 		]]},
 	}))
 
+	----------------------------------------
+	-- IEex_Extern_OnAfterConstructSprite --
+	----------------------------------------
+
+	IEex_HookRestore(0x6F296D, 0, 7, IEex_FlattenTable({
+		{[[
+			!push_registers_iwd2
+		]]},
+		IEex_GenLuaCall("IEex_Extern_OnAfterConstructSprite", {
+			["args"] = {
+				{"!push(esi)"}, -- sprite
+			},
+		}),
+		{[[
+			@call_error
+			!pop_registers_iwd2
+		]]},
+	}))
+
 	IEex_EnableCodeProtection()
 
 end)()

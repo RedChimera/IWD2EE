@@ -23,6 +23,30 @@ function IEex_AccessLuaStats(actorID)
 		or  IEex_Helper_GetBridge("IEex_DerivedStatsData", sprite + 0x1778)
 end
 
+function IEex_EnsureActorEffectListProcessed(objectID)
+	-- Force the creature's effects list to be evaluated if it hasn't already.
+	local sprite = IEex_GetActorShare(objectID)
+	if not IEex_IsObjectSprite(sprite, true) then return end
+	if not IEex_Helper_GetBridge("IEex_GameObjectData", objectID, "bEffectsHandled") then
+		-- m_newEffect = 1, to force an effects list process
+		IEex_WriteDword(sprite + 0x562C, 1)
+		-- CGameSprite_ProcessEffectList()
+		IEex_Call(0x72DE60, {}, sprite, 0x0)
+	end
+end
+
+function IEex_EnsureSpriteEffectListProcessed(sprite)
+	-- Force the creature's effects list to be evaluated if it hasn't already.
+	if not IEex_IsObjectSprite(sprite, true) then return end
+	local objectID = IEex_ReadDword(sprite + 0x5C)
+	if not IEex_Helper_GetBridge("IEex_GameObjectData", objectID, "bEffectsHandled") then
+		-- m_newEffect = 1, to force an effects list process
+		IEex_WriteDword(sprite + 0x562C, 1)
+		-- CGameSprite_ProcessEffectList()
+		IEex_Call(0x72DE60, {}, sprite, 0x0)
+	end
+end
+
 -------------------
 -- Thread: Async --
 -------------------
@@ -395,4 +419,16 @@ end
 function IEex_Extern_OnGameObjectsBeingCleaned()
 	IEex_AssertThread(IEex_Thread.Both, true)
 	IEex_Helper_ClearBridge("IEex_GameObjectData")
+end
+
+function IEex_Extern_OnAfterConstructSprite(sprite)
+	IEex_AssertThread(IEex_Thread.Both, true)
+	-- Import single pip feats into the new stats system
+	IEex_EnsureSpriteEffectListProcessed(sprite)
+	local baseStats = IEex_GetSpriteBaseStats(sprite)
+	for featID = 0, 74 do
+		if not IEex_Feats_DefaultMaxPips[featID] and IEex_IsFeatTakenInBaseStats(baseStats, featID) then
+			IEex_SetSpriteFeatCountStat(sprite, featID, 1, true)
+		end
+	end
 end
