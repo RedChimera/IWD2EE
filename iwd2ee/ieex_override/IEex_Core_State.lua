@@ -220,7 +220,7 @@ function IEex_GetFeatCountFromDerivedStats(stats, featID)
 	IEex_Helper_SynchronizedBridgeOperation("IEex_DerivedStatsData", function()
 		local feats = IEex_Helper_GetBridgeNL("IEex_DerivedStatsData", stats, "feats")
 		local featIndex = IEex_Helper_GetBridgeNL(feats, "feat_index_"..featID)
-		toReturn = IEex_Helper_GetBridgeNL(feats, featIndex, "count") or 0
+		toReturn = featIndex and IEex_Helper_GetBridgeNL(feats, featIndex, "count") or 0
 	end)
 	return toReturn
 end
