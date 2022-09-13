@@ -21,8 +21,6 @@ ACTION_PHP_EACH IEex_append_array AS data => ~~ BEGIN
 	APPEND ~%data%.IDS~ ~%data_1% %data_2%~ UNLESS ~^%data_1% ~
 END
 
-COMPILE ~%mod_folder%/dlg/USMULTIG.d~
-
 STRING_SET_EVALUATE 2943 ~<EXHPSTATE1>~
 STRING_SET_EVALUATE 2944 ~<EXHPSTATE2>~
 STRING_SET_EVALUATE 2945 ~<EXHPSTATE3>~
@@ -1213,3 +1211,5 @@ COPY_EXISTING_REGEXP ~.*\.bcs~ ~override~
 	END
 	IF ~93 0 0 0 0~
 	BUT_ONLY_IF_IT_CHANGES
+
+COMPILE ~%mod_folder%/dlg/USMULTIG.d~
