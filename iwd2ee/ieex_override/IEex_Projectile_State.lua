@@ -171,7 +171,7 @@ function IEex_Extern_OnProjectileDecode(esp)
 	end
 	local sourceID = IEex_GetActorIDShare(CGameAIBase)
 	local sourceRES = ""
-	if (source == 0 or source == 1 or source == 7) and IEex_Helper_GetBridge("IEex_RecordSpell", sourceID, "spellRES") ~= nil then
+	if (source == 0 or source == 1 or source == 2 or source == 3 or source == 7) and IEex_Helper_GetBridge("IEex_RecordSpell", sourceID, "spellRES") ~= nil then
 		sourceRES = IEex_Helper_GetBridge("IEex_RecordSpell", sourceID, "spellRES")
 	end
 	if IEex_GetActorSpellState(sourceID, 251) then
@@ -298,7 +298,7 @@ function IEex_Extern_OnPostProjectileCreation(CProjectile, esp)
 	end
 	local sourceID = IEex_GetActorIDShare(CGameAIBase)
 	local sourceRES = ""
-	if (source == 0 or source == 1 or source == 5 or source == 7) and IEex_Helper_GetBridge("IEex_RecordSpell", sourceID, "spellRES") ~= nil then
+	if (source == 0 or source == 1 or source == 2 or source == 3 or source == 5 or source == 7) and IEex_Helper_GetBridge("IEex_RecordSpell", sourceID, "spellRES") ~= nil then
 		sourceRES = IEex_Helper_GetBridge("IEex_RecordSpell", sourceID, "spellRES")
 	end
 	if source == 5 and IEex_Helper_GetBridge("IEex_RecordOpcode430Spell", sourceID, "spellRES") ~= nil then
@@ -536,7 +536,7 @@ function EXMETAMA(actionData, creatureData)
 		local resWrapper = IEex_DemandRes(currentSpellRES, "SPL")
 		if resWrapper:isValid() then
 			local spellData = resWrapper:getData()
-			if bit.band(IEex_ReadDword(spellData + 0x18), 0x10000000) > 0 then
+			if bit.band(IEex_ReadDword(spellData + 0x18), 0x10000000) > 0 or ex_damage_source_spell[currentSpellRES] ~= nil then
 				resWrapper:free()
 				return
 			end
@@ -712,14 +712,13 @@ function EXMETAMA(actionData, creatureData)
 ["source_id"] = sourceID,
 })
 		end
-	end
-	if spellAvailable and ex_quicken_spell[sourceID] then
-		local castCounter = IEex_ReadSignedWord(creatureData + 0x54E8, 0x0)
-		if castCounter ~= -1 then
-			ex_quicken_spell[sourceID] = nil
-		end
+		if spellAvailable and ex_quicken_spell[sourceID] then
+			local castCounter = IEex_ReadSignedWord(creatureData + 0x54E8, 0x0)
+			if castCounter ~= -1 then
+				ex_quicken_spell[sourceID] = nil
+			end
 --[[
-		IEex_ApplyEffectToActor(sourceID, {
+			IEex_ApplyEffectToActor(sourceID, {
 ["opcode"] = 189,
 ["target"] = 2,
 ["timing"] = 0,
@@ -730,7 +729,7 @@ function EXMETAMA(actionData, creatureData)
 ["source_id"] = sourceID,
 })
 --]]
-		IEex_ApplyEffectToActor(sourceID, {
+			IEex_ApplyEffectToActor(sourceID, {
 ["opcode"] = 288,
 ["target"] = 2,
 ["timing"] = 0,
@@ -742,7 +741,7 @@ function EXMETAMA(actionData, creatureData)
 ["source_target"] = sourceID,
 ["source_id"] = sourceID,
 })
-		IEex_ApplyEffectToActor(sourceID, {
+			IEex_ApplyEffectToActor(sourceID, {
 ["opcode"] = 188,
 ["target"] = 2,
 ["timing"] = 0,
@@ -752,7 +751,7 @@ function EXMETAMA(actionData, creatureData)
 ["source_target"] = sourceID,
 ["source_id"] = sourceID,
 })
-		IEex_ApplyEffectToActor(sourceID, {
+			IEex_ApplyEffectToActor(sourceID, {
 ["opcode"] = 206,
 ["target"] = 2,
 ["timing"] = 0,
@@ -762,8 +761,8 @@ function EXMETAMA(actionData, creatureData)
 ["source_target"] = sourceID,
 ["source_id"] = sourceID,
 })
-	else
-		IEex_ApplyEffectToActor(sourceID, {
+		else
+			IEex_ApplyEffectToActor(sourceID, {
 ["opcode"] = 254,
 ["target"] = 2,
 ["timing"] = 1,
@@ -771,6 +770,7 @@ function EXMETAMA(actionData, creatureData)
 ["source_target"] = sourceID,
 ["source_id"] = sourceID,
 })
+		end
 	end
 	if not spellAvailable then
 		ex_metamagic_in_use[sourceID] = nil

@@ -215,6 +215,8 @@
 @55339=~Attacks <EXWHNAME39> with <EXWHWEAP39> : <EXWHHITMISS39>~
 @55340=~Attacks <EXWHNAME40> with <EXWHWEAP40> : <EXWHHITMISS40>~
 */
+@55379=~That character cannot be raised, but can be resurrected by more powerful magic.~
+@55380=~That character cannot be raised or resurrected.~
 @55381=~That character has been dead too long to be raised by that spell.~
 @55382=~Spell Disrupted : Off hand in use.~
 @55383=~Attack failed to connect due to difference in height~

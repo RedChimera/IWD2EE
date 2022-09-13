@@ -230,6 +230,7 @@ function IEex_Extern_OnAddSummonToLimitHook(effectData, summonerData, summonedDa
 	return false
 end
 ex_apply_effects_flags = {}
+--[[
 ex_empowerable_opcodes = {[0] = true, [1] = true, [6] = true, [10] = true, [12] = true, [15] = true, [17] = true, [18] = true,
 [19] = true, [21] = true, [22] = true, [25] = true, [27] = true, [28] = true, [29] = true, [30] = true, [31] = true,
 [33] = true, [34] = true, [35] = true, [36] = true, [37] = true, [44] = true, [49] = true, [54] = true, [59] = true,
@@ -239,6 +240,8 @@ ex_empowerable_opcodes = {[0] = true, [1] = true, [6] = true, [10] = true, [12] 
 [173] = true, [176] = true, [189] = true, [190] = true, [191] = true, [218] = true,
 [238] = true, [239] = true, [247] = true, [255] = true, [266] = true,
 [281] = true, [297] = true, [298] = true, [410] = true, [411] = true, [416] = true, [431] = true, [432] = true, [436] = true,}
+--]]
+ex_empowerable_opcodes = {[12] = true, [17] = true, [18] = true, [25] = true, [67] = true, [410] = true, [411] = true, [416] = true,}
 (function()
 
 	IEex_AddScreenEffectsGlobal("EXEFFMOD", function(effectData, creatureData)
@@ -274,7 +277,6 @@ ex_empowerable_opcodes = {[0] = true, [1] = true, [6] = true, [10] = true, [12] 
 			IEex_WriteDword(creatureData + 0x740, bit.band(IEex_ReadDword(creatureData + 0x740), 0xFFFFBFFF))
 		end
 		local internalFlags = bit.bor(IEex_ReadDword(effectData + 0xCC), IEex_ReadDword(effectData + 0xD4))
-
 		local parameter1 = IEex_ReadDword(effectData + 0x18)
 		local parameter2 = IEex_ReadDword(effectData + 0x1C)
 		local parameter3 = IEex_ReadDword(effectData + 0x5C)
@@ -812,17 +814,21 @@ ex_empowerable_opcodes = {[0] = true, [1] = true, [6] = true, [10] = true, [12] 
 		end
 		if bit.band(internalFlags, 0x100000) > 0 then
 			if opcode == 288 then
+--[[
 				if parameter2 == 191 or parameter2 == 192 or parameter2 == 193 or parameter2 == 194 or parameter2 == 207 or parameter2 == 236 or parameter2 == 237 or parameter2 == 242 or parameter2 == 243 or parameter2 == 246 then
 					parameter1 = math.floor(parameter1 * 1.5)
 					IEex_WriteDword(effectData + 0x18, parameter1)
 				end
+--]]
 			elseif opcode == 500 then
 				if resource == "MEHGTST" and special == 1 then
 					parameter1 = math.floor(parameter1 * 1.5)
 					IEex_WriteDword(effectData + 0x18, parameter1)
+--[[
 				elseif resource == "MEMODSKL" or resource == "MEMODSTA" then
 					parameter1 = math.floor(parameter1 * 1.5)
 					IEex_WriteDword(effectData + 0x18, parameter1)
+--]]
 				end
 			elseif ex_empowerable_opcodes[opcode] ~= nil then
 				if opcode == 12 or opcode == 17 or opcode == 18 or opcode == 255 then

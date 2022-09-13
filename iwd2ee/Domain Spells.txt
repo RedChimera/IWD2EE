@@ -5,23 +5,23 @@ Bane:
 4: Cloak of Fear, Emotion: Despair
 5: Domination, Greater Command
 6: Feeblemind, Power Word: Silence
-7: Control Undead, Gate
+7: Control Undead, Cacofiend
 8: Enslave, Great Shout
 9: Mass Dominate, Power Word: Kill
 
 Helm:
-1: Armor of Faith, Protection from Evil
+1: Armor of Faith, Reflect Attack
 2: Hold Person, Spell Shield
 3: Glyph of Warding, Protection from Arrows
 4: Death Ward, Defensive Harmony
 5: Banishment, Repulsion
 6: Circle of Blades, Globe of Invulnerability
-7: Impervious Sanctity of Mind, Mantle
-8: Elemental Barrier, Seven Eyes
+7: Impervious Sanctity of Mind, Seven Eyes
+8: Elemental Barrier, Mantle
 9: Aegis, Iron Body
 
 Ilmater:
-1: Minor Elemental Barrier, Ox's Fortitude
+1: Ox's Fortitude, Shield Other
 2: Aid, Exaltation
 3: Cure Serious Wounds, Magic Circle Against Evil
 4: Emotion: Hope, Otiluke's Resilient Sphere
@@ -47,19 +47,19 @@ Mask:
 2: Blindness, Blur
 3: Invisibility Sphere, Mirror Image
 4: Blink, Improved Invisibility
-5: Lutzaen's Local Teleport, Shadow Conjuration
-6: Darts of Bone, Greater Shadow Conjuration
+5: Lutzaen's Local Teleport, Steal Spells
+6: Greater Shadow Conjuration, Steal Effects
 7: Mass Haste, Shades
-8: Army of Images, Mass Invisibility
+8: Mass Invisibility, Simulacrum
 9: Black Blade of Disaster, Perfect Invisibility
 
 Oghma:
 1: Identify, Identify Creature
-2: Find Traps, Remove Magic
-3: Dispel Magic, True Seeing
-4: Malison, Shout
+2: Arcane Sight, Clairvoyance
+3: Dispel Magic, Remove Magic
+4: True Seeing, Shout
 5: Power Word: Heal, Power Word: Silence
-6: Power Word: Stun, Symbol of Fear
+6: Power Word: Stun, Spell Sequencer
 7: Great Shout, Symbol of Hopelessness
 8: Power Word: Kill, Symbol of Death
 9: Executioner's Eyes, Wail of the Banshee
@@ -69,10 +69,10 @@ Selune:
 2: Moonblade, Otiluke's Resilient Sphere
 3: Summon Cow, Wall of Moonlight
 4: Emotion: Rage, Ghost Armor
-5: Protection from Magic Energy, Suffocate
-6: Antimagic Field, Divine Shell
-7: Lutzaen's Local Teleport, Planar Binding: Air Elemental
-8: Improved Alacrity, Planar Ally: Fire Elemental
+5: Protection from Magic Energy, Wall of Force
+6: Boulder Roll, Divine Shell
+7: Antimagic Field, Lutzaen's Local Teleport
+8: Prismatic Spray, Reverse Gravity
 9: Elemental Legion, Teleport Step
 
 Talos:
@@ -82,15 +82,15 @@ Talos:
 4: Protection from Electricity, Static Charge
 5: Ball Lightning, Chain Lightning
 6: Acid Storm, Whirlwind
-7: Destruction, Fire Storm
-8: Earthquake, Horrid Wilting
-9: Living Lightning, Meteor Swarm
+7: Fire Storm, Lightning Barrage
+8: Earthquake, Living Lightning
+9: Lightning Storm, Storm of Vengeance
 
 Tempus:
-1: Magic Stone, True Strike
-2: Chant, Draw Upon Holy Might
-3: Animate Zombie, Prayer
-4: Emotion: Rage, Recitation
+1: Chant, True Strike
+2: Draw Upon Holy Might, Prayer
+3: Recitation, Steel Wind Strike
+4: Duel, Emotion: Rage
 5: Champion's Strength, Chaotic Commands
 6: Circle of Blades, Spiritual Wrath
 7: Mordenkainen's Sword, Tenser's Transformation
@@ -99,23 +99,91 @@ Tempus:
 
 
 Auril:
-1: Ice Blade
-2: Snilloc's Snowball Swarm
-3: Icelance
+1: Ice Blade, Protection from Cold
+2: Protection from Fire, Snilloc's Snowball Swarm
+3: Icelance, Storm Shell
 4: Fireshield (Blue), Ice Storm
-5: Cone of Cold
-6: Otiluke's Freezing Sphere
-7: Auril's Whirlwind
-8:
-9: Auril's Blessing
+5: Cone of Cold, Expose to the Elements
+6: Divine Shell, Otiluke's Freezing Sphere
+7: Auril's Whirlwind, Stygian Ice Storm
+8: Elemental Barrier, Polar Ray
+9: Auril's Blessing, Storm of Vengeance
+
+Gruumsh:
+1: Blindness, Ox's Fortitude
+2: Draw Upon Holy Might, Spiritual Weapon (creates a spear instead of a hammer)
+3: Emotion: Rage, Strength of One
+4: Blood Rage, Call Lightning
+5: Champion's Strength, Righteous Wrath of the Faithful
+6: Spiritual Wrath, Trollish Fortitude
+7: Aura of Vitality, Tenser's Transformation
+8: Iron Body, Summon Fiend
+9: Earthquake, Executioner's Eyes
+
+Iyachtu Xvim:
+1: Bane, Inflict Light Wounds
+2: Inflict Moderate Wounds, Melf's Acid Arrow
+3: Protection from Acid, Inflict Serious Wounds
+4: Inflict Critical Wounds, Vitriolic Sphere
+5: Chaos, Slay Living
+6: Death Fog, Harm
+7: Acid Storm, Destruction
+8: Enslave, Utter Hatred
+9: Black Blade of Disaster, Mass Harm
+
+Laduguer:
+1: Command, Spiritual Weapon
+2: Invisibility, Ox's Fortitude
+3: Emotion: Despair, Enlarge Creature
+4: Improved Invisibility, Iron Skins
+5: Domination, Flaying
+6: Flesh to Stone, Power Word: Silence
+7: Iron Body, Power Word: Stun
+8: Enslave, Power Word: Blind
+9: Aegis, Mass Dominate
+
+Lolth:
+1: Charm Person or Animal, Hold Animal
+2: Darkness, Web
+3: Poison, Spider Spawn
+4: Free Action, Hold Monster
+5: Chaos, Insect Plague
+6: Disintegrate, Soul Eater
+7: Cacofiend (summons a yochlol), Creeping Doom
+8: Spell Trap, Summon Fiend (summons a bebilith)
+9: Gate (summons a retriever), Soul Bind
+
+Note: Drider priestesses do not have Lolth domain spells, as part of the punishment from Lolth that turned them into driders. Only the drow priestess you find north of Malavon's camp has domain spells.
 
 Malar:
-1: Hunter's Mark
-2: Summon Nature's Ally II
-3: Summon Nature's Ally III, Animal Rage
-4: Emotion: Rage
-5:
-6: Summon Nature's Ally VI
-7: Creeping Doom
-8:
-9: Executioner's Eyes
+1: Hunter's Mark, Summon Nature's Ally I
+2: Beast Claw, Summon Nature's Ally II
+3: Animal Rage, Summon Nature's Ally III
+4: Emotion: Rage, Summon Nature's Ally IV
+5: Conjure Animals, Summon Nature's Ally V
+6: Insect Plague, Summon Nature's Ally VI
+7: Creeping Doom, Wyvern Call
+8: Contagious Fear, Vipergout
+9: Aura of Vitality, Executioner's Eyes
+
+Myrkul:
+1: Deathwatch, Ray of Enfeeblement
+2: Death Armor, Ghoul Touch
+3: Animate Skeleton, Animate Zombie
+4: Ghoulish Feast, Skull Trap
+5: Control Undead, Summon Shadow
+6: Lich Touch, Reanimate
+7: Finger of Death, Skeleton Traps
+8: Energy Drain, Symbol of Death
+9: Soul Bind, Wail of the Banshee
+
+Sseth:
+1: Charm Person, Perception Filter
+2: Horror, Snakebite
+3: Dire Charm, Poison
+4: Cloud of Pestilence, Vipergout
+5: Cloudkill, Dolorous Decay
+6: Sseth's Scales, Sseth's Venom
+7: Greater Snakebite, Regeneration
+8: Contagious Fear, Storm of Sseth
+9: Gate (summons a marilith), Power Word: Kill

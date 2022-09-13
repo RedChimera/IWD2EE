@@ -4077,10 +4077,10 @@ COPY_EXISTING ~fseeds.itm~ ~override~
 
 COPY_EXISTING ~effik.spl~ ~override~
 	LPF ADD_SPELL_EFFECT INT_VAR insert_point=0 opcode=500 target=2 timing=0 parameter1=0x49575053 parameter2=0x323231 STR_VAR resource=~MESAFESP~ END
-
+/*
 COPY_EXISTING ~effas1.spl~ ~override~ ~effas2.spl~ ~override~
 	LPF ADD_SPELL_EFFECT INT_VAR insert_point=0 opcode=500 target=2 timing=0 parameter1=0x49575053 parameter2=0x373132 STR_VAR resource=~MESAFESP~ END
-
+*/
 COPY_EXISTING ~effgt.spl~ ~override~
 	LPF ADD_SPELL_EFFECT INT_VAR insert_point=0 opcode=500 target=2 timing=0 parameter1=0x49575053 parameter2=0x383132 STR_VAR resource=~MESAFESP~ END
 

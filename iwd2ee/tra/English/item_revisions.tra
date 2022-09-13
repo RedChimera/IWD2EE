@@ -3340,7 +3340,7 @@ Weight: 1 lb.
 Feat Requirement:  Simple Weapon, Small Blade
 Type:  One-handed~
 @10717    = ~Dagger of Piercing Weakness +5~
-@10718    = ~The typical dagger has a pointed, usually double-edged blade, as opposed to a knife, which has a single edge and is a bit shorter than the dagger. 
+@10718    = ~The typical dagger has a pointed, usually double-edged blade, as opposed to a knife, which has a single edge and is a bit shorter than the dagger.
 
 STATISTICS:
 
@@ -3349,7 +3349,7 @@ Attack Bonus:  +5
 Enchantment:  +5
 Damage Type:  Piercing
 Special:
-  Piercing Weakness: Each hit lowers piercing resistance by 5 for 3 rounds (cumulative, no save)
+  Piercing Weakness: Each hit lowers piercing resistance by 3 for 2 rounds (cumulative, no save)
 Weight: 1 lb.
 Feat Requirement:  Simple Weapon, Small Blade
 Type:  One-handed~
@@ -9398,7 +9398,7 @@ STATISTICS:
 Damage:  +6 (missile)
 Attack Bonus:  +2 
 Special:
-  Missile Weakness: Bolts fired from this crossbow lower the target's Missile Resistance by 10 for 3 rounds (no save; cumulative)
+  Missile Weakness: Bolts fired from this crossbow lower the target's Missile Resistance by 6 for 3 rounds (no save; non-cumulative)
 Weight: 9 lb.
 Feat Requirement:  Simple Weapon, Crossbow
 Type:  Two-handed~

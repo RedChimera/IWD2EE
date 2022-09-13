@@ -1801,6 +1801,69 @@ BEGIN
 		REPLACE_TEXTUALLY ~ex_feat_name_id = {~ ~ex_feat_name_id = {["%name%"] = %nextid%, ~
 END
 
+DEFINE_ACTION_FUNCTION ~EXTEND_FEAT_IWD2~
+	INT_VAR
+		id=~-1~
+		nameref=0xDEFA
+		descref=0xDEFA
+		max=1
+	STR_VAR
+		script=~Feats_True~
+		prerequisite_script=~~
+		featspl_1=~NoSpellForThis~
+		featspl_2=~NoSpellForThis~
+		featspl_3=~NoSpellForThis~
+		featspl_4=~NoSpellForThis~
+		featspl_5=~NoSpellForThis~
+BEGIN
+	ACTION_IF id >= 0 AND id <= 74 BEGIN
+		ACTION_IF (~%prerequisite_script%~ STRING_EQUAL_CASE ~~) BEGIN
+			OUTER_SPRINT prerequisite_script ~%script%~
+		END
+		COPY_EXISTING ~feats.2da~ ~override~
+			COUNT_2DA_COLS numcols
+			READ_2DA_ENTRY id 0 numcols name
+			PATCH_IF nameref != 0xDEFA BEGIN
+				SET_2DA_ENTRY id 2 numcols ~%nameref%~
+			END
+			PATCH_IF descref != 0xDEFA BEGIN
+				SET_2DA_ENTRY id 3 numcols ~%descref%~
+			END
+
+		COPY_EXISTING ~b3featex.2da~ ~override~
+			COUNT_2DA_ROWS 5 numrows
+			featfound = 0
+			idrow = 0
+			FOR (i = 0; i < numrows; ++i) BEGIN
+				READ_2DA_ENTRY i 1 numcols iid
+				PATCH_IF iid = id BEGIN
+					featfound = 1
+					idrow = i
+					i = numrows
+				END ELSE PATCH_IF iid > id BEGIN
+					i = numrows
+				END ELSE BEGIN
+					idrow = i
+				END
+			END
+			PATCH_IF featfound = 1 BEGIN
+				SET_2DA_ENTRY idrow 2 5 ~%max%~
+				SET_2DA_ENTRY idrow 3 5 ~%prerequisite_script%~
+				SET_2DA_ENTRY idrow 4 5 ~%script%~
+			END ELSE BEGIN
+				INSERT_2DA_ROW idrow 5 ~%name% %nextid% %max% %prerequisite_script% %script%~
+			END
+
+		COPY_EXISTING ~%featspl_1%.spl~ ~override/FE_%nextid%_1.spl~ ~%featspl_2%.spl~ ~override/FE_%nextid%_2.spl~ ~%featspl_3%.spl~ ~override/FE_%nextid%_3.spl~ ~%featspl_4%.spl~ ~override/FE_%nextid%_4.spl~ ~%featspl_5%.spl~ ~override/FE_%nextid%_5.spl~
+			IF_EXISTS
+/*
+		COPY_EXISTING ~IEex_WEIDU.lua~ ~override~
+			REPLACE_TEXTUALLY ~ex_feat_name_id = {~ ~ex_feat_name_id = {["%name%"] = %nextid%, ~
+		END
+*/
+	END
+END
+
 DEFINE_PATCH_FUNCTION ~CONVERT_DLG_TO_IWD2_FORMAT~
 BEGIN
 	READ_LONG 0xc ulgiash

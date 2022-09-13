@@ -228,11 +228,11 @@ Benefit: Your sneak attacks deal an additional 1d6 damage. This feat may be take
 
 You are an expert at fighting with two weapons. You can attack even more quickly with them.
 
-Prerequisite: Dex 17+, Ambidexterity, Two-Weapon Fighting, Base attack bonus +16 or higher; taking this feat a second time requires 16 levels of ranger.
+Prerequisite: Dex 17+, Ambidexterity, Two-Weapon Fighting, Base attack bonus +16 or higher; taking this feat a second time requires 15 levels of ranger.
 
 Benefit: While wielding two weapons, you get a second attack per round with the off-hand weapon (at -5 attack bonus). If you have two ranks in the feat, you get a third attack per round with it (at -10 attack bonus).
 
-Special: A character with 9 levels of ranger can take the first rank in this feat (and can take the second rank at level 16) even if they don't meet the prerequisites. However, if a ranger does not meet the prerequisites, they cannot use Improved Two-Weapon Fighting unless they wear light or no armor.~
+Special: A character with 9 levels of ranger can take the first rank in this feat (and can take the second rank at level 15) even if they don't meet the prerequisites. However, if a ranger does not meet the prerequisites, they cannot use Improved Two-Weapon Fighting unless they wear light or no armor.~
 @311    = ~Improved Unarmed Abilities~
 @312    = ~IMPROVED UNARMED ABILITIES:
 
@@ -367,7 +367,7 @@ Your barbarian rage is terrifying to behold.
 
 Prerequisites: Greater Rage, Intimidate 18 or higher
 
-Benefit: While you are raging, enemies within 6 feet of you must make a Will save (DC 3 + your Intimidate skill) or run away for 3 rounds.~
+Benefit: While you are raging, enemies within 6 feet of you must make a Will save (DC 5 + 1/2 your Intimidate skill) or run away for 3 rounds.~
 @337    = ~Two-Weapon Defense~
 @338    = ~TWO-WEAPON DEFENSE:
 
@@ -433,7 +433,7 @@ You may increase the power of your spells.
 
 Prerequisites: The ability to cast 3rd-level spells.
 
-Benefit: You gain the Empower Spell ability, usable at will as a free action. Using it increases the damage, healing, and most stat bonuses of the next spell you cast by 50%, but causes it to take up a spell slot two levels higher.~
+Benefit: You gain the Empower Spell ability, usable at will as a free action. Using it increases the damage, healing, or number of creatures summoned by the next spell you cast by 50% (rounded down), but causes it to take up a spell slot two levels higher.~
 @351    = ~Extend Spell~
 @352    = ~METAMAGIC, EXTEND SPELL:
 
@@ -495,11 +495,11 @@ Benefit: You gain the Mass Spell ability, usable at will as a free action. Using
 
 You can fire multiple arrows simultaneously at a nearby target.
 
-Prerequisite: Dex 17+, Rapid Shot, Precise Shot, Base attack bonus +16 or higher; taking the feat a second time requires 16 levels of ranger
+Prerequisite: Dex 17+, Rapid Shot, Precise Shot, Base attack bonus +16 or higher; taking the feat a second time requires 15 levels of ranger
 
 Benefit: When you have Rapid Shot enabled and you attack with a bow for the first time in a round, you fire two arrows instead of one. Each of these is a separate attack roll made at a -5 penalty. If you have two ranks in the feat, you fire three arrows instead of one, each made at a -10 penalty.
 
-Special: A character with 9 levels of ranger can take the first rank in this feat (and can take the second rank at level 16) even if they don't meet the prerequisites.~
+Special: A character with 9 levels of ranger can take the first rank in this feat (and can take the second rank at level 15) even if they don't meet the prerequisites.~
 @367    = ~Combat Reflexes~
 @368    = ~COMBAT REFLEXES:
 
@@ -861,7 +861,7 @@ Advantages:
 * 6th level: Set Natural Snare. This ability sets a trap that, which triggered by an enemy, ensnares all enemies within 20 feet for 5 rounds on a failed Reflex save. The save DC is 6 plus the ranger's Wilderness Lore skill. The ranger gains an additional use of Set Natural Snare every 6 levels after 6.
 * 7th level: Woodland Stride. The ranger becomes immune to Entangle, Web, and Spike Growth.
 * 9th level: The ranger can take the Improved Two-Weapon Fighting and Manyshot feats, even if they don't meet the prerequisites.
-* 16th level: The ranger can take the Improved Two-Weapon Fighting and Manyshot feats a second time, which no other class can do.
+* 15th level: The ranger can take the Improved Two-Weapon Fighting and Manyshot feats a second time, which no other class can do.
 
 Disadvantages:
 * Rangers gain feats at a slower rate than fighters.
@@ -1029,8 +1029,8 @@ Domain Spells:
 4: Death Ward, Defensive Harmony
 5: Banishment, Repulsion
 6: Circle of Blades, Globe of Invulnerability
-7: Impervious Sanctity of Mind, Mantle
-8: Elemental Barrier, Seven Eyes
+7: Impervious Sanctity of Mind, Seven Eyes
+8: Elemental Barrier, Mantle
 9: Aegis, Iron Body~
 @582    = ~
 
@@ -1072,8 +1072,8 @@ Domain Spells:
 
 Domain Spells:
 1: Identify, Identify Creature
-2: Dispel Magic, Remove Magic
-3: Arcane Sight, Clairvoyance
+2: Arcane Sight, Clairvoyance
+3: Dispel Magic, Remove Magic
 4: True Seeing, Shout
 5: Power Word: Heal, Power Word: Silence
 6: Power Word: Stun, Spell Sequencer
@@ -1089,7 +1089,7 @@ Domain Spells:
 4: Emotion: Rage, Ghost Armor
 5: Protection from Magic Energy, Wall of Force
 6: Boulder Roll, Divine Shell
-7: Lutzaen's Local Teleport, Antimagic Field
+7: Antimagic Field, Lutzaen's Local Teleport
 8: Prismatic Spray, Reverse Gravity
 9: Elemental Legion, Teleport Step~
 @587    = ~
@@ -1110,7 +1110,7 @@ Domain Spells:
 1: Chant, True Strike
 2: Draw Upon Holy Might, Prayer
 3: Recitation, Steel Wind Strike
-4: Emotion: Rage, Duel
+4: Duel, Emotion: Rage
 5: Champion's Strength, Chaotic Commands
 6: Circle of Blades, Spiritual Wrath
 7: Mordenkainen's Sword, Tenser's Transformation
@@ -1419,6 +1419,128 @@ Benefit: You gain a +1 bonus on Will saves and a +2 bonus on Concentration check
 Your character moves a little faster than his or her comrades.
 
 Benefit: Your character moves about 33% faster than normal.~
+@716    = ~EXOTIC WEAPON PROFICIENCY, BASTARD SWORD:
+
+You are proficient with using bastard swords as a one-handed weapon.
+
+Benefit: You make attack rolls with the weapon normally. Two ranks in this feat is Weapon Focus, which grants +1 to attack. A 4th-level Fighter may take a third rank in the feat for Weapon Specialization, which grants +2 to damage. An 8th-level Fighter may take a fourth rank in the feat for Greater Weapon Focus, which grants another +1 to attack. A 12th-level Fighter may take a fifth rank in the feat for Greater Weapon Specialization, which grants another +2 to damage.
+
+Normal: A character who uses a weapon without being proficient with it suffers a -4 penalty on attack rolls.
+
+Special: Fighters are proficient with all exotic weapons. You can gain this feat multiple times.
+~
+@717    = ~MARTIAL WEAPON PROFICIENCY, AXE:
+
+This feat will allow you to be proficient with axes.
+
+Benefit: You make attack rolls with the weapon normally. Two ranks in this feat is Weapon Focus, which grants +1 to attack. A 4th-level Fighter may take a third rank in the feat for Weapon Specialization, which grants +2 to damage. An 8th-level Fighter may take a fourth rank in the feat for Greater Weapon Focus, which grants another +1 to attack. A 12th-level Fighter may take a fifth rank in the feat for Greater Weapon Specialization, which grants another +2 to damage.
+
+Normal: A character who uses a weapon without being proficient with it suffers a -4 penalty on attack rolls.
+
+Special: Barbarians, fighters, paladins, and rangers are proficient with all martial weapons. You can gain this feat multiple times.
+~
+@718    = ~MARTIAL WEAPON PROFICIENCY, BOW:
+
+This feat will allow you to be proficient with bows.
+
+Benefit: You make attack rolls with the weapon normally. Two ranks in this feat is Weapon Focus, which grants +1 to attack. A 4th-level Fighter may take a third rank in the feat for Weapon Specialization, which grants +2 to damage. An 8th-level Fighter may take a fourth rank in the feat for Greater Weapon Focus, which grants another +1 to attack. A 12th-level Fighter may take a fifth rank in the feat for Greater Weapon Specialization, which grants another +2 to damage.
+
+Normal: A character who uses a weapon without being proficient with it suffers a -4 penalty on attack rolls.
+
+Special: Barbarians, fighters, paladins, and rangers are proficient with all martial weapons. You can gain this feat multiple times.
+~
+@719    = ~MARTIAL WEAPON PROFICIENCY, FLAIL:
+
+This feat will allow you to be proficient with flails.
+
+Benefit: You make attack rolls with the weapon normally. Two ranks in this feat is Weapon Focus, which grants +1 to attack. A 4th-level Fighter may take a third rank in the feat for Weapon Specialization, which grants +2 to damage. An 8th-level Fighter may take a fourth rank in the feat for Greater Weapon Focus, which grants another +1 to attack. A 12th-level Fighter may take a fifth rank in the feat for Greater Weapon Specialization, which grants another +2 to damage.
+
+Normal: A character who uses a weapon without being proficient with it suffers a -4 penalty on attack rolls.
+
+Special: Barbarians, fighters, paladins, and rangers are proficient with all martial weapons. You can gain this feat multiple times.
+~
+@720    = ~MARTIAL WEAPON PROFICIENCY, GREATSWORD:
+
+This feat will allow you to be proficient with greatswords.
+
+Benefit: You make attack rolls with the weapon normally. Two ranks in this feat is Weapon Focus, which grants +1 to attack. A 4th-level Fighter may take a third rank in the feat for Weapon Specialization, which grants +2 to damage. An 8th-level Fighter may take a fourth rank in the feat for Greater Weapon Focus, which grants another +1 to attack. A 12th-level Fighter may take a fifth rank in the feat for Greater Weapon Specialization, which grants another +2 to damage.
+
+Normal: A character who uses a weapon without being proficient with it suffers a -4 penalty on attack rolls.
+
+Special: Barbarians, fighters, paladins, and rangers are proficient with all martial weapons. You can gain this feat multiple times.
+~
+@721    = ~MARTIAL WEAPON PROFICIENCY, HAMMER:
+
+This feat will allow you to be proficient with hammers.
+
+Benefit: You make attack rolls with the weapon normally. Two ranks in this feat is Weapon Focus, which grants +1 to attack. A 4th-level Fighter may take a third rank in the feat for Weapon Specialization, which grants +2 to damage. An 8th-level Fighter may take a fourth rank in the feat for Greater Weapon Focus, which grants another +1 to attack. A 12th-level Fighter may take a fifth rank in the feat for Greater Weapon Specialization, which grants another +2 to damage.
+
+Normal: A character who uses a weapon without being proficient with it suffers a -4 penalty on attack rolls.
+
+Special: Barbarians, fighters, paladins, and rangers are proficient with all martial weapons. You can gain this feat multiple times.
+~
+@722    = ~MARTIAL WEAPON PROFICIENCY, LARGE SWORD:
+
+This feat will allow you to be proficient with large swords.
+
+Benefit: You make attack rolls with the weapon normally. Two ranks in this feat is Weapon Focus, which grants +1 to attack. A 4th-level Fighter may take a third rank in the feat for Weapon Specialization, which grants +2 to damage. An 8th-level Fighter may take a fourth rank in the feat for Greater Weapon Focus, which grants another +1 to attack. A 12th-level Fighter may take a fifth rank in the feat for Greater Weapon Specialization, which grants another +2 to damage.
+
+Normal: A character who uses a weapon without being proficient with it suffers a -4 penalty on attack rolls.
+
+Special: Barbarians, fighters, paladins, and rangers are proficient with all martial weapons. You can gain this feat multiple times.
+~
+@723    = ~MARTIAL WEAPON PROFICIENCY, POLEARM:
+
+This feat will allow you to be proficient with polearms.
+
+Benefit: You make attack rolls with the weapon normally. Two ranks in this feat is Weapon Focus, which grants +1 to attack. A 4th-level Fighter may take a third rank in the feat for Weapon Specialization, which grants +2 to damage. An 8th-level Fighter may take a fourth rank in the feat for Greater Weapon Focus, which grants another +1 to attack. A 12th-level Fighter may take a fifth rank in the feat for Greater Weapon Specialization, which grants another +2 to damage.
+
+Normal: A character who uses a weapon without being proficient with it suffers a -4 penalty on attack rolls.
+
+Special: Barbarians, fighters, paladins, and rangers are proficient with all martial weapons. You can gain this feat multiple times.
+~
+@724    = ~SIMPLE WEAPON PROFICIENCY, CROSSBOW:
+
+You understand how to use crossbows.
+
+Benefit: You make attack rolls with simple weapons normally. Two ranks in this feat is Weapon Focus, which grants +2 to hit and damage. Three ranks in the feat is Weapon Specialization, which grants +5 to hit and damage. Only characters with four or more levels of Fighter may take Weapon Specialization.
+
+Normal: A character who uses a weapon without being proficient with it suffers a -4 penalty on attack rolls.
+~
+@725    = ~SIMPLE WEAPON PROFICIENCY, MACE:
+
+You understand how to use maces.
+
+Benefit: You make attack rolls with the weapon normally. Two ranks in this feat is Weapon Focus, which grants +1 to attack. A 4th-level Fighter may take a third rank in the feat for Weapon Specialization, which grants +2 to damage. An 8th-level Fighter may take a fourth rank in the feat for Greater Weapon Focus, which grants another +1 to attack. A 12th-level Fighter may take a fifth rank in the feat for Greater Weapon Specialization, which grants another +2 to damage.
+
+Normal: A character who uses a weapon without being proficient with it suffers a -4 penalty on attack rolls.
+~
+@726    = ~SIMPLE WEAPON PROFICIENCY, MISSILE:
+
+You understand how to use missile weapons such as darts and slings.
+
+Benefit: You make attack rolls with the weapon normally. Two ranks in this feat is Weapon Focus, which grants +1 to attack. A 4th-level Fighter may take a third rank in the feat for Weapon Specialization, which grants +2 to damage. An 8th-level Fighter may take a fourth rank in the feat for Greater Weapon Focus, which grants another +1 to attack. A 12th-level Fighter may take a fifth rank in the feat for Greater Weapon Specialization, which grants another +2 to damage.
+
+Normal: A character who uses a weapon without being proficient with it suffers a -4 penalty on attack rolls.
+
+Note: Shortbows and longbows use Martial Weapon Proficiency, Bow.
+~
+@727    = ~SIMPLE WEAPON PROFICIENCY, QUARTERSTAFF:
+
+You understand how to use quarterstaves.
+
+Benefit: You make attack rolls with the weapon normally. Two ranks in this feat is Weapon Focus, which grants +1 to attack. A 4th-level Fighter may take a third rank in the feat for Weapon Specialization, which grants +2 to damage. An 8th-level Fighter may take a fourth rank in the feat for Greater Weapon Focus, which grants another +1 to attack. A 12th-level Fighter may take a fifth rank in the feat for Greater Weapon Specialization, which grants another +2 to damage.
+
+Normal: A character who uses a weapon without being proficient with it suffers a -4 penalty on attack rolls.
+~
+@728    = ~SIMPLE WEAPON PROFICIENCY, SMALL BLADE/TOUCH ATTACK:
+
+You understand how to use small blades such as daggers and short swords, as well as how to make touch attacks, such as unarmed strikes, natural weapons, or magical attacks that require an attack roll.
+
+Benefit: You make attack rolls with the weapon normally. Two ranks in this feat is Weapon Focus, which grants +1 to attack. A 4th-level Fighter may take a third rank in the feat for Weapon Specialization, which grants +2 to damage. An 8th-level Fighter may take a fourth rank in the feat for Greater Weapon Focus, which grants another +1 to attack. A 12th-level Fighter may take a fifth rank in the feat for Greater Weapon Specialization, which grants another +2 to damage.
+
+Normal: A character who uses a weapon without being proficient with it suffers a -4 penalty on attack rolls.
+~
 @783    = ~Human~
 @784    = ~HUMAN:
 
@@ -2084,7 +2206,7 @@ This metamagic makes the next spell you cast last twice as long. It will take up
 This metamagic prevents the next spell you cast from harming allies. It will take up a spell slot one level higher. Metamagic abilities can be used as a free action any number of times per day.~
 @962    = ~Empower Spell
 
-This metamagic increases the damage, healing, and most stat bonuses of the next spell you cast by 50%. It will take up a spell slot two levels higher. Metamagic abilities can be used as a free action any number of times per day.~
+This metamagic increases the damage, healing, and number of creatures summoned by the next spell you cast by 50% (rounded down). It will take up a spell slot two levels higher. Metamagic abilities can be used as a free action any number of times per day.~
 @963    = ~Quicken Spell
 
 This metamagic allows you to instantly cast your next spell, even if you've already cast a spell for the round. It will take up a spell slot two levels higher. You may only quicken one spell per round. Metamagic abilities can be used as a free action any number of times per day.~

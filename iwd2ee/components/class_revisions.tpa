@@ -739,7 +739,28 @@ LAF ADD_FEAT_IWD2 INT_VAR nameref=RESOLVE_STR_REF(@378) descref=RESOLVE_STR_REF(
 LAF ADD_FEAT_IWD2 INT_VAR nameref=RESOLVE_STR_REF(@382) descref=RESOLVE_STR_REF(@383) max=5 STR_VAR name=~ME_ADVANCED_SPELL_CAPACITY~ script=~Feats_AdvancedSpellCapacity~ prerequisite_script=~Prereq_AdvancedSpellCapacity~ featspl_1=~USFIMSC1~ featspl_2=~USFIMSC2~ featspl_3=~USFIMSC3~ featspl_4=~USFIMSC4~ featspl_5=~USFIMSC5~ END
 LAF ADD_FEAT_IWD2 INT_VAR nameref=RESOLVE_STR_REF(@384) descref=RESOLVE_STR_REF(@385) max=1 STR_VAR name=~ME_ASSASSIN~ script=~Feats_Assassin~ featspl_1=~USFASSA1~ END
 INCLUDE ~%mod_folder%/components/attacks_of_opportunity_1.tpa~
+/*
+LAF EXTEND_FEAT_IWD2 INT_VAR id=57 descref=RESOLVE_STR_REF(@728) max=5 STR_VAR script=~Feats_WeaponProficiency~ prerequisite_script=~Prereq_WeaponProficiency~ END
+LAF EXTEND_FEAT_IWD2 INT_VAR id=56 descref=RESOLVE_STR_REF(@727) max=5 STR_VAR script=~Feats_WeaponProficiency~ prerequisite_script=~Prereq_WeaponProficiency~ END
+LAF EXTEND_FEAT_IWD2 INT_VAR id=55 descref=RESOLVE_STR_REF(@726) max=5 STR_VAR script=~Feats_WeaponProficiency~ prerequisite_script=~Prereq_WeaponProficiency~ END
+LAF EXTEND_FEAT_IWD2 INT_VAR id=54 descref=RESOLVE_STR_REF(@725) max=5 STR_VAR script=~Feats_WeaponProficiency~ prerequisite_script=~Prereq_WeaponProficiency~ END
+LAF EXTEND_FEAT_IWD2 INT_VAR id=53 descref=RESOLVE_STR_REF(@724) max=5 STR_VAR script=~Feats_WeaponProficiency~ prerequisite_script=~Prereq_WeaponProficiency~ END
+LAF EXTEND_FEAT_IWD2 INT_VAR id=44 descref=RESOLVE_STR_REF(@723) max=5 STR_VAR script=~Feats_WeaponProficiency~ prerequisite_script=~Prereq_WeaponProficiency~ END
+LAF EXTEND_FEAT_IWD2 INT_VAR id=43 descref=RESOLVE_STR_REF(@722) max=5 STR_VAR script=~Feats_WeaponProficiency~ prerequisite_script=~Prereq_WeaponProficiency~ END
+LAF EXTEND_FEAT_IWD2 INT_VAR id=42 descref=RESOLVE_STR_REF(@721) max=5 STR_VAR script=~Feats_WeaponProficiency~ prerequisite_script=~Prereq_WeaponProficiency~ END
+LAF EXTEND_FEAT_IWD2 INT_VAR id=41 descref=RESOLVE_STR_REF(@720) max=5 STR_VAR script=~Feats_WeaponProficiency~ prerequisite_script=~Prereq_WeaponProficiency~ END
+LAF EXTEND_FEAT_IWD2 INT_VAR id=40 descref=RESOLVE_STR_REF(@719) max=5 STR_VAR script=~Feats_WeaponProficiency~ prerequisite_script=~Prereq_WeaponProficiency~ END
+LAF EXTEND_FEAT_IWD2 INT_VAR id=39 descref=RESOLVE_STR_REF(@718) max=5 STR_VAR script=~Feats_WeaponProficiency~ prerequisite_script=~Prereq_WeaponProficiency~ END
+LAF EXTEND_FEAT_IWD2 INT_VAR id=38 descref=RESOLVE_STR_REF(@717) max=5 STR_VAR script=~Feats_WeaponProficiency~ prerequisite_script=~Prereq_WeaponProficiency~ END
+LAF EXTEND_FEAT_IWD2 INT_VAR id=18 descref=RESOLVE_STR_REF(@716) max=5 STR_VAR script=~Feats_WeaponProficiency~ prerequisite_script=~Prereq_WeaponProficiency~ END
 
+COPY ~%mod_folder%/tables/WSPECIA2.2da~ ~override/WSPECIAL.2da~
+
+COPY_EXISTING ~IEex_WEIDU.lua~ ~override~
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~IEex_NEW_WEAPON_PROFICIENCY_COUNT *=.*~ ~IEex_NEW_WEAPON_PROFICIENCY_COUNT = 5~
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_proficiency_damage *=.*~ ~ex_proficiency_damage = {[0] = 0, [1] = 0, [2] = 0, [3] = 2, [4] = 2, [5] = 4}~
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_proficiency_attack *=.*~ ~ex_proficiency_attack = {[0] = -4, [1] = 0, [2] = 1, [3] = 1, [4] = 2, [5] = 2}~
+*/
 // New descriptions for classes
 COPY_EXISTING ~help02.2da~ ~override~
   COUNT_2DA_COLS num_cols
