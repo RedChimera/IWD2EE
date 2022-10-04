@@ -456,3 +456,7 @@ BEGIN @87 DESIGNATED 90
 SUBCOMPONENT @85
 
       INCLUDE ~%mod_folder%/components/roll_for_stats_2.tpa~ //~Plus/minus buttons enabled~
+
+BEGIN @89 DESIGNATED 91
+
+      INCLUDE ~%mod_folder%/components/more_traps.tpa~ //~Add more traps~

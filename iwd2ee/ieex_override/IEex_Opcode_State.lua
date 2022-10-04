@@ -214,6 +214,8 @@ function IEex_Extern_OnAddSummonToLimitHook(effectData, summonerData, summonedDa
 	IEex_WriteByte(summonedData + 0x730, IEex_ReadByte(effectData + 0xC4, 0x0))
 	IEex_WriteByte(summonedData + 0x731, IEex_ReadByte(effectData + 0xC5, 0x0))
 	IEex_WriteByte(summonedData + 0x732, IEex_ReadByte(effectData + 0xC6, 0x0))
+	local internalFlags = bit.bor(IEex_ReadDword(effectData + 0xCC), IEex_ReadDword(effectData + 0xD4))
+	IEex_WriteDword(summonedData + 0x734, internalFlags)
 	local summonedID = IEex_GetActorIDShare(summonedData)
 	local summonerID = IEex_GetActorIDShare(summonerData)
 	IEex_ApplyEffectToActor(summonedID, {
@@ -446,6 +448,7 @@ ex_empowerable_opcodes = {[12] = true, [17] = true, [18] = true, [25] = true, [6
 					elseif theopcode == 288 and theparameter2 == 225 and bit.band(thesavingthrow, 0x10000) == 0 and bit.band(thesavingthrow, 0x100000) == 0 and bit.band(thesavingthrow, 0x800000) > 0 then
 						local matchHeader = IEex_ReadWord(eData + 0x48, 0x0)
 						local spellRES = IEex_ReadLString(eData + 0x30, 8)
+						local thesourceID = IEex_ReadDword(eData + 0x110)
 						if (theparameter1 == 0 or exhitIndexList[theparameter1] ~= nil) and spellRES ~= "" and (matchHeader == 0 or matchHeader == headerType) and (bit.band(thesavingthrow, 0x4000000) == 0 or bit.band(IEex_ReadDword(effectData + 0xD4), 0x40) == 0) then
 							local thecasterlvl = 10
 							local newEffectTarget = targetID
@@ -456,10 +459,15 @@ ex_empowerable_opcodes = {[12] = true, [17] = true, [18] = true, [25] = true, [6
 								newEffectTargetX = IEex_ReadDword(effectData + 0x7C)
 								newEffectTargetY = IEex_ReadDword(effectData + 0x80)
 							end
-							local newEffectSource = sourceID
+							local newEffectSource = thesourceID
 							local newEffectSourceX = IEex_ReadDword(effectData + 0x7C)
 							local newEffectSourceY = IEex_ReadDword(effectData + 0x80)
-							if (bit.band(thesavingthrow, 0x400000) > 0) then
+							if not IEex_IsSprite(thesourceID, false) then
+								newEffectSource = sourceID
+							end
+							if (bit.band(thesavingthrow, 0x80000) > 0) then
+								newEffectSource = sourceID
+							elseif (bit.band(thesavingthrow, 0x400000) > 0) then
 								newEffectSource = targetID
 								newEffectSourceX = IEex_ReadDword(effectData + 0x84)
 								newEffectSourceY = IEex_ReadDword(effectData + 0x88)

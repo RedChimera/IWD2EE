@@ -138,6 +138,10 @@ Weight:  0 lb.~
 @23075=~20 damage resisted except from a good-aligned piercing weapon~
 @23076=~Bebilith~
 @23077=~Bebilith Bite~
+@23078=~Death Knight Sword~
+@23079=~Pit Fiend~
+@23080=~Pit Fiend's Bite~
+@23081=~Sseth's Kiss~
 
 @24002=~Call Slayer Knights~
 @24003=~Call Gelugon~
@@ -156,3 +160,5 @@ Weight:  0 lb.~
 @24018=~Lower Electricity Resistance~
 @24019=~Dark Thorn Growth~
 @24020=~Chilling Gaze~
+@24032=~Charge~
+@24033=~Gore~

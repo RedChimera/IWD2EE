@@ -5639,6 +5639,7 @@ COPY_EXISTING ~ar5101.are~ ~override~ //Hook Horror caves
 
 COPY_EXISTING ~AR5200.are~ ~override~ //Black Raven Monastery, outside
 	LPF fj_are_structure INT_VAR fj_loc_x=777 fj_loc_y=170 fj_type=8 fj_trap_loc_x=777 fj_trap_loc_y=170 fj_box_left=796 fj_box_top=220 fj_box_right=810 fj_box_bottom=239 fj_vertex_0=(809 + 222 * 0x10000) fj_vertex_1=(800 + 220 * 0x10000) fj_vertex_2=(796 + 237 * 0x10000) fj_vertex_3=(810 + 239 * 0x10000) STR_VAR fj_structure_type=~container~ fj_name=~US_Full_Nest~ END
+	LPF fj_are_structure INT_VAR fj_charge0=1 fj_con_itm_idx=1 STR_VAR fj_structure_type=~itm~ fj_name=~USRT12_V~ END
 	READ_SHORT 0x6A triggernumber
 	READ_LONG 0x6C triggeroffset
 	FOR (i = 0; i < triggernumber; ++i) BEGIN

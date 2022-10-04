@@ -69,6 +69,7 @@ Components:
 50. Remove the summoning limit
 51. Add attacks of opportunity to the game
 52. Roll for stats at character creation
+53. Add more traps
 
 ## Class Revisions
 
@@ -395,3 +396,7 @@ This component allows characters to make attacks of opportunity in melee under c
 This component lets you roll for stats rather than use IWD2's normal point-buy system. There are two subcomponents. The first one doesn't allow you to increment or decrement stats with the plus/minus buttons, but you can choose which ability score each number rolled is assigned to (like in The Temple of Elemental Evil). The second subcomponent lets you use the plus/minus buttons.
 
 Much of the credit for the inspiration for this mod goes to the makers of Light of Selune, IWD2-Ease, and Tactics4IWD2, which provided the groundwork for this mod and the changes it makes. I would also like to thank Firecrow, who provided indispensable feedback and played an instrumental role in inspiring many of the mod's features, and subtledoctor, bubb, and Gwendolyne for providing invaluable technical support during the construction of the mod. Credit goes to Erephine for making the new animations from One Pixel Productions, which have been added to IWD2EE.
+
+## Add more traps
+
+This component adds more traps to the game, and makes certain existing traps somewhat more dangerous. Don't worry; this shouldn't turn IWD2 into Durlag's Tower. The point is to add twists to existing encounters and make trap-disarming skills more meaningful.

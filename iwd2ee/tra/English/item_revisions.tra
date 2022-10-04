@@ -127,7 +127,7 @@ Special:
  Constant Effect: User under the effects of the spell Mind Blank while equipped
 Weight: 1 lb.~
 //@10048    = ~Flame Dance Talisman~
-@10049    = ~Fire can be the bringer of life, or the harvester of death. With the Flame Dance Talisman, both scenarios are true. Crafted by an unknown, yet clever sorcerer, the Flame Dance Talisman gave its wearer added protection against all sorts of melee attacks and had the power to launch a fireball once per day at would-be attackers.
+@10049    = ~Fire can be the bringer of life, or the harvester of death. With the Flame Dance Talisman, both scenarios are true. Crafted by an unknown, yet clever sorcerer, the Flame Dance Talisman gave its wearer added protection against all sorts of melee attacks and had the power to launch a fireball three times per day at would-be attackers.
 
 STATISTICS:
 
@@ -136,7 +136,7 @@ Special:
  Spell Power:  Can cast the spell Fireball (at level 10) three times per day
 Weight: 1 lb.~
 //@10050    = ~Sunfire Talisman~
-@10051    = ~Fire can be the bringer of life, or the harvester of death. With the Sunfire Talisman, both scenarios are true. Crafted by an unknown, yet clever sorcerer, the Sunfire Talisman gave its wearer added protection against all sorts of melee attacks and had the power to ignite a sunfire fireball once per day at surrounding would-be attackers. In addition, if the would be attackers tried to turn the tables and attack the sorcerer with their own fire weapons, the Sunfire Talisman would grant its wearer added resistance to fire.
+@10051    = ~Fire can be the bringer of life, or the harvester of death. With the Sunfire Talisman, both scenarios are true. Crafted by an unknown, yet clever sorcerer, the Sunfire Talisman gave its wearer added protection against all sorts of melee attacks and had the power to ignite a sunfire fireball three times per day at surrounding would-be attackers. In addition, if the would be attackers tried to turn the tables and attack the sorcerer with their own fire weapons, the Sunfire Talisman would grant its wearer added resistance to fire.
 
 STATISTICS:
 

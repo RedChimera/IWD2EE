@@ -2511,6 +2511,14 @@ COPY_EXISTING ~uspr851.spl~ ~override~
 COPY_EXISTING ~USPR851A.bam~ ~override/SPPR727A.bam~ ~USPR851B.bam~ ~override/SPPR727B.bam~ ~USPR851C.bam~ ~override/SPPR727C.bam~
 	IF_EXISTS
 */
+
+COPY_EXISTING ~uspr853.spl~ ~override~
+	SAY NAME1 @35853
+	SAY NAME2 @35853
+	SAY UNIDENTIFIED_DESC @36853
+	SAY IDENTIFIED_DESC @36853
+	LPF ALTER_EFFECT INT_VAR silent=1 check_headers=1 check_globals=1 match_opcode=139 match_parameter1=35853 parameter1=RESOLVE_STR_REF(@35853) END
+
 COPY_EXISTING ~uspr951.spl~ ~override~
 	SAY NAME1 @35951
 	SAY NAME2 @35951
@@ -4338,40 +4346,6 @@ COPY_EXISTING ~63vese.cre~ ~override~
 
 //STRING_SET_EVALUATE 8810 @35653
 STRING_SET_EVALUATE 40239 @982
-
-<<<<<<<< .../script.baf
-IF
-	Or(6)
-		CheckSpellState(Player1,ME_OMNIVISION_ENABLED)
-		CheckSpellState(Player2,ME_OMNIVISION_ENABLED)
-		CheckSpellState(Player3,ME_OMNIVISION_ENABLED)
-		CheckSpellState(Player4,ME_OMNIVISION_ENABLED)
-		CheckSpellState(Player5,ME_OMNIVISION_ENABLED)
-		CheckSpellState(Player6,ME_OMNIVISION_ENABLED)
-	!GlobalTimerNotExpired("US_Omnivision_Check","GLOBAL")
-THEN
-	RESPONSE #100
-		SetGlobal("US_Omnivision_Enabled","GLOBAL",1)
-		SetGlobalTimer("US_Omnivision_Check","GLOBAL",1)
-		SetVisualRange(255)
-END
-
-IF
-	!CheckSpellState(Player1,ME_OMNIVISION_ENABLED)
-	!CheckSpellState(Player2,ME_OMNIVISION_ENABLED)
-	!CheckSpellState(Player3,ME_OMNIVISION_ENABLED)
-	!CheckSpellState(Player4,ME_OMNIVISION_ENABLED)
-	!CheckSpellState(Player5,ME_OMNIVISION_ENABLED)
-	!CheckSpellState(Player6,ME_OMNIVISION_ENABLED)
-	Global("US_Omnivision_Enabled","GLOBAL",1)
-THEN
-	RESPONSE #100
-		SetGlobal("US_Omnivision_Enabled","GLOBAL",0)
-		SetVisualRange(0)
-END
-
->>>>>>>>
-EXTEND_BOTTOM ~DPLAYER3.bcs~ ~.../script.baf~
 
 <<<<<<<< .../script.baf
 IF

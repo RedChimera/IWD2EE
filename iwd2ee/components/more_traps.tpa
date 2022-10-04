@@ -5,6 +5,54 @@ OUTER_PATCH us_more_traps_variables BEGIN
 	doorsize=0xc8
 END
 
+COPY ~%mod_folder%/bcs/bcs_more_traps~ ~override~
+
+COPY ~%mod_folder%/spl/spl_more_traps~ ~override~
+
+/*
+COPY_EXISTING ~spwi312.spl~ ~override/ustw312.spl~
+	LPF ADD_SPELL_EFFECT INT_VAR insert_point=0 opcode=500 target=2 timing=0 parameter2=30 savingthrow=0x110000 special=9 STR_VAR resource=~MESPLPRT~ END
+	LPF ALTER_SPELL_EFFECT INT_VAR savebonus=7 END
+*/
+
+COPY_EXISTING ~ustw352.spl~ ~override~
+	SAY NAME1 @37352
+	SAY NAME2 @37352
+
+COPY_EXISTING ~spin249.spl~ ~override~
+	LPF ALTER_EFFECT INT_VAR silent=1 check_headers=1 check_globals=0 match_opcode=500 parameter1=0xA0600 STR_VAR match_resource=~EXDAMAGE~ END
+
+COPY_EXISTING ~spin251.spl~ ~override~
+	LPF ALTER_EFFECT INT_VAR silent=1 check_headers=1 check_globals=0 match_opcode=500 parameter1=0x51400 STR_VAR match_resource=~EXDAMAGE~ END
+
+COPY_EXISTING ~spin252.spl~ ~override~
+	SAY NAME1 @23081
+	SAY NAME2 @23081
+	LPF ALTER_EFFECT INT_VAR silent=1 check_headers=1 check_globals=0 match_opcode=500 parameter1=0x80A00 STR_VAR match_resource=~EXDAMAGE~ END
+
+COPY_EXISTING ~spin253.spl~ ~override~
+	LPF ALTER_EFFECT INT_VAR silent=1 check_headers=1 check_globals=0 match_opcode=500 parameter1=0x80400 STR_VAR match_resource=~EXDAMAGE~ END
+
+COPY_EXISTING ~spin254.spl~ ~override~
+	LPF ALTER_EFFECT INT_VAR silent=1 check_headers=1 check_globals=0 match_opcode=500 parameter1=0x90600 STR_VAR match_resource=~EXDAMAGE~ END
+
+COPY_EXISTING ~spwi001.spl~ ~override~ ~spwi002.spl~ ~override~
+	LPF ALTER_SPELL_EFFECT INT_VAR savebonus=7 END
+
+COPY_EXISTING ~spwi004.spl~ ~override~
+	LPF ALTER_SPELL_EFFECT INT_VAR savebonus=7 END
+	LPF ALTER_SPELL_EFFECT INT_VAR match_opcode=39 new_opcode=404 END
+
+COPY_EXISTING ~spwi016.spl~ ~override~ ~spwi017.spl~ ~override~
+	LPF ALTER_SPELL_EFFECT INT_VAR savebonus=15 END
+	LPF ALTER_SPELL_EFFECT INT_VAR match_opcode=25 parameter1=4 parameter2=2 END
+
+COPY_EXISTING ~spwi024.spl~ ~override~
+	LPF ALTER_SPELL_EFFECT INT_VAR savebonus=10 END
+
+COPY_EXISTING ~spwi095.spl~ ~override~
+	LPF ALTER_SPELL_EFFECT INT_VAR savebonus=14 END
+
 COPY_EXISTING ~AR2000.are~ ~override~
 	LPF fj_are_structure INT_VAR
 fj_type=0
@@ -23,7 +71,7 @@ fj_vertex_0=(802 + (1270 << 16))
 fj_vertex_1=(830 + (1285 << 16))
 fj_vertex_2=(833 + (1344 << 16))
 fj_vertex_3=(805 + (1329 << 16))
-STR_VAR fj_structure_type=~region~ fj_name=~US_Trap_1~ fj_reg_script=~~ END
+STR_VAR fj_structure_type=~region~ fj_name=~US_Trap_1~ fj_reg_script=~00P2005~ END
 	LPF fj_are_structure INT_VAR
 fj_type=0
 fj_flags=0x8
@@ -41,7 +89,7 @@ fj_vertex_0=(2880 + (1029 << 16))
 fj_vertex_1=(2925 + (1019 << 16))
 fj_vertex_2=(2987 + (1168 << 16))
 fj_vertex_3=(2942 + (1178 << 16))
-STR_VAR fj_structure_type=~region~ fj_name=~US_Trap_2~ fj_reg_script=~~ END
+STR_VAR fj_structure_type=~region~ fj_name=~US_Trap_2~ fj_reg_script=~00P2005~ END
 
 COPY_EXISTING ~AR2001.are~ ~override~
 	LPF fj_are_structure INT_VAR
@@ -61,13 +109,13 @@ fj_vertex_0=(2095 + (687 << 16))
 fj_vertex_1=(2223 + (687 << 16))
 fj_vertex_2=(2238 + (743 << 16))
 fj_vertex_3=(2110 + (743 << 16))
-STR_VAR fj_structure_type=~region~ fj_name=~US_Trap_1~ fj_reg_script=~~ END
+STR_VAR fj_structure_type=~region~ fj_name=~US_Trap_1~ fj_reg_script=~00P2007~ END
 
 COPY_EXISTING ~AR2002.are~ ~override~
-	LPF ALTER_AREA_REGION_IWD2 INT_VAR trap_detect=1030 trap_remove=50 STR_VAR region_name=~Trap 1~ region_script=~~ END
-	LPF ALTER_AREA_REGION_IWD2 INT_VAR trap_detect=1030 trap_remove=55 STR_VAR region_name=~Trap 2~ region_script=~~ END
-	LPF ALTER_AREA_REGION_IWD2 INT_VAR trap_detect=1035 trap_remove=50 STR_VAR region_name=~Trap 3~ region_script=~~ END
-	LPF ALTER_AREA_REGION_IWD2 INT_VAR trap_detect=1030 trap_remove=50 STR_VAR region_name=~Trap 4~ region_script=~~ END
+	LPF ALTER_AREA_REGION_IWD2 INT_VAR trap_detect=1030 trap_remove=50 STR_VAR region_name=~Trap 1~ region_script=~USTW312~ END
+	LPF ALTER_AREA_REGION_IWD2 INT_VAR trap_detect=1030 trap_remove=55 STR_VAR region_name=~Trap 2~ region_script=~USTW312~ END
+	LPF ALTER_AREA_REGION_IWD2 INT_VAR trap_detect=1035 trap_remove=50 STR_VAR region_name=~Trap 3~ region_script=~USTW211~ END
+	LPF ALTER_AREA_REGION_IWD2 INT_VAR trap_detect=1030 trap_remove=50 STR_VAR region_name=~Trap 4~ region_script=~USTW211~ END
 	LPF fj_are_structure INT_VAR
 fj_type=0
 fj_flags=0x8
@@ -85,7 +133,7 @@ fj_vertex_0=(990 + (1475 << 16))
 fj_vertex_1=(1051 + (1413 << 16))
 fj_vertex_2=(1162 + (1550 << 16))
 fj_vertex_3=(1100 + (1595 << 16))
-STR_VAR fj_structure_type=~region~ fj_name=~US_Trap_1~ fj_reg_script=~~ END
+STR_VAR fj_structure_type=~region~ fj_name=~US_Trap_1~ fj_reg_script=~USTW211~ END
 
 COPY_EXISTING ~AR2100.are~ ~override~
 	LPF fj_are_structure INT_VAR
@@ -105,7 +153,7 @@ fj_vertex_0=(1381 + (883 << 16))
 fj_vertex_1=(1403 + (883 << 16))
 fj_vertex_2=(1403 + (952 << 16))
 fj_vertex_3=(1381 + (952 << 16))
-STR_VAR fj_structure_type=~region~ fj_name=~US_Trap_1~ fj_reg_script=~~ END
+STR_VAR fj_structure_type=~region~ fj_name=~US_Trap_1~ fj_reg_script=~USTW222~ END
 	LPF fj_are_structure INT_VAR
 fj_type=0
 fj_flags=0x8
@@ -123,7 +171,7 @@ fj_vertex_0=(1287 + (896 << 16))
 fj_vertex_1=(1309 + (896 << 16))
 fj_vertex_2=(1309 + (962 << 16))
 fj_vertex_3=(1287 + (962 << 16))
-STR_VAR fj_structure_type=~region~ fj_name=~US_Trap_2~ fj_reg_script=~~ END
+STR_VAR fj_structure_type=~region~ fj_name=~US_Trap_2~ fj_reg_script=~USTW116~ END
 	LPF fj_are_structure INT_VAR
 fj_type=0
 fj_flags=0x8
@@ -141,7 +189,7 @@ fj_vertex_0=(1183 + (539 << 16))
 fj_vertex_1=(1160 + (570 << 16))
 fj_vertex_2=(1278 + (625 << 16))
 fj_vertex_3=(1301 + (594 << 16))
-STR_VAR fj_structure_type=~region~ fj_name=~US_Trap_3~ fj_reg_script=~~ END
+STR_VAR fj_structure_type=~region~ fj_name=~US_Trap_3~ fj_reg_script=~USTW222~ END
 	LPF fj_are_structure INT_VAR
 fj_type=0
 fj_flags=0x8
@@ -159,7 +207,7 @@ fj_vertex_0=(1151 + (621 << 16))
 fj_vertex_1=(1128 + (652 << 16))
 fj_vertex_2=(1246 + (707 << 16))
 fj_vertex_3=(1269 + (676 << 16))
-STR_VAR fj_structure_type=~region~ fj_name=~US_Trap_4~ fj_reg_script=~~ END
+STR_VAR fj_structure_type=~region~ fj_name=~US_Trap_4~ fj_reg_script=~USTW116~ END
 	LPF fj_are_structure INT_VAR
 fj_type=0
 fj_flags=0x8
@@ -177,9 +225,10 @@ fj_vertex_0=(873 + (678 << 16))
 fj_vertex_1=(873 + (811 << 16))
 fj_vertex_2=(803 + (905 << 16))
 fj_vertex_3=(801 + (863 << 16))
-STR_VAR fj_structure_type=~region~ fj_name=~US_Trap_5~ fj_reg_script=~~ END
+STR_VAR fj_structure_type=~region~ fj_name=~US_Trap_5~ fj_reg_script=~USTW215~ END
 
 COPY_EXISTING ~AR2102.are~ ~override~
+/*
 	LPF fj_are_structure INT_VAR
 fj_type=0
 fj_flags=0x8
@@ -198,6 +247,7 @@ fj_vertex_1=(1863 + (635 << 16))
 fj_vertex_2=(1968 + (786 << 16))
 fj_vertex_3=(1953 + (823 << 16))
 STR_VAR fj_structure_type=~region~ fj_name=~US_Trap_1~ fj_reg_script=~~ END
+*/
 	LPF fj_are_structure INT_VAR
 fj_type=0
 fj_flags=0x8
@@ -215,7 +265,7 @@ fj_vertex_0=(848 + (732 << 16))
 fj_vertex_1=(814 + (791 << 16))
 fj_vertex_2=(1071 + (899 << 16))
 fj_vertex_3=(1119 + (856 << 16))
-STR_VAR fj_structure_type=~region~ fj_name=~US_Trap_2~ fj_reg_script=~~ END
+STR_VAR fj_structure_type=~region~ fj_name=~US_Trap_2~ fj_reg_script=~USTW211~ END
 	LPF fj_are_structure INT_VAR
 fj_type=0
 fj_flags=0x8
@@ -233,7 +283,7 @@ fj_vertex_0=(1107 + (969 << 16))
 fj_vertex_1=(1154 + (1016 << 16))
 fj_vertex_2=(1084 + (1142 << 16))
 fj_vertex_3=(1027 + (1094 << 16))
-STR_VAR fj_structure_type=~region~ fj_name=~US_Trap_3~ fj_reg_script=~~ END
+STR_VAR fj_structure_type=~region~ fj_name=~US_Trap_3~ fj_reg_script=~USTW211~ END
 	LPF fj_are_structure INT_VAR
 fj_type=0
 fj_flags=0x8
@@ -251,9 +301,20 @@ fj_vertex_0=(736 + (1096 << 16))
 fj_vertex_1=(730 + (1143 << 16))
 fj_vertex_2=(1010 + (1182 << 16))
 fj_vertex_3=(977 + (1137 << 16))
-STR_VAR fj_structure_type=~region~ fj_name=~US_Trap_4~ fj_reg_script=~~ END
+STR_VAR fj_structure_type=~region~ fj_name=~US_Trap_4~ fj_reg_script=~USTW211~ END
+
+COPY_EXISTING ~AR3000.are~ ~override~
+	LPF ALTER_AREA_REGION_IWD2 STR_VAR region_name=~NW Bridge Poison Dart Trap~ region_script=~00P2003~ END
+	LPF ALTER_AREA_REGION_IWD2 STR_VAR region_name=~NW Bridge Arrow Trap~ region_script=~00P2002~ END
+	LPF ALTER_AREA_REGION_IWD2 STR_VAR region_name=~NE Bridge Arrow Trap~ region_script=~00P2015~ END
+	LPF ALTER_AREA_REGION_IWD2 STR_VAR region_name=~NE Bridge Acid Arrow Trap~ region_script=~00P2004~ END
+	LPF ALTER_AREA_REGION_IWD2 STR_VAR region_name=~S Bridge Arrow Trap~ region_script=~00P2011~ END
+	LPF ALTER_AREA_REGION_IWD2 STR_VAR region_name=~S Bridge Acid Arrow Trap~ region_script=~00P2022~ END
+	LPF ALTER_AREA_REGION_IWD2 STR_VAR region_name=~Invisibility_Trap_1~ region_script=~00P2015~ END
+	LPF ALTER_AREA_REGION_IWD2 STR_VAR region_name=~Invisibility_Trap_2~ region_script=~00P2002~ END
 
 COPY_EXISTING ~AR3001.are~ ~override~
+	LPF ALTER_AREA_REGION_IWD2 STR_VAR region_name=~Invisibilty_Trap_1~ region_script=~USTW116~ END
 	LPF fj_are_structure INT_VAR
 fj_type=0
 fj_flags=0x8
@@ -265,8 +326,8 @@ fj_box_left=3360
 fj_box_right=3520
 fj_box_top=1534
 fj_box_bottom=1667
-fj_loc_x=3554
-fj_loc_y=1120
+fj_loc_x=3374
+fj_loc_y=1709
 fj_vertex_0=(3375 + (1534 << 16))
 fj_vertex_1=(3360 + (1557 << 16))
 fj_vertex_2=(3503 + (1667 << 16))
@@ -289,7 +350,7 @@ fj_vertex_0=(235 + (690 << 16))
 fj_vertex_1=(286 + (772 << 16))
 fj_vertex_2=(963 + (698 << 16))
 fj_vertex_3=(1003 + (611 << 16))
-STR_VAR fj_structure_type=~region~ fj_name=~US_Trap_2~ fj_reg_script=~~ END
+STR_VAR fj_structure_type=~region~ fj_name=~US_Trap_2~ fj_reg_script=~USTW215~ END
 
 COPY_EXISTING ~AR3100.are~ ~override~
 	LPF fj_are_structure INT_VAR
@@ -309,7 +370,7 @@ fj_vertex_0=(494 + (883 << 16))
 fj_vertex_1=(484 + (892 << 16))
 fj_vertex_2=(594 + (932 << 16))
 fj_vertex_3=(596 + (920 << 16))
-STR_VAR fj_structure_type=~region~ fj_name=~US_Trap_1~ fj_reg_script=~~ END
+STR_VAR fj_structure_type=~region~ fj_name=~US_Trap_1~ fj_reg_script=~00P2022~ END
 	LPF fj_are_structure INT_VAR
 fj_type=0
 fj_flags=0x8
@@ -327,25 +388,541 @@ fj_vertex_0=(1671 + (894 << 16))
 fj_vertex_1=(1663 + (901 << 16))
 fj_vertex_2=(1773 + (939 << 16))
 fj_vertex_3=(1776 + (930 << 16))
-STR_VAR fj_structure_type=~region~ fj_name=~US_Trap_2~ fj_reg_script=~~ END
-/*
+STR_VAR fj_structure_type=~region~ fj_name=~US_Trap_2~ fj_reg_script=~00P2022~ END
+
 COPY_EXISTING ~AR3101.are~ ~override~
-	LPF ALTER_AREA_REGION_IWD2 INT_VAR type=2 cursor=28 all_flags=0x204 activate_x=2137 activate_y=586 info_point=(0 - 1) STR_VAR region_name=~Grate~ destination_area=~AR3101~ entrance_name=~USGR3101~ END
-	LPF fj_are_structure INT_VAR fj_trap_active=1 STR_VAR fj_structure_type=~region~ fj_name=~US_31Backdoor~ fj_reg_script=~US31BAKD~ END
 	LPF fj_are_structure INT_VAR
 fj_type=0
-fj_flags=0x82
+fj_flags=0x8
+fj_trap_detect=1040
+fj_trap_remove=50
 fj_trap_active=1
-fj_box_left=178
-fj_box_top=580
-fj_box_right=1916
-fj_box_bottom=1556
-fj_cursor_idx=0
-fj_loc_x=781
-fj_loc_y=805
-fj_vertex_0=(848 + (580 << 16))
-fj_vertex_1=(1916 + (1067 << 16))
-fj_vertex_2=(1564 + (1556 << 16))
-fj_vertex_3=(178 + (967 << 16))
-STR_VAR fj_structure_type=~region~ fj_name=~US_31Guthma_Cutscene~ fj_reg_script=~US31GCUT~ END
+fj_cursor_idx=38
+fj_box_left=966
+fj_box_right=1088
+fj_box_top=846
+fj_box_bottom=901
+fj_loc_x=1050
+fj_loc_y=700
+fj_vertex_0=(974 + (846 << 16))
+fj_vertex_1=(1088 + (889 << 16))
+fj_vertex_2=(1078 + (901 << 16))
+fj_vertex_3=(966 + (856 << 16))
+STR_VAR fj_structure_type=~region~ fj_name=~US_Trap_1~ fj_reg_script=~USTW312~ END
+	LPF fj_are_structure INT_VAR
+fj_type=0
+fj_flags=0x8
+fj_trap_detect=1035
+fj_trap_remove=50
+fj_trap_active=1
+fj_cursor_idx=38
+fj_box_left=648
+fj_box_right=828
+fj_box_top=868
+fj_box_bottom=948
+fj_loc_x=900
+fj_loc_y=700
+fj_vertex_0=(680 + (868 << 16))
+fj_vertex_1=(828 + (928 << 16))
+fj_vertex_2=(803 + (948 << 16))
+fj_vertex_3=(648 + (906 << 16))
+STR_VAR fj_structure_type=~region~ fj_name=~US_Trap_2~ fj_reg_script=~USTW312~ END
+
+COPY_EXISTING ~AR4000.are~ ~override~
+	LPF fj_are_structure INT_VAR
+fj_type=0
+fj_flags=0x8
+fj_trap_detect=1060
+fj_trap_remove=70
+fj_trap_active=1
+fj_cursor_idx=38
+fj_box_left=1700
+fj_box_right=1961
+fj_box_top=2290
+fj_box_bottom=2438
+fj_loc_x=1847
+fj_loc_y=2381
+fj_vertex_0=(1713 + (2323 << 16))
+fj_vertex_1=(1843 + (2290 << 16))
+fj_vertex_2=(1961 + (2362 << 16))
+fj_vertex_3=(1920 + (2435 << 16))
+fj_vertex_4=(1792 + (2438 << 16))
+fj_vertex_5=(1700 + (2381 << 16))
+STR_VAR fj_structure_type=~region~ fj_name=~US_Trap_1~ fj_reg_script=~USTW215~ END
+	LPF ALTER_AREA_REGION_IWD2 INT_VAR trap_detect=1005 trap_remove=140 STR_VAR region_name=~Trap4~ END
+	LPF ALTER_AREA_REGION_IWD2 STR_VAR region_name=~Trap1a~ fj_reg_script=~USTW220~ END
+	LPF ALTER_AREA_REGION_IWD2 STR_VAR region_name=~Trap1b~ fj_reg_script=~USTW220~ END
+	LPF ALTER_AREA_REGION_IWD2 STR_VAR region_name=~Trap1c~ fj_reg_script=~USTW220~ END
+	LPF ALTER_AREA_REGION_IWD2 STR_VAR region_name=~Trap2a~ fj_reg_script=~USTW220~ END
+	LPF ALTER_AREA_REGION_IWD2 STR_VAR region_name=~Trap2b~ fj_reg_script=~USTW404~ END
+	LPF ALTER_AREA_REGION_IWD2 STR_VAR region_name=~Trap2c~ fj_reg_script=~USTW220~ END
+	LPF ALTER_AREA_REGION_IWD2 STR_VAR region_name=~Trap2d~ fj_reg_script=~USTW220~ END
+	LPF ALTER_AREA_REGION_IWD2 STR_VAR region_name=~Trap3a~ fj_reg_script=~USTW404~ END
+	LPF ALTER_AREA_REGION_IWD2 STR_VAR region_name=~Trap3c~ fj_reg_script=~USTW220~ END
+
+COPY_EXISTING ~AR4101.are~ ~override~
+	LPF fj_are_structure INT_VAR
+fj_type=0
+fj_flags=0x8
+fj_trap_detect=1060
+fj_trap_remove=70
+fj_trap_active=1
+fj_cursor_idx=38
+fj_box_left=951
+fj_box_right=1028
+fj_box_top=975
+fj_box_bottom=1025
+fj_loc_x=1000
+fj_loc_y=1000
+fj_vertex_0=(973 + (975 << 16))
+fj_vertex_1=(1028 + (998 << 16))
+fj_vertex_2=(1009 + (1025 << 16))
+fj_vertex_3=(951 + (1002 << 16))
+STR_VAR fj_structure_type=~region~ fj_name=~US_Trap_1~ fj_reg_script=~USTW352~ END
+	LPF fj_are_structure INT_VAR
+fj_type=0
+fj_flags=0x8
+fj_trap_detect=1060
+fj_trap_remove=70
+fj_trap_active=1
+fj_cursor_idx=38
+fj_box_left=332
+fj_box_right=549
+fj_box_top=2132
+fj_box_bottom=2287
+fj_loc_x=400
+fj_loc_y=2100
+fj_vertex_0=(497 + (2132 << 16))
+fj_vertex_1=(549 + (2166 << 16))
+fj_vertex_2=(442 + (2287 << 16))
+fj_vertex_3=(332 + (2249 << 16))
+STR_VAR fj_structure_type=~region~ fj_name=~US_Trap_2~ fj_reg_script=~USTW404~ END
+	LPF fj_are_structure INT_VAR
+fj_type=0
+fj_flags=0x8
+fj_trap_detect=1060
+fj_trap_remove=70
+fj_trap_active=1
+fj_cursor_idx=38
+fj_box_left=904
+fj_box_right=1037
+fj_box_top=2615
+fj_box_bottom=2698
+fj_loc_x=900
+fj_loc_y=2700
+fj_vertex_0=(930 + (2615 << 16))
+fj_vertex_1=(1037 + (2667 << 16))
+fj_vertex_2=(1020 + (2698 << 16))
+fj_vertex_3=(904 + (2647 << 16))
+STR_VAR fj_structure_type=~region~ fj_name=~US_Trap_3~ fj_reg_script=~USTW404~ END
+
+COPY_EXISTING ~AR5101.are~ ~override~
+	LPF fj_are_structure INT_VAR
+fj_type=0
+fj_flags=0x8
+fj_trap_detect=1075
+fj_trap_remove=75
+fj_trap_active=1
+fj_cursor_idx=38
+fj_box_left=1791
+fj_box_right=1882
+fj_box_top=1260
+fj_box_bottom=1348
+fj_loc_x=2264
+fj_loc_y=966
+fj_vertex_0=(1794 + (1261 << 16))
+fj_vertex_1=(1882 + (1260 << 16))
+fj_vertex_2=(1879 + (1348 << 16))
+fj_vertex_3=(1791 + (1346 << 16))
+STR_VAR fj_structure_type=~region~ fj_name=~US_Trap_1~ fj_reg_script=~USTW312~ END
+
+COPY_EXISTING ~AR5302.are~ ~override~
+	LPF fj_are_structure INT_VAR
+fj_type=0
+fj_flags=0x8
+fj_trap_detect=1075
+fj_trap_remove=80
+fj_trap_active=1
+fj_cursor_idx=38
+fj_box_left=2000
+fj_box_right=2240
+fj_box_top=1475
+fj_box_bottom=1655
+fj_loc_x=2000
+fj_loc_y=1475
+fj_vertex_0=(2200 + (1475 << 16))
+fj_vertex_1=(2240 + (1475 << 16))
+fj_vertex_2=(2000 + (1655 << 16))
+fj_vertex_3=(2000 + (1625 << 16))
+STR_VAR fj_structure_type=~region~ fj_name=~US_Trap_1~ fj_reg_script=~USTW706~ END
+	LPF fj_are_structure INT_VAR
+fj_type=0
+fj_flags=0x8
+fj_trap_detect=1075
+fj_trap_remove=80
+fj_trap_active=1
+fj_cursor_idx=38
+fj_box_left=1760
+fj_box_right=2000
+fj_box_top=1475
+fj_box_bottom=1655
+fj_loc_x=2000
+fj_loc_y=1475
+fj_vertex_0=(1800 + (1475 << 16))
+fj_vertex_1=(1760 + (1475 << 16))
+fj_vertex_2=(2000 + (1655 << 16))
+fj_vertex_3=(2000 + (1625 << 16))
+STR_VAR fj_structure_type=~region~ fj_name=~US_Trap_2~ fj_reg_script=~USTW706~ END
+	LPF fj_are_structure INT_VAR
+fj_type=0
+fj_flags=0x8
+fj_trap_detect=1075
+fj_trap_remove=80
+fj_trap_active=1
+fj_cursor_idx=38
+fj_box_left=1760
+fj_box_right=2000
+fj_box_top=1295
+fj_box_bottom=1475
+fj_loc_x=2000
+fj_loc_y=1475
+fj_vertex_0=(1800 + (1475 << 16))
+fj_vertex_1=(1760 + (1475 << 16))
+fj_vertex_2=(2000 + (1295 << 16))
+fj_vertex_3=(2000 + (1325 << 16))
+STR_VAR fj_structure_type=~region~ fj_name=~US_Trap_3~ fj_reg_script=~USTW706~ END
+	LPF fj_are_structure INT_VAR
+fj_type=0
+fj_flags=0x8
+fj_trap_detect=1075
+fj_trap_remove=80
+fj_trap_active=1
+fj_cursor_idx=38
+fj_box_left=2000
+fj_box_right=2240
+fj_box_top=1295
+fj_box_bottom=1475
+fj_loc_x=2000
+fj_loc_y=1475
+fj_vertex_0=(2200 + (1475 << 16))
+fj_vertex_1=(2240 + (1475 << 16))
+fj_vertex_2=(2000 + (1295 << 16))
+fj_vertex_3=(2000 + (1325 << 16))
+STR_VAR fj_structure_type=~region~ fj_name=~US_Trap_4~ fj_reg_script=~USTW706~ END
+	LPF fj_are_structure INT_VAR
+fj_type=0
+fj_flags=0xA
+fj_trap_detect=1075
+fj_trap_remove=85
+fj_trap_active=1
+fj_cursor_idx=38
+fj_box_left=1555
+fj_box_right=1705
+fj_box_top=1867
+fj_box_bottom=1951
+fj_loc_x=1345
+fj_loc_y=1642
+fj_vertex_0=(1653 + (1867 << 16))
+fj_vertex_1=(1705 + (1887 << 16))
+fj_vertex_2=(1615 + (1951 << 16))
+fj_vertex_3=(1555 + (1921 << 16))
+STR_VAR fj_structure_type=~region~ fj_name=~US_Trap_5~ fj_reg_script=~00P2024~ END
+	LPF fj_are_structure INT_VAR
+fj_type=0
+fj_flags=0xA
+fj_trap_detect=1075
+fj_trap_remove=85
+fj_trap_active=1
+fj_cursor_idx=38
+fj_box_left=2540
+fj_box_right=2674
+fj_box_top=1808
+fj_box_bottom=1919
+fj_loc_x=2697
+fj_loc_y=1448
+fj_vertex_0=(2645 + (1808 << 16))
+fj_vertex_1=(2674 + (1830 << 16))
+fj_vertex_2=(2572 + (1919 << 16))
+fj_vertex_3=(2540 + (1892 << 16))
+STR_VAR fj_structure_type=~region~ fj_name=~US_Trap_6~ fj_reg_script=~00P2024~ END
+	LPF fj_are_structure INT_VAR
+fj_type=0
+fj_flags=0x8
+fj_trap_detect=1075
+fj_trap_remove=85
+fj_trap_active=1
+fj_cursor_idx=38
+fj_box_left=2971
+fj_box_right=3142
+fj_box_top=1935
+fj_box_bottom=2033
+fj_loc_x=3216
+fj_loc_y=1715
+fj_vertex_0=(3004 + (1935 << 16))
+fj_vertex_1=(3142 + (1985 << 16))
+fj_vertex_2=(3104 + (2033 << 16))
+fj_vertex_3=(2971 + (1968 << 16))
+STR_VAR fj_structure_type=~region~ fj_name=~US_Trap_7~ fj_reg_script=~USTW352~ END
+	LPF fj_are_structure INT_VAR
+fj_type=0
+fj_flags=0xA
+fj_trap_detect=1075
+fj_trap_remove=85
+fj_trap_active=1
+fj_cursor_idx=38
+fj_box_left=2751
+fj_box_right=2924
+fj_box_top=1047
+fj_box_bottom=1211
+fj_loc_x=3216
+fj_loc_y=1715
+fj_vertex_0=(2803 + (1047 << 16))
+fj_vertex_1=(2924 + (1174 << 16))
+fj_vertex_2=(2866 + (1211 << 16))
+fj_vertex_3=(2751 + (1073 << 16))
+STR_VAR fj_structure_type=~region~ fj_name=~US_Trap_8~ fj_reg_script=~00P2024~ END
+/*
+COPY_EXISTING ~AR6001.are~ ~override~
+	LPF fj_are_structure INT_VAR
+fj_type=0
+fj_flags=0x8
+fj_trap_detect=1090
+fj_trap_remove=90
+fj_trap_active=1
+fj_cursor_idx=38
+fj_box_left=661
+fj_box_right=748
+fj_box_top=1529
+fj_box_bottom=1564
+fj_loc_x=500
+fj_loc_y=1350
+fj_vertex_0=(664 + (1529 << 16))
+fj_vertex_1=(748 + (1556 << 16))
+fj_vertex_2=(744 + (1564 << 16))
+fj_vertex_3=(661 + (1539 << 16))
+STR_VAR fj_structure_type=~region~ fj_name=~US_Trap_1~ fj_reg_script=~~ END
 */
+/*
+COPY_EXISTING ~AR6003.are~ ~override~
+	LPF fj_are_structure INT_VAR
+fj_type=0
+fj_flags=0x8
+fj_trap_detect=1080
+fj_trap_remove=90
+fj_trap_active=1
+fj_cursor_idx=38
+fj_box_left=468
+fj_box_right=662
+fj_box_top=344
+fj_box_bottom=509
+fj_loc_x=750
+fj_loc_y=250
+fj_vertex_0=(525 + (344 << 16))
+fj_vertex_1=(662 + (461 << 16))
+fj_vertex_2=(595 + (509 << 16))
+fj_vertex_3=(468 + (389 << 16))
+STR_VAR fj_structure_type=~region~ fj_name=~US_Trap_1~ fj_reg_script=~~ END
+*/
+COPY_EXISTING ~AR6051.are~ ~override~
+	LPF fj_are_structure INT_VAR
+fj_type=0
+fj_flags=0xA
+fj_trap_detect=1090
+fj_trap_remove=90
+fj_trap_active=1
+fj_cursor_idx=38
+fj_box_left=2344
+fj_box_right=2491
+fj_box_top=817
+fj_box_bottom=940
+fj_loc_x=2419
+fj_loc_y=865
+fj_vertex_0=(2426 + (817 << 16))
+fj_vertex_1=(2491 + (841 << 16))
+fj_vertex_2=(2456 + (875 << 16))
+fj_vertex_3=(2414 + (940 << 16))
+fj_vertex_4=(2344 + (912 << 16))
+fj_vertex_5=(2384 + (848 << 16))
+STR_VAR fj_structure_type=~region~ fj_name=~US_Trap_1~ fj_reg_script=~UST6051A~ END
+	LPF fj_are_structure INT_VAR
+fj_type=0
+fj_flags=0xA
+fj_trap_detect=1085
+fj_trap_remove=85
+fj_trap_active=1
+fj_cursor_idx=38
+fj_box_left=1108
+fj_box_right=1316
+fj_box_top=1686
+fj_box_bottom=1789
+fj_loc_x=2419
+fj_loc_y=865
+fj_vertex_0=(1141 + (1686 << 16))
+fj_vertex_1=(1316 + (1754 << 16))
+fj_vertex_2=(1279 + (1789 << 16))
+fj_vertex_3=(1108 + (1725 << 16))
+STR_VAR fj_structure_type=~region~ fj_name=~Sseth's Kiss~ fj_reg_script=~60TRAP04~ END
+
+COPY_EXISTING ~AR6103.are~ ~override~
+	LPF fj_are_structure INT_VAR
+fj_type=0
+fj_flags=0xA
+fj_trap_detect=1105
+fj_trap_remove=95
+fj_trap_active=1
+fj_cursor_idx=38
+fj_box_left=2630
+fj_box_right=2643
+fj_box_top=939
+fj_box_bottom=951
+fj_loc_x=2500
+fj_loc_y=800
+fj_vertex_0=(2630 + (944 << 16))
+fj_vertex_1=(2643 + (939 << 16))
+fj_vertex_2=(2638 + (951 << 16))
+STR_VAR fj_structure_type=~region~ fj_name=~US_Trap_1~ fj_reg_script=~00P2017~ END
+	LPF fj_are_structure INT_VAR
+fj_type=0
+fj_flags=0xA
+fj_trap_detect=1095
+fj_trap_remove=95
+fj_trap_active=1
+fj_cursor_idx=38
+fj_box_left=1980
+fj_box_right=2014
+fj_box_top=1034
+fj_box_bottom=1061
+fj_loc_x=1900
+fj_loc_y=900
+fj_vertex_0=(1981 + (1042 << 16))
+fj_vertex_1=(2009 + (1034 << 16))
+fj_vertex_2=(2014 + (1052 << 16))
+fj_vertex_3=(1980 + (1061 << 16))
+STR_VAR fj_structure_type=~region~ fj_name=~US_Trap_2~ fj_reg_script=~00P2017~ END
+	LPF fj_are_structure INT_VAR
+fj_type=0
+fj_flags=0xA
+fj_trap_detect=1095
+fj_trap_remove=95
+fj_trap_active=1
+fj_cursor_idx=38
+fj_box_left=1929
+fj_box_right=1978
+fj_box_top=1270
+fj_box_bottom=1301
+fj_loc_x=1800
+fj_loc_y=1150
+fj_vertex_0=(1929 + (1284 << 16))
+fj_vertex_1=(1978 + (1270 << 16))
+fj_vertex_2=(1961 + (1301 << 16))
+STR_VAR fj_structure_type=~region~ fj_name=~US_Trap_3~ fj_reg_script=~00P2017~ END
+	LPF fj_are_structure INT_VAR
+fj_type=0
+fj_flags=0xA
+fj_trap_detect=1105
+fj_trap_remove=95
+fj_trap_active=1
+fj_cursor_idx=38
+fj_box_left=2541
+fj_box_right=2563
+fj_box_top=1297
+fj_box_bottom=1314
+fj_loc_x=2400
+fj_loc_y=1200
+fj_vertex_0=(2541 + (1302 << 16))
+fj_vertex_1=(2561 + (1297 << 16))
+fj_vertex_2=(2563 + (1311 << 16))
+fj_vertex_3=(2543 + (1314 << 16))
+STR_VAR fj_structure_type=~region~ fj_name=~US_Trap_4~ fj_reg_script=~00P2017~ END
+	LPF fj_are_structure INT_VAR
+fj_type=0
+fj_flags=0xA
+fj_trap_detect=1105
+fj_trap_remove=95
+fj_trap_active=1
+fj_cursor_idx=38
+fj_box_left=2826
+fj_box_right=2855
+fj_box_top=1814
+fj_box_bottom=1852
+fj_loc_x=2700
+fj_loc_y=1700
+fj_vertex_0=(2826 + (1814 << 16))
+fj_vertex_1=(2841 + (1831 << 16))
+fj_vertex_2=(2855 + (1844 << 16))
+fj_vertex_3=(2843 + (1852 << 16))
+STR_VAR fj_structure_type=~region~ fj_name=~US_Trap_5~ fj_reg_script=~00P2017~ END
+	LPF fj_are_structure INT_VAR
+fj_type=0
+fj_flags=0xA
+fj_trap_detect=1105
+fj_trap_remove=95
+fj_trap_active=1
+fj_cursor_idx=38
+fj_box_left=2315
+fj_box_right=2334
+fj_box_top=2217
+fj_box_bottom=2227
+fj_loc_x=2200
+fj_loc_y=2100
+fj_vertex_0=(2316 + (2219 << 16))
+fj_vertex_1=(2327 + (2217 << 16))
+fj_vertex_2=(2334 + (2227 << 16))
+fj_vertex_3=(2315 + (2227 << 16))
+STR_VAR fj_structure_type=~region~ fj_name=~US_Trap_6~ fj_reg_script=~00P2017~ END
+	LPF fj_are_structure INT_VAR
+fj_type=0
+fj_flags=0xA
+fj_trap_detect=1095
+fj_trap_remove=95
+fj_trap_active=1
+fj_cursor_idx=38
+fj_box_left=3085
+fj_box_right=3123
+fj_box_top=802
+fj_box_bottom=815
+fj_loc_x=2950
+fj_loc_y=700
+fj_vertex_0=(3085 + (802 << 16))
+fj_vertex_1=(3113 + (802 << 16))
+fj_vertex_2=(3123 + (812 << 16))
+fj_vertex_3=(3095 + (815 << 16))
+STR_VAR fj_structure_type=~region~ fj_name=~US_Trap_7~ fj_reg_script=~00P2017~ END
+	LPF fj_are_structure INT_VAR
+fj_type=0
+fj_flags=0xA
+fj_trap_detect=1105
+fj_trap_remove=95
+fj_trap_active=1
+fj_cursor_idx=38
+fj_box_left=401
+fj_box_right=416
+fj_box_top=1163
+fj_box_bottom=1178
+fj_loc_x=300
+fj_loc_y=1050
+fj_vertex_0=(401 + (1168 << 16))
+fj_vertex_1=(416 + (1163 << 16))
+fj_vertex_2=(416 + (1178 << 16))
+fj_vertex_3=(403 + (1176 << 16))
+STR_VAR fj_structure_type=~region~ fj_name=~US_Trap_8~ fj_reg_script=~00P2017~ END
+
+COPY_EXISTING ~AR6503.are~ ~override~
+	LPF fj_are_structure INT_VAR
+fj_type=0
+fj_flags=0xA
+fj_trap_detect=1115
+fj_trap_remove=130
+fj_trap_active=1
+fj_cursor_idx=38
+fj_box_left=676
+fj_box_right=738
+fj_box_top=480
+fj_box_bottom=518
+fj_loc_x=400
+fj_loc_y=300
+fj_vertex_0=(686 + (480 << 16))
+fj_vertex_1=(738 + (495 << 16))
+fj_vertex_2=(728 + (518 << 16))
+fj_vertex_3=(676 + (498 << 16))
+STR_VAR fj_structure_type=~region~ fj_name=~US_Trap_1~ fj_reg_script=~USTW352~ END

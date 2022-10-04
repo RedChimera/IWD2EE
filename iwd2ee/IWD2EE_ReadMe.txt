@@ -381,6 +381,10 @@ Much of the credit for the inspiration for this mod goes to the makers of Light 
 
 This component lets you roll for stats rather than use IWD2's normal point-buy system. There are two subcomponents. The first one doesn't allow you to increment or decrement stats with the plus/minus buttons, but you can choose which ability score each number rolled is assigned to (like in The Temple of Elemental Evil). The second subcomponent lets you use the plus/minus buttons.
 
+--Add more traps--
+
+This component adds more traps to the game, and makes certain existing traps somewhat more dangerous. Don't worry; this shouldn't turn IWD2 into Durlag's Tower. The point is to add twists to existing encounters and make trap-disarming skills more meaningful.
+
 Compatibility Notes:
 
 --Tactics4IWD2--

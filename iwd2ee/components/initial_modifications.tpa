@@ -648,6 +648,12 @@ COPY_EXISTING ~41PDOORS.bcs~ ~override~
 		REPLACE_TEXTUALLY CASE_INSENSITIVE ~DisplayString(LastTrigger,30052)~ ~DisplayString(LastTrigger,%ref_30052%)~
 	END
 
+COPY_EXISTING ~LUA6000A.bcs~ ~override~
+	DECOMPILE_AND_PATCH BEGIN
+		REPLACE_TEXTUALLY CASE_INSENSITIVE ~CutSceneID(Player1)~ ~CutSceneID(Player1)
+AdvanceTime(900)~
+	END
+
 COPY_EXISTING ~AR6503.bcs~ ~override~
 	DECOMPILE_AND_PATCH BEGIN
 		REPLACE_TEXTUALLY ~SetMusic(DAY,BLANK)~ ~SetMusic(DAY,MX_6000)~
@@ -760,11 +766,11 @@ REPLACE_TEXTUALLY CASE_INSENSITIVE EXACT_MATCH ~PartyHasItem("60Stele5")
 END
 
 COPY_EXISTING_REGEXP ~.*\.bcs~ override
-	REPLACE_TEXTUALLY CASE_SENSITIVE ~TR[^0-9]*86 \([0-9]+\) \([0-9]+\)[^T]*TR~ ~TR
+	REPLACE_TEXTUALLY CASE_SENSITIVE ~TR[%WNL%%MNL%%LNL%%TAB% ]*86 \([0-9]+\) \([0-9]+\)[^T]*TR~ ~TR
 16633 \1 \2 0 0 "return IEex_WasJustDisarmed()" "" OB
 0 0 0 0 0 0 0 0 0 0 0 0 0 [-1.-1.-1.-1] "" 0 0 OB
 TR~
-	REPLACE_TEXTUALLY CASE_SENSITIVE ~TR[^0-9]*87 \([0-9]+\) \([0-9]+\)[^T]*TR~ ~TR
+	REPLACE_TEXTUALLY CASE_SENSITIVE ~TR[%WNL%%MNL%%LNL%%TAB% ]*87 \([0-9]+\) \([0-9]+\)[^T]*TR~ ~TR
 16633 \1 \2 0 0 "return IEex_WasJustUnlocked()" "" OB
 0 0 0 0 0 0 0 0 0 0 0 0 0 [-1.-1.-1.-1] "" 0 0 OB
 TR~

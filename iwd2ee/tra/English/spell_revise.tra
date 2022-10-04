@@ -989,7 +989,8 @@ Saving Throw: None
 This spell grants the recipient a spell resistance of 1 per level of the caster, on top of any spell resistance the recipient currently possesses. This effect will last for the duration of the spell or, ironically enough, until dispelled. 
 ~
 @1520    = ~Holy Aura~
-@1521    = ~Holy Aura (Abjuration)
+@1521    = ~Holy Aura
+(Abjuration)
 Level: Clr 8, Ilmater 8
 Range: 20 ft.
 Duration: 1 round/level
@@ -1001,7 +1002,8 @@ A brilliant, divine radiance surrounds the subjects, protecting them from attack
 First, the warded creatures gain a +4 deflection bonus to AC and a +4 bonus to all saves.
 Second, the warded creature gains +10 spell resistance and 5/- resistance to all forms of magical damage.
 Third, the abjuration protects the creatures against charm and domination spells.
-Fourth, any creature of evil alignment who strikes (melee only)  those protected by the Holy Aura must make a Fortitude save or be blinded for 3 round.~
+Fourth, any creature of evil alignment who strikes (melee only) those protected by the Holy Aura must make a Fortitude save or be blinded for 3 round.
+Holy Aura cannot be cast by evil characters.~
 @1522    = ~Potion of Minor Globe of Invulnerability~
 @1523    = ~Potions are typically found in ceramic, crystal, glass, or metal flasks or vials. Flasks or other containers generally contain enough fluid to provide one person with one complete dose to achieve the effects of the potion. 
 
@@ -3461,6 +3463,17 @@ Area of Effect: 1 creature
 Saving Throw: None
 
 This spell imbues the recipient with a touch of divine guidance. For the duration, the target gains a +3 bonus to all skill checks they make.~
+@35155     = ~Pass Without Trace~
+@36155     = ~Pass Without Trace
+(Illusion)
+Level: Drd 2, Rgr 1
+Range: Caster
+Duration: 8 hours
+Casting Time: 4
+Area of Effect: 20-foot radius
+Saving Throw: None
+
+This spell allows allied creatures to move silently without leaving footprints. Affected creatures gain a +10 bonus to Move Silently checks.~
 @35252     = ~Null Healing~
 @36252     = ~Null Healing
 (Necromancy)
@@ -3471,7 +3484,7 @@ Casting Time: 3
 Area of Effect: 1 creature
 Saving Throw: None
 
-This necromantic curse prevents a creature from healing. For 1 day, the cursed creature cannot regain Hit Points by items, spells, abilities, resting, or regeneration. There is no saving throw.~
+This necromantic curse prevents a creature from healing. For 1 day, the cursed creature cannot regain Hit Points by items, spells, abilities, resting, or regeneration. There is no saving throw. Null Healing cannot be cast by good characters.~
 @35253     = ~Shield Other~
 @36253     = ~Shield Other
 (Abjuration)
@@ -3785,6 +3798,22 @@ Area of Effect: 1 creature
 Saving Throw: None
 
 This spell lets a creature regenerate wounds very rapidly. For the duration, the target regenerates 3 HP per second.~
+@35853     = ~Unholy Aura~
+@36853     = ~Unholy Aura
+(Abjuration)
+Level: Clr 8
+Range: 20 ft.
+Duration: 1 round/level
+Casting Time: 6
+Area of Effect: Allies in a 20' radius
+Saving Throw: None
+
+A malevolent darkness surrounds the subjects, protecting them from attacks, granting them resistance to spells, and blinding good creatures when they strike the subjects. This abjuration has four effects:
+First, the warded creatures gain a +4 deflection bonus to AC and a +4 bonus to all saves.
+Second, the warded creature gains +10 spell resistance and 5/- resistance to all forms of magical damage.
+Third, the abjuration protects the creatures against charm and domination spells.
+Fourth, any creature of good alignment who strikes (melee only) those protected by the Unholy Aura must make a Fortitude save or be blinded for 3 round.
+Unholy Aura can only be cast by evil characters.~
 @35951     = ~Auril's Blessing~
 @36951     = ~Auril's Blessing
 (Conjuration)
