@@ -738,7 +738,14 @@ LAF ADD_FEAT_IWD2 INT_VAR nameref=RESOLVE_STR_REF(@373) descref=RESOLVE_STR_REF(
 LAF ADD_FEAT_IWD2 INT_VAR nameref=RESOLVE_STR_REF(@378) descref=RESOLVE_STR_REF(@379) max=3 STR_VAR name=~ME_DAMAGE_REDUCTION~ script=~Feats_DamageReduction~ prerequisite_script=~Prereq_DamageReduction~ featspl_1=~USFDAMR1~ featspl_2=~USFDAMR1~ featspl_3=~USFDAMR1~ END
 LAF ADD_FEAT_IWD2 INT_VAR nameref=RESOLVE_STR_REF(@382) descref=RESOLVE_STR_REF(@383) max=5 STR_VAR name=~ME_ADVANCED_SPELL_CAPACITY~ script=~Feats_AdvancedSpellCapacity~ prerequisite_script=~Prereq_AdvancedSpellCapacity~ featspl_1=~USFIMSC1~ featspl_2=~USFIMSC2~ featspl_3=~USFIMSC3~ featspl_4=~USFIMSC4~ featspl_5=~USFIMSC5~ END
 LAF ADD_FEAT_IWD2 INT_VAR nameref=RESOLVE_STR_REF(@384) descref=RESOLVE_STR_REF(@385) max=1 STR_VAR name=~ME_ASSASSIN~ script=~Feats_Assassin~ featspl_1=~USFASSA1~ END
+
 INCLUDE ~%mod_folder%/components/attacks_of_opportunity_1.tpa~
+
+LAF EXTEND_FEAT_IWD2 INT_VAR id=9 descref=RESOLVE_STR_REF(@712) max=2 STR_VAR script=~Feats_CombatCasting~ prerequisite_script=~Prereq_CombatCasting~ END
+LAF EXTEND_FEAT_IWD2 INT_VAR id=48 descref=RESOLVE_STR_REF(@713) max=2 STR_VAR script=~Feats_PreciseShot~ prerequisite_script=~Prereq_PreciseShot~ END
+
+
+
 /*
 LAF EXTEND_FEAT_IWD2 INT_VAR id=57 descref=RESOLVE_STR_REF(@728) max=5 STR_VAR script=~Feats_WeaponProficiency~ prerequisite_script=~Prereq_WeaponProficiency~ END
 LAF EXTEND_FEAT_IWD2 INT_VAR id=56 descref=RESOLVE_STR_REF(@727) max=5 STR_VAR script=~Feats_WeaponProficiency~ prerequisite_script=~Prereq_WeaponProficiency~ END

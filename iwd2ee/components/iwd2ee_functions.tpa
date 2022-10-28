@@ -1829,13 +1829,14 @@ BEGIN
 			PATCH_IF descref != 0xDEFA BEGIN
 				SET_2DA_ENTRY id 3 numcols ~%descref%~
 			END
-
+		PRINT ~ugu~
 		COPY_EXISTING ~b3featex.2da~ ~override~
 			COUNT_2DA_ROWS 5 numrows
 			featfound = 0
 			idrow = 0
 			FOR (i = 0; i < numrows; ++i) BEGIN
-				READ_2DA_ENTRY i 1 numcols iid
+				READ_2DA_ENTRY i 1 5 iid
+				PATCH_PRINT ~%iid%~
 				PATCH_IF iid = id BEGIN
 					featfound = 1
 					idrow = i
@@ -1851,7 +1852,7 @@ BEGIN
 				SET_2DA_ENTRY idrow 3 5 ~%prerequisite_script%~
 				SET_2DA_ENTRY idrow 4 5 ~%script%~
 			END ELSE BEGIN
-				INSERT_2DA_ROW idrow 5 ~%name% %nextid% %max% %prerequisite_script% %script%~
+				INSERT_2DA_ROW idrow 5 ~%name% %id% %max% %prerequisite_script% %script%~
 			END
 
 		COPY_EXISTING ~%featspl_1%.spl~ ~override/FE_%nextid%_1.spl~ ~%featspl_2%.spl~ ~override/FE_%nextid%_2.spl~ ~%featspl_3%.spl~ ~override/FE_%nextid%_3.spl~ ~%featspl_4%.spl~ ~override/FE_%nextid%_4.spl~ ~%featspl_5%.spl~ ~override/FE_%nextid%_5.spl~
