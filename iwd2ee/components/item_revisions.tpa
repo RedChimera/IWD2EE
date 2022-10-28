@@ -734,9 +734,11 @@ COPY_EXISTING ~USHFHDWH.itm~ ~override~
 	SAY IDENTIFIED_DESC @10496
 
 COPY_EXISTING ~50HIDEAH.itm~ ~override~
+	LPF ALTER_EFFECT INT_VAR silent=1 check_headers=0 check_globals=1 match_opcode=502 special=RESOLVE_STR_REF(@23056) STR_VAR match_resource=~MEDAMSLV~ END
 	SAY IDENTIFIED_DESC @10498
 
 COPY_EXISTING ~50HFHEAH.itm~ ~override~
+	LPF ALTER_EFFECT INT_VAR silent=1 check_headers=0 check_globals=1 match_opcode=502 special=RESOLVE_STR_REF(@23057) STR_VAR match_resource=~MEDAMSLV~ END
 	SAY NAME2 @10499
 	SAY IDENTIFIED_DESC @10500
 
@@ -1487,6 +1489,9 @@ COPY_EXISTING ~00STAF92.itm~ ~override~
 COPY_EXISTING ~00STAF93.itm~ ~override~
 	SAY NAME2 @11065
 	SAY IDENTIFIED_DESC @11066
+
+COPY_EXISTING ~00STAF94.itm~ ~override~
+	SAY IDENTIFIED_DESC @11068
 
 COPY_EXISTING ~00STAFDD.itm~ ~override~
 	SAY IDENTIFIED_DESC @11080
@@ -3615,7 +3620,7 @@ COPY_EXISTING ~USLEAT58.itm~ ~override~
 	SAY IDENTIFIED_DESC @12494
 
 COPY_EXISTING ~USLEAT59.itm~ ~override~
-	LPF ALTER_EFFECT INT_VAR check_headers=0 check_globals=1 match_opcode=502 parameter1=RESOLVE_STR_REF(@12908) STR_VAR match_resource=~MEDEFLEC~ END
+	LPF ALTER_EFFECT INT_VAR check_headers=0 check_globals=1 match_opcode=502 parameter1=RESOLVE_STR_REF(@19908) STR_VAR match_resource=~MEDEFLEC~ END
 	SAY NAME2 @12495
 	SAY IDENTIFIED_DESC @12496
 
@@ -4185,12 +4190,12 @@ COPY_EXISTING ~USRING60.itm~ ~override~
 	SAY IDENTIFIED_DESC @12784
 
 COPY_EXISTING ~USSWDK45.itm~ ~override~
-	LPF ALTER_EFFECT INT_VAR check_headers=0 check_globals=1 match_opcode=502 parameter1=RESOLVE_STR_REF(@12907) STR_VAR match_resource=~MEDEFLEC~ END
+	LPF ALTER_EFFECT INT_VAR check_headers=0 check_globals=1 match_opcode=502 parameter1=RESOLVE_STR_REF(@19907) STR_VAR match_resource=~MEDEFLEC~ END
 	SAY NAME2 @12785
 	SAY IDENTIFIED_DESC @12786
 
 COPY_EXISTING ~USHFSK45.itm~ ~override~
-	LPF ALTER_EFFECT INT_VAR check_headers=0 check_globals=1 match_opcode=502 parameter1=RESOLVE_STR_REF(@12907) STR_VAR match_resource=~MEDEFLEC~ END
+	LPF ALTER_EFFECT INT_VAR check_headers=0 check_globals=1 match_opcode=502 parameter1=RESOLVE_STR_REF(@19907) STR_VAR match_resource=~MEDEFLEC~ END
 	SAY NAME2 @12787
 	SAY IDENTIFIED_DESC @12788
 
@@ -4419,6 +4424,25 @@ COPY_EXISTING ~USPLAT15.itm~ ~override~
 	SAY NAME1 @12891
 	SAY NAME2 @12891
 	SAY UNIDENTIFIED_DESC @12892
+
+COPY_EXISTING ~USSWDCCM.itm~ ~override~
+	SAY NAME2 @12893
+	SAY UNIDENTIFIED_DESC @12894
+
+COPY_EXISTING ~USHFSCCM.itm~ ~override~
+	SAY NAME2 @12895
+	SAY UNIDENTIFIED_DESC @12896
+
+COPY_EXISTING ~USDAGGPR.itm~ ~override~
+	SAY NAME2 @12897
+	SAY UNIDENTIFIED_DESC @12898
+
+COPY_EXISTING ~USHFDGPR.itm~ ~override~
+	SAY NAME2 @12899
+	SAY UNIDENTIFIED_DESC @12900
+
+COPY_EXISTING ~USBRACDA.itm~ ~override~
+	SAY UNIDENTIFIED_DESC @12902
 
 //General patch changes
 
@@ -4754,6 +4778,8 @@ USRTHF57	USROBEWA
 USRTHF58	USSTAFPO
 USRTHF59	USCLUBST
 USRTHF60	USHELMRC
+USRTHF61	USSWDCCM
+USRTHF62	USDAGGPR
 
 USRHF001	USAROW47
 USRHF002	00AROW06
@@ -5002,6 +5028,8 @@ USRTHF57	USHFRBWA
 USRTHF58	USHFSFPO
 USRTHF59	USHFCBST
 USRTHF60	USHFHMRC
+USRTHF61	USHFSCCM
+USRTHF62	USHFDGPR
 
 USRHF001	USAROW57
 USRHF002	USAROW54
@@ -5280,6 +5308,7 @@ COPY_EXISTING ~11elytha.sto~ ~override~ //Elytharra store
 	ADD_STORE_ITEM ~USBOOKSP~ AFTER ~11RTHF04~ #6 #1 #1 ~IDENTIFIED~ #1 //Tome of the Dedicated Specialist
 //	ADD_STORE_ITEM ~11RTHF07~ AFTER ~00AMUL13~ #1 #1 #1 ~IDENTIFIED~ #1 //Dreisbach's Iron Hoop
 	ADD_STORE_ITEM ~00RING87~ AFTER ~00RING75~ #1 #1 #1 ~IDENTIFIED~ #1 //Lesser Chameleon Ring
+	ADD_STORE_ITEM ~00RING67~ AFTER ~00RING87~ #1 #1 #1 ~IDENTIFIED~ #1 //Ring of Magic Missiles
 	ADD_STORE_ITEM ~00RING21~ AFTER ~00RING87~ #1 #1 #1 ~IDENTIFIED~ #1 //Wizard's Ring
 	ADD_STORE_ITEM ~00RING86~ AFTER ~00RING21~ #1 #1 #1 ~IDENTIFIED~ #1 //Ring of Beauty
 	ADD_STORE_ITEM ~00ROBE01~ BEFORE ~00ROBE03~ #1 #1 #1 ~IDENTIFIED~ #1 //Robe of Cold Resistance
@@ -5330,8 +5359,11 @@ COPY_EXISTING ~20dereth.sto~ ~override~ //Dereth druid store
 	ADD_STORE_ITEM ~SPPR729Z~ AFTER ~SPPR613Z~ #1 #1 #1 ~IDENTIFIED~ #1 //Aura of Vitality scroll
 
 COPY_EXISTING ~40BDAWN.sto~ ~override~ //Beodaewn the Werewolf Man store
+	WRITE_LONG 0x14 150
+	WRITE_LONG 0x18 50
 	ADD_STORE_ITEM ~USRTHF01~ AFTER ~00SPER99~ #1 #1 #1 ~IDENTIFIED~ #1 //Spear of Sorrows
 	ADD_STORE_ITEM ~11RTHF25~ AFTER ~USRTHF01~ #1 #1 #1 ~IDENTIFIED~ #1 //Haft Over Head
+	ADD_STORE_ITEM ~USRTHF61~ AFTER ~11RTHF25~ #1 #1 #1 ~IDENTIFIED~ #1 //Cradle of Mielikki
 	ADD_STORE_ITEM ~00RTHF47~ AFTER ~00BOOT02~ #1 #1 #1 ~IDENTIFIED~ #1 //Arcs of Disredain
 	ADD_STORE_ITEM ~00DART83~ AFTER ~00RTHF47~ #1 #1 #1 ~IDENTIFIED~ #1 //Returning Flurry Dart
 	ADD_STORE_ITEM ~USBRAC36~ AFTER ~00RTHF47~ #1 #1 #1 ~IDENTIFIED~ #1 //Gloves of Flame
@@ -5339,7 +5371,7 @@ COPY_EXISTING ~40BDAWN.sto~ ~override~ //Beodaewn the Werewolf Man store
 
 COPY_EXISTING ~41ZACK1.sto~ ~override~ ~41ZACK2.sto~ ~override~ ~41ZACK3.sto~ ~override~ //Zack Boosenberry stores
 	REMOVE_STORE_ITEM ~00MSTR95~
-//	ADD_STORE_ITEM ~USRTHF49~ AFTER ~00HAMM04~ #1 #1 #1 ~IDENTIFIED~ #1 //Staff of Besieging
+	ADD_STORE_ITEM ~USRTHF49~ AFTER ~00HAMM04~ #1 #1 #1 ~IDENTIFIED~ #1 //Staff of Besieging
 	ADD_STORE_ITEM ~00RTHF64~ BEFORE ~00HAMM04~ #1 #1 #1 ~IDENTIFIED~ #1 //Delnar's Healing Sword
 	ADD_STORE_ITEM ~00MSTR95~ BEFORE ~00HAMM04~ #1 #1 #1 ~IDENTIFIED~ #1 //Morningstar of Thorns
 	ADD_STORE_ITEM ~00RING78~ AFTER ~00RING20~ #1 #1 #1 ~IDENTIFIED~ #1 //Spirit Armor Ring
@@ -5358,7 +5390,7 @@ COPY_EXISTING ~50NYM2.sto~ ~override~ //Nym store
 	ADD_STORE_ITEM ~00RTHF60~ AFTER ~00RTHF57~ #1 #1 #1 ~IDENTIFIED~ #1 //Rogue's Cowl
 
 COPY_EXISTING ~00BASHS3.sto~ ~override~ //Avarine Decanter genie store
-	WRITE_LONG 0x14 155 //Buying stuff from him costs less money (since he actually has some good stuff now), though his goods are still overpriced
+	WRITE_LONG 0x14 155 //Buying stuff from him costs less money, though his goods are still overpriced
 	ADD_STORE_ITEM ~USRHF005~ AFTER ~00BRAC10~ #1 #1 #1 ~IDENTIFIED~ #1
 	ADD_STORE_ITEM ~00ROBE16~ AFTER ~00ROBE15~ #1 #1 #1 ~IDENTIFIED~ #1 //Robe of Electrical Resistance
 	ADD_STORE_ITEM ~50RTHF04~ AFTER ~00ROBE16~ #1 #1 #1 ~IDENTIFIED~ #1 //Milton Sixtoes armor
@@ -5377,7 +5409,8 @@ COPY_EXISTING ~00BASHS3.sto~ ~override~ //Avarine Decanter genie store
 //	ADD_STORE_ITEM ~USRTHF39~ AFTER ~00RING18~ #1 #1 #1 ~IDENTIFIED~ #1 //Celestial Fury
 	ADD_STORE_ITEM ~USSWDC50~ AFTER ~00RING18~ #1 #1 #1 ~IDENTIFIED~ #1 //Translocation Scimitar
 	ADD_STORE_ITEM ~USRTHF50~ AFTER ~00RING18~ #1 #1 #1 ~IDENTIFIED~ #1 //Malakar
-	ADD_STORE_ITEM ~USRTHF54~ AFTER ~USRTHF50~ #1 #1 #1 ~IDENTIFIED~ #1 //Reliance
+	ADD_STORE_ITEM ~USRTHF62~ AFTER ~USRTHF50~ #1 #1 #1 ~IDENTIFIED~ #1 //Presio's Dagger
+	ADD_STORE_ITEM ~USRTHF54~ AFTER ~USRTHF62~ #1 #1 #1 ~IDENTIFIED~ #1 //Reliance
 //	ADD_STORE_ITEM ~USRING48~ AFTER ~00RING18~ #1 #1 #1 ~IDENTIFIED~ #1 //Ring of Persistence
 //	ADD_STORE_ITEM ~USPERM50~ AFTER ~00POTN01~ #1 #1 #1 ~IDENTIFIED~ #1 //Impervious Elixir
 	ADD_STORE_ITEM ~00POTN97~ AFTER ~00POTN01~ #1 #1 #1 ~IDENTIFIED~ #1 //Potion of Resistance
@@ -5631,11 +5664,12 @@ COPY_EXISTING ~ar5002.are~ ~override~ //Limha's home
 COPY_EXISTING ~ar5030.are~ ~override~ //Fell Wood, Will o' Wisp lair
 	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR charges2=1 charges3=1 single_match=1 STR_VAR old_item=~RT08_R~ new_item=~USRTHF37~ END
 */
-COPY_EXISTING ~ar5100.are~ ~override~ //Hook Horror caves
+COPY_EXISTING ~ar5100.are~ ~override~ //White Dragon cave
 	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR container=1 charges1=3000 charges2=6000 charges3=0 single_match=1 STR_VAR old_item=~MISC07~ new_item=~MISC07~ END
 
 COPY_EXISTING ~ar5101.are~ ~override~ //Hook Horror caves
 	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR container=2 charges1=1 charges2=1 charges3=1 single_match=1 STR_VAR old_item=~RT10_M~ new_item=~USRT10_V~ END
+	LPF fj_are_structure INT_VAR fj_charge0=1 fj_con_itm_idx=1 STR_VAR fj_structure_type=~itm~ fj_name=~USBRACDA~ END
 
 COPY_EXISTING ~AR5200.are~ ~override~ //Black Raven Monastery, outside
 	LPF fj_are_structure INT_VAR fj_loc_x=777 fj_loc_y=170 fj_type=8 fj_trap_loc_x=777 fj_trap_loc_y=170 fj_box_left=796 fj_box_top=220 fj_box_right=810 fj_box_bottom=239 fj_vertex_0=(809 + 222 * 0x10000) fj_vertex_1=(800 + 220 * 0x10000) fj_vertex_2=(796 + 237 * 0x10000) fj_vertex_3=(810 + 239 * 0x10000) STR_VAR fj_structure_type=~container~ fj_name=~US_Full_Nest~ END
@@ -5896,6 +5930,11 @@ COPY_EXISTING ~30yquog.dlg~ ~override~ //Yquog dialogue
 		REPLACE_TEXTUALLY CASE_INSENSITIVE ~RMEW_02~ ~USRT04_V~
 	END
 
+COPY_EXISTING ~40bdawn.dlg~ ~override~ //Beodaewn dialogue
+	DECOMPILE_AND_PATCH BEGIN
+		REPLACE_TEXTUALLY CASE_INSENSITIVE ~ChangeStoreMarkup(\"40Bdawn\", 150, 70, 0)~ ~ChangeStoreMarkup("40Bdawn",120,55,0)~
+	END
+
 COPY_EXISTING ~50nym.dlg~ ~override~ //Nym dialogue
 	DECOMPILE_AND_PATCH BEGIN
 		REPLACE_TEXTUALLY CASE_INSENSITIVE ~StartStore(\"50Nym\"~ ~StartStore("50Nym2"~
@@ -6045,8 +6084,8 @@ COPY_EXISTING ~30ENNELI.dlg~ ~override~
 	UseItem("USHFPN05",Myself)~
 	END
 
-STRING_SET_EVALUATE 28729 @12901
-STRING_SET_EVALUATE 29042 @12902
+STRING_SET_EVALUATE 28729 @19901
+STRING_SET_EVALUATE 29042 @19902
 
 COPY_EXISTING ~40YURST.dlg~ ~override~
 	DECOMPILE_AND_PATCH BEGIN
@@ -6091,8 +6130,8 @@ UseItem("USHFPN53",Myself)~
 TakePartyItem("USHFGNWC")~
 	END
 
-STRING_SET_EVALUATE 28638 @12903
-STRING_SET_EVALUATE 28639 @12904
+STRING_SET_EVALUATE 28638 @19903
+STRING_SET_EVALUATE 28639 @19904
 
 COPY_EXISTING ~53LAB.dlg~ ~override~ ~53LABX.dlg~ ~override~
 	DECOMPILE_AND_PATCH BEGIN
@@ -6134,8 +6173,8 @@ TakePartyItemNum("USHFPN07",1)~
 UseItem("USHFPN07",Myself)~
 	END
 
-STRING_SET_EVALUATE 38630 @12905
-STRING_SET_EVALUATE 38631 @12906
+STRING_SET_EVALUATE 38630 @19905
+STRING_SET_EVALUATE 38631 @19906
 
 COPY_EXISTING ~61PYROS.dlg~ ~override~
 	DECOMPILE_AND_PATCH BEGIN

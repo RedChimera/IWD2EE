@@ -41,6 +41,7 @@ ex_full_ability_score_cap = 40
 ex_construct_race = 156
 ex_fiend_race = 164
 ex_reanimation_level_check_bonus = 5
+ex_clone_delay = 2400
 ex_time_slow_speed_divisor = 0x7FFFFFFF
 ex_due_south_spells = {["USWI653"] = true, }
 ex_bypass_spell_deflection = {}
@@ -236,7 +237,7 @@ ex_augury_spells = {
 ex_custom_scorcher = {["DEFAULT"] = {["TargetSpell"] = "USEFFAS1", ["PathSpell"] = "USEFFAS2", ["StartingTime"] = 0, ["Index"] = 1}, ["USWI864D"] = {["TargetSpell"] = "USWI864E", ["PathSpell"] = "USWI864E", ["StartingTime"] = 0, ["Index"] = 2}, ["USCHAINL"] = {["TargetSpell"] = "", ["PathSpell"] = "", ["StartingTime"] = 80, ["Index"] = 3}, }
 ex_noncumulative_opcode_functions = {["MEOP16"] = true, ["MEOP40"] = true, ["MEOP130"] = true, ["MEOP401"] = true, ["MEOP403"] = true, ["MEOP408"] = true, ["MEOP415"] = true, ["MEOP421"] = true, ["MEOP427"] = true, ["MEIMPALA"] = true, }
 ex_stat_scaling_functions = {["MESTATSC"] = true, ["MEHALFTH"] = true, ["MEPERFEC"] = true, }
-ex_on_tick_functions = {["MEPROJIE"] = 1, ["MEAREAGL"] = 1, ["MEGHOSTW"] = 1, ["METELMOV"] = 1, ["MEENLARG"] = 1, ["MEANSUP2"] = 2, ["MEDRAGPA"] = 2, ["MEDRAGPR"] = 2, ["MEWINGBU"] = 2, ["MESPIN"] = 2, ["MEINTERI"] = 2, ["IEex_EvaluatePermanentRepeatingEffects"] = 0, ["IEex_HeightMod"] = 0, ["IEex_ExtraAttacks"] = 0, ["IEex_DuelHide"] = 0, }
+ex_on_tick_functions = {["MECLONE3"] = 1, ["MEPROJIE"] = 1, ["MEAREAGL"] = 1, ["MEGHOSTW"] = 1, ["METELMOV"] = 1, ["MEENLARG"] = 1, ["MEANSUP2"] = 2, ["MEBARRA2"] = 2, ["MEDRAGPA"] = 2, ["MEDRAGPR"] = 2, ["MEWINGBU"] = 2, ["MESPIN"] = 2, ["MEINTERI"] = 2, ["IEex_EvaluatePermanentRepeatingEffects"] = 0, ["IEex_HeightMod"] = 0, ["IEex_ExtraAttacks"] = 0, ["IEex_DuelHide"] = 0, }
 ex_on_tick_default_functions = {["MEENLARG"] = "IEex_ResetSize", }
 ex_stat_spells = {
 [1] = {[21] = "USRAGE3", [25] = "USRAGE4", [29] = "USRAGE5"}, -- Barbarian Rage
@@ -317,6 +318,7 @@ ex_match_missile_index = {
 [10] = {[6] = 2, [11] = 7, [16] = 12, [21] = 17, [31] = 27, [36] = 32, [60] = 56, }, -- Turn nonmagical projectiles into magical ones
 [11] = {[17] = 375, [19] = 375, [20] = 375, [21] = 375, }, -- Turn bullets into boulders
 [12] = {[17] = 17, [18] = 18, [19] = 19, [20] = 20, [21] = 17, [375] = 375}, -- Turn bullets into Magic Stones
+[13] = {[68] = 69, [69] = 70, [70] = 71, [71] = 72, [72] = 73, [73] = 74, [74] = 75, [75] = 76, [76] = 77, [77] = 78, [324] = 325, [325] = 326, [326] = 327, [327] = 328, [328] = 329, [329] = 330, [330] = 331, [331] = 332, [332] = 333, [333] = 334, }, -- Increase Magic Missile or Force Missile count by 1
 }
 ex_new_projectile_damage_type = {
 [11] = {[0x10] = 0x0, [0x80] = 0x0, [0x200] = 0x0, [0x400] = 0x0, [0x800] = 0x0}, -- Turn bullets into boulders

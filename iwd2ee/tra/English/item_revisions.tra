@@ -355,6 +355,7 @@ Weight: 0 lb.~
 
 STATISTICS:
 
+Special: Magic Missile and Force Missile spells and abilities fire an additional missile when cast by the wearer.
 Spell Power: Can cast the spell Magic Missile (at level 1) unlimited times per day
 Weight: 0 lb.~
 //@10106    = ~Bard's Ring~
@@ -2107,7 +2108,7 @@ Weight: 15 lb.~
 //@10497    = ~Abishai Hide Armor~
 @10498    = ~There is great mystery surrounding this leather armor. No one knows how or where it came into existence. What is known is that the leather was cut from the hide of an abishai, although it is impossible to tell what color abishai since the armor is colored a deep black. In addition, it has an unusual, very light, vinegary smell.
 
-Those that have worn the Abishai Hide were bestowed with a slight invulnerability to non-magical weapons. 
+Those that have worn the Abishai Hide were bestowed with a slight invulnerability to most weapons.
 
 STATISTICS:
 
@@ -2117,12 +2118,12 @@ Max Dex Bonus:  +4
 Armor Check Penalty:  -3
 Arcane Spell Failure:  20%
 Special:
-  Damage reduction 5/+1
+  Damage Reduction: 5/good or silver
 Weight: 15 lb.~
 @10499    = ~Cornugon Hide Armor +3~
 @10500    = ~There is great mystery surrounding this leather armor. No one knows how or where it came into existence. What is known is that the leather was cut from the hide of a Cornugon. The armor is colored a deep black and riddled with very tough, barbed scales. In addition, it has an unusual, very light, vinegary smell.
 
-Those that have worn the Cornugon Hide were bestowed with a rather high invulnerability to non-magical weapons and the ability to slowly regenerate from injuries. 
+Those that have worn the Cornugon Hide were bestowed with a rather high invulnerability to most weapons and the ability to slowly regenerate from injuries.
 
 STATISTICS:
 
@@ -2132,8 +2133,8 @@ Max Dex Bonus:  +4
 Armor Check Penalty:  -3
 Arcane Spell Failure:  20%
 Special:
-  Damage reduction 10/+2
-  Regeneration: User regenerates 1 hit point every 2 rounds
+  Damage Reduction: 10/good or silver
+  Regeneration: User regenerates 1 hit point per round
 Weight: 15 lb.~
 
 
@@ -5399,7 +5400,19 @@ Weight: 4 lb.
 Feat Requirement:  Simple Weapon, Quarterstaff
 Type:  Two-handed~
 //@11067    = ~Staff of Corrosion~
-//@11068    = ~Item description can remain the same; if new description is needed put it here~
+@11068    = ~The simplest and humblest of staff weapons, the quarterstaff is a length of wood ranging six to nine feet in length. Masterwork quarterstaffs are made of stout oak and are shod with metal at both ends. This one is particularly special as it has been imbued with magical properties.
+
+STATISTICS:
+
+Damage:  1d6 + 1
+Attack Bonus:  +1
+Enchantment:  +1
+Damage Type:  Bludgeoning
+Special:
+  Any instance of acid damage from the wielder's spells deals an additional 5 points of damage (for spells that deal acid damage multiple times, this damage is added each time).
+Weight: 4 lb.
+Feat Requirement:  Simple Weapon, Quarterstaff
+Type:  Two-handed~
 //@11069    = ~Masterwork Quarterstaff~
 //@11070    = ~Item description can remain the same; if new description is needed put it here~
 //@11071    = ~Quarterstaff +5~
@@ -7445,14 +7458,16 @@ Damage:  1d8  +2
 Attack Bonus:  +2
 Enchantment:  +2
 Damage Type:  Bludgeoning
-Special:  
+Special:
+  Sunscorch and Sunbeam deal 40% more damage when cast by the wielder
+  The wielder's healing spells and abilities heal an additional 20 hit points
   Spell Power: Can cast Restoration (at level 10) thrice per day
   Spell Power: Can cast Cure Critical Wounds (at level 20) once per day
 Weight: 8 lb.
 Required Feat:  Simple Weapon, Mace
 Type:  One-handed~
 @11481    = ~Lathander's Gift +5~
-@11482    = ~Lathander's Gift is a finely crafted weapon. The head is constructed of mithril with blunted steel spikes of a golden color. The haft is fashioned from highly polished oak with a reinforced steel center. The pommel of the weapon is capped with a seal depicting the rising sun. 
+@11482    = ~Lathander's Gift is a finely crafted weapon. The head is constructed of mithril with blunted steel spikes of a golden color. The haft is fashioned from highly polished oak with a reinforced steel center. The pommel of the weapon is capped with a seal depicting the rising sun.
 
 This was once the favored weapon of a priest of Lathander, the morning lord, the god of renewal and rebirth. It is renowned for its abilities. The weapon can Heal thrice per day or Greater Shield of Lathander once per day.
 
@@ -7462,7 +7477,9 @@ Damage:  1d8  +5
 Attack Bonus:  +5
 Enchantment:  +5
 Damage Type:  Bludgeoning
-Special:  
+Special:
+  Sunscorch and Sunbeam deal 60% more damage when cast by the wielder
+  The wielder's healing spells and abilities heal an additional 30 hit points
   Spell Power: Can cast Heal (at level 20) thrice per day
   Spell Power: Can cast Greater Shield of Lathander (at level 30) once per day
 Weight: 8 lb.
@@ -12645,7 +12662,7 @@ Type:  Two-handed~
 
 STATISTICS:
 
-Resistance:  100/- Acid Resistance
+Wearer is immune to acid damage
 Weight:  3 lb.~
 @12613    = ~Hide Armor of Elemental Resistance +5~
 @12614    = ~Hide armor is made from multiple layers of leather armor. Though stiff and hard to move in, it is relatively simple to make and provides a good barrier against cold weather. It is most commonly seen on the warriors and huntsmen of northern barbarian tribes.
@@ -12688,7 +12705,7 @@ Max Dex Bonus:  +1
 Armor Check Penalty:  -6
 Arcane Spell Failure:  35%
 Special:
-  Resistance: 100/- Magic Damage Resistance
+  Wearer is immune to magic damage
 Weight: 25 lb.~
 @12621    = ~Helmet of Defense +6~
 @12622    = ~This class of decorative helmet, made of reinforced leather or metal, covers the face and head. Eye slits and breathing holes come highly recommended.
@@ -13893,7 +13910,7 @@ The spell Burning Hands deals 50% more damage and has +4 DC
 The wearer's unarmed attacks deal +1d4 fire damage
 Weight:  1 lb.~
 @12873    = ~Flail of Flame +2~
-@12874    = ~The flail is a sturdy wooden handle attached to an iron rod, a wooden rod with spikes, or a spiked iron ball. Between the handle and its implement is either a hinge or chain link.  The weapon has been enhanced magically, effectively forming a bond between the weapon and its wielder.
+@12874    = ~The flail is a sturdy wooden handle attached to an iron rod, a wooden rod with spikes, or a spiked iron ball. Between the handle and its implement is either a hinge or chain link. The weapon has been enhanced magically, effectively forming a bond between the weapon and its wielder.
 
 STATISTICS:
 
@@ -14019,12 +14036,75 @@ Max Dex Bonus:  +1
 Armor Check Penalty:  -6
 Arcane Spell Failure:  35%
 Weight: 68 lb.~
-@12900    = ~Hrm - you are powerful allies, indeed. More gold and gems to line your pockets, then - also, a suit of plate armor, a warhammer, a helmet, all crafted and enchanted by great duergar artisans. They are well deserved, outsider.~
-@12901    = ~Drink this Rainwater Brew, Ennelia. It should help your condition.~
-@12902    = ~Drink this Sour Draught, Ennelia. It should help your condition.~
-@12903    = ~This rainwater brew may help - drink it down.~
-@12904    = ~Perhaps a sour draught can help your wounds.~
-@12905    = ~This rainwater brew may help - drink it down.~
-@12906    = ~Perhaps a sour draught can help your wounds.~
-@12907    = ~Malakar deflected a slashing attack~
-@12908    = ~Avoided damage~
+@12893    = ~Cradle of Mielikki~
+@12894    = ~A lesser-known weapon, historically only used by rangers serving Mielikki, this blade has a very humble and simple background. The Cradle of Mielikki was originally blessed by a triumvirate of druids for a ranger named Kell Pathwalker. Kell led a peaceful life, fending off the occasional orc or goblin who might wander into his lands. When he died of old age, the druids had no one to pass the blade on to. The oldest of them, Bimon, held onto the scimitar, but never used it in battle. When Bimon and his associates left their grove for an extended period of time, a wandering mercenary robbed the hollow tree of its riches. He carried the scimitar north to the Spine of the World, where he died of exposure.
+
+STATISTICS:
+
+Damage:  1d6 + 1
+Attack Bonus: +1 
+Enchantment:  +1
+Damage Type:  Slashing
+Special:
+  The chance to critically hit with this weapon is increased by 5%. If the wielder is dual-wielding, this bonus applies to the other weapon as well.
+Weight:  4 lb.
+Feat Requirement:  Martial Weapon, Large Sword
+Type:  One-handed~
+@12895    = ~Cradle of Mielikki~
+@12896    = ~A lesser-known weapon, historically only used by rangers serving Mielikki, this blade has a very humble and simple background. The Cradle of Mielikki was originally blessed by a triumvirate of druids for a ranger named Kell Pathwalker. Kell led a peaceful life, fending off the occasional orc or goblin who might wander into his lands. When he died of old age, the druids had no one to pass the blade on to. The oldest of them, Bimon, held onto the scimitar, but never used it in battle. When Bimon and his associates left their grove for an extended period of time, a wandering mercenary robbed the hollow tree of its riches. He carried the scimitar north to the Spine of the World, where he died of exposure.
+
+STATISTICS:
+
+Damage:  1d6 + 3
+Attack Bonus: +3
+Enchantment:  +3
+Damage Type:  Slashing
+Special:
+  The chance to critically hit with this weapon is increased by 10%. If the wielder is dual-wielding, this bonus applies to the other weapon as well.
+Weight:  4 lb.
+Feat Requirement:  Martial Weapon, Large Sword
+Type:  One-handed~
+@12897    = ~Presio's Dagger~
+@12898    = ~This dagger once belonged to Presio, a priestess of Talona, goddess of disease and poison. Presio is unlikely to have ever used it for anything other than ceremonies, due to the restrictions of her faith. Presio was given the dagger as a gift upon attaining the rank of Most Debilitating Holiness.
+
+STATISTICS:
+
+Damage:  1d6 + 2
+Attack Bonus:  +2 
+Enchantment:  +2
+Damage Type:  Piercing
+Special:
+  When cast by the wielder, the spells Mold Touch, Cloud of Pestilence, Contagion, Poison, Dolorous Decay and Poison get +5 DC.
+Weight: 2 lb.
+Feat Requirement:  Simple Weapon, Small Blade
+Type:  One-handed~
+@12899    = ~Presio's Dagger~
+@12900    = ~This dagger once belonged to Presio, a priestess of Talona, goddess of disease and poison. Presio is unlikely to have ever used it for anything other than ceremonies, due to the restrictions of her faith. Presio was given the dagger as a gift upon attaining the rank of Most Debilitating Holiness.
+
+STATISTICS:
+
+Damage:  1d6 + 3
+Attack Bonus:  +3
+Enchantment:  +3
+Damage Type:  Piercing
+Special:
+  When cast by the wielder, the spells Mold Touch, Cloud of Pestilence, Contagion, Poison, Dolorous Decay and Poison get +7 DC.
+Weight: 2 lb.
+Feat Requirement:  Simple Weapon, Small Blade
+Type:  One-handed~
+//@12901    = ~Gauntlets of Infernal Damnation~
+@12902    = ~Cursed by a malefic priestess of Beshaba, goddess of bad luck, these hard black leather gloves affix themselves to whoever tries them on.  Despite the extremely nasty nature of the gloves, wealthy adventurers sometimes buy the distinctive gauntlets to place in their treasure hordes, waiting for a greedy thief to try them on.
+
+STATISTICS:
+
+Constant Effect: Wearer is under the effect of Shroud of Flame
+Special: Can only be removed by a Remove Curse spell~
+@19900    = ~Hrm - you are powerful allies, indeed. More gold and gems to line your pockets, then - also, a suit of plate armor, a warhammer, a helmet, all crafted and enchanted by great duergar artisans. They are well deserved, outsider.~
+@19901    = ~Drink this Rainwater Brew, Ennelia. It should help your condition.~
+@19902    = ~Drink this Sour Draught, Ennelia. It should help your condition.~
+@19903    = ~This rainwater brew may help - drink it down.~
+@19904    = ~Perhaps a sour draught can help your wounds.~
+@19905    = ~This rainwater brew may help - drink it down.~
+@19906    = ~Perhaps a sour draught can help your wounds.~
+@19907    = ~Malakar deflected a slashing attack~
+@19908    = ~Avoided damage~

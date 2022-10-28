@@ -1421,14 +1421,22 @@ You were raised in a land where mighty wizards order affairs.  Where powerful sp
 Benefit: You receive a +2 on all Diplomacy and Spellcraft checks. In addition, when buying goods from an NPC who is a wizard or sorcerer, you are treated as having +6 Charisma (which stacks with all other Charisma bonuses), reducing prices by about 9%.~
 @712    = ~COMBAT CASTING:
 
+Prerequisite: None for the first rank, but taking the feat a second time requires 15 Concentration.
+
 You are adept at casting spells in combat.
 
-Benefit: You get a +4 bonus to Concentration checks made to cast a spell while being injured. In addition, attacks of opportunity in response to you casting a spell are made at a -4 penalty.~
+Benefit: You get a +4 bonus to Concentration checks made to cast a spell while being injured. In addition, attacks of opportunity in response to you casting a spell are made at a -4 penalty.
+
+When taken a second time, the feat prevents you from provoking any attacks of opportunity from casting spells while an enemy is in melee range.~
 @713    = ~PRECISE SHOT:
 
 You are skilled at timing and aiming ranged attacks.
 
-Benefit: Reduces the to hit penalty for firing in close quarters from -8 to -4. In addition, enemies get a -4 attack penalty on attacks of opportunity provoked by your ranged attacks.~
+Prerequisite: None for the first rank, but taking the feat a second time requires Dodge, Mobility, and base attack bonus +11 or greater.
+
+Benefit: Reduces the to hit penalty for firing in close quarters from -8 to -4, and eliminates the -4 penalty on ranged attacks when shooting an enemy engaged in melee with another ally. In addition, enemies get a -4 attack penalty on attacks of opportunity provoked by your ranged attacks.
+
+When taken a second time, the feat prevents you from provoking any attacks of opportunity from making ranged attacks while an enemy is in melee range.~
 @714    = ~DISCIPLINE:
 
 You are admired for your single-minded determination and clarity of purpose.  You are difficult to distract by spell or blow.
@@ -1951,7 +1959,7 @@ Disadvantages:
 ~
 @832    = ~TIEFLING:
 
-The infernal counterpart to aasimar, tieflings are humans with a hint of the diabolical in their bloodline. Though their appearance is mostly human, they often have telltale signs that belie their ancestry. Tieflings usually have dusky skin and dark or reddish hair. Though many sport small horns, cat eyes, or other bizarre features, most tieflings try to hide their abnormalities from humans.
+The infernal counterpart to aasimar, tieflings are humans with a hint of the diabolical in their bloodline. Though their appearance is mostly human, they often have telltale signs that belie their ancestry. Tieflings usually have dusky skin and dark or reddish hair. Though many sport small horns, cat eyes, or other bizarre features, most tieflings try to hide their abnormalities from humans. Tieflings are not to be confused with half-fiends, or cambions. While cambions are always evil, tieflings aren't necessarily.
 
 Favored Class: Rogue
 
@@ -1981,6 +1989,7 @@ Advantages:
 * Spell resistance of 6 + character level.
 * Immunity to Sleep magic.
 * Proficient with large swords and crossbows (but not bows)
+* May use Weapon Finesse with large swords.
 * Faerie Fire 1/Day.
 * Darkness 1/Day.
 * Darkvision.

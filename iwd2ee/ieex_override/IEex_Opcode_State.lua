@@ -178,11 +178,12 @@ function IEex_Extern_OnCheckAddScreenEffectsHook(pEffect, pSprite)
 
 	local screenList = IEex_Helper_GetBridge(IEex_AccessLuaStats(actorID), "screenEffects")
 	local numEntries = IEex_Helper_GetBridgeNumInts(screenList)
-
-	for i = 1, numEntries, 1 do
-		local immunityFunction = _G[IEex_Helper_GetBridge(screenList, i, "functionName")]
-		if immunityFunction and immunityFunction(IEex_Helper_GetBridge(screenList, i, "pOriginatingEffect"), pEffect, pSprite) then
-			return true
+	if pSprite > 0 and IEex_ReadDword(pSprite + 0x12) > 0 then
+		for i = 1, numEntries, 1 do
+			local immunityFunction = _G[IEex_Helper_GetBridge(screenList, i, "functionName")]
+			if immunityFunction and immunityFunction(IEex_Helper_GetBridge(screenList, i, "pOriginatingEffect"), pEffect, pSprite) then
+				return true
+			end
 		end
 	end
 	return false
@@ -282,15 +283,68 @@ ex_empowerable_opcodes = {[12] = true, [17] = true, [18] = true, [25] = true, [6
 		local parameter1 = IEex_ReadDword(effectData + 0x18)
 		local parameter2 = IEex_ReadDword(effectData + 0x1C)
 		local parameter3 = IEex_ReadDword(effectData + 0x5C)
-		local dicenumber = IEex_ReadDword(effectData + 0x34)
-		local dicesize = IEex_ReadDword(effectData + 0x38)
-		local special = IEex_ReadDword(effectData + 0x44)
 		local timing = IEex_ReadDword(effectData + 0x20)
 		local duration = IEex_ReadDword(effectData + 0x24)
+		local resource = IEex_ReadLString(effectData + 0x2C, 8)
+		local dicenumber = IEex_ReadDword(effectData + 0x34)
+		local dicesize = IEex_ReadDword(effectData + 0x38)
+		local savingthrow = IEex_ReadDword(effectData + 0x3C)
+		local savebonus = IEex_ReadDword(effectData + 0x40)
+		local special = IEex_ReadDword(effectData + 0x44)
 		local time_applied = IEex_ReadDword(effectData + 0x68)
+--[[
+		if opcode == 500 and resource == "MECOPYEQ" then
+			local effectIndex = parameter1
+			local slotToCopy = parameter2
+			local slotToMatchType = special
+			local invItemInfo = IEex_ReadDword(creatureData + 0x4AD8 + slotToCopy * 0x4)
+			if invItemInfo > 0 then
+				local itemRES = IEex_ReadLString(invItemInfo + 0xC, 8)
+				local resWrapper = IEex_DemandRes(itemRES, "ITM")
+				if resWrapper:isValid() then
+					local itemData = resWrapper:getData()
+					if itemData > 0 then
+						local itemCategory = IEex_ReadWord(itemData + 0x1C, 0x0)
+						local itemMatchesType = false
+						for k, v in ipairs(me_item_type_slots[itemCategory]) do
+							if v == slotToMatchType then
+								itemMatchesType = true
+							end
+						end
+						if itemMatchesType or slotToMatchType == -1 then
+							local effectOffset = IEex_ReadDword(itemData + 0x6A)
+							local firstGlobalEffectIndex = IEex_ReadWord(itemData + 0x6E, 0x0)
+							local numGlobalEffects = IEex_ReadWord(itemData + 0x70, 0x0)
+							if numGlobalEffects > effectIndex then
+								local offset = effectOffset + (firstGlobalEffectIndex + effectIndex) * 0x30
+								opcode = IEex_ReadWord(itemData + offset, 0x0)
+								IEex_WriteDword(effectData + 0xC, opcode)
+								parameter1 = IEex_ReadDword(itemData + offset + 0x4)
+								IEex_WriteDword(effectData + 0x18, parameter1)
+								parameter2 = IEex_ReadDword(itemData + offset + 0x8)
+								IEex_WriteDword(effectData + 0x1C, parameter2)
+								resource = IEex_ReadLString(itemData + offset + 0x14, 8)
+								IEex_WriteLString(effectData + 0x2C, resource, 8)
+								savingthrow = IEex_ReadDword(itemData + offset + 0x24)
+								IEex_WriteDword(effectData + 0x3C, savingthrow)
+								savebonus = IEex_ReadDword(itemData + offset + 0x28)
+								IEex_WriteDword(effectData + 0x40, savebonus)
+								special = IEex_ReadDword(itemData + offset + 0x2C)
+								IEex_WriteDword(effectData + 0x44, special)
+								IEex_DS(opcode)
+							else
+								return true
+							end
+						end
+					end
+				end
+				resWrapper:free()
+			end
+		end
+--]]
 		local damageType = bit.band(parameter2, 0xFFFF0000)
 		if opcode == 12 then
-			if bit.band(parameter3, 0x40000) > 0 then
+			if bit.band(parameter3, 0x8000000) > 0 then
 				if damageType == 0x80000 then
 					IEex_SetToken("EXDAMFIR", IEex_FetchString(ex_tra_55387))
 					local fireResistance = IEex_ReadSignedWord(creatureData + 0x942, 0x0)
@@ -306,12 +360,9 @@ ex_empowerable_opcodes = {[12] = true, [17] = true, [18] = true, [25] = true, [6
 			end
 		end
 		if bit.band(internalFlags, 0x2000000) > 0 then return false end
-		local savingthrow = IEex_ReadDword(effectData + 0x3C)
-		local savebonus = IEex_ReadDword(effectData + 0x40)
 		local school = IEex_ReadDword(effectData + 0x48)
 		local restype = IEex_ReadDword(effectData + 0x8C)
 		local casterClass = IEex_ReadByte(effectData + 0xC5, 0x0)
-		local resource = IEex_ReadLString(effectData + 0x2C, 8)
 		local parent_resource = IEex_ReadLString(effectData + 0x90, 8)
 		local sourceSpell = ex_damage_source_spell[parent_resource]
 		if sourceSpell == nil then
@@ -503,11 +554,17 @@ ex_empowerable_opcodes = {[12] = true, [17] = true, [18] = true, [25] = true, [6
 						local theparameter2 = IEex_ReadDword(eData + 0x20)
 						if theopcode == 73 and theparameter2 > 0 then
 							if ex_damage_multiplier_type[IEex_ReadDword(effectData + 0x1C)] == theparameter2 then
+								local thesavingthrow = IEex_ReadDword(eData + 0x40)
+								local thespecial = IEex_ReadDword(eData + 0x48)
 								damageMultiplier = damageMultiplier + theparameter1
 								local theresource = IEex_ReadLString(eData + 0x30, 8)
-								if theresource == parent_resource then
-									local thespecial = IEex_ReadDword(eData + 0x48)
-									damageMultiplier = damageMultiplier + thespecial
+								if theresource == "" or theresource == parent_resource then
+									if bit.band(thesavingthrow, 0x100000) == 0 then
+										damageMultiplier = damageMultiplier + thespecial
+									else
+										parameter1 = parameter1 + thespecial
+										IEex_WriteDword(effectData + 0x18, parameter1)
+									end
 								end
 							end
 						end

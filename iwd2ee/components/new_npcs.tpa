@@ -626,7 +626,7 @@ COPY_EXISTING ~30GOBVUN.cre~ ~override~
 
 COPY_EXISTING ~41XHAAN.cre~ ~override~
 	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelfighter=2 newlevelsorcerer=6 STR_VAR updatehp=~max~ END
-	WRITE_LONG xp 22597
+	WRITE_LONG xp 28597
 	WRITE_SHORT armorclass 10
 	WRITE_ASCII smallportrait ~USXHAA_S~ #8
 	WRITE_ASCII largeportrait ~USXHAA_L~ #8
@@ -765,7 +765,7 @@ COPY_EXISTING ~41ZACK.cre~ ~override~
 
 COPY_EXISTING ~50PAIRI.cre~ ~override~
 	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelsorcerer=1 STR_VAR updatehp=~max~ END
-	WRITE_LONG xp 163
+	WRITE_LONG xp 36163
 	WRITE_ASCII smallportrait ~HFT2_S~ #8
 	WRITE_ASCII largeportrait ~HFT2_L~ #8
 	WRITE_BYTE strength 8
@@ -875,7 +875,7 @@ COPY_EXISTING ~USVEIR.cre~ ~override~
 	LPF	IWD2_REMOVE_CRE_ITEM STR_VAR item=~11VEIRA4 USAHFI1~ END
 
 COPY_EXISTING ~USVREK.cre~ ~override~
-	LPF	IWD2_REMOVE_CRE_ITEM STR_VAR item=~RT02_R USAHBB5~ END
+	LPF	IWD2_REMOVE_CRE_ITEM STR_VAR item=~RT02_R USAHBB5 USAHBB6~ END
 	PATCH_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~0~ BEGIN
 		LPF IWD2_ADD_CRE_EFFECT INT_VAR opcode=500 target=1 timing=9 STR_VAR resource=~MEBARBMV~ effsource=~USBARBMV~ END
 		LPF IWD2_ADD_CRE_EFFECT INT_VAR opcode=86 target=1 timing=9 parameter1=1 STR_VAR effsource=~USSTBA01~ END

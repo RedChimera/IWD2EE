@@ -980,7 +980,6 @@ function IEex_WriteDelayedPatches()
 
 	IEex_WriteWord(0x84EA66, IEex_NEW_FEATS_SIZE)
 
-
 	--This code prevents the game from crashing when there are more than 16 skills in SKILLS.2DA, but the additional skills still aren't displayed on the skills screen.
 	IEex_WriteByte(0x763E9D + 2, IEex_NEW_SKILLS_SIZE)
 	IEex_WriteByte(0x76429A + 2, IEex_NEW_SKILLS_SIZE)

@@ -1313,9 +1313,9 @@ Saving Throw: None
 This spell bestows a form of divine madness upon the priest's allies, improving their combat skills. All the priest's allies in the area of effect gain a +2 to attack rolls, damage rolls, and saving throws, and all creatures of the same alignment as the caster gain an extra attack every round.~
 @1641    = ~Call Lightning~
 @1642    = ~Call Lightning
-(Transmutation) 
+(Transmutation)
 Level: Clr 5, Drd 3, Rgr 4, Sor/Wiz 6
-Range: Sight of Caster
+Range: Caster
 Duration: 5 rounds/level
 Casting Time: 1 round
 Area of Effect: Sight of Caster
@@ -3060,6 +3060,17 @@ Area of Effect: Special
 Saving Throw: None 
 
 This spell summons one or more creatures of nature who will aid the caster for the duration of the spell.  The type of creatures that come is random.  The creatures summoned are more powerful than creatures summoned by lesser versions of this spell.~
+@31802     = ~Mass Heal~
+@32802     = ~Mass Heal
+(Conjuration)
+Level: Clr 8, Drd 9, Lathander 9
+Range: Caster
+Duration: Instantaneous
+Casting Time: 9
+Area of Effect: All allies within 20 ft.
+Saving Throw: None
+
+Mass Heal wipes away disease and injury from all allies in the area of effect. It cures blindness, diseases, feeblemind and restores the targets to maximum hit points if they have been injured.~
 @31850     = ~Summon Nature's Ally VIII~
 @32850     = ~Summon Nature's Ally VIII
 (Conjuration) 
@@ -3533,6 +3544,26 @@ Saving Throw: None
 A mending spell of moderate power, Make Whole completely repairs and unrusts all broken equipment in the caster's inventory, restoring them to their former glory. Broken armor typically becomes half-plate, ancient armor typically becomes full plate, and broken weapons are often restored to masterwork quality. If nothing else, the restored equipment is more valuable than it was when broken.
 
 Make Whole cannot repair enormous objects like buildings, walls or airships. For those, more powerful mending spells are needed.~
+@35259     = ~Heat Metal~
+@36259     = ~Heat Metal
+(Transmutation)
+Level: Drd 2
+Range: Sight of Caster
+Duration: Instantaneous
+Casting Time: 4
+Area of Effect: 1 creature
+Saving Throw: None
+
+This spell heats up all metal equipment the target currently has equipped, dealing fire damage to the target depending on how much metal was heated up:
+
+Has metal one-handed weapon or shield equipped: 2d6 per item
+Has metal two-handed weapon equipped: 4d6
+Wearing chain mail or splint mail: 6d6
+Wearing half-plate, field plate or full plate: 8d6
+Has Iron Skins active: 10d6
+Has Iron Body active or is a creature made of metal: 15d6
+
+If more than one of the above conditions apply, the damage from those conditions stacks.~
 @35351     = ~Quiver of Plenty~
 @36351     = ~Quiver of Plenty
 (Conjuration)
@@ -3776,6 +3807,17 @@ Area of Effect: 20-foot long, 5-foot wide wall
 Saving Throw: None
 
 This spell creates a wall of holy fire, which does not burn the innocent. Any non-good creature that passes through the wall takes 12d6 holy fire damage (which ignores fire resistance) with no Saving Throw. Good creatures can pass through the wall unharmed. Only one such wall can be active at a time.~
+@35659     = ~Mass Heal Animal~
+@36659     = ~Mass Heal Animal
+(Conjuration)
+Level: Drd 6, Rgr 6
+Range: Caster
+Duration: Instantaneous
+Casting Time: 9
+Area of Effect: Allied animals within 20 ft.
+Saving Throw: None
+
+Mass Heal Animal wipes away disease and injury from all animals in the area of effect. It cures blindness, diseases, feeblemind and restores the targets to maximum hit points if they have been injured.~
 @35753     = ~Power Word: Heal~
 @36753     = ~Power Word: Heal
 (Divination)

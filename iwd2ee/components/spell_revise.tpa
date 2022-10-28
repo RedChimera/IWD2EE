@@ -1863,6 +1863,12 @@ COPY_EXISTING ~sppr750.spl~ ~override~
 	SAY UNIDENTIFIED_DESC @32750
 	SAY IDENTIFIED_DESC @32750
 
+COPY_EXISTING ~sppr802.spl~ ~override~
+	SAY NAME1 @31802
+	SAY NAME2 @31802
+	SAY UNIDENTIFIED_DESC @32802
+	SAY IDENTIFIED_DESC @32802
+
 COPY_EXISTING ~sppr850.spl~ ~override~
 	SAY NAME1 @31850
 	SAY NAME2 @31850
@@ -2490,6 +2496,12 @@ COPY_EXISTING ~uspr658.spl~ ~override~
 	SAY UNIDENTIFIED_DESC @36658
 	SAY IDENTIFIED_DESC @36658
 
+COPY_EXISTING ~uspr659.spl~ ~override~
+	SAY NAME1 @35659
+	SAY NAME2 @35659
+	SAY UNIDENTIFIED_DESC @36659
+	SAY IDENTIFIED_DESC @36659
+
 COPY_EXISTING ~uspr753.spl~ ~override~
 	SAY NAME1 @35753
 	SAY NAME2 @35753
@@ -3084,6 +3096,15 @@ COPY_EXISTING ~uswi755.spl~ ~override~
 	SAY NAME2 @37755
 	SAY UNIDENTIFIED_DESC @38755
 	SAY IDENTIFIED_DESC @38755
+	READ_SHORT 0x68 numheaders
+	FOR (i = numheaders; i < 50; ++i) BEGIN
+		LPF ADD_SPELL_HEADER INT_VAR copy_header=i insert_point=i END
+		numheaders = numheaders + 1
+	END
+	FOR (i = 1; i <= numheaders; ++i) BEGIN
+		LPF ALTER_SPELL_HEADER INT_VAR header=i min_level=i END
+		LPF ALTER_EFFECT INT_VAR silent=1 header=(i - 1) match_opcode=500 special=(0x17B0000 + i) STR_VAR match_resource=~MEBARRA2~ END
+	END
 
 COPY_EXISTING ~uswi756.spl~ ~override~
 	SAY NAME1 @37756
@@ -3286,7 +3307,7 @@ COPY_EXISTING ~uswi956.spl~ ~override~
 	END
 	FOR (i = 1; i <= numheaders; ++i) BEGIN
 		LPF ALTER_SPELL_HEADER INT_VAR header=i min_level=i END
-		LPF ALTER_EFFECT INT_VAR silent=1 header=(i - 1) match_opcode=500 special=(i * 2) STR_VAR match_resource=~MEBARRAM~ END
+		LPF ALTER_EFFECT INT_VAR silent=1 header=(i - 1) match_opcode=500 special=(0xCD0000 + (i * 2)) STR_VAR match_resource=~MEBARRA2~ END
 	END
 
 COPY_EXISTING ~uswi957.spl~ ~override~
@@ -3388,7 +3409,7 @@ COPY ~%mod_folder%/bam/USCOLDA.bam~ ~override~
 COPY ~%mod_folder%/bam/USCOLDB.bam~ ~override~
 COPY ~%mod_folder%/bam/USCOLDC.bam~ ~override~
 
-COPY_EXISTING ~sppr504.spl~ ~override~ ~sppr712.spl~ ~override~ ~uspr355.spl~ ~override~
+COPY_EXISTING ~sppr504.spl~ ~override~ ~sppr712.spl~ ~override~ ~uspr355.spl~ ~override~ ~uswi866d.spl~ ~override~
 	LPF CLONE_EFFECT INT_VAR multi_match=1 opcode=172 timing=9 STR_VAR resource=~USBLINKT~ insert=~last~ END
 	LPF CLONE_EFFECT INT_VAR multi_match=1 opcode=172 timing=9 STR_VAR resource=~USJUMP~ insert=~last~ END
 	LPF CLONE_EFFECT INT_VAR multi_match=1 opcode=172 timing=9 STR_VAR resource=~USWI456D~ insert=~last~ END
@@ -3397,11 +3418,11 @@ COPY_EXISTING ~sppr504.spl~ ~override~ ~sppr712.spl~ ~override~ ~uspr355.spl~ ~o
 	LPF CLONE_EFFECT INT_VAR multi_match=1 opcode=500 timing=0 STR_VAR resource=~MEPOLYBA~ insert=~last~ END
 	UNLESS ~USBLINKT~
 
-COPY_EXISTING ~sppr504.spl~ ~override~ ~sppr712.spl~ ~override~ ~uspr355.spl~ ~override~
+COPY_EXISTING ~sppr504.spl~ ~override~ ~sppr712.spl~ ~override~ ~uspr355.spl~ ~override~ ~uswi866d.spl~ ~override~
 	LPF CLONE_EFFECT INT_VAR multi_match=1 opcode=276 parameter2=255 timing=9 STR_VAR resource=~USNOSALA~ insert=~last~ END
 	UNLESS ~USNOSALA~
 
-COPY_EXISTING ~sppr504.spl~ ~override~ ~sppr712.spl~ ~override~ ~uspr355.spl~ ~override~
+COPY_EXISTING ~sppr504.spl~ ~override~ ~sppr712.spl~ ~override~ ~uspr355.spl~ ~override~ ~uswi866d.spl~ ~override~
 	LPF CLONE_EFFECT INT_VAR multi_match=1 opcode=172 timing=9 STR_VAR resource=~USP01L01~ insert=~last~ END
 	LPF CLONE_EFFECT INT_VAR multi_match=1 opcode=172 timing=9 STR_VAR resource=~USP02L01~ insert=~last~ END
 	LPF CLONE_EFFECT INT_VAR multi_match=1 opcode=172 timing=9 STR_VAR resource=~USP03L01~ insert=~last~ END

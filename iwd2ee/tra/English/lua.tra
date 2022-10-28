@@ -288,6 +288,9 @@
 @55598=~The spell <EXACVAL1> has been stored in this character, to be released under the right conditions~
 @55599=~Contingency triggered~
 
+@55601=~Immune~
+@55602=~Absorbed~
+
 @55701=~Spell Failed: Rewind Time had not been initialized to start tracking effects on this character. Now it has, so it should work the next time the character casts the spell.~
 @55702=~Uninjured~
 @55703=~Barely injured~
