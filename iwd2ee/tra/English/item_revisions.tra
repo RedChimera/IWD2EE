@@ -14099,6 +14099,20 @@ STATISTICS:
 
 Constant Effect: Wearer is under the effect of Shroud of Flame
 Special: Can only be removed by a Remove Curse spell~
+//@12903    = ~Bone Talisman~
+@12904    = ~Bone talismans are highly coveted among practitioners of necromancy.  The charm is created from a piece of bone taken from the remains of a slain vampire.  Usually fashioned into a necklace or ring, the fey magic contained within the talisman enables the wearer to drain the life force from any living creature he or she touches.
+
+STATISTICS:
+
+Special: When cast by the wearer, Larloch's Minor Drain drains an additional 10 hit points, and Vampiric Touch drains an additional 20 hit points
+Spell Power: Can cast the spell Vampiric Touch (at level 10) once per day~
+//@12905    = ~Bone Talisman~
+@12906    = ~Bone talismans are highly coveted among practitioners of necromancy.  The charm is created from a piece of bone taken from the remains of a slain vampire.  Usually fashioned into a necklace or ring, the fey magic contained within the talisman enables the wearer to drain the life force from any living creature he or she touches.
+
+STATISTICS:
+
+Special: When cast by the wearer, Larloch's Minor Drain drains an additional 15 hit points, and Vampiric Touch drains an additional 30 hit points
+Spell Power: Can cast the spell Vampiric Touch (at level 10) once per day~
 @19900    = ~Hrm - you are powerful allies, indeed. More gold and gems to line your pockets, then - also, a suit of plate armor, a warhammer, a helmet, all crafted and enchanted by great duergar artisans. They are well deserved, outsider.~
 @19901    = ~Drink this Rainwater Brew, Ennelia. It should help your condition.~
 @19902    = ~Drink this Sour Draught, Ennelia. It should help your condition.~

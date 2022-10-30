@@ -1867,17 +1867,19 @@ A wizard that specializes in magic that protects, blocks, or banishes.
 Advantages:
 * Abjurers can memorize an additional spell per spell level they know.
 * Abjuration spells cast by an abjurer gain +2 DC.
+* Abjuration wizard spells cast by an abjurer last 20% longer.
 
 Disadvantages:
 * Abjurers cannot learn spells from the Invocation school.~
 @817    = ~Conjurer~
 @818    = ~CONJURER: 
 
-A wizard that specializes in creating creatures and objects to assist him.
+A wizard that specializes in creating creatures and objects to assist them.
 
 Advantages:
 * Conjurers can memorize an additional spell per spell level they know.
 * Conjuration spells cast by a conjurer gain +2 DC.
+* Conjuration wizard spells cast by a conjurer last 20% longer.
 
 Disadvantages:
 * Conjurers cannot learn spells from the Necromancy school.~
@@ -1888,6 +1890,7 @@ A wizard that specializes in detection and divining magics.
 
 * Diviners can memorize an additional spell per spell level they know.
 * Divination spells cast by a diviner gain +2 DC.
+* Divination wizard spells cast by a diviner last 20% longer.
 
 Disadvantages:
 * Diviners cannot learn spells from the Illusion school.~
@@ -1898,6 +1901,7 @@ A wizard that specializes in manipulating the minds of sentient beings.
 
 * Enchanters can memorize an additional spell per spell level they know.
 * Enchantment spells cast by an enchanter gain +2 DC.
+* Enchantment wizard spells cast by an enchanter last 20% longer.
 
 Disadvantages:
 * Enchanters cannot learn spells from the Transmutation school.~
@@ -1908,6 +1912,7 @@ A wizard that specializes in manipulating energy and creating something from not
 
 * Evokers can memorize an additional spell per spell level they know.
 * Evocation spells cast by an evoker gain +2 DC.
+* Evocation wizard spells cast by an evoker last 20% longer.
 
 Disadvantages:
 * Evokers cannot learn spells from the Abjuration school.~
@@ -1918,6 +1923,7 @@ A wizard that specializes in creating illusions to confuse and mislead.
 
 * Illusionists can memorize an additional spell per spell level they know.
 * Illusion spells cast by an illusionist gain +2 DC.
+* Illusion wizard spells cast by an illusionist last 20% longer.
 
 Disadvantages:
 * Illusionists cannot learn spells from the Divination school.~
@@ -1928,6 +1934,7 @@ A wizard that specializes in magic dealing with death.
 
 * Necromancers can memorize an additional spell per spell level they know.
 * Necromancy spells cast by a necromancer gain +2 DC.
+* Necromancy wizard spells cast by a necromancer last 20% longer.
 
 Disadvantages:
 * Necromancers cannot learn spells from the Conjuration school.~
@@ -1938,6 +1945,7 @@ A wizard that specializes in magic that alters physical reality.
 
 * Transmuters can memorize an additional spell per spell level they know.
 * Transmutation spells cast by a transmuter gain +2 DC.
+* Transmutation wizard spells cast by a transmuter last 20% longer.
 
 Disadvantages:
 * Transmuters cannot learn spells from the Enchantment school.~

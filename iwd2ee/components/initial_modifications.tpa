@@ -652,9 +652,9 @@ COPY_EXISTING ~41PDOORS.bcs~ ~override~
 		REPLACE_TEXTUALLY CASE_INSENSITIVE ~DisplayString(LastTrigger,30052)~ ~DisplayString(LastTrigger,%ref_30052%)~
 	END
 
-COPY_EXISTING ~LUA6000A.bcs~ ~override~
+COPY_EXISTING ~53CKULDA.bcs~ ~override~
 	DECOMPILE_AND_PATCH BEGIN
-		REPLACE_TEXTUALLY CASE_INSENSITIVE ~CutSceneID(Player1)~ ~CutSceneID(Player1)
+		REPLACE_TEXTUALLY CASE_INSENSITIVE ~CutSceneID(Myself)~ ~CutSceneID(Myself)
 AdvanceTime(900)~
 	END
 

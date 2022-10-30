@@ -368,6 +368,11 @@ ex_empowerable_opcodes = {[12] = true, [17] = true, [18] = true, [25] = true, [6
 		if sourceSpell == nil then
 			sourceSpell = string.sub(parent_resource, 1, 7)
 		end
+		if ex_trueschool[parent_resource] ~= nil then
+			school = ex_trueschool[parent_resource]
+		elseif ex_trueschool[sourceSpell] ~= nil then
+			school = ex_trueschool[sourceSpell]
+		end
 		if opcode == 12 and parent_resource == "IEEX_DAM" and IEex_IsSprite(sourceID, true) then
 --			if (bit.band(savingthrow, 0x10000) > 0 and (IEex_GetActorSpellState(sourceID, 195) or IEex_GetActorSpellState(sourceID, 225))) or bit.band(savingthrow, 0x40000) == 0 then
 				local weaponRES = IEex_ReadLString(effectData + 0x6C, 8)
@@ -926,26 +931,30 @@ ex_empowerable_opcodes = {[12] = true, [17] = true, [18] = true, [25] = true, [6
 				end
 			end
 		end
-		--[[
-		if IEex_GetActorSpellState(sourceID, 195) and timing ~= 1 and timing ~= 2 and timing ~= 9 and (ex_listspll[sourceSpell] ~= nil or ex_listdomn[sourceSpell] ~= nil) and (opcode ~= 500 or math.abs(duration - time_applied) > 16) then
+
+		if timing ~= 1 and timing ~= 2 and timing ~= 9 and (ex_listspll[sourceSpell] ~= nil or ex_listdomn[sourceSpell] ~= nil or casterClass > 0) and (opcode ~= 500 or math.abs(duration - time_applied) > 16) then
 			local durationMultiplier = 100
 			IEex_IterateActorEffects(sourceID, function(eData)
 				local theopcode = IEex_ReadDword(eData + 0x10)
 				local theparameter2 = IEex_ReadDword(eData + 0x20)
-				if theopcode == 288 and theparameter2 == 195 then
+				if theopcode == 288 and theparameter2 == 198 then
 					local theparameter1 = IEex_ReadDword(eData + 0x1C)
+					local theresource = IEex_ReadLString(eData + 0x30, 8)
 					local thesavingthrow = IEex_ReadDword(eData + 0x40)
 					local thespecial = IEex_ReadDword(eData + 0x48)
-					if (thespecial == 0 and casterClass > 0) or (thespecial == 1 and (casterClass == 2 or casterClass == 10 or casterClass == 11)) or (thespecial == 2 and (casterClass == 3 or casterClass == 4 or casterClass == 7 or casterClass == 8)) then
+					if (thespecial == 0 or thespecial == school) and (theresource == "" or theresource == parent_resource or theresource == sourceSpell) and ((casterClass == 2 and bit.band(thesavingthrow, 0x10000) > 0) or (casterClass == 3 and bit.band(thesavingthrow, 0x20000) > 0) or (casterClass == 4 and bit.band(thesavingthrow, 0x40000) > 0) or (casterClass == 7 and bit.band(thesavingthrow, 0x80000) > 0) or (casterClass == 8 and bit.band(thesavingthrow, 0x100000) > 0) or (casterClass == 10 and bit.band(thesavingthrow, 0x200000) > 0) or (casterClass == 11 and bit.band(thesavingthrow, 0x400000) > 0)) then
 						durationMultiplier = durationMultiplier + theparameter1 - 100
 					end
 				end
 			end)
+			if casterClass == 11 and school > 0 and (2 ^ (school + 5)) == bit.band(IEex_GetActorStat(sourceID, 89), 0x7FC0) then
+				durationMultiplier = durationMultiplier + ex_specialist_duration_multiplier - 100
+			end
 			if durationMultiplier ~= 100 then
 				IEex_WriteDword(effectData + 0x24, math.ceil((duration - time_applied) * durationMultiplier / 100) + time_applied)
 			end
 		end
-		--]]
+
 		return false
 	end)
 

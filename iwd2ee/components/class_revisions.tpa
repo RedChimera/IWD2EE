@@ -163,6 +163,7 @@ COPY_EXISTING ~SKILLPTS.2da~ ~override~
 	SET_2DA_ENTRY 0 2 12 ~3~
 
 COPY_EXISTING ~IEex_WEIDU.lua~ ~override~
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_specialist_duration_multiplier *=.*~ ~ex_specialist_duration_multiplier = 120~
 	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_proficiency_damage *=.*~ ~ex_proficiency_damage = {[0] = 0, [1] = 0, [2] = 2, [3] = 5, [4] = 5, [5] = 5}~
 	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_proficiency_attack *=.*~ ~ex_proficiency_attack = {[0] = -4, [1] = 0, [2] = 2, [3] = 5, [4] = 5, [5] = 5}~
 

@@ -3692,12 +3692,14 @@ This spell increases the harm that extreme conditions do to the target's body. F
 (Transmutation)
 Level: Rgr 6
 Range: Caster
-Duration: 4 rounds
+Duration: 4 rounds or until used up
 Casting Time: 5
 Area of Effect: Special
 Saving Throw: Reflex half
 
-This spell augments the ranger's missile attacks to deal damage in a cone. For the duration, whenever the ranger would make a missile attack, a spray of thorns is released instead, dealing the attack's damage to all creatures in a cone. However, creatures in the cone can make a Reflex save to halve the damage of the attack.~
+This spell augments the ranger's missile attacks to deal damage in a cone. For the duration, if the ranger would make a missile attack, a spray of thorns is released instead, dealing the attack's damage to all creatures in a cone. However, creatures in the cone can make a Reflex save to halve the damage of the attack. Once the ranger has made a number of ranged attacks equal to 1 per 6 levels, the spell ends early. Thorn Shots does not stack with Flame Shots.
+
+Although rangers normally cast spells at half their caster level, Holy Weapon will be cast at a ranger's full caster level.~
 @35554     = ~Animal Growth~
 @36554     = ~Animal Growth
 (Transmutation)

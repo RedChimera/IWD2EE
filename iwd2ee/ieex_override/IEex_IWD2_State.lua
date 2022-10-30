@@ -6958,7 +6958,7 @@ function MEPOLYMO(effectData, creatureData)
 ["timing"] = 9,
 ["parameter1"] = -4,
 ["parameter2"] = 193,
-["special"] = 2,
+["special"] = 0,
 ["parent_resource"] = "USPOLYMO",
 ["source_id"] = targetID
 })
@@ -10767,10 +10767,8 @@ function IEex_EvaluatePermanentRepeatingEffects(creatureData)
 			if theopcode == 288 and theparameter2 == 193 then
 				local theparameter1 = IEex_ReadDword(eData + 0x1C)
 				local thespecial = IEex_ReadDword(eData + 0x48)
-				if thespecial == 2 then
-					usedFunction = true
-					castingSpeedModifier = castingSpeedModifier + theparameter1
-				end
+				usedFunction = true
+				castingSpeedModifier = castingSpeedModifier + theparameter1
 			elseif theopcode == 500 and theresource == "MEIMPALA" then
 				disableCastingSpeed = true
 			end
@@ -11159,6 +11157,7 @@ function MEONCAST(effectData, creatureData)
 })
 	end
 --]]
+--[[
 	local wizardDurationModifier = 100
 	local priestDurationModifier = 100
 --	if IEex_GetActorSpellState(targetID, 193) then
@@ -11212,6 +11211,7 @@ function MEONCAST(effectData, creatureData)
 ["source_id"] = targetID
 })
 	end
+--]]
 --	if IEex_GetActorSpellState(targetID, 227) then
 		IEex_IterateActorEffects(targetID, function(eData)
 			local theopcode = IEex_ReadDword(eData + 0x10)

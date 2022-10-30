@@ -1393,8 +1393,24 @@ IEex_MutatorOpcodeFunctions["MEBOULSH"] = {
 			newMissileIndex = ex_match_missile_index[matchMissileIndexTable][missileIndex]
 		end
 		local thelimit = IEex_ReadSignedWord(originatingEffectData + 0x46, 0x0)
-		if (bit.band(savingthrow, 0x80000) > 0 and thelimit == 0) or not projectileMatched then
+		if (bit.band(savingthrow, 0x80000) > 0 and thelimit == 0) or not projectileMatched or (bit.band(savingthrow, 0x200000) == 0 and (source < 11 or source > 14)) then
 			ex_is_boulder_shot[actorID][functionIdentifier] = nil
+			if bit.band(savingthrow, 0x100000) > 0 then
+				thelimit = thelimit - 1
+				IEex_WriteWord(originatingEffectData + 0x46, thelimit)
+				if (bit.band(savingthrow, 0x80000) > 0 and thelimit == 0) then
+					IEex_WriteWord(creatureData + 0x476, 0)
+					IEex_ApplyEffectToActor(actorID, {
+["opcode"] = 254,
+["target"] = 2,
+["timing"] = 1,
+["resource"] = IEex_ReadLString(originatingEffectData + 0x90, 8),
+["source_target"] = actorID,
+["source_id"] = actorID,
+})
+				end
+			end
+
 			return missileIndex
 		elseif bit.band(savingthrow, 0x80000) > 0 and thelimit > 0 and source ~= 11 and source ~= 13 then
 			thelimit = thelimit - 1
@@ -1432,7 +1448,7 @@ IEex_MutatorOpcodeFunctions["MEBOULSH"] = {
 				damageType = ex_new_projectile_damage_type[matchMissileIndexTable][damageType]
 				IEex_WriteWord(effectData + 0x1E, damageType)
 			end
-			local damageBonus = IEex_ReadByte(originatingEffectData + 0x18, 0x0)
+			local damageBonus = IEex_ReadSignedByte(originatingEffectData + 0x18, 0x0)
 			local dicesize = IEex_ReadByte(originatingEffectData + 0x19, 0x0)
 			local dicenumber = IEex_ReadByte(originatingEffectData + 0x1A, 0x0)
 			local luck = IEex_GetActorStat(actorID, 32)
