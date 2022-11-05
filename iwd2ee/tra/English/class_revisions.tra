@@ -629,9 +629,9 @@ Special: This feat may be taken up to three times.~
 
 After endless dark research, you have finally achieved immortality... so long as your phylactery survives.
 
-Prerequisite: 18 levels of wizard or sorcerer or 15 levels of necromancer, must be evil or be an elf
+Prerequisite: 18 levels of wizard or sorcerer or 15 levels of necromancer, must be evil
 
-Benefit: After this feat is taken three times, you become lich and gain these effects:
+Benefit: After this feat is taken three times, you become a lich and gain these effects:
 * +5 armor bonus.
 * +2 Intelligence, Wisdom and Charisma.
 * Immune to cold, electricity, poison, disease, bleeding, fatigue, sleep, fear, hopelessness, charm, confusion, feeblemind, paralysis, stun, energy drain, instant death, petrification, polymorph effects, and healing spells.
@@ -640,10 +640,7 @@ Benefit: After this feat is taken three times, you become lich and gain these ef
 * You can be turned, but count as 4 levels higher against turning effects.
 * Your unarmed attacks are replaced with a Lich Touch, which deals 1d8+5 cold damage and paralyzes the target for 10 rounds on a failed save (Fortitude DC 10 + 1/4 sorcerer/wizard level + Charisma/Intelligence modifier).
 * You have an aura of fear; any enemy within 20 feet that is at least 5 levels lower than you must make a Will save (DC 10 + 1/4 sorcerer/wizard level + Charisma/Intelligence modifier) or run away for 1 round. An enemy that makes the save is immune to this effect for 24 hours.
-* You gain a phylactery which stores your life force. If you die, you come back after 8 hours. However, if all party members die, the enemies will destroy your phylactery and the game will be over.
-
-If you pursue this feat as a non-evil elf, you instead become a baelnorn. If so, you do not have an aura of fear.
-~
+* You gain a phylactery which stores your life force. If you die, you come back after 8 hours. However, if all party members die, the enemies will destroy your phylactery and the game will be over.~
 @522    = ~Wizard~
 @523    = ~WIZARD:
 

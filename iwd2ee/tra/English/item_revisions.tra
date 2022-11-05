@@ -113,6 +113,7 @@ When the goblin horde sacked Bremen, this mysterious item was seized from a dead
 STATISTICS:
 
 Special:
+ Storm-based spells (Rainstorm, Fire Storm, Storm of Vengeance, Ice Storm, Acid, Storm, and Stygian Ice Storm) do not harm allies when cast by the wearer
  Spell Power:  Can cast the spell Sanctuary (at level 15) twice per day
 Weight: 1 lb.~
 //@10046    = ~Calm Before the Storm~
@@ -123,8 +124,9 @@ This medallion, however, predates them all, carrying additional enchantments tha
 STATISTICS:
 
 Special:
- Spell Power:  Can cast the spell Sanctuary (at level 30) three times per day
+ Storm-based spells (Rainstorm, Fire Storm, Storm of Vengeance, Ice Storm, Acid, Storm, and Stygian Ice Storm) do not harm allies when cast by the wearer
  Constant Effect: User under the effects of the spell Mind Blank while equipped
+ Spell Power:  Can cast the spell Sanctuary (at level 30) three times per day
 Weight: 1 lb.~
 //@10048    = ~Flame Dance Talisman~
 @10049    = ~Fire can be the bringer of life, or the harvester of death. With the Flame Dance Talisman, both scenarios are true. Crafted by an unknown, yet clever sorcerer, the Flame Dance Talisman gave its wearer added protection against all sorts of melee attacks and had the power to launch a fireball three times per day at would-be attackers.
@@ -133,6 +135,7 @@ STATISTICS:
 
 Generic Armor Bonus: +1
 Special:
+ All fire damage dealt by the wearer is increased by 15%
  Spell Power:  Can cast the spell Fireball (at level 10) three times per day
 Weight: 1 lb.~
 //@10050    = ~Sunfire Talisman~
@@ -142,8 +145,9 @@ STATISTICS:
 
 Generic Armor Bonus: +3
 Special:
+ Resistance: 30/-  Fire Resistance
+ All fire damage dealt by the wearer is increased by 30%
  Spell Power:  Can instantly cast the spell Sunfire (at level 15, save DC 40) three times per day
- Resistance: 20/-  Fire Resistance
 Weight: 1 lb.~
 //@10052    = ~Gohoin's Charm~
 @10053    = ~The kobold explorer Gohoin wore this lucky charm with him throughout most of his life. A rarity among kobolds, Gohoin was both brave and clever. He worked to undermine the efforts of the dwarves against his people for twenty years before being slain in a dwarven rush on his tribe's home settlement. As luck would have it, the charm did not fall into the hands of the dwarves, but bounced away into an underground river. It was discovered decades later by a goblin hunter who wore it for the rest of his days. The nameless goblin is believed to have died somewhere in the Spine of the World mountains.
@@ -11497,9 +11501,9 @@ Naturally, not satisfied with any ordinary halberd, Pudu commissioned for partic
 
 STATISTICS:
 
-Damage:  1d10 + 3
-Attack Bonus:  +3
-Enchantment:  +3
+Damage:  1d10 + 5
+Attack Bonus:  +5
+Enchantment:  +5
 Damage Type:  Piercing
 Special:
   Stunning: 25% chance target is stunned for 1/2 combat round (Fortitude DC 30)
@@ -11514,9 +11518,9 @@ Naturally, not satisfied with any ordinary halberd, Pudu commissioned for partic
 
 STATISTICS:
 
-Damage:  1d10 + 5
-Attack Bonus:  +5 
-Enchantment:  +5
+Damage:  1d10 + 9
+Attack Bonus:  +9
+Enchantment:  +9
 Damage Type:  Piercing
 Special:
   Stunning: 25% chance target is stunned for 1/2 combat round (Fortitude DC 40)
@@ -14113,6 +14117,44 @@ STATISTICS:
 
 Special: When cast by the wearer, Larloch's Minor Drain drains an additional 15 hit points, and Vampiric Touch drains an additional 30 hit points
 Spell Power: Can cast the spell Vampiric Touch (at level 10) once per day~
+@12907    = ~Potion of Draconic Strength~
+@12908    = ~This potion was brewed from the pale yolk found in the white wyrm's egg, combined with some reagents from Imphraili's lab. Though it came at the cost of the future wyrm hatchling's life, the potion grants the strength of a fully grown white wyrm, whose might exceeds that of many giants. This strength lasts for 30 rounds.
+
+Strength: +12
+Cold Resistance: 50/-~
+@12909    = ~Potion of Draconic Strength~
+@12910    = ~This potion was brewed from the pale yolk found in the white wyrm's egg, combined with some reagents from Imphraili's lab. Though it came at the cost of the future wyrm hatchling's life, the potion grants the strength of a fully grown white wyrm, whose might exceeds that of many giants. This strength lasts for 30 rounds.
+
+Strength: +24
+Cold Resistance: 100/-~
+@13911    = ~Pikeman's End~
+@13912    = ~This notched and tarnished blade once saw a great deal of service in the employ of Kath Tahl, a warlord and bandit who roamed the countryside of the western heartlands.  Kath was fond of destroying peasant militias to send a warning to other communities.  He used this sword to that end.  When the nervous defenders tried to form a line of pikes, Kath and other heavily armored men would wade into the fray, hacking their weapons apart and breaking their formation.  Once the villagers had been sent into disarray, his men would fall in with cavalry and take what they wanted.  Kath eventually met his end when a rival warlord, Marhap the Blackbeard, destroyed Kath's army.
+
+STATISTICS:
+
+Damage:  2d6 + 3
+Attack Bonus:  +3 
+Enchantment:  +3
+Damage Type:  Slashing
+Special:
+  Pikeman's End deflects the first instance of piercing (melee) damage that would hit the wielder each round
+Weight: 12 lb.
+Feat Requirement:  Martial Weapon, Great Sword
+Type:  Two-handed~
+@13913    = ~Pikeman's Ruin~
+@13914    = ~This notched and tarnished blade once saw a great deal of service in the employ of Kath Tahl, a warlord and bandit who roamed the countryside of the western heartlands.  Kath was fond of destroying peasant militias to send a warning to other communities.  He used this sword to that end.  When the nervous defenders tried to form a line of pikes, Kath and other heavily armored men would wade into the fray, hacking their weapons apart and breaking their formation.  Once the villagers had been sent into disarray, his men would fall in with cavalry and take what they wanted.  Kath eventually met his end when a rival warlord, Marhap the Blackbeard, destroyed Kath's army.
+
+STATISTICS:
+
+Damage:  2d6 + 6
+Attack Bonus:  +6
+Enchantment:  +6
+Damage Type:  Slashing
+Special:
+  Pikeman's Ruin reflects the first instance of piercing (melee) damage that would hit the wielder each round back at the source
+Weight: 12 lb.
+Feat Requirement:  Martial Weapon, Great Sword
+Type:  Two-handed~
 @19900    = ~Hrm - you are powerful allies, indeed. More gold and gems to line your pockets, then - also, a suit of plate armor, a warhammer, a helmet, all crafted and enchanted by great duergar artisans. They are well deserved, outsider.~
 @19901    = ~Drink this Rainwater Brew, Ennelia. It should help your condition.~
 @19902    = ~Drink this Sour Draught, Ennelia. It should help your condition.~
@@ -14122,3 +14164,4 @@ Spell Power: Can cast the spell Vampiric Touch (at level 10) once per day~
 @19906    = ~Perhaps a sour draught can help your wounds.~
 @19907    = ~Malakar deflected a slashing attack~
 @19908    = ~Avoided damage~
+@19909    = ~Pikeman's End deflected a piercing attack~

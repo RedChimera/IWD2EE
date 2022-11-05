@@ -5,17 +5,18 @@ AUTHOR ~Red Chimera~
 
 ALWAYS
 //	ACTION_IF GAME_IS ~IWD2~ BEGIN
-           OUTER_SPRINT ~mod_folder~ ~iwd2ee~    //Folder Var
+           OUTER_TEXT_SPRINT ~mod_folder~ ~iwd2ee~    //Folder Var
 //      END
-
+	OUTER_TEXT_SPRINT installedacomponent ~%no%~
 	INCLUDE ~%mod_folder%/components/iwd2ee_functions.tpa~ //Functions that may be used in multiple components
 
 	ACTION_IF !FILE_EXISTS_IN_GAME ~usInitialModifications.txt~ BEGIN
 		INCLUDE ~%mod_folder%/components/initial_modifications.tpa~
-
+	END ELSE ACTION_IF (STRING_LENGTH ~%installedacomponent%~) = 4 AND NOT FILE_CONTAINS_EVALUATED (~WeiDU.log~ ~~~~~[%WNL%%LNL%%MNL%]~IWD2EE.IWD2EE.TP2~ ~~~~~) BEGIN
+		ABORT @100
 	END
 
-
+	OUTER_TEXT_SPRINT no ~yes~
 	SILENT
 	LAM	IWD2_INDEX_LISTS
 	VERBOSE

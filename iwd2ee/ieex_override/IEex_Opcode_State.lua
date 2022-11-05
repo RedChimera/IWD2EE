@@ -280,6 +280,7 @@ ex_empowerable_opcodes = {[12] = true, [17] = true, [18] = true, [25] = true, [6
 			IEex_WriteDword(creatureData + 0x740, bit.band(IEex_ReadDword(creatureData + 0x740), 0xFFFFBFFF))
 		end
 		local internalFlags = bit.bor(IEex_ReadDword(effectData + 0xCC), IEex_ReadDword(effectData + 0xD4))
+		local target = IEex_ReadDword(effectData + 0x10)
 		local parameter1 = IEex_ReadDword(effectData + 0x18)
 		local parameter2 = IEex_ReadDword(effectData + 0x1C)
 		local parameter3 = IEex_ReadDword(effectData + 0x5C)
@@ -372,6 +373,27 @@ ex_empowerable_opcodes = {[12] = true, [17] = true, [18] = true, [25] = true, [6
 			school = ex_trueschool[parent_resource]
 		elseif ex_trueschool[sourceSpell] ~= nil then
 			school = ex_trueschool[sourceSpell]
+		end
+		if target == 1 and timing ~= 2 and ex_listspll[parent_resource] ~= nil then
+			if ex_persistent_spell[sourceID] == 1 then
+				internalFlags = bit.bor(internalFlags, 0x10000)
+			end
+			if ex_extend_spell[sourceID] == 1 then
+				internalFlags = bit.bor(internalFlags, 0x20000)
+			end
+			if ex_widen_spell[sourceID] == 1 then
+				internalFlags = bit.bor(internalFlags, 0x40000)
+			end
+			if ex_safe_spell[sourceID] == 1 then
+				internalFlags = bit.bor(internalFlags, 0x80000)
+			end
+			if ex_empower_spell[sourceID] == 1 then
+				internalFlags = bit.bor(internalFlags, 0x100000)
+			end
+			if ex_maximize_spell[sourceID] == 1 then
+				internalFlags = bit.bor(internalFlags, 0x200000)
+			end
+			IEex_WriteDword(effectData + 0xCC, internalFlags)
 		end
 		if opcode == 12 and parent_resource == "IEEX_DAM" and IEex_IsSprite(sourceID, true) then
 --			if (bit.band(savingthrow, 0x10000) > 0 and (IEex_GetActorSpellState(sourceID, 195) or IEex_GetActorSpellState(sourceID, 225))) or bit.band(savingthrow, 0x40000) == 0 then
@@ -951,7 +973,8 @@ ex_empowerable_opcodes = {[12] = true, [17] = true, [18] = true, [25] = true, [6
 				durationMultiplier = durationMultiplier + ex_specialist_duration_multiplier - 100
 			end
 			if durationMultiplier ~= 100 then
-				IEex_WriteDword(effectData + 0x24, math.ceil((duration - time_applied) * durationMultiplier / 100) + time_applied)
+				duration = math.ceil(duration * durationMultiplier / 100)
+				IEex_WriteDword(effectData + 0x24, duration)
 			end
 		end
 

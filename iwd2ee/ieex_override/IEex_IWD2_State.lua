@@ -2170,7 +2170,7 @@ function Feats_AdvancedSpellCapacity(actorID, featID)
 	elseif impspcFeatCount == 2 or impspcFeatCount == 3 then
 		return (IEex_ReadByte(creatureData + 0x628, 0x0) >= 28 or IEex_ReadByte(creatureData + 0x629, 0x0) >= 21 or IEex_ReadByte(creatureData + 0x62A, 0x0) >= 21 or IEex_ReadByte(creatureData + 0x62D, 0x0) >= 23 or IEex_ReadByte(creatureData + 0x62E, 0x0) >= 23 or IEex_ReadByte(creatureData + 0x630, 0x0) >= 22 or IEex_ReadByte(creatureData + 0x631, 0x0) >= 21)
 	elseif impspcFeatCount == 4 then
-		return (IEex_ReadByte(creatureData + 0x628, 0x0) >= 31 or IEex_ReadByte(creatureData + 0x629, 0x0) >= 23 or IEex_ReadByte(creatureData + 0x62A, 0x0) >= 23 or IEex_ReadByte(creatureData + 0x62D, 0x0) >= 26 or IEex_ReadByte(creatureData + 0x62E, 0x0) >= 26 or IEex_ReadByte(creatureData + 0x630, 0x0) >= 22 or IEex_ReadByte(creatureData + 0x631, 0x0) >= 21)
+		return (IEex_ReadByte(creatureData + 0x628, 0x0) >= 31 or IEex_ReadByte(creatureData + 0x629, 0x0) >= 23 or IEex_ReadByte(creatureData + 0x62A, 0x0) >= 23 or IEex_ReadByte(creatureData + 0x62D, 0x0) >= 26 or IEex_ReadByte(creatureData + 0x62E, 0x0) >= 26 or IEex_ReadByte(creatureData + 0x630, 0x0) >= 24 or IEex_ReadByte(creatureData + 0x631, 0x0) >= 23)
 	else
 		return true
 	end
@@ -2184,7 +2184,7 @@ function Prereq_AdvancedSpellCapacity(actorID, featID)
 	elseif impspcFeatCount == 3 or impspcFeatCount == 4 then
 		return (IEex_ReadByte(creatureData + 0x628, 0x0) >= 28 or IEex_ReadByte(creatureData + 0x629, 0x0) >= 21 or IEex_ReadByte(creatureData + 0x62A, 0x0) >= 21 or IEex_ReadByte(creatureData + 0x62D, 0x0) >= 23 or IEex_ReadByte(creatureData + 0x62E, 0x0) >= 23 or IEex_ReadByte(creatureData + 0x630, 0x0) >= 22 or IEex_ReadByte(creatureData + 0x631, 0x0) >= 21)
 	elseif impspcFeatCount == 5 then
-		return (IEex_ReadByte(creatureData + 0x628, 0x0) >= 31 or IEex_ReadByte(creatureData + 0x629, 0x0) >= 23 or IEex_ReadByte(creatureData + 0x62A, 0x0) >= 23 or IEex_ReadByte(creatureData + 0x62D, 0x0) >= 26 or IEex_ReadByte(creatureData + 0x62E, 0x0) >= 26 or IEex_ReadByte(creatureData + 0x630, 0x0) >= 22 or IEex_ReadByte(creatureData + 0x631, 0x0) >= 21)
+		return (IEex_ReadByte(creatureData + 0x628, 0x0) >= 31 or IEex_ReadByte(creatureData + 0x629, 0x0) >= 23 or IEex_ReadByte(creatureData + 0x62A, 0x0) >= 23 or IEex_ReadByte(creatureData + 0x62D, 0x0) >= 26 or IEex_ReadByte(creatureData + 0x62E, 0x0) >= 26 or IEex_ReadByte(creatureData + 0x630, 0x0) >= 24 or IEex_ReadByte(creatureData + 0x631, 0x0) >= 23)
 	else
 		return true
 	end
@@ -20642,7 +20642,6 @@ function MECLONE(effectData, creatureData)
 			end
 		end
 	end
-	IEex_DS(sourceID .. ", " .. sourceX .. ", " .. sourceY)
 	IEex_ApplyEffectToActor(sourceID, {
 ["opcode"] = 410,
 ["target"] = 2,
@@ -20658,7 +20657,6 @@ function MECLONE(effectData, creatureData)
 end
 
 function MECLONE2(effectData, creatureData)
-	IEex_DS("ugu")
 	IEex_WriteDword(effectData + 0x110, 1)
 	if IEex_CheckForEffectRepeat(effectData, creatureData) then return end
 	local targetID = IEex_GetActorIDShare(creatureData)
@@ -21814,7 +21812,8 @@ function MESUMCAS(effectData, creatureData)
 	local summonerID = IEex_GetActorSummonerID(sourceID)
 --	IEex_WriteWord(creatureData + 0x730, 0)
 	local summonerData = IEex_GetActorShare(summonerID)
-	local internalFlags = IEex_ReadDword(sourceData + 0x734)
+	local internalFlags = bit.bor(IEex_ReadDword(effectData + 0xCC), IEex_ReadDword(effectData + 0xD4))
+	internalFlags = bit.bor(internalFlags, IEex_ReadDword(sourceData + 0x734))
 	local casterLevel = IEex_ReadSignedByte(sourceData + 0x730, 0x0)
 	if casterLevel == -1 then
 		casterLevel = 1

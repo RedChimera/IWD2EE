@@ -3699,7 +3699,7 @@ Saving Throw: Reflex half
 
 This spell augments the ranger's missile attacks to deal damage in a cone. For the duration, if the ranger would make a missile attack, a spray of thorns is released instead, dealing the attack's damage to all creatures in a cone. However, creatures in the cone can make a Reflex save to halve the damage of the attack. Once the ranger has made a number of ranged attacks equal to 1 per 6 levels, the spell ends early. Thorn Shots does not stack with Flame Shots.
 
-Although rangers normally cast spells at half their caster level, Holy Weapon will be cast at a ranger's full caster level.~
+Although rangers normally cast spells at half their caster level, Thorn Shots will be cast at a ranger's full caster level.~
 @35554     = ~Animal Growth~
 @36554     = ~Animal Growth
 (Transmutation)
@@ -3724,6 +3724,19 @@ Saving Throw: None
 This spell imbues the paladin's weapons with holy power. Any melee weapon the paladin wields for the duration is considered good-aligned and +5 for purposes of overcoming damage reduction, and deals an additional 2d6 magic damage to evil creatures.
 
 Although paladins normally cast spells at half their caster level, Holy Weapon will be cast at a paladin's full caster level.~
+@35556     = ~Unholy Weapon~
+@36556     = ~Unholy Weapon
+(Evocation)
+Level: Pal 5
+Range: Caster
+Duration: 1 round/level
+Casting Time: 5
+Area of Effect: Caster
+Saving Throw: None
+
+This spell imbues the blackguard's weapons with unholy power. Any melee weapon the paladin wields for the duration is considered evil-aligned and +5 for purposes of overcoming damage reduction, and deals an additional 2d6 magic damage to good creatures.
+
+Although blackguards normally cast spells at half their caster level, Unholy Weapon will be cast at a blackguard's full caster level.~
 @35557     = ~Mark of Justice~
 @36557     = ~Mark of Justice
 (Necromancy)
