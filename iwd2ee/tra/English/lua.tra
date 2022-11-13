@@ -297,6 +297,15 @@
 @55704=~Hurt~
 @55705=~Badly wounded~
 @55706=~Almost dead~
+@55707=~Recording erased~
+@55708=~Recording spells~
+@55709=~Recording finished~
+@55710=~Recording activated~
+@55711=~Recorded <EXRCSPELL>~
+@55712=~Recorded <EXRCSPELL> targeting <EXRCTARGET>~
+@55713=~<EXRCSPELL> was not recorded; it must target a party member or a point~
+@55714=~Currently there are no recorded spells to cast~
+@55715=~The spell~
 @55751=~Total Roll: <EXRRTOTAL>\nStored Total: <EXRRRECTOTAL>\n\n~
 @55752=~Unallocated Ability Scores:\n<EXRRUNALLOCATED>\n\n~
 @55753=~Press Z to reroll, X to store, C to recall, and V to reallocate ability scores.\n\n~

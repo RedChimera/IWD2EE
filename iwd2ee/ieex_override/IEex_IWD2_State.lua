@@ -106,6 +106,21 @@ IEex_CasterClassToType = {
 	[10] = 6,
 	[11] = 7,
 }
+
+IEex_CasterTypeToClass = {
+	[1] = 2,
+	[2] = 3,
+	[3] = 4,
+	[4] = 7,
+	[5] = 8,
+	[6] = 10,
+	[7] = 11,
+	[8] = 3,
+	[9] = 0,
+	[10] = 0,
+	[11] = 0,
+}
+
 function IEex_SetSpellInfo(actorID, casterType, spellLevel, resref, memorizedCount, castableCount)
 	if not IEex_IsSprite(actorID, true) then return end
 	local memMod = memorizedCount
@@ -365,6 +380,17 @@ function IEex_FetchSpellInfo(actorID, casterTypes)
 
 	return toReturn
 
+end
+
+function IEex_GetSpellNameRef(spellRES)
+	local nameRef = 0
+	local resWrapper = IEex_DemandRes(spellRES, "SPL")
+	if resWrapper:isValid() then
+		local spellData = resWrapper:getData()
+		nameRef = IEex_ReadDword(spellData + 0x8)
+	end
+	resWrapper:free()
+	return nameRef
 end
 
 ------------------------
@@ -5013,7 +5039,7 @@ function MESMITE(effectData, creatureData)
 ["savingthrow"] = newsavingthrow,
 ["resource"] = "EXDAMAGE",
 ["parent_resource"] = parent_resource,
-["internal_flags"] = IEex_ReadDword(effectData + 0xD4),
+["internal_flags"] = bit.bor(IEex_ReadDword(effectData + 0xCC), IEex_ReadDword(effectData + 0xD4)),
 ["source_id"] = sourceID
 })
 	IEex_ApplyEffectToActor(sourceID, {
@@ -6052,20 +6078,23 @@ end
 function MEGLOBEF(effectData, creatureData)
 	IEex_WriteDword(effectData + 0x110, 1)
 	if IEex_CheckForEffectRepeat(effectData, creatureData) then return end
-	local player1ID = IEex_GetActorIDCharacter(0)
-	if not IEex_IsSprite(player1ID, true) then return end
+--	local player1ID = IEex_GetActorIDCharacter(0)
+--	if not IEex_IsSprite(player1ID, true) then return end
 	local sourceID = IEex_ReadDword(effectData + 0x10C)
 	local targetID = IEex_GetActorIDShare(creatureData)
 	local timing = IEex_ReadDword(effectData + 0x20)
 	local duration = IEex_ReadDword(effectData + 0x24)
+--[[
 	if timing == 4096 then
 		timing = 0
 		duration = math.floor((duration - IEex_ReadDword(effectData + 0x68)) / 15)
 	end
+--]]
 	local spellRES = IEex_ReadLString(effectData + 0x18, 8)
 	local savingthrow = IEex_ReadDword(effectData + 0x3C)
 	local special = IEex_ReadDword(effectData + 0x44)
 	local casterlvl = IEex_ReadByte(effectData + 0xC4, 0)
+--[[
 	if spellRES == "" then
 		for i = 0, 30, 1 do
 			if 2 ^ i == special then
@@ -6073,7 +6102,11 @@ function MEGLOBEF(effectData, creatureData)
 			end
 		end
 	end
+--]]
 	if bit.band(savingthrow, 0x10000) == 0 then
+		if timing ~= 4096 then return end
+		IEex_SetGlobalEffectFlags(special, duration)
+--[[
 		IEex_ApplyEffectToActor(player1ID, {
 ["opcode"] = 288,
 ["target"] = 2,
@@ -6088,7 +6121,10 @@ function MEGLOBEF(effectData, creatureData)
 ["source_target"] = player1ID,
 ["source_id"] = sourceID,
 })
+--]]
 	else
+		IEex_SetGlobalEffectFlags(special, 0)
+--[[
 		IEex_IterateActorEffects(player1ID, function(eData)
 			local theopcode = IEex_ReadDword(eData + 0x10)
 			local theparameter2 = IEex_ReadDword(eData + 0x20)
@@ -6098,6 +6134,7 @@ function MEGLOBEF(effectData, creatureData)
 				IEex_WriteDword(eData + 0x114, 1)
 			end
 		end)
+--]]
 	end
 end
 
@@ -6223,7 +6260,7 @@ function MEMODDUR(effectData, creatureData)
 			local theresource = IEex_ReadLString(eData + 0x30, 8)
 			local theresourceflags = IEex_ReadDword(eData + 0x9C)
 			local theinternalflags = IEex_ReadDword(eData + 0xD8)
-			if thetiming ~= 2 and (bit.band(savingthrow, 0x10000) == 0 or bit.band(theinternalflags, 0x4000) == 0)then
+			if thetiming ~= 2 and (bit.band(savingthrow, 0x10000) == 0 or bit.band(theinternalflags, 0x4000) == 0) then
 				if condition == 0 or (condition == 1 and (bit.band(theresourceflags, 0x400) > 0 or theopcode == 12)) or (condition == 2 and (bit.band(theresourceflags, 0x400) == 0 and theopcode ~= 12)) then
 					IEex_WriteDword(eData + 0xD8, bit.bor(theinternalflags, 0x4000))
 					local theduration = IEex_ReadDword(eData + 0x28)
@@ -6239,6 +6276,13 @@ function MEMODDUR(effectData, creatureData)
 			end
 		end)
 	else
+		for bt = 0, 30, 1 do
+			local globalEffectExpiration = ex_global_effect_timers[bt + 1]
+			if globalEffectExpiration > 0 then
+				ex_global_effect_timers[bt + 1] = globalEffectExpiration + parameter1
+				IEex_SetGlobal("EX_GLOBEF" .. bt, globalEffectExpiration + parameter1)
+			end
+		end
 		if parameter2 == 0 and parameter1 < 0 then
 			IEex_IterateProjectiles(targetID, -1, function(projectileData)
 				if IEex_ProjectileType[IEex_ReadWord(projectileData + 0x6E, 0x0) + 1] == 6 then
@@ -9759,7 +9803,7 @@ function MEONHIT(effectData, creatureData)
 ["target_x"] = v[5],
 ["target_y"] = v[6],
 ["casterlvl"] = v[2],
---["internal_flags"] = v[9],
+["internal_flags"] = v[9],
 ["parent_resource"] = v[1],
 ["source_target"] = v[3],
 ["source_id"] = v[4]
@@ -9837,7 +9881,7 @@ function MEONHIT(effectData, creatureData)
 ["target_x"] = v[5],
 ["target_y"] = v[6],
 ["casterlvl"] = v[2],
---["internal_flags"] = v[9],
+["internal_flags"] = v[9],
 ["parent_resource"] = v[1],
 ["source_target"] = v[3],
 ["source_id"] = v[4]
@@ -10541,6 +10585,12 @@ function IEex_EvaluatePermanentRepeatingEffects(creatureData)
 --			end
 		end)
 --]]
+		local globalEffectFlags = IEex_GetGlobalEffectFlags()
+		if bit.band(globalEffectFlags, 0xB) > 0 and IEex_InCutsceneMode() then
+			IEex_SetGlobalEffectFlags(0xB, 0)
+			globalEffectFlags = IEex_GetGlobalEffectFlags()
+		end
+--[[
 		local globalEffectFlags = 0
 		IEex_IterateActorEffects(targetID, function(eData)
 			local theopcode = IEex_ReadDword(eData + 0x10)
@@ -10556,6 +10606,7 @@ function IEex_EvaluatePermanentRepeatingEffects(creatureData)
 			end
 		end)
 		IEex_WriteDword(creatureData + 0x73C, globalEffectFlags)
+--]]
 		if bit.band(globalEffectFlags, 0xA) > 0 then
 			if tick % ex_time_slow_speed_divisor ~= 0 or bit.band(globalEffectFlags, 0x8) > 0 then
 				IEex_IterateProjectiles(targetID, -1, function(projectileData)
@@ -11032,6 +11083,49 @@ function MEBATSNG(effectData, creatureData)
 	end
 end
 
+function MEBUFFRC(effectData, creatureData)
+	IEex_WriteDword(effectData + 0x110, 1)
+	if IEex_CheckForEffectRepeat(effectData, creatureData) then return end
+	local sourceID = IEex_ReadDword(effectData + 0x10C)
+	local targetID = IEex_GetActorIDShare(creatureData)
+	if not IEex_IsSprite(sourceID, false) or not IEex_IsPartyMember(sourceID) then return end
+	local parent_resource = IEex_ReadLString(effectData + 0x90, 8)
+	if IEex_GetGlobal("EX_Recording_Buffs") == 0 then return end
+	local partySlot = -1
+	for i = 0, 5, 1 do
+		if targetID == IEex_GetActorIDCharacter(i) then
+			partySlot = i
+		end
+	end
+	local spellNameRef = IEex_GetSpellNameRef(parent_resource)
+	local spellName = IEex_FetchString(spellNameRef)
+	if spellNameRef <= 0 then
+		spellName = IEex_FetchString(ex_tra_55715)
+	end
+	IEex_SetToken("EXRCSPELL", spellName)
+	if partySlot == -1 then
+		IEex_DisplayString(IEex_FetchString(ex_tra_55713))
+		return
+	end
+	local special = IEex_ReadDword(effectData + 0x44)
+	if special == 0 then
+		IEex_SetToken("EXRCTARGET", IEex_GetActorName(targetID))
+		IEex_DisplayString(IEex_FetchString(ex_tra_55712))
+	else
+		IEex_DisplayString(IEex_FetchString(ex_tra_55711))
+	end
+	IEex_ApplyEffectToActor(sourceID, {
+["opcode"] = 0,
+["target"] = 2,
+["timing"] = 9,
+["parameter3"] = partySlot,
+["parameter4"] = special,
+["resource"] = parent_resource,
+["parent_resource"] = "EXBUFFRC",
+["source_id"] = sourceID
+})
+	end
+
 function MEONCAST(effectData, creatureData)
 	IEex_WriteDword(effectData + 0x110, 1)
 	if IEex_CheckForEffectRepeat(effectData, creatureData) then return end
@@ -11039,6 +11133,31 @@ function MEONCAST(effectData, creatureData)
 	if not IEex_IsSprite(targetID, false) then return end
 	local casterlvl = IEex_ReadByte(effectData + 0xC4, 0x0)
 	local parent_resource = IEex_ReadLString(effectData + 0x18, 8)
+	if IEex_GetGlobal("EX_Recording_Buffs") == 1 then
+		local actionID = IEex_Helper_GetBridge("IEex_RecordSpell", targetID, "actionID")
+		local spellTargetID = IEex_Helper_GetBridge("IEex_RecordSpell", targetID, "targetID")
+		if actionID == 31 and spellTargetID ~= nil and IEex_IsSprite(spellTargetID, false) then
+			IEex_ApplyEffectToActor(spellTargetID, {
+["opcode"] = 500,
+["target"] = 2,
+["timing"] = 0,
+["special"] = 0,
+["resource"] = "MEBUFFRC",
+["parent_resource"] = parent_resource,
+["source_id"] = targetID
+})
+		elseif actionID == 95 then
+			IEex_ApplyEffectToActor(targetID, {
+["opcode"] = 500,
+["target"] = 2,
+["timing"] = 0,
+["special"] = 1,
+["resource"] = "MEBUFFRC",
+["parent_resource"] = parent_resource,
+["source_id"] = targetID
+})
+		end
+	end
 	local lowestClassSpellLevel = 10
 	local classSpellLevel = 0
 	for i = 2, 11, 1 do
@@ -21523,6 +21642,7 @@ function MEPROJCS(originatingEffectData, effectData, creatureData)
 ["source_id"] = targetID
 })
 		return true
+--[[
 	elseif opcode == 68 then
 		local targetX = IEex_ReadDword(creatureData + 0x6)
 		local targetY = IEex_ReadDword(creatureData + 0xA)
@@ -21546,6 +21666,7 @@ function MEPROJCS(originatingEffectData, effectData, creatureData)
 })
 		end
 		return true
+--]]
 	end
 	return false
 end
@@ -21621,6 +21742,35 @@ function MEPROJIS(originatingEffectData, effectData, creatureData)
 	return false
 end
 
+ex_mending_items = {["00MISC18"] = {"00SWDS02", "00SWDL02", "00SWDC94", "00SWDB02", "00SWDT02", }, ["00MISC19"] = {"00SHLD01", "00SHLD02", "00SHLD03", "00SHLD04", "00SHLD05", "00SHLD06", "00SHLD08", "00SHLD09", "00SHLD10", "00SHLD12", "00SHLD13", "00SHLD14", "00SHLD15", }, ["00MISC20"] = {"00PLAT01", }, ["00MISC21"] = {"00AMUL05", "00AMUL10", "00AMUL11", "00AMUL13", "00BELT01", "00FLAL99", "00HELM01", "00HELM02", "00HELM03", "00HELM04", "00HELM05", "00HELM06", "00RING02", "00GENKS", "50MISC38", "51MISC39", "63AMULIX", }, ["00MISC22"] = {"USPLAT15", "USPLAT15", "00PLAT04", }, }
+
+function MEMENDIN(effectData, creatureData)
+	IEex_WriteDword(effectData + 0x110, 1)
+	if IEex_CheckForEffectRepeat(effectData, creatureData) then return end
+	local targetID = IEex_GetActorIDShare(creatureData)
+	local sourceID = IEex_ReadDword(effectData + 0x10C)
+	local parameter1 = IEex_ReadDword(effectData + 0x18)
+	local numItemsRepaired = 0
+	for i = 0, 50, 1 do
+		local slotData = IEex_ReadDword(creatureData + 0x4AD8 + i * 0x4)
+		if slotData > 0 then
+			local itemRES = IEex_ReadLString(slotData + 0xC, 8)
+			if ex_mending_items[itemRES] ~= nil and (parameter1 == -1 or numItemsRepaired < parameter1) then
+				numItemsRepaired = numItemsRepaired + 1
+				local newItemRES = ex_mending_items[itemRES][math.random(#ex_mending_items[itemRES])]
+				IEex_ApplyEffectToActor(targetID, {
+["opcode"] = 143,
+["target"] = 2,
+["timing"] = 1,
+["parameter1"] = i,
+["resource"] = newItemRES,
+["source_id"] = sourceID
+})
+			end
+		end
+	end
+end
+
 function MEERUPT(effectData, creatureData)
 	IEex_WriteDword(effectData + 0x110, 1)
 	if IEex_CheckForEffectRepeat(effectData, creatureData) then return end
@@ -21656,35 +21806,6 @@ function MEERUPT(effectData, creatureData)
 ["target_y"] = summonerY,
 ["source_id"] = sourceID
 })
-end
-
-ex_mending_items = {["00MISC18"] = {"00SWDS02", "00SWDL02", "00SWDC94", "00SWDB02", "00SWDT02", }, ["00MISC19"] = {"00SHLD01", "00SHLD02", "00SHLD03", "00SHLD04", "00SHLD05", "00SHLD06", "00SHLD08", "00SHLD09", "00SHLD10", "00SHLD12", "00SHLD13", "00SHLD14", "00SHLD15", }, ["00MISC20"] = {"00PLAT01", }, ["00MISC21"] = {"00AMUL05", "00AMUL10", "00AMUL11", "00AMUL13", "00BELT01", "00FLAL99", "00HELM01", "00HELM02", "00HELM03", "00HELM04", "00HELM05", "00HELM06", "00RING02", "00GENKS", "50MISC38", "51MISC39", "63AMULIX", }, ["00MISC22"] = {"USPLAT15", "USPLAT15", "00PLAT04", }, }
-
-function MEMENDIN(effectData, creatureData)
-	IEex_WriteDword(effectData + 0x110, 1)
-	if IEex_CheckForEffectRepeat(effectData, creatureData) then return end
-	local targetID = IEex_GetActorIDShare(creatureData)
-	local sourceID = IEex_ReadDword(effectData + 0x10C)
-	local parameter1 = IEex_ReadDword(effectData + 0x18)
-	local numItemsRepaired = 0
-	for i = 0, 50, 1 do
-		local slotData = IEex_ReadDword(creatureData + 0x4AD8 + i * 0x4)
-		if slotData > 0 then
-			local itemRES = IEex_ReadLString(slotData + 0xC, 8)
-			if ex_mending_items[itemRES] ~= nil and (parameter1 == -1 or numItemsRepaired < parameter1) then
-				numItemsRepaired = numItemsRepaired + 1
-				local newItemRES = ex_mending_items[itemRES][math.random(#ex_mending_items[itemRES])]
-				IEex_ApplyEffectToActor(targetID, {
-["opcode"] = 143,
-["target"] = 2,
-["timing"] = 1,
-["parameter1"] = i,
-["resource"] = newItemRES,
-["source_id"] = sourceID
-})
-			end
-		end
-	end
 end
 
 function MEERUPT2(effectData, creatureData)
@@ -26117,7 +26238,38 @@ function MECLEARA(effectData, creatureData)
 	IEex_WriteWord(creatureData + 0x476, 0)
 end
 
+ex_global_effect_timers = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
+
+function IEex_GetGlobalEffectFlags()
+	local tick = IEex_GetGameTick()
+	local bitsOn = 0
+	for bt = 0, 30, 1 do
+		if ex_global_effect_timers[bt + 1] > tick then
+			bitsOn = bit.bor(bitsOn, 2 ^ bt)
+		end
+	end
+	return bitsOn
+end
+
+function IEex_SetGlobalEffectFlags(bitsOn, expirationTick)
+	local tick = IEex_GetGameTick()
+	for bt = 0, 30, 1 do
+		if bit.band(bitsOn, 2 ^ bt) ~= 0 then
+			IEex_SetGlobal("EX_GLOBEF" .. bt, expirationTick)
+			ex_global_effect_timers[bt + 1] = expirationTick
+		end
+	end
+	return false
+end
+
 function IEex_CheckGlobalEffect(bitCheck)
+	local tick = IEex_GetGameTick()
+	for bt = 0, 30, 1 do
+		if bit.band(bitCheck, 2 ^ bt) ~= 0 and ex_global_effect_timers[bt + 1] > tick then
+			return true
+		end
+	end
+--[[
 	local player1Data = IEex_GetActorShare(IEex_GetActorIDCharacter(0))
 	if player1Data > 0 then
 		local globalEffectFlags = IEex_ReadDword(player1Data + 0x73C)
@@ -26125,12 +26277,29 @@ function IEex_CheckGlobalEffect(bitCheck)
 			return true
 		end
 	end
+--]]
 	return false
 end
 
 function IEex_CheckGlobalEffectOnActor(actorID, bitCheck)
 	local globalEffectActive = false
 	local isUnaffected = false
+	if IEex_CheckGlobalEffect(bitCheck) then
+		globalEffectActive = true
+			local unaffectedFlags = 0
+			IEex_IterateActorEffects(actorID, function(eData)
+				local theopcode = IEex_ReadDword(eData + 0x10)
+				local theresource = IEex_ReadLString(eData + 0x30, 8)
+				local thespecial = IEex_ReadDword(eData + 0x48)
+				if theopcode == 206 and theresource == "EXGLOBEF" then
+					unaffectedFlags = bit.bor(unaffectedFlags, thespecial)
+				end
+			end)
+			if bit.band(bitCheck, unaffectedFlags) == bitCheck then
+				isUnaffected = true
+			end
+	end
+--[[
 	local player1Data = IEex_GetActorShare(IEex_GetActorIDCharacter(0))
 	if player1Data > 0 then
 		local globalEffectFlags = IEex_ReadDword(player1Data + 0x73C)
@@ -26150,6 +26319,7 @@ function IEex_CheckGlobalEffectOnActor(actorID, bitCheck)
 			end
 		end
 	end
+--]]
 	return globalEffectActive, isUnaffected
 end
 
@@ -27261,7 +27431,6 @@ function MEAILCON(originatingEffectData, actionData, creatureData)
 	local special = IEex_ReadDword(originatingEffectData + 0x44) * IEex_GetActorStat(sourceID, 54)
 	if parameter3 == 1 then return end
 	if actionID == 31 or actionID == 113 or actionID == 181 or actionID == 191 then
-		
 		local targetID = IEex_ReadDword(creatureData + 0x4BE)
 		if not IEex_IsSprite(targetID, false) then return end
 		local spellRES = IEex_GetActorSpellRES(sourceID)
@@ -27294,6 +27463,29 @@ function MEAILCON(originatingEffectData, actionData, creatureData)
 		for i = 0, 5, 1 do
 			if sourceID == IEex_GetActorIDCharacter(i) then
 				playerIndex = i
+			end
+		end
+		if IEex_GetGlobal("EX_Recording_Buffs") == 1 then
+			if actionID == 31 then
+				IEex_ApplyEffectToActor(sourceID, {
+["opcode"] = 500,
+["target"] = 2,
+["timing"] = 0,
+["special"] = 0,
+["resource"] = "MEBUFFRC",
+["parent_resource"] = spellRES,
+["source_id"] = sourceID
+})
+			elseif actionID == 95 then
+				IEex_ApplyEffectToActor(sourceID, {
+["opcode"] = 500,
+["target"] = 2,
+["timing"] = 0,
+["special"] = 1,
+["resource"] = "MEBUFFRC",
+["parent_resource"] = spellRES,
+["source_id"] = sourceID
+})
 			end
 		end
 		IEex_SetActionID(actionData, 0)
@@ -27601,6 +27793,29 @@ function MESPLSEQ(originatingEffectData, actionData, creatureData)
 		if special == 0 then
 			newTiming = 9
 		end
+		if IEex_GetGlobal("EX_Recording_Buffs") == 1 then
+			if actionID == 31 then
+				IEex_ApplyEffectToActor(sourceID, {
+["opcode"] = 500,
+["target"] = 2,
+["timing"] = 0,
+["special"] = 0,
+["resource"] = "MEBUFFRC",
+["parent_resource"] = spellRES,
+["source_id"] = sourceID
+})
+			elseif actionID == 95 then
+				IEex_ApplyEffectToActor(sourceID, {
+["opcode"] = 500,
+["target"] = 2,
+["timing"] = 0,
+["special"] = 1,
+["resource"] = "MEBUFFRC",
+["parent_resource"] = spellRES,
+["source_id"] = sourceID
+})
+			end
+		end
 		IEex_ApplyEffectToActor(sourceID, {
 ["opcode"] = 233,
 ["target"] = 2,
@@ -27883,6 +28098,29 @@ function MEBRDSEQ(originatingEffectData, actionData, creatureData)
 			timing = 0
 			duration = math.floor((duration - time_applied) / 15)
 		end
+		if IEex_GetGlobal("EX_Recording_Buffs") == 1 then
+			if actionID == 31 then
+				IEex_ApplyEffectToActor(sourceID, {
+["opcode"] = 500,
+["target"] = 2,
+["timing"] = 0,
+["special"] = 0,
+["resource"] = "MEBUFFRC",
+["parent_resource"] = spellRES,
+["source_id"] = sourceID
+})
+			elseif actionID == 95 then
+				IEex_ApplyEffectToActor(sourceID, {
+["opcode"] = 500,
+["target"] = 2,
+["timing"] = 0,
+["special"] = 1,
+["resource"] = "MEBUFFRC",
+["parent_resource"] = spellRES,
+["source_id"] = sourceID
+})
+			end
+		end
 		IEex_ApplyEffectToActor(sourceID, {
 ["opcode"] = 233,
 ["target"] = 2,
@@ -28060,6 +28298,29 @@ function MECOPYSP(effectData, creatureData)
 		local internalContingencyRES = ex_copy_spell_target_ability[spellTarget]
 		if spellTarget == 1 and spellRange <= 1 then
 			internalContingencyRES = ex_copy_spell_target_ability[99]
+		end
+		if IEex_GetGlobal("EX_Recording_Buffs") == 1 then
+			if actionID == 31 then
+				IEex_ApplyEffectToActor(sourceID, {
+["opcode"] = 500,
+["target"] = 2,
+["timing"] = 0,
+["special"] = 0,
+["resource"] = "MEBUFFRC",
+["parent_resource"] = spellRES,
+["source_id"] = sourceID
+})
+			elseif actionID == 95 then
+				IEex_ApplyEffectToActor(sourceID, {
+["opcode"] = 500,
+["target"] = 2,
+["timing"] = 0,
+["special"] = 1,
+["resource"] = "MEBUFFRC",
+["parent_resource"] = spellRES,
+["source_id"] = sourceID
+})
+			end
 		end
 		IEex_ApplyEffectToActor(sourceID, {
 ["opcode"] = 139,
@@ -28286,6 +28547,29 @@ function MEIMBUSP(originatingEffectData, actionData, creatureData)
 		if timing == 4096 then
 			timing = 0
 			duration = math.floor((duration - time_applied) / 15)
+		end
+		if IEex_GetGlobal("EX_Recording_Buffs") == 1 then
+			if actionID == 31 then
+				IEex_ApplyEffectToActor(sourceID, {
+["opcode"] = 500,
+["target"] = 2,
+["timing"] = 0,
+["special"] = 0,
+["resource"] = "MEBUFFRC",
+["parent_resource"] = spellRES,
+["source_id"] = sourceID
+})
+			elseif actionID == 95 then
+				IEex_ApplyEffectToActor(sourceID, {
+["opcode"] = 500,
+["target"] = 2,
+["timing"] = 0,
+["special"] = 1,
+["resource"] = "MEBUFFRC",
+["parent_resource"] = spellRES,
+["source_id"] = sourceID
+})
+			end
 		end
 		IEex_ApplyEffectToActor(sourceID, {
 ["opcode"] = 254,
@@ -28550,6 +28834,29 @@ function MESPLSTF(originatingEffectData, actionData, creatureData)
 		end
 		if numCharges == 0 then
 			numCharges = IEex_ReadByte(originatingEffectData + 0xC4, 0x0)
+		end
+		if IEex_GetGlobal("EX_Recording_Buffs") == 1 then
+			if actionID == 31 then
+				IEex_ApplyEffectToActor(sourceID, {
+["opcode"] = 500,
+["target"] = 2,
+["timing"] = 0,
+["special"] = 0,
+["resource"] = "MEBUFFRC",
+["parent_resource"] = spellRES,
+["source_id"] = sourceID
+})
+			elseif actionID == 95 then
+				IEex_ApplyEffectToActor(sourceID, {
+["opcode"] = 500,
+["target"] = 2,
+["timing"] = 0,
+["special"] = 1,
+["resource"] = "MEBUFFRC",
+["parent_resource"] = spellRES,
+["source_id"] = sourceID
+})
+			end
 		end
 		IEex_ApplyEffectToActor(sourceID, {
 ["opcode"] = 254,

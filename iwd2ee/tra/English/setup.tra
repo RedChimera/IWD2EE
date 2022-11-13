@@ -27,7 +27,7 @@
 @26   = ~Cosmetic Tweaks~
 @27   = ~Xuki Intimidation Option~
 @28   = ~Nonviolent Option for Isair and Madae~
-@29   = ~Alternative Dragon's Eye~
+@29   = ~Shorten the Dragon's Eye time loop questline to a single battle~
 @30   = ~Bribe Limha~
 @31   = ~Bribe Mirabel and Majrash~
 @32   = ~Diplomacy for Guthma~
@@ -88,9 +88,10 @@
 @87   = ~Plus/minus buttons enabled~
 @88   = ~Adding a bunch of objects to each area in the game; this could take some time...~
 @89   = ~Add more traps~
+@90   = ~Add key bindings for automating buffing (see the readme for more information)~
 @100  = ~IWD2EE was not uninstalled properly; the files from the previous installation are still in the override folder.
 Installing IWD2EE again without removing those files would corrupt various files.
 To install IWD2EE, do these steps in this order:
-1. Uninstall all your mods.
+1. Uninstall all your other mods.
 2. After you do that, look in the folder called "override" and delete everything from that folder.
 3. Install your mods again, including IWD2EE.~

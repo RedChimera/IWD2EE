@@ -461,3 +461,7 @@ SUBCOMPONENT @85
 BEGIN @89 DESIGNATED 91
 
       INCLUDE ~%mod_folder%/components/more_traps.tpa~ //~Add more traps~
+
+BEGIN @90 DESIGNATED 92
+
+      INCLUDE ~%mod_folder%/components/key_bindings_for_autobuffing.tpa~ //~Add key bindings for automating buffing~

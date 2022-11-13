@@ -368,3 +368,20 @@ COPY_EXISTING_REGEXP ~sppr[0-9][0-9][0-9]\.spl~ ~override~ ~spwi[0-9][0-9][0-9]\
 	BUT_ONLY_IF_IT_CHANGES
 
 END
+
+COPY_EXISTING ~LISTINNT.2da~ ~override~ ~LISTSHAP.2da~ ~override~
+	COUNT_2DA_COLS numcolumns
+	COUNT_2DA_ROWS numcolumns numrows
+	FOR (i = 1; i < numrows; ++i) BEGIN
+		READ_2DA_ENTRY i 1 numcolumns spell_res_ref
+		PATCH_IF (FILE_EXISTS_IN_GAME ~%spell_res_ref%.spl~) BEGIN
+			INNER_ACTION BEGIN
+				COPY_EXISTING ~%spell_res_ref%.spl~ ~override~
+					READ_SHORT 0x94 thecastingtime ELSE 0
+					LPF ADD_SPELL_CFEFFECT INT_VAR insert_point=0 opcode=500 target=1 timing=0 special=thecastingtime STR_VAR resource=~MEONCAST~ END
+					READ_LONG 0x6A effectoffset
+					WRITE_ASCIIE (effectoffset + 0x4) ~%SOURCE_RES%~ #8
+					UNLESS ~MEONCAST~
+			END
+		END
+	END

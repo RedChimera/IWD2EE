@@ -32,7 +32,7 @@ Components:
 13. Faster Underdark
 14. Faster Dragon's Eye and Lord Pyros' Domain
 15. Faster Severed Hand
-16. Alternative Dragon's Eye
+16. Shorten the Dragon's Eye time loop questline to a single battle
 17. Mage Scrolls for New Spells
 18. Revised Creature Immunities
 19. More Accurate Saving Throws for Enemies
@@ -70,6 +70,7 @@ Components:
 51. Add attacks of opportunity to the game
 52. Roll for stats at character creation
 53. Add more traps
+54. Add key bindings for automating buffing
 
 ## Class Revisions
 
@@ -256,7 +257,7 @@ The Severed Hand can also take a fair amount of time, and while it's not nearly 
 
 This component also makes it so you do not need to defeat Iyachtu Xvim before going to the final boss (though in this case you'll have to fight the glabrezus in the final battle).
 
-## Alternative Dragon's Eye
+## Shorten the Dragon's Eye time loop questline to a single battle
 
 This component simplifies the final area of Dragon's Eye. Rather than having to go through a long time travel quest, you just fight one battle to prevent Izbelah from casting Temporal Stasis. The component changes some dialogs in Chapter 5 to make it clear why you're fighting Izbelah.
 
@@ -395,8 +396,18 @@ This component allows characters to make attacks of opportunity in melee under c
 
 This component lets you roll for stats rather than use IWD2's normal point-buy system. There are two subcomponents. The first one doesn't allow you to increment or decrement stats with the plus/minus buttons, but you can choose which ability score each number rolled is assigned to (like in The Temple of Elemental Evil). The second subcomponent lets you use the plus/minus buttons.
 
-Much of the credit for the inspiration for this mod goes to the makers of Light of Selune, IWD2-Ease, and Tactics4IWD2, which provided the groundwork for this mod and the changes it makes. I would also like to thank Firecrow, who provided indispensable feedback and played an instrumental role in inspiring many of the mod's features, and subtledoctor, bubb, and Gwendolyne for providing invaluable technical support during the construction of the mod. Credit goes to Erephine for making the new animations from One Pixel Productions, which have been added to IWD2EE.
-
 ## Add more traps
 
 This component adds more traps to the game, and makes certain existing traps somewhat more dangerous. Don't worry; this shouldn't turn IWD2 into Durlag's Tower. The point is to add twists to existing encounters and make trap-disarming skills more meaningful.
+
+## Add key bindings for automating buffing
+
+This component adds a very fair system for automating buffing.
+
+To use it, first press the "[" button to start recording spells, then have party members cast any number of spells, which must either target party members or target a point. Then press "[" again to finish recording.
+
+After that, pressing the ";" button at any point will cause party members to cast the same spells that were previously recorded, in the same order, targeting the same party members as in the original recording. Spells that target a point will target the caster's location instead. If any of the recorded spells are not memorized at the time they would be cast, those spells are skipped.
+
+Pressing the "]" button will erase the recording until you do a new one.
+
+This system doesn't cheat in any way; the spells aren't cast instantly nor can you cast more than one spell per round unless you have Improved Alacrity. However, it should still speed up buffing somewhat and make it require less effort by the player. Once you have the spells recorded, you just have to press ";" without having to scroll through spell lists.

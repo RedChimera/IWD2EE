@@ -327,6 +327,71 @@ function EXAPPLSP(actionData, creatureData)
 	local sourceID = IEex_GetActorIDShare(creatureData)
 	if actionID == 31 or actionID == 95 or actionID == 191 or actionID == 192 then
 		local spellRES = IEex_GetActorSpellRES(sourceID)
+		local casterClass = IEex_ReadByte(creatureData + 0x530, 0x0)
+		local classSpellLevel = IEex_ReadDword(creatureData + 0x534)
+		if (actionID == 31 or actionID == 95) and IEex_IsPartyMember(sourceID) then
+			local sourceHasSpell = false
+			local spells = IEex_FetchSpellInfo(sourceID, {1, 2, 3, 4, 5, 6, 7, 8})
+			for i = 1, 9, 1 do
+				for cType, levelList in pairs(spells) do
+					if #levelList >= i then
+						local levelI = levelList[i]
+						local maxCastable = levelI[1]
+						local sorcererCastableCount = levelI[2]
+						local levelISpells = levelI[3]
+						if #levelISpells > 0 then
+							for i2, spell in ipairs(levelISpells) do
+								if spellRES == spell["resref"] then
+									if cType == 1 or cType == 6 then
+										if sorcererCastableCount > 0 then
+											if casterClass == 0 then
+												casterClass = IEex_CasterTypeToClass[cType]
+												IEex_WriteByte(creatureData + 0x530, casterClass)
+												classSpellLevel = i
+												IEex_WriteDword(creatureData + 0x534, classSpellLevel)
+											end
+											sourceHasSpell = true
+										end
+									else
+										if spell["castableCount"] > 0 then
+											if casterClass == 0 then
+												casterClass = IEex_CasterTypeToClass[cType]
+												IEex_WriteByte(creatureData + 0x530, casterClass)
+												classSpellLevel = i
+												IEex_WriteDword(creatureData + 0x534, classSpellLevel)
+											end
+											sourceHasSpell = true
+										end
+									end
+								end
+							end
+						end
+					end
+				end
+			end
+			local spells = IEex_FetchSpellInfo(sourceID, {9, 11})
+			for cType, levelList in pairs(spells) do
+				local levelISpells = levelList[1]
+				if levelISpells ~= nil then
+					for i2, spell in ipairs(levelISpells) do
+						if spellRES == spell["resref"] then
+							if cType == 11 then
+								if sorcererCastableCount > 0 then
+									sourceHasSpell = true
+								end
+							else
+								if spell["castableCount"] > 0 then
+									sourceHasSpell = true
+								end
+							end
+						end
+					end
+				end
+			end
+			if not sourceHasSpell then
+				IEex_SetActionID(actionData, 0)
+			end
+		end
 		local resWrapper = IEex_DemandRes(spellRES, "SPL")
 		if resWrapper:isValid() then
 			local spellData = resWrapper:getData()
@@ -370,7 +435,6 @@ function EXAPPLSP(actionData, creatureData)
 				end
 			end
 			if bit.band(spellFlags, 0x40000000) > 0 then
-				local casterClass = IEex_ReadByte(creatureData + 0x530, 0x0)
 				IEex_ApplyEffectToActor(sourceID, {
 ["opcode"] = 500,
 ["target"] = 2,

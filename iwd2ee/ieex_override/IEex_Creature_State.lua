@@ -218,6 +218,11 @@ function IEex_Extern_OnPostCreatureProcessEffectList(creatureData)
 	local extraFlags = IEex_ReadDword(creatureData + 0x740)
 	if ex_cre_initializing[targetID] then
 		ex_cre_initializing[targetID] = nil
+		if targetID == IEex_GetActorIDCharacter(0) then
+			for bt = 0, 30, 1 do
+				ex_global_effect_timers[bt + 1] = IEex_GetGlobal("EX_GLOBEF" .. bt)
+			end
+		end
 		if extraFlags == -1 or extraFlags == -65536 or extraFlags == -50393088 then
 			extraFlags = 0
 			IEex_WriteDword(creatureData + 0x740, extraFlags)

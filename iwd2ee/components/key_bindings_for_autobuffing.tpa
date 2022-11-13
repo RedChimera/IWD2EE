@@ -1,0 +1,2 @@
+COPY_EXISTING ~IEex_WEIDU.lua~ ~override~
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_enable_autobuffing_keys.*~ ~ex_enable_autobuffing_keys = true~

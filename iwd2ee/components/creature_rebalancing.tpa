@@ -1735,7 +1735,7 @@ COPY_EXISTING ~41GOLEIC.cre~ ~override~
 	WRITE_SHORT armorclass 25
 	WRITE_BYTE slashingresistance 5
 	WRITE_BYTE piercingresistance 5
-	WRITE_BYTE bludgeoningresistance 5
+	WRITE_BYTE bludgeoningresistance 0
 	WRITE_BYTE missileresistance 5
 	READ_LONG feats2 ulgiash
 	ulgiash|=0x2000000
@@ -4432,6 +4432,7 @@ COPY_EXISTING ~63INSTRC.cre~ ~override~ ~63PFINN.cre~ ~override~ ~63PFINH.cre~ ~
 	WRITE_BYTE skillspellcraft 16
 	WRITE_BYTE proficiencyflail 3
 	WRITE_BYTE challengerating 16
+	LPF	IWD2_REMOVE_CRE_ITEM STR_VAR item=~00CIWWLF~ END
 	LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item=~USDVLHF2~ slot=~boots~ mode=~replace~ END
 	LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item=~USCWHFCG~ slot=~weapon1~ mode=~replace~ END
 	LPF	IWD2_REMOVE_SPELLS_KNOWN STR_VAR class=~wizard~ END

@@ -913,15 +913,15 @@ ex_empowerable_opcodes = {[12] = true, [17] = true, [18] = true, [25] = true, [6
 				end
 --]]
 			elseif opcode == 500 then
+--[[
 				if resource == "MEHGTST" and special == 1 then
 					parameter1 = math.floor(parameter1 * 1.5)
 					IEex_WriteDword(effectData + 0x18, parameter1)
---[[
 				elseif resource == "MEMODSKL" or resource == "MEMODSTA" then
 					parameter1 = math.floor(parameter1 * 1.5)
 					IEex_WriteDword(effectData + 0x18, parameter1)
---]]
 				end
+--]]
 			elseif ex_empowerable_opcodes[opcode] ~= nil then
 				if opcode == 12 or opcode == 17 or opcode == 18 or opcode == 255 then
 					parameter1 = math.floor(parameter1 * 1.5)
