@@ -384,7 +384,7 @@ Casting Time: 7
 Area of Effect: Caster
 Saving Throw: None
 
-This spell steels the caster's mind against any outside influence. Charm, Command, Confusion, Dominate Person, Fear, Feeblemind, Hold, Sleep, Hopelessness and any psionic attack directed at the caster will fail as long as this spell is in effect.~
+This spell steels the caster's mind against any outside influence. Charm, Command, Confusion, Dominate Person, Fear, Feeblemind, Hold, Sleep, Stun, Hopelessness and any psionic attack directed at the caster will fail as long as this spell is in effect.~
 @1064    = ~Greater Restoration~
 @1065    = ~Greater Restoration 
 (Necromancy)
@@ -552,7 +552,7 @@ Saving Throw: Reflex half
 
 This spell creates a lance of force, extending from the caster to a specified point 60 feet in the distance. Any creatures in the lance's path take 5d4 points of nonmagical crushing damage, +2 points of damage per level of the caster (maximum of +50). Victims can Reflex save for half damage.~
 @1092    = ~Ice Storm~
-@1093    = ~Ice Storm 
+@1093    = ~Ice Storm
 (Evocation) 
 Level: Drd 4, Sor/Wiz 4
 Range: Sight of Caster
@@ -564,13 +564,13 @@ Saving Throw: None
 When this spell is cast, shards of ice smash down on all targets in the area of effect, doing 4d6 points of crushing damage and 4d6 points of cold damage.~
 @1094    = ~Improved Invisibility~
 @1095    = ~Improved Invisibility 
-(Illusion) 
+(Illusion)
 Level: Brd 5, Rgr 4, Sor/Wiz 4, Mask 4
 Range: Touch 
 Duration: 1 round / level
 Casting Time: 4 
 Area of Effect: 1 creature
-Saving Throw: None 
+Saving Throw: None
 
 This spell is similar to the Invisibility spell, but the recipient is able to attack, either with missile, melee weapons or spells, and remain unseen. However, telltale traces, a shimmering, allow an observant opponent to attack the invisible spell recipient. These traces are only noticeable when specifically looked for (after the invisible character has made his presence known).~
 @1096    = ~Spirit Armor~
@@ -587,14 +587,14 @@ This spell creates a corporeal barrier around the target's body by tapping into 
 @1098    = ~Emotion: Rage~
 @1099    = ~Emotion: Rage
 (Enchantment)
-Level: Brd 3, Sor/Wiz 4, Selune 4
+Level: Brd 2, Sor/Wiz 3, Selune 4
 Range: Sight of Caster
 Duration: 10 rounds
 Casting Time: 4
 Area of Effect: 10-foot radius
 Saving Throw: None
 
-This spell creates the emotion of rage within the area of effect. All creatures affected by the spell gain +4 to damage, +2 attack bonus, a +2 bonus to Will Saves, and a -2 penalty to AC. Emotion: Rage cannot be active on a creature at the same time as Emotion: Hope.~
+This spell creates the emotion of rage within the area of effect. All creatures affected by the spell gain +2 Strength, +2 Constitution, +1 to Will Saves, and a -1 penalty to AC. These bonuses and penalties do not stack with barbarian rage, but they do stack with other bonuses to Strength and Constitution. Emotion: Rage cannot be active on a creature at the same time as Emotion: Hope.~
 
 
 @1100    = ~Emotion: Fear~
@@ -962,7 +962,7 @@ Casting Time: 4
 Area of Effect: 1 creature
 Saving Throw: None 
 
-This spell gives the affected creature an immunity to magic that impedes movement (such as Grease, Web or Slow spells) and negates the effects of paralysis and hold spells. It does not grant immunity to stun.
+This spell gives the affected creature an immunity to magic that impedes movement (such as Grease, Web or Slow spells), negates the effects of paralysis and hold spells, and prevents them from being grappled. It does not grant immunity to stun.
 ~
 @1516    = ~Death Ward~
 @1517    = ~Death Ward 
@@ -1111,7 +1111,7 @@ Upon casting this spell, a skull is thrown by the caster at the target area. The
 @1561    = ~Spider Spawn~
 @1562    = ~Spider Spawn
 (Conjuration) 
-Level: Drd 3, Sor/Wiz 3
+Level: Drd 4, Sor/Wiz 4
 Range: Sight of Caster
 Duration: 5 rounds + 1 round/level
 Casting Time: 6
@@ -1120,7 +1120,7 @@ Saving Throw: None
 
 This spell conjures a large spider which is brought under the caster's telepathic control. There is a 20% chance of summoning 2 spiders. The type of spider that appears depends upon the level of the caster:
 
-5th : Giant spider
+7th : Giant spider
 9th : Phase spider
 12th+ : Sword spider~
 @1563    = ~Carrion Summons~
@@ -2715,7 +2715,24 @@ This gem has a soul trapped within through dark magic. One skilled in such magic
 @30139=~A small, shifting, rainbow-colored, iridescent gemstone. The fluid shades of color appear almost liquid under normal sunlight, it is truly a beautiful sight to behold. Rogue stones are extremely rare and are used for the gemjump spell, hence one of the most sought after gems in the Realms.
 
 This gem has a soul trapped within through dark magic. One skilled in such magic could consume the soul utterly to become stronger or recharge a magic item. Doing so destroys the gem.~
+@30140=~Attack Bonus - Moment of Prescience~
+@30141=~Attack Bonus - Moment of Prescience
 
+Using this ability causes the character to gain a +25 attack bonus for 1 round. Only one of the three Moment of Prescience abilities can be used.
+
+This ability may be used as a free action.~
+@30142=~Armor Class Bonus - Moment of Prescience~
+@30143=~Armor Class Bonus - Moment of Prescience
+
+Using this ability causes the character to gain a +25 AC bonus for 1 round. Only one of the three Moment of Prescience abilities can be used.
+
+This ability may be used as a free action.~
+@30144=~Saving Throw Bonus - Moment of Prescience~
+@30145=~Saving Throw Bonus - Moment of Prescience
+
+Using this ability causes the character to gain a +25 bonus to all saving throws for 1 round. Only one of the three Moment of Prescience abilities can be used.
+
+This ability may be used as a free action.~
 @31105     = ~Entangle~
 @32105     = ~Entangle
 (Transmutation) 
@@ -2994,7 +3011,7 @@ Casting Time: 3
 Area of Effect: 1 creature
 Saving Throw: None
 
-Chaotic Commands renders a creature immune to magical commands. Charm, Dominate Person, Command, Sleep, Fear, Confusion, Feeblemind, Hopelessness, and Symbol spells all fit into this category.~
+Chaotic Commands renders a creature immune to magical commands. Charm, Dominate Person, Command, Sleep, Fear, Stun, Confusion, Feeblemind, Hopelessness, and Symbol spells all fit into this category.~
 @31523     = ~Static Charge~
 @32523     = ~Static Charge
 (Transmutation)
@@ -3400,12 +3417,12 @@ This spell creates a fireball that hovers at a point determined by the caster.  
 (Abjuration)
 Level: Clr 9, Sor/Wiz 8
 Range: 10 ft.
-Duration: 1 Day 
+Duration: 1 Day
 Casting Time: 1
 Area of Effect: 1 creature
 Saving Throw: None
 
-In the interests of one's self-control and privacy, Mind Blank shields a creature's mind from almost any mental effect - Charm, Command, Dominate Person, Fear, Feeblemind, Sleep, and any scrying by crystal balls or other divination methods.~
+In the interests of one's self-control and privacy, Mind Blank shields a creature's mind from almost any mental effect - Charm, Command, Confusion, Dominate Person, Fear, Feeblemind, Hopelessness, Paralysis, Sleep, Stun, and any scrying by crystal balls or other divination methods.~
 @33809     = ~Summon Fiend~
 @34809     = ~Summon Fiend
 (Conjuration) 
@@ -4130,13 +4147,15 @@ This spell throws the target into the air with incredible force. The target is k
 @38354     = ~Moment of Prescience
 (Divination)
 Level: Brd 3, Drd 4, Sor/Wiz 3
-Range: 1000 ft.
-Duration: 1 round
-Casting Time: Free action
+Range: Sight of Caster
+Duration: Special
+Casting Time: 1
 Area of Effect: 1 creature
 Saving Throw: None
 
-The recipient of this spell momentarily gains the ability to see into the future, and can see any attack or spell coming. The target gains a +25 bonus to attack, AC and saving throws for 1 round. Moment of Prescience can be cast as a free action and on any creature in the area, even one out of sight.~
+The recipient of this spell can momentarily gain the ability to see into the future, and can see any attack or spell coming. The target gains three abilities, which can be used to give them a +25 bonus to attack, to AC or to saving throws, depending on the ability chosen, for 1 round. Once one of these abilities is used, all three disappear. If not used, the abilities also disappear after 3 hours.
+
+The abilities granted by Moment of Prescience can be used as a free action.~
 @37355     = ~Fly~
 @38355     = ~Fly
 (Transmutation)
@@ -4270,7 +4289,7 @@ Casting Time: 4
 Area of Effect: Special
 Saving Throw: None
 
-By casting Imbue with Spell Ability, the caster grants another creature the ability to cast one of the caster's spells once. Immediately after casting this spell, the caster must attempt to cast another spell of any level. Instead of being cast, that spell is stored in the creature on which Imbue with Spell Ability was just cast (consuming one use of the spell). That creature gains a special ability that lets them cast the spell once. If unused, that ability disappears after 8 hours.~
+By casting Imbue with Spell Ability, the caster grants another creature the ability to cast one of the caster's spells once. Immediately after casting this spell, the caster must attempt to cast another spell of any level, which must be an abjuration, conjuration or divination spell. Instead of being cast, that spell is stored in the creature on which Imbue with Spell Ability was just cast (consuming one use of the spell). That creature gains a special ability that lets them cast the spell once. If unused, that ability disappears after 8 hours.~
 @37551     = ~Steal Spells~
 @38551     = ~Steal Spells
 (Transmutation)

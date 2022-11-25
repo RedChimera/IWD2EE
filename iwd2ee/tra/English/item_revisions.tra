@@ -2253,7 +2253,7 @@ Special:
   Spell Power: Wearer can cast a combination of Animal Rage and Blood Rage 1/Day
   While under the effect of Barbarian Rage, Animal Rage, or Blood Rage, the wearer gains 5/- resistance to all damage.
 Weight: 20 lb.~
-@10525    = ~Mercenary's Lot +2~
+@10525    = ~Mercenary's Lot~
 @10526    = ~The mercenary's lot has been a difficult one in the lands of Icewind Dale, for there is little to occupy one's fighting skills in the far north... at least until recently. This armor was worn by a mercenary company called the Silver Band who was driven from the north after a heated debate at the Ten-Towns council (a debate that barred further mercenary service from most of the Ten-Towns for a period not exceeding three seasons). According to the debate, the mercenaries were not seen as effective combatants, and certainly not worth the gold they were paid for their meager weapon skills.
 
 In order to pay for their passage back south, the Silver Band was forced to sell several suits of their armor in order to transport their mounts and siege engines, and the Band swore they would never return to the North, even if the region perished under an avalanche of goblins and other freakish monsters. Apparently, their ability to predict the future was not listed in their company annals. 
@@ -2271,10 +2271,10 @@ Special:
   Light Weight: Armor weighs half as much as ordinary chainmail
   Resistance: 10/- Cold Resistance
 Weight: 20 lb.~
-@10527    = ~Mercenary's End +5~
+@10527    = ~Mercenary's End~
 @10528    = ~This armor was worn by the commander of a mercenary company called the Silver Band who was driven from the Ten-Towns after a fierce debate on the merits of their weapon skills (and the amount of gold that would change hands in order to see these weapon skills in combat). The commander apparently was killed in a drunken brawl by a warrior with a bizarre title before the rest of his band fled south, and this armor was taken by the local authorities in Bryn Shander. It was since released and has passed through the hands of several merchants in the far north. 
 
-This armor is valued in the far north due to its ability to protect the wielder from the elements as well as being light enough to allow for greater freedom of movement. Furthermore, the wearer of this armor never tires or becomes exhausted, and he can dispel exhaustion from his entire party once per day. 
+This armor is valued in the far north due to its ability to protect the wielder from the elements as well as being light enough to allow for greater freedom of movement. Furthermore, the wearer of this armor never tires or becomes exhausted, and he can dispel exhaustion from his entire party once per day.
 
 STATISTICS:
 
@@ -2288,7 +2288,7 @@ Special:
   Light Weight: Armor weighs 1/4th its normal weight
   Spell Power: Dispel party fatigue 1/day
 Weight: 10 lb.~
-@10529    = ~Chain of Drakkas +2~
+@10529    = ~Chain of Drakkas~
 @10530    = ~Drakkas Ranul was an outcast Moon Elf with a huge chip on his shoulder. At a very young age, Drakkas was kidnapped by a Drow raiding party and brought up by the Drow to be a pit fighter. At first he fought his fellow kidnap victims in the pits. However, over time, his fellow abductees died from their wounds and poor treatment, thus leaving Drakkas alone to eventually fight monsters of the Drow's choosing. Drakkas persevered, fueled by his ever-growing hatred for his captors, the hopes of one day escaping and then taking revenge on his kidnappers.
 
 One day Drakkas got his wish - he was able to escape by stealing his jail cell keys from his lazy night guard, and then stealthfully slipping out into the unforgiving Underdark. He managed to steal a couple of scimitars on his way out, which he put to good use while circumventing the twisted corridors of the Underdark. When he emerged on the surface, he immediately sought out his Moon Elf kin. 
@@ -2308,7 +2308,7 @@ Special:
   Spellcasting and Thieving abilities can be performed without penalties from wearing armor.
   Attack Bonus: +2 bonus
 Weight: 5 lb.~
-@10531    = ~Chain of Drakkas' Fury +3~
+@10531    = ~Chain of Drakkas' Fury~
 @10532    = ~Drakkas Ranul was an outcast Moon Elf with a huge chip on his shoulder. At a very young age, Drakkas was kidnapped by a Drow raiding party and brought up by the Drow to be a pit fighter. At first he fought his fellow kidnap victims in the pits. However, over time, his fellow abductees died from their wounds and poor treatment, thus leaving Drakkas alone to eventually fight monsters of the Drow's choosing. Drakkas persevered, fueled by his ever-growing hatred for his captors, the hopes of one day escaping and then taking revenge on his kidnappers.
 
 One day Drakkas got his wish - he was able to escape by stealing his jail cell keys from his lazy night guard, and then stealthfully slipping out into the unforgiving Underdark. He managed to steal a couple of scimitars on his way out, which he put to good use while circumventing the twisted corridors of the Underdark. When he emerged on the surface, he immediately sought out his Moon Elf kin.
@@ -2329,7 +2329,7 @@ Special:
   Attack Bonus: +3 bonus
   Speed: 1 additional attack per combat round
 Weight: 5 lb.~
-@10533    = ~Sanctity +1~
+@10533    = ~Sanctity~
 @10534    = ~Maya Selvinis was a solitary half-elf ranger who lived on the outskirts of Neverwinter. Feeling different and un-whole due to her breeding, she rarely had any interaction with other people except when she was summoned to aid in a crisis. Although she did not care for the company of others, she was more than eager to aid those in peril. However, after helping others, she would quickly return to her solitary ways, despite the general tolerance exhibited by the locals in Neverwinter.
 
 One special event that called for her ranger skills came and changed her life forever. An elderly female cleric of Eilistraee came to Maya and asked her aid in tracking down and destroying a demon that was tormenting her flock. Maya eagerly accepted the quest, put on her splint mail armor, secured her sword, and followed the cleric through the woods. After a day's travel, the cleric stopped at a small clearing between four towering trees. In the middle of the clearing was a small pond of water no wider than a yard. The cleric turned to Maya and said that the demon could be seen in the pond. Doubting, Maya approached the pond and peered in. The only thing Maya saw was her own reflection, and she stated that fact rather tersely to the cleric. The cleric smirked a bit and replied by saying that the demon was her reflection. In fact, the cleric pointed out that the demon was responsible for Maya's solitude and self-pity, and that the only one who was concerned about Maya's mixed breeding was Maya.
@@ -2344,12 +2344,12 @@ STATISTICS:
 Heavy Armor
 Armor Bonus: +7
 Max Dex Bonus:  +0
-Armor Check Penalty:  -6
+Armor Check Penalty:  -7
 Arcane Spell Failure:  40%
 Special:
   Whenever the wearer is hit in melee, there is a chance (5% * the wearer's Wisdom bonus) that the wearer will be protected by Sanctuary for the next 3 rounds
 Weight: 40 lb.~
-@10535    = ~Sanctity of Being +4~
+@10535    = ~Sanctity of Being~
 @10536    = ~Maya Selvinis was a solitary half-elf ranger who lived on the outskirts of Neverwinter. Feeling different and un-whole due to her breeding, she rarely had any interaction with other people except when she was summoned to aid in a crisis. Although she did not care for the company of others, she was more than eager to aid those in peril. However, after helping others, she would quickly return to her solitary ways, despite the general tolerance exhibited by the locals in Neverwinter.
 
 One special event that called for her ranger skills came and changed her life forever. An elderly female cleric of Eilistraee came to Maya and asked her aid in tracking down and destroying a demon that was tormenting her flock. Maya eagerly accepted the quest, put on her splint mail armor, secured her sword, and followed the cleric through the woods. After a day's travel, the cleric stopped at a small clearing between four towering trees. In the middle of the clearing was a small pond of water no wider than a yard. The cleric turned to Maya and said that the demon could be seen in the pond. Doubting, Maya approached the pond and peered in. The only thing Maya saw was her own reflection, and she stated that fact rather tersely to the cleric. The cleric smirked a bit and replied by saying that the demon was her reflection. In fact, the cleric pointed out that the demon was responsible for Maya's solitude and self-pity, and that the only one who was concerned about Maya's mixed breeding was Maya.
@@ -2364,46 +2364,46 @@ STATISTICS:
 Heavy Armor
 Armor Bonus: +10
 Max Dex Bonus:  +0
-Armor Check Penalty:  -6
+Armor Check Penalty:  -7
 Arcane Spell Failure:  40%
 Special:
   Whenever the wearer is hit in melee, there is a chance (10% * the wearer's Wisdom bonus) that the wearer will be protected by Sanctuary for the next 3 rounds
   Spellward:  Immunity to Cloak of Fear, Horror and Charm Person spells
 Weight: 40 lb.~
-@10537    = ~Armor of Tuqak Mauler +2~
+@10537    = ~Armor of Tuqak Mauler~
 @10538    = ~A talented, gnome smith, who went by the name of Boopie Silvermallet, made this armor to the exacting specifications of a half-orc barbarian named Tuqak Mauler. Forged from the finest metals and enchanted with Boopie's secret recipe magics, Tuqak's new armor looked more like a museum showpiece rather than practical combat armor. The steel strips shone with a silver brilliance and each rivet sparkled like fresh cut diamonds. When Tuqak put the armor on, he immediately felt more vigorous and alive. Unfortunately for Tuqak, this new armor also made him overconfident, which summarily caused his demise in a later battle. 
 
 So, wearer be warned - even though you feel like you can take on the world while wearing Tuqak's armor, you will still have to rely on combat skill to carry you through... alive.
 
 STATISTICS:
 
-Heavy Armor
-Armor Bonus: +8
-Max Dex Bonus:  +0
-Armor Check Penalty:  -6
+Medium Armor
+Armor Bonus: +11
+Max Dex Bonus:  +2
+Armor Check Penalty:  -5
 Arcane Spell Failure:  40%
 Special:
   Generic Armor Penalty: -8
   Hit Point Bonus:  +80 to Max Hit Points
 Weight: 40 lb.~
-@10539    = ~Armor of Tuqak Mauler the Fierce +4~
-@10540    = ~A talented, gnome smith, who went by the name of Boopie Silvermallet, made this armor to the exacting specifications of a half-orc barbarian named Tuqak Mauler. Forged from the finest metals and enchanted with Boopie's secret recipe magics, Tuqak's new armor looked more like a museum showpiece rather than practical combat armor. The steel strips shone with a silver brilliance and each rivet sparkled like fresh cut diamonds. When Tuqak put the armor on, he immediately felt more vigorous and alive. Unfortunately for Tuqak, this new armor also made him overconfident, which summarily caused his demise in a later battle. 
+@10539    = ~Armor of Tuqak Mauler the Fierce~
+@10540    = ~A talented, gnome smith, who went by the name of Boopie Silvermallet, made this armor to the exacting specifications of a half-orc barbarian named Tuqak Mauler. Forged from the finest metals and enchanted with Boopie's secret recipe magics, Tuqak's new armor looked more like a museum showpiece rather than practical combat armor. The steel strips shone with a silver brilliance and each rivet sparkled like fresh cut diamonds. When Tuqak put the armor on, he immediately felt more vigorous and alive. Unfortunately for Tuqak, this new armor also made him overconfident, which summarily caused his demise in a later battle.
 
 So, wearer be warned - even though you feel like you can take on the world while wearing Tuqak's armor, you will still have to rely on combat skill to carry you through... alive.
 
 STATISTICS:
 
-Heavy Armor
-Armor Bonus: +10
-Max Dex Bonus:  +0
-Armor Check Penalty:  -6
+Medium Armor
+Armor Bonus: +14
+Max Dex Bonus:  +2
+Armor Check Penalty:  -5
 Arcane Spell Failure:  40%
 Special:
   Generic Armor Penalty: -10
   Hit Point Bonus:  +100 to Max Hit Points
   Wearer is under the effects of the spell Death Ward
 Weight: 40 lb.~
-@10541    = ~Glacial Resilience +3~
+@10541    = ~Glacial Resilience~
 @10542    = ~Kyndor Icehammer was a mighty Dwarven warrior who loved the cold of the Dales. Not only did Kyndor call Icewind Dale his home, but he also had a special connection to the Dales - it was a part of him - not just a part of his body, but of his very soul. 
 
 Kyndor was also a remarkable armor and weaponsmith. Everything he forged had some kind of connection to Icewind Dale. In fact, his very armor, forged by his own hands, seemed to have its own life, and that life was very protective of Kyndor. Often times, during battle, his armor seemed to harness the elements of the Dales and retaliate against Kyndor's attackers. 
@@ -2415,12 +2415,12 @@ STATISTICS:
 Heavy Armor
 Armor Bonus: +9
 Max Dex Bonus:  +0
-Armor Check Penalty:  -6
+Armor Check Penalty:  -7
 Arcane Spell Failure:  40%
 Special:
   Retribution: Attacker suffers 1d6 cold damage per successful hit on wearer of Glacial Resilience (melee only)
 Weight: 40 lb.~
-@10543    = ~Glacial Storm +5~
+@10543    = ~Glacial Storm~
 @10544    = ~Kyndor Icehammer was a mighty Dwarven warrior who loved the cold of the Dales. Not only did Kyndor call Icewind Dale his home, but he also had a special connection to the Dales - it was a part of him - not just a part of his body, but of his very soul. 
 
 Kyndor was also a remarkable armor and weaponsmith. Everything he forged had some kind of connection to Icewind Dale. In fact, his very armor, forged by his own hands, seemed to have its own life, and that life was very protective of Kyndor. Often times, during battle, his armor seemed to harness the elements of the Dales and retaliate against Kyndor's attackers. 
@@ -2432,7 +2432,7 @@ STATISTICS:
 Heavy Armor
 Armor Bonus: +11
 Max Dex Bonus:  +0
-Armor Check Penalty:  -6
+Armor Check Penalty:  -7
 Arcane Spell Failure:  40%
 Special:
   Retribution: Attacker suffers 2d6 cold damage per successful hit on wearer of Glacial Storm (melee only)
@@ -2490,13 +2490,13 @@ Weight: 12 lb.~
 //@10556    = ~Item description can remain the same; if new description is needed put it here~
 @10557    = ~1/4 Weight Full Plate~
 //@10558    = ~Item description can remain the same; if new description is needed put it here~
-@10559    = ~Duergar-Forged Armor +2~
+@10559    = ~Duergar-Forged Armor +4~
 @10560    = ~Duergar master artisans forged this armor of dull gray steel. Runes cunningly worked into its surface reflect spells as well as blows, and the armor weighs only half as much as a typical suit of plate mail.
 
 STATISTICS:
 
 Heavy Armor
-Armor Bonus: +9
+Armor Bonus: +11
 Max Dex Bonus:  +0
 Armor Check Penalty:  -6
 Arcane Spell Failure:  40%
@@ -2504,13 +2504,13 @@ Special:
   Resistance: 5/- Magic Damage Resistance
   Light Weight
 Weight: 20 lb.~
-@10561    = ~Duergar-Forged Armor of Warding +4~
+@10561    = ~Duergar-Forged Armor of Warding +6~
 @10562    = ~Duergar master artisans forged this armor of dull gray steel. Runes cunningly worked into its surface reflect spells as well as blows, and the armor weighs only half as much as a typical suit of plate mail.
 
 STATISTICS:
 
 Heavy Armor
-Armor  Bonus: +11
+Armor  Bonus: +13
 Max Dex Bonus:  +0
 Armor Check Penalty:  -6
 Arcane Spell Failure:  40%
@@ -2526,14 +2526,14 @@ Weight: 20 lb.~
 STATISTICS:
 
 Heavy Armor
-Armor Bonus: +7
+Armor Bonus: +8
 Max Dex Bonus:  +1
 Armor Check Penalty:  -5
 Arcane Spell Failure:  35%
 Special:
   Lightweight: Armor is half normal weight of half-plate mail.
 Weight: 25 lb.~
-@10565    = ~Hawk's Feather +3~
+@10565    = ~Hawk's Feather~
 @10566    = ~Usually plate mail is reserved for those strong enough to wear it. It does not matter that there were many fine warriors in the land who could benefit from the extra protection that plate mail could lend them. Those unfortunate enough to be of the slender (and weaker) side were reserved to use nothing heavier than chain mail. That is until a resourceful young armorsmith happened on a hawk's feather enchantment that helped her to create plate mail that weighed half as much as regular plate mail. Needless to say, that particular armorsmith became very popular with the slender warriors of the region.
 
 
@@ -2548,43 +2548,10 @@ Special:
   Lightweight: Armor is one fifth normal weight of half-plate mail
   Strength: +5 
 Weight: 10 lb.~
-@10567    = ~Armor of the Clerics of Myrkul +1~
+@10567    = ~Armor of the Clerics of Myrkul~
 @10568    = ~Clerics of Myrkul center their whole existence on endeavors that aid the dead and dying. They make it their responsibility to organize funerals, burials, settling the dead's unfinished affairs and enacting wills.
 
 Common to these clerics are their amazing plate mail armor that grants them several advantages over necromantic spells such as Paralyze and Death Magic. Clerics of Myrkul may make it their practice to aid in the affairs of the dead, but they have no desire to prematurely die themselves. 
-
-STATISTICS:
-
-Heavy Armor
-Armor Bonus: +8
-Max Dex Bonus:  +0
-Armor Check Penalty:  -6
-Arcane Spell Failure:  40%
-Special:
-  Saving Throw Bonus:  +5 to Fortitude saves
-Weight: 50 lb.~
-@10569    = ~Blessed Armor of the Clerics of Myrkul +3~
-@10570    = ~Clerics of Myrkul center their whole existence on endeavors that aid the dead and dying. They make it their responsibility to organize funerals, burials, settling the dead's unfinished affairs and enacting wills.
-
-Common to these clerics are their amazing plate mail armor that grants them several advantages over necromantic spells such as Paralyze and Death Magic. Clerics of Myrkul may make it their practice to aid in the affairs of the dead, but they have no desire to prematurely die themselves. 
-
-STATISTICS:
-
-Heavy Armor
-Armor Bonus: +10
-Max Dex Bonus:  +1
-Armor Check Penalty:  -5
-Arcane Spell Failure:  35%
-Special:
-  Saving Throw Bonus:  +7 to Fortitude saves
-Spell Power:  Can cast 5th level Priest Spell Raise Dead once per day.
-Weight: 50 lb.~
-@10571    = ~Plate of the Pit Fiend +2~
-@10572    = ~No one is certain where the Plate of the Pit Fiend came from, or how it was created. Its spiky red scaled plates radiate a fiery red glow at all times, convincing those who look upon it that the plate mail is certainly otherworldly. 
-
-Those that equip the Plate of the Pit Fiend find that the plate has a deadly natural defense when struck too many times. If an enemy is too successful with their strikes against the wearer of the Plate of the Pit Fiend, the plate will emit an explosive burst of flame in all directions around itself. This flame mortally wounds everyone caught within its wake, except for the wearer of the unusual plate mail. 
-
-It is rumored that the Plate of the Pit Fiend is actually the hide of a Pit Fiend, killed and skinned by someone, or something, more powerful than a Greater Baatezu. If this rumor is true, pray to the gods that the creature capable of killing and skinning a Pit Fiend never comes to the material plane.
 
 STATISTICS:
 
@@ -2594,12 +2561,45 @@ Max Dex Bonus:  +0
 Armor Check Penalty:  -6
 Arcane Spell Failure:  40%
 Special:
+  Saving Throw Bonus:  +5 to Fortitude saves
+Weight: 50 lb.~
+@10569    = ~Blessed Armor of the Clerics of Myrkul~
+@10570    = ~Clerics of Myrkul center their whole existence on endeavors that aid the dead and dying. They make it their responsibility to organize funerals, burials, settling the dead's unfinished affairs and enacting wills.
+
+Common to these clerics are their amazing plate mail armor that grants them several advantages over necromantic spells such as Paralyze and Death Magic. Clerics of Myrkul may make it their practice to aid in the affairs of the dead, but they have no desire to prematurely die themselves. 
+
+STATISTICS:
+
+Heavy Armor
+Armor Bonus: +12
+Max Dex Bonus:  +1
+Armor Check Penalty:  -5
+Arcane Spell Failure:  35%
+Special:
+  Saving Throw Bonus:  +7 to Fortitude saves
+Spell Power:  Can cast 5th level Priest Spell Raise Dead once per day.
+Weight: 50 lb.~
+@10571    = ~Plate of the Pit Fiend~
+@10572    = ~No one is certain where the Plate of the Pit Fiend came from, or how it was created. Its spiky red scaled plates radiate a fiery red glow at all times, convincing those who look upon it that the plate mail is certainly otherworldly. 
+
+Those that equip the Plate of the Pit Fiend find that the plate has a deadly natural defense when struck too many times. If an enemy is too successful with their strikes against the wearer of the Plate of the Pit Fiend, the plate will emit an explosive burst of flame in all directions around itself. This flame mortally wounds everyone caught within its wake, except for the wearer of the unusual plate mail.
+
+It is rumored that the Plate of the Pit Fiend is actually the hide of a Pit Fiend, killed and skinned by someone, or something, more powerful than a Greater Baatezu. If this rumor is true, pray to the gods that the creature capable of killing and skinning a Pit Fiend never comes to the material plane.
+
+STATISTICS:
+
+Heavy Armor
+Armor Bonus: +11
+Max Dex Bonus:  +0
+Armor Check Penalty:  -6
+Arcane Spell Failure:  40%
+Special:
   Retribution: 10% chance of casting the spell Sunfire whenever the attacking enemy successfully hits wearer of Plate of the Pit Fiend (melee only)
 Weight: 50 lb.~
-@10573    = ~Plate of the Balor +5~
+@10573    = ~Plate of the Balor~
 @10574    = ~No one is certain where the Plate of the Balor came from, or how it was created. Its smooth, tough red plates radiate a fiery red glow at all times, convincing those who look upon it that the plate mail is certainly otherworldly. 
 
-Those that equip the Plate of the Balor find that the plate has a deadly natural defense when struck too many times. If an enemy is too successful with their strikes against the wearer of the Plate of the Balor, the plate will emit an explosive burst of flame in all directions around itself. This flame mortally wounds everyone caught within its wake, except for the wearer of the unusual plate mail. 
+Those that equip the Plate of the Balor find that the plate has a deadly natural defense when struck too many times. If an enemy is too successful with their strikes against the wearer of the Plate of the Balor, the plate will emit an explosive burst of flame in all directions around itself. This flame mortally wounds everyone caught within its wake, except for the wearer of the unusual plate mail.
 
 In addition, the plate has been known to send waves of terror upon those that attack its wearer.
 
@@ -2608,12 +2608,12 @@ It is rumored that the Plate of the Balor is actually the hide of a Balor, kille
 STATISTICS:
 
 Heavy Armor
-Armor Bonus: +12
+Armor Bonus: +14
 Max Dex Bonus:  +0
 Armor Check Penalty:  -6
 Arcane Spell Failure:  40%
 Special:
-  Retribution: 10% chance of casting the spell Sunfire whenever the attacking enemy successfully hits wearer of Plate of the Balor. 
+  Retribution: 10% chance of casting the spell Sunfire whenever the attacking enemy successfully hits wearer of Plate of the Balor.
   Retribution: 10% chance of casting the spell Cloak of Fear whenever the attacking enemy successfully hits wearer of Plate of the Balor. 
   Spellward: Immunity to Cloak of Fear, Horror, Charm Person, Dire Charm, and Confusion
 Weight: 50 lb.~
@@ -2627,15 +2627,15 @@ A fighter wearing Air Genasi armor is easy to spot since the armor glows a light
 STATISTICS:
 
 Heavy Armor
-Armor Bonus: +8
+Armor Bonus: +9
 Max Dex Bonus:  +1
 Armor Check Penalty:  -5
 Arcane Spell Failure:  35%
 Special:
-  Spellward: Immunity to Stinking Cloud, Cloudkill, Cloud of Pestilence and Whirlwind
+  Spellward: Immunity to Stinking Cloud, Cloudkill, Cloud of Pestilence, Gust of Wind, Whirlwind and Tornado
   Saving Throw Bonus:  +2 to Reflex saves
 Weight: 50 lb.~
-@10577    = ~Air Genasi Gale Armor +3~ //Without Spell Revisions Installed
+@10577    = ~Air Genasi Gale Armor~ //Without Spell Revisions Installed
 @10578    = ~There is no debating that Air Genasi make talented fighters, as do most all Genasi. So, it is not surprising that the armor Air Genasi have made carry some of the same innate magical protections as their own bodies.
 
 Air Genasi Gale Armor not only gives the excellent protection of normal full plate, but also gives its wearer the added protection of fending off most air spells and effects. In addition, the enchanted armor increases the wearer's dexterity as well as their ability to fend off attackers.
@@ -2645,15 +2645,15 @@ A fighter wearing Air Genasi Gale Armor is easy to spot since the armor glows a 
 STATISTICS:
 
 Heavy Armor
-Armor Bonus: +11
+Armor Bonus: +12
 Max Dex Bonus:  +1
 Armor Check Penalty:  -5
 Arcane Spell Failure:  35%
 Special:
-  Spellward: Immunity to Stinking Cloud, Cloudkill, Acid Fog, Suffocate, Cloud of Pestilence and Whirlwind
+  Spellward: Immunity to Stinking Cloud, Cloudkill, Acid Fog, Suffocate, Cloud of Pestilence, Gust of Wind, Whirlwind and Tornado
   Saving Throw Bonus:  +6 to Reflex saves
 Weight: 70 lb.~
-//@10579    = ~Air Genasi Gale Armor +3~ //With Spell Revisions Installed
+//@10579    = ~Air Genasi Gale Armor~ //With Spell Revisions Installed
 @10580    = ~There is no debating that Air Genasi make talented fighters, as do most all Genasi. So, it is not surprising that the armor Air Genasi have made carry some of the same innate magical protections as their own bodies.
 
 Air Genasi Gale Armor not only gives the excellent protection of normal full plate, but also gives its wearer the added protection of fending off most air spells and effects. In addition, the enchanted armor increases the wearer's dexterity as well as their ability to fend off attackers.
@@ -2663,15 +2663,15 @@ A fighter wearing Air Genasi Gale Armor is easy to spot since the armor glows a 
 STATISTICS:
 
 Heavy Armor
-Armor Bonus: +11
+Armor Bonus: +12
 Max Dex Bonus:  +1
 Armor Check Penalty:  -5
 Arcane Spell Failure:  35%
 Special:
-  Spellward: Immunity to Stinking Cloud, Cloudkill, Death Fog, Suffocate, Cloud of Pestilence and Whirlwind
+  Spellward: Immunity to Stinking Cloud, Cloudkill, Death Fog, Suffocate, Cloud of Pestilence, Gust of Wind, Whirlwind and Tornado
   Saving Throw Bonus:  +6 to Reflex saves
 Weight: 70 lb.~
-@10581    = ~Diamond Cut +1~
+@10581    = ~Diamond Cut~
 @10582    = ~Plate and full plate are arguably the toughest armor in any realm. However, no one can deny that full plate is susceptible to bludgeoning damage. In fact, most bludgeoning weapons were created with the intention of blowing through full plate armor. 
 
 With this thought in mind, the armor known as Diamond Cut was forged. No one is exactly sure how Diamond Cut came into existence, but what is known is that the renowned Mirabar armorsmith, Cutter Boomstock, one day unveiled the armor to a well-to-do knight who traveled all the way from Amn. Diamond Cut glistened in the firelight like a thousand diamonds, almost blinding was the intensity of the sheen. And, in a remarkable demonstration, Cutter Boomstock lifted his anvil high in the air and struck the armor. To everyone's amazement, the strike left no mark on the sparkling armor.
@@ -2680,7 +2680,7 @@ The knight happily took the armor and left Mirabar forever, never to be seen aga
 STATISTICS:
 
 Heavy Armor
-Armor Bonus: +9
+Armor Bonus: +10
 Max Dex Bonus:  +1
 Armor Check Penalty:  -5
 Arcane Spell Failure:  35%
@@ -2690,8 +2690,8 @@ Special:
   Resistance: 3/- Piercing Resistance
   Resistance: 3/- Missile Resistance
 Weight: 50 lb.~
-@10583    = ~Diamond Cutter +3~
-@10584    = ~Plate and full plate are arguably the toughest armor in any realm. However, no one can deny that full plate is susceptible to bludgeoning damage. In fact, most bludgeoning weapons were created with the intention of blowing through full plate armor. 
+@10583    = ~Diamond Cutter~
+@10584    = ~Plate and full plate are arguably the toughest armor in any realm. However, no one can deny that full plate is susceptible to bludgeoning damage. In fact, most bludgeoning weapons were created with the intention of blowing through full plate armor.
 
 With this thought in mind, the armor known as Diamond Cutter was forged. No one is exactly sure how Diamond Cutter came into existence, but what is known is that the renowned Mirabar armorsmith, Cutter Boomstock, one day unveiled the armor to a well-to-do knight who traveled all the way from Amn. Diamond Cutter glistened in the firelight like a thousand diamonds, almost blinding was the intensity of the sheen. And, in a remarkable demonstration, Cutter Boomstock lifted his anvil high in the air and struck the armor. To everyone's amazement, the strike left no mark on the sparkling armor. 
 
@@ -2700,7 +2700,7 @@ The knight happily took the armor and left Mirabar forever, never to be seen aga
 STATISTICS:
 
 Heavy Armor
-Armor Bonus: +11
+Armor Bonus: +13
 Max Dex Bonus:  +1
 Armor Check Penalty:  -5
 Arcane Spell Failure:  35%
@@ -2720,7 +2720,7 @@ As a result of the high Aasimar casualties, it was not uncommon for looters to t
 STATISTICS:
 
 Heavy Armor
-Armor Bonus: +11
+Armor Bonus: +12
 Max Dex Bonus:  +1
 Armor Check Penalty:  -5
 Arcane Spell Failure:  35%
@@ -2738,7 +2738,7 @@ As a result of the high Aasimar casualties, it was not uncommon for looters to t
 STATISTICS:
 
 Heavy Armor
-Armor Bonus: +13
+Armor Bonus: +14
 Max Dex Bonus:  +1
 Armor Check Penalty:  -5
 Arcane Spell Failure:  35%
@@ -11708,26 +11708,26 @@ Arcane Spell Failure:  30%
 Special:
   Constant Effect: Wearer is under the effects of the spell Minor Globe of Invulnerability
 Weight: 25 lb.~
-@12449    = ~Splint Mail of Vitality +3~
+@12449    = ~Splint Mail of Vitality +5~
 @12450    = ~Splint mail is a variant of banded mail in which the metal strips are applied vertically to the backing of chain, leather, or cloth rather than horizontally as in banded mail. Since the human body does not swivel in mid-torso as much as it flexes back to front, splint mail is more restrictive in battle. This particular suit of armor has been magically enchanted for increased durability and protection.
 
 STATISTICS:
 
 Heavy Armor
-Armor Bonus: +9
+Armor Bonus: +11
 Max Dex Bonus:  +0
 Armor Check Penalty:  -7
 Arcane Spell Failure:  40%
 Special:
   Constitution: +4 bonus
 Weight: 32 lb.~
-@12451    = ~Splint Mail of Perfect Health +4~
+@12451    = ~Splint Mail of Perfect Health +7~
 @12452    = ~Splint mail is a variant of banded mail in which the metal strips are applied vertically to the backing of chain, leather, or cloth rather than horizontally as in banded mail. Since the human body does not swivel in mid-torso as much as it flexes back to front, splint mail is more restrictive in battle. This particular suit of armor has been magically enchanted for increased durability and protection.
 
 STATISTICS:
 
 Heavy Armor
-Armor Bonus: +10
+Armor Bonus: +13
 Max Dex Bonus:  +0
 Armor Check Penalty:  -7
 Arcane Spell Failure:  40%
@@ -12033,24 +12033,24 @@ Arcane Spell Failure:  40%
 Special:
   Constant Effect: Wearer is under the effects of the spell Holy Power
 Weight: 40 lb.~
-@12503    = ~Full Plate +4~
+@12503    = ~Full Plate +5~
 @12504    = ~Full plate armor is the best armor a warrior can buy, both in appearance and protection. The perfectly fitted interlocking plates are specially angled to deflect arrows and blows, and the entire suit is carefully adorned with rich engraving and embossed detail. With its magical enchantments, this suit of full plate is ideal for warriors.
 
 STATISTICS:
 
 Heavy Armor
-Armor Bonus: +12
+Armor Bonus: +13
 Max Dex Bonus:  +1
 Armor Check Penalty:  -6
 Arcane Spell Failure:  35%
 Weight: 30 lb.~
-@12505    = ~Impenetrable Full Plate +3~
+@12505    = ~Impenetrable Full Plate +6~
 @12506    = ~Full plate armor is the best armor a warrior can buy, both in appearance and protection. The perfectly fitted interlocking plates are specially angled to deflect arrows and blows, and the entire suit is carefully adorned with rich engraving and embossed detail. With its magical enchantments, this suit of full plate is ideal for warriors.
 
 STATISTICS:
 
 Heavy Armor
-Armor Bonus: +11
+Armor Bonus: +14
 Max Dex Bonus:  +1
 Armor Check Penalty:  -6
 Arcane Spell Failure:  35%
@@ -12698,13 +12698,13 @@ STATISTICS:
 
 Wearer's divine spells last 40% longer
 Weight: 0 lb.~
-@12619    = ~Field Plate of Force Immunity +5~
+@12619    = ~Field Plate of Force Immunity +8~
 @12620    = ~Field plate is actually a more commonly used form of full plate armor. It consists of shaped and fitted metal plates riveted and interlocked to cover the entire body. This suit is made of adamantite and has been magically enhanced for added protection and durability.
 
 STATISTICS:
 
 Heavy Armor
-Armor Bonus: +12
+Armor Bonus: +15
 Max Dex Bonus:  +1
 Armor Check Penalty:  -6
 Arcane Spell Failure:  35%

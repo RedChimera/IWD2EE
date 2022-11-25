@@ -238,7 +238,7 @@ ex_augury_spells = {
 }
 ex_custom_scorcher = {["DEFAULT"] = {["TargetSpell"] = "USEFFAS1", ["PathSpell"] = "USEFFAS2", ["StartingTime"] = 0, ["Index"] = 1}, ["USWI864D"] = {["TargetSpell"] = "USWI864E", ["PathSpell"] = "USWI864E", ["StartingTime"] = 0, ["Index"] = 2}, ["USCHAINL"] = {["TargetSpell"] = "", ["PathSpell"] = "", ["StartingTime"] = 80, ["Index"] = 3}, }
 ex_noncumulative_opcode_functions = {["MEOP16"] = true, ["MEOP40"] = true, ["MEOP130"] = true, ["MEOP401"] = true, ["MEOP403"] = true, ["MEOP408"] = true, ["MEOP415"] = true, ["MEOP421"] = true, ["MEOP427"] = true, ["MEIMPALA"] = true, }
-ex_stat_scaling_functions = {["MESTATSC"] = true, ["MEHALFTH"] = true, ["MEPERFEC"] = true, }
+ex_stat_scaling_functions = {["MESTATSC"] = true, ["MEHALFTH"] = true, ["MEPERFEC"] = true, ["MESPLSTC"] = true, }
 ex_on_tick_functions = {["MECLONE3"] = 1, ["MEPROJIE"] = 1, ["MEAREAGL"] = 1, ["MEGHOSTW"] = 1, ["METELMOV"] = 1, ["MEENLARG"] = 1, ["MEANSUP2"] = 2, ["MEBARRA2"] = 2, ["MEDRAGPA"] = 2, ["MEDRAGPR"] = 2, ["MEWINGBU"] = 2, ["MESPIN"] = 2, ["MEINTERI"] = 2, ["IEex_EvaluatePermanentRepeatingEffects"] = 0, ["IEex_HeightMod"] = 0, ["IEex_ExtraAttacks"] = 0, ["IEex_DuelHide"] = 0, }
 ex_on_tick_default_functions = {["MEENLARG"] = "IEex_ResetSize", }
 ex_stat_spells = {
@@ -260,7 +260,7 @@ ex_stat_spells = {
 [16] = {[0] = "USW21L01", [9] = "USW21L09", [16] = "USW21L16", [24] = "USW21L24"}, -- Wild Shape: Blink Dog (Feat 1)
 [17] = {[0] = "USW22L01", [10] = "USW22L10", [15] = "USW22L15", [20] = "USW22L20", [25] = "USW22L25", [30] = "USW22L30"}, -- Wild Shape: Creeping Doom (Feat 2)
 [18] = {[0] = "USW23L01", [13] = "USW23L13", [18] = "USW23L18", [23] = "USW23L23", [28] = "USW23L28"}, -- Wild Shape: Rhinoceros Beetle (Feat 3)
-[19] = {[0] = "USW30L01", [40] = "USW30L40", [50] = "USW30L50"}, -- Wild Shape: Black Dragon
+[19] = {[0] = "USW30L01", [50] = "USW30L40"}, -- Wild Shape: Black Dragon
 [20] = {[0] = "USDUHM01", [2] = "USDUHM02", [3] = "USDUHM03", [4] = "USDUHM04", [5] = "USDUHM05", [6] = "USDUHM06", [7] = "USDUHM07", [8] = "USDUHM08", [9] = "USDUHM09", [10] = "USDUHM10"},
 [21] = {[12] = "USDAMA01", [14] = "USDAMA02", [16] = "USDAMA03", [18] = "USDAMA04", [20] = "USDAMA05", [22] = "USDAMA06", [24] = "USDAMA07", [26] = "USDAMA08", [28] = "USDAMA09", [30] = "USDAMA10", [32] = "USDAMA11", [34] = "USDAMA12", [36] = "USDAMA13", [38] = "USDAMA14", [40] = "USDAMA15"}, -- Stat-based bonuses to damage
 [22] = {[14] = "USDAMA01", [18] = "USDAMA02", [22] = "USDAMA03", [26] = "USDAMA04", [30] = "USDAMA05", [34] = "USDAMA06", [38] = "USDAMA07"}, -- Half stat-based bonuses to damage

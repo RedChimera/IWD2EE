@@ -681,20 +681,20 @@ ex_empowerable_opcodes = {[12] = true, [17] = true, [18] = true, [25] = true, [6
 						if theresource ~= "" then
 							local thecasterlvl = IEex_ReadDword(eData + 0xC8)
 							local newEffectTarget = sourceID
-							local newEffectTargetX = IEex_ReadDword(effectData + 0x7C)
-							local newEffectTargetY = IEex_ReadDword(effectData + 0x80)
+							local newEffectTargetX = IEex_ReadDword(sourceData + 0x6)
+							local newEffectTargetY = IEex_ReadDword(sourceData + 0xA)
 							if (bit.band(thesavingthrow, 0x200000) > 0) then
 								newEffectTarget = targetID
-								newEffectTargetX = IEex_ReadDword(effectData + 0x84)
-								newEffectTargetY = IEex_ReadDword(effectData + 0x88)
+								newEffectTargetX = IEex_ReadDword(creatureData + 0x6)
+								newEffectTargetY = IEex_ReadDword(creatureData + 0xA)
 							end
 							local newEffectSource = sourceID
-							local newEffectSourceX = IEex_ReadDword(effectData + 0x7C)
-							local newEffectSourceY = IEex_ReadDword(effectData + 0x80)
+							local newEffectSourceX = IEex_ReadDword(sourceData + 0x6)
+							local newEffectSourceY = IEex_ReadDword(sourceData + 0xA)
 							if (bit.band(thesavingthrow, 0x400000) > 0) then
 								newEffectSource = targetID
-								newEffectSourceX = IEex_ReadDword(effectData + 0x84)
-								newEffectSourceY = IEex_ReadDword(effectData + 0x88)
+								newEffectSourceX = IEex_ReadDword(creatureData + 0x6)
+								newEffectSourceY = IEex_ReadDword(creatureData + 0xA)
 							end
 							if (bit.band(thesavingthrow, 0x800000) > 0) then
 								newEffectSource = IEex_ReadDword(eData + 0x110)
@@ -954,7 +954,7 @@ ex_empowerable_opcodes = {[12] = true, [17] = true, [18] = true, [25] = true, [6
 			end
 		end
 
-		if timing ~= 1 and timing ~= 2 and timing ~= 9 and (ex_listspll[sourceSpell] ~= nil or ex_listdomn[sourceSpell] ~= nil or casterClass > 0) and (opcode ~= 500 or math.abs(duration - time_applied) > 16) then
+		if (timing == 0 or timing == 3 or timing == 4) and (ex_listspll[sourceSpell] ~= nil or ex_listdomn[sourceSpell] ~= nil or casterClass > 0) and (opcode ~= 500 or math.abs(duration - time_applied) > 16) then
 			local durationMultiplier = 100
 			IEex_IterateActorEffects(sourceID, function(eData)
 				local theopcode = IEex_ReadDword(eData + 0x10)

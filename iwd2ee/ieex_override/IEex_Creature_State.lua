@@ -79,6 +79,12 @@ function IEex_Extern_OnGameObjectBeingDeleted(actorID)
 		IEex_Helper_EraseBridgeKey("IEex_GameObjectData", actorID)
 		return
 	end
+	if ex_record_projectile_position[share] ~= nil then
+		ex_record_projectile_position[share] = nil
+	end
+	if ex_record_temporal_position[share] ~= nil then
+		ex_record_temporal_position[share] = nil
+	end
 	if IEex_ReadByte(share + 0x4, 0) ~= 0x31 then return end
 
 	ex_cre_initializing[actorID] = nil

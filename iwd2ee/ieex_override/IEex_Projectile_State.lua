@@ -1491,12 +1491,14 @@ IEex_MutatorOpcodeFunctions["MEMODDTP"] = {
 
 IEex_MutatorGlobalFunctions["METIMESL"] = {
     ["typeMutator"] = function(source, creatureData, missileIndex, sourceRES)
+--[[
 		if missileIndex == 335 and ex_time_slow_speed_divisor == 0x7FFFFFFF then
 			local timeSlowed = IEex_CheckGlobalEffect(0x2)
 			if timeSlowed then
 				return 1
 			end
 		end
+--]]
     end,
     ["projectileMutator"] = function(source, creatureData, projectileData, sourceRES)
     	if ex_time_slow_speed_divisor ~= 0x7FFFFFFF then

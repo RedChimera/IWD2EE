@@ -90,3 +90,46 @@ COPY_EXISTING ~KITLIST.2da~ ~override~
   END
   SET_2DA_ENTRIES_NOW rows_out num_cols
 BUT_ONLY
+
+COPY_EXISTING ~help03.2da~ ~override~
+	COUNT_2DA_ROWS 3 numrows
+	READ_2DA_ENTRY (numrows - 1) 0 3 nextindex
+	nextindex += 1
+	kit_name = RESOLVE_STR_REF(@815)
+	kit_desc = RESOLVE_STR_REF(@816)
+	INSERT_2DA_ROW numrows 3 ~%nextindex% %kit_name% %kit_desc%~
+	numrows += 1
+	nextindex += 1
+	kit_name = RESOLVE_STR_REF(@817)
+	kit_desc = RESOLVE_STR_REF(@818)
+	INSERT_2DA_ROW numrows 3 ~%nextindex% %kit_name% %kit_desc%~
+	numrows += 1
+	nextindex += 1
+	kit_name = RESOLVE_STR_REF(@819)
+	kit_desc = RESOLVE_STR_REF(@820)
+	INSERT_2DA_ROW numrows 3 ~%nextindex% %kit_name% %kit_desc%~
+	numrows += 1
+	nextindex += 1
+	kit_name = RESOLVE_STR_REF(@821)
+	kit_desc = RESOLVE_STR_REF(@822)
+	INSERT_2DA_ROW numrows 3 ~%nextindex% %kit_name% %kit_desc%~
+	numrows += 1
+	nextindex += 1
+	kit_name = RESOLVE_STR_REF(@823)
+	kit_desc = RESOLVE_STR_REF(@824)
+	INSERT_2DA_ROW numrows 3 ~%nextindex% %kit_name% %kit_desc%~
+	numrows += 1
+	nextindex += 1
+	kit_name = RESOLVE_STR_REF(@825)
+	kit_desc = RESOLVE_STR_REF(@826)
+	INSERT_2DA_ROW numrows 3 ~%nextindex% %kit_name% %kit_desc%~
+	numrows += 1
+	nextindex += 1
+	kit_name = RESOLVE_STR_REF(@827)
+	kit_desc = RESOLVE_STR_REF(@828)
+	INSERT_2DA_ROW numrows 3 ~%nextindex% %kit_name% %kit_desc%~
+	numrows += 1
+	nextindex += 1
+	kit_name = RESOLVE_STR_REF(@829)
+	kit_desc = RESOLVE_STR_REF(@830)
+	INSERT_2DA_ROW numrows 3 ~%nextindex% %kit_name% %kit_desc%~
