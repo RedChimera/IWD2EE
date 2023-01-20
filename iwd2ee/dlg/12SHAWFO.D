@@ -40,9 +40,9 @@ IF ~~ THEN BEGIN 5
 END
 
 IF ~~ THEN BEGIN 6
-  SAY ~Each company serves a rotation on the Palisade. Of late, most of our efforts have been focused on constructing the Palisade rather than manning it. On that note, we have a problem. Are you up for a special assignment? Or would you prefer to stick to a simple rotation?~
-  IF ~~ THEN REPLY ~We're ready to help. What needs to be done?~ GOTO 7
-  IF ~~ THEN REPLY ~We're not interested in any special assignments. We'd prefer to take our posts and wait until the goblins strike again.~ GOTO ShawfordTransition
+  SAY @6004
+  IF ~~ THEN REPLY @6005 GOTO 7
+  IF ~~ THEN REPLY @6006 GOTO ShawfordTransition
 END
 
 IF ~~ THEN BEGIN 7
@@ -468,7 +468,7 @@ IF ~~ THEN BEGIN 46
 END
 
 IF ~~ THEN BEGIN ShawfordTransition
-  SAY ~Very well, I'll find someone else to handle the situation. In the meantime-~
+  SAY @6007
   IF ~  Global("10Swift_Dead","GLOBAL",0)
 ~ THEN REPLY #10813 DO ~AddexperienceParty(5400)
 SetGlobal("Goblins_Attack_Palisade", "GLOBAL", 1)

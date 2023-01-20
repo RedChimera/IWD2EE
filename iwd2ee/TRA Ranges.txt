@@ -6,6 +6,7 @@
 4000-4499: Faster Areas
 4500-4799: Concoct Potions
 4800-5999: NPC Core
+6000-7999: More Persuasion Options
 10000-19999: Item Revisions
 20000-29999: Creature Revisions
 30000-39999: Spell Revisions
@@ -13,3 +14,4 @@
 54500-54799: Concoct Potions
 54900-54999: Better Racial Enemies
 55000-55999: Special Lua Strings
+56000-56999: Misc

@@ -6,10 +6,18 @@ COPY_EXISTING ~IEex_TRA.lua~ ~override~
 	REPLACE_TEXTUALLY ~ex_str_ability_roll_total *=.*~ ~ex_str_ability_roll_total = "%ex_str_ability_roll_total%"~
 	SPRINT ex_str_ability_roll_unallocated @55752
 	REPLACE_TEXTUALLY ~ex_str_ability_roll_unallocated *=.*~ ~ex_str_ability_roll_unallocated = "%ex_str_ability_roll_unallocated%"~
-	SPRINT ex_str_ability_roll_help_1 @55753
-	REPLACE_TEXTUALLY ~ex_str_ability_roll_help_1 *=.*~ ~ex_str_ability_roll_help_1 = "%ex_str_ability_roll_help_1%"~
+//	SPRINT ex_str_ability_roll_help_1 @55753
+//	REPLACE_TEXTUALLY ~ex_str_ability_roll_help_1 *=.*~ ~ex_str_ability_roll_help_1 = "%ex_str_ability_roll_help_1%"~
 	SPRINT ex_str_ability_roll_help_2 @55755
 	REPLACE_TEXTUALLY ~ex_str_ability_roll_help_2 *=.*~ ~ex_str_ability_roll_help_2 = "%ex_str_ability_roll_help_2%"~
+	ex_tra_55757 = RESOLVE_STR_REF(@55757)
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_tra_55757 *=.*~ ~ex_tra_55757 = %ex_tra_55757%~
+	ex_tra_55758 = RESOLVE_STR_REF(@55758)
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_tra_55758 *=.*~ ~ex_tra_55758 = %ex_tra_55758%~
+	ex_tra_55759 = RESOLVE_STR_REF(@55759)
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_tra_55759 *=.*~ ~ex_tra_55759 = %ex_tra_55759%~
+	ex_tra_55760 = RESOLVE_STR_REF(@55760)
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_tra_55760 *=.*~ ~ex_tra_55760 = %ex_tra_55760%~
 
 STRING_SET_EVALUATE 11976 @55756
 

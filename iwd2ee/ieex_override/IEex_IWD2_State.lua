@@ -37,6 +37,18 @@ function IEex_ReaddReloadListener(funcName)
 	IEex_AppendBridgeNL("IEex_ReloadListeners", funcName)
 end
 
+function IEex_FetchString(strref)
+
+	local resultPtr = IEex_Malloc(0x4)
+	IEex_Call(0x427B60, {strref, resultPtr}, nil, 0x8)
+
+	local toReturn = IEex_ReadString(IEex_ReadDword(resultPtr))
+	IEex_Call(0x7FCC1A, {}, resultPtr, 0x0)
+	IEex_Free(resultPtr)
+
+	return toReturn
+end
+
 ---------------------
 -- Specific States --
 ---------------------
@@ -1659,18 +1671,6 @@ function IEex_SetToken(tokenString, valueString)
 	IEex_Free(mem)
 end
 
-function IEex_FetchString(strref)
-
-	local resultPtr = IEex_Malloc(0x4)
-	IEex_Call(0x427B60, {strref, resultPtr}, nil, 0x8)
-
-	local toReturn = IEex_ReadString(IEex_ReadDword(resultPtr))
-	IEex_Call(0x7FCC1A, {}, resultPtr, 0x0)
-	IEex_Free(resultPtr)
-
-	return toReturn
-end
-
 function IEex_2DALoad(resref)
 
 	local C2DArray = IEex_Malloc(0x24)
@@ -1932,7 +1932,7 @@ function IEex_IterateProjectiles(actorID, projectileID, func)
 	IEex_IterateIDs(IEex_ReadDword(IEex_GetActorShare(actorID) + 0x12), 0, function(areaListID)
 		local share = IEex_GetActorShare(areaListID)
 		local vfptr = IEex_ReadDword(share)
-		if (projectileID == -1 or IEex_ReadWord(share + 0x6E, 0x0) == projectileID) and vfptr ~= 8712412 and vfptr ~= 8712524 then
+		if (projectileID == -1 or IEex_ReadWord(share + 0x6E, 0x0) == projectileID) and vfptr ~= 8712412 and vfptr ~= 8712524 and vfptr ~= 8765200 and vfptr ~= 8705572 then
 			func(share)
 		end
 	end)
@@ -10241,11 +10241,36 @@ function IEex_EvaluatePermanentRepeatingEffects(creatureData)
 		if not joinedParty then
 			extraFlags = bit.bor(extraFlags, 0x100)
 			IEex_WriteDword(creatureData + 0x740, extraFlags)
-			local onJoinPartyDLG = ex_on_join_party_dlg_set[IEex_ReadLString(creatureData + 0x554, 32)]
+			local scriptName = IEex_ReadLString(creatureData + 0x554, 32)
+			local onJoinPartyDLG = ex_on_join_party_dlg_set[scriptName]
 			if onJoinPartyDLG == nil then
 				onJoinPartyDLG = ex_on_join_party_dlg_set["DEFAULT"]
 			end
 			IEex_WriteLString(creatureData + 0x56DC, onJoinPartyDLG, 8)
+			local onJoinPartyTeamScript = ex_on_join_party_team_script_set[scriptName]
+			if onJoinPartyTeamScript ~= nil then
+				IEex_ApplyEffectToActor(targetID, {
+["opcode"] = 82,
+["target"] = 2,
+["timing"] = 1,
+["parameter2"] = 2,
+["resource"] = onJoinPartyTeamScript,
+["source_id"] = targetID,
+})
+--				IEex_WriteLString(creatureData + 0x748, onJoinPartyTeamScript, 8)
+			end
+			local onJoinPartySpecialScript1 = ex_on_join_party_special_script_1_set[scriptName]
+			if onJoinPartySpecialScript1 ~= nil then
+				IEex_ApplyEffectToActor(targetID, {
+["opcode"] = 82,
+["target"] = 2,
+["timing"] = 1,
+["parameter2"] = 1,
+["resource"] = onJoinPartySpecialScript1,
+["source_id"] = targetID,
+})
+--				IEex_WriteLString(creatureData + 0x750, onJoinPartySpecialScript1, 8)
+			end
 		end
 		local timeOfDeath = IEex_ReadDword(creatureData + 0x704)
 		if not IEex_GetActorState(targetID, 0xFC0) and timeOfDeath ~= -1 then
@@ -10418,11 +10443,13 @@ function IEex_EvaluatePermanentRepeatingEffects(creatureData)
 			local missile = IEex_ReadWord(projectileData + 0x6E, 0x0) + 1
 			local sourceID = IEex_ReadDword(projectileData + 0x72)
 			local spellRES = IEex_Helper_GetBridge("IEex_RecordOpcode430Spell", sourceID, "spellRES")
+
 			if missile == 1 and IEex_ReadLString(projectileData + 0xFA, 8) == "TRA_09B" then
 				local timeRemaining = IEex_ReadByte(projectileData + 0x2AE, 0x0)
 				IEex_WriteByte(projectileData + 0x2AE, timeRemaining + 1)
 --				IEex_WriteByte(projectileData + 0x2B2, 120)
 			end
+
 			if (missile == 40 or (missile == 1 and IEex_ReadLString(projectileData + 0xFA, 8) == "TRA_09B")) and bit.band(projectileFlags, 0x1000) == 0 and spellRES ~= nil and ex_spell_pattern_index[spellRES] ~= nil then
 				local pattern = ex_barrage_angle_pattern[ex_spell_pattern_index[spellRES]]
 				ex_burst_tick = tick
@@ -10594,11 +10621,9 @@ function IEex_EvaluatePermanentRepeatingEffects(creatureData)
 					if missileIndex == 40 or missileIndex == 79 then
 						local timeRemaining = IEex_ReadByte(projectileData + 0x29E, 0x0)
 						IEex_WriteByte(projectileData + 0x29E, timeRemaining + 1)
---[[
-					elseif missileIndex == 1 and IEex_ReadLString(projectileData + 0xFA, 8) == "TRA_09B" then
-						local timeRemaining = IEex_ReadByte(projectileData + 0x2AE, 0x0)
-						IEex_WriteByte(projectileData + 0x2AE, timeRemaining + 1)
---]]
+--					elseif missileIndex == 1 and IEex_ReadLString(projectileData + 0xFA, 8) == "TRA_09B" then
+--						local timeRemaining = IEex_ReadByte(projectileData + 0x2AE, 0x0)
+--						IEex_WriteByte(projectileData + 0x2AE, timeRemaining + 1)
 					end
 					if projectileType == 6 then
 						projectileHasExploded = (IEex_ReadByte(projectileData + 0x2B6, 0x0) > 0)
@@ -25195,6 +25220,37 @@ function MEDEATYP(originatingEffectData, effectData, creatureData)
 			if bit.band(o_savingthrow, 0x10000) > 0 then
 				IEex_WriteDword(effectData + 0x18, 1)
 			end
+			if bit.band(o_savingthrow, 0x10000000) > 0 then
+				local extraFlags = IEex_ReadDword(creatureData + 0x740)
+				extraFlags = bit.bor(extraFlags, 0x10000000)
+				IEex_WriteDword(creatureData + 0x740, extraFlags)
+			end
+			if bit.band(o_savingthrow, 0x20000000) > 0 then
+				local extraFlags = IEex_ReadDword(creatureData + 0x740)
+				extraFlags = bit.bor(extraFlags, 0x20000000)
+				IEex_WriteDword(creatureData + 0x740, extraFlags)
+			end
+			if IEex_IsPartyMember(targetID) and bit.band(o_savingthrow, 0x8000000) > 0 then
+				if bit.band(o_savingthrow, 0x20000000) > 0 then
+					IEex_ApplyEffectToActor(targetID, {
+["opcode"] = 139,
+["target"] = 2,
+["timing"] = 9,
+["parameter1"] = ex_tra_55378,
+["source_target"] = targetID,
+["source_id"] = targetID
+})
+				elseif bit.band(o_savingthrow, 0x10000000) > 0 then
+					IEex_ApplyEffectToActor(targetID, {
+["opcode"] = 139,
+["target"] = 2,
+["timing"] = 9,
+["parameter1"] = ex_tra_55377,
+["source_target"] = targetID,
+["source_id"] = targetID
+})
+				end
+			end
 		end
 	else
 		IEex_WriteDword(originatingEffectData + 0x110, 1)
@@ -30055,5 +30111,70 @@ function IEex_WasJustUnlocked()
 		end
 	else
 		return false
+	end
+end
+
+function IEex_SetKillCountToken(BCSObject)
+	local checkID = IEex_GetBCSObjectID(IEex_Lua_ActorID, BCSObject)
+	local checkData = IEex_GetActorShare(checkID)
+	if checkData == 0 then return end
+	IEex_SetToken("EXKILLCOUNT", IEex_ReadDword(checkData + 0x4BD6))
+end
+
+function IEex_SetBanter()
+	local validPartyDLGS = {}
+	local areaCheck = -1
+	for i = 0, 5, 1 do
+		local share = IEex_GetActorShare(IEex_GetActorIDCharacter(i))
+		if share > 0 then
+			local stateValue = bit.bor(IEex_ReadDword(share + 0x5BC), IEex_ReadDword(share + 0x920))
+			local currentArea = IEex_ReadDword(share + 0x12)
+			if areaCheck == -1 then
+				areaCheck = currentArea
+			elseif areaCheck ~= currentArea then
+				return
+			end
+			if bit.band(stateValue, 0x80103FFF) == 0 then
+				validPartyDLGS[IEex_ReadLString(share + 0x56DC, 8)] = true
+			end
+		end
+	end
+	for k, v in ipairs(ex_timed_banter_list) do
+		local doBanter = true
+		if v["dlgs"] ~= nil and v["dlgs"][1] ~= nil and v["id"] ~= nil and v["globals"] ~= nil then
+			local initiatingDLG = v["dlgs"][1]
+			local id = v["id"]
+			for k2, v2 in ipairs(v["dlgs"]) do
+				if not validPartyDLGS[v2] then
+					doBanter = false
+				end
+			end
+			if doBanter then
+				for k2, v2 in ipairs(v["globals"]) do
+					local theglobal = IEex_GetGlobal(v2[1])
+					local theop = v2[2]
+					local theval = v2[3]
+					if (theop == "=" or theop == "==") and theglobal ~= theval then
+						doBanter = false
+					elseif (theop == "!=" or theop == "~=") and theglobal == theval then
+						doBanter = false
+					elseif (theop == ">") and theglobal <= theval then
+						doBanter = false
+					elseif (theop == "<") and theglobal >= theval then
+						doBanter = false
+					elseif (theop == "<=") and theglobal > theval then
+						doBanter = false
+					elseif (theop == ">=") and theglobal < theval then
+						doBanter = false
+					end
+				end
+			end
+			if doBanter and IEex_GetGlobal("DIDBANTER" .. initiatingDLG .. "_" .. id) == 1 then
+				doBanter = false
+			end
+			if doBanter then
+				IEex_SetGlobal("BANTER" .. initiatingDLG, id)
+			end
+		end
 	end
 end

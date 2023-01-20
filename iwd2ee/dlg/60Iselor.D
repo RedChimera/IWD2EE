@@ -488,8 +488,8 @@ END
 IF WEIGHT #5 ~  NumTimesTalkedToGT(0)
 Global("Crossroads_Quest","GLOBAL",2)
 ~ THEN BEGIN 46
-  SAY ~You've done it.  The Crossroads are not sealed but... did you simply defeat them by force of arms?~
-  IF ~Global("US_OJAIHA_DIPLOMACY","GLOBAL",1)~ THEN REPLY ~Actually, we signed a treaty with the head of the temple of Sseth.  The deal won't last, but we figured it would keep the yuan-ti from Chult out of the way for the time being.  Now, can you tell us the way to the Severed Hand?~ DO ~AddXpVar("Level_12_Average",158)
+  SAY @6170
+  IF ~Global("US_OJAIHA_DIPLOMACY","GLOBAL",1)~ THEN REPLY @6171 DO ~AddXpVar("Level_12_Average",158)
 SetGlobal("Crossroads_Quest","GLOBAL",4)~ GOTO 48
   IF ~!Global("US_OJAIHA_DIPLOMACY","GLOBAL",1)~ THEN REPLY #29348 DO ~AddXpVar("Level_12_Average",29275)
 SetGlobal("Crossroads_Quest","GLOBAL",4)~ GOTO 48
@@ -508,7 +508,7 @@ SetGlobal("Crossroads_Quest","GLOBAL",4)~ GOTO 48
 END
 
 IF ~~ THEN BEGIN 48
-  SAY ~As[mah-DAY] Madae made clear, the Legion advances its forces up through Dragon's Eye.  The eruptions years ago must have opened passageways through the mountain.  The base of the volcano sits on the edge of the Fields of Slaughter.  But the past few days, I've noticed a strange disturbance in the temporal field.  Someone in Dragon's Eye is performing a ritual of some sort... You should investigate the disturbance while you're there.  It may pose a serious threat.~
+  SAY @6172
   IF ~~ THEN REPLY #29354 DO ~SetGlobal("AR6100_Revealed","GLOBAL",1)~ JOURNAL #29274 GOTO 43
   IF ~~ THEN REPLY #29355 DO ~SetGlobal("AR6100_Revealed","GLOBAL",1)~ JOURNAL #29274 EXIT
 END

@@ -43,6 +43,10 @@ COPY_EXISTING ~IEex_TRA.lua~ ~override~
 	REPLACE_TEXTUALLY ~ex_str_almost_dead *=.*~ ~ex_str_almost_dead = "%ex_str_almost_dead%"~
 	ex_tra_5000 = RESOLVE_STR_REF(@5000)
 	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_tra_5000 *=.*~ ~ex_tra_5000 = %ex_tra_5000%~
+	ex_tra_55377 = RESOLVE_STR_REF(@55377)
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_tra_55377 *=.*~ ~ex_tra_55377 = %ex_tra_55377%~
+	ex_tra_55378 = RESOLVE_STR_REF(@55378)
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_tra_55378 *=.*~ ~ex_tra_55378 = %ex_tra_55378%~
 	ex_tra_55379 = RESOLVE_STR_REF(@55379)
 	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_tra_55379 *=.*~ ~ex_tra_55379 = %ex_tra_55379%~
 	ex_tra_55380 = RESOLVE_STR_REF(@55380)
@@ -151,6 +155,14 @@ COPY_EXISTING ~IEex_TRA.lua~ ~override~
 	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_tra_55808 *=.*~ ~ex_tra_55808 = %ex_tra_55808%~
 	ex_tra_55809 = RESOLVE_STR_REF(@55809)
 	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_tra_55809 *=.*~ ~ex_tra_55809 = %ex_tra_55809%~
+	ex_tra_55901 = RESOLVE_STR_REF(@55901)
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_tra_55901 *=.*~ ~ex_tra_55901 = %ex_tra_55901%~
+	ex_tra_55902 = RESOLVE_STR_REF(@55902)
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_tra_55902 *=.*~ ~ex_tra_55902 = %ex_tra_55902%~
+	ex_tra_55903 = RESOLVE_STR_REF(@55903)
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_tra_55903 *=.*~ ~ex_tra_55903 = %ex_tra_55903%~
+	ex_tra_55904 = RESOLVE_STR_REF(@55904)
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_tra_55904 *=.*~ ~ex_tra_55904 = %ex_tra_55904%~
 	SPRINT ex_str_level @55000
 	REPLACE_TEXTUALLY ~ex_str_level *=.*~ ~ex_str_level = "%ex_str_level%"~
 	SPRINT ex_str_barbarian @55001
@@ -358,7 +370,7 @@ COPY_EXISTING ~IEex_TRA.lua~ ~override~
 	SPRINT ex_str_jackalweregaze @55101
 	REPLACE_TEXTUALLY ~ex_str_jackalweregaze *=.*~ ~ex_str_jackalweregaze = "%ex_str_jackalweregaze%"~ 
 	SPRINT ex_str_hopelessness @55102
-	REPLACE_TEXTUALLY ~ex_str_hopelessness *=.*~ ~ex_str_hopelessness = "%ex_str_hopelessness%"~ 
+	REPLACE_TEXTUALLY ~ex_str_hopelessness *=.*~ ~ex_str_hopelessness = "%ex_str_hopelessness%"~
 	SPRINT ex_str_nausea @55103
 	REPLACE_TEXTUALLY ~ex_str_nausea *=.*~ ~ex_str_nausea = "%ex_str_nausea%"~ 
 	SPRINT ex_str_enfeeblement @55104
@@ -539,6 +551,35 @@ COPY_EXISTING ~AR1107.are~ ~override~
 
 COPY_EXISTING ~AR4102.are~ ~override~
 	LPF ALTER_AREA_DOOR_IWD2 INT_VAR lock_difficulty=65 STR_VAR door_name=~AR4102_Door1~ END
+
+<<<<<<<< .../script.baf
+IF
+	GlobalLT("SR_Rescue_Sabrina","GLOBAL",3)
+	!CreatureHidden(Myself)
+THEN
+	RESPONSE #100
+		HideCreature(Myself,TRUE)
+END
+
+IF
+	Global("SR_Rescue_Sabrina","GLOBAL",3)
+	CreatureHidden(Myself)
+THEN
+	RESPONSE #100
+		HideCreature(Myself,FALSE)
+END
+
+IF
+	CreatureHidden(Myself)
+THEN
+	RESPONSE #100
+		NoAction()
+END
+
+>>>>>>>>
+EXTEND_TOP ~20sabri1.bcs~ ~.../script.baf~
+
+COMPILE ~%mod_folder%/dlg/USDLGMOD.d~
 
 COPY_EXISTING_REGEXP ~50CVENl0\.bcs~ ~override~ ~61PCFLOR\.bcs~ ~override~ //Fixing a bug where permanent effects would be removed from PCs via certain scripts
 	DECOMPILE_AND_PATCH BEGIN
@@ -828,6 +869,10 @@ COPY_EXISTING ~animate.ids~ ~override~
 	REPLACE_TEXTUALLY ~0x1201 Dragon, Black (BG2)~ ~0x1200 Dragon, Red (BG2)
 0x1201 Dragon, Black (BG2)
 0x1202 Dragon, Silver (BG2)~
+
+APPEND ~state.ids~
+~0x80103FFF EX_NO_DIALOGUE~
+	UNLESS ~EX_NO_DIALOGUE~
 
 APPEND ~sounds.ini~
 ~
@@ -1134,6 +1179,8 @@ END
 
 >>>>>>>>
 EXTEND_BOTTOM ~baldur.bcs~ ~.../script.baf~
+
+EXTEND_BOTTOM ~baldur.bcs~ ~override/usbanttm.bcs~
 /*
 SILENT
 COPY_EXISTING_REGEXP ~.*\.are~ ~override~

@@ -39,6 +39,8 @@ LANGUAGE   ~English~
            ~iwd2ee/tra/English/revised_battle_square.tra~
            ~iwd2ee/tra/English/lua.tra~
            ~iwd2ee/tra/English/racial_enemies.tra~
+           ~iwd2ee/tra/English/misc.tra~
+           ~iwd2ee/tra/English/more_persuasion_options.tra~
 
 
 
@@ -193,8 +195,6 @@ BEGIN @25 DESIGNATED 23
 
       INCLUDE ~%mod_folder%/components/racial_enemies.tpa~      //~Better Racial Enemies for Rangers~
 
-
-
 //Cosmetic Tweaks
 
 BEGIN @26 DESIGNATED 24
@@ -203,66 +203,72 @@ BEGIN @26 DESIGNATED 24
 
 //Xuki Intimidation Option
 
-BEGIN @27 DESIGNATED 25
+BEGIN @27 DESIGNATED 25 DEPRECATED ~The content of this component has been moved to More Persuasion Options.~
 
       INCLUDE ~%mod_folder%/components/xuki_intimidate.tpa~      //~Xuki Intimidation Option~
 
 
 //Nonviolent Option for Isair and Madae
 
-BEGIN @28 DESIGNATED 26
+BEGIN @28 DESIGNATED 26 DEPRECATED ~The content of this component has been moved to More Persuasion Options.~
 
       INCLUDE ~%mod_folder%/components/novio_isair_madae.tpa~      //~Nonviolent Option for Isair and Madae~
 
 //Bribe Limha
 
-BEGIN @30 DESIGNATED 28
+BEGIN @30 DESIGNATED 28 DEPRECATED ~The content of this component has been moved to More Persuasion Options.~
 
       INCLUDE ~%mod_folder%/components/limha_bribe.tpa~      //~Bribe Limha~
 
 
 //Bribe Mirabel and Majrash
 
-BEGIN @31 DESIGNATED 29
+BEGIN @31 DESIGNATED 29 DEPRECATED ~~
 
       INCLUDE ~%mod_folder%/components/mirabel_bribe.tpa~      //~Bribe Mirabel and Majrash~
 
 //Diplomacy for Guthma
 
-BEGIN @32 DESIGNATED 30
+BEGIN @32 DESIGNATED 30 DEPRECATED ~The content of this component has been moved to More Persuasion Options.~
 
       INCLUDE ~%mod_folder%/components/guthma_diplomacy.tpa~      //~Diplomacy for Guthma~
 
 //Trick Harshom
 
-BEGIN @33 DESIGNATED 31
+BEGIN @33 DESIGNATED 31 DEPRECATED ~The content of this component has been moved to More Persuasion Options.~
 
       INCLUDE ~%mod_folder%/components/harshom_trick.tpa~      //~Trick Harshom~
 
 //Intimidate Torak
 
-BEGIN @34 DESIGNATED 32
+BEGIN @34 DESIGNATED 32 DEPRECATED ~The content of this component has been moved to More Persuasion Options.~
 
       INCLUDE ~%mod_folder%/components/torak_intimidate.tpa~      //~Intimidate Torak~
 
 //Intimidate Elder Brain
 
-BEGIN @35 DESIGNATED 33
+BEGIN @35 DESIGNATED 33 DEPRECATED ~The content of this component has been moved to More Persuasion Options.~
 
       INCLUDE ~%mod_folder%/components/elder_brain.tpa~      //~Intimidate Elder Brain~
 
 //Bluff Thorasskus
 
-BEGIN @36 DESIGNATED 34
+BEGIN @36 DESIGNATED 34 DEPRECATED ~~
 
       INCLUDE ~%mod_folder%/components/thorasskus_bluff.tpa~      //~Bluff Thorasskus~
 
 //Bluff Thvara
 
-BEGIN @37 DESIGNATED 35
+BEGIN @37 DESIGNATED 35 DEPRECATED ~The content of this component has been moved to More Persuasion Options.~
 
       INCLUDE ~%mod_folder%/components/thvara_bluff.tpa~      //~Bluff Thvara~
-	  
+
+//More Persuasion Options
+
+BEGIN @91 DESIGNATED 93
+
+      INCLUDE ~%mod_folder%/components/more_persuasion_options.tpa~      //~More Persuasion Options~
+
 //NPC Core
 
 BEGIN @38 DESIGNATED 36

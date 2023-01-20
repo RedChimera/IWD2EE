@@ -1865,6 +1865,56 @@ BEGIN
 	END
 END
 
+DEFINE_ACTION_FUNCTION ~ADD_TIMED_BANTER_IWD2~
+	INT_VAR
+		id=0xDEFA
+	STR_VAR
+		dlg1=~~
+		dlg2=~~
+		dlg3=~~
+		dlg4=~~
+		dlg5=~~
+		dlg6=~~
+		global1=~~
+		global1operator=~~
+		global1value=~~
+		global2=~~
+		global2operator=~~
+		global2value=~~
+		global3=~~
+		global3operator=~~
+		global3value=~~
+BEGIN
+	OUTER_SPRINT dlglist ~"%dlg1%"~
+	ACTION_IF NOT (~%dlg2%~ STRING_EQUAL_CASE ~~) BEGIN
+		OUTER_SPRINT dlglist ~%dlglist%~ ^ ~, "%dlg2%"~
+	END
+	ACTION_IF NOT (~%dlg3%~ STRING_EQUAL_CASE ~~) BEGIN
+		OUTER_SPRINT dlglist ~%dlglist%~ ^ ~, "%dlg3%"~
+	END
+	ACTION_IF NOT (~%dlg4%~ STRING_EQUAL_CASE ~~) BEGIN
+		OUTER_SPRINT dlglist ~%dlglist%~ ^ ~, "%dlg4%"~
+	END
+	ACTION_IF NOT (~%dlg5%~ STRING_EQUAL_CASE ~~) BEGIN
+		OUTER_SPRINT dlglist ~%dlglist%~ ^ ~, "%dlg5%"~
+	END
+	ACTION_IF NOT (~%dlg6%~ STRING_EQUAL_CASE ~~) BEGIN
+		OUTER_SPRINT dlglist ~%dlglist%~ ^ ~, "%dlg6%"~
+	END
+	OUTER_SPRINT globallist ~~
+	ACTION_IF NOT (~%global1%~ STRING_EQUAL_CASE ~~) AND NOT (~%global1operator%~ STRING_EQUAL_CASE ~~) AND NOT (~%global1value%~ STRING_EQUAL_CASE ~~) BEGIN
+		OUTER_SPRINT globallist ~{"%global1%","%global1operator%",%global1value%}, ~
+	END
+	ACTION_IF NOT (~%global2%~ STRING_EQUAL_CASE ~~) AND NOT (~%global2operator%~ STRING_EQUAL_CASE ~~) AND NOT (~%global2value%~ STRING_EQUAL_CASE ~~) BEGIN
+		OUTER_SPRINT globallist ~%globallist%~ ^ ~{"%global2%","%global2operator%",%global2value%}, ~
+	END
+	ACTION_IF NOT (~%global3%~ STRING_EQUAL_CASE ~~) AND NOT (~%global3operator%~ STRING_EQUAL_CASE ~~) AND NOT (~%global3value%~ STRING_EQUAL_CASE ~~) BEGIN
+		OUTER_SPRINT globallist ~%globallist%~ ^ ~{"%global3%","%global3operator%",%global3value%}, ~
+	END
+	COPY_EXISTING ~IEEX_WEIDU.lua~ ~override~
+		REPLACE_TEXTUALLY EXACT_MATCH ~ex_timed_banter_list = {~ ~ex_timed_banter_list = {{["dlgs"] = {%dlglist%}, ["id"] = %id%, ["globals"] = {%globallist%}}, ~
+END
+
 DEFINE_PATCH_FUNCTION ~CONVERT_DLG_TO_IWD2_FORMAT~
 BEGIN
 	READ_LONG 0xc ulgiash

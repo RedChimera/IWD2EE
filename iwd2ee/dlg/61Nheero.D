@@ -649,7 +649,7 @@ IF ~~ THEN BEGIN 40
 END
 
 IF ~~ THEN BEGIN 41
-  SAY ~From what I have read, "his greatness" - yuan-ti High Priest Thorasskus - recently received a vision from his god Sseth about an imminent eruption.  He asked his High Sorceress Izbelah to quickly research a spell to reverse the process.~
+  SAY @6193
   IF ~~ THEN REPLY #35383 GOTO 42
   IF ~  Global("61NheeroGateQuest","GLOBAL",4)
 ~ THEN REPLY #35099 JOURNAL #35076 GOTO 46

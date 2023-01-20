@@ -73,7 +73,7 @@ IF ~~ THEN BEGIN 6
   SAY #9980
   IF ~~ THEN REPLY #9981 GOTO 7
   IF ~~ THEN REPLY #9978 EXIT
-  IF ~!NumInParty(6)~ THEN REPLY ~I can teach you more, if you like.  I've been practicing my skills all across Icewind Dale and I've learned far more than I did when I was training in a cramped little room.  We could use a dedicated and energetic monk like you.~ GOTO SersaJoinMonk1
+  IF ~!NumInParty(6)~ THEN REPLY @40153 GOTO SersaJoinMonk1
 END
 
 IF ~~ THEN BEGIN 7
@@ -111,7 +111,7 @@ IF ~~ THEN BEGIN 9
   IF ~~ THEN REPLY #9978 EXIT
   IF ~CheckSkillGT(Protagonist,9,Diplomacy)
 !NumInParty(6)
-!Global("US_Sersa_Says_No", "GLOBAL", 1)~ THEN REPLY ~You know, there's no better teacher than experience.  If you want to improve your skills, we could use a dedicated monk.  You can learn a lot from adventuring, and not just about the martial arts.~ GOTO SersaJoinSvaltid1
+!Global("US_Sersa_Says_No", "GLOBAL", 1)~ THEN REPLY @40153 GOTO SersaJoinSvaltid1
 END
 
 IF ~~ THEN BEGIN 10
@@ -122,86 +122,98 @@ IF ~~ THEN BEGIN 10
 END
 
 IF ~~ THEN BEGIN SersaJoinSvaltid1
-  SAY ~Leave the monastery?  But I've learned so much here -- and my training isn't done yet!~
-  IF ~~ THEN REPLY ~If you need outside help just to convince your teacher to do his job, then I think you're going to keep hitting mental walls.  Why don't you go get your last lesson while Svaltid is feeling helpful, then come with us?~ GOTO SersaJoinSvaltid2
+  SAY @40155
+  IF ~~ THEN REPLY @40156 GOTO SersaJoinSvaltid2
 END
 
 IF ~~ THEN BEGIN SersaJoinSvaltid2
-  SAY ~I've always wanted to travel Faerun... That's how I got to the monastery in the first place, but I settled down to practice my skills.  It suppose it depends on where you're going and what you're doing.~
-  IF ~CheckStatGT(Protagonist,6,CHR)~ THEN REPLY ~The Ten Towns are in danger.  The Legion of the Chimera is moving to attack all of them, so we're moving to defend all of them.~ GOTO SersaJoinSvaltid3
-  IF ~CheckStatGT(Protagonist,17,CHR)~ THEN REPLY ~Wherever the wind takes us next... which appears to be the depths of the Underdark, and all the horrible creatures therein.  Sounds fun, doesn't it?~ GOTO SersaJoinSvaltid3
-  IF ~CheckStatGT(Protagonist,8,CHR)~ THEN REPLY ~We're on a mission from Lord Ulbrec of Targos to bring down the Legion of the Chimera.  We've had to trek all across Icewind Dale to get where we are.  As for where we're going, it starts with the Underdark passage, but after that, it could be anywhere.~ GOTO SersaJoinSvaltid3
+  SAY @40157
+  IF ~CheckStatGT(Protagonist,6,CHR)~ THEN REPLY @40158 GOTO SersaJoinSvaltid3
+  IF ~!CheckStatGT(Protagonist,6,CHR)~ THEN REPLY @40158 GOTO SersaJoinSvaltidFailed
+  IF ~CheckStatGT(Protagonist,17,CHR)~ THEN REPLY @40159 GOTO SersaJoinSvaltid3
+  IF ~!CheckStatGT(Protagonist,17,CHR)~ THEN REPLY @40159 GOTO SersaJoinSvaltidFailed
+  IF ~CheckStatGT(Protagonist,8,CHR)~ THEN REPLY @40160 GOTO SersaJoinSvaltid3
+  IF ~!CheckStatGT(Protagonist,8,CHR)~ THEN REPLY @40160 GOTO SersaJoinSvaltidFailed
   IF ~CheckStatGT(Protagonist,22,CHR)
-!ClassEx(Protagonist, Paladin)~ THEN REPLY ~Gold, mostly.  It tends to run out fast... We have some expensive habits.~ GOTO SersaJoinMonk3Alternate
-  IF ~CheckStatGT(Protagonist,16,CHR)
-!ClassEx(Protagonist, Paladin)~ THEN REPLY ~We have certain grievances with the Legion of the Chimera and its various allies -- namely, their constant attempts to kill us.  We intend to wipe them out.~ GOTO SersaJoinMonk3Alternate
-  IF ~CheckStatGT(Protagonist,5,CHR)~ THEN REPLY ~Practicing our skills, just like you.  A constant drive towards self-perfection -- which happens to coincide with a mission to save the Ten Towns from the Legion of the Chimera.~ GOTO SersaJoinSvaltid3
-  IF ~CheckStatGT(Protagonist,24,CHR)~ THEN REPLY ~We're killing monsters.  We go where the monsters are and then we kill them.~ GOTO SersaJoinMonk3Alternate
-  IF ~CheckStatGT(Protagonist,10,CHR)~ THEN REPLY ~Aside from defeating the Legion of the Chimera?  We're seeing the sights.  Enjoying the weather.  Meeting new people.  Making discoveries.~ GOTO SersaJoinSvaltid3
-  IF ~CheckStatGT(Protagonist,21,CHR)~ THEN REPLY ~I don't really know.~ GOTO SersaJoinMonk3Alternate
-  IF ~!CheckStatGT(Protagonist,6,CHR)~ THEN REPLY ~The Ten Towns are in danger.  The Legion of the Chimera is moving to attack all of them, so we're moving to defend all of them.~ GOTO SersaJoinSvaltidFailed
-  IF ~!CheckStatGT(Protagonist,17,CHR)~ THEN REPLY ~Wherever the wind takes us next... which appears to be the depths of the Underdark, and all the horrible creatures therein.  Sounds fun, doesn't it?~ GOTO SersaJoinSvaltidFailed
-  IF ~!CheckStatGT(Protagonist,8,CHR)~ THEN REPLY ~We're on a mission from Lord Ulbrec of Targos to bring down the Legion of the Chimera.  We've had to trek all across Icewind Dale to get where we are.  As for where we're going, it starts with the Underdark passage, but after that, it could be anywhere.~ GOTO SersaJoinSvaltidFailed
+!ClassEx(Protagonist, Paladin)~ THEN REPLY @40161 GOTO SersaJoinMonk3Alternate
   IF ~!CheckStatGT(Protagonist,22,CHR)
-!ClassEx(Protagonist, Paladin)~ THEN REPLY ~Gold, mostly.  It tends to run out fast... We have some expensive habits.~ GOTO SersaJoinSvaltidFailed
+!ClassEx(Protagonist, Paladin)~ THEN REPLY @40161 GOTO SersaJoinSvaltidFailed
+  IF ~CheckStatGT(Protagonist,16,CHR)
+!ClassEx(Protagonist, Paladin)~ THEN REPLY @40162 GOTO SersaJoinMonk3Alternate
   IF ~!CheckStatGT(Protagonist,16,CHR)
-!ClassEx(Protagonist, Paladin)~ THEN REPLY ~We have certain grievances with the Legion of the Chimera and its various allies -- namely, their constant attempts to kill us.  We intend to wipe them out.~ GOTO SersaJoinSvaltidFailed
-  IF ~!CheckStatGT(Protagonist,5,CHR)~ THEN REPLY ~Practicing our skills, just like you.  A constant drive towards self-perfection -- which happens to coincide with a mission to save the Ten Towns from the Legion of the Chimera.~ GOTO SersaJoinSvaltidFailed
-  IF ~!CheckStatGT(Protagonist,24,CHR)~ THEN REPLY ~We're killing monsters.  We go where the monsters are and then we kill them.~ GOTO SersaJoinSvaltidFailed
-  IF ~!CheckStatGT(Protagonist,10,CHR)~ THEN REPLY ~Aside from defeating the Legion of the Chimera?  We're seeing the sights.  Enjoying the weather.  Meeting new people.  Making discoveries.~ GOTO SersaJoinSvaltidFailed
-  IF ~!CheckStatGT(Protagonist,21,CHR)~ THEN REPLY ~I don't really know.~ GOTO SersaJoinSvaltidFailed
+!ClassEx(Protagonist, Paladin)~ THEN REPLY @40162 GOTO SersaJoinSvaltidFailed
+  IF ~CheckStatGT(Protagonist,5,CHR)~ THEN REPLY @40163 GOTO SersaJoinSvaltid3
+  IF ~!CheckStatGT(Protagonist,5,CHR)~ THEN REPLY @40163 GOTO SersaJoinSvaltidFailed
+  IF ~CheckStatGT(Protagonist,24,CHR)~ THEN REPLY @40164 GOTO SersaJoinMonk3Alternate
+  IF ~!CheckStatGT(Protagonist,24,CHR)~ THEN REPLY @40164 GOTO SersaJoinSvaltidFailed
+  IF ~CheckStatGT(Protagonist,10,CHR)~ THEN REPLY @40165 GOTO SersaJoinSvaltid3
+  IF ~!CheckStatGT(Protagonist,10,CHR)~ THEN REPLY @40165 GOTO SersaJoinSvaltidFailed
+  IF ~CheckStatGT(Protagonist,21,CHR)~ THEN REPLY @40166 GOTO SersaJoinMonk3Alternate
+  IF ~!CheckStatGT(Protagonist,21,CHR)~ THEN REPLY @40166 GOTO SersaJoinSvaltidFailed
 END
 
 IF ~~ THEN BEGIN SersaJoinSvaltidFailed
-  SAY ~That, um... That sounds like it could be interesting.  But I think I am better off staying here.  I have friends at the monastery and, uh... many things to do.  But I do appreciate you talking to Svaltid for me.  Thank you.~
-  IF ~~ THEN REPLY ~I understand.  Farewell, Sersa.~ DO ~SetGlobal("US_Sersa_Says_No", "GLOBAL", 1)~ EXIT
+  SAY @40167
+  IF ~~ THEN REPLY @40168 DO ~SetGlobal("US_Sersa_Says_No", "GLOBAL", 1)~ EXIT
 END
 
 IF ~~ THEN BEGIN SersaJoinSvaltid3
-  SAY ~That... actually sounds interesting.  But I have so many things to learn here, too... I can't say right now.  Let me go do my training with Svaltid and sleep on it.  I'll talk to you again in the morning...~
-  IF ~~ THEN DO ~FadeToColor([0.0],0)
+  SAY @40169
+  IF ~Global("52Exile","GLOBAL",0)~ THEN REPLY @40170 DO ~FadeToColor([0.0],0)
 Wait(3)
 FadeFromColor([0.0],0)
-RestUntilHealed()~ GOTO SersaJoinSvaltid4
-END
-
-IF ~~ THEN BEGIN SersaJoinSvaltid4
-  SAY ~I've thought about what you've said and... my answer is yes.  I'd be delighted to join your group.  I've already spoken to Salisam and he's said it's a good opportunity for me.  I'm sure there are things I'll miss by leaving the monastery, but I guess that's the cost of trying new things.  I have my things together -- which basically just means me -- and I'm ready to go.~
-  IF ~~ THEN REPLY ~Great.  Let's get started.~ DO ~SetGlobal("US_Sersa_Joined", "GLOBAL", 1)
-ApplySpellRES("USSERSC",Myself)~ EXIT
+RestUntilHealed()~ GOTO SersaJoinMonk4Salisam
+  IF ~Global("52Exile","GLOBAL",1)~ THEN REPLY @40170 DO ~FadeToColor([0.0],0)
+Wait(3)
+FadeFromColor([0.0],0)
+RestUntilHealed()~ GOTO SersaJoinMonk4Aruma
 END
 
 IF ~~ THEN BEGIN SersaJoinMonk1
-  SAY ~Leave the monastery?  But I've learned so much here -- and my training isn't done yet.~
-  IF ~~ THEN REPLY ~I've seen the monks here and the teachers have great skill.  But you are already approaching the limit of what they can teach you.  I see great talent in you.  Perhaps it's time to leave home and go out in search of more knowledge.~ GOTO SersaJoinMonk2
+  SAY @40155
+  IF ~~ THEN REPLY @40171 GOTO SersaJoinMonk2
 END
 
 IF ~~ THEN BEGIN SersaJoinMonk2
-  SAY ~Maybe... But I need to know more about what I'm getting into.  Tell me, where are you going, exactly?~
-  IF ~~ THEN REPLY ~The Ten Towns are in danger.  The Legion of the Chimera is moving to attack all of them, so we're moving to defend all of them.~ GOTO SersaJoinMonk3
-  IF ~~ THEN REPLY ~Wherever the wind takes us next... which appears to be the depths of the Underdark, and all the horrible creatures therein.  Sounds fun, doesn't it?~ GOTO SersaJoinMonk3
-  IF ~~ THEN REPLY ~Lord Ulbrec asked us to bring down the Legion of the Chimera.  We've had to trek all across Icewind Dale to get where we are.  As for where we're going, it starts with the Underdark passage, but after that, it could be anywhere.~ GOTO SersaJoinMonk3
-  IF ~~ THEN REPLY ~Practicing my skills, just like you.  I am on a constant drive towards self-perfection -- which happens to coincide with a mission to save the Ten Towns from the Legion of the Chimera.~ GOTO SersaJoinMonk3
+  SAY @40172
+  IF ~~ THEN REPLY @40158 GOTO SersaJoinMonk3
+  IF ~~ THEN REPLY @40159 GOTO SersaJoinMonk3
+  IF ~~ THEN REPLY @40160  GOTO SersaJoinMonk3
+  IF ~~ THEN REPLY @40163 GOTO SersaJoinMonk3
 END
 
 IF ~~ THEN BEGIN SersaJoinMonk3
-  SAY ~That... actually sounds interesting.  But I'm not sure... I can't say right now.  I need to sleep on this.  Give me a day and I'll talk to you again in the morning.~
-  IF ~~ THEN REPLY ~Very well.  I will see you then.~ DO ~FadeToColor([0.0],0)
+  SAY @40173
+  IF ~Global("52Exile","GLOBAL",0)~ THEN REPLY @40170 DO ~FadeToColor([0.0],0)
 Wait(3)
 FadeFromColor([0.0],0)
-RestUntilHealed()~ GOTO SersaJoinMonk4
+RestUntilHealed()~ GOTO SersaJoinMonk4Salisam
+  IF ~Global("52Exile","GLOBAL",1)~ THEN REPLY @40170 DO ~FadeToColor([0.0],0)
+Wait(3)
+FadeFromColor([0.0],0)
+RestUntilHealed()~ GOTO SersaJoinMonk4Aruma
 END
 
 IF ~~ THEN BEGIN SersaJoinMonk3Alternate
-  SAY ~I'm not sure... I can't say right now.  I need to sleep on this.  Give me a day and I'll talk to you again in the morning.~
-  IF ~~ THEN REPLY ~Very well.  I will see you then.~ DO ~FadeToColor([0.0],0)
+  SAY @40174
+  IF ~Global("52Exile","GLOBAL",0)~ THEN REPLY @40170 DO ~FadeToColor([0.0],0)
 Wait(3)
 FadeFromColor([0.0],0)
-RestUntilHealed()~ GOTO SersaJoinMonk4
+RestUntilHealed()~ GOTO SersaJoinMonk4Salisam
+  IF ~Global("52Exile","GLOBAL",1)~ THEN REPLY @40170 DO ~FadeToColor([0.0],0)
+Wait(3)
+FadeFromColor([0.0],0)
+RestUntilHealed()~ GOTO SersaJoinMonk4Aruma
 END
 
-IF ~~ THEN BEGIN SersaJoinMonk4
-  SAY ~I've thought about what you've said and... my answer is yes.  I'd be delighted to join you.  I've already spoken to Salisam and he's said it's a good opportunity for me.  I'm sure there are things I'll miss by leaving the monastery, but that's the cost of trying new things.  I have my things together -- which basically just means me -- and I'm ready to go.~
-  IF ~~ THEN REPLY ~Great.  Let's get started.~ DO ~SetGlobal("US_Sersa_Joined", "GLOBAL", 1)
+IF ~~ THEN BEGIN SersaJoinMonk4Salisam
+  SAY @40175
+  IF ~~ THEN REPLY @40177 DO ~SetGlobal("US_Sersa_Joined", "GLOBAL", 1)
+ApplySpellRES("USSERSC",Myself)~ EXIT
+END
+
+IF ~~ THEN BEGIN SersaJoinMonk4Aruma
+  SAY @40176
+  IF ~~ THEN REPLY @40177 DO ~SetGlobal("US_Sersa_Joined", "GLOBAL", 1)
 ApplySpellRES("USSERSC",Myself)~ EXIT
 END

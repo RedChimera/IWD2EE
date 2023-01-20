@@ -39,38 +39,29 @@ Components:
 20. Revise Critical Hit Immunity
 21. Better Racial Enemies for Rangers
 22. Cosmetic Tweaks
-23. Xuki Intimidation Option
-24. Nonviolent Option for Isair and Madae
-25. Bribe Limha
-26. Bribe Mirabel and Majrash
-27. Diplomacy for Guthma
-28. Trick Harshom
-29. Intimidate Torak
-30. Intimidate Elder Brain
-31. Bluff Thorasskus
-32. Bluff Thvara
-33. NPC Core
-34. NPCs start with experience
-35. New GUI
-36. Looping Main Theme
-37. Revised Battle Square
-38. Minor Damage Resistance for Armor and Shields
-39. Race Revisions
-40. Enemies give the same amount of experience regardless of the party's level
-41. Adjust encounter level-scaling
-42. Reduce enemy HP bonuses in Heart of Fury Mode
-43. Reduce enemy attack bonuses in Heart of Fury Mode
-44. Reduce enemy saving throw bonuses in Heart of Fury Mode
-45. Weaken allied summoned creatures in Heart of Fury Mode
-46. Have the party start with experience in Heart of Fury Mode
-47. Reduce the delay between sneak attacks
-48. Increase the level cap
-49. Always learn spells from scrolls successfully
-50. Remove the summoning limit
-51. Add attacks of opportunity to the game
-52. Roll for stats at character creation
-53. Add more traps
-54. Add key bindings for automating buffing
+23. More Persuasion Options
+24. NPC Core
+25. NPCs start with experience
+26. New GUI
+27. Looping Main Theme
+28. Revised Battle Square
+29. Minor Damage Resistance for Armor and Shields
+30. Race Revisions
+31. Enemies give the same amount of experience regardless of the party's level
+32. Adjust encounter level-scaling
+33. Reduce enemy HP bonuses in Heart of Fury Mode
+34. Reduce enemy attack bonuses in Heart of Fury Mode
+35. Reduce enemy saving throw bonuses in Heart of Fury Mode
+36. Weaken allied summoned creatures in Heart of Fury Mode
+37. Have the party start with experience in Heart of Fury Mode
+38. Reduce the delay between sneak attacks
+39. Increase the level cap
+40. Always learn spells from scrolls successfully
+41. Remove the summoning limit
+42. Add attacks of opportunity to the game
+43. Roll for stats at character creation
+44. Add more traps
+45. Add key bindings for automating buffing
 
 ## Class Revisions
 

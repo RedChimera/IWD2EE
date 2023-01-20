@@ -1,0 +1,9 @@
+BEGIN ~USREIGP~
+
+IF ~!InParty(Myself)
+~ THEN BEGIN 0
+  SAY @40188
+  IF ~!NumInParty(6)~ THEN REPLY @40189 DO ~JoinParty()~ EXIT
+  IF ~~ THEN REPLY @40190 EXIT
+  IF ~~ THEN REPLY @40191 DO ~EscapeArea()~ EXIT
+END

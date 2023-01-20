@@ -1,3 +1,34 @@
 //NOTES
 //This allows the player to bluff their way past Thvara. It needs a command to get Thvara and company to leave.
 COMPILE ~%mod_folder%/dlg/50THVARA.d~ ~%mod_folder%/dlg/50GNTFO.d~
+
+<<<<<<<< .../script.baf
+IF
+	Allegiance(Myself,NEUTRAL)
+	Global("US_Bluff_Thvara","GLOBAL",1)
+THEN
+	RESPONSE #100
+		SetGlobalTimer("US_Bluff_Thvara_Escape","GLOBAL",9)
+		SetGlobal("US_Bluff_Thvara","GLOBAL",2)
+END
+
+IF
+	Allegiance(Myself,NEUTRAL)
+	Global("US_Bluff_Thvara","GLOBAL",2)
+	GlobalTimerNotExpired("US_Bluff_Thvara_Escape","GLOBAL")
+THEN
+	RESPONSE #100
+		MoveToPoint([58.1539])
+END
+
+IF
+	Allegiance(Myself,NEUTRAL)
+	Global("US_Bluff_Thvara","GLOBAL",2)
+	!GlobalTimerNotExpired("US_Bluff_Thvara_Escape","GLOBAL")
+THEN
+	RESPONSE #100
+		DestroySelf()
+END
+
+>>>>>>>>
+EXTEND_BOTTOM ~50thvdel.bcs~ ~.../script.baf~

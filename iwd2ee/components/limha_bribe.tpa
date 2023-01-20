@@ -5,3 +5,31 @@
 COMPILE ~%mod_folder%/dlg/50LIMHA.d~ ~%mod_folder%/dlg/50HANNU.d~
 // Notice that it also compiles a dialog for Hannu. The Faster Wandering Village component offers the possibility of escaping the area without helping Suoma at all.
 // Accordingly, I've added a dialog in which the player can say "I don't care about the kids; I don't need to save them to get through the woods." Limha then kills Hannu and becomes neutral.
+
+<<<<<<<< .../script.baf
+IF
+	Global("US_Limha_Spared","GLOBAL",1)
+THEN
+	RESPONSE #100
+		SpellCastEffect(Myself,"","","",GLOW_ALTERATION,1,ATTACK)
+		SpellHitEffectSprite(Myself,Myself,DIMENSION_DOOR_ORIGIN,0)
+		HideCreature(Myself,TRUE)
+		DestroySelf()
+END
+
+>>>>>>>>
+EXTEND_TOP_REGEXP ~50limha[01]\.bcs~ ~.../script.baf~
+
+<<<<<<<< .../script.baf
+IF
+	Global("US_Limha_Spared","GLOBAL",1)
+THEN
+	RESPONSE #100
+		SmallWait(1)
+		SpellHitEffectSprite(Myself,Myself,DIMENSION_DOOR_ORIGIN,0)
+		HideCreature(Myself,TRUE)
+		DestroySelf()
+END
+
+>>>>>>>>
+EXTEND_TOP ~50agog0.bcs~ ~.../script.baf~

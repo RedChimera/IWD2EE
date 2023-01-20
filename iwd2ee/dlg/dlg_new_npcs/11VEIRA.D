@@ -206,7 +206,7 @@ IF ~~ THEN BEGIN 20
 ItemIsIdentified("10GenGBo",Nothing)
 ~ THEN REPLY #28428 GOTO 21
   IF ~~ THEN REPLY #28429 EXIT
-  IF ~!NumInParty(6)~ THEN REPLY ~If you know something of the future, perhaps you could come with us.  It's always good to have another head and another pair of eyes, especially someone who won't die to a single stray arrow.~ GOTO VeiraJoin1
+  IF ~!NumInParty(6)~ THEN REPLY @40012 GOTO VeiraJoin1
 END
 
 IF ~~ THEN BEGIN 21
@@ -236,7 +236,7 @@ IF ~~ THEN BEGIN 23
   SAY #28434
   IF ~~ THEN REPLY #30749 DO ~SetGlobal("Veira_Quest", "GLOBAL", 2)
 SetGlobal("Let_Me_Go", "GLOBAL", 1)~ EXIT
-  IF ~!NumInParty(6)~ THEN REPLY ~Wait... You may still be able to help us.  If danger lies ahead, we could use someone who won't die as easily as the rest of us.~ GOTO VeiraJoin1
+  IF ~!NumInParty(6)~ THEN REPLY @40013 GOTO VeiraJoin1
 END
 
 IF ~~ THEN BEGIN 24
@@ -302,7 +302,7 @@ IF WEIGHT #2 ~  GlobalGT("Veira_Happy","GLOBAL",0)
   IF ~  PartyHasItem("10GenGBo ")
 ItemIsIdentified("10GenGBo",Nothing)
 ~ THEN REPLY #28428 GOTO 21
-  IF ~!NumInParty(6)~ THEN REPLY ~Perhaps you could come with us.  It's always good to have another head and another pair of eyes, especially someone who won't die to a single stray arrow.~ GOTO VeiraJoin1
+  IF ~!NumInParty(6)~ THEN REPLY @40014 GOTO VeiraJoin1
   IF ~~ THEN REPLY #30760 EXIT
 END
 
@@ -313,20 +313,16 @@ IF WEIGHT #0 ~  Global("Let_Me_Go","GLOBAL",1)
 END
 
 IF ~~ THEN BEGIN VeiraJoin1
-  SAY ~- I am no immortal -
-     - This form is less than air -
-          - But if I leave this place, I may be destroyed like any other -~
-  IF ~~ THEN REPLY ~Then I bid you farewell, Veira.  I hope you can find peace.~ DO ~SetGlobal("Veira_Quest", "GLOBAL", 2)
+  SAY @40015
+  IF ~~ THEN REPLY @40016 DO ~SetGlobal("Veira_Quest", "GLOBAL", 2)
 SetGlobal("Let_Me_Go", "GLOBAL", 1)~ EXIT
-  IF ~~ THEN REPLY ~I'm afraid we need all the hands we can get.  If this... chimera... is as dangerous as you say, we could use your help.~ GOTO VeiraJoin2
+  IF ~~ THEN REPLY @40017 GOTO VeiraJoin2
 END
 
 IF ~~ THEN BEGIN VeiraJoin2
-  SAY ~- Then go, and I will follow -
-     - I will aid you as long as this form persists -
-          - Until the shadow is banished from our future -~
-  IF ~~ THEN REPLY ~I am grateful, Veira.  Let's defend this town together.~ DO ~SetGlobal("US_Veira_Joined", "GLOBAL", 1)
+  SAY @40018
+  IF ~~ THEN REPLY @40019 DO ~SetGlobal("US_Veira_Joined", "GLOBAL", 1)
 ApplySpellRES("USVEIRC",Myself)~ EXIT
-  IF ~~ THEN REPLY ~I've never been friends with a ghost before, but I guess there's a first time for anything.  Come on, let's get going.~ DO ~SetGlobal("US_Veira_Joined", "GLOBAL", 1)
+  IF ~~ THEN REPLY @40020 DO ~SetGlobal("US_Veira_Joined", "GLOBAL", 1)
 ApplySpellRES("USVEIRC",Myself)~ EXIT
 END

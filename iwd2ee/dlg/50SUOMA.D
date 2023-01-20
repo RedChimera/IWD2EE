@@ -114,8 +114,7 @@ END
 IF ~~ THEN BEGIN 7
   SAY #2739
   IF ~~ THEN REPLY #2740 DO ~SetGlobal("50Suoma_Help", "Global", 1)~ JOURNAL #2703 GOTO 8
-  IF ~!Alignment(Protagonist,NEUTRAL_GOOD)
-!Alignment(Protagonist,LAWFUL_GOOD)~ THEN REPLY ~Aid the village?  No, no, no; I'm not here to save any little villages.  I'm just passing through.  I have places to go and things to do.~ GOTO SuomaIntimidate1
+  IF ~!Alignment(Protagonist,MASK_GOOD)~ THEN REPLY @6117 GOTO SuomaIntimidate1
   IF ~~ THEN REPLY #2741 EXIT
 END
 
@@ -133,7 +132,7 @@ IF ~~ THEN BEGIN 9
 ~ THEN REPLY #2747 DO ~SetGlobal("50Suoma_Help", "Global", 3)~ JOURNAL #2705 GOTO 10
   IF ~!ClassEx(Protagonist,PALADIN)
 !GlobalGT("50Tahvo_Wight","Global",1)
-~ THEN REPLY ~Wait, we had a deal--we would help you find the children and you would tell us how to get through the Fell Wood.~ GOTO SuomaDiplomacy1
+~ THEN REPLY @6118 GOTO SuomaDiplomacy1
   IF ~~ THEN REPLY #2744 GOTO 1
   IF ~~ THEN REPLY #2745 EXIT
 END
@@ -196,7 +195,7 @@ END
 
 IF ~~ THEN BEGIN 17
   SAY #2771
-  IF ~~ THEN REPLY ~Very strange.~ GOTO 18
+  IF ~~ THEN REPLY @6147 GOTO 18
   IF ~  Global("50Nym","Global",0)
 ~ THEN REPLY #2773 GOTO 2
   IF ~~ THEN REPLY #2774 GOTO 1
@@ -204,7 +203,7 @@ IF ~~ THEN BEGIN 17
 END
 
 IF ~~ THEN BEGIN 18
-  SAY ~Yes... and this is why I wished to speak with you.  If you intend to continue traveling eastwards, you must pass through the haunted Fell Wood.  The trail to the Cold Marshes beyond the forest is difficult to find... in this village, I alone know the way.~
+  SAY @6119
   IF ~~ THEN REPLY #2732 GOTO 5
   IF ~~ THEN REPLY #2733 GOTO 6
   IF ~~ THEN REPLY #2734 GOTO 1
@@ -331,54 +330,53 @@ IF WEIGHT #0 ~See([ENEMY], 0)~ THEN BEGIN 28
 END
 
 IF ~~ THEN BEGIN SuomaIntimidate1
-  SAY ~I am certain you are here to help us, whether you knew it or not.  Forgive me, but I cannot give you your answers just yet.  I must ask that you speak with Venla the Healer, first - she will tell you what must be done.  Please help us, and we shall help you in turn.~
+  SAY @6120
   IF ~  GlobalGT("50Venla_Children","Global",1)
 ~ THEN REPLY #2743 DO ~SetGlobal("50Suoma_Help", "Global", 2)~ JOURNAL #2704 GOTO 9
-  IF ~~ THEN REPLY ~Very well.  I will go speak with Venla.~ DO ~SetGlobal("50Suoma_Help", "Global", 1)~ JOURNAL #2703 EXIT
-  IF ~~ THEN REPLY ~I see.  I have other questions.~ DO ~SetGlobal("50Suoma_Help", "Global", 1)~ JOURNAL #2703 GOTO 1
-  IF ~Alignment(Protagonist,MASK_EVIL)
-CheckSkillGT(Protagonist,13,Intimidate)~ THEN REPLY ~I don't think you understood me.  I don't care about your dreams--I'm not running errands for some old barbarian crone.  If you know how to get through these woods, then you will *tell* me how to get through these woods.~ DO ~SetGlobal("USSUOMA_SKIP", "Global", 1)~ GOTO SuomaIntimidate2
+  IF ~~ THEN REPLY @6123 DO ~SetGlobal("50Suoma_Help", "Global", 1)~ JOURNAL #2703 EXIT
+  IF ~~ THEN REPLY @6124 DO ~SetGlobal("50Suoma_Help", "Global", 1)~ JOURNAL #2703 GOTO 1
   IF ~!Alignment(Protagonist,MASK_EVIL)
-CheckSkillGT(Protagonist,13,Intimidate)
-CheckSkillGT(Protagonist,5,Bluff)~ THEN REPLY ~I don't think you understood me.  I don't care about your visions--I'm not running errands for some old hag.  If you know how to get through these woods, then you will *tell* me how to get through these woods.~ DO ~SetGlobal("USSUOMA_SKIP", "Global", 1)~ GOTO SuomaIntimidate2
+CheckSkillGT(Protagonist,13,Intimidate)~ THEN REPLY @6121 DO ~SetGlobal("USSUOMA_SKIP", "Global", 1)~ GOTO SuomaIntimidate2
+  IF ~Alignment(Protagonist,MASK_EVIL)
+CheckSkillGT(Protagonist,13,Intimidate)~ THEN REPLY @6122 DO ~SetGlobal("USSUOMA_SKIP", "Global", 1)~ GOTO SuomaIntimidate2
 END
 
 IF ~~ THEN BEGIN SuomaIntimidate2
-  SAY ~I must insist.  Our village is in need, and we cannot solve these problems on our own.~
-  IF ~~ THEN REPLY ~Fine.  If you're that stubborn, I'll go speak with Venla.~ DO ~SetGlobal("50Suoma_Help", "Global", 1)~ JOURNAL #2703 EXIT
-  IF ~~ THEN REPLY ~Listen, you barbarian crone--if you don't tell us the way through the woods, you're going to have much bigger problems than a missing bucket or a rabid wolf.  I saw your scrawny band of hunters on the way here, and I don't think any of them is going to stop us if we draw steel on this village.  You can tell us the path through the woods now, or you can tell us when we're carving up your people.~ GOTO SuomaIntimidate3
+  SAY @6125
+  IF ~~ THEN REPLY @6126 DO ~SetGlobal("50Suoma_Help", "Global", 1)~ JOURNAL #2703 EXIT
+  IF ~Alignment(Protagonist,MASK_EVIL)~ THEN REPLY @6127 GOTO SuomaIntimidate3
 END
 
 IF ~~ THEN BEGIN SuomaIntimidate3
-  SAY ~I... I see.  No, you are not the wanderers I've been expecting.  Very well... if you leave our village in peace, then I will tell you.  There is a certain sort of monster in the Fell Wood, horrific abominations known as dark treants.  It is their warping influence that hides the true path to you.  Destroy them and the way will be clear.  You can find them to the southeast of the first clearing.~
-  IF ~~ THEN REPLY ~This had better be the right path.  If I can't get through those woods on your directions, I'm coming back.~ DO ~SetCriticalPathObject(Myself, FALSE)
+  SAY @6128
+  IF ~~ THEN REPLY @6129 DO ~SetCriticalPathObject(Myself, FALSE)
 SetGlobal("USSUOMA_SCARED", "Global", 1)
 ~ EXIT
 END
 
 IF ~~ THEN BEGIN SuomaDiplomacy1
-  SAY ~I understand, and we are grateful, but our troubles do not end with the missing children.  We also have a problem with a local wight.  Tahvo the Huntmaster can tell you more.~
-  IF ~~ THEN REPLY ~Suoma, your village isn't my only priority here.  I am needed elsewhere.  I need you to tell me how to get through the Fell Woods.~ GOTO SuomaDiplomacy2
-  IF ~~ THEN REPLY ~I saved your children and that's not enough for you?  I'm not interested in being the local hero; I'm just trying to get out of here.  Tell me how to get through the woods.~ GOTO SuomaDiplomacy2
-  IF ~~ THEN REPLY ~Very well.  If your village still needs help, I'll go speak with this Tahvo.~ EXIT
+  SAY @6130
+  IF ~~ THEN REPLY @6131 GOTO SuomaDiplomacy2
+  IF ~CheckSkillGT(Protagonist,8,Diplomacy)~ THEN REPLY @6132 GOTO SuomaDiplomacy4
+  IF ~~ THEN REPLY @6133 EXIT
 END
 
 IF ~~ THEN BEGIN SuomaDiplomacy2
-  SAY ~I know you have other places to go, but first you are needed here.  Please... we do not have anywhere else to turn.~
-  IF ~CheckSkillGT(Protagonist,10,Diplomacy)~ THEN REPLY ~Look, I would love to help, but we simply don't have any more time to waste.  I mean no offense, but we have higher priorities than the needs of just one village.  We have all of Icewind Dale to worry about.~ GOTO SuomaDiplomacy3
-  IF ~CheckSkillGT(Protagonist,8,Diplomacy)~ THEN REPLY ~Then you're out of luck.  I'd rather take my chances in the woods than run errands all day.  I'm not going to stay here and wait for you to live up to your end of the bargain.~ GOTO SuomaDiplomacy3
-  IF ~~ THEN REPLY ~Fine.  If it's really necessary, I'll go ask Tahvo about this wight.~ EXIT
+  SAY @6134
+  IF ~CheckSkillGT(Protagonist,10,Diplomacy)~ THEN REPLY @6135 GOTO SuomaDiplomacy3
+  IF ~CheckSkillGT(Protagonist,8,Diplomacy)~ THEN REPLY @6136 GOTO SuomaDiplomacy3
+  IF ~~ THEN REPLY @6137 EXIT
 END
 
 IF ~~ THEN BEGIN SuomaDiplomacy3
-  SAY ~I cannot show you the way forward until our needs are met.  I foresaw you helping us, and we have no one else to ask.~
-  IF ~~ THEN REPLY ~We did help you.  Our work is done here.  Now it's time to move on.  We're on a mission from Targos, and we're not staying here and waiting for permission to do our job.  If you won't help us, then we'll find our own way.~ GOTO SuomaDiplomacy4
-  IF ~~ THEN REPLY ~Sorry, but the answer is no.  If you don't tell how to get through the woods, we'll find a way without your help.~ GOTO SuomaDiplomacy4
+  SAY @6138
+  IF ~~ THEN REPLY @6139 GOTO SuomaDiplomacy4
+  IF ~~ THEN REPLY @6140 GOTO SuomaDiplomacy4
 END
 
 IF ~~ THEN BEGIN SuomaDiplomacy4
-  SAY ~Very well.  I appreciate what you've done for us, so I will tell you how to escape the woods.  There is a certain sort of monster in the Fell Wood, horrific abominations known as dark treants.  It is their warping influence that hides the true path to you.  Destroy them and the way will be clear.  You can find them to the southeast of the first clearing.~
-  IF ~~ THEN REPLY ~Thank you, Suoma.~ DO ~SetCriticalPathObject(Myself, FALSE)
+  SAY @6141
+  IF ~~ THEN REPLY @6142 DO ~SetCriticalPathObject(Myself, FALSE)
 SetGlobal("USSUOMA_SKIP", "Global", 1)
 SetGlobal("USSUOMA_HELPED", "Global", 1)
 SetGlobal("50Suoma_Help","GLOBAL",5)
@@ -386,12 +384,12 @@ SetGlobal("50Suoma_Help","GLOBAL",5)
 END
 
 IF WEIGHT #3 ~Global("USSUOMA_SCARED", "Global", 1)~ THEN BEGIN SuomaScared
-  SAY ~It's you again...~
-  IF ~~ THEN REPLY ~How do I get through the Fell Wood again?~ GOTO SuomaScared2
-  IF ~~ THEN REPLY ~Just passing through.  Farewell.~ EXIT
+  SAY @6143
+  IF ~~ THEN REPLY @6144 GOTO SuomaScared2
+  IF ~~ THEN REPLY @6145 EXIT
 END
 
 IF ~~ THEN BEGIN SuomaScared2
-  SAY ~You must find the dark treants and destroy them.  They are responsible for hiding the true path.  You can find them to the southeast of the first clearing.~
-  IF ~~ THEN REPLY ~Thank you.~ EXIT
+  SAY @6146
+  IF ~~ THEN REPLY #21892 EXIT
 END

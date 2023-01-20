@@ -1,7 +1,6 @@
 //NOTES
 // This component lets the player strike a peace treaty with Ojaiha, allowing the player to return to Kuldahar successfully without killing anyone. I think I've covered the plot inconsistencies all right, but there may be more I'm unaware of.
 
-COPY ~%mod_folder%/bcs/AR6051.bcs~ ~override~ // has a new line to let US_OJAIHA_DIPLOMACY set the Cedra cutscene to trigger in AR6001.bcs
 COPY ~%mod_folder%/bcs/60OJAIH2.bcs~ ~override~ // has a new line to set US_OJAIHA_DIPLOMACY to zero if Ojaiha becomes hostile
 COPY ~%mod_folder%/bcs/6051ROBE.bcs~ ~override~ // has a new line to let US_OJAIHA_DIPLOMACY replace the effects of the disguise
 
@@ -30,3 +29,9 @@ COMPILE ~%mod_folder%/dlg/60YTELIT.d~
 COMPILE ~%mod_folder%/dlg/60YTELST.d~
 COMPILE ~%mod_folder%/dlg/60YTREGS.d~
 COMPILE ~%mod_folder%/dlg/60YTREST.d~
+
+COPY_EXISTING_REGEXP ~60.*\.dlg~ ~override~
+	DECOMPILE_AND_PATCH BEGIN
+		REPLACE_TEXTUALLY CASE_INSENSITIVE ~Global(\"6051_Wearing_Robes\", *\"GLOBAL\", *6)~ ~CheckSpellState(LastTalkedToBy,UNDEAD_WARD)~
+	END
+	IF ~6051_Wearing_Robes~

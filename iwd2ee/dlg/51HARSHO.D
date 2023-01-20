@@ -15,9 +15,10 @@ IF ~~ THEN BEGIN 1
   IF ~  !Gender(Protagonist,MALE)
 ~ THEN REPLY #9513 GOTO 11 //The Hosttower?
   IF ~CheckSkillGT(Protagonist, 20, Spellcraft)
-!Kit(Protagonist, Mage_Illusionist)~ THEN REPLY ~(Begin crafting glamer to make Harshom and his allies appear to be umber hulks)~ GOTO TrickHarshom // attempt to trick Harshom
+!Kit(Protagonist, Mage_Diviner)
+!Kit(Protagonist, Mage_Illusionist)~ THEN REPLY @6159 GOTO TrickHarshom // attempt to trick Harshom
   IF ~CheckSkillGT(Protagonist, 10, Spellcraft)
-Kit(Protagonist, Mage_Illusionist)~ THEN REPLY ~(Begin crafting glamer to make Harshom and his allies appear to be umber hulks)~ GOTO TrickHarshom // attempt to trick Harshom
+Kit(Protagonist, Mage_Illusionist)~ THEN REPLY @6159 GOTO TrickHarshom // attempt to trick Harshom
   IF ~~ THEN REPLY #9514 DO ~Enemy()~ EXIT //Enough boasting, Harshom - it's time to fight.
 END
 
@@ -32,10 +33,11 @@ IF ~~ THEN BEGIN 2
 ~ THEN REPLY #9513 GOTO 11
   IF ~ClassEx(Protagonist,MAGE)
 CheckSkillGT(Protagonist, 20, Spellcraft)
-!Kit(Protagonist, Mage_Illusionist)~ THEN REPLY ~(Begin crafting glamer to make Harshom and his allies appear to be umber hulks)~ GOTO TrickHarshom // attempt to trick Harshom
+!Kit(Protagonist, Mage_Diviner)
+!Kit(Protagonist, Mage_Illusionist)~ THEN REPLY @6159 GOTO TrickHarshom // attempt to trick Harshom
   IF ~ClassEx(Protagonist,MAGE)
 CheckSkillGT(Protagonist, 10, Spellcraft)
-Kit(Protagonist, Mage_Illusionist)~ THEN REPLY ~(Begin crafting glamer to make Harshom and his allies appear to be umber hulks)~ GOTO TrickHarshom // attempt to trick Harshom
+Kit(Protagonist, Mage_Illusionist)~ THEN REPLY @6159 GOTO TrickHarshom // attempt to trick Harshom
   IF ~~ THEN REPLY #9514 DO ~Enemy()~ EXIT
 END
 
@@ -48,10 +50,11 @@ IF ~~ THEN BEGIN 3
 ~ THEN REPLY #9518 GOTO 11 //What's the Hosttower?
   IF ~ClassEx(Protagonist,MAGE)
 CheckSkillGT(Protagonist, 20, Spellcraft)
-!Kit(Protagonist, Mage_Illusionist)~ THEN REPLY ~(Begin crafting glamer to make Harshom and his allies appear to be umber hulks)~ GOTO TrickHarshom // attempt to trick Harshom
+!Kit(Protagonist, Mage_Diviner)
+!Kit(Protagonist, Mage_Illusionist)~ THEN REPLY @6159 GOTO TrickHarshom // attempt to trick Harshom
   IF ~ClassEx(Protagonist,MAGE)
 CheckSkillGT(Protagonist, 10, Spellcraft)
-Kit(Protagonist, Mage_Illusionist)~ THEN REPLY ~(Begin crafting glamer to make Harshom and his allies appear to be umber hulks)~ GOTO TrickHarshom // attempt to trick Harshom
+Kit(Protagonist, Mage_Illusionist)~ THEN REPLY @6159 GOTO TrickHarshom // attempt to trick Harshom
   IF ~~ THEN REPLY #9514 DO ~Enemy()~ EXIT
 END
 
@@ -65,10 +68,11 @@ IF ~~ THEN BEGIN 5
   IF ~~ THEN REPLY #9521 GOTO 6 //Go on...
   IF ~ClassEx(Protagonist,MAGE)
 CheckSkillGT(Protagonist, 20, Spellcraft)
-!Kit(Protagonist, Mage_Illusionist)~ THEN REPLY ~(Begin crafting glamer to make Harshom and his allies appear to be umber hulks)~ GOTO TrickHarshom // attempt to trick Harshom
+!Kit(Protagonist, Mage_Diviner)
+!Kit(Protagonist, Mage_Illusionist)~ THEN REPLY @6159 GOTO TrickHarshom // attempt to trick Harshom
   IF ~ClassEx(Protagonist,MAGE)
 CheckSkillGT(Protagonist, 10, Spellcraft)
-Kit(Protagonist, Mage_Illusionist)~ THEN REPLY ~(Begin crafting glamer to make Harshom and his allies appear to be umber hulks)~ GOTO TrickHarshom // attempt to trick Harshom
+Kit(Protagonist, Mage_Illusionist)~ THEN REPLY @6159 GOTO TrickHarshom // attempt to trick Harshom
   IF ~~ THEN REPLY #9514 DO ~Enemy()~ EXIT
 END
 
@@ -82,10 +86,11 @@ IF ~~ THEN BEGIN 6
 ~ THEN REPLY #9518 GOTO 11
   IF ~ClassEx(Protagonist,MAGE)
 CheckSkillGT(Protagonist, 20, Spellcraft)
-!Kit(Protagonist, Mage_Illusionist)~ THEN REPLY ~(Begin crafting glamer to make Harshom and his allies appear to be umber hulks)~ GOTO TrickHarshom // attempt to trick Harshom
+!Kit(Protagonist, Mage_Diviner)
+!Kit(Protagonist, Mage_Illusionist)~ THEN REPLY @6159 GOTO TrickHarshom // attempt to trick Harshom
   IF ~ClassEx(Protagonist,MAGE)
 CheckSkillGT(Protagonist, 10, Spellcraft)
-Kit(Protagonist, Mage_Illusionist)~ THEN REPLY ~(Begin crafting glamer to make Harshom and his allies appear to be umber hulks)~ GOTO TrickHarshom // attempt to trick Harshom
+Kit(Protagonist, Mage_Illusionist)~ THEN REPLY @6159 GOTO TrickHarshom // attempt to trick Harshom
   IF ~~ THEN REPLY #9514 DO ~Enemy()~ EXIT
 END
 
@@ -105,10 +110,11 @@ IF ~~ THEN BEGIN 8
 ~ THEN REPLY #9518 GOTO 11
   IF ~ClassEx(Protagonist,MAGE)
 CheckSkillGT(Protagonist, 20, Spellcraft)
-!Kit(Protagonist, Mage_Illusionist)~ THEN REPLY ~(Begin crafting glamer to make Harshom and his allies appear to be umber hulks)~ GOTO TrickHarshom // attempt to trick Harshom
+!Kit(Protagonist, Mage_Diviner)
+!Kit(Protagonist, Mage_Illusionist)~ THEN REPLY @6159 GOTO TrickHarshom // attempt to trick Harshom
   IF ~ClassEx(Protagonist,MAGE)
 CheckSkillGT(Protagonist, 10, Spellcraft)
-Kit(Protagonist, Mage_Illusionist)~ THEN REPLY ~(Begin crafting glamer to make Harshom and his allies appear to be umber hulks)~ GOTO TrickHarshom // attempt to trick Harshom
+Kit(Protagonist, Mage_Illusionist)~ THEN REPLY @6159 GOTO TrickHarshom // attempt to trick Harshom
   IF ~~ THEN REPLY #9514 DO ~Enemy()~ EXIT
 END
 
@@ -122,10 +128,11 @@ IF ~~ THEN BEGIN 9
 ~ THEN REPLY #9518 GOTO 11
   IF ~ClassEx(Protagonist,MAGE)
 CheckSkillGT(Protagonist, 20, Spellcraft)
-!Kit(Protagonist, Mage_Illusionist)~ THEN REPLY ~(Begin crafting glamer to make Harshom and his allies appear to be umber hulks)~ GOTO TrickHarshom // attempt to trick Harshom
+!Kit(Protagonist, Mage_Diviner)
+!Kit(Protagonist, Mage_Illusionist)~ THEN REPLY @6159 GOTO TrickHarshom // attempt to trick Harshom
   IF ~ClassEx(Protagonist,MAGE)
 CheckSkillGT(Protagonist, 10, Spellcraft)
-Kit(Protagonist, Mage_Illusionist)~ THEN REPLY ~(Begin crafting glamer to make Harshom and his allies appear to be umber hulks)~ GOTO TrickHarshom // attempt to trick Harshom
+Kit(Protagonist, Mage_Illusionist)~ THEN REPLY @6159 GOTO TrickHarshom // attempt to trick Harshom
   IF ~~ THEN REPLY #9514 DO ~Enemy()~ EXIT
 END
 
@@ -135,10 +142,11 @@ IF ~~ THEN BEGIN 10
   IF ~Global("USKYOSTI_HARSHOM", "Global", 1)~ THEN REPLY #9512 JOURNAL #9328 GOTO 4
   IF ~ClassEx(Protagonist,MAGE)
 CheckSkillGT(Protagonist, 20, Spellcraft)
-!Kit(Protagonist, Mage_Illusionist)~ THEN REPLY ~(Begin crafting glamer to make Harshom and his allies appear to be umber hulks)~ GOTO TrickHarshom // attempt to trick Harshom
+!Kit(Protagonist, Mage_Diviner)
+!Kit(Protagonist, Mage_Illusionist)~ THEN REPLY @6159 GOTO TrickHarshom // attempt to trick Harshom
   IF ~ClassEx(Protagonist,MAGE)
 CheckSkillGT(Protagonist, 10, Spellcraft)
-Kit(Protagonist, Mage_Illusionist)~ THEN REPLY ~(Begin crafting glamer to make Harshom and his allies appear to be umber hulks)~ GOTO TrickHarshom // attempt to trick Harshom
+Kit(Protagonist, Mage_Illusionist)~ THEN REPLY @6159 GOTO TrickHarshom // attempt to trick Harshom
   IF ~~ THEN REPLY #9514 DO ~Enemy()~ EXIT
 END
 
@@ -148,10 +156,11 @@ IF ~~ THEN BEGIN 11
   IF ~Global("USKYOSTI_HARSHOM", "Global", 1)~ THEN REPLY #9512 JOURNAL #9328 GOTO 4
   IF ~ClassEx(Protagonist,MAGE)
 CheckSkillGT(Protagonist, 20, Spellcraft)
-!Kit(Protagonist, Mage_Illusionist)~ THEN REPLY ~(Begin crafting glamer to make Harshom and his allies appear to be umber hulks)~ GOTO TrickHarshom // attempt to trick Harshom
+!Kit(Protagonist, Mage_Diviner)
+!Kit(Protagonist, Mage_Illusionist)~ THEN REPLY @6159 GOTO TrickHarshom // attempt to trick Harshom
   IF ~ClassEx(Protagonist,MAGE)
 CheckSkillGT(Protagonist, 10, Spellcraft)
-Kit(Protagonist, Mage_Illusionist)~ THEN REPLY ~(Begin crafting glamer to make Harshom and his allies appear to be umber hulks)~ GOTO TrickHarshom // attempt to trick Harshom
+Kit(Protagonist, Mage_Illusionist)~ THEN REPLY @6159 GOTO TrickHarshom // attempt to trick Harshom
   IF ~~ THEN REPLY #9514 DO ~Enemy()~ EXIT
 END
 
@@ -165,26 +174,29 @@ IF ~~ THEN BEGIN 12
 ~ THEN REPLY #9518 GOTO 11
   IF ~ClassEx(Protagonist,MAGE)
 CheckSkillGT(Protagonist, 20, Spellcraft)
-!Kit(Protagonist, Mage_Illusionist)~ THEN REPLY ~(Begin crafting glamer to make Harshom and his allies appear to be umber hulks)~ GOTO TrickHarshom // attempt to trick Harshom
+!Kit(Protagonist, Mage_Diviner)
+!Kit(Protagonist, Mage_Illusionist)~ THEN REPLY @6159 GOTO TrickHarshom // attempt to trick Harshom
   IF ~ClassEx(Protagonist,MAGE)
 CheckSkillGT(Protagonist, 10, Spellcraft)
-Kit(Protagonist, Mage_Illusionist)~ THEN REPLY ~(Begin crafting glamer to make Harshom and his allies appear to be umber hulks)~ GOTO TrickHarshom // attempt to trick Harshom
+Kit(Protagonist, Mage_Illusionist)~ THEN REPLY @6159 GOTO TrickHarshom // attempt to trick Harshom
   IF ~~ THEN REPLY #9514 DO ~Enemy()~ EXIT
 END
 
 IF ~~ THEN BEGIN TrickHarshom
-  SAY ~Wait... what was that? Gah! I thought we were done with these creatures! Everyone, focus! Don't be deceived!~
-  IF ~CheckSkillGT(Protagonist, 5, Bluff)~ THEN REPLY ~(Distort the voices of Harshom's allies) Harshom! Harshom, which one is which? I can't tell the hulks from the bears!~ GOTO TrickHarshom2
-  IF ~CheckSkillLT(Protagonist, 5, Bluff)~ THEN REPLY ~(Distort the voices of Harshom's allies) The umber hulks are attacking us again! They're right behind us!~ GOTO TrickHarshomFailed
+  SAY @6166
+  IF ~CheckSkillGT(Protagonist, 5, Bluff)~ THEN REPLY @6160 GOTO TrickHarshom2
+  IF ~CheckSkillLT(Protagonist, 6, Bluff)~ THEN REPLY @6161 GOTO TrickHarshomFailed
 END
 
 IF ~~ THEN BEGIN TrickHarshomFailed
-  SAY ~Spread out! Make sure... Wait. No, this is just an illusion! Everyone, there are no umber hulks! The enemy is right in front of us! Find the illusionist and kill them!~
+  SAY @6162
   IF ~~ THEN DO ~Enemy()~ EXIT
 END
 
 IF ~~ THEN BEGIN TrickHarshom2
-  SAY ~By the hells, spread out! Don't look into their eyes! Focus on the--wait, where is everyone? Where are you?~
-  IF ~~ THEN REPLY ~Help! Help me!~ DO ~Enemy()~ EXIT  // The DO section here needs to impose a confusion effect on Harshom and ideally also his allies.
-  IF ~CheckSkillGT(Protagonist, 9, Bluff)~ THEN REPLY ~Open the door! Open the door! We need to get out of the tunnels!~ DO ~Enemy()~ EXIT  // The DO section here needs to impose a confusion effect on Harshom and ideally also his allies. This one also needs to open the door behind Harshom.
+  SAY @6163
+  IF ~~ THEN REPLY @6164 DO ~SetGlobal("US_Trick_Harshom","GLOBAL",1)
+  Enemy()~ EXIT  // The DO section here needs to impose a confusion effect on Harshom and ideally also his allies.
+  IF ~CheckSkillGT(Protagonist, 9, Bluff)~ THEN REPLY @6165 DO ~SetGlobal("US_Trick_Harshom","GLOBAL",2)
+  Enemy()~ EXIT  // The DO section here needs to impose a confusion effect on Harshom and ideally also his allies. This one also needs to open the door behind Harshom.
 END

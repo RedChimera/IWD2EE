@@ -218,7 +218,7 @@ IF ~~ THEN BEGIN 26
   SAY #36256
   IF ~~ THEN REPLY #36257 DO ~Enemy()
 SetGlobal("SR_Villagers_Dead","GLOBAL", 1)~ EXIT
-  IF ~CheckSkillGT(Protagonist,7,Intimidate)~ THEN REPLY ~I have a better idea.  Broken Tusk Clan!  Torak has sent *scores* of your brothers to their deaths because he was too afraid to face us himself!  Is this the orc you want as your leader?~ GOTO TorakIntimidate
+  IF ~CheckSkillGT(Protagonist,7,Intimidate)~ THEN REPLY @6008 GOTO TorakIntimidate
 END
 
 IF ~~ THEN BEGIN 27
@@ -231,13 +231,13 @@ END
 IF ~~ THEN BEGIN 28
   SAY #36260
   IF ~~ THEN REPLY #36257 DO ~Enemy()~ EXIT
-  IF ~CheckSkillGT(Protagonist,7,Intimidate)~ THEN REPLY ~I have a better idea.  Broken Tusk Clan!  Torak has sent *scores* of your brothers to their deaths because he was too afraid to face us himself!  Is this the orc you want as your leader?~ GOTO TorakIntimidate
+  IF ~CheckSkillGT(Protagonist,7,Intimidate)~ THEN REPLY @6008 GOTO TorakIntimidate
 END
 
 IF ~~ THEN BEGIN 29
   SAY #36261
   IF ~~ THEN REPLY #36257 DO ~Enemy()~ EXIT
-  IF ~CheckSkillGT(Protagonist,7,Intimidate)~ THEN REPLY ~I have a better idea.  Broken Tusk Clan!  Torak has sent *scores* of your brothers to their deaths because he was too afraid to face us himself!  Is this the orc you want as your leader?~ GOTO TorakIntimidate
+  IF ~CheckSkillGT(Protagonist,7,Intimidate)~ THEN REPLY @6008 GOTO TorakIntimidate
 END
 
 IF WEIGHT #0 ~  Global("SR_Accepted_Threat","GLOBAL",1)
@@ -254,7 +254,7 @@ SetGlobal("SR_Villagers_Dead","GLOBAL", 1)~ EXIT
 END
 
 IF ~~ THEN BEGIN TorakIntimidate
-  SAY ~What? Bro-broken Tusk Clan! Slay them! Slay them all!~
-  IF ~~ THEN REPLY ~Whoever wants him gone is no enemy of ours.  We're only here to collect one head.  But whoever wants to defend him is welcome to try!~ DO ~Enemy() SetGlobal("RUNTORG","GLOBAL",1)~ EXIT
+  SAY @6009
+  IF ~~ THEN REPLY @6010 DO ~Enemy() SetGlobal("RUNTORG","GLOBAL",1)~ EXIT
 END
 

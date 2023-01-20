@@ -3,3 +3,9 @@
 //This also adds an option to Abdoshanheth's dialog, allowing the player to intimidate the Elder Brain directly from the dialog with Abdoshanheth.
 COMPILE ~%mod_folder%/dlg/53ELDER.d~
 COMPILE ~%mod_folder%/dlg/53ABDOSH.d~
+
+COPY_EXISTING ~AR5302.are~ ~override~
+	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR actor_name=~Galoombethshe~ script_special1=~USMINDFL~ END
+	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR actor_name=~Ecktarrilsenularr~ script_special1=~USMINDFL~ END
+	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR actor_name=~Zephulp-Maress~ script_special1=~USMINDFL~ END
+	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR actor_name=~Oolay~ script_special1=~USMINDFL~ END

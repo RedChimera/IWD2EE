@@ -183,40 +183,6 @@ COPY ~%mod_folder%/spl/spl_new_npcs~ ~override~
 
 COPY ~%mod_folder%/bam/bam_new_npcs~ ~override~
 
-EXTEND_BOTTOM ~DPLAYER2.bcs~ ~override/usnoplot.bcs~
-
-COMPILE ~%mod_folder%/dlg/dlg_new_npcs/10REIG.d~
-COMPILE ~%mod_folder%/dlg/dlg_new_npcs/11VEIRA.d~
-COMPILE ~%mod_folder%/dlg/dlg_new_npcs/20NEWEMM.d~
-COMPILE ~%mod_folder%/dlg/dlg_new_npcs/41ZACK.d~
-COMPILE ~%mod_folder%/dlg/dlg_new_npcs/50PAIRI.d~
-
-COMPILE ~%mod_folder%/dlg/dlg_new_npcs/20NEWVRK.d~
-COMPILE ~%mod_folder%/dlg/dlg_new_npcs/30GOBVUN.d~
-COMPILE ~%mod_folder%/dlg/dlg_new_npcs/52SERSA.d~
-COMPILE ~%mod_folder%/dlg/dlg_new_npcs/41XHAAN.d~
-
-COMPILE ~%mod_folder%/dlg/dlg_new_npcs/10BLACK.d~
-COMPILE ~%mod_folder%/dlg/dlg_new_npcs/10KICKSH.d~
-//COMPILE ~%mod_folder%/dlg/dlg_new_npcs/10BLANC.d~ This file is damaged somehow; decompiling it breaks a different dialog, Black Geoffrey's.
-
-COMPILE ~%mod_folder%/dlg/dlg_new_npcs/12SHAWFO.d~
-
-ACTION_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~4~ BEGIN
-
-COPY_EXISTING ~10REIG.dlg~ ~override~
-	DECOMPILE_AND_PATCH BEGIN
-		REPLACE_TEXTUALLY CASE_INSENSITIVE ~PartyHasItem(\"00POTN04\")~ ~Or(2)
-	PartyHasItem("00POTN04")
-	PartyHasItem("USHFPN04")~
-		REPLACE_TEXTUALLY CASE_INSENSITIVE ~TakePartyItemNum(\"00Potn04\", ?1)~ ~TakePartyItemNum("00Potn04",1)
-TakePartyItemNum("USHFPN04",1)~
-		REPLACE_TEXTUALLY CASE_INSENSITIVE ~DestroyItem(\"00Potn04\")~ ~DestroyItem("00Potn04")
-DestroyItem("USHFPN04")~
-	END
-	LPF CONVERT_DLG_TO_IWD2_FORMAT END
-
-END
 /*
 COPY_EXISTING ~LISTINNT.2da~ ~override~
 	COUNT_2DA_ROWS 2 numrows
@@ -237,6 +203,71 @@ COPY_EXISTING ~LISTSPLL.2da~ ~override~
 SILENT
 LAM IWD2_INDEX_LISTS
 VERBOSE
+
+EXTEND_BOTTOM ~DPLAYER2.bcs~ ~override/usnoplot.bcs~
+
+APPEND ~state.ids~
+~0x80103FFF EX_NO_DIALOGUE~
+	UNLESS ~EX_NO_DIALOGUE~
+
+COMPILE ~%mod_folder%/dlg/dlg_new_npcs/10BLACK.d~
+COMPILE ~%mod_folder%/dlg/dlg_new_npcs/10KICKSH.d~
+COMPILE ~%mod_folder%/dlg/dlg_new_npcs/10REIG.d~
+COMPILE ~%mod_folder%/dlg/dlg_new_npcs/11VEIRA.d~
+COMPILE ~%mod_folder%/dlg/dlg_new_npcs/20NEWEMM.d~
+COMPILE ~%mod_folder%/dlg/dlg_new_npcs/20NEWVRK.d~
+COMPILE ~%mod_folder%/dlg/dlg_new_npcs/30GOBVUN.d~
+COMPILE ~%mod_folder%/dlg/dlg_new_npcs/41XHAAN.d~
+COMPILE ~%mod_folder%/dlg/dlg_new_npcs/41ZACK.d~
+COMPILE ~%mod_folder%/dlg/dlg_new_npcs/50PAIRI.d~
+COMPILE ~%mod_folder%/dlg/dlg_new_npcs/52SERSA.d~
+
+COMPILE ~%mod_folder%/dlg/dlg_new_npcs/USDLGNMD.d~
+
+COMPILE ~%mod_folder%/dlg/dlg_new_npcs/USGEOFP.d~
+COMPILE ~%mod_folder%/dlg/dlg_new_npcs/USREIGP.d~
+COMPILE ~%mod_folder%/dlg/dlg_new_npcs/USVEIRP.d~
+COMPILE ~%mod_folder%/dlg/dlg_new_npcs/USEMMAP.d~
+COMPILE ~%mod_folder%/dlg/dlg_new_npcs/USVREKP.d~
+COMPILE ~%mod_folder%/dlg/dlg_new_npcs/USVUNAP.d~
+COMPILE ~%mod_folder%/dlg/dlg_new_npcs/USXHAAP.d~
+COMPILE ~%mod_folder%/dlg/dlg_new_npcs/USZACKP.d~
+COMPILE ~%mod_folder%/dlg/dlg_new_npcs/USPAIRP.d~
+COMPILE ~%mod_folder%/dlg/dlg_new_npcs/USSERSP.d~
+COMPILE ~%mod_folder%/dlg/dlg_new_npcs/USGEOFJ.d~
+COMPILE ~%mod_folder%/dlg/dlg_new_npcs/USREIGJ.d~
+//COMPILE ~%mod_folder%/dlg/dlg_new_npcs/USVEIRJ.d~
+COMPILE ~%mod_folder%/dlg/dlg_new_npcs/USEMMAJ.d~
+//COMPILE ~%mod_folder%/dlg/dlg_new_npcs/USVREKJ.d~
+COMPILE ~%mod_folder%/dlg/dlg_new_npcs/USVUNAJ.d~
+COMPILE ~%mod_folder%/dlg/dlg_new_npcs/USXHAAJ.d~
+COMPILE ~%mod_folder%/dlg/dlg_new_npcs/USZACKJ.d~
+//COMPILE ~%mod_folder%/dlg/dlg_new_npcs/USPAIRJ.d~
+//COMPILE ~%mod_folder%/dlg/dlg_new_npcs/USSERSJ.d~
+
+COPY_EXISTING ~IEEX_WEIDU.lua~ ~override~
+	REPLACE_TEXTUALLY CASE_INSENSITIVE EXACT_MATCH ~ex_on_join_party_special_script_1_set = {~ ~ex_on_join_party_special_script_1_set = {["USGEOF"] = "USGEOFD", ["USREIG"] = "USREIGD", ["USVEIR"] = "USVEIRD", ["USEMMA"] = "USEMMAD", ["USVREK"] = "USVREKD", ["USVUNA"] = "USVUNAD", ["USXHAA"] = "USXHAAD", ["USZACK"] = "USZACKD", ["USPAIR"] = "USPAIRD", ["USSERS"] = "USSERSD", ~
+	REPLACE_TEXTUALLY CASE_INSENSITIVE EXACT_MATCH ~ex_on_join_party_team_script_set = {~ ~ex_on_join_party_team_script_set = {["USEMMA"] = "USEMMABL", ["USVREK"] = "USVREKLV", ["USVUNA"] = "USVUNALV", ["USXHAA"] = "USXHAALV", ~
+	REPLACE_TEXTUALLY CASE_INSENSITIVE EXACT_MATCH ~ex_on_leave_party_dlg_set = {~ ~ex_on_leave_party_dlg_set = {["USGEOF"] = "USGEOFP", ["USREIG"] = "USREIGP", ["USVEIR"] = "USVEIRP", ["USEMMA"] = "USEMMAP", ["USVREK"] = "USVREKP", ["USVUNA"] = "USVUNAP", ["USXHAA"] = "USXHAAP", ["USZACK"] = "USZACKP", ["USPAIR"] = "USPAIRP", ["USSERS"] = "USSERSP", ~
+	REPLACE_TEXTUALLY CASE_INSENSITIVE EXACT_MATCH ~ex_on_join_party_dlg_set = {~ ~ex_on_join_party_dlg_set = {["USGEOF"] = "USGEOFJ", ["USREIG"] = "USREIGJ", ["USVEIR"] = "USVEIRJ", ["USEMMA"] = "USEMMAJ", ["USVREK"] = "USVREKJ", ["USVUNA"] = "USVUNAJ", ["USXHAA"] = "USXHAAJ", ["USZACK"] = "USZACKJ", ["USPAIR"] = "USPAIRJ", ["USSERS"] = "USSERSJ", ~
+
+LAF ADD_TIMED_BANTER_IWD2 INT_VAR id=1 STR_VAR dlg1=~USREIGJ~ dlg2=~USGEOFJ~ END
+
+ACTION_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~4~ BEGIN
+
+COPY_EXISTING ~10REIG.dlg~ ~override~
+	DECOMPILE_AND_PATCH BEGIN
+		REPLACE_TEXTUALLY CASE_INSENSITIVE ~PartyHasItem(\"00POTN04\")~ ~Or(2)
+	PartyHasItem("00POTN04")
+	PartyHasItem("USHFPN04")~
+		REPLACE_TEXTUALLY CASE_INSENSITIVE ~TakePartyItemNum(\"00Potn04\", ?1)~ ~TakePartyItemNum("00Potn04",1)
+TakePartyItemNum("USHFPN04",1)~
+		REPLACE_TEXTUALLY CASE_INSENSITIVE ~DestroyItem(\"00Potn04\")~ ~DestroyItem("00Potn04")
+DestroyItem("USHFPN04")~
+	END
+	LPF CONVERT_DLG_TO_IWD2_FORMAT END
+
+END
 
 COPY_EXISTING ~USCIVEIR.itm~ ~override~
 	SAY NAME1 @4802
@@ -861,6 +892,9 @@ COPY_EXISTING ~10BLACK.cre~ ~override/USGEOF.cre~ ~10REIG.cre~ ~override/USREIG.
 	END
 
 COPY_EXISTING ~USGEOF.cre~ ~override~
+	WRITE_ASCII specialscript1 ~USGEOFD~ #8
+	WRITE_ASCII dialogue ~USGEOF~ #8
+	WRITE_ASCII scriptname ~USGEOF~ #32
 	LPF	IWD2_REMOVE_CRE_ITEM STR_VAR item=~USAHFI3~ END
 
 COPY_EXISTING ~USREIG.cre~ ~override~ ~USEMMA.cre~ ~override~ ~USSERS.cre~ ~override~
@@ -869,12 +903,21 @@ COPY_EXISTING ~USREIG.cre~ ~override~ ~USEMMA.cre~ ~override~ ~USSERS.cre~ ~over
 COPY_EXISTING ~USREIG.cre~ ~override~
 	READ_SHORT maxhp themaxhp
 	WRITE_SHORT currenthp themaxhp
+	WRITE_ASCII specialscript1 ~USREIGD~ #8
+	WRITE_ASCII dialogue ~USREIG~ #8
+	WRITE_ASCII scriptname ~USREIG~ #32
 	LPF	IWD2_REMOVE_CRE_ITEM STR_VAR item=~USAHFI1~ END
 
 COPY_EXISTING ~USVEIR.cre~ ~override~
+	WRITE_ASCII specialscript1 ~USVEIRD~ #8
+	WRITE_ASCII dialogue ~USVEIR~ #8
+	WRITE_ASCII scriptname ~USVEIR~ #32
 	LPF	IWD2_REMOVE_CRE_ITEM STR_VAR item=~11VEIRA4 USAHFI1~ END
 
 COPY_EXISTING ~USVREK.cre~ ~override~
+	WRITE_ASCII specialscript1 ~USVREKD~ #8
+	WRITE_ASCII dialogue ~USVREK~ #8
+	WRITE_ASCII scriptname ~USVREK~ #32
 	LPF	IWD2_REMOVE_CRE_ITEM STR_VAR item=~RT02_R USAHBB5 USAHBB6~ END
 	PATCH_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~0~ BEGIN
 		LPF IWD2_ADD_CRE_EFFECT INT_VAR opcode=500 target=1 timing=9 STR_VAR resource=~MEBARBMV~ effsource=~USBARBMV~ END
@@ -887,22 +930,38 @@ COPY_EXISTING ~USVREK.cre~ ~override~
 		LPF IWD2_ADD_CRE_EFFECT INT_VAR opcode=88 target=1 timing=9 parameter1=1 STR_VAR effsource=~USSTBA01~ END
 		LPF IWD2_ADD_CRE_EFFECT INT_VAR opcode=89 target=1 timing=9 parameter1=1 STR_VAR effsource=~USSTBA01~ END
 	END
+
 COPY_EXISTING ~USVUNA.cre~ ~override~
+	WRITE_ASCII specialscript1 ~USVUNAD~ #8
+	WRITE_ASCII dialogue ~USVUNA~ #8
+	WRITE_ASCII scriptname ~USVUNA~ #32
 	LPF	IWD2_REMOVE_CRE_ITEM STR_VAR item=~USAHFI5~ END
 
 COPY_EXISTING ~USXHAA.cre~ ~override~
 	WRITE_BYTE race 164
+	WRITE_ASCII specialscript1 ~USXHAAD~ #8
+	WRITE_ASCII dialogue ~USXHAA~ #8
+	WRITE_ASCII scriptname ~USXHAA~ #32
 	LPF	IWD2_REMOVE_CRE_ITEM STR_VAR item=~USAHFI3~ END
 
 COPY_EXISTING ~USZACK.cre~ ~override~
+	WRITE_ASCII specialscript1 ~USZACKD~ #8
+	WRITE_ASCII dialogue ~USZACK~ #8
+	WRITE_ASCII scriptname ~USZACK~ #32
 	LPF	IWD2_REMOVE_CRE_ITEM STR_VAR item=~00LEAT03 00MSTR95 USAHTH4~ END
 	LPF	IWD2_ADD_CRE_ITEM INT_VAR equip=0 STR_VAR item=~00LEAT03~ flags=~identified~ slot=~armor~ mode=~replace~ END
 	LPF	IWD2_ADD_CRE_ITEM INT_VAR equip=1 STR_VAR item=~00MSTR95~ flags=~identified~ slot=~weapon1~ mode=~replace~ END
 
 COPY_EXISTING ~USPAIR.cre~ ~override~
 	WRITE_LONG xp 25000
+	WRITE_ASCII specialscript1 ~USPAIRD~ #8
+	WRITE_ASCII dialogue ~USPAIR~ #8
+	WRITE_ASCII scriptname ~USPAIR~ #32
 
 COPY_EXISTING ~USSERS.cre~ ~override~
+	WRITE_ASCII specialscript1 ~USSERSD~ #8
+	WRITE_ASCII dialogue ~USSERS~ #8
+	WRITE_ASCII scriptname ~USSERS~ #32
 	LPF	IWD2_REMOVE_CRE_ITEM STR_VAR item=~RAMO_MK RT10_M USCWHFMO~ END
 
 COPY_EXISTING ~USAOCHA.cre~ ~override~
@@ -931,7 +990,10 @@ COPY_EXISTING ~USXHAAT.spl~ ~override~
   SAY IDENTIFIED_DESC @4865
 
 COPY_EXISTING ~USEMMA.cre~ ~override~
+	WRITE_ASCII specialscript1 ~USEMMAD~ #8
 	WRITE_ASCII teamscript ~USEMMABL~ #8
+	WRITE_ASCII dialogue ~USEMMA~ #8
+	WRITE_ASCII scriptname ~USEMMA~ #32
 	LPF	IWD2_ADD_CRE_ITEM INT_VAR equip=0 STR_VAR item=~USCWHFMB~ slot=~inv1~ mode=~replace~ END
 
 COPY_EXISTING ~AR1000.bcs~ ~override~

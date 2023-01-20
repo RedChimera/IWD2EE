@@ -316,34 +316,34 @@ END
 
 IF WEIGHT #0 ~Global("USGUTHMA_FRIEND","GLOBAL",1)
 ~ THEN BEGIN 37
-  SAY ~You've returned.  How goes the battle?~
-  IF ~~ THEN REPLY ~Oddly enough, we actually managed to strike a deal with Guthma, the leader of the horde.~ GOTO 38
+  SAY @6018
+  IF ~~ THEN REPLY @6019 GOTO 38
 END
 
 IF ~~ THEN BEGIN 38
-  SAY ~A deal? With the horde?~
-  IF ~~ THEN REPLY ~Apparently Guthma was unhappy with his clan's allegiance with the greater Legion--or at least, with his apparent superior, a half-dragon woman named Sherincal.  It seems the Legion has been relying on Guthma to do most of the work in attacking Targos, and he resents having his clan bear most of the risks while the Legion contributes little.~ GOTO 39
+  SAY @6028
+  IF ~~ THEN REPLY @6020 GOTO 39
 END
 
 IF ~~ THEN BEGIN 39
-  SAY ~I suppose that's good news, if our enemies are divided.~
-  IF ~~ THEN REPLY ~We convinced Guthma to avoid attacking Targos until the Legion decides to intervene and contribute its own forces.  When the Legion is weakened by fighting Targos, Guthma will pounce on them.  He still very much intends to destroy Targos, but we won't see another attack for weeks, if not months.  It buys us a great deal of time.~ GOTO 40
+  SAY @6021
+  IF ~~ THEN REPLY @6022 GOTO 40
 END
 
 IF ~~ THEN BEGIN 40
-  SAY ~It's not a perfect solution, but I'm surprised it was even possible. I see no sign of my companion, Braston. Do you know what has happened to him?~
-  IF ~!Global("31brasto_dead", "GLOBAL", 1)~ THEN REPLY ~I'm afraid he's being held captive at the fortress.  We tried to convince Guthma to release him, but he refused.  He will probably be there for a long time, Ennelia.~ GOTO 41
-  IF ~Global("31brasto_dead", "GLOBAL", 1)~ THEN REPLY ~I'm afraid he's dead.~ GOTO 42
+  SAY @6023
+  IF ~!Global("31brasto_dead", "GLOBAL", 1)~ THEN REPLY @6024 GOTO 41
+  IF ~Global("31brasto_dead", "GLOBAL", 1)~ THEN REPLY @6025 GOTO 42
 END
 
 IF ~~ THEN BEGIN 41
-  SAY ~Oh... I see.  At least... at least he's not dead.  I will wait for him.  Return to the town.  I - I will find my way there soon.~
-  IF ~~ THEN REPLY ~Farewell.~ DO ~SetGlobal("30Enneli_Nodes","GLOBAL", 2)
+  SAY @6026
+  IF ~~ THEN REPLY #1487 DO ~SetGlobal("30Enneli_Nodes","GLOBAL", 2)
 SetGlobal("Braston_Ennelia_Leave", "GLOBAL", 1)~ EXIT
 END
 
 IF ~~ THEN BEGIN 42
-  SAY ~Oh... this is terrible news.  Return to the town.  I - I will find my way there soon... *sniff*~
-  IF ~~ THEN REPLY ~Farewell.~ DO ~SetGlobal("30Enneli_Nodes","GLOBAL", 2)
+  SAY @6027
+  IF ~~ THEN REPLY #1487 DO ~SetGlobal("30Enneli_Nodes","GLOBAL", 2)
 SetGlobal("Braston_Ennelia_Leave", "GLOBAL", 1)~ EXIT
 END

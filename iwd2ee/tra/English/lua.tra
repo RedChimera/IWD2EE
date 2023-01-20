@@ -215,6 +215,8 @@
 @55339=~Attacks <EXWHNAME39> with <EXWHWEAP39> : <EXWHHITMISS39>~
 @55340=~Attacks <EXWHNAME40> with <EXWHWEAP40> : <EXWHHITMISS40>~
 */
+@55377=~<EXRDNAME>'s body has been destroyed. A Resurrection spell will be needed to bring <EXRDNAME> back to life; Raise Dead will not suffice.~
+@55378=~<EXRDNAME>'s soul has been captured. The vessel for their soul must be destroyed before they can be brought back to life.~
 @55379=~That character cannot be raised, but can be resurrected by more powerful magic.~
 @55380=~That character cannot be raised or resurrected.~
 @55381=~That character has been dead too long to be raised by that spell.~
@@ -312,6 +314,10 @@
 @55754=~Press Z to reroll, X to store, and C to recall.\n\n~
 @55755=~Click the plus button on an ability score to allocate the highest remaining number to that ability score. Click the minus button to unallocate the number.\n\n~
 @55756=~Next Ability Score~
+@55757=~Reroll~
+@55758=~Store~
+@55759=~Recall~
+@55760=~Reallocate~
 
 @55801=~Pick pocket successful and was not detected~
 @55802=~Pick pocket successful but was detected~
@@ -322,3 +328,9 @@
 @55807=~Pick pocket failed because target has nothing you can steal with your current skill level, but you were not detected~
 @55808=~Pick pocket failed because target has nothing you can steal with your current skill level, and you were detected~
 @55809=~Pick pocket failed because target has nothing you can steal with your current skill level~
+
+@55901=~IEex_Options~
+@55902=~Transparent Fog of War~
+@55903=~"Replaces the interlaced fog of war with \z
+						a version that uses transparency. This fixes the flickering caused by the vanilla implementation."~
+@55904=~Reform Party~

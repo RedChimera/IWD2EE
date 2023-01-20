@@ -81,7 +81,7 @@ SetGlobal("41RescueQuest", "GLOBAL", 1)~ JOURNAL #18898 GOTO 5
 END
 
 IF ~~ THEN BEGIN 5
-  SAY ~Zack's the name... Zack Boosenburry... illusionist and faithful of Baervan Wildwanderer.  Have you-excuse me for a moment.  Aocha?  *Aocha?*  AOCHA?!~
+  SAY @40122
   IF ~  PartyHasItem("41GenZB")
 ~ THEN REPLY #32555 DO ~TakePartyItem("41GenZB")~ GOTO 6
   IF ~~ THEN REPLY #32556 GOTO 8
@@ -100,9 +100,9 @@ RandomNum(4,3)
 RandomNum(4,4)
 ~ THEN REPLY #32720 GOTO 3
   IF ~  Global("41RescueQuest","GLOBAL",1)
-~ THEN REPLY ~You're an illusionist?  Does that mean you have spells to sell?~ DO ~SetGlobal("41AochaQuest","GLOBAL",1)~ GOTO 9
+~ THEN REPLY @40123 DO ~SetGlobal("41AochaQuest","GLOBAL",1)~ GOTO 9
   IF ~  !Global("41RescueQuest","GLOBAL",1)
-~ THEN REPLY ~You're an illusionist?  Does that mean you have spells to sell?~ GOTO 30
+~ THEN REPLY @40123 GOTO 30
   IF ~  Global("41RescueQuest","GLOBAL",1)
 ~ THEN REPLY #32722 DO ~SetGlobal("41AochaQuest","GLOBAL",1)~ GOTO 9
   IF ~  !Global("41RescueQuest","GLOBAL",1)
@@ -235,13 +235,13 @@ SetGlobal("41AochaQuest","GLOBAL",1)~ JOURNAL #32200 GOTO 9
 END
 
 IF ~~ THEN BEGIN 12
-  SAY ~Response: Aocha - come here girl!  *PHHIRRR!*  Oh, I almost forgot - fumbling around inside that worm I hit upon a few items.  If there's anything I can do for you, let me know.~
-  IF ~~ THEN REPLY ~We're happy for you.  Farewell.~ DO ~GiveItemCreate("00Brac09",Protagonist,0,0,0)
+  SAY @40124
+  IF ~~ THEN REPLY @40125 DO ~GiveItemCreate("00Brac09",Protagonist,0,0,0)
 GiveItemCreate("00Gem27",Protagonist,0,0,0)
 GiveItemCreate("00Ring75",Protagonist,0,0,0)
 SetGlobal("41ZackAreaNum", "GLOBAL", 4100)
 SetGlobal("41ZackTask","GLOBAL", 14)~ EXIT
-  IF ~!NumInParty(6)~ THEN REPLY ~Actually, we could use your help.  Would you consider joining us?~ DO ~GiveItemCreate("00Brac09",Protagonist,0,0,0)
+  IF ~!NumInParty(6)~ THEN REPLY @40126 DO ~GiveItemCreate("00Brac09",Protagonist,0,0,0)
 GiveItemCreate("00Gem27",Protagonist,0,0,0)
 GiveItemCreate("00Ring75",Protagonist,0,0,0)
 SetGlobal("41ZackAreaNum", "GLOBAL", 4100)
@@ -249,7 +249,7 @@ SetGlobal("41ZackTask","GLOBAL", 14)~ GOTO ZackJoin1
 END
 
 IF ~~ THEN BEGIN 13
-  SAY ~Aocha... AOCHA...!  A good mount she was...  Perhaps her death was inevitable, <CHARNAME> - being who... *what* she was.  If I was nearby, I could have rescued her, but...~
+  SAY @40127
   IF ~  RandomNum(4,1)
 ~ THEN REPLY #32720 GOTO 0
   IF ~  RandomNum(4,2)
@@ -452,6 +452,8 @@ END
 IF ~  NumTimesTalkedToGT(0)
 ~ THEN BEGIN 26
   SAY #33298
+  IF ~!NumInParty(6)
+Global("41AochaQuest","GLOBAL",3)~ THEN REPLY @40128 GOTO ZackJoin1
   IF ~  Global("41RescueQuest","GLOBAL",1)
 ~ THEN REPLY #32720 DO ~SetGlobal("41AochaQuest","GLOBAL",1)~ GOTO 9
   IF ~  RandomNum(4,1)
@@ -712,28 +714,28 @@ IF ~~ THEN BEGIN 41
 END
 
 IF ~~ THEN BEGIN ZackJoin1
-  SAY ~I can consider all sorts of things.  What do you need help with?~
-  IF ~!Global("41WesternPassDone","GLOBAL",1)~ THEN REPLY ~We intend to destroy that glacier blocking the pass.  Lord Ulbrec sent us to meet with the Neverwinter soldiers, and this ice wall is blocking the way.~ GOTO ZackJoinIceWallUp1
-  IF ~Global("41WesternPassDone","GLOBAL",1)~ THEN REPLY ~We need to send word to Targos about the Aurilites' activities here.  Without the airship we used to travel here, we'll need to make our way to Kuldahar through the Eastern Pass.  We could use your help getting there.~ GOTO ZackJoinIceWallDown
+  SAY @40129
+  IF ~!Global("41WesternPassDone","GLOBAL",1)~ THEN REPLY @40130 GOTO ZackJoinIceWallUp1
+  IF ~Global("41WesternPassDone","GLOBAL",1)~ THEN REPLY @40131 GOTO ZackJoinIceWallDown
 END
 
 IF ~~ THEN BEGIN ZackJoinIceWallUp1
-  SAY ~I came here to study the glacier - the enchantments on the ice are fascinating.  I'd hate to see it fall before I had a chance to research it!~
-  IF ~~ THEN REPLY ~You'll have plenty of time to study the wall.  In fact, I don't know if we even *could* bring down the wall before we researched it.  Why not come along with us to study it?  You'll need protection from all these Aurilites.~ GOTO ZackJoinIceWallUp2
+  SAY @40132
+  IF ~~ THEN REPLY @40133 GOTO ZackJoinIceWallUp2
 END
 
 IF ~~ THEN BEGIN ZackJoinIceWallUp2
-  SAY ~Good point.  I certainly don't want to get devoured by another one of those worms, either.  I'll help you bring down the wall, as long as I have some time to take notes.  Just let me get Aocha first.~
-  IF ~~ THEN REPLY ~Aocha's coming with us?~ GOTO ZackJoinAocha1
+  SAY @40134
+  IF ~~ THEN REPLY @40135 GOTO ZackJoinAocha1
 END
 
 IF ~~ THEN BEGIN ZackJoinAocha1
-  SAY ~Of course!  She's quite friendly, though she can be quite a bruiser when we're in trouble.  I usually keep her in my pocket - she's safer there.~
-  IF ~~ THEN REPLY ~You keep a giant spider in your pocket?~ GOTO ZackJoinAocha2
+  SAY @40136
+  IF ~~ THEN REPLY @40137 GOTO ZackJoinAocha2
 END
 
 IF ~~ THEN BEGIN ZackJoinAocha2
-  SAY ~It's one of my little inventions. I designed a magical pocket for her to hide in!  It comes in handy when I need to go into town - you wouldn't believe how many people are scared of her! I also have a special formula in there, just in case she gets hurt.  Let me shrink her down and put her in my pocket, and I'll be ready to go...~
+  SAY @40138
   IF ~~ THEN DO ~FadeToColor([0.0],0)
 HideCreature("41Aocha",TRUE)
 Wait(3)
@@ -741,12 +743,12 @@ FadeFromColor([0.0],0)~ GOTO ZackJoinAocha3
 END
 
 IF ~~ THEN BEGIN ZackJoinAocha3
-  SAY ~Done!  Aocha is comfortable, and I'm all set.  Shall we?~
-  IF ~~ THEN REPLY ~Let's go.~ DO ~SetGlobal("US_Zack_Joined", "GLOBAL", 1)
+  SAY @40139
+  IF ~~ THEN REPLY #5014 DO ~SetGlobal("US_Zack_Joined", "GLOBAL", 1)
 ApplySpellRES("USZACKC",Myself)~ EXIT
 END
 
 IF ~~ THEN BEGIN ZackJoinIceWallDown
-  SAY ~Sounds like a fair trade for saving my life and Aocha, and with the ice wall broken, there's not much left for me here, anyway.  Very well, I can tag along for a while.  Just let me get Aocha first.~
-  IF ~~ THEN REPLY ~Aocha's coming with us?~ GOTO ZackJoinAocha1
+  SAY @40140
+  IF ~~ THEN REPLY @40135 GOTO ZackJoinAocha1
 END

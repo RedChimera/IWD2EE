@@ -799,6 +799,7 @@ function IEex_Chargen_RerollListener(key)
 					end
 				end
 				if panelID == 4 and ex_ability_scores_initialized then
+
 					if ex_new_ability_score_system == 1 or ex_new_ability_score_system == 2 then
 						if key == ex_chargen_reroll_key then
 							IEex_Chargen_Reroll()
@@ -827,6 +828,7 @@ function IEex_Chargen_RerollListener(key)
 								table.sort(unallocatedAbilityScores)
 							end
 						end
+
 						IEex_Chargen_UpdateAbilityScores(chargenData, share)
 					end
 				end
@@ -1180,6 +1182,105 @@ function IEex_AbilityScoreCapListener()
 	end
 end
 
+ex_reform_party_button_added = 1
+ex_reroll_buttons_added = 0
+function IEex_AddButtonListener()
+
+	-----------------------------
+	-- Add Reform Party button --
+	-----------------------------
+
+	if ex_reform_party_button_added == 0 then
+		local screenCharacter = IEex_GetEngineCharacter()
+		local characterRecordPanel = IEex_GetPanelFromEngine(screenCharacter, 2)
+		if characterRecordPanel > 0 then
+			-- Move the normal "Level Up" button over to make room
+			IEex_SetControlXY(IEex_GetControlFromPanel(characterRecordPanel, 37), 655, 361)
+		
+			IEex_AddControlOverride("GUIREC", 2, 38, "IEex_UI_Button")
+			IEex_AddControlToPanel(characterRecordPanel, {
+				["type"] = IEex_ControlStructType.BUTTON,
+				["id"] = 38,
+				["x"] = 655,
+				["y"] = 388,
+				["width"] = 117,
+				["height"] = 25,
+				["bam"] = "GBTNSTD",
+				["frameUnpressed"] = 1,
+				["framePressed"] = 2,
+				["frameDisabled"] = 3,
+			})
+			IEex_SetControlButtonText(IEex_GetControlFromPanel(characterRecordPanel, 38), IEex_FetchString(ex_tra_55904)) -- "Reform Party"
+			ex_reform_party_button_added = 1
+		end
+	end
+	if ex_reroll_buttons_added == 0 and (ex_new_ability_score_system == 1 or ex_new_ability_score_system == 2) then
+		local screenCreateChar = IEex_GetEngineCreateChar()
+		local abilitiesPanel = IEex_GetPanelFromEngine(screenCreateChar, 4)
+		if abilitiesPanel > 0 then
+			IEex_AddControlOverride("GUICG", 4, 37, "IEex_UI_Button")
+			IEex_AddControlToPanel(abilitiesPanel, {
+				["type"] = IEex_ControlStructType.BUTTON,
+				["id"] = 37,
+				["x"] = 22,
+				["y"] = 320,
+				["width"] = 253,
+				["height"] = 32,
+				["bam"] = "GBTNLRG",
+				["frameUnpressed"] = 1,
+				["framePressed"] = 2,
+				["frameDisabled"] = 3,
+			})
+			IEex_SetControlButtonText(IEex_GetControlFromPanel(abilitiesPanel, 37), IEex_FetchString(ex_tra_55757)) -- "Reroll"
+			IEex_AddControlOverride("GUICG", 4, 38, "IEex_UI_Button")
+			IEex_AddControlToPanel(abilitiesPanel, {
+				["type"] = IEex_ControlStructType.BUTTON,
+				["id"] = 38,
+				["x"] = 22,
+				["y"] = 360,
+				["width"] = 117,
+				["height"] = 25,
+				["bam"] = "GBTNSTD",
+				["frameUnpressed"] = 1,
+				["framePressed"] = 2,
+				["frameDisabled"] = 3,
+			})
+			IEex_SetControlButtonText(IEex_GetControlFromPanel(abilitiesPanel, 38), IEex_FetchString(ex_tra_55758)) -- "Store"
+			IEex_AddControlOverride("GUICG", 4, 39, "IEex_UI_Button")
+			IEex_AddControlToPanel(abilitiesPanel, {
+				["type"] = IEex_ControlStructType.BUTTON,
+				["id"] = 39,
+				["x"] = 158,
+				["y"] = 360,
+				["width"] = 117,
+				["height"] = 25,
+				["bam"] = "GBTNSTD",
+				["frameUnpressed"] = 1,
+				["framePressed"] = 2,
+				["frameDisabled"] = 3,
+			})
+			IEex_SetControlButtonText(IEex_GetControlFromPanel(abilitiesPanel, 39), IEex_FetchString(ex_tra_55759)) -- "Recall"
+			if ex_new_ability_score_system == 1 then
+				IEex_AddControlOverride("GUICG", 4, 40, "IEex_UI_Button")
+				IEex_AddControlToPanel(abilitiesPanel, {
+					["type"] = IEex_ControlStructType.BUTTON,
+					["id"] = 40,
+					["x"] = 22,
+					["y"] = 393,
+					["width"] = 253,
+					["height"] = 32,
+					["bam"] = "GBTNLRG",
+					["frameUnpressed"] = 1,
+					["framePressed"] = 2,
+					["frameDisabled"] = 3,
+				})
+				IEex_SetControlButtonText(IEex_GetControlFromPanel(abilitiesPanel, 40), IEex_FetchString(ex_tra_55760)) -- "Reallocate"
+			end
+			ex_reroll_buttons_added = 1
+		end
+	end
+end
+
 function IEex_Scroll_InputStateListener()
 
 end
@@ -1190,7 +1291,8 @@ function IEex_Scroll_RegisterListeners()
 	IEex_AddKeyPressedListener("IEex_ArcaneSightListener")
 	IEex_AddKeyPressedListener("IEex_Scroll_KeyPressedListener")
 	IEex_AddKeyReleasedListener("IEex_Scroll_KeyReleasedListener")
-	IEex_AddKeyReleasedListener("IEex_Chargen_RerollListener")
+--	IEex_AddKeyReleasedListener("IEex_Chargen_RerollListener")
+	IEex_AddInputStateListener("IEex_AddButtonListener")
 	IEex_AddInputStateListener("IEex_DeathwatchListener")
 	IEex_AddInputStateListener("IEex_AbilityScoreCapListener")
 	IEex_AddInputStateListener("IEex_Chargen_ExtraFeatListener")

@@ -23,7 +23,7 @@ IF ~~ THEN BEGIN 1
   IF ~  CheckSkillGT(Protagonist,3,Diplomacy)
 ~ THEN REPLY #36501 DO ~AddXpVar("Level_4_Easy",36495)
 ~ JOURNAL #36490 GOTO 16
-  IF ~CheckSkillGT(Protagonist,6,Intimidate)~ THEN REPLY ~A truce? Interesting... we've finally found someone smart enough not to stand in our way.~ GOTO IntimidateXuki
+  IF ~CheckSkillGT(Protagonist,6,Intimidate)~ THEN REPLY @6011 GOTO IntimidateXuki
   IF ~  CheckSkillLT(Protagonist,4,Diplomacy)
 CheckSkillGT(Protagonist,3,Bluff)
 ~ THEN REPLY #36507 DO ~AddXpVar("Level_4_Easy",36495)
@@ -178,18 +178,18 @@ IF ~~ THEN BEGIN 16
 END
 
 IF ~~ THEN BEGIN IntimidateXuki
-  SAY ~I propose that we arrange a meeting between Lord Ulbrec and a representative of the Legion. Let us-~
-  IF ~~ THEN REPLY ~Actually, I have a better idea. Why don't you run while you still have a chance?~ GOTO IntimidateXuki2
+  SAY @6012
+  IF ~~ THEN REPLY @6013 GOTO IntimidateXuki2
 END
 
 IF ~~ THEN BEGIN IntimidateXuki2
-  SAY ~There's no need for threats. After all, you happen to be surrounded, and-~
-  IF ~~ THEN REPLY ~We just slaughtered the entire Broken Tusk Clan and killed everything else in Shaengarne Ford that tried to slow us down. This "Legion" is next on the chopping block. You can run and live another day, or we can slice you open and let you hold in your spilling guts while you watch us butcher your companions. It's up to you, Xuki.~ GOTO IntimidateXuki3
+  SAY @6014
+  IF ~~ THEN REPLY @6015 GOTO IntimidateXuki3
 END
 
 IF ~~ THEN BEGIN IntimidateXuki3
-  SAY ~I... I think my job is done here. I'm sure the Legion can handle this situation without my help.~
-  IF ~~ THEN REPLY ~Good choice.~ DO ~AddExperienceParty(2500)
+  SAY @6016
+  IF ~~ THEN REPLY @6017 DO ~AddExperienceParty(2500)
 GiveItemCreate("Misc07",Protagonist,100,0,0)
 GiveItemCreate("00ROBE04",Protagonist,0,0,0)
 GiveItemCreate("00BOOT09",Protagonist,0,0,0)

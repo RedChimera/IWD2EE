@@ -1,6 +1,7 @@
 BEGIN ~53ELDER~
 
-IF ~  NumberOfTimesTalkedTo(0)
+IF ~NumberOfTimesTalkedTo(0)
+Global("ElderBrainScared", "GLOBAL", 0)
 ~ THEN BEGIN 0
   SAY #22279
   IF ~~ THEN REPLY #22280 GOTO 1
@@ -37,7 +38,7 @@ IF ~~ THEN BEGIN 3
 END
 
 IF ~~ THEN BEGIN 4
-  SAY ~-- We find that difficult to accept.  Whether you came here seeking trouble or not, you have found it.  Farewell, humans. --~
+  SAY @6168
   IF ~  CheckSkillLT(Protagonist,12,Intimidate)
 ~ THEN DO ~Enemy()~ JOURNAL #22278 EXIT
   IF ~  CheckSkillGT(Protagonist,11,Intimidate)
@@ -73,6 +74,6 @@ IF ~  True()
 END
 
 IF ~~ THEN BEGIN 10
-  SAY ~ -- It would be unnecessary to waste effort removing a pest that would just as soon leave on its own. The gates you seek lie to the northeast.  Go there *now* - do not tarry or wander about our citadel - and do not return.  --~
+  SAY @6169
   IF ~~ THEN DO ~SetGlobal("ElderBrainScared", "GLOBAL", 1)~ EXIT
 END

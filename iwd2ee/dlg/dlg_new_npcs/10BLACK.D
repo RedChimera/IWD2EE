@@ -193,7 +193,7 @@ IF ~~ THEN BEGIN 21
   SAY #1545
   IF ~~ THEN REPLY #1546 DO ~SetGlobal("Palisade_Iron_Collar_Quest", "GLOBAL", 2)
 FaceSavedLocation(Myself)~ EXIT
-  IF ~!NumInParty(6)~ THEN REPLY ~That's not good enough.  Shawford won't be satisfied unless he sees at least one of you in person.  Follow us up to the palisade.~ DO ~SetGlobal("Palisade_Iron_Collar_Quest", "GLOBAL", 2)
+  IF ~!NumInParty(6)~ THEN REPLY @40000 DO ~SetGlobal("Palisade_Iron_Collar_Quest", "GLOBAL", 2)
 FaceSavedLocation(Myself)~ GOTO GeoffreyJoinParty1
 END
 
@@ -216,14 +216,14 @@ END
 IF ~~ THEN BEGIN 25
   SAY #28148
   IF ~~ THEN REPLY #28149 DO ~SetGlobal("Palisade_Iron_Collar_Quest", "GLOBAL", 2)FaceSavedLocation(Myself)~ EXIT
-  IF ~!NumInParty(6)~ THEN REPLY ~That's not good enough.  Shawford won't be satisfied unless he sees at least one of you in person.  Follow us up to the palisade.~ DO ~SetGlobal("Palisade_Iron_Collar_Quest", "GLOBAL", 2)
+  IF ~!NumInParty(6)~ THEN REPLY @40000 DO ~SetGlobal("Palisade_Iron_Collar_Quest", "GLOBAL", 2)
 FaceSavedLocation(Myself)~ GOTO GeoffreyJoinParty1
 END
 
 IF ~~ THEN BEGIN GeoffreyJoinParty1
-  SAY ~By the *hells* -- Fine!  Let's just get this over with.~
-  IF ~~ THEN REPLY ~Good. We need all the men we can get.~ DO ~SetGlobal("US_Geoffrey_Convinced_To_Join","GLOBAL",1)
+  SAY @40001
+  IF ~~ THEN REPLY @40002 DO ~SetGlobal("US_Geoffrey_Convinced_To_Join","GLOBAL",1)
 ApplySpellRES("USGEOFC",Myself)~ EXIT
-  IF ~~ THEN REPLY ~That's the spirit!  Now fall in line.~ DO ~SetGlobal("US_Geoffrey_Convinced_To_Join","GLOBAL",1)
+  IF ~~ THEN REPLY @40003 DO ~SetGlobal("US_Geoffrey_Convinced_To_Join","GLOBAL",1)
 ApplySpellRES("USGEOFC",Myself)~ EXIT
 END

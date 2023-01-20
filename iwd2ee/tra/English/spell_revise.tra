@@ -807,7 +807,9 @@ Casting Time: 1
 Area of Effect: 15-foot radius
 Saving Throw: Reflex half
 
-Malavon's Rage was created by the dark elf sorcerer Malavon. It shoots darts of pure energy out from the caster's body in all directions, harming friend and foe alike. The small wedges of magic do 20-80 points of piercing damage to everything caught in their path. This spell is especially useful when a mage is surrounded by enemies. A successful Reflex save at -2 will reduce the damage done by the spell by 50%.~
+Malavon's Rage was created by the dark elf sorcerer Malavon. It shoots darts of pure energy out from the caster's body in all directions, harming friend and foe alike. The small wedges of magic do 25d4 points of piercing damage to everything caught in their path (Reflex save at -2 for half). This spell is especially useful when a mage is surrounded by enemies.
+
+Like most spells created by drow, Malavon's Rage was designed to bypass spell resistance, as drow often fight enemies that resist magic... such as other drow.~
 @1138    = ~Flaying~
 @1139    = ~Flaying
 (Necromancy) 
@@ -966,15 +968,15 @@ This spell gives the affected creature an immunity to magic that impedes movemen
 ~
 @1516    = ~Death Ward~
 @1517    = ~Death Ward 
-(Necromancy) 
+(Necromancy)
 Level: Clr 4, Drd 5, Pal 4, Helm 4
 Range: Touch
 Duration: 10 rounds / level
 Casting Time: 5
 Area of Effect: 1 creature
-Saving Throw: None 
+Saving Throw: None
 
-This spell protects the target from all forms of death magic for the duration of the spell. This includes but is not limited to Power Word Kill, Death Spell and Finger of Death.
+This spell protects the target from death magic and energy drain for the duration of the spell. This includes but is not limited to Power Word Kill, Death Spell and Finger of Death, as well as the spell Energy Drain and the attacks of wights and wraiths.
 ~
 @1518    = ~Spell Resistance~
 @1519    = ~Spell Resistance 
@@ -1572,7 +1574,7 @@ Casting Time: 5
 Area of Effect: 1 creature
 Saving Throw: Fortitude partial
 
-The spell turns a creature to dust. When cast, a ball of green energy shoots forth from the caster to the target, who will be disintegrated unless they make a Fortitude save at -2. If the victim makes their saving throw, they will only suffer 5d6 magic damage. If they fails, however, it will suffer 2d6 magic damage per caster level (max 40d6). This spell works on undead creatures.~
+The spell turns a creature to dust. When cast, a ball of green energy shoots forth from the caster to the target, who will be disintegrated unless they make a Fortitude save at -2. If the victim makes their saving throw, they will only suffer 5d6 magic damage. If they fail, however, they will suffer 2d6 magic damage per caster level (max 40d6). A party member killed by this spell cannot be raised with Raise Dead, but can still be brought back by Resurrection. This spell works on undead creatures.~
 @1696    = ~Power Word: Blind~
 @1697    = ~Power Word: Blind
 (Divination)
@@ -1793,13 +1795,13 @@ This spell calls upon unholy power to smite your enemies. Any creatures of non-e
 @1759    = ~Slay Living
 (Necromancy) 
 Level: Clr 5, Talos 5
-Range: Touch 
+Range: Touch
 Duration: Instantaneous
 Casting Time: 1 round
 Area of Effect: 1 creature
 Saving Throw: Fortitude partial
 
-This spell imbues the caster's hands with destructive negative energy that will release when a successful touch attack is made. This attack will instantly slay a living creature unless a Fortitude save is made, in which case the creature takes 3d6 + 1/level points of magic damage instead. The Fortitude DC is equal to 15 plus the caster's Wisdom and Spell Focus bonuses. This spell has no effect on undead or constructs.~
+This spell imbues the caster's hands with destructive negative energy that will release when a successful touch attack is made. This attack will instantly slay a living creature unless a Fortitude save is made, in which case the creature takes 3d6 + 1/level points of magic damage instead. This spell has no effect on undead or constructs.~
 @1760    = ~Harm~
 @1761    = ~Harm 
 (Necromancy) 
@@ -1810,7 +1812,7 @@ Casting Time: 1 round
 Area of Effect: 1 creature
 Saving Throw: Fortitude negates
 
-This spell imbues the caster's hands with destructive negative energy that will release when a successful touch attack is made at +2. This attack deals magic damage equal to all but 1d4 of the target's current hit points on a failed Fortitude save. The save DC is equal to 18 plus the caster's Wisdom and Spell Focus bonuses. This spell has no effect on undead or constructs.
+This spell imbues the caster's hands with destructive negative energy that will release when a successful touch attack is made. This attack deals magic damage equal to all but 1d4 of the target's current hit points on a failed Fortitude save (made with a -2 penalty). This spell has no effect on undead or constructs.
 ~
 @1762    = ~Ice Blade~
 @1763    = ~Ice Blade
@@ -1897,7 +1899,7 @@ Casting Time: 1 round
 Area of Effect: 1 creature
 Saving Throw: Fortitude partial
 
-This spell imbues the caster's hands with divine force that will release when a successful touch attack is made. This attack will instantly destroy a target, blasting it into small chunks. A Fortitude saving throw is allowed and if successful the target takes 10d6 magic damage instead of being destroyed. The Fortitude DC is equal to 19 plus the caster's Wisdom and Spell Focus bonuses. Destruction can even destroy undead and constructs. Note that a character struck with a Destruction spell cannot be raised from the dead with a Raise Dead or Resurrection spell.
+This spell imbues the caster's hands with divine force that will release when a successful touch attack is made. This attack will instantly destroy a target, blasting it into small chunks. A Fortitude saving throw with a -2 penalty is allowed and if successful the target takes 10d6 magic damage instead of being destroyed. Destruction can even destroy undead and constructs. Note that a character struck with a Destruction spell cannot be raised with a Raise Dead spell; a more powerful Resurrection spell will be needed to restore the character's body.
 ~
 @1775    = ~Control Undead~
 @1776    = ~Control Undead 
@@ -2733,6 +2735,263 @@ This ability may be used as a free action.~
 Using this ability causes the character to gain a +25 bonus to all saving throws for 1 round. Only one of the three Moment of Prescience abilities can be used.
 
 This ability may be used as a free action.~
+@30146=~Not knowing how to do anything else with the gem, you shatter it and the soul is freed.~
+@30147=~What will you do with the soul gem?~
+@30148=~Increase an ability score.~
+@30149=~Recharge a magic item.~
+@30150=~Shatter it and free the soul.~
+@30151=~Which ability score?~
+@30152=~Strength.~
+@30153=~Dexterity.~
+@30154=~Constitution.~
+@30155=~Intelligence.~
+@30156=~Wisdom.~
+@30157=~Charisma.~
+@30158=~Which item will you recharge?~
+@30159=~I am the channel through which your wish shall be fulfilled. You may wish to duplicate a spell less powerful than the one you just cast, or you may wish for an effect that can only be chosen once. You have three one-time wishes remaining.~
+@30160=~I am the channel through which your wish shall be fulfilled. You may wish to duplicate a spell less powerful than the one you just cast, or you may wish for an effect that can only be chosen once. You have two one-time wishes remaining.~
+@30161=~I am the channel through which your wish shall be fulfilled. You may wish to duplicate a spell less powerful than the one you just cast, or you may wish for an effect that can only be chosen once. You have one one-time wish remaining.~
+@30162=~I am the channel through which your wish shall be fulfilled. You have no one-time wishes remaining, so you may only choose to duplicate a spell.~
+@30163=~I wish to cast a spell...~
+@30164=~I will make a one-time wish...~
+@30165=~I am forbidden from granting wishes to minions, amusing as that may be.~
+@30166=~... to become stronger.~
+@30167=~... to become more agile.~
+@30168=~... to become tougher.~
+@30169=~... to become smarter.~
+@30170=~... to become wiser.~
+@30171=~... to become more charismatic.~
+@30172=~... to obtain a powerful magic item.~
+@30173=~... to become rich.~
+@30174=~... to regain all my memorized spells, as if I had slept 8 hours.~
+@30175=~... to cast an epic spell called...~
+//The strings below are of epic spell names; they should have the same name as in creature_rebalancing.tra (TRA range @21001 - @21099) but with punctuation added.
+@30176=~... Animus Blast.~
+@30177=~... Animus Blizzard.~
+@30178=~... Create Winterwight.~
+@30179=~... Epic Mage Armor.~
+@30180=~... Epic Warding.~
+@30181=~... Many Missiles.~
+@30182=~... Mass Energy Drain.~
+@30183=~... Pestilence.~
+@30184=~... Souleating Weapon.~
+@30185=~... Xvimian Storm.~
+
+@30186=~Then so you shall.~
+@30187=~Then you shall have it.~
+@30188=~Rich you shall become!~
+@30189=~...~
+@30190=~... of 1st-level called...~
+@30191=~... of 2nd-level called...~
+@30192=~... of 3rd-level called...~
+@30193=~... of 4th-level called...~
+@30194=~... of 5th-level called...~
+@30195=~... of 6th-level called...~
+@30196=~... of 7th-level called...~
+@30197=~... of 8th-level called...~
+//The strings below are of spell names; they should have the same name as in spell_revise.tra (if you don't find the spell in spell_revise.tra, then use the name from the vanilla game) but with punctuation added.
+@30198=~... Deathwatch.~
+@30199=~... Grease.~
+@30200=~... Identify Creature.~
+@30201=~... Jump.~
+@30202=~... Mage Armor.~
+@30203=~... Perception Filter.~
+@30204=~... Protection from Evil.~
+@30205=~... Protection from Petrification.~
+@30206=~... Reflect Attack.~
+@30207=~... Reflected Image.~
+@30208=~... Shield.~
+@30209=~... Sleep.~
+@30210=~... Summon Monster I.~
+@30211=~... True Strike.~
+@30212=~... Arcane Sight.~
+@30213=~... Blur.~
+@30214=~... Cat's Grace.~
+@30215=~... Darkness.~
+@30216=~... Death Armor.~
+@30217=~... Decastave.~
+@30218=~... Dispel Illusions.~
+@30219=~... Eagle's Splendor.~
+@30220=~... Gedlee's Electric Loop.~
+@30221=~... Horror.~
+@30222=~... Invisibility.~
+@30223=~... Levitate.~
+@30224=~... Luck.~
+@30225=~... Minor Elemental Barrier.~
+@30226=~... Mirror Image.~
+@30227=~... Ox's Fortitude.~
+@30228=~... Protection from Arrows.~
+@30229=~... Remove Fear.~
+@30230=~... Snilloc's Snowball Swarm.~
+@30231=~... Summon Monster II.~
+@30232=~... Vocalize.~
+@30233=~... Web.~
+@30234=~... Animate Skeleton.~
+@30235=~... Animate Zombie.~
+@30236=~... Blink.~
+@30237=~... Dispel Magic.~
+@30238=~... Emotion: Rage.~
+@30239=~... Enlarge Creature.~
+@30240=~... Fireball.~
+@30241=~... Fly.~
+@30242=~... Ghost Armor.~
+@30243=~... Haste.~
+@30244=~... Hold Person.~
+@30245=~... Invisibility Sphere.~
+@30246=~... Melf's Minute Meteors.~
+@30247=~... Moment of Prescience.~
+@30248=~... Nondetection.~
+@30249=~... Protection from Cold.~
+@30250=~... Protection from Fire.~
+@30251=~... Remove Magic.~
+@30252=~... Skull Trap.~
+@30253=~... Slow.~
+@30254=~... Stinking Cloud.~
+@30255=~... Summon Monster III.~
+@30256=~... Break Enchantment.~
+@30257=~... Carrion Summons.~
+@30258=~... Confusion.~
+@30259=~... Emotion: Fear.~
+@30260=~... Fire Shield (Blue).~
+@30261=~... Fire Shield (Red).~
+@30262=~... Ghoulish Feast.~
+@30263=~... Giant Vermin.~
+@30264=~... Ice Storm.~
+@30265=~... Improved Invisibility.~
+@30266=~... Magic Circle Against Evil.~
+@30267=~... Malison.~
+@30268=~... Minor Globe of Invulnerability.~
+@30269=~... Otiluke's Resilient Sphere.~
+@30270=~... Polymorph Self.~
+@30271=~... Shadow Conjuration.~
+@30272=~... Spider Spawn.~
+@30273=~... Spirit Armor.~
+@30274=~... Stoneskin.~
+@30275=~... Suffocate.~
+@30276=~... Summon Monster IV.~
+@30277=~... Teleport Field.~
+@30278=~... Wall of Fire.~
+@30279=~... Ball Lightning.~
+@30280=~... Cloudkill.~
+@30281=~... Ghostform.~
+@30282=~... Greater Shadow Conjuration.~
+@30283=~... Hold Monster.~
+@30284=~... Lesser Planar Binding: Air Elemental.~
+@30285=~... Lesser Planar Binding: Earth Elemental.~
+@30286=~... Lesser Planar Binding: Fire Elemental.~
+@30287=~... Lesser Planar Binding: Water Elemental.~
+@30288=~... Phantom Blade.~
+@30289=~... Protection from Acid.~
+@30290=~... Protection from Electricity.~
+@30291=~... Protection from Magic Energy.~
+@30292=~... Rewind Time.~
+@30293=~... Shroud of Flame.~
+@30294=~... Spell Shield.~
+@30295=~... Sunfire.~
+@30296=~... Summon Monster V.~
+@30297=~... Summon Shadow.~
+@30298=~... Symbol of Pain.~
+@30299=~... Antimagic Field.~
+@30300=~... Boulder Roll.~
+@30301=~... Chaos.~
+@30302=~... Circle of Death.~
+@30303=~... Darts of Bone.~
+@30304=~... Death Fog.~
+@30305=~... Globe of Invulnerability.~
+@30306=~... Lich Touch.~
+@30307=~... Mass Haste.~
+@30308=~... Planar Binding: Air Elemental.~
+@30309=~... Planar Binding: Earth Elemental.~
+@30310=~... Planar Binding: Fire Elemental.~
+@30311=~... Planar Binding: Water Elemental.~
+@30312=~... Shades.~
+@30313=~... Soul Eater.~
+@30314=~... Spellstaff.~
+@30315=~... Summon Invisible Stalker.~
+@30316=~... Summon Monster VI.~
+@30317=~... Summon Shadow.~
+@30318=~... Tenser's Transformation.~
+@30319=~... Trollish Fortitude.~
+@30320=~... True Seeing.~
+@30321=~... Wyvern Call.~
+@30322=~... Acid Storm.~
+@30323=~... Banishment.~
+@30324=~... Cacofiend.~
+@30325=~... Control Undead.~
+@30326=~... Death Ward.~
+@30327=~... Delayed Blast Fireball.~
+@30328=~... Forcecage.~
+@30329=~... Malavon's Rage.~
+@30330=~... Mantle.~
+@30331=~... Mass Invisibility.~
+@30332=~... Mordenkainen's Sword.~
+@30333=~... Omnipresence.~
+@30334=~... Repulsion.~
+@30335=~... Seven Eyes.~
+@30336=~... Skeleton Traps.~
+@30337=~... Skip Time.~
+@30338=~... Spell Sequencer.~
+@30339=~... Spell Turning.~
+@30340=~... Stygian Ice Storm.~
+@30341=~... Summon Djinni.~
+@30342=~... Summon Efreeti.~
+@30343=~... Summon Monster VII.~
+@30344=~... Sympathy.~
+@30345=~... Vipergout.~
+@30346=~... Contagious Fear.~
+@30347=~... Elemental Barrier.~
+@30348=~... Fiery Cloud.~
+@30349=~... Horrid Wilting.~
+@30350=~... Iron Body.~
+@30351=~... Living Lightning.~
+@30352=~... Metafireball.~
+@30353=~... Mind Blank.~
+@30354=~... Otto's Irresistible Spin.~
+@30355=~... Power Word: Blind.~
+@30356=~... Reverse Gravity.~
+@30357=~... Simulacrum.~
+@30358=~... Spell Trap.~
+@30359=~... Summon Fiend.~
+@30360=~... Summon Monster VIII.~
+@30361=~... Symbol of Death.~
+@30362=~... Symbol of Hopelessness.~
+@30363=~... Symbol of Stunning.~
+@30364=~... Teleport Step.~
+@30365=~~
+@30366=~~
+@30367=~~
+@30368=~~
+@30369=~~
+@30370=~~
+@30371=~~
+@30372=~~
+@30373=~~
+@30374=~~
+@30375=~~
+@30376=~~
+@30377=~~
+@30378=~~
+@30379=~~
+@30380=~~
+@30381=~~
+@30382=~~
+@30383=~~
+@30384=~~
+@30385=~~
+@30386=~~
+@30387=~~
+@30388=~~
+@30389=~~
+@30390=~~
+@30391=~~
+@30392=~~
+@30393=~~
+@30394=~~
+@30395=~~
+@30396=~~
+@30397=~~
+@30398=~~
+@30399=~~
 @31105     = ~Entangle~
 @32105     = ~Entangle
 (Transmutation) 
@@ -2928,7 +3187,7 @@ This spell summons one or more creatures of nature who will aid the caster for t
 @32408     = ~Magic Circle Against Evil
 (Abjuration) [Good]
 Level: Clr 4, Pal 4, Sor/Wiz 4, Ilmater 3
-Range: Touch 
+Range: Caster
 Duration: 1 minute/level
 Casting Time: 7
 Area of Effect: 10-foot radius
@@ -4768,7 +5027,7 @@ Casting Time: 12
 Area of Effect: 40-foot radius
 Saving Throw: Fortitude half
 
-Malavon's Corrosive Fog is another spell created by the dark elf sorcerer Malavon. It creates an enormous cloud of acid fog that lingers for a long time. Each round, any creature in the fog takes 10d6 acid damage (Fortitude save for half).~
+Malavon's Corrosive Fog is another spell created by the dark elf sorcerer Malavon. It creates an enormous cloud of acid fog that lingers for a long time. Each round, any creature in the fog takes 12d6 acid damage (Fortitude save for half).The target's Spell Resistance, if any, does not affect this spell.~
 @37956     = ~Lightning Spiral~
 @38956     = ~Lightning Spiral
 (Evocation)

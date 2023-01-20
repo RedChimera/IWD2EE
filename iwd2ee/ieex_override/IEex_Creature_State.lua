@@ -225,6 +225,7 @@ function IEex_Extern_OnPostCreatureProcessEffectList(creatureData)
 	if ex_cre_initializing[targetID] then
 		ex_cre_initializing[targetID] = nil
 		if targetID == IEex_GetActorIDCharacter(0) then
+			ex_reform_party_button_added = 0
 			for bt = 0, 30, 1 do
 				ex_global_effect_timers[bt + 1] = IEex_GetGlobal("EX_GLOBEF" .. bt)
 			end
@@ -370,7 +371,7 @@ function IEex_Extern_OnPostCreatureProcessEffectList(creatureData)
 		end
 	end
 	extraFlags = IEex_ReadDword(creatureData + 0x740)
-	if bit.band(extraFlags, 0x6000) == 0x4000 and IEex_ReadSignedByte(creatureData + 0x5622, 0x0) < 0 and not usedFunction and not IEex_IsPartyMember(targetID) and IEex_CheckGlobalEffect(0xFFFFFFFF) == false then return end
+	if bit.band(extraFlags, 0x6100) == 0x4000 and IEex_ReadSignedByte(creatureData + 0x5622, 0x0) < 0 and not usedFunction and not IEex_IsPartyMember(targetID) and IEex_CheckGlobalEffect(0xFFFFFFFF) == false then return end
 
 --[[
 	local areaData = IEex_ReadDword(creatureData + 0x12)

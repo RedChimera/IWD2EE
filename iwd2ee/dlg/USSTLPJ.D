@@ -1,11 +1,11 @@
 BEGIN ~USSTLPJ~
 
 IF ~~ THEN BEGIN 0
-  SAY ~We have not had time to review the spell ourselves. Our diviner will be here tomorrow and then-~
+  SAY @6203
   IF ~~ THEN EXTERN ~USSTLPI~ 1
 END
 
 IF ~~ THEN BEGIN 1
-  SAY ~Izbelah, this... Oh. We seem to have visitors. Excuse me, who are you?~
-  IF ~~ THEN REPLY ~We're here for the sorceress. We can't let you cast that spell, Izbelah.~ EXTERN ~USSTLPI~ 3
+  SAY @6207
+  IF ~~ THEN REPLY @6208 EXTERN ~USSTLPI~ 3
 END

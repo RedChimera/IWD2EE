@@ -384,15 +384,15 @@ GlobalGT("Goblin_Palisade_Quest","GLOBAL",0)
 Global("USGUTHMA_FRIEND","GLOBAL",1)
 Global("D_Congrats","GLOBAL",0)
 ~ THEN BEGIN 35
-  SAY ~I heard you struck a deal with goblin leader.  Not exactly what we're paying you for, is it?~
+  SAY @6000
   IF ~  Global("Dock_Goblin_Quest","GLOBAL",1)
 Global("Know_Deirdre_Store","GLOBAL",0)
-~ THEN REPLY ~We're paid to protect Targos, and we did it.  What is this place?~ DO ~SetGlobal("D_Congrats", "GLOBAL", 1)~ GOTO 9
+~ THEN REPLY @6001 DO ~SetGlobal("D_Congrats", "GLOBAL", 1)~ GOTO 9
   IF ~  Global("Know_Deirdre_Store","GLOBAL",1)
-~ THEN REPLY ~We're paid to protect Targos, and we did it.  What is this place again?~ DO ~SetGlobal("D_Congrats", "GLOBAL", 1)~ GOTO 9
+~ THEN REPLY @6002 DO ~SetGlobal("D_Congrats", "GLOBAL", 1)~ GOTO 9
   IF ~  Global("Know_Deirdre_Store","GLOBAL",0)
 ~ THEN REPLY #15740 DO ~SetGlobal("D_Congrats", "GLOBAL", 1)~ GOTO 10
-  IF ~~ THEN REPLY ~Don't question my methods.  I risked my life striking that deal, and now I need supplies.~ DO ~SetGlobal("D_Congrats", "GLOBAL", 1)~ GOTO 10
+  IF ~~ THEN REPLY @6003 DO ~SetGlobal("D_Congrats", "GLOBAL", 1)~ GOTO 10
   IF ~~ THEN REPLY #15723 DO ~SetGlobal("D_Congrats", "GLOBAL", 1)~ EXIT
 END
 

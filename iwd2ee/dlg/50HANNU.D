@@ -48,6 +48,6 @@ IF WEIGHT #1 ~  !CurrentAreaIs(Myself,5000)
 END
 
 IF ~~ THEN BEGIN 8
-  SAY ~Wait!  Don't let her--ack!  Urk... *gurgle*...~
+  SAY @6059
   IF ~~ THEN DO ~Kill(Myself)~ EXIT
 END

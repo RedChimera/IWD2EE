@@ -131,7 +131,7 @@ Global("50Sorcery","GLOBAL",0)
   IF ~GlobalGT("50Sorcery","GLOBAL",0)
 ~ THEN REPLY #14160 EXIT
   IF ~!NumInParty(6)
-Global("50Sorcery", "GLOBAL", 2)~ THEN REPLY ~Actually, I was wondering if you would be willing to join our group.  We have room for a budding sorceress.~ GOTO PairiJoin1
+Global("50Sorcery", "GLOBAL", 2)~ THEN REPLY @40141 GOTO PairiJoin1
 END
 
 IF ~~ THEN BEGIN 6
@@ -141,7 +141,7 @@ IF ~~ THEN BEGIN 6
   IF ~~ THEN REPLY #14186 GOTO 8
   IF ~~ THEN REPLY #14187 GOTO 9
   IF ~!NumInParty(6)
-Global("50Sorcery", "GLOBAL", 2)~ THEN REPLY ~Why wait?  We have room for another sorcerer in our group.  You could come along with us.~ GOTO PairiJoin1
+Global("50Sorcery", "GLOBAL", 2)~ THEN REPLY @40142 GOTO PairiJoin1
 END
 
 IF ~~ THEN BEGIN 7
@@ -191,7 +191,7 @@ Global("50Sorcery","GLOBAL",0)
   IF ~GlobalGT("50Sorcery","GLOBAL",0)
 ~ THEN REPLY #14190 EXIT
   IF ~!NumInParty(6)
-Global("50Sorcery", "GLOBAL", 2)~ THEN REPLY ~If you want to learn more about magic, we have room for another sorcerer in our group.  You could come along with us.~ GOTO PairiJoin1
+Global("50Sorcery", "GLOBAL", 2)~ THEN REPLY @40143 GOTO PairiJoin1
 END
 
 IF ~~ THEN BEGIN 10
@@ -200,7 +200,7 @@ IF ~~ THEN BEGIN 10
 ~ THEN REPLY #14194 DO ~SetGlobal("50Sorcery", "GLOBAL", 0)~ GOTO 11
   IF ~  CheckStatGT(Protagonist,8,CLASSLEVELSORCERER)
 ~ THEN REPLY #14195 GOTO 12
-  IF ~!NumInParty(6)~ THEN REPLY ~If you want to learn more about magic, we have room for another sorcerer in our group.  You could come along with us.~ GOTO PairiJoin1
+  IF ~!NumInParty(6)~ THEN REPLY @40143 GOTO PairiJoin1
   IF ~~ THEN REPLY #14196 GOTO 11
   IF ~~ THEN REPLY #14197 DO ~SetGlobal("50Sorcery", "GLOBAL", 0)~ EXIT
 END
@@ -239,7 +239,7 @@ Global("50PairiQ","GLOBAL",0)
 ~ THEN REPLY #14165 DO ~SetGlobal("50PairiQ", "GLOBAL", 1)~ GOTO 4
   IF ~~ THEN REPLY #14138 GOTO 3
   IF ~!NumInParty(6)
-Global("50Sorcery", "GLOBAL", 2)~ THEN REPLY ~If you want to learn more, we have room for another sorcerer on our travels.  You could join us, if you want.~ GOTO PairiJoin1
+Global("50Sorcery", "GLOBAL", 2)~ THEN REPLY @40144 GOTO PairiJoin1
   IF ~~ THEN REPLY #14203 EXIT
 END
 
@@ -371,28 +371,22 @@ Global("50Sorcery","GLOBAL",0)
 END
 
 IF ~~ THEN BEGIN PairiSorceryNew
-  SAY ~Wait!  I must ask... there is magic - sorcery - coursing through my blood.  No one here can teach me, but I don't wish to leave the village on my own just yet.  Can you help me?~
-  IF ~!NumInParty(6)~ THEN REPLY ~If you want to learn more about magic, we have room for a sorcerer in our group.  You could come along with us.~ GOTO PairiJoin1
+  SAY @40145
+  IF ~!NumInParty(6)~ THEN REPLY @40146 GOTO PairiJoin1
   IF ~~ THEN REPLY #14196 GOTO 11
   IF ~~ THEN REPLY #14197 DO ~SetGlobal("50Sorcery", "GLOBAL", 0)~ EXIT
 END
 
 IF ~~ THEN BEGIN PairiJoin1
-  SAY ~You would take me with you?  I don't know what to say -- this is so exciting!~
-  IF ~~ THEN REPLY ~Just say yes.~ GOTO PairiJoin2
-  IF ~~ THEN REPLY ~It could be dangerous.  You'd learn a lot, but you'd be taking a lot of risks, too.  Are you sure you're up to it?~ GOTO PairiJoin2
+  SAY @40147
+  IF ~~ THEN REPLY @40148 GOTO PairiJoin2
+  IF ~~ THEN REPLY @40149 GOTO PairiJoin2
 END
 
 IF ~~ THEN BEGIN PairiJoin2
-  SAY ~Yes!  Yes, I'll do it!  I can't wait to get started.  All the places we'll go, all the things we'll see...~
-  IF ~~ THEN REPLY ~Welcome to the group, Pairi.  You're now one of the heroes of Targos.~ DO ~SetGlobal("US_Pairi_Joined", "GLOBAL", 1)
+  SAY @40150
+  IF ~~ THEN REPLY @40151 DO ~SetGlobal("US_Pairi_Joined", "GLOBAL", 1)
 ApplySpellRES("USPAIRC",Myself)~ EXIT
-  IF ~~ THEN REPLY ~Fall in line, Pairi.  We've got a long march ahead of us.~ DO ~SetGlobal("US_Pairi_Joined", "GLOBAL", 1)
+  IF ~~ THEN REPLY @40152 DO ~SetGlobal("US_Pairi_Joined", "GLOBAL", 1)
 ApplySpellRES("USPAIRC",Myself)~ EXIT
-END
-
-IF ~~ THEN BEGIN PairiJoin3
-  SAY ~You would take me with you?  I don't know what to say -- this is so exciting!~
-  IF ~~ THEN REPLY ~Just say yes.~ GOTO PairiJoin2
-  IF ~~ THEN REPLY ~It could be dangerous.  You'd learn a lot, but you'd be taking a lot of risks, too.  Are you sure you're up to it?~ GOTO PairiJoin2
 END

@@ -2,92 +2,62 @@ BEGIN ~41XHAAN~
 
 IF WEIGHT #0 ~Global("US_Xhaan_Promise","GLOBAL",1)
 Global("US_Xhaan_Promise_Join","GLOBAL",1)~ THEN BEGIN XhaanJoin1
-  SAY ~Thankfully, a disease has been purged from my mind, like ice inside a blazing inferno.  You have lived up to your end of the bargain, mortal, and I shall live up to mine.  I shall help you bring down this Legion.~
-  IF ~!NumInParty(6)~ THEN REPLY ~I knew you would.  Shall we?~ DO ~SetGlobal("US_Xhaan_Joined", "GLOBAL", 1)
+  SAY @40104
+  IF ~!NumInParty(6)~ THEN REPLY @40105 DO ~SetGlobal("US_Xhaan_Joined", "GLOBAL", 1)
 ApplySpellRES("USXHAAC",Myself)~ EXIT
-  IF ~NumInParty(6)~ THEN REPLY ~We no longer have room for you in our group, devil.  Take your freedom and go.~ GOTO XhaanJoin1Refuse
+  IF ~NumInParty(6)~ THEN REPLY @40106 GOTO XhaanJoin1Refuse
 END
 
 IF ~~ THEN BEGIN XhaanJoin1Refuse
-  SAY ~Very well.  Good luck, mortal -- you may well need it.~
-  IF ~~ THEN REPLY ~Farewell, Xhaan.~ EXIT
+  SAY @40107
+  IF ~~ THEN REPLY @40108 EXIT
 END
 
 IF ~~ THEN BEGIN XhaanAsk1
-  SAY ~I can offer many things, mortal.  What is it that you want?~
-  IF ~!NumInParty(6)~ THEN REPLY ~An ally.  If I set you free, then you will join me and help me defeat the Legion of the Chimera.~ DO ~SetGlobal("US_Xhaan_Promise_Join","GLOBAL",1)~ GOTO XhaanAskJoin
-  IF ~~ THEN REPLY ~Gold.  That is the price of your freedom.~ GOTO XhaanAskGold
-  IF ~~ THEN REPLY ~Power.  I will trade your freedom for a portion of your life force.~ GOTO XhaanAskXP
+  SAY @40109
+  IF ~!NumInParty(6)~ THEN REPLY @40110 DO ~SetGlobal("US_Xhaan_Promise_Join","GLOBAL",1)~ GOTO XhaanAskJoin
+  IF ~~ THEN REPLY @40111 GOTO XhaanAskGold
+  IF ~~ THEN REPLY @40112 GOTO XhaanAskXP
 END
 
 IF ~~ THEN BEGIN XhaanAskJoin
-  SAY ~The Legion is responsible for our imprisonment.  I would gladly aid in their destruction.  I agree to your terms.~
+  SAY @40113
   IF ~GlobalLT("41XhaanMindQuest","GLOBAL",3)
 Global("CagedFury_dead","GLOBAL",1)
-~ THEN REPLY ~It is done, then.  I have already banished Aeij-Kllenzr't - Caged Fury.  He was the spirit of a tempest bound to an altar downstairs.~ GOTO XhaanJoin1
-  IF ~~ THEN REPLY ~Excellent.  I will return when the task is done.~ DO ~SetGlobal("US_Xhaan_Promise","GLOBAL",1)~ EXIT
+~ THEN REPLY @40114 GOTO XhaanJoin1
+  IF ~~ THEN REPLY @40115 DO ~SetGlobal("US_Xhaan_Promise","GLOBAL",1)~ EXIT
 END
 
 IF ~~ THEN BEGIN XhaanAskGold
-  SAY ~Mortals are ever predictable.  With my freedom, I could grant this wish -- a thousand gold pieces, in the local coin.~
+  SAY @40116
   IF ~GlobalLT("41XhaanMindQuest","GLOBAL",3)
 Global("CagedFury_dead","GLOBAL",1)
-~ THEN REPLY ~It is done, then.  I have already banished Aeij-Kllenzr't - Caged Fury.  He was the spirit of a tempest bound to an altar downstairs.~ GOTO XhaanGold1
-  IF ~~ THEN REPLY ~Excellent.  I will return when the task is done.~ DO ~SetGlobal("US_Xhaan_Promise","GLOBAL",1)~ EXIT
+~ THEN REPLY @40114 GOTO XhaanTrick1
+  IF ~~ THEN REPLY @40115 DO ~SetGlobal("US_Xhaan_Promise","GLOBAL",1)~ EXIT
 END
 
 IF ~~ THEN BEGIN XhaanAskXP
-  SAY ~Of all things, an adventurer can appreciate the allure of power.  With my freedom, I could grant this wish -- a portion of my life force, transferred from my being to yours.~
+  SAY @40117
   IF ~GlobalLT("41XhaanMindQuest","GLOBAL",3)
 Global("CagedFury_dead","GLOBAL",1)
-~ THEN REPLY ~It is done, then.  I have already banished Aeij-Kllenzr't - Caged Fury.  He was the spirit of a tempest bound to an altar downstairs.~ GOTO XhaanXP1
-  IF ~~ THEN REPLY ~Excellent.  I will return when the task is done.~ DO ~SetGlobal("US_Xhaan_Promise","GLOBAL",1)~ EXIT
-END
-
-IF ~~ THEN BEGIN XhaanGold1
-  SAY ~Thankfully, a disease has been purged from my mind, like ice inside a blazing inferno.  It's time to awaken the spawns of the Hells, so I must bid you farewell.~
-  IF ~~ THEN REPLY ~What of my reward?~ GOTO XhaanGold2
-END
-
-IF ~~ THEN BEGIN XhaanGold2
-  SAY ~I promised you nothing, mortal -- I merely said I had the *power* to grant your request.  But I am grateful, so here is a parting gift, along with my thanks.  Do with it what you will.~
-  IF ~~ THEN REPLY ~Very well.  A fair trade nonetheless.~ DO ~AddXpVar("Level_8_Hard",31586)
-SetGlobal("41XhaanMindQuest", "GLOBAL", 3)
-GiveItemCreate("Misc07",Protagonist,250,0,0)~ EXIT
-  IF ~~ THEN REPLY ~I should have expected no less from a devil.  Take your freedom and begone.~ DO ~AddXpVar("Level_8_Hard",31586)
-SetGlobal("41XhaanMindQuest", "GLOBAL", 3)
-GiveItemCreate("Misc07",Protagonist,250,0,0)~ EXIT
-END
-
-IF ~~ THEN BEGIN XhaanXP1
-  SAY ~Thankfully, a disease has been purged from my mind, like ice inside a blazing inferno.  It's time to awaken the spawns of the Hells, so I must bid you farewell.~
-  IF ~~ THEN REPLY ~What of my reward?~ GOTO XhaanGold2
-END
-
-IF ~~ THEN BEGIN XhaanXP2
-  SAY ~I promised you nothing, mortal -- I merely said I had the *power* to grant your request.  But I am grateful, so here is a parting gift, along with my thanks.  Do with it what you will.~
-  IF ~~ THEN REPLY ~Very well.  A fair trade nonetheless.~ DO ~AddXpVar("Level_8_Hard",31586)
-SetGlobal("41XhaanMindQuest", "GLOBAL", 3)
-GiveItemCreate("Misc07",Protagonist,250,0,0)~ EXIT
-  IF ~~ THEN REPLY ~I should have expected no less from a devil.  Take your freedom and begone.~ DO ~AddXpVar("Level_8_Hard",31586)
-SetGlobal("41XhaanMindQuest", "GLOBAL", 3)
-GiveItemCreate("Misc07",Protagonist,250,0,0)~ EXIT
+~ THEN REPLY @40114 GOTO XhaanTrick1
+  IF ~~ THEN REPLY @40115 DO ~SetGlobal("US_Xhaan_Promise","GLOBAL",1)~ EXIT
 END
 
 IF ~~ THEN BEGIN XhaanTrick1
-  SAY ~Thankfully, a disease has been purged from my mind, like ice inside a blazing inferno.  It's time to awaken the spawns of the Hells, so I must bid you farewell.~
-  IF ~~ THEN REPLY ~What of my reward?~ GOTO XhaanTrick2
+  SAY #33359
+  IF ~~ THEN REPLY @40118 GOTO XhaanTrick2
 END
 
 IF ~~ THEN BEGIN XhaanTrick2
-  SAY ~I promised you nothing, mortal -- I merely said I had the *power* to grant your request.  But I am nonetheless grateful, so here is a parting gift, along with my thanks.  Do with it what you will.~
-  IF ~~ THEN REPLY ~Very well, devil.  A fair trade.~ DO ~AddXpVar("Level_8_Hard",31586)
-SetGlobal("41XhaanMindQuest", "GLOBAL", 3)
-GiveItemCreate("Misc07",Protagonist,250,0,0)~ EXIT
-  IF ~~ THEN REPLY ~I should have expected no less from a devil.  Take your freedom and begone.~ DO ~AddXpVar("Level_8_Hard",31586)
-SetGlobal("41XhaanMindQuest", "GLOBAL", 3)
-GiveItemCreate("Misc07",Protagonist,250,0,0)~ EXIT
+  SAY @40119
+  IF ~~ THEN REPLY @40120 DO ~AddXpVar("Level_8_Hard",31586)
+SetGlobal("41XhaanMindQuest", "GLOBAL", 4)
+Enemy()~ EXIT
+  IF ~~ THEN REPLY @40121 DO ~AddXpVar("Level_8_Hard",31586)
+SetGlobal("41XhaanMindQuest", "GLOBAL", 3)~ EXIT
 END
+
 
 IF WEIGHT #3 ~  Global("CagedFury_dead","GLOBAL",0)
 Or(6)
@@ -144,19 +114,19 @@ SetGlobal("41XhaanMindQuest", "GLOBAL", 3)~ JOURNAL #31585 GOTO 9
 Global("CagedFury_dead","GLOBAL",1)
 Global("US_Xhaan_Promise","GLOBAL",1)
 Global("US_Xhaan_Promise_Join","GLOBAL",1)
-~ THEN REPLY ~We've already banished Aeij-Kllenzr't - Caged Fury.  He was the spirit of a tempest bound to an altar downstairs.~ GOTO XhaanJoin1
+~ THEN REPLY @40102 GOTO XhaanJoin1
   IF ~  GlobalLT("41XhaanMindQuest","GLOBAL",3)
 Global("CagedFury_dead","GLOBAL",1)
 Global("US_Xhaan_Promise","GLOBAL",1)
 !Global("US_Xhaan_Promise_Join","GLOBAL",1)
-~ THEN REPLY ~We've already banished Aeij-Kllenzr't - Caged Fury.  He was the spirit of a tempest bound to an altar downstairs.~ GOTO XhaanTrick1
+~ THEN REPLY @40102 GOTO XhaanTrick1
   IF ~  GlobalLT("41XhaanMindQuest","GLOBAL",3)
 !ClassEx(Protagonist,PALADIN)
 !Global("US_Xhaan_Promise","GLOBAL",1)
 Or(2)
 CheckStatGT(Protagonist,15,INT)
 CheckSkillGT(Protagonist,8,Diplomacy)
-~ THEN REPLY ~If you cannot leave until that voice is banished, perhaps we could make a deal.  What could you offer me in exchange for your freedom?~ GOTO XhaanAsk1
+~ THEN REPLY @40101 GOTO XhaanAsk1
   IF ~  GlobalLT("41XhaanMindQuest","GLOBAL",2)
 !Global("CagedFury_dead","GLOBAL",1)
 ~ THEN REPLY #33330 DO ~SetGlobal("41XhaanMindQuest", "GLOBAL", 2)~ JOURNAL #31584 GOTO 7
@@ -185,19 +155,19 @@ SetGlobal("41XhaanMindQuest", "GLOBAL", 3)~ JOURNAL #31585 GOTO 9
 Global("CagedFury_dead","GLOBAL",1)
 Global("US_Xhaan_Promise","GLOBAL",1)
 Global("US_Xhaan_Promise_Join","GLOBAL",1)
-~ THEN REPLY ~We've already banished Aeij-Kllenzr't - Caged Fury.  He was the spirit of a tempest bound to an altar downstairs.~ GOTO XhaanJoin1
+~ THEN REPLY @40102 GOTO XhaanJoin1
   IF ~  GlobalLT("41XhaanMindQuest","GLOBAL",3)
 Global("CagedFury_dead","GLOBAL",1)
 Global("US_Xhaan_Promise","GLOBAL",1)
 !Global("US_Xhaan_Promise_Join","GLOBAL",1)
-~ THEN REPLY ~We've already banished Aeij-Kllenzr't - Caged Fury.  He was the spirit of a tempest bound to an altar downstairs.~ GOTO XhaanTrick1
+~ THEN REPLY @40102 GOTO XhaanTrick1
   IF ~  GlobalLT("41XhaanMindQuest","GLOBAL",3)
 !ClassEx(Protagonist,PALADIN)
 !Global("US_Xhaan_Promise","GLOBAL",1)
 Or(2)
 CheckStatGT(Protagonist,15,INT)
 CheckSkillGT(Protagonist,8,Diplomacy)
-~ THEN REPLY ~If you cannot leave until that voice is banished, perhaps we could make a deal.  What could you offer me in exchange for your freedom?~ GOTO XhaanAsk1
+~ THEN REPLY @40102 GOTO XhaanAsk1
   IF ~  GlobalLT("41XhaanMindQuest","GLOBAL",2)
 !Global("CagedFury_dead","GLOBAL",1)
 ~ THEN REPLY #33336 DO ~SetGlobal("41XhaanMindQuest", "GLOBAL", 2)~ JOURNAL #31584 GOTO 7
@@ -246,13 +216,13 @@ SetGlobal("41XhaanMindQuest", "GLOBAL", 3)~ JOURNAL #31585 GOTO 9
 Global("CagedFury_dead","GLOBAL",1)
 Global("US_Xhaan_Promise","GLOBAL",1)
 Global("US_Xhaan_Promise_Join","GLOBAL",1)
-~ THEN REPLY ~Yes, we banished the spirit of the tempest bound to the altar below.~ DO ~AddXpVar("Level_8_Hard",31586)
+~ THEN REPLY @40103 DO ~AddXpVar("Level_8_Hard",31586)
 SetGlobal("41XhaanMindQuest", "GLOBAL", 3)~ JOURNAL #31585 GOTO XhaanJoin1
   IF ~  GlobalLT("41XhaanMindQuest","GLOBAL",3)
 Global("CagedFury_dead","GLOBAL",1)
 Global("US_Xhaan_Promise","GLOBAL",1)
 !Global("US_Xhaan_Promise_Join","GLOBAL",1)
-~ THEN REPLY ~We've already banished Aeij-Kllenzr't - Caged Fury.  He was the spirit of a tempest bound to an altar downstairs.~ GOTO XhaanTrick1
+~ THEN REPLY @40102 GOTO XhaanTrick1
   IF ~  Global("41XhaanPlayerKnowsLock","GLOBAL",1)
 OpenState("AR4101_Door13",FALSE)
 OpenState("AR4101_Door14",FALSE)
@@ -328,19 +298,19 @@ SetGlobal("41XhaanMindQuest", "GLOBAL", 3)~ JOURNAL #31585 GOTO 9
 Global("CagedFury_dead","GLOBAL",1)
 Global("US_Xhaan_Promise","GLOBAL",1)
 Global("US_Xhaan_Promise_Join","GLOBAL",1)
-~ THEN REPLY ~We've already banished Aeij-Kllenzr't - Caged Fury.  He was the spirit of a tempest bound to an altar downstairs.~ GOTO XhaanJoin1
+~ THEN REPLY @40102 GOTO XhaanJoin1
   IF ~  GlobalLT("41XhaanMindQuest","GLOBAL",3)
 Global("CagedFury_dead","GLOBAL",1)
 Global("US_Xhaan_Promise","GLOBAL",1)
 !Global("US_Xhaan_Promise_Join","GLOBAL",1)
-~ THEN REPLY ~We've already banished Aeij-Kllenzr't - Caged Fury.  He was the spirit of a tempest bound to an altar downstairs.~ GOTO XhaanTrick1
+~ THEN REPLY @40102 GOTO XhaanTrick1
   IF ~  GlobalLT("41XhaanMindQuest","GLOBAL",3)
 !ClassEx(Protagonist,PALADIN)
 !Global("US_Xhaan_Promise","GLOBAL",1)
 Or(2)
 CheckStatGT(Protagonist,15,INT)
 CheckSkillGT(Protagonist,8,Diplomacy)
-~ THEN REPLY ~If you cannot leave until that voice is banished, perhaps we could make a deal.  What could you offer me in exchange for your freedom?~ GOTO XhaanAsk1
+~ THEN REPLY @40101 GOTO XhaanAsk1
   IF ~  GlobalLT("41XhaanMindQuest","GLOBAL",2)
 !Global("CagedFury_dead","GLOBAL",1)
 ~ THEN REPLY #33330 DO ~SetGlobal("41XhaanMindQuest", "GLOBAL", 2)~ JOURNAL #31584 GOTO 7
@@ -397,19 +367,19 @@ SetGlobal("41XhaanMindQuest", "GLOBAL", 3)~ JOURNAL #31585 GOTO 9
 Global("CagedFury_dead","GLOBAL",1)
 Global("US_Xhaan_Promise","GLOBAL",1)
 Global("US_Xhaan_Promise_Join","GLOBAL",1)
-~ THEN REPLY ~We've already banished Aeij-Kllenzr't - Caged Fury.  He was the spirit of a tempest bound to an altar downstairs.~ GOTO XhaanJoin1
+~ THEN REPLY @40102 GOTO XhaanJoin1
   IF ~  GlobalLT("41XhaanMindQuest","GLOBAL",3)
 Global("CagedFury_dead","GLOBAL",1)
 Global("US_Xhaan_Promise","GLOBAL",1)
 !Global("US_Xhaan_Promise_Join","GLOBAL",1)
-~ THEN REPLY ~We've already banished Aeij-Kllenzr't - Caged Fury.  He was the spirit of a tempest bound to an altar downstairs.~ GOTO XhaanTrick1
+~ THEN REPLY @40102 GOTO XhaanTrick1
   IF ~  GlobalLT("41XhaanMindQuest","GLOBAL",3)
 !ClassEx(Protagonist,PALADIN)
 !Global("US_Xhaan_Promise","GLOBAL",1)
 Or(2)
 CheckStatGT(Protagonist,15,INT)
 CheckSkillGT(Protagonist,8,Diplomacy)
-~ THEN REPLY ~If you cannot leave until that voice is banished, perhaps we could make a deal.  What could you offer me in exchange for your freedom?~ GOTO XhaanAsk1
+~ THEN REPLY @40101 GOTO XhaanAsk1
   IF ~  GlobalLT("41XhaanMindQuest","GLOBAL",2)
 !Global("CagedFury_dead","GLOBAL",1)
 ~ THEN REPLY #33336 DO ~SetGlobal("41XhaanMindQuest", "GLOBAL", 2)~ JOURNAL #31584 GOTO 7

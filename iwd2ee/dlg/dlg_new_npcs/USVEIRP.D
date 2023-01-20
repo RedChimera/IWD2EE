@@ -1,0 +1,9 @@
+BEGIN ~USVEIRP~
+
+IF ~!InParty(Myself)
+~ THEN BEGIN 0
+  SAY @40199
+  IF ~!NumInParty(6)~ THEN REPLY @40200 DO ~JoinParty()~ EXIT
+  IF ~~ THEN REPLY @40201 EXIT
+  IF ~~ THEN REPLY @40202 DO ~DestroySelf()~ EXIT
+END

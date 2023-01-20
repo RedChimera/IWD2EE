@@ -1,9 +1,10 @@
 BEGIN ~20NEWEMM~
 
-IF WEIGHT #0 ~Global("US_VREK_JOIN","GLOBAL",1)~ THEN BEGIN VrekJoined
-  SAY ~You have returned.  How may I... is that the troll who stole my blade?~
-  IF ~~ THEN REPLY ~We required the troll's assistance for tackling the horde.  I'm sorry, but Vrek's condition was that we could not hand over the blade.  The sword is a threat to him and we cannot relinquish it.~ GOTO EmmaAttack
-  IF ~~ THEN REPLY ~Sorry, Emma, but we have a stronger ally on hand.  We can't give you the sword.  Vrek here sees it as a threat.~ GOTO EmmaAttack
+IF WEIGHT #0 ~Global("US_VREK_JOIN","GLOBAL",1)
+InParty("USVREK")~ THEN BEGIN VrekJoined
+  SAY @40034
+  IF ~~ THEN REPLY @40035 DO ~SetGlobal("SR_Emma_Revenge","GLOBAL",2)~ GOTO EmmaAttack
+  IF ~~ THEN REPLY @40036 DO ~SetGlobal("SR_Emma_Revenge","GLOBAL",2)~ GOTO EmmaAttack
 END
 
 IF WEIGHT #6 ~  NumberOfTimesTalkedTo(0)
@@ -87,9 +88,9 @@ IF ~~ THEN BEGIN 5
 END
 
 IF ~~ THEN BEGIN 6
-  SAY ~I have used most of my power journeying here and fighting these orcs.  I relied upon scrolls to make it this far.  I cannot do this on my own.  I need your aid in this matter.~
+  SAY @40022
   IF ~~ THEN REPLY #36426 DO ~SetGlobal("SR_Recover_Blade","GLOBAL", 3)~ JOURNAL #36400 GOTO 11
-  IF ~~ THEN REPLY ~A troll is a dangerous adversary.  I will consider it.~ DO ~SetGlobal("SR_Recover_Blade","GLOBAL", 3)~ JOURNAL #36400 GOTO 11
+  IF ~~ THEN REPLY @40023 DO ~SetGlobal("SR_Recover_Blade","GLOBAL", 3)~ JOURNAL #36400 GOTO 11
   IF ~  !Global("SR_Emma_Heal","GLOBAL",1)
 !ClassEx(Protagonist,PALADIN)
 !ClassEx(Protagonist,MONK)
@@ -142,7 +143,7 @@ IF ~~ THEN BEGIN 13
 GlobalLT("SR_Recover_Blade","GLOBAL",4)
 !Global("SR_Kaitlin_Fled","GLOBAL",1)
 !Global("SR_Kaitlin_Dead","GLOBAL",1)
-~ THEN REPLY ~Join us and we'll help those villagers together.~ GOTO EmmaJoin1
+~ THEN REPLY @40024 GOTO EmmaJoin1
   IF ~~ THEN REPLY #36440 EXIT
 END
 
@@ -193,7 +194,7 @@ FadeFromColor([0.0],0)~ EXIT
 Global("SR_Recover_Blade","GLOBAL",4)
 !Global("SR_Kaitlin_Fled","GLOBAL",1)
 !Global("SR_Kaitlin_Dead","GLOBAL",1)
-~ THEN REPLY ~Would you consider joining us?  The horde has laid claim to Shaengarne Bridge, and Lord Ulbrec has asked us to retake the bridge.  We would be grateful if you would lend us your assistance.~ GOTO EmmaJoin1
+~ THEN REPLY @40025 GOTO EmmaJoin1
   IF ~!NumInParty(6)
 !Global("US_VREK_JOIN","GLOBAL",1)
 GlobalLT("SR_Recover_Blade","GLOBAL",4)
@@ -247,7 +248,7 @@ IF ~~ THEN BEGIN 18
   SAY #36453
   IF ~!NumInParty(6)
 !Global("US_VREK_JOIN","GLOBAL",1)
-~ THEN REPLY ~Would you consider joining us?  The horde has laid claim to Shaengarne Bridge, and Lord Ulbrec has asked us to retake the bridge.  We would be grateful if you would lend us your assistance.~ GOTO EmmaJoin1
+~ THEN REPLY @40025 GOTO EmmaJoin1
   IF ~  !Global("SR_Emma_Heal","GLOBAL",1)
 ~ THEN REPLY #36444 DO ~StartStore("20Emma", Protagonist)~ EXIT
   IF ~  Global("SR_Emma_Heal","GLOBAL",1)
@@ -259,10 +260,10 @@ FadeFromColor([0.0],0)~ EXIT
 END
 
 IF ~~ THEN BEGIN 19
-  SAY ~Well, you will at least leave here with my blessing.  If I can be of any other aid to you, you need only ask.~
+  SAY @40026
   IF ~!NumInParty(6)
 !Global("US_VREK_JOIN","GLOBAL",1)
-~ THEN REPLY ~Would you consider joining us?  The horde has laid claim to Shaengarne Bridge, and Lord Ulbrec has asked us to retake the bridge.  We would be grateful if you would lend us your assistance.~ GOTO EmmaJoin1
+~ THEN REPLY @40025 GOTO EmmaJoin1
   IF ~  Global("SR_Emma_Heal","GLOBAL",1)
 ~ THEN REPLY #36444 DO ~StartStore("20EmDis", Protagonist)~ EXIT
   IF ~~ THEN REPLY #36445 DO ~FadeToColor([0.0],0)
@@ -280,7 +281,7 @@ IF ~~ THEN BEGIN 21
   SAY #36459
   IF ~!NumInParty(6)
 !Global("US_VREK_JOIN","GLOBAL",1)
-~ THEN REPLY ~Would you consider joining us?  The horde has laid claim to Shaengarne Bridge, and Lord Ulbrec has asked us to retake the bridge.  We would be grateful if you would lend us your assistance.~ GOTO EmmaJoin1
+~ THEN REPLY @40025 GOTO EmmaJoin1
   IF ~~ THEN REPLY #36460 EXIT
 END
 
@@ -337,37 +338,42 @@ IF ~~ THEN BEGIN 30
 END
 
 IF ~~ THEN BEGIN EmmaJoin1
-  SAY ~These orcs have concerned me as well.  If you need any assistance, I will gladly provide it.  What needs to be done?~
-  IF ~~ THEN REPLY ~We need to march to Shaengarne Bridge and drive away the orcs.  It's an important route for Targos, and we can't let it fall.~ GOTO EmmaJoin2
-  IF ~~ THEN REPLY ~Kill orcs.  Kill goblins.  Anything that gets in the way, honestly.~ GOTO EmmaJoin3
+  SAY @40027
+  IF ~~ THEN REPLY @40028 GOTO EmmaJoin2
+  IF ~~ THEN REPLY @40029 GOTO EmmaJoin3
 END
 
 IF ~~ THEN BEGIN EmmaJoin2
-  SAY ~Very well.  Lead the way and we can fight back the horde together.~
+  SAY @40030
   IF ~~ THEN DO ~SetGlobal("US_Emma_Joined", "GLOBAL", 1)
 ApplySpellRES("USEMMAC",Myself)~ EXIT
 END
 
 IF ~~ THEN BEGIN EmmaJoin3
-  SAY ~An odd way of putting it, but I am no stranger to combat.  I will do whatever it takes to keep these villagers safe.~
+  SAY @40031
   IF ~~ THEN DO ~SetGlobal("US_Emma_Joined", "GLOBAL", 1)
 ApplySpellRES("USEMMAC",Myself)~ EXIT
 END
 
 IF ~~ THEN BEGIN EmmaJoin4
-  SAY ~Yes. It would be wrong for me to just stay here and ignore their plight, even though I lack my moonblade. I will travel with you.~
+  SAY @40032
   IF ~~ THEN DO ~SetGlobal("US_Emma_Joined", "GLOBAL", 1)
 ApplySpellRES("USEMMAC",Myself)~ EXIT
 END
 
 IF ~~ THEN BEGIN EmmaJoin5
-  SAY ~Very well. Even without my moonblade, I can put up a fight. Let us go.~
+  SAY @40033
   IF ~~ THEN DO ~SetGlobal("US_Emma_Joined", "GLOBAL", 1)
 ApplySpellRES("USEMMAC",Myself)~ EXIT
 END
 
 IF ~~ THEN BEGIN EmmaAttack
-  SAY ~You traded my moonblade for the loyalty of a *troll?*  Return my sword, pig, or I will take it by force!~
-  IF ~~ THEN REPLY ~I cannot do that, priestess.  Vrek and I had a deal, and I have to set priorities.  The sword is ours now.~ DO ~Enemy()~ EXIT
-  IF ~~ THEN REPLY ~I'd like to see you try.  Vrek, shall we?~ DO ~Enemy()~ EXIT
+  SAY @40037
+  IF ~~ THEN REPLY @40038 GOTO EmmaAttack2
+  IF ~~ THEN REPLY @40039 GOTO EmmaAttack2
+END
+
+IF ~~ THEN BEGIN EmmaAttack2
+  SAY @40040
+  IF ~~ THEN REPLY @40041 DO ~StartCutScene("20cEmma2")~ EXIT
 END

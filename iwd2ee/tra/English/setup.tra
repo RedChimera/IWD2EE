@@ -89,6 +89,7 @@
 @88   = ~Adding a bunch of objects to each area in the game; this could take some time...~
 @89   = ~Add more traps~
 @90   = ~Add key bindings for automating buffing (see the readme for more information)~
+@91   = ~More Persuasion Options~
 @100  = ~IWD2EE was not uninstalled properly; the files from the previous installation are still in the override folder.
 Installing IWD2EE again without removing those files would corrupt various files.
 To install IWD2EE, do these steps in this order:

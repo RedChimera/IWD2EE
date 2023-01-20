@@ -1,8 +1,11 @@
 IEex_NEW_WEAPON_PROFICIENCY_COUNT = 3
 ex_proficiency_damage = {[0] = 0, [1] = 0, [2] = 0, [3] = 2, [4] = 2, [5] = 2}
 ex_proficiency_attack = {[0] = -4, [1] = 0, [2] = 1, [3] = 1, [4] = 1, [5] = 1}
+ex_on_join_party_special_script_1_set = {}
+ex_on_join_party_team_script_set = {}
 ex_on_join_party_dlg_set = {["DEFAULT"] = "MULTIG", }
 ex_on_leave_party_dlg_set = {["DEFAULT"] = "USMULTIG", }
+ex_timed_banter_list = {}
 ex_caster_max_spell_level = {[2] = {22, 8}, [3] = {17, 9}, [4] = {17, 9}, [7] = {17, 6}, [8] = {17, 6}, [10] = {18, 9}, [11] = {17, 9}}
 ex_subrace_name = {[0x10000] = "HUMAN", [0x10001] = "HUMAN_AASIMAR", [0x10002] = "HUMAN_TIEFLING", [0x20000] = "ELF", [0x20001] = "ELF_DROW", [0x20002] = "ELF_WILD", [0x30000] = "HALF_ELF", [0x40000] = "DWARF", [0x40001] = "DWARF_GOLD", [0x40002] = "DWARF_GRAY", [0x50000] = "HALFLING", [0x50001] = "HALFLING_STRONGHEART", [0x50002] = "HALFLING_GHOSTWISE", [0x60000] = "GNOME", [0x60001] = "GNOME_DEEP", [0x70000] = "HALF_ORC", }
 ex_extra_feat_races = {[0x10000] = 1, [0x10001] = 0, [0x10002] = 0, [0x20000] = 0, [0x20001] = 0, [0x20002] = 0, [0x30000] = 0, [0x40000] = 0, [0x40001] = 0, [0x40002] = 0, [0x50000] = 0, [0x50001] = 1, [0x50002] = 0, [0x60000] = 0, [0x60001] = 0, [0x70000] = 0, }

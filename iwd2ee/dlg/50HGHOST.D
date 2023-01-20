@@ -55,7 +55,7 @@ Kit(Player3, Mage_Diviner)
 Kit(Player4, Mage_Diviner)
 Kit(Player5, Mage_Diviner)
 Kit(Player6, Mage_Diviner)
-~ THEN REPLY ~I think we can make it through the woods.  We have divination magic at our disposal; a few auguries should keep us from getting lost.~ GOTO FellWoodSkip
+~ THEN REPLY @6060 GOTO FellWoodSkip
   IF ~!Global("USFELLWOOD_Skip","Global",1)
 Or(6)
 CheckSkillGT(Player1, 21, Wilderness_Lore)
@@ -64,17 +64,17 @@ CheckSkillGT(Player3, 21, Wilderness_Lore)
 CheckSkillGT(Player4, 21, Wilderness_Lore)
 CheckSkillGT(Player5, 21, Wilderness_Lore)
 CheckSkillGT(Player6, 21, Wilderness_Lore)
-~ THEN REPLY ~We shouldn't have any trouble making it through the woods.  We have a fair amount of experience traveling through the wilderness.~ GOTO FellWoodSkip
+~ THEN REPLY @6061 GOTO FellWoodSkip
   IF ~!Global("USFELLWOOD_Skip","Global",1)
 Or(6)
-CheckSkillGT(Player1, 26, Search)
-CheckSkillGT(Player2, 26, Search)
-CheckSkillGT(Player3, 26, Search)
-CheckSkillGT(Player4, 26, Search)
-CheckSkillGT(Player5, 26, Search)
-CheckSkillGT(Player6, 26, Search)
-~ THEN REPLY ~We can probably make it through the woods without getting lost.  I think we can make it out as long as we chart out our progress and stay alert.~ GOTO FellWoodSkip
-  IF ~Global("USSUOMA_SKIP","Global",1)~ THEN REPLY ~Suoma has already told us how to proceed.  We need to find and destroy the Dark Treants who are hiding the true path.~ GOTO FellWoodSkip2
+CheckSkillGT(Player1, 21, Search)
+CheckSkillGT(Player2, 21, Search)
+CheckSkillGT(Player3, 21, Search)
+CheckSkillGT(Player4, 21, Search)
+CheckSkillGT(Player5, 21, Search)
+CheckSkillGT(Player6, 21, Search)
+~ THEN REPLY @6062 GOTO FellWoodSkip
+  IF ~Global("USSUOMA_SKIP","Global",1)~ THEN REPLY @6063 GOTO FellWoodSkip2
   IF ~~ THEN REPLY #8446 EXIT
 END
 
@@ -145,11 +145,11 @@ SetGlobal("50HGhost", "Global", 2)~ EXIT
 END
 
 IF ~~ THEN BEGIN FellWoodSkip
-  SAY ~Be careful then, wanderer.  If you are determined to proceed, then go to the southeast exit of this clearing.  Perhaps you will have more luck than those who became before you.~
-  IF ~~ THEN REPLY ~Farewell, spirit.~ DO ~SetGlobal("USFELLWOOD_SKIP","Global",1)~ EXIT
+  SAY @6064
+  IF ~~ THEN REPLY #8450 DO ~SetGlobal("USFELLWOOD_SKIP","Global",1)~ EXIT
 END
 
 IF ~~ THEN BEGIN FellWoodSkip2
-  SAY ~Be careful then, wanderer.  If you are determined to proceed, then go to the southeast exit of this clearing.  Perhaps you will have more luck than those who became before you.~
-  IF ~~ THEN REPLY ~Farewell, spirit.~ EXIT
+  SAY @6064
+  IF ~~ THEN REPLY #8450 EXIT
 END

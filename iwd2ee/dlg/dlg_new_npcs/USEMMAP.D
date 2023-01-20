@@ -1,0 +1,8 @@
+BEGIN ~USEMMAP~
+
+IF ~!InParty(Myself)
+~ THEN BEGIN 0
+  SAY @40203
+  IF ~!NumInParty(6)~ THEN REPLY @40204 DO ~JoinParty()~ EXIT
+  IF ~~ THEN REPLY @40205 EXIT
+END

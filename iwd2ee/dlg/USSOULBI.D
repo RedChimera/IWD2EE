@@ -3,165 +3,165 @@ BEGIN ~USSOULBI~
 IF WEIGHT #0 ~NumTimesTalkedTo(0)
 !IEex_LuaTrigger("return IEex_KnowsSpell(LastSummonerOf(Myself), 6963)")
 !Race(Protagonist,TANARI)~ THEN BEGIN SoulGemShatter
-  SAY ~Not knowing how to do anything else with the gem, you shatter it and the soul is freed.~
+  SAY @30146
   IF ~~ THEN DO ~IEex_Lua("IEex_ReleaseSoulFromInventory(LastSummonerOf(Myself))")
 SpellHitEffectSprite(Protagonist,Protagonist,DRAGONS_DEATH_ANIMATION_1,0)~ EXIT
 END
 
 IF WEIGHT #2 ~NumTimesTalkedTo(0)
 ~ THEN BEGIN SoulGem
-  SAY ~What will you do with the soul gem?~
-  IF ~IsPlayerNumber(Protagonist,1)~ THEN REPLY ~Increase an ability score.~ GOTO SoulGemAbilityScoreP1
-  IF ~IsPlayerNumber(Protagonist,2)~ THEN REPLY ~Increase an ability score.~ GOTO SoulGemAbilityScoreP2
-  IF ~IsPlayerNumber(Protagonist,3)~ THEN REPLY ~Increase an ability score.~ GOTO SoulGemAbilityScoreP3
-  IF ~IsPlayerNumber(Protagonist,4)~ THEN REPLY ~Increase an ability score.~ GOTO SoulGemAbilityScoreP4
-  IF ~IsPlayerNumber(Protagonist,5)~ THEN REPLY ~Increase an ability score.~ GOTO SoulGemAbilityScoreP5
-  IF ~IsPlayerNumber(Protagonist,6)~ THEN REPLY ~Increase an ability score.~ GOTO SoulGemAbilityScoreP6
-  IF ~~ THEN REPLY ~Recharge a magic item.~ DO ~IEex_Lua("IEex_CheckInventoryItems(LastSummonerOf(Myself))")~ GOTO SoulGemRecharge
-  IF ~~ THEN REPLY ~Shatter it and free the soul.~ DO ~IEex_Lua("IEex_ReleaseSoulFromInventory(LastSummonerOf(Myself))")
+  SAY @30147
+  IF ~IsPlayerNumber(Protagonist,1)~ THEN REPLY @30148 GOTO SoulGemAbilityScoreP1
+  IF ~IsPlayerNumber(Protagonist,2)~ THEN REPLY @30148 GOTO SoulGemAbilityScoreP2
+  IF ~IsPlayerNumber(Protagonist,3)~ THEN REPLY @30148 GOTO SoulGemAbilityScoreP3
+  IF ~IsPlayerNumber(Protagonist,4)~ THEN REPLY @30148 GOTO SoulGemAbilityScoreP4
+  IF ~IsPlayerNumber(Protagonist,5)~ THEN REPLY @30148 GOTO SoulGemAbilityScoreP5
+  IF ~IsPlayerNumber(Protagonist,6)~ THEN REPLY @30148 GOTO SoulGemAbilityScoreP6
+  IF ~~ THEN REPLY @30149 DO ~IEex_Lua("IEex_CheckInventoryItems(LastSummonerOf(Myself))")~ GOTO SoulGemRecharge
+  IF ~~ THEN REPLY @30150 DO ~IEex_Lua("IEex_ReleaseSoulFromInventory(LastSummonerOf(Myself))")
 SpellHitEffectSprite(Protagonist,Protagonist,DRAGONS_DEATH_ANIMATION_1,0)~ EXIT
 END
 
 IF ~~ THEN BEGIN SoulGemAbilityScoreP1
-  SAY ~Which ability score?~
-  IF ~GlobalLT("US_Soul_Strength_P1","GLOBAL",2)~ THEN REPLY ~Strength.~ DO ~IncrementGlobal("US_Soul_Strength_P1","GLOBAL",1)
+  SAY @30151
+  IF ~GlobalLT("US_Soul_Strength_P1","GLOBAL",2)~ THEN REPLY @30152 DO ~IncrementGlobal("US_Soul_Strength_P1","GLOBAL",1)
 ReallyForceSpellRES("USWSHSTR",Protagonist)
 SpellHitEffectSprite(Protagonist,Protagonist,DRAGONS_DEATH_ANIMATION_2,0)~ EXIT
-  IF ~GlobalLT("US_Soul_Dexterity_P1","GLOBAL",2)~ THEN REPLY ~Dexterity.~ DO ~IncrementGlobal("US_Soul_Dexterity_P1","GLOBAL",1)
+  IF ~GlobalLT("US_Soul_Dexterity_P1","GLOBAL",2)~ THEN REPLY @30153 DO ~IncrementGlobal("US_Soul_Dexterity_P1","GLOBAL",1)
 ReallyForceSpellRES("USWSHDEX",Protagonist)
 SpellHitEffectSprite(Protagonist,Protagonist,DRAGONS_DEATH_ANIMATION_2,0)~ EXIT
-  IF ~GlobalLT("US_Soul_Constitution_P1","GLOBAL",2)~ THEN REPLY ~Constitution.~ DO ~IncrementGlobal("US_Soul_Constitution_P1","GLOBAL",1)
+  IF ~GlobalLT("US_Soul_Constitution_P1","GLOBAL",2)~ THEN REPLY @30154 DO ~IncrementGlobal("US_Soul_Constitution_P1","GLOBAL",1)
 ReallyForceSpellRES("USWSHCON",Protagonist)
 SpellHitEffectSprite(Protagonist,Protagonist,DRAGONS_DEATH_ANIMATION_2,0)~ EXIT
-  IF ~GlobalLT("US_Soul_Intelligence_P1","GLOBAL",2)~ THEN REPLY ~Intelligence.~ DO ~IncrementGlobal("US_Soul_Intelligence_P1","GLOBAL",1)
+  IF ~GlobalLT("US_Soul_Intelligence_P1","GLOBAL",2)~ THEN REPLY @30155 DO ~IncrementGlobal("US_Soul_Intelligence_P1","GLOBAL",1)
 ReallyForceSpellRES("USWSHINT",Protagonist)
 SpellHitEffectSprite(Protagonist,Protagonist,DRAGONS_DEATH_ANIMATION_2,0)~ EXIT
-  IF ~GlobalLT("US_Soul_Wisdom_P1","GLOBAL",2)~ THEN REPLY ~Wisdom.~ DO ~IncrementGlobal("US_Soul_Wisdom_P1","GLOBAL",1)
+  IF ~GlobalLT("US_Soul_Wisdom_P1","GLOBAL",2)~ THEN REPLY @30156 DO ~IncrementGlobal("US_Soul_Wisdom_P1","GLOBAL",1)
 ReallyForceSpellRES("USWSHWIS",Protagonist)
 SpellHitEffectSprite(Protagonist,Protagonist,DRAGONS_DEATH_ANIMATION_2,0)~ EXIT
-  IF ~GlobalLT("US_Soul_Charisma_P1","GLOBAL",2)~ THEN REPLY ~Charisma.~ DO ~IncrementGlobal("US_Soul_Charisma_P1","GLOBAL",1)
+  IF ~GlobalLT("US_Soul_Charisma_P1","GLOBAL",2)~ THEN REPLY @30157 DO ~IncrementGlobal("US_Soul_Charisma_P1","GLOBAL",1)
 ReallyForceSpellRES("USWSHCHR",Protagonist)
 SpellHitEffectSprite(Protagonist,Protagonist,DRAGONS_DEATH_ANIMATION_2,0)~ EXIT
-  IF ~~ THEN REPLY ~Never mind.~ GOTO SoulGem
+  IF ~~ THEN REPLY #16720 GOTO SoulGem
 END
 
 IF ~~ THEN BEGIN SoulGemAbilityScoreP2
-  SAY ~Which ability score?~
-  IF ~GlobalLT("US_Soul_Strength_P2","GLOBAL",2)~ THEN REPLY ~Strength.~ DO ~IncrementGlobal("US_Soul_Strength_P2","GLOBAL",1)
+  SAY @30151
+  IF ~GlobalLT("US_Soul_Strength_P2","GLOBAL",2)~ THEN REPLY @30152 DO ~IncrementGlobal("US_Soul_Strength_P2","GLOBAL",1)
 ReallyForceSpellRES("USWSHSTR",Protagonist)
 SpellHitEffectSprite(Protagonist,Protagonist,DRAGONS_DEATH_ANIMATION_2,0)~ EXIT
-  IF ~GlobalLT("US_Soul_Dexterity_P2","GLOBAL",2)~ THEN REPLY ~Dexterity.~ DO ~IncrementGlobal("US_Soul_Dexterity_P2","GLOBAL",1)
+  IF ~GlobalLT("US_Soul_Dexterity_P2","GLOBAL",2)~ THEN REPLY @30153 DO ~IncrementGlobal("US_Soul_Dexterity_P2","GLOBAL",1)
 ReallyForceSpellRES("USWSHDEX",Protagonist)
 SpellHitEffectSprite(Protagonist,Protagonist,DRAGONS_DEATH_ANIMATION_2,0)~ EXIT
-  IF ~GlobalLT("US_Soul_Constitution_P2","GLOBAL",2)~ THEN REPLY ~Constitution.~ DO ~IncrementGlobal("US_Soul_Constitution_P2","GLOBAL",1)
+  IF ~GlobalLT("US_Soul_Constitution_P2","GLOBAL",2)~ THEN REPLY @30154 DO ~IncrementGlobal("US_Soul_Constitution_P2","GLOBAL",1)
 ReallyForceSpellRES("USWSHCON",Protagonist)
 SpellHitEffectSprite(Protagonist,Protagonist,DRAGONS_DEATH_ANIMATION_2,0)~ EXIT
-  IF ~GlobalLT("US_Soul_Intelligence_P2","GLOBAL",2)~ THEN REPLY ~Intelligence.~ DO ~IncrementGlobal("US_Soul_Intelligence_P2","GLOBAL",1)
+  IF ~GlobalLT("US_Soul_Intelligence_P2","GLOBAL",2)~ THEN REPLY @30155 DO ~IncrementGlobal("US_Soul_Intelligence_P2","GLOBAL",1)
 ReallyForceSpellRES("USWSHINT",Protagonist)
 SpellHitEffectSprite(Protagonist,Protagonist,DRAGONS_DEATH_ANIMATION_2,0)~ EXIT
-  IF ~GlobalLT("US_Soul_Wisdom_P2","GLOBAL",2)~ THEN REPLY ~Wisdom.~ DO ~IncrementGlobal("US_Soul_Wisdom_P2","GLOBAL",1)
+  IF ~GlobalLT("US_Soul_Wisdom_P2","GLOBAL",2)~ THEN REPLY @30156 DO ~IncrementGlobal("US_Soul_Wisdom_P2","GLOBAL",1)
 ReallyForceSpellRES("USWSHWIS",Protagonist)
 SpellHitEffectSprite(Protagonist,Protagonist,DRAGONS_DEATH_ANIMATION_2,0)~ EXIT
-  IF ~GlobalLT("US_Soul_Charisma_P2","GLOBAL",2)~ THEN REPLY ~Charisma.~ DO ~IncrementGlobal("US_Soul_Charisma_P2","GLOBAL",1)
+  IF ~GlobalLT("US_Soul_Charisma_P2","GLOBAL",2)~ THEN REPLY @30157 DO ~IncrementGlobal("US_Soul_Charisma_P2","GLOBAL",1)
 ReallyForceSpellRES("USWSHCHR",Protagonist)
 SpellHitEffectSprite(Protagonist,Protagonist,DRAGONS_DEATH_ANIMATION_2,0)~ EXIT
-  IF ~~ THEN REPLY ~Never mind.~ GOTO SoulGem
+  IF ~~ THEN REPLY #16720 GOTO SoulGem
 END
 
 IF ~~ THEN BEGIN SoulGemAbilityScoreP3
-  SAY ~Which ability score?~
-  IF ~GlobalLT("US_Soul_Strength_P3","GLOBAL",2)~ THEN REPLY ~Strength.~ DO ~IncrementGlobal("US_Soul_Strength_P3","GLOBAL",1)
+  SAY @30151
+  IF ~GlobalLT("US_Soul_Strength_P3","GLOBAL",2)~ THEN REPLY @30152 DO ~IncrementGlobal("US_Soul_Strength_P3","GLOBAL",1)
 ReallyForceSpellRES("USWSHSTR",Protagonist)
 SpellHitEffectSprite(Protagonist,Protagonist,DRAGONS_DEATH_ANIMATION_2,0)~ EXIT
-  IF ~GlobalLT("US_Soul_Dexterity_P3","GLOBAL",2)~ THEN REPLY ~Dexterity.~ DO ~IncrementGlobal("US_Soul_Dexterity_P3","GLOBAL",1)
+  IF ~GlobalLT("US_Soul_Dexterity_P3","GLOBAL",2)~ THEN REPLY @30153 DO ~IncrementGlobal("US_Soul_Dexterity_P3","GLOBAL",1)
 ReallyForceSpellRES("USWSHDEX",Protagonist)
 SpellHitEffectSprite(Protagonist,Protagonist,DRAGONS_DEATH_ANIMATION_2,0)~ EXIT
-  IF ~GlobalLT("US_Soul_Constitution_P3","GLOBAL",2)~ THEN REPLY ~Constitution.~ DO ~IncrementGlobal("US_Soul_Constitution_P3","GLOBAL",1)
+  IF ~GlobalLT("US_Soul_Constitution_P3","GLOBAL",2)~ THEN REPLY @30154 DO ~IncrementGlobal("US_Soul_Constitution_P3","GLOBAL",1)
 ReallyForceSpellRES("USWSHCON",Protagonist)
 SpellHitEffectSprite(Protagonist,Protagonist,DRAGONS_DEATH_ANIMATION_2,0)~ EXIT
-  IF ~GlobalLT("US_Soul_Intelligence_P3","GLOBAL",2)~ THEN REPLY ~Intelligence.~ DO ~IncrementGlobal("US_Soul_Intelligence_P3","GLOBAL",1)
+  IF ~GlobalLT("US_Soul_Intelligence_P3","GLOBAL",2)~ THEN REPLY @30155 DO ~IncrementGlobal("US_Soul_Intelligence_P3","GLOBAL",1)
 ReallyForceSpellRES("USWSHINT",Protagonist)
 SpellHitEffectSprite(Protagonist,Protagonist,DRAGONS_DEATH_ANIMATION_2,0)~ EXIT
-  IF ~GlobalLT("US_Soul_Wisdom_P3","GLOBAL",2)~ THEN REPLY ~Wisdom.~ DO ~IncrementGlobal("US_Soul_Wisdom_P3","GLOBAL",1)
+  IF ~GlobalLT("US_Soul_Wisdom_P3","GLOBAL",2)~ THEN REPLY @30156 DO ~IncrementGlobal("US_Soul_Wisdom_P3","GLOBAL",1)
 ReallyForceSpellRES("USWSHWIS",Protagonist)
 SpellHitEffectSprite(Protagonist,Protagonist,DRAGONS_DEATH_ANIMATION_2,0)~ EXIT
-  IF ~GlobalLT("US_Soul_Charisma_P3","GLOBAL",2)~ THEN REPLY ~Charisma.~ DO ~IncrementGlobal("US_Soul_Charisma_P3","GLOBAL",1)
+  IF ~GlobalLT("US_Soul_Charisma_P3","GLOBAL",2)~ THEN REPLY @30157 DO ~IncrementGlobal("US_Soul_Charisma_P3","GLOBAL",1)
 ReallyForceSpellRES("USWSHCHR",Protagonist)
 SpellHitEffectSprite(Protagonist,Protagonist,DRAGONS_DEATH_ANIMATION_2,0)~ EXIT
-  IF ~~ THEN REPLY ~Never mind.~ GOTO SoulGem
+  IF ~~ THEN REPLY #16720 GOTO SoulGem
 END
 
 IF ~~ THEN BEGIN SoulGemAbilityScoreP4
-  SAY ~Which ability score?~
-  IF ~GlobalLT("US_Soul_Strength_P4","GLOBAL",2)~ THEN REPLY ~Strength.~ DO ~IncrementGlobal("US_Soul_Strength_P4","GLOBAL",1)
+  SAY @30151
+  IF ~GlobalLT("US_Soul_Strength_P4","GLOBAL",2)~ THEN REPLY @30152 DO ~IncrementGlobal("US_Soul_Strength_P4","GLOBAL",1)
 ReallyForceSpellRES("USWSHSTR",Protagonist)
 SpellHitEffectSprite(Protagonist,Protagonist,DRAGONS_DEATH_ANIMATION_2,0)~ EXIT
-  IF ~GlobalLT("US_Soul_Dexterity_P4","GLOBAL",2)~ THEN REPLY ~Dexterity.~ DO ~IncrementGlobal("US_Soul_Dexterity_P4","GLOBAL",1)
+  IF ~GlobalLT("US_Soul_Dexterity_P4","GLOBAL",2)~ THEN REPLY @30153 DO ~IncrementGlobal("US_Soul_Dexterity_P4","GLOBAL",1)
 ReallyForceSpellRES("USWSHDEX",Protagonist)
 SpellHitEffectSprite(Protagonist,Protagonist,DRAGONS_DEATH_ANIMATION_2,0)~ EXIT
-  IF ~GlobalLT("US_Soul_Constitution_P4","GLOBAL",2)~ THEN REPLY ~Constitution.~ DO ~IncrementGlobal("US_Soul_Constitution_P4","GLOBAL",1)
+  IF ~GlobalLT("US_Soul_Constitution_P4","GLOBAL",2)~ THEN REPLY @30154 DO ~IncrementGlobal("US_Soul_Constitution_P4","GLOBAL",1)
 ReallyForceSpellRES("USWSHCON",Protagonist)
 SpellHitEffectSprite(Protagonist,Protagonist,DRAGONS_DEATH_ANIMATION_2,0)~ EXIT
-  IF ~GlobalLT("US_Soul_Intelligence_P4","GLOBAL",2)~ THEN REPLY ~Intelligence.~ DO ~IncrementGlobal("US_Soul_Intelligence_P4","GLOBAL",1)
+  IF ~GlobalLT("US_Soul_Intelligence_P4","GLOBAL",2)~ THEN REPLY @30155 DO ~IncrementGlobal("US_Soul_Intelligence_P4","GLOBAL",1)
 ReallyForceSpellRES("USWSHINT",Protagonist)
 SpellHitEffectSprite(Protagonist,Protagonist,DRAGONS_DEATH_ANIMATION_2,0)~ EXIT
-  IF ~GlobalLT("US_Soul_Wisdom_P4","GLOBAL",2)~ THEN REPLY ~Wisdom.~ DO ~IncrementGlobal("US_Soul_Wisdom_P4","GLOBAL",1)
+  IF ~GlobalLT("US_Soul_Wisdom_P4","GLOBAL",2)~ THEN REPLY @30156 DO ~IncrementGlobal("US_Soul_Wisdom_P4","GLOBAL",1)
 ReallyForceSpellRES("USWSHWIS",Protagonist)
 SpellHitEffectSprite(Protagonist,Protagonist,DRAGONS_DEATH_ANIMATION_2,0)~ EXIT
-  IF ~GlobalLT("US_Soul_Charisma_P4","GLOBAL",2)~ THEN REPLY ~Charisma.~ DO ~IncrementGlobal("US_Soul_Charisma_P4","GLOBAL",1)
+  IF ~GlobalLT("US_Soul_Charisma_P4","GLOBAL",2)~ THEN REPLY @30157 DO ~IncrementGlobal("US_Soul_Charisma_P4","GLOBAL",1)
 ReallyForceSpellRES("USWSHCHR",Protagonist)
 SpellHitEffectSprite(Protagonist,Protagonist,DRAGONS_DEATH_ANIMATION_2,0)~ EXIT
-  IF ~~ THEN REPLY ~Never mind.~ GOTO SoulGem
+  IF ~~ THEN REPLY #16720 GOTO SoulGem
 END
 
 IF ~~ THEN BEGIN SoulGemAbilityScoreP5
-  SAY ~Which ability score?~
-  IF ~GlobalLT("US_Soul_Strength_P5","GLOBAL",2)~ THEN REPLY ~Strength.~ DO ~IncrementGlobal("US_Soul_Strength_P5","GLOBAL",1)
+  SAY @30151
+  IF ~GlobalLT("US_Soul_Strength_P5","GLOBAL",2)~ THEN REPLY @30152 DO ~IncrementGlobal("US_Soul_Strength_P5","GLOBAL",1)
 ReallyForceSpellRES("USWSHSTR",Protagonist)
 SpellHitEffectSprite(Protagonist,Protagonist,DRAGONS_DEATH_ANIMATION_2,0)~ EXIT
-  IF ~GlobalLT("US_Soul_Dexterity_P5","GLOBAL",2)~ THEN REPLY ~Dexterity.~ DO ~IncrementGlobal("US_Soul_Dexterity_P5","GLOBAL",1)
+  IF ~GlobalLT("US_Soul_Dexterity_P5","GLOBAL",2)~ THEN REPLY @30153 DO ~IncrementGlobal("US_Soul_Dexterity_P5","GLOBAL",1)
 ReallyForceSpellRES("USWSHDEX",Protagonist)
 SpellHitEffectSprite(Protagonist,Protagonist,DRAGONS_DEATH_ANIMATION_2,0)~ EXIT
-  IF ~GlobalLT("US_Soul_Constitution_P5","GLOBAL",2)~ THEN REPLY ~Constitution.~ DO ~IncrementGlobal("US_Soul_Constitution_P5","GLOBAL",1)
+  IF ~GlobalLT("US_Soul_Constitution_P5","GLOBAL",2)~ THEN REPLY @30154 DO ~IncrementGlobal("US_Soul_Constitution_P5","GLOBAL",1)
 ReallyForceSpellRES("USWSHCON",Protagonist)
 SpellHitEffectSprite(Protagonist,Protagonist,DRAGONS_DEATH_ANIMATION_2,0)~ EXIT
-  IF ~GlobalLT("US_Soul_Intelligence_P5","GLOBAL",2)~ THEN REPLY ~Intelligence.~ DO ~IncrementGlobal("US_Soul_Intelligence_P5","GLOBAL",1)
+  IF ~GlobalLT("US_Soul_Intelligence_P5","GLOBAL",2)~ THEN REPLY @30155 DO ~IncrementGlobal("US_Soul_Intelligence_P5","GLOBAL",1)
 ReallyForceSpellRES("USWSHINT",Protagonist)
 SpellHitEffectSprite(Protagonist,Protagonist,DRAGONS_DEATH_ANIMATION_2,0)~ EXIT
-  IF ~GlobalLT("US_Soul_Wisdom_P5","GLOBAL",2)~ THEN REPLY ~Wisdom.~ DO ~IncrementGlobal("US_Soul_Wisdom_P5","GLOBAL",1)
+  IF ~GlobalLT("US_Soul_Wisdom_P5","GLOBAL",2)~ THEN REPLY @30156 DO ~IncrementGlobal("US_Soul_Wisdom_P5","GLOBAL",1)
 ReallyForceSpellRES("USWSHWIS",Protagonist)
 SpellHitEffectSprite(Protagonist,Protagonist,DRAGONS_DEATH_ANIMATION_2,0)~ EXIT
-  IF ~GlobalLT("US_Soul_Charisma_P5","GLOBAL",2)~ THEN REPLY ~Charisma.~ DO ~IncrementGlobal("US_Soul_Charisma_P5","GLOBAL",1)
+  IF ~GlobalLT("US_Soul_Charisma_P5","GLOBAL",2)~ THEN REPLY @30157 DO ~IncrementGlobal("US_Soul_Charisma_P5","GLOBAL",1)
 ReallyForceSpellRES("USWSHCHR",Protagonist)
 SpellHitEffectSprite(Protagonist,Protagonist,DRAGONS_DEATH_ANIMATION_2,0)~ EXIT
-  IF ~~ THEN REPLY ~Never mind.~ GOTO SoulGem
+  IF ~~ THEN REPLY #16720 GOTO SoulGem
 END
 
 IF ~~ THEN BEGIN SoulGemAbilityScoreP6
-  SAY ~Which ability score?~
-  IF ~GlobalLT("US_Soul_Strength_P6","GLOBAL",2)~ THEN REPLY ~Strength.~ DO ~IncrementGlobal("US_Soul_Strength_P6","GLOBAL",1)
+  SAY @30151
+  IF ~GlobalLT("US_Soul_Strength_P6","GLOBAL",2)~ THEN REPLY @30152 DO ~IncrementGlobal("US_Soul_Strength_P6","GLOBAL",1)
 ReallyForceSpellRES("USWSHSTR",Protagonist)
 SpellHitEffectSprite(Protagonist,Protagonist,DRAGONS_DEATH_ANIMATION_2,0)~ EXIT
-  IF ~GlobalLT("US_Soul_Dexterity_P6","GLOBAL",2)~ THEN REPLY ~Dexterity.~ DO ~IncrementGlobal("US_Soul_Dexterity_P6","GLOBAL",1)
+  IF ~GlobalLT("US_Soul_Dexterity_P6","GLOBAL",2)~ THEN REPLY @30153 DO ~IncrementGlobal("US_Soul_Dexterity_P6","GLOBAL",1)
 ReallyForceSpellRES("USWSHDEX",Protagonist)
 SpellHitEffectSprite(Protagonist,Protagonist,DRAGONS_DEATH_ANIMATION_2,0)~ EXIT
-  IF ~GlobalLT("US_Soul_Constitution_P6","GLOBAL",2)~ THEN REPLY ~Constitution.~ DO ~IncrementGlobal("US_Soul_Constitution_P6","GLOBAL",1)
+  IF ~GlobalLT("US_Soul_Constitution_P6","GLOBAL",2)~ THEN REPLY @30154 DO ~IncrementGlobal("US_Soul_Constitution_P6","GLOBAL",1)
 ReallyForceSpellRES("USWSHCON",Protagonist)
 SpellHitEffectSprite(Protagonist,Protagonist,DRAGONS_DEATH_ANIMATION_2,0)~ EXIT
-  IF ~GlobalLT("US_Soul_Intelligence_P6","GLOBAL",2)~ THEN REPLY ~Intelligence.~ DO ~IncrementGlobal("US_Soul_Intelligence_P6","GLOBAL",1)
+  IF ~GlobalLT("US_Soul_Intelligence_P6","GLOBAL",2)~ THEN REPLY @30155 DO ~IncrementGlobal("US_Soul_Intelligence_P6","GLOBAL",1)
 ReallyForceSpellRES("USWSHINT",Protagonist)
 SpellHitEffectSprite(Protagonist,Protagonist,DRAGONS_DEATH_ANIMATION_2,0)~ EXIT
-  IF ~GlobalLT("US_Soul_Wisdom_P6","GLOBAL",2)~ THEN REPLY ~Wisdom.~ DO ~IncrementGlobal("US_Soul_Wisdom_P6","GLOBAL",1)
+  IF ~GlobalLT("US_Soul_Wisdom_P6","GLOBAL",2)~ THEN REPLY @30156 DO ~IncrementGlobal("US_Soul_Wisdom_P6","GLOBAL",1)
 ReallyForceSpellRES("USWSHWIS",Protagonist)
 SpellHitEffectSprite(Protagonist,Protagonist,DRAGONS_DEATH_ANIMATION_2,0)~ EXIT
-  IF ~GlobalLT("US_Soul_Charisma_P6","GLOBAL",2)~ THEN REPLY ~Charisma.~ DO ~IncrementGlobal("US_Soul_Charisma_P6","GLOBAL",1)
+  IF ~GlobalLT("US_Soul_Charisma_P6","GLOBAL",2)~ THEN REPLY @30157 DO ~IncrementGlobal("US_Soul_Charisma_P6","GLOBAL",1)
 ReallyForceSpellRES("USWSHCHR",Protagonist)
 SpellHitEffectSprite(Protagonist,Protagonist,DRAGONS_DEATH_ANIMATION_2,0)~ EXIT
-  IF ~~ THEN REPLY ~Never mind.~ GOTO SoulGem
+  IF ~~ THEN REPLY #16720 GOTO SoulGem
 END
 
 IF ~~ THEN BEGIN SoulGemRecharge
-  SAY ~Which item will you recharge?~
+  SAY @30158
   IF ~IEex_LuaTrigger("return IEex_HasChargeItemInSlot(LastSummonerOf(Myself), 0)")~ THEN REPLY ~<EXINVSLOT0>.~ DO ~IEex_Lua("IEex_RechargeItemInSlot(LastSummonerOf(Myself), 0, 100)")
 SpellHitEffectSprite(Protagonist,Protagonist,DRAGONS_DEATH_ANIMATION_2,0)~ EXIT
   IF ~IEex_LuaTrigger("return IEex_HasChargeItemInSlot(LastSummonerOf(Myself), 1)")~ THEN REPLY ~<EXINVSLOT1>.~ DO ~IEex_Lua("IEex_RechargeItemInSlot(LastSummonerOf(Myself), 1, 100)")
@@ -252,5 +252,5 @@ SpellHitEffectSprite(Protagonist,Protagonist,DRAGONS_DEATH_ANIMATION_2,0)~ EXIT
 SpellHitEffectSprite(Protagonist,Protagonist,DRAGONS_DEATH_ANIMATION_2,0)~ EXIT
   IF ~IEex_LuaTrigger("return IEex_HasChargeItemInSlot(LastSummonerOf(Myself), 50)")~ THEN REPLY ~<EXINVSLOT50>.~ DO ~IEex_Lua("IEex_RechargeItemInSlot(LastSummonerOf(Myself), 50, 100)")
 SpellHitEffectSprite(Protagonist,Protagonist,DRAGONS_DEATH_ANIMATION_2,0)~ EXIT
-  IF ~~ THEN REPLY ~Never mind.~ GOTO SoulGem
+  IF ~~ THEN REPLY #16720 GOTO SoulGem
 END

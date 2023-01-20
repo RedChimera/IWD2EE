@@ -1518,6 +1518,47 @@ function IEex_Extern_UI_ButtonLClick(CUIControlButton)
 	}
 
 	local handlers = {
+		["GUICG"] = {
+			[4] = {
+				[37] = function()
+					IEex_Chargen_Reroll()
+				end,
+				[38] = function()
+					recordedAbilityScores = currentAbilityScores
+					recordedUnallocatedAbilityScores = unallocatedAbilityScores
+					if ex_new_ability_score_system == 2 then
+						ex_recorded_remaining_points = IEex_ReadDword(chargenData + 0x4EA)
+					end
+					IEex_Chargen_UpdateAbilityScores(IEex_GetEngineCreateChar(), IEex_GetActorShare(IEex_ReadDword(IEex_GetEngineCreateChar() + 0x4E2)))
+				end,
+				[39] = function()
+					if (recordedAbilityScores[1] > 0 or #recordedUnallocatedAbilityScores > 0) then
+						currentAbilityScores = recordedAbilityScores
+						unallocatedAbilityScores = recordedUnallocatedAbilityScores
+						if ex_new_ability_score_system == 2 then
+							ex_current_remaining_points = ex_recorded_remaining_points
+							IEex_WriteDword(chargenData + 0x4EA, ex_current_remaining_points)
+							for i = 1, 6, 1 do
+								IEex_WriteByte(share + ex_base_ability_score_cre_offset[i], currentAbilityScores[i])
+							end
+						end
+					end
+					IEex_Chargen_UpdateAbilityScores(IEex_GetEngineCreateChar(), IEex_GetActorShare(IEex_ReadDword(IEex_GetEngineCreateChar() + 0x4E2)))
+				end,
+				[40] = function()
+					if ex_new_ability_score_system == 1 then
+						for i = 1, 6, 1 do
+							if currentAbilityScores[i] > 0 then
+								table.insert(unallocatedAbilityScores, currentAbilityScores[i] - racialAbilityBonuses[i])
+								currentAbilityScores[i] = 0
+							end
+							table.sort(unallocatedAbilityScores)
+						end
+					end
+					IEex_Chargen_UpdateAbilityScores(IEex_GetEngineCreateChar(), IEex_GetActorShare(IEex_ReadDword(IEex_GetEngineCreateChar() + 0x4E2)))
+				end,
+			},
+		},
 		["GUIOPT"] = {
 			[2] = {
 				-- "IEex Options" Button
@@ -1593,6 +1634,15 @@ function IEex_Extern_UI_ButtonLClick(CUIControlButton)
 				end,
 			},
 		},
+		["GUIREC"] = {
+			[2] = {
+				[38] = function()
+					if ex_current_record_actorID ~= IEex_GetActorIDCharacter(0) and ex_current_record_actorID ~= 0 then
+						IEex_WriteWord(IEex_GetActorShare(ex_current_record_actorID) + 0x476, 21)
+					end
+				end,
+			},
+		},
 		["GUIW08"] = worldHandler,
 		["GUIW10"] = worldHandler,
 	}
@@ -1620,8 +1670,7 @@ function IEex_Extern_UI_LabelLDown(CUIControlLabel)
 		["GUIOPT"] = {
 			[14] = {
 				[5] = function()
-					IEex_SetTextAreaToString(IEex_GetEngineOptions(), 14, 3, "Replaces the interlaced fog of war with \z
-						a version that uses transparency. This fixes the flickering caused by the vanilla implementation.")
+					IEex_SetTextAreaToString(IEex_GetEngineOptions(), 14, 3, IEex_FetchString(ex_tra_55903))
 				end,
 			},
 		},
@@ -1856,7 +1905,7 @@ IEex_AbsoluteOnce("IEex_CustomControls", function()
 		["framePressed"] = 2,
 		["frameDisabled"] = 3,
 	})
-	IEex_SetControlButtonText(IEex_GetControlFromPanel(worldOptionsPanel, 15), "IEex Options")
+	IEex_SetControlButtonText(IEex_GetControlFromPanel(worldOptionsPanel, 15), IEex_FetchString(ex_tra_55901)) -- "IEex Options"
 
 	-- IEex Options panel - ID 14
 	local newOptionsPanel = IEex_AddPanelToEngine(screenOptions, {
@@ -1879,7 +1928,7 @@ IEex_AbsoluteOnce("IEex_CustomControls", function()
 		["fontBam"] = "STONEBIG",
 		["textFlags"] = 0x44, -- Center justify(4) | Middle justify(6)
 	})
-	IEex_SetControlLabelText(IEex_GetControlFromPanel(newOptionsPanel, 0), "IEex Options")
+	IEex_SetControlLabelText(IEex_GetControlFromPanel(newOptionsPanel, 0), IEex_FetchString(ex_tra_55901)) -- "IEex Options"
 
 	-- "Done" Button - ID 1
 	IEex_AddControlOverride("GUIOPT", 14, 1, "IEex_UI_Button")
@@ -1895,7 +1944,7 @@ IEex_AbsoluteOnce("IEex_CustomControls", function()
 		["framePressed"] = 2,
 		["frameDisabled"] = 3,
 	})
-	IEex_SetControlButtonText(IEex_GetControlFromPanel(newOptionsPanel, 1), "Done")
+	IEex_SetControlButtonText(IEex_GetControlFromPanel(newOptionsPanel, 1), IEex_FetchString(11973)) -- "Done"
 
 	-- "Cancel" Button - ID 2
 	IEex_AddControlOverride("GUIOPT", 14, 2, "IEex_UI_Button")
@@ -1911,7 +1960,7 @@ IEex_AbsoluteOnce("IEex_CustomControls", function()
 		["framePressed"] = 2,
 		["frameDisabled"] = 3,
 	})
-	IEex_SetControlButtonText(IEex_GetControlFromPanel(newOptionsPanel, 2), "Cancel")
+	IEex_SetControlButtonText(IEex_GetControlFromPanel(newOptionsPanel, 2), IEex_FetchString(13727)) -- "Cancel"
 
 	-- Description Area - ID 3
 	IEex_AddControlOverride("GUIOPT", 14, 3, "IEex_UI_TextArea")
@@ -1958,7 +2007,7 @@ IEex_AbsoluteOnce("IEex_CustomControls", function()
 		["fontBam"] = "NORMAL",
 		["textFlags"] = 0x51, -- Use color(0) | Right justify(4) | Middle justify(6)
 	})
-	IEex_SetControlLabelText(IEex_GetControlFromPanel(newOptionsPanel, 5), "Transparent Fog of War")
+	IEex_SetControlLabelText(IEex_GetControlFromPanel(newOptionsPanel, 5), IEex_FetchString(ex_tra_55902)) -- "Transparent Fog of War"
 
 	-- "Transparent Fog of War" Toggle - ID 6
 	IEex_AddControlOverride("GUIOPT", 14, 6, "IEex_UI_Button")
@@ -2315,10 +2364,12 @@ ex_class_name_strings = {
 {9987, 502, 504, 2012, 2022, 3015, 2862, 12744, 12745},
 }
 ex_current_record_hand = 1
+ex_current_record_actorID = 0
 function IEex_Extern_OnUpdateRecordDescription(CScreenCharacter, CGameSprite, CUIControlEditMultiLine, m_plstStrings)
 	IEex_AssertThread(IEex_Thread.Both, true)
 	local creatureData = CGameSprite
 	local targetID = IEex_GetActorIDShare(creatureData)
+	ex_current_record_actorID = targetID
 	local descPanelNum = IEex_ReadByte(CScreenCharacter + 0x1844, 0)
 	local extraFlags = IEex_ReadDword(creatureData + 0x740)
 	if bit.band(extraFlags, 0x1000) > 0 then

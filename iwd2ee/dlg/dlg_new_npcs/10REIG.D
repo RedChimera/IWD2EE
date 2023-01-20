@@ -201,13 +201,13 @@ IF WEIGHT #1 ~  Global("Reig_Quest","GLOBAL",2)
 ~ THEN REPLY #20839 EXIT
   IF ~  Global("Dock_Goblin_Quest","GLOBAL",1)
 ~ THEN REPLY #20840 DO ~SetGlobal("Told_Reig", "GLOBAL", 1)~ JOURNAL #1479 GOTO 20
-  IF ~!NumInParty(6)~ THEN REPLY ~We could use an extra hand, if your arm is all right.~ GOTO ReigJoinPartyGoblinsAlive
+  IF ~!NumInParty(6)~ THEN REPLY @40004 GOTO ReigJoinPartyGoblinsAlive
 END
 
 IF ~~ THEN BEGIN 20
   SAY #20867
   IF ~~ THEN REPLY #20887 EXIT
-  IF ~!NumInParty(6)~ THEN REPLY ~Why not come with us?  We'll treat you to an ale -- if you hadn't warned us about the goblins, we might have been taken by surprise.~ GOTO ReigJoinPartyGoblinsDead
+  IF ~!NumInParty(6)~ THEN REPLY @40005 GOTO ReigJoinPartyGoblinsDead
 END
 
 IF WEIGHT #0 ~  Global("Told_Reig","GLOBAL",1)
@@ -273,18 +273,18 @@ IF ~~ THEN BEGIN 27
 END
 
 IF ~~ THEN BEGIN ReigJoinPartyGoblinsAlive
-  SAY ~Yes, I think I can fight.  I lost my spear, but at least I can move my arm again.  If we manage to put down those damn goblins, we should go report to Ulbrec in town.~
-  IF ~~ THEN REPLY ~Very well.  Let's get moving.~ GOTO ReigJoinPartyGoblinsAlive2
+  SAY @40006
+  IF ~~ THEN REPLY @40007 GOTO ReigJoinPartyGoblinsAlive2
 END
 
 IF ~~ THEN BEGIN ReigJoinPartyGoblinsAlive2
-  SAY ~Keep an eye out for goblin archers if you don't want to end up like Brohn.  Keep an eye out and stay quiet... The goblins have the advantage of numbers, and we can't afford to get surrounded.~
-  IF ~~ THEN REPLY ~Got it.~ DO ~SetGlobal("US_Reig_Joined", "GLOBAL", 1)
+  SAY @40008
+  IF ~~ THEN REPLY @40009 DO ~SetGlobal("US_Reig_Joined", "GLOBAL", 1)
 ApplySpellRES("USREIGC",Myself)~ EXIT
 END
 
 IF ~~ THEN BEGIN ReigJoinPartyGoblinsDead
-  SAY ~My thanks, but the ale can wait.  Let's report to Ulbrec.  He needs to know what happened here.~
-  IF ~~ THEN REPLY ~Very well.  Let's go.~ DO ~SetGlobal("US_Reig_Joined", "GLOBAL", 1)
+  SAY @40010
+  IF ~~ THEN REPLY @40011 DO ~SetGlobal("US_Reig_Joined", "GLOBAL", 1)
 ApplySpellRES("USREIGC",Myself)~ EXIT
 END

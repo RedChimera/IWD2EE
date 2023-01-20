@@ -5,3 +5,29 @@ COMPILE ~%mod_folder%/dlg/51HARSHO.d~
 COMPILE ~%mod_folder%/dlg/50KURTTU.d~  //This returns an error message but installs anyway. WeiDU says it doesn't recognize a See trigger of some sort.
 COMPILE ~%mod_folder%/dlg/50CARITA.d~  //See above
 COMPILE ~%mod_folder%/dlg/50LEEVI.d~  //See above
+
+<<<<<<<< .../script.baf
+
+IF
+	Global("US_Trick_Harshom","GLOBAL",2)
+	Global("US_Trick_Harshom_Door","GLOBAL",0)
+THEN
+	RESPONSE #100
+		SetGlobal("US_Trick_Harshom_Door","GLOBAL",1)
+		Unlock("AR5102_Gate1")
+		OpenDoor("AR5102_Gate1")
+		Continue()
+END
+
+IF
+	GlobalGT("US_Trick_Harshom","GLOBAL",0)
+	Global("US_Trick_Harshom_Effect","LOCALS",0)
+THEN
+	RESPONSE #100
+		SetGlobal("US_Trick_Harshom_Effect","LOCALS",1)
+		Enemy()
+		ApplySpellRES("USHARUMB",Myself)
+END
+
+>>>>>>>>
+EXTEND_TOP ~51hcutw.bcs~ ~.../script.baf~

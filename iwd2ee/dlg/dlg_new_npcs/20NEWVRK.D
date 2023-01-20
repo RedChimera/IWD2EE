@@ -51,14 +51,14 @@ IF ~~ THEN BEGIN 5
   SAY #36282
   IF ~~ THEN REPLY #36283 GOTO 7
   IF ~Global("US_Emma_Joined", "GLOBAL", 0)
-  !ClassEx(Protagonist, Paladin)~ THEN REPLY ~That's quite clever, Vrek.  You've created your own little kingdom, set up a food supply, removed an important threat... You're a very intelligent troll.~ GOTO VrekJoin1
+  !ClassEx(Protagonist, Paladin)~ THEN REPLY @40042 GOTO VrekJoin1
 END
 
 IF ~~ THEN BEGIN 6
   SAY #36284
   IF ~~ THEN REPLY #36283 GOTO 7
   IF ~Global("US_Emma_Joined", "GLOBAL", 0)
-  !ClassEx(Protagonist, Paladin)~ THEN REPLY ~That's quite clever, Vrek.  You've created your own little kingdom, set up a food supply, removed an important threat... You're a very intelligent troll.~ GOTO VrekJoin1
+  !ClassEx(Protagonist, Paladin)~ THEN REPLY @40042 GOTO VrekJoin1
 END
 
 IF ~~ THEN BEGIN 7
@@ -84,84 +84,84 @@ IF ~~ THEN BEGIN 8
 END
 
 IF ~~ THEN BEGIN VrekJoin1
-  SAY ~Vrek think often.  Vrek see things orc not see.  Orc not know things Vrek know.~
-  IF ~~ THEN REPLY ~What do you see that the orcs don't?~ GOTO VrekJoinSee
-  IF ~CheckSkillGT(Protagonist,4,Intimidate)~ THEN REPLY ~Emma isn't the only one with a magical weapon.  There are weapons like hers all across Faerun -- what if another human comes by with a magic sword?~ GOTO VrekJoinThreat
+  SAY @40043
+  IF ~~ THEN REPLY @40044 GOTO VrekJoinSee
+  IF ~CheckSkillGT(Protagonist,4,Intimidate)~ THEN REPLY @40045 GOTO VrekJoinThreat
 END
 
 IF ~~ THEN BEGIN VrekJoinSee
-  SAY ~Orc not have plan.  Only Vrek have plan.  Vrek put together pieces.  Now Vrek control orc and human and world.~
-  IF ~~ THEN REPLY ~Not anymore, Vrek.  I'm breaking up this little "kingdom" of yours.~ GOTO 7
-  IF ~!NumInParty(6)~ THEN REPLY ~The world has a lot more to offer than a few humans.  You don't have any higher ambitions?  Gold, power, an army?  An intelligent troll could do much more than this.~ GOTO VrekJoin2
-  IF ~CheckSkillGT(Protagonist,4,Intimidate)~ THEN REPLY ~You don't control the whole world just yet.  Emma's sword is not the only one that can hurt you.~ GOTO VrekJoinThreat
+  SAY @40046
+  IF ~~ THEN REPLY @40047 GOTO 7
+  IF ~!NumInParty(6)~ THEN REPLY @40048 GOTO VrekJoin2
+  IF ~CheckSkillGT(Protagonist,4,Intimidate)~ THEN REPLY @40049 GOTO VrekJoinThreat
 END
 
 IF ~~ THEN BEGIN VrekJoin2
-  SAY ~Vrek not eat gold.  Vrek eat meat.  Human meat best.~
-  IF ~Global("SR_Villagers_Dead","GLOBAL",1)~ THEN REPLY ~Your humans are already gone.  The orcs killed them when I intruded on the camp.~ GOTO VrekJoinHumansDead
-  IF ~GlobalGT("SR_Rescue_Villagers","GLOBAL",3)~ THEN REPLY ~Your humans are already gone.  I killed their orc guards and set them free.~ GOTO VrekJoinHumansSaved
+  SAY @40050
+  IF ~Global("SR_Villagers_Dead","GLOBAL",1)~ THEN REPLY @40051 GOTO VrekJoinHumansDead
+  IF ~GlobalGT("SR_Rescue_Villagers","GLOBAL",3)~ THEN REPLY @40052 GOTO VrekJoinHumansSaved
   IF ~!GlobalGT("SR_Rescue_Villagers","GLOBAL",3)
-!Global("SR_Villagers_Dead","GLOBAL",1)~ THEN REPLY ~I can't let you keep doing this, Vrek.~ GOTO 7
+!Global("SR_Villagers_Dead","GLOBAL",1)~ THEN REPLY @40053 GOTO 7
 END
 
 IF ~~ THEN BEGIN VrekJoinHumansDead
-  SAY ~Orc kill human?  You ruin plan!  Vrek has no food!~
-  IF ~CheckSkillLT(Protagonist,6,Diplomacy)~ THEN REPLY ~Maybe not.  But join my group and we'll have lots of meat for you every day.~ GOTO VrekJoinFailedNoFood
-  IF ~CheckSkillGT(Protagonist,5,Diplomacy)~ THEN REPLY ~Maybe not.  But join my group and we'll have lots of meat for you every day.~ GOTO VrekJoinSuccess1
+  SAY @40054
+  IF ~CheckSkillLT(Protagonist,6,Diplomacy)~ THEN REPLY @40056 GOTO VrekJoinFailedNoFood
+  IF ~CheckSkillGT(Protagonist,5,Diplomacy)~ THEN REPLY @40056 GOTO VrekJoinSuccess1
 END
 
 IF ~~ THEN BEGIN VrekJoinHumansSaved
-  SAY ~You take human?  You ruin plan!  Vrek has no food!~
-  IF ~CheckSkillLT(Protagonist,8,Diplomacy)~ THEN REPLY ~Maybe not.  But join my group and we'll have lots of meat for you every day.~ GOTO VrekJoinFailedNoFood
-  IF ~CheckSkillGT(Protagonist,7,Diplomacy)~ THEN REPLY ~Maybe not.  But join my group and we'll have lots of meat for you every day.~ GOTO VrekJoinSuccess1
+  SAY @40055
+  IF ~CheckSkillLT(Protagonist,8,Diplomacy)~ THEN REPLY @40056 GOTO VrekJoinFailedNoFood
+  IF ~CheckSkillGT(Protagonist,7,Diplomacy)~ THEN REPLY @40056 GOTO VrekJoinSuccess1
 END
 
 IF ~~ THEN BEGIN VrekJoinFailedNoFood
-  SAY ~Vrek no join you.  You take Vrek's food.  Vrek kill you and eat!~
+  SAY @40057
   IF ~~ THEN DO ~Enemy()~ EXIT
 END
 
 IF ~~ THEN BEGIN VrekJoinThreat
-  SAY ~If new human come with new magic sword, Vrek will find -- take sword, no fear.~
-  IF ~~ THEN REPLY ~That's not going to happen.  I'm ending this operation.~ GOTO 7
+  SAY @40058
+  IF ~~ THEN REPLY @40059 GOTO 7
   IF ~!NumInParty(6)
-CheckSkillGT(Protagonist,5,Diplomacy)~ THEN REPLY ~What if you don't see it coming?  What if the next blade is hidden?  You need other people to help you look for them.  People like us.~ GOTO VrekJoinThreat2
+CheckSkillGT(Protagonist,5,Diplomacy)~ THEN REPLY @40060 GOTO VrekJoinThreat2
 END
 
 IF ~~ THEN BEGIN VrekJoinThreat2
-  SAY ~Vrek no trust human.  Human hate Vrek.~
-  IF ~Race(Protagonist,Human)~ THEN REPLY ~I need help fighting the goblin horde, and I'll take whatever help I can get, even from a troll.  If you help me kill the orcs at the bridge, I'll help you look out for magic weapons like Emma's... You can even get a share of our gold.~ GOTO VrekJoinThreat3
-  IF ~!Race(Protagonist,Human)~ THEN REPLY ~I'm not a human, but I need help fighting the goblin horde, and I'll take whatever help I can get, even from a troll.  If you help me kill the orcs at the bridge, I'll help you look out for magic weapons like Emma's... You can even get a share of our gold.~ GOTO VrekJoinThreat3
+  SAY @40061
+  IF ~Race(Protagonist,Human)~ THEN REPLY @40062 GOTO VrekJoinThreat3
+  IF ~!Race(Protagonist,Human)~ THEN REPLY @40063 GOTO VrekJoinThreat3
 END
 
 IF ~~ THEN BEGIN VrekJoinThreat3
-  SAY ~Vrek not eat gold.  Vrek already have food and healer blade.~
-  IF ~Global("SR_Villagers_Dead","GLOBAL",1)~ THEN REPLY ~Your humans are already gone.  The orcs killed them when I intruded on the camp.~ GOTO VrekJoinThreat3HumansDead
-  IF ~GlobalGT("SR_Rescue_Villagers","GLOBAL",3)~ THEN REPLY ~Your humans are already gone.  I killed their orc guards and set them free.~ GOTO VrekJoinThreat3HumansSaved
+  SAY @40064
+  IF ~Global("SR_Villagers_Dead","GLOBAL",1)~ THEN REPLY @40051 GOTO VrekJoinThreat3HumansDead
+  IF ~GlobalGT("SR_Rescue_Villagers","GLOBAL",3)~ THEN REPLY @40052 GOTO VrekJoinThreat3HumansSaved
   IF ~!GlobalGT("SR_Rescue_Villagers","GLOBAL",3)
-!Global("SR_Villagers_Dead","GLOBAL",1)~ THEN REPLY ~Then there's no reasoning with you.  Your reign ends here, Vrek.~ GOTO 7
+!Global("SR_Villagers_Dead","GLOBAL",1)~ THEN REPLY @40065 GOTO 7
 END
 
 IF ~~ THEN BEGIN VrekJoinThreat3HumansDead
-  SAY ~Orc kill human?  You ruin plan!  Vrek has no food!~
-  IF ~CheckSkillLT(Protagonist,4,Diplomacy)~ THEN REPLY ~Maybe not.  But I can offer you better.  Join my group and we'll have lots of meat for you every day.~ GOTO VrekJoinFailedNoFood
-  IF ~CheckSkillGT(Protagonist,3,Diplomacy)~ THEN REPLY ~Maybe not.  But I can offer you better.  Join my group and we'll have lots of meat for you every day.  I wouldn't mind a troll on the team -- in fact, an intelligent troll would be very welcome.~ GOTO VrekJoinSuccess1
+  SAY @40054
+  IF ~CheckSkillLT(Protagonist,4,Diplomacy)~ THEN REPLY @40066 GOTO VrekJoinFailedNoFood
+  IF ~CheckSkillGT(Protagonist,3,Diplomacy)~ THEN REPLY @40067 GOTO VrekJoinSuccess1
 END
 
 IF ~~ THEN BEGIN VrekJoinThreat3HumansSaved
-  SAY ~You take human?  You ruin plan!  Vrek has no food!~
-  IF ~CheckSkillLT(Protagonist,6,Diplomacy)~ THEN REPLY ~Maybe not.  But I can offer you better.  Join my group and we'll have lots of meat for you every day.~ GOTO VrekJoinFailedNoFood
-  IF ~CheckSkillGT(Protagonist,5,Diplomacy)~ THEN REPLY ~Maybe not.  But I can offer you better.  Join my group and we'll have lots of meat for you every day.  I wouldn't mind a troll on the team -- in fact, an intelligent troll would be very welcome.~ GOTO VrekJoinSuccess1
+  SAY @40055
+  IF ~CheckSkillLT(Protagonist,6,Diplomacy)~ THEN REPLY @40066 GOTO VrekJoinFailedNoFood
+  IF ~CheckSkillGT(Protagonist,5,Diplomacy)~ THEN REPLY @40067 GOTO VrekJoinSuccess1
 END
 
 IF ~~ THEN BEGIN VrekJoinSuccess1
-  SAY ~You have gold?  Give Vrek meat?  Keep healer sword away?~
-  IF ~~ THEN REPLY ~Come with us and you can have all the food you want and more.  All you have to do is help us kill the orcs near the bridge.  They don't have magic weapons; it should be easy for a troll.~ GOTO VrekJoinSuccess2
+  SAY @40068
+  IF ~~ THEN REPLY @40069 GOTO VrekJoinSuccess2
 END
 
 IF ~~ THEN BEGIN VrekJoinSuccess2
-  SAY ~Vrek... Vrek say yes.  But if human give sword to healer, Vrek kill human.~
-  IF ~~ THEN REPLY ~That's good enough for me.  Come along... we have orcs to slay.~ DO ~SetGlobal("US_Vrek_Joined", "GLOBAL", 1)
+  SAY @40070
+  IF ~~ THEN REPLY @40071 DO ~SetGlobal("US_Vrek_Joined", "GLOBAL", 1)
 SetGlobal("US_VREK_JOIN", "GLOBAL", 1)
 ApplySpellRES("USVREKC",Myself)~ EXIT
 END

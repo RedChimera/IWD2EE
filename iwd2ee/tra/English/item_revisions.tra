@@ -113,7 +113,7 @@ When the goblin horde sacked Bremen, this mysterious item was seized from a dead
 STATISTICS:
 
 Special:
- Storm-based spells (Rainstorm, Fire Storm, Storm of Vengeance, Ice Storm, Acid, Storm, and Stygian Ice Storm) do not harm allies when cast by the wearer
+ Storm-based spells (Rainstorm, Fire Storm, Storm of Vengeance, Ice Storm, Acid Storm, and Stygian Ice Storm) do not harm allies when cast by the wearer
  Spell Power:  Can cast the spell Sanctuary (at level 15) twice per day
 Weight: 1 lb.~
 //@10046    = ~Calm Before the Storm~
@@ -124,7 +124,7 @@ This medallion, however, predates them all, carrying additional enchantments tha
 STATISTICS:
 
 Special:
- Storm-based spells (Rainstorm, Fire Storm, Storm of Vengeance, Ice Storm, Acid, Storm, and Stygian Ice Storm) do not harm allies when cast by the wearer
+ Storm-based spells (Rainstorm, Fire Storm, Storm of Vengeance, Ice Storm, Acid Storm, and Stygian Ice Storm) do not harm allies when cast by the wearer
  Constant Effect: User under the effects of the spell Mind Blank while equipped
  Spell Power:  Can cast the spell Sanctuary (at level 30) three times per day
 Weight: 1 lb.~
@@ -1932,7 +1932,7 @@ Armor Check Penalty:  -1
 Arcane Spell Failure:  15%
 Special:
   Cursed: Once donned, this armor cannot be removed without a Remove Curse spell
-  Charisma: Set to 80% of current value
+  Charisma: -2 penalty
   Wearer under the effects of the spell Death Ward
 Weight: 20 lb.~
 @10473    = ~Zuvembie's Impunity +4~
@@ -1949,7 +1949,7 @@ Armor Check Penalty:  -0
 Arcane Spell Failure:  15%
 Special:
   Cursed: Once donned, this armor cannot be removed without a Remove Curse spell. 
-  Charisma: Set to 70% of current value
+  Charisma: -3 penalty
   Wearer under the effects of the spell Death Ward
   Freedom of Movement: The wearer is immune to everything, magical and otherwise, that affects mobility in any way, although can still be hasted.
 Weight: 20 lb.~

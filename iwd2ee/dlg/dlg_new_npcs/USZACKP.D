@@ -1,0 +1,8 @@
+BEGIN ~USZACKP~
+
+IF ~!InParty(Myself)
+~ THEN BEGIN 0
+  SAY @40221
+  IF ~!NumInParty(6)~ THEN REPLY @40222 DO ~JoinParty()~ EXIT
+  IF ~~ THEN REPLY @40223 EXIT
+END

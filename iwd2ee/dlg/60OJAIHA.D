@@ -1,8 +1,8 @@
 BEGIN ~60OJAIHA~
 
 IF WEIGHT #0 ~Global("US_OJAIHA_DIPLOMACY","GLOBAL",1)~ THEN BEGIN OjaihaDiplomacyTreatyAlreadyComplete
-  SAY ~On your way then, <CHARNAME>.  The treaty may be signed, but you are not entitled to stay here indefinitely.~
-  IF ~~ THEN REPLY ~Very well.~ EXIT
+  SAY @6173
+  IF ~~ THEN REPLY #15951 EXIT
 END
 
 IF WEIGHT #1 ~  !Global("6051_Wearing_Robes","GLOBAL",6)
@@ -128,9 +128,9 @@ IF ~~ THEN BEGIN 12
 END
 
 IF ~~ THEN BEGIN 13
-  SAY ~Jeszrael burns with hatred, as sweet as Sseth's venom... but I have yet given her no answer.  I told her I would meditate upon the matter... and the centuries I have lived in Sseth's keeping have taught me patience, something Jeszrael too, must learn.~
+  SAY #32334
   IF ~~ THEN REPLY #32335 DO ~SetGlobal("60Know_Jez", "GLOBAL", 1)~ GOTO 14 //Could we convince you not to join with her forces?
-  IF ~CheckSkillGT(Protagonist,8,Diplomacy)~ THEN REPLY ~We hope to avoid a major conflict on that scale.  Perhaps we could organize a truce?~ GOTO OjaihaDiplomacy1
+  IF ~CheckSkillGT(Protagonist,12,Diplomacy)~ THEN REPLY @6174 GOTO OjaihaDiplomacy1
   IF ~~ THEN REPLY #32336 DO ~SetGlobal("60Know_Jez", "GLOBAL", 1) //Then we have arrived just in time.  Prepare to die!
 Enemy()~ EXIT
 END
@@ -138,7 +138,7 @@ END
 IF ~~ THEN BEGIN 14
   SAY #32337 //And abandon our people who have made their homes within the flames of Dragon's Eye?  You would have a greater chance of surviving the embrace of the World Serpent, outsider... we do not betray our race to ones such as you.
   IF ~~ THEN REPLY #32338 GOTO 15 //Then perhaps you could allow them to return here, to the jungles of Chult.
-  IF ~CheckSkillGT(Protagonist,8,Diplomacy)~ THEN REPLY ~We are not asking you to abandon them.  We are suggesting a truce.~ GOTO OjaihaDiplomacy1
+  IF ~CheckSkillGT(Protagonist,15,Diplomacy)~ THEN REPLY @6175 GOTO OjaihaDiplomacy1
   IF ~~ THEN REPLY #32339 DO ~Enemy()~ EXIT //We have nothing to discuss, then.  Prepare to die.
 END
 
@@ -630,76 +630,77 @@ Global("60Suspect","GLOBAL",2)
 END
 
 IF ~~ THEN BEGIN OjaihaDiplomacy1
-  SAY ~A truce with the warmbloods is out of the question.  The massacre at Dragon's Eye showed us the nature of your kind thirty years ago.~
-  IF ~CheckSkillGT(Protagonist,25,Diplomacy)~ THEN REPLY ~Then it is time that we settled the yuan-ti's grievances with Kuldahar.  I am here on the authority of Archdruid Iselore;  I have the power to craft a binding treaty to resolve this conflict.~ GOTO OjaihaDiplomacyTreaty1
+  SAY @6176
+  IF ~CheckSkillGT(Protagonist,24,Diplomacy)~ THEN REPLY @6177 GOTO OjaihaDiplomacyTreaty1
   IF ~CheckSkillLT(Protagonist,25,Diplomacy)
-CheckSkillGT(Protagonist,15,Diplomacy)~ THEN REPLY ~What if we were to craft a treaty?  We are willing to negotiate.~ GOTO OjaihaDiplomacyTreaty2
-  IF ~CheckSkillLT(Protagonist,15,Diplomacy)~ THEN REPLY ~What if we were to craft a treaty?~ GOTO OjaihaDiplomacyTreaty3
-  IF ~~ THEN REPLY ~Very well.  If you insist on bloodshed, then you will have it.~ DO ~Enemy()~ EXIT
+CheckSkillGT(Protagonist,14,Diplomacy)~ THEN REPLY @6178 GOTO OjaihaDiplomacyTreaty2
+  IF ~CheckSkillLT(Protagonist,15,Diplomacy)~ THEN REPLY @6179 GOTO OjaihaDiplomacyTreaty3
+  IF ~~ THEN REPLY @6180 DO ~Enemy()~ EXIT
 END
 
 IF ~~ THEN BEGIN OjaihaDiplomacyTreaty1
-  SAY ~I see little point in attempting to resolve this through words.  But if you have the authority to make such a treaty binding, warmblood, I can spare some time to draft some concessions...~
-  IF ~~ THEN REPLY ~PartyGoldGT(60000)~ DO ~FadeToColor([0.0],0)
+  SAY @6181
+  IF ~PartyGoldGT(11999)~ DO ~FadeToColor([0.0],0)
 Wait(3)
 FadeFromColor([0.0],0)~ GOTO OjaihaDiplomacyTreaty1Possible
-  IF ~~ THEN REPLY ~PartyGoldLT(60000)~ DO ~FadeToColor([0.0],0)
+  IF ~PartyGoldLT(12000)~ DO ~FadeToColor([0.0],0)
 Wait(3)
 FadeFromColor([0.0],0)~ GOTO OjaihaDiplomacyTreatyImpossible
 END
 
 IF ~~ THEN BEGIN OjaihaDiplomacyTreaty2
-  SAY ~I see little point in attempting to resolve this through words.  But if you have the authority to make such a treaty binding, warmblood, I can spare some time to draft some concessions...~
-  IF ~~ THEN REPLY ~PartyGoldGT(90000)~ DO ~FadeToColor([0.0],0)
+  SAY @6181
+  IF ~PartyGoldGT(29999)~ DO ~FadeToColor([0.0],0)
 Wait(3)
 FadeFromColor([0.0],0)~ GOTO OjaihaDiplomacyTreaty2Possible
-  IF ~~ THEN REPLY ~PartyGoldLT(90000)~ DO ~FadeToColor([0.0],0)
+  IF ~PartyGoldLT(30000)~ DO ~FadeToColor([0.0],0)
 Wait(3)
 FadeFromColor([0.0],0)~ GOTO OjaihaDiplomacyTreatyImpossible
 END
 
 IF ~~ THEN BEGIN OjaihaDiplomacyTreaty3
-  SAY ~I see little point in attempting to resolve this through words.  But if you have the authority to make such a treaty binding, warmblood, I can spare some time to draft some concessions...~
-  IF ~~ THEN REPLY ~PartyGoldGT(130000)~ DO ~FadeToColor([0.0],0)
+  SAY @6181
+  IF ~PartyGoldGT(59999)~ DO ~FadeToColor([0.0],0)
 Wait(3)
 FadeFromColor([0.0],0)~ GOTO OjaihaDiplomacyTreaty3Possible
-  IF ~~ THEN REPLY ~PartyGoldLT(130000)~ DO ~FadeToColor([0.0],0)
+  IF ~PartyGoldLT(60000)~ DO ~FadeToColor([0.0],0)
 Wait(3)
 FadeFromColor([0.0],0)~ GOTO OjaihaDiplomacyTreatyImpossible
 END
 
 IF ~~ THEN BEGIN OjaihaDiplomacyTreaty1Possible
-  SAY ~Very well...  These terms are acceptable.  Ten years of non-aggression and non-interference, free passage through Kuldahar for trade and other peaceful purposes, a formal apology from <CHARNAME> as a representative of Archdruid Iselore and Kuldahar for the aggressions against the yuan-ti, and reparations of 60,000 gold for said aggressions, paid by <CHARNAME> on behalf of Kuldahar.~
-  IF ~~ THEN REPLY ~And... signed.  I will leave the gold here and return to Iselore with the good news.~ DO ~TakePartyGold(60000)~ GOTO OjaihaDiplomacyTreatyFinish
-  IF ~~ THEN REPLY ~Hm... No.  No, I cannot agree to these terms.~ GOTO OjaihaDiplomacyTreatyFailed
+  SAY @6182
+  IF ~~ THEN REPLY @6185 DO ~TakePartyGold(12000)~ GOTO OjaihaDiplomacyTreatyFinish
+  IF ~~ THEN REPLY @6186 GOTO OjaihaDiplomacyTreatyFailed
 END
 
 IF ~~ THEN BEGIN OjaihaDiplomacyTreaty2Possible
-  SAY ~Very well...  These terms are acceptable.  Ten years of non-aggression and non-interference, free passage through Kuldahar for trade and other peaceful purposes, and reparations of 90,000 gold for aggressions against the yuan-ti, paid by <CHARNAME> on behalf of Kuldahar.~
-  IF ~~ THEN REPLY ~And... signed.  I will leave the gold here and return to Iselore with the good news.~ DO ~TakePartyGold(90000)~ GOTO OjaihaDiplomacyTreatyFinish
-  IF ~~ THEN REPLY ~Hm... No.  No, I cannot agree to these terms.~ GOTO OjaihaDiplomacyTreatyFailed
+  SAY @6183
+  IF ~~ THEN REPLY @6185 DO ~TakePartyGold(30000)~ GOTO OjaihaDiplomacyTreatyFinish
+  IF ~~ THEN REPLY @6186 GOTO OjaihaDiplomacyTreatyFailed
 END
 
 IF ~~ THEN BEGIN OjaihaDiplomacyTreaty3Possible
-  SAY ~Very well...  These terms are acceptable.  Ten years of non-aggression and reparations of 130,000 gold for aggressions against the yuan-ti, paid by <CHARNAME> on behalf of Kuldahar.~
-  IF ~~ THEN REPLY ~And... signed.  I will leave the gold here and return to Iselore with the good news.~ DO ~TakePartyGold(130000)~ GOTO OjaihaDiplomacyTreatyFinish
-  IF ~~ THEN REPLY ~Hm... No.  No, I cannot agree to these terms.~ GOTO OjaihaDiplomacyTreatyFailed
+  SAY @6184
+  IF ~~ THEN REPLY @6185 DO ~TakePartyGold(60000)~ GOTO OjaihaDiplomacyTreatyFinish
+  IF ~~ THEN REPLY @6186 GOTO OjaihaDiplomacyTreatyFailed
 END
 
 IF ~~ THEN BEGIN OjaihaDiplomacyTreatyFinish
-  SAY ~Excellent.  Farewell, <CHARNAME>... I believe our business is done here.~
-  IF ~~ THEN REPLY ~I believe it is.  Farewell, Ojaiha.~ DO ~SetGlobal("Crossroads_Quest","GLOBAL",2)
-SetGlobal("US_OJAIHA_DIPLOMACY","GLOBAL",1)~ JOURNAL #159 EXIT
+  SAY @6187
+  IF ~~ THEN REPLY @6188 DO ~SetGlobal("Crossroads_Quest","GLOBAL",2)
+SetGlobal("US_OJAIHA_DIPLOMACY","GLOBAL",1)
+SetGlobal("Kuldahar_Start_Cutscene","GLOBAL",1)~ JOURNAL #159 EXIT
 END
 
 IF ~~ THEN BEGIN OjaihaDiplomacyTreatyFailed
-  SAY ~Then there is nothing more to be said.  I will aid our brethren in Dragon's Eye, and I will see your kind become our slaves, as Sseth has foretold.  I will place your heart upon the altar, and offer it up to the World Serpent.~
+  SAY @6189
   IF ~~ THEN REPLY #32343 DO ~Enemy()~ EXIT
   IF ~~ THEN REPLY #32344 DO ~Enemy()~ EXIT
 END
 
 IF ~~ THEN BEGIN OjaihaDiplomacyTreatyImpossible
-  SAY ~These terms are simply not acceptable.  Vague promises, inadequate reparations... This treaty is nothing more than empty words.  I will aid our brethren in Dragon's Eye, and I will see your kind become our slaves, as Sseth has foretold.  I will place your heart upon the altar, and offer it up to the World Serpent.~
+  SAY @6190
   IF ~~ THEN REPLY #32343 DO ~Enemy()~ EXIT
   IF ~~ THEN REPLY #32344 DO ~Enemy()~ EXIT
 END

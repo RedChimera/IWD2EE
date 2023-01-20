@@ -20,7 +20,7 @@ Global("PlayerKnowsPyrosDead", "MYAREA", 1)~ THEN REPLY #35813 /* ~We'd like to 
   IF ~!Global("CurrentDestination", "MYAREA", 6)
 Global("PlayerKnowsJasper", "MYAREA", 1)~ THEN REPLY #35814 /* ~We need to visit Ambassador Jasper's embassy.~ */ DO ~SetGlobal("DestinationRequest", "LOCALS", 6)~ GOTO 1
   IF ~!Global("CurrentDestination","MYAREA",7)
-Global("PlayerKnowsStash","MYAREA",1)~ THEN REPLY ~Can you reach the island with the chest southwest of the amphitheatre?~ /* ~Can you reach a lava mephit lair southwest of the amphitheatre?~ */ DO ~SetGlobal("DestinationRequest", "LOCALS", 7)~ GOTO 1
+Global("PlayerKnowsStash","MYAREA",1)~ THEN REPLY @6191 /* ~Can you reach a lava mephit lair southwest of the amphitheatre?~ */ DO ~SetGlobal("DestinationRequest", "LOCALS", 7)~ GOTO 1
   IF ~!Global("CurrentDestination", "MYAREA", 8)
 Global("PlayerSawAmphitheatre", "MYAREA", 1)~ THEN REPLY #35816 /* ~We were considering the amphitheatre.~ */ DO ~SetGlobal("DestinationRequest", "LOCALS", 8)~ GOTO 1
   IF ~!Global("CurrentDestination", "MYAREA", 1)~ THEN REPLY #35808 /* ~We're ready to return to the upper levels.~ */ DO ~SetGlobal("DestinationRequest", "LOCALS", 1)~ GOTO 2
@@ -30,7 +30,7 @@ Global("PlayerSawGuardPost", "MYAREA", 0)
 Global("PlayerKnowsLothar", "MYAREA", 0)
 Global("PlayerKnowsPyrosDead", "MYAREA", 0)
 Global("PlayerKnowsJasper", "MYAREA", 0)
-Global("PlayerSawAmphitheatre", "MYAREA", 0)~ THEN REPLY ~Take us to one of the buildings on the magma.~ /* ~We need to visit Ambassador Jasper's embassy.~ */ DO ~SetGlobal("DestinationRequest", "LOCALS", 6)~ GOTO 1
+Global("PlayerSawAmphitheatre", "MYAREA", 0)~ THEN REPLY @6192 /* ~We need to visit Ambassador Jasper's embassy.~ */ DO ~SetGlobal("DestinationRequest", "LOCALS", 6)~ GOTO 1
   IF ~~ THEN REPLY #30477 /* ~Can you heal me?~ */ DO ~SetGlobal("DestinationRequest", "LOCALS", 0)
 StartStore("61Archon",Protagonist)~ EXIT
   IF ~~ THEN REPLY #35817 /* ~None at the moment.  Farewell.~ */ DO ~SetGlobal("DestinationRequest", "LOCALS", 0)~ EXIT
