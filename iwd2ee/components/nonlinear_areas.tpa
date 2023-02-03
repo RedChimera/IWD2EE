@@ -1,0 +1,3 @@
+INCLUDE ~%mod_folder%/components/faster_horde.tpa~
+INCLUDE ~%mod_folder%/components/faster_ice.tpa~
+INCLUDE ~%mod_folder%/components/faster_severed_hand.tpa~

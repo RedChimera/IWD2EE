@@ -7,3 +7,32 @@ INCLUDE ~%mod_folder%/components/torak_intimidate.tpa~
 INCLUDE ~%mod_folder%/components/elder_brain.tpa~
 INCLUDE ~%mod_folder%/components/thvara_bluff.tpa~
 INCLUDE ~%mod_folder%/components/ojaiha_diplomacy.tpa~
+
+// This introduces several new means of skipping the Wandering Village. First, the Hunter's Ghost has some new lines.
+// If anyone in the party has a Diviner level or high Search or Wilderness Lore, they can claim they can get through the woods on their own, which sets a variable.
+COMPILE ~%mod_folder%/dlg/50HGHOST.d~
+// Second, Suoma also has new lines. The first time you meet her, you can intimidate her into telling you how to escape the woods.
+// After you save the children from Limha and report to Venla, you can also use Diplomacy to get Suoma to help you earlier than normal.
+// Both of these set a new variable to 1.
+COMPILE ~%mod_folder%/dlg/50SUOMA.d~
+// Next, we have an updated area script for the exit from the Wandering Village.
+// If you use Intimidate or Diplomacy on Suoma, you should be able to fight the dark treants early.
+// If you have high Search or Wilderness Lore or a Diviner in the party, you should be able to walk right to the exit.
+COPY ~%mod_folder%/bcs/AR5015.bcs~ ~override~
+// The latter method requires a custom script, which replicates some but not all of the effects of the normal cutscene that plays when you kill the treants.
+COPY ~%mod_folder%/bcs/USWVSKIP.bcs~ ~override~
+
+//NOTES
+// creates Ruinlord Argos Val and appends a script to add him to the throne room where people can bluff their way to Isair and Madae
+
+EXTEND_BOTTOM ~AR6303.bcs~ ~%mod_folder%/baf/USSTSH01.baf~
+
+COMPILE ~%mod_folder%/dlg/USSTSH01.d~
+
+COPY ~%mod_folder%/cre/USSTSHRL.cre~ ~override~
+  SAY NAME1 @4001
+  SAY NAME2 @4001
+COPY ~%mod_folder%/bcs/USSTRL.bcs~ ~override~
+COPY ~%mod_folder%/bcs/USSTSH02.bcs~ ~override~
+COPY ~%mod_folder%/bcs/USSTSH03.bcs~ ~override~
+COPY ~%mod_folder%/spl/USSTIW04.spl~ ~override~

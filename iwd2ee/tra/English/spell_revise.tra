@@ -279,7 +279,7 @@ Casting Time: 3
 Area of Effect: 15-foot radius 
 Saving Throw: Will negates
 
-A Dispel Magic spell removes magical effects upon anyone within the area of effect. This includes the effects of spells, potions and magical items. It does not, however, affect magical items themselves. Enemy creatures are allowed a Will save at a -8 penalty to resist, while friendly creatures are automatically affected.~
+A Dispel Magic spell removes magical effects upon anyone within the area of effect. This includes the effects of spells, potions and magical items. It does not, however, affect magical items themselves. Enemy creatures are allowed a Will save at a -5 penalty to resist, while friendly creatures are automatically affected.~
 @1046    = ~Remove Disease~
 @1047    = ~Remove Disease 
 (Abjuration)
@@ -473,7 +473,7 @@ Level 7:  1d3 fire, cold, acid, and electricity damage; blindness for three roun
 
 Level 9:  1d3 fire, cold, acid, magic, and electricity damage; blindness for four rounds, stun for one round
 
-Level 11:  1d3 fire, cold, acid, magic, and electricity damage; blindness for five rounds, stun for two rounds~
+Level 11:  1d3 fire, cold, acid, magic, and electricity damage; blindness for five rounds, stun for one round~
 @1078    = ~Bull's Strength~
 @1079    = ~Bull's Strength 
 (Transmutation) 
@@ -3024,7 +3024,7 @@ Casting Time: 1
 Area of Effect: 1 creature 
 Saving Throw: None
 
-This spell forms a magic barrier around the target creature, granting a bonus of +2 generic bonus to AC and saving throws against attacks, spells and abilities from evil creatures. In additions, the creature is immune to charm and domination effects. Summoned fiends will not attack their summoner or their summoner's allies if their summoner has Protection from Evil.~
+This spell forms a magic barrier around the target creature, granting a +2 generic bonus to AC and saving throws against attacks, spells and abilities from evil creatures. In additions, the creature is immune to charm and domination effects. Summoned fiends will not attack their summoner or their summoner's allies if their summoner has Protection from Evil.~
 @31115     = ~Armor of Faith~
 @32115     = ~Armor of Faith
 (Abjuration)
@@ -4390,7 +4390,7 @@ Casting Time: 5
 Area of Effect: 15-foot radius 
 Saving Throw: Will negates
 
-Remove Magic is like Dispel Magic, except it only affects enemies. When cast, it dispels most magical effects on enemies in the area of effect who fail a Will save at -8.~
+Remove Magic is like Dispel Magic, except it only affects enemies. When cast, it dispels most magical effects on enemies in the area of effect who fail a Will save at -5.~
 @37353     = ~Throw~
 @38353     = ~Throw
 (Transmutation)

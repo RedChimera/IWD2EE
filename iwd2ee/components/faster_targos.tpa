@@ -3,7 +3,180 @@
 COMPILE ~%mod_folder%/dlg/12SHAWFO.d~ 
 
 // patches Olap's script so that the game does not end if you skip Shawford's quests and Olap dies during the invasion.
-EXTEND_BOTTOM ~12OLAP0.bcs~ ~%mod_folder%/baf/USSTOLAP.baf~
+EXTEND_TOP ~12OLAP0.bcs~ ~%mod_folder%/baf/USSTOLAP.baf~
 
-COPY ~%mod_folder%/bcs/12OLAP0.bcs~ ~override~
+COPY ~%mod_folder%/bcs/bcs_faster_targos~ ~override~
 
+COPY_EXISTING ~12olap.cre~ ~override~
+	READ_LONG 0x10 thecreflags
+	thecreflags&=0xFFFFDFFF
+	WRITE_LONG 0x10 thecreflags
+
+COPY_EXISTING ~30GOBSH1.cre~ ~override/12GOBSH1.cre~
+	WRITE_BYTE 0x29C 1
+
+COPY_EXISTING ~ar1200.bcs~ ~override~
+	DECOMPILE_AND_PATCH BEGIN
+		REPLACE_TEXTUALLY CASE_INSENSITIVE ~Global(\"Goblin_Palisade_Quest\", ?\"GLOBAL\", ?0)~ ~Global("Goblin_Palisade_Quest","GLOBAL",0)
+Global("US_Enhanced_Palisade_Fight","GLOBAL",0)~
+		REPLACE_TEXTUALLY CASE_INSENSITIVE ~Dead(\"03_Wolf_02\")~ ~Dead("03_Wolf_02")
+Or(2)
+	Global("US_Enhanced_Palisade_Fight","GLOBAL",0)
+	Dead("US_03_Enemy_01")
+Or(2)
+	Global("US_Enhanced_Palisade_Fight","GLOBAL",0)
+	Dead("US_03_Enemy_02")~
+		REPLACE_TEXTUALLY CASE_INSENSITIVE ~Dead(\"05_Goblin_Archer_03\")~ ~Dead("05_Goblin_Archer_03")
+Or(2)
+	Global("US_Enhanced_Palisade_Fight","GLOBAL",0)
+	Dead("US_05_Enemy_01")
+Or(2)
+	Global("US_Enhanced_Palisade_Fight","GLOBAL",0)
+	Dead("US_05_Enemy_02")
+Or(2)
+	Global("US_Enhanced_Palisade_Fight","GLOBAL",0)
+	Dead("US_05_Enemy_03")
+Or(2)
+	Global("US_Enhanced_Palisade_Fight","GLOBAL",0)
+	Dead("US_05_Enemy_04")
+Or(2)
+	Global("US_Enhanced_Palisade_Fight","GLOBAL",0)
+	Dead("US_05_Enemy_05")~
+		REPLACE_TEXTUALLY CASE_INSENSITIVE ~Dead(\"06_Goblin_Archer_03\")~ ~Dead("06_Goblin_Archer_03")
+Or(2)
+	Global("US_Enhanced_Palisade_Fight","GLOBAL",0)
+	Dead("US_06_Enemy_01")~
+		REPLACE_TEXTUALLY CASE_INSENSITIVE ~Dead(\"07_Goblin_Archer_02\")~ ~Dead("07_Goblin_Archer_02")
+Or(2)
+	Global("US_Enhanced_Palisade_Fight","GLOBAL",0)
+	Dead("US_07_Enemy_01")
+Or(2)
+	Global("US_Enhanced_Palisade_Fight","GLOBAL",0)
+	Dead("US_07_Enemy_02")~
+	END
+
+OUTER_SET ref_4003 = RESOLVE_STR_REF(@4003)
+
+<<<<<<<< .../script.baf
+
+IF
+	Global("Goblin_Palisade_Quest","GLOBAL",0)
+	Global("US_Enhanced_Palisade_Fight","GLOBAL",1)
+	!Global("Goblins_Attack_Palisade","GLOBAL",0)
+	Global("GOBLIN_TEAM_1_STATE","MYAREA",2)
+	Global("GOBLIN_TEAM_2_STATE","MYAREA",2)
+	Global("GOBLIN_TEAM_3_STATE","MYAREA",2)
+	Global("GOBLIN_TEAM_4_STATE","MYAREA",2)
+	Global("GOBLIN_TEAM_6_STATE","MYAREA",2)
+	Global("GOBLIN_TEAM_7_STATE","MYAREA",2)
+	Global("GOBLIN_TEAM_8_STATE","MYAREA",2)
+THEN
+	RESPONSE #100
+		AddXPVar("Level_15_Very_Hard",%ref_4003%)
+		AddJournalEntry(27868)
+		SetGlobal("Goblin_Palisade_Quest","GLOBAL",1)
+		TriggerActivation("TO1100",TRUE)
+		SetMusic(COMBAT_NORMAL,BLANK)
+		SetMusic(DAY,BLANK)
+		SetMusic(NIGHT,BLANK)
+		SetMusic(DAY,MX_1200)
+		SetMusic(NIGHT,MX_1200)
+		SetMusic(COMBAT_WIN,none)
+		Deactivate("Goblin_Walla")
+		Continue()
+END
+
+>>>>>>>>
+EXTEND_TOP ~ar1200.bcs~ ~.../script.baf~ EVAL
+
+COPY_EXISTING_REGEXP ~12CABA0[567]\.bcs~ ~override~
+	DECOMPILE_AND_PATCH BEGIN
+		REPLACE_TEXTUALLY CASE_INSENSITIVE ~!Global(\"Goblins_Attack_Palisade\", ?\"GLOBAL\", ?0)~ ~!Global("Goblins_Attack_Palisade","GLOBAL",0)
+Global("US_Enhanced_Palisade_Fight","GLOBAL",0)~
+	END
+
+<<<<<<<< .../script.baf
+
+IF
+	!InCutsceneMode()
+	!Global("Goblins_Attack_Palisade","GLOBAL",0)
+	Global("US_Enhanced_Palisade_Fight","GLOBAL",1)
+	Global("GOBLIN_TEAM_1_STATE","MYAREA",2)
+	Global("GOBLIN_TEAM_2_STATE","MYAREA",2)
+	Global("GOBLIN_TEAM_3_STATE","MYAREA",2)
+	EntirePartyOnMap()
+THEN
+	RESPONSE #100
+		StartCutSceneMode()
+		ClearAllActions()
+		MultiPlayerSync()
+		StartCutScene("USCSPN1A")
+END
+
+>>>>>>>>
+EXTEND_TOP ~12CABA05.bcs~ ~.../script.baf~
+
+<<<<<<<< .../script.baf
+IF
+	CreatureHidden(Myself)
+	!Global("Goblins_Attack_Palisade","GLOBAL",0)
+	Global("US_Enhanced_Palisade_Fight","GLOBAL",1)
+	Global("GOBLIN_TEAM_5_STATE","MYAREA",2)
+	Global("GOBLIN_TEAM_7_STATE","MYAREA",2)
+	EntirePartyOnMap()
+THEN
+	RESPONSE #100
+		StartCutSceneMode()
+		ClearAllActions()
+		MultiPlayerSync()
+		StartCutScene("USCSPN3A")
+END
+
+>>>>>>>>
+EXTEND_TOP ~12CABA06.bcs~ ~.../script.baf~
+
+<<<<<<<< .../script.baf
+
+IF
+	!InCutsceneMode()
+	!Global("Goblins_Attack_Palisade","GLOBAL",0)
+	Global("US_Enhanced_Palisade_Fight","GLOBAL",1)
+	EntirePartyOnMap()
+THEN
+	RESPONSE #100
+		StartCutSceneMode()
+		ClearAllActions()
+		MultiPlayerSync()
+		StartCutScene("USCSPN2A")
+END
+
+>>>>>>>>
+EXTEND_TOP ~12CABA07.bcs~ ~.../script.baf~
+
+COPY_EXISTING ~AR1200.are~ ~override~
+	LPF fj_are_structure INT_VAR fj_loc_x=1642 fj_loc_y=1898 fj_orientation=14 STR_VAR fj_structure_type=~actor~ fj_name=~US_03_Enemy_01~ fj_cre_resref=~12WOLF~ END
+	LPF ALTER_AREA_ACTOR_IWD2 INT_VAR flag_difficulty_1=1 flag_difficulty_2=1 flag_difficulty_3=1 STR_VAR actor_name=~US_03_Enemy_01~ script_special1=~USATKUHP~ script_team=~00T03T~ script_special2=~1200ATNG~ script_combat=~00AATGN~ script_special3=~00T03M~ script_movement=~1200T03M~ END
+	LPF fj_are_structure INT_VAR fj_loc_x=1463 fj_loc_y=2138 fj_orientation=12 STR_VAR fj_structure_type=~actor~ fj_name=~US_03_Enemy_02~ fj_cre_resref=~12WOLF~ END
+	LPF ALTER_AREA_ACTOR_IWD2 INT_VAR flag_difficulty_1=1 flag_difficulty_2=1 flag_difficulty_3=1 STR_VAR actor_name=~US_03_Enemy_02~ script_special1=~USATKUHP~ script_team=~00T03T~ script_special2=~1200ATNG~ script_combat=~00AATGN~ script_special3=~00T03M~ script_movement=~1200T03M~ END
+
+
+	LPF fj_are_structure INT_VAR fj_loc_x=3309 fj_loc_y=416 fj_orientation=14 STR_VAR fj_structure_type=~actor~ fj_name=~US_05_Enemy_01~ fj_cre_resref=~12GOBARE~ END
+	LPF ALTER_AREA_ACTOR_IWD2 INT_VAR flag_difficulty_1=1 flag_difficulty_2=1 flag_difficulty_3=1 STR_VAR actor_name=~US_05_Enemy_01~ script_special1=~00ASTIVN~ script_team=~00T05T~ script_special2=~1200ATNR~ script_combat=~00AATBN~ script_special3=~00T05M~ script_movement=~1200T05M~ END
+	LPF fj_are_structure INT_VAR fj_loc_x=3347 fj_loc_y=399 fj_orientation=14 STR_VAR fj_structure_type=~actor~ fj_name=~US_05_Enemy_02~ fj_cre_resref=~12GOBARE~ END
+	LPF ALTER_AREA_ACTOR_IWD2 INT_VAR flag_difficulty_1=1 flag_difficulty_2=1 flag_difficulty_3=1 STR_VAR actor_name=~US_05_Enemy_02~ script_special1=~00ASTIVN~ script_team=~00T05T~ script_special2=~1200ATNR~ script_combat=~00AATBN~ script_special3=~00T05M~ script_movement=~1200T05M~ END
+	LPF fj_are_structure INT_VAR fj_loc_x=3422 fj_loc_y=391 fj_orientation=0 STR_VAR fj_structure_type=~actor~ fj_name=~US_05_Enemy_03~ fj_cre_resref=~12GOBARE~ END
+	LPF ALTER_AREA_ACTOR_IWD2 INT_VAR flag_difficulty_1=1 flag_difficulty_2=1 flag_difficulty_3=1 STR_VAR actor_name=~US_05_Enemy_03~ script_special1=~00ASTIVN~ script_team=~00T05T~ script_special2=~1200ATNR~ script_combat=~00AATBN~ script_special3=~00T05M~ script_movement=~1200T05M~ END
+	LPF fj_are_structure INT_VAR fj_loc_x=3487 fj_loc_y=401 fj_orientation=2 STR_VAR fj_structure_type=~actor~ fj_name=~US_05_Enemy_04~ fj_cre_resref=~12GOBARE~ END
+	LPF ALTER_AREA_ACTOR_IWD2 INT_VAR flag_difficulty_1=1 flag_difficulty_2=1 flag_difficulty_3=1 STR_VAR actor_name=~US_05_Enemy_04~ script_special1=~00ASTIVN~ script_team=~00T05T~ script_special2=~1200ATNR~ script_combat=~00AATBN~ script_special3=~00T05M~ script_movement=~1200T05M~ END
+	LPF fj_are_structure INT_VAR fj_loc_x=3559 fj_loc_y=494 fj_orientation=4 STR_VAR fj_structure_type=~actor~ fj_name=~US_05_Enemy_05~ fj_cre_resref=~12GOBARE~ END
+	LPF ALTER_AREA_ACTOR_IWD2 INT_VAR flag_difficulty_1=1 flag_difficulty_2=1 flag_difficulty_3=1 STR_VAR actor_name=~US_05_Enemy_05~ script_special1=~00ASTIVN~ script_team=~00T05T~ script_special2=~1200ATNR~ script_combat=~00AATBN~ script_special3=~00T05M~ script_movement=~1200T05M~ END
+
+
+	LPF fj_are_structure INT_VAR fj_loc_x=1190 fj_loc_y=868 fj_orientation=14 STR_VAR fj_structure_type=~actor~ fj_name=~US_06_Enemy_01~ fj_cre_resref=~12GOBSH1~ END
+	LPF ALTER_AREA_ACTOR_IWD2 INT_VAR flag_difficulty_1=1 flag_difficulty_2=1 flag_difficulty_3=1 STR_VAR actor_name=~US_06_Enemy_01~ script_override=~USENPINI~ script_special1=~00ASTIVN~ script_team=~00T06T~ script_special2=~31GOBSH4~ script_combat=~00AATGN~ script_special3=~00T06M~ END
+
+
+	LPF fj_are_structure INT_VAR fj_loc_x=2729 fj_loc_y=753 fj_orientation=0 STR_VAR fj_structure_type=~actor~ fj_name=~US_07_Enemy_01~ fj_cre_resref=~30GOBWRS~ END
+	LPF ALTER_AREA_ACTOR_IWD2 INT_VAR flag_difficulty_1=1 flag_difficulty_2=1 flag_difficulty_3=1 STR_VAR actor_name=~US_07_Enemy_01~ script_special1=~00ASTIVN~ script_team=~00T07T~ script_special2=~1200ATNG~ script_combat=~00AATGN~ script_special3=~00T07M~ script_movement=~1200T07M~ END
+	LPF fj_are_structure INT_VAR fj_loc_x=2611 fj_loc_y=771 fj_orientation=0 STR_VAR fj_structure_type=~actor~ fj_name=~US_07_Enemy_02~ fj_cre_resref=~30GOBWRS~ END
+	LPF ALTER_AREA_ACTOR_IWD2 INT_VAR flag_difficulty_1=1 flag_difficulty_2=1 flag_difficulty_3=1 STR_VAR actor_name=~US_07_Enemy_02~ script_special1=~00ASTIVN~ script_team=~00T07T~ script_special2=~1200ATNG~ script_combat=~00AATGN~ script_special3=~00T07M~ script_movement=~1200T07M~ END

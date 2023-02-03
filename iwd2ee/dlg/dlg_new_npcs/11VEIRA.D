@@ -322,7 +322,9 @@ END
 IF ~~ THEN BEGIN VeiraJoin2
   SAY @40018
   IF ~~ THEN REPLY @40019 DO ~SetGlobal("US_Veira_Joined", "GLOBAL", 1)
+SetGlobal("Veira_Quest", "GLOBAL", 2)
 ApplySpellRES("USVEIRC",Myself)~ EXIT
   IF ~~ THEN REPLY @40020 DO ~SetGlobal("US_Veira_Joined", "GLOBAL", 1)
+SetGlobal("Veira_Quest", "GLOBAL", 2)
 ApplySpellRES("USVEIRC",Myself)~ EXIT
 END

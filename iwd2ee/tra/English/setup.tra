@@ -8,7 +8,7 @@
 @7    = ~Better XP Progression~
 @8    = ~Completely unnerfed challenge ratings: enemy CR is always equal to their level~
 @9    = ~Partially unnerfed challenge ratings: enemy CR is equal to or slightly less than their level (recommended)~
-@10   = ~Faster Targos~
+@10   = ~More Interesting Alternative to the Palisade Quests~
 @11   = ~Faster Horde Fortress~
 @12   = ~Faster Ice Temple~
 @13   = ~Faster Wandering Village~
@@ -90,6 +90,7 @@
 @89   = ~Add more traps~
 @90   = ~Add key bindings for automating buffing (see the readme for more information)~
 @91   = ~More Persuasion Options~
+@92   = ~Add Additional Ways to Progress Through Certain Areas~
 @100  = ~IWD2EE was not uninstalled properly; the files from the previous installation are still in the override folder.
 Installing IWD2EE again without removing those files would corrupt various files.
 To install IWD2EE, do these steps in this order:

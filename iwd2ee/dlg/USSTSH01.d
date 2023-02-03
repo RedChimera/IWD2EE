@@ -2,9 +2,9 @@ BEGIN USSTSH01
 
 IF ~NumTimesTalkedTo(0)~ THEN BEGIN FirstMeeting
 SAY @6218
-IF ~CheckSkillGT(Protagonist,24,Bluff)~ THEN REPLY @6219 GOTO TotalBluff25
+IF ~CheckSkillGT(Protagonist,44,Bluff)~ THEN REPLY @6219 GOTO TotalBluff25
 IF ~CheckSkillGT(Protagonist,14,Bluff)
-CheckSkillLT(Protagonist,25,Bluff)~ THEN REPLY @6220 GOTO TotalBluff15
+CheckSkillLT(Protagonist,45,Bluff)~ THEN REPLY @6220 GOTO TotalBluff15
 IF ~CheckSkillLT(Protagonist,15,Bluff)~ THEN REPLY @6221 GOTO FailedBluff
 IF ~~ THEN REPLY @6230 DO ~SetNumTimesTalkedTo(0)~ GOTO Leave
 END

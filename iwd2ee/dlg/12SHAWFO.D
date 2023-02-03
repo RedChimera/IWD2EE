@@ -42,7 +42,7 @@ END
 IF ~~ THEN BEGIN 6
   SAY @6004
   IF ~~ THEN REPLY @6005 GOTO 7
-  IF ~~ THEN REPLY @6006 GOTO ShawfordTransition
+  IF ~Global("US_Allow_Enhanced_Palisade","GLOBAL",1)~ THEN REPLY @6006 GOTO ShawfordTransition
 END
 
 IF ~~ THEN BEGIN 7
@@ -469,14 +469,26 @@ END
 
 IF ~~ THEN BEGIN ShawfordTransition
   SAY @6007
-  IF ~  Global("10Swift_Dead","GLOBAL",0)
-~ THEN REPLY #10813 DO ~AddexperienceParty(5400)
-SetGlobal("Goblins_Attack_Palisade", "GLOBAL", 1)
+  IF ~~ THEN DO ~FadeToColor([0.0],0)
+Wait(3)
+AdvanceTime(2400)
+FadeFromColor([0.0],0)~ GOTO ShawfordTransition2
+END
+
+IF ~~ THEN BEGIN ShawfordTransition2
+  SAY @6402
+  IF ~Global("10Swift_Dead","GLOBAL",0)
+~ THEN REPLY #10813 DO ~SetGlobal("Goblins_Attack_Palisade", "GLOBAL", 1)
+SetGlobal("Palisade_Iron_Collar_Quest","GLOBAL",4)
+SetGlobal("Lumber_Quest_Aborted","GLOBAL",1)
+SetGlobal("US_Enhanced_Palisade_Fight","GLOBAL",1)
 StartCutSceneMode()
 StartCutScene("12cWar2")~ EXIT
-  IF ~  Global("10Swift_Dead","GLOBAL",1)
-~ THEN REPLY #10813 DO ~AddexperienceParty(5400)
-SetGlobal("Goblins_Attack_Palisade", "GLOBAL", 1)
+  IF ~Global("10Swift_Dead","GLOBAL",1)
+~ THEN REPLY #10813 DO ~SetGlobal("Goblins_Attack_Palisade", "GLOBAL", 1)
+SetGlobal("Palisade_Iron_Collar_Quest","GLOBAL",4)
+SetGlobal("Lumber_Quest_Aborted","GLOBAL",1)
+SetGlobal("US_Enhanced_Palisade_Fight","GLOBAL",1)
 StartCutSceneMode()
 StartCutScene("12cWar0")~ EXIT
 END

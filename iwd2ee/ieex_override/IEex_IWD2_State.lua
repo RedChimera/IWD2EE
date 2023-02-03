@@ -3445,6 +3445,7 @@ function EXDAMAGE(effectData, creatureData)
 	if ((parameter2 == 0x200000 or parameter2 == 0x200003) and isImmuneToPoison) or ((parameter2 == 0x40000000 or parameter2 == 0x40000003) and isImmuneToDisease) then
 		damage = 0
 	end
+--	IEex_DS("savebonus E: " .. savebonus)
 	if damage <= 0 then
 		damage = 0
 	else
@@ -3829,6 +3830,14 @@ function MEHEALIN(effectData, creatureData)
 ["parent_resource"] = parent_resource,
 ["source_id"] = sourceID
 })
+end
+
+function MESETGLB(effectData, creatureData)
+	IEex_WriteDword(effectData + 0x110, 1)
+	if IEex_CheckForEffectRepeat(effectData, creatureData) then return end
+	local variableName = IEex_ReadLString(effectData + 0x18, 8)
+	local value = IEex_ReadDword(effectData + 0x44)
+	IEex_SetGlobal(variableName, value)
 end
 
 ex_feat_bit_location = {
@@ -26323,6 +26332,16 @@ end
 
 IEex_AddActionHookOpcode("MENOTHIN")
 
+function MENOINID(originatingEffectData, actionData, creatureData)
+	local actionID = IEex_GetActionID(actionData)
+	local savingthrow = IEex_ReadDword(originatingEffectData + 0x3C)
+	if actionID == 139 or ((actionID == 8 or actionID == 137 or actionID == 198) and bit.band(savingthrow, 0x10000) > 0) then
+		IEex_WriteWord(creatureData + 0x476, 0)
+	end
+end
+
+IEex_AddActionHookOpcode("MENOINID")
+
 function MECLEARA(effectData, creatureData)
 	IEex_WriteWord(creatureData + 0x476, 0)
 end
@@ -26492,6 +26511,38 @@ function MESUMDLG(actionData, creatureData)
 end
 
 IEex_AddActionHookGlobal("MESUMDLG")
+
+ex_race_name_ref = {[10000] = 1096, [10001] = 5377, [10002] = 5378, [20000] = 1097, [20001] = 5379, [20002] = 5380, [30000] = 1098, [40000] = 1100, [40001] = 5381, [40002] = 5382, [50000] = 5374, [50001] = 5383, [50002] = 5384, [60000] = 1099, [60001] = 5385, [70000] = 23, }
+ex_race_name_ref_less_specific = {[10000] = 1096, [10001] = 5377, [10002] = 5378, [20000] = 7194, [20001] = 5379, [20002] = 7194, [30000] = 1098, [40000] = 7182, [40001] = 7192, [40002] = 9295, [50000] = 7195, [50001] = 7195, [50002] = 7195, [60000] = 7196, [60001] = 7196, [70000] = 23, }
+function MEDLGTOK(actionData, creatureData)
+	local actionID = IEex_GetActionID(actionData)
+	local sourceID = IEex_GetActorIDShare(creatureData)
+	if actionID == 8 or actionID == 137 or actionID == 139 or actionID == 198 then
+		local tokenRecipientID = IEex_ReadDword(creatureData + 0x4BE)
+		if actionID == 139 then
+			tokenRecipientID = sourceID
+		end
+		local recipientData = IEex_GetActorShare(tokenRecipientID)
+		local gender = IEex_ReadByte(recipientData + 0x34, 0x0)
+		if gender == 1 then
+			for k, v in pairs(ex_token_male) do
+				IEex_SetToken(k, IEex_FetchString(v))
+			end
+		elseif gender == 2 then
+			for k, v in pairs(ex_token_female) do
+				IEex_SetToken(k, IEex_FetchString(v))
+			end
+		end
+		local racePlusSub = IEex_ReadByte(recipientData + 0x26, 0x0) * 0x10000 + IEex_GetActorStat(targetID, 93)
+		local raceStrref = 1
+		if ex_race_name_ref_less_specific[racePlusSub] ~= nil then
+			raceStrref = ex_race_name_ref_less_specific[racePlusSub]
+		end
+		IEex_SetToken("PRO_RACE", string.lower(IEex_FetchString(raceStrref)))
+	end
+end
+
+IEex_AddActionHookGlobal("MEDLGTOK")
 
 function MEPICKPO(actionData, creatureData)
 	local actionID = IEex_GetActionID(actionData)
@@ -27293,6 +27344,33 @@ function IEex_PickLock(sourceID, targetID)
 })
 				return
 			end
+			if bit.band(objectFlags, 0x200000) > 0 then
+				if bit.band(objectFlags, 0x100000) > 0 then
+					IEex_ApplyEffectToActor(sourceID, {
+["opcode"] = 139,
+["target"] = 2,
+["timing"] = 9,
+["parameter1"] = ex_tra_55814,
+["source_id"] = sourceID
+})
+				else
+					IEex_ApplyEffectToActor(sourceID, {
+["opcode"] = 139,
+["target"] = 2,
+["timing"] = 9,
+["parameter1"] = ex_tra_55810,
+["source_id"] = sourceID
+})
+				end
+				IEex_ApplyEffectToActor(sourceID, {
+["opcode"] = 174,
+["target"] = 2,
+["timing"] = 9,
+["resource"] = "AMB_D21",
+["source_id"] = sourceID
+})
+				return
+			end
 			if lockpickingSkill + math.random(4) >= math.floor(lockDifficulty / 5) then
 				objectFlags = bit.band(objectFlags, 0xFFFFFFFE)
 				objectFlags = bit.bor(objectFlags, 0x1000000)
@@ -27346,6 +27424,33 @@ function IEex_PickLock(sourceID, targetID)
 ["parameter1"] = 23169,
 ["source_id"] = sourceID
 })
+				IEex_ApplyEffectToActor(sourceID, {
+["opcode"] = 174,
+["target"] = 2,
+["timing"] = 9,
+["resource"] = "AMB_D21",
+["source_id"] = sourceID
+})
+				return
+			end
+			if bit.band(objectFlags, 0x200000) > 0 then
+				if bit.band(objectFlags, 0x100000) > 0 then
+					IEex_ApplyEffectToActor(sourceID, {
+["opcode"] = 139,
+["target"] = 2,
+["timing"] = 9,
+["parameter1"] = ex_tra_55813,
+["source_id"] = sourceID
+})
+				else
+					IEex_ApplyEffectToActor(sourceID, {
+["opcode"] = 139,
+["target"] = 2,
+["timing"] = 9,
+["parameter1"] = ex_tra_55810,
+["source_id"] = sourceID
+})
+				end
 				IEex_ApplyEffectToActor(sourceID, {
 ["opcode"] = 174,
 ["target"] = 2,
@@ -27419,6 +27524,26 @@ function IEex_BashLock(sourceID, targetID)
 })
 				return
 			end
+			if bit.band(objectFlags, 0x100000) > 0 then
+				if bit.band(objectFlags, 0x200000) > 0 then
+					IEex_ApplyEffectToActor(sourceID, {
+["opcode"] = 139,
+["target"] = 2,
+["timing"] = 9,
+["parameter1"] = ex_tra_55814,
+["source_id"] = sourceID
+})
+				else
+					IEex_ApplyEffectToActor(sourceID, {
+["opcode"] = 139,
+["target"] = 2,
+["timing"] = 9,
+["parameter1"] = ex_tra_55812,
+["source_id"] = sourceID
+})
+				end
+				return
+			end
 			local roll = math.random(4)
 			if strengthBonus + roll >= math.floor(lockDifficulty / 5) or roll == 4 and lockDifficulty <= 5 then
 				objectFlags = bit.band(objectFlags, 0xFFFFFFFE)
@@ -27454,6 +27579,26 @@ function IEex_BashLock(sourceID, targetID)
 ["parameter1"] = 9914,
 ["source_id"] = sourceID
 })
+				return
+			end
+			if bit.band(objectFlags, 0x100000) > 0 then
+				if bit.band(objectFlags, 0x200000) > 0 then
+					IEex_ApplyEffectToActor(sourceID, {
+["opcode"] = 139,
+["target"] = 2,
+["timing"] = 9,
+["parameter1"] = ex_tra_55813,
+["source_id"] = sourceID
+})
+				else
+					IEex_ApplyEffectToActor(sourceID, {
+["opcode"] = 139,
+["target"] = 2,
+["timing"] = 9,
+["parameter1"] = ex_tra_55811,
+["source_id"] = sourceID
+})
+				end
 				return
 			end
 			if strengthBonus + math.random(4) >= math.floor(lockDifficulty / 5) then
@@ -30177,4 +30322,56 @@ function IEex_SetBanter()
 			end
 		end
 	end
+end
+
+USREIG = "USREIG"
+USGEOF = "USGEOF"
+USVEIR = "USVEIR"
+USEMMA = "USEMMA"
+USVREK = "USVREK"
+USVUNA = "USVUNA"
+USZACK = "USZACK"
+USXHAA = "USXHAA"
+USPAIR = "USPAIR"
+USSERS = "USSERS"
+
+function IEex_IfValidForPartyDialogue(scriptName)
+	local sourceID = IEex_Lua_ActorID
+	local sourceData = IEex_GetActorShare(sourceID)
+	if not scriptName then
+		scriptName = IEex_ReadLString(sourceData + 0x554, 32)
+	end
+	local canBanter = false
+	for i = 0, 5, 1 do
+		local share = IEex_GetActorShare(IEex_GetActorIDCharacter(i))
+		if share > 0 then
+		end
+		if share > 0 and IEex_ReadLString(share + 0x554, 32) == scriptName then
+			local stateValue = bit.bor(IEex_ReadDword(share + 0x5BC), IEex_ReadDword(share + 0x920))
+			if bit.band(stateValue, 0x80103FFF) == 0 and IEex_ReadDword(sourceData + 0x12) == IEex_ReadDword(share + 0x12) and IEex_ReadDword(IEex_GetActorShare(IEex_GetActorIDCharacter(0)) + 0x12) == IEex_ReadDword(share + 0x12) then
+				canBanter = true
+			end
+		end
+	end
+	return true
+end
+
+function IEex_AllPartyMembersCanBanter()
+	local areaCheck = -1
+	for i = 0, 5, 1 do
+		local share = IEex_GetActorShare(IEex_GetActorIDCharacter(i))
+		if share > 0 then
+			local stateValue = bit.bor(IEex_ReadDword(share + 0x5BC), IEex_ReadDword(share + 0x920))
+			local currentArea = IEex_ReadDword(share + 0x12)
+			if areaCheck == -1 then
+				areaCheck = currentArea
+			elseif areaCheck ~= currentArea then
+				return false
+			end
+			if bit.band(stateValue, 0x80103FFF) ~= 0 then
+				return false
+			end
+		end
+	end
+	return true
 end

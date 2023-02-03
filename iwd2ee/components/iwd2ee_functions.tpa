@@ -1915,6 +1915,22 @@ BEGIN
 		REPLACE_TEXTUALLY EXACT_MATCH ~ex_timed_banter_list = {~ ~ex_timed_banter_list = {{["dlgs"] = {%dlglist%}, ["id"] = %id%, ["globals"] = {%globallist%}}, ~
 END
 
+DEFINE_ACTION_FUNCTION ~ADD_GENDER_TOKEN_IWD2~
+	INT_VAR
+		male=0
+		female=0
+	STR_VAR
+		token=~~
+BEGIN
+	OUTER_PATCH_SAVE token_fixed ~%token%~ BEGIN
+		REPLACE_TEXTUALLY CASE_INSENSITIVE ~[\[\]<>]~ ~~
+	END
+	COPY_EXISTING ~IEEX_TRA.lua~ ~override~
+		REPLACE_TEXTUALLY CASE_SENSITIVE ~\[\"%token_fixed%\"\][^,}]*, *~ ~~
+		REPLACE_TEXTUALLY EXACT_MATCH ~ex_token_male = {~ ~ex_token_male = {["%token_fixed%"] = %male%, ~
+		REPLACE_TEXTUALLY EXACT_MATCH ~ex_token_female = {~ ~ex_token_female = {["%token_fixed%"] = %female%, ~
+END
+
 DEFINE_PATCH_FUNCTION ~CONVERT_DLG_TO_IWD2_FORMAT~
 BEGIN
 	READ_LONG 0xc ulgiash

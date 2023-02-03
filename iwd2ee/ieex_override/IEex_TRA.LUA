@@ -1,3 +1,5 @@
+ex_token_male = {}
+ex_token_female = {}
 ex_tra_904 = 0
 ex_tra_905 = 0
 ex_tra_906 = 0
@@ -90,6 +92,11 @@ ex_tra_55806 = 0
 ex_tra_55807 = 0
 ex_tra_55808 = 0
 ex_tra_55809 = 0
+ex_tra_55810 = 0
+ex_tra_55811 = 0
+ex_tra_55812 = 0
+ex_tra_55813 = 0
+ex_tra_55814 = 0
 ex_tra_55901 = 0
 ex_tra_55902 = 0
 ex_tra_55903 = 0

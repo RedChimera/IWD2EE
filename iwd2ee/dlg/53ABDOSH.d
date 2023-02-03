@@ -13,7 +13,7 @@ END
 
 IF ~~ THEN BEGIN 2
   SAY #22172
-  IF ~  CheckSkillGT(Protagonist,11,Intimidate)
+  IF ~  CheckSkillGT(Protagonist,17,Intimidate)
 ~ THEN REPLY #422 DO ~SetGlobal("53ElderB_Permission", "GLOBAL", 1)~ EXTERN ~53ELDER~ 10
   IF ~~ THEN REPLY @6044 DO ~Enemy()~ EXIT
 END

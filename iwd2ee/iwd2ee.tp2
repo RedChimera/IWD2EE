@@ -90,18 +90,24 @@ SUBCOMPONENT @7
       INCLUDE ~%mod_folder%/components/better_xp_2.tpa~      //~Partially unnerfed challenge ratings: enemy CR is equal to or slightly less than their level (recommended)~
 
 
-//Faster Targos
+//More Interesting Alternative to the Palisade Quests
 BEGIN @10 DESIGNATED 8
 
-      INCLUDE ~%mod_folder%/components/faster_targos.tpa~      //~Faster Targos~
+      INCLUDE ~%mod_folder%/components/faster_targos.tpa~      //~More Interesting Alternative to the Palisade Quests~
+
+//Add Additional Ways to Progress Through Certain Areas
+
+BEGIN @92 DESIGNATED 94
+
+      INCLUDE ~%mod_folder%/components/nonlinear_areas.tpa~      //~Add Additional Ways to Progress Through Certain Areas~
 
 //Faster Horde Fortress
-BEGIN @11 DESIGNATED 9
+BEGIN @11 DESIGNATED 9 DEPRECATED ~The content of this component has been moved to Add Additional Ways to Progress Through Certain Areas.~
 
       INCLUDE ~%mod_folder%/components/faster_horde.tpa~      //~Faster Horde Fortress~
 
 //Faster Ice Temple
-BEGIN @12 DESIGNATED 10
+BEGIN @12 DESIGNATED 10 DEPRECATED ~The content of this component has been moved to Add Additional Ways to Progress Through Certain Areas.~
 
       INCLUDE ~%mod_folder%/components/faster_ice.tpa~      //~Faster Ice Temple~
 
@@ -113,13 +119,13 @@ BEGIN @13 DESIGNATED 11
 
 //Faster Black Raven Monastery
 
-BEGIN @14 DESIGNATED 12
+BEGIN @14 DESIGNATED 12 DEPRECATED ~~
 
       INCLUDE ~%mod_folder%/components/faster_b_raven.tpa~      //~Faster Black Raven Monastery~
 
 //Faster Underdark
 
-BEGIN @15 DESIGNATED 13
+BEGIN @15 DESIGNATED 13 DEPRECATED ~~
 
       INCLUDE ~%mod_folder%/components/faster_underdark.tpa~      //~Faster Underdark~
 
@@ -131,15 +137,15 @@ BEGIN @16 DESIGNATED 14
 
 //Faster Severed Hand
 
-BEGIN @17 DESIGNATED 15
+BEGIN @17 DESIGNATED 15 DEPRECATED ~The content of this component has been moved to Add Additional Ways to Progress Through Certain Areas.~
 
       INCLUDE ~%mod_folder%/components/faster_severed_hand.tpa~      //~Faster Severed Hand~
 
-//Alternative Dragon's Eye
+//Shorten the Dragon's Eye time loop questline to a single battle
 
 BEGIN @29 DESIGNATED 27
 
-      INCLUDE ~%mod_folder%/components/alt_dragon_eye.tpa~      //~Alternative Dragon's Eye~
+      INCLUDE ~%mod_folder%/components/alt_dragon_eye.tpa~      //~Shorten the Dragon's Eye time loop questline to a single battle~
 
 //More Potions for Oswald
 

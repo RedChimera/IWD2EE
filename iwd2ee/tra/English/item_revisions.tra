@@ -4913,7 +4913,7 @@ Enchantment:  +1
 Damage Type:  Slashing
 Special: 
   Counts as a silver weapon
-  Each hit creates a Goodberry in the wielder's third quick item slot
+  Each hit has a 25% chance to create a Goodberry in the wielder's third quick item slot
 Weight:  4 lb.
 Feat Requirement:  Martial Weapon, Large Sword
 Type:  One-handed~
@@ -4928,7 +4928,7 @@ Enchantment:  +3
 Damage Type:  Slashing
 Special: 
   Counts as a silver weapon
-  Each hit creates two Goodberries in the wielder's third quick item slot
+  Each hit has a 50% chance to create a Goodberry in the wielder's third quick item slot
 Weight:  4 lb.
 Feat Requirement:  Martial Weapon, Large Sword
 Type:  One-handed~
@@ -14127,8 +14127,8 @@ Cold Resistance: 50/-~
 
 Strength: +24
 Cold Resistance: 100/-~
-@13911    = ~Pikeman's End~
-@13912    = ~This notched and tarnished blade once saw a great deal of service in the employ of Kath Tahl, a warlord and bandit who roamed the countryside of the western heartlands.  Kath was fond of destroying peasant militias to send a warning to other communities.  He used this sword to that end.  When the nervous defenders tried to form a line of pikes, Kath and other heavily armored men would wade into the fray, hacking their weapons apart and breaking their formation.  Once the villagers had been sent into disarray, his men would fall in with cavalry and take what they wanted.  Kath eventually met his end when a rival warlord, Marhap the Blackbeard, destroyed Kath's army.
+@12911    = ~Pikeman's End~
+@12912    = ~This notched and tarnished blade once saw a great deal of service in the employ of Kath Tahl, a warlord and bandit who roamed the countryside of the western heartlands.  Kath was fond of destroying peasant militias to send a warning to other communities.  He used this sword to that end.  When the nervous defenders tried to form a line of pikes, Kath and other heavily armored men would wade into the fray, hacking their weapons apart and breaking their formation.  Once the villagers had been sent into disarray, his men would fall in with cavalry and take what they wanted.  Kath eventually met his end when a rival warlord, Marhap the Blackbeard, destroyed Kath's army.
 
 STATISTICS:
 
@@ -14141,8 +14141,8 @@ Special:
 Weight: 12 lb.
 Feat Requirement:  Martial Weapon, Great Sword
 Type:  Two-handed~
-@13913    = ~Pikeman's Ruin~
-@13914    = ~This notched and tarnished blade once saw a great deal of service in the employ of Kath Tahl, a warlord and bandit who roamed the countryside of the western heartlands.  Kath was fond of destroying peasant militias to send a warning to other communities.  He used this sword to that end.  When the nervous defenders tried to form a line of pikes, Kath and other heavily armored men would wade into the fray, hacking their weapons apart and breaking their formation.  Once the villagers had been sent into disarray, his men would fall in with cavalry and take what they wanted.  Kath eventually met his end when a rival warlord, Marhap the Blackbeard, destroyed Kath's army.
+@12913    = ~Pikeman's Ruin~
+@12914    = ~This notched and tarnished blade once saw a great deal of service in the employ of Kath Tahl, a warlord and bandit who roamed the countryside of the western heartlands.  Kath was fond of destroying peasant militias to send a warning to other communities.  He used this sword to that end.  When the nervous defenders tried to form a line of pikes, Kath and other heavily armored men would wade into the fray, hacking their weapons apart and breaking their formation.  Once the villagers had been sent into disarray, his men would fall in with cavalry and take what they wanted.  Kath eventually met his end when a rival warlord, Marhap the Blackbeard, destroyed Kath's army.
 
 STATISTICS:
 

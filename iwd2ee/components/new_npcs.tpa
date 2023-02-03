@@ -48,6 +48,7 @@ OUTER_PATCH us_creature_constants BEGIN
 	levelrogue=0x93
 	levelsorcerer=0x94
 	levelwizard=0x95
+	BIOGRAPHY=0x1a8
 	teamscript=0x1ac
 	specialscript1=0x1b4
 	enchantmentlevel=0x1bc
@@ -236,9 +237,9 @@ COMPILE ~%mod_folder%/dlg/dlg_new_npcs/USPAIRP.d~
 COMPILE ~%mod_folder%/dlg/dlg_new_npcs/USSERSP.d~
 COMPILE ~%mod_folder%/dlg/dlg_new_npcs/USGEOFJ.d~
 COMPILE ~%mod_folder%/dlg/dlg_new_npcs/USREIGJ.d~
-//COMPILE ~%mod_folder%/dlg/dlg_new_npcs/USVEIRJ.d~
+COMPILE ~%mod_folder%/dlg/dlg_new_npcs/USVEIRJ.d~
 COMPILE ~%mod_folder%/dlg/dlg_new_npcs/USEMMAJ.d~
-//COMPILE ~%mod_folder%/dlg/dlg_new_npcs/USVREKJ.d~
+COMPILE ~%mod_folder%/dlg/dlg_new_npcs/USVREKJ.d~
 COMPILE ~%mod_folder%/dlg/dlg_new_npcs/USVUNAJ.d~
 COMPILE ~%mod_folder%/dlg/dlg_new_npcs/USXHAAJ.d~
 COMPILE ~%mod_folder%/dlg/dlg_new_npcs/USZACKJ.d~
@@ -247,11 +248,20 @@ COMPILE ~%mod_folder%/dlg/dlg_new_npcs/USZACKJ.d~
 
 COPY_EXISTING ~IEEX_WEIDU.lua~ ~override~
 	REPLACE_TEXTUALLY CASE_INSENSITIVE EXACT_MATCH ~ex_on_join_party_special_script_1_set = {~ ~ex_on_join_party_special_script_1_set = {["USGEOF"] = "USGEOFD", ["USREIG"] = "USREIGD", ["USVEIR"] = "USVEIRD", ["USEMMA"] = "USEMMAD", ["USVREK"] = "USVREKD", ["USVUNA"] = "USVUNAD", ["USXHAA"] = "USXHAAD", ["USZACK"] = "USZACKD", ["USPAIR"] = "USPAIRD", ["USSERS"] = "USSERSD", ~
-	REPLACE_TEXTUALLY CASE_INSENSITIVE EXACT_MATCH ~ex_on_join_party_team_script_set = {~ ~ex_on_join_party_team_script_set = {["USEMMA"] = "USEMMABL", ["USVREK"] = "USVREKLV", ["USVUNA"] = "USVUNALV", ["USXHAA"] = "USXHAALV", ~
+	REPLACE_TEXTUALLY CASE_INSENSITIVE EXACT_MATCH ~ex_on_join_party_team_script_set = {~ ~ex_on_join_party_team_script_set = {["USEMMA"] = "USEMMABL", ["USVREK"] = "USVREKLV", ["USVUNA"] = "USVUNALV", ["USXHAA"] = "USXHAALV", ["USSERS"] = "USSERSLV", ~
 	REPLACE_TEXTUALLY CASE_INSENSITIVE EXACT_MATCH ~ex_on_leave_party_dlg_set = {~ ~ex_on_leave_party_dlg_set = {["USGEOF"] = "USGEOFP", ["USREIG"] = "USREIGP", ["USVEIR"] = "USVEIRP", ["USEMMA"] = "USEMMAP", ["USVREK"] = "USVREKP", ["USVUNA"] = "USVUNAP", ["USXHAA"] = "USXHAAP", ["USZACK"] = "USZACKP", ["USPAIR"] = "USPAIRP", ["USSERS"] = "USSERSP", ~
 	REPLACE_TEXTUALLY CASE_INSENSITIVE EXACT_MATCH ~ex_on_join_party_dlg_set = {~ ~ex_on_join_party_dlg_set = {["USGEOF"] = "USGEOFJ", ["USREIG"] = "USREIGJ", ["USVEIR"] = "USVEIRJ", ["USEMMA"] = "USEMMAJ", ["USVREK"] = "USVREKJ", ["USVUNA"] = "USVUNAJ", ["USXHAA"] = "USXHAAJ", ["USZACK"] = "USZACKJ", ["USPAIR"] = "USPAIRJ", ["USSERS"] = "USSERSJ", ~
 
 LAF ADD_TIMED_BANTER_IWD2 INT_VAR id=1 STR_VAR dlg1=~USREIGJ~ dlg2=~USGEOFJ~ END
+LAF ADD_TIMED_BANTER_IWD2 INT_VAR id=9 STR_VAR dlg1=~USGEOFJ~ dlg2=~USEMMAJ~ END
+
+LAF ADD_GENDER_TOKEN_IWD2 INT_VAR male=RESOLVE_STR_REF(@40421) female=RESOLVE_STR_REF(@40422) STR_VAR token=~PRO_BOYGIRL~ END
+LAF ADD_GENDER_TOKEN_IWD2 INT_VAR male=RESOLVE_STR_REF(@40423) female=RESOLVE_STR_REF(@40424) STR_VAR token=~PRO_BOYGIRL_UPPER~ END
+
+COPY_EXISTING ~USGEOFD.bcs~ ~override~
+	REPLACE ~40468~ @40468
+	REPLACE ~40564~ @40564
+
 
 ACTION_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~4~ BEGIN
 
@@ -938,6 +948,7 @@ COPY_EXISTING ~USVUNA.cre~ ~override~
 	LPF	IWD2_REMOVE_CRE_ITEM STR_VAR item=~USAHFI5~ END
 
 COPY_EXISTING ~USXHAA.cre~ ~override~
+	SAY BIOGRAPHY @40410
 	WRITE_BYTE race 164
 	WRITE_ASCII specialscript1 ~USXHAAD~ #8
 	WRITE_ASCII dialogue ~USXHAA~ #8

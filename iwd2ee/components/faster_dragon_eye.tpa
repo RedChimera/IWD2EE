@@ -8,7 +8,32 @@ END
 
 //INCLUDE ~%mod_folder%/components/us_functions.tpa~ //Functions that may be used in multiple components
 
+ACTION_IF NOT MOD_IS_INSTALLED ~iwd2ee.tp2~ ~2~ BEGIN
+	COPY_EXISTING ~SPPR716.spl~ ~override~ ~SPWI804.spl~ ~override~
+		LPF CLONE_EFFECT INT_VAR silent=1 check_headers=1 check_globals=0 match_opcode=142 opcode=288 parameter2=129 END
+END
 
+ACTION_IF NOT MOD_IS_INSTALLED ~iwd2ee.tp2~ ~4~ BEGIN
+
+	COPY_EXISTING ~00HFAMES.itm~ ~override~
+		LPF CLONE_EFFECT INT_VAR silent=1 check_headers=0 check_globals=1 match_opcode=142 opcode=288 parameter2=129 END
+
+	COPY ~%mod_folder%/itm/itm_item_revisions/61GENWP.itm~ ~override~
+		READ_LONG 0x18 theitemflags
+		theitemflags&=0xFFFF7FFE
+		WRITE_LONG 0x18 theitemflags
+		SAY UNIDENTIFIED_DESC @12316
+		IF_EXISTS
+
+	COPY ~%mod_folder%/itm/itm_item_revisions/61POTNSB.itm~ ~override~
+		SAY IDENTIFIED_DESC @12588
+
+	COPY_EXISTING ~61pbrewt.bcs~ ~override~
+		DECOMPILE_AND_PATCH BEGIN
+			REPLACE_TEXTUALLY CASE_INSENSITIVE ~GiveItemCreate(\"61GenWP\",\"PoisonTable\",1,0,0)~ ~GiveItemCreate("61GenWP","PoisonTable",3,0,0)~
+			REPLACE_TEXTUALLY CASE_INSENSITIVE ~Global(\"61ExitTo6104Open\",\"GLOBAL\",1)~ ~False()~
+		END
+END
 
 COPY_EXISTING ~61pbridg.bcs~ ~override~
 	DECOMPILE_AND_PATCH BEGIN
@@ -29,9 +54,8 @@ COPY_EXISTING ~61pslime.bcs~ ~override~
 
 COPY_EXISTING ~61sseeye.bcs~ ~override~
 	DECOMPILE_AND_PATCH BEGIN
-		REPLACE_TEXTUALLY CASE_INSENSITIVE ~.IsAnimationID.*
-~ ~False()
-~
+		REPLACE_TEXTUALLY CASE_INSENSITIVE ~\(.IsAnimationID\)~ ~!CheckSpellState(LastMarkedObject,MIND_BLANK)
+\1~
 	END
 
 <<<<<<<< .../script.baf
@@ -52,22 +76,5 @@ END
 >>>>>>>>
 EXTEND_TOP ~61thoram.bcs~ ~.../script.baf~
 
-STRING_SET_EVALUATE 35435 ~This strange door does not budge. Written on it in calligraphy are the words, "Only by the will of the High Priest shalt thou pass."~
-
-/*
-// patches a door so you can force it open and also rigs the northmost exit in Lord Pyros' domain to lead to the Fields of Slaughter instead of back to Dragon's Eye
-
-COPY_EXISTING ~AR6103.are~ ~override~
- WRITE_BYTE 0xE428 99
-BUT_ONLY
-
-*/
-
-/*
-COPY_EXISTING ~AR6104.are~ ~override~
- WRITE_BYTE 0x91E6 0x36
- WRITE_BYTE 0x91E7 0x32
- WRITE_BYTE 0x91E8 0x30
- WRITE_BYTE 0x91E9 0x30
-BUT_ONLY
-*/
+STRING_SET_EVALUATE 35435 @4006
+STRING_SET_EVALUATE 35458 @4007

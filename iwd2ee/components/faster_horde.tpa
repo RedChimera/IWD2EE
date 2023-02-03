@@ -23,10 +23,15 @@ COPY_EXISTING ~AR3000.are~ ~override~
 		SET offset = dooroffset + (i * doorsize)
 		READ_ASCII (offset + 0x20) doorid (8)
 		PATCH_IF (~%doorid%~ STRING_EQUAL ~MAINGATE~) BEGIN
-			WRITE_LONG (offset + 0x8c) 99
+			WRITE_LONG (offset + 0x8c) 70
+			READ_LONG (offset + 0x28) thedoorflags
+			thedoorflags|=0x200000
+			WRITE_LONG (offset + 0x28) thedoorflags
+			SAY (offset + 0x98) @4004
 		END
 		ELSE PATCH_IF (~%doorid%~ STRING_EQUAL ~SIDEGATE~) BEGIN
-			WRITE_LONG (offset + 0x8c) 99
+			WRITE_LONG (offset + 0x8c) 95
+			SAY (offset + 0x98) @4005
 		END
 	END
 /*
@@ -72,9 +77,6 @@ STR_VAR door_name=~AR3100_Door3_InnerGate~ END
 		READ_ASCII (offset + 0x20) doorid (5)
 		PATCH_IF (~%doorid%~ STRING_EQUAL ~GATE1~) BEGIN
 			WRITE_LONG (offset + 0x28) 0x61
-		END
-		ELSE PATCH_IF (~%doorid%~ STRING_EQUAL ~DOOR1~) BEGIN
-			WRITE_LONG (offset + 0x8c) 110
 		END
 	END
 

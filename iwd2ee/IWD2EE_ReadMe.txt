@@ -5,9 +5,23 @@ Installation:
 3. The WeiDu window will pop up. Follow the prompt and WeiDu will install the mod on your game. This can also reinstall or uninstall the mod.
 4. In the IWD2 folder will appear a new program: IWD2EE.exe. Start the game by clicking on it. If you start the game via IWD2.exe, the game will not work right.
 
-Icewind Dale 2: Enhanced Edition is a compilation of tweaks and fixes for Icewind Dale 2, enhancing the game in a variety of ways. Classes, spells, items, creatures, and encounters are made more interesting. IWD2EE changes over 300 spells and over 1,000 items, and it adds over 30 new spells, over 120 new items, and several NPCs that can join the party. The mod fixes many of the big issues with the original Icewind Dale 2: you no longer have to solve tedious, cryptic puzzles to complete certain areas, enemies in Heart of Fury Mode are empowered in interesting ways rather than just having lots of HP, and you can revise the experience system so you won't get zero experience for killing enemies late in the game.
+Icewind Dale 2: Enhanced Edition is a compilation of tweaks and fixes for Icewind Dale 2, enhancing the game in a variety of ways. Classes, spells, items, creatures, and encounters are made more interesting. IWD2EE changes over 300 spells and over 1,000 items, and it adds over 90 new spells, almost 200 new items, over 30 new feats, and several NPCs that can join the party. The mod fixes many of the big issues with the original Icewind Dale 2: you no longer have to do large amounts of backtracking to complete certain areas, enemies in Heart of Fury Mode are empowered in interesting ways rather than just having lots of HP, and you can revise the experience system so you won't get zero experience for killing enemies late in the game.
 
-Class Revisions, Spell Revisions, Item Revisions and Creature Revisions are the core components of IWD2EE. It is recommended you install all four of them.
+The big changes described above are only applied if you install certain components - Class Revisions, Spell Revisions, Item Revisions and Creature Revisions are the biggest ones. But there is also a core component to IWD2EE, which is installed the first time you install any one of IWD2EE's components (even one like the New GUI component that doesn't change gameplay on its own).
+
+--Core Features--
+
+* Load times are much faster.
+* Scrolling the screen should be smoother on some devices.
+* It is possible to scroll with the middle mouse button.
+* When you start IWD2EE, a menu opens that lets you set the game to a higher resolution.
+* Right-clicking the inventory button opens the quickloot menu.
+* Right-clicking a spell or innate ability on the actionbar brings up its description (though most innate abilities don't have descriptions unless Class Revisions is installed).
+* You can now go through dialogue as fast as you want; there's no longer a brief delay each time you choose a dialogue option.
+* The character record screen includes a Reform Party button.
+* The options screen includes a button to access the IEex Options menu (currently it includes an option to alter the fog of war so that it doesn't flicker, if you were having problems with it flickering).
+* If you do not have the vanilla option to rest until healed enabled, characters heal a number of HP equal to their level on rest, rather than only healing 1 HP.
+* For modders, IWD2EE includes several new opcodes, and offers the ability to run Lua code in-game (and some of the new opcodes can call custom Lua functions), as well as a limited ability to modify to GUI. This opens up many possibilities for modding.
 
 Components:
 
@@ -18,48 +32,44 @@ Components:
 5. Item Revisions
 6. Creature Revisions
 7. Better XP Progression
-8. Faster Targos
-9. Faster Horde Fortress
-10. Faster Ice Temple
-11. Faster Wandering Village
-12. Faster Black Raven Monastery
-13. Faster Underdark
-14. Faster Dragon's Eye
-15. Faster Severed Hand
-16. Shorten the Dragon's Eye time loop questline to a single battle
-17. Mage Scrolls for New Spells
-18. Revised Creature Immunities
-19. More Accurate Saving Throws for Enemies
-20. Revise Critical Hit Immunity
-21. Better Racial Enemies for Rangers
-22. Cosmetic Tweaks
-23. More Persuasion Options
-24. NPC Core
-25. NPCs start with experience
-26. New GUI
-27. Looping Main Theme
-28. Revised Battle Square
-29. Minor Damage Resistance for Armor and Shields
-30. Race Revisions
-31. Enemies give the same amount of experience regardless of the party's level
-32. Adjust encounter level-scaling
-33. Reduce enemy HP bonuses in Heart of Fury Mode
-34. Reduce enemy attack bonuses in Heart of Fury Mode
-35. Reduce enemy saving throw bonuses in Heart of Fury Mode
-36. Weaken allied summoned creatures in Heart of Fury Mode
-37. Have the party start with experience in Heart of Fury Mode
-38. Reduce the delay between sneak attacks
-39. Increase the level cap
-40. Always learn spells from scrolls successfully
-41. Remove the summoning limit
-42. Add attacks of opportunity to the game
-43. Roll for stats at character creation
-44. Add more traps
-45. Add key bindings for automating buffing
+8. More Interesting Alternative to the Palisade Quests
+9. Add Additional Ways to Progress Through Certain Areas
+10. Faster Wandering Village
+11. Faster Dragon's Eye
+12. Shorten the Dragon's Eye time loop questline to a single battle
+13. Add more scrolls to the game
+14. Revised Creature Immunities
+15. More Accurate Saving Throws for Enemies
+16. Revise Critical Hit Immunity
+17. Better Racial Enemies for Rangers
+18. Cosmetic Tweaks
+19. More Persuasion Options
+20. NPC Core
+21. NPCs start with experience
+22. New GUI
+23. Looping Main Theme
+24. Revised Battle Square
+25. Minor Damage Resistance for Armor and Shields
+26. Race Revisions
+27. Enemies give the same amount of experience regardless of the party's level
+28. Adjust encounter level-scaling
+29. Reduce enemy HP bonuses in Heart of Fury Mode
+30. Reduce enemy attack bonuses in Heart of Fury Mode
+31. Reduce enemy saving throw bonuses in Heart of Fury Mode
+32. Weaken allied summoned creatures in Heart of Fury Mode
+33. Have the party start with experience in Heart of Fury Mode
+34. Reduce the delay between sneak attacks
+35. Increase the level cap
+36. Always learn spells from scrolls successfully
+37. Remove the summoning limit
+38. Add attacks of opportunity to the game
+39. Roll for stats at character creation
+40. Add more traps
+41. Add key bindings for automating buffing
 
 --Class Revisions--
 
-This component revises the game's classes to make warriors and rogues much more viable. This component is most balanced when combined with the Spell Revisions component.
+This component revises the game's classes to make warriors and rogues much more viable, and it adds over 30 new feats to the game. This component is most balanced when combined with the Spell Revisions component.
 
 Barbarians: Barbarian rage now grants immunity to fear, hopelessness, stun, paralysis, sleep, and unconsciousness. Also, Barbarians start gaining damage resistance at level 2 rather than level 11, and their damage resistance from their class is doubled if they're wearing medium armor (hide armor or chain mail). Barbarian Rage now keeps improving after level 20.
 
@@ -79,7 +89,7 @@ Level 20: The Ballad of Three Heroes: +5 spell resistance, 5/- resistance to all
 
 Creature Revisions also makes it so enemies early on use more sound-based spells and abilities (such as harpy wails in Chapter 1), which makes the Song of Kaudies more useful.
 
-Clerics: Clerics, druid, and mages all gain spell slots at the same rate. Spontaneous casting scales beyond level 4 (you can now cast Healing Circle, Heal, Greater Restoration, and Mass Heal via spontaneous casting).
+Clerics: Clerics are not changed much by Class Revisions, but Spell Revisions improves the spontaneous casting and domain systems.
 
 Druids: Druids get a new set of shapeshifting forms. The abilities of each form scale with the druid's level.
 
@@ -89,7 +99,7 @@ Level 9: Giant Viper
 Level 11: Salamander or Frost Salamander
 Level 13: Shambling Mound
 Level 15: Fire, Water, Earth or Air Elemental
-Level 30: Black Dragon (Dragon Shape)
+Level 40: Black Dragon (Dragon Shape)
 
 The druid shapeshifting feats are also changed. They now allow druids to shapeshift into Blink Dogs, Rhinocerous Beetles, and a swarm of insects as in the Creeping Doom spell.
 
@@ -135,7 +145,9 @@ Paladin of Mystra:
 
 Sorcerers: Sorcerers will no longer hit their peak at level 20 and then experience near-zero growth. They get slightly slower spell growth and slightly slower access to new spell picks.
 
-Class Revisions also adds over 30 new skills to the game and modifies several existing skills to make them more useful.
+Wizards: Generalist wizards now gain +1 to the DC of all wizard spells they cast (Specialist wizards gain +2 to the DC of wizard spells they cast of their school, but this was a vanilla feature that wasn't documented in IWD2 until now).
+
+Although the inherent changes to clerics, sorcerers, and wizards aren't huge, all spellcasting classes benefit greatly from some the new feats, especially metamagic feats.
 
 --Looser Alignment Restrictions for Classes--
 
@@ -153,9 +165,21 @@ Rogues can be Lawful Good
 
 This component significantly strengthens many underpowered spells. It also switches some spells to lower or higher levels and grants some spells to classes that previously could not cast them. Here are the main changes:
 
-- Over 90 new spells are added to the game. These include unused spells like Dimension Door, spells from other games like Mantle and True Strike, as well as unusual ones like Identify Creature (a divination spell that tells you the stats of the target creature) and Auril's Blessing (which increases the power of your cold spells).
+- Over 90 new spells are added to the game. These include unused spells like Dimension Door, PnP spells that weren't included in the original game like Fly, Wall of Force and Reverse Gravity, spells from other games like Mantle, Stygian Ice Storm and Isaac's Greater Missile Storm, as well as unusual ones like Identify Creature (a divination spell that tells you the stats of the target creature) and Auril's Blessing (which increases the power of your cold spells). Some of the new spells are bard-only, paladin-only, or ranger-only.
 
 - Cleric domains have better spell choices. If a spell is in-theme with the kit (e.g. Moonblade and Wall of Moonlight for priests of Selune), they can cast it at a particularly low level as a domain spell.
+
+- Clerics can spontaneously convert spells above 4th-level into healing/harming spells of the same level, rather than into Cure/Inflict Critical Wounds. Here is the full list:
+Level	Good Spell		Evil Spell
+1	Cure Light Wounds	Inflict Light Wounds
+2	Cure Moderate Wounds	Inflict Moderate Wounds
+3	Cure Serious Wounds	Inflict Serious Wounds
+4	Cure Critical Wounds	Inflict Critical Wounds
+5	Raise Dead		Slay Living
+6	Heal			Harm
+7	Resurrection		Destruction
+8	Greater Restoration	Energy Drain
+9	Mass Heal		Mass Harm
 
 - Certain spells are available to more classes. Rangers and Paladins have much better spell choices. Spells that create magical weapons or give combat bonuses can be cast as lower-level spells by Rangers or Paladins than by Druids or Clerics (e.g. Rangers can cast Fire Seeds as a 4th-level spell, and Paladins can cast Spiritual Weapon as a 1st-level spell and Holy Power as a 3rd-level spell).
 
@@ -174,7 +198,7 @@ Spell Focus: Transmutation/Abjuration
 
 --Item Revisions--
 
-Normally, Icewind Dale 2's items are balanced terribly. There are just a few good items towering over hundreds of almost useless magic items (e.g. items that just provide +1 Hide skill or 1/- Spell Resistance). It's not even a low-magic game: one gets tons of magic items, but most of them suck.
+Normally, Icewind Dale 2's items are balanced terribly. There are just a few good items towering over hundreds of almost useless magic items (e.g. items that just provide +1 Hide skill or 1/- Spell Resistance). It's not even a low-magic game: one gets tons of magic items, but most of them are terrible.
 
 Item Revisions enhances most of the magical items in Icewind Dale 2, giving them a much larger variety of useful abilities. The purpose is primarily to empower weak items rather than to weaken strong items. Overall, the total number of magical items you obtain as loot in the game won't change much, but those items are more likely to be useful.
 
@@ -202,45 +226,32 @@ In most RPGs, you gain levels at a roughly constant level over the course of the
 
 This component fixes that. There are two install options. The first option sets all creatures' challenge rating equal to their level, which results in extremely fast leveling as the game progresses. The second option, which is the recommended version, sets CR to slightly below their level after level 9. Neither option will affect early game enemies much, but midgame and endgame enemies will now grant XP appropriate to the challenge they pose.
 
---Faster Targos--
+--More Interesting Alternative to the Palisade Quests--
 
-This component allows the player to skip most of the Targos questline. The first time you speak with Shawford Crale, you can trigger the goblin invasion with Vghotan, Ghotrag, and Caballus by saying "Did you hear that?" midway through the dialogue.
+This component offers a more exciting alternative to the quests you'd normally have to do at the Palisade. When you first talk to Shawford, rather than agree to do his "special assignments," you can simply choose to stand guard at your posts until the goblins attack. This jumps you straight to the Palisade battle, which will be more difficult and involve more enemies (e.g. because you didn't repair the wall, and Isherwood couldn't pick off as many goblins before running out of arrows). If you manage to win this more difficult battle, you get extra experience equal to the experience you would've gotten for completing the quests.
 
---Faster Horde Fortress--
+--Add Additional Ways to Progress Through Certain Areas--
 
-This component rigs the front gate of the Horde Fortress so that you can force it open and attack the fortress head on rather than sneaking through the tunnels. It also adds additional ways to get inside Guthma's cabin.
+This component includes several changes that make certain areas more nonlinear and add some more opportunities to use certain niche spells and skills.
 
---Faster Ice Temple--
-
-Getting through the Ice Temple is one of the slowest parts of IWD2, with lots of disconnected plot triggers and quest items. This component makes it so some of the locked doors in the temple that normally require keys or the lightning machine to open are now either open by default or pickable. This component also allows you to skip the whole area by tearing down the wall through brute force. If you deal enough damage to the Ice Wall Fault in the northwest corner of the exterior map (the one with Sherincal and the Remorhazes), the wall will collapse and you can proceed to the next area. Destroying the wall is extremely difficult, however, as the wall has tremendous damage resistances, lots of HP, and deals cold damage whenever it is struck.
+* If you want to try attacking the Horde Fortress head on, you can bash open the gate to the inner fortress with a Knock spell. While inside, one of the enemies drops a wardstone that will open the gate to Guthma's cabin, though you could also sneak in by opening a grate on the roof. With the wardstone, you can also head into Goblin Warrens from the opposite direction you normally would, fight your way through, and come out the other side.
+* Several locks in the Ice Temple that previously required keys or the lightning machine to open can be picked.
+* In the Severed Hand, the door to the bridge between the War Tower and the Wizard Tower is unlocked from the start, so if you have a way to make the party fly or teleport, you can reach Orrick's study by going over the gap in the bridge.
+* Riki no longer requires you to fight Iyachtu Xvim or make a deal with him to proceed to the final bosses. However, if you didn't defeat Iyachtu Xvim or ally with him, you will have to survive unkillable glabrezus while fighting the final bosses, and the bosses will be tougher in the second phase because you didn't purify the radiant pool.
 
 --Faster Wandering Village--
 
-This component lets you delve all the way through the Fell Wood and fight the Will o' Wisps the first time you go there, rather than having to go through it three times for the three quests.
-
-The component also allows you to skip all of the Wandering Village questlines and the Fell Wood Maze by going straight to the exit. Enter the Fell Wood where the spirit greets you, choose the east exit to the treant area, and the exit to the next area will already be open.
-
-It is still possible to complete all of the Wandering Village quests with this component installed.
-
---Faster Black Raven Monastery--
-
-This component allows you to skip the Black Raven Monastery trials without having to kill the monks. The locked door in the monastery basement can now be picked.
-
---Faster Underdark--
-
-This component lets you skip the Viciscamera questline. You should be able to force open the doors to the mind flayer city and proceed without doing any chores for Malavon.
+This component reduces the backtracking required by the Wandering Village quests. You can now travel to all three sections of the Fell Wood the first time you go there (allowing you to meet the dryad, collect the horn, and fight the Will o' Wisps), rather than having to go through it three times for the three quests.
 
 --Faster Dragon's Eye--
 
-Dragon's Eye and the time paradox questline in Lord Pyros' Domain have long been the low point of IWD2, with massive amounts of backtracking, numerous plot triggers with few clues to indicate where you're supposed to go, and very little reward for the immense amount of time you have to invest in the game just to get through it. This component makes two of the mandatory side quests in Dragon's Eye optional.
+This component reduces the backtracking necessary to get through Dragon's Eye by making the alchemy quests optional. You should now be able to fight your way through the third floor of Dragon's Eye without having to go back to previous floors.
 
-Opening the door in the third floor of Dragon's Eye no longer requires you to put poison in the four pools in the area; you just have to kill Thorasskus. In addition, you can pass under the Eye of Sseth without being a histachii.
+* A powerful mind-shielding spell like Impervious Sanctity of Mind or Mind Blank can allow you to pass under the Eye of Sseth without needing to become a histachii. (This is PnP-accurate; Mind Blank normally protects against an Antipathy spell).
+* Opening the door in the third floor of Dragon's Eye no longer requires you to put poison in the four pools in the area; you just have to kill Thorasskus.
+* The timed gate with the slime trap opens after 60 seconds rather than 24 in-game hours.
 
---Faster Severed Hand--
-
-The Severed Hand can also take a fair amount of time, and while it's not nearly as monotonous as Dragon's Eye or the Ice Temple, some parts of it can still be very slow. This component adds Ruinlord Argos Val to Isair and Madae's throne room. If you have a very high Bluff score, you can convince him to introduce you to Isair and Madae without having to do any of the other quests in the Severed Hand.
-
-This component also makes it so you do not need to defeat Iyachtu Xvim before going to the final boss (though in this case you'll have to fight the glabrezus in the final battle).
+The alchemy quests can still be completed; you can still make histachii brew and poison vials. These items still offer benefits: the histachii brew allows you to sneak past yuan-ti without them attacking you, and the poison vials can now be used as consumables to poison your weapon as per the Envenom Weapon ability.
 
 --Shorten the Dragon's Eye time loop questline to a single battle--
 
@@ -293,7 +304,22 @@ Currently, this component lets any race choose any of the available colors on ch
 
 --More Persuasion Options--
 
-This is a collection of components that add more opportunities in the game to use Bluff, Diplomacy, and Intimidate, usually to skip a battle.
+This component adds more opportunities in the game to use Bluff, Diplomacy, Intimidate, and other skills in dialogue.
+
+SPOILERS BELOW
+
+* In the fight with Torak, a character with high enough Intimidate can potentially intimidate some of Torak's minions into abandoning their leader, though it probably won't work on all of them.
+* In the fight for Shaengarne Bridge, a character with high enough Intimidate can intimidate Xuki into surrendering and dropping her gear, though the other enemies will still have to be dealt with.
+* It's possible to make a deal with Guthma to stop his attack on the Ten Towns and finish Chapter 1 without fighting Guthma, though it will require both Bluff and Diplomacy.
+* It's possible for the party to Bluff their way out of the fight with Thvara.
+* Suoma can be intimidated into telling the party of the dark treants early on, though it requires you to be rather mean. Once you've rescued the children from Limha, you can also persuade Suoma (using Diplomacy) to tell you of the dark treants. Either way, that will allow you to fight the dark treants and move on to the Cold Marshes earlier than normal.
+* The party can bribe Limha into freeing the children and turning them back to human form. The cost is lower with higher Diplomacy.
+* A character with an extremely high Search or Wilderness Lore skill can potentially find the exit to the Fell Wood without having to fight the Dark Treants.
+* Before fighting Harshom, a character with arcane spellcasting who has high enough Bluff and very high Spellcraft and access to illusion spells can trick Harshom in order to gain advantage in the battle in some way. The check is easier to make if the character is an illusionist.
+* When the party first enters the mind flayer stronghold, a character with very high Intimidate can intimidate the Elder Brain in response to their telepathic messages and convince them to let the party leave without a fight, provided they head straight to the exit.
+* In the yuan-ti temple in Chult, it is possible to talk with Ojaiha and organize a truce, provided your Diplomacy is high enough. This will allow you to move on to the fight with Cedra's forces once you return to Kuldahar.
+* In the Severed Hand, there is a new character in the throne room. A party member with an outrageously high Bluff skill can convince them to call back Isair and Madae to the Severed Hand and give you an audience, starting the final battle earlier than normal.
+* Lastly, this component adds no fewer than five different dialogue paths to talk your way out of the final boss fight. They typically require the character talking to be very good at multiple pursuasion skills.
 
 --NPC Core--
 

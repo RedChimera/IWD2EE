@@ -538,3 +538,82 @@ IF ~~ THEN BEGIN 78
   SAY @40409
   IF ~~ THEN GOTO 77
 END
+
+IF ~InParty(Myself)
+Global("BANTERUSREIGJ","GLOBAL",13)~ THEN BEGIN 79
+  SAY @40567
+  IF ~!IEex_LuaTrigger("return IEex_IfValidForPartyDialogue(USVUNA)")
+!IEex_LuaTrigger("return IEex_IfValidForPartyDialogue(USEMMA)")
+IEex_LuaTrigger("return IEex_IfValidForPartyDialogue(USGEOF)")~ THEN REPLY @40571 DO ~SetGlobal("DIDBANTERUSREIGJ13","GLOBAL",1)
+SetGlobal("BANTERUSREIGJ","GLOBAL",0)~ EXTERN ~USGEOFJ~ 66
+  IF ~!IEex_LuaTrigger("return IEex_IfValidForPartyDialogue(USVUNA)")
+!IEex_LuaTrigger("return IEex_IfValidForPartyDialogue(USEMMA)")
+IEex_LuaTrigger("return IEex_IfValidForPartyDialogue(USGEOF)")~ THEN REPLY @40572 DO ~SetGlobal("DIDBANTERUSREIGJ13","GLOBAL",1)
+SetGlobal("BANTERUSREIGJ","GLOBAL",0)~ EXTERN ~USGEOFJ~ 71
+  IF ~!IEex_LuaTrigger("return IEex_IfValidForPartyDialogue(USVUNA)")
+!IEex_LuaTrigger("return IEex_IfValidForPartyDialogue(USEMMA)")
+!IEex_LuaTrigger("return IEex_IfValidForPartyDialogue(USGEOF)")~ THEN REPLY @40572 DO ~SetGlobal("DIDBANTERUSREIGJ13","GLOBAL",1)
+SetGlobal("BANTERUSREIGJ","GLOBAL",0)~ GOTO 80
+  IF ~!IEex_LuaTrigger("return IEex_IfValidForPartyDialogue(USVUNA)")
+!IEex_LuaTrigger("return IEex_IfValidForPartyDialogue(USEMMA)")
+IEex_LuaTrigger("return IEex_IfValidForPartyDialogue(USGEOF)")~ THEN REPLY @40574 DO ~SetGlobal("DIDBANTERUSREIGJ13","GLOBAL",1)
+SetGlobal("BANTERUSREIGJ","GLOBAL",0)~ EXTERN ~USGEOFJ~ 72
+  IF ~!IEex_LuaTrigger("return IEex_IfValidForPartyDialogue(USVUNA)")
+!IEex_LuaTrigger("return IEex_IfValidForPartyDialogue(USEMMA)")
+!IEex_LuaTrigger("return IEex_IfValidForPartyDialogue(USGEOF)")~ THEN REPLY @40574 DO ~SetGlobal("DIDBANTERUSREIGJ13","GLOBAL",1)
+SetGlobal("BANTERUSREIGJ","GLOBAL",0)~ EXIT
+  IF ~!IEex_LuaTrigger("return IEex_IfValidForPartyDialogue(USVUNA)")
+!IEex_LuaTrigger("return IEex_IfValidForPartyDialogue(USEMMA)")~ THEN REPLY @40575 DO ~SetGlobal("DIDBANTERUSREIGJ13","GLOBAL",1)
+SetGlobal("BANTERUSREIGJ","GLOBAL",0)~ EXIT
+  IF ~!IEex_LuaTrigger("return IEex_IfValidForPartyDialogue(USVUNA)")
+!IEex_LuaTrigger("return IEex_IfValidForPartyDialogue(USEMMA)")~ THEN REPLY @40576 DO ~SetGlobal("DIDBANTERUSREIGJ13","GLOBAL",1)
+SetGlobal("BANTERUSREIGJ","GLOBAL",0)~ GOTO 84
+  IF ~IEex_LuaTrigger("return IEex_IfValidForPartyDialogue(USVUNA)")~ THEN DO ~SetGlobal("DIDBANTERUSREIGJ13","GLOBAL",1)
+SetGlobal("BANTERUSREIGJ","GLOBAL",0)~ EXTERN ~USVUNAJ~ 3
+  IF ~IEex_LuaTrigger("return IEex_IfValidForPartyDialogue(USEMMA)")~ THEN DO ~SetGlobal("DIDBANTERUSREIGJ13","GLOBAL",1)
+SetGlobal("BANTERUSREIGJ","GLOBAL",0)~ EXTERN ~USEMMAJ~ 11
+END
+
+IF ~~ THEN BEGIN 80
+  SAY @40628
+  IF ~~ THEN REPLY @40629 EXIT
+  IF ~Or(3)
+LevelInClassGT(Protagonist,0,BARBARIAN)
+LevelInClassGT(Protagonist,0,DRUID)
+LevelInClassGT(Protagonist,0,RANGER)~ THEN REPLY @40630 GOTO 81
+  IF ~~ THEN REPLY @40631 GOTO 83
+  IF ~~ THEN REPLY @40632 GOTO 83
+END
+
+IF ~~ THEN BEGIN 81
+  SAY @40633
+  IF ~~ THEN REPLY @40634 EXIT
+  IF ~~ THEN REPLY @40635 GOTO 82
+END
+
+IF ~~ THEN BEGIN 82
+  SAY @40636
+  IF ~~ THEN EXIT
+END
+
+IF ~~ THEN BEGIN 83
+  SAY @40637
+  IF ~~ THEN EXIT
+END
+
+IF ~~ THEN BEGIN 84
+  SAY @40647
+  IF ~~ THEN REPLY @40648 GOTO 85
+  IF ~~ THEN REPLY @40649 GOTO 85
+  IF ~~ THEN REPLY @40650 GOTO 86
+END
+
+IF ~~ THEN BEGIN 85
+  SAY @40651
+  IF ~~ THEN EXIT
+END
+
+IF ~~ THEN BEGIN 86
+  SAY @40652
+  IF ~~ THEN EXIT
+END

@@ -172,11 +172,17 @@ IF ~~ THEN BEGIN 12
 ~ THEN REPLY #9518 GOTO 10
   IF ~  !Gender(Protagonist,MALE)
 ~ THEN REPLY #9518 GOTO 11
-  IF ~ClassEx(Protagonist,MAGE)
+  IF ~Or(3)
+  ClassEx(Protagonist,BARD)
+  ClassEx(Protagonist,MAGE)
+  ClassEx(Protagonist,SORCERER)
 CheckSkillGT(Protagonist, 20, Spellcraft)
 !Kit(Protagonist, Mage_Diviner)
 !Kit(Protagonist, Mage_Illusionist)~ THEN REPLY @6159 GOTO TrickHarshom // attempt to trick Harshom
-  IF ~ClassEx(Protagonist,MAGE)
+  IF ~Or(3)
+  ClassEx(Protagonist,BARD)
+  ClassEx(Protagonist,MAGE)
+  ClassEx(Protagonist,SORCERER)
 CheckSkillGT(Protagonist, 10, Spellcraft)
 Kit(Protagonist, Mage_Illusionist)~ THEN REPLY @6159 GOTO TrickHarshom // attempt to trick Harshom
   IF ~~ THEN REPLY #9514 DO ~Enemy()~ EXIT
