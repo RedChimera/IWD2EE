@@ -464,24 +464,18 @@ STATISTICS:
 Resistance: 30/- Poison Resistance
 Weight: 1 lb.~
 @4754     = ~Vampire Milk~
-@4755     = ~This freezing bottle of bluish liquid is a mix of flour, blueberries, fine cheeses, and the breast milk of a slain vampire, wight, or bodak. Partly fermented and treated with lime and salt, this potion becomes a bitter fluid indistinguishable from paint. The concoction is extremely toxic when drunk normally, so the would-be drinker must build up a tolerance by taking small sips of the milk over the course of several days. Violent seizures, fits of vomiting, and terrifying hallucinations are typical side effects of the process.
-
-Once the user adjusts to the toxins, however, he or she may use the negative energy in the vampire milk to close their wounds. This bitter potion heals 60 hit points with every bottle. The healing is similar to that of a vampire's regeneration: it will close mortal wounds and regrow lost body parts, but it will not restore lost blood. Due to this, as well as the remaining harmful effects of negative energy, the drinker suffers energy drain until cured with a Restoration spell.
+@4755     = ~This freezing bottle of bluish liquid is a mix of flour, blueberries, fine cheeses, and the breast milk of a slain vampire, wight, or bodak. Partly fermented and treated with lime and salt, this potion becomes a bitter fluid indistinguishable from paint. The concoction carries a large amount of negative energy with it, and it would be fatal to most living creatures. Undead, however, could drink it to restore health. This healing is similar to that of a vampire's regeneration: it will close mortal wounds and regrow lost body parts, but it will not restore lost blood.
 
 STATISTICS:
 
-Heals 60 hit points
-Energy Drain: -1 to Attack Bonus / -1 to damage, -5 to max hit points until cured
+Heals 60 hit points to undead, deals 60 damage to anyone else
 Weight: 1 lb.~
 @54754     = ~Vampire Milk~
-@54755     = ~This freezing bottle of bluish liquid is a mix of flour, blueberries, fine cheeses, and the breast milk of a slain vampire, wight, or bodak. Partly fermented and treated with lime and salt, this potion becomes a bitter fluid indistinguishable from paint. The concoction is extremely toxic when drunk normally, so the would-be drinker must build up a tolerance by taking small sips of the milk over the course of several days. Violent seizures, fits of vomiting, and terrifying hallucinations are typical side effects of the process.
-
-Once the user adjusts to the toxins, however, he or she may use the negative energy in the vampire milk to close their wounds. This bitter potion heals 150 hit points with every bottle. The healing is similar to that of a vampire's regeneration: it will close mortal wounds and regrow lost body parts, but it will not restore lost blood. Due to this, as well as the remaining harmful effects of negative energy, the drinker suffers energy drain until cured with a Restoration spell.
+@54755     = ~This freezing bottle of bluish liquid is a mix of flour, blueberries, fine cheeses, and the breast milk of a slain vampire, wight, or bodak. Partly fermented and treated with lime and salt, this potion becomes a bitter fluid indistinguishable from paint. The concoction carries a large amount of negative energy with it, and it would be fatal to most living creatures. Undead, however, could drink it to restore health. This healing is similar to that of a vampire's regeneration: it will close mortal wounds and regrow lost body parts, but it will not restore lost blood.
 
 STATISTICS:
 
-Heals 150 hit points
-Energy Drain: -2 to Attack Bonus / -2 to damage, -10 to max hit points until cured
+Heals 150 hit points to undead, deals 150 damage to anyone else
 Weight: 1 lb.~
 @4756     = ~Moldy Poultice~
 @4757     = ~This poultice is a small jar of very fertile soil topped with a lush green moss. An alchemist must take special care when cultivating this moss, constantly making sure it has just the right amount of water and nutrients to thrive. Singing lullabies, burning incense, and paying compliments to the moss are all critical parts of the process.

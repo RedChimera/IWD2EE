@@ -1,3 +1,7 @@
 INCLUDE ~%mod_folder%/components/faster_horde.tpa~
 INCLUDE ~%mod_folder%/components/faster_ice.tpa~
 INCLUDE ~%mod_folder%/components/faster_severed_hand.tpa~
+
+ACTION_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~5~ BEGIN
+	COMPILE ~%mod_folder%/dlg/dlg_creature_revisions/41ALTAR.d~
+END

@@ -258,7 +258,7 @@ You are trained to knock down or trip enemies in melee combat.
 
 Prerequisite: Base attack bonus +6 or higher
 
-Benefit: You gain an ability that lets you knock down or trip an adjacent creature. The ability can be used once per round. If your Dexterity is higher than your Strength, you attempt to trip the target, which must make a Reflex save (DC 10 + half your level + your Dexterity modifier) or fall down for 4 seconds. Otherwise, you try to knock down your target, which must make a Fortitude save (DC 10 + half your level + your Strength modifier) or fall down for 4 seconds. The DC gets -4 for each time someone has tried to knock down or trip the target in the past 10 rounds. Especially large creatures cannot be knocked down or tripped. The time spent to perform this ability causes the character to have one fewer attack in the following round.
+Benefit: You gain an ability that lets you knock down or trip an adjacent creature. The ability can be used once per round. If your Dexterity is higher than your Strength, you attempt to trip the target, which must make a Reflex save (DC 5 + half your base attack bonus + your Dexterity modifier) or fall down for 4 seconds. Otherwise, you try to knock down your target, which must make a Fortitude save (DC 5 + half your base attack bonus + your Strength modifier) or fall down for 4 seconds. The DC gets -4 for each time someone has tried to knock down or trip the target in the past 10 rounds. It also gets -4 if the target has more than two legs or is otherwise more stable than a normal humanoid (such as a dwarf). Especially large creatures cannot be knocked down or tripped. The time spent to perform this ability causes the character to have one fewer attack in the following round.
 
 This feat may be taken twice. When taken a second time, the feat is Improved Knockdown, which allows you to knock down or trip even large creatures, and adds a +2 bonus to the DC.~
 @317    = ~Light Armor Mastery~
@@ -818,7 +818,7 @@ Level 21-30: 1d8+5
 
 * Ki Strike: At level 8, the monk's unarmed attack is empowered with ki. The unarmed strike damage from such an attack can deal damage to a creature with damage reduction, such as a wight, as if the blow were made with a weapon with an enhancement bonus equal to the monk's damage bonus. Thus, a level 12 monk's fists strike as a +3 weapon.
 * A monk's natural armor class starts at 10, and then increases by +1 at 5th level and every 5 levels thereafter.
-* When not wearing armor (robes are acceptable) a monk adds his Wisdom bonus to his AC in the same manner as his Dexterity bonus.
+* When not wearing armor (robes are acceptable) a monk adds their Wisdom bonus to their AC in the same manner as their Dexterity bonus. If the monk is shapeshifted, they will only gain this benefit if their monk level is greater than or equal to the minimum level required to shapeshift into that form.
 * Stunning Attacks: When this ability is used, all of the monk's unarmed attacks in the next round force the victim to make a Fortitude save (DC 10 + Wisdom modifier + half the monk's level) or be stunned for 1 round. A monk can make a stunning attack 1/day/level.
 * Evasion: Monks have the ability to evade damage from area of effect spells. Whenever a monk makes a successful Reflex save against an area effect spell that allows a reflex save for half damage, he or she takes no damage.
 * 2nd level: Deflect Arrows. The monk gains the Deflect Arrows feat, yielding a +1 miscellanous bonus against missile weapons. In addition, the monk automatically blocks the first instance of missile damage that would hit them each round. The monk must have a hand free to block missiles this way.
@@ -847,9 +847,9 @@ Hit Points per Level: 1-10
 
 Advantages:
 * Proficient with all simple and martial weapons, light armor, medium armor, heavy armor, and shields.
-* Adds Charisma modifier to all saving throws.
-* Paladins may use Lay On Hands 1/Day. Lay On Hands heals the target for a number of hit points equal to the paladin's Charisma modifier times their paladin level (minimum of 1 point per level). Paladins gain an additional casting every 5 levels.
+* Paladins may use Lay On Hands 1/Day. Lay On Hands heals the target for a number of hit points equal to the paladin's Charisma modifier times their paladin level (minimum of 1 point per level). It can also be used on an undead creature to deal damage to them, though that would require a successful melee touch attack. Paladins gain an additional casting every 5 levels.
 * Paladins are immune to all forms of disease.
+* 2nd Level: Adds Charisma modifier to all saving throws.
 * 2nd Level: Spellcasting. Paladins gain the ability to cast spells.
 * 2nd level: Smite Evil. Once per day, the paladin may now attempt to smite evil with one normal melee attack. They add their Charisma modifier (if positive) to their attack roll and deal a number of extra d4s equal to their paladin level plus their Charisma modifier. Paladins can smite evil an additional time every 10 levels.
 * 2nd Level: Aura of Courage. Paladins become immune to fear, and allies within 10 feet receive a bonus of +4 to saving throws against fear effects.
@@ -1261,7 +1261,7 @@ Normal: A character who uses a weapon without being proficient with it suffers a
 ~
 @684    = ~SIMPLE WEAPON PROFICIENCY, MISSILE:
 
-You understand how to use missile weapons such as darts and slings.
+You understand how to use missile weapons such as darts and slings, as well as magical ranged touch attacks that require an attack roll.
 
 Benefit: You make attack rolls with simple weapons normally. Two ranks in this feat is Weapon Focus, which grants +2 to hit and damage. Three ranks in the feat is Weapon Specialization, which grants +5 to hit and damage. Only characters with four or more levels of Fighter may take Weapon Specialization.
 
@@ -1277,10 +1277,10 @@ Benefit: You make attack rolls with simple weapons normally. Two ranks in this f
 
 Normal: A character who uses a weapon without being proficient with it suffers a -4 penalty on attack rolls.
 ~
-@686    = ~Simple Weapon, Small Blade/Touch Attack~
-@687    = ~SIMPLE WEAPON PROFICIENCY, SMALL BLADE/TOUCH ATTACK:
+@686    = ~Simple Weapon, Small Blade/Unarmed~
+@687    = ~SIMPLE WEAPON PROFICIENCY, SMALL BLADE/UNARMED:
 
-You understand how to use small blades such as daggers and short swords, as well as how to make touch attacks, such as unarmed strikes, natural weapons, or magical attacks that require an attack roll.
+You understand how to use small blades such as daggers and short swords, as well as how to fight unarmed, with natural weapons, and with magical melee touch attacks that require an attack roll such as Inflict Light Wounds or Shocking Grasp.
 
 Benefit: You make attack rolls with simple weapons normally. Two ranks in this feat is Weapon Focus, which grants +2 to hit and damage. Three ranks in the feat is Weapon Specialization, which grants +5 to hit and damage. Only characters with four or more levels of Fighter may take Weapon Specialization.
 
@@ -1381,7 +1381,7 @@ Benefit: The "speed factor" delay before you attack for the first time in a roun
 
 You are especially skilled at using daggers, short swords and unarmed strikes, which allows you to benefit as much from Dexterity as from Strength.
 
-Prerequisite: Proficient with small blade/touch attack, base attack bonus +1.
+Prerequisite: Proficient with small blade/unarmed, base attack bonus +1.
 
 Benefit: With daggers, short swords, unarmed attacks and natural weapons, you may use your Dexterity modifier instead of your Strength modifier on attack rolls. In addition, you may apply half your Dexterity modifier to the damage of such weapons (provided the halved number is still higher than your Strength modifier). Since you need your second hand for balance, if you carry a shield, apply the shield's armor check penalty to your attack rolls.~
 @708    = ~DEFLECT ARROWS:
@@ -1542,7 +1542,7 @@ Normal: A character who uses a weapon without being proficient with it suffers a
 ~
 @726    = ~SIMPLE WEAPON PROFICIENCY, MISSILE:
 
-You understand how to use missile weapons such as darts and slings.
+You understand how to use missile weapons such as darts and slings, as well as magical ranged touch attacks that require an attack roll.
 
 Benefit: You make attack rolls with the weapon normally. Two ranks in this feat is Weapon Focus, which grants +1 to attack. A 4th-level Fighter may take a third rank in the feat for Weapon Specialization, which grants +2 to damage. An 8th-level Fighter may take a fourth rank in the feat for Greater Weapon Focus, which grants another +1 to attack. A 12th-level Fighter may take a fifth rank in the feat for Greater Weapon Specialization, which grants another +2 to damage.
 
@@ -1558,14 +1558,21 @@ Benefit: You make attack rolls with the weapon normally. Two ranks in this feat 
 
 Normal: A character who uses a weapon without being proficient with it suffers a -4 penalty on attack rolls.
 ~
-@728    = ~SIMPLE WEAPON PROFICIENCY, SMALL BLADE/TOUCH ATTACK:
+@728    = ~SIMPLE WEAPON PROFICIENCY, SMALL BLADE/UNARMED:
 
-You understand how to use small blades such as daggers and short swords, as well as how to make touch attacks, such as unarmed strikes, natural weapons, or magical attacks that require an attack roll.
+You understand how to use small blades such as daggers and short swords, as well as how to fight unarmed, with natural weapons, and with magical melee touch attacks that require an attack roll such as Inflict Light Wounds or Shocking Grasp.
 
 Benefit: You make attack rolls with the weapon normally. Two ranks in this feat is Weapon Focus, which grants +1 to attack. A 4th-level Fighter may take a third rank in the feat for Weapon Specialization, which grants +2 to damage. An 8th-level Fighter may take a fourth rank in the feat for Greater Weapon Focus, which grants another +1 to attack. A 12th-level Fighter may take a fifth rank in the feat for Greater Weapon Specialization, which grants another +2 to damage.
 
 Normal: A character who uses a weapon without being proficient with it suffers a -4 penalty on attack rolls.
 ~
+@729    = ~STUNNING ATTACK:
+
+You know how to strike opponents in vulnerable areas.
+
+Prerequisites: Dex 13+, Wis 13+, base attack bonus +8 or higher
+
+Benefit:  When attacking with Stunning Attack, it forces a foe damaged by your unarmed attack to make a Fortitude saving throw (DC 10 + one-half your level + Wis modifier), in addition to dealing damage normally.  If the defender fails his saving throw, he is stunned for 1 round.  A stunned character can't act and can be hit automatically.  You may attempt a stunning attack once per day for every four levels you have attained.~
 @783    = ~Human~
 @784    = ~HUMAN:
 
@@ -1731,7 +1738,7 @@ Disadvantages:
 * -2 Strength.
 ~
 @801    = ~Deep Gnome~
-@802    = ~DEEP GNOME: 
+@802    = ~DEEP GNOME:
 
 Also known as svirfneblin, the deep gnomes of the Realms are a secretive, mysterious race. Found in the deepest caverns of the Underdark, the svirfneblin live in constant fear of slavery or destruction at the hands or dark elves, mind flayers, and duergar. Deep gnomes are legendary for their ability to handle stone and gems. They have brown or gray skin and gray or white hair. They are among the few denizens of the Underdark that tend not to be evil.
 
@@ -1751,6 +1758,7 @@ Advantages:
 * Stonecunning: +2 racial bonus on Search checks.
 * +2 racial bonus on Hide checks, which improves to +4 in darkened areas underground.
 * Darkvision.
+* The character's Illusion spells gain +2 DC (stacks with Spell Focus)
 
 Disadvantages:
 * -2 Strength.
@@ -1769,6 +1777,7 @@ Advantages:
 * Stonecunning: +2 racial bonus on Search checks to notice unusual stonework, such as sliding walls, secret doors, stonework traps and new construction.
 * +2 racial bonus to saving throws against poison.
 * +2 racial bonus to saving throws against spells and spell-like effects.
+* Knockdown/trip attempts against dwarves have their DC reduced by 4, as dwarves are especially stable.
 * +4 dodge bonus against giants.
 * +1 racial bonus to attack rolls against orcs and goblinoids (goblins, hobgoblins, and bugbears).
 * Proficient with axes and hammers.
@@ -1789,6 +1798,7 @@ Advantages:
 * Stonecunning: +2 racial bonus on Search checks to notice unusual stonework, such as sliding walls, secret doors, stonework traps and new construction.
 * +2 racial bonus to saving throws against poison.
 * +2 racial bonus to saving throws against spells and spell-like effects.
+* Knockdown/trip attempts against dwarves have their DC reduced by 4, as dwarves are especially stable.
 * +4 dodge bonus against giants.
 * +1 racial bonus to attack rolls against aberrations, the bizarre creatures that live in the Underdark.
 * Proficient with axes and hammers.
@@ -1810,6 +1820,7 @@ Advantages:
 * +2 racial bonus to saving throws against poison.
 * +2 racial bonus to saving throws against spells and spell-like effects.
 * +4 racial bonus on Move Silently checks. Gray dwarves excel in stealthy movement.
+* Knockdown/trip attempts against dwarves have their DC reduced by 4, as dwarves are especially stable.
 * +4 dodge bonus against giants.
 * Immune to paralysis (still vulnerable to stunning attacks).
 * Invisibility 1/day.
@@ -2192,14 +2203,14 @@ This ability can be used once per round. It brings up a menu which allows you to
 You coat your weapons in poison. For 5 rounds, each hit you make with any weapon (including missile weapons) will poison the target unless it makes a Fortitude save (DC 6 + your Alchemy skill). If poisoned, the target takes 12 poison damage over the next 6 seconds.~
 @944    = ~Knockdown
 
-This ability can be used once per round. If your Dexterity is higher than your Strength, you attempt to trip the target, which must make a Reflex save (DC 10 + half your level + your Dexterity modifier) or fall down for 4 seconds. Otherwise, you try to knock down your target, which must make a Fortitude save (DC 10 + half your level + your Strength modifier) or fall down for 4 seconds. The DC gets -4 for each time someone has tried to knock down or trip the target in the past 10 rounds. Especially large creatures cannot be knocked down or tripped. The time spent to perform this ability causes you to have one fewer attack in the following round.~
+This ability can be used once per round. If your Dexterity is higher than your Strength, you attempt to trip the target, which must make a Reflex save (DC 5 + half your base attack bonus + your Dexterity modifier) or fall down for 4 seconds. Otherwise, you try to knock down your target, which must make a Fortitude save (DC 5 + half your base attack bonus + your Strength modifier) or fall down for 4 seconds. The DC gets -4 for each time someone has tried to knock down or trip the target in the past 10 rounds. It also gets -4 if the target has more than two legs or is otherwise more stable than a normal humanoid (such as a dwarf). Especially large creatures cannot be knocked down or tripped. The time spent to perform this ability causes you to have one fewer attack in the following round.~
 @945    = ~Feint
 
 This ability can be used once per round. The target must make a Will save (DC 10 + your Bluff skill). The DC gets -4 for each time someone has tried to feint the target in the past 10 rounds. On a failure, for 4 seconds, the target loses its Dexterity bonus to AC, and it gains additional penalties to Armor Class and attack rolls equal to one third of your Bluff skill, rounded down.~
 @946    = ~Improved Knockdown~
 @947    = ~Improved Knockdown
 
-This ability can be used once per round. If your Dexterity is higher than your Strength, you attempt to trip the target, which must make a Reflex save (DC 10 + half your level + your Dexterity modifier) or fall down for 4 seconds. Otherwise, you try to knock down your target, which must make a Fortitude save (DC 12 + half your level + your Strength modifier) or fall down for 4 seconds. The DC gets -4 for each time someone has tried to knock down or trip the target in the past 10 rounds. The time spent to perform this ability causes you to have one fewer attack in the following round.~
+This ability can be used once per round. If your Dexterity is higher than your Strength, you attempt to trip the target, which must make a Reflex save (DC 7 + half your base attack bonus + your Dexterity modifier) or fall down for 4 seconds. Otherwise, you try to knock down your target, which must make a Fortitude save (DC 7 + half your base attack bonus + your Strength modifier) or fall down for 4 seconds. The DC gets -4 for each time someone has tried to knock down or trip the target in the past 10 rounds. It also gets -4 if the target has more than two legs or is otherwise more stable than a normal humanoid (such as a dwarf). The time spent to perform this ability causes you to have one fewer attack in the following round.~
 @948    = ~Improved Feint~
 @949    = ~Improved Feint
 

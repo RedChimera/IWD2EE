@@ -9,16 +9,18 @@ The big changes described above are only applied if you install certain componen
 ## Core Features
 
 - Load times are much faster.
+- IWD2EE includes built-in widescreen compatibility, making the Widescreen Mod unnecessary. DO NOT INSTALL THE WIDESCREEN MOD WITH IWD2EE; IT WILL CRASH THE GAME. When you start IWD2EE, a menu opens that lets you set the game to a higher resolution.
+- IWD2EE includes a ddraw fix unless you already had one installed. This should improve performance unless you already had a ddraw fix.
 - Scrolling the screen should be smoother on some devices.
 - It is possible to scroll with the middle mouse button.
-- When you start IWD2EE, a menu opens that lets you set the game to a higher resolution.
 - Right-clicking the inventory button opens the quickloot menu.
 - Right-clicking a spell or innate ability on the actionbar brings up its description (though most innate abilities don't have descriptions unless Class Revisions is installed).
 - You can now go through dialogue as fast as you want; there's no longer a brief delay each time you choose a dialogue option.
 - The character record screen includes a Reform Party button.
 - The options screen includes a button to access the IEex Options menu (currently it includes an option to alter the fog of war so that it doesn't flicker, if you were having problems with it flickering).
 - If you do not have the vanilla option to rest until healed enabled, characters heal a number of HP equal to their level on rest, rather than only healing 1 HP.
-- For modders, IWD2EE includes several new opcodes, and offers the ability to run Lua code in-game (and some of the new opcodes can call custom Lua functions), as well as a limited ability to modify to GUI. This opens up many possibilities for modding.
+- As long as you have the console enabled in IWD2's normal config menu, cheat keys will be enabled automatically without needing to enter a command. 
+- For modders, IWD2EE includes several new opcodes, and offers the ability to run Lua code in-game via the console or various hooks (and some of the new opcodes can call custom Lua functions), as well as a limited ability to modify to GUI. This opens up many possibilities for modding.
 
 
 ## Installation
@@ -112,6 +114,14 @@ Level 40: Black Dragon (Dragon Shape)
 The druid shapeshifting feats are also changed. They now allow druids to shapeshift into Blink Dogs, Rhinocerous Beetles, and a swarm of insects as in the Creeping Doom spell.
 
 Rogues: Rogues get +1 luck every 5 levels. They won't have the sustained damage output a warrior has, but they'll be able to land some very wicked sneak attacks (luck in IWD2 increases the chance of a critical hit).
+
+Class Revisions also revises some of the thieving skills:
+
+- Pick Pockets: As in PnP, pickpocketing someone involves two rolls: one to determine if you're caught, and the other to determine if you are able to take the item. Any item could potentially be stolen, including equipped items (the DC depends on the item slot and whether the item is equipped; stealing from one of their regular inventory slots is easy, but stealing an equipped weapon is very hard, and stealing an equipped suit of armor is basically impossible, with a DC of 70, on which a 20 doesn't guarantee success). In addition, when you pickpocket someone, you see a list of the droppable items they have in their inventory, along with the chance of stealing each one and the chance of getting away with it. Items that are easier to steal and less likely to get you caught are stolen first.
+
+- Open Lock: The lockpicking system has been revised to be more like Baldur's Gate, in that picking locks is easier but forcing them open is harder, and there isn't much variance to the roll: if you aren't able to get it open after a couple of tries, you probably can't. Also, picking locks gives you experience.
+
+- Disable Device: Disarming traps gives you experience.
 
 Monks: Monks now get much faster and more accurate unarmed attacks, and their attack damage progresses more logically. Their base damage caps at 1d8+5, but they start with 2 attacks per round and gain an additional attack per round every 3 levels (up to 18 attacks per round at level 49). Their Deflect Arrows ability now lets them take no damage from the first missile attack that would hit them each round. Wholeness of Body now restores HP equal to the character's monk level * their Wisdom bonus, and can be used once per 7 levels. Quivering Palm can affect enemies higher level than the monk, and monks gain an additional use of Quivering Palm every 6 levels after level 15. Monks also get Abundant Step at level 10, a teleportation effect.
 
@@ -353,13 +363,29 @@ To get all the rewards for the Battle Square, one normally has to fight 25 battl
 
 This component makes it so one only has to beat a rank once (with 3 or more squares) to get the main reward for the rank. To get all the rewards, it will only take 30 battles rather than 250.
 
+In addition, this component allows you to go back to the Battle Square and finish it up in Chapter 5 when you return to the Ice Temple for Nickademus's favor.
+
 ## Minor Damage Resistance for Armor and Shields
 
 Inspired by Weimer's similar component from IWD2-Ease, this component patches every armor and shield in the game so they give physical damage resistance equal to half their Armor Class bonus, rounded down. 
 
 ## Race Revisions
 
-Race Revisions gives some new abilities to certain races, to make them fit their archetypes better. For example, lightfoot halflings gain their Dexterity modifier (if higher than their Strength modifier) to the damage of slings and other throwing weapons. Rock gnomes gain a bonus to Intelligence rather than Constitution.
+Race Revisions revises various races and subraces, giving them abilities that they're supposed to have in PnP:
+- Humans get 4 extra skill points at 1st level rather than 2.
+- Elves can detect traps even when they aren't actively searching.
+- Gnomes get a bonus to the DC of illusion spells they cast.
+- Knockdown/trip attempts against dwarves have their DC reduced by 4, as dwarves are especially stable.
+- Drow and Tieflings can cast Darkness once per day. Drow start proficient with crossbows instead of bows.
+- Duergar can enlarge themselves once per day.
+
+Race Revisions also gives certain races a few new abilities:
+- Half-elves and Half-orcs now get an extra feat at 1st-level (this is the benefit they get for being half-human; previously all their benefits and drawbacks had to do with their elf/orc side).
+- Elves may use Weapon Finesse with large swords.
+- Dwarves start proficient in axes and hammers.
+- Rock gnomes have +2 Intelligence instead of Constitution.
+- Lightfoot halflings may add half their Dexterity modifier rather than their Strength modifier to the damage of a sling or thrown weapon (if the former is higher).
+- Ghostwise halflings gain 1.5 times their Strength bonus to damage with slings and thrown weapons, as one would with two-handed weapons.
 
 ## Revise racial level adjustment/ECL
 
@@ -375,7 +401,7 @@ Icewind Dale 2 encounters often have additional enemies for a higher-level party
 
 ## Reduce the HP bonuses of creatures in Heart of Fury Mode
 
-Enemies in Heart of Fury Mode normally have absolutely ridiculous HP: goblins in the prologue have 157 HP, and the frost spiders in Chapter 2 have 452 HP! This component drastically reduces the HP on creatures in Heart of Fury Mode: goblins in the prologue have 13 HP, and the frost spiders have 232 HP. This will make Heart of Fury Mode easier, but also much less tedious (and Creature Revisions makes Heart of Fury Mode more challenging to make up for it).
+Enemies in Heart of Fury Mode normally have absolutely ridiculous HP: goblins in the prologue have 157 HP, and the frost spiders in Chapter 2 have 452 HP! This component drastically reduces the HP on creatures in Heart of Fury Mode. This component is designed for a party starting HoF at a low level. It is balanced such that enemies early on will have way less HP than in the original HoF, but enemies later on won't have that much less HP. This will make Heart of Fury Mode easier, but also much less tedious (and Creature Revisions makes Heart of Fury Mode more challenging to make up for it).
 
 ## Reduce the attack bonuses of creatures in Heart of Fury Mode
 

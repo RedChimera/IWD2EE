@@ -134,6 +134,14 @@ COPY_EXISTING ~USCWPIT1.itm~ ~override~ ~USCWPIT2.itm~ ~override~
 	SAY NAME2 @23080
 	IF_EXISTS
 
+COPY_EXISTING ~USCWMOHR.itm~ ~override~ ~USHFCWMH.itm~ ~override~
+	SAY NAME1 @23083
+	SAY NAME2 @23083
+
+COPY_EXISTING ~USCWDRCH.itm~ ~override~
+	SAY NAME1 @23085
+	SAY NAME2 @23085
+
 COPY_EXISTING ~uses001.spl~ ~override~
 	SAY NAME1 @21001
 	SAY NAME2 @21001
@@ -386,6 +394,10 @@ COPY_EXISTING ~usip951.spl~ ~override~
 COPY_EXISTING ~usip952.spl~ ~override~
 	SAY NAME1 @21952
 	SAY NAME2 @21952
+
+ACTION_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~2~ BEGIN
+	COPY_EXISTING ~uspr952.spl~ ~override/usip952.spl~
+END
 
 COPY_EXISTING ~usiw651.spl~ ~override~
 	SAY NAME1 @22651
@@ -3325,6 +3337,29 @@ COPY_EXISTING ~60WRAITH.cre~ ~override~ ~60WRAITN.cre~ ~override~
 	WRITE_BYTE proficiencysmallblade 3
 	LPF	IWD2_ADD_CRE_ITEM INT_VAR equip=1 STR_VAR item=~USCHFWR1~ slot=~weapon1~ mode=~replace~ END
 
+COPY_EXISTING ~USMOHRG.cre~ ~override~
+	SAY NAME1 @23082
+	SAY NAME2 @23082
+	READ_LONG feats1 ulgiash
+	ulgiash|=0x2020000
+	WRITE_LONG feats1 ulgiash
+	WRITE_BYTE skillalchemy 16
+	WRITE_BYTE skillbluff 16
+	WRITE_BYTE skillhide 16
+	WRITE_BYTE skillmovesilently 16
+	LPF IWD2_ADD_CRE_EFFECT INT_VAR opcode=187 target=0 timing=1 parameter1=1 STR_VAR effvar= EVAL ~ME_ENVENOM_WEAPON~ END
+	PATCH_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~0~ BEGIN
+		LPF ADD_CRE_EXTENDED_FEAT INT_VAR points=1 STR_VAR name=~ME_ASSASSIN~ END
+		LPF ADD_CRE_EXTENDED_FEAT INT_VAR points=2 STR_VAR name=~ME_FEINT~ END
+		LPF ADD_CRE_EXTENDED_FEAT INT_VAR points=3 STR_VAR name=~ME_IMPROVED_SNEAK_ATTACK~ END
+		LPF	IWD2_CRE_ABILITY INT_VAR num=2 STR_VAR resource=~SPIN231~ END
+	END ELSE BEGIN
+		LPF	IWD2_CRE_ABILITY INT_VAR num=1 STR_VAR resource=~SPIN231~ END
+	END
+	PATCH_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~0~ BEGIN
+		LPF IWD2_ADD_CRE_EFFECT INT_VAR opcode=187 target=0 timing=1 parameter1=1 STR_VAR effvar= EVAL ~ME_GRAPPLE~ END
+	END
+
 COPY_EXISTING ~60HIEPHE.cre~ ~override~ ~60HIEPHH.cre~ ~override~ ~62NEOORC.cre~ ~override~ ~62NEOORN.cre~ ~override~ ~62OROC.cre~ ~override~ ~62OROGC.cre~ ~override~ ~62OROGC2.cre~ ~override~
 	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelcleric=17 STR_VAR updatehp=~max~ END
 	WRITE_BYTE dexterity 10
@@ -4607,9 +4642,9 @@ COPY_EXISTING ~63INSTRC.cre~ ~override~ ~63PFINN.cre~ ~override~ ~63PFINH.cre~ ~
 	WRITE_BYTE reflexsave 8
 	WRITE_BYTE willsave 10
 	WRITE_BYTE fireresistance 100
-	WRITE_BYTE coldresistance 20
+	WRITE_BYTE coldresistance 10
 	WRITE_BYTE elecresistance 0
-	WRITE_BYTE acidresistance 20
+	WRITE_BYTE acidresistance 10
 	WRITE_BYTE spellresistance 25
 	WRITE_BYTE magicfireresistance 100
 	WRITE_BYTE magiccoldresistance 20
@@ -4633,6 +4668,11 @@ COPY_EXISTING ~63INSTRC.cre~ ~override~ ~63PFINN.cre~ ~override~ ~63PFINH.cre~ ~
 	LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item=~USCWHFCG~ slot=~weapon1~ mode=~replace~ END
 	LPF	IWD2_REMOVE_SPELLS_KNOWN STR_VAR class=~wizard~ END
 	LPF	IWD2_CRE_ABILITY INT_VAR num=1 STR_VAR resource=~SPIN197~ END
+
+COPY_EXISTING ~USDRETCH.cre~ ~override~
+	SAY NAME1 @23084
+	SAY NAME2 @23084
+	LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item=~USDEMON1~ slot=~boots~ mode=~replace~ END
 
 ACTION_IF NOT (MOD_IS_INSTALLED ~iwd2ee.tp2~ ~2~) BEGIN
 	COPY_EXISTING ~00SGLB.cre~ ~override~ ~00SDGLB.cre~ ~override~ ~00SSGLB.cre~ ~override~ ~00SSHGLB.cre~ ~override~
@@ -4791,6 +4831,16 @@ COPY_EXISTING_REGEXP ~63GLABS.*\.cre~ ~override~
 	LPF	IWD2_REMOVE_SPELLS_KNOWN STR_VAR class=~wizard~ END
 	LPF	IWD2_CRE_ABILITY INT_VAR num=1 STR_VAR resource=~SPIN197~ END
 
+COPY_EXISTING ~63GLABSL.cre~ ~override~ ~63GLABSR.cre~ ~override~
+	WRITE_ASCII teamscript ~00T01ET~ #8
+	WRITE_ASCII movementscript ~00T01M~ #8
+
+COPY_EXISTING ~63GLABS2.cre~ ~override/USGLBS2L.cre~
+	WRITE_ASCII deathvariableset ~US_SH_Slain_GlabS2L~ #32
+
+COPY_EXISTING ~63GLABS2.cre~ ~override/USGLBS2R.cre~
+	WRITE_ASCII deathvariableset ~US_SH_Slain_GlabS2R~ #32
+
 ACTION_IF NOT (MOD_IS_INSTALLED ~iwd2ee.tp2~ ~2~) BEGIN
 	COPY_EXISTING ~00SPITFI.cre~ ~override~
 		LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelfighter=12 newlevelwizard=8 STR_VAR updatehp=~max~ END
@@ -4807,8 +4857,8 @@ ACTION_IF NOT (MOD_IS_INSTALLED ~iwd2ee.tp2~ ~2~) BEGIN
 		WRITE_BYTE willsave 10
 		WRITE_BYTE fireresistance 100
 		WRITE_BYTE coldresistance 100
-		WRITE_BYTE elecresistance 15
-		WRITE_BYTE acidresistance 15
+		WRITE_BYTE elecresistance 0
+		WRITE_BYTE acidresistance 10
 		WRITE_BYTE spellresistance 25
 		WRITE_BYTE magicfireresistance 100
 		WRITE_BYTE magiccoldresistance 100
@@ -4854,8 +4904,8 @@ COPY_EXISTING ~41PFIEND.cre~ ~override~ ~41SPITFI.cre~ ~override~ ~63PITFND.cre~
 	WRITE_BYTE willsave 10
 	WRITE_BYTE fireresistance 100
 	WRITE_BYTE coldresistance 100
-	WRITE_BYTE elecresistance 15
-	WRITE_BYTE acidresistance 15
+	WRITE_BYTE elecresistance 0
+	WRITE_BYTE acidresistance 10
 	WRITE_BYTE spellresistance 25
 	WRITE_BYTE magicfireresistance 100
 	WRITE_BYTE magiccoldresistance 100
@@ -4900,8 +4950,8 @@ COPY_EXISTING ~63YXBUN.cre~ ~override~ ~63YXBUH.cre~ ~override~
 	WRITE_BYTE willsave 14
 	WRITE_BYTE fireresistance 100
 	WRITE_BYTE coldresistance 100
-	WRITE_BYTE elecresistance 15
-	WRITE_BYTE acidresistance 15
+	WRITE_BYTE elecresistance 0
+	WRITE_BYTE acidresistance 10
 	WRITE_BYTE spellresistance 30
 	WRITE_BYTE magicfireresistance 100
 	WRITE_BYTE magiccoldresistance 100
@@ -6231,6 +6281,9 @@ COPY_EXISTING ~AR6000.are~ ~override~
 	LPF ALTER_AREA_ACTOR_IWD2 INT_VAR flag_difficulty_1=0 flag_difficulty_2=1 flag_difficulty_3=1 STR_VAR actor_name=~04_Wraith_02~ cre_file=~USWRAIGR~ script_special2=~USWRAIGR~ END
 	LPF ALTER_AREA_ACTOR_IWD2 INT_VAR flag_difficulty_1=1 flag_difficulty_2=1 flag_difficulty_3=1 STR_VAR actor_name=~05_Wraith_01~ cre_file=~USWRAIGR~ script_special2=~USWRAIGR~ END
 	LPF ALTER_AREA_ACTOR_IWD2 INT_VAR flag_difficulty_1=0 flag_difficulty_2=0 flag_difficulty_3=1 STR_VAR actor_name=~07_Wraith_02~ cre_file=~USWRAIGR~ script_special2=~USWRAIGR~ END
+	LPF ALTER_AREA_ACTOR_IWD2 INT_VAR flag_difficulty_1=1 flag_difficulty_2=1 flag_difficulty_3=1 STR_VAR actor_name=~02_Wight_03~ cre_file=~USMOHRG~ script_special2=~USBUGBEA~ END
+	LPF ALTER_AREA_ACTOR_IWD2 INT_VAR flag_difficulty_1=0 flag_difficulty_2=1 flag_difficulty_3=1 STR_VAR actor_name=~04_Wight_06~ cre_file=~USMOHRG~ script_special2=~USBUGBEA~ END
+	LPF ALTER_AREA_ACTOR_IWD2 INT_VAR flag_difficulty_1=1 flag_difficulty_2=1 flag_difficulty_3=1 STR_VAR actor_name=~05_Wight_01~ cre_file=~USMOHRG~ script_special2=~USBUGBEA~ END
 	LPF ALTER_AREA_ACTOR_IWD2 INT_VAR flag_difficulty_1=1 flag_difficulty_2=1 flag_difficulty_3=0 STR_VAR actor_name=~02_Khavros_the_Black~ END
 	LPF ALTER_AREA_ACTOR_IWD2 INT_VAR flag_difficulty_1=0 flag_difficulty_2=0 flag_difficulty_3=1 STR_VAR actor_name=~02_Wight_05~ cre_file=~USKHAVRO~ script_special2=~USWIGHTW~ END
 
@@ -6239,6 +6292,7 @@ COPY_EXISTING ~AR6001.are~ ~override~
 
 COPY_EXISTING ~AR6002.are~ ~override~
 	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR actor_name=~02_Wraith_02~ cre_file=~USWRAIGR~ script_special2=~USWRAIGR~ END
+	LPF ALTER_AREA_ACTOR_IWD2 INT_VAR x_coord=979 y_coord=1102 STR_VAR actor_name=~Wight1~ cre_file=~USMOHRG~ script_special2=~USBUGBEA~ END
 
 COPY_EXISTING ~AR6003.are~ ~override~
 	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR actor_name=~Wraith2~ cre_file=~USWRAIGN~ script_special2=~USWRAIGR~ END
@@ -6370,8 +6424,6 @@ STRING_SET 18557 @23071
 
 OUTER_SET ref_23069 = RESOLVE_STR_REF(@23069)
 OUTER_SET ref_23070 = RESOLVE_STR_REF(@23070)
-
-COMPILE ~%mod_folder%/dlg/dlg_creature_revisions/41ALTAR.d~
 
 <<<<<<<< .../script.baf
 IF
@@ -6591,6 +6643,7 @@ USCIHFTR	USCITROL
 USCIHFTG	USCITROG
 USRAKSHF	USRAKSH1
 USCWHFBE	USCWBEBI
+USCWHFMH	USCWMOHR
 ~
 UNLESS ~USCWHFMO~
 
@@ -6654,6 +6707,7 @@ USCIHFTR	USHFCITR
 USCIHFTG	USHFCITG
 USRAKSHF	USRAKSH2
 USCWHFBE	USHFCWBE
+USCWHFMH	USHFCWMH
 ~
 UNLESS ~USCWHFMO~
 
@@ -7343,6 +7397,65 @@ ACTION_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~0~ BEGIN
 			LPF IWD2_ADD_CRE_EFFECT INT_VAR opcode=502 target=2 timing=9 parameter1=RESOLVE_STR_REF(@924) parameter2=0x680 savingthrow=0xA80000 special=7 STR_VAR resource=~MEDEFLEC~ parent_resource=~FE_13_1~ END
 		END
 
+END
+//Add silver weapons to the game if Item Revisions is not installed
+
+ACTION_IF NOT MOD_IS_INSTALLED ~iwd2ee.tp2~ ~4~ BEGIN
+	COPY ~%mod_folder%/itm/itm_item_revisions/USSPER03.itm~ ~override~
+		SAY NAME2 @12883
+		SAY IDENTIFIED_DESC @12884
+
+	COPY ~%mod_folder%/itm/itm_item_revisions/00SWDL09.itm~ ~override~
+		SAY IDENTIFIED_DESC @10834
+
+	COPY ~%mod_folder%/itm/itm_item_revisions/ZZJ5GT.itm~ ~override~
+		SAY IDENTIFIED_DESC @10742
+	
+	COPY ~%mod_folder%/itm/itm_item_revisions/ZZJ5HF.itm~ ~override~
+		SAY IDENTIFIED_DESC @10744
+	
+	COPY ~%mod_folder%/itm/itm_item_revisions/ZZJ5ST.itm~ ~override~
+		SAY IDENTIFIED_DESC @10746
+	
+	COPY ~%mod_folder%/itm/itm_item_revisions/ZZJ5HO.itm~ ~override~
+		SAY IDENTIFIED_DESC @10748
+
+	COPY ~%mod_folder%/itm/itm_item_revisions/00SWDCCS.itm~ ~override~
+		SAY NAME2 @10971
+		SAY IDENTIFIED_DESC @10972
+	
+	COPY ~%mod_folder%/itm/itm_item_revisions/00HFSCCS.itm~ ~override~
+		SAY NAME2 @10973
+		SAY IDENTIFIED_DESC @10974
+
+	COPY ~%mod_folder%/itm/itm_item_revisions/00SWDSTD.itm~ ~override~
+		SAY NAME2 @10813
+		SAY IDENTIFIED_DESC @10814
+	
+	COPY ~%mod_folder%/itm/itm_item_revisions/00HFSSTD.itm~ ~override~
+		SAY NAME2 @10815
+		SAY IDENTIFIED_DESC @10816
+
+COPY_EXISTING ~60SHEEMI.sto~ ~override~ //Conlan store
+	REMOVE_STORE_ITEM ~00RTHF26~
+
+COPY_EXISTING ~20newder.dlg~ ~override~ //Dereth Springsong dialogue
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~GiveItemCreate(\"00SWDC99\",Protagonist, 1, 0, 0)~ ~GiveItemCreate("00RTHF26",Protagonist, 1, 1, 0)~
+
+
+COPY_EXISTING ~ar2001.are~ ~override~ //Shaengarne village
+	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR charges1=1  charges2=1  charges3=0 single_match=1 STR_VAR old_item=~00RTHF17~ new_item=~00RTHF21~ END
+
+COPY_EXISTING ~ar2100.are~ ~override~ //Shaengarne, highlands
+	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR container=1 single_match=1 STR_VAR old_item=~RT02_M~ new_item=~USSPER03~ END
+
+COPY_EXISTING ~ar2101.are~ ~override~ //Shaengarne, the Malarite dam
+	LPF REPLACE_AREA_ITEM_IWD2 INT_VAR charges1=1  charges2=1  charges3=0 single_match=1 STR_VAR old_item=~00RTHF21~ new_item=~00RTHF17~ END
+
+END
+
+ACTION_IF NOT MOD_IS_INSTALLED ~iwd2ee.tp2~ ~2~ BEGIN
+	COPY ~%mod_folder%/itm/MOONBLA.itm~ ~override~
 END
 
 INCLUDE ~%mod_folder%/components/final_patches.tpa~

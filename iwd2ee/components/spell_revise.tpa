@@ -147,7 +147,7 @@ COPY ~%mod_folder%/cre/00SVPRG.cre~ ~override~
 
 // Spell Revisions core component; copies over NUMEROUS spells
 
-COPY_EXISTING ~sppr103.spl~ ~override~ ~sppr214.spl~ ~override~ ~sppr401.spl~ ~override~ ~sppr502.spl~ ~override~ ~sppr521.spl~ ~override~ ~sppr112.spl~ ~override~ ~sppr218.spl~ ~override~ ~sppr416.spl~ ~override~ ~sppr513.spl~ ~override~ ~spwi402.spl~ ~override~
+COPY_EXISTING_REGEXP ~uspr103[dh].spl~ ~override~ ~uspr214[dh].spl~ ~override~ ~uspr401[dh].spl~ ~override~ ~uspr502[dh].spl~ ~override~ ~uspr521[dh].spl~ ~override~ ~uspr112[dh].spl~ ~override~ ~uspr218[dh].spl~ ~override~ ~uspr416[dh].spl~ ~override~ ~uspr513[dh].spl~ ~override~ ~uspr515d.spl~ ~override~ ~spwi402.spl~ ~override~
 	READ_SHORT 0x68 numheaders
 	FOR (i = numheaders; i < 30; ++i) BEGIN
 		LPF ADD_SPELL_HEADER INT_VAR copy_header=i insert_point=i END
@@ -1398,18 +1398,14 @@ COPY_EXISTING_REGEXP ~ICW[0-9][0-9].itm~ ~override~ ~ILW[0-9][0-9].itm~ ~overrid
 	LPF ALTER_EFFECT INT_VAR silent=1 check_headers=1 check_globals=0 match_opcode=290 match_parameter2=55 opcode=500 parameter2=94 STR_VAR resource=~MESPLPR2~ END
 
 COPY_EXISTING ~sppr103.spl~ ~override~
-	LPF ALTER_SPELL_HEADER INT_VAR speed=1 END
+//	LPF ALTER_SPELL_HEADER INT_VAR speed=1 END
 	SAY NAME1 @1861
 	SAY NAME2 @1861
 	SAY UNIDENTIFIED_DESC @1862
 	SAY IDENTIFIED_DESC @1862
-	READ_SHORT 0x68 numheaders
-	FOR (i = 0; i < numheaders; ++i) BEGIN
-		LPF ALTER_EFFECT INT_VAR header=i silent=1 check_headers=1 check_globals=0 match_opcode=17 parameter1=(i + 1) dicenumber=1 dicesize=8 END
-	END
 
 COPY_EXISTING ~sppr214.spl~ ~override~
-	LPF ALTER_SPELL_HEADER INT_VAR speed=1 END
+//	LPF ALTER_SPELL_HEADER INT_VAR speed=1 END
 	SAY NAME1 @1863
 	SAY NAME2 @1863
 	SAY UNIDENTIFIED_DESC @1864
@@ -1420,7 +1416,7 @@ COPY_EXISTING ~sppr214.spl~ ~override~
 	END
 
 COPY_EXISTING ~sppr401.spl~ ~override~
-	LPF ALTER_SPELL_HEADER INT_VAR speed=2 END
+//	LPF ALTER_SPELL_HEADER INT_VAR speed=2 END
 	SAY NAME1 @1865
 	SAY NAME2 @1865
 	SAY UNIDENTIFIED_DESC @1866
@@ -1431,7 +1427,7 @@ COPY_EXISTING ~sppr401.spl~ ~override~
 	END
 
 COPY_EXISTING ~sppr502.spl~ ~override~
-	LPF ALTER_SPELL_HEADER INT_VAR speed=2 END
+//	LPF ALTER_SPELL_HEADER INT_VAR speed=2 END
 	SAY NAME1 @1867
 	SAY NAME2 @1867
 	SAY UNIDENTIFIED_DESC @1868
@@ -1452,7 +1448,7 @@ COPY_EXISTING ~sppr521.spl~ ~override~
 	END
 
 COPY_EXISTING ~sppr112.spl~ ~override~
-	LPF ALTER_SPELL_HEADER INT_VAR speed=1 END
+//	LPF ALTER_SPELL_HEADER INT_VAR speed=1 END
 	READ_SHORT 0x68 numheaders
 	FOR (i = 0; i < numheaders; ++i) BEGIN
 		ones_digit = (i + 1) MODULO 10
@@ -1474,7 +1470,7 @@ COPY_EXISTING ~sppr112.spl~ ~override~
 	END
 */
 COPY_EXISTING ~sppr218.spl~ ~override~
-	LPF ALTER_SPELL_HEADER INT_VAR speed=1 END
+//	LPF ALTER_SPELL_HEADER INT_VAR speed=1 END
 	READ_SHORT 0x68 numheaders
 	FOR (i = 0; i < numheaders; ++i) BEGIN
 		ones_digit = (i + 1) MODULO 10
@@ -1483,7 +1479,7 @@ COPY_EXISTING ~sppr218.spl~ ~override~
 	END
 
 COPY_EXISTING ~sppr416.spl~ ~override~
-	LPF ALTER_SPELL_HEADER INT_VAR speed=2 END
+//	LPF ALTER_SPELL_HEADER INT_VAR speed=2 END
 	READ_SHORT 0x68 numheaders
 	FOR (i = 0; i < numheaders; ++i) BEGIN
 		ones_digit = (i + 1) MODULO 10
@@ -1492,12 +1488,72 @@ COPY_EXISTING ~sppr416.spl~ ~override~
 	END
 
 COPY_EXISTING ~sppr513.spl~ ~override~
-	LPF ALTER_SPELL_HEADER INT_VAR speed=2 END
+//	LPF ALTER_SPELL_HEADER INT_VAR speed=2 END
 	READ_SHORT 0x68 numheaders
 	FOR (i = 0; i < numheaders; ++i) BEGIN
 		ones_digit = (i + 1) MODULO 10
 		tens_digit = (i + 1) / 10
 		LPF ALTER_EFFECT INT_VAR header=i silent=1 check_headers=1 check_globals=0 match_opcode=111 parameter1=1 STR_VAR resource= EVAL ~ICW%tens_digit%%ones_digit%~ END
+	END
+
+COPY_EXISTING ~uspr103d.spl~ ~override~ ~uspr112d.spl~ ~override~
+	READ_SHORT 0x68 numheaders
+	FOR (i = 0; i < numheaders; ++i) BEGIN
+		LPF ALTER_EFFECT INT_VAR header=i silent=1 check_headers=1 check_globals=0 match_opcode=500 parameter1=(0x39010800 + i + 1) STR_VAR match_resource=~EXDAMAGE~ END
+	END
+
+COPY_EXISTING ~uspr103h.spl~ ~override~ ~uspr112h.spl~ ~override~
+	READ_SHORT 0x68 numheaders
+	FOR (i = 0; i < numheaders; ++i) BEGIN
+		LPF ALTER_EFFECT INT_VAR header=i silent=1 check_headers=1 check_globals=0 match_opcode=500 parameter1=(0x1080000 + i + 1) STR_VAR match_resource=~MEHEALIN~ END
+	END
+
+COPY_EXISTING ~uspr214d.spl~ ~override~ ~uspr218d.spl~ ~override~
+	READ_SHORT 0x68 numheaders
+	FOR (i = 0; i < numheaders; ++i) BEGIN
+		LPF ALTER_EFFECT INT_VAR header=i silent=1 check_headers=1 check_globals=0 match_opcode=500 parameter1=(0x39020800 + (i + 1) * 2) STR_VAR match_resource=~EXDAMAGE~ END
+	END
+
+COPY_EXISTING ~uspr521d.spl~ ~override~
+	READ_SHORT 0x68 numheaders
+	FOR (i = 0; i < numheaders; ++i) BEGIN
+		LPF ALTER_EFFECT INT_VAR header=i silent=1 check_headers=1 check_globals=0 match_opcode=500 parameter1=(0x37020800 + (i + 1) * 2) STR_VAR match_resource=~EXDAMAGE~ END
+	END
+
+COPY_EXISTING ~uspr214h.spl~ ~override~ ~uspr218h.spl~ ~override~ ~uspr521h.spl~ ~override~
+	READ_SHORT 0x68 numheaders
+	FOR (i = 0; i < numheaders; ++i) BEGIN
+		LPF ALTER_EFFECT INT_VAR header=i silent=1 check_headers=1 check_globals=0 match_opcode=500 parameter1=(0x2080000 + (i + 1) * 2) STR_VAR match_resource=~MEHEALIN~ END
+	END
+
+COPY_EXISTING ~uspr401d.spl~ ~override~ ~uspr416d.spl~ ~override~
+	READ_SHORT 0x68 numheaders
+	FOR (i = 0; i < numheaders; ++i) BEGIN
+		LPF ALTER_EFFECT INT_VAR header=i silent=1 check_headers=1 check_globals=0 match_opcode=500 parameter1=(0x39030800 + (i + 1) * 3) STR_VAR match_resource=~EXDAMAGE~ END
+	END
+
+COPY_EXISTING ~uspr401h.spl~ ~override~ ~uspr416h.spl~ ~override~
+	READ_SHORT 0x68 numheaders
+	FOR (i = 0; i < numheaders; ++i) BEGIN
+		LPF ALTER_EFFECT INT_VAR header=i silent=1 check_headers=1 check_globals=0 match_opcode=500 parameter1=(0x3080000 + (i + 1) * 3) STR_VAR match_resource=~MEHEALIN~ END
+	END
+
+COPY_EXISTING ~uspr502d.spl~ ~override~ ~uspr513d.spl~ ~override~
+	READ_SHORT 0x68 numheaders
+	FOR (i = 0; i < numheaders; ++i) BEGIN
+		LPF ALTER_EFFECT INT_VAR header=i silent=1 check_headers=1 check_globals=0 match_opcode=500 parameter1=(0x39040800 + (i + 1) * 4) STR_VAR match_resource=~EXDAMAGE~ END
+	END
+
+COPY_EXISTING ~uspr502h.spl~ ~override~ ~uspr513h.spl~ ~override~
+	READ_SHORT 0x68 numheaders
+	FOR (i = 0; i < numheaders; ++i) BEGIN
+		LPF ALTER_EFFECT INT_VAR header=i silent=1 check_headers=1 check_globals=0 match_opcode=500 parameter1=(0x4080000 + (i + 1) * 4) STR_VAR match_resource=~MEHEALIN~ END
+	END
+
+COPY_EXISTING ~uspr515d.spl~ ~override~
+	READ_SHORT 0x68 numheaders
+	FOR (i = 0; i < numheaders; ++i) BEGIN
+		LPF ALTER_EFFECT INT_VAR header=i silent=1 check_headers=1 check_globals=0 match_opcode=500 parameter1=(0x39030600 + i + 1) STR_VAR match_resource=~EXDAMAGE~ END
 	END
 
 COPY_EXISTING ~sppr101.spl~ ~override~
@@ -2224,8 +2280,8 @@ ACTION_IF NOT (MOD_IS_INSTALLED ~iwd2ee.tp2~ ~2~) BEGIN
 		WRITE_BYTE willsave 10
 		WRITE_BYTE fireresistance 100
 		WRITE_BYTE coldresistance 100
-		WRITE_BYTE elecresistance 15
-		WRITE_BYTE acidresistance 15
+		WRITE_BYTE elecresistance 0
+		WRITE_BYTE acidresistance 10
 		WRITE_BYTE spellresistance 25
 		WRITE_BYTE magicfireresistance 100
 		WRITE_BYTE magiccoldresistance 100
@@ -2805,6 +2861,10 @@ COPY_EXISTING ~uswi454d.spl~ ~override~ ~uswi454p.spl~ ~override~ ~uswi454s.spl~
 	SAY NAME2 @30055
 	SAY UNIDENTIFIED_DESC @30124
 	SAY IDENTIFIED_DESC @30124
+
+COPY_EXISTING ~00CWYUT2.itm~ ~override~
+	LPF ADD_ITEM_EQEFFECT INT_VAR opcode=502 target=1 timing=2 special=1 STR_VAR resource=~MEPOLYBL~ END
+	UNLESS ~MEPOLYBL~
 
 COPY_EXISTING ~uswi455.spl~ ~override~
 	SAY NAME1 @37455
@@ -3767,7 +3827,7 @@ COPY_EXISTING ~LISTSPLL.2da~ ~override~
 						theunusability&=0xFFFFFDFF
 					END
 					PATCH_IF wiz = 0 BEGIN
-						theunusability|=0x200
+						theunusability|=0x400
 					END ELSE BEGIN
 						theunusability&=0xFFFFFBFF
 						READ_SHORT 0x68 numheaders
@@ -3977,7 +4037,7 @@ COPY_EXISTING_REGEXP ~.*\.spl~ ~override~
 	UNLESS ~US#1~
 	BUT_ONLY_IF_IT_CHANGES
 */
-
+/*
 COPY_EXISTING ~sppr103.spl~ ~override~ ~sppr214.spl~ ~override~ ~sppr401.spl~ ~override~ ~sppr502.spl~ ~override~ ~sppr521.spl~ ~override~ ~spin109.spl~ ~override~ ~spin271.spl~ ~override~ ~spin274.spl~ ~override~
 	READ_LONG 0x18 thespellflags
 	PATCH_IF (thespellflags BAND 0x00004000) = 0 BEGIN
@@ -4014,11 +4074,13 @@ COPY_EXISTING ~sppr103.spl~ ~override~ ~sppr214.spl~ ~override~ ~sppr401.spl~ ~o
 		END
 	END
 	BUT_ONLY_IF_IT_CHANGES
+*/
 /*
 COPY_EXISTING ~sppr101.spl~ ~override~ ~sppr103.spl~ ~override~ ~sppr106.spl~ ~override~ ~sppr107.spl~ ~override~ ~sppr108.spl~ ~override~ ~sppr109.spl~ ~override~ ~sppr110.spl~ ~override~ ~sppr112.spl~ ~override~ ~sppr115.spl~ ~override~ ~sppr201.spl~ ~override~ ~sppr202.spl~ ~override~ ~sppr203.spl~ ~override~ ~effc1.spl~ ~override~ ~sppr205.spl~ ~override~ ~sppr206.spl~ ~override~ ~sppr207.spl~ ~override~ ~sppr210.spl~ ~override~ ~sppr212.spl~ ~override~ ~sppr213.spl~ ~override~ ~sppr214.spl~ ~override~ ~sppr215.spl~ ~override~ ~uspr215d.spl~ ~override~ ~sppr217.spl~ ~override~ ~sppr218.spl~ ~override~ ~sppr219.spl~ ~override~ ~sppr220.spl~ ~override~ ~sppr306.spl~ ~override~ ~sppr307.spl~ ~override~ ~sppr308.spl~ ~override~ ~sppr312.spl~ ~override~ ~sppr313.spl~ ~override~ ~effp1.spl~ ~override~ ~sppr314.spl~ ~override~ ~sppr316.spl~ ~override~ ~sppr318.spl~ ~override~ ~sppr323.spl~ ~override~ ~sppr326.spl~ ~override~ ~sppr401.spl~ ~override~ ~sppr403.spl~ ~override~ ~sppr404.spl~ ~override~ ~sppr406.spl~ ~override~ ~sppr407.spl~ ~override~ ~sppr408.spl~ ~override~ ~sppr409.spl~ ~override~ ~sppr414.spl~ ~override~ ~effr1.spl~ ~override~ ~sppr415.spl~ ~override~ ~sppr416.spl~ ~override~ ~sppr420.spl~ ~override~ ~sppr424.spl~ ~override~ ~sppr425.spl~ ~override~ ~sppr426.spl~ ~override~ ~sppr428.spl~ ~override~ ~sppr502.spl~ ~override~ ~sppr507.spl~ ~override~ ~sppr508.spl~ ~override~ ~sppr511.spl~ ~override~ ~effrwf1.spl~ ~override~ ~effrwf2.spl~ ~override~ ~sppr513.spl~ ~override~ ~sppr514.spl~ ~override~ ~sppr515.spl~ ~override~ ~sppr517.spl~ ~override~ ~sppr519.spl~ ~override~ ~sppr520.spl~ ~override~ ~sppr521.spl~ ~override~ ~sppr523.spl~ ~override~ ~uspr523d.spl~ ~override~ ~sppr524.spl~ ~override~ ~sppr606.spl~ ~override~ ~sppr607.spl~ ~override~ ~sppr609.spl~ ~override~ ~sppr611.spl~ ~override~ ~sppr614.spl~ ~override~ ~sppr615.spl~ ~override~ ~sppr716.spl~ ~override~ ~sppr717.spl~ ~override~ ~sppr718.spl~ ~override~ ~sppr720.spl~ ~override~ ~sppr725.spl~ ~override~ ~sppr729.spl~ ~override~ ~sppr801.spl~ ~override~ ~sppr802.spl~ ~override~ ~uspr151.spl~ ~override~ ~uspr253.spl~ ~override~ ~uspr351.spl~ ~override~ ~uspr352.spl~ ~override~ ~uspr353.spl~ ~override~ ~uspr353d.spl~ ~override~ ~uspr451.spl~ ~override~ ~uspr454.spl~ ~override~ ~uspr551.spl~ ~override~ ~uspr554.spl~ ~override~ ~uspr654.spl~ ~override~ ~uspr656.spl~ ~override~ ~uspr753.spl~ ~override~ ~uspr754.spl~ ~override~ ~uspr951.spl~ ~override~ ~uspr955.spl~ ~override~
 
 COPY_EXISTING ~spwi102.spl~ ~override~ ~spwi107.spl~ ~override~ ~spwi108.spl~ ~override~ ~spwi113.spl~ ~override~ ~spwi114.spl~ ~override~ ~spwi115.spl~ ~override~ ~spwi120.spl~ ~override~ ~spwi201.spl~ ~override~ ~override~ ~spwi206.spl~ ~override~ ~spwi209.spl~ ~override~ ~spwi210.spl~ ~override~ ~spwi212.spl~ ~override~ ~spwi214.spl~ ~override~ ~spwi219.spl~ ~override~ ~spwi221.spl~ ~override~ ~spwi223.spl~ ~override~ ~spwi228.spl~ ~override~ ~spwi305.spl~ ~override~ ~spwi310.spl~ ~override~ ~spwi311.spl~ ~override~ ~spwi317.spl~ ~override~ ~spwi321.spl~ ~override~ ~spwi323.spl~ ~override~ ~spwi405.spl~ ~override~ ~spwi406.spl~ ~override~ ~spwi408.spl~ ~override~ ~spwi410.spl~ ~override~ ~spwi414.spl~ ~override~ ~spwi419.spl~ ~override~ ~spwi421.spl~ ~override~ ~spwi426.spl~ ~override~ ~spwi427.spl~ ~override~ ~spwi514.spl~ ~override~ ~spwi515.spl~ ~override~ ~spwi516.spl~ ~override~ ~spwi521.spl~ ~override~ ~spwi522.spl~ ~override~ ~spwi523.spl~ ~override~ ~spwi525.spl~ ~override~ ~spwi526.spl~ ~override~ ~spwi601.spl~ ~override~ ~spwi608.spl~ ~override~ ~spwi610.spl~ ~override~ ~spwi614.spl~ ~override~ ~spwi616.spl~ ~override~ ~spwi618.spl~ ~override~ ~spwi620.spl~ ~override~ ~spwi621.spl~ ~override~ ~spwi622.spl~ ~override~ ~spwi623.spl~ ~override~ ~spwi624.spl~ ~override~ ~spwi627.spl~ ~override~ ~spwi628.spl~ ~override~ ~spwi629.spl~ ~override~ ~spwi704.spl~ ~override~ ~spwi709.spl~ ~override~ ~spwi710.spl~ ~override~ ~spwi712.spl~ ~override~ ~spwi719.spl~ ~override~ ~spwi804.spl~ ~override~ ~spwi807.spl~ ~override~ ~spwi907.spl~ ~override~ ~spwi909.spl~ ~override~ ~spwi910.spl~ ~override~ ~uswi151.spl~ ~override~ ~uswi152.spl~ ~override~ ~uswi155.spl~ ~override~ ~uswi156.spl~ ~override~ ~uswi254.spl~ ~override~ ~uswi255.spl~ ~override~ ~uswi354.spl~ ~override~ ~uswi355.spl~ ~override~ ~uswi453.spl~ ~override~ ~uswi654.spl~ ~override~ ~uswi752.spl~ ~override~ ~uswi753.spl~ ~override~ ~uswi758.spl~ ~override~ ~uswi760.spl~ ~override~ ~uswi763.spl~ ~override~ ~uswi855.spl~ ~override~ ~uswi856.spl~ ~override~ ~uswi857.spl~ ~override~ ~uswi860.spl~ ~override~ ~uswi952.spl~ ~override~ ~uswi953.spl~ ~override~ ~uswi954.spl~ ~override~ ~uswi954d.spl~ ~override~ ~uswi958.spl~ ~override~ ~uswi959.spl~ ~override~
 */
+/*
 OUTER_FOR (i = 1; i < 30; ++i) BEGIN
 	OUTER_SET ones_digit = (i + 1) MODULO 10
 	OUTER_SET tens_digit = (i + 1) / 10
@@ -4041,14 +4103,15 @@ OUTER_FOR (i = 1; i < 30; ++i) BEGIN
 //		LPF ALTER_EFFECT INT_VAR silent=1 check_headers=1 check_globals=0 match_opcode=12 parameter1=((i + 1) * 4) dicenumber=4 dicesize=8 END
 		LPF ALTER_EFFECT INT_VAR silent=1 check_headers=1 check_globals=0 match_opcode=500 match_parameter2=0x400000 parameter1=(0x40800 + (i + 1) * 4) savingthrow=0x90000 STR_VAR match_resource=~EXDAMAGE~ END
 		LPF ALTER_EFFECT INT_VAR silent=1 check_headers=1 check_globals=1 STR_VAR match_resource=~icw01~ resource= EVAL ~icw%tens_digit%%ones_digit%~ END
+*/
 /*
 	COPY_EXISTING ~shockg%tens_digit%%ones_digit%.itm~ ~override~
 		WRITE_SHORT 0xA4 0
 		LPF ADD_ITEM_EFFECT INT_VAR type=1 opcode=112 target=1 timing=1 STR_VAR resource= EVAL ~%SOURCE_RES%~ END
 		LPF ADD_ITEM_EFFECT INT_VAR type=1 opcode=254 target=1 timing=1 STR_VAR resource=~SPWI115~ END
-*/
-END
 
+END
+*/
 //Patching all scrolls to be usable by the correct wizard kits.
 /*
 COPY_EXISTING_REGEXP ~sppr.*\.spl~ ~override~ ~spwi.*\.spl~ ~override~ ~uspr.*\.spl~ ~override~ ~uswi.*\.spl~ ~override~

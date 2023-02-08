@@ -4,7 +4,9 @@ COMPILE ~%mod_folder%/dlg/61ISAIR.d~ ~%mod_folder%/dlg/60MADAE.d~
 //As of 6/11/2018, this now includes commands that open the door, remove everyone from the room including Isair and Madae, and allow the player to go right to the exit.
 
 //This also includes some tweaks to AR6305's script, a script that I think relates to Orrick, and the script for the exit to the end credits, to make them compatible with the new nonviolent option.
-COPY ~%mod_folder%/bcs/AR6305.bcs~ ~override~
+COPY_EXISTING ~AR6305.bcs~ ~override~
+	REPLACE_TEXTUALLY ~CheckDoorFlags(\"AR6303_Door1\", ?DOOROPEN)~ ~CheckDoorFlags("AR6303_Door1",DOOROPEN)
+!Global("US_Final_Battle_Alternate","GLOBAL",1)~
 //I think the area script only includes a single line [!Global("US_Final_Battle_Alternate","GLOBAL",1)], at line 235, which ensures that a certain cutscene which normally triggers when the party opens the southern door, does not open the southern door.
 //The dialogs already open that door and make the subsequent cutscene unnecessary and also game-breaking.
 

@@ -2383,6 +2383,7 @@ function IEex_Extern_OnUpdateRecordDescription(CScreenCharacter, CGameSprite, CU
 	local turnUndeadLevelString = IEex_FetchString(12126)
 	local wholenessOfBodyString = IEex_FetchString(39768)
 	local abilitiesString = IEex_FetchString(33547)
+	local expertiseString = IEex_FetchString(39818)
 	local genericString = IEex_FetchString(33552)
 	local monkWisdomBonusString = ex_str_925
 	local mainhandString = IEex_FetchString(734)
@@ -2467,53 +2468,107 @@ function IEex_Extern_OnUpdateRecordDescription(CScreenCharacter, CGameSprite, CU
 				wisdomBonus = 1
 			end
 			line = string.gsub(line, "%d+", monkLevel * wisdomBonus)
-		elseif string.match(line, monkWisdomBonusString .. ":") or string.match(line, genericString .. ":") then
+		elseif string.match(line, monkWisdomBonusString .. ":") or string.match(line, genericString .. ":") or string.match(line, expertiseString .. ":") then
 			local monkLevel = IEex_GetActorStat(targetID, 101)
 			if monkLevel > 0 then
 				local wisdomBonus = math.floor((IEex_GetActorStat(targetID, 39) - 10) / 2)
-				local monkACBonusDisabled = false
-				local fixMonkACBonus = true
-				local unfixMonkACBonus = (IEex_ReadByte(creatureData + 0x9D4, 0x0) > 0)
-				IEex_IterateActorEffects(targetID, function(eData)
-					local theopcode = IEex_ReadDword(eData + 0x10)
-					local theparameter1 = IEex_ReadDword(eData + 0x1C)
-					local theparameter2 = IEex_ReadDword(eData + 0x20)
-					if theopcode == 288 and theparameter2 == 241 then
-						local thegeneralitemcategory = IEex_ReadByte(eData + 0x48, 0x0)
-						if thegeneralitemcategory >= 1 and thegeneralitemcategory <= 3 then
-							monkACBonusDisabled = true
-							if (thegeneralitemcategory == 1 and (theparameter1 ~= 67 or not ex_elven_chainmail_counts_as_unarmored)) or thegeneralitemcategory == 3 then
-								fixMonkACBonus = false
+				if wisdomBonus > 0 then
+					local monkACBonusDisabled = false
+					local fixMonkACBonus = true
+					local unfixMonkACBonus = (IEex_ReadByte(creatureData + 0x9D4, 0x0) > 0)
+					IEex_IterateActorEffects(targetID, function(eData)
+						local theopcode = IEex_ReadDword(eData + 0x10)
+						local theparameter1 = IEex_ReadDword(eData + 0x1C)
+						local theparameter2 = IEex_ReadDword(eData + 0x20)
+						local theresource = IEex_ReadLString(eData + 0x30, 8)
+						local thesavingthrow = IEex_ReadDword(eData + 0x40)
+						local thespecial = IEex_ReadDword(eData + 0x48)
+						if theopcode == 288 and theparameter2 == 241 then
+							local thegeneralitemcategory = IEex_ReadByte(eData + 0x48, 0x0)
+							if thegeneralitemcategory >= 1 and thegeneralitemcategory <= 3 then
+								monkACBonusDisabled = true
+								if (thegeneralitemcategory == 1 and (theparameter1 ~= 67 or not ex_elven_chainmail_counts_as_unarmored)) or thegeneralitemcategory == 3 then
+									fixMonkACBonus = false
+								end
+							end
+						elseif theopcode == 502 and theresource == "MEPOLYBL" then
+							if thespecial > monkLevel then
+								unfixMonkACBonus = true
+							end
+						end
+					end)
+					if not monkACBonusDisabled and unfixMonkACBonus then
+						if string.match(line, monkWisdomBonusString .. ":") then
+							line = string.gsub(line, "%d+", 0)
+						elseif string.match(line, genericString .. ":") then
+							local genericAC = string.match(line, "%d+")
+							if string.match(line, "%-") then
+								genericAC = genericAC * -1
+							end
+							genericAC = genericAC + wisdomBonus
+							if genericAC > 0 then
+								line = string.gsub(line, "." .. "%d+", "+" .. genericAC)
+							elseif genericAC < 0 then
+								line = string.gsub(line, "." .. "%d+", "-" .. math.abs(genericAC))
+							else
+								line = ""
+							end
+						end
+					elseif monkACBonusDisabled and fixMonkACBonus and not unfixMonkACBonus then
+						if string.match(line, monkWisdomBonusString .. ":") then
+							line = string.gsub(line, "0", wisdomBonus)
+						elseif string.match(line, genericString .. ":") then
+							local genericAC = string.match(line, "%d+")
+							if string.match(line, "%-") then
+								genericAC = genericAC * -1
+							end
+							genericAC = genericAC - wisdomBonus
+							if genericAC > 0 then
+								line = string.gsub(line, "." .. "%d+", "+" .. genericAC)
+							elseif genericAC < 0 then
+								line = string.gsub(line, "." .. "%d+", "-" .. math.abs(genericAC))
+							else
+								line = ""
 							end
 						end
 					end
-				end)
-				if not monkACBonusDisabled and unfixMonkACBonus then
-					if string.match(line, monkWisdomBonusString .. ":") then
+				end
+			end
+		local expertiseCount = IEex_ReadDword(creatureData + 0x4C54)
+		if expertiseCount > 0 then
+			local actionID = IEex_ReadWord(creatureData + 0x476, 0x0)
+			if actionID ~= 3 and actionID ~= 94 and actionID ~= 98 and actionID ~= 105 and actionID ~= 134 and actionID ~= 27 then
+				local isRanged = false
+				local weaponSlot = IEex_ReadByte(creatureData + 0x4BA4, 0x0)
+				local weaponHeader = IEex_ReadByte(creatureData + 0x4BA6, 0x0)
+				local weaponRES = ""
+				local slotData = IEex_ReadDword(creatureData + 0x4AD8 + weaponSlot * 0x4)
+				local weaponWrapper = 0
+				if slotData > 0 then
+					weaponRES = IEex_ReadLString(slotData + 0xC, 8)
+					weaponWrapper = IEex_DemandRes(weaponRES, "ITM")
+					if weaponWrapper:isValid() then
+						local itemData = weaponWrapper:getData()
+						local numHeaders = IEex_ReadSignedWord(itemData + 0x68, 0x0)
+						if weaponHeader >= numHeaders then
+							weaponHeader = 0
+						end
+						headerType = IEex_ReadByte(itemData + 0x82 + weaponHeader * 0x38, 0x0)
+						local itemType = IEex_ReadWord(itemData + 0x1C, 0x0)
+						if headerType == 2 then
+							isRanged = true
+						end
+					end
+				end
+				if not isRanged then
+					if string.match(line, expertiseString .. ":") then
 						line = string.gsub(line, "%d+", 0)
 					elseif string.match(line, genericString .. ":") then
 						local genericAC = string.match(line, "%d+")
 						if string.match(line, "%-") then
 							genericAC = genericAC * -1
 						end
-						genericAC = genericAC + wisdomBonus
-						if genericAC > 0 then
-							line = string.gsub(line, "." .. "%d+", "+" .. genericAC)
-						elseif genericAC < 0 then
-							line = string.gsub(line, "." .. "%d+", "-" .. math.abs(genericAC))
-						else
-							line = ""
-						end
-					end
-				elseif monkACBonusDisabled and fixMonkACBonus then
-					if string.match(line, monkWisdomBonusString .. ":") then
-						line = string.gsub(line, "0", wisdomBonus)
-					elseif string.match(line, genericString .. ":") then
-						local genericAC = string.match(line, "%d+")
-						if string.match(line, "%-") then
-							genericAC = genericAC * -1
-						end
-						genericAC = genericAC - wisdomBonus
+						genericAC = genericAC + expertiseCount
 						if genericAC > 0 then
 							line = string.gsub(line, "." .. "%d+", "+" .. genericAC)
 						elseif genericAC < 0 then
@@ -2524,6 +2579,7 @@ function IEex_Extern_OnUpdateRecordDescription(CScreenCharacter, CGameSprite, CU
 					end
 				end
 			end
+		end
 		elseif descPanelNum == 1 and string.match(line, castingFailureString .. ":") then
 			local armoredArcanaFeatCount = IEex_ReadByte(creatureData + 0x781, 0x0)
 			local castingFailure = string.match(line, "%d+")

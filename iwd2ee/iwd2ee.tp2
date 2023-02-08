@@ -7,6 +7,9 @@ ALWAYS
 //	ACTION_IF GAME_IS ~IWD2~ BEGIN
            OUTER_TEXT_SPRINT ~mod_folder~ ~iwd2ee~    //Folder Var
 //      END
+	ACTION_IF MOD_IS_INSTALLED ~widescreen.tp2~ ~0~ BEGIN
+		ABORT @99
+	END
 	OUTER_TEXT_SPRINT installedacomponent ~%no%~
 	INCLUDE ~%mod_folder%/components/iwd2ee_functions.tpa~ //Functions that may be used in multiple components
 

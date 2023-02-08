@@ -343,23 +343,6 @@ ex_empowerable_opcodes = {[12] = true, [17] = true, [18] = true, [25] = true, [6
 			end
 		end
 --]]
-		local damageType = bit.band(parameter2, 0xFFFF0000)
-		if opcode == 12 then
-			if bit.band(parameter3, 0x8000000) > 0 then
-				if damageType == 0x80000 then
-					IEex_SetToken("EXDAMFIR", IEex_FetchString(ex_tra_55387))
-					local fireResistance = IEex_ReadSignedWord(creatureData + 0x942, 0x0)
-					if fireResistance > 0 then
-						fireResistance = 0
-						IEex_WriteWord(creatureData + 0x942, fireResistance)
-					end
-				end
-			else
-				if damageType == 0x80000 then
-					IEex_SetToken("EXDAMFIR", IEex_FetchString(ex_tra_55386))
-				end
-			end
-		end
 		if bit.band(internalFlags, 0x2000000) > 0 then return false end
 		local school = IEex_ReadDword(effectData + 0x48)
 		local restype = IEex_ReadDword(effectData + 0x8C)
@@ -631,6 +614,31 @@ ex_empowerable_opcodes = {[12] = true, [17] = true, [18] = true, [25] = true, [6
 
 --			end
 
+		end
+		local damageType = bit.band(parameter2, 0xFFFF0000)
+		if opcode == 12 then
+			if damageType == 0x80000 then
+				if bit.band(parameter3, 0x8000000) > 0 then
+					IEex_SetToken("EXDAMFIR", IEex_FetchString(ex_tra_55387))
+					local fireResistance = IEex_ReadSignedWord(creatureData + 0x942, 0x0)
+					if fireResistance > 0 then
+						fireResistance = 0
+						IEex_WriteWord(creatureData + 0x942, fireResistance)
+					end
+				else
+					IEex_SetToken("EXDAMFIR", IEex_FetchString(ex_tra_55386))
+				end
+			elseif damageType == 0x400000 then
+				if bit.band(parameter3, 0x8000000) > 0 then
+					IEex_SetToken("EXDAMMAG", IEex_FetchString(ex_tra_55372))
+				elseif bit.band(parameter3, 0x10000000) > 0 then
+					IEex_SetToken("EXDAMMAG", IEex_FetchString(ex_tra_55373))
+				elseif bit.band(parameter3, 0x20000000) > 0 then
+					IEex_SetToken("EXDAMMAG", IEex_FetchString(ex_tra_55374))
+				else
+					IEex_SetToken("EXDAMMAG", IEex_FetchString(ex_tra_55371))
+				end
+			end
 		end
 		if opcode == 13 or opcode == 420 then
 			local timeSlowed, targetNotSlowed = IEex_CheckGlobalEffectOnActor(targetID, 0x2)

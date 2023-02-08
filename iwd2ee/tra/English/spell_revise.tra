@@ -89,7 +89,7 @@ If the saving throw is successful, the damage is reduced:
 1st round: 2d6 damage
 2nd round: 1d6 damage
 
-Each round after the first, the nearest creature within ten feet of the victim must make a Fortitude save or be infected by the mold at full strength. This process continues until the mold fails to infect a suitable host in time. Creatures already under the effects of the mold cannot contract it again. The brown mold quickly dies once the spell expires.~
+Each round after the first, the nearest creature within ten feet of the victim must make a Fortitude save or be infected by the mold at full strength. This process continues until the mold fails to infect a suitable host in time. Creatures already under the effects of the mold cannot contract it again. The brown mold quickly dies once the spell expires. This spell does not provoke an attack of opportunity.~
 @1014    = ~Defensive Harmony~
 @1015    = ~Defensive Harmony 
 (Enchantment) [Lawful]
@@ -362,7 +362,7 @@ Casting Time: 5
 Area of Effect: 1 creature
 Saving Throw: None
 
-Heal wipes away disease and injury from a target creature. It cures blindness, diseases, feeblemind and restores the target to maximum hit points if they have been injured. There is no effect when used on the Undead.~
+Heal wipes away disease and injury from a target creature. It cures blindness, diseases, feeblemind and restores the target to maximum hit points if they have been injured. If used on an undead creature, it will instead act as a Harm spell, reducing the undead to 1 hit point if the caster succeeds on a touch attack roll and the undead fails a Fortitude save with a -2 penalty. This spell does not provoke an attack of opportunity when used to harm hostile undead.~
 @1060    = ~Symbol of Hopelessness~
 @1061    = ~Symbol of Hopelessness
 (Divination) 
@@ -450,7 +450,7 @@ Casting Time: 1
 Area of Effect: 1 creature
 Saving Throw: Special
 
-When the caster completes this spell, a blue glow encompasses his hand. This energy attacks the life force of any creature the wizard touches (no attack roll is required). The touched creature suffers 1d6 cold damage per level (max 5d6) and receives a -3 attack penalty for 10 rounds after being struck. If the creature is undead creature, it is affected by panic (Will negates) for 10 rounds. Undead suffer no damage or attack bonus penalty from Chill Touch.~
+When the caster completes this spell, a blue glow encompasses his hand. This energy attacks the life force of any creature the wizard touches (no attack roll is required). The touched creature suffers 1d6 cold damage per level (max 5d6) and receives a -3 attack penalty for 10 rounds after being struck. If the creature is undead creature, it is affected by panic (Will negates) for 10 rounds. Undead suffer no damage or attack bonus penalty from Chill Touch. This spell does not provoke an attack of opportunity.~
 @1076    = ~Chromatic Orb~
 @1077    = ~Chromatic Orb 
 (Evocation) 
@@ -528,7 +528,7 @@ Casting Time: 1
 Area of Effect: 1 creature
 Saving Throw: None 
 
-This spell imbues the caster's hands with the ability to drain life, taking 1d6 hit points per level from a living victim and granting it to the caster (maximum 10d6), with any hit points over the caster's normal maximum total treated as temporary bonus hit points. The temporary hit points disappear after 1 hour.~
+This spell imbues the caster's hands with the ability to drain life, taking 1d6 hit points per level from a living victim and granting it to the caster (maximum 10d6), with any hit points over the caster's normal maximum total treated as temporary bonus hit points. The temporary hit points disappear after 1 hour. This spell does not provoke an attack of opportunity.~
 @1088    = ~Icelance~
 @1089    = ~Icelance 
 (Evocation)
@@ -796,7 +796,7 @@ Casting Time: 2
 Area of Effect: 1 creature
 Saving Throw: Fortitude negates
 
-This spell brings the power of the ghoul to the caster's hands - upon touching a creature (no attack roll necessary), the victim must make a successful Fortitude save or be paralyzed and be covered with an awful carrion stench for 5 rounds. All living creatures within a 10-foot radius of the victim, with the exception of the caster, suffer extreme nausea and are at a penalty of 2 for attack bonuses, damage, and saving throws.~
+This spell brings the power of the ghoul to the caster's hands - upon touching a creature (no attack roll necessary), the victim must make a successful Fortitude save or be paralyzed and be covered with an awful carrion stench for 5 rounds. All living creatures within a 10-foot radius of the victim, with the exception of the caster, suffer extreme nausea and are at a penalty of 2 for attack bonuses, damage, and saving throws. This spell does not provoke an attack of opportunity.~
 @1136    = ~Malavon's Rage~
 @1137    = ~Malavon's Rage
 (Evocation)
@@ -1536,10 +1536,7 @@ Casting Time: 1
 Area of Effect: 1 creature
 Saving Throw: None
 
-This spell imbues the caster's hands with a powerful electrical charge that will release when a successful touch attack is made. The attack deals 1d8 points of electrical damage +2 points per caster level.
-
-The electrical charge is sufficient for one successful attack, and once an opponent has been touched, the spell's energy is used up.
-~
+This spell imbues the caster's hands with a powerful electrical charge that will release when a successful touch attack is made. The attack deals 1d10 points of electrical damage per caster level (max 5d10). If the target is wearing metal armor (chain mail, splint mail, half plate, field plate, or full plate), the attack roll is made at a +3 bonus. This spell will not provoke an attack of opportunity.~
 @1690    = ~Snakebite~
 @1691    = ~Snakebite 
 (Transmutation) 
@@ -1801,9 +1798,9 @@ Casting Time: 1 round
 Area of Effect: 1 creature
 Saving Throw: Fortitude partial
 
-This spell imbues the caster's hands with destructive negative energy that will release when a successful touch attack is made. This attack will instantly slay a living creature unless a Fortitude save is made, in which case the creature takes 3d6 + 1/level points of magic damage instead. This spell has no effect on undead or constructs.~
+This spell imbues the caster's hands with destructive negative energy that will release when a successful touch attack is made. This attack will instantly slay a living creature unless a Fortitude save is made, in which case the creature takes 3d6 + 1/level points of magic damage instead. This spell has no effect on undead or constructs, and it does not provoke an attack of opportunity.~
 @1760    = ~Harm~
-@1761    = ~Harm 
+@1761    = ~Harm
 (Necromancy) 
 Level: Clr 6, Drd 7, Ilmater 6
 Range: Touch 
@@ -1812,8 +1809,7 @@ Casting Time: 1 round
 Area of Effect: 1 creature
 Saving Throw: Fortitude negates
 
-This spell imbues the caster's hands with destructive negative energy that will release when a successful touch attack is made. This attack deals magic damage equal to all but 1d4 of the target's current hit points on a failed Fortitude save (made with a -2 penalty). This spell has no effect on undead or constructs.
-~
+This spell imbues the caster's hands with destructive negative energy that will release when a successful touch attack is made. This attack deals magic damage equal to all but one of the target's current hit points on a failed Fortitude save (made with a -2 penalty). If used on an undead creature, it will instead act as a Heal spell, healing them to full health without requiring a touch attack to hit. This spell does not provoke an attack of opportunity when used to harm the living.~
 @1762    = ~Ice Blade~
 @1763    = ~Ice Blade
 (Evocation)
@@ -1899,7 +1895,7 @@ Casting Time: 1 round
 Area of Effect: 1 creature
 Saving Throw: Fortitude partial
 
-This spell imbues the caster's hands with divine force that will release when a successful touch attack is made. This attack will instantly destroy a target, blasting it into small chunks. A Fortitude saving throw with a -2 penalty is allowed and if successful the target takes 10d6 magic damage instead of being destroyed. Destruction can even destroy undead and constructs. Note that a character struck with a Destruction spell cannot be raised with a Raise Dead spell; a more powerful Resurrection spell will be needed to restore the character's body.
+This spell imbues the caster's hands with divine force that will release when a successful touch attack is made. This attack will instantly destroy a target, blasting it into small chunks. A Fortitude saving throw with a -2 penalty is allowed and if successful the target takes 10d6 magic damage instead of being destroyed. Destruction can even destroy undead and constructs. Note that a character struck with a Destruction spell cannot be raised with a Raise Dead spell; a more powerful Resurrection spell will be needed to restore the character's body. This spell does not provoke an attack of opportunity.
 ~
 @1775    = ~Control Undead~
 @1776    = ~Control Undead 
@@ -1923,7 +1919,7 @@ Casting Time: 1
 Area of Effect: 1 creature
 Saving Throw: None
 
-This spell imbues the caster's hands with destructive negative energy that will release when a successful touch attack is made. This attack deals 1d8 magic damage + 1 per caster level (maximum of 1d8 + 30). This spell has no effect on undead or constructs.~
+This spell imbues the caster's hands with destructive negative energy that will release when a successful touch attack is made. This attack deals 1d8 magic damage + 1 per caster level (maximum of 1d8 + 30). If used on an undead creature, it will instead heal them the same amount without requiring an attack roll. This spell does not provoke an attack of opportunity when used to harm the living.~
 @1779    = ~Inflict Moderate Wounds~
 @1780    = ~Inflict Moderate Wounds 
 (Necromancy) 
@@ -1934,7 +1930,7 @@ Casting Time: 1
 Area of Effect: 1 creature
 Saving Throw: None
 
-This spell imbues the caster's hands with destructive negative energy that will release when a successful touch attack is made. This attack deals 2d8 magic damage + 2 per caster level (maximum of 2d8 + 60). This spell has no effect on undead or constructs.~
+This spell imbues the caster's hands with destructive negative energy that will release when a successful touch attack is made. This attack deals 2d8 magic damage + 2 per caster level (maximum of 2d8 + 60). If used on an undead creature, it will instead heal them the same amount without requiring an attack roll. This spell does not provoke an attack of opportunity when used to harm the living.~
 @1781    = ~Inflict Serious Wounds~
 @1782    = ~Inflict Serious Wounds
 (Necromancy) 
@@ -1945,7 +1941,7 @@ Casting Time: 2
 Area of Effect: 1 creature
 Saving Throw: None
 
-This spell imbues the caster's hands with destructive negative energy that will release when a successful touch attack is made. This attack deals 3d8 magic damage + 3 per caster level (maximum of 3d8 + 90). This spell has no effect on undead or constructs.~
+This spell imbues the caster's hands with destructive negative energy that will release when a successful touch attack is made. This attack deals 3d8 magic damage + 3 per caster level (maximum of 3d8 + 90). If used on an undead creature, it will instead heal them the same amount without requiring an attack roll. This spell does not provoke an attack of opportunity when used to harm the living.~
 @1783    = ~Inflict Critical Wounds~
 @1784    = ~Inflict Critical Wounds
 (Necromancy)
@@ -1956,7 +1952,7 @@ Casting Time: 2
 Area of Effect: 1 creature
 Saving Throw: None
 
-This spell imbues the caster's hands with destructive negative energy that will release when a successful touch attack is made. This attack deals 4d8 magic damage + 4 per caster level (maximum of 4d8 + 120). This spell has no effect on undead or constructs.~
+This spell imbues the caster's hands with destructive negative energy that will release when a successful touch attack is made. This attack deals 4d8 magic damage + 4 per caster level (maximum of 4d8 + 120). If used on an undead creature, it will instead heal them the same amount without requiring an attack roll. This spell does not provoke an attack of opportunity when used to harm the living.~
 
 @1811    = ~Power Word: Silence~
 @1812    = ~Power Word: Silence 
@@ -2130,7 +2126,7 @@ Casting Time: 1
 Area of Effect: 1 creature
 Saving Throw: None 
 
-When casting this spell and laying his hand upon a living creature, the caster heals 1d8 points of damage +1 per caster level (up to 1d8+30).~
+When casting this spell and laying his hand upon a living creature, the caster heals 1d8 points of damage +1 per caster level (up to 1d8+30). Undead creatures will take magic damage instead of being healed. This spell will require a successful touch attack roll if cast on an undead creature. It will not provoke an attack of opportunity if cast to damage enemy undead.~
 @1863     = ~Cure Moderate Wounds~
 @1864     = ~Cure Moderate Wounds
 (Conjuration)
@@ -2141,7 +2137,7 @@ Casting Time: 1
 Area of Effect: 1 creature
 Saving Throw: None
 
-When casting this spell and laying his hand upon a living creature, the caster heals 2d8 points of damage +2 per caster level (up to 2d8+60).~
+When casting this spell and laying his hand upon a living creature, the caster heals 2d8 points of damage +2 per caster level (up to 2d8+60). Undead creatures will take magic damage instead of being healed. This spell will require a successful touch attack roll if cast on an undead creature. It will not provoke an attack of opportunity if cast to damage enemy undead.~
 @1865     = ~Cure Serious Wounds~
 @1866     = ~Cure Serious Wounds
 (Conjuration) 
@@ -2152,7 +2148,7 @@ Casting Time: 2
 Area of Effect: 1 creature
 Saving Throw: None 
 
-When casting this spell and laying his hand upon a living creature, the caster heals 3d8 points of damage +3 per caster level (up to 3d8+90).~
+When casting this spell and laying his hand upon a living creature, the caster heals 3d8 points of damage +3 per caster level (up to 3d8+90). Undead creatures will take magic damage instead of being healed. This spell will require a successful touch attack roll if cast on an undead creature. It will not provoke an attack of opportunity if cast to damage enemy undead.~
 @1867     = ~Cure Critical Wounds~
 @1868     = ~Cure Critical Wounds
 (Conjuration)
@@ -2163,7 +2159,7 @@ Casting Time: 2
 Area of Effect: 1 creature
 Saving Throw: None
 
-When casting this spell and laying his hand upon a living creature, the caster heals 4d8 points of damage +4 per caster level (up to 4d8+120).~
+When casting this spell and laying his hand upon a living creature, the caster heals 4d8 points of damage +4 per caster level (up to 4d8+120). Undead creatures will take magic damage instead of being healed. This spell will require a successful touch attack roll if cast on an undead creature. It will not provoke an attack of opportunity if cast to damage enemy undead.~
 @1869     = ~Healing Circle~
 @1870     = ~Healing Circle
 (Conjuration) 
@@ -2174,7 +2170,7 @@ Casting Time: 3
 Area of Effect: 30-foot radius
 Saving Throw: None 
 
-This spell heals all friendly creatures within the area of effect by 2d8 points of damage +2 per caster level (up to +60).~
+This spell heals all friendly living creatures within the area of effect by 2d8 points of damage +2 per caster level (up to +60). Enemy undead creatures in the area of effect take the same amount of magic damage, though the caster will have to succeed on a ranged touch attack for each undead creature that would be affected.~
 @1871     = ~Bless~
 @1872     = ~Bless
 (Conjuration)
@@ -2295,7 +2291,7 @@ Casting Time: 2
 Area of Effect: 5-foot radius
 Saving Throw: Reflex half
 
-Upon completion of this spell a ring of electricity erupts from the caster, dealing 1d6 electricity damage per every two caster levels (maximum 5d6 electricity damage) to every creature within the area of effect. In addition, creatures struck by the ring are stunned for 1 round. A successful Reflex save halves the damage and negates the stunning effect.~
+Upon completion of this spell a ring of electricity erupts from the caster, dealing 1d6 electricity damage per every two caster levels (maximum 5d6 electricity damage) to every creature within the area of effect. In addition, creatures struck by the ring are stunned for 1 round. A successful Reflex save halves the damage and negates the stunning effect. This spell does not provoke an attack of opportunity, as it is intended to be used in melee.~
 @1893     = ~Burning Hands~
 @1894     = ~Burning Hands
 (Transmutation)
@@ -3346,7 +3342,7 @@ Casting Time: 9
 Area of Effect: All allies within 20 ft.
 Saving Throw: None
 
-Mass Heal wipes away disease and injury from all allies in the area of effect. It cures blindness, diseases, feeblemind and restores the targets to maximum hit points if they have been injured.~
+Mass Heal wipes away disease and injury from all living allies in the area of effect. It cures blindness, diseases, feeblemind and restores the targets to maximum hit points if they have been injured. Enemy undead in the area of effect suffer the effects of a Harm spell if the caster succeeds on a ranged touch attack roll for each one.~
 @31850     = ~Summon Nature's Ally VIII~
 @32850     = ~Summon Nature's Ally VIII
 (Conjuration) 
@@ -4023,7 +4019,7 @@ Casting Time: 9
 Area of Effect: 1 creature
 Saving Throw: None
 
-In casting this spell, the caster marks the target, who will be automatically punished upon committing a serious crime. The next time the target kills someone, their Mark of Justice is triggered, and the target takes 20d10 magic damage with no saving throw. This spell can only be cast by lawful characters.~
+In casting this spell, the caster marks the target, who will be automatically punished upon committing a serious crime. The next time the target kills someone, their Mark of Justice is triggered, and the target takes 20d10 magic damage with no saving throw. This spell does not provoke an attack of opportunity when cast on an enemy. It can only be cast by lawful characters.~
 @35653     = ~Repulsion~
 @36653     = ~Repulsion
 (Abjuration)
@@ -4168,7 +4164,7 @@ Casting Time: 9
 Area of Effect: All enemies within 30 ft.
 Saving Throw: Fortitude negates
 
-Mass Harm releases destructive negative energy upon all enemies in the area of effect. Those creatures must Save vs. Fortitude at +3 or lose all but 1d4 of their hit points. This spell has no effect on undead or constructs.~
+Mass Harm releases destructive negative energy upon all living enemies in the area of effect. The caster makes ranged touch attacks against each of those creatures; each one that get hit must Save vs. Fortitude or lose all but one hit point. The DC is the same as that of the 6th-level Harm spell. Allied undead in the area of effect are instead healed to full health as per a Heal spell.~
 @35953     = ~Volcanic Eruption~
 @36953     = ~Volcanic Eruption
 (Evocation)
@@ -4629,16 +4625,16 @@ Boulder Roll creates a large boulder, which rolls forward from the caster, crush
 @37654     = ~Songcasting~
 @38654     = ~Songcasting
 (Universal)
-Level: Brd 6
+Level: Brd 8
 Range: Special
 Duration: 15 rounds
 Casting Time: 10
 Area of Effect: Special
 Saving Throw: None
 
-Songcasting lets the bard store a spell, which has a chance of being cast automatically each round that the bard sings their bard song. Immediately after casting this spell, the bard should attempt to cast another spell of 2nd-level or lower. Instead of being cast, this spell will be stored (expending one use of the spell).
+Songcasting lets the bard store a spell, which has a chance of being cast automatically each round that the bard sings their bard song. Immediately after casting this spell, the bard should attempt to cast another spell of 1st-level. Instead of being cast, this spell will be stored (expending one use of the spell).
 
-Each round for the duration, if the bard is singing a bard song, there is a chance (1% per bard level) that the spell will be cast on each creature the bard song affects. Even spells with a range of Caster can target other creatures this way. If the spell is 1st-level, the chance is doubled. The spell can potentially be triggered multiple times over many rounds.~
+Each round for the duration, if the bard is singing a bard song, there is a chance (1% per bard level) that the spell will be cast on each creature the bard song affects. Even spells with a range of Caster can target other creatures this way. The spell can potentially be triggered multiple times over many rounds.~
 @37655     = ~Void Sound~
 @38655     = ~Void Sound
 (Necromancy)
@@ -4983,7 +4979,7 @@ Saving Throw: Fortitude negates
 
 Unlike lesser polymorph spells, True Polymorph can turn a creature into an inanimate object. If the target fails a Fortitude saving throw with a -4 penalty, it is transformed into a keg. While in keg form, the target cannot do anything, but their equipment can still be found inside the keg when it is split open. The effect lasts until dispelled.
 
-If True Polymorph is casting on a petrified creature, it will instead duplicate the effects of Stone to Flesh.~
+If True Polymorph is cast on a petrified creature, it will instead duplicate the effects of Stone to Flesh.~
 @37952     = ~Perfect Invisibility~
 @38952     = ~Perfect Invisibility
 (Illusion)
@@ -5134,4 +5130,4 @@ Any character who knows the spell Soul Bind (or any fiend, regardless of whether
 * Permanently raise one of the character's ability scores by 1 (each ability score cannot be increased by more than 2 this way).
 * Fully restore the charges of a magic item in the character's inventory (items that give permanent bonuses cannot be recharged).
 
-Undead, constructs, summoned creatures, and creatures with less than 13 HD are unaffected by Soul Bind. This spell can only be cast by evil characters.~
+Undead, constructs, summoned creatures, and creatures with less than 13 HD are unaffected by Soul Bind. This spell does not provoke an attack of opportunity when cast on an enemy. It can only be cast by evil characters.~

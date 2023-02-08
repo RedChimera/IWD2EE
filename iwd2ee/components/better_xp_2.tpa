@@ -3,7 +3,7 @@ COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
 
 READ_BYTE "0x8A" "totallevel"
 
-WRITE_SHORT 0x25A 1
+WRITE_BYTE 0x25A 1
 
 IF_EVAL ("%totallevel%" = "0x1")
 
@@ -11,7 +11,7 @@ COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
 
 READ_BYTE "0x8A" "totallevel"
 
-WRITE_SHORT 0x25A 2
+WRITE_BYTE 0x25A 2
 
 IF_EVAL ("%totallevel%" = "0x2")
 
@@ -19,7 +19,7 @@ COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
 
 READ_BYTE "0x8A" "totallevel"
 
-WRITE_SHORT 0x25A 3
+WRITE_BYTE 0x25A 3
 
 IF_EVAL ("%totallevel%" = "0x3")
 
@@ -27,7 +27,7 @@ COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
 
 READ_BYTE "0x8A" "totallevel"
 
-WRITE_SHORT 0x25A 4
+WRITE_BYTE 0x25A 4
 
 IF_EVAL ("%totallevel%" = "0x4")
 
@@ -35,7 +35,7 @@ COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
 
 READ_BYTE "0x8A" "totallevel"
 
-WRITE_SHORT 0x25A 5
+WRITE_BYTE 0x25A 5
 
 IF_EVAL ("%totallevel%" = "0x5")
 
@@ -43,7 +43,7 @@ COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
 
 READ_BYTE "0x8A" "totallevel"
 
-WRITE_SHORT 0x25A 6
+WRITE_BYTE 0x25A 6
 
 IF_EVAL ("%totallevel%" = "0x6")
 
@@ -51,7 +51,7 @@ COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
 
 READ_BYTE "0x8A" "totallevel"
 
-WRITE_SHORT 0x25A 7
+WRITE_BYTE 0x25A 7
 
 IF_EVAL ("%totallevel%" = "0x7")
 
@@ -59,7 +59,7 @@ COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
 
 READ_BYTE "0x8A" "totallevel"
 
-WRITE_SHORT 0x25A 8
+WRITE_BYTE 0x25A 8
 
 IF_EVAL ("%totallevel%" = "0x8")
 
@@ -67,7 +67,7 @@ COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
 
 READ_BYTE "0x8A" "totallevel"
 
-WRITE_SHORT 0x25A 9
+WRITE_BYTE 0x25A 9
 
 IF_EVAL ("%totallevel%" = "0x9")
 
@@ -75,7 +75,7 @@ COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
 
 READ_BYTE "0x8A" "totallevel"
 
-WRITE_SHORT 0x25A 9
+WRITE_BYTE 0x25A 9
 
 IF_EVAL ("%totallevel%" = "0xA")
 
@@ -83,7 +83,7 @@ COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
 
 READ_BYTE "0x8A" "totallevel"
 
-WRITE_SHORT 0x25A 10
+WRITE_BYTE 0x25A 10
 
 IF_EVAL ("%totallevel%" = "0xB")
 
@@ -91,7 +91,7 @@ COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
 
 READ_BYTE "0x8A" "totallevel"
 
-WRITE_SHORT 0x25A 10
+WRITE_BYTE 0x25A 10
 
 IF_EVAL ("%totallevel%" = "0xC")
 
@@ -99,7 +99,7 @@ COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
 
 READ_BYTE "0x8A" "totallevel"
 
-WRITE_SHORT 0x25A 11
+WRITE_BYTE 0x25A 11
 
 IF_EVAL ("%totallevel%" = "0xD")
 
@@ -107,7 +107,7 @@ COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
 
 READ_BYTE "0x8A" "totallevel"
 
-WRITE_SHORT 0x25A 12
+WRITE_BYTE 0x25A 12
 
 IF_EVAL ("%totallevel%" = "0xE")
 
@@ -115,7 +115,7 @@ COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
 
 READ_BYTE "0x8A" "totallevel"
 
-WRITE_SHORT 0x25A 12
+WRITE_BYTE 0x25A 12
 
 IF_EVAL ("%totallevel%" = "0xF")
 
@@ -123,7 +123,7 @@ COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
 
 READ_BYTE "0x8A" "totallevel"
 
-WRITE_SHORT 0x25A 13
+WRITE_BYTE 0x25A 13
 
 IF_EVAL ("%totallevel%" = "0x10")
 
@@ -131,7 +131,7 @@ COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
 
 READ_BYTE "0x8A" "totallevel"
 
-WRITE_SHORT 0x25A 14
+WRITE_BYTE 0x25A 14
 
 IF_EVAL ("%totallevel%" = "0x11")
 
@@ -139,7 +139,7 @@ COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
 
 READ_BYTE "0x8A" "totallevel"
 
-WRITE_SHORT 0x25A 14
+WRITE_BYTE 0x25A 14
 
 IF_EVAL ("%totallevel%" = "0x12")
 
@@ -147,7 +147,7 @@ COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
 
 READ_BYTE "0x8A" "totallevel"
 
-WRITE_SHORT 0x25A 15
+WRITE_BYTE 0x25A 15
 
 IF_EVAL ("%totallevel%" = "0x13")
 
@@ -155,7 +155,7 @@ COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
 
 READ_BYTE "0x8A" "totallevel"
 
-WRITE_SHORT 0x25A 16
+WRITE_BYTE 0x25A 16
 
 IF_EVAL ("%totallevel%" = "0x14")
 
@@ -163,7 +163,7 @@ COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
 
 READ_BYTE "0x8A" "totallevel"
 
-WRITE_SHORT 0x25A 16
+WRITE_BYTE 0x25A 16
 
 IF_EVAL ("%totallevel%" = "0x15")
 
@@ -171,7 +171,7 @@ COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
 
 READ_BYTE "0x8A" "totallevel"
 
-WRITE_SHORT 0x25A 17
+WRITE_BYTE 0x25A 17
 
 IF_EVAL ("%totallevel%" = "0x16")
 
@@ -179,7 +179,7 @@ COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
 
 READ_BYTE "0x8A" "totallevel"
 
-WRITE_SHORT 0x25A 17
+WRITE_BYTE 0x25A 17
 
 IF_EVAL ("%totallevel%" = "0x17")
 
@@ -187,7 +187,7 @@ COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
 
 READ_BYTE "0x8A" "totallevel"
 
-WRITE_SHORT 0x25A 18
+WRITE_BYTE 0x25A 18
 
 IF_EVAL ("%totallevel%" = "0x18")
 
@@ -195,7 +195,7 @@ COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
 
 READ_BYTE "0x8A" "totallevel"
 
-WRITE_SHORT 0x25A 19
+WRITE_BYTE 0x25A 19
 
 IF_EVAL ("%totallevel%" = "0x19")
 
@@ -203,7 +203,7 @@ COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
 
 READ_BYTE "0x8A" "totallevel"
 
-WRITE_SHORT 0x25A 19
+WRITE_BYTE 0x25A 19
 
 IF_EVAL ("%totallevel%" = "0x1A")
 
@@ -211,7 +211,7 @@ COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
 
 READ_BYTE "0x8A" "totallevel"
 
-WRITE_SHORT 0x25A 20
+WRITE_BYTE 0x25A 20
 
 IF_EVAL ("%totallevel%" = "0x1B")
 
@@ -219,7 +219,7 @@ COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
 
 READ_BYTE "0x8A" "totallevel"
 
-WRITE_SHORT 0x25A 21
+WRITE_BYTE 0x25A 21
 
 IF_EVAL ("%totallevel%" = "0x1C")
 
@@ -227,7 +227,7 @@ COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
 
 READ_BYTE "0x8A" "totallevel"
 
-WRITE_SHORT 0x25A 22
+WRITE_BYTE 0x25A 22
 
 IF_EVAL ("%totallevel%" = "0x1d")
 
@@ -235,6 +235,9 @@ COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
 
 READ_BYTE "0x8A" "totallevel"
 
-WRITE_SHORT 0x25A 22
+WRITE_BYTE 0x25A 22
 
 IF_EVAL ("%totallevel%" = "0x1E")
+
+COPY_EXISTING ~63GLABS1.cre~ ~override~ ~63GLABSL.cre~ ~override~ ~63GLABSR.cre~ ~override~
+	WRITE_BYTE 0x25A 0

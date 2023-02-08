@@ -376,9 +376,9 @@ function EXAPPLSP(actionData, creatureData)
 					for i2, spell in ipairs(levelISpells) do
 						if spellRES == spell["resref"] then
 							if cType == 11 then
-								if sorcererCastableCount > 0 then
+--								if sorcererCastableCount > 0 then
 									sourceHasSpell = true
-								end
+--								end
 							else
 								if spell["castableCount"] > 0 then
 									sourceHasSpell = true

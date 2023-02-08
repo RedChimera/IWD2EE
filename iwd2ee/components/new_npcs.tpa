@@ -223,8 +223,6 @@ COMPILE ~%mod_folder%/dlg/dlg_new_npcs/41ZACK.d~
 COMPILE ~%mod_folder%/dlg/dlg_new_npcs/50PAIRI.d~
 COMPILE ~%mod_folder%/dlg/dlg_new_npcs/52SERSA.d~
 
-COMPILE ~%mod_folder%/dlg/dlg_new_npcs/USDLGNMD.d~
-
 COMPILE ~%mod_folder%/dlg/dlg_new_npcs/USGEOFP.d~
 COMPILE ~%mod_folder%/dlg/dlg_new_npcs/USREIGP.d~
 COMPILE ~%mod_folder%/dlg/dlg_new_npcs/USVEIRP.d~
@@ -246,6 +244,14 @@ COMPILE ~%mod_folder%/dlg/dlg_new_npcs/USZACKJ.d~
 //COMPILE ~%mod_folder%/dlg/dlg_new_npcs/USPAIRJ.d~
 //COMPILE ~%mod_folder%/dlg/dlg_new_npcs/USSERSJ.d~
 
+COMPILE ~%mod_folder%/dlg/dlg_new_npcs/USDLGNMD.d~
+
+COPY_EXISTING ~USVREKJ.dlg~ ~override~
+	DECOMPILE_AND_PATCH BEGIN
+		REPLACE ~40732~ @40732
+		REPLACE ~40734~ @40734
+	END
+
 COPY_EXISTING ~IEEX_WEIDU.lua~ ~override~
 	REPLACE_TEXTUALLY CASE_INSENSITIVE EXACT_MATCH ~ex_on_join_party_special_script_1_set = {~ ~ex_on_join_party_special_script_1_set = {["USGEOF"] = "USGEOFD", ["USREIG"] = "USREIGD", ["USVEIR"] = "USVEIRD", ["USEMMA"] = "USEMMAD", ["USVREK"] = "USVREKD", ["USVUNA"] = "USVUNAD", ["USXHAA"] = "USXHAAD", ["USZACK"] = "USZACKD", ["USPAIR"] = "USPAIRD", ["USSERS"] = "USSERSD", ~
 	REPLACE_TEXTUALLY CASE_INSENSITIVE EXACT_MATCH ~ex_on_join_party_team_script_set = {~ ~ex_on_join_party_team_script_set = {["USEMMA"] = "USEMMABL", ["USVREK"] = "USVREKLV", ["USVUNA"] = "USVUNALV", ["USXHAA"] = "USXHAALV", ["USSERS"] = "USSERSLV", ~
@@ -254,6 +260,11 @@ COPY_EXISTING ~IEEX_WEIDU.lua~ ~override~
 
 LAF ADD_TIMED_BANTER_IWD2 INT_VAR id=1 STR_VAR dlg1=~USREIGJ~ dlg2=~USGEOFJ~ END
 LAF ADD_TIMED_BANTER_IWD2 INT_VAR id=9 STR_VAR dlg1=~USGEOFJ~ dlg2=~USEMMAJ~ END
+LAF ADD_TIMED_BANTER_IWD2 INT_VAR id=2 STR_VAR dlg1=~USVUNAJ~ dlg2=~USVEIRJ~ END
+LAF ADD_TIMED_BANTER_IWD2 INT_VAR id=3 STR_VAR dlg1=~USVUNAJ~ dlg2=~USGEOFJ~ END
+LAF ADD_TIMED_BANTER_IWD2 INT_VAR id=3 STR_VAR dlg1=~USZACKJ~ dlg2=~USXHAAJ~ END
+LAF ADD_TIMED_BANTER_IWD2 INT_VAR id=4 STR_VAR dlg1=~USZACKJ~ dlg2=~USXHAAJ~ END
+LAF ADD_TIMED_BANTER_IWD2 INT_VAR id=1 STR_VAR dlg1=~USXHAAJ~ dlg2=~USREIGJ~ END
 
 LAF ADD_GENDER_TOKEN_IWD2 INT_VAR male=RESOLVE_STR_REF(@40421) female=RESOLVE_STR_REF(@40422) STR_VAR token=~PRO_BOYGIRL~ END
 LAF ADD_GENDER_TOKEN_IWD2 INT_VAR male=RESOLVE_STR_REF(@40423) female=RESOLVE_STR_REF(@40424) STR_VAR token=~PRO_BOYGIRL_UPPER~ END
@@ -262,6 +273,11 @@ COPY_EXISTING ~USGEOFD.bcs~ ~override~
 	REPLACE ~40468~ @40468
 	REPLACE ~40564~ @40564
 
+COPY_EXISTING ~USVEIRD.bcs~ ~override~
+	REPLACE ~40714~ @40714
+
+COPY_EXISTING ~USZACKD.bcs~ ~override~
+	REPLACE ~40934~ @40934
 
 ACTION_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~4~ BEGIN
 

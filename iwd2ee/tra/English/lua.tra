@@ -215,6 +215,12 @@
 @55339=~Attacks <EXWHNAME39> with <EXWHWEAP39> : <EXWHHITMISS39>~
 @55340=~Attacks <EXWHNAME40> with <EXWHWEAP40> : <EXWHHITMISS40>~
 */
+@55371=~magic~
+@55372=~positive energy~
+@55373=~negative energy~
+@55374=~psychic~
+@55375=~Touch Attack Roll ~
+@55376=~Ranged Touch Attack Roll ~
 @55377=~<EXRDNAME>'s body has been destroyed. A Resurrection spell will be needed to bring <EXRDNAME> back to life; Raise Dead will not suffice.~
 @55378=~<EXRDNAME>'s soul has been captured. The vessel for their soul must be destroyed before they can be brought back to life.~
 @55379=~That character cannot be raised, but can be resurrected by more powerful magic.~

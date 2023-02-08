@@ -10,3 +10,414 @@ ACTION_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~4~ BEGIN
 		REPLACE_TEXTUALLY CASE_INSENSITIVE ~00BRAC11~ ~USRTHF43~
 		REPLACE_TEXTUALLY CASE_INSENSITIVE ~00WAND18~ ~USRTHF51~
 END
+
+//Making it so you can go back to the Battle Square in Chapter 5 when you return to the Ice Temple for Nickademus's favor.
+
+COPY_EXISTING ~AR4103.are~ ~override~
+	LPF ALTER_AREA_DOOR_IWD2 INT_VAR all_flags=0x60 STR_VAR door_name=~AR4102_Switch1~ door_script=~41PARES1~ END
+	LPF ALTER_AREA_DOOR_IWD2 INT_VAR all_flags=0x60 STR_VAR door_name=~AR4102_Switch2~ door_script=~41PARES2~ END
+	LPF ALTER_AREA_DOOR_IWD2 INT_VAR all_flags=0x60 STR_VAR door_name=~AR4102_Switch3~ door_script=~41PARES2~ END
+	LPF ALTER_AREA_DOOR_IWD2 INT_VAR all_flags=0x260 unlock_message=40950 STR_VAR door_name=~AR4102_Switch4~ door_script=~41PARER1~ END
+	LPF ALTER_AREA_DOOR_IWD2 INT_VAR all_flags=0x260 unlock_message=40950 STR_VAR door_name=~AR4102_Switch5~ door_script=~41PARER2~ END
+	LPF ALTER_AREA_DOOR_IWD2 INT_VAR all_flags=0x260 unlock_message=40950 STR_VAR door_name=~AR4102_Switch6~ door_script=~41PARER3~ END
+	LPF ALTER_AREA_DOOR_IWD2 INT_VAR all_flags=0x260 unlock_message=40950 STR_VAR door_name=~AR4102_Switch7~ door_script=~41PARER4~ END
+	LPF ALTER_AREA_DOOR_IWD2 INT_VAR all_flags=0x260 unlock_message=40950 STR_VAR door_name=~AR4102_Switch8~ door_script=~41PAREO1~ END
+	LPF ALTER_AREA_DOOR_IWD2 INT_VAR all_flags=0x260 unlock_message=40950 STR_VAR door_name=~AR4102_Switch9~ door_script=~41PAREO2~ END
+	LPF ALTER_AREA_DOOR_IWD2 INT_VAR all_flags=0x260 unlock_message=40950 STR_VAR door_name=~AR4102_Switch10~ door_script=~41PAREO3~ END
+	LPF ALTER_AREA_DOOR_IWD2 INT_VAR all_flags=0x260 unlock_message=40950 STR_VAR door_name=~AR4102_Switch11~ door_script=~41PAREO4~ END
+	LPF ALTER_AREA_DOOR_IWD2 INT_VAR all_flags=0x260 unlock_message=40950 STR_VAR door_name=~AR4102_Switch12~ door_script=~41PAREO5~ END
+	LPF ALTER_AREA_DOOR_IWD2 INT_VAR all_flags=0x260 unlock_message=40950 STR_VAR door_name=~AR4102_Switch13~ door_script=~41PAREO6~ END
+	LPF fj_are_structure INT_VAR fj_loc_x=2175 fj_loc_y=2592 fj_orientation=10 STR_VAR fj_structure_type=~actor~ fj_name=~GameMaster~ fj_cre_resref=~41GOLEIC~ END
+	LPF ALTER_AREA_ACTOR_IWD2 INT_VAR flag_cre_unattached=1 flag_difficulty_1=1 flag_difficulty_2=1 flag_difficulty_3=1 STR_VAR actor_name=~GameMaster~ script_team=~41PARENA~ END
+	LPF fj_are_structure INT_VAR
+fj_type=1
+fj_flags=0x100
+fj_trap_active=1
+fj_box_left=1969
+fj_box_top=2553
+fj_box_right=2102
+fj_box_bottom=2647
+fj_cursor_idx=12
+fj_loc_x=2036
+fj_loc_y=2599
+fj_vertex_0=(1969 + (2611 << 16))
+fj_vertex_1=(2051 + (2647 << 16))
+fj_vertex_2=(2102 + (2589 << 16))
+fj_vertex_3=(2020 + (2553 << 16))
+STR_VAR fj_structure_type=~region~ fj_name=~GameGrid0~ fj_reg_script=~41PGRID0~ END
+	LPF fj_are_structure INT_VAR
+fj_type=1
+fj_flags=0x100
+fj_trap_active=1
+fj_box_left=2026
+fj_box_top=2491
+fj_box_right=2156
+fj_box_bottom=2585
+fj_cursor_idx=12
+fj_loc_x=2093
+fj_loc_y=2539
+fj_vertex_0=(2026 + (2549 << 16))
+fj_vertex_1=(2106 + (2585 << 16))
+fj_vertex_2=(2156 + (2528 << 16))
+fj_vertex_3=(2073 + (2491 << 16))
+STR_VAR fj_structure_type=~region~ fj_name=~GameGrid1~ fj_reg_script=~41PGRID1~ END
+	LPF fj_are_structure INT_VAR
+fj_type=1
+fj_flags=0x100
+fj_trap_active=1
+fj_box_left=2078
+fj_box_top=2430
+fj_box_right=2212
+fj_box_bottom=2524
+fj_cursor_idx=12
+fj_loc_x=2145
+fj_loc_y=2477
+fj_vertex_0=(2078 + (2488 << 16))
+fj_vertex_1=(2160 + (2524 << 16))
+fj_vertex_2=(2212 + (2466 << 16))
+fj_vertex_3=(2128 + (2430 << 16))
+STR_VAR fj_structure_type=~region~ fj_name=~GameGrid2~ fj_reg_script=~41PGRID2~ END
+	LPF fj_are_structure INT_VAR
+fj_type=1
+fj_flags=0x100
+fj_trap_active=1
+fj_box_left=2058
+fj_box_top=2592
+fj_box_right=2187
+fj_box_bottom=2684
+fj_cursor_idx=12
+fj_loc_x=2123
+fj_loc_y=2639
+fj_vertex_0=(2058 + (2649 << 16))
+fj_vertex_1=(2136 + (2684 << 16))
+fj_vertex_2=(2187 + (2626 << 16))
+fj_vertex_3=(2108 + (2592 << 16))
+STR_VAR fj_structure_type=~region~ fj_name=~GameGrid3~ fj_reg_script=~41PGRID3~ END
+	LPF fj_are_structure INT_VAR
+fj_type=1
+fj_flags=0x100
+fj_trap_active=1
+fj_box_left=2112
+fj_box_top=2530
+fj_box_right=2242
+fj_box_bottom=2623
+fj_cursor_idx=12
+fj_loc_x=2176
+fj_loc_y=2579
+fj_vertex_0=(2112 + (2587 << 16))
+fj_vertex_1=(2192 + (2623 << 16))
+fj_vertex_2=(2242 + (2565 << 16))
+fj_vertex_3=(2163 + (2530 << 16))
+STR_VAR fj_structure_type=~region~ fj_name=~GameGrid4~ fj_reg_script=~41PGRID4~ END
+	LPF fj_are_structure INT_VAR
+fj_type=1
+fj_flags=0x100
+fj_trap_active=1
+fj_box_left=2166
+fj_box_top=2470
+fj_box_right=2296
+fj_box_bottom=2561
+fj_cursor_idx=12
+fj_loc_x=2232
+fj_loc_y=2515
+fj_vertex_0=(2166 + (2526 << 16))
+fj_vertex_1=(2246 + (2561 << 16))
+fj_vertex_2=(2296 + (2503 << 16))
+fj_vertex_3=(2217 + (2470 << 16))
+STR_VAR fj_structure_type=~region~ fj_name=~GameGrid5~ fj_reg_script=~41PGRID5~ END
+	LPF fj_are_structure INT_VAR
+fj_type=1
+fj_flags=0x100
+fj_trap_active=1
+fj_box_left=2142
+fj_box_top=2628
+fj_box_right=2277
+fj_box_bottom=2723
+fj_cursor_idx=12
+fj_loc_x=2210
+fj_loc_y=2676
+fj_vertex_0=(2142 + (2687 << 16))
+fj_vertex_1=(2226 + (2723 << 16))
+fj_vertex_2=(2277 + (2665 << 16))
+fj_vertex_3=(2194 + (2628 << 16))
+STR_VAR fj_structure_type=~region~ fj_name=~GameGrid6~ fj_reg_script=~41PGRID6~ END
+	LPF fj_are_structure INT_VAR
+fj_type=1
+fj_flags=0x100
+fj_trap_active=1
+fj_box_left=2198
+fj_box_top=2568
+fj_box_right=2330
+fj_box_bottom=2662
+fj_cursor_idx=12
+fj_loc_x=2264
+fj_loc_y=2614
+fj_vertex_0=(2198 + (2625 << 16))
+fj_vertex_1=(2281 + (2662 << 16))
+fj_vertex_2=(2330 + (2604 << 16))
+fj_vertex_3=(2248 + (2568 << 16))
+STR_VAR fj_structure_type=~region~ fj_name=~GameGrid7~ fj_reg_script=~41PGRID7~ END
+	LPF fj_are_structure INT_VAR
+fj_type=1
+fj_flags=0x100
+fj_trap_active=1
+fj_box_left=2253
+fj_box_top=2506
+fj_box_right=2386
+fj_box_bottom=2600
+fj_cursor_idx=12
+fj_loc_x=2319
+fj_loc_y=2552
+fj_vertex_0=(2253 + (2564 << 16))
+fj_vertex_1=(2334 + (2600 << 16))
+fj_vertex_2=(2386 + (2541 << 16))
+fj_vertex_3=(2301 + (2506 << 16))
+STR_VAR fj_structure_type=~region~ fj_name=~GameGrid8~ fj_reg_script=~41PGRID8~ END
+	LPF fj_are_structure INT_VAR
+fj_flags=0x11
+fj_loc_x=2035
+fj_loc_y=2600
+STR_VAR fj_structure_type=~animation~ fj_name=~GameIcon0~ fj_bam_resref=~4102SQ0~ END
+	LPF fj_are_structure INT_VAR
+fj_flags=0x11
+fj_loc_x=2089
+fj_loc_y=2539
+STR_VAR fj_structure_type=~animation~ fj_name=~GameIcon1~ fj_bam_resref=~4102SQ1~ END
+	LPF fj_are_structure INT_VAR
+fj_flags=0x11
+fj_loc_x=2145
+fj_loc_y=2477
+STR_VAR fj_structure_type=~animation~ fj_name=~GameIcon2~ fj_bam_resref=~4102SQ2~ END
+	LPF fj_are_structure INT_VAR
+fj_flags=0x11
+fj_loc_x=2124
+fj_loc_y=2639
+STR_VAR fj_structure_type=~animation~ fj_name=~GameIcon3~ fj_bam_resref=~4102SQ3~ END
+	LPF fj_are_structure INT_VAR
+fj_flags=0x11
+fj_loc_x=2176
+fj_loc_y=2578
+STR_VAR fj_structure_type=~animation~ fj_name=~GameIcon4~ fj_bam_resref=~4102SQ4~ END
+	LPF fj_are_structure INT_VAR
+fj_flags=0x11
+fj_loc_x=2232
+fj_loc_y=2516
+STR_VAR fj_structure_type=~animation~ fj_name=~GameIcon5~ fj_bam_resref=~4102SQ5~ END
+	LPF fj_are_structure INT_VAR
+fj_flags=0x11
+fj_loc_x=2210
+fj_loc_y=2677
+STR_VAR fj_structure_type=~animation~ fj_name=~GameIcon6~ fj_bam_resref=~4102SQ6~ END
+	LPF fj_are_structure INT_VAR
+fj_flags=0x11
+fj_loc_x=2264
+fj_loc_y=2616
+STR_VAR fj_structure_type=~animation~ fj_name=~GameIcon7~ fj_bam_resref=~4102SQ7~ END
+	LPF fj_are_structure INT_VAR
+fj_flags=0x11
+fj_loc_x=2317
+fj_loc_y=2553
+STR_VAR fj_structure_type=~animation~ fj_name=~GameIcon8~ fj_bam_resref=~4102SQ8~ END
+
+
+<<<<<<<< .../script.baf
+
+IF
+	OnCreation()
+	Global("BattleSquareActive","MYAREA",1)
+THEN
+	RESPONSE #100
+		SetGlobal("BattleSquareActive","MYAREA",2)
+		Continue()
+END
+
+IF
+	Global("BattleSquareActive","MYAREA",2)
+	BitGlobal("BattleSquarePlayerScore","MYAREA",1,AND)
+THEN
+	RESPONSE #100
+		Activate("GameIcon0")
+		PlaySequence("GameIcon0",AWAKE)
+		Continue()
+END
+
+IF
+	Global("BattleSquareActive","MYAREA",2)
+	BitGlobal("BattleSquarePlayerScore","MYAREA",2,AND)
+THEN
+	RESPONSE #100
+		Activate("GameIcon1")
+		PlaySequence("GameIcon1",AWAKE)
+		Continue()
+END
+
+IF
+	Global("BattleSquareActive","MYAREA",2)
+	BitGlobal("BattleSquarePlayerScore","MYAREA",4,AND)
+THEN
+	RESPONSE #100
+		Activate("GameIcon2")
+		PlaySequence("GameIcon2",AWAKE)
+		Continue()
+END
+
+IF
+	Global("BattleSquareActive","MYAREA",2)
+	BitGlobal("BattleSquarePlayerScore","MYAREA",8,AND)
+THEN
+	RESPONSE #100
+		Activate("GameIcon3")
+		PlaySequence("GameIcon3",AWAKE)
+		Continue()
+END
+
+IF
+	Global("BattleSquareActive","MYAREA",2)
+	BitGlobal("BattleSquarePlayerScore","MYAREA",16,AND)
+THEN
+	RESPONSE #100
+		Activate("GameIcon4")
+		PlaySequence("GameIcon4",AWAKE)
+		Continue()
+END
+
+IF
+	Global("BattleSquareActive","MYAREA",2)
+	BitGlobal("BattleSquarePlayerScore","MYAREA",32,AND)
+THEN
+	RESPONSE #100
+		Activate("GameIcon5")
+		PlaySequence("GameIcon5",AWAKE)
+		Continue()
+END
+
+IF
+	Global("BattleSquareActive","MYAREA",2)
+	BitGlobal("BattleSquarePlayerScore","MYAREA",64,AND)
+THEN
+	RESPONSE #100
+		Activate("GameIcon6")
+		PlaySequence("GameIcon6",AWAKE)
+		Continue()
+END
+
+IF
+	Global("BattleSquareActive","MYAREA",2)
+	BitGlobal("BattleSquarePlayerScore","MYAREA",128,AND)
+THEN
+	RESPONSE #100
+		Activate("GameIcon7")
+		PlaySequence("GameIcon7",AWAKE)
+		Continue()
+END
+
+IF
+	Global("BattleSquareActive","MYAREA",2)
+	BitGlobal("BattleSquarePlayerScore","MYAREA",256,AND)
+THEN
+	RESPONSE #100
+		Activate("GameIcon8")
+		PlaySequence("GameIcon8",AWAKE)
+		Continue()
+END
+
+IF
+	Global("BattleSquareActive","MYAREA",2)
+	BitGlobal("BattleSquareArenaScore","MYAREA",1,AND)
+THEN
+	RESPONSE #100
+		Activate("GameIcon0")
+		PlaySequence("GameIcon0",CAST)
+		Continue()
+END
+
+IF
+	Global("BattleSquareActive","MYAREA",2)
+	BitGlobal("BattleSquareArenaScore","MYAREA",2,AND)
+THEN
+	RESPONSE #100
+		Activate("GameIcon1")
+		PlaySequence("GameIcon1",CAST)
+		Continue()
+END
+
+IF
+	Global("BattleSquareActive","MYAREA",2)
+	BitGlobal("BattleSquareArenaScore","MYAREA",4,AND)
+THEN
+	RESPONSE #100
+		Activate("GameIcon2")
+		PlaySequence("GameIcon2",CAST)
+		Continue()
+END
+
+IF
+	Global("BattleSquareActive","MYAREA",2)
+	BitGlobal("BattleSquareArenaScore","MYAREA",8,AND)
+THEN
+	RESPONSE #100
+		Activate("GameIcon3")
+		PlaySequence("GameIcon3",CAST)
+		Continue()
+END
+
+IF
+	Global("BattleSquareActive","MYAREA",2)
+	BitGlobal("BattleSquareArenaScore","MYAREA",16,AND)
+THEN
+	RESPONSE #100
+		Activate("GameIcon4")
+		PlaySequence("GameIcon4",CAST)
+		Continue()
+END
+
+IF
+	Global("BattleSquareActive","MYAREA",2)
+	BitGlobal("BattleSquareArenaScore","MYAREA",32,AND)
+THEN
+	RESPONSE #100
+		Activate("GameIcon5")
+		PlaySequence("GameIcon5",CAST)
+		Continue()
+END
+
+IF
+	Global("BattleSquareActive","MYAREA",2)
+	BitGlobal("BattleSquareArenaScore","MYAREA",64,AND)
+THEN
+	RESPONSE #100
+		Activate("GameIcon6")
+		PlaySequence("GameIcon6",CAST)
+		Continue()
+END
+
+IF
+	Global("BattleSquareActive","MYAREA",2)
+	BitGlobal("BattleSquareArenaScore","MYAREA",128,AND)
+THEN
+	RESPONSE #100
+		Activate("GameIcon7")
+		PlaySequence("GameIcon7",CAST)
+		Continue()
+END
+
+IF
+	Global("BattleSquareActive","MYAREA",2)
+	BitGlobal("BattleSquareArenaScore","MYAREA",256,AND)
+THEN
+	RESPONSE #100
+		Activate("GameIcon8")
+		PlaySequence("GameIcon8",CAST)
+		Continue()
+END
+
+IF
+	Global("BattleSquareActive","MYAREA",2)
+THEN
+	RESPONSE #100
+		SetGlobal("BattleSquareActive","MYAREA",1)
+		Continue()
+END
+
+>>>>>>>>
+EXTEND_BOTTOM ~ar4103.bcs~ ~.../script.baf~
