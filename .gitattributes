@@ -1,3 +1,4 @@
 *.tpa text
 *.bcs text eol=lf
 *.bs text eol=lf
+*.glsl text eol=lf
