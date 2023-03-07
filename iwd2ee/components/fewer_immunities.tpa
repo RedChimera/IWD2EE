@@ -155,6 +155,12 @@ COPY_EXISTING ~41SHERI.cre~ ~override~ ~41SHERI2.cre~ ~override~ ~41SHERI3.cre~ 
 COPY_EXISTING ~41GOLEIC.cre~ ~override~ ~41GOLEMC.cre~ ~override~
 	WRITE_BYTE spellresistance 15
 
+COPY_EXISTING ~50LIMHA.cre~ ~override~ ~50LIMHA2.cre~ ~override~
+	LPF	IWD2_ADD_CRE_ITEM STR_VAR item=~USTOUGHE~ slot=~cloak~ mode=~move~ END
+
+COPY_EXISTING ~53MIRABE.cre~ ~override~ ~53MAJRAS.cre~ ~override~
+	LPF	IWD2_ADD_CRE_ITEM STR_VAR item=~USTOUGHE~ slot=~boots~ mode=~move~ END
+
 COPY_EXISTING ~50WIL.cre~ ~override~ ~50WILH.cre~ ~override~ ~50WILX.cre~ ~override~
 	WRITE_BYTE fireresistance 20
 	WRITE_BYTE coldresistance 100

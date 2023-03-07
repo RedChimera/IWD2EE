@@ -36,3 +36,17 @@ COPY ~%mod_folder%/bcs/USSTRL.bcs~ ~override~
 COPY ~%mod_folder%/bcs/USSTSH02.bcs~ ~override~
 COPY ~%mod_folder%/bcs/USSTSH03.bcs~ ~override~
 COPY ~%mod_folder%/spl/USSTIW04.spl~ ~override~
+
+<<<<<<<< .../script.baf
+IF
+	!InCutsceneMode()
+	Global("US_Spell_Revisions_Installed","GLOBAL",0)
+	Global("US_Initialize","GLOBAL",1)
+	!GlobalTimerNotExpired("US_Initialize_Timer","GLOBAL")
+THEN
+	RESPONSE #100
+		SetGlobal("US_Spell_Revisions_Installed","GLOBAL",1)
+END
+
+>>>>>>>>
+EXTEND_BOTTOM ~BALDUR.bcs~ ~.../script.baf~

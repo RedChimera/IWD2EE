@@ -83,6 +83,12 @@ IF ~~ THEN BEGIN 8
   IF ~~ THEN REPLY #36266 GOTO 1
 END
 
+IF ~~ THEN BEGIN 9
+  SAY @41377
+  IF ~~ THEN REPLY #36279 DO ~AddXpVar("Level_3_Easy",36264)~ JOURNAL #36263 GOTO 4
+  IF ~~ THEN REPLY #36276 GOTO 7
+END
+
 IF ~~ THEN BEGIN VrekJoin1
   SAY @40043
   IF ~~ THEN REPLY @40044 GOTO VrekJoinSee
@@ -164,4 +170,10 @@ IF ~~ THEN BEGIN VrekJoinSuccess2
   IF ~~ THEN REPLY @40071 DO ~SetGlobal("US_Vrek_Joined", "GLOBAL", 1)
 SetGlobal("US_VREK_JOIN", "GLOBAL", 1)
 ApplySpellRES("USVREKC",Myself)~ EXIT
+END
+
+IF WEIGHT #0 ~IEex_LuaTrigger("return IEex_IfValidForPartyDialogue(USEMMA)")
+NumberOfTimesTalkedTo(0)~ THEN BEGIN VrekEmmaIntro
+  SAY @41375
+  IF ~~ THEN EXTERN ~USEMMAJ~ 81
 END

@@ -2118,12 +2118,13 @@ COPY_EXISTING ~50HADBRU.cre~ ~override~
 	END
 
 COPY_EXISTING ~50LIMHA.cre~ ~override~ ~50LIMHA2.cre~ ~override~
+	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelwizard=16 END
 	READ_LONG feats3 ulgiash
 	ulgiash|=0x2
 	WRITE_LONG feats3 ulgiash
-	WRITE_BYTE skillconcentration 16
-	WRITE_BYTE skillspellcraft 16
-	WRITE_BYTE challengerating 13
+	WRITE_BYTE skillconcentration 21
+	WRITE_BYTE skillspellcraft 21
+	WRITE_BYTE challengerating 18
 	LPF	IWD2_REMOVE_SPELLS_KNOWN STR_VAR class=~wizard~ END
 	LPF	IWD2_CRE_SPELL INT_VAR num=6 STR_VAR class=~wizard~ resource=~SPWI112~ END
 	LPF	IWD2_CRE_SPELL INT_VAR num=4 STR_VAR class=~wizard~ resource=~SPWI212~ END
@@ -2139,6 +2140,12 @@ COPY_EXISTING ~50LIMHA.cre~ ~override~ ~50LIMHA2.cre~ ~override~
 	LPF	IWD2_CRE_SPELL INT_VAR num=2 STR_VAR class=~wizard~ resource=~SPWI810~ END
 	LPF	IWD2_CRE_SPELL INT_VAR num=2 STR_VAR class=~wizard~ resource=~SPWI902~ END
 	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~SPWI908~ END
+	PATCH_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~0~ BEGIN
+		READ_LONG feats1 ulgiash
+		ulgiash|=0x200
+		WRITE_LONG feats1 ulgiash
+		LPF IWD2_ADD_CRE_EFFECT INT_VAR opcode=288 target=0 timing=9 parameter2=231 savingthrow=0x40000 END
+	END
 
 COPY_EXISTING ~50TREDA.cre~ ~override~
 	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelfighter=10 STR_VAR updatehp=~max~ END
@@ -2464,7 +2471,8 @@ COPY_EXISTING ~51HSTMU.cre~ ~override~
 	END
 
 COPY_EXISTING ~51HARSHO.cre~ ~override~
-	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelwizard=14 STR_VAR updatehp=~max~ END
+	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelwizard=17 STR_VAR updatehp=~max~ END
+	WRITE_LONG kit 0x80 //Conjurer
 	WRITE_BYTE skillconcentration 17
 	WRITE_BYTE skillspellcraft 17
 	WRITE_BYTE challengerating 14
@@ -2487,10 +2495,16 @@ COPY_EXISTING ~51HARSHO.cre~ ~override~
 		LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~USWI352~ END
 		LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~SPPR719~ END
 	END
+	PATCH_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~0~ BEGIN
+		READ_LONG feats1 ulgiash
+		ulgiash|=0x200
+		WRITE_LONG feats1 ulgiash
+		LPF IWD2_ADD_CRE_EFFECT INT_VAR opcode=288 target=0 timing=9 parameter2=231 savingthrow=0x40000 END
+	END
 	LPF ADD_CRE_EXTENDED_FEAT INT_VAR points=1 STR_VAR name=~ME_AUGMENT_SUMMONING~ END
 
 COPY_EXISTING ~66DHARSH.cre~ ~override~
-	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelwizard=18 STR_VAR updatehp=~max~ END
+	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelwizard=20 STR_VAR updatehp=~max~ END
 	WRITE_BYTE skillconcentration 21
 	WRITE_BYTE skillspellcraft 21
 	WRITE_BYTE challengerating 17
@@ -2512,6 +2526,12 @@ COPY_EXISTING ~66DHARSH.cre~ ~override~
 	PATCH_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~2~ BEGIN
 		LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~USWI352~ END
 		LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~SPPR719~ END
+	END
+	PATCH_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~0~ BEGIN
+		READ_LONG feats1 ulgiash
+		ulgiash|=0x200
+		WRITE_LONG feats1 ulgiash
+		LPF IWD2_ADD_CRE_EFFECT INT_VAR opcode=288 target=0 timing=9 parameter2=231 savingthrow=0x40000 END
 	END
 	LPF ADD_CRE_EXTENDED_FEAT INT_VAR points=1 STR_VAR name=~ME_AUGMENT_SUMMONING~ END
 
@@ -2595,6 +2615,12 @@ COPY_EXISTING ~51ZAMA.cre~ ~override~ ~52ZAMA.cre~ ~override~
 	LPF	IWD2_CRE_SPELL INT_VAR num=2 STR_VAR class=~cleric~ resource=~SPPR726~ END
 	PATCH_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~2~ BEGIN
 		LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~cleric~ resource=~SPWI910~ END
+	END
+	PATCH_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~0~ BEGIN
+		READ_LONG feats1 ulgiash
+		ulgiash|=0x200
+		WRITE_LONG feats1 ulgiash
+		LPF IWD2_ADD_CRE_EFFECT INT_VAR opcode=288 target=0 timing=9 parameter2=231 savingthrow=0x40000 END
 	END
 
 COPY_EXISTING ~51HHR.cre~ ~override~ ~51HHRH.cre~ ~override~
@@ -2892,6 +2918,12 @@ COPY_EXISTING ~53CELEDR.cre~ ~override~
 	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~SPWI806~ END
 	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~SPWI907~ END
 	LPF	IWD2_CRE_SPELL INT_VAR num=2 STR_VAR class=~wizard~ resource=~SPWI908~ END
+	PATCH_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~0~ BEGIN
+		READ_LONG feats1 ulgiash
+		ulgiash|=0x200
+		WRITE_LONG feats1 ulgiash
+		LPF IWD2_ADD_CRE_EFFECT INT_VAR opcode=288 target=0 timing=9 parameter2=231 savingthrow=0x40000 END
+	END
 
 COPY_EXISTING ~53CRADDR.cre~ ~override~
 	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelcleric=13 END
@@ -2911,6 +2943,12 @@ COPY_EXISTING ~53CRADDR.cre~ ~override~
 	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~cleric~ resource=~SPPR717~ END
 	LPF	IWD2_CRE_SPELL INT_VAR num=2 STR_VAR class=~cleric~ resource=~SPPR705~ END
 	LPF	IWD2_CRE_SPELL INT_VAR num=2 STR_VAR class=~cleric~ resource=~SPPR715~ END
+	PATCH_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~0~ BEGIN
+		READ_LONG feats1 ulgiash
+		ulgiash|=0x200
+		WRITE_LONG feats1 ulgiash
+		LPF IWD2_ADD_CRE_EFFECT INT_VAR opcode=288 target=0 timing=9 parameter2=231 savingthrow=0x40000 END
+	END
 
 COPY_EXISTING ~53DESATH.cre~ ~override~
 	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelwizard=12 END
@@ -2977,6 +3015,12 @@ COPY_EXISTING ~53DROPR.cre~ ~override~
 	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~cleric~ resource=~SPPR717~ END
 	LPF	IWD2_CRE_SPELL INT_VAR num=2 STR_VAR class=~cleric~ resource=~SPPR705~ END
 	LPF	IWD2_CRE_SPELL INT_VAR num=2 STR_VAR class=~cleric~ resource=~SPPR715~ END
+	PATCH_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~0~ BEGIN
+		READ_LONG feats1 ulgiash
+		ulgiash|=0x200
+		WRITE_LONG feats1 ulgiash
+		LPF IWD2_ADD_CRE_EFFECT INT_VAR opcode=288 target=0 timing=9 parameter2=231 savingthrow=0x40000 END
+	END
 
 COPY_EXISTING ~53DRIDPR.cre~ ~override~ ~53DRIPRH.cre~ ~override~ ~53VIDRPR.cre~ ~override~ ~53VIDRP2.cre~ ~override~
 	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelcleric=12 END
@@ -3064,6 +3108,12 @@ COPY_EXISTING ~53GINAFA.cre~ ~override~
 	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~cleric~ resource=~SPPR717~ END
 	LPF	IWD2_CRE_SPELL INT_VAR num=2 STR_VAR class=~cleric~ resource=~SPPR705~ END
 	LPF	IWD2_CRE_SPELL INT_VAR num=2 STR_VAR class=~cleric~ resource=~SPPR715~ END
+	PATCH_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~0~ BEGIN
+		READ_LONG feats1 ulgiash
+		ulgiash|=0x200
+		WRITE_LONG feats1 ulgiash
+		LPF IWD2_ADD_CRE_EFFECT INT_VAR opcode=288 target=0 timing=9 parameter2=231 savingthrow=0x40000 END
+	END
 
 COPY_EXISTING ~53POD.cre~ ~override~ ~53VICISC.cre~ ~override~
 	WRITE_BYTE general 255
@@ -3074,7 +3124,7 @@ COPY_EXISTING ~53VICISC.cre~ ~override~
 	WRITE_BYTE challengerating 18
 
 COPY_EXISTING ~53IMPHRA.cre~ ~override~
-	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelwizard=15 STR_VAR updatehp=~max~ END
+	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelwizard=17 STR_VAR updatehp=~max~ END
 	READ_LONG feats3 ulgiash
 	ulgiash|=0x11
 	WRITE_LONG feats3 ulgiash
@@ -3097,6 +3147,17 @@ COPY_EXISTING ~53IMPHRA.cre~ ~override~
 	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~SPWI717~ END
 	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~SPWI807~ END
 	LPF	IWD2_CRE_SPELL INT_VAR num=2 STR_VAR class=~wizard~ resource=~SPWI906~ END
+	PATCH_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~2~ BEGIN
+		LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~SPPR719~ END
+		LPF	IWD2_CRE_SPELL INT_VAR num=3 STR_VAR class=~wizard~ resource=~USWI865~ END
+		LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~USWI959~ END
+	END
+	PATCH_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~0~ BEGIN
+		READ_LONG feats1 ulgiash
+		ulgiash|=0x200
+		WRITE_LONG feats1 ulgiash
+		LPF IWD2_ADD_CRE_EFFECT INT_VAR opcode=288 target=0 timing=9 parameter2=231 savingthrow=0x40000 END
+	END
 
 COPY_EXISTING ~53MALAVO.cre~ ~override~
 	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelwizard=20 END
@@ -3115,6 +3176,12 @@ COPY_EXISTING ~53MALAVO.cre~ ~override~
 	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~SPWI718~ END
 	LPF	IWD2_CRE_SPELL INT_VAR num=2 STR_VAR class=~wizard~ resource=~SPWI805~ END
 	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~SPWI910~ END
+	PATCH_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~0~ BEGIN
+		READ_LONG feats1 ulgiash
+		ulgiash|=0x200
+		WRITE_LONG feats1 ulgiash
+		LPF IWD2_ADD_CRE_EFFECT INT_VAR opcode=288 target=0 timing=9 parameter2=231 savingthrow=0x40000 END
+	END
 
 COPY_EXISTING ~53MYRVEK.cre~ ~override~
 	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelwizard=15 END
@@ -3132,6 +3199,12 @@ COPY_EXISTING ~53MYRVEK.cre~ ~override~
 	LPF	IWD2_CRE_SPELL INT_VAR num=2 STR_VAR class=~wizard~ resource=~SPWI504~ END
 	LPF	IWD2_CRE_SPELL INT_VAR num=2 STR_VAR class=~wizard~ resource=~SPWI615~ END
 	LPF	IWD2_CRE_SPELL INT_VAR num=3 STR_VAR class=~wizard~ resource=~SPWI607~ END
+	PATCH_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~0~ BEGIN
+		READ_LONG feats1 ulgiash
+		ulgiash|=0x200
+		WRITE_LONG feats1 ulgiash
+		LPF IWD2_ADD_CRE_EFFECT INT_VAR opcode=288 target=0 timing=9 parameter2=231 savingthrow=0x40000 END
+	END
 
 COPY_EXISTING ~53SPITDR.cre~ ~override~
 	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelfighter=13 END
@@ -3184,6 +3257,12 @@ COPY_EXISTING ~53ELDERB.cre~ ~override~
 	LPF	IWD2_ADD_CRE_ITEM STR_VAR item=~USCIHFEB~ slot=~lring~ mode=~move~ END
 	LPF	IWD2_REMOVE_SPELLS_KNOWN STR_VAR class=~cleric~ END
 	LPF	IWD2_REMOVE_SPELLS_KNOWN STR_VAR class=~wizard~ END
+	PATCH_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~0~ BEGIN
+		READ_LONG feats1 ulgiash
+		ulgiash|=0x200
+		WRITE_LONG feats1 ulgiash
+		LPF IWD2_ADD_CRE_EFFECT INT_VAR opcode=288 target=0 timing=9 parameter2=231 savingthrow=0x40000 END
+	END
 
 COPY_EXISTING ~ar5302.bcs~ ~override~
 	DECOMPILE_AND_PATCH BEGIN
@@ -3231,6 +3310,12 @@ COPY_EXISTING ~53MAJRAS.cre~ ~override~
 	LPF	IWD2_CRE_SPELL INT_VAR num=2 STR_VAR class=~wizard~ resource=~SPWI716~ END
 	LPF	IWD2_CRE_SPELL INT_VAR num=2 STR_VAR class=~wizard~ resource=~SPWI803~ END
 	LPF	IWD2_CRE_SPELL INT_VAR num=4 STR_VAR class=~wizard~ resource=~SPWI902~ END
+	PATCH_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~0~ BEGIN
+		READ_LONG feats1 ulgiash
+		ulgiash|=0x200
+		WRITE_LONG feats1 ulgiash
+		LPF IWD2_ADD_CRE_EFFECT INT_VAR opcode=288 target=0 timing=9 parameter2=231 savingthrow=0x40000 END
+	END
 	LPF ADD_CRE_EXTENDED_FEAT INT_VAR points=1 STR_VAR name=~ME_AUGMENT_SUMMONING~ END
 
 COPY_EXISTING ~53MIRABE.cre~ ~override~
@@ -3253,6 +3338,12 @@ COPY_EXISTING ~53MIRABE.cre~ ~override~
 //	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~SPWI910~ END
 	PATCH_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~2~ BEGIN
 		LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~USWI957~ END
+	END
+	PATCH_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~0~ BEGIN
+		READ_LONG feats1 ulgiash
+		ulgiash|=0x200
+		WRITE_LONG feats1 ulgiash
+		LPF IWD2_ADD_CRE_EFFECT INT_VAR opcode=288 target=0 timing=9 parameter2=231 savingthrow=0x40000 END
 	END
 
 COPY_EXISTING ~60HARPY.cre~ ~override~
@@ -3381,6 +3472,12 @@ COPY_EXISTING ~60HIEPHE.cre~ ~override~ ~60HIEPHH.cre~ ~override~ ~62NEOORC.cre~
 	PATCH_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~2~ BEGIN
 		LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~cleric~ resource=~SPWI910~ END
 	END
+	PATCH_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~0~ BEGIN
+		READ_LONG feats1 ulgiash
+		ulgiash|=0x200
+		WRITE_LONG feats1 ulgiash
+		LPF IWD2_ADD_CRE_EFFECT INT_VAR opcode=288 target=0 timing=9 parameter2=231 savingthrow=0x40000 END
+	END
 
 COPY_EXISTING ~60NEOORP.cre~ ~override~
 	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelcleric=15 STR_VAR updatehp=~max~ END
@@ -3427,6 +3524,12 @@ COPY_EXISTING ~60ATALA.cre~ ~override~
 		LPF	IWD2_CRE_SPELL INT_VAR num=2 STR_VAR class=~wizard~ resource=~USWI752~ END
 		LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~USWI953~ END
 	END
+	PATCH_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~0~ BEGIN
+		READ_LONG feats1 ulgiash
+		ulgiash|=0x200
+		WRITE_LONG feats1 ulgiash
+		LPF IWD2_ADD_CRE_EFFECT INT_VAR opcode=288 target=0 timing=9 parameter2=231 savingthrow=0x40000 END
+	END
 
 COPY_EXISTING ~60INHEIN.cre~ ~override~
 	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelcleric=24 STR_VAR updatehp=~max~ END
@@ -3449,6 +3552,12 @@ COPY_EXISTING ~60INHEIN.cre~ ~override~
 	LPF	IWD2_CRE_SPELL INT_VAR num=1 forcelevel=7 STR_VAR class=~domain~ resource=~SPWI905~ END
 	LPF	IWD2_CRE_SPELL INT_VAR num=1 forcelevel=8 STR_VAR class=~domain~ resource=~SPWI806~ END
 	LPF	IWD2_CRE_SPELL INT_VAR num=1 forcelevel=9 STR_VAR class=~domain~ resource=~SPWI911~ END
+	PATCH_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~0~ BEGIN
+		READ_LONG feats1 ulgiash
+		ulgiash|=0x200
+		WRITE_LONG feats1 ulgiash
+		LPF IWD2_ADD_CRE_EFFECT INT_VAR opcode=288 target=0 timing=9 parameter2=231 savingthrow=0x40000 END
+	END
 
 COPY_EXISTING ~60JAIGER.cre~ ~override~
 	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelranger=21 STR_VAR updatehp=~max~ END
@@ -3529,6 +3638,12 @@ COPY_EXISTING ~60GUARDI.cre~ ~override~
 	LPF	IWD2_REMOVE_CRE_ITEM STR_VAR item=~10CICAT1 00CWSHE3 00CIIMMC~ END
 	LPF	IWD2_ADD_CRE_ITEM INT_VAR equip=0 STR_VAR item=~USCIHFGU~ slot=~rring~ mode=~replace~ END
 	LPF	IWD2_ADD_CRE_ITEM INT_VAR equip=1 STR_VAR item=~USCWHFGU~ slot=~weapon1~ mode=~replace~ END
+	PATCH_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~0~ BEGIN
+		READ_LONG feats1 ulgiash
+		ulgiash|=0x200
+		WRITE_LONG feats1 ulgiash
+		LPF IWD2_ADD_CRE_EFFECT INT_VAR opcode=288 target=0 timing=9 parameter2=231 savingthrow=0x40000 END
+	END
 
 COPY_EXISTING ~60PBFIGT.cre~ ~override~
 	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelfighter=10 STR_VAR updatehp=~max~ END
@@ -3701,6 +3816,12 @@ COPY_EXISTING ~60INHATR.cre~ ~override~
 //		LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~SPPR519~ END
 		LPF	IWD2_CRE_SPELL INT_VAR num=3 STR_VAR class=~wizard~ resource=~USWI952~ END
 	END
+	PATCH_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~0~ BEGIN
+		READ_LONG feats1 ulgiash
+		ulgiash|=0x200
+		WRITE_LONG feats1 ulgiash
+		LPF IWD2_ADD_CRE_EFFECT INT_VAR opcode=288 target=0 timing=9 parameter2=231 savingthrow=0x40000 END
+	END
 
 
 COPY_EXISTING ~60ABPRIE.cre~ ~override~ ~60YTHIPR.cre~ ~override~
@@ -3728,7 +3849,7 @@ COPY_EXISTING ~60SASHKA.cre~ ~override~ ~61DYAPRI.cre~ ~override~ ~61YAPRIE.cre~
 	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~cleric~ resource=~SPPR728~ END
 
 COPY_EXISTING ~60OJAIHA.cre~ ~override~ ~61YASUMM.cre~ ~override~
-	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelcleric=17 STR_VAR updatehp=~max~ END
+	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelcleric=20 STR_VAR updatehp=~max~ END
 	WRITE_BYTE skillconcentration 20
 	WRITE_BYTE skillspellcraft 20
 	WRITE_BYTE proficiencysmallblade 2
@@ -3738,6 +3859,12 @@ COPY_EXISTING ~60OJAIHA.cre~ ~override~ ~61YASUMM.cre~ ~override~
 	LPF	IWD2_CRE_SPELL INT_VAR num=5 STR_VAR class=~cleric~ resource=~SPPR503~ END
 	LPF	IWD2_CRE_SPELL INT_VAR num=2 STR_VAR class=~cleric~ resource=~SPPR608~ END
 	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~cleric~ resource=~SPPR728~ END
+	PATCH_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~0~ BEGIN
+		READ_LONG feats1 ulgiash
+		ulgiash|=0x200
+		WRITE_LONG feats1 ulgiash
+		LPF IWD2_ADD_CRE_EFFECT INT_VAR opcode=288 target=0 timing=9 parameter2=231 savingthrow=0x40000 END
+	END
 
 COPY_EXISTING ~61THORAS.cre~ ~override~
 	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelcleric=23 STR_VAR updatehp=~max~ END
@@ -3754,6 +3881,12 @@ COPY_EXISTING ~61THORAS.cre~ ~override~
 	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~cleric~ resource=~SPWI718~ END
 	LPF	IWD2_CRE_SPELL INT_VAR num=3 STR_VAR class=~cleric~ resource=~SPPR715~ END
 	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~cleric~ resource=~SPPR728~ END
+	PATCH_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~0~ BEGIN
+		READ_LONG feats1 ulgiash
+		ulgiash|=0x200
+		WRITE_LONG feats1 ulgiash
+		LPF IWD2_ADD_CRE_EFFECT INT_VAR opcode=288 target=0 timing=9 parameter2=231 savingthrow=0x40000 END
+	END
 
 COPY_EXISTING ~61VENOMI.cre~ ~override~
 	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelcleric=16 STR_VAR updatehp=~max~ END
@@ -3766,6 +3899,12 @@ COPY_EXISTING ~61VENOMI.cre~ ~override~
 	LPF	IWD2_CRE_SPELL INT_VAR num=5 STR_VAR class=~cleric~ resource=~SPPR503~ END
 	LPF	IWD2_CRE_SPELL INT_VAR num=2 STR_VAR class=~cleric~ resource=~SPPR608~ END
 	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~cleric~ resource=~SPPR728~ END
+	PATCH_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~0~ BEGIN
+		READ_LONG feats1 ulgiash
+		ulgiash|=0x200
+		WRITE_LONG feats1 ulgiash
+		LPF IWD2_ADD_CRE_EFFECT INT_VAR opcode=288 target=0 timing=9 parameter2=231 savingthrow=0x40000 END
+	END
 
 COPY_EXISTING ~60YTPRIE.cre~ ~override~ ~61YHPRIE.cre~ ~override~ ~61RYHPRI.cre~ ~override~
 	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelcleric=14 STR_VAR updatehp=~average~ END
@@ -3832,6 +3971,12 @@ COPY_EXISTING ~60CEDRA.cre~ ~override~
 	WRITE_BYTE challengerating 20
 	LPF	IWD2_REMOVE_SPELLS_KNOWN STR_VAR class=~sorcerer~ END
 	LPF	IWD2_REMOVE_SPELLS_KNOWN STR_VAR class=~wizard~ END
+	PATCH_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~0~ BEGIN
+		READ_LONG feats1 ulgiash
+		ulgiash|=0x200
+		WRITE_LONG feats1 ulgiash
+		LPF IWD2_ADD_CRE_EFFECT INT_VAR opcode=288 target=0 timing=9 parameter2=231 savingthrow=0x40000 END
+	END
 
 COPY_EXISTING ~61IZBELA.cre~ ~override~ ~61IZBEL2.cre~ ~override~
 	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelsorcerer=20 END
@@ -3848,6 +3993,12 @@ COPY_EXISTING ~61IZBELA.cre~ ~override~ ~61IZBEL2.cre~ ~override~
 		LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~USWI953~ END
 		LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~USWI954~ END
 		LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~USWI959~ END
+	END
+	PATCH_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~0~ BEGIN
+		READ_LONG feats1 ulgiash
+		ulgiash|=0x200
+		WRITE_LONG feats1 ulgiash
+		LPF IWD2_ADD_CRE_EFFECT INT_VAR opcode=288 target=0 timing=9 parameter2=231 savingthrow=0x40000 END
 	END
 
 COPY_EXISTING ~60YTARCH.cre~ ~override~ ~60RANYTA.cre~ ~override~
@@ -4148,6 +4299,12 @@ COPY_EXISTING ~62SPBLD.cre~ ~override~
 		LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~bard~ resource=~SPWI613~ END
 		LPF	IWD2_CRE_SPELL INT_VAR num=2 STR_VAR class=~bard~ resource=~USWI753~ END
 	END
+	PATCH_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~0~ BEGIN
+		READ_LONG feats1 ulgiash
+		ulgiash|=0x200
+		WRITE_LONG feats1 ulgiash
+		LPF IWD2_ADD_CRE_EFFECT INT_VAR opcode=288 target=0 timing=9 parameter2=231 savingthrow=0x40000 END
+	END
 
 COPY_EXISTING ~62KRATU.cre~ ~override~
 	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelcleric=20 STR_VAR updatehp=~max~ END
@@ -4165,6 +4322,12 @@ COPY_EXISTING ~62KRATU.cre~ ~override~
 	PATCH_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~2~ BEGIN
 		LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~cleric~ resource=~SPWI717~ END
 		LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~cleric~ resource=~USPR952~ END
+	END
+	PATCH_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~0~ BEGIN
+		READ_LONG feats1 ulgiash
+		ulgiash|=0x200
+		WRITE_LONG feats1 ulgiash
+		LPF IWD2_ADD_CRE_EFFECT INT_VAR opcode=288 target=0 timing=9 parameter2=231 savingthrow=0x40000 END
 	END
 
 COPY_EXISTING ~62MDARF.cre~ ~override~
@@ -4193,6 +4356,12 @@ COPY_EXISTING ~62MDARF.cre~ ~override~
 		LPF	IWD2_CRE_SPELL INT_VAR num=2 STR_VAR class=~wizard~ resource=~USWI352~ END
 		LPF	IWD2_CRE_SPELL INT_VAR num=2 STR_VAR class=~wizard~ resource=~USWI752~ END
 		LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~USWI953~ END
+	END
+	PATCH_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~0~ BEGIN
+		READ_LONG feats1 ulgiash
+		ulgiash|=0x200
+		WRITE_LONG feats1 ulgiash
+		LPF IWD2_ADD_CRE_EFFECT INT_VAR opcode=288 target=0 timing=9 parameter2=231 savingthrow=0x40000 END
 	END
 
 COPY_EXISTING_REGEXP ~62REDWI.*\.cre~ ~override~ ~63THAYM.*\.cre~ ~override~
@@ -4264,6 +4433,12 @@ COPY_EXISTING_REGEXP ~63CEDRIN\.cre~ ~override~ ~63FYNNE\.cre~ ~override~ ~63TAS
 		LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~USWI751~ END
 		LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~USWI752~ END
 	END
+	PATCH_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~0~ BEGIN
+		READ_LONG feats1 ulgiash
+		ulgiash|=0x200
+		WRITE_LONG feats1 ulgiash
+		LPF IWD2_ADD_CRE_EFFECT INT_VAR opcode=288 target=0 timing=9 parameter2=231 savingthrow=0x40000 END
+	END
 
 COPY_EXISTING ~62SAABL1.cre~ ~override~ ~62SAABL2.cre~ ~override~
 	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelwizard=24 STR_VAR updatehp=~max~ END
@@ -4295,6 +4470,12 @@ COPY_EXISTING ~62SAABL1.cre~ ~override~ ~62SAABL2.cre~ ~override~
 		LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~USWI751~ END
 		LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~USWI752~ END
 		LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~USWI953~ END
+	END
+	PATCH_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~0~ BEGIN
+		READ_LONG feats1 ulgiash
+		ulgiash|=0x200
+		WRITE_LONG feats1 ulgiash
+		LPF IWD2_ADD_CRE_EFFECT INT_VAR opcode=288 target=0 timing=9 parameter2=231 savingthrow=0x40000 END
 	END
 	LPF ADD_CRE_EXTENDED_FEAT INT_VAR points=1 STR_VAR name=~ME_AUGMENT_SUMMONING~ END
 
@@ -4332,6 +4513,12 @@ COPY_EXISTING ~63VESE.cre~ ~override~
 		LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~USWI751~ END
 		LPF	IWD2_CRE_SPELL INT_VAR num=2 STR_VAR class=~wizard~ resource=~USWI752~ END
 		LPF	IWD2_CRE_SPELL INT_VAR num=2 STR_VAR class=~wizard~ resource=~USWI952~ END
+	END
+	PATCH_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~0~ BEGIN
+		READ_LONG feats1 ulgiash
+		ulgiash|=0x200
+		WRITE_LONG feats1 ulgiash
+		LPF IWD2_ADD_CRE_EFFECT INT_VAR opcode=288 target=0 timing=9 parameter2=231 savingthrow=0x40000 END
 	END
 	LPF ADD_CRE_EXTENDED_FEAT INT_VAR points=1 STR_VAR name=~ME_AUGMENT_SUMMONING~ END
 
@@ -4668,6 +4855,12 @@ COPY_EXISTING ~63INSTRC.cre~ ~override~ ~63PFINN.cre~ ~override~ ~63PFINH.cre~ ~
 	LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item=~USCWHFCG~ slot=~weapon1~ mode=~replace~ END
 	LPF	IWD2_REMOVE_SPELLS_KNOWN STR_VAR class=~wizard~ END
 	LPF	IWD2_CRE_ABILITY INT_VAR num=1 STR_VAR resource=~SPIN197~ END
+	PATCH_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~0~ BEGIN
+		READ_LONG feats1 ulgiash
+		ulgiash|=0x200
+		WRITE_LONG feats1 ulgiash
+		LPF IWD2_ADD_CRE_EFFECT INT_VAR opcode=288 target=0 timing=9 parameter2=231 savingthrow=0x40000 END
+	END
 
 COPY_EXISTING ~USDRETCH.cre~ ~override~
 	SAY NAME1 @23084
@@ -4771,6 +4964,12 @@ COPY_EXISTING ~41GLABRE.cre~ ~override~ ~41SDGLB.cre~ ~override~ ~41SGLB.cre~ ~o
 	LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item=~USCWHFGL~ slot=~shield1~ mode=~replace~ END
 	LPF	IWD2_REMOVE_SPELLS_KNOWN STR_VAR class=~wizard~ END
 	LPF	IWD2_CRE_ABILITY INT_VAR num=1 STR_VAR resource=~SPIN197~ END
+	PATCH_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~0~ BEGIN
+		READ_LONG feats1 ulgiash
+		ulgiash|=0x200
+		WRITE_LONG feats1 ulgiash
+		LPF IWD2_ADD_CRE_EFFECT INT_VAR opcode=288 target=0 timing=9 parameter2=231 savingthrow=0x40000 END
+	END
 
 COPY_EXISTING ~41SSGLB.cre~ ~override~
 	READ_SHORT currenthp thecurrenthp
@@ -4830,6 +5029,12 @@ COPY_EXISTING_REGEXP ~63GLABS.*\.cre~ ~override~
 	LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item=~USCWHFLG~ slot=~shield1~ mode=~replace~ END
 	LPF	IWD2_REMOVE_SPELLS_KNOWN STR_VAR class=~wizard~ END
 	LPF	IWD2_CRE_ABILITY INT_VAR num=1 STR_VAR resource=~SPIN197~ END
+	PATCH_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~0~ BEGIN
+		READ_LONG feats1 ulgiash
+		ulgiash|=0x200
+		WRITE_LONG feats1 ulgiash
+		LPF IWD2_ADD_CRE_EFFECT INT_VAR opcode=288 target=0 timing=9 parameter2=231 savingthrow=0x40000 END
+	END
 
 COPY_EXISTING ~63GLABSL.cre~ ~override~ ~63GLABSR.cre~ ~override~
 	WRITE_ASCII teamscript ~00T01ET~ #8
@@ -4934,6 +5139,12 @@ COPY_EXISTING ~41PFIEND.cre~ ~override~ ~41SPITFI.cre~ ~override~ ~63PITFND.cre~
 	LPF	IWD2_REMOVE_SPELLS_KNOWN STR_VAR class=~wizard~ END
 //	LPF	IWD2_CRE_SPELL INT_VAR num=4 STR_VAR class=~wizard~ resource=~SPWI402~ END
 	LPF	IWD2_CRE_ABILITY INT_VAR num=1 STR_VAR resource=~SPIN197~ END
+	PATCH_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~0~ BEGIN
+		READ_LONG feats1 ulgiash
+		ulgiash|=0x200
+		WRITE_LONG feats1 ulgiash
+		LPF IWD2_ADD_CRE_EFFECT INT_VAR opcode=288 target=0 timing=9 parameter2=231 savingthrow=0x40000 END
+	END
 
 COPY_EXISTING ~63YXBUN.cre~ ~override~ ~63YXBUH.cre~ ~override~
 	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelfighter=16 newlevelwizard=13 STR_VAR updatehp=~max~ END
@@ -4980,6 +5191,12 @@ COPY_EXISTING ~63YXBUN.cre~ ~override~ ~63YXBUH.cre~ ~override~
 	LPF	IWD2_REMOVE_SPELLS_KNOWN STR_VAR class=~wizard~ END
 //	LPF	IWD2_CRE_SPELL INT_VAR num=4 STR_VAR class=~wizard~ resource=~SPWI402~ END
 	LPF	IWD2_CRE_ABILITY INT_VAR num=1 STR_VAR resource=~SPIN197~ END
+	PATCH_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~0~ BEGIN
+		READ_LONG feats1 ulgiash
+		ulgiash|=0x200
+		WRITE_LONG feats1 ulgiash
+		LPF IWD2_ADD_CRE_EFFECT INT_VAR opcode=288 target=0 timing=9 parameter2=231 savingthrow=0x40000 END
+	END
 
 COPY_EXISTING ~63YXBU.cre~ ~override/USGELUGO.cre~
 	WRITE_BYTE allegiance 255
@@ -5027,6 +5244,12 @@ COPY_EXISTING ~USPITFIE.cre~ ~override~
 	PATCH_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~2~ BEGIN
 		LPF	IWD2_CRE_SPELL INT_VAR num=20 STR_VAR class=~wizard~ resource=~USWI352~ END
 	END
+	PATCH_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~0~ BEGIN
+		READ_LONG feats1 ulgiash
+		ulgiash|=0x200
+		WRITE_LONG feats1 ulgiash
+		LPF IWD2_ADD_CRE_EFFECT INT_VAR opcode=288 target=0 timing=9 parameter2=231 savingthrow=0x40000 END
+	END
 
 COPY_EXISTING ~USPITFIE.cre~ ~override/63INSTRC.cre~
 	LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item=~USRT15_V~ slot=~inv1~ mode=~replace~ END
@@ -5039,12 +5262,24 @@ COPY_EXISTING ~USMARILI.cre~ ~override~
 	SAY NAME1 @23005
 	SAY NAME2 @23005
 	LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item=~USDMNHF2~ slot=~rring~ mode=~replace~ END
+	PATCH_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~0~ BEGIN
+		READ_LONG feats1 ulgiash
+		ulgiash|=0x200
+		WRITE_LONG feats1 ulgiash
+		LPF IWD2_ADD_CRE_EFFECT INT_VAR opcode=288 target=0 timing=9 parameter2=231 savingthrow=0x40000 END
+	END
 
 COPY_EXISTING ~USMARIGR.cre~ ~override~
 	LPF ADD_CRE_EXTENDED_FEAT INT_VAR points=2 STR_VAR name=~ME_WHIRLWIND_ATTACK~ END
 	SAY NAME1 @23006
 	SAY NAME2 @23006
 	LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item=~USDMNHF3~ slot=~rring~ mode=~replace~ END
+	PATCH_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~0~ BEGIN
+		READ_LONG feats1 ulgiash
+		ulgiash|=0x200
+		WRITE_LONG feats1 ulgiash
+		LPF IWD2_ADD_CRE_EFFECT INT_VAR opcode=288 target=0 timing=9 parameter2=231 savingthrow=0x40000 END
+	END
 
 COPY_EXISTING ~USMARILI.cre~ ~override/USSMARIL.cre~ ~USMARIGR.cre~ ~override/USSMARGR.cre~
 	WRITE_BYTE defaultvisibility 1
@@ -5248,6 +5483,12 @@ COPY_EXISTING ~41SHERI2.cre~ ~override~
 	WRITE_BYTE skillconcentration 15
 	WRITE_BYTE skillspellcraft 15
 	WRITE_BYTE challengerating 14
+	PATCH_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~0~ BEGIN
+		READ_LONG feats1 ulgiash
+		ulgiash|=0x200
+		WRITE_LONG feats1 ulgiash
+		LPF IWD2_ADD_CRE_EFFECT INT_VAR opcode=288 target=0 timing=9 parameter2=231 savingthrow=0x40000 END
+	END
 
 COPY_EXISTING ~41SHERI3.cre~ ~override~
 	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelfighter=10 newlevelwizard=10 STR_VAR updatehp=~max~ END
@@ -5264,6 +5505,12 @@ COPY_EXISTING ~41SHERI3.cre~ ~override~
 	WRITE_BYTE skillconcentration 18
 	WRITE_BYTE skillspellcraft 18
 	WRITE_BYTE challengerating 16
+	PATCH_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~0~ BEGIN
+		READ_LONG feats1 ulgiash
+		ulgiash|=0x200
+		WRITE_LONG feats1 ulgiash
+		LPF IWD2_ADD_CRE_EFFECT INT_VAR opcode=288 target=0 timing=9 parameter2=231 savingthrow=0x40000 END
+	END
 
 COPY_EXISTING ~66DSHERI.cre~ ~override~
 	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelfighter=12 newlevelwizard=12 STR_VAR updatehp=~max~ END
@@ -5302,6 +5549,12 @@ COPY_EXISTING ~66DSHERI.cre~ ~override~
 	LPF	IWD2_CRE_SPELL INT_VAR num=2 STR_VAR class=~wizard~ resource=~SPWI702~ END
 	LPF	IWD2_CRE_SPELL INT_VAR num=2 STR_VAR class=~wizard~ resource=~SPWI808~ END
 	LPF	IWD2_CRE_ABILITY INT_VAR num=1 STR_VAR resource=~SPIN197~ END
+	PATCH_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~0~ BEGIN
+		READ_LONG feats1 ulgiash
+		ulgiash|=0x200
+		WRITE_LONG feats1 ulgiash
+		LPF IWD2_ADD_CRE_EFFECT INT_VAR opcode=288 target=0 timing=9 parameter2=231 savingthrow=0x40000 END
+	END
 
 COPY_EXISTING ~62HADR.cre~ ~override~ ~62HADR2.cre~ ~override~ ~63BHDR.cre~ ~override~ ~65BHDR.cre~ ~override~ ~65BHDR2.cre~ ~override~ ~67BHDR.cre~ ~override~ ~67BHDR2.cre~ ~override~ ~67BHDR3.cre~ ~override~ ~67BHDR4.cre~ ~override~ ~67HADR.cre~ ~override~
 	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelfighter=14 newlevelwizard=8 STR_VAR updatehp=~max~ END
@@ -5345,6 +5598,12 @@ COPY_EXISTING ~62HADR.cre~ ~override~ ~62HADR2.cre~ ~override~ ~63BHDR.cre~ ~ove
 	LPF	IWD2_CRE_SPELL INT_VAR num=2 STR_VAR class=~wizard~ resource=~SPWI808~ END
 	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~SPWI903~ END
 	LPF	IWD2_CRE_ABILITY INT_VAR num=1 STR_VAR resource=~SPIN197~ END
+	PATCH_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~0~ BEGIN
+		READ_LONG feats1 ulgiash
+		ulgiash|=0x200
+		WRITE_LONG feats1 ulgiash
+		LPF IWD2_ADD_CRE_EFFECT INT_VAR opcode=288 target=0 timing=9 parameter2=231 savingthrow=0x40000 END
+	END
 
 COPY_EXISTING ~62HADRR.cre~ ~override~ ~65RHDR.cre~ ~override~ ~66RHDR.cre~ ~override~ ~673RHDR.cre~ ~override~ ~67RHDR.cre~ ~override~
 	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelfighter=14 newlevelwizard=8 STR_VAR updatehp=~max~ END
@@ -5390,6 +5649,12 @@ COPY_EXISTING ~62HADRR.cre~ ~override~ ~65RHDR.cre~ ~override~ ~66RHDR.cre~ ~ove
 	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~SPWI806~ END
 	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~SPWI903~ END
 	LPF	IWD2_CRE_ABILITY INT_VAR num=1 STR_VAR resource=~SPIN197~ END
+	PATCH_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~0~ BEGIN
+		READ_LONG feats1 ulgiash
+		ulgiash|=0x200
+		WRITE_LONG feats1 ulgiash
+		LPF IWD2_ADD_CRE_EFFECT INT_VAR opcode=288 target=0 timing=9 parameter2=231 savingthrow=0x40000 END
+	END
 
 COPY_EXISTING ~63GRDCOM.cre~ ~override~
 	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelfighter=14 newlevelwizard=10 STR_VAR updatehp=~max~ END
@@ -5440,6 +5705,12 @@ COPY_EXISTING ~63GRDCOM.cre~ ~override~
 	LPF	IWD2_CRE_SPELL INT_VAR num=2 STR_VAR class=~wizard~ resource=~SPWI702~ END
 	LPF	IWD2_CRE_SPELL INT_VAR num=2 STR_VAR class=~wizard~ resource=~SPWI808~ END
 	LPF	IWD2_CRE_ABILITY INT_VAR num=1 STR_VAR resource=~SPIN197~ END
+	PATCH_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~0~ BEGIN
+		READ_LONG feats1 ulgiash
+		ulgiash|=0x200
+		WRITE_LONG feats1 ulgiash
+		LPF IWD2_ADD_CRE_EFFECT INT_VAR opcode=288 target=0 timing=9 parameter2=231 savingthrow=0x40000 END
+	END
 
 COPY_EXISTING ~63DRACE.cre~ ~override~
 	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelfighter=16 newlevelwizard=12 STR_VAR updatehp=~max~ END
@@ -5482,6 +5753,12 @@ COPY_EXISTING ~63DRACE.cre~ ~override~
 	LPF	IWD2_CRE_SPELL INT_VAR num=3 STR_VAR class=~wizard~ resource=~SPWI903~ END
 	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~SPWI910~ END
 	LPF	IWD2_CRE_ABILITY INT_VAR num=1 STR_VAR resource=~SPIN197~ END
+	PATCH_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~0~ BEGIN
+		READ_LONG feats1 ulgiash
+		ulgiash|=0x200
+		WRITE_LONG feats1 ulgiash
+		LPF IWD2_ADD_CRE_EFFECT INT_VAR opcode=288 target=0 timing=9 parameter2=231 savingthrow=0x40000 END
+	END
 
 COPY_EXISTING ~66VYXEIN.cre~ ~override~
 	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelfighter=13 newlevelwizard=15 STR_VAR updatehp=~max~ END
@@ -5528,6 +5805,12 @@ COPY_EXISTING ~66VYXEIN.cre~ ~override~
 	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~SPWI807~ END
 	LPF	IWD2_CRE_SPELL INT_VAR num=2 STR_VAR class=~wizard~ resource=~SPWI908~ END
 	LPF	IWD2_CRE_ABILITY INT_VAR num=1 STR_VAR resource=~SPIN197~ END
+	PATCH_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~0~ BEGIN
+		READ_LONG feats1 ulgiash
+		ulgiash|=0x200
+		WRITE_LONG feats1 ulgiash
+		LPF IWD2_ADD_CRE_EFFECT INT_VAR opcode=288 target=0 timing=9 parameter2=231 savingthrow=0x40000 END
+	END
 
 COPY_EXISTING ~67NALAK.cre~ ~override~
 	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelfighter=11 newlevelwizard=17 STR_VAR updatehp=~max~ END
@@ -5577,6 +5860,12 @@ COPY_EXISTING ~67NALAK.cre~ ~override~
 	LPF	IWD2_CRE_SPELL INT_VAR num=3 STR_VAR class=~wizard~ resource=~SPWI906~ END
 	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~SPWI910~ END
 	LPF	IWD2_CRE_ABILITY INT_VAR num=1 STR_VAR resource=~SPIN197~ END
+	PATCH_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~0~ BEGIN
+		READ_LONG feats1 ulgiash
+		ulgiash|=0x200
+		WRITE_LONG feats1 ulgiash
+		LPF IWD2_ADD_CRE_EFFECT INT_VAR opcode=288 target=0 timing=9 parameter2=231 savingthrow=0x40000 END
+	END
 
 COPY_EXISTING ~63GRDAR.cre~ ~override~
 	WRITE_BYTE armorcolor 66
@@ -5630,6 +5919,12 @@ COPY_EXISTING_REGEXP ~63RUINL\.cre~ ~override~ ~65ORRUIN\.cre~ ~override~ ~65RUC
 	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~cleric~ resource=~SPPR717~ END
 	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~cleric~ resource=~SPPR726~ END
 	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~cleric~ resource=~SPWI905~ END
+	PATCH_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~0~ BEGIN
+		READ_LONG feats1 ulgiash
+		ulgiash|=0x200
+		WRITE_LONG feats1 ulgiash
+		LPF IWD2_ADD_CRE_EFFECT INT_VAR opcode=288 target=0 timing=9 parameter2=231 savingthrow=0x40000 END
+	END
 
 COPY_EXISTING ~63ERADRU.cre~ ~override~ ~63GADU.cre~ ~override~ ~65GARUK.cre~ ~override~ ~65RUCOL.cre~ ~override~
 	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelcleric=20 END
@@ -5645,6 +5940,12 @@ COPY_EXISTING ~63ERADRU.cre~ ~override~ ~63GADU.cre~ ~override~ ~65GARUK.cre~ ~o
 	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~cleric~ resource=~SPPR717~ END
 	LPF	IWD2_CRE_SPELL INT_VAR num=2 STR_VAR class=~cleric~ resource=~SPPR726~ END
 	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~cleric~ resource=~SPWI905~ END
+	PATCH_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~0~ BEGIN
+		READ_LONG feats1 ulgiash
+		ulgiash|=0x200
+		WRITE_LONG feats1 ulgiash
+		LPF IWD2_ADD_CRE_EFFECT INT_VAR opcode=288 target=0 timing=9 parameter2=231 savingthrow=0x40000 END
+	END
 
 COPY_EXISTING ~65BRUTAI.cre~ ~override~ ~65BRUTA1.cre~ ~override~
 	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelcleric=24 newlevelfighter=4 STR_VAR updatehp=~max~ END
@@ -5668,6 +5969,12 @@ COPY_EXISTING ~65BRUTAI.cre~ ~override~ ~65BRUTA1.cre~ ~override~
 	LPF	IWD2_CRE_SPELL INT_VAR num=2 STR_VAR class=~cleric~ resource=~SPPR726~ END
 	LPF	IWD2_CRE_SPELL INT_VAR num=2 STR_VAR class=~cleric~ resource=~SPWI905~ END
 	LPF	IWD2_CRE_ABILITY INT_VAR num=1 STR_VAR resource=~SPIN197~ END
+	PATCH_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~0~ BEGIN
+		READ_LONG feats1 ulgiash
+		ulgiash|=0x200
+		WRITE_LONG feats1 ulgiash
+		LPF IWD2_ADD_CRE_EFFECT INT_VAR opcode=288 target=0 timing=9 parameter2=231 savingthrow=0x40000 END
+	END
 
 COPY_EXISTING ~65MNK.cre~ ~override~ ~66MNK.cre~ ~override~ ~66MNK2.cre~ ~override~
 	LPF ADD_CRE_EXTENDED_FEAT INT_VAR points=2 STR_VAR name=~ME_IMPROVED_UNARMED_ABILITIES~ END
@@ -5725,6 +6032,12 @@ COPY_EXISTING ~65IYTXM.cre~ ~override~
 	WRITE_BYTE enchantmentlevel 5
 	LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item=~USCIHFXV~ slot=~lring~ mode=~replace~ END
 	LPF	IWD2_CRE_ABILITY INT_VAR num=1 STR_VAR resource=~SPIN197~ END
+	PATCH_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~0~ BEGIN
+		READ_LONG feats1 ulgiash
+		ulgiash|=0x200
+		WRITE_LONG feats1 ulgiash
+		LPF IWD2_ADD_CRE_EFFECT INT_VAR opcode=288 target=0 timing=9 parameter2=231 savingthrow=0x40000 END
+	END
 
 COPY_EXISTING ~66PUDU.cre~ ~override~
 	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelfighter=24 STR_VAR updatehp=~max~ END
@@ -5797,6 +6110,12 @@ COPY_EXISTING ~63ISARN.cre~ ~override~ ~63ISARN2.cre~ ~override~
 	WRITE_BYTE skillspellcraft 24
 	WRITE_BYTE proficiencylargesword 2
 	WRITE_BYTE proficiencysmallblade 2
+	PATCH_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~0~ BEGIN
+		READ_LONG feats1 ulgiash
+		ulgiash|=0x200
+		WRITE_LONG feats1 ulgiash
+		LPF IWD2_ADD_CRE_EFFECT INT_VAR opcode=288 target=0 timing=9 parameter2=231 savingthrow=0x40000 END
+	END
 
 COPY_EXISTING ~63ISARN.cre~ ~override~
 	LPF	IWD2_REMOVE_SPELLS_KNOWN STR_VAR class=~wizard~ END
@@ -5859,6 +6178,12 @@ COPY_EXISTING ~63ISAIR.cre~ ~override~ ~63ISAIR2.cre~ ~override~
 	WRITE_BYTE skillspellcraft 28
 	WRITE_BYTE proficiencylargesword 3
 	WRITE_BYTE proficiencysmallblade 3
+	PATCH_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~0~ BEGIN
+		READ_LONG feats1 ulgiash
+		ulgiash|=0x200
+		WRITE_LONG feats1 ulgiash
+		LPF IWD2_ADD_CRE_EFFECT INT_VAR opcode=288 target=0 timing=9 parameter2=231 savingthrow=0x40000 END
+	END
 
 COPY_EXISTING ~63ISAIR.cre~ ~override~
 	LPF	IWD2_REMOVE_SPELLS_KNOWN STR_VAR class=~wizard~ END
@@ -5926,6 +6251,12 @@ COPY_EXISTING ~63MADAN.cre~ ~override~ ~63MADAN2.cre~ ~override~
 	WRITE_BYTE skillspellcraft 24
 	WRITE_BYTE proficiencymace 3
 	WRITE_BYTE proficiencysmallblade 3
+	PATCH_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~0~ BEGIN
+		READ_LONG feats1 ulgiash
+		ulgiash|=0x200
+		WRITE_LONG feats1 ulgiash
+		LPF IWD2_ADD_CRE_EFFECT INT_VAR opcode=288 target=0 timing=9 parameter2=231 savingthrow=0x40000 END
+	END
 
 COPY_EXISTING ~63MADAN.cre~ ~override~
 	LPF	IWD2_REMOVE_SPELLS_KNOWN STR_VAR class=~cleric~ END
@@ -5968,6 +6299,12 @@ COPY_EXISTING ~63MADAE.cre~ ~override~ ~63MADAE2.cre~ ~override~
 	WRITE_BYTE skillspellcraft 28
 	WRITE_BYTE proficiencymace 3
 	WRITE_BYTE proficiencysmallblade 3
+	PATCH_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~0~ BEGIN
+		READ_LONG feats1 ulgiash
+		ulgiash|=0x200
+		WRITE_LONG feats1 ulgiash
+		LPF IWD2_ADD_CRE_EFFECT INT_VAR opcode=288 target=0 timing=9 parameter2=231 savingthrow=0x40000 END
+	END
 
 COPY_EXISTING ~63MADAE.cre~ ~override~
 	LPF	IWD2_REMOVE_SPELLS_KNOWN STR_VAR class=~cleric~ END
@@ -6027,6 +6364,12 @@ COPY_EXISTING ~63BUVAI.cre~ ~override~
 		LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~USWI352~ END
 		LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~USWI752~ END
 	END
+	PATCH_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~0~ BEGIN
+		READ_LONG feats1 ulgiash
+		ulgiash|=0x200
+		WRITE_LONG feats1 ulgiash
+		LPF IWD2_ADD_CRE_EFFECT INT_VAR opcode=288 target=0 timing=9 parameter2=231 savingthrow=0x40000 END
+	END
 
 COPY_EXISTING ~63MOURN.cre~ ~override~
 	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelwizard=18 STR_VAR updatehp=~max~  END
@@ -6055,6 +6398,12 @@ COPY_EXISTING ~63MOURN.cre~ ~override~
 		LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~USWI352~ END
 		LPF	IWD2_CRE_SPELL INT_VAR num=2 STR_VAR class=~wizard~ resource=~USWI652~ END
 		LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~USWI752~ END
+	END
+	PATCH_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~0~ BEGIN
+		READ_LONG feats1 ulgiash
+		ulgiash|=0x200
+		WRITE_LONG feats1 ulgiash
+		LPF IWD2_ADD_CRE_EFFECT INT_VAR opcode=288 target=0 timing=9 parameter2=231 savingthrow=0x40000 END
 	END
 
 COPY_EXISTING ~63PHAEN.cre~ ~override~
@@ -6126,6 +6475,12 @@ COPY_EXISTING ~63ZILVAR.cre~ ~override~
 	PATCH_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~2~ BEGIN
 		LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~cleric~ resource=~USWI352~ END
 		LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~cleric~ resource=~SPWI717~ END
+	END
+	PATCH_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~0~ BEGIN
+		READ_LONG feats1 ulgiash
+		ulgiash|=0x200
+		WRITE_LONG feats1 ulgiash
+		LPF IWD2_ADD_CRE_EFFECT INT_VAR opcode=288 target=0 timing=9 parameter2=231 savingthrow=0x40000 END
 	END
 /*
 COPY_EXISTING ~61PPCIRC.bcs~ ~override~

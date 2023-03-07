@@ -10715,11 +10715,24 @@ function IEex_EvaluatePermanentRepeatingEffects(creatureData)
 		if joinedParty then
 			extraFlags = bit.band(extraFlags, 0xFFFFFEFF)
 			IEex_WriteDword(creatureData + 0x740, extraFlags)
-			local onLeavePartyDLG = ex_on_leave_party_dlg_set[IEex_ReadLString(creatureData + 0x554, 32)]
+			local scriptName = IEex_ReadLString(creatureData + 0x554, 32)
+			local onLeavePartyDLG = ex_on_leave_party_dlg_set[scriptName]
 			if onLeavePartyDLG == nil then
 				onLeavePartyDLG = ex_on_leave_party_dlg_set["DEFAULT"]
 			end
 			IEex_WriteLString(creatureData + 0x56DC, onLeavePartyDLG, 8)
+			local onLeavePartyTeamScript = ex_on_leave_party_team_script_set[scriptName]
+			if onLeavePartyTeamScript ~= nil then
+				IEex_ApplyEffectToActor(targetID, {
+["opcode"] = 82,
+["target"] = 2,
+["timing"] = 1,
+["parameter2"] = 2,
+["resource"] = onLeavePartyTeamScript,
+["source_id"] = targetID,
+})
+--				IEex_WriteLString(creatureData + 0x748, onJoinPartyTeamScript, 8)
+			end
 		end
 	end
 
@@ -19741,7 +19754,7 @@ ex_specific_floor_height = {["AR3000"] = {[0xFF00] = -750}, ["AR5200"] = {[0xFF0
 ex_specific_floor_height_door = {["AR6051"] = {[0xFFFF00] = {-300, 0, "BRIDGE1"}}, }
 ex_specific_floor_spell = {["AR6051"] = {[0xFF00] = "USFL6051"}, ["AR6104"] = {[0xFF00] = "USFL6104"}, ["AR6300"] = {[0xFF00] = "USFL6300"}, }
 ex_specific_floor_spell_door = {["AR6051"] = {[0xFFFF00] = {"USFL6051", "", "BRIDGE1"}}, }
-ex_specific_teleport_zone = {["AR4102"] = true, ["AR5202"] = true, }
+ex_specific_teleport_zone = {["AR4102"] = true, ["AR4103"] = true, ["AR5202"] = true, ["AR6305"] = true, }
 ex_record_translucency = {}
 ex_burrowing_previous_emerge_time = {}
 function MEHGTMOD(effectData, creatureData)
@@ -19770,6 +19783,9 @@ function IEex_HeightMod(creatureData)
 	local isIncorporeal = IEex_IsIncorporeal(targetID)
 	local isBurrowing = IEex_GetActorSpellState(targetID, 218)
 	local hasTeleportStep = false
+	local extraFlags = IEex_ReadDword(creatureData + 0x740)
+	local canFallIntoPits = (bit.band(extraFlags, 0x8000) > 0)
+	local fallIntoPitFunctionDetected = false
 	if areaData > 0 then
 		areaRES = IEex_ReadLString(areaData, 8)
 		areaType = IEex_ReadWord(areaData + 0x40, 0x0)
@@ -19811,7 +19827,7 @@ function IEex_HeightMod(creatureData)
 			
 			local specificFloorHeight = IEex_GetBitmapPixelColor(bitmapData, math.floor(targetX / 16), math.floor(targetY / 12))
 
-			if ex_specific_floor_height[areaRES][specificFloorHeight] ~= nil then
+			if ex_specific_floor_height[areaRES][specificFloorHeight] ~= nil and canFallIntoPits then
 				minHeight = ex_specific_floor_height[areaRES][specificFloorHeight] * 2
 			elseif ex_specific_floor_height_door[areaRES] ~= nil and ex_specific_floor_height_door[areaRES][specificFloorHeight] ~= nil then
 				IEex_IterateDoors(targetID, function(share)
@@ -19824,7 +19840,7 @@ function IEex_HeightMod(creatureData)
 					end
 				end)
 			end
-			if ex_specific_floor_spell[areaRES] ~= nil and ex_specific_floor_spell[areaRES][specificFloorHeight] ~= nil then
+			if ex_specific_floor_spell[areaRES] ~= nil and ex_specific_floor_spell[areaRES][specificFloorHeight] ~= nil and canFallIntoPits then
 				floorSpellRES = ex_specific_floor_spell[areaRES][specificFloorHeight]
 			elseif ex_specific_floor_spell_door[areaRES] ~= nil and ex_specific_floor_spell_door[areaRES][specificFloorHeight] ~= nil then
 				IEex_IterateDoors(targetID, function(share)
@@ -19890,6 +19906,8 @@ function IEex_HeightMod(creatureData)
 			end
 		elseif theopcode == 500 and theresource == "METELMOV" then
 			hasTeleportStep = true
+		elseif theopcode == 500 and (theresource == "MEGHOSTW" or theresource == "MEWINGBU") then
+			fallIntoPitFunctionDetected = true
 		elseif theopcode == 206 and theresource == "MEHGTMOD" then
 			doNotModifyHeight = true
 		end
@@ -20115,7 +20133,14 @@ function IEex_HeightMod(creatureData)
 		IEex_WriteByte(creatureData + 0x9DC, 1)
 		IEex_WriteByte(IEex_ReadDword(creatureData + 0x50F0) + 0x7, 0)
 	end
-	if height == 0 and speed + extraSpeed == 0 and accel <= 0 and minHeight == 0 and not IEex_GetActorSpellState(targetID, 184) and not IEex_GetActorSpellState(targetID, 190) then return end
+	if height == 0 and speed + extraSpeed == 0 and accel <= 0 and minHeight == 0 and not IEex_GetActorSpellState(targetID, 184) and not IEex_GetActorSpellState(targetID, 190) and not fallIntoPitFunctionDetected then
+		extraFlags = bit.band(extraFlags, 0xFFFF7FFF)
+		IEex_WriteDword(creatureData + 0x740, extraFlags)
+		return
+	else
+		extraFlags = bit.bor(extraFlags, 0x8000)
+		IEex_WriteDword(creatureData + 0x740, extraFlags)
+	end
 	local timeSlowed, targetNotSlowed = IEex_CheckGlobalEffectOnActor(targetID, 0x2)
 	if IEex_GetGameTick() % ex_time_slow_speed_divisor ~= 0 then
 		if timeSlowed and not targetNotSlowed then
@@ -20344,7 +20369,6 @@ function IEex_HeightMod(creatureData)
 })
 --		IEex_WriteDword(creatureData + 0xE, 0)
 		if bit.band(savingthrow, 0x80000) > 0 and spellRES ~= "" then
-			print(targetID)
 			IEex_ApplyEffectToActor(targetID, {
 ["opcode"] = 402,
 ["target"] = 2,
@@ -30903,7 +30927,7 @@ function IEex_IfValidForPartyDialogue(scriptName)
 			end
 		end
 	end
-	return true
+	return canBanter
 end
 
 function IEex_AllPartyMembersCanBanter()

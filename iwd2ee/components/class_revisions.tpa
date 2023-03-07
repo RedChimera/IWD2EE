@@ -2528,8 +2528,12 @@ COPY_EXISTING ~LISTINNT.2da~ ~override~
 	lastindex += 1
 	INSERT_2DA_ROW numrows 2 ~%lastindex% USWHIRLI~
 */
-COPY_EXISTING_REGEXP ~52MNK[FM].*\.cre~ ~override~ ~52ARUMA.cre~ ~override~ ~52BERED.cre~ ~override~ ~52MOROHE.cre~ ~override~ ~52NONIN.cre~ ~override~ ~52SALISA.cre~ ~override~ ~52SALISX.cre~ ~override~ ~52SERSA.cre~ ~override~ ~52SVALTI.cre~ ~override~ ~63FORMIS.cre~ ~override~ ~63MNK[FM].*\.cre~ ~override~ ~67ORMIS.cre~ ~override~ ~67ORMISL.cre~ ~override~
-		LPF IWD2_ADD_CRE_EFFECT INT_VAR opcode=500 target=1 timing=9 parameter1=RESOLVE_STR_REF(@566) parameter2=6 STR_VAR resource=~MECLSNAM~ END
-		LPF IWD2_ADD_CRE_EFFECT INT_VAR opcode=288 target=1 timing=9 parameter2=225 STR_VAR resource=~USBLARV~ END
+
+COPY_EXISTING ~USBLARK.spl~ ~override~
+	LPF ALTER_EFFECT INT_VAR silent=1 check_headers=1 check_globals=0 match_opcode=500 parameter1=RESOLVE_STR_REF(@566) STR_VAR match_resource=~MECLSNAM~ END
+
+COPY_EXISTING_REGEXP ~52MNK[FM].*\.cre~ ~override~ ~52ARUMA.cre~ ~override~ ~52BERED.cre~ ~override~ ~52MOROHE.cre~ ~override~ ~52NONIN.cre~ ~override~ ~52SALISA.cre~ ~override~ ~52SALISX.cre~ ~override~ /*~52SERSA.cre~ ~override~*/ ~52SVALTI.cre~ ~override~ ~63FORMIS.cre~ ~override~ ~63MNK[FM].*\.cre~ ~override~ ~67ORMIS.cre~ ~override~ ~67ORMISL.cre~ ~override~
+	LPF IWD2_ADD_CRE_EFFECT INT_VAR opcode=500 target=1 timing=9 parameter1=RESOLVE_STR_REF(@566) parameter2=6 STR_VAR resource=~MECLSNAM~ effsource=~USBLARK~ END
+	LPF IWD2_ADD_CRE_EFFECT INT_VAR opcode=288 target=1 timing=9 parameter2=225 STR_VAR resource=~USBLARV~ effsource=~USBLARK~ END
 
 INCLUDE ~%mod_folder%/components/final_patches.tpa~

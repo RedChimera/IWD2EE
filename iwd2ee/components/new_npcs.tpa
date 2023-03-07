@@ -152,12 +152,13 @@ APPEND ~RT_NORM.2da~
 USCIHFVE	USCIVEIR
 USCIHFVR	USCIVREK
 USCIHFXH	USCIXHAA
+USCIHFXC	USCIXHAC
 USCWHFAO	USCWAOCH
 USCWHFVR	USCWVREK
 USCWHFVU	USCWVUNA
 USCWHFXH	USCWXHAA
 USCWHFMB	00SWDL09
-
+USCWHFXC	USCWXHAC
 ~
 UNLESS ~USCWHFVR~
 
@@ -166,11 +167,13 @@ APPEND ~RT_FURY.2da~
 USCIHFVE	USHFCIVE
 USCIHFVR	USHFCIVR
 USCIHFXH	USHFCIXH
+USCIHFXC	USHFCIXC
 USCWHFAO	USHFCWAO
 USCWHFVR	USHFCWVR
 USCWHFVU	USHFCWVU
 USCWHFXH	USHFCWXH
 USCWHFMB	USHFSL09
+USCWHFXC	USHFCWXC
 ~
 UNLESS ~USCWHFVR~
 
@@ -222,6 +225,7 @@ COMPILE ~%mod_folder%/dlg/dlg_new_npcs/41XHAAN.d~
 COMPILE ~%mod_folder%/dlg/dlg_new_npcs/41ZACK.d~
 COMPILE ~%mod_folder%/dlg/dlg_new_npcs/50PAIRI.d~
 COMPILE ~%mod_folder%/dlg/dlg_new_npcs/52SERSA.d~
+COMPILE ~%mod_folder%/dlg/dlg_new_npcs/63YXBU.d~
 
 COMPILE ~%mod_folder%/dlg/dlg_new_npcs/USGEOFP.d~
 COMPILE ~%mod_folder%/dlg/dlg_new_npcs/USREIGP.d~
@@ -241,8 +245,8 @@ COMPILE ~%mod_folder%/dlg/dlg_new_npcs/USVREKJ.d~
 COMPILE ~%mod_folder%/dlg/dlg_new_npcs/USVUNAJ.d~
 COMPILE ~%mod_folder%/dlg/dlg_new_npcs/USXHAAJ.d~
 COMPILE ~%mod_folder%/dlg/dlg_new_npcs/USZACKJ.d~
-//COMPILE ~%mod_folder%/dlg/dlg_new_npcs/USPAIRJ.d~
-//COMPILE ~%mod_folder%/dlg/dlg_new_npcs/USSERSJ.d~
+COMPILE ~%mod_folder%/dlg/dlg_new_npcs/USPAIRJ.d~
+COMPILE ~%mod_folder%/dlg/dlg_new_npcs/USSERSJ.d~
 
 COMPILE ~%mod_folder%/dlg/dlg_new_npcs/USDLGNMD.d~
 
@@ -255,6 +259,7 @@ COPY_EXISTING ~USVREKJ.dlg~ ~override~
 COPY_EXISTING ~IEEX_WEIDU.lua~ ~override~
 	REPLACE_TEXTUALLY CASE_INSENSITIVE EXACT_MATCH ~ex_on_join_party_special_script_1_set = {~ ~ex_on_join_party_special_script_1_set = {["USGEOF"] = "USGEOFD", ["USREIG"] = "USREIGD", ["USVEIR"] = "USVEIRD", ["USEMMA"] = "USEMMAD", ["USVREK"] = "USVREKD", ["USVUNA"] = "USVUNAD", ["USXHAA"] = "USXHAAD", ["USZACK"] = "USZACKD", ["USPAIR"] = "USPAIRD", ["USSERS"] = "USSERSD", ~
 	REPLACE_TEXTUALLY CASE_INSENSITIVE EXACT_MATCH ~ex_on_join_party_team_script_set = {~ ~ex_on_join_party_team_script_set = {["USEMMA"] = "USEMMABL", ["USVREK"] = "USVREKLV", ["USVUNA"] = "USVUNALV", ["USXHAA"] = "USXHAALV", ["USSERS"] = "USSERSLV", ~
+	REPLACE_TEXTUALLY CASE_INSENSITIVE EXACT_MATCH ~ex_on_leave_party_team_script_set = {~ ~ex_on_leave_party_team_script_set = {["USEMMA"] = "USEMMABL", ["USVREK"] = "USVREKLV", ["USVUNA"] = "USVUNALV", ["USXHAA"] = "USXHAALV", ["USSERS"] = "USSERSLV", ~
 	REPLACE_TEXTUALLY CASE_INSENSITIVE EXACT_MATCH ~ex_on_leave_party_dlg_set = {~ ~ex_on_leave_party_dlg_set = {["USGEOF"] = "USGEOFP", ["USREIG"] = "USREIGP", ["USVEIR"] = "USVEIRP", ["USEMMA"] = "USEMMAP", ["USVREK"] = "USVREKP", ["USVUNA"] = "USVUNAP", ["USXHAA"] = "USXHAAP", ["USZACK"] = "USZACKP", ["USPAIR"] = "USPAIRP", ["USSERS"] = "USSERSP", ~
 	REPLACE_TEXTUALLY CASE_INSENSITIVE EXACT_MATCH ~ex_on_join_party_dlg_set = {~ ~ex_on_join_party_dlg_set = {["USGEOF"] = "USGEOFJ", ["USREIG"] = "USREIGJ", ["USVEIR"] = "USVEIRJ", ["USEMMA"] = "USEMMAJ", ["USVREK"] = "USVREKJ", ["USVUNA"] = "USVUNAJ", ["USXHAA"] = "USXHAAJ", ["USZACK"] = "USZACKJ", ["USPAIR"] = "USPAIRJ", ["USSERS"] = "USSERSJ", ~
 
@@ -265,19 +270,70 @@ LAF ADD_TIMED_BANTER_IWD2 INT_VAR id=3 STR_VAR dlg1=~USVUNAJ~ dlg2=~USGEOFJ~ END
 LAF ADD_TIMED_BANTER_IWD2 INT_VAR id=3 STR_VAR dlg1=~USZACKJ~ dlg2=~USXHAAJ~ END
 LAF ADD_TIMED_BANTER_IWD2 INT_VAR id=4 STR_VAR dlg1=~USZACKJ~ dlg2=~USXHAAJ~ END
 LAF ADD_TIMED_BANTER_IWD2 INT_VAR id=1 STR_VAR dlg1=~USXHAAJ~ dlg2=~USREIGJ~ END
+LAF ADD_TIMED_BANTER_IWD2 INT_VAR id=14 STR_VAR dlg1=~USZACKJ~ dlg2=~USVREKJ~ END
+LAF ADD_TIMED_BANTER_IWD2 INT_VAR id=15 STR_VAR dlg1=~USZACKJ~ dlg2=~USVEIRJ~ END
+LAF ADD_TIMED_BANTER_IWD2 INT_VAR id=23 STR_VAR dlg1=~USREIGJ~ dlg2=~USPAIRJ~ END
+LAF ADD_TIMED_BANTER_IWD2 INT_VAR id=24 STR_VAR dlg1=~USREIGJ~ dlg2=~USVUNAJ~ global1=~CHAPTER~ global1operator=~>=~ global1value=~5~ END
+LAF ADD_TIMED_BANTER_IWD2 INT_VAR id=11 STR_VAR dlg1=~USPAIRJ~ dlg2=~USVEIRJ~ END
+LAF ADD_TIMED_BANTER_IWD2 INT_VAR id=12 STR_VAR dlg1=~USPAIRJ~ dlg2=~USVUNAJ~ END
+
 
 LAF ADD_GENDER_TOKEN_IWD2 INT_VAR male=RESOLVE_STR_REF(@40421) female=RESOLVE_STR_REF(@40422) STR_VAR token=~PRO_BOYGIRL~ END
 LAF ADD_GENDER_TOKEN_IWD2 INT_VAR male=RESOLVE_STR_REF(@40423) female=RESOLVE_STR_REF(@40424) STR_VAR token=~PRO_BOYGIRL_UPPER~ END
 
+COPY_EXISTING ~USREIGD.bcs~ ~override~
+	REPLACE ~41033~ @41033
+
 COPY_EXISTING ~USGEOFD.bcs~ ~override~
 	REPLACE ~40468~ @40468
 	REPLACE ~40564~ @40564
+	REPLACE ~41021~ @41021
+	REPLACE ~41034~ @41034
 
 COPY_EXISTING ~USVEIRD.bcs~ ~override~
 	REPLACE ~40714~ @40714
+	REPLACE ~40975~ @40975
+	REPLACE ~41601~ @41601
+
+COPY_EXISTING ~USEMMAD.bcs~ ~override~
+	REPLACE ~41035~ @41035
+	REPLACE ~41557~ @41557
+
+COPY_EXISTING ~USVREKD.bcs~ ~override~
+	REPLACE ~41602~ @41602
+
+COPY_EXISTING ~USVUNAD.bcs~ ~override~
+	REPLACE ~41036~ @41036
 
 COPY_EXISTING ~USZACKD.bcs~ ~override~
 	REPLACE ~40934~ @40934
+	REPLACE ~40974~ @40974
+	REPLACE ~41040~ @41040
+	REPLACE ~41603~ @41603
+
+COPY_EXISTING ~USXHAAD.bcs~ ~override~
+	REPLACE ~41039~ @41039
+	REPLACE ~41077~ @41077
+	REPLACE ~41203~ @41203
+	REPLACE ~41205~ @41205
+
+COPY_EXISTING ~USPAIRD.bcs~ ~override~
+	REPLACE ~41020~ @41020
+	REPLACE ~41037~ @41037
+
+COPY_EXISTING ~USSERSD.bcs~ ~override~
+	REPLACE ~41038~ @41038
+
+COPY_EXISTING ~USSERSLV.bcs~ ~override~
+	REPLACE ~41607~ @41607
+
+COPY_EXISTING ~USYXBUD.bcs~ ~override~
+	REPLACE ~41645~ @41645
+	REPLACE ~41649~ @41649
+
+COPY_EXISTING ~6303PFC.bcs~ ~override~
+	REPLACE ~41644~ @41644
+	BUT_ONLY_IF_IT_CHANGES
 
 ACTION_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~4~ BEGIN
 
@@ -344,14 +400,12 @@ COPY_EXISTING ~USHFCWVU.itm~ ~override~
 	SAY IDENTIFIED_DESC @4817
 
 COPY_EXISTING ~USCWXHAA.itm~ ~override~
-	LPF ALTER_EFFECT INT_VAR silent=1 check_headers=0 check_globals=1 match_opcode=502 special=RESOLVE_STR_REF(@23056) STR_VAR match_resource=~MEDAMSLV~ END
 	SAY NAME1 @4818
 	SAY NAME2 @4818
 	SAY UNIDENTIFIED_DESC @4819
 	SAY IDENTIFIED_DESC @4819
 
 COPY_EXISTING ~USHFCWXH.itm~ ~override~
-	LPF ALTER_EFFECT INT_VAR silent=1 check_headers=0 check_globals=1 match_opcode=502 special=RESOLVE_STR_REF(@23057) STR_VAR match_resource=~MEDAMSLV~ END
 	SAY NAME1 @4820
 	SAY NAME2 @4820
 	SAY UNIDENTIFIED_DESC @4821
@@ -370,6 +424,32 @@ COPY_EXISTING ~USHFCIXH.itm~ ~override~
 	SAY UNIDENTIFIED_DESC @4825
 	SAY IDENTIFIED_DESC @4825
 	LPF ALTER_EFFECT INT_VAR check_headers=0 check_globals=1 match_opcode=502 special=RESOLVE_STR_REF(@23057) STR_VAR match_resource=~MEDAMSLV~ END
+
+COPY_EXISTING ~USCWXHAC.itm~ ~override~
+	SAY NAME1 @4830
+	SAY NAME2 @4830
+	SAY UNIDENTIFIED_DESC @4831
+	SAY IDENTIFIED_DESC @4831
+
+COPY_EXISTING ~USHFCWXC.itm~ ~override~
+	SAY NAME1 @4832
+	SAY NAME2 @4832
+	SAY UNIDENTIFIED_DESC @4833
+	SAY IDENTIFIED_DESC @4833
+
+COPY_EXISTING ~USCIXHAC.itm~ ~override~
+	SAY NAME1 @4834
+	SAY NAME2 @4834
+	SAY UNIDENTIFIED_DESC @4835
+	SAY IDENTIFIED_DESC @4835
+	LPF ALTER_EFFECT INT_VAR check_headers=0 check_globals=1 match_opcode=502 special=RESOLVE_STR_REF(@23057) STR_VAR match_resource=~MEDAMSLV~ END
+
+COPY_EXISTING ~USHFCIXC.itm~ ~override~
+	SAY NAME1 @4836
+	SAY NAME2 @4836
+	SAY UNIDENTIFIED_DESC @4837
+	SAY IDENTIFIED_DESC @4837
+	LPF ALTER_EFFECT INT_VAR check_headers=0 check_globals=1 match_opcode=502 special=RESOLVE_STR_REF(@23058) STR_VAR match_resource=~MEDAMSLV~ END
 
 COPY_EXISTING ~USCWAOCH.itm~ ~override~
 	SAY NAME1 @4826
@@ -1023,6 +1103,9 @@ COPY_EXISTING ~USEMMA.cre~ ~override~
 	WRITE_ASCII scriptname ~USEMMA~ #32
 	LPF	IWD2_ADD_CRE_ITEM INT_VAR equip=0 STR_VAR item=~USCWHFMB~ slot=~inv1~ mode=~replace~ END
 
+COPY_EXISTING ~USBLARK.spl~ ~override~
+	LPF ALTER_EFFECT INT_VAR silent=1 check_headers=1 check_globals=0 match_opcode=500 parameter1=RESOLVE_STR_REF(@566) STR_VAR match_resource=~MECLSNAM~ END
+
 COPY_EXISTING ~AR1000.bcs~ ~override~
 	DECOMPILE_AND_PATCH BEGIN
 		REPLACE_TEXTUALLY CASE_INSENSITIVE ~Global(\"HEALED_REIG\",\"MYAREA\",0)~ ~Global("HEALED_REIG","MYAREA",0)
@@ -1057,4 +1140,305 @@ COPY_EXISTING ~20VREKC.bcs~ ~override~
 !HasItem("USHFSL09","Container_1")~
 	END
 */
+
+OUTER_SET ref_41605 = RESOLVE_STR_REF(@41605)
+OUTER_SET ref_41606 = RESOLVE_STR_REF(@41606)
+
+<<<<<<<< .../script.baf
+IF
+	Global("WATCHING_PLAYER","MYAREA",1)
+	Global("US_Sersa_In_Chamber","MYAREA",0)
+	IsScriptName("USSERS",Player1)
+THEN
+	RESPONSE #100
+		SetGlobal("US_Sersa_In_Chamber","MYAREA",1)
+END
+
+IF
+	Global("WATCHING_PLAYER","MYAREA",1)
+	Global("US_Sersa_In_Chamber","MYAREA",1)
+	!IsScriptName("USSERS",Player1)
+THEN
+	RESPONSE #100
+		SetGlobal("US_Sersa_In_Chamber","MYAREA",0)
+END
+
+IF
+	Global("WATCHING_PLAYER","MYAREA",2)
+	Global("US_Sersa_In_Chamber","MYAREA",0)
+	IsScriptName("USSERS",Player2)
+THEN
+	RESPONSE #100
+		SetGlobal("US_Sersa_In_Chamber","MYAREA",1)
+END
+
+IF
+	Global("WATCHING_PLAYER","MYAREA",2)
+	Global("US_Sersa_In_Chamber","MYAREA",1)
+	!IsScriptName("USSERS",Player2)
+THEN
+	RESPONSE #100
+		SetGlobal("US_Sersa_In_Chamber","MYAREA",0)
+END
+
+IF
+	Global("WATCHING_PLAYER","MYAREA",3)
+	Global("US_Sersa_In_Chamber","MYAREA",0)
+	IsScriptName("USSERS",Player3)
+THEN
+	RESPONSE #100
+		SetGlobal("US_Sersa_In_Chamber","MYAREA",1)
+END
+
+IF
+	Global("WATCHING_PLAYER","MYAREA",3)
+	Global("US_Sersa_In_Chamber","MYAREA",1)
+	!IsScriptName("USSERS",Player3)
+THEN
+	RESPONSE #100
+		SetGlobal("US_Sersa_In_Chamber","MYAREA",0)
+END
+
+IF
+	Global("WATCHING_PLAYER","MYAREA",4)
+	Global("US_Sersa_In_Chamber","MYAREA",0)
+	IsScriptName("USSERS",Player4)
+THEN
+	RESPONSE #100
+		SetGlobal("US_Sersa_In_Chamber","MYAREA",1)
+END
+
+IF
+	Global("WATCHING_PLAYER","MYAREA",4)
+	Global("US_Sersa_In_Chamber","MYAREA",1)
+	!IsScriptName("USSERS",Player4)
+THEN
+	RESPONSE #100
+		SetGlobal("US_Sersa_In_Chamber","MYAREA",0)
+END
+
+IF
+	Global("WATCHING_PLAYER","MYAREA",5)
+	Global("US_Sersa_In_Chamber","MYAREA",0)
+	IsScriptName("USSERS",Player5)
+THEN
+	RESPONSE #100
+		SetGlobal("US_Sersa_In_Chamber","MYAREA",1)
+END
+
+IF
+	Global("WATCHING_PLAYER","MYAREA",5)
+	Global("US_Sersa_In_Chamber","MYAREA",1)
+	!IsScriptName("USSERS",Player5)
+THEN
+	RESPONSE #100
+		SetGlobal("US_Sersa_In_Chamber","MYAREA",0)
+END
+
+IF
+	Global("WATCHING_PLAYER","MYAREA",6)
+	Global("US_Sersa_In_Chamber","MYAREA",0)
+	IsScriptName("USSERS",Player6)
+THEN
+	RESPONSE #100
+		SetGlobal("US_Sersa_In_Chamber","MYAREA",1)
+END
+
+IF
+	Global("WATCHING_PLAYER","MYAREA",6)
+	Global("US_Sersa_In_Chamber","MYAREA",1)
+	!IsScriptName("USSERS",Player6)
+THEN
+	RESPONSE #100
+		SetGlobal("US_Sersa_In_Chamber","MYAREA",0)
+END
+
+IF
+	Global("US_Sersa_In_Chamber","MYAREA",1)
+	Global("C_1_MASTERED","MYAREA",1)
+	Global("US_Sersa_Mastered_C_1","MYAREA",0)
+THEN
+	RESPONSE #100
+		SetGlobal("US_Sersa_Mastered_C_1","MYAREA",1)
+		DisplayMessage(%ref_41605%)
+END
+
+IF
+	Global("US_Sersa_In_Chamber","MYAREA",0)
+	Global("C_1_MASTERED","MYAREA",1)
+	Global("US_Sersa_Mastered_C_1","MYAREA",0)
+THEN
+	RESPONSE #100
+		SetGlobal("US_Sersa_Mastered_C_1","MYAREA",-1)
+END
+
+IF
+	Global("US_Sersa_In_Chamber","MYAREA",1)
+	Global("C_2_MASTERED","MYAREA",1)
+	Global("US_Sersa_Mastered_C_2","MYAREA",0)
+THEN
+	RESPONSE #100
+		SetGlobal("US_Sersa_Mastered_C_2","MYAREA",1)
+		DisplayMessage(%ref_41605%)
+END
+
+IF
+	Global("US_Sersa_In_Chamber","MYAREA",0)
+	Global("C_2_MASTERED","MYAREA",1)
+	Global("US_Sersa_Mastered_C_2","MYAREA",0)
+THEN
+	RESPONSE #100
+		SetGlobal("US_Sersa_Mastered_C_2","MYAREA",-1)
+END
+
+IF
+	Global("US_Sersa_In_Chamber","MYAREA",1)
+	Global("C_3_MASTERED","MYAREA",1)
+	Global("US_Sersa_Mastered_C_3","MYAREA",0)
+THEN
+	RESPONSE #100
+		SetGlobal("US_Sersa_Mastered_C_3","MYAREA",1)
+		DisplayMessage(%ref_41605%)
+END
+
+IF
+	Global("US_Sersa_In_Chamber","MYAREA",0)
+	Global("C_3_MASTERED","MYAREA",1)
+	Global("US_Sersa_Mastered_C_3","MYAREA",0)
+THEN
+	RESPONSE #100
+		SetGlobal("US_Sersa_Mastered_C_3","MYAREA",-1)
+END
+
+IF
+	Global("US_Sersa_In_Chamber","MYAREA",1)
+	Global("C_4_MASTERED","MYAREA",1)
+	Global("US_Sersa_Mastered_C_4","MYAREA",0)
+THEN
+	RESPONSE #100
+		SetGlobal("US_Sersa_Mastered_C_4","MYAREA",1)
+		DisplayMessage(%ref_41605%)
+END
+
+IF
+	Global("US_Sersa_In_Chamber","MYAREA",0)
+	Global("C_4_MASTERED","MYAREA",1)
+	Global("US_Sersa_Mastered_C_4","MYAREA",0)
+THEN
+	RESPONSE #100
+		SetGlobal("US_Sersa_Mastered_C_4","MYAREA",-1)
+END
+
+IF
+	Global("US_Sersa_In_Chamber","MYAREA",1)
+	Global("C_5_MASTERED","MYAREA",1)
+	Global("US_Sersa_Mastered_C_5","MYAREA",0)
+THEN
+	RESPONSE #100
+		SetGlobal("US_Sersa_Mastered_C_5","MYAREA",1)
+		DisplayMessage(%ref_41605%)
+END
+
+IF
+	Global("US_Sersa_In_Chamber","MYAREA",0)
+	Global("C_5_MASTERED","MYAREA",1)
+	Global("US_Sersa_Mastered_C_5","MYAREA",0)
+THEN
+	RESPONSE #100
+		SetGlobal("US_Sersa_Mastered_C_5","MYAREA",-1)
+END
+
+IF
+	Global("US_Sersa_In_Chamber","MYAREA",1)
+	Global("C_6_MASTERED","MYAREA",1)
+	Global("US_Sersa_Mastered_C_6","MYAREA",0)
+THEN
+	RESPONSE #100
+		SetGlobal("US_Sersa_Mastered_C_6","MYAREA",1)
+		DisplayMessage(%ref_41605%)
+END
+
+IF
+	Global("US_Sersa_In_Chamber","MYAREA",0)
+	Global("C_6_MASTERED","MYAREA",1)
+	Global("US_Sersa_Mastered_C_6","MYAREA",0)
+THEN
+	RESPONSE #100
+		SetGlobal("US_Sersa_Mastered_C_6","MYAREA",-1)
+END
+
+IF
+	Global("US_Sersa_In_Chamber","MYAREA",1)
+	Global("C_7_MASTERED","MYAREA",1)
+	Global("US_Sersa_Mastered_C_7","MYAREA",0)
+THEN
+	RESPONSE #100
+		SetGlobal("US_Sersa_Mastered_C_7","MYAREA",1)
+		DisplayMessage(%ref_41605%)
+END
+
+IF
+	Global("US_Sersa_In_Chamber","MYAREA",0)
+	Global("C_7_MASTERED","MYAREA",1)
+	Global("US_Sersa_Mastered_C_7","MYAREA",0)
+THEN
+	RESPONSE #100
+		SetGlobal("US_Sersa_Mastered_C_7","MYAREA",-1)
+END
+
+IF
+	Global("US_Sersa_In_Chamber","MYAREA",1)
+	Global("C_8_MASTERED","MYAREA",1)
+	Global("US_Sersa_Mastered_C_1","MYAREA",1)
+	Global("US_Sersa_Mastered_C_2","MYAREA",1)
+	Global("US_Sersa_Mastered_C_3","MYAREA",1)
+	Global("US_Sersa_Mastered_C_4","MYAREA",1)
+	Global("US_Sersa_Mastered_C_5","MYAREA",1)
+	Global("US_Sersa_Mastered_C_6","MYAREA",1)
+	Global("US_Sersa_Mastered_C_7","MYAREA",1)
+	Global("US_Sersa_Mastered_C_8","MYAREA",0)
+THEN
+	RESPONSE #100
+		SetGlobal("US_Sersa_Mastered_C_8","MYAREA",1)
+		SetGlobal("US_Sersa_Mastered_All","GLOBAL",1)
+		DisplayMessage(%ref_41606%)
+END
+
+IF
+	Global("US_Sersa_In_Chamber","MYAREA",1)
+	Global("C_8_MASTERED","MYAREA",1)
+	Global("US_Sersa_Mastered_C_8","MYAREA",0)
+THEN
+	RESPONSE #100
+		SetGlobal("US_Sersa_Mastered_C_8","MYAREA",1)
+		DisplayMessage(%ref_41605%)
+END
+
+IF
+	Global("US_Sersa_In_Chamber","MYAREA",0)
+	Global("C_8_MASTERED","MYAREA",1)
+	Global("US_Sersa_Mastered_C_8","MYAREA",0)
+THEN
+	RESPONSE #100
+		SetGlobal("US_Sersa_Mastered_C_8","MYAREA",-1)
+END
+
+IF
+	Global("WATCHING_PLAYER","MYAREA",0)
+	Global("US_Sersa_In_Chamber","MYAREA",1)
+THEN
+	RESPONSE #100
+		SetGlobal("US_Sersa_In_Chamber","MYAREA",0)
+END
+
+>>>>>>>>
+EXTEND_BOTTOM ~AR5202.bcs~ ~.../script.baf~ EVAL
+
+COPY_EXISTING ~AR6303.are~ ~override~
+	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR actor_name=~Yxbudurzmutkimdu~ script_team=~USYXBUT~ script_special2=~USYXBUD~ script_movement=~USENFOLO~ END
+	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR actor_name=~Pfinikmillillin~ script_team=~USYXBUT~ script_movement=~USENFOLO~ END
+	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR actor_name=~Tutuplimbobo~ script_team=~USYXBUT~ script_movement=~USENFOLO~ END
+	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR actor_name=~Lemure Slave~ script_team=~USYXBUT~ script_special3=~USENFOLO~ END
+	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR actor_name=~Wight Lemure Slave~ script_team=~USYXBUT~ script_special3=~USENFOLO~ END
+
 INCLUDE ~%mod_folder%/components/final_patches.tpa~

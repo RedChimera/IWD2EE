@@ -1,19 +1,5 @@
 BEGIN ~20NEWEMM~
 
-IF WEIGHT #0 ~Global("US_VREK_JOIN","GLOBAL",1)
-InParty("USVREK")~ THEN BEGIN VrekJoined
-  SAY @40034
-  IF ~~ THEN REPLY @40035 DO ~SetGlobal("SR_Emma_Revenge","GLOBAL",2)~ GOTO EmmaAttack
-  IF ~~ THEN REPLY @40036 DO ~SetGlobal("SR_Emma_Revenge","GLOBAL",2)~ GOTO EmmaAttack
-END
-
-IF WEIGHT #6 ~  NumberOfTimesTalkedTo(0)
-~ THEN BEGIN 0
-  SAY #36409
-  IF ~~ THEN REPLY #36410 GOTO 1
-  IF ~~ THEN REPLY #36411 GOTO 2
-END
-
 IF ~~ THEN BEGIN 1
   SAY #36412
   IF ~~ THEN REPLY #36413 GOTO 4
@@ -335,6 +321,20 @@ END
 IF ~~ THEN BEGIN 30
   SAY #36471
   IF ~~ THEN REPLY #36434 DO ~StartCutScene("20cEmma2")~ EXIT
+END
+
+IF WEIGHT #0 ~Global("US_VREK_JOIN","GLOBAL",1)
+InParty("USVREK")~ THEN BEGIN VrekJoined
+  SAY @40034
+  IF ~~ THEN REPLY @40035 DO ~SetGlobal("SR_Emma_Revenge","GLOBAL",2)~ GOTO EmmaAttack
+  IF ~~ THEN REPLY @40036 DO ~SetGlobal("SR_Emma_Revenge","GLOBAL",2)~ GOTO EmmaAttack
+END
+
+IF WEIGHT #6 ~  NumberOfTimesTalkedTo(0)
+~ THEN BEGIN 0
+  SAY #36409
+  IF ~~ THEN REPLY #36410 GOTO 1
+  IF ~~ THEN REPLY #36411 GOTO 2
 END
 
 IF ~~ THEN BEGIN EmmaJoin1

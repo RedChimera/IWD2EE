@@ -4,6 +4,7 @@ ex_proficiency_attack = {[0] = -4, [1] = 0, [2] = 1, [3] = 1, [4] = 1, [5] = 1}
 ex_on_join_party_special_script_1_set = {}
 ex_on_join_party_team_script_set = {}
 ex_on_join_party_dlg_set = {["DEFAULT"] = "MULTIG", }
+ex_on_leave_party_team_script_set = {}
 ex_on_leave_party_dlg_set = {["DEFAULT"] = "USMULTIG", }
 ex_timed_banter_list = {}
 ex_caster_max_spell_level = {[2] = {22, 8}, [3] = {17, 9}, [4] = {17, 9}, [7] = {17, 6}, [8] = {17, 6}, [10] = {18, 9}, [11] = {17, 9}}

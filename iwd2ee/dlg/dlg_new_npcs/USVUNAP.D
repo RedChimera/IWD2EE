@@ -6,12 +6,12 @@ GlobalLT("CHAPTER","GLOBAL",2)~ THEN BEGIN 0
   IF ~!NumInParty(6)~ THEN REPLY @40210 DO ~JoinParty()~ EXIT
   IF ~~ THEN REPLY @40211 DO ~DestroySelf()~ EXIT
   IF ~~ THEN REPLY @40212 DO ~DestroySelf()~ EXIT
-  IF ~~ THEN REPLY @40213 DO ~Enemy()~ EXIT
+  IF ~~ THEN REPLY @40213 DO ~ChangeEnemyAlly(Myself,ENEMY)~ EXIT
 END
 
 IF ~!InParty(Myself)
 GlobalGT("CHAPTER","GLOBAL",1)~ THEN BEGIN 1
   SAY @40214
   IF ~!NumInParty(6)~ THEN REPLY @40215 DO ~JoinParty()~ EXIT
-  IF ~~ THEN REPLY @40216 DO ~Enemy()~ EXIT
+  IF ~~ THEN REPLY @40216 DO ~ChangeEnemyAlly(Myself,ENEMY)~ EXIT
 END
