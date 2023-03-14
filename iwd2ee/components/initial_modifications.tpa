@@ -9,6 +9,8 @@ COPY ~%mod_folder%/ieex_main_folder~ ~./~
 
 ACTION_IF NOT MOD_IS_INSTALLED ~ddrawfix.tp2~ ~0~ AND NOT MOD_IS_INSTALLED ~ddrawfix.tp2~ ~2~ AND NOT FILE_EXISTS ~./aqrit.cfg~ AND NOT FILE_EXISTS ~./ddraw.ini~ BEGIN
 	COPY ~%mod_folder%/ddrawfix~ ~./~
+	AT_NOW ~rmdir "Shaders" /s /q & xcopy "%mod_folder%\ddrawfix\Shaders" "Shaders" /i /s /e~ EXACT
+	AT_UNINSTALL ~rmdir "Shaders" /s /q~ EXACT
 END
 
 ACTION_FOR_EACH file IN ACTION TRIGGER BEGIN
