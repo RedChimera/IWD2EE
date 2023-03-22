@@ -182,6 +182,7 @@ COPY_EXISTING ~IEex_WEIDU.lua~ ~override~
 	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_dash_movement_multiplier *=.*~ ~ex_dash_movement_multiplier = 133~
 	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_pnp_ranged_penalty_without_precise_shot_to_avoid_hitting_ally *=.*~ ~ex_pnp_ranged_penalty_without_precise_shot_to_avoid_hitting_ally = -4~
 	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_paladin_charisma_save_bonus_level *=.*~ ~ex_paladin_charisma_save_bonus_level = 2~
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_max_skill_points_saved_for_next_level *=.*~ ~ex_max_skill_points_saved_for_next_level = 5~
 
 COPY_EXISTING_REGEXP ~00MFIST.*\.itm~ ~override~ ~USMFIS[0-5][0-9]\.itm~ ~override~
 	LPF DELETE_EFFECT INT_VAR silent=1 check_headers=0 check_globals=1 match_opcode=1 END
