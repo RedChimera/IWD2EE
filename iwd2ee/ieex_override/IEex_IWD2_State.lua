@@ -9754,6 +9754,8 @@ function MESPLATK(effectData, creatureData)
 	local spellRES = IEex_ReadLString(effectData + 0x18, 8)
 	local parent_resource = IEex_ReadLString(effectData + 0x90, 8)
 	local isRanged = (bit.band(savingthrow, 0x10000) > 0)
+	local ignoreIfNotUndead = (bit.band(savingthrow, 0x10000000) > 0)
+	if ignoreIfNotUndead and IEex_ReadByte(creatureData + 0x25, 0x0) ~= 4 then return end
 	local currentAttackPenalty = 0
 	local proficiencyFeat = ex_melee_touch_attack_proficiency_feat
 	if isRanged then
@@ -11567,7 +11569,34 @@ function MEBUFFRC(effectData, creatureData)
 ["parent_resource"] = "EXBUFFRC",
 ["source_id"] = sourceID
 })
+end
+
+function MEBUFFCA(effectData, creatureData)
+	IEex_WriteDword(effectData + 0x110, 1)
+	if IEex_CheckForEffectRepeat(effectData, creatureData) then return end
+	local sourceID = IEex_GetActorIDShare(creatureData)
+	if not IEex_IsSprite(sourceID, false) or not IEex_IsPartyMember(sourceID) then return end
+	local spellRES = IEex_ReadLString(effectData + 0x6C, 8)
+	local partySlot = -1
+	for i = 0, 5, 1 do
+		if sourceID == IEex_GetActorIDCharacter(i) then
+			partySlot = i
+		end
 	end
+	if partySlot == -1 then
+		return
+	end
+	local sourceX, sourceY = IEex_GetActorLocation(sourceID)
+	local parameter3 = IEex_ReadDword(effectData + 0x5C)
+	local parameter4 = IEex_ReadDword(effectData + 0x60)
+	IEex_DS(IEex_GetGameTick())
+	if parameter4 == 0 then
+		IEex_Eval('SpellRES(\"' .. spellRES .. '\",Player' .. (parameter3 + 1) .. ')',partySlot)
+	else
+		IEex_Eval('SpellPointRES(\"' .. spellRES .. '\",[' .. sourceX .. '.' .. sourceY .. '])',partySlot)
+	end
+--	IEex_Eval('SmallWait(1)',partySlot)
+end
 
 function MEONCAST(effectData, creatureData)
 	IEex_WriteDword(effectData + 0x110, 1)

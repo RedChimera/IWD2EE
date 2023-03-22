@@ -708,6 +708,11 @@ COPY_EXISTING ~AR1105.are~ ~override~
 COPY_EXISTING ~AR1107.are~ ~override~
 	LPF ALTER_AREA_CONTAINER_IWD2 INT_VAR lock_difficulty=25 STR_VAR container_name=~Locked Desk Drawer~ END
 
+COPY_EXISTING ~40NAJMPL.bcs~ ~override~ ~40NAJMPR.bcs~ ~override~
+	DECOMPILE_AND_PATCH BEGIN
+		REPLACE_TEXTUALLY ~SetCreatureAreaFlag(.*~ ~~
+	END
+
 COPY_EXISTING ~AR4102.are~ ~override~
 	LPF ALTER_AREA_DOOR_IWD2 INT_VAR lock_difficulty=65 STR_VAR door_name=~AR4102_Door1~ END
 
@@ -1455,12 +1460,42 @@ COPY_EXISTING_REGEXP ~.*\.are~ ~override~
 	END
 	READ_SHORT 0xB4 numdoors
 	READ_LONG 0xB8 dooroffset
+	READ_LONG 0x8C vertexoffset
 	FOR (i = 0; i < numdoors; ++i) BEGIN
 		READ_SHORT (dooroffset + 0x6C) trapdetectiondifficulty
 		READ_SHORT (dooroffset + 0x70) istrapped
 		PATCH_IF istrapped > 0 AND trapdetectiondifficulty != 100 BEGIN
 			WRITE_SHORT (dooroffset + 0x6C) (trapdetectiondifficulty + 1000)
 		END
+
+		READ_SSHORT (dooroffset + 0x3E) boundingboxopenbottom
+		PATCH_IF boundingboxopenbottom < 50 BEGIN
+			WRITE_SHORT (dooroffset + 0x38) (0 - 1)
+			WRITE_SHORT (dooroffset + 0x3A) (0 - 1)
+			WRITE_SHORT (dooroffset + 0x3C) (0 - 1)
+			WRITE_SHORT (dooroffset + 0x3E) (0 - 1)
+			READ_LONG (dooroffset + 0x2C) firstvertexindexopen
+			READ_SHORT (dooroffset + 0x30) numverticesopen
+			FOR (j = 0; j < numverticesopen; ++j) BEGIN
+				WRITE_SHORT (vertexoffset + (firstvertexindexopen + j) * 0x4) (0 - 1)
+				WRITE_SHORT (vertexoffset + (firstvertexindexopen + j) * 0x4 + 0x2) (0 - 1)
+			END
+		END
+
+		READ_SSHORT (dooroffset + 0x46) boundingboxclosedbottom
+		PATCH_IF boundingboxclosedbottom < 50 BEGIN
+			WRITE_SHORT (dooroffset + 0x40) (0 - 1)
+			WRITE_SHORT (dooroffset + 0x42) (0 - 1)
+			WRITE_SHORT (dooroffset + 0x44) (0 - 1)
+			WRITE_SHORT (dooroffset + 0x46) (0 - 1)
+			READ_SHORT (dooroffset + 0x32) numverticesclosed
+			READ_LONG (dooroffset + 0x34) firstvertexindexclosed
+			FOR (j = 0; j < numverticesclosed; ++j) BEGIN
+				WRITE_SHORT (vertexoffset + (firstvertexindexclosed + j) * 0x4) (0 - 1)
+				WRITE_SHORT (vertexoffset + (firstvertexindexclosed + j) * 0x4 + 0x2) (0 - 1)
+			END
+		END
+
 		dooroffset += 0xC8
 	END
 	UNLESS ~USAREAGL~

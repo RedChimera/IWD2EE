@@ -309,7 +309,8 @@ function IEex_Scroll_KeyReleasedListener(key)
 end
 
 ex_buff_reactivate_cooldown = 3
-
+ex_buff_activate_tick = 0
+ex_buff_recorded_list = {{}, {}, {}, {}, {}, {}, }
 function IEex_BuffRecordingListener(key)
 --	if IEex_IsKeyDown(IEex_KeyIDS.LEFT_ALT) or IEex_IsKeyDown(IEex_KeyIDS.RIGHT_ALT) then
 	if ex_enable_autobuffing_keys then
@@ -360,12 +361,28 @@ function IEex_BuffRecordingListener(key)
 					for k, v in ipairs(recordedBuffs) do
 						local targetID = IEex_GetActorIDCharacter(v[2])
 						if IEex_IsSprite(targetID, false) and IEex_CheckActorLOSObject(actorID, targetID) then
+--[[
+							IEex_ApplyEffectToActor(actorID, {
+["opcode"] = 500,
+["target"] = 2,
+["timing"] = 4,
+["duration"] = k,
+["parameter3"] = v[2],
+["parameter4"] = v[3],
+["resource"] = "MEBUFFCA",
+["vvcresource"] = v[1],
+["parent_resource"] = "EXBUFFCA",
+["source_id"] = actorID
+})
+--]]
+
 							if v[3] == 0 then
 								IEex_Eval('SpellRES(\"' .. v[1] .. '\",Player' .. (v[2] + 1) .. ')',i)
 							else
 								IEex_Eval('SpellPointRES(\"' .. v[1] .. '\",[' .. sourceX .. '.' .. sourceY .. '])',i)
 							end
 							IEex_Eval('SmallWait(1)',i)
+
 						end
 					end
 				end
@@ -431,7 +448,7 @@ ex_chargen_ability_buttons_pressed = {[16] = false, [17] = false, [18] = false, 
 ex_ability_scores_initialized = false
 ex_extra_feats_granted = false
 ex_extra_skill_points_granted = false
-ex_current_remaining_points = 0
+ex_current_remaining_points = ex_new_ability_score_total_points
 ex_recorded_remaining_points = 0
 racialAbilityBonuses = {0, 0, 0, 0, 0, 0}
 currentAbilityScores = {0, 0, 0, 0, 0, 0}
@@ -464,6 +481,12 @@ function IEex_Chargen_ExtraFeatListener()
 						IEex_WriteDword(chargenData + 0x4EA, ex_current_remaining_points)
 						for i = 1, 6, 1 do
 							IEex_WriteByte(share + ex_base_ability_score_cre_offset[i], currentAbilityScores[i])
+						end
+					end
+					if ex_new_ability_score_system == 3 then
+						IEex_WriteDword(chargenData + 0x4EA, ex_new_ability_score_total_points)
+						for i = 1, 6, 1 do
+							currentAbilityScores[i] = IEex_ReadByte(share + ex_base_ability_score_cre_offset[i], currentAbilityScores[i])
 						end
 					end
 					if ex_new_ability_score_system == 1 or ex_new_ability_score_system == 2 then
@@ -518,6 +541,35 @@ function IEex_Chargen_ExtraFeatListener()
 							end
 						end)
 					end
+				elseif panelID == 4 and ex_new_ability_score_system == 3 then
+					local panelData = IEex_ReadDword(IEex_ReadDword(chargenData + 0x53E) + 0x8)
+					IEex_IterateCPtrList(panelData + 0x4, function(controlData)
+						local controlIndex = IEex_ReadByte(controlData + 0xA, 0x0)
+						if ex_chargen_ability_buttons_pressed[controlIndex] ~= nil then
+							local buttonWasPressed = ex_chargen_ability_buttons_pressed[controlIndex]
+							local buttonIsPressed = (IEex_ReadByte(controlData + 0x134, 0x0) > 0)
+							if buttonWasPressed or buttonIsPressed then
+--[[
+								if controlIndex == 16 or controlIndex == 18 or controlIndex == 20 or controlIndex == 22 or controlIndex == 24 or controlIndex == 26 then
+									local a = math.floor(controlIndex / 2) - 7
+									if currentAbilityScores[a] == 0 and #unallocatedAbilityScores > 0 then
+										currentAbilityScores[a] = table.remove(unallocatedAbilityScores) + racialAbilityBonuses[a]
+									end
+								elseif controlIndex == 17 or controlIndex == 19 or controlIndex == 21 or controlIndex == 23 or controlIndex == 25 or controlIndex == 27 then
+									local a = math.floor(controlIndex / 2) - 7
+									local newAbilityScore = IEex_ReadByte(share + ex_base_ability_score_cre_offset[a], 0x0)
+									if currentAbilityScores[a] ~ then
+										table.insert(unallocatedAbilityScores, currentAbilityScores[a] - racialAbilityBonuses[a])
+										table.sort(unallocatedAbilityScores)
+										currentAbilityScores[a] = 0
+									end
+								end
+--]]
+								IEex_Chargen_UpdateAbilityScores(chargenData, share)
+							end
+							ex_chargen_ability_buttons_pressed[controlIndex] = buttonIsPressed
+						end
+					end)
 				end
 			else
 				if (panelID == 2 or panelID == 8) and (currentAbilityScores[1] > 0 or #unallocatedAbilityScores > 0) then
@@ -891,93 +943,122 @@ function IEex_Chargen_Reroll()
 end
 
 function IEex_Chargen_UpdateAbilityScores(chargenData, share)
-	local abilityScoreTotal = 0
-	local recordedAbilityScoreTotal = 0
-	for i = 1, 6, 1 do
-		abilityScoreTotal = abilityScoreTotal + currentAbilityScores[i]
-		if currentAbilityScores[i] == 0 then
-			abilityScoreTotal = abilityScoreTotal + racialAbilityBonuses[i]
-		end
-		recordedAbilityScoreTotal = recordedAbilityScoreTotal + recordedAbilityScores[i]
-		if recordedAbilityScores[i] == 0 then
-			recordedAbilityScoreTotal = recordedAbilityScoreTotal + racialAbilityBonuses[i]
-		end
-		if ex_new_ability_score_system == 1 then
-			if #unallocatedAbilityScores == 0 then
-				IEex_WriteDword(chargenData + 0x4EA, 0)
-			else
-				IEex_WriteDword(chargenData + 0x4EA, unallocatedAbilityScores[#unallocatedAbilityScores])
-				if #unallocatedAbilityScores >= i then
-					abilityScoreTotal = abilityScoreTotal + unallocatedAbilityScores[i]
+	if ex_new_ability_score_system == 1 or ex_new_ability_score_system == 2 then
+		local abilityScoreTotal = 0
+		local recordedAbilityScoreTotal = 0
+		for i = 1, 6, 1 do
+			abilityScoreTotal = abilityScoreTotal + currentAbilityScores[i]
+			if currentAbilityScores[i] == 0 then
+				abilityScoreTotal = abilityScoreTotal + racialAbilityBonuses[i]
+			end
+			recordedAbilityScoreTotal = recordedAbilityScoreTotal + recordedAbilityScores[i]
+			if recordedAbilityScores[i] == 0 then
+				recordedAbilityScoreTotal = recordedAbilityScoreTotal + racialAbilityBonuses[i]
+			end
+			if ex_new_ability_score_system == 1 then
+				if #unallocatedAbilityScores == 0 then
+					IEex_WriteDword(chargenData + 0x4EA, 0)
+				else
+					IEex_WriteDword(chargenData + 0x4EA, unallocatedAbilityScores[#unallocatedAbilityScores])
+					if #unallocatedAbilityScores >= i then
+						abilityScoreTotal = abilityScoreTotal + unallocatedAbilityScores[i]
+					end
+					if #recordedUnallocatedAbilityScores >= i then
+						recordedAbilityScoreTotal = recordedAbilityScoreTotal + recordedUnallocatedAbilityScores[i]
+					end
 				end
-				if #recordedUnallocatedAbilityScores >= i then
-					recordedAbilityScoreTotal = recordedAbilityScoreTotal + recordedUnallocatedAbilityScores[i]
+				IEex_WriteByte(chargenData + 0x50D + i, currentAbilityScores[i])
+				IEex_WriteByte(chargenData + 0x513 + i, currentAbilityScores[i])
+				IEex_WriteByte(share + ex_base_ability_score_cre_offset[i], currentAbilityScores[i])
+			end
+	
+		end
+		if recordedAbilityScoreTotal >= -4 and recordedAbilityScoreTotal <= 4 then
+			recordedAbilityScoreTotal = 0
+		end
+		if ex_new_ability_score_system == 2 then
+			for i = 1, 6, 1 do
+				currentAbilityScores[i] = IEex_ReadByte(share + ex_base_ability_score_cre_offset[i], 0x0)
+			end
+			ex_current_remaining_points = IEex_ReadDword(chargenData + 0x4EA)
+		end
+		local infoString = string.gsub(string.gsub(ex_str_ability_roll_total, "<EXRRTOTAL>", abilityScoreTotal), "<EXRRRECTOTAL>", recordedAbilityScoreTotal)
+	
+		if ex_new_ability_score_system == 1 then
+			local unallocatedString = ""
+			for i = #unallocatedAbilityScores, 1, -1 do
+				unallocatedString = unallocatedString .. unallocatedAbilityScores[i] .. " "
+			end
+			infoString = infoString .. string.gsub(ex_str_ability_roll_unallocated, "<EXRRUNALLOCATED>", unallocatedString)
+		end
+		infoString = infoString .. ex_str_ability_roll_help_1
+		if ex_new_ability_score_system == 1 then
+			infoString = infoString .. ex_str_ability_roll_help_2
+		end
+		infoString = infoString .. "--------\n"
+		IEex_SetToken("EXRRINFO", infoString)
+		IEex_EngineCreateCharUpdatePopupPanel()
+		local infoStrref = 17247
+		local textAreaData = 0
+		IEex_IterateCPtrList(IEex_ReadDword(IEex_ReadDword(chargenData + 0x53E) + 0x8) + 0x4, function(controlData)
+			if IEex_ReadByte(controlData + 0xA, 0x0) == 29 then
+				textAreaData = controlData
+			end
+		end)
+		if textAreaData > 0 and IEex_ReadDword(textAreaData + 0x56) > 0 then
+			local foundIt = false
+			for k, v in ipairs(ex_chargen_ability_strrefs) do
+				if not foundIt then
+					local vString = string.gsub(IEex_FetchString(v), "<EXRRINFO>", "")
+					local matchNext = false
+					IEex_IterateCPtrList(textAreaData + 0x52, function(lineEntry)
+						local line = IEex_ReadString(IEex_ReadDword(lineEntry + 0x4))
+						if string.match(line, "%-%-%-%-%-%-%-%-") then
+							matchNext = true
+						elseif matchNext then
+							matchNext = false
+							line = string.gsub(line, "%(", "")
+							line = string.gsub(line, "%)", "")
+							vString = string.gsub(vString, "%(", "")
+							vString = string.gsub(vString, "%)", "")
+							if string.match(vString, line) then
+								foundIt = true
+								infoStrref = v
+							end
+						end
+					end)
 				end
 			end
-			IEex_WriteByte(chargenData + 0x50D + i, currentAbilityScores[i])
-			IEex_WriteByte(chargenData + 0x513 + i, currentAbilityScores[i])
-			IEex_WriteByte(share + ex_base_ability_score_cre_offset[i], currentAbilityScores[i])
 		end
-
-	end
-	if recordedAbilityScoreTotal >= -4 and recordedAbilityScoreTotal <= 4 then
-		recordedAbilityScoreTotal = 0
-	end
-	if ex_new_ability_score_system == 2 then
+		IEex_SetTextAreaToStrref(chargenData, 4, 29, infoStrref)
+	elseif ex_new_ability_score_system == 3 then
 		for i = 1, 6, 1 do
-			currentAbilityScores[i] = IEex_ReadByte(share + ex_base_ability_score_cre_offset[i], 0x0)
+			local newAbilityScore = IEex_ReadByte(share + ex_base_ability_score_cre_offset[i], 0x0)
+			if newAbilityScore > currentAbilityScores[i] then
+				for j = currentAbilityScores[i] + 1, newAbilityScore, 1 do
+					local cost = ex_new_ability_score_increase_cost[j - racialAbilityBonuses[i]]
+					if cost <= ex_current_remaining_points then
+						ex_current_remaining_points = ex_current_remaining_points - cost
+					else
+						newAbilityScore = j - 1
+						IEex_WriteDword(chargenData + 0x4EA, ex_current_remaining_points)
+						IEex_WriteByte(share + ex_base_ability_score_cre_offset[i], newAbilityScore)
+						break
+					end
+					IEex_WriteDword(chargenData + 0x4EA, ex_current_remaining_points)
+				end
+			elseif newAbilityScore < currentAbilityScores[i] then
+				for j = currentAbilityScores[i], newAbilityScore + 1, -1 do
+					local cost = ex_new_ability_score_increase_cost[j - racialAbilityBonuses[i]]
+					ex_current_remaining_points = ex_current_remaining_points + cost
+					IEex_WriteDword(chargenData + 0x4EA, ex_current_remaining_points)
+				end
+			end
+			currentAbilityScores[i] = newAbilityScore
 		end
 		ex_current_remaining_points = IEex_ReadDword(chargenData + 0x4EA)
+		IEex_EngineCreateCharUpdatePopupPanel()
 	end
-	local infoString = string.gsub(string.gsub(ex_str_ability_roll_total, "<EXRRTOTAL>", abilityScoreTotal), "<EXRRRECTOTAL>", recordedAbilityScoreTotal)
-
-	if ex_new_ability_score_system == 1 then
-		local unallocatedString = ""
-		for i = #unallocatedAbilityScores, 1, -1 do
-			unallocatedString = unallocatedString .. unallocatedAbilityScores[i] .. " "
-		end
-		infoString = infoString .. string.gsub(ex_str_ability_roll_unallocated, "<EXRRUNALLOCATED>", unallocatedString)
-	end
-	infoString = infoString .. ex_str_ability_roll_help_1
-	if ex_new_ability_score_system == 1 then
-		infoString = infoString .. ex_str_ability_roll_help_2
-	end
-	infoString = infoString .. "--------\n"
-	IEex_SetToken("EXRRINFO", infoString)
-	IEex_EngineCreateCharUpdatePopupPanel()
-	local infoStrref = 17247
-	local textAreaData = 0
-	IEex_IterateCPtrList(IEex_ReadDword(IEex_ReadDword(chargenData + 0x53E) + 0x8) + 0x4, function(controlData)
-		if IEex_ReadByte(controlData + 0xA, 0x0) == 29 then
-			textAreaData = controlData
-		end
-	end)
-	if textAreaData > 0 and IEex_ReadDword(textAreaData + 0x56) > 0 then
-		local foundIt = false
-		for k, v in ipairs(ex_chargen_ability_strrefs) do
-			if not foundIt then
-				local vString = string.gsub(IEex_FetchString(v), "<EXRRINFO>", "")
-				local matchNext = false
-				IEex_IterateCPtrList(textAreaData + 0x52, function(lineEntry)
-					local line = IEex_ReadString(IEex_ReadDword(lineEntry + 0x4))
-					if string.match(line, "%-%-%-%-%-%-%-%-") then
-						matchNext = true
-					elseif matchNext then
-						matchNext = false
-						line = string.gsub(line, "%(", "")
-						line = string.gsub(line, "%)", "")
-						vString = string.gsub(vString, "%(", "")
-						vString = string.gsub(vString, "%)", "")
-						if string.match(vString, line) then
-							foundIt = true
-							infoStrref = v
-						end
-					end
-				end)
-			end
-		end
-	end
-	IEex_SetTextAreaToStrref(chargenData, 4, 29, infoStrref)
 end
 
 function IEex_DeathwatchListener()

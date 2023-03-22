@@ -1429,18 +1429,20 @@ COPY_EXISTING ~52YETGH.cre~ ~override~ ~52YETTG.cre~ ~override~ ~52YETTGR.cre~ ~
 
 COPY_EXISTING ~50ABOMIN.cre~ ~override~
 	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelbarbarian=15 STR_VAR updatehp=~max~ END
-	WRITE_SHORT armorclass 25
+	WRITE_SHORT armorclass 15
 	WRITE_BYTE strength 29
 	WRITE_BYTE dexterity 21
 	WRITE_BYTE constitution 24
 	READ_LONG feats2 ulgiash
 	ulgiash|=0x2000000
 	WRITE_LONG feats2 ulgiash
+	WRITE_BYTE spellresistance 20
+	WRITE_BYTE enchantmentlevel 2
 	WRITE_BYTE proficiencysmallblade 2
 	WRITE_BYTE challengerating 16
 	WRITE_ASCII specialscript2 ~USYETI~ #8
 	LPF	IWD2_ADD_CRE_ITEM INT_VAR equip=0 STR_VAR item=~USENLARG~ slot=~boots~ mode=~replace~ END
-	LPF	IWD2_ADD_CRE_ITEM INT_VAR equip=1 STR_VAR item=~USCWAYET~ slot=~weapon1~ mode=~replace~ END
+	LPF	IWD2_ADD_CRE_ITEM INT_VAR equip=1 STR_VAR item=~USCWHFAY~ slot=~weapon1~ mode=~replace~ END
 	LPF	IWD2_ADD_CRE_ITEM INT_VAR equip=0 STR_VAR item=~USCWHFWB~ slot=~weapon2~ mode=~replace~ END
 
 COPY_EXISTING ~50ABOMIN.cre~ ~override/USABOMIN.cre~
@@ -6999,6 +7001,7 @@ USCIHFTG	USCITROG
 USRAKSHF	USRAKSH1
 USCWHFBE	USCWBEBI
 USCWHFMH	USCWMOHR
+USCWHFAY	USCWAYET
 ~
 UNLESS ~USCWHFMO~
 
@@ -7063,6 +7066,7 @@ USCIHFTG	USHFCITG
 USRAKSHF	USRAKSH2
 USCWHFBE	USHFCWBE
 USCWHFMH	USHFCWMH
+USCWHFAY	USHFCWAY
 ~
 UNLESS ~USCWHFMO~
 

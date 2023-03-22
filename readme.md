@@ -71,11 +71,10 @@ The big changes described above are only applied if you install certain componen
 34. Reduce the delay between sneak attacks
 35. Increase the level cap
 36. Always learn spells from scrolls successfully
-37. Remove the summoning limit
-38. Add attacks of opportunity to the game
-39. Roll for stats at character creation
-40. Add more traps
-41. Add key bindings for automating buffing
+37. Add attacks of opportunity to the game
+38. Change the way ability scores are assigned at character creation
+39. Add more traps
+40. Add key bindings for automating buffing
 
 ## Class Revisions
 
@@ -431,17 +430,15 @@ This component increases the level cap to 40 or to 50 (your choice). You'll only
 
 This component lets all wizards successfully learn spells from scrolls 100% of the time.
 
-## Remove the summoning limit
-
-This component allows you to summon any number of creatures at once.
-
 ## Add attacks of opportunity to the game
 
 This component allows characters to make attacks of opportunity in melee under certain conditions: if the enemy steps out of your melee range, if they make a ranged attack, or if they cast a spell. There are two subcomponents: you can make it so only characters with a certain feat can perform attacks of opportunity, or you can allow everyone to make attacks of opportunity. 
 
-## Roll for stats at character creation
+## Change the way ability scores are assigned at character creation
 
-This component lets you roll for stats rather than use IWD2's normal point-buy system. There are two subcomponents. The first one doesn't allow you to increment or decrement stats with the plus/minus buttons, but you can choose which ability score each number rolled is assigned to (like in The Temple of Elemental Evil). The second subcomponent lets you use the plus/minus buttons.
+This component has three options. Two of them allow you to roll for stats rather than use IWD2's normal point-buy system. The first one doesn't allow you to increment or decrement stats with the plus/minus buttons, but you can choose which ability score each number rolled is assigned to (like in The Temple of Elemental Evil). The second subcomponent lets you use the plus/minus buttons.
+
+The third subcomponent lets you use the point-buy system of Neverwinter Nights, where increasing a stat above a certain value requires you to spend extra points, and the minimum for a stat is 8.
 
 ## Add more traps
 

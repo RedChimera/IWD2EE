@@ -83,14 +83,15 @@
 @82   = ~Add attacks of opportunity to the game~
 @83   = ~Only characters with a certain feat can perform attacks of opportunity~
 @84   = ~Everyone can perform attacks of opportunity~
-@85   = ~Roll for stats at character creation~
-@86   = ~Plus/minus buttons disabled, but you can choose which ability score each number rolled goes to~
-@87   = ~Plus/minus buttons enabled~
+@85   = ~Change the way ability scores are assigned at character creation~
+@86   = ~Roll for stats - Plus/minus buttons disabled, but you can choose which ability score each number rolled goes to (like in The Temple of Elemental Evil)~
+@87   = ~Roll for stats - Plus/minus buttons enabled (like in Baldur's Gate)~
 @88   = ~Adding a bunch of objects to each area in the game; this could take some time...~
 @89   = ~Add more traps~
 @90   = ~Add key bindings for automating buffing (see the readme for more information)~
 @91   = ~More Persuasion Options~
 @92   = ~Add Additional Ways to Progress Through Certain Areas~
+@93   = ~Point buy - Increasing an ability score above a certain value requires extra points, and they cannot be decreased below 8 (like in Neverwinter Nights)~
 @99   = ~The Widescreen Mod is not compatible with IWD2EE and will crash the game if installed with IWD2EE. Please uninstall it. IWD2EE already allows you to increase the game's resolution; you do not need the Widescreen Mod.~
 @100  = ~IWD2EE was not uninstalled properly; the files from the previous installation are still in the override folder.
 Installing IWD2EE again without removing those files would corrupt various files.

@@ -1632,7 +1632,7 @@ Max Dex Bonus:  +6
 Armor Check Penalty:  -0
 Arcane Spell Failure:  10%
 Special:
-  The armor bonus of this armor is increased by 1 for every 5 points of Wilderness Lore the wearer has
+  The armor bonus of this armor is increased by 1 for every 10 points of Wilderness Lore the wearer has
 Weight: 10 lb.~
 @10433    = ~Studded Leather Armor of Luck +2~
 @10434    = ~Studded leather armor has little in common with normal leather armor. While leather armor is a hardened shell, studded leather armor is soft and supple with hundreds of metal rivets affixed. The rivets are so close together that they form a flexible coating of hard metal that turns aside slashing and cutting attacks. The soft leather backing is little more than a means of securing the rivets in place. Magical enchantments enhance the protective abilities of this leather armor.
@@ -1953,12 +1953,31 @@ Special:
   Wearer under the effects of the spell Death Ward
   Freedom of Movement: The wearer is immune to everything, magical and otherwise, that affects mobility in any way, although can still be hasted.
 Weight: 20 lb.~
-@10475    = ~Interloper +3~
+@10475    = ~Interloper +2~
 @10476    = ~One of the greatest skills a scout can have is the ability to sneak about undetected. For many years a scout will hone their craft in the arts of hiding in shadows and moving silently, just so they may attain one of the most valuable resources in the realm - information. 
 
 While a skilled scout may be able to slink undetected around a camp of regular soldiers and bandits with ease, the same cannot be said if the camp the scout is observing is protected by detection magics. It is because of this very reason that the armor known as Interloper was created.
 
 Many generations ago, skilled wood elf craftsman perfected a technique that was able to combine powerful non-detection magic into leather armor. Using this armor, wood elf scouts could infiltrate even the most well protected campsites without fear of being discovered by any magical means. Unfortunately, one of the scouts grew careless and was captured as he was spying on a drow raiding party. After days of torturing their prisoner, the drow were able to learn how the scouts were able to infiltrate their camps and even the location of the village at which these special armors were being made. Needless to say, every man, woman and child in that village was ruthlessly slaughtered...except one. This particular Interloper armor managed to survive only because the individual who wore it was away from the wood elf community the day the drow attacked.
+
+STATISTICS:
+
+Light Armor
+Armor Bonus: +5
+Max Dex Bonus:  +5
+Armor Check Penalty:  -1
+Arcane Spell Failure:  15%
+Special:
+  Wearer is under the effect of Nondetection.
+  Move Silently skill: +6
+  The armor bonus of Interloper is increased by 1 for every 10 points of Move Silently the wearer has.
+Weight: 5 lb.~
+@10477    = ~Silent Interloper +3~
+@10478    = ~One of the greatest skills a scout can have is the ability to sneak about undetected. For many years a scout will hone their craft in the arts of hiding in shadows and moving silently, just so they may attain one of the most valuable resources in the realm - information. 
+
+While a skilled scout may be able to slink undetected around a camp of regular soldiers and bandits with ease, the same cannot be said if the camp the scout is observing is protected by detection magics. It is because of this very reason that the armor known as Silent Interloper was created.
+
+Many generations ago, skilled wood elf craftsman perfected a technique that was able to combine powerful non-detection magic into leather armor. Using this armor, wood elf scouts could infiltrate even the most well protected campsites without fear of being discovered by any magical means. Unfortunately, one of the scouts grew careless and was captured as he was spying on a drow raiding party. After days of torturing their prisoner, the drow were able to learn how the scouts were able to infiltrate their camps and even the location of the village at which these special armors were being made. Needless to say, every man, woman and child in that village was ruthlessly slaughtered...except one. This particular Silent Interloper armor managed to survive only because the individual who wore it was away from the wood elf community the day the drow attacked.
 
 STATISTICS:
 
@@ -1969,27 +1988,8 @@ Armor Check Penalty:  -1
 Arcane Spell Failure:  15%
 Special:
   Wearer is under the effect of Nondetection.
-  Move Silently skill: +6
-  The armor bonus of Interloper is increased by 1 for every 5 points of Move Silently the wearer has.
-Weight: 5 lb.~
-@10477    = ~Silent Interloper +5~
-@10478    = ~One of the greatest skills a scout can have is the ability to sneak about undetected. For many years a scout will hone their craft in the arts of hiding in shadows and moving silently, just so they may attain one of the most valuable resources in the realm - information. 
-
-While a skilled scout may be able to slink undetected around a camp of regular soldiers and bandits with ease, the same cannot be said if the camp the scout is observing is protected by detection magics. It is because of this very reason that the armor known as Silent Interloper was created.
-
-Many generations ago, skilled wood elf craftsman perfected a technique that was able to combine powerful non-detection magic into leather armor. Using this armor, wood elf scouts could infiltrate even the most well protected campsites without fear of being discovered by any magical means. Unfortunately, one of the scouts grew careless and was captured as he was spying on a drow raiding party. After days of torturing their prisoner, the drow were able to learn how the scouts were able to infiltrate their camps and even the location of the village at which these special armors were being made. Needless to say, every man, woman and child in that village was ruthlessly slaughtered...except one. This particular Silent Interloper armor managed to survive only because the individual who wore it was away from the wood elf community the day the drow attacked.
-
-STATISTICS:
-
-Light Armor
-Armor Bonus: +8
-Max Dex Bonus:  +5
-Armor Check Penalty:  -1
-Arcane Spell Failure:  15%
-Special:
-  Wearer is under the effect of Nondetection.
   Move Silently skill: +12
-  The armor bonus of Silent Interloper is increased by 1 for every 5 points of Move Silently the wearer has.
+  The armor bonus of Silent Interloper is increased by 1 for every 10 points of Move Silently the wearer has.
 Weight: 15 lb.~
 
 

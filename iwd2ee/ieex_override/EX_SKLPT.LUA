@@ -4,6 +4,10 @@
 
 IEex_DisableCodeProtection()
 
-IEex_WriteDword(0x5E2155, 0x8B9001B2)
+if ex_max_skill_points_saved_for_next_level == -1 then
+	IEex_WriteDword(0x5E2155, 0x8B9001B2)
+else
+	IEex_WriteByte(0x5E2154, ex_max_skill_points_saved_for_next_level)
+end
 
 IEex_EnableCodeProtection()

@@ -66,7 +66,7 @@ Casting Time: 3
 Area of Effect: 3-foot radius
 Saving Throw: None
 
-This spell conjures forth a barrier of floating bones that spin rapidly around the caster, granting a +2 bonus to AC. Anyone entering their path takes 2d6 bludgeoning damage and 2d6 slashing damage per round.~
+This spell conjures forth a barrier of floating bones that spin rapidly around the caster. Anyone entering their path takes 2d6 bludgeoning damage and 2d6 slashing damage per round.~
 @1012    = ~Mold Touch~
 @1013    = ~Mold Touch 
 (Transmutation)
@@ -144,7 +144,7 @@ Casting Time: 9
 Area of Effect: 3-foot radius
 Saving Throw: Reflex half
 
-This spell conjures forth a wall of circling, razor-sharp blades that whirl and flash around the caster, creating a barrier that grants +5 AC to the caster. Any creature attempting to pass through the blade barrier suffers 10d8 points of damage, with a successful Reflex save for half damage.~
+This spell conjures forth a wall of circling, razor-sharp blades that whirl and flash around the caster. Any creature attempting to pass through the blade barrier suffers 10d8 points of damage, with a successful Reflex save for half damage.~
 @1024    = ~Spiritual Wrath~
 @1025    = ~Spiritual Wrath 
 (Evocation)
@@ -3672,7 +3672,7 @@ This spell creates a fireball that hovers at a point determined by the caster.  
 (Abjuration)
 Level: Clr 9, Sor/Wiz 8
 Range: 10 ft.
-Duration: 1 Day
+Duration: 8 hours
 Casting Time: 1
 Area of Effect: 1 creature
 Saving Throw: None

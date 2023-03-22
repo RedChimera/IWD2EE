@@ -328,10 +328,13 @@ function EXAPPLSP(actionData, creatureData)
 	if actionID == 31 or actionID == 95 or actionID == 191 or actionID == 192 then
 		local spellRES = IEex_GetActorSpellRES(sourceID)
 		local casterClass = IEex_ReadByte(creatureData + 0x530, 0x0)
+		local casterDomain = IEex_ReadByte(creatureData + 0x531, 0x0)
 		local classSpellLevel = IEex_ReadDword(creatureData + 0x534)
 		if (actionID == 31 or actionID == 95) and IEex_IsPartyMember(sourceID) then
 			local sourceHasSpell = false
 			local spells = IEex_FetchSpellInfo(sourceID, {1, 2, 3, 4, 5, 6, 7, 8})
+			local hasSpellAsCleric = false
+			local hasSpellAsDomain = false
 			for i = 1, 9, 1 do
 				for cType, levelList in pairs(spells) do
 					if #levelList >= i then
@@ -361,6 +364,11 @@ function EXAPPLSP(actionData, creatureData)
 												IEex_WriteDword(creatureData + 0x534, classSpellLevel)
 											end
 											sourceHasSpell = true
+											if cType == 2 then
+												hasSpellAsCleric = true
+											elseif cType == 8 then
+												hasSpellAsDomain = true
+											end
 										end
 									end
 								end
@@ -369,7 +377,18 @@ function EXAPPLSP(actionData, creatureData)
 					end
 				end
 			end
-			local spells = IEex_FetchSpellInfo(sourceID, {9, 11})
+			if casterClass == 3 and casterDomain == 0 and hasSpellAsDomain and not hasSpellAsCleric then
+				local kit = IEex_GetActorStat(sourceID, 89)
+				for i = 1, 9, 1 do
+					if bit.band(kit, 2 ^ (i + 14)) > 0 then
+						casterDomain = i
+					end
+				end
+				if casterDomain > 0 then
+					IEex_WriteByte(creatureData + 0x531, casterDomain)
+				end
+			end
+			spells = IEex_FetchSpellInfo(sourceID, {9, 11})
 			for cType, levelList in pairs(spells) do
 				local levelISpells = levelList[1]
 				if levelISpells ~= nil then

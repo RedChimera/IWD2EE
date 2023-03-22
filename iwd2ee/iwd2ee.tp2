@@ -445,7 +445,7 @@ BEGIN @75 DESIGNATED 85
 
 //Remove the summoning limit
 
-BEGIN @81 DESIGNATED 86
+BEGIN @81 DESIGNATED 86 DEPRECATED ~Removing the summoning limit is pretty buggy and tends to crash the game.~
 
       INCLUDE ~%mod_folder%/components/remove_summoning_limit.tpa~ //~Remove the summoning limit~
 
@@ -461,17 +461,22 @@ BEGIN @84 DESIGNATED 88
 
       INCLUDE ~%mod_folder%/components/attacks_of_opportunity_2.tpa~ //~Everyone can perform attacks of opportunity~
 
-//Roll for stats at character creation
+//Change the way ability scores are assigned at character creation
 
 BEGIN @86 DESIGNATED 89
 SUBCOMPONENT @85
 
-      INCLUDE ~%mod_folder%/components/roll_for_stats_1.tpa~ //~Plus/minus buttons disabled, but you can choose which ability score each number rolled goes to~
+      INCLUDE ~%mod_folder%/components/roll_for_stats_1.tpa~ //~Roll for stats - Plus/minus buttons disabled, but you can choose which ability score each number rolled goes to (like in The Temple of Elemental Evil)~
 
 BEGIN @87 DESIGNATED 90
 SUBCOMPONENT @85
 
-      INCLUDE ~%mod_folder%/components/roll_for_stats_2.tpa~ //~Plus/minus buttons enabled~
+      INCLUDE ~%mod_folder%/components/roll_for_stats_2.tpa~ //~Roll for stats - Plus/minus buttons enabled (like in Baldur's Gate)~
+
+BEGIN @93 DESIGNATED 95
+SUBCOMPONENT @85
+
+      INCLUDE ~%mod_folder%/components/roll_for_stats_3.tpa~ //~Point buy - Increasing an ability score above a certain value requires extra points, and they cannot be decreased below 8 (like in Neverwinter Nights)~
 
 BEGIN @89 DESIGNATED 91
 

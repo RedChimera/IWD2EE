@@ -18,11 +18,20 @@ ex_darkvision_attack_penalty = {[0] = -99, [1] = -4, [2] = -2, [3] = 0}
 ex_pick_pocket_slot_difficulty = {[0] = 4, [1] = 50, [2] = 6, [3] = 20, [4] = 6, [5] = 8, [6] = 6, [7] = 4, [8] = 4, [10] = 32767, [11] = 0, [12] = 0, [13] = 0, [14] = 0, [15] = 0, [16] = 0, [17] = 0, [18] = 0, [19] = 0, [20] = 0, [21] = 0, [22] = 0, [23] = 0, [24] = 0, [25] = 0, [26] = 0, [27] = 0, [28] = 0, [29] = 0, [30] = 0, [31] = 0, [32] = 0, [33] = 0, [34] = 0, [35] = 0, [36] = 0, [37] = 0, [38] = 0, [39] = 0, [40] = 0, [41] = 0, [42] = 32767, [43] = 8, [44] = 10, [45] = 8, [46] = 10, [47] = 8, [48] = 10, [49] = 8, [50] = 10, }
 --If the revised pickpocketing system is enabled, the DC of a Pick Pockets check to not be caught is 10 + the difficulty of the particular item slot.
 ex_pick_pocket_slot_stealth_difficulty = {[0] = 10, [1] = 60, [2] = 10, [3] = 60, [4] = 10, [5] = 20, [6] = 10, [7] = 15, [8] = 15, [10] = 32767, [11] = 0, [12] = 0, [13] = 0, [14] = 0, [15] = 0, [16] = 0, [17] = 0, [18] = 0, [19] = 0, [20] = 0, [21] = 0, [22] = 0, [23] = 0, [24] = 0, [25] = 0, [26] = 0, [27] = 0, [28] = 0, [29] = 0, [30] = 0, [31] = 0, [32] = 0, [33] = 0, [34] = 0, [35] = 0, [36] = 0, [37] = 0, [38] = 0, [39] = 0, [40] = 0, [41] = 0, [42] = 32767, [43] = 2, [44] = 6, [45] = 2, [46] = 6, [47] = 2, [48] = 6, [49] = 2, [50] = 6, }
+--[[
+Values for ex_new_ability_score_system:
+0: Vanilla IWD2
+1: ToEE-style - Roll for stats; plus/minus buttons are disabled, but you can choose which stat each number rolled goes to
+2: BG-style - Roll for stats; plus/minus buttons are enabled
+3: NWN-style - Point buy; higher values in a stat cost more points
+--]]
 ex_new_ability_score_system = 0
 ex_new_ability_score_dicenumber = 4
 ex_new_ability_score_dicesize = 6
 ex_new_ability_score_ignored_dice = 1
 ex_new_ability_score_bonus = 0
+ex_new_ability_score_total_points = 0
+ex_new_ability_score_increase_cost = {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, }
 ex_automatic_reroll_minimum_total = 60
 ex_automatic_reroll_minimum_stat = 14
 ex_enable_autobuffing_keys = false
@@ -63,6 +72,7 @@ ex_no_summoning_limit = false
 ex_no_apr_limit = false
 ex_shadowstep_brightness_max = 180
 ex_full_ability_score_cap = 40
+ex_max_skill_points_saved_for_next_level = 1
 ex_construct_race = 156
 ex_fiend_race = 164
 ex_reanimation_level_check_bonus = 5
@@ -299,6 +309,7 @@ ex_stat_spells = {
 [32] = {[12] = "USSANC10", [14] = "USSANC20", [16] = "USSANC30", [18] = "USSANC40", [20] = "USSANC50", [22] = "USSANC60", [24] = "USSANC70", [26] = "USSANC80", [28] = "USSANC90", [30] = "USSANC00"},
 [33] = {[3] = "USACAR01", [6] = "USACAR02", [9] = "USACAR03", [12] = "USACAR04", [15] = "USACAR05", [18] = "USACAR06", [21] = "USACAR07", [24] = "USACAR08", [27] = "USACAR09", [30] = "USACAR10", [33] = "USACAR11", [36] = "USACAR12", [39] = "USACAR13", [42] = "USACAR14", [45] = "USACAR15", [48] = "USACAR16", [51] = "USACAR17", [54] = "USACAR18", [57] = "USACAR19", [60] = "USACAR20", [63] = "USACAR21", [66] = "USACAR22", [69] = "USACAR23", [72] = "USACAR24", [75] = "USACAR25"}, -- Armor bonus based on skills
 [34] = {[2] = "USDAMA01", [4] = "USDAMA02", [6] = "USDAMA03", [8] = "USDAMA04", [10] = "USDAMA05", [12] = "USDAMA06", [14] = "USDAMA07", [16] = "USDAMA08", [18] = "USDAMA09", [20] = "USDAMA10", [22] = "USDAMA11", [24] = "USDAMA12", [26] = "USDAMA13", [28] = "USDAMA14", [30] = "USDAMA15", [32] = "USDAMA16", [34] = "USDAMA17", [36] = "USDAMA18", [38] = "USDAMA19", [40] = "USDAMA20"}, -- Damage bonuses
+[35] = {[10] = "USACAR01", [20] = "USACAR02", [30] = "USACAR03", [40] = "USACAR04", [50] = "USACAR05", [60] = "USACAR06", [70] = "USACAR07", [80] = "USACAR08", [90] = "USACAR09", [100] = "USACAR10", [110] = "USACAR11", [120] = "USACAR12", [130] = "USACAR13", [140] = "USACAR14", [150] = "USACAR15", [160] = "USACAR16", [170] = "USACAR17", [180] = "USACAR18", [190] = "USACAR19", [200] = "USACAR20", [210] = "USACAR21", [220] = "USACAR22", [230] = "USACAR23", [240] = "USACAR24", [250] = "USACAR25"}, -- Armor bonus based on skills
 [81] = {[12] = "USCOMP01", },
 [82] = {[12] = "USCOMP01", [14] = "USCOMP02", },
 [83] = {[12] = "USCOMP01", [14] = "USCOMP02", [16] = "USCOMP03", },

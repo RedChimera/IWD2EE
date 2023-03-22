@@ -772,7 +772,7 @@ function EXMETAMA(actionData, creatureData)
 })
 		end
 	end
-	if not spellAvailable then
+	if not spellAvailable and actionID ~= 83 then
 		ex_metamagic_in_use[sourceID] = nil
 		ex_can_use_metamagic[sourceID] = nil
 	end
