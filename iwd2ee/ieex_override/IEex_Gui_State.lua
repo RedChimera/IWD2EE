@@ -1524,38 +1524,45 @@ function IEex_Extern_UI_ButtonLClick(CUIControlButton)
 					IEex_Chargen_Reroll()
 				end,
 				[38] = function()
+					local chargenData = IEex_GetEngineCreateChar()
+					local share = IEex_GetActorShare(IEex_ReadDword(chargenData + 0x4E2))
 					recordedAbilityScores = currentAbilityScores
 					recordedUnallocatedAbilityScores = unallocatedAbilityScores
 					if ex_new_ability_score_system == 2 then
 						ex_recorded_remaining_points = IEex_ReadDword(chargenData + 0x4EA)
 					end
-					IEex_Chargen_UpdateAbilityScores(IEex_GetEngineCreateChar(), IEex_GetActorShare(IEex_ReadDword(IEex_GetEngineCreateChar() + 0x4E2)))
+					IEex_Chargen_UpdateAbilityScores(chargenData, share)
 				end,
 				[39] = function()
+					local chargenData = IEex_GetEngineCreateChar()
+					local share = IEex_GetActorShare(IEex_ReadDword(chargenData + 0x4E2))
 					if (recordedAbilityScores[1] > 0 or #recordedUnallocatedAbilityScores > 0) then
 						currentAbilityScores = recordedAbilityScores
 						unallocatedAbilityScores = recordedUnallocatedAbilityScores
+						for i = 1, 6, 1 do
+							IEex_WriteByte(share + ex_base_ability_score_cre_offset[i], currentAbilityScores[i])
+						end
 						if ex_new_ability_score_system == 2 then
 							ex_current_remaining_points = ex_recorded_remaining_points
 							IEex_WriteDword(chargenData + 0x4EA, ex_current_remaining_points)
-							for i = 1, 6, 1 do
-								IEex_WriteByte(share + ex_base_ability_score_cre_offset[i], currentAbilityScores[i])
-							end
 						end
 					end
-					IEex_Chargen_UpdateAbilityScores(IEex_GetEngineCreateChar(), IEex_GetActorShare(IEex_ReadDword(IEex_GetEngineCreateChar() + 0x4E2)))
+					IEex_Chargen_UpdateAbilityScores(chargenData, share)
 				end,
 				[40] = function()
+					local chargenData = IEex_GetEngineCreateChar()
+					local share = IEex_GetActorShare(IEex_ReadDword(chargenData + 0x4E2))
 					if ex_new_ability_score_system == 1 then
 						for i = 1, 6, 1 do
 							if currentAbilityScores[i] > 0 then
 								table.insert(unallocatedAbilityScores, currentAbilityScores[i] - racialAbilityBonuses[i])
-								currentAbilityScores[i] = 0
+								IEex_WriteByte(share + ex_base_ability_score_cre_offset[i], 0)
+--								currentAbilityScores[i] = 0
 							end
 							table.sort(unallocatedAbilityScores)
 						end
 					end
-					IEex_Chargen_UpdateAbilityScores(IEex_GetEngineCreateChar(), IEex_GetActorShare(IEex_ReadDword(IEex_GetEngineCreateChar() + 0x4E2)))
+					IEex_Chargen_UpdateAbilityScores(chargenData, share)
 				end,
 			},
 		},

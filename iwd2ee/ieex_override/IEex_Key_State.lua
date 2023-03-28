@@ -477,23 +477,22 @@ function IEex_Chargen_ExtraFeatListener()
 						racialAbilityBonuses[5] = tonumber(IEex_2DAGetAtStrings("ABRACEAD", "MOD_WIS", racePlusSubName))
 						racialAbilityBonuses[6] = tonumber(IEex_2DAGetAtStrings("ABRACEAD", "MOD_CHR", racePlusSubName))
 					end
-					if ex_new_ability_score_system == 2 then
-						IEex_WriteDword(chargenData + 0x4EA, ex_current_remaining_points)
-						for i = 1, 6, 1 do
-							IEex_WriteByte(share + ex_base_ability_score_cre_offset[i], currentAbilityScores[i])
-						end
-					end
-					if ex_new_ability_score_system == 3 then
-						IEex_WriteDword(chargenData + 0x4EA, ex_new_ability_score_total_points)
-						for i = 1, 6, 1 do
-							currentAbilityScores[i] = IEex_ReadByte(share + ex_base_ability_score_cre_offset[i], currentAbilityScores[i])
-						end
-					end
 					if ex_new_ability_score_system == 1 or ex_new_ability_score_system == 2 then
+						if ex_new_ability_score_system == 2 then
+							IEex_WriteDword(chargenData + 0x4EA, ex_current_remaining_points)
+						end
 						if currentAbilityScores[1] == 0 and #unallocatedAbilityScores == 0 then
 							IEex_Chargen_Reroll()
 						else
+							for i = 1, 6, 1 do
+								IEex_WriteByte(share + ex_base_ability_score_cre_offset[i], currentAbilityScores[i])
+							end
 							IEex_Chargen_UpdateAbilityScores(chargenData, share)
+						end
+					elseif ex_new_ability_score_system == 3 then
+						IEex_WriteDword(chargenData + 0x4EA, ex_new_ability_score_total_points)
+						for i = 1, 6, 1 do
+							currentAbilityScores[i] = IEex_ReadByte(share + ex_base_ability_score_cre_offset[i], currentAbilityScores[i])
 						end
 					end
 					IEex_EngineCreateCharUpdatePopupPanel()
@@ -509,14 +508,16 @@ function IEex_Chargen_ExtraFeatListener()
 								if controlIndex == 16 or controlIndex == 18 or controlIndex == 20 or controlIndex == 22 or controlIndex == 24 or controlIndex == 26 then
 									local a = math.floor(controlIndex / 2) - 7
 									if currentAbilityScores[a] == 0 and #unallocatedAbilityScores > 0 then
-										currentAbilityScores[a] = table.remove(unallocatedAbilityScores) + racialAbilityBonuses[a]
+										IEex_WriteByte(share + ex_base_ability_score_cre_offset[a], table.remove(unallocatedAbilityScores) + racialAbilityBonuses[a])
+--										currentAbilityScores[a] = table.remove(unallocatedAbilityScores) + racialAbilityBonuses[a]
 									end
 								elseif controlIndex == 17 or controlIndex == 19 or controlIndex == 21 or controlIndex == 23 or controlIndex == 25 or controlIndex == 27 then
 									local a = math.floor(controlIndex / 2) - 7
 									if currentAbilityScores[a] > 0 and #unallocatedAbilityScores < 6 then
 										table.insert(unallocatedAbilityScores, currentAbilityScores[a] - racialAbilityBonuses[a])
 										table.sort(unallocatedAbilityScores)
-										currentAbilityScores[a] = 0
+										IEex_WriteByte(share + ex_base_ability_score_cre_offset[a], 0)
+--										currentAbilityScores[a] = 0
 									end
 								end
 								IEex_Chargen_UpdateAbilityScores(chargenData, share)
@@ -535,7 +536,7 @@ function IEex_Chargen_ExtraFeatListener()
 					else
 						IEex_IterateCPtrList(panelData + 0x4, function(controlData)
 							if IEex_ReadDword(controlData) == 8732244 then
-								IEex_WriteByte(controlData + 0x1E, 1)
+								IEex_WriteByte(controlData + 0x1E, 1) 
 								IEex_WriteByte(controlData + 0x32, 0)
 								IEex_WriteByte(controlData + 0x116, 1)
 							end
@@ -572,7 +573,9 @@ function IEex_Chargen_ExtraFeatListener()
 					end)
 				end
 			else
-				if (panelID == 2 or panelID == 8) and (currentAbilityScores[1] > 0 or #unallocatedAbilityScores > 0) then
+				if (panelID == 2 or panelID == 8 or ex_new_ability_score_system == 3) and (currentAbilityScores[1] > 0 or #unallocatedAbilityScores > 0) then
+					ex_current_remaining_points = ex_new_ability_score_total_points
+					ex_recorded_remaining_points = 0
 					racialAbilityBonuses = {0, 0, 0, 0, 0, 0}
 					currentAbilityScores = {0, 0, 0, 0, 0, 0}
 					recordedAbilityScores = {0, 0, 0, 0, 0, 0}
@@ -947,6 +950,7 @@ function IEex_Chargen_UpdateAbilityScores(chargenData, share)
 		local abilityScoreTotal = 0
 		local recordedAbilityScoreTotal = 0
 		for i = 1, 6, 1 do
+			currentAbilityScores[i] = IEex_ReadByte(share + ex_base_ability_score_cre_offset[i], 0x0)
 			abilityScoreTotal = abilityScoreTotal + currentAbilityScores[i]
 			if currentAbilityScores[i] == 0 then
 				abilityScoreTotal = abilityScoreTotal + racialAbilityBonuses[i]
@@ -963,13 +967,13 @@ function IEex_Chargen_UpdateAbilityScores(chargenData, share)
 					if #unallocatedAbilityScores >= i then
 						abilityScoreTotal = abilityScoreTotal + unallocatedAbilityScores[i]
 					end
-					if #recordedUnallocatedAbilityScores >= i then
-						recordedAbilityScoreTotal = recordedAbilityScoreTotal + recordedUnallocatedAbilityScores[i]
-					end
+				end
+				if #recordedUnallocatedAbilityScores >= i then
+					recordedAbilityScoreTotal = recordedAbilityScoreTotal + recordedUnallocatedAbilityScores[i]
 				end
 				IEex_WriteByte(chargenData + 0x50D + i, currentAbilityScores[i])
 				IEex_WriteByte(chargenData + 0x513 + i, currentAbilityScores[i])
-				IEex_WriteByte(share + ex_base_ability_score_cre_offset[i], currentAbilityScores[i])
+--				IEex_WriteByte(share + ex_base_ability_score_cre_offset[i], currentAbilityScores[i])
 			end
 	
 		end
@@ -977,12 +981,9 @@ function IEex_Chargen_UpdateAbilityScores(chargenData, share)
 			recordedAbilityScoreTotal = 0
 		end
 		if ex_new_ability_score_system == 2 then
-			for i = 1, 6, 1 do
-				currentAbilityScores[i] = IEex_ReadByte(share + ex_base_ability_score_cre_offset[i], 0x0)
-			end
 			ex_current_remaining_points = IEex_ReadDword(chargenData + 0x4EA)
 		end
-		local infoString = string.gsub(string.gsub(ex_str_ability_roll_total, "<EXRRTOTAL>", abilityScoreTotal), "<EXRRRECTOTAL>", recordedAbilityScoreTotal)
+		local infoString = string.gsub(string.gsub(ex_str_ability_roll_total, "<EXRRTOTAL>", abilityScoreTotal + ex_current_remaining_points), "<EXRRRECTOTAL>", recordedAbilityScoreTotal + ex_recorded_remaining_points)
 	
 		if ex_new_ability_score_system == 1 then
 			local unallocatedString = ""

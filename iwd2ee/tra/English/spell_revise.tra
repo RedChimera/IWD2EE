@@ -988,8 +988,7 @@ Casting Time: 1 round
 Area of Effect: 1 creature
 Saving Throw: None 
 
-This spell grants the recipient a spell resistance of 1 per level of the caster, on top of any spell resistance the recipient currently possesses. This effect will last for the duration of the spell or, ironically enough, until dispelled. 
-~
+This spell grants the recipient a spell resistance of 12 + 1 per level of the caster. It will replace whatever spell resistance the creature already has. Only allies can be affected by this spell.~
 @1520    = ~Holy Aura~
 @1521    = ~Holy Aura
 (Abjuration)
