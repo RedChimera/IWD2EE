@@ -3,7 +3,7 @@ ex_proficiency_damage = {[0] = 0, [1] = 0, [2] = 0, [3] = 2, [4] = 2, [5] = 2}
 ex_proficiency_attack = {[0] = -4, [1] = 0, [2] = 1, [3] = 1, [4] = 1, [5] = 1}
 ex_on_join_party_special_script_1_set = {}
 ex_on_join_party_team_script_set = {}
-ex_on_join_party_dlg_set = {["DEFAULT"] = "MULTIG", }
+ex_on_join_party_dlg_set = {["diriel"] = "P#DIRIB", ["hildury"] = "P#HILDB", ["jaemal"] = "P#JAEMB", ["nikosh"] = "P#NIKOB", ["nord"] = "P#WINDB", ["peony"] = "P#PEONB", ["prachi"] = "P#PRACB", ["rizdaer"] = "P#RIZDB", ["salomeya"] = "P#SALOB", ["valeero"] = "P#VALEB", ["DEFAULT"] = "MULTIG", }
 ex_on_leave_party_team_script_set = {}
 ex_on_leave_party_dlg_set = {["DEFAULT"] = "USMULTIG", }
 ex_timed_banter_list = {}

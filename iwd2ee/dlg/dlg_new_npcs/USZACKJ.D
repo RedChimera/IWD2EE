@@ -14,6 +14,8 @@ END
 IF ~InParty(Myself)
 Global("BANTERUSZACKJ","GLOBAL",1)~ THEN BEGIN 1
   SAY @40889
+  IF ~~ THEN DO ~SetGlobal("DIDBANTERUSZACKJ1","GLOBAL",1)
+SetGlobal("BANTERUSZACKJ","GLOBAL",0)~ EXIT
   IF ~IEex_LuaTrigger("return IEex_IfValidForPartyDialogue(USGEOF)")~ THEN DO ~SetGlobal("DIDBANTERUSZACKJ1","GLOBAL",1)
 SetGlobal("BANTERUSZACKJ","GLOBAL",0)~ EXTERN ~USGEOFJ~ 78
 END
@@ -221,7 +223,7 @@ END
 
 IF ~~ THEN BEGIN 35
   SAY @40963
-    IF ~~ THEN EXIT
+  IF ~~ THEN EXIT
   IF ~IEex_LuaTrigger("return IEex_IfValidForPartyDialogue(USXHAA)")~ THEN EXTERN ~USXHAAJ~ 15
   IF ~IEex_LuaTrigger("return IEex_IfValidForPartyDialogue(USVUNA)")~ THEN EXTERN ~USVUNAJ~ 35
 END

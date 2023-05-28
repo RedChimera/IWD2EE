@@ -1456,7 +1456,7 @@ STATISTICS:
 
 Armor Class:  +5 vs. Bludgeoning
 Saving Throw Bonus:  +5 on Will saves
-Safe Spells: When the wearer casts an area of effect spell, allies gain a +5 bonus to saving throws against the spell and will take no damage on a successful save, or half damage on a failed save.
+Safe Spells: When the wearer casts an area of effect spell, allies make saving throws against the spell with -5 DC and will take no damage on a successful save, or half damage on a failed save.
 Weight:  4 lb.~
 //@10391    = ~Robe of the Good Archmagi~
 @10392    = ~This powerful Wizard Robe offers protection from all forms of physical attack while at the same time increasing one's magical resistance and saving throws. Due to the nature of its enchantment, it can only be worn by those of good alignment.

@@ -548,6 +548,10 @@ IEex_LuaTrigger("return IEex_IfValidForPartyDialogue(USGEOF)")~ THEN REPLY @4057
 SetGlobal("BANTERUSREIGJ","GLOBAL",0)~ EXTERN ~USGEOFJ~ 66
   IF ~!IEex_LuaTrigger("return IEex_IfValidForPartyDialogue(USVUNA)")
 !IEex_LuaTrigger("return IEex_IfValidForPartyDialogue(USEMMA)")
+IEex_LuaTrigger("return IEex_IfValidForPartyDialogue(USGEOF)")~ THEN REPLY @40571 DO ~SetGlobal("DIDBANTERUSREIGJ13","GLOBAL",1)
+SetGlobal("BANTERUSREIGJ","GLOBAL",0)~ EXTERN ~USGEOFJ~ 66
+  IF ~!IEex_LuaTrigger("return IEex_IfValidForPartyDialogue(USVUNA)")
+!IEex_LuaTrigger("return IEex_IfValidForPartyDialogue(USEMMA)")
 IEex_LuaTrigger("return IEex_IfValidForPartyDialogue(USGEOF)")~ THEN REPLY @40572 DO ~SetGlobal("DIDBANTERUSREIGJ13","GLOBAL",1)
 SetGlobal("BANTERUSREIGJ","GLOBAL",0)~ EXTERN ~USGEOFJ~ 71
   IF ~!IEex_LuaTrigger("return IEex_IfValidForPartyDialogue(USVUNA)")
@@ -736,6 +740,8 @@ END
 IF ~InParty(Myself)
 Global("BANTERUSREIGJ","GLOBAL",16)~ THEN BEGIN 103
   SAY @40884
+  IF ~~ THEN DO ~SetGlobal("DIDBANTERUSREIGJ16","GLOBAL",1)
+SetGlobal("BANTERUSREIGJ","GLOBAL",0)~ EXIT
   IF ~IEex_LuaTrigger("return IEex_IfValidForPartyDialogue(USGEOF)")~ THEN DO ~SetGlobal("DIDBANTERUSREIGJ16","GLOBAL",1)
 SetGlobal("BANTERUSREIGJ","GLOBAL",0)~ EXTERN ~USGEOFJ~ 78
   IF ~IEex_LuaTrigger("return IEex_IfValidForPartyDialogue(USZACK)")~ THEN DO ~SetGlobal("DIDBANTERUSREIGJ16","GLOBAL",1)

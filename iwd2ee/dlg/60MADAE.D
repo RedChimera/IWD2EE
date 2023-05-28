@@ -349,7 +349,12 @@ END
 
 IF ~~ THEN BEGIN SuccessfulQuestionMotivesM3K
 SAY @6393
-  IF ~~ THEN EXTERN ~61ISAIR~ MythalTriggerQuestionMotives3A
+  IF ~~ THEN DO ~SetGlobal("Ready_To_Retreat","GLOBAL",1)
+SetGlobal("WarpSequenceHP25","MYAREA",1)
+SetGlobal("Final_Battle_Progress","GLOBAL",2)
+SetGlobal("US_Final_Battle_Alternate","GLOBAL",1)
+StartCutSceneMode()
+StartCutScene("US63CFB5")~ EXIT
 END
 
 IF ~~ THEN BEGIN FailedQuestionMotivesRaceAny

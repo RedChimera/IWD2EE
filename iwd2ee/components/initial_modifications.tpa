@@ -7,6 +7,8 @@ COPY ~%mod_folder%/initial~ ~override~
 COPY ~%mod_folder%/ieex_override~ ~override~
 COPY ~%mod_folder%/ieex_main_folder~ ~./~
 
+COPY ~%mod_folder%/bcs/+thief_s.bs~ ~Scripts~
+
 ACTION_IF NOT MOD_IS_INSTALLED ~ddrawfix.tp2~ ~0~ AND NOT MOD_IS_INSTALLED ~ddrawfix.tp2~ ~2~ AND NOT FILE_EXISTS ~./aqrit.cfg~ AND NOT FILE_EXISTS ~./ddraw.ini~ BEGIN
 	COPY ~%mod_folder%/ddrawfix~ ~./~
 	AT_NOW ~rmdir "Shaders" /s /q & xcopy "%mod_folder%\ddrawfix\Shaders" "Shaders" /i /s /e~ EXACT
@@ -34,6 +36,7 @@ STRING_SET_EVALUATE 2946 ~<EXHPSTATE4>~
 STRING_SET_EVALUATE 2947 ~<EXHPSTATE5>~
 STRING_SET_EVALUATE 25019 ~<EXDAMMAG>~
 STRING_SET_EVALUATE 25024 ~<EXDAMFIR>~
+STRING_SET_EVALUATE 18020 @56004
 
 COPY_EXISTING ~IEex_TRA.lua~ ~override~
 	SPRINT ex_str_925 @925
@@ -841,7 +844,7 @@ COPY_EXISTING ~AR6200.are~ ~override~
 
 COPY_EXISTING ~30GOBKRU.dlg~ ~override~
 	DECOMPILE_AND_PATCH BEGIN
-		REPLACE_TEXTUALLY CASE_INSENSITIVE ~\"Krunbars_Bracers_Quest\",\"GLOBAL\",2)~ ~"Krunbars_Bracers_Quest","GLOBAL",0)
+		REPLACE_TEXTUALLY CASE_INSENSITIVE ~Global(\"Krunbars_Bracers_Quest\",\"GLOBAL\",2)~ ~GlobalGT("Krunbars_Bracers_Quest","GLOBAL",0)
 Or(2)
 	Global("Krunbars_Bracers_Quest","GLOBAL",2)
 	PartyHasItem("00BracTB")~

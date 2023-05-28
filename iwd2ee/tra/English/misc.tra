@@ -2,3 +2,20 @@
 @56001=~Do you require my services once again?~
 @56002=~Yes, please rejoin the party.~
 @56003=~Not at this time.~
+@56004=~This slider controls the difficulty level to be used in combat. From left to right, the settings are as follows:
+
+* Very Easy: Enemies have a -4 penalty to attack and saving throws, and the party takes half damage.
+
+* Easy: Enemies have a -2 penalty to attack and saving throws, and the party takes three quarter damage.
+
+* Normal: This setting has no changes; Icewind Dale 2: Enhanced Edition was balanced for this difficulty.
+
+* Hard: Enemies have a +3 attack bonus and deal 50% more damage to the party.
+
+* Insane: Enemies have a +9 attack bonus and deal double damage to the party.
+
+In addition, there is an even higher difficulty, Heart of Fury. This difficulty setting can be accessed by opening Config.exe, selecting the "Heart of Fury Mode" option, and starting a new game.
+
+* Heart of Fury: Enemies have triple their base HP plus another 80 HP, +10 to all ability scores, +12 levels in each of their classes, +9 attack, +5 saving throws, deal double damage to the party, and have +10 challenge rating. Many magical items throughout the game are replaced with more powerful versions.
+
+Icewind Dale 2: Enhanced Edition has certain optional components which reduce the bonuses given to Heart of Fury enemies. The bonuses above are assuming no such components are installed.~

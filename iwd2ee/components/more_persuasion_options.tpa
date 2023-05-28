@@ -1,3 +1,5 @@
+COPY ~%mod_folder%/bcs/bcs_more_persuasion_options~ ~override~
+
 INCLUDE ~%mod_folder%/components/xuki_intimidate.tpa~
 INCLUDE ~%mod_folder%/components/novio_isair_madae.tpa~
 INCLUDE ~%mod_folder%/components/limha_bribe.tpa~

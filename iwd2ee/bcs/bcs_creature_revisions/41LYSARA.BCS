@@ -166,7 +166,7 @@ TR
 0 0 0 0 0 0 0 0 0 0 0 0 0 [-1.-1.-1.-1] "" 0 0 OB
 TR
 TR
-16449 0 1 0 0 "US_Blasphemy" "LOCALS" OB
+16449 0 1 0 0 "US_Blasphemy" "GLOBAL" OB
 0 0 0 0 0 0 0 0 0 0 0 0 0 [-1.-1.-1.-1] "" 0 0 OB
 TR
 CO
@@ -187,7 +187,7 @@ OB
 0 0 0 0 0 0 0 0 0 0 0 0 0 [-1.-1.-1.-1] "" 0 0 OB
 OB
 0 0 0 0 0 0 0 0 0 0 0 0 0 [-1.-1.-1.-1] "" 0 0 OB
-21 0 0 0 0"LOCALSUS_Blasphemy" "" AC
+35 0 0 0 0"GLOBALUS_Blasphemy" "" AC
 AC
 31OB
 0 0 0 0 0 0 0 0 0 0 0 0 0 [-1.-1.-1.-1] "" 0 0 OB

@@ -11,7 +11,7 @@ IF
 	Global("US_Limha_Spared","GLOBAL",1)
 THEN
 	RESPONSE #100
-		SpellCastEffect(Myself,"","","",GLOW_ALTERATION,1,ATTACK)
+		SmallWait(1)
 		SpellHitEffectSprite(Myself,Myself,DIMENSION_DOOR_ORIGIN,0)
 		HideCreature(Myself,TRUE)
 		DestroySelf()

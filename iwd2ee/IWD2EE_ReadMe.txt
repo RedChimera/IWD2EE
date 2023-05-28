@@ -132,8 +132,6 @@ Monk of the Dark Moon:
 
 Fighters: Fighters get +1 to damage every 5 levels and +5% critical hit chance every 10 levels, and now the fighter-exclusive Weapon Specialization feats give +5 to hit and damage. All warriors get better saving throws and stronger attacks.
 
-Rangers: Rangers get more spell slots, and they get them at lower levels. They can gain the feats Improved Two-Weapon Fighting and Manyshot at lower levels than other classes, and they can gain a second rank in those feats for another attack per round. They are also able to use Set Natural Snare every 6 levels, which snares enemies for 5 rounds on a failed Reflex save. Set Natural Snare is much more effective than in the original game; the save DC now improves by 1 for every level and will work reliably even in Heart of Fury mode.
-
 Paladins: Paladins get more spell slots, and they get them at lower levels. Paladins get an additional casting of Lay on Hands every 5 levels. Smite Evil is more powerful, and they get an additional casting of Smite Evil every 10 levels.
 
 In addition, paladin orders no longer limit multiclassing, and they have extra abilities.
@@ -152,6 +150,8 @@ Paladin of Mystra:
 2nd level: The paladin gains one rank in Armored Arcana, reducing their arcane spell failure by 35%.
 6th level: The paladin gains two more ranks in Armored Arcana, reducing their arcane spell failure by a total of 105% (allowing them to cast arcane spells with no chance of failure while wearing the heaviest armor and shields).
 11th level: All fire, cold, electricity, acid, and magic damage dealt by the paladin is increased by 20%. This stacks with feats like Spirit of Flame. This bonus applies to both spells like Fireball and abilities like Smite Evil.
+
+Rangers: Rangers get more spell slots, and they get them at lower levels. They can gain the feats Improved Two-Weapon Fighting and Manyshot at lower levels than other classes, and they can gain a second rank in those feats for another attack per round. They are also able to use Set Natural Snare every 6 levels, which snares enemies for 5 rounds on a failed Reflex save. Set Natural Snare is much more effective than in the original game; the save DC now scales with the ranger's Wilderness Lore skill.
 
 Sorcerers: Sorcerers will no longer hit their peak at level 20 and then experience near-zero growth. They get slightly slower spell growth and slightly slower access to new spell picks.
 
@@ -338,7 +338,11 @@ This component allows several existing NPCs to join the party: the fighter Reig,
 
 --NPCs gain experience upon joining to match the party's experience--
 
-This component lets NPCs from the NPC Core component start with experience to match the party. There are two subcomponents. The first one makes NPCs start with the average experience of the rest of the party members. The second one makes them start with a fifth of the total experience of the party (this way, a small, high level party won't recruit high level NPCs).
+NPCs start with the average experience of the rest of the party members. The second one makes them start with a fifth of the total experience of the party.
+
+The point of the second option is to prevent certain exploits related to soloing. If you have the first option enabled, you could get pretty far into the game while soloing and reach a high level, and then recruit NPCs that were just as overleveled as your starting character. With the second option enabled, those NPCs will be at a reasonable level regardless of the previous size of the party.
+
+The first option is recommended if you aren't planning on doing any XP exploits like that.
 
 --Cosmetic improvements to the GUI and New loading screens--
 
@@ -376,7 +380,7 @@ Race Revisions also gives certain races a few new abilities:
 * Dwarves start proficient in axes and hammers.
 * Rock gnomes have +2 Intelligence instead of Constitution.
 * Lightfoot halflings may add half their Dexterity modifier rather than their Strength modifier to the damage of a sling or thrown weapon (if the former is higher).
-* Ghostwise halflings gain 1.5 times their Strength bonus to damage with slings and thrown weapons, as one would with two-handed weapons.
+* Ghostwise halflings gain 1.5 times their Strength bonus to damage with slings and thrown weapons, as one would with two-handed weapons. In addition, their stat penalty is to Intelligence rather than Strength.
 
 --Revise racial level adjustment/ECL--
 
@@ -392,7 +396,7 @@ Icewind Dale 2 encounters often have additional enemies for a higher-level party
 
 --Reduce the HP bonuses of creatures in Heart of Fury Mode--
 
-Enemies in Heart of Fury Mode normally have absolutely ridiculous HP: goblins in the prologue have 157 HP, and the frost spiders in Chapter 2 have 452 HP! This component drastically reduces the HP on creatures in Heart of Fury Mode. This component is designed for a party starting HoF at a low level. It is balanced such that enemies early on will have way less HP than in the original HoF, but enemies later on won't have that much less HP. This will make Heart of Fury Mode easier, but also much less tedious (and Creature Revisions makes Heart of Fury Mode more challenging to make up for it).
+Enemies in Heart of Fury Mode normally have absolutely ridiculous HP: goblins in the prologue have 157 HP, and the frost spiders in Chapter 2 have 452 HP! This component reduces the HP on creatures in Heart of Fury Mode. This component is designed for a party starting HoF at a low level. It is balanced such that enemies early on will have way less HP than in the original HoF, but enemies later on won't have that much less HP. This will make Heart of Fury Mode easier, but also much less tedious (and Creature Revisions makes Heart of Fury Mode more challenging to make up for it).
 
 --Reduce the attack bonuses of creatures in Heart of Fury Mode--
 
@@ -422,11 +426,9 @@ This component increases the level cap to 40 or to 50 (your choice). You'll only
 
 This component lets all wizards successfully learn spells from scrolls 100% of the time.
 
---Add attacks of opportunity to the game--
+--Everyone can perform attacks of opportunity--
 
-This component allows characters to make attacks of opportunity in melee under certain conditions: if the enemy steps out of your melee range, if they make a ranged attack, or if they cast a spell. There are two subcomponents: you can make it so only characters with a certain feat can perform attacks of opportunity, or you can allow everyone to make attacks of opportunity. 
-
-Much of the credit for the inspiration for this mod goes to the makers of Light of Selune, IWD2-Ease, and Tactics4IWD2, which provided the groundwork for this mod and the changes it makes. I would also like to thank Firecrow, who provided indispensable feedback and played an instrumental role in inspiring many of the mod's features, and subtledoctor, bubb, and Gwendolyne for providing invaluable technical support during the construction of the mod.
+This component allows characters to make attacks of opportunity in melee under certain conditions: if the enemy steps out of your melee range, if they make a ranged attack, or if they cast a spell.
 
 --Change the way ability scores are assigned at character creation--
 

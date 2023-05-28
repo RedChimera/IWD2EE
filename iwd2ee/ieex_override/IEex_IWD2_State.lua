@@ -13140,31 +13140,31 @@ function MESPLAP2(effectData, creatureData)
 		end
 	elseif protectionType == 114 then
 		if general == 4 or race == ex_construct_race or (race == ex_fiend_race and alignment == 0x33) then
-			hasProtection = true
+			doApply = true
 		end
 	elseif protectionType == 116 then
 		if IEex_GetItemSlotRES(checkID, 44 + IEex_ReadByte(checkData + 0x4C68, 0x0) * 2) ~= "" then
-			hasProtection = true
+			doApply = true
 		end
 	elseif protectionType == 118 then
 		if race == ex_construct_race or race == 190 then
-			hasProtection = true
+			doApply = true
 		end
 	elseif protectionType == 120 and IEex_IsSprite(sourceID, true) then
 		if IEex_CompareActorAllegiances(targetID, sourceID) == 1 and general ~= 4 then
-			hasProtection = true
+			doApply = true
 		end
 	elseif protectionType == 122 and IEex_IsSprite(sourceID, true) then
 		if IEex_CompareActorAllegiances(targetID, sourceID) == -1 and general ~= 4 then
-			hasProtection = true
+			doApply = true
 		end
 	elseif protectionType == 124 and IEex_IsSprite(sourceID, true) then
 		if IEex_CompareActorAllegiances(targetID, sourceID) == 1 and general == 4 then
-			hasProtection = true
+			doApply = true
 		end
 	elseif protectionType == 126 and IEex_IsSprite(sourceID, true) then
 		if IEex_CompareActorAllegiances(targetID, sourceID) == -1 and general == 4 then
-			hasProtection = true
+			doApply = true
 		end
 	end
 
@@ -30977,4 +30977,14 @@ function IEex_AllPartyMembersCanBanter()
 		end
 	end
 	return true
+end
+
+function IEex_StealthTimerExpired()
+	local sourceID = IEex_Lua_ActorID
+	local objectData = IEex_GetActorShare(sourceID)
+	if objectData <= 0 then return false end
+	local objectType = IEex_ReadByte(objectData + 0x4, 0x0)
+	if objectType ~= 0x31 then return false end
+	local stealthTimer = IEex_ReadSignedByte(objectData + 0x727A, 0x0)
+	return (stealthTimer == 0 or stealthTimer == -1)
 end

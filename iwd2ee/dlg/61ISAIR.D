@@ -526,7 +526,12 @@ END
 
 IF ~~ THEN BEGIN MythalTriggerMageIntimidate
   SAY @6334
-  IF ~~ THEN REPLY @6335 GOTO MythalTriggerMageIntimidate2
+  IF ~~ THEN REPLY @6335 DO ~SetGlobal("Ready_To_Retreat","GLOBAL",1)
+SetGlobal("WarpSequenceHP25","MYAREA",1)
+SetGlobal("Final_Battle_Progress","GLOBAL",2)
+SetGlobal("US_Final_Battle_Alternate","GLOBAL",1)
+StartCutSceneMode()
+StartCutScene("US63CFB5")~ EXIT
 END
 
 IF ~~ THEN BEGIN MythalTriggerMageIntimidate2
@@ -536,7 +541,12 @@ END
 
 IF ~~ THEN BEGIN MythalTriggerQuestionMotives1A
   SAY @6337
-  IF ~~ THEN REPLY @6338 GOTO MythalTriggerQuestionMotives1B
+  IF ~~ THEN DO ~SetGlobal("Ready_To_Retreat","GLOBAL",1)
+SetGlobal("WarpSequenceHP25","MYAREA",1)
+SetGlobal("Final_Battle_Progress","GLOBAL",2)
+SetGlobal("US_Final_Battle_Alternate","GLOBAL",1)
+StartCutSceneMode()
+StartCutScene("US63CFB5")~ EXIT
 END
 
 IF ~~ THEN BEGIN MythalTriggerQuestionMotives1B
@@ -546,8 +556,18 @@ END
 
 IF ~~ THEN BEGIN MythalTriggerQuestionMotives2A
   SAY @6340
-  IF ~~ THEN REPLY @6341 GOTO MythalTriggerQuestionMotives2B
-  IF ~~ THEN REPLY @6342 GOTO MythalTriggerQuestionMotives2B
+  IF ~~ THEN REPLY @6341 DO ~SetGlobal("Ready_To_Retreat","GLOBAL",1)
+SetGlobal("WarpSequenceHP25","MYAREA",1)
+SetGlobal("Final_Battle_Progress","GLOBAL",2)
+SetGlobal("US_Final_Battle_Alternate","GLOBAL",1)
+StartCutSceneMode()
+StartCutScene("US63CFB5")~ EXIT
+  IF ~~ THEN REPLY @6342 DO ~SetGlobal("Ready_To_Retreat","GLOBAL",1)
+SetGlobal("WarpSequenceHP25","MYAREA",1)
+SetGlobal("Final_Battle_Progress","GLOBAL",2)
+SetGlobal("US_Final_Battle_Alternate","GLOBAL",1)
+StartCutSceneMode()
+StartCutScene("US63CFB5")~ EXIT
 END
 
 IF ~~ THEN BEGIN MythalTriggerQuestionMotives2B
@@ -562,8 +582,18 @@ END
 
 IF ~~ THEN BEGIN MythalTriggerNoArmyIntimidate
   SAY @6346
-  IF ~~ THEN REPLY @6347 GOTO MythalTriggerNoArmyIntimidate2
-  IF ~~ THEN REPLY @6348 GOTO MythalTriggerNoArmyIntimidate2
+  IF ~~ THEN REPLY @6347 DO ~SetGlobal("Ready_To_Retreat","GLOBAL",1)
+SetGlobal("WarpSequenceHP25","MYAREA",1)
+SetGlobal("Final_Battle_Progress","GLOBAL",2)
+SetGlobal("US_Final_Battle_Alternate","GLOBAL",1)
+StartCutSceneMode()
+StartCutScene("US63CFB5")~ EXIT
+  IF ~~ THEN REPLY @6348 DO ~SetGlobal("Ready_To_Retreat","GLOBAL",1)
+SetGlobal("WarpSequenceHP25","MYAREA",1)
+SetGlobal("Final_Battle_Progress","GLOBAL",2)
+SetGlobal("US_Final_Battle_Alternate","GLOBAL",1)
+StartCutSceneMode()
+StartCutScene("US63CFB5")~ EXIT
 END
 
 IF ~~ THEN BEGIN MythalTriggerNoArmyIntimidate2

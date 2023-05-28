@@ -67,6 +67,7 @@ function IEex_Extern_OnGameObjectAdded(actorID)
 
 	ex_cre_initializing[actorID] = true
 	ex_cre_effects_initializing[actorID] = true
+	
 end
 
 function IEex_Extern_OnGameObjectBeingDeleted(actorID)
@@ -235,6 +236,10 @@ function IEex_Extern_OnPostCreatureProcessEffectList(creatureData)
 			IEex_WriteDword(creatureData + 0x740, extraFlags)
 		elseif extraFlags < 0 then
 			extraFlags = bit.band(extraFlags, 0x31000)
+			IEex_WriteDword(creatureData + 0x740, extraFlags)
+		end
+		if bit.band(extraFlags, 0x3000000) > 0 then
+			extraFlags = bit.band(extraFlags, 0xFCFFFFFF)
 			IEex_WriteDword(creatureData + 0x740, extraFlags)
 		end
 		local constantID = IEex_ReadDword(creatureData + 0x700)
