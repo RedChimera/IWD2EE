@@ -624,7 +624,7 @@ END
 
 IF ~InParty(Myself)
 Global("BANTERUSREIGJ","GLOBAL",14)~ THEN BEGIN 87
-  SAY @40787
+  SAY @40788
   IF ~~ THEN REPLY @40789 DO ~SetGlobal("DIDBANTERUSREIGJ14","GLOBAL",1)
 SetGlobal("BANTERUSREIGJ","GLOBAL",0)~ GOTO 88
   IF ~IEex_LuaTrigger("return IEex_IfValidForPartyDialogue(USEMMA)")~ THEN REPLY @40790 DO ~SetGlobal("DIDBANTERUSREIGJ14","GLOBAL",1)
@@ -643,7 +643,7 @@ END
 IF ~~ THEN BEGIN 88
   SAY @40796
   IF ~!IEex_LuaTrigger("return IEex_IfValidForPartyDialogue(USEMMA)")~ THEN EXIT
-  IF ~IEex_LuaTrigger("return IEex_IfValidForPartyDialogue(USEMMA)")~ THEN EXTERN ~USEMMA~ 46
+  IF ~IEex_LuaTrigger("return IEex_IfValidForPartyDialogue(USEMMA)")~ THEN EXTERN ~USEMMAJ~ 46
 END
 
 IF ~~ THEN BEGIN 89

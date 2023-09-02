@@ -24,7 +24,7 @@ The big changes described above are only applied if you install certain componen
 * The options screen includes a button to access the new IEex Options menu (currently it includes an option to alter the fog of war so that it doesn't flicker).
 * If you do not have the vanilla option to rest until healed enabled, characters heal a number of HP equal to their level on rest, rather than only healing 1 HP.
 * As long as you have the console enabled in IWD2's normal config menu, cheat keys will be enabled automatically without needing to enter a command. 
-* For modders, IWD2EE includes several new opcodes, and offers the ability to run Lua code in-game via the console or various hooks (and some of the new opcodes can call custom Lua functions), as well as a limited ability to modify to GUI. This opens up many possibilities for modding.
+* For modders, IWD2EE includes several new opcodes, and offers the ability to run Lua code in-game via the console or various hooks (and some of the new opcodes can call custom Lua functions), as well as a limited ability to modify the GUI. This opens up many possibilities for modding.
 
 Components:
 

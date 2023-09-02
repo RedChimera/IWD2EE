@@ -920,7 +920,7 @@ IEex_MutatorOpcodeFunctions["EXEMPSPL"] = {
 				local actorID = IEex_GetActorIDShare(creatureData)
 				local parameter1 = IEex_ReadDword(originatingEffectData + 0x18)
 			   	local special = IEex_ReadDword(originatingEffectData + 0x44)
-		    	if ex_metamagic_in_use[actorID]["EXEMPSPL"] ~= nil then
+		    	if ex_metamagic_in_use[actorID] ~= nil and ex_metamagic_in_use[actorID]["EXEMPSPL"] ~= nil then
 					local savingthrow = IEex_ReadDword(originatingEffectData + 0x3C)
 					if bit.band(savingthrow, 0x10000000) == 0 then
 						savingthrow = bit.bor(savingthrow, 0x10000000)
@@ -970,7 +970,7 @@ IEex_MutatorOpcodeFunctions["EXEXTSPL"] = {
 				local actorID = IEex_GetActorIDShare(creatureData)
 				local parameter1 = IEex_ReadDword(originatingEffectData + 0x18)
 			   	local special = IEex_ReadDword(originatingEffectData + 0x44)
-		    	if ex_metamagic_in_use[actorID]["EXEXTSPL"] ~= nil then
+		    	if ex_metamagic_in_use[actorID] ~= nil and ex_metamagic_in_use[actorID]["EXEXTSPL"] ~= nil then
 					local savingthrow = IEex_ReadDword(originatingEffectData + 0x3C)
 					if bit.band(savingthrow, 0x10000000) == 0 then
 						savingthrow = bit.bor(savingthrow, 0x10000000)
@@ -1017,7 +1017,7 @@ IEex_MutatorOpcodeFunctions["EXMASSPL"] = {
 				local actorID = IEex_GetActorIDShare(creatureData)
 				local parameter1 = IEex_ReadDword(originatingEffectData + 0x18)
 			   	local special = IEex_ReadDword(originatingEffectData + 0x44)
-		    	if ex_metamagic_in_use[actorID]["EXMASSPL"] ~= nil then
+		    	if ex_metamagic_in_use[actorID] ~= nil and ex_metamagic_in_use[actorID]["EXMASSPL"] ~= nil then
 					local savingthrow = IEex_ReadDword(originatingEffectData + 0x3C)
 					if bit.band(savingthrow, 0x10000000) == 0 then
 						savingthrow = bit.bor(savingthrow, 0x10000000)
@@ -1062,7 +1062,7 @@ IEex_MutatorOpcodeFunctions["EXMAXSPL"] = {
 				local actorID = IEex_GetActorIDShare(creatureData)
 				local parameter1 = IEex_ReadDword(originatingEffectData + 0x18)
 			   	local special = IEex_ReadDword(originatingEffectData + 0x44)
-		    	if ex_metamagic_in_use[actorID]["EXMAXSPL"] ~= nil then
+		    	if ex_metamagic_in_use[actorID] ~= nil and ex_metamagic_in_use[actorID]["EXMAXSPL"] ~= nil then
 					local savingthrow = IEex_ReadDword(originatingEffectData + 0x3C)
 					if bit.band(savingthrow, 0x10000000) == 0 then
 						savingthrow = bit.bor(savingthrow, 0x10000000)
@@ -1112,7 +1112,7 @@ IEex_MutatorOpcodeFunctions["EXPERSPL"] = {
 				local actorID = IEex_GetActorIDShare(creatureData)
 				local parameter1 = IEex_ReadDword(originatingEffectData + 0x18)
 			   	local special = IEex_ReadDword(originatingEffectData + 0x44)
-		    	if ex_metamagic_in_use[actorID]["EXPERSPL"] ~= nil then
+		    	if ex_metamagic_in_use[actorID] ~= nil and ex_metamagic_in_use[actorID]["EXPERSPL"] ~= nil then
 					local savingthrow = IEex_ReadDword(originatingEffectData + 0x3C)
 					if bit.band(savingthrow, 0x10000000) == 0 then
 						savingthrow = bit.bor(savingthrow, 0x10000000)
@@ -1175,7 +1175,7 @@ IEex_MutatorOpcodeFunctions["EXSAFSPL"] = {
 				local actorID = IEex_GetActorIDShare(creatureData)
 				local parameter1 = IEex_ReadDword(originatingEffectData + 0x18)
 			   	local special = IEex_ReadDword(originatingEffectData + 0x44)
-		    	if ex_metamagic_in_use[actorID]["EXSAFSPL"] ~= nil then
+		    	if ex_metamagic_in_use[actorID] ~= nil and ex_metamagic_in_use[actorID]["EXSAFSPL"] ~= nil then
 					local savingthrow = IEex_ReadDword(originatingEffectData + 0x3C)
 					if bit.band(savingthrow, 0x10000000) == 0 then
 						savingthrow = bit.bor(savingthrow, 0x10000000)
@@ -1253,7 +1253,7 @@ IEex_MutatorOpcodeFunctions["EXWIDSPL"] = {
 
 				local parameter1 = IEex_ReadDword(originatingEffectData + 0x18)
 			   	local special = IEex_ReadDword(originatingEffectData + 0x44)
-		    	if ex_metamagic_in_use[actorID]["EXWIDSPL"] ~= nil then
+		    	if ex_metamagic_in_use[actorID] ~= nil and ex_metamagic_in_use[actorID]["EXWIDSPL"] ~= nil then
 					local savingthrow = IEex_ReadDword(originatingEffectData + 0x3C)
 					if bit.band(savingthrow, 0x10000000) == 0 then
 						savingthrow = bit.bor(savingthrow, 0x10000000)

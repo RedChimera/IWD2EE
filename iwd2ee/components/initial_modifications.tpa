@@ -636,8 +636,12 @@ STRING_SET_EVALUATE 32702 @980
 STRING_SET_EVALUATE 32703 @983
 STRING_SET_EVALUATE 34007 @23048
 
- //Turning the "test" creatures into regular creatures because their irregular CRE format can crash WeiDU when patching all creatures.
+//Turning the "test" creatures into regular creatures because their irregular CRE format can crash WeiDU when patching all creatures.
 COPY_EXISTING ~00gob.cre~ ~override/test_01.cre~ ~00gob.cre~ ~override/test_02.cre~ ~00gob.cre~ ~override/test_03.cre~ ~00gob.cre~ ~override/testocle.cre~
+
+//Fixed a vanilla bug where these summoned creatures had no script.
+COPY_EXISTING ~00SCAT.cre~ ~override~ ~00SDRAT.cre~ ~override~ ~00SABOR.cre~ ~override~
+	WRITE_ASCII combatscript ~00AATGN~ #8
 
 COPY_EXISTING ~attstyl.ids~ ~override/attstyle.ids~ //This is to prevent a bug where WeiDU looks for attstyle.ids while extending scripts but it's not there in IWD2
 

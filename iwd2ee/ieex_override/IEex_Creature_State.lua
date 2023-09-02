@@ -226,6 +226,7 @@ function IEex_Extern_OnPostCreatureProcessEffectList(creatureData)
 	if ex_cre_initializing[targetID] then
 		ex_cre_initializing[targetID] = nil
 		if targetID == IEex_GetActorIDCharacter(0) then
+			ex_dead_pc_equipment_record = {}
 			ex_reform_party_button_added = 0
 			for bt = 0, 30, 1 do
 				ex_global_effect_timers[bt + 1] = IEex_GetGlobal("EX_GLOBEF" .. bt)

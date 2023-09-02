@@ -20,7 +20,7 @@ The big changes described above are only applied if you install certain componen
 - The options screen includes a button to access the IEex Options menu (currently it includes an option to alter the fog of war so that it doesn't flicker, if you were having problems with it flickering).
 - If you do not have the vanilla option to rest until healed enabled, characters heal a number of HP equal to their level on rest, rather than only healing 1 HP.
 - As long as you have the console enabled in IWD2's normal config menu, cheat keys will be enabled automatically without needing to enter a command. 
-- For modders, IWD2EE includes several new opcodes, and offers the ability to run Lua code in-game via the console or various hooks (and some of the new opcodes can call custom Lua functions), as well as a limited ability to modify to GUI. This opens up many possibilities for modding.
+- For modders, IWD2EE includes several new opcodes, and offers the ability to run Lua code in-game via the console or various hooks (and some of the new opcodes can call custom Lua functions), as well as a limited ability to modify the GUI. This opens up many possibilities for modding.
 
 
 ## Installation
@@ -139,8 +139,6 @@ Monk of the Dark Moon:
 
 Fighters: Fighters get +1 to damage every 5 levels and +5% critical hit chance every 10 levels, and now the fighter-exclusive Weapon Specialization feats give +5 to hit and damage. All warriors get better saving throws and stronger attacks.
 
-Rangers: Rangers get more spell slots, and they get them at lower levels. They can gain the feats Improved Two-Weapon Fighting and Manyshot at lower levels than other classes, and they can gain a second rank in those feats for another attack per round. They are also able to use Set Natural Snare every 6 levels, which snares enemies for 5 rounds on a failed Reflex save. Set Natural Snare is much more effective than in the original game; the save DC now improves by 1 for every level and will work reliably even in Heart of Fury mode.
-
 Paladins: Paladins get more spell slots, and they get them at lower levels. Paladins get an additional casting of Lay on Hands every 5 levels. Smite Evil is more powerful, and they get an additional casting of Smite Evil every 10 levels.
 
 In addition, paladin orders no longer limit multiclassing, and they have extra abilities.
@@ -160,6 +158,8 @@ Paladin of Mystra:
 6th level: The paladin gains two more ranks in Armored Arcana, reducing their arcane spell failure by a total of 105% (allowing them to cast arcane spells with no chance of failure while wearing the heaviest armor and shields).
 11th level: All fire, cold, electricity, acid, and magic damage dealt by the paladin is increased by 20%. This stacks with feats like Spirit of Flame. This bonus applies to both spells like Fireball and abilities like Smite Evil.
 
+Rangers: Rangers get more spell slots, and they get them at lower levels. They can gain the feats Improved Two-Weapon Fighting and Manyshot at lower levels than other classes, and they can gain a second rank in those feats for another attack per round. They are also able to use Set Natural Snare every 6 levels, which snares enemies for 5 rounds on a failed Reflex save. Set Natural Snare is much more effective than in the original game; the save DC now scales with the ranger's Wilderness Lore skill.
+
 Sorcerers: Sorcerers will no longer hit their peak at level 20 and then experience near-zero growth. They get slightly slower spell growth and slightly slower access to new spell picks.
 
 Wizards: Generalist wizards now gain +1 to the DC of all wizard spells they cast (Specialist wizards gain +2 to the DC of wizard spells they cast of their school, but this was a vanilla feature that wasn't documented in IWD2 until now).
@@ -170,13 +170,19 @@ Although the inherent changes to clerics, sorcerers, and wizards aren't huge, al
 
 Even IWD2's very broad class system can be restrictive in some ways, mostly in the lawful/chaotic axis. This component loosens a few of the restrictions, allowing certain classes to be compatible with more alignments:
 
-Bards can be any alignment besides Lawful Neutral (previously could not be any lawful alignment)
-Monks of the Old Order can be any non-chaotic alignment
-Monks of the Broken Ones can be Neutral Good
-Monks of the Dark Moon can be Lawful Neutral, True Neutral, and Neutral Evil
-Paladins of Ilmater and Mystra can be Neutral Good
-Paladins of Helm can be Lawful Neutral
-Rogues can be Lawful Good
+- Bards can be any alignment besides Lawful Neutral (previously could not be any lawful alignment)
+
+- Monks of the Old Order can be any non-chaotic alignment
+
+- Monks of the Broken Ones can be Neutral Good
+
+- Monks of the Dark Moon can be Lawful Neutral, True Neutral, and Neutral Evil
+
+- Paladins of Ilmater and Mystra can be Neutral Good
+
+- Paladins of Helm can be Lawful Neutral
+
+- Rogues can be Lawful Good
 
 ## Spell Revisions
 
@@ -270,8 +276,6 @@ This component reduces the backtracking necessary to get through Dragon's Eye by
 
 The alchemy quests can still be completed; you can still make histachii brew and poison vials. These items still offer benefits: the histachii brew allows you to sneak past yuan-ti without them attacking you, and the poison vials can now be used as consumables to poison your weapon as per the Envenom Weapon ability.
 
-Opening the door in the third floor of Dragon's Eye no longer requires you to put poison in the four pools in the area; you just have to kill Thorasskus. In addition, you can pass under the Eye of Sseth without being a histachii.
-
 ## Shorten the Dragon's Eye time loop questline to a single battle
 
 This component simplifies the final area of Dragon's Eye. Rather than having to go through a long time travel quest, you just fight one battle to prevent Izbelah from casting Temporal Stasis. The component changes some dialogs in Chapter 5 to make it clear why you're fighting Izbelah.
@@ -346,7 +350,11 @@ This component allows several existing NPCs to join the party: the fighter Reig,
 
 ## NPCs gain experience upon joining to match the party's experience
 
-This component lets NPCs from the NPC Core component start with experience to match the party. There are two subcomponents. The first one makes NPCs start with the average experience of the rest of the party members. The second one makes them start with a fifth of the total experience of the party (this way, a small, high level party won't recruit high level NPCs).
+This component lets NPCs from the NPC Core component start with experience to match the party. There are two subcomponents. The first one makes NPCs start with the average experience of the rest of the party members. The second one makes them start with a fifth of the total experience of the party.
+
+The point of the second option is to prevent certain exploits related to soloing. If you have the first option enabled, you could get pretty far into the game while soloing and reach a high level, and then recruit NPCs that were just as overleveled as your starting character. With the second option enabled, those NPCs will be at a reasonable level regardless of the previous size of the party.
+
+The first option is recommended if you aren't planning on doing any XP exploits like that.
 
 ## Cosmetic improvements to the GUI and New loading screens
 
@@ -384,7 +392,7 @@ Race Revisions also gives certain races a few new abilities:
 - Dwarves start proficient in axes and hammers.
 - Rock gnomes have +2 Intelligence instead of Constitution.
 - Lightfoot halflings may add half their Dexterity modifier rather than their Strength modifier to the damage of a sling or thrown weapon (if the former is higher).
-- Ghostwise halflings gain 1.5 times their Strength bonus to damage with slings and thrown weapons, as one would with two-handed weapons.
+- Ghostwise halflings gain 1.5 times their Strength bonus to damage with slings and thrown weapons, as one would with two-handed weapons. In addition, their stat penalty is to Intelligence rather than Strength.
 
 ## Revise racial level adjustment/ECL
 
@@ -400,7 +408,7 @@ Icewind Dale 2 encounters often have additional enemies for a higher-level party
 
 ## Reduce the HP bonuses of creatures in Heart of Fury Mode
 
-Enemies in Heart of Fury Mode normally have absolutely ridiculous HP: goblins in the prologue have 157 HP, and the frost spiders in Chapter 2 have 452 HP! This component drastically reduces the HP on creatures in Heart of Fury Mode. This component is designed for a party starting HoF at a low level. It is balanced such that enemies early on will have way less HP than in the original HoF, but enemies later on won't have that much less HP. This will make Heart of Fury Mode easier, but also much less tedious (and Creature Revisions makes Heart of Fury Mode more challenging to make up for it).
+Enemies in Heart of Fury Mode normally have absolutely ridiculous HP: goblins in the prologue have 157 HP, and the frost spiders in Chapter 2 have 452 HP! This component reduces the HP on creatures in Heart of Fury Mode. This component is designed for a party starting HoF at a low level. It is balanced such that enemies early on will have way less HP than in the original HoF, but enemies later on won't have that much less HP. This will make Heart of Fury Mode easier, but also much less tedious (and Creature Revisions makes Heart of Fury Mode more challenging to make up for it).
 
 ## Reduce the attack bonuses of creatures in Heart of Fury Mode
 
@@ -432,7 +440,7 @@ This component lets all wizards successfully learn spells from scrolls 100% of t
 
 ## Add attacks of opportunity to the game
 
-This component allows characters to make attacks of opportunity in melee under certain conditions: if the enemy steps out of your melee range, if they make a ranged attack, or if they cast a spell. There are two subcomponents: you can make it so only characters with a certain feat can perform attacks of opportunity, or you can allow everyone to make attacks of opportunity. 
+This component allows characters to make attacks of opportunity in melee under certain conditions: if the enemy steps out of your melee range, if they make a ranged attack, or if they cast a spell.
 
 ## Change the way ability scores are assigned at character creation
 

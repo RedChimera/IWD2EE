@@ -3171,6 +3171,8 @@ COPY_EXISTING ~uswi752.spl~ ~override~
 	LPF ALTER_EFFECT INT_VAR silent=1 check_headers=1 check_globals=1 match_opcode=139 match_parameter1=30034 parameter1=RESOLVE_STR_REF(@30034) END
 	LPF ALTER_EFFECT INT_VAR silent=1 check_headers=1 check_globals=1 match_opcode=139 match_parameter1=30035 parameter1=RESOLVE_STR_REF(@30035) END
 	LPF ALTER_EFFECT INT_VAR silent=1 check_headers=1 check_globals=1 match_opcode=139 match_parameter1=30036 parameter1=RESOLVE_STR_REF(@30036) END
+	LPF ALTER_EFFECT INT_VAR silent=1 check_headers=1 check_globals=1 match_opcode=139 match_parameter1=30036 parameter1=RESOLVE_STR_REF(@30036) END
+	LPF ALTER_EFFECT INT_VAR silent=1 check_headers=1 check_globals=1 match_opcode=502 match_special=55356 special=RESOLVE_STR_REF(@55356) END
 
 COPY_EXISTING ~uswi753.spl~ ~override~
 	SAY NAME1 @37753

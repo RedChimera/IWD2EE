@@ -6699,14 +6699,14 @@ COPY_EXISTING ~AR6305.are~ ~override~
 	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR actor_name=~Phaen~ script_special2=~00MONKG0~ END
 
 COPY_EXISTING ~AR6500.are~ ~override~
-	LPF ALTER_AREA_ACTOR_IWD2 INT_VAR flag_difficulty_3=0 STR_VAR actor_name=~Cornugon_1~ END
-	LPF ALTER_AREA_ACTOR_IWD2 INT_VAR flag_difficulty_3=0 STR_VAR actor_name=~Cornugon_2~ END
-	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR actor_name=~Glabrezu_1~ cre_file=~USHGELUG~ script_combat=~00PITFIE~ script_special1=~USHOFNOT~ END
-	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR actor_name=~Glabrezu_2~ cre_file=~USHGELUG~ script_combat=~00PITFIE~ script_special1=~USHOFNOT~ END
+	LPF ALTER_AREA_ACTOR_IWD2 INT_VAR flag_difficulty_3=0 STR_VAR actor_name=~Cornugon_1~ script_special1=~00ASTIVN~ END
+	LPF ALTER_AREA_ACTOR_IWD2 INT_VAR flag_difficulty_3=0 STR_VAR actor_name=~Cornugon_2~ script_special1=~00ASTIVN~ END
+	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR actor_name=~Glabrezu_1~ cre_file=~USHGELUG~ script_team=~00ASTIVN~ script_special2=~00T01ET~ script_combat=~00PITFIE~ script_special1=~USHOFNOT~ END
+	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR actor_name=~Glabrezu_2~ cre_file=~USHGELUG~ script_team=~00ASTIVN~ script_special2=~00T01ET~ script_combat=~00PITFIE~ script_special1=~USHOFNOT~ END
 	LPF fj_are_structure INT_VAR fj_loc_x=871 fj_loc_y=846 fj_orientation=6 STR_VAR fj_structure_type=~actor~ fj_name=~US_Greater_Gelugon_1~ fj_cre_resref=~USHGELGR~ END
 	LPF fj_are_structure INT_VAR fj_loc_x=408 fj_loc_y=845 fj_orientation=10 STR_VAR fj_structure_type=~actor~ fj_name=~US_Greater_Gelugon_2~ fj_cre_resref=~USHGELGR~ END
-	LPF ALTER_AREA_ACTOR_IWD2 INT_VAR flag_cre_unattached=1 flag_difficulty_1=0 flag_difficulty_2=0 flag_difficulty_3=1 STR_VAR actor_name=~US_Greater_Gelugon_1~ script_team=~00T01ET~ script_movement=~00T01M~ script_combat=~00PITFIE~ script_special1=~USHOFONL~ END
-	LPF ALTER_AREA_ACTOR_IWD2 INT_VAR flag_cre_unattached=1 flag_difficulty_1=0 flag_difficulty_2=0 flag_difficulty_3=1 STR_VAR actor_name=~US_Greater_Gelugon_2~ script_team=~00T01ET~ script_movement=~00T01M~ script_combat=~00PITFIE~ script_special1=~USHOFONL~ END
+	LPF ALTER_AREA_ACTOR_IWD2 INT_VAR flag_cre_unattached=1 flag_difficulty_1=0 flag_difficulty_2=0 flag_difficulty_3=1 STR_VAR actor_name=~US_Greater_Gelugon_1~ script_team=~00ASTIVN~ script_special2=~00T01ET~ script_movement=~00T01M~ script_combat=~00PITFIE~ script_special1=~USHOFONL~ END
+	LPF ALTER_AREA_ACTOR_IWD2 INT_VAR flag_cre_unattached=1 flag_difficulty_1=0 flag_difficulty_2=0 flag_difficulty_3=1 STR_VAR actor_name=~US_Greater_Gelugon_2~ script_team=~00ASTIVN~ script_special2=~00T01ET~ script_movement=~00T01M~ script_combat=~00PITFIE~ script_special1=~USHOFONL~ END
 
 COPY_EXISTING ~AR6501.are~ ~override~
 	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR match_cre_file=~67DEKNT~ script_special2=~USDEATHK~ END
@@ -7193,6 +7193,9 @@ COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
 		WRITE_BYTE alignment 35
 	END
 	BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING_REGEXP ~00S.*\.cre~ ~override~
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~00AATGN.~ ~USAATGNS~
 
 ACTION_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~0~ BEGIN
 

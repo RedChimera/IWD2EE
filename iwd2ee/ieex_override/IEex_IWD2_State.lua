@@ -6074,6 +6074,89 @@ function MERAISED(effectData, creatureData)
 ["source_id"] = sourceID
 })
 	end
+	local constantID = IEex_ReadDword(creatureData + 0x700)
+	local equipmentRecord = ex_dead_pc_equipment_record[constantID]
+
+	if equipmentRecord == nil or #equipmentRecord == 0 then return end
+	local highestNumMatches = 0
+	local numMatches = 0
+	local highestNumMatchesContainer = 0
+	IEex_IterateIDs(IEex_ReadDword(creatureData + 0x12), 0x11, function(containerID)
+		local containerData = IEex_GetActorShare(containerID)
+		numMatches = 0
+		if IEex_ReadDword(containerData + 0x5BA) <= #equipmentRecord then
+			IEex_IterateCPtrList(containerData + 0x5AE, function(containerItemData)
+				local nextItem = equipmentRecord[numMatches + 1]
+				local itemRES = IEex_ReadLString(containerItemData + 0xC, 8)
+				local charges1 = IEex_ReadWord(containerItemData + 0x18, 0x0)
+				local charges2 = IEex_ReadWord(containerItemData + 0x1A, 0x0)
+				local charges3 = IEex_ReadWord(containerItemData + 0x1C, 0x0)
+				local slotFlags = IEex_ReadDword(containerItemData + 0x20)
+				if itemRES == nextItem[2] and charges1 == nextItem[3] and charges2 == nextItem[4] and charges3 == nextItem[5] and slotFlags == nextItem[6] then
+					numMatches = numMatches + 1
+				end
+			end)
+		end
+		if numMatches > highestNumMatches then
+			highestNumMatches = numMatches
+			highestNumMatchesContainer = containerData
+		end
+	end)
+	if highestNumMatchesContainer > 0 then
+		local nextItemIndex = 1
+		IEex_IterateCPtrList(highestNumMatchesContainer + 0x5AE, function(containerItemData)
+			local itemRES = IEex_ReadLString(containerItemData + 0xC, 8)
+			local charges1 = IEex_ReadWord(containerItemData + 0x18, 0x0)
+			local charges2 = IEex_ReadWord(containerItemData + 0x1A, 0x0)
+			local charges3 = IEex_ReadWord(containerItemData + 0x1C, 0x0)
+			local slotFlags = IEex_ReadDword(containerItemData + 0x20)
+			for i = nextItemIndex, #equipmentRecord, 1 do
+				local nextItem = equipmentRecord[i]
+				if itemRES == nextItem[2] and charges1 == nextItem[3] and charges2 == nextItem[4] and charges3 == nextItem[5] and slotFlags == nextItem[6] then
+					nextItemIndex = nextItemIndex + 1
+					IEex_ApplyEffectToActor(targetID, {
+["opcode"] = 143,
+["target"] = 2,
+["timing"] = 1,
+["parameter1"] = nextItem[1],
+["parameter2"] = 2,
+["resource"] = itemRES,
+["source_id"] = targetID
+})
+					if charges1 > 1 or charges2 > 1 or charges3 > 1 then
+						IEex_ApplyEffectToActor(targetID, {
+["opcode"] = 500,
+["target"] = 2,
+["timing"] = 0,
+["parameter1"] = charges1,
+["parameter2"] = 1,
+["parameter3"] = charges2,
+["parameter4"] = charges3,
+["special"] = nextItem[1],
+["savingthrow"] = 0x80000,
+["resource"] = "EXCHARGE",
+["source_id"] = targetID
+})
+						
+					end
+					IEex_ApplyEffectToActor(targetID, {
+["opcode"] = 500,
+["target"] = 2,
+["timing"] = 0,
+["parameter1"] = slotFlags,
+["parameter2"] = 0,
+["special"] = nextItem[1],
+["resource"] = "EXITMFLG",
+["source_id"] = targetID
+})
+					break;
+				end
+			end
+		end)
+		IEex_WriteByte(highestNumMatchesContainer + 0x863, 1)
+		IEex_Eval('EquipMostDamagingMelee()',targetID)
+	end
+	ex_dead_pc_equipment_record[constantID] = nil
 end
 
 function MEREDIRE(effectData, creatureData)
@@ -10613,6 +10696,12 @@ function IEex_EvaluatePermanentRepeatingEffects(creatureData)
 	local usedFunction = false
 	local tick = IEex_GetGameTick()
 	local targetID = IEex_GetActorIDShare(creatureData)
+--[[
+	if tick % 15 == 0 and targetID == IEex_GetActorIDCharacter(0) then
+		IEex_DS("ugu")
+		IEex_Search(107, creatureData, 0x8000, false)
+	end
+--]]
 --	if IEex_CheckForInfiniteLoop(targetID, IEex_ReadDword(effectData + 0x24), "MEREPERM", 5) then return end
 	if IEex_ReadSignedByte(creatureData + 0x603, 0x0) == -1 and IEex_IsPartyMember(targetID) then
 		IEex_WriteByte(creatureData + 0x603, 0)
@@ -11589,7 +11678,6 @@ function MEBUFFCA(effectData, creatureData)
 	local sourceX, sourceY = IEex_GetActorLocation(sourceID)
 	local parameter3 = IEex_ReadDword(effectData + 0x5C)
 	local parameter4 = IEex_ReadDword(effectData + 0x60)
-	IEex_DS(IEex_GetGameTick())
 	if parameter4 == 0 then
 		IEex_Eval('SpellRES(\"' .. spellRES .. '\",Player' .. (parameter3 + 1) .. ')',partySlot)
 	else
@@ -23722,6 +23810,27 @@ function EXCHARGE(effectData, creatureData)
 	end
 end
 
+function EXITMFLG(effectData, creatureData)
+	IEex_WriteDword(effectData + 0x110, 1)
+	local targetID = IEex_GetActorIDShare(creatureData)
+	local flagsToChange = IEex_ReadDword(effectData + 0x18)
+	local parameter2 = IEex_ReadDword(effectData + 0x1C)
+	local savingthrow = IEex_ReadDword(effectData + 0x3C)
+	local special = IEex_ReadDword(effectData + 0x44)
+	local invItemData = IEex_ReadDword(creatureData + 0x4AD8 + special * 0x4)
+	if invItemData > 0 then
+		local slotFlags = IEex_ReadDword(invItemData + 0x20)
+		if parameter2 == 0 then
+			slotFlags = flagsToChange
+		elseif parameter2 == 1 then
+			slotFlags = bit.bor(slotFlags, flagsToChange)
+		elseif parameter2 == 2 then
+			slotFlags = bit.band(slotFlags, (0xFFFFFFFF - flagsToChange))
+		end
+		IEex_WriteDword(invItemData + 0x20, slotFlags)
+	end
+end
+
 function MEHOFSUM(effectData, creatureData)
 	IEex_WriteDword(effectData + 0x110, 1)
 	if IEex_CheckForEffectRepeat(effectData, creatureData) then return end
@@ -25569,7 +25678,6 @@ function MEDAMSLV(originatingEffectData, effectData, creatureData)
 	if opcode ~= 12 or IEex_ReadLString(effectData + 0x90, 8) ~= "IEEX_DAM" then return false end
 	if damage <= 0 and dicenumber <= 0 then return false end
 	local doDeflect = false
-	local weaponEnchantment = 0
 	local weaponRES = IEex_ReadLString(effectData + 0x6C, 8)
 	local resWrapper = IEex_DemandRes(weaponRES, "ITM")
 	local weaponData = 0
@@ -25587,6 +25695,7 @@ function MEDAMSLV(originatingEffectData, effectData, creatureData)
 	local headerType = IEex_ReadByte(weaponData + 0x82 + 0x38 * currentHeader, 0x0)
 	local weaponFlags = IEex_ReadDword(weaponData + 0x18)
 	local weaponType = IEex_ReadWord(weaponData + 0x1C, 0x0)
+	local weaponEnchantment = IEex_ReadDword(weaponData + 0x60)
 	IEex_IterateActorEffects(sourceID, function(eData)
 		local theopcode = IEex_ReadDword(eData + 0x10)
 		local theweaponRES = IEex_ReadLString(eData + 0x1C, 8)
@@ -25614,7 +25723,6 @@ function MEDAMSLV(originatingEffectData, effectData, creatureData)
 	if (reductionType == 1 and bit.band(weaponFlags, 0x40) > 0) or (reductionType == 2 and bit.band(weaponFlags, 0x40) == 0) or (reductionType == 3 and bit.band(weaponFlags, 0x100) > 0) or (reductionType == 4 and bit.band(weaponFlags, 0x100) == 0) or (reductionType == 5 and bit.band(weaponFlags, 0x140) == 0) or (reductionType == 6 and bit.band(weaponFlags, 0x2) > 0) or (reductionType == 7 and bit.band(weaponFlags, 0x2) == 0) or (reductionType == 8 and bit.band(weaponFlags, 0x10) > 0) or (reductionType == 9 and bit.band(weaponFlags, 0x10) == 0) or (reductionType == 10 and bit.band(weaponFlags, 0x200) > 0) or (reductionType == 11 and bit.band(weaponFlags, 0x200) == 0) or (reductionType == 12 and bit.band(weaponFlags, 0x10000) > 0) or (reductionType == 13 and bit.band(weaponFlags, 0x10000) == 0) or (reductionType == 14 and bit.band(weaponFlags, 0x20000) > 0) or (reductionType == 15 and bit.band(weaponFlags, 0x20000) == 0) or (reductionType == 16 and bit.band(weaponFlags, 0x40000) > 0) or (reductionType == 17 and bit.band(weaponFlags, 0x40000) == 0) or (reductionType == 18 and bit.band(weaponFlags, 0x80000) > 0) or (reductionType == 19 and bit.band(weaponFlags, 0x80000) == 0) or (reductionType == 20 and bit.band(weaponFlags, 0x10100) == 0) or (reductionType == 21 and bit.band(weaponFlags, 0x10200) == 0) or (reductionType == 22 and (bit.band(weaponFlags, 0x10000) == 0 or (damage_type ~= 0x10 and damage_type ~= 0x200))) then
 		doDeflect = true
 	end
-	weaponEnchantment = IEex_ReadDword(weaponData + 0x60)
 	resWrapper:free()
 	if reductionType == 0 and weaponEnchantment <= maxEnchantment then
 		doDeflect = true

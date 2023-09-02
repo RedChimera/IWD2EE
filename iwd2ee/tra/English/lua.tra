@@ -215,6 +215,16 @@
 @55339=~Attacks <EXWHNAME39> with <EXWHWEAP39> : <EXWHHITMISS39>~
 @55340=~Attacks <EXWHNAME40> with <EXWHWEAP40> : <EXWHHITMISS40>~
 */
+@55351=~5 damage resisted from nonmagical weapon~
+@55352=~10 damage resisted from weapon of less than +2 enchantment~
+@55353=~15 damage resisted from weapon of less than +3 enchantment~
+@55354=~20 damage resisted from weapon of less than +4 enchantment~
+@55355=~25 damage resisted from weapon of less than +5 enchantment~
+@55356=~30 damage resisted from weapon of less than +6 enchantment~
+@55357=~35 damage resisted from weapon of less than +7 enchantment~
+@55358=~40 damage resisted from weapon of less than +8 enchantment~
+@55359=~45 damage resisted from weapon of less than +9 enchantment~
+@55360=~50 damage resisted from weapon of less than +10 enchantment~
 @55371=~magic~
 @55372=~positive energy~
 @55373=~negative energy~

@@ -1,4 +1,3 @@
-
 IEex_Debug_DisableOpcodes = false
 IEex_Debug_DisableScreenEffects = false
 
@@ -233,6 +232,7 @@ function IEex_Extern_OnAddSummonToLimitHook(effectData, summonerData, summonedDa
 	return false
 end
 ex_apply_effects_flags = {}
+ex_dead_pc_equipment_record = {}
 --[[
 ex_empowerable_opcodes = {[0] = true, [1] = true, [6] = true, [10] = true, [12] = true, [15] = true, [17] = true, [18] = true,
 [19] = true, [21] = true, [22] = true, [25] = true, [27] = true, [28] = true, [29] = true, [30] = true, [31] = true,
@@ -640,6 +640,7 @@ ex_empowerable_opcodes = {[12] = true, [17] = true, [18] = true, [25] = true, [6
 				end
 			end
 		end
+		local constantID = IEex_ReadDword(creatureData + 0x700)
 		if opcode == 13 or opcode == 420 then
 			local timeSlowed, targetNotSlowed = IEex_CheckGlobalEffectOnActor(targetID, 0x2)
 			local noChunkedDeath, targetYesChunkedDeath = IEex_CheckGlobalEffectOnActor(targetID, 0x4)
@@ -647,7 +648,46 @@ ex_empowerable_opcodes = {[12] = true, [17] = true, [18] = true, [25] = true, [6
 				parameter2 = 0x4
 				IEex_WriteDword(effectData + 0x1C, parameter2)
 			end
+			if IEex_IsPartyMember(targetID) then
+				ex_dead_pc_equipment_record[constantID] = {}
+				for i = 0, 50, 1 do
+					local slotData = IEex_ReadDword(creatureData + 0x4AD8 + i * 0x4)
+					if slotData > 0 then
+						local itemRES = IEex_ReadLString(slotData + 0xC, 8)
+						local charges1 = IEex_ReadWord(slotData + 0x18, 0x0)
+						local charges2 = IEex_ReadWord(slotData + 0x1A, 0x0)
+						local charges3 = IEex_ReadWord(slotData + 0x1C, 0x0)
+						local slotFlags = IEex_ReadDword(slotData + 0x20)
+						local resWrapper = IEex_DemandRes(itemRES, "ITM")
+						local itemData = 0
+						if resWrapper:isValid() then
+							itemData = resWrapper:getData()
+						end
+						if itemData > 0 then
+							local itemFlags = IEex_ReadDword(itemData + 0x18)
+							if bit.band(itemFlags, 0x4) > 0 then
+								table.insert(ex_dead_pc_equipment_record[constantID], {i, itemRES, charges1, charges2, charges3, slotFlags})
+							end
+						end
+						resWrapper:free()
+					end
+				end
+			end
 		end
+--[[
+		if opcode == 287 and IEex_IsPartyMember(targetID) and not IEex_IsSprite(targetID, false) then
+			IEex_IterateIDs(IEex_ReadDword(creatureData + 0x12), 0x11, function(containerID)
+				local containerData = IEex_GetActorShare(containerID)
+				containerX = IEex_ReadDword(containerData + 0x6)
+				containerY = IEex_ReadDword(containerData + 0xA)
+				currentDistance = IEex_GetDistance(actorX, actorY, containerX, containerY)
+				if currentDistance < 20 and currentDistance < shortestDistance and IEex_ReadWord(containerData + 0x5CA, 0x0) == 4 then
+					shortestDistance = currentDistance
+					closestContainer = containerData
+				end
+			end)
+		end
+--]]
 		if opcode == 13 and parent_resource == "" then
 			local oldItemSlotList = {}
 			IEex_IterateActorEffects(targetID, function(eData)
