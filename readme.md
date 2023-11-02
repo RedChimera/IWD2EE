@@ -32,6 +32,8 @@ The big changes described above are only applied if you install certain componen
 <img src="https://github.com/RedChimera/semiOverhaul-v1.32/blob/master/iwd2ee/png/IWD2Programs.png">
 5. You MUST start the game by clicking on IWD2EE.exe. If you click on IWD2.exe instead, the game will crash during character creation or when you load a save game.
 
+If you are using any mods other than IWD2EE, you should also install the IWD2EE mod compatibility patch which comes with IWD2EE. Install the patch after IWD2EE and after all other mods.
+
 
 ## Components
 

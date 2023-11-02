@@ -1,0 +1,2432 @@
+BACKUP ~iwd2ee_mod_compatibility_patch/backup~
+AUTHOR ~Red Chimera~
+
+ALWAYS
+	OUTER_TEXT_SPRINT ~mod_folder~ ~iwd2ee~
+	INCLUDE ~%mod_folder%/components/iwd2ee_functions.tpa~
+	SILENT
+	LAM	IWD2_INDEX_LISTS
+	VERBOSE
+END
+
+LANGUAGE   ~English~
+           ~English~
+           ~iwd2ee_mod_compatibility_patch/tra/English/setup.tra~
+           ~iwd2ee/tra/English/class_revisions.tra~
+           ~iwd2ee/tra/English/loose_alignment.tra~
+           ~iwd2ee/tra/English/spell_revise.tra~
+           ~iwd2ee/tra/English/spell_focus.tra~
+           ~iwd2ee/tra/English/item_revisions.tra~
+           ~iwd2ee/tra/English/creature_rebalancing.tra~
+           ~iwd2ee/tra/English/faster_areas.tra~
+           ~iwd2ee/tra/English/z_concoct_potions.tra~
+		   ~iwd2ee/tra/English/npc_core.tra~
+           ~iwd2ee/tra/English/revised_battle_square.tra~
+           ~iwd2ee/tra/English/lua.tra~
+           ~iwd2ee/tra/English/racial_enemies.tra~
+           ~iwd2ee/tra/English/misc.tra~
+           ~iwd2ee/tra/English/more_persuasion_options.tra~
+
+
+BEGIN @1 REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~usInitialModifications.txt~ @98 FORBID_COMPONENT ~widescreen.tp2~ ~0~ @99 DESIGNATED 0
+
+ACTION_IF MOD_IS_INSTALLED ~Setup-IWD2-Ease.tp2~ ~0~ BEGIN
+
+	COPY_EXISTING ~63HALBPB.itm~ ~override~ ~00AROW88.itm~ ~override~ ~00FLAL87.itm~ ~override~
+		LPF ALTER_EFFECT INT_VAR silent=1 check_headers=0 check_globals=1 match_probability1=25 probability1=100 END
+		BUT_ONLY_IF_IT_CHANGES
+
+
+
+	ACTION_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~4~ AND NOT MOD_IS_INSTALLED ~Setup-IWD2-Ease.tp2~ ~16~ BEGIN
+		COPY_EXISTING ~00SWDB93.itm~ ~override~
+			WRITE_SHORT 0x96 6
+			BUT_ONLY_IF_IT_CHANGES
+	END
+
+END
+
+ACTION_IF MOD_IS_INSTALLED ~Setup-IWD2-Ease.tp2~ ~2~ AND MOD_IS_INSTALLED ~iwd2ee.tp2~ ~0~ BEGIN
+
+	COPY ~iwd2ee/spl/spin148.spl~ ~override~
+		IF_EXISTS
+
+END
+
+ACTION_IF MOD_IS_INSTALLED ~Setup-IWD2-Ease.tp2~ ~3~ BEGIN
+
+	COPY_EXISTING ~60SWDLHA.itm~ ~override~ ~60HFSLHA.itm~ ~override~
+		READ_LONG 0x18 theflags
+		theflags|=0x10000
+		WRITE_LONG 0x18 theflags
+		BUT_ONLY_IF_IT_CHANGES
+
+
+
+	ACTION_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~4~ AND NOT MOD_IS_INSTALLED ~Setup-IWD2-Ease.tp2~ ~16~ BEGIN
+		COPY_EXISTING ~00SWDB93.itm~ ~override~
+			WRITE_SHORT 0x96 6
+			BUT_ONLY_IF_IT_CHANGES
+	END
+
+END
+
+ACTION_IF MOD_IS_INSTALLED ~Setup-IWD2-Ease.tp2~ ~5~ AND MOD_IS_INSTALLED ~iwd2ee.tp2~ ~2~ BEGIN
+
+	COPY ~iwd2ee/spl/spl_spell_revisions/spwi807.spl~ ~override~
+		SAY NAME1 @1126
+		SAY UNIDENTIFIED_DESC @1127
+		IF_EXISTS
+
+END
+
+ACTION_IF MOD_IS_INSTALLED ~Setup-IWD2-Ease.tp2~ ~6~ AND MOD_IS_INSTALLED ~iwd2ee.tp2~ ~84~ BEGIN
+
+	COPY_EXISTING ~strtxp.2da~ ~override~
+		LPF GET_2DA_ROW INT_VAR numcolumns=2 match_column=0 STR_VAR match=~HUMAN_AASIMAR~ RET aasimarrow=matched END
+		SET_2DA_ENTRY aasimarrow 1 2 ~0~
+		LPF GET_2DA_ROW INT_VAR numcolumns=2 match_column=0 STR_VAR match=~HUMAN_TIEFLING~ RET tieflingrow=matched END
+		SET_2DA_ENTRY tieflingrow 1 2 ~0~
+		LPF GET_2DA_ROW INT_VAR numcolumns=2 match_column=0 STR_VAR match=~ELF_DROW~ RET drowrow=matched END
+		SET_2DA_ENTRY drowrow 1 2 ~0~
+		LPF GET_2DA_ROW INT_VAR numcolumns=2 match_column=0 STR_VAR match=~DWARF_GRAY~ RET duergarrow=matched END
+		SET_2DA_ENTRY duergarrow 1 2 ~0~
+		LPF GET_2DA_ROW INT_VAR numcolumns=2 match_column=0 STR_VAR match=~GNOME_DEEP~ RET svirfrow=matched END
+		SET_2DA_ENTRY svirfrow 1 2 ~0~
+
+END
+
+ACTION_IF MOD_IS_INSTALLED ~Setup-IWD2-Ease.tp2~ ~17~ AND MOD_IS_INSTALLED ~iwd2ee.tp2~ ~2~ BEGIN
+
+COPY_EXISTING_REGEXP ~00LEAT0[1-57]\.itm~ ~override~ ~00CHAN0[1-5]\.itm~ ~override~ ~00PLAT[01][1-4]\.itm~ ~override~ ~00SHLD[01][013-9]\.itm~ ~override~ ~00SHLD9[89]\.itm~ ~override~ ~12SHLD[CKS][TDG]\.itm~ ~override~ ~12HFSD[CKS][TDG]\.itm~ ~override~ ~00CIARM[B-D]\.itm~ ~override~
+	LPF DELETE_ITEM_EQEFFECT INT_VAR opcode_to_delete=86 END
+	LPF DELETE_ITEM_EQEFFECT INT_VAR opcode_to_delete=87 END
+	LPF DELETE_ITEM_EQEFFECT INT_VAR opcode_to_delete=88 END
+	LPF DELETE_ITEM_EQEFFECT INT_VAR opcode_to_delete=89 END
+	BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING ~00LEAT05.itm~ ~override~
+	SAY IDENTIFIED_DESC @10424
+
+COPY_EXISTING ~00LEAT07.itm~ ~override~
+	SAY IDENTIFIED_DESC @10428
+
+COPY_EXISTING ~00CHAN02.itm~ ~override~
+	SAY IDENTIFIED_DESC @10504
+
+COPY_EXISTING ~00CHAN03.itm~ ~override~
+	SAY IDENTIFIED_DESC @10506
+
+COPY_EXISTING ~00PLAT02.itm~ ~override~
+	SAY IDENTIFIED_DESC @10548
+
+COPY_EXISTING ~00PLAT03.itm~ ~override~
+	SAY NAME2 @10549
+	SAY IDENTIFIED_DESC @10550
+
+COPY_EXISTING ~00PLAT04.itm~ ~override~
+	SAY IDENTIFIED_DESC @10552
+
+COPY_EXISTING ~00PLAT12.itm~ ~override~
+	SAY NAME2 @10557
+
+COPY_EXISTING ~00SHLD98.itm~ ~override~
+	SAY IDENTIFIED_DESC @10632
+
+COPY_EXISTING ~00SHLD99.itm~ ~override~
+	SAY IDENTIFIED_DESC @10634
+
+COPY_EXISTING ~12SHLDCT.itm~ ~override~
+	SAY NAME2 @10655
+
+COPY_EXISTING ~12HFSDCT.itm~ ~override~
+	SAY NAME2 @10657
+
+COPY_EXISTING ~12SHLDKD.itm~ ~override~
+	SAY NAME2 @10659
+	SAY IDENTIFIED_DESC @10660
+
+COPY_EXISTING ~12HFSDKD.itm~ ~override~
+	SAY NAME2 @10661
+	SAY IDENTIFIED_DESC @10662
+
+COPY_EXISTING ~12SHLDSG.itm~ ~override~
+	SAY NAME2 @10663
+	SAY IDENTIFIED_DESC @10664
+
+COPY_EXISTING ~12HFSDSG.itm~ ~override~
+	SAY NAME2 @10665
+	SAY IDENTIFIED_DESC @10666
+
+COPY ~iwd2ee/itm/itm_item_revisions/00BRAC02.itm~ ~override~
+
+COPY ~iwd2ee/itm/itm_item_revisions/00BRAC03.itm~ ~override~
+
+COPY ~iwd2ee/itm/itm_item_revisions/00BRAC04.itm~ ~override~
+
+COPY ~iwd2ee/itm/itm_item_revisions/00BRAC11.itm~ ~override~
+	SAY IDENTIFIED_DESC @10237
+
+COPY ~iwd2ee/itm/itm_item_revisions/00LEAT06.itm~ ~override~
+	SAY NAME2 @10425
+	SAY IDENTIFIED_DESC @10426
+
+COPY ~iwd2ee/itm/itm_item_revisions/00LEAT08.itm~ ~override~
+	SAY NAME2 @10429
+	SAY IDENTIFIED_DESC @10430
+
+COPY ~iwd2ee/itm/itm_item_revisions/00LEAT86.itm~ ~override~
+	SAY NAME2 @10431
+	SAY IDENTIFIED_DESC @10432
+
+COPY ~iwd2ee/itm/itm_item_revisions/00LEAT87.itm~ ~override~
+	SAY NAME2 @10433
+	SAY IDENTIFIED_DESC @10434
+
+COPY ~iwd2ee/itm/itm_item_revisions/00LEAT88.itm~ ~override~
+	SAY NAME2 @10435
+	SAY IDENTIFIED_DESC @10436
+
+COPY ~iwd2ee/itm/itm_item_revisions/00LEAT89.itm~ ~override~
+	SAY IDENTIFIED_DESC @10438
+
+COPY ~iwd2ee/itm/itm_item_revisions/00LEAT90.itm~ ~override~
+	SAY NAME2 @10439
+	SAY IDENTIFIED_DESC @10440
+
+COPY ~iwd2ee/itm/itm_item_revisions/00LEAT91.itm~ ~override~
+	SAY NAME2 @10441
+	SAY IDENTIFIED_DESC @10442
+
+COPY ~iwd2ee/itm/itm_item_revisions/00LEAT92.itm~ ~override~
+	SAY NAME2 @10443
+	SAY IDENTIFIED_DESC @10444
+
+COPY ~iwd2ee/itm/itm_item_revisions/00LEAT93.itm~ ~override~
+	SAY NAME2 @10445
+	SAY IDENTIFIED_DESC @10446
+
+COPY ~iwd2ee/itm/itm_item_revisions/00LEAT94.itm~ ~override~
+	SAY NAME2 @10447
+	SAY IDENTIFIED_DESC @10448
+
+COPY ~iwd2ee/itm/itm_item_revisions/00LEAT95.itm~ ~override~
+	SAY NAME2 @10449
+	SAY IDENTIFIED_DESC @10450
+
+COPY ~iwd2ee/itm/itm_item_revisions/00LEAT96.itm~ ~override~
+	SAY NAME2 @10451
+	SAY IDENTIFIED_DESC @10452
+
+COPY ~iwd2ee/itm/itm_item_revisions/00LEAT97.itm~ ~override~
+	SAY NAME2 @10453
+	SAY IDENTIFIED_DESC @10454
+
+COPY ~iwd2ee/itm/itm_item_revisions/00LEAT98.itm~ ~override~
+	SAY NAME2 @10455
+	SAY IDENTIFIED_DESC @10456
+
+COPY ~iwd2ee/itm/itm_item_revisions/00LEAT99.itm~ ~override~
+	SAY NAME2 @10457
+	SAY IDENTIFIED_DESC @10458
+
+COPY ~iwd2ee/itm/itm_item_revisions/10LEATUB.itm~ ~override~
+	SAY IDENTIFIED_DESC @10460
+
+COPY ~iwd2ee/itm/itm_item_revisions/10HFLTUB.itm~ ~override~
+	SAY NAME2 @10461
+	SAY IDENTIFIED_DESC @10462
+
+COPY ~iwd2ee/itm/itm_item_revisions/62LEATDB.itm~ ~override~
+	SAY NAME2 @10463
+	SAY IDENTIFIED_DESC @10464
+
+COPY ~iwd2ee/itm/itm_item_revisions/62HFLTDB.itm~ ~override~
+	SAY NAME2 @10465
+	SAY IDENTIFIED_DESC @10466
+
+COPY ~iwd2ee/itm/itm_item_revisions/50LEATMS.itm~ ~override~
+	SAY NAME2 @10467
+	SAY IDENTIFIED_DESC @10468
+
+COPY ~iwd2ee/itm/itm_item_revisions/50HFLTMS.itm~ ~override~
+	SAY NAME2 @10469
+	SAY IDENTIFIED_DESC @10470
+
+COPY ~iwd2ee/itm/itm_item_revisions/60LEATZU.itm~ ~override~
+	SAY NAME2 @10471
+	SAY IDENTIFIED_DESC @10472
+
+COPY ~iwd2ee/itm/itm_item_revisions/60HFLTZU.itm~ ~override~
+	SAY NAME2 @10473
+	SAY IDENTIFIED_DESC @10474
+
+COPY ~iwd2ee/itm/itm_item_revisions/60LEATIN.itm~ ~override~
+	SAY NAME2 @10475
+	SAY IDENTIFIED_DESC @10476
+
+COPY ~iwd2ee/itm/itm_item_revisions/60HFLTIN.itm~ ~override~
+	SAY NAME2 @10477
+	SAY IDENTIFIED_DESC @10478
+
+COPY ~iwd2ee/itm/itm_item_revisions/00HIDE01.itm~ ~override~
+	SAY IDENTIFIED_DESC @10480
+
+COPY ~iwd2ee/itm/itm_item_revisions/00HIDE02.itm~ ~override~
+	SAY IDENTIFIED_DESC @10482
+
+COPY ~iwd2ee/itm/itm_item_revisions/00HIDE03.itm~ ~override~
+	SAY IDENTIFIED_DESC @10484
+
+COPY ~iwd2ee/itm/itm_item_revisions/00HIDE04.itm~ ~override~
+	SAY IDENTIFIED_DESC @10486
+
+COPY ~iwd2ee/itm/itm_item_revisions/00HIDE05.itm~ ~override~
+	SAY IDENTIFIED_DESC @10490
+
+COPY ~iwd2ee/itm/itm_item_revisions/00HIDE06.itm~ ~override~
+	SAY IDENTIFIED_DESC @10492
+
+COPY ~iwd2ee/itm/itm_item_revisions/50HIDE06.itm~ ~override~
+	SAY NAME2 @10493
+	SAY IDENTIFIED_DESC @10494
+
+COPY ~iwd2ee/itm/itm_item_revisions/50HIDEAH.itm~ ~override~
+	LPF ALTER_EFFECT INT_VAR silent=1 check_headers=0 check_globals=1 match_opcode=502 special=RESOLVE_STR_REF(@23056) STR_VAR match_resource=~MEDAMSLV~ END
+	SAY IDENTIFIED_DESC @10498
+
+COPY ~iwd2ee/itm/itm_item_revisions/50HFHEAH.itm~ ~override~
+	LPF ALTER_EFFECT INT_VAR silent=1 check_headers=0 check_globals=1 match_opcode=502 special=RESOLVE_STR_REF(@23057) STR_VAR match_resource=~MEDAMSLV~ END
+	SAY NAME2 @10499
+	SAY IDENTIFIED_DESC @10500
+
+COPY ~iwd2ee/itm/itm_item_revisions/00CHAN06.itm~ ~override~
+	SAY NAME2 @10511
+	SAY IDENTIFIED_DESC @10512
+
+COPY ~iwd2ee/itm/itm_item_revisions/00CHAN07.itm~ ~override~
+	SAY NAME2 @10515
+	SAY IDENTIFIED_DESC @10516
+
+COPY ~iwd2ee/itm/itm_item_revisions/00CHAN08.itm~ ~override~
+	SAY NAME2 @10517
+	SAY IDENTIFIED_DESC @10518
+
+COPY ~iwd2ee/itm/itm_item_revisions/00CHAN09.itm~ ~override~
+	SAY NAME2 @10521
+	SAY IDENTIFIED_DESC @10522
+
+COPY ~iwd2ee/itm/itm_item_revisions/00CHANML.itm~ ~override~
+	SAY NAME2 @10525
+	SAY IDENTIFIED_DESC @10526
+
+COPY ~iwd2ee/itm/itm_item_revisions/00HFCNML.itm~ ~override~
+	SAY NAME2 @10527
+	SAY IDENTIFIED_DESC @10528
+
+COPY ~iwd2ee/itm/itm_item_revisions/60CHANCD.itm~ ~override~
+	SAY NAME2 @10529
+	SAY IDENTIFIED_DESC @10530
+
+COPY ~iwd2ee/itm/itm_item_revisions/60HFCNCD.itm~ ~override~
+	SAY NAME2 @10531
+	SAY IDENTIFIED_DESC @10532
+
+COPY ~iwd2ee/itm/itm_item_revisions/60CHANSA.itm~ ~override~
+	SAY NAME2 @10533
+	SAY IDENTIFIED_DESC @10534
+
+COPY ~iwd2ee/itm/itm_item_revisions/60HFCNSA.itm~ ~override~
+	SAY NAME2 @10535
+	SAY IDENTIFIED_DESC @10536
+
+COPY ~iwd2ee/itm/itm_item_revisions/60CHANTM.itm~ ~override~
+	SAY NAME2 @10537
+	SAY IDENTIFIED_DESC @10538
+
+COPY ~iwd2ee/itm/itm_item_revisions/60HFCNTM.itm~ ~override~
+	SAY NAME2 @10539
+	SAY IDENTIFIED_DESC @10540
+
+COPY ~iwd2ee/itm/itm_item_revisions/60CHANGR.itm~ ~override~
+	SAY NAME2 @10541
+	SAY IDENTIFIED_DESC @10542
+
+COPY ~iwd2ee/itm/itm_item_revisions/60HFCNGR.itm~ ~override~
+	SAY NAME2 @10543
+	SAY IDENTIFIED_DESC @10544
+
+COPY ~iwd2ee/itm/itm_item_revisions/00PLAT10.itm~ ~override~
+	SAY IDENTIFIED_DESC @10554
+
+COPY ~iwd2ee/itm/itm_item_revisions/51PLAT10.itm~ ~override~
+	SAY NAME2 @10559
+	SAY IDENTIFIED_DESC @10560
+
+COPY ~iwd2ee/itm/itm_item_revisions/51HFPT10.itm~ ~override~
+	SAY NAME2 @10561
+	SAY IDENTIFIED_DESC @10562
+
+COPY ~iwd2ee/itm/itm_item_revisions/60PLATOF.itm~ ~override~
+	SAY IDENTIFIED_DESC @10564
+
+COPY ~iwd2ee/itm/itm_item_revisions/60HFPTOF.itm~ ~override~
+	SAY NAME2 @10565
+	SAY IDENTIFIED_DESC @10566
+
+COPY ~iwd2ee/itm/itm_item_revisions/60PLATKC.itm~ ~override~
+	SAY NAME2 @10567
+	SAY IDENTIFIED_DESC @10568
+
+COPY ~iwd2ee/itm/itm_item_revisions/60HFPTKC.itm~ ~override~
+	SAY NAME2 @10569
+	SAY IDENTIFIED_DESC @10570
+
+COPY ~iwd2ee/itm/itm_item_revisions/60PLATPF.itm~ ~override~
+	SAY NAME2 @10571
+	SAY IDENTIFIED_DESC @10572
+
+COPY ~iwd2ee/itm/itm_item_revisions/60HFPTPF.itm~ ~override~
+	SAY NAME2 @10573
+	SAY IDENTIFIED_DESC @10574
+
+COPY ~iwd2ee/itm/itm_item_revisions/60PLATAG.itm~ ~override~
+	SAY NAME2 @10575
+	SAY IDENTIFIED_DESC @10576
+
+COPY ~iwd2ee/itm/itm_item_revisions/60HFPTAG.itm~ ~override~
+	SAY NAME2 @10577
+	PATCH_IF (MOD_IS_INSTALLED ~iwd2ee.tp2~ ~2~) BEGIN //If Spell Revisions is installed
+		SAY IDENTIFIED_DESC @10580
+	END ELSE BEGIN
+		SAY IDENTIFIED_DESC @10578
+	END
+
+COPY ~iwd2ee/itm/itm_item_revisions/60PLATDC.itm~ ~override~
+	SAY NAME2 @10581
+	SAY IDENTIFIED_DESC @10582
+
+COPY ~iwd2ee/itm/itm_item_revisions/60HFPTDC.itm~ ~override~
+	SAY NAME2 @10583
+	SAY IDENTIFIED_DESC @10584
+
+COPY ~iwd2ee/itm/itm_item_revisions/60PLATAA.itm~ ~override~
+	SAY NAME2 @10585
+	SAY IDENTIFIED_DESC @10586
+
+COPY ~iwd2ee/itm/itm_item_revisions/60HFPTAA.itm~ ~override~
+	SAY NAME2 @10587
+	SAY IDENTIFIED_DESC @10588
+
+COPY ~iwd2ee/itm/itm_item_revisions/00SHLD02.itm~ ~override~
+
+COPY ~iwd2ee/itm/itm_item_revisions/00SHLD12.itm~ ~override~ ~iwd2ee/itm/itm_item_revisions/00SHLD13.itm~ ~override~ ~iwd2ee/itm/itm_item_revisions/00SHLD14.itm~ ~override~ ~iwd2ee/itm/itm_item_revisions/00SHLD15.itm~ ~override~
+	SAY UNIDENTIFIED_DESC @10600
+
+COPY ~iwd2ee/itm/itm_item_revisions/00SHLD16.itm~ ~override~
+	SAY IDENTIFIED_DESC @10602
+
+COPY ~iwd2ee/itm/itm_item_revisions/00SHLD17.itm~ ~override~
+	SAY IDENTIFIED_DESC @10604
+
+COPY ~iwd2ee/itm/itm_item_revisions/00SHLD85.itm~ ~override~
+	SAY NAME2 @10605
+	SAY IDENTIFIED_DESC @10606
+
+COPY ~iwd2ee/itm/itm_item_revisions/00SHLD86.itm~ ~override~
+	SAY NAME2 @10607
+	SAY IDENTIFIED_DESC @10608
+
+COPY ~iwd2ee/itm/itm_item_revisions/00SHLD87.itm~ ~override~
+	SAY NAME2 @10609
+	SAY IDENTIFIED_DESC @10610
+
+COPY ~iwd2ee/itm/itm_item_revisions/00SHLD88.itm~ ~override~
+	SAY NAME2 @10611
+	SAY IDENTIFIED_DESC @10612
+
+COPY ~iwd2ee/itm/itm_item_revisions/00SHLD89.itm~ ~override~
+	SAY NAME2 @10613
+	SAY IDENTIFIED_DESC @10614
+
+COPY ~iwd2ee/itm/itm_item_revisions/00SHLD90.itm~ ~override~
+	SAY NAME2 @10615
+	SAY IDENTIFIED_DESC @10616
+
+COPY ~iwd2ee/itm/itm_item_revisions/00SHLD91.itm~ ~override~
+	SAY NAME2 @10617
+	SAY IDENTIFIED_DESC @10618
+
+COPY ~iwd2ee/itm/itm_item_revisions/00SHLD92.itm~ ~override~
+	SAY NAME2 @10619
+	SAY IDENTIFIED_DESC @10620
+
+COPY ~iwd2ee/itm/itm_item_revisions/00SHLD93.itm~ ~override~
+	SAY NAME2 @10621
+	SAY IDENTIFIED_DESC @10622
+
+COPY ~iwd2ee/itm/itm_item_revisions/00SHLD94.itm~ ~override~
+	SAY NAME2 @10623
+	SAY IDENTIFIED_DESC @10624
+
+COPY ~iwd2ee/itm/itm_item_revisions/00SHLD95.itm~ ~override~
+	SAY IDENTIFIED_DESC @10626
+
+COPY ~iwd2ee/itm/itm_item_revisions/00SHLD96.itm~ ~override~
+	SAY NAME2 @10627
+	SAY IDENTIFIED_DESC @10628
+
+COPY ~iwd2ee/itm/itm_item_revisions/00SHLD97.itm~ ~override~
+	SAY IDENTIFIED_DESC @10630
+
+COPY ~iwd2ee/itm/itm_item_revisions/00SHLDBU.itm~ ~override~
+	SAY NAME2 @10635
+	SAY IDENTIFIED_DESC @10636
+
+COPY ~iwd2ee/itm/itm_item_revisions/00HFSDBU.itm~ ~override~
+	SAY NAME2 @10637
+	SAY IDENTIFIED_DESC @10638
+
+COPY ~iwd2ee/itm/itm_item_revisions/00SHLDFF.itm~ ~override~
+	SAY NAME2 @10639
+	SAY IDENTIFIED_DESC @10640
+
+COPY ~iwd2ee/itm/itm_item_revisions/00HFSDFF.itm~ ~override~
+	SAY NAME2 @10641
+	SAY IDENTIFIED_DESC @10642
+
+COPY ~iwd2ee/itm/itm_item_revisions/00SHLDFV.itm~ ~override~
+	SAY NAME2 @10643
+	SAY IDENTIFIED_DESC @10644
+
+COPY ~iwd2ee/itm/itm_item_revisions/00HFSDFV.itm~ ~override~
+	SAY NAME2 @10645
+	SAY IDENTIFIED_DESC @10646
+
+COPY ~iwd2ee/itm/itm_item_revisions/00SHLDMM.itm~ ~override~
+	SAY NAME2 @10647
+	SAY IDENTIFIED_DESC @10648
+
+COPY ~iwd2ee/itm/itm_item_revisions/00HFSDMM.itm~ ~override~
+	SAY NAME2 @10649
+	SAY IDENTIFIED_DESC @10650
+
+COPY ~iwd2ee/itm/itm_item_revisions/00SHLDRF.itm~ ~override~
+	SAY NAME2 @10651
+	SAY IDENTIFIED_DESC @10652
+
+COPY ~iwd2ee/itm/itm_item_revisions/00HFSDRF.itm~ ~override~
+	SAY NAME2 @10653
+	SAY IDENTIFIED_DESC @10654
+
+COPY ~iwd2ee/itm/itm_item_revisions/12SHLDTS.itm~ ~override~
+	SAY IDENTIFIED_DESC @10668
+
+COPY ~iwd2ee/itm/itm_item_revisions/12HFSDTS.itm~ ~override~
+	SAY NAME2 @10669
+	SAY IDENTIFIED_DESC @10670
+
+COPY ~iwd2ee/itm/itm_item_revisions/51SHLDFO.itm~ ~override~
+	SAY NAME2 @10671
+	SAY IDENTIFIED_DESC @10672
+
+COPY ~iwd2ee/itm/itm_item_revisions/51HFSDFO.itm~ ~override~
+	SAY NAME2 @10673
+	SAY IDENTIFIED_DESC @10674
+
+COPY_EXISTING_REGEXP ~.*\.itm~ ~override~
+//Armor and shields grant resistance to physical damage equal to half their armor/shield bonus, rounded down
+	READ_SHORT 0x1c us_item_category
+	PATCH_IF (us_item_category >= 60 AND us_item_category <= 68) OR (us_item_category = 2) OR (us_item_category = 6) BEGIN
+		us_bonus = 0
+		READ_LONG 0x6a us_offset
+		READ_SHORT 0x70 us_num_effects
+		FOR (i=0; i < us_num_effects; ++i) BEGIN
+			READ_SHORT us_offset us_opcode
+			READ_LONG (us_offset + 0x8) us_parameter2
+			PATCH_IF (us_opcode = 0 AND us_parameter2 = 1) BEGIN
+				READ_LONG (us_offset + 0x4) us_parameter1
+				i = us_num_effects
+			END
+			us_offset += effectsize
+		END
+		PATCH_IF (us_bonus > 0) BEGIN
+			LPF DELETE_EFFECT INT_VAR silent=1 check_headers=0 check_globals=1 STR_VAR match_resource=~USARMDAR~ END
+			LPF ADD_ITEM_EQEFFECT INT_VAR opcode=modifyslashingresistance target=1 timing=2 parameter1=us_bonus STR_VAR resource=~USARMDAR~ END
+			LPF ADD_ITEM_EQEFFECT INT_VAR opcode=modifypiercingresistance target=1 timing=2 parameter1=us_bonus STR_VAR resource=~USARMDAR~ END
+			LPF ADD_ITEM_EQEFFECT INT_VAR opcode=modifybludgeoningresistance target=1 timing=2 parameter1=us_bonus STR_VAR resource=~USARMDAR~ END
+			LPF ADD_ITEM_EQEFFECT INT_VAR opcode=modifymissileresistance target=1 timing=2 parameter1=us_bonus STR_VAR resource=~USARMDAR~ END
+		END
+	END ELSE PATCH_IF (us_item_category = 12 OR us_item_category = 41 OR us_item_category = 47 OR us_item_category = 49 OR us_item_category = 53) BEGIN
+		us_bonus = 0
+		READ_LONG 0x6a us_offset
+		READ_SHORT 0x70 us_num_effects
+		FOR (i=0; i < us_num_effects; ++i) BEGIN
+			READ_SHORT us_offset us_opcode
+			READ_LONG (us_offset + 0x8) us_parameter2
+			PATCH_IF (us_opcode = 0 AND us_parameter2 = 3) BEGIN
+				READ_LONG (us_offset + 0x4) us_parameter1
+				i = us_num_effects
+			END
+			us_offset += effectsize
+		END
+		PATCH_IF (us_bonus > 0) BEGIN
+			LPF DELETE_EFFECT INT_VAR silent=1 check_headers=0 check_globals=1 STR_VAR match_resource=~USARMDAR~ END
+			LPF ADD_ITEM_EQEFFECT INT_VAR opcode=modifyslashingresistance target=1 timing=2 parameter1=us_bonus STR_VAR resource=~USARMDAR~ END
+			LPF ADD_ITEM_EQEFFECT INT_VAR opcode=modifypiercingresistance target=1 timing=2 parameter1=us_bonus STR_VAR resource=~USARMDAR~ END
+			LPF ADD_ITEM_EQEFFECT INT_VAR opcode=modifybludgeoningresistance target=1 timing=2 parameter1=us_bonus STR_VAR resource=~USARMDAR~ END
+			LPF ADD_ITEM_EQEFFECT INT_VAR opcode=modifymissileresistance target=1 timing=2 parameter1=us_bonus STR_VAR resource=~USARMDAR~ END
+		END
+	END
+	BUT_ONLY_IF_IT_CHANGES
+
+END
+
+
+ACTION_IF MOD_IS_INSTALLED ~Setup-IWD2-Ease.tp2~ ~19~ AND MOD_IS_INSTALLED ~iwd2ee.tp2~ ~2~ BEGIN
+
+	COPY ~iwd2ee/tables/LISTSPLL.2DA~ ~override~
+		IF_EXISTS
+END
+
+ACTION_IF MOD_IS_INSTALLED ~Setup-Merchant.tp2~ ~0~ AND MOD_IS_INSTALLED ~iwd2ee.tp2~ ~4~ BEGIN
+
+	COPY_EXISTING ~RT_NORM.2da~ ~override~ ~RT_FURY.2da~ ~override~
+		REPLACE_TEXTUALLY CASE_INSENSITIVE ~[ %TAB%]*USFlal59~ ~~
+
+END
+
+ACTION_IF MOD_IS_INSTALLED ~Setup-LOS.tp2~ ~0~ AND MOD_IS_INSTALLED ~iwd2ee.tp2~ ~0~ BEGIN
+
+    COPY_EXISTING ~WSPECIAL.2DA~ ~override~
+        SET_2DA_ENTRY 2 1 3 ~1~
+        SET_2DA_ENTRY 2 2 3 ~0~
+        SET_2DA_ENTRY 3 1 3 ~1~
+        SET_2DA_ENTRY 3 2 3 ~2~
+
+END
+
+ACTION_IF MOD_IS_INSTALLED ~Setup-LOS.tp2~ ~1~ BEGIN
+
+	COPY_EXISTING ~00CHAN07.itm~ ~override~ ~USPLATSW.itm~ ~override~ ~USHFPTSW.itm~ ~override~ ~W#SOLA1.itm~ ~override~
+		READ_LONG 0x1E theunusabilityflags
+		theunusabilityflags|=0x8
+		WRITE_LONG 0x1E theunusabilityflags
+		IF_EXISTS
+
+END
+
+ACTION_IF MOD_IS_INSTALLED ~Setup-LOS.tp2~ ~2~ BEGIN
+
+	COPY_EXISTING ~EFFLS32.spl~ ~override~
+		LPF ALTER_EFFECT INT_VAR check_headers=1 check_globals=0 match_opcode=73 parameter1=0 savingthrow=0x100000 special=4 END
+
+	COPY_EXISTING ~F#BOWC01.itm~ ~override~ ~F#HBWC01.itm~ ~override~
+		LPF ADD_ITEM_EQEFFECT INT_VAR opcode=500 target=1 timing=2 parameter1=36 parameter2=95 special=50 STR_VAR resource=~MESTATSC~ END
+
+	COPY_EXISTING ~F#SHLD06.itm~ ~override~
+		LPF ALTER_EFFECT INT_VAR check_headers=0 check_globals=1 match_opcode=73 parameter1=0 savingthrow=0x100000 special=2 END
+
+	COPY_EXISTING ~F#HSHD06.itm~ ~override~
+		LPF ALTER_EFFECT INT_VAR check_headers=0 check_globals=1 match_opcode=73 parameter1=0 savingthrow=0x100000 special=4 END
+
+ACTION_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~0~ BEGIN
+
+COPY ~iwd2ee/spl/spl_class_revisions/spin109.spl~ ~override~
+	SAY UNIDENTIFIED_DESC @954
+	SAY IDENTIFIED_DESC @954
+
+COPY ~iwd2ee/spl/spl_class_revisions/spin271.spl~ ~override~
+	SAY UNIDENTIFIED_DESC @218
+	SAY IDENTIFIED_DESC @218
+
+END
+
+ACTION_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~2~ BEGIN
+
+COPY ~iwd2ee/spl/spl_spell_revisions/sppr103.spl~ ~override~
+	SAY NAME1 @1861
+	SAY NAME2 @1861
+	SAY UNIDENTIFIED_DESC @1862
+	SAY IDENTIFIED_DESC @1862
+	READ_SHORT 0x94 thecastingtime ELSE 0
+	LPF ADD_SPELL_CFEFFECT INT_VAR insert_point=0 opcode=500 target=1 timing=0 special=thecastingtime STR_VAR resource=~MEONCAST~ END
+	READ_LONG 0x6A effectoffset
+	WRITE_ASCIIE (effectoffset + 0x4) ~%SOURCE_RES%~ #8
+	LPF ADD_SPELL_CFEFFECT INT_VAR insert_point=0 opcode=500 target=1 timing=0 STR_VAR resource=~EXMETALV~ END
+
+COPY ~iwd2ee/spl/spl_spell_revisions/sppr214.spl~ ~override~
+	SAY NAME1 @1863
+	SAY NAME2 @1863
+	SAY UNIDENTIFIED_DESC @1864
+	SAY IDENTIFIED_DESC @1864
+	READ_SHORT 0x94 thecastingtime ELSE 0
+	LPF ADD_SPELL_CFEFFECT INT_VAR insert_point=0 opcode=500 target=1 timing=0 special=thecastingtime STR_VAR resource=~MEONCAST~ END
+	READ_LONG 0x6A effectoffset
+	WRITE_ASCIIE (effectoffset + 0x4) ~%SOURCE_RES%~ #8
+	LPF ADD_SPELL_CFEFFECT INT_VAR insert_point=0 opcode=500 target=1 timing=0 STR_VAR resource=~EXMETALV~ END
+
+COPY ~iwd2ee/spl/spl_spell_revisions/sppr401.spl~ ~override~
+	SAY NAME1 @1865
+	SAY NAME2 @1865
+	SAY UNIDENTIFIED_DESC @1866
+	SAY IDENTIFIED_DESC @1866
+	READ_SHORT 0x94 thecastingtime ELSE 0
+	LPF ADD_SPELL_CFEFFECT INT_VAR insert_point=0 opcode=500 target=1 timing=0 special=thecastingtime STR_VAR resource=~MEONCAST~ END
+	READ_LONG 0x6A effectoffset
+	WRITE_ASCIIE (effectoffset + 0x4) ~%SOURCE_RES%~ #8
+	LPF ADD_SPELL_CFEFFECT INT_VAR insert_point=0 opcode=500 target=1 timing=0 STR_VAR resource=~EXMETALV~ END
+
+COPY ~iwd2ee/spl/spl_spell_revisions/sppr502.spl~ ~override~
+	SAY NAME1 @1867
+	SAY NAME2 @1867
+	SAY UNIDENTIFIED_DESC @1868
+	SAY IDENTIFIED_DESC @1868
+	READ_SHORT 0x94 thecastingtime ELSE 0
+	LPF ADD_SPELL_CFEFFECT INT_VAR insert_point=0 opcode=500 target=1 timing=0 special=thecastingtime STR_VAR resource=~MEONCAST~ END
+	READ_LONG 0x6A effectoffset
+	WRITE_ASCIIE (effectoffset + 0x4) ~%SOURCE_RES%~ #8
+	LPF ADD_SPELL_CFEFFECT INT_VAR insert_point=0 opcode=500 target=1 timing=0 STR_VAR resource=~EXMETALV~ END
+
+COPY ~iwd2ee/spl/spl_spell_revisions/SPPR607.spl~ ~override~
+	SAY NAME1 @1058
+	SAY NAME2 @1058
+	SAY UNIDENTIFIED_DESC @1059
+	SAY IDENTIFIED_DESC @1059
+	READ_SHORT 0x94 thecastingtime ELSE 0
+	LPF ADD_SPELL_CFEFFECT INT_VAR insert_point=0 opcode=500 target=1 timing=0 special=thecastingtime STR_VAR resource=~MEONCAST~ END
+	READ_LONG 0x6A effectoffset
+	WRITE_ASCIIE (effectoffset + 0x4) ~%SOURCE_RES%~ #8
+	LPF ADD_SPELL_CFEFFECT INT_VAR insert_point=0 opcode=500 target=1 timing=0 STR_VAR resource=~EXMETALV~ END
+
+END
+
+ACTION_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~4~ BEGIN
+
+COPY ~iwd2ee/itm/itm_item_revisions/00AX2H99.itm~ ~override~
+	SAY NAME2 @11325
+	SAY IDENTIFIED_DESC @11326
+
+COPY ~iwd2ee/itm/itm_item_revisions/00MSTR93.itm~ ~override~
+	SAY IDENTIFIED_DESC @11466
+
+COPY ~iwd2ee/itm/itm_item_revisions/00CLUB84.itm~ ~override~
+	SAY NAME2 @11351
+	SAY IDENTIFIED_DESC @11352
+
+COPY ~iwd2ee/itm/itm_item_revisions/00DAGG92.itm~ ~override~
+	SAY NAME2 @10709
+	SAY IDENTIFIED_DESC @10710
+
+COPY ~iwd2ee/itm/itm_item_revisions/00DAGG98.itm~ ~override~
+	SAY IDENTIFIED_DESC @10722
+
+COPY ~iwd2ee/itm/itm_item_revisions/00FLAL90.itm~ ~override~
+	SAY NAME2 @11505
+	SAY IDENTIFIED_DESC @11506
+
+COPY ~iwd2ee/itm/itm_item_revisions/00HALB96.itm~ ~override~
+	SAY NAME2 @11161
+	SAY IDENTIFIED_DESC @11162
+
+COPY ~iwd2ee/itm/itm_item_revisions/00SPERIM.itm~ ~override~
+	SAY NAME2 @11125
+	SAY IDENTIFIED_DESC @11126
+
+COPY ~iwd2ee/itm/itm_item_revisions/00HFSRIM.itm~ ~override~
+	SAY NAME2 @11127
+	SAY IDENTIFIED_DESC @11128
+
+COPY ~iwd2ee/itm/itm_item_revisions/ZZM6UC.itm~ ~override~
+	SAY IDENTIFIED_DESC @12330
+
+COPY ~iwd2ee/itm/itm_item_revisions/00SWDL94.itm~ ~override~
+	SAY IDENTIFIED_DESC @10866
+
+COPY ~iwd2ee/itm/itm_item_revisions/00SWDL96.itm~ ~override~
+	SAY IDENTIFIED_DESC @10870
+
+COPY ~iwd2ee/itm/itm_item_revisions/00SWDL99.itm~ ~override~
+	SAY IDENTIFIED_DESC @10876
+
+COPY ~iwd2ee/itm/itm_item_revisions/00SWDS93.itm~ ~override~
+	SAY IDENTIFIED_DESC @10792
+
+COPY ~iwd2ee/itm/itm_item_revisions/00AX1HAS.itm~ ~override~
+	SAY NAME2 @11249
+	SAY IDENTIFIED_DESC @11250
+
+COPY ~iwd2ee/itm/itm_item_revisions/00HFAXAS.itm~ ~override~
+	SAY NAME2 @11251
+	SAY IDENTIFIED_DESC @11252
+
+COPY ~iwd2ee/itm/itm_item_revisions/00AX2H87.itm~ ~override~
+	SAY IDENTIFIED_DESC @11302
+
+COPY ~iwd2ee/itm/itm_item_revisions/00HAMM88.itm~ ~override~
+	SAY IDENTIFIED_DESC @11560
+
+COPY ~iwd2ee/itm/itm_item_revisions/00MACE89.itm~ ~override~
+	SAY NAME2 @11407
+	SAY IDENTIFIED_DESC @11408
+
+COPY ~iwd2ee/itm/itm_item_revisions/00MSTR92.itm~ ~override~
+	SAY NAME2 @11463
+	SAY IDENTIFIED_DESC @11464
+
+COPY ~iwd2ee/itm/itm_item_revisions/00BULL90.itm~ ~override~
+	SAY NAME2 @12019
+	SAY IDENTIFIED_DESC @12020
+
+COPY ~iwd2ee/itm/itm_item_revisions/00FLAL85.itm~ ~override~
+	SAY IDENTIFIED_DESC @11496
+
+COPY ~iwd2ee/itm/itm_item_revisions/00FLAL96.itm~ ~override~
+	SAY NAME2 @11517
+	SAY IDENTIFIED_DESC @11518
+
+COPY ~iwd2ee/itm/itm_item_revisions/00FLAL98.itm~ ~override~
+	SAY NAME2 @11521
+	SAY IDENTIFIED_DESC @11522
+
+COPY ~iwd2ee/itm/itm_item_revisions/00SPER90.itm~ ~override~
+	SAY IDENTIFIED_DESC @11106
+
+COPY ~iwd2ee/itm/itm_item_revisions/00SWDC90.itm~ ~override~
+	SAY IDENTIFIED_DESC @10952
+
+COPY ~iwd2ee/itm/itm_item_revisions/00SWDS94.itm~ ~override~
+	SAY NAME2 @10793
+	SAY IDENTIFIED_DESC @10794
+
+COPY ~iwd2ee/itm/itm_item_revisions/00SWDS97.itm~ ~override~
+	SAY IDENTIFIED_DESC @10800
+
+COPY ~iwd2ee/itm/itm_item_revisions/00POTN07.itm~ ~override~
+	SAY IDENTIFIED_DESC @12080
+
+COPY ~iwd2ee/itm/itm_item_revisions/00BOWCAG.itm~ ~override~
+	SAY NAME2 @11793
+	SAY IDENTIFIED_DESC @11794
+
+COPY ~iwd2ee/itm/itm_item_revisions/00HFBCAG.itm~ ~override~
+	SAY NAME2 @11795
+	SAY IDENTIFIED_DESC @11796
+
+COPY ~iwd2ee/itm/itm_item_revisions/00BOWLSR.itm~ ~override~
+	SAY NAME2 @11767
+	SAY IDENTIFIED_DESC @11768
+
+COPY ~iwd2ee/itm/itm_item_revisions/00HFBLSR.itm~ ~override~
+	SAY NAME2 @11769
+	SAY IDENTIFIED_DESC @11770
+
+COPY ~iwd2ee/itm/itm_item_revisions/00BOWSEH.itm~ ~override~
+	SAY NAME2 @11717
+	SAY IDENTIFIED_DESC @11718
+
+COPY ~iwd2ee/itm/itm_item_revisions/00HFBSEH.itm~ ~override~
+	SAY NAME2 @11719
+	SAY IDENTIFIED_DESC @11720
+
+COPY ~iwd2ee/itm/itm_item_revisions/00BOWSRS.itm~ ~override~
+	SAY NAME2 @11721
+	SAY IDENTIFIED_DESC @11722
+
+COPY ~iwd2ee/itm/itm_item_revisions/00HFBSRS.itm~ ~override~
+	SAY NAME2 @11723
+	SAY IDENTIFIED_DESC @11724
+
+COPY ~iwd2ee/itm/itm_item_revisions/51BWHXDB.itm~ ~override~
+	SAY IDENTIFIED_DESC @11878
+
+COPY ~iwd2ee/itm/itm_item_revisions/51HFHXDB.itm~ ~override~
+	SAY IDENTIFIED_DESC @11880
+
+COPY ~iwd2ee/itm/itm_item_revisions/51BWHXHB.itm~ ~override~
+	SAY IDENTIFIED_DESC @11882
+
+COPY ~iwd2ee/itm/itm_item_revisions/51HFHXHB.itm~ ~override~
+	SAY IDENTIFIED_DESC @11884
+
+COPY ~iwd2ee/itm/itm_item_revisions/00BWHXGE.itm~ ~override~
+	SAY NAME2 @11861
+	SAY IDENTIFIED_DESC @11862
+
+COPY ~iwd2ee/itm/itm_item_revisions/00HFHXGE.itm~ ~override~
+	SAY NAME2 @11863
+	SAY IDENTIFIED_DESC @11864
+
+COPY ~iwd2ee/itm/itm_item_revisions/00BWHXIA.itm~ ~override~
+	SAY NAME2 @11869
+	SAY IDENTIFIED_DESC @11870
+
+COPY ~iwd2ee/itm/itm_item_revisions/00HFHXIA.itm~ ~override~
+	SAY NAME2 @11871
+	SAY IDENTIFIED_DESC @11872
+
+COPY ~iwd2ee/itm/itm_item_revisions/00BWHXMR.itm~ ~override~
+	SAY NAME2 @11873
+	SAY IDENTIFIED_DESC @11874
+
+COPY ~iwd2ee/itm/itm_item_revisions/00HFHXMR.itm~ ~override~
+	SAY NAME2 @11875
+	SAY IDENTIFIED_DESC @11876
+
+COPY ~iwd2ee/itm/itm_item_revisions/00BWLXIM.itm~ ~override~
+	SAY NAME2 @11827
+	SAY IDENTIFIED_DESC @11828
+
+COPY ~iwd2ee/itm/itm_item_revisions/00HFLXIM.itm~ ~override~
+	SAY NAME2 @11829
+	SAY IDENTIFIED_DESC @11830
+
+COPY ~iwd2ee/itm/itm_item_revisions/00BWLXMB.itm~ ~override~
+	SAY NAME2 @11831
+	SAY IDENTIFIED_DESC @11832
+
+COPY ~iwd2ee/itm/itm_item_revisions/00HFLXMB.itm~ ~override~
+	SAY NAME2 @11833
+	SAY IDENTIFIED_DESC @11834
+
+COPY ~iwd2ee/itm/itm_item_revisions/00BOWL01.itm~ ~override~
+	SAY UNIDENTIFIED_DESC @11736
+
+COPY ~iwd2ee/itm/itm_item_revisions/00BOWL02.itm~ ~override~
+	SAY UNIDENTIFIED_DESC @11738
+
+COPY ~iwd2ee/itm/itm_item_revisions/00BOWL03.itm~ ~override~
+	SAY IDENTIFIED_DESC @11740
+
+COPY ~iwd2ee/itm/itm_item_revisions/00BOWL88.itm~ ~override~
+	SAY IDENTIFIED_DESC @11742
+
+COPY ~iwd2ee/itm/itm_item_revisions/00BOWL89.itm~ ~override~
+	SAY IDENTIFIED_DESC @11744
+
+COPY ~iwd2ee/itm/itm_item_revisions/00BOWL90.itm~ ~override~
+	SAY IDENTIFIED_DESC @11746
+
+COPY ~iwd2ee/itm/itm_item_revisions/00BOWL91.itm~ ~override~
+	SAY IDENTIFIED_DESC @11748
+
+COPY ~iwd2ee/itm/itm_item_revisions/00BOWL95.itm~ ~override~
+	SAY IDENTIFIED_DESC @11750
+
+COPY ~iwd2ee/itm/itm_item_revisions/00BOWL96.itm~ ~override~
+	SAY NAME2 @11751
+	SAY IDENTIFIED_DESC @11752
+
+COPY ~iwd2ee/itm/itm_item_revisions/00BOWL97.itm~ ~override~
+	SAY NAME2 @11753
+	SAY IDENTIFIED_DESC @11754
+
+COPY ~iwd2ee/itm/itm_item_revisions/00BOWL98.itm~ ~override~
+	SAY NAME2 @11755
+	SAY IDENTIFIED_DESC @11756
+
+COPY ~iwd2ee/itm/itm_item_revisions/00BOWL99.itm~ ~override~
+	SAY NAME2 @11757
+	SAY IDENTIFIED_DESC @11758
+
+COPY ~iwd2ee/itm/itm_item_revisions/00BOWLFK.itm~ ~override~
+	SAY NAME2 @11759
+	SAY IDENTIFIED_DESC @11760
+
+COPY ~iwd2ee/itm/itm_item_revisions/00HFBLFK.itm~ ~override~
+	SAY NAME2 @11761
+	SAY IDENTIFIED_DESC @11762
+
+COPY ~iwd2ee/itm/itm_item_revisions/00BOWLSF.itm~ ~override~
+	SAY NAME2 @11763
+	SAY IDENTIFIED_DESC @11764
+
+COPY ~iwd2ee/itm/itm_item_revisions/00HFBLSF.itm~ ~override~
+	SAY NAME2 @11765
+	SAY IDENTIFIED_DESC @11766
+
+COPY ~iwd2ee/itm/itm_item_revisions/00BOWC01.itm~ ~override~
+	SAY UNIDENTIFIED_DESC @11772
+
+COPY ~iwd2ee/itm/itm_item_revisions/00BOWC02.itm~ ~override~
+	SAY UNIDENTIFIED_DESC @11774
+
+COPY ~iwd2ee/itm/itm_item_revisions/00BOWC04.itm~ ~override~
+	SAY IDENTIFIED_DESC @11776
+
+COPY ~iwd2ee/itm/itm_item_revisions/00BOWC92.itm~ ~override~
+	SAY NAME2 @11777
+	SAY IDENTIFIED_DESC @11778
+
+COPY ~iwd2ee/itm/itm_item_revisions/00BOWC93.itm~ ~override~
+	SAY NAME2 @11779
+	SAY IDENTIFIED_DESC @11780
+
+COPY ~iwd2ee/itm/itm_item_revisions/00BOWC94.itm~ ~override~
+	SAY NAME2 @11781
+	SAY IDENTIFIED_DESC @11782
+
+COPY ~iwd2ee/itm/itm_item_revisions/00BOWC95.itm~ ~override~
+	SAY NAME2 @11783
+	SAY IDENTIFIED_DESC @11784
+
+COPY ~iwd2ee/itm/itm_item_revisions/00BOWC96.itm~ ~override~
+	SAY IDENTIFIED_DESC @11786
+
+COPY ~iwd2ee/itm/itm_item_revisions/00BOWC97.itm~ ~override~
+	SAY IDENTIFIED_DESC @11788
+
+COPY ~iwd2ee/itm/itm_item_revisions/00BOWC98.itm~ ~override~
+	SAY IDENTIFIED_DESC @11790
+
+COPY ~iwd2ee/itm/itm_item_revisions/00BOWC99.itm~ ~override~
+	SAY IDENTIFIED_DESC @11792
+
+COPY ~iwd2ee/itm/itm_item_revisions/00SWDT93.itm~ ~override~
+	SAY IDENTIFIED_DESC @11000
+
+COPY ~iwd2ee/itm/itm_item_revisions/00CWSKX1.itm~ ~override~
+
+COPY ~iwd2ee/itm/itm_item_revisions/00SWDSSK.itm~ ~override~
+	SAY NAME2 @10809
+	SAY IDENTIFIED_DESC @10810
+
+COPY ~iwd2ee/itm/itm_item_revisions/00HFSSSK.itm~ ~override~
+	SAY NAME2 @10811
+	SAY IDENTIFIED_DESC @10812
+
+COPY ~iwd2ee/itm/itm_item_revisions/00ROBE05.itm~ ~override~
+	SAY IDENTIFIED_DESC @10392
+
+COPY ~iwd2ee/itm/itm_item_revisions/00ROBE06.itm~ ~override~
+	SAY IDENTIFIED_DESC @10394
+
+COPY ~iwd2ee/itm/itm_item_revisions/00ROBE07.itm~ ~override~
+	SAY IDENTIFIED_DESC @10396
+
+COPY ~iwd2ee/itm/itm_item_revisions/10LEATUB.itm~ ~override~
+	SAY IDENTIFIED_DESC @10460
+
+COPY ~iwd2ee/itm/itm_item_revisions/10HFLTUB.itm~ ~override~
+	SAY NAME2 @10461
+	SAY IDENTIFIED_DESC @10462
+
+COPY ~iwd2ee/itm/itm_item_revisions/62LEATDB.itm~ ~override~
+	SAY NAME2 @10463
+	SAY IDENTIFIED_DESC @10464
+
+COPY ~iwd2ee/itm/itm_item_revisions/62HFLTDB.itm~ ~override~
+	SAY NAME2 @10465
+	SAY IDENTIFIED_DESC @10466
+
+COPY ~iwd2ee/itm/itm_item_revisions/50LEATMS.itm~ ~override~
+	SAY NAME2 @10467
+	SAY IDENTIFIED_DESC @10468
+
+COPY ~iwd2ee/itm/itm_item_revisions/50HFLTMS.itm~ ~override~
+	SAY NAME2 @10469
+	SAY IDENTIFIED_DESC @10470
+
+COPY ~iwd2ee/itm/itm_item_revisions/60LEATZU.itm~ ~override~
+	SAY NAME2 @10471
+	SAY IDENTIFIED_DESC @10472
+
+COPY ~iwd2ee/itm/itm_item_revisions/60HFLTZU.itm~ ~override~
+	SAY NAME2 @10473
+	SAY IDENTIFIED_DESC @10474
+
+COPY ~iwd2ee/itm/itm_item_revisions/60LEATIN.itm~ ~override~
+	SAY NAME2 @10475
+	SAY IDENTIFIED_DESC @10476
+
+COPY ~iwd2ee/itm/itm_item_revisions/60HFLTIN.itm~ ~override~
+	SAY NAME2 @10477
+	SAY IDENTIFIED_DESC @10478
+
+COPY ~iwd2ee/itm/itm_item_revisions/50HIDE06.itm~ ~override~
+	SAY NAME2 @10493
+	SAY IDENTIFIED_DESC @10494
+
+COPY ~iwd2ee/itm/itm_item_revisions/50HIDEAH.itm~ ~override~
+	LPF ALTER_EFFECT INT_VAR silent=1 check_headers=0 check_globals=1 match_opcode=502 special=RESOLVE_STR_REF(@23056) STR_VAR match_resource=~MEDAMSLV~ END
+	SAY IDENTIFIED_DESC @10498
+
+COPY ~iwd2ee/itm/itm_item_revisions/50HFHEAH.itm~ ~override~
+	LPF ALTER_EFFECT INT_VAR silent=1 check_headers=0 check_globals=1 match_opcode=502 special=RESOLVE_STR_REF(@23057) STR_VAR match_resource=~MEDAMSLV~ END
+	SAY NAME2 @10499
+	SAY IDENTIFIED_DESC @10500
+
+COPY ~iwd2ee/itm/itm_item_revisions/00CHANML.itm~ ~override~
+	SAY NAME2 @10525
+	SAY IDENTIFIED_DESC @10526
+
+COPY ~iwd2ee/itm/itm_item_revisions/00HFCNML.itm~ ~override~
+	SAY NAME2 @10527
+	SAY IDENTIFIED_DESC @10528
+
+COPY ~iwd2ee/itm/itm_item_revisions/60CHANSA.itm~ ~override~
+	SAY NAME2 @10533
+	SAY IDENTIFIED_DESC @10534
+
+COPY ~iwd2ee/itm/itm_item_revisions/60HFCNSA.itm~ ~override~
+	SAY NAME2 @10535
+	SAY IDENTIFIED_DESC @10536
+
+COPY ~iwd2ee/itm/itm_item_revisions/60CHANTM.itm~ ~override~
+	SAY NAME2 @10537
+	SAY IDENTIFIED_DESC @10538
+
+COPY ~iwd2ee/itm/itm_item_revisions/60HFCNTM.itm~ ~override~
+	SAY NAME2 @10539
+	SAY IDENTIFIED_DESC @10540
+
+COPY ~iwd2ee/itm/itm_item_revisions/60CHANGR.itm~ ~override~
+	SAY NAME2 @10541
+	SAY IDENTIFIED_DESC @10542
+
+COPY ~iwd2ee/itm/itm_item_revisions/60HFCNGR.itm~ ~override~
+	SAY NAME2 @10543
+	SAY IDENTIFIED_DESC @10544
+
+COPY ~iwd2ee/itm/itm_item_revisions/51PLAT10.itm~ ~override~
+	SAY NAME2 @10559
+	SAY IDENTIFIED_DESC @10560
+
+COPY ~iwd2ee/itm/itm_item_revisions/51HFPT10.itm~ ~override~
+	SAY NAME2 @10561
+	SAY IDENTIFIED_DESC @10562
+
+COPY ~iwd2ee/itm/itm_item_revisions/60PLATOF.itm~ ~override~
+	SAY IDENTIFIED_DESC @10564
+
+COPY ~iwd2ee/itm/itm_item_revisions/60HFPTOF.itm~ ~override~
+	SAY NAME2 @10565
+	SAY IDENTIFIED_DESC @10566
+
+COPY ~iwd2ee/itm/itm_item_revisions/60PLATKC.itm~ ~override~
+	SAY NAME2 @10567
+	SAY IDENTIFIED_DESC @10568
+
+COPY ~iwd2ee/itm/itm_item_revisions/60HFPTKC.itm~ ~override~
+	SAY NAME2 @10569
+	SAY IDENTIFIED_DESC @10570
+
+COPY ~iwd2ee/itm/itm_item_revisions/60PLATPF.itm~ ~override~
+	SAY NAME2 @10571
+	SAY IDENTIFIED_DESC @10572
+
+COPY ~iwd2ee/itm/itm_item_revisions/60HFPTPF.itm~ ~override~
+	SAY NAME2 @10573
+	SAY IDENTIFIED_DESC @10574
+
+COPY ~iwd2ee/itm/itm_item_revisions/60PLATAG.itm~ ~override~
+	SAY NAME2 @10575
+	SAY IDENTIFIED_DESC @10576
+
+COPY ~iwd2ee/itm/itm_item_revisions/60HFPTAG.itm~ ~override~
+	SAY NAME2 @10577
+	PATCH_IF (MOD_IS_INSTALLED ~iwd2ee.tp2~ ~2~) BEGIN //If Spell Revisions is installed
+		SAY IDENTIFIED_DESC @10580
+	END ELSE BEGIN
+		SAY IDENTIFIED_DESC @10578
+	END
+
+COPY ~iwd2ee/itm/itm_item_revisions/60PLATDC.itm~ ~override~
+	SAY NAME2 @10581
+	SAY IDENTIFIED_DESC @10582
+
+COPY ~iwd2ee/itm/itm_item_revisions/60HFPTDC.itm~ ~override~
+	SAY NAME2 @10583
+	SAY IDENTIFIED_DESC @10584
+
+COPY ~iwd2ee/itm/itm_item_revisions/60PLATAA.itm~ ~override~
+	SAY NAME2 @10585
+	SAY IDENTIFIED_DESC @10586
+
+COPY ~iwd2ee/itm/itm_item_revisions/60HFPTAA.itm~ ~override~
+	SAY NAME2 @10587
+	SAY IDENTIFIED_DESC @10588
+
+COPY ~iwd2ee/itm/itm_item_revisions/00SHLDBU.itm~ ~override~
+	SAY NAME2 @10635
+	SAY IDENTIFIED_DESC @10636
+
+COPY ~iwd2ee/itm/itm_item_revisions/00HFSDBU.itm~ ~override~
+	SAY NAME2 @10637
+	SAY IDENTIFIED_DESC @10638
+
+COPY ~iwd2ee/itm/itm_item_revisions/00SHLDFF.itm~ ~override~
+	SAY NAME2 @10639
+	SAY IDENTIFIED_DESC @10640
+
+COPY ~iwd2ee/itm/itm_item_revisions/00HFSDFF.itm~ ~override~
+	SAY NAME2 @10641
+	SAY IDENTIFIED_DESC @10642
+
+COPY ~iwd2ee/itm/itm_item_revisions/00SHLDFV.itm~ ~override~
+	SAY NAME2 @10643
+	SAY IDENTIFIED_DESC @10644
+
+COPY ~iwd2ee/itm/itm_item_revisions/00HFSDFV.itm~ ~override~
+	SAY NAME2 @10645
+	SAY IDENTIFIED_DESC @10646
+
+COPY ~iwd2ee/itm/itm_item_revisions/00SHLDMM.itm~ ~override~
+	SAY NAME2 @10647
+	SAY IDENTIFIED_DESC @10648
+
+COPY ~iwd2ee/itm/itm_item_revisions/00HFSDMM.itm~ ~override~
+	SAY NAME2 @10649
+	SAY IDENTIFIED_DESC @10650
+
+COPY ~iwd2ee/itm/itm_item_revisions/00SHLDRF.itm~ ~override~
+	SAY NAME2 @10651
+	SAY IDENTIFIED_DESC @10652
+
+COPY ~iwd2ee/itm/itm_item_revisions/00HFSDRF.itm~ ~override~
+	SAY NAME2 @10653
+	SAY IDENTIFIED_DESC @10654
+
+COPY ~iwd2ee/itm/itm_item_revisions/12SHLDTS.itm~ ~override~
+	SAY IDENTIFIED_DESC @10668
+
+COPY ~iwd2ee/itm/itm_item_revisions/12HFSDTS.itm~ ~override~
+	SAY NAME2 @10669
+	SAY IDENTIFIED_DESC @10670
+
+COPY ~iwd2ee/itm/itm_item_revisions/00SHLD12.itm~ ~override~ ~iwd2ee/itm/itm_item_revisions/00SHLD13.itm~ ~override~ ~iwd2ee/itm/itm_item_revisions/00SHLD14.itm~ ~override~ ~iwd2ee/itm/itm_item_revisions/00SHLD15.itm~ ~override~
+	SAY UNIDENTIFIED_DESC @10600
+
+COPY ~iwd2ee/itm/itm_item_revisions/00SHLD16.itm~ ~override~
+	SAY IDENTIFIED_DESC @10602
+
+COPY ~iwd2ee/itm/itm_item_revisions/00SHLD17.itm~ ~override~
+	SAY IDENTIFIED_DESC @10604
+
+COPY ~iwd2ee/itm/itm_item_revisions/00SHLD85.itm~ ~override~
+	SAY NAME2 @10605
+	SAY IDENTIFIED_DESC @10606
+
+COPY ~iwd2ee/itm/itm_item_revisions/00SHLD86.itm~ ~override~
+	SAY NAME2 @10607
+	SAY IDENTIFIED_DESC @10608
+
+COPY ~iwd2ee/itm/itm_item_revisions/00SHLD87.itm~ ~override~
+	SAY NAME2 @10609
+	SAY IDENTIFIED_DESC @10610
+
+COPY ~iwd2ee/itm/itm_item_revisions/00SHLD97.itm~ ~override~
+	SAY IDENTIFIED_DESC @10630
+
+COPY ~%mod_folder%/itm/USALBEET.itm~ ~override/00POTN03.itm~
+  SAY NAME1 @4759
+  SAY NAME2 @4759
+  SAY DESC @4760
+
+COPY ~%mod_folder%/itm/USALRAIN.itm~ ~override/00POTN04.itm~
+  SAY NAME1 @4700
+  SAY NAME2 @4700
+  SAY DESC @4701
+
+COPY ~%mod_folder%/itm/USALSOUR.itm~ ~override/00POTN05.itm~
+  SAY NAME1 @4702
+  SAY NAME2 @4702
+  SAY DESC @4703
+
+
+COPY ~iwd2ee/spl/spl_item_revisions/EFFSOUL1.spl~ ~override~
+
+COPY ~iwd2ee/spl/spl_item_revisions/EFFSOUL2.spl~ ~override~
+
+COPY_EXISTING ~00AROW96.itm~ ~override~ ~00AX1H82.itm~ ~override~ ~00HFAXBA.itm~ ~override~ ~00DART04.itm~ ~override~ ~00STAF80.itm~ ~override~ ~00SPER94.itm~ ~override~ ~00SWDL82.itm~ ~override~ ~00SWDS86.itm~ ~override~ ~50HFDGLT.itm~ ~override~
+	LPF ALTER_EFFECT INT_VAR check_headers=1 check_globals=0 match_opcode=416 parameter1=2 savingthrow=0 savebonus=0 END
+
+COPY_EXISTING ~00AX1H90.itm~ ~override~
+	WRITE_LONG 0x60 5
+	WRITE_SHORT 0x96 1
+
+COPY_EXISTING ~50CLUBBT.itm~ ~override~
+	WRITE_BYTE 0x196 0
+	LPF ALTER_EFFECT INT_VAR check_headers=1 check_globals=0 match_opcode=500 match_parameter2=524288 match_probability1=100 parameter1=0x10600 STR_VAR match_resource=~EXDAMAGE~ END
+
+
+
+
+END
+
+END
+
+OUTER_SET iwd2eenumspells = 443
+OUTER_SET currentnumspells = 443
+OUTER_SET spellsaddedafteriwd2ee = 0
+
+COPY ~iwd2ee/tables/LISTSPLL.2DA~ ~iwd2ee/tables/LISTSPLL.2DA~
+	COUNT_2DA_ROWS 9 iwd2eenumspells
+	IF_EXISTS
+	BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING ~LISTSPLL.2DA~ ~override~
+	COUNT_2DA_ROWS 9 currentnumspells
+	IF_EXISTS
+	BUT_ONLY_IF_IT_CHANGES
+
+ACTION_IF iwd2eenumspells > currentnumspells BEGIN
+	OUTER_SET spellsaddedafteriwd2ee = 1
+END
+
+PRINT @2
+
+
+COPY_EXISTING_REGEXP ~.*\.bcs~ override
+	REPLACE_TEXTUALLY CASE_SENSITIVE ~TR[%WNL%%MNL%%LNL%%TAB% ]*86 \([0-9]+\) \([0-9]+\)[^T]*TR~ ~TR
+16633 \1 \2 0 0 "return IEex_WasJustDisarmed()" "" OB
+0 0 0 0 0 0 0 0 0 0 0 0 0 [-1.-1.-1.-1] "" 0 0 OB
+TR~
+	REPLACE_TEXTUALLY CASE_SENSITIVE ~TR[%WNL%%MNL%%LNL%%TAB% ]*87 \([0-9]+\) \([0-9]+\)[^T]*TR~ ~TR
+16633 \1 \2 0 0 "return IEex_WasJustUnlocked()" "" OB
+0 0 0 0 0 0 0 0 0 0 0 0 0 [-1.-1.-1.-1] "" 0 0 OB
+TR~
+	IF ~TR[%WNL%%MNL%%LNL%%TAB% ]*8[67]~
+	BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING_REGEXP ~.*\.are~ ~override~
+	LPF fj_are_structure INT_VAR fj_loc_x=0 fj_loc_y=0 STR_VAR fj_structure_type=~actor~ fj_name= EVAL ~%SOURCE_RES%AREAGL~ fj_cre_resref=~USAREAGL~ END
+//	LPF fj_are_structure INT_VAR fj_loc_x=0 fj_loc_y=0 fj_flags=0x2 STR_VAR fj_structure_type=~animation~ fj_name= EVAL ~%SOURCE_RES%COFL~ fj_bam_resref=~USCOFORL~ END
+//	LPF fj_are_structure INT_VAR fj_loc_x=0 fj_loc_y=0 fj_flags=0x2 STR_VAR fj_structure_type=~animation~ fj_name= EVAL ~%SOURCE_RES%COFR~ fj_bam_resref=~USCOFORR~ END
+//	LPF fj_are_structure INT_VAR fj_loc_x=0 fj_loc_y=0 fj_flags=0x2 STR_VAR fj_structure_type=~animation~ fj_name= EVAL ~%SOURCE_RES%COFB~ fj_bam_resref=~USCOFORB~ END
+//	LPF fj_are_structure INT_VAR fj_loc_x=0 fj_loc_y=0 fj_flags=0x2 STR_VAR fj_structure_type=~animation~ fj_name= EVAL ~%SOURCE_RES%COFT~ fj_bam_resref=~USCOFORT~ END
+//	LPF fj_are_structure INT_VAR fj_loc_x=0 fj_loc_y=0 fj_flags=0x2 STR_VAR fj_structure_type=~animation~ fj_name= EVAL ~%SOURCE_RES%TORNAD~ fj_bam_resref=~WHIRLWX~ END
+//	LPF fj_are_structure INT_VAR fj_loc_x=0 fj_loc_y=0 fj_flags=0x2 STR_VAR fj_structure_type=~animation~ fj_name= EVAL ~%SOURCE_RES%GRVGLB~ fj_bam_resref=~USGRVGLB~ END
+	LPF ALTER_AREA_ACTOR_IWD2 INT_VAR flag_cre_unattached=1 flag_difficulty_1=1 flag_difficulty_2=1 flag_difficulty_3=1 STR_VAR actor_name= EVAL ~%SOURCE_RES%AREAGL~ END
+	READ_SHORT 0x6A numtriggers
+	READ_LONG 0x6C triggeroffset
+	FOR (i = 0; i < numtriggers; ++i) BEGIN
+		READ_SHORT (triggeroffset + 0x20) triggertype
+		READ_SHORT (triggeroffset + 0x68) trapdetectiondifficulty
+		READ_SHORT (triggeroffset + 0x6C) istrapped
+		PATCH_IF istrapped > 0 AND triggertype = 0 AND trapdetectiondifficulty != 100 BEGIN
+			WRITE_SHORT (triggeroffset + 0x68) (trapdetectiondifficulty + 1000)
+		END
+		triggeroffset += 0xC4
+	END
+	READ_SHORT 0x84 numcontainers
+	READ_LONG 0x80 containeroffset
+	FOR (i = 0; i < numcontainers; ++i) BEGIN
+		READ_SHORT (containeroffset + 0x2C) trapdetectiondifficulty
+		READ_SHORT (containeroffset + 0x30) istrapped
+		PATCH_IF istrapped > 0 AND trapdetectiondifficulty != 100 BEGIN
+			WRITE_SHORT (containeroffset + 0x2C) (trapdetectiondifficulty + 1000)
+		END
+		containeroffset += 0xC0
+	END
+	READ_SHORT 0xB4 numdoors
+	READ_LONG 0xB8 dooroffset
+	READ_LONG 0x8C vertexoffset
+	FOR (i = 0; i < numdoors; ++i) BEGIN
+		READ_SHORT (dooroffset + 0x6C) trapdetectiondifficulty
+		READ_SHORT (dooroffset + 0x70) istrapped
+		PATCH_IF istrapped > 0 AND trapdetectiondifficulty != 100 BEGIN
+			WRITE_SHORT (dooroffset + 0x6C) (trapdetectiondifficulty + 1000)
+		END
+
+		READ_SSHORT (dooroffset + 0x3E) boundingboxopenbottom
+		PATCH_IF boundingboxopenbottom < 50 BEGIN
+			WRITE_SHORT (dooroffset + 0x38) (0 - 1)
+			WRITE_SHORT (dooroffset + 0x3A) (0 - 1)
+			WRITE_SHORT (dooroffset + 0x3C) (0 - 1)
+			WRITE_SHORT (dooroffset + 0x3E) (0 - 1)
+			READ_LONG (dooroffset + 0x2C) firstvertexindexopen
+			READ_SHORT (dooroffset + 0x30) numverticesopen
+			FOR (j = 0; j < numverticesopen; ++j) BEGIN
+				WRITE_SHORT (vertexoffset + (firstvertexindexopen + j) * 0x4) (0 - 1)
+				WRITE_SHORT (vertexoffset + (firstvertexindexopen + j) * 0x4 + 0x2) (0 - 1)
+			END
+		END
+
+		READ_SSHORT (dooroffset + 0x46) boundingboxclosedbottom
+		PATCH_IF boundingboxclosedbottom < 50 BEGIN
+			WRITE_SHORT (dooroffset + 0x40) (0 - 1)
+			WRITE_SHORT (dooroffset + 0x42) (0 - 1)
+			WRITE_SHORT (dooroffset + 0x44) (0 - 1)
+			WRITE_SHORT (dooroffset + 0x46) (0 - 1)
+			READ_SHORT (dooroffset + 0x32) numverticesclosed
+			READ_LONG (dooroffset + 0x34) firstvertexindexclosed
+			FOR (j = 0; j < numverticesclosed; ++j) BEGIN
+				WRITE_SHORT (vertexoffset + (firstvertexindexclosed + j) * 0x4) (0 - 1)
+				WRITE_SHORT (vertexoffset + (firstvertexindexclosed + j) * 0x4 + 0x2) (0 - 1)
+			END
+		END
+
+		dooroffset += 0xC8
+	END
+	UNLESS ~USAREAGL~
+
+COPY_EXISTING_REGEXP ~.*\.bcs~ ~override~
+	DECOMPILE_AND_PATCH BEGIN
+		REPLACE_TEXTUALLY CASE_SENSITIVE ~PickPocketFailed.*~ ~GlobalGT("IEEX_PICK_POCKET_FAILED","LOCALS",0)~
+	END
+	IF ~93 0 0 0 0~
+	BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
+	PATCH_IF NOT (~%SOURCE_RES%~ STRING_EQUAL_CASE ~CHARBASE~) BEGIN
+		LPF IWD2_ADD_CRE_EFFECT INT_VAR opcode=500 target=1 timing=9 STR_VAR resource= EVAL ~MEAPRBON~ effsource= EVAL ~USAPRBON~ END
+	END
+	UNLESS ~MEAPRBON~
+
+ACTION_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~0~ BEGIN
+
+COPY + ~Characters~ ~Characters~
+	PATCH_IF ~%SOURCE_EXT%~ STRING_EQUAL_CASE ~CHR~ BEGIN
+		READ_BYTE 0x2B0 thebardlevel
+		READ_LONG 0x826 thesongoffset
+		thesongoffset = thesongoffset + 0x224
+		READ_LONG 0x82A thesongcount
+		PATCH_IF thebardlevel = 1 AND thesongcount = 1 BEGIN
+			WRITE_LONG thesongoffset 0
+		END
+	END
+	BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
+	READ_LONG animation theanimation
+	PATCH_IF (theanimation = 4097 OR theanimation = 31232 OR theanimation = 31233 OR theanimation = 31234 OR theanimation = 31235 OR theanimation = 31491 OR theanimation = 32559 OR theanimation = 40960 OR theanimation = 57344 OR theanimation = 57362 OR theanimation = 57378 OR theanimation = 57400 OR theanimation = 57416 OR theanimation = 57424 OR theanimation = 59244 OR theanimation = 60467) BEGIN
+		READ_BYTE general thegeneral
+		PATCH_IF thegeneral != 4 BEGIN
+			WRITE_BYTE general 2
+		END
+	END
+	BUT_ONLY_IF_IT_CHANGES
+
+	ACTION_IF spellsaddedafteriwd2ee = 1 BEGIN
+
+		COPY_EXISTING ~LISTSPLL.2DA~ ~override~
+			FOR (i = iwd2eenumspells; i < currentnumspells; ++i) BEGIN
+				READ_2DA_ENTRY i 8 9 thespellres
+				INNER_ACTION BEGIN
+					COPY_EXISTING ~%thespellres%.spl~ ~override~
+						LPF ADD_SPELL_CFEFFECT INT_VAR insert_point=0 opcode=500 target=1 timing=0 STR_VAR resource=~EXMETALV~ END
+						IF_EXISTS
+						UNLESS ~EXMETALV~
+
+					COPY_EXISTING ~%thespellres%.spl~ ~override~
+						READ_BYTE 0x8E thetarget
+						READ_SHORT 0xA8 theprojectile
+						PATCH_IF thetarget = 5 AND (theprojectile = 1 OR theprojectile = 66) BEGIN
+							LPF ALTER_EFFECT INT_VAR silent=1 check_headers=1 check_globals=0 match_target=1 target=2 END
+						END
+						IF_EXISTS
+						BUT_ONLY_IF_IT_CHANGES
+				END
+			END
+			IF_EXISTS
+			BUT_ONLY_IF_IT_CHANGES
+
+	END
+
+COPY_EXISTING ~LISTINNT.2da~ ~override~ ~LISTSHAP.2da~ ~override~
+	COUNT_2DA_COLS numcolumns
+	COUNT_2DA_ROWS numcolumns numrows
+	FOR (i = 1; i < numrows; ++i) BEGIN
+		READ_2DA_ENTRY i 1 numcolumns spell_res_ref
+		PATCH_IF (FILE_EXISTS_IN_GAME ~%spell_res_ref%.spl~) BEGIN
+			INNER_ACTION BEGIN
+				COPY_EXISTING ~%spell_res_ref%.spl~ ~override~
+					READ_SHORT 0x94 thecastingtime ELSE 0
+					LPF ADD_SPELL_CFEFFECT INT_VAR insert_point=0 opcode=500 target=1 timing=0 special=thecastingtime STR_VAR resource=~MEONCAST~ END
+					READ_LONG 0x6A effectoffset
+					WRITE_ASCIIE (effectoffset + 0x4) ~%SOURCE_RES%~ #8
+					UNLESS ~MEONCAST~
+			END
+		END
+	END
+
+END
+
+ACTION_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~2~ BEGIN
+
+COPY_EXISTING_REGEXP ~.*\.itm~ ~override~ ~.*\.spl~ ~override~
+	LPF CLONE_EFFECT INT_VAR silent=1 check_headers=1 check_globals=0 match_opcode=58 timing=0 duration=0 opcode=500 parameter1=0 parameter2=0 STR_VAR resource=~MEPOLYBA~ END
+	IF ~:~
+	UNLESS ~MEPOLYBA~
+	BUT_ONLY_IF_IT_CHANGES
+
+	ACTION_IF spellsaddedafteriwd2ee = 1 BEGIN
+
+		COPY_EXISTING ~LISTSPLL.2DA~ ~override~
+			FOR (i = iwd2eenumspells; i < currentnumspells; ++i) BEGIN
+				READ_2DA_ENTRY i 8 9 thespellres
+				INNER_ACTION BEGIN
+					COPY_EXISTING ~%thespellres%.spl~ ~override~
+						READ_SHORT 0x94 thecastingtime ELSE 0
+						LPF ADD_SPELL_CFEFFECT INT_VAR insert_point=0 opcode=500 target=1 timing=0 special=thecastingtime STR_VAR resource=~MEONCAST~ END
+						READ_LONG 0x6A effectoffset
+						WRITE_ASCIIE (effectoffset + 0x4) ~%SOURCE_RES%~ #8
+						UNLESS ~MEONCAST~
+				END
+			END
+			IF_EXISTS
+			BUT_ONLY_IF_IT_CHANGES
+
+	END
+
+END
+
+ACTION_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~4~ BEGIN
+
+COPY_EXISTING_REGEXP ~.*\.itm~ ~override~
+	READ_LONG 0x18 us_item_flags
+	READ_SHORT 0x1c us_item_category
+	READ_ASCII 0x22 theequippedanimation
+//If the item is a bullet or dart, it should apply Strength bonus
+	PATCH_IF (us_item_category=14 OR us_item_category=24) BEGIN
+		LPF ALTER_ITEM_HEADER INT_VAR header_type=2 flag_strength=1 END
+	END
+//Arrows, bolts and bullets should have 0 range by default so the range is dependent on the launcher
+	PATCH_IF (us_item_category=5 OR us_item_category=14 OR us_item_category=31) BEGIN
+		LPF ALTER_ITEM_HEADER INT_VAR header_type=2 range=0 END
+	END
+//Throwing daggers and darts should have decent range.
+	PATCH_IF (us_item_category=16 OR us_item_category=24) BEGIN
+		LPF ALTER_ITEM_HEADER INT_VAR header_type=2 range=30 END
+	END
+//Throwing axes and throwing hammers shouldn't have long range - they're heavy!
+	PATCH_IF (us_item_category=21 OR us_item_category=25) BEGIN
+		LPF ALTER_ITEM_HEADER INT_VAR header_type=2 range=10 END
+	END
+//Making sure two-handed axes don't thrust (they're not halberds)
+	PATCH_IF (us_item_category=25 AND ((us_item_flags BAND 0x00000002) = 0x00000002)) BEGIN
+		LPF ALTER_ITEM_HEADER INT_VAR header_type=1 animation_overhand=50 animation_backhand=50 animation_thrust=0 END
+	END
+//Making sure spears have 3 range and always thrust (sure, spears sometimes can slash, but there are already plenty of other weapons with slashing animations)
+	PATCH_IF (us_item_category=29) BEGIN
+		LPF ALTER_ITEM_HEADER INT_VAR header_type=1 animation_overhand=0 animation_backhand=0 animation_thrust=100 END
+		READ_SHORT 0x68 numheaders
+		FOR (i = 0; i < numheaders; ++i) BEGIN
+			offset = 0x82 + i * 0x38
+			READ_BYTE offset theheadertype
+			PATCH_IF theheadertype = 1 BEGIN
+				READ_SHORT (offset + 0xE) therange
+				PATCH_IF therange <= 2 BEGIN
+					WRITE_SHORT (offset + 0xE) 3
+				END
+			END
+		END
+	END
+//Making sure items that aren't supposed to be usable by clerics, wizards, monks or paladins cannot be used by the kits of those classes
+	READ_LONG 0x1e us_item_unusability
+/*
+	PATCH_IF us_item_category = 7 AND NOT (~%theequippedanimation%~ STRING_EQUAL_CASE ~  ~) BEGIN
+		us_item_unusability|=0x20
+		WRITE_LONG 0x1e us_item_unusability
+	END
+*/
+	READ_BYTE 0x2b us_kit_unusability_2
+	READ_BYTE 0x2d us_kit_unusability_3
+	READ_BYTE 0x2f us_kit_unusability_4
+	PATCH_IF ((us_item_unusability BAND 0x00000004) = 0x00000004) BEGIN
+		us_kit_unusability_2|=0xff
+		us_kit_unusability_3|=0x80
+	END
+	ELSE BEGIN
+		us_kit_unusability_2&=0x0
+		us_kit_unusability_3&=0x7f
+	END
+	PATCH_IF ((us_item_unusability BAND 0x00000400) = 0x00000400) BEGIN
+		us_kit_unusability_3|=0x7f
+		us_kit_unusability_4|=0xc0
+	END
+	ELSE BEGIN
+		PATCH_IF (us_item_category != 11) BEGIN
+			us_kit_unusability_3&=0x80
+			us_kit_unusability_4&=0x3f
+		END
+	END
+	PATCH_IF ((us_item_unusability BAND 0x00000020) = 0x00000020) BEGIN
+		us_kit_unusability_4|=0x38
+	END
+	ELSE BEGIN
+		us_kit_unusability_4&=0xc7
+	END
+	PATCH_IF ((us_item_unusability BAND 0x00000040) = 0x00000040) BEGIN
+		us_kit_unusability_4|=0x7
+	END
+	ELSE BEGIN
+		us_kit_unusability_4&=0xf8
+	END
+	WRITE_BYTE 0x2b us_kit_unusability_2
+	WRITE_BYTE 0x2d us_kit_unusability_3
+	WRITE_BYTE 0x2f us_kit_unusability_4
+	UNLESS ~USEQTYPE~
+	BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING_REGEXP ~.*\.itm~ ~override~
+	READ_SHORT 0x1c theitemtype
+	READ_ASCII 0x22 theequippedanimation
+	READ_SHORT 0x68 thenumheaders
+	PATCH_IF (theitemtype=16 OR theitemtype=19 OR theitemtype=20 OR theitemtype=57 OR theitemtype=69) AND NOT (~%theequippedanimation%~ STRING_EQUAL_CASE ~SC~) AND thenumheaders > 0 BEGIN
+		READ_LONG 0xA8 theheaderflags
+		PATCH_IF ((theheaderflags BAND 0x00020000) = 0x00020000) BEGIN
+			LPF ADD_ITEM_EQEFFECT INT_VAR opcode=500 target=1 timing=2 parameter1=1 savingthrow=0x100000 STR_VAR resource=~MECRIT~ END
+		END
+	END
+	UNLESS ~MECRIT~
+	BUT_ONLY_IF_IT_CHANGES
+
+ACTION_IF !(MOD_IS_INSTALLED ~Setup-IWD2-Ease.tp2~ ~1~) BEGIN
+
+	COPY_EXISTING_REGEXP ~.*\.itm~ ~override~
+		READ_SHORT 0x1c theitemcategory
+		READ_SHORT 0x38 themaxstack
+		PATCH_IF themaxstack > 1 BEGIN
+			PATCH_IF theitemcategory = 0 OR theitemcategory = 9 OR theitemcategory = 71 BEGIN
+				WRITE_SHORT 0x38 24
+			END ELSE PATCH_IF theitemcategory = 11 BEGIN
+				WRITE_SHORT 0x38 50
+			END ELSE PATCH_IF theitemcategory = 34 BEGIN
+				WRITE_SHORT 0x38 20
+			END ELSE PATCH_IF theitemcategory = 5 OR theitemcategory = 14 OR theitemcategory = 24 OR theitemcategory = 31 BEGIN
+				WRITE_SHORT 0x38 80
+			END ELSE PATCH_IF theitemcategory = 16 OR theitemcategory = 21 OR theitemcategory = 25 BEGIN
+				WRITE_SHORT 0x38 40
+			END
+		END
+		BUT_ONLY_IF_IT_CHANGES
+END
+
+COPY_EXISTING_REGEXP ~.*\.are~ ~override~ ~.*\.cre~ ~override~ ~.*\.sto~ ~override~
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~[06][01]POTN~ ~USPNHF~
+	IF ~POTN~
+	BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING_REGEXP ~00.*\.sto~ ~override~
+	READ_LONG 0x8 thestoretype
+	READ_SHORT 0x9C thestoragecapacity
+	PATCH_IF thestoretype = 4 AND thestoragecapacity < 100 BEGIN
+		WRITE_SHORT 0x9C 100
+	END
+	BUT_ONLY_IF_IT_CHANGES
+
+END
+
+ACTION_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~5~ BEGIN
+
+COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
+	WRITE_BYTE baseattackbonus 0
+	BUT_ONLY_IF_IT_CHANGES
+
+END
+
+ACTION_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~0~ AND MOD_IS_INSTALLED ~iwd2ee.tp2~ ~5~ BEGIN
+
+COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
+	READ_BYTE installationflags theinstallationflags
+	READ_SBYTE luck theluck
+	PATCH_IF theluck >= 0 AND (theinstallationflags BAND 0x00000001) != 0x00000001 BEGIN
+		READ_BYTE alignment thealignment
+		READ_BYTE levelbarbarian barbarianlevel
+		READ_BYTE leveldruid druidlevel
+		READ_BYTE levelfighter fighterlevel
+		READ_BYTE levelpaladin paladinlevel
+		READ_BYTE levelranger rangerlevel
+		READ_BYTE levelrogue roguelevel
+		PATCH_IF barbarianlevel > 0 BEGIN
+			PATCH_IF barbarianlevel >= 8 BEGIN
+				TEXT_SPRINT hofitem ~USABBB08~
+			END ELSE BEGIN
+				TEXT_SPRINT hofitem ~USAHBB%barbarianlevel%~
+			END
+			READ_LONG 0x612 itemslotsoffset
+			READ_SSHORT (itemslotsoffset + 0xE) theslot
+			PATCH_IF theslot < 0 BEGIN
+				LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item= EVAL ~%hofitem%~ slot=~belt~ END
+			END ELSE BEGIN
+				READ_SSHORT (itemslotsoffset + 0x8) theslot
+				PATCH_IF theslot < 0 BEGIN
+					LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item= EVAL ~%hofitem%~ slot=~lring~ END
+				END ELSE BEGIN
+					READ_SSHORT (itemslotsoffset + 0xA) theslot
+					PATCH_IF theslot < 0 BEGIN
+						LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item= EVAL ~%hofitem%~ slot=~rring~ END
+					END ELSE BEGIN
+						READ_SSHORT (itemslotsoffset + 0xC) theslot
+						PATCH_IF theslot < 0 BEGIN
+							LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item= EVAL ~%hofitem%~ slot=~amulet~ END
+						END ELSE BEGIN
+							READ_SSHORT (itemslotsoffset + 0x6) theslot
+							PATCH_IF theslot < 0 BEGIN
+								LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item= EVAL ~%hofitem%~ slot=~gloves~ END
+							END ELSE BEGIN
+								READ_SSHORT (itemslotsoffset + 0x10) theslot
+								PATCH_IF theslot < 0 BEGIN
+									LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item= EVAL ~%hofitem%~ slot=~boots~ END
+								END ELSE BEGIN
+									LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item= EVAL ~%hofitem%~ slot=~cloak~ mode=~move~ END
+								END
+							END
+						END
+					END
+				END
+			END
+		END
+		PATCH_IF druidlevel > 0 BEGIN
+			PATCH_IF druidlevel >= 3 BEGIN
+				TEXT_SPRINT hofitem ~USABDR03~
+			END ELSE BEGIN
+				TEXT_SPRINT hofitem ~USAHDR1~
+			END
+			READ_LONG 0x612 itemslotsoffset
+			READ_SSHORT (itemslotsoffset + 0xE) theslot
+			PATCH_IF theslot < 0 BEGIN
+				LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item= EVAL ~%hofitem%~ slot=~belt~ END
+			END ELSE BEGIN
+				READ_SSHORT (itemslotsoffset + 0x8) theslot
+				PATCH_IF theslot < 0 BEGIN
+					LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item= EVAL ~%hofitem%~ slot=~lring~ END
+				END ELSE BEGIN
+					READ_SSHORT (itemslotsoffset + 0xA) theslot
+					PATCH_IF theslot < 0 BEGIN
+						LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item= EVAL ~%hofitem%~ slot=~rring~ END
+					END ELSE BEGIN
+						READ_SSHORT (itemslotsoffset + 0xC) theslot
+						PATCH_IF theslot < 0 BEGIN
+							LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item= EVAL ~%hofitem%~ slot=~amulet~ END
+						END ELSE BEGIN
+							READ_SSHORT (itemslotsoffset + 0x6) theslot
+							PATCH_IF theslot < 0 BEGIN
+								LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item= EVAL ~%hofitem%~ slot=~gloves~ END
+							END ELSE BEGIN
+								READ_SSHORT (itemslotsoffset + 0x10) theslot
+								PATCH_IF theslot < 0 BEGIN
+									LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item= EVAL ~%hofitem%~ slot=~boots~ END
+								END ELSE BEGIN
+									LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item= EVAL ~%hofitem%~ slot=~cloak~ mode=~move~ END
+								END
+							END
+						END
+					END
+				END
+			END
+		END
+		PATCH_IF fighterlevel > 0 BEGIN
+			PATCH_IF fighterlevel >= 30 BEGIN
+				TEXT_SPRINT hofitem ~USABFI30~
+			END ELSE BEGIN
+				TEXT_SPRINT hofitem ~USAHFI%fighterlevel%~
+			END
+			READ_LONG 0x612 itemslotsoffset
+			READ_SSHORT (itemslotsoffset + 0xE) theslot
+			PATCH_IF theslot < 0 BEGIN
+				LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item= EVAL ~%hofitem%~ slot=~belt~ END
+			END ELSE BEGIN
+				READ_SSHORT (itemslotsoffset + 0x8) theslot
+				PATCH_IF theslot < 0 BEGIN
+					LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item= EVAL ~%hofitem%~ slot=~lring~ END
+				END ELSE BEGIN
+					READ_SSHORT (itemslotsoffset + 0xA) theslot
+					PATCH_IF theslot < 0 BEGIN
+						LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item= EVAL ~%hofitem%~ slot=~rring~ END
+					END ELSE BEGIN
+						READ_SSHORT (itemslotsoffset + 0xC) theslot
+						PATCH_IF theslot < 0 BEGIN
+							LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item= EVAL ~%hofitem%~ slot=~amulet~ END
+						END ELSE BEGIN
+							READ_SSHORT (itemslotsoffset + 0x6) theslot
+							PATCH_IF theslot < 0 BEGIN
+								LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item= EVAL ~%hofitem%~ slot=~gloves~ END
+							END ELSE BEGIN
+								READ_SSHORT (itemslotsoffset + 0x10) theslot
+								PATCH_IF theslot < 0 BEGIN
+									LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item= EVAL ~%hofitem%~ slot=~boots~ END
+								END ELSE BEGIN
+									LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item= EVAL ~%hofitem%~ slot=~cloak~ mode=~move~ END
+								END
+							END
+						END
+					END
+				END
+			END
+		END
+		PATCH_IF paladinlevel > 0 AND (thealignment BAND 0x00000003) = 0x00000003 BEGIN
+			PATCH_IF paladinlevel >= 30 BEGIN
+				TEXT_SPRINT hofitem ~USABBG30~
+			END ELSE BEGIN
+				TEXT_SPRINT hofitem ~USAHBG%paladinlevel%~
+			END
+			READ_LONG 0x612 itemslotsoffset
+			READ_SSHORT (itemslotsoffset + 0xE) theslot
+			PATCH_IF theslot < 0 BEGIN
+				LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item= EVAL ~%hofitem%~ slot=~belt~ END
+			END ELSE BEGIN
+				READ_SSHORT (itemslotsoffset + 0x8) theslot
+				PATCH_IF theslot < 0 BEGIN
+					LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item= EVAL ~%hofitem%~ slot=~lring~ END
+				END ELSE BEGIN
+					READ_SSHORT (itemslotsoffset + 0xA) theslot
+					PATCH_IF theslot < 0 BEGIN
+						LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item= EVAL ~%hofitem%~ slot=~rring~ END
+					END ELSE BEGIN
+						READ_SSHORT (itemslotsoffset + 0xC) theslot
+						PATCH_IF theslot < 0 BEGIN
+							LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item= EVAL ~%hofitem%~ slot=~amulet~ END
+						END ELSE BEGIN
+							READ_SSHORT (itemslotsoffset + 0x6) theslot
+							PATCH_IF theslot < 0 BEGIN
+								LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item= EVAL ~%hofitem%~ slot=~gloves~ END
+							END ELSE BEGIN
+								READ_SSHORT (itemslotsoffset + 0x10) theslot
+								PATCH_IF theslot < 0 BEGIN
+									LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item= EVAL ~%hofitem%~ slot=~boots~ END
+								END ELSE BEGIN
+									LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item= EVAL ~%hofitem%~ slot=~cloak~ mode=~move~ END
+								END
+							END
+						END
+					END
+				END
+			END
+		END
+		PATCH_IF rangerlevel > 0 BEGIN
+			PATCH_IF rangerlevel >= 7 BEGIN
+				TEXT_SPRINT hofitem ~USABRN07~
+			END ELSE BEGIN
+				TEXT_SPRINT hofitem ~USAHRN1~
+			END
+			READ_LONG 0x612 itemslotsoffset
+			READ_SSHORT (itemslotsoffset + 0xE) theslot
+			PATCH_IF theslot < 0 BEGIN
+				LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item= EVAL ~%hofitem%~ slot=~belt~ END
+			END ELSE BEGIN
+				READ_SSHORT (itemslotsoffset + 0x8) theslot
+				PATCH_IF theslot < 0 BEGIN
+					LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item= EVAL ~%hofitem%~ slot=~lring~ END
+				END ELSE BEGIN
+					READ_SSHORT (itemslotsoffset + 0xA) theslot
+					PATCH_IF theslot < 0 BEGIN
+						LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item= EVAL ~%hofitem%~ slot=~rring~ END
+					END ELSE BEGIN
+						READ_SSHORT (itemslotsoffset + 0xC) theslot
+						PATCH_IF theslot < 0 BEGIN
+							LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item= EVAL ~%hofitem%~ slot=~amulet~ END
+						END ELSE BEGIN
+							READ_SSHORT (itemslotsoffset + 0x6) theslot
+							PATCH_IF theslot < 0 BEGIN
+								LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item= EVAL ~%hofitem%~ slot=~gloves~ END
+							END ELSE BEGIN
+								READ_SSHORT (itemslotsoffset + 0x10) theslot
+								PATCH_IF theslot < 0 BEGIN
+									LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item= EVAL ~%hofitem%~ slot=~boots~ END
+								END ELSE BEGIN
+									LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item= EVAL ~%hofitem%~ slot=~cloak~ mode=~move~ END
+								END
+							END
+						END
+					END
+				END
+			END
+		END
+		PATCH_IF roguelevel > 0 BEGIN
+			PATCH_IF roguelevel >= 30 BEGIN
+				TEXT_SPRINT hofitem ~USABTH30~
+			END ELSE BEGIN
+				TEXT_SPRINT hofitem ~USAHTH%roguelevel%~
+			END
+			READ_LONG 0x612 itemslotsoffset
+			READ_SSHORT (itemslotsoffset + 0xE) theslot
+			PATCH_IF theslot < 0 BEGIN
+				LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item= EVAL ~%hofitem%~ slot=~belt~ END
+			END ELSE BEGIN
+				READ_SSHORT (itemslotsoffset + 0x8) theslot
+				PATCH_IF theslot < 0 BEGIN
+					LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item= EVAL ~%hofitem%~ slot=~lring~ END
+				END ELSE BEGIN
+					READ_SSHORT (itemslotsoffset + 0xA) theslot
+					PATCH_IF theslot < 0 BEGIN
+						LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item= EVAL ~%hofitem%~ slot=~rring~ END
+					END ELSE BEGIN
+						READ_SSHORT (itemslotsoffset + 0xC) theslot
+						PATCH_IF theslot < 0 BEGIN
+							LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item= EVAL ~%hofitem%~ slot=~amulet~ END
+						END ELSE BEGIN
+							READ_SSHORT (itemslotsoffset + 0x6) theslot
+							PATCH_IF theslot < 0 BEGIN
+								LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item= EVAL ~%hofitem%~ slot=~gloves~ END
+							END ELSE BEGIN
+								READ_SSHORT (itemslotsoffset + 0x10) theslot
+								PATCH_IF theslot < 0 BEGIN
+									LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item= EVAL ~%hofitem%~ slot=~boots~ END
+								END ELSE BEGIN
+									LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item= EVAL ~%hofitem%~ slot=~cloak~ mode=~move~ END
+								END
+							END
+						END
+					END
+				END
+			END
+		END
+	END
+	UNLESS ~USA[HB]~
+	BUT_ONLY_IF_IT_CHANGES
+
+END
+
+//From the final patches hidden component
+
+COPY_EXISTING_REGEXP ~.*\.itm~ ~override~
+	READ_LONG 0x18 theitemflags
+	PATCH_IF (theitemflags BAND 0x00040000) = 0 BEGIN
+		READ_LONG 0x64 headeroffset
+		READ_SHORT 0x68 numheaders
+		PATCH_IF numheaders > 0 BEGIN
+			READ_LONG 0x6A effectoffset
+			READ_SHORT (headeroffset + 0x2A) theprojectile
+			READ_SHORT (headeroffset + 0x38 * (numheaders - 1) + 0x1E) lastheadernumeffects
+			READ_SHORT (headeroffset + 0x38 * (numheaders - 1) + 0x20) lastheaderfirsteffectindex
+			numeffects = lastheadernumeffects + lastheaderfirsteffectindex
+			offset = effectoffset
+			foundblink = 0
+			FOR (i = 0; i < numeffects; ++i) BEGIN
+				READ_SHORT offset theopcode
+				READ_LONG (offset + 0x8) theparameter2
+				READ_BYTE (offset + 0xC) thetiming
+				PATCH_IF (theopcode = 12 OR (theopcode = 241 AND theparameter2 = 0)) BEGIN
+//				PATCH_IF (theopcode = 241 AND theparameter2 = 0) AND thetiming != 3 AND thetiming != 4 BEGIN
+					READ_BYTE (offset + 0x4) theparameter1
+					READ_SBYTE (offset + 0x1C) thedicenumber
+					PATCH_IF thedicenumber < 0 BEGIN
+						thedicenumber = 0
+					END
+					READ_SBYTE (offset + 0x20) thedicesize
+					PATCH_IF thedicesize < 0 BEGIN
+						thedicesize = 0
+					END
+					READ_LONG (offset + 0x24) thesavingthrow
+					thesavingthrow|=0x10000
+					PATCH_IF theopcode = 241 BEGIN
+						thesavingthrow|=0x200000
+						WRITE_LONG (offset + 0x8) 0x400000
+					END
+					PATCH_IF theprojectile = 3 OR theprojectile = 8 OR theprojectile = 13 OR theprojectile = 18 OR theprojectile = 22 OR theprojectile = 25 OR theprojectile = 26 OR theprojectile = 28 OR theprojectile = 33 OR theprojectile = 38 OR theprojectile = 40 OR theprojectile = 42 OR theprojectile = 57 OR theprojectile = 64 OR theprojectile = 67 OR theprojectile = 92 OR theprojectile = 94 OR theprojectile = 95 OR theprojectile = 96 OR theprojectile = 97 OR theprojectile = 98 OR theprojectile = 99 OR theprojectile = 100 OR theprojectile = 101 OR theprojectile = 104 OR theprojectile = 107 OR theprojectile = 109 OR theprojectile = 158 OR theprojectile = 159 OR theprojectile = 186 OR theprojectile = 187 OR theprojectile = 190 OR theprojectile = 191 OR theprojectile = 204 OR theprojectile = 205 OR theprojectile = 206 OR theprojectile = 207 OR theprojectile = 209 OR theprojectile = 210 OR theprojectile = 211 OR theprojectile = 212 OR theprojectile = 213 OR theprojectile = 214 OR theprojectile = 215 OR theprojectile = 216 OR theprojectile = 217 OR theprojectile = 235 OR theprojectile = 270 OR theprojectile = 272 OR theprojectile = 274 OR theprojectile = 279 OR theprojectile = 280 OR theprojectile = 282 OR theprojectile = 283 OR theprojectile = 284 OR theprojectile = 286 OR theprojectile = 287 OR theprojectile = 288 OR theprojectile = 296 OR theprojectile = 299 OR theprojectile = 300 OR theprojectile = 301 OR theprojectile = 302 OR theprojectile = 303 OR theprojectile = 304 OR theprojectile = 305 OR theprojectile = 306 OR theprojectile = 308 OR theprojectile = 309 OR theprojectile = 310 OR theprojectile = 311 OR theprojectile = 312 OR theprojectile = 313 OR theprojectile = 315 OR theprojectile = 316 OR theprojectile = 317 OR theprojectile = 318 OR theprojectile = 319 OR theprojectile = 323 OR theprojectile = 335 OR theprojectile = 337 OR theprojectile = 338 OR theprojectile = 340 OR theprojectile = 341 OR theprojectile = 342 OR theprojectile = 343 OR theprojectile = 351 OR theprojectile = 360 OR theprojectile = 362 OR theprojectile = 366 OR theprojectile = 368 OR theprojectile = 369 OR theprojectile = 370 OR theprojectile = 374 OR theprojectile = 377 OR theprojectile = 379 OR theprojectile = 380 OR theprojectile = 381 OR theprojectile = 382 OR theprojectile = 383 OR theprojectile = 384 OR theprojectile = 385 OR theprojectile = 386 BEGIN
+						thesavingthrow|=0x4000000
+					END
+					PATCH_IF (thesavingthrow BAND 0x00000004) > 0 BEGIN
+						thesavingthrow&=0xFFFFFFFB
+						thesavingthrow|=0x400
+					END
+					PATCH_IF (thesavingthrow BAND 0x00000008) > 0 BEGIN
+						thesavingthrow&=0xFFFFFFF7
+						thesavingthrow|=0x800
+					END
+					PATCH_IF (thesavingthrow BAND 0x00000010) > 0 BEGIN
+						thesavingthrow&=0xFFFFFFEF
+						thesavingthrow|=0x1000
+					END
+					WRITE_SHORT offset 500
+					WRITE_LONG (offset + 0x4) (theparameter1 + (thedicesize << 8) + (thedicenumber << 16))
+					PATCH_IF thetiming = 1 OR thetiming = 9 BEGIN
+						WRITE_BYTE (offset + 0xC) 0
+						WRITE_LONG (offset + 0xE) 0
+					END ELSE PATCH_IF thetiming = 3 OR thetiming = 4 BEGIN
+						WRITE_BYTE (offset + 0xC) 3
+					END
+					WRITE_ASCII (offset + 0x14) ~EXDAMAGE~ #8
+					WRITE_LONG (offset + 0x1C) 0
+					WRITE_LONG (offset + 0x20) 0
+					WRITE_LONG (offset + 0x24) thesavingthrow
+				END ELSE PATCH_IF (theopcode = 16 OR theopcode = 40 OR theopcode = 130 OR theopcode = 408 OR theopcode = 409 OR theopcode = 415 OR theopcode = 427 OR theopcode = 452) BEGIN
+					WRITE_ASCIIE (offset + 0x14) ~MEOP%theopcode%~ #8
+					WRITE_SHORT offset 500
+				END ELSE PATCH_IF theopcode = 433 AND MOD_IS_INSTALLED ~iwd2ee.tp2~ ~2~ BEGIN
+					foundblink = 1
+					WRITE_ASCIIE (offset + 0x14) ~USBLINK~ #8
+					WRITE_SHORT offset 288
+					WRITE_LONG (offset + 0x4) 1
+					WRITE_LONG (offset + 0x8) 224
+				END
+				offset = offset + 0x30
+			END
+			PATCH_IF foundblink = 1 BEGIN
+				LPF CLONE_EFFECT INT_VAR silent=1 check_headers=1 check_globals=1 match_opcode=288 match_parameter2=224 parameter1=0 parameter2=2 STR_VAR match_resource=~USBLINK~ resource=~~ END
+				LPF CLONE_EFFECT INT_VAR silent=1 check_headers=1 check_globals=1 match_opcode=288 match_parameter2=224 opcode=66 parameter1=0 parameter2=0 STR_VAR match_resource=~USBLINK~ resource=~~ END
+			END
+		END
+	END
+	UNLESS ~EXDAMAGE~
+	BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING_REGEXP ~.*\.itm~ ~override~
+	READ_SHORT 0x68 thenumheaders
+	PATCH_IF thenumheaders > 0 BEGIN
+		READ_BYTE 0x82 thefirstheadertype
+		PATCH_IF thefirstheadertype = 1 OR thefirstheadertype = 2 BEGIN
+			LPF ADD_ITEM_EFFECT INT_VAR type=1 opcode=500 target=2 timing=0 special=1 STR_VAR resource=~MEONHIT~ END
+			LPF ADD_ITEM_EFFECT INT_VAR type=2 opcode=500 target=2 timing=0 special=2 STR_VAR resource=~MEONHIT~ END
+			READ_SHORT 0x1C theitemtype
+			READ_ASCII 0x22 theappearance (2)
+			offset = 0x82
+			FOR (i = 0; i < thenumheaders; ++i) BEGIN
+				READ_BYTE offset theheadertype
+				READ_SHORT (offset + 0x18) thedicenumber
+				READ_SHORT (offset + 0x1C) thedamagetype
+				PATCH_IF thedamagetype = 1 OR thedamagetype = 4 BEGIN
+					damageeffecttype = 0x100000
+				END ELSE PATCH_IF thedamagetype = 2 OR thedamagetype = 9 BEGIN
+					damageeffecttype = 0
+				END ELSE BEGIN
+					damageeffecttype = 0x1000000
+				END
+				newdamage = 0
+				PATCH_IF theitemtype = 16 AND theheadertype = 1 AND (~%theappearance%~ STRING_EQUAL_CASE ~DD~ OR ~%theappearance%~ STRING_EQUAL_CASE ~SS~) BEGIN
+					newdamage = 0x20600
+				END ELSE PATCH_IF theitemtype = 0 OR theitemtype = 16 OR theitemtype = 19 OR theitemtype = 24 OR theitemtype = 28 OR theitemtype = 44 BEGIN
+					newdamage = 0x10600
+				END
+				PATCH_IF theheadertype = 1 AND thedicenumber > 0 BEGIN
+					LPF ADD_ITEM_EFFECT INT_VAR header=(i + 1) type=1 opcode=500 target=2 timing=0 parameter1=newdamage parameter2=damageeffecttype savingthrow=0x1884000 STR_VAR resource=~EXDAMAGE~ END
+				END ELSE PATCH_IF theheadertype = 2 AND thedicenumber > 0 BEGIN
+					LPF ADD_ITEM_EFFECT INT_VAR header=(i + 1) type=2 opcode=500 target=2 timing=0 parameter1=newdamage parameter2=damageeffecttype savingthrow=0x1884000 STR_VAR resource=~EXDAMAGE~ END
+				END
+				offset += 0x38
+			END
+		END
+	END
+	UNLESS ~MEONHIT~
+	BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING_REGEXP ~.*\.spl~ ~override~
+	READ_LONG 0x18 thespellflags
+	PATCH_IF (thespellflags BAND 0x00004000) = 0 BEGIN
+		READ_LONG 0x64 headeroffset
+		READ_SHORT 0x68 numheaders
+		READ_LONG 0x6A effectoffset
+		READ_SHORT (headeroffset + 0x26) theprojectile
+		READ_SHORT (headeroffset + 0x28 * (numheaders - 1) + 0x1E) lastheadernumeffects
+		READ_SHORT (headeroffset + 0x28 * (numheaders - 1) + 0x20) lastheaderfirsteffectindex
+		numeffects = lastheadernumeffects + lastheaderfirsteffectindex
+		offset = effectoffset
+		FOR (i = 0; i < numeffects; ++i) BEGIN
+			READ_SHORT offset theopcode
+			READ_LONG (offset + 0x8) theparameter2
+			READ_BYTE (offset + 0xC) thetiming
+			PATCH_IF (theopcode = 12 OR (theopcode = 241 AND theparameter2 = 0)) BEGIN
+				READ_BYTE (offset + 0x4) theparameter1
+				READ_SBYTE (offset + 0x1C) thedicenumber
+				PATCH_IF thedicenumber < 0 BEGIN
+					thedicenumber = 0
+				END
+				READ_SBYTE (offset + 0x20) thedicesize
+				PATCH_IF thedicesize < 0 BEGIN
+					thedicesize = 0
+				END
+				READ_LONG (offset + 0x24) thesavingthrow
+				thesavingthrow|=0x10000
+				thesavingthrow|=0x80000
+				PATCH_IF theopcode = 241 BEGIN
+					thesavingthrow|=0x200000
+					WRITE_LONG (offset + 0x8) 0x400000
+				END
+				PATCH_IF theprojectile = 3 OR theprojectile = 8 OR theprojectile = 13 OR theprojectile = 18 OR theprojectile = 22 OR theprojectile = 25 OR theprojectile = 26 OR theprojectile = 28 OR theprojectile = 33 OR theprojectile = 38 OR theprojectile = 40 OR theprojectile = 42 OR theprojectile = 57 OR theprojectile = 64 OR theprojectile = 67 OR theprojectile = 92 OR theprojectile = 94 OR theprojectile = 95 OR theprojectile = 96 OR theprojectile = 97 OR theprojectile = 98 OR theprojectile = 99 OR theprojectile = 100 OR theprojectile = 101 OR theprojectile = 104 OR theprojectile = 107 OR theprojectile = 109 OR theprojectile = 158 OR theprojectile = 159 OR theprojectile = 186 OR theprojectile = 187 OR theprojectile = 190 OR theprojectile = 191 OR theprojectile = 204 OR theprojectile = 205 OR theprojectile = 206 OR theprojectile = 207 OR theprojectile = 209 OR theprojectile = 210 OR theprojectile = 211 OR theprojectile = 212 OR theprojectile = 213 OR theprojectile = 214 OR theprojectile = 215 OR theprojectile = 216 OR theprojectile = 217 OR theprojectile = 235 OR theprojectile = 270 OR theprojectile = 272 OR theprojectile = 274 OR theprojectile = 279 OR theprojectile = 280 OR theprojectile = 282 OR theprojectile = 283 OR theprojectile = 284 OR theprojectile = 286 OR theprojectile = 287 OR theprojectile = 288 OR theprojectile = 296 OR theprojectile = 299 OR theprojectile = 300 OR theprojectile = 301 OR theprojectile = 302 OR theprojectile = 303 OR theprojectile = 304 OR theprojectile = 305 OR theprojectile = 306 OR theprojectile = 308 OR theprojectile = 309 OR theprojectile = 310 OR theprojectile = 311 OR theprojectile = 312 OR theprojectile = 313 OR theprojectile = 315 OR theprojectile = 316 OR theprojectile = 317 OR theprojectile = 318 OR theprojectile = 319 OR theprojectile = 323 OR theprojectile = 335 OR theprojectile = 337 OR theprojectile = 338 OR theprojectile = 340 OR theprojectile = 341 OR theprojectile = 342 OR theprojectile = 343 OR theprojectile = 351 OR theprojectile = 360 OR theprojectile = 362 OR theprojectile = 366 OR theprojectile = 368 OR theprojectile = 369 OR theprojectile = 370 OR theprojectile = 374 OR theprojectile = 377 OR theprojectile = 379 OR theprojectile = 380 OR theprojectile = 381 OR theprojectile = 382 OR theprojectile = 383 OR theprojectile = 384 OR theprojectile = 385 OR theprojectile = 386 BEGIN
+					thesavingthrow|=0x4000000
+				END
+				PATCH_IF (thesavingthrow BAND 0x00000004) > 0 BEGIN
+					thesavingthrow&=0xFFFFFFFB
+					thesavingthrow|=0x400
+				END
+				PATCH_IF (thesavingthrow BAND 0x00000008) > 0 BEGIN
+					thesavingthrow&=0xFFFFFFF7
+					thesavingthrow|=0x800
+				END
+				PATCH_IF (thesavingthrow BAND 0x00000010) > 0 BEGIN
+					thesavingthrow&=0xFFFFFFEF
+					thesavingthrow|=0x1000
+				END
+				WRITE_SHORT offset 500
+				WRITE_LONG (offset + 0x4) (theparameter1 + (thedicesize << 8) + (thedicenumber << 16))
+				PATCH_IF thetiming = 1 OR thetiming = 9 BEGIN
+					WRITE_BYTE (offset + 0xC) 0
+					WRITE_LONG (offset + 0xE) 0
+				END ELSE PATCH_IF thetiming = 3 OR thetiming = 4 BEGIN
+					WRITE_BYTE (offset + 0xC) 3
+				END
+				WRITE_ASCII (offset + 0x14) ~EXDAMAGE~ #8
+				WRITE_LONG (offset + 0x1C) 0
+				WRITE_LONG (offset + 0x20) 0
+				WRITE_LONG (offset + 0x24) thesavingthrow
+			END
+			offset = offset + 0x30
+		END
+	END
+	UNLESS ~EXDAMAGE~
+	BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING_REGEXP ~.*\.itm~ ~override~
+	ismelee = 0
+	isranged = 0
+	islauncher = 0
+	READ_SHORT 0x18 theitemflags
+	READ_SHORT 0x1C thecategory
+	READ_ASCII 0x22 theappearance (2)
+	PATCH_IF (~%theappearance%~ STRING_EQUAL_CASE ~2A~) OR (~%theappearance%~ STRING_EQUAL_CASE ~3A~) OR (~%theappearance%~ STRING_EQUAL_CASE ~4A~) BEGIN
+		LPF ADD_ITEM_EQEFFECT INT_VAR opcode=288 target=1 timing=2 parameter1=thecategory parameter2=241 savingthrow=(theitemflags << 16) special=1 STR_VAR resource=~USEQTYPE~ END
+	END ELSE PATCH_IF thecategory = 67 BEGIN
+		LPF ADD_ITEM_EQEFFECT INT_VAR opcode=288 target=1 timing=2 parameter1=thecategory parameter2=241 savingthrow=(theitemflags << 16) special=2 STR_VAR resource=~USEQTYPE~ END
+	END ELSE PATCH_IF (~%theappearance%~ STRING_EQUAL_CASE ~D1~) OR (~%theappearance%~ STRING_EQUAL_CASE ~D2~) OR (~%theappearance%~ STRING_EQUAL_CASE ~D3~) OR (~%theappearance%~ STRING_EQUAL_CASE ~D4~) OR (~%theappearance%~ STRING_EQUAL_CASE ~C6~) BEGIN
+		LPF ADD_ITEM_EQEFFECT INT_VAR opcode=288 target=1 timing=2 parameter1=thecategory parameter2=241 savingthrow=(theitemflags << 16) special=3 STR_VAR resource=~USEQTYPE~ END
+	END ELSE BEGIN
+		READ_SHORT 0x68 thenumheaders
+		PATCH_IF thenumheaders > 0 BEGIN
+			offset = 0x82
+			FOR (i = 0; i < thenumheaders; ++i) BEGIN
+				READ_BYTE offset theheadertype
+				PATCH_IF theheadertype = 1 AND isranged = 0 BEGIN
+					ismelee = 1
+					READ_SHORT (offset + 0x18) thedicenumber
+					READ_SHORT (offset + 0x1C) thedamagetype
+					PATCH_IF thedicenumber = 0 BEGIN
+						thedamagetype = 0
+					END
+				END ELSE PATCH_IF theheadertype = 2 BEGIN
+					isranged = 1
+					READ_SHORT (offset + 0x18) thedicenumber
+					READ_SHORT (offset + 0x1C) thedamagetype
+					PATCH_IF thedicenumber = 0 BEGIN
+						thedamagetype = 0
+					END
+				END ELSE PATCH_IF theheadertype = 4 BEGIN
+					islauncher = 1
+					READ_SHORT (offset + 0x18) thedicenumber
+					READ_SHORT (offset + 0x1C) thedamagetype
+					PATCH_IF thedicenumber = 0 BEGIN
+						thedamagetype = 0
+					END
+				END
+				offset += 0x38
+			END
+			PATCH_IF isranged = 1 BEGIN
+				LPF ADD_ITEM_EQEFFECT INT_VAR opcode=288 target=1 timing=2 parameter1=thecategory parameter2=241 savingthrow=(theitemflags << 16) special=4 STR_VAR resource=~USEQTYPE~ END
+			END ELSE PATCH_IF ismelee = 1 BEGIN
+				PATCH_IF (~%theappearance%~ STRING_EQUAL_CASE ~  ~) BEGIN
+					LPF ADD_ITEM_EQEFFECT INT_VAR opcode=288 target=1 timing=2 parameter1=thecategory parameter2=241 savingthrow=(theitemflags << 16) special=6 STR_VAR resource=~USEQTYPE~ END
+				END ELSE BEGIN
+					LPF ADD_ITEM_EQEFFECT INT_VAR opcode=288 target=1 timing=2 parameter1=thecategory parameter2=241 savingthrow=(theitemflags << 16) special=5 STR_VAR resource=~USEQTYPE~ END
+				END
+			END ELSE PATCH_IF islauncher = 1 BEGIN
+				LPF ADD_ITEM_EQEFFECT INT_VAR opcode=288 target=1 timing=2 parameter1=thecategory parameter2=241 savingthrow=(theitemflags << 16) special=7 STR_VAR resource=~USEQTYPE~ END
+			END
+		END
+	END
+	PATCH_IF (((theitemflags BAND 0x00000002) = 0x00000002) AND ismelee = 1 AND NOT (~%theappearance%~ STRING_EQUAL_CASE ~  ~)) OR thecategory = 41 OR thecategory = 47 OR thecategory = 49 OR thecategory = 53 BEGIN
+		LPF ADD_ITEM_EQEFFECT INT_VAR opcode=500 target=1 timing=0 special=1 STR_VAR resource=~MEMONKAN~ END
+	END
+	UNLESS ~USEQTYPE~
+	BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING_REGEXP ~.*\.itm~ ~override~
+	isweapon = 0
+	READ_SHORT 0x68 thenumheaders
+	PATCH_IF thenumheaders > 0 BEGIN
+		offset = 0x82
+		FOR (i = 0; i < thenumheaders; ++i) BEGIN
+			READ_BYTE offset theheadertype
+			PATCH_IF theheadertype = 1 OR theheadertype = 2 BEGIN
+				isweapon = 1
+			END
+			offset += 0x38
+		END
+		PATCH_IF isweapon = 1 BEGIN
+			LPF ADD_ITEM_EQEFFECT INT_VAR opcode=287 target=1 timing=2 STR_VAR resource=~USNONSNA~ END
+		END
+	END
+	UNLESS ~USNONSNA~
+	BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
+	WRITE_SHORT 0x184 0
+	WRITE_SHORT 0x186 0
+	WRITE_SHORT 0x188 (0 - 2)
+	WRITE_BYTE 0x197 0
+	WRITE_LONG 0x198 0
+	WRITE_LONG 0x1A0 0
+	WRITE_LONG 0x1A4 0
+	BUT_ONLY_IF_IT_CHANGES
+
+COPY + ~Characters~ ~Characters~
+	PATCH_IF ~%SOURCE_EXT%~ STRING_EQUAL_CASE ~CHR~ BEGIN
+		WRITE_SHORT 0x3A8 0
+		WRITE_SHORT 0x3AA 0
+		WRITE_SHORT 0x3AC (0 - 2)
+		WRITE_BYTE 0x3BB 0
+		WRITE_LONG 0x3BC 0
+		WRITE_LONG 0x3C4 0
+		READ_SLONG 0x3C8 theextraflags
+		PATCH_IF theextraflags = (0 - 1) BEGIN
+			WRITE_LONG 0x3C8 0
+		END
+	END
+	BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
+	READ_BYTE race therace
+	READ_BYTE subrace thesubrace
+	READ_BYTE alignment thealignment
+	READ_BYTE levelcleric theclericlevel
+	READ_LONG kit thekit
+	READ_LONG animation theanimation
+	PATCH_IF (theanimation = 59337 OR theanimation = 60184 OR theanimation = 60217 OR theanimation = 60233 OR theanimation = 60681 OR theanimation = 60712 OR theanimation = 61197 OR theanimation = 61213) OR therace = 168 OR therace = 182 OR therace = 183 OR therace = 184 OR therace = 185 OR (theclericlevel > 0 AND (thekit BAND 0x00200000) = 0x00200000) BEGIN
+		READ_LONG extraflags theextraflags
+		theextraflags|=0x200000
+		WRITE_LONG extraflags theextraflags
+	END
+	BUT_ONLY_IF_IT_CHANGES
+
+ACTION_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~51~ BEGIN
+
+COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
+	READ_LONG animation theanimation
+	READ_BYTE general thegeneral
+	READ_BYTE race therace
+	PATCH_IF (thegeneral = 4) OR (therace = 156) OR (therace = 160 AND (MOD_IS_INSTALLED ~iwd2ee.tp2~ ~23~)) OR (therace = 152) OR (therace = 161) OR (therace = 175) OR (theanimation >= 30976 AND theanimation <= 30979) OR (theanimation = 29442) OR (theanimation = 61329) OR (therace = 190) BEGIN
+		READ_BYTE attributes theattributes
+		theattributes|=0x2
+		WRITE_BYTE attributes theattributes
+	END
+	ELSE BEGIN
+		READ_BYTE attributes theattributes
+		theattributes&=0xFD
+		WRITE_BYTE attributes theattributes
+	END
+	BUT_ONLY_IF_IT_CHANGES
+
+END
+
+ACTION_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~21~ BEGIN
+
+COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
+	READ_BYTE attributes theattributes
+	theattributes&=0xFD
+	WRITE_BYTE attributes theattributes
+	BUT_ONLY_IF_IT_CHANGES
+
+END
+
+ACTION_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~23~ BEGIN
+
+COPY_EXISTING_REGEXP ~.+\.cre~ ~override~
+    READ_BYTE race therace
+    READ_BYTE general thegeneral
+	READ_BYTE installationflags theinstallationflags
+	PATCH_IF (theinstallationflags BAND 0x00000003) = 0x00000000 BEGIN
+		theinstallationflags|=0x2
+		WRITE_BYTE installationflags theinstallationflags
+	    PATCH_IF therace = 107 OR therace = 116 BEGIN // turn arachnids into driders
+	        WRITE_BYTE race 182
+	    END ELSE PATCH_IF therace = 113 OR therace = 179 OR therace = 189 BEGIN // turn giants into giants
+	        WRITE_BYTE race 153
+	    END ELSE PATCH_IF therace = 111 OR therace = 160 OR therace = 180 BEGIN // turn goblinoids and orcs into goblins
+	        WRITE_BYTE race 155
+	    END ELSE PATCH_IF therace = 101 OR therace = 104 OR therace = 150 OR therace = 151 OR therace = 181 BEGIN // turn bugs into bugbears
+	        WRITE_BYTE race 180
+	    END ELSE PATCH_IF therace = 106 OR therace = 186 OR therace = 192 OR therace = 193 BEGIN // turn aberrations into harpies
+	        WRITE_BYTE race 174
+	    END ELSE PATCH_IF therace = 164 BEGIN // turn demons and devils into hook horrors
+	        WRITE_BYTE race 181
+	    END ELSE PATCH_IF therace = 156 OR therace = 215 BEGIN // turn constructs into orcs
+	        WRITE_BYTE race 160
+	    END ELSE PATCH_IF therace = 152 OR therace = 175 BEGIN // turn elementals into salamanders
+	        WRITE_BYTE race 161
+	    END ELSE PATCH_IF therace = 1 BEGIN // turn humans into shapeshifters
+	        WRITE_BYTE race 191
+	    END ELSE PATCH_IF therace = 171 BEGIN // turn snow trolls into trolls
+	        WRITE_BYTE race 165
+	    END ELSE PATCH_IF therace = 157 BEGIN // turn lizardmen into yuan-ti
+	        WRITE_BYTE race 168
+	    END ELSE PATCH_IF therace = 166 OR therace = 177 OR therace = 184 BEGIN // turn underdark aberrations into lizard men
+	        WRITE_BYTE race 157
+	    END ELSE PATCH_IF therace = 108 OR therace = 115 BEGIN // turn ghouls and skeletons into undead
+	        WRITE_BYTE race 167
+	    END ELSE PATCH_IF therace = 154 OR therace = 187 OR therace = 188 BEGIN // turn dragons into wyverns
+	        WRITE_BYTE race 118
+	    END ELSE PATCH_IF therace = 119 OR therace = 159 OR therace = 174 BEGIN // turn amorphous beings into umber hulks
+	        WRITE_BYTE race 166
+	    END
+// turn animals into ogres. Note that animal is not a race; it's a general type.
+	    PATCH_IF thegeneral = 2 BEGIN
+       		WRITE_BYTE race 113
+   		END
+	END
+	BUT_ONLY_IF_IT_CHANGES
+
+END
+
+ACTION_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~39~ BEGIN
+
+COPY_EXISTING_REGEXP ~.*\.itm~ ~override~
+//Armor and shields grant resistance to physical damage equal to half their armor/shield bonus, rounded down
+	READ_SHORT 0x1c us_item_category
+	PATCH_IF (us_item_category >= 60 AND us_item_category <= 68) OR (us_item_category = 2) OR (us_item_category = 6) BEGIN
+		us_bonus = 0
+		READ_LONG 0x6a us_offset
+		READ_SHORT 0x70 us_num_effects
+		FOR (i=0; i < us_num_effects; ++i) BEGIN
+			READ_SHORT us_offset us_opcode
+			READ_LONG (us_offset + 0x8) us_parameter2
+			PATCH_IF (us_opcode = modifyac AND us_parameter2 = armorbonus) BEGIN
+				READ_LONG (us_offset + 0x4) us_parameter1
+				us_bonus = us_parameter1 / 2
+				i = us_num_effects
+			END
+			us_offset += effectsize
+		END
+		PATCH_IF (us_bonus > 0) BEGIN
+			LPF ADD_ITEM_EQEFFECT INT_VAR opcode=modifyslashingresistance target=1 timing=2 parameter1=us_bonus STR_VAR resource=~USARMDAR~ END
+			LPF ADD_ITEM_EQEFFECT INT_VAR opcode=modifypiercingresistance target=1 timing=2 parameter1=us_bonus STR_VAR resource=~USARMDAR~ END
+			LPF ADD_ITEM_EQEFFECT INT_VAR opcode=modifybludgeoningresistance target=1 timing=2 parameter1=us_bonus STR_VAR resource=~USARMDAR~ END
+			LPF ADD_ITEM_EQEFFECT INT_VAR opcode=modifymissileresistance target=1 timing=2 parameter1=us_bonus STR_VAR resource=~USARMDAR~ END
+		END
+	END ELSE PATCH_IF (us_item_category = 12 OR us_item_category = 41 OR us_item_category = 47 OR us_item_category = 49 OR us_item_category = 53) BEGIN
+		us_bonus = 0
+		READ_LONG 0x6a us_offset
+		READ_SHORT 0x70 us_num_effects
+		FOR (i=0; i < us_num_effects; ++i) BEGIN
+			READ_SHORT us_offset us_opcode
+			READ_LONG (us_offset + 0x8) us_parameter2
+			PATCH_IF (us_opcode = modifyac AND us_parameter2 = shieldbonus) BEGIN
+				READ_LONG (us_offset + 0x4) us_parameter1
+				us_bonus = us_parameter1 / 2
+				i = us_num_effects
+			END
+			us_offset += effectsize
+		END
+		PATCH_IF (us_bonus > 0) BEGIN
+			LPF ADD_ITEM_EQEFFECT INT_VAR opcode=modifyslashingresistance target=1 timing=2 parameter1=us_bonus STR_VAR resource=~USARMDAR~ END
+			LPF ADD_ITEM_EQEFFECT INT_VAR opcode=modifypiercingresistance target=1 timing=2 parameter1=us_bonus STR_VAR resource=~USARMDAR~ END
+			LPF ADD_ITEM_EQEFFECT INT_VAR opcode=modifybludgeoningresistance target=1 timing=2 parameter1=us_bonus STR_VAR resource=~USARMDAR~ END
+			LPF ADD_ITEM_EQEFFECT INT_VAR opcode=modifymissileresistance target=1 timing=2 parameter1=us_bonus STR_VAR resource=~USARMDAR~ END
+		END
+	END
+	UNLESS ~USARMDAR~
+	BUT_ONLY_IF_IT_CHANGES
+
+END
+
+ACTION_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~46~ OR MOD_IS_INSTALLED ~iwd2ee.tp2~ ~48~ OR MOD_IS_INSTALLED ~iwd2ee.tp2~ ~49~ BEGIN
+
+	COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
+		READ_BYTE 0x303 theattributes
+		READ_BYTE installationflags theinstallationflags
+		PATCH_IF (theattributes BAND 0x00000001) != 0x00000001 AND (theinstallationflags BAND 0x00000001) = 0x00000000 BEGIN
+			READ_SSHORT 0x26 themaxhp
+			PATCH_IF themaxhp <= 60 BEGIN
+				TEXT_SPRINT hofitem ~USHFMODA~
+				READ_BYTE 0x8a thelevel
+				READ_BYTE 0x26a theconstitution
+				PATCH_IF (themaxhp * 3 - 100 + (thelevel + 12) * (theconstitution / 2)) = 0 BEGIN
+					themaxhp += 1
+					WRITE_SHORT 0x26 themaxhp
+				END
+			END
+			ELSE BEGIN
+				TEXT_SPRINT hofitem ~USHFMODB~
+			END
+			READ_LONG 0x612 itemslotsoffset
+			READ_SSHORT (itemslotsoffset + 0xE) theslot
+			PATCH_IF theslot < 0 BEGIN
+				LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item= EVAL ~%hofitem%~ slot=~belt~ END
+			END
+			ELSE BEGIN
+				READ_SSHORT (itemslotsoffset + 0x8) theslot
+				PATCH_IF theslot < 0 BEGIN
+					LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item= EVAL ~%hofitem%~ slot=~lring~ END
+				END
+				ELSE BEGIN
+					READ_SSHORT (itemslotsoffset + 0xA) theslot
+					PATCH_IF theslot < 0 BEGIN
+						LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item= EVAL ~%hofitem%~ slot=~rring~ END
+					END
+					ELSE BEGIN
+						READ_SSHORT (itemslotsoffset + 0xC) theslot
+						PATCH_IF theslot < 0 BEGIN
+							LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item= EVAL ~%hofitem%~ slot=~amulet~ END
+						END
+						ELSE BEGIN
+							READ_SSHORT (itemslotsoffset + 0x6) theslot
+							PATCH_IF theslot < 0 BEGIN
+								LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item= EVAL ~%hofitem%~ slot=~gloves~ END
+							END
+							ELSE BEGIN
+								READ_SSHORT (itemslotsoffset + 0x10) theslot
+								PATCH_IF theslot < 0 BEGIN
+									LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item= EVAL ~%hofitem%~ slot=~boots~ END
+								END
+								ELSE BEGIN
+									LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item= EVAL ~%hofitem%~ slot=~cloak~ mode=~move~ END
+								END
+							END
+						END
+					END
+				END
+			END
+		END
+		UNLESS ~USHOFMOD[AB]~
+		BUT_ONLY_IF_IT_CHANGES
+
+	COPY_EXISTING ~CHARBASE.cre~ ~override~ ~USGEOF.cre~ ~override~ ~USREIG.cre~ ~override~ ~USVEIR.cre~ ~override~ ~USEMMA.cre~ ~override~ ~USVREK.cre~ ~override~ ~USVUNA.cre~ ~override~ ~USXHAA.cre~ ~override~ ~USZACK.cre~ ~override~ ~USPAIR.cre~ ~override~ ~USSERS.cre~ ~override~ ~USSIMULA.cre~ ~override~
+		LPF	IWD2_REMOVE_CRE_ITEM STR_VAR item=~USHFMODA USHFMODB~ END
+		IF_EXISTS
+
+END
+
+ACTION_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~47~ BEGIN
+
+	COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
+		READ_BYTE 0x303 theattributes
+		READ_BYTE installationflags theinstallationflags
+		PATCH_IF (theattributes BAND 0x00000001) != 0x00000001 AND (theinstallationflags BAND 0x00000001) = 0x00000000 BEGIN
+			TEXT_SPRINT hofitem ~USHFMODP~
+			READ_LONG 0x612 itemslotsoffset
+			READ_SSHORT (itemslotsoffset + 0xE) theslot
+			PATCH_IF theslot < 0 BEGIN
+				LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item= EVAL ~%hofitem%~ slot=~belt~ END
+			END
+			ELSE BEGIN
+				READ_SSHORT (itemslotsoffset + 0x8) theslot
+				PATCH_IF theslot < 0 BEGIN
+					LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item= EVAL ~%hofitem%~ slot=~lring~ END
+				END
+				ELSE BEGIN
+					READ_SSHORT (itemslotsoffset + 0xA) theslot
+					PATCH_IF theslot < 0 BEGIN
+						LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item= EVAL ~%hofitem%~ slot=~rring~ END
+					END
+					ELSE BEGIN
+						READ_SSHORT (itemslotsoffset + 0xC) theslot
+						PATCH_IF theslot < 0 BEGIN
+							LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item= EVAL ~%hofitem%~ slot=~amulet~ END
+						END
+						ELSE BEGIN
+							READ_SSHORT (itemslotsoffset + 0x6) theslot
+							PATCH_IF theslot < 0 BEGIN
+								LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item= EVAL ~%hofitem%~ slot=~gloves~ END
+							END
+							ELSE BEGIN
+								READ_SSHORT (itemslotsoffset + 0x2A) theslot
+								PATCH_IF theslot < 0 BEGIN
+									LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item= EVAL ~%hofitem%~ slot=~cloak~ END
+								END
+								ELSE BEGIN
+									LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item= EVAL ~%hofitem%~ slot=~boots~ mode=~move~ END
+								END
+							END
+						END
+					END
+				END
+			END
+		END
+		UNLESS ~USHOFMODP~
+		BUT_ONLY_IF_IT_CHANGES
+
+	COPY_EXISTING ~CHARBASE.cre~ ~override~ ~USGEOF.cre~ ~override~ ~USREIG.cre~ ~override~ ~USVEIR.cre~ ~override~ ~USEMMA.cre~ ~override~ ~USVREK.cre~ ~override~ ~USVUNA.cre~ ~override~ ~USXHAA.cre~ ~override~ ~USZACK.cre~ ~override~ ~USPAIR.cre~ ~override~ ~USSERS.cre~ ~override~ ~USSIMULA.cre~ ~override~
+		LPF	IWD2_REMOVE_CRE_ITEM STR_VAR item=~USHFMODP~ END
+		IF_EXISTS
+
+END

@@ -323,6 +323,7 @@ COPY_EXISTING ~USPAIRD.bcs~ ~override~
 
 COPY_EXISTING ~USSERSD.bcs~ ~override~
 	REPLACE ~41038~ @41038
+	REPLACE ~41204~ @41204
 
 COPY_EXISTING ~USSERSLV.bcs~ ~override~
 	REPLACE ~41607~ @41607
@@ -495,8 +496,8 @@ COPY_EXISTING ~10BLACK.cre~ ~override~
 COPY_EXISTING ~10BLACK.cre~ ~override~ ~12BLACK.cre~ ~override~
 	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelrogue=3 STR_VAR updatehp=~max~ END
 	WRITE_LONG xp 6080
-	WRITE_ASCII smallportrait ~EMF2_S~ #8
-	WRITE_ASCII largeportrait ~EMF2_L~ #8
+	WRITE_ASCII smallportrait ~USGEOF_S~ #8
+	WRITE_ASCII largeportrait ~USGEOF_L~ #8
 	WRITE_LONG animation 25345
 	WRITE_BYTE strength 14
 	WRITE_BYTE dexterity 17
@@ -542,8 +543,8 @@ COPY_EXISTING ~10BLACK.cre~ ~override~ ~12BLACK.cre~ ~override~
 COPY_EXISTING ~10REIG.cre~ ~override~
 	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelfighter=1 END
 	WRITE_LONG xp 200
-	WRITE_ASCII smallportrait ~HMF7_S~ #8
-	WRITE_ASCII largeportrait ~HMF7_L~ #8
+	WRITE_ASCII smallportrait ~USREIG_S~ #8
+	WRITE_ASCII largeportrait ~USREIG_L~ #8
 	WRITE_SHORT currenthp 3
 	WRITE_SHORT maxhp 10
 	WRITE_BYTE fortitudesave 3
@@ -576,8 +577,8 @@ COPY_EXISTING ~10REIG.cre~ ~override~
 COPY_EXISTING ~11VEIRA.cre~ ~override~
 	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelwizard=1 STR_VAR updatehp=~max~ END
 	WRITE_LONG xp 131
-	WRITE_ASCII smallportrait ~2FELF2_S~ #8
-	WRITE_ASCII largeportrait ~2FELF2_L~ #8
+	WRITE_ASCII smallportrait ~USVEIR_S~ #8
+	WRITE_ASCII largeportrait ~USVEIR_L~ #8
 	WRITE_LONG animation 25105
 	WRITE_SHORT armorclass 10
 	WRITE_BYTE skincolor 105
@@ -632,8 +633,8 @@ COPY_EXISTING ~20EMMA.cre~ ~override~
 	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelcleric=6 STR_VAR updatehp=~max~ END
 	WRITE_LONG xp 15642
 	WRITE_SHORT armorclass 10
-//	WRITE_ASCII smallportrait ~EMMA1S~ #8
-//	WRITE_ASCII largeportrait ~EMMA1L~ #8
+	WRITE_ASCII smallportrait ~USEMMA_S~ #8
+	WRITE_ASCII largeportrait ~USEMMA_L~ #8
 	WRITE_BYTE fortitudesave 3
 	WRITE_BYTE reflexsave 2
 	WRITE_BYTE willsave 5
@@ -732,6 +733,8 @@ COPY_EXISTING ~30GOBVUN.cre~ ~override~
 	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelranger=5 STR_VAR updatehp=~max~ END
 	WRITE_LONG xp 14255
 	WRITE_SHORT armorclass 10
+	WRITE_ASCII smallportrait ~USVUNA_S~ #8
+	WRITE_ASCII largeportrait ~USVUNA_L~ #8
 	WRITE_BYTE fortitudesave 5
 	WRITE_BYTE reflexsave 3
 	WRITE_BYTE willsave 2
@@ -841,8 +844,8 @@ COPY_EXISTING ~LISTSPLL.2DA~ ~override~
 */
 COPY_EXISTING ~41ZACK.cre~ ~override~
 	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelrogue=4 newlevelwizard=4 STR_VAR updatehp=~max~ END
-	WRITE_ASCII smallportrait ~GMW_S~ #8
-	WRITE_ASCII largeportrait ~GMW_L~ #8
+	WRITE_ASCII smallportrait ~USZACK_S~ #8
+	WRITE_ASCII largeportrait ~USZACK_L~ #8
 	WRITE_LONG xp 30530
 	WRITE_SHORT armorclass 10
 	WRITE_BYTE fortitudesave 2
@@ -903,8 +906,8 @@ COPY_EXISTING ~41ZACK.cre~ ~override~
 COPY_EXISTING ~50PAIRI.cre~ ~override~
 	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelsorcerer=1 STR_VAR updatehp=~max~ END
 	WRITE_LONG xp 36163
-	WRITE_ASCII smallportrait ~HFT2_S~ #8
-	WRITE_ASCII largeportrait ~HFT2_L~ #8
+	WRITE_ASCII smallportrait ~USPAIR_S~ #8
+	WRITE_ASCII largeportrait ~USPAIR_L~ #8
 	WRITE_BYTE strength 8
 	WRITE_BYTE dexterity 16
 	WRITE_BYTE constitution 10

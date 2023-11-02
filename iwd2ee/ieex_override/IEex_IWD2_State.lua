@@ -1932,7 +1932,7 @@ function IEex_IterateProjectiles(actorID, projectileID, func)
 	IEex_IterateIDs(IEex_ReadDword(IEex_GetActorShare(actorID) + 0x12), 0, function(areaListID)
 		local share = IEex_GetActorShare(areaListID)
 		local vfptr = IEex_ReadDword(share)
-		if (projectileID == -1 or IEex_ReadWord(share + 0x6E, 0x0) == projectileID) and vfptr ~= 8712412 and vfptr ~= 8712524 and vfptr ~= 8765200 and vfptr ~= 8705572 then
+		if (projectileID == -1 or IEex_ReadWord(share + 0x6E, 0x0) == projectileID) and vfptr ~= 8712412 and vfptr ~= 8712524 and vfptr ~= 8765200 and vfptr ~= 8765308 and vfptr ~= 8705572 then
 			func(share)
 		end
 	end)
@@ -2623,10 +2623,11 @@ end
 -- This function can be used to find where a certain stat is stored in the creature's data.
 function EXSEARCH(effectData, creatureData)
 	local is_string = IEex_ReadDword(effectData + 0x40)
-	local search_end = IEex_ReadDword(effectData + 0x44)
+	local search_start = IEex_ReadDword(effectData + 0x1C)
+	local search_length = IEex_ReadDword(effectData + 0x44)
 	if is_string > 0 then
 		local search_target = IEex_ReadLString(effectData + 0x18, 0x8)
-		for i = 0, search_end, 1 do
+		for i = 0, search_length, 1 do
 			if IEex_ReadLString(creatureData + i, 0x8) == search_target then
 				IEex_DisplayString("Match found for " .. search_target .. " at offset " .. i)
 			end
@@ -2635,7 +2636,7 @@ function EXSEARCH(effectData, creatureData)
 		local search_byte = IEex_ReadByte(effectData + 0x18, 0x0)
 		local search_word = IEex_ReadWord(effectData + 0x18, 0x0)
 		local search_dword = IEex_ReadDword(effectData + 0x18)
-		for i = 0, search_end, 1 do
+		for i = 0, search_length, 1 do
 			if IEex_ReadDword(creatureData + i) == search_dword then
 				IEex_DisplayString("Match found for " .. search_dword .. " at offset " .. i .. " (4 bytes)")
 			elseif search_dword < 65536 and IEex_ReadWord(creatureData + i, 0x0) == search_word then
@@ -2688,7 +2689,7 @@ function IEex_Search_Change_Log(read_size, search_start, search_length, noise_re
 end
 
 function EXPRINTO(effectData, creatureData)
-	local offset = IEex_ReadDword(effectData + 0x1c)
+	local offset = IEex_ReadDword(effectData + 0x1C)
 	local read_size = IEex_ReadDword(effectData + 0x40)
 	if read_size == 1 then
 		IEex_DisplayString("Byte at offset " .. offset .. " is " .. IEex_ReadByte(creatureData + offset, 0x0))
@@ -2837,7 +2838,7 @@ ex_crippling_strike_assassin = {ex_tra_930, ex_tra_930, ex_tra_930, ex_tra_930, 
 ex_arterial_strike = {1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4, 4, 5, 5, 5, 5, 5, 5}
 ex_damage_source_spell = {["EFFAS1"] = "SPWI217", ["EFFAS2"] = "SPWI217", ["EFFCL"] = "SPPR302", ["EFFCT1"] = "SPWI117", ["EFFDA3"] = "SPWI228", ["EFFFS1"] = "SPWI427", ["EFFFS2"] = "SPWI426", ["EFFIK"] = "SPWI122", ["EFFMB1"] = "SPPR318", ["EFFMB2"] = "SPPR318", ["EFFMT1"] = "SPPR322", ["EFFPB1"] = "SPWI521", ["EFFPB2"] = "SPWI521", ["EFFS1"] = "SPPR113", ["EFFS2"] = "SPPR113", ["EFFS3"] = "SPPR113", ["EFFSC"] = "SPPR523", ["EFFSOF1"] = "SPWI511", ["EFFSOF2"] = "SPWI511", ["EFFSR1"] = "SPPR707", ["EFFSR2"] = "SPPR707", ["EFFSSO1"] = "SPPR608", ["EFFSSO2"] = "SPPR608", ["EFFSSO3"] = "SPPR608", ["EFFSSS1"] = "SPWI220", ["EFFSSS2"] = "SPWI220", ["EFFVS1"] = "SPWI424", ["EFFVS2"] = "SPWI424", ["EFFVS3"] = "SPWI424", ["EFFWOM1"] = "SPPR423", ["EFFWOM2"] = "SPPR423", ["EFFHW15"] = "SPWI805", ["EFFHW16"] = "SPWI805", ["EFFHW17"] = "SPWI805", ["EFFHW18"] = "SPWI805", ["EFFHW19"] = "SPWI805", ["EFFHW20"] = "SPWI805", ["EFFHW21"] = "SPWI805", ["EFFHW22"] = "SPWI805", ["EFFHW23"] = "SPWI805", ["EFFHW24"] = "SPWI805", ["EFFHW25"] = "SPWI805", ["EFFWT15"] = "SPWI805", ["EFFWT16"] = "SPWI805", ["EFFWT17"] = "SPWI805", ["EFFWT18"] = "SPWI805", ["EFFWT19"] = "SPWI805", ["EFFWT20"] = "SPWI805", ["EFFWT21"] = "SPWI805", ["EFFWT22"] = "SPWI805", ["EFFWT23"] = "SPWI805", ["EFFWT24"] = "SPWI805", ["EFFWT25"] = "SPWI805", ["USWI417D"] = "SPWI417", ["USWI422D"] = "SPWI422", ["USWI452D"] = "USWI452", ["USWI652D"] = "USWI652", ["USWI755D"] = "USWI755", ["USWI954F"] = "USWI954", ["USDVSH01"] = "USPR151", ["USDVSH02"] = "USPR151", ["USDVSH03"] = "USPR151", ["USDVSH04"] = "USPR151", ["USDVSH05"] = "USPR151", ["USDVSH06"] = "USPR151", ["USDVSH07"] = "USPR151", ["USDVSH08"] = "USPR151", ["USDVSH09"] = "USPR151", ["USDVSH10"] = "USPR151", ["USDVSH11"] = "USPR151", ["USDVSH12"] = "USPR151", ["USDVSH13"] = "USPR151", ["USDVSH14"] = "USPR151", ["USDVSH15"] = "USPR151", ["USPR215D"] = "SPPR215", ["USPR452D"] = "USPR452", ["USDESTRU"] = "SPPR717", ["USPR953D"] = "USPR953", ["USSTOV2D"] = "USPR954", ["USSTOV3D"] = "USPR954", ["USSTOV4D"] = "USPR954", ["USSTOV5D"] = "USPR954", ["USWI653D"] = "USWI653", ["USWI956D"] = "USWI956", ["USWI759D"] = "USWI759", ["USWI759E"] = "USWI759", ["USPR102D"] = "SPPR102", ["USPR204D"] = "SPPR204", ["USPR211D"] = "SPPR211", ["USPR305D"] = "SPPR305", ["USPR310D"] = "SPPR310", ["USPR311D"] = "SPPR311", ["USPR320D"] = "SPPR320", ["USPR322D"] = "SPPR322", ["USPR324D"] = "SPPR324", ["USPR325D"] = "SPPR325", ["USPR405D"] = "SPPR405", ["USPR417D"] = "SPPR417", ["USPR418D"] = "SPPR418", ["USPR510D"] = "SPPR510", ["USPR512D"] = "SPPR512", ["USPR515D"] = "SPPR515", ["USPR518D"] = "SPPR518", ["USPR522D"] = "SPPR522", ["USPR611D"] = "SPPR611", ["USPR613D"] = "SPPR613", ["USPR616D"] = "SPPR616", ["USPR715D"] = "SPPR715", ["USPR717D"] = "SPPR717", ["USPR719D"] = "SPPR719", ["USPR726D"] = "SPPR726", ["USPR727D"] = "SPPR727", ["USPR728D"] = "SPPR728", ["USPR802D"] = "SPPR802", ["USPR952D"] = "USPR952", ["USWI101D"] = "SPWI101", ["USWI104D"] = "SPWI104", ["USWI105D"] = "SPWI105", ["USWI116D"] = "SPWI116", ["USWI118D"] = "SPWI118", ["USWI121D"] = "SPWI121", ["USWI205D"] = "SPWI205", ["USWI213D"] = "SPWI213", ["USWI215D"] = "SPWI215", ["USWI218D"] = "SPWI218", ["USWI222D"] = "SPWI222", ["USWI226D"] = "SPWI226", ["USWI227D"] = "SPWI227", ["USWI252D"] = "USWI252", ["USWI253D"] = "USWI253", ["USWI253E"] = "USWI253", ["USWI306D"] = "SPWI306", ["USWI312D"] = "SPWI312", ["USWI316D"] = "SPWI316", ["USWI320D"] = "SPWI320", ["USWI420D"] = "SPWI420", ["USWI423D"] = "SPWI423", ["USWI425D"] = "SPWI425", ["USWI507D"] = "SPWI507", ["USWI508D"] = "SPWI508", ["USWI509D"] = "SPWI509", ["USWI510D"] = "SPWI510", ["USWI605D"] = "SPWI605", ["USWI612D"] = "SPWI612", ["USWI653D"] = "USWI653", ["USWI705D"] = "SPWI705", ["USWI711D"] = "SPWI711", ["USWI717D"] = "SPWI717", ["USWI751D"] = "USWI751", ["USWI759E"] = "USWI759", ["USWI806D"] = "SPWI806", ["USWI810D"] = "SPWI810", ["USWI911D"] = "SPWI911", ["USSUCCRW"] = "SPWI621", ["USSUWYVE"] = "SPWI626", ["USSUGHOU"] = "USWI453", ["USWI762D"] = "USWI762", ["USWI864D"] = "USWI864", ["USWI864E"] = "USWI864", }
 ex_feat_id_offset = {[18] = 0x78D, [38] = 0x777, [39] = 0x774, [40] = 0x779, [41] = 0x77D, [42] = 0x77B, [43] = 0x77E, [44] = 0x77A, [53] = 0x775, [54] = 0x778, [55] = 0x776, [56] = 0x77C, [57] = 0x77F}
-ex_damage_multiplier_type = {[0] = 9, [0x10000] = 4, [0x20000] = 2, [0x40000] = 3, [0x80000] = 1, [0x100000] = 8, [0x200000] = 6, [0x400000] = 5, [0x800000] = 10, [0x1000000] = 7, [0x2000000] = 1, [0x4000000] = 2, [0x8000000] = 9, [0x10000000] = 5}
+ex_damage_multiplier_type = {[0] = 9, [0x10000] = 4, [0x20000] = 2, [0x40000] = 3, [0x80000] = 1, [0x100000] = 8, [0x200000] = 6, [0x400000] = 5, [0x800000] = 10, [0x1000000] = 7, [0x2000000] = 10, [0x4000000] = 10, [0x8000000] = 9, [0x10000000] = 5}
 ex_damage_resistance_stat = {[0] = 22, [0x10000] = 17, [0x20000] = 15, [0x40000] = 16, [0x80000] = 14, [0x100000] = 23, [0x200000] = 74, [0x400000] = 73, [0x800000] = 24, [0x1000000] = 21, [0x2000000] = 19, [0x4000000] = 20, [0x8000000] = 22, [0x10000000] = 73}
 ex_improved_uncanny_dodge_class_level = {[1] = 5, [9] = 6, }
 function EXDAMAGE(effectData, creatureData)
@@ -5975,10 +5976,31 @@ function MEGARGOS(effectData, creatureData)
 	IEex_WriteDword(effectData + 0x110, 1)
 	local targetID = IEex_GetActorIDShare(creatureData)
 	local parameter1 = IEex_ReadDword(effectData + 0x18)
+	local parameter2 = IEex_ReadDword(effectData + 0x1C)
+	local skinType = IEex_ReadDword(effectData + 0x44)
 	IEex_IterateActorEffects(targetID, function(eData)
 		local theopcode = IEex_ReadDword(eData + 0x10)
+		local theparameter2 = IEex_ReadDword(eData + 0x20)
 		if theopcode == 218 then
-			IEex_WriteDword(eData + 0x60, parameter1)
+			if skinType == 0 and theparameter2 == 0 then
+				local skinsRemaining = IEex_ReadDword(eData + 0x60)
+				if parameter2 == 0 then
+					IEex_WriteDword(eData + 0x60, skinsRemaining + parameter1)
+				elseif parameter2 == 1 then
+					IEex_WriteDword(eData + 0x60, parameter1)
+				elseif parameter2 == 2 then
+					IEex_WriteDword(eData + 0x60, math.floor(skinsRemaining * parameter1 / 100))
+				end
+			elseif skinType == 1 and theparameter2 == 1 then
+				local skinsRemaining = IEex_ReadDword(eData + 0x1C)
+				if parameter2 == 0 then
+					IEex_WriteDword(eData + 0x1C, skinsRemaining + parameter1)
+				elseif parameter2 == 1 then
+					IEex_WriteDword(eData + 0x1C, parameter1)
+				elseif parameter2 == 2 then
+					IEex_WriteDword(eData + 0x1C, math.floor(skinsRemaining * parameter1 / 100))
+				end
+			end
 		end
 	end)
 end
@@ -11116,8 +11138,12 @@ function IEex_EvaluatePermanentRepeatingEffects(creatureData)
 --]]
 		if bit.band(globalEffectFlags, 0xA) > 0 then
 			if tick % ex_time_slow_speed_divisor ~= 0 or bit.band(globalEffectFlags, 0x8) > 0 then
+				IEex_DS("Searching...")
 				IEex_IterateProjectiles(targetID, -1, function(projectileData)
+
 					local missileIndex = IEex_ReadWord(projectileData + 0x6E, 0x0) + 1
+					IEex_DS(IEex_ReadDword(projectileData))
+
 					local projectileType = IEex_ProjectileType[missileIndex]
 					local projectileHasExploded = false
 					if missileIndex == 40 or missileIndex == 79 then
@@ -20646,7 +20672,7 @@ function MEACTIVA(effectData, creatureData)
 end
 
 function MECIRCLE(effectData, creatureData)
-	IEex_WriteDword(effectData + 0x110, 1)
+--	IEex_WriteDword(effectData + 0x110, 1)
 	if IEex_CheckForEffectRepeat(effectData, creatureData) then return end
 	local targetID = IEex_GetActorIDShare(creatureData)
 	if targetID <= 0 or not IEex_IsSprite(targetID, true) then return end
@@ -26179,6 +26205,22 @@ function MERESCON(originatingEffectData, effectData, creatureData)
 	end
 end
 
+function MEPRTLEV(originatingEffectData, effectData, creatureData)
+	local targetID = IEex_GetActorIDShare(creatureData)
+	local sourceID = IEex_ReadDword(effectData + 0x10C)
+	local o_sourceID = IEex_ReadDword(originatingEffectData + 0x10C)
+	local power = IEex_ReadDword(effectData + 0x14)
+	local minLevel = IEex_ReadDword(originatingEffectData + 0x18)
+	local maxLevel = IEex_ReadDword(originatingEffectData + 0x20)
+	local o_savingthrow = IEex_ReadDword(originatingEffectData + 0x3C)
+	local selfSpellStillWorks = (bit.band(o_savingthrow, 0x10000) > 0)
+	local alliedSpellStillWorks = (bit.band(o_savingthrow, 0x20000) > 0)
+	if power >= minLevel and power <= maxLevel and (not selfSpellStillWorks or targetID ~= sourceID) and (not alliedSpellStillWorks or IEex_CompareActorAllegiances(targetID, sourceID) ~= 1) then
+		return true
+	end
+	return false
+end
+
 IEex_AddScreenEffectsGlobal("MEQUABIL", function(effectData, creatureData)
 	local opcode = IEex_ReadDword(effectData + 0xC)
 	local timing = IEex_ReadDword(effectData + 0x20)
@@ -28363,6 +28405,49 @@ function MEKNOCKF(effectData, creatureData)
 			IEex_WriteDword(creatureData + 0x5C4, objectFlags)
 		end
 	end
+end
+
+function MECHAOCA(effectData, creatureData)
+	IEex_WriteDword(effectData + 0x110, 1)
+	local sourceID = IEex_ReadDword(effectData + 0x10C)
+	local targetID = IEex_GetActorIDShare(creatureData)
+	local savingthrow = IEex_ReadDword(effectData + 0x3C)
+	local minLevel = IEex_ReadDword(effectData + 0x18)
+	local maxLevel = IEex_ReadDword(effectData + 0x1C)
+	if minLevel <= 0 or minLevel > 9 then
+		minLevel = 1
+	end
+	if maxLevel <= 0 or maxLevel > 9 then
+		maxLevel = 9
+	end
+	if minLevel > maxLevel then return end
+	local randomSpellTable = ex_chaos_cast_enemy
+	local cea = IEex_CompareActorAllegiances(sourceID, targetID)
+	if sourceID == targetID then
+		randomSpellTable = ex_chaos_cast_self
+	elseif cea == 1 then
+		randomSpellTable = ex_chaos_cast_ally
+	end
+	local randomSpellLevelTable = randomSpellTable[math.random(minLevel, maxLevel)]
+	local randomSpell = randomSpellLevelTable[math.random(#randomSpellLevelTable)]
+	local casterlvl = IEex_ReadDword(effectData + 0xC4)
+	IEex_ApplyEffectToActor(targetID, {
+["opcode"] = 146,
+["target"] = 2,
+["timing"] = 9,
+["parameter1"] = casterlvl,
+["parameter2"] = 1,
+["savingthrow"] = 0x10000,
+["resource"] = randomSpell,
+["source_x"] = IEex_ReadDword(effectData + 0x7C),
+["source_y"] = IEex_ReadDword(effectData + 0x80),
+["target_x"] = IEex_ReadDword(effectData + 0x84),
+["target_y"] = IEex_ReadDword(effectData + 0x88),
+["parent_resource"] = IEex_ReadLString(effectData + 0x90, 8),
+["casterlvl"] = casterlvl,
+["source_target"] = targetID,
+["source_id"] = sourceID
+})
 end
 
 ex_ailment_contingency_conditions = {["SPPR103"] = 1, ["SPPR108"] = 10, ["SPPR212"] = 11, ["SPPR214"] = 1, ["SPPR307"] = 12, ["SPPR308"] = 13, ["SPPR314"] = 14, ["SPPR316"] = 15, ["SPPR401"] = 1, ["SPPR404"] = 16, ["SPPR426"] = 17, ["SPPR502"] = 1, ["SPPR607"] = 9, ["SPPR725"] = 59, ["USPR753"] = 9, ["USPR754"] = 1, ["SPWI203"] = 18, ["SPWI210"] = 10, ["SPWI219"] = 19, ["SPWI410"] = 12, ["SPWI614"] = 21, }

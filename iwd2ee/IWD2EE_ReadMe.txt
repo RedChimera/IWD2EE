@@ -5,6 +5,8 @@ Installation:
 3. The WeiDu window will pop up. Follow the prompt and WeiDu will install the mod on your game. This can also reinstall or uninstall the mod.
 4. In the IWD2 folder will appear a new program: IWD2EE.exe. Start the game by clicking on it. If you start the game via IWD2.exe, the game will not work right.
 
+If you are using any mods other than IWD2EE, you should also install the IWD2EE mod compatibility patch which comes with IWD2EE. Install the patch after IWD2EE and after all other mods.
+
 Icewind Dale 2: Enhanced Edition is a compilation of tweaks and fixes for Icewind Dale 2, enhancing the game in a variety of ways. Classes, spells, items, creatures, and encounters are made more interesting. IWD2EE changes over 300 spells and over 1,000 items, and it adds over 90 new spells, almost 200 new items, over 30 new feats, and several NPCs that can join the party. The mod fixes many of the big issues with the original Icewind Dale 2: you no longer have to do large amounts of backtracking to complete certain areas, enemies in Heart of Fury Mode are empowered in interesting ways rather than just having lots of HP, and you can revise the experience system so you won't get zero experience for killing enemies late in the game.
 
 The big changes described above are only applied if you install certain components - Class Revisions, Spell Revisions, Item Revisions and Creature Revisions are the biggest ones. But there is also a core component to IWD2EE, which is installed the first time you install any one of IWD2EE's components (even one like the New GUI component that doesn't change gameplay on its own).
@@ -458,13 +460,37 @@ Compatibility Notes:
 
 The Widescreen Mod is NOT COMPATIBLE and WILL CRASH THE GAME if used with IWD2EE. IWD2EE includes a built-in way to set the game's resolution, so you don't need the Widescreen Mod.
 
+--Tweaks Anthology--
+
+Tweaks Anthology has components that are compatible with IWD2EE (if a component doesn't work in IWD2, there won't be an option to install it).
+
+--1 Pixel Productions--
+
+1 Pixel Productions apparently causes frequent crashes when installed with IWD2EE. IWD2EE already includes many of the new weapon animations from 1pp (adding those doesn't require patching the exe, so it's less risky).
+
+--IWD2 NPC--
+
+The IWD2 NPC mod is compatible with IWD2EE.
+
+--Light of Selune--
+
+Light of Selune is compatible with IWD2EE, however it does modify many of the same items that IWD2EE modifies.
+
 --Tactics4IWD2--
 
-Tactics4IWD2 is not compatible with IWD2EE, since IWD2EE already modifies the AI of almost all the enemies in the game.
+Not recommended, as IWD2EE's Creature Revisions already gives signficant boosts to enemies and the AI of spellcasters. This mod has many revised items, spells, and creatures that will overwrite IWD2EE's changes.
+
+--Undead Targos--
+
+Unnecessary as IWD2EE already includes a way to shorten the Targos questline while making the palisade battle more challenging.
+
+--Bonus Merchant for IWD2--
+
+The Bonus Merchant mod is compatible with IWD2EE. It is worth noting though that the mod has anachronisms in it; it references events of Baldur's Gate 2 even though Icewind Dale 2 starts over 50 years before Baldur's Gate 1.
 
 --IWD2-Ease--
 
-Here is a list of the components in IWD2-Ease that says which components are compatible with IWD2EE and which aren't. IWD2-Ease should be installed AFTER IWD2EE, not before!
+Here is a list of the components in IWD2-Ease that says which components are compatible with IWD2EE and which aren't.
 
 Bugfixes: 
 Unnecessary as IWD2EE should already fix these bugs.
@@ -476,7 +502,7 @@ Non-Combat War Chant of Sith:
 Unnecessary as IWD2EE already allows War Chant of Sith outside of combat.
 
 Improved Holy Avenger: 
-Incompatible as IWD2EE already has its own version of the Holy Avenger.
+Unnecessary as IWD2EE already has its own version of the Holy Avenger.
 
 Two-Handed Holy Avenger: 
 Compatible (unlike the previous component, this just patches the Holy Avenger rather than overwriting it).
@@ -509,7 +535,7 @@ Some Heart of Fury Items in Normal Mode:
 Compatible, but this component could potentially be unbalanced.
 
 Stronger Bastard Swords:
-Incompatible, as IWD2EE already improves bastard swords (the stronger bastard swords from the component are also ridiculously overpowered - you can buy a bastard sword in Targos that deals +5d6 acid damage per hit!).
+Unnecessary, as IWD2EE already improves bastard swords (the stronger bastard swords from the component are also ridiculously overpowered - you can buy a bastard sword in Targos that deals +5d6 acid damage per hit!).
 
 All Items Identified:
 Compatible.
@@ -521,13 +547,13 @@ Armor and Shields Provide Damage Resistance:
 Incompatible with IWD2EE's component that also gives armor and shields damage resistance.
 
 Include Forgotten Armor and Shields:
-Incompatible as IWD2EE already adds most of these items to the game (this component is also unbalanced, as it hands you multiple +3 items for free in the prologue!).
+Unnecessary as IWD2EE already adds most of these items to the game (this component is also unbalanced, as it hands you multiple +3 items for free in the prologue!).
 
 Additional Druid Spells:
 Incompatible as this component prevents characters from learning the new spells that were added by IWD2EE. Unnecessary as IWD2EE already gives druids a lot of new spells, including many of the same spells that this component gives them.
 
 Alternate Shapeshifting:
-Incompatible as IWD2EE already revises druid shapeshifting.
+Unnecessary as IWD2EE already revises druid shapeshifting.
 
 Skip Battle Square:
 Unnecessary as IWD2EE already includes a component that greatly reduces the amount of time needed to earn the main Battle Square rewards.

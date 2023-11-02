@@ -18,7 +18,8 @@ ACTION_IF NOT FILE_EXISTS_IN_GAME ~ushfmodp.itm~ BEGIN
 
 	COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
 		READ_BYTE 0x303 theattributes
-		PATCH_IF (theattributes BAND 0x00000001) != 0x00000001 BEGIN
+		READ_BYTE installationflags theinstallationflags
+		PATCH_IF (theattributes BAND 0x00000001) != 0x00000001 AND (theinstallationflags BAND 0x00000001) = 0x00000000 BEGIN
 			TEXT_SPRINT hofitem ~USHFMODP~
 			READ_LONG 0x612 itemslotsoffset
 			READ_SSHORT (itemslotsoffset + 0xE) theslot
@@ -59,6 +60,7 @@ ACTION_IF NOT FILE_EXISTS_IN_GAME ~ushfmodp.itm~ BEGIN
 				END
 			END
 		END
+		UNLESS ~USHOFMODP~
 		BUT_ONLY_IF_IT_CHANGES
 
 	COPY_EXISTING ~CHARBASE.cre~ ~override~ ~USGEOF.cre~ ~override~ ~USREIG.cre~ ~override~ ~USVEIR.cre~ ~override~ ~USEMMA.cre~ ~override~ ~USVREK.cre~ ~override~ ~USVUNA.cre~ ~override~ ~USXHAA.cre~ ~override~ ~USZACK.cre~ ~override~ ~USPAIR.cre~ ~override~ ~USSERS.cre~ ~override~ ~USSIMULA.cre~ ~override~

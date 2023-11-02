@@ -1302,7 +1302,7 @@ The vitriolic sphere also splashes acid in a 5-foot radius around the primary ta
 
 Vitriolic Sphere bypasses spell resistance.~
 @1639    = ~Righteous Wrath of the Faithful~
-@1640    = ~Righteous Wrath of the Faithful 
+@1640    = ~Righteous Wrath of the Faithful
 (Enchantment)
 Level: Clr 5, Pal 4
 Range: Caster
@@ -4126,6 +4126,17 @@ Area of Effect: Allied animals within 20 ft.
 Saving Throw: None
 
 Mass Heal Animal wipes away disease and injury from all animals in the area of effect. It cures blindness, diseases, feeblemind and restores the targets to maximum hit points if they have been injured.~
+@35660     = ~Desecrate~
+@36660     = ~Desecrate
+(Necromancy)
+Level: Clr 6
+Range: Entire area
+Duration: 8 hours
+Casting Time: 9
+Area of Effect: All undead in the area
+Saving Throw: None
+
+This spell imbues the current area with negative energy. For the duration, all undead gain +2 Constitution, get +2 to attack and damage, and count as 3 levels higher for purposes of resisting Turn Undead. In addition, any spell which would animate undead will create twice as many undead creatures when cast in the desecrated area. Desecrate can only be cast by evil characters.~
 @35753     = ~Power Word: Heal~
 @36753     = ~Power Word: Heal
 (Divination)
@@ -4566,6 +4577,19 @@ Area of Effect: Special
 Saving Throw: None
 
 By casting Imbue with Spell Ability, the caster grants another creature the ability to cast one of the caster's spells once. Immediately after casting this spell, the caster must attempt to cast another spell of any level, which must be an abjuration, conjuration or divination spell. Instead of being cast, that spell is stored in the creature on which Imbue with Spell Ability was just cast (consuming one use of the spell). That creature gains a special ability that lets them cast the spell once. If unused, that ability disappears after 8 hours.~
+@37457     = ~Chaos Cast~
+@38457     = ~Chaos Cast
+(Universal)
+Level: Sor/Wiz 4
+Range: Sight of Caster
+Duration: Special
+Casting Time: 1
+Area of Effect: Special
+Saving Throw: Special
+
+This spell casts a random wizard spell on the target creature, which could be a spell of any level between 1 and 8. The nature of the spell depends on the target. If the target is an enemy, they will receive a harmful spell, but if the target is an ally, they will receive a beneficial spell. Targeting restrictions are obeyed (a spell that only affects the caster will not be rolled unless the target is the caster).
+
+The main advantage of Chaos Cast is that the random spell is more likely to be higher than level 4 than lower (since there are more levels above level 4 than below). The disadvantage is that the spell might not be useful in the current situation.~
 @37551     = ~Steal Spells~
 @38551     = ~Steal Spells
 (Transmutation)

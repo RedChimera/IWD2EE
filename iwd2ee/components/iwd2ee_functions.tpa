@@ -55,6 +55,7 @@ OUTER_PATCH creature_constants BEGIN
 	teamscript=0x1ac
 	specialscript1=0x1b4
 	enchantmentlevel=0x1bc
+	installationflags=0x1be
 	feats1=0x1c0
 	feats2=0x1c4
 	feats3=0x1c8
@@ -148,6 +149,19 @@ OUTER_PATCH creature_constants BEGIN
 	actorsize=0x110
 	regionsize=0xc4
 	doorsize=0xc8
+END
+
+OUTER_PATCH us_armor_damage_resistance_constants BEGIN
+	armorbonus=1
+	shieldbonus=3
+
+	modifyac=0
+	modifyslashingresistance=86
+	modifybludgeoningresistance=87
+	modifypiercingresistance=88
+	modifymissileresistance=89
+
+	effectsize=0x30
 END
 
 DEFINE_PATCH_FUNCTION ~ALTER_AREA_ACTOR_IWD2~

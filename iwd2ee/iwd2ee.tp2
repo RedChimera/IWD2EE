@@ -14,6 +14,39 @@ ALWAYS
 	INCLUDE ~%mod_folder%/components/iwd2ee_functions.tpa~ //Functions that may be used in multiple components
 
 	ACTION_IF !FILE_EXISTS_IN_GAME ~usInitialModifications.txt~ BEGIN
+
+		OUTER_TEXT_SPRINT directoryname ~~
+		
+		SILENT
+		COPY ~./icewind2.ini~ ~./icewind2.ini~
+			REPLACE_EVALUATE
+			~\\\([^%WNL%%LNL%%MNL%\\]*\)\([%WNL%%LNL%%MNL%%TAB% ]*\)CD1:=~
+			BEGIN
+			TEXT_SPRINT directoryname ~%MATCH1%~
+			END
+			~\%MATCH1%%MATCH2%CD1:=~
+			IF_EXISTS
+			BUT_ONLY_IF_IT_CHANGES
+		VERBOSE
+		
+		ACTION_IF NOT ~%directoryname%~ STRING_EQUAL_CASE  ~~ BEGIN
+		
+			OUTER_SET correctdirectory = 0
+		
+			SILENT
+			COPY ~../%directoryname%/icewind2.ini~ ~../%directoryname%/icewind2.ini~
+				correctdirectory = 1
+				IF_EXISTS
+				BUT_ONLY_IF_IT_CHANGES
+			VERBOSE
+
+			ACTION_IF correctdirectory = 0 BEGIN
+				ABORT @98
+			END
+		
+		END
+
+
 		INCLUDE ~%mod_folder%/components/initial_modifications.tpa~
 	END ELSE ACTION_IF (STRING_LENGTH ~%installedacomponent%~) = 4 AND NOT FILE_CONTAINS_EVALUATED (~WeiDU.log~ ~~~~~[%WNL%%LNL%%MNL%]~IWD2EE.IWD2EE.TP2~ ~~~~~) BEGIN
 		ABORT @100
@@ -24,6 +57,8 @@ ALWAYS
 	LAM	IWD2_INDEX_LISTS
 	VERBOSE
 END
+
+README ~iwd2ee/IWD2EE_ReadMe.txt~
 
 AUTO_TRA ~iwd2ee/tra/%s~
 

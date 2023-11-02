@@ -7200,8 +7200,9 @@ COPY_EXISTING_REGEXP ~00S.*\.cre~ ~override~
 ACTION_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~0~ BEGIN
 
 COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
+	READ_BYTE installationflags theinstallationflags
 	READ_SBYTE luck theluck
-	PATCH_IF theluck >= 0 BEGIN
+	PATCH_IF theluck >= 0 AND (theinstallationflags BAND 0x00000001) != 0x00000001 BEGIN
 		READ_BYTE alignment thealignment
 		READ_BYTE levelbarbarian barbarianlevel
 		READ_BYTE leveldruid druidlevel
@@ -7444,12 +7445,8 @@ COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
 			END
 		END
 	END
+	UNLESS ~USA[HB]~
 	BUT_ONLY_IF_IT_CHANGES
-
-COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
-	PATCH_IF NOT (~%SOURCE_RES%~ STRING_EQUAL_CASE ~CHARBASE~) BEGIN
-		LPF IWD2_ADD_CRE_EFFECT INT_VAR opcode=500 target=1 timing=9 STR_VAR resource= EVAL ~MEAPRBON~ effsource= EVAL ~USAPRBON~ END
-	END
 
 COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
 	READ_BYTE attacksperround theattacksperround
@@ -7749,6 +7746,7 @@ COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
 	END
 	WRITE_LONG feats1 thefeats1
 	WRITE_LONG feats2 thefeats2
+	BUT_ONLY_IF_IT_CHANGES
 
 ACTION_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~0~ BEGIN
 
@@ -7758,6 +7756,24 @@ ACTION_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~0~ BEGIN
 		PATCH_IF (thefeats1 BAND 0x00002000) = 0x00002000 AND themonklevel >= 2 BEGIN
 			LPF IWD2_ADD_CRE_EFFECT INT_VAR opcode=502 target=2 timing=9 parameter1=RESOLVE_STR_REF(@924) parameter2=0x680 savingthrow=0xA80000 special=7 STR_VAR resource=~MEDEFLEC~ parent_resource=~FE_13_1~ END
 		END
+		READ_BYTE levelfighter thefighterlevel
+		PATCH_IF thefighterlevel >= 8 BEGIN
+			newproficiencyrank = 4
+			PATCH_IF thefighterlevel >= 12 BEGIN
+				newproficiencyrank = 5
+			END
+			FOR (i = 0x1D8; i <= 0x1E3; ++i) BEGIN
+				READ_BYTE i theproficiencyrank
+				PATCH_IF theproficiencyrank = 3 BEGIN
+					WRITE_BYTE i newproficiencyrank
+				END
+			END
+			READ_BYTE 0x1F1 theproficiencyrank
+			PATCH_IF theproficiencyrank = 3 BEGIN
+				WRITE_BYTE 0x1F1 newproficiencyrank
+			END
+		END
+		BUT_ONLY_IF_IT_CHANGES
 
 END
 //Add silver weapons to the game if Item Revisions is not installed

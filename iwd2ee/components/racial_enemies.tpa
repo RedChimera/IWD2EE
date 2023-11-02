@@ -3,7 +3,6 @@ COPY ~%mod_folder%/eff/eff_racial_enemies~ ~override~
 COPY ~%mod_folder%/spl/spl_racial_enemies~ ~override~
 
 //NOTES
-//Need to traify
 
 // This component works by changing creature types to the types targeted by vanilla racial enemies. You can't create a new "Arachnid" racial enemy, but you can patch spiders to be coded as ettercaps and then change the string for the racial enemy choice. Note that these commands can't be copied out of order, or else one command might overwrite another and place a creature type in the wrong category.
 
@@ -11,46 +10,47 @@ COPY ~%mod_folder%/spl/spl_racial_enemies~ ~override~
 
 COPY_EXISTING_REGEXP ~.+\.cre~ ~override~
     READ_BYTE race therace
-    PATCH_IF therace = 107 OR therace = 116 BEGIN // turn arachnids into driders
-        WRITE_BYTE race 182
-    END ELSE PATCH_IF therace = 113 OR therace = 179 OR therace = 189 BEGIN // turn giants into giants
-        WRITE_BYTE race 153
-    END ELSE PATCH_IF therace = 111 OR therace = 160 OR therace = 180 BEGIN // turn goblinoids and orcs into goblins
-        WRITE_BYTE race 155
-    END ELSE PATCH_IF therace = 101 OR therace = 104 OR therace = 150 OR therace = 151 OR therace = 181 BEGIN // turn bugs into bugbears
-        WRITE_BYTE race 180
-    END ELSE PATCH_IF therace = 106 OR therace = 186 OR therace = 192 OR therace = 193 BEGIN // turn aberrations into harpies
-        WRITE_BYTE race 174
-    END ELSE PATCH_IF therace = 164 BEGIN // turn demons and devils into hook horrors
-        WRITE_BYTE race 181
-    END ELSE PATCH_IF therace = 156 OR therace = 215 BEGIN // turn constructs into orcs
-        WRITE_BYTE race 160
-    END ELSE PATCH_IF therace = 152 OR therace = 175 BEGIN // turn elementals into salamanders
-        WRITE_BYTE race 161
-    END ELSE PATCH_IF therace = 1 BEGIN // turn humans into shapeshifters
-        WRITE_BYTE race 191
-    END ELSE PATCH_IF therace = 171 BEGIN // turn snow trolls into trolls
-        WRITE_BYTE race 165
-    END ELSE PATCH_IF therace = 157 BEGIN // turn lizardmen into yuan-ti
-        WRITE_BYTE race 168
-    END ELSE PATCH_IF therace = 166 OR therace = 177 OR therace = 184 BEGIN // turn underdark aberrations into lizard men
-        WRITE_BYTE race 157
-    END ELSE PATCH_IF therace = 108 OR therace = 115 BEGIN // turn ghouls and skeletons into undead
-        WRITE_BYTE race 167
-    END ELSE PATCH_IF therace = 154 OR therace = 187 OR therace = 188 BEGIN // turn dragons into wyverns
-        WRITE_BYTE race 118
-    END ELSE PATCH_IF therace = 119 OR therace = 159 OR therace = 174 BEGIN // turn amorphous beings into umber hulks
-        WRITE_BYTE race 166
-    END
-	BUT_ONLY_IF_IT_CHANGES
-
-// turn animals into ogres. Note that animal is not a race; it's a general type.
-
-COPY_EXISTING_REGEXP ~.+\.cre~ ~override~
     READ_BYTE general thegeneral
-    PATCH_IF thegeneral = 2 BEGIN
-        WRITE_BYTE race 113
-    END
+	READ_BYTE installationflags theinstallationflags
+	PATCH_IF (theinstallationflags BAND 0x00000003) = 0x00000000 BEGIN
+		theinstallationflags|=0x2
+		WRITE_BYTE installationflags theinstallationflags
+	    PATCH_IF therace = 107 OR therace = 116 BEGIN // turn arachnids into driders
+	        WRITE_BYTE race 182
+	    END ELSE PATCH_IF therace = 113 OR therace = 179 OR therace = 189 BEGIN // turn giants into giants
+	        WRITE_BYTE race 153
+	    END ELSE PATCH_IF therace = 111 OR therace = 160 OR therace = 180 BEGIN // turn goblinoids and orcs into goblins
+	        WRITE_BYTE race 155
+	    END ELSE PATCH_IF therace = 101 OR therace = 104 OR therace = 150 OR therace = 151 OR therace = 181 BEGIN // turn bugs into bugbears
+	        WRITE_BYTE race 180
+	    END ELSE PATCH_IF therace = 106 OR therace = 186 OR therace = 192 OR therace = 193 BEGIN // turn aberrations into harpies
+	        WRITE_BYTE race 174
+	    END ELSE PATCH_IF therace = 164 BEGIN // turn demons and devils into hook horrors
+	        WRITE_BYTE race 181
+	    END ELSE PATCH_IF therace = 156 OR therace = 215 BEGIN // turn constructs into orcs
+	        WRITE_BYTE race 160
+	    END ELSE PATCH_IF therace = 152 OR therace = 175 BEGIN // turn elementals into salamanders
+	        WRITE_BYTE race 161
+	    END ELSE PATCH_IF therace = 1 BEGIN // turn humans into shapeshifters
+	        WRITE_BYTE race 191
+	    END ELSE PATCH_IF therace = 171 BEGIN // turn snow trolls into trolls
+	        WRITE_BYTE race 165
+	    END ELSE PATCH_IF therace = 157 BEGIN // turn lizardmen into yuan-ti
+	        WRITE_BYTE race 168
+	    END ELSE PATCH_IF therace = 166 OR therace = 177 OR therace = 184 BEGIN // turn underdark aberrations into lizard men
+	        WRITE_BYTE race 157
+	    END ELSE PATCH_IF therace = 108 OR therace = 115 BEGIN // turn ghouls and skeletons into undead
+	        WRITE_BYTE race 167
+	    END ELSE PATCH_IF therace = 154 OR therace = 187 OR therace = 188 BEGIN // turn dragons into wyverns
+	        WRITE_BYTE race 118
+	    END ELSE PATCH_IF therace = 119 OR therace = 159 OR therace = 174 BEGIN // turn amorphous beings into umber hulks
+	        WRITE_BYTE race 166
+	    END
+// turn animals into ogres. Note that animal is not a race; it's a general type.
+	    PATCH_IF thegeneral = 2 BEGIN
+       		WRITE_BYTE race 113
+   		END
+	END
 	BUT_ONLY_IF_IT_CHANGES
 
 COPY_EXISTING ~IEex_WEIDU.lua~ ~override~
