@@ -11,10 +11,10 @@ COPY ~%mod_folder%/spl/spl_racial_enemies~ ~override~
 COPY_EXISTING_REGEXP ~.+\.cre~ ~override~
     READ_BYTE race therace
     READ_BYTE general thegeneral
-	READ_BYTE installationflags theinstallationflags
-	PATCH_IF (theinstallationflags BAND 0x00000003) = 0x00000000 BEGIN
-		theinstallationflags|=0x2
-		WRITE_BYTE installationflags theinstallationflags
+	READ_BYTE attributes theattributes
+	PATCH_IF (theattributes BAND 0x00000030) = 0x00000000 BEGIN
+		theattributes|=0x20
+		WRITE_BYTE attributes theattributes
 	    PATCH_IF therace = 107 OR therace = 116 BEGIN // turn arachnids into driders
 	        WRITE_BYTE race 182
 	    END ELSE PATCH_IF therace = 113 OR therace = 179 OR therace = 189 BEGIN // turn giants into giants

@@ -7200,9 +7200,9 @@ COPY_EXISTING_REGEXP ~00S.*\.cre~ ~override~
 ACTION_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~0~ BEGIN
 
 COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
-	READ_BYTE installationflags theinstallationflags
+	READ_BYTE attributes theattributes
 	READ_SBYTE luck theluck
-	PATCH_IF theluck >= 0 AND (theinstallationflags BAND 0x00000001) != 0x00000001 BEGIN
+	PATCH_IF theluck >= 0 AND (theattributes BAND 0x00000010) != 0x00000010 BEGIN
 		READ_BYTE alignment thealignment
 		READ_BYTE levelbarbarian barbarianlevel
 		READ_BYTE leveldruid druidlevel

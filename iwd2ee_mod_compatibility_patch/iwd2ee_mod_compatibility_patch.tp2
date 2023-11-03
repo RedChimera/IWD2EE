@@ -1620,9 +1620,9 @@ END
 ACTION_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~0~ AND MOD_IS_INSTALLED ~iwd2ee.tp2~ ~5~ BEGIN
 
 COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
-	READ_BYTE installationflags theinstallationflags
+	READ_BYTE attributes theattributes
 	READ_SBYTE luck theluck
-	PATCH_IF theluck >= 0 AND (theinstallationflags BAND 0x00000001) != 0x00000001 BEGIN
+	PATCH_IF theluck >= 0 AND (theattributes BAND 0x00000010) != 0x00000010 BEGIN
 		READ_BYTE alignment thealignment
 		READ_BYTE levelbarbarian barbarianlevel
 		READ_BYTE leveldruid druidlevel
@@ -2214,10 +2214,10 @@ ACTION_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~23~ BEGIN
 COPY_EXISTING_REGEXP ~.+\.cre~ ~override~
     READ_BYTE race therace
     READ_BYTE general thegeneral
-	READ_BYTE installationflags theinstallationflags
-	PATCH_IF (theinstallationflags BAND 0x00000003) = 0x00000000 BEGIN
-		theinstallationflags|=0x2
-		WRITE_BYTE installationflags theinstallationflags
+	READ_BYTE attributes theattributes
+	PATCH_IF (theattributes BAND 0x00000030) = 0x00000000 BEGIN
+		theattributes|=0x20
+		WRITE_BYTE attributes theattributes
 	    PATCH_IF therace = 107 OR therace = 116 BEGIN // turn arachnids into driders
 	        WRITE_BYTE race 182
 	    END ELSE PATCH_IF therace = 113 OR therace = 179 OR therace = 189 BEGIN // turn giants into giants
@@ -2313,8 +2313,7 @@ ACTION_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~46~ OR MOD_IS_INSTALLED ~iwd2ee.tp2~ ~4
 
 	COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
 		READ_BYTE 0x303 theattributes
-		READ_BYTE installationflags theinstallationflags
-		PATCH_IF (theattributes BAND 0x00000001) != 0x00000001 AND (theinstallationflags BAND 0x00000001) = 0x00000000 BEGIN
+		PATCH_IF (theattributes BAND 0x00000011) = 0x00000000 BEGIN
 			READ_SSHORT 0x26 themaxhp
 			PATCH_IF themaxhp <= 60 BEGIN
 				TEXT_SPRINT hofitem ~USHFMODA~
@@ -2380,8 +2379,7 @@ ACTION_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~47~ BEGIN
 
 	COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
 		READ_BYTE 0x303 theattributes
-		READ_BYTE installationflags theinstallationflags
-		PATCH_IF (theattributes BAND 0x00000001) != 0x00000001 AND (theinstallationflags BAND 0x00000001) = 0x00000000 BEGIN
+		PATCH_IF (theattributes BAND 0x00000011) = 0x00000000 BEGIN
 			TEXT_SPRINT hofitem ~USHFMODP~
 			READ_LONG 0x612 itemslotsoffset
 			READ_SSHORT (itemslotsoffset + 0xE) theslot

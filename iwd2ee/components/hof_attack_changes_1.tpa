@@ -18,8 +18,7 @@ ACTION_IF NOT FILE_EXISTS_IN_GAME ~ushfmodp.itm~ BEGIN
 
 	COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
 		READ_BYTE 0x303 theattributes
-		READ_BYTE installationflags theinstallationflags
-		PATCH_IF (theattributes BAND 0x00000001) != 0x00000001 AND (theinstallationflags BAND 0x00000001) = 0x00000000 BEGIN
+		PATCH_IF (theattributes BAND 0x00000011) = 0x00000000 BEGIN
 			TEXT_SPRINT hofitem ~USHFMODP~
 			READ_LONG 0x612 itemslotsoffset
 			READ_SSHORT (itemslotsoffset + 0xE) theslot
