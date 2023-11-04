@@ -7754,7 +7754,7 @@ ACTION_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~0~ BEGIN
 		READ_BYTE levelmonk themonklevel
 		READ_LONG feats1 thefeats1
 		PATCH_IF (thefeats1 BAND 0x00002000) = 0x00002000 AND themonklevel >= 2 BEGIN
-			LPF IWD2_ADD_CRE_EFFECT INT_VAR opcode=502 target=2 timing=9 parameter1=RESOLVE_STR_REF(@924) parameter2=0x680 savingthrow=0xA80000 special=7 STR_VAR resource=~MEDEFLEC~ parent_resource=~FE_13_1~ END
+			LPF IWD2_ADD_CRE_EFFECT INT_VAR opcode=502 target=2 timing=9 parameter1=RESOLVE_STR_REF(@921) parameter2=0x680 savingthrow=0xA80000 special=7 STR_VAR resource=~MEDEFLEC~ parent_resource=~FE_13_1~ END
 		END
 		READ_BYTE levelfighter thefighterlevel
 		PATCH_IF thefighterlevel >= 8 BEGIN

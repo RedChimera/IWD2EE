@@ -738,7 +738,7 @@ BUT_ONLY
 COPY_EXISTING ~help03.2da~ ~override~
 	black_raven_order_name = RESOLVE_STR_REF(@566)
 	black_raven_order_description = RESOLVE_STR_REF(@567)
-	REPLACE_TEXTUALLY ~15\([ %TAB%]+[0-9]+[ %TAB%]+[0-9]+\)~ ~16\1~
+	REPLACE_TEXTUALLY ~15\([ %TAB%]+[0-9]+[ %TAB%]+[0-9]+\)~ ~16\1~ 
 	REPLACE_TEXTUALLY ~14\([ %TAB%]+[0-9]+[ %TAB%]+[0-9]+\)~ ~15\1~
 	REPLACE_TEXTUALLY ~13\([ %TAB%]+[0-9]+[ %TAB%]+[0-9]+\)~ ~13	%black_raven_order_name%	%black_raven_order_description%
 14\1~

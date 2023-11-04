@@ -3905,7 +3905,7 @@ Damage Type: Piercing
 Special:
   Move Silently: +6
   Hide: +6
-  Whenever the wielder attacks a creature from stealth or invisibility with this weapon, the attack deals bonus piercing damage equal to the wielder's Sneak Attack damage (even if the hit was already a sneak attack, this extra damage is still added). Partial invisibility is not sufficient.
+  Sneak attacks with this weapon deal an extra 3d6 damage
 Weight: 3 lb.
 Feat Requirement:  Simple Weapon, Small Blade
 Type:  One-handed~
@@ -3923,7 +3923,7 @@ Damage Type: Piercing
 Special:
   Move Silently: +12
   Hide: +12
-  Whenever the wielder attacks a creature from stealth or invisibility with this weapon, the attack deals bonus piercing damage equal to the wielder's Sneak Attack damage (even if the hit was already a sneak attack, this extra damage is still added). Partial invisibility is not sufficient.
+  Sneak attacks with this weapon deal an extra 5d6 damage
 Weight: 3 lb.
 Feat Requirement:  Simple Weapon, Small Blade
 Type:  One-handed~
@@ -4913,7 +4913,7 @@ Enchantment:  +1
 Damage Type:  Slashing
 Special: 
   Counts as a silver weapon
-  Each hit has a 25% chance to create a Goodberry in the wielder's third quick item slot
+  Each hit has a 10% chance to create a Goodberry in the wielder's third quick item slot
 Weight:  4 lb.
 Feat Requirement:  Martial Weapon, Large Sword
 Type:  One-handed~
@@ -4928,7 +4928,7 @@ Enchantment:  +3
 Damage Type:  Slashing
 Special: 
   Counts as a silver weapon
-  Each hit has a 50% chance to create a Goodberry in the wielder's third quick item slot
+  Each hit has a 20% chance to create a Goodberry in the wielder's third quick item slot
 Weight:  4 lb.
 Feat Requirement:  Martial Weapon, Large Sword
 Type:  One-handed~
@@ -9530,7 +9530,7 @@ STATISTICS:
 Damage: +6 (missile)
 Attack Bonus: +2
 Special:
-  If the wielder has weapon specialization in crossbows, their proficiency attack and damage bonuses with Geloise are doubled.
+  The wielder's crossbow proficiency bonuses to attack and damage are doubled.
 Weight: 10 lb.
 Feat Requirement:  Simple Weapon, Crossbow
 Type:  Two-handed~
@@ -9540,9 +9540,9 @@ Type:  Two-handed~
 STATISTICS:
 
 Damage: +12 (missile)
-Attack Bonus: +5 
+Attack Bonus: +5
 Special:
-  If the wielder has weapon specialization in crossbows, their proficiency attack and damage bonuses with Geloise are tripled.
+  The wielder's crossbow proficiency bonuses to attack and damage are tripled.
 Weight: 10 lb.
 Feat Requirement:  Simple Weapon, Crossbow
 Type:  Two-handed~
@@ -10897,7 +10897,7 @@ STATISTICS:
 Poison: Target takes 4 damage per second for 30 seconds (no save)
 Range:  20 ft.
 Area:  1 creature
-Duration: 24 hours~
+Duration: 30 seconds~
 @12195    = ~Cursed Scroll of Cold Vulnerability~
 @12196    = ~This scroll appears to be a Protection from Cold scroll, but it is actually a cursed scroll. When used, it will grant vulnerability to cold, causing the target to take additional damage from cold attacks. The scroll could potentially be used to curse a monster.
 
@@ -11978,7 +11978,6 @@ Armor Check Penalty:  -1
 Arcane Spell Failure:  15%
 Special:
   Speed: 1 additional attack per round
-  Limitless Speed: The wearer is not capped at five attacks per round
 Weight: 4 lb.~
 @12495    = ~Leather Armor of Epic Avoidance +6~
 @12496    = ~At first glance this appears to be an ordinary suit of leather armor, a closer inspection reveals subtle clues of various arcane enhancements. The rivets holding the various pieces together shine brightly as if polished. The leather pieces are soft and supple to the touch, but instantly become rigid when struck with a heavy blow. And when worn, the creaking and stretching noises normally associated with such armors are mysteriously absent.

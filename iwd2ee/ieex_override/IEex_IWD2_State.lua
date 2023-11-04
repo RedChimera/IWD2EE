@@ -9346,8 +9346,8 @@ function MEWHIRLA(effectData, creatureData)
 						else
 							local attackBonus = IEex_GetActorBaseAttackBonus(sourceID) + IEex_GetActorStat(sourceID, 7) + IEex_ReadSignedWord(offset + 0x14, 0x0) - IEex_ReadSignedWord(effectData + 0x44, 0x0) - currentAttackPenalty
 							if proficiencyFeat > 0 then
-								attackBonus = attackBonus + tonumber(IEex_2DAGetAtStrings("WSPECIAL", "HIT", tostring(IEex_ReadByte(sourceData + ex_feat_id_offset[proficiencyFeat], 0x0))))
---								attackBonus = attackBonus + ex_proficiency_attack[IEex_ReadByte(sourceData + ex_feat_id_offset[proficiencyFeat], 0x0)]
+--								attackBonus = attackBonus + tonumber(IEex_2DAGetAtStrings("WSPECIAL", "HIT", tostring(IEex_ReadByte(sourceData + ex_feat_id_offset[proficiencyFeat], 0x0))))
+								attackBonus = attackBonus + ex_proficiency_attack[IEex_ReadByte(sourceData + ex_feat_id_offset[proficiencyFeat], 0x0)]
 							end
 							if IEex_ReadByte(sourceData + 0x24, 0x0) >= 200 then
 								attackBonus = attackBonus + ex_difficulty_attack_bonus[IEex_GetGameDifficulty()]
@@ -27350,9 +27350,22 @@ function MEPICKP2(effectData, creatureData)
 	if atLeastOneItem then
 		IEex_DisplayString("Possible items:")
 	end
+	local states = bit.bor(IEex_ReadDword(creatureData + 0x5BC), IEex_ReadDword(creatureData + 0x920))
+	local successDifficultyAdjust = 0
+	for state, stateV in pairs(ex_pick_pocket_state_difficulty_adjust) do
+		if bit.band(states, state) ~= 0 and successDifficultyAdjust > stateV then
+			successDifficultyAdjust = stateV
+		end
+	end
+	local stealthDifficultyAdjust = 0
+	for state, stateV in pairs(ex_pick_pocket_state_stealth_difficulty_adjust) do
+		if bit.band(states, state) ~= 0 and stealthDifficultyAdjust > stateV then
+			stealthDifficultyAdjust = stateV
+		end
+	end
 	for k, v in pairs(possibleItemList) do
-		local successChance = 100 - ((19 + ex_pick_pocket_slot_difficulty[k] - pickpocketSkill) * 5)
-		local stealthChance = 100 - ((9 + detectionSkill + ex_pick_pocket_slot_stealth_difficulty[k] - pickpocketSkill) * 5)
+		local successChance = 100 - ((19 + ex_pick_pocket_slot_difficulty[k] - pickpocketSkill + successDifficultyAdjust) * 5)
+		local stealthChance = 100 - ((9 + detectionSkill + ex_pick_pocket_slot_stealth_difficulty[k] - pickpocketSkill + stealthDifficultyAdjust) * 5)
 		if k >= 43 and math.floor((k - 43) / 2) == currentWeaponSet then
 			successChance = successChance - 50
 			stealthChance = stealthChance - 100
@@ -27402,8 +27415,8 @@ function MEPICKP2(effectData, creatureData)
 			IEex_DisplayString(IEex_FetchString(v[6]) .. " - Success chance: " .. v[7] .. "%, Stealth chance: " .. v[8] .. "%")
 		end
 	end
-	local pickpocketRoll = pickpocketSkill + math.random(20)
-	local detectionRoll = pickpocketSkill + math.random(20)
+	local pickpocketRoll = pickpocketSkill - successDifficultyAdjust + math.random(20)
+	local detectionRoll = pickpocketSkill - stealthDifficultyAdjust + math.random(20)
 	local isSuccess = false
 	local isUndetected = false
 	if slotToSteal >= 43 and math.floor((slotToSteal - 43) / 2) == currentWeaponSet then

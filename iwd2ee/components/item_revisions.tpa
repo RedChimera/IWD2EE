@@ -5629,7 +5629,7 @@ COPY_EXISTING ~50NYM2.sto~ ~override~ //Nym store
 	ADD_STORE_ITEM ~00DAGG93~ AFTER ~00ROBE03~ #1 #1 #1 ~IDENTIFIED~ #1 //Dagger of Speed +1
 	ADD_STORE_ITEM ~USBOOT42~ AFTER ~00BOOT03~ #1 #1 #1 ~IDENTIFIED~ #1 //Gargoyle Boots
 	ADD_STORE_ITEM ~00RTHF57~ AFTER ~00RTHF33~ #1 #1 #1 ~IDENTIFIED~ #1 //Geloise
-	ADD_STORE_ITEM ~00RTHF60~ AFTER ~00RTHF57~ #1 #1 #1 ~IDENTIFIED~ #1 //Rogue's Cowl
+	ADD_STORE_ITEM ~USRTHF60~ AFTER ~00RTHF57~ #1 #1 #1 ~IDENTIFIED~ #1 //Rogue's Cowl
 
 COPY_EXISTING ~00BASHS3.sto~ ~override~ //Avarine Decanter genie store
 	WRITE_LONG 0x14 155 //Buying stuff from him costs less money, though his goods are still overpriced
