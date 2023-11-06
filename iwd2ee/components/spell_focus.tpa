@@ -1,39 +1,21 @@
 //NOTES
-//
+// approx 20 seconds is ALWAYS and setup shenanigans before beginning this code
+// v3.2.0:  24.69 seconds
+// revised: 22.37 seconds
 
 // this reads in spell schools and translates them. Divination spells become necromancy, conjuration becomes evocation, abjuration becomes transmutation, and illusion becomes enchantment. This does not affect which spells a specialist mage can learn; that's handled via the edits to scrolls.
 
-COPY_EXISTING_REGEXP ~.*\.spl~ ~override~
-
-READ_BYTE "0x25" "spellschool"
-
-WRITE_SHORT 0x25 7
-
-IF_EVAL ("%spellschool%" = "0x3")
-
-COPY_EXISTING_REGEXP ~.*\.spl~ ~override~
-
-READ_BYTE "0x25" "spellschool"
-
-WRITE_SHORT 0x25 6
-
-IF_EVAL ("%spellschool%" = "0x2")
-
-COPY_EXISTING_REGEXP ~.*\.spl~ ~override~
-
-READ_BYTE "0x25" "spellschool"
-
-WRITE_SHORT 0x25 4
-
-IF_EVAL ("%spellschool%" = "0x5")
-
-COPY_EXISTING_REGEXP ~.*\.spl~ ~override~
-
-READ_BYTE "0x25" "spellschool"
-
-WRITE_SHORT 0x25 8
-
-IF_EVAL ("%spellschool%" = "0x1")
+COPY_EXISTING_REGEXP ~^.+\.spl$~ ~override~
+  READ_BYTE 0x25 spellschool
+  PATCH_MATCH spellschool WITH
+    1 BEGIN SET spellschool = 8 END
+    2 BEGIN SET spellschool = 6 END
+    3 BEGIN SET spellschool = 7 END
+    5 BEGIN SET spellschool = 4 END
+    DEFAULT // don't change other values
+  END  
+  WRITE_BYTE 0x25 spellschool
+  BUT_ONLY  
 
 // new names for Spell Focus feats
 
