@@ -1,4 +1,7 @@
 //NOTES
+// approx 20 seconds is ALWAYS and setup shenanigans before beginning this code
+// v3.2.0:  39.57 seconds
+// revised: 26.43 seconds
 
 COPY_EXISTING_REGEXP ~^.+\.cre$~ ~override~
   READ_BYTE 0x8a totallevel
