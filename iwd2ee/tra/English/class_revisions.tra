@@ -142,7 +142,7 @@ By using this ability, the priest can cause one or more undead creatures within 
 The druid shapeshifts into a winter wolf. While in winter wolf form, the Druid can is immune to cold and can attack once per round with the winter wolf's frost breath, which deals 4d4 cold damage (Reflex DC 10 for half). Every 5 levels thereafter, the breath damage increases by 2d4 and the save DC increases by 5.~
 @228    = ~Wild Shape: Polar Bear
 
-The druid shapeshifts into a polar bear. While in polar bear form, the Druid gains an additional attack per round compared to his or her natural form. Every 3 levels thereafter, the polar bear form gains +1 to Strength, Dexterity and Constitution, and its attack damage increases.While in polar bear form, the Druid gains an additional attack per round compared to his or her natural form. Every 3 levels thereafter, the polar bear form gains +1 to Strength, Dexterity and Constitution, and its attack damage increases.~
+The druid shapeshifts into a polar bear. While in polar bear form, the Druid gains an additional attack per round compared to his or her natural form. Every 3 levels thereafter, the polar bear form gains +1 to Strength, Dexterity and Constitution, and its attack damage increases.~
 @229    = ~Wild Shape: Giant Viper
 
 The druid shapeshifts into a giant viper. While in giant viper form, the Druid's attacks poison the target, dealing 2 damage per second for 6 seconds (Fortitude DC 15). Every 3 levels thereafter, the giant viper form gains +1 to Strength, Dexterity and Constitution, +1 AC, and the save DC against its poison increases by 3.~
@@ -1528,7 +1528,7 @@ Special: Barbarians, fighters, paladins, and rangers are proficient with all mar
 
 You understand how to use crossbows.
 
-Benefit: You make attack rolls with simple weapons normally. Two ranks in this feat is Weapon Focus, which grants +2 to hit and damage. Three ranks in the feat is Weapon Specialization, which grants +5 to hit and damage. Only characters with four or more levels of Fighter may take Weapon Specialization.
+Benefit: You make attack rolls with the weapon normally. Two ranks in this feat is Weapon Focus, which grants +1 to attack. A 4th-level Fighter may take a third rank in the feat for Weapon Specialization, which grants +2 to damage. An 8th-level Fighter may take a fourth rank in the feat for Greater Weapon Focus, which grants another +1 to attack. A 12th-level Fighter may take a fifth rank in the feat for Greater Weapon Specialization, which grants another +2 to damage.
 
 Normal: A character who uses a weapon without being proficient with it suffers a -4 penalty on attack rolls.
 ~

@@ -7748,6 +7748,110 @@ COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
 	WRITE_LONG feats2 thefeats2
 	BUT_ONLY_IF_IT_CHANGES
 
+COPY_EXISTING ~30SPIWO.cre~ ~override~ ~30SPIWOD.cre~ ~override~
+	READ_LONG 0x61A thenumitems
+	READ_LONG 0x616 theitemoffset
+	FOR (i = 0; i < thenumitems; ++i) BEGIN
+		READ_ASCII (theitemoffset + i * 0x14) theitemres
+		PATCH_IF ~%theitemres%~ STRING_EQUAL_CASE ~30WSPIDR~ BEGIN
+			READ_LONG (theitemoffset + i * 0x14 + 0x10) theslotflags
+			theslotflags|=0x2
+			WRITE_LONG (theitemoffset + i * 0x14 + 0x10) theslotflags
+		END
+	END
+	IF ~30WSPIDR~
+
+COPY_EXISTING ~30SPIWOQ.cre~ ~override~
+	READ_LONG 0x61A thenumitems
+	READ_LONG 0x616 theitemoffset
+	FOR (i = 0; i < thenumitems; ++i) BEGIN
+		READ_ASCII (theitemoffset + i * 0x14) theitemres
+		PATCH_IF ~%theitemres%~ STRING_EQUAL_CASE ~30WSPIDQ~ BEGIN
+			READ_LONG (theitemoffset + i * 0x14 + 0x10) theslotflags
+			theslotflags|=0x2
+			WRITE_LONG (theitemoffset + i * 0x14 + 0x10) theslotflags
+		END
+	END
+	IF ~30WSPIDQ~
+
+COPY_EXISTING_REGEXP ~30WWLF\.cre~ ~override~ ~40RWOLFW\.cre~ ~override~ ~40WOLFWI\.cre~ ~override~ ~50W[LF].*\.cre~ ~override~
+	READ_LONG 0x61A thenumitems
+	READ_LONG 0x616 theitemoffset
+	FOR (i = 0; i < thenumitems; ++i) BEGIN
+		READ_ASCII (theitemoffset + i * 0x14) theitemres
+		PATCH_IF ~%theitemres%~ STRING_EQUAL_CASE ~00MISC25~ BEGIN
+			READ_LONG (theitemoffset + i * 0x14 + 0x10) theslotflags
+			theslotflags|=0x2
+			WRITE_LONG (theitemoffset + i * 0x14 + 0x10) theslotflags
+		END
+	END
+	IF ~00MISC25~
+
+COPY_EXISTING_REGEXP ~40RYETIT\.cre~ ~override~ ~40YETITU\.cre~ ~override~ ~50ABOMIN\.cre~ ~override~ ~USABOMIN\.cre~ ~override~ ~52YET.*\.cre~ ~override~
+	READ_LONG 0x61A thenumitems
+	READ_LONG 0x616 theitemoffset
+	FOR (i = 0; i < thenumitems; ++i) BEGIN
+		READ_ASCII (theitemoffset + i * 0x14) theitemres
+		PATCH_IF ~%theitemres%~ STRING_EQUAL_CASE ~00MISC26~ BEGIN
+			READ_LONG (theitemoffset + i * 0x14 + 0x10) theslotflags
+			theslotflags|=0x2
+			WRITE_LONG (theitemoffset + i * 0x14 + 0x10) theslotflags
+		END
+	END
+	IF ~00MISC26~
+
+COPY_EXISTING ~40BETBOR.cre~ ~override~ ~40RBETBO.cre~ ~override~
+	READ_LONG 0x61A thenumitems
+	READ_LONG 0x616 theitemoffset
+	FOR (i = 0; i < thenumitems; ++i) BEGIN
+		READ_ASCII (theitemoffset + i * 0x14) theitemres
+		PATCH_IF ~%theitemres%~ STRING_EQUAL_CASE ~00MISC39~ BEGIN
+			READ_LONG (theitemoffset + i * 0x14 + 0x10) theslotflags
+			theslotflags|=0x2
+			WRITE_LONG (theitemoffset + i * 0x14 + 0x10) theslotflags
+		END
+	END
+	IF ~00MISC39~
+
+COPY_EXISTING_REGEXP ~41REMHZ.*\.cre~ ~override~
+	READ_LONG 0x61A thenumitems
+	READ_LONG 0x616 theitemoffset
+	FOR (i = 0; i < thenumitems; ++i) BEGIN
+		READ_ASCII (theitemoffset + i * 0x14) theitemres
+		PATCH_IF ~%theitemres%~ STRING_EQUAL_CASE ~00POTN50~ OR ~%theitemres%~ STRING_EQUAL_CASE ~USPNHF50~ BEGIN
+			READ_LONG (theitemoffset + i * 0x14 + 0x10) theslotflags
+			theslotflags|=0x2
+			WRITE_LONG (theitemoffset + i * 0x14 + 0x10) theslotflags
+		END
+	END
+	IF ~50~
+
+COPY_EXISTING ~61WYVERN.cre~ ~override~ ~61WYVERR.cre~ ~override~
+	READ_LONG 0x61A thenumitems
+	READ_LONG 0x616 theitemoffset
+	FOR (i = 0; i < thenumitems; ++i) BEGIN
+		READ_ASCII (theitemoffset + i * 0x14) theitemres
+		PATCH_IF ~%theitemres%~ STRING_EQUAL_CASE ~61RTHF02~ BEGIN
+			READ_LONG (theitemoffset + i * 0x14 + 0x10) theslotflags
+			theslotflags|=0x2
+			WRITE_LONG (theitemoffset + i * 0x14 + 0x10) theslotflags
+		END
+	END
+	IF ~61RTHF02~
+
+COPY_EXISTING ~63DMNCON.cre~ ~override~
+	READ_LONG 0x61A thenumitems
+	READ_LONG 0x616 theitemoffset
+	FOR (i = 0; i < thenumitems; ++i) BEGIN
+		READ_ASCII (theitemoffset + i * 0x14) theitemres
+		PATCH_IF ~%theitemres%~ STRING_EQUAL_CASE ~63GENTB~ BEGIN
+			READ_LONG (theitemoffset + i * 0x14 + 0x10) theslotflags
+			theslotflags|=0x2
+			WRITE_LONG (theitemoffset + i * 0x14 + 0x10) theslotflags
+		END
+	END
+	IF ~63GENTB~
+
 ACTION_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~0~ BEGIN
 
 	COPY_EXISTING_REGEXP ~.*\.cre~ ~override~

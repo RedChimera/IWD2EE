@@ -243,7 +243,18 @@ function IEex_GetSpriteFeatCount(sprite, featID)
 	if featID > 74 or IEex_Feats_DefaultMaxPips[featID] then
 		return IEex_GetFeatCountFromBaseStats(baseStats, featID)
 	else
-		return IEex_GetFeatCountFromDerivedStats(IEex_GetSpriteDerivedStats(sprite), featID)
+		local offset = tonumber(IEex_2DAGetAtRelated("B3FEATEX", "ID", "FEAT_COUNT_OFFSET", function(id) return tonumber(id) == featID end))
+		if offset == nil then
+			return 1
+		else
+			local featCount = IEex_ReadSignedByte(sprite + offset, 0x0)
+			if featCount == -1 then
+				featCount = 1
+				IEex_WriteByte(sprite + offset, featCount)
+			end
+			return featCount
+		end
+--		return IEex_GetFeatCountFromDerivedStats(IEex_GetSpriteDerivedStats(sprite), featID)
 	end
 end
 
@@ -252,6 +263,11 @@ function IEex_GetActorFeatCount(actorID, featID)
 end
 
 function IEex_SetSpriteFeatCountStat(sprite, featID, count, onlyIfNew)
+	local offset = tonumber(IEex_2DAGetAtRelated("B3FEATEX", "ID", "FEAT_COUNT_OFFSET", function(id) return tonumber(id) == featID end))
+	if offset ~= nil then
+		IEex_WriteByte(sprite + offset, count)
+	end
+	if true then return end
 	local applyEffect = false
 	IEex_Helper_SynchronizedBridgeOperation("IEex_DerivedStatsData", function()
 		local feats = IEex_Helper_GetBridgeNL("IEex_DerivedStatsData", IEex_GetSpriteDerivedStats(sprite), "feats")
@@ -374,7 +390,7 @@ function IEex_Extern_FeatHook(sprite, oldBaseStats, oldDerivedStats)
 		if IEex_IsFeatTakenInBaseStats(IEex_GetSpriteBaseStats(sprite), featID) then
 			local oldFeatCount = (featID > 74 or IEex_Feats_DefaultMaxPips[featID])
 				and IEex_GetFeatCountFromBaseStats(oldBaseStats, featID)
-				or IEex_GetFeatCountFromDerivedStats(oldDerivedStats, featID)
+				or IEex_GetFeatCountFromBaseStats(oldBaseStats, featID)
 			local newFeatCount = IEex_GetSpriteFeatCount(sprite, featID)
 			if oldFeatCount ~= newFeatCount then
 				for featLevel = oldFeatCount + 1, newFeatCount, 1 do

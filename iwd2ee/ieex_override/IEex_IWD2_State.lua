@@ -1500,14 +1500,15 @@ end
 function IEex_GetEngineCharacterPanelID()
     local characterScreen = IEex_GetEngineCharacter()
     local pTail = IEex_ReadDword(characterScreen + 0x632) -- m_lPopupStack.m_pNodeTail
-    local panelID = pTail ~= 0x0 and IEex_ReadDword(IEex_ReadDword(pTail + 0x8) + 0x20) or 0
+    local panelID = pTail ~= 0x0 and IEex_ReadDword(IEex_ReadDword(pTail + 0x8) + 0x20) or -1
 	return panelID
 end
 
 function IEex_EngineCharacterUpdatePopupPanel()
     local characterScreen = IEex_GetEngineCharacter()
     local pTail = IEex_ReadDword(characterScreen + 0x632) -- m_lPopupStack.m_pNodeTail
-    local panelID = pTail ~= 0x0 and IEex_ReadDword(IEex_ReadDword(pTail + 0x8) + 0x20) or 0
+    local panelID = pTail ~= 0x0 and IEex_ReadDword(IEex_ReadDword(pTail + 0x8) + 0x20) or -1
+    if panelID == -1 then return end
     local share = IEex_GetActorShare(IEex_ReadDword(characterScreen + 0x136))
     -- CScreenCharacter_UpdatePopupPanel()
     IEex_Call(0x5E0B20, {share, panelID}, characterScreen, 0x0)
@@ -1521,7 +1522,8 @@ end
 function IEex_EngineCreateCharUpdatePopupPanel()
     local createCharScreen = IEex_GetEngineCreateChar()
     local pTail = IEex_ReadDword(createCharScreen + 0x53E) -- m_lPopupStack.m_pNodeTail
-    local panelID = pTail ~= 0x0 and IEex_ReadDword(IEex_ReadDword(pTail + 0x8) + 0x20) or 0
+    local panelID = pTail ~= 0x0 and IEex_ReadDword(IEex_ReadDword(pTail + 0x8) + 0x20) or -1
+    if panelID == -1 then return end
     local share = IEex_GetActorShare(IEex_ReadDword(createCharScreen + 0x4E2))
     -- CScreenCreateChar_UpdatePopupPanel()
     IEex_Call(0x60CEB0, {share, panelID}, createCharScreen, 0x0)
@@ -1530,7 +1532,7 @@ end
 function IEex_GetEngineCreateCharPanelID()
     local createCharScreen = IEex_GetEngineCreateChar()
     local pTail = IEex_ReadDword(createCharScreen + 0x53E) -- m_lPopupStack.m_pNodeTail
-    local panelID = pTail ~= 0x0 and IEex_ReadDword(IEex_ReadDword(pTail + 0x8) + 0x20) or 0
+    local panelID = pTail ~= 0x0 and IEex_ReadDword(IEex_ReadDword(pTail + 0x8) + 0x20) or -1
 	return panelID
 end
 
@@ -2041,7 +2043,7 @@ function Feats_BlindingSpeed(actorID, featID)
 	local creatureData = IEex_GetActorShare(actorID)
 	return (IEex_GetActorBaseStat(actorID, 40) >= 23)
 end
-
+--[[
 function Feats_CombatCasting(actorID, featID)
 	local creatureData = IEex_GetActorShare(actorID)
 	local combatCastingFeatCount = 0
@@ -2070,6 +2072,47 @@ function Prereq_CombatCasting(actorID, featID)
 		if not combatCastingFeatCount then
 			combatCastingFeatCount = 0
 		end
+	end
+	if combatCastingFeatCount == 2 then
+		return (IEex_ReadByte(creatureData + 0x7B7, 0x0) >= 15)
+	else
+		return true
+	end
+end
+--]]
+
+function Feats_CombatCasting(actorID, featID)
+	local creatureData = IEex_GetActorShare(actorID)
+	if ex_feat_id_offset[featID] == nil then return true end
+	local combatCastingFeatCount = IEex_ReadSignedByte(creatureData + ex_feat_id_offset[featID], 0x0)
+	if combatCastingFeatCount == -1 then
+		local hasFeat = (bit.band(IEex_ReadDword(creatureData + 0x75C), 0x200) > 0)
+		if hasFeat then
+			combatCastingFeatCount = 1
+		else
+			combatCastingFeatCount = 0
+		end
+		IEex_WriteByte(creatureData + ex_feat_id_offset[featID], combatCastingFeatCount)
+	end
+	if combatCastingFeatCount == 1 then
+		return (IEex_ReadByte(creatureData + 0x7B7, 0x0) >= 15)
+	else
+		return true
+	end
+end
+
+function Prereq_CombatCasting(actorID, featID)
+	local creatureData = IEex_GetActorShare(actorID)
+	if ex_feat_id_offset[featID] == nil then return true end
+	local combatCastingFeatCount = IEex_ReadSignedByte(creatureData + ex_feat_id_offset[featID], 0x0)
+	if combatCastingFeatCount == -1 then
+		local hasFeat = (bit.band(IEex_ReadDword(creatureData + 0x75C), 0x200) > 0)
+		if hasFeat then
+			combatCastingFeatCount = 1
+		else
+			combatCastingFeatCount = 0
+		end
+		IEex_WriteByte(creatureData + ex_feat_id_offset[featID], combatCastingFeatCount)
 	end
 	if combatCastingFeatCount == 2 then
 		return (IEex_ReadByte(creatureData + 0x7B7, 0x0) >= 15)
@@ -2371,7 +2414,7 @@ function Feats_PersistentSpell(actorID, featID)
 	local creatureData = IEex_GetActorShare(actorID)
 	return (IEex_ReadByte(creatureData + 0x628, 0x0) > 18 or IEex_ReadByte(creatureData + 0x629, 0x0) > 12 or IEex_ReadByte(creatureData + 0x62A, 0x0) > 12 or IEex_ReadByte(creatureData + 0x630, 0x0) > 13 or IEex_ReadByte(creatureData + 0x631, 0x0) > 12)
 end
-
+--[[
 function Feats_PreciseShot(actorID, featID)
 	local creatureData = IEex_GetActorShare(actorID)
 	local hasDodge = (bit.band(IEex_ReadDword(creatureData + 0x75C), 0x10000) > 0)
@@ -2404,6 +2447,50 @@ function Prereq_PreciseShot(actorID, featID)
 		if not preciseShotFeatCount then
 			preciseShotFeatCount = 0
 		end
+	end
+	if preciseShotFeatCount == 2 then
+		return (hasDodge and MobilityFeatCount > 0 and IEex_ReadByte(creatureData + 0x5EC, 0x0) >= 11)
+	else
+		return true
+	end
+end
+--]]
+function Feats_PreciseShot(actorID, featID)
+	local creatureData = IEex_GetActorShare(actorID)
+	if ex_feat_id_offset[featID] == nil then return true end
+	local hasDodge = (bit.band(IEex_ReadDword(creatureData + 0x75C), 0x10000) > 0)
+	local MobilityFeatCount = IEex_ReadByte(creatureData + 0x744 + ex_feat_name_id["ME_MOBILITY"], 0x0)
+	local preciseShotFeatCount = IEex_ReadSignedByte(creatureData + ex_feat_id_offset[featID], 0x0)
+	if preciseShotFeatCount == -1 then
+		local hasFeat = (bit.band(IEex_ReadDword(creatureData + 0x75C), 0x200) > 0)
+		if hasFeat then
+			preciseShotFeatCount = 1
+		else
+			preciseShotFeatCount = 0
+		end
+		IEex_WriteByte(creatureData + ex_feat_id_offset[featID], preciseShotFeatCount)
+	end
+	if preciseShotFeatCount == 1 then
+		return (hasDodge and MobilityFeatCount > 0 and IEex_ReadByte(creatureData + 0x5EC, 0x0) >= 11)
+	else
+		return true
+	end
+end
+
+function Prereq_PreciseShot(actorID, featID)
+	local creatureData = IEex_GetActorShare(actorID)
+	if ex_feat_id_offset[featID] == nil then return true end
+	local hasDodge = (bit.band(IEex_ReadDword(creatureData + 0x75C), 0x10000) > 0)
+	local MobilityFeatCount = IEex_ReadByte(creatureData + 0x744 + ex_feat_name_id["ME_MOBILITY"], 0x0)
+	local preciseShotFeatCount = IEex_ReadSignedByte(creatureData + ex_feat_id_offset[featID], 0x0)
+	if preciseShotFeatCount == -1 then
+		local hasFeat = (bit.band(IEex_ReadDword(creatureData + 0x75C), 0x200) > 0)
+		if hasFeat then
+			preciseShotFeatCount = 1
+		else
+			preciseShotFeatCount = 0
+		end
+		IEex_WriteByte(creatureData + ex_feat_id_offset[featID], preciseShotFeatCount)
 	end
 	if preciseShotFeatCount == 2 then
 		return (hasDodge and MobilityFeatCount > 0 and IEex_ReadByte(creatureData + 0x5EC, 0x0) >= 11)
@@ -2533,7 +2620,7 @@ end
 function Feats_WeaponProficiency(actorID, featID)
 	local creatureData = IEex_GetActorShare(actorID)
 	if ex_feat_id_offset[featID] == nil then return true end
-	local weaponProficiencyFeatCount = IEex_ReadByte(creatureData + ex_feat_id_offset[featID])
+	local weaponProficiencyFeatCount = IEex_ReadByte(creatureData + ex_feat_id_offset[featID], 0x0)
 	local fighterLevel = IEex_ReadByte(creatureData + 0x62B, 0x0)
 	if weaponProficiencyFeatCount == 2 then
 		return (fighterLevel >= 4)
@@ -2549,7 +2636,7 @@ end
 function Prereq_WeaponProficiency(actorID, featID)
 	local creatureData = IEex_GetActorShare(actorID)
 	if ex_feat_id_offset[featID] == nil then return true end
-	local weaponProficiencyFeatCount = IEex_ReadByte(creatureData + ex_feat_id_offset[featID])
+	local weaponProficiencyFeatCount = IEex_ReadByte(creatureData + ex_feat_id_offset[featID], 0x0)
 	local fighterLevel = IEex_ReadByte(creatureData + 0x62B, 0x0)
 	if weaponProficiencyFeatCount == 3 then
 		return (fighterLevel >= 4)
@@ -2598,6 +2685,10 @@ end
 ------------------------------------------------------------
 -- Functions which can be used by Opcode 500 (Invoke Lua) --
 ------------------------------------------------------------
+
+function B3FEAT(effectData, creatureData)
+	IEex_WriteDword(effectData + 0x110, 1)
+end
 
 -- Changes the actionbar button at index [parameter1]
 --  to the type in [parameter2].
@@ -2837,7 +2928,7 @@ ex_crippling_strike = {ex_tra_905, ex_tra_905, ex_tra_905, ex_tra_905, ex_tra_90
 ex_crippling_strike_assassin = {ex_tra_930, ex_tra_930, ex_tra_930, ex_tra_930, ex_tra_930, ex_tra_931, ex_tra_931, ex_tra_931, ex_tra_932, ex_tra_932, ex_tra_932, ex_tra_933, ex_tra_933, ex_tra_933, ex_tra_934, ex_tra_934, ex_tra_934, ex_tra_935, ex_tra_935, ex_tra_935, ex_tra_936, ex_tra_936, ex_tra_936, ex_tra_937, ex_tra_937, ex_tra_937, ex_tra_938, ex_tra_938, ex_tra_938, ex_tra_939}
 ex_arterial_strike = {1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4, 4, 5, 5, 5, 5, 5, 5}
 ex_damage_source_spell = {["EFFAS1"] = "SPWI217", ["EFFAS2"] = "SPWI217", ["EFFCL"] = "SPPR302", ["EFFCT1"] = "SPWI117", ["EFFDA3"] = "SPWI228", ["EFFFS1"] = "SPWI427", ["EFFFS2"] = "SPWI426", ["EFFIK"] = "SPWI122", ["EFFMB1"] = "SPPR318", ["EFFMB2"] = "SPPR318", ["EFFMT1"] = "SPPR322", ["EFFPB1"] = "SPWI521", ["EFFPB2"] = "SPWI521", ["EFFS1"] = "SPPR113", ["EFFS2"] = "SPPR113", ["EFFS3"] = "SPPR113", ["EFFSC"] = "SPPR523", ["EFFSOF1"] = "SPWI511", ["EFFSOF2"] = "SPWI511", ["EFFSR1"] = "SPPR707", ["EFFSR2"] = "SPPR707", ["EFFSSO1"] = "SPPR608", ["EFFSSO2"] = "SPPR608", ["EFFSSO3"] = "SPPR608", ["EFFSSS1"] = "SPWI220", ["EFFSSS2"] = "SPWI220", ["EFFVS1"] = "SPWI424", ["EFFVS2"] = "SPWI424", ["EFFVS3"] = "SPWI424", ["EFFWOM1"] = "SPPR423", ["EFFWOM2"] = "SPPR423", ["EFFHW15"] = "SPWI805", ["EFFHW16"] = "SPWI805", ["EFFHW17"] = "SPWI805", ["EFFHW18"] = "SPWI805", ["EFFHW19"] = "SPWI805", ["EFFHW20"] = "SPWI805", ["EFFHW21"] = "SPWI805", ["EFFHW22"] = "SPWI805", ["EFFHW23"] = "SPWI805", ["EFFHW24"] = "SPWI805", ["EFFHW25"] = "SPWI805", ["EFFWT15"] = "SPWI805", ["EFFWT16"] = "SPWI805", ["EFFWT17"] = "SPWI805", ["EFFWT18"] = "SPWI805", ["EFFWT19"] = "SPWI805", ["EFFWT20"] = "SPWI805", ["EFFWT21"] = "SPWI805", ["EFFWT22"] = "SPWI805", ["EFFWT23"] = "SPWI805", ["EFFWT24"] = "SPWI805", ["EFFWT25"] = "SPWI805", ["USWI417D"] = "SPWI417", ["USWI422D"] = "SPWI422", ["USWI452D"] = "USWI452", ["USWI652D"] = "USWI652", ["USWI755D"] = "USWI755", ["USWI954F"] = "USWI954", ["USDVSH01"] = "USPR151", ["USDVSH02"] = "USPR151", ["USDVSH03"] = "USPR151", ["USDVSH04"] = "USPR151", ["USDVSH05"] = "USPR151", ["USDVSH06"] = "USPR151", ["USDVSH07"] = "USPR151", ["USDVSH08"] = "USPR151", ["USDVSH09"] = "USPR151", ["USDVSH10"] = "USPR151", ["USDVSH11"] = "USPR151", ["USDVSH12"] = "USPR151", ["USDVSH13"] = "USPR151", ["USDVSH14"] = "USPR151", ["USDVSH15"] = "USPR151", ["USPR215D"] = "SPPR215", ["USPR452D"] = "USPR452", ["USDESTRU"] = "SPPR717", ["USPR953D"] = "USPR953", ["USSTOV2D"] = "USPR954", ["USSTOV3D"] = "USPR954", ["USSTOV4D"] = "USPR954", ["USSTOV5D"] = "USPR954", ["USWI653D"] = "USWI653", ["USWI956D"] = "USWI956", ["USWI759D"] = "USWI759", ["USWI759E"] = "USWI759", ["USPR102D"] = "SPPR102", ["USPR204D"] = "SPPR204", ["USPR211D"] = "SPPR211", ["USPR305D"] = "SPPR305", ["USPR310D"] = "SPPR310", ["USPR311D"] = "SPPR311", ["USPR320D"] = "SPPR320", ["USPR322D"] = "SPPR322", ["USPR324D"] = "SPPR324", ["USPR325D"] = "SPPR325", ["USPR405D"] = "SPPR405", ["USPR417D"] = "SPPR417", ["USPR418D"] = "SPPR418", ["USPR510D"] = "SPPR510", ["USPR512D"] = "SPPR512", ["USPR515D"] = "SPPR515", ["USPR518D"] = "SPPR518", ["USPR522D"] = "SPPR522", ["USPR611D"] = "SPPR611", ["USPR613D"] = "SPPR613", ["USPR616D"] = "SPPR616", ["USPR715D"] = "SPPR715", ["USPR717D"] = "SPPR717", ["USPR719D"] = "SPPR719", ["USPR726D"] = "SPPR726", ["USPR727D"] = "SPPR727", ["USPR728D"] = "SPPR728", ["USPR802D"] = "SPPR802", ["USPR952D"] = "USPR952", ["USWI101D"] = "SPWI101", ["USWI104D"] = "SPWI104", ["USWI105D"] = "SPWI105", ["USWI116D"] = "SPWI116", ["USWI118D"] = "SPWI118", ["USWI121D"] = "SPWI121", ["USWI205D"] = "SPWI205", ["USWI213D"] = "SPWI213", ["USWI215D"] = "SPWI215", ["USWI218D"] = "SPWI218", ["USWI222D"] = "SPWI222", ["USWI226D"] = "SPWI226", ["USWI227D"] = "SPWI227", ["USWI252D"] = "USWI252", ["USWI253D"] = "USWI253", ["USWI253E"] = "USWI253", ["USWI306D"] = "SPWI306", ["USWI312D"] = "SPWI312", ["USWI316D"] = "SPWI316", ["USWI320D"] = "SPWI320", ["USWI420D"] = "SPWI420", ["USWI423D"] = "SPWI423", ["USWI425D"] = "SPWI425", ["USWI507D"] = "SPWI507", ["USWI508D"] = "SPWI508", ["USWI509D"] = "SPWI509", ["USWI510D"] = "SPWI510", ["USWI605D"] = "SPWI605", ["USWI612D"] = "SPWI612", ["USWI653D"] = "USWI653", ["USWI705D"] = "SPWI705", ["USWI711D"] = "SPWI711", ["USWI717D"] = "SPWI717", ["USWI751D"] = "USWI751", ["USWI759E"] = "USWI759", ["USWI806D"] = "SPWI806", ["USWI810D"] = "SPWI810", ["USWI911D"] = "SPWI911", ["USSUCCRW"] = "SPWI621", ["USSUWYVE"] = "SPWI626", ["USSUGHOU"] = "USWI453", ["USWI762D"] = "USWI762", ["USWI864D"] = "USWI864", ["USWI864E"] = "USWI864", }
-ex_feat_id_offset = {[18] = 0x78D, [38] = 0x777, [39] = 0x774, [40] = 0x779, [41] = 0x77D, [42] = 0x77B, [43] = 0x77E, [44] = 0x77A, [53] = 0x775, [54] = 0x778, [55] = 0x776, [56] = 0x77C, [57] = 0x77F}
+ex_feat_id_offset = {[9] = 0x70C, [48] = 0x70D, [18] = 0x78D, [38] = 0x777, [39] = 0x774, [40] = 0x779, [41] = 0x77D, [42] = 0x77B, [43] = 0x77E, [44] = 0x77A, [53] = 0x775, [54] = 0x778, [55] = 0x776, [56] = 0x77C, [57] = 0x77F}
 ex_damage_multiplier_type = {[0] = 9, [0x10000] = 4, [0x20000] = 2, [0x40000] = 3, [0x80000] = 1, [0x100000] = 8, [0x200000] = 6, [0x400000] = 5, [0x800000] = 10, [0x1000000] = 7, [0x2000000] = 10, [0x4000000] = 10, [0x8000000] = 9, [0x10000000] = 5}
 ex_damage_resistance_stat = {[0] = 22, [0x10000] = 17, [0x20000] = 15, [0x40000] = 16, [0x80000] = 14, [0x100000] = 23, [0x200000] = 74, [0x400000] = 73, [0x800000] = 24, [0x1000000] = 21, [0x2000000] = 19, [0x4000000] = 20, [0x8000000] = 22, [0x10000000] = 73}
 ex_improved_uncanny_dodge_class_level = {[1] = 5, [9] = 6, }

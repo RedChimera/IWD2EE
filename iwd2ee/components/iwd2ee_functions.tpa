@@ -1821,6 +1821,7 @@ DEFINE_ACTION_FUNCTION ~EXTEND_FEAT_IWD2~
 		nameref=0xDEFA
 		descref=0xDEFA
 		max=1
+		offset=~-1~
 	STR_VAR
 		script=~Feats_True~
 		prerequisite_script=~~
@@ -1843,13 +1844,13 @@ BEGIN
 			PATCH_IF descref != 0xDEFA BEGIN
 				SET_2DA_ENTRY id 3 numcols ~%descref%~
 			END
-		PRINT ~ugu~
+
 		COPY_EXISTING ~b3featex.2da~ ~override~
-			COUNT_2DA_ROWS 5 numrows
+			COUNT_2DA_ROWS 6 numrows
 			featfound = 0
 			idrow = 0
 			FOR (i = 0; i < numrows; ++i) BEGIN
-				READ_2DA_ENTRY i 1 5 iid
+				READ_2DA_ENTRY i 1 6 iid
 				PATCH_PRINT ~%iid%~
 				PATCH_IF iid = id BEGIN
 					featfound = 1
@@ -1862,14 +1863,15 @@ BEGIN
 				END
 			END
 			PATCH_IF featfound = 1 BEGIN
-				SET_2DA_ENTRY idrow 2 5 ~%max%~
-				SET_2DA_ENTRY idrow 3 5 ~%prerequisite_script%~
-				SET_2DA_ENTRY idrow 4 5 ~%script%~
+				SET_2DA_ENTRY idrow 2 6 ~%max%~
+				SET_2DA_ENTRY idrow 3 6 ~%prerequisite_script%~
+				SET_2DA_ENTRY idrow 4 6 ~%script%~
+				SET_2DA_ENTRY idrow 5 6 ~%offset%~
 			END ELSE BEGIN
-				INSERT_2DA_ROW idrow 5 ~%name% %id% %max% %prerequisite_script% %script%~
+				INSERT_2DA_ROW idrow 6 ~%name% %id% %max% %prerequisite_script% %script% %offset%~
 			END
 
-		COPY_EXISTING ~%featspl_1%.spl~ ~override/FE_%nextid%_1.spl~ ~%featspl_2%.spl~ ~override/FE_%nextid%_2.spl~ ~%featspl_3%.spl~ ~override/FE_%nextid%_3.spl~ ~%featspl_4%.spl~ ~override/FE_%nextid%_4.spl~ ~%featspl_5%.spl~ ~override/FE_%nextid%_5.spl~
+		COPY_EXISTING ~%featspl_1%.spl~ ~override/FE_%id%_1.spl~ ~%featspl_2%.spl~ ~override/FE_%id%_2.spl~ ~%featspl_3%.spl~ ~override/FE_%id%_3.spl~ ~%featspl_4%.spl~ ~override/FE_%id%_4.spl~ ~%featspl_5%.spl~ ~override/FE_%id%_5.spl~
 			IF_EXISTS
 /*
 		COPY_EXISTING ~IEex_WEIDU.lua~ ~override~
