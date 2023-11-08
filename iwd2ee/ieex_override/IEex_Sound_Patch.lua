@@ -25,6 +25,16 @@
 		!mov([ecx+0x4],0x0)
 	]]})
 
+	-----------------------------------------------------------------------------------------------------------
+	-- Start CSoundMixer::nMaxChannelSlot as -1 so IEexHelper.dll's CSoundImp::Export_DestructHook() doesn't --
+	-- crash when icewind2.ini's [Alias] fields aren't properly updated. The game still crashes when this    --
+	-- happens, but displays the proper assertion.                                                           --
+	-----------------------------------------------------------------------------------------------------------
+
+	IEex_HookReturnNOPs(0x7AAE62, 1, {[[
+		!mov([esi+0xD8],-1)
+	]]})
+
 	IEex_EnableCodeProtection()
 
 end)()
