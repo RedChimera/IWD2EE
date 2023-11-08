@@ -572,7 +572,9 @@ Chris Dix (She/Her) - aka @semiticgoddess - was the one who started the IWD2EE p
 
 @OlvynChuru created the second half of IWD2EE's components, created all the new items and almost all the new spells and feats. OlvynChuru was also responsible for all the changes to encounters and enemy AI and most of the changes to feats, items, and spells.
 
-@Bubb created IEex and most of the base functions and new opcodes that open new possibilities for modding. Bubb was also responsible for many of IWD2EE's greatest quality of life improvements, including quickloot, faster loading times, and built-in widescreen capability.
+@Bubb created most of the base functions and new opcodes that open new possibilities for modding. Bubb was also responsible for many of IWD2EE's greatest quality of life improvements, including quickloot, faster loading times, and built-in widescreen capability.
+
+@mrfearless created the IEex loader that enables Lua functions to be run in IWD2.
 
 @kjeron created many WeiDU functions that are used in IWD2EE's installation to modify IWD2 files.
 
