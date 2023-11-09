@@ -69,6 +69,7 @@ dofile("override/IEex_Gui_State.lua")
 dofile("override/IEex_Render_State.lua")
 dofile("override/IEex_Resource_State.lua")
 dofile("override/IEex_Projectile_State.lua")
+dofile("override/IEex_StartupFixes_State.lua")
 dofile("override/IEex_Dev_State.lua")
 
 
