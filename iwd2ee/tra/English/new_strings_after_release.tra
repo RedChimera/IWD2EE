@@ -1,2 +1,6 @@
 //All new strings that have been added to IWD2EE after translations have begun should
 // be put in here to make them easier for translators to find.
+@94=~IWD2EE installs a ddraw fix to improve performance. Choose which one you want.
+
+ 1] Install this if you plan on playing in fullscreen mode (cnc-ddraw fix)
+ 2] Install this if you plan on playing in windowed mode (default ddraw fix)~

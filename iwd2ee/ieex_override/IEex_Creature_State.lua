@@ -443,10 +443,12 @@ function IEex_Extern_OnAfterConstructSprite(sprite)
 	IEex_AssertThread(IEex_Thread.Both, true)
 	-- Import single pip feats into the new stats system
 	IEex_EnsureSpriteEffectListProcessed(sprite)
+--[[
 	local baseStats = IEex_GetSpriteBaseStats(sprite)
 	for featID = 0, 74 do
 		if not IEex_Feats_DefaultMaxPips[featID] and IEex_IsFeatTakenInBaseStats(baseStats, featID) then
 			IEex_SetSpriteFeatCountStat(sprite, featID, 1, true)
 		end
 	end
+--]]
 end

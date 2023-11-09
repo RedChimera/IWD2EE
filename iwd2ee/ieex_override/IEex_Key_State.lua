@@ -464,6 +464,7 @@ function IEex_Chargen_ExtraFeatListener()
 		if share > 0 then
 			ex_randomizer = math.random(6)
 			local panelID = IEex_GetEngineCreateCharPanelID()
+			if panelID == -1 then return end
 			local racePlusSub = IEex_ReadByte(share + 0x26, 0x0) * 0x10000 + IEex_ReadByte(share + 0x3E3D, 0x0)
 			if panelID == 4 or panelID == 53 then
 				if not ex_ability_scores_initialized then
@@ -635,7 +636,7 @@ function IEex_LevelUp_ExtraFeatListener()
 		local actorID = IEex_ReadDword(levelUpData + 0x136)
 		local share = IEex_GetActorShare(actorID)
 		local panelID = IEex_GetEngineCharacterPanelID()
-		if panelID == 0 and ex_starting_level[1] ~= -1 then
+		if panelID <= 0 and ex_starting_level[1] ~= -1 then
 			ex_starting_level = {-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1}
 			ex_starting_skill_points = -1
 			ex_class_level_up["numLevelUps"] = -1
@@ -653,7 +654,7 @@ function IEex_LevelUp_ExtraFeatListener()
 					ex_class_level_up["numLevelUps"] = -1
 					ex_class_level_up["class"] = -1
 				end
-			elseif panelID ~= 0 and panelID ~= 2 then
+			elseif panelID > 0 and panelID ~= 2 then
 				if IEex_ReadByte(share + 0x626, 0x0) > ex_starting_level[1] and ex_starting_level[1] ~= -1 and ex_class_level_up["numLevelUps"] == -1 then
 					ex_class_level_up["numLevelUps"] = IEex_ReadByte(share + 0x626, 0x0) - ex_starting_level[1]
 					for i = 2, 12, 1 do

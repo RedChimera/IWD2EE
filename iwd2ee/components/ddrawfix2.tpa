@@ -1,0 +1,413 @@
+
+/*
+	ACTION_IF ( ~%WEIDU_ARCH%~ STRING_COMPARE ~x86~ ) BEGIN
+		FAIL ~Only x86 systems supported.~
+	END
+*/
+	ACTION_IF ENGINE_IS ~BG1 SoA ToB~ BEGIN 
+		OUTER_SPRINT ~gameexe~ ~bgmain.exe~ 
+		OUTER_SPRINT ~gameini~ ~baldur.ini~ 
+	END
+	ELSE BEGIN 
+		ACTION_IF ENGINE_IS ~TotSC~ BEGIN 
+			OUTER_SPRINT ~gameexe~ ~bgmain2.exe~ 
+			OUTER_SPRINT ~gameini~ ~baldur.ini~ 
+		END
+		ELSE BEGIN 
+			ACTION_IF ENGINE_IS ~IWD1 HoW TotLM~ BEGIN
+				OUTER_SPRINT ~gameexe~ ~idmain.exe~ 
+				OUTER_SPRINT ~gameini~ ~icewind.ini~ 	
+			END 
+			ELSE BEGIN 
+				ACTION_IF ENGINE_IS ~IWD2~ BEGIN 
+					OUTER_SPRINT ~gameexe~ ~iwd2.exe~ 
+					OUTER_SPRINT ~gameini~ ~icewind2.ini~ 
+				END 
+				ELSE BEGIN 
+					ACTION_IF ENGINE_IS ~PST~ BEGIN 
+						OUTER_SPRINT ~gameexe~ ~torment.exe~ 
+						OUTER_SPRINT ~gameini~ ~torment.ini~ 
+					END  
+					ELSE FAIL ~Engine is not recognized.~
+				END 
+			END 
+		END 
+	END
+	
+	// Disable SoftBlt
+	//	deprecated and conflicts with HEL causing the screen to be blank/black... 
+	COPY ~%gameini%~ ~%gameini%~ 
+		REPLACE_TEXTUALLY ~SoftSrcKeyBltFast=1~ ~SoftSrcKeyBltFast=0~ 
+		REPLACE_TEXTUALLY ~SoftBltFast=1~       ~SoftBltFast=0~ 
+		REPLACE_TEXTUALLY ~SoftSrcKeyBlt=1~     ~SoftSrcKeyBlt=0~ 
+		REPLACE_TEXTUALLY ~SoftBlt=1~           ~SoftBlt=0~ 
+		REPLACE_TEXTUALLY ~SoftMirrorBlt=1~     ~SoftMirrorBlt=0~ 
+	BUT_ONLY_IF_IT_CHANGES
+
+
+
+// Desc: Create a regex pattern for binary data
+// Args: sig [array] - bytes to find in (0xhh 0xhh format). A value of 'xxxx' matches any byte. sig "cleared" at end of function.
+// Retn: pattern [string]
+// Note:
+//
+DEFINE_PATCH_MACRO MakeSig BEGIN
+	INNER_PATCH_SAVE pattern ~~ BEGIN
+		PATCH_PHP_EACH sig AS index => value BEGIN
+			SET offset = BUFFER_LENGTH
+			PATCH_IF( ~%value%~ STRING_EQUAL ~xxxx~ ) BEGIN
+				INSERT_BYTES offset 11
+				WRITE_ASCII offset ~\(x\|[^x]\)~ // match any character ( including newline )
+			END
+			ELSE BEGIN
+				PATCH_IF( %value% == 0x5E ) BEGIN  
+					INSERT_BYTES offset 4
+					WRITE_LONG offset 0x5D5E5C5B // [\^] litteral caret
+				END
+				ELSE BEGIN 
+					INSERT_BYTES offset 3
+					WRITE_BYTE offset 0x5B // '['
+					WRITE_BYTE ( offset + 1 ) %value%
+					WRITE_BYTE ( offset + 2 ) 0x5D // ']'					
+				END
+			END
+		END
+		PATCH_CLEAR_ARRAY sig	
+	END
+END
+
+
+// Desc: Gets PIMAGE_DATA_DIRECTORY and the PIMAGE_SECTION_HEADER for the section containing the requested directory
+// Args: dir_index 
+//	0 == Export Directory
+//	1 == Import Directory
+//	2 == Resource Directory
+//	etc.
+//
+// Retn: 
+//	data_dir - file offset of the requested IMAGE_DATA_DIRECTORY
+//	section_header -  file offset of the IMAGE_SECTION_HEADER pointed to by the rva field of the IMAGE_DATA_DIRECTORY
+// Note:  
+//
+DEFINE_PATCH_MACRO GetDataDir BEGIN
+	SET GetDataDir_Succeeded = 0
+	PATCH_IF( SOURCE_SIZE >= 0x40 ) BEGIN
+		READ_SHORT 0x00 e_magic
+		PATCH_IF( e_magic == 0x5A4D ) BEGIN
+			READ_LONG 0x3C e_lfanew 
+			PATCH_IF( SOURCE_SIZE >= (e_lfanew + 0xF8) ) BEGIN
+				READ_LONG e_lfanew PE_Signature 
+				PATCH_IF( PE_Signature == 0x00004550 ) BEGIN
+					READ_SHORT (e_lfanew + 0x14) PE_SizeOfOptionalHeader
+					PATCH_IF( PE_SizeOfOptionalHeader >= 0x5C ) BEGIN
+						READ_LONG (e_lfanew + 0x18 + 0x1C) PE_OptionalHeader_ImageBase
+						READ_SHORT (e_lfanew + 0x06) PE_NumberOfSections
+						SET First_Section_Header = ( e_lfanew + 0x18 + PE_SizeOfOptionalHeader )
+						PATCH_IF( SOURCE_SIZE >= (First_Section_Header + (PE_NumberOfSections * 0x28) )) BEGIN
+							READ_LONG (e_lfanew + 0x18 + 0x5C) PE_OptionalHeader_NumberOfRvaAndSizes 
+							PATCH_IF( PE_OptionalHeader_NumberOfRvaAndSizes >= 3 ) BEGIN
+								SET data_dir = (e_lfanew + 0x18 + 0x60 + ( dir_index * 8 ) ) 
+								READ_LONG data_dir data_rva
+								FOR( section_index = 0; ( section_index < PE_NumberOfSections ) && ( GetDataDir_Succeeded == 0 ); section_index += 1 ) BEGIN
+									READ_LONG (First_Section_Header + (0x28 * section_index) + 0x0C) Section_VirtualAddress									
+									PATCH_IF( Section_VirtualAddress  <= data_rva ) BEGIN
+										READ_LONG (First_Section_Header + (0x28 * section_index) + 0x08) Section_VirtualSize
+										PATCH_IF( (Section_VirtualAddress + Section_VirtualSize) > data_rva ) BEGIN	
+											SET section_header = First_Section_Header + (0x28 * section_index)
+											SET GetDataDir_Succeeded = 1
+										END
+									END
+								END		
+							END
+						END
+					END
+				END
+			END
+		END
+	END
+END
+
+
+// Desc: 
+// Args: module_name [string], import_name [string]
+// Retn: pointer [integer] - virtual address or -1 
+// Note: 
+//
+DEFINE_PATCH_MACRO GetImportThunk BEGIN
+	SET pointer = ( 0 - 1) 
+	SET module_name_size = STRING_LENGTH ~%module_name%~
+	SET import_name_size = STRING_LENGTH ~%import_name%~
+	
+	SET dir_index = 1
+	LAUNCH_PATCH_MACRO GetDataDir
+
+	// data_dir - IMAGE_DATA_DIRECTORY for Import Table
+	// section_header - for the section that contains the Import Table
+	PATCH_IF( GetDataDir_Succeeded != 0 ) BEGIN 
+		READ_LONG data_dir impdir_rva
+		READ_LONG ( data_dir + 4 ) impdir_size
+		READ_LONG (section_header + 0x0C) idata_va 
+		READ_LONG (section_header + 0x10) idata_raw_size
+		READ_LONG (section_header + 0x14) idata_base // Raw Address
+		SET impdir = (impdir_rva - idata_va) + idata_base 
+		
+		PATCH_IF( (impdir_size > 0) && (impdir < SOURCE_SIZE) && ((impdir + impdir_size) <= SOURCE_SIZE) ) BEGIN
+			SET run_impdir_loop = 1	
+			FOR( impdir_index = 0; (((impdir_index + 1) * 0x14) <= impdir_size) && (run_impdir_loop != 0); impdir_index += 1 ) BEGIN
+				READ_LONG (impdir + (impdir_index * 0x14) + 0x0C) dll_name_rva
+				PATCH_IF( dll_name_rva != 0) BEGIN	
+					SET dll_name_offset = (dll_name_rva - idata_va) + idata_base 
+					PATCH_IF( (dll_name_offset + module_name_size) <= SOURCE_SIZE ) BEGIN
+						READ_ASCII dll_name_offset dll_name ( module_name_size )									
+						PATCH_IF( ~%dll_name%~ STRING_EQUAL_CASE ~%module_name%~ ) BEGIN
+							READ_LONG (impdir + (impdir_index * 0x14) + 0x10) iat_rva
+							SET iat_offset = (iat_rva - idata_va) + idata_base
+							SET run_iat_loop = 1
+							FOR( thunk_index = 0; run_iat_loop != 0; thunk_index += 1 ) BEGIN
+								SET thunk = (iat_offset + (thunk_index * 4))
+								PATCH_IF( (thunk + 4) <= SOURCE_SIZE ) BEGIN
+									READ_LONG thunk func_name_rva									
+									PATCH_IF( func_name_rva != 0 && ((func_name_rva & 0x80000000) == 0) ) BEGIN
+										SET func_name_offset = (func_name_rva - idata_va) + idata_base
+										PATCH_IF( (func_name_offset + 2 + import_name_size) <= SOURCE_SIZE ) BEGIN
+											READ_ASCII (func_name_offset + 2) func_name ( import_name_size )	 												
+											PATCH_IF( ~%func_name%~ STRING_EQUAL_CASE ~%import_name%~ ) BEGIN	
+												SET pointer = thunk + PE_OptionalHeader_ImageBase + ( idata_va - idata_base )
+												SET run_iat_loop = 0
+												SET run_impdir_loop = 0
+											END	
+										END
+									END
+									ELSE BEGIN // func_name_rva is NULL
+										SET run_iat_loop = 0
+									END
+								END
+							END
+						END
+					END
+				END
+				ELSE BEGIN // dll_name_rva is NULL
+					SET run_impdir_loop = 0
+				END
+			END 
+		END
+	END
+END
+
+
+// Disable high DPI scaling (aka DPI Virtualization) by embedding or dropping a configuration manifest
+//	AFAIK needed for users who are running the Aero theme and have increased their text size to 150% (aka to 121 dpi or above)
+//	... Microsoft does state that "high" DPI scaling may cause problems with full screen DirectX applications
+//	... a users has reported that turning off DPI scaling fixed his problem... so we might as well do it for everyone  
+//	DO NOT USE "BUT_ONLY_IF_IT_CHANGES" on %gameexe% or %gameexe%.manifest
+//	... we need the "last modified date" to change so as to make sure that Windows will look for a new manifest (undocumented?)
+//
+DEFINE_PATCH_MACRO DpiAware BEGIN
+	SET embedded = 0
+	SPRINT manifest ~~ ^
+	// defining asmv3 in the assembly tag (as Microsoft tells us to do) causes a BLUE SCREEN OF DEATH on WinXP SP2 (great work!)
+		~<assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">~ ^
+			~<asmv3:application xmlns:asmv3="urn:schemas-microsoft-com:asm.v3">~ ^
+				~<asmv3:windowsSettings>~ ^
+					~<dpiAware xmlns="http://schemas.microsoft.com/SMI/2005/WindowsSettings">true</dpiAware>~ ^
+				~</asmv3:windowsSettings>~ ^
+			~</asmv3:application>~ ^
+		~</assembly>~	
+	
+	SET dir_index = 2
+	LAUNCH_PATCH_MACRO GetDataDir
+
+	// data_dir - IMAGE_DATA_DIRECTORY for Resource Table
+	// section_header - for the section that contains the Resource Table
+	PATCH_IF( GetDataDir_Succeeded != 0 ) BEGIN 
+		SET insert_count = 72 + ( STRING_LENGTH ~%manifest%~ )	
+		READ_LONG (section_header + 0x08) rsrc_virtual_size
+		READ_LONG (section_header + 0x0C) rsrc_va 
+		READ_LONG (section_header + 0x10) rsrc_raw_size
+		READ_LONG (section_header + 0x14) rsrc_base // Raw Address
+		PATCH_IF( (rsrc_virtual_size + insert_count) < rsrc_raw_size ) BEGIN 
+			READ_LONG data_dir res_rva
+			SET type_dir = (res_rva - rsrc_va) + rsrc_base 
+			READ_SHORT ( type_dir + 12 ) num_named_entries 		
+			READ_SHORT ( type_dir + 14 ) num_id_entries 		
+			SET type_total = num_named_entries + num_id_entries
+			SET HasManifest = 0
+			FOR( type_i = 0; type_i < type_total; type_i += 1 ) BEGIN
+				READ_LONG ( type_dir + 16 + (type_i * 8) ) type_name
+				PATCH_IF( type_name == 24 ) BEGIN SET HasManifest = 1 END 
+			END
+			PATCH_IF( !HasManifest ) BEGIN
+				SET insert_offset = type_dir + 16 + (type_total * 8)
+				DELETE_BYTES ( rsrc_base + rsrc_virtual_size ) insert_count
+				INSERT_BYTES insert_offset insert_count
+				SET rsrc_virtual_size += insert_count
+				WRITE_LONG (section_header + 0x08) rsrc_virtual_size
+				READ_LONG (data_dir + 4) res_size
+				SET res_size += insert_count
+				WRITE_LONG (data_dir + 4) res_size
+				WRITE_SHORT ( type_dir + 14 ) ( num_id_entries + 1 ) 
+				WRITE_LONG (insert_offset) 24
+				WRITE_LONG (insert_offset + 4) ( 0x80000000 + (24 + (type_total * 8)) )
+				WRITE_LONG (insert_offset + 8) 0
+				WRITE_LONG (insert_offset + 12) 0
+				WRITE_LONG (insert_offset + 16) 0
+				WRITE_LONG (insert_offset + 20) 0x00010000
+				WRITE_LONG (insert_offset + 24) 1
+				WRITE_LONG (insert_offset + 28) ( 0x80000000 + (48 + (type_total * 8)) )
+				WRITE_LONG (insert_offset + 32) 0
+				WRITE_LONG (insert_offset + 36) 0
+				WRITE_LONG (insert_offset + 40) 0
+				WRITE_LONG (insert_offset + 44) 0x00010000
+				WRITE_LONG (insert_offset + 48) 1033
+				WRITE_LONG (insert_offset + 52) (72 + (type_total * 8))
+				WRITE_LONG (insert_offset + 56) (res_rva + 88 + (type_total * 8)) 
+				WRITE_LONG (insert_offset + 60) ( STRING_LENGTH ~%manifest%~ )
+				WRITE_LONG (insert_offset + 64) 0
+				WRITE_LONG (insert_offset + 68) 0
+				WRITE_EVALUATED_ASCII (insert_offset + 72) ~%manifest%~ ( STRING_LENGTH ~%manifest%~ )		
+				SET embedded = 1
+				
+				// fixups //
+				FOR( type_i = 0; type_i < type_total; type_i += 1 ) BEGIN
+					READ_LONG ( type_dir + 20 + (type_i * 8) ) type_offset
+					PATCH_IF( insert_offset <= ((type_offset & 0x7FFFFFFF) + type_dir) ) BEGIN
+						SET type_offset += insert_count
+						WRITE_LONG ( type_dir + 20 + (type_i * 8) ) type_offset
+					END
+					READ_LONG ( type_dir + 16 + (type_i * 8) ) type_name
+					PATCH_IF( type_name & 0x80000000 ) BEGIN
+						PATCH_IF( insert_offset <= ((type_name & 0x7FFFFFFF) + type_dir) ) BEGIN
+							WRITE_LONG ( type_dir + 16 + (type_i * 8) ) ( type_name + insert_count )
+						END
+					END
+					SET	name_dir = (type_offset & 0x7FFFFFFF) + type_dir	
+					READ_SHORT ( name_dir + 12 ) num_named_entries 		
+					READ_SHORT ( name_dir + 14 ) num_id_entries 		
+					SET name_total = num_named_entries + num_id_entries
+					FOR( name_i = 0; name_i < name_total; name_i += 1 ) BEGIN
+						READ_LONG ( name_dir + 20 + (name_i * 8) ) name_offset
+						PATCH_IF( insert_offset <= ((name_offset & 0x7FFFFFFF) + type_dir) ) BEGIN
+							SET name_offset += insert_count
+							WRITE_LONG ( name_dir + 20 + (name_i * 8) ) name_offset
+						END
+						READ_LONG ( name_dir + 16 + (name_i * 8) ) name_name
+						PATCH_IF( name_name & 0x80000000 ) BEGIN 
+							PATCH_IF( insert_offset <= ((name_name & 0x7FFFFFFF) + type_dir) ) BEGIN
+								WRITE_LONG ( name_dir + 16 + (name_i * 8) ) ( name_name + insert_count )
+							END
+						END
+						SET lang_dir = (name_offset & 0x7FFFFFFF) + type_dir
+						READ_SHORT ( lang_dir + 12 ) num_named_entries 		
+						READ_SHORT ( lang_dir + 14 ) num_id_entries 		
+						SET lang_total = num_named_entries + num_id_entries
+						FOR( lang_i = 0; lang_i < lang_total; lang_i += 1 ) BEGIN
+							READ_LONG ( lang_dir + 20 + (lang_i * 8) ) lang_offset
+							PATCH_IF( insert_offset <= ((lang_offset & 0x7FFFFFFF) + type_dir) ) BEGIN
+								SET lang_offset += insert_count
+								WRITE_LONG ( lang_dir + 20 + (lang_i * 8) ) lang_offset
+							END
+							READ_LONG ( lang_dir + 16 + (lang_i * 8) ) lang_name
+							PATCH_IF( lang_name & 0x80000000 ) BEGIN 
+								PATCH_IF( insert_offset <= ((lang_name & 0x7FFFFFFF) + type_dir) ) BEGIN
+									WRITE_LONG ( lang_dir + 16 + (lang_i * 8) ) ( lang_name + insert_count )
+								END
+							END
+							SET	data_entry = lang_offset + type_dir					
+							READ_LONG data_entry data_rva
+							PATCH_IF( insert_offset <= ((data_rva - rsrc_va) + rsrc_base ) ) BEGIN
+								WRITE_LONG data_entry (data_rva + insert_count)
+							END
+						END
+					END		
+				END	
+			END
+		END
+	END
+	
+	PATCH_IF( !embedded ) BEGIN // drop an external manifest
+		INNER_ACTION BEGIN
+// warning it must be "<<<<<<<< <new_file>\n" spaces or anything else between "<new_file>" and "\n" causes a fail...
+<<<<<<<< <new_file>
+>>>>>>>>
+			COPY ~<new_file>~ ~%DEST_FILE%.manifest~ // is %DEST_FILE% still reliable following an INNER_ACTION?
+				INSERT_BYTES 0 ( STRING_LENGTH ~%manifest%~ )
+				WRITE_EVALUATED_ASCII 0 ~%manifest%~
+		END
+	END
+END
+
+
+// Passed the DDCREATE_EMULATIONONLY flag to DirectDrawCreate() as an attempt to solve graphic issues
+DEFINE_PATCH_MACRO ForceDDrawHEL BEGIN 
+	SET success = 0
+	SPRINT module_name ~DDRAW.DLL~
+	SPRINT import_name ~DirectDrawCreate~
+	LAUNCH_PATCH_MACRO GetImportThunk
+	PATCH_IF( pointer != (0 - 1) ) BEGIN 		
+		// build a signature to find "jmp ds:[pfnDirectDrawCreate]"
+		DEFINE_ARRAY sig BEGIN 0xFF 0x25 todo todo todo todo END
+		DEFINE_ARRAY hex_chars BEGIN 0 1 2 3 4 5 6 7 8 9 A B C D E F END
+		SET nibble0 = ( ( pointer >> 0  ) & 15 )
+		SET nibble1 = ( ( pointer >> 4  ) & 15 )
+		SET nibble2 = ( ( pointer >> 8  ) & 15 )
+		SET nibble3 = ( ( pointer >> 12 ) & 15 )
+		SET nibble4 = ( ( pointer >> 16 ) & 15 )
+		SET nibble5 = ( ( pointer >> 20 ) & 15 )
+		SET nibble6 = ( ( pointer >> 24 ) & 15 )
+		SET nibble7 = ( ( pointer >> 28 ) & 15 )
+		SPRINT $sig(2) EVALUATE_BUFFER ~0x%hex_chars_%nibble1%%%hex_chars_%nibble0%%~	
+		SPRINT $sig(3) EVALUATE_BUFFER ~0x%hex_chars_%nibble3%%%hex_chars_%nibble2%%~
+		SPRINT $sig(4) EVALUATE_BUFFER ~0x%hex_chars_%nibble5%%%hex_chars_%nibble4%%~
+		SPRINT $sig(5) EVALUATE_BUFFER ~0x%hex_chars_%nibble7%%%hex_chars_%nibble6%%~
+		LAUNCH_PATCH_MACRO MakeSig
+		// assumes the first occurance is the only occurance of jmp [_imp_DirectDrawCreate]...
+		SET jmp_offset = INDEX_BUFFER( CASE_SENSITIVE EVALUATE_REGEXP ~%pattern%~ 0 )
+		PATCH_IF( jmp_offset != (0 - 1) ) BEGIN
+			// search for the CALL to the "jmp [_imp_DirectDrawCreate]"
+			// assumes only one call...
+			DEFINE_ARRAY sig BEGIN 0x6A 0x00 0xE8 xxxx xxxx xxxx xxxx END	// push 0; call ddcreate;
+			LAUNCH_PATCH_MACRO MakeSig
+			SET offset = 0
+			SET run_search_loop = 1
+			WHILE( run_search_loop != 0 ) BEGIN  
+				SET offset = INDEX_BUFFER( CASE_SENSITIVE EVALUATE_REGEXP ~%pattern%~ ( offset + 1 ) )
+				PATCH_IF( offset != (0 - 1) ) BEGIN
+					READ_LONG ( offset + 3 ) rel
+					PATCH_IF( ( offset + 7 + rel ) == jmp_offset ) BEGIN
+						WRITE_BYTE ( offset + 1 ) 0x02 // DDCREATE_EMULATIONONLY flag
+						SET success = 1
+						SET run_search_loop = 0
+					END
+				END
+				ELSE BEGIN
+					SET run_search_loop = 0
+				END
+			END
+		END
+	END
+	PATCH_IF( !success ) BEGIN
+		PATCH_FAIL ~Patch location not found.~
+	END
+END
+
+
+//  If flip is swapping double buffers, this "fix" will CAUSE cursor artifacts to occur
+//  If flip is blitting the back buffer to the front buffer, this will fix cursor artifacts
+//  We just tweak a cmp statement to change program flow such that info for the opposite buffer is used to earse the cursor 
+DEFINE_PATCH_MACRO CursorFix BEGIN 
+	//	caution: weak sig
+	DEFINE_ARRAY sig   BEGIN 0x1C 0x02 0x76 0x88 0x75 0x0E 0xA1 xxxx xxxx xxxx 0x00 0x83 xxxx xxxx xxxx 0x00 0x00 0x00 0x74 0xB5 0x8B xxxx xxxx 0x83 xxxx xxxx 0x00 END 
+	LAUNCH_PATCH_MACRO MakeSig 
+	SET offset = INDEX_BUFFER( CASE_SENSITIVE EVALUATE_REGEXP ~%pattern%~ ( 0 ) )
+	PATCH_IF( offset != (0 - 1) ) BEGIN
+		WRITE_BYTE ( offset + 26 ) 0x02
+	END
+	ELSE PATCH_WARN ~Patch location not found.~
+END
+
+	COPY ~%gameexe%~ ~%gameexe%~
+	LAUNCH_PATCH_MACRO DpiAware
+	MOVE ~ddrawfix/wined3d/ddraw.dll~   ~ddraw.dll~
+	MOVE ~ddrawfix/wined3d/libwine.dll~ ~libwine.dll~
+	MOVE ~ddrawfix/wined3d/wined3d.dll~ ~wined3d.dll~
+

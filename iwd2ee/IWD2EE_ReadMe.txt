@@ -14,7 +14,7 @@ The big changes described above are only applied if you install certain componen
 --Core Features--
 
 * Load times are much faster.
-* IWD2EE includes built-in widescreen compatibility, making the Widescreen Mod unnecessary. DO NOT INSTALL THE WIDESCREEN MOD WITH IWD2EE; IT WILL CRASH THE GAME. When you start IWD2EE, a menu opens that lets you set the game to a higher resolution.
+* IWD2EE includes built-in widescreen compatibility, making the Widescreen Mod unnecessary. DO NOT INSTALL THE WIDESCREEN MOD WITH IWD2EE; IT WILL CRASH THE GAME. When you start IWD2EE, a menu opens that lets you set the game to a higher resolution. Note that higher resolution settings do not apply to menus; they only apply when you load a save game.
 * IWD2EE includes a ddraw fix unless you already had one installed. This should improve performance.
 * Scrolling the screen should be smoother on some devices.
 * It is possible to scroll with the middle mouse button.
@@ -132,7 +132,7 @@ Monk of the Broken Ones:
 Monk of the Dark Moon:
 2nd level: The monk gains a sneak attack bonus of 1d6. For every 4 additional monk levels after level 2, the monk gains another 1d6 sneak attack damage.
 
-Fighters: Fighters get +1 to damage every 5 levels and +5% critical hit chance every 10 levels, and now the fighter-exclusive Weapon Specialization feats give +5 to hit and damage. All warriors get better saving throws and stronger attacks.
+Fighters: Fighters get +1 to damage every 5 levels and +5% critical hit chance every 10 levels, and can get Greater Weapon Focus in a weapon at level 8 and Greater Weapon Specialization at level 12. All warriors get better saving throws and stronger attacks.
 
 Paladins: Paladins get more spell slots, and they get them at lower levels. Paladins get an additional casting of Lay on Hands every 5 levels. Smite Evil is more powerful, and they get an additional casting of Smite Evil every 10 levels.
 
@@ -572,7 +572,9 @@ Chris Dix (She/Her) - aka @semiticgoddess - was the one who started the IWD2EE p
 
 @OlvynChuru created the second half of IWD2EE's components, created all the new items and almost all the new spells and feats. OlvynChuru was also responsible for all the changes to encounters and enemy AI and most of the changes to feats, items, and spells.
 
-@Bubb created IEex and most of the base functions and new opcodes that open new possibilities for modding. Bubb was also responsible for many of IWD2EE's greatest quality of life improvements, including quickloot, faster loading times, and built-in widescreen capability.
+@Bubb created most of the base functions and new opcodes that open new possibilities for modding. Bubb was also responsible for many of IWD2EE's greatest quality of life improvements, including quickloot, faster loading times, and built-in widescreen capability.
+
+@mrfearless created the IEex loader that enables Lua functions to be run in IWD2.
 
 @kjeron created many WeiDU functions that are used in IWD2EE's installation to modify IWD2 files.
 

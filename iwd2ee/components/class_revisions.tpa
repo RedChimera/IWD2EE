@@ -618,25 +618,25 @@ LAF ADD_FEAT_IWD2 INT_VAR nameref=RESOLVE_STR_REF(@384) descref=RESOLVE_STR_REF(
 
 INCLUDE ~%mod_folder%/components/attacks_of_opportunity_1.tpa~
 
-LAF EXTEND_FEAT_IWD2 INT_VAR id=9 descref=RESOLVE_STR_REF(@712) max=2 STR_VAR script=~Feats_CombatCasting~ prerequisite_script=~Prereq_CombatCasting~ END
-LAF EXTEND_FEAT_IWD2 INT_VAR id=48 descref=RESOLVE_STR_REF(@713) max=2 STR_VAR script=~Feats_PreciseShot~ prerequisite_script=~Prereq_PreciseShot~ END
+LAF EXTEND_FEAT_IWD2 INT_VAR id=9 offset=0x70C descref=RESOLVE_STR_REF(@712) max=2 STR_VAR script=~Feats_CombatCasting~ prerequisite_script=~Prereq_CombatCasting~ END
+LAF EXTEND_FEAT_IWD2 INT_VAR id=48 offset=0x70D descref=RESOLVE_STR_REF(@713) max=2 STR_VAR script=~Feats_PreciseShot~ prerequisite_script=~Prereq_PreciseShot~ END
 
 
 
 
-LAF EXTEND_FEAT_IWD2 INT_VAR id=57 descref=RESOLVE_STR_REF(@728) max=5 STR_VAR script=~Feats_WeaponProficiency~ prerequisite_script=~Prereq_WeaponProficiency~ END
-LAF EXTEND_FEAT_IWD2 INT_VAR id=56 descref=RESOLVE_STR_REF(@727) max=5 STR_VAR script=~Feats_WeaponProficiency~ prerequisite_script=~Prereq_WeaponProficiency~ END
-LAF EXTEND_FEAT_IWD2 INT_VAR id=55 descref=RESOLVE_STR_REF(@726) max=5 STR_VAR script=~Feats_WeaponProficiency~ prerequisite_script=~Prereq_WeaponProficiency~ END
-LAF EXTEND_FEAT_IWD2 INT_VAR id=54 descref=RESOLVE_STR_REF(@725) max=5 STR_VAR script=~Feats_WeaponProficiency~ prerequisite_script=~Prereq_WeaponProficiency~ END
-LAF EXTEND_FEAT_IWD2 INT_VAR id=53 descref=RESOLVE_STR_REF(@724) max=5 STR_VAR script=~Feats_WeaponProficiency~ prerequisite_script=~Prereq_WeaponProficiency~ END
-LAF EXTEND_FEAT_IWD2 INT_VAR id=44 descref=RESOLVE_STR_REF(@723) max=5 STR_VAR script=~Feats_WeaponProficiency~ prerequisite_script=~Prereq_WeaponProficiency~ END
-LAF EXTEND_FEAT_IWD2 INT_VAR id=43 descref=RESOLVE_STR_REF(@722) max=5 STR_VAR script=~Feats_WeaponProficiency~ prerequisite_script=~Prereq_WeaponProficiency~ END
-LAF EXTEND_FEAT_IWD2 INT_VAR id=42 descref=RESOLVE_STR_REF(@721) max=5 STR_VAR script=~Feats_WeaponProficiency~ prerequisite_script=~Prereq_WeaponProficiency~ END
-LAF EXTEND_FEAT_IWD2 INT_VAR id=41 descref=RESOLVE_STR_REF(@720) max=5 STR_VAR script=~Feats_WeaponProficiency~ prerequisite_script=~Prereq_WeaponProficiency~ END
-LAF EXTEND_FEAT_IWD2 INT_VAR id=40 descref=RESOLVE_STR_REF(@719) max=5 STR_VAR script=~Feats_WeaponProficiency~ prerequisite_script=~Prereq_WeaponProficiency~ END
-LAF EXTEND_FEAT_IWD2 INT_VAR id=39 descref=RESOLVE_STR_REF(@718) max=5 STR_VAR script=~Feats_WeaponProficiency~ prerequisite_script=~Prereq_WeaponProficiency~ END
-LAF EXTEND_FEAT_IWD2 INT_VAR id=38 descref=RESOLVE_STR_REF(@717) max=5 STR_VAR script=~Feats_WeaponProficiency~ prerequisite_script=~Prereq_WeaponProficiency~ END
-LAF EXTEND_FEAT_IWD2 INT_VAR id=18 descref=RESOLVE_STR_REF(@716) max=5 STR_VAR script=~Feats_WeaponProficiency~ prerequisite_script=~Prereq_WeaponProficiency~ END
+LAF EXTEND_FEAT_IWD2 INT_VAR id=57 offset=0x77F descref=RESOLVE_STR_REF(@728) max=5 STR_VAR script=~Feats_WeaponProficiency~ prerequisite_script=~Prereq_WeaponProficiency~ END
+LAF EXTEND_FEAT_IWD2 INT_VAR id=56 offset=0x77C descref=RESOLVE_STR_REF(@727) max=5 STR_VAR script=~Feats_WeaponProficiency~ prerequisite_script=~Prereq_WeaponProficiency~ END
+LAF EXTEND_FEAT_IWD2 INT_VAR id=55 offset=0x776 descref=RESOLVE_STR_REF(@726) max=5 STR_VAR script=~Feats_WeaponProficiency~ prerequisite_script=~Prereq_WeaponProficiency~ END
+LAF EXTEND_FEAT_IWD2 INT_VAR id=54 offset=0x778 descref=RESOLVE_STR_REF(@725) max=5 STR_VAR script=~Feats_WeaponProficiency~ prerequisite_script=~Prereq_WeaponProficiency~ END
+LAF EXTEND_FEAT_IWD2 INT_VAR id=53 offset=0x775 descref=RESOLVE_STR_REF(@724) max=5 STR_VAR script=~Feats_WeaponProficiency~ prerequisite_script=~Prereq_WeaponProficiency~ END
+LAF EXTEND_FEAT_IWD2 INT_VAR id=44 offset=0x77A descref=RESOLVE_STR_REF(@723) max=5 STR_VAR script=~Feats_WeaponProficiency~ prerequisite_script=~Prereq_WeaponProficiency~ END
+LAF EXTEND_FEAT_IWD2 INT_VAR id=43 offset=0x77E descref=RESOLVE_STR_REF(@722) max=5 STR_VAR script=~Feats_WeaponProficiency~ prerequisite_script=~Prereq_WeaponProficiency~ END
+LAF EXTEND_FEAT_IWD2 INT_VAR id=42 offset=0x77B descref=RESOLVE_STR_REF(@721) max=5 STR_VAR script=~Feats_WeaponProficiency~ prerequisite_script=~Prereq_WeaponProficiency~ END
+LAF EXTEND_FEAT_IWD2 INT_VAR id=41 offset=0x77D descref=RESOLVE_STR_REF(@720) max=5 STR_VAR script=~Feats_WeaponProficiency~ prerequisite_script=~Prereq_WeaponProficiency~ END
+LAF EXTEND_FEAT_IWD2 INT_VAR id=40 offset=0x779 descref=RESOLVE_STR_REF(@719) max=5 STR_VAR script=~Feats_WeaponProficiency~ prerequisite_script=~Prereq_WeaponProficiency~ END
+LAF EXTEND_FEAT_IWD2 INT_VAR id=39 offset=0x774 descref=RESOLVE_STR_REF(@718) max=5 STR_VAR script=~Feats_WeaponProficiency~ prerequisite_script=~Prereq_WeaponProficiency~ END
+LAF EXTEND_FEAT_IWD2 INT_VAR id=38 offset=0x777 descref=RESOLVE_STR_REF(@717) max=5 STR_VAR script=~Feats_WeaponProficiency~ prerequisite_script=~Prereq_WeaponProficiency~ END
+LAF EXTEND_FEAT_IWD2 INT_VAR id=18 offset=0x78D descref=RESOLVE_STR_REF(@716) max=5 STR_VAR script=~Feats_WeaponProficiency~ prerequisite_script=~Prereq_WeaponProficiency~ END
 
 COPY ~%mod_folder%/tables/WSPECIA2.2da~ ~override/WSPECIAL.2da~
 
@@ -738,7 +738,7 @@ BUT_ONLY
 COPY_EXISTING ~help03.2da~ ~override~
 	black_raven_order_name = RESOLVE_STR_REF(@566)
 	black_raven_order_description = RESOLVE_STR_REF(@567)
-	REPLACE_TEXTUALLY ~15\([ %TAB%]+[0-9]+[ %TAB%]+[0-9]+\)~ ~16\1~ 
+	REPLACE_TEXTUALLY ~15\([ %TAB%]+[0-9]+[ %TAB%]+[0-9]+\)~ ~16\1~
 	REPLACE_TEXTUALLY ~14\([ %TAB%]+[0-9]+[ %TAB%]+[0-9]+\)~ ~15\1~
 	REPLACE_TEXTUALLY ~13\([ %TAB%]+[0-9]+[ %TAB%]+[0-9]+\)~ ~13	%black_raven_order_name%	%black_raven_order_description%
 14\1~

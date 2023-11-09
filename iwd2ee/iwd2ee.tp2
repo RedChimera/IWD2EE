@@ -16,7 +16,7 @@ ALWAYS
 	ACTION_IF !FILE_EXISTS_IN_GAME ~usInitialModifications.txt~ BEGIN
 
 		OUTER_TEXT_SPRINT directoryname ~~
-		
+
 		SILENT
 		COPY ~./icewind2.ini~ ~./icewind2.ini~
 			REPLACE_EVALUATE
@@ -32,7 +32,7 @@ ALWAYS
 		ACTION_IF NOT ~%directoryname%~ STRING_EQUAL_CASE  ~~ BEGIN
 		
 			OUTER_SET correctdirectory = 0
-		
+
 			SILENT
 			COPY ~../%directoryname%/icewind2.ini~ ~../%directoryname%/icewind2.ini~
 				correctdirectory = 1
@@ -43,10 +43,28 @@ ALWAYS
 			ACTION_IF correctdirectory = 0 BEGIN
 				ABORT @98
 			END
-		
+
 		END
 
-
+		ACTION_IF NOT FILE_EXISTS ~./aqrit.cfg~ AND NOT FILE_EXISTS ~./ddraw.ini~ BEGIN
+/*
+			PRINT @94
+			ACTION_READLN ~input~
+			OUTER_WHILE !(IS_AN_INT %input%) OR (input != 1 AND input != 2) BEGIN
+				ACTION_READLN ~input~
+			END
+*/
+			UNINSTALL ~ddrawfix.tp2~ ~0~
+			UNINSTALL ~ddrawfix.tp2~ ~1~
+			UNINSTALL ~ddrawfix.tp2~ ~2~
+//			ACTION_IF input = 1 BEGIN
+				COPY ~%mod_folder%/ddrawfix~ ~./~
+				AT_NOW ~rmdir "Shaders" /s /q & xcopy "%mod_folder%\ddrawfix\Shaders" "Shaders" /i /s /e~ EXACT
+				AT_UNINSTALL ~rmdir "Shaders" /s /q~ EXACT
+//			END ELSE ACTION_IF input = 2 BEGIN
+//				INCLUDE ~%mod_folder%/components/ddrawfix2.tpa~
+//			END
+		END
 		INCLUDE ~%mod_folder%/components/initial_modifications.tpa~
 	END ELSE ACTION_IF (STRING_LENGTH ~%installedacomponent%~) = 4 AND NOT FILE_CONTAINS_EVALUATED (~WeiDU.log~ ~~~~~[%WNL%%LNL%%MNL%]~IWD2EE.IWD2EE.TP2~ ~~~~~) BEGIN
 		ABORT @100
@@ -79,6 +97,7 @@ LANGUAGE   ~English~
            ~iwd2ee/tra/English/racial_enemies.tra~
            ~iwd2ee/tra/English/misc.tra~
            ~iwd2ee/tra/English/more_persuasion_options.tra~
+           ~iwd2ee/tra/English/new_strings_after_release.tra~
 
 
 
