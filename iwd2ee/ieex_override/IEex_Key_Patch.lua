@@ -251,6 +251,126 @@
 		!jnz_dword :45F45F
 	]]})
 
+	--------------------------------------------------------------------------------------
+	-- Replace all GetAsyncKeyState() calls with a Raw Input implementation that fakes  --
+	-- GetAsyncKeyState()'s behavior. GetAsyncKeyState() sets the low bit of its return --
+	-- value when a key has been pressed since the last poll. This allows programs to   --
+	-- detect whether it missed a keydown event. However, this behavior is unreliable,  --
+	-- as the "since last poll" mechanism is OS-wide, which allows another program on   --
+	-- the system to consume a keypress before the engine can read it.                  --
+	--------------------------------------------------------------------------------------
+
+		---------------------------------------------------------------------------------
+		-- Create a hidden window on a separate thread that accepts Raw Input messages --
+		---------------------------------------------------------------------------------
+
+		-- CChitin_CreateWindow
+		IEex_HookRestore(0x791291, 0, 6, {[[
+			!push(ebx) ; hWnd ;
+			!call >IEex_Helper_RegisterRawInput
+		]]})
+
+		-------------------------------------------
+		-- Redirect all GetAsyncKeyState() calls --
+		-------------------------------------------
+
+		-- CScreenConnection_TimerAsynchronousUpdate
+		IEex_HookRestore(0x5FB53D, 2, 3, {"!call >IEex_Helper_GetAsyncKeyStateWrapper"})
+
+		-- CChitin_AsynchronousUpdate
+		IEex_HookRestore(0x78F538, 2, 6, {"!call >IEex_Helper_GetAsyncKeyStateWrapper"})
+		IEex_HookRestore(0x78F55F, 2, 6, {"!call >IEex_Helper_GetAsyncKeyStateWrapper"})
+		IEex_HookRestore(0x78F587, 2, 6, {"!call >IEex_Helper_GetAsyncKeyStateWrapper"})
+		IEex_HookRestore(0x78F620, 2, 3, {"!call >IEex_Helper_GetAsyncKeyStateWrapper"})
+		IEex_HookRestore(0x78F7E5, 2, 3, {"!call >IEex_Helper_GetAsyncKeyStateWrapper"})
+		IEex_HookRestore(0x78F9B7, 2, 3, {"!call >IEex_Helper_GetAsyncKeyStateWrapper"})
+		IEex_HookReturnNOPs(0x78FBC3, 1, {"!call >IEex_Helper_GetAsyncKeyStateWrapper"})
+
+		-- CChitin_B3AUTO_00790570
+		IEex_HookRestore(0x790585, 2, 3, {"!call >IEex_Helper_GetAsyncKeyStateWrapper"})
+		IEex_HookRestore(0x790591, 2, 3, {"!call >IEex_Helper_GetAsyncKeyStateWrapper"})
+		IEex_HookRestore(0x79059B, 2, 6, {"!call >IEex_Helper_GetAsyncKeyStateWrapper"})
+		IEex_HookRestore(0x7905D5, 2, 3, {"!call >IEex_Helper_GetAsyncKeyStateWrapper"})
+
+		-- CChitin_SelectEngine
+		IEex_HookRestore(0x7908EF, 2, 3, {"!call >IEex_Helper_GetAsyncKeyStateWrapper"})
+		IEex_HookRestore(0x7908FB, 2, 3, {"!call >IEex_Helper_GetAsyncKeyStateWrapper"})
+		IEex_HookRestore(0x790905, 2, 4, {"!call >IEex_Helper_GetAsyncKeyStateWrapper"})
+		IEex_HookRestore(0x79093C, 2, 3, {"!call >IEex_Helper_GetAsyncKeyStateWrapper"})
+
+		--------------------------------------------------------------------
+		-- Unused: Patches the engine's message pump to maintain WM_INPUT --
+		--------------------------------------------------------------------
+
+		if false then
+
+			IEex_HookReturnNOPs(0x792801, 35, {[[
+
+				!mark_esp
+
+				@loop_process_messages_before_WM_INPUT
+
+				!push(1)                       ; PM_REMOVE    | UINT wRemoveMsg    ;
+				!push(FE)                      ; WM_INPUT - 1 | UINT wMsgFilterMax ;
+				!push(0)                       ;              | UINT wMsgFilterMin ;
+				!push(0)                       ;              | HWND hWnd          ;
+				!marked_esp !lea(edx,[esp+10])
+				!push(edx)                     ;              | LPMSG lpMsg        ;
+				!call_[dword] #847434          ;              | PeekMessageA()     ;
+				!adjust_marked_esp(-14)
+
+				!test(eax,eax)
+				!jz_dword >loop_process_messages_after_WM_INPUT
+
+				!marked_esp !lea(edx,[esp+10])
+				!cmp([edx+4],12)               ; WM_QUIT      |                    ;
+				!je_dword :79285B
+
+				@not_WM_INPUT
+				!push(edx)                     ;              | const MSG *lpMsg   ;
+				!call_[dword] #84743C          ;              | TranslateMessage() ;
+				!adjust_marked_esp(-4)
+
+				!marked_esp !lea(edx,[esp+10])
+				!push(edx)                     ;              | const MSG *lpMsg   ;
+				!call_[dword] #847440          ;              | DispatchMessageA() ;
+				!adjust_marked_esp(-4)
+
+				!jmp_dword >loop_process_messages_before_WM_INPUT
+
+				@loop_process_messages_after_WM_INPUT
+
+				!push(1)                       ; PM_REMOVE,   | UINT wRemoveMsg    ;
+				!push(-1)                      ; -1 (max)     | UINT wMsgFilterMax ;
+				!push(100)                     ; WM_INPUT + 1 | UINT wMsgFilterMin ;
+				!push(0)                       ;              | HWND hWnd          ;
+				!marked_esp !lea(edx,[esp+10])
+				!push(edx)                     ;              | LPMSG lpMsg        ;
+				!call_[dword] #847434          ;              | PeekMessageA()     ;
+				!adjust_marked_esp(-14)
+
+				!test(eax,eax)
+				!jz_dword >done
+
+				!marked_esp !lea(edx,[esp+10])
+				!push(edx)                     ;              | const MSG *lpMsg   ;
+				!call_[dword] #84743C          ;              | TranslateMessage() ;
+				!adjust_marked_esp(-4)
+
+				!marked_esp !lea(edx,[esp+10])
+				!push(edx)                     ;              | const MSG *lpMsg   ;
+				!call_[dword] #847440          ;              | DispatchMessageA() ;
+				!adjust_marked_esp(-4)
+
+				!jmp_dword >loop_process_messages_after_WM_INPUT
+
+				@done
+				!jmp_dword :79282B ; Ensure a sync tick per message loop, else the engine
+					               ; might end up processing messages forever
+			]]})
+		end
+
+
 	IEex_EnableCodeProtection()
 
 end)()
