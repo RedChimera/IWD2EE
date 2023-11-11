@@ -88,7 +88,7 @@ IEex_KeyIDS = {
 IEex_Keys = IEex_Default( {}, IEex_Keys)
 IEex_Helper_InitBridgeFromTable("IEex_Keys", function()
 	for key = 0x1, 0xFE, 1 do
-		IEex_Keys[key] = {["isDown"] = false, ["pressedSinceLastPoll"] = false}
+		IEex_Keys[key] = {["isDown"] = false}
 	end
 end)
 
@@ -1507,15 +1507,6 @@ function IEex_Extern_AllowMouseScrollDown(CGameArea, nViewY)
 	return nEffectiveViewBottom < nAreaHeight
 end
 
-function IEex_Extern_CChitin_ProcessEvents_CheckFlagClobber(key)
-	IEex_AssertThread(IEex_Thread.Async, true)
-	local keyData = IEex_Helper_GetBridge("IEex_Keys", key)
-	if not keyData then return false end
-	local toReturn = IEex_Helper_GetBridge(keyData, "pressedSinceLastPoll")
-	IEex_Helper_SetBridge(keyData, "pressedSinceLastPoll", false)
-	return toReturn
-end
-
 function IEex_Extern_CChitin_ProcessEvents_CheckKeys()
 
 	-- https://docs.microsoft.com/en-us/windows/win32/inputdev/virtual-key-codes
@@ -1524,24 +1515,40 @@ function IEex_Extern_CChitin_ProcessEvents_CheckKeys()
 
 	for key = 0x1, 0xFE, 1 do
 
-		-- USER32.DLL::GetAsyncKeyState
-		local result = bit.band(IEex_Call(IEex_ReadDword(0x8474A8), {key}, nil, 0x0), 0xFFFF)
-		local isPhysicallyDown = bit.band(result, 0x8000) ~= 0x0
-		local pressedSinceLastPoll = bit.band(result, 0x1) ~= 0x0
+		-- IEex_Helper_GetAsyncKeyStateClient() allows up to 15 ([0-14]) clients (0 = engine) to query key state while
+		-- each having their own "pressed since last poll" state
+		--
+		-- The export "IEex_Helper_GetAsyncKeyStateWrapper" is IEex_Helper_GetAsyncKeyStateClient() with nClient = 0
+		local keyState = IEex_Helper_GetAsyncKeyStateClient(1, key)
+
+		local isDownRightNow = bit.band(keyState, 0x8000) ~= 0x0
+		local wasDown = bit.band(keyState, 0x1) ~= 0x0
 
 		local keyData = IEex_Helper_GetBridge("IEex_Keys", key)
-		local isDown = IEex_Helper_GetBridge(keyData, "isDown")
-		IEex_Helper_SetBridge(keyData, "pressedSinceLastPoll", pressedSinceLastPoll)
+		local isDownBridge = IEex_Helper_GetBridge(keyData, "isDown")
 
-		if isPhysicallyDown and not isDown then
-			IEex_Helper_SetBridge(keyData, "isDown", true)
+		-- Update bridge
+		if isDownRightNow then
+			if not isDownBridge then
+				IEex_Helper_SetBridge(keyData, "isDown", true)
+			end
+		elseif isDownBridge then
+			IEex_Helper_SetBridge(keyData, "isDown", false)
+		end
+
+		-- If the async thread is running really slow it might miss a keydown + keyup
+		-- This corrects missing exactly 1 keydown + keyup sequence for a key
+		local missedPress = not isDownRightNow and wasDown
+
+		-- Run key pressed listeners
+		if (isDownRightNow and not isDownBridge) or missedPress then
 			IEex_Helper_IterateBridge("IEex_KeyPressedListeners", function(_, funcName)
 				_G[funcName](key)
 			end)
 		end
 
-		if not isPhysicallyDown and isDown then
-			IEex_Helper_SetBridge(keyData, "isDown", false)
+		-- Run key released listeners
+		if (not isDownRightNow and isDownBridge) or missedPress then
 			IEex_Helper_IterateBridge("IEex_KeyReleasedListeners", function(_, funcName)
 				_G[funcName](key)
 			end)
