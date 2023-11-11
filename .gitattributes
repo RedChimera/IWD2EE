@@ -3,3 +3,6 @@
 *.bs text eol=lf
 *.glsl text eol=lf
 /pdb export-ignore
+.gitattributes export-ignore
+log.MD export-ignore
+readme.md export-ignore
