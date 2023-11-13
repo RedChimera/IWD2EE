@@ -99,6 +99,21 @@ function IEex_DllCall(dll, proc, args, ecx, pop)
 	return result
 end
 
+-- OS:WINDOWS
+function IEex_GetModuleProcAddress(module, proc)
+	local toReturn
+	IEex_RunWithStack(#proc + 1, function(esp)
+		IEex_WriteString(esp, proc)
+		toReturn = IEex_Call(IEex_Label("__imp__GetProcAddress"), {esp, module}, nil, 0x0)
+	end)
+	return toReturn
+end
+
+-- OS:WINDOWS
+function IEex_PostMessageA(hWnd, Msg, wParam, lParam)
+	IEex_DllCall("User32", "PostMessageA", {lParam, wParam, Msg, hWnd}, nil, 0x0)
+end
+
 -------------------
 -- Debug Utility --
 -------------------
@@ -1626,6 +1641,162 @@ function IEex_HookJump(address, restoreSize, assembly)
 	IEex_WriteAssembly(address, {"!jmp_dword", {hookCode, 4, 4}})
 end
 
+function IEex_HookJumpOnFail(address, restoreSize, assembly)
+
+	local storeBytes = function(startAddress, size)
+		local bytes = {}
+		local limit = startAddress + size - 1
+		for i = startAddress, limit, 1 do
+			table.insert(bytes, {IEex_ReadByte(i, 0), 1})
+		end
+		return bytes
+	end
+
+	local byteToDwordJmp = {
+		[0x70] = {{0x0F, 1}, {0x80, 1}},
+		[0x71] = {{0x0F, 1}, {0x81, 1}},
+		[0x72] = {{0x0F, 1}, {0x82, 1}},
+		[0x73] = {{0x0F, 1}, {0x83, 1}},
+		[0x74] = {{0x0F, 1}, {0x84, 1}},
+		[0x75] = {{0x0F, 1}, {0x85, 1}},
+		[0x76] = {{0x0F, 1}, {0x86, 1}},
+		[0x77] = {{0x0F, 1}, {0x87, 1}},
+		[0x78] = {{0x0F, 1}, {0x88, 1}},
+		[0x79] = {{0x0F, 1}, {0x89, 1}},
+		[0x7A] = {{0x0F, 1}, {0x8A, 1}},
+		[0x7B] = {{0x0F, 1}, {0x8B, 1}},
+		[0x7C] = {{0x0F, 1}, {0x8C, 1}},
+		[0x7D] = {{0x0F, 1}, {0x8D, 1}},
+		[0x7E] = {{0x0F, 1}, {0x8E, 1}},
+		[0x7F] = {{0x0F, 1}, {0x8F, 1}},
+		[0xEB] = {{0xE9, 1}},
+	}
+
+	local instructionByte = IEex_ReadByte(address, 0)
+	local instructionBytes = {}
+	local instructionSize = nil
+	local offset = nil
+
+	local switchBytes = byteToDwordJmp[instructionByte]
+	if switchBytes then
+		instructionBytes = switchBytes
+		instructionSize = 2
+		offset = IEex_ReadByte(address + 1, 0)
+	elseif instructionByte == 0xE9 then
+		instructionBytes = {{instructionByte, 1}}
+		instructionSize = 5
+		offset = IEex_ReadDword(address + 1)
+	else
+		instructionBytes = {{instructionByte, 1}, {IEex_ReadByte(address + 1, 0), 1}}
+		instructionSize = 6
+		offset = IEex_ReadDword(address + 2)
+	end
+
+	local afterInstruction = address + instructionSize
+	local jmpFailDest = afterInstruction + restoreSize
+	local restoreBytes = storeBytes(afterInstruction, restoreSize)
+	local jmpDest = afterInstruction + offset
+
+	IEex_DefineAssemblyLabel("jmp_success", jmpDest)
+
+	local hookCode = IEex_WriteAssemblyAuto(IEex_FlattenTable({
+		instructionBytes, {{jmpDest, 4, 4}},
+		assembly, [[
+		@jmp_fail ]],
+		restoreBytes, [[
+		!jmp_dword ]], {{jmpFailDest, 4, 4}},
+	}))
+
+	local nops = {}
+	for i = 1, instructionSize + restoreSize - 5 do
+		table.insert(nops, {0x90, 1})
+	end
+
+	IEex_WriteAssembly(address, IEex_FlattenTable({
+		"!jmp_dword", {{hookCode, 4, 4}},
+		nops
+	}))
+end
+
+function IEex_HookJumpOnSuccess(address, restoreSize, assembly)
+
+	local storeBytes = function(startAddress, size)
+		local bytes = {}
+		local limit = startAddress + size - 1
+		for i = startAddress, limit, 1 do
+			table.insert(bytes, {IEex_ReadByte(i, 0), 1})
+		end
+		return bytes
+	end
+
+	local byteToDwordJmp = {
+		[0x70] = {{0x0F, 1}, {0x80, 1}},
+		[0x71] = {{0x0F, 1}, {0x81, 1}},
+		[0x72] = {{0x0F, 1}, {0x82, 1}},
+		[0x73] = {{0x0F, 1}, {0x83, 1}},
+		[0x74] = {{0x0F, 1}, {0x84, 1}},
+		[0x75] = {{0x0F, 1}, {0x85, 1}},
+		[0x76] = {{0x0F, 1}, {0x86, 1}},
+		[0x77] = {{0x0F, 1}, {0x87, 1}},
+		[0x78] = {{0x0F, 1}, {0x88, 1}},
+		[0x79] = {{0x0F, 1}, {0x89, 1}},
+		[0x7A] = {{0x0F, 1}, {0x8A, 1}},
+		[0x7B] = {{0x0F, 1}, {0x8B, 1}},
+		[0x7C] = {{0x0F, 1}, {0x8C, 1}},
+		[0x7D] = {{0x0F, 1}, {0x8D, 1}},
+		[0x7E] = {{0x0F, 1}, {0x8E, 1}},
+		[0x7F] = {{0x0F, 1}, {0x8F, 1}},
+		[0xEB] = {{0xE9, 1}},
+	}
+
+	local instructionByte = IEex_ReadByte(address, 0)
+	local instructionBytes = {}
+	local instructionSize = nil
+	local offset = nil
+
+	local switchBytes = byteToDwordJmp[instructionByte]
+	if switchBytes then
+		instructionBytes = switchBytes
+		instructionSize = 2
+		offset = IEex_ReadByte(address + 1, 0)
+	elseif instructionByte == 0xE9 then
+		instructionBytes = {{instructionByte, 1}}
+		instructionSize = 5
+		offset = IEex_ReadDword(address + 1)
+	else
+		instructionBytes = {{instructionByte, 1}, {IEex_ReadByte(address + 1, 0), 1}}
+		instructionSize = 6
+		offset = IEex_ReadDword(address + 2)
+	end
+
+	local afterInstruction = address + instructionSize
+	local jmpFailDest = afterInstruction + restoreSize
+	local restoreBytes = storeBytes(afterInstruction, restoreSize)
+	local jmpDest = afterInstruction + offset
+
+	IEex_DefineAssemblyLabel("jmp_success", jmpDest)
+
+	local hookCode = IEex_WriteAssemblyAuto(IEex_FlattenTable({
+		instructionBytes, [[ >jmp_success_internal
+		@jmp_fail ]],
+		restoreBytes, [[
+		!jmp_dword ]], {{jmpFailDest, 4, 4}}, [[
+		@jmp_success_internal ]],
+		assembly, [[
+		!jmp_dword ]], {{jmpDest, 4, 4}},
+	}))
+
+	local nops = {}
+	for i = 1, instructionSize + restoreSize - 5 do
+		table.insert(nops, {0x90, 1})
+	end
+
+	IEex_WriteAssembly(address, IEex_FlattenTable({
+		"!jmp_dword", {{hookCode, 4, 4}},
+		nops
+	}))
+end
+
 function IEex_HookJumpAutoFail(address, restoreSize, assembly)
 
 	local storeBytes = function(startAddress, size)
@@ -1690,14 +1861,6 @@ function IEex_HookJumpAutoFail(address, restoreSize, assembly)
 	}))
 
 	IEex_WriteAssembly(address, {"!jmp_dword", {hookCode, 4, 4}})
-end
-
-function IEex_HookJumpOnSuccess(address, assembly)
-	local jmpFailDest = address + 6
-	local jmpDest = jmpFailDest + IEex_ReadDword(address + 2)
-	IEex_DefineAssemblyLabel("jmp_success", jmpDest)
-	IEex_DefineAssemblyLabel("jmp_fail", jmpFailDest)
-	IEex_WriteAssembly(address + 2, {{IEex_WriteAssemblyAuto(assembly), 4, 4}})
 end
 
 function IEex_HookJumpNoReturn(address, assembly)

@@ -38,7 +38,7 @@
 		]]},
 	})
 
-	IEex_HookJumpOnSuccess(0x453933, IEex_FlattenTable({
+	IEex_HookJumpOnSuccess(0x453933, 0, IEex_FlattenTable({
 		{[[
 			!mark_esp(3D8)
 			!add_eax_dword #400A

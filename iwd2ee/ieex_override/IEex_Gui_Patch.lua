@@ -798,7 +798,7 @@
 	-- IEex_Extern_OnActionbarUnhandledRButtonClick() --
 	----------------------------------------------------
 
-	IEex_HookJumpOnSuccess(0x5947DA, IEex_FlattenTable({
+	IEex_HookJumpOnSuccess(0x5947DA, 0, IEex_FlattenTable({
 		{[[
 			!push_all_registers_iwd2
 		]]},
