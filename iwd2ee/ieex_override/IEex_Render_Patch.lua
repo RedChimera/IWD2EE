@@ -199,24 +199,27 @@
 				!mov(eax,-1)
 
 				@no_error
+				!xor(ecx,ecx)
 				!cmp(eax,-1)
 				!je_dword >continue_normally
 
-				!xor(ecx,ecx)
 				!mov_cl_al
-				!jmp_dword >continue
-
-				@continue_normally
-				!xor(ecx,ecx)
-				!mov_cl_byte:[edx+dword] #E1
-
-				@continue
 				!pop(edi)
 				!pop(esi)
 				!pop(ebp)
 				!pop(edx)
 				!pop(ebx)
 				!pop(eax)
+				!jmp_dword >return
+
+				@continue_normally
+				!pop(edi)
+				!pop(esi)
+				!pop(ebp)
+				!pop(edx)
+				!pop(ebx)
+				!pop(eax)
+				!mov_cl_byte:[edx+dword] #E1
 			]]},
 		}))
 
