@@ -279,9 +279,10 @@ function IEex_Extern_OnPostCreatureProcessEffectList(creatureData)
 				local thetiming = IEex_ReadDword(eData + 0x24)
 				local theresource = IEex_ReadLString(eData + 0x30, 8)
 				local theinternal_flags = IEex_ReadDword(eData + 0xD8)
-				if theopcode == 500 and ((ex_on_tick_functions[theresource] == 1 and onTickFunctionsCalled[theresource] == nil) or ex_on_tick_functions[theresource] == 2) and (thetiming == 1 or thetiming == 2 or thetiming == 9 or thetiming == 4096) then
+				local funcCondition = ex_on_tick_functions[theresource]
+				if theopcode == 500 and ((funcCondition == 1 and onTickFunctionsCalled[theresource] == nil) or funcCondition == 2 or funcCondition == -1) and (thetiming == 1 or thetiming == 2 or thetiming == 9 or thetiming == 4096) then
 					usedFunction = true
-					if bit.band(theinternal_flags, 0x80) == 0 then
+					if bit.band(theinternal_flags, 0x80) == 0 and funcCondition ~= -1 then
 						foundOpcodeFunction = true
 						onTickFunctionsCalled[theresource] = true
 						IEex_WriteDword(eData + 0xD8, bit.bor(theinternal_flags, 0x80))
@@ -292,20 +293,18 @@ function IEex_Extern_OnPostCreatureProcessEffectList(creatureData)
 		end)
 	end
 	for funcName, funcCondition in pairs(ex_on_tick_functions) do
-		if funcCondition > 0 and not onTickFunctionsCalled[funcName] and ex_on_tick_default_functions[funcName] then
+		if funcCondition ~= 0 and not onTickFunctionsCalled[funcName] and ex_on_tick_default_functions[funcName] then
 			_G[ex_on_tick_default_functions[funcName]](creatureData)
 		end
 	end
 
-	if usedFunction then
+	if usedFunction and not foundOpcodeFunction then
 		IEex_IterateActorEffects(targetID, function(eData)
-			if not foundOpcodeFunction then
-				local theopcode = IEex_ReadDword(eData + 0x10)
-				local theresource = IEex_ReadLString(eData + 0x30, 8)
-				local theinternal_flags = IEex_ReadDword(eData + 0xD8)
-				if theopcode == 500 and bit.band(theinternal_flags, 0x80) > 0 then
-					IEex_WriteDword(eData + 0xD8, bit.band(theinternal_flags, 0xFFFFFF7F))
-				end
+			local theopcode = IEex_ReadDword(eData + 0x10)
+			local theresource = IEex_ReadLString(eData + 0x30, 8)
+			local theinternal_flags = IEex_ReadDword(eData + 0xD8)
+			if theopcode == 500 and bit.band(theinternal_flags, 0x80) > 0 then
+				IEex_WriteDword(eData + 0xD8, bit.band(theinternal_flags, 0xFFFFFF7F))
 			end
 		end)
 	end
@@ -377,7 +376,8 @@ function IEex_Extern_OnPostCreatureProcessEffectList(creatureData)
 		end
 	end
 	extraFlags = IEex_ReadDword(creatureData + 0x740)
-	if bit.band(extraFlags, 0x6100) == 0x4000 and IEex_ReadSignedByte(creatureData + 0x5622, 0x0) < 0 and not usedFunction and not IEex_IsPartyMember(targetID) and IEex_CheckGlobalEffect(0xFFFFFFFF) == false then return end
+	local visualHeight = IEex_ReadDword(creatureData + 0xE)
+	if bit.band(extraFlags, 0x6100) == 0x4000 and visualHeight == 0 and IEex_ReadSignedByte(creatureData + 0x5622, 0x0) < 0 and not usedFunction and not IEex_IsPartyMember(targetID) and IEex_CheckGlobalEffect(0xFFFFFFFF) == false and not IEex_GetActorSpellState(targetID, 218) then return end
 
 --[[
 	local areaData = IEex_ReadDword(creatureData + 0x12)

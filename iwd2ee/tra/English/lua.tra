@@ -324,6 +324,7 @@
 @55713=~<EXRCSPELL> was not recorded; it must target a party member or a point~
 @55714=~Currently there are no recorded spells to cast~
 @55715=~The spell~
+@55716=~Cast the spell <EXCCSPELL>~
 @55751=~Total Roll: <EXRRTOTAL>\nStored Total: <EXRRRECTOTAL>\n\n~
 @55752=~Unallocated Ability Scores:\n<EXRRUNALLOCATED>\n\n~
 @55753=~Press Z to reroll, X to store, C to recall, and V to reallocate ability scores.\n\n~

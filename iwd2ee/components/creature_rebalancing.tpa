@@ -1383,6 +1383,11 @@ COPY_EXISTING ~00SDYET.cre~ ~override~ ~00SSHYET.cre~ ~override~ ~00SSYET.cre~ ~
 	WRITE_ASCII specialscript2 ~USYETI~ #8
 	LPF	IWD2_ADD_CRE_ITEM INT_VAR equip=1 STR_VAR item=~USCWYETI~ slot=~weapon1~ mode=~replace~ END
 
+COPY_EXISTING ~00SDYET.cre~ ~override~
+	READ_LONG 0x20 ulgiash
+	ulgiash&=0xFFFFFEFF
+	WRITE_LONG 0x20 ulgiash
+
 COPY_EXISTING ~40YETITU.cre~ ~override~ ~40RYETIT.cre~ ~override~
 	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelfighter=4 newlevelrogue=3 END
 	WRITE_SHORT currenthp 56
@@ -2048,7 +2053,13 @@ COPY_EXISTING ~41BARWAR.cre~ ~override~ ~41RBAWAR.cre~ ~override~
 	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelbarbarian=5 END
 	LPF	IWD2_ADD_CRE_ITEM STR_VAR item=~00HIDE06~ slot=~armor~ mode=~replace~ END
 
+COPY_EXISTING ~00HIDE06.itm~ ~override/USCIHD06.itm~
+	READ_LONG 0x18 theitemflags
+	theitemflags&=0xFFFFFFFB
+	WRITE_LONG 0x18 theitemflags
+
 COPY_EXISTING ~00SBRSK1.cre~ ~override~ ~00SBRSK2.cre~ ~override~ ~00SBRSK3.cre~ ~override~
+	LPF	IWD2_ADD_CRE_ITEM STR_VAR item=~USCIHD06~ slot=~armor~ mode=~replace~ END
 	LPF	IWD2_ADD_CRE_ITEM STR_VAR item=~00CISHLC~ slot=~shield1~ mode=~replace~ END
 
 COPY_EXISTING ~41BARSHA.cre~ ~override~ ~41RBASHA.cre~ ~override~
@@ -6621,6 +6632,9 @@ COPY_EXISTING ~AR5201.are~ ~override~
 
 COPY_EXISTING ~AR5300.are~ ~override~
 	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR match_cre_file=~53MINOTH~ script_special2=~USMINOTA~ END
+	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR match_cre_file=~53DRWITH~ script_special3=~00AATBN~ END
+	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR match_cre_file=~53SORAPP~ script_special2=~53SORAPC~ script_combat=~00AATBN~ END
+	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR match_cre_file=~53MALAVO~ script_special3=~00AATGN~ END
 
 COPY_EXISTING ~AR5302.are~ ~override~
 	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR match_cre_file=~53MINOTH~ script_special2=~USMINOTA~ END

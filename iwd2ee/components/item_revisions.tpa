@@ -5539,7 +5539,7 @@ COPY_EXISTING ~11deird.sto~ ~override~ //Gallaway Trading Post
 	ADD_STORE_ITEM ~00BWLX99~ AFTER ~00BWLX02~ #1 #1 #1 ~IDENTIFIED~ #1 //Light Crossbow of Accuracy
 	ADD_STORE_ITEM ~00BWHX02~ AFTER ~00BWHX01~ #1 #1 #1 ~IDENTIFIED~ #1 //Masterwork Heavy Crossbow
 	ADD_STORE_ITEM ~00RTHF55~ AFTER ~00BWHX02~ #1 #1 #1 ~IDENTIFIED~ #1 //Mailripper
-	ADD_STORE_ITEM ~00RTHF15~ AFTER ~00DART02~ #20 #0 #0 ~IDENTIFIED~ #2 //Adron's Theorem darts
+//	ADD_STORE_ITEM ~00RTHF15~ AFTER ~00DART02~ #20 #0 #0 ~IDENTIFIED~ #2 //Adron's Theorem darts
 	ADD_STORE_ITEM ~USABAG01~ AFTER ~00RTHF50~ #0 #0 #0 ~IDENTIFIED~ #1 //Ammo Belt
 
 COPY_EXISTING ~11elytha.sto~ ~override~ //Elytharra store
@@ -5709,7 +5709,8 @@ COPY_EXISTING ~53HEGGR.sto~ ~override~ //Underdark weapon/armor store
 	ADD_STORE_ITEM ~00SHLD85~ AFTER ~00SHLD16~ #1 #1 #1 ~IDENTIFIED~ #1 //Tower Shield of Spell Resistance +2
 	ADD_STORE_ITEM ~USRTHF41~ AFTER ~00HAMT10~ #1 #1 #1 ~IDENTIFIED~ #1
 	ADD_STORE_ITEM ~USRTHF64~ AFTER ~00SWDT88~ #1 #1 #1 ~IDENTIFIED~ #1 //Pikeman's End
-	REMOVE_STORE_ITEM ~00STAF93~ ~00HAMT10~
+	REMOVE_STORE_ITEM ~00STAF93~ ~00HAMT10~ ~00RTHF56~
+	ADD_STORE_ITEM ~00RTHF56~ BEFORE ~00RTHF84~ #1 #1 #1 ~IDENTIFIED~ #1 //Makavail's Bane (fixing a bug that allowed you to buy multiple copies of it)
 
 COPY_EXISTING ~53KADRES.sto~ ~override~ //Kadresh drow store
 //	ADD_STORE_ITEM ~USCLCK48~ #1 #1 #1 ~IDENTIFIED~ #1 //Cloak of Iron
@@ -6176,7 +6177,7 @@ COPY_EXISTING ~30yquog.dlg~ ~override~ //Yquog dialogue
 
 COPY_EXISTING ~40bdawn.dlg~ ~override~ //Beodaewn dialogue
 	DECOMPILE_AND_PATCH BEGIN
-		REPLACE_TEXTUALLY CASE_INSENSITIVE ~ChangeStoreMarkup(\"40Bdawn\", 150, 70, 0)~ ~ChangeStoreMarkup("40Bdawn",120,55,0)~
+		REPLACE_TEXTUALLY CASE_INSENSITIVE ~ChangeStoreMarkup(\"40Bdawn\", *150, *70, *0)~ ~ChangeStoreMarkup("40Bdawn",120,55,0)~
 	END
 
 COPY_EXISTING ~50nym.dlg~ ~override~ //Nym dialogue
@@ -6195,6 +6196,11 @@ COPY_EXISTING ~51barud.dlg~ ~override~ //Barud Barzam (duergar leader) dialogue
 	END
 
 STRING_SET_EVALUATE 9254 @12900
+
+COPY_EXISTING ~53heggr.dlg~ ~override~
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ChangeStoreMarkup(\"53Heggr\",126,80,30)~ ~ChangeStoreMarkup("53Heggr",126,50,30)~
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ChangeStoreMarkup(\"53Heggr\",126,88,30)~ ~ChangeStoreMarkup("53Heggr",126,55,30)~
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ChangeStoreMarkup(\"53Heggr\",112,96,30)~ ~ChangeStoreMarkup("53Heggr",112,60,30)~
 
 COPY_EXISTING ~53ginafa.dlg~ ~override~ //Ginafae dialogue
 	REPLACE_TEXTUALLY CASE_INSENSITIVE ~53ClckHD~ ~USRTHF06~

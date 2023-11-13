@@ -3894,7 +3894,7 @@ Casting Time: 3
 Area of Effect: Caster
 Saving Throw: None
 
-This spell turns the ranger's missile attacks into flaming projectiles. The ranger's next 20 missile attacks deal an additional 1d6 fire damage.~
+This spell turns the ranger's missile attacks into flaming projectiles. The ranger's next 10 missile attacks deal an additional 1d6 fire damage.~
 @35451     = ~Curing Contingency~
 @36451     = ~Curing Contingency
 (Universal)
@@ -4046,12 +4046,12 @@ In casting this spell, the caster marks the target, who will be automatically pu
 (Abjuration)
 Level: Brd 7, Clr 6, Sor/Wiz 7, Helm 5
 Range: Caster
-Duration: 10 rounds
+Duration: 3 rounds
 Casting Time: 6
 Area of Effect: 20-foot radius
 Saving Throw: Fortitude negates
 
-This spell grants the caster an aura that repels nearby enemies, sending them hurtling away from the caster. Any enemy that comes within the area of effect must make a Fortitude save with +3 DC or be knocked back.~
+This spell grants the caster an aura that repels nearby enemies, sending them hurtling away from the caster. Any enemy that comes within the area of effect must make a Fortitude save with -5 DC or be knocked back.~
 @35654     = ~Wondrous Recall~
 @36654     = ~Wondrous Recall
 (Enchantment)

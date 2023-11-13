@@ -14,7 +14,7 @@ ALWAYS
 	INCLUDE ~%mod_folder%/components/iwd2ee_functions.tpa~ //Functions that may be used in multiple components
 
 	ACTION_IF !FILE_EXISTS_IN_GAME ~usInitialModifications.txt~ BEGIN
-
+/*
 		OUTER_TEXT_SPRINT directoryname ~~
 
 		SILENT
@@ -45,7 +45,7 @@ ALWAYS
 			END
 
 		END
-
+*/
 		ACTION_IF NOT FILE_EXISTS ~./aqrit.cfg~ AND NOT FILE_EXISTS ~./ddraw.ini~ BEGIN
 /*
 			PRINT @94

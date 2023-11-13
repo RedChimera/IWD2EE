@@ -1,6 +1,3 @@
-
-
-
 IEex_NEW_WEAPON_PROFICIENCY_COUNT = 3
 ex_proficiency_damage = {[0] = 0, [1] = 0, [2] = 0, [3] = 2, [4] = 2, [5] = 2}
 ex_proficiency_attack = {[0] = -4, [1] = 0, [2] = 1, [3] = 1, [4] = 1, [5] = 1}
@@ -277,7 +274,7 @@ ex_augury_spells = {
 ex_custom_scorcher = {["DEFAULT"] = {["TargetSpell"] = "USEFFAS1", ["PathSpell"] = "USEFFAS2", ["StartingTime"] = 0, ["Index"] = 1}, ["USWI864D"] = {["TargetSpell"] = "USWI864E", ["PathSpell"] = "USWI864E", ["StartingTime"] = 0, ["Index"] = 2}, ["USCHAINL"] = {["TargetSpell"] = "", ["PathSpell"] = "", ["StartingTime"] = 80, ["Index"] = 3}, }
 ex_noncumulative_opcode_functions = {["MEOP16"] = true, ["MEOP40"] = true, ["MEOP130"] = true, ["MEOP401"] = true, ["MEOP403"] = true, ["MEOP408"] = true, ["MEOP415"] = true, ["MEOP421"] = true, ["MEOP427"] = true, ["MEIMPALA"] = true, }
 ex_stat_scaling_functions = {["MESTATSC"] = true, ["MEHALFTH"] = true, ["MEPERFEC"] = true, ["MESPLSTC"] = true, }
-ex_on_tick_functions = {["MECLONE3"] = 1, ["MEPROJIE"] = 1, ["MEAREAGL"] = 1, ["MEGHOSTW"] = 1, ["METELMOV"] = 1, ["MEENLARG"] = 1, ["MEANSUP2"] = 2, ["MEBARRA2"] = 2, ["MEDRAGPA"] = 2, ["MEDRAGPR"] = 2, ["MEWINGBU"] = 2, ["MESPIN"] = 2, ["MEINTERI"] = 2, ["IEex_EvaluatePermanentRepeatingEffects"] = 0, ["IEex_HeightMod"] = 0, ["IEex_ExtraAttacks"] = 0, ["IEex_DuelHide"] = 0, }
+ex_on_tick_functions = {["MEHGTMOD"] = -1, ["MECLONE3"] = 1, ["MEPROJIE"] = 1, ["MEAREAGL"] = 1, ["MEGHOSTW"] = 1, ["METELMOV"] = 1, ["MEENLARG"] = 1, ["MEANSUP2"] = 2, ["MEBARRA2"] = 2, ["MEDRAGPA"] = 2, ["MEDRAGPR"] = 2, ["MEWINGBU"] = 2, ["MESPIN"] = 2, ["MEINTERI"] = 2, ["IEex_EvaluatePermanentRepeatingEffects"] = 0, ["IEex_HeightMod"] = 0, ["IEex_ExtraAttacks"] = 0, ["IEex_DuelHide"] = 0, }
 ex_on_tick_default_functions = {["MEENLARG"] = "IEex_ResetSize", }
 ex_stat_spells = {
 [1] = {[21] = "USRAGE3", [25] = "USRAGE4", [29] = "USRAGE5"}, -- Barbarian Rage

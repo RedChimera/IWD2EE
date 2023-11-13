@@ -940,6 +940,8 @@ COPY_EXISTING ~50PAIRI.cre~ ~override~
 COPY_EXISTING ~52SERSA.cre~ ~override~
 	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelmonk=12 STR_VAR updatehp=~max~ END
 	WRITE_LONG xp 67426
+	WRITE_ASCII smallportrait ~USSERS_S~ #8
+	WRITE_ASCII largeportrait ~USSERS_L~ #8
 	WRITE_BYTE fortitudesave 8
 	WRITE_BYTE reflexsave 8
 	WRITE_BYTE willsave 8

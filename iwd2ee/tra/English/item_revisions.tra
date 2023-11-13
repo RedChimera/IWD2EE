@@ -1423,7 +1423,7 @@ Special:
 Weight: 3 lb.~
 
 //@10383    = ~Wizard Robe of Cold Resistance~
-@10384    = ~Mage Robes of Cold Resistance are a common sight in the Sword Coast region, especially as one travels north towards Neverwinter and the Icewind Dales. Many young mages receive it as a gift from their instructors upon successfully completing their first five years of study. As with other such robes, they can only be worn by those of the wizardly profession.
+@10384    = ~Wizard Robes of Cold Resistance are a common sight in the Sword Coast region, especially as one travels north towards Neverwinter and the Icewind Dales. Many young mages receive it as a gift from their instructors upon successfully completing their first five years of study.
 
 STATISTICS:
 
@@ -3905,7 +3905,7 @@ Damage Type: Piercing
 Special:
   Move Silently: +6
   Hide: +6
-  Sneak attacks with this weapon deal an extra 3d6 damage
+  Backstab: If the wielder attacks from stealth or invisibility and hits a creature in the back with this weapon, it deals an additional 6d6 damage.
 Weight: 3 lb.
 Feat Requirement:  Simple Weapon, Small Blade
 Type:  One-handed~
@@ -3923,7 +3923,7 @@ Damage Type: Piercing
 Special:
   Move Silently: +12
   Hide: +12
-  Sneak attacks with this weapon deal an extra 5d6 damage
+  Backstab: If the wielder attacks from stealth or invisibility and hits a creature in the back with this weapon, it deals an additional 10d6 damage.
 Weight: 3 lb.
 Feat Requirement:  Simple Weapon, Small Blade
 Type:  One-handed~
@@ -7043,7 +7043,7 @@ Special:
   Spell Process: 50% chance target becomes Confused for 1 round (Will DC 33)
   Impact: Increased chance of scoring a critical hit
 Weight: 6 lb.
-Required Feat:  Martial Weapon, Flail
+Required Feat:  Simple Weapon, Mace
 Type:  One-handed~
 //@11387    = ~Troll Killer~
 @11388    = ~Most clubs are stout, hardwood sticks, narrow at the grip and wider at the end. This simple weapon has been used since mankind first began using tools. Anyone can find a good stout piece of wood and swing it; hence the club's widespread use. With minute traces of acid along its striking end, coupled with its unusually warm feel, one could surmise that this club would be especially effective against all trolls.
@@ -10934,7 +10934,7 @@ Spell Power: Grants all allies in a 20-foot radius +6 Strength for 10 rounds onc
 
 Weight: 1 lb.~
 //@12201    = ~Heart of Winter~ //HoF
-@12202    = ~The Heart of Winter is often confused with the legendary Heartstone Gem, a powerful scrying artifact that serves as the heart of the great tree community of Kuldahar. The Heart of Winter is not an object, but an expression frequently used by the Uthgart tribes of the north to refer to a warrior or creature that has rid itself of all except one driving focus - usually revenge or hatred. The expression is often used to describe the barbarian lord, Wylfdene, who returned to lead the barbarian tribes in a campaign against the Ten-Towns in the Year of the Cold Soul (1281 Dale Reckoning). According to legend, Wylfdene claimed to be the reincarnation of the shaman Jerrod, one of the barbarians greatest heroes and the one who sacrificed himself in the final battle against the archmage Arakon many hundreds of years ago. Claiming that his body had become home to Jerrod's spirit, Wylfdene rallied the tribes of the North to war to retake the lands that he claimed had been seized by the southerners of the Ten-Towns. Establishing a great war camp in Bremen's Run, a narrow canyon under the shadow of Kelvin's Cairn, he fought several quick battles against the dwarves and townsfolk of the region until a small band of adventurers arrived in the town of Lonelywood to try to carve out a peace between the Ten-Towns and the barbarians. Their efforts at diplomacy are said to have failed, but they succeeded in defeating Wylfdene and saving the Ten-Towns from destruction. It is believed that these adventurers are the only reason the Ten-Towns exist (and thrive) to this day. 
+@12202    = ~The Heart of Winter is often confused with the legendary Heartstone Gem, a powerful scrying artifact that serves as the heart of the great tree community of Kuldahar. The Heart of Winter is not an object, but an expression frequently used by the Uthgart tribes of the north to refer to a warrior or creature that has rid itself of all except one driving focus - usually revenge or hatred. The expression is often used to describe the barbarian lord, Wylfdene, who returned to lead the barbarian tribes in a campaign against the Ten-Towns in the Year of the Cold Soul (1281 Dale Reckoning). According to legend, Wylfdene claimed to be the reincarnation of the shaman Jerrod, one of the barbarians greatest heroes and the one who sacrificed himself in the final battle against the archmage Arakon many hundreds of years ago. Claiming that his body had become home to Jerrod's spirit, Wylfdene rallied the tribes of the North to war to retake the lands that he claimed had been seized by the southerners of the Ten-Towns. Establishing a great war camp in Bremen's Run, a narrow canyon under the shadow of Kelvin's Cairn, he fought several quick battles against the dwarves and townsfolk of the region until a small band of adventurers arrived in the town of Lonelywood to try to carve out a peace between the Ten-Towns and the barbarians. Their efforts at diplomacy are said to have failed, but they succeeded in defeating Wylfdene and saving the Ten-Towns from destruction. It is believed that these adventurers are the only reason the Ten-Towns exist (and thrive) to this day.
 
 What happened to these brave adventurers is unknown. The last known record of them is a sighting of them at the Whistling Gallows Inn in Lonelywood, where they spoke with a halfling traveler who claimed to know of a place where great riches could be found. Shortly after this, the adventurers and the halfling vanished and were never heard from again. 
 
@@ -11260,13 +11260,13 @@ Grants a creature a +4 generic AC bonus for 6 rounds
 Range: 100 ft.
 Weight: 1 lb.~
 @12267    = ~Elemental Breach Wand~
-@12268    = ~Wands are 1 1/4 feet long and slender. They are made of ivory, bone, or wood and are usually tipped with something - metal, crystal, stone, etc. They are fragile and tend to break easily. Because of this, they are often kept in cases. 
+@12268    = ~Wands are 1 1/4 feet long and slender. They are made of ivory, bone, or wood and are usually tipped with something - metal, crystal, stone, etc. They are fragile and tend to break easily. Because of this, they are often kept in cases.
 
 Wands are powered by charges, each use costing one or more charges (depending on the item). When a wand runs out of charges, it is consumed and destroyed.
 
 STATISTICS:
 
-Reduces a creature's resistance to fire, cold, electricity and acid by 10 (no save, non-cumulative)
+Causes a creature to take 30% more fire, cold, electricity, and acid damage for 20 rounds (no save, non-cumulative)
 Range: 100 ft.
 Weight: 1 lb.~
 @12269    = ~Wand of Dazzling Colors~
@@ -12822,7 +12822,7 @@ Special:
   Splitting: When fired, these bolts split into two bolts; each will deal full damage
 Weight:  0 lb.
 Launcher:  Crossbow~
-@12639    = ~Bullets of Bludgeoning Weakness +5~
+@12639    = ~Bullets of Shattering +5~
 @12640    = ~Magical currents are embedded inside this bullet so that it seems a little more balanced and lighter as it jumps towards an opponent.
 
 STATISTICS:
@@ -12832,7 +12832,7 @@ Attack Bonus:  +5
 Enchantment:  +5
 Damage Type:  Missile (bludgeoning)
 Special:
-  Bludgeoning Weakness: Lowers the target's bludgeoning resistance by 5 for 3 rounds (cumulative, no save)
+  Deals x3 damage on a critical hit
 Weight: 0 lb.
 Launcher:  Sling~
 @12641    = ~Boulders +2~

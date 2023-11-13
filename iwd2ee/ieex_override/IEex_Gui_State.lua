@@ -1030,6 +1030,7 @@ function IEex_Extern_OnActionbarUnhandledRButtonClick(nIndex)
 			local nScrollIndex = IEex_GetActionbarScrollIndex()
 			local nSpellButtonIndex = nScrollIndex + (nButtonType - 0x15)
 			local buttonData = IEex_GetAtCPtrListIndex(IEex_GetCurrentActionbarQuickButtons(), nSpellButtonIndex)
+			if not buttonData then return end
 			local resref = IEex_ReadLString(buttonData + 0x1A + 0x6, 8) -- CButtonData.m_abilityId.m_res
 			IEex_LaunchWorldScreenSpellInfo(resref)
 		end
@@ -2431,22 +2432,172 @@ function IEex_Extern_OnUpdateRecordDescription(CScreenCharacter, CGameSprite, CU
 			end
 		elseif string.match(line, sneakAttackDamageString .. ":") then
 			local rogueLevel = IEex_GetActorStat(targetID, 104)
-			local sneakAttackDiceNumber = math.floor((rogueLevel + 1) / 2) + IEex_ReadByte(creatureData + 0x744 + ex_feat_name_id["ME_IMPROVED_SNEAK_ATTACK"], 0x0)
-			if IEex_GetActorSpellState(targetID, 192) then
-				IEex_IterateActorEffects(targetID, function(eData)
-					local theopcode = IEex_ReadDword(eData + 0x10)
-					local theparameter2 = IEex_ReadDword(eData + 0x20)
-					if theopcode == 288 and theparameter2 == 192 then
-						local theparameter1 = IEex_ReadDword(eData + 0x1C)
-						local thesavingthrow = IEex_ReadDword(eData + 0x40)
-						local theresource = IEex_ReadLString(eData + 0x30, 8)
-						if bit.band(thesavingthrow, 0x20000) == 0 and (bit.band(thesavingthrow, 0x40000) > 0 or rogueLevel > 0) then
-							sneakAttackDiceNumber = sneakAttackDiceNumber + theparameter1
+			local sneakAttackDiceNumberMainHand = math.floor((rogueLevel + 1) / 2) + IEex_ReadByte(creatureData + 0x744 + ex_feat_name_id["ME_IMPROVED_SNEAK_ATTACK"], 0x0)
+			local sneakAttackDiceNumberOffHand = sneakAttackDiceNumberMainHand
+			local isLauncher = false
+			local numWeapons = 0
+			IEex_IterateActorEffects(targetID, function(eData)
+				local theopcode = IEex_ReadDword(eData + 0x10)
+				local theparameter2 = IEex_ReadDword(eData + 0x20)
+				local thespecial = IEex_ReadDword(eData + 0x48)
+				if theopcode == 288 and theparameter2 == 192 then
+					local theparameter1 = IEex_ReadDword(eData + 0x1C)
+					local thesavingthrow = IEex_ReadDword(eData + 0x40)
+					local theresource = IEex_ReadLString(eData + 0x30, 8)
+					if bit.band(thesavingthrow, 0x30000) == 0 and (bit.band(thesavingthrow, 0x40000) > 0 or rogueLevel > 0) then
+						sneakAttackDiceNumberMainHand = sneakAttackDiceNumberMainHand + theparameter1
+						sneakAttackDiceNumberOffHand = sneakAttackDiceNumberOffHand + theparameter1
+					end
+				elseif theopcode == 288 and theparameter2 == 241 then
+					if thespecial == 5 then
+						numWeapons = numWeapons + 1
+					elseif thespecial == 7 then
+						isLauncher = true
+					end
+				end
+			end)
+			local weaponSlot = IEex_ReadByte(creatureData + 0x4BA4, 0x0)
+			local weaponHeader = IEex_ReadWord(creatureData + 0x4BA6, 0x0)
+			local slotData = IEex_ReadDword(creatureData + 0x4AD8 + weaponSlot * 0x4)
+			local weaponRES = ""
+			local weaponWrapper = 0
+--			local headerType = 1
+			local offhandSlotData = 0
+			local offhandRES = ""
+			if slotData > 0 then
+				weaponRES = IEex_ReadLString(slotData + 0xC, 8)
+				local weaponWrapper = IEex_DemandRes(weaponRES, "ITM")
+				if weaponWrapper:isValid() then
+					local weaponData = weaponWrapper:getData()
+					local numHeaders = IEex_ReadSignedWord(weaponData + 0x68, 0x0)
+					if weaponHeader >= numHeaders then
+						weaponHeader = 0
+					end
+					local numEffects = IEex_ReadWord(weaponData + 0x82 + weaponHeader * 0x38 + 0x1E, 0x0)
+					local firstEffectIndex = IEex_ReadWord(weaponData + 0x82 + weaponHeader * 0x38 + 0x20, 0x0)
+--					local itemType = IEex_ReadWord(weaponData + 0x1C, 0x0)
+--					headerType = IEex_ReadByte(weaponData + 0x82 + weaponHeader * 0x38, 0x0)
+					local effectOffset = IEex_ReadDword(weaponData + 0x6A)
+					local numGlobalEffects = IEex_ReadWord(weaponData + 0x70, 0x0)
+					for i = 0, numGlobalEffects - 1, 1 do
+						local offset = weaponData + effectOffset + i * 0x30
+						local theopcode = IEex_ReadWord(offset, 0x0)
+						local theparameter2 = IEex_ReadDword(offset + 0x8)
+						if theopcode == 288 and theparameter2 == 192 then
+							local theparameter1 = IEex_ReadDword(offset + 0x4)
+							local thesavingthrow = IEex_ReadDword(offset + 0x24)
+							if bit.band(thesavingthrow, 0x30000) == 0x10000 and (bit.band(thesavingthrow, 0x40000) > 0 or rogueLevel > 0) then
+								sneakAttackDiceNumberMainHand = sneakAttackDiceNumberMainHand + theparameter1
+							end
 						end
 					end
-				end)
+					for i = firstEffectIndex, firstEffectIndex + numEffects - 1, 1 do
+						local offset = weaponData + effectOffset + i * 0x30
+						local theopcode = IEex_ReadWord(offset, 0x0)
+						local theresource = IEex_ReadLString(offset + 0x14, 8)
+						if theopcode == 500 and theresource == "EXDAMAGE" then
+							local headerExtraSneakAttackDice = IEex_ReadByte(offset + 0x6, 0x0)
+							local thesavingthrow = IEex_ReadDword(offset + 0x24)
+							if bit.band(thesavingthrow, 0x1800000) == 0x1800000 and sneakAttackDiceNumberMainHand > 0 then
+								sneakAttackDiceNumberMainHand = sneakAttackDiceNumberMainHand + headerExtraSneakAttackDice
+							end
+						end
+					end
+				end
+				weaponWrapper:free()
 			end
-			line = string.gsub(line, "%d+d6", sneakAttackDiceNumber .. "d6")
+			if weaponSlot == 42 and numWeapons >= 2 then
+				numWeapons = 1
+			end
+			if numWeapons >= 2 and weaponSlot >= 43 then
+				offhandSlotData = IEex_ReadDword(creatureData + 0x4AD8 + (weaponSlot + 1) * 0x4)
+				if offhandSlotData > 0 then
+					offhandRES = IEex_ReadLString(offhandSlotData + 0xC, 8)
+					local offhandWrapper = IEex_DemandRes(offhandRES, "ITM")
+					if offhandWrapper:isValid() then
+						local weaponData = offhandWrapper:getData()
+						local numEffects = IEex_ReadWord(weaponData + 0x82 + 0x1E, 0x0)
+						local firstEffectIndex = IEex_ReadWord(weaponData + 0x82 + 0x20, 0x0)
+	--					local itemType = IEex_ReadWord(weaponData + 0x1C, 0x0)
+	--					headerType = IEex_ReadByte(weaponData + 0x82 + weaponHeader * 0x38, 0x0)
+						local effectOffset = IEex_ReadDword(weaponData + 0x6A)
+						local numGlobalEffects = IEex_ReadWord(weaponData + 0x70, 0x0)
+						for i = 0, numGlobalEffects - 1, 1 do
+							local offset = weaponData + effectOffset + i * 0x30
+							local theopcode = IEex_ReadWord(offset, 0x0)
+							local theparameter2 = IEex_ReadDword(offset + 0x8)
+							if theopcode == 288 and theparameter2 == 192 then
+								local theparameter1 = IEex_ReadDword(offset + 0x4)
+								local thesavingthrow = IEex_ReadDword(offset + 0x24)
+								if bit.band(thesavingthrow, 0x30000) == 0x10000 and (bit.band(thesavingthrow, 0x40000) > 0 or rogueLevel > 0) then
+									sneakAttackDiceNumberOffHand = sneakAttackDiceNumberOffHand + theparameter1
+								end
+							end
+						end
+						for i = firstEffectIndex, firstEffectIndex + numEffects - 1, 1 do
+							local offset = weaponData + effectOffset + i * 0x30
+							local theopcode = IEex_ReadWord(offset, 0x0)
+							local theresource = IEex_ReadLString(offset + 0x14, 8)
+							if theopcode == 500 and theresource == "EXDAMAGE" then
+								local headerExtraSneakAttackDice = IEex_ReadByte(offset + 0x6, 0x0)
+								local thesavingthrow = IEex_ReadDword(offset + 0x24)
+								if bit.band(thesavingthrow, 0x1800000) == 0x1800000 and sneakAttackDiceNumberOffHand > 0 then
+									sneakAttackDiceNumberOffHand = sneakAttackDiceNumberOffHand + headerExtraSneakAttackDice
+								end
+							end
+						end
+					end
+					offhandWrapper:free()
+				end
+			end
+			if isLauncher then
+				local weaponSet = IEex_ReadByte(creatureData + 0x4C68, 0x0)
+				local launcherSlotData = IEex_ReadDword(creatureData + 0x4AD8 + (43 + 2 * weaponSet) * 0x4)
+				if launcherSlotData > 0 then
+					local launcherRES = IEex_ReadLString(launcherSlotData + 0xC, 8)
+					local launcherWrapper = IEex_DemandRes(launcherRES, "ITM")
+					if launcherWrapper:isValid() then
+						local weaponData = launcherWrapper:getData()
+						local numHeaders = IEex_ReadSignedWord(weaponData + 0x68, 0x0)
+						local numEffects = IEex_ReadWord(weaponData + 0x82 + 0x1E, 0x0)
+						local firstEffectIndex = IEex_ReadWord(weaponData + 0x82 + 0x20, 0x0)
+	--					local itemType = IEex_ReadWord(weaponData + 0x1C, 0x0)
+	--					headerType = IEex_ReadByte(weaponData + 0x82 + weaponHeader * 0x38, 0x0)
+						local effectOffset = IEex_ReadDword(weaponData + 0x6A)
+						local numGlobalEffects = IEex_ReadWord(weaponData + 0x70, 0x0)
+						for i = 0, numGlobalEffects - 1, 1 do
+							local offset = weaponData + effectOffset + i * 0x30
+							local theopcode = IEex_ReadWord(offset, 0x0)
+							local theparameter2 = IEex_ReadDword(offset + 0x8)
+							if theopcode == 288 and theparameter2 == 192 then
+								local theparameter1 = IEex_ReadDword(offset + 0x4)
+								local thesavingthrow = IEex_ReadDword(offset + 0x24)
+								if bit.band(thesavingthrow, 0x30000) == 0x10000 and (bit.band(thesavingthrow, 0x40000) > 0 or rogueLevel > 0) then
+									sneakAttackDiceNumberMainHand = sneakAttackDiceNumberMainHand + theparameter1
+								end
+							end
+						end
+						for i = firstEffectIndex, firstEffectIndex + numEffects - 1, 1 do
+							local offset = weaponData + effectOffset + i * 0x30
+							local theopcode = IEex_ReadWord(offset, 0x0)
+							local theresource = IEex_ReadLString(offset + 0x14, 8)
+							if theopcode == 500 and theresource == "EXDAMAGE" then
+								local headerExtraSneakAttackDice = IEex_ReadByte(offset + 0x6, 0x0)
+								local thesavingthrow = IEex_ReadDword(offset + 0x24)
+								if bit.band(thesavingthrow, 0x1800000) == 0x1800000 and sneakAttackDiceNumberMainHand > 0 then
+									sneakAttackDiceNumberMainHand = sneakAttackDiceNumberMainHand + headerExtraSneakAttackDice
+								end
+							end
+						end
+					end
+					launcherWrapper:free()
+				end
+			end
+			if numWeapons >= 2 and weaponSlot >= 43 then
+				line = string.gsub(line, "%d+d6", sneakAttackDiceNumberMainHand .. "d6/" .. sneakAttackDiceNumberOffHand .. "d6")
+			else
+				line = string.gsub(line, "%d+d6", sneakAttackDiceNumberMainHand .. "d6")
+			end
 		elseif string.match(line, turnUndeadLevelString .. ":") then
 			local clericLevel = IEex_GetActorStat(targetID, 98)
 			local paladinLevel = IEex_GetActorStat(targetID, 102)

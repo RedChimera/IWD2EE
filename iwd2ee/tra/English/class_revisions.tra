@@ -139,7 +139,7 @@ While this ability is active, you gain an additional attack per round with any r
 By using this ability, the priest can cause one or more undead creatures within sight to flee. The higher the priest's level and Charisma bonus, the higher the level of undead they can turn. If the priest is much higher level than the undead, they will instead be destroyed (if the priest is good, or a neutral worshipper of a non-evil deity) or brought under the priest's control (if the priest is evil, or a neutral worshipper of an evil deity).~
 @227    = ~Wild Shape: Winter Wolf
 
-The druid shapeshifts into a winter wolf. While in winter wolf form, the Druid can is immune to cold and can attack once per round with the winter wolf's frost breath, which deals 4d4 cold damage (Reflex DC 10 for half). Every 5 levels thereafter, the breath damage increases by 2d4 and the save DC increases by 5.~
+The druid shapeshifts into a winter wolf. While in winter wolf form, the Druid is immune to cold and can attack once per round with the winter wolf's frost breath, which deals 4d4 cold damage (Reflex DC 10 for half). Every 5 levels thereafter, the breath damage increases by 2d4 and the save DC increases by 5.~
 @228    = ~Wild Shape: Polar Bear
 
 The druid shapeshifts into a polar bear. While in polar bear form, the Druid gains an additional attack per round compared to his or her natural form. Every 3 levels thereafter, the polar bear form gains +1 to Strength, Dexterity and Constitution, and its attack damage increases.~
@@ -870,7 +870,6 @@ Hit Points per Level: 1-10
 
 Advantages:
 * Proficient with all simple and martial weapons, light armor, medium armor, and shields.
-* Rangers gain the Rapid Shot feat at level 1.
 * Rangers may select a Favored Enemy at first level. They gain +1 to attack and +4 to damage against creatures of that race type. Rangers gain an additional Favored Enemy every five levels, and the attack bonus against previous Favored Enemies increases by 1.
 * Rangers can fight with two weapons as if they had the feats Ambidexterity and Two-Weapon Fighting if they are wearing light or no armor only.
 * 2nd level: Spellcasting. Rangers gain the ability to cast spells.
@@ -1438,7 +1437,7 @@ When taken a second time, the feat prevents you from provoking any attacks of op
 
 You are admired for your single-minded determination and clarity of purpose.  You are difficult to distract by spell or blow.
 
-Benefit: You gain a +1 bonus on Will saves and a +2 bonus on Concentration checks. You also gain a +6 bonus to saving throws against feints, grapples, and knockdowns/trip attacks.~
+Benefit: You gain a +1 bonus on Will saves and a +2 bonus on Concentration checks. You are also more resistant to feints, grapples, and knockdowns/trip attacks, which get -6 DC against you.~
 @715    = ~DASH:
 
 Your character moves a little faster than his or her comrades.

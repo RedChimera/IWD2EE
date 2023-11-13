@@ -182,10 +182,10 @@ COPY_EXISTING_REGEXP ~.*\.spl~ ~override~
 	END
 	BUT_ONLY_IF_IT_CHANGES
 
-COPY_EXISTING_REGEXP ~..BOWS..\.itm~ ~override~ ~..BOWP..\.itm~ ~override~ ~..BWLX..\.itm~ ~override~ ~..HFBS..\.itm~ ~override~ ~..HFBP..\.itm~ ~override~ ~..HFLX..\.itm~ ~override~
+COPY_EXISTING_REGEXP ~..BOWS..\.itm~ ~override~ ~..BOWP..\.itm~ ~override~ ~..BWLX..\.itm~ ~override~ ~..SLNG..\.itm~ ~override~ ~..HFBS..\.itm~ ~override~ ~..HFBP..\.itm~ ~override~ ~..HFLX..\.itm~ ~override~ ~..HFSG..\.itm~ ~override~
 	READ_SHORT 0x68 thenumheaders
 	READ_SHORT 0x1C theitemtype
-	PATCH_IF thenumheaders > 0 AND (theitemtype = 15 OR theitemtype = 27) BEGIN
+	PATCH_IF thenumheaders > 0 AND (theitemtype = 15 OR theitemtype = 18 OR theitemtype = 27) BEGIN
 		LPF ADD_ITEM_EQEFFECT INT_VAR opcode=288 target=1 timing=2 parameter1=1 parameter2=192 savingthrow=0x10000 STR_VAR resource=~USSNEAKX~ END
 	END
 	IF_EXISTS
