@@ -2050,7 +2050,7 @@ function IEex_InstallQuickloot()
 		["width"]           = w1,
 		["height"]          = h1,
 		["hasBackground"]   = 1,
-		["backgroundImage"] = IEex_GetPanelBackgroundImage(panel1Memory)
+		["backgroundImage"] = "B3QKLOOT"
 	})
 
 	for i = 7, 16 do
