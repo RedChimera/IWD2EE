@@ -1053,6 +1053,15 @@
 	IEex_WriteDword(0x855AC8, noNeedRenderWhenInventoryPopupOpen) -- Inventory Portraits
 	IEex_WriteDword(0x85C770, noNeedRenderWhenInventoryPopupOpen) -- Portrait Health Bars
 
+	--------------------------------------------------------------
+	-- Allow CHU files to define panels at negative coordinates --
+	--------------------------------------------------------------
+
+	IEex_WriteAssembly(0x4D2822, {"!movsx_eax_word:[edi+byte] 04"})
+	IEex_WriteAssembly(0x4D2828, {"!movsx_ecx_word:[edi+byte] 06"})
+	IEex_WriteAssembly(0x4D27F4, {"!movsx_eax_word:[edi+byte] 04"})
+	IEex_WriteAssembly(0x4D27FA, {"!movsx_ecx_word:[edi+byte] 06"})
+
 	IEex_EnableCodeProtection()
 
 end)()
