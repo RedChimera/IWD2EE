@@ -12,9 +12,9 @@
 	-- Define Assembly Functions --
 	-------------------------------
 
-	----------------------
-	-- IEex_ApplyResref --
-	----------------------
+	------------------------
+	-- IEex_ApplyResref() --
+	------------------------
 
 	-- push resref
 	-- push share
@@ -81,6 +81,44 @@
 
 		!restore_stack_frame
 		!ret_word 08 00
+	]]})
+
+	-------------------------
+	-- IEex_GetCursorPos() --
+	-------------------------
+
+	local lock_IEex_FakeCursorPosMem = IEex_Helper_GetOrCreateGlobalLock("IEex_FakeCursorPosMem")
+
+	-- push &tagPOINT
+	IEex_WriteAssemblyAuto({[[
+
+		$IEex_GetCursorPos
+
+		!push_dword ]], {lock_IEex_FakeCursorPosMem, 4}, [[
+		!call >IEex_Helper_LockGlobalDirect
+
+		!cmp_[dword]_byte ]], {IEex_FakeCursorPosMem, 4}, [[ 00
+		!jnz_dword >faking
+
+		!push_dword ]], {lock_IEex_FakeCursorPosMem, 4}, [[
+		!call >IEex_Helper_UnlockGlobalDirect
+
+		!push([esp+4])
+		!call_[dword] #8474D4 ; GetCursorPos ;
+
+		!ret_word 04 00
+
+		@faking
+		!mov(ecx,[esp+4])
+		!mov_eax_[dword] ]], {IEex_FakeCursorPosMem + 4, 4}, [[
+		!mov([ecx],eax)
+		!mov_eax_[dword] ]], {IEex_FakeCursorPosMem + 8, 4}, [[
+		!mov([ecx+4],eax)
+
+		!push_dword ]], {lock_IEex_FakeCursorPosMem, 4}, [[
+		!call >IEex_Helper_UnlockGlobalDirect
+
+		!ret_word 04 00
 	]]})
 
 	-------------------

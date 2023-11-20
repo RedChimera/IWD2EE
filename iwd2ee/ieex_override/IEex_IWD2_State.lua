@@ -12,7 +12,7 @@ function IEex_Reload()
 		IEex_Helper_Sleep(1)
 	end
 	IEex_Helper_SynchronizedBridgeOperation("IEex_ReloadListeners", function()
-		IEex_Helper_ReadDataFromBridgeNL("IEex_ReloadListeners")
+		IEex_ReloadListeners = IEex_Helper_ReadDataFromBridgeNL("IEex_ReloadListeners")
 		IEex_Helper_ClearBridgeNL("IEex_ReloadListeners")
 		local limit = #IEex_ReloadListeners
 		for i = 1, limit, 1 do
@@ -71,6 +71,7 @@ dofile("override/IEex_Resource_State.lua")
 dofile("override/IEex_Projectile_State.lua")
 dofile("override/IEex_StartupFixes_State.lua")
 dofile("override/IEex_Dev_State.lua")
+dofile("override/IEex_FakeInputRoutine.lua")
 
 
 

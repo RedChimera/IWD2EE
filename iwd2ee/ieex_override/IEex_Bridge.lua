@@ -32,7 +32,7 @@ IEex_Bridge_NoLockFunctions = {
 
 function IEex_UpdateBridge(bridgeName, updateFunc)
 	IEex_Helper_SynchronizedBridgeOperation(bridgeName, function()
-		IEex_Helper_ReadDataFromBridgeNL(bridgeName)
+		_G[bridgeName] = IEex_Helper_ReadDataFromBridgeNL(bridgeName)
 		updateFunc(_G[bridgeName])
 		IEex_Helper_WriteDataToBridgeNL(bridgeName)
 	end)

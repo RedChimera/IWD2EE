@@ -516,7 +516,7 @@
 		!sub_esp_byte 08
 
 		!push_esp
-		!call_[dword] #8474D4 ; GetCursorPos ;
+		!call >IEex_GetCursorPos
 
 		!push(esp)
 		!mov(eax,[8CF6DC])
@@ -535,7 +535,7 @@
 		!sub_esp_byte 08
 
 		!push_esp
-		!call_[dword] #8474D4 ; GetCursorPos ;
+		!call >IEex_GetCursorPos
 
 		!push(esp)
 		!mov(eax,[8CF6DC])

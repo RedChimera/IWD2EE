@@ -277,7 +277,7 @@ end
 function IEex_Extern_CGameSprite_SetCurrAction(actionData)
 	IEex_AssertThread(IEex_Thread.Both, true)
 	IEex_Helper_SynchronizedBridgeOperation("IEex_ActionHooks", function()
-		IEex_Helper_ReadDataFromBridgeNL("IEex_ActionHooks")
+		IEex_ActionHooks = IEex_Helper_ReadDataFromBridgeNL("IEex_ActionHooks")
 		IEex_Helper_ClearBridgeNL("IEex_ActionHooks")
 		local limit = #IEex_ActionHooks
 		for i = 1, limit, 1 do
@@ -300,7 +300,7 @@ function IEex_Extern_CGameSprite_SetCurrAction(actionData)
 		end)
 		IEex_Helper_SynchronizedBridgeOperation("IEex_OpcodeActionHooks", function()
 			local actorActionHookOpcodeListChecked = {}
-			IEex_Helper_ReadDataFromBridgeNL("IEex_OpcodeActionHooks")
+			IEex_OpcodeActionHooks = IEex_Helper_ReadDataFromBridgeNL("IEex_OpcodeActionHooks")
 			for k, v in ipairs(IEex_OpcodeActionHooks) do
 				local originatingEffectData = actorActionHookOpcodeList[v]
 				if originatingEffectData ~= nil and actorActionHookOpcodeListChecked[v] == nil then
@@ -312,7 +312,7 @@ function IEex_Extern_CGameSprite_SetCurrAction(actionData)
 	end
 	IEex_Helper_SynchronizedBridgeOperation("IEex_GlobalActionHooks", function()
 		local actorActionHookGlobalListChecked = {}
-		IEex_Helper_ReadDataFromBridgeNL("IEex_GlobalActionHooks")
+		IEex_GlobalActionHooks = IEex_Helper_ReadDataFromBridgeNL("IEex_GlobalActionHooks")
 		for k, v in ipairs(IEex_GlobalActionHooks) do
 			if actorActionHookGlobalListChecked[v] == nil then
 				actorActionHookGlobalListChecked[v] = true

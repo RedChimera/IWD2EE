@@ -22,6 +22,14 @@ IEex_Once("IEex_CoreInitializeVariables", function()
 	IEex_SpellToScroll = {}
 	IEex_Loaded2DAs = {}
 
+	IEex_Helper_SynchronizedBridgeOperation("IEex_FakeCursorPosMem", function(bridge)
+		IEex_FakeCursorPosMem = IEex_Helper_GetBridgeNL(bridge, "value")
+		if IEex_FakeCursorPosMem == nil then
+			IEex_FakeCursorPosMem = IEex_Malloc(0xC)
+			IEex_WriteDword(IEex_FakeCursorPosMem, 0)
+			IEex_Helper_SetBridgeNL(bridge, "value", IEex_FakeCursorPosMem)
+		end
+	end)
 end)
 
 function IEex_Extern_CreateAsyncState()

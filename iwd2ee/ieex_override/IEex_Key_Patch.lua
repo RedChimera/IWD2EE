@@ -1,46 +1,174 @@
 
 (function()
 
-	-----------------------------
-	-- IEex_GetCursorClientPos --
-	-----------------------------
+	--------------------------------------
+	-- Define Assembly-to-Lua Functions --
+	--------------------------------------
 
-	IEex_WriteAssemblyFunction("IEex_GetCursorClientPos", {[[
+	-------------------------
+	-- IEex_GetCursorPos() --
+	-------------------------
 
-		!push_state
-		!sub_esp_byte 08
+	IEex_WriteAssemblyFunction("IEex_GetCursorPos", {[[
 
-		!push_esp
-		!call_[dword] #8474D4 ; GetCursorPos ;
+		$IEex_GetCursorPosLua
+		!sub(esp,8)
+		!push(esp)
+		!call >IEex_GetCursorPos
+
+		; x ;
+		!push([esp])
+		!fild_[esp]
+		!sub(esp,4)
+		!fstp_qword:[esp]
+		!push([esp+14])
+		!call >_lua_pushnumber
+		!add(esp,C)
+
+		; y ;
+		!push([esp+4])
+		!fild_[esp]
+		!sub(esp,4)
+		!fstp_qword:[esp]
+		!push([esp+14])
+		!call >_lua_pushnumber
+		!add(esp,C)
+
+		!mov(eax,2)
+		!add(esp,8)
+		!ret
+	]]})
+
+	---------------------------
+	-- IEex_ClientToScreen() --
+	---------------------------
+
+	IEex_WriteAssemblyFunction("IEex_ClientToScreen", {[[
+
+		$IEex_ClientToScreenLua
+		!build_stack_frame
+
+		; in x ;
+		!push(2)
+		!push([ebp+8])
+		!call >_lua_tonumber
+		!add(esp,8)
+		!call >__ftol2_sse
+		!push(eax)
+
+		; in y ;
+		!push(1)
+		!push([ebp+8])
+		!call >_lua_tonumber
+		!add(esp,8)
+		!call >__ftol2_sse
+		!push(eax)
+
+		!push(esp)
+		!mov(eax,[8CF6DC])
+		!push([eax+94])
+		!call_[dword] #847478 ; ClientToScreen ;
+
+		; out x ;
+		!push([esp])
+		!fild_[esp]
+		!sub(esp,4)
+		!fstp_qword:[esp]
+		!push([ebp+8])
+		!call >_lua_pushnumber
+		!add(esp,C)
+
+		; out y ;
+		!push([esp+4])
+		!fild_[esp]
+		!sub(esp,4)
+		!fstp_qword:[esp]
+		!push([ebp+8])
+		!call >_lua_pushnumber
+		!add(esp,C)
+
+		!mov(eax,2)
+		!destroy_stack_frame
+		!ret
+	]]})
+
+	---------------------------
+	-- IEex_ScreenToClient() --
+	---------------------------
+
+	IEex_WriteAssemblyFunction("IEex_ScreenToClient", {[[
+
+		$IEex_ScreenToClientLua
+		!build_stack_frame
+
+		; in x ;
+		!push(2)
+		!push([ebp+8])
+		!call >_lua_tonumber
+		!add(esp,8)
+		!call >__ftol2_sse
+		!push(eax)
+
+		; in y ;
+		!push(1)
+		!push([ebp+8])
+		!call >_lua_tonumber
+		!add(esp,8)
+		!call >__ftol2_sse
+		!push(eax)
 
 		!push(esp)
 		!mov(eax,[8CF6DC])
 		!push([eax+94])
 		!call_[dword] #847470 ; ScreenToClient ;
 
+		; out x ;
 		!push([esp])
 		!fild_[esp]
-		!sub_esp_byte 04
+		!sub(esp,4)
 		!fstp_qword:[esp]
 		!push([ebp+8])
 		!call >_lua_pushnumber
-		!add_esp_byte 0C
+		!add(esp,C)
 
+		; out y ;
 		!push([esp+4])
 		!fild_[esp]
-		!sub_esp_byte 04
+		!sub(esp,4)
 		!fstp_qword:[esp]
 		!push([ebp+8])
 		!call >_lua_pushnumber
-		!add_esp_byte 0C
+		!add(esp,C)
 
-		!add_esp_byte 08
-		!mov_eax #2
-		!pop_state
+		!mov(eax,2)
+		!destroy_stack_frame
 		!ret
 	]]})
 
+	-------------------
+	-- Write Patches --
+	-------------------
+
 	IEex_DisableCodeProtection()
+
+	----------------------------------------------------------------
+	-- Hook that runs directly before the engine checks for input --
+	----------------------------------------------------------------
+
+	IEex_HookBeforeCall(0x78F112, IEex_FlattenTable({
+		{[[
+			!push(ecx)
+		]]},
+		IEex_GenLuaCall("IEex_Extern_BeforeCheckKeys"),
+		{[[
+			@call_error
+			!pop(ecx)
+		]]},
+	}))
+
+	---------------------------------------------------------------
+	-- Hook that runs directly after the engine checks for input --
+	---------------------------------------------------------------
 
 	IEex_HookAfterRestore(0x78FC63, 0, 6, {[[
 
@@ -64,7 +192,10 @@
 
 	]]})
 
-	-- Enable window-edge scrolling in windowed mode
+	---------------------------------------------------
+	-- Enable window-edge scrolling in windowed mode --
+	---------------------------------------------------
+
 	IEex_WriteAssembly(0x78F43F, {"!jmp_byte"})
 
 	----------------------------------------------------
@@ -322,6 +453,13 @@
 					               ; might end up processing messages forever
 			]]})
 		end
+
+	----------------------------------------------------
+	-- Potentially fake the cursor position for debug --
+	----------------------------------------------------
+
+	IEex_WriteAssembly(0x45F6F8, {"!call >IEex_GetCursorPos !nop"})
+	IEex_WriteAssembly(0x78F2B3, {"!call >IEex_GetCursorPos !nop"})
 
 
 	IEex_EnableCodeProtection()

@@ -116,6 +116,151 @@ function IEex_IsKeyDown(key)
 	return IEex_Helper_GetBridge("IEex_Keys", key, "isDown")
 end
 
+-- Signals the Raw Input implementation to act as if it received a RAWKEYBOARD / RAWMOUSE event (up or down).
+--
+-- Note: Does not spoof key repeat events.
+--
+-- Changes are only detected by the engine once per async tick; run "fake input" functions in
+-- IEex_Extern_BeforeCheckKeys() to ensure correct timing.
+function IEex_FakeKeyEvent(key, isDown)
+	IEex_Helper_FakeKeyEvent(key, isDown)
+end
+
+-- Signals the Raw Input implementation to act as if it received RAWKEYBOARD / RAWMOUSE events (down + up).
+--
+-- Changes are only detected by the engine once per async tick; run "fake input" functions in
+-- IEex_Extern_BeforeCheckKeys() to ensure correct timing.
+function IEex_FakeKeyPress(key)
+	IEex_Helper_FakeKeyEvent(key, true)
+	IEex_Helper_FakeKeyEvent(key, false)
+end
+
+-- Causes the cursor to report a fake position to the engine / Lua.
+--
+-- Changes are only detected by the engine once per async tick; run "fake input" functions in
+-- IEex_Extern_BeforeCheckKeys() to ensure correct timing.
+function IEex_StartFakingCursorPos(initialX, initialY)
+	IEex_Helper_LockGlobal("IEex_FakeCursorPosMem")
+	IEex_WriteDword(IEex_FakeCursorPosMem, 1)
+	IEex_WriteDword(IEex_FakeCursorPosMem + 4, initialX or 0)
+	IEex_WriteDword(IEex_FakeCursorPosMem + 8, initialY or 0)
+	IEex_Helper_UnlockGlobal("IEex_FakeCursorPosMem")
+end
+
+-- Moves the fake cursor.
+--
+-- Changes are only detected by the engine once per async tick; run "fake input" functions in
+-- IEex_Extern_BeforeCheckKeys() to ensure correct timing.
+function IEex_FakeCursorPos(x, y)
+	IEex_Helper_LockGlobal("IEex_FakeCursorPosMem")
+	IEex_WriteDword(IEex_FakeCursorPosMem + 4, x)
+	IEex_WriteDword(IEex_FakeCursorPosMem + 8, y)
+	IEex_Helper_UnlockGlobal("IEex_FakeCursorPosMem")
+end
+
+-- Returns the cursor to normal.
+--
+-- Changes are only detected by the engine once per async tick; run "fake input" functions in
+-- IEex_Extern_BeforeCheckKeys() to ensure correct timing.
+function IEex_StopFakingCursorPos()
+	IEex_Helper_LockGlobal("IEex_FakeCursorPosMem")
+	IEex_WriteDword(IEex_FakeCursorPosMem, 0)
+	IEex_Helper_UnlockGlobal("IEex_FakeCursorPosMem")
+end
+
+IEex_FakeInputRoutineEvent = {
+	FUNCTION = 0,      -- { IEex_FakeInputRoutineEvent.FUNCTION, function(state, eventT) -> IEex_FakeInputRoutineReturn }
+	UP = 1,            -- { IEex_FakeInputRoutineEvent.UP, IEex_KeyIDS.<key> }
+	DOWN = 2,          -- { IEex_FakeInputRoutineEvent.DOWN, IEex_KeyIDS.<key> }
+	PRESS = 3,         -- { IEex_FakeInputRoutineEvent.PRESS, IEex_KeyIDS.<key> }
+	SET_MOUSE_POS = 4, -- { IEex_FakeInputRoutineEvent.SET_MOUSE_POS, clientX, clientY }
+	CLICK_CONTROL = 5, -- { IEex_FakeInputRoutineEvent.CLICK_CONTROL, <alowed CHU resrefs; table or string>, panelID, controlID }
+	WAIT = 6,          -- { IEex_FakeInputRoutineEvent.WAIT, <minimum number of microseconds> }
+}
+
+IEex_FakeInputRoutineReturn = {
+	CONTINUE = 0,             -- Process the next entry (next tick)
+	CONTINUE_IMMEDIATELY = 1, -- Process the next entry (now)
+	WAIT = 2,                 -- Process the same entry next tick
+	END = 3,                  -- Terminate the fake input routine early
+}
+
+-- Allows a fake input routine to be started / stopped from any thread
+IEex_FakeInputRoutine = {
+	["active"] = false,
+	["routine"] = nil,
+}
+IEex_Helper_InitBridgeFromTable("IEex_FakeInputRoutine", IEex_FakeInputRoutine)
+
+-- Starts a fake input routine from any thread
+function IEex_StartFakeInputRoutine(fakeInputRoutine, stopKey, alreadyLockedBridge)
+	local doStart = function(bridge)
+		IEex_Helper_SetBridgeNL(bridge, "active", true)
+		IEex_Helper_SetBridgeNL(bridge, "routine", fakeInputRoutine)
+		IEex_Helper_SetBridgeNL(bridge, "stopKey", stopKey)
+	end
+	if alreadyLockedBridge == nil then
+		IEex_Helper_SynchronizedBridgeOperation("IEex_FakeInputRoutine", doStart)
+	else
+		doStart(alreadyLockedBridge)
+	end
+end
+
+-- Stops the currently executing fake input routine from any thread
+function IEex_StopFakeInputRoutine(alreadyLockedBridge)
+	local doStop = function(bridge)
+		IEex_Helper_SetBridgeNL(bridge, "active", false)
+		IEex_Helper_SetBridgeNL(bridge, "routine", nil)
+	end
+	if alreadyLockedBridge == nil then
+		IEex_Helper_SynchronizedBridgeOperation("IEex_FakeInputRoutine", doStop)
+	else
+		doStop(alreadyLockedBridge)
+	end
+end
+
+-- From any thread, either:
+--   * Starts a fake input routine if none are currently active
+--   * Else stops the currently executing fake input routine
+function IEex_StartOrStopFakeInputRoutine(fakeInputRoutine, stopKey)
+	IEex_Helper_SynchronizedBridgeOperation("IEex_FakeInputRoutine", function(bridge)
+		if not IEex_Helper_GetBridgeNL(bridge, "active") then
+			IEex_StartFakeInputRoutine(fakeInputRoutine, stopKey, bridge)
+		else
+			IEex_StopFakeInputRoutine(bridge)
+		end
+	end)
+end
+
+IEex_Helper_InitBridgeFromTable("IEex_FakeInputRoutineStartStopKeys", {})
+
+-- Registers keys that start/stop a fake input routine
+function IEex_RegisterFakeInputRoutineStartStopKeys(uniqueKeybindingName, fakeInputRoutine, startKey, stopKey)
+	IEex_Helper_SynchronizedBridgeOperation("IEex_FakeInputRoutineStartStopKeys", function(bridge)
+		local i = IEex_Helper_GetBridgeNL(bridge, uniqueKeybindingName)
+		if i == nil then
+			i = IEex_Helper_GetBridgeNumIntsNL(bridge) + 1
+			IEex_Helper_SetBridgeNL(bridge, uniqueKeybindingName, i)
+		end
+		IEex_Helper_SetBridgeNL(bridge, i, {
+			["routine"] = fakeInputRoutine,
+			["startKey"] = startKey,
+			["stopKey"] = stopKey,
+		})
+	end)
+end
+
+-- Unregisters keys that start/stop a fake input routine
+function IEex_UnregisterFakeInputRoutineStartStopKeys(uniqueKeybindingName)
+	IEex_Helper_SynchronizedBridgeOperation("IEex_FakeInputRoutineStartStopKeys", function(bridge)
+		local i = IEex_Helper_GetBridgeNL(bridge, uniqueKeybindingName)
+		if i ~= nil then
+			IEex_Helper_EraseBridgeKeyNL(bridge, uniqueKeybindingName)
+			IEex_Helper_EraseBridgeKeyNL(bridge, i)
+		end
+	end)
+end
+
 function IEex_CheckViewPosition()
 	local pInfinity = IEex_GetCInfinity()
 	local nNewX = IEex_ReadDword(pInfinity + 0x40)
@@ -1373,6 +1518,7 @@ function IEex_Scroll_RegisterListeners()
 	IEex_AddKeyPressedListener("IEex_ExtraCheatKeysListener")
 	IEex_AddKeyPressedListener("IEex_ArcaneSightListener")
 	IEex_AddKeyPressedListener("IEex_Scroll_KeyPressedListener")
+	IEex_AddKeyPressedListener("IEex_FakeInputRoutineStartStopListener")
 	IEex_AddKeyReleasedListener("IEex_Scroll_KeyReleasedListener")
 --	IEex_AddKeyReleasedListener("IEex_Chargen_RerollListener")
 	IEex_AddInputStateListener("IEex_AddButtonListener")
@@ -1413,7 +1559,7 @@ function IEex_Extern_CheckScroll()
 
 		if IEex_Helper_GetBridgeNL("IEex_Scroll_MiddleMouseState", "isDown") then
 
-			local cursorX, cursorY = IEex_GetCursorClientPos()
+			local cursorX, cursorY = IEex_ScreenToClient(IEex_GetCursorPos())
 			local deltaX = IEex_Helper_GetBridgeNL("IEex_Scroll_MiddleMouseState", "oldX") - cursorX
 			local deltaY = IEex_Helper_GetBridgeNL("IEex_Scroll_MiddleMouseState", "oldY") - cursorY
 			IEex_AdjustViewPosition(deltaX, deltaY)
@@ -1505,6 +1651,182 @@ function IEex_Extern_AllowMouseScrollDown(CGameArea, nViewY)
 	local nEffectiveViewBottom = IEex_GetEffectiveViewBottom(nViewY)
 	local nAreaHeight = IEex_ReadDword(CGameArea + 0x550)
 	return nEffectiveViewBottom < nAreaHeight
+end
+
+-- Async thread state for currently executing fake input routine
+IEex_FakeInputRoutineActive = false
+IEex_FakeInputRoutineT = nil
+IEex_FakeInputRoutineI = nil
+IEex_FakeInputRoutineStopKey = nil
+
+-- Allows the user to start/stop a fake input routine via keypress
+function IEex_FakeInputRoutineStartStopListener(key)
+	if not IEex_FakeInputRoutineActive then
+		IEex_Helper_SynchronizedBridgeOperation("IEex_FakeInputRoutineStartStopKeys", function(bridge)
+			for i = 1, IEex_Helper_GetBridgeNumIntsNL(bridge) do
+				local info = IEex_Helper_GetBridgeNL(bridge, i)
+				if key == IEex_Helper_GetBridgeNL(info, "startKey") then
+					IEex_StartFakeInputRoutine(
+						IEex_Helper_GetBridgeNL(info, "routine"),
+						IEex_Helper_GetBridgeNL(info, "stopKey")
+					)
+				end
+			end
+		end)
+	elseif key == IEex_FakeInputRoutineStopKey then
+		IEex_StopFakeInputRoutine()
+	end
+end
+
+-- Starts a fake input routine from the async thread.
+--   Note: Assuming IEex_FakeInputRoutine is already locked.
+function IEex_StartFakeInputThread()
+	IEex_StartFakingCursorPos()
+	IEex_FakeInputRoutineActive = true
+	IEex_FakeInputRoutine = IEex_Helper_ReadDataFromBridgeNL("IEex_FakeInputRoutine")
+	IEex_FakeInputRoutineT = IEex_FakeInputRoutine.routine
+	IEex_FakeInputRoutineI = 1
+	IEex_FakeInputRoutineStopKey = IEex_FakeInputRoutine.stopKey or IEex_FakeInputRoutineT.stopKey
+end
+
+-- Stops a fake input routine from the async thread
+function IEex_StopFakeInputRoutineThread(alreadyLockedBridge)
+	IEex_StopFakingCursorPos()
+	if alreadyLockedBridge == nil then
+		IEex_Helper_SetBridge("IEex_FakeInputRoutine", "active", false)
+	else
+		IEex_Helper_SetBridgeNL(alreadyLockedBridge, "active", false)
+	end
+	IEex_FakeInputRoutineActive = false
+	IEex_FakeInputRoutineT = nil
+	IEex_FakeInputRoutineI = nil
+	IEex_FakeInputRoutineStopKey = nil
+end
+
+-- Fake input routine event logic
+IEex_FakeInputRoutineSwitch = {
+	[IEex_FakeInputRoutineEvent.FUNCTION] = function(state, eventT)
+		return eventT[2](state, eventT)
+	end,
+	[IEex_FakeInputRoutineEvent.UP] = function(state, eventT)
+		IEex_FakeKeyEvent(eventT[2], false)
+	end,
+	[IEex_FakeInputRoutineEvent.DOWN] = function(state, eventT)
+		IEex_FakeKeyEvent(eventT[2], true)
+	end,
+	[IEex_FakeInputRoutineEvent.PRESS] = function(state, eventT)
+		IEex_FakeKeyPress(eventT[2])
+	end,
+	[IEex_FakeInputRoutineEvent.SET_MOUSE_POS] = function(state, eventT)
+		IEex_FakeCursorPos(IEex_ClientToScreen(eventT[2], eventT[3]))
+	end,
+	[IEex_FakeInputRoutineEvent.CLICK_CONTROL] = function(state, eventT)
+
+		local activeEngine = IEex_GetActiveEngine()
+		local chuResref = IEex_GetCHUResrefFromEngine(activeEngine)
+
+		local acceptableCHUs = eventT[2]
+		if type(acceptableCHUs) == "table" then
+			local found = false
+			for _, acceptableCHU in ipairs(acceptableCHUs) do
+				if chuResref == acceptableCHU then
+					found = true
+					break
+				end
+			end
+			if not found then
+				print("[!] Fake input routine attempted to click a control of an inactive engine")
+				return IEex_FakeInputRoutineReturn.END
+			end
+		elseif chuResref ~= acceptableCHUs then
+			print("[!] Fake input routine attempted to click a control of an inactive engine")
+			return IEex_FakeInputRoutineReturn.END
+		end
+
+		local panel = IEex_GetPanelFromEngine(activeEngine, eventT[3])
+		if panel == 0x0 then
+			state.lastControlClickFailed = true
+			return IEex_FakeInputRoutineReturn.CONTINUE_IMMEDIATELY
+		end
+		local control = IEex_GetControlFromPanel(panel, eventT[4])
+		if control == 0x0 then
+			state.lastControlClickFailed = true
+			return IEex_FakeInputRoutineReturn.CONTINUE_IMMEDIATELY
+		end
+		local clientX, clientY, clientWidth, clientHeight = IEex_GetControlAreaAbsolute(control)
+		local centerClientX = clientX + clientWidth / 2
+		local centerClientY = clientY + clientHeight / 2
+		local centerScreenX, centerScreenY = IEex_ClientToScreen(centerClientX, centerClientY)
+		IEex_FakeCursorPos(centerScreenX, centerScreenY)
+		IEex_FakeKeyPress(IEex_KeyIDS.LEFT_MOUSE_CLICK)
+		state.lastControlClickFailed = false
+	end,
+	[IEex_FakeInputRoutineEvent.WAIT] = function(state, eventT)
+
+		if state.lastControlClickFailed then
+			state.lastControlClickFailed = false
+			return IEex_FakeInputRoutineReturn.CONTINUE_IMMEDIATELY
+		end
+
+		if state.waitInitialized == nil then
+			IEex_Helper_StoreMicroseconds("IEex_FakeInputRoutineEventWaitStart")
+			state.waitInitialized = true
+		end
+
+		IEex_Helper_StoreMicroseconds("IEex_FakeInputRoutineEventWaitCurrent")
+		local diff = IEex_Helper_GetMicrosecondsDiff("IEex_FakeInputRoutineEventWaitCurrent", "IEex_FakeInputRoutineEventWaitStart")
+		if diff < eventT[2] then
+			return IEex_FakeInputRoutineReturn.WAIT
+		end
+		state.waitInitialized = nil
+	end
+}
+
+function IEex_Extern_BeforeCheckKeys()
+
+	IEex_AssertThread(IEex_Thread.Async, true)
+
+	-- Check if the async thread should start/stop a fake input routine
+	IEex_Helper_SynchronizedBridgeOperation("IEex_FakeInputRoutine", function(bridge)
+		if IEex_Helper_GetBridgeNL(bridge, "active") then
+			if not IEex_FakeInputRoutineActive then
+				IEex_StartFakeInputThread()
+			end
+		elseif IEex_FakeInputRoutineActive then
+			IEex_StopFakeInputRoutineThread(bridge)
+		end
+	end)
+
+	if not IEex_FakeInputRoutineActive then
+		return
+	end
+
+	-- Handle fake input routine events
+	while true do
+
+		local eventT = IEex_FakeInputRoutineT[IEex_FakeInputRoutineI]
+		if eventT == nil then
+			IEex_StopFakeInputRoutineThread()
+			break
+		end
+
+		local result = IEex_FakeInputRoutineSwitch[eventT[1]](IEex_FakeInputRoutineT, eventT)
+		if result == nil or result == IEex_FakeInputRoutineReturn.CONTINUE then
+			IEex_FakeInputRoutineI = IEex_FakeInputRoutineI + 1
+			break
+		elseif result == IEex_FakeInputRoutineReturn.WAIT then
+			break
+		elseif result == IEex_FakeInputRoutineReturn.CONTINUE_IMMEDIATELY then
+			IEex_FakeInputRoutineI = IEex_FakeInputRoutineI + 1
+			-- Loop
+		elseif result == IEex_FakeInputRoutineReturn.END then
+			IEex_StopFakeInputRoutineThread()
+			break
+		else
+			IEex_TracebackMessage("[!] Unhandled IEex_FakeInputRoutineReturn: "..tostring(result))
+			break
+		end
+	end
 end
 
 function IEex_Extern_CChitin_ProcessEvents_CheckKeys()

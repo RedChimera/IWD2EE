@@ -154,8 +154,16 @@ function IEex_GetUIManagerFromPanel(CUIPanel)
 	return IEex_ReadDword(CUIPanel)
 end
 
+function IEex_GetCHUResrefFromUIManager(CUIManager)
+	return IEex_ReadLString(CUIManager + 0x8, 8)
+end
+
+function IEex_GetCHUResrefFromEngine(CBaldurEngine)
+	return IEex_GetCHUResrefFromUIManager(IEex_GetUIManagerFromEngine(CBaldurEngine))
+end
+
 function IEex_GetCHUResrefFromPanel(CUIPanel)
-	return IEex_ReadLString(IEex_GetUIManagerFromPanel(CUIPanel) + 0x8, 8)
+	return IEex_GetCHUResrefFromUIManager(IEex_GetUIManagerFromPanel(CUIPanel))
 end
 
 function IEex_GetMainViewportBottom(excludeQuickloot, checkHidden)
