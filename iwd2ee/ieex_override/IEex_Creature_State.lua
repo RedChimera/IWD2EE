@@ -377,7 +377,8 @@ function IEex_Extern_OnPostCreatureProcessEffectList(creatureData)
 	end
 	extraFlags = IEex_ReadDword(creatureData + 0x740)
 	local visualHeight = IEex_ReadDword(creatureData + 0xE)
-	if bit.band(extraFlags, 0x6100) == 0x4000 and visualHeight == 0 and IEex_ReadSignedByte(creatureData + 0x5622, 0x0) < 0 and not usedFunction and not IEex_IsPartyMember(targetID) and IEex_CheckGlobalEffect(0xFFFFFFFF) == false and not IEex_GetActorSpellState(targetID, 218) then return end
+	local speed = IEex_ReadSignedWord(creatureData + 0x722, 0x0)
+	if bit.band(extraFlags, 0x6100) == 0x4000 and visualHeight == 0 and speed == 0 and IEex_ReadSignedByte(creatureData + 0x5622, 0x0) < 0 and not usedFunction and not IEex_IsPartyMember(targetID) and IEex_CheckGlobalEffect(0xFFFFFFFF) == false and not IEex_GetActorSpellState(targetID, 218) then return end
 
 --[[
 	local areaData = IEex_ReadDword(creatureData + 0x12)

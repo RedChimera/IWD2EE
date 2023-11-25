@@ -1973,7 +1973,7 @@ COPY_EXISTING ~41DOOMGD.cre~ ~override~
 	WRITE_BYTE dexterity 15
 	WRITE_BYTE slashingresistance 5
 	WRITE_BYTE piercingresistance 5
-	WRITE_BYTE bludgeoningresistance 5
+	WRITE_BYTE bludgeoningresistance 0
 	WRITE_BYTE missileresistance 10
 	WRITE_BYTE bludgeoningresistance 5
 	WRITE_BYTE spellresistance 12
@@ -1990,7 +1990,7 @@ COPY_EXISTING ~41VRASSI.cre~ ~override~
 	WRITE_BYTE dexterity 16
 	WRITE_BYTE slashingresistance 10
 	WRITE_BYTE piercingresistance 10
-	WRITE_BYTE bludgeoningresistance 10
+	WRITE_BYTE bludgeoningresistance 5
 	WRITE_BYTE missileresistance 10
 	WRITE_BYTE fireresistance 10
 	WRITE_BYTE coldresistance 10

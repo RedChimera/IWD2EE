@@ -149,8 +149,8 @@ Lolth:
 4: Free Action, Hold Monster
 5: Chaos, Insect Plague
 6: Disintegrate, Soul Eater
-7: Cacofiend (summons a yochlol), Creeping Doom
-8: Spell Trap, Summon Fiend (summons a bebilith)
+7: Cacofiend (summons a bebilith), Creeping Doom
+8: Spell Trap, Summon Fiend (summons a yochlol)
 9: Gate (summons a retriever), Soul Bind
 
 Note: Drider priestesses do not have Lolth domain spells, as part of the punishment from Lolth that turned them into driders. Only the drow priestess you find north of Malavon's camp has domain spells.

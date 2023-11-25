@@ -689,6 +689,9 @@ ex_empowerable_opcodes = {[12] = true, [17] = true, [18] = true, [25] = true, [6
 		end
 --]]
 		if opcode == 13 and parent_resource == "" then
+--			if parameter2 == 0x40 and timing == 4 then
+--				IEex_WriteDword(effectData + 0x20, 9)
+--			end
 			local oldItemSlotList = {}
 			IEex_IterateActorEffects(targetID, function(eData)
 				local theopcode = IEex_ReadDword(eData + 0x10)

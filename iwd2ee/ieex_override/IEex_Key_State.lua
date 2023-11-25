@@ -772,8 +772,13 @@ function IEex_Chargen_ExtraFeatListener()
 end
 ex_starting_level = {-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1}
 ex_starting_skill_points = -1
+ex_num_level_ups_chosen = 1
 ex_class_level_up = {["numLevelUps"] = -1, ["class"] = -1}
 ex_levelup_extra_skill_points_granted = false
+ex_levelup_class_selection_buttons_pressed = {[2] = false, [3] = false, [4] = false, [5] = false, [6] = false, [7] = false, [8] = false, [9] = false, [10] = false, [11] = false, [12] = false, }
+ex_levelup_class_selection_button_last_pressed = -1
+ex_true_xp = -1
+ex_true_xp_adjusted = -1
 function IEex_LevelUp_ExtraFeatListener()
 	local g_pBaldurChitin = IEex_ReadDword(0x8CF6DC)
 	local levelUpData = IEex_ReadDword(g_pBaldurChitin + 0x1C60)
@@ -782,8 +787,17 @@ function IEex_LevelUp_ExtraFeatListener()
 		local share = IEex_GetActorShare(actorID)
 		local panelID = IEex_GetEngineCharacterPanelID()
 		if panelID <= 0 and ex_starting_level[1] ~= -1 then
+			if ex_true_xp ~= -1 then
+				IEex_WriteDword(share + 0x5B4, ex_true_xp)
+--				IEex_WriteDword(share + 0x984, ex_true_xp)
+--				IEex_WriteDword(share + 0x17DC, ex_true_xp)
+				ex_levelup_class_selection_button_last_pressed = -1
+				ex_true_xp = -1
+				ex_true_xp_adjusted = -1
+			end
 			ex_starting_level = {-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1}
 			ex_starting_skill_points = -1
+			ex_num_level_ups_chosen = 1
 			ex_class_level_up["numLevelUps"] = -1
 			ex_class_level_up["class"] = -1
 		end
@@ -795,11 +809,55 @@ function IEex_LevelUp_ExtraFeatListener()
 					end
 					ex_starting_skill_points = IEex_ReadByte(share + 0x8A3, 0x0)
 				end
+				local panelData = IEex_ReadDword(IEex_ReadDword(levelUpData + 0x632) + 0x8)
+				IEex_IterateCPtrList(panelData + 0x4, function(controlData)
+					local controlIndex = IEex_ReadByte(controlData + 0xA, 0x0)
+					if controlIndex >= 2 and controlIndex <= 12 then
+						local buttonWasPressed = ex_levelup_class_selection_buttons_pressed[controlIndex]
+						local buttonIsPressed = (IEex_ReadByte(controlData + 0x134, 0x0) > 0)
+						if buttonIsPressed and not buttonWasPressed then
+							if ex_true_xp == -1 then
+								ex_true_xp = IEex_ReadDword(share + 0x5B4)
+								ex_true_xp_adjusted = IEex_ReadDword(share + 0x984)
+							end
+							local ecl = ex_starting_level[1]
+							if not IEex_Modules["EX_LVADJ"] then
+								local racePlusSub = IEex_ReadByte(share + 0x26, 0x0) * 0x10000 + IEex_GetActorStat(actorID, 93)
+								local defaultLevelAdjustment = {[0x10001] = 1, [0x10002] = 1, [0x20001] = 2, [0x40002] = 2, [0x60001] = 3, }
+								if defaultLevelAdjustment[racePlusSub] ~= nil then
+									ecl = ecl + defaultLevelAdjustment[racePlusSub]
+								end
+							end
+							if ex_levelup_class_selection_button_last_pressed == controlIndex then
+								ex_num_level_ups_chosen = ex_num_level_ups_chosen + 1
+							else
+								ex_num_level_ups_chosen = 1
+							end
+							ex_levelup_class_selection_button_last_pressed = controlIndex
+							local tempXP = tonumber(IEex_2DAGetAtStrings("XPLEVEL", tostring(ecl + ex_num_level_ups_chosen), "BARBARIAN"))
+							if tempXP ~= -1 and tempXP <= ex_true_xp_adjusted then
+--								IEex_WriteDword(share + 0x5B4, tempXP)
+								IEex_WriteDword(share + 0x984, tempXP)
+								IEex_WriteDword(share + 0x17DC, tempXP)
+							end
+						end
+						ex_levelup_class_selection_buttons_pressed[controlIndex] = buttonIsPressed
+					end
+				end)
 				if ex_class_level_up["numLevelUps"] ~= -1 then
 					ex_class_level_up["numLevelUps"] = -1
 					ex_class_level_up["class"] = -1
 				end
 			elseif panelID > 0 and panelID ~= 2 then
+				if ex_true_xp ~= -1 then
+					IEex_WriteDword(share + 0x5B4, ex_true_xp)
+--					IEex_WriteDword(share + 0x984, ex_true_xp)
+--					IEex_WriteDword(share + 0x17DC, ex_true_xp)
+					ex_levelup_class_selection_button_last_pressed = -1
+					ex_num_level_ups_chosen = 1
+					ex_true_xp = -1
+					ex_true_xp_adjusted = -1
+				end
 				if IEex_ReadByte(share + 0x626, 0x0) > ex_starting_level[1] and ex_starting_level[1] ~= -1 and ex_class_level_up["numLevelUps"] == -1 then
 					ex_class_level_up["numLevelUps"] = IEex_ReadByte(share + 0x626, 0x0) - ex_starting_level[1]
 					for i = 2, 12, 1 do
@@ -809,6 +867,7 @@ function IEex_LevelUp_ExtraFeatListener()
 					end
 				end
 			end
+
 --			local racePlusSub = IEex_ReadByte(share + 0x26, 0x0) * 0x10000 + IEex_ReadByte(share + 0x3E3D, 0x0)
 --[[
 			if panelID == 7 then
@@ -1828,6 +1887,7 @@ function IEex_Extern_BeforeCheckKeys()
 		end
 	end
 end
+
 
 function IEex_Extern_CChitin_ProcessEvents_CheckKeys()
 

@@ -326,11 +326,12 @@ function EXAPPLSP(actionData, creatureData)
 	local actionID = IEex_GetActionID(actionData)
 	local sourceID = IEex_GetActorIDShare(creatureData)
 	if actionID == 31 or actionID == 95 or actionID == 191 or actionID == 192 then
+		local targetID = IEex_GetActionObjectID(actionData)
 		local spellRES = IEex_GetActorSpellRES(sourceID)
 		local casterClass = IEex_ReadByte(creatureData + 0x530, 0x0)
 		local casterDomain = IEex_ReadByte(creatureData + 0x531, 0x0)
 		local classSpellLevel = IEex_ReadDword(creatureData + 0x534)
-		if (actionID == 31 or actionID == 95) and IEex_IsPartyMember(sourceID) then
+		if (actionID == 31 or actionID == 95) and IEex_IsPartyMember(sourceID) and spellRES ~= "SPIN108" then
 			local sourceHasSpell = false
 			local spells = IEex_FetchSpellInfo(sourceID, {1, 2, 3, 4, 5, 6, 7, 8})
 			local hasSpellAsCleric = false
@@ -416,7 +417,6 @@ function EXAPPLSP(actionData, creatureData)
 			local spellData = resWrapper:getData()
 			local spellFlags = IEex_ReadDword(spellData + 0x18)
 			if bit.band(spellFlags, 0x10000000) > 0 then
-				local targetID = IEex_GetActionObjectID(actionData)
 				local targetX = IEex_GetActionPointX(actionData)
 				local targetY = IEex_GetActionPointY(actionData)
 				if actionID == 31 then

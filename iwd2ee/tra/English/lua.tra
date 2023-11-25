@@ -231,8 +231,8 @@
 @55374=~psychic~
 @55375=~Touch Attack Roll ~
 @55376=~Ranged Touch Attack Roll ~
-@55377=~<EXRDNAME>'s body has been destroyed. A Resurrection spell will be needed to bring <EXRDNAME> back to life; Raise Dead will not suffice.~
-@55378=~<EXRDNAME>'s soul has been captured. The vessel for their soul must be destroyed before they can be brought back to life.~
+@55377=~This character's body has been destroyed. A Resurrection spell will be needed to bring them back to life; Raise Dead will not suffice.~
+@55378=~This character's soul has been captured. The vessel for their soul must be destroyed before they can be brought back to life.~
 @55379=~That character cannot be raised, but can be resurrected by more powerful magic.~
 @55380=~That character cannot be raised or resurrected.~
 @55381=~That character has been dead too long to be raised by that spell.~

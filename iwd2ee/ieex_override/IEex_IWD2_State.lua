@@ -1510,7 +1510,7 @@ function IEex_EngineCharacterUpdatePopupPanel()
     local characterScreen = IEex_GetEngineCharacter()
     local pTail = IEex_ReadDword(characterScreen + 0x632) -- m_lPopupStack.m_pNodeTail
     local panelID = pTail ~= 0x0 and IEex_ReadDword(IEex_ReadDword(pTail + 0x8) + 0x20) or -1
-    if panelID == -1 then return end
+--    if panelID == -1 then return end
     local share = IEex_GetActorShare(IEex_ReadDword(characterScreen + 0x136))
     -- CScreenCharacter_UpdatePopupPanel()
     IEex_Call(0x5E0B20, {share, panelID}, characterScreen, 0x0)
@@ -2929,7 +2929,7 @@ ex_item_type_critical = {[0] = {0, 2}, [5] = {0, 3}, [14] = {0, 2}, [15] = {0, 3
 ex_crippling_strike = {ex_tra_905, ex_tra_905, ex_tra_905, ex_tra_905, ex_tra_905, ex_tra_906, ex_tra_906, ex_tra_906, ex_tra_907, ex_tra_907, ex_tra_907, ex_tra_908, ex_tra_908, ex_tra_908, ex_tra_909, ex_tra_909, ex_tra_909, ex_tra_910, ex_tra_910, ex_tra_910, ex_tra_911, ex_tra_911, ex_tra_911, ex_tra_912, ex_tra_912, ex_tra_912, ex_tra_913, ex_tra_913, ex_tra_913, ex_tra_914}
 ex_crippling_strike_assassin = {ex_tra_930, ex_tra_930, ex_tra_930, ex_tra_930, ex_tra_930, ex_tra_931, ex_tra_931, ex_tra_931, ex_tra_932, ex_tra_932, ex_tra_932, ex_tra_933, ex_tra_933, ex_tra_933, ex_tra_934, ex_tra_934, ex_tra_934, ex_tra_935, ex_tra_935, ex_tra_935, ex_tra_936, ex_tra_936, ex_tra_936, ex_tra_937, ex_tra_937, ex_tra_937, ex_tra_938, ex_tra_938, ex_tra_938, ex_tra_939}
 ex_arterial_strike = {1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4, 4, 5, 5, 5, 5, 5, 5}
-ex_damage_source_spell = {["EFFAS1"] = "SPWI217", ["EFFAS2"] = "SPWI217", ["EFFCL"] = "SPPR302", ["EFFCT1"] = "SPWI117", ["EFFDA3"] = "SPWI228", ["EFFFS1"] = "SPWI427", ["EFFFS2"] = "SPWI426", ["EFFIK"] = "SPWI122", ["EFFMB1"] = "SPPR318", ["EFFMB2"] = "SPPR318", ["EFFMT1"] = "SPPR322", ["EFFPB1"] = "SPWI521", ["EFFPB2"] = "SPWI521", ["EFFS1"] = "SPPR113", ["EFFS2"] = "SPPR113", ["EFFS3"] = "SPPR113", ["EFFSC"] = "SPPR523", ["EFFSOF1"] = "SPWI511", ["EFFSOF2"] = "SPWI511", ["EFFSR1"] = "SPPR707", ["EFFSR2"] = "SPPR707", ["EFFSSO1"] = "SPPR608", ["EFFSSO2"] = "SPPR608", ["EFFSSO3"] = "SPPR608", ["EFFSSS1"] = "SPWI220", ["EFFSSS2"] = "SPWI220", ["EFFVS1"] = "SPWI424", ["EFFVS2"] = "SPWI424", ["EFFVS3"] = "SPWI424", ["EFFWOM1"] = "SPPR423", ["EFFWOM2"] = "SPPR423", ["EFFHW15"] = "SPWI805", ["EFFHW16"] = "SPWI805", ["EFFHW17"] = "SPWI805", ["EFFHW18"] = "SPWI805", ["EFFHW19"] = "SPWI805", ["EFFHW20"] = "SPWI805", ["EFFHW21"] = "SPWI805", ["EFFHW22"] = "SPWI805", ["EFFHW23"] = "SPWI805", ["EFFHW24"] = "SPWI805", ["EFFHW25"] = "SPWI805", ["EFFWT15"] = "SPWI805", ["EFFWT16"] = "SPWI805", ["EFFWT17"] = "SPWI805", ["EFFWT18"] = "SPWI805", ["EFFWT19"] = "SPWI805", ["EFFWT20"] = "SPWI805", ["EFFWT21"] = "SPWI805", ["EFFWT22"] = "SPWI805", ["EFFWT23"] = "SPWI805", ["EFFWT24"] = "SPWI805", ["EFFWT25"] = "SPWI805", ["USWI417D"] = "SPWI417", ["USWI422D"] = "SPWI422", ["USWI452D"] = "USWI452", ["USWI652D"] = "USWI652", ["USWI755D"] = "USWI755", ["USWI954F"] = "USWI954", ["USDVSH01"] = "USPR151", ["USDVSH02"] = "USPR151", ["USDVSH03"] = "USPR151", ["USDVSH04"] = "USPR151", ["USDVSH05"] = "USPR151", ["USDVSH06"] = "USPR151", ["USDVSH07"] = "USPR151", ["USDVSH08"] = "USPR151", ["USDVSH09"] = "USPR151", ["USDVSH10"] = "USPR151", ["USDVSH11"] = "USPR151", ["USDVSH12"] = "USPR151", ["USDVSH13"] = "USPR151", ["USDVSH14"] = "USPR151", ["USDVSH15"] = "USPR151", ["USPR215D"] = "SPPR215", ["USPR452D"] = "USPR452", ["USDESTRU"] = "SPPR717", ["USPR953D"] = "USPR953", ["USSTOV2D"] = "USPR954", ["USSTOV3D"] = "USPR954", ["USSTOV4D"] = "USPR954", ["USSTOV5D"] = "USPR954", ["USWI653D"] = "USWI653", ["USWI956D"] = "USWI956", ["USWI759D"] = "USWI759", ["USWI759E"] = "USWI759", ["USPR102D"] = "SPPR102", ["USPR204D"] = "SPPR204", ["USPR211D"] = "SPPR211", ["USPR305D"] = "SPPR305", ["USPR310D"] = "SPPR310", ["USPR311D"] = "SPPR311", ["USPR320D"] = "SPPR320", ["USPR322D"] = "SPPR322", ["USPR324D"] = "SPPR324", ["USPR325D"] = "SPPR325", ["USPR405D"] = "SPPR405", ["USPR417D"] = "SPPR417", ["USPR418D"] = "SPPR418", ["USPR510D"] = "SPPR510", ["USPR512D"] = "SPPR512", ["USPR515D"] = "SPPR515", ["USPR518D"] = "SPPR518", ["USPR522D"] = "SPPR522", ["USPR611D"] = "SPPR611", ["USPR613D"] = "SPPR613", ["USPR616D"] = "SPPR616", ["USPR715D"] = "SPPR715", ["USPR717D"] = "SPPR717", ["USPR719D"] = "SPPR719", ["USPR726D"] = "SPPR726", ["USPR727D"] = "SPPR727", ["USPR728D"] = "SPPR728", ["USPR802D"] = "SPPR802", ["USPR952D"] = "USPR952", ["USWI101D"] = "SPWI101", ["USWI104D"] = "SPWI104", ["USWI105D"] = "SPWI105", ["USWI116D"] = "SPWI116", ["USWI118D"] = "SPWI118", ["USWI121D"] = "SPWI121", ["USWI205D"] = "SPWI205", ["USWI213D"] = "SPWI213", ["USWI215D"] = "SPWI215", ["USWI218D"] = "SPWI218", ["USWI222D"] = "SPWI222", ["USWI226D"] = "SPWI226", ["USWI227D"] = "SPWI227", ["USWI252D"] = "USWI252", ["USWI253D"] = "USWI253", ["USWI253E"] = "USWI253", ["USWI306D"] = "SPWI306", ["USWI312D"] = "SPWI312", ["USWI316D"] = "SPWI316", ["USWI320D"] = "SPWI320", ["USWI420D"] = "SPWI420", ["USWI423D"] = "SPWI423", ["USWI425D"] = "SPWI425", ["USWI507D"] = "SPWI507", ["USWI508D"] = "SPWI508", ["USWI509D"] = "SPWI509", ["USWI510D"] = "SPWI510", ["USWI605D"] = "SPWI605", ["USWI612D"] = "SPWI612", ["USWI653D"] = "USWI653", ["USWI705D"] = "SPWI705", ["USWI711D"] = "SPWI711", ["USWI717D"] = "SPWI717", ["USWI751D"] = "USWI751", ["USWI759E"] = "USWI759", ["USWI806D"] = "SPWI806", ["USWI810D"] = "SPWI810", ["USWI911D"] = "SPWI911", ["USSUCCRW"] = "SPWI621", ["USSUWYVE"] = "SPWI626", ["USSUGHOU"] = "USWI453", ["USWI762D"] = "USWI762", ["USWI864D"] = "USWI864", ["USWI864E"] = "USWI864", }
+ex_damage_source_spell = {["EFFAS1"] = "SPWI217", ["EFFAS2"] = "SPWI217", ["EFFCL"] = "SPPR302", ["EFFCT1"] = "SPWI117", ["EFFDA3"] = "SPWI228", ["EFFFS1"] = "SPWI427", ["EFFFS2"] = "SPWI426", ["EFFIK"] = "SPWI122", ["EFFMB1"] = "SPPR318", ["EFFMB2"] = "SPPR318", ["EFFMT1"] = "SPPR322", ["EFFPB1"] = "SPWI521", ["EFFPB2"] = "SPWI521", ["EFFS1"] = "SPPR113", ["EFFS2"] = "SPPR113", ["EFFS3"] = "SPPR113", ["EFFSC"] = "SPPR523", ["EFFSOF1"] = "SPWI511", ["EFFSOF2"] = "SPWI511", ["EFFSR1"] = "SPPR707", ["EFFSR2"] = "SPPR707", ["EFFSSO1"] = "SPPR608", ["EFFSSO2"] = "SPPR608", ["EFFSSO3"] = "SPPR608", ["EFFSSS1"] = "SPWI220", ["EFFSSS2"] = "SPWI220", ["EFFVS1"] = "SPWI424", ["EFFVS2"] = "SPWI424", ["EFFVS3"] = "SPWI424", ["EFFWOM1"] = "SPPR423", ["EFFWOM2"] = "SPPR423", ["EFFHW15"] = "SPWI805", ["EFFHW16"] = "SPWI805", ["EFFHW17"] = "SPWI805", ["EFFHW18"] = "SPWI805", ["EFFHW19"] = "SPWI805", ["EFFHW20"] = "SPWI805", ["EFFHW21"] = "SPWI805", ["EFFHW22"] = "SPWI805", ["EFFHW23"] = "SPWI805", ["EFFHW24"] = "SPWI805", ["EFFHW25"] = "SPWI805", ["EFFWT15"] = "SPWI805", ["EFFWT16"] = "SPWI805", ["EFFWT17"] = "SPWI805", ["EFFWT18"] = "SPWI805", ["EFFWT19"] = "SPWI805", ["EFFWT20"] = "SPWI805", ["EFFWT21"] = "SPWI805", ["EFFWT22"] = "SPWI805", ["EFFWT23"] = "SPWI805", ["EFFWT24"] = "SPWI805", ["EFFWT25"] = "SPWI805", ["USWI417D"] = "SPWI417", ["USWI422D"] = "SPWI422", ["USWI452D"] = "USWI452", ["USWI652D"] = "USWI652", ["USWI755D"] = "USWI755", ["USWI954F"] = "USWI954", ["USDVSH01"] = "USPR151", ["USDVSH02"] = "USPR151", ["USDVSH03"] = "USPR151", ["USDVSH04"] = "USPR151", ["USDVSH05"] = "USPR151", ["USDVSH06"] = "USPR151", ["USDVSH07"] = "USPR151", ["USDVSH08"] = "USPR151", ["USDVSH09"] = "USPR151", ["USDVSH10"] = "USPR151", ["USDVSH11"] = "USPR151", ["USDVSH12"] = "USPR151", ["USDVSH13"] = "USPR151", ["USDVSH14"] = "USPR151", ["USDVSH15"] = "USPR151", ["USPR215D"] = "SPPR215", ["USPR452D"] = "USPR452", ["USDESTRU"] = "SPPR717", ["USPR953D"] = "USPR953", ["USSTOV2D"] = "USPR954", ["USSTOV3D"] = "USPR954", ["USSTOV4D"] = "USPR954", ["USSTOV5D"] = "USPR954", ["USWI653D"] = "USWI653", ["USWI956D"] = "USWI956", ["USWI759D"] = "USWI759", ["USWI759E"] = "USWI759", ["USPR102D"] = "SPPR102", ["USPR204D"] = "SPPR204", ["USPR211D"] = "SPPR211", ["USPR305D"] = "SPPR305", ["USPR310D"] = "SPPR310", ["USPR311D"] = "SPPR311", ["USPR320D"] = "SPPR320", ["USPR322D"] = "SPPR322", ["USPR324D"] = "SPPR324", ["USPR325D"] = "SPPR325", ["USPR405D"] = "SPPR405", ["USPR417D"] = "SPPR417", ["USPR418D"] = "SPPR418", ["USPR510D"] = "SPPR510", ["USPR512D"] = "SPPR512", ["USPR515D"] = "SPPR515", ["USPR518D"] = "SPPR518", ["USPR522D"] = "SPPR522", ["USPR611D"] = "SPPR611", ["USPR613D"] = "SPPR613", ["USPR616D"] = "SPPR616", ["USPR715D"] = "SPPR715", ["USPR717D"] = "SPPR717", ["USPR719D"] = "SPPR719", ["USPR726D"] = "SPPR726", ["USPR727D"] = "SPPR727", ["USPR728D"] = "SPPR728", ["USPR802D"] = "SPPR802", ["USPR952D"] = "USPR952", ["USWI101D"] = "SPWI101", ["USWI104D"] = "SPWI104", ["USWI105D"] = "SPWI105", ["USWI116D"] = "SPWI116", ["USWI118D"] = "SPWI118", ["USWI121D"] = "SPWI121", ["USWI205D"] = "SPWI205", ["USWI213D"] = "SPWI213", ["USWI215D"] = "SPWI215", ["USWI218D"] = "SPWI218", ["USWI222D"] = "SPWI222", ["USWI226D"] = "SPWI226", ["USWI227D"] = "SPWI227", ["USWI252D"] = "USWI252", ["USWI253D"] = "USWI253", ["USWI253E"] = "USWI253", ["USWI306D"] = "SPWI306", ["USWI312D"] = "SPWI312", ["USWI316D"] = "SPWI316", ["USWI318D"] = "SPWI318", ["USWI320D"] = "SPWI320", ["USWI420D"] = "SPWI420", ["USWI423D"] = "SPWI423", ["USWI425D"] = "SPWI425", ["USWI507D"] = "SPWI507", ["USWI508D"] = "SPWI508", ["USWI509D"] = "SPWI509", ["USWI510D"] = "SPWI510", ["USWI605D"] = "SPWI605", ["USWI612D"] = "SPWI612", ["USWI653D"] = "USWI653", ["USWI705D"] = "SPWI705", ["USWI711D"] = "SPWI711", ["USWI717D"] = "SPWI717", ["USWI751D"] = "USWI751", ["USWI759E"] = "USWI759", ["USWI806D"] = "SPWI806", ["USWI810D"] = "SPWI810", ["USWI911D"] = "SPWI911", ["USSUCCRW"] = "SPWI621", ["USSUWYVE"] = "SPWI626", ["USSUGHOU"] = "USWI453", ["USWI762D"] = "USWI762", ["USWI864D"] = "USWI864", ["USWI864E"] = "USWI864", }
 ex_feat_id_offset = {[9] = 0x70C, [48] = 0x70D, [18] = 0x78D, [38] = 0x777, [39] = 0x774, [40] = 0x779, [41] = 0x77D, [42] = 0x77B, [43] = 0x77E, [44] = 0x77A, [53] = 0x775, [54] = 0x778, [55] = 0x776, [56] = 0x77C, [57] = 0x77F}
 ex_damage_multiplier_type = {[0] = 9, [0x10000] = 4, [0x20000] = 2, [0x40000] = 3, [0x80000] = 1, [0x100000] = 8, [0x200000] = 6, [0x400000] = 5, [0x800000] = 10, [0x1000000] = 7, [0x2000000] = 10, [0x4000000] = 10, [0x8000000] = 9, [0x10000000] = 5}
 ex_damage_resistance_stat = {[0] = 22, [0x10000] = 17, [0x20000] = 15, [0x40000] = 16, [0x80000] = 14, [0x100000] = 23, [0x200000] = 74, [0x400000] = 73, [0x800000] = 24, [0x1000000] = 21, [0x2000000] = 19, [0x4000000] = 20, [0x8000000] = 22, [0x10000000] = 73}
@@ -5260,23 +5260,47 @@ end
 
 function MESTATES(effectData, creatureData)
 	if IEex_CheckForEffectRepeat(effectData, creatureData) then return end
-	if not IEex_IsSprite(IEex_ReadDword(effectData + 0x10C), false) then return end
+	local sourceID = IEex_ReadDword(effectData + 0x10C)
+	if not IEex_IsSprite(sourceID, false) then return end
 	local targetID = IEex_GetActorIDShare(creatureData)
 	local state = IEex_ReadDword(effectData + 0x44)
 	local stateValue = bit.bor(IEex_ReadDword(creatureData + 0x5BC), IEex_ReadDword(creatureData + 0x920))
 	local invert = (bit.band(IEex_ReadDword(effectData + 0x3C), 0x100000) > 0)
+	local casterlvl = IEex_ReadDword(effectData + 0xC4)
 	if bit.band(stateValue, state) ~= 0 then
 		if invert == false then
 			local spellRES = IEex_ReadLString(effectData + 0x18, 8)
 			if spellRES ~= "" then
-				IEex_ApplyResref(spellRES, targetID)
+				IEex_ApplyEffectToActor(targetID, {
+["opcode"] = 402,
+["target"] = 2,
+["timing"] = 1,
+["resource"] = spellRES,
+["target_x"] = IEex_ReadDword(creatureData + 0x6),
+["target_y"] = IEex_ReadDword(creatureData + 0xA),
+["casterlvl"] = casterlvl,
+["parent_resource"] = spellRES,
+["internal_flags"] = IEex_ReadDword(effectData + 0xD4),
+["source_id"] = sourceID
+})
 			end
 		end
 	else
 		if invert == true then
 			local spellRES = IEex_ReadLString(effectData + 0x18, 8)
 			if spellRES ~= "" then
-				IEex_ApplyResref(spellRES, targetID)
+				IEex_ApplyEffectToActor(targetID, {
+["opcode"] = 402,
+["target"] = 2,
+["timing"] = 1,
+["resource"] = spellRES,
+["target_x"] = IEex_ReadDword(creatureData + 0x6),
+["target_y"] = IEex_ReadDword(creatureData + 0xA),
+["casterlvl"] = casterlvl,
+["parent_resource"] = spellRES,
+["internal_flags"] = IEex_ReadDword(effectData + 0xD4),
+["source_id"] = sourceID
+})
 			end
 		end
 	end
@@ -6130,6 +6154,8 @@ function MERAISED(effectData, creatureData)
 ["source_id"] = sourceID
 })
 		return
+	elseif bit.band(savingthrow, 0x40000) > 0 and not IEex_GetActorState(targetID, 0x80) then
+		return
 	end
 	extraFlags = bit.band(extraFlags, 0xEFFFFFFF)
 	IEex_WriteDword(creatureData + 0x740, extraFlags)
@@ -6153,13 +6179,24 @@ function MERAISED(effectData, creatureData)
 	end
 	if race >= 8 then
 		IEex_WriteByte(creatureData + 0x26, 1)
-		IEex_ApplyEffectToActor(targetID, {
+		if bit.band(savingthrow, 0x40000) == 0 then
+			IEex_ApplyEffectToActor(targetID, {
 ["opcode"] = 32,
 ["target"] = 2,
 ["timing"] = 9,
 ["parent_resource"] = parent_resource,
 ["source_id"] = sourceID
 })
+		else
+			IEex_ApplyEffectToActor(targetID, {
+["opcode"] = 43,
+["target"] = 2,
+["timing"] = 9,
+["resist_dispel"] = 2,
+["parent_resource"] = parent_resource,
+["source_id"] = sourceID
+})
+		end
 		IEex_WriteByte(creatureData + 0x26, race)
 		IEex_ApplyEffectToActor(targetID, {
 ["opcode"] = 53,
@@ -6181,22 +6218,39 @@ function MERAISED(effectData, creatureData)
 ["source_id"] = sourceID
 })
 	else
-		IEex_ApplyEffectToActor(targetID, {
+		if bit.band(savingthrow, 0x40000) == 0 then
+			IEex_ApplyEffectToActor(targetID, {
 ["opcode"] = 32,
 ["target"] = 2,
 ["timing"] = 9,
 ["parent_resource"] = parent_resource,
 ["source_id"] = sourceID
 })
+		else
+			IEex_ApplyEffectToActor(targetID, {
+["opcode"] = 43,
+["target"] = 2,
+["timing"] = 9,
+["resist_dispel"] = 2,
+["parent_resource"] = parent_resource,
+["source_id"] = sourceID
+})
+		end
 	end
 	local constantID = IEex_ReadDword(creatureData + 0x700)
 	local equipmentRecord = ex_dead_pc_equipment_record[constantID]
-
 	if equipmentRecord == nil or #equipmentRecord == 0 then return end
 	local highestNumMatches = 0
 	local numMatches = 0
 	local highestNumMatchesContainer = 0
-	IEex_IterateIDs(IEex_ReadDword(creatureData + 0x12), 0x11, function(containerID)
+	local areaData = IEex_ReadDword(creatureData + 0x12)
+	if areaData == 0 then
+		local sourceData = IEex_GetActorShare(sourceID)
+		if sourceData > 0 then
+			areaData = IEex_ReadDword(sourceData + 0x12)
+		end
+	end
+	IEex_IterateIDs(areaData, 0x11, function(containerID)
 		local containerData = IEex_GetActorShare(containerID)
 		numMatches = 0
 		if IEex_ReadDword(containerData + 0x5BA) <= #equipmentRecord then
@@ -11448,6 +11502,7 @@ function IEex_EvaluatePermanentRepeatingEffects(creatureData)
 			end
 		end
 	end)
+	local sourceX, sourceY = IEex_GetActorLocation(targetID)
 	for k, v in ipairs(repermList) do
 		IEex_ApplyEffectToActor(targetID, {
 ["opcode"] = 402,
@@ -11456,6 +11511,8 @@ function IEex_EvaluatePermanentRepeatingEffects(creatureData)
 ["resource"] = v[1],
 ["parent_resource"] = v[4],
 ["casterlvl"] = v[3],
+["target_x"] = sourceX,
+["target_y"] = sourceY,
 ["source_id"] = v[2],
 })
 	end
@@ -12128,7 +12185,7 @@ function MELRNALL(effectData, creatureData)
 	local kit = IEex_GetActorStat(targetID, 89)
 	local specialistBit = 0x40
 	local specialistSchool = 0
-	for i = 1, 9, 1 do
+	for i = 1, 8, 1 do
 		if bit.band(kit, specialistBit) > 0 then
 			specialistSchool = i
 		end
@@ -16558,6 +16615,8 @@ function MESPLOPP(actionData, creatureData)
 		end
 		if provokeAttackOfOpportunity then
 			ex_attopp_casting[sourceID] = {}
+		else
+			ex_attopp_casting[sourceID] = nil
 		end
 	end
 end
@@ -17689,9 +17748,6 @@ function IEex_ExtraAttacks(creatureData)
 				if IEex_GetDistance(targetX, targetY, actionTargetX, actionTargetY) <= range * 20 + 40 then
 					ex_attopp_target[targetID] = actionTargetID
 					local animationSequence = IEex_ReadByte(IEex_GetActorShare(actionTargetID) + 0x50F4, 0x0)
-					if ex_attopp_casting[actionTargetID] == nil then
-						ex_attopp_casting[actionTargetID] = {}
-					end
 					local actionTargetHasRangedWeapon = false
 					if animationSequence == 0 or animationSequence == 8 or animationSequence == 11 or animationSequence == 12 or animationSequence == 13 then
 						weaponSlot = IEex_ReadByte(actionTargetData + 0x4BA4, 0x0)
@@ -17713,7 +17769,7 @@ function IEex_ExtraAttacks(creatureData)
 							resWrapper:free()
 						end
 					end
-					if (animationSequence == 2 or animationSequence == 3) and not ex_attopp_casting[actionTargetID][targetID] and not ignoreSpellCastOpportunity and (ex_attopp_repeat_timer[targetID][actionTargetID] == nil or tick - ex_attopp_repeat_timer[targetID][actionTargetID] >= 30) then
+					if (animationSequence == 2 or animationSequence == 3) and ex_attopp_casting[actionTargetID] and not ex_attopp_casting[actionTargetID][targetID] and not ignoreSpellCastOpportunity and (ex_attopp_repeat_timer[targetID][actionTargetID] == nil or tick - ex_attopp_repeat_timer[targetID][actionTargetID] >= 30) then
 						if ex_attopp_count[targetID] == nil or (ex_attopp_timer[targetID] ~= nil and tick - ex_attopp_timer[targetID] >= 100) then
 							ex_attopp_count[targetID] = 0
 							ex_attopp_timer[targetID] = tick
@@ -19924,6 +19980,18 @@ function MEUNSTUC(effectData, creatureData)
 	IEex_WriteDword(effectData + 0x110, 1)
 	if IEex_CheckForEffectRepeat(effectData, creatureData) then return end
 	local targetID = IEex_GetActorIDShare(creatureData)
+--[[
+	local parent_resource = IEex_ReadLString(effectData + 0x90, 8)
+	IEex_IterateActorEffects(targetID, function(eData)
+		local theopcode = IEex_ReadDword(eData + 0x10)
+		local theparent_resource = IEex_ReadLString(eData + 0x94, 8)
+		if theopcode == 184 and theparent_resource == parent_resource then
+			IEex_WriteDword(eData + 0x20, 0)
+			IEex_WriteByte(creatureData + 0x9DC, 0)
+		end
+	end)
+	IEex_WriteByte(creatureData + 0x9DC, 0)
+--]]
 	IEex_ApplyEffectToActor(targetID, {
 ["opcode"] = 124,
 ["target"] = 2,
@@ -20562,7 +20630,7 @@ function IEex_HeightMod(creatureData)
 					end
 				end)
 			end
-			speed = 0
+--			speed = 0
 		end
 	elseif height >= maxHeight then
 		height = maxHeight - 1
@@ -20610,8 +20678,7 @@ function IEex_HeightMod(creatureData)
 --	if bit.band(IEex_ReadDword(creatureData + 0x434), 0x2000) > 0 then return end
 
 	IEex_WriteDword(creatureData + 0x5326, 0)
-	if (minHeight <= 0 or bit.band(savingthrow, 0x10000) > 0) and bit.band(savingthrow, 0x20000) == 0 and (height <= minHeight and (speed < 0 or (speed <= 0 and not isFlying and not IEex_GetActorSpellState(targetID, 218))) and accel <= 0) then 
-
+	if (minHeight <= 0 or bit.band(savingthrow, 0x10000) > 0) and bit.band(savingthrow, 0x20000) == 0 and (height <= minHeight and (speed < 0 or (speed <= 0 and minHeight >= 0 and not isFlying and not IEex_GetActorSpellState(targetID, 218))) and accel <= 0) then 
 		IEex_WriteWord(creatureData + 0x722, 0)
 		IEex_WriteWord(creatureData + 0x724, -2)
 --[[
@@ -20683,13 +20750,13 @@ function IEex_HeightMod(creatureData)
 			end)
 			IEex_WriteByte(creatureData + 0x9DC, 0)
 --			IEex_JumpActorToPoint(targetID, targetX, targetY, true)
-
 			IEex_ApplyEffectToActor(targetID, {
 ["opcode"] = 500,
 ["target"] = 2,
 ["timing"] = 3,
 ["duration"] = 1,
 ["resource"] = "MEUNSTUC",
+["parent_resource"] = parent_resource,
 ["source_target"] = targetID,
 ["source_id"] = targetID
 })
@@ -22227,6 +22294,7 @@ function MEPROJIM(effectData, creatureData)
 ["duration"] = duration,
 ["parameter1"] = 1,
 ["parameter2"] = 0,
+["savingthrow"] = 0x10000,
 ["resource"] = creatureRES,
 ["target_x"] = targetX,
 ["target_y"] = targetY,

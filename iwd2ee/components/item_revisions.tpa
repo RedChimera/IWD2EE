@@ -2379,6 +2379,7 @@ COPY_EXISTING ~00BWLX98.itm~ ~override~
 
 COPY_EXISTING ~00BWLX99.itm~ ~override~
 	SAY NAME2 @11821
+	SAY IDENTIFIED_DESC @11822
 
 COPY_EXISTING ~00BWLXHF.itm~ ~override~
 	SAY NAME2 @11823
@@ -4639,6 +4640,12 @@ COPY_EXISTING ~11bookde.itm~ ~override~ ~11hfbkde.itm~ ~override~
 	us_kit_unusability_3|=0x80
 	WRITE_BYTE 0x2b us_kit_unusability_2
 	WRITE_BYTE 0x2d us_kit_unusability_3
+
+COPY_EXISTING ~usbooksp.itm~ ~override~
+	READ_BYTE 0x2d us_kit_unusability_3
+	us_kit_unusability_3|=0x40
+	WRITE_BYTE 0x2d us_kit_unusability_3
+	IF_EXISTS
 
 //Scimitars should have the scimitar animation
 COPY_EXISTING_REGEXP ~..SWDC..\.itm~ ~override~ ~..HFSC..\.itm~ ~override~

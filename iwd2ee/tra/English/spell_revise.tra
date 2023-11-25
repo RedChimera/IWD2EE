@@ -66,7 +66,7 @@ Casting Time: 3
 Area of Effect: 3-foot radius
 Saving Throw: None
 
-This spell conjures forth a barrier of floating bones that spin rapidly around the caster. Anyone entering their path takes 2d6 bludgeoning damage and 2d6 slashing damage per round.~
+This spell conjures forth a barrier of floating bones that spin rapidly around the caster. Anyone entering their path takes 2d6 bludgeoning damage and 2d6 slashing damage per round. This spell does not provoke an attack of opportunity.~
 @1012    = ~Mold Touch~
 @1013    = ~Mold Touch 
 (Transmutation)
@@ -111,7 +111,7 @@ Casting Time: 7
 Area of Effect: 1 creature
 Saving Throw: Fortitude negates
 
-This spell grants the caster the ability to touch a creature and instantly poison them. The poison deals 2 damage per second for 30 seconds, then dissipates from the target's body. For every 6 caster levels, the poison deals another point of damage per second, up to a maximum of 7 damage per second at level 30. A successful Fortitude save negates any effect.~
+This spell grants the caster the ability to touch a creature and instantly poison them. The poison deals 2 damage per second for 30 seconds, then dissipates from the target's body. For every 6 caster levels, the poison deals another point of damage per second, up to a maximum of 7 damage per second at level 30. A successful Fortitude save negates any effect. This spell does not provoke an attack of opportunity.~
 @1018    = ~Shield of Lathander~
 @1019    = ~Shield of Lathander 
 (Conjuration) [Good]
@@ -144,7 +144,7 @@ Casting Time: 9
 Area of Effect: 3-foot radius
 Saving Throw: Reflex half
 
-This spell conjures forth a wall of circling, razor-sharp blades that whirl and flash around the caster. Any creature attempting to pass through the blade barrier suffers 10d8 points of damage, with a successful Reflex save for half damage.~
+This spell conjures forth a wall of circling, razor-sharp blades that whirl and flash around the caster. Any creature attempting to pass through the blade barrier suffers 10d8 points of damage, with a successful Reflex save for half damage. This spell does not provoke an attack of opportunity.~
 @1024    = ~Spiritual Wrath~
 @1025    = ~Spiritual Wrath 
 (Evocation)
@@ -155,7 +155,7 @@ Casting Time: 2
 Area of Effect: Special
 Saving Throw: Reflex half
 
-Upon completion of this spell, the caster becomes a focus of spiritual energy, which then shoots out from the caster in four directions, like lightning bolts. The caster specifies the direction of one of the bolts and the other bolts shoot opposite and perpendicular to that direction, completing a cross-shaped pattern. All creatures in the bolts' path take 5d20 points of magic damage, with a Reflex save for half. Creatures of the same moral alignment (good, neutral, evil) as the caster are unaffected by the spell.~
+Upon completion of this spell, the caster becomes a focus of spiritual energy, which then shoots out from the caster in four directions, like lightning bolts. The caster specifies the direction of one of the bolts and the other bolts shoot opposite and perpendicular to that direction, completing a cross-shaped pattern. All creatures in the bolts' path take 5d20 points of magic damage, with a Reflex save for half. Creatures of the same moral alignment (good, neutral, evil) as the caster are unaffected by the spell. This spell does not provoke an attack of opportunity.~
 @1026    = ~Whirlwind~
 @1027    = ~Whirlwind 
 (Evocation)
@@ -807,7 +807,7 @@ Casting Time: 1
 Area of Effect: 15-foot radius
 Saving Throw: Reflex half
 
-Malavon's Rage was created by the dark elf sorcerer Malavon. It shoots darts of pure energy out from the caster's body in all directions, harming friend and foe alike. The small wedges of magic do 25d4 points of piercing damage to everything caught in their path (Reflex save with +2 DC for half). This spell is especially useful when a mage is surrounded by enemies.
+Malavon's Rage was created by the dark elf sorcerer Malavon. It shoots darts of pure energy out from the caster's body in all directions, harming friend and foe alike. The small wedges of magic do 25d4 points of piercing damage to everything caught in their path (Reflex save with +2 DC for half). This spell is especially useful when a mage is surrounded by enemies, and it will not provoke an attack of opportunity.
 
 Like most spells created by drow, Malavon's Rage was designed to bypass spell resistance, as drow often fight enemies that resist magic... such as other drow.~
 @1138    = ~Flaying~
@@ -1212,8 +1212,7 @@ Casting Time: 7
 Area of Effect: 15-foot radius
 Saving Throw: Reflex partial
 
-This spell allows the caster to evoke dazzling beams of intensely hot light. Every round, all creatures in the beam are blinded for 3 rounds and take 4d6 points of magic damage, or 16d6 damage over 4 rounds. A successful Reflex save negates the blindness and reduces the damage by half. Undead creatures, fungi, mold, oozes, slimes and other fungoid creatures caught in the ray suffer 1d6 points of damage per caster level (maximum 20d6) per round. This spell bypasses spell resistance.
-~
+This spell allows the caster to evoke dazzling beams of intensely hot light. Every round, all creatures in the beam are blinded for 3 rounds and take 4d6 points of magic damage, or 16d6 damage over 4 rounds. A successful Reflex save negates the blindness and reduces the damage by half. Undead creatures, fungi, mold, oozes, slimes and other fungoid creatures caught in the ray suffer 1d6 points of damage per caster level (maximum 20d6) per round. This spell bypasses spell resistance.~
 @1621    = ~Great Shout~
 @1622    = ~Great Shout
 (Evocation)
@@ -1225,7 +1224,6 @@ Area of Effect: 30-feet long, 10-foot diameter
 Saving Throw: Fortitude half
 
 Upon uttering the Great Shout, the caster releases a stunning force from his mouth in a 30-foot long, 10-foot diameter cone. Creatures within the area of effect take 10d10 magic damage with a Fortitude save for half. Those who fail the save are stunned for 5 rounds and deafened for 10 rounds. The caster also takes 2d10 damage and is stunned for 1 round and deafened for 2 rounds, but makes his or her saving throw with -5 DC. Great Shout bypasses spell resistance and immunity to magic. Deafened creatures have a 25% chance of resisting this spell.~
-
 @1623    = ~Animal Rage~
 @1624    = ~Animal Rage
 (Enchantment)
@@ -1236,9 +1234,7 @@ Casting Time: 8
 Area of Effect: 1 creature
 Saving Throw: Special
 
-This spell imbues the target creature with animal ferocity. The target creature gains +4 strength, +4 constitution, +20% movement, and +2 to all saving throws. The target loses the ability to cast spells while Animal Rage is in effect. He or she can be controlled normally unless enemies are within sight, at which time the target immediately attacks in melee, using whatever is in hand. There is a 5% chance per round that the target will go berserk, attacking friend and foe alike. Allies are automatically affected, while enemies may make a Will save to avoid the effects.
-~
-
+This spell imbues the target creature with animal ferocity. The target creature gains +4 strength, +4 constitution, +20% movement, and +2 to all saving throws. The target loses the ability to cast spells while Animal Rage is in effect. He or she can be controlled normally unless enemies are within sight, at which time the target immediately attacks in melee, using whatever is in hand. There is a 5% chance per round that the target will go berserk, attacking friend and foe alike. Allies are automatically affected, while enemies may make a Will save to avoid the effects. This spell does not provoke an attack of opportunity when cast on an enemy.~
 @1629    = ~Flame Arrow~
 @1630    = ~Flame Arrow 
 (Conjuration) 
@@ -1489,8 +1485,7 @@ Up to 2: Unconscious for 5 rounds
 3 or 4: Blinded for 3 rounds
 5 or more: Stunned for 1 round
 
-A successful Will save with +2 DC will negate the effect. Blind creatures are not affected by color spray.
-~
+A successful Will save with +2 DC will negate the effect. Blind creatures are not affected by color spray. This spell does not provoke an attack of opportunity.~
 @1682    = ~Alicorn Lance~
 @1683    = ~Alicorn Lance
 (Evocation)
@@ -2301,7 +2296,7 @@ Casting Time: 1
 Area of Effect: Burst of flames 10ft. long, centered on caster's hands
 Saving Throw: Reflex half
 
-When the wizard casts this spell, a jet of searing flame shoots from his fingertips. The flame jets are five feet in length and spread out in a horizontal arc of about 120 degrees in front of the wizard. Any creature in the area of effect suffers 1d4 points of damage per caster level (maximum of 5d4). A successful Reflex save halves the damage.~
+When the wizard casts this spell, a jet of searing flame shoots from his fingertips. The flame jets are five feet in length and spread out in a horizontal arc of about 120 degrees in front of the wizard. Any creature in the area of effect suffers 1d4 points of damage per caster level (maximum of 5d4). A successful Reflex save halves the damage. This spell does not provoke an attack of opportunity.~
 @1895     = ~Flame Blade~
 @1896     = ~Flame Blade
 (Evocation)
@@ -3031,6 +3026,17 @@ Area of Effect: Caster
 Saving Throw: None 
 
 The armor of faith is a force of energy that absorbs a portion of the damage intended for the caster. The caster gains a 1/- resistance to all non-poison damage for the duration of the spell. For every five caster levels, they get another 1/- resistance.~
+@31117     = ~Frost Fingers~
+@32117     = ~Frost Fingers
+(Transmutation) 
+Level: Drd 1
+Range: Caster
+Duration: Instantaneous
+Casting Time: 1
+Area of Effect: 5-foot long, 120 degree arc
+Saving Throw: Reflex half
+
+Upon completion of this spell, chilling frost emanates from the caster's hands in the shape of a wedge in front of them.  Any creature caught in the area of effect suffers 1d3 + 1 cold damage per caster level, to a maximum of 1d3 + 10 cold damage.  In addition, the creature is slowed for 2 rounds.  A successful Reflex save halves the damage and negates the slow effect. This spell does not provoke an attack of opportunity.~
 @31150     = ~Summon Nature's Ally I~
 @32150     = ~Summon Nature's Ally I
 (Conjuration) 
@@ -3089,7 +3095,7 @@ Casting Time: 3
 Area of Effect: 5' x 20' x 20' cone
 Saving Throw: Reflex half
 
-This spell calls upon Selune's connection with moonlight and magic to invoke a spray of glowing spheres. The spell causes 1d6 magic damage per level (max 5d6) to every creature caught in its path. Creatures can make a Reflex save for half damage.~
+This spell calls upon Selune's connection with moonlight and magic to invoke a spray of glowing spheres. The spell causes 1d6 magic damage per level (max 5d6) to every creature caught in its path. Creatures can make a Reflex save for half damage. This spell does not provoke an attack of opportunity.~
 @31250     = ~Summon Nature's Ally II~
 @32250     = ~Summon Nature's Ally II
 (Conjuration) 
@@ -3210,7 +3216,7 @@ Casting Time: 6
 Area of Effect: Caster
 Saving Throw: Will negates
 
-Cloak of Fear bestows the caster with an aura of fear in a 5-foot radius.  All enemies that enter the cloak's area of effect must make a Will save or flee in panic for 1 round, and must continue to make Will saves twice a round as long as they are in the cloak of fear's area of effect.  The aura does not affect undead creatures.~
+Cloak of Fear bestows the caster with an aura of fear in a 5-foot radius.  All enemies that enter the cloak's area of effect must make a Will save or flee in panic for 1 round, and must continue to make Will saves twice a round as long as they are in the cloak of fear's area of effect.  The aura does not affect undead creatures. This spell does not provoke an attack of opportunity.~
 @31417     = ~Cloud of Pestilence~
 @32417     = ~Cloud of Pestilence
 (Necromancy) [Evil]
@@ -3599,7 +3605,7 @@ Casting Time: 3
 Area of Effect: 30-foot radius
 Saving Throw: Reflex half
 
-A sunfire is an explosive burst of flame similar to a fireball, but centered on the caster.  All creatures in the area of effect except for the caster are burned for 1d6 fire damage per caster level (15d6 maximum, 12d6 minimum).  A successful Reflex save halves the damage.  This spell blinds drow and gray dwarves if a Fortitude save is failed.~
+A sunfire is an explosive burst of flame similar to a fireball, but centered on the caster.  All creatures in the area of effect except for the caster are burned for 1d6 fire damage per caster level (15d6 maximum, 12d6 minimum).  A successful Reflex save halves the damage.  This spell blinds drow and gray dwarves if a Fortitude save is failed. This spell does not provoke an attack of opportunity.~
 @33520     = ~Lesser Planar Binding: Air Elemental~
 @34520     = ~Lesser Planar Binding: Air Elemental
 (Conjuration) 

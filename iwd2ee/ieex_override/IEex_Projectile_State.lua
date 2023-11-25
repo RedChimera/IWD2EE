@@ -1561,3 +1561,18 @@ IEex_MutatorGlobalFunctions["USWI858"] = {
     ["effectMutator"] = function(source, creatureData, projectileData, effectData)
     end,
 }
+
+IEex_MutatorGlobalFunctions["USDLVMOD"] = {
+    ["typeMutator"] = function(source, creatureData, missileIndex, sourceRES)
+
+    end,
+    ["projectileMutator"] = function(source, creatureData, projectileData, sourceRES)
+	end,
+    ["effectMutator"] = function(source, creatureData, projectileData, effectData)
+    	local parent_resource = IEex_ReadLString(effectData + 0x90, 8)
+    	local trueSpellLevel = ex_alternate_spell_level_list[parent_resource]
+    	if trueSpellLevel then
+			IEex_WriteDword(effectData + 0x14, trueSpellLevel)
+    	end
+    end,
+}
