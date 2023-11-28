@@ -421,6 +421,24 @@ function IEex_FlattenTable(table)
 	return toReturn
 end
 
+function IEex_FindInTable(t, toFind)
+	for i, v in ipairs(t) do
+		if v == toFind then
+			return i
+		end
+	end
+	return nil
+end
+
+function IEex_ElementInTableMeetsCond(t, condFunc)
+	for _, v in ipairs(t) do
+		if condFunc(v) then
+			return true
+		end
+	end
+	return false
+end
+
 function IEex_RoundUp(numToRound, multiple)
 	if multiple == 0 then
 		return numToRound
@@ -860,8 +878,8 @@ Core function that writes assembly declarations into memory. args syntax =>
 		>label  = Writes relative offset to label's address.
 		*label  = Writes label's address.
 		@label  = Defines a local label that can be used in the above two operations.
-		          (only in current IEex_WriteAssembly call, use IEex_DefineAssemblyLabel()
-		          if you want to create a global label)
+				  (only in current IEex_WriteAssembly call, use IEex_DefineAssemblyLabel()
+				  if you want to create a global label)
 		$label  = Defines a global label
 		!macro  = Writes macro's bytes.
 

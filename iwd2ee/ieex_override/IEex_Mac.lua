@@ -603,6 +603,7 @@ IEex_GlobalAssemblyMacros = {
 	["mov_al_[esi]"] = "8A 46 00",
 	["mov_al_[esp+byte]"] = "8A 44 24",
 	["mov_al_byte:[dword]"] = "A0",
+	["mov_al_byte:[edi]"] = "8A 07",
 	["mov_ax_[ecx+byte]"] = "66 8B 41",
 	["mov_bx"] = "66 BB",
 	["mov_byte:[dword]_al"] = "A2",

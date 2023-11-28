@@ -90,6 +90,7 @@ IEex_Helper_InitBridgeFromTable("IEex_Keys", function()
 	for key = 0x1, 0xFE, 1 do
 		IEex_Keys[key] = {["isDown"] = false}
 	end
+	IEex_Keys.pressedStack = {}
 end)
 
 -- These need to be readded every IEex_Reload()
@@ -114,6 +115,14 @@ end
 
 function IEex_IsKeyDown(key)
 	return IEex_Helper_GetBridge("IEex_Keys", key, "isDown")
+end
+
+function IEex_GetPressedKeysStack()
+	return IEex_Helper_ReadDataFromBridge("IEex_Keys", "pressedStack")
+end
+
+function IEex_GetPressedKeysStackNL()
+	return IEex_Helper_ReadDataFromBridgeNL("IEex_Keys", "pressedStack")
 end
 
 -- Signals the Raw Input implementation to act as if it received a RAWKEYBOARD / RAWMOUSE event (up or down).
@@ -314,10 +323,25 @@ end)
 -- Scrolling --
 ---------------
 
-IEex_Scroll_KeyLeft  = IEex_KeyIDS.LEFT
-IEex_Scroll_KeyRight = IEex_KeyIDS.RIGHT
-IEex_Scroll_KeyUp    = IEex_KeyIDS.UP
-IEex_Scroll_KeyDown  = IEex_KeyIDS.DOWN
+IEex_Scroll_DefaultKeys = {
+	IEex_KeyIDS.UP,    IEex_KeyIDS.NUMPAD8, -- m_nKeyScrollState = 1
+					   IEex_KeyIDS.NUMPAD9, -- m_nKeyScrollState = 2
+	IEex_KeyIDS.RIGHT, IEex_KeyIDS.NUMPAD6, -- m_nKeyScrollState = 3
+					   IEex_KeyIDS.NUMPAD3, -- m_nKeyScrollState = 4
+	IEex_KeyIDS.DOWN,  IEex_KeyIDS.NUMPAD2, -- m_nKeyScrollState = 5
+					   IEex_KeyIDS.NUMPAD1, -- m_nKeyScrollState = 6
+	IEex_KeyIDS.LEFT,  IEex_KeyIDS.NUMPAD4, -- m_nKeyScrollState = 7
+					   IEex_KeyIDS.NUMPAD7, -- m_nKeyScrollState = 8
+}
+
+IEex_Scroll_UpKeys          = { IEex_KeyIDS.UP,    IEex_KeyIDS.NUMPAD8 }
+IEex_Scroll_TopRightKeys    = {                    IEex_KeyIDS.NUMPAD9 }
+IEex_Scroll_RightKeys       = { IEex_KeyIDS.RIGHT, IEex_KeyIDS.NUMPAD6 }
+IEex_Scroll_BottomRightKeys = {                    IEex_KeyIDS.NUMPAD3 }
+IEex_Scroll_DownKeys        = { IEex_KeyIDS.DOWN,  IEex_KeyIDS.NUMPAD2 }
+IEex_Scroll_BottomLeftKeys  = {                    IEex_KeyIDS.NUMPAD1 }
+IEex_Scroll_LeftKeys        = { IEex_KeyIDS.LEFT,  IEex_KeyIDS.NUMPAD4 }
+IEex_Scroll_TopLeftKeys     = {                    IEex_KeyIDS.NUMPAD7 }
 
 IEex_Helper_InitBridgeFromTable("IEex_Scroll_MiddleMouseState", {
 	["isDown"] = false,
@@ -336,33 +360,99 @@ function IEex_Scroll_CalculateDeltaFactor()
 	return toReturn
 end
 
-function IEex_Scroll_CheckMultiScrollState(m_nKeyScrollState)
-	if m_nKeyScrollState == 1 then
-		if IEex_IsKeyDown(IEex_Scroll_KeyLeft) or IEex_IsKeyDown(IEex_KeyIDS.NUMPAD4) then
-			m_nKeyScrollState = 8
-		elseif IEex_IsKeyDown(IEex_Scroll_KeyRight) or IEex_IsKeyDown(IEex_KeyIDS.NUMPAD6) then
-			m_nKeyScrollState = 2
-		end
-	elseif m_nKeyScrollState == 3 then
-		if IEex_IsKeyDown(IEex_Scroll_KeyUp) or IEex_IsKeyDown(IEex_KeyIDS.NUMPAD8) then
-			m_nKeyScrollState = 2
-		elseif IEex_IsKeyDown(IEex_Scroll_KeyDown) or IEex_IsKeyDown(IEex_KeyIDS.NUMPAD2) then
-			m_nKeyScrollState = 4
-		end
-	elseif m_nKeyScrollState == 5 then
-		if IEex_IsKeyDown(IEex_Scroll_KeyRight) or IEex_IsKeyDown(IEex_KeyIDS.NUMPAD6) then
-			m_nKeyScrollState = 4
-		elseif IEex_IsKeyDown(IEex_Scroll_KeyLeft) or IEex_IsKeyDown(IEex_KeyIDS.NUMPAD4) then
-			m_nKeyScrollState = 6
-		end
-	elseif m_nKeyScrollState == 7 then
-		if IEex_IsKeyDown(IEex_Scroll_KeyDown) or IEex_IsKeyDown(IEex_KeyIDS.NUMPAD2) then
-			m_nKeyScrollState = 6
-		elseif IEex_IsKeyDown(IEex_Scroll_KeyUp) or IEex_IsKeyDown(IEex_KeyIDS.NUMPAD8) then
-			m_nKeyScrollState = 8
+function IEex_Scroll_ResolveScrollState()
+	local state = 0
+	for _, key in ipairs(IEex_GetPressedKeysStack()) do
+		if IEex_FindInTable(IEex_Scroll_UpKeys, key) then
+			if state == 3 or state == 4 then     -- RIGHT / BOTTOM-RIGHT
+				state = 2                        -- => TOP-RIGHT
+			elseif state == 6 or state == 7 then -- BOTTOM-LEFT / LEFT
+				state = 8                        -- => TOP-LEFT
+			else
+				state = 1                        -- => UP
+			end
+		elseif IEex_FindInTable(IEex_Scroll_TopRightKeys, key) then
+			state = 2                            -- => TOP-RIGHT
+		elseif IEex_FindInTable(IEex_Scroll_RightKeys, key) then
+			if state == 1 or state == 8 then     -- UP / TOP-LEFT
+				state = 2                        -- => TOP-RIGHT
+			elseif state == 5 or state == 6 then -- DOWN / BOTTOM-LEFT
+				state = 4                        -- => BOTTOM-RIGHT
+			else
+				state = 3                        -- => RIGHT
+			end
+		elseif IEex_FindInTable(IEex_Scroll_BottomRightKeys, key) then
+			state = 4                            -- => BOTTOM-RIGHT
+		elseif IEex_FindInTable(IEex_Scroll_DownKeys, key) then
+			if state == 2 or state == 3 then     -- TOP-RIGHT / RIGHT
+				state = 4                        -- => BOTTOM-RIGHT
+			elseif state == 7 or state == 8 then -- LEFT / TOP-LEFT
+				state = 6                        -- => BOTTOM-LEFT
+			else
+				state = 5                        -- => DOWN
+			end
+		elseif IEex_FindInTable(IEex_Scroll_BottomLeftKeys, key) then
+			state = 6                            -- => BOTTOM-LEFT
+		elseif IEex_FindInTable(IEex_Scroll_LeftKeys, key) then
+			if state == 1 or state == 2 then     -- UP / TOP-RIGHT
+				state = 8                        -- => TOP-LEFT
+			elseif state == 4 or state == 5 then -- BOTTOM-RIGHT / DOWN
+				state = 6                        -- => BOTTOM-LEFT
+			else
+				state = 7                        -- => LEFT
+			end
+		elseif IEex_FindInTable(IEex_Scroll_TopLeftKeys, key) then
+			state = 8                            -- => TOP-LEFT
 		end
 	end
-	return m_nKeyScrollState
+	return state
+end
+
+function IEex_IsWorldScreenAcceptingInput()
+
+	local m_pObjectGame = IEex_GetGameData()
+	local m_inputMode = IEex_ReadByte(m_pObjectGame + 0x43E2)
+	local pWorldEngine = IEex_GetEngineWorld()
+	local pUIManager = IEex_GetUIManagerFromEngine(pWorldEngine)
+
+	return
+		IEex_IsBitSet(m_inputMode, 0)                       -- (m_pObjectGame->m_gameSave.m_inputMode & 1) != 0
+		and
+		(
+			IEex_IsBitUnset(m_inputMode, 1)                 -- (m_pObjectGame->m_gameSave.m_inputMode & 2) == 0
+			or IEex_ReadDword(pUIManager) ~= 0              -- or m_bHidden
+			or IEex_ReadDword(pUIManager + 0x14) == 0x0     -- or m_controlCaptured == nullptr
+			or IEex_ByteDword(pUIManager + 0x2C) ~= 2       -- or m_inputCaptured ~= 2
+		)
+		and
+		(
+			IEex_ReadDword(pWorldEngine + 0x156) == 0       -- !m_bCheatKeysEnabled
+			or IEex_ReadDword(pWorldEngine + 0x136) == 0    -- or !m_bCtrlDown
+			or key == IEex_ReadByte(m_pObjectGame + 0x452A) -- or key == m_pObjectGame->aHotkeyToVirtualKey[0x16] (Map)
+		)
+end
+
+function IEex_IsGameAutoScrolling()
+	if IEex_GetActiveEngine() ~= IEex_GetEngineWorld() then return false end
+	local pVisibleArea = IEex_GetVisibleArea()
+	if pVisibleArea == 0x0 then return false end
+	local CInfinity = IEex_GetCInfinityFromArea(pVisibleArea)
+	return IEex_ReadDword(CInfinity + 0x18E) ~= -1 -- m_ptScrollDest.x
+		or IEex_ReadDword(CInfinity + 0x192) ~= -1 -- m_ptScrollDest.y
+end
+
+IEex_Scroll_CheckScheduled = false
+
+function IEex_Scroll_CheckKeyboardInput()
+	if IEex_GetActiveEngine() == IEex_GetEngineWorld() then
+		local pVisibleArea = IEex_GetVisibleArea()
+		if pVisibleArea ~= 0x0 and IEex_IsWorldScreenAcceptingInput() and not IEex_IsGameAutoScrolling() then
+			IEex_WriteDword(pVisibleArea + 0x23C, IEex_Scroll_ResolveScrollState())
+			IEex_Scroll_CheckScheduled = false
+			return
+		end
+	end
+	IEex_Scroll_CheckScheduled = true
 end
 
 function IEex_Scroll_KeyPressedListener(key)
@@ -376,14 +466,7 @@ function IEex_Scroll_KeyPressedListener(key)
 		end)
 	end
 
-	if IEex_GetActiveEngine() == IEex_GetEngineWorld() then
-		local visibleArea = IEex_GetVisibleArea()
-		if visibleArea ~= 0x0 then
-			local m_nKeyScrollStateAddress = visibleArea + 0x23C
-			local m_nKeyScrollState = IEex_ReadDword(m_nKeyScrollStateAddress)
-			IEex_WriteDword(m_nKeyScrollStateAddress, IEex_Scroll_CheckMultiScrollState(m_nKeyScrollState))
-		end
-	end
+	IEex_Scroll_CheckKeyboardInput()
 end
 
 function IEex_Scroll_KeyReleasedListener(key)
@@ -392,64 +475,12 @@ function IEex_Scroll_KeyReleasedListener(key)
 		IEex_Helper_SetBridge("IEex_Scroll_MiddleMouseState", "isDown", false)
 	end
 
-	if IEex_GetActiveEngine() == IEex_GetEngineWorld() then
+	IEex_Scroll_CheckKeyboardInput()
+end
 
-		local visibleArea = IEex_GetVisibleArea()
-		if visibleArea ~= 0x0 then
-
-			local m_nKeyScrollStateAddress = visibleArea + 0x23C
-			local m_nKeyScrollState = IEex_ReadDword(m_nKeyScrollStateAddress)
-
-			if key == IEex_Scroll_KeyLeft or key == IEex_KeyIDS.NUMPAD4 then
-				if IEex_IsKeyDown(IEex_Scroll_KeyRight) or IEex_IsKeyDown(IEex_KeyIDS.NUMPAD6) then
-					m_nKeyScrollState = IEex_Scroll_CheckMultiScrollState(3)
-				elseif m_nKeyScrollState == 6 and not IEex_IsKeyDown(IEex_KeyIDS.NUMPAD1) then
-					m_nKeyScrollState = 5
-				elseif m_nKeyScrollState == 7 then
-					m_nKeyScrollState = 0
-				elseif m_nKeyScrollState == 8 and not IEex_IsKeyDown(IEex_KeyIDS.NUMPAD7) then
-					m_nKeyScrollState = 1
-				end
-			elseif key == IEex_Scroll_KeyRight or key == IEex_KeyIDS.NUMPAD6 then
-				if IEex_IsKeyDown(IEex_Scroll_KeyLeft) or IEex_IsKeyDown(IEex_KeyIDS.NUMPAD4) then
-					m_nKeyScrollState = IEex_Scroll_CheckMultiScrollState(7)
-				elseif m_nKeyScrollState == 2 and not IEex_IsKeyDown(IEex_KeyIDS.NUMPAD9) then
-					m_nKeyScrollState = 1
-				elseif m_nKeyScrollState == 3 then
-					m_nKeyScrollState = 0
-				elseif m_nKeyScrollState == 4 and not IEex_IsKeyDown(IEex_KeyIDS.NUMPAD3) then
-					m_nKeyScrollState = 5
-				end
-			elseif key == IEex_Scroll_KeyUp or key == IEex_KeyIDS.NUMPAD8 then
-				if IEex_IsKeyDown(IEex_Scroll_KeyDown) or IEex_IsKeyDown(IEex_KeyIDS.NUMPAD2) then
-					m_nKeyScrollState = IEex_Scroll_CheckMultiScrollState(5)
-				elseif m_nKeyScrollState == 1 then
-					m_nKeyScrollState = 0
-				elseif m_nKeyScrollState == 2 and not IEex_IsKeyDown(IEex_KeyIDS.NUMPAD9) then
-					m_nKeyScrollState = 3
-				elseif m_nKeyScrollState == 8 and not IEex_IsKeyDown(IEex_KeyIDS.NUMPAD7) then
-					m_nKeyScrollState = 7
-				end
-			elseif key == IEex_Scroll_KeyDown or key == IEex_KeyIDS.NUMPAD2 then
-				if IEex_IsKeyDown(IEex_Scroll_KeyUp) or IEex_IsKeyDown(IEex_KeyIDS.NUMPAD8) then
-					m_nKeyScrollState = IEex_Scroll_CheckMultiScrollState(1)
-				elseif m_nKeyScrollState == 4 and not IEex_IsKeyDown(IEex_KeyIDS.NUMPAD3) then
-					m_nKeyScrollState = 3
-				elseif m_nKeyScrollState == 5 then
-					m_nKeyScrollState = 0
-				elseif m_nKeyScrollState == 6 and not IEex_IsKeyDown(IEex_KeyIDS.NUMPAD1) then
-					m_nKeyScrollState = 7
-				end
-			elseif (key == IEex_KeyIDS.NUMPAD7 and m_nKeyScrollState == 8)
-				or (key == IEex_KeyIDS.NUMPAD9 and m_nKeyScrollState == 2)
-				or (key == IEex_KeyIDS.NUMPAD3 and m_nKeyScrollState == 4)
-				or (key == IEex_KeyIDS.NUMPAD1 and m_nKeyScrollState == 6)
-			then
-				m_nKeyScrollState = 0
-			end
-
-			IEex_WriteDword(m_nKeyScrollStateAddress, m_nKeyScrollState)
-		end
+function IEex_Scroll_InputStateListener()
+	if IEex_Scroll_CheckScheduled then
+		IEex_Scroll_CheckKeyboardInput()
 	end
 end
 
@@ -1568,10 +1599,6 @@ function IEex_AddButtonListener()
 	end
 end
 
-function IEex_Scroll_InputStateListener()
-
-end
-
 function IEex_Scroll_RegisterListeners()
 	IEex_AddKeyPressedListener("IEex_BuffRecordingListener")
 	IEex_AddKeyPressedListener("IEex_ExtraCheatKeysListener")
@@ -1621,7 +1648,10 @@ function IEex_Extern_CheckScroll()
 			local cursorX, cursorY = IEex_ScreenToClient(IEex_GetCursorPos())
 			local deltaX = IEex_Helper_GetBridgeNL("IEex_Scroll_MiddleMouseState", "oldX") - cursorX
 			local deltaY = IEex_Helper_GetBridgeNL("IEex_Scroll_MiddleMouseState", "oldY") - cursorY
-			IEex_AdjustViewPosition(deltaX, deltaY)
+
+			if IEex_IsWorldScreenAcceptingInput() and not IEex_IsGameAutoScrolling() then
+				IEex_AdjustViewPosition(deltaX, deltaY)
+			end
 
 			IEex_Helper_SetBridgeNL("IEex_Scroll_MiddleMouseState", "oldX", cursorX)
 			IEex_Helper_SetBridgeNL("IEex_Scroll_MiddleMouseState", "oldY", cursorY)
@@ -1888,56 +1918,102 @@ function IEex_Extern_BeforeCheckKeys()
 	end
 end
 
-
 function IEex_Extern_CChitin_ProcessEvents_CheckKeys()
 
 	-- https://docs.microsoft.com/en-us/windows/win32/inputdev/virtual-key-codes
 
 	IEex_AssertThread(IEex_Thread.Async, true)
 
-	for key = 0x1, 0xFE, 1 do
+	-- Save key states, the pressed keys stack, and pressed/released events during the Raw Input lock to keep the critical section short
+	local keyStates = {}
+	local pressedKeysStack = nil
+	local keyPressedEvents = {}
+	local keyReleasedEvents = {}
+	local keyPressedEventsI = 0
+	local keyReleasedEventsI = 0
 
-		-- IEex_Helper_GetAsyncKeyStateClient() allows up to 15 ([0-14]) clients (0 = engine) to query key state while
-		-- each having their own "pressed since last poll" state
-		--
-		-- The export "IEex_Helper_GetAsyncKeyStateWrapper" is IEex_Helper_GetAsyncKeyStateClient() with nClient = 0
-		local keyState = IEex_Helper_GetAsyncKeyStateClient(1, key)
+	IEex_Helper_SynchronizedBridgeOperation("IEex_Keys", function(keysBridge)
 
-		local isDownRightNow = bit.band(keyState, 0x8000) ~= 0x0
-		local wasDown = bit.band(keyState, 0x1) ~= 0x0
-
-		local keyData = IEex_Helper_GetBridge("IEex_Keys", key)
-		local isDownBridge = IEex_Helper_GetBridge(keyData, "isDown")
-
-		-- Update bridge
-		if isDownRightNow then
-			if not isDownBridge then
-				IEex_Helper_SetBridge(keyData, "isDown", true)
+		-- Locks the Raw Input implementation. Key states / the pressed keys stack will not be updated during the critical section.
+		IEex_Helper_RunWithRawInputLock(function()
+			for key = 0x1, 0xFE do
+				-- IEex_Helper_GetAsyncKeyStateClient() allows up to 15 ([0-14]) clients (0 = engine) to query key state while
+				-- each having their own "pressed since last poll" state. The export "IEex_Helper_GetAsyncKeyStateWrapper" is
+				-- IEex_Helper_GetAsyncKeyStateClient() with nClient = 0.
+				keyStates[key] = IEex_Helper_GetAsyncKeyStateClient(1, key)
 			end
-		elseif isDownBridge then
-			IEex_Helper_SetBridge(keyData, "isDown", false)
-		end
+			pressedKeysStack = IEex_Helper_GetPressedKeysStackNL()
+		end)
 
-		-- If the async thread is running really slow it might miss a keydown + keyup
-		-- This corrects missing exactly 1 keydown + keyup sequence for a key
-		local missedPress = not isDownRightNow and wasDown
+		IEex_Helper_SetBridgeNL(keysBridge, "pressedStack", pressedKeysStack)
 
-		-- Run key pressed listeners
-		if (isDownRightNow and not isDownBridge) or missedPress then
-			IEex_Helper_IterateBridge("IEex_KeyPressedListeners", function(_, funcName)
-				_G[funcName](key)
-			end)
-		end
+		for key = 0x1, 0xFE do
 
-		-- Run key released listeners
-		if (not isDownRightNow and isDownBridge) or missedPress then
-			IEex_Helper_IterateBridge("IEex_KeyReleasedListeners", function(_, funcName)
-				_G[funcName](key)
-			end)
+			local keyState = keyStates[key]
+
+			local isDownRightNow = bit.band(keyState, 0x8000) ~= 0x0
+			local wasDown = bit.band(keyState, 0x1) ~= 0x0
+
+			local keyData = IEex_Helper_GetBridgeNL(keysBridge, key)
+			local isDownBridge = IEex_Helper_GetBridgeNL(keyData, "isDown")
+
+			-- Update bridge
+			if isDownRightNow then
+				if not isDownBridge then
+					IEex_Helper_SetBridgeNL(keyData, "isDown", true)
+				end
+			elseif isDownBridge then
+				IEex_Helper_SetBridgeNL(keyData, "isDown", false)
+			end
+
+			-- If the async thread is running really slow it might miss a keydown + keyup
+			-- This corrects missing exactly 1 keydown + keyup sequence for a key
+			local missedPress = not isDownRightNow and wasDown
+
+			-- Note key pressed event
+			if (isDownRightNow and not isDownBridge) or missedPress then
+				keyPressedEventsI = keyPressedEventsI + 1
+				keyPressedEvents[keyPressedEventsI] = key
+			end
+
+			-- Note key released event
+			if (not isDownRightNow and isDownBridge) or missedPress then
+				keyReleasedEventsI = keyReleasedEventsI + 1
+				keyReleasedEvents[keyReleasedEventsI] = key
+			end
 		end
+	end)
+
+	-- Run key pressed listeners
+	for _, key in ipairs(keyPressedEvents) do
+		IEex_Helper_IterateBridge("IEex_KeyPressedListeners", function(_, funcName)
+			_G[funcName](key)
+		end)
+	end
+
+	-- Run key released listeners
+	for _, key in ipairs(keyReleasedEvents) do
+		IEex_Helper_IterateBridge("IEex_KeyReleasedListeners", function(_, funcName)
+			_G[funcName](key)
+		end)
 	end
 
 	IEex_Helper_IterateBridge("IEex_InputStateListeners", function(_, funcName)
 		_G[funcName](key)
 	end)
+end
+
+-- Return:
+--   false => Normal handling (allow hardcoded keybinding / hotkey)
+--   true  => Prevent hardcoded keybinding / hotkey
+function IEex_Extern_OnBeforeWorldScreenCheckingHardcodedKeybinding(key)
+
+	IEex_AssertThread(IEex_Thread.Async, true)
+
+	-- Suppress default scroll key handling
+	if IEex_FindInTable(IEex_Scroll_DefaultKeys, key) then
+		return true
+	end
+
+	return false
 end

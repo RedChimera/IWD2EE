@@ -450,7 +450,7 @@
 
 				@done
 				!jmp_dword :79282B ; Ensure a sync tick per message loop, else the engine
-					               ; might end up processing messages forever
+								   ; might end up processing messages forever
 			]]})
 		end
 
@@ -460,6 +460,32 @@
 
 	IEex_WriteAssembly(0x45F6F8, {"!call >IEex_GetCursorPos !nop"})
 	IEex_WriteAssembly(0x78F2B3, {"!call >IEex_GetCursorPos !nop"})
+
+	--------------------------------------------------------------
+	-- Allow hardcoded worldscreen keybindings to be suppressed --
+	--------------------------------------------------------------
+
+	IEex_HookRestore(0x687829, 0, 7, IEex_FlattenTable({
+		{[[
+			!push_all_registers_iwd2
+		]]},
+		IEex_GenLuaCall("IEex_Extern_OnBeforeWorldScreenCheckingHardcodedKeybinding", {
+			["args"] = {
+				{[[
+					!xor(eax,eax)
+					!mov_al_byte:[edi]
+					!push(eax)
+				]]},
+			},
+			["returnType"] = IEex_LuaCallReturnType.Boolean,
+		}),
+		{[[
+			@call_error
+			!test(eax,eax)
+			!pop_all_registers_iwd2
+			!jnz_dword :689504
+		]]},
+	}))
 
 
 	IEex_EnableCodeProtection()
