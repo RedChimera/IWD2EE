@@ -1,0 +1,739 @@
+@4700     = ~Rainwater Brew~
+@4701     = ~Cheap, efficient, and crude, this potion is a mix of rainwater, clay, ash, and roots from several plants.  This modest brew will restore 2d6 hit points to the drinker.
+
+STATISTICS:
+
+Heals 2d6 hit points
+Weight: 1 lb.~
+@54700     = ~Rainwater Brew~
+@54701     = ~Cheap, efficient, and crude, this potion is a mix of rainwater, clay, ash, and roots from several plants.  This modest brew will restore 5d6 hit points to the drinker.
+
+STATISTICS:
+
+Heals 5d6 hit points
+Weight: 1 lb.~
+@4702     = ~Sour Draught~
+@4703     = ~Potent potions require less common ingredients, and this brew is no exception. Animal fat, bile, dried leaves, and fermented meat comprise this foul-smelling concoction, but a dying friend will not complain. This brew will restore 4d8 hit points to whoever is desperate enough to drink it.
+
+STATISTICS:
+
+Heals 4d8 hit points
+Weight: 1 lb.~
+@54702     = ~Sour Draught~
+@54703     = ~Potent potions require less common ingredients, and this brew is no exception. Animal fat, bile, dried leaves, and fermented meat comprise this foul-smelling concoction, but a dying friend will not complain. This brew will restore 10d8 hit points to whoever is desperate enough to drink it.
+
+STATISTICS:
+
+Heals 10d8 hit points
+Weight: 1 lb.~
+@4704     = ~Sweet Elixir~
+@4705     = ~One might mistake this sweet drink for white wine, but the gentle bite in the flavor comes not from alcohol, but transmuted quartz. Drinking this potion can soothe nearly any ailment, from common infection to lethal venom to an ugly hangover. The quartz binds to toxic substances and turns them into harmless salt, curing poison, disease, and intoxication. In case that is not enough to heal the sickly adventurer, the horse tears in the syrup will also restore 1d4 hit points to the user.
+
+STATISTICS:
+
+Cures poison and disease
+Heals 1d4 hit points
+Weight: 1 lb.~
+@54704     = ~Sweet Elixir~
+@54705     = ~One might mistake this sweet drink for white wine, but the gentle bite in the flavor comes not from alcohol, but transmuted quartz. Drinking this potion can soothe nearly any ailment, from common infection to lethal venom to an ugly hangover. The quartz binds to toxic substances and turns them into harmless salt, curing poison, disease, and intoxication. In case that is not enough to heal the sickly adventurer, the horse tears in the syrup will also restore 4d4 hit points to the user.
+
+STATISTICS:
+
+Cures poison and disease
+Heals 4d4 hit points
+Weight: 1 lb.~
+@4706     = ~Electric Gel~
+@4707     = ~This pale bluish gel emits a strange hum in its tightly-sealed brass container.  When imbibed, the gel absorbs electrical damage, granting the user a 20/- resistance to all forms of electricity.  The effect lasts for 10 rounds or until dispelled.
+
+STATISTICS:
+
+Resistance: 20/- Electrical Resistance~
+@54706     = ~Electric Gel~
+@54707     = ~This pale bluish gel emits a strange hum in its tightly-sealed brass container.  When imbibed, the gel absorbs electrical damage, granting the user a 50/- resistance to all forms of electricity.  The effect lasts for 10 rounds or until dispelled.
+
+STATISTICS:
+
+Resistance: 50/- Electrical Resistance~
+@4708     = ~Radiant Philter~
+@4709     = ~A viscous liquid shimmers inside this tiny bottle. Brewed in a wax jar and leached through strips of magical parchment, this mixture of saltpeter, olive oil, chopped lizards, lye, mint leaves, and cinnamon can shield the user's skin from extreme heat.
+
+By pouring the vial onto one's arm and speaking the command word, the user spreads a radiant prismatic liquid across his or her body, granting 20/- resistance to all forms of fire damage. The liquid is enchanted to cling to the user's skin, but the effect will wear off after 10 rounds.
+
+STATISTICS:
+
+Resistance: 20/- Fire Resistance
+Weight: 1 lb.~
+@54708     = ~Radiant Philter~
+@54709     = ~A viscous liquid shimmers inside this tiny bottle. Brewed in a wax jar and leached through strips of magical parchment, this mixture of saltpeter, olive oil, chopped lizards, lye, mint leaves, and cinnamon can shield the user's skin from extreme heat.
+
+By pouring the vial onto one's arm and speaking the command word, the user spreads a radiant prismatic liquid across his or her body, granting 50/- resistance to all forms of fire damage. The liquid is enchanted to cling to the user's skin, but the effect will wear off after 10 rounds.
+
+STATISTICS:
+
+Resistance: 50/- Fire Resistance
+Weight: 1 lb.~
+@4710     = ~Black Mania~
+@4711     = ~Not all potions are exactly medical.  Some alchemists turn their talents to producing narcotics, and make their living by peddling addictive poisons to the idle and restless.  This black oil is a modified version of one such narcotic.  When drunk Black Mania will induce a violent state of confusion, granting the user a +5 bonus to damage rolls and +3 to melee attack rolls at the cost of a -3 penalty to AC and missile attacks.  Further, the user goes berserk for 10 rounds and his or her hit points are hidden for the duration of the effect.
+
+STATISTICS:
+
++3 to melee attacks
++5 to damage
+-3 AC
+-3 to missile attacks
+User goes berserk while in combat
+Hit points hidden
+Weight: 1 lb.~
+@54710     = ~Black Mania~
+@54711     = ~Not all potions are exactly medical.  Some alchemists turn their talents to producing narcotics, and make their living by peddling addictive poisons to the idle and restless.  This black oil is a modified version of one such narcotic.  When drunk Black Mania will induce a violent state of confusion, granting the user a +10 bonus to damage rolls and +5 to melee attack rolls at the cost of a -10 penalty to AC and -5 to missile attacks.  Further, the user goes berserk for 10 rounds and his or her hit points are hidden for the duration of the effect.
+
+STATISTICS:
+
++5 to melee attacks
++10 to damage
+-10 AC
+-5 to missile attacks
+User goes berserk while in combat
+Hit points hidden
+Weight: 1 lb.~
+@4712     = ~Bonemeal Eyedrops~
+@4713     = ~Made with a pinch of bonemeal, tomato or carrot juice, distilled water, a few drops of the user's own blood, and an eyeball from a bird of prey, this reddish solution can improve the user's eyesight. Aside from a light burning sensation, the user will suddenly find the world vastly more detailed, granting a +3 bonus to all ranged attacks.  The eyedrops burn slightly, and so the user will gradually cry away the fluid, losing its benefits after 1 hour has passed.
+
+STATISTICS:
+
++3 Attack Bonus (ranged weapons only)
+Weight: 1 lb.~
+@54712     = ~Bonemeal Eyedrops~
+@54713     = ~Made with a pinch of bonemeal, tomato or carrot juice, distilled water, a few drops of the user's own blood, and an eyeball from a bird of prey, this reddish solution can improve the user's eyesight. Aside from a light burning sensation, the user will suddenly gain magical insight into the weaknesses of other creatures.  The eyedrops burn slightly, and so the user will gradually cry away the fluid, losing its benefits after 10 rounds have passed.
+
+STATISTICS:
+
+Executioner's Eyes for 10 rounds (+4 attack bonus, +4 critical threat range)
+Weight: 1 lb.~
+@4714     = ~Smoke Bomb~
+@4715     = ~Anyone can start a fire and produce a small cloud of smoke, but creating a burst of smoke in one swift movement takes some art.  This small canister of concentrated smoke will quickly create an obscuring cloud when broken, hiding the user for 1d3+3 seconds depending on air currents and other factors.
+
+STATISTICS:
+
+Invisibility for 1d3+3 seconds
+Weight: 1 lb.~
+@54714     = ~Smoke Bomb~
+@54715     = ~Anyone can start a fire and produce a small cloud of smoke, but creating a burst of smoke in one swift movement takes some art.  This small canister of concentrated smoke will quickly create an obscuring cloud when broken, hiding the user for 1d3+3 seconds depending on air currents and other factors.
+
+STATISTICS:
+
+Invisibility for 1d3+3 seconds
+Weight: 1 lb.~
+@4716     = ~Bitter Tonic~
+@4717     = ~This potion is a highly concentrated reddish mixture made from roots, clay, crushed pearls and oyster shells, blood, and alcohol.  The solution empowers the drinker's constitution and resilience, granting a +4 bonus to all Fortitude saves for 1 hour.
+
+STATISTICS:
+
++4 to Fortitude saves
+Weight: 1 lb.~
+@54716     = ~Bitter Tonic~
+@54717     = ~This potion is a highly concentrated reddish mixture made from roots, clay, crushed pearls and oyster shells, blood, and alcohol.  The solution empowers the drinker's constitution and resilience, granting a +8 bonus to all Fortitude saves for 1 hour.
+
+STATISTICS:
+
++8 to Fortitude saves
+Weight: 1 lb.~
+@4718     = ~Brine Solution~
+@4719     = ~This potion, a small piece of a dolphin's brain suspended in whale oil and brine with quicksilver and greenstone as catalysts, is capable of enhancing the user's mental abilities.  Most of the dolphin brain's latent power goes to waste, since the workings of the mind are still poorly understood and the method behind this concoction is fairly crude, but the brine will banish all distractions from the user's mind, granting a +4 bonus to all Will saves for 1 hour.
+
+STATISTICS:
+
++4 to Will saves
+Weight: 1 lb.~
+@54718     = ~Brine Solution~
+@54719     = ~This potion, a small piece of a dolphin's brain suspended in whale oil and brine with quicksilver and greenstone as catalysts, is capable of enhancing the user's mental abilities.  Most of the dolphin brain's latent power goes to waste, since the workings of the mind are still poorly understood and the method behind this concoction is fairly crude, but the brine will banish all distractions from the user's mind, granting a +8 bonus to all Will saves for 1 hour.
+
+STATISTICS:
+
++8 to Will saves
+Weight: 1 lb.~
+@4720     = ~Pressurized Gas~
+@4721     = ~This bottle of highly pressurized toxins will explode when it is shattered, flooding the area with a cloud of noxious gas.  Any breathing creature who is caught in the cloud is confronted with a nauseating stench that sinks deep into their nostrils and sticks in the back of their throat, suffering 5 poison damage per round for 5 rounds.  Every round the victim remains in the cloud, it must make a Fortitude save to avoid being poisoned.
+
+STATISTICS:
+
+5 poison damage per round for 5 rounds (Fortitude DC 15 negates)
+Dissipates after 10 rounds
+Weight: 1 lb.~
+@54720     = ~Pressurized Gas~
+@54721     = ~This bottle of highly pressurized toxins will explode when it is shattered, flooding the area with a cloud of noxious gas.  Any breathing creature who is caught in the cloud is confronted with a nauseating stench that sinks deep into their nostrils and sticks in the back of their throat, suffering 10 poison damage per round for 5 rounds.  Every round the victim remains in the cloud, it must make a Fortitude save to avoid being poisoned.
+
+STATISTICS:
+
+10 poison damage per round for 5 rounds (Fortitude DC 25 negates)
+Dissipates after 10 rounds
+Weight: 1 lb.~
+@4722     = ~Burning Oil~
+@4723     = ~Simple to make but expensive to produce, this mixture of blackpowder and highly refined oil and gas will ignite when it breaks against a target.  As soon as the bottle hits the ground, a small capsule of pure sodium and another capsule of water will break open.  The sodium catches fire on contact with the water, setting the rest of the mixture alight.
+
+A weak grenade inside the bottle then causes the flaming oil to expand rapidly, spreading the flame across all creatures within a 30 foot radius.  Anyone caught inside the burst will suffer 6d6 points of damage with a Reflex save (DC 15) for half.
+
+STATISTICS:
+
+6d6 fire damage (Reflex DC 15 for 1/2 damage)
+Area of Effect: 30-foot radius
+Range: 40'
+Weight: 1 lb.~
+@54722     = ~Burning Oil~
+@54723     = ~Simple to make but expensive to produce, this mixture of blackpowder and highly refined oil and gas will ignite when it breaks against a target.  As soon as the bottle hits the ground, a small capsule of pure sodium and another capsule of water will break open.  The sodium catches fire on contact with the water, setting the rest of the mixture alight.
+
+A weak grenade inside the bottle then causes the flaming oil to expand rapidly, spreading the flame across all creatures within a 30 foot radius.  Anyone caught inside the burst will suffer 12d6 points of damage with a Reflex save (DC 25) for half.
+
+STATISTICS:
+
+12d6 fire damage (Reflex DC 25 for 1/2 damage)
+Area of Effect: 30-foot radius
+Range: 40'
+Weight: 1 lb.~
+@4724     = ~Musk Wine~
+@4725     = ~Brewed from fermented plums and the musk of several animals (usually cattle, oxen, horses, donkeys, and buffalo), this strong wine has a peculiar noxious scent despite its sweet taste.  Taken with a bit of Ankheg acid and some lime (the base, not the fruit) to neutralize the acid, this potion grants the drinker +6 to Strength for 10 rounds.
+
+STATISTICS:
+
++6 Strength
+Weight: 1 lb.~
+@54724     = ~Musk Wine~
+@54725     = ~Brewed from fermented plums and the musk of several animals (usually cattle, oxen, horses, donkeys, and buffalo), this strong wine has a peculiar noxious scent despite its sweet taste.  Taken with a bit of Ankheg acid and some lime (the base, not the fruit) to neutralize the acid, this potion grants the drinker +12 to Strength for 10 rounds.
+
+STATISTICS:
+
++12 Strength
+Weight: 1 lb.~
+@4726     = ~Lime Juice~
+@4727     = ~This potion, a tart mix of lime juice, scorpion venom, peppers, and a few drops of dwarf or gnome blood, will grant the drinker 20/- magic damage resistance for 10 rounds, evening the odds against spellcasting foes.
+
+STATISTICS:
+
+Resistance: 20/- Magic Damage Resistance
+Weight: 1 lb.~
+@54726     = ~Lime Juice~
+@54727     = ~This potion, a tart mix of lime juice, scorpion venom, peppers, and a few drops of dwarf or gnome blood, will grant the drinker 50/- magic damage resistance for 10 rounds, evening the odds against spellcasting foes.
+
+STATISTICS:
+
+Resistance: 50/- Magic Damage Resistance
+Weight: 1 lb.~
+@4728     = ~Vial of Scales~
+@4729     = ~Composed of powdered rust, beetle shells, bonemeal, and oak bark, this alcohol-based mixture conjures a barrier of jagged metal scales over the user's skin. These iron skins will absorb the next 1-6 blows that would hit the drinker in the next 10 rounds.
+
+STATISTICS:
+
+Drinker gains 1d6 iron skins, as per the Iron Skins spell
+Weight: 1 lb.~
+@54728     = ~Vial of Scales~
+@54729     = ~Composed of powdered rust, beetle shells, bonemeal, and oak bark, this alcohol-based mixture conjures a barrier of jagged metal scales over the user's skin. These iron skins will absorb the next 3-18 blows that would hit the drinker in the next 10 rounds.
+
+STATISTICS:
+
+Drinker gains 3d6 iron skins, as per the Iron Skins spell
+Weight: 1 lb.~
+@4730     = ~Refined Ectoplasm~
+@4731     = ~Graveyard dust, rainwater, mashed blackbirds or nightcrawlers, and the dried blood of a small child are only the first ingredients needed to brew this bitter, earthy potion. To complete the brew, an alchemist must extract the ectoplasm from a ghost or specter, whether by killing a wandering spirit or scraping the material from the throat of a medium, necromancer, or diviner contacting the dead. Left out at night over the course of 1-7 days (depending on the available moonlight), this potion will put the drinker in a partially spectral state, granting him or her near-immunity to mundane weapons.  For 10 rounds after imbibing this bitter potion, the user ignores the first 10 points of damage from any weapon with an enchantment below +2.
+
+STATISTICS:
+
+10/+2 Damage Reduction
+Weight: 1 lb.~
+@54730     = ~Refined Ectoplasm~
+@54731     = ~Graveyard dust, rainwater, mashed blackbirds or nightcrawlers, and the dried blood of a small child are only the first ingredients needed to brew this bitter, earthy potion. To complete the brew, an alchemist must extract the ectoplasm from a ghost or specter, whether by killing a wandering spirit or scraping the material from the throat of a medium, necromancer, or diviner contacting the dead. Left out at night over the course of 1-7 days (depending on the available moonlight), this potion will put the drinker in a partially spectral state, granting him or her near-immunity to mundane weapons.  For 10 rounds after imbibing this bitter potion, the user ignores the first 15 points of damage from any weapon with an enchantment below +3.
+
+STATISTICS:
+
+15/+3 Damage Reduction
+Weight: 1 lb.~
+@4732     = ~Haunted Ether~
+@4733     = ~Both complex engineering and mystical study are necessary to create this bottle of enchanted gas. The alchemist must first invest in a fractional distillation column to collect the necessary gas from the atmosphere. Once the gas is collected, it must be infused with one or more hostile spirits. Reciting blasphemies in a graveyard is sufficient if the alchemist is well-versed in Abyssal or is familiar with the teachings of the most popular deity among the dead; otherwise the alchemist must resort to graverobbing, and conduct various illegal and unpleasant rituals with exhumed corpses.
+
+If the alchemist successfully enrages the local spirits, he or she may bind them to the collected gas. Delivering repeated electrical charges to the imprisoned spirits will gradually disorient them, allowing the bottle to be thrown just like a grenade. When the bottle shatters, the spirits will lash out at the closest living creatures they can find, dealing 4d12 magic damage with a Fortitude save for half and inflicting fear on any victim who fails a Will save.
+
+STATISTICS:
+
+4d12 magic damage
+Fear for 5 rounds, Will save negates
+Weight: 1 lb.
+~
+@4734     = ~Elf Tendon Wand~
+@4735     = ~This greasy, squishy, and occasionally twitchy wand, composed primarily of leg tendons from elves and half-elves, can deliver a bolt of necromantic energy to any living target.  The victim suffers 12d4 poison damage, but may attempt a Fortitude save for half.
+
+STATISTICS:
+
+12d4 poison damage, Fortitude save for half
+Weight: 1 lb.
+~
+@4736     = ~Murky Liquor~
+@4737     = ~With the right ingredients, a skilled alchemist can alter the very nature of a living being. By dissolving rock salt and frog juice in an alcohol-based solution and adding the remains of a deer or antelope digested in a crocodile's stomach, an alchemist can concoct a smoky potion that transmutes the drinker's body into a semi-liquid state.
+
+The drinker retains all of their normal functions, but the liquid state cushions the impact of enemy attacks, granting a 3/- resistance to all forms of physical damage for 10 rounds.
+
+STATISTICS:
+
+3/- Slashing Resistance
+3/- Crushing Resistance
+3/- Piercing Resistance
+3/- Missile Resistance
+Weight: 1 lb.~
+@54736     = ~Murky Liquor~
+@54737     = ~With the right ingredients, a skilled alchemist can alter the very nature of a living being. By dissolving rock salt and frog juice in an alcohol-based solution and adding the remains of a deer or antelope digested in a crocodile's stomach, an alchemist can concoct a smoky potion that transmutes the drinker's body into a semi-liquid state.
+
+The drinker retains all of their normal functions, but the liquid state cushions the impact of enemy attacks, granting a 10/- resistance to all forms of physical damage for 10 rounds.
+
+STATISTICS:
+
+10/- Slashing Resistance
+10/- Crushing Resistance
+10/- Piercing Resistance
+10/- Missile Resistance
+Weight: 1 lb.~
+@4738     = ~Blood Nectar~
+@4739     = ~Contrary to what one might expect from a potion called "Blood Nectar," this deep red, blood-flavored concoction does not, in fact, contain any nectar. It is primarily blood.
+
+Sweetened with honey and apple juice and brewed with ginseng and hummingbird feathers, this potion grants the drinker +2 to all ability scores for 1 hour.
+
+STATISTICS:
+
++2 Strength
++2 Dexterity
++2 Constitution
++2 Intelligence
++2 Wisdom
++2 Charisma
+Weight: 1 lb.~
+@54738     = ~Blood Nectar~
+@54739     = ~Contrary to what one might expect from a potion called "Blood Nectar," this deep red, blood-flavored concoction does not, in fact, contain any nectar. It is primarily blood.
+
+Sweetened with honey and apple juice and brewed with ginseng and hummingbird feathers, this potion grants the drinker +6 to all ability scores for 1 hour.
+
+STATISTICS:
+
++6 Strength
++6 Dexterity
++6 Constitution
++6 Intelligence
++6 Wisdom
++6 Charisma
+Weight: 1 lb.~
+@4740     = ~Purified Ichor~
+@4741     = ~Ichor can come from many sources, but the most convenient source is the bloodstream of a Bhaalspawn. In its unaltered state, the blood is little different from any other--extracting its true power is a complex process.
+
+First, the Alchemist must conduct research into the parent deity and design a ritual to activate the hidden potential of the ichor. From there, the essence must be filtered out by leeching the blood with mummy wrappings, distillation, and precipitation in a centrifuge, producing a sweet-smelling golden liquid... or, in the case of ichor from evil deities, a foul mixture of grease and coarse dust.
+
+Consuming the resulting substance is usually fatal; the purified ichor must be diluted and adapted to the user's system to have any positive effect. The exact method depends on the user, and requires intensive research and testing to discover. If the user is lucky, the method might be as harmless as crushing up some pearls and mixing the ichor with pumpkin juice and butter to produce an odd-flavored but perfectly drinkable potion.
+
+If the user is unlucky, administering the dose might require vivisection.
+
+Regardless of the method, the final result is a violent twisting of the digestive tract and the spread of the ichor through the user's body. The process is immensely painful and draining, permanently lowering the user's Constitution by 1 and dealing 10d10 poison damage with a save vs. death at -4 for half damage. If the user survives the process, he or she gains +1 to Strength, Dexterity, Intelligence, Wisdom, and Charisma as the divine ichor suffuses their system.
+
+If the user dies in the process, he or she may try again after being resurrected, but once the attempt is successful, further doses will have no affected on the imbued character.
+
+Alchemical Genius: An Alchemist may tweak the recipe to ease the burden on their system, negating the Constitution penalty and resisting the damage entirely.
+
+STATISTICS:
+
++1 Strength, Dexterity, Intelligence, Wisdom, and Charisma
+-1 Constitution
+Duration: Permanent
+Weight: 1 lb.
+~
+@4742     = ~Plasma~
+@4743     = ~A crackling blue gas buzzes inside this small glass container. By collecting energy from various sources and transferring the latent power to an inert gas, an alchemist may create a safe and useful form of plasma.
+
+The user must open the bottle and inhale deeply, holding the gas in their lungs until the plasma is absorbed into the bloodstream. The plasma adds a special boost to every strike the user makes in combat, increasing all attack damage by 4 points. The plasma quickly dissipates, however, and the effects will vanish within 10 rounds.
+
+STATISTICS:
+
++4 Attack Damage
+Weight: 1 lb.~
+@54742     = ~Plasma~
+@54743     = ~A crackling blue gas buzzes inside this small glass container. By collecting energy from various sources and transferring the latent power to an inert gas, an alchemist may create a safe and useful form of plasma.
+
+The user must open the bottle and inhale deeply, holding the gas in their lungs until the plasma is absorbed into the bloodstream. The plasma adds a special boost to every strike the user makes in combat, increasing all attack damage by 6 points. The plasma quickly dissipates, however, and the effects will vanish within 10 rounds.
+
+STATISTICS:
+
++6 Attack Damage
+Weight: 1 lb.~
+@4744     = ~Bog Vapor~
+@4745     = ~A blend of eldritch magic and noxious gases, this bottle of smoky greenish vapor is dense with enchantments. The gas itself is nothing but simple air and water extracted from a bog, but the enchantments are more complex. The bottle is lined with residue from slain Will o' Wisps and toxic mushrooms, and the gas imbued with the souls of fallen treants.
+
+The wielder may throw the bottle much like a grenade, bypassing any armor or shield bonuses the target may possess. Any creature unfortunate enough to touch the fumes will suffer a cumulative -3 penalty to spell and energy resistances as the enchantment seeps into their system, rendering them vulnerable to hostile spells. The effect is short-lived, however, and will wear off after five rounds.
+
+STATISTICS:
+
+Damage:  1d3
+Damage Type:  Missile (bludgeoning)
+Special:  -3 Spell Resistance and -3 resistance to fire, cold, electricity, and acid damage (cumulative) for 5 rounds
+Weight: 0 lb.
+Required Feat:  Simple Weapons, Missile
+Type:  One-handed~
+@54744     = ~Bog Vapor~
+@54745     = ~A blend of eldritch magic and noxious gases, this bottle of smoky greenish vapor is dense with enchantments. The gas itself is nothing but simple air and water extracted from a bog, but the enchantments are more complex. The bottle is lined with residue from slain Will o' Wisps and toxic mushrooms, and the gas imbued with the souls of fallen treants.
+
+The wielder may throw the bottle much like a grenade, bypassing any armor or shield bonuses the target may possess. Any creature unfortunate enough to touch the fumes will suffer a cumulative -5 penalty to spell and energy resistances as the enchantment seeps into their system, rendering them vulnerable to hostile spells. The effect is short-lived, however, and will wear off after five rounds.
+
+STATISTICS:
+
+Damage:  1d3
+Damage Type:  Missile (bludgeoning)
+Special:  -5 Spell Resistance and -5 resistance to fire, cold, electricity, and acid damage (cumulative) for 5 rounds
+Weight: 0 lb.
+Required Feat:  Simple Weapons, Missile
+Type:  One-handed~
+@4746     = ~Fairy Oil~
+@4747     = ~Fey creatures are tricky to find and harder to catch, but an alchemist who manages to capture enough of them can steal those powers, if only for a short time. The liquid itself is nothing more than peat and crushed buttercups mixed with olive oil, but if the alchemist can convince a group of fairies to bestow the oil with their magic--or if the alchemist mixes the oil with the fairies' blood and powdered bones--this potion will enshroud the drinker with a small cloud of illusory magic similar to the Mirror Image spell.
+
+STATISTICS:
+
+Mirror Image (4 images)
+Weight: 1 lb.~
+@54746     = ~Fairy Oil~
+@54747     = ~Fey creatures are tricky to find and harder to catch, but an alchemist who manages to capture enough of them can steal those powers, if only for a short time. The liquid itself is nothing more than peat and crushed buttercups mixed with olive oil, but if the alchemist can convince a group of fairies to bestow the oil with their magic--or if the alchemist mixes the oil with the fairies' blood and powdered bones--this potion will enshroud the drinker with a small cloud of illusory magic similar to the Mirror Image spell.
+
+STATISTICS:
+
+Mirror Image (8 images)
+Weight: 1 lb.~
+@4748     = ~Magnetic Fluid~
+@4749     = ~Despite its viscous nature, this fluid is actually an alloy of chromium and iron, kept in its liquid form by powerful transmutations. By heating and cooling the alloy in the presence of magnets and using a magical fire to burn other rare metals in its presence, an alchemist can add a powerful magnetic field to the liquid alloy which only activates when the fluid is drunk. The magnetic field is incredibly dangerous to the drinker, as it pulls weapons directly to the drinker's body, imposing a -5 penalty to hit, damage, and AC as well as a -10 penalty to all forms of physical damage.
+
+However, the drinker can will this magnetic field to produce a violent backlash against his or her attackers that inflicts 10d4 crushing damage with every strike.  The field will dissipate after 10 rounds.
+
+STATISTICS:
+
+Magnetic Backlash: Attackers suffer 10d4 crushing damage per hit
+-5 Attack Bonus
+-5 Attack Damage
+-5 AC
+-10 Slashing, Crushing, Piercing, and Missile Resistance
+Weight: 1 lb.~
+@54748     = ~Magnetic Fluid~
+@54749     = ~Despite its viscous nature, this fluid is actually an alloy of chromium and iron, kept in its liquid form by powerful transmutations. By heating and cooling the alloy in the presence of magnets and using a magical fire to burn other rare metals in its presence, an alchemist can add a powerful magnetic field to the liquid alloy which only activates when the fluid is drunk. The magnetic field is incredibly dangerous to the drinker, as it pulls weapons directly to the drinker's body, imposing a -5 penalty to hit, damage, and AC as well as a -15 penalty to all forms of physical damage.
+
+However, the drinker can will this magnetic field to produce a violent backlash against his or her attackers that inflicts 15d4 crushing damage with every strike.  The field will dissipate after 10 rounds.
+
+STATISTICS:
+
+Magnetic Backlash: Attackers suffer 15d4 crushing damage per hit
+-5 Attack Bonus
+-5 Attack Damage
+-5 AC
+-15 Slashing, Crushing, Piercing, and Missile Resistance
+Weight: 1 lb.~
+@4750     = ~Burning Syrup~
+@4751     = ~This thick reddish syrup, composed of the nectar and sap of several flowers and trees, burns with anti-magic energy. By pouring the syrup over a magical item and then destroying it, an alchemist may infuse the syrup with disruptive forces. This may require destroying multiple magical items depending on their power.
+
+When drunk, the syrup creates an anti-magic field around the user's body, automatically dispelling all dispellable effects (both positive and negative) as well as granting 15/- spell resistance for 10 rounds. The field also interferes with the user's own spells, if any, increasing spell failure by 25%.
+
+STATISTICS:
+
+Dispels all dispellable effects on the drinker
+Resistance: 15/- Spell Resistance
+25% Spell Failure
+Weight: 1 lb.~
+@54750     = ~Burning Syrup~
+@54751     = ~This thick reddish syrup, composed of the nectar and sap of several flowers and trees, burns with anti-magic energy. By pouring the syrup over a magical item and then destroying it, an alchemist may infuse the syrup with disruptive forces. This may require destroying multiple magical items depending on their power.
+
+When drunk, the syrup creates an anti-magic field around the user's body, automatically dispelling all dispellable effects (both positive and negative) as well as granting 30/- spell resistance for 10 rounds. The field also interferes with the user's own spells, if any, increasing spell failure by 50%.
+
+STATISTICS:
+
+Dispels all dispellable effects on the drinker
+Resistance: 30/- Spell Resistance
+50% Spell Failure
+Weight: 1 lb.~
+@4752     = ~Snake Lymph~
+@4753     = ~Yuan-ti alchemists use a special blend of venom and assorted herbs to transform humanoid captives into histachii slaves. The process is irreversible and destroys the victim's mind, but it grants them unusual powers that make them helpful servants for their Yuan-ti masters.
+
+Much of the science is unknown to humanoids, but an Alchemist may concoct a special version of the histachii brew from Yuan-ti lymph and mandrake root that will grant the drinker some limited resistance to poison. For 1 hour after the lymph is drunk, the user will enjoy 6/- poison resistance.
+
+STATISTICS:
+
+Resistance: 6/- Poison Resistance
+Weight: 1 lb.~
+@54752     = ~Snake Lymph~
+@54753     = ~Yuan-ti alchemists use a special blend of venom and assorted herbs to transform humanoid captives into histachii slaves. The process is irreversible and destroys the victim's mind, but it grants them unusual powers that make them helpful servants for their Yuan-ti masters.
+
+Much of the science is unknown to humanoids, but an Alchemist may concoct a special version of the histachii brew from Yuan-ti lymph and mandrake root that will grant the drinker some limited resistance to poison. For 1 hour after the lymph is drunk, the user will enjoy 30/- poison resistance.
+
+STATISTICS:
+
+Resistance: 30/- Poison Resistance
+Weight: 1 lb.~
+@4754     = ~Vampire Milk~
+@4755     = ~This freezing bottle of bluish liquid is a mix of flour, blueberries, fine cheeses, and the breast milk of a slain vampire, wight, or bodak. Partly fermented and treated with lime and salt, this potion becomes a bitter fluid indistinguishable from paint. The concoction carries a large amount of negative energy with it, and it would be fatal to most living creatures. Undead, however, could drink it to restore health. This healing is similar to that of a vampire's regeneration: it will close mortal wounds and regrow lost body parts, but it will not restore lost blood.
+
+STATISTICS:
+
+Heals 60 hit points to undead, deals 60 damage to anyone else
+Weight: 1 lb.~
+@54754     = ~Vampire Milk~
+@54755     = ~This freezing bottle of bluish liquid is a mix of flour, blueberries, fine cheeses, and the breast milk of a slain vampire, wight, or bodak. Partly fermented and treated with lime and salt, this potion becomes a bitter fluid indistinguishable from paint. The concoction carries a large amount of negative energy with it, and it would be fatal to most living creatures. Undead, however, could drink it to restore health. This healing is similar to that of a vampire's regeneration: it will close mortal wounds and regrow lost body parts, but it will not restore lost blood.
+
+STATISTICS:
+
+Heals 150 hit points to undead, deals 150 damage to anyone else
+Weight: 1 lb.~
+@4756     = ~Moldy Poultice~
+@4757     = ~This poultice is a small jar of very fertile soil topped with a lush green moss. An alchemist must take special care when cultivating this moss, constantly making sure it has just the right amount of water and nutrients to thrive. Singing lullabies, burning incense, and paying compliments to the moss are all critical parts of the process.
+
+Nurtured with love and blessed with plenty of exposure to moonlight, this moss will develop a faint glow. If the alchemist has treated it well, the moss will gladly spend its precious energy to bring a dead creature back to life.
+
+Its power spent and its personality sacrificed for the sake of the alchemist's fallen comrade, the moss will lose its glow. The user is well advised to throw the moss away--keeping it around tends to make one somber, and the moss wouldn't want its best friend to be sad.
+
+STATISTICS:
+
+Resurrects one creature
+Makes the user sigh and look wistfully into the distance every now and then
+Weight: 1 lb.
+~
+@4758     = ~(sighs and looks wistfully into the distance)~
+@4759     = ~Beetle Grease~
+@4760     = ~Most people would object to slathering their bodies with grease made from smashed beetles. Adventurers with no such objections will gain a +4 bonus to their Reflex saves for 1 hour when applying this grease to their skin.
+
+STATISTICS:
+
++4 to Reflex saves
+Weight: 1 lb.~
+@54759     = ~Beetle Grease~
+@54760     = ~Most people would object to slathering their bodies with grease made from smashed beetles. Adventurers with no such objections will gain a +8 bonus to their Reflex saves for 1 hour when applying this grease to their skin.
+
+STATISTICS:
+
++8 to Reflex saves
+Weight: 1 lb.~
+@4761     = ~Beholder Sauce~
+@4762     = ~Comprised of the blood, lymph, tears, and eyeball juice of a (preferably) dead beholder, this tangy sauce will temporarily numb the user's eyes so that they can be transmuted into several blobby stalks.  Aside from blurry vision and no small amount of discomfort, this potion allows any spellcaster to begin casting a new spell as soon as he or she finishes casting the previous one, eliminating the normal delay between spellcasting.  This allows the user to cast more than one spell in a single round, though the character cannot benefit from reductions in casting time.  After 2 rounds, the user's eyes will return to their normal form and the effect of the potion will wear off.
+
+STATISTICS:
+
+Improved Alacrity
+Weight: 1 lb.~
+@54761     = ~Beholder Sauce~
+@54762     = ~Comprised of the blood, lymph, tears, and eyeball juice of a (preferably) dead beholder, this tangy sauce will temporarily numb the user's eyes so that they can be transmuted into several blobby stalks.  Aside from blurry vision and no small amount of discomfort, this potion allows any spellcaster to begin casting a new spell as soon as he or she finishes casting the previous one, eliminating the normal delay between spellcasting.  This allows the user to cast more than one spell in a single round, though the character cannot benefit from reductions in casting time.  After 3 rounds, the user's eyes will return to their normal form and the effect of the potion will wear off.
+
+STATISTICS:
+
+Improved Alacrity
+Weight: 1 lb.~
+@4763     = ~Coral Balm~
+@4764     = ~By tearing off chunks from a coral reef, crushing the coral into powder, and mixing it with sea cucumber paste, an alchemist may create a bluish balm.  When smeared over the user's body, the balm will expand into a powerful shield,  trapping the user inside but protecting them from all forms of attack.  The shield will absorb 100 hit points before shattering.
+
+STATISTICS:
+
+Tortoise Shell (100 hit points)
+Weight: 1 lb.~
+@54763     = ~Coral Balm~
+@54764     = ~By tearing off chunks from a coral reef, crushing the coral into powder, and mixing it with sea cucumber paste, an alchemist may create a bluish balm.  When smeared over the user's body, the balm will expand into a powerful shield,  trapping the user inside but protecting them from all forms of attack.  The shield will absorb 400 hit points before shattering.
+
+STATISTICS:
+
+Tortoise Shell (400 hit points)
+Weight: 1 lb.~
+@4765     = ~Feyr Secretion~
+@4766     = ~This bottle contains a purplish goo secreted by a feyr's skin.  A series of magical enchantments transforms the goo into a powerful potion capable of bestowing an ethereal state on the drinker.  All enemy attacks have a 50% chance of failing outright, as per the Blink spell.  The user's attacks and spells, however, also suffer a 20% chance of failure.  The effects last for 10 rounds.
+
+STATISTICS:
+
+Blink for 10 rounds
+Weight: 1 lb.~
+@54765     = ~Feyr Secretion~
+@54766     = ~This bottle contains a purplish goo secreted by a feyr's skin.  A series of magical enchantments transforms the goo into a powerful potion capable of bestowing an ethereal state on the drinker.  All enemy attacks have a 50% chance of failing outright, as per the Blink spell.  The user's attacks and spells, however, also suffer a 20% chance of failure.  The effects last for 20 rounds.
+
+STATISTICS:
+
+Blink for 20 rounds
+Weight: 1 lb.~
+@4767     = ~Fire Salamander Jelly~
+@4768     = ~A spicy mix of gum arabic and the blood of a fire salamander, this gelatinous compound will erect a wall of flame around the drinker, decreasing all cold damage by half and inflicting 1d6+10 fire damage to all attackers.  The effect lasts for 10 rounds or until dispelled.
+
+STATISTICS:
+
+Fire Shield, Red
+Weight: 1 lb.~
+@54767     = ~Fire Salamander Jelly~
+@54768     = ~A spicy mix of gum arabic and the blood of a fire salamander, this gelatinous compound will erect a wall of flame around the drinker, decreasing all cold damage by half and inflicting 1d6+20 fire damage to all attackers.  The effect lasts for 10 rounds or until dispelled.
+
+STATISTICS:
+
+Fire Shield, Red
+Weight: 1 lb.~
+@4769     = ~Frost Salamander Jelly~
+@4770     = ~A minty jelly composed of gum arabic and the blood of a frost salamander, this gelatinous compound will erect a wall of frost around the drinker, decreasing all fire damage by half and inflicting 1d6+10 cold damage to all attackers.  The effect lasts for 10 rounds or until dispelled.
+
+STATISTICS:
+
+Fire Shield, Blue
+Weight: 1 lb.~
+@54769     = ~Frost Salamander Jelly~
+@54770     = ~A minty jelly composed of gum arabic and the blood of a frost salamander, this gelatinous compound will erect a wall of frost around the drinker, decreasing all fire damage by half and inflicting 1d6+20 cold damage to all attackers.  The effect lasts for 10 rounds or until dispelled.
+
+STATISTICS:
+
+Fire Shield, Blue
+Weight: 1 lb.~
+@4771     = ~Fish Lubricant~
+@4772     = ~Fish oil, sesame oil, a unique set of enchantments, and very fine ash make up this greasy lubricant.  When the user applies this oil to the skin and activates the command word, the lubricant will begin to vibrate faintly.  Any attempt hinder the user's movement will fail so long as the lubricant is active, which will last for 10 rounds or until dispelled.
+
+STATISTICS:
+
+Freedom of Movement
+Weight: 1 lb.~
+@54771     = ~Fish Lubricant~
+@54772     = ~Fish oil, sesame oil, a unique set of enchantments, and very fine ash make up this greasy lubricant.  When the user applies this oil to the skin and activates the command word, the lubricant will begin to vibrate faintly.  Any attempt hinder the user's movement will fail so long as the lubricant is active, which will last for 1 hour or until dispelled.
+
+STATISTICS:
+
+Freedom of Movement
+Weight: 1 lb.~
+@4773     = ~Fizzy Drink~
+@4774     = ~This bubbly concoction of fruit juice and ostrich brains will give a rush of energy to the drinker.  For ten rounds after imbibing this sugary drink, the user will move and attack at an accelerated rate, gaining a +4 bonus to movement rate and speed factor, and gaining +1 casting speed.
+
+STATISTICS:
+
++4 Movement Rate
++4 Speed Factor
++1 Casting Speed
+Weight: 1 lb.~
+@54773     = ~Fizzy Drink~
+@54774     = ~This bubbly concoction of fruit juice and ostrich brains will give a rush of energy to the drinker.  For ten rounds after imbibing this sugary drink, the user will move and attack at an accelerated rate, gaining a +4 bonus to movement rate and speed factor, and gaining +2 casting speed.
+
+STATISTICS:
+
++10 Movement Rate
++10 Speed Factor
++2 Casting Speed
+Weight: 1 lb.~
+@4775     = ~Ghoul Powder~
+@4776     = ~This fine bluish-gray dust, made from the powdered skin and flesh of a ghoul or wight, gives off a very faint glow.  Snorting the powder will result in a painful headache as well as a powerful enchantment through the user's body.  For 10 rounds after huffing this magical powder, the user will gain a 20/- resistance to all forms of cold damage.
+
+STATISTICS:
+
+Resistance: 20/- Cold Resistance
+Weight: 1 lb.~
+@54775     = ~Ghoul Powder~
+@54776     = ~This fine bluish-gray dust, made from the powdered skin and flesh of a ghoul or wight, gives off a very faint glow.  Snorting the powder will result in a painful headache as well as a powerful enchantment through the user's body.  For 10 rounds after huffing this magical powder, the user will gain a 50/- resistance to all forms of cold damage.
+
+STATISTICS:
+
+Resistance: 50/- Cold Resistance
+Weight: 1 lb.~
+@4777     = ~Golden Bubbles~
+@4778     = ~Good luck is hard to come by, but for those who know how to generate it, fortune can come from almost anywhere.  This bubbly solution is a mix of gold flakes, lemon juice, ground pearls, and powdered goat hooves.  Anyone who drinks this potion will experience a rush of euphoria and supreme confidence in everything, as well as a +2 luck bonus for 10 rounds.
+
+STATISTICS:
+
++2 Luck
+Weight: 1 lb.~
+@54777     = ~Golden Bubbles~
+@54778     = ~Good luck is hard to come by, but for those who know how to generate it, fortune can come from almost anywhere.  This bubbly solution is a mix of gold flakes, lemon juice, ground pearls, and powdered goat hooves.  Anyone who drinks this potion will experience a rush of euphoria and supreme confidence in everything, as well as a +4 luck bonus for 10 rounds.
+
+STATISTICS:
+
++4 Luck
+Weight: 1 lb.~
+@4779     = ~Ogre Bile~
+@4780     = ~This sickly translucent liquid is a mixture of green slime, common salt, and bile from the gut of an ogre.  Anyone who forces him or herself to drink this foul potion will gain 25 temporary hit points for 8 hours.  Any damage the user suffers will first come from the temporary hit points.
+
+STATISTICS:
+
++25 Maximum Hit Points
+Weight: 1 lb.~
+@54779     = ~Ogre Bile~
+@54780     = ~This sickly translucent liquid is a mixture of green slime, common salt, and bile from the gut of an ogre.  Anyone who forces him or herself to drink this foul potion will gain 100 temporary hit points for 8 hours.  Any damage the user suffers will first come from the temporary hit points.
+
+STATISTICS:
+
++100 Maximum Hit Points
+Weight: 1 lb.~
+@4781     = ~Oil of Speed~
+@4782     = ~A pale oil made from crushed pearls, shark teeth, and rabbit's blood, this potion will quickly spread through the user's body.  The oil will dramatically improve the user's movement and attack rates, granting Haste as per the mage spell for 10 rounds.
+
+STATISTICS:
+
+Haste
+Weight: 1 lb.~
+@54781     = ~Oil of Speed~
+@54782     = ~A pale oil made from crushed pearls, shark teeth, and rabbit's blood, this potion will quickly spread through the user's body.  The oil will dramatically improve the user's movement and attack rates, granting Improved Haste for 5 rounds.
+
+STATISTICS:
+
+Improved Haste
+Weight: 1 lb.~
+@4783     = ~Potion of Clarity~
+@4784     = ~This potion is a pleasant-smelling concoction of olive oil spiked with powdered nereid nose and crushed lapis lazuli.  Drinking this odd-tasting potion will temporarily grant the user immunity to most mind-affect spells, including charm, domination, feeblemind, fear, and confusion effects for 10 rounds.
+
+STATISTICS:
+
+Immunity to charm, domination, feeblemind, fear, and confusion
+Weight: 1 lb.~
+@54783     = ~Potion of Clarity~
+@54784     = ~This potion is a pleasant-smelling concoction of olive oil spiked with powdered nereid nose and crushed lapis lazuli.  Drinking this odd-tasting potion will temporarily grant the user immunity to most mind-affect spells, including charm, domination, feeblemind, fear, confusion, hopelessness, and stun effects for 15 rounds.
+
+STATISTICS:
+
+Immunity to charm, domination, feeblemind, fear, confusion, hopelessness, and stun
+Weight: 1 lb.~
+@4785     = ~Treant Sap~
+@4786     = ~Hardened treant sap mixed with holy water and mashed peas sits inside this firm wooden container.  The hard sap must be chewed thoroughly unless it is heated before consumption.  The sap turns the user's skin to a stiff, woody substance, granting a +4 natural bonus to AC for 1 hour.
+
+STATISTICS:
+
+Barkskin (+4 AC)
+Weight: 1 lb.~
+@54785     = ~Treant Sap~
+@54786     = ~Hardened treant sap mixed with holy water and mashed peas sits inside this firm wooden container.  The hard sap must be chewed thoroughly unless it is heated before consumption.  The sap turns the user's skin to a stiff, woody substance, granting a +7 natural bonus to AC for 1 hour.
+
+STATISTICS:
+
+Barkskin (+7 AC)
+Weight: 1 lb.~
+@4787     = ~Troll Serum~
+@4788     = ~Made of concentrated troll blood leeched through perforated otyugh skin, this sour mixture will temporarily grant the drinker the regenerative abilities of a troll.  For 10 rounds after imbibing this potion, the drinker will heal 5 hit points every round.
+
+STATISTICS:
+
+Regenerates 5 hit points per round
+Weight: 1 lb.~
+@54787     = ~Troll Serum~
+@54788     = ~Made of concentrated troll blood leeched through perforated otyugh skin, this sour mixture will temporarily grant the drinker the regenerative abilities of a troll.  For 10 rounds after imbibing this potion, the drinker will heal 10 hit points every round.
+
+STATISTICS:
+
+Regenerates 10 hit points per round
+Weight: 1 lb.~
+@4789     = ~Zombie Slime~
+@4790     = ~This chunky soup is a mixture of chopped elf hair and the foul slime drained from the corpse of a slime zombie.  Drinking this sickly concoction will grant the user 20/- acid resistance for 10 rounds.
+
+STATISTICS:
+
+Resistance: 20/- Acid Resistance
+Weight: 1 lb.~
+@54789     = ~Zombie Slime~
+@54790     = ~This chunky soup is a mixture of chopped elf hair and the foul slime drained from the corpse of a slime zombie.  Drinking this sickly concoction will grant the user 50/- acid resistance for 10 rounds.
+
+STATISTICS:
+
+Resistance: 50/- Acid Resistance
+Weight: 1 lb.~
+@4791     = ~Vial of Vipers~
+@4792     = ~A curious experimental blend, this vial of green sludge will twist the drinker's innards and use his or her own intestines to incubate a den of magically-generated vipers. Every round for six rounds, the drinker will vomit out a fully-grown viper that he or she may control telepathically.
+
+STATISTICS:
+
+Vipergout for 6 rounds
+Weight: 1 lb.~
+@54791     = ~Vial of Vipers~
+@54792     = ~A curious experimental blend, this vial of green sludge will twist the drinker's innards and use his or her own intestines to incubate a den of magically-generated vipers. Every round for twelve rounds, the drinker will vomit out a fully-grown viper that he or she may control telepathically.
+
+STATISTICS:
+
+Vipergout for 12 rounds
+Weight: 1 lb.~
+@4793     = ~Concoct Potions~
+@4794     = ~Begin.~
+@4795     = ~Exit.~
+@4796     = ~You may not concoct potions when enemies are nearby.~

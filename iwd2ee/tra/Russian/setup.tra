@@ -1,0 +1,113 @@
+//TRA num 1-100
+@1    = ~Class Revisions~
+@2    = ~Looser Alignment Restrictions~
+@3    = ~Spell Revisions~
+@4    = ~Spell Focus Feats for All Schools~
+@5    = ~Item Revisions~
+@6    = ~Creature Revisions~
+@7    = ~Better XP Progression~
+@8    = ~Completely unnerfed challenge ratings: enemy CR is always equal to their level~
+@9    = ~Partially unnerfed challenge ratings: enemy CR is equal to or slightly less than their level (recommended)~
+@10   = ~More Interesting Alternative to the Palisade Quests~
+@11   = ~Faster Horde Fortress~
+@12   = ~Faster Ice Temple~
+@13   = ~Faster Wandering Village~
+@14   = ~Faster Black Raven Monastery~
+@15   = ~Faster Underdark~
+@16   = ~Faster Dragon's Eye~
+@17   = ~Faster Severed Hand~
+@18   = ~More Potions for Oswald~
+@19   = ~Add more scrolls to the game~
+@20   = ~Revised Creature Resistances and Immunities~
+@21   = ~Shapeshifting Sound Fix (only install if your druid makes strange noises after shapeshifting; otherwise is unnecessary)~
+@22   = ~More Accurate Saving Throws for Enemies~
+@23   = ~Revise Critical Hit Immunity~
+@24   = ~Sudden Death Mode~
+@25   = ~Better Racial Enemies for Rangers~
+@26   = ~Cosmetic Tweaks~
+@27   = ~Xuki Intimidation Option~
+@28   = ~Nonviolent Option for Isair and Madae~
+@29   = ~Shorten the Dragon's Eye time loop questline to a single battle~
+@30   = ~Bribe Limha~
+@31   = ~Bribe Mirabel and Majrash~
+@32   = ~Diplomacy for Guthma~
+@33   = ~Trick Harshom~
+@34   = ~Intimidate Torak~
+@35   = ~Intimidate Elder Brain~
+@36   = ~Bluff Thorasskus~
+@37   = ~Bluff Thvara~
+@38   = ~NPC Core~
+@39   = ~Cosmetic improvements to the GUI and new loading screens~
+@40   = ~Revised Battle Square~
+@41   = ~Minor Damage Resistance for Armor and Shields~
+@42   = ~ChangeAIScript Fix~
+@43   = ~Race Revisions~
+@44   = ~Enemies give the same amount of experience regardless of the party's level~
+@45   = ~Adjust encounter level-scaling~
+@46   = ~Always fight at least the medium-level version of an encounter~
+@47   = ~Always fight the high-level version of an encounter~
+@48   = ~Reduce the HP bonuses of creatures in Heart of Fury Mode~
+@49   = ~Remove ability score bonuses of allied summoned creatures in Heart of Fury Mode~
+@50   = ~Enemies give 25 * CR experience, enough for a six-character party to reach level 15-16 by the end of the game~
+@51   = ~Enemies give 35 * CR experience, enough for a six-character party to reach level 18-19 by the end of the game~
+@52   = ~Reduce the attack bonuses of creatures in Heart of Fury Mode~
+@53   = ~Reduce the Saving Throw bonuses of creatures in Heart of Fury Mode~
+@54   = ~Creatures in Heart of Fury Mode get -3 to all saves~
+@55   = ~Creatures in Heart of Fury Mode that are normally 10 HD or less get -3 to all saves~
+@56   = ~Undead, constructs, objects, elementals and oozes become immune to critical hits; all other creatures become vulnerable to critical hits~
+@57   = ~All creatures become vulnerable to critical hits~
+@58   = ~NPCs gain experience upon joining to match the party's experience~
+@59   = ~Have the party start the game with extra experience in Heart of Fury Mode~
+@60   = ~Start with a total of 36000 experience divided among the party, enough for a six-character party to start at level 4 (recommended if you've installed some of the components that weaken HoF creatures)~
+@61   = ~Start with a total of 90000 experience divided among the party, enough for a six-character party to start at level 6~
+@62   = ~Start with a total of 270000 experience divided among the party, enough for a six-character party to start at level 10~
+@63   = ~Reduce the delay after a sneak attack before the creature can be sneak attacked again~
+@64   = ~Revise opposing schools for specialist wizards~
+@65   = ~Remove it~
+@66   = ~Lower it to 1 round~
+@67   = ~Looping main theme~
+@68   = ~NPCs start with the average experience of the rest of the party~
+@69   = ~NPCs start with one fifth the total experience of the rest of the party (so NPC starting XP won't depend on party size)~
+@70   = ~Increase the level cap~
+@71   = ~Increase it to 40~
+@72   = ~Increase it to 50~
+@73   = ~Let aasimars, tieflings, drow, duergar, and svirfneblin level up just as fast as other races (no ECL/level adjustment) but weaken them to the power level of other races~
+@74   = ~Revise racial level adjustment/ECL~
+@75   = ~Always learn spells from scrolls successfully~
+@76   = ~Each party member starts HoF with 28000 experience, enough to reach level 8~
+@77   = ~Each party member starts HoF with 78000 experience, enough to reach level 13 (recommended)~
+@78   = ~Each party member starts HoF with 28000 experience, enough to reach level 8 (recommended)~
+@79   = ~Each party member starts HoF with 45000 experience, enough to reach level 10~
+@80   = ~Each party member starts HoF with 78000 experience, enough to reach level 13~
+@81   = ~Remove the summoning limit~
+@82   = ~Add attacks of opportunity to the game~
+@83   = ~Only characters with a certain feat can perform attacks of opportunity~
+@84   = ~Everyone can perform attacks of opportunity~
+@85   = ~Change the way ability scores are assigned at character creation~
+@86   = ~Roll for stats - Plus/minus buttons disabled, but you can choose which ability score each number rolled goes to (like in The Temple of Elemental Evil)~
+@87   = ~Roll for stats - Plus/minus buttons enabled (like in Baldur's Gate)~
+@88   = ~Adding a bunch of objects to each area in the game; this could take some time...~
+@89   = ~Add more traps~
+@90   = ~Add key bindings for automating buffing (see the readme for more information)~
+@91   = ~More Persuasion Options~
+@92   = ~Add Additional Ways to Progress Through Certain Areas~
+@93   = ~Point buy - Increasing an ability score above a certain value requires extra points, and they cannot be decreased below 8 (like in Neverwinter Nights)~
+@98   = ~Did you move, rename or copy your IWD2 game folder? This will cause a lot of bugs in-game because the game doesn't know where the new game folder is.
+
+To fix this, open the file icewind2.ini in Notepad or another text editor, and find the lines that say something like this:
+
+[Alias]
+HD0:=C:\Program Files (x86)\Black Isle\Icewind Dale II
+CD1:=C:\Program Files (x86)\Black Isle\Icewind Dale II\Data\
+CD2:=C:\Program Files (x86)\Black Isle\Icewind Dale II\CD2\
+
+(It will say a different file path if you downloaded the game from GOG.)
+
+You need to edit these lines to point to the new directory where you're playing IWD2EE.~
+@99   = ~The Widescreen Mod is not compatible with IWD2EE and will crash the game if installed with IWD2EE. Please uninstall it. IWD2EE already allows you to increase the game's resolution; you do not need the Widescreen Mod.~
+@100  = ~IWD2EE was not uninstalled properly; the files from the previous installation are still in the override folder.
+Installing IWD2EE again without removing those files would corrupt various files.
+To install IWD2EE, do these steps in this order:
+1. Uninstall all your other mods.
+2. After you do that, look in the folder called "override" and delete everything from that folder.
+3. Install your mods again, including IWD2EE.~

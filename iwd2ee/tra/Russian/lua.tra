@@ -1,0 +1,357 @@
+@55000=~Level ~
+@55001=~Barbarian~
+@55002=~Bard~
+@55003=~Cleric~
+@55004=~Druid~
+@55005=~Fighter~
+@55006=~Monk~
+@55007=~Paladin~
+@55008=~Ranger~
+@55009=~Rogue~
+@55010=~Sorcerer~
+@55011=~Wizard~
+@55012=~Hit Points: ~
+@55013=~Armor Class: ~
+@55014=~AC vs. slashing: ~
+@55015=~AC vs. piercing: ~
+@55016=~AC vs. bludgeoning: ~
+@55017=~AC vs. missiles: ~
+@55018=~Attack Bonus: ~
+@55019=~Attacks per round: ~
+@55020=~Ability Scores: ~
+@55021=~Strength: ~
+@55022=~Dexterity: ~
+@55023=~Constitution: ~
+@55024=~Intelligence: ~
+@55025=~Wisdom: ~
+@55026=~Charisma: ~
+@55027=~Slashing Resistance: ~
+@55028=~Piercing Resistance: ~
+@55029=~Bludgeoning Resistance: ~
+@55030=~Missile Resistance: ~
+@55031=~Fire Resistance: ~
+@55032=~Cold Resistance: ~
+@55033=~Electricity Resistance: ~
+@55034=~Acid Resistance: ~
+@55035=~Poison Resistance: ~
+@55036=~Magic Damage Resistance: ~
+@55037=~Spell Resistance: ~
+@55038=~Damage Reduction: ~
+@55039=~Saving Throws: ~
+@55040=~Fortitude: ~
+@55041=~Reflex: ~
+@55042=~Will: ~
+@55043=~Concentration skill: ~
+@55044=~Mirror images remaining: ~
+@55045=~Stoneskin damage remaining: ~
+@55046=~Casting time reduced by: ~
+@55047=~Sneak attack damage: ~
+@55048=~<EXICNAME> casts arcane spells as if <EXICVAL1> levels higher~
+@55049=~<EXICNAME> casts arcane spells with <EXICVAL1>% the normal duration~
+@55050=~<EXICNAME> casts divine spells as if <EXICVAL1> levels higher~
+@55051=~<EXICNAME> casts divine spells with <EXICVAL1>% the normal duration~
+@55052=~<EXICNAME> can extend up to level <EXICVAL1> spells~
+@55053=~<EXICNAME> can maximize up to level <EXICVAL1> spells~
+@55054=~<EXICNAME> can quicken up to level <EXICVAL1> spells~
+@55055=~<EXICNAME> can safen up to level <EXICVAL1> spells~
+@55056=~<EXICNAME> can cast more than one spell per round~
+@55057=~<EXICNAME> can see invisible creatures~
+@55058=~<EXICNAME> is protected from critical hits~
+@55059=~<EXICNAME> is protected from sneak attacks~
+@55060=~<EXICNAME> deals maximum damage with each hit~
+@55061=~<EXICNAME> can sneak attack on each hit~
+@55062=~<EXICNAME> cannot be reduced below <EXICVAL1> HP~
+@55063=~Immunities: ~
+@55064=~berserk~
+@55065=~charm~
+@55066=~damage~
+@55067=~healing~
+@55068=~invisibility~
+@55069=~morale failure~
+@55070=~fear~
+@55071=~poison~
+@55072=~silence~
+@55073=~sleep~
+@55074=~slow~
+@55075=~stun~
+@55076=~dispelling~
+@55077=~spell failure~
+@55078=~blindness~
+@55079=~feeblemindedness~
+@55080=~disease~
+@55081=~deafness~
+@55082=~fatigue~
+@55083=~intoxication~
+@55084=~paralysis~
+@55085=~teleportation~
+@55086=~confusion~
+@55087=~petrification~
+@55088=~polymorphing~
+@55089=~Entangle~
+@55090=~Web~
+@55091=~Grease~
+@55092=~hold~
+@55093=~movement penalties~
+@55094=~vampiric effects~
+@55095=~Beltyn's Burning Blood~
+@55096=~salamander auras~
+@55097=~umber hulk gaze~
+@55098=~Animal Rage~
+@55099=~Vitriolic Sphere~
+@55100=~harpy wail~
+@55101=~jackalwere gaze~
+@55102=~hopelessness~
+@55103=~nausea~
+@55104=~enfeeblement~
+@55105=~domination~
+@55106=~Otiluke's Resilient Sphere~
+@55107=~wounding~
+@55108=~knockdown~
+@55109=~instant death~
+@55110=~Hold Undead~
+@55111=~Control Undead~
+@55112=~banishment~
+@55113=~energy drain~
+@55114=~<EXICNAME> cannot be turned~
+@55115=~Iron skins remaining: ~
+@55116=~Blackguard~
+@55180=~, 1 image remaining~
+@55181=~, <EXASVAL3> images remaining~
+@55182=~, 1 damage remaining~
+@55183=~, <EXASVAL3> damage remaining~
+@55184=~, 1 skin remaining~
+@55185=~, <EXASVAL3> skins remaining~
+@55186=~, 1 shot remaining~
+@55187=~, <EXASVAL3> shots remaining~
+@55190=~Spells Active On <EXASNAME>:~
+@55191=~  <EXASVAL1> - 1 second remaining~
+@55192=~  <EXASVAL1> - <EXASVAL2> seconds remaining~
+@55193=~  <EXASVAL1> - 1 round remaining~
+@55194=~  <EXASVAL1> - <EXASVAL2> rounds remaining~
+@55195=~  <EXASVAL1> - 1 hour remaining~
+@55196=~  <EXASVAL1> - <EXASVAL2> hours remaining~
+@55197=~  <EXASVAL1> - 1 day remaining~
+@55198=~  <EXASVAL1> - <EXASVAL2> days remaining~
+
+@55301=~<EXWHACTION1>: <EXWHROLL1> <EXWHBONUS1> = <EXWHTOTAL1> : <EXWHHITMISS1>~
+@55302=~<EXWHACTION2>: <EXWHROLL2> <EXWHBONUS2> = <EXWHTOTAL2> : <EXWHHITMISS2>~
+@55303=~<EXWHACTION3>: <EXWHROLL3> <EXWHBONUS3> = <EXWHTOTAL3> : <EXWHHITMISS3>~
+@55304=~<EXWHACTION4>: <EXWHROLL4> <EXWHBONUS4> = <EXWHTOTAL4> : <EXWHHITMISS4>~
+@55305=~<EXWHACTION5>: <EXWHROLL5> <EXWHBONUS5> = <EXWHTOTAL5> : <EXWHHITMISS5>~
+@55306=~<EXWHACTION6>: <EXWHROLL6> <EXWHBONUS6> = <EXWHTOTAL6> : <EXWHHITMISS6>~
+@55307=~<EXWHACTION7>: <EXWHROLL7> <EXWHBONUS7> = <EXWHTOTAL7> : <EXWHHITMISS7>~
+@55308=~<EXWHACTION8>: <EXWHROLL8> <EXWHBONUS8> = <EXWHTOTAL8> : <EXWHHITMISS8>~
+@55309=~<EXWHACTION9>: <EXWHROLL9> <EXWHBONUS9> = <EXWHTOTAL9> : <EXWHHITMISS9>~
+@55310=~<EXWHACTION10>: <EXWHROLL10> <EXWHBONUS10> = <EXWHTOTAL10> : <EXWHHITMISS10>~
+@55311=~<EXWHACTION11>: <EXWHROLL11> <EXWHBONUS11> = <EXWHTOTAL11> : <EXWHHITMISS11>~
+@55312=~<EXWHACTION12>: <EXWHROLL12> <EXWHBONUS12> = <EXWHTOTAL12> : <EXWHHITMISS12>~
+@55313=~<EXWHACTION13>: <EXWHROLL13> <EXWHBONUS13> = <EXWHTOTAL13> : <EXWHHITMISS13>~
+@55314=~<EXWHACTION14>: <EXWHROLL14> <EXWHBONUS14> = <EXWHTOTAL14> : <EXWHHITMISS14>~
+@55315=~<EXWHACTION15>: <EXWHROLL15> <EXWHBONUS15> = <EXWHTOTAL15> : <EXWHHITMISS15>~
+@55316=~<EXWHACTION16>: <EXWHROLL16> <EXWHBONUS16> = <EXWHTOTAL16> : <EXWHHITMISS16>~
+@55317=~<EXWHACTION17>: <EXWHROLL17> <EXWHBONUS17> = <EXWHTOTAL17> : <EXWHHITMISS17>~
+@55318=~<EXWHACTION18>: <EXWHROLL18> <EXWHBONUS18> = <EXWHTOTAL18> : <EXWHHITMISS18>~
+@55319=~<EXWHACTION19>: <EXWHROLL19> <EXWHBONUS19> = <EXWHTOTAL19> : <EXWHHITMISS19>~
+@55320=~<EXWHACTION20>: <EXWHROLL20> <EXWHBONUS20> = <EXWHTOTAL20> : <EXWHHITMISS20>~
+@55321=~<EXWHACTION21>: <EXWHROLL21> <EXWHBONUS21> = <EXWHTOTAL21> : <EXWHHITMISS21>~
+@55322=~<EXWHACTION22>: <EXWHROLL22> <EXWHBONUS22> = <EXWHTOTAL22> : <EXWHHITMISS22>~
+@55323=~<EXWHACTION23>: <EXWHROLL23> <EXWHBONUS23> = <EXWHTOTAL23> : <EXWHHITMISS23>~
+@55324=~<EXWHACTION24>: <EXWHROLL24> <EXWHBONUS24> = <EXWHTOTAL24> : <EXWHHITMISS24>~
+@55325=~<EXWHACTION25>: <EXWHROLL25> <EXWHBONUS25> = <EXWHTOTAL25> : <EXWHHITMISS25>~
+@55326=~<EXWHACTION26>: <EXWHROLL26> <EXWHBONUS26> = <EXWHTOTAL26> : <EXWHHITMISS26>~
+@55327=~<EXWHACTION27>: <EXWHROLL27> <EXWHBONUS27> = <EXWHTOTAL27> : <EXWHHITMISS27>~
+@55328=~<EXWHACTION28>: <EXWHROLL28> <EXWHBONUS28> = <EXWHTOTAL28> : <EXWHHITMISS28>~
+@55329=~<EXWHACTION29>: <EXWHROLL29> <EXWHBONUS29> = <EXWHTOTAL29> : <EXWHHITMISS29>~
+@55330=~<EXWHACTION30>: <EXWHROLL30> <EXWHBONUS30> = <EXWHTOTAL30> : <EXWHHITMISS30>~
+@55331=~<EXWHACTION31>: <EXWHROLL31> <EXWHBONUS31> = <EXWHTOTAL31> : <EXWHHITMISS31>~
+@55332=~<EXWHACTION32>: <EXWHROLL32> <EXWHBONUS32> = <EXWHTOTAL32> : <EXWHHITMISS32>~
+@55333=~<EXWHACTION33>: <EXWHROLL33> <EXWHBONUS33> = <EXWHTOTAL33> : <EXWHHITMISS33>~
+@55334=~<EXWHACTION34>: <EXWHROLL34> <EXWHBONUS34> = <EXWHTOTAL34> : <EXWHHITMISS34>~
+@55335=~<EXWHACTION35>: <EXWHROLL35> <EXWHBONUS35> = <EXWHTOTAL35> : <EXWHHITMISS35>~
+@55336=~<EXWHACTION36>: <EXWHROLL36> <EXWHBONUS36> = <EXWHTOTAL36> : <EXWHHITMISS36>~
+@55337=~<EXWHACTION37>: <EXWHROLL37> <EXWHBONUS37> = <EXWHTOTAL37> : <EXWHHITMISS37>~
+@55338=~<EXWHACTION38>: <EXWHROLL38> <EXWHBONUS38> = <EXWHTOTAL38> : <EXWHHITMISS38>~
+@55339=~<EXWHACTION39>: <EXWHROLL39> <EXWHBONUS39> = <EXWHTOTAL39> : <EXWHHITMISS39>~
+@55340=~<EXWHACTION40>: <EXWHROLL40> <EXWHBONUS40> = <EXWHTOTAL40> : <EXWHHITMISS40>~
+/*
+@55301=~Attacks <EXWHNAME1> with <EXWHWEAP1> : <EXWHHITMISS1>~
+@55302=~Attacks <EXWHNAME2> with <EXWHWEAP2> : <EXWHHITMISS2>~
+@55303=~Attacks <EXWHNAME3> with <EXWHWEAP3> : <EXWHHITMISS3>~
+@55304=~Attacks <EXWHNAME4> with <EXWHWEAP4> : <EXWHHITMISS4>~
+@55305=~Attacks <EXWHNAME5> with <EXWHWEAP5> : <EXWHHITMISS5>~
+@55306=~Attacks <EXWHNAME6> with <EXWHWEAP6> : <EXWHHITMISS6>~
+@55307=~Attacks <EXWHNAME7> with <EXWHWEAP7> : <EXWHHITMISS7>~
+@55308=~Attacks <EXWHNAME8> with <EXWHWEAP8> : <EXWHHITMISS8>~
+@55309=~Attacks <EXWHNAME9> with <EXWHWEAP9> : <EXWHHITMISS9>~
+@55310=~Attacks <EXWHNAME10> with <EXWHWEAP10> : <EXWHHITMISS10>~
+@55311=~Attacks <EXWHNAME11> with <EXWHWEAP11> : <EXWHHITMISS11>~
+@55312=~Attacks <EXWHNAME12> with <EXWHWEAP12> : <EXWHHITMISS12>~
+@55313=~Attacks <EXWHNAME13> with <EXWHWEAP13> : <EXWHHITMISS13>~
+@55314=~Attacks <EXWHNAME14> with <EXWHWEAP14> : <EXWHHITMISS14>~
+@55315=~Attacks <EXWHNAME15> with <EXWHWEAP15> : <EXWHHITMISS15>~
+@55316=~Attacks <EXWHNAME16> with <EXWHWEAP16> : <EXWHHITMISS16>~
+@55317=~Attacks <EXWHNAME17> with <EXWHWEAP17> : <EXWHHITMISS17>~
+@55318=~Attacks <EXWHNAME18> with <EXWHWEAP18> : <EXWHHITMISS18>~
+@55319=~Attacks <EXWHNAME19> with <EXWHWEAP19> : <EXWHHITMISS19>~
+@55320=~Attacks <EXWHNAME20> with <EXWHWEAP20> : <EXWHHITMISS20>~
+@55321=~Attacks <EXWHNAME21> with <EXWHWEAP21> : <EXWHHITMISS21>~
+@55322=~Attacks <EXWHNAME22> with <EXWHWEAP22> : <EXWHHITMISS22>~
+@55323=~Attacks <EXWHNAME23> with <EXWHWEAP23> : <EXWHHITMISS23>~
+@55324=~Attacks <EXWHNAME24> with <EXWHWEAP24> : <EXWHHITMISS24>~
+@55325=~Attacks <EXWHNAME25> with <EXWHWEAP25> : <EXWHHITMISS25>~
+@55326=~Attacks <EXWHNAME26> with <EXWHWEAP26> : <EXWHHITMISS26>~
+@55327=~Attacks <EXWHNAME27> with <EXWHWEAP27> : <EXWHHITMISS27>~
+@55328=~Attacks <EXWHNAME28> with <EXWHWEAP28> : <EXWHHITMISS28>~
+@55329=~Attacks <EXWHNAME29> with <EXWHWEAP29> : <EXWHHITMISS29>~
+@55330=~Attacks <EXWHNAME30> with <EXWHWEAP30> : <EXWHHITMISS30>~
+@55331=~Attacks <EXWHNAME31> with <EXWHWEAP31> : <EXWHHITMISS31>~
+@55332=~Attacks <EXWHNAME32> with <EXWHWEAP32> : <EXWHHITMISS32>~
+@55333=~Attacks <EXWHNAME33> with <EXWHWEAP33> : <EXWHHITMISS33>~
+@55334=~Attacks <EXWHNAME34> with <EXWHWEAP34> : <EXWHHITMISS34>~
+@55335=~Attacks <EXWHNAME35> with <EXWHWEAP35> : <EXWHHITMISS35>~
+@55336=~Attacks <EXWHNAME36> with <EXWHWEAP36> : <EXWHHITMISS36>~
+@55337=~Attacks <EXWHNAME37> with <EXWHWEAP37> : <EXWHHITMISS37>~
+@55338=~Attacks <EXWHNAME38> with <EXWHWEAP38> : <EXWHHITMISS38>~
+@55339=~Attacks <EXWHNAME39> with <EXWHWEAP39> : <EXWHHITMISS39>~
+@55340=~Attacks <EXWHNAME40> with <EXWHWEAP40> : <EXWHHITMISS40>~
+*/
+@55351=~5 damage resisted from nonmagical weapon~
+@55352=~10 damage resisted from weapon of less than +2 enchantment~
+@55353=~15 damage resisted from weapon of less than +3 enchantment~
+@55354=~20 damage resisted from weapon of less than +4 enchantment~
+@55355=~25 damage resisted from weapon of less than +5 enchantment~
+@55356=~30 damage resisted from weapon of less than +6 enchantment~
+@55357=~35 damage resisted from weapon of less than +7 enchantment~
+@55358=~40 damage resisted from weapon of less than +8 enchantment~
+@55359=~45 damage resisted from weapon of less than +9 enchantment~
+@55360=~50 damage resisted from weapon of less than +10 enchantment~
+@55371=~magic~
+@55372=~positive energy~
+@55373=~negative energy~
+@55374=~psychic~
+@55375=~Touch Attack Roll ~
+@55376=~Ranged Touch Attack Roll ~
+@55377=~This character's body has been destroyed. A Resurrection spell will be needed to bring them back to life; Raise Dead will not suffice.~
+@55378=~This character's soul has been captured. The vessel for their soul must be destroyed before they can be brought back to life.~
+@55379=~That character cannot be raised, but can be resurrected by more powerful magic.~
+@55380=~That character cannot be raised or resurrected.~
+@55381=~That character has been dead too long to be raised by that spell.~
+@55382=~Spell Disrupted : Off hand in use.~
+@55383=~Attack failed to connect due to difference in height~
+@55384=~Damage avoided due to etherealness~
+@55385=~Damage avoided due to incorporealness~
+@55386=~fire~
+@55387=~holy fire~
+@55390=~Using Feat: Blind-Fight - Successful~
+@55391=~Using Feat: Blind-Fight - Failed!~
+@55392=~Missed due to concealment.~
+@55395=~Attack of Opportunity~
+@55398=~Hit~
+@55399=~Miss~
+
+@55401=~<EXSSFULL1>~
+@55402=~<EXSSFULL2>~
+@55431=~<EXSSREGAINEDLOSTAND><EXSSNUMSPELLS> <EXSSLEVELORNAME> spell~ //e.g. ~Regained 1 Magic Missile spell~ or ~Lost 1 2nd-level spell~~
+@55432=~<EXSSREGAINEDLOSTAND><EXSSNUMSPELLS> <EXSSLEVELORNAME> spells~
+@55453=~Regained ~
+@55454=~Lost ~
+@55455=~and ~
+@55460=~Cast with <EXMMLEVEL> spell slot~
+@55461=~1st-level~
+@55462=~2nd-level~
+@55463=~3rd-level~
+@55464=~4th-level~
+@55465=~5th-level~
+@55466=~6th-level~
+@55467=~7th-level~
+@55468=~8th-level~
+@55469=~9th-level~
+@55470=~10th-level~
+@55471=~11th-level~
+@55472=~12th-level~
+@55473=~13th-level~
+@55474=~14th-level~
+@55475=~15th-level~
+@55476=~16th-level~
+@55477=~17th-level~
+@55478=~18th-level~
+@55479=~19th-level~
+@55480=~20th-level~
+@55481=~Spell Countered~
+@55482=~You do not have a spell memorized that can counter that spell.~
+@55483=~Attempts to counter <EXCSNAM1>'s spell~
+@55484=~Counterspell failed: <EXCSNAM1> is not casting a spell~
+@55491=~Metamagic failed: You do not have any spells of <EXMMLEVEL> or higher memorized~
+@55492=~Metamagic failed: You do not have any spells of <EXMMLEVEL> or higher remaining~
+@55493=~Metamagic failed: The resulting spell is too high level~
+
+@55500=~<EXACVAL1> is not a valid spell for Curing Contingency~
+@55580=~Copy Spell failed: <EXCPNAM1> is not casting a spell~
+@55581=~Copy Spell failed: <EXCPVAL1> is too high level for you to copy~
+@55582=~Copy Spell failed: <EXCPVAL1> cannot be copied~
+@55583=~<EXCPVAL1> copied with Copy Spell~
+@55584=~<EXACVAL1> is too high level to be stored in a Spellstaff~
+@55585=~Innate abilities cannot be stored in a Spellstaff~
+@55586=~<EXACVAL1> can only target the caster and thus cannot be stored in a Spellstaff~
+@55587=~<EXACVAL1> cannot be stored in a Spellstaff~
+@55588=~<EXACVAL1> has been stored in a Spellstaff, to be released by attacking with it~
+@55590=~A spell of that school has already been stored in the sequencer~
+@55591=~<EXACVAL1> is too high level for Imbue with Spell Ability~
+@55592=~<EXACVAL1> does not work with Imbue with Spell Ability~
+@55593=~This character has been imbued with <EXACVAL1>; they can cast it once~
+@55594=~<EXACVAL1> cannot be stored with Songcasting~
+@55595=~<EXACVAL1> has been stored in this character, to be released occasionally when the bard sings their bard song~
+@55596=~<EXACVAL1> cannot be stored in this sequencer~
+@55597=~<EXACVAL1> has been stored in the sequencer~
+@55598=~The spell <EXACVAL1> has been stored in this character, to be released under the right conditions~
+@55599=~Contingency triggered~
+
+@55601=~Immune~
+@55602=~Absorbed~
+
+@55701=~Spell Failed: Rewind Time had not been initialized to start tracking effects on this character. Now it has, so it should work the next time the character casts the spell.~
+@55702=~Uninjured~
+@55703=~Barely injured~
+@55704=~Hurt~
+@55705=~Badly wounded~
+@55706=~Almost dead~
+@55707=~Recording erased~
+@55708=~Recording spells~
+@55709=~Recording finished~
+@55710=~Recording activated~
+@55711=~Recorded <EXRCSPELL>~
+@55712=~Recorded <EXRCSPELL> targeting <EXRCTARGET>~
+@55713=~<EXRCSPELL> was not recorded; it must target a party member or a point~
+@55714=~Currently there are no recorded spells to cast~
+@55715=~The spell~
+@55716=~Cast the spell <EXCCSPELL>~
+@55751=~Total Roll: <EXRRTOTAL>\nStored Total: <EXRRRECTOTAL>\n\n~
+@55752=~Unallocated Ability Scores:\n<EXRRUNALLOCATED>\n\n~
+@55753=~Press Z to reroll, X to store, C to recall, and V to reallocate ability scores.\n\n~
+@55754=~Press Z to reroll, X to store, and C to recall.\n\n~
+@55755=~Click the plus button on an ability score to allocate the highest remaining number to that ability score. Click the minus button to unallocate the number.\n\n~
+@55756=~Next Ability Score~
+@55757=~Reroll~
+@55758=~Store~
+@55759=~Recall~
+@55760=~Reallocate~
+
+@55801=~Pick pocket successful and was not detected~
+@55802=~Pick pocket successful but was detected~
+@55803=~Pick pocket failed but was not detected~
+@55804=~Pick pocket failed and was detected~
+@55805=~Pick pocket failed because target has nothing to steal, but you were not detected~
+@55806=~Pick pocket failed because target has nothing to steal, and you were detected~
+@55807=~Pick pocket failed because target has nothing you can steal with your current skill level, but you were not detected~
+@55808=~Pick pocket failed because target has nothing you can steal with your current skill level, and you were detected~
+@55809=~Pick pocket failed because target has nothing you can steal with your current skill level~
+@55810=~The mechanism that operates this does not have a conventional lock, but it may still be possible to bash it down.~
+@55811=~This door is too sturdy to force open, but the lock can still be picked.~
+@55812=~This container is too sturdy to force open, but the lock can still be picked.~
+@55813=~This door does not have a conventional lock and is too sturdy to force open, but a Knock spell may still open it.~
+@55814=~This container does not have a conventional lock and is too sturdy to force open, but a Knock spell may still open it.~
+
+@55901=~IEex Options~
+@55902=~Transparent Fog of War~
+@55903=~Replaces the interlaced fog of war with a version that uses transparency. This fixes the flickering caused by the vanilla implementation.~
+@55904=~Reform Party~
