@@ -107,7 +107,17 @@
 Вес: 1 фунт
 Требования: Мудрость 13+~
 //@10044    = ~Eye of the Storm~
-@10045    = ~In the howling north of Icewind Dale, it can be difficult to steady oneself before battle... or even keep one's wit when surrounded by foes. These simple medallions carry a minor blessing that allows a soldier to achieve a measure of peace even in the middle of combat, allowing him to steady himself to face the trials ahead. These medallions are highly prized by soldiers that deal with the Uthgardt, especially when trading turns sour, and it seems blood is about to be shed. 
+@10045    = ~/*На воющем севере Долины Ледяного Ветра бывает трудно успокоиться перед битвой... или оставаться невозмутимым, будучи окружённым врагами. Эти простые медальоны несут на себе небольшое благословение, которое позволяет солдату обрести спокойствие даже в разгар боя, давая ему шанс оставаться стойким перед лицом будущих испытаний. Эти медальоны высоко ценятся солдатами, имеющими дело с Утгардтом, особенно когда торговля заканчивается неудачей, и кажется, что вот-вот прольётся кровь.
+
+Когда орда гоблинов разграбила Бремен, этот таинственный предмет был снят с мёртвого купца гоблинским шаманом, который так и не смог найти ему применения. Шаман пронёс амулет несколько лиг, до тех пор, пока не потерял его, обронив где-то в снегу. И вот он появился здесь.
+
+ПАРАМЕТРЫ:
+
+Особенности:
+ "Штормовые" заклинания (Ливень, Огненная буря, Буря возмездия, Ледяной шторм, Кислотная буря и Stygian Ice Storm), не наносят вреда союзникам, когда их применяет владелец.
+ Заклинание: Может применять заклинание "Святилище" дважды в день
+Вес: 1 фунт~*/
+In the howling north of Icewind Dale, it can be difficult to steady oneself before battle... or even keep one's wit when surrounded by foes. These simple medallions carry a minor blessing that allows a soldier to achieve a measure of peace even in the middle of combat, allowing him to steady himself to face the trials ahead. These medallions are highly prized by soldiers that deal with the Uthgardt, especially when trading turns sour, and it seems blood is about to be shed. 
 
 When the goblin horde sacked Bremen, this mysterious item was seized from a dead merchant by one of the goblin shamans, who could find no use for it. The medallion was carried for several leagues until the amulet slipped from the shaman's possession and was lost amongst the snows, only to resurface here. 
 
