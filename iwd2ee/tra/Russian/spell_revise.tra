@@ -112,72 +112,71 @@
 Спасбросок: стойкости, отменяет
 
 Это заклинание даёт прочитавшему его возможность отравить своего противника одним касанием. За яд наносит 2 единицы урона в секунду в течении 30 секунд, а затем перестаёт действовать на жертву. За каждые 6 уровней заклинателя, яд наносит дополнительный пункт урона в секунду, до максимума в 7 единиц урона в секунду на 30-м уровне. Успешный спасбросок стойкости нейтрализует воздействие. Это заклинание не провоцирует атаку при возможности.~
-@1018    = ~Shield of Lathander~
-@1019    = ~Shield of Lathander 
-(Conjuration) [Good]
-Level: Clr 4, Pal 4, Lathander 4
-Range: Touch
-Duration: 3 rounds
-Casting Time: 4
-Area of Effect: 1 creature
-Saving Throw: None
+@1018    = ~Щит Латандера~
+@1019    = ~Щит Латандера
+(Призывание) [Добро]
+Уровень: священник 4, паладин 4, жрец Латандера 4
+Дальность: прикосновение
+Длительность: 3 раунда
+Время чтения: 4
+Зона действия: 1 существо
+Спасбросок: нет
 
-This spell grants the target a 15/- damage resistance bonus to bludgeoning, slashing, piercing, fire, cold, acid, and electricity damage for the duration of the spell.~
-@1020    = ~Smashing Wave~
-@1021    = ~Smashing Wave 
-(Evocation)
-Level: Drd 5, Rgr 5
-Range: 40 feet
-Duration: Instantaneous
-Casting Time: 5
-Area of Effect: 5-foot wide wave
-Saving Throw: Reflex half
+Это заклинание даёт цели сопротивление 15/- к дробящему, рубящему, колющему урона, урону огнём, холодом, кислотой и электричеством на протяжении действия заклинания.~
+@1020    = ~Сокрушительная волна~
+@1021    = ~Сокрушительная волна 
+(Проявление)
+Уровень: друид 5, следопыт 5
+Дальность: 40 футов
+Длительность: мгновенно
+Время чтения: 5
+Зона действия: волна шириной 5 футов
+Спасбросок: реакции, половина урона
 
-This spell summons a wave of water that moves in the direction willed by the caster, striking all in its path with massive force. The wave deals 1d8 crushing damage per caster level (maximum 15d8), and every creature struck by the wave must make a Reflex save or be pushed back and knocked down for 1 round.~
-@1022    = ~Circle of Blades~
-@1023    = ~Circle of Blades
-(Evocation)
-Level: Clr 6, Pal 5, Helm 6, Tempus 6
-Range: Caster
-Duration: 2 rounds
-Casting Time: 9
-Area of Effect: 3-foot radius
-Saving Throw: Reflex half
+Это заклинание вызывает мощную водяную волну, которая движется в направлении, указанном заклинателем, сметая всё на своём пути. Волна наносит 1d8 дробящего урона на уровень заклинателя (до максимума 15d8) и каждое существо, поражённое волной и провалившее спасбросок реакции будет отброшено назад и сбито с ног на 1 раунд.~
+@1022    = ~Круг клинков~
+@1023    = ~(Проявление)
+Уровень: священник 6, паладин 5, жрец Хелма 6, жрец Темпуса 6
+Дальность: колдующий
+Длительность: 2 раунда
+Время чтения: 9
+Зона действия: радиус 3 фута
+Спасбросок: реакции, половина урона
 
-This spell conjures forth a wall of circling, razor-sharp blades that whirl and flash around the caster. Any creature attempting to pass through the blade barrier suffers 10d8 points of damage, with a successful Reflex save for half damage. This spell does not provoke an attack of opportunity.~
-@1024    = ~Spiritual Wrath~
-@1025    = ~Spiritual Wrath 
-(Evocation)
-Level: Clr 6, Pal 6, Helm 7, Tempus 6
-Range: Sight of Caster
-Duration: Instantaneous
-Casting Time: 2
-Area of Effect: Special
-Saving Throw: Reflex half
+Это заклинание создаёт стену из острых как бритва, вращающихся лезвий, окружающих заклинателя неподвижным барьером. Любое существо, которое попытается преодолеть барьер из лезвий, получит 10d8 единиц урона. Успешный спасбросок реакции уменьшает повреждения вдвое. Это заклинание не провоцирует атаку при возможности.~
+@1024    = ~Духовный гнев~
+@1025    = ~Духовный гнев
+(Проявление)
+Уровень: священник 6, паладин 6, жрец Хелма 7, жрец Темпуса 6
+Дальность: обзор колдующего
+Длительность: мгновенно
+Время чтения: 2
+Зона действия: особая
+Спасбросок: реакции, половина урона
 
-Upon completion of this spell, the caster becomes a focus of spiritual energy, which then shoots out from the caster in four directions, like lightning bolts. The caster specifies the direction of one of the bolts and the other bolts shoot opposite and perpendicular to that direction, completing a cross-shaped pattern. All creatures in the bolts' path take 5d20 points of magic damage, with a Reflex save for half. Creatures of the same moral alignment (good, neutral, evil) as the caster are unaffected by the spell. This spell does not provoke an attack of opportunity.~
-@1026    = ~Whirlwind~
-@1027    = ~Whirlwind 
-(Evocation)
-Level: Drd 8, Talos 6
-Range: Sight of Caster
-Duration: 10 rounds
-Casting Time: 8
-Area of Effect: Special
-Saving Throw: Reflex partial
+В теле жреца концентрируется духовная мощь, которая затем вылетает в четырёх направлениях, как разряды молнии. Заклинатель задаёт направление для одного из разрядов, а остальные летят перпендикулярно и в противоположном направлении, образуя крест. Любое существо на пути у разряда получает 5d20 очков урона магией (вдвое меньше при успешном спасброске). Существа, разделяющие с заклинателем мировоззрение (добрые, нейтральные, злые), не подвержены действию заклинания. Это заклинание не провоцирует атаку при возможности.~
+@1026    = ~Вихрь~
+@1027    = ~Вихрь
+(Проявление)
+Уровень: друид 8, жрец Талоса 6
+Дальность: обзор колдующего
+Длительность: 10 раундов
+Время чтения: 8
+Зона действия: особая
+Спасбросок: реакции, особый
 
-This spell creates a small whirlwind near the caster, which the caster can direct to a location within his sight. Once the whirlwind reaches its destination, the caster will lose control and the whirlwind will fly around randomly, harming friend and foe alike. The caster is immune to his/her own spell. If a creature is caught in the path of the whirlwind, it takes 3d8 crushing damage, 3d8 slashing damage, and must make a successful reflex save or be stunned for 5 rounds. This spell bypasses spell resistance.~
-@1028    = ~Earthquake~
-@1029    = ~Earthquake 
-(Transmutation)
-Level: Drd 8, Sor/Wiz 9, Talos 7
-Range: Caster
-Duration: Instantaneous
-Casting Time: 1 round
-Area of Effect: Sight of Caster
-Saving Throw: Fortitude partial
+Около заклинателя появляется небольшой вихрь, который можно отправить в любую точку в поле зрения. Достигнув этой точки, вихрь выходит из-под контроля заклинателя и начинает беспорядочно кружить, поражая всех подряд. Сам заклинатель не подвергается воздействию своего же заклинания. Любой, кто окажется на пути у вихря, получает 3d8 дробящего и 3d8 рубящего урона, а при неудачном спасброске реакции ещё и оглушается на 5 раунда. Сопротивление заклинаниям не работает на это заклинание.~
+@1028    = ~Землетрясение~
+@1029    = ~Землетрясение
+(Преобразование)
+Уровень: друид 8, колдун/волшебник 9, жрец Талоса 7
+Дальность: колдующий
+Длительность: мгновенно
+Время чтения: 1 раунд
+Зона действия: обзор колдующего
+Спасбросок: стойкости, особый
 
-This spell causes a local tremor to rip through the ground. Every creature within sight of the caster suffer 10d6 points of bludgeoning damage and must make a Fortitude save or be knocked unconscious for 5 rounds. Unconscious creatures can be struck automatically and will not wake up when damaged. This spell bypasses spell resistance.~
+Это заклинание вызывает дрожь земли. Каждое существо в пределах видимости заклинателя получает 10d6 единиц дробящего урона и должно сделать спасбросок стойкости или потерять сознание на 5 раундов. Существа, находящиеся без сознания поражаются автоматически и не приходят в сознание при получении урона. Сопротивление заклинаниям не работает на это заклинание.~
 @1030    = ~Mist of Eldath~
 @1031    = ~Mist of Eldath 
 (Evocation) [Good]
