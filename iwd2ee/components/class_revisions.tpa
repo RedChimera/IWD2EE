@@ -174,6 +174,9 @@ COPY_EXISTING ~IEex_WEIDU.lua~ ~override~
 	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_monk_fist_progression *=.*~ ~ex_monk_fist_progression = {[0] = "00FIST", [1] = "USMFIS01", [2] = "USMFIS02", [3] = "USMFIS03", [4] = "USMFIS04", [5] = "USMFIS05", [6] = "USMFIS06", [7] = "USMFIS07", [8] = "USMFIS08", [9] = "USMFIS09", [10] = "USMFIS10", [11] = "USMFIS11", [12] = "USMFIS12", [13] = "USMFIS13", [14] = "USMFIS14", [15] = "USMFIS15", [16] = "USMFIS16", [17] = "USMFIS17", [18] = "USMFIS18", [19] = "USMFIS19", [20] = "USMFIS20", [21] = "USMFIS21", [22] = "USMFIS22", [23] = "USMFIS23", [24] = "USMFIS24", [25] = "USMFIS25", [26] = "USMFIS26", [27] = "USMFIS27", [28] = "USMFIS28", [29] = "USMFIS29", [30] = "USMFIS30", [31] = "USMFIS31", [32] = "USMFIS32", [33] = "USMFIS33", [34] = "USMFIS34", [35] = "USMFIS35", [36] = "USMFIS36", [37] = "USMFIS37", [38] = "USMFIS38", [39] = "USMFIS39", [40] = "USMFIS40", [41] = "USMFIS41", [42] = "USMFIS42", [43] = "USMFIS43", [44] = "USMFIS44", [45] = "USMFIS45", [46] = "USMFIS46", [47] = "USMFIS47", [48] = "USMFIS48", [49] = "USMFIS49", [50] = "USMFIS50", }~
 	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_incorporeal_monk_fist_progression *=.*~ ~ex_incorporeal_monk_fist_progression = {[0] = "USFISTIN", [1] = "USMFII01", [2] = "USMFII02", [3] = "USMFII03", [4] = "USMFII04", [5] = "USMFII05", [6] = "USMFII06", [7] = "USMFII07", [8] = "USMFII08", [9] = "USMFII09", [10] = "USMFII10", [11] = "USMFII11", [12] = "USMFII12", [13] = "USMFII13", [14] = "USMFII14", [15] = "USMFII15", [16] = "USMFII16", [17] = "USMFII17", [18] = "USMFII18", [19] = "USMFII19", [20] = "USMFII20", [21] = "USMFII21", [22] = "USMFII22", [23] = "USMFII23", [24] = "USMFII24", [25] = "USMFII25", [26] = "USMFII26", [27] = "USMFII27", [28] = "USMFII28", [29] = "USMFII29", [30] = "USMFII30", [31] = "USMFII31", [32] = "USMFII32", [33] = "USMFII33", [34] = "USMFII34", [35] = "USMFII35", [36] = "USMFII36", [37] = "USMFII37", [38] = "USMFII38", [39] = "USMFII39", [40] = "USMFII40", [41] = "USMFII41", [42] = "USMFII42", [43] = "USMFII43", [44] = "USMFII44", [45] = "USMFII45", [46] = "USMFII46", [47] = "USMFII47", [48] = "USMFII48", [49] = "USMFII49", [50] = "USMFII50", }~
 	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_monk_apr_progression *=.*~ ~ex_monk_apr_progression = {[0] = 0, [1] = 0, [2] = 0, [3] = 0, [4] = 0, [5] = 0, [6] = 0, [7] = 0, [8] = 0, [9] = 0, [10] = 0, [11] = 0, [12] = 0, [13] = 1, [14] = 1, [15] = 1, [16] = 2, [17] = 2, [18] = 2, [19] = 3, [20] = 3, [21] = 3, [22] = 4, [23] = 4, [24] = 4, [25] = 5, [26] = 5, [27] = 5, [28] = 6, [29] = 6, [30] = 6, [31] = 7, [32] = 7, [33] = 7, [34] = 8, [35] = 8, [36] = 8, [37] = 9, [38] = 9, [39] = 9, [40] = 10, [41] = 10, [42] = 10, [43] = 11, [44] = 11, [45] = 11, [46] = 12, [47] = 12, [48] = 12, [49] = 13, [50] = 13, }~
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_wizard_spell_learning_on_level_up *=.*~ ~ex_wizard_spell_learning_on_level_up = true~
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_sorcerer_spell_replacement_on_level_up *=.*~ ~ex_sorcerer_spell_replacement_on_level_up = true~
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_bard_spell_replacement_on_level_up *=.*~ ~ex_bard_spell_replacement_on_level_up = true~
 	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_weapon_finesse_damage_bonus *=.*~ ~ex_weapon_finesse_damage_bonus = true~
 	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_revised_pickpocketing *=.*~ ~ex_revised_pickpocketing = true~
 	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_revised_lockpicking *=.*~ ~ex_revised_lockpicking = true~
@@ -637,6 +640,11 @@ LAF EXTEND_FEAT_IWD2 INT_VAR id=40 offset=0x779 descref=RESOLVE_STR_REF(@719) ma
 LAF EXTEND_FEAT_IWD2 INT_VAR id=39 offset=0x774 descref=RESOLVE_STR_REF(@718) max=5 STR_VAR script=~Feats_WeaponProficiency~ prerequisite_script=~Prereq_WeaponProficiency~ END
 LAF EXTEND_FEAT_IWD2 INT_VAR id=38 offset=0x777 descref=RESOLVE_STR_REF(@717) max=5 STR_VAR script=~Feats_WeaponProficiency~ prerequisite_script=~Prereq_WeaponProficiency~ END
 LAF EXTEND_FEAT_IWD2 INT_VAR id=18 offset=0x78D descref=RESOLVE_STR_REF(@716) max=5 STR_VAR script=~Feats_WeaponProficiency~ prerequisite_script=~Prereq_WeaponProficiency~ END
+LAF EXTEND_FEAT_IWD2 INT_VAR id=45 offset=0 descref=RESOLVE_STR_REF(@669) max=1 STR_VAR script=~Feats_MaximizedAttacks~ prerequisite_script=~Feats_MaximizedAttacks~ END
+LAF EXTEND_FEAT_IWD2 INT_VAR id=0 offset=0 max=1 STR_VAR script=~Feats_MasterOfMagicForce~ prerequisite_script=~Feats_MasterOfMagicForce~ END
+LAF EXTEND_FEAT_IWD2 INT_VAR id=2 offset=0 max=1 STR_VAR script=~Feats_MasterOfMagicForce~ prerequisite_script=~Feats_MasterOfMagicForce~ END
+LAF EXTEND_FEAT_IWD2 INT_VAR id=51 offset=0 max=1 STR_VAR script=~Feats_MasterOfMagicForce~ prerequisite_script=~Feats_MasterOfMagicForce~ END
+LAF EXTEND_FEAT_IWD2 INT_VAR id=65 offset=0 max=1 STR_VAR script=~Feats_MasterOfMagicForce~ prerequisite_script=~Feats_MasterOfMagicForce~ END
 
 COPY ~%mod_folder%/tables/WSPECIA2.2da~ ~override/WSPECIAL.2da~
 
@@ -1064,11 +1072,13 @@ STRING_SET 9566 @820
 STRING_SET 9565 @818
 STRING_SET 9564 @816
 STRING_SET 9562 @527
+STRING_SET 9559 @529
 STRING_SET 9561 @541
 STRING_SET 9560 @531
 STRING_SET 9558 @537
 STRING_SET 9557 @539
 STRING_SET 36 @535
+STRING_SET 35 @569
 STRING_SET 37695 @729
 
 STRING_SET 39846 @898

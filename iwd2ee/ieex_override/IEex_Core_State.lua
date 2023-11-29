@@ -252,7 +252,7 @@ function IEex_GetSpriteFeatCount(sprite, featID)
 		return IEex_GetFeatCountFromBaseStats(baseStats, featID)
 	else
 		local offset = tonumber(IEex_2DAGetAtRelated("B3FEATEX", "ID", "FEAT_COUNT_OFFSET", function(id) return tonumber(id) == featID end))
-		if offset == nil then
+		if offset == nil or offset <= 0 then
 			return 1
 		else
 			local featCount = IEex_ReadSignedByte(sprite + offset, 0x0)
@@ -272,7 +272,7 @@ end
 
 function IEex_SetSpriteFeatCountStat(sprite, featID, count, onlyIfNew)
 	local offset = tonumber(IEex_2DAGetAtRelated("B3FEATEX", "ID", "FEAT_COUNT_OFFSET", function(id) return tonumber(id) == featID end))
-	if offset ~= nil then
+	if offset ~= nil and offset > 0 then
 		IEex_WriteByte(sprite + offset, count)
 	end
 	if true then return end

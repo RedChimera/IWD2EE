@@ -652,8 +652,9 @@ Hit Points per Level: 1-4
 
 Advantages:
 * Proficient with all simple weapons except for simple missile weapons.
-* Receive a bonus feat every five levels in addition to the normal feats given to all character classes every three levels.
+* Receives a bonus feat every five levels in addition to the normal feats given to all character classes every three levels.
 * If the character does not specialize in a school of magic, they gain a +1 bonus to the DC of all their spells.
+* Learns two new spells each time they level up, and can also learn spells from scrolls.
 
 Disadvantages:
 * Starts with no proficiencies in armor and is a very poor at melee combat.~
@@ -689,9 +690,10 @@ Hit Points per Level: 1-6
 
 Advantages:
 * Proficient with all simple weapons, light armor, medium armor, and shields. The bard is also proficient with large swords.
-* Gains one point in Armored Arcana.
+* Gains one point in Armored Arcana, reducing arcane spell failure by 35%.
 * +1 to Alchemy, Knowledge (Arcana) and Spellcraft.
-* 2nd level: Spellcasting. Bards gain the ability to cast minor wizard spells. Wearing a suit of armor imposes a chance of spell failure.
+* 2nd level: Spellcasting. Bards gain the ability to cast arcane spells.
+* 7th level: The bard may replace one of their known spells with another spell of the same level. They may do this once again every 3 levels after level 7. The bard can only replace spells at least two spell levels below the highest spell level they can cast (e.g. only a 1st-level spell when the bard reaches 7th level), though they can replace 7th-level spells starting at level 25, and 8th-level spells starting at level 28.
 * Many rogue like skills are class skills of the Bard.
 * Bard Songs. Bards have the ability to sing melodies that have magical effects on creatures within thirty feet. As they advance in level, they gain additional songs. The songs are described in detail below.
 * 1st level: The Tale of Curran Strongheart. When played, all the bard's allies gain +1 attack bonus, +1 damage, and immunity to fear and hopelessness. The attack and damage bonuses increase by 1 at levels 10, 25 and 40.
@@ -1024,6 +1026,20 @@ The Order of the Black Raven was founded by Valas the Black Raven, a half-drow f
 Advantages:
 * 2nd level: The monk gains +2 to damage against enemy groups that commonly practice slavery, such as drow, duergar, mind flayers, yuan-ti, devils, Thayvians, and followers of Bane and Iyachtu Xvim. For every 4 monk levels after level 2, the monk gains another +1 damage against these enemies.~
 
+@569    = ~SORCERER:
+
+Sorcerers are practitioners of magic who were born with the innate ability to cast spells. It is thought that the blood of some powerful creature flows through their veins; perhaps they even are the spawn of dragons walking in humanoid form. Regardless, the Sorcerer's magic is intuitive rather than logical. They know fewer spells than wizards, and acquire spells more slowly, but they can cast spells more often and have no need to select and prepare spells ahead of time. Sorcerers cannot specialize in magic the way wizards do. Other than these differences, a Sorcerer is very similar to the wizard.
+
+NOTE: A sorcerer does NOT learn spells from scrolls. He chooses new spells with each level. Charisma is the casting statistic for a sorcerer. It affects their maximum spellcasting level, spell saving throw DCs, and number of bonus spells.
+
+Hit Points per Level: 1-4
+
+Advantages:
+* Proficient with all simple weapons.
+* 6th level: The sorcerer may replace one of their known spells with another spell of the same level. They may do this once again every 2 levels after level 6. The sorcerer can only replace spells at least two spell levels below the highest spell level they can cast (e.g. only a 1st-level spell when the sorcerer reaches 6th level), though they can replace 8th-level spells starting at level 20, and 9th-level spells starting at level 22.
+
+Disadvantages:
+* Starts with no proficiencies in armor and is very poor at melee combat.~
 @580    = ~
 
 Domain Spells:

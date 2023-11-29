@@ -474,7 +474,7 @@ function IEex_Scroll_KeyReleasedListener(key)
 	if key == IEex_KeyIDS.MIDDLE_MOUSE_CLICK then
 		IEex_Helper_SetBridge("IEex_Scroll_MiddleMouseState", "isDown", false)
 	end
-
+	
 	IEex_Scroll_CheckKeyboardInput()
 end
 
@@ -810,6 +810,12 @@ ex_levelup_class_selection_buttons_pressed = {[2] = false, [3] = false, [4] = fa
 ex_levelup_class_selection_button_last_pressed = -1
 ex_true_xp = -1
 ex_true_xp_adjusted = -1
+ex_menu_num_wizard_spells_remaining = -1
+ex_menu_wizard_spells_learned = {}
+ex_menu_num_learned_spells_per_level = {0, 0, 0, 0, 0, 0, 0, 0, 0}
+ex_alternate_spell_menu_class = -1
+ex_menu_sorcerer_spells_replaced = {}
+ex_menu_sorcerer_spell_to_replace = ""
 function IEex_LevelUp_ExtraFeatListener()
 	local g_pBaldurChitin = IEex_ReadDword(0x8CF6DC)
 	local levelUpData = IEex_ReadDword(g_pBaldurChitin + 0x1C60)
@@ -817,7 +823,7 @@ function IEex_LevelUp_ExtraFeatListener()
 		local actorID = IEex_ReadDword(levelUpData + 0x136)
 		local share = IEex_GetActorShare(actorID)
 		local panelID = IEex_GetEngineCharacterPanelID()
-		if panelID <= 0 and ex_starting_level[1] ~= -1 then
+		if (panelID <= 0 or panelID == 2) and ex_starting_level[1] ~= -1 then
 			if ex_true_xp ~= -1 then
 				IEex_WriteDword(share + 0x5B4, ex_true_xp)
 --				IEex_WriteDword(share + 0x984, ex_true_xp)
@@ -829,8 +835,126 @@ function IEex_LevelUp_ExtraFeatListener()
 			ex_starting_level = {-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1}
 			ex_starting_skill_points = -1
 			ex_num_level_ups_chosen = 1
-			ex_class_level_up["numLevelUps"] = -1
-			ex_class_level_up["class"] = -1
+			if ex_class_level_up["numLevelUps"] ~= -1 then
+				if ex_class_level_up["class"] == 11 and ex_wizard_spell_learning_on_level_up and ex_wizard_spells_learned_per_level_up > 0 then
+					ex_alternate_spell_menu_class = ex_class_level_up["class"]
+					ex_menu_num_wizard_spells_remaining = ex_class_level_up["numLevelUps"] * ex_wizard_spells_learned_per_level_up
+					ex_menu_in_second_replacement_step = false
+					local screenCharacter = IEex_GetEngineCharacter()
+					local characterRecordPanel = IEex_GetPanelFromEngine(screenCharacter, 2)
+					local newWizardSpellsPanel = IEex_GetPanelFromEngine(screenCharacter, 58)
+					-- Add to popup stack
+					IEex_Call(0x7FBE4E, {newWizardSpellsPanel}, screenCharacter + 0x62A, 0x0) -- CPtrList_AddTail()
+					local trySetPanelEnabled = function(panel, enabled)
+						if panel ~= 0x0 then
+							IEex_SetPanelEnabled(panel, enabled)
+						end
+					end
+				
+					local setCommonPanelsEnabled = function(engine, enabled)
+						trySetPanelEnabled(IEex_GetPanelFromEngine(engine, -2), enabled)
+						trySetPanelEnabled(IEex_GetPanelFromEngine(engine, -3), enabled)
+						trySetPanelEnabled(IEex_GetPanelFromEngine(engine, -4), enabled)
+						trySetPanelEnabled(IEex_GetPanelFromEngine(engine, -5), enabled)
+						IEex_SetPanelEnabled(IEex_GetPanelFromEngine(engine, 0), enabled)
+						IEex_SetPanelEnabled(IEex_GetPanelFromEngine(engine, 1), enabled)
+						IEex_SetPanelEnabled(IEex_GetPanelFromEngine(engine, 2), enabled)
+					end
+					local characterRecordPanelX, characterRecordPanelY, _, _ = IEex_GetPanelArea(characterRecordPanel)
+					setCommonPanelsEnabled(screenCharacter, false)
+--					IEex_SetPanelEnabled(characterRecordPanel, false)
+					IEex_SetToken("EXWLNUM", ex_menu_num_wizard_spells_remaining)
+					IEex_SetControlTextDisplay(IEex_GetControlFromPanel(newWizardSpellsPanel, 30), IEex_FetchString(ex_tra_55772))
+					IEex_SetControlLabelText(IEex_GetControlFromPanel(newWizardSpellsPanel, 34), tostring(ex_menu_num_wizard_spells_remaining))
+					ex_menu_wizard_spells_learned = {}
+					ex_menu_sorcerer_spells_replaced = {}
+					ex_menu_num_learned_spells_per_level = {0, 0, 0, 0, 0, 0, 0, 0, 0}
+					IEex_InitializeWizardLearnList()
+					ex_current_menu_spell_level = ex_menu_max_castable_level
+					IEex_DisplayWizardSpellsToLearn(ex_current_menu_spell_level)
+					IEex_SetPanelEnabled(newWizardSpellsPanel, true)
+--					IEex_SetPanelXY(newWizardSpellsPanel, characterRecordPanelX, characterRecordPanelY)
+					IEex_SetPanelActive(newWizardSpellsPanel, true)
+					IEex_PanelInvalidate(newWizardSpellsPanel)
+				elseif (ex_class_level_up["class"] == 2 and ex_bard_spell_replacement_on_level_up and IEex_GetActorStat(actorID, 97) >= ex_bard_spell_replacement_levels_behind + 2) or (ex_class_level_up["class"] == 10 and ex_sorcerer_spell_replacement_on_level_up and IEex_GetActorStat(actorID, 105) >= ex_sorcerer_spell_replacement_levels_behind + 1) then
+					ex_alternate_spell_menu_class = ex_class_level_up["class"]
+					ex_menu_num_wizard_spells_remaining = 0
+					ex_menu_in_second_replacement_step = false
+					local classLevel = 0
+					local replacementCasterLevel = 0
+					local maxSpell2DA = 0
+					if ex_alternate_spell_menu_class == 2 then
+						classLevel = IEex_GetActorStat(actorID, 97)
+						for i = classLevel - ex_class_level_up["numLevelUps"] + 1, classLevel, 1 do
+							ex_menu_num_wizard_spells_remaining = ex_menu_num_wizard_spells_remaining + ex_bard_spell_replacement_progression[i]
+						end
+						replacementCasterLevel = classLevel - ex_bard_spell_replacement_levels_behind
+						maxSpell2DA = IEex_2DADemand("MXSPLBRD")
+					else
+						classLevel = IEex_GetActorStat(actorID, 105)
+						for i = classLevel - ex_class_level_up["numLevelUps"] + 1, classLevel, 1 do
+							ex_menu_num_wizard_spells_remaining = ex_menu_num_wizard_spells_remaining + ex_sorcerer_spell_replacement_progression[i]
+						end
+						replacementCasterLevel = classLevel - ex_sorcerer_spell_replacement_levels_behind
+						maxSpell2DA = IEex_2DADemand("MXSPLSOR")
+					end
+					ex_menu_max_castable_level = 0
+					local m_nSizeX = IEex_ReadWord(maxSpell2DA + 0x20, 0x0)
+					local m_nSizeY = IEex_ReadWord(maxSpell2DA + 0x22, 0x0)
+					if replacementCasterLevel > 0 and replacementCasterLevel <= m_nSizeY then
+						for i = 0, m_nSizeX - 1, 1 do
+							local numSpellsAtLevel = tonumber(IEex_2DAGetAt(maxSpell2DA, i, (replacementCasterLevel - 1)))
+							if numSpellsAtLevel > 0 then
+								ex_menu_max_castable_level = ex_menu_max_castable_level + 1
+							end
+						end
+					end
+					if ex_menu_num_wizard_spells_remaining > 0 and ex_menu_max_castable_level > 0 then
+						local screenCharacter = IEex_GetEngineCharacter()
+						local characterRecordPanel = IEex_GetPanelFromEngine(screenCharacter, 2)
+						local newWizardSpellsPanel = IEex_GetPanelFromEngine(screenCharacter, 58)
+						-- Add to popup stack
+						IEex_Call(0x7FBE4E, {newWizardSpellsPanel}, screenCharacter + 0x62A, 0x0) -- CPtrList_AddTail()
+						local trySetPanelEnabled = function(panel, enabled)
+							if panel ~= 0x0 then
+								IEex_SetPanelEnabled(panel, enabled)
+							end
+						end
+					
+						local setCommonPanelsEnabled = function(engine, enabled)
+							trySetPanelEnabled(IEex_GetPanelFromEngine(engine, -2), enabled)
+							trySetPanelEnabled(IEex_GetPanelFromEngine(engine, -3), enabled)
+							trySetPanelEnabled(IEex_GetPanelFromEngine(engine, -4), enabled)
+							trySetPanelEnabled(IEex_GetPanelFromEngine(engine, -5), enabled)
+							IEex_SetPanelEnabled(IEex_GetPanelFromEngine(engine, 0), enabled)
+							IEex_SetPanelEnabled(IEex_GetPanelFromEngine(engine, 1), enabled)
+							IEex_SetPanelEnabled(IEex_GetPanelFromEngine(engine, 2), enabled)
+						end
+						local characterRecordPanelX, characterRecordPanelY, _, _ = IEex_GetPanelArea(characterRecordPanel)
+						setCommonPanelsEnabled(screenCharacter, false)
+	--					IEex_SetPanelEnabled(characterRecordPanel, false)
+						if ex_menu_num_wizard_spells_remaining == 1 then
+							IEex_SetControlTextDisplay(IEex_GetControlFromPanel(newWizardSpellsPanel, 30), IEex_FetchString(ex_tra_55773))
+						else
+							IEex_SetToken("EXWLNUM", ex_menu_num_wizard_spells_remaining)
+							IEex_SetControlTextDisplay(IEex_GetControlFromPanel(newWizardSpellsPanel, 30), IEex_FetchString(ex_tra_55774))
+						end
+						IEex_SetControlLabelText(IEex_GetControlFromPanel(newWizardSpellsPanel, 34), tostring(ex_menu_num_wizard_spells_remaining))
+						ex_menu_wizard_spells_learned = {}
+						ex_menu_sorcerer_spells_replaced = {}
+						ex_menu_num_learned_spells_per_level = {0, 0, 0, 0, 0, 0, 0, 0, 0}
+						IEex_InitializeWizardLearnList()
+						ex_current_menu_spell_level = ex_menu_max_castable_level
+						IEex_DisplayWizardSpellsToLearn(ex_current_menu_spell_level)
+						IEex_SetPanelEnabled(newWizardSpellsPanel, true)
+	--					IEex_SetPanelXY(newWizardSpellsPanel, characterRecordPanelX, characterRecordPanelY)
+						IEex_SetPanelActive(newWizardSpellsPanel, true)
+						IEex_PanelInvalidate(newWizardSpellsPanel)
+					end
+				end
+				ex_class_level_up["numLevelUps"] = -1
+				ex_class_level_up["class"] = -1
+			end
 		end
 		if share > 0 then
 			if panelID == 54 then
@@ -1923,6 +2047,7 @@ function IEex_Extern_CChitin_ProcessEvents_CheckKeys()
 	-- https://docs.microsoft.com/en-us/windows/win32/inputdev/virtual-key-codes
 
 	IEex_AssertThread(IEex_Thread.Async, true)
+
 
 	-- Save key states, the pressed keys stack, and pressed/released events during the Raw Input lock to keep the critical section short
 	local keyStates = {}

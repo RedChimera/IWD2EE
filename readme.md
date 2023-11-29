@@ -18,6 +18,7 @@ The big changes described above are only applied if you install certain componen
 - You can now go through dialogue as fast as you want; there's no longer a brief delay each time you choose a dialogue option.
 - The character record screen includes a Reform Party button.
 - The options screen includes a button to access the IEex Options menu (currently it includes an option to alter the fog of war so that it doesn't flicker, if you were having problems with it flickering).
+- If a party member has enough experience to level up multiple times, you can choose how many times they level up at a time. This also allows you to divide the level ups among multiple classes (though you'll have to go through the level up process once for each class).
 - If you do not have the vanilla option to rest until healed enabled, characters heal a number of HP equal to their level on rest, rather than only healing 1 HP.
 - As long as you have the console enabled in IWD2's normal config menu, cheat keys will be enabled automatically without needing to enter a command. 
 - For modders, IWD2EE includes several new opcodes, and offers the ability to run Lua code in-game via the console or various hooks (and some of the new opcodes can call custom Lua functions), as well as a limited ability to modify the GUI. This opens up many possibilities for modding.
@@ -100,6 +101,8 @@ Level 20: The Ballad of Three Heroes: +5 spell resistance, 5/- resistance to all
 
 Creature Revisions also makes it so enemies early on use more sound-based spells and abilities (such as harpy wails in Chapter 1), which makes the Song of Kaudies more useful.
 
+As in PnP, bards can, on certain level ups, replace one of their lower level spells with another spell of the same level.
+
 Clerics: Clerics are not changed much by Class Revisions, but Spell Revisions improves the spontaneous casting and domain systems.
 
 Druids: Druids get a new set of shapeshifting forms. The abilities of each form scale with the druid's level.
@@ -162,9 +165,9 @@ Paladin of Mystra:
 
 Rangers: Rangers get more spell slots, and they get them at lower levels. They can gain the feats Improved Two-Weapon Fighting and Manyshot at lower levels than other classes, and they can gain a second rank in those feats for another attack per round. They are also able to use Set Natural Snare every 6 levels, which snares enemies for 5 rounds on a failed Reflex save. Set Natural Snare is much more effective than in the original game; the save DC now scales with the ranger's Wilderness Lore skill.
 
-Sorcerers: Sorcerers will no longer hit their peak at level 20 and then experience near-zero growth. They get slightly slower spell growth and slightly slower access to new spell picks.
+Sorcerers: Sorcerers will no longer hit their peak at level 20 and then experience near-zero growth. As in PnP, sorcerers can, on certain level ups, replace one of their lower level spells with another spell of the same level.
 
-Wizards: Generalist wizards now gain +1 to the DC of all wizard spells they cast (Specialist wizards gain +2 to the DC of wizard spells they cast of their school, but this was a vanilla feature that wasn't documented in IWD2 until now).
+Wizards: As in PnP, wizards can choose two new spells to learn on each level up, which can be of any spell level the wizard has accessed. Generalist wizards now gain +1 to the DC of all wizard spells they cast (Specialist wizards gain +2 to the DC of wizard spells they cast of their school, but this was a vanilla feature that wasn't documented in IWD2 until now).
 
 Although the inherent changes to clerics, sorcerers, and wizards aren't huge, all spellcasting classes benefit greatly from some the new feats, especially metamagic feats.
 
