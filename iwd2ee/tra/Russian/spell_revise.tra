@@ -1,117 +1,117 @@
 //TRA num range  @1000 to @1999
 
 
-@1000    = ~Doom~
-@1001    = ~Doom
-(Enchantment) 
-Level: Clr 1, Talos 1, Bard 2
-Range: Sight of Caster
-Duration: 2 rounds / level
-Casting Time: 4
-Area of Effect: 1 creature
-Saving Throw: None
+@1000    = ~Рок~
+@1001    = ~Рок 
+(Чародейство) 
+Уровень: священник 1, жрец Талоса 1, бард 2
+Дальность: обзор колдующего
+Длительность: 2 раунда/уровень
+Время чтения: 4
+Зона действия: 1 существо
+Спасбросок: нет
 
-This spell causes a feeling of doom to overwhelm the target. For the duration of the spell the target receives a -2 penalty to attack bonus and saving throws. Multiple Doom spells stack, giving the target additional penalties.~
-@1002    = ~Chant~
-@1003    = ~Chant
-(Conjuration) 
-Level: Clr 2, Tempus 2
-Range: Caster
-Duration: 10 rounds
-Casting Time: 1 round 
-Area of Effect: 30-foot radius
-Saving Throw: None 
+Это заклинание насылает на цель злой рок; во время действия заклинания цель получает -2 к атаке и спасброскам. Эффект от нескольких таких заклинаний складывается, налагая на цель дополнительные штрафы.~
+@1002    = ~Песнь~
+@1003    = ~Песнь
+(Призывание)
+Уровень: священник 2, жрец Темпуса 2
+Дальность: колдующий
+Длительность: 10 раундов
+Время чтения: 1 раунд
+Зона действия: радиус 30 футов
+Спасбросок: нет
 
-By means of the Chant spell, the cleric brings special favor upon himself and his party, and causes harm to his enemies. When the Chant spell is completed, all the cleric's allies in the area of effect gain +1 to attack, damage, and saving throws, while the cleric's enemies suffer a -1 penalty to their attacks, damage and saves. Multiple Chants are not cumulative. This spell requires a moderate amount of concentration by the caster, so the cleric's movement is slowed by half.~
-@1004    = ~Goodberry~
-@1005    = ~Goodberry
-(Transmutation) 
-Level: Drd 1
-Range: Caster
-Duration: 1 day / level
-Casting Time: 1 
-Area of Effect: 4 Sprigs
-Saving Throw: None 
+С помощью этого заклинания священник призывает божественное расположение к себе и своей команде и причиняет вред своим врагам. После прочтения заклинания все дружественные священнику существа в зоне действия получают +1 к атаке, урону и спасброскам, в то время как враги священника получают -1 к своим атакам, урону и спасброскам. Повторение заклинания не усиливает его эффект. Заклинание требует от колдующего умеренную концентрацию, поэтому священник передвигается в два раза медленнее.~
+@1004    = ~Ягода~
+@1005    = ~Ягода
+(Преобразование)
+Уровень: друид 1
+Дальность: колдующий
+Длительность: 1 день/уровень
+Время чтения: 1
+Зона действия: 4 ягоды
+Спасбросок: нет
 
-Casting a Goodberry spell creates four sprigs of magical berries that the caster can give to allies or carry themselves. These berries cure 1d4+5 points of damage when eaten. The sprig will only last one day per level of the caster, so it's not advisable to carry them around for too long.~
-@1006    = ~Spell Shield~
-@1007    = ~Spell Shield
-(Abjuration)
-Level: Clr 2, Helm 2
-Range: Sight of Caster
-Duration: 5 rounds
-Casting Time: 2
-Area of Effect: 1 creature
-Saving Throw: None 
+Создаёт четыре магические ягоды, которые колдующий может дать союзникам или носить с собой. При поедании эти ягоды излечивают 1d4+5 очков урона. Ягоды сохраняются по одному дню на каждый уровень колдующего, поэтому не рекомендуется носить их с собой слишком долго.~
+@1006    = ~Щит заклинаний~
+@1007    = ~Щит заклинаний 
+(Отречение)
+Уровень: священник 2, жрец Хелма 2
+Дальность: обзор колдующего
+Длительность: 5 раундов
+Время чтения: 2
+Зона действия: 1 существо
+Спасбросок: нет
 
-This spell grants a +3 bonus to Will saves and immunity to charm and stun effects for the duration of the spell.~
-@1008    = ~Tortoise Shell~
-@1009    = ~Tortoise Shell
-(Abjuration) 
-Level: Drd 3, Rgr 3
-Range: Sight of Caster
-Duration: 10 rounds
-Casting Time: 2
-Area of Effect: 1 creature
-Saving Throw: None 
+Это заклинание предоставляет +3 к спасброскам воли и иммунитет к эффекта зачарования и оглушения в течение времени действия заклинания.~
+@1008    = ~Черепаший панцирь~
+@1009    = ~Черепаший панцирь 
+(Отречение)
+Уровень: друид 3, следопыт 3
+Дальность: обзор колдующего
+Длительность: 10 раундов
+Время чтения: 2
+Зона действия: 1 существо
+Спасбросок: нет
 
-Upon completion of this spell, a large hemispherical shell resembling that of a tortoise encases the target creature, shielding it from the outside world. The creature encased can take no action but in turn is impervious to all effects. The tortoise shell has 50 hit points, plus another 50 hit points for every 10 levels the druid has attained.~
-@1010    = ~Circle of Bones~
-@1011    = ~Circle of Bones 
-(Necromancy)
-Level: Clr 3
-Range: Caster
-Duration: 3 rounds
-Casting Time: 3
-Area of Effect: 3-foot radius
-Saving Throw: None
+После применения данного заклинания цель закрывает большая защитная полусфера, похожая на панцирь черепахи. Существо, оказавшееся внутри полусферы, не может совершать действий, но при этом остаётся неуязвимым для атак врага. Сфера может принять на себя 50 единиц урона и дополнительно 50 единиц урона за каждые 10 уровней друида или следопыта.~
+@1010    = ~Костяной круг~
+@1011    = ~Костяной круг 
+(Некромантия)
+Уровень: священник 3
+Дальность: колдующий
+Длительность: 3 раунда
+Время чтения: 3
+Зона действия: радиус 3 фута
+Спасбросок: нет
 
-This spell conjures forth a barrier of floating bones that spin rapidly around the caster. Anyone entering their path takes 2d6 bludgeoning damage and 2d6 slashing damage per round. This spell does not provoke an attack of opportunity.~
-@1012    = ~Mold Touch~
-@1013    = ~Mold Touch 
-(Transmutation)
-Level: Drd 3
-Range: Touch
-Duration: Special
-Casting Time: 6
-Area of Effect: 1 creature
-Saving Throw: Fortitude half
+Вокруг заклинателя начинает быстро вращаться барьер из костей. Любой, кто окажется у них на пути, каждый раунд получает 2d6 дробящего и 2d6 рубящего урона. Это заклинание не провоцирует атаку при возможности.~
+@1012    = ~Прикосновение плесени~
+@1013    = ~Прикосновение плесени 
+(Преобразование)
+Уровень: друид 3
+Дальность: прикосновение
+Длительность: особая
+Время чтения: 6
+Зона действия: 1 существо
+Спасбросок: стойкости, половина урона
 
-This spell infects the target creature with a rapidly-spreading brown mold. If the infected creature fails a Fortitude save with +3 DC, the creature takes damage as follows:
+Заклинатель прикасается к существу и поражает его коричневой плесенью, которая быстро распространяется. Жертве разрешается сделать спасбросок стойкости с бонусом +3; в случае провала заражение становится серьёзным, и существо получает урон:
 
-1st round: 4d6 damage
-2nd round: 3d6 damage
-3rd round: 2d6 damage
-4th round: 1d6 damage
+1-й раунд: 4d6 очков урона
+2-й раунд: 3d6 очков урона
+3-й раунд: 2d6 очков урона
+4-1 раунд: 1d6 очков урона
 
-If the saving throw is successful, the damage is reduced:
+При успешном спасброске урон снижается:
 
-1st round: 2d6 damage
-2nd round: 1d6 damage
+1-й раунд: 2d6 очков урона
+2-й раунд: 1d6 очков урона
 
-Each round after the first, the nearest creature within ten feet of the victim must make a Fortitude save or be infected by the mold at full strength. This process continues until the mold fails to infect a suitable host in time. Creatures already under the effects of the mold cannot contract it again. The brown mold quickly dies once the spell expires. This spell does not provoke an attack of opportunity.~
-@1014    = ~Defensive Harmony~
-@1015    = ~Defensive Harmony 
-(Enchantment) [Lawful]
-Level: Clr 4, Pal 4, Helm 4
-Range: Caster
-Duration: 6 rounds
-Casting Time: 1
-Area of Effect: 10-foot radius
-Saving Throw: None
+Каждый раунд, начиная со второго, ближайшее из существ в пределах 10 футов от жертвы поражается плесенью в полную силу, если не сделает успешный спасбросок стойкости. Это продолжается, пока не кончатся подходящие жертвы для плесени. Существа, уже находящиеся под её воздействием, не могут заразиться повторно. По истечении срока действия заклинания коричневая плесень быстро погибает. Это заклинание не провоцирует атаку при возможности.~
+@1014    = ~Защитная гармония~
+@1015    = ~Защитная гармония 
+(Чародейство) [Законопослушный]
+Уровень: священник 4, паладин 4, жрец Хелма 4
+Дальность: колдующий
+Длительность: 6 раундов
+Время чтения: 1
+Зона действия: радиус 10 футов
+Спасбросок: нет
 
-Defensive Harmony allows a group of creatures to act as a single unit for a single battle or encounter, enhancing the coordination of their attacks and tactics. This effect is always centered on the caster but affects all those within a 10-foot radius. The affected can move outside of this area after the spell is cast and still enjoy the benefits of harmony. While the spell is in effect, each affected creature gains a +4 generic armor bonus. This lasts for 6 rounds or until successfully dispelled.~
-@1016    = ~Poison~
-@1017    = ~Poison 
-(Necromancy) 
-Level: Clr 4, Drd 3
-Range: Touch
-Duration: 30 seconds
-Casting Time: 7
-Area of Effect: 1 creature
-Saving Throw: Fortitude negates
+На время одного сражения или боя группа существ получает способность действовать как единое целое, координируя свои атаки и тактические решения. Заклинание сфокусировано на заклинателе и охватывает область с радиусом 10 футов от него. Эффект гармонии сохраняется и после того, как существа покидают область охвата. Заклинание даёт +4 к классу защиты (общий); действие длится 6 раундов, если не будет развеяно раньше.~
+@1016    = ~Яд~
+@1017    = ~Яд
+(Некромантия)
+Уровень: священник 4, друид 3
+Дальность: прикосновение
+Длительность: 30 секунд
+Время чтения: 7
+Зона действия: 1 существо
+Спасбросок: стойкости, отменяет
 
-This spell grants the caster the ability to touch a creature and instantly poison them. The poison deals 2 damage per second for 30 seconds, then dissipates from the target's body. For every 6 caster levels, the poison deals another point of damage per second, up to a maximum of 7 damage per second at level 30. A successful Fortitude save negates any effect. This spell does not provoke an attack of opportunity.~
+Это заклинание даёт прочитавшему его возможность отравить своего противника одним касанием. За яд наносит 2 единицы урона в секунду в течении 30 секунд, а затем перестаёт действовать на жертву. За каждые 6 уровней заклинателя, яд наносит дополнительный пункт урона в секунду, до максимума в 7 единиц урона в секунду на 30-м уровне. Успешный спасбросок стойкости нейтрализует воздействие. Это заклинание не провоцирует атаку при возможности.~
 @1018    = ~Shield of Lathander~
 @1019    = ~Shield of Lathander 
 (Conjuration) [Good]
