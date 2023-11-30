@@ -177,180 +177,180 @@
 Спасбросок: стойкости, особый
 
 Это заклинание вызывает дрожь земли. Каждое существо в пределах видимости заклинателя получает 10d6 единиц дробящего урона и должно сделать спасбросок стойкости или потерять сознание на 5 раундов. Существа, находящиеся без сознания поражаются автоматически и не приходят в сознание при получении урона. Сопротивление заклинаниям не работает на это заклинание.~
-@1030    = ~Mist of Eldath~
-@1031    = ~Mist of Eldath 
-(Evocation) [Good]
-Level: Drd 7, Ilmater 8
-Range: Sight of Caster
-Duration: 1 round
-Casting Time: 1 round
-Area of Effect: 10-foot radius
-Saving Throw: None
+@1030    = ~Туман Эльдат~
+@1031    = ~Туман Эльдат
+(Проявление) [Добро]
+Уровень: друид 7, жрец Ильматера 8
+Дальность: обзор колдующего
+Длительность: 1 раунд
+Время чтения: 1 раунд
+Зона действия: радиус 10 футов
+Спасбросок: нет
 
-This spell blankets the area of effect with a green mist - any creature within the mist will be cured of disease, poison, and healed of 50 points of damage.~
-@1032    = ~Larloch's Minor Drain~
-@1033    = ~Larloch's Minor Drain 
-(Necromancy)
-Level: Sor/Wiz 1
-Range: Sight of Caster
-Duration: 1 hour
-Casting Time: 1 
-Area of Effect: 1 creature
-Saving Throw: None 
+Зону действия окутывает серебристо-голубой туман. Все существа в тумане избавляются от болезней и ядов и восстанавливают по 50 очков здоровья.~
+@1032    = ~Малый отток Ларлоха~
+@1033    = ~Малый отток Ларлоха
+(Некромантия)
+Уровень: колдун/волшебник 1
+Дальность: обзор колдующего
+Длительность: 1 час
+Время чтения: 1
+Зона действия: 1 существо
+Спасбросок: нет
 
-With this spell, the wizard drains the life force from a target and adds it to his own, draining 2d4 hit points from the victim. For every 3 caster levels after level 1, the amount drained increases by 1d4, up to 5d4 at 10th level. The extra hit points will disappear in an hour.~
-@1034    = ~Horror~
-@1035    = ~Horror 
-(Necromancy) 
-Level: Brd 2, Sor/Wiz 2, Bane 2
-Range: Sight of Caster
-Duration: 4 rounds
-Casting Time: 2 
-Area of Effect: 15-foot radius
-Saving Throw: Will negates 
+С помощью этого заклинания волшебник вытягивает жизненную силу из цели и добавляет её к своей. Выбранное существо получает 2d4 урона, в то время как заклинатель получает 2d4 дополнительных пунктов здоровья. За каждые три уровня заклинателя после первого, количество вытянутых пунктов здоровья увеличивается на 1d4, до 5d4 на десятом уровне. Дополнительные пункты здоровья исчезают спустя один час после применения заклинания.~
+@1034    = ~Ужас~
+@1035    = ~Ужас
+(Некромантия)
+Уровень: бард 2, колдун/волшебник 2, жрец Бейна 2
+Дальность: обзор колдующего
+Длительность: 4 раунда
+Время чтения: 2
+Зона действия: радиус 15 футов
+Спасбросок: воли, отменяет
 
-All enemies within the area of effect must make a Will save or flee in terror. Certain creatures, such as undead, are immune to this spell.~
-@1036    = ~Power Word: Sleep~
-@1037    = ~Power Word: Sleep
-(Divination) 
-Level: Brd 2, Sor/Wiz 2
-Range: Sight of Caster
-Duration: 3 rounds
-Casting Time: 0
-Area of Effect: 1 creature
-Saving Throw: None
+Все враги в зоне действия заклинания должны прокинуть спасбросок воли. Провалившее спасбросок существо будет вынуждено бежать в страхе. Некоторые существа, например, нежить, обладают иммунитетом к этому заклинанию.~
+@1036    = ~Слово силы: Усыпить~
+@1037    = ~Слово силы: Усыпить
+(Прорицание)
+Уровень: бард 2, колдун/волшебник 2
+Дальность: обзор колдующего
+Длительность: 3 раундов
+Время чтения: 0
+Зона действия: 1 существо
+Спасбросок: нет
 
-When a wizard calls upon a Power Word: Sleep spell, he forces a comatose slumber upon a creature. There is no saving throw, though the creature will wake up if injured. This spell has no effect on deaf creatures.~
-@1038    = ~Death Armor~
-@1039    = ~Death Armor
-(Necromancy) 
-Level: Sor/Wiz 2, Cleric 2, Talos 2
-Range: Caster
-Duration: 1 round/level
-Casting Time: 2
-Area of Effect: Caster
-Saving Throw: None
+Когда волшебник произносит это заклинание, он насылает коматозную дремоту на существо. Спасброска от заклинания нет, хотя существо проснётся, если будет ранено. Это заклинание не действует на глухих существ.~
+@1038    = ~Доспехи смерти~
+@1039    = ~Доспехи смерти
+(Некромантия)
+Уровень: колдун/волшебник 2, священник 2, жрец Талоса 2
+Дальность: колдующий
+Длительность: 1 раунд/уровень
+Время чтения: 2
+Зона действия: колдующий
+Спасбросок: нет
 
-This spell surrounds the caster with crackling black energy from the negative energy plane. The Death Armor will damage anyone who strikes the caster in melee, dealing 1d6 + 1 per 2 caster levels (maximum of 1d6 + 5) magic damage. Other non-living creatures such as constructs and golems are unaffected.~
-@1040    = ~Seven Eyes~
-@1041    = ~Seven Eyes 
-(Abjuration)
-Level: Sor/Wiz 7, Helm 8
-Range: Caster
-Duration: 20 rounds
-Casting Time: 7
-Area of Effect: Caster
-Saving Throw: None
+Заклинание окружает колдующего облаком искрящейся чёрной энергии из плана негативной энергии. Доспехи смерти наносят урон врагу, который нанёс удар по колдующего в ближнем бою. Цель получает урон 1d6+1 за каждые 2 уровня колдующего (вплоть до 1d6+5). Заклинание не действует не живых существ, таких, как нежить, конструкты и големы.~
+@1040    = ~Семь глаз~
+@1041    = ~Семь глаз
+(Отречение)
+Уровень: колдун/волшебник 7, жрец Хелма 8
+Дальность: колдующий
+Длительность: 20 раундов
+Время чтения: 7
+Зона действия: колдующий
+Спасбросок: нет
 
-This spell conjures forth seven magical orbs that float in a ring above the caster's head. Each eye has a defensive and offensive ability, though once either one is used the eye will lose its power. If an eye is expended or destroyed, it can be replaced by re-casting Seven Eyes. The powers of each eye are described below.
+Над головой заклинателя появляются семь магических сфер, медленно летающих по кругу. У каждого глаза есть возможность защиты или нападения, но использовать его можно только для чего-либо одного, а затем он теряет силу. Если какие-то глаза были потрачены или уничтожены, они могут быть заменены повторным чтением этого же заклинания. Свойства глаз описаны ниже.
 
-Eye of the Mind - This orb protects the caster against mental attacks, such as charm, emotion, and fear. The eye may be expended as the 1st level wizard spell Charm Person.
+Глаз разума - защищает заклинателя от воздействия на разум, к примеру, зачарования, эмоций, страха. Может быть использован как магическое заклинание 1-го уровня "Очаровать персонажа".
 
-Eye of the Sword - This eye deflects the first physical damaging attack that strikes the caster. The eye may be expended as the 1st level wizard spell Magic Missile (5 missiles).
+Глаз меча - отражает первую физическую атаку, направленную на заклинателя. Может быть использован как магическое заклинание 1-го уровня "Волшебный снаряд" (5 снарядов).
 
-Eye of the Mage - This eye absorbs one manifestation of fire, electrical, cold, or acid damage. The eye can also be expended as the 3rd level wizard spell Lightning Bolt (4d8 damage).
+Глаз мага - поглощает одну атаку холодом, огнём, электричеством или кислотой. Может быть использован как магическое заклинание 3-го уровня "Разряд молнии" (урон 4d8).
 
-Eye of Venom - This eye halts any one attack or effect that could poison the caster. The eye can also be used to poison one creature, dealing 30 points of damage over a period of 30 seconds.
+Глаз яда - останавливает одну атаку или действие, способные отравить заклинателя. Может быть использован для отравления одного существа (30 единиц урона в течение 30 секунд).
 
-Eye of the Spirit - This eye blocks one instant-death magic attack (Death Spell, Finger of Death, Power Word Kill, Slay Living, Destruction). The wizard may instead choose to expend the eye's power similar to a Ray of Enfeeblement, dropping a target's strength by -10, reducing its chance to hit, and the damage it deals.
+Глаз духа - блокирует одну магическую атаку, вызывающую мгновенную смерть ("Заклинание смерти", "Перст смерти", "Слово силы: Убить", "Убить живого", "Уничтожение"). Может быть использован как заклинание "Луч слабости" (снижает Силу цели на 10, что уменьшает точность и урон наносимых ею атак).
 
-Eye of Fortitude - This eye blocks one stunning, deafness, blindness, or silence effect. It may alternatively be expended as the 4th level wizard spell, Shout.
+Глаз стойкости - предотвращает одно ошеломление, оглушение, слепоту или молчание. Также может быть использован как магическое заклинание 4-го уровня "Крик".
 
-Eye of Stone - This eye shields the caster from a single petrification attack. It can also be used as the spell, Hold Person.~
-@1042    = ~Rainstorm~
-@1043    = ~Rainstorm 
-(Evocation)
-Level: Drd 2
-Range: Sight of Caster
-Duration: 2 rounds
-Casting Time: 6
-Area of Effect: 30-foot radius
-Saving Throw: Reflex half
+Глаз камня - предохраняет заклинателя от превращения в камень. Также может быть использован как заклинание "Удержание персонажа".~
+@1042    = ~Ливень~
+@1043    = ~Ливень
+(Проявление)
+Уровень: друид 2
+Дальность: обзор колдующего
+Длительность: 2 раунда
+Время чтения: 6
+Зона действия: радиус 30 футов
+Спасбросок: реакции, половина урона
 
-This spell, which may only be cast outdoors, brings forth a magical rain that saturates the area of effect. The rain grants 5/- resistance to fire but a -5 weakness to cold and electricity damage, and deals 2d3 points of magic damage to all cold and fire-using/dwelling creatures. In addition, all creatures in the area of effect are struck by bolts of lightning that deal 2d6 electricity damage, with a Reflex save for half damage. Flame Blade spells, Shroud of Flame, and salamander auras are also extinguished.~
-@1044    = ~Dispel Magic~
-@1045    = ~Dispel Magic 
-(Abjuration) 
-Level: Brd 3, Clr 3, Drd 4, Pal 3, Sor/Wiz 3, Oghma 3
-Range: Sight of Caster
-Duration: Instantaneous 
-Casting Time: 3
-Area of Effect: 15-foot radius 
-Saving Throw: Will negates
+Это заклинание, которое можно читать только на открытом воздухе, вызывает магический ливень в указанной зоне. Ливень даёт 5/- сопротивление огню, но -5 уязвимости к урону холодом и электричеством. Он также наносит урон 2d3 магического урона всем существам, использующим или живущим в холоде и огне. Кроме того, в каждом раунде существует 50-процентная вероятность удара молнией, которая наносит 2d6 очков электрического урона (успешный спасбросок реакции позволяет сократить урон вдвое). Кроме того, в области действия заклинания обрываются действия заклинаний "Огненный клинок" и "Саван пламени", а также не действует аура саламандры.~
+@1044    = ~Развеять магию~
+@1045    = ~Развеять магию
+(Отречение)
+Уровень: бард 3, священник 3, друид 4, паладин 3, колдун/волшебник 3, жрец Огмы 3
+Дальность: обзор колдующего
+Длительность: мгновенно
+Время чтения: 3
+Зона действия: радиус 15 футов
+Спасбросок: воли, отменяет
 
-A Dispel Magic spell removes magical effects upon anyone within the area of effect. This includes the effects of spells, potions and magical items. It does not, however, affect magical items themselves. Enemy creatures are allowed a Will save with +5 DC to resist, while friendly creatures are automatically affected.~
-@1046    = ~Remove Disease~
-@1047    = ~Remove Disease 
-(Abjuration)
-Level: Brd 3, Clr 3, Drd 3, Rgr 3
-Range: Touch
-Duration: Instantaneous
-Casting Time: 1
-Area of Effect: 1 creature
-Saving Throw: None
+Заклинание снимает со всех существ в области охвата все магические эффекты, включая эффекты заклинаний, зелий и магических предметов. Сами магические предметы при этом не подвергаются его воздействию. Вражеские существа могут прокинуть спасбросок воли с УС +5, чтобы избежать эффекта заклинания, в то время как дружественные существа автоматически подвергаются эффекту заклинания.~
+@1046    = ~Излечение болезни~
+@1047    = ~Излечение болезни
+(Отречение)
+Уровень: бард 3, священник 3, друид 3, следопыт 3
+Дальность: прикосновение
+Длительность: мгновенно
+Время чтения: 1
+Зона действия: 1 существо
+Спасбросок: нет
 
-When this spell is placed on a diseased individual, it immediately cures them and restores 5 lost hit points.~
-@1048    = ~Exaltation~
-@1049    = ~Exaltation 
-(Abjuration)
-Level: Clr 3, Helm 3
-Range: Touch
-Duration: 10 rounds
-Casting Time: 3
-Area of Effect: 1 creature
-Saving Throw: None
+Существо, поражённое болезнью, немедленно выздоравливает, и у него восстанавливается 5 пунктов здоровья.~
+@1048    = ~Возвышение~
+@1049    = ~Возвышение
+(Отречение)
+Уровень: священник 3, жрец Хелма 3
+Дальность: прикосновение
+Длительность: 10 раундов
+Время чтения: 3
+Зона действия: 1 существо
+Спасбросок: нет
 
-This spell enables a cleric to aid and protect any one being. By touch, the caster removes the effects of fear, sleep, feeblemindedness, unconsciousness, intoxication, as well as berserk, confused, and hopeless states of mind. In addition, the recipient is protected against spells and other attacks that cause these effects for the duration of the spell.~
-@1050    = ~Moonblade~
-@1051    = ~Moonblade 
-(Evocation)
-Level: Drd 3, Rgr 3, Selune 2
-Range: Caster
-Duration: 10 rounds
-Casting Time: 6
-Area of Effect: Caster
-Saving Throw: None
+Этим заклинанием священник может дать защиту любому существу. Прикоснувшись к цели, заклинатель снимает эффекты страха, сна, слабоумия, потери сознания, отравления, ярости, растерянности и безнадёжности, а также на время действия заклинания делает цель неуязвимой для атак и заклинаний, вызывающих такие эффекты.~
+@1050    = ~Лунный клинок~
+@1051    = ~Лунный клинок
+(Проявление)
+Уровень: друид 3, следопыт 3, жрец Селуны 2
+Дальность: колдующий
+Длительность: 10 раундов
+Время чтения: 6
+Зона действия: колдующий
+Спасбросок: нет
 
-This spell summons forth a silent, weightless sword-like construct made of moonlight that extends 4 feet from the caster's hand. The moonblade is considered a +4 weapon for determining what creatures it can damage, though the bonus does not apply to attack bonus. In addition, due to the insubstantial nature of the moonblade, the blade bypasses armor and shield bonuses to AC, though it still gains damage bonuses from Strength, proficiency, and any other damage bonus a melee weapon could gain. It uses the Simple Weapon: Small Blade proficiency.
+Это заклинание создаёт в руках прочитавшего бесшумное, невесомое мечеподобное лезвие из лунного света, длиной в 4 фута. Лунный клинок считается +4 оружием, при определении того, какое существо он способен поразить, однако улучшения атаки нет. Кроме того, так как Лунный клинок нематериален, он игнорирует улучшения к классу защиты, получаемые от щита или доспехов, но при этом он всё равно получает улучшения к урону за высокую силу, мастерство и любые другие. Черта "Простое оружие, Короткие клинки" используется для определения бонуса мастерства.
 
-The strike of a moonblade drains a target's vitality, inflicting 1d12+4 points of damage, and an additional 1d12+4 points to undead, who are particularly susceptible. A successful strike also temporarily scrambles magic, causing any spells the target casts in the next round to fail. Though it is not made of silver, the moonblade has the same effect against lycanthropes as a silver weapon, dealing full damage to them.
+Удар лунного клинка высасывает жизненные силы жертвы, нанося 1d12+4 единиц урона, и дополнительные 1d12+4 единиц урона для нежити, которая особенно уязвима к этому заклинанию. Также, успешный удар этого клинка временно запутывает магию, из-за чего все заклинания, применённые жертвой в следующем раунде, не сработают. Хотя этот клинок сделан не из серебра, он действует против ликантропов так же, как и серебряное оружие, нанося им полный урон.
 
-If the caster is already wielding a non-conjured moonblade at the time that they cast this spell, instead of conjuring a new moonblade, the spell will give the current moonblade +3 to attack and damage for the duration.
+Если в момент произнесения заклинания у заклинателя уже есть не призванный заклинанием лунный клинок, вместо того чтобы создавать новый, заклинание даст текущему лунному клинку +3 к атаке и урону на время действия заклинания.
 
-When cast as a ranger spell, this spell creates a moonblade in each hand.~
-@1052    = ~Neutralize Poison~
-@1053    = ~Neutralize Poison
-(Conjuration)
-Level: Brd 4, Clr 4, Drd 3, Pal 4, Rgr 3
-Range: Touch 
-Duration: 3 rounds
-Casting Time: 1 
-Area of Effect: 1 creature
-Saving Throw: None 
+Когда это заклинание произносится следопытом, оно создает по лунному клинку в каждой руке.~
+@1052    = ~Нейтрализация яда~
+@1053    = ~Нейтрализация яда
+(Призывание)
+Уровень: бард 4, священник 4, друид 3, паладин 4, следопыт 3
+Дальность: прикосновение
+Длительность: 3 раунда
+Время чтения: 1
+Зона действия: 1 существо
+Спасбросок: нет
 
-When this spell is placed upon a poisoned individual, it immediately neutralizes any poison, ends any persistent bleeding, and heals 4d6 hit points. In addition, the target gains 2/- poison resistance for 3 rounds.~
-@1054    = ~Champion's Strength~
-@1055    = ~Champion's Strength 
-(Transmutation) 
-Level: Clr 5, Pal 4, Tempus 5
-Range: Sight of Caster
-Duration: 1 round / level
-Casting Time: 8
-Area of Effect: 1 creature
-Saving Throw: None
+При наложении этого заклинания на персонажа все эффекты отравления немедленно снимаются, также прекращается кровотечение и исцеляется 4d6 пунктов здоровья. Кроме того, цель заклинания получает 2/- сопротивление яду на 3 раунда.~
+@1054    = ~Сила победителя~
+@1055    = ~Сила победителя
+(Преобразование)
+Уровень: священник 5, паладин 4, жрец Темпуса 5
+Дальность: обзор колдующего
+Длительность: 1 раунд/уровень
+Время чтения: 8
+Зона действия: 1 существо
+Спасбросок: нет
 
-When this spell is cast, the caster effectively draws on the strength of his god and lends it to the target creature, in effect creating a champion. The target gains a +12 strength bonus for the duration of the spell. However, the spell requires concentration by the caster; until the duration ends, the caster cannot cast any more spells.~
-@1056    = ~Insect Plague~
-@1057    = ~Insect Plague 
-(Conjuration)
-Level: Drd 5, Rgr 5
-Range: Sight of Caster
-Duration: Special
-Casting Time: 1 round
-Area of Effect: 25-foot radius
-Saving Throw: Partial
+При чтении этого заклинания колдующий берёт силу своего бога и передаёт её цели превращая её в могучего героя. Цель получает 12 дополнительных пунктов силы на время действия заклинания. Однако это заклинание требует от заклинателя концентрации; пока его действие не закончится, заклинатель не сможет произнести больше ни одного заклинания.~
+@1056    = ~Рой насекомых~
+@1057    = ~Рой насекомых
+(Призывание)
+Уровень: друид 5, следопыт 5
+Дальность: обзор колдующего
+Длительность: особая
+Время чтения: 1 раунд
+Зона действия: радиус 25 футов
+Спасбросок: частичный
 
-This spell summons a swarm of creeping, hopping, and flying insects. All creatures within the swarm take 1 hit point of damage every round and suffer 100% spell failure (50% on a successful Will save). Creature who flee the swarm will still be chased by the insects for 5 rounds after. Undead and constructs are unaffected by insect plague, as are any creatures under the effects of Fire Shield.~
+Заклинание призывает множество ползучих, скачущих и летающих насекомых. Все, кто оказался внутри этого роя, получают по 1 единице урона за раунд и получают 100% шанс провалить чтение заклинаний (50% шанс в случае успешного спасброска воли). Существа, покинувшие зону роя, буду преследоваться насекомыми дополнительно в течении 5 раундов. Нежить и конструкты не подвержены эффекту нашествия насекомых, так же как и все существа, находящиеся под воздействием заклинания "Огненный Щит".~
 @1058    = ~Heal~
 @1059    = ~Heal 
 (Conjuration)
