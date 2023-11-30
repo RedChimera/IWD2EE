@@ -351,61 +351,61 @@
 Спасбросок: частичный
 
 Заклинание призывает множество ползучих, скачущих и летающих насекомых. Все, кто оказался внутри этого роя, получают по 1 единице урона за раунд и получают 100% шанс провалить чтение заклинаний (50% шанс в случае успешного спасброска воли). Существа, покинувшие зону роя, буду преследоваться насекомыми дополнительно в течении 5 раундов. Нежить и конструкты не подвержены эффекту нашествия насекомых, так же как и все существа, находящиеся под воздействием заклинания "Огненный Щит".~
-@1058    = ~Heal~
-@1059    = ~Heal 
-(Conjuration)
-Level: Clr 6, Drd 7, Lathander 6
-Range: Touch
-Duration: Instantaneous
-Casting Time: 5
-Area of Effect: 1 creature
-Saving Throw: None
+@1058    = ~Исцеление~
+@1059    = ~Исцеление
+(Призывание)
+Уровень: священник 6, друид 7, жрец Латандера 6
+Дальность: прикосновение
+Длительность: мгновенно
+Время чтения: 5
+Зона действия: 1 существо
+Спасбросок: нет
 
-Heal wipes away disease and injury from a target creature. It cures blindness, diseases, feeblemind and restores the target to maximum hit points if they have been injured. If used on an undead creature, it will instead act as a Harm spell, reducing the undead to 1 hit point if the caster succeeds on a touch attack roll and the undead fails a Fortitude save with +2 DC. This spell does not provoke an attack of opportunity when used to harm hostile undead.~
-@1060    = ~Symbol of Hopelessness~
-@1061    = ~Symbol of Hopelessness
-(Divination)
-Level: Clr 8, Sor/Wiz 8, Oghma 7
-Range: Sight of Caster
-Duration: 4 rounds
-Casting Time: 9
-Area of Effect: 30-foot radius
-Saving Throw: Will negates
+Заклинание избавляет выбранное существо от всех недугов: излечивает слепоту, болезни и слабоумие и восстанавливает здоровье до максимума, если цель была ранена. При использовании на нежить, это заклинание действует как заклинание "Вред", снижая её пункты здоровья до одного, если заклинатель преуспеет в атаке касанием, и нежить провалит спасбросок стойкости с УС +2. Это заклинание не провоцирует атаку при возможности, если используется для нанесения вреда враждебной нежити.~
+@1060    = ~Символ безнадёжности~
+@1061    = ~Символ безнадёжности
+(Прорицание)
+Уровень: священник 8, колдун/волшебник 8, жрец Огмы 7
+Дальность: обзор колдующего
+Длительность: 4 раунда
+Время чтения: 9
+Зона действия: радиус 30 футов
+Спасбросок: воли, отменяет
 
-This spell conjures forth a glyph imbued with magical power that channels its effects through any enemy creatures capable of seeing it. Creatures affected will be overwhelmed by hopelessness and become unresponsive, refusing to defend themselves or their allies. A successful Will save will resist the effects. Undead, constructs, and blinded creatures are unaffected.~
-@1062    = ~Impervious Sanctity of Mind~
-@1063    = ~Impervious Sanctity of Mind 
-(Abjuration)
-Level: Clr 7, Ilmater 7, Helm 7
-Range: Caster
-Duration: 10 rounds/level
-Casting Time: 7
-Area of Effect: Caster
-Saving Throw: None
+Это заклинание создаёт наделённый волшебными силами символ, который передаёт своё воздействие через всякое способное его видеть вражеское существо. Попавшие под воздействие символа жертвы будут подавлены безнадёжностью и станут беспомощными, отказываясь защищать себя и своих союзников. Успешный спасбросок воли помогает избежать действия эффекта. Нежить, конструкты и слепые существа не подвержены действию этого заклинания.~
+@1062    = ~Непроницаемая чистота разума~
+@1063    = ~Непроницаемая чистота разума
+(Отречение)
+Уровень: священник 7, жрец Ильматера 7, жрец Хелма 7
+Дальность: колдующий
+Длительность: 10 раундов/уровень
+Время чтения: 7
+Зона действия: колдующий
+Спасбросок: нет
 
-This spell steels the caster's mind against any outside influence. Charm, Command, Confusion, Dominate Person, Fear, Feeblemind, Hold, Sleep, Stun, Hopelessness and any psionic attack directed at the caster will fail as long as this spell is in effect.~
-@1064    = ~Greater Restoration~
-@1065    = ~Greater Restoration 
-(Necromancy)
-Level: Clr 8, Drd 9, Lathander 7
-Range: Touch
-Duration: Instantaneous
-Casting Time: 3
-Area of Effect: 1 creature
-Saving Throw: None
+Заклинание укрепляет разум колдующего, защищая его от внешних воздействий. Во время действия заклинания он не подвергается влиянию заклинаний "Очарование", "Повеление", "Замешательство", "Подчинение", "Страх", "Слабоумие", "Удержание", "Сон", "Безнадёжность" и любых псионических атак.~
+@1064    = ~Великое восстановление~
+@1065    = ~Великое восстановление
+(Некромантия)
+Уровень: священник 8, друид 9, жрец Латандера 7
+Дальность: прикосновение
+Длительность: мгновенное
+Время чтения: 3
+Зона действия: 1 существо
+Спасбросок: нет
 
-This spell will heal all hit points and cure a creature of almost any ailment: energy drain, paralysis, hold, stun, slow, petrification, enfeeblement, pain, bleeding, poison, disease, acid damage over time, blindness, deafness, silence, feeblemind, any form of insanity such as confusion or berserk states of mind, charm, domination, hopelessness, despair, panic, and artificially induced sleep.~
-@1066    = ~Aura of Vitality~
-@1067    = ~Aura of Vitality 
-(Transmutation) 
-Level: Drd 7, Lathander 8
-Range: Caster
-Duration: 2 rounds/level
-Casting Time: 2
-Area of Effect: 20-foot radius
-Saving Throw: None 
+Это заклинание восстанавливает все пункты здоровья и излечивает практические от всех недугов: вытягивания энергии, паралича, удержания, оглушения, замедления, окаменения, ослабления, боли, кровотечения, яда болезни, кислотного периодического повреждения, слепоты, глухоты, тишины, слабоумия, всех видов наведённого безумия, такого как замешательство или неистовство, очарования, доминирования, безнадёжности, отчаяния, паники и наведённого сна.~
+@1066    = ~Аура жизненной энергии~
+@1067    = ~Аура жизненной энергии
+(Преобразование)
+Уровень: друид 7, жрец Латандера 8
+Дальность: колдующий
+Длительность: 2 раунд/уровень
+Время чтения: 2
+Зона действия: радиус 20 футов
+Спасбросок: нет
 
-Upon casting this spell, the caster exudes magical energy that imbues all allies in the area of effect with healthy vigor. This allows them to perform tremendous physical feats well beyond their normal capabilities. All allies in the area of effect gain a +4 bonus to strength, dexterity and constitution for the duration of the spell.~
+При наложении этого заклинания заклинатель излучает магическую энергию, которая пропитывает всех находящихся поблизости союзников и увеличивает их живучесть. Это позволяет им выполнять физические действия, далеко выходящие за рамки обычных способностей. Все союзники в зоне действия получают +4 к Силе, Ловкости и Телосложению на время действия заклинания.~
 @1068    = ~Shield~
 @1069    = ~Shield
 (Abjuration)
