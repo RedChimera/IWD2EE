@@ -406,229 +406,227 @@
 Спасбросок: нет
 
 При наложении этого заклинания заклинатель излучает магическую энергию, которая пропитывает всех находящихся поблизости союзников и увеличивает их живучесть. Это позволяет им выполнять физические действия, далеко выходящие за рамки обычных способностей. Все союзники в зоне действия получают +4 к Силе, Ловкости и Телосложению на время действия заклинания.~
-@1068    = ~Shield~
-@1069    = ~Shield
-(Abjuration)
-Level: Sor/Wiz 1
-Range: Caster
-Duration: 10 rounds/level
-Casting Time: 1 
-Area of Effect: Caster
-Saving Throw: None
+@1068    = ~Щит~
+@1069    = ~Щит
+(Отречение)
+Уровень: колдун/волшебник 1
+Дальность: колдующий
+Длительность: 10 раундов/уровень
+Время чтения: 1
+Зона действия: колдующий
+Спасбросок: нет
 
-Shield creates an invisible, mobile disk of force that hovers in front of the caster. It negates Magic Missile attacks directed at the caster. The disk also intercepts attacks, providing a +4 shield bonus.~
-@1070    = ~Mage Armor~
-@1071    = ~Mage Armor
-(Conjuration) 
-Level: Brd 1, Sor/Wiz 1
-Range: Touch
-Duration: 1 hour/level
-Casting Time: 3
-Area of Effect: 1 creature
-Saving Throw: None
+Щит создаёт невидимый перемещающийся силовой полукруг, который прикрывает колдующего спереди. Он защищает от направленных на своего владельца "Магических снарядов". Круг также отклоняет атаки, добавляя +4 к классу защиты (щит).~
+@1070    = ~Доспехи мага~
+@1071    = ~Доспехи мага
+(Призывание)
+Уровень: бард 1, колдун/волшебник 1
+Дальность: прикосновение
+Длительность: 1 час / уровень
+Время чтения: 3
+Зона действия: одно существо
+Спасбросок: нет
 
-By means of this spell, the wizard creates a magical field of force that serves as if it were scale mail armor (Armor Bonus: +4). It is cumulative with Dexterity and with a shield bonus. The armor spell does not hinder movement and adds no weight or encumbrance, nor does it prevent spellcasting. It lasts until successfully dispelled or until the duration runs out.~
-@1072    = ~Sleep~
-@1073    = ~Sleep
-(Enchantment) 
-Level: Brd 1, Rgr 2, Sor/Wiz 1, Mask 1
-Range: Sight of Caster
-Duration: 4 rounds 
-Casting Time: 1 
-Area of Effect: 15-foot radius
-Saving Throw: Will
+Этим заклинанием маг создаёт волшебное силовое поле, которое защищает его, как чешуйчатый доспех (класс защиты (доспех): +4). Эффект складывается с бонусами к классу защиты от ловкости и от щита. Волшебный доспех не ограничивает движения, не добавляет веса и не мешает читать заклинания. Он сохраняется, пока заклинание не будет развеяно или не истечёт срок его действия.~
+@1072    = ~Сон~
+@1073    = ~Сон
+(Чародейство)
+Уровень: бард 1, следопыт 2, колдун/волшебник 1, жрец Маска 1
+Дальность: обзор колдующего
+Длительность: 4 раунда
+Время чтения: 1
+Зона действия: радиус 15 футов
+Спасбросок: воли, отменяет
 
-A Sleep spell causes a comatose slumber to come upon all creatures in the area of effect that fail a Will save. Sleeping creatures are helpless, but will awaken upon taking damage.~
-@1074    = ~Chill Touch~
-@1075    = ~Chill Touch
-(Necromancy)
-Level: Sor/Wiz 1
-Range: Touch
-Duration: Special
-Casting Time: 1
-Area of Effect: 1 creature
-Saving Throw: Special
+Заклинание погружает всех существ в зоне действия, проваливших спасбросок воли, в коматозный сон. Спящие существа беспомощны, однако после получения урона они просыпаются.~
+@1074    = ~Леденящее прикосновение~
+@1075    = ~Леденящее прикосновение
+(Некромантия)
+Уровень: колдун/волшебник 1
+Дальность: прикосновение
+Длительность: особая
+Время чтения: 1
+Зона действия: одно существо
+Спасбросок: особый
 
-When the caster completes this spell, a blue glow encompasses his hand. This energy attacks the life force of any creature the wizard touches (no attack roll is required). The touched creature suffers 1d6 cold damage per level (max 5d6) and receives a -3 attack penalty for 10 rounds after being struck. If the creature is undead creature, it is affected by panic (Will negates) for 10 rounds. Undead suffer no damage or attack bonus penalty from Chill Touch. This spell does not provoke an attack of opportunity.~
-@1076    = ~Chromatic Orb~
-@1077    = ~Chromatic Orb
-(Evocation) 
-Level: Brd 1, Sor/Wiz 1
-Range: Sight of Caster
-Duration: Special
-Casting Time: 1 
-Area of Effect: 1 creature
-Saving Throw: Reflex negates
+При прочтении заклинания руку колдующего охватывает голубое пламя. Эта энергия атакует жизненную силу любого существа, которого коснулся заклинатель (броска на атаку не требуется). Существо, которого коснулись, получает 1d6 урона холодом за уровень заклинателя (до максимума в 5d6) и -3 к атакам в течении 10 раундов. Если данное существо - нежить, оно будет охвачена паникой (спасбросок воли отменяет эффект) на 10 раундов. Нежить не получает повреждений или штрафа к атаке от леденящего прикосновения. Это заклинание не провоцирует атаку при возможности.~
+@1076    = ~Цветная сфера~
+@1077    = ~Цветная сфера
+(Проявление)
+Уровень: бард 1, колдун/волшебник 1
+Дальность: обзор колдующего
+Длительность: особая
+Время чтения: 1
+Зона действия: 1 существо
+Спасбросок: реакции, отменяет
 
-This spell creates a multicolored sphere that can be hurled unerringly to its target. The orb's effects depend on the level of the wizard and can be negated by a successful Reflex save:
+Это заклинание создаёт цветную сферу, которую можно безошибочно направить на цель. Получаемый эффект можно избежать успешным спасброском реакции, и он зависит от уровня колдующего: 
 
-Level 1:  1d3 fire damage, blindness for one round
+Уровень 1: 1d3 урона огнём; цель ослепляется на один раунд
 
-Level 3:  1d3 fire and electricity damage, blindness for one round
+Уровень 3: 1d3 урона огнём и электричеством; цель ослепляется на один раунд
 
-Level 5:  1d3 fire, cold, and electricity damage; blindness for two rounds, stun for one round
+Уровень 5: 1d3 урона огнём, электричеством и холодом; цель ослепляется на два раунда и оглушается на один раунд
 
-Level 7:  1d3 fire, cold, acid, and electricity damage; blindness for three rounds, stun for one round
+Уровень 7: 1d3 урона огнём, электричеством, холодом и кислотой; цель ослепляется на три раунда и оглушается на один раунд
 
-Level 9:  1d3 fire, cold, acid, magic, and electricity damage; blindness for four rounds, stun for one round
+Уровень 9: 1d3 урона огнём, электричеством, холодом, кислотой и магией; цель ослепляется на четыре раунда и оглушается на один раунд
 
-Level 11:  1d3 fire, cold, acid, magic, and electricity damage; blindness for five rounds, stun for one round~
-@1078    = ~Bull's Strength~
-@1079    = ~Bull's Strength 
-(Transmutation)
-Level: Brd 2, Clr 2, Pal 2, Sor/Wiz 2, Lathander 2
-Range: Touch
-Duration: 1 hour / level
-Casting Time: 1 round
-Area of Effect: 1 creature
-Saving Throw: None 
+Уровень 11: 1d3 урона огнём, электричеством, холодом, кислотой и магией; цель ослепляется на пять раундов и оглушается на один раунд~
+@1078    = ~Сила быка~
+@1079    = ~Сила быка
+(Преобразование)
+Уровень: бард 2, священник 2, паладин 2, колдун/волшебник 2, жрец Латандера 2
+Дальность: прикосновение
+Длительность: 1 час/уровень
+Время чтения: 1 раунд
+Зона действия: 1 существо
+Спасбросок: нет
 
-This spell grants the target creature a +4 strength bonus for the duration of the spell.~
-@1080    = ~Aganazzar's Scorcher~
-@1081    = ~Aganazzar's Scorcher 
-(Evocation) 
-Level: Sor/Wiz 2, Lathander 3
-Range: Sight of Caster
-Duration: 1 round
-Casting Time: 2
-Area of Effect: 2-foot by 60-foot jet. 
-Saving Throw: Reflex Half
+Это заклинание увеличивает силу выбранного существа на 4 на время действия заклинания.~
+@1080    = ~Выстрел Аганназара~
+@1081    = ~Выстрел Аганназара
+(Проявление)
+Уровень: колдун/волшебник 2, жрец Латандера 3
+Дальность: обзор колдующего
+Длительность: 1 раунд
+Время чтения: 2
+Зона действия: струя шириной 2 и длиной 60 футов
+Спасбросок: реакции, половина урона
 
-Upon completion of this spell, a jet of flame shoots from the caster's fingertips toward the target creature. The stream of fire is continuous and deals 3d6 fire damage to the target twice over the course of a round with no saving throw for a total of 6d6 fire damage. In addition, anyone that is caught in the flame's path takes 2d8 fire damage with a Reflex save for half damage.~
-@1082    = ~Decastave~
-@1083    = ~Decastave 
-(Evocation)
-Level: Sor/Wiz 2
-Range: Caster
-Duration: 10 rounds
-Casting Time: 10
-Area of Effect: Caster
-Saving Throw: None
+После прочтения заклинания из кончиков пальцев колдующего вырывается поток пламени в направлении одной цели. Непрерывный огненный поток наносит цели огненный урон 3d6 дважды за раунд без спасбросков, в итоге нанося урон огнём 6d6. Кроме того, любой, кто попадёт в огненный поток, получает 2d8 повреждений огнём, но успешный спасбросок реакции снижает его наполовину.~
+@1082    = ~Мегапосох~
+@1083    = ~Мегапосох
+(Проявление)
+Уровень: колдун/волшебник 2
+Дальность: колдующий 
+Длительность: 10 раундов
+Время чтения: 10
+Зона действия: колдующий
+Спасбросок: нет
 
-This spell creates a staff of force in the caster's hand which can be wielded as a weapon, using the Simple Weapon: Quarterstaff proficiency. The Decastave deals 1d10 bludgeoning damage per hit, and strikes as a +1 weapon, though it has no attack bonus. The staff also drains an additional 1d10 hit points per strike and heals the wielder that many Hit Points.~
-@1084    = ~Lightning Bolt~
-@1085    = ~Lightning Bolt
-(Evocation)
-Level: Sor/Wiz 3, Talos 3
-Range: Line of Sight
-Duration: Instantaneous
-Casting Time: 3 
-Area of Effect: Special
-Saving Throw: Reflex half
+В руке заклинателя появляется силовое поле, принимающее форму посоха. Он расценивается как оружие и получает обычные штрафы и бонусы, используя черту "Простое оружие, Посохи". Посох наносит 1d10 единиц дробящего урона при каждом ударе и считается оружием +1, хотя и не имеет бонусов к атаке. При каждом попадании по цели посох также отнимает у противника 1d10 пунктов здоровья и вылечивает заклинателя на это же количество пунктов здоровья.~
+@1084    = ~Разряд молнии~
+@1085    = ~Разряд молнии 
+(Проявление)
+Уровень: колдун/волшебник 3, жрец Талоса 3
+Дальность: поле зрения
+Длительность: мгновенно
+Время чтения: 3
+Зона действия: особая
+Спасбросок: реакции, половина урона
 
-Upon casting this spell, the wizard releases a powerful stroke of electrical energy that inflicts 1d8 points of damage per level of the spellcaster to each creature within its area of effect (maximum damage of 10d8). A successful Reflex save with +4 DC reduces this damage to half. When the lightning bolt intersects with a wall it will fizzle out.~
-@1086    = ~Vampiric Touch~
-@1087    = ~Vampiric Touch 
-(Necromancy) 
-Level: Sor/Wiz 3
-Range: Touch
-Duration: Special
-Casting Time: 1
-Area of Effect: 1 creature
-Saving Throw: None
+После прочтения заклинания волшебник высвобождает могучий разряд электрической энергии, который наносит 1d8 единиц урона на уровень колдующего каждому существу в зоне его действия (вплоть до 10d8). Успешный спасбросок реакции с +4 к УС снижает урон в два раза. При попадании в стену молния исчезает.~
+@1086    = ~Прикосновение вампира~
+@1087    = ~Прикосновение вампира
+(Некромантия)
+Уровень: колдун/волшебник 3
+Дальность: прикосновение
+Длительность: особая
+Время чтения: 1
+Зона действия: одно существо
+Спасбросок: нет
 
-This spell imbues the caster's hands with the ability to drain life, taking 1d6 hit points per level from a living victim and granting it to the caster (maximum 10d6), with any hit points over the caster's normal maximum total treated as temporary bonus hit points. The temporary hit points disappear after 1 hour. This spell does not provoke an attack of opportunity.~
-@1088    = ~Icelance~
-@1089    = ~Icelance 
-(Evocation)
-Level: Drd 3, Sor/Wiz 3
-Range: Sight of Caster
-Duration: Instantaneous 
-Casting Time: 3
-Area of Effect: 1 creature
-Saving Throw: Fortitude partial
+Это заклинание позволяет колдующему вытягивать жизнь, отнимая у жертвы 1d6 пунктов здоровья на уровень колдующего (вплоть до 10d6). Эти пункты добавляются к здоровью колдующего, а любые пункты здоровья сверх обычного максимума считаются временными. Временные пункты здоровья исчезают спустя 1 час после применения заклинания. Это заклинание не провоцирует атаку при возможности.~
+@1088    = ~Ледяное копьё~
+@1089    = ~Ледяное копьё
+(Проявление)
+Уровень: друид 3, колдун/волшебник 3
+Дальность: обзор колдующего
+Длительность: мгновенно
+Время чтения: 3
+Зона действия: 1 существо
+Спасбросок: стойкости, особый
 
-This spell fires a magical lance of ice at a target of the caster's choosing. It automatically hits, inflicting 5d6 points of cold damage and forcing the target to make a Fortitude save or be stunned for 3 rounds.~
-@1090    = ~Lance of Disruption~
-@1091    = ~Lance of Disruption
-(Evocation)
-Level: Sor/Wiz 3
-Range: 60 feet
-Duration: Instantaneous
-Casting Time: 3
-Area of Effect: Special
-Saving Throw: Reflex half
+Заклинание мечет волшебное копьё в выбранную цель. Брошенное копьё всегда поражает жертву и наносит 5d6 единиц урона холодом. Жертва делает спасбросок стойкости, при его провале оглушается на 3 раунда.~
+@1090    = ~Копьё разрушения~
+@1091    = ~Копьё разрушения
+(Проявление)
+Уровень: колдун/волшебник 3
+Дальность: 60 футов
+Длительность: мгновенно
+Время чтения: 3
+Зона действия: особая
+Спасбросок: реакции, половина урона
 
-This spell creates a lance of force, extending from the caster to a specified point 60 feet in the distance. Any creatures in the lance's path take 5d4 points of nonmagical crushing damage, +2 points of damage per level of the caster (maximum of +50). Victims can Reflex save for half damage.~
-@1092    = ~Ice Storm~
-@1093    = ~Ice Storm
-(Evocation) 
-Level: Drd 4, Sor/Wiz 4
-Range: Sight of Caster
-Duration: Instantaneous
-Casting Time: 4 
-Area of Effect: 20-foot radius
-Saving Throw: None 
+Это заклинание создаёт силовую пику, которая тянется от колдующего на 60 футов. Любые существа на пути пики получают 5d4 единиц немагического дробящего урона, +2 единицы урона на уровень колдующего (вплоть до +50). Жертвы могут прокинуть спасбросок реакции, чтобы снизить урон вполовину.~
+@1092    = ~Ледяной шторм~
+@1093    = ~Ледяной шторм
+(Проявление)
+Уровень: друид 4, колдун/волшебник 4
+Дальность: обзор колдующего
+Длительность: мгновенно
+Время чтения: 4
+Зона действия: радиус 20 футов
+Спасбросок: нет
 
-When this spell is cast, shards of ice smash down on all targets in the area of effect, doing 4d6 points of crushing damage and 4d6 points of cold damage.~
-@1094    = ~Improved Invisibility~
-@1095    = ~Improved Invisibility 
-(Illusion)
-Level: Brd 5, Rgr 4, Sor/Wiz 4, Mask 4
-Range: Touch 
-Duration: 1 round / level
-Casting Time: 4 
-Area of Effect: 1 creature
-Saving Throw: None
+В зоне действия заклинания падают осколки льда, которые наносят 4d6 урона холодом и 4d6 дробящего урона всем целям в области действия заклинания.~
+@1094    = ~Улучшенная невидимость~
+@1095    = ~Улучшенная невидимость
+(Иллюзия)
+Уровень: бард 5, следопыт 4, колдун/волшебник 4, жрец Маска 4
+Дальность: прикосновение
+Длительность: 1 раунд/уровень
+Время чтения: 4
+Зона действия: 1 существо
+Спасбросок: нет
 
-This spell is similar to the Invisibility spell, but the recipient is able to attack, either with missile, melee weapons or spells, and remain unseen. However, telltale traces, a shimmering, allow an observant opponent to attack the invisible spell recipient. These traces are only noticeable when specifically looked for (after the invisible character has made his presence known).~
-@1096    = ~Spirit Armor~
-@1097    = ~Spirit Armor 
-(Necromancy)
-Level: Brd 4, Sor/Wiz 4
-Range: Touch
-Duration: 5 rounds + 1 round/level
-Casting Time: 4
-Area of Effect: 1 creature
-Saving Throw: None
+Заклинание похоже на заклинание "Невидимость", но в данном случае получатель способен атаковать оружием как дальнего, так и ближнего боя, а так же читать заклинания, оставаясь при этом невидимым. Однако наблюдательный противник может заметить слабое мерцание и атаковать невидимку. Это мерцание заметно, только если специально присматриваться (то есть, после того, как невидимый персонаж выдаст своё присутствие).~
+@1096    = ~Духовные доспехи~
+@1097    = ~Духовные доспехи
+(Некромантия)
+Уровень: бард 4, колдун/волшебник 4
+Дальность: прикосновение
+Длительность: 5 раундов + 1 раунд/уровень
+Время чтения: 4
+Зона действия: 1 существо
+Спасбросок: нет
 
-This spell creates a corporeal barrier around the target's body by tapping into the target's life force. The armor itself is weightless, and does not hinder movement or spell casting. Spirit Armor grants an armor bonus of +8, and a +3 bonus to Fortitude saves. When the spell expires, the external portion of the spirit is temporarily lost and 3d6 points of damage is incurred.~
-@1098    = ~Emotion: Rage~
-@1099    = ~Emotion: Rage
-(Enchantment)
-Level: Brd 2, Sor/Wiz 3, Selune 4
-Range: Sight of Caster
-Duration: 10 rounds
-Casting Time: 4
-Area of Effect: 10-foot radius
-Saving Throw: None
+Это заклинание окружает цель материальным барьером, используя её жизненную силу. Сам доспех невесом и не мешает двигаться и колдовать. Во время действия заклинания класс защиты цели (доспех) увеличивается на +8, и цель также получает +3 к спасброскам стойкости. Опасность заклинания состоит в том, что по истечении срока действия цель на время лишается части своей жизненной силы, получая 3d6 пунктов урона.~
+@1098    = ~Эмоция: Ярость~
+@1099    = ~Эмоция: Ярость
+(Чародейство)
+Уровень: бард 2, колдун/волшебник 3, жрец Селуны 4
+Дальность: обзор колдующего
+Длительность: 10 раундов
+Время чтения: 4
+Зона действия: радиус 10 футов
+Спасбросок: нет
 
-This spell creates the emotion of rage within the area of effect. All creatures affected by the spell gain +2 Strength, +2 Constitution, +1 to Will Saves, and a -1 penalty to AC. These bonuses and penalties do not stack with barbarian rage, but they do stack with other bonuses to Strength and Constitution. Emotion: Rage cannot be active on a creature at the same time as Emotion: Hope.~
+Это заклинание заставляет впадать в ярость. Все существа, затронутые действием заклинания, получают +2 к силе и телосложению, +1 к спасброскам воли и -1 к классу защиты. Эти модификации не суммируются с модификациями от ярости варвара, но суммируются с любыми другими модификациями силы и телосложения. Это заклинание не может быть наложено на существ с действующим эффектом от заклинания "Эмоция: Надежда".~
+@1100    = ~Эмоция: Страх~
+@1101    = ~Эмоция: Страх
+(Чародейство)
+Уровень: бард 3, колдун/волшебник 4
+Дальность: обзор колдующего
+Длительность: 10 раундов
+Время чтения: 4
+Зона действия: живые существа в радиусе 15 футов
+Спасбросок: воли, отменяет
 
+Это заклинание заставляет испытывать страх. Все существа, подвергшиеся его воздействию, убегают в течение 10 раундов.~
+@1102    = ~Эмоция: Надежда~
+@1103    = ~Эмоция: Надежда
+(Чародейство)
+Уровень: бард 3, колдун/волшебник 4, жрец Ильматера 4, жрец Селуны 4
+Дальность: обзор колдующего
+Длительность: 10 раундов
+Время чтения: 4
+Зона действия: живые существа в радиусе 15 футов
+Спасбросок: нет
 
-@1100    = ~Emotion: Fear~
-@1101    = ~Emotion: Fear 
-(Enchantment)
-Level: Brd 3, Sor/Wiz 4
-Range: Sight of Caster
-Duration: 10 rounds
-Casting Time: 4
-Area of Effect: Living creatures in 15' radius
-Saving Throw: Will negates
+Это заклинание вселяет в сердца надежду. Все существа, подвергшиеся воздействию заклинания, повышают свой боевой дух и получают +2 ко всем спасброскам, броскам атаки и урона. Это заклинание не может быть наложено на существ с действующим эффектом от заклинания "Эмоция: Ярость".~
+@1104    = ~Крик~
+@1105    = ~Крик
+(Проявление)
+Уровень: бард 3, колдун/волшебник 4, жрец Огмы 4
+Дальность: малая (30 футов длины, 10 футов ширины)
+Длительность: мгновенно
+Время чтения: 1
+Зона действия: конус
+Спасбросок: стойкости, особый
 
-This spell creates the emotion of fear within the area of effect. All creatures affected by the spell flee for 10 rounds.~
-@1102    = ~Emotion: Hope~
-@1103    = ~Emotion: Hope 
-(Enchantment)
-Level: Brd 3, Sor/Wiz 4, Ilmater 4, Selune 4
-Range: Sight of Caster
-Duration: 10 rounds
-Casting Time: 4
-Area of Effect: Living creatures in 15' radius
-Saving Throw: None
-
-This spell creates the emotion of hope within the area of effect. All creatures affected by the spell gain a +2 on their saving throws, skill checks, attack bonuses, and damage rolls. Emotion: Hope cannot be active on a creature at the same time as Emotion: Rage.~
-@1104    = ~Shout~
-@1105    = ~Shout
-(Evocation)
-Level: Brd 3, Sor/Wiz 4, Oghma 4
-Range: Close (30 ft. long, 10 ft. diameter)
-Duration: Instantaneous 
-Casting Time: 1 
-Area: Cone
-Saving Throw: Fortitude partial
-
-The caster emits an ear-splitting yell that deafens and damages creatures in its path. Any creature within the area of effect is deafened for 5 rounds, stunned for 2 rounds, and takes 5d6 points of damage. A successful save negates the deafness and stun and reduces the damage by half. A deafened creature has a 50% chance of resisting this spell.~
+Голос заклинателя становится невероятно мощным, и он может издаёт пронзительный вопль, который оглушает и повреждает существ на своём пути. Любое существо в зоне действия эффекта глохнет на 5 раундов, ошеломляется на 2 раунда и получает 5d6 очков урона. Успешный спасбросок стойкости спасает от оглушения и ошеломления и уменьшает полученный урон в два раза. Глухие существа имеют 50% шанс избежать действия этого заклинания.~
 @1106    = ~Domination~
 @1107    = ~Domination
 (Enchantment) 
