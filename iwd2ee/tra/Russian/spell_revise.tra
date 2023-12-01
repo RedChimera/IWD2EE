@@ -706,39 +706,39 @@
 Спасбросок: нет
 
 С помощью этого заклинания колдующий создаёт пять шарообразных сгустков электричества, которые можно бросать во врагов. В когда шар попадает в цель, он взрывается, нанося 2d6 урона электричеством, и другие шаровые молнии синхронно поражают всех врагов на расстоянии до 8 футов от первоначальной цели, нанося такой же урон. Шаровая молния автоматически попадает в цель и получает все бонусы урона, которые получил бы дротик (для определения бонусов урона, используется черта "Простое оружие, Метательное").~
-@1120    = ~Flesh to Stone~
-@1121    = ~Flesh to Stone 
-(Transmutation)
-Level: Sor/Wiz 6
-Range: Sight of Caster
-Duration: Permanent
-Casting Time: 6
-Area of Effect: 1 creature
-Saving Throw: Fortitude negates
+@1120    = ~Плоть в камень~
+@1121    = ~Плоть в камень
+(Преобразование)
+Уровень: колдун/волшебник 6
+Дальность: обзор колдующего
+Длительность: постоянно
+Время чтения: 6
+Зона действия: 1 существо
+Спасбросок: стойкости, отменяет
 
-This spell turns a living creature to stone on a failed Fortitude save. The effects of this spell may be reversed with the 6th level wizard spell, Stone to Flesh. This spell has no effect on undead or creatures who have been blinded.~
-@1122    = ~Power Word: Silence~
-@1123    = ~Power Word: Silence 
-(Divination)
-Level: Brd 5, Sor/Wiz 6, Oghma 5, Bane 6
-Range: Sight of Caster
-Duration: 4 rounds
-Casting Time: 0
-Area of Effect: 1 Creature
-Saving Throw: None
+Заклинание превращает существо в камень. Успешный спасбросок стойкости позволяет избежать окаменения. Жертву можно вернуть к нормальному состоянию заклинанием 6-го уровня "Камень в плоть". Это заклинание не действует на нежить или существ, которые были ослеплены.~
+@1122    = ~Слово силы: Тишина~
+@1123    = ~Слово силы: Тишина
+(Прорицание)
+Уровень: бард 5, колдун/волшебник 6, жрец Огмы 5, жрец Бейна 6
+Дальность: обзор колдующего
+Длительность: 2 раунда
+Время чтения: 1
+Зона действия: 1 существо
+Спасбросок: нет
 
-This spell allows the caster to utter one of the words of power. When spoken, Power Word: Silence can be invoked against any creature in range, preventing them from making a sound. No saving throw is allowed. This spell has no effect on deaf creatures.~
-@1124    = ~Power Word: Stun~
-@1125    = ~Power Word: Stun 
-(Divination)
-Level: Brd 6, Sor/Wiz 7, Oghma 6, Tempus 8
-Range: Sight of Caster
-Duration: Special
-Casting Time: 0
-Area of Effect: 1 creature
-Saving Throw: Special
+Заклинание позволяет магу произнести одно из слов силы. "Слово силы: Тишина" можно направить на любое существо в области охвата, не давая ему издавать какие бы то ни было звуки. Спасброска от этого заклинания нет. Это заклинание не действует на глухих существ.~
+@1124    = ~Слово силы: Оглушить~
+@1125    = ~Слово силы: Оглушить
+(Прорицание)
+Уровень: бард 6, колдун/волшебник 7, жрец Огмы 6, жрец Темпуса 8
+Дальность: обзор колдующего
+Длительность: особая
+Время чтения: 0
+Зона действия: 1 существо
+Спасбросок: особый
 
-Power Word: Stun is another of the words of power. Creatures with less than 50 hit points are stunned for 4-16 rounds, those with 51 to 100 hit points are stunned for 2-8 rounds, those with 101 to 150 hit points are stunned for 1-4 rounds, and those with more than 151 hit points must make a Will save with +2 DC or be stunned for one round. The spell checks the creature's current hit points, not their maximum, so even the toughest creatures can be affected by this spell if they are wounded. This spell has no effect on deaf creatures.~
+"Слово силы: Оглушить" относится к тому же виду заклинаний, что и "Слово силы: Тишина" и "Слово силы: Убить". Произнеся его, заклинатель указывает цель и оглушает её. Существа, здоровье которых менее 50 единиц, оглушаются на 4-16 раундов, от 51 до 100 - на 2-8 раундов, от 101 до 150 - на 1-4 раунда, а существа со здоровьем больше 151 единиц должны прокинуть спасбросок воли или с УС +2 или быть оглушёнными на 1 раунд. При этом "Слово силы: Оглушить" учитывает не максимальное, а текущее здоровье, поэтому оглушить можно даже сильного противника, если он ранен. Это заклинание не действует на глухих существ.~
 @1126    = ~Iron Body~
 @1127    = ~Iron Body 
 (Transmutation)
