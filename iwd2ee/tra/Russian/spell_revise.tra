@@ -424,7 +424,7 @@
 Дальность: прикосновение
 Длительность: 1 час / уровень
 Время чтения: 3
-Зона действия: одно существо
+Зона действия: 1 существо
 Спасбросок: нет
 
 Этим заклинанием маг создаёт волшебное силовое поле, которое защищает его, как чешуйчатый доспех (класс защиты (доспех): +4). Эффект складывается с бонусами к классу защиты от ловкости и от щита. Волшебный доспех не ограничивает движения, не добавляет веса и не мешает читать заклинания. Он сохраняется, пока заклинание не будет развеяно или не истечёт срок его действия.~
@@ -446,7 +446,7 @@
 Дальность: прикосновение
 Длительность: особая
 Время чтения: 1
-Зона действия: одно существо
+Зона действия: 1 существо
 Спасбросок: особый
 
 При прочтении заклинания руку колдующего охватывает голубое пламя. Эта энергия атакует жизненную силу любого существа, которого коснулся заклинатель (броска на атаку не требуется). Существо, которого коснулись, получает 1d6 урона холодом за уровень заклинателя (до максимума в 5d6) и -3 к атакам в течении 10 раундов. Если данное существо - нежить, оно будет охвачена паникой (спасбросок воли отменяет эффект) на 10 раундов. Нежить не получает повреждений или штрафа к атаке от леденящего прикосновения. Это заклинание не провоцирует атаку при возможности.~
@@ -524,7 +524,7 @@
 Дальность: прикосновение
 Длительность: особая
 Время чтения: 1
-Зона действия: одно существо
+Зона действия: 1 существо
 Спасбросок: нет
 
 Это заклинание позволяет колдующему вытягивать жизнь, отнимая у жертвы 1d6 пунктов здоровья на уровень колдующего (вплоть до 10d6). Эти пункты добавляются к здоровью колдующего, а любые пункты здоровья сверх обычного максимума считаются временными. Временные пункты здоровья исчезают спустя 1 час после применения заклинания. Это заклинание не провоцирует атаку при возможности.~
@@ -627,85 +627,85 @@
 Спасбросок: стойкости, особый
 
 Голос заклинателя становится невероятно мощным, и он может издаёт пронзительный вопль, который оглушает и повреждает существ на своём пути. Любое существо в зоне действия эффекта глохнет на 5 раундов, ошеломляется на 2 раунда и получает 5d6 очков урона. Успешный спасбросок стойкости спасает от оглушения и ошеломления и уменьшает полученный урон в два раза. Глухие существа имеют 50% шанс избежать действия этого заклинания.~
-@1106    = ~Domination~
-@1107    = ~Domination
-(Enchantment) 
-Level: Brd 5, Sor/Wiz 6, Bane 5
-Range: Sight of Caster
-Duration: 3 rounds / level
-Casting Time: 5 
-Area of Effect: 1 creature
-Saving Throw: Will negates 
+@1106    = ~Подчинение~
+@1107    = ~Подчинение
+(Чародейство)
+Уровень: бард 5, колдун/волшебник 6, жрец Бейна 5
+Дальность: обзор колдующего
+Длительность: 3 раунда/уровень
+Время чтения: 5
+Зона действия: 1 существо
+Спасбросок: воли, отменяет
 
-The domination spell enables the caster to control the actions of any creature while the spell is in effect. This control is maintained through a telepathic link between the caster and the victim. The target gets a Will save with +2 DC in order to avoid the effect.~
-@1108    = ~Hold Monster~
-@1109    = ~Hold Monster
-(Enchantment)
-Level: Brd 4, Clr 4, Sor/Wiz 5
-Range: Sight of Caster
-Duration: 1 round / 2 levels
-Casting Time: 5 
-Area of Effect: 15' radius
-Saving Throw: Will negates
+Заклинатель получает возможность управлять действиями цели в течение всего времени действия заклинания. Это управление происходит посредством телепатической связи между заклинателем и жертвой. Успешный спасбросок воли с УС +2 позволяет избежать воздействия заклинания.~
+@1108    = ~Удержание монстра~
+@1109    = ~Удержание монстра
+(Чародейство)
+Уровень: бард 4, священник 4, колдун/волшебник 5
+Дальность: обзор колдующего
+Длительность: 1 раунд/ 2 уровня
+Время чтения: 5
+Зона действия: радиус 15 футов
+Спасбросок: воли, отменяет
 
-This spell freezes all creatures within the area of effect in place, unable to take any action or defend themselves in any way. Undead creatures are unaffected by this spell.~
-@1110    = ~Chaos~
-@1111    = ~Chaos 
-(Enchantment) 
-Level: Sor/Wiz 6, Brd 6
-Range: Sight of Caster
-Duration: 10 rounds
-Casting Time: 5 
-Area of Effect: 20-foot radius
-Saving Throw: Will negates
+После наложения этого заклинания цель теряет способность двигаться, выполнят какие-либо действия или защищаться. На нежить это заклинание не действует.~
+@1110    = ~Хаос~
+@1111    = ~Хаос
+(Чародейство)
+Уровень: колдун/волшебник 6, бард 6
+Дальность: обзор колдующего
+Длительность: 10 раундов
+Время чтения: 5
+Зона действия: радиус 20 футов
+Спасбросок: воли, отменяет
 
-The effects of this spell are identical to the 4th level spell Confusion in all respects. The victims wander around as if in a daze, sometimes wandering away or sometimes attacking either friend or foe. Victims above level 4 are entitled to a Will save with +2 DC to resist the effect. The spell lasts for the duration or until a successful dispel magic is cast.~
-@1112    = ~Shroud of Flame~
-@1113    = ~Shroud of Flame 
-(Evocation)
-Level: Sor/Wiz 5
-Range: Sight of Caster 
-Duration: 10 rounds
-Casting Time: 5
-Area of Effect: 1 creature
-Saving Throw: None
+Заклинание оказывает такое же действие, что и "Замешательство" 4-го уровня. Жертвы бессмысленно бродят вокруг, иногда покидая поле боя, иногда атакуя кого попало. Цели 4-го уровня и ниже выполняют спасбросок с УС +2, чтобы избежать эффекта заклинания. Эффект сохраняется до конца срока действия заклинания, если оно не будет успешно развеяно раньше.~
+@1112    = ~Саван пламени~
+@1113    = ~Саван пламени
+(Проявление)
+Уровень: колдун/волшебник 5
+Дальность: обзор колдующего
+Длительность: 10 раундов
+Время чтения: 5
+Зона действия: 1 существо
+Спасбросок: нет
 
-This spell causes a creature to burst into flames. The creature will burn for 3d6 points of damage every round, and gouts of flame erupt from the burning target, causing any creatures within ten feet of the target to take 1d6 points of damage from the flames.~
-@1114    = ~Lower Resistance~
-@1115    = ~Lower Resistance
-(Transmutation) 
-Level: Pal 5, Sor/Wiz 5
-Range: Sight of Caster 
-Duration: 2 rounds / level
-Casting Time: 5
-Area of Effect: 1 creature
-Saving Throw: None
+Это заклинание заставляет существо вспыхнуть и загореться. Существо будет пылать, получая каждый раунд 3d6 единиц урона. Языки пламени, исходящие от горящей жертвы, будут наносить всем существам на расстоянии до 10 футов от жертвы 1d6 пунктов урона.~
+@1114    = ~Снижение сопротивления~
+@1115    = ~Снижение сопротивления
+(Преобразование)
+Уровень: паладин 5, колдун/волшебник 5
+Дальность: обзор колдующего 
+Длительность: 2 раунда/уровень
+Время чтения: 5
+Зона действия: 1 существо
+Спасбросок: нет
 
-Using this spell, a wizard may reduce the spell resistance of a target creature. The victim's spell resistance will be reduced by 1 point for every level of the caster. Spell resistance cannot block this spell, and there is no saving throw.~
-@1116    = ~Phantom Blade~
-@1117    = ~Phantom Blade 
-(Evocation)
-Level: Brd 5, Pal 3, Sor/Wiz 5, Mask 6
-Range: Caster
-Duration: 20 rounds
-Casting Time: 5
-Area of Effect: Special
-Saving Throw: None
+С помощью этого заклинания волшебник может снизить сопротивление магии выбранного существа. Сопротивление магии снижается на 1 за каждый уровень заклинателя. Сопротивление магии не работают против этого заклинания и спасбросков тоже нет.~
+@1116    = ~Призрачный клинок~
+@1117    = ~Призрачный клинок
+(Проявление)
+Уровень: бард 5, паладин 3, колдун/волшебник 5, жрец Маска 6
+Дальность: колдующий
+Длительность: 20 раундов
+Время чтения: 5
+Зона действия: особая
+Спасбросок: нет
 
-This spell creates a translucent, shadowlike, weightless area of magical force extending from the fingers of one of the caster's hands. This silent construct can be wielded as a longsword and may strike targets from a short distance away.
+Заклинание создаёт в одной руке заклинателя полупрозрачное, невесомое и напоминающее тень поле магической энергии. Оно совершенно бесшумно и имеет форму клинка, которым можно рубить так же, как обычным длинным мечом.
 
-The phantom blade deals 1d8+3 damage with a +3 bonus to attack and strikes as a +6 weapon for the purposes of bypassing weapon immunities, and inflicts an additional 1d10 magic damage (or 1d10+10 damage if the target is undead). Due to its etheric nature, it ignores armor and shield bonuses, though it still strikes harder depending on the wielder's Strength. Although the phantom blade appears as a longsword, it uses the small blade proficiency and can be used with Weapon Finesse. This sword can only be used by the caster and remains in her hand for the duration or until dispelled.~
-@1118    = ~Ball Lightning~
-@1119    = ~Ball Lightning 
-(Evocation)
-Level: Drd 5, Rgr 4, Sor/Wiz 5, Talos 5
-Range: Caster 
-Duration: 1 round / level
-Casting Time: 5
-Area of Effect: Caster
-Saving Throw: None
+Призрачный клинок наносит 1d8+3 урона с бонусом атаки +3, действует как магическое оружие +6, а также наносит дополнитель 1d10 урона магией (или 1d10+10, если цель - нежить). За счёт своей эфирной природы клинок игнорирует прибавки к классу защиты за доспех и щит у цели, но при этом получает прибавки за силу владельца. Хотя призрачный клинок выглядит как длинный меч, он использует черту "Простое оружие, Короткие клинки" и может быть использован с чертой "Фехтование". Призрачный клинок может использовать только сам заклинатель; он остаётся у него в руке, пока не истечёт срок действия заклинания или оно не будет развеяно.~
+@1118    = ~Шаровая молния~
+@1119    = ~Шаровая молния
+(Проявление)
+Уровень: друид 5, следопыт 4, колдун/волшебник 5, жрец Талоса 5
+Дальность: колдующий
+Длительность: 1 раунд/уровень
+Время чтения: 5
+Зона действия: колдующий
+Спасбросок: нет
 
-Through this spell, the caster creates five balls of electricity that can be hurled in combat. When a ball lightning is thrown at an enemy, it deals 2d6 electrical damage, and other ball lightnings will similtaneously shoot at every enemy within 8 feet of the target, dealing the same damage. The ball lightnings automatically hit, and they gain any damage bonuses a dart would gain (they use the Simple Weapon: Missile proficiency).~
+С помощью этого заклинания колдующий создаёт пять шарообразных сгустков электричества, которые можно бросать во врагов. В когда шар попадает в цель, он взрывается, нанося 2d6 урона электричеством, и другие шаровые молнии синхронно поражают всех врагов на расстоянии до 8 футов от первоначальной цели, нанося такой же урон. Шаровая молния автоматически попадает в цель и получает все бонусы урона, которые получил бы дротик (для определения бонусов урона, используется черта "Простое оружие, Метательное").~
 @1120    = ~Flesh to Stone~
 @1121    = ~Flesh to Stone 
 (Transmutation)
