@@ -192,6 +192,50 @@
 	IEex_WriteAssembly(0x59FA95, {"!repeat(6,!nop)"})
 	IEex_WriteAssembly(0x59FB0C, {"!repeat(6,!nop)"})
 
+	----------------------------------------------------------------------------------------------
+	-- Allow the sync thread to run while the async thread is processing an area fade effect    --
+	----------------------------------------------------------------------------------------------
+	--   There is a visible stutter in rendering without this patch - for example, when asking  --
+	--   Hedron to watch over you rest. It is safe for the sync thread to run in this situation --
+	--   because the async thread is just spinning.                                             --
+	----------------------------------------------------------------------------------------------
+
+	-- Entering the area fade loop
+	IEex_HookJumpOnFail(0x4FFF1F, 7, {[[
+
+		!push_all_registers_iwd2
+
+		; Allow the sync thread to run concurrently with me (the async thread) ;
+		!push_byte 01
+		!call >IEex_Helper_SetSyncThreadAllowedToRunWithoutSignal
+
+		!pop_all_registers_iwd2
+	]]})
+
+	-- Leaving the area fade loop
+	IEex_HookReturnNOPs(0x4FFF83, 0, {[[
+		;
+		  Reimplement the instructions I clobbered. Normally I would use IEex_HookJumpOnFail() here, but there aren't
+		  enough bytes after the jump that can be clobbered, (only 4, another instruction jumps to the 5th).
+		;
+		!call_esi
+		!dec_edi
+		!jnz_dword :4FFF33
+
+		; Leaving the area fade loop ;
+
+		!push_all_registers_iwd2
+
+		;
+		  Disallow the sync thread from running concurrently with me (the async thread)
+		  and make sure the sync thread is yielding before I resume
+		;
+		!call >IEex_Helper_CommandAndWaitForSyncThreadYield
+
+		!pop_all_registers_iwd2
+		!jmp_dword :4FFF88
+	]]})
+
 
 	IEex_EnableCodeProtection()
 
