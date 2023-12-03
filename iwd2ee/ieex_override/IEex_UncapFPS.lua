@@ -1,4 +1,10 @@
 
+IEex_UncapFPS_Enabled = true
+
+if not IEex_UncapFPS_Enabled then
+	return
+end
+
 ---------------
 -- Scrolling --
 ---------------

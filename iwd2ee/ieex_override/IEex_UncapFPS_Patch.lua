@@ -1,6 +1,10 @@
 
 (function()
 
+	if not IEex_UncapFPS_Enabled then
+		return
+	end
+
 	IEex_DisableCodeProtection()
 
 	-----------------------------------------------------------------------------------
@@ -175,6 +179,18 @@
 		@call_error
 		!pop_all_registers_iwd2
 	]]}))
+
+	--------------------------------------------------------------------------------------------------------------
+	-- Remove unnecessary SleepEx() calls                                                                       --
+	--------------------------------------------------------------------------------------------------------------
+	--   Slightly speeds up loading. Note that these patches are made here, and not in IEex_LoadTimes_Patch.lua --
+	--   because the vanilla game loop deadlocks without these sleep calls.                                     --
+	--------------------------------------------------------------------------------------------------------------
+
+	-- CInfGame_GiveUpAreaListsThenYieldToSyncThread()
+	IEex_WriteAssembly(0x59FB3C, {"!repeat(6,!nop)"})
+	IEex_WriteAssembly(0x59FA95, {"!repeat(6,!nop)"})
+	IEex_WriteAssembly(0x59FB0C, {"!repeat(6,!nop)"})
 
 
 	IEex_EnableCodeProtection()

@@ -59,11 +59,6 @@
 	-- CGameArea_AIUpdate() - Long hang when entering an area
 	IEex_WriteAssembly(0x46F3CE, {"!repeat(12,!nop)"})
 
-	-- CInfGame_GiveUpAreaListsThenYieldToSyncThread()
-	IEex_WriteAssembly(0x59FB3C, {"!repeat(6,!nop)"})
-	IEex_WriteAssembly(0x59FA95, {"!repeat(6,!nop)"})
-	IEex_WriteAssembly(0x59FB0C, {"!repeat(6,!nop)"})
-
 	-- CGameArea_ProgressBarCallback()
 	IEex_WriteAssembly(0x474EF0, {"!add(esp,4) !repeat(3,!nop)"})
 
