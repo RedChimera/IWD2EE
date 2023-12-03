@@ -50,6 +50,26 @@
 	-- CInfGame_ProgressBarCallback()
 	IEex_WriteAssembly(0x5A9761, {"!add(esp,8) !repeat(3,!nop)"})
 
+	-- CInfTileSet_Destruct()
+	IEex_WriteAssembly(0x5CB040, {"!repeat(9,!nop)"})
+
+	-- CAIScript_Read()
+	IEex_WriteAssembly(0x40F7BD, {"!repeat(5,!nop)"})
+
+	-- CGameArea_AIUpdate() - Long hang when entering an area
+	IEex_WriteAssembly(0x46F3CE, {"!repeat(12,!nop)"})
+
+	-- CInfGame_GiveUpAreaListsThenYieldToSyncThread()
+	IEex_WriteAssembly(0x59FB3C, {"!repeat(6,!nop)"})
+	IEex_WriteAssembly(0x59FA95, {"!repeat(6,!nop)"})
+	IEex_WriteAssembly(0x59FB0C, {"!repeat(6,!nop)"})
+
+	-- CGameArea_ProgressBarCallback()
+	IEex_WriteAssembly(0x474EF0, {"!add(esp,4) !repeat(3,!nop)"})
+
+	-- CInfGame_SynchronousUpdate() - Autosave
+	IEex_WriteAssembly(0x5BEC07, {"!repeat(8,!nop)"})
+
 	IEex_EnableCodeProtection()
 
 end)()

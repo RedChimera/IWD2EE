@@ -72,6 +72,7 @@ dofile("override/IEex_Projectile_State.lua")
 dofile("override/IEex_StartupFixes_State.lua")
 dofile("override/IEex_Dev_State.lua")
 dofile("override/IEex_FakeInputRoutine.lua")
+dofile("override/IEex_UncapFPS.lua")
 
 
 
@@ -1495,46 +1496,46 @@ function IEex_GetGameData()
 end
 
 function IEex_GetEngineCharacter()
-    local g_pBaldurChitin = IEex_ReadDword(0x8CF6DC)
-    return IEex_ReadDword(g_pBaldurChitin + 0x1C60)
+	local g_pBaldurChitin = IEex_ReadDword(0x8CF6DC)
+	return IEex_ReadDword(g_pBaldurChitin + 0x1C60)
 end
 
 function IEex_GetEngineCharacterPanelID()
-    local characterScreen = IEex_GetEngineCharacter()
-    local pTail = IEex_ReadDword(characterScreen + 0x632) -- m_lPopupStack.m_pNodeTail
-    local panelID = pTail ~= 0x0 and IEex_ReadDword(IEex_ReadDword(pTail + 0x8) + 0x20) or -1
+	local characterScreen = IEex_GetEngineCharacter()
+	local pTail = IEex_ReadDword(characterScreen + 0x632) -- m_lPopupStack.m_pNodeTail
+	local panelID = pTail ~= 0x0 and IEex_ReadDword(IEex_ReadDword(pTail + 0x8) + 0x20) or -1
 	return panelID
 end
 
 function IEex_EngineCharacterUpdatePopupPanel()
-    local characterScreen = IEex_GetEngineCharacter()
-    local pTail = IEex_ReadDword(characterScreen + 0x632) -- m_lPopupStack.m_pNodeTail
-    local panelID = pTail ~= 0x0 and IEex_ReadDword(IEex_ReadDword(pTail + 0x8) + 0x20) or -1
-    if panelID == -1 then return end
-    local share = IEex_GetActorShare(IEex_ReadDword(characterScreen + 0x136))
-    -- CScreenCharacter_UpdatePopupPanel()
-    IEex_Call(0x5E0B20, {share, panelID}, characterScreen, 0x0)
+	local characterScreen = IEex_GetEngineCharacter()
+	local pTail = IEex_ReadDword(characterScreen + 0x632) -- m_lPopupStack.m_pNodeTail
+	local panelID = pTail ~= 0x0 and IEex_ReadDword(IEex_ReadDword(pTail + 0x8) + 0x20) or -1
+	if panelID == -1 then return end
+	local share = IEex_GetActorShare(IEex_ReadDword(characterScreen + 0x136))
+	-- CScreenCharacter_UpdatePopupPanel()
+	IEex_Call(0x5E0B20, {share, panelID}, characterScreen, 0x0)
 end
 
 function IEex_GetEngineCreateChar()
-    local g_pBaldurChitin = IEex_ReadDword(0x8CF6DC)
-    return IEex_ReadDword(g_pBaldurChitin + 0x1C64)
+	local g_pBaldurChitin = IEex_ReadDword(0x8CF6DC)
+	return IEex_ReadDword(g_pBaldurChitin + 0x1C64)
 end
 
 function IEex_EngineCreateCharUpdatePopupPanel()
-    local createCharScreen = IEex_GetEngineCreateChar()
-    local pTail = IEex_ReadDword(createCharScreen + 0x53E) -- m_lPopupStack.m_pNodeTail
-    local panelID = pTail ~= 0x0 and IEex_ReadDword(IEex_ReadDword(pTail + 0x8) + 0x20) or -1
-    if panelID == -1 then return end
-    local share = IEex_GetActorShare(IEex_ReadDword(createCharScreen + 0x4E2))
-    -- CScreenCreateChar_UpdatePopupPanel()
-    IEex_Call(0x60CEB0, {share, panelID}, createCharScreen, 0x0)
+	local createCharScreen = IEex_GetEngineCreateChar()
+	local pTail = IEex_ReadDword(createCharScreen + 0x53E) -- m_lPopupStack.m_pNodeTail
+	local panelID = pTail ~= 0x0 and IEex_ReadDword(IEex_ReadDword(pTail + 0x8) + 0x20) or -1
+	if panelID == -1 then return end
+	local share = IEex_GetActorShare(IEex_ReadDword(createCharScreen + 0x4E2))
+	-- CScreenCreateChar_UpdatePopupPanel()
+	IEex_Call(0x60CEB0, {share, panelID}, createCharScreen, 0x0)
 end
 
 function IEex_GetEngineCreateCharPanelID()
-    local createCharScreen = IEex_GetEngineCreateChar()
-    local pTail = IEex_ReadDword(createCharScreen + 0x53E) -- m_lPopupStack.m_pNodeTail
-    local panelID = pTail ~= 0x0 and IEex_ReadDword(IEex_ReadDword(pTail + 0x8) + 0x20) or -1
+	local createCharScreen = IEex_GetEngineCreateChar()
+	local pTail = IEex_ReadDword(createCharScreen + 0x53E) -- m_lPopupStack.m_pNodeTail
+	local panelID = pTail ~= 0x0 and IEex_ReadDword(IEex_ReadDword(pTail + 0x8) + 0x20) or -1
 	return panelID
 end
 
@@ -1578,17 +1579,17 @@ function IEex_IsGamePaused()
 end
 
 function IEex_InCutsceneMode()
-    local m_gameSave = IEex_GetGameData() + 0x422C
-    return IEex_ReadDword(m_gameSave + 0x1B6) == 0x142
+	local m_gameSave = IEex_GetGameData() + 0x422C
+	return IEex_ReadDword(m_gameSave + 0x1B6) == 0x142
 end
 
 function IEex_IsDialogWindowOpen()
-    local worldScreen = IEex_GetEngineWorld()
-    return IEex_GetActiveEngine() == worldScreen and IEex_IsPanelActive(IEex_GetPanelFromEngine(worldScreen, 7))
+	local worldScreen = IEex_GetEngineWorld()
+	return IEex_GetActiveEngine() == worldScreen and IEex_IsPanelActive(IEex_GetPanelFromEngine(worldScreen, 7))
 end
 
 function IEex_AddPartyXP(nAmount, bNotQuestXP, bAmountIsChallengeRating)
-    IEex_Call(0x5C0BB0, {bAmountIsChallengeRating and 1 or 0, bNotQuestXP and 1 or 0, nAmount}, IEex_GetGameData(), 0x0)
+	IEex_Call(0x5C0BB0, {bAmountIsChallengeRating and 1 or 0, bNotQuestXP and 1 or 0, nAmount}, IEex_GetGameData(), 0x0)
 end
 
 function IEex_DisplayString(string)
@@ -18782,9 +18783,9 @@ function METRANST(effectData, creatureData)
 end
 
 function IEex_JumpActorToPoint(actorID, pointX, pointY, bSendSpriteUpdateMessage)
-    if not IEex_IsSprite(actorID, true) then return end
-    if bSendSpriteUpdateMessage == nil then bSendSpriteUpdateMessage = true end 
-    IEex_Call(0x745950, {bSendSpriteUpdateMessage and 1 or 0, pointY, pointX}, IEex_GetActorShare(actorID), 0x0)
+	if not IEex_IsSprite(actorID, true) then return end
+	if bSendSpriteUpdateMessage == nil then bSendSpriteUpdateMessage = true end
+	IEex_Call(0x745950, {bSendSpriteUpdateMessage and 1 or 0, pointY, pointX}, IEex_GetActorShare(actorID), 0x0)
 end
 
 function MESETZ(effectData, creatureData)

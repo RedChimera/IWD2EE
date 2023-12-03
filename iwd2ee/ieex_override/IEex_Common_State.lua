@@ -1624,7 +1624,7 @@ function IEex_HookJump(address, restoreSize, assembly)
 	if switchBytes then
 		instructionBytes = switchBytes
 		instructionSize = 2
-		offset = IEex_ReadByte(address + 1, 0)
+		offset = IEex_ReadSignedByte(address + 1, 0)
 	elseif instructionByte == 0xE9 then
 		instructionBytes = {{instructionByte, 1}}
 		instructionSize = 5
@@ -1699,7 +1699,7 @@ function IEex_HookJumpOnFail(address, restoreSize, assembly)
 	if switchBytes then
 		instructionBytes = switchBytes
 		instructionSize = 2
-		offset = IEex_ReadByte(address + 1, 0)
+		offset = IEex_ReadSignedByte(address + 1, 0)
 	elseif instructionByte == 0xE9 then
 		instructionBytes = {{instructionByte, 1}}
 		instructionSize = 5
@@ -1776,7 +1776,7 @@ function IEex_HookJumpOnSuccess(address, restoreSize, assembly)
 	if switchBytes then
 		instructionBytes = switchBytes
 		instructionSize = 2
-		offset = IEex_ReadByte(address + 1, 0)
+		offset = IEex_ReadSignedByte(address + 1, 0)
 	elseif instructionByte == 0xE9 then
 		instructionBytes = {{instructionByte, 1}}
 		instructionSize = 5

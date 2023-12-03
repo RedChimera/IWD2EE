@@ -971,11 +971,11 @@
 		!ja_dword >no_skip
 
 		; The following use the OLD character animation type, (which is invalid for this flag):
-		      0x6400 <unlisted>
-		      0x6402 MONK
-		      0x6403 Skeleton (BG)
-		      0x6404 <unlisted>
-		      0x6405 Doom Guard
+			  0x6400 <unlisted>
+			  0x6402 MONK
+			  0x6403 Skeleton (BG)
+			  0x6404 <unlisted>
+			  0x6405 Doom Guard
 		;
 
 		@skip

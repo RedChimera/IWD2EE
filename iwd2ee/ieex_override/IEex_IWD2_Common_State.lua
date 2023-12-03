@@ -1,16 +1,16 @@
 function IEex_GetEngineCharacter()
 	local g_pBaldurChitin = IEex_ReadDword(0x8CF6DC)
-    return IEex_ReadDword(g_pBaldurChitin + 0x1C60)
+	return IEex_ReadDword(g_pBaldurChitin + 0x1C60)
 end
 
 function IEex_GetEngineCreateChar()
 	local g_pBaldurChitin = IEex_ReadDword(0x8CF6DC)
-    return IEex_ReadDword(g_pBaldurChitin + 0x1C64)
+	return IEex_ReadDword(g_pBaldurChitin + 0x1C64)
 end
 
 function IEex_GetEngineOptions()
 	local g_pBaldurChitin = IEex_ReadDword(0x8CF6DC)
-    return IEex_ReadDword(g_pBaldurChitin + 0x1C78)
+	return IEex_ReadDword(g_pBaldurChitin + 0x1C78)
 end
 
 function IEex_GetEngineWorld()
@@ -227,7 +227,7 @@ function IEex_SetControlTextDisplay(CUIControlTextDisplay, text)
 end
 
 function IEex_SetTextAreaToStrref(engine, panelID, controlID, strref)
-    IEex_Call(0x6103A0, {strref, controlID, panelID}, engine, 0x0)
+	IEex_Call(0x6103A0, {strref, controlID, panelID}, engine, 0x0)
 end
 
 function IEex_SetTextAreaToString(engine, panelID, controlID, string)
