@@ -254,7 +254,7 @@
 
 Глаз духа - блокирует одну магическую атаку, вызывающую мгновенную смерть ("Заклинание смерти", "Перст смерти", "Слово силы: Убить", "Убить живого", "Уничтожение"). Может быть использован как заклинание "Луч слабости" (снижает Силу цели на 10, что уменьшает точность и урон наносимых ею атак).
 
-Глаз стойкости - предотвращает одно ошеломление, оглушение, слепоту или молчание. Также может быть использован как магическое заклинание 4-го уровня "Крик".
+Глаз стойкости - предотвращает одно оглушение, глухоту, слепоту или молчание. Также может быть использован как магическое заклинание 4-го уровня "Крик".
 
 Глаз камня - предохраняет заклинателя от превращения в камень. Также может быть использован как заклинание "Удержание персонажа".~
 @1042    = ~Ливень~
@@ -626,7 +626,7 @@
 Зона действия: конус
 Спасбросок: стойкости, особый
 
-Голос заклинателя становится невероятно мощным, и он может издаёт пронзительный вопль, который оглушает и повреждает существ на своём пути. Любое существо в зоне действия эффекта глохнет на 5 раундов, ошеломляется на 2 раунда и получает 5d6 очков урона. Успешный спасбросок стойкости спасает от оглушения и ошеломления и уменьшает полученный урон в два раза. Глухие существа имеют 50% шанс избежать действия этого заклинания.~
+Голос заклинателя становится невероятно мощным, и он может издаёт пронзительный вопль, который оглушает и повреждает существ на своём пути. Любое существо в зоне действия эффекта глохнет на 5 раундов, оглушается на 2 раунда и получает 5d6 очков урона. Успешный спасбросок стойкости спасает от оглушения и глухоты и уменьшает полученный урон в два раза. Глухие существа имеют 50% шанс избежать действия этого заклинания.~
 @1106    = ~Подчинение~
 @1107    = ~Подчинение
 (Чародейство)
@@ -1017,115 +1017,110 @@
 Спасбросок: нет
 
 Это заклинание создаёт наделённый волшебными силами символ, который передаёт своё воздействие через всякое способное его видеть вражеское существо. Попавшие под воздействие символа жертвы будут страдать от сильной боли, что понизит их Ловкость на 6 и ухудшит броски атаки, проверку навыков и способностей на -6. Это заклинание не действует на слепых существ.~
-@1546    = ~Symbol of Death~
-@1547    = ~Symbol of Death 
-(Divination)
-Level: Clr 8, Sor/Wiz 8, Oghma 8
-Range: Sight of Caster
-Duration: Instantaneous
-Casting Time: 1 round
-Area of Effect: 30-foot radius
-Saving Throw: Fortitude negates
+@1546    = ~Символ смерти~
+@1547    = ~Символ смерти
+(Прорицание)
+Уровень: священник 8, колдун/волшебник 8, жрец Огмы 8
+Дальность: поле зрения
+Длительность: мгновенное
+Время чтения: 1 раунд
+Зона действия: радиус 30 футов
+Спасбросок: стойкости, отменяет
 
-This spell conjures forth a magical glyph imbued with magical power that channels its effects through anyone capable of seeing it. Any living creature will instantly die upon seeing the symbol on a failed Fortitude save with -6 DC. This spell has no effect on blind creatures.
-~
-@1548    = ~Symbol of Stunning~
-@1549    = ~Symbol of Stunning
-(Divination) 
-Level: Clr 8, Sor/Wiz 8
-Range: Sight of Caster
-Duration: 2 rounds / level
-Casting Time: 1 round
-Area of Effect: 30-foot radius 
-Saving Throw: Reflex negates
+Это заклинание позволяет наколдовать небольшой знак. Этот знак наделён волшебной силой, которая воздействует на всех, кто имел неосторожность посмотреть на результат колдовства. Каждое живое существо, попавшее в зону действия знака, тут же умирает (успешный спасбросок стойкости с УС -6 позволяет избежать эффекта).~
+@1548    = ~Символ оглушения~
+@1549    = ~Символ оглушения
+(Прорицание)
+Уровень: священник 8, колдун/волшебник 8
+Дальность: поле зрения
+Длительность: 2 раунда/уровень
+Время чтения: 1 раунд
+Зона действия: радиус 30 футов
+Спасбросок: реакции, отменяет
 
-This spell conjures forth a magical glyph imbued with magical power that channels its effects through anyone capable of seeing it. Any creature will be stunned upon seeing the symbol on a failed Reflex save. The effect lasts until the duration runs out or the victim takes damage. This spell has no effect on blind creatures.
-~
-@1550    = ~Symbol of Fear~
-@1551    = ~Symbol of Fear 
-(Divination) 
-Level: Clr 8, Sor/Wiz 8, Oghma 6
-Range: Sight of Caster
-Duration: 10 rounds
-Casting Time: 1 round
-Area of Effect: 30-foot radius 
-Saving Throw: Will negates
+Это заклинание позволяет наколдовать небольшой знак. Этот знак наделён волшебной силой, которая воздействует на всех, кто имел неосторожность посмотреть на результат колдовства. Каждое существо, попавшее в зону действия знака, оглушается при проваленном спасброске реакции. Эффект длится до конца действия заклинания или пока существо не получит урона. Слепые существа не подвержены действию этого заклинания.~
+@1550    = ~Символ страха~
+@1551    = ~Символ страха
+(Прорицание)
+Уровень: священник 8, колдун/волшебник 8, жрец Огмы 6
+Дальность: обзор колдующего
+Длительность: 10 раундов
+Время чтения: 1 раунд
+Зона действия: радиус 30 футов
+Спасбросок: воли, отменяет
 
-This spell conjures forth a magical glyph imbued with magical power that channels its effects through anyone capable of seeing it. Both living and undead creatures are susceptible to this spell. On a failed Will save, any enemy within range will be affected by a powerful version of the Fear spell. This spell has no effect on blind creatures.
-~
-@1552    = ~Circle of Death~
-@1553    = ~Circle of Death 
-(Necromancy)
-Level: Sor/Wiz 6
-Range: Sight of Caster
-Duration: Instantaneous 
-Casting Time: 6
-Area of Effect: 30-foot radius
-Saving Throw: Fortitude negates
+Это заклинание вызывает магический знак, обладающий волшебной силой, который действует на каждого увидевшего его. И живые существа и нежить подвержены действию этого заклинания. Чтобы защититься от этого заклинания, противники могут попытаться сделать спасбросок воли. При неудачном спасброске на существо накладывается мощное заклинание "Страх". Слепые существа не подвержены действию этого заклинания.~
+@1552    = ~Круг смерти~
+@1553    = ~Круг смерти
+(Некромантия)
+Уровень: колдун/волшебник 6
+Дальность: обзор колдующего
+Длительность: мгновенно
+Время чтения: 6
+Зона действия: радиус 30 футов
+Спасбросок: стойкости, отменяет
 
-This spell snuffs out the lives of creatures in the area of effect. One of more creatures, whose combined hit points add up to 150 or less, are instantly slain on a failed Fortitude save.
-~
-@1554    = ~Soul Eater~
-@1555    = ~Soul Eater 
-(Necromancy)
-Level: Sor/Wiz 6, Mask 7
-Range: Sight of Caster
-Duration: 5 rounds
-Casting Time: 5
-Area of Effect: 10-foot radius
-Saving Throw: None
+Это заклинание высасывает жизнь находящихся в зоне действия существ. Оно столь сильное, что убивает одно или несколько существ на месте (чьё суммарное количество пунктов здоровья не превышает 150) при проваленном спасброске стойкости.~
+@1554    = ~Пожиратель душ~
+@1555    = ~Пожиратель душ
+(Некромантия)
+Уровень: колдун/волшебник 6, жрец Маска 7
+Дальность: обзор колдующего
+Длительность: 5 раундов
+Время чтения: 5
+Зона действия: радиус 10 футов
+Спасбросок: нет
 
-This spell deals 10d6 damage and imposes a -2 penalty to attack rolls and saving throws to all living, hostile creatures within a 10-foot radius for 5 rounds. Any creatures that die as a result of this damage are obliterated and their essence is transformed into a 3 hit dice skeleton under control of the caster. Also, for each creature that dies in this manner the caster gains 20 temporary hit points for 1 hour. Soul Eater has no effect on undead or constructs.~
-@1556    = ~Vipergout~
-@1557    = ~Vipergout
-(Conjuration)
-Level: Drd 7, Rgr 6, Sor/Wiz 7
-Range: Caster
-Duration: 10 rounds
-Casting Time: 7
-Area of Effect: Caster
-Saving Throw: None 
+Все живые враждебные существа в пределах 10 футов от точки применения заклинания получают 10d6 очков урона и -2 к атакам на 5 раундов. Те, кто при этом погибает в результате полученного урона, исчезают навсегда, а их сущность воплощается в виде подчинённых заклинателю скелетов с 3-м уровнем здоровья каждый. Помимо этого, за каждое убитое заклинанием существо заклинатель на 1 час получает 20 временных пунктов здоровья. Нежить, элементали и механизмы не подвержены действию "Пожирателя душ".~
+@1556    = ~Поток змей~
+@1557    = ~Поток змей
+(Призывание)
+Уровень: друид 7, следопыт 6, колдун/волшебник 7
+Дальность: колдующий
+Длительность: 10 раундов
+Время чтения: 7
+Зона действия: колдующий
+Спасбросок: нет
 
-This spell summons vipers which leap forth from the caster's mouth to attack her enemies. Starting on the round the spell is completed, the caster spits forth one viper each round for the duration of the spell. Spat vipers land at the caster's feet and stay for 3 rounds. Until the caster has brought forth all the snakes summoned by this spell, she suffers a 50% spell failure penalty.
-~
-@1558    = ~Viper~
-@1559    = ~Skull Trap~
-@1560    = ~Skull Trap
-(Necromancy)
-Level: Sor/Wiz 3
-Range: Sight of Caster 
-Duration:  Special
-Casting Time: 3 
-Area of Effect: Special
-Saving Throw: Reflex half
+После использования этого заклинания из рта колдующего извергаются гадюки, которые нападают на врага. Начиная с раунда, в котором было закончено заклинание, колдующий извергает из себя по одной гадюке за раунд до окончания действия заклинания. Гадюки приземляются у ног колдующего и остаются там в течение 3 раундов. Пока колдующий не исторгнет из себя всех змей, он получает шанс 50% на провал заклинания.~
+@1558    = ~Гадюка~
+@1559    = ~Череп-ловушка~
+@1560    = ~Череп-ловушка
+(Некромантия)
+Уровень: колдун/волшебник 3
+Дальность: обзор колдующего
+Длительность: особая
+Время чтения: 3
+Зона действия: особая
+Спасбросок: реакции, половина урона
 
-Upon casting this spell, a skull is thrown by the caster at the target area. The skull floats in the area until a creature comes within 5 feet of it. When this happens, the skull is triggered and explodes, dealing 1d6 slashing damage per level (max 10d6) to all creatures in a 10-foot radius. When casting this spell, it is wise to set it far away from the party, lest they set it off accidentally. Leaving the area the Skull Trap is in will make it disappear harmlessly. A successful Reflex save will do half damage.~
-@1561    = ~Spider Spawn~
-@1562    = ~Spider Spawn
-(Conjuration) 
-Level: Drd 4, Sor/Wiz 4
-Range: Sight of Caster
-Duration: 5 rounds + 1 round/level
-Casting Time: 6
-Area of Effect: Special 
-Saving Throw: None 
+Заклинатель бросает в указанное место череп. Этот череп парит в воздухе, пока какое-нибудь существо не подойдёт к нему ближе, чем на 5 футов. В этот момент череп просыпается и взрывается, нанося урон всем в радиусе 10 футов. Урон составляет 1d6 единиц рубящего урона на каждый уровень заклинателя до максимума в 10d6. Череп лучше размещать подальше от отряда, чтобы случайно не подорваться на своём же гостинце. Если покинуть локацию, череп-ловушка исчезнет без всякого вреда. При успешном спасброске реакции урон сокращается вдвое.~
+@1561    = ~Порождение пауков~
+@1562    = ~Порождение пауков
+(Призывание)
+Уровень: друид 4, колдун/волшебник 4
+Дальность: обзор колдующего
+Длительность: 5 раундов + 1 раунд/уровень
+Время чтения: 6
+Зона действия: особая
+Спасбросок: нет
 
-This spell conjures a large spider which is brought under the caster's telepathic control. There is a 20% chance of summoning 2 spiders. The type of spider that appears depends upon the level of the caster:
+Это заклинание призывает большого паука, который оказывается под телепатическим контролем заклинателя. Есть 20% шанс вызвать двух пауков. Вид паука зависит от уровня заклинателя:
 
-7th : Giant spider
-9th : Phase spider
-12th+ : Sword spider~
-@1563    = ~Carrion Summons~
-@1564    = ~Carrion Summons 
-(Conjuration) 
-Level: Sor/Wiz 4
-Range: Sight of Caster
-Duration: 1 round / level
-Casting Time: 4
-Area of Effect: Special 
-Saving Throw: Fortitude negates on-hit effect
+7 уровень: огромный паук
+9 уровень: фазовый паук
+12 уровень и выше: паук-мечник~
+@1563    = ~Вызов падальщика~
+@1564    = ~Вызов падальщика
+(Призывание)
+Уровень: колдун/волшебник 4
+Дальность: обзор колдующего
+Длительность: 1 раунд/уровень
+Время чтения: 4
+Зона действия: особая
+Спасбросок: стойкости позволяет избежать эффектов при атаке
 
-This spell conjures forth a mutated carrion crawler of enormous size that is under the caster's control. As with a normal carrion crawler, it has 8 attacks per round and each attack paralyzes the target on a failed Fortitude save.  The DC is equal to the DC of this spell as cast by the caster.~
+Это заклинание призывает огромную мутировавшую гусеницу-падальщика, которой заклинатель может управлять. Как и у обычной гусеницы-падальщика, у призванного существа 8 атак в раунд и каждая атака парализует цель при проваленном спасброске стойкости. УС этого эффекта равен УС заклинания.~
 @1565    = ~Mass Invisibility~
 @1566    = ~Mass Invisibility 
 (Illusion)
