@@ -983,43 +983,40 @@
 Спасбросок: нет
 
 Объект заклинания получает сопротивление магии 12 + 1 за каждый уровень колдующего. Это сопротивление заменяет предыдущее значение сопротивления магии. Только союзники могут быть целью этого заклинания.~
-@1520    = ~Holy Aura~
-@1521    = ~Holy Aura
-(Abjuration)
-Level: Clr 8, Ilmater 8
-Range: 20 ft.
-Duration: 1 round/level
-Casting Time: 6
-Area of Effect: Allies in a 20' radius
-Saving Throw: None
+@1520    = ~Аура святости~
+@1521    = ~Аура святости
+(Отречение)
+Уровень: священник 8, жрец Ильматера 8
+Дальность: 20 футов
+Длительность: 1 раунд/уровень
+Время чтения: 6
+Зона действия: союзники радиусе 20 футов
+Спасбросок: нет
 
-A brilliant, divine radiance surrounds the subjects, protecting them from attacks, granting them resistance to spells, and blinding evil creatures when they strike the subjects. This abjuration has four effects:
-First, the warded creatures gain a +4 deflection bonus to AC and a +4 bonus to all saves.
-Second, the warded creature gains +10 spell resistance and 5/- resistance to all forms of magical damage.
-Third, the abjuration protects the creatures against charm and domination spells.
-Fourth, any creature of evil alignment who strikes (melee only) those protected by the Holy Aura must make a Fortitude save or be blinded for 3 round.
-Holy Aura cannot be cast by evil characters.~
-@1522    = ~Potion of Minor Globe of Invulnerability~
-@1523    = ~Potions are typically found in ceramic, crystal, glass, or metal flasks or vials. Flasks or other containers generally contain enough fluid to provide one person with one complete dose to achieve the effects of the potion. 
+Цели окружает сияющее облако, которое защищает их от физических атак и заклинаний, а также ослепляет вражеских злых существ. У этого заклинания четыре эффекта:
+Во-первых, цели получают +4 к классу защиты (отражение) и +4 ко всем спасброскам.
+Во-вторых, сопротивление магии у целей заклинания увеличивается на 10 и они получают 5/- сопротивления любому магическому урону.
+В третьих, заклинание защищает существа от заклинаний очарования и подчинения.
+В-четвёртых, любое злое существо, которое наносит по защищённой аурой святости цели удар в ближнем бою, слепнет на 3 раунда, если не сделает успешный спасбросок стойкости.
+Это заклинание не может быть прочитано злыми существами.~
+@18696 = ~Зелье малой сферы неуязвимости~
+@18697 = ~Зелья обычно хранятся в керамических, хрустальных, стеклянных, металлических бутылках или пузырьках. Как правило, каждый сосуд содержит достаточно жидкости для одной дозы, необходимой для достижения эффекта.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-User under the effects of the spell Minor Globe of Invulnerability
-Weight: 1 lb.~
+Зелье производит эффект, равносильный использованию заклинания "Малая сфера неуязвимости"
+Вес: 1 фунт~
+@1544    = ~Символ боли~
+@1545    = ~Символ боли
+(Прорицание)
+Уровень: священник 8, колдун/волшебник 8
+Дальность: обзор колдующего
+Длительность: 1 раунд/уровень
+Время чтения: 9
+Зона действия: радиус 30 футов
+Спасбросок: нет
 
-
-@1544    = ~Symbol of Pain~
-@1545    = ~Symbol of Pain 
-(Divination)
-Level: Clr 8, Sor/Wiz 8
-Range: Sight of Caster
-Duration: 1 round / level
-Casting Time: 9
-Area of Effect: 30-foot radius
-Saving Throw: None
-
-This spell conjures forth a magical glyph imbued with magical power that channels its effects through any enemy creatures capable of seeing it. Creatures affected will suffer wracking pains throughout their body, reducing their Dexterity scores by 6 and impose a -6 penalty on attack rolls, skill checks and ability checks. This spell has no effect on blind creatures.
-~
+Это заклинание создаёт наделённый волшебными силами символ, который передаёт своё воздействие через всякое способное его видеть вражеское существо. Попавшие под воздействие символа жертвы будут страдать от сильной боли, что понизит их Ловкость на 6 и ухудшит броски атаки, проверку навыков и способностей на -6. Это заклинание не действует на слепых существ.~
 @1546    = ~Symbol of Death~
 @1547    = ~Symbol of Death 
 (Divination)
