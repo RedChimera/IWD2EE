@@ -851,141 +851,138 @@
 Спасбросок: стойкости, половина урона
 
 Заклинатель, получает иммунитеты лича, а его руки обретают силу прикосновения лича. Они излучают зелёный свет негативной энергии, который наносит 3d10+5 урона холодом цели, которую успешно атаковал заклинатель (к тому же учитываются бонусы от силы, черт, заклинаний, предметов и другие эффекты) и парализует цель на 10 раундов, если жертва провалит спасбросок стойкости. При атаке используется черта "Простое оружие, Короткие клинки/Атака касанием". Пока заклинание активно, заклинатель считается нежитью, становясь невосприимчивым к яду, болезни, кровоточащим ранам, утечке энергии, магии смерти, окаменению, оглушению, урону холодом, параличу, очарованию, состоянию берсерка, замешательству, усталости, сну и страху.~
-@1496    = ~Eagle's Splendor~
-@1497    = ~Eagle's Splendor 
-(Transmutation)
-Level: Brd 2, Drd 2, Pal 2, Sor/Wiz 2, Oghma 1
-Range: Caster
-Duration: 1 hour / level
-Casting Time: 1 
-Target: Creature touched
-Saving Throw: None 
+@1496    = ~Величие орла~
+@1497    = ~Величие орла
+(Преобразование)
+Уровень: бард 2, друид 2, паладин 2, колдун/волшебник 2, жрец Огмы 1
+Дальность: колдующий
+Длительность: 1 час/уровень
+Время чтения: 1
+Цель: существо, до которого дотронулись
+Спасбросок: нет
 
-The transmutated creature becomes more poised, articulate, and personally forceful. The spell grants +3 to Charisma, adding the usual benefits of Charisma-based skills and abilities.~
-@1498    = ~Mirror Image~
-@1499    = ~Mirror Image 
-(Illusion) 
-Level: Brd 2, Sor/Wiz 2, Mask 3
-Range: Caster
-Duration: 1 round / level
-Casting Time: 1
-Area of Effect: Caster
-Saving Throw: None 
+Видоизменённое существо становится более хладнокровным, расчётливым и сильным духом. Заклинание увеличивает Харизму на 3, добавляя обычные преимущества основанных на харизме навыков и способностей.~
+@1498    = ~Зеркальный образ~
+@1499    = ~Зеркальный образ
+(Иллюзия)
+Уровень: бард 2, колдун/волшебник 2, жрец Маска 3
+Дальность: колдующий
+Длительность: 1 раунд/уровень
+Время чтения: 1
+Зона действия: колдующий
+Спасбросок: нет
 
-When a Mirror Image spell is invoked, the spellcaster causes two to eight duplicates of himself to come into being around him. These images do exactly what the wizard does. Since the spell causes a blurring and slight distortion when it is cast, it is impossible for opponents to be certain which ones are the illusions and which is the actual wizard. When an image is struck by a melee or missile attack, magical or otherwise, it disappears, but any other existing images remain intact until struck. The images shift from round to round so that an enemy must first hit every image before being able to hit the wizard.~
-@1500    = ~Cat's Grace~
-@1501    = ~Cat's Grace 
-(Transmutation) 
-Level: Brd 2, Drd 2, Rgr 2, Sor/Wiz 2
-Range: Touch
-Duration: 1 hour/level
-Casting Time: 2
-Area of Effect: 1 creature
-Saving Throw: None
+Заклинание создаёт вокруг волшебника 2d4 его копий. Зеркальные образы в точности повторяют его действия. Во время чтения этого заклинания видимость несколько искажается, поэтому противники не могут сразу же отличить копии от настоящего волшебника. Когда зеркальный образ поражён любым оружием, снарядом или заклинанием, он исчезает, но остальные остаются. Копии каждый раунд меняются местами, так что противник сможет добраться до волшебника только после того, как уничтожит все зеркальные образы.~
+@1500    = ~Кошачья грация~
+@1501    = ~Кошачья грация
+(Преобразование)
+Уровень: бард 2, друид 2, следопыт 2, колдун/волшебник 2
+Дальность: прикосновение 
+Длительность: 1 час/уровень
+Время чтения: 2
+Зона действия: 1 существо
+Спасбросок: нет
 
-This spell grants the target creature a +4 Dexterity bonus for the duration of the spell.~
-@1502    = ~Stoneskin~
-@1503    = ~Stoneskin 
-(Abjuration)
-Level: Drd 4, Rgr 4, Sor/Wiz 4, Ilmater 6
-Range: Touch
-Duration: 2 rounds / level
-Casting Time: 1
-Area of Effect: Creature touched
-Saving Throw: None
+Это заклинание увеличивает ловкость существа на 4 на время действия заклинания.~
+@1502    = ~Каменная кожа~
+@1503    = ~Каменная кожа
+(Отречение)
+Уровень: друид 4, следопыт 4, колдун/волшебник 4, жрец Ильматера 6
+Дальность: прикосновение
+Длительность: 2 раунда/уровень
+Время чтения: 1
+Зона действия: 1 существо
+Спасбросок: нет
 
-The warded creature gains resistance to blows, cuts, stabs, and slashes. The subject gains damage reduction 10/+5. (It ignores the first 10 points of damage, though a weapon with a +5 enhancement bonus or any magical attack bypasses the reduction.)  Once the spell has prevented a total of 10 points of damage per caster level (maximum 150 points), it is discharged.
-~
-@1504    = ~Malison~
-@1505    = ~Malison 
-(Enchantment)
-Level: Sor/Wiz 4, Oghma 4
-Range: Sight of Caster
-Duration: 1 round / level 
-Casting Time: 4 
-Area of Effect: 30-foot radius
-Saving Throw: None
+Существо становится почти неуязвимым для дробящих, колющих и рубящих ударов. Цель получает снижение урона 10/+5. (Первые 10 очков урона игнорируются, если атака не магическая или если у оружия нет бонуса +5 и выше.) Чары развеиваются, как только примут на себя 10 единиц урона на уровень колдующего (вплоть до 150).~
+@1504    = ~Проклятие~
+@1505    = ~Проклятие
+(Чародейство)
+Уровень: колдун/волшебник 4, жрец Огмы 4
+Дальность: обзор колдующего
+Длительность: 1 раунд/уровень
+Время чтения: 4
+Зона действия: радиус 30 футов
+Спасбросок: нет
 
-This spell causes all enemy targets in the area of effect to suffer a -2 on all their saving throws as long as the spell is in effect.~
-@1506    = ~Spirit Armor~
-@1507    = ~Spirit Armor 
-(Necromancy)
-Level: Brd 4, Sor/Wiz 4
-Range: Touch
-Duration: 3 rounds / level
-Casting Time: 3 
-Area of Effect: 1 creature 
-Saving Throw: None
+Это заклинание несёт всем врагам, находящимся в зоне действия, ухудшение всех их спасбросков на -2 на время действия заклинания.~
+@1506    = ~Духовные доспехи~
+@1507    = ~Духовные доспехи
+(Некромантия)
+Уровень: бард 4, колдун/волшебник 4
+Дальность: прикосновение
+Длительность: 3 раунда/уровень
+Время чтения: 3
+Зона действия: 1 существо
+Спасбросок: нет
 
-This spell creates a corporeal barrier around the target's body by tapping into the target's life force. The armor itself is weightless, and does not hinder movement or spell casting, granting a +3 generic bonus to AC. Also, due to the magical nature of the spell, the recipient will receive a +3 bonus to Fortitude saves. There is a danger to using the target's life force to power the spell, as when the spell expires, the external portion of the spirit is temporarily lost and 2d4 points of damage is incurred.~
-@1508    = ~Wyvern Call~
-@1509    = ~Wyvern Call 
-(Conjuration) 
-Level: Drd 6, Rgr 6, Sor/Wiz 6
-Range: Sight of Caster
-Duration: 2 rounds / level
-Casting Time: 6
-Area of Effect: Special 
-Saving Throw: Fortitude negates on-hit effect
+Это заклинание окружает цель материальным барьером, используя её жизненную силу. Сам доспех невесом и не мешает двигаться и колдовать. Также доспех даёт +3 к классу защиты (общий) и +3 к спасброскам стойкости. Опасность заклинания состоит в том, что по истечении срока действия цель на время лишается части своей жизненной силы, получая 2d4 пунктов урона.~
+@1508    = ~Призыв виверны~
+@1509    = ~Призыв виверны
+(Призывание)
+Уровень: друид 6, следопыт 6, колдун/волшебник 6
+Дальность: обзор колдующего
+Длительность: 2 раунда/уровень
+Время чтения: 6
+Зона действия: особая
+Спасбросок: стойкости, чтобы избежать эффектов атак
 
-When this spell is cast, the wizard opens up a magical channel that will summon a wyvern to his aid. The wyvern will remain under the wizard's control and will live and die at his command until the spell duration expires. The DC of the poison from the wyvern's stinger is equal to the DC of this spell as cast by the caster.~
-@1510    = ~Mordenkainen's Sword~
-@1511    = ~Mordenkainen's Sword
-(Evocation)
-Level: Sor/Wiz 7
-Range: Sight of Caster
-Duration: 1 round/level 
-Casting Time: 7
-Area of Effect: Special
-Saving Throw: None
+При прочтении этого заклинания волшебник приоткрывает магический канал, через который призывает к себе на помощь виверну. Волшебник получает власть над виверной, и она будет исполнять его волю до тех пор, пока не кончится действие заклинания. УС яда виверны равен УС этого заклинания, произнесённого заклинателем.~
+@1510    = ~Меч Морденкайнена~
+@1511    = ~Меч Морденкайнена
+(Проявление)
+Уровень: колдун/волшебник 7
+Дальность: обзор колдующего
+Длительность: 1 раунд/уровень
+Время чтения: 7
+Зона действия: особая
+Спасбросок: нет
 
-This spell summons a shimmering sword of force that can be mentally wielded by the caster. Despite the fact it is held in the hand, it can hit creatures anywhere within the sight of the caster. The sword has a bonus to attack equal to the caster's level and damages its target for 3d6+3 points of damage. It is a considered a +3 weapon, so it can damage creatures normally that are resistant to damage from lesser magical items. Mordenkainen's Sword uses the Simple Weapon: Small Blade proficiency.~
-@1512    = ~Aid~
-@1513    = ~Aid 
-(Enchantment)
-Level: Clr 2, Ilmater 2
-Range: Touch 
-Duration: 5 rounds/level 
-Casting Time: 1 
-Area of Effect: 1 creature
-Saving Throw: None 
+Это заклинание создаёт искрящийся клинок силы, который заклинатель контролирует силой мысли. Несмотря на то, что заклинатель держит меч в руках, им можно атаковать любое существо в пределах видимости заклинателя. Меч даёт бонус к атаке, равный уровню заклинателя, и наносит цели 3d6+3 единиц урона. Этот меч считается оружием +3. Таким образом, он способен ранить существ, которые обладают сопротивлением к обычному и слабо зачарованному оружию. Для владения этим клинком используется черта "Простое оружие, Короткие клинки".~
+@1512    = ~Помощь~
+@1513    = ~Помощь
+(Чародейство)
+Уровень: священник 2, жрец Ильматера 2
+Дальность: прикосновение
+Длительность: 5 раундов/уровень
+Время чтения: 1
+Зона действия: 1 существо
+Спасбросок: нет
 
-The recipient of this spell gains +1 attack bonus, +1 to saving throws, and 8 temporary hit points for the duration of the spell. These bonus hit points can exceed a character's maximum hit points.~
-@1514    = ~Freedom of Movement~
-@1515    = ~Freedom of Movement 
-(Abjuration) 
-Level: Clr 4, Drd 4, Pal 4, Rgr 4
-Range: Touch 
-Duration: 10 rounds + 1 round/level
-Casting Time: 4
-Area of Effect: 1 creature
-Saving Throw: None 
+Цель этого заклинания получает +1 к атаке и спасброскам, а также 8 временных пунктов здоровья на время действия заклинания. Эти дополнительные пункты здоровья могут быть добавлены сверх максимального здоровья персонажа.~
+@1514    = ~Свобода действий~
+@1515    = ~Свобода действий
+(Отречение)
+Уровень: священник 4, друид 4, паладин 4, следопыт 4
+Дальность: прикосновение
+Длительность: 10 раундов + 1 раунд/уровень
+Время чтения: 4
+Зона действия: 1 существо
+Спасбросок: нет
 
-This spell gives the affected creature an immunity to magic that impedes movement (such as Grease, Web or Slow spells), negates the effects of paralysis and hold spells, and prevents them from being grappled. It does not grant immunity to stun.
-~
-@1516    = ~Death Ward~
-@1517    = ~Death Ward 
-(Necromancy)
-Level: Clr 4, Drd 5, Pal 4, Helm 4
-Range: Touch
-Duration: 10 rounds / level
-Casting Time: 5
-Area of Effect: 1 creature
-Saving Throw: None
+Это заклинание даёт цели иммунитет к заклинаниям, которые затрудняют перемещение (к примеру "Слизь", "Паутина" или "Замедление"), а также устраняет эффекты паралича и удержания и предотвращает захват. Оно не даёт иммунитета к оглушению.~
+@1516    = ~Ограждение от смерти~
+@1517    = ~Ограждение от смерти
+(Некромантия)
+Уровень: священник 4, друид 5, паладин 5, жрец Хелма 4
+Дальность: прикосновение
+Длительность: 10 раундов/уровень
+Время чтения: 5
+Зона действия: 1 существо
+Спасбросок: нет
 
-This spell protects the target from death magic and energy drain for the duration of the spell. This includes but is not limited to Power Word Kill, Death Spell and Finger of Death, as well as the spell Energy Drain and the attacks of wights and wraiths.
-~
-@1518    = ~Spell Resistance~
-@1519    = ~Spell Resistance 
-(Transmutation)
-Level: Clr 5, Pal 5
-Range: Touch
-Duration: 3 rounds + 1 round / level
-Casting Time: 1 round
-Area of Effect: 1 creature
-Saving Throw: None 
+На время действия заклинания цель защищена от всех форм магии смерти и оттока энергии. Это включает в том числе заклинания "Слово силы: Убить", "Заклинание смерти" и "Перст смерти", а также заклинание "Отток энергии" и атаки упырей и вурдалаков.~
+@1518    = ~Сопротивление заклинаниям~
+@1519    = ~Сопротивление заклинаниям
+(Преобразование)
+Уровень: священник 5, паладин 5
+Дальность: прикосновение
+Длительность: 3 раунда + 1 раунд/уровень
+Время чтения: 1 раунд
+Зона действия: 1 существо
+Спасбросок: нет
 
-This spell grants the recipient a spell resistance of 12 + 1 per level of the caster. It will replace whatever spell resistance the creature already has. Only allies can be affected by this spell.~
+Объект заклинания получает сопротивление магии 12 + 1 за каждый уровень колдующего. Это сопротивление заменяет предыдущее значение сопротивления магии. Только союзники могут быть целью этого заклинания.~
 @1520    = ~Holy Aura~
 @1521    = ~Holy Aura
 (Abjuration)
