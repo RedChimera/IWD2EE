@@ -739,118 +739,118 @@
 Спасбросок: особый
 
 "Слово силы: Оглушить" относится к тому же виду заклинаний, что и "Слово силы: Тишина" и "Слово силы: Убить". Произнеся его, заклинатель указывает цель и оглушает её. Существа, здоровье которых менее 50 единиц, оглушаются на 4-16 раундов, от 51 до 100 - на 2-8 раундов, от 101 до 150 - на 1-4 раунда, а существа со здоровьем больше 151 единиц должны прокинуть спасбросок воли или с УС +2 или быть оглушёнными на 1 раунд. При этом "Слово силы: Оглушить" учитывает не максимальное, а текущее здоровье, поэтому оглушить можно даже сильного противника, если он ранен. Это заклинание не действует на глухих существ.~
-@1126    = ~Iron Body~
-@1127    = ~Iron Body 
-(Transmutation)
-Level: Sor/Wiz 8, Helm 8
-Range: Caster
-Duration: 1 round / level
-Casting Time: 8
-Area of Effect: Caster
-Saving Throw: None
+@1126    = ~Железное тело~
+@1127    = ~Железное тело
+(Преобразование)
+Уровень: колдун/волшебник 8, жрец Хелма 8
+Дальность: колдующий
+Длительность: 1 раундов/уровень
+Время чтения: 8
+Зона действия: колдующий
+Спасбросок: нет
 
-This spell transforms the caster's body into living iron, granting him several powerful resistances and abilities. While the spell is in effect, the caster has 15/- resistance to fire, cold, and all forms of physical damage, but also +15 vulnerability to electricity. Spells that affect respiration or the physiology of the caster are ignored completely, such as poison, blindness, deafness, and disease to name a few. In addition, the caster gains a +8 bonus to strength and constitution and a -8 dexterity penalty. Unfortunately, the caster's movement becomes slow and awkward under the weight of his new body, setting his movement rate to half its normal rate, and he receives a -2 penalty to casting speed.~
-@1128    = ~Black Blade of Disaster~
-@1129    = ~Black Blade of Disaster
-(Conjuration) 
-Level: Sor/Wiz 9, Mask 9
-Range: Caster
-Duration: 1 round/level 
-Casting Time: 9
-Area of Effect: Special
-Saving Throw: Special
+Тело заклинателя превращается в живое железо и становится таким же крепким и устойчивым к урону. На время действия заклинания колдующий получает 15/- сопротивления огню, холоду и всем формам физического урона, но +15 уязвимости к электричеству. Заклинания, влияющие на дыхание или физиологические процессы заклинателя, к примеру, "Яд", "Слепота", "Оглушение" или "Болезнь", не действуют. Кроме того заклинатель получает +8 к Силе, -8 к Ловкости. К сожалению, движения заклинателя становятся медленными и неловкими: скорость его передвижения снижается вдвое, и он получает -2 к скорости чтения заклинаний.~
+@1128    = ~Чёрный клинок несчастья~
+@1129    = ~Чёрный клинок несчастья
+(Призывание)
+Уровень: колдун/волшебник 9, жрец Маска 9
+Дальность: колдующий
+Длительность: 1 раунд/уровень
+Время чтения: 9
+Зона действия: особая
+Спасбросок: особый
 
-This spell enables the caster to create a black, blade-shaped, planar rift, about three feet long. It jumps into the caster's hand and is used as a normal sword, remaining there for the duration of the spell. The sword acts as a +10 weapon, dealing 2d12+10 damage per strike with a +10 attack bonus. Furthermore, the blade drains one single level from the target per hit, imposing a -1 penalty to hit and damage and a -5 penalty to HP.~
-@1130    = ~Otiluke's Freezing Sphere~
-@1131    = ~Otiluke's Freezing Sphere 
-(Evocation)
-Level: Sor/Wiz 6, Druid 6
-Range: Sight of Caster 
-Duration: Special
-Casting Time: 6
-Area of Effect: 1 creature
-Saving Throw: Reflex negates
+Заклинание создаёт чёрный разлом между планами: длиной около трёх футов и имеющий форму меча. Клинок пребывает в руке волшебника весь срок действия заклинания и используется как обычный меч. Этот клинок считается оружием +10, получает бонус +10 к атаке и наносит 2d12+10 повреждения. Кроме того, клинок отнимает у цели один уровень при успешном попадании, накладывая штраф -1 к атаке и отнимая у цели 5 от максимума пунктов здоровья.~
+@1130    = ~Замораживающая сфера Отилука~
+@1131    = ~Замораживающая сфера Отилука
+(Проявление)
+Уровень: колдун/волшебник 6, друид 6
+Дальность: обзор колдующего
+Длительность: особая
+Время чтения: 6
+Зона действия: 1 существо
+Спасбросок: реакции, отменяет
 
-This spell fires an orb of cold at a creature that inflicts 1d8 points of cold damage/level of the caster (maximum of 30d8) and slows the target for 1 round per level. If the target makes its saving throw, however, they only suffer half damage and the slow effect is negated.~
-@1132    = ~Darts of Bone~
-@1133    = ~Darts of Bone
-(Necromancy)
-Level: Sor/Wiz 6
-Range: Caster
-Duration: 5 rounds
-Casting Time: 5
-Area of Effect: Caster
-Saving Throw: None
+Заклинание направляет в цель шар холода, который наносит 1d8 урона холодом за каждый уровень заклинателя (до максимума в 30d8) и замедляет цель на 1 раунд за уровень заклинателя. Если цель сделает удачный спасбросок реакции, она получает только половину повреждений и не замедляется.~
+@1132    = ~Костяные дротики~
+@1133    = ~Костяные дротики
+(Некромантия)
+Уровень: колдун/волшебник 6
+Дальность: колдующий
+Длительность: 5 раундов
+Время чтения: 5
+Зона действия: колдующий
+Спасбросок: нет
 
-This spell creates darts made of bone that drain the life force from its victims, dealing 1d4+3 missile damage plus 2d6 magic damage and penalizing the target's Fortitude save by 2 for 5 rounds with every successful hit. The darts strike as +3 weapons and will not run out until they vanish after 5 rounds.~
-@1134    = ~Ghoul Touch~
-@1135    = ~Ghoul Touch
-(Necromancy) 
-Level: Sor/Wiz 2
-Range: Touch
-Duration: 5 rounds
-Casting Time: 2
-Area of Effect: 1 creature
-Saving Throw: Fortitude negates
+Это заклинания создаёт костяные дротики, которые высасывают жизненную силу из жертв, нанося 1d4+3 метательного урона и 2d6 урона от магии. Цель также получает -2 к спасброску стойкости на 5 раундов при каждом удачном попадании. Дротики считаются оружием +3 и не заканчиваются, пока не истечёт время действия заклинания.~
+@1134    = ~Прикосновение упыря~
+@1135    = ~Прикосновение упыря
+(Некромантия)
+Уровень: колдун/волшебник 2
+Дальность: прикосновение
+Длительность: 5 раундов
+Время чтения: 2
+Зона действия: 1 существо
+Спасбросок: стойкости, отменяет
 
-This spell brings the power of the ghoul to the caster's hands - upon touching a creature (no attack roll necessary), the victim must make a successful Fortitude save or be paralyzed and be covered with an awful carrion stench for 5 rounds. All living creatures within a 10-foot radius of the victim, with the exception of the caster, suffer extreme nausea and are at a penalty of 2 for attack bonuses, damage, and saving throws. This spell does not provoke an attack of opportunity.~
-@1136    = ~Malavon's Rage~
-@1137    = ~Malavon's Rage
-(Evocation)
-Level: Sor/Wiz 7
-Range: Caster
-Duration: Instantaneous
-Casting Time: 1
-Area of Effect: 15-foot radius
-Saving Throw: Reflex half
+Это заклинание даёт колдующему силу упыря: при прикосновении (атака не требуется) жертва должна прокинуть спасбросок стойкости, иначе будет парализована на 5 раундов и начнёт омерзительно вонять мертвечиной. Все существа в радиусе 10 футов от жертвы (за исключением заклинателя) будут подвержены тошноте и получат -2 к атаке, урону и спасброскам. Это заклинание не провоцирует атаку при возможности.~
+@1136    = ~Ярость Малавона~
+@1137    = ~Ярость Малавона
+(Проявление)
+Уровень: колдун/волшебник 7
+Дальность: колдующий
+Длительность: мгновенно
+Время чтения: 1
+Зона действия: радиус 15 футов
+Спасбросок: реакции, половина урона
 
-Malavon's Rage was created by the dark elf sorcerer Malavon. It shoots darts of pure energy out from the caster's body in all directions, harming friend and foe alike. The small wedges of magic do 25d4 points of piercing damage to everything caught in their path (Reflex save with +2 DC for half). This spell is especially useful when a mage is surrounded by enemies, and it will not provoke an attack of opportunity.
+Это заклинание разработал маг-дроу Малавон. Из тела заклинателя во всех направлениях вылетают стрелы чистой энергии, поражающие и друзей, и врагов. Эти энергетические стрелы наносят 25d4 единиц колющего урона любой цели, что окажется у них на пути. Удачный спасбросок реакции снижает урон на 50%. Заклинание особенно эффективно, если маг оказался окружён врагами, и оно не провоцирует атаку при возможности.
 
-Like most spells created by drow, Malavon's Rage was designed to bypass spell resistance, as drow often fight enemies that resist magic... such as other drow.~
-@1138    = ~Flaying~
-@1139    = ~Flaying
-(Necromancy) 
-Level: Sor/Wiz 5
-Range: Sight of Caster
-Duration: 1 round / level
-Casting Time: 1
-Area of Effect: 1 creature
-Saving Throw: Fortitude half
+Как и большинство заклинаний, созданных дроу, "Ярость Малавона" была разработана, чтобы игнорировать сопротивление заклинаниям, поскольку дроу часто сражаются с врагами, имеющими сопротивление магии... например, с другими дроу.~
+@1138    = ~Сдирание кожи~
+@1139    = ~Сдирание кожи
+(Некромантия)
+Уровень: колдун/волшебник 5
+Дальность: обзор колдующего
+Длительность: 1 раунд/уровень
+Время чтения: 1
+Зона действия: 1 существо
+Спасбросок: стойкости, половина урона
 
-This horrid spell strips the flesh from a target, causing a magically induced bleeding wound that deals 4 damage per round for the duration of the spell, with an additional 4 bleeding damage for every 10 levels of the caster, up to a maximum of 16 damage per round at level 30. A successful Fortitude save will halve the damage from the bleeding.~
-@1140    = ~Power Word: Kill~
-@1141    = ~Power Word: Kill
-(Divination)
-Level: Brd 8, Sor/Wiz 9, Oghma 8, Tempus 9
-Range: Sight of Caster
-Duration: Permanent 
-Casting Time: 0
-Area of Effect: 1 creature
-Saving Throw: Partial
+Это ужасное заклинание сдирает кожу с жертвы, вызывая кровоточащую рану, которая наносит 4 урона в раунд на протяжении действия заклинания, и еще 4 урона от кровотечения за каждый десять уровней заклинателя, до максимума в 16 урона в раунд на 30 уровне. Успешный спасбросок стойкости уменьшает урон от кровотечения вдвое.~
+@1140    = ~Слово силы: Убить~
+@1141    = ~Слово силы: Убить
+(Призывание)
+Уровень: бард 8, колдун/волшебник 9, жрец Огмы 8, жрец Темпуса 9
+Дальность: обзор колдующего
+Длительность: постоянно
+Время чтения: 0
+Зона действия: 1 существо
+Спасбросок: особый
 
-Power Word: Kill is the deadliest word of power. The moment the word is spoken, the victim is instantly killed on a failed Will save with +4 DC. Those who survive still suffer 60 magic damage. This spell has no effect on deaf creatures.~
-@1142    = ~Wail of the Banshee~
-@1143    = ~Wail of the Banshee 
-(Necromancy)
-Level: Brd 8, Sor/Wiz 9, Oghma 9, Talos 9
-Range: Caster
-Duration: Instantaneous
-Casting Time: 9
-Area of Effect: 30-foot radius
-Saving Throw: Fortitude negates
+Заклинание "Слово силы: Убить", возможно, самое опасное из слов силы. Оно убивает любое существо, имеющее до 100 очков здоровья, или несколько существ с 20 или меньшим количеством очков здоровья на каждого, вплоть до максимума в 200 очков здоровья. При этом в расчёт берётся текущее количество очков здоровья существа, а не его максимальное значение, поэтому заклинание может подействовать даже на очень сильное создание, если то было ранено.~
+@1142    = ~Вопль банши~
+@1143    = ~Вопль банши
+(Некромантия)
+Уровень: бард 8, колдун/волшебник 9, жрец Огмы 9, жрец Талоса 9
+Дальность: колдующий
+Длительность: мгновенно
+Время чтения: 9
+Зона действия: радиус 30 футов
+Спасбросок: стойкости, отменяет
 
-The caster emits a terrible scream that kills creatures who hear it (except for the caster). The spell affects up to one creature per caster level. A successful Fortitude save with -4 DC prevents the effects.~
-@1144    = ~Lich Touch~
-@1145    = ~Lich Touch 
-(Necromancy)
-Level: Sor/Wiz 6
-Range: Touch 
-Duration: 1 round/level 
-Casting Time: 6
-Area of Effect: Caster
-Saving Throw: Fortitude half
+Колдующий испускает жутки вопль, убивающий всех, кто его слышит (кроме самого колдующего). Вопль поражает по одной цели на каждый уровень колдующего. Успешный спасбросок стойкости с -4 к УС позволяет избежать эффекта заклинания.~
+@1144    = ~Прикосновение лича~
+@1145    = ~Прикосновение лича
+(Некромантия)
+Уровень: колдун/волшебник 6
+Дальность: прикосновение 
+Длительность: 1 раунд/уровень
+Время чтения: 6
+Зона действия: колдующий
+Спасбросок: стойкости, половина урона
 
-This spell confers the powers of a lich's touch and a lich's immunities upon the caster. The wizard's hands are imbued with a chilling force of negative energy, allowing the caster to deal 3d10+5 cold damage (plus damage bonuses from Strength, proficiencies, spells, items and other effects) with each hit and paralyze living victims for 10 rounds on a failed Fortitude save. The attack uses the Simple Weapon: Small Blade/Touch Attack proficiency. While the spell is active, the caster is treated as undead, becoming immune to poison, disease, bleeding wounds, energy drain, death magic, petrification, stun, cold damage, paralysis, charm, berserk, confusion, fatigue, sleep, and fear.~
+Заклинатель, получает иммунитеты лича, а его руки обретают силу прикосновения лича. Они излучают зелёный свет негативной энергии, который наносит 3d10+5 урона холодом цели, которую успешно атаковал заклинатель (к тому же учитываются бонусы от силы, черт, заклинаний, предметов и другие эффекты) и парализует цель на 10 раундов, если жертва провалит спасбросок стойкости. При атаке используется черта "Простое оружие, Короткие клинки/Атака касанием". Пока заклинание активно, заклинатель считается нежитью, становясь невосприимчивым к яду, болезни, кровоточащим ранам, утечке энергии, магии смерти, окаменению, оглушению, урону холодом, параличу, очарованию, состоянию берсерка, замешательству, усталости, сну и страху.~
 @1496    = ~Eagle's Splendor~
 @1497    = ~Eagle's Splendor 
 (Transmutation)
