@@ -351,23 +351,23 @@ COPY_EXISTING ~61MUSJEL.cre~ ~override~ ~61SLIOLI.cre~ ~override~
 	WRITE_BYTE piercingresistance 25
 	WRITE_BYTE missileresistance 0
 
-// Patching fiends so they have fiendish immunities rather than undead immunities
 
-COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
-	READ_BYTE race therace
-	PATCH_IF (therace = 164 AND !(MOD_IS_INSTALLED ~iwd2ee.tp2~ ~23~)) OR (therace = 181 AND (MOD_IS_INSTALLED ~iwd2ee.tp2~ ~23~)) BEGIN
-		REPLACE_TEXTUALLY CASE_INSENSITIVE ~00CIDEAD~ ~USCIFIEN~
-		REPLACE_TEXTUALLY CASE_INSENSITIVE ~00CIDED1~ ~USCIFIEN~
-	END
+// M_I_I checks inside regexps are slow, check outside regexp and use var instead
+ACTION_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~23~ BEGIN OUTER_SET iwdee_comp_23 = 1 END ELSE BEGIN OUTER_SET iwdee_comp_23 = 0 END 
 
-	BUT_ONLY_IF_IT_CHANGES
-
-// Patching elementals, salamanders and genies to have elemental resistances
-
+// cam: collapsing several regexps into one
 COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
 	READ_LONG animation theanimation
 	READ_BYTE race therace
 	READ_BYTE fireresistance thefireresistance
+  
+  // Patching fiends so they have fiendish immunities rather than undead immunities
+	PATCH_IF (therace = 164 AND !(iwdee_comp_23)) OR (therace = 181 AND (iwdee_comp_23)) BEGIN
+		REPLACE_TEXTUALLY CASE_INSENSITIVE ~00CIDEAD~ ~USCIFIEN~
+		REPLACE_TEXTUALLY CASE_INSENSITIVE ~00CIDED1~ ~USCIFIEN~
+	END
+  
+  // Patching elementals, salamanders and genies to have elemental resistances
 	PATCH_IF (therace = 152) OR (therace = 161) OR (therace = 175) BEGIN
 		LPF	IWD2_REMOVE_CRE_ITEM STR_VAR item=~00CIBAR1 00CIDED1 00CIDEAD~ END
 		TEXT_SPRINT theimmunityitem ~USCIELEM~
@@ -429,12 +429,8 @@ COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
 			END
 		END
 	END
-	BUT_ONLY_IF_IT_CHANGES
 
-// Patching myconids and shambling mounds to have the correct resistances
-
-COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
-	READ_LONG animation theanimation
+  // Patching myconids and shambling mounds to have the correct resistances
 	PATCH_IF theanimation = 29442 OR theanimation = 60313 OR theanimation = 60329 OR theanimation = 60337 BEGIN
 		LPF	IWD2_REMOVE_CRE_ITEM STR_VAR item=~00CIBAR1 00CIDED1 00CIDEAD~ END
 		TEXT_SPRINT theimmunityitem ~USCIMYCO~
@@ -483,12 +479,8 @@ COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
 			END
 		END
 	END
-	BUT_ONLY_IF_IT_CHANGES
-
-// Patching spiders to be immune to web
-
-COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
-	READ_LONG animation theanimation
+  
+  // Patching spiders to be immune to web (no longer has UNLESS guard, so may end up with dupe 00CIDRI2 items)
 	PATCH_IF (theanimation >= 31232 AND theanimation <= 31236) OR theanimation = 32559 BEGIN
 		TEXT_SPRINT theimmunityitem ~00CIDRI2~
 		READ_LONG 0x612 itemslotsoffset
@@ -533,26 +525,15 @@ COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
 			END
 		END
 	END
-	UNLESS ~00CIDRI2~
-	BUT_ONLY_IF_IT_CHANGES
-
-COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
-	READ_LONG animation theanimation
-	READ_BYTE race therace
+  
+  // more item swaps
 	PATCH_IF theanimation = 61264 OR theanimation = 61280 OR theanimation = 61296 BEGIN
 		REPLACE_TEXTUALLY CASE_INSENSITIVE ~00CIBAR1~ ~USCIBAR2~
 	END ELSE PATCH_IF therace = 156 BEGIN
 		REPLACE_TEXTUALLY CASE_INSENSITIVE ~00CIBAR1~ ~00CIGOL1~
 	END
-	BUT_ONLY_IF_IT_CHANGES
-
-COPY_EXISTING ~50TROSG.cre~ ~override~ ~50TROSGR.cre~ ~override~
-	LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item=~USCIHFTG~ slot=~lring~ mode=~replace~ END
-
-// Patching trolls so they have more HP but are vulnerable to fire and acid
-
-COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
-	READ_BYTE race therace
+  
+  // Patching trolls so they have more HP but are vulnerable to fire and acid
 	PATCH_IF therace = 165 OR therace = 171 BEGIN
 		LPF	IWD2_REMOVE_CRE_ITEM STR_VAR item=~00CIDED1 00CIDEAD~ END
 		READ_SSHORT currenthp thecurrenthp
@@ -570,7 +551,10 @@ COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
 		WRITE_BYTE acidresistance (theacidresistance - 20)
 		REPLACE_TEXTUALLY ~00TROLL1~ ~USCIHFTR~
 	END
-	BUT_ONLY_IF_IT_CHANGES
+	BUT_ONLY
+
+COPY_EXISTING ~50TROSG.cre~ ~override~ ~50TROSGR.cre~ ~override~
+	LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item=~USCIHFTG~ slot=~lring~ mode=~replace~ END
 
 //We should patch these
 // replaces items that grant immunities to common enemy types and bosses
