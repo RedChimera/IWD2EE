@@ -1198,113 +1198,107 @@
 Спасбросок: реакции, особый
 
 Заклинатель призывает ослепительный луч яркого и горячего света. Каждый раунд все попавшие под луч существа ослепляются на 3 раунда и получают 4d6 магического урона (16d4 за четыре раунда). Успешный спасбросок реакции отменяет слепоту и снижает урон вдвое. Нежить, грибы, плесень, тина, слизь и другие грибоподобные существа, попадая под луч, получают по дополнительно 1d6 очков урона за каждый уровень заклинателя (вплоть до 20d6) в раунд. Это заклинание игнорирует сопротивлении магии.~
-@1621    = ~Great Shout~
-@1622    = ~Great Shout
-(Evocation)
-Level: Brd 6, Sor/Wiz 8, Oghma 7
-Range: Caster
-Duration: Instantaneous 
-Casting Time: 2 
-Area of Effect: 30-feet long, 10-foot diameter
-Saving Throw: Fortitude half
+@1621    = ~Великий крик~
+@1622    = ~Великий крик
+(Проявление)
+Уровень: бард 6, колдун/волшебник 8, жрец Огмы 7
+Дальность: колдующий
+Длительность: мгновенно
+Время чтения: 1
+Зона действия: 30-футовый конус с раструбом 10 футов
+Спасбросок: стойкости, половина урона
 
-Upon uttering the Great Shout, the caster releases a stunning force from his mouth in a 30-foot long, 10-foot diameter cone. Creatures within the area of effect take 10d10 magic damage with a Fortitude save for half. Those who fail the save are stunned for 5 rounds and deafened for 10 rounds. The caster also takes 2d10 damage and is stunned for 1 round and deafened for 2 rounds, but makes his or her saving throw with -5 DC. Great Shout bypasses spell resistance and immunity to magic. Deafened creatures have a 25% chance of resisting this spell.~
-@1623    = ~Animal Rage~
-@1624    = ~Animal Rage
-(Enchantment)
-Level:  Drd 4, Rgr 3
-Range: Touch
-Duration: 10 rounds
-Casting Time: 8
-Area of Effect: 1 creature
-Saving Throw: Special
+Заклинатель издаёт поразительно громкий крик, который распространяется конусом длиной в 30 футов с раструбом 10 футов в самой дальней точке. Существа в зоне действия получают 10d10 магического урона, который снижается вполовину при успешном спасброске стойкости. При неудачном спасброске эти существа также оглушаются на 5 раундов и лишаются слуха на 10. Заклинатель также сам получает урон 2d10, оглушается на 1 раунд и глохнет на два при провале спасброска (с -5 к УС). Это заклинание игнорирует сопротивление и иммунитет к магии. Глухие существа имеют 25% шанс не подвергнуться воздействия этого заклинания.~
+@1623    = ~Ярость Зверя~
+@1624    = ~Ярость Зверя
+(Чародейство)
+Уровень: друид 4, следопыт 3
+Дальность: прикосновение
+Длительность: 10 раундов
+Время чтения: 8
+Зона действия: 1 существо
+Спасбросок: особый
 
-This spell imbues the target creature with animal ferocity. The target creature gains +4 strength, +4 constitution, +20% movement, and +2 to all saving throws. The target loses the ability to cast spells while Animal Rage is in effect. He or she can be controlled normally unless enemies are within sight, at which time the target immediately attacks in melee, using whatever is in hand. There is a 5% chance per round that the target will go berserk, attacking friend and foe alike. Allies are automatically affected, while enemies may make a Will save to avoid the effects. This spell does not provoke an attack of opportunity when cast on an enemy.~
-@1629    = ~Flame Arrow~
-@1630    = ~Flame Arrow 
-(Conjuration) 
-Level: Sor/Wiz 3
-Range: Sight of Caster
-Duration: Instant
-Casting Time: 3 
-Area of Effect: 1 Creature
-Saving Throw: Reflex half 
+Это заклинание наделяет выбранное существо свирепостью зверя. Существо получает +4 к силе, +4 к телосложению, +20% к скорости передвижения и +2 ко всем спасброскам. Однако, во время действия Ярости Зверя, существо теряет способность применять заклинания. Персонажем можно нормально управлять, пока в пределах видимости не появятся враги; после этого персонаж немедленно переходит в ближний бой, используя всё, что находится в руках. В каждом раунде есть 5% вероятность, что жертва впадёт в неистовство и начнёт атаковать как врагов, так и друзей. Союзники автоматически попадают под воздействие этого заклинания, а враги могут сделать спасбросок воли, чтобы избежать эффекта. Это заклинание не провоцирует атаку при возможности.~
+@1629    = ~Огненная стрела~
+@1630    = ~Огненная стрела
+(Призывание)
+Уровень: колдун/волшебник 3
+Дальность: обзор колдующего
+Длительность: мгновенная
+Время чтения: 3
+Зона действия: 1 существо
+Спасбросок: реакции, половина урона
 
-This spell enables the caster to hurl fiery arrows at his enemies. Each bolt inflicts 4-24 points of fire damage. Only half of the fire damage is inflicted if the creature rolls a successful Reflex save. The caster can fire one bolt for every four experience levels (two bolts at 8th level, three at 12th level, etc.). Flame Arrow bypasses spell resistance.~
-@1631    = ~Minor Elemental Barrier~
-@1632    = ~Minor Elemental Barrier
-(Abjuration) 
-Level: Clr 2, Drd 2, Pal 2, Rgr 1, Sor/Wiz 2, Ilmater 1
-Range: Touch 
-Duration: 2 rounds / level 
-Casting Time: 5 
-Area of Effect: 1 creature
-Saving Throw: None 
+Это заклинание позволяет колдующему обрушить на голову врага огненные стрелы. Каждая стрела наносит 4d6 очков огненного урона. При успешном спасброске реакции существо получает только половину огненного урона. Колдующий может выпустить одну стрелу за каждые четыре уровня опыта (две стрелы на 8-м уровне, три на 12-м и т.д.). Это заклинание игнорирует сопротивление магии.~
+@1631    = ~Малый барьер стихий~
+@1632    = ~Малый барьер стихий
+(Отречение)
+Уровень: священник 2, друид 2, паладин 2, следопыт 1, колдун/волшебник 2, жрец Ильматера 1
+Дальность: прикосновение
+Длительность: 2 раунда/уровень
+Время чтения: 5
+Зона действия: 1 существо
+Спасбросок: нет
 
-This spell toughens the target creature's body to withstand fire and cold, granting a 10/- fire and cold resistance bonus for the duration of the spell.
-~
-@1633    = ~Protection from Fire~
-@1634    = ~Protection from Fire 
-(Abjuration) 
-Level: Clr 3, Drd 3, Rgr 3, Sor/Wiz 3, Selune 3
-Range: Touch 
-Duration: 3 rounds/level
-Casting Time: 6
-Area of Effect: 1 creature
-Saving Throw: None 
+Это заклинание закаляет тело выбранного существа, делая его невосприимчивым к огню и холоду, даруя сопротивлению огню и холоду на 10/- на время действия заклинания.~
+@1633    = ~Защита от огня~
+@1634    = ~Защита от огня
+(Отречение)
+Уровень: священник 3, друид 3, следопыт 3, колдун/волшебник 3, жрец Селуны 3
+Дальность: прикосновение
+Длительность: 3 раунда/уровень
+Время чтения: 6
+Зона действия: 1 существо
+Спасбросок: нет
 
-This spell grants a damage resistance of 20/- against fire to the target for the duration.
-~
-@1635    = ~Protection from Lightning~
-@1636    = ~Protection from Lightning 
-(Abjuration) 
-Level: Clr 4, Drd 3, Rgr 3
-Range: Touch
-Duration: 5 rounds/level
-Casting Time: 7
-Area of Effect: 1 creature
-Saving Throw: None 
+Это заклинание дарует 20/- сопротивление огненному урону на время действия заклинания.~
+@1635    = ~Защита от молний~
+@1636    = ~Защита от молний 
+(Отречение)
+Уровень: священник 4, друид 3, следопыт 3
+Дальность: прикосновение 
+Длительность: 5 раундов/уровень
+Время чтения: 7 
+Зона действия: 1 существо
+Спасбросок: нет 
 
-This spell grants a 30/- electricity resistance bonus to the target creature for the duration.
-~
-@1637    = ~Vitriolic Sphere~
-@1638    = ~Vitriolic Sphere
-(Conjuration)
-Level: Sor/Wiz 4
-Range: Sight of Caster
-Duration: Special
-Casting Time: 4
-Area of Effect: Special
-Saving Throw: Reflex half
+Это заклинание дарует 30/- сопротивление электрическому урону на время действия заклинания.~
+@1637    = ~Кислотный шар~
+@1638    = ~Кислотный шар
+(Призывание)
+Уровень: колдун/волшебник 4
+Дальность: обзор колдующего
+Длительность: особая
+Время чтения: 4
+Зона действия: особая
+Спасбросок: реакции, половина урона
 
-This spell conjures a sphere of glowing emerald acid that the caster can direct to strike any target within range. When it reaches its target, the sphere explodes and drenches the victim in potent acid. The victim suffers 1d4 points of acid damage per caster level, to a maximum of 12d4 points of damage (Reflex half). After the initial damage, the victim must make a Reflex save every round which will reduce the damage for that round by half and also stop any further acid damage. If unsuccessful, the victim continues to suffer acid damage in the following rounds, sustaining two less dice of damage each round. For example, an 8th-level wizard inflicts 8d4 damage with this spell on the first round, 6d4 on the second round, 4d4 on the third round, 2d4 on the fourth round, and the spell ends on the fifth round. Each round the victim is entitled to a Reflex save to avoid further damage in any remaining rounds. 
+Это заклинание создаёт светящийся кислотный шар изумрудного цвета, который можно направить на любую цель в пределах досягаемости. Достигнув цели, шар взрывается и обливает жертву сильнодействующей кислотой. Жертва получает 1d4 единиц кислотного урона за уровень заклинателя, максимальные повреждения составляют 12d4 единиц (успешный спасбросок реакции снижает урон в два раза). После получения первичных повреждений жертва должна каждый раунд делать спасбросок реакции, что уменьшит урон за этот раунд в два раза, а также прекратит дальнейшие повреждения. В случае неудачи жертва продолжает получать урон на протяжении следующих раундов, в каждом раунде получая на 2 кости меньше урона, чем в предыдущем. Например, волшебник 8го уровня наносит этим заклинанием 8d4 урона в первом раунде, 6d4 - во втором, 4d4 - в третьем, 2d4 в четвёртом раунде, после чего действие заклинания оканчивается. В каждом раунде жертва может прокинуть спасбросок реакции для избежания дальнейшего урона в оставшихся раундах. 
 
-The vitriolic sphere also splashes acid in a 5-foot radius around the primary target. Any creatures within the splash radius must make a Reflex save or suffer a splash hit that inflicts 1d4 points of damage per every five levels of the caster. Splash hits do not cause continuing damage.
+Кислотный шар также разбрызгивает кислоту с радиусом 5 футов вокруг основной цели. Все существа, находящиеся в этом пространстве тоже должны прокинуть спасбросок реакции, иначе пострадают от брызг, получая 1d4 единиц урона за каждые пять уровней заклинателя. Брызги не вызывают дополнительного урона в следующих раундах. Это заклинание игнорирует сопротивление магии.~
+@1639    = ~Праведный гнев верующих~
+@1640    = ~Праведный гнев верующих
+(Чародейство)
+Уровень: священник 5, паладин 4
+Дальность: колдующий
+Длительность: 8 раундов
+Время чтения: 8
+Зона действия: радиус 30 футов
+Спасбросок: нет
 
-Vitriolic Sphere bypasses spell resistance.~
-@1639    = ~Righteous Wrath of the Faithful~
-@1640    = ~Righteous Wrath of the Faithful
-(Enchantment)
-Level: Clr 5, Pal 4
-Range: Caster
-Duration: 8 rounds
-Casting Time: 8
-Area of Effect: 30-foot radius
-Saving Throw: None
+Заклинание приводит союзников колдующего в состояние своеобразного религиозного экстаза, улучшающего их способности в бою. Все попавшие в область охвата заклинания союзники колдующего получают +2 к броскам атаки, урона и спасброскам. Персонажи одного мировоззрения с колдующим получают +3 к броскам атаки, урона и спасброскам вместо +2.~
+@1641    = ~Вызов молнии~
+@1642    = ~Вызов молнии
+(Преобразования)
+Уровень: священник 5, друид 3, следопыт 4, колдун/волшебник 6
+Дальность: заклинатель
+Длительность: 5 раундов/уровень
+Время чтения: 1 раунд
+Зона действия: обзор колдующего
+Спасбросок: реакции, половина урона
 
-This spell bestows a form of divine madness upon the priest's allies, improving their combat skills. All the priest's allies in the area of effect gain a +2 to attack rolls, damage rolls, and saving throws. Creatures of the same alignment as the caster gain +3 to attack rolls, damage rolls and saving throws instead of +2.~
-@1641    = ~Call Lightning~
-@1642    = ~Call Lightning
-(Transmutation)
-Level: Clr 5, Drd 3, Rgr 4, Sor/Wiz 6
-Range: Caster
-Duration: 5 rounds/level
-Casting Time: 1 round
-Area of Effect: Sight of Caster
-Saving Throw: Reflex half
-
-When a Call Lightning spell is cast, it must be cast outside, otherwise it will not work and the spell is wasted. The caster is able to call down bolts of lightning. The caster can call down one bolt per 5 rounds. The spell has a duration of 5 rounds per caster level. Each bolt causes 2d10 points of electrical damage plus 1d10 per level (maximum of 12d10 at level 10). A successful Reflex save with +4 DC halves the damage. The bolt of lightning flashes down in a vertical stroke at any of the caster's enemies. The caster does not choose the targets of the spell, though the lightning will not strike any of their allies.~
-
+Заклинание следует применять только на открытом воздухе, иначе оно не сработает и будет потрачено зря. Колдующий может призывать молнию один раз за 5 раундов. Заклинание длится 5 раундов за каждый уровень колдующего. Каждый разряд наносит 2d10 электрического урона и 1d10 дополнительного урона за каждый уровень заклинателя (вплоть до 12d10 на 10 уровне). Успешный спасбросок реакции с +4 к УС уменьшает урон вдвое. Молния бьёт вертикально вниз прямо во врага колдующего. Колдующий не может выбирать цель заклинания, однако молния не будет бить по дружественным ему существам.~
 @1653    = ~Minor Globe of Invulnerability~
 @1654    = ~Minor Globe of Invulnerability
 (Abjuration) 
