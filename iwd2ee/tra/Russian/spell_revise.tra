@@ -1299,51 +1299,50 @@
 Спасбросок: реакции, половина урона
 
 Заклинание следует применять только на открытом воздухе, иначе оно не сработает и будет потрачено зря. Колдующий может призывать молнию один раз за 5 раундов. Заклинание длится 5 раундов за каждый уровень колдующего. Каждый разряд наносит 2d10 электрического урона и 1d10 дополнительного урона за каждый уровень заклинателя (вплоть до 12d10 на 10 уровне). Успешный спасбросок реакции с +4 к УС уменьшает урон вдвое. Молния бьёт вертикально вниз прямо во врага колдующего. Колдующий не может выбирать цель заклинания, однако молния не будет бить по дружественным ему существам.~
-@1653    = ~Minor Globe of Invulnerability~
-@1654    = ~Minor Globe of Invulnerability
-(Abjuration) 
-Level: Sor/Wiz 4
-Range: Caster
-Duration: 3 rounds/level
-Casting Time: 4 
-Area of Effect: Caster
-Saving Throw: None 
+@1653    = ~Малая сфера неуязвимости~
+@1654    = ~Малая сфера неуязвимости
+(Отречение)
+Уровень: колдун/волшебник 4
+Дальность: колдующий
+Длительность: 3 раунда/уровень
+Время чтения: 4
+Зона действия: колдующий
+Спасбросок: нет
 
-This spell creates an immobile, faintly shimmering magical sphere around the caster that prevents any 1st-, 2nd-, or 3rd-level spell effects from affecting the caster. This includes innate abilities and effects from devices. However, any type of spell can be cast out of the magical sphere with no penalty, and strictly defensive mage spells that only impact the caster, such as Mirror Image, may still be cast (non-defensive spells and those which can be cast on other characters, such as Death Armor and Protection from Evil, will be blocked). The globe can be brought down by a successful Dispel Magic spell.~
-@1655    = ~Globe of Invulnerability~
-@1656    = ~Globe of Invulnerability
-(Abjuration)
-Level: Sor/Wiz 6, Helm 6
-Range: Caster
-Duration: 3 rounds/level
-Casting Time: 6
-Area of Effect: Caster
-Saving Throw: None 
+Это заклинание создаёт вокруг колдующего неподвижную, слегка мерцающую магическую сферу, которая защищает чародея от эффектов заклинаний 1-го, 2-го или 3-го уровней, в том числе врождённых способностей и эффектов от устройств. Тем не менее, находясь внутри магического шара, можно читать любое заклинание без ограничений и защитные заклинания, воздействующие на самого заклинателя (например "Отражённый образ") могут быть прочитаны, в то время, как не защитные заклинания и защитные заклинания, накладываемые на других существ (например "Защита от зла") будут заблокированы. Сфера может быть рассеяна с помощью успешного заклинания "Развеять магию".~
+@1655    = ~Сфера неуязвимости~
+@1656    = ~Сфера неуязвимости
+(Отречение)
+Уровень: колдун/волшебник 6, жрец Хелма 6
+Дальность: колдующий
+Длительность: 3 раунда/уровень
+Время чтения: 6
+Зона действия: колдующий
+Спасбросок: нет
 
-This spell is similar to the 4th level wizard spell, Minor Globe of Invulnerability, except that it protects the caster from 4th- and 5th-level spells as well.~
-@1657    = ~Conjure Animals~
-@1658    = ~Conjure Animals
-(Conjuration) 
-Level: Drd 5, Rgr 5
-Range: Sight of Caster
-Duration: 40 rounds
-Casting Time: 9
-Area of Effect: Special 
-Saving Throw: None
+Действует так же, как заклинание 4-го уровня "Малая сфера неуязвимости", но защищает также и от заклинаний 4-го и 4-го уровней.~
+@1657    = ~Призыв животных~
+@1658    = ~Призыв животных
+(Призывание)
+Уровень: друид 5, следопыт 5
+Дальность: обзор колдующего
+Длительность: 40 раундов
+Время чтения: 9
+Зона действия: особая
+Спасбросок: нет
 
-This spell summons forth 1d3 massive mountain bears that will obey commands from the caster for the duration of the spell.
-~
-@1659    = ~Dimension Door~
-@1660    = ~Dimension Door 
-(Transmutation) 
-Level: Brd 1, Sor/Wiz 1, Selune 4
-Range: 20 feet + 2 feet/level
-Duration: Instantaneous
-Casting Time: 0
-Area of Effect: Caster
-Saving Throw: None 
+Это заклинание позволяет призвать 1d3 могучих горных медведей, который будет повиноваться приказам вызвавшего его в течение действия заклинания.~
+@1659    = ~Дверь измерений~
+@1660    = ~Дверь измерений
+(Преобразование)
+Уровень: бард 1, колдун/волшебник 1, жрец Селуны 4
+Дальность: 20 футов + 2 фута/уровень
+Длительность: мгновенно
+Время чтения: 0
+Зона действия: колдующий
+Спасбросок: нет
 
-This spell teleports the caster to any point within the range of the spell. The point can be outside the caster's visual range, but it must be a location the party has seen.~
+Это заклинание переносит колдующего на любое место в пределах дальности действия заклинания. Это место может находиться вне радиуса обзора заклинателя, но оно должно быть предварительно обнаружено им или его группой.~
 @1661    = ~Spook~
 @1662    = ~Spook 
 (Illusion)
