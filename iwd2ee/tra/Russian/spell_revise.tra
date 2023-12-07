@@ -1186,7 +1186,7 @@
 Зона действия: 1 существо
 Спасбросок: нет
 
-Это заклинание позволяет колдующему поменяться местами с другим существом - без спасброска. Любые метательные или магические снаряды, которые в полете были направлены на колдующего, перенаправляются на цель заклинания и наоборот. Это заклинание может быть применено к любому существу, которое видит группа, даже если колдующий его не видит. На существ и предметы, являющиеся частью рельефа или зданий, это заклинание не действует.~
+Это заклинание позволяет колдующему поменяться местами с другим существом - без спасброска. Любые метательные или магические снаряды, которые в полете были направлены на колдующего, перенаправляются на цель заклинания и наоборот. Это заклинание может быть применено к любому существу, которое видит группа, даже если колдующий его не видит. На существ предметы, являющихся частью рельефа или зданий, это заклинание не действует.~
 @1591    = ~Солнечный луч~
 @1592    = ~Солнечный луч
 (Проявление)
@@ -1343,77 +1343,74 @@
 Спасбросок: нет
 
 Это заклинание переносит колдующего на любое место в пределах дальности действия заклинания. Это место может находиться вне радиуса обзора заклинателя, но оно должно быть предварительно обнаружено им или его группой.~
-@1661    = ~Spook~
-@1662    = ~Spook 
-(Illusion)
-Level: Brd 1, Sor/Wiz 1
-Range: Sight of Caster
-Duration: 3 rounds
-Casting Time: 1
-Area of Effect: 1 creature
-Saving Throw: Will negates 
+@1661    = ~Приведение~
+@1662    = ~Приведение
+(Иллюзия)
+Уровень: бард 1, колдун/волшебник 1
+Дистанция: поле видимости заклинателя
+Длительность: 3 раунда
+Время чтения: 1
+Зона действия: 1 существо
+Спасбросок: воли, отменяет
 
-A Spook spell enables the wizard to play upon natural fears to cause the target creature to perceive the spellcaster as someone or something inimical which then appears to advance upon it in a threatening manner. If the creature does not make a successful Will save, it panics. The DC gets +1 for every two experience levels of the caster, to a maximum of +6 at 12th level. Although the caster does not actually pursue the fleeing creature, a phantasm from its own mind does. Spook does not affect undead.
-~
-@1663    = ~Protection from Magic Energy~
-@1664    = ~Protection from Magic Energy 
-(Abjuration) 
-Level: Sor/Wiz 6
-Range: Touch 
-Duration: 10 rounds / level
-Casting Time: 6
-Area of Effect: 1 creature 
-Saving Throw: None 
+Это заклинание позволяет заклинателю сыграть на естественных страхах, оно заставляет объект воспринять заклинателя как нечто враждебное, внезапно явившееся и с угрозой надвигающееся на него. Если существу не удаётся спасбросок воли, оно поворачивается и с максимальной скоростью убегает как можно дальше от заклинателя. УС заклинания увеличивается на один за каждые два уровня заклинателя до максимума +6 на 12 уровне. На самом деле заклинатель не преследует убегающее существо, но это делает созданный им фантом. Заклинание не действует на нежить.~
+@1663    = ~Защита от магической энергии~
+@1664    = ~Защита от магической энергии
+(Отречение)
+Уровень: колдун/волшебник 6
+Дальность: прикосновение
+Длительность: 10 раундов / уровень
+Время чтения: 6
+Зона действия: 1 существо
+Спасбросок: нет
 
-This spell grants a +30 magic damage resistance bonus for the duration of the spell.
-~
-@1665    = ~Translocation Trick~
-@1666    = ~Translocation Trick
-(Transmutation)
-Level: Sor/Wiz 2, Brd 2
-Range: Sight of Caster
-Duration: Instantaneous
-Casting Time: 0
-Area of Effect: Special
-Saving Throw: None
+Это заклинание дарует +30 к сопротивлению магическому урону на время действия заклинания.~
+@1665    = ~Перемена мест~
+@1666    = ~Перемена мест
+(Преобразование)
+Уровень: колдун/волшебник 2, бард 2
+Дальность: обзор колдующего
+Длительность: мгновенно
+Время чтения: 0
+Зона действия: особая
+Спасбросок: нет
 
-This spell allows the caster to switch positions with another creature - there is no Saving Throw. Stationary creatures that are part of a structure are unaffected by this spell.
-~
-@1667    = ~Lutzaen's Local Teleport~
-@1668    = ~Lutzaen's Local Teleport
-(Transmutation)
-Level: Brd 5, Sor/Wiz 5
-Range: Anywhere in current area
-Duration: Instantaneous
-Casting Time: 2
-Area of Effect: Party
-Saving Throw: None
+Это заклинание позволяет колдующему поменяться местами с другим существом, без спасброска. Стационарные существа, являющиеся частью рельефа или зданий не подвержены эффекту этого заклинания.~
+@1667    = ~Локальный телепор Луцаэна~
+@1668    = ~Локальный телепор Луцаэна
+(Преобразование)
+Уровень: бард 5, колдун/волшебник 5
+Дальность: любая точка в текущей области
+Длительность: мгновенная
+Время чтения: 2
+Зона действия: группа
+Спасбросок: нет
 
-Lutzaen's Local Teleport lets the caster teleport their party to another location in the same area. The target point can be anywhere in the area, even if the caster cannot see it. Since the teleport distance is relatively short, there is no chance of the teleportation going wrong.~
-@1670    = ~Emotion: Despair~
-@1671    = ~Emotion: Despair
-(Enchantment)
-Level: Brd 3, Sor/Wiz 4, Bane 4, Mask 4
-Range: Sight of Caster
-Duration: 10 rounds
-Casting Time: 4
-Area of Effect: 15' radius
-Saving Throw: None
+Это заклинание позволяет колдующему переместить всю группу в текущей области. Точка назначения - любая, даже если она находится вне области видимости заклинателя. Так как дистанция телепортации относительно небольшая - это заклинания всегда удаётся.~
+@1670    = ~Эмоция: Отчаяние~
+@1671    = ~Эмоция: Отчаяние
+(Чародейство)
+Уровень: бард 3, колдун/волшебник 4, жрец Бейна 4, жрец Маска 4
+Дальность: зона видимости колдующего
+Длительность: 10 раундов
+Время использования: 4
+Зона действия: радиус 15 футов
+Спасбросок: нет
 
-This spell creates the emotion of despair within the area of effect. All creatures affected by the spell gain a -2 penalty on their saving throws, attack bonuses, and damage rolls. Allies and unnatural creatures are unaffected.~
-@1672    = ~Animate Zombie~
-@1673    = ~Animate Zombie 
-(Necromancy) 
-Level: Clr 3, Sor/Wiz 5, Tempus 3
-Range: Sight of Caster
-Duration: Instantaneous 
-Casting Time: 9
-Area of Effect: Special 
-Saving Throw: None
+Заклинание вызывает чувство отчаяния у всех существ, оказавшихся в зоне поражения. Все затронутые заклинанием существа получают -2 к спасброскам, броскам атаки и урона. Союзники и неестественные существа (например, нежить) не подвергаются воздействию этого заклинания.~
+@1672    = ~Создание зомби~
+@1673    = ~Создание зомби
+(Некромантия)
+Уровень: священник 3, колдун/волшебник 5, жрец Темпуса 3
+Дальность: обзор колдующего
+Длительность: мгновенно
+Время чтения: 9
+Зона действия: особая
+Спасбросок: нет
 
-This spell brings forth a long-dead zombie from deep within the earth and reanimates it to serve the caster. The higher the level of the caster, the more powerful the zombie summoned by this spell.
+Это заклинание призывает давно умершего человека в виде зомби. Оно поднимает труп из под земли, воскрешает его и заставляет служить колдующему. Чем выше уровень колдующего, тем сильнее призванный этим заклинанием зомби.
 
-WARNING: At higher levels, the Zombie Lords and Festering Drowned Dead summoned by this spell have powerful supernatural auras. The effects of their auras may harm your own party members if they fall within the area of affect.~
+ВНИМАНИЕ: Повелители зомби и гниющие утопленники высоких уровней обладают сильными сверхъестественными аурами, которые могут причинить вред попавшим в зону их действия членам вашей группы.~
 @1674    = ~Animate Skeleton~
 @1675    = ~Animate Skeleton 
 (Necromancy) 
