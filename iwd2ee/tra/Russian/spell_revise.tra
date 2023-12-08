@@ -1505,65 +1505,61 @@
 Спасбросок: нет
 
 После прочтения руки колдующего наполняются электрической энергией, которая высвобождается при успешном прикосновении. Атака наносит 1d10 электрического урона на уровень заклинателя (до максимум 5d10). Если на цели надеты металлические доспехи (кольчуга, пластинчатый доспех, полулаты, сплошной латный доспех или полный латный доспех), атака касание производится с бонусом +3. Это заклинание не провоцирует атаку при возможности.~
-@1690    = ~Snakebite~
-@1691    = ~Snakebite 
-(Transmutation) 
-Level: Drd 3, Rgr 2
-Range: Caster
-Duration: 1 round/level
-Casting Time: 5
-Area of Effect: Caster
-Saving Throw: Fortitude negates
+@1690    = ~Укус змеи~
+@1691    = ~Укус змеи
+(Преобразование)
+Уровень: друид 3, следопыт 2
+Дальность: колдующий
+Длительность: 1 раунд/уровень
+Время чтения: 5
+Зона действия: колдующий
+Спасбросок: стойкости, отменяет
 
-This spell transforms the caster's hands and arms into snakes which can be employed in combat, attacking twice per round. Each attack deals 1d3 piercing damage and the target must make a Fortitude save or be poisoned - the poison paralyzes and deals 6 poison damage per round over the next 4 rounds.
-~
-@1692    = ~Expeditious Retreat~
-@1693    = ~Expeditious Retreat 
-(Transmutation)
-Level: Clr 2, Ilmater 2, Rgr 2
-Range: Touch
-Duration: 5 rounds
-Casting Time: 1
-Area of Effect: 15' radius
-Saving Throw: None
+Благодаря этому заклинанию руки заклинателя превращаются в змей, которых можно дважды за раунд использовать для нападения в бою. Каждая атака наносит по 1d3 очка колющего урона и может отравить цель, если той не удастся прокинуть спасбросок стойкости. Яд парализует цель и наносит 6 очков урона ядом за раунд в течение 4-х раундов.~
+@1692    = ~Быстрое отступление~
+@1693    = ~Быстрое отступление
+(Преобразование)
+Уровень: священник 2, жрец Ильматера 2, следопыт 2
+Дальность: прикосновение
+Длительность: 5 раунда
+Время чтения: 1
+Зона действия: радиус 15 футов
+Спасбросок: нет
 
-This spell grants incredible speed to all friendly creatures within the area of effect. All creatures affected by the spell will gain a +12 bonus to movement rate for the duration.
-~
-@1694    = ~Disintegrate~
-@1695    = ~Disintegrate
-(Transmutation)
-Level: Sor/Wiz 6
-Range: Sight of Caster
-Duration: Instantaneous
-Casting Time: 5
-Area of Effect: 1 creature
-Saving Throw: Fortitude partial
+Эти чары увеличивают скорость всех дружественных существа в области действия заклинания на короткий промежуток времени. Все задействованные заклинанием существа получают +12 к скорости на протяжении действия заклинания.~
+@1694    = ~Распыление~
+@1695    = ~Распыление
+(Преобразование)
+Уровень: колдун/волшебник 6
+Дальность: обзор колдующего
+Длительность: мгновенно
+Время чтения: 5
+Зона действия: 1 существо
+Спасбросок: стойкости, особый
 
-The spell turns a creature to dust. When cast, a ball of green energy shoots forth from the caster to the target, who will be disintegrated unless they make a Fortitude save with +2 DC. If the victim makes their saving throw, they will only suffer 5d6 magic damage. If they fail, however, they will suffer 2d6 magic damage per caster level (max 40d6). A party member killed by this spell cannot be raised with Raise Dead, but can still be brought back by Resurrection. This spell works on undead creatures.~
-@1696    = ~Power Word: Blind~
-@1697    = ~Power Word: Blind
-(Divination)
-Level: Brd 7, Sor/Wiz 8, Tempus 7, Bane 8
-Range: Sight of Caster
-Duration: Special
-Casting Time: 0
-Area of Effect: 10-foot radius
-Saving Throw: None
+Это заклинание превращает цель в пыль. Из пальцев колдующего в цель вылетает зелёный энергетический шар, и если цель не прокинет спасбросок стойкости с +2 к УС, она распадётся на части. При успешном спасброске цель в любом случае получит 5d6 магического урона. В случае проваленного спасброска цель получает 2d6 магического урона за уровень заклинателя (до максимума в 40d6). Член группы, убитый этим заклинанием, не может быть воскрешён с помощью заклинания "Оживление мёртвого", только с помощью заклинания "Воскрешение". Это заклинание работает также и против нежити.~
+@1696    = ~Слово силы: Ослепить~
+@1697    = ~Слово силы: Ослепить
+(Прорицание)
+Уровень: бард 7, колдун/волшебник 8, жрец Темпуса 7, жрец Бейна 8
+Дальность: обзор колдующего
+Длительность: особая
+Время чтения: 0
+Зона действия: радиус 10 футов
+Спасбросок: нет
 
-This spell blinds enemy creatures within the area of effect. The duration of the blindness depends on the Hit Dice of the creature. Creatures of 9 or less Hit Dice are blinded permanently, those greater than 9 HD but less than 20 are blinded for 1d4 +1 minutes, while those having 20 or greater Hit Dice are blinded for 1d4+1 rounds. This spell has no effect on deaf creatures.
-~
-@1698    = ~Blindness~
-@1699    = ~Blindness
-(Illusion)
-Level: Brd 2, Sor/Wiz 2, Mask 2
-Range: Sight of Caster
-Duration: 15 rounds
-Casting Time: 2
-Area of Effect: 1 creature 
-Saving Throw: Fortitude negates
+Это заклинание ослепляет находящихся в зоне действия противников. Длительность ослепления зависит от уровня здоровья жертвы. Существа с 9-м и меньше уровнем здоровья будут ослеплены навеки; те, у кого уровень здоровья больше 9, но меньше 20, ослепляются на 1d4+1 минуту; те же, у кого уровень здоровья 20 и больше, ослепляются на 1d4+1 раунда. Это заклинание не работе на глухих существ.~
+@1698    = ~Ослепление~
+@1699    = ~Ослепление
+(Иллюзия)
+Уровень: бард 2, колдун/волшебник 2, жрец Маска 2
+Дальность: обзор колдующего
+Длительность: 15 раундов
+Время чтения: 2
+Зона действия: 1 существо
+Спасбросок: стойкости, отменяет
 
-This spell blinds one creature. Blind creatures are at a significant disadvantage in combat, with a -2 penalty to AC, no AC bonus from dexterity, and attacks by the blind creature are 50% likely to outright miss (all opponents have full concealment). Symbol spells have no effect on blind creatures.
-~
+Заклинание ослепляет одно существо. Ослеплённая жертва получает -2 к классу защиты, не получает бонусов к классу защиты за ловкость, а атаки слепого существа с 50% вероятностью промахиваются мимо цели (как если бы все противники были полностью укрыты). Это заклинание не работает на слепых существ.~
 @1700    = ~Deafness~
 @1701    = ~Deafness
 (Illusion)
