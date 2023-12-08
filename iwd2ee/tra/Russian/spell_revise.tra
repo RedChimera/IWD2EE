@@ -1562,64 +1562,50 @@
 Заклинание ослепляет одно существо. Ослеплённая жертва получает -2 к классу защиты, не получает бонусов к классу защиты за ловкость, а атаки слепого существа с 50% вероятностью промахиваются мимо цели (как если бы все противники были полностью укрыты). Это заклинание не работает на слепых существ.~
 @1700    = ~Оглушение~
 @1701    = ~Оглушение
-(Преобразование)
+(Иллюзия)
 Уровень: бард 2, колдун/волшебник 2
 Дистанция: поле зрения заклинателя
 Длительность: 1 день
 Время чтения: 2
 Зона действия: 1 существо
-Спасбросок: стойкости, отменяет
+Спасбросок: нет
 
-Заклинание оглушения полностью отнимает у объекта слух и любую чувствительность к звукам. Оглушённый заклинатель в 20% случаев провалит чтение любого произносимого заклинания. Оглушение можно удалить заклинанием "Развеивание магии" или другими схожими по эффекту действиями.~
-Deafness
-(Illusion)
-Level: Brd 2, Sor/Wiz 2
-Range: Sight of Caster
-Duration: 1 day
-Casting Time: 2
-Area of Effect: 1 creature
-Saving Throw: None
+Заклинание оглушения полностью отнимает у объекта слух и любую чувствительность к звукам. Оглушённый заклинатель в 20% случаев провалит чтение любого произносимого заклинания. Оглушение можно удалить заклинанием "Развеивание магии" или другими схожими по эффекту действиями. Глухие существа не восприимчивы к заклинаниям "Слово Силы", песням барда, и атакам основанным на звуках, вроде вопля банши.~
+@1714    = ~Воскрешение~
+@1715    = ~Воскрешение
+(Призывание)
+Уровень: священник 7, жрец Латандера 8
+Дальность: прикосновение
+Длительность: мгновенно 
+Время чтения: 1 раундов
+Зона действия: 1 существо
+Спасбросок: нет
 
-This spell will make the target totally deaf. Deafened spellcasters are 20% more likely to miscast any spell. This deafness can be done away with by a dispel magic spell and similar effects. Deaf creatures are immune to Power Word spells, bard songs, and sound-based attacks such as a harpy's wail.
-~
-@1714    = ~Resurrection~
-@1715    = ~Resurrection
-(Conjuration)
-Level: Clr 7, Lathander 8
-Range: Touch 
-Duration: Instantaneous 
-Casting Time: 1 round
-Area of Effect: 1 creature
-Saving Throw: None
+Это заклинание работает как и заклинание "Оживление мёртвого", но воскрешает персонажа с максимальным запасом здоровья и силами. Чтобы заклинание сработало, умерший должен быть в группе. Существо воскресает с полными запасом здоровья и бодрым.
 
-As Raise Dead, except you are able to restore life and complete strength to a deceased character. The deceased character must be in the party for the spell to work. Upon completion of the spell, the creature is immediately restored to full hit points, vigor and health.
+Обратите внимание, что при чтении со свитка заклинание менее эффективно. Свиток можно применить только в том месте, где погибла цель; если прочитать свиток в другой области, ничего не произойдёт.~
+@1716    = ~Улучшенная проворность~
+@1717    = ~Улучшенная проворность
+(Универсальная)
+Уровень: колдун/волшебник 9, священник 9, друид 9
+Дальность: колдующий
+Длительность: 3 раунда
+Время чтения: 1 раундов
+Зона действия: колдующий
+Спасбросок: нет
 
-Note that when this spell is inscribed on a scroll, its power and range is diminished. A scroll of Resurrection only works when invoked at the place where the target died; if the caster leaves the area and attempts to resurrect his companion, the scroll will not work.
-~
+Это заклинание устраняет перерыв между произнесением заклинаний, позволяя заклинателю начать новое заклинание, как только он закончит произносить предыдущее. Заклинатель под действием Улучшенной проворности может произнести несколько заклинаний в течение одного раунда, но концентрация накладывает штраф -3 к скорости произнесения заклинаний на время действия этого заклинания.~
+@1718    = ~Размытие~
+@1719    = ~Размытие
+(Иллюзия)
+Уровень: бард 2, колдун/волшебник 2, жрец Маска 2
+Дальность: колдующий
+Длительность: 10 раундов/уровень
+Время чтения: 2
+Зона действия: колдующий
+Спасбросок: нет
 
-@1716    = ~Improved Alacrity~
-@1717    = ~Improved Alacrity
-(Universal)
-Level: Sor/Wiz 9, Clr 9, Drd 9
-Range: Caster 
-Duration: 3 rounds
-Casting Time: 1 round
-Area of Effect: Caster
-Saving Throw: None 
-
-This spell eliminates the interval between spellcasting, allowing the caster to begin a new spell as soon as he or she finishes casting the previous one. A spellcaster under the effects of Improved Alacrity can cast multiple spells in the space of a single round, but the concentration involved imposes a -3 penalty to casting speed for the duration of the spell.
-~
-@1718    = ~Blur~
-@1719    = ~Blur 
-(Illusion)  
-Level: Brd 2, Sor/Wiz 2, Mask 2
-Range: Caster
-Duration: 10 rounds / level 
-Casting Time: 2
-Area of Effect: Caster
-Saving Throw: None
-
-Blur causes the wizard's body to become blurred, shifting and wavering. This distortion gives the caster's attackers a 20% miss chance when trying to hit him.~
+Заклинание делает очертания тела заклинателя размытыми и нечёткими, так что все атаки ближнего и дальнего боя по персонажу с 20% вероятностью не попадают в цель.~
 @1720    = ~Dispel Illusions~
 @1721    = ~Dispel Illusions
 (Divination)
