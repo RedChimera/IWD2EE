@@ -1427,6 +1427,22 @@ function IEex_HookAfterCall(address, assembly)
 	), 4, 4}})
 end
 
+function IEex_HookBeforeAndAfterCall(address, beforeAssembly, afterAssembly)
+
+	local afterCall = address + 0x5
+	local callDest = afterCall + IEex_ReadDword(address + 0x1)
+	IEex_DefineAssemblyLabel("return", afterCall)
+
+	local hookAddress = IEex_WriteAssemblyAuto(IEex_FlattenTable({
+		beforeAssembly,
+		{"!call", {callDest, 4, 4}},
+		afterAssembly,
+		{"!jmp_dword", {afterCall, 4, 4}},
+	}))
+
+	IEex_WriteAssembly(address, {"!jmp_dword", {hookAddress, 4, 4}})
+end
+
 function IEex_HookReturnNOPs(address, nopCount, assembly)
 
 	local afterInstruction = address + 0x5 + nopCount

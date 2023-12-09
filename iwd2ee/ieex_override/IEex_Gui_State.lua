@@ -1074,6 +1074,16 @@ function IEex_Extern_OnSetActionbarState(nState)
 	if IEex_GetGameData() == 0x0 then return end
 end
 
+IEex_TooltipKillReason = {
+	UNKNOWN = 0,
+	EFFECT_LIST_UPDATE = 1,
+}
+
+function IEex_Extern_ShouldTooltipRefreshInsteadOfDying(killReason)
+	IEex_AssertThread(IEex_Thread.Both, true)
+	return killReason == IEex_TooltipKillReason.EFFECT_LIST_UPDATE
+end
+
 function IEex_Extern_CUIManager_fInit_CHUInitialized(CUIManager, resrefPointer)
 
 	IEex_AssertThread(IEex_Thread.Both, true)

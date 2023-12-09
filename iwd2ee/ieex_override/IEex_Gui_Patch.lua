@@ -1010,6 +1010,87 @@
 	IEex_WriteAssembly(0x4D27F4, {"!movsx_eax_word:[edi+byte] 04"})
 	IEex_WriteAssembly(0x4D27FA, {"!movsx_ecx_word:[edi+byte] 06"})
 
+	------------------------------------------------------------------------------
+	-- Tooltips shouldn't be killed every time a character's actionbar updates, --
+	-- for example, when their effect list is processed.                        --
+	------------------------------------------------------------------------------
+
+	local inEffectListButtonArrayUpdateMem = IEex_Malloc(0x4)
+	IEex_WriteDword(inEffectListButtonArrayUpdateMem, 0x0)
+
+	IEex_HookBeforeAndAfterCall(0x734704,
+		{"!mov_[dword]_dword", {inEffectListButtonArrayUpdateMem, 4}, "#1"},
+		{"!mov_[dword]_dword", {inEffectListButtonArrayUpdateMem, 4}, "#0"}
+	)
+
+	local determineTooltipKillReason = IEex_WriteAssemblyAuto({[[
+
+		!push_registers_iwd2
+
+		!cmp_[dword]_byte ]], {inEffectListButtonArrayUpdateMem, 4}, [[ 00
+		!jz_dword >unknown
+
+		!mov_eax ]], {IEex_TooltipKillReason.EFFECT_LIST_UPDATE, 4}, [[
+		!jmp_dword >return
+
+		@unknown
+		!mov_eax ]], {IEex_TooltipKillReason.UNKNOWN, 4}, [[
+
+		@return
+		!pop_registers_iwd2
+		!ret
+	]]})
+
+	local killTooltipHookMem = IEex_Malloc(0x8)
+
+	local shouldTooltipBeRefreshedMem = killTooltipHookMem
+	IEex_WriteDword(shouldTooltipBeRefreshedMem, 0x0)
+
+	local savedTooltipUIManagerMem = killTooltipHookMem + 0x4
+	IEex_WriteDword(savedTooltipUIManagerMem, 0x0)
+
+	IEex_HookRestore(0x4D4060, 0, 7, IEex_FlattenTable({
+		{[[
+			!push_all_registers_iwd2
+			!mov_[dword]_ecx ]], {savedTooltipUIManagerMem, 4}, [[
+		]]},
+		IEex_GenLuaCall("IEex_Extern_ShouldTooltipRefreshInsteadOfDying", {
+			["args"] = {
+				{[[
+					!call ]], {determineTooltipKillReason, 4, 4}, [[
+					!push(eax)
+				]]},
+			},
+			["returnType"] = IEex_LuaCallReturnType.Boolean,
+		}),
+		{[[
+			!jmp_dword >no_error
+
+			@call_error
+			!xor(eax,eax)
+
+			@no_error
+			!mov_[dword]_eax ]], {shouldTooltipBeRefreshedMem, 4}, [[
+
+			!pop_all_registers_iwd2
+		]]},
+	}))
+
+	IEex_HookAfterRestore(0x4D40A8, 0, 7, {[[
+
+		!push_all_registers_iwd2
+
+		!cmp_[dword]_byte ]], {shouldTooltipBeRefreshedMem, 4}, [[ 00
+		!jz_dword >allow_tooltip_kill
+
+		!mov_eax_[dword] ]], {savedTooltipUIManagerMem, 4}, [[
+		!mov([eax+0x76],1) ; m_bIsForceToolTip = 1 ;
+
+		@allow_tooltip_kill
+		!pop_all_registers_iwd2
+	]]})
+
+
 	IEex_EnableCodeProtection()
 
 end)()
