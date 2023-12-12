@@ -1606,51 +1606,50 @@
 Спасбросок: нет
 
 Заклинание делает очертания тела заклинателя размытыми и нечёткими, так что все атаки ближнего и дальнего боя по персонажу с 20% вероятностью не попадают в цель.~
-@1720    = ~Dispel Illusions~
-@1721    = ~Dispel Illusions
-(Divination)
-Level: Clr 3, Sor/Wiz 3, Brd 3, Drd 4
-Range: Caster
-Duration: Instantaneous
-Casting Time: 2
-Area of Effect: Sight of Caster
-Saving Throw: None
+@1720    = ~Развеять Иллюзии~
+@1721    = ~Развеять Иллюзии
+(Прорицание)
+Уровень: священник 3, колдун/волшебник 3, бард 3, друид 4
+Дальность: колдующий
+Длительность: мгновенно
+Время чтения: 2
+Зона действия: поле зрения заклинателя
+Спасбросок: нет
 
-This spell removes all illusionary effects from enemies in the area of effect, including Invisibility, Sanctuary, Mirror Image, and Blur.~
-@1722    = ~Nondetection~
-@1723    = ~Nondetection 
-(Abjuration) 
-Level: Rgr 3, Sor/Wiz 3
-Range: Touch 
-Duration: 1 hour / level
-Casting Time: 3 
-Area of Effect: 1 creature
-Saving Throw: None 
+Это заклинание снимает с врагов в зоне действия все эффекты иллюзий, включая эффекты заклинаний "Невидимость", "Святилище", "Зеркальный образ", "Размытие".~
+@1722    = ~Необнаружение~
+@1723    = ~Необнаружение
+(Отречение)
+Уровень: следопыт 3, колдун/волшебник 3
+Дальность: прикосновение
+Длительность: 1 час/уровень
+Время чтения: 3
+Зона действия: 1 существо
+Спасбросок: нет
 
-By casting this spell, the wizard makes the creature touched undetectable by divination spells such as Dispel Illusions and True Seeing.
-~
-@1724    = ~True Seeing~
-@1725    = ~True Seeing
-(Divination)
-Level: Brd 6, Clr 5, Drd 6, Pal 5, Sor/Wiz 5, Oghma 3
-Range: Sight of Caster
-Duration: 3 rounds/level
-Casting Time: 3
-Area of Effect: 30' radius
-Saving Throw: None 
+Наложив это заклинание, волшебник делает выбранное существо невидимым для заклинаний прорицания, которые обнаруживают скрытых или невидимых существ (то есть таких заклинаний, как "Развеять Иллюзии" или "Истинное видение").~
+@1724    = ~Истинное зрение~
+@1725    = ~Истинное зрение
+(Прорицание)
+Уровень: бард 6, священник 5, друид 6, паладин 5, колдун/волшебник 5, жрец Огмы 3
+Дальность: обзор колдующего
+Длительность: 3 раунда/уровень
+Время чтения: 3
+Зона действия: радиус 30 футов
+Спасбросок: нет
 
-True Seeing dispels all illusions among enemies and reveals any hidden characters in the area of effect (i.e., thieves using stealth), regardless of spell resistance. Mirror Image, Blur, Sanctuary, and all forms of invisibility are removed. Each round for the duration, this effect is repeated, dispelling illusions more recently created. This spell cures any form of blindness and makes the caster immune to blindness for 5 rounds.~
-@1726    = ~Ox's Fortitude~
-@1727    = ~Ox's Fortitude
-(Transmutation) 
-Level: Brd 2, Clr 2, Pal 2, Sor/Wiz 2, Lathander 2
-Range: Touch 
-Duration: 1 hour / level
-Casting Time: 2
-Area of Effect: 1 creature
-Saving Throw: None 
+При сотворении в указанной волшебником точке все действующие в этой области заклинания иллюзий и фантомов будут развеяны, а все скрытые враги (например воры, укрытые в тени) обнаружены, вне зависимости от сопротивления магии. Это включает в себя эффекты заклинаний "Отражённый образ", "Размытие", "Святилище", а также все формы невидимости. Каждый раунд, во время действия заклинания, этот эффект повторяется, развеивая только что созданные иллюзии. Это заклинание также вылечивает все формы слепоты у заклинателя, предоставляя иммунитет к слепоте на 5 раундов.~
+@1726    = ~Выносливость вола~
+@1727    = ~Выносливость вола
+(Преобразование)
+Уровень: бард 2, колдун/волшебник 2, паладин 2, колдун/волшебник 2, жрец Латандера 2
+Дальность: прикосновение
+Длительность: 1 час/уровень
+Время чтения: 2
+Зона действия: 1 существо
+Спасбросок: нет
 
-This spell grants the target creature a +4 constitution bonus for the duration of the spell.~
+Это заклинание увеличивает телосложения существа на 4 на время действия заклинания.~
 @1728    = ~Stone to Flesh~
 @1729    = ~Stone to Flesh 
 (Transmutation) 
