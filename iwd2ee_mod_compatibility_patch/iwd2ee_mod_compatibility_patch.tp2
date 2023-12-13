@@ -30,7 +30,9 @@ LANGUAGE   ~English~
 
 BEGIN @1 REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~usInitialModifications.txt~ @98 FORBID_COMPONENT ~widescreen.tp2~ ~0~ @99 DESIGNATED 0
 
-ACTION_IF MOD_IS_INSTALLED ~Setup-IWD2-Ease.tp2~ ~0~ BEGIN
+ACTION_IF FILE_EXISTS ~iwd2-ease/readme-iwd2-ease.html~ BEGIN OUTER_SET cdeou = 1 END ELSE BEGIN OUTER_SET cdeou = 0 END // no way to version test eou; file is only present post-v15
+
+ACTION_IF MOD_IS_INSTALLED ~Setup-IWD2-Ease.tp2~ ~0~ BEGIN // 0 is deprecated in EoU v16; keep this for < v16
 
 	COPY_EXISTING ~63HALBPB.itm~ ~override~ ~00AROW88.itm~ ~override~ ~00FLAL87.itm~ ~override~
 		LPF ALTER_EFFECT INT_VAR silent=1 check_headers=0 check_globals=1 match_probability1=25 probability1=100 END
@@ -38,7 +40,7 @@ ACTION_IF MOD_IS_INSTALLED ~Setup-IWD2-Ease.tp2~ ~0~ BEGIN
 
 
 
-	ACTION_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~4~ AND NOT MOD_IS_INSTALLED ~Setup-IWD2-Ease.tp2~ ~16~ BEGIN
+	ACTION_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~4~ AND NOT MOD_IS_INSTALLED ~Setup-IWD2-Ease.tp2~ ~14~ BEGIN 
 		COPY_EXISTING ~00SWDB93.itm~ ~override~
 			WRITE_SHORT 0x96 6
 			BUT_ONLY_IF_IT_CHANGES
@@ -46,14 +48,14 @@ ACTION_IF MOD_IS_INSTALLED ~Setup-IWD2-Ease.tp2~ ~0~ BEGIN
 
 END
 
-ACTION_IF MOD_IS_INSTALLED ~Setup-IWD2-Ease.tp2~ ~2~ AND MOD_IS_INSTALLED ~iwd2ee.tp2~ ~0~ BEGIN
+ACTION_IF MOD_IS_INSTALLED ~Setup-IWD2-Ease.tp2~ ~2~ AND MOD_IS_INSTALLED ~iwd2ee.tp2~ ~0~ BEGIN // EoU-2 now skips if IWD2EE-0 is installed; keep this for < v16
 
 	COPY ~iwd2ee/spl/spin148.spl~ ~override~
 		IF_EXISTS
 
 END
 
-ACTION_IF MOD_IS_INSTALLED ~Setup-IWD2-Ease.tp2~ ~3~ BEGIN
+ACTION_IF MOD_IS_INSTALLED ~Setup-IWD2-Ease.tp2~ ~3~ BEGIN // EoU-3 now skips if IWD2EE-4 is installed (the source of this BIT16/good flag); keep this for < v16
 
 	COPY_EXISTING ~60SWDLHA.itm~ ~override~ ~60HFSLHA.itm~ ~override~
 		READ_LONG 0x18 theflags
@@ -63,7 +65,7 @@ ACTION_IF MOD_IS_INSTALLED ~Setup-IWD2-Ease.tp2~ ~3~ BEGIN
 
 
 
-	ACTION_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~4~ AND NOT MOD_IS_INSTALLED ~Setup-IWD2-Ease.tp2~ ~16~ BEGIN
+	ACTION_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~4~ AND NOT MOD_IS_INSTALLED ~Setup-IWD2-Ease.tp2~ ~14~ BEGIN
 		COPY_EXISTING ~00SWDB93.itm~ ~override~
 			WRITE_SHORT 0x96 6
 			BUT_ONLY_IF_IT_CHANGES
@@ -71,7 +73,7 @@ ACTION_IF MOD_IS_INSTALLED ~Setup-IWD2-Ease.tp2~ ~3~ BEGIN
 
 END
 
-ACTION_IF MOD_IS_INSTALLED ~Setup-IWD2-Ease.tp2~ ~5~ AND MOD_IS_INSTALLED ~iwd2ee.tp2~ ~2~ BEGIN
+ACTION_IF MOD_IS_INSTALLED ~Setup-IWD2-Ease.tp2~ ~5~ AND MOD_IS_INSTALLED ~iwd2ee.tp2~ ~2~ BEGIN // EoU-5 now skips if IWD2EE-2 is installed; keep this for < v16
 
 	COPY ~iwd2ee/spl/spl_spell_revisions/spwi807.spl~ ~override~
 		SAY NAME1 @1126
@@ -80,7 +82,7 @@ ACTION_IF MOD_IS_INSTALLED ~Setup-IWD2-Ease.tp2~ ~5~ AND MOD_IS_INSTALLED ~iwd2e
 
 END
 
-ACTION_IF MOD_IS_INSTALLED ~Setup-IWD2-Ease.tp2~ ~6~ AND MOD_IS_INSTALLED ~iwd2ee.tp2~ ~84~ BEGIN
+ACTION_IF MOD_IS_INSTALLED ~Setup-IWD2-Ease.tp2~ ~6~ AND MOD_IS_INSTALLED ~iwd2ee.tp2~ ~84~ BEGIN // EoU-6 now skips if IWD2EE-84 is installed; keep this for < v16
 
 	COPY_EXISTING ~strtxp.2da~ ~override~
 		LPF GET_2DA_ROW INT_VAR numcolumns=2 match_column=0 STR_VAR match=~HUMAN_AASIMAR~ RET aasimarrow=matched END
@@ -96,7 +98,7 @@ ACTION_IF MOD_IS_INSTALLED ~Setup-IWD2-Ease.tp2~ ~6~ AND MOD_IS_INSTALLED ~iwd2e
 
 END
 
-ACTION_IF MOD_IS_INSTALLED ~Setup-IWD2-Ease.tp2~ ~17~ AND MOD_IS_INSTALLED ~iwd2ee.tp2~ ~2~ BEGIN
+ACTION_IF MOD_IS_INSTALLED ~Setup-IWD2-Ease.tp2~ ~17~ AND MOD_IS_INSTALLED ~iwd2ee.tp2~ ~4~ AND !cdeou BEGIN // eou-17 no longer nukes 140 pieces of armor as of v16
 
 COPY_EXISTING_REGEXP ~00LEAT0[1-57]\.itm~ ~override~ ~00CHAN0[1-5]\.itm~ ~override~ ~00PLAT[01][1-4]\.itm~ ~override~ ~00SHLD[01][013-9]\.itm~ ~override~ ~00SHLD9[89]\.itm~ ~override~ ~12SHLD[CKS][TDG]\.itm~ ~override~ ~12HFSD[CKS][TDG]\.itm~ ~override~ ~00CIARM[B-D]\.itm~ ~override~
 	LPF DELETE_ITEM_EQEFFECT INT_VAR opcode_to_delete=86 END
@@ -583,7 +585,7 @@ COPY_EXISTING_REGEXP ~.*\.itm~ ~override~
 END
 
 
-ACTION_IF MOD_IS_INSTALLED ~Setup-IWD2-Ease.tp2~ ~19~ AND MOD_IS_INSTALLED ~iwd2ee.tp2~ ~2~ BEGIN
+ACTION_IF MOD_IS_INSTALLED ~Setup-IWD2-Ease.tp2~ ~19~ AND MOD_IS_INSTALLED ~iwd2ee.tp2~ ~2~ AND !cdeou BEGIN // eou-19 no longer overwrites listspll.2da
 
 	COPY ~iwd2ee/tables/LISTSPLL.2DA~ ~override~
 		IF_EXISTS
@@ -1575,20 +1577,46 @@ COPY_EXISTING_REGEXP ~.*\.itm~ ~override~
 
 ACTION_IF !(MOD_IS_INSTALLED ~Setup-IWD2-Ease.tp2~ ~1~) BEGIN
 
+  // tweaks anthology doesn't have a unitary stacking component, so this nonsense:
+  OUTER_SET cd_ammo_stack_light = 80 // iwd2ee default sans tweaks for: arrows, bolts, bullets, darts
+  OUTER_SET cd_ammo_stack_heavy = 40 // iwd2ee default sans tweaks for: daggers,hammers, axes
+  ACTION_IF MOD_IS_INSTALLED ~setup-cdtweaks.tp2~ ~3080~ BEGIN OUTER_SET cd_ammo_stack_light = 999 cd_ammo_stack_heavy = 999 END ELSE // tweaks Increase Ammo Stacks: unlimited
+//ACTION_IF MOD_IS_INSTALLED ~setup-cdtweaks.tp2~ ~3083~ BEGIN OUTER_SET cd_ammo_stack_light =  40 cd_ammo_stack_heavy =  40 END ELSE // tweaks Increase Ammo Stacks: 40
+  ACTION_IF MOD_IS_INSTALLED ~setup-cdtweaks.tp2~ ~3083~ BEGIN OUTER_SET cd_ammo_stack_light =  80 cd_ammo_stack_heavy =  80 END ELSE // tweaks Increase Ammo Stacks: 80
+  ACTION_IF MOD_IS_INSTALLED ~setup-cdtweaks.tp2~ ~3083~ BEGIN OUTER_SET cd_ammo_stack_light = 120 cd_ammo_stack_heavy = 120 END      // tweaks Increase Ammo Stacks: 120
+  
+  OUTER_SET cd_gem_stack = 20 // iwd2ee default sans tweaks
+  ACTION_IF MOD_IS_INSTALLED ~setup-cdtweaks.tp2~ ~3090~ BEGIN OUTER_SET cd_gem_stack = 999 END ELSE // tweaks increase Gem and Jewelry Stacking: unlimited
+  ACTION_IF MOD_IS_INSTALLED ~setup-cdtweaks.tp2~ ~3091~ BEGIN OUTER_SET cd_gem_stack =  40 END ELSE // tweaks increase Gem and Jewelry Stacking: 40
+  ACTION_IF MOD_IS_INSTALLED ~setup-cdtweaks.tp2~ ~3092~ BEGIN OUTER_SET cd_gem_stack =  80 END ELSE // tweaks increase Gem and Jewelry Stacking: 80
+  ACTION_IF MOD_IS_INSTALLED ~setup-cdtweaks.tp2~ ~3093~ BEGIN OUTER_SET cd_gem_stack = 120 END      // tweaks increase Gem and Jewelry Stacking: 120
+  
+  OUTER_SET cd_potion_stack = 24 // iwd2ee default sans tweaks
+  ACTION_IF MOD_IS_INSTALLED ~setup-cdtweaks.tp2~ ~3100~ BEGIN OUTER_SET cd_potion_stack = 999 END ELSE // tweaks increased Potion Stacking: unlimited
+  ACTION_IF MOD_IS_INSTALLED ~setup-cdtweaks.tp2~ ~3101~ BEGIN OUTER_SET cd_potion_stack =  40 END ELSE // tweaks increased Potion Stacking: 40
+  ACTION_IF MOD_IS_INSTALLED ~setup-cdtweaks.tp2~ ~3102~ BEGIN OUTER_SET cd_potion_stack =  80 END ELSE // tweaks increased Potion Stacking: 80
+  ACTION_IF MOD_IS_INSTALLED ~setup-cdtweaks.tp2~ ~3103~ BEGIN OUTER_SET cd_potion_stack = 120 END      // tweaks increased Potion Stacking: 120
+  
+  OUTER_SET cd_scroll_stack = 50 // iwd2ee default sans tweaks
+  ACTION_IF MOD_IS_INSTALLED ~setup-cdtweaks.tp2~ ~3110~ BEGIN OUTER_SET cd_scroll_stack = 999 END ELSE // tweaks increased Scroll Stacking: unlimited
+//ACTION_IF MOD_IS_INSTALLED ~setup-cdtweaks.tp2~ ~3111~ BEGIN OUTER_SET cd_scroll_stack =  40 END ELSE // tweaks increased Scroll Stacking: 40
+  ACTION_IF MOD_IS_INSTALLED ~setup-cdtweaks.tp2~ ~3112~ BEGIN OUTER_SET cd_scroll_stack =  80 END ELSE // tweaks increased Scroll Stacking: 80
+  ACTION_IF MOD_IS_INSTALLED ~setup-cdtweaks.tp2~ ~3113~ BEGIN OUTER_SET cd_scroll_stack = 120 END      // tweaks increased Scroll Stacking: 120
+
 	COPY_EXISTING_REGEXP ~.*\.itm~ ~override~
 		READ_SHORT 0x1c theitemcategory
 		READ_SHORT 0x38 themaxstack
 		PATCH_IF themaxstack > 1 BEGIN
-			PATCH_IF theitemcategory = 0 OR theitemcategory = 9 OR theitemcategory = 71 BEGIN
-				WRITE_SHORT 0x38 24
-			END ELSE PATCH_IF theitemcategory = 11 BEGIN
-				WRITE_SHORT 0x38 50
-			END ELSE PATCH_IF theitemcategory = 34 BEGIN
-				WRITE_SHORT 0x38 20
-			END ELSE PATCH_IF theitemcategory = 5 OR theitemcategory = 14 OR theitemcategory = 24 OR theitemcategory = 31 BEGIN
-				WRITE_SHORT 0x38 80
-			END ELSE PATCH_IF theitemcategory = 16 OR theitemcategory = 21 OR theitemcategory = 25 BEGIN
-				WRITE_SHORT 0x38 40
+			PATCH_IF theitemcategory = 0 OR theitemcategory = 9 OR theitemcategory = 71 BEGIN // misc, potions, rations
+				WRITE_SHORT 0x38 cd_potion_stack
+			END ELSE PATCH_IF theitemcategory = 11 BEGIN // scrolls
+				WRITE_SHORT 0x38 cd_scroll_stack
+			END ELSE PATCH_IF theitemcategory = 34 BEGIN // gems
+				WRITE_SHORT 0x38 cd_gem_stack
+			END ELSE PATCH_IF theitemcategory = 5 OR theitemcategory = 14 OR theitemcategory = 24 OR theitemcategory = 31 BEGIN // arrows, bolts, bullets, darts
+				WRITE_SHORT 0x38 cd_ammo_stack_light
+			END ELSE PATCH_IF theitemcategory = 16 OR theitemcategory = 21 OR theitemcategory = 25 BEGIN // daggers, hammers, axes
+				WRITE_SHORT 0x38 cd_ammo_stack_heavy
 			END
 		END
 		BUT_ONLY_IF_IT_CHANGES

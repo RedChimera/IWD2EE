@@ -829,9 +829,9 @@ Range: Sight of Caster
 Duration: Permanent 
 Casting Time: 0
 Area of Effect: 1 creature
-Saving Throw: Partial
+Saving Throw: Fortitude partial
 
-Power Word: Kill is the deadliest word of power. The moment the word is spoken, the victim is instantly killed on a failed Will save with +4 DC. Those who survive still suffer 60 magic damage. This spell has no effect on deaf creatures.~
+Power Word: Kill is the deadliest word of power. The moment the word is spoken, the victim is instantly killed on a failed Fortitude save with +4 DC. If they have 100 hit points or less remaining, they do not even get a saving throw. This spell has no effect on deaf creatures.~
 @1142    = ~Wail of the Banshee~
 @1143    = ~Wail of the Banshee 
 (Necromancy)

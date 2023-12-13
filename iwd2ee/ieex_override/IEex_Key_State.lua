@@ -85,13 +85,9 @@ IEex_KeyIDS = {
 	["LEFT_SHIFT"] = 166,
 }
 
-IEex_Keys = IEex_Default( {}, IEex_Keys)
-IEex_Helper_InitBridgeFromTable("IEex_Keys", function()
-	for key = 0x1, 0xFE, 1 do
-		IEex_Keys[key] = {["isDown"] = false}
-	end
-	IEex_Keys.pressedStack = {}
-end)
+---------------------------
+-- Listener Registration --
+---------------------------
 
 -- These need to be readded every IEex_Reload()
 
@@ -112,6 +108,37 @@ function IEex_AddInputStateListener(funcName)
 		IEex_AppendBridgeNL("IEex_InputStateListeners", funcName)
 	end)
 end
+
+function IEex_AddRejectHardcodedWorldScreenKeybindingListener(funcName)
+	IEex_Helper_SynchronizedBridgeOperation("IEex_RejectHardcodedWorldScreenKeybindingListeners", function()
+		IEex_AppendBridgeNL("IEex_RejectHardcodedWorldScreenKeybindingListeners", funcName)
+	end)
+end
+
+function IEex_Key_ReloadListener()
+	IEex_Helper_ClearBridge("IEex_KeyPressedListeners")
+	IEex_Helper_ClearBridge("IEex_KeyReleasedListeners")
+	IEex_Helper_ClearBridge("IEex_InputStateListeners")
+	IEex_Helper_ClearBridge("IEex_RejectHardcodedWorldScreenKeybindingListeners")
+	IEex_ReaddReloadListener("IEex_Key_ReloadListener")
+end
+
+IEex_AbsoluteOnce("IEex_Key_RegisterReloadListener", function()
+	IEex_AddReloadListener("IEex_Key_ReloadListener")
+end)
+
+-----------------------
+-- General Functions --
+-----------------------
+
+IEex_Keys = IEex_Default( {}, IEex_Keys)
+IEex_Helper_InitBridgeFromTable("IEex_Keys", function()
+	for key = 0x1, 0xFE, 1 do
+		IEex_Keys[key] = {["isDown"] = false}
+	end
+	IEex_Keys.pressedStack = {}
+end)
+
 
 function IEex_IsKeyDown(key)
 	return IEex_Helper_GetBridge("IEex_Keys", key, "isDown")
@@ -293,121 +320,6 @@ function IEex_AdjustViewPosition(deltaX, deltaY)
 	IEex_Call(0x5D11F0, {0, math.floor(m_ptCurrentPosExact_y / 10000), math.floor(m_ptCurrentPosExact_x / 10000)}, infinity, 0x0)
 end
 
-function IEex_AdjustViewPositionFromScrollState(scrollState, delta)
-	if scrollState == 6 or scrollState == 7 or scrollState == 8 then
-		IEex_AdjustViewPosition(-delta, 0)
-	end
-	if scrollState == 2 or scrollState == 3 or scrollState == 4 then
-		IEex_AdjustViewPosition(delta, 0)
-	end
-	if scrollState == 1 or scrollState == 2 or scrollState == 8 then
-		IEex_AdjustViewPosition(0, -delta)
-	end
-	if scrollState == 4 or scrollState == 5 or scrollState == 6 then
-		IEex_AdjustViewPosition(0, delta)
-	end
-end
-
-function IEex_Key_ReloadListener()
-	IEex_Helper_ClearBridge("IEex_KeyPressedListeners")
-	IEex_Helper_ClearBridge("IEex_KeyReleasedListeners")
-	IEex_Helper_ClearBridge("IEex_InputStateListeners")
-	IEex_ReaddReloadListener("IEex_Key_ReloadListener")
-end
-
-IEex_AbsoluteOnce("IEex_Key_RegisterReloadListener", function()
-	IEex_AddReloadListener("IEex_Key_ReloadListener")
-end)
-
----------------
--- Scrolling --
----------------
-
-IEex_Scroll_DefaultKeys = {
-	IEex_KeyIDS.UP,    IEex_KeyIDS.NUMPAD8, -- m_nKeyScrollState = 1
-					   IEex_KeyIDS.NUMPAD9, -- m_nKeyScrollState = 2
-	IEex_KeyIDS.RIGHT, IEex_KeyIDS.NUMPAD6, -- m_nKeyScrollState = 3
-					   IEex_KeyIDS.NUMPAD3, -- m_nKeyScrollState = 4
-	IEex_KeyIDS.DOWN,  IEex_KeyIDS.NUMPAD2, -- m_nKeyScrollState = 5
-					   IEex_KeyIDS.NUMPAD1, -- m_nKeyScrollState = 6
-	IEex_KeyIDS.LEFT,  IEex_KeyIDS.NUMPAD4, -- m_nKeyScrollState = 7
-					   IEex_KeyIDS.NUMPAD7, -- m_nKeyScrollState = 8
-}
-
-IEex_Scroll_UpKeys          = { IEex_KeyIDS.UP,    IEex_KeyIDS.NUMPAD8 }
-IEex_Scroll_TopRightKeys    = {                    IEex_KeyIDS.NUMPAD9 }
-IEex_Scroll_RightKeys       = { IEex_KeyIDS.RIGHT, IEex_KeyIDS.NUMPAD6 }
-IEex_Scroll_BottomRightKeys = {                    IEex_KeyIDS.NUMPAD3 }
-IEex_Scroll_DownKeys        = { IEex_KeyIDS.DOWN,  IEex_KeyIDS.NUMPAD2 }
-IEex_Scroll_BottomLeftKeys  = {                    IEex_KeyIDS.NUMPAD1 }
-IEex_Scroll_LeftKeys        = { IEex_KeyIDS.LEFT,  IEex_KeyIDS.NUMPAD4 }
-IEex_Scroll_TopLeftKeys     = {                    IEex_KeyIDS.NUMPAD7 }
-
-IEex_Helper_InitBridgeFromTable("IEex_Scroll_MiddleMouseState", {
-	["isDown"] = false,
-	["oldX"] = 0,
-	["oldY"] = 0,
-})
-
-function IEex_Scroll_CalculateDeltaFactor()
-	local toReturn = 1
-	IEex_Helper_StoreMicroseconds("curTick")
-	if IEex_Helper_ExistsMicroseconds("lastTick") then
-		local diff = IEex_Helper_GetMicrosecondsDiff("curTick", "lastTick")
-		toReturn = diff / 25000
-	end
-	IEex_Helper_AssignMicroseconds("lastTick", "curTick")
-	return toReturn
-end
-
-function IEex_Scroll_ResolveScrollState()
-	local state = 0
-	for _, key in ipairs(IEex_GetPressedKeysStack()) do
-		if IEex_FindInTable(IEex_Scroll_UpKeys, key) then
-			if state == 3 or state == 4 then     -- RIGHT / BOTTOM-RIGHT
-				state = 2                        -- => TOP-RIGHT
-			elseif state == 6 or state == 7 then -- BOTTOM-LEFT / LEFT
-				state = 8                        -- => TOP-LEFT
-			else
-				state = 1                        -- => UP
-			end
-		elseif IEex_FindInTable(IEex_Scroll_TopRightKeys, key) then
-			state = 2                            -- => TOP-RIGHT
-		elseif IEex_FindInTable(IEex_Scroll_RightKeys, key) then
-			if state == 1 or state == 8 then     -- UP / TOP-LEFT
-				state = 2                        -- => TOP-RIGHT
-			elseif state == 5 or state == 6 then -- DOWN / BOTTOM-LEFT
-				state = 4                        -- => BOTTOM-RIGHT
-			else
-				state = 3                        -- => RIGHT
-			end
-		elseif IEex_FindInTable(IEex_Scroll_BottomRightKeys, key) then
-			state = 4                            -- => BOTTOM-RIGHT
-		elseif IEex_FindInTable(IEex_Scroll_DownKeys, key) then
-			if state == 2 or state == 3 then     -- TOP-RIGHT / RIGHT
-				state = 4                        -- => BOTTOM-RIGHT
-			elseif state == 7 or state == 8 then -- LEFT / TOP-LEFT
-				state = 6                        -- => BOTTOM-LEFT
-			else
-				state = 5                        -- => DOWN
-			end
-		elseif IEex_FindInTable(IEex_Scroll_BottomLeftKeys, key) then
-			state = 6                            -- => BOTTOM-LEFT
-		elseif IEex_FindInTable(IEex_Scroll_LeftKeys, key) then
-			if state == 1 or state == 2 then     -- UP / TOP-RIGHT
-				state = 8                        -- => TOP-LEFT
-			elseif state == 4 or state == 5 then -- BOTTOM-RIGHT / DOWN
-				state = 6                        -- => BOTTOM-LEFT
-			else
-				state = 7                        -- => LEFT
-			end
-		elseif IEex_FindInTable(IEex_Scroll_TopLeftKeys, key) then
-			state = 8                            -- => TOP-LEFT
-		end
-	end
-	return state
-end
-
 function IEex_IsWorldScreenAcceptingInput()
 
 	local m_pObjectGame = IEex_GetGameData()
@@ -441,48 +353,9 @@ function IEex_IsGameAutoScrolling()
 		or IEex_ReadDword(CInfinity + 0x192) ~= -1 -- m_ptScrollDest.y
 end
 
-IEex_Scroll_CheckScheduled = false
-
-function IEex_Scroll_CheckKeyboardInput()
-	if IEex_GetActiveEngine() == IEex_GetEngineWorld() then
-		local pVisibleArea = IEex_GetVisibleArea()
-		if pVisibleArea ~= 0x0 and IEex_IsWorldScreenAcceptingInput() and not IEex_IsGameAutoScrolling() then
-			IEex_WriteDword(pVisibleArea + 0x23C, IEex_Scroll_ResolveScrollState())
-			IEex_Scroll_CheckScheduled = false
-			return
-		end
-	end
-	IEex_Scroll_CheckScheduled = true
-end
-
-function IEex_Scroll_KeyPressedListener(key)
-
-	if key == IEex_KeyIDS.MIDDLE_MOUSE_CLICK then
-		IEex_Helper_SynchronizedBridgeOperation("IEex_Scroll_MiddleMouseState", function()
-			IEex_Helper_SetBridgeNL("IEex_Scroll_MiddleMouseState", "isDown", true)
-			local oldX, oldY = IEex_GetCursorXY()
-			IEex_Helper_SetBridgeNL("IEex_Scroll_MiddleMouseState", "oldX", oldX)
-			IEex_Helper_SetBridgeNL("IEex_Scroll_MiddleMouseState", "oldY", oldY)
-		end)
-	end
-
-	IEex_Scroll_CheckKeyboardInput()
-end
-
-function IEex_Scroll_KeyReleasedListener(key)
-
-	if key == IEex_KeyIDS.MIDDLE_MOUSE_CLICK then
-		IEex_Helper_SetBridge("IEex_Scroll_MiddleMouseState", "isDown", false)
-	end
-
-	IEex_Scroll_CheckKeyboardInput()
-end
-
-function IEex_Scroll_InputStateListener()
-	if IEex_Scroll_CheckScheduled then
-		IEex_Scroll_CheckKeyboardInput()
-	end
-end
+---------------
+-- Listeners --
+---------------
 
 ex_buff_reactivate_cooldown = 3
 ex_buff_activate_tick = 0
@@ -810,6 +683,12 @@ ex_levelup_class_selection_buttons_pressed = {[2] = false, [3] = false, [4] = fa
 ex_levelup_class_selection_button_last_pressed = -1
 ex_true_xp = -1
 ex_true_xp_adjusted = -1
+ex_menu_num_wizard_spells_remaining = -1
+ex_menu_wizard_spells_learned = {}
+ex_menu_num_learned_spells_per_level = {0, 0, 0, 0, 0, 0, 0, 0, 0}
+ex_alternate_spell_menu_class = -1
+ex_menu_sorcerer_spells_replaced = {}
+ex_menu_sorcerer_spell_to_replace = ""
 function IEex_LevelUp_ExtraFeatListener()
 	local g_pBaldurChitin = IEex_ReadDword(0x8CF6DC)
 	local levelUpData = IEex_ReadDword(g_pBaldurChitin + 0x1C60)
@@ -817,7 +696,7 @@ function IEex_LevelUp_ExtraFeatListener()
 		local actorID = IEex_ReadDword(levelUpData + 0x136)
 		local share = IEex_GetActorShare(actorID)
 		local panelID = IEex_GetEngineCharacterPanelID()
-		if panelID <= 0 and ex_starting_level[1] ~= -1 then
+		if (panelID <= 0 or panelID == 2) and ex_starting_level[1] ~= -1 then
 			if ex_true_xp ~= -1 then
 				IEex_WriteDword(share + 0x5B4, ex_true_xp)
 --				IEex_WriteDword(share + 0x984, ex_true_xp)
@@ -829,8 +708,126 @@ function IEex_LevelUp_ExtraFeatListener()
 			ex_starting_level = {-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1}
 			ex_starting_skill_points = -1
 			ex_num_level_ups_chosen = 1
-			ex_class_level_up["numLevelUps"] = -1
-			ex_class_level_up["class"] = -1
+			if ex_class_level_up["numLevelUps"] ~= -1 then
+				if ex_class_level_up["class"] == 11 and ex_wizard_spell_learning_on_level_up and ex_wizard_spells_learned_per_level_up > 0 then
+					ex_alternate_spell_menu_class = ex_class_level_up["class"]
+					ex_menu_num_wizard_spells_remaining = ex_class_level_up["numLevelUps"] * ex_wizard_spells_learned_per_level_up
+					ex_menu_in_second_replacement_step = false
+					local screenCharacter = IEex_GetEngineCharacter()
+					local characterRecordPanel = IEex_GetPanelFromEngine(screenCharacter, 2)
+					local newWizardSpellsPanel = IEex_GetPanelFromEngine(screenCharacter, 58)
+					-- Add to popup stack
+					IEex_Call(0x7FBE4E, {newWizardSpellsPanel}, screenCharacter + 0x62A, 0x0) -- CPtrList_AddTail()
+					local trySetPanelEnabled = function(panel, enabled)
+						if panel ~= 0x0 then
+							IEex_SetPanelEnabled(panel, enabled)
+						end
+					end
+				
+					local setCommonPanelsEnabled = function(engine, enabled)
+						trySetPanelEnabled(IEex_GetPanelFromEngine(engine, -2), enabled)
+						trySetPanelEnabled(IEex_GetPanelFromEngine(engine, -3), enabled)
+						trySetPanelEnabled(IEex_GetPanelFromEngine(engine, -4), enabled)
+						trySetPanelEnabled(IEex_GetPanelFromEngine(engine, -5), enabled)
+						IEex_SetPanelEnabled(IEex_GetPanelFromEngine(engine, 0), enabled)
+						IEex_SetPanelEnabled(IEex_GetPanelFromEngine(engine, 1), enabled)
+						IEex_SetPanelEnabled(IEex_GetPanelFromEngine(engine, 2), enabled)
+					end
+					local characterRecordPanelX, characterRecordPanelY, _, _ = IEex_GetPanelArea(characterRecordPanel)
+					setCommonPanelsEnabled(screenCharacter, false)
+--					IEex_SetPanelEnabled(characterRecordPanel, false)
+					IEex_SetToken("EXWLNUM", ex_menu_num_wizard_spells_remaining)
+					IEex_SetControlTextDisplay(IEex_GetControlFromPanel(newWizardSpellsPanel, 30), IEex_FetchString(ex_tra_55772))
+					IEex_SetControlLabelText(IEex_GetControlFromPanel(newWizardSpellsPanel, 34), tostring(ex_menu_num_wizard_spells_remaining))
+					ex_menu_wizard_spells_learned = {}
+					ex_menu_sorcerer_spells_replaced = {}
+					ex_menu_num_learned_spells_per_level = {0, 0, 0, 0, 0, 0, 0, 0, 0}
+					IEex_InitializeWizardLearnList()
+					ex_current_menu_spell_level = ex_menu_max_castable_level
+					IEex_DisplayWizardSpellsToLearn(ex_current_menu_spell_level)
+					IEex_SetPanelEnabled(newWizardSpellsPanel, true)
+--					IEex_SetPanelXY(newWizardSpellsPanel, characterRecordPanelX, characterRecordPanelY)
+					IEex_SetPanelActive(newWizardSpellsPanel, true)
+					IEex_PanelInvalidate(newWizardSpellsPanel)
+				elseif (ex_class_level_up["class"] == 2 and ex_bard_spell_replacement_on_level_up and IEex_GetActorStat(actorID, 97) >= ex_bard_spell_replacement_levels_behind + 2) or (ex_class_level_up["class"] == 10 and ex_sorcerer_spell_replacement_on_level_up and IEex_GetActorStat(actorID, 105) >= ex_sorcerer_spell_replacement_levels_behind + 1) then
+					ex_alternate_spell_menu_class = ex_class_level_up["class"]
+					ex_menu_num_wizard_spells_remaining = 0
+					ex_menu_in_second_replacement_step = false
+					local classLevel = 0
+					local replacementCasterLevel = 0
+					local maxSpell2DA = 0
+					if ex_alternate_spell_menu_class == 2 then
+						classLevel = IEex_GetActorStat(actorID, 97)
+						for i = classLevel - ex_class_level_up["numLevelUps"] + 1, classLevel, 1 do
+							ex_menu_num_wizard_spells_remaining = ex_menu_num_wizard_spells_remaining + ex_bard_spell_replacement_progression[i]
+						end
+						replacementCasterLevel = classLevel - ex_bard_spell_replacement_levels_behind
+						maxSpell2DA = IEex_2DADemand("MXSPLBRD")
+					else
+						classLevel = IEex_GetActorStat(actorID, 105)
+						for i = classLevel - ex_class_level_up["numLevelUps"] + 1, classLevel, 1 do
+							ex_menu_num_wizard_spells_remaining = ex_menu_num_wizard_spells_remaining + ex_sorcerer_spell_replacement_progression[i]
+						end
+						replacementCasterLevel = classLevel - ex_sorcerer_spell_replacement_levels_behind
+						maxSpell2DA = IEex_2DADemand("MXSPLSOR")
+					end
+					ex_menu_max_castable_level = 0
+					local m_nSizeX = IEex_ReadWord(maxSpell2DA + 0x20, 0x0)
+					local m_nSizeY = IEex_ReadWord(maxSpell2DA + 0x22, 0x0)
+					if replacementCasterLevel > 0 and replacementCasterLevel <= m_nSizeY then
+						for i = 0, m_nSizeX - 1, 1 do
+							local numSpellsAtLevel = tonumber(IEex_2DAGetAt(maxSpell2DA, i, (replacementCasterLevel - 1)))
+							if numSpellsAtLevel > 0 then
+								ex_menu_max_castable_level = ex_menu_max_castable_level + 1
+							end
+						end
+					end
+					if ex_menu_num_wizard_spells_remaining > 0 and ex_menu_max_castable_level > 0 then
+						local screenCharacter = IEex_GetEngineCharacter()
+						local characterRecordPanel = IEex_GetPanelFromEngine(screenCharacter, 2)
+						local newWizardSpellsPanel = IEex_GetPanelFromEngine(screenCharacter, 58)
+						-- Add to popup stack
+						IEex_Call(0x7FBE4E, {newWizardSpellsPanel}, screenCharacter + 0x62A, 0x0) -- CPtrList_AddTail()
+						local trySetPanelEnabled = function(panel, enabled)
+							if panel ~= 0x0 then
+								IEex_SetPanelEnabled(panel, enabled)
+							end
+						end
+					
+						local setCommonPanelsEnabled = function(engine, enabled)
+							trySetPanelEnabled(IEex_GetPanelFromEngine(engine, -2), enabled)
+							trySetPanelEnabled(IEex_GetPanelFromEngine(engine, -3), enabled)
+							trySetPanelEnabled(IEex_GetPanelFromEngine(engine, -4), enabled)
+							trySetPanelEnabled(IEex_GetPanelFromEngine(engine, -5), enabled)
+							IEex_SetPanelEnabled(IEex_GetPanelFromEngine(engine, 0), enabled)
+							IEex_SetPanelEnabled(IEex_GetPanelFromEngine(engine, 1), enabled)
+							IEex_SetPanelEnabled(IEex_GetPanelFromEngine(engine, 2), enabled)
+						end
+						local characterRecordPanelX, characterRecordPanelY, _, _ = IEex_GetPanelArea(characterRecordPanel)
+						setCommonPanelsEnabled(screenCharacter, false)
+	--					IEex_SetPanelEnabled(characterRecordPanel, false)
+						if ex_menu_num_wizard_spells_remaining == 1 then
+							IEex_SetControlTextDisplay(IEex_GetControlFromPanel(newWizardSpellsPanel, 30), IEex_FetchString(ex_tra_55773))
+						else
+							IEex_SetToken("EXWLNUM", ex_menu_num_wizard_spells_remaining)
+							IEex_SetControlTextDisplay(IEex_GetControlFromPanel(newWizardSpellsPanel, 30), IEex_FetchString(ex_tra_55774))
+						end
+						IEex_SetControlLabelText(IEex_GetControlFromPanel(newWizardSpellsPanel, 34), tostring(ex_menu_num_wizard_spells_remaining))
+						ex_menu_wizard_spells_learned = {}
+						ex_menu_sorcerer_spells_replaced = {}
+						ex_menu_num_learned_spells_per_level = {0, 0, 0, 0, 0, 0, 0, 0, 0}
+						IEex_InitializeWizardLearnList()
+						ex_current_menu_spell_level = ex_menu_max_castable_level
+						IEex_DisplayWizardSpellsToLearn(ex_current_menu_spell_level)
+						IEex_SetPanelEnabled(newWizardSpellsPanel, true)
+	--					IEex_SetPanelXY(newWizardSpellsPanel, characterRecordPanelX, characterRecordPanelY)
+						IEex_SetPanelActive(newWizardSpellsPanel, true)
+						IEex_PanelInvalidate(newWizardSpellsPanel)
+					end
+				end
+				ex_class_level_up["numLevelUps"] = -1
+				ex_class_level_up["class"] = -1
+			end
 		end
 		if share > 0 then
 			if panelID == 54 then
@@ -1599,30 +1596,27 @@ function IEex_AddButtonListener()
 	end
 end
 
-function IEex_Scroll_RegisterListeners()
+function IEex_Key_RegisterInputListeners()
 	IEex_AddKeyPressedListener("IEex_BuffRecordingListener")
 	IEex_AddKeyPressedListener("IEex_ExtraCheatKeysListener")
 	IEex_AddKeyPressedListener("IEex_ArcaneSightListener")
-	IEex_AddKeyPressedListener("IEex_Scroll_KeyPressedListener")
 	IEex_AddKeyPressedListener("IEex_FakeInputRoutineStartStopListener")
-	IEex_AddKeyReleasedListener("IEex_Scroll_KeyReleasedListener")
 --	IEex_AddKeyReleasedListener("IEex_Chargen_RerollListener")
 	IEex_AddInputStateListener("IEex_AddButtonListener")
 	IEex_AddInputStateListener("IEex_DeathwatchListener")
 	IEex_AddInputStateListener("IEex_AbilityScoreCapListener")
 	IEex_AddInputStateListener("IEex_Chargen_ExtraFeatListener")
 	IEex_AddInputStateListener("IEex_LevelUp_ExtraFeatListener")
-	IEex_AddInputStateListener("IEex_Scroll_InputStateListener")
 end
 
-function IEex_Scroll_ReloadListener()
-	IEex_Scroll_RegisterListeners()
-	IEex_ReaddReloadListener("IEex_Scroll_ReloadListener")
+function IEex_Key_ReloadInputListeners()
+	IEex_Key_RegisterInputListeners()
+	IEex_ReaddReloadListener("IEex_Key_ReloadInputListeners")
 end
 
-IEex_AbsoluteOnce("IEex_Scroll_InitListeners", function()
-	IEex_Scroll_RegisterListeners()
-	IEex_AddReloadListener("IEex_Scroll_ReloadListener")
+IEex_AbsoluteOnce("IEex_Key_InitInputListeners", function()
+	IEex_Key_RegisterInputListeners()
+	IEex_AddReloadListener("IEex_Key_ReloadInputListeners")
 end)
 
 -----------
@@ -1632,51 +1626,6 @@ end)
 ------------------
 -- Thread: Both --
 ------------------
-
-function IEex_Extern_CheckScroll()
-
-	IEex_AssertThread(IEex_Thread.Both, true)
-
-	if IEex_Helper_GetBridge("IEex_Helper_SupressScrollCheck", "value") then
-		return
-	end
-
-	IEex_Helper_SynchronizedBridgeOperation("IEex_Scroll_MiddleMouseState", function()
-
-		if IEex_Helper_GetBridgeNL("IEex_Scroll_MiddleMouseState", "isDown") then
-
-			local cursorX, cursorY = IEex_ScreenToClient(IEex_GetCursorPos())
-			local deltaX = IEex_Helper_GetBridgeNL("IEex_Scroll_MiddleMouseState", "oldX") - cursorX
-			local deltaY = IEex_Helper_GetBridgeNL("IEex_Scroll_MiddleMouseState", "oldY") - cursorY
-
-			if IEex_IsWorldScreenAcceptingInput() and not IEex_IsGameAutoScrolling() then
-				IEex_AdjustViewPosition(deltaX, deltaY)
-			end
-
-			IEex_Helper_SetBridgeNL("IEex_Scroll_MiddleMouseState", "oldX", cursorX)
-			IEex_Helper_SetBridgeNL("IEex_Scroll_MiddleMouseState", "oldY", cursorY)
-		end
-	end)
-
-	local visibleArea = IEex_GetVisibleArea()
-	if visibleArea ~= 0x0 then
-
-		local deltaFactor = IEex_Scroll_CalculateDeltaFactor()
-
-		if not IEex_Helper_GetBridgeNL("IEex_Scroll_MiddleMouseState", "isDown") then
-
-			local m_nScrollState = IEex_ReadDword(visibleArea + 0x238)
-			local m_nKeyScrollState = IEex_ReadDword(visibleArea + 0x23C)
-
-			local gameData = IEex_GetGameData()
-			local scrollSpeed = IEex_ReadDword(gameData + 0x43F2)
-			local keyboardScrollSpeed = IEex_ReadDword(gameData + 0x443E) / 3
-
-			IEex_AdjustViewPositionFromScrollState(m_nScrollState, scrollSpeed * deltaFactor)
-			IEex_AdjustViewPositionFromScrollState(m_nKeyScrollState, keyboardScrollSpeed * deltaFactor)
-		end
-	end
-end
 
 function IEex_GetEffectiveViewBottom(nViewY)
 	return nViewY + IEex_GetMainViewportBottom(false, true)
@@ -2010,10 +1959,13 @@ function IEex_Extern_OnBeforeWorldScreenCheckingHardcodedKeybinding(key)
 
 	IEex_AssertThread(IEex_Thread.Async, true)
 
-	-- Suppress default scroll key handling
-	if IEex_FindInTable(IEex_Scroll_DefaultKeys, key) then
-		return true
-	end
+	local toReturn = false
+	IEex_Helper_IterateBridge("IEex_RejectHardcodedWorldScreenKeybindingListeners", function(_, funcName)
+		if _G[funcName](key) then
+			toReturn = true
+			return true -- break
+		end
+	end)
 
-	return false
+	return toReturn
 end

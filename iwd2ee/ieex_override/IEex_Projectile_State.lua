@@ -129,7 +129,7 @@ IEex_ProjectileType = {
 [270] = 6, [271] = 1, [272] = 7, [273] = 6, [274] = 6, [275] = 6, [276] = 6, [277] = 6, [278] = 6, [279] = 6,
 [280] = 6, [281] = 6, [282] = 6, [283] = 6, [284] = 6, [285] = 1, [286] = 6, [287] = 6, [288] = 6, [289] = 1,
 [290] = 1, [291] = 1, [292] = 1, [293] = 1, [294] = 1, [295] = 6, [296] = 7, [297] = 1, [298] = 1, [299] = 6,
-[300] = 6, [301] = 6, [302] = 4, [303] = 1, [304] = 1, [305] = 16, [306] = 6, [307] = 6, [308] = 6, [309] = 6,
+[300] = 6, [301] = 6, [302] = 4, [303] = 1, [304] = 11, [305] = 16, [306] = 6, [307] = 6, [308] = 6, [309] = 6,
 [310] = 6, [311] = 6, [312] = 12, [313] = 4, [314] = 1, [315] = 7, [316] = 1, [317] = 6, [318] = 6, [319] = 7,
 [320] = 6, [321] = 6, [322] = 6, [323] = 6, [324] = 1, [325] = 3, [326] = 3, [327] = 3, [328] = 3, [329] = 3,
 [330] = 3, [331] = 3, [332] = 3, [333] = 3, [334] = 3, [335] = 6, [336] = 6, [337] = 6, [338] = 6, [339] = 6,
@@ -909,10 +909,10 @@ end
 
 ex_empower_spell = {}
 IEex_MutatorOpcodeFunctions["EXEMPSPL"] = {
-    ["typeMutator"] = function(source, originatingEffectData, creatureData, missileIndex, sourceRES)
+	["typeMutator"] = function(source, originatingEffectData, creatureData, missileIndex, sourceRES)
 
-    end,
-    ["projectileMutator"] = function(source, originatingEffectData, creatureData, projectileData, sourceRES)
+	end,
+	["projectileMutator"] = function(source, originatingEffectData, creatureData, projectileData, sourceRES)
 		local resWrapper = IEex_DemandRes(sourceRES, "SPL")
 		if resWrapper:isValid() then
 			local spellData = resWrapper:getData()
@@ -920,20 +920,20 @@ IEex_MutatorOpcodeFunctions["EXEMPSPL"] = {
 				local actorID = IEex_GetActorIDShare(creatureData)
 				local parameter1 = IEex_ReadDword(originatingEffectData + 0x18)
 			   	local special = IEex_ReadDword(originatingEffectData + 0x44)
-		    	if ex_metamagic_in_use[actorID] ~= nil and ex_metamagic_in_use[actorID]["EXEMPSPL"] ~= nil then
+				if ex_metamagic_in_use[actorID] ~= nil and ex_metamagic_in_use[actorID]["EXEMPSPL"] ~= nil then
 					local savingthrow = IEex_ReadDword(originatingEffectData + 0x3C)
 					if bit.band(savingthrow, 0x10000000) == 0 then
 						savingthrow = bit.bor(savingthrow, 0x10000000)
 						IEex_WriteDword(originatingEffectData + 0x3C, savingthrow)
 						ex_empower_spell[actorID] = nil
 					end
-			    	if source <= 3 or ((source == 5 or source == 6 or source == 7) and ex_is_first_spell[actorID]["EXEMPSPL"] == nil) then
-			    		ex_is_first_spell[actorID]["EXEMPSPL"] = true
+					if source <= 3 or ((source == 5 or source == 6 or source == 7) and ex_is_first_spell[actorID]["EXEMPSPL"] == nil) then
+						ex_is_first_spell[actorID]["EXEMPSPL"] = true
 						ex_empower_spell[actorID] = 0
-			    	end
-			    	if source >= 11 then
-			    		ex_empower_spell[actorID] = nil
-			    	end
+					end
+					if source >= 11 then
+						ex_empower_spell[actorID] = nil
+					end
 					if source ~= 4 and source < 11 and ex_empower_spell[actorID] ~= nil then
 						ex_empower_spell[actorID] = 1
 						ex_projectile_flags[projectileData]["Metamagic"] = bit.bor(ex_projectile_flags[projectileData]["Metamagic"], 0x100000)
@@ -945,7 +945,7 @@ IEex_MutatorOpcodeFunctions["EXEMPSPL"] = {
 		end
 		resWrapper:free()
 	end,
-    ["effectMutator"] = function(source, originatingEffectData, creatureData, projectileData, effectData)
+	["effectMutator"] = function(source, originatingEffectData, creatureData, projectileData, effectData)
 --[[
 		local actorID = IEex_GetActorIDShare(creatureData)
 		if ex_empower_spell[actorID] == 1 then
@@ -954,15 +954,15 @@ IEex_MutatorOpcodeFunctions["EXEMPSPL"] = {
 			IEex_WriteDword(effectData + 0xD4, internalFlags)
 		end
 --]]
-    end,
+	end,
 }
 
 ex_extend_spell = {}
 IEex_MutatorOpcodeFunctions["EXEXTSPL"] = {
-    ["typeMutator"] = function(source, originatingEffectData, creatureData, missileIndex, sourceRES)
+	["typeMutator"] = function(source, originatingEffectData, creatureData, missileIndex, sourceRES)
 
-    end,
-    ["projectileMutator"] = function(source, originatingEffectData, creatureData, projectileData, sourceRES)
+	end,
+	["projectileMutator"] = function(source, originatingEffectData, creatureData, projectileData, sourceRES)
 		local resWrapper = IEex_DemandRes(sourceRES, "SPL")
 		if resWrapper:isValid() then
 			local spellData = resWrapper:getData()
@@ -970,20 +970,20 @@ IEex_MutatorOpcodeFunctions["EXEXTSPL"] = {
 				local actorID = IEex_GetActorIDShare(creatureData)
 				local parameter1 = IEex_ReadDword(originatingEffectData + 0x18)
 			   	local special = IEex_ReadDword(originatingEffectData + 0x44)
-		    	if ex_metamagic_in_use[actorID] ~= nil and ex_metamagic_in_use[actorID]["EXEXTSPL"] ~= nil then
+				if ex_metamagic_in_use[actorID] ~= nil and ex_metamagic_in_use[actorID]["EXEXTSPL"] ~= nil then
 					local savingthrow = IEex_ReadDword(originatingEffectData + 0x3C)
 					if bit.band(savingthrow, 0x10000000) == 0 then
 						savingthrow = bit.bor(savingthrow, 0x10000000)
 						IEex_WriteDword(originatingEffectData + 0x3C, savingthrow)
 						ex_extend_spell[actorID] = nil
 					end
-			    	if source <= 3 or ((source == 5 or source == 6 or source == 7) and ex_is_first_spell[actorID]["EXEXTSPL"] == nil) then
-			    		ex_is_first_spell[actorID]["EXEXTSPL"] = true
+					if source <= 3 or ((source == 5 or source == 6 or source == 7) and ex_is_first_spell[actorID]["EXEXTSPL"] == nil) then
+						ex_is_first_spell[actorID]["EXEXTSPL"] = true
 						ex_extend_spell[actorID] = 0
-			    	end
-			    	if source >= 11 then
-			    		ex_extend_spell[actorID] = nil
-			    	end
+					end
+					if source >= 11 then
+						ex_extend_spell[actorID] = nil
+					end
 					if source ~= 4 and source < 11 and ex_extend_spell[actorID] ~= nil then
 						ex_extend_spell[actorID] = 1
 						ex_projectile_flags[projectileData]["Metamagic"] = bit.bor(ex_projectile_flags[projectileData]["Metamagic"], 0x20000)
@@ -995,7 +995,7 @@ IEex_MutatorOpcodeFunctions["EXEXTSPL"] = {
 		end
 		resWrapper:free()
 	end,
-    ["effectMutator"] = function(source, originatingEffectData, creatureData, projectileData, effectData)
+	["effectMutator"] = function(source, originatingEffectData, creatureData, projectileData, effectData)
 --[[
 		local actorID = IEex_GetActorIDShare(creatureData)
 		if ex_extend_spell[actorID] == 1 then
@@ -1004,12 +1004,12 @@ IEex_MutatorOpcodeFunctions["EXEXTSPL"] = {
 			IEex_WriteDword(effectData + 0xD4, internalFlags)
 		end
 --]]
-    end,
+	end,
 }
 
 ex_mass_spell = {}
 IEex_MutatorOpcodeFunctions["EXMASSPL"] = {
-    ["typeMutator"] = function(source, originatingEffectData, creatureData, missileIndex, sourceRES)
+	["typeMutator"] = function(source, originatingEffectData, creatureData, missileIndex, sourceRES)
 		local resWrapper = IEex_DemandRes(sourceRES, "SPL")
 		if resWrapper:isValid() then
 			local spellData = resWrapper:getData()
@@ -1017,20 +1017,20 @@ IEex_MutatorOpcodeFunctions["EXMASSPL"] = {
 				local actorID = IEex_GetActorIDShare(creatureData)
 				local parameter1 = IEex_ReadDword(originatingEffectData + 0x18)
 			   	local special = IEex_ReadDword(originatingEffectData + 0x44)
-		    	if ex_metamagic_in_use[actorID] ~= nil and ex_metamagic_in_use[actorID]["EXMASSPL"] ~= nil then
+				if ex_metamagic_in_use[actorID] ~= nil and ex_metamagic_in_use[actorID]["EXMASSPL"] ~= nil then
 					local savingthrow = IEex_ReadDword(originatingEffectData + 0x3C)
 					if bit.band(savingthrow, 0x10000000) == 0 then
 						savingthrow = bit.bor(savingthrow, 0x10000000)
 						IEex_WriteDword(originatingEffectData + 0x3C, savingthrow)
 						ex_mass_spell[actorID] = nil
 					end
-			    	if source <= 3 or ((source == 5 or source == 6 or source == 7) and ex_is_first_spell[actorID]["EXMASSPL"] == nil) then
-			    		ex_is_first_spell[actorID]["EXMASSPL"] = true
+					if source <= 3 or ((source == 5 or source == 6 or source == 7) and ex_is_first_spell[actorID]["EXMASSPL"] == nil) then
+						ex_is_first_spell[actorID]["EXMASSPL"] = true
 						ex_mass_spell[actorID] = 0
-			    	end
-			    	if source >= 11 then
-			    		ex_mass_spell[actorID] = nil
-			    	end
+					end
+					if source >= 11 then
+						ex_mass_spell[actorID] = nil
+					end
 					if source ~= 4 and source < 11 and ex_mass_spell[actorID] ~= nil then
 --						ex_projectile_flags[projectileData]["Metamagic"] = bit.bor(ex_projectile_flags[projectileData]["Metamagic"], 0x400000)
 						return 94
@@ -1041,20 +1041,20 @@ IEex_MutatorOpcodeFunctions["EXMASSPL"] = {
 			end
 		end
 		resWrapper:free()
-    end,
-    ["projectileMutator"] = function(source, originatingEffectData, creatureData, projectileData, sourceRES)
+	end,
+	["projectileMutator"] = function(source, originatingEffectData, creatureData, projectileData, sourceRES)
 
 	end,
-    ["effectMutator"] = function(source, originatingEffectData, creatureData, projectileData, effectData)
-    end,
+	["effectMutator"] = function(source, originatingEffectData, creatureData, projectileData, effectData)
+	end,
 }
 
 ex_maximize_spell = {}
 IEex_MutatorOpcodeFunctions["EXMAXSPL"] = {
-    ["typeMutator"] = function(source, originatingEffectData, creatureData, missileIndex, sourceRES)
+	["typeMutator"] = function(source, originatingEffectData, creatureData, missileIndex, sourceRES)
 
-    end,
-    ["projectileMutator"] = function(source, originatingEffectData, creatureData, projectileData, sourceRES)
+	end,
+	["projectileMutator"] = function(source, originatingEffectData, creatureData, projectileData, sourceRES)
 		local resWrapper = IEex_DemandRes(sourceRES, "SPL")
 		if resWrapper:isValid() then
 			local spellData = resWrapper:getData()
@@ -1062,20 +1062,20 @@ IEex_MutatorOpcodeFunctions["EXMAXSPL"] = {
 				local actorID = IEex_GetActorIDShare(creatureData)
 				local parameter1 = IEex_ReadDword(originatingEffectData + 0x18)
 			   	local special = IEex_ReadDword(originatingEffectData + 0x44)
-		    	if ex_metamagic_in_use[actorID] ~= nil and ex_metamagic_in_use[actorID]["EXMAXSPL"] ~= nil then
+				if ex_metamagic_in_use[actorID] ~= nil and ex_metamagic_in_use[actorID]["EXMAXSPL"] ~= nil then
 					local savingthrow = IEex_ReadDword(originatingEffectData + 0x3C)
 					if bit.band(savingthrow, 0x10000000) == 0 then
 						savingthrow = bit.bor(savingthrow, 0x10000000)
 						IEex_WriteDword(originatingEffectData + 0x3C, savingthrow)
 						ex_maximize_spell[actorID] = nil
 					end
-			    	if source <= 3 or ((source == 5 or source == 6 or source == 7) and ex_is_first_spell[actorID]["EXMAXSPL"] == nil) then
-			    		ex_is_first_spell[actorID]["EXMAXSPL"] = true
+					if source <= 3 or ((source == 5 or source == 6 or source == 7) and ex_is_first_spell[actorID]["EXMAXSPL"] == nil) then
+						ex_is_first_spell[actorID]["EXMAXSPL"] = true
 						ex_maximize_spell[actorID] = 0
-			    	end
-			    	if source >= 11 then
-			    		ex_maximize_spell[actorID] = nil
-			    	end
+					end
+					if source >= 11 then
+						ex_maximize_spell[actorID] = nil
+					end
 					if source ~= 4 and source < 11 and ex_maximize_spell[actorID] ~= nil then
 						ex_maximize_spell[actorID] = 1
 						ex_projectile_flags[projectileData]["Metamagic"] = bit.bor(ex_projectile_flags[projectileData]["Metamagic"], 0x200000)
@@ -1087,7 +1087,7 @@ IEex_MutatorOpcodeFunctions["EXMAXSPL"] = {
 		end
 		resWrapper:free()
 	end,
-    ["effectMutator"] = function(source, originatingEffectData, creatureData, projectileData, effectData)
+	["effectMutator"] = function(source, originatingEffectData, creatureData, projectileData, effectData)
 --[[
 		local actorID = IEex_GetActorIDShare(creatureData)
 		if ex_maximize_spell[actorID] == 1 then
@@ -1096,15 +1096,15 @@ IEex_MutatorOpcodeFunctions["EXMAXSPL"] = {
 			IEex_WriteDword(effectData + 0xD4, internalFlags)
 		end
 --]]
-    end,
+	end,
 }
 
 ex_persistent_spell = {}
 IEex_MutatorOpcodeFunctions["EXPERSPL"] = {
-    ["typeMutator"] = function(source, originatingEffectData, creatureData, missileIndex, sourceRES)
+	["typeMutator"] = function(source, originatingEffectData, creatureData, missileIndex, sourceRES)
 
-    end,
-    ["projectileMutator"] = function(source, originatingEffectData, creatureData, projectileData, sourceRES)
+	end,
+	["projectileMutator"] = function(source, originatingEffectData, creatureData, projectileData, sourceRES)
 		local resWrapper = IEex_DemandRes(sourceRES, "SPL")
 		if resWrapper:isValid() then
 			local spellData = resWrapper:getData()
@@ -1112,20 +1112,20 @@ IEex_MutatorOpcodeFunctions["EXPERSPL"] = {
 				local actorID = IEex_GetActorIDShare(creatureData)
 				local parameter1 = IEex_ReadDword(originatingEffectData + 0x18)
 			   	local special = IEex_ReadDword(originatingEffectData + 0x44)
-		    	if ex_metamagic_in_use[actorID] ~= nil and ex_metamagic_in_use[actorID]["EXPERSPL"] ~= nil then
+				if ex_metamagic_in_use[actorID] ~= nil and ex_metamagic_in_use[actorID]["EXPERSPL"] ~= nil then
 					local savingthrow = IEex_ReadDword(originatingEffectData + 0x3C)
 					if bit.band(savingthrow, 0x10000000) == 0 then
 						savingthrow = bit.bor(savingthrow, 0x10000000)
 						IEex_WriteDword(originatingEffectData + 0x3C, savingthrow)
 						ex_persistent_spell[actorID] = nil
 					end
-			    	if source <= 3 or ((source == 5 or source == 6 or source == 7) and ex_is_first_spell[actorID]["EXPERSPL"] == nil) then
-			    		ex_is_first_spell[actorID]["EXPERSPL"] = true
+					if source <= 3 or ((source == 5 or source == 6 or source == 7) and ex_is_first_spell[actorID]["EXPERSPL"] == nil) then
+						ex_is_first_spell[actorID]["EXPERSPL"] = true
 						ex_persistent_spell[actorID] = 0
-			    	end
-			    	if source >= 11 then
-			    		ex_persistent_spell[actorID] = nil
-			    	end
+					end
+					if source >= 11 then
+						ex_persistent_spell[actorID] = nil
+					end
 					if source ~= 4 and source < 11 and ex_persistent_spell[actorID] ~= nil then
 						ex_persistent_spell[actorID] = 1
 						ex_projectile_flags[projectileData]["Metamagic"] = bit.bor(ex_projectile_flags[projectileData]["Metamagic"], 0x10000)
@@ -1137,7 +1137,7 @@ IEex_MutatorOpcodeFunctions["EXPERSPL"] = {
 		end
 		resWrapper:free()
 	end,
-    ["effectMutator"] = function(source, originatingEffectData, creatureData, projectileData, effectData)
+	["effectMutator"] = function(source, originatingEffectData, creatureData, projectileData, effectData)
 --[[
 		local actorID = IEex_GetActorIDShare(creatureData)
 		if ex_persistent_spell[actorID] == 1 then
@@ -1146,28 +1146,28 @@ IEex_MutatorOpcodeFunctions["EXPERSPL"] = {
 			IEex_WriteDword(effectData + 0xD4, internalFlags)
 		end
 --]]
-    end,
+	end,
 }
 
 ex_quicken_spell = {}
 IEex_MutatorOpcodeFunctions["EXQUISPL"] = {
-    ["typeMutator"] = function(source, originatingEffectData, creatureData, missileIndex, sourceRES)
+	["typeMutator"] = function(source, originatingEffectData, creatureData, missileIndex, sourceRES)
 
-    end,
-    ["projectileMutator"] = function(source, originatingEffectData, creatureData, projectileData, sourceRES)
+	end,
+	["projectileMutator"] = function(source, originatingEffectData, creatureData, projectileData, sourceRES)
 	
 	end,
-    ["effectMutator"] = function(source, originatingEffectData, creatureData, projectileData, effectData)
+	["effectMutator"] = function(source, originatingEffectData, creatureData, projectileData, effectData)
 
-    end,
+	end,
 }
 
 ex_safe_spell = {}
 IEex_MutatorOpcodeFunctions["EXSAFSPL"] = {
-    ["typeMutator"] = function(source, originatingEffectData, creatureData, missileIndex, sourceRES)
+	["typeMutator"] = function(source, originatingEffectData, creatureData, missileIndex, sourceRES)
 
-    end,
-    ["projectileMutator"] = function(source, originatingEffectData, creatureData, projectileData, sourceRES)
+	end,
+	["projectileMutator"] = function(source, originatingEffectData, creatureData, projectileData, sourceRES)
 		local resWrapper = IEex_DemandRes(sourceRES, "SPL")
 		if resWrapper:isValid() then
 			local spellData = resWrapper:getData()
@@ -1175,20 +1175,20 @@ IEex_MutatorOpcodeFunctions["EXSAFSPL"] = {
 				local actorID = IEex_GetActorIDShare(creatureData)
 				local parameter1 = IEex_ReadDword(originatingEffectData + 0x18)
 			   	local special = IEex_ReadDword(originatingEffectData + 0x44)
-		    	if ex_metamagic_in_use[actorID] ~= nil and ex_metamagic_in_use[actorID]["EXSAFSPL"] ~= nil then
+				if ex_metamagic_in_use[actorID] ~= nil and ex_metamagic_in_use[actorID]["EXSAFSPL"] ~= nil then
 					local savingthrow = IEex_ReadDword(originatingEffectData + 0x3C)
 					if bit.band(savingthrow, 0x10000000) == 0 then
 						savingthrow = bit.bor(savingthrow, 0x10000000)
 						IEex_WriteDword(originatingEffectData + 0x3C, savingthrow)
 						ex_safe_spell[actorID] = nil
 					end
-			    	if source <= 3 or ((source == 5 or source == 6 or source == 7) and ex_is_first_spell[actorID]["EXSAFSPL"] == nil) then
-			    		ex_is_first_spell[actorID]["EXSAFSPL"] = true
+					if source <= 3 or ((source == 5 or source == 6 or source == 7) and ex_is_first_spell[actorID]["EXSAFSPL"] == nil) then
+						ex_is_first_spell[actorID]["EXSAFSPL"] = true
 						ex_safe_spell[actorID] = 0
-			    	end
-			    	if source >= 11 then
-			    		ex_safe_spell[actorID] = nil
-			    	end
+					end
+					if source >= 11 then
+						ex_safe_spell[actorID] = nil
+					end
 					if source ~= 4 and source < 11 and ex_safe_spell[actorID] ~= nil then
 						ex_safe_spell[actorID] = 1
 						ex_projectile_flags[projectileData]["Metamagic"] = bit.bor(ex_projectile_flags[projectileData]["Metamagic"], 0x80000)
@@ -1200,7 +1200,7 @@ IEex_MutatorOpcodeFunctions["EXSAFSPL"] = {
 		end
 		resWrapper:free()
 	end,
-    ["effectMutator"] = function(source, originatingEffectData, creatureData, projectileData, effectData)
+	["effectMutator"] = function(source, originatingEffectData, creatureData, projectileData, effectData)
 --[[
 		local actorID = IEex_GetActorIDShare(creatureData)
 		if ex_safe_spell[actorID] == 1 then
@@ -1209,19 +1209,19 @@ IEex_MutatorOpcodeFunctions["EXSAFSPL"] = {
 			IEex_WriteDword(effectData + 0xD4, internalFlags)
 		end
 --]]
-    end,
+	end,
 }
 
 ex_widen_spell = {}
 IEex_MutatorOpcodeFunctions["EXWIDSPL"] = {
-    ["typeMutator"] = function(source, originatingEffectData, creatureData, missileIndex, sourceRES)
-    
-    end,
-    ["projectileMutator"] = function(source, originatingEffectData, creatureData, projectileData, sourceRES)
+	["typeMutator"] = function(source, originatingEffectData, creatureData, missileIndex, sourceRES)
+	
+	end,
+	["projectileMutator"] = function(source, originatingEffectData, creatureData, projectileData, sourceRES)
 		local actorID = IEex_GetActorIDShare(creatureData)
-    	if (source == 11 or source == 12 or source == 13 or source == 14) and IEex_GetActorSpellState(actorID, 246) then
-    		local projectileIndex = IEex_ReadWord(projectileData + 0x6E, 0x0)
-    		IEex_IterateActorEffects(sourceID, function(eData)
+		if (source == 11 or source == 12 or source == 13 or source == 14) and IEex_GetActorSpellState(actorID, 246) then
+			local projectileIndex = IEex_ReadWord(projectileData + 0x6E, 0x0)
+			IEex_IterateActorEffects(sourceID, function(eData)
 				local theopcode = IEex_ReadDword(eData + 0x10)
 				local theparameter2 = IEex_ReadDword(eData + 0x20)
 				local theinternalFlags = bit.bor(IEex_ReadDword(eData + 0xD0), IEex_ReadDword(eData + 0xD8))
@@ -1245,7 +1245,7 @@ IEex_MutatorOpcodeFunctions["EXWIDSPL"] = {
 					end
 				end
 			end)
-    	end
+		end
 		local resWrapper = IEex_DemandRes(sourceRES, "SPL")
 		if resWrapper:isValid() then
 			local spellData = resWrapper:getData()
@@ -1253,20 +1253,20 @@ IEex_MutatorOpcodeFunctions["EXWIDSPL"] = {
 
 				local parameter1 = IEex_ReadDword(originatingEffectData + 0x18)
 			   	local special = IEex_ReadDword(originatingEffectData + 0x44)
-		    	if ex_metamagic_in_use[actorID] ~= nil and ex_metamagic_in_use[actorID]["EXWIDSPL"] ~= nil then
+				if ex_metamagic_in_use[actorID] ~= nil and ex_metamagic_in_use[actorID]["EXWIDSPL"] ~= nil then
 					local savingthrow = IEex_ReadDword(originatingEffectData + 0x3C)
 					if bit.band(savingthrow, 0x10000000) == 0 then
 						savingthrow = bit.bor(savingthrow, 0x10000000)
 						IEex_WriteDword(originatingEffectData + 0x3C, savingthrow)
 						ex_widen_spell[actorID] = nil
 					end
-			    	if source <= 3 or ((source == 5 or source == 6 or source == 7) and ex_is_first_spell[actorID]["EXWIDSPL"] == nil) then
-			    		ex_is_first_spell[actorID]["EXWIDSPL"] = true
+					if source <= 3 or ((source == 5 or source == 6 or source == 7) and ex_is_first_spell[actorID]["EXWIDSPL"] == nil) then
+						ex_is_first_spell[actorID]["EXWIDSPL"] = true
 						ex_widen_spell[actorID] = 0
-			    	end
-			    	if source >= 11 then
-			    		ex_widen_spell[actorID] = nil
-			    	end
+					end
+					if source >= 11 then
+						ex_widen_spell[actorID] = nil
+					end
 					if source ~= 4 and source < 11 and ex_widen_spell[actorID] ~= nil then
 						ex_widen_spell[actorID] = 1
 						ex_projectile_flags[projectileData]["Metamagic"] = bit.bor(ex_projectile_flags[projectileData]["Metamagic"], 0x40000)
@@ -1287,7 +1287,7 @@ IEex_MutatorOpcodeFunctions["EXWIDSPL"] = {
 		end
 		resWrapper:free()
 	end,
-    ["effectMutator"] = function(source, originatingEffectData, creatureData, projectileData, effectData)
+	["effectMutator"] = function(source, originatingEffectData, creatureData, projectileData, effectData)
 --[[
 		local actorID = IEex_GetActorIDShare(creatureData)
 		if ex_widen_spell[actorID] == 1 then
@@ -1300,15 +1300,15 @@ IEex_MutatorOpcodeFunctions["EXWIDSPL"] = {
 			end
 		end
 --]]
-    end,
+	end,
 }
 
 IEex_MutatorGlobalFunctions["MEMETAGL"] = {
-    ["typeMutator"] = function(source, creatureData, missileIndex, sourceRES)
-    end,
-    ["projectileMutator"] = function(source, creatureData, projectileData, sourceRES)
+	["typeMutator"] = function(source, creatureData, missileIndex, sourceRES)
 	end,
-    ["effectMutator"] = function(source, creatureData, projectileData, effectData)
+	["projectileMutator"] = function(source, creatureData, projectileData, sourceRES)
+	end,
+	["effectMutator"] = function(source, creatureData, projectileData, effectData)
 		if ex_projectile_flags[projectileData] ~= nil then
 
 			local internalFlags = bit.bor(IEex_ReadDword(effectData + 0xCC), IEex_ReadDword(effectData + 0xD4))
@@ -1322,17 +1322,17 @@ IEex_MutatorGlobalFunctions["MEMETAGL"] = {
 			IEex_WriteDword(effectData + 0xCC, internalFlags)
 			IEex_WriteDword(effectData + 0xD4, internalFlags)
 		end
-    end,
+	end,
 }
 
 IEex_MutatorOpcodeFunctions["MEATKSAV"] = {
-    ["typeMutator"] = function(source, originatingEffectData, creatureData, missileIndex, sourceRES)
+	["typeMutator"] = function(source, originatingEffectData, creatureData, missileIndex, sourceRES)
 	end,
-    ["projectileMutator"] = function(source, originatingEffectData, creatureData, projectileData, sourceRES)
-    
-    end,
+	["projectileMutator"] = function(source, originatingEffectData, creatureData, projectileData, sourceRES)
+	
+	end,
 
-    ["effectMutator"] = function(source, originatingEffectData, creatureData, projectileData, effectData)
+	["effectMutator"] = function(source, originatingEffectData, creatureData, projectileData, effectData)
 		local actorID = IEex_GetActorIDShare(creatureData)
 		local opcode = IEex_ReadDword(effectData + 0xC)
 		local matchProjectile = IEex_ReadDword(originatingEffectData + 0x18)
@@ -1369,14 +1369,14 @@ IEex_MutatorOpcodeFunctions["MEATKSAV"] = {
 			IEex_WriteDword(effectData + 0x3C, bit.bor(IEex_ReadDword(effectData + 0x3C), 0x8))
 			IEex_WriteDword(effectData + 0x40, savebonus)
 		end
-    end,
+	end,
 }
 
 
 
 ex_is_boulder_shot = {}
 IEex_MutatorOpcodeFunctions["MEBOULSH"] = {
-    ["typeMutator"] = function(source, originatingEffectData, creatureData, missileIndex, sourceRES)
+	["typeMutator"] = function(source, originatingEffectData, creatureData, missileIndex, sourceRES)
 		local actorID = IEex_GetActorIDShare(creatureData)
 		if ex_is_boulder_shot[actorID] == nil then
 			ex_is_boulder_shot[actorID] = {}
@@ -1431,11 +1431,11 @@ IEex_MutatorOpcodeFunctions["MEBOULSH"] = {
 		end
 		return newMissileIndex
 	end,
-    ["projectileMutator"] = function(source, originatingEffectData, creatureData, projectileData, sourceRES)
-    
-    end,
+	["projectileMutator"] = function(source, originatingEffectData, creatureData, projectileData, sourceRES)
+	
+	end,
 
-    ["effectMutator"] = function(source, originatingEffectData, creatureData, projectileData, effectData)
+	["effectMutator"] = function(source, originatingEffectData, creatureData, projectileData, effectData)
 		local actorID = IEex_GetActorIDShare(creatureData)
 		local opcode = IEex_ReadDword(effectData + 0xC)
 		local damageType = IEex_ReadWord(effectData + 0x1E, 0x0)
@@ -1469,28 +1469,28 @@ IEex_MutatorOpcodeFunctions["MEBOULSH"] = {
 			end
 			IEex_WriteDword(effectData + 0x18, IEex_ReadDword(effectData + 0x18) + damageBonus)
 		end
-    end,
+	end,
 }
 
 IEex_MutatorOpcodeFunctions["MEMODDTP"] = {
-    ["typeMutator"] = function(source, originatingEffectData, creatureData, missileIndex, sourceRES)
-    
+	["typeMutator"] = function(source, originatingEffectData, creatureData, missileIndex, sourceRES)
+	
 	end,
-    ["projectileMutator"] = function(source, originatingEffectData, creatureData, projectileData, sourceRES)
-    
-    end,
+	["projectileMutator"] = function(source, originatingEffectData, creatureData, projectileData, sourceRES)
+	
+	end,
 
-    ["effectMutator"] = function(source, originatingEffectData, creatureData, projectileData, effectData)
+	["effectMutator"] = function(source, originatingEffectData, creatureData, projectileData, effectData)
 		local opcode = IEex_ReadDword(effectData + 0xC)
 		if opcode == 12 and IEex_ReadLString(effectData + 0x90, 8) == "IEEX_DAM" and (IEex_ReadLString(effectData + 0x6C, 8) == IEex_ReadLString(originatingEffectData + 0x90, 8) or IEex_ReadLString(effectData + 0x74, 8) == IEex_ReadLString(originatingEffectData + 0x90, 8)) then
 			local newDamageType = IEex_ReadWord(originatingEffectData + 0x18, 0x0)
 			IEex_WriteWord(effectData + 0x1E, newDamageType)
 		end
-    end,
+	end,
 }
 
 IEex_MutatorGlobalFunctions["METIMESL"] = {
-    ["typeMutator"] = function(source, creatureData, missileIndex, sourceRES)
+	["typeMutator"] = function(source, creatureData, missileIndex, sourceRES)
 --[[
 		if missileIndex == 335 and ex_time_slow_speed_divisor == 0x7FFFFFFF then
 			local timeSlowed = IEex_CheckGlobalEffect(0x2)
@@ -1499,80 +1499,80 @@ IEex_MutatorGlobalFunctions["METIMESL"] = {
 			end
 		end
 --]]
-    end,
-    ["projectileMutator"] = function(source, creatureData, projectileData, sourceRES)
-    	if ex_time_slow_speed_divisor ~= 0x7FFFFFFF then
+	end,
+	["projectileMutator"] = function(source, creatureData, projectileData, sourceRES)
+		if ex_time_slow_speed_divisor ~= 0x7FFFFFFF then
 			local timeSlowed = IEex_CheckGlobalEffect(0x2)
 			if timeSlowed then
 				IEex_WriteWord(projectileData + 0x70, math.ceil(IEex_ReadWord(projectileData + 0x70, 0x0) / ex_time_slow_speed_divisor))
 			end
 		end
 	end,
-    ["effectMutator"] = function(source, creatureData, projectileData, effectData)
-    end,
+	["effectMutator"] = function(source, creatureData, projectileData, effectData)
+	end,
 }
 
 --[[
 IEex_MutatorGlobalFunctions["USPR954"] = {
-    ["typeMutator"] = function(source, creatureData, missileIndex, sourceRES)
+	["typeMutator"] = function(source, creatureData, missileIndex, sourceRES)
 
-    end,
-    ["projectileMutator"] = function(source, creatureData, projectileData, sourceRES)
-    	if ex_true_spell[sourceRES] ~= nil then
-    		sourceRES = ex_true_spell[sourceRES]
-    	end
-    	local projectileIndex = IEex_ReadWord(projectileData + 0x6E, 0x0)
+	end,
+	["projectileMutator"] = function(source, creatureData, projectileData, sourceRES)
+		if ex_true_spell[sourceRES] ~= nil then
+			sourceRES = ex_true_spell[sourceRES]
+		end
+		local projectileIndex = IEex_ReadWord(projectileData + 0x6E, 0x0)
 --		if sourceRES == "USPR954" and source ~= 8 then
 		if projectileIndex == 308 then
 		end
 	end,
-    ["effectMutator"] = function(source, creatureData, projectileData, effectData)
-    end,
+	["effectMutator"] = function(source, creatureData, projectileData, effectData)
+	end,
 }
 --]]
 IEex_MutatorGlobalFunctions["USWI252"] = {
-    ["typeMutator"] = function(source, creatureData, missileIndex, sourceRES)
+	["typeMutator"] = function(source, creatureData, missileIndex, sourceRES)
 
-    end,
-    ["projectileMutator"] = function(source, creatureData, projectileData, sourceRES)
-    	if ex_true_spell[sourceRES] ~= nil then
-    		sourceRES = ex_true_spell[sourceRES]
-    	end
+	end,
+	["projectileMutator"] = function(source, creatureData, projectileData, sourceRES)
+		if ex_true_spell[sourceRES] ~= nil then
+			sourceRES = ex_true_spell[sourceRES]
+		end
 		if sourceRES == "USWI252" then
 			IEex_WriteWord(projectileData + 0x2B2, 314)
 		end
 	end,
-    ["effectMutator"] = function(source, creatureData, projectileData, effectData)
-    end,
+	["effectMutator"] = function(source, creatureData, projectileData, effectData)
+	end,
 }
 
 IEex_MutatorGlobalFunctions["USWI858"] = {
-    ["typeMutator"] = function(source, creatureData, missileIndex, sourceRES)
+	["typeMutator"] = function(source, creatureData, missileIndex, sourceRES)
 
-    end,
-    ["projectileMutator"] = function(source, creatureData, projectileData, sourceRES)
-    	if ex_true_spell[sourceRES] ~= nil then
-    		sourceRES = ex_true_spell[sourceRES]
-    	end
+	end,
+	["projectileMutator"] = function(source, creatureData, projectileData, sourceRES)
+		if ex_true_spell[sourceRES] ~= nil then
+			sourceRES = ex_true_spell[sourceRES]
+		end
 		if sourceRES == "USWI858" and source ~= 8 then
 			IEex_WriteWord(projectileData + 0x2B2, 37)
 		end
 	end,
-    ["effectMutator"] = function(source, creatureData, projectileData, effectData)
-    end,
+	["effectMutator"] = function(source, creatureData, projectileData, effectData)
+	end,
 }
 
 IEex_MutatorGlobalFunctions["USDLVMOD"] = {
-    ["typeMutator"] = function(source, creatureData, missileIndex, sourceRES)
+	["typeMutator"] = function(source, creatureData, missileIndex, sourceRES)
 
-    end,
-    ["projectileMutator"] = function(source, creatureData, projectileData, sourceRES)
 	end,
-    ["effectMutator"] = function(source, creatureData, projectileData, effectData)
-    	local parent_resource = IEex_ReadLString(effectData + 0x90, 8)
-    	local trueSpellLevel = ex_alternate_spell_level_list[parent_resource]
-    	if trueSpellLevel then
+	["projectileMutator"] = function(source, creatureData, projectileData, sourceRES)
+	end,
+	["effectMutator"] = function(source, creatureData, projectileData, effectData)
+		local parent_resource = IEex_ReadLString(effectData + 0x90, 8)
+		local trueSpellLevel = ex_alternate_spell_level_list[parent_resource]
+		if trueSpellLevel then
 			IEex_WriteDword(effectData + 0x14, trueSpellLevel)
-    	end
-    end,
+		end
+	end,
 }

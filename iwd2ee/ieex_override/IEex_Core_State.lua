@@ -65,6 +65,14 @@ function IEex_Extern_CreateAsyncState()
 
 end
 
+-- Called by IEexHelper when it is handling thread creation
+-- function IEex_Extern_PostAsyncThreadCreated()
+-- 	IEex_AssertThread(IEex_Thread.Sync, true)
+-- 	while IEex_ReadByte(IEex_AsyncInitialLock) == 0 do
+-- 		IEex_Helper_Sleep(1)
+-- 	end
+-- end
+
 function IEex_Extern_ConsoleErrorFunc(message)
 	message = debug.traceback(message, 2)
 	IEex_DisplayString(tostring(message))
@@ -252,7 +260,7 @@ function IEex_GetSpriteFeatCount(sprite, featID)
 		return IEex_GetFeatCountFromBaseStats(baseStats, featID)
 	else
 		local offset = tonumber(IEex_2DAGetAtRelated("B3FEATEX", "ID", "FEAT_COUNT_OFFSET", function(id) return tonumber(id) == featID end))
-		if offset == nil then
+		if offset == nil or offset <= 0 then
 			return 1
 		else
 			local featCount = IEex_ReadSignedByte(sprite + offset, 0x0)
@@ -272,7 +280,7 @@ end
 
 function IEex_SetSpriteFeatCountStat(sprite, featID, count, onlyIfNew)
 	local offset = tonumber(IEex_2DAGetAtRelated("B3FEATEX", "ID", "FEAT_COUNT_OFFSET", function(id) return tonumber(id) == featID end))
-	if offset ~= nil then
+	if offset ~= nil and offset > 0 then
 		IEex_WriteByte(sprite + offset, count)
 	end
 	if true then return end

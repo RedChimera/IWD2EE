@@ -1427,6 +1427,22 @@ function IEex_HookAfterCall(address, assembly)
 	), 4, 4}})
 end
 
+function IEex_HookBeforeAndAfterCall(address, beforeAssembly, afterAssembly)
+
+	local afterCall = address + 0x5
+	local callDest = afterCall + IEex_ReadDword(address + 0x1)
+	IEex_DefineAssemblyLabel("return", afterCall)
+
+	local hookAddress = IEex_WriteAssemblyAuto(IEex_FlattenTable({
+		beforeAssembly,
+		{"!call", {callDest, 4, 4}},
+		afterAssembly,
+		{"!jmp_dword", {afterCall, 4, 4}},
+	}))
+
+	IEex_WriteAssembly(address, {"!jmp_dword", {hookAddress, 4, 4}})
+end
+
 function IEex_HookReturnNOPs(address, nopCount, assembly)
 
 	local afterInstruction = address + 0x5 + nopCount
@@ -1624,7 +1640,7 @@ function IEex_HookJump(address, restoreSize, assembly)
 	if switchBytes then
 		instructionBytes = switchBytes
 		instructionSize = 2
-		offset = IEex_ReadByte(address + 1, 0)
+		offset = IEex_ReadSignedByte(address + 1, 0)
 	elseif instructionByte == 0xE9 then
 		instructionBytes = {{instructionByte, 1}}
 		instructionSize = 5
@@ -1699,7 +1715,7 @@ function IEex_HookJumpOnFail(address, restoreSize, assembly)
 	if switchBytes then
 		instructionBytes = switchBytes
 		instructionSize = 2
-		offset = IEex_ReadByte(address + 1, 0)
+		offset = IEex_ReadSignedByte(address + 1, 0)
 	elseif instructionByte == 0xE9 then
 		instructionBytes = {{instructionByte, 1}}
 		instructionSize = 5
@@ -1776,7 +1792,7 @@ function IEex_HookJumpOnSuccess(address, restoreSize, assembly)
 	if switchBytes then
 		instructionBytes = switchBytes
 		instructionSize = 2
-		offset = IEex_ReadByte(address + 1, 0)
+		offset = IEex_ReadSignedByte(address + 1, 0)
 	elseif instructionByte == 0xE9 then
 		instructionBytes = {{instructionByte, 1}}
 		instructionSize = 5

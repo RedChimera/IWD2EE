@@ -1074,6 +1074,16 @@ function IEex_Extern_OnSetActionbarState(nState)
 	if IEex_GetGameData() == 0x0 then return end
 end
 
+IEex_TooltipKillReason = {
+	UNKNOWN = 0,
+	EFFECT_LIST_UPDATE = 1,
+}
+
+function IEex_Extern_ShouldTooltipRefreshInsteadOfDying(killReason)
+	IEex_AssertThread(IEex_Thread.Both, true)
+	return killReason == IEex_TooltipKillReason.EFFECT_LIST_UPDATE
+end
+
 function IEex_Extern_CUIManager_fInit_CHUInitialized(CUIManager, resrefPointer)
 
 	IEex_AssertThread(IEex_Thread.Both, true)
@@ -1658,10 +1668,238 @@ function IEex_Extern_UI_ButtonLClick(CUIControlButton)
 					end
 				end,
 			},
+			[58] = {
+				[32] = function()
+					local screenCharacter = IEex_GetEngineCharacter()
+					local newWizardSpellsPanel = IEex_GetPanelFromEngine(screenCharacter, 58)
+					for buttonID = 0, 29, 1 do
+						local thisButton = IEex_GetControlFromPanel(newWizardSpellsPanel, buttonID)
+						IEex_SetControlButtonFrameUpForce(thisButton, 1)
+					end
+					ex_menu_sorcerer_spells_replaced = {}
+					for spellRES, justTaken in pairs(ex_menu_wizard_spells_learned) do
+						if justTaken then
+							ex_menu_wizard_spells_learned[spellRES] = nil
+							ex_menu_num_wizard_spells_remaining = ex_menu_num_wizard_spells_remaining + 1
+						end
+					end
+					ex_menu_num_learned_spells_per_level = {0, 0, 0, 0, 0, 0, 0, 0, 0}
+					IEex_SetControlLabelText(IEex_GetControlFromPanel(newWizardSpellsPanel, 34), tostring(ex_menu_num_wizard_spells_remaining))
+					ex_menu_in_second_replacement_step = false
+					IEex_DisplayWizardSpellsToLearn(ex_current_menu_spell_level)
+					IEex_NewWizardSpellsPanelDoneButtonUpdate()
+					IEex_PanelInvalidate(newWizardSpellsPanel)
+				end,
+				[35] = function()
+					if IEex_NewWizardSpellsPanelDoneButtonClickable() then
+						local screenCharacter = IEex_GetEngineCharacter()
+						local characterRecordPanel = IEex_GetPanelFromEngine(screenCharacter, 2)
+						local newWizardSpellsPanel = IEex_GetPanelFromEngine(screenCharacter, 58)
+						local actorID = IEex_ReadDword(screenCharacter + 0x136)
+						if not IEex_IsSprite(actorID, false) then return end
+						
+						-- Remove from popup stack
+						IEex_Call(0x7FB343, {}, screenCharacter + 0x62A, 0x0) -- CPtrList_RemoveTail()
+
+						IEex_SetPanelActive(newWizardSpellsPanel, false)
+						setCommonPanelsEnabled(screenCharacter, true)
+						IEex_SetPanelEnabled(characterRecordPanel, true)
+						if ex_alternate_spell_menu_class == 11 then
+							for spellRES, justTaken in pairs(ex_menu_wizard_spells_learned) do
+								if justTaken then
+									IEex_ApplyEffectToActor(actorID, {
+["opcode"] = 147,
+["target"] = 2,
+["timing"] = 1,
+["resource"] = spellRES,
+["source_id"] = actorID
+})
+								end
+							end
+						elseif ex_alternate_spell_menu_class == 2 or ex_alternate_spell_menu_class == 10 then
+							local share = IEex_GetActorShare(actorID)
+							local casterType = IEex_CasterClassToType[ex_alternate_spell_menu_class]
+							local currentLevelBase = share + 0x4284 + (casterType - 1) * 0x100
+							for level = 1, ex_menu_max_castable_level, 1 do
+								local currentEntryBase = IEex_ReadDword(currentLevelBase + 0x4)
+								local pEndEntry = IEex_ReadDword(currentLevelBase + 0x8)
+								while currentEntryBase ~= pEndEntry do
+									local spellRES = IEex_LISTSPLL[IEex_ReadDword(currentEntryBase)]
+									if ex_menu_sorcerer_spells_replaced[spellRES] then
+										IEex_WriteDword(currentEntryBase,IEex_LISTSPLL_Reverse[ex_menu_sorcerer_spells_replaced[spellRES]])
+										for i = 0x360C, 0x37EC, 0x3C do
+											if IEex_ReadLString(share + i + 0x20, 8) == spellRES and IEex_ReadByte(share + i + 0x36, 0x0) == ex_alternate_spell_menu_class then
+												IEex_WriteLString(share + i, string.sub(ex_menu_sorcerer_spells_replaced[spellRES], 1, 7) .. "B", 8)
+												IEex_WriteLString(share + i + 0x20, ex_menu_sorcerer_spells_replaced[spellRES], 8)
+											end
+										end
+									end
+									currentEntryBase = currentEntryBase + 0x10
+								end
+								currentLevelBase = currentLevelBase + 0x1C
+							end
+						end
+					end
+				end,
+				[36] = function()
+					local screenCharacter = IEex_GetEngineCharacter()
+					local newWizardSpellsPanel = IEex_GetPanelFromEngine(screenCharacter, 58)
+					if ex_current_menu_spell_level > 1 and not ex_menu_in_second_replacement_step then
+						ex_current_menu_spell_level = ex_current_menu_spell_level - 1
+						IEex_DisplayWizardSpellsToLearn(ex_current_menu_spell_level)
+						if ex_alternate_spell_menu_class == 11 then
+							for buttonID = 0, 29, 1 do
+								local thisButton = IEex_GetControlFromPanel(newWizardSpellsPanel, buttonID)
+								local spellResref = ex_menu_available_wizard_spells[ex_current_menu_spell_level][buttonID + 1]
+								if not ex_menu_wizard_spells_learned[spellResref] then
+									IEex_SetControlButtonFrameUpForce(thisButton, 1)
+								else
+									IEex_SetControlButtonFrameUpForce(thisButton, 0)
+								end
+							end
+						end
+					end
+					IEex_PanelInvalidate(newWizardSpellsPanel)
+				end,
+				[37] = function()
+					local screenCharacter = IEex_GetEngineCharacter()
+					local newWizardSpellsPanel = IEex_GetPanelFromEngine(screenCharacter, 58)
+					local actorID = IEex_ReadDword(screenCharacter + 0x136)
+					if not IEex_IsSprite(actorID, false) then return end
+					if ex_current_menu_spell_level < ex_menu_max_castable_level and not ex_menu_in_second_replacement_step then
+						ex_current_menu_spell_level = ex_current_menu_spell_level + 1
+						IEex_DisplayWizardSpellsToLearn(ex_current_menu_spell_level)
+						if ex_alternate_spell_menu_class == 11 then
+							for buttonID = 0, 29, 1 do
+								local thisButton = IEex_GetControlFromPanel(newWizardSpellsPanel, buttonID)
+								local spellResref = ex_menu_available_wizard_spells[ex_current_menu_spell_level][buttonID + 1]
+								if not ex_menu_wizard_spells_learned[spellResref] then
+									IEex_SetControlButtonFrameUpForce(thisButton, 1)
+								else
+									IEex_SetControlButtonFrameUpForce(thisButton, 0)
+								end
+							end
+						end
+					end
+--					local thisButton = IEex_GetControlFromPanel(newWizardSpellsPanel, 0)
+--					IEex_SetControlButtonFrameUpForce(thisButton, 2)
+--[[
+					-- Remove from popup stack
+					IEex_Call(0x7FB343, {}, screenCharacter + 0x62A, 0x0) -- CPtrList_RemoveTail()
+		
+					-- Add to popup stack
+					IEex_Call(0x7FBE4E, {newWizardSpellsPanel}, screenCharacter + 0x62A, 0x0) -- CPtrList_AddTail()
+--]]
+					IEex_PanelInvalidate(newWizardSpellsPanel)
+				end,
+			},
 		},
 		["GUIW08"] = worldHandler,
 		["GUIW10"] = worldHandler,
 	}
+
+	for buttonID = 0, 29, 1 do
+		handlers["GUIREC"][58][buttonID] = function()
+			local screenCharacter = IEex_GetEngineCharacter()
+			local newWizardSpellsPanel = IEex_GetPanelFromEngine(screenCharacter, 58)
+			local thisButton = IEex_GetControlFromPanel(newWizardSpellsPanel, buttonID)
+			local spellResref = ""
+			if ex_alternate_spell_menu_class == 11 then
+				spellResref = ex_menu_available_wizard_spells[ex_current_menu_spell_level][buttonID + 1]
+			elseif ex_alternate_spell_menu_class == 2 or ex_alternate_spell_menu_class == 10 then
+				if not ex_menu_in_second_replacement_step then
+					local i = 0
+					for spellRES, isKnown in pairs(ex_menu_known_wizard_spells[ex_current_menu_spell_level]) do
+						if i == buttonID then
+							if not ex_menu_sorcerer_spells_replaced[spellRES] then
+								spellResref = spellRES
+							else
+								spellResref = ex_menu_sorcerer_spells_replaced[spellRES]
+							end
+						end
+						i = i + 1
+					end
+				else
+					spellResref = ex_menu_available_wizard_spells[ex_current_menu_spell_level][buttonID + 1]
+					if ex_menu_wizard_spells_learned[spellResref] then
+						spellResref = ""
+					end
+				end
+			end
+			if not spellResref then return end
+			local spellWrapper = IEex_DemandRes(spellResref, "SPL")
+			if not spellWrapper:isValid() then
+				spellWrapper:free()
+				return
+			end
+			local descTextDisplay = IEex_GetControlFromPanel(newWizardSpellsPanel, 30)
+			if ex_alternate_spell_menu_class == 11 then
+				if not ex_menu_wizard_spells_learned[spellResref] then
+					if (ex_menu_num_known_spells_per_level[ex_current_menu_spell_level] + ex_menu_num_learned_spells_per_level[ex_current_menu_spell_level] + 1) > 24 then
+						IEex_SetControlTextDisplay(descTextDisplay, IEex_FetchString(ex_tra_55771))
+						spellWrapper:free()
+						return
+					elseif ex_menu_num_wizard_spells_remaining > 0 then
+						ex_menu_wizard_spells_learned[spellResref] = true
+						ex_menu_num_learned_spells_per_level[ex_current_menu_spell_level] = ex_menu_num_learned_spells_per_level[ex_current_menu_spell_level] + 1
+						ex_menu_num_wizard_spells_remaining = ex_menu_num_wizard_spells_remaining - 1
+						IEex_SetControlLabelText(IEex_GetControlFromPanel(newWizardSpellsPanel, 34), tostring(ex_menu_num_wizard_spells_remaining))
+						IEex_SetControlButtonFrameUp(thisButton, 0)
+					end
+				else
+					ex_menu_wizard_spells_learned[spellResref] = nil
+					ex_menu_num_learned_spells_per_level[ex_current_menu_spell_level] = ex_menu_num_learned_spells_per_level[ex_current_menu_spell_level] - 1
+					ex_menu_num_wizard_spells_remaining = ex_menu_num_wizard_spells_remaining + 1
+					IEex_SetControlLabelText(IEex_GetControlFromPanel(newWizardSpellsPanel, 34), tostring(ex_menu_num_wizard_spells_remaining))
+					IEex_SetControlButtonFrameUp(thisButton, 1)
+				end
+			elseif ex_alternate_spell_menu_class == 2 or ex_alternate_spell_menu_class == 10 then
+				if not ex_menu_in_second_replacement_step then
+					if not ex_menu_wizard_spells_learned[spellResref] then
+						if ex_menu_num_wizard_spells_remaining > 0 then
+							ex_menu_sorcerer_spell_to_replace = spellResref
+							ex_menu_in_second_replacement_step = true
+							IEex_DisplayWizardSpellsToLearn(ex_current_menu_spell_level)
+						end
+					else
+						for spellRES, replacementRES in pairs(ex_menu_sorcerer_spells_replaced) do
+							if replacementRES == spellResref then
+								ex_menu_sorcerer_spells_replaced[spellRES] = nil
+								ex_menu_wizard_spells_learned[spellResref] = nil
+							end
+						end
+						ex_menu_num_wizard_spells_remaining = ex_menu_num_wizard_spells_remaining + 1
+						IEex_SetControlLabelText(IEex_GetControlFromPanel(newWizardSpellsPanel, 34), tostring(ex_menu_num_wizard_spells_remaining))
+						IEex_SetControlButtonFrameUp(thisButton, 1)
+						IEex_DisplayWizardSpellsToLearn(ex_current_menu_spell_level)
+					end
+				else
+					ex_menu_wizard_spells_learned[spellResref] = true
+					ex_menu_sorcerer_spells_replaced[ex_menu_sorcerer_spell_to_replace] = spellResref
+					ex_menu_sorcerer_spell_to_replace = ""
+					ex_menu_num_wizard_spells_remaining = ex_menu_num_wizard_spells_remaining - 1
+					IEex_SetControlLabelText(IEex_GetControlFromPanel(newWizardSpellsPanel, 34), tostring(ex_menu_num_wizard_spells_remaining))
+					ex_menu_in_second_replacement_step = false
+					IEex_DisplayWizardSpellsToLearn(ex_current_menu_spell_level)
+				end
+			end
+--[[
+			if IEex_GetControlButtonFrameUp(thisButton) == 0 then
+				IEex_SetControlButtonFrameUp(thisButton, 1)
+			else
+				IEex_SetControlButtonFrameUp(thisButton, 0)
+			end
+--]]
+			local spellData = spellWrapper:getData()
+--			local spellName = IEex_FetchString(IEex_ReadDword(spellData + 0x8))
+			local spellDesc = IEex_FetchString(IEex_ReadDword(spellData + 0x50))
+			spellWrapper:free()
+
+			IEex_SetControlTextDisplay(descTextDisplay, spellDesc)
+			IEex_NewWizardSpellsPanelDoneButtonUpdate()
+			IEex_PanelInvalidate(newWizardSpellsPanel)
+		end
+	end
 
 	local resrefHandler = handlers[resref]
 	if not resrefHandler then return end
@@ -2274,6 +2512,169 @@ function IEex_OnCHUInitialized(chuResref)
 		IEex_SetControlButtonText(IEex_GetControlFromPanel(newSpellInfoPanel, 5), IEex_FetchString(11973))
 
 		IEex_SetPanelActive(newSpellInfoPanel, false)
+
+	elseif chuResref == "GUIREC" then
+		local screenCharacter = IEex_GetEngineCharacter()
+		local newWizardSpellsPanel = IEex_AddPanelToEngine(screenCharacter, {
+			["id"] = 58,
+			["x"] = 245,
+			["width"] = 555,
+			["height"] = 433,
+			["hasBackground"] = 1,
+			["backgroundImage"] = "GUIRLVL5",
+			["flags"] = 0x1,
+		})
+		local buttonID = 0
+
+		for i = 0, 4, 1 do
+			for j = 0, 5, 1 do
+				IEex_AddControlOverride("GUIREC", 58, buttonID, "IEex_UI_Button")
+				IEex_AddControlToPanel(newWizardSpellsPanel, {
+					["type"] = IEex_ControlStructType.BUTTON,
+					["id"] = buttonID,
+					["x"] = 14 + 43 * j,
+					["y"] = 76 + 43 * i,
+					["width"] = 40,
+					["height"] = 39,
+					["bam"] = "SPLBUT",
+					["frameUnpressed"] = 1,
+					["framePressed"] = 2,
+					["frameDisabled"] = 3,
+				})
+				IEex_AddControlOverride("GUIREC", 58, (buttonID + 100), "ButtonMageSpellInfoIcon")
+				IEex_AddControlToPanel(newWizardSpellsPanel, {
+					["type"] = IEex_ControlStructType.BUTTON,
+					["id"] = (buttonID + 100),
+					["x"] = 18 + 43 * j,
+					["y"] = 79 + 43 * i,
+					["bam"] = "",
+					["width"] = 32,
+					["height"] = 32,
+				})
+				buttonID = buttonID + 1
+			end
+		end
+		
+		IEex_AddControlOverride("GUIREC", 58, 30, "IEex_UI_TextArea")
+		IEex_AddControlToPanel(newWizardSpellsPanel, {
+			["type"] = IEex_ControlStructType.TEXT_AREA,
+			["id"] = 30,
+			["x"] = 305,
+			["y"] = 26,
+			["width"] = 207,
+			["height"] = 339,
+			["fontBam"] = "NORMAL",
+			["scrollbarID"] = 31,
+		})
+
+		IEex_AddControlOverride("GUIREC", 58, 31, "IEex_UI_Scrollbar")
+		IEex_AddControlToPanel(newWizardSpellsPanel, {
+			["type"] = IEex_ControlStructType.SCROLL_BAR,
+			["id"] = 31,
+			["x"] = 523,
+			["y"] = 23,
+			["width"] = 12,
+			["height"] = 348,
+			["graphicsBam"] = "GBTNSCRL",
+			["animationNumber"] = 0,
+			["upArrowFrameUnpressed"] = 0,
+			["upArrowFramePressed"] = 1,
+			["downArrowFrameUnpressed"] = 2,
+			["downArrowFramePressed"] = 3,
+			["troughFrame"] = 4,
+			["sliderFrame"] = 5,
+			["textAreaID"] = 30,
+		})
+
+		IEex_AddControlOverride("GUIREC", 58, 32, "IEex_UI_Button")
+		IEex_AddControlToPanel(newWizardSpellsPanel, {
+			["type"] = IEex_ControlStructType.BUTTON,
+			["id"] = 32,
+			["x"] = 298,
+			["y"] = 382,
+			["width"] = 117,
+			["height"] = 25,
+			["bam"] = "GBTNSTD",
+			["sequence"] = 0,
+			["frameUnpressed"] = 1,
+			["framePressed"] = 2,
+			["frameDisabled"] = 3,
+		})
+		IEex_SetControlButtonText(IEex_GetControlFromPanel(newWizardSpellsPanel, 32), IEex_FetchString(ex_tra_55770))
+		
+		IEex_AddControlOverride("GUIREC", 58, 33, "IEex_UI_Label")
+		IEex_AddControlToPanel(newWizardSpellsPanel, {
+			["type"] = IEex_ControlStructType.LABEL,
+			["id"] = 33,
+			["x"] = 10,
+			["y"] = 23,
+			["width"] = 205,
+			["height"] = 28,
+			["fontBam"] = "NORMAL",
+			["fontColor1"] = 0xFFFFF6,
+			["textFlags"] = 0x45, -- Use color(0) | Center justify(4) | Middle justify(6)
+		})
+		
+		IEex_AddControlOverride("GUIREC", 58, 34, "IEex_UI_Label")
+		IEex_AddControlToPanel(newWizardSpellsPanel, {
+			["type"] = IEex_ControlStructType.LABEL,
+			["id"] = 34,
+			["x"] = 226,
+			["y"] = 23,
+			["width"] = 50,
+			["height"] = 28,
+			["fontBam"] = "NORMAL",
+			["fontColor1"] = 0xFFFF,
+			["textFlags"] = 0x45, -- Use color(0) | Center justify(4) | Middle justify(6)
+		})
+
+		IEex_AddControlOverride("GUIREC", 58, 35, "IEex_UI_Button")
+		IEex_AddControlToPanel(newWizardSpellsPanel, {
+			["type"] = IEex_ControlStructType.BUTTON,
+			["id"] = 35,
+			["x"] = 419,
+			["y"] = 382,
+			["width"] = 117,
+			["height"] = 25,
+			["bam"] = "GBTNSTD",
+			["sequence"] = 1,
+			["frameUnpressed"] = 1,
+			["framePressed"] = 2,
+			["frameDisabled"] = 3,
+		})
+		IEex_SetControlButtonText(IEex_GetControlFromPanel(newWizardSpellsPanel, 35), IEex_FetchString(11973))
+		
+		IEex_AddControlOverride("GUIREC", 58, 36, "IEex_UI_Button")
+		IEex_AddControlToPanel(newWizardSpellsPanel, {
+			["type"] = IEex_ControlStructType.BUTTON,
+			["id"] = 36,
+			["x"] = 14,
+			["y"] = 300,
+			["width"] = 47,
+			["height"] = 39,
+			["bam"] = "GBTNJBTN",
+			["sequence"] = 0,
+			["frameUnpressed"] = 1,
+			["framePressed"] = 2,
+			["frameDisabled"] = 3,
+		})
+		
+		IEex_AddControlOverride("GUIREC", 58, 37, "IEex_UI_Button")
+		IEex_AddControlToPanel(newWizardSpellsPanel, {
+			["type"] = IEex_ControlStructType.BUTTON,
+			["id"] = 37,
+			["x"] = 222,
+			["y"] = 300,
+			["width"] = 47,
+			["height"] = 39,
+			["bam"] = "GBTNJBTN",
+			["sequence"] = 1,
+			["frameUnpressed"] = 1,
+			["framePressed"] = 2,
+			["frameDisabled"] = 3,
+		})
+		
+		IEex_SetPanelActive(newWizardSpellsPanel, false)
 	end
 end
 
@@ -2300,7 +2701,7 @@ function IEex_LoadOptions()
 
 	local options = IEex_Helper_GetBridge("IEex_Options", "options")
 	IEex_Helper_SetBridge(options, "transparentFogOfWar",
-    	IEex_GetPrivateProfileInt("IEex Options", "Transparent Fog of War", 0, ".\\Icewind2.ini") ~= 0 and true or false)
+		IEex_GetPrivateProfileInt("IEex Options", "Transparent Fog of War", 0, ".\\Icewind2.ini") ~= 0 and true or false)
 
 	IEex_InitOptionButtons()
 end
@@ -2357,6 +2758,173 @@ function IEex_Extern_OnOptionsScreenESC(CScreenOptions)
 		return true
 	end
 	return false
+end
+
+ex_current_menu_spell_level = 1
+ex_menu_in_second_replacement_step = false
+function IEex_DisplayWizardSpellsToLearn(level)
+	local screenCharacter = IEex_GetEngineCharacter()
+	local actorID = IEex_ReadDword(screenCharacter + 0x136)
+	if not IEex_IsSprite(actorID, false) then return end
+	local newWizardSpellsPanel = IEex_GetPanelFromEngine(screenCharacter, 58)
+	if ex_alternate_spell_menu_class == 11 then
+		IEex_SetControlLabelText(IEex_GetControlFromPanel(newWizardSpellsPanel, 33), IEex_FetchString(ex_spelllevelmenustrrefs[level]))
+		for i = 1, 30, 1 do
+			if i <= #ex_menu_available_wizard_spells[level] then
+				IEex_SetControlButtonMageSpellInfoIcon(IEex_GetControlFromPanel(newWizardSpellsPanel, i + 99), ex_menu_available_wizard_spells[level][i])
+			else
+				IEex_SetControlButtonMageSpellInfoIcon(IEex_GetControlFromPanel(newWizardSpellsPanel, i + 99), "")
+			end
+		end
+	elseif ex_alternate_spell_menu_class == 2 or ex_alternate_spell_menu_class == 10 then
+		IEex_SetControlLabelText(IEex_GetControlFromPanel(newWizardSpellsPanel, 33), IEex_FetchString(ex_spelllevelreplacementmenustrrefs[level]))
+		if not ex_menu_in_second_replacement_step then
+			local i = 1
+			for spellRES, isKnown in pairs(ex_menu_known_wizard_spells[level]) do
+				if isKnown then
+					if ex_menu_sorcerer_spells_replaced[spellRES] then
+						IEex_SetControlButtonMageSpellInfoIcon(IEex_GetControlFromPanel(newWizardSpellsPanel, i + 99), ex_menu_sorcerer_spells_replaced[spellRES])
+						IEex_SetControlButtonFrameUpForce(IEex_GetControlFromPanel(newWizardSpellsPanel, i - 1), 0)
+					else
+						IEex_SetControlButtonMageSpellInfoIcon(IEex_GetControlFromPanel(newWizardSpellsPanel, i + 99), spellRES)
+						IEex_SetControlButtonFrameUpForce(IEex_GetControlFromPanel(newWizardSpellsPanel, i - 1), 1)
+					end
+					i = i + 1
+				end
+			end
+			for j = i, 30, 1 do
+				IEex_SetControlButtonMageSpellInfoIcon(IEex_GetControlFromPanel(newWizardSpellsPanel, j + 99), "")
+				IEex_SetControlButtonFrameUpForce(IEex_GetControlFromPanel(newWizardSpellsPanel, j - 1), 1)
+			end
+		else
+			for i = 1, 30, 1 do
+				if i <= #ex_menu_available_wizard_spells[level] and not ex_menu_wizard_spells_learned[ex_menu_available_wizard_spells[level][i]] then
+					IEex_SetControlButtonMageSpellInfoIcon(IEex_GetControlFromPanel(newWizardSpellsPanel, i + 99), ex_menu_available_wizard_spells[level][i])
+				else
+					IEex_SetControlButtonMageSpellInfoIcon(IEex_GetControlFromPanel(newWizardSpellsPanel, i + 99), "")
+				end
+				IEex_SetControlButtonFrameUpForce(IEex_GetControlFromPanel(newWizardSpellsPanel, i - 1), 1)
+			end
+		end
+	end
+	local leftButton = IEex_GetControlFromPanel(newWizardSpellsPanel, 36)
+	local rightButton = IEex_GetControlFromPanel(newWizardSpellsPanel, 37)
+	if level <= 1 or ex_menu_in_second_replacement_step then
+		IEex_SetControlButtonFrameUpForce(leftButton, 3)
+		IEex_SetControlButtonFrameDown(leftButton, 3)
+	else
+		IEex_SetControlButtonFrameUpForce(leftButton, 1)
+		IEex_SetControlButtonFrameDown(leftButton, 2)
+	end
+	if level >= ex_menu_max_castable_level or ex_menu_in_second_replacement_step then
+		IEex_SetControlButtonFrameUpForce(rightButton, 3)
+		IEex_SetControlButtonFrameDown(rightButton, 3)
+	else
+		IEex_SetControlButtonFrameUpForce(rightButton, 1)
+		IEex_SetControlButtonFrameDown(rightButton, 2)
+	end
+end
+
+ex_menu_known_wizard_spells = {{}, {}, {}, {}, {}, {}, {}, {}, {}, }
+ex_menu_available_wizard_spells = {{}, {}, {}, {}, {}, {}, {}, {}, {}, }
+ex_menu_num_known_spells_per_level = {0, 0, 0, 0, 0, 0, 0, 0, 0}
+ex_menu_max_castable_level = 0
+function IEex_InitializeWizardLearnList()
+	local screenCharacter = IEex_GetEngineCharacter()
+	local actorID = IEex_ReadDword(screenCharacter + 0x136)
+	if not IEex_IsSprite(actorID, false) then return end
+	local kit = IEex_GetActorStat(actorID, 89)
+	local specialistBit = 0x40
+	local specialistSchool = 0
+	for i = 1, 9, 1 do
+		if bit.band(kit, specialistBit) > 0 then
+			specialistSchool = i
+		end
+		specialistBit = specialistBit * 2
+	end
+	if specialistSchool == 0 then
+		specialistSchool = 9
+	end
+	local knownSpellsOfLevel = {}
+	local casterType = IEex_CasterClassToType[ex_alternate_spell_menu_class]
+	local spells = IEex_FetchSpellInfo(actorID, {casterType})
+	local levelList = spells[casterType]
+	if ex_alternate_spell_menu_class == 11 then
+		ex_menu_max_castable_level = 0
+	end
+	ex_menu_known_wizard_spells = {{}, {}, {}, {}, {}, {}, {}, {}, {}, }
+	ex_menu_available_wizard_spells = {{}, {}, {}, {}, {}, {}, {}, {}, {}, }
+	ex_menu_num_known_spells_per_level = {0, 0, 0, 0, 0, 0, 0, 0, 0}
+	if levelList ~= nil then
+		for level = 1, #levelList, 1 do
+			local levelI = levelList[level]
+			if levelI ~= nil then
+				if levelI[1] > 0 then
+					if ex_alternate_spell_menu_class == 11 then
+						ex_menu_max_castable_level = ex_menu_max_castable_level + 1
+					end
+					local levelISpells = levelI[3]
+					if #levelISpells > 0 then
+						for i, spell in ipairs(levelISpells) do
+							ex_menu_known_wizard_spells[level][spell["resref"]] = true
+							ex_menu_num_known_spells_per_level[level] = ex_menu_num_known_spells_per_level[level] + 1
+						end
+					end
+				end
+			end
+		end
+	end
+	local alignment = IEex_ReadByte(IEex_GetActorShare(actorID) + 0x35, 0x0)
+	local listspll = IEex_2DADemand("LISTSPLL")
+	local m_nSizeY = IEex_ReadWord(listspll + 0x22, 0x0)
+	for i = 0, m_nSizeY - 1, 1 do
+		local wizardLevel = tonumber(IEex_2DAGetAt(listspll, casterType - 1, i))
+		local spellRES = IEex_2DAGetAt(listspll, 7, i)
+		if wizardLevel > 0 and wizardLevel <= ex_menu_max_castable_level and not ex_menu_known_wizard_spells[wizardLevel][spellRES] then
+			local scrollWrapper = IEex_DemandRes(spellRES .. "Z", "ITM")
+			if scrollWrapper:isValid() then
+				local scrollData = scrollWrapper:getData()
+				local unusabilityFlags = IEex_ReadDword(scrollData + 0x1E)
+				local kitUnusability3 = IEex_ReadByte(scrollData + 0x2D, 0x0)
+				local kitUnusability4 = IEex_ReadByte(scrollData + 0x2F, 0x0)
+				if (bit.band(unusabilityFlags, 0x1000) == 0 or bit.band(alignment, 0x30) ~= 0x30) and (bit.band(unusabilityFlags, 0x2000) == 0 or bit.band(alignment, 0x3) ~= 0x3) and (bit.band(unusabilityFlags, 0x4000) == 0 or bit.band(alignment, 0x3) ~= 0x1) and (bit.band(unusabilityFlags, 0x8000) == 0 or bit.band(alignment, 0x3) ~= 0x2) and (bit.band(unusabilityFlags, 0x10000) == 0 or bit.band(alignment, 0x30) ~= 0x10) and (bit.band(unusabilityFlags, 0x20000) == 0 or bit.band(alignment, 0x30) ~= 0x20) then
+					if ex_alternate_spell_menu_class ~= 11 or (((specialistSchool == 1 or specialistSchool == 2) and bit.band(kitUnusability4, 2 ^ (specialistSchool + 5)) == 0x0) or (specialistSchool >= 3 and bit.band(kitUnusability3, 2 ^ (specialistSchool - 3)) == 0x0)) then
+						table.insert(ex_menu_available_wizard_spells[wizardLevel], spellRES)
+					end
+				end
+			end
+			scrollWrapper:free()
+		end
+	end
+	IEex_NewWizardSpellsPanelDoneButtonUpdate()
+end
+
+function IEex_NewWizardSpellsPanelDoneButtonClickable()
+	if ex_alternate_spell_menu_class == 2 or ex_alternate_spell_menu_class == 10 then
+		return (not ex_menu_in_second_replacement_step)
+	else
+		if ex_menu_num_wizard_spells_remaining == 0 then return true end
+		local isClickable = true
+		for level = 1, ex_menu_max_castable_level, 1 do
+			if ex_menu_num_learned_spells_per_level[level] < #ex_menu_available_wizard_spells[level] and (ex_menu_num_known_spells_per_level[level] + ex_menu_num_learned_spells_per_level[level]) < 24 then
+				isClickable = false
+			end
+		end
+		return isClickable
+	end
+end
+
+function IEex_NewWizardSpellsPanelDoneButtonUpdate()
+	local screenCharacter = IEex_GetEngineCharacter()
+	local newWizardSpellsPanel = IEex_GetPanelFromEngine(screenCharacter, 58)
+	local doneButton = IEex_GetControlFromPanel(newWizardSpellsPanel, 35)
+	if not IEex_NewWizardSpellsPanelDoneButtonClickable() then
+		IEex_SetControlButtonFrameUpForce(doneButton, 3)
+		IEex_SetControlButtonFrameDown(doneButton, 3)
+	else
+		IEex_SetControlButtonFrameUpForce(doneButton, 1)
+		IEex_SetControlButtonFrameDown(doneButton, 2)
+	end
 end
 
 ------------------------------------

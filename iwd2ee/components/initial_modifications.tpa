@@ -155,6 +155,16 @@ COPY_EXISTING ~IEex_TRA.lua~ ~override~
 	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_tra_55715 *=.*~ ~ex_tra_55715 = %ex_tra_55715%~
 	ex_tra_55716 = RESOLVE_STR_REF(@55716)
 	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_tra_55716 *=.*~ ~ex_tra_55716 = %ex_tra_55716%~
+	ex_tra_55770 = RESOLVE_STR_REF(@55770)
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_tra_55770 *=.*~ ~ex_tra_55770 = %ex_tra_55770%~
+	ex_tra_55771 = RESOLVE_STR_REF(@55771)
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_tra_55771 *=.*~ ~ex_tra_55771 = %ex_tra_55771%~
+	ex_tra_55772 = RESOLVE_STR_REF(@55772)
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_tra_55772 *=.*~ ~ex_tra_55772 = %ex_tra_55772%~
+	ex_tra_55773 = RESOLVE_STR_REF(@55773)
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_tra_55773 *=.*~ ~ex_tra_55773 = %ex_tra_55773%~
+	ex_tra_55774 = RESOLVE_STR_REF(@55774)
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_tra_55774 *=.*~ ~ex_tra_55774 = %ex_tra_55774%~
 	ex_tra_55801 = RESOLVE_STR_REF(@55801)
 	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_tra_55801 *=.*~ ~ex_tra_55801 = %ex_tra_55801%~
 	ex_tra_55802 = RESOLVE_STR_REF(@55802)
@@ -374,7 +384,7 @@ COPY_EXISTING ~IEex_TRA.lua~ ~override~
 	SPRINT ex_str_entangle @55089
 	REPLACE_TEXTUALLY ~ex_str_entangle *=.*~ ~ex_str_entangle = "%ex_str_entangle%"~ 
 	SPRINT ex_str_web @55090
-	REPLACE_TEXTUALLY ~ex_str_web *=.*~ ~ex_str_web = "%ex_str_web%"~ 
+	REPLACE_TEXTUALLY ~ex_str_web *=.*~ ~ex_str_web = "%ex_str_web%"~
 	SPRINT ex_str_grease @55091
 	REPLACE_TEXTUALLY ~ex_str_grease *=.*~ ~ex_str_grease = "%ex_str_grease%"~ 
 	SPRINT ex_str_hold @55092
@@ -493,7 +503,27 @@ COPY_EXISTING ~IEex_TRA.lua~ ~override~
 	ex_spelllevel18 = RESOLVE_STR_REF(@55478)
 	ex_spelllevel19 = RESOLVE_STR_REF(@55479)
 	ex_spelllevel20 = RESOLVE_STR_REF(@55480)
+	ex_spelllevelmenu1 = RESOLVE_STR_REF(@55761)
+	ex_spelllevelmenu2 = RESOLVE_STR_REF(@55762)
+	ex_spelllevelmenu3 = RESOLVE_STR_REF(@55763)
+	ex_spelllevelmenu4 = RESOLVE_STR_REF(@55764)
+	ex_spelllevelmenu5 = RESOLVE_STR_REF(@55765)
+	ex_spelllevelmenu6 = RESOLVE_STR_REF(@55766)
+	ex_spelllevelmenu7 = RESOLVE_STR_REF(@55767)
+	ex_spelllevelmenu8 = RESOLVE_STR_REF(@55768)
+	ex_spelllevelmenu9 = RESOLVE_STR_REF(@55769)
+	ex_spelllevelreplacementmenu1 = RESOLVE_STR_REF(@55781)
+	ex_spelllevelreplacementmenu2 = RESOLVE_STR_REF(@55782)
+	ex_spelllevelreplacementmenu3 = RESOLVE_STR_REF(@55783)
+	ex_spelllevelreplacementmenu4 = RESOLVE_STR_REF(@55784)
+	ex_spelllevelreplacementmenu5 = RESOLVE_STR_REF(@55785)
+	ex_spelllevelreplacementmenu6 = RESOLVE_STR_REF(@55786)
+	ex_spelllevelreplacementmenu7 = RESOLVE_STR_REF(@55787)
+	ex_spelllevelreplacementmenu8 = RESOLVE_STR_REF(@55788)
+	ex_spelllevelreplacementmenu9 = RESOLVE_STR_REF(@55789)
 	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_spelllevelstrrefs *=.*~ ~ex_spelllevelstrrefs = {%ex_spelllevel1%, %ex_spelllevel2%, %ex_spelllevel3%, %ex_spelllevel4%, %ex_spelllevel5%, %ex_spelllevel6%, %ex_spelllevel7%, %ex_spelllevel8%, %ex_spelllevel9%, %ex_spelllevel10%, %ex_spelllevel11%, %ex_spelllevel12%, %ex_spelllevel13%, %ex_spelllevel14%, %ex_spelllevel15%, %ex_spelllevel16%, %ex_spelllevel17%, %ex_spelllevel18%, %ex_spelllevel19%, %ex_spelllevel20%}~
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_spelllevelmenustrrefs *=.*~ ~ex_spelllevelmenustrrefs = {%ex_spelllevelmenu1%, %ex_spelllevelmenu2%, %ex_spelllevelmenu3%, %ex_spelllevelmenu4%, %ex_spelllevelmenu5%, %ex_spelllevelmenu6%, %ex_spelllevelmenu7%, %ex_spelllevelmenu8%, %ex_spelllevelmenu9%}~
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_spelllevelreplacementmenustrrefs *=.*~ ~ex_spelllevelreplacementmenustrrefs = {%ex_spelllevelreplacementmenu1%, %ex_spelllevelreplacementmenu2%, %ex_spelllevelreplacementmenu3%, %ex_spelllevelreplacementmenu4%, %ex_spelllevelreplacementmenu5%, %ex_spelllevelreplacementmenu6%, %ex_spelllevelreplacementmenu7%, %ex_spelllevelreplacementmenu8%, %ex_spelllevelreplacementmenu9%}~
 	IF_EXISTS
 
 COPY_EXISTING ~IEex_TRA.lua~ ~override~
@@ -830,6 +860,7 @@ SetGlobal("SR_Torak_Talk","GLOBAL",4)~
 COPY_EXISTING ~62PSAABG.bcs~ ~override~
 	DECOMPILE_AND_PATCH BEGIN
 		REPLACE_TEXTUALLY EXACT_MATCH ~Entered(~ ~Global("AR6201_VISITED","GLOBAL",0)
+Global("TEAM_9","MYAREA",0)
 Entered(~
 	END
 

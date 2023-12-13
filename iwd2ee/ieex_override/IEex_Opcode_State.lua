@@ -688,7 +688,7 @@ ex_empowerable_opcodes = {[12] = true, [17] = true, [18] = true, [25] = true, [6
 			end)
 		end
 --]]
-		if opcode == 13 and parent_resource == "" then
+		if opcode == 13 or opcode == 420 then
 --			if parameter2 == 0x40 and timing == 4 then
 --				IEex_WriteDword(effectData + 0x20, 9)
 --			end

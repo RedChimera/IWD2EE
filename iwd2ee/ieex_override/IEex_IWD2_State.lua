@@ -72,6 +72,7 @@ dofile("override/IEex_Projectile_State.lua")
 dofile("override/IEex_StartupFixes_State.lua")
 dofile("override/IEex_Dev_State.lua")
 dofile("override/IEex_FakeInputRoutine.lua")
+dofile("override/IEex_UncapFPS.lua")
 
 
 
@@ -1495,46 +1496,46 @@ function IEex_GetGameData()
 end
 
 function IEex_GetEngineCharacter()
-    local g_pBaldurChitin = IEex_ReadDword(0x8CF6DC)
-    return IEex_ReadDword(g_pBaldurChitin + 0x1C60)
+	local g_pBaldurChitin = IEex_ReadDword(0x8CF6DC)
+	return IEex_ReadDword(g_pBaldurChitin + 0x1C60)
 end
 
 function IEex_GetEngineCharacterPanelID()
-    local characterScreen = IEex_GetEngineCharacter()
-    local pTail = IEex_ReadDword(characterScreen + 0x632) -- m_lPopupStack.m_pNodeTail
-    local panelID = pTail ~= 0x0 and IEex_ReadDword(IEex_ReadDword(pTail + 0x8) + 0x20) or -1
+	local characterScreen = IEex_GetEngineCharacter()
+	local pTail = IEex_ReadDword(characterScreen + 0x632) -- m_lPopupStack.m_pNodeTail
+	local panelID = pTail ~= 0x0 and IEex_ReadDword(IEex_ReadDword(pTail + 0x8) + 0x20) or -1
 	return panelID
 end
 
 function IEex_EngineCharacterUpdatePopupPanel()
-    local characterScreen = IEex_GetEngineCharacter()
-    local pTail = IEex_ReadDword(characterScreen + 0x632) -- m_lPopupStack.m_pNodeTail
-    local panelID = pTail ~= 0x0 and IEex_ReadDword(IEex_ReadDword(pTail + 0x8) + 0x20) or -1
---    if panelID == -1 then return end
-    local share = IEex_GetActorShare(IEex_ReadDword(characterScreen + 0x136))
-    -- CScreenCharacter_UpdatePopupPanel()
-    IEex_Call(0x5E0B20, {share, panelID}, characterScreen, 0x0)
+	local characterScreen = IEex_GetEngineCharacter()
+	local pTail = IEex_ReadDword(characterScreen + 0x632) -- m_lPopupStack.m_pNodeTail
+	local panelID = pTail ~= 0x0 and IEex_ReadDword(IEex_ReadDword(pTail + 0x8) + 0x20) or -1
+	if panelID == -1 then return end
+	local share = IEex_GetActorShare(IEex_ReadDword(characterScreen + 0x136))
+	-- CScreenCharacter_UpdatePopupPanel()
+	IEex_Call(0x5E0B20, {share, panelID}, characterScreen, 0x0)
 end
 
 function IEex_GetEngineCreateChar()
-    local g_pBaldurChitin = IEex_ReadDword(0x8CF6DC)
-    return IEex_ReadDword(g_pBaldurChitin + 0x1C64)
+	local g_pBaldurChitin = IEex_ReadDword(0x8CF6DC)
+	return IEex_ReadDword(g_pBaldurChitin + 0x1C64)
 end
 
 function IEex_EngineCreateCharUpdatePopupPanel()
-    local createCharScreen = IEex_GetEngineCreateChar()
-    local pTail = IEex_ReadDword(createCharScreen + 0x53E) -- m_lPopupStack.m_pNodeTail
-    local panelID = pTail ~= 0x0 and IEex_ReadDword(IEex_ReadDword(pTail + 0x8) + 0x20) or -1
-    if panelID == -1 then return end
-    local share = IEex_GetActorShare(IEex_ReadDword(createCharScreen + 0x4E2))
-    -- CScreenCreateChar_UpdatePopupPanel()
-    IEex_Call(0x60CEB0, {share, panelID}, createCharScreen, 0x0)
+	local createCharScreen = IEex_GetEngineCreateChar()
+	local pTail = IEex_ReadDword(createCharScreen + 0x53E) -- m_lPopupStack.m_pNodeTail
+	local panelID = pTail ~= 0x0 and IEex_ReadDword(IEex_ReadDword(pTail + 0x8) + 0x20) or -1
+	if panelID == -1 then return end
+	local share = IEex_GetActorShare(IEex_ReadDword(createCharScreen + 0x4E2))
+	-- CScreenCreateChar_UpdatePopupPanel()
+	IEex_Call(0x60CEB0, {share, panelID}, createCharScreen, 0x0)
 end
 
 function IEex_GetEngineCreateCharPanelID()
-    local createCharScreen = IEex_GetEngineCreateChar()
-    local pTail = IEex_ReadDword(createCharScreen + 0x53E) -- m_lPopupStack.m_pNodeTail
-    local panelID = pTail ~= 0x0 and IEex_ReadDword(IEex_ReadDword(pTail + 0x8) + 0x20) or -1
+	local createCharScreen = IEex_GetEngineCreateChar()
+	local pTail = IEex_ReadDword(createCharScreen + 0x53E) -- m_lPopupStack.m_pNodeTail
+	local panelID = pTail ~= 0x0 and IEex_ReadDword(IEex_ReadDword(pTail + 0x8) + 0x20) or -1
 	return panelID
 end
 
@@ -1578,17 +1579,17 @@ function IEex_IsGamePaused()
 end
 
 function IEex_InCutsceneMode()
-    local m_gameSave = IEex_GetGameData() + 0x422C
-    return IEex_ReadDword(m_gameSave + 0x1B6) == 0x142
+	local m_gameSave = IEex_GetGameData() + 0x422C
+	return IEex_ReadDword(m_gameSave + 0x1B6) == 0x142
 end
 
 function IEex_IsDialogWindowOpen()
-    local worldScreen = IEex_GetEngineWorld()
-    return IEex_GetActiveEngine() == worldScreen and IEex_IsPanelActive(IEex_GetPanelFromEngine(worldScreen, 7))
+	local worldScreen = IEex_GetEngineWorld()
+	return IEex_GetActiveEngine() == worldScreen and IEex_IsPanelActive(IEex_GetPanelFromEngine(worldScreen, 7))
 end
 
 function IEex_AddPartyXP(nAmount, bNotQuestXP, bAmountIsChallengeRating)
-    IEex_Call(0x5C0BB0, {bAmountIsChallengeRating and 1 or 0, bNotQuestXP and 1 or 0, nAmount}, IEex_GetGameData(), 0x0)
+	IEex_Call(0x5C0BB0, {bAmountIsChallengeRating and 1 or 0, bNotQuestXP and 1 or 0, nAmount}, IEex_GetGameData(), 0x0)
 end
 
 function IEex_DisplayString(string)
@@ -2358,6 +2359,21 @@ function Feats_MasterOfMagicForce(actorID, featID)
 	return (IEex_ReadByte(creatureData + 0x7C1, 0x0) >= 10 and (IEex_ReadByte(creatureData + 0x628, 0x0) > 9 or IEex_ReadByte(creatureData + 0x629, 0x0) > 6 or IEex_ReadByte(creatureData + 0x62A, 0x0) > 6 or IEex_ReadByte(creatureData + 0x62D, 0x0) > 10 or IEex_ReadByte(creatureData + 0x62E, 0x0) > 10 or IEex_ReadByte(creatureData + 0x630, 0x0) > 7 or IEex_ReadByte(creatureData + 0x631, 0x0) > 6))
 end
 
+function Feats_MaximizedAttacks(actorID, featID)
+	local creatureData = IEex_GetActorShare(actorID)
+	local concentrationSkill = IEex_ReadByte(creatureData + 0x7B7, 0x0)
+	local numSpecializations = 0
+	for i = 0x774, 0x77F, 1 do
+		if IEex_ReadByte(creatureData + i, 0x0) >= 3 then
+			numSpecializations = numSpecializations + 1
+		end
+	end
+	if IEex_ReadByte(creatureData + 0x78D, 0x0) >= 3 then
+		numSpecializations = numSpecializations + 1
+	end
+	return (numSpecializations >= 2 and concentrationSkill >= 4)
+end
+
 function Feats_MaximizeSpell(actorID, featID)
 	local creatureData = IEex_GetActorShare(actorID)
 	return (IEex_ReadByte(creatureData + 0x628, 0x0) > 9 or IEex_ReadByte(creatureData + 0x629, 0x0) > 6 or IEex_ReadByte(creatureData + 0x62A, 0x0) > 6 or IEex_ReadByte(creatureData + 0x62D, 0x0) > 10 or IEex_ReadByte(creatureData + 0x62E, 0x0) > 10 or IEex_ReadByte(creatureData + 0x630, 0x0) > 7 or IEex_ReadByte(creatureData + 0x631, 0x0) > 6)
@@ -3021,7 +3037,7 @@ function EXDAMAGE(effectData, creatureData)
 		end
 		local weaponSlot = IEex_ReadByte(sourceData + 0x4BA4, 0x0)
 		if weaponSlot >= 11 and weaponSlot <= 14 then
-			IEex_IterateActorEffects(targetID, function(eData)
+			IEex_IterateActorEffects(sourceID, function(eData)
 				local theopcode = IEex_ReadDword(eData + 0x10)
 				local theparameter1 = IEex_ReadDword(eData + 0x1C)
 				local theparameter2 = IEex_ReadDword(eData + 0x20)
@@ -4469,7 +4485,7 @@ function MESTATSP(effectData, creatureData)
 		local spellRES = ""
 		local highest = -1
 		for key,value in pairs(statSpellList) do
-			if statValue >= key and key > highest then
+			if (bit.band(savingthrow, 0x20000) == 0 and statValue >= key and key > highest) or (bit.band(savingthrow, 0x20000) > 0 and statValue < key and key < highest) then
 				spellRES = value
 				highest = key
 			end
@@ -6557,16 +6573,58 @@ function MEMODDUR(effectData, creatureData)
 				IEex_SetGlobal("EX_GLOBEF" .. bt, globalEffectExpiration + parameter1)
 			end
 		end
+		local areaData = IEex_ReadDword(creatureData + 0x12)
+		if areaData > 0 then
+			local areaRES = IEex_ReadLString(areaData, 8)
+			IEex_IterateIDs(areaData, 0x31, function(currentID)
+				local currentShare = IEex_GetActorShare(currentID)
+				local scriptName = IEex_ReadLString(currentShare + 0x554, 32)
+				if scriptName == areaRES .. "AREAGL" then
+					IEex_IterateActorEffects(currentID, function(eData)
+						local theopcode = IEex_ReadDword(eData + 0x10)
+						local theparameter1 = IEex_ReadDword(eData + 0x1C)
+						local theparameter2 = IEex_ReadDword(eData + 0x20)
+						local thetiming = IEex_ReadDword(eData + 0x24)
+						local thesavingthrow = IEex_ReadDword(eData + 0x40)
+						local theresource = IEex_ReadLString(eData + 0x30, 8)
+						local theresourceflags = IEex_ReadDword(eData + 0x9C)
+						local theinternalflags = IEex_ReadDword(eData + 0xD8)
+						if thetiming ~= 2 and (bit.band(savingthrow, 0x10000) == 0 or bit.band(theinternalflags, 0x4000) == 0) then
+							if condition == 0 or (condition == 1 and (bit.band(theresourceflags, 0x400) > 0 or theopcode == 12)) or (condition == 2 and (bit.band(theresourceflags, 0x400) == 0 and theopcode ~= 12)) then
+								IEex_WriteDword(eData + 0xD8, bit.bor(theinternalflags, 0x4000))
+								local theduration = IEex_ReadDword(eData + 0x28)
+								local thetime_applied = IEex_ReadDword(eData + 0x6C)
+								if parameter2 == 0 then
+									IEex_WriteDword(eData + 0x28, theduration + parameter1)
+								elseif parameter2 == 1 then
+									IEex_WriteDword(eData + 0x28, theduration + parameter1)
+								elseif parameter2 == 2 then
+									IEex_WriteDword(eData + 0x28, thetime_applied + math.floor((theduration - thetime_applied) * parameter1 / 100))
+								end
+							end
+						end
+					end)
+				end
+			end)
+		end
 		if parameter2 == 0 and parameter1 < 0 then
 			IEex_IterateProjectiles(targetID, -1, function(projectileData)
-				if IEex_ProjectileType[IEex_ReadWord(projectileData + 0x6E, 0x0) + 1] == 6 then
+				local projectileType = IEex_ProjectileType[IEex_ReadWord(projectileData + 0x6E, 0x0) + 1]
+				if projectileType == 6 then
 					local remainingDuration = IEex_ReadSignedWord(projectileData + 0x4C0, 0x0)
 					remainingDuration = remainingDuration + parameter1
 					if remainingDuration <= 0 then
 						remainingDuration = 1
 					end
 					IEex_WriteWord(projectileData + 0x4C0, remainingDuration)
-
+				elseif projectileType == 11 then
+					
+					local remainingDuration = IEex_ReadSignedWord(projectileData + 0x2AE, 0x0)
+					remainingDuration = remainingDuration + parameter1
+					if remainingDuration <= 0 then
+						remainingDuration = 1
+					end
+					IEex_WriteWord(projectileData + 0x2AE, remainingDuration)
 				end
 				IEex_WriteWord(projectileData + 0x70, 1000)
 			end)
@@ -14288,7 +14346,7 @@ function MEFEINT(effectData, creatureData)
 	if feintFeatID ~= nil then
 		feintFeatCount = IEex_ReadByte(sourceData + 0x744 + feintFeatID, 0x0)
 	end
-	savebonus = savebonus + IEex_ReadByte(sourceData + 0x7B6, 0x0) + math.floor((IEex_GetActorStat(sourceID, 38) - 10) / 2)
+	savebonus = savebonus + IEex_GetActorStat(sourceID, 230)
 	IEex_IterateActorEffects(sourceID, function(eData)
 		local theopcode = IEex_ReadDword(eData + 0x10)
 		local theparameter2 = IEex_ReadDword(eData + 0x20)
@@ -18725,9 +18783,9 @@ function METRANST(effectData, creatureData)
 end
 
 function IEex_JumpActorToPoint(actorID, pointX, pointY, bSendSpriteUpdateMessage)
-    if not IEex_IsSprite(actorID, true) then return end
-    if bSendSpriteUpdateMessage == nil then bSendSpriteUpdateMessage = true end 
-    IEex_Call(0x745950, {bSendSpriteUpdateMessage and 1 or 0, pointY, pointX}, IEex_GetActorShare(actorID), 0x0)
+	if not IEex_IsSprite(actorID, true) then return end
+	if bSendSpriteUpdateMessage == nil then bSendSpriteUpdateMessage = true end
+	IEex_Call(0x745950, {bSendSpriteUpdateMessage and 1 or 0, pointY, pointX}, IEex_GetActorShare(actorID), 0x0)
 end
 
 function MESETZ(effectData, creatureData)
@@ -22548,7 +22606,7 @@ function MEPROJCS(originatingEffectData, effectData, creatureData)
 	local savingthrow = IEex_ReadDword(effectData + 0x3C)
 	local parent_resource = IEex_ReadLString(effectData + 0x90, 8)
 	local internalFlags = bit.bor(IEex_ReadDword(effectData + 0xCC), IEex_ReadDword(effectData + 0xD4))
-	if opcode == 13 and parent_resource == "" and bit.band(internalFlags, 0x4000000) == 0 then
+	if (opcode == 13 or opcode == 420) and bit.band(internalFlags, 0x4000000) == 0 then
 		parameter1 = 1
 		IEex_WriteDword(effectData + 0x18, parameter1)
 		local targetX = IEex_ReadDword(creatureData + 0x6)
@@ -26131,7 +26189,7 @@ function MEDEATYP(originatingEffectData, effectData, creatureData)
 	local durationEnd = IEex_ReadDword(originatingEffectData + 0x68) + IEex_ReadDword(originatingEffectData + 0x44) * 15 + 2
 	local o_savingthrow = IEex_ReadDword(originatingEffectData + 0x3C)
 	if IEex_GetGameTick() <= durationEnd or IEex_ReadDword(originatingEffectData + 0x44) == -1 then
-		if opcode == 13 then
+		if opcode == 13 or opcode == 420 then
 			IEex_WriteDword(effectData + 0x1C, IEex_ReadDword(originatingEffectData + 0x1C))
 			if bit.band(o_savingthrow, 0x10000) > 0 then
 				IEex_WriteDword(effectData + 0x18, 1)
@@ -26187,7 +26245,7 @@ function MESOULBI(originatingEffectData, effectData, creatureData)
 	local sourceData = IEex_GetActorShare(o_sourceID)
 	if sourceData <= 0 then return false end
 	if IEex_GetGameTick() <= durationEnd or IEex_ReadDword(originatingEffectData + 0x44) == -1 then
-		if opcode == 13 then
+		if opcode == 13 or opcode == 420 then
 			local foundGem = false
 			for i = 15, 41, 1 do
 				if not foundGem then
@@ -26310,7 +26368,7 @@ function MERESCON(originatingEffectData, effectData, creatureData)
 	local resurrectionEnd = IEex_ReadDword(originatingEffectData + 0x68) + IEex_ReadDword(originatingEffectData + 0x44) * 15
 	local o_savingthrow = IEex_ReadDword(originatingEffectData + 0x3C)
 	if IEex_GetGameTick() <= resurrectionEnd or IEex_ReadDword(originatingEffectData + 0x44) == 0 then
-		if opcode == 13 and parent_resource == "" then
+		if opcode == 13 or opcode == 420 then
 			local doResurrect = false
 			if o_timing == 2 then
 				for i = 0, 50, 1 do
