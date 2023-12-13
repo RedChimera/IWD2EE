@@ -820,15 +820,15 @@
 Это ужасное заклинание сдирает кожу с жертвы, вызывая кровоточащую рану, которая наносит 4 урона в раунд на протяжении действия заклинания, и еще 4 урона от кровотечения за каждый десять уровней заклинателя, до максимума в 16 урона в раунд на 30 уровне. Успешный спасбросок стойкости уменьшает урон от кровотечения вдвое.~
 @1140    = ~Слово силы: Убить~
 @1141    = ~Слово силы: Убить
-(Призывание)
+(Прорицание)
 Уровень: бард 8, колдун/волшебник 9, жрец Огмы 8, жрец Темпуса 9
 Дальность: обзор колдующего
 Длительность: постоянно
 Время чтения: 0
 Зона действия: 1 существо
-Спасбросок: особый
+Спасбросок: стойкости, особый
 
-Заклинание "Слово силы: Убить", возможно, самое опасное из слов силы. Оно убивает любое существо, имеющее до 100 очков здоровья, или несколько существ с 20 или меньшим количеством очков здоровья на каждого, вплоть до максимума в 200 очков здоровья. При этом в расчёт берётся текущее количество очков здоровья существа, а не его максимальное значение, поэтому заклинание может подействовать даже на очень сильное создание, если то было ранено.~
+Заклинание "Слово силы: Убить", возможно, самое опасное из слов силы. Оно убивает любое существо при проваленном спасброске стойкости с +4 к УС. Если у жертвы 100 пунктов жизни или меньше, она автоматические убивается. Это заклинание не действует на глухих существ.~
 @1142    = ~Вопль банши~
 @1143    = ~Вопль банши
 (Некромантия)
@@ -1650,65 +1650,61 @@
 Спасбросок: нет
 
 Это заклинание увеличивает телосложения существа на 4 на время действия заклинания.~
-@1728    = ~Stone to Flesh~
-@1729    = ~Stone to Flesh 
-(Transmutation) 
-Level: Sor/Wiz 6
-Range: Medium
-Duration: Permanent
-Casting Time: 6
-Area of Effect: 1 creature
-Saving Throw: None
+@1728    = ~Камень в плоть~
+@1729    = ~Камень в плоть
+(Преобразование)
+Уровень: колдун/волшебник 6
+Дальность: средняя
+Длительность: постоянно
+Время чтения: 6
+Зона действия: 1 существо
+Спасбросок: нет
 
-This spell reverses the effects of petrification. After a petrified character has been shattered and their portrait goes gray, this spell will restore them to full health.
-~
-@1730    = ~Finger of Death~
-@1731    = ~Finger of Death 
-(Necromancy)
-Level: Drd 8, Sor/Wiz 7
-Range: Sight of Caster 
-Duration: Permanent 
-Casting Time: 5
-Area of Effect: 1 creature
-Saving Throw: Fortitude partial
+Это заклинание возвращает окаменевшее существо в нормальное состояние. После того, как окаменевший персонаж был разрушен, а его портрет станет серым, это заклинание восстановит ему всё здоровье.~
+@1730    = ~Перст смерти~
+@1731    = ~Перст смерти
+(Некромантия)
+Уровень: друид 8, колдун/волшебник 7
+Дальность: обзор колдующего
+Длительность: постоянно
+Время чтения: 5
+Зона действия: 1 существо
+Спасбросок: стойкости, особый
 
-The caster utters the finger of death incantation, points his index finger at the creature to be slain, and unless the victim makes a Fortitude save, the victim dies instantly. Even if the save is successful, however, the brush with death still inflicts 3d6 + 1 point/level of damage.
-~
-@1732    = ~Reflected Image~
-@1733    = ~Reflected Image 
-(Illusion) 
-Level: Brd 1, Sor/Wiz 1, Mask 1
-Range: Sight of Caster
-Duration: 24 hours
-Casting Time: 0
-Area of Effect: 1 creature
-Saving Throw: None 
+Заклинатель читает "Перст смерти", направляет на цель указательный палец - и жертва мгновенно погибает, если не сделает удачный спасбросок стойкости. Но и в случае успешного спасброска встреча со смертью не проходит безболезненно - заклинание наносит 3d6 единиц урона плюс по 1 единице за каждый уровень колдующего.~
+@1732    = ~Отражённый образ~
+@1733    = ~Отражённый образ
+(Иллюзия)
+Уровень: бард 1, колдун/волшебник 1, жрец Маска 1
+Дальность: обзор колдующего
+Длительность: 24 часа
+Время чтения: 0
+Зона действия: 1 существо
+Спасбросок: нет
 
-Upon casting this spell, the caster creates an image of the target that will travel along beside him or her. The image will perform all of the actions that the target does, forcing opponents to guess which image to attack. The image will disappear with a successful Dispel Magic, when attacked or when the spell duration runs out.~
-@1734    = ~Ghost Armor~
-@1735    = ~Ghost Armor
-(Conjuration)
-Level: Brd 3, Sor/Wiz 3, Selune 4
-Range: Touch
-Duration: 5 rounds + 2 rounds/level
-Casting Time: 3 
-Area of Effect: 1 creature
-Saving Throw: None 
+Произнеся это заклинание, заклинатель создает образ цели, который будет путешествовать рядом с ней. Изображение будет повторять все действия цели, заставляя противников гадать, какой из образов настоящий. Образ исчезает после успешного развеивания магии, при атаке или по истечении срока действия заклинания.~
+@1734    = ~Призрачные доспехи~
+@1735    = ~Призрачные доспехи
+(Призывание)
+Уровень: бард 3, колдун/волшебник 3, жрец Селуны 4
+Дальность: прикосновение
+Длительность: 5 раундов + 2 раунда/уровень
+Время чтения: 3
+Зона действия: 1 существо
+Спасбросок: нет
 
-This spell creates a magical field of force with the strength of half-plate armor (armor bonus +7). It is cumulative with Dexterity effects and shield bonuses. The Ghost Armor spell does not hinder movement, adds no weight or encumbrance, nor does it prevent spellcasting. It lasts until dispelled or until the duration runs out.~
+Это заклинание создаёт магическое силовое поле с крепостью полулатных доспехов (+7 к классу защиты (доспех)). Оно действует вместе с бонусами от Ловкости и щита. Заклинание не затрудняет движения, не добавляет веса, не перегружает и не мешает читать заклинания. Оно поддерживается до истечения срока действия или же до тех пор, пока его не развеют.~
+@1744    = ~Стук~
+@1745    = ~Стук
+(Преобразование)
+Уровень: колдун/волшебник 2
+Дальность: обзор колдующего
+Длительность: особая
+Время чтения: 1
+Зона действия: запертая дверь или сундук
+Спасбросок: нет
 
-@1744    = ~Knock~
-@1745    = ~Knock
-(Transmutation)
-Level: Sor/Wiz 2
-Range: Sight of Caster
-Duration: Special 
-Casting Time: 1
-Area of Effect: Locked door or container
-Saving Throw: None
-
-The Knock spell opens locked, held or arcane locked doors. It opens secret doors, as well as locked boxes or chests. It does not raise barred gates or similar impediments.
-~
+Заклинание открывает запертые, удерживаемые или запечатанные магией двери. Оно открывает потайные двери, а также запертые ящики и сундуки, но не поднимает опущенные ворота или подобные препятствия.~
 @1747    = ~Horrid Wilting~
 @1748    = ~Horrid Wilting
 (Necromancy)
