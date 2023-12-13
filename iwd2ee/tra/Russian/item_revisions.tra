@@ -1,123 +1,112 @@
 //TRA num range @10000 to @19999
 
-@2492    = ~Ягода~
-@2493    = ~На вид это обычные ягоды черники, однако они созданы заклинанием "Ягода". Каждая съеденная горсть восстанавливает 1d4+5 единиц здоровья.~
+@2492    = ~Goodberry~
+@2493    = ~Created by the Goodberry spell, these simple looking blueberries will heal 1d4+5 points of damage for each bunch of berries eaten.~
 
 //@10020    = ~Necklace of Missiles~
-@10021    = ~Это ожерелье создаёт крохотную магическую бусинку, которая безошибочно полетит в цель. При поражении цели, бусинка взорвётся огненным адом, поджигая всё, что попало в зону взрыва. Это ожерелье может создавать три огненных шара в день.
+@10021    = ~This necklace creates a tiny magical bead that will fly unerringly towards its target. Upon striking the target, the bead will burst into a fiery inferno, burning anything caught within the blast area. This necklace can create three fireballs per day.
 
-ПАРАМЕТРЫ:
+STATISTICS:
 
-Дальность: 50 футов
-Зона действия: радиус 30 футов
-Урон: 4d6 (cпасбросок реакции УС 14)
-Вес: 1 фунт~
+Range:  50 ft
+Area of effect:  30 ft radius
+Damage:  4d6 (Reflex DC 14)
+Weight: 1 lb.~
 //@10022    = ~Amulet of Protection +1~
-@10023    = ~Амулет - один из самых удобных предметов для наложения чар; его носят на шее, что никак не мешает тонкому процессу чтения заклинания. Магия этого амулета защищает владельца от вреда.
+@10023    = ~Amulets are one the most favored items to enchant by wizards because of their ability to be worn without interfering with the delicate rituals of spell casting. This particular amulet has been infused with various magics that are designed to protect the wearer from harm.
 
-ПАРАМЕТРЫ:
+STATISTICS:
 
-Класс защиты: +1 (общий)
-Спасброски: +1
-Вес: 1 фунт~
+Generic Armor Bonus: +1
+Saving Throw Bonus: +1
+Weight: 1 lb.~
 //@10024    = ~Shield Amulet~
-@10025    = ~Этот амулет создает невидимый, подвижный диск силы, который защищает заклинателя подобно заклинанию "Щит".
+@10025    = ~This amulet creates an invisible, mobile disk of force that protects the caster in a fashion identical to the spell Shield. 
 
-ПАРАМЕТРЫ:
+STATISTICS:
 
-Носитель находится под действием заклинания "Щит", пока этот амулет экипирован
-Вес: 1 фунт~
+Wearer is under the effect of the spell Shield while equipped
+Weight: 1 lb.~
 //@10026    = ~Amulet of Intellect~
-@10027    = ~Этот амулет был зачарован для улучшения запоминающих способностей владельца.
+@10027    = ~This amulet has been enchanted to improved the wearer's learning capabilities.
 
-ПАРАМЕТРЫ:
+STATISTICS:
 
-Интеллект: +3
-Вес: 1 фунт~
+Intelligence:  +3
+Weight: 1 lb.~
 //@10028    = ~Lucky Knucky~
-@10029    = ~В этом талисмане едва угадывается крупный осколок рыбьей кости. Вот уже почти два десятка лет он хранится в Таргосе, чтобы приносить городу удачу. Его история началась с моряка по прозвищу Молодой Нед из Лонливуда. Однажды он рыбачил неподалёку от Таргоса. Возле берега Маэр Дуалдона лодчонка моряка перевернулась вверх килем. Но ему сопутствовала удача - Нед выловил свою "необычайно увесистую" рыбину - на его удочку попалась огромная круглоголовая форель. Обрадованный Нед отправился к берегу и уже нёс рыбу домой, когда на него напал оголодавший медведь. Косолапый разбойник отхватил себе большую часть рыбины, оставив в руках рыболова лишь голову. Нед побрёл в город. Он сохранил голову в качестве доказательства о случившемся. Со временем Нед стал считать, что удачным денькам он обязан своей "счастливой косточке". Прознав про это, разбойник по прозвищу Трусливый Марг, не без помощи краплёной колоды карт, "выиграл" у моряка рыбью голову. Нед очень огорчился, что дал себя одурачить, но пойти к разбойнику и потребовать талисман назад побоялся. Марг же в скором времени был вынужден срочно бежать из Таргоса и расплатился рыбьей головой за припасы в дорогу. Купивший кусок рыбьей головы торговец несколько месяцев держал её у себя, а потом сбагрил другу, работавшему в местных доках. В течение нескольких последующих лет до наших дней счастливый талисман Неда перепродавался, выигрывался в карты или обменивался не один десяток раз. У него было больше дюжины владельцев в Таргосе и один - в Бремене.
+@10029    = ~This barely recognizable lump of fish bone has been carried as a good luck charm in Targos for almost twenty years. The item's history started with the sailor Young Ned of Lonelywood. On one of his fishing trips near Targos, his small boat capsized near the Maer Dualdon shore. He held onto his prize catch, an "unbelievably massive" knucklehead trout, despite being charged by a hungry bear when he reached shore. The bear snatched the majority of the trout away from Ned, leaving him holding the poor fish's tooth-severed head. Ned walked the rest of the way to Targos and kept the head as evidence of his encounter. Over time, Ned started to attribute his good fortune as a sailor to his "lucky knucky". The brigand Marg the Trembler "won" Ned's lucky knucky away from him in a rigged card game. Ned was bitter over being cheated, but he wasn't willing to stand up to Marg to get it back. Marg later used the fish head as currency to buy supplies as he hastily fled from Targos. The man who received the piece of bone held on to it for a few months before handing it off to a friend at the docks. In the years that followed up to the current date, Ned's "lucky knucky" has been traded, won, or sold to over a dozen people in Targos and, once, in Bremen.
 
-ПАРАМЕТРЫ:
+STATISTICS:
 
-Удача: +1
-Вес: 0 фунтов~
+Luck: +1
+Weight: 0 lb.~
 //@10030    = ~Young Ned's Knucky~
-@10031    = ~@27538 = ~В этом талисмане едва угадывается крупный осколок рыбьей кости. Вот уже почти два десятка лет он хранится в Таргосе, чтобы приносить городу удачу. Его история началась с моряка по прозвищу Молодой Нед из Лонливуда. Однажды он рыбачил неподалёку от Таргоса. Возле берега Маэр Дуалдона лодчонка моряка перевернулась вверх килем. Но ему сопутствовала удача - Нед выловил свою "необычайно увесистую" рыбину - на его удочку попалась огромная круглоголовая форель. Обрадованный Нед отправился к берегу и уже нёс рыбу домой, когда на него напал оголодавший медведь. Косолапый разбойник отхватил себе большую часть рыбины, оставив в руках рыболова лишь голову. Нед побрёл в город. Он сохранил голову в качестве доказательства о случившемся. Со временем Нед стал считать, что удачным денькам он обязан своей "счастливой косточке". Прознав про это, разбойник по прозвищу Трусливый Марг, не без помощи краплёной колоды карт, "выиграл" у моряка рыбью голову. Нед очень огорчился, что дал себя одурачить, но пойти к разбойнику и потребовать талисман назад побоялся. Марг же в скором времени был вынужден срочно бежать из Таргоса и расплатился рыбьей головой за припасы в дорогу. Купивший кусок рыбьей головы торговец несколько месяцев держал её у себя, а потом сбагрил другу, работавшему в местных доках. В течение нескольких последующих лет до наших дней счастливый талисман Неда перепродавался, выигрывался в карты или обменивался не один десяток раз. У него было больше дюжины владельцев в Таргосе и один - в Бремене.
+@10031    = ~This barely recognizable lump of fish bone has been carried as good luck charm in Targos for almost twenty years. The item's history started with the sailor Young Ned of Lonelywood. On one of his fishing trips near Targos, his small boat capsized near the Maer Dualdon shore. He held onto his prize catch, an "unbelievably massive" knucklehead trout, despite being charged by a hungry bear when he reached shore. The bear snatched the majority of the trout away from Ned, leaving him holding the poor fish's tooth-severed head. Ned walked the rest of the way to Targos and kept the head as evidence of his encounter. Over time, Ned started to attribute his good fortune as a sailor to his "lucky knucky". The brigand Marg the Trembler "won" Ned's lucky knucky away from him in a rigged card game. Ned was bitter over being cheated, but he wasn't willing to stand up to Marg to get it back. Marg later used the fish head as currency to buy supplies as he hastily fled from Targos. The man who received the piece of bone held on to it for a few months before handing it off to a friend at the docks. In the years that followed up to the current date, Ned's "lucky knucky" has been traded, won, or sold to over a dozen people in Targos and, once, in Bremen.
 
-ПАРАМЕТРЫ:
+STATISTICS:
 
-Особенности:
- Удача: +2
-Вес: 0 фунтов~
+Luck: +2
+Weight: 0 lb.~
 //@10032    = ~Yeti Skin Scarf~
 //@10033    = ~Item description can remain the same; if new description is needed put it here~
 //@10034    = ~Winter Wolf Scarf~
-@10035    = ~Этот широкий шарф сделан из шерсти зимнего волка.
+@10035    = ~This is a scarf that is constructed from the fur of a Winter Wolf.
 
-ПАРАМЕТРЫ:
+STATISTICS:
 
-Сопротивление: 2/- сопротивления холоду
-Харизма: +1
-Вес: 2 фунта~
+Resistance: 2/- Cold Resistance
+Charisma: +1
+Weight: 2 lb.~
 //@10036    = ~Belib's Multiple Tool~
-@10037    = ~Белиб Осторожный был весьма умным гномом. Он называл себя искателем приключений и считал, что, отправляясь в путь, нужно защитить каждую частичку своей крошечной задницы. Он создал десятки магических предметов, которые могли бы пригодиться ему в самых невероятных ситуациях. Эти удивительные вещи, несомненно, вызвали бы зависть всех искателей приключений - если бы Белибу удалось выйти из дома вместе со всем своим снаряжением.
+@10037    = ~Belib the Wary was a very bright gnome, and self-proclaimed adventurer, who believed in covering every angle of his tiny arse before leaving on grand quests. He created magical items that literally saturated the gamut of possible situations that could arise from his high adventures. These magical items would have been the envy of all adventurers, had Belib been successful in leaving his domicile with his equipment.
 
-Потратив многие года на создание своей коллекции волшебных предметов, Белиб наконец сложил все эти вещи в большой дорожный мешок (мешок, естественно, был зачарован так, чтобы вмещать гораздо больше обычного гномьего мешка) и отправился на поиски самых великий приключений. К несчастью для Белиба, он споткнулся на пороге и был раздавлен своим же тяжеленным мешком. Мешок порвался, и его волшебное содержимое рассыпалось по всему двору. Хотелось бы думать, что прохожие помогут раздавленному гному, но они лишь растащили всё его добро.
+After many years of creating his incredible inventory of enchanted do-dads, Belib finally gathered his wares into an immense backpack (naturally, it was enchanted to carry far more than what would normally fit into a gnome's pack) and set out to quest for the grandest quests. Unfortunately for Belib, one of his tiny feet tripped over his home's threshold and he was summarily crushed under the enormous weight of his pack. The backpack burst open and scattered his enchanted wares all across his front yard. One would like to think that passing sentient beings would stop and help the crushed gnome, but the most that passersby did was loot Belib's goods.
 
-Одним из самых популярных предметов, созданных Белибом - особенно среди тех подонков, которые специализируются на кражах и мародёрстве - был "Многофункциональный инструмент Белиба". Этот инструмент, замаскированный под красивый амулет, поможет даже самому неумелому разбойнику стать мастером по взлому замков и обезвреживанию ловушек. Как это часто бывает с предметами, помогающими в воровском искусстве, этот инструмент за годы своего существования частенько переходил из одних грязных рук в другие.
+One of Belib's more popular goodies, especially with the vermin that make stealing and looting a career, was Belib's Multiple Tool. Disguised as an ornate amulet, this tool would help make even the most inept rogue a master of lock picking and trap disarming. As is usually the case with items that aid in the thieving arts, Belib's Multiple Tool has found its way into many greased palms over the years.
 
-ПАРАМЕТРЫ:
+STATISTICS:
 
-Особенности:
- Навык "Взлом замков": +5
- Навык "Поиск": +5
-Вес: 1 фунт~
+Special:
+ +5 to Open Lock skill
+ +5 to Search skill
+Weight: 1 lb.~
 //@10038    = ~Belib's Multiple Tool of Fortune~
-@10039    = ~Белиб Осторожный был весьма умным гномом. Он называл себя искателем приключений и считал, что, отправляясь в путь, нужно защитить каждую частичку своей крошечной задницы. Он создал десятки магических предметов, которые могли бы пригодиться ему в самых невероятных ситуациях. Эти удивительные вещи, несомненно, вызвали бы зависть всех искателей приключений - если бы Белибу удалось выйти из дома вместе со всем своим снаряжением.
+@10039    = ~Belib the Wary was a very bright gnome, and self-proclaimed adventurer, who believed in covering every angle of his tiny arse before leaving on grand quests. He created magical items that literally saturated the gamut of possible situations that could arise from his high adventures. These magical items would have been the envy of all adventurers, had Belib been successful in leaving his domicile with his equipment.
 
-Потратив многие года на создание своей коллекции волшебных предметов, Белиб наконец сложил все эти вещи в большой дорожный мешок (мешок, естественно, был зачарован так, чтобы вмещать гораздо больше обычного гномьего мешка) и отправился на поиски самых великий приключений. К несчастью для Белиба, он споткнулся на пороге и был раздавлен своим же тяжеленным мешком. Мешок порвался, и его волшебное содержимое рассыпалось по всему двору. Хотелось бы думать, что прохожие помогут раздавленному гному, но они лишь растащили всё его добро.
+After many years of creating his incredible inventory of enchanted do-dads, Belib finally gathered his wares into an immense backpack (naturally, it was enchanted to carry far more than what would normally fit into a gnome's pack) and set out to quest for the grandest quests. Unfortunately for Belib, one of his tiny feet tripped over his home's threshold and he was summarily crushed under the enormous weight of his pack. The backpack burst open and scattered his enchanted wares all across his front yard. One would like to think that passing sentient beings would stop and help the crushed gnome, but the most that passersby did was loot Belib's goods.
 
-Одним из самых популярных предметов, созданных Белибом - особенно среди тех подонков, которые специализируются на кражах и мародёрстве - был "Многофункциональный инструмент удачи Белиба". Этот инструмент, замаскированный под красивый амулет, поможет даже самому неумелому разбойнику стать мастером по взлому замков и обезвреживанию ловушек. Как это часто бывает с предметами, помогающими в воровском искусстве, этот инструмент за годы своего существования частенько переходил из одних грязных рук в другие.
+One of Belib's more popular goodies, especially with the vermin that make stealing and looting a career, was Belib's Multiple Tool of Fortune. Disguised as an ornate amulet, this tool would help make even the most inept rogue a master of lock picking and trap disarming. As is usually the case with items that aid in the thieving arts, Belib's Multiple Tool has found its way into many greased palms over the years.
 
-ПАРАМЕТРЫ:
+STATISTICS:
 
-Особенности:
- Навык "Взлом замков": +10
- Навык "Поиск": +10
- Спасброски: +2 ко всем
-Вес: 1 фунт~
+Special:
+ Open Lock skill: +10
+ Search skill: +10
+ Saving Throw Bonus: +2 to all
+Weight: 1 lb.~
 //@10040    = ~Druid's Stone~
-@10041    = ~Эти камни песочного цвета были созданы друидами, следящими за границами пустыни Анаурох. Друиды часто медитировали, находясь на своём одиночном посту, и такие камни, помогали им общаться с землёй и камнями под ногами, рассказывая друидам о передвижениях пустынных существ в окрестностях. Во время опасности эти друиды могли призвать силу земли, что делало их кожу твёрдой, как камень и давало определённую защиту от нападений.
+@10041    = ~These sand-colored stones were fashioned by druids watching the borders of the Anauroch Desert. The druids would often meditate while on their lonely vigils, and the stones they wore would help them commune with the earth and stones beneath their feet, telling them of the movements of desert creatures in the surrounding area. In times of danger, they could summon the strength of the earth to their aid, causing their skin to become as hard as stone and giving them some protection against attacks. 
 
-Причина их дежурств была неизвестна, но друиды таинственно исчезли более пятидесяти лет назад, и никому доподлинно не известно, что с ними стало. Остались только эти камни, а камни не рассказывают историй.
+The reason for their vigil was unknown, but the druids vanished mysteriously over fifty years ago, and no one knows what became of them. Only their druid stones remained, and the stones have told no stories.
 
-ПАРАМЕТРЫ:
+STATISTICS:
 
-Особенности:
- Находясь под воздействием заклинания "Каменная кожа", владелец получает 5/- сопротивление физическому урону
-Вес: 1 фунт
-Требования: Мудрость 13+~
+Special:
+  While under the effect of Stoneskin, the wearer gains 5/- resistance to physical damage
+Weight: 1 lb.
+Minimum Wisdom of 13 Required~
 //@10042    = ~Druid's Stone of Thorns~
-@10043    = ~Разные виды этих камней песочного цвета изготавливались друидами, следящими за границами пустыни Анаурох, но именно этот камень принадлежал Теону, который, как считается, и организовал слежку за пустыней из-за предзнаменований, полученных им от зимних ветров. Когда Аталаклис Потерянный в конце концов пересёк границы пустыни Анаурох, Теон собрал своих друидов и вступил в бой с Аталаклисом на песках. Несмотря на силу друидских камней, Аталаклис победил всех друидов и превратил их тела в песок, а затем собрал их камни и сложил их в кучу в качестве предупреждения. Он продолжил свой путь на запад, пока его не нашёл старый герцог Хольза Эльд, и они встретились в битве из-за преступлений Аталаклиса против Плачущей Королевы.
+@10043    = ~Versions of these sand-colored stones were fashioned by druids watching the borders of the Anauroch Desert, but this particular stone was worn by Theon, who was believed to have organized the Anauroch vigil based on portents he had received upon the winter winds. When Atalacyls the Lost eventually crossed the boundaries of the Anauroch desert, Theon gathered the druids to him and engaged him in battle on the sands. Despite the powers of their stones, Atalacyls defeated them to a man and turned their bodies to sand, then made a small pile of their druid stones as a warning to others not to follow him on his path. He continued his journey westwards until he was found by Old Duke Kholsa Ehld, and the two of them met in battle over Atalacyls' crimes against the Weeping Queen.
 
-ПАРАМЕТРЫ:
+STATISTICS:
 
-Особенности:
- Находясь под воздействием заклинания "Каменная кожа", владелец получает 10/- сопротивление физическому урону, и враги, поражающие владельца в ближнем бою получают 2d4 колющего урона
-Вес: 1 фунт
-Требования: Мудрость 13+~
+Special:
+  While under the effect of Stoneskin, the wearer gains 10/- resistance to physical damage, and enemies who hit the wearer in melee take 2d4 piercing damage
+Weight: 1 lb.
+Minimum Wisdom of 13 Required~
 //@10044    = ~Eye of the Storm~
-@10045    = ~/*На воющем севере Долины Ледяного Ветра бывает трудно успокоиться перед битвой... или оставаться невозмутимым, будучи окружённым врагами. Эти простые медальоны несут на себе небольшое благословение, которое позволяет солдату обрести спокойствие даже в разгар боя, давая ему шанс оставаться стойким перед лицом будущих испытаний. Эти медальоны высоко ценятся солдатами, имеющими дело с Утгардтом, особенно когда торговля заканчивается неудачей, и кажется, что вот-вот прольётся кровь.
-
-Когда орда гоблинов разграбила Бремен, этот таинственный предмет был снят с мёртвого купца гоблинским шаманом, который так и не смог найти ему применения. Шаман пронёс амулет несколько лиг, до тех пор, пока не потерял его, обронив где-то в снегу. И вот он появился здесь.
-
-ПАРАМЕТРЫ:
-
-Особенности:
- "Штормовые" заклинания (Ливень, Огненная буря, Буря возмездия, Ледяной шторм, Кислотная буря и Stygian Ice Storm), не наносят вреда союзникам, когда их применяет владелец.
- Заклинание: Может применять заклинание "Святилище" дважды в день
-Вес: 1 фунт~*/
-In the howling north of Icewind Dale, it can be difficult to steady oneself before battle... or even keep one's wit when surrounded by foes. These simple medallions carry a minor blessing that allows a soldier to achieve a measure of peace even in the middle of combat, allowing him to steady himself to face the trials ahead. These medallions are highly prized by soldiers that deal with the Uthgardt, especially when trading turns sour, and it seems blood is about to be shed. 
+@10045    = ~In the howling north of Icewind Dale, it can be difficult to steady oneself before battle... or even keep one's wit when surrounded by foes. These simple medallions carry a minor blessing that allows a soldier to achieve a measure of peace even in the middle of combat, allowing him to steady himself to face the trials ahead. These medallions are highly prized by soldiers that deal with the Uthgardt, especially when trading turns sour, and it seems blood is about to be shed. 
 
 When the goblin horde sacked Bremen, this mysterious item was seized from a dead merchant by one of the goblin shamans, who could find no use for it. The medallion was carried for several leagues until the amulet slipped from the shaman's possession and was lost amongst the snows, only to resurface here. 
 
