@@ -1943,97 +1943,92 @@
 Спасбросок: реакции, половина урона
 
 На выбранную заклинателем цель с небес падает обжигающий луч света и обжигает целевое существо, нанося ему 1d6 огненного урона + 1 за каждый уровень заклинателя (вплоть до 1d6+15). Нежить и монстры, уязвимые к яркому свету получают 1d6 огненного урона + 2 за каждый уровень заклинателя (вплоть до 1d6+30). Жертвы должны сделать успешный спасбросок реакции или ослепнуть на 3 раунда. Дроу и серых дварфов заклинание ослепляет на 3 раунда в любом случае (без спасброска).~
-@1837    = ~Holy Word~
-@1838    = ~Holy Word
-(Conjuration) [Good]
-Level: Clr 7, Ilmater 7
-Range: Caster
-Duration: Special
-Casting Time: 1
-Area of Effect: 30-foot radius
-Saving Throw: None
+@1837    = ~Святое слово~
+@1838    = ~Святое слово
+(Призывание) [Добро]
+Уровень: священник 7, жрец Ильматера 7
+Дальность: колдующий
+Длительность: особая
+Время чтения: 1
+Зона действия: радиус 30 футов
+Спасбросок: нет
 
-When uttered, this spell turns the cleric into a bridge between his god and the Material Plane, allowing him to funnel magical energy to smite all creatures of non-good alignment in the area of effect. The effects differ according to the target's level:
+Произнеся это заклинание, священник превращает себя в живой мост между своим богом и Первичным материальным планом, что позволяет ему направить магическую энергию на истребление всех не добрых созданий в радиусе действия заклинания. Эффект от такого удара будет зависеть от уровня объекта:
 
-  Less than 4 - Death
-  4 to 7 - Stunned for 10 rounds  
-  8 to 11 - Loses 7 Str for 5 rounds and stunned for 1 round. 
-  12 and up - Stunned for 1 round.
+ менее 4 - смерть
+ 4-7 - ошеломление на 10 раундов
+ 8-11 - сила объекта уменьшается на 7 на 5 раундов; заклинание ошеломляет существо на 1 раунд.
+ 12 и выше - ошеломление на 1 раунд.
 
-There is no saving throw. This spell may only be cast by good characters. Deaf creatures are immune to this spell. Holy Word cannot affect the same creature more than once per five rounds.~
+Против этого заклинания нет спасброска. Это заклинание может быть прочитано только добрым персонажем. Глухие существа не подвергаются эффекту этого заклинания и оно не может воздействовать не одно и тоже существа чаще чем раз в пять раундов.~
 @1839    = ~Blasphemy~
-@1840    = ~Blasphemy
-(Conjuration) [Evil]
-Level: Clr 7, Mask 8
-Range: Caster
-Duration: Instantaneous
-Casting Time: 1
-Area of Effect: 30-foot radius
-Saving Throw: None
+@1840    = ~Богохульство
+(Призывание) [Зло]
+Уровень: священник 7, жрец Маска 8
+Дальность: колдующий
+Длительность: мгновенно
+Время чтения: 1
+Зона действия: радиус 30 футов
+Спасбросок: нет
 
-When uttered, this spell turns the cleric into a bridge between his god and the Prime Material Plane, allowing him to funnel magical energy to smite all creatures of non-evil alignment in the area of effect. The effects differ according to the target's level:
+После прочтения это заклинание обращает священника в мост между его богом и Первичным материальным планом, позволяя ему направлять магическую энергию на всех не злых существ в зоне действия. Эффекты зависят от уровня цели:
 
-  Less than 4 - Death
-  4 to 7 - Stunned for 10 rounds
-  8 to 11 - Loses 7 Str for 5 rounds and stunned for 1 round.
-  12 and up - Stunned for 1 round.
+ Менее 4 - смерть
+ От 4 до 7 - ошеломление на 10 раундов
+ От 8 до 11 - теряет 7 пунктов силы на 5 раундов и получает ошеломление на 1 раунд.
+ От 12 и выше - ошеломление на 1 раунд.
 
-There is no saving throw. This spell may only be cast by evil characters. Deaf creatures are immune to this spell. Blasphemy cannot affect the same creature more than once per five rounds.~
+Против этого заклинания нет спасброска. Это заклинание может быть прочитано только злым персонажем. Глухие существа не подвергаются эффекту этого заклинания и оно не может воздействовать не одно и тоже существа чаще чем раз в пять раундов.~
+@1849    = ~Великий щит Латандера~
+@1850    = ~Великий щит Латандера
+(Призывание) [Добро]
+Уровень: священник 7, паладин 6, жрец Латандера 6
+Дальность: прикосновение
+Длительность: 3 раунда
+Время чтения: 7
+Зона действия: 1 существо
+Спасбросок: нет
 
-@1849    = ~Greater Shield of Lathander~
-@1850    = ~Greater Shield of Lathander
-(Conjuration) [Good]
-Level: Clr 7, Pal 6, Lathander 6
-Range: Touch
-Duration: 3 rounds
-Casting Time: 7
-Area of Effect: 1 creature
-Saving Throw: None
+Это заклинание позволяет на некоторое время повысить сопротивление магии цели на +30 и сократить получаемый целью урон на 30/- от всех типов урона.~
+@1851    = ~Метеоритный дождь~
+@1852    = ~Метеоритный дождь
+(Проявление)
+Уровень: колдун/волшебник 9, жрец Латандера 9
+Дальность: обзор колдующего
+Длительность: 1 раунд
+Время чтения: 9
+Зона действия: радиус 30 футов
+Спасбросок: реакции, половина урона
 
-This spell grants damage reduction of 30/- to all forms of damage for the duration of the spell as well as +30 spell resistance.
-~
-@1851    = ~Meteor Swarm~
-@1852    = ~Meteor Swarm 
-(Evocation) 
-Level: Sor/Wiz 9, Lathander 9
-Range: Sight of Caster
-Duration: 1 round
-Casting Time: 9
-Area of Effect: 30-foot radius
-Saving Throw: Reflex half
+По завершении прочтения заклинания в области действия начинается метеоритный ливень, наносящий очень большой урон как по врагам, так и по своим. Все существа в области действия получают 1d12 на уровень заклинателя урона; при успешно выполненном спасброске реакции получаемый урон уменьшается вдвое. Половина полученного урона, это огненный урон и вторая половина - дробящий. Колдующему надлежит применять это мощное заклинание с исключительной осторожностью.~
+@1853    = ~Радужные брызги~
+@1854    = ~Радужные брызги
+(Иллюзия)
+Уровень: бард 7, колдун/волшебник 7, жрец Селуны 9
+Дальность: колдующий
+Длительность: мгновенно
+Время чтения: 7
+Зона действия: распыление на область 70 футов на 15 футов
+Спасбросок: особый
 
-Upon completion of this spell, meteors bombard the area of effect, dealing devastating damage to friend or foe. All creatures in the area effect take 1d12 damage per level with a Reflex save for half damage. Half the damage is bludgeoning and the other half is fire. The caster is well advised to be careful in his use of this spell.
-~
-@1853    = ~Prismatic Spray~
-@1854    = ~Prismatic Spray
-(Illusion)
-Level: Brd 7, Sor/Wiz 7, Selune 9
-Range: Caster 
-Duration: Instantaneous
-Casting Time: 7
-Area of Effect: 70 x 15-foot spray
-Saving Throw: Special
+Когда волшебник творит это заклинание, из его руки вылетает конус разноцветных лучей длиной 70 футов и шириной 15 футов. Попавшее в лучи существо подвергается действию определённого случайного эффекта, зависящего от цвета луча, но в любом случае существа, имеющие менее 8-ого уровня здоровья, будут ослеплены на 2-8 раундов в дополнение к остальным эффектам. Лучи радужных брызг вызывают следующие эффекты (в зависимости от цвета): красный (наносит 10d6 огненного урона, успешный спасбросок реакции снижает урон вдвое), оранжевый (наносит 10d6 урона кислотой, успешный спасбросок реакции снижает урон вдвое), жёлтый (наносит 10d6 урона электричеством, успешный спасбросок реакции снижает урон вдвое), зелёный (успешный спасбросок стойкости или смерть; выжившие получают 20 пунктов урона ядом), голубой (успешный спасбросок стойкости или превращение в камень), синий (успешный спасбросок воли или впадение в безумие) или фиолетовый (успешный спасбросок воли или перенос на другой план с мгновенным возвратом обратно и высасыванием пяти уровней). При этом с равной вероятностью любое существо в области действия заклинания может попасть под два луча сразу. Это заклинание игнорирует сопротивление магии.~
+@1855    = ~Цветные брызги~
+@1856    = ~Цветные брызги
+(Преобразование)
+Уровень: бард 1, колдун/волшебник 1
+Дальность: колдующий
+Длительность: мгновенно
+Время чтения: 1
+Зона действия: треугольник со сторонами 5, 20 и 20 футов
+Спасбросок: реакции, отменяет
 
-This spell causes shimmering rays of light to flash from the wizard's hand, in a cone 70 feet long and 15 wide at its end. Any creature touched by the rays may be inflicted with a random effect depending on the color (see below), but any creature with 8 hit dice or less is blinded for 2-8 rounds, regardless of any additional effect. The colors of the prismatic spray do the following: red (inflicts 10d6 hit points of fire damage, Reflex for half), orange (10d6 hit points of acid damage, Reflex save for half), yellow (10d6  hit points of electrical damage, Reflex for half), green (Fortitude save or die - survivors still take 20 hit points of poison damage), blue (Fortitude or turn to stone), indigo (Will save or go insane), or violet (Will save or be warped to another plane and back again instantaneously with the lasting effects of having 5 levels drained). There is also an equal chance that any creature within the area of the spell will be hit by two of the beams. This spell bypasses spell resistance.
-~
-@1855    = ~Color Spray~
-@1856    = ~Color Spray 
-(Transmutation)
-Level: Brd 1, Sor/Wiz 1
-Range: Caster
-Duration: Instantaneous
-Casting Time: 1
-Area of Effect: 5' x 20' x 20' wedge 
-Saving Throw: Reflex negates 
+Это заклинание создаёт яркий конус цветных брызг, вырывающийся из рук колдующего. Заклинание действует на всех оказавшихся в зоне действия существ. Тем не менее, эффект заклинания разнится в зависимости от уровня здоровья жертвы:
 
-This spell creates a vivid, fan-shaped spray of clashing colors to spring forth from the caster's hand. The spell affects each creature caught in the area of effect according to its hit dice:
+До 2: падает без сознания на 5 раундов
+3 или 4: ослепление на 3 раунда
+5 или выше: ошеломление на 1 раунд
 
-Up to 2: Unconscious for 5 rounds
-3 or 4: Blinded for 3 rounds
-5 or more: Stunned for 1 round
-
-A successful Reflex save with +2 DC will negate the effect. Blind creatures are not affected by Color Spray.
-~
+Успешный спасбросок реакции с +2 к УС позволяет избежать эффекта заклинания. Заклинание не действует на слепых существ.~
 @1857    = ~Death Fog~
 @1858    = ~Death Fog
 (Transmutation)
