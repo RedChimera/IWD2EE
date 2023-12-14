@@ -1705,257 +1705,244 @@
 Спасбросок: нет
 
 Заклинание открывает запертые, удерживаемые или запечатанные магией двери. Оно открывает потайные двери, а также запертые ящики и сундуки, но не поднимает опущенные ворота или подобные препятствия.~
-@1747    = ~Horrid Wilting~
-@1748    = ~Horrid Wilting
-(Necromancy)
-Level: Sor/Wiz 8, Ilmater 9, Talos 9
-Range: Sight of Caster
-Duration: Instantaneous
-Casting Time: 8
-Area of Effect: 30-foot radius
-Saving Throw: Fortitude half
+@1747    = ~Жуткое увядание~
+@1748    = ~Жуткое увядание
+(Некромантия)
+Уровень: колдун/волшебник 8, жрец Ильматера 9, жрец Талоса 9
+Дальность: обзор колдующего
+Длительность: мгновенно
+Время чтения: 8
+Зона действия: радиус 30 футов
+Спасбросок: стойкости, половина урона
 
-This spell evaporates moisture from the bodies of every living creature within the area of effect, inflicting 1d8 points of damage per caster level (Maximum 25d8). Affected creatures are allowed a Fortitude save for half damage. Water based creatures are especially vulnerable to this spell and suffer double damage. Allies are unaffected by this spell.
-~
-@1749    = ~Stinking Cloud~
-@1750    = ~Stinking Cloud
-(Necromancy) 
-Level Sor/Wiz 3
-Range: Medium
-Duration: 1 round/level
-Casting Time: 2 
-Area of Effect: 30-foot radius
-Saving Throw: Fortitude negates
+Заклинание испаряет влагу из тела всех находящихся в области живых существ, нанося по 1d8 единиц урона за каждый уровень колдующего (до максимума в 25d8). Сделав удачный спасбросок стойкости, жертва получит только половину урона. Существа, состоящие из воды, особенно уязвимы к действию заклинания, а потому получают удвоенный урон. Союзники заклинателя не подвержены действию этого заклинания.~
+@1749    = ~Зловонное облако~
+@1750    = ~Зловонное облако
+(Некромантия)
+Уровень колдун/волшебник 3
+Дальность: средняя
+Длительность: 1 раунд/уровень
+Время чтения: 2
+Зона действия: радиус 30 футов
+Спасбросок: стойкости, отменяет
 
-Stinking Cloud creates a billowing mass of noxious vapors up to 30 feet away from the wizard. Any living creature caught within the cloud must roll a successful Fortitude save with -2 DC or become nauseated, making them unable to attack, cast spells, concentrate on spells, and so on. These effects last for as long as the character remains in the cloud.
-~
+Зловонное облако создаёт невдалеке (до 30 футов) от волшебника клубящееся облако ядовитых испарений. Любое попавшее в облако живое существо должно выкинуть успешный спасбросок стойкости с -2 к УС. В случае неудачи жертву начинает тошнить, она не сможет атаковать, читать заклинания, концентрироваться на них и т.п. Эти эффекты длятся в течение всего времени, пока персонаж остаётся в облаке.~
+@1755    = ~Дьявольская порча~
+@1756    = ~Дьявольская порча
+(Проявление) [Зло]
+Уровень: священник 4, жрец Маска 5
+Дальность: средняя
+Длительность: мгновенно
+Время чтения: 3
+Зона действия: радиус 20 футов
+Спасбросок: стойкости, особый
 
-@1755    = ~Unholy Blight~
-@1756    = ~Unholy Blight 
-(Evocation) [Evil]
-Level: Clr 4, Mask 5
-Range: Medium
-Duration: Instantaneous
-Casting Time: 3 
-Area of Effect: 20-foot radius
-Saving Throw: Fortitude partial
+Это заклинание вызывает нечестивую силу, бьющую по врагам. Любое существо с не злым мировоззрением, попавшее в зону действия, получает 1d8 урона (вплоть до 5d8) за каждые два уровня заклинателя и его тошнит в течение 3 раундов, что даёт ему -2 к атаки, классу защиты и спасброскам. Успешный спасбросок стойкости уменьшает урон вдвое и нейтрализует тошноту. Нейтральные существа получают половину урона и их не тошнит.~
+@1757    = ~Разлом ледяной стены~
+@1758    = ~Убить живого~
+@1759    = ~Убить живого
+(Некромантия)
+Уровень: священник 5, жрец Талоса 5
+Дальность: прикосновение
+Длительность: мгновенно
+Время чтения: 1 раунд
+Зона действия: 1 существо
+Спасбросок: стойкости, особый
 
-This spell calls upon unholy power to smite your enemies. Any creatures of non-evil alignment within the area of effect take 1d8 damage (maximum 5d8) per two caster levels and are nauseated for 3 rounds, which gives them a -2 to their attack bonus, AC, and saving throws. A successful Fortitude save reduces damage to half and negates the nauseating effect. Neutral creatures take half damage and are not sickened. 
-~
-@1757    = ~Ice Wall Fault~
-@1758    = ~Slay Living~
-@1759    = ~Slay Living
-(Necromancy) 
-Level: Clr 5, Talos 5
-Range: Touch
-Duration: Instantaneous
-Casting Time: 1 round
-Area of Effect: 1 creature
-Saving Throw: Fortitude partial
+Это заклинание пропитывает руки заклинателя разрушительной негативной энергией, которая будет выпущена при успешной атаке прикосновения. Такая атака мгновенно убьёт живое существо, за исключением тех случаев, когда жертва успешно прокинет спасбросок стойкости, в случае чего она понесёт 3d6 + 1/уровень единиц магического урона. Нежить и конструкты не восприимчивы к этому заклинанию, и оно не провоцирует атаку при возможности.~
+@1760    = ~Вред~
+@1761    = ~Вред
+(Некромантия)
+Уровень: священник 6, друид 7, жрец Ильматера 6
+Дальность: прикосновение
+Длительность: особая
+Время чтения: 1 раунд
+Зона действия: 1 существо
+Спасбросок: стойкости, отменяет
 
-This spell imbues the caster's hands with destructive negative energy that will release when a successful touch attack is made. This attack will instantly slay a living creature unless a Fortitude save is made, in which case the creature takes 3d6 + 1/level points of magic damage instead. This spell has no effect on undead or constructs, and it does not provoke an attack of opportunity.~
-@1760    = ~Harm~
-@1761    = ~Harm
-(Necromancy) 
-Level: Clr 6, Drd 7, Ilmater 6
-Range: Touch 
-Duration: Special
-Casting Time: 1 round
-Area of Effect: 1 creature
-Saving Throw: Fortitude negates
+Это заклинание наделяет руки колдующего разрушительной отрицательной энергией, которая высвобождается при успешно проведённой атаке прикосновением. Атака наносит урон магией, равный текущему количеству пунктов здоровья цели минус 1 при проваленном спасброске стойкости (с +2 к УС). Использованное на нежить, это заклинание работает, как заклинание "Исцеление", восстанавливая ей все пункты здоровья без необходимости проводить успешную атаку прикосновением. Это заклинание не провоцирует атаку при возможности когда используется для нанесения вреда.~
+@1762    = ~Ледяной клинок~
+@1763    = ~Ледяной клинок
+(Проявление)
+Уровень: священник 3, друид 2, следопыт 1
+Дальность: колдующий
+Длительность: 5 раундов + 1 раунд/уровень
+Время чтения: 4
+Зона действия: колдующий
+Спасбросок: реакции, особый
 
-This spell imbues the caster's hands with destructive negative energy that will release when a successful touch attack is made. This attack deals magic damage equal to all but one of the target's current hit points on a failed Fortitude save (with +2 DC). If used on an undead creature, it will instead act as a Heal spell, healing them to full health without requiring a touch attack to hit. This spell does not provoke an attack of opportunity when used to harm the living.~
-@1762    = ~Ice Blade~
-@1763    = ~Ice Blade
-(Evocation)
-Level: Clr 3, Drd 2, Rgr 1
-Range: Caster
-Duration: 5 rounds + 1 round/level
-Casting Time: 4
-Area of Effect: Caster
-Saving Throw: Reflex
+Это заклинание создаёт сгусток сильнейшего холода, который вытекает из руки заклинателя и принимает форму скимитара и используется, как скимитар. Клинок является оружием +2 и наносит наносит 2d6+2 урона холодом, игнорируя бонусы к классу брони от доспеха и щита. При успешном попадании жертва замедляется на 2 раунда, если она не прокинет спасбросок реакции. УС для этого эффекта равен 12 + бонус мудрости заклинателя и бонусы от "любимой школы магии". Ледяной клинок использует черту "Военное оружие, Большие мечи" для определения модификаторов к атаке и урону, а также модификаторы от силы, заклинаний, предметов и других эффектов.
 
-This spell creates a segment of deep chilling cold that springs forth from the casters hand, taking the shape of a scimitar and wielded as one. The blade is a +2 weapon. It deals 2d6+2 cold damage and bypasses armor and shield bonuses, and the victim must make a Reflex save or be slowed for 2 rounds. The Reflex DC is equal to 12 plus the caster's Wisdom and Spell Focus bonuses. The Ice Blade uses the Martial Weapon: Large Sword proficiency, and gains bonuses to attack and damage from Strength, proficiency, spells, items, and other effects.
+Если заклинание используется следопытом, оно создаёт по ледяному клинку в каждой руке.~
+@1764    = ~Дубинка из звёздного металла~
+@1765    = ~Дубинка из звёздного металла
+(Призывание)
+Уровень: друид 4, следопыт 3
+Дальность: колдующий
+Длительность: 30 раундов
+Время чтения: 7
+Зона действия: колдующий
+Спасбросок: нет
 
-When cast as a ranger spell, this spell creates an Ice Blade in each hand.~
-@1764    = ~Star Metal Cudgel~
-@1765    = ~Star Metal Cudgel
-(Conjuration)
-Level: Drd 4, Rgr 3
-Range: Caster
-Duration: 30 rounds
-Casting Time: 7
-Area of Effect: Caster
-Saving Throw: None
+Это заклинание создаёт магическую дубинку из метеоритного металла (1d6), имеющую +4 к атаке и урону, которая расценивается, как оружие +6. Дубинка также наносит дополнительно 3d6 магического урона всем видам неестественных существ. Для определения снижения урона дубинка считается оружием из холодного металла, и наносит полный урон демонам. Для определения модификаторов к атаке и урону эта дубинка использует черту "Простое оружие, Булавы".
+@1767    = ~Создание скелета/зомби~
+@1768    = ~Этот свиток содержит два заклинания: "Создание скелета" и "Создание зомби":
 
-This spell creates a meteoric iron magical club (1d6) that has +4 to attack and damage, and is treated as a +6 weapon for purposes of what it can hit. It does an additional 3d6 points of magic damage against all forms of unnatural creatures. For purposes of damage reduction, it counts as a cold iron weapon, dealing full damage to demons. The Star Metal Cudgel uses the Simple Weapon: Mace proficiency.~
-@1767    = ~Animate Skeleton/Zombie~
-@1768    = ~This scroll contains the knowledge of two spells, Animate Skeleton and Animate Zombie:
+Создание скелета
+(Некромантия)
+Уровень: священник 3, колдун/волшебник 5, жрец Темпуса 3
+Дальность: обзор колдующего
+Длительность: мгновенно
+Время чтения: 9
+Зона действия: особая
+Спасбросок: нет
 
-Animate Skeleton 
-(Necromancy)
-Level: Clr 3, Sor/Wiz 5, Tempus 3
-Range: Sight of Caster
-Duration: Instantaneous 
-Casting Time: 9
-Area of Effect: Special 
-Saving Throw: None 
+Это заклинание призывает давно умершего человека в виде скелета. Оно поднимает тело усопшего из под земли, воскрешает его и заставляет служить колдующему. Чем выше уровень колдующего, тем сильнее призванный заклинанием скелет.
 
-This spell brings forth a long-dead skeleton from deep within the earth and reanimates it to serve the caster. The higher the level of the caster, the more powerful the skeleton summoned by this spell.
+Создание зомби
+(Некромантия)
+Уровень: священник 3, колдун/волшебник 5, жрец Темпуса 3
+Дальность: обзор колдующего
+Длительность: мгновенно
+Время чтения: 9
+Зона действия: особая
+Спасбросок: нет
 
-Animate Zombie 
-(Necromancy) 
-Level: Clr 3, Sor/Wiz 5, Tempus 3
-Range: Sight of Caster
-Duration: Instantaneous 
-Casting Time: 9
-Area of Effect: Special
-Saving Throw: None 
+Это заклинание призывает давно умершего человека в виде зомби. Оно поднимает труп из под земли, воскрешает его и заставляет служить колдующему. Чем выше уровень колдующего, тем сильнее призванный этим заклинанием зомби.
 
-This spell brings forth a long-dead zombie from deep within the earth and reanimates it to serve the caster. The higher the level of the caster, the more powerful the zombie summoned by this spell.
+ВНИМАНИЕ: Повелители зомби и гниющие утопленники высоких уровней обладают сильными сверхъестественными аурами, которые могут причинить вред попавшим в зону их действия членам вашей группы.~
+@1769    = ~Защита от стихий~
+@1770    = ~Защита от стихий
+(Отречение)
+Уровень: бард 8, священник 8, друид 7, колдун/волшебник 8
+Дальность: прикосновение
+Длительность: 10 раундов
+Время чтения: 8
+Зона действия: 1 существо
+Спасбросок: нет
 
-WARNING: At higher levels, the Zombie Lords and Festering Drowned Dead summoned by this spell have powerful supernatural auras. The effects of their auras may harm your own party members if they fall within the area of effect.~
+Это заклинание дарует почти полное сопротивление к стихийному урону. На время действия заклинания, цель получает сопротивление 100/- кислотному, огненному, электрическому урону и урону холодом.~
+@1771    = ~Стена лунного света~
+@1772    = ~Стена лунного света
+(Проявление)
+Уровень: друид 4, жрец Селуны 5
+Дальность: обзор колдующего
+Длительность: 5 раундов
+Время чтения: 7
+Зона действия: стена 20 футов длиной и 5 футов шириной
+Спасбросок: нет
 
-@1769    = ~Elemental Barrier~
-@1770    = ~Elemental Barrier
-(Abjuration)
-Level: Brd 8, Clr 8, Drd 7, Sor/Wiz 8
-Range: Touch
-Duration: 10 rounds
-Casting Time: 8
-Area 'of Effect: 1 creature
-Saving Throw: None
+В указанном месте появляется мерцающая энергетическая завеса бело-синего цвета. Стена неосязаема, не требует привязки к материальному предмету, сквозь неё можно без труда пройти. Злые существа при проходе сквозь стену получают 2d10 магического урона, а нежить - 5d10 магического урона. Урон наносится только при первом пересечении стены. Если поставить новую "Стену лунного света", то старая тут же исчезнет.~
+@1773    = ~Уничтожение~
+@1774    = ~Уничтожение
+(Некромантия)
+Уровень: священник 7, жрец Талоса 7
+Дальность: малая
+Длительность: особая
+Время чтения: 1 раунд
+Зона действия: 1 существо
+Спасбросок: стойкости, особый
 
-This spell grants the recipient near-total immunity to elemental damage. For the duration, the target gains 100/- resistance to fire, cold, electricity, and acid damage.
-~
-@1771    = ~Wall of Moonlight~
-@1772    = ~Wall of Moonlight
-(Evocation)
-Level: Drd 4, Selune 5
-Range: Sight of Caster
-Duration: 5 rounds
-Casting Time: 7
-Area of Effect: 20-foot long, 5-foot wide wall
-Saving Throw: None
+Это заклинание наделяет руки колдующего разрушительной отрицательной энергией, которая высвобождается при успешно проведённой атаке прикосновением. Цель моментально уничтожается, разлетаясь на мелкие кусочки. Успешный спасбросок стойкости с +2 к УС позволяет избежать уничтожения, но цель при этом получает 10d6 магического урона. Это заклинание даже может уничтожить нежить и конструкты. Обратите внимание, что убитый "Уничтожением" персонаж не сможет восстать из мёртвых под действием заклинаний "Оживление мёртвого". Более мощное заклинание "Воскрешение" необходимо для восстановления тела умершего. Это заклинание не провоцирует атаку при возможности.~
+@1775    = ~Управление нежитью~
+@1776    = ~Управление нежитью
+(Некромантия)
+Уровень: священник 7, колдун/волшебник 7
+Дальность: обзор колдующего
+Длительность: 3 раунда/уровень
+Время чтения: 7
+Зона действия: радиус 30 футов
+Спасбросок: воли, отменяет
 
-This spell invokes a shimmering tapestry of blue-white force. This wall is intangible, requiring no physical anchor, and can easily be passed through. Evil creatures passing through the wall take 2d10 magic damage. Undead creatures passing through the wall take 5d10 magic damage. A creature that has passed through the wall can only take damage from it once. Only one Wall of Moonlight may be in effect at any time.
-~
-@1773    = ~Destruction~
-@1774    = ~Destruction
-(Necromancy)
-Level: Clr 7, Talos 7
-Range: Close
-Duration: Special
-Casting Time: 1 round
-Area of Effect: 1 creature
-Saving Throw: Fortitude partial
+Заклинание позволяет заклинателю контролировать нежить в пределах зоны действия заклинания. Успешный спасбросок воли нейтрализует действие заклинания. Нежить остаётся под контролем заклинателя на время действия заклинания или пока оно не будет развеяно.~
+@1777    = ~Нанесение лёгких ран~
+@1778    = ~Нанесение лёгких ран
+(Некромантия)
+Уровень: священник 1
+Дальность: прикосновение
+Длительность: особая
+Время чтения: 1
+Зона действия: 1 существо
+Спасбросок: нет
 
-This spell imbues the caster's hands with divine force that will release when a successful touch attack is made. This attack will instantly destroy a target, blasting it into small chunks. A Fortitude saving throw with +2 DC is allowed and if successful the target takes 10d6 magic damage instead of being destroyed. Destruction can even destroy undead and constructs. Note that a character struck with a Destruction spell cannot be raised with a Raise Dead spell; a more powerful Resurrection spell will be needed to restore the character's body. This spell does not provoke an attack of opportunity.
-~
-@1775    = ~Control Undead~
-@1776    = ~Control Undead 
-(Necromancy)
-Level: Clr 7, Sor/Wiz 7
-Range: Sight of Caster
-Duration: 3 rounds / level
-Casting Time: 7
-Area of Effect: 30-foot radius
-Saving Throw: Will negates
+Это заклинание наделяет руки колдующего разрушительной отрицательной энергией, которая высвобождается при успешно проведённой атаке прикосновением. Эта атака наносит 1d8 + 1 урона магией на уровень колдующего (вплоть до 1d8+30). Если это заклинание использует на нежить, оно вылечит им такое же количество пунктов здоровья и не требует успешной атаки. Это заклинание не провоцирует атаки при возможности, если используется для нанесения вреда.~
+@1779    = ~Нанесение средних ран~
+@1780    = ~Нанесение средних ран
+(Некромантия)
+Уровень: священник 2
+Дальность: прикосновение
+Длительность: особая
+Время чтения: 1
+Зона действия: 1 существо
+Спасбросок: нет
 
-The control undead spell allows the caster to take control of undead creatures within the area of effect. A Will save is allowed to negate the effect. The undead remain under control of the caster for the duration of the spell or until they are affected by a dispel magic.
-~
-@1777    = ~Inflict Light Wounds~
-@1778    = ~Inflict Light Wounds 
-(Necromancy) 
-Level: Clr 1
-Range: Touch
-Duration: Special
-Casting Time: 1
-Area of Effect: 1 creature
-Saving Throw: None
+Это заклинание наделяет руки колдующего разрушительной отрицательной энергией, которая высвобождается при успешно проведённой атаке прикосновением. Эта атака наносит 2d8 + 2 урона магией на уровень колдующего (вплоть до 2d8+60). Если это заклинание использует на нежить, оно вылечит им такое же количество пунктов здоровья и не требует успешной атаки. Это заклинание не провоцирует атаки при возможности, если используется для нанесения вреда.~
+@1781    = ~Нанесение серьёзных ран~
+@1782    = ~Нанесение серьёзных ран
+(Некромантия)
+Уровень: священник 3
+Дальность: прикосновение
+Длительность: особая
+Время чтения: 2
+Зона действия: 1 существо
+Спасбросок: нет
 
-This spell imbues the caster's hands with destructive negative energy that will release when a successful touch attack is made. This attack deals 1d8 magic damage + 1 per caster level (maximum of 1d8 + 30). If used on an undead creature, it will instead heal them the same amount without requiring an attack roll. This spell does not provoke an attack of opportunity when used to harm the living.~
-@1779    = ~Inflict Moderate Wounds~
-@1780    = ~Inflict Moderate Wounds 
-(Necromancy) 
-Level: Clr 2
-Range: Touch 
-Duration: Special
-Casting Time: 1
-Area of Effect: 1 creature
-Saving Throw: None
+Это заклинание наделяет руки колдующего разрушительной отрицательной энергией, которая высвобождается при успешно проведённой атаке прикосновением. Эта атака наносит 3d8 + 3 урона магией на уровень колдующего (вплоть до 3d8+90). Если это заклинание использует на нежить, оно вылечит им такое же количество пунктов здоровья и не требует успешной атаки. Это заклинание не провоцирует атаки при возможности, если используется для нанесения вреда.~
+@1783    = ~Нанесение критических ран~
+@1784    = ~Нанесение критических ран
+(Некромантия)
+Уровень: священник 4
+Дальность: прикосновение
+Длительность: особая
+Время чтения: 2
+Зона действия: 1 существо
+Спасбросок: нет
 
-This spell imbues the caster's hands with destructive negative energy that will release when a successful touch attack is made. This attack deals 2d8 magic damage + 2 per caster level (maximum of 2d8 + 60). If used on an undead creature, it will instead heal them the same amount without requiring an attack roll. This spell does not provoke an attack of opportunity when used to harm the living.~
-@1781    = ~Inflict Serious Wounds~
-@1782    = ~Inflict Serious Wounds
-(Necromancy) 
-Level: Clr 3
-Range: Touch
-Duration: Special
-Casting Time: 2
-Area of Effect: 1 creature
-Saving Throw: None
+Это заклинание наделяет руки колдующего разрушительной отрицательной энергией, которая высвобождается при успешно проведённой атаке прикосновением. Эта атака наносит 4d8 + 4 урона магией на уровень колдующего (вплоть до 4d8+120). Если это заклинание использует на нежить, оно вылечит им такое же количество пунктов здоровья и не требует успешной атаки. Это заклинание не провоцирует атаки при возможности, если используется для нанесения вреда.~
+@1811    = ~Слово силы: Тишина~
+@1812    = ~Слово силы: Тишина
+(Прорицание)
+Уровень: бард 5, колдун/волшебник 6, жрец Огмы 5, жрец Бейна 6
+Дальность: обзор колдующего
+Длительность: 4 раунда
+Время чтения: 0
+Зона действия: 1 существо
+Спасбросок: нет
 
-This spell imbues the caster's hands with destructive negative energy that will release when a successful touch attack is made. This attack deals 3d8 magic damage + 3 per caster level (maximum of 3d8 + 90). If used on an undead creature, it will instead heal them the same amount without requiring an attack roll. This spell does not provoke an attack of opportunity when used to harm the living.~
-@1783    = ~Inflict Critical Wounds~
-@1784    = ~Inflict Critical Wounds
-(Necromancy)
-Level: Clr 4
-Range: Touch 
-Duration: Special
-Casting Time: 2
-Area of Effect: 1 creature
-Saving Throw: None
+Заклинание позволяет магу произнести одно из слов силы. "Слово силы: Тишина" можно направить на любое существо в области охвата, не давая ему издавать какие бы то ни было звуки. Спасброска от этого заклинания нет, но оно не оказывает никакого воздействия на глухих существ.~
+@1813    = ~Массовое подчинение~
+@1814    = ~Массовое подчинение
+(Чародейство)
+Уровень: бард 8, колдун/волшебник 9, жрец Бейна 9
+Дальность: обзор колдующего
+Длительность: 1 раунд/уровень
+Время чтения: 9
+Зона действия: радиус 20 футов
+Спасбросок: воли, отменяет
 
-This spell imbues the caster's hands with destructive negative energy that will release when a successful touch attack is made. This attack deals 4d8 magic damage + 4 per caster level (maximum of 4d8 + 120). If used on an undead creature, it will instead heal them the same amount without requiring an attack roll. This spell does not provoke an attack of opportunity when used to harm the living.~
+Все существа, оказавшиеся в зоне действия заклинания, подчиняются колдующему, словно под действием заклинания "Подчинение" 5-го уровня. Успешный спасбросок воли отменяет эффект. На нежить заклинание не действует.~
+@1831    = ~Защита от стихий~
+@1832    = ~Защита от стихий
+(Отречение)
+Уровень: бард 8, священник 8, друид 7, колдун/волшебник 8
+Дальность: прикосновение
+Длительность: 10 раундов
+Время чтения: 8
+Зона действия: 1 существо
+Спасбросок: нет
 
-@1811    = ~Power Word: Silence~
-@1812    = ~Power Word: Silence 
-(Divination)
-Level: Brd 5, Sor/Wiz 6, Oghma 5, Bane 6
-Range: Sight of Caster
-Duration: 4 rounds
-Casting Time: 0
-Area of Effect: 1 creature
-Saving Throw: None
+Это заклинание дарует почти полное сопротивление к стихийному урону. На время действия заклинания, цель получает сопротивление 100/- кислотному, огненному, электрическому урону и урону холодом.~
+@1833    = ~Солнечный ожог~
+@1834    = ~Солнечный ожог
+(Проявление)
+Уровень: друид 1, следопыт 1, жрец Латандера 1, жрец Селуны 1
+Дальность: обзор колдующего
+Длительность: мгновенно
+Время чтения: 4
+Зона действия: 1 существо
+Спасбросок: реакции, половина урона
 
-This spell allows the caster to utter one of the words of power. When spoken, Power Word: Silence can be invoked against any creature in range, preventing them from making a sound. No saving throw is allowed. This spell has no effect on deaf creatures.~
-@1813    = ~Mass Dominate~
-@1814    = ~Mass Dominate 
-(Enchantment) 
-Level: Brd 8, Sor/Wiz 9, Bane 9
-Range: Sight of Caster
-Duration: 1 round/level
-Casting Time: 9
-Area of Effect: 20-foot radius
-Saving Throw: Will negates
-
-This spell forces all creatures not allied with the caster in the area of effect to Will save or be dominated as if affected by the spell Dominate Person. Undead are unaffected by this spell.
-~
-
-@1831    = ~Elemental Barrier~
-@1832    = ~Elemental Barrier
-(Abjuration)
-Level: Brd 8, Clr 8, Drd 7, Sor/Wiz 8
-Range: Touch
-Duration: 10 rounds
-Casting Time: 8
-Area 'of Effect: 1 creature
-Saving Throw: None 
-
-This spell grants the recipient near-total immunity to elemental damage. For the duration, the target gains 100/- resistance to fire, cold, electricity, and acid damage.
-~
-@1833    = ~Sunscorch~
-@1834    = ~Sunscorch
-(Evocation)
-Level: Drd 1, Rgr 1, Lathander 1, Selune 1
-Range: Sight of Caster
-Duration: Instantaneous
-Casting Time: 4
-Area of Effect: 1 creature
-Saving Throw: Reflex half
-
-Upon completion of this spell, a brilliant ray of scorching heat fires down from the sky and burns the target creature for 1d6 + 1 fire damage per level of the caster (to a maximum of 1d6 + 15). Undead creatures and monsters vulnerable to bright light take 1d6 + 2 fire damage per level of the caster (to a maximum of 1d6 + 30). Victims must make a successful Reflex save or be blinded for 3 rounds. Drow and gray dwarves are blinded from the spell for 3 rounds (no save).~
+На выбранную заклинателем цель с небес падает обжигающий луч света и обжигает целевое существо, нанося ему 1d6 огненного урона + 1 за каждый уровень заклинателя (вплоть до 1d6+15). Нежить и монстры, уязвимые к яркому свету получают 1d6 огненного урона + 2 за каждый уровень заклинателя (вплоть до 1d6+30). Жертвы должны сделать успешный спасбросок реакции или ослепнуть на 3 раунда. Дроу и серых дварфов заклинание ослепляет на 3 раунда в любом случае (без спасброска).~
 @1837    = ~Holy Word~
 @1838    = ~Holy Word
 (Conjuration) [Good]
