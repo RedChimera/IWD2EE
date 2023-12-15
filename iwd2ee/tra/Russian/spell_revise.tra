@@ -2172,96 +2172,96 @@
 Спасбросок: реакции, половина урона
 
 Это заклинание создаёт лёгкое, дымное облако, которое заполняет зону действия и поначалу ведёт себя вполне безобидно. Однако по прошествии одного раунда оно вспыхивает и горит, нанося 1d4 огненного урона на уровень заклинателя (до максимума в 25d4) всем, кто попал в зону действия заклинания. Облако будет продолжать пылать с регулярными интервалами в один раунд в течение времени действия заклинания.~
-@1883     = ~Trollish Fortitude~
-@1884     = ~Trollish Fortitude
-(Necromancy)
-Level: Drd 6, Rgr 6, Sor/Wiz 6
-Range: Caster
-Duration: 20 rounds
-Casting Time: 6
-Area of Effect: Caster
-Saving Throw: None
+@1883     = ~Стойкость тролля~
+@1884     = ~Стойкость тролля
+(Некромантия)
+Уровень: друид 6, следопыт 6, колдун/волшебник 6
+Дальность: колдующий
+Длительность: 20 раундов
+Время чтения: 6
+Зона действия: колдующий
+Спасбросок: нет
 
-This spell imbues the caster with the resilience of a troll, allowing the caster to regenerate 5 hit points per round up to his/her maximum hit points.~
-@1885     = ~Iron Skins~
-@1886     = ~Iron Skins
-(Transmutation) 
-Level: Clr 5, Pal 5
-Range: Caster
-Duration: 8 hours
-Casting Time: 1 round
-Area of Effect: Caster
-Saving Throw: None 
+Заклинатель становится стойким, как тролль, и регенерирует 5 пунктов здоровья каждый раунд, пока не восстановит здоровье полностью.~
+@1885     = ~Железная кожа~
+@1886     = ~Железная кожа
+(Преобразование)
+Уровень: священник 5, паладин 5
+Дальность: колдующий
+Длительность: 8 часов
+Время чтения: 1 раунд
+Зона действия: колдующий
+Спасбросок: нет
 
-This spell provides the caster with a damage reduction of 10/- to bludgeoning, piercing, and slashing damage. This resistance bonus only applies to a number of attacks equal to 1 attack for every 2 levels of the caster up to a maximum of 8, after which the spell will dissipate. This spell is not cumulative with itself or similar magicks (such as the 4th level wizard spell Stoneskin).~
-@1887     = ~Ray of Enfeeblement~
-@1888     = ~Ray of Enfeeblement
-(Necromancy) 
-Level: Clr 1, Sor/Wiz 1
-Range: Sight of Caster
-Duration: 8 rounds
-Casting Time: 2
-Area of Effect: 1 creature
-Saving Throw: Fortitude negates
+Это заклятье даёт заклинателю сопротивление 10/- от рубящего, колющего и дробящего урона. Премия к сопротивлению применяется ограниченное число раз, помогая при 1 атаке за каждые 2 уровня заклинателя (вплоть до 8 атак), после этого чары рассеиваются. Эффект от данного заклинания не сочетается с эффектами другого такого же или сходного по действию заклинания (например, заклинания волшебника 4-го уровня "Каменная кожа").~
+@1887     = ~Луч слабости~
+@1888     = ~Луч слабости
+(Некромантия)
+Уровень: священник 1, колдун/волшебник 1
+Дальность: обзор колдующего
+Длительность: 8 раундов
+Время чтения: 2
+Зона действия: 1 существо
+Спасбросок: стойкости, отменяет
 
-By means of a Ray of Enfeeblement, the caster weakens an opponent, reducing its strength and therefore the attacks that rely upon it. The victim's strength is reduced by 15 for the duration of the spell, unless a Fortitude save is made (with +4 DC). Any associated penalties with having a reduced strength apply. The effects of this spell are not cumulative with repeat castings.~
-@1889     = ~Vitriolic Sphere~
-@1890     = ~Vitriolic Sphere
-(Conjuration)
-Level: Drd 4, Sor/Wiz 4
-Range: Sight of Caster
-Duration: Special
-Casting Time: 4
-Area of Effect: Special
-Saving Throw: Reflex half
+Направив на врага "Луч слабости", заклинатель на время действия заклинания понижает его силу и, соответственно, ухудшает его атаки, зависящие от этой характеристики. Провалив спасбросок стойкости (с +4 к УС), жертва теряет 15 единиц силы. Жертва страдает от всех штрафов, связанных со снижением силы. При повторном наложении эффекты заклинания не складываются.~
+@1889     = ~Кислотный шар~
+@1890     = ~Кислотный шар
+(Призывание)
+Уровень: друид 4, колдун/волшебник 4
+Дальность: обзор колдующего
+Длительность: особая
+Время чтения: 4
+Зона действия: особая
+Спасбросок: реакции, половина урона
 
-This spell conjures a sphere of glowing emerald acid that the caster can direct to strike any target within range. When it reaches its target, the sphere explodes and drenches the victim in potent acid. The victim suffers 1d4 points of acid damage per caster level, to a maximum of 12d4 points of damage (Reflex half). After the initial damage, the victim must make a Reflex save every round which will reduce the damage for that round by half and also stop any further acid damage. If unsuccessful, the victim continues to suffer acid damage in the following rounds, sustaining two less dice of damage each round. For example, an 8th-level wizard inflicts 8d4 damage with this spell on the first round, 6d4 on the second round, 4d4 on the third round, 2d4 on the fourth round, and the spell ends on the fifth round. Each round the victim is entitled to a Reflex save to avoid further damage in any remaining rounds. The vitriolic sphere also splashes acid in a 5-foot radius around the primary target. Any creatures within the splash radius must make a Reflex save or suffer a splash hit that inflicts 1d4 points of damage per every five levels of the caster. Splash hits do not cause continuing damage.~
-@1891     = ~Gedlee's Electric Loop~
-@1892     = ~Gedlee's Electric Loop
-(Evocation)
-Level: Drd 2, Sor/Wiz 2, Talos 2
-Range: Close
-Duration: Instantaneous
-Casting Time: 2
-Area of Effect: 5-foot radius
-Saving Throw: Reflex half
+Это заклинание создаёт светящийся кислотный шар изумрудного цвета, который можно направить на любую цель в пределах досягаемости. Достигнув цели, шар взрывается и обливает жертву сильнодействующей кислотой. Жертва получает 1d4 единиц кислотного урона за уровень заклинателя, максимальные повреждения составляют 12d4 единиц (успешный спасбросок реакции снижает урон в два раза). После получения первичных повреждений жертва должна каждый раунд делать спасбросок реакции, что уменьшит урон за этот раунд в два раза, а также прекратит дальнейшие повреждения. В случае неудачи жертва продолжает получать урон на протяжении следующих раундов, в каждом раунде получая на 2 кости меньше урона, чем в предыдущем. Например, волшебник 8го уровня наносит этим заклинанием 8d4 урона в первом раунде, 6d4 - во втором, 4d4 - в третьем, 2d4 в четвёртом раунде, после чего действие заклинания оканчивается. В каждом раунде жертва может прокинуть спасбросок реакции для избежания дальнейшего урона в оставшихся раундах. Кислотный шар также разбрызгивает кислоту с радиусом 5 футов вокруг основной цели. Все существа, находящиеся в этом пространстве тоже должны прокинуть спасбросок реакции, иначе пострадают от брызг, получая 1d4 единиц урона за каждые пять уровней заклинателя. Брызги не вызывают дополнительного урона в следующих раундах.~
+@1891     = ~Электрическая петля Гедли~
+@1892     = ~Электрическая петля Гедли
+(Проявление)
+Уровень: друид 2, колдун/волшебник 2, жрец Талоса 2
+Дальность: малая
+Длительность: мгновенно
+Время чтения: 2
+Зона действия: радиус 5 футов
+Спасбросок: реакции, половина урона
 
-Upon completion of this spell a ring of electricity erupts from the caster, dealing 1d6 electricity damage per every two caster levels (maximum 5d6 electricity damage) to every creature within the area of effect. In addition, creatures struck by the ring are stunned for 1 round. A successful Reflex save halves the damage and negates the stunning effect. This spell does not provoke an attack of opportunity, as it is intended to be used in melee.~
-@1893     = ~Burning Hands~
-@1894     = ~Burning Hands
-(Transmutation)
-Level: Drd 1, Sor/Wiz 1
-Range: Caster
-Duration: Instantaneous 
-Casting Time: 1 
-Area of Effect: Burst of flames 10ft. long, centered on caster's hands
-Saving Throw: Reflex half
+Заклинание создаёт вокруг колдующего круговой поток электричества, который наносит всем существам, оказавшимся в зоне поражения 1d6 урона электричеством за каждые два уровня колдующего (вплоть до 5d6). Кроме того, заклинание ошеломляет этих существ на 1 раунд. Успешный спасбросок реакции снижает урон вдвое и отменяет ошеломление. Это заклинание не провоцирует атаку при возможности, так как специально было создано для использования в ближнем бою.~
+@1893     = ~Горящие руки~
+@1894     = ~Горящие руки
+(Преобразование)
+Уровень: друид 1, колдун/волшебник 1
+Дальность: колдующий
+Длительность: мгновенно
+Время чтения: 1
+Зона действия: струи пламени длиной по 10 футов из рук колдующего
+Спасбросок: реакции, половина урона
 
-When the wizard casts this spell, a jet of searing flame shoots from his fingertips. The flame jets are five feet in length and spread out in a horizontal arc of about 120 degrees in front of the wizard. Any creature in the area of effect suffers 1d4 points of damage per caster level (maximum of 5d4). A successful Reflex save halves the damage. This spell does not provoke an attack of opportunity.~
-@1895     = ~Flame Blade~
-@1896     = ~Flame Blade
-(Evocation)
-Level: Drd 2, Rgr 2
-Range: Caster
-Duration: 5 rounds + 1 round / level
-Casting Time: 4 
-Area of Effect: Caster
-Saving Throw: None
+Кончики пальцев заклинателя исторгают струи огня длиной около 10 футов. Эти струи расходятся в горизонтальной плоскости перед заклинателем под углом примерно в 120 градусов. Любое существо в зоне действия заклинания получает по 1d4 очка урона на каждый уровень заклинателя (до максимума в 5d4). При успешном спасброске реакции жертва получает только половину урона. Это заклинание не провоцирует атаку при возможности.~
+@1895     = ~Огненный клинок~
+@1896     = ~Огненный клинок
+(Проявление)
+Уровень: друид 2, следопыт 2
+Дальность: колдующий
+Длительность: 5 раундов + 1 раунд/уровень
+Время чтения: 4
+Зона действия: колдующий
+Спасбросок: нет
 
-With this spell, the caster causes a blazing ray of red-hot fire to spring forth from their hand. This blade-like ray is wielded as if it were a scimitar, and uses the Martial Weapon: Large Sword proficiency. The Flame Blade is a +2 weapon. Attacks with it deal 2d8+2 fire damage and bypass armor and shield bonuses. It does gain bonuses to attack and damage from Strength, proficiency, spells, items, and other effects.
+После прочтения этого заклинания в руке жреца загорается сверкающий луч ярко-красного пламени. Этот луч имеет форму клинка, используется как скимитар и использует черту "Военное оружие, Большие мечи". Огненный клинок расценивается, как оружие +2, наносит 2d8+2 огненного урона и игнорирует бонусы к классу защиты от доспеха и щита. Атаки огненным клинком так же используют возможные модификаторы от мастерства, силы, заклинаний, предметов и других эффектов.
 
-When cast as a ranger spell, this spell creates a Flame Blade in each hand.~
-@1897     = ~Shillelagh~
-@1898     = ~Shillelagh
-(Transmutation) 
-Level: Drd 1, Rgr 1
-Range: Caster
-Duration: 10 rounds / level
-Casting Time: 2
-Area of Effect: Caster
-Saving Throw: None 
+Если это заклинание прочитано следопытом, оно создаёт по огненному клинку в каждой руке.~
+@1897     = ~Дубинка~
+@1898     = ~Дубинка
+(Преобразование)
+Уровень: друид 1, следопыт 1
+Дальность: колдующий
+Длительность: 10 раундов / уровень
+Время чтения: 2
+Зона действия: колдующий
+Спасбросок: нет
 
-This spell creates a magical cudgel that has a +1 attack bonus and inflicts 1d10+1 bludgeoning damage per strike. The enchantment, attack and damage bonuses of the Shillelagh increase to +2 at level 6, +3 at level 9, +4 at level 12, and +5 at level 15. The Shillelagh also gains the character's Wisdom bonus to attack and damage instead of Strength if their Wisdom is higher. The Shillelagh uses the Simple Weapon: Mace proficiency.~
+Это заклинание создаёт магическую дубинку (+1) с бонусом к атаке +1 и наносящую при ударе дробящий урон 1d10+1. Бонусы зачарования, атаки и урона увеличиваются до +2 на 6-м уровне, +3 на 9-м уровне, +4 на 12-м уровне и +5 на 15-м уровне. Дубинка также получает бонус мудрости к атаке и урону вместо силы, если мудрость выше. Дубинка использует черту черту "Простое оружие, Булавы".~
 @1899     = ~Contagion~
 @1900     = ~Contagion
 (Necromancy) 
