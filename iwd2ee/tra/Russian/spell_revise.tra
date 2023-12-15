@@ -1961,7 +1961,7 @@
  12 и выше - ошеломление на 1 раунд.
 
 Против этого заклинания нет спасброска. Это заклинание может быть прочитано только добрым персонажем. Глухие существа не подвергаются эффекту этого заклинания и оно не может воздействовать не одно и тоже существа чаще чем раз в пять раундов.~
-@1839    = ~Blasphemy~
+@1839    = ~Богохульство~
 @1840    = ~Богохульство
 (Призывание) [Зло]
 Уровень: священник 7, жрец Маска 8
@@ -2029,151 +2029,149 @@
 5 или выше: ошеломление на 1 раунд
 
 Успешный спасбросок реакции с +2 к УС позволяет избежать эффекта заклинания. Заклинание не действует на слепых существ.~
-@1857    = ~Death Fog~
-@1858    = ~Death Fog
-(Transmutation)
-Level: Sor/Wiz 6
-Range: Sight of Caster 
-Duration: 10 rounds
-Casting Time: 6
-Area of Effect: 15-foot radius
-Saving Throw: Fortitude partial
+@1857    = ~Туман смерти~
+@1858    = ~Туман смерти
+(Преобразование)
+Уровень: колдун/волшебник 6
+Дальность: обзор колдующего
+Длительность: 10 раундов
+Время чтения: 6
+Зона действия: радиус 15 футов
+Спасбросок: стойкости, особый
 
-This spell brings forth a billowing cloud of acidic fog. The thick fog corrodes everything it touches, dealing 1d6 points of acid damage per round. Further, every round a creature remains in the cloud, its acid resistance is penalized by -4 points, which can reduce its acid resistance below zero, causing it to take extra damage from the cloud or any other form of acid damage. The victim may attempt a Fortitude save; if successful, the acid resistance penalty is reduced to -2. The penalty is cumulative and wears off after 5 rounds.~
+Это заклинание создаёт клубящееся облако кислотного тумана. Густой туман разъедает все, к чему прикасается, нанося 1d6 кислотного урона в раунд. Кроме того, каждый раунд, пока существо находится в облаке, его сопротивление кислоте снижается на 4, что может снизить этот показатель ниже нуля, в результате чего оно будет получать дополнительный урон от облака или любого другого кислотного урона. Жертва может попытаться сделать спасбросок стойкости; в случае успеха снижение сопротивления кислоте уменьшается до 2. Это снижение является кумулятивным и сходит на нет через 5 раундов.~
+@1859     = ~Защита от холода~
+@1860     = ~Защита от холода
+(Отречение)
+Уровень: священник 3, друид 3, следопыт 3, колдун/волшебник 3, жрец Селуны 3
+Дальность: прикосновение
+Длительность: 3 раунда/уровень
+Время чтения: 6
+Зона действия: 1 существо
+Спасбросок: нет
 
-@1859     = ~Protection from Cold~
-@1860     = ~Protection from Cold
-(Abjuration) 
-Level: Clr 3, Drd 3, Rgr 3, Sor/Wiz 3, Selune 3
-Range: Touch
-Duration: 3 rounds/level
-Casting Time: 6
-Area of Effect: 1 creature
-Saving Throw: None 
+Это заклинание даёт сопротивление урону 20/- против урона холодом на время действия заклинания.~
+@1861     = ~Исцеление лёгких ран~
+@1862     = ~Исцеление лёгких ран
+(Призывание)
+Уровень: бард 1, жрец 1, друид 1, паладин 1, следопыт 2
+Дальность: прикосновение
+Длительность: мгновенно
+Время чтения: 1
+Зона действия: 1 существо
+Спасбросок: нет
 
-This spell grants a damage resistance of 20/- against cold to the target for the duration.
-~
-@1861     = ~Cure Light Wounds~
-@1862     = ~Cure Light Wounds
-(Conjuration)
-Level: Brd 1, Clr 1, Drd 1, Pal 1, Rgr 2
-Range: Touch
-Duration: Instantaneous  
-Casting Time: 1
-Area of Effect: 1 creature
-Saving Throw: None 
+Прочитав руки и коснувшись живого существа, колдующий исцеляет 1d8 пунктов урона + 1/уровень колдующего (до 1d8+30). Нежить вместо исцеления получает магический урон. Для применения этого заклинания к нежити, нужно выполнить успешную атаку прикосновением. Заклинание не провоцирует атаку при возможности, если используется для нанесения урона вражеской нежити.~
+@1863     = ~Исцеление умеренных ран~
+@1864     = ~Исцеление умеренных ран
+(Призывание)
+Уровень: бард 2, жрец 2, друид 3, паладин 3, следопыт 3
+Дальность: прикосновение
+Длительность: мгновенно
+Время чтения: 1
+Зона действия: 1 существо
+Спасбросок: нет
 
-When casting this spell and laying his hand upon a living creature, the caster heals 1d8 points of damage +1 per caster level (up to 1d8+30). Undead creatures will take magic damage instead of being healed. This spell will require a successful touch attack roll if cast on an undead creature. It will not provoke an attack of opportunity if cast to damage enemy undead.~
-@1863     = ~Cure Moderate Wounds~
-@1864     = ~Cure Moderate Wounds
-(Conjuration)
-Level: Brd 2, Clr 2, Drd 3, Pal 3, Rng 3
-Range: Touch 
-Duration: Instantaneous 
-Casting Time: 1
-Area of Effect: 1 creature
-Saving Throw: None
+Прочитав руки и коснувшись живого существа, колдующий исцеляет 2d8 пунктов урона + 2/уровень колдующего (до 2d8+60). Нежить вместо исцеления получает магический урон. Для применения этого заклинания к нежити, нужно выполнить успешную атаку прикосновением. Заклинание не провоцирует атаку при возможности, если используется для нанесения урона вражеской нежити.~
+@1865     = ~Исцеление серьёзных ран~
+@1866     = ~Исцеление серьёзных ран
+(Призывание)
+Уровень: бард 3, жрец 3, друид 4, паладин 4, следопыт 4, жрец Ильматера 3
+Дальность: прикосновение
+Длительность: мгновенно
+Время чтения: 2
+Зона действия: 1 существо
+Спасбросок: нет
 
-When casting this spell and laying his hand upon a living creature, the caster heals 2d8 points of damage +2 per caster level (up to 2d8+60). Undead creatures will take magic damage instead of being healed. This spell will require a successful touch attack roll if cast on an undead creature. It will not provoke an attack of opportunity if cast to damage enemy undead.~
-@1865     = ~Cure Serious Wounds~
-@1866     = ~Cure Serious Wounds
-(Conjuration) 
-Level: Brd 3, Clr 3, Drd 4, Pal 4, Rgr 4, Ilmater 3
-Range: Touch
-Duration: Instantaneous
-Casting Time: 2
-Area of Effect: 1 creature
-Saving Throw: None 
+Прочитав руки и коснувшись живого существа, колдующий исцеляет 3d8 пунктов урона + 3/уровень колдующего (до 3d8+90). Нежить вместо исцеления получает магический урон. Для применения этого заклинания к нежити, нужно выполнить успешную атаку прикосновением. Заклинание не провоцирует атаку при возможности, если используется для нанесения урона вражеской нежити.~
+@1867     = ~Исцеление критических ран~
+@1868     = ~Исцеление критических ран
+(Призывание)
+Уровень: бард 4, жрец 4, друид 5
+Дальность: прикосновение
+Длительность: мгновенно
+Время чтения: 2
+Зона действия: 1 существо
+Спасбросок: нет
 
-When casting this spell and laying his hand upon a living creature, the caster heals 3d8 points of damage +3 per caster level (up to 3d8+90). Undead creatures will take magic damage instead of being healed. This spell will require a successful touch attack roll if cast on an undead creature. It will not provoke an attack of opportunity if cast to damage enemy undead.~
-@1867     = ~Cure Critical Wounds~
-@1868     = ~Cure Critical Wounds
-(Conjuration)
-Level: Brd 4, Clr 4, Drd 5
-Range: Touch 
-Duration: Instantaneous
-Casting Time: 2
-Area of Effect: 1 creature
-Saving Throw: None
+Прочитав руки и коснувшись живого существа, колдующий исцеляет 4d8 пунктов урона + 4/уровень колдующего (до 4d8+120). Нежить вместо исцеления получает магический урон. Для применения этого заклинания к нежити, нужно выполнить успешную атаку прикосновением. Заклинание не провоцирует атаку при возможности, если используется для нанесения урона вражеской нежити.~
+@1869     = ~Круг исцеления~
+@1870     = ~Круг исцеления
+(Призывание)
+Уровень: бард 5, жрец 5, друид 6
+Дальность: колдующий
+Длительность: мгновенно
+Время чтения: 3
+Зона действия: радиус 30 футов
+Спасбросок: нет
 
-When casting this spell and laying his hand upon a living creature, the caster heals 4d8 points of damage +4 per caster level (up to 4d8+120). Undead creatures will take magic damage instead of being healed. This spell will require a successful touch attack roll if cast on an undead creature. It will not provoke an attack of opportunity if cast to damage enemy undead.~
-@1869     = ~Healing Circle~
-@1870     = ~Healing Circle
-(Conjuration) 
-Level: Brd 5, Clr 5, Drd 6
-Range: Caster
-Duration: Instantaneous
-Casting Time: 3
-Area of Effect: 30-foot radius
-Saving Throw: None
+Это заклинание исцеляет всех дружественных существ в зоне действия на 2d8 + 2/уровень заклинателя пунктов урона (вплоть до 2d8+60). Вражеская нежить в зоне действия эффекта получает такое же количество магического урона, но колдующий должен успешно совершить дистационную атаку касанием против каждой нежити, попавшей в область действия заклинания.~
+@1871     = ~Благословение~
+@1872     = ~Благословение
+(Призывание)
+Уровень: священник 1, паладин 1, жрец Темпуса 1
+Дальность: обзор колдующего
+Длительность: 1 минута/уровень
+Время чтения: 2
+Зона действия: радиус 25 футов
+Спасбросок: нет
 
-This spell heals all friendly living creatures within the area of effect by 2d8 points of damage +2 per caster level (up to +60). Enemy undead creatures in the area of effect take the same amount of magic damage, though the caster will have to succeed on a ranged touch attack for each undead creature that would be affected.~
-@1871     = ~Bless~
-@1872     = ~Bless
-(Conjuration)
-Level: Clr 1, Pal 1, Tempus 1
-Range: Sight of Caster
-Duration: 1 minute / level
-Casting Time: 2
-Area of Effect: 25-foot radius
-Saving Throw: None 
+По прочтении этого заклинания колдующий повышает бонус к атаке для союзных существ в зоне действия на +1. Благословение отменяет эффекты заклинания "Проклятие".~
+@1873     = ~Проклятие~
+@1874     = ~Проклятие
+(Чародейство)
+Уровень: священник 1, жрец Бейна 1
+Дальность: обзор колдующего
+Длительность: 1 минута/уровень
+Время чтения: 2
+Зона действия: радиус 25 футов
+Спасбросок: воли, отменяет
 
-Upon uttering this spell, the caster raises the attack bonus of allied creatures in the area of effect by +1. Bless counters and dispels Bane.~
-@1873     = ~Bane~
-@1874     = ~Bane
-(Enchantment)
-Level: Clr 1, Bane 1
-Range: Sight of Caster
-Duration: 1 minute / level
-Casting Time: 2
-Area of Effect: 25-foot radius
-Saving Throw: None
+"Проклятие" является противоположностью заклинания "Благословение". Она понижает боевой дух и ухудшает точность вражеских существ в зоне действия на -1 в течение действия заклинания. Проклятие отменяет эффекты заклинания "Благословения".~
+@1875     = ~Спешка~
+@1876     = ~Спешка
+(Преобразование)
+Уровень: бард 3, следопыт 4, колдун/волшебник 3
+Дальность: обзор колдующего
+Длительность: 1 раунд/уровень
+Время чтения: 3
+Зона действия: 1 существо
+Спасбросок: нет
 
-Bane is the reverse of Bless, and lowers the morale and attack bonus of enemy creatures in the area of effect by 1 for the duration of the spell. Bane counters and dispels Bless.~
-@1875     = ~Haste~
-@1876     = ~Haste
-(Transmutation)
-Level: Brd 3, Rgr 4, Sor/Wiz 3
-Range: Sight of Caster
-Duration: 1 round/level 
-Casting Time: 3
-Area of Effect: 1 creature
-Saving Throw: None 
+Каждый раунд существо под воздействием этого заклинания имеет право выполнить дополнительную атаку, получает бонус к классу защиты +4 и передвигается с вдвое большей скоростью перемещения. Спешка отменяет заклинание "Замедление". Эффект от нескольких подобных заклинаний или похожих эффектов не складывается.~
+@1877     = ~Огненные семена~
+@1878     = ~Огненные семена
+(Призывание)
+Уровень: друид 6, следопыт 4
+Дальность: колдующий
+Длительность: 10 раундов
+Время чтения: 5
+Зона действия: особая
+Спасбросок: реакции, половина урона
 
-A creature affected by Haste gains an extra attack every round, a +4 armor bonus, and moves at double its base movement rate. Haste dispels and counters slow and is not cumulative with itself or with other similar magic.~
-@1877     = ~Fire Seeds~
-@1878     = ~Fire Seeds
-(Conjuration)
-Level: Drd 6, Rgr 4
-Range: Caster
-Duration: 10 rounds
-Casting Time: 5
-Area of Effect: Special
-Saving Throw: Reflex half
+Заклинание создаёт в инвентаре заклинателя метательные снаряды наподобие гранат - по одному за каждые пять уровней (2 на 10-м уровне, 3 на 15-м и т.д.) При метании семена взрываются, нанося 4d6 пунктов огненного урона всем в радиусе 15 футов от места взрыва. Огненные семена используют черту "Простое оружие, Метательное" и получают бонусы от силы, мастерства, предметов и других эффектов. Существа могут уменьшить урон вдвое, если успешно прокинут спасбросок реакции. УС для этого спасброска равен 16 + бонусы от мудрости и любимой школы магии.~
+@1879     = ~Паутина~
+@1880     = ~Паутина
+(Призывание)
+Уровень: друид 2, колдун/волшебник 2
+Дальность: обзор колдующего
+Длительность: 15 раундов
+Время чтения: 2
+Зона действия: радиус 15 футов
+Спасбросок: реакции, отменяет
 
-This spell creates one explosive seed for every five levels (2 at 10th level, 3 at 15th level, etc...), which can be thrown by the caster. When hurled, the seeds explode, doing 4d6 points of fire damage to everything within a 15-foot radius. The Fire Seeds use the Simple Weapon: Missile proficiency and gain damage bonuses based on Strength, proficiency, items, spells, and other sources. Creatures can make Reflex save for half damage. The DC of the Reflex save is 16 + Wisdom and Spell Focus bonuses.~
-@1879     = ~Web~
-@1880     = ~Web
-(Conjuration)
-Level: Drd 2, Sor/Wiz 2
-Range: Sight of Caster
-Duration: 15 rounds
-Casting Time: 2 
-Area of Effect: 15-foot radius
-Saving Throw: Reflex negates
+Заклинание создаёт многослойную массу прочных, липких нитей, подобных паучьей сети, однако гораздо большего размера и прочности. Если существа в зоне действия провалят спасбросок реакции с -2 к УС, они получают -2 к броскам атаки и классу защиты, 50% шанс на провал заклинания и не могут двигаться.~
+@1881     = ~Жгучее облако~
+@1882     = ~Жгучее облако
+(Призывание)
+Уровень: друид 8, колдун/волшебник 8
+Дальность: обзор колдующего
+Длительность: 10 раундов
+Время чтения: 2
+Зона действия: радиус 10 футов
+Спасбросок: реакции, половина урона
 
-Web creates a many-layered mass of strong, sticky strands, similar to spider webs, but much larger and tougher. Creatures within the area of effect who fail a Reflex save with -2 DC suffer a -2 penalty to Armor Class and attack rolls, a 50% chance of spell failure, and can't move.~
-@1881     = ~Fiery Cloud~
-@1882     = ~Fiery Cloud
-(Conjuration)
-Level: Drd 8, Sor/Wiz 8
-Range: Sight of Caster
-Duration: 10 rounds
-Casting Time: 2
-Area of Effect: 10-foot radius
-Saving Throw: Reflex half
-
-This spell brings forth a thin, smoky cloud that fills the area of effect and initially appears harmless. However, one round later it sparks and flames, dealing 1d4 fire damage per level (max 25d4) to anyone caught in the area of effect. The cloud will continue to flare at regular one round intervals for the duration of the spell.~
+Это заклинание создаёт лёгкое, дымное облако, которое заполняет зону действия и поначалу ведёт себя вполне безобидно. Однако по прошествии одного раунда оно вспыхивает и горит, нанося 1d4 огненного урона на уровень заклинателя (до максимума в 25d4) всем, кто попал в зону действия заклинания. Облако будет продолжать пылать с регулярными интервалами в один раунд в течение времени действия заклинания.~
 @1883     = ~Trollish Fortitude~
 @1884     = ~Trollish Fortitude
 (Necromancy)
