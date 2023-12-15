@@ -2262,95 +2262,94 @@
 Спасбросок: нет
 
 Это заклинание создаёт магическую дубинку (+1) с бонусом к атаке +1 и наносящую при ударе дробящий урон 1d10+1. Бонусы зачарования, атаки и урона увеличиваются до +2 на 6-м уровне, +3 на 9-м уровне, +4 на 12-м уровне и +5 на 15-м уровне. Дубинка также получает бонус мудрости к атаке и урону вместо силы, если мудрость выше. Дубинка использует черту черту "Простое оружие, Булавы".~
-@1899     = ~Contagion~
-@1900     = ~Contagion
-(Necromancy) 
-Level: Clr 3, Drd 3, Sor/Wiz 4
-Range: Sight of Caster
-Duration: Permanent
-Casting Time: 4
-Area of Effect: 1 creature 
-Saving Throw: Fortitude negates
+@1899     = ~Инфекция~
+@1900     = ~Инфекция
+(Некромантия)
+Уровень: священник 3, друид 3, колдун/волшебник 4
+Дальность: обзор колдующего
+Длительность: постоянная
+Время чтения: 4
+Зона действия: 1 существо
+Спасбросок: стойкости, отменяет
 
-This spell causes a major disease and weakness in a creature. The afflicted individual is immediately stricken with painful and distracting symptoms: boils, blotches, lesions, seeping abscesses, and so on. Strength, Dexterity, and Constitution are reduced by 4. The afflicted creature is also slowed. These effects persist until the character receives a remove disease spell. Casting Contagion on the same creature multiple times will worsen the disease. A Fortitude save (with +8 DC) will negate the effects.~
-@1901     = ~Holy Power~
-@1902     = ~Holy Power
-(Evocation) 
-Level: Clr 4, Pal 3, Ilmater 5
-Range: None
-Duration: 12 rounds
-Casting Time: 4
-Area of Effect: Caster
-Saving Throw: None
+Это заклинание вызывает у цели серьёзную болезнь и слабость. У поражённого существа немедленно появляются болезненные и отвлекающие симптомы: нарывы, пятна, повреждения, сочащиеся нарывы и так далее. Сила, ловкость и телосложение жертвы уменьшаются на 4 и она замедляется. Эти эффекты сохраняются до тех пор, пока на цель заклинания не будет использовано "Излечение болезни". Многократные применение этого заклинания на одно и тоже существу усугубляет эффекты. Успешный спасбросок стойкости с +8 к УС позволяет избежать заражения и всех негативных эффектов.~
+@1901     = ~Святая сила~
+@1902     = ~Святая сила
+(Проявление)
+Уровень: священник 4, паладин 3, жрец Ильматера 5
+Дистанция: нет
+Длительность: 12 раундов
+Время чтения: 4
+Зона действия: колдующий
+Спасбросок: нет
 
-Through this spell, the caster channels the power of his god throughout his entire being, amplifying the damage done by his attacks. The caster gains a +4 damage bonus for the duration of the spell.~
-@1903     = ~Protection from Acid~
-@1904     = ~Protection from Acid
-(Abjuration) 
-Level: Sor/Wiz 5
-Range: Touch
-Duration: 10 rounds / level
-Casting Time: 6
-Area of Effect: 1 creature 
-Saving Throw: None 
+С помощью этого заклинания заклинатель становится проводником силы своего божества и, пропуская её через всё своё существо, усиливает урон, наносимый своими атаками. На время действия заклинатель получает +4 к урону.~
+@1903     = ~Защита от кислоты~
+@1904     = ~Защита от кислоты
+(Отречение)
+Уровень: колдун/волшебник 5
+Дальность: прикосновение 
+Длительность: 10 раундов/уровень
+Время чтения: 6
+Зона действия: 1 существо 
+Спасбросок: нет 
 
-This spell grants a damage resistance of 25/- against acid damage for the duration.~
-@1905     = ~Protection from Electricity~
-@1906     = ~Protection from Electricity
-(Abjuration) 
-Level: Sor/Wiz 5, Talos 4
-Range: Touch 
-Duration: 10 rounds / level
-Casting Time: 6
-Area of Effect: 1 creature 
-Saving Throw: None 
+Это заклинание дарует сопротивление 25/- против кислотного урона на всё время действия.~
+@1905     = ~Защита от электричества~
+@1906     = ~Защита от электричества
+(Отречение)
+Уровень: колдун/волшебник 5, жрец Талоса 4
+Дальность: прикосновение
+Длительность: 10 раундов/уровень
+Время чтения: 6
+Зона действия: 1 существо
+Спасбросок: нет
 
-This spell grants a damage resistance of 25/- against electrical damage for the duration of the spell.~
-@1907     = ~Storm Shell~
-@1908     = ~Storm Shell
-(Abjuration)
-Level: Drd 4, Rgr 4, Talos 3
-Range: Caster
-Duration: 10 rounds
-Casting Time: 6
-Area of Effect: Caster
-Saving Throw: None
+Это заклинание дарует сопротивление 25/- против электрического урона на всё время действия.~
+@1907     = ~Оболочка бури~
+@1908     = ~Оболочка бури
+(Отречение)
+Уровень: друид 4, следопыт 4, жрец Талоса 3
+Дальность: колдующий
+Длительность: 10 раундов
+Время чтения: 6
+Зона действия: колдующий
+Спасбросок: нет
 
-This spell surrounds the caster with a dark sphere of disruptive energy that moves with him or her. The storm shell grants a 100/- resistance bonus to electricity and a 15/- resistance bonus to fire and cold. In addition, the caster is protected from all storm and cloud-based spells while the storm shell is active.~
-@1909     = ~Shambler~
-@1910     = ~Shambler
-(Conjuration)
-Level: Drd 7
-Range: Sight of Caster
-Duration: 8 hours
-Casting Time: 7
-Area of Effect: Special
-Saving Throw: None
+Это заклинание окружает произнёсшего его тёмной сферой разрушительной энергии, которая передвигается вместе с заклинателем. Оболочка даёт сопротивление 100/- к электричеству сопротивление 15/- к огню и холоду. В дополнение, заклинатель защищён от всех "штормовых" и "облачных/туманных" заклинаний, пока оболочка бури активна.~
+@1909     = ~Ползун~
+@1910     = ~Ползун
+(Призывание)
+Уровень: друид 7
+Дальность: обзор колдующего
+Длительность: 8 часов
+Время чтения: 7
+Зона действия: особая
+Спасбросок: нет
 
-This spell creates a shambling mound of 12 HD which willingly aids the caster in combat or whatever other duties it is assigned and has the capability to carry out. If the caster is level 20 or higher, this spell summons two shambling mounds rather than one.~
-@1911     = ~Faerie Fire~
-@1912     = ~Faerie Fire
-(Evocation)
-Level: Drd 1, Lathander 1, Selune 1
-Range: Sight of Caster
-Duration: 3 rounds / level
-Casting Time: 1
-Area of Effect: 20-foot radius
-Saving Throw: None
+Это заклинание создаёт ползущий холм с 12-м уровнем здоровья, который помогает колдующему в бою или выполняет иные действия, которые способен совершить. Если колдующий 20-ого уровня или ваше, то призывается два ползущих холма вместо одного.~
+@1911     = ~Огонь фей~
+@1912     = ~Огонь фей
+(Проявление)
+Уровень: друид 1, жрец Латандера 1, жрец Селуны 1
+Дальность: обзор колдующего
+Длительность: 3 раунда/уровень
+Время чтения: 1
+Зона действия: радиус 20 футов
+Спасбросок: нет
 
-This spell outlines all enemies in the area of effect with a pale glow, making their position and movements easily visible - this gives a -2 AC penalty.~
-@1913     = ~Aegis~
-@1914     = ~Aegis
-(Abjuration)
-Level: Sor/Wiz 9, Helm 9
-Range: Caster
-Duration: 20 rounds
-Casting Time: 1
-Area of Effect: Caster
-Saving Throw: None 
+Это заклинание заставляет всех врагов в области испускать слабое свечение, что облегчает задачу обнаружения противников, тем самым понижая их класс защиты на 2.~
+@1913     = ~Эгида~
+@1914     = ~Эгида
+(Отречение)
+Уровень: колдун/волшебник 9, жрец Хелма 9
+Дальность: колдующий
+Длительность: 20 раундов
+Время чтения: 1
+Зона действия: колдующий
+Спасбросок: нет
 
-This spell grants the caster a 5/- bonus to all damage resistances, a +15 armor bonus, +15 spell resistance, and +5 to all saves.~
-
+Это заклинание добавляет колдующему 5/- сопротивления всем видам урона, +15 к классу защиты (доспех), +15 к сопротивлению магии, +5 ко всем спасброскам.~
 @1976     = ~Instant~
 @1977     = ~1 round~
 @1978     = ~Free action~
