@@ -2350,169 +2350,169 @@
 Спасбросок: нет
 
 Это заклинание добавляет колдующему 5/- сопротивления всем видам урона, +15 к классу защиты (доспех), +15 к сопротивлению магии, +5 ко всем спасброскам.~
-@1976     = ~Instant~
-@1977     = ~1 round~
-@1978     = ~Free action~
-@1979     = ~Casting Time:~
-@1980     = ~Level:~
-@1981     = ~Brd~
-@1982     = ~Clr~
-@1983     = ~Drd~
-@1984     = ~Pal~
-@1985     = ~Rgr~
-@1986     = ~Sor~
-@1987     = ~Wiz~
-@1988     = ~Ilmater~
-@1989     = ~Lathander~
-@1990     = ~Selune~
-@1991     = ~Helm~
-@1992     = ~Oghma~
-@1993     = ~Tempus~
-@1994     = ~Bane~
-@1995     = ~Mask~
-@1996     = ~Talos~
+@1976     = ~Мгновенно~
+@1977     = ~1 раунд~
+@1978     = ~Свободное действие~
+@1979     = ~Время чтения:~
+@1980     = ~Уровень:~
+@1981     = ~Бард~
+@1982     = ~Священник~
+@1983     = ~Друид~
+@1984     = ~Паладин~
+@1985     = ~Следопыт~
+@1986     = ~Колдун~
+@1987     = ~Волшебник~
+@1988     = ~Жрец Ильматера~
+@1989     = ~Жрец Латандера~
+@1990     = ~Жрец Селуны~
+@1991     = ~Жрец Хелма~
+@1992     = ~Жрец Огмы~
+@1993     = ~Жрец Темпуса~
+@1994     = ~Жрец Бейна~
+@1995     = ~Жрец Маска~
+@1996     = ~Жрец Талоса~
 
-@30001=~Cold damage dealt increased by 50%~
-@30002=~Cold damage dealt increased by 100%~
-@30003=~Cold damage dealt increased by 150%~
-@30004=~Cold damage dealt increased by 200%~
-@30005=~Protected by Freedom of Movement~
-@30006=~Protected by Chaotic Commands~
-@30007=~Impervious Sanctity of Mind~
-@30008=~Protected by Mind Blank~
-@30009=~Protected by Death Ward~
-@30010=~Protected by Spell Shield~
-@30011=~Protected by Elemental Barrier~
-@30012=~Quiver of Plenty +1~
-@30013=~This quiver was created by the Quiver of Plenty spell. It holds a limitless supply of +1 arrows.
+@30001=~Наносимый урон холодом увеличен на 50%~
+@30002=~Наносимый урон холодом увеличен на 100%~
+@30003=~Наносимый урон холодом увеличен на 150%~
+@30004=~Наносимый урон холодом увеличен на 200%~
+@30005=~Под защитой "Свободы действий"~
+@30006=~Под защитой "Хаотичных приказов"~
+@30007=~Непроницаемая чистота разума~
+@30008=~Под защитой "Очистки разума"~
+@30009=~Под защитой "Ограждения от смерти~
+@30010=~Под защитой "Щита заклинаний"~
+@30011=~Под защитой "Защиты от стихий"~
+@30012=~Колчан изобилия +1~
+@30013=~Этот колчан был создан заклинанием "Колчан изобилия". В нём содержатся бесконечные стрелы +1.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d6 + 1
-Attack Bonus:  +1 
-Enchantment:  +1
-Damage Type:  Missile (piercing)
-Special:
-  Unlimited Arrows: Any number of arrows can be taken from the quiver.
-Weight:  0 lb.
-Launcher:  Bow~
-@30014=~Quiver of Plenty +2~
-@30015=~This quiver was created by the Quiver of Plenty spell. It holds a limitless supply of +2 arrows.
+Урон:  1d6 + 1
+Атака:  +1
+Зачарование: +1
+Тип урона: метательный (колющий)
+Особенности:
+ Бесконечные стрелы: Из колчана можно взять любое количество стрел.
+Вес: 0 фунтов.
+Оружие: Лук~
+@30014=~Колчан изобилия +2~
+@30015=~Этот колчан был создан заклинанием "Колчан изобилия". В нём содержатся бесконечные стрелы +2.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d6 + 2
-Attack Bonus:  +2
-Enchantment:  +2
-Damage Type:  Missile (piercing)
-Special:
-  Unlimited Arrows: Any number of arrows can be taken from the quiver.
-Weight:  0 lb.
-Launcher:  Bow~
-@30016=~Quiver of Plenty +3~
-@30017=~This quiver was created by the Quiver of Plenty spell. It holds a limitless supply of +3 arrows.
+Урон:  1d6 + 2
+Атака:  +2
+Зачарование: +2
+Тип урона: метательный (колющий)
+Особенности:
+ Бесконечные стрелы: Из колчана можно взять любое количество стрел.
+Вес: 0 фунтов.
+Оружие: Лук~
+@30016=~Колчан изобилия +3~
+@30017=~Этот колчан был создан заклинанием "Колчан изобилия". В нём содержатся бесконечные стрелы +3.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d6 + 3
-Attack Bonus:  +3
-Enchantment:  +3
-Damage Type:  Missile (piercing)
-Special:
-  Unlimited Arrows: Any number of arrows can be taken from the quiver.
-Weight:  0 lb.
-Launcher:  Bow~
-@30018=~Quiver of Plenty +4~
-@30019=~This quiver was created by the Quiver of Plenty spell. It holds a limitless supply of +4 arrows.
+Урон:  1d6 + 3
+Атака:  +3
+Зачарование: +3
+Тип урона: метательный (колющий)
+Особенности:
+ Бесконечные стрелы: Из колчана можно взять любое количество стрел.
+Вес: 0 фунтов.
+Оружие: Лук~
+@30018=~Колчан изобилия +4~
+@30019=~Этот колчан был создан заклинанием "Колчан изобилия". В нём содержатся бесконечные стрелы +4.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d6 + 4
-Attack Bonus:  +4
-Enchantment:  +4
-Damage Type:  Missile (piercing)
-Special:
-  Unlimited Arrows: Any number of arrows can be taken from the quiver.
-Weight:  0 lb.
-Launcher:  Bow~
-@30020=~Quiver of Plenty +5~
-@30021=~This quiver was created by the Quiver of Plenty spell. It holds a limitless supply of +5 arrows.
+Урон:  1d6 + 4
+Атака:  +4
+Зачарование: +4
+Тип урона: метательный (колющий)
+Особенности:
+ Бесконечные стрелы: Из колчана можно взять любое количество стрел.
+Вес: 0 фунтов.
+Оружие: Лук~
+@30020=~Колчан изобилия +5~
+@30021=~Этот колчан был создан заклинанием "Колчан изобилия". В нём содержатся бесконечные стрелы +5.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d6 + 5
-Attack Bonus:  +5
-Enchantment:  +5
-Damage Type:  Missile (piercing)
-Special:
-  Unlimited Arrows: Any number of arrows can be taken from the quiver.
-Weight:  0 lb.
-Launcher:  Bow~
-@30022=~Quiver of Plenty +6~
-@30023=~This quiver was created by the Quiver of Plenty spell. It holds a limitless supply of +6 arrows.
+Урон:  1d6 + 5
+Атака:  +5
+Зачарование: +5
+Тип урона: метательный (колющий)
+Особенности:
+ Бесконечные стрелы: Из колчана можно взять любое количество стрел.
+Вес: 0 фунтов.
+Оружие: Лук~
+@30022=~Колчан изобилия +6~
+@30023=~Этот колчан был создан заклинанием "Колчан изобилия". В нём содержатся бесконечные стрелы +6.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d6 + 6
-Attack Bonus:  +6
-Enchantment:  +6
-Damage Type:  Missile (piercing)
-Special:
-  Unlimited Arrows: Any number of arrows can be taken from the quiver.
-Weight:  0 lb.
-Launcher:  Bow~
-@30024=~Quiver of Plenty +7~
-@30025=~This quiver was created by the Quiver of Plenty spell. It holds a limitless supply of +7 arrows.
+Урон:  1d6 + 6
+Атака:  +6
+Зачарование: +6
+Тип урона: метательный (колющий)
+Особенности:
+ Бесконечные стрелы: Из колчана можно взять любое количество стрел.
+Вес: 0 фунтов.
+Оружие: Лук~
+@30024=~Колчан изобилия +7~
+@30025=~Этот колчан был создан заклинанием "Колчан изобилия". В нём содержатся бесконечные стрелы +7.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d6 + 7
-Attack Bonus:  +7
-Enchantment:  +7
-Damage Type:  Missile (piercing)
-Special:
-  Unlimited Arrows: Any number of arrows can be taken from the quiver.
-Weight:  0 lb.
-Launcher:  Bow~
-@30026=~Quiver of Plenty +8~
-@30027=~This quiver was created by the Quiver of Plenty spell. It holds a limitless supply of +8 arrows.
+Урон:  1d6 + 7
+Атака:  +7
+Зачарование: +7
+Тип урона: метательный (колющий)
+Особенности:
+ Бесконечные стрелы: Из колчана можно взять любое количество стрел.
+Вес: 0 фунтов.
+Оружие: Лук~
+@30026=~Колчан изобилия +8~
+@30027=~Этот колчан был создан заклинанием "Колчан изобилия". В нём содержатся бесконечные стрелы +8.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d6 + 8
-Attack Bonus:  +8
-Enchantment:  +8
-Damage Type:  Missile (piercing)
-Special:
-  Unlimited Arrows: Any number of arrows can be taken from the quiver.
-Weight:  0 lb.
-Launcher:  Bow~
-@30028=~Quiver of Plenty +9~
-@30029=~This quiver was created by the Quiver of Plenty spell. It holds a limitless supply of +9 arrows.
+Урон:  1d6 + 8
+Атака:  +8
+Зачарование: +8
+Тип урона: метательный (колющий)
+Особенности:
+ Бесконечные стрелы: Из колчана можно взять любое количество стрел.
+Вес: 0 фунтов.
+Оружие: Лук~
+@30028=~Колчан изобилия +9~
+@30029=~Этот колчан был создан заклинанием "Колчан изобилия". В нём содержатся бесконечные стрелы +9.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d6 + 9
-Attack Bonus:  +9
-Enchantment:  +9
-Damage Type:  Missile (piercing)
-Special:
-  Unlimited Arrows: Any number of arrows can be taken from the quiver.
-Weight:  0 lb.
-Launcher:  Bow~
-@30030=~Quiver of Plenty +10~
-@30031=~This quiver was created by the Quiver of Plenty spell. It holds a limitless supply of +10 arrows.
+Урон:  1d6 + 9
+Атака:  +9
+Зачарование: +9
+Тип урона: метательный (колющий)
+Особенности:
+ Бесконечные стрелы: Из колчана можно взять любое количество стрел.
+Вес: 0 фунтов.
+Оружие: Лук~
+@30030=~Колчан изобилия +10~
+@30031=~Этот колчан был создан заклинанием "Колчан изобилия". В нём содержатся бесконечные стрелы +10.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d6 + 10
-Attack Bonus:  +10
-Enchantment:  +10
-Damage Type:  Missile (piercing)
-Special:
-  Unlimited Arrows: Any number of arrows can be taken from the quiver.
-Weight:  0 lb.
-Launcher:  Bow~
+Урон:  1d6 + 10
+Атака:  +10
+Зачарование: +10
+Тип урона: метательный (колющий)
+Особенности:
+ Бесконечные стрелы: Из колчана можно взять любое количество стрел.
+Вес: 0 фунтов.
+Оружие: Лук~
 @30032=~Protected by Mantle (Damage Reduction 15/+3)~
 @30033=~Protected by Mantle (Damage Reduction 20/+4)~
 @30034=~Protected by Mantle (Damage Reduction 25/+5)~
