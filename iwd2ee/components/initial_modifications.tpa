@@ -9,6 +9,8 @@ COPY ~%mod_folder%/ieex_main_folder~ ~./~
 
 COPY ~%mod_folder%/bcs/+thief_s.bs~ ~Scripts~
 
+COPY ~%mod_folder%/tables/LISTINNT.2da~ ~override~
+
 ACTION_FOR_EACH file IN ACTION TRIGGER BEGIN
 	COPY ~%mod_folder%/patches/%file%.IDS~ ~%mod_folder%/patches~
 		COUNT_2DA_ROWS 2 rows

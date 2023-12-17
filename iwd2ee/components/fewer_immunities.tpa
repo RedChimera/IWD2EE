@@ -280,39 +280,41 @@ COPY_EXISTING ~52MNKST.cre~ ~override~
 
 COPY_EXISTING ~53FGOLEM.cre~ ~override~
 	WRITE_BYTE fireresistance 0
-	WRITE_BYTE coldresistance 20
+	WRITE_BYTE coldresistance 10
 	WRITE_BYTE electricityresistance 100
 	WRITE_BYTE acidresistance 0
-	WRITE_BYTE magicdamageresistance 20
+	WRITE_BYTE magicdamageresistance 0
 	WRITE_BYTE spellresistance 20
 	WRITE_BYTE slashingresistance 0
-	WRITE_BYTE bludgeoningresistance 15
-	WRITE_BYTE piercingresistance 5
+	WRITE_BYTE bludgeoningresistance 10
+	WRITE_BYTE piercingresistance 0
 	WRITE_BYTE missileresistance 0
 
 COPY_EXISTING ~53GOLIM.cre~ ~override~ ~53GOLIMH.cre~ ~override~
-	WRITE_BYTE fireresistance 10
-	WRITE_BYTE coldresistance 30
+	WRITE_BYTE fireresistance 5
+	WRITE_BYTE coldresistance 20
 	WRITE_BYTE electricityresistance 100
-	WRITE_BYTE acidresistance 5
-	WRITE_BYTE magicdamageresistance 50
+	WRITE_BYTE acidresistance 0
+	WRITE_BYTE magicdamageresistance 5
 	WRITE_BYTE spellresistance 30
-	WRITE_BYTE slashingresistance 5
-	WRITE_BYTE bludgeoningresistance 25
-	WRITE_BYTE piercingresistance 15
-	WRITE_BYTE missileresistance 10
+	WRITE_BYTE slashingresistance 0
+	WRITE_BYTE bludgeoningresistance 15
+	WRITE_BYTE piercingresistance 0
+	WRITE_BYTE missileresistance 0
+	WRITE_BYTE enchantmentlevel 2
 
 COPY_EXISTING ~53GOLIMX.cre~ ~override~
-	WRITE_BYTE fireresistance 10
-	WRITE_BYTE coldresistance 30
+	WRITE_BYTE fireresistance 5
+	WRITE_BYTE coldresistance 20
 	WRITE_BYTE electricityresistance 100
-	WRITE_BYTE acidresistance 5
-	WRITE_BYTE magicdamageresistance 50
+	WRITE_BYTE acidresistance 0
+	WRITE_BYTE magicdamageresistance 5
 	WRITE_BYTE spellresistance 0
-	WRITE_BYTE slashingresistance 5
-	WRITE_BYTE bludgeoningresistance 25
-	WRITE_BYTE piercingresistance 15
-	WRITE_BYTE missileresistance 10
+	WRITE_BYTE slashingresistance 0
+	WRITE_BYTE bludgeoningresistance 15
+	WRITE_BYTE piercingresistance 0
+	WRITE_BYTE missileresistance 0
+	WRITE_BYTE enchantmentlevel 2
 
 COPY_EXISTING ~53MGOLEM.cre~ ~override~
 	WRITE_BYTE fireresistance 40

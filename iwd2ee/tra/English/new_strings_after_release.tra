@@ -367,3 +367,85 @@ Disadvantages:
 @55787=~Spell Replacement: Level 7~
 @55788=~Spell Replacement: Level 8~
 @55789=~Spell Replacement: Level 9~
+@1871     = ~Bless~
+@1872     = ~Bless
+(Conjuration)
+Level: Clr 1, Pal 1, Tempus 1
+Range: Sight of Caster
+Duration: 1 minute / level
+Casting Time: 2
+Area of Effect: 25-foot radius
+Saving Throw: None 
+
+Upon uttering this spell, the caster raises the attack bonus and saving throws of allied creatures in the area of effect by +1. Bless counters and dispels Bane.~
+@1873     = ~Bane~
+@1874     = ~Bane
+(Enchantment)
+Level: Clr 1, Bane 1
+Range: Sight of Caster
+Duration: 1 minute / level
+Casting Time: 2
+Area of Effect: 25-foot radius
+Saving Throw: None
+
+Bane is the reverse of Bless, and lowers the attack bonus and saving throws of enemy creatures in the area of effect by 1 for the duration of the spell. Bane counters and dispels Bless.~
+@214    = ~Ilmater's Endurance
+
+This ability allows a non-evil ally to bear far more pain but also suffer more pain, granting them a +20 Constitution bonus and a -3 vulnerability to physical damage for 8 hours.~
+@31802     = ~Mass Heal~
+@32802     = ~Mass Heal
+(Conjuration)
+Level: Clr 8, Drd 9, Lathander 9
+Range: Sight of Caster
+Duration: Instantaneous
+Casting Time: 9
+Area of Effect: 20-foot radius
+Saving Throw: None
+
+Mass Heal wipes away disease and injury from all living allies in the area of effect. It cures blindness, diseases, feeblemind and restores the targets to maximum hit points if they have been injured. Enemy undead in the area of effect suffer the effects of a Harm spell if the caster succeeds on a ranged touch attack roll for each one.~
+@35952     = ~Mass Harm~
+@36952     = ~Mass Harm
+(Necromancy)
+Level: Clr 9
+Range: Sight of Caster
+Duration: Instantaneous
+Casting Time: 9
+Area of Effect: 20-foot radius
+Saving Throw: Fortitude negates
+
+Mass Harm releases destructive negative energy upon all living enemies in the area of effect. The caster makes ranged touch attacks against each of those creatures; each one that get hit must Save vs. Fortitude or lose all but one hit point. The DC is the same as that of the 6th-level Harm spell. Allied undead in the area of effect are instead healed to full health as per a Heal spell.~
+@1126    = ~Iron Body~
+@1127    = ~Iron Body 
+(Transmutation)
+Level: Sor/Wiz 8, Helm 8
+Range: Caster
+Duration: 1 round / level
+Casting Time: 8
+Area of Effect: Caster
+Saving Throw: None
+
+This spell transforms the caster's body into living iron, granting him several powerful resistances and abilities. While the spell is in effect, the caster has 15/- resistance to fire, cold, and all forms of physical damage, but also +15 vulnerability to electricity. Spells that affect respiration or the physiology of the caster are ignored completely, such as poison, blindness, deafness, and disease to name a few, and the caster becomes too heavy to knock back with spells like Gust of Wind, Throw or Repulsion. In addition, the caster gains a +8 bonus to strength and constitution and a -8 dexterity penalty. Unfortunately, the caster's movement becomes slow and awkward under the weight of his new body, setting his movement rate to half its normal rate, and he receives a -2 penalty to casting speed.~
+@1857    = ~Death Fog~
+@1858    = ~Death Fog
+(Transmutation)
+Level: Sor/Wiz 6
+Range: Sight of Caster 
+Duration: 10 rounds
+Casting Time: 6
+Area of Effect: 15-foot radius
+Saving Throw: None
+
+This spell brings forth a billowing cloud of acidic fog. The thick fog limits movement to 50% of a creature's current movement rate. In addition, all creatures caught within the fog take 3d6 points of acid damage per round.~
+@37955     = ~Malavon's Corrosive Fog~
+@38955     = ~Malavon's Corrosive Fog
+(Conjuration)
+Level: Sor/Wiz 9
+Range: Sight of Caster
+Duration: 30 rounds
+Casting Time: 12
+Area of Effect: 40-foot radius
+Saving Throw: Fortitude half
+
+Malavon's Corrosive Fog is another spell created by the dark elf sorcerer Malavon. It creates an enormous cloud of acid fog that lingers for a long time. Each round, any creature in the fog takes 12d6 acid damage (Fortitude save for half), and their movement rate is halved (there is no save against the movement penalty). The target's Spell Resistance, if any, does not affect this spell.~
+@19910    = ~We used Imphraili's notes to complete her theoretical experiment regarding the transfusion of a modified Sanguis Anima into one's own bloodstream.  The process was difficult and painful but left our alchemist strangely invigorated.~
+@19911    = ~We used the white wyrm's egg to form a magical liquid which was then mixed into the alchemist's bloodstream.  The process cooled the blood, making them resistant to cold but more vulnerable to heat.~
