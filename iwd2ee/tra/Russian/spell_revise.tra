@@ -2513,89 +2513,89 @@
  Бесконечные стрелы: Из колчана можно взять любое количество стрел.
 Вес: 0 фунтов.
 Оружие: Лук~
-@30032=~Protected by Mantle (Damage Reduction 15/+3)~
-@30033=~Protected by Mantle (Damage Reduction 20/+4)~
-@30034=~Protected by Mantle (Damage Reduction 25/+5)~
-@30035=~Protected by Mantle (Damage Reduction 30/+6)~
-@30036=~Protected by Mantle (Damage Reduction 35/+7)~
-@30037=~Minor Elemental Barrier~
-@30038=~Protected from Fire~
-@30039=~Protected from Cold~
-@30040=~Protected from Electricity~
-@30041=~Protected from Acid~
-@30042=~Protected from Magic Energy~
-@30043=~Blurred~
-@30044=~Blink~
-@30045=~Rage~
-@30046=~Hope~
-@30047=~Protected by Aegis~
-@30048=~Created by the Goodberry spell, these simple looking blueberries will heal 1d4+5 points of damage for each bunch of berries eaten.~
-@30049=~Reflected the attack~
-@30050=~Protected by Spell Trap~
-@30051=~Release Spell Sequencer~
-@30052=~You ghostwalked through the door and opened it from the inside.~
-@30053=~Ghoul~
-@30054=~Object of Sympathy~
-@30055=~Copied Spell~
-@30056=~Incorporeal~
-@30057=~Ethereal~
-@30058=~Levitating~
-@30059=~Resistance Lowered~
-@30060=~Enlarged~
-@30061=~Jump Distance Increased~
-@30062=~Flying~
-@30063=~Mutated Crawler~
-@30064=~Protected by Spell Turning~
-@30065=~Skeleton Bomb~
-@30066=~Explode~
-@30067=~Imbued Spell~
-@30068=~Deva~
-@30069=~Stunning Mace of Disruption +3~
-@30070=~Damage from non-evil weapon reduced by 10~
-@30071=~Damage from non-evil weapon reduced by 15~
-@30072=~Mislead Clone~
-@30073=~Spellstaff (Grease)~
-@30074=~Spellstaff (Mage Armor)~
-@30075=~Spellstaff (Burning Hands)~
-@30076=~Spellstaff (Charm Person)~
-@30077=~Spellstaff (Color Spray)~
-@30078=~Spellstaff (Protection from Petrification)~
-@30079=~Spellstaff (Magic Missile)~
-@30080=~Spellstaff (Shocking Grasp)~
-@30081=~Spellstaff (Sleep)~
-@30082=~Spellstaff (Chill Touch)~
-@30083=~Spellstaff (Chromatic Orb)~
-@30084=~Spellstaff (Larloch's Minor Drain)~
-@30085=~Spellstaff (Reflected Image)~
-@30086=~Spellstaff (Spook)~
-@30087=~Spellstaff (Ice Dagger)~
-@30088=~Spellstaff (Summon Monster I)~
-@30089=~Spellstaff (Deafness)~
-@30090=~Spellstaff (Ray of Enfeeblement)~
-@30091=~Spellstaff (Dimension Door)~
-@30092=~Spellstaff (Simple Summoning)~
-@30093=~Spellstaff (Jump)~
-@30094=~Spellstaff (Identify Creature)~
-@30095=~Spellstaff (Bless)~
-@30096=~Spellstaff (Command)~
-@30097=~Spellstaff (Cure Light Wounds)~
-@30098=~Spellstaff (Entangle)~
-@30099=~Spellstaff (Protection from Evil)~
-@30100=~Spellstaff (Remove Fear)~
-@30101=~Spellstaff (Sanctuary)~
-@30102=~Spellstaff (Bane)~
-@30103=~Spellstaff (Inflict Light Wounds)~
-@30104=~Spellstaff (Sunscorch)~
-@30105=~Spellstaff (Doom)~
-@30106=~Spellstaff (Faerie Fire)~
-@30107=~Spellstaff (Frost Fingers)~
-@30108=~Spellstaff (Summon Nature's Ally I)~
-@30109=~Spellstaff (Hunter's Mark)~
-@30110=~Spellstaff (Shortening)~
-@30111=~Release Eclectic Sequencer~
-@30112=~Projecting Body~
-@30113=~Spellstaff (Perception Filter)~
-@30114=~Spellstaff (Guidance)~
+@30032=~Под защитой "Мантии" (Уменьшение урона 15/+3)~
+@30033=~Под защитой "Мантии" (Уменьшение урона 20/+4)~
+@30034=~Под защитой "Мантии" (Уменьшение урона 25/+5)~
+@30035=~Под защитой "Мантии" (Уменьшение урона 30/+6)~
+@30036=~Под защитой "Мантии" (Уменьшение урона 35/+7)~
+@30037=~Малый барьер стихий~
+@30038=~Под защитой от огня~
+@30039=~Под защитой от холода~
+@30040=~Под защитой от электричества~
+@30041=~Под защитой от кислоты~
+@30042=~Под защитой от магической энергии~
+@30043=~Под защитой "Размытия"~
+@30044=~Мерцание~
+@30045=~Ярость~
+@30046=~Надежда~
+@30047=~Под защитой "Эгиды"~
+@30048=~На вид это обычные ягоды черники, однако они созданы заклинанием "Ягода". Каждая съеденная горсть восстанавливает 1d4+5 единиц здоровья.~
+@30049=~Атака отражена~
+@30050=~Под защитой "Ловушки Заклинаний"~
+@30051=~Выпустить "Последовательность"~
+@30052=~Вы прошли призраком сквозь дверь и открыли ее изнутри.~
+@30053=~Упырь~
+@30054=~Объект "Симпатии"~
+@30055=~Скопированное заклинание~
+@30056=~Вне тела~
+@30057=~В эфирном плане~
+@30058=~Под действием "Левитации"~
+@30059=~Сопротивление снижено~
+@30060=~Большего размера~
+@30061=~Увеличена дальность прыжков~
+@30062=~Под действием "Полёта"~
+@30063=~Мутировавшая гусеница-падальщик~
+@30064=~Под защитой "Обращения заклинаний"~
+@30065=~Скелет-бомба~
+@30066=~Взорвать~
+@30067=~Наделённое заклинание~
+@30068=~Дева~
+@30069=~Ошеломляющая булава распада +3~
+@30070=~Урон от незлого оружия уменьшен на 10~
+@30071=~Урон от незлого оружия уменьшен на 15~
+@30072=~Клон от "Заблуждения"~
+@30073=~Посох заклинаний (Слизь)~
+@30074=~Посох заклинаний (Доспехи Мага)~
+@30075=~Посох заклинаний (Горящие руки)~
+@30076=~Посох заклинаний (Очаровать персонажа)~
+@30077=~Посох заклинаний (Цветные брызги)~
+@30078=~Посох заклинаний (Защита от окаменения)~
+@30079=~Посох заклинаний (Магический снаряд)~
+@30080=~Посох заклинаний (Шокирующая хватка)~
+@30081=~Посох заклинаний (Сон)~
+@30082=~Посох заклинаний (Леденящее прикосновение)~
+@30083=~Посох заклинаний (Цветная сфера)~
+@30084=~Посох заклинаний (Малый отток Ларлоха)~
+@30085=~Посох заклинаний (Отражённый образ)~
+@30086=~Посох заклинаний (Приведение)~
+@30087=~Посох заклинаний (Ледяной кинжал)~
+@30088=~Посох заклинаний (Вызов монстров I)~
+@30089=~Посох заклинаний (Оглушение)~
+@30090=~Посох заклинаний (Луч слабости)~
+@30091=~Посох заклинаний (Дверь измерений)~
+@30092=~Посох заклинаний (Простой вызов)~
+@30093=~Посох заклинаний (Прыжок)~
+@30094=~Посох заклинаний (Опознание существа)~
+@30095=~Посох заклинаний (Благословение)~
+@30096=~Посох заклинаний (Повеление)~
+@30097=~Посох заклинаний (Исцеление лёгких ран)~
+@30098=~Посох заклинаний (Запутывание)~
+@30099=~Посох заклинаний (Защита от зла)~
+@30100=~Посох заклинаний (Снять страх)~
+@30101=~Посох заклинаний (Святилище)~
+@30102=~Посох заклинаний (Проклятие)~
+@30103=~Посох заклинаний (Нанесение лёгких ран)~
+@30104=~Посох заклинаний (Солнечный ожог)~
+@30105=~Посох заклинаний (Рок)~
+@30106=~Посох заклинаний (Огонь фей)~
+@30107=~Посох заклинаний (Ледяные пальцы)~
+@30108=~Посох заклинаний (Призыв природных союзников I)~
+@30109=~Посох заклинаний (Метка охотника)~
+@30110=~Посох заклинаний (Уменьшение)~
+@30111=~Выпустить "Эклектическую Последовательность"~
+@30112=~Спроецированное изображение~
+@30113=~Посох заклинаний (Фильтр восприятия)~
+@30114=~Посох заклинаний (Руководство)~
 @30115=~Polymorph: Fomorian Giant~
 @30116=~Polymorph: Troll~
 @30117=~Polymorph: Umber Hulk~
@@ -2604,7 +2604,7 @@
 @30120=~Troll Attack~
 @30121=~Umber Hulk Attack~
 @30122=~Wyvern Stinger~
-@30123=~Jump
+@30123=~Прыжок
 
 By using this ability, the character jumps to a target point up to 20 feet away. This ability may be used at will until the Jump spell wears off.~
 @30124=~Copied Spell
@@ -2622,7 +2622,7 @@ The character shapeshifts into an umber hulk. While in umber hulk form, the char
 @30128=~Polymorph: Wyvern
 
 The character shapeshifts into an wyvern. While in wyvern form, the character's attacks poison the target on a failed Fortitude save.~
-@30129=~Imbued Spell
+@30129=~Наделённое заклинание
 
 By using this ability, the character casts the imbued spell.~
 @30130=~Release Spell Sequencer
@@ -2631,7 +2631,7 @@ By using this ability, the character instantly casts the spells that are stored 
 @30131=~Explode
 
 Using this ability will detonate the skeleton immediately, dealing 10d6 slashing damage to all creatures within 15 feet (Reflex save for half).~
-@30132=~Release Eclectic Sequencer
+@30132=~Выпустить "Эклектическую Последовательность"
 
 By using this ability, the character instantly casts the spells that are stored in their sequencer.~
 @30133=~Soul Gem~
@@ -2699,7 +2699,7 @@ This ability may be used as a free action.~
 @30176=~... Animus Blast.~
 @30177=~... Animus Blizzard.~
 @30178=~... Create Winterwight.~
-@30179=~... Epic Mage Armor.~
+@30179=~... Epic Доспехи Мага.~
 @30180=~... Epic Warding.~
 @30181=~... Many Missiles.~
 @30182=~... Mass Energy Drain.~
@@ -2722,17 +2722,17 @@ This ability may be used as a free action.~
 //The strings below are of spell names; they should have the same name as in spell_revise.tra (if you don't find the spell in spell_revise.tra, then use the name from the vanilla game) but with punctuation added.
 @30198=~... Deathwatch.~
 @30199=~... Grease.~
-@30200=~... Identify Creature.~
-@30201=~... Jump.~
-@30202=~... Mage Armor.~
-@30203=~... Perception Filter.~
-@30204=~... Protection from Evil.~
-@30205=~... Protection from Petrification.~
+@30200=~... Опознание существа.~
+@30201=~... Прыжок.~
+@30202=~... Доспехи Мага.~
+@30203=~... Фильтр восприятия.~
+@30204=~... Защита от зла.~
+@30205=~... Защита от окаменения.~
 @30206=~... Reflect Attack.~
-@30207=~... Reflected Image.~
+@30207=~... Отражённый образ.~
 @30208=~... Shield.~
-@30209=~... Sleep.~
-@30210=~... Summon Monster I.~
+@30209=~... Сон.~
+@30210=~... Вызов монстров I.~
 @30211=~... True Strike.~
 @30212=~... Arcane Sight.~
 @30213=~... Blur.~
@@ -2745,7 +2745,7 @@ This ability may be used as a free action.~
 @30220=~... Gedlee's Electric Loop.~
 @30221=~... Horror.~
 @30222=~... Invisibility.~
-@30223=~... Levitate.~
+@30223=~... Левитация.~
 @30224=~... Luck.~
 @30225=~... Minor Elemental Barrier.~
 @30226=~... Mirror Image.~
@@ -2753,7 +2753,7 @@ This ability may be used as a free action.~
 @30228=~... Protection from Arrows.~
 @30229=~... Remove Fear.~
 @30230=~... Snilloc's Snowball Swarm.~
-@30231=~... Summon Monster II.~
+@30231=~... Вызов монстров II.~
 @30232=~... Vocalize.~
 @30233=~... Web.~
 @30234=~... Animate Skeleton.~
@@ -2763,7 +2763,7 @@ This ability may be used as a free action.~
 @30238=~... Emotion: Rage.~
 @30239=~... Enlarge Creature.~
 @30240=~... Fireball.~
-@30241=~... Fly.~
+@30241=~... Полёт.~
 @30242=~... Ghost Armor.~
 @30243=~... Haste.~
 @30244=~... Hold Person.~
@@ -2777,7 +2777,7 @@ This ability may be used as a free action.~
 @30252=~... Skull Trap.~
 @30253=~... Slow.~
 @30254=~... Stinking Cloud.~
-@30255=~... Summon Monster III.~
+@30255=~... Вызов монстров III.~
 @30256=~... Break Enchantment.~
 @30257=~... Carrion Summons.~
 @30258=~... Confusion.~
@@ -2798,7 +2798,7 @@ This ability may be used as a free action.~
 @30273=~... Spirit Armor.~
 @30274=~... Stoneskin.~
 @30275=~... Suffocate.~
-@30276=~... Summon Monster IV.~
+@30276=~... Вызов монстров IV.~
 @30277=~... Teleport Field.~
 @30278=~... Wall of Fire.~
 @30279=~... Ball Lightning.~
@@ -2818,7 +2818,7 @@ This ability may be used as a free action.~
 @30293=~... Shroud of Flame.~
 @30294=~... Spell Shield.~
 @30295=~... Sunfire.~
-@30296=~... Summon Monster V.~
+@30296=~... Вызов монстров V.~
 @30297=~... Summon Shadow.~
 @30298=~... Symbol of Pain.~
 @30299=~... Antimagic Field.~
@@ -2836,9 +2836,9 @@ This ability may be used as a free action.~
 @30311=~... Planar Binding: Water Elemental.~
 @30312=~... Shades.~
 @30313=~... Soul Eater.~
-@30314=~... Spellstaff.~
+@30314=~... Посох заклинаний.~
 @30315=~... Summon Invisible Stalker.~
-@30316=~... Summon Monster VI.~
+@30316=~... Вызов монстров VI.~
 @30317=~... Summon Shadow.~
 @30318=~... Tenser's Transformation.~
 @30319=~... Trollish Fortitude.~
@@ -2865,7 +2865,7 @@ This ability may be used as a free action.~
 @30340=~... Stygian Ice Storm.~
 @30341=~... Summon Djinni.~
 @30342=~... Summon Efreeti.~
-@30343=~... Summon Monster VII.~
+@30343=~... Вызов монстров VII.~
 @30344=~... Sympathy.~
 @30345=~... Vipergout.~
 @30346=~... Contagious Fear.~
@@ -2882,7 +2882,7 @@ This ability may be used as a free action.~
 @30357=~... Simulacrum.~
 @30358=~... Spell Trap.~
 @30359=~... Summon Fiend.~
-@30360=~... Summon Monster VIII.~
+@30360=~... Вызов монстров VIII.~
 @30361=~... Symbol of Death.~
 @30362=~... Symbol of Hopelessness.~
 @30363=~... Symbol of Stunning.~
@@ -2922,7 +2922,7 @@ This ability may be used as a free action.~
 @30397=~~
 @30398=~~
 @30399=~~
-@31105     = ~Entangle~
+@31105     = ~Запутывание~
 @32105     = ~Entangle
 (Transmutation) 
 Level: Drd 1, Rgr 1
@@ -2944,7 +2944,7 @@ Area of Effect: Caster
 Saving Throw: None
 
 This spell enhances the caster's sling bullets. Any bullet the caster throws will deal magic damage instead of physical damage, and will deal an additional 1d4+1 damage. The spell ends once the caster has thrown a certain number of bullets: five plus one per caster level (maximum of 15 at level 10).~
-@31107     = ~Protection from Evil~
+@31107     = ~Защита от зла~
 @32107     = ~Protection from Evil
 (Abjuration) [Good]
 Level: Clr 1, Pal 1, Sor/Wiz 1
@@ -2966,7 +2966,7 @@ Area of Effect: Caster
 Saving Throw: None 
 
 The armor of faith is a force of energy that absorbs a portion of the damage intended for the caster. The caster gains a 1/- resistance to all non-poison damage for the duration of the spell. For every five caster levels, they get another 1/- resistance.~
-@31117     = ~Frost Fingers~
+@31117     = ~Ледяные пальцы~
 @32117     = ~Frost Fingers
 (Transmutation) 
 Level: Drd 1
@@ -2977,7 +2977,7 @@ Area of Effect: 5-foot long, 120 degree arc
 Saving Throw: Reflex half
 
 Upon completion of this spell, chilling frost emanates from the caster's hands in the shape of a wedge in front of them.  Any creature caught in the area of effect suffers 1d3 + 1 cold damage per caster level, to a maximum of 1d3 + 10 cold damage.  In addition, the creature is slowed for 2 rounds.  A successful Reflex save halves the damage and negates the slow effect. This spell does not provoke an attack of opportunity.~
-@31150     = ~Summon Nature's Ally I~
+@31150     = ~Призыв природных союзников I~
 @32150     = ~Summon Nature's Ally I
 (Conjuration) 
 Level: Drd 1, Rgr 1
@@ -3036,7 +3036,7 @@ Area of Effect: 5' x 20' x 20' cone
 Saving Throw: Reflex half
 
 This spell calls upon Selune's connection with moonlight and magic to invoke a spray of glowing spheres. The spell causes 1d6 magic damage per level (max 5d6) to every creature caught in its path. Creatures can make a Reflex save for half damage. This spell does not provoke an attack of opportunity.~
-@31250     = ~Summon Nature's Ally II~
+@31250     = ~Призыв природных союзников II~
 @32250     = ~Summon Nature's Ally II
 (Conjuration) 
 Level: Drd 2, Rgr 2
@@ -3102,7 +3102,7 @@ Area of Effect: 1 creature
 Saving Throw: None 
 
 This spell employs positive energy to ward off the effects of negative energy from attacks such as those employed by wights, spectres and vampires.  The target creature is immune to energy drain for the duration of the spell.~
-@31350     = ~Summon Nature's Ally III~
+@31350     = ~Призыв природных союзников III~
 @32350     = ~Summon Nature's Ally III
 (Conjuration) 
 Level: Drd 3, Rgr 3
@@ -3113,7 +3113,7 @@ Area of Effect: Special
 Saving Throw: None 
 
 This spell summons one or more creatures of nature who will aid the caster for the duration of the spell.  The type of creatures that come is random.  The creatures summoned are more powerful than creatures summoned by lesser versions of this spell.~
-@31402     = ~Summon Nature's Ally IV~
+@31402     = ~Призыв природных союзников IV~
 @32402     = ~Summon Nature's Ally IV
 (Conjuration) 
 Level: Drd 4, Rgr 4
@@ -3190,7 +3190,7 @@ Area of Effect: 20-foot long, 5-foot wide wall
 Saving Throw: None 
 
 This spell brings into existence an immobile, blazing curtain of shimmering fire. Any creature passing through the wall takes 9d6 fire damage. Only one wall of fire may be active at any one time.~
-@31501     = ~Summon Nature's Ally V~
+@31501     = ~Призыв природных союзников V~
 @32501     = ~Summon Nature's Ally V
 (Conjuration) 
 Level: Drd 5, Rgr 5
@@ -3233,7 +3233,7 @@ Area of Effect: Sight of Caster
 Saving Throw: Reflex half
 
 Static Charge is similar to Call Lightning except it can be used indoors. Upon completion of this spell an enemy creature within the area of effect is fried by a static discharge for 1d8 electricity damage per caster level, to a maximum of 16d8 electricity damage. A successful Reflex save with +4 DC halves the damage. Once released the static charge will build up again on the caster, discharging once per 5 rounds for the duration of the spell.~
-@31602     = ~Summon Nature's Ally VI~
+@31602     = ~Призыв природных союзников VI~
 @32602     = ~Summon Nature's Ally VI
 (Conjuration) 
 Level: Drd 6, Rgr 6
@@ -3277,7 +3277,7 @@ Area of Effect: 30-foot radius
 Saving Throw: Will negates
 
 Contagious Fear causes panic among enemies in the area of effect, and the panic then spreads to other creatures. Each enemy in the initial area of effect must make a Will save or run in fear for 10 rounds. Any enemy that comes within 10 feet of one of the panicking creatures must make the save as well, or else the contagion will spread to that creature. Creatures immune to fear will not transmit the contagion. A creature that makes a save against this spell is immune to the spell for 2 rounds. After the spell expires on a creature, that creature is immune to the contagion for 8 hours.~
-@31750     = ~Summon Nature's Ally VII~
+@31750     = ~Призыв природных союзников VII~
 @32750     = ~Summon Nature's Ally VII
 (Conjuration)
 Level: Drd 7
@@ -3299,7 +3299,7 @@ Area of Effect: All allies within 20 ft.
 Saving Throw: None
 
 Mass Heal wipes away disease and injury from all living allies in the area of effect. It cures blindness, diseases, feeblemind and restores the targets to maximum hit points if they have been injured. Enemy undead in the area of effect suffer the effects of a Harm spell if the caster succeeds on a ranged touch attack roll for each one.~
-@31850     = ~Summon Nature's Ally VIII~
+@31850     = ~Призыв природных союзников VIII~
 @32850     = ~Summon Nature's Ally VIII
 (Conjuration) 
 Level: Drd 8
@@ -3321,7 +3321,7 @@ Area of Effect: Special
 Saving Throw: None
 
 This spell allows the caster to summon four elementals, one from each of the elemental planes. The spell always summons 12 hit dice elementals.~
-@31950     = ~Summon Nature's Ally IX~
+@31950     = ~Призыв природных союзников IX~
 @32950     = ~Summon Nature's Ally IX
 (Conjuration) 
 Level: Drd 9
@@ -3332,7 +3332,7 @@ Area of Effect: Special
 Saving Throw: None 
 
 This spell summons one or more creatures of nature who will aid the caster for the duration of the spell.  The type of creatures that come is random.  The creatures summoned are more powerful than creatures summoned by lesser versions of this spell.~
-@33104     = ~Charm Person~
+@33104     = ~Очаровать персонажа~
 @34104     = ~Charm Person
 (Enchantment)
 Level: Brd 1, Sor/Wiz 1
@@ -3344,7 +3344,7 @@ Saving Throw: Will negates
 
 This spell affects any single person it is cast upon. The term person includes any bipedal human, demihuman, or humanoid of man-size or smaller, such as brownies, dryads, dwarves, elves, gnolls, gnomes, goblins, half-elves, halflings, half-orcs, hobgoblins, humans, kobolds, lizard men, nixies, orcs, pixies, sprites, troglodytes, and others. Thus, a 10th-level fighter could be charmed, but an ogre could not. The person receives a Will save to avoid the effect.  If the spell recipient fails his saving throw, he regards the caster as a trusted friend and ally to be heeded and protected.  The caster may give him orders, and the charmed individual will carry them out as quickly as possible.
 If the caster harms, or attempts to harm, the charmed person by some overt action, or if a dispel magic spell is successfully cast upon the charmed person, the charm spell is broken.  If two or more charm effects simultaneously affect a creature, the most recent charm takes precedence.  Note that the subject has full memory of the events that took place while he was charmed. Also note that you cannot have a charmed creature leave the area where he was charmed.~
-@33122     = ~Ice Dagger~
+@33122     = ~Ледяной кинжал~
 @34122     = ~Ice Dagger
 (Evocation)
 Level: Drd 1, Sor/Wiz 1
@@ -3678,7 +3678,7 @@ Area of Effect: Caster
 Saving Throw: None
 
 This spell creates a barrier around the paladin that shields him or her temporarily. The paladin gains a generic Armor Class bonus equal to his or her Charisma bonus. The shield lasts for 5 rounds, plus an additional number of rounds equal to the paladin's Charisma bonus.~
-@35152     = ~Hunter's Mark~
+@35152     = ~Метка охотника~
 @36152     = ~Hunter's Mark
 (Divination)
 Level: Rgr 1
@@ -3691,7 +3691,7 @@ Saving Throw: None
 By casting Hunter's Mark, the ranger magically marks a creature as their quarry. For the duration, all physical damage that would be dealt to the marked creature is increased by 3, plus an additional 3 for every 10 ranger levels. In addition, the creature cannot become invisible while marked. Hunter's Mark can be cast on any creature the party sees, even if the ranger does not see it.
 
 Although rangers normally cast spells at half their caster level, Hunter's Mark will be cast at a ranger's full caster level.~
-@35153     = ~Shortening~
+@35153     = ~Уменьшение~
 @36153     = ~Shortening
 (Abjuration)
 Level: Brd 1, Clr 1
@@ -3702,7 +3702,7 @@ Area of Effect: 1 creature
 Saving Throw: None
 
 Shortening reduces the remaining duration of magical effects on the target. If the target is an ally, all hostile effects on them will have their duration reduced by 5 rounds. If the target is an enemy, all non-hostile effects on them will have their duration reduced by 5 rounds. If an effect's remaining duration is reduced to zero, the effect ends. Shortening is useful for dispelling effects with short durations, such as Hold Person.~
-@35154     = ~Guidance~
+@35154     = ~Руководство~
 @36154     = ~Guidance
 (Divination)
 Level: Clr 1, Drd 1
@@ -4225,7 +4225,7 @@ Area of Effect: Caster
 Saving Throw: None
 
 After this spell is cast, the next instance of physical damage the caster would receive is reflected back at the attacker, damaging them instead. If the physical damage came from a weapon, any on-hit effects of the weapon will also be reflected back at the attacker.~
-@37154     = ~Simple Summoning~
+@37154     = ~Простой вызов~
 @38154     = ~Simple Summoning
 (Conjuration)
 Level: Brd 2, Clr 2, Sor/Wiz 1
@@ -4249,7 +4249,7 @@ Area of Effect: Caster
 Saving Throw: None
 
 Deathwatch lets the caster learn precisely how close other creatures are to death. As long as a party member has Deathwatch and isn't incapacitated, if you hover the cursor over an enemy until it displays the tooltip, it will show the enemy's current and maximum Hit Points.~
-@37156     = ~Jump~
+@37156     = ~Прыжок~
 @38156     = ~Jump
 (Transmutation)
 Level: Brd 1, Rgr 1, Sor/Wiz 1
@@ -4275,7 +4275,7 @@ Saving Throw: None
 A lesser version of Invisibility, this spell causes the caster to become invisible for a short time, or until the caster attacks or casts a spell on another creature.
 
 Vanish is less effective for sneaking past groups of enemies, and better suited for getting out of tight spots in combat. Wizard/rogues can use this spell as an easy way to prepare for another sneak attack.~
-@37251     = ~Identify Creature~
+@37251     = ~Опознание существа~
 @38251     = ~Identify Creature
 (Divination)
 Level: Brd 2, Drd 2, Rgr 2, Sor/Wiz 2
@@ -4297,7 +4297,7 @@ Area of Effect: 15-foot radius
 Saving Throw: Fortitude partial
 
 This spell releases an extremely loud and jarring burst of sound. Creatures in the area of effect take 1d8 magic damage and must make a Fortitude save or be stunned for 1 round. Deaf creatures are not stunned but still take damage. The caster is unaffected by this spell.~
-@37253     = ~Levitate~
+@37253     = ~Левитация~
 @38253     = ~Levitate
 (Transmutation)
 Level: Brd 2, Sor/Wiz 2
@@ -4389,7 +4389,7 @@ Saving Throw: None
 The recipient of this spell can momentarily gain the ability to see into the future, and can see any attack or spell coming. The target gains three abilities, which can be used to give them a +25 bonus to attack, to AC or to saving throws, depending on the ability chosen, for 1 round. Once one of these abilities is used, all three disappear. If not used, the abilities also disappear after 3 hours.
 
 The abilities granted by Moment of Prescience can be used as a free action.~
-@37355     = ~Fly~
+@37355     = ~Полёт~
 @38355     = ~Fly
 (Transmutation)
 Level: Brd 3, Rgr 3, Sor/Wiz 3
@@ -4400,7 +4400,7 @@ Area of Effect: 1 creature
 Saving Throw: None
 
 This wondrous spell gives the recipient the power to fly. For the duration, the character can fly over normally impassable gaps and obstacles. In addition, unless the character is fighting in melee or casting a touch spell, they will be flying far enough above the ground that most melee attacks against them will be made at a -20 penalty. The effects of Fly are suppressed as long as the character is indoors.~
-@37356     = ~Perception Filter~
+@37356     = ~Фильтр восприятия~
 @38356     = ~Perception Filter
 (Illusion)
 Level: Brd 1, Sor/Wiz 1
@@ -4424,7 +4424,7 @@ Area of Effect: Caster
 Saving Throw: None
 
 A more powerful version of the spell Identify, Legend Lore temporarily increases the lore of the caster, allowing them to identify multiple magical items. For the duration, the caster's Knowledge (Arcana) is increased by 30.~
-@37358     = ~Project Image~
+@37358     = ~Спроецировать образ~
 @38358     = ~Project Image
 (Illusion)
 Level: Brd 3, Sor/Wiz 3
@@ -4512,7 +4512,7 @@ Polymorph Self allows the caster to assume the form of a creature of moderate po
 * Troll (regenerates 1 HP per second)
 * Umber Hulk (nearby enemies must make Will save each round or be confused)
 * Wyvern (can fly, and each hit poisons the target on a failed Fortitude save)~
-@37456     = ~Imbue with Spell Ability~
+@37456     = ~Наделить способностью к заклинанию~
 @38456     = ~Imbue with Spell Ability
 (Universal)
 Level: Clr 4, Brd 4
@@ -4637,7 +4637,7 @@ Area of Effect: 30-feet long, 10-foot diameter cone
 Saving Throw: Fortitude half
 
 By casting this spell, the caster emits a Void Sound, a horrific sound that can somehow be heard by the deaf and by no one else, and which carries negative energy with it. All deaf creatures in the area of effect take 1d8 magic damage per level (max 30d8). This spell has no effect on undead or constructs.~
-@37656     = ~Spellstaff~
+@37656     = ~Посох заклинаний~
 @38656     = ~Spellstaff
 (Universal)
 Level: Drd 6, Sor/Wiz 6
@@ -5070,7 +5070,7 @@ Area of Effect: 1 creature
 Saving Throw: None
 
 Mordenkainen's Disjunction dispels all dispellable effects on the target. There is no saving throw. This spell can even remove the effects of Spell Turning, Spell Trap, Antimagic Field, or a Protection from Magic scroll.~
-@37961     = ~Eclectic Sequencer~
+@37961     = ~Эклектическая Последовательность~
 @38961     = ~Eclectic Sequencer
 (Universal)
 Level: Wiz 9
