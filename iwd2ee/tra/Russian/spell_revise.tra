@@ -2596,44 +2596,44 @@
 @30112=~Спроецированное изображение~
 @30113=~Посох заклинаний (Фильтр восприятия)~
 @30114=~Посох заклинаний (Руководство)~
-@30115=~Polymorph: Fomorian Giant~
-@30116=~Polymorph: Troll~
-@30117=~Polymorph: Umber Hulk~
-@30118=~Polymorph: Wyvern~
-@30119=~Fomorian Giant Boulder~
-@30120=~Troll Attack~
-@30121=~Umber Hulk Attack~
-@30122=~Wyvern Stinger~
+@30115=~Превращение: фоморский великан~
+@30116=~Превращение: тролль~
+@30117=~Превращение: бурый увалень~
+@30118=~Превращение: виверна~
+@30119=~Валун фоморского великана~
+@30120=~Атака тролля~
+@30121=~Атака бурого увальня~
+@30122=~Жало виверны~
 @30123=~Прыжок
 
-By using this ability, the character jumps to a target point up to 20 feet away. This ability may be used at will until the Jump spell wears off.~
-@30124=~Copied Spell
+Используя эту способность, персонаж может прыгнуть на расстояние до 20 футов. Эту способность можно использовать, пока не истечёт срок действия заклинания "Прыжок".~
+@30124=~Скопированное заклинание
 
-By using this ability, the character casts the copied spell.~
-@30125=~Polymorph: Fomorian Giant
+Используя эту способность, персонаж может прочитать скопированное заклинание.~
+@30125=~Превращение: фоморский великан
 
-The character shapeshifts into a fomorian giant. While in fomorian giant form, the character can throw boulders at long range.~
-@30126=~Polymorph: Troll
+Персонаж превращается в фоморского великана. Находясь в этой форме, персонаж может бросать валуны на дальнее расстояние.~
+@30126=~Превращение: тролль
 
-The character shapeshifts into a troll. While in troll form, the character regenerates 1 HP per second but is vulnerable to fire and acid.~
-@30127=~Polymorph: Umber Hulk
+Персонаж превращается в тролля. Находясь в этой форме, персонаж регенерирует 1 пункт здоровья в секунду, но уязвим к кислоте и холоду.~
+@30127=~Превращение: бурый увалень
 
-The character shapeshifts into an umber hulk. While in umber hulk form, the character's gaze confuses nearby enemies if they fail a Will save.~
-@30128=~Polymorph: Wyvern
+Персонаж превращается в бурого увальня. Находясь в этой форме, персонаж ошеломляёт ближайших врагов взглядом, если они провалят спасбросок воли.~
+@30128=~Превращение: виверна
 
-The character shapeshifts into an wyvern. While in wyvern form, the character's attacks poison the target on a failed Fortitude save.~
+Персонаж превращается в виверну. Пока персонаж находится в этой форме, его атаки отравляют атакуемых, если они провалят спасбросок стойкости.~
 @30129=~Наделённое заклинание
 
-By using this ability, the character casts the imbued spell.~
-@30130=~Release Spell Sequencer
+Используя эту способность, персонаж читает заклинание, которым его наделили.~
+@30130=~Выпустить "Последовательность"
 
-By using this ability, the character instantly casts the spells that are stored in their sequencer.~
-@30131=~Explode
+Используя эту способность, персонаж мгновенно высвобождает заклинания, сохранённые с помощью заклинания "Последовательность".~
+@30131=~Взорвать
 
-Using this ability will detonate the skeleton immediately, dealing 10d6 slashing damage to all creatures within 15 feet (Reflex save for half).~
+При использовании этой способности скелет немедленно взрывается, нанося 10d6 колющего урона всем существам в радиусе 15 футов (половину при успешном спасброске реакции).~
 @30132=~Выпустить "Эклектическую Последовательность"
 
-By using this ability, the character instantly casts the spells that are stored in their sequencer.~
+Используя эту способность, персонаж мгновенно высвобождает заклинания, сохранённые с помощью заклинания "Эклектическая Последовательность".~
 @30133=~Soul Gem~
 @30134=~Star Sapphire - With Soul~
 @30135=~Star Sapphire is a precious variation of the sapphire, however is more translucent, with a white star highlighted in its center. A star sapphire has been known to ornament devices which protect against magic.
