@@ -2923,27 +2923,27 @@
 @30398=~~
 @30399=~~
 @31105     = ~Запутывание~
-@32105     = ~Entangle
-(Transmutation) 
-Level: Drd 1, Rgr 1
-Range: Sight of Caster
-Duration: 10 rounds 
-Casting Time: 4
-Area of Effect: 20-foot radius
-Saving Throw: Reflex partial
+@32105     = ~Запутывание
+(Преобразование)
+Уровень: друид 1, следопыт 1
+Дальность: обзор колдующего
+Длительность: 10 раундов
+Время чтения: 4
+Зона действия: радиус 20 футов
+Спасбросок: реакции, особый
 
-When an Entangle spell is cast, it must be cast outside, otherwise it will not work and the spell is wasted. It causes vines to sprout forth from the ground to wrap, twist, and entwine any creatures in the area of effect, preventing movement. Creatures must make a Reflex save every round in order to move through the entangled area. Entangled creatures can still perform normal actions but cannot move and suffer a -2 penalty to Armor Class and attack rolls, as well as a 50% chance of spell failure. All creatures within the area of effect who make their Reflex save move at half rate.~
-@31106     = ~Magic Stone~
-@32106     = ~Magic Stone
-(Enchantment)
-Level: Clr 1, Drd 1, Rgr 1
-Range: Caster
-Duration: 30 rounds or until used up
-Casting Time: 1
-Area of Effect: Caster
-Saving Throw: None
+Заклинание должно быть прочитано на открытой местности, иначе оно не сработает и будет зря потрачено. После его прочтения из-под земли выбиваются побеги растений и опутывают, переплетают и сковывают всех существ в зоне действия, не давая им перемещаться. Для передвижения по опутанной растениями местности существа должны каждый раунд кидать спасбросок реакции. Опутанные существа всё ещё могут совершать обычные действия, однако не могут передвигаться и получают -2 к броскам атаки и классу защиты, а также 50% шанс на провал заклинания. Все находящиеся в зоне действия и успешно кинувшие спасбросок реакции существа, всё равно, передвигаются в два раза медленнее.~
+@31106     = ~Магический камень~
+@32106     = ~Магический камень
+(Преобразование)
+Уровень: священник 1, друид 1, следопыт 1
+Дальность: колдующий
+Длительность: 30 раундов или пока не будет использовано
+Время чтения: 1
+Зона действия: колдующий
+Спасбросок: нет
 
-This spell enhances the caster's sling bullets. Any bullet the caster throws will deal magic damage instead of physical damage, and will deal an additional 1d4+1 damage. The spell ends once the caster has thrown a certain number of bullets: five plus one per caster level (maximum of 15 at level 10).~
+Это заклинание усиливает снаряды для пращи заклинателя. Любой такой снаряд, брошенный заклинателем, наносит не физический, а магический урон и дополнительно наносит 1d4+1 урона. Действие заклинания заканчивается, когда заклинатель метнёт определённое количество снарядов: пять + 1/уровень заклинателя (до максимума в 15 снарядов на 15-м уровне).~
 @31107     = ~Защита от зла~
 @32107     = ~Protection from Evil
 (Abjuration) [Good]
