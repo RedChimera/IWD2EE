@@ -2945,27 +2945,27 @@
 
 Это заклинание усиливает снаряды для пращи заклинателя. Любой такой снаряд, брошенный заклинателем, наносит не физический, а магический урон и дополнительно наносит 1d4+1 урона. Действие заклинания заканчивается, когда заклинатель метнёт определённое количество снарядов: пять + 1/уровень заклинателя (до максимума в 15 снарядов на 15-м уровне).~
 @31107     = ~Защита от зла~
-@32107     = ~Protection from Evil
-(Abjuration) [Good]
-Level: Clr 1, Pal 1, Sor/Wiz 1
-Range: Touch 
-Duration: 1 minute/level
-Casting Time: 1
-Area of Effect: 1 creature 
-Saving Throw: None
+@32107     = ~Защита от зла
+(Отречение) [Добро]
+Уровень: священник 1, паладин 1, колдун/волшебник 1
+Дальность: прикосновение
+Длительность: 1 минута/уровень
+Время чтения: 1
+Зона действия: 1 существо
+Спасбросок: нет
 
-This spell forms a magic barrier around the target creature, granting a +2 generic bonus to AC and saving throws against attacks, spells and abilities from evil creatures. In additions, the creature is immune to charm and domination effects. Summoned fiends will not attack their summoner or their summoner's allies if their summoner has Protection from Evil.~
-@31115     = ~Armor of Faith~
-@32115     = ~Armor of Faith
-(Abjuration)
-Level: Clr 1, Pal 1, Helm 1
-Range: Caster
-Duration: 10 rounds + 1 round/level
-Casting Time: 1
-Area of Effect: Caster
-Saving Throw: None 
+При наложении заклинания вокруг цели создаётся магический барьер, дающий +2 к классу защиты (общий) и спасброскам против атак, заклинаний и способностей злых существ. В дополнение, цель заклинания также становиться невосприимчивой к эффектам очарования и доминации. Вызванные изверги не будут атаковать своего призывателя или его союзников, если на призывателя наложена "Защита от зла".~
+@31115     = ~Доспехи веры~
+@32115     = ~Доспехи веры
+(Отречение)
+Уровень: священник 1, паладин 1, жрец Хелма 1
+Дальность: колдующий
+Длительность: 10 раундов + 1 раунд/уровень
+Время чтения: 1
+Зона действия: колдующий
+Спасбросок: нет
 
-The armor of faith is a force of energy that absorbs a portion of the damage intended for the caster. The caster gains a 1/- resistance to all non-poison damage for the duration of the spell. For every five caster levels, they get another 1/- resistance.~
+Доспехи веры - это энергетическое поле, поглощающее часть урона, получаемого колдующим. Колдующий получает поглощение урона 1/- ко всем видам урона кроме яда в течение всего времени действия заклинания. На каждые пять уровней заклинателя, поглощение увеличивается на ещё 1/-.~
 @31117     = ~Ледяные пальцы~
 @32117     = ~Frost Fingers
 (Transmutation) 
