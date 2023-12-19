@@ -2785,108 +2785,108 @@
 @30260=~... Огненный щит (синий).~
 @30261=~... Огненный щит (красный).~
 @30262=~... Пир упырей.~
-@30263=~... Giant Vermin.~
-@30264=~... Ice Storm.~
-@30265=~... Improved Invisibility.~
-@30266=~... Magic Circle Against Evil.~
-@30267=~... Malison.~
-@30268=~... Minor Globe of Invulnerability.~
-@30269=~... Otiluke's Resilient Sphere.~
-@30270=~... Polymorph Self.~
-@30271=~... Shadow Conjuration.~
-@30272=~... Spider Spawn.~
-@30273=~... Spirit Armor.~
-@30274=~... Stoneskin.~
-@30275=~... Suffocate.~
+@30263=~... Гигантское насекомое.~
+@30264=~... Ледяной шторм.~
+@30265=~... Улучшенная невидимость.~
+@30266=~... Круг защиты от зла.~
+@30267=~... Проклятие.~
+@30268=~... Малая сфера неуязвимости.~
+@30269=~... Упругая сфера Отилука.~
+@30270=~... Превращение себя.~
+@30271=~... Чудовища тени.~
+@30272=~... Порождение пауков.~
+@30273=~... Духовные доспехи.~
+@30274=~... Каменная кожа.~
+@30275=~... Удушение.~
 @30276=~... Вызов монстров IV.~
-@30277=~... Teleport Field.~
-@30278=~... Wall of Fire.~
-@30279=~... Ball Lightning.~
-@30280=~... Cloudkill.~
-@30281=~... Ghostform.~
-@30282=~... Greater Shadow Conjuration.~
-@30283=~... Hold Monster.~
-@30284=~... Lesser Planar Binding: Air Elemental.~
-@30285=~... Lesser Planar Binding: Earth Elemental.~
-@30286=~... Lesser Planar Binding: Fire Elemental.~
-@30287=~... Lesser Planar Binding: Water Elemental.~
-@30288=~... Phantom Blade.~
-@30289=~... Protection from Acid.~
-@30290=~... Protection from Electricity.~
-@30291=~... Protection from Magic Energy.~
-@30292=~... Rewind Time.~
-@30293=~... Shroud of Flame.~
-@30294=~... Spell Shield.~
-@30295=~... Sunfire.~
+@30277=~... Поле телепортации.~
+@30278=~... Стена огня.~
+@30279=~... Шаровая молния.~
+@30280=~... Облако-убийца.~
+@30281=~... Призрачная форма.~
+@30282=~... Великие чудовища тени.~
+@30283=~... Удержание монстра.~
+@30284=~... Малые планарные узы: элементаль воздуха.~
+@30285=~... Малые планарные узы: элементаль земли.~
+@30286=~... Малые планарные узы: элементаль огня.~
+@30287=~... Малые планарные узы: элементаль воды.~
+@30288=~... Призрачный клинок.~
+@30289=~... Защита от кислоты.~
+@30290=~... Защита от электричества.~
+@30291=~... Защита от магической энергии.~
+@30292=~... Отмотать время.~
+@30293=~... Саван пламени.~
+@30294=~... Щит заклинаний.~
+@30295=~... Солнечный огонь.~
 @30296=~... Вызов монстров V.~
-@30297=~... Summon Shadow.~
-@30298=~... Symbol of Pain.~
-@30299=~... Antimagic Field.~
-@30300=~... Boulder Roll.~
-@30301=~... Chaos.~
-@30302=~... Circle of Death.~
-@30303=~... Darts of Bone.~
-@30304=~... Death Fog.~
-@30305=~... Globe of Invulnerability.~
-@30306=~... Lich Touch.~
-@30307=~... Mass Haste.~
-@30308=~... Planar Binding: Air Elemental.~
-@30309=~... Planar Binding: Earth Elemental.~
-@30310=~... Planar Binding: Fire Elemental.~
-@30311=~... Planar Binding: Water Elemental.~
-@30312=~... Shades.~
-@30313=~... Soul Eater.~
+@30297=~... Призвать тень.~
+@30298=~... Символ боли.~
+@30299=~... Антимагическая оболочка.~
+@30300=~... Катящийся валун.~
+@30301=~... Хаос.~
+@30302=~... Круг смерти.~
+@30303=~... Костяные дротики.~
+@30304=~... Туман смерти.~
+@30305=~... Сфера неуязвимости.~
+@30306=~... Прикосновение лича.~
+@30307=~... Массовая спешка.~
+@30308=~... Планарные узы: элементаль воздуха.~
+@30309=~... Планарные узы: элементаль земли.~
+@30310=~... Планарные узы: элементаль огня.~
+@30311=~... Планарные узы: элементаль воды.~
+@30312=~... Тени.~
+@30313=~... Пожиратель душ.~
 @30314=~... Посох заклинаний.~
-@30315=~... Summon Invisible Stalker.~
+@30315=~... Невидимый охотник.~
 @30316=~... Вызов монстров VI.~
-@30317=~... Summon Shadow.~
-@30318=~... Tenser's Transformation.~
-@30319=~... Trollish Fortitude.~
-@30320=~... True Seeing.~
-@30321=~... Wyvern Call.~
-@30322=~... Acid Storm.~
-@30323=~... Banishment.~
-@30324=~... Cacofiend.~
-@30325=~... Control Undead.~
-@30326=~... Death Ward.~
-@30327=~... Delayed Blast Fireball.~
-@30328=~... Forcecage.~
-@30329=~... Malavon's Rage.~
-@30330=~... Mantle.~
-@30331=~... Mass Invisibility.~
-@30332=~... Mordenkainen's Sword.~
-@30333=~... Omnipresence.~
-@30334=~... Repulsion.~
-@30335=~... Seven Eyes.~
-@30336=~... Skeleton Traps.~
-@30337=~... Skip Time.~
-@30338=~... Spell Sequencer.~
-@30339=~... Spell Turning.~
-@30340=~... Stygian Ice Storm.~
-@30341=~... Summon Djinni.~
-@30342=~... Summon Efreeti.~
+@30317=~... Призвать тень.~
+@30318=~... Преобразование Тензера.~
+@30319=~... Стойкость тролля.~
+@30320=~... Истинное видение.~
+@30321=~... Призыв виверны.~
+@30322=~... Кислотная буря.~
+@30323=~... Изгнание.~
+@30324=~... Какодемон.~
+@30325=~... Управление нежитью.~
+@30326=~... Ограждение от смерти.~
+@30327=~... Задержанный взрыв огненного шара.~
+@30328=~... Силовая клетка.~
+@30329=~... Ярость Малавона.~
+@30330=~... Мантия.~
+@30331=~... Массовая невидимость.~
+@30332=~... Меч Морденкайнена.~
+@30333=~... Вездесущность.~
+@30334=~... Отталкивание.~
+@30335=~... Семь глаз.~
+@30336=~... Скелеты-ловушки.~
+@30337=~... Пропустить время.~
+@30338=~... Последовательность.~
+@30339=~... Обращение заклинаний.~
+@30340=~... Стигийский ледяной шторм.~
+@30341=~... Вызов джинни.~
+@30342=~... Вызов ифрита.~
 @30343=~... Вызов монстров VII.~
-@30344=~... Sympathy.~
-@30345=~... Vipergout.~
-@30346=~... Contagious Fear.~
-@30347=~... Elemental Barrier.~
-@30348=~... Fiery Cloud.~
-@30349=~... Horrid Wilting.~
-@30350=~... Iron Body.~
-@30351=~... Living Lightning.~
-@30352=~... Metafireball.~
-@30353=~... Mind Blank.~
-@30354=~... Otto's Irresistible Spin.~
-@30355=~... Power Word: Blind.~
-@30356=~... Reverse Gravity.~
-@30357=~... Simulacrum.~
-@30358=~... Spell Trap.~
-@30359=~... Summon Fiend.~
+@30344=~... Симпатия.~
+@30345=~... Поток змей.~
+@30346=~... Заразный страх.~
+@30347=~... Защита от стихий.~
+@30348=~... Жгучее облако.~
+@30349=~... Жуткое увядание.~
+@30350=~... Железное тело.~
+@30351=~... Живая молния.~
+@30352=~... Множественный огненный шар.~
+@30353=~... Очистка разума.~
+@30354=~... Неудержимое вращение Отто.~
+@30355=~... Слово силы: Ослепить.~
+@30356=~... Обратная гравитация.~
+@30357=~... Подобие.~
+@30358=~... Ловушка заклинаний.~
+@30359=~... Вызов демона.~
 @30360=~... Вызов монстров VIII.~
-@30361=~... Symbol of Death.~
-@30362=~... Symbol of Hopelessness.~
-@30363=~... Symbol of Stunning.~
-@30364=~... Teleport Step.~
+@30361=~... Символ смерти.~
+@30362=~... Символ безнадёжности.~
+@30363=~... Символ ошеломления.~
+@30364=~... Телепортирующий шаг.~
 @30365=~~
 @30366=~~
 @30367=~~
@@ -3266,8 +3266,8 @@ Area of Effect: 1 creature
 Saving Throw: Fortitude negates
 
 Dolorous decay is a rotting and withering of the body that spreads quickly and painfully throughout the afflicted creature.  Afflicted creatures take 1 point of damage per second and are slowed for 1 round per level.  The target creature can resist the disease with a successful Fortitude save at +8 DC.~
-@31727     = ~Contagious Fear~
-@32727     = ~Contagious Fear
+@31727     = ~Заразный страх~
+@32727     = ~Заразный страх
 (Necromancy)
 Level: Brd 7, Clr 8, Sor/Wiz 8
 Range: Sight of Caster
@@ -3987,8 +3987,8 @@ Area of Effect: 1 creature
 Saving Throw: None
 
 In casting this spell, the caster marks the target, who will be automatically punished upon committing a serious crime. The next time the target kills someone, their Mark of Justice is triggered, and the target takes 20d10 magic damage with no saving throw. This spell does not provoke an attack of opportunity when cast on an enemy. It can only be cast by lawful characters.~
-@35653     = ~Repulsion~
-@36653     = ~Repulsion
+@35653     = ~Отталкивание~
+@36653     = ~Отталкивание
 (Abjuration)
 Level: Brd 7, Clr 6, Sor/Wiz 7, Helm 5
 Range: Caster
@@ -4547,8 +4547,8 @@ Area of Effect: 1 creature
 Saving Throw: None
 
 This spell steals memorized spells from the target and grants their spell slots to the caster. The caster makes a Pick Pockets roll, adding their caster level (and any normal bonuses to Pick Pockets). For every 10 points of the total roll, the target loses one memorized spell of 5th-level or lower, and the caster regains one spell of 4th-level or lower (prioritizing the highest-level spells that can be lost or regained this way). There is no Saving Throw, though Spell Resistance may prevent the theft.~
-@37552     = ~Ghostform~
-@38552     = ~Ghostform
+@37552     = ~Призрачная форма~
+@38552     = ~Призрачная форма
 (Transmutation)
 Level: Brd 5, Clr 5, Sor/Wiz 5
 Range: Touch
@@ -4558,8 +4558,8 @@ Area of Effect: 1 creature
 Saving Throw: None
 
 This spell turns the recipient incorporeal for a limited period of time. While incorporeal, the character gets damage reduction 5/+1, and they have a 50% chance to ignore any instance of physical damage. They are still tangible enough to attack and cast spells. The recipient can also move through walls while incorporeal. Simply click on a point to move to, and the character will float to that point, bypassing normally impassable obstacles in the way.~
-@37553     = ~Rewind Time~
-@38553     = ~Rewind Time
+@37553     = ~Отмотать время~
+@38553     = ~Отмотать время
 (Transmutation)
 Level: Brd 5, Sor/Wiz 5
 Range: Caster
@@ -4602,8 +4602,8 @@ Area of Effect: 1 creature
 Saving Throw: None 
 
 This spell creates a large number of projectiles akin to those created by the Magic Missile spell, which hit a single target. Each missile deals 1d4+1 magic damage with no saving throw. The spell fires one missile per level of the wizard.~
-@37653     = ~Boulder Roll~
-@38653     = ~Boulder Roll
+@37653     = ~Катящийся валун~
+@38653     = ~Катящийся валун
 (Conjuration)
 Level: Drd 6, Sor/Wiz 6
 Range: Special
@@ -4661,8 +4661,8 @@ Area of Effect: Entire area
 Saving Throw: None
 
 A lesser time manipulation spell, Freeze Inanimates stops time for all inanimate objects that are not being worn or carried by a creature. Any arrow, bolt, bullet, or other projectile that is fired or thrown by a creature during the duration of this spell will freeze in midair immediately, as it is no longer being carried. Magical projectiles are also frozen immediately after being conjured. All creatures can still move and do actions while time is stopped. Items can still be picked up from the ground, as the effects of this spell end for them when they are grasped by a creature. Once the spell ends, any projectile that had been frozen by the spell will resume flying toward its target.~
-@37751     = ~Stygian Ice Storm~
-@38751     = ~Stygian Ice Storm
+@37751     = ~Стигийский ледяной шторм~
+@38751     = ~Стигийский ледяной шторм
 (Conjuration)
 Level: Sor/Wiz 7
 Range: Sight of Caster
@@ -4747,8 +4747,8 @@ Saving Throw: None
 Spell Sequencer lets the caster store three spells to be released later on. After casting Spell Sequencer, the caster must attempt to cast up to three spells of 4th-level or lower. Instead of being cast, those spells are stored in the sequencer (expending one use of each spell). The caster then gains the innate ability "Release Spell Sequencer." Using that ability immediately casts all three spells on the target of the ability.
 
 Spells with a range of "Caster" will be cast on the caster, regardless of the target of the ability. Spells with limited range will fail if the target is outside the spell's range.~
-@37759     = ~Sympathy~
-@38759     = ~Sympathy
+@37759     = ~Симпатия~
+@38759     = ~Симпатия
 (Enchantment)
 Level: Brd 6, Drd 8, Sor/Wiz 7
 Range: Sight of Caster
@@ -4758,8 +4758,8 @@ Area of Effect: Special
 Saving Throw: Will negates
 
 This spell brings forth a magical object that imbues creatures that see it with the desire to be near it. Any non-allied creature that sees the object of sympathy must make a Will save (with -3 DC) each round or be compelled to walk harmlessly toward the object for the round. Any creature immune to charm effects is also immune to this effect.~
-@37760     = ~Skip Time~
-@38760     = ~Skip Time
+@37760     = ~Пропустить время~
+@38760     = ~Пропустить время
 (Transmutation)
 Level: Sor/Wiz 7
 Range: Special
@@ -4771,8 +4771,8 @@ Saving Throw: None
 Skip Time transports the party ten rounds into the future. From the point of view of other creatures, the party vanishes, then reappears in the same spot ten rounds later. However, no time has passed for the party.
 
 The main effect of this is to reduce the duration of all magical effects on creatures outside the party by ten rounds, ending effects like Mantle that have short durations and causing the rest to expire sooner. Lingering areas of effect such as Web and Stinking Cloud also have their duration reduced. Skip Time can also allow the party to evade area of effect spells and abilities when timed right.~
-@37761     = ~Forcecage~
-@38761     = ~Forcecage
+@37761     = ~Силовая клетка~
+@38761     = ~Силовая клетка
 (Abjuration)
 Level: Sor/Wiz 7
 Range: Sight of Caster
@@ -4782,8 +4782,8 @@ Area of Effect: 15-foot cube
 Saving Throw: None
 
 This spell creates a cage of force - a cube with walls of force on each side. Creatures that were in the area of effect when the spell was cast are trapped in the forcecage for the duration. Creatures cannot enter or pass through the area of effect. Only one forcecage may be active at a time.~
-@37762     = ~Skeleton Traps~
-@38762     = ~Skeleton Traps
+@37762     = ~Скелеты-ловушки~
+@38762     = ~Скелеты-ловушки
 (Necromancy)
 Level: Sor/Wiz 7
 Range: Sight of Caster
@@ -4848,8 +4848,8 @@ Area of Effect: 20-foot radius
 Saving Throw: None 
 
 Army of Images is like Mirror Image, except as an area of effect. When cast, all allies within 20 feet become surrounded by eight illusory duplicates. Incoming attacks may hit the duplicates rather than the real creatures.~
-@37855     = ~Teleport Step~
-@38855     = ~Teleport Step
+@37855     = ~Телепортирующий шаг~
+@38855     = ~Телепортирующий шаг
 (Transmutation)
 Level: Brd 8, Sor/Wiz 8, Selune 9
 Range: Sight of Caster
@@ -4881,8 +4881,8 @@ Area of Effect: 1 creature
 Saving Throw: None
 
 This spell links the caster and the target such that any spell effect that would be applied to one creature is also applied to the other. Link Effects only duplicates effects from spells and certain abilities of monsters; effects of items and non-magical abilities are ignored.~
-@37858     = ~Metafireball~
-@38858     = ~Metafireball
+@37858     = ~Множественный огненный шар~
+@38858     = ~Множественный огненный шар
 (Evocation)
 Level: Sor/Wiz 8
 Range: Sight of Caster
@@ -4892,8 +4892,8 @@ Area of Effect: 20-foot radius
 Saving Throw: Reflex half
 
 Also known as Fireballball, this spell launches a fireball that explodes into other fireballs. After the Metafireball explodes, each creature in the area of effect is hit by a separate fireball with its own area of effect. Each of the secondary fireballs deals 3d6 fire damage (Reflex save with -5 DC for half). This spell is most effective when cast at a large group of creatures clumped together.~
-@37859     = ~Otto's Irresistible Spin~
-@38859     = ~Otto's Irresistible Spin
+@37859     = ~Неудержимое вращение Отто~
+@38859     = ~Неудержимое вращение Отто
 (Enchantment)
 Level: Brd 7, Sor/Wiz 8
 Range: Sight of Caster
@@ -4903,8 +4903,8 @@ Area of Effect: 20-foot radius
 Saving Throw: None
 
 Otto's Irresistible Spin forces multiple creatures to spin in place against their will for 5 rounds. Affected creatures will do nothing other than repeatedly spin in place, even if they see enemies. The spell is irresistible - there is no Saving Throw, and Spell Resistance will not block the spell. If an affected creature takes damage, the effects of the spell immediately end for that creature.~
-@37860     = ~Omnipresence~
-@38860     = ~Omnipresence
+@37860     = ~Вездесущность~
+@38860     = ~Вездесущность
 (Transmutation)
 Level: Brd 7, Cleric 8, Sor/Wiz 7
 Range: Sight of Caster
@@ -4936,8 +4936,8 @@ Area of Effect: Special
 Saving Throw: None
 
 Simulacrum creates a duplicate of the caster, which will serve the caster for the duration. It has half the caster's hit points and half the caster's level (rounded up) in each of the caster's classes. The simulacrum retains the memorized spells of the caster, which it can cast as well (but only those of a low enough level). It has no equipment, so it is useful primarily as an extra spellcaster. A character can only have one simulacrum at a time.~
-@37863     = ~Reverse Gravity~
-@38863     = ~Reverse Gravity
+@37863     = ~Обратная гравитация~
+@38863     = ~Обратная гравитация
 (Transmutation)
 Level: Drd 8, Sor/Wiz 8, Selune 8
 Range: Sight of Caster
@@ -4993,8 +4993,8 @@ Area of Effect: Caster
 Saving Throw: None
 
 This spell eliminates the interval between spellcasting, allowing the caster to begin a new spell as soon as he or she finishes casting the previous one. A spellcaster under the effects of Improved Alacrity can cast multiple spells in the space of a single round, but the concentration involved prevents the caster from benefitting from decreased casting time effects (such as Improved Initiative) for the duration of the spell.~
-@37954     = ~Living Lightning~
-@38954     = ~Living Lightning
+@37954     = ~Живая молния~
+@38954     = ~Живая молния
 (Evocation)
 Level: Drd 8, Sor/Wiz 8, Talos 8
 Range: Caster
