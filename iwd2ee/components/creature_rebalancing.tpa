@@ -317,6 +317,13 @@ COPY_EXISTING ~usms033.spl~ ~override~
 	SAY NAME1 @24033
 	SAY NAME2 @24033
 
+ACTION_IF NOT MOD_IS_INSTALLED ~iwd2ee.tp2~ ~2~ BEGIN
+
+COPY_EXISTING ~uses001.spl~ ~override~ ~uses002.spl~ ~override~ ~uses007.spl~ ~override~
+	LPF DELETE_EFFECT INT_VAR silent=1 check_headers=1 check_globals=0 match_opcode=502 STR_VAR match_resource=~MEDEATYP~ END
+
+END
+
 COPY_EXISTING ~sppr114.spl~ ~override/usip114.spl~ ~sppr250.spl~ ~override/usip250.spl~ ~sppr350.spl~ ~override/usip350.spl~ ~sppr428.spl~ ~override/usip428.spl~ ~sppr517.spl~ ~override/usip517.spl~ ~sppr602.spl~ ~override/usip602.spl~ ~sppr704.spl~ ~override/usip704.spl~ ~sppr729.spl~ ~override/usip729.spl~ ~spwi211.spl~ ~override/usiw211.spl~ ~spwi220.spl~ ~override/usiw220.spl~ ~spwi316.spl~ ~override/usiw316.spl~ ~spwi318.spl~ ~override/usiw318.spl~ ~spwi404.spl~ ~override/usiw404.spl~ ~spwi405.spl~ ~override/usiw405.spl~ ~spwi411.spl~ ~override/usiw411.spl~ ~spwi419.spl~ ~override/usiw419.spl~ ~spwi424.spl~ ~override/usiw424.spl~ ~spwi504.spl~ ~override/usiw504.spl~ ~spwi507.spl~ ~override/usiw507.spl~ ~spwi509.spl~ ~override/usiw509.spl~ ~spwi605.spl~ ~override/usiw605.spl~ ~spwi612.spl~ ~override/usiw612.spl~ ~spwi615.spl~ ~override/usiw615.spl~ ~spwi617.spl~ ~override/usiw617.spl~ ~spwi705.spl~ ~override/usiw705.spl~ ~spwi708.spl~ ~override/usiw708.spl~ ~spwi808.spl~ ~override/usiw808.spl~ ~spwi810.spl~ ~override/usiw810.spl~ ~spwi910.spl~ ~override/usiw910.spl~ ~spwi911.spl~ ~override/usiw911.spl~
 	WRITE_SHORT 0x1c 2
 //	LPF ALTER_SPELL_HEADER INT_VAR location=4 END
@@ -1965,6 +1972,11 @@ COPY_EXISTING ~41GOLEMC.cre~ ~override~
 	READ_LONG feats2 ulgiash
 	ulgiash|=0x2000000
 	WRITE_LONG feats2 ulgiash
+	WRITE_BYTE fireresistance 0
+	WRITE_BYTE slashingresistance 10
+	WRITE_BYTE piercingresistance 10
+	WRITE_BYTE missileresistance 10
+	WRITE_BYTE coldresistance 50
 	WRITE_BYTE proficiencysmallblade 3
 	LPF	IWD2_ADD_CRE_ITEM INT_VAR equip=1 STR_VAR item=~USCWHFYG~ slot=~weapon1~ mode=~replace~ END
 
@@ -1974,7 +1986,7 @@ COPY_EXISTING ~41DOOMGD.cre~ ~override~
 	WRITE_BYTE slashingresistance 5
 	WRITE_BYTE piercingresistance 5
 	WRITE_BYTE bludgeoningresistance 0
-	WRITE_BYTE missileresistance 10
+	WRITE_BYTE missileresistance 0
 	WRITE_BYTE bludgeoningresistance 5
 	WRITE_BYTE spellresistance 12
 	WRITE_BYTE magicdamageresistance 100
@@ -1988,15 +2000,15 @@ COPY_EXISTING ~41DOOMGD.cre~ ~override~
 COPY_EXISTING ~41VRASSI.cre~ ~override~
 	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelfighter=10 STR_VAR updatehp=~max~ END
 	WRITE_BYTE dexterity 16
-	WRITE_BYTE slashingresistance 10
-	WRITE_BYTE piercingresistance 10
-	WRITE_BYTE bludgeoningresistance 5
-	WRITE_BYTE missileresistance 10
+	WRITE_BYTE slashingresistance 5
+	WRITE_BYTE piercingresistance 5
+	WRITE_BYTE bludgeoningresistance 0
+	WRITE_BYTE missileresistance 0
 	WRITE_BYTE fireresistance 10
 	WRITE_BYTE coldresistance 10
 	WRITE_BYTE spellresistance 14
 	WRITE_BYTE magicdamageresistance 100
-	WRITE_BYTE enchantmentlevel 1
+	WRITE_BYTE enchantmentlevel 2
 	READ_LONG feats2 ulgiash
 	ulgiash|=0x500100
 	WRITE_LONG feats2 ulgiash
@@ -2850,14 +2862,14 @@ COPY_EXISTING ~52GOLIR.cre~ ~override~ ~61GOLIRO.cre~ ~override~ ~64IGOLEM.cre~ 
 	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelfighter=18 STR_VAR updatehp=~max~ END
 	WRITE_BYTE fireresistance 100
 	WRITE_BYTE coldresistance 50
-	WRITE_BYTE electricityresistance 20
-	WRITE_BYTE acidresistance 10
-	WRITE_BYTE magicdamageresistance 10
+	WRITE_BYTE electricityresistance (0 - 5)
+	WRITE_BYTE acidresistance 0
+	WRITE_BYTE magicdamageresistance 0
 	WRITE_BYTE spellresistance 25
-	WRITE_BYTE slashingresistance 20
-	WRITE_BYTE bludgeoningresistance 5
-	WRITE_BYTE piercingresistance 15
-	WRITE_BYTE missileresistance 15
+	WRITE_BYTE slashingresistance 5
+	WRITE_BYTE bludgeoningresistance 0
+	WRITE_BYTE piercingresistance 5
+	WRITE_BYTE missileresistance 5
 	READ_LONG feats2 ulgiash
 	ulgiash|=0x2000000
 	WRITE_LONG feats2 ulgiash
@@ -7161,12 +7173,13 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobal("US_Party_Dispel_Final","GLOBAL",1)
-		ReallyForceSpellRES("USDISPEA",Player1)
-		ReallyForceSpellRES("USDISPEA",Player2)
-		ReallyForceSpellRES("USDISPEA",Player3)
-		ReallyForceSpellRES("USDISPEA",Player4)
-		ReallyForceSpellRES("USDISPEA",Player5)
-		ReallyForceSpellRES("USDISPEA",Player6)
+		Wait(1)
+		ApplySpellRES("USDISPEA",Player1)
+		ApplySpellRES("USDISPEA",Player2)
+		ApplySpellRES("USDISPEA",Player3)
+		ApplySpellRES("USDISPEA",Player4)
+		ApplySpellRES("USDISPEA",Player5)
+		ApplySpellRES("USDISPEA",Player6)
 END
 
 >>>>>>>>

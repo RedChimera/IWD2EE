@@ -128,7 +128,6 @@ COPY ~%mod_folder%/tables/feats.2da~ ~override~
 COPY ~%mod_folder%/tables/FEATCLAS.2da~ ~override~
 COPY ~%mod_folder%/tables/FEATLVL.2da~ ~override~
 COPY ~%mod_folder%/tables/LVLFEAT.2da~ ~override~
-COPY ~%mod_folder%/tables/LISTINNT.2da~ ~override~
 COPY ~%mod_folder%/tables/LISTSONG.2da~ ~override~
 COPY ~%mod_folder%/tables/HPBARB.2da~ ~override~
 COPY ~%mod_folder%/tables/HPMONK.2da~ ~override~

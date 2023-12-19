@@ -573,7 +573,7 @@ Credits
 
 Chris Dix (She/Her) - aka @semiticgoddess - was the one who started the IWD2EE project and got the rest of the team together to work on it. She did the initial work on the first half of IWD2EE's components and did most of the writing, including NPC dialogue and potion descriptions.
 
-@OlvynChuru created the second half of IWD2EE's components, created all the new items and almost all the new spells and feats. OlvynChuru was also responsible for all the changes to encounters and enemy AI and most of the changes to feats, items, and spells.
+@OlvynChuru created the second half of IWD2EE's components, created all the new items and almost all the new spells and feats. OlvynChuru was also responsible for all the changes to encounters and enemy AI and most of the changes to feats, items, and spells, as well as the Lua functions that are called by the new opcodes.
 
 @Bubb created most of the base functions and new opcodes that open new possibilities for modding. Bubb was also responsible for many of IWD2EE's greatest quality of life improvements, including quickloot, faster loading times, and built-in widescreen capability.
 
@@ -581,12 +581,18 @@ Chris Dix (She/Her) - aka @semiticgoddess - was the one who started the IWD2EE p
 
 @kjeron created many WeiDU functions that are used in IWD2EE's installation to modify IWD2 files.
 
+@CamDawg revised some of IWD2EE's WeiDU files to run faster.
+
 Andrii Shafetov - aka @ashafetov - created IWD2EE's new main menu screen and the starting screens for the prologue and first two chapters.
 
 Igor Levchenko - aka @Igor_Levchenko - painted the portrait for Vrek Vileclaw.
+
+@Vertis created the image for the new quickloot panel.
+
+@mleduque fixed an OS-specific command in the WeiDU installation to maybe work on Linux.
 
 Several people on Discord, including @Vertis, @rbaker, and @IcewindDale2 managed to generate AI portraits for Reig Redwaters, Black Geoffrey, Veira, Emma Moonblade, Vunarg, Zack Boosenburry, and Sersa when we were having trouble finding a real artist to do the portraits.
 
 Credit goes to Erephine for allowing IWD2EE to use the animations from 1 Pixel Productions.
 
-And lastly, credit goes to the over 300 people who playtested IWD2EE. Special thanks goes to @Gazoo, @Firecrow, @deeel, @IcewindDale2, and @Fallen Prince for giving extensive feedback on our Discord.
+And lastly, credit goes to the over 300 people who playtested IWD2EE before release. Special thanks goes to @Gazoo, @Firecrow, @deeel, @IcewindDale2, and @Fallen Prince for giving extensive feedback on our Discord.
