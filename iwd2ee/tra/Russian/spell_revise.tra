@@ -749,7 +749,7 @@
 Зона действия: колдующий
 Спасбросок: нет
 
-Тело заклинателя превращается в живое железо и становится таким же крепким и устойчивым к урону. На время действия заклинания колдующий получает 15/- сопротивления огню, холоду и всем формам физического урона, но +15 уязвимости к электричеству. Заклинания, влияющие на дыхание или физиологические процессы заклинателя, к примеру, "Яд", "Слепота", "Оглушение" или "Болезнь", не действуют. Кроме того заклинатель получает +8 к Силе, -8 к Ловкости. К сожалению, движения заклинателя становятся медленными и неловкими: скорость его передвижения снижается вдвое, и он получает -2 к скорости чтения заклинаний.~
+Тело заклинателя превращается в живое железо и становится таким же крепким и устойчивым к урону. На время действия заклинания колдующий получает 15/- сопротивления огню, холоду и всем формам физического урона, но +15 уязвимости к электричеству. Заклинания, влияющие на дыхание или физиологические процессы заклинателя, к примеру, "Яд", "Слепота", "Оглушение" или "Болезнь", не действуют, а сам заклинатель становится слишком тяжёлым, чтобы его можно было отбросить такими заклинаниями, как "Порыв ветра", "Бросок" или "Отталкивание". Кроме того заклинатель получает +8 к Силе, -8 к Ловкости. К сожалению, движения заклинателя становятся медленными и неловкими: скорость его передвижения снижается вдвое, и он получает -2 к скорости чтения заклинаний.~
 @1128    = ~Чёрный клинок несчастья~
 @1129    = ~Чёрный клинок несчастья
 (Призывание)
@@ -2037,9 +2037,9 @@
 Длительность: 10 раундов
 Время чтения: 6
 Зона действия: радиус 15 футов
-Спасбросок: стойкости, особый
+Спасбросок: нет
 
-Это заклинание создаёт клубящееся облако кислотного тумана. Густой туман разъедает все, к чему прикасается, нанося 1d6 кислотного урона в раунд. Кроме того, каждый раунд, пока существо находится в облаке, его сопротивление кислоте снижается на 4, что может снизить этот показатель ниже нуля, в результате чего оно будет получать дополнительный урон от облака или любого другого кислотного урона. Жертва может попытаться сделать спасбросок стойкости; в случае успеха снижение сопротивления кислоте уменьшается до 2. Это снижение является кумулятивным и сходит на нет через 5 раундов.~
+Это заклинание создаёт клубящееся облако кислотного тумана. Густой туман ограничивает передвижение до 50% от текущей скорости передвижения существа. Кроме того, каждый раунд, пока существо находится в облаке, оно получает 3d6 кислотного урона.~
 @1859     = ~Защита от холода~
 @1860     = ~Защита от холода
 (Отречение)
@@ -2116,7 +2116,7 @@
 Зона действия: радиус 25 футов
 Спасбросок: нет
 
-По прочтении этого заклинания колдующий повышает бонус к атаке для союзных существ в зоне действия на +1. Благословение отменяет эффекты заклинания "Проклятие".~
+По прочтении этого заклинания колдующий повышает увеличивает атаку и спасброски союзных существ в зоне действия на один. Благословение отменяет эффекты заклинания "Проклятие".~
 @1873     = ~Проклятие~
 @1874     = ~Проклятие
 (Чародейство)
@@ -2127,7 +2127,7 @@
 Зона действия: радиус 25 футов
 Спасбросок: воли, отменяет
 
-"Проклятие" является противоположностью заклинания "Благословение". Она понижает боевой дух и ухудшает точность вражеских существ в зоне действия на -1 в течение действия заклинания. Проклятие отменяет эффекты заклинания "Благословения".~
+"Проклятие" является противоположностью заклинания "Благословение". Она понижает атаку и спасброски вражеских существ в зоне действия на один в течение действия заклинания. Проклятие отменяет эффекты заклинания "Благословения".~
 @1875     = ~Спешка~
 @1876     = ~Спешка
 (Преобразование)
@@ -3292,10 +3292,10 @@ This spell summons one or more creatures of nature who will aid the caster for t
 @32802     = ~Mass Heal
 (Conjuration)
 Level: Clr 8, Drd 9, Lathander 9
-Range: Caster
+Range: Sight of Caster
 Duration: Instantaneous
 Casting Time: 9
-Area of Effect: All allies within 20 ft.
+Area of Effect: 20-foot radius
 Saving Throw: None
 
 Mass Heal wipes away disease and injury from all living allies in the area of effect. It cures blindness, diseases, feeblemind and restores the targets to maximum hit points if they have been injured. Enemy undead in the area of effect suffer the effects of a Harm spell if the caster succeeds on a ranged touch attack roll for each one.~
@@ -3746,8 +3746,8 @@ Area of Effect: 1 creature
 Saving Throw: None
 
 This spell creates a mystic connection between the caster and the target so that some of their wounds are transferred to the caster. Whenever the target would take damage, they only take half the damage; the other half is taken by the caster. The damage is only split this way if the caster and target can see each other.~
-@35255     = ~Gust of Wind~
-@36255     = ~Gust of Wind
+@35255     = ~Порыв ветра~
+@36255     = ~Порыв ветра
 (Evocation)
 Level: Drd 2
 Range: Sight of Caster
@@ -3756,7 +3756,7 @@ Casting Time: 2
 Area of Effect: 40-foot cube
 Saving Throw: None
 
-This spell releases an extremely strong gust of wind starting at the caster and blowing outward in the target direction. Creatures in the area of effect are blown back, potentially taking damage if they hit a wall or fall into a pit. The damage dealt depends on how fast the creatures were moving when they hit the wall or the ground.~
+This spell releases an extremely strong gust of wind starting at the caster and blowing outward in the target direction. Creatures in the area of effect are blown back, potentially taking damage if they hit a wall or fall into a pit. Larger creatures are not blown back as fast, and huge creatures such as frost giants are completely unaffected. The damage dealt depends on how fast the creatures were moving when they hit the wall or the ground.~
 @35257     = ~Heat Metal~
 @36257     = ~Heat Metal
 (Transmutation)
@@ -4136,10 +4136,10 @@ This spell calls upon the power of Auril to amplify the caster's cold spells. Fo
 @36952     = ~Mass Harm
 (Necromancy)
 Level: Clr 9
-Range: Caster
+Range: Sight of Caster
 Duration: Instantaneous
 Casting Time: 9
-Area of Effect: All enemies within 30 ft.
+Area of Effect: 20-foot radius
 Saving Throw: Fortitude negates
 
 Mass Harm releases destructive negative energy upon all living enemies in the area of effect. The caster makes ranged touch attacks against each of those creatures; each one that get hit must Save vs. Fortitude or lose all but one hit point. The DC is the same as that of the 6th-level Harm spell. Allied undead in the area of effect are instead healed to full health as per a Heal spell.~
@@ -4365,8 +4365,8 @@ Area of Effect: 15-foot radius
 Saving Throw: Will negates
 
 Remove Magic is like Dispel Magic, except it only affects enemies. When cast, it dispels most magical effects on enemies in the area of effect who fail a Will save with +5 DC.~
-@37353     = ~Throw~
-@38353     = ~Throw
+@37353     = ~Бросок~
+@38353     = ~Бросок
 (Transmutation)
 Level: Brd 4, Sor/Wiz 3
 Range: Touch
@@ -4897,12 +4897,12 @@ Also known as Fireballball, this spell launches a fireball that explodes into ot
 (Enchantment)
 Level: Brd 7, Sor/Wiz 8
 Range: Sight of Caster
-Duration: 5 rounds
+Duration: 3 rounds
 Casting Time: 8
 Area of Effect: 20-foot radius
 Saving Throw: None
 
-Otto's Irresistible Spin forces multiple creatures to spin in place against their will for 5 rounds. Affected creatures will do nothing other than repeatedly spin in place, even if they see enemies. The spell is irresistible - there is no Saving Throw, and Spell Resistance will not block the spell. If an affected creature takes damage, the effects of the spell immediately end for that creature.~
+Otto's Irresistible Spin forces multiple creatures to spin in place against their will for 3 rounds. Affected creatures will do nothing other than repeatedly spin in place, even if they see enemies. The spell is irresistible - there is no Saving Throw, and Spell Resistance will not block the spell. If an affected creature takes damage, the effects of the spell immediately end for that creature. A creature cannot be affected by this spell more than once per 8 hours.~
 @37860     = ~Вездесущность~
 @38860     = ~Вездесущность
 (Transmutation)
@@ -5014,7 +5014,7 @@ Casting Time: 12
 Area of Effect: 40-foot radius
 Saving Throw: Fortitude half
 
-Malavon's Corrosive Fog is another spell created by the dark elf sorcerer Malavon. It creates an enormous cloud of acid fog that lingers for a long time. Each round, any creature in the fog takes 12d6 acid damage (Fortitude save for half). The target's Spell Resistance, if any, does not affect this spell.~
+Malavon's Corrosive Fog is another spell created by the dark elf sorcerer Malavon. It creates an enormous cloud of acid fog that lingers for a long time. Each round, any creature in the fog takes 12d6 acid damage (Fortitude save for half), and their movement rate is halved (there is no save against the movement penalty). The target's Spell Resistance, if any, does not affect this spell.~
 @37956     = ~Lightning Spiral~
 @38956     = ~Lightning Spiral
 (Evocation)
