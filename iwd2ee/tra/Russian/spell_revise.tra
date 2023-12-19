@@ -1606,8 +1606,8 @@
 Спасбросок: нет
 
 Заклинание делает очертания тела заклинателя размытыми и нечёткими, так что все атаки ближнего и дальнего боя по персонажу с 20% вероятностью не попадают в цель.~
-@1720    = ~Развеять Иллюзии~
-@1721    = ~Развеять Иллюзии
+@1720    = ~Развеять иллюзии~
+@1721    = ~Развеять иллюзии
 (Прорицание)
 Уровень: священник 3, колдун/волшебник 3, бард 3, друид 4
 Дальность: колдующий
@@ -2555,7 +2555,7 @@
 @30071=~Урон от незлого оружия уменьшен на 15~
 @30072=~Клон от "Заблуждения"~
 @30073=~Посох заклинаний (Слизь)~
-@30074=~Посох заклинаний (Доспехи Мага)~
+@30074=~Посох заклинаний (Доспехи мага)~
 @30075=~Посох заклинаний (Горящие руки)~
 @30076=~Посох заклинаний (Очаровать персонажа)~
 @30077=~Посох заклинаний (Цветные брызги)~
@@ -2634,157 +2634,157 @@
 @30132=~Выпустить "Эклектическую Последовательность"
 
 Используя эту способность, персонаж мгновенно высвобождает заклинания, сохранённые с помощью заклинания "Эклектическая Последовательность".~
-@30133=~Soul Gem~
-@30134=~Star Sapphire - With Soul~
-@30135=~Star Sapphire is a precious variation of the sapphire, however is more translucent, with a white star highlighted in its center. A star sapphire has been known to ornament devices which protect against magic.
+@30133=~Драгоценный камень души~
+@30134=~Звездчатый сапфир - содержит душу~
+@30135=~Звездчатый сапфир - ценнейшая разновидность сапфира, более прозрачная, с сияющей белой звездой в центре. Звездчатые сапфиры часто используют в украшениях, защищающих от магии.
 
-This gem has a soul trapped within through dark magic. One skilled in such magic could consume the soul utterly to become stronger or recharge a magic item. Doing so destroys the gem.~
-@30136=~King's Tears - With Soul~
-@30137=~King's Tears are very rare and found only in the Realms where they are sometimes called frozen tears. Clear, teardrop-shaped, smooth surfaced, and thought to be unbreakable. However, this gem can barely contain the soul inside it, and is almost ready to burst. These stones are said to be the crystallized tears of long-dead necromancer kings. In each gem can be seen that which the weeping king loved long ago. Their true nature is unknown but suffice it to say that sages prize these gems above all others.
+В этом драгоценном камне с помощью тёмной магии заключена душа. Тот, кто обладает такой магией, может полностью поглотить душу, чтобы стать сильнее или зарядить магический предмет. При этом драгоценный камень разрушается.~
+@30136=~Королевские слёзы - содержит душу~
+@30137=~Королевские слёзы крайне редки и встречаются только в королевствах, где их ещё иногда называют замёрзшими слезами. Это прозрачные, гладкие камни каплевидной формы, которые до сих пор никому не удавалось разрушить. Говорят, что на самом деле это застывшие слёзы давно умерших королей-некромантов. В каждом камне можно увидеть то, что когда-то любил плакавший король. Их истинная природа неизвестна, но достаточно сказать, что мудрецы ценят эти камни превыше всех остальных.
 
-This gem has a soul trapped within through dark magic. One skilled in such magic could consume the soul utterly to become stronger or recharge a magic item. Doing so destroys the gem.~
-@30138=~Rogue Stone - With Soul~
-@30139=~A small, shifting, rainbow-colored, iridescent gemstone. The fluid shades of color appear almost liquid under normal sunlight, it is truly a beautiful sight to behold. Rogue stones are extremely rare and are used for the gemjump spell, hence one of the most sought after gems in the Realms.
+В этом драгоценном камне с помощью тёмной магии заключена душа. Тот, кто обладает такой магией, может полностью поглотить душу, чтобы стать сильнее или зарядить магический предмет. При этом драгоценный камень разрушается.~
+@30138=~Плутовской камень - содержит душу~
+@30139=~Маленький радужный драгоценный камень, который блестит и переливается. Он так играет в дневном свете, что кажется почти жидким - воистину прекрасное зрелище. Плутовские камни исключительно редки и используются в заклинании камнепортации, что делает их одними из самых ценных самоцветов в королевствах.
 
-This gem has a soul trapped within through dark magic. One skilled in such magic could consume the soul utterly to become stronger or recharge a magic item. Doing so destroys the gem.~
-@30140=~Attack Bonus - Moment of Prescience~
-@30141=~Attack Bonus - Moment of Prescience
+В этом драгоценном камне с помощью тёмной магии заключена душа. Тот, кто обладает такой магией, может полностью поглотить душу, чтобы стать сильнее или зарядить магический предмет. При этом драгоценный камень разрушается.~
+@30140=~Бонус к атаке - Момент предвидения~
+@30141=~Бонус к атаке - Момент предвидения
 
-Using this ability causes the character to gain a +25 attack bonus for 1 round. Only one of the three Moment of Prescience abilities can be used.
+При использования этой способности, персонаж получает +25 к атаке на 1 раунд. Можно использовать только одну способность из трёх способностей "Момента предвидения".
 
-This ability may be used as a free action.~
-@30142=~Armor Class Bonus - Moment of Prescience~
-@30143=~Armor Class Bonus - Moment of Prescience
+Эта способность используется в качестве свободного действия.~
+@30142=~Бонус к классу защиты - Момент предвидения~
+@30143=~Бонус к классу защиты - Момент предвидения
 
-Using this ability causes the character to gain a +25 AC bonus for 1 round. Only one of the three Moment of Prescience abilities can be used.
+При использования этой способности, персонаж получает +25 к классу защиты на 1 раунд. Можно использовать только одну способность из трёх способностей "Момента предвидения".
 
-This ability may be used as a free action.~
-@30144=~Saving Throw Bonus - Moment of Prescience~
-@30145=~Saving Throw Bonus - Moment of Prescience
+Эта способность используется в качестве свободного действия.~
+@30144=~Бонус к спасброскам - Момент предвидения~
+@30145=~Бонус к спасброскам - Момент предвидения
 
-Using this ability causes the character to gain a +25 bonus to all saving throws for 1 round. Only one of the three Moment of Prescience abilities can be used.
+При использования этой способности, персонаж получает +25 к спасброскам на 1 раунд. Можно использовать только одну способность из трёх способностей "Момента предвидения".
 
-This ability may be used as a free action.~
-@30146=~Not knowing how to do anything else with the gem, you shatter it and the soul is freed.~
-@30147=~What will you do with the soul gem?~
-@30148=~Increase an ability score.~
-@30149=~Recharge a magic item.~
-@30150=~Shatter it and free the soul.~
-@30151=~Which ability score?~
-@30152=~Strength.~
-@30153=~Dexterity.~
-@30154=~Constitution.~
-@30155=~Intelligence.~
-@30156=~Wisdom.~
-@30157=~Charisma.~
-@30158=~Which item will you recharge?~
-@30159=~I am the channel through which your wish shall be fulfilled. You may wish to duplicate a spell less powerful than the one you just cast, or you may wish for an effect that can only be chosen once. You have three one-time wishes remaining.~
-@30160=~I am the channel through which your wish shall be fulfilled. You may wish to duplicate a spell less powerful than the one you just cast, or you may wish for an effect that can only be chosen once. You have two one-time wishes remaining.~
-@30161=~I am the channel through which your wish shall be fulfilled. You may wish to duplicate a spell less powerful than the one you just cast, or you may wish for an effect that can only be chosen once. You have one one-time wish remaining.~
-@30162=~I am the channel through which your wish shall be fulfilled. You have no one-time wishes remaining, so you may only choose to duplicate a spell.~
-@30163=~I wish to cast a spell...~
-@30164=~I will make a one-time wish...~
-@30165=~I am forbidden from granting wishes to minions, amusing as that may be.~
-@30166=~... to become stronger.~
-@30167=~... to become more agile.~
-@30168=~... to become tougher.~
-@30169=~... to become smarter.~
-@30170=~... to become wiser.~
-@30171=~... to become more charismatic.~
-@30172=~... to obtain a powerful magic item.~
-@30173=~... to become rich.~
-@30174=~... to regain all my memorized spells, as if I had slept 8 hours.~
-@30175=~... to cast an epic spell called...~
+Эта способность используется в качестве свободного действия.~
+@30146=~Не зная, что ещё можно сделать с драгоценным камнем, ты разбиваешь его, и душа освобождается.~
+@30147=~Что ты хочешь сделать с драгоценным камнем души?~
+@30148=~Увеличить параметр.~
+@30149=~Зарядить магический предмет.~
+@30150=~Разбить его и освободить душу.~
+@30151=~Какой параметр?~
+@30152=~Силу.~
+@30153=~Ловкость.~
+@30154=~Телосложение.~
+@30155=~Интеллект.~
+@30156=~Мудрость.~
+@30157=~Обаяние.~
+@30158=~Какой предмет нужно зарядить?~
+@30159=~Я канал, через который твоё желание будет исполнено. Ты можешь пожелать продублировать заклинание, менее мощное, чем то, которое было произнесено. Или же пожелать одноразовый эффект. Можно пожелать ещё три одноразовых эффекта.~
+@30160=~Я канал, через который твоё желание будет исполнено. Ты можешь пожелать продублировать заклинание, менее мощное, чем то, которое было произнесено. Или же пожелать одноразовый эффект. Можно пожелать ещё два одноразовых эффекта.~
+@30161=~Я канал, через который твоё желание будет исполнено. Ты можешь пожелать продублировать заклинание, менее мощное, чем то, которое было произнесено. Или же пожелать одноразовый эффект. Можно пожелать ещё один одноразовый эффект.~
+@30162=~Я канал, через который твоё желание будет исполнено. У тебя не осталось одноразовых эффектов, потому ты можешь только пожелать продублировать заклинание.~
+@30163=~Я желаю сотворить заклинание...~
+@30164=~Я желаю получить одноразовый эффект...~
+@30165=~Мне запрещено выполнять желания приспешников, как бы забавно это ни было.~
+@30166=~... и стать сильнее.~
+@30167=~... и стать более проворным.~
+@30168=~... и стать выносливее.~
+@30169=~... и стать умнее.~
+@30170=~... и стать мудрее.~
+@30171=~... и стать привлекательнее.~
+@30172=~... и получить мощный магический предмет.~
+@30173=~... и стать богаче.~
+@30174=~... и восстановить все свои заклинания, как будто после длинного отдыха.~
+@30175=~... и произнести эпическое заклинание под названием...~
 //The strings below are of epic spell names; they should have the same name as in creature_rebalancing.tra (TRA range @21001 - @21099) but with punctuation added.
-@30176=~... Animus Blast.~
-@30177=~... Animus Blizzard.~
-@30178=~... Create Winterwight.~
-@30179=~... Epic Доспехи Мага.~
-@30180=~... Epic Warding.~
-@30181=~... Many Missiles.~
-@30182=~... Mass Energy Drain.~
-@30183=~... Pestilence.~
-@30184=~... Souleating Weapon.~
-@30185=~... Xvimian Storm.~
+@30176=~... Взрыв враждебности.~
+@30177=~... Метель враждебности.~
+@30178=~... Сотворить зимнюю тьму.~
+@30179=~... Эпические доспехи мага.~
+@30180=~... Эпическая Опека.~
+@30181=~... Множество снарядов.~
+@30182=~... Массовый отток энергии.~
+@30183=~... Мор.~
+@30184=~... Пожирающее души оружие.~
+@30185=~... Шторм Ксвима.~
 
-@30186=~Then so you shall.~
-@30187=~Then you shall have it.~
-@30188=~Rich you shall become!~
+@30186=~Тогда ты станешь.~
+@30187=~Тогда ты получишь это.~
+@30188=~Богаче ты станешь!~
 @30189=~...~
-@30190=~... of 1st-level called...~
-@30191=~... of 2nd-level called...~
-@30192=~... of 3rd-level called...~
-@30193=~... of 4th-level called...~
-@30194=~... of 5th-level called...~
-@30195=~... of 6th-level called...~
-@30196=~... of 7th-level called...~
-@30197=~... of 8th-level called...~
+@30190=~... первого уровня под названием...~
+@30191=~... второго уровня под названием...~
+@30192=~... третьего уровня под названием...~
+@30193=~... четвёртого уровня под названием...~
+@30194=~... пятого уровня под названием...~
+@30195=~... шестого уровня под названием...~
+@30196=~... седьмого уровня под названием...~
+@30197=~... восьмого уровня под названием...~
 //The strings below are of spell names; they should have the same name as in spell_revise.tra (if you don't find the spell in spell_revise.tra, then use the name from the vanilla game) but with punctuation added.
-@30198=~... Deathwatch.~
-@30199=~... Grease.~
+@30198=~... Часы смерти.~
+@30199=~... Слизь.~
 @30200=~... Опознание существа.~
 @30201=~... Прыжок.~
-@30202=~... Доспехи Мага.~
+@30202=~... Доспехи мага.~
 @30203=~... Фильтр восприятия.~
 @30204=~... Защита от зла.~
 @30205=~... Защита от окаменения.~
-@30206=~... Reflect Attack.~
+@30206=~... Отразить атаку.~
 @30207=~... Отражённый образ.~
-@30208=~... Shield.~
+@30208=~... Щит.~
 @30209=~... Сон.~
 @30210=~... Вызов монстров I.~
-@30211=~... True Strike.~
-@30212=~... Arcane Sight.~
-@30213=~... Blur.~
-@30214=~... Cat's Grace.~
-@30215=~... Darkness.~
-@30216=~... Death Armor.~
-@30217=~... Decastave.~
-@30218=~... Dispel Illusions.~
-@30219=~... Eagle's Splendor.~
-@30220=~... Gedlee's Electric Loop.~
-@30221=~... Horror.~
-@30222=~... Invisibility.~
+@30211=~... Верный удар.~
+@30212=~... Колдовское зрение.~
+@30213=~... Размытие.~
+@30214=~... Кошачья грация.~
+@30215=~... Тьма.~
+@30216=~... Доспехи смерти.~
+@30217=~... Мегапосох.~
+@30218=~... Развеять иллюзии.~
+@30219=~... Величие орла.~
+@30220=~... Электрическая петля Гедли.~
+@30221=~... Ужас.~
+@30222=~... Невидимость.~
 @30223=~... Левитация.~
-@30224=~... Luck.~
-@30225=~... Minor Elemental Barrier.~
-@30226=~... Mirror Image.~
-@30227=~... Ox's Fortitude.~
-@30228=~... Protection from Arrows.~
-@30229=~... Remove Fear.~
-@30230=~... Snilloc's Snowball Swarm.~
+@30224=~... Удача.~
+@30225=~... Малый барьер стихий.~
+@30226=~... Зеркальный образ.~
+@30227=~... Выносливость вола.~
+@30228=~... Защита от стрел.~
+@30229=~... Снять страх.~
+@30230=~... Снегопад Сниллока.~
 @30231=~... Вызов монстров II.~
-@30232=~... Vocalize.~
-@30233=~... Web.~
-@30234=~... Animate Skeleton.~
-@30235=~... Animate Zombie.~
-@30236=~... Blink.~
-@30237=~... Dispel Magic.~
-@30238=~... Emotion: Rage.~
-@30239=~... Enlarge Creature.~
-@30240=~... Fireball.~
+@30232=~... Озвучивание.~
+@30233=~... Паутина.~
+@30234=~... Создание скелета.~
+@30235=~... Создание зомби.~
+@30236=~... Мерцание.~
+@30237=~... Развеять магию.~
+@30238=~... Эмоция: Ярость.~
+@30239=~... Увеличить существо.~
+@30240=~... Огненный шар.~
 @30241=~... Полёт.~
-@30242=~... Ghost Armor.~
-@30243=~... Haste.~
-@30244=~... Hold Person.~
-@30245=~... Invisibility Sphere.~
-@30246=~... Melf's Minute Meteors.~
-@30247=~... Moment of Prescience.~
-@30248=~... Nondetection.~
-@30249=~... Protection from Cold.~
-@30250=~... Protection from Fire.~
-@30251=~... Remove Magic.~
-@30252=~... Skull Trap.~
-@30253=~... Slow.~
-@30254=~... Stinking Cloud.~
+@30242=~... Призрачные доспехи.~
+@30243=~... Спешка.~
+@30244=~... Удержание персонажа.~
+@30245=~... Сфера невидимости.~
+@30246=~... Мелкие метеоры Мелфа.~
+@30247=~... Момент предвидения.~
+@30248=~... Необнаружение.~
+@30249=~... Защита от огня.~
+@30250=~... Защита от холода.~
+@30251=~... Удалить магию.~
+@30252=~... Череп-ловушка.~
+@30253=~... Замедление.~
+@30254=~... Зловонное облако.~
 @30255=~... Вызов монстров III.~
-@30256=~... Break Enchantment.~
-@30257=~... Carrion Summons.~
-@30258=~... Confusion.~
-@30259=~... Emotion: Fear.~
-@30260=~... Fire Shield (Blue).~
-@30261=~... Fire Shield (Red).~
-@30262=~... Ghoulish Feast.~
+@30256=~... Разрушить чары.~
+@30257=~... Вызов падальщика.~
+@30258=~... Замешательство.~
+@30259=~... Эмоция: Страх.~
+@30260=~... Огненный щит (синий).~
+@30261=~... Огненный щит (красный).~
+@30262=~... Пир упырей.~
 @30263=~... Giant Vermin.~
 @30264=~... Ice Storm.~
 @30265=~... Improved Invisibility.~
@@ -4203,8 +4203,8 @@ Area of Effect: Special
 Saving Throw: None
 
 This spell summons an angelic deva to assist the party. The deva has a variety of priest spells, can fly, and wields a mace that forces creatures it hits to make a Fortitude save or be stunned. The party can only summon one deva per 8 hours. This spell may only be cast by good characters.~
-@37151     = ~True Strike~
-@38151     = ~True Strike
+@37151     = ~Верный удар~
+@38151     = ~Верный удар
 (Divination) 
 Level: Brd 1, Pal 1, Rgr 1, Sor/Wiz 1
 Range: Caster
@@ -4214,8 +4214,8 @@ Area of Effect: Caster
 Saving Throw: None
 
 The True Strike spell gives the caster incredible insights into his or her enemies' weaknesses, but only for an extremely short duration. For 9 seconds, the caster gains a +20 attack bonus.~
-@37152     = ~Reflect Attack~
-@38152     = ~Reflect Attack
+@37152     = ~Отразить атаку~
+@38152     = ~Отразить атаку
 (Abjuration)
 Level: Brd 1, Pal 1, Sor/Wiz 1, Helm 1
 Range: Caster
@@ -4238,8 +4238,8 @@ Saving Throw: None
 Simple Summoning summons the target of the spell. The target is instantly teleported to the caster's side. Unlike most other summoning spells, Simple Summoning gives no control over the creature. This spell could either be used to rescue an ally (e.g. if the ally was paralyzed and being attacked by enemies), or to transport an enemy into a vulnerable position. Creatures and objects that are part of a structure (e.g. support beams) are unaffected.
 
 Simple Summoning can be cast on any creature the party sees, even one outside of the caster's visual range.~
-@37155     = ~Deathwatch~
-@38155     = ~Deathwatch
+@37155     = ~Часы смерти
+@38155     = ~Часы смерти
 (Necromancy)
 Level: Clr 1, Rgr 1, Sor/Wiz 1
 Range: Caster
@@ -4310,8 +4310,8 @@ Saving Throw: Reflex negates
 This spell suspends the target in the air if it fails a Reflex save (Allies are affected with no saving throw necessary). While levitating, the target cannot move unless it can fly, and it gets a -20 attack penalty with melee weapons, but also gets +20 AC against melee weapons. If cast on an ally, that ally can levitate up and down as well. While the character is selected, hold Left Shift to lift them up or hold Right Shift to pull them down. While at ground level, the character can move and loses the bonuses and penalties, but the spell doesn't end immediately.
 
 When cast on an ally, Levitate lasts 4 rounds. When cast on a non-allied creature, it lasts 10 rounds.~
-@37254     = ~Arcane Sight~
-@38254     = ~Arcane Sight
+@37254     = ~Колдовское зрение~
+@38254     = ~Колдовское зрение
 (Divination)
 Level: Brd 2, Sor/Wiz 2
 Range: Caster
@@ -4332,8 +4332,8 @@ Area of Effect: 1 creature
 Saving Throw: None
 
 This spell causes the target to temporarily grow twice as large in each dimension. The target gains +8 Strength and Constitution; these are size bonuses which stack with other bonuses to these attributes. The target's speed is also increased (since they cover more distance with each stride). However, the target also gets a -4 penalty to Dexterity, AC, and attack rolls due to increased size. The target cannot benefit from invisibility, blur, or mirror image.~
-@37256     = ~Darkness~
-@38256     = ~Darkness
+@37256     = ~Тьма~
+@38256     = ~Тьма
 (Illusion)
 Level: Brd 2, Clr 2, Sor/Wiz 2
 Range: Sight of Caster
@@ -4354,8 +4354,8 @@ Area of Effect: Entire area
 Saving Throw: None
 
 The Clairvoyance spell empowers the caster to see in their mind the geographical features and buildings of the region they are currently exploring. It extends to a great range, but cannot reveal creatures or their movements. Clairvoyance can be cast indoors or outdoors.~
-@37352     = ~Remove Magic~
-@38352     = ~Remove Magic
+@37352     = ~Удалить магию~
+@38352     = ~Удалить магию
 (Abjuration)
 Level: Clr 3, Drd 4, Pal 3, Sor/Wiz 3, Oghma 2
 Range: Sight of Caster
@@ -4376,8 +4376,8 @@ Area of Effect: 1 creature
 Saving Throw: Reflex half
 
 This spell throws the target into the air with incredible force. The target is knocked back as it is sent hurtling through the air. When it lands or hits the ceiling, it takes bludgeoning damage based on how fast it was moving right before the collision, up to 5d6 plus 1d6 per caster level (max 20d6 total from a level 15 caster). If the target succeeds on a Reflex save, it is thrown with less force and will only take about half damage.~
-@37354     = ~Moment of Prescience~
-@38354     = ~Moment of Prescience
+@37354     = ~Момент предвидения~
+@38354     = ~Момент предвидения
 (Divination)
 Level: Brd 3, Drd 4, Sor/Wiz 3
 Range: Sight of Caster
@@ -4474,8 +4474,8 @@ Area of Effect: 1 creature
 Saving Throw: Will or Fortitude negates
 
 Phantasmal Killer causes the target to be struck down by an embodiment of its worst fears. The target may make a Will save to disbelieve the illusion. On a failure, they must make a Fortitude save or die. Even on a successful Fortitude save, they still take 3d6 magic damage. If the target was panicking when they got hit by this spell, the DC of both saves is increased by 6.~
-@37453     = ~Ghoulish Feast~
-@38453     = ~Ghoulish Feast
+@37453     = ~Пир упырей~
+@38453     = ~Пир упырей
 (Necromancy)
 Level: Clr 4, Sor/Wiz 4
 Range: Caster
