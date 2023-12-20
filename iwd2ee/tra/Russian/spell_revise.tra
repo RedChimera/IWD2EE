@@ -2967,163 +2967,163 @@
 
 Доспехи веры - это энергетическое поле, поглощающее часть урона, получаемого колдующим. Колдующий получает поглощение урона 1/- ко всем видам урона кроме яда в течение всего времени действия заклинания. На каждые пять уровней заклинателя, поглощение увеличивается на ещё 1/-.~
 @31117     = ~Ледяные пальцы~
-@32117     = ~Frost Fingers
-(Transmutation) 
-Level: Drd 1
-Range: Caster
-Duration: Instantaneous
-Casting Time: 1
-Area of Effect: 5-foot long, 120 degree arc
-Saving Throw: Reflex half
+@32117     = ~Ледяные пальцы
+(Преобразование)
+Уровень: друид 1
+Дальность: колдующий
+Длительность: мгновенно
+Время чтения: 1
+Зона действия: 5-футовый конус с углом раствора 120 градусов
+Спасбросок: реакции, половина урона
 
-Upon completion of this spell, chilling frost emanates from the caster's hands in the shape of a wedge in front of them.  Any creature caught in the area of effect suffers 1d3 + 1 cold damage per caster level, to a maximum of 1d3 + 10 cold damage.  In addition, the creature is slowed for 2 rounds.  A successful Reflex save halves the damage and negates the slow effect. This spell does not provoke an attack of opportunity.~
+Колдующий создаёт перед собой клинообразную область жуткого холода. Существо, оказавшееся в зоне поражения, получает 1d3 + 1 урона холодом на уровень колдующего (вплоть до 1d3 + 10). Кроме того, существо замедляется на 2 раунда. Успешный спасбросок реакции уменьшает урон вдвое и отменяет эффект замедления. Это заклинание не провоцирует атаку при возможности.~
 @31150     = ~Призыв природных союзников I~
-@32150     = ~Summon Nature's Ally I
-(Conjuration) 
-Level: Drd 1, Rgr 1
-Range: Sight of Caster
-Duration: 10 rounds + 5 rounds/level
-Casting Time: 6 
-Area of Effect: Special 
-Saving Throw: None 
+@32150     = ~Призыв природных союзников I
+(Призывание)
+Уровень: друид 1, следопыт 1
+Дальность: обзор колдующего
+Длительность: 10 раундов + 5 раундов/уровень
+Время чтения: 6
+Зона действия: особая
+Спасбросок: нет
 
-This spell summons one or more creatures of nature who will aid the caster for the duration of the spell. The type of creatures that comes is random.~
-@31202     = ~Barkskin~
-@32202     = ~Barkskin
-(Transmutation) 
-Level: Drd 2, Rgr 2
-Range: Touch
-Duration: 10 rounds + 2 rounds/level
-Casting Time: 5
-Area of Effect: 1 creature
-Saving Throw: None 
+Это заклинание призывает одно или несколько созданий природы, которые будут помогать колдующему во время действия заклинания. Вид призываемых существ определяется случайно.~
+@31202     = ~Кожа-кора~
+@32202     = ~Кожа-кора
+(Преобразование)
+Уровень: друид 2
+Дальность: прикосновение
+Длительность: 10 раундов + 2 раунда/уровень
+Время чтения: 5
+Зона действия: 1 существо
+Спасбросок: нет
 
-Barkskin causes a creature's skin to become as tough as bark, granting a +3 generic AC bonus (+4 at 6th level and +5 at 12th level) for the duration of the spell.~
-@31212     = ~Slow Poison~
-@32212     = ~Slow Poison
-(Conjuration) 
-Level: Brd 2, Clr 2, Drd 2, Pal 2, Rgr 1
-Range: Touch
-Duration: Instantaneous
-Casting Time: 0
-Area of Effect: 1 creature 
-Saving Throw: None
+Задубевшая кожа делает кожу существа твёрдой как кора дерева и даёт +3 (+4 на 6-м уровне и +5 на 12-м уровне) к классу защиты (общий) на время действия заклинания.~
+@31212     = ~Замедлить яд~
+@32212     = ~Замедлить яд
+(Призывание)
+Уровень: бард 2, священник 2, друид 2, паладин 2, следопыт 1
+Дальность: прикосновение
+Длительность: мгновенно
+Время чтения: 0
+Зона действия: 1 существо
+Спасбросок: нет
 
-When this spell is placed upon a poisoned individual, it greatly slows the effects of venom, actually neutralizing all but the most deadly poisons.
+Это заклинание значительно замедляет действие яда в теле отравленного существа, фактически нейтрализуя все яды, кроме самых смертоносных.
 
-This spell will also sober up a character that has drunken himself into a stupor.~
-@31215     = ~Draw Upon Holy Might~
-@32215     = ~Draw Upon Holy Might
-(Evocation)
-Level: Clr 2, Pal 2, Tempus 2
-Range: Caster
-Duration: 10 rounds
-Casting Time: 5
-Area of Effect: Caster
-Saving Throw: None
+Это заклинание также отрезвляет вусмерть пьяного персонажа.~
+@31215     = ~Призыв священной мощи~
+@32215     = ~Призыв священной мощи
+(Проявление)
+Уровень: священник 2, паладин 2, жрец Темпуса 2
+Дальность: колдующий
+Длительность: 10 раундов
+Время чтения: 5
+Зона действия: колдующий
+Спасбросок: нет
 
-The caster calls upon their god to grant them power for a short period. The caster's Strength, Dexterity and Constitution are all raised by 1 point for every 3 levels of the caster. A third level caster would have their abilities raised by 1, while a 12th level caster would have their abilities raised by 4.
+Колдующий просит своего бога временно даровать ему божественную мощь. Сила, Телосложение и Ловкость заклинателя увеличиваются на 1 за каждые 3 уровня колдующего. Соответственно, колдующий третьего уровня повысит свои характеристики на 1, в то время как колдующий 12-го уровня - на 4.
 
-Draw Upon Holy Might is especially effective when cast as a paladin spell. Paladins cast this spell at their full caster level plus 6 (so a 9th-level paladin would have their abilities raised by 5).~
-@31226     = ~Moon Motes~
-@32226     = ~Moon Motes
-(Conjuration) 
-Level: Drd 2, Selune 1
-Range: Caster
-Duration: Instantaneous
-Casting Time: 3
-Area of Effect: 5' x 20' x 20' cone
-Saving Throw: Reflex half
+Это заклинание особенно эффективно при использовании паладинами. Паладины применяют его, как будто бы они имели 6 дополнительных уровней паладина. Так у паладина 9-ого уровня способности повысятся на 5).~
+@31226     = ~Лунные мотыльки~
+@32226     = ~Лунные мотыльки
+(Призывание)
+Уровень: друид 2, жрец Селуны 1
+Дальность: колдующий
+Длительность: мгновенная
+Время чтения: 3
+Зона действия: конус с раствором 5 футов и длиной стороны 20 футов
+Спасбросок: реакции, половина урона
 
-This spell calls upon Selune's connection with moonlight and magic to invoke a spray of glowing spheres. The spell causes 1d6 magic damage per level (max 5d6) to every creature caught in its path. Creatures can make a Reflex save for half damage. This spell does not provoke an attack of opportunity.~
+Это заклинание использует связь Селуны с лунным светом и магией, чтобы вызвать струю светящихся сфер. Заклинание наносит 1d6 магического урона за уровень заклинателя (до максимума в 5d6) каждому существу, оказавшемуся на его пути. Существа могут сделать спасбросок реакции, чтобы получить половину урона. Это заклинание не провоцирует атаку при возможности.~
 @31250     = ~Призыв природных союзников II~
-@32250     = ~Summon Nature's Ally II
-(Conjuration) 
-Level: Drd 2, Rgr 2
-Range: Sight of Caster
-Duration: 10 rounds + 5 rounds/level
-Casting Time: 6 
-Area of Effect: Special 
-Saving Throw: None 
+@32250     = ~Призыв природных союзников II
+(Призывание)
+Уровень: друид 2, следопыт 2
+Дальность: обзор колдующего
+Длительность: 10 раундов + 5 раундов/уровень
+Время чтения: 6
+Зона действия: особая
+Спасбросок: нет
 
-This spell summons one or more creatures of nature who will aid the caster for the duration of the spell.  The type of creatures that come is random.  The creatures summoned are more powerful than creatures summoned by lesser versions of this spell.~
-@31304     = ~Glyph of Warding~
-@32304     = ~Glyph of Warding
-(Abjuration) 
-Level: Clr 3, Helm 3
-Range: Sight of Caster
-Duration: Special
-Casting Time: 9
-Area of Effect: Special 
-Saving Throw: Reflex half
+Это заклинание призывает одно или несколько созданий природы, которые будут помогать колдующему во время действия заклинания. Вид призываемых существ определяется случайно. Призванные существа сильнее, чем существа, вызываемые более слабой версией этого заклинания.~
+@31304     = ~Охранный символ~
+@32304     = ~Охранный символ
+(Отречение)
+Уровень: священник 3, жрец Хелма 3
+Дальность: обзор колдующего
+Длительность: особая
+Время чтения: 9
+Зона действия: особая
+Спасбросок: реакции, половина урона
 
-A Glyph of Warding is a powerful inscription, magically drawn to prevent unauthorized or hostile creatures from passing, entering, or opening.  It can be used to guard a small bridge, to ward an entry, or as a trap on a chest or box.  Any creature violating the warded area sets off the glyph. It deals 1d8 electrical damage per two levels (max 5d8) to the victims, though they may make a Reflex save for half damage.~
-@31305     = ~Hold Animal~
-@32305     = ~Hold Animal
-(Enchantment) 
-Level: Drd 2, Rgr 2
-Range: Sight of Caster
-Duration: 1 round/level
-Casting Time: 6
-Area of Effect: 20-foot radius
-Saving Throw: Will negates 
+Охранный символ - могущественная магическая надпись, начертанная с целью не позволить посторонним или враждебным существам пройти куда-либо или открыть что-либо. Его можно использовать для того, чтобы охранять небольшой мост, перекрыть проход, установить ловушку на сундуке или ящике. Каждое существо, вторгающееся в защищённую заклинанием область, становится объектом чар. Успешный спасбросок реакции позволяет получить только половину урона, но при провале жертва получает 1d8 электрического урона за каждые два уровня колдующего.~
+@31305     = ~Удержание животного~
+@32305     = ~Удержание животного
+(Чародейство)
+Уровень: друид 2, следопыт 2
+Дальность: обзор колдующего
+Длительность: 1 раунд/уровень
+Время чтения: 6
+Зона действия: радиус 20 футов
+Спасбросок: воли, отменяет
 
-This spell holds animals rigidly immobile. Animals with magical powers such as winter wolves do count as animals, as do some of the more animalistic monsters such as remorhazes. The effect is centered on a point selected by the caster, and 1-4 animals within 20 feet of the target point are affected. Those who succeed on their Will save are unaffected by the spell. Being held does not prevent the worsening of the subject's condition due to wounds, disease, or poison.~
-@31308     = ~Remove Paralysis~
-@32308     = ~Remove Paralysis
-(Conjuration) 
-Level: Clr 2, Pal 2
-Range: Close
-Duration: Permanent 
-Casting Time: 1
-Area of Effect: 25' Radius
-Saving Throw: None 
+Это заклинание удерживает животных в полной неподвижности. Животные с магическими способностями, такие как зимний волк, всё равно считаются животными, так же как и некоторые монстры, напоминающие животных, такие, как реморхазы. Заклинатель выбирает точку, и заклинание воздействует на 1d4 животных в радиусе 20 футов от этой точки. Если животное успешно выкинуло спасбросок воли, оно не будет подвержено влиянию заклинания. Удержание не препятствует ухудшению здоровья существа из-за ран, болезни или отравления.~
+@31308     = ~Снять паралич~
+@32308     = ~Снять паралич
+(Призывание)
+Уровень: священник 2, паладин 2
+Дальность: малая
+Длительность: постоянная
+Время чтения: 1
+Зона действия: радиус 25 футов
+Спасбросок: нет
 
-The caster can free creatures from the effects of any paralysis, stunning, or related magic (such as a ghoul touch, or a Hold Person spell).~
-@31310     = ~Miscast Magic~
-@32310     = ~Miscast Magic
-(Enchantment) 
-Level: Clr 3
-Range: Sight of Caster
-Duration: 20 rounds
-Casting Time: 2
-Area of Effect: 1 creature
-Saving Throw: Will negates
+С помощью этого заклинания колдующий может избавить существ в области действия заклинания от любой парализующей, ошеломляющей или подобной магии (например, прикосновения упыря или заклинания "Удержание персонажа").~
+@31310     = ~Неправильная магия~
+@32310     = ~Неправильная магия
+(Чародейство)
+Уровень: священник 3
+Дальность: обзор колдующего
+Длительность: 20 раундов
+Время чтения: 2
+Зона действия: 1 существо
+Спасбросок: воли, отменяет
 
-Any spell casting creature that is affected by this spell has its casting ability severely disabled.  When the creature attempts to cast a spell, it has an 50% chance of failure.  Creatures can make a Will save (with +8 DC) to avoid the effect.~
-@31326     = ~Negative Energy Protection~
-@32326     = ~Negative Energy Protection
-(Abjuration) 
-Level: Clr 3, Lathander 3
-Range: Touch
-Duration: 3 rounds/level
-Casting Time: 1
-Area of Effect: 1 creature
-Saving Throw: None 
+Любое существо, использующее магию и поражённое этим заклинанием, практически полностью теряет возможность колдовать. Попытка чтения жертвой заклинания обречена на провал в 50% случаев. Удачный спасбросок воли позволяет избежать эффекта, но кидается он с +8 к УС.~
+@31326     = ~Защита от негативной энергии~
+@32326     = ~Защита от негативной энергии
+(Отречение)
+Уровень: священник 3, жрец Латандера 3
+Дальность: прикосновение
+Длительность: 3 раунда/уровень
+Время чтения: 1
+Зона действия: 1 существо
+Спасбросок: нет
 
-This spell employs positive energy to ward off the effects of negative energy from attacks such as those employed by wights, spectres and vampires.  The target creature is immune to energy drain for the duration of the spell.~
+Заклинание использует позитивную энергию, чтобы защитить цель от воздействия негативной энергии, которую используют умертвия, призраки и вампиры. Пока действует заклинание, прикрытое им существо обладает неуязвимостью к эффекту оттока энергии.~
 @31350     = ~Призыв природных союзников III~
-@32350     = ~Summon Nature's Ally III
-(Conjuration) 
-Level: Drd 3, Rgr 3
-Range: Sight of Caster
-Duration: 10 rounds + 5 rounds/level
-Casting Time: 6
-Area of Effect: Special
-Saving Throw: None 
+@32350     = ~Призыв природных союзников III
+(Призывание)
+Уровень: друид 3, следопыт 3
+Дальность: обзор колдующего
+Длительность: 10 раундов + 5 раундов/уровень
+Время чтения: 6
+Зона действия: особая
+Спасбросок: нет
 
-This spell summons one or more creatures of nature who will aid the caster for the duration of the spell.  The type of creatures that come is random.  The creatures summoned are more powerful than creatures summoned by lesser versions of this spell.~
+Это заклинание позволяет призвать одно или несколько существ, которые будут помогать призвавшему их в течение действия заклинания. Тип вызванных существ определяется случайным образом. Это заклинание призывает более сильных существ, чем такие же заклинания низких уровней.~
 @31402     = ~Призыв природных союзников IV~
-@32402     = ~Summon Nature's Ally IV
-(Conjuration) 
-Level: Drd 4, Rgr 4
-Range: Sight of Caster
-Duration: 10 rounds + 5 rounds/level
-Casting Time: 6
-Area of Effect: Special
-Saving Throw: None
+@32402     = ~Призыв природных союзников IV
+(Призывание)
+Уровень: друид 4, следопыт 4
+Дальность: обзор колдующего
+Длительность: 10 раундов + 5 раундов/уровень
+Время чтения: 6
+Зона действия: особая
+Спасбросок: нет
 
-This spell summons one or more creatures of nature who will aid the caster for the duration of the spell.  The type of creatures that come is random.  The creatures summoned are more powerful than creatures summoned by lesser versions of this spell.~
+Это заклинание позволяет призвать одно или несколько существ, которые будут помогать призвавшему их в течение действия заклинания. Тип вызванных существ определяется случайным образом. Это заклинание призывает более сильных существ, чем такие же заклинания низких уровней.~
 @31405     = ~Mental Domination~
 @32405     = ~Mental Domination
 (Enchantment) 
