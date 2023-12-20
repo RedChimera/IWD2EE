@@ -3124,126 +3124,126 @@
 Спасбросок: нет
 
 Это заклинание позволяет призвать одно или несколько существ, которые будут помогать призвавшему их в течение действия заклинания. Тип вызванных существ определяется случайным образом. Это заклинание призывает более сильных существ, чем такие же заклинания низких уровней.~
-@31405     = ~Mental Domination~
-@32405     = ~Mental Domination
-(Enchantment) 
-Level: Clr 4
-Range: Sight of Caster
-Duration: 1 round/level
-Casting Time: 4
-Area of Effect: 1 creature 
-Saving Throw: Will negates
+@31405     = ~Подчинение разума~
+@32405     = ~Подчинение разума
+(Чародейство)
+Уровень: священник 4
+Дальность: обзор колдующего
+Длительность: 1 раунд/уровень
+Время чтения: 4
+Зона действия: 1 существо
+Спасбросок: воли, отменяет
 
-This spell enables the caster to invade the mind of the target creature, allowing the caster to will the creature into whatever actions he so desires.  The target creature will resist the effects if a successful Will save with +2 DC is made.  While a creature is dominated in such a manner, its mind is cloudy and thought is hampered - spellcasting is impossible and attack bonuses are made with a -2 penalty.~
-@31408     = ~Magic Circle Against Evil~
-@32408     = ~Magic Circle Against Evil
-(Abjuration) [Good]
-Level: Clr 4, Pal 4, Sor/Wiz 4, Ilmater 3
-Range: Caster
-Duration: 1 minute/level
-Casting Time: 7
-Area of Effect: 10-foot radius
-Saving Throw: None
+Заклинатель получает возможность управлять целью, если она не сможет прокинуть спасбросок воли с +2 к УС. Во время действия заклинания существо, на которое оно наложено, не может читать заклинания и получает -2 к атаке.~
+@31408     = ~Круг защиты от зла~
+@32408     = ~Круг защиты от зла
+(Отречение) [Добро]
+Уровень: священник 4, паладин 4, колдун/волшебник 4, жрец Ильматера 3
+Дальность: колдующий
+Длительность: 1 минута / уровень
+Время чтения: 7
+Зона действия: радиус 10 футов
+Спасбросок: нет
 
-When this spell is cast, all creatures within a 10' radius are affected individually by Protection from Evil, giving them +2 AC and +2 to Saving Throws against evil creatures, as well as immunity to charm and domination effects from such creatures.~
-@31409     = ~Cloak of Fear~
-@32409     = ~Cloak of Fear
-(Conjuration)
-Level: Clr 4, Bane 4
-Range: Caster
-Duration: 6 rounds
-Casting Time: 6
-Area of Effect: Caster
-Saving Throw: Will negates
+Каждое существо в круге с радиусом 10 футов получает преимущества заклинания "Защита от зла": +2 к классу защиты, +2 к спасброскам от атак, заклинаний и способностей злых существ, а также иммунитет к заклинаниям очарования и доминации этих же существ.~
+@31409     = ~Плащ страха~
+@32409     = ~Плащ страха
+(Призывание)
+Уровень: священник 4, жрец Бейна 4
+Дальность: колдующий
+Длительность: 6 раундов
+Время чтения: 6
+Зона действия: колдующий
+Спасбросок: воли, отменяет
 
-Cloak of Fear bestows the caster with an aura of fear in a 5-foot radius.  All enemies that enter the cloak's area of effect must make a Will save or flee in panic for 1 round, and must continue to make Will saves twice a round as long as they are in the cloak of fear's area of effect.  The aura does not affect undead creatures. This spell does not provoke an attack of opportunity.~
-@31417     = ~Cloud of Pestilence~
-@32417     = ~Cloud of Pestilence
-(Necromancy) [Evil]
-Level: Clr 4
-Range: Sight of Caster
-Duration: 4 rounds
-Casting Time: 7
-Area of Effect: 20-foot radius
-Saving Throw: Fortitude negates
+У заклинателя появляется аура страха, действующая в радиусе 5 футов. Все попадающие в зону действия плаща страха и провалившие спасбросок воли существа в панике убегают в течение 1 раунда, а также должны повторять спасбросок воли дважды в раунд, пока они находятся в зоне действия заклинания. Нежить влиянию ауры не подвержена. Это заклинание не провоцирует атаку при возможности.~
+@31417     = ~Облако чумы~
+@32417     = ~Облако чумы
+(Некромантия) [Зло]
+Уровень: священник 4
+Дальность: обзор колдующего
+Длительность: 4 раунда
+Время чтения: 7
+Зона действия: радиус 20 футов
+Спасбросок: стойкости, отменяет
 
-This spell transforms the air in a 20-foot radius into sickening, grayish mists.  The caster and non-living creatures are immune to the effects of the cloud.  Every round of exposure to the disease-ridden air causes the loss of 4 points of Strength, Dexterity, and Constitution. Creatures within the afflicted area must make a Fortitude save every round to avoid the debilitating effects of the cloud. The effects will last 1 turn.  Cloud of Pestilence can only be cast by evil characters.~
-@31423     = ~Wall of Moonlight~
-@32423     = ~Wall of Moonlight
-(Evocation)
-Level: Drd 4, Selune 3
-Range: Sight of Caster
-Duration: 5 rounds
-Casting Time: 7
-Area of Effect: 20-foot long, 5-foot wide wall
-Saving Throw: None
+Это заклинание превращает воздух с радиусом 20 футов в отвратительный серый туман. Заклинатель не подвержен воздействию тумана, как и не живые существа. Остальные создания, находящиеся в заражённом облаке, каждый раунд теряют по 4 единицы силы, ловкости, и телосложения. Каждый раунд такие существа, находясь в зоне действия облака, должны прокидывать спасбросок стойкости, чтобы избежать губительного воздействия. Эффекты заражения действуют в течении одного хода. Это заклинание могут применять только злые персонажи.~
+@31423     = ~Стена лунного света~
+@32423     = ~Стена лунного света
+(Проявление)
+Уровень: друид 4, жрец Селуны 3
+Дальность: обзор колдующего
+Длительность: 5 раундов
+Время чтения: 7
+Зона действия: стена 20 футов длиной и 5 футов шириной
+Спасбросок: нет
 
-This spell invokes a shimmering tapestry of blue-white force.  This wall is intangible, requiring no physical anchor, and can easily be passed through.  Evil creatures passing through the wall take 4d10 magic damage.  Undead creatures passing through the wall take 8d10 magic damage.  A creature that has passed through the wall can only take damage from it once.  Only one Wall of Moonlight may be in effect at any time.~
-@31427     = ~Wall of Fire~
-@32427     = ~Wall of Fire
-(Evocation)
-Level: Drd 5, Sor/Wiz 4
-Range: Sight of Caster
-Duration: 5 rounds
-Casting Time: 4
-Area of Effect: 20-foot long, 5-foot wide wall
-Saving Throw: None 
+В указанном месте появляется мерцающая энергетическая завеса бело-синего цвета. Стена неосязаема, не требует привязки к материальному предмету, сквозь неё можно без труда пройти. Злые существа при проходе сквозь стену получают 4d10 магического урона, а нежить - 8d10 магического урона. Урон наносится только при первом пересечении стены. Если поставить новую "Стену лунного света", то старая тут же исчезнет.~
+@31427     = ~Стена огня~
+@32427     = ~Стена огня
+(Проявление)
+Уровень: друид 5, колдун/волшебник 4
+Дальность: поле зрения колдующего
+Длительность: 5 раундов
+Время чтения: 4
+Зона действия: стена 20 футов длиной и 5 футов шириной
+Спасбросок: нет
 
-This spell brings into existence an immobile, blazing curtain of shimmering fire. Any creature passing through the wall takes 9d6 fire damage. Only one wall of fire may be active at any one time.~
+Возникает неподвижная, переливающаяся завеса лилового огня. Она наносит 9d6 огненного урона любому проходящему через неё существу. В одной области может существовать только одна стена огня.~
 @31501     = ~Призыв природных союзников V~
-@32501     = ~Summon Nature's Ally V
-(Conjuration) 
-Level: Drd 5, Rgr 5
-Range: Sight of Caster
-Duration: 10 rounds + 5 rounds/level
-Casting Time: 6 
-Area of Effect: Special 
-Saving Throw: None
+@32501     = ~Призыв природных союзников V
+(Призывание)
+Уровень: друид 5, следопыт 5
+Дальность: обзор колдующего
+Длительность: 10 раундов + 5 раундов/уровень
+Время чтения: 6
+Зона действия: особая
+Спасбросок: нет
 
-This spell summons one or more creatures of nature who will aid the caster for the duration of the spell.  The type of creatures that come is random.  The creatures summoned are more powerful than creatures summoned by lesser versions of this spell.~
-@31503     = ~Flame Strike~
-@32503     = ~Flame Strike
-(Evocation)
-Level: Clr 5, Drd 4, Rgr 4, Lathander 5
-Range: Sight of Caster
-Duration: Instantaneous 
-Casting Time: 8 
-Area of Effect: 10-foot radius
-Saving Throw: Reflex half
+Это заклинание позволяет призвать одно или несколько существ, которые будут помогать призвавшему их в течение действия заклинания. Тип вызванных существ определяется случайным образом. Это заклинание призывает более сильных существ, чем такие же заклинания низких уровней.~
+@31503     = ~Удар пламени~
+@32503     = ~Удар пламени
+(Проявление)
+Уровень: священник 5, друид 4, следопыт 4, жрец Латандера 5
+Дальность: обзор колдующего
+Длительность: мгновенно
+Время чтения: 8
+Зона действия: радиус 10 футов
+Спасбросок: реакции, половина урона
 
-When the caster evokes Flame Strike, a vertical column of fire blasts downward into the area of effect.  All creatures caught in the area of effect take 1d6 damage per caster level (maximum 15d6). Half the damage is fire damage while the other half is holy fire damage, which ignores fire resistance. A successful Reflex save halves both kinds of damage.~
-@31508     = ~Chaotic Commands~
-@32508     = ~Chaotic Commands
-(Enchantment) [Chaos]
-Level: Clr 5, Tempus 5
-Range: Sight of Caster
-Duration: 10 rounds + 1 round/level
-Casting Time: 3
-Area of Effect: 1 creature
-Saving Throw: None
+После прочтения заклинания на выбранную заклинателем зону действия обрушивается вертикальная колонна пламени. Все существа в зоне действия получают 1d6 урона на уровень колдующего (вплоть до 15d6). Половина урона, это урон огнём, а вторая половина - урон святым огнём, который игнорирует сопротивление огню. Удачный спасбросок реакции уменьшает повреждения от обоих типов урона вдвое.~
+@31508     = ~Хаотичные приказы~
+@32508     = ~Хаотичные приказы
+(Чародейство) [Хаос]
+Уровень: священник 5, жрец Темпуса 5
+Дальность: обзор колдующего
+Длительность: 10 раундов +1 раунд/уровень
+Время прочтения: 3
+Область действия: 1 существо
+Спасбросок: нет
 
-Chaotic Commands renders a creature immune to magical commands. Charm, Dominate Person, Command, Sleep, Fear, Stun, Confusion, Feeblemind, Hopelessness, and Symbol spells all fit into this category.~
-@31523     = ~Static Charge~
-@32523     = ~Static Charge
-(Transmutation)
-Level: Drd 5, Rgr 6, Talos 4
-Duration: 5 turns
-Casting Time: 1 round
-Area of Effect: Sight of Caster
-Saving Throw: Reflex half
+Хаотичные приказы делают существо невосприимчивым к магическому контролю. В эту категорию входят заклинания: "Очарование", "Подчинение", "Повеление", "Сон", "Страх", "Замешательство", "Слабоумие", "Безнадёжность" и заклинания знаков.~
+@31523     = ~Статический разряд~
+@32523     = ~Статический разряд
+(Преобразование)
+Уровень: друид 5, следопыт 6, жрец Талоса 4
+Длительность: 5 ходов
+Время чтения: 1 раунд
+Зона действия: обзор колдующего
+Спасбросок: реакции, половина урона
 
-Static Charge is similar to Call Lightning except it can be used indoors. Upon completion of this spell an enemy creature within the area of effect is fried by a static discharge for 1d8 electricity damage per caster level, to a maximum of 16d8 electricity damage. A successful Reflex save with +4 DC halves the damage. Once released the static charge will build up again on the caster, discharging once per 5 rounds for the duration of the spell.~
+Статический разряд похож на заклинание "Вызов молнии", за исключением того, что он может быть использован в помещении. По прочтении этого заклинания вражеское существо, находящееся в зоне действия, поражается статическим разрядом. Этот разряд наносит по 1d8 урона электричеством за каждый уровень заклинателя, до максимального урона в 16d8. Успешный спасбросок реакции с +4 к УС позволяет получить только половину урона. После удара статический разряд вновь накапливается в теле заклинателя, разряжаясь раз в 5 раундов в течение действия заклинания.~
 @31602     = ~Призыв природных союзников VI~
-@32602     = ~Summon Nature's Ally VI
-(Conjuration) 
-Level: Drd 6, Rgr 6
-Range: Sight of Caster
-Duration: 10 rounds + 5 rounds/level
-Casting Time: 6 
-Area of Effect: Special 
-Saving Throw: None 
+@32602     = ~Призыв природных союзников VI
+(Призывание)
+Уровень: друид 6, следопыт 6
+Дальность: обзор колдующего
+Длительность: 10 раундов + 5 раундов/уровень
+Время чтения: 6
+Зона действия: особая
+Спасбросок: нет
 
-This spell summons one or more creatures of nature who will aid the caster for the duration of the spell.  The type of creatures that come is random.  The creatures summoned are more powerful than creatures summoned by lesser versions of this spell.~
+Это заклинание позволяет призвать одно или несколько существ, которые будут помогать призвавшему их в течение действия заклинания. Тип вызванных существ определяется случайным образом. Это заклинание призывает более сильных существ, чем такие же заклинания низких уровней.~
 @31608    = ~Sol's Searing Orb~
 @32608    = ~Sol's Searing Orb
 (Evocation)
