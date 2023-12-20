@@ -1580,10 +1580,10 @@ ACTION_IF !(MOD_IS_INSTALLED ~Setup-IWD2-Ease.tp2~ ~1~) BEGIN
   // tweaks anthology doesn't have a unitary stacking component, so this nonsense:
   OUTER_SET cd_ammo_stack_light = 80 // iwd2ee default sans tweaks for: arrows, bolts, bullets, darts
   OUTER_SET cd_ammo_stack_heavy = 40 // iwd2ee default sans tweaks for: daggers,hammers, axes
-  ACTION_IF MOD_IS_INSTALLED ~setup-cdtweaks.tp2~ ~3080~ BEGIN OUTER_SET cd_ammo_stack_light = 999 cd_ammo_stack_heavy = 999 END ELSE // tweaks Increase Ammo Stacks: unlimited
-//ACTION_IF MOD_IS_INSTALLED ~setup-cdtweaks.tp2~ ~3083~ BEGIN OUTER_SET cd_ammo_stack_light =  40 cd_ammo_stack_heavy =  40 END ELSE // tweaks Increase Ammo Stacks: 40
-  ACTION_IF MOD_IS_INSTALLED ~setup-cdtweaks.tp2~ ~3083~ BEGIN OUTER_SET cd_ammo_stack_light =  80 cd_ammo_stack_heavy =  80 END ELSE // tweaks Increase Ammo Stacks: 80
-  ACTION_IF MOD_IS_INSTALLED ~setup-cdtweaks.tp2~ ~3083~ BEGIN OUTER_SET cd_ammo_stack_light = 120 cd_ammo_stack_heavy = 120 END      // tweaks Increase Ammo Stacks: 120
+  ACTION_IF MOD_IS_INSTALLED ~setup-cdtweaks.tp2~ ~3080~ BEGIN OUTER_SET cd_ammo_stack_light = 999 OUTER_SET cd_ammo_stack_heavy = 999 END ELSE // tweaks Increase Ammo Stacks: unlimited
+//ACTION_IF MOD_IS_INSTALLED ~setup-cdtweaks.tp2~ ~3083~ BEGIN OUTER_SET cd_ammo_stack_light =  40 OUTER_SET cd_ammo_stack_heavy =  40 END ELSE // tweaks Increase Ammo Stacks: 40
+  ACTION_IF MOD_IS_INSTALLED ~setup-cdtweaks.tp2~ ~3083~ BEGIN OUTER_SET cd_ammo_stack_light =  80 OUTER_SET cd_ammo_stack_heavy =  80 END ELSE // tweaks Increase Ammo Stacks: 80
+  ACTION_IF MOD_IS_INSTALLED ~setup-cdtweaks.tp2~ ~3083~ BEGIN OUTER_SET cd_ammo_stack_light = 120 OUTER_SET cd_ammo_stack_heavy = 120 END      // tweaks Increase Ammo Stacks: 120
   
   OUTER_SET cd_gem_stack = 20 // iwd2ee default sans tweaks
   ACTION_IF MOD_IS_INSTALLED ~setup-cdtweaks.tp2~ ~3090~ BEGIN OUTER_SET cd_gem_stack = 999 END ELSE // tweaks increase Gem and Jewelry Stacking: unlimited
