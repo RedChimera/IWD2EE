@@ -3310,7 +3310,7 @@
 Спасбросок: нет
 
 Это заклинание позволяет призвать одно или несколько существ, которые будут помогать призвавшему их в течение действия заклинания. Тип вызванных существ определяется случайным образом. Это заклинание призывает более сильных существ, чем такие же заклинания низких уровней.~
-@31901     = ~Elemental Legion~
+@31901     = ~Легион элементалей~
 @32901     = ~Легион элементалей
 (Призывание)
 Уровень: друид 9, жрец Селуны 9
@@ -3390,173 +3390,173 @@
 Спасбросок: воли, отменяет
 
 Это заклинание на короткое время обездвиживает 1d4 людей, полулюдей или человекообразных существ. Это заклинание действует на любых двуногих человекообразных существ размером с человека или меньше. Примером такого существа может домовой, дриада, дварф, эльф, гнолл, гном, гоблин, полуэльф, полурослик, полуорк, хобгоблин, человек, кобольд, человекоящер, русалка, орк, пикси, фея, троглодит и другие. Таким образом, боец 10-го уровня может быть удержан, а огр - нет. Эффект срабатывает на ближайших к цели заклинания врагов и удерживает их. Враги, успешно совершившие спасбросок воли не подвержены действию заклинания. Нежить не подвержена воздействию этого заклинания. Удерживаемые существа не способны двигаться и говорить, но они остаются в курсе происходящего и могут использовать способности, не требующие движения или речи. Удержание не предотвращает ухудшения состояния из-за ран, болезней или яда.~
-@33312     = ~Slow~
-@34312     = ~Slow
-(Transmutation) 
-Level: Brd 3, Sor/Wiz 3
-Range: Sight of Caster
-Duration: 1 round/level
-Casting Time: 3
-Area of Effect: 20-foot radius
-Saving Throw: Will negates
+@33312     = ~Замедление~
+@34312     = ~Замедление
+(Преобразование)
+Уровень: бард 3, колдун/волшебник 3
+Дальность: обзор колдующего
+Длительность: 1 раунд/уровень
+Время чтения: 3
+Зона действия: радиус 20 футов
+Спасбросок: воли, отменяет
 
-A creature affected by Slow loses an attack every round (but will not drop below 1 attack per round), has -4 to AC, and moves at half its base movement rate. A successful Will save with +4 DC prevents the effects.~
-@33316     = ~Dire Charm~
-@34316     = ~Dire Charm
-(Enchantment)
-Level: Brd 2, Sor/Wiz 3, Bane 3
-Range: Sight of Caster
-Duration: 8 rounds
-Casting Time: 3 
-Area of Effect: 1 creature
-Saving Throw: Will negates
+Существо под влиянием этого заклинания теряет одну атаку за раунд (однако остаётся не менее 1 атаки за раунд), получает -4 к классу защиты и передвигается со скоростью в два раза ниже своей базовой скорости перемещения. Успешный спасбросок воли с +4 к УС позволяет избежать эффектов этого заклинания.~
+@33316     = ~Дикое очарование~
+@34316     = ~Дикое очарование
+(Чародейство)
+Уровень: бард 2, колдун/волшебник 3, жрец Бейна 3
+Дальность: обзор колдующего
+Длительность: 8 раундов
+Время чтения: 3
+Зона действия: 1 существо
+Спасбросок: воли, отменяет
 
-This spell is similar to the Charm Person spell. However, the affected creature goes into a berserk state, wanting no one to harm his master (the spell caster). Thus, the creature will fight enemies of the caster, even former allies. Dire Charm can affect both humanoids and giants.~
-@33322     = ~Melf's Minute Meteors~
-@34322     = ~Melf's Minute Meteors
-(Evocation)
-Level: Sor/Wiz 3
-Range: Caster
-Duration: 8 hours
-Casting Time: 3
-Area of Effect: Caster
-Saving Throw: None
+Это заклинание подобно заклинанию "Очаровать персонажа". Однако, выбранное существо приходит в бешенство, никому не позволяя притрагиваться к своему хозяину (заклинателю). Следовательно, это существо будет сражаться с врагами колдующего и даже бывшими союзниками. Это заклинание работает и на человекообразных существа и на великанов.~
+@33322     = ~Мелкие метеоры Мелфа~
+@34322     = ~Мелкие метеоры Мелфа
+(Проявление)
+Уровень: колдун/волшебник 3
+Дистанция: колдующий
+Длительность: 8 часов
+Время чтения: 3
+Зона действия: колдующий
+Спасбросок: нет
 
-This spell creates fifteen small meteors, which can be thrown by the caster. Each meteor bursts into a 1-foot-diameter sphere upon impact and inflicts 1d4+6 points of fire damage (plus Strength bonus). The meteors use the Simple Weapon: Missile proficiency (they count as darts), gain a +5 bonus to attack rolls, and strike as +3 weapons. The wizard may attack four additional times per round while throwing the meteors.~
-@33323     = ~Blink~
-@34323     = ~Blink
-(Transmutation)
-Level: Brd 3, Sor/Wiz 3, Mask 4
-Range: Caster
-Duration: 1 round/level
-Casting Time: 3
-Area of Effect: Caster
-Saving Throw: None
+Это заклинание создаёт 15 мелких метеоров, которые может метать заклинатель. Каждый из метеоров взрывается сферой с диаметром в один фут, причиняющей объекту 1d4+6 урона огнём (плюс бонус силы). Метеоры используют черту "Простое оружие, Метательное" (они считаются дротиками), получают бонус +5 к броскам атаки и считаются оружием +3. Во время метания метеоров, заклинатель может совершить четыре дополнительные атаки за раунд.~
+@33323     = ~Мерцание~
+@34323     = ~Мерцание
+(Преобразование)
+Уровень: бард 3, колдун/волшебник 3, жрец Маска
+Дальность: колдующий
+Длительность: 1 раунд/уровень
+Время чтения: 3
+Зона действия: колдующий
+Спасбросок: нет
 
-Through this spell, the caster is able to enter a state where they are constantly phasing between the material and ethereal planes. Each second, the caster has a 50% chance to become ethereal and a 50% chance to stop being ethereal.
+С помощью этого заклинания колдующий непрерывно перемещается между материальным и эфирным мирами. Каждую секунду у заклинателя есть 50% шанс стать эфирным и 50% шанс перестать быть эфирным.
 
-While ethereal, the caster cannot be affected by attacks or spells from non-ethereal creatures, but the caster's attacks and spells also cannot affect non-ethereal creatures. The caster can still cast spells on themself while ethereal.~
-@33417     = ~Beltyn's Burning Blood~
-@34417     = ~Beltyn's Burning Blood
-(Necromancy)
-Level: Sor/Wiz 4
-Range: Sight of Caster
-Duration: 1 round/2 levels
-Casting Time: 2
-Area of Effect: 1 creature
-Saving Throw: Fortitude partial
+Пока заклинатель - эфирный, на него не могут воздействовать атаки и заклинания не эфирных существ, но и его атаки и заклинание тоже не могут воздействовать на не эфирных существ. Заклинатель всё еще может использовать заклинания на себя без каких-либо ограничений.~
+@33417     = ~Горящая кровь Бельтина~
+@34417     = ~Горящая кровь Бельтина
+(Некромантия)
+Уровень: колдун/волшебник 4
+Дальность: зона видимости колдующего
+Длительность: 1 раунд/2 уровня
+Время использования: 2
+Зона действия: 1 существо
+Спасбросок: стойкости, особый
 
-This spell turns a target's blood to flame, doing 3d4 hit points of damage every round and driving the victim berserk with pain. The target gets to make a Fortitude save every round; if successful, the berserk state is negated, but the damage is still dealt.  This spell does not work against creatures that do not have blood, such as the undead, elementals, and plants. Creatures with at least 15/- fire resistance are immune to the berserk effect.~
-@33426     = ~Fire Shield (Blue)~
-@34426     = ~Fire Shield (Blue)
-(Evocation)
-Level: Sor/Wiz 4
-Range: Caster
-Duration: 1 round/level
-Casting Time: 4
-Area of Effect: Caster
-Saving Throw: None 
+Заклинание превращает кровь объекта в огонь, нанося 3d4 урона каждый раунд. При этом жертва впадает в ярость от боли. В каждом раунде цель заклинания должен выбросить спасбросок стойкости: в случае удачного броска безумие отменяется, но урон - нет. Заклинание не действует на существа, у которых нет крови: например, на нежить, элементалей и растения. Если существо обладает по крайней мере 15/- сопротивлением огню, оно не впадает в ярость.~
+@33426     = ~Огненный щит (синий)~
+@34426     = ~Огненный щит (синий)
+(Проявление)
+Уровень: колдун/волшебник 4
+Дальность: колдующий
+Длительность: 1 раунд/уровень
+Время чтения: 4
+Зона действия: колдующий
+Спасбросок: нет
 
-The Blue Fireshield protects the user from fire damage by surrounding the caster with a shield of ice flames, which reduce all fire damage taken by 50%. Opponents striking the caster with melee attacks also suffer 1d6 + 1 per level (max 1d6+15) cold damage per hit.~
-@33427     = ~Fire Shield (Red)~
-@34427     = ~Fire Shield (Red)
-(Evocation)
-Level: Sor/Wiz 4
-Range: Caster
-Duration: 1 round/level
-Casting Time: 4
-Area of Effect: Caster
-Saving Throw: None 
+Синий огненный щит защищает колдующего, окружая его барьером из холодного огня, который снижает весь урон от огня на 50%. Противник, наносящий колдующему удар в ближнем бою, также получает 1d6+1 урона холодом на уровень колдующего (до максимума в 1d6+15).~
+@33427     = ~Огненный щит (красный)~
+@34427     = ~Огненный щит (красный)
+(Проявление)
+Уровень: колдун/волшебник 4
+Дальность: колдующий
+Длительность: 1 раунд/уровень
+Время чтения: 4
+Зона действия: колдующий
+Спасбросок: нет
 
-The Red Fire Shield protects the user from cold damage by surrounding the caster with a shield of burning flames, which reduce all cold damage taken by 50%.  Opponents striking the caster with melee attacks suffer 1d6 + 1 per level (max 1d6+15) fire damage per hit.~
-@33503     = ~Cloudkill~
-@34503     = ~Cloudkill
-(Necromancy)
-Level: Sor/Wiz 5
-Range: Sight of Caster
-Duration: 10 rounds
-Casting Time: 5
-Area of Effect: 15-foot radius
-Saving Throw: Fortitude partial
+Синий огненный щит защищает колдующего, окружая его барьером из огня, который снижает весь урон от холода на 50%. Противник, наносящий колдующему удар в ближнем бою, также получает 1d6+1 урона огнём на уровень колдующего (до максимума в 1d6+15).~
+@33503     = ~Облако-убийца~
+@34503     = ~Облако-убийца
+(Некромантия)
+Уровень: колдун/волшебник 5
+Дальность: обзор колдующего
+Длительность: 10 раундов
+Время чтения: 5
+Зона действия: радиус 15 футов
+Спасбросок: стойкости, отменяет
 
-This spell generates a billowing cloud of ghastly yellowish green vapors that is so toxic as to slay any creature with fewer than 4 Hit Dice with no save. Creatures with no more than half as many Hit Dice as the caster's level (rounded up) must make a Fortitude save or be slain. Holding one's breath has no effect on the lethality of the spell. Creatures in the cloud that don't die suffer 1d10 points of poison damage each round with no save.~
-@33504     = ~Cone of Cold~
-@34504     = ~Cone of Cold
-(Evocation)
-Level: Sor/Wiz 5
-Range: Caster
-Duration: Instantaneous 
-Casting Time: 5
-Area of Effect: Cone
-Saving Throw: Reflex half
+Это заклинание создаёт клубящееся облако ядовитых зелёных испарений, которые убивают любое существо с уровнем здоровья меньше 4. Существа с уровнем здоровья не больше чем половина уровня колдующего (округляется вверх) должны прокинуть спасбросок стойкости, иначе они погибнут. Задержка дыхания, не спасает от действия заклинания. Все существа, которые не погибли, получают 1d10 единиц урона ядом каждый раунд, во время которого они находятся в зоне действия заклинания. Спасброски при этом не кидаются.~
+@33504     = ~Конус холода~
+@34504     = ~Конус холода
+(Проявление)
+Уровень: колдун/волшебник 5
+Дальность: колдующий
+Длительность: мгновенно
+Время чтения: 5
+Зона действия: конус
+Спасбросок: реакции, половина урона
 
-This spell releases a cone-shaped blast of frost from the caster, doing 1d6 hit points of cold damage per level of the caster (15d6 maximum, 12d6 minimum).~
-@33510     = ~Feeblemind~
-@34510     = ~Feeblemind
-(Enchantment) 
-Level: Sor/Wiz 5, Ilmater 5, Bane 6
-Range: Sight of Caster
-Duration: 20 rounds
-Casting Time: 5
-Area of Effect: 1 creature 
-Saving Throw: Will negates
+Это заклинание высвобождает конусообразный поток холода со стороны колдующего, нанося 1d6 очков урона холодом за каждый уровень колдующего (минимум - 12d6 урона, максимум - 15d6 урона).~
+@33510     = ~Слабоумие~
+@34510     = ~Слабоумие
+(Чародейство)
+Уровень: колдун/волшебник 5, жрец Ильматера 5, жрец Бейна 6
+Дальность: обзор колдующего
+Длительность: 20 раундов
+Время чтения: 5
+Зона действия: 1 существо
+Спасбросок: воли, отменяет
 
-This spell turns a target into a gibbering idiot for the duration of the spell.  The victim is allowed a Will save with +2 DC to resist being stupefied.  Feebleminded individuals cannot cast spells.~
-@33514     = ~Lesser Planar Binding: Fire Elemental~
-@34514     = ~Lesser Planar Binding: Fire Elemental
-(Conjuration) 
-Level: Sor/Wiz 5
-Range: Sight of Caster
-Duration: 3 rounds + 1 round/level
-Casting Time: 8
-Area of Effect: Special 
-Saving Throw: None 
+Цель превращается в лопочущего идиота. Избежать слабоумия позволяет успешный спасбросок воли с +2 к УС. Слабоумные существа не могут читать заклинания.~
+@33514     = ~Малые планарные узы: элементаль огня~
+@34514     = ~Малые планарные узы: элементаль огня
+(Призывание)
+Уровень: колдун/волшебник 5
+Дальность: обзор колдующего
+Длительность: 3 раунда + 1 раунд/уровень
+Время чтения: 1 раунд
+Зона действия: особая
+Спасбросок: нет
 
-This spell summons an 8 Hit Dice elemental from the Elemental Plane of Fire. This lesser fire elemental serves the caster for the duration.~
-@33515     = ~Lesser Planar Binding: Earth Elemental~
-@34515     = ~Lesser Planar Binding: Earth Elemental
-(Conjuration) 
-Level: Sor/Wiz 5
-Range: Sight of Caster
-Duration: 3 rounds + 1 round/level
-Casting Time: 8
-Area of Effect: Special 
-Saving Throw: None 
+Это заклинание призывает элементаля огня - облачённую в материальную форму стихию с 8-м уровнем здоровья. Элементаль будет служить вызвавшему его, пока не истечёт срок действия заклятия.~
+@33515     = ~Малые планарные узы: элементаль земли~
+@34515     = ~Малые планарные узы: элементаль земли
+(Призывание)
+Уровень: колдун/волшебник 5
+Дальность: обзор колдующего
+Длительность: 3 раунда + 1 раунд/уровень
+Время чтения: 1 раунд
+Зона действия: особая
+Спасбросок: нет
 
-This spell summons an 8 Hit Dice elemental from the Elemental Plane of Earth. This lesser earth elemental serves the caster for the duration.~
-@33516     = ~Lesser Planar Binding: Water Elemental~
-@34516     = ~Lesser Planar Binding: Water Elemental
-(Conjuration) 
-Level: Sor/Wiz 5
-Range: Sight of Caster
-Duration: 3 rounds + 1 round/level
-Casting Time: 8
-Area of Effect: Special
-Saving Throw: None 
+Это заклинание призывает элементаля земли - облачённую в материальную форму стихию с 8-м уровнем здоровья. Элементаль будет служить вызвавшему его, пока не истечёт срок действия заклятия.~
+@33516     = ~Малые планарные узы: элементаль воды~
+@34516     = ~Малые планарные узы: элементаль воды
+(Призывание)
+Уровень: колдун/волшебник 5
+Дальность: обзор колдующего
+Длительность: 3 раунда + 1 раунд/уровень
+Время чтения: 1 раунд
+Зона действия: особая
+Спасбросок: нет
 
-This spell summons an 8 Hit Dice elemental from the Elemental Plane of Water. This lesser water elemental serves the caster for the duration.~
-@33519     = ~Sunfire~
-@34519     = ~Sunfire
-(Evocation) 
-Level: Sor/Wiz 5
-Range: Caster
-Duration: Instantaneous
-Casting Time: 3
-Area of Effect: 30-foot radius
-Saving Throw: Reflex half
+Это заклинание призывает элементаля воды - облачённую в материальную форму стихию с 8-м уровнем здоровья. Элементаль будет служить вызвавшему его, пока не истечёт срок действия заклятия.~
+@33519     = ~Солнечный огонь~
+@34519     = ~Солнечный огонь
+(Проявление)
+Уровень: колдун/волшебник 5
+Дальность: колдующий
+Длительность: мгновенно
+Время чтения: 3
+Зона действия: радиус 30 футов
+Спасбросок: реакции, половина урона
 
-A sunfire is an explosive burst of flame similar to a fireball, but centered on the caster.  All creatures in the area of effect except for the caster are burned for 1d6 fire damage per caster level (15d6 maximum, 12d6 minimum).  A successful Reflex save halves the damage.  This spell blinds drow and gray dwarves if a Fortitude save is failed. This spell does not provoke an attack of opportunity.~
-@33520     = ~Lesser Planar Binding: Air Elemental~
-@34520     = ~Lesser Planar Binding: Air Elemental
-(Conjuration) 
-Level: Sor/Wiz 5
-Range: Sight of Caster
-Duration: 3 rounds + 1 round/level
-Casting Time: 8
-Area of Effect: Special 
-Saving Throw: None 
+Солнечный огонь это взрывающаяся вспышка огня, подобная огненному шару, но с фокусом на колдующем. Все существа в зоне действия кроме колдующего получают 1d6 урона огнём на уровень колдующего (минимум - 12d6 урона, максимум - 15d6 урона). Успешный спасбросок реакции снижает урон наполовину. Это заклинание ослепляет дроу и серых дварфов при провале спасброска стойкости. Это заклинание не провоцирует атаки при возможности.~
+@33520     = ~Малые планарные узы: элементаль воздуха~
+@34520     = ~Малые планарные узы: элементаль воздуха
+(Призывание)
+Уровень: колдун/волшебник 5
+Дальность: обзор колдующего
+Длительность: 3 раунда + 1 раунд/уровень
+Время чтения: 1 раунд
+Зона действия: особая
+Спасбросок: нет
 
-This spell summons an 8 Hit Dice elemental from the Elemental Plane of Air. This lesser air elemental serves the caster for the duration.~
+Это заклинание призывает элементаля воздуха - облачённую в материальную форму стихию с 8-м уровнем здоровья. Элементаль будет служить вызвавшему его, пока не истечёт срок действия заклятия.
 @33622     = ~Planar Binding: Air Elemental~
 @34622     = ~Planar Binding: Air Elemental
 (Conjuration)
