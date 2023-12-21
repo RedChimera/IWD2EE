@@ -3244,152 +3244,152 @@
 Спасбросок: нет
 
 Это заклинание позволяет призвать одно или несколько существ, которые будут помогать призвавшему их в течение действия заклинания. Тип вызванных существ определяется случайным образом. Это заклинание призывает более сильных существ, чем такие же заклинания низких уровней.~
-@31608    = ~Sol's Searing Orb~
-@32608    = ~Sol's Searing Orb
-(Evocation)
-Level: Clr 6, Drd 5, Rgr 5
-Range: Sight of Caster
-Duration: Instantaneous
-Casting Time: 6
-Area of Effect: 1 creature
-Saving Throw: Reflex half
+@31608    = ~Обжигающий шар Сола~
+@32608    = ~Обжигающий шар Сола
+(Проявление)
+Уровень: священник 6, друид 5, следопыт 5
+Дальность: обзор колдующего
+Длительность: мгновенно
+Время чтения: 6
+Зона действия: 1 существо
+Спасбросок: реакции, половина урона
 
-Upon completion of this spell the caster hurls a brilliant, blazing sphere at a target creature. When it hits it explodes in a flash of light, blinding the target creature and dealing 9d12 points of fire damage. A successful Reflex save avoids the blindness and halves the damage. Drow and gray dwarves must make their Reflex save against blindness with +4 DC. Undead creatures are particularly vulnerable to this spell and take double damage.~
-@31616     = ~Dolorous Decay~
-@32616     = ~Dolorous Decay
-(Necromancy) 
-Level: Clr 6, Drd 6
-Range: Sight of Caster 
-Duration: 1 round/level
-Casting Time: 2
-Area of Effect: 1 creature 
-Saving Throw: Fortitude negates
+По прочтении этого заклинания, колдующий бросает в выбранное существо пылающую сферу. При попадании сфера взрывается вспышкой света, ослепляя цель и нанося ей 9d12 огненного урона. Успешный спасбросок реакции помогает жертве избежать ослепления и уменьшает урон вдвое. Дроу и серые дварфы кидают спасбросок реакции против ослепления с +4 к УС. Нежить особенно уязвима для этого заклинания и получает двойной урон.~
+@31616     = ~Мучительное гниение~
+@32616     = ~Мучительное гниение
+(Некромантия)
+Уровень: священник 6, друид 6
+Дальность: обзор колдующего
+Длительность: 1 раунд/раунд
+Время чтения: 2
+Зона действия: 1 существо
+Спасбросок: стойкости, отменяет
 
-Dolorous decay is a rotting and withering of the body that spreads quickly and painfully throughout the afflicted creature.  Afflicted creatures take 1 point of damage per second and are slowed for 1 round per level.  The target creature can resist the disease with a successful Fortitude save at +8 DC.~
+"Мучительное гниение" вызывает быстро распространяющиеся в теле поражённого создания разложение и увядание. Жертва этого заклинания теряет по 1 пункту здоровья в секунду и замедляется на 1 раунд за уровень заклинателя. Если жертва сумеет прокинуть спасбросок стойкости с +8 к УС, заклинание не сработает.~
 @31727     = ~Заразный страх~
 @32727     = ~Заразный страх
-(Necromancy)
-Level: Brd 7, Clr 8, Sor/Wiz 8
-Range: Sight of Caster
-Duration: 10 rounds
-Casting Time: 8
-Area of Effect: 30-foot radius
-Saving Throw: Will negates
+(Некромантия)
+Уровень: бард 7, священник 8, колдун/волшебник 8
+Дальность: обзор колдующего
+Длительность: 10 раундов
+Время чтения: 8
+Зона действия: радиус 30 футов
+Спасбросок: воли, отменяет
 
-Contagious Fear causes panic among enemies in the area of effect, and the panic then spreads to other creatures. Each enemy in the initial area of effect must make a Will save or run in fear for 10 rounds. Any enemy that comes within 10 feet of one of the panicking creatures must make the save as well, or else the contagion will spread to that creature. Creatures immune to fear will not transmit the contagion. A creature that makes a save against this spell is immune to the spell for 2 rounds. After the spell expires on a creature, that creature is immune to the contagion for 8 hours.~
+Заразный страх вызывает панику среди врагов в зоне действия эффекта, а затем паника распространяется на других существ. Каждый враг в начальной области действия должен сделать спасбросок воли или бежать в страхе в течение 10 раундов. Любой враг, оказавшийся в радиусе 10 футов от одного из паникующих существ, также должен сделать спасбросок, иначе зараза распространится и на него. Существа, невосприимчивые к страху, не передают заразу. Существо, сделавшее спасбросок против этого заклинания, получает иммунитет к заклинанию на 2 раунда. После того как действие заклинания на существе закончится, оно будет невосприимчиво к эффекту заклинания на 8 часов.~
 @31750     = ~Призыв природных союзников VII~
-@32750     = ~Summon Nature's Ally VII
-(Conjuration)
-Level: Drd 7
-Range: Sight of Caster
-Duration: 10 rounds + 5 rounds/level
-Casting Time: 6 
-Area of Effect: Special
-Saving Throw: None 
+@32750     = ~Призыв природных союзников VII
+(Призывание)
+Уровень: друид 7
+Дальность: обзор колдующего
+Длительность: 10 раундов + 5 раундов/уровень
+Время чтения: 6
+Зона действия: особая
+Спасбросок: нет
 
-This spell summons one or more creatures of nature who will aid the caster for the duration of the spell.  The type of creatures that come is random.  The creatures summoned are more powerful than creatures summoned by lesser versions of this spell.~
-@31802     = ~Mass Heal~
-@32802     = ~Mass Heal
-(Conjuration)
-Level: Clr 8, Drd 9, Lathander 9
-Range: Sight of Caster
-Duration: Instantaneous
-Casting Time: 9
-Area of Effect: 20-foot radius
-Saving Throw: None
+Это заклинание позволяет призвать одно или несколько существ, которые будут помогать призвавшему их в течение действия заклинания. Тип вызванных существ определяется случайным образом. Это заклинание призывает более сильных существ, чем такие же заклинания низких уровней.~
+@31802     = ~Массовое исцеление~
+@32802     = ~Массовое исцеление
+(Призывание)
+Уровень: священник 8, друид 9, жрец Латандера 9
+Дальность: обзор колдующего
+Длительность: мгновенно
+Время чтения: 9
+Зона действия: радиус 20 футов
+Спасбросок: нет
 
-Mass Heal wipes away disease and injury from all living allies in the area of effect. It cures blindness, diseases, feeblemind and restores the targets to maximum hit points if they have been injured. Enemy undead in the area of effect suffer the effects of a Harm spell if the caster succeeds on a ranged touch attack roll for each one.~
+"Массовое исцеление" исцеляет всех живых союзников в зоне действия заклинания от болезней и травм. Заклинание лечит слепоту, болезни, слабость и восстанавливает количество пунктов здоровья цели до максимума. Вражеская нежить в зоне действия эффекта получает эффект заклинания "Вред", если заклинателю удается выполнить дистанционную атака касанием для каждой из них.~
 @31850     = ~Призыв природных союзников VIII~
-@32850     = ~Summon Nature's Ally VIII
-(Conjuration) 
-Level: Drd 8
-Range: Sight of Caster
-Duration: 10 rounds + 5 rounds/level
-Casting Time: 6 
-Area of Effect: Special
-Saving Throw: None 
+@32850     = ~Призыв природных союзников VIII
+(Призывание)
+Уровень: друид 8
+Дальность: обзор колдующего
+Длительность: 10 раундов + 5 раундов/уровень
+Время чтения: 6
+Зона действия: особая
+Спасбросок: нет
 
-This spell summons one or more creatures of nature who will aid the caster for the duration of the spell.  The type of creatures that come is random.  The creatures summoned are more powerful than creatures summoned by lesser versions of this spell.~
+Это заклинание позволяет призвать одно или несколько существ, которые будут помогать призвавшему их в течение действия заклинания. Тип вызванных существ определяется случайным образом. Это заклинание призывает более сильных существ, чем такие же заклинания низких уровней.~
 @31901     = ~Elemental Legion~
-@32901     = ~Elemental Legion
-(Conjuration)
-Level: Drd 9, Selune 9
-Range: Sight of Caster
-Duration: 3 rounds + 1 round/level
-Casting Time: 15
-Area of Effect: Special 
-Saving Throw: None
+@32901     = ~Легион элементалей
+(Призывание)
+Уровень: друид 9, жрец Селуны 9
+Дальность: обзор колдующего
+Длительность: 3 раунда + 1 раунд/уровень
+Время чтения: 15
+Зона действия: особая
+Спасбросок: нет
 
-This spell allows the caster to summon four elementals, one from each of the elemental planes. The spell always summons 12 hit dice elementals.~
+Заклинание позволяет заклинателю призвать четырёх элементалей, по одному из каждой стихии. Заклинание всегда призывает элементалей с 12-м уровнем здоровья.~
 @31950     = ~Призыв природных союзников IX~
-@32950     = ~Summon Nature's Ally IX
-(Conjuration) 
-Level: Drd 9
-Range: Sight of Caster
-Duration: 10 rounds + 5 rounds/level
-Casting Time: 6
-Area of Effect: Special 
-Saving Throw: None 
+@32950     = ~Призыв природных союзников IX
+(Призывание)
+Уровень: друид 9
+Дальность: обзор колдующего
+Длительность: 10 раундов + 5 раундов/уровень
+Время чтения: 6
+Зона действия: особая
+Спасбросок: нет
 
-This spell summons one or more creatures of nature who will aid the caster for the duration of the spell.  The type of creatures that come is random.  The creatures summoned are more powerful than creatures summoned by lesser versions of this spell.~
+Это заклинание позволяет призвать одно или несколько существ, которые будут помогать призвавшему их в течение действия заклинания. Тип вызванных существ определяется случайным образом. Это заклинание призывает более сильных существ, чем такие же заклинания низких уровней.~
 @33104     = ~Очаровать персонажа~
-@34104     = ~Charm Person
-(Enchantment)
-Level: Brd 1, Sor/Wiz 1
-Range: Sight of Caster
-Duration: 5 rounds
-Casting Time: 1
-Area of Effect: 1 creature
-Saving Throw: Will negates 
+@34104     = ~Очаровать персонажа
+(Чародейство)
+Уровень: бард 1, колдун/волшебник 1
+Дальность: обзор колдующего
+Длительность: 5 раундов
+Время чтения: 1
+Зона действия: 1 существо
+Спасбросок: воли, отменяет
 
-This spell affects any single person it is cast upon. The term person includes any bipedal human, demihuman, or humanoid of man-size or smaller, such as brownies, dryads, dwarves, elves, gnolls, gnomes, goblins, half-elves, halflings, half-orcs, hobgoblins, humans, kobolds, lizard men, nixies, orcs, pixies, sprites, troglodytes, and others. Thus, a 10th-level fighter could be charmed, but an ogre could not. The person receives a Will save to avoid the effect.  If the spell recipient fails his saving throw, he regards the caster as a trusted friend and ally to be heeded and protected.  The caster may give him orders, and the charmed individual will carry them out as quickly as possible.
-If the caster harms, or attempts to harm, the charmed person by some overt action, or if a dispel magic spell is successfully cast upon the charmed person, the charm spell is broken.  If two or more charm effects simultaneously affect a creature, the most recent charm takes precedence.  Note that the subject has full memory of the events that took place while he was charmed. Also note that you cannot have a charmed creature leave the area where he was charmed.~
+Это заклинание воздействует на любого выбранного персонажа. Термин "человекообразный" подразумевает любое двуногое человекоподобное существо размером с человека или меньше, такое как домовой, дриада, дварф, эльф, гнолл, гном, гоблин, полуэльф, полурослик, полуорк, хобгоблин, человек, кобольд, человекоящер, русалка, орк, пикси, фея, троглодит и другие. Таким образом, боец 10-го уровня может быть очарован, а огр не может. Чтобы избежать эффекта, персонаж совершает спасбросок воли. Если цель заклинания проваливает спасбросок, она считает колдующего верным другом и союзником, которого нужно беречь и защищать. Колдующий может отдавать ему приказы, а очарованный персонаж будет тут же их выполнять.
+Если заклинатель причинит вред персонажу или попытается это сделать, или при успешном прочтении на очарованном персонаже заклинания "Развеивание магии", заклинание будет снято. Если на персонажа будет наложено два или более эффекта очарования, предпочтение будет отдано последнему. Учтите, что цель будет помнить обо всём, что случилось в то время, пока она была очарована. Помните также, что вы не можете заставить очарованное существо покинуть территорию, где оно было очаровано.~
 @33122     = ~Ледяной кинжал~
-@34122     = ~Ice Dagger
-(Evocation)
-Level: Drd 1, Sor/Wiz 1
-Range: Sight of Caster
-Duration: Instantaneous 
-Casting Time: 1
-Area of Effect: 1 creature
-Saving Throw: None
+@34122     = ~Ледяной кинжал
+(Проявление)
+Уровень: друид 1, колдун/волшебник 1
+Дальность: обзор колдующего
+Длительность: мгновенно
+Время чтения: 1
+Зона действия: 1 существо
+Спасбросок: нет
 
-Upon completion of this spell, the caster hurls a magical shard of ice imbued with deep freezing cold, dealing 1d4 cold damage to the target creature per caster level (5d4 maximum). Other creatures within 5 feet also take the same amount of damage, except that they may make a Reflex save for half damage.~
-@33209     = ~Luck~
-@34209     = ~Luck
-(Enchantment) 
-Level: Brd 2, Drd 2, Sor/Wiz 2
-Range: Sight of Caster
-Duration: 10 rounds
-Casting Time: 2
-Area of Effect: 1 creature
-Saving Throw: None
+Заклинатель бросает в цель осколок волшебного льда. Цель получает урон холодом 1d4 за каждый уровень колдующего (вплоть до 5d4). Кроме того, каждое оказавшееся в пределах 5 футов от места взрыва существо получает такое же количество урона, но они могут сделать спасбросок реакции для избежания эффекта.~
+@33209     = ~Удача~
+@34209     = Удача
+(Чародейство)
+Уровень: бард 2, друид 2, колдун/волшебник 2
+Дальность: обзор колдующего
+Длительность: 10 раундов
+Время чтения: 2
+Зона действия: 1 существо
+Спасбросок: нет
 
-The recipient of this spell gains a +2 bonus to luck for the duration of the spell.
+Цель этого заклинания получает +2 к удаче на время действия заклинания.
 
-Luck influences damage dice rolls, attack rolls, saving throws, and skill checks. For instance, if a character with +2 luck would roll 18 on an attack, the luck bonus adds 2 to the roll, making it a 20 and resulting in a critical hit.~
-@33299     = ~Summon Cow~
-@34299     = ~Summon Cow
-(Conjuration)
-Level: Selune 3
-Range: Visual range of the caster 
-Duration: Instant
-Casting Time: 1
-Area of Effect: 1 creature
-Saving Throw: None
+Удача влияет на броски на атаку, урон, проверки способностей и спасброски, увеличивая эти броски, но не больше максимума. Например, при удаче +2, если бросок на атаку был 18, то при добавлении бонуса от удачи, он становится 20 (критический удар).~
+@33299     = ~Вызов коровы~
+@34299     = ~Вызов коровы
+(Призывание)
+Уровень: жрец Селуны 3
+Дальность: зона видимости колдующего
+Длительность: немедленно
+Время чтения: 1
+Зона действия: 1 существо
+Спасбросок: нет
 
-In a shocking display that is bound to cow your enemies, this spell drops a cow from the sky onto the target creature. The cow deals 10d8 bludgeoning damage to the creature. There is no Saving Throw, and Spell Resistance cannot stop the cow.~
-@33306     = ~Hold Person~
-@34306     = ~Hold Person
-(Enchantment) 
-Level: Brd 2, Clr 2, Sor/Wiz 3, Helm 2
-Range: Sight of Caster
-Duration: 1 round/2 levels
-Casting Time: 3
-Area of Effect: Special
-Saving Throw: Will negates 
+В шокирующем зрелище, которое не может не поразить ваших врагов, это заклинание сбрасывает с неба корову на целевое существо. Корова наносит 10d8 урона. Спасбросок отсутствует, и даже сопротивление заклинаниям не в силах остановить корову!~
+@33306     = ~Удержание персонажа~
+@34306     = ~Удержание персонажа
+(Чародейство)
+Уровень: бард 2, священник 2, колдун/волшебник 3, жрец Хелма 2
+Дальность: обзор колдующего
+Длительность: 1 раунд/2 уровня
+Время чтения: 3
+Зона действия: особая
+Спасбросок: воли, отменяет
 
-This spell holds 1-4 humans, demihumans, or humanoid creatures immobile for a short duration. The Hold Person spell affects any bipedal human, demihuman, or humanoid of man size or smaller, including dwarves, elves, gnolls, gnomes, goblins, half-elves, halflings, half-orcs, hobgoblins, humans, lizard men, orcs, troglodytes, and others. Thus, a 10th-level fighter could be held, while an ogre could not. The effect selects the enemies closest to the target and holds them. Enemies making their Will saves are totally unaffected by the spell. Undead creatures cannot be held. Held creatures cannot move or speak, but they remain aware of events around them and can use abilities not requiring motion or speech. Being held does not prevent the worsening of the subject's condition due to wounds, disease, or poison.  A successful Will save negates any effect.~
+Это заклинание на короткое время обездвиживает 1d4 людей, полулюдей или человекообразных существ. Это заклинание действует на любых двуногих человекообразных существ размером с человека или меньше. Примером такого существа может домовой, дриада, дварф, эльф, гнолл, гном, гоблин, полуэльф, полурослик, полуорк, хобгоблин, человек, кобольд, человекоящер, русалка, орк, пикси, фея, троглодит и другие. Таким образом, боец 10-го уровня может быть удержан, а огр - нет. Эффект срабатывает на ближайших к цели заклинания врагов и удерживает их. Враги, успешно совершившие спасбросок воли не подвержены действию заклинания. Нежить не подвержена воздействию этого заклинания. Удерживаемые существа не способны двигаться и говорить, но они остаются в курсе происходящего и могут использовать способности, не требующие движения или речи. Удержание не предотвращает ухудшения состояния из-за ран, болезней или яда.~
 @33312     = ~Slow~
 @34312     = ~Slow
 (Transmutation) 
