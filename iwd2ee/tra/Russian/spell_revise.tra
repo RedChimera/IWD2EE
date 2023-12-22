@@ -3829,102 +3829,102 @@
 Спасбросок: нет
 
 Это заклинание телепортирует всех членов группы к заклинателю. Члены группы, находящиеся в других областях, не затрагиваются этим заклинанием. "Призыв группы" может пригодиться, если нужно вытащить союзников из опасных ситуаций.~
-@35354     = ~Flame Shots~
-@36354     = ~Flame Shots
-(Transmutation)
-Level: Rgr 3
-Range: Caster
-Duration: 20 rounds/level or until used up
-Casting Time: 3
-Area of Effect: Caster
-Saving Throw: None
+@35354     = ~Огненные снаряды~
+@36354     = ~Огненные снаряды
+(Преобразование)
+Уровень: следопыт 3
+Дальность: колдующий
+Длительность: 20 раундов на уровень или пока не израсходуется
+Время чтения: 3
+Зона действия: колдующий
+Спасбросок: нет
 
-This spell turns the ranger's missile attacks into flaming projectiles. The ranger's next 10 missile attacks deal an additional 1d6 fire damage.~
-@35451     = ~Curing Contingency~
-@36451     = ~Curing Contingency
-(Universal)
-Level: Clr 4
-Range: Special
-Duration: 8 hours
-Casting Time: 8
-Area of Effect: Special
-Saving Throw: None
+Это заклинание превращает дистанционные атаки следопыта в огненные. Следующие 10 дистанционных атак следопыта нанесут дополнительно 1d6 урона огнем.~
+@35451     = ~Вылечить будущий недуг~
+@36451     = ~Вылечить будущий недуг
+(Универсальное)
+Уровень: священник 4
+Дальность: особая
+Длительность: 8 часов
+Время чтения: 8
+Зона действия: особая
+Спасбросок: нет
 
-Curing Contigency stores a healing or curing spell in a creature, which will be automatically cast on that creature when they need it. After casting this spell, the caster must then attempt to cast another spell of 4th-level or lower on a creature they can see. Instead of being cast, that spell is stored in the creature for 8 hours (expending one use of the spell).
+Это заклинание хранит в существе заклинание исцеления или восстановления, которое будет автоматически применено к этому существу, когда оно в нем нуждается. После произнесения этого заклинания заклинатель должен произнести другое заклинание 4-го уровня или ниже на существо, которое он может видеть. Вместо того чтобы быть произнесенным, это заклинание расходуется и сохраняется в существе в течение 8 часов.
 
-If the stored spell was a healing spell, it will be automatically cast when the creature has less than 40% of its maximum Hit Points remaining. If the stored spell was one that cures a status ailment (e.g. Remove Paralysis or Neutralize Poison), it will be cast when the creature is affected by an ailment it can cure.
+Если сохраненное заклинание было заклинанием исцеления, оно будет автоматически произнесено, когда у существа останется менее 40% от максимального количества пунктов здоровья. Если сохраненное заклинание было заклинанием, лечащим определённый эффект (например, "Снять паралич" или "Нейтрализация яда"), то оно будет произнесено, когда существо будет поражено заболеванием, которое оно может вылечить.
 
-The caster can cast this spell multiple times on different creatures, but a single creature cannot have more than one stored spell at once.
+Заклинатель может накладывать это заклинание несколько раз на разных существ, но одно существо не может иметь более одного сохраненного заклинания одновременно.
 
-The following spells can be stored: Cure Light Wounds, Remove Fear, Slow Poison, Cure Moderate Wounds, Break Enchantment, Remove Paralysis, Remove Disease, Exaltation, Cure Serious Wounds, Neutralize Poison, Restoration, and Cure Critical Wounds.~
-@35452     = ~Duel~
-@36452     = ~Duel
-(Evocation)
-Level: Pal 4
-Range: Sight of Caster
-Duration: 10 rounds or until someone dies
-Casting Time: 1
-Area of Effect: 1 creature
-Saving Throw: None
+Можно хранить следующие заклинания: "Исцеление лёгких ран", "Снять страх", "Замедлить яд", "Исцеление умеренных ран", "Разрушить чары", "Снять паралич", "Излечить болезнь", "Возвышение", "Исцеление серьёзных ран", "Нейтрализация яд", "Восстановление" и "Исцеление критических ран".~
+@35452     = ~Дуэль~
+@36452     = ~Дуэль
+(Проявление)
+Уровень: паладин 4
+Дальность: обзор колдующего
+Длительность: 10 раундов или до смерти цели или заклинателя
+Время чтения: 1
+Зона действия: 1 существо
+Спасбросок: нет
 
-This spell can only be cast on an enemy. Casting it causes everyone other than the paladin and the target to disappear temporarily. The paladin then has 10 rounds to duel the enemy without outside interference. After those 10 rounds, or if the paladin or the enemy dies, all creatures reappear where they were before.~
-@35453     = ~Snake's Swiftness~
-@36453     = ~Snake's Swiftness~
-@35454     = ~Pebbles to Boulders~
-@36454     = ~Pebbles to Boulders
-(Transmutation)
-Level: Clr 5, Drd 4, Rgr 4
-Range: Caster
-Duration: 5 rounds/level or until used up
-Casting Time: 4
-Area of Effect: Caster
-Saving Throw: None
+Это заклинание можно наложить только на врага. При его произнесении все, кроме паладина и цели, временно исчезают. После этого у паладина есть 10 раундов, чтобы сразиться с врагом без постороннего вмешательства. По истечении этих 10 раундов или если паладин или его враг умрет, все существа снова появятся там, где они были раньше.~
+@35453     = ~Стремительность змеи~
+@36453     = ~Стремительность змеи~
+@35454     = ~Гальку в валуны~
+@36454     = ~Гальку в валуны
+(Преобразование)
+Уровень: священник 5, друид 4, следопыт 4
+Дальность: колдующий
+Длительность: 5 раундов на уровень или пока не будет использовано
+Время чтения: 4
+Зона действия: колдующий
+Спасбросок: нет
 
-This spell turns the caster's sling bullets into boulders. While the spell is active, if the caster launches a bullet, it instantly turns into a large boulder that retains the speed of the original bullet. The boulder inflicts an additional 7d4 damage if it hits (on top of the former damage of the bullet). Only a limited number of bullets can be turned into boulders before the spell ends: up to one per 2 levels.~
-@35551     = ~Supreme Speed~
-@36551     = ~Supreme Speed
-(Transmutation)
-Level: Rgr 5
-Range: Caster
-Duration: 15 rounds
-Casting Time: 4
-Area of Effect: Caster
-Saving Throw: None
+Это заклинание превращает снаряды для пращи в валуны. Пока заклинание активно, если заклинатель выпускает снаряд, он мгновенно превращается в большой валун, сохраняющий скорость первоначальной пули. При попадании валун наносит дополнительные 7d4 урона (помимо исходного урона снаряда). В валуны можно превратить лишь ограниченное количество снарядов: один за два уровня заклинателя.~
+@35551     = ~Абсолютная скорость~
+@36551     = ~Абсолютная скорость
+(Преобразование)
+Уровень: следопыт 5
+Дальность: колдующий
+Длительность: 15 раундов
+Время чтения: 4
+Зона действия: колдующий
+Спасбросок: нет
 
-This spell drastically speeds up the ranger's movement. For the duration, the ranger moves at the fastest possible speed.~
-@35455     = ~Crumble~
-@36455     = ~Crumble
-(Transmutation)
-Level: Drd 4
-Range: Sight of Caster
-Duration: Instantaneous
-Casting Time: 4
-Area of Effect: 1 creature
-Saving Throw: None
+Это заклинание значительно ускоряет передвижение следопыта. В течение всего времени действия заклинания, следопыт движется с максимально возможной скоростью.~
+@35455     = ~Сокрушение~
+@36455     = ~Сокрушение
+(Преобразование)
+Уровень: друид 4
+Дальность: обзор колдующего
+Длительность: мгновенно
+Время чтения: 4
+Зона действия: 1 существо
+Спасбросок: нет
 
-Crumble is a spell specialized in destroying unnatural objects and constructs. When cast on an object or construct, it deals 1d8 bludgeoning damage per level (max 15d8), with no saving throw. The target's Spell Resistance does not affect this spell.~
-@35456     = ~Steel Wind Strike~
-@36456     = ~Steel Wind Strike
-(Transmutation)
-Level: Rgr 4, Tempus 3
-Range: Sight of Caster
-Duration: Instantaneous
-Casting Time: 0
-Area of Effect: 20-foot radius
-Saving Throw: None
+Это заклинание, специализируется на уничтожении неестественных объектов и конструктов. При наложении на такой объект или конструкт оно наносит 1d8 дробящего урона за уровень (максимум 15d8), без спасброска. Это заклинание игнорирует сопротивление магии цели.~
+@35456     = ~Удар стального ветра~
+@36456     = ~Удар стального ветра
+(Преобразование)
+Уровень: следопыт 4, жрец Темпуса 3
+Дальность: обзор колдующего
+Длительность: мгновенно
+Время чтения: 0
+Зона действия: радиус 20 футов
+Спасбросок: нет
 
-Steel Wind Strike enables the caster to zoom between each enemy in the area of effect, making attacks against each enemy with each equipped weapon. The caster must have one or more melee weapons equipped for this spell to function; ranged weapons won't work. Attacks made this way can critically hit and will apply any on-hit effects of the weapons. Like with Whirlwind Attack, the time spent casting this spell prevents the character from making any other attacks for the round.~
-@35552     = ~Expose to the Elements~
-@36552     = ~Expose to the Elements
-(Transmutation)
-Level: Drd 5, Sor/Wiz 8
-Range: Sight of Caster
-Duration: 1 round/level
-Casting Time: 3
-Area of Effect: 1 creature
-Saving Throw: None
+Это заклинание позволяет заклинателю перемещаться между противниками в зоне действия заклинания, нанося атаки по каждому из них каждым экипированным оружием. Чтобы заклинание сработало, у заклинателя должно быть экипировано одно или несколько оружий ближнего боя; оружие дальнего боя не сработает. Атаки, сделанные таким образом, могут быть критически успешными и применяют все эффекты оружия при попадании. Как и в случае с "Вихревой атакой", время, потраченное на использование этого заклинания, не позволяет персонажу совершать другие атаки в течение раунда.~
+@35552     = ~Открыться стихиям~
+@36552     = ~Открыться стихиям
+(Преобразование)
+Уровень: друид 5, колдун/волшебник 8
+Дальность: обзор колдующего
+Длительность: 1 раунд/уровень
+Время чтения: 3
+Зона действия: 1 существо
+Спасбросок: нет
 
-This spell increases the harm that extreme conditions do to the target's body. For the duration, all fire, cold, electrical and acid damage dealt to the target is increased by 50%. This increase is applied before damage resistance. There is no saving throw.~
+Это заклинание увеличивает вред, наносимый телу цели экстремальными условиями. На время действия заклинания все повреждения, наносимые цели огнем, холодом, электричеством и кислотой, увеличиваются на 50%. Это увеличение применяется до вычисления сопротивления урону. Спасброска от этого заклинания нет.~
 @35553     = ~Thorn Shots~
 @36553     = ~Thorn Shots
 (Transmutation)
