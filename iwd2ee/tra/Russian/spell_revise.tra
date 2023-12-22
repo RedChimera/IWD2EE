@@ -2591,7 +2591,7 @@
 @30107=~Посох заклинаний (Ледяные пальцы)~
 @30108=~Посох заклинаний (Призыв природных союзников I)~
 @30109=~Посох заклинаний (Метка охотника)~
-@30110=~Посох заклинаний (Уменьшение)~
+@30110=~Посох заклинаний (Сокращение)~
 @30111=~Выпустить "Эклектическую Последовательность"~
 @30112=~Спроецированное изображение~
 @30113=~Посох заклинаний (Фильтр восприятия)~
@@ -3557,206 +3557,206 @@
 Спасбросок: нет
 
 Это заклинание призывает элементаля воздуха - облачённую в материальную форму стихию с 8-м уровнем здоровья. Элементаль будет служить вызвавшему его, пока не истечёт срок действия заклятия.
-@33622     = ~Planar Binding: Air Elemental~
-@34622     = ~Planar Binding: Air Elemental
-(Conjuration)
-Level: Sor/Wiz 6
-Range: Sight of Caster
-Duration: 3 rounds + 1 round/level
-Casting Time: 1 round
-Area of Effect: Special
-Saving Throw: None
+@33622     = ~Планарные узы: элементаль воздуха~
+@34622     = ~Планарные узы: элементаль воздуха
+(Призывание)
+Уровень: колдун/волшебник 6
+Дальность: обзор колдующего
+Длительность: 3 раунда + 1 раунд/уровень
+Время чтения: 1 раунд
+Зона действия: особая
+Спасбросок: нет
 
-This spell summons a 12 Hit Dice elemental from the Elemental Plane of Air. The air elemental serves the caster for the duration.~
-@33627     = ~Planar Binding: Fire Elemental~
-@34627     = ~Planar Binding: Fire Elemental
-(Conjuration)
-Level: Sor/Wiz 6
-Range: Sight of Caster
-Duration: 3 rounds + 1 round/level
-Casting Time: 1 round
-Area of Effect: Special
-Saving Throw: None
+Это заклинание призывает элементаля воздуха - облачённую в материальную форму стихию с 12-м уровнем здоровья. Элементаль будет служить вызвавшему его, пока не истечёт срок действия заклятия.~
+@33627     = ~Планарные узы: элементаль огня~
+@34627     = ~Планарные узы: элементаль огня
+(Призывание)
+Уровень: колдун/волшебник 6
+Дальность: обзор колдующего
+Длительность: 3 раунда + 1 раунд/уровень
+Время чтения: 1 раунд
+Зона действия: особая
+Спасбросок: нет
 
-This spell summons a 12 Hit Dice elemental from the Elemental Plane of Fire. The fire elemental serves the caster for the duration.~
-@33628     = ~Planar Binding: Earth Elemental~
-@34628     = ~Planar Binding: Earth Elemental
-(Conjuration)
-Level: Sor/Wiz 6
-Range: Sight of Caster
-Duration: 3 rounds + 1 round/level
-Casting Time: 1 round
-Area of Effect: Special
-Saving Throw: None
+Это заклинание призывает элементаля огня - облачённую в материальную форму стихию с 12-м уровнем здоровья. Элементаль будет служить вызвавшему его, пока не истечёт срок действия заклятия.~
+@33628     = ~Планарные узы: элементаль земли~
+@34628     = ~Планарные узы: элементаль земли
+(Призывание)
+Уровень: колдун/волшебник 6
+Дальность: обзор колдующего
+Длительность: 3 раунда + 1 раунд/уровень
+Время чтения: 1 раунд
+Зона действия: особая
+Спасбросок: нет
 
-This spell summons a 12 Hit Dice elemental from the Elemental Plane of Earth. The earth elemental serves the caster for the duration.~
-@33629     = ~Planar Binding: Water Elemental~
-@34629     = ~Planar Binding: Water Elemental
-(Conjuration)
-Level: Sor/Wiz 6
-Range: Sight of Caster
-Duration: 3 rounds + 1 round/level
-Casting Time: 1 round
-Area of Effect: Special
-Saving Throw: None
+Это заклинание призывает элементаля земли - облачённую в материальную форму стихию с 12-м уровнем здоровья. Элементаль будет служить вызвавшему его, пока не истечёт срок действия заклятия.~
+@33629     = ~Планарные узы: элементаль воды~
+@34629     = ~Планарные узы: элементаль воды
+(Призывание)
+Уровень: колдун/волшебник 6
+Дальность: обзор колдующего
+Длительность: 3 раунда + 1 раунд/уровень
+Время чтения: 1 раунд
+Зона действия: особая
+Спасбросок: нет
 
-This spell summons a 12 Hit Dice elemental from the Elemental Plane of Water. The water elemental serves the caster for the duration.~
-@33708     = ~Acid Storm~
-@34708     = ~Acid Storm
-(Evocation)
-Level: Drd 7, Sor/Wiz 7, Talos 6
-Range: Sight of Caster
-Duration: 1 round/3 levels
-Casting Time: 7
-Area of Effect: 20-foot radius
-Saving Throw: Reflex half
+Это заклинание призывает элементаля воды - облачённую в материальную форму стихию с 12-м уровнем здоровья. Элементаль будет служить вызвавшему его, пока не истечёт срок действия заклятия.~
+@33708     = ~Кислотная буря~
+@34708     = ~Кислотная буря
+(Проявление)
+Уровень: друид 7, колдун/волшебник 7, жрец Талоса 6
+Дальность: обзор колдующего
+Длительность: 1 раунд/3 уровня
+Время чтения: 7
+Зона действия: радиус 20 футов
+Спасбросок: реакции, половина урона
 
-You cause acid to rain downward, dealing 3d6 acid damage per round for 1 round per 3 levels (max 24d6 over 8 rounds). The acid lasts half as many rounds (rounded down) for creatures that succeed on a Reflex save. The storm itself lasts only a few seconds, but the acid adheres to the skin of creatures in the area, causing damage over time.~
+На указанную область выпадает кислотный дождь, который наносит по 3d6 кислотного урона в раунд и длиться один раунд за каждые три уровня заклинателя (вплоть до 24d6 урона за 8 раундов). Кислота действует в два раза меньше раундов (округляется вниз) для существ, которым удалось прокинуть спасбросок реакции. Сама буря длится всего несколько секунд, но кислота прилипает к коже существ в зоне поражения и наносит урон с течением времени.~
 @33713     = ~Cacofiend~
-@34713     = ~Cacofiend
-(Conjuration) 
-Level: Sor/Wiz 7
-Range: Sight of Caster
-Duration: 15 rounds
-Casting Time: 1 round
-Area of Effect: Special 
-Saving Throw: None 
+@34713     = ~Какодемон
+(Призывание)
+Уровень: колдун/волшебник 7
+Дальность: обзор колдующего
+Длительность: 15 раундов
+Время чтения: 1 раунд
+Зона действия: особая
+Спасбросок: нет
 
-When this spell is cast, it will summon a cornugon, a devil from the Nine Hells. The cornugon will serve the caster as long as the caster is under Protection from Evil. However, if the caster ever loses that protection, the devil will turn on the party. This is a dangerous spell to invoke, saved best for desperate times.~
-@33714     = ~Delayed Blast Fireball~
-@34714     = ~Delayed Blast Fireball
-(Evocation)
-Level: Sor/Wiz 7
-Range: Sight of Caster
-Duration: Special
-Casting Time: 7
-Area of Effect: 30-foot radius
-Saving Throw: Reflex half
+Заклинание вызывает корнугона, дьявола из Девяти Адов. Корнугон будет служить заклинателю, пока тот находится под защитой от зла. Однако, если тот лишится защиты, то дьявол обернётся против заклинателя и его союзников. Это очень опасное заклинание, которое лучше оставить для самых безнадёжных случаев.~
+@33714     = ~Задержанный взрыв огненного шара~
+@34714     = ~Задержанный взрыв огненного шара
+(Проявление)
+Уровень: колдун/волшебник 7
+Дальность: обзор колдующего
+Длительность: особая
+Время чтения: 7
+Зона действия: радиус 30 футов
+Спасбросок: реакции, половина урона
 
-This spell creates a fireball that hovers at a point determined by the caster.  The fireball will stay in position until someone walks too close to it, at which point it will explode for 1d6 points of damage per caster level. (max 20d6, Reflex save for half damage).~
-@33804     = ~Mind Blank~
-@34804     = ~Mind Blank
-(Abjuration)
-Level: Clr 9, Sor/Wiz 8
-Range: 10 ft.
-Duration: 8 hours
-Casting Time: 1
-Area of Effect: 1 creature
-Saving Throw: None
+Это заклинание создаёт огненный шар, который зависает в воздухе в точке, указанной колдующим. Огненный шар будет парить в воздухе, пока кто-то не подойдёт к нему на близкое расстояние - тогда шар взорвётся, нанося 1d6 единиц урона за уровень колдующего (до максимума в 20d6 урона, успешный спасбросок реакции уменьшает урон вдвое).~
+@33804     = ~Очистка разума~
+@34804     = ~Очистка разума
+(Отречение)
+Уровень: священник 9, колдун/волшебник 8
+Дальность: 10 футов
+Длительность: 8 часов
+Время чтения: 1
+Зона действия: 1 существо
+Спасбросок: нет
 
-In the interests of one's self-control and privacy, Mind Blank shields a creature's mind from almost any mental effect - Charm, Command, Confusion, Dominate Person, Fear, Feeblemind, Hopelessness, Paralysis, Sleep, Stun, and any scrying by crystal balls or other divination methods.~
-@33809     = ~Summon Fiend~
-@34809     = ~Summon Fiend
-(Conjuration) 
-Level: Sor/Wiz 8
-Range: Sight of Caster
-Duration: 15 rounds
-Casting Time: 1 round
-Area of Effect: Special 
-Saving Throw: None
+"Очистка разума" оберегает сознание и мысли заколдованного существа практические от любого ментального воздействия, куда входят такие заклинания, как: "Очарование", "Повеление", "Замешательство", "Подчинение", "Страх", "Слабоумие", "Удержание", "Сон", "Безнадёжность", "Ошеломление" и так далее. Кроме того, оно не даёт следить за целью с помощью хрустальных шаров и других способов прорицания.~
+@33809     = ~Вызов демона~
+@34809     = ~Вызов демона
+(Призывание)
+Уровень: колдун/волшебник 8
+Дальность: обзор колдующего
+Длительность: 15 раундов
+Время чтения: 1 раунд
+Зона действия: особая
+Спасбросок: нет
 
-More powerful than the 7th level variant, casting this spell summons a frenzied demon called a glabrezu.  This demon will attack the caster's enemies if the caster is protected from evil, but it will attack the party if the caster loses that protection. Only desperate or suicidal mages use this spell.~
-@33905     = ~Gate~
-@34905     = ~Gate
-(Conjuration)
-Level: Clr 9, Sor/Wiz 9, Bane 7
-Range: Sight of Caster
-Duration: 33 rounds
-Casting Time: 9
-Area of Effect: Special
-Saving Throw: None
+Это заклинание - более мощный вариант заклинания седьмого уровня. Оно позволяет вызывать взбешённого демона, называемого глабрезу. Этот демон будет атаковать врагов заклинателя, пока тот находится под защитой от зла. Однако, если тот лишится защиты, то глабрезу обернётся против заклинателя и его союзников. Этим заклинанием пользуются только маги, попавшие в безвыходное положение, и самоубийцы.~
+@33905     = ~Врата~
+@34905     = ~Врата
+(Призывание)
+Уровень: священник 9, колдун/волшебник 9, жрец Бейна 7
+Дальность: обзор колдующего
+Длительность: 33 раунда
+Время чтения: 9
+Зона действия: особая
+Спасбросок: нет
 
-By means of this spell, the caster summons an especially powerful devil called a gelugon. The gelugon will fight for the party as long as the caster is under Protection from Evil. However, if the caster loses Protection from Evil, the devil will tear the caster and their companions apart piece by piece, and then feast on the remains.~
-@35151     = ~Divine Shield~
-@36151     = ~Divine Shield
-(Abjuration)
-Level: Pal 1
-Range: Caster
-Duration: 5 rounds + Charisma bonus
-Casting Time: 3
-Area of Effect: Caster
-Saving Throw: None
+С помощью этого заклинания колдующий вызывает особо могучего дьявола, называемого гелугон. Этот дьявол будет атаковать врагов заклинателя, пока тот находится под защитой от зла. Однако, если тот лишится защиты, то гелугон разорвёт на кусочки и его, и его соратников, а затем сожрёт их остатки.~
+@35151     = ~Божественный щит~
+@36151     = ~Божественный щит
+(Отречение)
+Уровень: паладин 1
+Дальность: колдующий
+Длительность: 5 раундов + модификатор харизмы
+Время чтения: 3
+Зона действия: колдующий
+Спасбросок: нет
 
-This spell creates a barrier around the paladin that shields him or her temporarily. The paladin gains a generic Armor Class bonus equal to his or her Charisma bonus. The shield lasts for 5 rounds, plus an additional number of rounds equal to the paladin's Charisma bonus.~
+Это заклинание создает вокруг паладина барьер, который временно защищает его или ее. Паладин получает прибавку к классу брони (общий), равный его или ее модификатору харизмы. Щит действует 5 раундов, плюс дополнительное количество раундов, равное модификатору харизмы паладина.
 @35152     = ~Метка охотника~
-@36152     = ~Hunter's Mark
-(Divination)
-Level: Rgr 1
-Range: 1000 ft.
-Duration: 1 hour
-Casting Time: 1
-Area of Effect: 1 creature
-Saving Throw: None
+@36152     = ~Метка охотника
+(Прорицание)
+Уровень: следопыт 1
+Дальность: 1000 футов
+Длительность: 1 час
+Время чтения: 1
+Зона действия: 1 существо
+Спасбросок: нет
 
-By casting Hunter's Mark, the ranger magically marks a creature as their quarry. For the duration, all physical damage that would be dealt to the marked creature is increased by 3, plus an additional 3 for every 10 ranger levels. In addition, the creature cannot become invisible while marked. Hunter's Mark can be cast on any creature the party sees, even if the ranger does not see it.
+С помощью заклинания "Метка охотника" следопыт магически помечает одно существо как свою добычу. На время действия заклинания весь физический урон, который может быть нанесен помеченному существу, увеличивается на 3, плюс еще 3 за каждые 10 уровней следопыта. Кроме того, пока существо помечено, оно не может стать невидимым. Метка охотника может быть наложена на любое существо, которое видит группа следопыта, даже если сам следопыт его не видит.
 
-Although rangers normally cast spells at half their caster level, Hunter's Mark will be cast at a ranger's full caster level.~
-@35153     = ~Уменьшение~
-@36153     = ~Shortening
-(Abjuration)
-Level: Brd 1, Clr 1
-Range: Sight of Caster
-Duration: Instantaneous
-Casting Time: 1
-Area of Effect: 1 creature
-Saving Throw: None
+Хотя обычно следопыты учитывают только половину своего уровня при вычисления УС заклинаний, это заклинание учитывает полный уровень следопыта.~
+@35153     = ~Сокращение~
+@36153     = ~Сокращение
+(Отречение)
+Уровень: бард 1, священник 1
+Дальность: обзор колдующего
+Длительность: мгновенная
+Время чтения: 1
+Зона действия: 1 существо
+Спасбросок: нет
 
-Shortening reduces the remaining duration of magical effects on the target. If the target is an ally, all hostile effects on them will have their duration reduced by 5 rounds. If the target is an enemy, all non-hostile effects on them will have their duration reduced by 5 rounds. If an effect's remaining duration is reduced to zero, the effect ends. Shortening is useful for dispelling effects with short durations, such as Hold Person.~
+Сокращение уменьшает оставшееся время действия магических эффектов на цель. Если цель - союзник, длительность всех враждебных эффектов на ней сокращается на 5 раундов. Если цель - враг, длительность всех не враждебных эффектов на ней сокращается на 5 раундов. Если оставшаяся длительность эффекта сокращается до нуля, эффект исчезает. Сокращение полезно для рассеивания эффектов с коротким сроком действия, таких как "Удержание персонажа".
 @35154     = ~Руководство~
-@36154     = ~Guidance
-(Divination)
-Level: Clr 1, Drd 1
-Range: Touch
-Duration: 5 rounds
-Casting Time: 1
-Area of Effect: 1 creature
-Saving Throw: None
+@36154     = ~Руководство
+(Прорицание)
+Уровень: священник 1, друид 1
+Дальность: прикосновение
+Длительность: 5 раундов
+Время чтения: 1
+Зона действия: 1 существо
+Спасбросок: нет
 
-This spell imbues the recipient with a touch of divine guidance. For the duration, the target gains a +3 bonus to all skill checks they make.~
-@35155     = ~Pass Without Trace~
-@36155     = ~Pass Without Trace
-(Illusion)
-Level: Drd 2, Rgr 1
-Range: Caster
-Duration: 8 hours
-Casting Time: 4
-Area of Effect: 20-foot radius
-Saving Throw: None
+Это заклинание наделяет получателя божественным руководством. На время действия заклинания цель получает +3 ко всем проверкам умений.~
+@35155     = ~Пройти без следа~
+@36155     = ~Пройти без следа
+(Иллюзия)
+Уровень: друид 2, следопыт 1
+Дальность: колдующий
+Длительность: 8 часов
+Время чтения: 4
+Зона действия: радиус 20 футов
+Спасбросок: нет
 
-This spell allows allied creatures to move silently without leaving footprints. Affected creatures gain a +10 bonus to Move Silently checks.~
-@35252     = ~Null Healing~
-@36252     = ~Null Healing
-(Necromancy)
-Level: Clr 2
-Range: Sight of Caster
-Duration: 1 day
-Casting Time: 3
-Area of Effect: 1 creature
-Saving Throw: None
+Это заклинание позволяет союзникам заклинателя передвигаться бесшумно, не оставляя следов. Существа, под воздействием этого заклинания, получают +10 к проверкам навыка "Тихая походка"~
+@35252     = ~Нулевое заживление~
+@36252     = ~Нулевое заживление
+(Некромантия)
+Уровень: священник 1
+Дальность: обзор колдующего
+Длительность: 1 день
+Время чтения: 3
+Зона действия: 1 существо
+Спасбросок: нет
 
-This necromantic curse prevents a creature from healing. For 1 day, the cursed creature cannot regain Hit Points by items, spells, abilities, resting, or regeneration. There is no saving throw. Null Healing cannot be cast by good characters.~
-@35253     = ~Shield Other~
-@36253     = ~Shield Other
-(Abjuration)
-Level: Clr 2, Pal 2, Ilmater 1
-Range: Sight of Caster
-Duration: 3 rounds/level
-Casting Time: 5
-Area of Effect: 1 creature
-Saving Throw: None
+Это проклятие не позволяет существу исцеляться. В течение одного дня проклятое существо не может восстанавливать пункты здоровья с помощью предметов, заклинаний, способностей, отдыха или регенерации. Спасбросок отсутствует. Это заклинание не может быть прочитано добрыми персонажами.~
+@35253     = ~Защитить другого~
+@36253     = ~Защитить другого
+(Отречение)
+Уровень: священник 2, паладин 2, жрец Ильматера 1
+Дальность: обзор колдующего
+Длительность: 3 раунда/уровень
+Время чтения: 5
+Зона действия: 1 существо
+Спасбросок: нет
 
-This spell creates a mystic connection between the caster and the target so that some of their wounds are transferred to the caster. Whenever the target would take damage, they only take half the damage; the other half is taken by the caster. The damage is only split this way if the caster and target can see each other.~
+Это заклинание создает мистическую связь между заклинателем и целью, так что часть ран цели переходит к заклинателю. Всякий раз, когда цель заклинания получает урон, она получает только половину урона; вторую половину получает заклинатель. Урон распределяется таким образом только в том случае, если заклинатель и цель заклинания видят друг друга.~
 @35255     = ~Порыв ветра~
 @36255     = ~Порыв ветра
-(Evocation)
-Level: Drd 2
-Range: Sight of Caster
-Duration: Instantaneous
-Casting Time: 2
-Area of Effect: 40-foot cube
-Saving Throw: None
+(Проявление)
+Уровень: друид 2
+Дальность: обзор колдующего
+Длительность: мгновенная
+Время чтения: 2
+Зона действия: куб, со стороной 40 футов
+Спасбросок: нет
 
-This spell releases an extremely strong gust of wind starting at the caster and blowing outward in the target direction. Creatures in the area of effect are blown back, potentially taking damage if they hit a wall or fall into a pit. Larger creatures are not blown back as fast, and huge creatures such as frost giants are completely unaffected. The damage dealt depends on how fast the creatures were moving when they hit the wall or the ground.~
+Это заклинание создаёт чрезвычайно сильный порыв ветра, исходящий от заклинателя и дующий в заданном направлении. Существа, находящиеся в зоне действия заклинания, отлетают назад, потенциально получая урон, если ударятся о стену или упадут в яму. Большие существа отлетают назад медленнее, а огромные существа, такие как морозные великаны, и вовсе остаются на месте. Наносимый урон зависит от того, с какой скоростью двигались существа, в момент удара о стену или падения.~
 @35257     = ~Heat Metal~
 @36257     = ~Heat Metal
 (Transmutation)
