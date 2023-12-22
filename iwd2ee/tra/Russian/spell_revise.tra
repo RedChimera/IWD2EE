@@ -3690,7 +3690,7 @@
 
 С помощью заклинания "Метка охотника" следопыт магически помечает одно существо как свою добычу. На время действия заклинания весь физический урон, который может быть нанесен помеченному существу, увеличивается на 3, плюс еще 3 за каждые 10 уровней следопыта. Кроме того, пока существо помечено, оно не может стать невидимым. Метка охотника может быть наложена на любое существо, которое видит группа следопыта, даже если сам следопыт его не видит.
 
-Хотя обычно следопыты учитывают только половину своего уровня при вычисления УС заклинаний, это заклинание учитывает полный уровень следопыта.~
+Хотя обычно следопыты учитывают только половину своего уровня при чтении заклинаний, это заклинание учитывает полный уровень следопыта.~
 @35153     = ~Сокращение~
 @36153     = ~Сокращение
 (Отречение)
@@ -3757,79 +3757,78 @@
 Спасбросок: нет
 
 Это заклинание создаёт чрезвычайно сильный порыв ветра, исходящий от заклинателя и дующий в заданном направлении. Существа, находящиеся в зоне действия заклинания, отлетают назад, потенциально получая урон, если ударятся о стену или упадут в яму. Большие существа отлетают назад медленнее, а огромные существа, такие как морозные великаны, и вовсе остаются на месте. Наносимый урон зависит от того, с какой скоростью двигались существа, в момент удара о стену или падения.~
-@35257     = ~Heat Metal~
-@36257     = ~Heat Metal
-(Transmutation)
-Level: Drd 2
-Range: Sight of Caster
-Duration: Instantaneous
-Casting Time: 6
-Area of Effect: 20-foot radius
-Saving Throw: None
+@35257     = ~Нагреть метал~
+@36257     = ~Нагреть метал
+(Преобразование)
+Уровень: друид 2
+Дальность: обзор колдующего
+Длительность: мгновенная
+Время чтения: 6
+Зона действия: радиус 20 футов
+Спасбросок: нет
 
-This spell makes all metal in the area of effect extremely hot. Creatures take 2d6 fire damage for each hand they are holding a metal weapon or shield in. In addition, they take 4d6 fire damage if they are wearing chainmail, splint mail, half-plate or full plate armor.
+Это заклинание делает весь металл в зоне действия чрезвычайно горячим. Существа получают 2d6 урона от огня за каждую руку, в которой они держат металлическое оружие или щит. Кроме того, они получают 4d6 урона огнем, если на них надета кольчуга, пластинчатый доспех, полулаты или полные латы.
 
-A creature also takes 10d6 fire damage if they are under the effect of Iron Skins, and 20d6 fire damage if they are under the effect of Iron Body or are otherwise made of metal (though note that iron golems are immune to fire).~
-@35258     = ~Make Whole~
-@36258     = ~Make Whole
-(Transmutation)
-Level: Clr 2
-Range: Caster
-Duration: Instantaneous
-Casting Time: 6
-Area of Effect: Items in caster's inventory
-Saving Throw: None
+Существа также получают 10d6 урона от огня, если на них наложен эффект заклинания "Железная кожа", и 20d6 урона от огня, если на их наложен эффект заклинания "Железное тело" или оно как-то по-другому сделано из металла (хотя стоит учитывать, что железные големы невосприимчивы к огню).~
+@35258     = ~Сделать целым~
+@36258     = ~Сделать целым
+(Преобразование)
+Уровень: священник 2
+Дальность: колдующий
+Длительность: мгновенная
+Время чтения: 6
+Зона действия: вещи в инвентаре колдующего
+Спасбросок: нет
 
-A mending spell of moderate power, Make Whole completely repairs and unrusts all broken equipment in the caster's inventory, restoring them to their former glory. Broken armor typically becomes half-plate, ancient armor typically becomes full plate, and broken weapons are often restored to masterwork quality. If nothing else, the restored equipment is more valuable than it was when broken.
+Заклинание починки средней силы "Сделать целым" полностью ремонтирует и восстанавливает всё сломанное снаряжение в инвентаре заклинателя, возвращая ему былую славу. Сломанные доспехи обычно превращаются в полулаты, древние доспехи - в полные латы, а сломанное оружие часто восстанавливается до оружия мастерской работы. Обычно, восстановленное снаряжение становится более ценным, чем то, которое было сломано.
 
-Make Whole cannot repair enormous objects like buildings, walls or airships. For those, more powerful mending spells are needed.~
-@35259     = ~Heat Metal~
-@36259     = ~Heat Metal
-(Transmutation)
-Level: Drd 2
-Range: Sight of Caster
-Duration: Instantaneous
-Casting Time: 4
-Area of Effect: 1 creature
-Saving Throw: None
+С помощью этого заклинания нельзя починить огромные объекты, такие как здания, стены или дирижабли. Для них нужны более мощные заклинания починки.~
+@35259     = ~Нагреть метал~
+@36259     = ~Нагреть метал
+(Преобразование)
+Уровень: друид 2
+Дальность: обзор колдующего
+Длительность: мгновенная
+Время чтения: 4
+Зона действия: 1 существо
+Спасбросок: нет
 
-This spell heats up all metal equipment the target currently has equipped, dealing fire damage to the target depending on how much metal was heated up:
+Это заклинание делает всё металлическое снаряжение на цели заклинания чрезвычайно горячим, причиняя урон огнем в зависимости от того, как много металла было нагрето:
 
-Has metal one-handed weapon or shield equipped: 2d6 per item
-Has metal two-handed weapon equipped: 4d6
-Wearing chain mail or splint mail: 6d6
-Wearing half-plate, field plate or full plate: 8d6
-Has Iron Skins active: 10d6
-Has Iron Body active or is a creature made of metal: 15d6
+Металлическое одноручное оружие в руках или щит: 2d6 урона за одну вещь
+Металлическое двуручное оружие в руках: 4d6 урона
+Одетая кольчуга или пластинчатый доспех: 6d6 урона
+Одетый латный, полулатный или полный латный доспех: 8d6 урона
+Активное заклинание "Железная кожа": 10d6 урона
+Активное заклинание "Железное тело" или существо сделано из железа: 15d6 урона
 
-If more than one of the above conditions apply, the damage from those conditions stacks.~
-@35351     = ~Quiver of Plenty~
-@36351     = ~Quiver of Plenty
-(Conjuration)
-Level: Rgr 3
-Range: Caster
-Duration: 30 rounds
-Casting Time: 5
-Area of Effect: Caster
-Saving Throw: None
+Урон складывает от всех возможных источников урона.~
+@35351     = ~Колчан изобилия~
+@36351     = ~Колчан изобилия
+(Призывание)
+Уровень: следопыт 3
+Дальность: колдующий
+Длительность: 30 раундов
+Время чтения: 5
+Зона действия: колдующий
+Спасбросок: нет
 
-This spell temporarily gives the ranger a quiver containing an unlimited supply of magical arrows. The arrows have an additional +1 to attack and damage for every 4 ranger levels. The quiver cannot be dropped or given to another character.
+Это заклинание временно дает следопыту колчан с неограниченным запасом магических стрел. Стрелы получают +1 к атаке и урону за каждые 4 уровня следопыта. Колчан нельзя бросить или передать другому персонажу.
 
-Although rangers normally cast spells at half their caster level, Quiver of Plenty will be cast at a ranger's full caster level.
+Хотя обычно следопыты учитывают только половину своего уровня при чтении заклинаний, это заклинание учитывает полный уровень следопыта.
 
-Note: The quiver is created in the ranger's first ammunition slot. Any ammunition that was previously in that slot will be unavailable until the spell ends.~
+Примечание: Колчан создается в первой ячейке для боеприпасов следопыта. Все боеприпасы, которые ранее находились в этом слоте, будут недоступны до окончания действия заклинания.~
+@35353     = ~Призыв группы~
+@36353     = ~Призыв группы
+(Призывание)
+Уровень: бард 3, священник 3, паладин 3
+Дальность: текущая область
+Длительность: мгновенная
+Время чтения: 0
+Зона действия: группа
+Спасбросок: нет
 
-@35353     = ~Recall Party~
-@36353     = ~Recall Party
-(Conjuration)
-Level: Brd 3, Clr 3, Pal 3
-Range: Entire area
-Duration: Instantaneous
-Casting Time: 0
-Area of Effect: Party
-Saving Throw: None
-
-This spell teleports all party members to the caster's side. Party members in a different area are unaffected. Recall Party could be useful for getting allies out of dangerous situations.~
+Это заклинание телепортирует всех членов группы к заклинателю. Члены группы, находящиеся в других областях, не затрагиваются этим заклинанием. "Призыв группы" может пригодиться, если нужно вытащить союзников из опасных ситуаций.~
 @35354     = ~Flame Shots~
 @36354     = ~Flame Shots
 (Transmutation)
