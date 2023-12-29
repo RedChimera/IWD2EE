@@ -1090,6 +1090,57 @@
 		!pop_all_registers_iwd2
 	]]})
 
+	------------------------------------------------------------------
+	-- Render green overlay on scrolls that the character can learn --
+	--   Hardcoded resref: B3TINTG.BAM                              --
+	------------------------------------------------------------------
+
+	-- CUIControlButtonItemSlot::Render()
+	IEex_HookJumpOnSuccess(0x62E560, 0, {[[
+		!mark_esp
+		!push_all_registers_iwd2
+		!push(esi)                    ; pButton ;
+		!marked_esp !push([esp+0x24]) ; pItem   ;
+		!marked_esp !push([esp+0x14]) ; pSprite ;
+		!call >IEex_Helper_PostItemSlotRenderHook
+		!pop_all_registers_iwd2
+	]]})
+
+	-- CUIControlButtonStoreItem::Render()
+	IEex_HookJumpOnSuccess(0x681C3B, 3, {[[
+		!mark_esp
+		!push_all_registers_iwd2
+		!push(esi)                    ; pButton ;
+		!lea(eax,[esi+0x66E])
+		!push(eax)                    ; pItem   ;
+		!marked_esp !push([esp+0x20]) ; pSprite ;
+		!call >IEex_Helper_PostItemSlotRenderHook
+		!pop_all_registers_iwd2
+	]]})
+
+	-- CUIControlButtonStorePartyItem::Render()
+	IEex_HookJumpOnSuccess(0x68278B, 3, {[[
+		!mark_esp
+		!push_all_registers_iwd2
+		!push(esi)                    ; pButton ;
+		!lea(eax,[esi+0x66E])
+		!push(eax)                    ; pItem   ;
+		!marked_esp !push([esp+0x20]) ; pSprite ;
+		!call >IEex_Helper_PostItemSlotRenderHook
+		!pop_all_registers_iwd2
+	]]})
+
+	-- CUIControlButtonWorldContainerSlot::Render()
+	IEex_HookJumpOnSuccess(0x696623, 3, {[[
+		!mark_esp
+		!push_all_registers_iwd2
+		!push(esi)                    ; pButton ;
+		!marked_esp !push([esp+0x1C]) ; pItem   ;
+		!marked_esp !push([esp+0x10]) ; pSprite ;
+		!call >IEex_Helper_PostItemSlotRenderHook
+		!pop_all_registers_iwd2
+	]]})
+
 
 	IEex_EnableCodeProtection()
 
