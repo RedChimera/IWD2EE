@@ -13,7 +13,7 @@ The big changes described above are only applied if you install certain componen
 - IWD2EE includes a ddraw fix, which should improve performance.
 - Scrolling the screen should be smoother on some devices.
 - It is possible to scroll with the middle mouse button.
-- Right-clicking the inventory button opens the quickloot menu.
+- There is now a quickloot button.
 - Right-clicking a spell or innate ability on the actionbar brings up its description (though most innate abilities don't have descriptions unless Class Revisions is installed).
 - You can now go through dialogue as fast as you want; there's no longer a brief delay each time you choose a dialogue option.
 - The character record screen includes a Reform Party button.
