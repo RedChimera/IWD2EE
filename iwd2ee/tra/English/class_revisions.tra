@@ -258,9 +258,9 @@ You are trained to knock down or trip enemies in melee combat.
 
 Prerequisite: Base attack bonus +6 or higher
 
-Benefit: You gain an ability that lets you knock down or trip an adjacent creature. The ability can be used once per round. If your Dexterity is higher than your Strength, you attempt to trip the target, which must make a Reflex save (DC 5 + half your base attack bonus + your Dexterity modifier) or fall down for 4 seconds. Otherwise, you try to knock down your target, which must make a Fortitude save (DC 5 + half your base attack bonus + your Strength modifier) or fall down for 4 seconds. The DC gets -4 for each time someone has tried to knock down or trip the target in the past 10 rounds. It also gets -4 if the target has more than two legs or is otherwise more stable than a normal humanoid (such as a dwarf). Especially large creatures cannot be knocked down or tripped. The time spent to perform this ability causes the character to have one fewer attack in the following round.
+Benefit: You gain an ability that lets you knock down or trip an adjacent creature. The ability can be used once per round. If your Dexterity is higher than your Strength, you attempt to trip the target, which must make a Reflex save (DC 5 + half your base attack bonus + your Dexterity modifier) or fall down for 4 seconds. Otherwise, you try to knock down your target, which must make a Fortitude save (DC 5 + half your base attack bonus + your Strength modifier) or fall down for 4 seconds. The DC gets -4 for each time someone has tried to knock down or trip the target in the past 10 rounds. It also gets -4 if the target has more than two legs or is otherwise more stable than a normal humanoid (such as a dwarf). Creatures larger than you cannot be knocked down tripped. The time spent to perform this ability causes the character to have one fewer attack in the following round.
 
-This feat may be taken twice. When taken a second time, the feat is Improved Knockdown, which allows you to knock down or trip even large creatures, and adds a +2 bonus to the DC.~
+This feat may be taken twice. When taken a second time, the feat is Improved Knockdown, which and adds a +2 bonus to the DC, and allows you knock down or trip creatures one size category larger than you (creatures whose circle has no more than twice the radius of your circle).~
 @317    = ~Light Armor Mastery~
 @318    = ~LIGHT ARMOR MASTERY:
 
@@ -629,18 +629,36 @@ Special: This feat may be taken up to three times.~
 
 After endless dark research, you have finally achieved immortality... so long as your phylactery survives.
 
-Prerequisite: 18 levels of wizard or sorcerer or 15 levels of necromancer, must be evil
+Prerequisite: To start taking ranks in this feat, you need two ranks in Spell Focus: Necromancy, 12 levels of wizard or sorcerer or 10 levels of necromancer, and evil alignment. To take the final rank, you need 20 levels of wizard or sorcerer or 18 levels of necromancer.
 
-Benefit: After this feat is taken three times, you become a lich and gain these effects:
-* +5 armor bonus.
+Benefit: Even after you meet the initial requirements, you must take this feat five times for it to have any benefit (this represents the long hours of evil research necessary to achieve lichdom). Once you do, you become a lich and gain these effects:
+* +5 generic armor bonus.
 * +2 Intelligence, Wisdom and Charisma.
-* Immune to cold, electricity, poison, disease, bleeding, fatigue, sleep, fear, hopelessness, charm, confusion, feeblemind, paralysis, stun, energy drain, instant death, petrification, polymorph effects, and healing spells.
-* 15/- resistance to slashing and piercing damage, damage reduction 5/+1.
+* Immune to cold, electricity, poison, disease, bleeding, fatigue, sleep, fear, hopelessness, charm, confusion, feeblemind, paralysis, stun, energy drain, instant death, petrification, polymorph effects, critical hits, and sneak attacks.
+* 5/- resistance to slashing and piercing damage, damage reduction 5/+1.
 * +8 bonus to Hide, Move Silently, and Search.
 * You can be turned, but count as 4 levels higher against turning effects.
-* Your unarmed attacks are replaced with a Lich Touch, which deals 1d8+5 cold damage and paralyzes the target for 10 rounds on a failed save (Fortitude DC 10 + 1/4 sorcerer/wizard level + Charisma/Intelligence modifier).
-* You have an aura of fear; any enemy within 20 feet that is at least 5 levels lower than you must make a Will save (DC 10 + 1/4 sorcerer/wizard level + Charisma/Intelligence modifier) or run away for 1 round. An enemy that makes the save is immune to this effect for 24 hours.
-* You gain a phylactery which stores your life force. If you die, you come back after 8 hours. However, if all party members die, the enemies will destroy your phylactery and the game will be over.~
+* You take damage from Cure Wounds spells and healing potions but are healed by Inflict Wounds spells.
+* Your unarmed attacks are replaced with a Lich Touch, which deals 3d10+5 cold damage and paralyzes the target for 10 rounds on a failed save (same DC as the spell Lich Touch).
+* You have an aura of fear; any enemy within 20 feet that is at least 5 levels lower than you must make a Will save (DC 10 + Charisma/Intelligence modifier) or run away for 1 round.
+* You gain a phylactery which stores your life force. If you die, you will be automatically revived after 8 hours. However, if all party members die, the enemies will destroy your phylactery and the game will be over.~
+@390    = ~LICHDOM:
+
+After endless dark research, you have finally achieved immortality... so long as your phylactery survives.
+
+Prerequisite: To start taking ranks in this feat, you need two ranks in Spell Focus: Necromancy, 12 levels of wizard or sorcerer or 10 levels of necromancer, and evil alignment. To take the final rank, you need 20 levels of wizard or sorcerer or 18 levels of necromancer.
+
+Benefit: Even after you meet the initial requirements, you must take this feat five times for it to have any benefit (this represents the long hours of evil research necessary to achieve lichdom). Once you do, you become a lich and gain these effects:
+* +5 armor bonus.
+* +2 Intelligence, Wisdom and Charisma.
+* Immune to cold, electricity, poison, disease, bleeding, fatigue, sleep, fear, hopelessness, charm, confusion, feeblemind, paralysis, stun, energy drain, instant death, petrification, and polymorph effects.
+* 5/- resistance to slashing and piercing damage, damage reduction 5/+1.
+* +8 bonus to Hide, Move Silently, and Search.
+* You can be turned, but count as 4 levels higher against turning effects.
+* You take damage from Cure Wounds spells and healing potions but are healed by Inflict Wounds spells.
+* Your unarmed attacks are replaced with a Lich Touch, which deals 3d10+5 cold damage and paralyzes the target for 10 rounds on a failed save (same DC as the spell Lich Touch).
+* You have an aura of fear; any enemy within 20 feet that is at least 5 levels lower than you must make a Will save (DC 10 + Charisma/Intelligence modifier) or run away for 1 round.
+* You gain a phylactery which stores your life force. If you die, you will be automatically revived after 8 hours. However, if all party members die, the enemies will destroy your phylactery and the game will be over.~
 @522    = ~Wizard~
 @523    = ~WIZARD:
 
@@ -1381,7 +1399,7 @@ While anyone can grapple something, you have the skill to grapple even a hostile
 
 Benefit: You gain an ability that lets you grab an adjacent creature. The ability can be used once per round. The target must make a Reflex save (DC 12 + half your level + your Strength or Dexterity modifier (whichever is higher)) or be grappled by you for 2 rounds. While grappled, the creature gets a -4 attack penalty, a 50% chance of spell failure, and cannot move away from you. If you move, you may pull the creature along with you.
 
-To grapple, you must have at least one hand free. The save gains +4 DC if you have both hands free. It gets -4 DC for each time someone has tried to grapple the target in the past 10 rounds. If you grapple an ally or a paralyzed, stunned, sleeping, or knocked down creature, there is no save. Especially large creatures cannot be grappled.~
+To grapple, you must have at least one hand free. The save gains +4 DC if you have both hands free. It gets -4 DC for each time someone has tried to grapple the target in the past 10 rounds. If you grapple an ally or a paralyzed, stunned, sleeping, or knocked down creature, there is no save. Creatures larger than you cannot be grappled.~
 @705    = ~ARMORED ARCANA:
 
 You can cast spells with less chance of failure while wearing armor.
@@ -1590,6 +1608,15 @@ You know how to strike opponents in vulnerable areas.
 Prerequisites: Dex 13+, Wis 13+, base attack bonus +8 or higher
 
 Benefit:  When attacking with Stunning Attack, it forces a foe damaged by your unarmed attack to make a Fortitude saving throw (DC 10 + one-half your level + Wis modifier), in addition to dealing damage normally.  If the defender fails his saving throw, he is stunned for 1 round.  A stunned character can't act and can be hit automatically.  You may attempt a stunning attack once per day for every four levels you have attained.~
+@730    = ~DODGE:
+
+You are adept at dodging blows.
+
+Prerequisite: Dex 13+. Taking the feat a second time requires Dex 25+, Improved Evasion, and Defensive Roll.
+
+Benefit: You receive a +1 dodge bonus to armor class against attacks from an opponent.
+
+When taken a second time, the feat also allows you to automatically dodge the first attack that would hit you each round.~
 @783    = ~Human~
 @784    = ~HUMAN:
 
@@ -2163,6 +2190,17 @@ Disadvantages:
 * -4 Charisma.
 * -25% Experience Penalty: Deep gnomes are slightly more powerful and gain 25% less experience than other races.
 ~
+@890    = ~Dodged the attack~
+@891    = ~Which lich appearance would you like to use?~
+@892    = ~Black lich.~
+@893    = ~White lich.~
+@894    = ~I will keep my original appearance.~
+@895    = ~Lich Phylactery~
+@896    = ~This is your phylactery. If you die, your soul retreats to your phylactery, which will create a new body for you and revive you after 8 hours. However, if all party members die, the enemies will destroy your phylactery and the game will be over.
+
+STATISTICS:
+
+Weight: 1~
 @897    = ~The Song of Kaudies - Resistant to Sound Attacks~
 @898    = ~Additional attack~
 @899    = ~Sneak Attack~
@@ -2211,7 +2249,7 @@ Disadvantages:
 
 This ability can be used once per round. The target must make a Reflex save (DC 12 + half your level + your Strength or Dexterity modifier (whichever is higher)) or be grappled by you for 2 rounds. While grappled, the creature gets a -4 attack penalty, a 50% chance of spell failure, and cannot move away from you. If you move, you may pull the creature along with you.
 
-To grapple, you must have at least one hand free. The save gains +4 DC if you have both hands free. It gets -4 DC for each time someone has tried to grapple the target in the past 10 rounds. If you grapple an ally or a paralyzed, stunned, sleeping, or knocked down creature, there is no save. Especially large creatures cannot be grappled.~
+To grapple, you must have at least one hand free. The save gains +4 DC if you have both hands free. It gets -4 DC for each time someone has tried to grapple the target in the past 10 rounds. If you grapple an ally or a paralyzed, stunned, sleeping, or knocked down creature, there is no save. Creatures larger than you cannot be grappled.~
 @942    = ~Concoct Potions
 
 This ability can be used once per round. It brings up a menu which allows you to spend resources creating potions. For every 2 points of Alchemy above 10, you are able to create a broader variety of potions.~
@@ -2220,14 +2258,14 @@ This ability can be used once per round. It brings up a menu which allows you to
 You coat your weapons in poison. For 5 rounds, each hit you make with any weapon (including missile weapons) will poison the target unless it makes a Fortitude save (DC 6 + your Alchemy skill). If poisoned, the target takes 12 poison damage over the next 6 seconds.~
 @944    = ~Knockdown
 
-This ability can be used once per round. If your Dexterity is higher than your Strength, you attempt to trip the target, which must make a Reflex save (DC 5 + half your base attack bonus + your Dexterity modifier) or fall down for 4 seconds. Otherwise, you try to knock down your target, which must make a Fortitude save (DC 5 + half your base attack bonus + your Strength modifier) or fall down for 4 seconds. The DC gets -4 for each time someone has tried to knock down or trip the target in the past 10 rounds. It also gets -4 if the target has more than two legs or is otherwise more stable than a normal humanoid (such as a dwarf). Especially large creatures cannot be knocked down or tripped. The time spent to perform this ability causes you to have one fewer attack in the following round.~
+This ability can be used once per round. If your Dexterity is higher than your Strength, you attempt to trip the target, which must make a Reflex save (DC 5 + half your base attack bonus + your Dexterity modifier) or fall down for 4 seconds. Otherwise, you try to knock down your target, which must make a Fortitude save (DC 5 + half your base attack bonus + your Strength modifier) or fall down for 4 seconds. The DC gets -4 for each time someone has tried to knock down or trip the target in the past 10 rounds. It also gets -4 if the target has more than two legs or is otherwise more stable than a normal humanoid (such as a dwarf). Creatures larger than you cannot be knocked down or tripped. The time spent to perform this ability causes you to have one fewer attack in the following round.~
 @945    = ~Feint
 
 This ability can be used once per round. The target must make a Will save (DC 10 + your Bluff skill). The DC gets -4 for each time someone has tried to feint the target in the past 10 rounds. On a failure, for 4 seconds, the target loses its Dexterity bonus to AC, and it gains additional penalties to Armor Class and attack rolls equal to one third of your Bluff skill, rounded down.~
 @946    = ~Improved Knockdown~
 @947    = ~Improved Knockdown
 
-This ability can be used once per round. If your Dexterity is higher than your Strength, you attempt to trip the target, which must make a Reflex save (DC 7 + half your base attack bonus + your Dexterity modifier) or fall down for 4 seconds. Otherwise, you try to knock down your target, which must make a Fortitude save (DC 7 + half your base attack bonus + your Strength modifier) or fall down for 4 seconds. The DC gets -4 for each time someone has tried to knock down or trip the target in the past 10 rounds. It also gets -4 if the target has more than two legs or is otherwise more stable than a normal humanoid (such as a dwarf). The time spent to perform this ability causes you to have one fewer attack in the following round.~
+This ability can be used once per round. If your Dexterity is higher than your Strength, you attempt to trip the target, which must make a Reflex save (DC 7 + half your base attack bonus + your Dexterity modifier) or fall down for 4 seconds. Otherwise, you try to knock down your target, which must make a Fortitude save (DC 7 + half your base attack bonus + your Strength modifier) or fall down for 4 seconds. The DC gets -4 for each time someone has tried to knock down or trip the target in the past 10 rounds. It also gets -4 if the target has more than two legs or is otherwise more stable than a normal humanoid (such as a dwarf). Creatures more than one size category larger than you (whose circle is more than twice as large as your circle) cannot be knocked down or tripped. The time spent to perform this ability causes you to have one fewer attack in the following round.~
 @948    = ~Improved Feint~
 @949    = ~Improved Feint
 

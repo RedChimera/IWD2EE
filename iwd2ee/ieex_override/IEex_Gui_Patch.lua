@@ -404,9 +404,6 @@
 	-- IEex_Extern_CScreenWorld_OnInventoryButtonRClick --
 	------------------------------------------------------
 
-	-- Enable right-click on inventory button
-	IEex_WriteAssembly(0x77CFD6, {"!mov_eax 03"})
-
 	IEex_WriteDword(0x85D798, IEex_WriteAssemblyAuto({[[
 
 		!push_all_registers_iwd2

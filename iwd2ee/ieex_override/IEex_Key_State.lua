@@ -748,6 +748,7 @@ function IEex_LevelUp_ExtraFeatListener()
 					IEex_SetPanelEnabled(newWizardSpellsPanel, true)
 --					IEex_SetPanelXY(newWizardSpellsPanel, characterRecordPanelX, characterRecordPanelY)
 					IEex_SetPanelActive(newWizardSpellsPanel, true)
+					IEex_SetEngineScrollbarFocus(screenCharacter, IEex_GetControlFromPanel(newWizardSpellsPanel, 31))
 					IEex_PanelInvalidate(newWizardSpellsPanel)
 				elseif (ex_class_level_up["class"] == 2 and ex_bard_spell_replacement_on_level_up and IEex_GetActorStat(actorID, 97) >= ex_bard_spell_replacement_levels_behind + 2) or (ex_class_level_up["class"] == 10 and ex_sorcerer_spell_replacement_on_level_up and IEex_GetActorStat(actorID, 105) >= ex_sorcerer_spell_replacement_levels_behind + 1) then
 					ex_alternate_spell_menu_class = ex_class_level_up["class"]
@@ -822,6 +823,7 @@ function IEex_LevelUp_ExtraFeatListener()
 						IEex_SetPanelEnabled(newWizardSpellsPanel, true)
 	--					IEex_SetPanelXY(newWizardSpellsPanel, characterRecordPanelX, characterRecordPanelY)
 						IEex_SetPanelActive(newWizardSpellsPanel, true)
+						IEex_SetEngineScrollbarFocus(screenCharacter, IEex_GetControlFromPanel(newWizardSpellsPanel, 31))
 						IEex_PanelInvalidate(newWizardSpellsPanel)
 					end
 				end
@@ -1377,8 +1379,8 @@ function IEex_ArcaneSightListener(key)
 				theduration = -1
 			end
 			if (thetiming == 6 or thetiming == 7 or thetiming == 4096) then
-				if ex_damage_source_spell[theparent_resource] ~= nil then
-					theparent_resource = ex_damage_source_spell[theparent_resource]
+				if ex_source_spell[theparent_resource] ~= nil then
+					theparent_resource = ex_source_spell[theparent_resource]
 				end
 				local extraString = ""
 				if theopcode == 119 then

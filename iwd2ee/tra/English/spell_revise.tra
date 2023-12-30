@@ -624,12 +624,12 @@ This spell creates the emotion of hope within the area of effect. All creatures 
 (Evocation)
 Level: Brd 3, Sor/Wiz 4, Oghma 4
 Range: Close (30 ft. long, 10 ft. diameter)
-Duration: Instantaneous 
-Casting Time: 1 
-Area: Cone
+Duration: Instantaneous
+Casting Time: 1
+Area: 30-feet long, 10-foot diameter
 Saving Throw: Fortitude partial
 
-The caster emits an ear-splitting yell that deafens and damages creatures in its path. Any creature within the area of effect is deafened for 5 rounds, stunned for 2 rounds, and takes 5d6 points of damage. A successful save negates the deafness and stun and reduces the damage by half. A deafened creature has a 50% chance of resisting this spell.~
+The caster emits an ear-splitting yell that deafens and damages creatures in its path. Any creature within the area of effect is deafened for 5 rounds, stunned for 2 rounds, and takes 5d6 points of sonic damage. A successful save negates the deafness and stun and reduces the damage by half. A deafened creature has a 50% chance of resisting this spell.~
 @1106    = ~Domination~
 @1107    = ~Domination
 (Enchantment) 
@@ -853,7 +853,7 @@ Casting Time: 6
 Area of Effect: Caster
 Saving Throw: Fortitude half
 
-This spell confers the powers of a lich's touch and a lich's immunities upon the caster. The wizard's hands are imbued with a chilling force of negative energy, allowing the caster to deal 3d10+5 cold damage (plus damage bonuses from Strength, proficiencies, spells, items and other effects) with each hit and paralyze living victims for 10 rounds on a failed Fortitude save. The attack uses the Simple Weapon: Small Blade/Touch Attack proficiency. While the spell is active, the caster is treated as undead, becoming immune to poison, disease, bleeding wounds, energy drain, death magic, petrification, stun, cold damage, paralysis, charm, berserk, confusion, fatigue, sleep, and fear.~
+This spell confers the powers of a lich's touch. The wizard's hands are imbued with a chilling force of negative energy, allowing the caster to deal 3d10+5 cold damage (plus damage bonuses from Strength, proficiencies, spells, items and other effects) with each hit and paralyze living victims for 10 rounds on a failed Fortitude save. The attack uses the Simple Weapon: Small Blade/Touch Attack proficiency.~
 @1496    = ~Eagle's Splendor~
 @1497    = ~Eagle's Splendor 
 (Transmutation)
@@ -864,7 +864,7 @@ Casting Time: 1
 Target: Creature touched
 Saving Throw: None 
 
-The transmutated creature becomes more poised, articulate, and personally forceful. The spell grants +3 to Charisma, adding the usual benefits of Charisma-based skills and abilities.~
+The transmutated creature becomes more poised, articulate, and personally forceful. The spell grants +4 to Charisma, adding the usual benefits of Charisma-based skills and abilities.~
 @1498    = ~Mirror Image~
 @1499    = ~Mirror Image 
 (Illusion) 
@@ -1223,7 +1223,7 @@ Casting Time: 2
 Area of Effect: 30-feet long, 10-foot diameter
 Saving Throw: Fortitude half
 
-Upon uttering the Great Shout, the caster releases a stunning force from his mouth in a 30-foot long, 10-foot diameter cone. Creatures within the area of effect take 10d10 magic damage with a Fortitude save for half. Those who fail the save are stunned for 5 rounds and deafened for 10 rounds. The caster also takes 2d10 damage and is stunned for 1 round and deafened for 2 rounds, but makes his or her saving throw with -5 DC. Great Shout bypasses spell resistance and immunity to magic. Deafened creatures have a 25% chance of resisting this spell.~
+Upon uttering the Great Shout, the caster releases a stunning force from their mouth in a 30-foot long, 10-foot diameter cone. Creatures within the area of effect take 10d10 sonic damage with a Fortitude save for half. Those who fail the save are stunned for 5 rounds and deafened for 10 rounds. Deafened creatures have a 25% chance of resisting this spell.~
 @1623    = ~Animal Rage~
 @1624    = ~Animal Rage
 (Enchantment)
@@ -3459,7 +3459,7 @@ Casting Time: 3
 Area of Effect: 20-foot radius
 Saving Throw: Will negates
 
-A creature affected by Slow loses an attack every round (but will not drop below 1 attack per round), has -4 to AC, and moves at half its base movement rate. A successful Will save with +4 DC prevents the effects.~
+A creature affected by Slow loses an attack every round (but will not drop below 1 attack per round), has -4 to AC, and moves at half its base movement rate. A successful Will save with +4 DC prevents the effects. Slow dispels Haste, Mass Haste and Improved Haste spells.~
 @33316     = ~Dire Charm~
 @34316     = ~Dire Charm
 (Enchantment)
@@ -3627,6 +3627,17 @@ Area of Effect: Special
 Saving Throw: None
 
 This spell summons a 12 Hit Dice elemental from the Elemental Plane of Air. The air elemental serves the caster for the duration.~
+@33623     = ~Mass Haste~
+@34623     = ~Mass Haste
+(Transmutation)
+Level: Brd 6, Sor/Wiz 6
+Range: Sight of Caster
+Duration: 3 rounds + 1 round/level 
+Casting Time: 3
+Area of Effect: 20-foot radius
+Saving Throw: None
+
+Mass Haste grants the effects of the 3rd-level spell Haste to all allies in the area of effect. Those allies gain +4 AC and an extra attack per round, and move twice as fast. These effects do not stack with the 3rd-level spell. Mass Haste dispels Slow effects.~
 @33627     = ~Planar Binding: Fire Elemental~
 @34627     = ~Planar Binding: Fire Elemental
 (Conjuration)
@@ -4355,7 +4366,7 @@ Casting Time: 2
 Area of Effect: 15-foot radius
 Saving Throw: Fortitude partial
 
-This spell releases an extremely loud and jarring burst of sound. Creatures in the area of effect take 1d8 magic damage and must make a Fortitude save or be stunned for 1 round. Deaf creatures are not stunned but still take damage. The caster is unaffected by this spell.~
+This spell releases an extremely loud and jarring burst of sound. Creatures in the area of effect take 1d8 sonic damage and must make a Fortitude save or be stunned for 1 round. Deaf creatures are not stunned but still take damage. The caster is unaffected by this spell.~
 @37253     = ~Levitate~
 @38253     = ~Levitate
 (Transmutation)

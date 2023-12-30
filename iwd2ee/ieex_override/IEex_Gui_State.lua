@@ -1531,6 +1531,14 @@ function IEex_Extern_UI_ButtonLClick(CUIControlButton)
 	end
 
 	local worldHandler = {
+		[0] = {
+			[15] = IEex_CScreenWorld_OnQuicklootButtonLClick(),
+		},
+--[[
+		[22] = {
+			[15] = IEex_CScreenWorld_OnQuicklootButtonLClick(),
+		},
+--]]
 		[IEex_WorldScreenSpellInfoPanelID] = {
 			[5] = IEex_StopWorldScreenSpellInfo,
 		}
@@ -1975,6 +1983,7 @@ function IEex_Extern_Quickloot_ScrollRight()
 end
 
 function IEex_Extern_CScreenWorld_OnInventoryButtonRClick()
+	if true then return end
 	IEex_AssertThread(IEex_Thread.Async, true)
 	if IEex_Helper_GetBridge("IEex_Quickloot", "on") then
 		IEex_Quickloot_Stop()
@@ -2513,6 +2522,42 @@ function IEex_OnCHUInitialized(chuResref)
 
 		IEex_SetPanelActive(newSpellInfoPanel, false)
 
+		local commandsPanel = IEex_GetPanelFromEngine(worldScreen, 0)
+		local quicklootButtonX = 705
+		if chuResref == "GUIW10" then
+			quicklootButtonX = 817
+		end
+		local commandsPanelMultiplayer = IEex_GetPanelFromEngine(worldScreen, 22)
+		IEex_AddControlOverride(chuResref, 0, 15, "IEex_UI_Button")
+		IEex_AddControlToPanel(commandsPanel, {
+			["type"] = IEex_ControlStructType.BUTTON,
+			["id"] = 15,
+			["x"] = quicklootButtonX,
+			["y"] = 73,
+			["width"] = 29,
+			["height"] = 34,
+			["bam"] = "USGBTNQL",
+			["sequence"] = 0,
+			["frameUnpressed"] = 0,
+			["framePressed"] = 1,
+			["frameDisabled"] = 0,
+		})
+
+		IEex_AddControlOverride(chuResref, 22, 15, "IEex_UI_Button")
+		IEex_AddControlToPanel(commandsPanelMultiplayer, {
+			["type"] = IEex_ControlStructType.BUTTON,
+			["id"] = 15,
+			["x"] = quicklootButtonX,
+			["y"] = 73,
+			["width"] = 29,
+			["height"] = 34,
+			["bam"] = "USGBTNQL",
+			["sequence"] = 0,
+			["frameUnpressed"] = 0,
+			["framePressed"] = 1,
+			["frameDisabled"] = 0,
+		})
+
 	elseif chuResref == "GUIREC" then
 		local screenCharacter = IEex_GetEngineCharacter()
 		local newWizardSpellsPanel = IEex_AddPanelToEngine(screenCharacter, {
@@ -2675,6 +2720,7 @@ function IEex_OnCHUInitialized(chuResref)
 		})
 		
 		IEex_SetPanelActive(newWizardSpellsPanel, false)
+		
 	end
 end
 
@@ -2758,6 +2804,15 @@ function IEex_Extern_OnOptionsScreenESC(CScreenOptions)
 		return true
 	end
 	return false
+end
+
+function IEex_CScreenWorld_OnQuicklootButtonLClick()
+	IEex_AssertThread(IEex_Thread.Async, true)
+	if IEex_Helper_GetBridge("IEex_Quickloot", "on") then
+		IEex_Quickloot_Stop()
+	else
+		IEex_Quickloot_Start()
+	end
 end
 
 ex_current_menu_spell_level = 1
@@ -2949,6 +3004,7 @@ ex_class_name_strings = {
 }
 ex_current_record_hand = 1
 ex_current_record_actorID = 0
+ex_previous_line_was_race = false
 function IEex_Extern_OnUpdateRecordDescription(CScreenCharacter, CGameSprite, CUIControlEditMultiLine, m_plstStrings)
 	IEex_AssertThread(IEex_Thread.Both, true)
 	local creatureData = CGameSprite
@@ -2972,6 +3028,7 @@ function IEex_Extern_OnUpdateRecordDescription(CScreenCharacter, CGameSprite, CU
 	local monkWisdomBonusString = ex_str_925
 	local mainhandString = IEex_FetchString(734)
 	local offhandString = IEex_FetchString(733)
+	local raceString = IEex_FetchString(1048)
 	local baseString = IEex_FetchString(31353)
 	local rangedString = IEex_FetchString(41123)
 	local numberOfAttacksString = IEex_FetchString(9458)
@@ -3006,6 +3063,13 @@ function IEex_Extern_OnUpdateRecordDescription(CScreenCharacter, CGameSprite, CU
 			if string.match(line, favoredClassString) then
 				lookForClassNames = false
 			end
+		elseif ex_previous_line_was_race then
+			ex_previous_line_was_race = false
+			if IEex_ReadByte(creatureData + 0x7B3, 0x0) > 4 then
+				line = line .. IEex_FetchString(ex_tra_55603)
+			end
+		elseif string.match(line, raceString) then
+			ex_previous_line_was_race = true
 		elseif string.match(line, sneakAttackDamageString .. ":") then
 			local rogueLevel = IEex_GetActorStat(targetID, 104)
 			local sneakAttackDiceNumberMainHand = math.floor((rogueLevel + 1) / 2) + IEex_ReadByte(creatureData + 0x744 + ex_feat_name_id["ME_IMPROVED_SNEAK_ATTACK"], 0x0)
@@ -3566,11 +3630,14 @@ function IEex_Extern_OnUpdateRecordDescription(CScreenCharacter, CGameSprite, CU
 							extraAttacks = extraAttacks + 1
 						end
 					end
+					if normalAPR == 5 and baseAPR < 4 then
+						extraMainhandAttacks = extraMainhandAttacks + baseAPR - normalAPR + 1
+					end
 				else
 					extraAttacks = extraAttacks + extraMainhandAttacks
 					extraMainhandAttacks = 0
 					if normalAPR == 5 then
-						extraAttacks = extraAttacks + IEex_ReadByte(creatureData + 0x5ED, 0x0) - normalAPR
+						extraAttacks = extraAttacks + baseAPR - normalAPR
 						if extraAttacks < 0 then
 							extraAttacks = 0
 						end
@@ -3586,7 +3653,10 @@ function IEex_Extern_OnUpdateRecordDescription(CScreenCharacter, CGameSprite, CU
 					end
 					manyshotAttacks = manyshotAttacks * 2
 					totalAttacks = normalAPR + extraAttacks + extraMainhandAttacks + manyshotAttacks
-
+				end
+				if imptwfFeatCount > 2 and numWeapons >= 2 then
+					extraAttacks = extraMainhandAttacks + (normalAPR - 1)
+					totalAttacks = normalAPR + extraAttacks + extraMainhandAttacks + manyshotAttacks
 				end
 				if string.match(line, numberOfAttacksString) then
 					if numWeapons >= 2 then

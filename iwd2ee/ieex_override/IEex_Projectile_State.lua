@@ -536,7 +536,7 @@ function EXMETAMA(actionData, creatureData)
 		local resWrapper = IEex_DemandRes(currentSpellRES, "SPL")
 		if resWrapper:isValid() then
 			local spellData = resWrapper:getData()
-			if bit.band(IEex_ReadDword(spellData + 0x18), 0x10000000) > 0 or ex_damage_source_spell[currentSpellRES] ~= nil then
+			if bit.band(IEex_ReadDword(spellData + 0x18), 0x10000000) > 0 or ex_source_spell[currentSpellRES] ~= nil then
 				resWrapper:free()
 				return
 			end
@@ -1339,8 +1339,8 @@ IEex_MutatorOpcodeFunctions["MEATKSAV"] = {
 		if opcode == 12 and IEex_ReadLString(effectData + 0x90, 8) == "IEEX_DAM" and (matchProjectile == -1 or IEex_ReadWord(projectileData + 0x6E, 0x0) == matchProjectile) then
 			local savebonus = IEex_ReadDword(originatingEffectData + 0x40)
 			local sourceSpell = IEex_ReadLString(originatingEffectData + 0x90, 8)
-			if ex_damage_source_spell[sourceSpell] ~= nil then
-				sourceSpell = ex_damage_source_spell[sourceSpell]
+			if ex_source_spell[sourceSpell] ~= nil then
+				sourceSpell = ex_source_spell[sourceSpell]
 			end
 			local trueschool = IEex_ReadDword(originatingEffectData + 0x48)
 			if ex_trueschool[sourceSpell] ~= nil then

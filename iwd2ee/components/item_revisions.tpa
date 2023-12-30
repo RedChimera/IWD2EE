@@ -5552,7 +5552,7 @@ COPY_EXISTING ~11deird.sto~ ~override~ //Gallaway Trading Post
 COPY_EXISTING ~11elytha.sto~ ~override~ //Elytharra store
 	REMOVE_STORE_ITEM ~11RTHF04~
 	ADD_STORE_ITEM ~11RTHF04~ BEFORE ~00AMUL14~ #1 #1 #1 ~IDENTIFIED~ #1 //Book of Leaves
-	ADD_STORE_ITEM ~USBOOKSP~ AFTER ~11RTHF04~ #6 #1 #1 ~IDENTIFIED~ #1 //Tome of the Dedicated Specialist
+//	ADD_STORE_ITEM ~USBOOKSP~ AFTER ~11RTHF04~ #6 #1 #1 ~IDENTIFIED~ #1 //Tome of the Dedicated Specialist
 //	ADD_STORE_ITEM ~11RTHF07~ AFTER ~00AMUL13~ #1 #1 #1 ~IDENTIFIED~ #1 //Dreisbach's Iron Hoop
 	ADD_STORE_ITEM ~00RING87~ AFTER ~00RING75~ #1 #1 #1 ~IDENTIFIED~ #1 //Lesser Chameleon Ring
 	ADD_STORE_ITEM ~00RING67~ AFTER ~00RING87~ #1 #1 #1 ~IDENTIFIED~ #1 //Ring of Magic Missiles

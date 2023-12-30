@@ -620,9 +620,12 @@ LAF ADD_FEAT_IWD2 INT_VAR nameref=RESOLVE_STR_REF(@384) descref=RESOLVE_STR_REF(
 
 INCLUDE ~%mod_folder%/components/attacks_of_opportunity_1.tpa~
 
+LAF ADD_FEAT_IWD2 INT_VAR nameref=RESOLVE_STR_REF(@386) descref=RESOLVE_STR_REF(@387) max=3 STR_VAR name=~ME_FAST_HEALING~ script=~Feats_FastHealing~ prerequisite_script=~Prereq_FastHealing~ featspl_1=~USFFASH1~ featspl_2=~USFFASH1~ featspl_3=~USFFASH1~ END
+LAF ADD_FEAT_IWD2 INT_VAR nameref=RESOLVE_STR_REF(@388) descref=RESOLVE_STR_REF(@389) max=5 STR_VAR name=~ME_LICHDOM~ script=~Feats_Lichdom~ prerequisite_script=~Prereq_Lichdom~ featspl_5=~USFLICH3~ END
+
 LAF EXTEND_FEAT_IWD2 INT_VAR id=9 offset=0x70C descref=RESOLVE_STR_REF(@712) max=2 STR_VAR script=~Feats_CombatCasting~ prerequisite_script=~Prereq_CombatCasting~ END
 LAF EXTEND_FEAT_IWD2 INT_VAR id=48 offset=0x70D descref=RESOLVE_STR_REF(@713) max=2 STR_VAR script=~Feats_PreciseShot~ prerequisite_script=~Prereq_PreciseShot~ END
-
+LAF EXTEND_FEAT_IWD2 INT_VAR id=16 offset=0x70E descref=RESOLVE_STR_REF(@730) max=2 STR_VAR script=~Feats_Dodge~ prerequisite_script=~Prereq_Dodge~ END
 
 
 
@@ -1800,10 +1803,38 @@ COPY_EXISTING ~SPIN970.spl~ ~override~
   SAY UNIDENTIFIED_DESC @226
   SAY IDENTIFIED_DESC @226
 
+COPY_EXISTING ~USLICHPH.itm~ ~override~
+  SAY NAME1 @895
+  SAY NAME2 @895
+  SAY UNIDENTIFIED_DESC @896
+  SAY IDENTIFIED_DESC @896
+
+COPY_EXISTING ~USLICHAD.cre~ ~override~
+  SAY NAME1 @388
+  SAY NAME2 @388
+
+COPY_EXISTING ~USLICHF2.spl~ ~override~
+	READ_SHORT 0x68 numheaders
+	FOR (i = numheaders; i < 50; ++i) BEGIN
+		LPF ADD_SPELL_HEADER INT_VAR copy_header=i insert_point=i END
+		numheaders = numheaders + 1
+	END
+	FOR (i = 1; i <= numheaders; ++i) BEGIN
+		levelcheck = i - 5
+		PATCH_IF levelcheck <= 0 BEGIN
+			levelcheck = 1
+		END
+		LPF ALTER_SPELL_HEADER INT_VAR header=i min_level=i END
+		LPF ALTER_EFFECT INT_VAR silent=1 check_headers=1 check_globals=0 header=(i - 1) dicenumber=levelcheck END
+	END
+
 COPY_EXISTING ~FE_13_1.spl~ ~override~
 	LPF ALTER_EFFECT INT_VAR silent=1 match_opcode=502 parameter1=RESOLVE_STR_REF(@921) STR_VAR match_resource=~MEDEFLEC~ END
 
-COPY ~%mod_folder%/dlg/USALCP01.d~ ~override/USALCP01.dlg~
+COPY_EXISTING ~FE_16_2.spl~ ~override~
+	LPF ALTER_EFFECT INT_VAR silent=1 match_opcode=502 parameter1=RESOLVE_STR_REF(@890) STR_VAR match_resource=~MEDEFLEC~ END
+
+COPY ~%mod_folder%/dlg/USALCP01.d~ ~override/USALCP01.dlg~ ~%mod_folder%/dlg/USLICHAD.d~ ~override/USLICHAD.dlg~
 	COMPILE_D_TO_DLG
 	LPF CONVERT_DLG_TO_IWD2_FORMAT END
 
@@ -1812,6 +1843,7 @@ STRING_SET 17248 @940
 COPY ~%mod_folder%/bam/USALCP02.bam~ ~override~
 
 COPY ~%mod_folder%/bcs/USALCP02.bcs~ ~override~
+COPY ~%mod_folder%/bcs/USLICHAD.bcs~ ~override~
 
 COPY ~%mod_folder%/sto/USALCP00.sto~ ~override~
 COPY ~%mod_folder%/sto/USALCP01.sto~ ~override~

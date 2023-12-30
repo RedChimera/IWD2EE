@@ -226,8 +226,10 @@ function IEex_GetFeatCountFromBaseStats(baseStats, featID)
 	if featID <= 74 then
 		-- Abuse function's simple indexing and pretend like I have a sprite
 		return IEex_Call(IEex_Label("CGameSprite::GetFeatCount"), {featID}, baseStats - 0x5A4, 0x0)
-	else
+	elseif featID <= 111 then
 		return IEex_ReadByte(baseStats + 0x1EB + (featID - 0x4B), 0)
+	else
+		return IEex_ReadByte(baseStats + 0x300 + (featID - 0x70), 0)
 	end
 end
 
@@ -325,8 +327,10 @@ function IEex_SetSpriteFeatCount(sprite, featID, count)
 		else
 			IEex_Call(IEex_Label("CGameSprite::SetFeatCount"), {count, featID}, sprite, 0x0)
 		end
-	else
+	elseif featID <= 111 then
 		IEex_WriteByte(sprite + 0x78F + (featID - 0x4B), count)
+	else
+		IEex_WriteByte(sprite + 0x8A4 + (featID - 0x70), count)
 	end
 end
 
