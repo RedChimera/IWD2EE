@@ -624,8 +624,11 @@
 		; push CSpell ;
 		!push_ecx
 
+		!call >IEex_GetLuaState
+		!mov_ebx_eax
+
 		!push_dword ]], {IEex_WriteStringAuto("IEex_Extern_CSpell_UsableBySprite"), 4}, [[
-		!push_dword *_g_lua_async
+		!push_ebx
 		!call >_lua_getglobal
 		!add_esp_byte 08
 
@@ -633,7 +636,7 @@
 		!fild_[esp]
 		!sub_esp_byte 04
 		!fstp_qword:[esp]
-		!push_dword *_g_lua_async
+		!push_ebx
 		!call >_lua_pushnumber
 		!add_esp_byte 0C
 
@@ -641,28 +644,28 @@
 		!fild_[esp]
 		!sub_esp_byte 04
 		!fstp_qword:[esp]
-		!push_dword *_g_lua_async
+		!push_ebx
 		!call >_lua_pushnumber
 		!add_esp_byte 0C
 
 		!push_byte 00
 		!push_byte 01
 		!push_byte 02
-		!push_dword *_g_lua_async
+		!push_ebx
 		!call >_lua_pcall
 		!add_esp_byte 10
-		!push_dword *_g_lua_async
+		!push_ebx
 		!call >IEex_CheckCallError
 
 		!push_byte FF
-		!push_dword *_g_lua_async
+		!push_ebx
 		!call >_lua_toboolean
 		!add_esp_byte 08
 
 		!push_eax
 
 		!push_byte FE
-		!push_dword *_g_lua_async
+		!push_ebx
 		!call >_lua_settop
 		!add_esp_byte 08
 

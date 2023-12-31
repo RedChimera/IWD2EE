@@ -141,7 +141,7 @@ end
 
 function IEex_Extern_CSpell_UsableBySprite(CSpell, sprite)
 
-	IEex_AssertThread(IEex_Thread.Async, true)
+	IEex_AssertThread(IEex_Thread.Both, true)
 	local resref = IEex_ReadLString(CSpell + 0x8, 8)
 
 	local scrollResref = IEex_SpellToScroll[resref]
