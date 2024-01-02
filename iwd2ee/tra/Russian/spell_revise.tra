@@ -3925,19 +3925,19 @@
 Спасбросок: нет
 
 Это заклинание увеличивает вред, наносимый телу цели экстремальными условиями. На время действия заклинания все повреждения, наносимые цели огнем, холодом, электричеством и кислотой, увеличиваются на 50%. Это увеличение применяется до вычисления сопротивления урону. Спасброска от этого заклинания нет.~
-@35553     = ~Thorn Shots~
-@36553     = ~Thorn Shots
-(Transmutation)
-Level: Rgr 6
-Range: Caster
-Duration: 4 rounds or until used up
-Casting Time: 5
-Area of Effect: Special
-Saving Throw: Reflex half
+@35553     = ~Выстрелы колючками~
+@36553     = ~Выстрелы колючками
+(Преобразование)
+Уровень: следопыт 6
+Дальность: колдующий
+Длительность: 4 раунда или пока не будет использовано
+Время чтения: 5
+Зона действия: особая
+Спасбросок: реакции, половина урона
 
-This spell augments the ranger's missile attacks to deal damage in a cone. For the duration, if the ranger would make a missile attack, a spray of thorns is released instead, dealing the attack's damage to all creatures in a cone. However, creatures in the cone can make a Reflex save to halve the damage of the attack. Once the ranger has made a number of ranged attacks equal to 1 per 6 levels, the spell ends early. Thorn Shots does not stack with Flame Shots.
+Это заклинание усиливает дистанционные атаки следопыта - они начинают наносить урон существам, находящимся в конусе. В течение времени действия заклинания, если следопыта проводит дистанционную атаку, вместо нее выпускается поток шипов, наносящий урон от этой атаки всем существам, попавшим в конус. Они могут сделать спасбросок реакции, чтобы уменьшить урон вдвое. Как только следопыт совершит количество максимально количество дистанционных атак (по одной на 6 уровней), заклинание заканчивается досрочно. Это заклинание не получает дополнительный урон от заклинания "Огненные снаряды".
 
-Although rangers normally cast spells at half their caster level, Thorn Shots will be cast at a ranger's full caster level.~
+Хотя обычно следопыты учитывают только половину своего уровня при чтении заклинаний, это заклинание учитывает полный уровень следопыта.~
 @35554     = ~Animal Growth~
 @36554     = ~Animal Growth
 (Transmutation)
