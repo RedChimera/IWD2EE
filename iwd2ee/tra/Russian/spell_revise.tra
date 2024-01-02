@@ -3988,7 +3988,6 @@
 Произнося это заклинание, заклинатель помечает цель, которая будет автоматически наказана при совершении тяжкого преступления. В следующий раз, когда цель убьет кого-нибудь, сработает "Метка правосудия", и цель получит 20d10 магического урона без броска спасброска. При наложении на врага это заклинание не провоцирует атаку при возможности. Его могут применять только законопослушные персонажи.~
 @35653     = ~Отталкивание~
 @36653     = ~Отталкивание
-
 (Отречение)
 Уровень: бард 7, священник 6, колдун/волшебник 7, жрец Хелма
 Дальность: колдующий
@@ -4000,8 +3999,8 @@
 Это заклинание наделяет заклинателя аурой, которая отталкивает ближайших врагов, отбрасывая их от заклинателя. Любой враг, оказавшийся в зоне действия заклинания, должен сделать спасбросок стойкости с -5 к УС или быть отброшенным назад.~
 @35654     = ~Wondrous Recall~
 @36654     = ~Wondrous Recall
-(Enchantment)
-Level: Brd 6, Clr 6, Drd 6
+(Чародейство)
+Уровень: Brd 6, Clr 6, Drd 6
 Range: Caster
 Duration: Instantaneous
 Casting Time: 3
@@ -4012,7 +4011,7 @@ This spell enables the caster to bring back to memory 2 spells that have been pr
 @35655     = ~Bolt of Glory~
 @36655     = ~Bolt of Glory
 (Evocation)
-Level: Clr 6, Pal 6
+Уровень: Clr 6, Pal 6
 Range: Sight of Caster
 Duration: Instantaneous
 Casting Time: 5
@@ -4029,7 +4028,7 @@ There is no Saving Throw, and the target's Spell Resistance matters not.~
 @35656     = ~Supreme Speed~
 @36656     = ~Supreme Speed
 (Transmutation)
-Level: Rgr 6
+Уровень: Rgr 6
 Range: Caster
 Duration: 1 second/level
 Casting Time: 1
@@ -4042,7 +4041,7 @@ Although rangers normally cast spells at half their caster level, Supreme Speed 
 @35657     = ~Explosive Smite~
 @36657     = ~Explosive Smite
 (Evocation)
-Level: Pal 6
+Уровень: Pal 6
 Range: Caster
 Duration: 2 rounds or until triggered
 Casting Time: 0
@@ -4053,7 +4052,7 @@ This spell allows the paladin to apply their Smite Evil as an area of effect. Ca
 @35658     = ~Trial by Fire~
 @36658     = ~Trial by Fire
 (Evocation)
-Level: Clr 6, Pal 6
+Уровень: Clr 6, Pal 6
 Range: Caster
 Duration: 5 rounds
 Casting Time: 6
@@ -4064,7 +4063,7 @@ This spell creates a wall of holy fire, which does not burn the innocent. Any no
 @35659     = ~Mass Heal Animal~
 @36659     = ~Mass Heal Animal
 (Conjuration)
-Level: Drd 6, Rgr 6
+Уровень: Drd 6, Rgr 6
 Range: Caster
 Duration: Instantaneous
 Casting Time: 9
@@ -4075,7 +4074,7 @@ Mass Heal Animal wipes away disease and injury from all animals in the area of e
 @35660     = ~Desecrate~
 @36660     = ~Desecrate
 (Necromancy)
-Level: Clr 6
+Уровень: Clr 6
 Range: Entire area
 Duration: 8 hours
 Casting Time: 9
@@ -4086,7 +4085,7 @@ This spell imbues the current area with negative energy. For the duration, all u
 @35753     = ~Power Word: Heal~
 @36753     = ~Power Word: Heal
 (Divination)
-Level: Brd 8, Clr 7
+Уровень: Brd 8, Clr 7
 Range: Sight of Caster
 Duration: Instantaneous
 Casting Time: 0
@@ -4097,7 +4096,7 @@ Power Word: Heal is one of the beneficial words of power. When uttered, it heals
 @35754     = ~Regeneration~
 @36754     = ~Regeneration
 (Necromancy)
-Level: Clr 7, Drd 8
+Уровень: Clr 7, Drd 8
 Range: Touch
 Duration: 1 round / 2 levels
 Casting Time: 7
@@ -4108,7 +4107,7 @@ This spell lets a creature regenerate wounds very rapidly. For the duration, the
 @35853     = ~Unholy Aura~
 @36853     = ~Unholy Aura
 (Abjuration)
-Level: Clr 8
+Уровень: Clr 8
 Range: 20 ft.
 Duration: 1 round/level
 Casting Time: 6
@@ -4124,7 +4123,7 @@ Unholy Aura can only be cast by evil characters.~
 @35951     = ~Auril's Blessing~
 @36951     = ~Auril's Blessing
 (Conjuration)
-Level: Drd 9
+Уровень: Drd 9
 Range: Caster
 Duration: 1 round/level
 Casting Time: 9
@@ -4135,7 +4134,7 @@ This spell calls upon the power of Auril to amplify the caster's cold spells. Fo
 @35952     = ~Mass Harm~
 @36952     = ~Mass Harm
 (Necromancy)
-Level: Clr 9
+Уровень: Clr 9
 Range: Sight of Caster
 Duration: Instantaneous
 Casting Time: 9
@@ -4146,7 +4145,7 @@ Mass Harm releases destructive negative energy upon all living enemies in the ar
 @35953     = ~Volcanic Eruption~
 @36953     = ~Volcanic Eruption
 (Evocation)
-Level: Drd 9
+Уровень: Drd 9
 Range: Caster
 Duration: Instantaneous
 Casting Time: 12
@@ -4157,7 +4156,7 @@ This spell triggers a small volcanic eruption centered on the caster. Multiple b
 @35954     = ~Storm of Vengeance~
 @36954     = ~Storm of Vengeance
 (Conjuration)
-Level: Clr 9, Drd 9, Talos 9
+Уровень: Clr 9, Drd 9, Talos 9
 Range: Sight of Caster
 Duration: 4 rounds
 Casting Time: 12
@@ -4173,7 +4172,7 @@ This spell conjures a divine storm cloud which releases damaging torrents upon c
 @35955     = ~Contingent Resurrection~
 @36955     = ~Contingent Resurrection
 (Conjuration)
-Level: Clr 9
+Уровень: Clr 9
 Range: Touch
 Duration: 8 hours or until triggered
 Casting Time: 18
@@ -4184,7 +4183,7 @@ This spell stores a Resurrection spell in the target, which will be triggered th
 @35956     = ~Tornado~
 @36956     = ~Tornado
 (Evocation)
-Level: Drd 9
+Уровень: Drd 9
 Range: Sight of Caster
 Duration: 3 rounds
 Casting Time: 9
@@ -4195,7 +4194,7 @@ A more powerful version of the spell Whirlwind, the spell creates a tornado at t
 @35957     = ~Summon Deva~
 @36957     = ~Summon Deva
 (Conjuration)
-Level: Clr 9
+Уровень: Clr 9
 Range: Sight of Caster
 Duration: 50 rounds
 Casting Time: 12
@@ -4206,7 +4205,7 @@ This spell summons an angelic deva to assist the party. The deva has a variety o
 @37151     = ~Верный удар~
 @38151     = ~Верный удар
 (Divination) 
-Level: Brd 1, Pal 1, Rgr 1, Sor/Wiz 1
+Уровень: Brd 1, Pal 1, Rgr 1, Sor/Wiz 1
 Range: Caster
 Duration: 9 seconds
 Casting Time: 1
@@ -4217,7 +4216,7 @@ The True Strike spell gives the caster incredible insights into his or her enemi
 @37152     = ~Отразить атаку~
 @38152     = ~Отразить атаку
 (Abjuration)
-Level: Brd 1, Pal 1, Sor/Wiz 1, Helm 1
+Уровень: Brd 1, Pal 1, Sor/Wiz 1, Helm 1
 Range: Caster
 Duration: 8 hours or until triggered
 Casting Time: 0
@@ -4228,7 +4227,7 @@ After this spell is cast, the next instance of physical damage the caster would 
 @37154     = ~Простой вызов~
 @38154     = ~Simple Summoning
 (Conjuration)
-Level: Brd 2, Clr 2, Sor/Wiz 1
+Уровень: Brd 2, Clr 2, Sor/Wiz 1
 Range: 1000 ft.
 Duration: Instantaneous
 Casting Time: 1
@@ -4241,7 +4240,7 @@ Simple Summoning can be cast on any creature the party sees, even one outside of
 @37155     = ~Часы смерти
 @38155     = ~Часы смерти
 (Necromancy)
-Level: Clr 1, Rgr 1, Sor/Wiz 1
+Уровень: Clr 1, Rgr 1, Sor/Wiz 1
 Range: Caster
 Duration: 10 rounds/level
 Casting Time: 1
@@ -4252,7 +4251,7 @@ Deathwatch lets the caster learn precisely how close other creatures are to deat
 @37156     = ~Прыжок~
 @38156     = ~Jump
 (Transmutation)
-Level: Brd 1, Rgr 1, Sor/Wiz 1
+Уровень: Brd 1, Rgr 1, Sor/Wiz 1
 Range: Touch
 Duration: 30 rounds
 Casting Time: 4
@@ -4265,7 +4264,7 @@ In addition, while this spell is active, the recipient is immune to falling dama
 @37157     = ~Vanish~
 @38157     = ~Vanish
 (Illusion)
-Level: Brd 1, Sor/Wiz 1
+Уровень: Brd 1, Sor/Wiz 1
 Range: Caster
 Duration: 3 rounds
 Casting Time: 1
@@ -4278,7 +4277,7 @@ Vanish is less effective for sneaking past groups of enemies, and better suited 
 @37251     = ~Опознание существа~
 @38251     = ~Identify Creature
 (Divination)
-Level: Brd 2, Drd 2, Rgr 2, Sor/Wiz 2
+Уровень: Brd 2, Drd 2, Rgr 2, Sor/Wiz 2
 Range: Sight of Caster
 Duration: Instantaneous
 Casting Time: 2
@@ -4289,7 +4288,7 @@ Identify Creature reveals useful combat information about the target creature. T
 @37252     = ~Sound Burst~
 @38252     = ~Sound Burst
 (Evocation)
-Level: Brd 2
+Уровень: Brd 2
 Range: Sight of Caster
 Duration: 1 round
 Casting Time: 2
@@ -4300,7 +4299,7 @@ This spell releases an extremely loud and jarring burst of sound. Creatures in t
 @37253     = ~Левитация~
 @38253     = ~Levitate
 (Transmutation)
-Level: Brd 2, Sor/Wiz 2
+Уровень: Brd 2, Sor/Wiz 2
 Range: Sight of Caster
 Duration: Special
 Casting Time: 2
@@ -4313,7 +4312,7 @@ When cast on an ally, Levitate lasts 4 rounds. When cast on a non-allied creatur
 @37254     = ~Колдовское зрение~
 @38254     = ~Колдовское зрение
 (Divination)
-Level: Brd 2, Sor/Wiz 2
+Уровень: Brd 2, Sor/Wiz 2
 Range: Caster
 Duration: 5 rounds/level
 Casting Time: 2
@@ -4324,7 +4323,7 @@ Arcane Sight lets the caster see what magical effects are on a creature. While t
 @37255     = ~Enlarge Creature~
 @38255     = ~Enlarge Creature
 (Transmutation)
-Level: Sor/Wiz 3
+Уровень: Sor/Wiz 3
 Range: Sight of Caster
 Duration: 1 round/level
 Casting Time: 6
@@ -4335,7 +4334,7 @@ This spell causes the target to temporarily grow twice as large in each dimensio
 @37256     = ~Тьма~
 @38256     = ~Тьма
 (Illusion)
-Level: Brd 2, Clr 2, Sor/Wiz 2
+Уровень: Brd 2, Clr 2, Sor/Wiz 2
 Range: Sight of Caster
 Duration: 4 rounds
 Casting Time: 4
@@ -4346,7 +4345,7 @@ This spell creates magical darkness in the area of effect. Creatures without dar
 @37351     = ~Clairvoyance~
 @38351     = ~Clairvoyance
 (Divination)
-Level: Drd 2, Rgr 2
+Уровень: Drd 2, Rgr 2
 Range: Caster
 Duration: Permanent
 Casting Time: 5
@@ -4357,7 +4356,7 @@ The Clairvoyance spell empowers the caster to see in their mind the geographical
 @37352     = ~Удалить магию~
 @38352     = ~Удалить магию
 (Abjuration)
-Level: Clr 3, Drd 4, Pal 3, Sor/Wiz 3, Oghma 2
+Уровень: Clr 3, Drd 4, Pal 3, Sor/Wiz 3, Oghma 2
 Range: Sight of Caster
 Duration: Instantaneous 
 Casting Time: 5
@@ -4368,7 +4367,7 @@ Remove Magic is like Dispel Magic, except it only affects enemies. When cast, it
 @37353     = ~Бросок~
 @38353     = ~Бросок
 (Transmutation)
-Level: Brd 4, Sor/Wiz 3
+Уровень: Brd 4, Sor/Wiz 3
 Range: Touch
 Duration: Instantaneous
 Casting Time: 1
@@ -4379,7 +4378,7 @@ This spell throws the target into the air with incredible force. The target is k
 @37354     = ~Момент предвидения~
 @38354     = ~Момент предвидения
 (Divination)
-Level: Brd 3, Drd 4, Sor/Wiz 3
+Уровень: Brd 3, Drd 4, Sor/Wiz 3
 Range: Sight of Caster
 Duration: Special
 Casting Time: 1
@@ -4392,7 +4391,7 @@ The abilities granted by Moment of Prescience can be used as a free action.~
 @37355     = ~Полёт~
 @38355     = ~Fly
 (Transmutation)
-Level: Brd 3, Rgr 3, Sor/Wiz 3
+Уровень: Brd 3, Rgr 3, Sor/Wiz 3
 Range: Sight of Caster
 Duration: 1 round/level
 Casting Time: 3
@@ -4403,7 +4402,7 @@ This wondrous spell gives the recipient the power to fly. For the duration, the 
 @37356     = ~Фильтр восприятия~
 @38356     = ~Perception Filter
 (Illusion)
-Level: Brd 1, Sor/Wiz 1
+Уровень: Brd 1, Sor/Wiz 1
 Range: Touch
 Duration: 10 rounds/level
 Casting Time: 3
@@ -4416,7 +4415,7 @@ If a character under the effect of this spell attacks or casts a spell, that doe
 @37357     = ~Legend Lore~
 @38357     = ~Legend Lore
 (Divination) 
-Level: Brd 3, Oghma 3
+Уровень: Brd 3, Oghma 3
 Range: Caster
 Duration: 10 rounds/level
 Casting Time: 3
@@ -4427,7 +4426,7 @@ A more powerful version of the spell Identify, Legend Lore temporarily increases
 @37358     = ~Спроецировать образ~
 @38358     = ~Project Image
 (Illusion)
-Level: Brd 3, Sor/Wiz 3
+Уровень: Brd 3, Sor/Wiz 3
 Range: Sight of Caster
 Duration: 1 round/level
 Casting Time: 6
@@ -4443,8 +4442,8 @@ While Project Image is active, the character record screen and HP bar record the
 The spell ends early if the image is destroyed (it starts with the same HP as the caster), if it's dispelled, if the caster is killed, or if the party moves to another area.~
 @37359     = ~Glibness~
 @38359     = ~Glibness
-(Enchantment)
-Level: Brd 3
+(Чародейство)
+Уровень: Brd 3
 Range: Caster
 Duration: 10 rounds/level
 Casting Time: 3
@@ -4455,7 +4454,7 @@ This spell greatly increases the character's ability to fool others. For the dur
 @37451     = ~Teleport Field~
 @38451     = ~Teleport Field
 (Transmutation) 
-Level: Brd 5, Sor/Wiz 4
+Уровень: Brd 5, Sor/Wiz 4
 Range: Sight of Caster
 Duration: 4 rounds
 Casting Time: 1
@@ -4466,7 +4465,7 @@ This spell creates a strange magical field in the area of effect. Any hostile cr
 @37452     = ~Phantasmal Killer~
 @38452     = ~Phantasmal Killer
 (Illusion)
-Level: Brd 4, Sor/Wiz 4
+Уровень: Brd 4, Sor/Wiz 4
 Range: Sight of Caster
 Duration: Instantaneous
 Casting Time: 4
@@ -4477,7 +4476,7 @@ Phantasmal Killer causes the target to be struck down by an embodiment of its wo
 @37453     = ~Пир упырей~
 @38453     = ~Пир упырей
 (Necromancy)
-Level: Clr 4, Sor/Wiz 4
+Уровень: Clr 4, Sor/Wiz 4
 Range: Caster
 Duration: 10 rounds/level
 Casting Time: 4
@@ -4488,7 +4487,7 @@ This spell lets the caster summon undead by killing other creatures. During the 
 @37454     = ~Copy Spell~
 @38454     = ~Copy Spell
 (Universal)
-Level: Brd 4
+Уровень: Brd 4
 Range: Sight of Caster
 Duration: Permanent until released
 Casting Time: Free action
@@ -4499,7 +4498,7 @@ This spell copies a spell that another creature is casting, allowing the bard to
 @37455     = ~Polymorph Self~
 @38455     = ~Polymorph Self
 (Transmutation)
-Level: Sor/Wiz 4
+Уровень: Sor/Wiz 4
 Range: Caster
 Duration: 1 minute/level
 Casting Time: 4
@@ -4515,7 +4514,7 @@ Polymorph Self allows the caster to assume the form of a creature of moderate po
 @37456     = ~Наделить способностью к заклинанию~
 @38456     = ~Imbue with Spell Ability
 (Universal)
-Level: Clr 4, Brd 4
+Уровень: Clr 4, Brd 4
 Range: Sight of Caster
 Duration: 8 hours or until released
 Casting Time: 4
@@ -4526,7 +4525,7 @@ By casting Imbue with Spell Ability, the caster grants another creature the abil
 @37457     = ~Chaos Cast~
 @38457     = ~Chaos Cast
 (Universal)
-Level: Sor/Wiz 4
+Уровень: Sor/Wiz 4
 Range: Sight of Caster
 Duration: Special
 Casting Time: 1
@@ -4539,7 +4538,7 @@ The main advantage of Chaos Cast is that the random spell is more likely to be h
 @37551     = ~Steal Spells~
 @38551     = ~Steal Spells
 (Transmutation)
-Level: Brd 5, Sor/Wiz 5, Mask 5
+Уровень: Brd 5, Sor/Wiz 5, Mask 5
 Range: Sight of Caster
 Duration: Instantaneous
 Casting Time: 5
@@ -4550,7 +4549,7 @@ This spell steals memorized spells from the target and grants their spell slots 
 @37552     = ~Призрачная форма~
 @38552     = ~Призрачная форма
 (Transmutation)
-Level: Brd 5, Clr 5, Sor/Wiz 5
+Уровень: Brd 5, Clr 5, Sor/Wiz 5
 Range: Touch
 Duration: 1 round/level
 Casting Time: 5
@@ -4561,7 +4560,7 @@ This spell turns the recipient incorporeal for a limited period of time. While i
 @37553     = ~Отмотать время~
 @38553     = ~Отмотать время
 (Transmutation)
-Level: Brd 5, Sor/Wiz 5
+Уровень: Brd 5, Sor/Wiz 5
 Range: Caster
 Duration: -2 rounds
 Casting Time: 0
@@ -4572,7 +4571,7 @@ This spell briefly reverses time for the caster, reverting them to the state the
 @37554     = ~Wall of Force~
 @38554     = ~Wall of Force
 (Abjuration)
-Level: Sor/Wiz 5, Selune 5
+Уровень: Sor/Wiz 5, Selune 5
 Range: Sight of Caster
 Duration: 5 rounds
 Casting Time: 7
@@ -4582,8 +4581,8 @@ Saving Throw: None
 This spell creates a wall of magical force, which stays for 5 rounds. Creatures cannot pass through the wall, though they can still fly over it, teleport past it, or float through it while incorporeal. The wall cannot be dispelled. Only one Wall of Force can be active at a time.~
 @37555     = ~Second Chance~
 @38555     = ~Second Chance
-(Enchantment)
-Level: Brd 5, Clr 6
+(Чародейство)
+Уровень: Brd 5, Clr 6
 Range: Touch
 Duration: 8 hours or until triggered
 Casting Time: 9
@@ -4594,7 +4593,7 @@ This spell gives the target the miraculous ability to avoid death once. The next
 @37652     = ~Isaac's Greater Missile Storm~
 @38652     = ~Isaac's Greater Missile Storm
 (Evocation)
-Level: Sor/Wiz 6
+Уровень: Sor/Wiz 6
 Range: Sight of Caster
 Duration: Instantaneous
 Casting Time: 4
@@ -4605,7 +4604,7 @@ This spell creates a large number of projectiles akin to those created by the Ma
 @37653     = ~Катящийся валун~
 @38653     = ~Катящийся валун
 (Conjuration)
-Level: Drd 6, Sor/Wiz 6
+Уровень: Drd 6, Sor/Wiz 6
 Range: Special
 Duration: Instantaneous
 Casting Time: 4
@@ -4616,7 +4615,7 @@ Boulder Roll creates a large boulder, which rolls forward from the caster, crush
 @37654     = ~Songcasting~
 @38654     = ~Songcasting
 (Universal)
-Level: Brd 8
+Уровень: Brd 8
 Range: Special
 Duration: 15 rounds
 Casting Time: 10
@@ -4629,7 +4628,7 @@ Each round for the duration, if the bard is singing a bard song, there is a chan
 @37655     = ~Void Sound~
 @38655     = ~Void Sound
 (Necromancy)
-Level: Brd 7
+Уровень: Brd 7
 Range: Caster
 Duration: Instantaneous
 Casting Time: 5
@@ -4640,7 +4639,7 @@ By casting this spell, the caster emits a Void Sound, a horrific sound that can 
 @37656     = ~Посох заклинаний~
 @38656     = ~Spellstaff
 (Universal)
-Level: Drd 6, Sor/Wiz 6
+Уровень: Drd 6, Sor/Wiz 6
 Range: Special
 Duration: 8 hours or until all charges are expended
 Casting Time: 10
@@ -4653,7 +4652,7 @@ The Spellstaff has a number of charges equal to the caster's level. Each time th
 @37657     = ~Freeze Inanimates~
 @38657     = ~Freeze Inanimates
 (Transmutation)
-Level: Sor/Wiz 6
+Уровень: Sor/Wiz 6
 Range: Caster
 Duration: 4 rounds
 Casting Time: 6
@@ -4664,7 +4663,7 @@ A lesser time manipulation spell, Freeze Inanimates stops time for all inanimate
 @37751     = ~Стигийский ледяной шторм~
 @38751     = ~Стигийский ледяной шторм
 (Conjuration)
-Level: Sor/Wiz 7
+Уровень: Sor/Wiz 7
 Range: Sight of Caster
 Duration: Instantaneous
 Casting Time: 4
@@ -4675,7 +4674,7 @@ Stygian Ice Storm is the signature spell of gelugons. When cast, it summons a st
 @37752     = ~Mantle~
 @38752     = ~Mantle
 (Abjuration)
-Level: Sor/Wiz 7
+Уровень: Sor/Wiz 7
 Range: Caster
 Duration: 4 rounds
 Casting Time: 1
@@ -4692,8 +4691,8 @@ Caster level        Damage Reduction
 30 and above        35/+7~
 @37753     = ~Fortune's Favorite~
 @38753     = ~Fortune's Favorite
-(Enchantment) 
-Level: Brd 7
+(Чародейство) 
+Уровень: Brd 7
 Range: Sight of Caster
 Duration: 7 seconds
 Casting Time: 2
@@ -4704,7 +4703,7 @@ This spell bestows flawless luck upon a creature. For 7 seconds, the recipient g
 @37755     = ~Lightning Barrage~
 @38755     = ~Lightning Barrage
 (Evocation)
-Level: Sor/Wiz 7, Talos 7
+Уровень: Sor/Wiz 7, Talos 7
 Range: Sight of Caster
 Duration: Instantaneous
 Casting Time: 4
@@ -4715,7 +4714,7 @@ This spell fires a flurry of small lightning bolts at the target. One bolt is fi
 @37756     = ~Reanimate~
 @38756     = ~Reanimate
 (Necromancy)
-Level: Clr 7, Sor/Wiz 7
+Уровень: Clr 7, Sor/Wiz 7
 Range: Sight of Caster
 Duration: Permanent
 Casting Time: 7
@@ -4726,7 +4725,7 @@ This spell "resurrects" the target as an undead creature under the caster's cont
 @37757     = ~Skeleton Horde~
 @38757     = ~Skeleton Horde
 (Necromancy) 
-Level: Clr 7, Sor/Wiz 7
+Уровень: Clr 7, Sor/Wiz 7
 Range: Sight of Caster
 Duration: 8 hours
 Casting Time: 7
@@ -4737,7 +4736,7 @@ This spell animates 1 skeleton per caster level. The skeletons ignore the summon
 @37758     = ~Spell Sequencer~
 @38758     = ~Spell Sequencer
 (Universal)
-Level: Brd 7, Sor/Wiz 7, Oghma 6
+Уровень: Brd 7, Sor/Wiz 7, Oghma 6
 Range: Special
 Duration: Permanent until triggered
 Casting Time: 15
@@ -4749,8 +4748,8 @@ Spell Sequencer lets the caster store three spells to be released later on. Afte
 Spells with a range of "Caster" will be cast on the caster, regardless of the target of the ability. Spells with limited range will fail if the target is outside the spell's range.~
 @37759     = ~Симпатия~
 @38759     = ~Симпатия
-(Enchantment)
-Level: Brd 6, Drd 8, Sor/Wiz 7
+(Чародейство)
+Уровень: Brd 6, Drd 8, Sor/Wiz 7
 Range: Sight of Caster
 Duration: 1 round/level
 Casting Time: 7
@@ -4761,7 +4760,7 @@ This spell brings forth a magical object that imbues creatures that see it with 
 @37760     = ~Пропустить время~
 @38760     = ~Пропустить время
 (Transmutation)
-Level: Sor/Wiz 7
+Уровень: Sor/Wiz 7
 Range: Special
 Duration: 10 rounds
 Casting Time: 2
@@ -4774,7 +4773,7 @@ The main effect of this is to reduce the duration of all magical effects on crea
 @37761     = ~Силовая клетка~
 @38761     = ~Силовая клетка
 (Abjuration)
-Level: Sor/Wiz 7
+Уровень: Sor/Wiz 7
 Range: Sight of Caster
 Duration: 5 rounds
 Casting Time: 1
@@ -4785,7 +4784,7 @@ This spell creates a cage of force - a cube with walls of force on each side. Cr
 @37762     = ~Скелеты-ловушки~
 @38762     = ~Скелеты-ловушки
 (Necromancy)
-Level: Sor/Wiz 7
+Уровень: Sor/Wiz 7
 Range: Sight of Caster
 Duration: 8 hours
 Casting Time: 7
@@ -4796,7 +4795,7 @@ This spell animates two skeletons which can be detonated on command to deal dama
 @37763     = ~Spell Turning~
 @38763     = ~Spell Turning
 (Abjuration)
-Level: Brd 7, Sor/Wiz 7
+Уровень: Brd 7, Sor/Wiz 7
 Range: Caster
 Duration: 10 rounds/level or until depleted
 Casting Time: 2
@@ -4807,7 +4806,7 @@ Spell Turning reflects incoming hostile spells back at the source. While Spell T
 @37764     = ~Steal Effects~
 @38764     = ~Steal Effects
 (Abjuration)
-Level: Brd 6, Sor/Wiz 7, Mask 6
+Уровень: Brd 6, Sor/Wiz 7, Mask 6
 Range: Sight of Caster
 Duration: Instantaneous
 Casting Time: 5
@@ -4818,7 +4817,7 @@ This spell steals the effects of spells from the target and grants them to the c
 @37852     = ~Energy Drain~
 @38852     = ~Energy Drain
 (Necromancy)
-Level: Clr 8, Sor/Wiz 8
+Уровень: Clr 8, Sor/Wiz 8
 Range: Sight of Caster
 Duration: Permanent
 Casting Time: 2
@@ -4828,8 +4827,8 @@ Saving Throw: None
 Similar to the energy drain of a wight or wraith, except much more powerful, this spell drains multiple levels from a creature. The target is drained one level for every three levels of the caster, to a maximum energy drain of 16 levels for a 48th-level caster. The energy drain is permanent until cured with a Restoration spell. This spell has no effect on undead or constructs.~
 @37853     = ~Enslave~
 @38853     = ~Enslave
-(Enchantment)
-Level: Brd 7, Sor/Wiz 8
+(Чародейство)
+Уровень: Brd 7, Sor/Wiz 8
 Range: Sight of Caster
 Duration: Permanent
 Casting Time: 8
@@ -4840,7 +4839,7 @@ This spell allows the caster to permanently gain full control of another creatur
 @37854     = ~Army of Images~
 @38854     = ~Army of Images
 (Illusion)
-Level: Brd 8, Mask 8
+Уровень: Brd 8, Mask 8
 Range: Caster
 Duration: 10 rounds
 Casting Time: 8
@@ -4851,7 +4850,7 @@ Army of Images is like Mirror Image, except as an area of effect. When cast, all
 @37855     = ~Телепортирующий шаг~
 @38855     = ~Телепортирующий шаг
 (Transmutation)
-Level: Brd 8, Sor/Wiz 8, Selune 9
+Уровень: Brd 8, Sor/Wiz 8, Selune 9
 Range: Sight of Caster
 Duration: 3 rounds/level
 Casting Time: 4
@@ -4862,7 +4861,7 @@ Among the greatest teleportation spells, Teleport Step lets the recipient telepo
 @37856     = ~Spell Trap~
 @38856     = ~Spell Trap
 (Abjuration)
-Level: Brd 8, Sor/Wiz 8
+Уровень: Brd 8, Sor/Wiz 8
 Range: Caster
 Duration: 10 rounds/level or until depleted
 Casting Time: 2
@@ -4872,8 +4871,8 @@ Saving Throw: None
 Spell Trap absorbs incoming hostile spells and grants their spell slots to the caster. While Spell Trap is active, if the caster would be hit by a harmful spell, that spell is nullified, and the caster regains a previously cast spell of a level less than or equal to that of the absorbed spell. Spells regained this way must also be 7th-level or lower, even if the absorbed spell was higher than 7th-level. Spell Trap can absorb a total of 18 spell levels before it ends, though as long as there is at least one spell level remaining, the next spell will be absorbed. Spell Trap does not absorb spells cast by allies. It does not absorb Dispel Magic either, though it cannot be dispelled itself.~
 @37857     = ~Link Effects~
 @38857     = ~Link Effects
-(Enchantment)
-Level: Brd 7, Clr 8, Sor/Wiz 8
+(Чародейство)
+Уровень: Brd 7, Clr 8, Sor/Wiz 8
 Range: Sight of Caster
 Duration: 2 rounds/level
 Casting Time: 8
@@ -4884,7 +4883,7 @@ This spell links the caster and the target such that any spell effect that would
 @37858     = ~Множественный огненный шар~
 @38858     = ~Множественный огненный шар
 (Evocation)
-Level: Sor/Wiz 8
+Уровень: Sor/Wiz 8
 Range: Sight of Caster
 Duration: Instantaneous
 Casting Time: 3
@@ -4894,8 +4893,8 @@ Saving Throw: Reflex half
 Also known as Fireballball, this spell launches a fireball that explodes into other fireballs. After the Metafireball explodes, each creature in the area of effect is hit by a separate fireball with its own area of effect. Each of the secondary fireballs deals 3d6 fire damage (Reflex save with -5 DC for half). This spell is most effective when cast at a large group of creatures clumped together.~
 @37859     = ~Неудержимое вращение Отто~
 @38859     = ~Неудержимое вращение Отто
-(Enchantment)
-Level: Brd 7, Sor/Wiz 8
+(Чародейство)
+Уровень: Brd 7, Sor/Wiz 8
 Range: Sight of Caster
 Duration: 3 rounds
 Casting Time: 8
@@ -4906,7 +4905,7 @@ Otto's Irresistible Spin forces multiple creatures to spin in place against thei
 @37860     = ~Вездесущность~
 @38860     = ~Вездесущность
 (Transmutation)
-Level: Brd 7, Cleric 8, Sor/Wiz 7
+Уровень: Brd 7, Cleric 8, Sor/Wiz 7
 Range: Sight of Caster
 Duration: 30 rounds
 Casting Time: 5
@@ -4917,7 +4916,7 @@ The spell Omnipresence spreads the essence of the target creature throughout the
 @37861     = ~The Jester's Party~
 @38861     = ~The Jester's Party
 (Conjuration)
-Level: Brd 8
+Уровень: Brd 8
 Range: Entire area
 Duration: Instantaneous
 Casting Time: 1
@@ -4928,7 +4927,7 @@ This spell teleports every creature in the current area next to the caster. Cast
 @37862     = ~Simulacrum~
 @38862     = ~Simulacrum
 (Illusion)
-Level: Brd 8, Sor/Wiz 8
+Уровень: Brd 8, Sor/Wiz 8
 Range: Sight of Caster
 Duration: 1 round/level
 Casting Time: 8
@@ -4939,7 +4938,7 @@ Simulacrum creates a duplicate of the caster, which will serve the caster for th
 @37863     = ~Обратная гравитация~
 @38863     = ~Обратная гравитация
 (Transmutation)
-Level: Drd 8, Sor/Wiz 8, Selune 8
+Уровень: Drd 8, Sor/Wiz 8, Selune 8
 Range: Sight of Caster
 Duration: 1 round/level
 Casting Time: 8
@@ -4950,7 +4949,7 @@ This spell creates a large spherical area that reverses the gravity of creatures
 @37864     = ~Polar Ray~
 @38864     = ~Polar Ray
 (Evocation)
-Level: Drd 8, Sor/Wiz 8
+Уровень: Drd 8, Sor/Wiz 8
 Range: Sight of Caster
 Duration: 1 round
 Casting Time: 6
@@ -4961,7 +4960,7 @@ Upon casting this spell, the caster emits a freezing beam in the direction of th
 @37865     = ~True Polymorph~
 @38865     = ~True Polymorph
 (Transmutation)
-Level: Brd 7, Sor/Wiz 8
+Уровень: Brd 7, Sor/Wiz 8
 Range: Sight of Caster
 Duration: Permanent
 Casting Time: 4
@@ -4974,7 +4973,7 @@ If True Polymorph is cast on a petrified creature, it will instead duplicate the
 @37952     = ~Perfect Invisibility~
 @38952     = ~Perfect Invisibility
 (Illusion)
-Level: Sor/Wiz 9
+Уровень: Sor/Wiz 9
 Range: Touch
 Duration: 2 rounds
 Casting Time: 4
@@ -4985,7 +4984,7 @@ This spell is the ultimate form of invisibility. While under the effect of Perfe
 @37953     = ~Improved Alacrity~
 @38953     = ~Improved Alacrity
 (Transmutation)
-Level: Clr 9, Drd 9, Sor/Wiz 9
+Уровень: Clr 9, Drd 9, Sor/Wiz 9
 Range: Caster 
 Duration: 6 rounds
 Casting Time: 5
@@ -4996,7 +4995,7 @@ This spell eliminates the interval between spellcasting, allowing the caster to 
 @37954     = ~Живая молния~
 @38954     = ~Живая молния
 (Evocation)
-Level: Drd 8, Sor/Wiz 8, Talos 8
+Уровень: Drd 8, Sor/Wiz 8, Talos 8
 Range: Caster
 Duration: 1 round/level
 Casting Time: 10
@@ -5007,7 +5006,7 @@ Living Lightning is essentially a spell that repeatedly casts itself. When cast,
 @37955     = ~Malavon's Corrosive Fog~
 @38955     = ~Malavon's Corrosive Fog
 (Conjuration)
-Level: Sor/Wiz 9
+Уровень: Sor/Wiz 9
 Range: Sight of Caster
 Duration: 30 rounds
 Casting Time: 12
@@ -5018,7 +5017,7 @@ Malavon's Corrosive Fog is another spell created by the dark elf sorcerer Malavo
 @37956     = ~Lightning Spiral~
 @38956     = ~Lightning Spiral
 (Evocation)
-Level: Drd 9, Sor/Wiz 9, Talos 9
+Уровень: Drd 9, Sor/Wiz 9, Talos 9
 Range: Caster
 Duration: Instantaneous
 Casting Time: 5
@@ -5029,7 +5028,7 @@ This spell envelops the caster in a spiral of lightning, releasing lightning bol
 @37957     = ~Mass Omnivision~
 @38957     = ~Mass Omnivision
 (Divination)
-Level: Brd 8, Sor/Wiz 9
+Уровень: Brd 8, Sor/Wiz 9
 Range: Special
 Duration: 2 rounds/level
 Casting Time: 3
@@ -5040,7 +5039,7 @@ This spell increases the visual range of all creatures to the maximum, such that
 @37958     = ~Improved Haste~
 @38958     = ~Improved Haste
 (Transmutation)
-Level: Brd 8, Sor/Wiz 9
+Уровень: Brd 8, Sor/Wiz 9
 Range: Sight of Caster
 Duration: 1 round/2 levels
 Casting Time: 3
@@ -5051,7 +5050,7 @@ This spell drastically speeds up the target's movement and attack speed. For the
 @37959     = ~Time Stop~
 @38959     = ~Time Stop
 (Transmutation)
-Level: Sor/Wiz 9
+Уровень: Sor/Wiz 9
 Range: Caster
 Duration: 3 rounds
 Casting Time: 9
@@ -5062,7 +5061,7 @@ This spell stops time for everyone and everything except the caster. All other c
 @37960     = ~Mordenkainen's Disjunction~
 @38960     = ~Mordenkainen's Disjunction
 (Abjuration)
-Level: Sor/Wiz 9
+Уровень: Sor/Wiz 9
 Range: Sight of Caster
 Duration: Instantaneous
 Casting Time: 4
@@ -5073,7 +5072,7 @@ Mordenkainen's Disjunction dispels all dispellable effects on the target. There 
 @37961     = ~Эклектическая Последовательность~
 @38961     = ~Eclectic Sequencer
 (Universal)
-Level: Wiz 9
+Уровень: Wiz 9
 Range: Special
 Duration: Permanent until triggered
 Casting Time: 15
@@ -5086,7 +5085,7 @@ Spells with a range of "Caster" will be cast on the caster, regardless of the ta
 @37962     = ~Wish~
 @38962     = ~Wish
 (Universal)
-Level: Sor/Wiz 9
+Уровень: Sor/Wiz 9
 Range: Special
 Duration: Instantaneous
 Casting Time: 1
@@ -5107,7 +5106,7 @@ Each one-time wish cannot be chosen more than once by a single character, and a 
 @37963     = ~Soul Bind~
 @38963     = ~Soul Bind
 (Necromancy)
-Level: Clr 9, Sor/Wiz 9
+Уровень: Clr 9, Sor/Wiz 9
 Range: Touch
 Duration: 3 rounds
 Casting Time: 7
