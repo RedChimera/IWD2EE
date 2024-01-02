@@ -3753,7 +3753,7 @@
 Дальность: обзор колдующего
 Длительность: мгновенная
 Время чтения: 2
-Зона действия: куб, со стороной 40 футов
+Зона действия: куб со стороной 40 футов
 Спасбросок: нет
 
 Это заклинание создаёт чрезвычайно сильный порыв ветра, исходящий от заклинателя и дующий в заданном направлении. Существа, находящиеся в зоне действия заклинания, отлетают назад, потенциально получая урон, если ударятся о стену или упадут в яму. Большие существа отлетают назад медленнее, а огромные существа, такие как морозные великаны, и вовсе остаются на месте. Наносимый урон зависит от того, с какой скоростью двигались существа, в момент удара о стену или падения.~
@@ -3938,65 +3938,66 @@
 Это заклинание усиливает дистанционные атаки следопыта - они начинают наносить урон существам, находящимся в конусе. В течение времени действия заклинания, если следопыта проводит дистанционную атаку, вместо нее выпускается поток шипов, наносящий урон от этой атаки всем существам, попавшим в конус. Они могут сделать спасбросок реакции, чтобы уменьшить урон вдвое. Как только следопыт совершит количество максимально количество дистанционных атак (по одной на 6 уровней), заклинание заканчивается досрочно. Это заклинание не получает дополнительный урон от заклинания "Огненные снаряды".
 
 Хотя обычно следопыты учитывают только половину своего уровня при чтении заклинаний, это заклинание учитывает полный уровень следопыта.~
-@35554     = ~Animal Growth~
-@36554     = ~Animal Growth
-(Transmutation)
-Level: Drd 5, Rgr 5
-Range: Caster
-Duration: 1 round/level
-Casting Time: 7
-Area of Effect: 20-foot radius
-Saving Throw: None
+@35554     = ~Рост животных~
+@36554     = ~Рост животных
+(Преобразование)
+Уровень: друид 5, следопыт 5
+Дальность: колдующий
+Длительность: 1 раунд/уровень
+Время чтения: 7
+Зона действия: радиус 20 футов
+Спасбросок: нет
 
-Animal Growth causes allied animals in the area of effect to temporarily grow twice as large in each dimension. The animals gains +8 Strength and Constitution; these are size bonuses which stack with other bonuses to these attributes. The animals' movement speed is doubled, because they cover more distance with each stride. However, they also get a -4 penalty to Dexterity, AC, and attack rolls due to increased size.~
-@35555     = ~Holy Weapon~
-@36555     = ~Holy Weapon
-(Evocation)
-Level: Pal 5
-Range: Caster
-Duration: 1 round/level
-Casting Time: 5
-Area of Effect: Caster
-Saving Throw: None
+В результате действия этого заклинания, все животные-союзники в зоне действия эффекта заклинания временно становятся в два раза больше в каждом измерении. Они получают +8 к силе и конституции; это бонусы за размер, они суммируются с другими бонусами к этим параметрам. Скорость передвижения животных удваивается, так как они преодолевают большее расстояние с каждым шагом. Однако из-за увеличения размера они также получают -4 к ловкости, AC и броскам атаки.~
+@35555     = ~Святое оружие~
+@36555     = ~Святое оружие
+(Проявление)
+Уровень: паладин 5
+Дальность: колдующий
+Длительность: 1 раунд/уровень
+Время чтения: 5
+Зона действия: колдующий
+Спасбросок: нет
 
-This spell imbues the paladin's weapons with holy power. Any melee weapon the paladin wields for the duration is considered good-aligned and +5 for purposes of overcoming damage reduction, and deals an additional 2d6 magic damage to evil creatures.
+Это заклинание наделяет оружие паладина святой силой. Любое оружие ближнего боя, которым паладин владеет в течение времени действия этого заклинания, считается имеющим доброе мировоззрение, получает +5 для преодоления снижения урона, а также наносит злым существам дополнительные 2d6 магического урона.~
 
-Although paladins normally cast spells at half their caster level, Holy Weapon will be cast at a paladin's full caster level.~
-@35556     = ~Unholy Weapon~
-@36556     = ~Unholy Weapon
-(Evocation)
-Level: Pal 5
-Range: Caster
-Duration: 1 round/level
-Casting Time: 5
-Area of Effect: Caster
-Saving Throw: None
+Хотя обычно паладины учитывают только половину своего уровня при чтении заклинаний, это заклинание учитывает полный уровень паладина.~
+@35556     = ~Нечестивое оружие~
+@36556     = ~Нечестивое оружие
+(Проявление)
+Уровень: паладин 5
+Дальность: колдующий
+Длительность: 1 раунд/уровень
+Время чтения: 5
+Зона действия: колдующий
+Спасбросок: нет
 
-This spell imbues the blackguard's weapons with unholy power. Any melee weapon the paladin wields for the duration is considered evil-aligned and +5 for purposes of overcoming damage reduction, and deals an additional 2d6 magic damage to good creatures.
+Это заклинание наделяет оружие чёрного стража нечистой силой. Любое оружие ближнего боя, которым паладин владеет в течение времени действия этого заклинания, считается имеющим злое мировоззрение, получает +5 для преодоления снижения урона, а также наносит добрым существам дополнительные 2d6 магического урона.~
 
-Although blackguards normally cast spells at half their caster level, Unholy Weapon will be cast at a blackguard's full caster level.~
-@35557     = ~Mark of Justice~
-@36557     = ~Mark of Justice
-(Necromancy)
-Level: Clr 5, Pal 4
-Range: Touch
-Duration: Permanent until triggered
-Casting Time: 9
-Area of Effect: 1 creature
-Saving Throw: None
+Хотя обычно чёрные стражи учитывают только половину своего уровня при чтении заклинаний, это заклинание учитывает полный уровень чёрного стража.~
+@35557     = ~Метка правосудия~
+@36557     = ~Метка правосудия
+(Некромантия)
+Уровень: священник 5, паладин 4
+Дальность: касание
+Длительность: постоянная, пока не сработает
+Время чтения: 9
+Зона действия: 1 существо
+Спасбросок: нет
 
-In casting this spell, the caster marks the target, who will be automatically punished upon committing a serious crime. The next time the target kills someone, their Mark of Justice is triggered, and the target takes 20d10 magic damage with no saving throw. This spell does not provoke an attack of opportunity when cast on an enemy. It can only be cast by lawful characters.~
+Произнося это заклинание, заклинатель помечает цель, которая будет автоматически наказана при совершении тяжкого преступления. В следующий раз, когда цель убьет кого-нибудь, сработает "Метка правосудия", и цель получит 20d10 магического урона без броска спасброска. При наложении на врага это заклинание не провоцирует атаку при возможности. Его могут применять только законопослушные персонажи.~
 @35653     = ~Отталкивание~
 @36653     = ~Отталкивание
-(Abjuration)
-Level: Brd 7, Clr 6, Sor/Wiz 7, Helm 5
-Range: Caster
-Duration: 3 rounds
-Casting Time: 6
-Area of Effect: 20-foot radius
-Saving Throw: Fortitude negates
 
-This spell grants the caster an aura that repels nearby enemies, sending them hurtling away from the caster. Any enemy that comes within the area of effect must make a Fortitude save with -5 DC or be knocked back.~
+(Отречение)
+Уровень: бард 7, священник 6, колдун/волшебник 7, жрец Хелма
+Дальность: колдующий
+Длительность: 3 раунда
+Время чтения: 6
+Зона действия: радиус 20 футов
+Спасбросок: стойкости, половина урона
+
+Это заклинание наделяет заклинателя аурой, которая отталкивает ближайших врагов, отбрасывая их от заклинателя. Любой враг, оказавшийся в зоне действия заклинания, должен сделать спасбросок стойкости с -5 к УС или быть отброшенным назад.~
 @35654     = ~Wondrous Recall~
 @36654     = ~Wondrous Recall
 (Enchantment)
