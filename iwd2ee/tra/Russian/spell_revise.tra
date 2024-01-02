@@ -4001,22 +4001,22 @@
 @36654     = ~Wondrous Recall
 (Чародейство)
 Уровень: бард 6, священник 6, друид 6
-Range: Caster
-Duration: Instantaneous
-Casting Time: 3
-Area of Effect: Caster
-Saving Throw: None
+Дальность: колдующий
+Длительность: мгновенно
+Время чтения:  3
+Зона действия: колдующий
+Спасбросок: нет
 
 This spell enables the caster to bring back to memory 2 spells that have been previously cast. If no spells have been cast yet, nothing happens. Wondrous Recall cannot recall 6th-level or higher spells.~
 @35655     = ~Bolt of Glory~
 @36655     = ~Bolt of Glory
-(Evocation)
-Уровень: священник 6, Pal 6
-Range: Sight of Caster
-Duration: Instantaneous
-Casting Time: 5
-Area of Effect: 1 creature
-Saving Throw: None
+(Проявление)
+Уровень: священник 6, паладин 6
+Дальность: обзор колдующего
+Длительность: мгновенно
+Время чтения:  5
+Зона действия: 1 существо
+Спасбросок: нет
 
 This spell launches a divine bolt at the target, dealing magic damage. The damage depends on the type of creature hit:
 
@@ -4027,92 +4027,92 @@ All other creatures: 10d6
 There is no Saving Throw, and the target's Spell Resistance matters not.~
 @35656     = ~Supreme Speed~
 @36656     = ~Supreme Speed
-(Transmutation)
-Уровень: Rgr 6
-Range: Caster
-Duration: 1 second/level
-Casting Time: 1
-Area of Effect: Caster
-Saving Throw: None
+(Преобразование)
+Уровень: следопыт 6
+Дальность: колдующий
+Длительность: 1 second/level
+Время чтения:  1
+Зона действия: колдующий
+Спасбросок: нет
 
 This spell drastically speeds up the ranger's attack speed. For the duration, the ranger attacks twice as many times per round. Attack bonuses will continue to decrease for attacks beyond the 5th one.
 
 Although rangers normally cast spells at half their caster level, Supreme Speed will be cast at a ranger's full caster level.~
 @35657     = ~Explosive Smite~
 @36657     = ~Explosive Smite
-(Evocation)
-Уровень: Pal 6
-Range: Caster
-Duration: 2 rounds or until triggered
-Casting Time: 0
-Area of Effect: Special
-Saving Throw: None
+(Проявление)
+Уровень: паладин 6
+Дальность: колдующий
+Длительность: 2 rounds or until triggered
+Время чтения:  0
+Зона действия: особая
+Спасбросок: нет
 
 This spell allows the paladin to apply their Smite Evil as an area of effect. Casting Explosive Smite automatically causes the paladin to ready Smite Evil without consuming a use of it. The paladin gains their Charisma bonus to their next attack roll, and their next successful attack generates an explosion. All evil creatures within 20 feet take damage equal to the paladin's regular Smite Evil damage (though only the creature that was hit by the actual attack takes the attack's damage).~
 @35658     = ~Trial by Fire~
 @36658     = ~Trial by Fire
-(Evocation)
-Уровень: священник 6, Pal 6
-Range: Caster
-Duration: 5 rounds
-Casting Time: 6
-Area of Effect: 20-foot long, 5-foot wide wall
-Saving Throw: None
+(Проявление)
+Уровень: священник 6, паладин 6
+Дальность: колдующий
+Длительность: 5 rounds
+Время чтения:  6
+Зона действия: 20-foot long, 5-foot wide wall
+Спасбросок: нет
 
 This spell creates a wall of holy fire, which does not burn the innocent. Any non-good creature that passes through the wall takes 12d6 holy fire damage (which ignores fire resistance) with no Saving Throw. Good creatures can pass through the wall unharmed. Only one such wall can be active at a time.~
 @35659     = ~Mass Heal Animal~
 @36659     = ~Mass Heal Animal
-(Conjuration)
-Уровень: друид 6, Rgr 6
-Range: Caster
-Duration: Instantaneous
-Casting Time: 9
-Area of Effect: Allied animals within 20 ft.
-Saving Throw: None
+(Призывание)
+Уровень: друид 6, следопыт 6
+Дальность: колдующий
+Длительность: мгновенно
+Время чтения:  9
+Зона действия: Allied animals within 20 ft.
+Спасбросок: нет
 
 Mass Heal Animal wipes away disease and injury from all animals in the area of effect. It cures blindness, diseases, feeblemind and restores the targets to maximum hit points if they have been injured.~
 @35660     = ~Desecrate~
 @36660     = ~Desecrate
-(Necromancy)
+(Некромантия)
 Уровень: священник 6
 Range: Entire area
-Duration: 8 hours
-Casting Time: 9
-Area of Effect: All undead in the area
-Saving Throw: None
+Длительность: 8 hours
+Время чтения:  9
+Зона действия: All undead in the area
+Спасбросок: нет
 
 This spell imbues the current area with negative energy. For the duration, all undead gain +2 Constitution, get +2 to attack and damage, and count as 3 levels higher for purposes of resisting Turn Undead. In addition, any spell which would animate undead will create twice as many undead creatures when cast in the desecrated area. Desecrate can only be cast by evil characters.~
 @35753     = ~Power Word: Heal~
 @36753     = ~Power Word: Heal
-(Divination)
+(Прорицание)
 Уровень: бард 8, священник 7
-Range: Sight of Caster
-Duration: Instantaneous
-Casting Time: 0
-Area of Effect: 1 creature
-Saving Throw: None
+Дальность: обзор колдующего
+Длительность: мгновенно
+Время чтения:  0
+Зона действия: 1 существо
+Спасбросок: нет
 
 Power Word: Heal is one of the beneficial words of power. When uttered, it heals a creature to their maximum hit points and cures poison, disease, blindness, deafness, feeblemindedness, intoxication, and bleeding. Power Word: Heal has no effect on undead.~
 @35754     = ~Regeneration~
 @36754     = ~Regeneration
-(Necromancy)
+(Некромантия)
 Уровень: священник 7, друид 8
 Range: Touch
-Duration: 1 round / 2 levels
-Casting Time: 7
-Area of Effect: 1 creature
-Saving Throw: None
+Длительность: 1 round / 2 levels
+Время чтения:  7
+Зона действия: 1 существо
+Спасбросок: нет
 
 This spell lets a creature regenerate wounds very rapidly. For the duration, the target regenerates 3 HP per second.~
 @35853     = ~Unholy Aura~
 @36853     = ~Unholy Aura
-(Abjuration)
+(Отречение)
 Уровень: священник 8
 Range: 20 ft.
-Duration: 1 round/level
-Casting Time: 6
-Area of Effect: Allies in a 20' radius
-Saving Throw: None
+Длительность: 1 round/level
+Время чтения:  6
+Зона действия: Allies in a 20' radius
+Спасбросок: нет
 
 A malevolent darkness surrounds the subjects, protecting them from attacks, granting them resistance to spells, and blinding good creatures when they strike the subjects. This abjuration has four effects:
 First, the warded creatures gain a +4 deflection bonus to AC and a +4 bonus to all saves.
@@ -4122,45 +4122,45 @@ Fourth, any creature of good alignment who strikes (melee only) those protected 
 Unholy Aura can only be cast by evil characters.~
 @35951     = ~Auril's Blessing~
 @36951     = ~Auril's Blessing
-(Conjuration)
+(Призывание)
 Уровень: друид 9
-Range: Caster
-Duration: 1 round/level
-Casting Time: 9
-Area of Effect: Caster
-Saving Throw: None
+Дальность: колдующий
+Длительность: 1 round/level
+Время чтения:  9
+Зона действия: колдующий
+Спасбросок: нет
 
 This spell calls upon the power of Auril to amplify the caster's cold spells. For the duration, cold damage dealt by the caster is increased by 50%, or by 100% if cast at level 30 or higher. In addition, the spell Cone of Cold has +4 DC and a much larger area of effect, as does the Winter Wolf shapeshift form's cold breath.~
 @35952     = ~Mass Harm~
 @36952     = ~Mass Harm
-(Necromancy)
+(Некромантия)
 Уровень: священник 9
-Range: Sight of Caster
-Duration: Instantaneous
-Casting Time: 9
-Area of Effect: 20-foot radius
+Дальность: обзор колдующего
+Длительность: мгновенно
+Время чтения:  9
+Зона действия: 20-foot radius
 Saving Throw: Fortitude negates
 
 Mass Harm releases destructive negative energy upon all living enemies in the area of effect. The caster makes ranged touch attacks against each of those creatures; each one that get hit must Save vs. Fortitude or lose all but one hit point. The DC is the same as that of the 6th-level Harm spell. Allied undead in the area of effect are instead healed to full health as per a Heal spell.~
 @35953     = ~Volcanic Eruption~
 @36953     = ~Volcanic Eruption
-(Evocation)
+(Проявление)
 Уровень: друид 9
-Range: Caster
-Duration: Instantaneous
-Casting Time: 12
-Area of Effect: Special
+Дальность: колдующий
+Длительность: мгновенно
+Время чтения:  12
+Зона действия: особая
 Saving Throw: Reflex half
 
 This spell triggers a small volcanic eruption centered on the caster. Multiple balls of lava (one per two caster levels) fly through the area in random directions and hit the ground in random spots. Each ball of lava deals 6d6 fire damage (Reflex save for half) to all creatures within 20 feet of its landing point. The caster is completely unharmed by this spell, but their allies are still in danger.~
 @35954     = ~Storm of Vengeance~
 @36954     = ~Storm of Vengeance
-(Conjuration)
+(Призывание)
 Уровень: священник 9, друид 9, Talos 9
-Range: Sight of Caster
-Duration: 4 rounds
-Casting Time: 12
-Area of Effect: 25-foot radius
+Дальность: обзор колдующего
+Длительность: 4 rounds
+Время чтения:  12
+Зона действия: 25-foot radius
 Saving Throw: Reflex half
 
 This spell conjures a divine storm cloud which releases damaging torrents upon creatures in the area of effect. Each round, the nature of the storm is different:
@@ -4171,139 +4171,139 @@ This spell conjures a divine storm cloud which releases damaging torrents upon c
 4th round: Ice Storm - Deals 4d6 bludgeoning damage and 4d6 cold damage with no save.~
 @35955     = ~Contingent Resurrection~
 @36955     = ~Contingent Resurrection
-(Conjuration)
+(Призывание)
 Уровень: священник 9
 Range: Touch
-Duration: 8 hours or until triggered
-Casting Time: 18
-Area of Effect: 1 creature
-Saving Throw: None
+Длительность: 8 hours or until triggered
+Время чтения:  18
+Зона действия: 1 существо
+Спасбросок: нет
 
 This spell stores a Resurrection spell in the target, which will be triggered the next time the target dies within 8 hours. The target will be brought back to life and will regain all hit points.~
 @35956     = ~Tornado~
 @36956     = ~Tornado
-(Evocation)
+(Проявление)
 Уровень: друид 9
-Range: Sight of Caster
-Duration: 3 rounds
-Casting Time: 9
-Area of Effect: 15-foot radius
-Saving Throw: None
+Дальность: обзор колдующего
+Длительность: 3 rounds
+Время чтения:  9
+Зона действия: 15-foot radius
+Спасбросок: нет
 
 A more powerful version of the spell Whirlwind, the spell creates a tornado at the target point that moves randomly. Creatures that come within 15 feet of the tornado get sucked up into it, taking 3d8 slashing damage per second that they stay inside it. Creatures are usually ejected from the tornado after about a round. Huge creatures such as frost giants and dragons aren't sucked up into the tornado but still take damage while in the area of effect. Only one tornado may be active at a time. This spell can only be cast outdoors.~
 @35957     = ~Summon Deva~
 @36957     = ~Summon Deva
-(Conjuration)
+(Призывание)
 Уровень: священник 9
-Range: Sight of Caster
-Duration: 50 rounds
-Casting Time: 12
-Area of Effect: Special
-Saving Throw: None
+Дальность: обзор колдующего
+Длительность: 50 rounds
+Время чтения:  12
+Зона действия: особая
+Спасбросок: нет
 
 This spell summons an angelic deva to assist the party. The deva has a variety of priest spells, can fly, and wields a mace that forces creatures it hits to make a Fortitude save or be stunned. The party can only summon one deva per 8 hours. This spell may only be cast by good characters.~
 @37151     = ~Верный удар~
 @38151     = ~Верный удар
-(Divination) 
-Уровень: бард 1, Pal 1, Rgr 1, Sor/Wiz 1
-Range: Caster
-Duration: 9 seconds
-Casting Time: 1
-Area of Effect: Caster
-Saving Throw: None
+(Прорицание) 
+Уровень: бард 1, паладин 1, следопыт 1, колдун/волшебник 1
+Дальность: колдующий
+Длительность: 9 seconds
+Время чтения:  1
+Зона действия: колдующий
+Спасбросок: нет
 
 The True Strike spell gives the caster incredible insights into his or her enemies' weaknesses, but only for an extremely short duration. For 9 seconds, the caster gains a +20 attack bonus.~
 @37152     = ~Отразить атаку~
 @38152     = ~Отразить атаку
-(Abjuration)
-Уровень: бард 1, Pal 1, Sor/Wiz 1, Helm 1
-Range: Caster
-Duration: 8 hours or until triggered
-Casting Time: 0
-Area of Effect: Caster
-Saving Throw: None
+(Отречение)
+Уровень: бард 1, паладин 1, колдун/волшебник 1, Helm 1
+Дальность: колдующий
+Длительность: 8 hours or until triggered
+Время чтения:  0
+Зона действия: колдующий
+Спасбросок: нет
 
 After this spell is cast, the next instance of physical damage the caster would receive is reflected back at the attacker, damaging them instead. If the physical damage came from a weapon, any on-hit effects of the weapon will also be reflected back at the attacker.~
 @37154     = ~Простой вызов~
 @38154     = ~Simple Summoning
-(Conjuration)
-Уровень: бард 2, священник 2, Sor/Wiz 1
+(Призывание)
+Уровень: бард 2, священник 2, колдун/волшебник 1
 Range: 1000 ft.
-Duration: Instantaneous
-Casting Time: 1
-Area of Effect: 1 creature
-Saving Throw: None
+Длительность: мгновенно
+Время чтения:  1
+Зона действия: 1 существо
+Спасбросок: нет
 
 Simple Summoning summons the target of the spell. The target is instantly teleported to the caster's side. Unlike most other summoning spells, Simple Summoning gives no control over the creature. This spell could either be used to rescue an ally (e.g. if the ally was paralyzed and being attacked by enemies), or to transport an enemy into a vulnerable position. Creatures and objects that are part of a structure (e.g. support beams) are unaffected.
 
 Simple Summoning can be cast on any creature the party sees, even one outside of the caster's visual range.~
 @37155     = ~Часы смерти
 @38155     = ~Часы смерти
-(Necromancy)
-Уровень: священник 1, Rgr 1, Sor/Wiz 1
-Range: Caster
-Duration: 10 rounds/level
-Casting Time: 1
-Area of Effect: Caster
-Saving Throw: None
+(Некромантия)
+Уровень: священник 1, следопыт 1, колдун/волшебник 1
+Дальность: колдующий
+Длительность: 10 rounds/level
+Время чтения:  1
+Зона действия: колдующий
+Спасбросок: нет
 
 Deathwatch lets the caster learn precisely how close other creatures are to death. As long as a party member has Deathwatch and isn't incapacitated, if you hover the cursor over an enemy until it displays the tooltip, it will show the enemy's current and maximum Hit Points.~
 @37156     = ~Прыжок~
 @38156     = ~Jump
-(Transmutation)
-Уровень: бард 1, Rgr 1, Sor/Wiz 1
+(Преобразование)
+Уровень: бард 1, следопыт 1, колдун/волшебник 1
 Range: Touch
-Duration: 30 rounds
-Casting Time: 4
-Area of Effect: 1 creature
-Saving Throw: None
+Длительность: 30 rounds
+Время чтения:  4
+Зона действия: 1 существо
+Спасбросок: нет
 
 This spell greatly increases the recipient's jump distance, allowing them to jump over obstacles or across large gaps. For the duration, the recipient gains the Jump ability, usable at will. By using this ability, the character jumps to a target point up to 20 feet away.
 
 In addition, while this spell is active, the recipient is immune to falling damage from all sources.~
 @37157     = ~Vanish~
 @38157     = ~Vanish
-(Illusion)
-Уровень: бард 1, Sor/Wiz 1
-Range: Caster
-Duration: 3 rounds
-Casting Time: 1
-Area of Effect: Caster
-Saving Throw: None
+(Иллюзия)
+Уровень: бард 1, колдун/волшебник 1
+Дальность: колдующий
+Длительность: 3 rounds
+Время чтения:  1
+Зона действия: колдующий
+Спасбросок: нет
 
 A lesser version of Invisibility, this spell causes the caster to become invisible for a short time, or until the caster attacks or casts a spell on another creature.
 
 Vanish is less effective for sneaking past groups of enemies, and better suited for getting out of tight spots in combat. Wizard/rogues can use this spell as an easy way to prepare for another sneak attack.~
 @37251     = ~Опознание существа~
 @38251     = ~Identify Creature
-(Divination)
-Уровень: бард 2, друид 2, Rgr 2, Sor/Wiz 2
-Range: Sight of Caster
-Duration: Instantaneous
-Casting Time: 2
-Area of Effect: 1 creature
-Saving Throw: None
+(Прорицание)
+Уровень: бард 2, друид 2, следопыт 2, колдун/волшебник 2
+Дальность: обзор колдующего
+Длительность: мгновенно
+Время чтения:  2
+Зона действия: 1 существо
+Спасбросок: нет
 
 Identify Creature reveals useful combat information about the target creature. The information includes the creature's level, current and maximum hit points, number of attacks per round, ability scores, resistances, saving throws, and various other traits that depend on the creature.~
 @37252     = ~Sound Burst~
 @38252     = ~Sound Burst
-(Evocation)
+(Проявление)
 Уровень: бард 2
-Range: Sight of Caster
-Duration: 1 round
-Casting Time: 2
-Area of Effect: 15-foot radius
+Дальность: обзор колдующего
+Длительность: 1 round
+Время чтения:  2
+Зона действия: 15-foot radius
 Saving Throw: Fortitude partial
 
 This spell releases an extremely loud and jarring burst of sound. Creatures in the area of effect take 1d8 magic damage and must make a Fortitude save or be stunned for 1 round. Deaf creatures are not stunned but still take damage. The caster is unaffected by this spell.~
 @37253     = ~Левитация~
 @38253     = ~Levitate
-(Transmutation)
-Уровень: бард 2, Sor/Wiz 2
-Range: Sight of Caster
-Duration: Special
-Casting Time: 2
-Area of Effect: 1 creature
+(Преобразование)
+Уровень: бард 2, колдун/волшебник 2
+Дальность: обзор колдующего
+Длительность: Special
+Время чтения:  2
+Зона действия: 1 существо
 Saving Throw: Reflex negates
 
 This spell suspends the target in the air if it fails a Reflex save (Allies are affected with no saving throw necessary). While levitating, the target cannot move unless it can fly, and it gets a -20 attack penalty with melee weapons, but also gets +20 AC against melee weapons. If cast on an ally, that ally can levitate up and down as well. While the character is selected, hold Left Shift to lift them up or hold Right Shift to pull them down. While at ground level, the character can move and loses the bonuses and penalties, but the spell doesn't end immediately.
@@ -4311,127 +4311,127 @@ This spell suspends the target in the air if it fails a Reflex save (Allies are 
 When cast on an ally, Levitate lasts 4 rounds. When cast on a non-allied creature, it lasts 10 rounds.~
 @37254     = ~Колдовское зрение~
 @38254     = ~Колдовское зрение
-(Divination)
-Уровень: бард 2, Sor/Wiz 2
-Range: Caster
-Duration: 5 rounds/level
-Casting Time: 2
-Area of Effect: Caster
-Saving Throw: None
+(Прорицание)
+Уровень: бард 2, колдун/волшебник 2
+Дальность: колдующий
+Длительность: 5 rounds/level
+Время чтения:  2
+Зона действия: колдующий
+Спасбросок: нет
 
 Arcane Sight lets the caster see what magical effects are on a creature. While the spell is in effect and the caster isn't incapacitated, if you hover the cursor over a creature and press Tab, a list of all the magical effects on the creature from spells and abilities will be displayed, along with their remaining durations.~
 @37255     = ~Enlarge Creature~
 @38255     = ~Enlarge Creature
-(Transmutation)
-Уровень: Sor/Wiz 3
-Range: Sight of Caster
-Duration: 1 round/level
-Casting Time: 6
-Area of Effect: 1 creature
-Saving Throw: None
+(Преобразование)
+Уровень: колдун/волшебник 3
+Дальность: обзор колдующего
+Длительность: 1 round/level
+Время чтения:  6
+Зона действия: 1 существо
+Спасбросок: нет
 
 This spell causes the target to temporarily grow twice as large in each dimension. The target gains +8 Strength and Constitution; these are size bonuses which stack with other bonuses to these attributes. The target's speed is also increased (since they cover more distance with each stride). However, the target also gets a -4 penalty to Dexterity, AC, and attack rolls due to increased size. The target cannot benefit from invisibility, blur, or mirror image.~
 @37256     = ~Тьма~
 @38256     = ~Тьма
-(Illusion)
-Уровень: бард 2, священник 2, Sor/Wiz 2
-Range: Sight of Caster
-Duration: 4 rounds
-Casting Time: 4
-Area of Effect: 20-foot radius
+(Иллюзия)
+Уровень: бард 2, священник 2, колдун/волшебник 2
+Дальность: обзор колдующего
+Длительность: 4 rounds
+Время чтения:  4
+Зона действия: 20-foot radius
 Saving Throw: Fortitude negates
 
 This spell creates magical darkness in the area of effect. Creatures without darkvision must make a Fortitude saving throw or be effectively blinded. Creatures with darkvision aren't blinded, but even they have only a limited ability to see through magical darkness, getting a -4 attack penalty on a failed save. Creatures with superior 120 foot darkvision (e.g. drow, gray dwarves or deep gnomes) only get a -2 attack penalty. Devils and creatures immune to blindness are unaffected.~
 @37351     = ~Clairvoyance~
 @38351     = ~Clairvoyance
-(Divination)
-Уровень: друид 2, Rgr 2
-Range: Caster
-Duration: Permanent
-Casting Time: 5
-Area of Effect: Entire area
-Saving Throw: None
+(Прорицание)
+Уровень: друид 2, следопыт 2
+Дальность: колдующий
+Длительность: Permanent
+Время чтения:  5
+Зона действия: Entire area
+Спасбросок: нет
 
 The Clairvoyance spell empowers the caster to see in their mind the geographical features and buildings of the region they are currently exploring. It extends to a great range, but cannot reveal creatures or their movements. Clairvoyance can be cast indoors or outdoors.~
 @37352     = ~Удалить магию~
 @38352     = ~Удалить магию
-(Abjuration)
-Уровень: священник 3, друид 4, Pal 3, Sor/Wiz 3, Oghma 2
-Range: Sight of Caster
-Duration: Instantaneous 
-Casting Time: 5
-Area of Effect: 15-foot radius 
+(Отречение)
+Уровень: священник 3, друид 4, паладин 3, колдун/волшебник 3, Oghma 2
+Дальность: обзор колдующего
+Длительность: мгновенно 
+Время чтения:  5
+Зона действия: 15-foot radius 
 Saving Throw: Will negates
 
 Remove Magic is like Dispel Magic, except it only affects enemies. When cast, it dispels most magical effects on enemies in the area of effect who fail a Will save with +5 DC.~
 @37353     = ~Бросок~
 @38353     = ~Бросок
-(Transmutation)
-Уровень: бард 4, Sor/Wiz 3
+(Преобразование)
+Уровень: бард 4, колдун/волшебник 3
 Range: Touch
-Duration: Instantaneous
-Casting Time: 1
-Area of Effect: 1 creature
+Длительность: мгновенно
+Время чтения:  1
+Зона действия: 1 существо
 Saving Throw: Reflex half
 
 This spell throws the target into the air with incredible force. The target is knocked back as it is sent hurtling through the air. When it lands or hits the ceiling, it takes bludgeoning damage based on how fast it was moving right before the collision, up to 5d6 plus 1d6 per caster level (max 20d6 total from a level 15 caster). If the target succeeds on a Reflex save, it is thrown with less force and will only take about half damage.~
 @37354     = ~Момент предвидения~
 @38354     = ~Момент предвидения
-(Divination)
-Уровень: бард 3, друид 4, Sor/Wiz 3
-Range: Sight of Caster
-Duration: Special
-Casting Time: 1
-Area of Effect: 1 creature
-Saving Throw: None
+(Прорицание)
+Уровень: бард 3, друид 4, колдун/волшебник 3
+Дальность: обзор колдующего
+Длительность: Special
+Время чтения:  1
+Зона действия: 1 существо
+Спасбросок: нет
 
 The recipient of this spell can momentarily gain the ability to see into the future, and can see any attack or spell coming. The target gains three abilities, which can be used to give them a +25 bonus to attack, to AC or to saving throws, depending on the ability chosen, for 1 round. Once one of these abilities is used, all three disappear. If not used, the abilities also disappear after 3 hours.
 
 The abilities granted by Moment of Prescience can be used as a free action.~
 @37355     = ~Полёт~
 @38355     = ~Fly
-(Transmutation)
-Уровень: бард 3, Rgr 3, Sor/Wiz 3
-Range: Sight of Caster
-Duration: 1 round/level
-Casting Time: 3
-Area of Effect: 1 creature
-Saving Throw: None
+(Преобразование)
+Уровень: бард 3, следопыт 3, колдун/волшебник 3
+Дальность: обзор колдующего
+Длительность: 1 round/level
+Время чтения:  3
+Зона действия: 1 существо
+Спасбросок: нет
 
 This wondrous spell gives the recipient the power to fly. For the duration, the character can fly over normally impassable gaps and obstacles. In addition, unless the character is fighting in melee or casting a touch spell, they will be flying far enough above the ground that most melee attacks against them will be made at a -20 penalty. The effects of Fly are suppressed as long as the character is indoors.~
 @37356     = ~Фильтр восприятия~
 @38356     = ~Perception Filter
-(Illusion)
-Уровень: бард 1, Sor/Wiz 1
+(Иллюзия)
+Уровень: бард 1, колдун/волшебник 1
 Range: Touch
-Duration: 10 rounds/level
-Casting Time: 3
-Area of Effect: 1 creature
-Saving Throw: None
+Длительность: 10 rounds/level
+Время чтения:  3
+Зона действия: 1 существо
+Спасбросок: нет
 
 Perception Filter causes the recipient to attract less notice without actually being invisible. Enemies will ignore the character, not attacking or casting spells on them, as long as there is someone else they can target instead (who isn't affected by this spell). If there are no other allies they can target instead, the enemies will notice the character and attack them.
 
 If a character under the effect of this spell attacks or casts a spell, that does not cause the spell to end, but the enemy they are currently targeting can still notice them.~
 @37357     = ~Legend Lore~
 @38357     = ~Legend Lore
-(Divination) 
+(Прорицание) 
 Уровень: бард 3, Oghma 3
-Range: Caster
-Duration: 10 rounds/level
-Casting Time: 3
-Area of Effect: Caster
-Saving Throw: None
+Дальность: колдующий
+Длительность: 10 rounds/level
+Время чтения:  3
+Зона действия: колдующий
+Спасбросок: нет
 
 A more powerful version of the spell Identify, Legend Lore temporarily increases the lore of the caster, allowing them to identify multiple magical items. For the duration, the caster's Knowledge (Arcana) is increased by 30.~
 @37358     = ~Спроецировать образ~
 @38358     = ~Project Image
-(Illusion)
-Уровень: бард 3, Sor/Wiz 3
-Range: Sight of Caster
-Duration: 1 round/level
-Casting Time: 6
-Area of Effect: Special
-Saving Throw: None
+(Иллюзия)
+Уровень: бард 3, колдун/волшебник 3
+Дальность: обзор колдующего
+Длительность: 1 round/level
+Время чтения:  6
+Зона действия: особая
+Спасбросок: нет
 
 This spell creates an illusory duplicate of the caster. For the duration, the caster controls this image instead of their body, can see through its eyes, and can command it to attack or cast spells. Spells cast this way use up the caster's spell slots.
 
@@ -4444,43 +4444,43 @@ The spell ends early if the image is destroyed (it starts with the same HP as th
 @38359     = ~Glibness
 (Чародейство)
 Уровень: бард 3
-Range: Caster
-Duration: 10 rounds/level
-Casting Time: 3
-Area of Effect: Caster
-Saving Throw: None
+Дальность: колдующий
+Длительность: 10 rounds/level
+Время чтения:  3
+Зона действия: колдующий
+Спасбросок: нет
 
 This spell greatly increases the character's ability to fool others. For the duration, the character's Bluff skill is increased by 30.~
 @37451     = ~Teleport Field~
 @38451     = ~Teleport Field
-(Transmutation) 
-Уровень: бард 5, Sor/Wiz 4
-Range: Sight of Caster
-Duration: 4 rounds
-Casting Time: 1
-Area of Effect: 15-foot radius
-Saving Throw: None
+(Преобразование) 
+Уровень: бард 5, колдун/волшебник 4
+Дальность: обзор колдующего
+Длительность: 4 rounds
+Время чтения:  1
+Зона действия: 15-foot radius
+Спасбросок: нет
 
 This spell creates a strange magical field in the area of effect. Any hostile creature in the field will be teleported to a random location in the field each round.~
 @37452     = ~Phantasmal Killer~
 @38452     = ~Phantasmal Killer
-(Illusion)
-Уровень: бард 4, Sor/Wiz 4
-Range: Sight of Caster
-Duration: Instantaneous
-Casting Time: 4
-Area of Effect: 1 creature
+(Иллюзия)
+Уровень: бард 4, колдун/волшебник 4
+Дальность: обзор колдующего
+Длительность: мгновенно
+Время чтения:  4
+Зона действия: 1 существо
 Saving Throw: Will or Fortitude negates
 
 Phantasmal Killer causes the target to be struck down by an embodiment of its worst fears. The target may make a Will save to disbelieve the illusion. On a failure, they must make a Fortitude save or die. Even on a successful Fortitude save, they still take 3d6 magic damage. If the target was panicking when they got hit by this spell, the DC of both saves is increased by 6.~
 @37453     = ~Пир упырей~
 @38453     = ~Пир упырей
-(Necromancy)
-Уровень: священник 4, Sor/Wiz 4
-Range: Caster
-Duration: 10 rounds/level
-Casting Time: 4
-Area of Effect: Caster
+(Некромантия)
+Уровень: священник 4, колдун/волшебник 4
+Дальность: колдующий
+Длительность: 10 rounds/level
+Время чтения:  4
+Зона действия: колдующий
 Saving Throw: Special
 
 This spell lets the caster summon undead by killing other creatures. During the duration of this spell, whenever the caster kills a creature, a ghoul rises to feast upon the remains. That ghoul will serve the caster for 8 hours. A ghoul will only be summoned if the caster dealt the killing damage to the creature; if the caster damaged the creature but another party member finished it off, the caster will not get a ghoul. The ghouls' paralyzing touch uses the DC of this spell as cast by the caster. Ghoulish Feast cannot be cast by good characters.~
@@ -4488,22 +4488,22 @@ This spell lets the caster summon undead by killing other creatures. During the 
 @38454     = ~Copy Spell
 (Universal)
 Уровень: бард 4
-Range: Sight of Caster
-Duration: Permanent until released
-Casting Time: Free action
-Area of Effect: Special
-Saving Throw: None
+Дальность: обзор колдующего
+Длительность: Permanent until released
+Время чтения:  Free action
+Зона действия: особая
+Спасбросок: нет
 
 This spell copies a spell that another creature is casting, allowing the bard to cast that spell once. Copy Spell should be cast on another creature that is casting a spell. The bard gains a special ability that lets them cast that same spell. Once used, the ability is gone until Copy Spell is cast again. Copy Spell cannot copy innate abilities, nor can it copy spells of a higher spell level than the bard can currently cast. Casting Copy Spell itself is a free action, but casting the copied spell could take some time.~
 @37455     = ~Polymorph Self~
 @38455     = ~Polymorph Self
-(Transmutation)
-Уровень: Sor/Wiz 4
-Range: Caster
-Duration: 1 minute/level
-Casting Time: 4
-Area of Effect: Caster
-Saving Throw: None
+(Преобразование)
+Уровень: колдун/волшебник 4
+Дальность: колдующий
+Длительность: 1 minute/level
+Время чтения:  4
+Зона действия: колдующий
+Спасбросок: нет
 
 Polymorph Self allows the caster to assume the form of a creature of moderate power. While in another form, the caster has its Strength, Dexterity, Constitution, base Armor Class, resistances, immunities, attacks, and special abilities. The caster can polymorph into one of the following forms:
 
@@ -4515,21 +4515,21 @@ Polymorph Self allows the caster to assume the form of a creature of moderate po
 @38456     = ~Imbue with Spell Ability
 (Universal)
 Уровень: священник 4, бард 4
-Range: Sight of Caster
-Duration: 8 hours or until released
-Casting Time: 4
-Area of Effect: Special
-Saving Throw: None
+Дальность: обзор колдующего
+Длительность: 8 hours or until released
+Время чтения:  4
+Зона действия: особая
+Спасбросок: нет
 
 By casting Imbue with Spell Ability, the caster grants another creature the ability to cast one of the caster's spells once. Immediately after casting this spell, the caster must attempt to cast another spell of any level, which must be an abjuration, conjuration or divination spell. Instead of being cast, that spell is stored in the creature on which Imbue with Spell Ability was just cast (consuming one use of the spell). That creature gains a special ability that lets them cast the spell once. If unused, that ability disappears after 8 hours.~
 @37457     = ~Chaos Cast~
 @38457     = ~Chaos Cast
 (Universal)
-Уровень: Sor/Wiz 4
-Range: Sight of Caster
-Duration: Special
-Casting Time: 1
-Area of Effect: Special
+Уровень: колдун/волшебник 4
+Дальность: обзор колдующего
+Длительность: Special
+Время чтения:  1
+Зона действия: особая
 Saving Throw: Special
 
 This spell casts a random wizard spell on the target creature, which could be a spell of any level between 1 and 8. The nature of the spell depends on the target. If the target is an enemy, they will receive a harmful spell, but if the target is an ally, they will receive a beneficial spell. Targeting restrictions are obeyed (a spell that only affects the caster will not be rolled unless the target is the caster).
@@ -4537,46 +4537,46 @@ This spell casts a random wizard spell on the target creature, which could be a 
 The main advantage of Chaos Cast is that the random spell is more likely to be higher than level 4 than lower (since there are more levels above level 4 than below). The disadvantage is that the spell might not be useful in the current situation.~
 @37551     = ~Steal Spells~
 @38551     = ~Steal Spells
-(Transmutation)
-Уровень: бард 5, Sor/Wiz 5, Mask 5
-Range: Sight of Caster
-Duration: Instantaneous
-Casting Time: 5
-Area of Effect: 1 creature
-Saving Throw: None
+(Преобразование)
+Уровень: бард 5, колдун/волшебник 5, Mask 5
+Дальность: обзор колдующего
+Длительность: мгновенно
+Время чтения:  5
+Зона действия: 1 существо
+Спасбросок: нет
 
 This spell steals memorized spells from the target and grants their spell slots to the caster. The caster makes a Pick Pockets roll, adding their caster level (and any normal bonuses to Pick Pockets). For every 10 points of the total roll, the target loses one memorized spell of 5th-level or lower, and the caster regains one spell of 4th-level or lower (prioritizing the highest-level spells that can be lost or regained this way). There is no Saving Throw, though Spell Resistance may prevent the theft.~
 @37552     = ~Призрачная форма~
 @38552     = ~Призрачная форма
-(Transmutation)
-Уровень: бард 5, священник 5, Sor/Wiz 5
+(Преобразование)
+Уровень: бард 5, священник 5, колдун/волшебник 5
 Range: Touch
-Duration: 1 round/level
-Casting Time: 5
-Area of Effect: 1 creature
-Saving Throw: None
+Длительность: 1 round/level
+Время чтения:  5
+Зона действия: 1 существо
+Спасбросок: нет
 
 This spell turns the recipient incorporeal for a limited period of time. While incorporeal, the character gets damage reduction 5/+1, and they have a 50% chance to ignore any instance of physical damage. They are still tangible enough to attack and cast spells. The recipient can also move through walls while incorporeal. Simply click on a point to move to, and the character will float to that point, bypassing normally impassable obstacles in the way.~
 @37553     = ~Отмотать время~
 @38553     = ~Отмотать время
-(Transmutation)
-Уровень: бард 5, Sor/Wiz 5
-Range: Caster
-Duration: -2 rounds
-Casting Time: 0
-Area of Effect: Caster
-Saving Throw: None
+(Преобразование)
+Уровень: бард 5, колдун/волшебник 5
+Дальность: колдующий
+Длительность: -2 rounds
+Время чтения:  0
+Зона действия: колдующий
+Спасбросок: нет
 
 This spell briefly reverses time for the caster, reverting them to the state they were in two rounds ago. The caster's HP is restored to what it was two rounds ago, as is their location in the area. The caster also regains the magical effects they had two rounds ago, while losing effects gained in the past two rounds (including harmful status effects). Rewind Time does not restore memorized spells expended in the last two rounds.~
 @37554     = ~Wall of Force~
 @38554     = ~Wall of Force
-(Abjuration)
-Уровень: Sor/Wiz 5, Selune 5
-Range: Sight of Caster
-Duration: 5 rounds
-Casting Time: 7
-Area of Effect: 20-foot long, 5-foot wide wall
-Saving Throw: None
+(Отречение)
+Уровень: колдун/волшебник 5, Selune 5
+Дальность: обзор колдующего
+Длительность: 5 rounds
+Время чтения:  7
+Зона действия: 20-foot long, 5-foot wide wall
+Спасбросок: нет
 
 This spell creates a wall of magical force, which stays for 5 rounds. Creatures cannot pass through the wall, though they can still fly over it, teleport past it, or float through it while incorporeal. The wall cannot be dispelled. Only one Wall of Force can be active at a time.~
 @37555     = ~Second Chance~
@@ -4584,31 +4584,31 @@ This spell creates a wall of magical force, which stays for 5 rounds. Creatures 
 (Чародейство)
 Уровень: бард 5, священник 6
 Range: Touch
-Duration: 8 hours or until triggered
-Casting Time: 9
-Area of Effect: 1 creature
-Saving Throw: None
+Длительность: 8 hours or until triggered
+Время чтения:  9
+Зона действия: 1 существо
+Спасбросок: нет
 
 This spell gives the target the miraculous ability to avoid death once. The next time the target would die in the next 8 hours, they are instead reduced to one hit point.~
 @37652     = ~Isaac's Greater Missile Storm~
 @38652     = ~Isaac's Greater Missile Storm
-(Evocation)
-Уровень: Sor/Wiz 6
-Range: Sight of Caster
-Duration: Instantaneous
-Casting Time: 4
-Area of Effect: 1 creature
-Saving Throw: None 
+(Проявление)
+Уровень: колдун/волшебник 6
+Дальность: обзор колдующего
+Длительность: мгновенно
+Время чтения:  4
+Зона действия: 1 существо
+Спасбросок: нет 
 
 This spell creates a large number of projectiles akin to those created by the Magic Missile spell, which hit a single target. Each missile deals 1d4+1 magic damage with no saving throw. The spell fires one missile per level of the wizard.~
 @37653     = ~Катящийся валун~
 @38653     = ~Катящийся валун
-(Conjuration)
-Уровень: друид 6, Sor/Wiz 6
+(Призывание)
+Уровень: друид 6, колдун/волшебник 6
 Range: Special
-Duration: Instantaneous
-Casting Time: 4
-Area of Effect: All creatures in path of boulder
+Длительность: мгновенно
+Время чтения:  4
+Зона действия: All creatures in path of boulder
 Saving Throw: Reflex partial
 
 Boulder Roll creates a large boulder, which rolls forward from the caster, crushing creatures in its path, until it hits a wall. Creatures hit take 12d8 bludgeoning damage and are knocked down for 2 rounds. A successful Reflex save halves the damage and prevents one from being knocked down. The boulder always travels due south from the caster.~
@@ -4617,69 +4617,69 @@ Boulder Roll creates a large boulder, which rolls forward from the caster, crush
 (Universal)
 Уровень: бард 8
 Range: Special
-Duration: 15 rounds
-Casting Time: 10
-Area of Effect: Special
-Saving Throw: None
+Длительность: 15 rounds
+Время чтения:  10
+Зона действия: особая
+Спасбросок: нет
 
 Songcasting lets the bard store a spell, which has a chance of being cast automatically each round that the bard sings their bard song. Immediately after casting this spell, the bard should attempt to cast another spell of 1st-level. Instead of being cast, this spell will be stored (expending one use of the spell).
 
 Each round for the duration, if the bard is singing a bard song, there is a chance (1% per bard level) that the spell will be cast on each creature the bard song affects. Even spells with a range of Caster can target other creatures this way. The spell can potentially be triggered multiple times over many rounds.~
 @37655     = ~Void Sound~
 @38655     = ~Void Sound
-(Necromancy)
+(Некромантия)
 Уровень: бард 7
-Range: Caster
-Duration: Instantaneous
-Casting Time: 5
-Area of Effect: 30-feet long, 10-foot diameter cone
+Дальность: колдующий
+Длительность: мгновенно
+Время чтения:  5
+Зона действия: 30-feet long, 10-foot diameter cone
 Saving Throw: Fortitude half
 
 By casting this spell, the caster emits a Void Sound, a horrific sound that can somehow be heard by the deaf and by no one else, and which carries negative energy with it. All deaf creatures in the area of effect take 1d8 magic damage per level (max 30d8). This spell has no effect on undead or constructs.~
 @37656     = ~Посох заклинаний~
 @38656     = ~Spellstaff
 (Universal)
-Уровень: друид 6, Sor/Wiz 6
+Уровень: друид 6, колдун/волшебник 6
 Range: Special
-Duration: 8 hours or until all charges are expended
-Casting Time: 10
-Area of Effect: Special
-Saving Throw: None
+Длительность: 8 hours or until all charges are expended
+Время чтения:  10
+Зона действия: особая
+Спасбросок: нет
 
 This spell lets the caster store a spell in a staff, which casts the spell each time it is used to attack a creature. Immediately after casting this spell, the caster should attempt to cast a 1st-level spell that can target a point or a creature other than the caster (or one that gives the caster a weapon to make a touch attack against a creature). Instead of being cast, this spell will be stored in a Spellstaff, which is wielded by the caster.
 
 The Spellstaff has a number of charges equal to the caster's level. Each time the caster attacks with the staff, a charge is used to cast the stored spell on the target of the attack. The stored spell is always cast with a caster level of 10, regardless of the caster's actual level. The staff has a range equal to the range of the spell, deals no physical damage, and automatically hits (unless the stored spell is one like Shocking Grasp that requires an attack roll, in which case the staff requires an attack roll to hit).~
 @37657     = ~Freeze Inanimates~
 @38657     = ~Freeze Inanimates
-(Transmutation)
-Уровень: Sor/Wiz 6
-Range: Caster
-Duration: 4 rounds
-Casting Time: 6
-Area of Effect: Entire area
-Saving Throw: None
+(Преобразование)
+Уровень: колдун/волшебник 6
+Дальность: колдующий
+Длительность: 4 rounds
+Время чтения:  6
+Зона действия: Entire area
+Спасбросок: нет
 
 A lesser time manipulation spell, Freeze Inanimates stops time for all inanimate objects that are not being worn or carried by a creature. Any arrow, bolt, bullet, or other projectile that is fired or thrown by a creature during the duration of this spell will freeze in midair immediately, as it is no longer being carried. Magical projectiles are also frozen immediately after being conjured. All creatures can still move and do actions while time is stopped. Items can still be picked up from the ground, as the effects of this spell end for them when they are grasped by a creature. Once the spell ends, any projectile that had been frozen by the spell will resume flying toward its target.~
 @37751     = ~Стигийский ледяной шторм~
 @38751     = ~Стигийский ледяной шторм
-(Conjuration)
-Уровень: Sor/Wiz 7
-Range: Sight of Caster
-Duration: Instantaneous
-Casting Time: 4
-Area of Effect: 20-foot radius
+(Призывание)
+Уровень: колдун/волшебник 7
+Дальность: обзор колдующего
+Длительность: мгновенно
+Время чтения:  4
+Зона действия: 20-foot radius
 Saving Throw: Will partial
 
 Stygian Ice Storm is the signature spell of gelugons. When cast, it summons a storm of hellish ice from Stygia, the fifth layer of the Nine Hells. All creatures in the area of effect take 12d6 cold damage with no save, and must make a Will saving throw or be effectively feebleminded for 3 rounds due to the severe memory loss caused by Stygian ice. The caster is unaffected, as are undead creatures.~
 @37752     = ~Mantle~
 @38752     = ~Mantle
-(Abjuration)
-Уровень: Sor/Wiz 7
-Range: Caster
-Duration: 4 rounds
-Casting Time: 1
-Area of Effect: Caster
-Saving Throw: None
+(Отречение)
+Уровень: колдун/волшебник 7
+Дальность: колдующий
+Длительность: 4 rounds
+Время чтения:  1
+Зона действия: колдующий
+Спасбросок: нет
 
 This spell envelops the caster in a magical cloak of force, which blocks all but the most powerful physical attacks. For 4 rounds, the caster gains damage reduction 15/+3. The damage reduction increases based on the level of the caster:
 
@@ -4693,55 +4693,55 @@ Caster level        Damage Reduction
 @38753     = ~Fortune's Favorite
 (Чародейство) 
 Уровень: бард 7
-Range: Sight of Caster
-Duration: 7 seconds
-Casting Time: 2
-Area of Effect: 1 creature
-Saving Throw: None 
+Дальность: обзор колдующего
+Длительность: 7 seconds
+Время чтения:  2
+Зона действия: 1 существо
+Спасбросок: нет 
 
 This spell bestows flawless luck upon a creature. For 7 seconds, the recipient gains a +20 bonus to luck. This means that the recipient will deal maximum damage with their attacks, take minimum damage from spells, roll a natural 20 with each attack, and almost always succeed on saving throws.~
 @37755     = ~Lightning Barrage~
 @38755     = ~Lightning Barrage
-(Evocation)
-Уровень: Sor/Wiz 7, Talos 7
-Range: Sight of Caster
-Duration: Instantaneous
-Casting Time: 4
-Area of Effect: Special
+(Проявление)
+Уровень: колдун/волшебник 7, Talos 7
+Дальность: обзор колдующего
+Длительность: мгновенно
+Время чтения:  4
+Зона действия: особая
 Saving Throw: Reflex half
 
 This spell fires a flurry of small lightning bolts at the target. One bolt is fired per level, each one dealing 1d8 electrical damage (Reflex save with +4 DC for half) to all creatures in its path. The bolts will bounce off walls, potentially hitting the same creature multiple times per bolt.~
 @37756     = ~Reanimate~
 @38756     = ~Reanimate
-(Necromancy)
-Уровень: священник 7, Sor/Wiz 7
-Range: Sight of Caster
-Duration: Permanent
-Casting Time: 7
-Area of Effect: Nearest corpse in 5-ft. radius
-Saving Throw: None
+(Некромантия)
+Уровень: священник 7, колдун/волшебник 7
+Дальность: обзор колдующего
+Длительность: Permanent
+Время чтения:  7
+Зона действия: Nearest corpse in 5-ft. radius
+Спасбросок: нет
 
 This spell "resurrects" the target as an undead creature under the caster's control, retaining the stats and spells it had in life. The nearest dead creature to the target point, excluding undead, constructs, most extraplanar creatures, and creatures more than five levels higher than the caster, will be reanimated. It picks up and re-equips items it dropped when it died, unless the party took those items. Creatures that exploded into chunks cannot be reanimated. Reanimate cannot be cast by good characters.~
 @37757     = ~Skeleton Horde~
 @38757     = ~Skeleton Horde
-(Necromancy) 
-Уровень: священник 7, Sor/Wiz 7
-Range: Sight of Caster
-Duration: 8 hours
-Casting Time: 7
-Area of Effect: Special
-Saving Throw: None 
+(Некромантия) 
+Уровень: священник 7, колдун/волшебник 7
+Дальность: обзор колдующего
+Длительность: 8 hours
+Время чтения:  7
+Зона действия: особая
+Спасбросок: нет 
 
 This spell animates 1 skeleton per caster level. The skeletons ignore the summoning limit. Skeleton Horde cannot be cast by good characters.~
 @37758     = ~Spell Sequencer~
 @38758     = ~Spell Sequencer
 (Universal)
-Уровень: бард 7, Sor/Wiz 7, Oghma 6
+Уровень: бард 7, колдун/волшебник 7, Oghma 6
 Range: Special
-Duration: Permanent until triggered
-Casting Time: 15
-Area of Effect: Special
-Saving Throw: None
+Длительность: Permanent until triggered
+Время чтения:  15
+Зона действия: особая
+Спасбросок: нет
 
 Spell Sequencer lets the caster store three spells to be released later on. After casting Spell Sequencer, the caster must attempt to cast up to three spells of 4th-level or lower. Instead of being cast, those spells are stored in the sequencer (expending one use of each spell). The caster then gains the innate ability "Release Spell Sequencer." Using that ability immediately casts all three spells on the target of the ability.
 
@@ -4749,222 +4749,222 @@ Spells with a range of "Caster" will be cast on the caster, regardless of the ta
 @37759     = ~Симпатия~
 @38759     = ~Симпатия
 (Чародейство)
-Уровень: бард 6, друид 8, Sor/Wiz 7
-Range: Sight of Caster
-Duration: 1 round/level
-Casting Time: 7
-Area of Effect: Special
+Уровень: бард 6, друид 8, колдун/волшебник 7
+Дальность: обзор колдующего
+Длительность: 1 round/level
+Время чтения:  7
+Зона действия: особая
 Saving Throw: Will negates
 
 This spell brings forth a magical object that imbues creatures that see it with the desire to be near it. Any non-allied creature that sees the object of sympathy must make a Will save (with -3 DC) each round or be compelled to walk harmlessly toward the object for the round. Any creature immune to charm effects is also immune to this effect.~
 @37760     = ~Пропустить время~
 @38760     = ~Пропустить время
-(Transmutation)
-Уровень: Sor/Wiz 7
+(Преобразование)
+Уровень: колдун/волшебник 7
 Range: Special
-Duration: 10 rounds
-Casting Time: 2
-Area of Effect: Party
-Saving Throw: None
+Длительность: 10 rounds
+Время чтения:  2
+Зона действия: Party
+Спасбросок: нет
 
 Skip Time transports the party ten rounds into the future. From the point of view of other creatures, the party vanishes, then reappears in the same spot ten rounds later. However, no time has passed for the party.
 
 The main effect of this is to reduce the duration of all magical effects on creatures outside the party by ten rounds, ending effects like Mantle that have short durations and causing the rest to expire sooner. Lingering areas of effect such as Web and Stinking Cloud also have their duration reduced. Skip Time can also allow the party to evade area of effect spells and abilities when timed right.~
 @37761     = ~Силовая клетка~
 @38761     = ~Силовая клетка
-(Abjuration)
-Уровень: Sor/Wiz 7
-Range: Sight of Caster
-Duration: 5 rounds
-Casting Time: 1
-Area of Effect: 15-foot cube
-Saving Throw: None
+(Отречение)
+Уровень: колдун/волшебник 7
+Дальность: обзор колдующего
+Длительность: 5 rounds
+Время чтения:  1
+Зона действия: 15-foot cube
+Спасбросок: нет
 
 This spell creates a cage of force - a cube with walls of force on each side. Creatures that were in the area of effect when the spell was cast are trapped in the forcecage for the duration. Creatures cannot enter or pass through the area of effect. Only one forcecage may be active at a time.~
 @37762     = ~Скелеты-ловушки~
 @38762     = ~Скелеты-ловушки
-(Necromancy)
-Уровень: Sor/Wiz 7
-Range: Sight of Caster
-Duration: 8 hours
-Casting Time: 7
-Area of Effect: Special 
+(Некромантия)
+Уровень: колдун/волшебник 7
+Дальность: обзор колдующего
+Длительность: 8 hours
+Время чтения:  7
+Зона действия: особая 
 Saving Throw: Reflex half
 
 This spell animates two skeletons which can be detonated on command to deal damage. When you have a skeleton use its special ability, or the skeleton takes damage, its skull explodes like a Skull Trap, dealing 10d6 slashing damage to all creatures within 15 feet (Reflex save for half), and the skeleton is destroyed. At 24th level, the spell animates three skeletons instead of two. Skeleton Traps cannot be cast by good characters.~
 @37763     = ~Spell Turning~
 @38763     = ~Spell Turning
-(Abjuration)
-Уровень: бард 7, Sor/Wiz 7
-Range: Caster
-Duration: 10 rounds/level or until depleted
-Casting Time: 2
-Area of Effect: Caster
-Saving Throw: None
+(Отречение)
+Уровень: бард 7, колдун/волшебник 7
+Дальность: колдующий
+Длительность: 10 rounds/level or until depleted
+Время чтения:  2
+Зона действия: колдующий
+Спасбросок: нет
 
 Spell Turning reflects incoming hostile spells back at the source. While Spell Turning is active, if the caster would be hit by a harmful, single-target spell of any level, that spell is reflected back at its own caster. Spell Turning can reflect a total of 15 spell levels before it ends, though as long as there is at least one spell level remaining, the next spell will be reflected. It does not reflect Dispel Magic either, though it cannot be dispelled itself.~
 @37764     = ~Steal Effects~
 @38764     = ~Steal Effects
-(Abjuration)
-Уровень: бард 6, Sor/Wiz 7, Mask 6
-Range: Sight of Caster
-Duration: Instantaneous
-Casting Time: 5
-Area of Effect: 1 creature
+(Отречение)
+Уровень: бард 6, колдун/волшебник 7, Mask 6
+Дальность: обзор колдующего
+Длительность: мгновенно
+Время чтения:  5
+Зона действия: 1 существо
 Saving Throw: Will negates
 
 This spell steals the effects of spells from the target and grants them to the caster. If the target fails a Will save with +5 DC, all dispellable effects on them (such as from Mirror Image or Stoneskin) are dispelled, and the caster gains those effects for their remaining durations. Effects of items and innate abilities cannot be stolen. If an ally is targeted, they are affected with no save.~
 @37852     = ~Energy Drain~
 @38852     = ~Energy Drain
-(Necromancy)
-Уровень: священник 8, Sor/Wiz 8
-Range: Sight of Caster
-Duration: Permanent
-Casting Time: 2
-Area of Effect: 1 creature
-Saving Throw: None
+(Некромантия)
+Уровень: священник 8, колдун/волшебник 8
+Дальность: обзор колдующего
+Длительность: Permanent
+Время чтения:  2
+Зона действия: 1 существо
+Спасбросок: нет
 
 Similar to the energy drain of a wight or wraith, except much more powerful, this spell drains multiple levels from a creature. The target is drained one level for every three levels of the caster, to a maximum energy drain of 16 levels for a 48th-level caster. The energy drain is permanent until cured with a Restoration spell. This spell has no effect on undead or constructs.~
 @37853     = ~Enslave~
 @38853     = ~Enslave
 (Чародейство)
-Уровень: бард 7, Sor/Wiz 8
-Range: Sight of Caster
-Duration: Permanent
-Casting Time: 8
-Area of Effect: 1 creature
+Уровень: бард 7, колдун/волшебник 8
+Дальность: обзор колдующего
+Длительность: Permanent
+Время чтения:  8
+Зона действия: 1 существо
 Saving Throw: Will negates
 
 This spell allows the caster to permanently gain full control of another creature. The target must make a Will saving throw with +4 DC. If it fails, it is dominated by the caster until it dies or the effect is dispelled. Enslave can even affect undead and constructs.~
 @37854     = ~Army of Images~
 @38854     = ~Army of Images
-(Illusion)
+(Иллюзия)
 Уровень: бард 8, Mask 8
-Range: Caster
-Duration: 10 rounds
-Casting Time: 8
-Area of Effect: 20-foot radius
-Saving Throw: None 
+Дальность: колдующий
+Длительность: 10 rounds
+Время чтения:  8
+Зона действия: 20-foot radius
+Спасбросок: нет 
 
 Army of Images is like Mirror Image, except as an area of effect. When cast, all allies within 20 feet become surrounded by eight illusory duplicates. Incoming attacks may hit the duplicates rather than the real creatures.~
 @37855     = ~Телепортирующий шаг~
 @38855     = ~Телепортирующий шаг
-(Transmutation)
-Уровень: бард 8, Sor/Wiz 8, Selune 9
-Range: Sight of Caster
-Duration: 3 rounds/level
-Casting Time: 4
-Area of Effect: 1 creature
-Saving Throw: None
+(Преобразование)
+Уровень: бард 8, колдун/волшебник 8, Selune 9
+Дальность: обзор колдующего
+Длительность: 3 rounds/level
+Время чтения:  4
+Зона действия: 1 существо
+Спасбросок: нет
 
 Among the greatest teleportation spells, Teleport Step lets the recipient teleport anywhere in the area simply by moving. Click on a destination for the character, and they will teleport there. The character can teleport any number of times with this spell.~
 @37856     = ~Spell Trap~
 @38856     = ~Spell Trap
-(Abjuration)
-Уровень: бард 8, Sor/Wiz 8
-Range: Caster
-Duration: 10 rounds/level or until depleted
-Casting Time: 2
-Area of Effect: Caster
-Saving Throw: None
+(Отречение)
+Уровень: бард 8, колдун/волшебник 8
+Дальность: колдующий
+Длительность: 10 rounds/level or until depleted
+Время чтения:  2
+Зона действия: колдующий
+Спасбросок: нет
 
 Spell Trap absorbs incoming hostile spells and grants their spell slots to the caster. While Spell Trap is active, if the caster would be hit by a harmful spell, that spell is nullified, and the caster regains a previously cast spell of a level less than or equal to that of the absorbed spell. Spells regained this way must also be 7th-level or lower, even if the absorbed spell was higher than 7th-level. Spell Trap can absorb a total of 18 spell levels before it ends, though as long as there is at least one spell level remaining, the next spell will be absorbed. Spell Trap does not absorb spells cast by allies. It does not absorb Dispel Magic either, though it cannot be dispelled itself.~
 @37857     = ~Link Effects~
 @38857     = ~Link Effects
 (Чародейство)
-Уровень: бард 7, священник 8, Sor/Wiz 8
-Range: Sight of Caster
-Duration: 2 rounds/level
-Casting Time: 8
-Area of Effect: 1 creature
-Saving Throw: None
+Уровень: бард 7, священник 8, колдун/волшебник 8
+Дальность: обзор колдующего
+Длительность: 2 rounds/level
+Время чтения:  8
+Зона действия: 1 существо
+Спасбросок: нет
 
 This spell links the caster and the target such that any spell effect that would be applied to one creature is also applied to the other. Link Effects only duplicates effects from spells and certain abilities of monsters; effects of items and non-magical abilities are ignored.~
 @37858     = ~Множественный огненный шар~
 @38858     = ~Множественный огненный шар
-(Evocation)
-Уровень: Sor/Wiz 8
-Range: Sight of Caster
-Duration: Instantaneous
-Casting Time: 3
-Area of Effect: 20-foot radius
+(Проявление)
+Уровень: колдун/волшебник 8
+Дальность: обзор колдующего
+Длительность: мгновенно
+Время чтения:  3
+Зона действия: 20-foot radius
 Saving Throw: Reflex half
 
 Also known as Fireballball, this spell launches a fireball that explodes into other fireballs. After the Metafireball explodes, each creature in the area of effect is hit by a separate fireball with its own area of effect. Each of the secondary fireballs deals 3d6 fire damage (Reflex save with -5 DC for half). This spell is most effective when cast at a large group of creatures clumped together.~
 @37859     = ~Неудержимое вращение Отто~
 @38859     = ~Неудержимое вращение Отто
 (Чародейство)
-Уровень: бард 7, Sor/Wiz 8
-Range: Sight of Caster
-Duration: 3 rounds
-Casting Time: 8
-Area of Effect: 20-foot radius
-Saving Throw: None
+Уровень: бард 7, колдун/волшебник 8
+Дальность: обзор колдующего
+Длительность: 3 rounds
+Время чтения:  8
+Зона действия: 20-foot radius
+Спасбросок: нет
 
 Otto's Irresistible Spin forces multiple creatures to spin in place against their will for 3 rounds. Affected creatures will do nothing other than repeatedly spin in place, even if they see enemies. The spell is irresistible - there is no Saving Throw, and Spell Resistance will not block the spell. If an affected creature takes damage, the effects of the spell immediately end for that creature. A creature cannot be affected by this spell more than once per 8 hours.~
 @37860     = ~Вездесущность~
 @38860     = ~Вездесущность
-(Transmutation)
-Уровень: бард 7, Cleric 8, Sor/Wiz 7
-Range: Sight of Caster
-Duration: 30 rounds
-Casting Time: 5
-Area of Effect: 1 creature
-Saving Throw: None
+(Преобразование)
+Уровень: бард 7, Cleric 8, колдун/волшебник 7
+Дальность: обзор колдующего
+Длительность: 30 rounds
+Время чтения:  5
+Зона действия: 1 существо
+Спасбросок: нет
 
 The spell Omnipresence spreads the essence of the target creature throughout the area, allowing the creature to do actions at longer range than normal. For the duration or until dispelled, the creature can attack any creature in sight with any weapon, even with melee weapons. The creature can also target other creatures with touch spells at long range, and can cast spells at a target outside their visual range. However, these effects also go the other way. An omnipresent creature can be attacked with melee weapons and targeted by touch spells at long range. Since Omnipresence makes the creature's form less solid, the creature can move through other creatures while under the effects of the spell.~
 @37861     = ~The Jester's Party~
 @38861     = ~The Jester's Party
-(Conjuration)
+(Призывание)
 Уровень: бард 8
 Range: Entire area
-Duration: Instantaneous
-Casting Time: 1
-Area of Effect: Everyone in current area
-Saving Throw: None
+Длительность: мгновенно
+Время чтения:  1
+Зона действия: Everyone in current area
+Спасбросок: нет
 
 This spell teleports every creature in the current area next to the caster. Casting this spell in a dungeon could lead to a massive fight, so the caster had better be prepared.~
 @37862     = ~Simulacrum~
 @38862     = ~Simulacrum
-(Illusion)
-Уровень: бард 8, Sor/Wiz 8
-Range: Sight of Caster
-Duration: 1 round/level
-Casting Time: 8
-Area of Effect: Special
-Saving Throw: None
+(Иллюзия)
+Уровень: бард 8, колдун/волшебник 8
+Дальность: обзор колдующего
+Длительность: 1 round/level
+Время чтения:  8
+Зона действия: особая
+Спасбросок: нет
 
 Simulacrum creates a duplicate of the caster, which will serve the caster for the duration. It has half the caster's hit points and half the caster's level (rounded up) in each of the caster's classes. The simulacrum retains the memorized spells of the caster, which it can cast as well (but only those of a low enough level). It has no equipment, so it is useful primarily as an extra spellcaster. A character can only have one simulacrum at a time.~
 @37863     = ~Обратная гравитация~
 @38863     = ~Обратная гравитация
-(Transmutation)
-Уровень: друид 8, Sor/Wiz 8, Selune 8
-Range: Sight of Caster
-Duration: 1 round/level
-Casting Time: 8
-Area of Effect: 20-foot radius sphere
-Saving Throw: None
+(Преобразование)
+Уровень: друид 8, колдун/волшебник 8, Selune 8
+Дальность: обзор колдующего
+Длительность: 1 round/level
+Время чтения:  8
+Зона действия: 20-foot radius sphere
+Спасбросок: нет
 
 This spell creates a large spherical area that reverses the gravity of creatures inside it. Any creature that enters the area of effect will start falling up. While in the air, the creature cannot move unless it can fly. Creatures that hit the ceiling (if indoors) could potentially take bludgeoning damage depending on how fast they were rising. Only one sphere of reversed gravity may be active at a time.~
 @37864     = ~Polar Ray~
 @38864     = ~Polar Ray
-(Evocation)
-Уровень: друид 8, Sor/Wiz 8
-Range: Sight of Caster
-Duration: 1 round
-Casting Time: 6
-Area of Effect: 2-foot by 1000-foot jet
+(Проявление)
+Уровень: друид 8, колдун/волшебник 8
+Дальность: обзор колдующего
+Длительность: 1 round
+Время чтения:  6
+Зона действия: 2-foot by 1000-foot jet
 Saving Throw: Reflex half
 
 Upon casting this spell, the caster emits a freezing beam in the direction of the target point. The beam continues past the target point all the way to the end of the area. All creatures in the beam's path take 1d6 cold damage per level (max 25d6), with a Reflex save for half. The beam deals this damage again half a round later.~
 @37865     = ~True Polymorph~
 @38865     = ~True Polymorph
-(Transmutation)
-Уровень: бард 7, Sor/Wiz 8
-Range: Sight of Caster
-Duration: Permanent
-Casting Time: 4
-Area of Effect: 1 creature
+(Преобразование)
+Уровень: бард 7, колдун/волшебник 8
+Дальность: обзор колдующего
+Длительность: Permanent
+Время чтения:  4
+Зона действия: 1 существо
 Saving Throw: Fortitude negates
 
 Unlike lesser polymorph spells, True Polymorph can turn a creature into an inanimate object. If the target fails a Fortitude saving throw with +4 DC, it is transformed into a keg. While in keg form, the target cannot do anything, but their equipment can still be found inside the keg when it is split open. The effect lasts until dispelled.
@@ -4972,101 +4972,101 @@ Unlike lesser polymorph spells, True Polymorph can turn a creature into an inani
 If True Polymorph is cast on a petrified creature, it will instead duplicate the effects of Stone to Flesh.~
 @37952     = ~Perfect Invisibility~
 @38952     = ~Perfect Invisibility
-(Illusion)
-Уровень: Sor/Wiz 9
+(Иллюзия)
+Уровень: колдун/волшебник 9
 Range: Touch
-Duration: 2 rounds
-Casting Time: 4
-Area of Effect: 1 creature
-Saving Throw: None
+Длительность: 2 rounds
+Время чтения:  4
+Зона действия: 1 существо
+Спасбросок: нет
 
 This spell is the ultimate form of invisibility. While under the effect of Perfect Invisibility, a creature can attack, cast a spell or otherwise interact with another creature or object while remaining completely invisible. However, Perfect Invisibility can still be dispelled by effects that would dispel regular invisibility, such as True Seeing or Dispel Magic. Barring such removal, the spell will last for 2 rounds.~
 @37953     = ~Improved Alacrity~
 @38953     = ~Improved Alacrity
-(Transmutation)
-Уровень: священник 9, друид 9, Sor/Wiz 9
-Range: Caster 
-Duration: 6 rounds
-Casting Time: 5
-Area of Effect: Caster
-Saving Throw: None
+(Преобразование)
+Уровень: священник 9, друид 9, колдун/волшебник 9
+Дальность: колдующий 
+Длительность: 6 rounds
+Время чтения:  5
+Зона действия: колдующий
+Спасбросок: нет
 
 This spell eliminates the interval between spellcasting, allowing the caster to begin a new spell as soon as he or she finishes casting the previous one. A spellcaster under the effects of Improved Alacrity can cast multiple spells in the space of a single round, but the concentration involved prevents the caster from benefitting from decreased casting time effects (such as Improved Initiative) for the duration of the spell.~
 @37954     = ~Живая молния~
 @38954     = ~Живая молния
-(Evocation)
-Уровень: друид 8, Sor/Wiz 8, Talos 8
-Range: Caster
-Duration: 1 round/level
-Casting Time: 10
-Area of Effect: Random creatures within 20 feet
+(Проявление)
+Уровень: друид 8, колдун/волшебник 8, Talos 8
+Дальность: колдующий
+Длительность: 1 round/level
+Время чтения:  10
+Зона действия: Random creatures within 20 feet
 Saving Throw: Reflex half
 
 Living Lightning is essentially a spell that repeatedly casts itself. When cast, a lightning bolt shoots out of the caster, targeting a random enemy within 20 feet (if there are no enemies within 20 feet of the caster, nothing happens immediately). The bolt deals 10d8 damage, with a Reflex save at +4 DC for half. Every round thereafter for the duration of the spell, another lightning bolt is released, requiring no further action by the caster.~
 @37955     = ~Malavon's Corrosive Fog~
 @38955     = ~Malavon's Corrosive Fog
-(Conjuration)
-Уровень: Sor/Wiz 9
-Range: Sight of Caster
-Duration: 30 rounds
-Casting Time: 12
-Area of Effect: 40-foot radius
+(Призывание)
+Уровень: колдун/волшебник 9
+Дальность: обзор колдующего
+Длительность: 30 rounds
+Время чтения:  12
+Зона действия: 40-foot radius
 Saving Throw: Fortitude half
 
 Malavon's Corrosive Fog is another spell created by the dark elf sorcerer Malavon. It creates an enormous cloud of acid fog that lingers for a long time. Each round, any creature in the fog takes 12d6 acid damage (Fortitude save for half), and their movement rate is halved (there is no save against the movement penalty). The target's Spell Resistance, if any, does not affect this spell.~
 @37956     = ~Lightning Spiral~
 @38956     = ~Lightning Spiral
-(Evocation)
-Уровень: друид 9, Sor/Wiz 9, Talos 9
-Range: Caster
-Duration: Instantaneous
-Casting Time: 5
-Area of Effect: Special
+(Проявление)
+Уровень: друид 9, колдун/волшебник 9, Talos 9
+Дальность: колдующий
+Длительность: мгновенно
+Время чтения:  5
+Зона действия: особая
 Saving Throw: Reflex half
 
 This spell envelops the caster in a spiral of lightning, releasing lightning bolts in all directions. Eight bolts are released per level (four at a time), each dealing 1d8 electrical damage (Reflex save with +4 DC for half). Lightning Spiral does significantly more damage to creatures close to the caster.~
 @37957     = ~Mass Omnivision~
 @38957     = ~Mass Omnivision
-(Divination)
-Уровень: бард 8, Sor/Wiz 9
+(Прорицание)
+Уровень: бард 8, колдун/волшебник 9
 Range: Special
-Duration: 2 rounds/level
-Casting Time: 3
-Area of Effect: Entire area
-Saving Throw: None
+Длительность: 2 rounds/level
+Время чтения:  3
+Зона действия: Entire area
+Спасбросок: нет
 
 This spell increases the visual range of all creatures to the maximum, such that they can see anything in the area that isn't blocked by a wall. Creatures can also cast spells and fire ranged weapons at creatures from much farther away than normal.~
 @37958     = ~Improved Haste~
 @38958     = ~Improved Haste
-(Transmutation)
-Уровень: бард 8, Sor/Wiz 9
-Range: Sight of Caster
-Duration: 1 round/2 levels
-Casting Time: 3
-Area of Effect: 1 creature
-Saving Throw: None
+(Преобразование)
+Уровень: бард 8, колдун/волшебник 9
+Дальность: обзор колдующего
+Длительность: 1 round/2 levels
+Время чтения:  3
+Зона действия: 1 существо
+Спасбросок: нет
 
 This spell drastically speeds up the target's movement and attack speed. For the duration, the target gains +8 AC, moves at quadruple speed, and attacks twice as many times per round. Attack bonuses will continue to decrease for attacks beyond the 5th one. This effect does not stack with Haste.~
 @37959     = ~Time Stop~
 @38959     = ~Time Stop
-(Transmutation)
-Уровень: Sor/Wiz 9
-Range: Caster
-Duration: 3 rounds
-Casting Time: 9
-Area of Effect: Entire area
-Saving Throw: None
+(Преобразование)
+Уровень: колдун/волшебник 9
+Дальность: колдующий
+Длительность: 3 rounds
+Время чтения:  9
+Зона действия: Entire area
+Спасбросок: нет
 
 This spell stops time for everyone and everything except the caster. All other creatures cannot move or act, while the caster can act for three rounds of apparent time.~
 @37960     = ~Mordenkainen's Disjunction~
 @38960     = ~Mordenkainen's Disjunction
-(Abjuration)
-Уровень: Sor/Wiz 9
-Range: Sight of Caster
-Duration: Instantaneous
-Casting Time: 4
-Area of Effect: 1 creature
-Saving Throw: None
+(Отречение)
+Уровень: колдун/волшебник 9
+Дальность: обзор колдующего
+Длительность: мгновенно
+Время чтения:  4
+Зона действия: 1 существо
+Спасбросок: нет
 
 Mordenkainen's Disjunction dispels all dispellable effects on the target. There is no saving throw. This spell can even remove the effects of Spell Turning, Spell Trap, Antimagic Field, or a Protection from Magic scroll.~
 @37961     = ~Эклектическая Последовательность~
@@ -5074,10 +5074,10 @@ Mordenkainen's Disjunction dispels all dispellable effects on the target. There 
 (Universal)
 Уровень: Wiz 9
 Range: Special
-Duration: Permanent until triggered
-Casting Time: 15
-Area of Effect: Special
-Saving Throw: None
+Длительность: Permanent until triggered
+Время чтения:  15
+Зона действия: особая
+Спасбросок: нет
 
 Eclectic Sequencer may only be cast by generalist wizards. It lets the caster store eight spells to be released later on. After casting Eclectic Sequencer, the caster must attempt to cast up to eight spells of 7th-level or lower, each of which must be of a different school. Instead of being cast, those spells are stored in the sequencer (expending one use of each spell). The caster then gains the innate ability "Release Eclectic Sequencer." Using that ability immediately casts all eight spells on the target of the ability.
 
@@ -5085,11 +5085,11 @@ Spells with a range of "Caster" will be cast on the caster, regardless of the ta
 @37962     = ~Wish~
 @38962     = ~Wish
 (Universal)
-Уровень: Sor/Wiz 9
+Уровень: колдун/волшебник 9
 Range: Special
-Duration: Instantaneous
-Casting Time: 1
-Area of Effect: Special
+Длительность: мгновенно
+Время чтения:  1
+Зона действия: особая
 Saving Throw: Special
 
 Wish is among the mightiest spells a wizard or sorcerer can cast. By simply speaking aloud, they can alter reality to better suit them. Even a Wish spell, however, has its limits.
@@ -5105,13 +5105,13 @@ In casting Wish, the caster has two initial choices. The first choice is to dupl
 Each one-time wish cannot be chosen more than once by a single character, and a character may make no more than three one-time wishes, no matter how many times they cast Wish.~
 @37963     = ~Soul Bind~
 @38963     = ~Soul Bind
-(Necromancy)
-Уровень: священник 9, Sor/Wiz 9
+(Некромантия)
+Уровень: священник 9, колдун/волшебник 9
 Range: Touch
-Duration: 3 rounds
-Casting Time: 7
-Area of Effect: 1 creature
-Saving Throw: None
+Длительность: 3 rounds
+Время чтения:  7
+Зона действия: 1 существо
+Спасбросок: нет
 
 This foul spell should be cast on a living creature that is about to die. If the target dies within 3 rounds, its soul is captured in a gem within the caster's inventory. The gem must be of great value - either a star sapphire, a king's tear, or a rogue stone - and cannot already contain a soul. A creature whose soul is captured this way cannot be resurrected.
 
