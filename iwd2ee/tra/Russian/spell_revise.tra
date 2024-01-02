@@ -3997,8 +3997,8 @@
 Спасбросок: стойкости, половина урона
 
 Это заклинание наделяет заклинателя аурой, которая отталкивает ближайших врагов, отбрасывая их от заклинателя. Любой враг, оказавшийся в зоне действия заклинания, должен сделать спасбросок стойкости с -5 к УС или быть отброшенным назад.~
-@35654     = ~Wondrous Recall~
-@36654     = ~Wondrous Recall
+@35654     = ~Чудесное вспоминание~
+@36654     = ~Чудесное вспоминание
 (Чародейство)
 Уровень: бард 6, священник 6, друид 6
 Дальность: колдующий
@@ -4007,9 +4007,9 @@
 Зона действия: колдующий
 Спасбросок: нет
 
-This spell enables the caster to bring back to memory 2 spells that have been previously cast. If no spells have been cast yet, nothing happens. Wondrous Recall cannot recall 6th-level or higher spells.~
-@35655     = ~Bolt of Glory~
-@36655     = ~Bolt of Glory
+Это заклинание позволяет заклинателю вспомнить 2 заклинания, которые были прочитаны ранее. Если заклинания еще не были прочитаны, ничего не происходит. С помощью этого заклинания нельзя вспомнить заклинания 6-ого уровня и выше.~
+@35655     = ~Заряд славы~
+@36655     = ~Заряд славы
 (Проявление)
 Уровень: священник 6, паладин 6
 Дальность: обзор колдующего
@@ -4018,26 +4018,26 @@ This spell enables the caster to bring back to memory 2 spells that have been pr
 Зона действия: 1 существо
 Спасбросок: нет
 
-This spell launches a divine bolt at the target, dealing magic damage. The damage depends on the type of creature hit:
+Это заклинание запускает в цель заряд божественной энергии, который наносит магический урон. Урон зависит от типа цели:
 
-Fiends: 20d6
-Undead: 15d6
-All other creatures: 10d6
+Изверги: 20d6
+Нежить: 15d6
+Все остальные существа: 10d6
 
-There is no Saving Throw, and the target's Spell Resistance matters not.~
-@35656     = ~Supreme Speed~
-@36656     = ~Supreme Speed
+Спасброска против этого заклинания нет и сопротивление магии не работает.~
+@35656     = ~Абсолютная скорость~
+@36656     = ~Абсолютная скорость
 (Преобразование)
 Уровень: следопыт 6
 Дальность: колдующий
-Длительность: 1 second/level
+Длительность: 1 секунда/уровень
 Время чтения:  1
 Зона действия: колдующий
 Спасбросок: нет
 
-This spell drastically speeds up the ranger's attack speed. For the duration, the ranger attacks twice as many times per round. Attack bonuses will continue to decrease for attacks beyond the 5th one.
+Это заклинание значительно ускоряет скорость атаки следопыта. В течение всего времени действия заклинания следопыт имеет в два раза больше атак в раунд. Бонусы к атаке продолжают уменьшаться при атаках, следующих за 5-й.
 
-Although rangers normally cast spells at half their caster level, Supreme Speed will be cast at a ranger's full caster level.~
+Хотя обычно следопыты учитывают только половину своего уровня при чтении заклинаний, это заклинание учитывает полный уровень следопыта.~
 @35657     = ~Explosive Smite~
 @36657     = ~Explosive Smite
 (Проявление)
