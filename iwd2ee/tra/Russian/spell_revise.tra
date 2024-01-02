@@ -990,7 +990,7 @@
 Дальность: 20 футов
 Длительность: 1 раунд/уровень
 Время чтения: 6
-Зона действия: союзники радиусе 20 футов
+Зона действия: союзники в радиусе 20 футов
 Спасбросок: нет
 
 Цели окружает сияющее облако, которое защищает их от физических атак и заклинаний, а также ослепляет вражеских злых существ. У этого заклинания четыре эффекта:
@@ -4038,52 +4038,52 @@
 Это заклинание значительно ускоряет скорость атаки следопыта. В течение всего времени действия заклинания следопыт имеет в два раза больше атак в раунд. Бонусы к атаке продолжают уменьшаться при атаках, следующих за 5-й.
 
 Хотя обычно следопыты учитывают только половину своего уровня при чтении заклинаний, это заклинание учитывает полный уровень следопыта.~
-@35657     = ~Explosive Smite~
-@36657     = ~Explosive Smite
+@35657     = ~Взрывное сокрушение~
+@36657     = ~Взрывное сокрушение
 (Проявление)
 Уровень: паладин 6
 Дальность: колдующий
-Длительность: 2 rounds or until triggered
+Длительность: 2 раунда или до срабатывания
 Время чтения:  0
 Зона действия: особая
 Спасбросок: нет
 
-This spell allows the paladin to apply their Smite Evil as an area of effect. Casting Explosive Smite automatically causes the paladin to ready Smite Evil without consuming a use of it. The paladin gains their Charisma bonus to their next attack roll, and their next successful attack generates an explosion. All evil creatures within 20 feet take damage equal to the paladin's regular Smite Evil damage (though only the creature that was hit by the actual attack takes the attack's damage).~
-@35658     = ~Trial by Fire~
-@36658     = ~Trial by Fire
+Это заклинание позволяет паладину применить свою способность "Сокрушить зло" на область. При использовании этого заклинания паладин автоматически готовит способность "Сокрушить зло", не расходуя её. Паладин получает свой бонус обаяния к следующему броску атаки, а его следующая успешная атака вызывает взрыв. Все злые существа в радиусе 20 футов получают урон, равный обычному урону от способности "Сокрушить зло" (хотя урон от атаки получает только то существо, которое было поражено самой атакой).~
+@35658     = ~Испытание огнём~
+@36658     = ~Испытание огнём
 (Проявление)
 Уровень: священник 6, паладин 6
 Дальность: колдующий
-Длительность: 5 rounds
+Длительность: 5 раундов
 Время чтения:  6
-Зона действия: 20-foot long, 5-foot wide wall
+Зона действия: стена, длиной 20 футов и шириной 5 футов
 Спасбросок: нет
 
-This spell creates a wall of holy fire, which does not burn the innocent. Any non-good creature that passes through the wall takes 12d6 holy fire damage (which ignores fire resistance) with no Saving Throw. Good creatures can pass through the wall unharmed. Only one such wall can be active at a time.~
-@35659     = ~Mass Heal Animal~
-@36659     = ~Mass Heal Animal
+Это заклинание создает стену святого огня, который не обжигает невинных. При проходе сквозь стену любое не доброе существо, получает 12d6 урона от святого огня (сопротивление огню не применяется) без спасброска. Добрые существа могут проходить сквозь стену невредимыми. Одновременно может быть активна только одна такая стена.~
+@35659     = ~Массовое исцеление животных~
+@36659     = ~Массовое исцеление животных
 (Призывание)
 Уровень: друид 6, следопыт 6
 Дальность: колдующий
 Длительность: мгновенно
 Время чтения:  9
-Зона действия: Allied animals within 20 ft.
+Зона действия: дружественные животные на расстоянии до 20 футов.
 Спасбросок: нет
 
-Mass Heal Animal wipes away disease and injury from all animals in the area of effect. It cures blindness, diseases, feeblemind and restores the targets to maximum hit points if they have been injured.~
-@35660     = ~Desecrate~
-@36660     = ~Desecrate
+Это заклинание избавляет животных в области действия от болезней и травм. Оно лечит слепоту, болезни, слабоумие и восстанавливает цель до максимального количества пунктов здоровья.~
+@35660     = ~Осквернение~
+@36660     = ~Осквернение
 (Некромантия)
 Уровень: священник 6
-Range: Entire area
-Длительность: 8 hours
+Дальность: вся область
+Длительность: 8 часов
 Время чтения:  9
-Зона действия: All undead in the area
+Зона действия: Вся нежить в области
 Спасбросок: нет
 
-This spell imbues the current area with negative energy. For the duration, all undead gain +2 Constitution, get +2 to attack and damage, and count as 3 levels higher for purposes of resisting Turn Undead. In addition, any spell which would animate undead will create twice as many undead creatures when cast in the desecrated area. Desecrate can only be cast by evil characters.~
-@35753     = ~Power Word: Heal~
-@36753     = ~Power Word: Heal
+Это заклинание наполняет текущую область негативной энергией. На время действия заклинания вся нежить получает +2 к телосложению, атаке и урону, а также считается на 3 уровня выше для сопротивления изгнанию. Кроме того, любое заклинание, поднимающее нежить, создаст в два раза больше существ, если его произнести в оскверненной области. Осквернять могут только злые персонажи.~
+@35753     = ~Слово силы: Исцелить~
+@36753     = ~Слово силы: Исцелить
 (Прорицание)
 Уровень: бард 8, священник 7
 Дальность: обзор колдующего
@@ -4092,34 +4092,34 @@ This spell imbues the current area with negative energy. For the duration, all u
 Зона действия: 1 существо
 Спасбросок: нет
 
-Power Word: Heal is one of the beneficial words of power. When uttered, it heals a creature to their maximum hit points and cures poison, disease, blindness, deafness, feeblemindedness, intoxication, and bleeding. Power Word: Heal has no effect on undead.~
-@35754     = ~Regeneration~
-@36754     = ~Regeneration
+Это заклинание одно из благотворных слов силы. При произнесении оно восстанавливает максимальное количество пунтков здоровья существу и исцеляет яды, болезни, слепоту, глухоту, слабоумие, отравления и кровотечение. Это заклинание не действует на нежить.~
+@35754     = ~Регенерация~
+@36754     = ~Регенерация
 (Некромантия)
 Уровень: священник 7, друид 8
-Range: Touch
-Длительность: 1 round / 2 levels
+Дальность: прикосновение
+Длительность: 1 раунд / 2 уровня
 Время чтения:  7
 Зона действия: 1 существо
 Спасбросок: нет
 
-This spell lets a creature regenerate wounds very rapidly. For the duration, the target regenerates 3 HP per second.~
-@35853     = ~Unholy Aura~
-@36853     = ~Unholy Aura
+Это заклинание позволяет существу очень быстро восстанавливать здоровье. В течение времени действия заклинания цель восстанавливает 3 пункта здоровья в секунду.~
+@35853     = ~Аура нечестивости~
+@36853     = ~Аура нечестивости
 (Отречение)
 Уровень: священник 8
-Range: 20 ft.
-Длительность: 1 round/level
-Время чтения:  6
-Зона действия: Allies in a 20' radius
+Дальность: 20 футов
+Длительность: 1 раунд/уровень
+Время чтения: 6
+Зона действия: союзники в радиусе 20 футов
 Спасбросок: нет
 
-A malevolent darkness surrounds the subjects, protecting them from attacks, granting them resistance to spells, and blinding good creatures when they strike the subjects. This abjuration has four effects:
-First, the warded creatures gain a +4 deflection bonus to AC and a +4 bonus to all saves.
-Second, the warded creature gains +10 spell resistance and 5/- resistance to all forms of magical damage.
-Third, the abjuration protects the creatures against charm and domination spells.
-Fourth, any creature of good alignment who strikes (melee only) those protected by the Unholy Aura must make a Fortitude save or be blinded for 3 round.
-Unholy Aura can only be cast by evil characters.~
+Цели окружает зловещая тьма, которая защищает их от физических атак и заклинаний, а также ослепляет вражеских добрых существ. У этого заклинания четыре эффекта:
+Во-первых, цели получают +4 к классу защиты (отражение) и +4 ко всем спасброскам.
+Во-вторых, сопротивление магии у целей заклинания увеличивается на 10 и они получают 5/- сопротивления любому магическому урону.
+В третьих, заклинание защищает существа от заклинаний очарования и подчинения.
+В-четвёртых, любое доброе существо, которое наносит по защищённой аурой нечестивости цели удар в ближнем бою, слепнет на 3 раунда, если не сделает успешный спасбросок стойкости.
+Это заклинание может быть прочитано только злыми существами.~
 @35951     = ~Auril's Blessing~
 @36951     = ~Auril's Blessing
 (Призывание)
@@ -4173,7 +4173,7 @@ This spell conjures a divine storm cloud which releases damaging torrents upon c
 @36955     = ~Contingent Resurrection
 (Призывание)
 Уровень: священник 9
-Range: Touch
+Дальность: прикосновение
 Длительность: 8 hours or until triggered
 Время чтения:  18
 Зона действия: 1 существо
@@ -4228,7 +4228,7 @@ After this spell is cast, the next instance of physical damage the caster would 
 @38154     = ~Simple Summoning
 (Призывание)
 Уровень: бард 2, священник 2, колдун/волшебник 1
-Range: 1000 ft.
+Дальность: 1000 ft.
 Длительность: мгновенно
 Время чтения:  1
 Зона действия: 1 существо
@@ -4252,7 +4252,7 @@ Deathwatch lets the caster learn precisely how close other creatures are to deat
 @38156     = ~Jump
 (Преобразование)
 Уровень: бард 1, следопыт 1, колдун/волшебник 1
-Range: Touch
+Дальность: прикосновение
 Длительность: 30 rounds
 Время чтения:  4
 Зона действия: 1 существо
@@ -4368,7 +4368,7 @@ Remove Magic is like Dispel Magic, except it only affects enemies. When cast, it
 @38353     = ~Бросок
 (Преобразование)
 Уровень: бард 4, колдун/волшебник 3
-Range: Touch
+Дальность: прикосновение
 Длительность: мгновенно
 Время чтения:  1
 Зона действия: 1 существо
@@ -4403,7 +4403,7 @@ This wondrous spell gives the recipient the power to fly. For the duration, the 
 @38356     = ~Perception Filter
 (Иллюзия)
 Уровень: бард 1, колдун/волшебник 1
-Range: Touch
+Дальность: прикосновение
 Длительность: 10 rounds/level
 Время чтения:  3
 Зона действия: 1 существо
@@ -4550,7 +4550,7 @@ This spell steals memorized spells from the target and grants their spell slots 
 @38552     = ~Призрачная форма
 (Преобразование)
 Уровень: бард 5, священник 5, колдун/волшебник 5
-Range: Touch
+Дальность: прикосновение
 Длительность: 1 round/level
 Время чтения:  5
 Зона действия: 1 существо
@@ -4583,7 +4583,7 @@ This spell creates a wall of magical force, which stays for 5 rounds. Creatures 
 @38555     = ~Second Chance
 (Чародейство)
 Уровень: бард 5, священник 6
-Range: Touch
+Дальность: прикосновение
 Длительность: 8 hours or until triggered
 Время чтения:  9
 Зона действия: 1 существо
@@ -4605,7 +4605,7 @@ This spell creates a large number of projectiles akin to those created by the Ma
 @38653     = ~Катящийся валун
 (Призывание)
 Уровень: друид 6, колдун/волшебник 6
-Range: Special
+Дальность: Special
 Длительность: мгновенно
 Время чтения:  4
 Зона действия: All creatures in path of boulder
@@ -4616,7 +4616,7 @@ Boulder Roll creates a large boulder, which rolls forward from the caster, crush
 @38654     = ~Songcasting
 (Universal)
 Уровень: бард 8
-Range: Special
+Дальность: Special
 Длительность: 15 rounds
 Время чтения:  10
 Зона действия: особая
@@ -4640,7 +4640,7 @@ By casting this spell, the caster emits a Void Sound, a horrific sound that can 
 @38656     = ~Spellstaff
 (Universal)
 Уровень: друид 6, колдун/волшебник 6
-Range: Special
+Дальность: Special
 Длительность: 8 hours or until all charges are expended
 Время чтения:  10
 Зона действия: особая
@@ -4737,7 +4737,7 @@ This spell animates 1 skeleton per caster level. The skeletons ignore the summon
 @38758     = ~Spell Sequencer
 (Universal)
 Уровень: бард 7, колдун/волшебник 7, Oghma 6
-Range: Special
+Дальность: Special
 Длительность: Permanent until triggered
 Время чтения:  15
 Зона действия: особая
@@ -4761,7 +4761,7 @@ This spell brings forth a magical object that imbues creatures that see it with 
 @38760     = ~Пропустить время
 (Преобразование)
 Уровень: колдун/волшебник 7
-Range: Special
+Дальность: Special
 Длительность: 10 rounds
 Время чтения:  2
 Зона действия: Party
@@ -4917,7 +4917,7 @@ The spell Omnipresence spreads the essence of the target creature throughout the
 @38861     = ~The Jester's Party
 (Призывание)
 Уровень: бард 8
-Range: Entire area
+Дальность: Entire area
 Длительность: мгновенно
 Время чтения:  1
 Зона действия: Everyone in current area
@@ -4974,7 +4974,7 @@ If True Polymorph is cast on a petrified creature, it will instead duplicate the
 @38952     = ~Perfect Invisibility
 (Иллюзия)
 Уровень: колдун/волшебник 9
-Range: Touch
+Дальность: прикосновение
 Длительность: 2 rounds
 Время чтения:  4
 Зона действия: 1 существо
@@ -5029,7 +5029,7 @@ This spell envelops the caster in a spiral of lightning, releasing lightning bol
 @38957     = ~Mass Omnivision
 (Прорицание)
 Уровень: бард 8, колдун/волшебник 9
-Range: Special
+Дальность: Special
 Длительность: 2 rounds/level
 Время чтения:  3
 Зона действия: Entire area
@@ -5073,7 +5073,7 @@ Mordenkainen's Disjunction dispels all dispellable effects on the target. There 
 @38961     = ~Eclectic Sequencer
 (Universal)
 Уровень: Wiz 9
-Range: Special
+Дальность: Special
 Длительность: Permanent until triggered
 Время чтения:  15
 Зона действия: особая
@@ -5086,7 +5086,7 @@ Spells with a range of "Caster" will be cast on the caster, regardless of the ta
 @38962     = ~Wish
 (Universal)
 Уровень: колдун/волшебник 9
-Range: Special
+Дальность: Special
 Длительность: мгновенно
 Время чтения:  1
 Зона действия: особая
@@ -5107,7 +5107,7 @@ Each one-time wish cannot be chosen more than once by a single character, and a 
 @38963     = ~Soul Bind
 (Некромантия)
 Уровень: священник 9, колдун/волшебник 9
-Range: Touch
+Дальность: прикосновение
 Длительность: 3 rounds
 Время чтения:  7
 Зона действия: 1 существо
