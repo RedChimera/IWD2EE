@@ -348,7 +348,11 @@ TakePartyItemNum("USHFPN04",1)~
 		REPLACE_TEXTUALLY CASE_INSENSITIVE ~DestroyItem(\"00Potn04\")~ ~DestroyItem("00Potn04")
 DestroyItem("USHFPN04")~
 	END
-	LPF CONVERT_DLG_TO_IWD2_FORMAT END
+
+COPY_EXISTING ~20NEWEMM.dlg~ ~override~
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~00MISC32~ ~USRTHF18~
+	IF ~00MISC32~
+	BUT_ONLY_IF_IT_CHANGES
 
 END
 
@@ -893,7 +897,6 @@ COPY_EXISTING ~41ZACK.cre~ ~override~
 	LPF	IWD2_CRE_SPELL INT_VAR num=2 STR_VAR class=~wizard~ resource=~SPWI105~ END
 	LPF	IWD2_CRE_SPELL INT_VAR num=0 STR_VAR class=~wizard~ resource=~SPWI116~ END
 	LPF	IWD2_CRE_SPELL INT_VAR num=0 STR_VAR class=~wizard~ resource=~SPWI120~ END
-	LPF	IWD2_CRE_SPELL INT_VAR num=2 STR_VAR class=~wizard~ resource=~SPWI121~ END
 	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~SPWI201~ END
 	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~SPWI206~ END
 	LPF	IWD2_CRE_SPELL INT_VAR num=0 STR_VAR class=~wizard~ resource=~SPWI209~ END
@@ -901,6 +904,9 @@ COPY_EXISTING ~41ZACK.cre~ ~override~
 	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~SPWI212~ END
 	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~SPWI223~ END
 	LPF	IWD2_CRE_SPELL INT_VAR num=0 STR_VAR class=~wizard~ resource=~SPWI224~ END
+	PATCH_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~2~ BEGIN
+		LPF	IWD2_CRE_SPELL INT_VAR num=2 STR_VAR class=~wizard~ resource=~SPWI121~ END
+	END
 	LPF	IWD2_CRE_ABILITY INT_VAR num=1 STR_VAR resource=~USZACK1~ END
 
 COPY_EXISTING ~50PAIRI.cre~ ~override~
@@ -1145,6 +1151,12 @@ COPY_EXISTING ~20VREKC.bcs~ ~override~
 !HasItem("USHFSL09","Container_1")~
 	END
 */
+
+COPY_EXISTING ~AR4000.bcs~ ~override~ ~AR4100.bcs~ ~override~ ~AR4101.bcs~ ~override~ ~AR4102.bcs~ ~override~
+	DECOMPILE_AND_PATCH BEGIN
+		REPLACE_TEXTUALLY CASE_INSENSITIVE ~!Exists(\"41Zack\")~ ~Global("US_Zack_Joined","GLOBAL",0)
+!Exists("41Zack")~
+	END
 
 OUTER_SET ref_41605 = RESOLVE_STR_REF(@41605)
 OUTER_SET ref_41606 = RESOLVE_STR_REF(@41606)

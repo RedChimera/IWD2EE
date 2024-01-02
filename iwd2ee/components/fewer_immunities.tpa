@@ -558,6 +558,12 @@ COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
 COPY_EXISTING ~50TROSG.cre~ ~override~ ~50TROSGR.cre~ ~override~
 	LPF	IWD2_ADD_CRE_ITEM INT_VAR STR_VAR item=~USCIHFTG~ slot=~lring~ mode=~replace~ END
 
+COPY_EXISTING ~30ICETRL.cre~ ~override~
+	LPF IWD2_ADD_CRE_EFFECT INT_VAR opcode=31 target=1 timing=9 savingthrow=0x40000000 special=(0 - 10) END
+
+COPY_EXISTING ~41TROICE.cre~ ~override~ ~41RTROIC.cre~ ~override~ ~51TROIC.cre~ ~override~
+	LPF IWD2_ADD_CRE_EFFECT INT_VAR opcode=31 target=1 timing=9 savingthrow=0x40000000 special=(0 - 5) END
+
 //We should patch these
 // replaces items that grant immunities to common enemy types and bosses
 /*

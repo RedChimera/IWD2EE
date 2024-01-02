@@ -1966,6 +1966,7 @@ COPY_EXISTING ~41GOLEIC.cre~ ~override~
 	WRITE_LONG feats2 ulgiash
 	WRITE_BYTE proficiencysmallblade 3
 	LPF	IWD2_ADD_CRE_ITEM INT_VAR equip=1 STR_VAR item=~USCWHFIG~ slot=~weapon1~ mode=~replace~ END
+	LPF IWD2_ADD_CRE_EFFECT INT_VAR opcode=31 target=1 timing=9 savingthrow=0x40000000 special=(0 - 10) END
 
 COPY_EXISTING ~41GOLEMC.cre~ ~override~
 	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelfighter=12 STR_VAR updatehp=~max~ END
@@ -1979,6 +1980,7 @@ COPY_EXISTING ~41GOLEMC.cre~ ~override~
 	WRITE_BYTE coldresistance 50
 	WRITE_BYTE proficiencysmallblade 3
 	LPF	IWD2_ADD_CRE_ITEM INT_VAR equip=1 STR_VAR item=~USCWHFYG~ slot=~weapon1~ mode=~replace~ END
+	LPF IWD2_ADD_CRE_EFFECT INT_VAR opcode=31 target=1 timing=9 savingthrow=0x40000000 special=(0 - 30) END
 
 COPY_EXISTING ~41DOOMGD.cre~ ~override~
 	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelfighter=6 STR_VAR updatehp=~max~ END

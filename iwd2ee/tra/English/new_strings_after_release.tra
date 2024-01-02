@@ -449,3 +449,136 @@ Saving Throw: Fortitude half
 Malavon's Corrosive Fog is another spell created by the dark elf sorcerer Malavon. It creates an enormous cloud of acid fog that lingers for a long time. Each round, any creature in the fog takes 12d6 acid damage (Fortitude save for half), and their movement rate is halved (there is no save against the movement penalty). The target's Spell Resistance, if any, does not affect this spell.~
 @19910    = ~We used Imphraili's notes to complete her theoretical experiment regarding the transfusion of a modified Sanguis Anima into one's own bloodstream.  The process was difficult and painful but left our alchemist strangely invigorated.~
 @19911    = ~We used the white wyrm's egg to form a magical liquid which was then mixed into the alchemist's bloodstream.  The process cooled the blood, making them resistant to cold but more vulnerable to heat.~
+@56005    = ~Ability Score Drain~
+@55370    = ~sonic~
+@55603    = ~ (Lich)~
+@316    = ~KNOCKDOWN:
+
+You are trained to knock down or trip enemies in melee combat.
+
+Prerequisite: Base attack bonus +6 or higher
+
+Benefit: You gain an ability that lets you knock down or trip an adjacent creature. The ability can be used once per round. If your Dexterity is higher than your Strength, you attempt to trip the target, which must make a Reflex save (DC 5 + half your base attack bonus + your Dexterity modifier) or fall down for 4 seconds. Otherwise, you try to knock down your target, which must make a Fortitude save (DC 5 + half your base attack bonus + your Strength modifier) or fall down for 4 seconds. The DC gets -4 for each time someone has tried to knock down or trip the target in the past 10 rounds. It also gets -4 if the target has more than two legs or is otherwise more stable than a normal humanoid (such as a dwarf). Creatures larger than you cannot be knocked down tripped. The time spent to perform this ability causes the character to have one fewer attack in the following round.
+
+This feat may be taken twice. When taken a second time, the feat is Improved Knockdown, which and adds a +2 bonus to the DC, and allows you knock down or trip creatures one size category larger than you (creatures whose circle has no more than twice the radius of your circle).~
+@389    = ~LICHDOM:
+
+After endless dark research, you have finally achieved immortality... so long as your phylactery survives.
+
+Prerequisite: To start taking ranks in this feat, you need two ranks in Spell Focus: Necromancy, 12 levels of wizard or sorcerer or 10 levels of necromancer, and evil alignment. To take the final rank, you need 20 levels of wizard or sorcerer or 18 levels of necromancer.
+
+Benefit: Even after you meet the initial requirements, you must take this feat five times for it to have any benefit (this represents the long hours of evil research necessary to achieve lichdom). Once you do, you become a lich and gain these effects:
+* +5 generic armor bonus.
+* +2 Intelligence, Wisdom and Charisma.
+* Immune to cold, electricity, poison, disease, bleeding, fatigue, sleep, fear, hopelessness, charm, confusion, feeblemind, paralysis, stun, energy drain, instant death, petrification, polymorph effects, critical hits, and sneak attacks.
+* 5/- resistance to slashing and piercing damage, damage reduction 5/+1.
+* +8 bonus to Hide, Move Silently, and Search.
+* You can be turned, but count as 4 levels higher against turning effects.
+* You take damage from Cure Wounds spells and healing potions but are healed by Inflict Wounds spells.
+* Your unarmed attacks are replaced with a Lich Touch, which deals 3d10+5 cold damage and paralyzes the target for 10 rounds on a failed save (same DC as the spell Lich Touch).
+* You have an aura of fear; any enemy within 20 feet that is at least 5 levels lower than you must make a Will save (DC 10 + Charisma/Intelligence modifier) or run away for 1 round.
+* You gain a phylactery which stores your life force. If you die, you will be automatically revived after 8 hours. However, if all party members die, the enemies will destroy your phylactery and the game will be over.~
+@390    = ~LICHDOM:
+
+After endless dark research, you have finally achieved immortality... so long as your phylactery survives.
+
+Prerequisite: To start taking ranks in this feat, you need two ranks in Spell Focus: Necromancy, 12 levels of wizard or sorcerer or 10 levels of necromancer, and evil alignment. To take the final rank, you need 20 levels of wizard or sorcerer or 18 levels of necromancer.
+
+Benefit: Even after you meet the initial requirements, you must take this feat five times for it to have any benefit (this represents the long hours of evil research necessary to achieve lichdom). Once you do, you become a lich and gain these effects:
+* +5 armor bonus.
+* +2 Intelligence, Wisdom and Charisma.
+* Immune to cold, electricity, poison, disease, bleeding, fatigue, sleep, fear, hopelessness, charm, confusion, feeblemind, paralysis, stun, energy drain, instant death, petrification, and polymorph effects.
+* 5/- resistance to slashing and piercing damage, damage reduction 5/+1.
+* +8 bonus to Hide, Move Silently, and Search.
+* You can be turned, but count as 4 levels higher against turning effects.
+* You take damage from Cure Wounds spells and healing potions but are healed by Inflict Wounds spells.
+* Your unarmed attacks are replaced with a Lich Touch, which deals 3d10+5 cold damage and paralyzes the target for 10 rounds on a failed save (same DC as the spell Lich Touch).
+* You have an aura of fear; any enemy within 20 feet that is at least 5 levels lower than you must make a Will save (DC 10 + Charisma/Intelligence modifier) or run away for 1 round.
+* You gain a phylactery which stores your life force. If you die, you will be automatically revived after 8 hours. However, if all party members die, the enemies will destroy your phylactery and the game will be over.~
+@704    = ~GRAPPLE:
+
+While anyone can grapple something, you have the skill to grapple even a hostile creature in the midst of combat.
+
+Benefit: You gain an ability that lets you grab an adjacent creature. The ability can be used once per round. The target must make a Reflex save (DC 12 + half your level + your Strength or Dexterity modifier (whichever is higher)) or be grappled by you for 2 rounds. While grappled, the creature gets a -4 attack penalty, a 50% chance of spell failure, and cannot move away from you. If you move, you may pull the creature along with you.
+
+To grapple, you must have at least one hand free. The save gains +4 DC if you have both hands free. It gets -4 DC for each time someone has tried to grapple the target in the past 10 rounds. If you grapple an ally or a paralyzed, stunned, sleeping, or knocked down creature, there is no save. Creatures larger than you cannot be grappled.~
+@730    = ~DODGE:
+
+You are adept at dodging blows.
+
+Prerequisite: Dex 13+. Taking the feat a second time requires Dex 25+, Improved Evasion, and Defensive Roll.
+
+Benefit: You receive a +1 dodge bonus to armor class against attacks from an opponent.
+
+When taken a second time, the feat also allows you to automatically dodge the first attack that would hit you each round.~
+@890    = ~Dodged the attack~
+@891    = ~Which lich appearance would you like to use?~
+@892    = ~Black lich.~
+@893    = ~White lich.~
+@894    = ~I will keep my original appearance.~
+@895    = ~Lich Phylactery~
+@896    = ~This is your phylactery. If you die, your soul retreats to your phylactery, which will create a new body for you and revive you after 8 hours. However, if all party members die, the enemies will destroy your phylactery and the game will be over.
+
+STATISTICS:
+
+Weight: 1~
+@1105    = ~Shout
+(Evocation)
+Level: Brd 3, Sor/Wiz 4, Oghma 4
+Range: Close (30 ft. long, 10 ft. diameter)
+Duration: Instantaneous
+Casting Time: 1
+Area: 30-feet long, 10-foot diameter
+Saving Throw: Fortitude partial
+
+The caster emits an ear-splitting yell that deafens and damages creatures in its path. Any creature within the area of effect is deafened for 5 rounds, stunned for 2 rounds, and takes 5d6 points of sonic damage. A successful save negates the deafness and stun and reduces the damage by half. A deafened creature has a 50% chance of resisting this spell.~
+@1145    = ~Lich Touch
+(Necromancy)
+Level: Sor/Wiz 6
+Range: Touch
+Duration: 1 round/level 
+Casting Time: 6
+Area of Effect: Caster
+Saving Throw: Fortitude half
+
+This spell confers the powers of a lich's touch. The wizard's hands are imbued with a chilling force of negative energy, allowing the caster to deal 3d10+5 cold damage (plus damage bonuses from Strength, proficiencies, spells, items and other effects) with each hit and paralyze living victims for 10 rounds on a failed Fortitude save. The attack uses the Simple Weapon: Small Blade/Touch Attack proficiency.~
+@1497    = ~Eagle's Splendor
+(Transmutation)
+Level: Brd 2, Drd 2, Pal 2, Sor/Wiz 2, Oghma 1
+Range: Caster
+Duration: 1 hour / level
+Casting Time: 1 
+Target: Creature touched
+Saving Throw: None 
+
+The transmutated creature becomes more poised, articulate, and personally forceful. The spell grants +4 to Charisma, adding the usual benefits of Charisma-based skills and abilities.~
+@1622    = ~Great Shout
+(Evocation)
+Level: Brd 6, Sor/Wiz 8, Oghma 7
+Range: Caster
+Duration: Instantaneous 
+Casting Time: 2 
+Area of Effect: 30-feet long, 10-foot diameter
+Saving Throw: Fortitude half
+
+Upon uttering the Great Shout, the caster releases a stunning force from their mouth in a 30-foot long, 10-foot diameter cone. Creatures within the area of effect take 10d10 sonic damage with a Fortitude save for half. Those who fail the save are stunned for 5 rounds and deafened for 10 rounds. Deafened creatures have a 25% chance of resisting this spell.~
+@34623     = ~Mass Haste
+(Transmutation)
+Level: Brd 6, Sor/Wiz 6
+Range: Sight of Caster
+Duration: 3 rounds + 1 round/level 
+Casting Time: 3
+Area of Effect: 20-foot radius
+Saving Throw: None
+
+Mass Haste grants the effects of the 3rd-level spell Haste to all allies in the area of effect. Those allies gain +4 AC and an extra attack per round, and move twice as fast. These effects do not stack with the 3rd-level spell. Mass Haste dispels Slow effects.~
+@38252     = ~Sound Burst
+(Evocation)
+Level: Brd 2
+Range: Sight of Caster
+Duration: 1 round
+Casting Time: 2
+Area of Effect: 15-foot radius
+Saving Throw: Fortitude partial
+
+This spell releases an extremely loud and jarring burst of sound. Creatures in the area of effect take 1d8 sonic damage and must make a Fortitude save or be stunned for 1 round. Deaf creatures are not stunned but still take damage. The caster is unaffected by this spell.~

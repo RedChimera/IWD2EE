@@ -150,3 +150,26 @@ COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
 	theattributes&=0xFD
 	WRITE_BYTE attributes theattributes
 	BUT_ONLY_IF_IT_CHANGES
+
+ACTION_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~0~ BEGIN
+
+	COPY_EXISTING ~USFLICH3.spl~ ~override~
+		LPF DELETE_EFFECT INT_VAR check_headers=1 match_opcode=500 STR_VAR match_resource=~MECRITIM~ END
+
+	COPY_EXISTING ~feats.2da~ ~override~
+	  COUNT_2DA_COLS num_cols
+	  READ_2DA_ENTRIES_NOW rows num_cols
+	  FOR (row = 0; row < rows; ++row) BEGIN
+	    READ_2DA_ENTRY_FORMER rows row 0 label
+	    PATCH_MATCH ~%label%~ WITH
+	      ~ME_LICHDOM~ BEGIN
+	        SET strref = RESOLVE_STR_REF(@390)
+	        SET_2DA_ENTRY_LATER rows_out row 3 ~%strref%~
+	      END
+	      DEFAULT
+	    END
+	  END
+	  SET_2DA_ENTRIES_NOW rows_out num_cols
+	BUT_ONLY
+
+END

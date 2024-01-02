@@ -1,0 +1,8 @@
+BEGIN USLICHAD
+
+IF ~True()~ THEN BEGIN 1
+  SAY @891
+  IF ~~ THEN REPLY @892 DO ~ReallyForceSpellRES("USLICHAB",Myself)~ EXIT
+  IF ~~ THEN REPLY @893 DO ~ReallyForceSpellRES("USLICHAW",Myself)~ EXIT
+  IF ~~ THEN REPLY @894 EXIT
+END

@@ -225,6 +225,7 @@
 @55358=~40 damage resisted from weapon of less than +8 enchantment~
 @55359=~45 damage resisted from weapon of less than +9 enchantment~
 @55360=~50 damage resisted from weapon of less than +10 enchantment~
+@55370=~sonic~
 @55371=~magic~
 @55372=~positive energy~
 @55373=~negative energy~
@@ -308,6 +309,7 @@
 
 @55601=~Immune~
 @55602=~Absorbed~
+@55603=~ (Lich)~
 
 @55701=~Spell Failed: Rewind Time had not been initialized to start tracking effects on this character. Now it has, so it should work the next time the character casts the spell.~
 @55702=~Uninjured~

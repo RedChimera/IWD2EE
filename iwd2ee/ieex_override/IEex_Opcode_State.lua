@@ -284,6 +284,7 @@ ex_empowerable_opcodes = {[12] = true, [17] = true, [18] = true, [25] = true, [6
 		local parameter1 = IEex_ReadDword(effectData + 0x18)
 		local parameter2 = IEex_ReadDword(effectData + 0x1C)
 		local parameter3 = IEex_ReadDword(effectData + 0x5C)
+		local damageType = bit.band(parameter2, 0xFFFF0000)
 		local timing = IEex_ReadDword(effectData + 0x20)
 		local duration = IEex_ReadDword(effectData + 0x24)
 		local resource = IEex_ReadLString(effectData + 0x2C, 8)
@@ -348,7 +349,7 @@ ex_empowerable_opcodes = {[12] = true, [17] = true, [18] = true, [25] = true, [6
 		local restype = IEex_ReadDword(effectData + 0x8C)
 		local casterClass = IEex_ReadByte(effectData + 0xC5, 0x0)
 		local parent_resource = IEex_ReadLString(effectData + 0x90, 8)
-		local sourceSpell = ex_damage_source_spell[parent_resource]
+		local sourceSpell = ex_source_spell[parent_resource]
 		if sourceSpell == nil then
 			sourceSpell = string.sub(parent_resource, 1, 7)
 		end
@@ -425,7 +426,6 @@ ex_empowerable_opcodes = {[12] = true, [17] = true, [18] = true, [25] = true, [6
 						elseif theopcode == 288 and theparameter2 == 213 and bit.band(thesavingthrow, 0x10000) > 0 then
 							IEex_WriteWord(effectData + 0x1E, IEex_ReadWord(offset + 0x4, 0x0))
 							parameter2 = IEex_ReadDword(effectData + 0x1C)
-							damageType = bit.band(parameter2, 0xFFFF0000)
 						elseif theopcode == 288 and theparameter2 == 225 and bit.band(thesavingthrow, 0x10000) > 0 and bit.band(thesavingthrow, 0x100000) == 0 and bit.band(thesavingthrow, 0x800000) > 0 then
 							local spellRES = IEex_ReadLString(offset + 0x14, 8)
 							if spellRES ~= "" and (bit.band(thesavingthrow, 0x4000000) == 0 or bit.band(IEex_ReadDword(effectData + 0xD4), 0x40) == 0) then
@@ -467,7 +467,6 @@ ex_empowerable_opcodes = {[12] = true, [17] = true, [18] = true, [25] = true, [6
 						elseif theopcode == 288 and theparameter2 == 213 and bit.band(thesavingthrow, 0x10000) > 0 then
 							IEex_WriteWord(effectData + 0x1E, IEex_ReadWord(offset + 0x4, 0x0))
 							parameter2 = IEex_ReadDword(effectData + 0x1C)
-							damageType = bit.band(parameter2, 0xFFFF0000)
 						elseif theopcode == 288 and theparameter2 == 225 and bit.band(thesavingthrow, 0x10000) > 0 and bit.band(thesavingthrow, 0x100000) == 0 and bit.band(thesavingthrow, 0x800000) > 0 then
 							local spellRES = IEex_ReadLString(offset + 0x14, 8)
 							if spellRES ~= "" and (bit.band(thesavingthrow, 0x4000000) == 0 or bit.band(IEex_ReadDword(effectData + 0xD4), 0x40) == 0) then
@@ -505,7 +504,6 @@ ex_empowerable_opcodes = {[12] = true, [17] = true, [18] = true, [25] = true, [6
 					elseif theopcode == 288 and theparameter2 == 213 and bit.band(thesavingthrow, 0x10000) == 0 then
 						IEex_WriteWord(effectData + 0x1E, theparameter1)
 						parameter2 = IEex_ReadDword(effectData + 0x1C)
-						damageType = bit.band(parameter2, 0xFFFF0000)
 					elseif theopcode == 288 and theparameter2 == 225 and bit.band(thesavingthrow, 0x10000) == 0 and bit.band(thesavingthrow, 0x100000) == 0 and bit.band(thesavingthrow, 0x800000) > 0 then
 						local matchHeader = IEex_ReadWord(eData + 0x48, 0x0)
 						local spellRES = IEex_ReadLString(eData + 0x30, 8)
@@ -614,31 +612,6 @@ ex_empowerable_opcodes = {[12] = true, [17] = true, [18] = true, [25] = true, [6
 
 --			end
 
-		end
-		local damageType = bit.band(parameter2, 0xFFFF0000)
-		if opcode == 12 then
-			if damageType == 0x80000 then
-				if bit.band(parameter3, 0x8000000) > 0 then
-					IEex_SetToken("EXDAMFIR", IEex_FetchString(ex_tra_55387))
-					local fireResistance = IEex_ReadSignedWord(creatureData + 0x942, 0x0)
-					if fireResistance > 0 then
-						fireResistance = 0
-						IEex_WriteWord(creatureData + 0x942, fireResistance)
-					end
-				else
-					IEex_SetToken("EXDAMFIR", IEex_FetchString(ex_tra_55386))
-				end
-			elseif damageType == 0x400000 then
-				if bit.band(parameter3, 0x8000000) > 0 then
-					IEex_SetToken("EXDAMMAG", IEex_FetchString(ex_tra_55372))
-				elseif bit.band(parameter3, 0x10000000) > 0 then
-					IEex_SetToken("EXDAMMAG", IEex_FetchString(ex_tra_55373))
-				elseif bit.band(parameter3, 0x20000000) > 0 then
-					IEex_SetToken("EXDAMMAG", IEex_FetchString(ex_tra_55374))
-				else
-					IEex_SetToken("EXDAMMAG", IEex_FetchString(ex_tra_55371))
-				end
-			end
 		end
 		local constantID = IEex_ReadDword(creatureData + 0x700)
 		if opcode == 13 or opcode == 420 then
@@ -809,7 +782,8 @@ ex_empowerable_opcodes = {[12] = true, [17] = true, [18] = true, [25] = true, [6
 			IEex_IterateActorEffects(targetID, function(eData)
 				local theopcode = IEex_ReadDword(eData + 0x10)
 				local theparameter1 = IEex_ReadDword(eData + 0x1C)
-				if theopcode == 208 and theparameter1 > minHP then
+				local theparameter2 = IEex_ReadDword(eData + 0x20)
+				if theopcode == 288 and theparameter1 > minHP and theparameter2 == 205 then
 					minHP = theparameter1
 				end
 			end)
@@ -819,20 +793,32 @@ ex_empowerable_opcodes = {[12] = true, [17] = true, [18] = true, [25] = true, [6
 			end
 		end
 		if opcode == 12 then
---[[
-			IEex_WriteByte(creatureData + 0xA60, 0)
-			IEex_WriteByte(creatureData + 0x18B8, 0)
-			IEex_WriteDword(creatureData + 0x920, bit.band(IEex_ReadDword(creatureData + 0x920), 0xBFFFFFFF))
-			IEex_WriteDword(creatureData + 0x1778, bit.band(IEex_ReadDword(creatureData + 0x1778), 0xBFFFFFFF))
---]]
+			local altDamageList = ex_alternative_damage_type[damageType]
+			local altDamageBits = math.floor(bit.band(parameter3, 0x78000000) / 0x8000000)
+			local resistance = IEex_ReadSignedWord(creatureData + ex_damage_resistance_stat_offset[damageType], 0x0)
+			if altDamageList then
+				local altDamage = altDamageList[altDamageBits]
+				if altDamage then
+					if (altDamage[2] == 0x1 or altDamage[2] == 0x2) and ex_damage_resistance_stat_offset[damageType] then
+						if resistance > 0 or altDamage[2] == 0x1 then
+							resistance = 0
+						end
+					end
+				end
+			end
+
 			local onDamageEffectList = {}
+			local resistanceOpcode = ex_damage_resistance_opcode[damageType]
+			if not resistanceOpcode then
+				resistanceOpcode = -1
+			end
 			IEex_IterateActorEffects(targetID, function(eData)
 				local theopcode = IEex_ReadDword(eData + 0x10)
 				local theparameter1 = IEex_ReadDword(eData + 0x1C)
 				local theparameter2 = IEex_ReadDword(eData + 0x20)
 				local thesavingthrow = IEex_ReadDword(eData + 0x40)
-				local thetypesChecked = IEex_ReadDword(eData + 0x48) * 0x10000
-				if theopcode == 288 and theparameter2 == 226 and theparameter1 <= parameter1 and ((damageType == 0 and bit.band(thetypesChecked, 0x20000000) > 0) or bit.band(thetypesChecked, damageType) > 0) then
+				local thetypesChecked = IEex_ReadDword(eData + 0x48)
+				if theopcode == 288 and theparameter2 == 226 and theparameter1 <= parameter1 and ((damageType == 0 and bit.band(thetypesChecked, 0x2000) > 0) or bit.band(thetypesChecked * 0x10000, damageType) > 0) and (bit.band(thetypesChecked, 0x4000000) == 0 or bit.band(thetypesChecked, 0x78000000) == bit.band(parameter3, 0x78000000)) then
 					local theresource = IEex_ReadLString(eData + 0x30, 8)
 					if theresource ~= "" then
 						local thecasterlvl = IEex_ReadDword(eData + 0xC8)
@@ -856,6 +842,9 @@ ex_empowerable_opcodes = {[12] = true, [17] = true, [18] = true, [25] = true, [6
 						end
 						table.insert(onDamageEffectList, {theresource, thecasterlvl, newEffectTarget, newEffectSource, newEffectTargetX, newEffectTargetY, newEffectSourceX, newEffectSourceY})
 					end
+				elseif theopcode == resistanceOpcode and bit.band(thesavingthrow, 0x78000000) == bit.band(parameter3, 0x78000000) and theparameter1 == 0 and theparameter2 == 0 then
+					local thespecial = IEex_ReadDword(eData + 0x48)
+					resistance = resistance + thespecial
 				end
 			end)
 			for k, v in ipairs(onDamageEffectList) do
@@ -874,6 +863,28 @@ ex_empowerable_opcodes = {[12] = true, [17] = true, [18] = true, [25] = true, [6
 ["source_id"] = v[4]
 })
 			end
+			if altDamageList then
+				local altDamage = altDamageList[altDamageBits]
+				if altDamage[3] ~= "" then
+					IEex_ApplyEffectToActor(targetID, {
+["opcode"] = 174,
+["target"] = 2,
+["timing"] = 1,
+["resource"] = altDamage[3],
+["source_x"] = v[7],
+["source_y"] = v[8],
+["target_x"] = IEex_ReadDword(creatureData + 0x6),
+["target_y"] = IEex_ReadDword(creatureData + 0xA),
+["parent_resource"] = "USDAMSND",
+["source_target"] = targetID,
+["source_id"] = sourceID
+})
+				end
+				if altDamage[1] > 0 then
+					IEex_SetToken(ex_alternative_damage_token[damageType], IEex_FetchString(altDamage[1]))
+				end
+			end
+			IEex_WriteWord(creatureData + ex_damage_resistance_stat_offset[damageType], resistance)
 		end
 		if opcode == 98 and restype == 1 and IEex_GetActorSpellState(sourceID, 191) then
 			local healingMultiplier = 100
