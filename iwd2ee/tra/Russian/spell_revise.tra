@@ -1594,7 +1594,7 @@
 Зона действия: колдующий
 Спасбросок: нет
 
-Это заклинание устраняет перерыв между произнесением заклинаний, позволяя заклинателю начать новое заклинание, как только он закончит произносить предыдущее. Заклинатель под действием Улучшенной проворности может произнести несколько заклинаний в течение одного раунда, но концентрация накладывает штраф -3 к скорости произнесения заклинаний на время действия этого заклинания.~
+Это заклинание устраняет перерыв между произнесением заклинаний, позволяя заклинателю начать новое заклинание, как только он закончит произносить предыдущее. Заклинатель под действием этого заклинания может произнести несколько заклинаний в течение одного раунда, но концентрация накладывает штраф -3 к скорости произнесения заклинаний на время действия этого заклинания.~
 @1718    = ~Размытие~
 @1719    = ~Размытие
 (Иллюзия)
@@ -2625,15 +2625,15 @@
 @30129=~Наделённое заклинание
 
 Используя эту способность, персонаж читает заклинание, которым его наделили.~
-@30130=~Выпустить "Последовательность"
+@30130=~Выпустить последовательность
 
 Используя эту способность, персонаж мгновенно высвобождает заклинания, сохранённые с помощью заклинания "Последовательность".~
 @30131=~Взорвать
 
 При использовании этой способности скелет немедленно взрывается, нанося 10d6 колющего урона всем существам в радиусе 15 футов (половину при успешном спасброске реакции).~
-@30132=~Выпустить "Эклектическую Последовательность"
+@30132=~Выпустить эклектическую последовательность
 
-Используя эту способность, персонаж мгновенно высвобождает заклинания, сохранённые с помощью заклинания "Эклектическая Последовательность".~
+Используя эту способность, персонаж мгновенно высвобождает заклинания, сохранённые с помощью заклинания "Эклектическая последовательность".~
 @30133=~Драгоценный камень души~
 @30134=~Звездчатый сапфир - содержит душу~
 @30135=~Звездчатый сапфир - ценнейшая разновидность сапфира, более прозрачная, с сияющей белой звездой в центре. Звездчатые сапфиры часто используют в украшениях, защищающих от магии.
@@ -4161,18 +4161,18 @@ Mass Harm releases destructive negative energy upon all living enemies in the ar
 Длительность: мгновенно
 Время чтения:  12
 Зона действия: особая
-Saving Throw: Reflex half
+Спасбросок: реакции, половина урона
 
 This spell triggers a small volcanic eruption centered on the caster. Multiple balls of lava (one per two caster levels) fly through the area in random directions and hit the ground in random spots. Each ball of lava deals 6d6 fire damage (Reflex save for half) to all creatures within 20 feet of its landing point. The caster is completely unharmed by this spell, but their allies are still in danger.~
 @35954     = ~Storm of Vengeance~
 @36954     = ~Storm of Vengeance
 (Призывание)
-Уровень: священник 9, друид 9, Talos 9
+Уровень: священник 9, друид 9, жрец Талоса 9
 Дальность: обзор колдующего
 Длительность: 4 rounds
 Время чтения:  12
 Зона действия: 25-foot radius
-Saving Throw: Reflex half
+Спасбросок: реакции, половина урона
 
 This spell conjures a divine storm cloud which releases damaging torrents upon creatures in the area of effect. Each round, the nature of the storm is different:
 
@@ -4383,7 +4383,7 @@ Remove Magic is like Dispel Magic, except it only affects enemies. When cast, it
 Длительность: мгновенно
 Время чтения:  1
 Зона действия: 1 существо
-Saving Throw: Reflex half
+Спасбросок: реакции, половина урона
 
 This spell throws the target into the air with incredible force. The target is knocked back as it is sent hurtling through the air. When it lands or hits the ceiling, it takes bludgeoning damage based on how fast it was moving right before the collision, up to 5d6 plus 1d6 per caster level (max 20d6 total from a level 15 caster). If the target succeeds on a Reflex save, it is thrown with less force and will only take about half damage.~
 @37354     = ~Момент предвидения~
@@ -4492,12 +4492,12 @@ Phantasmal Killer causes the target to be struck down by an embodiment of its wo
 Длительность: 10 rounds/level
 Время чтения:  4
 Зона действия: колдующий
-Saving Throw: Special
+Спасбросок: особый
 
 This spell lets the caster summon undead by killing other creatures. During the duration of this spell, whenever the caster kills a creature, a ghoul rises to feast upon the remains. That ghoul will serve the caster for 8 hours. A ghoul will only be summoned if the caster dealt the killing damage to the creature; if the caster damaged the creature but another party member finished it off, the caster will not get a ghoul. The ghouls' paralyzing touch uses the DC of this spell as cast by the caster. Ghoulish Feast cannot be cast by good characters.~
 @37454     = ~Copy Spell~
 @38454     = ~Copy Spell
-(Universal)
+(Универсальное)
 Уровень: бард 4
 Дальность: обзор колдующего
 Длительность: Permanent until released
@@ -4524,7 +4524,7 @@ Polymorph Self allows the caster to assume the form of a creature of moderate po
 * Wyvern (can fly, and each hit poisons the target on a failed Fortitude save)~
 @37456     = ~Наделить способностью к заклинанию~
 @38456     = ~Imbue with Spell Ability
-(Universal)
+(Универсальное)
 Уровень: священник 4, бард 4
 Дальность: обзор колдующего
 Длительность: 8 hours or until released
@@ -4535,13 +4535,13 @@ Polymorph Self allows the caster to assume the form of a creature of moderate po
 By casting Imbue with Spell Ability, the caster grants another creature the ability to cast one of the caster's spells once. Immediately after casting this spell, the caster must attempt to cast another spell of any level, which must be an abjuration, conjuration or divination spell. Instead of being cast, that spell is stored in the creature on which Imbue with Spell Ability was just cast (consuming one use of the spell). That creature gains a special ability that lets them cast the spell once. If unused, that ability disappears after 8 hours.~
 @37457     = ~Chaos Cast~
 @38457     = ~Chaos Cast
-(Universal)
+(Универсальное)
 Уровень: колдун/волшебник 4
 Дальность: обзор колдующего
 Длительность: Special
 Время чтения:  1
 Зона действия: особая
-Saving Throw: Special
+Спасбросок: особый
 
 This spell casts a random wizard spell on the target creature, which could be a spell of any level between 1 and 8. The nature of the spell depends on the target. If the target is an enemy, they will receive a harmful spell, but if the target is an ally, they will receive a beneficial spell. Targeting restrictions are obeyed (a spell that only affects the caster will not be rolled unless the target is the caster).
 
@@ -4625,7 +4625,7 @@ Saving Throw: Reflex partial
 Boulder Roll creates a large boulder, which rolls forward from the caster, crushing creatures in its path, until it hits a wall. Creatures hit take 12d8 bludgeoning damage and are knocked down for 2 rounds. A successful Reflex save halves the damage and prevents one from being knocked down. The boulder always travels due south from the caster.~
 @37654     = ~Songcasting~
 @38654     = ~Songcasting
-(Universal)
+(Универсальное)
 Уровень: бард 8
 Дальность: Special
 Длительность: 15 rounds
@@ -4644,12 +4644,12 @@ Each round for the duration, if the bard is singing a bard song, there is a chan
 Длительность: мгновенно
 Время чтения:  5
 Зона действия: 30-feet long, 10-foot diameter cone
-Saving Throw: Fortitude half
+Спасбросок: стойкости, половина урона
 
 By casting this spell, the caster emits a Void Sound, a horrific sound that can somehow be heard by the deaf and by no one else, and which carries negative energy with it. All deaf creatures in the area of effect take 1d8 magic damage per level (max 30d8). This spell has no effect on undead or constructs.~
 @37656     = ~Посох заклинаний~
 @38656     = ~Spellstaff
-(Universal)
+(Универсальное)
 Уровень: друид 6, колдун/волшебник 6
 Дальность: Special
 Длительность: 8 hours or until all charges are expended
@@ -4714,12 +4714,12 @@ This spell bestows flawless luck upon a creature. For 7 seconds, the recipient g
 @37755     = ~Lightning Barrage~
 @38755     = ~Lightning Barrage
 (Проявление)
-Уровень: колдун/волшебник 7, Talos 7
+Уровень: колдун/волшебник 7, жрец Талоса 7
 Дальность: обзор колдующего
 Длительность: мгновенно
 Время чтения:  4
 Зона действия: особая
-Saving Throw: Reflex half
+Спасбросок: реакции, половина урона
 
 This spell fires a flurry of small lightning bolts at the target. One bolt is fired per level, each one dealing 1d8 electrical damage (Reflex save with +4 DC for half) to all creatures in its path. The bolts will bounce off walls, potentially hitting the same creature multiple times per bolt.~
 @37756     = ~Reanimate~
@@ -4746,7 +4746,7 @@ This spell "resurrects" the target as an undead creature under the caster's cont
 This spell animates 1 skeleton per caster level. The skeletons ignore the summoning limit. Skeleton Horde cannot be cast by good characters.~
 @37758     = ~Spell Sequencer~
 @38758     = ~Spell Sequencer
-(Universal)
+(Универсальное)
 Уровень: бард 7, колдун/волшебник 7, Oghma 6
 Дальность: Special
 Длительность: Permanent until triggered
@@ -4800,7 +4800,7 @@ This spell creates a cage of force - a cube with walls of force on each side. Cr
 Длительность: 8 hours
 Время чтения:  7
 Зона действия: особая 
-Saving Throw: Reflex half
+Спасбросок: реакции, половина урона
 
 This spell animates two skeletons which can be detonated on command to deal damage. When you have a skeleton use its special ability, or the skeleton takes damage, its skull explodes like a Skull Trap, dealing 10d6 slashing damage to all creatures within 15 feet (Reflex save for half), and the skeleton is destroyed. At 24th level, the spell animates three skeletons instead of two. Skeleton Traps cannot be cast by good characters.~
 @37763     = ~Spell Turning~
@@ -4899,7 +4899,7 @@ This spell links the caster and the target such that any spell effect that would
 Длительность: мгновенно
 Время чтения:  3
 Зона действия: 20-foot radius
-Saving Throw: Reflex half
+Спасбросок: реакции, половина урона
 
 Also known as Fireballball, this spell launches a fireball that explodes into other fireballs. After the Metafireball explodes, each creature in the area of effect is hit by a separate fireball with its own area of effect. Each of the secondary fireballs deals 3d6 fire damage (Reflex save with -5 DC for half). This spell is most effective when cast at a large group of creatures clumped together.~
 @37859     = ~Неудержимое вращение Отто~
@@ -4965,7 +4965,7 @@ This spell creates a large spherical area that reverses the gravity of creatures
 Длительность: 1 round
 Время чтения:  6
 Зона действия: 2-foot by 1000-foot jet
-Saving Throw: Reflex half
+Спасбросок: реакции, половина урона
 
 Upon casting this spell, the caster emits a freezing beam in the direction of the target point. The beam continues past the target point all the way to the end of the area. All creatures in the beam's path take 1d6 cold damage per level (max 25d6), with a Reflex save for half. The beam deals this damage again half a round later.~
 @37865     = ~True Polymorph~
@@ -4981,96 +4981,96 @@ Saving Throw: Fortitude negates
 Unlike lesser polymorph spells, True Polymorph can turn a creature into an inanimate object. If the target fails a Fortitude saving throw with +4 DC, it is transformed into a keg. While in keg form, the target cannot do anything, but their equipment can still be found inside the keg when it is split open. The effect lasts until dispelled.
 
 If True Polymorph is cast on a petrified creature, it will instead duplicate the effects of Stone to Flesh.~
-@37952     = ~Perfect Invisibility~
-@38952     = ~Perfect Invisibility
+@37952     = ~Абсолютная невидимость~
+@38952     = ~Абсолютная невидимость
 (Иллюзия)
 Уровень: колдун/волшебник 9
 Дальность: прикосновение
-Длительность: 2 rounds
+Длительность: 2 раунда
 Время чтения:  4
 Зона действия: 1 существо
 Спасбросок: нет
 
-This spell is the ultimate form of invisibility. While under the effect of Perfect Invisibility, a creature can attack, cast a spell or otherwise interact with another creature or object while remaining completely invisible. However, Perfect Invisibility can still be dispelled by effects that would dispel regular invisibility, such as True Seeing or Dispel Magic. Barring such removal, the spell will last for 2 rounds.~
-@37953     = ~Improved Alacrity~
-@38953     = ~Improved Alacrity
+Это заклинание - высшая форма невидимости. Находясь под его действием, существо может атаковать, произносить заклинания или иным образом взаимодействовать с другим существом или объектом, оставаясь при этом полностью невидимым. Однако это заклинание все еще может быть развеяна эффектами, которые развеивают обычную невидимость, такими как "Истинное видение" или "Развеять магию". В противном случае заклинание действует 2 раунда.~
+@37953     = ~Улучшенная проворность~
+@38953     = ~Улучшенная проворность
 (Преобразование)
 Уровень: священник 9, друид 9, колдун/волшебник 9
-Дальность: колдующий 
-Длительность: 6 rounds
+Дальность: колдующий
+Длительность: 6 раундов
 Время чтения:  5
 Зона действия: колдующий
 Спасбросок: нет
 
-This spell eliminates the interval between spellcasting, allowing the caster to begin a new spell as soon as he or she finishes casting the previous one. A spellcaster under the effects of Improved Alacrity can cast multiple spells in the space of a single round, but the concentration involved prevents the caster from benefitting from decreased casting time effects (such as Improved Initiative) for the duration of the spell.~
+Это заклинание устраняет перерыв между произнесением заклинаний, позволяя заклинателю начать новое заклинание, как только он закончит произносить предыдущее. Заклинатель под действием этого заклинания может произнести несколько заклинаний в течение одного раунда, но концентрация не позволяет ему пользоваться эффектами уменьшения времени произнесения заклинаний, например улучшенной инициативой, в течении действия этого заклинания.~
 @37954     = ~Живая молния~
 @38954     = ~Живая молния
 (Проявление)
-Уровень: друид 8, колдун/волшебник 8, Talos 8
+Уровень: друид 8, колдун/волшебник 8, жрец Талоса 8
 Дальность: колдующий
-Длительность: 1 round/level
+Длительность: 1 раунд/уровень
 Время чтения:  10
-Зона действия: Random creatures within 20 feet
-Saving Throw: Reflex half
+Зона действия: Случайное существе на расстоянии до 20 футов
+Спасбросок: реакции, половина урона
 
-Living Lightning is essentially a spell that repeatedly casts itself. When cast, a lightning bolt shoots out of the caster, targeting a random enemy within 20 feet (if there are no enemies within 20 feet of the caster, nothing happens immediately). The bolt deals 10d8 damage, with a Reflex save at +4 DC for half. Every round thereafter for the duration of the spell, another lightning bolt is released, requiring no further action by the caster.~
-@37955     = ~Malavon's Corrosive Fog~
-@38955     = ~Malavon's Corrosive Fog
+Живая молния - это, по сути, заклинание, которое многократно воспроизводит само себя. При произнесении этого заклинания из заклинателя вылетает молния, нацеленная на случайного врага на расстоянии до 20 футов (если на расстоянии до 20 футов от заклинателя нет врагов, то ничего не происходит). Молния наносит 10d8 урона, и цель может успешно прокинуть спасбросок реакции с +4 к УС для снижения урона вдвое. Каждый последующий раунд в течение всего времени действия заклинания выпускается еще одна молния, не требующая от заклинателя никаких дополнительных действий.~
+@37955     = ~Едкий туман Малавона~
+@38955     = ~Едкий туман Малавона
 (Призывание)
 Уровень: колдун/волшебник 9
 Дальность: обзор колдующего
-Длительность: 30 rounds
+Длительность: 30 раундов
 Время чтения:  12
-Зона действия: 40-foot radius
-Saving Throw: Fortitude half
+Зона действия: радиус 40 футов
+Спасбросок: стойкости, половина урона
 
-Malavon's Corrosive Fog is another spell created by the dark elf sorcerer Malavon. It creates an enormous cloud of acid fog that lingers for a long time. Each round, any creature in the fog takes 12d6 acid damage (Fortitude save for half), and their movement rate is halved (there is no save against the movement penalty). The target's Spell Resistance, if any, does not affect this spell.~
-@37956     = ~Lightning Spiral~
-@38956     = ~Lightning Spiral
+Едкий туман Малавона - еще одно заклинание, созданное магом-дроу Малавоном. Оно создает огромное облако кислотного тумана, который держится долгое время. Каждый раунд любое существо, попавшее в туман, получает 12d6 урона кислотой (успешный спасбросок стойкости позволяет снизить урон в два раза), и скорость его передвижения уменьшается вдвое (спасбросок против этого эффекта не действует). Сопротивление магии существа, попавшего в туман не влияет на это заклинание.~
+@37956     = ~Спираль молний~
+@38956     = ~Спираль молний
 (Проявление)
-Уровень: друид 9, колдун/волшебник 9, Talos 9
+Уровень: друид 9, колдун/волшебник 9, жрец Талоса 9
 Дальность: колдующий
 Длительность: мгновенно
 Время чтения:  5
 Зона действия: особая
-Saving Throw: Reflex half
+Спасбросок: реакции, половина урона
 
-This spell envelops the caster in a spiral of lightning, releasing lightning bolts in all directions. Eight bolts are released per level (four at a time), each dealing 1d8 electrical damage (Reflex save with +4 DC for half). Lightning Spiral does significantly more damage to creatures close to the caster.~
-@37957     = ~Mass Omnivision~
-@38957     = ~Mass Omnivision
+Это заклинание окутывает заклинателя спиралью молний, выпускающей молнии во всех направлениях. За уровень выпускается восемь болтов (по четыре за раз), каждый из которых наносит 1d8 электрического урона (успешный спасбросок реакции с +4 к УС снижает урон вдвое). Спираль молний наносит значительно больше урона существам, находящимся рядом с заклинателем.~
+@37957     = ~Массовое всевидение~
+@38957     = ~Массовое всевидение
 (Прорицание)
 Уровень: бард 8, колдун/волшебник 9
-Дальность: Special
-Длительность: 2 rounds/level
+Дальность: особая
+Длительность: 2 раунда/уровень
 Время чтения:  3
-Зона действия: Entire area
+Зона действия: вся область
 Спасбросок: нет
 
-This spell increases the visual range of all creatures to the maximum, such that they can see anything in the area that isn't blocked by a wall. Creatures can also cast spells and fire ranged weapons at creatures from much farther away than normal.~
+Это заклинание увеличивает дальность видимости всех существ до максимума, так что они могут видеть все, что находится в зоне видимости, не загороженное стеной. Существа также могут произносить заклинания и стрелять из оружия дальнего боя на гораздо большем расстоянии, чем обычно.~
 @37958     = ~Улучшенная спешка~
 @38958     = ~Улучшенная спешка
 (Преобразование)
 Уровень: бард 8, колдун/волшебник 9
 Дальность: обзор колдующего
-Длительность: 1 round/2 levels
+Длительность: 1 раунд/2 уровня
 Время чтения:  3
 Зона действия: 1 существо
 Спасбросок: нет
 
-This spell drastically speeds up the target's movement and attack speed. For the duration, the target gains +8 AC, moves at quadruple speed, and attacks twice as many times per round. Attack bonuses will continue to decrease for attacks beyond the 5th one. This effect does not stack with Haste.~
-@37959     = ~Time Stop~
-@38959     = ~Time Stop
+Это заклинание значительно ускоряет передвижение и скорость атаки цели. На время действия заклинания цель получает +8 к классу защиты, двигается с четырехкратной скоростью и удвоенное количество атак в раунд. Бонусы атаки продолжают уменьшаться при атаках, следующих за 5-й. Этот эффект не суммируется с эффектами заклинания "Спешка".~
+@37959     = ~Остановка времени~
+@38959     = ~Остановка времени
 (Преобразование)
 Уровень: колдун/волшебник 9
 Дальность: колдующий
-Длительность: 3 rounds
+Длительность: 3 раунда
 Время чтения:  9
-Зона действия: Entire area
+Зона действия: вся область
 Спасбросок: нет
 
-This spell stops time for everyone and everything except the caster. All other creatures cannot move or act, while the caster can act for three rounds of apparent time.~
-@37960     = ~Mordenkainen's Disjunction~
-@38960     = ~Mordenkainen's Disjunction
+Это заклинание останавливает время для всех и вся, кроме заклинателя. Все остальные существа не могут двигаться или действовать, в то время как заклинатель может действовать в течение трех раундов собственного времени.~
+@37960     = ~Рассеивание Морденкайнена~
+@38960     = ~Рассеивание Морденкайнена
 (Отречение)
 Уровень: колдун/волшебник 9
 Дальность: обзор колдующего
@@ -5079,56 +5079,56 @@ This spell stops time for everyone and everything except the caster. All other c
 Зона действия: 1 существо
 Спасбросок: нет
 
-Mordenkainen's Disjunction dispels all dispellable effects on the target. There is no saving throw. This spell can even remove the effects of Spell Turning, Spell Trap, Antimagic Field, or a Protection from Magic scroll.~
-@37961     = ~Эклектическая Последовательность~
-@38961     = ~Eclectic Sequencer
-(Universal)
-Уровень: Wiz 9
-Дальность: Special
-Длительность: Permanent until triggered
+Это заклинание развеивает все эффекты, которые можно развеять на цели без спасброска. Оно даже удаляет эффекты таких заклинаний, как "Обращение заклинаний", "Ловушка заклинаний", "Антимагическая оболочка" и эффект от свитка защиты от магии.~
+@37961     = ~Эклектическая последовательность~
+@38961     = ~Эклектическая последовательность
+(Универсальное)
+Уровень: волшебник 9
+Дальность: особая
+Длительность: Постоянная, до использования
 Время чтения:  15
 Зона действия: особая
 Спасбросок: нет
 
-Eclectic Sequencer may only be cast by generalist wizards. It lets the caster store eight spells to be released later on. After casting Eclectic Sequencer, the caster must attempt to cast up to eight spells of 7th-level or lower, each of which must be of a different school. Instead of being cast, those spells are stored in the sequencer (expending one use of each spell). The caster then gains the innate ability "Release Eclectic Sequencer." Using that ability immediately casts all eight spells on the target of the ability.
+Это заклинание могут применять только волшебники не специализирующиеся ни в одной из школ магии. Оно позволяет заклинателю сохранить восемь заклинаний, чтобы выпустить их позже. После применения этого заклинания заклинатель должен попытаться произнести до восьми заклинаний 7-го уровня или ниже, каждое из которых должно относиться к разной школе магии. Вместо того чтобы быть произнесенными, эти заклинания тратятся и сохраняются в последовательности. После этого заклинатель получает способность "Выпустить эклектическую последовательность". При использовании этой способности все восемь заклинаний немедленно накладываются на цель способности.
 
-Spells with a range of "Caster" will be cast on the caster, regardless of the target of the ability. Spells with limited range will fail if the target is outside the spell's range.~
-@37962     = ~Wish~
-@38962     = ~Wish
-(Universal)
+Заклинания с дальностью "Колдующий" будут наложены на заклинателя, независимо от цели способности. Заклинания с ограниченной дальностью не сработают, если цель находится за пределами дальности заклинания.~
+@37962     = ~Желание~
+@38962     = ~Желание
+(Универсальное)
 Уровень: колдун/волшебник 9
-Дальность: Special
+Дальность: Особая
 Длительность: мгновенно
 Время чтения:  1
 Зона действия: особая
-Saving Throw: Special
+Спасбросок: особый
 
-Wish is among the mightiest spells a wizard or sorcerer can cast. By simply speaking aloud, they can alter reality to better suit them. Even a Wish spell, however, has its limits.
+Желание - одно из самых могущественных заклинаний, которые может произнести колдун или волшебник. Просто произнеся его вслух, они могут изменить реальность по своему велению. Однако даже у этого заклинания есть свои пределы.
 
-In casting Wish, the caster has two initial choices. The first choice is to duplicate a wizard spell of 8th-level or lower (including one of a specialist wizard's opposing school), which will target the caster. The other choice is to make a more powerful, one-time wish. There are several choices of a one-time wish:
+При произнесении этого заклинания у заклинателя есть два первоначальных варианта. Первый вариант - продублировать заклинание волшебника 8-го уровня или ниже (включая заклинание противоположной школы волшебника-специалиста), которое будет направлено на заклинателя. Второй вариант - загадать более мощное одноразовое желание. Существует несколько вариантов одноразового желания:
 
-* Permanently raise one of the caster's ability scores by 1 (there is a separate one-time wish for each ability score).
-* Create a powerful magic item.
-* Create 100000 gold.
-* Make it as if the caster has rested 8 hours and re-memorized all their spells.
-* Duplicate an epic spell, which will target the caster (there is a separate one-time wish for each spell).
+* Навсегда повысить один из параметров заклинателя на 1 (на каждый параметр используется своё одноразовое желание).
+* Создать мощный магический предмет.
+* Создать 100000 золотых.
+* Сделать так, как будто заклинатель отдохнул 8 часов и заново запомнил все свои заклинания.
+* Продублировать эффект эпического заклинания, который будет направлено на заклинателя (для каждого эпического заклинания использует своё одноразовое желание).
 
-Each one-time wish cannot be chosen more than once by a single character, and a character may make no more than three one-time wishes, no matter how many times they cast Wish.~
-@37963     = ~Soul Bind~
-@38963     = ~Soul Bind
+Каждое одноразовое желание не может быть выбрано одним персонажем более одного раза, и персонаж может загадать не более трех одноразовых желаний, независимо от того, сколько раз он произнесет заклинание "Желание".~
+@37963     = ~Связать душу~
+@38963     = ~Связать душу
 (Некромантия)
 Уровень: священник 9, колдун/волшебник 9
 Дальность: прикосновение
-Длительность: 3 rounds
+Длительность: 3 раунда
 Время чтения:  7
 Зона действия: 1 существо
 Спасбросок: нет
 
-This foul spell should be cast on a living creature that is about to die. If the target dies within 3 rounds, its soul is captured in a gem within the caster's inventory. The gem must be of great value - either a star sapphire, a king's tear, or a rogue stone - and cannot already contain a soul. A creature whose soul is captured this way cannot be resurrected.
+Это нечистое заклинание должно быть применено к живому существу, которое вот-вот умрет. Если цель умирает в течение 3 раундов после применения заклинания, ее душа попадает в драгоценный камень, находящийся в инвентаре заклинателя. Драгоценный камень должен быть очень ценным, это может быть либо звездчатый сапфир, либо королевские слёзы, либо плутовской камень, и он не должен уже содержать душу. Существо, чья душа была захвачена таким образом, не может быть воскрешено.
 
-Any character who knows the spell Soul Bind (or any fiend, regardless of whether they know the spell) can use a gem with a soul as a consumable item. Doing so shatters the gem and consumes the soul utterly, but gives the character a benefit of their choice:
+Любой персонаж, знающий заклинание "Связать душу" (или любой изверг, независимо от того, знает ли он это заклинание), может использовать драгоценный камень с душой в качестве используемого предмета. При этом драгоценный камень разрушается, душа полностью уничтожается, но персонаж получает один из следующих эффектов:
 
-* Permanently raise one of the character's ability scores by 1 (each ability score cannot be increased by more than 2 this way).
-* Fully restore the charges of a magic item in the character's inventory (items that give permanent bonuses cannot be recharged).
+* Навсегда повышается один из параметров персонажа на 1 (каждый параметр не может быть увеличен более чем на 2 таким образом).
+* Полностью зарядить один магический предмет в инвентаре персонажа (предметы, дающие постоянные эффекты, не могут быть перезаряжены).
 
-Undead, constructs, summoned creatures, and creatures with less than 13 HD are unaffected by Soul Bind. This spell does not provoke an attack of opportunity when cast on an enemy. It can only be cast by evil characters.~
+На нежить, конструктов, призванных существ и существ с менее чем 13-м уровнем это заклинание не действует. Это заклинание не провоцирует атаку возможности при наложении на врага. Его могут применять только злые персонажи.~
