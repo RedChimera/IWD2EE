@@ -3568,17 +3568,17 @@
 Спасбросок: нет
 
 Это заклинание призывает элементаля воздуха - облачённую в материальную форму стихию с 12-м уровнем здоровья. Элементаль будет служить вызвавшему его, пока не истечёт срок действия заклятия.~
-@33623     = ~Mass Haste~
-@34623     = ~Mass Haste
-(Transmutation)
-Level: Brd 6, Sor/Wiz 6
-Range: Sight of Caster
-Duration: 3 rounds + 1 round/level 
-Casting Time: 3
-Area of Effect: 20-foot radius
-Saving Throw: None
+@33623     = ~Массовая спешка~
+@34623     = ~Массовая спешка
+(Преобразование)
+Уровень: бард 6, колдун/волшебник 6
+Дальность: обзор колдующего
+Длительность: 3 раунда + 1 раунд/уровень
+Время чтения: 3
+Зона действия: радиус 20 футов
+Спасбросок: нет
 
-Mass Haste grants the effects of the 3rd-level spell Haste to all allies in the area of effect. Those allies gain +4 AC and an extra attack per round, and move twice as fast. These effects do not stack with the 3rd-level spell. Mass Haste dispels Slow effects.~
+Это заклинание даёт эффект заклинания третьего уровня "Спешка" на всех союзников в области действия заклинания. Они получают дополнительную атаку, бонус к классу защиты +4 и передвигается с вдвое большей скоростью перемещения. Эффект этого заклинания не складывается с аналогичным эффектом от заклинания "Спешка" третьего уровня. Массовая спешка развеивает эффекты заклинания "Замедление".~
 @33627     = ~Планарные узы: элементаль огня~
 @34627     = ~Планарные узы: элементаль огня
 (Призывание)
@@ -4131,17 +4131,17 @@ Mass Haste grants the effects of the 3rd-level spell Haste to all allies in the 
 В третьих, заклинание защищает существа от заклинаний очарования и подчинения.
 В-четвёртых, любое доброе существо, которое наносит по защищённой аурой нечестивости цели удар в ближнем бою, слепнет на 3 раунда, если не сделает успешный спасбросок стойкости.
 Это заклинание может быть прочитано только злыми существами.~
-@35951     = ~Auril's Blessing~
-@36951     = ~Auril's Blessing
+@35951     = ~Благословение Аурил~
+@36951     = ~Благословение Аурил
 (Призывание)
 Уровень: друид 9
 Дальность: колдующий
-Длительность: 1 round/level
+Длительность: 1 раунд/уровень
 Время чтения:  9
 Зона действия: колдующий
 Спасбросок: нет
 
-This spell calls upon the power of Auril to amplify the caster's cold spells. For the duration, cold damage dealt by the caster is increased by 50%, or by 100% if cast at level 30 or higher. In addition, the spell Cone of Cold has +4 DC and a much larger area of effect, as does the Winter Wolf shapeshift form's cold breath.~
+Это заклинание призывает силу Аурил, чтобы усилить холодные заклинания заклинателя. На время действия заклинания урон от холода, наносимый заклинателем, увеличивается на 50% или на 100%, если заклинатель 30-го уровня или выше. Кроме того, заклинание "Конус холода" имеет +4 к УС и гораздо большую область действия, как и ледяное дыхание в форме зимнего волка.~
 @35952     = ~Mass Harm~
 @36952     = ~Mass Harm
 (Некромантия)
@@ -4149,7 +4149,7 @@ This spell calls upon the power of Auril to amplify the caster's cold spells. Fo
 Дальность: обзор колдующего
 Длительность: мгновенно
 Время чтения:  9
-Зона действия: 20-foot radius
+Зона действия: радиус 20 футов
 Спасбросок: стойкости, отменяет
 
 Mass Harm releases destructive negative energy upon all living enemies in the area of effect. The caster makes ranged touch attacks against each of those creatures; each one that get hit must Save vs. Fortitude or lose all but one hit point. The DC is the same as that of the 6th-level Harm spell. Allied undead in the area of effect are instead healed to full health as per a Heal spell.~
