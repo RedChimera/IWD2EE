@@ -4372,7 +4372,7 @@ The Clairvoyance spell empowers the caster to see in their mind the geographical
 Длительность: мгновенно 
 Время чтения:  5
 Зона действия: 15-foot radius 
-Saving Throw: Will negates
+Спасбросок: воли, отменяет
 
 Remove Magic is like Dispel Magic, except it only affects enemies. When cast, it dispels most magical effects on enemies in the area of effect who fail a Will save with +5 DC.~
 @37353     = ~Бросок~
@@ -4765,7 +4765,7 @@ Spells with a range of "Caster" will be cast on the caster, regardless of the ta
 Длительность: 1 round/level
 Время чтения:  7
 Зона действия: особая
-Saving Throw: Will negates
+Спасбросок: воли, отменяет
 
 This spell brings forth a magical object that imbues creatures that see it with the desire to be near it. Any non-allied creature that sees the object of sympathy must make a Will save (with -3 DC) each round or be compelled to walk harmlessly toward the object for the round. Any creature immune to charm effects is also immune to this effect.~
 @37760     = ~Пропустить время~
@@ -4822,75 +4822,75 @@ Spell Turning reflects incoming hostile spells back at the source. While Spell T
 Длительность: мгновенно
 Время чтения:  5
 Зона действия: 1 существо
-Saving Throw: Will negates
+Спасбросок: воли, отменяет
 
 This spell steals the effects of spells from the target and grants them to the caster. If the target fails a Will save with +5 DC, all dispellable effects on them (such as from Mirror Image or Stoneskin) are dispelled, and the caster gains those effects for their remaining durations. Effects of items and innate abilities cannot be stolen. If an ally is targeted, they are affected with no save.~
-@37852     = ~Energy Drain~
-@38852     = ~Energy Drain
+@37852     = ~Отток энергии~
+@38852     = ~Отток энергии
 (Некромантия)
 Уровень: священник 8, колдун/волшебник 8
 Дальность: обзор колдующего
-Длительность: Permanent
+Длительность: постоянная
 Время чтения:  2
 Зона действия: 1 существо
 Спасбросок: нет
 
 Similar to the energy drain of a wight or wraith, except much more powerful, this spell drains multiple levels from a creature. The target is drained one level for every three levels of the caster, to a maximum energy drain of 16 levels for a 48th-level caster. The energy drain is permanent until cured with a Restoration spell. This spell has no effect on undead or constructs.~
-@37853     = ~Enslave~
-@38853     = ~Enslave
+@37853     = ~Поработить~
+@38853     = ~Поработить
 (Чародейство)
 Уровень: бард 7, колдун/волшебник 8
 Дальность: обзор колдующего
-Длительность: Permanent
+Длительность: постоянная
 Время чтения:  8
 Зона действия: 1 существо
-Saving Throw: Will negates
+Спасбросок: воли, отменяет
 
-This spell allows the caster to permanently gain full control of another creature. The target must make a Will saving throw with +4 DC. If it fails, it is dominated by the caster until it dies or the effect is dispelled. Enslave can even affect undead and constructs.~
-@37854     = ~Army of Images~
-@38854     = ~Army of Images
+Это заклинание позволяет заклинателю навсегда обрести полный контроль над другим существом, если цель завалит спасбросок воли с +4 к УС. В этом случае существо будет находиться под властью заклинателя до тех пор, пока не умрет или эффект не рассеется. Это заклинание работает даже на нежит и конструкты.~
+@37854     = ~Армия образов~
+@38854     = ~Армия образов
 (Иллюзия)
-Уровень: бард 8, Mask 8
+Уровень: бард 8, жрец Маска 8
 Дальность: колдующий
-Длительность: 10 rounds
+Длительность: 10 раундов
 Время чтения:  8
-Зона действия: 20-foot radius
-Спасбросок: нет 
+Зона действия: радиус 20 футов
+Спасбросок: нет
 
-Army of Images is like Mirror Image, except as an area of effect. When cast, all allies within 20 feet become surrounded by eight illusory duplicates. Incoming attacks may hit the duplicates rather than the real creatures.~
+Это заклинание работает, как заклинание "Отражённый образ", но только на область. При прочтении этого заклинания все союзники в радиусе 20 футов оказываются окружены восемью иллюзорными образами. Любые атаки могут поразить эти образы, а не реальных существ.~
 @37855     = ~Телепортирующий шаг~
 @38855     = ~Телепортирующий шаг
 (Преобразование)
 Уровень: бард 8, колдун/волшебник 8, жрец Селуны 9
 Дальность: обзор колдующего
-Длительность: 3 rounds/level
+Длительность: 3 раунда/уровень
 Время чтения:  4
 Зона действия: 1 существо
 Спасбросок: нет
 
-Among the greatest teleportation spells, Teleport Step lets the recipient teleport anywhere in the area simply by moving. Click on a destination for the character, and they will teleport there. The character can teleport any number of times with this spell.~
-@37856     = ~Spell Trap~
-@38856     = ~Spell Trap
+Одно из величайших заклинаний телепортации, "Телепортирующий шаг" позволяет получателю заклинания телепортироваться в любую точку области, простым движением. Нажмите на пункт назначения персонажа, и он телепортируется в эту точку. С помощью этого заклинания персонаж может телепортироваться любое количество раз.~
+@37856     = ~Ловушка заклинаний~
+@38856     = ~Ловушка заклинаний
 (Отречение)
 Уровень: бард 8, колдун/волшебник 8
 Дальность: колдующий
-Длительность: 10 rounds/level or until depleted
+Длительность: 10 раундов/уровень или пока не израсходуется
 Время чтения:  2
 Зона действия: колдующий
 Спасбросок: нет
 
-Spell Trap absorbs incoming hostile spells and grants their spell slots to the caster. While Spell Trap is active, if the caster would be hit by a harmful spell, that spell is nullified, and the caster regains a previously cast spell of a level less than or equal to that of the absorbed spell. Spells regained this way must also be 7th-level or lower, even if the absorbed spell was higher than 7th-level. Spell Trap can absorb a total of 18 spell levels before it ends, though as long as there is at least one spell level remaining, the next spell will be absorbed. Spell Trap does not absorb spells cast by allies. It does not absorb Dispel Magic either, though it cannot be dispelled itself.~
-@37857     = ~Link Effects~
-@38857     = ~Link Effects
+Это заклинание поглощает попадающие в заклинателя враждебные заклинания и отдаёт их ячейки заклинателю. Пока "Ловушка заклинаний" активна, если в заклинателя должно попасть вредоносное заклинание, оно аннулируется, и он восстанавливает ранее наложенное заклинание уровня меньше или равного уровню поглощенного заклинания. Заклинания, восстановленные таким образом, должны быть 7-го уровня или ниже, даже если поглощенное заклинание было выше 7-го уровня. До окончания действия заклинания "Ловушка заклинаний" может поглотить в общей сложности 18 уровней заклинаний, но пока остается хотя бы один уровень заклинания, следующее заклинание будет поглощено. Это заклинание не поглощает заклинания, наложенные союзниками. Оно также не поглощает "Развеять магию", хотя само не может быть развеяно.~
+@37857     = ~Связанные эффекты~
+@38857     = ~Связанные эффекты
 (Чародейство)
 Уровень: бард 7, священник 8, колдун/волшебник 8
 Дальность: обзор колдующего
-Длительность: 2 rounds/level
+Длительность: 2 раунда/уровень
 Время чтения:  8
 Зона действия: 1 существо
 Спасбросок: нет
 
-This spell links the caster and the target such that any spell effect that would be applied to one creature is also applied to the other. Link Effects only duplicates effects from spells and certain abilities of monsters; effects of items and non-magical abilities are ignored.~
+Это заклинание связывает заклинателя и цель так, что любой эффект заклинания, примененный к одному существу, будет применен и к другому. Это заклинание повторяет только эффекты заклинаний и некоторых способностей монстров; эффекты предметов и немагические способности не повторяются.~
 @37858     = ~Множественный огненный шар~
 @38858     = ~Множественный огненный шар
 (Проявление)
@@ -4898,10 +4898,10 @@ This spell links the caster and the target such that any spell effect that would
 Дальность: обзор колдующего
 Длительность: мгновенно
 Время чтения:  3
-Зона действия: 20-foot radius
+Зона действия: радиус 20 футов
 Спасбросок: реакции, половина урона
 
-Also known as Fireballball, this spell launches a fireball that explodes into other fireballs. After the Metafireball explodes, each creature in the area of effect is hit by a separate fireball with its own area of effect. Each of the secondary fireballs deals 3d6 fire damage (Reflex save with -5 DC for half). This spell is most effective when cast at a large group of creatures clumped together.~
+Это заклинание, также известное как "Огненный шар-шар", запускает огненный шар, который взрывается другими огненными шарами. После взрыва множественного огненного шара каждое существо в зоне действия заклинания поражается отдельным огненным шаром с собственной зоной действия. Каждый из вторичных огненных шаров наносит 3d6 урона огнем (половина урона при удачном спасброске с -5 к УС). Это заклинание наиболее эффективно, когда оно направлено на большую группу существ, собравшихся вместе.~
 @37859     = ~Неудержимое вращение Отто~
 @38859     = ~Неудержимое вращение Отто
 (Чародейство)
