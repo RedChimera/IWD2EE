@@ -4150,7 +4150,7 @@ This spell calls upon the power of Auril to amplify the caster's cold spells. Fo
 Длительность: мгновенно
 Время чтения:  9
 Зона действия: 20-foot radius
-Saving Throw: Fortitude negates
+Спасбросок: стойкости, отменяет
 
 Mass Harm releases destructive negative energy upon all living enemies in the area of effect. The caster makes ranged touch attacks against each of those creatures; each one that get hit must Save vs. Fortitude or lose all but one hit point. The DC is the same as that of the 6th-level Harm spell. Allied undead in the area of effect are instead healed to full health as per a Heal spell.~
 @35953     = ~Volcanic Eruption~
@@ -4350,7 +4350,7 @@ This spell causes the target to temporarily grow twice as large in each dimensio
 Длительность: 4 rounds
 Время чтения:  4
 Зона действия: 20-foot radius
-Saving Throw: Fortitude negates
+Спасбросок: стойкости, отменяет
 
 This spell creates magical darkness in the area of effect. Creatures without darkvision must make a Fortitude saving throw or be effectively blinded. Creatures with darkvision aren't blinded, but even they have only a limited ability to see through magical darkness, getting a -4 attack penalty on a failed save. Creatures with superior 120 foot darkvision (e.g. drow, gray dwarves or deep gnomes) only get a -2 attack penalty. Devils and creatures immune to blindness are unaffected.~
 @37351     = ~Clairvoyance~
@@ -4582,7 +4582,7 @@ This spell briefly reverses time for the caster, reverting them to the state the
 @37554     = ~Wall of Force~
 @38554     = ~Wall of Force
 (Отречение)
-Уровень: колдун/волшебник 5, Selune 5
+Уровень: колдун/волшебник 5, жрец Селуны 5
 Дальность: обзор колдующего
 Длительность: 5 rounds
 Время чтения:  7
@@ -4861,7 +4861,7 @@ Army of Images is like Mirror Image, except as an area of effect. When cast, all
 @37855     = ~Телепортирующий шаг~
 @38855     = ~Телепортирующий шаг
 (Преобразование)
-Уровень: бард 8, колдун/волшебник 8, Selune 9
+Уровень: бард 8, колдун/волшебник 8, жрец Селуны 9
 Дальность: обзор колдующего
 Длительность: 3 rounds/level
 Время чтения:  4
@@ -4907,80 +4907,80 @@ Also known as Fireballball, this spell launches a fireball that explodes into ot
 (Чародейство)
 Уровень: бард 7, колдун/волшебник 8
 Дальность: обзор колдующего
-Длительность: 3 rounds
+Длительность: 3 раунда
 Время чтения:  8
-Зона действия: 20-foot radius
+Зона действия: радиус 20 футов
 Спасбросок: нет
 
-Otto's Irresistible Spin forces multiple creatures to spin in place against their will for 3 rounds. Affected creatures will do nothing other than repeatedly spin in place, even if they see enemies. The spell is irresistible - there is no Saving Throw, and Spell Resistance will not block the spell. If an affected creature takes damage, the effects of the spell immediately end for that creature. A creature cannot be affected by this spell more than once per 8 hours.~
+Это заклинание заставляет нескольких существ вращаться на месте против их воли в течение 3 раундов. Пораженные существа не будут делать ничего, кроме как вращаться на месте, даже если они увидят врагов. Заклинание непреодолимо - спасброска нет, и сопротивление магии не блокирует это заклинание. Если затронутое заклинанием существо получает урон, действие заклинания немедленно прекращается для этого существа. Существо может быть подвергаться эффекту этого заклинания не чаще одного раза в 8 часов.~
 @37860     = ~Вездесущность~
 @38860     = ~Вездесущность
 (Преобразование)
-Уровень: бард 7, Cleric 8, колдун/волшебник 7
+Уровень: бард 7, священник 8, колдун/волшебник 7
 Дальность: обзор колдующего
-Длительность: 30 rounds
+Длительность: 30 раундов
 Время чтения:  5
 Зона действия: 1 существо
 Спасбросок: нет
 
-The spell Omnipresence spreads the essence of the target creature throughout the area, allowing the creature to do actions at longer range than normal. For the duration or until dispelled, the creature can attack any creature in sight with any weapon, even with melee weapons. The creature can also target other creatures with touch spells at long range, and can cast spells at a target outside their visual range. However, these effects also go the other way. An omnipresent creature can be attacked with melee weapons and targeted by touch spells at long range. Since Omnipresence makes the creature's form less solid, the creature can move through other creatures while under the effects of the spell.~
-@37861     = ~The Jester's Party~
-@38861     = ~The Jester's Party
+Это заклинание распространяет сущность целевого существа по всей области, позволяя ему совершать действия на большем расстоянии, чем обычно. В течение всего времени действия заклинания или до тех пор, пока оно не будет развеяно, существо может атаковать любое существо в пределах видимости любым оружием, даже оружием ближнего боя. Существо также может нацеливаться на других существ заклинаниями касания на большом расстоянии, а также произносить заклинания в цель, находящуюся вне зоны его видимости. Однако эти эффекты действуют и в обратную сторону. Вездесущее существо может быть атаковано оружием ближнего боя и нацелено заклинаниями касания на дальнем расстоянии. Поскольку это заклинание делает форму существа менее твердой, оно может перемещаться сквозь других существ, находясь под действием заклинания.~
+@37861     = ~Вечеринка шута~
+@38861     = ~Вечеринка шута
 (Призывание)
 Уровень: бард 8
-Дальность: Entire area
+Дальность: вся область
 Длительность: мгновенно
 Время чтения:  1
-Зона действия: Everyone in current area
+Зона действия: Каждое существо в текущей области
 Спасбросок: нет
 
-This spell teleports every creature in the current area next to the caster. Casting this spell in a dungeon could lead to a massive fight, so the caster had better be prepared.~
-@37862     = ~Simulacrum~
-@38862     = ~Simulacrum
+Это заклинание телепортирует всех существ в текущей области так, чтобы они находились рядом с заклинателем. Применение этого заклинания может привести к массовой драке, так что заклинателю лучше быть готовым.~
+@37862     = ~Подобие~
+@38862     = ~Подобие
 (Иллюзия)
 Уровень: бард 8, колдун/волшебник 8
 Дальность: обзор колдующего
-Длительность: 1 round/level
+Длительность: 1 раунд/уровень
 Время чтения:  8
 Зона действия: особая
 Спасбросок: нет
 
-Simulacrum creates a duplicate of the caster, which will serve the caster for the duration. It has half the caster's hit points and half the caster's level (rounded up) in each of the caster's classes. The simulacrum retains the memorized spells of the caster, which it can cast as well (but only those of a low enough level). It has no equipment, so it is useful primarily as an extra spellcaster. A character can only have one simulacrum at a time.~
+Это заклинание создает дубликат заклинателя, который будет служить ему в течение всего времени. У него будет половина пунктов здоровья заклинателя и половина уровня (округляется вверх) заклинателя в каждом из классов заклинателя. Подобие сохраняет запомненные заклинания заклинателя, которые оно тоже может прочитать (только те, которые достаточно низкого уровня). У него нет экипировки, поэтому подобие полезно в первую очередь как дополнительный заклинатель. Одновременно персонаж может иметь только одно подобие.~
 @37863     = ~Обратная гравитация~
 @38863     = ~Обратная гравитация
 (Преобразование)
-Уровень: друид 8, колдун/волшебник 8, Selune 8
+Уровень: друид 8, колдун/волшебник 8, жрец Селуны 8
 Дальность: обзор колдующего
-Длительность: 1 round/level
+Длительность: 1 раунд/уровень
 Время чтения:  8
-Зона действия: 20-foot radius sphere
+Зона действия: сфера, радиусом 20 футов
 Спасбросок: нет
 
-This spell creates a large spherical area that reverses the gravity of creatures inside it. Any creature that enters the area of effect will start falling up. While in the air, the creature cannot move unless it can fly. Creatures that hit the ceiling (if indoors) could potentially take bludgeoning damage depending on how fast they were rising. Only one sphere of reversed gravity may be active at a time.~
-@37864     = ~Polar Ray~
-@38864     = ~Polar Ray
+Это заклинание создает большую сферическую область, которая изменяет гравитацию для существ, находящихся в ней. Любое существо, попавшее в зону действия заклинания, начнет падать вверх. Находясь в воздухе, существо не может двигаться, если только оно не умеет летать. Существа, ударившиеся о потолок (если они находятся в помещении), могут получить урон от удара, зависящий от скорости их подъема. Одновременно может быть активна только одна сфера обратной гравитации.~
+@37864     = ~Полярный луч~
+@38864     = ~Полярный луч
 (Проявление)
 Уровень: друид 8, колдун/волшебник 8
 Дальность: обзор колдующего
-Длительность: 1 round
+Длительность: 1 раунд
 Время чтения:  6
-Зона действия: 2-foot by 1000-foot jet
+Зона действия: струя шириной 2 фута и длиной 1000 футов
 Спасбросок: реакции, половина урона
 
-Upon casting this spell, the caster emits a freezing beam in the direction of the target point. The beam continues past the target point all the way to the end of the area. All creatures in the beam's path take 1d6 cold damage per level (max 25d6), with a Reflex save for half. The beam deals this damage again half a round later.~
-@37865     = ~True Polymorph~
-@38865     = ~True Polymorph
+Произнеся это заклинание, заклинатель испускает замораживающий луч в направлении целевой точки. Луч проходит сквозь точку бьёт до края области. Все существа на пути луча получают 1d6 урона холодом за уровень заклинателя (до максимума 25d6), при успешном спасброске реакции урон снижается вдвое. Луч наносит такой же урон еще раз через полраунда.~
+@37865     = ~Истинное превращение~
+@38865     = ~Истинное превращение
 (Преобразование)
 Уровень: бард 7, колдун/волшебник 8
 Дальность: обзор колдующего
-Длительность: Permanent
+Длительность: постоянная
 Время чтения:  4
 Зона действия: 1 существо
-Saving Throw: Fortitude negates
+Спасбросок: стойкости, отменяет
 
-Unlike lesser polymorph spells, True Polymorph can turn a creature into an inanimate object. If the target fails a Fortitude saving throw with +4 DC, it is transformed into a keg. While in keg form, the target cannot do anything, but their equipment can still be found inside the keg when it is split open. The effect lasts until dispelled.
+В отличие от других заклинаний превращения, это заклинание может превратить существо в неодушевленный предмет. Если цель проваливает спасбросок стойкости с +4 к УС, она превращается в бочонок. Находясь в форме бочонка, цель не может ничего делать, но ее снаряжение можно найти внутри бочонка, когда он будет расколот. Эффект длится до тех пор, пока не будет развеян.
 
-If True Polymorph is cast on a petrified creature, it will instead duplicate the effects of Stone to Flesh.~
+Если это заклинание накладывается на окаменевшее существо, то вместо этого он дублирует эффект заклинания "Камень в плоть".~
 @37952     = ~Абсолютная невидимость~
 @38952     = ~Абсолютная невидимость
 (Иллюзия)
