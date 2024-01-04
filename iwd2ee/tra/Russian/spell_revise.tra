@@ -1186,7 +1186,7 @@
 Зона действия: 1 существо
 Спасбросок: нет
 
-Это заклинание позволяет колдующему поменяться местами с другим существом - без спасброска. Любые метательные или магические снаряды, которые в полете были направлены на колдующего, перенаправляются на цель заклинания и наоборот. Это заклинание может быть применено к любому существу, которое видит группа, даже если колдующий его не видит. На существ предметы, являющихся частью рельефа или зданий, это заклинание не действует.~
+Это заклинание позволяет колдующему поменяться местами с другим существом - без спасброска. Любые метательные или магические снаряды, которые в полете были направлены на колдующего, перенаправляются на цель заклинания и наоборот. Это заклинание может быть применено к любому существу, которое видит группа, даже если колдующий его не видит. На существ и предметы, являющиеся частью рельефа или зданий, это заклинание не действует.~
 @1591    = ~Солнечный луч~
 @1592    = ~Солнечный луч
 (Проявление)
@@ -3959,7 +3959,7 @@
 Зона действия: радиус 20 футов
 Спасбросок: нет
 
-В результате действия этого заклинания, все животные-союзники в зоне действия эффекта заклинания временно становятся в два раза больше в каждом измерении. Они получают +8 к силе и конституции; это бонусы за размер, они суммируются с другими бонусами к этим параметрам. Скорость передвижения животных удваивается, так как они преодолевают большее расстояние с каждым шагом. Однако из-за увеличения размера они также получают -4 к ловкости, AC и броскам атаки.~
+В результате действия этого заклинания, все животные-союзники в зоне действия эффекта заклинания временно становятся в два раза больше в каждом измерении. Они получают +8 к силе и конституции; это бонусы за размер, они суммируются с другими бонусами к этим параметрам. Скорость передвижения животных удваивается, так как они преодолевают большее расстояние с каждым шагом. Однако из-за увеличения размера они также получают -4 к ловкости, классу защиты и броскам атаки.~
 @35555     = ~Святое оружие~
 @36555     = ~Святое оружие
 (Проявление)
@@ -4185,108 +4185,108 @@
 (Призывание)
 Уровень: священник 9
 Дальность: прикосновение
-Длительность: 8 hours or until triggered
+Длительность: 8 часов или пока не сработает
 Время чтения:  18
 Зона действия: 1 существо
 Спасбросок: нет
 
-This spell stores a Resurrection spell in the target, which will be triggered the next time the target dies within 8 hours. The target will be brought back to life and will regain all hit points.~
-@35956     = ~Tornado~
-@36956     = ~Tornado
+Это заклинание накладывает на цель заклинание "Воскрешения", которое сработает в следующий раз, когда цель умрет в течение следующих 8 часов. Цель будет возвращена к жизни и восстановит все пункты здоровья.~
+@35956     = ~Торнадо~
+@36956     = ~Торнадо
 (Проявление)
 Уровень: друид 9
 Дальность: обзор колдующего
-Длительность: 3 rounds
+Длительность: 3 раунда
 Время чтения:  9
-Зона действия: 15-foot radius
+Зона действия: радиус 15 футов
 Спасбросок: нет
 
-A more powerful version of the spell Whirlwind, the spell creates a tornado at the target point that moves randomly. Creatures that come within 15 feet of the tornado get sucked up into it, taking 3d8 slashing damage per second that they stay inside it. Creatures are usually ejected from the tornado after about a round. Huge creatures such as frost giants and dragons aren't sucked up into the tornado but still take damage while in the area of effect. Only one tornado may be active at a time. This spell can only be cast outdoors.~
-@35957     = ~Summon Deva~
-@36957     = ~Summon Deva
+Более мощная версия заклинания "Вихрь", это заклинание создает в целевой точке торнадо, которое движется случайным образом. Существа, оказавшиеся в радиусе 15 футов от торнадо, засасываются в него, получая 3d8 колющего урона за секунду пребывания в нем. Обычно существа выбрасываются из торнадо примерно через раунд. Огромные существа, такие как морозные великаны и драконы, не засасываются в торнадо, но все равно получают урон, находясь в зоне его действия. Одновременно может быть активно только одно торнадо. Это заклинание можно произнести только на открытом пространстве.~
+@35957     = ~Призвать деву~
+@36957     = ~Призвать деву
 (Призывание)
 Уровень: священник 9
 Дальность: обзор колдующего
-Длительность: 50 rounds
+Длительность: 50 раундов
 Время чтения:  12
 Зона действия: особая
 Спасбросок: нет
 
-This spell summons an angelic deva to assist the party. The deva has a variety of priest spells, can fly, and wields a mace that forces creatures it hits to make a Fortitude save or be stunned. The party can only summon one deva per 8 hours. This spell may only be cast by good characters.~
+Это заклинание призывает ангельскую деву на помощь группе. Дева владеет различными заклинаниями священника, умеет летать и владеет булавой, которая ошеломляет существ, проваливших спасбросок стойкости, при ударе. Группа может призвать только одну деву раз в 8 часов. Это заклинание могут применять только добрые персонажи.~
 @37151     = ~Верный удар~
 @38151     = ~Верный удар
-(Прорицание) 
+(Прорицание)
 Уровень: бард 1, паладин 1, следопыт 1, колдун/волшебник 1
 Дальность: колдующий
-Длительность: 9 seconds
+Длительность: 9 секунд
 Время чтения:  1
 Зона действия: колдующий
 Спасбросок: нет
 
-The True Strike spell gives the caster incredible insights into his or her enemies' weaknesses, but only for an extremely short duration. For 9 seconds, the caster gains a +20 attack bonus.~
+Это заклинание дает заклинателю невероятное понимание слабых мест врагов, но только на очень короткий срок. На 9 секунд заклинатель получает +20 к атаке.~
 @37152     = ~Отразить атаку~
 @38152     = ~Отразить атаку
 (Отречение)
-Уровень: бард 1, паладин 1, колдун/волшебник 1, Helm 1
+Уровень: бард 1, паладин 1, колдун/волшебник 1, жрец Хелма 1
 Дальность: колдующий
-Длительность: 8 hours or until triggered
+Длительность: 8 часов или пока не сработает
 Время чтения:  0
 Зона действия: колдующий
 Спасбросок: нет
 
-After this spell is cast, the next instance of physical damage the caster would receive is reflected back at the attacker, damaging them instead. If the physical damage came from a weapon, any on-hit effects of the weapon will also be reflected back at the attacker.~
+После произнесения этого заклинания следующий физический урон, который получил бы заклинатель, отражается обратно в атакующего, нанося ему урон. Если физический урон был нанесен оружием, то все эффекты оружия, которые срабатывают при попадании, также будут отражены обратно в атакующего.~
 @37154     = ~Простой вызов~
-@38154     = ~Simple Summoning
+@38154     = ~Простой вызов
 (Призывание)
 Уровень: бард 2, священник 2, колдун/волшебник 1
-Дальность: 1000 ft.
+Дальность: 1000 футов
 Длительность: мгновенно
 Время чтения:  1
 Зона действия: 1 существо
 Спасбросок: нет
 
-Simple Summoning summons the target of the spell. The target is instantly teleported to the caster's side. Unlike most other summoning spells, Simple Summoning gives no control over the creature. This spell could either be used to rescue an ally (e.g. if the ally was paralyzed and being attacked by enemies), or to transport an enemy into a vulnerable position. Creatures and objects that are part of a structure (e.g. support beams) are unaffected.
+Это заклинание призывает цель заклинания. Цель мгновенно телепортируется к заклинателю. В отличие от большинства других заклинаний вызова, это заклинание не дает контроля над существом. Это заклинание можно использовать либо для спасения союзника (например, если он парализован и атакован врагами), либо для переноса врага в уязвимое положение. На существ и предметы, являющиеся частью рельефа или зданий, это заклинание не действует.
 
-Simple Summoning can be cast on any creature the party sees, even one outside of the caster's visual range.~
+Заклинание "Простой призыв" может быть наложено на любое существо, которое видит партия, даже если оно находится вне зоны видимости заклинателя.~
 @37155     = ~Часы смерти
 @38155     = ~Часы смерти
 (Некромантия)
 Уровень: священник 1, следопыт 1, колдун/волшебник 1
 Дальность: колдующий
-Длительность: 10 rounds/level
+Длительность: 10 раундов/уровень
 Время чтения:  1
 Зона действия: колдующий
 Спасбросок: нет
 
-Deathwatch lets the caster learn precisely how close other creatures are to death. As long as a party member has Deathwatch and isn't incapacitated, if you hover the cursor over an enemy until it displays the tooltip, it will show the enemy's current and maximum Hit Points.~
+Это заклинание позволяет заклинателю узнать, насколько близко другие существа находятся к смерти. Если навести курсор на врага, то во всплывающей подсказке будет показано текущее и максимальное количество пунктов здоровья, пока у какого-либо члена группы есть активное заклинание "Часы смерти" и он не выведен из строя.~
 @37156     = ~Прыжок~
-@38156     = ~Jump
+@38156     = ~Прыжок
 (Преобразование)
 Уровень: бард 1, следопыт 1, колдун/волшебник 1
 Дальность: прикосновение
-Длительность: 30 rounds
+Длительность: 30 раундов
 Время чтения:  4
 Зона действия: 1 существо
 Спасбросок: нет
 
-This spell greatly increases the recipient's jump distance, allowing them to jump over obstacles or across large gaps. For the duration, the recipient gains the Jump ability, usable at will. By using this ability, the character jumps to a target point up to 20 feet away.
+Это заклинание значительно увеличивает дальность прыжка получателя, позволяя ему перепрыгивать через препятствия или большие ямы. На время действия заклинания получатель приобретает способность "Прыжок", которую можно использовать по своему желанию. Используя эту способность, персонаж прыгает в точку на расстоянии до 20 футов.
 
-In addition, while this spell is active, the recipient is immune to falling damage from all sources.~
-@37157     = ~Vanish~
-@38157     = ~Vanish
+Кроме того, пока это заклинание активно, получатель невосприимчив к урону от падения, нанесённому каким-либо образом.~
+@37157     = ~Исчезнуть~
+@38157     = ~Исчезнуть
 (Иллюзия)
 Уровень: бард 1, колдун/волшебник 1
 Дальность: колдующий
-Длительность: 3 rounds
+Длительность: 3 раунда
 Время чтения:  1
 Зона действия: колдующий
 Спасбросок: нет
 
-A lesser version of Invisibility, this spell causes the caster to become invisible for a short time, or until the caster attacks or casts a spell on another creature.
+Слабая версия заклинания "Невидимость", это заклинание заставляет заклинателя стать невидимым на короткое время, или пока он не атакует или не наложит заклинание на другое существо.
 
-Vanish is less effective for sneaking past groups of enemies, and better suited for getting out of tight spots in combat. Wizard/rogues can use this spell as an easy way to prepare for another sneak attack.~
+Это заклинание плохо подходит для того, чтобы пробираться мимо групп врагов, но скорее позволяет спастись из боя в опасной ситуации. Волшебники/плуты могут использовать это заклинание для подготовки к скрытой атаке.~
 @37251     = ~Опознание существа~
-@38251     = ~Identify Creature
+@38251     = ~Опознание существа
 (Прорицание)
 Уровень: бард 2, друид 2, следопыт 2, колдун/волшебник 2
 Дальность: обзор колдующего
@@ -4295,53 +4295,53 @@ Vanish is less effective for sneaking past groups of enemies, and better suited 
 Зона действия: 1 существо
 Спасбросок: нет
 
-Identify Creature reveals useful combat information about the target creature. The information includes the creature's level, current and maximum hit points, number of attacks per round, ability scores, resistances, saving throws, and various other traits that depend on the creature.~
-@37252     = ~Sound Burst~
-@38252     = ~Sound Burst
+Это заклинание раскрывает полезную боевую информацию о целевом существе. Информация включает в себя уровень существа, текущее и максимальное количество пунктов здоровья, количество атак в раунд, параметры, сопротивления, модификаторы спасбросков и различные другие характеристики, зависящие от существа.~
+@37252     = ~Взрыв звука~
+@38252     = ~Взрыв звука
 (Проявление)
 Уровень: бард 2
 Дальность: обзор колдующего
-Длительность: 1 round
+Длительность: 1 раунд
 Время чтения:  2
-Зона действия: 15-foot radius
-Saving Throw: Fortitude partial
+Зона действия: радиус 15 футов
+Спасбросок: стойкости, особый
 
-This spell releases an extremely loud and jarring burst of sound. Creatures in the area of effect take 1d8 sonic damage and must make a Fortitude save or be stunned for 1 round. Deaf creatures are not stunned but still take damage. The caster is unaffected by this spell.~
+Это заклинание издает чрезвычайно громкий и пронзительный звук. Существа в зоне действия получают 1d8 звукового урона и должны прокинуть спасбросок стойкости или быть ошеломлёнными на 1 раунд. Глухие существа не ошеломляются, но все равно получают урон. На заклинателя это заклинание не действует.~
 @37253     = ~Левитация~
-@38253     = ~Levitate
+@38253     = ~Левитация
 (Преобразование)
 Уровень: бард 2, колдун/волшебник 2
 Дальность: обзор колдующего
-Длительность: Special
+Длительность: особая
 Время чтения:  2
 Зона действия: 1 существо
-Saving Throw: Reflex negates
+Спасбросок: реакции, отменяет
 
-This spell suspends the target in the air if it fails a Reflex save (Allies are affected with no saving throw necessary). While levitating, the target cannot move unless it can fly, and it gets a -20 attack penalty with melee weapons, but also gets +20 AC against melee weapons. If cast on an ally, that ally can levitate up and down as well. While the character is selected, hold Left Shift to lift them up or hold Right Shift to pull them down. While at ground level, the character can move and loses the bonuses and penalties, but the spell doesn't end immediately.
+Это заклинание поднимет цель в воздух, если она проваливает спасбросок реакции (союзники попадают под действие заклинания без спасброска). Во время левитации цель не может двигаться, если только она не умеет летать, и получает штраф -20 к атаке оружием ближнего боя, но также получает +20 классу защиты против оружия ближнего боя. Если заклинание наложено на союзника, он также может левитировать вверх и вниз. Пока персонаж выбран, удерживайте левый shift, чтобы поднять его вверх, или правый shift, чтобы опустить его вниз. Находясь на уровне земли, персонаж может перемещаться и эффекты заклинания, но само заклинание не сразу не заканчивается.
 
-When cast on an ally, Levitate lasts 4 rounds. When cast on a non-allied creature, it lasts 10 rounds.~
+Если заклинание наложено на союзника, оно длится 4 раунда. При наложении на существо, не являющееся союзником, оно длится 10 раундов.~
 @37254     = ~Колдовское зрение~
 @38254     = ~Колдовское зрение
 (Прорицание)
 Уровень: бард 2, колдун/волшебник 2
 Дальность: колдующий
-Длительность: 5 rounds/level
+Длительность: 5 раундов/уровень
 Время чтения:  2
 Зона действия: колдующий
 Спасбросок: нет
 
-Arcane Sight lets the caster see what magical effects are on a creature. While the spell is in effect and the caster isn't incapacitated, if you hover the cursor over a creature and press Tab, a list of all the magical effects on the creature from spells and abilities will be displayed, along with their remaining durations.~
-@37255     = ~Enlarge Creature~
-@38255     = ~Enlarge Creature
+Это заклинание позволяет заклинателю видеть, какие магические эффекты наложены на существо. Если навести курсор на существо и нажать tab, появится список всех магических эффектов, наложенных на него заклинаниями и способностями, а также их оставшаяся длительность.~
+@37255     = ~Увеличить существо~
+@38255     = ~Увеличить существо
 (Преобразование)
 Уровень: колдун/волшебник 3
 Дальность: обзор колдующего
-Длительность: 1 round/level
+Длительность: 1 раунд/уровень
 Время чтения:  6
 Зона действия: 1 существо
 Спасбросок: нет
 
-This spell causes the target to temporarily grow twice as large in each dimension. The target gains +8 Strength and Constitution; these are size bonuses which stack with other bonuses to these attributes. The target's speed is also increased (since they cover more distance with each stride). However, the target also gets a -4 penalty to Dexterity, AC, and attack rolls due to increased size. The target cannot benefit from invisibility, blur, or mirror image.~
+Это заклинание заставляет цель временно увеличиться в два раза в каждом измерении. Цель получает +8 к силе и конституции; это бонусы к размеру, которые суммируются с другими бонусами к этим параметрам. Скорость цели также увеличивается (поскольку она преодолевает большее расстояние с каждым шагом). Однако из-за увеличения размера цель также получает штраф -4 к ловкости, классу защиты и броскам атаки. Цель не получает преимущество от заклинаний невидимости, размытия или зеркального образа.~
 @37256     = ~Тьма~
 @38256     = ~Тьма
 (Иллюзия)
