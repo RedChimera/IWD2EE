@@ -4347,34 +4347,34 @@
 (Иллюзия)
 Уровень: бард 2, священник 2, колдун/волшебник 2
 Дальность: обзор колдующего
-Длительность: 4 rounds
+Длительность: 4 раунда
 Время чтения:  4
-Зона действия: 20-foot radius
+Зона действия: радиус 20 футов
 Спасбросок: стойкости, отменяет
 
-This spell creates magical darkness in the area of effect. Creatures without darkvision must make a Fortitude saving throw or be effectively blinded. Creatures with darkvision aren't blinded, but even they have only a limited ability to see through magical darkness, getting a -4 attack penalty on a failed save. Creatures with superior 120 foot darkvision (e.g. drow, gray dwarves or deep gnomes) only get a -2 attack penalty. Devils and creatures immune to blindness are unaffected.~
-@37351     = ~Clairvoyance~
-@38351     = ~Clairvoyance
+Это заклинание создает магическую тьму в области действия заклинания. Существа, не обладающие инфравидением, должны сделать спасбросок стойкости или быть ослепленными. Существа с инфравидением не ослепляются, но даже они имеют лишь ограниченную способность видеть сквозь магическую тьму, получая -4 к атаке при неудачном спасброске. Существа с превосходным 120-футовым инфравидением (например, дроу, серые дварфы или глубинные гномы) получают лишь -2 к атаке. Дьяволы и существа, невосприимчивые к слепоте, не подвержены этому эффекту.~
+@37351     = ~Ясновидение~
+@38351     = ~Ясновидение
 (Прорицание)
 Уровень: друид 2, следопыт 2
 Дальность: колдующий
-Длительность: Permanent
+Длительность: постоянная
 Время чтения:  5
-Зона действия: Entire area
+Зона действия: вся область
 Спасбросок: нет
 
-The Clairvoyance spell empowers the caster to see in their mind the geographical features and buildings of the region they are currently exploring. It extends to a great range, but cannot reveal creatures or their movements. Clairvoyance can be cast indoors or outdoors.~
+Это заклинание позволяет заклинателю мысленно видеть географические особенности и здания текущей области. Оно распространяется на большое расстояние, но не может обнаружить существ или их перемещения. Заклинание "Ясновидение" можно применять как в помещении, так и на открытом пространстве.~
 @37352     = ~Удалить магию~
 @38352     = ~Удалить магию
 (Отречение)
-Уровень: священник 3, друид 4, паладин 3, колдун/волшебник 3, Oghma 2
+Уровень: священник 3, друид 4, паладин 3, колдун/волшебник 3, жрец Огмы 2
 Дальность: обзор колдующего
-Длительность: мгновенно 
+Длительность: мгновенно
 Время чтения:  5
-Зона действия: 15-foot radius 
+Зона действия: радиус 15 футов
 Спасбросок: воли, отменяет
 
-Remove Magic is like Dispel Magic, except it only affects enemies. When cast, it dispels most magical effects on enemies in the area of effect who fail a Will save with +5 DC.~
+Это заклинание работает подобно заклинанию "Развеять магию", но действует только на врагов. Они могут прокинуть спасбросок воли с +5 к УС, чтобы избежать эффекта заклинания.~
 @37353     = ~Бросок~
 @38353     = ~Бросок
 (Преобразование)
@@ -4385,37 +4385,37 @@ Remove Magic is like Dispel Magic, except it only affects enemies. When cast, it
 Зона действия: 1 существо
 Спасбросок: реакции, половина урона
 
-This spell throws the target into the air with incredible force. The target is knocked back as it is sent hurtling through the air. When it lands or hits the ceiling, it takes bludgeoning damage based on how fast it was moving right before the collision, up to 5d6 plus 1d6 per caster level (max 20d6 total from a level 15 caster). If the target succeeds on a Reflex save, it is thrown with less force and will only take about half damage.~
+Это заклинание подбрасывает цель в воздух с невероятной силой. Когда она приземляется или ударяется о потолок, то получает урон от удара в зависимости от скорости, с которой она двигалась перед столкновением, до 5d6 плюс 1d6 за уровень заклинателя (максимум 20d6 на 15-м уровне заклинателя). Если цель успешно прокинет спасбросок реакции, ее отбрасывает с меньшей силой, и она получает лишь половину урона.~
 @37354     = ~Момент предвидения~
 @38354     = ~Момент предвидения
 (Прорицание)
 Уровень: бард 3, друид 4, колдун/волшебник 3
 Дальность: обзор колдующего
-Длительность: Special
+Длительность: особая
 Время чтения:  1
 Зона действия: 1 существо
 Спасбросок: нет
 
-The recipient of this spell can momentarily gain the ability to see into the future, and can see any attack or spell coming. The target gains three abilities, which can be used to give them a +25 bonus to attack, to AC or to saving throws, depending on the ability chosen, for 1 round. Once one of these abilities is used, all three disappear. If not used, the abilities also disappear after 3 hours.
+Получивший это заклинание может мгновенно обрести способность видеть будущее и таким образом предвидеть любую атаку или заклинание. Он получает три способности, которые могут быть использованы, чтобы дать ему бонус +25 к атаке, классу защиты или спасброскам, в зависимости от выбранной способности, на 1 раунд. Как только одна из этих способностей будет использована, все три исчезают. Если способности не использовать, они также исчезают через 3 часа.
 
-The abilities granted by Moment of Prescience can be used as a free action.~
+Способности, дарованные этим заклинанием, могут быть использованы как свободное действие.~
 @37355     = ~Полёт~
-@38355     = ~Fly
+@38355     = ~Полёт
 (Преобразование)
 Уровень: бард 3, следопыт 3, колдун/волшебник 3
 Дальность: обзор колдующего
-Длительность: 1 round/level
+Длительность: 1 раунд/уровень
 Время чтения:  3
 Зона действия: 1 существо
 Спасбросок: нет
 
-This wondrous spell gives the recipient the power to fly. For the duration, the character can fly over normally impassable gaps and obstacles. In addition, unless the character is fighting in melee or casting a touch spell, they will be flying far enough above the ground that most melee attacks against them will be made at a -20 penalty. The effects of Fly are suppressed as long as the character is indoors.~
+Это чудесное заклинание наделяет получателя способностью летать. В течение всего времени персонаж может перелетать через обычно непроходимые пропасти и препятствия. Кроме того, если персонаж не сражается в ближнем бою или не читает заклинания, для которых требуется атака касанием, он будет лететь достаточно высоко над землей, чтобы большинство атак в ближнем бою против него были сделаны со штрафом -20. Эффекты полета не действуют, пока персонаж находится в помещении.~
 @37356     = ~Фильтр восприятия~
-@38356     = ~Perception Filter
+@38356     = ~Фильтр восприятия
 (Иллюзия)
 Уровень: бард 1, колдун/волшебник 1
 Дальность: прикосновение
-Длительность: 10 rounds/level
+Длительность: 10 раундов/уровень
 Время чтения:  3
 Зона действия: 1 существо
 Спасбросок: нет
@@ -4426,9 +4426,9 @@ If a character under the effect of this spell attacks or casts a spell, that doe
 @37357     = ~Legend Lore~
 @38357     = ~Legend Lore
 (Прорицание) 
-Уровень: бард 3, Oghma 3
+Уровень: бард 3, жрец Огмы 3
 Дальность: колдующий
-Длительность: 10 rounds/level
+Длительность: 10 раундов/уровень
 Время чтения:  3
 Зона действия: колдующий
 Спасбросок: нет
@@ -4439,7 +4439,7 @@ A more powerful version of the spell Identify, Legend Lore temporarily increases
 (Иллюзия)
 Уровень: бард 3, колдун/волшебник 3
 Дальность: обзор колдующего
-Длительность: 1 round/level
+Длительность: 1 рануд/уровень
 Время чтения:  6
 Зона действия: особая
 Спасбросок: нет
@@ -4456,7 +4456,7 @@ The spell ends early if the image is destroyed (it starts with the same HP as th
 (Чародейство)
 Уровень: бард 3
 Дальность: колдующий
-Длительность: 10 rounds/level
+Длительность: 10 раундов/уровень
 Время чтения:  3
 Зона действия: колдующий
 Спасбросок: нет
@@ -4467,9 +4467,9 @@ This spell greatly increases the character's ability to fool others. For the dur
 (Преобразование) 
 Уровень: бард 5, колдун/волшебник 4
 Дальность: обзор колдующего
-Длительность: 4 rounds
+Длительность: 4 раунда
 Время чтения:  1
-Зона действия: 15-foot radius
+Зона действия: радиус 15 футов
 Спасбросок: нет
 
 This spell creates a strange magical field in the area of effect. Any hostile creature in the field will be teleported to a random location in the field each round.~
@@ -4489,7 +4489,7 @@ Phantasmal Killer causes the target to be struck down by an embodiment of its wo
 (Некромантия)
 Уровень: священник 4, колдун/волшебник 4
 Дальность: колдующий
-Длительность: 10 rounds/level
+Длительность: 10 раундов/уровень
 Время чтения:  4
 Зона действия: колдующий
 Спасбросок: особый
@@ -4511,7 +4511,7 @@ This spell copies a spell that another creature is casting, allowing the bard to
 (Преобразование)
 Уровень: колдун/волшебник 4
 Дальность: колдующий
-Длительность: 1 minute/level
+Длительность: 1 минута/уровень
 Время чтения:  4
 Зона действия: колдующий
 Спасбросок: нет
@@ -4523,11 +4523,11 @@ Polymorph Self allows the caster to assume the form of a creature of moderate po
 * Umber Hulk (nearby enemies must make Will save each round or be confused)
 * Wyvern (can fly, and each hit poisons the target on a failed Fortitude save)~
 @37456     = ~Наделить способностью к заклинанию~
-@38456     = ~Imbue with Spell Ability
+@38456     = ~Наделить способностью к заклинанию
 (Универсальное)
 Уровень: священник 4, бард 4
 Дальность: обзор колдующего
-Длительность: 8 hours or until released
+Длительность: 8 часов или до использования
 Время чтения:  4
 Зона действия: особая
 Спасбросок: нет
