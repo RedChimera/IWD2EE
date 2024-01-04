@@ -4420,11 +4420,11 @@
 Зона действия: 1 существо
 Спасбросок: нет
 
-Perception Filter causes the recipient to attract less notice without actually being invisible. Enemies will ignore the character, not attacking or casting spells on them, as long as there is someone else they can target instead (who isn't affected by this spell). If there are no other allies they can target instead, the enemies will notice the character and attack them.
+Фильтр восприятия заставляет получателя привлекать меньше внимания, не становясь при этом невидимым. Враги будут игнорировать персонажа, не атакуя его и не накладывая на него заклинания, пока есть кто-то другой для этих целей (без эффекта заклинания "Фильтр восприятия"). Если нет никого, на кого они могли бы нацелиться, враги заметят персонажа под действием этого заклинания и станут его атаковать.
 
-If a character under the effect of this spell attacks or casts a spell, that does not cause the spell to end, but the enemy they are currently targeting can still notice them.~
-@37357     = ~Legend Lore~
-@38357     = ~Legend Lore
+Если персонаж под действием этого заклинания атакует или произносит другое заклинание, "Фильтр восприятия" не прекращается, но враг, на которого направлена атака или заклинание заметит его.~
+@37357     = ~Легендарные знания~
+@38357     = ~Легендарные знания
 (Прорицание) 
 Уровень: бард 3, жрец Огмы 3
 Дальность: колдующий
@@ -4433,26 +4433,26 @@ If a character under the effect of this spell attacks or casts a spell, that doe
 Зона действия: колдующий
 Спасбросок: нет
 
-A more powerful version of the spell Identify, Legend Lore temporarily increases the lore of the caster, allowing them to identify multiple magical items. For the duration, the caster's Knowledge (Arcana) is increased by 30.~
+Более мощная версия заклинания "Опознание", это заклинание временно увеличивает знания заклинателя, позволяя ему опознавать множество магических предметов. На время действия заклинания навык "Знание (волшебство)" заклинателя увеличивается на 30.~
 @37358     = ~Спроецировать образ~
-@38358     = ~Project Image
+@38358     = ~Спроецировать образ
 (Иллюзия)
 Уровень: бард 3, колдун/волшебник 3
 Дальность: обзор колдующего
-Длительность: 1 рануд/уровень
+Длительность: 1 раунд/уровень
 Время чтения:  6
 Зона действия: особая
 Спасбросок: нет
 
-This spell creates an illusory duplicate of the caster. For the duration, the caster controls this image instead of their body, can see through its eyes, and can command it to attack or cast spells. Spells cast this way use up the caster's spell slots.
+Это заклинание создает иллюзорную копию заклинателя. В течение времени действия заклинания, колдующий управляет этим образом вместо своего тела, видит его глазами и может приказывать ему атаковать или произносить заклинания. Заклинания, наложенные таким образом, расходуют слоты заклинаний заклинателя.
 
-Importantly, any damage the image takes will not harm the caster when the spell is over, and any status ailments inflicted on the image will not affect the caster. Thus, this spell can be used to send the image into risky situations that would be unwise to send the actual character into.
+Важно отметить, что любой урон, полученный образом, не повредит заклинателю, когда заклинание закончится, а любые статусные эффекты, наложенные на образ, не повлияют на заклинателя. Таким образом, это заклинание можно использовать для того, чтобы отправить образ в опасные места, в которые было бы неразумно отправлять реального персонажа.
 
-While Project Image is active, the character record screen and HP bar record the stats of the image rather than the caster. When the image takes damage or is killed, the HP bar will go down, but the caster will be fine afterwards as long as their body didn't take damage.
+Пока активно это заклинание, экран персонажа и панель пунктов здоровья отображают характеристики образа, а не заклинателя. Когда образ получает урон, полоска пунктов здоровья уменьшается, но с самим заклинателем всё будет в порядке, если его тело самое не получило урона.
 
-The spell ends early if the image is destroyed (it starts with the same HP as the caster), if it's dispelled, if the caster is killed, or if the party moves to another area.~
-@37359     = ~Glibness~
-@38359     = ~Glibness
+Заклинание заканчивается досрочно, если образ уничтожен (он начинает с тем же количеством пунктов здоровья, что и заклинатель), если он развеян, если заклинатель убит или если партия переместилась в другую область.~
+@37359     = ~Бойкость~
+@38359     = ~Бойкость
 (Чародейство)
 Уровень: бард 3
 Дальность: колдующий
@@ -4461,10 +4461,10 @@ The spell ends early if the image is destroyed (it starts with the same HP as th
 Зона действия: колдующий
 Спасбросок: нет
 
-This spell greatly increases the character's ability to fool others. For the duration, the character's Bluff skill is increased by 30.~
-@37451     = ~Teleport Field~
-@38451     = ~Teleport Field
-(Преобразование) 
+Это заклинание значительно увеличивает способность персонажа обманывать других. На время действия заклинания навык "Блеф" персонажа увеличивается на 30.~
+@37451     = ~Поле телепортации~
+@38451     = ~Поле телепортации
+(Преобразование)
 Уровень: бард 5, колдун/волшебник 4
 Дальность: обзор колдующего
 Длительность: 4 раунда
@@ -4472,18 +4472,18 @@ This spell greatly increases the character's ability to fool others. For the dur
 Зона действия: радиус 15 футов
 Спасбросок: нет
 
-This spell creates a strange magical field in the area of effect. Any hostile creature in the field will be teleported to a random location in the field each round.~
-@37452     = ~Phantasmal Killer~
-@38452     = ~Phantasmal Killer
+Это заклинание создает в зоне действия заклинания странное магическое поле. Любое враждебное существо, оказавшееся в поле, будет телепортироваться в случайное место, тоже находящиеся в зоне действия заклинания, каждый раунд.~
+@37452     = ~Фантомный убийца~
+@38452     = ~Фантомный убийца
 (Иллюзия)
 Уровень: бард 4, колдун/волшебник 4
 Дальность: обзор колдующего
 Длительность: мгновенно
 Время чтения:  4
 Зона действия: 1 существо
-Saving Throw: Will or Fortitude negates
+Спасбросок: стойкости или воли, половина урона
 
-Phantasmal Killer causes the target to be struck down by an embodiment of its worst fears. The target may make a Will save to disbelieve the illusion. On a failure, they must make a Fortitude save or die. Even on a successful Fortitude save, they still take 3d6 magic damage. If the target was panicking when they got hit by this spell, the DC of both saves is increased by 6.~
+"Фантомный убийца" заставляет цель заклинания быть поражённой воплощением ее худших кошмаров. Цель может сделать спасбросок воли, чтобы не поверить в иллюзию. В случае неудачи она должна сделать спасбросок стойкости или умереть. Даже в случае успешного спасброска на стойкость цель все равно получает 3d6 магического урона. Если цель была в панике, когда она стало целью этого заклинания, УС обоих спасбросков увеличивается на 6.~
 @37453     = ~Пир упырей~
 @38453     = ~Пир упырей
 (Некромантия)
@@ -4494,20 +4494,20 @@ Phantasmal Killer causes the target to be struck down by an embodiment of its wo
 Зона действия: колдующий
 Спасбросок: особый
 
-This spell lets the caster summon undead by killing other creatures. During the duration of this spell, whenever the caster kills a creature, a ghoul rises to feast upon the remains. That ghoul will serve the caster for 8 hours. A ghoul will only be summoned if the caster dealt the killing damage to the creature; if the caster damaged the creature but another party member finished it off, the caster will not get a ghoul. The ghouls' paralyzing touch uses the DC of this spell as cast by the caster. Ghoulish Feast cannot be cast by good characters.~
-@37454     = ~Copy Spell~
-@38454     = ~Copy Spell
+Это заклинание позволяет заклинателю вызывать нежить, убивая других существ. Во время действия этого заклинания каждый раз, когда заклинатель убивает существо, поднимается упырь, чтобы полакомиться его останками. Этот упырь будет служить заклинателю в течение 8 часов. Упырь будет вызван только в том случае, если заклинатель нанес смертельный урон существу; если смертельный урон был нанесен кем-то другим (даже если заклинатель нанёс какой-то урон жертве), упыря не получится. Парализующее прикосновение упыря использует УС этого заклинания. Заклинание "Пир упырей" не может быть прочитано добрыми персонажами.~
+@37454     = ~Скопировать заклинание~
+@38454     = ~Скопировать заклинание
 (Универсальное)
 Уровень: бард 4
 Дальность: обзор колдующего
-Длительность: Permanent until released
-Время чтения:  Free action
+Длительность: постоянная, до использования
+Время чтения:  свободное действие
 Зона действия: особая
 Спасбросок: нет
 
-This spell copies a spell that another creature is casting, allowing the bard to cast that spell once. Copy Spell should be cast on another creature that is casting a spell. The bard gains a special ability that lets them cast that same spell. Once used, the ability is gone until Copy Spell is cast again. Copy Spell cannot copy innate abilities, nor can it copy spells of a higher spell level than the bard can currently cast. Casting Copy Spell itself is a free action, but casting the copied spell could take some time.~
-@37455     = ~Polymorph Self~
-@38455     = ~Polymorph Self
+Это заклинание копирует заклинание, которое произносит другое существо, позволяя барду произнести его один раз. Использовать это заклинание следует на другое существо, которое произносит заклинание. После этого бард получит способность, позволяющую ему произнести то же самое заклинание. После использования способность пропадает, пока "Скопировать заклинание" не будет снова использовано. Это заклинание не может копировать врожденные способности, а также заклинания более высокого уровня, чем те, что бард может прочитать в данный момент. Копирование заклинания само по себе является свободным действием, но произнесение скопированного заклинания занимает нормальное время чтения заклинания.~
+@37455     = ~Превращение себя~
+@38455     = ~Превращение себя
 (Преобразование)
 Уровень: колдун/волшебник 4
 Дальность: колдующий
@@ -4516,12 +4516,12 @@ This spell copies a spell that another creature is casting, allowing the bard to
 Зона действия: колдующий
 Спасбросок: нет
 
-Polymorph Self allows the caster to assume the form of a creature of moderate power. While in another form, the caster has its Strength, Dexterity, Constitution, base Armor Class, resistances, immunities, attacks, and special abilities. The caster can polymorph into one of the following forms:
+Это заклинание позволяет заклинателю принять форму существа средней силы. Находясь в другой форме, заклинатель получает её силу, ловкость, телосложение, базовый класс брони, сопротивления, иммунитеты, атаки и особые способности. Заклинатель может превратиться в одного из следующих существ:
 
-* Fomorian Giant (can throw boulders at long range)
-* Troll (regenerates 1 HP per second)
-* Umber Hulk (nearby enemies must make Will save each round or be confused)
-* Wyvern (can fly, and each hit poisons the target on a failed Fortitude save)~
+* фоморский великан (может метать валуны на дальние расстояния)
+* тролль (регенерирует 1 пункт здоровья в секунду)
+* бурый увалень (ближайшие враги должны делать спасбросок воли каждый раунд или быть сбитыми с толку)
+* виверна (может летать, и каждое попадание отравляет цель при неудачном спасброске стойкости)~
 @37456     = ~Наделить способностью к заклинанию~
 @38456     = ~Наделить способностью к заклинанию
 (Универсальное)
