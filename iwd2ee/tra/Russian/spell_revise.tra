@@ -4142,8 +4142,8 @@
 Спасбросок: нет
 
 Это заклинание призывает силу Аурил, чтобы усилить холодные заклинания заклинателя. На время действия заклинания урон от холода, наносимый заклинателем, увеличивается на 50% или на 100%, если заклинатель 30-го уровня или выше. Кроме того, заклинание "Конус холода" имеет +4 к УС и гораздо большую область действия, как и ледяное дыхание в форме зимнего волка.~
-@35952     = ~Mass Harm~
-@36952     = ~Mass Harm
+@35952     = ~Массовый вред~
+@36952     = ~Массовый вред
 (Некромантия)
 Уровень: священник 9
 Дальность: обзор колдующего
@@ -4152,9 +4152,9 @@
 Зона действия: радиус 20 футов
 Спасбросок: стойкости, отменяет
 
-Mass Harm releases destructive negative energy upon all living enemies in the area of effect. The caster makes ranged touch attacks against each of those creatures; each one that get hit must Save vs. Fortitude or lose all but one hit point. The DC is the same as that of the 6th-level Harm spell. Allied undead in the area of effect are instead healed to full health as per a Heal spell.~
-@35953     = ~Volcanic Eruption~
-@36953     = ~Volcanic Eruption
+Это заклинание выпускает разрушительную негативную энергию на всех живых врагов в зоне действия эффекта. Заклинатель наносит дистанционные атаки касанием по каждому из этих существ. При попадании, каждое из них должно сделать успешный спасбросок стойкости или потерять все пункты здоровья, кроме одного. УС такой же, как у заклинания "Вред" 6-го уровня. Союзная нежить в зоне действия эффекта целиком восстанавливает здоровье, как при использовании заклинания "Исцеление".~
+@35953     = ~Извержение вулкана~
+@36953     = ~Извержение вулкана
 (Проявление)
 Уровень: друид 9
 Дальность: колдующий
@@ -4163,23 +4163,23 @@ Mass Harm releases destructive negative energy upon all living enemies in the ar
 Зона действия: особая
 Спасбросок: реакции, половина урона
 
-This spell triggers a small volcanic eruption centered on the caster. Multiple balls of lava (one per two caster levels) fly through the area in random directions and hit the ground in random spots. Each ball of lava deals 6d6 fire damage (Reflex save for half) to all creatures within 20 feet of its landing point. The caster is completely unharmed by this spell, but their allies are still in danger.~
-@35954     = ~Storm of Vengeance~
-@36954     = ~Storm of Vengeance
+Это заклинание вызывает небольшое извержение вулкана, центр которого приходится на заклинателя. Множество шаров лавы (по одному на каждые два уровня заклинателя) разлетаются по области в случайных направлениях и падают на землю в случайных местах. Каждый шар лавы наносит 6d6 урона огнем (успешный спабросок реакции снижает урон в два раза) всем существам в радиусе 20 футов от его приземления. Заклинатель не получает урона, но его союзники все еще находятся в опасности.~
+@35954     = ~Буря возмездия~
+@36954     = ~Буря возмездия
 (Призывание)
 Уровень: священник 9, друид 9, жрец Талоса 9
 Дальность: обзор колдующего
-Длительность: 4 rounds
+Длительность: 4 раунда
 Время чтения:  12
-Зона действия: 25-foot radius
+Зона действия: радиус 25 футов
 Спасбросок: реакции, половина урона
 
-This spell conjures a divine storm cloud which releases damaging torrents upon creatures in the area of effect. Each round, the nature of the storm is different:
+Это заклинание вызывает штормовое облако божественного гнева, которое обрушивает разрушительные потоки на всех существ в зоне действия. Каждый раунд природа шторма меняется:
 
-1st round: Fire Storm - Deals 1d6 fire damage per level (max 20d6) with a Reflex save for half.
-2nd round: Acid Storm - Deals 3d6 acid damage per round for 1 round per 3 levels (max 24d6 and 8 rounds). A Reflex save halves the number of rounds.
-3rd round: Lightning Storm - Deals 12d10 electricity damage with a Reflex save with +4 DC for half.
-4th round: Ice Storm - Deals 4d6 bludgeoning damage and 4d6 cold damage with no save.~
+1-й раунд: Огненный шторм - наносит 1d6 урона огнем за уровень заклинателя (до максимума 20d6), успешный спасбросок реакции снижает урон вдвое.
+2-й раунд: Кислотный шторм - наносит 3d6 урона кислотой в раунд в течение 1 раунда за каждые 3 уровня заклинателя (до максимума в 24d6 урона за 8 раундов). Успешный спасбросок реакции снижает количество раундов вдвое.
+3-й раунд: Шторм молний - наносит 12d10 урона электричеством, успешный спасбросок реакции с +4 к УС снижает урон вдвое.
+4-й раунд: Ледяной шторм - наносит 4d6 колющего и 4d6 холодного урона без спасброска.~
 @35955     = ~Contingent Resurrection~
 @36955     = ~Contingent Resurrection
 (Призывание)
