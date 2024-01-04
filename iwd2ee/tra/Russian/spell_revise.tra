@@ -4636,41 +4636,41 @@
 Это заклинание позволяет барду хранить заклинание, которое имеет шанс быть автоматически произнесенным каждый раунд, когда бард поет свою бардовскую песню. Сразу после произнесения этого заклинания бард должен прочитать другое заклинание 1-го уровня. Вместо того чтобы сработать, это заклинание будет сохранено (расходуется одно использование заклинания).
 
 Каждый раунд в течение всего времени, если бард поет бардовскую песню, есть шанс (1% за уровень барда), что заклинание будет наложено на каждое существо, на которое распространяется бардовская песня. Даже заклинания с радиусом действия "заклинатель" могут таким образом быть прочитаны на других существ. Потенциально заклинание может быть вызвано несколько раз в течение нескольких раундов.~
-@37655     = ~Void Sound~
-@38655     = ~Void Sound
+@37655     = ~Звук пустоты~
+@38655     = ~Звук пустоты
 (Некромантия)
 Уровень: бард 7
 Дальность: колдующий
 Длительность: мгновенно
 Время чтения:  5
-Зона действия: 30-feet long, 10-foot diameter cone
+Зона действия: конус, с длиной стороны 30 футов и раствором 10 футов
 Спасбросок: стойкости, половина урона
 
-By casting this spell, the caster emits a Void Sound, a horrific sound that can somehow be heard by the deaf and by no one else, and which carries negative energy with it. All deaf creatures in the area of effect take 1d8 magic damage per level (max 30d8). This spell has no effect on undead or constructs.~
+Произнеся это заклинание, заклинатель испускает звук пустоты - ужасающий звук, который могут слышать только глухие, и который несет в себе негативную энергию. Все глухие существа в зоне действия получают 1d8 магического урона за уровень (до максимума в 30d8). Это заклинание не действует на нежить и конструктов.~
 @37656     = ~Посох заклинаний~
-@38656     = ~Spellstaff
+@38656     = ~Посох заклинаний
 (Универсальное)
 Уровень: друид 6, колдун/волшебник 6
-Дальность: Special
-Длительность: 8 hours or until all charges are expended
+Дальность: особая
+Длительность: 8 часов или пока не будут израсходованы все заряды
 Время чтения:  10
 Зона действия: особая
 Спасбросок: нет
 
-This spell lets the caster store a spell in a staff, which casts the spell each time it is used to attack a creature. Immediately after casting this spell, the caster should attempt to cast a 1st-level spell that can target a point or a creature other than the caster (or one that gives the caster a weapon to make a touch attack against a creature). Instead of being cast, this spell will be stored in a Spellstaff, which is wielded by the caster.
+Это заклинание позволяет заклинателю хранить заклинание в посохе, который будет колдовать заклинание каждый раз при атаке. Сразу после произнесения этого заклинания заклинатель должен произнести заклинание 1-го уровня, целью которого может быть точка или существо, отличное от заклинателя (или заклинание, которое дает заклинателю оружие, чтобы совершить атаку касанием). Вместо того чтобы сработать, это заклинание будет храниться в посохе, которым владеет заклинатель.
 
-The Spellstaff has a number of charges equal to the caster's level. Each time the caster attacks with the staff, a charge is used to cast the stored spell on the target of the attack. The stored spell is always cast with a caster level of 10, regardless of the caster's actual level. The staff has a range equal to the range of the spell, deals no physical damage, and automatically hits (unless the stored spell is one like Shocking Grasp that requires an attack roll, in which case the staff requires an attack roll to hit).~
-@37657     = ~Freeze Inanimates~
-@38657     = ~Freeze Inanimates
+Посох имеет количество зарядов, равное уровню заклинателя. Каждый раз, когда заклинатель атакует посохом, один заряд используется для произнесения сохраненного заклинания на цель атаки. Сохраненное заклинание всегда произносится с уровнем заклинателя 10, независимо от фактического уровня заклинателя. Посох имеет радиус действия, равный радиусу действия заклинания, не наносит физического урона и автоматически попадает в цель (если только сохраненное заклинание не является заклинанием, требующим броска атаки, в этом случае посох требует броска атаки для попадания).~
+@37657     = ~Заморозить неживое~
+@38657     = ~Заморозить неживое
 (Преобразование)
 Уровень: колдун/волшебник 6
 Дальность: колдующий
-Длительность: 4 rounds
+Длительность: 4 раунда
 Время чтения:  6
-Зона действия: Entire area
+Зона действия: Вся область
 Спасбросок: нет
 
-A lesser time manipulation spell, Freeze Inanimates stops time for all inanimate objects that are not being worn or carried by a creature. Any arrow, bolt, bullet, or other projectile that is fired or thrown by a creature during the duration of this spell will freeze in midair immediately, as it is no longer being carried. Magical projectiles are also frozen immediately after being conjured. All creatures can still move and do actions while time is stopped. Items can still be picked up from the ground, as the effects of this spell end for them when they are grasped by a creature. Once the spell ends, any projectile that had been frozen by the spell will resume flying toward its target.~
+Малое заклинание манипуляции со временем, "Заморозить неживое" останавливает время для всех неодушевленных предметов, которые не надеты или не переносятся существами. Любая стрела, болт, пуля или другой снаряд, выпущенный или брошенный существом во время действия этого заклинания, немедленно застывает в воздухе, поскольку его больше не переносят. Магические снаряды также застывают сразу после создания. Все существа могут двигаться и совершать действия, пока время остановлено. Предметы по-прежнему можно подбирать с земли, так как действие заклинания заканчивается, когда предметы поднимает какое-либо существо. После окончания действия заклинания любой снаряд, который был заморожен заклинанием, возобновит полет к своей цели.~
 @37751     = ~Стигийский ледяной шторм~
 @38751     = ~Стигийский ледяной шторм
 (Призывание)
@@ -4678,41 +4678,40 @@ A lesser time manipulation spell, Freeze Inanimates stops time for all inanimate
 Дальность: обзор колдующего
 Длительность: мгновенно
 Время чтения:  4
-Зона действия: 20-foot radius
-Saving Throw: Will partial
+Зона действия: радиус 20 футов
+Спасбросок: воли, особый
 
-Stygian Ice Storm is the signature spell of gelugons. When cast, it summons a storm of hellish ice from Stygia, the fifth layer of the Nine Hells. All creatures in the area of effect take 12d6 cold damage with no save, and must make a Will saving throw or be effectively feebleminded for 3 rounds due to the severe memory loss caused by Stygian ice. The caster is unaffected, as are undead creatures.~
-@37752     = ~Mantle~
-@38752     = ~Mantle
+Стигийский ледяной шторм - фирменное заклинание гелугонов. Когда оно произносится, то вызывает бурю адского льда из Стигии, пятого круга Девяти Адов. Все существа в зоне действия получают 12d6 урона холодом без спасброска и должны прокинуть спасбросок воли, иначе на 3 раунда лишатся рассудка из-за потери памяти, вызванной стигийским льдом. На заклинателя это заклинание не действует, как и на нежить.~
+@37752     = ~Мантия~
+@38752     = ~Мантия
 (Отречение)
 Уровень: колдун/волшебник 7
 Дальность: колдующий
-Длительность: 4 rounds
+Длительность: 4 раунда
 Время чтения:  1
 Зона действия: колдующий
 Спасбросок: нет
 
-This spell envelops the caster in a magical cloak of force, which blocks all but the most powerful physical attacks. For 4 rounds, the caster gains damage reduction 15/+3. The damage reduction increases based on the level of the caster:
+Это заклинание окутывает заклинателя магическим плащом силы, который блокирует все физические атаки, кроме самых мощных. На 4 раунда заклинатель получает снижение урона 15/+3. Снижение урона увеличивается в зависимости от уровня заклинателя:
 
-Caster level        Damage Reduction
-14 and below        15/+3
-15 - 19             20/+4
-20 - 24             25/+5
-25 - 29             30/+6
-30 and above        35/+7~
-@37753     = ~Fortune's Favorite~
-@38753     = ~Fortune's Favorite
-(Чародейство) 
+14 уровень и ниже: 15/+3
+15 - 19 уровни: 20/+4
+20 - 24 уровни: 25/+5
+25 - 29 уровни: 30/+6
+30 и выше уровни: 35/+7~
+@37753     = ~Любимец судьбы~
+@38753     = ~Любимец судьбы
+(Чародейство)
 Уровень: бард 7
 Дальность: обзор колдующего
-Длительность: 7 seconds
+Длительность: 7 секунд
 Время чтения:  2
 Зона действия: 1 существо
-Спасбросок: нет 
+Спасбросок: нет
 
-This spell bestows flawless luck upon a creature. For 7 seconds, the recipient gains a +20 bonus to luck. This means that the recipient will deal maximum damage with their attacks, take minimum damage from spells, roll a natural 20 with each attack, and almost always succeed on saving throws.~
-@37755     = ~Lightning Barrage~
-@38755     = ~Lightning Barrage
+Это заклинание наделяет существо абсолютной удачей. В течение 7 секунд цель получает +20 к удаче. Это означает, что цель будет наносить максимальный урон своими атаками, получать минимальный урон от заклинаний, бросать 20 при каждой атаке и почти всегда добиваться успеха при спасбросках.~
+@37755     = ~Шквал молний~
+@38755     = ~Шквал молний
 (Проявление)
 Уровень: колдун/волшебник 7, жрец Талоса 7
 Дальность: обзор колдующего
@@ -4721,48 +4720,48 @@ This spell bestows flawless luck upon a creature. For 7 seconds, the recipient g
 Зона действия: особая
 Спасбросок: реакции, половина урона
 
-This spell fires a flurry of small lightning bolts at the target. One bolt is fired per level, each one dealing 1d8 electrical damage (Reflex save with +4 DC for half) to all creatures in its path. The bolts will bounce off walls, potentially hitting the same creature multiple times per bolt.~
-@37756     = ~Reanimate~
-@38756     = ~Reanimate
+Это заклинание выпускает в цель шквал маленьких молний. За каждый уровень заклинателя выпускается одна молния, наносящая 1d8 электрического урона (при успешном спасброске реакции с +4 к УС урон снижается вдвое) всем существам на своем пути. Молнии отскакивают от стен и могут попасть в одно и то же существо несколько раз за один.~
+@37756     = ~Реанимация~
+@38756     = ~Реанимация
 (Некромантия)
 Уровень: священник 7, колдун/волшебник 7
 Дальность: обзор колдующего
-Длительность: Permanent
+Длительность: постоянная
 Время чтения:  7
-Зона действия: Nearest corpse in 5-ft. radius
+Зона действия: Ближайший труп на расстоянии до 5 футов
 Спасбросок: нет
 
-This spell "resurrects" the target as an undead creature under the caster's control, retaining the stats and spells it had in life. The nearest dead creature to the target point, excluding undead, constructs, most extraplanar creatures, and creatures more than five levels higher than the caster, will be reanimated. It picks up and re-equips items it dropped when it died, unless the party took those items. Creatures that exploded into chunks cannot be reanimated. Reanimate cannot be cast by good characters.~
-@37757     = ~Skeleton Horde~
-@38757     = ~Skeleton Horde
+Это заклинание "воскрешает" цель в виде неживого существа под контролем заклинателя, сохраняя характеристики и заклинания, которыми оно обладало при жизни. Ближайшее к точки - цели заклинание мертвое существо (исключая нежить, конструктов, большинство существ с других планов и существ, и существ, более чем на пять уровней превосходящих кастера) будет оживлено. Оно подбирает и экипирует предметы, которыми оно обладало при жизни, если только эти предметы не были забраны кем-то ещё. Существа, которые разлетелись на куски, не могут быть оживлены. Это заклинание не может быть прочитано добрыми персонажами.~
+@37757     = ~Орда скелетов~
+@38757     = ~Орда скелетов
 (Некромантия) 
 Уровень: священник 7, колдун/волшебник 7
 Дальность: обзор колдующего
-Длительность: 8 hours
+Длительность: 8 часов
 Время чтения:  7
 Зона действия: особая
-Спасбросок: нет 
+Спасбросок: нет
 
-This spell animates 1 skeleton per caster level. The skeletons ignore the summoning limit. Skeleton Horde cannot be cast by good characters.~
-@37758     = ~Spell Sequencer~
-@38758     = ~Spell Sequencer
+Это заклинание оживляет 1 скелет за уровень заклинателя. Скелеты игнорируют ограничение на количество призванных существ. Это заклинание не может быть прочитано добрыми персонажами.~
+@37758     = ~Последовательность~
+@38758     = ~Последовательность
 (Универсальное)
-Уровень: бард 7, колдун/волшебник 7, Oghma 6
-Дальность: Special
-Длительность: Permanent until triggered
+Уровень: бард 7, колдун/волшебник 7, жрец Огмы 6
+Дальность: особая
+Длительность: постоянная до срабатывания
 Время чтения:  15
 Зона действия: особая
 Спасбросок: нет
 
-Spell Sequencer lets the caster store three spells to be released later on. After casting Spell Sequencer, the caster must attempt to cast up to three spells of 4th-level or lower. Instead of being cast, those spells are stored in the sequencer (expending one use of each spell). The caster then gains the innate ability "Release Spell Sequencer." Using that ability immediately casts all three spells on the target of the ability.
+Это заклинание позволяет заклинателю сохранить три заклинания, чтобы выпустить их позже. После применения этого заклинания заклинатель должен произнести до трёх заклинаний 4-го уровня или ниже. Вместо того чтобы сработать, эти заклинания тратятся и сохраняются в последовательности. После этого заклинатель получает способность "Выпустить последовательность". При использовании этой способности все три заклинания немедленно накладываются на цель способности.
 
-Spells with a range of "Caster" will be cast on the caster, regardless of the target of the ability. Spells with limited range will fail if the target is outside the spell's range.~
+Заклинания с дальностью "Колдующий" будут наложены на заклинателя, независимо от цели способности. Заклинания с ограниченной дальностью не сработают, если цель находится за пределами дальности заклинания.~
 @37759     = ~Симпатия~
 @38759     = ~Симпатия
 (Чародейство)
 Уровень: бард 6, друид 8, колдун/волшебник 7
 Дальность: обзор колдующего
-Длительность: 1 round/level
+Длительность: 1 раунд/уровень
 Время чтения:  7
 Зона действия: особая
 Спасбросок: воли, отменяет
@@ -5090,7 +5089,7 @@ Similar to the energy drain of a wight or wraith, except much more powerful, thi
 Зона действия: особая
 Спасбросок: нет
 
-Это заклинание могут применять только волшебники не специализирующиеся ни в одной из школ магии. Оно позволяет заклинателю сохранить восемь заклинаний, чтобы выпустить их позже. После применения этого заклинания заклинатель должен попытаться произнести до восьми заклинаний 7-го уровня или ниже, каждое из которых должно относиться к разной школе магии. Вместо того чтобы быть произнесенными, эти заклинания тратятся и сохраняются в последовательности. После этого заклинатель получает способность "Выпустить эклектическую последовательность". При использовании этой способности все восемь заклинаний немедленно накладываются на цель способности.
+Это заклинание могут применять только волшебники не специализирующиеся ни в одной из школ магии. Оно позволяет заклинателю сохранить восемь заклинаний, чтобы выпустить их позже. После применения этого заклинания заклинатель должен прочитать до восьми заклинаний 7-го уровня или ниже, каждое из которых должно относиться к разной школе магии. Вместо того чтобы сработать, эти заклинания тратятся и сохраняются в последовательности. После этого заклинатель получает способность "Выпустить эклектическую последовательность". При использовании этой способности все восемь заклинаний немедленно накладываются на цель способности.
 
 Заклинания с дальностью "Колдующий" будут наложены на заклинателя, независимо от цели способности. Заклинания с ограниченной дальностью не сработают, если цель находится за пределами дальности заклинания.~
 @37962     = ~Желание~
