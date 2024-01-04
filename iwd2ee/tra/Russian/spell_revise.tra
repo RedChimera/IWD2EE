@@ -4532,110 +4532,110 @@
 Зона действия: особая
 Спасбросок: нет
 
-By casting Imbue with Spell Ability, the caster grants another creature the ability to cast one of the caster's spells once. Immediately after casting this spell, the caster must attempt to cast another spell of any level, which must be an abjuration, conjuration or divination spell. Instead of being cast, that spell is stored in the creature on which Imbue with Spell Ability was just cast (consuming one use of the spell). That creature gains a special ability that lets them cast the spell once. If unused, that ability disappears after 8 hours.~
-@37457     = ~Chaos Cast~
-@38457     = ~Chaos Cast
+Произнеся это заклинание, колдующий наделяет другое существо способностью однократно произнести одно из его заклинаний. Сразу же после произнесения этого заклинания, заклинатель должен прочитать другое заклинание любого уровня, относящееся к школам отречения, призывания или прорицания. Вместо того чтобы сработать, это заклинание сохраняется в существе, которого наделяют способностью к заклинанию (расходуется одно использование заклинания). Это существо получает особую способность, которая позволяет ему произнести заклинание один раз. Если эта способность не используется, она исчезает через 8 часов.~
+@37457     = ~Хаотическое заклинание~
+@38457     = ~Хаотическое заклинание
 (Универсальное)
 Уровень: колдун/волшебник 4
 Дальность: обзор колдующего
-Длительность: Special
+Длительность: особая
 Время чтения:  1
 Зона действия: особая
 Спасбросок: особый
 
-This spell casts a random wizard spell on the target creature, which could be a spell of any level between 1 and 8. The nature of the spell depends on the target. If the target is an enemy, they will receive a harmful spell, but if the target is an ally, they will receive a beneficial spell. Targeting restrictions are obeyed (a spell that only affects the caster will not be rolled unless the target is the caster).
+Это заклинание накладывает на целевое существо случайное заклинание волшебника, которое может быть заклинанием любого уровня от 1 до 8. Характер заклинания зависит от цели. Если цель - враг, она получит вредоносное заклинание, а если союзник - полезное. Ограничения по цели соблюдаются (заклинание, воздействующее только на заклинателя, не будет прочитано, если целью не является сам заклинатель).
 
-The main advantage of Chaos Cast is that the random spell is more likely to be higher than level 4 than lower (since there are more levels above level 4 than below). The disadvantage is that the spell might not be useful in the current situation.~
-@37551     = ~Steal Spells~
-@38551     = ~Steal Spells
+Основное преимущество этого заклинания состоит в том, что случайное заклинание с большей вероятностью будет выше 4-го уровня, чем ниже (так как выше 4-ого уровня находятся уровни заклинаний 5, 6, 7 и 8, тогда как ниже только уровни 1, 2 и 3). Недостатком является то, что заклинание может оказаться бесполезным в текущей ситуации.~
+@37551     = ~Украсть заклинания~
+@38551     = ~Украсть заклинания
 (Преобразование)
-Уровень: бард 5, колдун/волшебник 5, Mask 5
+Уровень: бард 5, колдун/волшебник 5, жрец Маска 5
 Дальность: обзор колдующего
 Длительность: мгновенно
 Время чтения:  5
 Зона действия: 1 существо
 Спасбросок: нет
 
-This spell steals memorized spells from the target and grants their spell slots to the caster. The caster makes a Pick Pockets roll, adding their caster level (and any normal bonuses to Pick Pockets). For every 10 points of the total roll, the target loses one memorized spell of 5th-level or lower, and the caster regains one spell of 4th-level or lower (prioritizing the highest-level spells that can be lost or regained this way). There is no Saving Throw, though Spell Resistance may prevent the theft.~
+Это заклинание крадет у цели запомненные заклинания и отдает их слоты заклинаний заклинателю. Заклинатель делает бросок навыка "Карманная кража", добавляя свой уровень заклинателя (и любые обычные бонусы навыка "Карманная кража"). За каждые 10 пунктов суммарного броска цель теряет одно запомненное заклинание 5-го уровня или ниже, а заклинатель восстанавливает одно заклинание 4-го уровня или ниже (приоритет отдается самым высокоуровневым заклинаниям, которые можно потерять или восстановить таким образом). Спасбросок отсутствует, хотя сопротивление магии может предотвратить кражу.~
 @37552     = ~Призрачная форма~
 @38552     = ~Призрачная форма
 (Преобразование)
 Уровень: бард 5, священник 5, колдун/волшебник 5
 Дальность: прикосновение
-Длительность: 1 round/level
+Длительность: 1 раунд/уровень
 Время чтения:  5
 Зона действия: 1 существо
 Спасбросок: нет
 
-This spell turns the recipient incorporeal for a limited period of time. While incorporeal, the character gets damage reduction 5/+1, and they have a 50% chance to ignore any instance of physical damage. They are still tangible enough to attack and cast spells. The recipient can also move through walls while incorporeal. Simply click on a point to move to, and the character will float to that point, bypassing normally impassable obstacles in the way.~
+Это заклинание превращает получателя в бесплотного на ограниченный период времени. В бесплотном состоянии персонаж получает снижение урона 5/+1, и у него есть 50% шанс игнорировать любой физический урон. Он все еще достаточно осязаем, чтобы атаковать и произносить заклинания. Получатель также может перемещаться сквозь стены, находясь в бесплотном состоянии. Просто нажмите на точку, в которую нужно переместиться, и персонаж поплывет к ней, обходя обычно непроходимые препятствия на пути.~
 @37553     = ~Отмотать время~
 @38553     = ~Отмотать время
 (Преобразование)
 Уровень: бард 5, колдун/волшебник 5
 Дальность: колдующий
-Длительность: -2 rounds
+Длительность: -2 раунда
 Время чтения:  0
 Зона действия: колдующий
 Спасбросок: нет
 
-This spell briefly reverses time for the caster, reverting them to the state they were in two rounds ago. The caster's HP is restored to what it was two rounds ago, as is their location in the area. The caster also regains the magical effects they had two rounds ago, while losing effects gained in the past two rounds (including harmful status effects). Rewind Time does not restore memorized spells expended in the last two rounds.~
-@37554     = ~Wall of Force~
-@38554     = ~Wall of Force
+Это заклинание позволяет немного отмотать время вспять, возвращая заклинателя в то состояние, в котором он находился два раунда назад. Пункты здоровья заклинателя восстанавливаются до уровня, на котором они были был два раунда назад, как и его местоположение в пространстве. Заклинатель также восстанавливает эффекты, которые были у него два раунда назад, но теряет эффекты, полученные за последние два раунда (включая вредоносные эффекты состояний). Это заклинание не восстанавливает запомненные заклинания, израсходованные за последние два раунда.~
+@37554     = ~Силовая стена~
+@38554     = ~Силовая стена
 (Отречение)
 Уровень: колдун/волшебник 5, жрец Селуны 5
 Дальность: обзор колдующего
-Длительность: 5 rounds
+Длительность: 5 раунда
 Время чтения:  7
-Зона действия: 20-foot long, 5-foot wide wall
+Зона действия: стена 20 футов длиной и 5 футов шириной
 Спасбросок: нет
 
-This spell creates a wall of magical force, which stays for 5 rounds. Creatures cannot pass through the wall, though they can still fly over it, teleport past it, or float through it while incorporeal. The wall cannot be dispelled. Only one Wall of Force can be active at a time.~
-@37555     = ~Second Chance~
-@38555     = ~Second Chance
+Это заклинание создает магическую силовую стену, которая стоит в течение 5 раундов. Существа не могут пройти сквозь стену, но могут перелететь через нее, телепортироваться или проплыть сквозь нее, будучи бесплотными. Стену нельзя развеять. Одновременно может быть активна только одна силовая стена.~
+@37555     = ~Второй шанс~
+@38555     = ~Второй шанс
 (Чародейство)
 Уровень: бард 5, священник 6
 Дальность: прикосновение
-Длительность: 8 hours or until triggered
+Длительность: 8 часов или пока не сработает
 Время чтения:  9
 Зона действия: 1 существо
 Спасбросок: нет
 
-This spell gives the target the miraculous ability to avoid death once. The next time the target would die in the next 8 hours, they are instead reduced to one hit point.~
-@37652     = ~Isaac's Greater Missile Storm~
-@38652     = ~Isaac's Greater Missile Storm
+Это заклинание наделяет цель чудесной способностью один раз избежать смерти. В следующий раз, когда цель умрет в течение следующих 8 часов, её здоровье уменьшится до одного пункта здоровья вместо этого.~
+@37652     = ~Большая буря стрел Исаака~
+@38652     = ~Большая буря стрел Исаака
 (Проявление)
 Уровень: колдун/волшебник 6
 Дальность: обзор колдующего
 Длительность: мгновенно
 Время чтения:  4
 Зона действия: 1 существо
-Спасбросок: нет 
+Спасбросок: нет
 
-This spell creates a large number of projectiles akin to those created by the Magic Missile spell, which hit a single target. Each missile deals 1d4+1 magic damage with no saving throw. The spell fires one missile per level of the wizard.~
+Это заклинание создает большое количество снарядов, похожих на те, что создаются заклинанием "Волшебная стрела", которые попадают в цель заклинания. Каждая ракета наносит 1d4+1 магического урона без спасброска. Заклинание выпускает один снаряд за уровень волшебника.~
 @37653     = ~Катящийся валун~
 @38653     = ~Катящийся валун
 (Призывание)
 Уровень: друид 6, колдун/волшебник 6
-Дальность: Special
+Дальность: особая
 Длительность: мгновенно
 Время чтения:  4
-Зона действия: All creatures in path of boulder
-Saving Throw: Reflex partial
+Зона действия: Все существа на пути валуна
+Спасбросок: реакции, особый
 
-Boulder Roll creates a large boulder, which rolls forward from the caster, crushing creatures in its path, until it hits a wall. Creatures hit take 12d8 bludgeoning damage and are knocked down for 2 rounds. A successful Reflex save halves the damage and prevents one from being knocked down. The boulder always travels due south from the caster.~
-@37654     = ~Songcasting~
-@38654     = ~Songcasting
+Это заклинание создает большой валун, который катится от заклинателя, сокрушая существ на своем пути, пока не врежется в стену. Попавшие под удар существа получают 12d8 дробящего урона и сбиваются с ног на 2 раунда. Успешный спасбросок реакции уменьшает урон вдвое и предотвращает сбивание с ног. Валун всегда движется на юг от заклинателя.~
+@37654     = ~Заклинание песней~
+@38654     = ~Заклинание песней
 (Универсальное)
 Уровень: бард 8
-Дальность: Special
-Длительность: 15 rounds
+Дальность: Особая
+Длительность: 15 раундов
 Время чтения:  10
 Зона действия: особая
 Спасбросок: нет
 
-Songcasting lets the bard store a spell, which has a chance of being cast automatically each round that the bard sings their bard song. Immediately after casting this spell, the bard should attempt to cast another spell of 1st-level. Instead of being cast, this spell will be stored (expending one use of the spell).
+Это заклинание позволяет барду хранить заклинание, которое имеет шанс быть автоматически произнесенным каждый раунд, когда бард поет свою бардовскую песню. Сразу после произнесения этого заклинания бард должен прочитать другое заклинание 1-го уровня. Вместо того чтобы сработать, это заклинание будет сохранено (расходуется одно использование заклинания).
 
-Each round for the duration, if the bard is singing a bard song, there is a chance (1% per bard level) that the spell will be cast on each creature the bard song affects. Even spells with a range of Caster can target other creatures this way. The spell can potentially be triggered multiple times over many rounds.~
+Каждый раунд в течение всего времени, если бард поет бардовскую песню, есть шанс (1% за уровень барда), что заклинание будет наложено на каждое существо, на которое распространяется бардовская песня. Даже заклинания с радиусом действия "заклинатель" могут таким образом быть прочитаны на других существ. Потенциально заклинание может быть вызвано несколько раз в течение нескольких раундов.~
 @37655     = ~Void Sound~
 @38655     = ~Void Sound
 (Некромантия)
