@@ -129,41 +129,41 @@
  Заклинание: Может применять заклинание "Святилище" (как заклинатель 30-ого уровня) трижды в день
 Вес: 1 фунт~
 //@10048    = ~Flame Dance Talisman~
-@10049    = ~Fire can be the bringer of life, or the harvester of death. With the Flame Dance Talisman, both scenarios are true. Crafted by an unknown, yet clever sorcerer, the Flame Dance Talisman gave its wearer added protection against all sorts of melee attacks and had the power to launch a fireball three times per day at would-be attackers.
+@10049    = ~Огонь может дарить жизнь и отнимать её - это верно и для Талисмана пляски огня, созданного каким-то хитроумным колдуном. Талисман даёт своему владельцу дополнительную защиту от всех атак в ближнем бою, а также даёт возможность один раз в день выпустить во врагов огненный шар.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Generic Armor Bonus: +1
-Special:
- All fire damage dealt by the wearer is increased by 15%
- Spell Power:  Can cast the spell Fireball (at level 10) three times per day
-Weight: 1 lb.~
+Класс защиты: +1 (общий)
+Особенности:
+ Весь урон от огня, наносимый владельцем амулета, увеличивается на 15%.
+ Заклинание: три раза в день может использовать заклинание "Огненный шар" (как заклинатель 10-ого уровня)
+Вес: 1 фунт~
 //@10050    = ~Sunfire Talisman~
-@10051    = ~Fire can be the bringer of life, or the harvester of death. With the Sunfire Talisman, both scenarios are true. Crafted by an unknown, yet clever sorcerer, the Sunfire Talisman gave its wearer added protection against all sorts of melee attacks and had the power to ignite a sunfire fireball three times per day at surrounding would-be attackers. In addition, if the would be attackers tried to turn the tables and attack the sorcerer with their own fire weapons, the Sunfire Talisman would grant its wearer added resistance to fire.
+@10051    = ~Огонь может дарить жизнь и отнимать её - это верно и для Талисмана солнечного света, созданного каким-то хитроумным колдуном. Талисман даёт своему владельцу дополнительную защиту от всех атак в ближнем бою, а также даёт возможность один раз в день выпустить во врагов шар солнечного огня. А если нападающие сами попытаются использовать огонь, талисман придаст своему владельцу защиту и от него.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Generic Armor Bonus: +3
-Special:
- Resistance: 30/-  Fire Resistance
- All fire damage dealt by the wearer is increased by 30%
- Spell Power:  Can instantly cast the spell Sunfire (at level 15, save DC 40) three times per day
-Weight: 1 lb.~
+Класс защиты: +3 (общий)
+Особенности:
+ Сопротивление: 30/- сопротивление огню
+ Весь урон от огня, наносимый владельцем амулета, увеличивается на 30%.
+ Заклинание: три раза в день может использовать заклинание "Солнечный огонь" (как заклинатель 15-ого уровня с УС 40)
+Вес: 1 фунт~
 //@10052    = ~Gohoin's Charm~
-@10053    = ~The kobold explorer Gohoin wore this lucky charm with him throughout most of his life. A rarity among kobolds, Gohoin was both brave and clever. He worked to undermine the efforts of the dwarves against his people for twenty years before being slain in a dwarven rush on his tribe's home settlement. As luck would have it, the charm did not fall into the hands of the dwarves, but bounced away into an underground river. It was discovered decades later by a goblin hunter who wore it for the rest of his days. The nameless goblin is believed to have died somewhere in the Spine of the World mountains.
+@10053    = ~Кобольд-исследователь Гохоин носил этот талисман с собой в течение почти всей своей жизни. Гохоин был одновременно храбрым и умным, что является редкостью среди кобольдов. В течение двадцати лет он делал всё, чтобы помешать дварфам, уничтожить его народ, прежде чем был убит во время набега дварфов на его собственное поселение. По воле удачи, этот амулет не попал в руки дварфов, а упал в подземную реку. Десятилетиями позже он был обнаружен гоблином-охотником, который носил его до конца своих дней. Считается, что тот неизвестный гоблин умер где-то в горах Хребта Мира.
 
-STATISTICS:
- 
-Generic Armor Bonus: +2 
-Luck: +1
-Weight: 0 lb.~
+ПАРАМЕТРЫ:
+
+Класс защиты: +2 (общий)
+Удача: +1
+Вес: 0 фунтов~
 //@10054    = ~Gohoin's Secret Charm~
-@10055    = ~The kobold explorer Gohoin wore this lucky charm with him throughout most of his life. A rarity among kobolds, Gohoin was both brave and clever. He worked to undermine the efforts of the dwarves against his people for twenty years before being slain in a dwarven rush on his tribe's home settlement. As luck would have it, the charm did not fall into the hands of the dwarves, but bounced away into an underground river. It was discovered decades later by a goblin hunter who wore it for the rest of his days. The nameless goblin is believed to have died somewhere in the Spine of the World mountains.
- 
-Generic Armor Bonus: +3
-Luck: +1
-Spell Power: Can cast the spell Improved Invisibility (at level 20) 1/Day
-Weight: 0 lb.~
+@10055    = ~Кобольд-исследователь Гохоин носил этот талисман с собой в течение почти всей своей жизни. Гохоин был одновременно храбрым и умным, что является редкостью среди кобольдов. В течение двадцати лет он делал всё, чтобы помешать дварфам, уничтожить его народ, прежде чем был убит во время набега дварфов на его собственное поселение. По воле удачи, этот амулет не попал в руки дварфов, а упал в подземную реку. Десятилетиями позже он был обнаружен гоблином-охотником, который носил его до конца своих дней. Считается, что тот неизвестный гоблин умер где-то в горах Хребта Мира.
+
+Класс защиты: +3 (общий)
+Удача: +1
+Заклинание: Может применять заклинание "Улучшенная невидимость" (как заклинатель 20-ого уровня) раз в день
+Вес: 0 фунтов~
 //@10056    = ~Mirabel's Pendant~
 @10057    = ~Worn by Mirabel, a Red Wizard diviner sent to kill the would-be saviors of Icewind Dale, this beautiful pendant displays an ivory cameo of a beautiful bald woman. The cameo is held in place with an intricate silver frame that is, in turn, fastened to the neck with a burgundy ribbon choker. Engraved on the back of the frame are the Mulhorandi letters for "A.L."
 
