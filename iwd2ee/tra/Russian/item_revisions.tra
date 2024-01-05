@@ -222,39 +222,43 @@
 Мудрость: +6
 Вес: 1 фунт~
 //@10068    = ~Cleansing Medallion~
-@10069    = ~This circular silver medallion allows a good-aligned priest or paladin to draw upon the strength of their faith to heal the sick and injured. It does not appear to be tied to any faith or religion, but it does radiate an aura of well-being and comfort. 
+@10069    = ~Этот круглый серебряный медальон позволяет паладину или жрецу с добрым мировоззрением использовать силу своей веры для исцеления больных и раненых. Этот медальон, похоже, не связан с каким-то определённым божеством, но излучает ауру благожелательности и успокоения.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-The wearer's healing spells and abilities heal an additional 5 hit points
-Spell Power: Casts Cure Light Wounds (at level 10) once per day
-Weight: 0 lb.~
-@10070    = ~Healing Medallion~
-@10071    = ~This circular silver medallion allows a good-aligned priest or paladin to draw upon the strength of their faith to heal the sick and injured. It does not appear to be tied to any faith or religion, but it does radiate an aura of well-being and comfort.
+Особенности:
+ Заклинание: Сотворение заклинания "Исцеление лёгких ран" (как заклинатель десятого уровня) раз в день
+ Лечебные заклинания и способности владельца исцеляют дополнительно 5 пунктов здоровья
+Вес: 0 фунтов~
+@10070    = ~Медальон исцеления~
+@10071    = ~Этот круглый серебряный медальон позволяет паладину или жрецу с добрым мировоззрением использовать силу своей веры для исцеления больных и раненых. Этот медальон, похоже, не связан с каким-то определённым божеством, но излучает ауру благожелательности и успокоения.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-The wearer's healing spells and abilities heal an additional 20 hit points
-Spell Power: Casts Cure Critical Wounds (at level 15) once per day
-Weight: 0 lb.~
+Особенности:
+ Заклинание: позволяет творить заклинание "Исцеление критических ран" раз в день
+ Лечебные заклинания и способности владельца исцеляют дополнительно 20 пунктов здоровья
+Вес: 0 фунтов~
 //@10072    = ~Houndstooth Collar~
-@10073    = ~This filthy enchanted collar was stripped from the neck of Vghotan's dead worg and bears the crude marks of goblin sorcery. When worn around the neck, the wearer gains the ability to call upon the strength and ferocity of a worg, turning his hands into claws and raking opponents for tremendous damage. 
+@10073    = ~Этот грязный зачарованный ошейник был снят с мёртвого ворга, принадлежавшего Вгхотану. Грубые гоблинские знаки на ошейнике свидетельствуют о том, что он зачарован. Надев ошейник на шею, владелец обретает способность призывать силу и свирепость ворга, превращая свои руки в когтистые лапы для нанесения противникам огромного урона.
 
-STATISTICS:
- 
-Wearer Immune to Panic and Fear
-Spell Power: Can cast the spell Beast Claw (at level 10) 1/Day.
-Weight: 0 lb.~
+ПАРАМЕТРЫ:
+
+Особенности:
+ Оберёг: Иммунитет к эффектам паники и страха
+ Заклинание: Может использовать заклинание "Коготь зверя" (как заклинатель десятого уровня) раз в день.
+Вес: 0 фунтов~
 //@10074    = ~Vghotan's Band~
-@10075    = ~This filthy enchanted collar was stripped from the neck of Vghotan's dead worg and bears the crude marks of goblin sorcery. When worn around the neck, the wearer gains the ability to call upon the strength and ferocity of a worg, turning his hands into claws and raking opponents for tremendous damage. 
+@10075    = ~Этот грязный зачарованный ошейник был снят с мёртвого ворга, принадлежавшего Вгхотану. Грубые гоблинские знаки на ошейнике свидетельствуют о том, что он зачарован. Надев ошейник на шею, владелец обретает способность призывать силу и свирепость ворга, превращая свои руки в когтистые лапы для нанесения противникам огромного урона.
 
-STATISTICS:
- 
-Strength:  +3
-Constant Effect: User is under effect of the spell Freedom of Movement while equipped
-Wearer Immune to Panic and Fear
-Spell Power: Can cast the spell Beast Claw (at level 30) 1/Day.
-Weight: 0 lb.~
+ПАРАМЕТРЫ:
+
+Особенности:
+ Сила: +3
+ Постоянный эффект: если ошейник надет, то на пользователя постоянно действует эффект заклинания "Свобода действий"
+ Оберёг: Иммунитет к эффектам паники и страха
+ Заклинание: Может использовать заклинание "Коготь зверя" (как заклинатель 30-ого уровня) раз в день.
+Вес: 0 фунтов~
 //@10076    = ~Incandescent Blue Ioun Stone~
 @10077    = ~This magical stone was crafted long ago somewhere beyond the astral plane, though its exact age is hard to discern. The stone was made by a githzerai craftsman named Bashenee for a great monk of the githzerai race. This unnamed monk died in battle with githyanki foes and the stone drifted among their race for years. Somehow, the stone eventually was given to Oinchack'olp, a mind flayer, who kept it as his prized possession.
 
