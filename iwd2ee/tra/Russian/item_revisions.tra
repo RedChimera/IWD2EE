@@ -114,31 +114,20 @@
 ПАРАМЕТРЫ:
 
 Особенности:
- "Штормовые" заклинания (Ливень, Огненная буря, Буря возмездия, Ледяной шторм, Кислотная буря и Stygian Ice Storm), не наносят вреда союзникам, когда их применяет владелец.
- Заклинание: Может применять заклинание "Святилище" дважды в день
-Вес: 1 фунт~*/
-In the howling north of Icewind Dale, it can be difficult to steady oneself before battle... or even keep one's wit when surrounded by foes. These simple medallions carry a minor blessing that allows a soldier to achieve a measure of peace even in the middle of combat, allowing him to steady himself to face the trials ahead. These medallions are highly prized by soldiers that deal with the Uthgardt, especially when trading turns sour, and it seems blood is about to be shed. 
-
-When the goblin horde sacked Bremen, this mysterious item was seized from a dead merchant by one of the goblin shamans, who could find no use for it. The medallion was carried for several leagues until the amulet slipped from the shaman's possession and was lost amongst the snows, only to resurface here. 
-
-STATISTICS:
-
-Special:
- Storm-based spells (Rainstorm, Fire Storm, Storm of Vengeance, Ice Storm, Acid Storm, and Stygian Ice Storm) do not harm allies when cast by the wearer
- Spell Power:  Can cast the spell Sanctuary (at level 15) twice per day
-Weight: 1 lb.~
+ "Штормовые" заклинания (Ливень, Огненная буря, Буря возмездия, Ледяной шторм, Кислотная буря и Стигийская ледяная буря), не наносят вреда союзникам, когда их применяет владелец этого медальона.
+ Заклинание: Может применять заклинание "Святилище" (как заклинатель 15-ого уровня) дважды в день
+Вес: 1 фунт~
 //@10046    = ~Calm Before the Storm~
-@10047    = ~Among the many treasures unique to the North, are medallions called the Eyes of the Storm. These simple medallions carry a minor blessing that allows a soldier to achieve a measure of peace even in the middle of combat, allowing him to steady himself to face the trials ahead. These medallions are highly prized by soldiers that deal with the Uthgardt, especially when trading turns sour, and it seems blood is about to be shed. 
+@10047    = ~Среди многих сокровищ, встречающихся только на Севере, есть медальоны, называемые Глазами Бури. Эти простые медальоны несут на себе небольшое благословение, которое позволяет солдату обрести спокойствие даже в разгар боя, давая ему шанс оставаться стойким перед лицом будущих испытаний. Эти медальоны высоко ценятся солдатами, имеющими дело с Утгардтом, особенно когда торговля заканчивается неудачей, и кажется, что вот-вот прольётся кровь.
 
-This medallion, however, predates them all, carrying additional enchantments that allow a warrior to keep not only his wits, but his will, when fighting barbarians, goblins, or worse, creatures of the North that attempt to break a man's will. Creatures that attempt to cage the mind of an opponent wearing this medallion find their best spells and charms simply steam off the wearer's mind like water off a polar worm's back.
+Однако, этот медальон появился раньше прочих, неся на себе дополнительные чары, позволяющие воину сохранять не только разум, но и волю в сражениях с варварами, гоблинами или самыми ужасными существами Севера, пытающимися эту волю сломить. Такие существа, при попытке сковать разум носящего этот медальон, обнаружат, что самые лучшие их заклинания и чары попросту испаряются из разума воина, как вода со спины полярного червя.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Special:
- Storm-based spells (Rainstorm, Fire Storm, Storm of Vengeance, Ice Storm, Acid Storm, and Stygian Ice Storm) do not harm allies when cast by the wearer
- Constant Effect: User under the effects of the spell Mind Blank while equipped
- Spell Power:  Can cast the spell Sanctuary (at level 30) three times per day
-Weight: 1 lb.~
+Особенности:
+ "Штормовые" заклинания (Ливень, Огненная буря, Буря возмездия, Ледяной шторм, Кислотная буря и Стигийская ледяная буря), не наносят вреда союзникам, когда их применяет владелец этого медальона.
+ Заклинание: Может применять заклинание "Святилище" (как заклинатель 30-ого уровня) трижды в день
+Вес: 1 фунт~
 //@10048    = ~Flame Dance Talisman~
 @10049    = ~Fire can be the bringer of life, or the harvester of death. With the Flame Dance Talisman, both scenarios are true. Crafted by an unknown, yet clever sorcerer, the Flame Dance Talisman gave its wearer added protection against all sorts of melee attacks and had the power to launch a fireball three times per day at would-be attackers.
 
