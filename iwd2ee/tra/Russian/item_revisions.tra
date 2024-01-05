@@ -165,61 +165,62 @@
 Заклинание: Может применять заклинание "Улучшенная невидимость" (как заклинатель 20-ого уровня) раз в день
 Вес: 0 фунтов~
 //@10056    = ~Mirabel's Pendant~
-@10057    = ~Worn by Mirabel, a Red Wizard diviner sent to kill the would-be saviors of Icewind Dale, this beautiful pendant displays an ivory cameo of a beautiful bald woman. The cameo is held in place with an intricate silver frame that is, in turn, fastened to the neck with a burgundy ribbon choker. Engraved on the back of the frame are the Mulhorandi letters for "A.L."
+@10057    = ~Эта прекрасная подвеска, которую носила Мирабель, красная волшебница-прорицательница, посланная убить потенциальных спасителей Долины Ледяного Ветра, имеет камею из слоновой кости, изображающую красивую обнажённую женщину. Камея удерживается на месте при помощи замысловатой серебряной оправы, которая, в свою очередь, крепится на шее с помощью бордовой ленточки. На задней стороне обрамления выгравированы Мулхорандские буквы "А.Л."
 
-STATISTICS:
- 
-Increased Duration: Wearer's arcane spells last 25% longer
-Weight: 0 lb.~
+ПАРАМЕТРЫ:
+
+Увеличенная продолжительность: Время действия заклинаний носителя подвески на 25% дольше
+Вес: 0 фунтов~
 //@10058    = ~Mirabel's Maleficent Pendant~
-@10059    = ~Worn by Mirabel, a Red Wizard diviner sent to kill the would-be saviors of Icewind Dale, this beautiful pendant displays an ivory cameo of a beautiful bald woman. The cameo is held in place with an intricate silver frame that is, in turn, fastened to the neck with a burgundy ribbon choker. Engraved on the back of the frame are the Mulhorandi letters for "A.L."
+@10059    = ~Эта прекрасная подвеска, которую носила Мирабель, красная волшебница-прорицательница, посланная убить потенциальных спасителей Долины Ледяного Ветра, имеет камею из слоновой кости, изображающую красивую обнажённую женщину. Камея удерживается на месте при помощи замысловатой серебряной оправы, которая, в свою очередь, крепится на шее с помощью бордовой ленточки. На задней стороне обрамления выгравированы Мулхорандские буквы "А.Л."
 
-STATISTICS:
- 
-Increased Duration: Wearer's arcane spells last 50% longer
-Spell Power: Can cast the spell Malison (at level 30) 1/Day
-Weight: 0 lb.~
+ПАРАМЕТРЫ:
+
+Увеличенная продолжительность: Время действия заклинаний носителя подвески на 50% дольше
+Заклинание: Может применять заклинание "Проклятие" (как заклинатель 30-ого уровня) раз в день
+Вес: 0 фунтов~
 //@10060    = ~Snow Leopard Charm~
-@10061    = ~Shamans of many barbarian clans have long looked upon the snow leopard as one of the most graceful and swift hunters of the frozen lands. Many times the warriors of these clans mimic the movements of the large, white cats during fierce combat. In addition, the barbarian shamans would sometimes create spells that would temporarily imbue the warriors with the dexterity of the snow leopards. However, since these spells were temporary, often times the spell would wear off at inopportune times.
+@10061    = ~Шаманы многих варварских кланов издавна считают снежного барса одними из самых ловких и искусных охотников замёрзших земель. Варвары северных племён подражают движениям барса в бою, а их шаманы создают заклинания, позволяющие воинам обрести ловкость этих огромных белых хищников. Однако такие чары не вечны и часто рассеиваются в самый неподходящий момент.
 
-It is said, however, that a group of barbarian shamans once congregated deep within the Dales to find a way to better harness the swift agility of the snow leopard. For nearly a year the shamans remained out of sight from their home clans, busily focusing their attentions towards the magic of the snow leopard. Then one day, the shamans returned to their respective clans, each holding a small necklace made of silver, with a pendant that resembled a snow leopard's paw. The shamans gave this pendant to their strongest warrior of each clan. Once placed around the neck of the warrior, the dexterity of the snow leopard filled their powerful bodies. From then on, the Snow Leopard Charm, as it became known, would become one of the most prized artifacts within barbarian clans. Only the mightiest warriors wore the amulet, and it became the goal of all young warriors to one day be adorned with the Snow Leopard Charm.
-   
-STATISTICS:
+Говорят, что однажды группа шаманов варваров собралась где-то в одном из дальних уголков Долин, чтобы найти способ лучше использовать ловкость снежного барса. Почти целый год шаманы изучали магию движений этого зверя, и однажды каждый из них вернулся в своё племя, держа в руках серебряный амулет, напоминавший лапу барса, чтобы вручить его самому сильному воину племени. Такой амулет "Снежного барса" (как их стали называть), надетый на шею, придаёт своему владельцу ловкость снежного барса. Подобные амулеты достаются только сильнейшим воинам клана, и все юные варвары мечтают о том, чтобы когда-нибудь заслужить право на ношение этого сокровища.
 
-Special:
- Dexterity: +4 bonus
-Weight: 1 lb.~
+ПАРАМЕТРЫ:
+
+Особенности:
+ Ловкость: +4
+Вес: 1 фунт~
 //@10062    = ~Heart of the Snow Leopard Charm~
-@10063    = ~Shamans of many barbarian clans have long looked upon the snow leopard as one of the most graceful and swift hunters of the frozen lands. Many times the warriors of these clans mimic the movements of the large, white cats during fierce combat. In addition, the barbarian shamans would sometimes create spells that would temporarily imbue the warriors with the dexterity of the snow leopards. However, since these spells were temporary, often times the spell would wear off at inopportune times.
+@10063    = ~Шаманы многих варварских кланов издавна считают снежного барса одними из самых ловких и искусных охотников замёрзших земель. Варвары северных племён подражают движениям барса в бою, а их шаманы создают заклинания, позволяющие воинам обрести ловкость этих огромных белых хищников. Однако такие чары не вечны и часто рассеиваются в самый неподходящий момент.
 
-It is said, however, that a group of barbarian shamans once congregated deep within the Dales to find a way to better harness the swift agility of the snow leopard. For nearly a year the shamans remained out of sight from their home clans, busily focusing their attentions towards the magic of the snow leopard. Then one day, the shamans returned to their respective clans, each holding a small necklace made of silver, with a pendant that resembled a snow leopard's paw. The shamans gave this pendant to their strongest warriors of each clan. Once placed around the neck of the warrior, the dexterity of the snow leopard filled their powerful bodies, as well as immunity to the cold that surrounded the Dales. From then on, the Heart of the Snow Leopard Charm, as it became known, would become one of the most prized artifacts within barbarian clans. Only the mightiest warriors wore the amulet, and it became the goal of all young warriors to one day be adorned with the Heart of the Snow Leopard Charm.
+Говорят, что однажды группа шаманов варваров собралась где-то в одном из дальних уголков Долин, чтобы найти способ лучше использовать ловкость снежного барса. Почти целый год шаманы изучали магию движений этого зверя, и однажды каждый из них вернулся в своё племя, держа в руках серебряный амулет, напоминавший лапу барса, чтобы вручить его самому сильному воину племени. Такой амулет "Сердце снежного барса" (как их стали называть), надетый на шею, придаёт своему владельцу ловкость снежного барса и наделяет того иммунитетом к холоду. Подобные амулеты достаются только сильнейшим воинам клана, и все юные варвары мечтают о том, чтобы когда-нибудь заслужить право на ношение этого сокровища.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Special:
- Dexterity: +8 bonus
- Resistance: 10/- Cold Resistance
-Weight: 1 lb.~
+Особенности:
+ Ловкость: +8
+ Сопротивление: 10/- сопротивление холоду
+Вес: 1 фунт~
 //@10064    = ~Blood of the Innocent~
-@10065    = ~Fearless, ruthless, and reveling in the death and despair of others, the vile Dreadmaster of Bane spreads his dogma of hate and strife on the land. Nothing makes a cleric of Bane happier than if the strife within the land is caused by one of his disciples. 
+@10065    = ~Бесстрашные, безжалостные и жестокие Повелители Ужаса Бейна распространяют своё полное ненависти учение по всей земле. Наивысшее удовольствие они получают, наблюдая за тем, как их ученики сеют раздоры.
 
-To help a Dreadmaster of Bane better serve his tyrannical god, a special amulet, dipped in the spilled blood of the innocent victims of a Dreadmaster's wrath, is (on rare occasions) made. This amulet, once worn by a Dreadmaster of Bane, blesses the evil disciple with increased strength and wisdom to better exercise his dark plans. No one is quite sure, except for very high-level Bane clerics, of all the ingredients that go into the Blood of the Innocent amulet - but those that did find out soon became part of the amulet themselves.
+Чтобы помочь Повелителям Ужаса лучше служить своему богу-тирану, изготавливаются специальные (довольно редкие) амулеты, окунаемые в пролитую кровь невинных жертв священников Бейна. Такой амулет, надетый Повелителем ужаса, придаёт тому дополнительную силу для лучшего осуществления его тёмных планов. Никто, кроме самых высокопоставленных священников Бейна, не знает точно, какие ингредиенты входят в состав амулета "Кровь невинного", а те, у кого получалось это узнать, сами быстро становились такими ингредиентами.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Strength: +3 
-Wisdom: +3 
-Weight: 1 lb.~
+Особенности:
+ Сила: +3
+ Мудрость: +3
+Вес: 1 фунт~
 //@10066    = ~Bile of the Damned~
-@10067    = ~Fearless, ruthless, and reveling in the death and despair of others, the vile Dreadmaster of Bane spreads his dogma of hate and strife on the land. Nothing makes a cleric of Bane happier than if the strife within the land is caused by one of his disciples. 
+@10067    = ~Бесстрашные, безжалостные и жестокие Повелители Ужаса Бейна распространяют своё полное ненависти учение по всей земле. Наивысшее удовольствие они получают, наблюдая за тем, как их ученики сеют раздоры.
 
-To help a Dreadmaster of Bane better serve his tyrannical god, a special amulet, dipped in the spilled blood of the innocent victims of a Dreadmaster's wrath, is (on rare occasions) made. This elixir, once worn by a Dreadmaster of Bane, blesses the evil disciple with increased strength and wisdom to better exercise his dark plans. No one is quite sure, except for very high-level Bane clerics, of all the ingredients that go into the Bile of the Damned amulet - but those that did find out soon became part of the amulet themselves.
+Чтобы помочь Повелителям Ужаса лучше служить своему богу-тирану, изготавливаются специальные (довольно редкие) амулеты, окунаемые в пролитую кровь невинных жертв священников Бейна. Такой амулет, надетый Повелителем ужаса, придаёт тому дополнительную силу и мудрость для лучшего осуществления его тёмных планов. Никто, кроме самых высокопоставленных священников Бейна, не знает точно, какие ингредиенты входят в состав амулета "Желчь проклятого", а те, у кого получалось это узнать, сами быстро становились такими ингредиентами.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Strength: +6 
-Wisdom: +6
-Weight: 1 lb.~
+Сила: +6
+Мудрость: +6
+Вес: 1 фунт~
 //@10068    = ~Cleansing Medallion~
 @10069    = ~This circular silver medallion allows a good-aligned priest or paladin to draw upon the strength of their faith to heal the sick and injured. It does not appear to be tied to any faith or religion, but it does radiate an aura of well-being and comfort. 
 
