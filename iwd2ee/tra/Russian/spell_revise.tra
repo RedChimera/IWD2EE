@@ -4766,64 +4766,64 @@
 Зона действия: особая
 Спасбросок: воли, отменяет
 
-This spell brings forth a magical object that imbues creatures that see it with the desire to be near it. Any non-allied creature that sees the object of sympathy must make a Will save (with -3 DC) each round or be compelled to walk harmlessly toward the object for the round. Any creature immune to charm effects is also immune to this effect.~
+Это заклинание создаёт магический предмет в точке заклинания, который вселяет в существ, которые его видят, желание находиться рядом с ним. Любое не дружественное существо, которое видит объект симпатии, должно каждый раунд делать спасбросок воли с -3 к УС или просто идти к этому предмету весь раунд. Любое существо, невосприимчивое к эффектам очарования, также невосприимчиво к этому эффекту.~
 @37760     = ~Пропустить время~
 @38760     = ~Пропустить время
 (Преобразование)
 Уровень: колдун/волшебник 7
-Дальность: Special
-Длительность: 10 rounds
+Дальность: особая
+Длительность: 10 раундов
 Время чтения:  2
-Зона действия: Party
+Зона действия: группа
 Спасбросок: нет
 
-Skip Time transports the party ten rounds into the future. From the point of view of other creatures, the party vanishes, then reappears in the same spot ten rounds later. However, no time has passed for the party.
+Это заклинание переносит группу на десять раундов в будущее. С точки зрения других существ, группа исчезает, а затем вновь появляется на том же месте десять раундов спустя. Однако для партии время не проходит.
 
-The main effect of this is to reduce the duration of all magical effects on creatures outside the party by ten rounds, ending effects like Mantle that have short durations and causing the rest to expire sooner. Lingering areas of effect such as Web and Stinking Cloud also have their duration reduced. Skip Time can also allow the party to evade area of effect spells and abilities when timed right.~
+Основной эффект этого заклинания - сокращение длительности всех магических эффектов на существах вне группы на десять раундов, что, например, прекращает действие таких заклинаний как "Мантия", которые имеют короткий срок действия, и заставляет остальные эффекты истечь быстрее. Длительность действия эффектов от заклинаний таких, как "Паутина" или "Зловонное облако", также сокращается. При применении в правильный момент это заклинание также позволяет группе уклониться от заклинаний и способностей с зональным эффектом.~
 @37761     = ~Силовая клетка~
 @38761     = ~Силовая клетка
 (Отречение)
 Уровень: колдун/волшебник 7
 Дальность: обзор колдующего
-Длительность: 5 rounds
+Длительность: 5 раундов
 Время чтения:  1
-Зона действия: 15-foot cube
+Зона действия: куб со стороной 15 футов
 Спасбросок: нет
 
-This spell creates a cage of force - a cube with walls of force on each side. Creatures that were in the area of effect when the spell was cast are trapped in the forcecage for the duration. Creatures cannot enter or pass through the area of effect. Only one forcecage may be active at a time.~
+Это заклинание создает силовую клетку - куб со из силовых стен на каждой грани. Существа, находившиеся в зоне действия заклинания в момент его произнесения, оказываются запертыми в силовой клетке на весь срок действия заклинания. Никакие существа не могут войти или выйти из области действия заклинания до его истечения. Одновременно может быть активна только одна силовая клетка.
 @37762     = ~Скелеты-ловушки~
 @38762     = ~Скелеты-ловушки
 (Некромантия)
 Уровень: колдун/волшебник 7
 Дальность: обзор колдующего
-Длительность: 8 hours
+Длительность: 8 часов
 Время чтения:  7
 Зона действия: особая 
 Спасбросок: реакции, половина урона
 
-This spell animates two skeletons which can be detonated on command to deal damage. When you have a skeleton use its special ability, or the skeleton takes damage, its skull explodes like a Skull Trap, dealing 10d6 slashing damage to all creatures within 15 feet (Reflex save for half), and the skeleton is destroyed. At 24th level, the spell animates three skeletons instead of two. Skeleton Traps cannot be cast by good characters.~
-@37763     = ~Spell Turning~
-@38763     = ~Spell Turning
+Это заклинание поднимает двух скелетов, которые могут быть взорваны по команде, чтобы нанести урон. Когда скелет использует свою особую способность или получает урон, его череп взрывается, подобно заклинанию "Череп-ловушка", нанося 10d6 рубящего урона всем существам в радиусе 15 футов (успешный спасбросок реакции снижает урона вдвое), а сам скелет уничтожается. На 24-м уровне заклинателя, это заклинание оживляет не два, а три скелета. Оно не может быть прочитано добрыми персонажами.~
+@37763     = ~Обращение заклинаний~
+@38763     = ~Обращение заклинаний
 (Отречение)
 Уровень: бард 7, колдун/волшебник 7
 Дальность: колдующий
-Длительность: 10 rounds/level or until depleted
+Длительность: 10 раундов/на уровень или пока не потратится
 Время чтения:  2
 Зона действия: колдующий
 Спасбросок: нет
 
-Spell Turning reflects incoming hostile spells back at the source. While Spell Turning is active, if the caster would be hit by a harmful, single-target spell of any level, that spell is reflected back at its own caster. Spell Turning can reflect a total of 15 spell levels before it ends, though as long as there is at least one spell level remaining, the next spell will be reflected. It does not reflect Dispel Magic either, though it cannot be dispelled itself.~
-@37764     = ~Steal Effects~
-@38764     = ~Steal Effects
+Это заклинание отражает входящие враждебные заклинания обратно к их источнику. Пока оно активно, если по заклинателю попадает вредоносное одноцелевое заклинание любого уровня, оно отражается обратно к тому, кто его использовал. До окончания действия заклинания "Обращение заклинаний" может отразить в общей сложности 15 уровней заклинаний, но пока остается хотя бы один уровень заклинания, следующее заклинание будет отражено. Оно не отражает заклинание "Развеять магию", но само не может быть развеяно.~
+@37764     = ~Украсть эффекты~
+@38764     = ~Украсть эффекты
 (Отречение)
-Уровень: бард 6, колдун/волшебник 7, Mask 6
+Уровень: бард 6, колдун/волшебник 7, жрец Маска 6
 Дальность: обзор колдующего
 Длительность: мгновенно
 Время чтения:  5
 Зона действия: 1 существо
 Спасбросок: воли, отменяет
 
-This spell steals the effects of spells from the target and grants them to the caster. If the target fails a Will save with +5 DC, all dispellable effects on them (such as from Mirror Image or Stoneskin) are dispelled, and the caster gains those effects for their remaining durations. Effects of items and innate abilities cannot be stolen. If an ally is targeted, they are affected with no save.~
+Это заклинание похищает эффекты заклинаний у цели и передаёт из заклинателю. Если цель проваливает спасбросок с +5 к УС, все рассеиваемые эффекты на ней (например, от заклинаний "Зеркальный образ" или "Каменная кожа") рассеиваются, и заклинатель получает эти эффекты на оставшееся время. Эффекты от предметов или от врожденных способностей не могут быть украдены. Если это заклинание прочитано на союзника, он автоматически подвергается его воздействию без спасброска.~
 @37852     = ~Отток энергии~
 @38852     = ~Отток энергии
 (Некромантия)
@@ -4834,7 +4834,7 @@ This spell steals the effects of spells from the target and grants them to the c
 Зона действия: 1 существо
 Спасбросок: нет
 
-Similar to the energy drain of a wight or wraith, except much more powerful, this spell drains multiple levels from a creature. The target is drained one level for every three levels of the caster, to a maximum energy drain of 16 levels for a 48th-level caster. The energy drain is permanent until cured with a Restoration spell. This spell has no effect on undead or constructs.~
+Это заклинание похоже на отток энергии духа или умертвия, только гораздо мощнее, отнимает у своей цели несколько уровней. Отнимается один уровень за каждые три уровня заклинателя, до максимум в 16 уровней для заклинателя 48-го уровня. Эффект заклинания постоянен, пока он не будет излечен заклинанием "Восстановление" или подобным. Это заклинание не действует на нежить и конструктов.~
 @37853     = ~Поработить~
 @38853     = ~Поработить
 (Чародейство)
