@@ -260,124 +260,123 @@
  Заклинание: Может использовать заклинание "Коготь зверя" (как заклинатель 30-ого уровня) раз в день.
 Вес: 0 фунтов~
 //@10076    = ~Incandescent Blue Ioun Stone~
-@10077    = ~This magical stone was crafted long ago somewhere beyond the astral plane, though its exact age is hard to discern. The stone was made by a githzerai craftsman named Bashenee for a great monk of the githzerai race. This unnamed monk died in battle with githyanki foes and the stone drifted among their race for years. Somehow, the stone eventually was given to Oinchack'olp, a mind flayer, who kept it as his prized possession.
+@10077    = ~Это волшебный камень был создан давным-давно (хотя его истинный возраст и тяжело определить), где-то далеко за пределами астрального мира. Его сделал гитцерай по имени Башени для одного соплеменника, великого монаха. Этот монах погиб в битве с гитиянки, и после этого гитиянки владели камнем в течение многих лет. Впоследствии камень каким-то образом попал к пожирателю разума по имени Ойнчак'ольп.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Wisdom: +3
-Weight: 1 lb.~
+Мудрость: +3
+Вес: 1 фунт~
 //@10078    = ~Incandescent Blue Ioun Stone~ //HoF
-@10079    = ~This magical stone was crafted long ago somewhere beyond the astral plane, though its exact age is hard to discern. The stone was made by a githzerai craftsman named Bashenee for a great monk of the githzerai race. This unnamed monk died in battle with githyanki foes and the stone drifted among their race for years. Somehow, the stone eventually was given to Oinchack'olp, a mind flayer, who kept it as his prized possession.
+@10079    = ~Это волшебный камень был создан давным-давно (хотя его истинный возраст и тяжело определить), где-то далеко за пределами астрального мира. Его сделал гитцерай по имени Башени для одного соплеменника, великого монаха. Этот монах погиб в битве с гитиянки, и после этого гитиянки владели камнем в течение многих лет. Впоследствии камень каким-то образом попал к пожирателю разума по имени Ойнчак'ольп.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Wisdom: +6
-Weight: 1 lb.~
+Мудрость: +6
+Вес: 1 фунт~
 //@10080    = ~House of Despana Insignia~
-@10081    = ~This small obsidian and adamantite amulet has a metal hoop near the top through which a purple and pink ribbon passes. The raised surface of the amulet features the arrow and hexagon glyph of House Despana. Malavon Despana crafted the amulet for his brother, Ilmryn. Legends state that when Malavon and his allies in the church of Vhaeraun attacked the Lolth matriarchy, he had to face his brother, then the Weapons Master of House Despana, in a pitched battle. Just as Ilmryn gained the upper hand, Malavon uttered a secret word that invoked an unknown power within the amulet. Ilmryn was surrounded by a magical barrier that protected him from harm. Since it was ostensibly a beneficial magical effect, Ilmryn's natural magic resistance did not help him resist the amulet's power. When the Weapons Master emerged from the protective sphere, he found himself face to face with over a dozen of the most powerful tanar'ri he had ever seen. He died screaming, cursing his brother's name.
+@10081    = ~Этот маленький амулет сделан из обсидиана и адамантита. В его верхней части находится металлическое колечко, через которое продета розово-фиолетовая ленточка. На рельефной поверхности амулета изображена стрела и шестиугольный символ дома Деспана. Малавон Деспана создал этот амулет для своего брата Илмрина. Легенды гласят, что когда Малавон и его союзники из церкви Ваэрауна восстали против Лолт, им пришлось сойтись в бою с Илмрином, который в то время был оружейным мастером дома Деспана. В тот момент, когда чаша весов стала склоняться на сторону Илмрина, Малавон произнёс тайное слово, которое высвободило чары, заключённые в амулете. Илмрин оказался заключён внутри защитной сферы: так как в этих чарах нет ничего дурного, врождённая сопротивление магии Илмрина не подействовало против них. Когда же защитный барьер рассеялся, мастер оружия обнаружил, что его окружило более десятка самых могущественных танар'ри, которых ему когда-либо приходилось видеть. Он умер, с криком, проклиная имя своего брата.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Spell Power: Can cast Blur (at level 10) 1/Day
-Spell Power: Can cast Melf's Acid Arrow (at level 10) 1/Day
-Spell Power:  Can cast Otiluke's Resilient Sphere with no save, bypassing spell resistance (at level 10) 1/Day
-Weight: 1 lb.~
+Использует магию: 1 раз в день может использовать заклинание "Размытие" (как заклинатель десятого уровня)
+Использует магию: 1 раз в день может использовать заклинание "Кислотная стрела Мелфа" (как заклинатель десятого уровня)
+Использует магию: 1 раз в день может использовать заклинание "Упругая сфера Отилука"(как заклинатель десятого уровня)
+Вес: 1 фунт~
 //@10082    = ~House of Despana Insignia~ //HoF
-@10083    = ~This small obsidian and adamantite amulet has a metal hoop near the top through which a purple and pink ribbon passes. The raised surface of the amulet features the arrow and hexagon glyph of House Despana. Malavon Despana crafted the amulet for his brother, Ilmryn. Legends state that when Malavon and his allies in the church of Vhaeraun attacked the Lolth matriarchy, he had to face his brother, then the Weapons Master of House Despana, in a pitched battle. Just as Ilmryn gained the upper hand, Malavon uttered a secret word that invoked an unknown power within the amulet. Ilmryn was surrounded by a magical barrier that protected him from harm. Since it was ostensibly a beneficial magical effect, Ilmryn's natural magic resistance did not help him resist the amulet's power. When the Weapons Master emerged from the protective sphere, he found himself face to face with over a dozen of the most powerful tanar'ri he had ever seen. He died screaming, cursing his brother's name.
+@10083    = ~Этот маленький амулет сделан из обсидиана и адамантита. В его верхней части находится металлическое колечко, через которое продета розово-фиолетовая ленточка. На рельефной поверхности амулета изображена стрела и шестиугольный символ дома Деспана. Малавон Деспана создал этот амулет для своего брата Илмрина. Легенды гласят, что когда Малавон и его союзники из церкви Ваэрауна восстали против Лолт, им пришлось сойтись в бою с Илмрином, который в то время был оружейным мастером дома Деспана. В тот момент, когда чаша весов стала склоняться на сторону Илмрина, Малавон произнёс тайное слово, которое высвободило чары, заключённые в амулете. Илмрин оказался заключён внутри защитной сферы: так как в этих чарах нет ничего дурного, врождённая сопротивление магии Илмрина не подействовало против них. Когда же защитный барьер рассеялся, мастер оружия обнаружил, что его окружило более десятка самых могущественных танар'ри, которых ему когда-либо приходилось видеть. Он умер, с криком, проклиная имя своего брата.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Spell Power: Can cast Blur (at level 30) 1/Day
-Spell Power: Can cast Lutzaen's Frequent Jaunt (at level 30) 1/Day
-Spell Power:  Can cast Otiluke's Resilient Sphere with no save, bypassing spell resistance (at level 30) 1/Day
-Weight: 1 lb.~
-
-
+Использует магию: 1 раз в день может использовать заклинание "Размытие" (как заклинатель 30-ого уровня)
+Использует магию: 1 раз в день может использовать заклинание "Прыжок Луцаэна" (как заклинатель 30-ого уровня)
+Использует магию: 1 раз в день может использовать заклинание "Упругая сфера Отилука"(как заклинатель 30-ого уровня)
+Вес: 1 фунт~
 //@10084    = ~Ring of Fire Resistance~
-@10085    = ~This magical ring grants the wearer partial immunity to damage by fire.
+@10085    = ~Надевший это волшебное кольцо получает частичную защиту от урона огнём.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Resistance:  15/- Fire Resistance
-Weight: 0 lb.~
+Сопротивление: 15/- сопротивления огню
+Вес: 0 фунтов~
 //@10086    = ~Ring of Animal Friendship~
-@10087    = ~A druid order in Cormanthor is said to cautiously guard the secret to the construction of these rings, which have never been seen in the possession of anyone outside their immediate membership. How this particular ring escaped the protection of their forest is unknown, but there are rumors that an outcast could have brought it into exile with him. 
+@10087    = ~Говорят, что орден друидов Кормантора тщательно хранит тайну создания таких колец, и доверяют их исключительно членам ордена. Как это кольцо оказалось за пределами их леса, неизвестно, но ходят слухи, что его мог унести с собой друид-изгнанник.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Special:  Charm a single animal 1/day (no save)
-Duration:  2 hours
-Weight: 0 lb.~
-@10088    = ~Ring of Most Twisted Strength~
-@10089    = ~This ring is surrounded by two small tubes, each of which contains a strange purple fluid. When worn, the ring makes the wearer as strong as anyone could possibly be in this world, yet it severely weakens them in other important ways. It also causes the wearer's body to appear malformed, with very thick arms and legs, but very small hands and feet, and a thin torso. Most likely this ring was created by a Wish from a fool who wanted to become supernaturally strong.
+Особенности: позволяет зачаровать одно животное (без спасброска) раз в день
+Длительность: 2 часа
+Вес: 0 фунтов~
+@10088    = ~Кольцо самой извращённой силы~
+@10089    = ~Это кольцо окружено двумя небольшими трубками, каждая из которых содержит странную фиолетовую жидкость. При ношении кольцо делает его обладателя настолько сильным, насколько это вообще возможно в этом мире, но при этом сильно ослабляет его в других важных аспектах. Кроме того, тело владельца выглядит неполноценным: толстые руки и ноги, но очень маленькие кисти и стопы, а также тонкое туловище. Скорее всего, это кольцо было создано по желанию глупца, который хотел стать сверхъестественно сильным.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Strength: +10
-Dexterity: -4
-Constitution: -4
-Special: Can only be removed by a Remove Curse spell
-Weight: 0 lb.~
+Сила: +10
+Ловкость: -4
+Телосложение: -4
+Особенности: Может быть снято только с помощью заклинания "Снять проклятие"
+Вес: 0 фунтов~
 //@10090    = ~Ring of Invisibility~
-@10091    = ~Held by a master thief for the better part of a generation, this ring was put to bold use in the markets of Waterdeep. Working a crowd in broad daylight, the rogue would steal countless numbers of purses from nobles, replacing them with bags of sand so the theft would go unnoticed. His identity was never known, but the name "Sandthief" was cursed loudly in its stead. It is rumored he retired, and now lives among the nobles he used to rob.
+@10091    = ~Довольно долгое время это кольцо принадлежало мастеру-вору, который беззастенчиво пользовался им на рынках Вотердипа. Орудуя в толпе средь бела дня, жулик воровал у знати бесчисленное количество кошельков, заменяя их мешочками с песком, чтобы кражу не заметили сразу. Его личность так и не была установлена, но зато его прозвище Песочный Вор многие проклинали на все лады. Ходят слухи, что он отошёл от дел и сейчас живёт среди дворян, которых раньше грабил.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Can turn invisible 1/day
-Duration: 4 hours
-Weight: 0 lb.~
+Особенности: владелец может становиться невидимым раз в день
+Длительность: 4 часа
+Вес: 0 фунтов~
 //@10092    = ~Ring of Protection +1~
 //@10093    = ~Item description can remain the same; if new description is needed put it here~
-@10094    = ~Ring of Protection +3~
-@10095    = ~This magical ring provides the wearer with additional protection.
+@10094    = ~Кольцо защиты +3~
+@10095    = ~Это магическое кольцо защищает своего владельца.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Deflection Bonus: +3
-Weight: 0 lb.~
-@10096    = ~Wizard's Ring~
-@10097    = ~Created by magic long forgotten, rings such as these are much sought after by those who dabble in the arcane arts. The creators of this ring have instilled wards into this ring so that only those who practice the arts may use it.
+Класс защиты: +3 (отражение)
+Вес: 0 фунтов~
+@10096    = ~Кольцо волшебника~
+@10097    = ~Созданные при помощи давным-давно забытой магии, эти кольца пользуются большим спросом у тех, кто увлекается тайными искусствами. Создатели этого кольца влили в него защиту, так что лишь те, кто практикует такие искусства, могут использовать его.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Intelligence:  +2
-Weight: 0 lb.~
+Интеллект: +2
+Вес: 0 фунтов~
 //@10098    = ~Ring of Freedom of Movement~
 //@10099    = ~Item description can remain the same; if new description is needed put it here~
 //@10100    = ~Ring of Energy~
-@10101    = ~Crafted by Drow mages of the Underdark, this weapon was used in an arranged battle between two rival houses. Each combatant was allowed to use a single magic item to aid his efforts. This ring was the weapon used by the victor of the contest, though he never laid hands on it. It was worn by his sibling and fired from the crowd, striking his opponent squarely in the back. Everyone witnessing agreed it was a brilliant interpretation of the rules.
+@10101    = ~Созданный магами-дроу из Андердарка, этот артефакт был использован в решающем поединке между двумя враждующими домами. Каждый из соперников мог воспользоваться только одним магическим предметом. Это кольцо принесло победу одному из участников, хотя он к нему даже не прикоснулся. Кольцо надел его родной брат, стоявший в толпе, и выстрелил прямо в спину противника. Все свидетели согласились, что это была великолепная интерпретация правил.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Special: Deal damage to a single creature 1/day
-Damage:  10d6 (no save, bypasses spell resistance)
-Weight: 0 lb.~
+Особенности: наносит урон одному существу раз в день
+Урон: 10d6 (нет спасброска, игнорирует сопротивление магии)
+Вес: 0 фунтов~
 //@10102    = ~Every God Ring~
-@10103    = ~Rings such as these are one of the most well kept secrets among the pious. For in order for these rings to be created they must be blessed by all the known gods. This can cause problems, especially for those faiths that conflict with each other. It's not surprising that those who choose to don the ring refuse to reveal its origins for fear of being persecuted by their own brethren.
+@10103    = ~Такие кольца являются одним из самых хорошо хранимых секретов среди праведников. Ибо для создания этих колец они должны быть благословлены всеми известными богами. Это может вызвать определённые проблемы, особенно среди тех конфессий, которые конфликтуют друг с другом. Неудивительно, что те, что решаются надеть такое кольцо, предпочитают не раскрывать его происхождения, из боязни преследования своими же собратьями.
 
-STATISTICS:
 
-Wisdom:  +4
-Weight: 0 lb.~
+ПАРАМЕТРЫ:
+
+Мудрость: +4
+Вес: 0 фунтов~
 //@10104    = ~Ring of Magic Missiles~
-@10105    = ~A ring is a small band of precious metal that is used as jewelry. Some rare rings have had enchantments placed upon them that confer various magical abilities. These rings are highly sought after, especially by those of the adventuring profession. For no apparent reason, this ring feels warm to the touch.
+@10105    = ~Кольцо - это небольшая полоска драгоценного металла, используемая как украшение. Изредка встречаются кольца, которые зачарованы и обладают различными магическими свойствами. Такие кольца очень высоко ценятся, особенно среди искателей приключений. Это кольцо тёплое на ощупь.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Special: Magic Missile and Force Missile spells and abilities fire an additional missile when cast by the wearer.
-Spell Power: Can cast the spell Magic Missile (at level 1) unlimited times per day
-Weight: 0 lb.~
+Особенности: заклинания "Магический снаряд" и "Силовые снаряды Морденкайнена", прочитанные владельцем кольца, выпускают один дополнительный снаряд
+Заклинание : владелец кольца может читать заклинание "Магический снаряд" (как заклинатель первого уровня) неограниченное количество раз в день
+Вес: 0 фунтов~
 //@10106    = ~Bard's Ring~
-@10107    = ~A ring is a small band of precious metal that is used as jewelry. Some rare rings have had enchantments placed upon them that confer various magical abilities. These rings are highly sought after, especially by those of the adventuring profession. This particular ring looks very whimsical and seems to hum slightly.
+@10107    = ~Кольцо - это небольшая полоска драгоценного металла, используемая как украшение. Изредка встречаются кольца, которые зачарованы и обладают различными магическими свойствами. Такие кольца очень высоко ценятся, особенно среди искателей приключений. Это кольцо выглядит очень причудливо и тихо жужжит.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Charisma: +4
-Knowledge (Arcana): +4
-Use Magic Device: +4
-Weight: 0 lb.~
+Харизма: +4
+Знание (волшебство): +4
+Использование магического устройства: +4
+Вес: 0 фунтов~
 @10108    = ~Ring of Domination~
-@10109    = ~A ring is a small band of precious metal that is used as jewelry. Some rare rings have had enchantments placed upon them that confer various magical abilities. These rings are highly sought after, especially by those of the adventuring profession. For no apparent reason, this ring feels warm to the touch.
+@10109    = ~Кольцо - это небольшая полоска драгоценного металла, используемая как украшение. Изредка встречаются кольца, которые зачарованы и обладают различными магическими свойствами. Такие кольца очень высоко ценятся, особенно среди искателей приключений. Это кольцо тёплое на ощупь.
 
 STATISTICS:
 
@@ -385,7 +384,7 @@ Charisma: +2
 Spell Power: Can cast the spell Domination (at level 15) 1/day
 Weight: 0 lb.~
 @10110    = ~Stoneskin Ring~
-@10111    = ~A ring is a small band of precious metal that is used as jewelry. Some rare rings have had enchantments placed upon them that confer various magical abilities. These rings are highly sought after, especially by those of the adventuring profession. For no apparent reason, this ring feels warm to the touch.
+@10111    = ~Кольцо - это небольшая полоска драгоценного металла, используемая как украшение. Изредка встречаются кольца, которые зачарованы и обладают различными магическими свойствами. Такие кольца очень высоко ценятся, особенно среди искателей приключений. Это кольцо тёплое на ощупь.
 
 STATISTICS:
 
