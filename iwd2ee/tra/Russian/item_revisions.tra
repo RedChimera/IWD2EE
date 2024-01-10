@@ -375,59 +375,59 @@
 Знание (волшебство): +4
 Использование магического устройства: +4
 Вес: 0 фунтов~
-@10108    = ~Ring of Domination~
+@10108    = ~Кольцо подчинения~
 @10109    = ~Кольцо - это небольшая полоска драгоценного металла, используемая как украшение. Изредка встречаются кольца, которые зачарованы и обладают различными магическими свойствами. Такие кольца очень высоко ценятся, особенно среди искателей приключений. Это кольцо тёплое на ощупь.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Charisma: +2
-Spell Power: Can cast the spell Domination (at level 15) 1/day
-Weight: 0 lb.~
-@10110    = ~Stoneskin Ring~
+Харизма: +2
+Заклинание : владелец кольца может читать заклинание "Господство" (как заклинатель 15-ого уровня) раз в день
+Вес: 0 фунтов~
+@10110    = ~Кольцо каменно кожи~
 @10111    = ~Кольцо - это небольшая полоска драгоценного металла, используемая как украшение. Изредка встречаются кольца, которые зачарованы и обладают различными магическими свойствами. Такие кольца очень высоко ценятся, особенно среди искателей приключений. Это кольцо тёплое на ощупь.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Spell Power: Can cast the spell Stoneskin (at level 10) 1/day
-Weight: 0 lb.~
+Заклинание : владелец кольца может читать заклинание "Каменная кожа" (как заклинатель 10-ого уровня) раз в день
+Вес: 0 фунтов~
 //@10112    = ~Ring of Hearty Strength~
-@10113    = ~Some rings look to be of very rugged construction, befitting those who are stout of body. These rare rings have had enchantments placed upon them that confer various magical abilities. These rings are highly sought after, especially by those of the warrior profession. 
+@10113    = ~Некоторые кольца очень прочны и незамысловаты - они хорошо подходят тем, кто крепок телом. На эти, довольно редкие, кольца наложены чары, наделяющие их различными магические способности. Эти кольца ценятся очень высоко, особенно представителями воинских профессий.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Constitution: +2
-Strength: +2
-Weight: 0 lb.~
+Телосложение: +2
+Сила: +2
+Вес: 0 фунтов~
 //@10114    = ~Holy Might Ring~
-@10115    = ~A ring is a small band of precious metal that is used as jewelry. Some rare rings have had holy enchantments placed upon them that confer various blessed abilities. These rings are highly sought after, especially by those of the adventuring profession. This ring conveys a feeling of strength.
+@10115    = ~Кольцо - это небольшая полоска драгоценного металла, используемая как украшение. Изредка встречаются кольца с наложенными на них священными заклинаниями, дающими владельцу дополнительные способности. Такие украшения очень высоко ценятся, особенно среди искателей приключений. Это кольцо излучает силу.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Spell Power: Can cast the spell Draw Upon Holy Might (at level 12) 1/day
-Weight: 0 lb.~
-@10116    = ~Invulnerability Ring~
-@10117    = ~A ring is a small band of precious metal that is used as jewelry. Some rare rings have had protection enchantments placed upon them that shield its wearer from the hardships of battle. These rings are highly sought after, especially by those adventurers who need extra protection. This rings seems to emit an aura of security.
+Заклинание : владелец кольца может читать заклинание "Призыв священной мощи" (как заклинатель 12-ого уровня) раз в день
+Вес: 0 фунтов~
+@10116    = ~Колько неуязвимости~
+@10117    = ~Кольцо - это небольшая полоска драгоценного металла, используемая как украшение. Изредка встречаются кольца с наложенными чарами, которые защищают владельца кольца он урона в бою. Эти кольца ценятся очень высоко, особенно искателями приключений, которым нужна дополнительная защита в бою. Это кольцо излучает защитную ауру.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Spell Power: Can cast the spell Minor Globe of Invulnerability (at level 10) 1/day
-Weight: 0 lb.~
+Заклинание : владелец кольца может читать заклинание "Малая сфера неуязвимости" (как заклинатель 10-ого уровня) раз в день
+Вес: 0 фунтов~
 //@10118    = ~Protection from Evil Ring~
-@10119    = ~A ring is a small band of precious metal that is used as jewelry. Some rare rings have had holy enchantments placed upon them that confer various protective abilities. In the ongoing battle to smite evil, these rings are highly sought after by those adventurers fighting the good fight. This ring glows with a reassuring warmth.
+@10119    = ~Кольцо - это небольшая полоска драгоценного металла, используемая как украшение. Изредка встречаются кольца, не которые наложены священные чары и которые обладают некоторыми защитными свойствами. В условиях непрерывной борьбы со злом эти кольца очень высоко ценятся, особенно теми искателями приключений, что выступают на стороне добра. Это кольцо излучает обнадёживающую теплоту.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Spell Power: Can cast the spell Magic Circle Against Evil (at level 10) 1/day
-Weight: 0 lb.~
+Заклинание : владелец кольца может читать заклинание "Защита от зла" (как заклинатель 10-ого уровня) раз в день
+Вес: 0 фунтов~
 //@10120    = ~Chameleon Ring of Dexterity~
-@10121    = ~A ring is a small band of precious metal that is used as jewelry. This sleek ring is made from an unknown, black ore, and, quite remarkably, is difficult to focus one's eyes upon. It is said that some rare rings have had dark enchantments placed upon them that confer various speed and stealth abilities. These rings are highly sought after, especially by those of the thieving profession. 
+@10121    = ~Кольцо - это небольшая полоска драгоценного металла, используемая как украшение. Это гладкое кольцо сделано из неизвестного чёрного металла. Оно отличается тем, что на нём сложно сфокусировать зрение. Говорят, изредка встречаются кольца, на которые наложены тёмные чары и которые увеличивают скорость и способности, связанные со скрытностью. Такие украшения очень высоко ценятся, особенно среди представителей воровских профессий.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Generic Armor Bonus: +2
-Dexterity: +2
-Shadowed: +10 to Hide skill
-Weight: 0 lb.~
+Класс защиты: +2 (общий)
+Ловкость: +2
+Слияние с тенью: +10 к навыку "Незаметность"
+Вес: 0 фунтов~
 @10122    = ~Ring of Charm Protection~
 @10123    = ~A ring is a small band of precious metal that is used as jewelry. Some rare rings have had magical mental enchantments placed upon them that confer various magical immunities. These rings are highly sought after, especially by those of the adventuring profession. This particular ring conveys a sense of self-assuredness.
 
