@@ -580,49 +580,43 @@
 
 Сопротивление: 15/- сопротивления кислоте
 Вес: 0 фунтов~
-@10162    = ~Greater Chameleon Ring~
+@10162    = ~Большое кольцо хамелеона~
 @10163    = ~Кольцо - это небольшая полоска драгоценного металла, используемая как украшение. Изредка встречаются кольца, которые зачарованы и обладают различными магическими свойствами. Такие кольца очень высоко ценятся, особенно среди искателей приключений. Это кольцо тёплое на ощупь.
 
-STATISTICS:
 ПАРАМЕТРЫ:
 
-Generic Armor Bonus: +3
-Shadowed: +15 to Hide skill
-Weight: 0 lb.~
+Класс защиты: +3 (общий)
+Слияние с тенью: +15 к навыку "Незаметность"
 Вес: 0 фунтов~
 //@10164    = ~Ring of Regeneration~
 @10165    = ~Кольцо - это небольшая полоска драгоценного металла, используемая как украшение. Изредка встречаются кольца, которые зачарованы и обладают различными магическими свойствами. Такие кольца очень высоко ценятся, особенно среди искателей приключений. Это кольцо тёплое на ощупь.
 
-STATISTICS:
 ПАРАМЕТРЫ:
 
-Regeneration: Regain 1 hit point every round
-Weight: 0 lb.~
+Регенерация: Восстанавливает 1 пункт здоровья каждый раунд
 Вес: 0 фунтов~
 //@10166    = ~Chameleon Ring~
 @10167    = ~Кольцо - это небольшая полоска драгоценного металла, используемая как украшение. Изредка встречаются кольца, которые зачарованы и обладают различными магическими свойствами. Такие кольца очень высоко ценятся, особенно среди искателей приключений. Это кольцо тёплое на ощупь.
 
-STATISTICS:
 ПАРАМЕТРЫ:
 
-Generic Armor Bonus: +2
-Shadowed: +10 to Hide skill
-Weight: 0 lb.~
+Класс защиты: +2 (общий)
+Слияние с тенью: +10 к навыку "Незаметность"
 Вес: 0 фунтов~
 //@10168    = ~Aramite Ring~
-@10169    = ~These silver and ebony rings were worn by followers of a charismatic wizard named Aramite of the Northern Wind. Hundreds of years ago, Aramite started a cult that revered the rulers of ancient Netheril. Seeking to recreate Netherese culture, Aramite and his followers attempted to overtake and excavate a large number of ruins across Faerun. Aramite successfully recovered many ancient Netherese writings and artifacts that were thought to be long lost. Rumors state that the Netherese lich king, Larloch, eventually put an end to Aramite and his entire cult. These rings are among the only items that remain from their organization.
+@10169    = ~Такие серебряные и эбонитовые кольца носили последователи обаятельного волшебника по имени Арамит родом из Северного Ветра. Сотни лет назад Арамит основал культ, который прославлял правителей древнего Нетерила. Пытаясь возродить культурное наследие Нетерила, Арамит и его последователи решили исследовать и раскопать немалое количество развалин по всему Фаэруну. Надо сказать, что Арамиту удалось отыскать множество письменных трудов и артефактов древних нетерильцев. Настолько много, что волшебник потерял рассудок. Слухи гласят, что Ларлох, король-лич Нетерила, в конце концов покончил с Арамитом и всем его культом. Такие кольца - это всё, что осталось от некогда влиятельной организации.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Spellcasting time decreased by 1
-Weight: 1 lb.~
+Время чтения заклинаний уменьшается на 1
+Вес: 1 фунт~
 //@10170    = ~Aramite Cult Leader Ring~
-@10171    = ~These silver and ebony rings were worn by followers of a charismatic wizard named Aramite of the Northern Wind. Hundreds of years ago, Aramite started a cult that revered the rulers of ancient Netheril. Seeking to recreate Netherese culture, Aramite and his followers attempted to overtake and excavate a large number of ruins across Faerun. Aramite successfully recovered many ancient Netherese writings and artifacts that were thought to be long lost. Rumors state that the Netherese lich king, Larloch, eventually put an end to Aramite and his entire cult. These rings are among the only items that remain from their organization.
+@10171    = ~Такие серебряные и эбонитовые кольца носили последователи обаятельного волшебника по имени Арамит родом из Северного Ветра. Сотни лет назад Арамит основал культ, который прославлял правителей древнего Нетерила. Пытаясь возродить культурное наследие Нетерила, Арамит и его последователи решили исследовать и раскопать немалое количество развалин по всему Фаэруну. Надо сказать, что Арамиту удалось отыскать множество письменных трудов и артефактов древних нетерильцев. Настолько много, что волшебник потерял рассудок. Слухи гласят, что Ларлох, король-лич Нетерила, в конце концов покончил с Арамитом и всем его культом. Такие кольца - это всё, что осталось от некогда влиятельной организации.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Spellcasting time decreased by 2
-Weight: 1 lb.~
+Время чтения заклинаний уменьшается на 2
+Вес: 1 фунт~
 //@10172    = ~Cold Reflection~
 @10173    = ~Few have heard of the (literally) short-lived underground movement against the Hosttower of the Arcane called the Circle of Ice - nor the rings that came to mark the members of the organization, both in life and in death. 
 
