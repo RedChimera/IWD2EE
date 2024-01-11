@@ -428,181 +428,187 @@
 Ловкость: +2
 Слияние с тенью: +10 к навыку "Незаметность"
 Вес: 0 фунтов~
-@10122    = ~Ring of Charm Protection~
-@10123    = ~A ring is a small band of precious metal that is used as jewelry. Some rare rings have had magical mental enchantments placed upon them that confer various magical immunities. These rings are highly sought after, especially by those of the adventuring profession. This particular ring conveys a sense of self-assuredness.
+@10122    = ~Кольцо защиты от чар~
+@10123    = ~Кольцо - это небольшая полоска драгоценного металла, используемая как украшение. Изредка встречаются кольца, которые зачарованы и обладают различными магическими свойствами. Такие кольца очень высоко ценятся, особенно среди искателей приключений. Это кольцо повышает уверенность в себе.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Mind Protection: Immune to all charm and domination effects
-Weight: 0 lb.~
-@10124    = ~Lesser Ring of Resistances~
-@10125    = ~A ring is a small band of precious metal that is used as jewelry. Some rare rings have had magical mental enchantments placed upon them that confer various magical immunities. These rings are highly sought after, especially by those of the adventuring profession. This particular ring conveys a sense of sturdiness.
+Защита разума: дарует иммунитет ко всем эффектам очарования и господства
+Вес: 0 фунтов~
+@10124    = ~Кольцо малого сопротивления~
+@10125    = ~Кольцо - это небольшая полоска драгоценного металла, используемая как украшение. Изредка встречаются кольца, которые зачарованы и обладают различными магическими свойствами. Такие кольца очень высоко ценятся, особенно среди искателей приключений. Это кольцо создаёт ощущение защищённости.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Resistance: 1/- Slashing Resistance
-Resistance: 1/- Piercing Resistance
-Resistance: 1/- Bludgeoning Resistance
-Resistance: 1/- Missile Resistance
-Resistance: 1/- Fire Resistance
-Resistance: 1/- Cold Resistance
-Resistance: 1/- Electrical Resistance
-Resistance: 1/- Acid Resistance
-Resistance: 1/- Magic Damage Resistance
-Weight: 0 lb.~
-@10126    = ~Ring of Spirit Armor~
-@10127    = ~A ring is a small band of precious metal that is used as jewelry. Some rare rings have had enchantments placed upon them that allow its wearer to cast certain spells. These rings are highly sought after, especially by those of the adventuring profession. This ring seems to be forged with the same technique and strength one would find in full plate mail. In fact, it even feels a bit heavier than a ring of its size should. 
+Сопротивление: 1/- рубящему урону
+Сопротивление: 1/- колющему урону
+Сопротивление: 1/- дробящему урону
+Сопротивление: 1/- метательному урону
+Сопротивление: 1/- урону огнём
+Сопротивление: 1/- урону холодом
+Сопротивление: 1/- урону электричеством
+Сопротивление: 1/- урону кислотой
+Сопротивление: 1/- магическому урону
+Вес: 0 фунтов~
+@10126    = ~Кольцо духовных доспехов~
+@10127    = ~Кольцо - это небольшая полоска драгоценного металла, используемая как украшение. Изредка встречаются кольца, которые зачарованы и обладают различными магическими свойствами. Такие кольца очень высоко ценятся, особенно среди искателей приключений. Это кольцо, судя по всему, создавалось по той же технологии и ковалось с той же силой, с которыми куются полные латные доспехи. Оно даже весит больше, чем должно весить кольцо такого размера. 
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Spell Power: Can cast the spell Spirit Armor (at level 10) 1/day
-Weight: 0 lb.~
-@10128    = ~Ring of Life Protection~
-@10129    = ~A ring is a small band of precious metal that is used as jewelry. Some rare rings have had enchantments placed upon them that confer various magical abilities. These rings are highly sought after, especially by those of the adventuring profession. For no apparent reason, this ring feels warm to the touch.
+Заклинание: владелец кольца может прочитать заклинание "Духовные доспехи" (как заклинатель 10-ого уровня) раз в день
+Вес: 0 фунтов~
+@10128    = ~Кольцо защиты жизни~
+@10129    = ~Кольцо - это небольшая полоска драгоценного металла, используемая как украшение. Изредка встречаются кольца, которые зачарованы и обладают различными магическими свойствами. Такие кольца очень высоко ценятся, особенно среди искателей приключений. Это кольцо тёплое на ощупь.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Constant Effect: Death Ward while equipped
-Weight: 0 lb.~
-@10130    = ~Ring of Wisdom~
-@10131    = ~A ring is a small band of precious metal that is used as jewelry. Some rare rings have had enchantments placed upon them that confer various magical abilities. These rings are highly sought after, especially by those of the adventuring profession. For no apparent reason, this ring feels warm to the touch.
+Постоянный эффект: персонаж постоянно находится под действием эффекта "Ограждение от смерти"
+Вес: 0 фунтов~
+@10130    = ~Кольцо мудрости~
+@10131    = ~Кольцо - это небольшая полоска драгоценного металла, используемая как украшение. Изредка встречаются кольца, которые зачарованы и обладают различными магическими свойствами. Такие кольца очень высоко ценятся, особенно среди искателей приключений. Это кольцо тёплое на ощупь.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Wisdom: +2
-Weight: 0 lb.~
+Мудрость: +2
+Вес: 0 фунтов~
 //@10132    = ~Tymora's Loop~
-@10133    = ~This ring has received the blessings of Tymora and will bring good luck to those who wear it.
+@10133    = ~Это кольцо получило благословение Тиморы и приносит удачу тем, кто его носит.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Luck:  +2
-Weight: 0 lb.~
-@10134    = ~Ring of Sneak Attacks~
-@10135    = ~A ring is a small band of precious metal that is used as jewelry. Some rare rings have had enchantments placed upon them that confer various magical abilities. These rings are highly sought after, especially by those of the adventuring profession. For no apparent reason, this ring feels warm to the touch.
+Удача: +2
+Вес: 0 фунтов~
+@10134    = ~Кольцо скрытой атаки~
+@10135    = ~Кольцо - это небольшая полоска драгоценного металла, используемая как украшение. Изредка встречаются кольца, которые зачарованы и обладают различными магическими свойствами. Такие кольца очень высоко ценятся, особенно среди искателей приключений. Это кольцо тёплое на ощупь.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-The wearer's Sneak Attack damage is increased by 2d6
-Weight: 0 lb.~
+Урон от скрытой атаки владельца кольца увеличивается на 2d6
+Вес: 0 фунтов~
 //@10136    = ~Ring of Knowledge~
-@10137    = ~A ring is a small band of precious metal that is used as jewelry. Some rare rings have had enchantments placed upon them that confer various magical abilities. These rings are highly sought after, especially by those of the adventuring profession. For no apparent reason, this ring feels warm to the touch.
+@10137    = ~Кольцо - это небольшая полоска драгоценного металла, используемая как украшение. Изредка встречаются кольца, которые зачарованы и обладают различными магическими свойствами. Такие кольца очень высоко ценятся, особенно среди искателей приключений. Это кольцо тёплое на ощупь.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Knowledge (Arcana): +5
-Alchemy: +5
-Weight: 0 lb.~
-@10138    = ~Lesser Extending Ring~
-@10139    = ~A ring is a small band of precious metal that is used as jewelry. Some rare rings have had enchantments placed upon them that confer various magical abilities. These rings are highly sought after, especially by those of the adventuring profession. For no apparent reason, this ring feels warm to the touch.
+Знание (Волшебство): +5
+Алхимия: +5
+Вес: 0 фунтов~
+@10138    = ~Кольцо малого продления~
+@10139    = ~Кольцо - это небольшая полоска драгоценного металла, используемая как украшение. Изредка встречаются кольца, которые зачарованы и обладают различными магическими свойствами. Такие кольца очень высоко ценятся, особенно среди искателей приключений. Это кольцо тёплое на ощупь.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Extension: The wearer's spells last 15% longer
-Weight: 0 lb.~
-@10140    = ~Lesser Ring of Force Resistance~
-@10141    = ~A ring is a small band of precious metal that is used as jewelry. Some rare rings have had enchantments placed upon them that confer various magical abilities. These rings are highly sought after, especially by those of the adventuring profession. For no apparent reason, this ring feels warm to the touch.
+Продление: Заклинания владельца кольца длятся на 15% дольше
+Вес: 0 фунтов~
+@10140    = ~Кольцо малого сопротивление силе~
+@10141    = ~Кольцо - это небольшая полоска драгоценного металла, используемая как украшение. Изредка встречаются кольца, которые зачарованы и обладают различными магическими свойствами. Такие кольца очень высоко ценятся, особенно среди искателей приключений. Это кольцо тёплое на ощупь.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Resistance: 5/- Magic Damage Resistance
-Weight: 0 lb.~
+Сопротивление: 5/- магическому урону
+Вес: 0 фунтов~
 //@10142    = ~Ring of Beauty~
-@10143    = ~This ring has received the blessings of Sune, the goddess of beauty, love, and passion.
+@10143    = ~Это кольцо благословила Суна - богиня любви, красоты и страсти.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Charisma:  +2
-Weight: 0 lb.~
+Харизма: +2
+Вес: 0 фунтов~
 //@10144    = ~Lesser Chameleon Ring~
-@10145    = ~A ring is a small band of precious metal that is used as jewelry. Some rare rings have had enchantments placed upon them that confer various magical abilities. These rings are highly sought after, especially by those of the adventuring profession. For no apparent reason, this ring feels warm to the touch.
+@10145    = ~Кольцо - это небольшая полоска драгоценного металла, используемая как украшение. Изредка встречаются кольца, которые зачарованы и обладают различными магическими свойствами. Такие кольца очень высоко ценятся, особенно среди искателей приключений. Это кольцо тёплое на ощупь.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Generic Armor Bonus: +1
-Shadowed: +5 to Hide skill
-Weight: 0 lb.~
+Класс защиты: +1 (общий)
+Слияние с тенью: +5 к навыку "Незаметность"
+Вес: 0 фунтов~
 //@10146    = ~Winter Ring~
-@10147    = ~This ring appears to be made from ice and yet it does not melt. A slight inner glow beneath the surface betrays the magical nature of this ring.
+@10147    = ~Это кольцо, похоже, сделано изо льда, однако оно не тает. Лёгкое внутреннее свечение выдаёт магическое происхождение артефакта.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Resistance:  50/- Cold Resistance
-All cold damage dealt by the wearer is increased by 30%
-Weight: 0 lb.~
+Сопротивление: 50/- сопротивления холоду
+Весь урон холодом, наносимый носителем кольца, увеличивается на 30%
+Вес: 0 фунтов~
 //@10148    = ~Ring of Greater Regeneration~
-@10149    = ~A ring is a small band of precious metal that is used as jewelry. Some rare rings have had enchantments placed upon them that confer various magical abilities. These rings are highly sought after, especially by those of the adventuring profession. For no apparent reason, this ring feels warm to the touch.
+@10149    = ~Кольцо - это небольшая полоска драгоценного металла, используемая как украшение. Изредка встречаются кольца, которые зачарованы и обладают различными магическими свойствами. Такие кольца очень высоко ценятся, особенно среди искателей приключений. Это кольцо тёплое на ощупь.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Regeneration: Regain 1 hit point every 2 seconds
-Weight: 0 lb.~
-@10150    = ~Ring of Lightning Resistance~
-@10151    = ~A ring is a small band of precious metal that is used as jewelry. Some rare rings have had enchantments placed upon them that confer various magical abilities. These rings are highly sought after, especially by those of the adventuring profession. For no apparent reason, this ring feels warm to the touch.
+Регенерация: владелец восстанавливает 1 пункт здоровья каждые 2 секунды
+Вес: 0 фунтов~
+@10150    = ~Кольцо сопротивление молнии~
+@10151    = ~Кольцо - это небольшая полоска драгоценного металла, используемая как украшение. Изредка встречаются кольца, которые зачарованы и обладают различными магическими свойствами. Такие кольца очень высоко ценятся, особенно среди искателей приключений. Это кольцо тёплое на ощупь.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Resistance: 15/- Electrical Resistance
-Weight: 0 lb.~
-@10152    = ~Ring of Protection +5~
-@10153    = ~This magical ring provides the wearer with amazing protection.
+Сопротивление: 15/- сопротивления электричеству
+Вес: 0 фунтов~
+@10152    = ~Кольцо Защиты +5~
+@10153    = ~Это магическое кольцо обеспечивает своему владельцу удивительную защиту.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Deflection Bonus: +5
-Weight: 0 lb.~
-@10154    = ~Ring of Arcane Knowledge~
-@10155    = ~A ring is a small band of precious metal that is used as jewelry. Some rare rings have had enchantments placed upon them that confer various magical abilities. These rings are highly sought after, especially by those of the adventuring profession. For no apparent reason, this ring feels warm to the touch.
+Класс защиты: +5 (отражение)
+Вес: 0 фунтов~
+@10154    = ~Кольцо тайного знания~
+@10155    = ~Кольцо - это небольшая полоска драгоценного металла, используемая как украшение. Изредка встречаются кольца, которые зачарованы и обладают различными магическими свойствами. Такие кольца очень высоко ценятся, особенно среди искателей приключений. Это кольцо тёплое на ощупь.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Intelligence: +3
-Knowledge (Arcana): +6
-Weight: 0 lb.~
-@10156    = ~Ring of Spell Resistance~
-@10157    = ~A ring is a small band of precious metal that is used as jewelry. Some rare rings have had enchantments placed upon them that confer various magical abilities. These rings are highly sought after, especially by those of the adventuring profession. For no apparent reason, this ring feels warm to the touch.
+Интеллект: +3
+Знание (Волшебство): +6
+Вес: 0 фунтов~
+@10156    = ~Кольцо сопротивления магии~
+@10157    = ~Кольцо - это небольшая полоска драгоценного металла, используемая как украшение. Изредка встречаются кольца, которые зачарованы и обладают различными магическими свойствами. Такие кольца очень высоко ценятся, особенно среди искателей приключений. Это кольцо тёплое на ощупь.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Spell Resistance: Set to 18
-Weight: 0 lb.~
-@10158    = ~Ring of Cold Resistance~
-@10159    = ~A ring is a small band of precious metal that is used as jewelry. Some rare rings have had enchantments placed upon them that confer various magical abilities. These rings are highly sought after, especially by those of the adventuring profession. For no apparent reason, this ring feels warm to the touch.
+Сопротивление: сопротивление магии устанавливается на 18
+Вес: 0 фунтов~
+@10158    = ~Кольцо сопротивления холоду~
+@10159    = ~Кольцо - это небольшая полоска драгоценного металла, используемая как украшение. Изредка встречаются кольца, которые зачарованы и обладают различными магическими свойствами. Такие кольца очень высоко ценятся, особенно среди искателей приключений. Это кольцо тёплое на ощупь.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Resistance: 15/- Cold Resistance
-Weight: 0 lb.~
+Сопротивление: 15/- сопротивления холоду
+Вес: 0 фунтов~
 //@10160    = ~Ring of Acid Resistance~
-@10161    = ~A ring is a small band of precious metal that is used as jewelry. Some rare rings have had enchantments placed upon them that confer various magical abilities. These rings are highly sought after, especially by those of the adventuring profession. For no apparent reason, this ring feels warm to the touch.
+@10161    = ~Кольцо - это небольшая полоска драгоценного металла, используемая как украшение. Изредка встречаются кольца, которые зачарованы и обладают различными магическими свойствами. Такие кольца очень высоко ценятся, особенно среди искателей приключений. Это кольцо тёплое на ощупь.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Resistance: 15/- Acid Resistance
-Weight: 0 lb.~
+Сопротивление: 15/- сопротивления кислоте
+Вес: 0 фунтов~
 @10162    = ~Greater Chameleon Ring~
-@10163    = ~A ring is a small band of precious metal that is used as jewelry. Some rare rings have had enchantments placed upon them that confer various magical abilities. These rings are highly sought after, especially by those of the adventuring profession. For no apparent reason, this ring feels warm to the touch.
+@10163    = ~Кольцо - это небольшая полоска драгоценного металла, используемая как украшение. Изредка встречаются кольца, которые зачарованы и обладают различными магическими свойствами. Такие кольца очень высоко ценятся, особенно среди искателей приключений. Это кольцо тёплое на ощупь.
 
 STATISTICS:
+ПАРАМЕТРЫ:
 
 Generic Armor Bonus: +3
 Shadowed: +15 to Hide skill
 Weight: 0 lb.~
+Вес: 0 фунтов~
 //@10164    = ~Ring of Regeneration~
-@10165    = ~A ring is a small band of precious metal that is used as jewelry. Some rare rings have had enchantments placed upon them that confer various magical abilities. These rings are highly sought after, especially by those of the adventuring profession. For no apparent reason, this ring feels warm to the touch.
+@10165    = ~Кольцо - это небольшая полоска драгоценного металла, используемая как украшение. Изредка встречаются кольца, которые зачарованы и обладают различными магическими свойствами. Такие кольца очень высоко ценятся, особенно среди искателей приключений. Это кольцо тёплое на ощупь.
 
 STATISTICS:
+ПАРАМЕТРЫ:
 
 Regeneration: Regain 1 hit point every round
 Weight: 0 lb.~
+Вес: 0 фунтов~
 //@10166    = ~Chameleon Ring~
-@10167    = ~A ring is a small band of precious metal that is used as jewelry. Some rare rings have had enchantments placed upon them that confer various magical abilities. These rings are highly sought after, especially by those of the adventuring profession. For no apparent reason, this ring feels warm to the touch.
+@10167    = ~Кольцо - это небольшая полоска драгоценного металла, используемая как украшение. Изредка встречаются кольца, которые зачарованы и обладают различными магическими свойствами. Такие кольца очень высоко ценятся, особенно среди искателей приключений. Это кольцо тёплое на ощупь.
 
 STATISTICS:
+ПАРАМЕТРЫ:
 
 Generic Armor Bonus: +2
 Shadowed: +10 to Hide skill
 Weight: 0 lb.~
+Вес: 0 фунтов~
 //@10168    = ~Aramite Ring~
 @10169    = ~These silver and ebony rings were worn by followers of a charismatic wizard named Aramite of the Northern Wind. Hundreds of years ago, Aramite started a cult that revered the rulers of ancient Netheril. Seeking to recreate Netherese culture, Aramite and his followers attempted to overtake and excavate a large number of ruins across Faerun. Aramite successfully recovered many ancient Netherese writings and artifacts that were thought to be long lost. Rumors state that the Netherese lich king, Larloch, eventually put an end to Aramite and his entire cult. These rings are among the only items that remain from their organization.
 
