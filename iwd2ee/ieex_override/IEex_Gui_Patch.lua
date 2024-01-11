@@ -1138,6 +1138,11 @@
 		!pop_all_registers_iwd2
 	]]})
 
+	IEex_HookReplaceFunctionMaintainOriginal(0x7AEAD0, 5, "CVidCell::RenderIconOriginal", {[[
+		!jmp_dword >IEex_Helper_CVidCell_RenderIconOverride
+	]]})
+	IEex_Helper_DefineAddress("CVidCell::RenderIconOriginal", IEex_Label("CVidCell::RenderIconOriginal"))
+
 
 	IEex_EnableCodeProtection()
 
