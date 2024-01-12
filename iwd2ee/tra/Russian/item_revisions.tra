@@ -618,110 +618,111 @@
 Время чтения заклинаний уменьшается на 2
 Вес: 1 фунт~
 //@10172    = ~Cold Reflection~
-@10173    = ~Few have heard of the (literally) short-lived underground movement against the Hosttower of the Arcane called the Circle of Ice - nor the rings that came to mark the members of the organization, both in life and in death. 
+@10173    = ~Немногие знают об очень недолговечном (буквально) подпольном движении против магов Великой башни Тайны под названием "Круг льда" и о том, что членов этой организации при жизни и после неё можно было узнать по особым кольцам.
 
-The Circle of Ice was sponsored by a merchant from Waterdeep whose name has been burned from recorded history by the Hosttower. Apparently, after being forced to debase himself before the Hosttower during a trading agreement in Luskan (and being forced to surrender much of his cargo), the merchant became obsessed with wiping the Hosttower from the face of Faerun. Commissioning wizards in Waterdeep to fashion a score of rings for him, he set about using the last of his remaining wealth to hire a band of wizard slayers to bring about the downfall of the Hosttower. These twenty wizard slayers made arrangements to travel north on their own and rendezvous with the merchant in Luskan. 
+"Круг льда" существовал на средства одного купца из Вотердипа, чьё имя позже было вычеркнуто из хроник Великой башни. По всей видимости, после того, как во время торгового соглашения в Лускане этот купец был сильно унижен (а так же был вынужден за бесценок отдать большую часть своих товаров), он стал одержим идеей стереть Великую башню с лица Фаэруна. Поручив волшебникам в Вотердипе изготовить для него несколько колец, он решил использовать оставшееся у него богатство, чтобы нанять группу из двадцати убийц волшебников для уничтожения магов Великой башни. Эти убийцы должны были самостоятельно отправиться на север и встретиться с торговцем в Лускане.
 
-Ironically enough, the merchant never wore one of these rings, which was key in exposing and defeating the movement. As soon as he returned to Luskan, his mind was picked apart by telepaths and his movements scried, and each wizard slayer and accomplice was noted, identified, and ultimately led into deathtraps where their rings proved no match against the summoned monsters and arrows of slaying wielded by the ambush parties. It is rumored that only one wizard slayer, Martek, escaped the Hosttower, and to this day, he has never been found, which has been a constant source of irritation to the mages.
+Иронично, но сам купец никогда не носил ни одного из этих колец, что послужило раскрытию и уничтожению всей организации. Как только этот торговец добрался до Лускана, его разум был прочтён магами-телепатами, а личности всех убийц волшебников установлены. В конечном счёте, все заговорщики были завлечены в смертельные ловушки, где их кольца оказались не в состоянии противостоять призванным монстрам и смертельным стрелам. Говорят, что только одному из этих убийц, Мартеку, удалось выбраться из Великой башни, и найти его так и не удалось, что очень раздражало магов башни.
 
-In any event, the Circle of Ice died a quick, silent death in Luskan, but the merchant lived on as a toy of the Hosttower, serving them until death, at which point, his corpse was stored in their laboratories. It is most likely his preserved body will end up as the left arm of a flesh golem named Bok many years from now. 
+Как бы то ни было, "Круг льда" был быстро и тихо разгромлён в Лускане, а вот сам купец стал игрушкой магов Великой башни, служа им до самой смерти, после чего его тело было отправлено в лабораторию. Скорее всего, через много лет из его тела сделают левую руку голема из плоти по имени Бок.
 
-These small bands of Cold Reflection appear to be made of crystallized ice, very cold to the touch, and they cannot be seen by a wizard unless the wizard knows they are there. 
+Эти маленькие кольца холодного отражения кажутся сделанными изо льда и очень холодны на ощупь. Кроме того, эти кольца может увидеть только волшебник, который знает, где они должны находиться.
 
-If your band contains one that fancies him or herself a wizard slayer, perhaps these rings may be used for the purpose they were intended... but without the shortsightedness of foolish merchants handicapping your efforts. 
- 
-STATISTICS:
+Если в вашей группе есть тот, кто считает себя убийцей волшебников, то он может использовать это кольцо по назначению... и при этом не опасаться разделить участь несчастного купца.
 
-Spell Resistance: Set to 20
-Weight: 0 lb.~
+ПАРАМЕТРЫ:
+
+Особенности:
+ Сопротивление магии: устанавливается в 20
+Вес: 0 фунтов~
 //@10174    = ~Cold Steel Reflection~
-@10175    = ~During the formation of the Circle of Ice resistance movement against the wizards of the Hosttower of the Arcane, many special rings were forged for the wizard slayers of the organization to help them fend off the magical powers of their opponents. 
+@10175    = ~Во время формирования движения "Круг Льда", борющегося с волшебниками Великой башни Тайны, было выковано множество специальных колец для убийц волшебников, состоящих в этом движении, чтобы помочь им противостоять магическим атакам.
 
-The organization and the forging of the rings was sponsored by a merchant from Waterdeep whose name has been burned from the annals of history by the Hosttower. Apparently, after being forced to debase himself before the Hosttower during a trading agreement in Luskan (and being forced to surrender much of his cargo), the merchant became obsessed with wiping the Hosttower from the face of Faerun. Commissioning wizards in Waterdeep to fashion a score of rings for him, he set about using the last of his remaining wealth to hire a band of wizard slayers to bring about the downfall of the Hosttower. These twenty wizard slayers made arrangements to travel north on their own and rendezvous with the merchant in Luskan. 
+И сам "Круг льда" и изготовление колец существовали на средства одного купца из Вотердипа, чьё имя позже было вычеркнуто из хроник Великой башни. По всей видимости, после того, как во время торгового соглашения в Лускане этот купец был сильно унижен (а так же был вынужден за бесценок отдать большую часть своих товаров), он стал одержим идеей стереть Великую башню с лица Фаэруна. Поручив волшебникам в Вотердипе изготовить для него несколько колец, он решил использовать оставшееся у него богатство, чтобы нанять группу из двадцати убийц волшебников для уничтожения магов Великой башни. Эти убийцы должны были самостоятельно отправиться на север и встретиться с торговцем в Лускане.
 
-There was one wizard slayer named Martek, however, who ignored the rings offered by the merchant, and knowing the danger and guile of the Hosttower, instead commissioned a special ring from a dwarven ally that would provide him additional wards against spells and charms. Once the other members of the Circle of Ice began to be murdered in Luskan after the Hosttower learned their identities, Martek used the power of his enhanced ring to shield himself from the scrying of the Hosttower wizards and escape southwards. He eventually returned the ring to his dwarven ally, who sold it to a merchant making his way for Bryn Shander. 
+Был, однако, один убийца волшебников по имени Мартек, который отказался от кольца, предложенного торговцем, и, зная об опасности и коварстве Великой башни, предпочёл заказать другое кольцо у своего союзника-дварфа. Это кольцо должно было обеспечить ему дополнительную защиту против заклинаний и чар. Когда других членов "Круга Льда" начали убивать в Лускане, после того, как Великая башня узнала их личности, Мартек воспользовался силой своего кольца для того, чтобы защититься от колдовства магов башни и сбежал на юг. В конце концов, он вернул кольцо своему союзнику-дварфу, а тот продал его торговцу, направляющемуся в Брин Шандер.
 
-This Cold Steel Reflection ring differs from the other Circle of Ice rings in that it seems to have a ring of steel beneath the icy exterior of the ring - much like Martek himself. 
+Это кольцо, называемое "Отражение холодной стали" отличается от других колец "Круга Льда" тем, что под его ледяной оболочкой проходит стальной стержень - что неплохо характеризует и самого Мартека.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Special:
-  Spell Resistance: Set to 32
-  Spell Power:  Can cast the 6th level Wizard Spell Globe of Invulnerability (at level 30) once per day
-Weight: 0 lb.~
-@10176    = ~Harshom's Ring of Summoning~
-@10177    = ~This ring was fashioned from a piece of smooth, dark-stained oak. Twin rings of gold line the outer edges of the wooden torus. In all other respects, the ring appears to be well kept but mundane. It previously belonged to the self-titled Beastlord Harshom, a member of Luskan's Hosttower of the Arcane.
+Особенности:
+ Сопротивление магии: устанавливается в 32
+ Заклинание: Может применять заклинание волшебника 6го уровня "Сфера неуязвимости" (на уровне заклинателя 30-ого уровня) один раз в день
+Вес: 0 фунтов~
+@10176    = ~Кольцо призывания Харшома~
+@10177    = ~Это кольцо изготовлено из куска гладкого дуба с тёмными пятнами. Две одинаковые золотые кромки обрамляют деревянное кольцо по краям. Во всех остальных отношениях это кольцо выглядит ухоженным, но совершенно обыкновенным. Ранее оно принадлежало самоназванному Повелителю Зверей Харшому, представителю Великой башни Тайны в Лускане.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Creatures summoned by the wearer gain +2 to damage and +20 maximum Hit Points
-Weight: 1 lb.~
-@10178    = ~Beastlord's Ring~
-@10179    = ~This ring was fashioned from a piece of smooth, dark-stained oak. Twin rings of gold line the outer edges of the wooden torus. In all other respects, the ring appears to be well kept but mundane. It previously belonged to the self-titled Beastlord Harshom, a member of Luskan's Hosttower of the Arcane.
+Существа, призванные владельцем кольца, получают +2 к урону и +20 к количеству максимальных пунктов здоровья.
+Вес: 1 фунт~
+@10178    = ~Кольцо повелителя зверей~
+@10179    = ~Это кольцо изготовлено из куска гладкого дуба с тёмными пятнами. Две одинаковые золотые кромки обрамляют деревянное кольцо по краям. Во всех остальных отношениях это кольцо выглядит ухоженным, но совершенно обыкновенным. Ранее оно принадлежало самоназванному Повелителю Зверей Харшому, представителю Великой башни Тайны в Лускане.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Creatures summoned by the wearer gain +4 to damage and +40 maximum Hit Points
-Weight: 1 lb.~
+Существа, призванные владельцем кольца, получают +4 к урону и +40 к количеству максимальных пунктов здоровья.
+Вес: 1 фунт~
 //@10180    = ~Tyrannar's Band~
-@10181    = ~Previously worn by the half-drow Tyrannar Brutai Mar, this thick steel ring is pockmarked and scratched in many places. Other than its brutalized appearance, it has no distinctive features.
+@10181    = ~Это толстое стальное кольцо, ранее носимое полу-дроу Тираннаром Брутай Маром, покрыто множество пятен и царапин. Кроме своего грубого внешнего вида, оно не имеет никаких отличительных особенностей.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Wisdom:  +3 bonus
-Charisma:  +3 bonus
-Weight: 1 lb.~
+Мудрость: +3
+Харизма: +3
+Вес: 1 фунт~
 //@10182    = ~High Tyrannar's Band~
-@10183    = ~Previously worn by the half-drow Tyrannar Brutai Mar, this thick steel ring is pockmarked and scratched in many places. Other than its brutalized appearance, it has no distinctive features.
+@10183    = ~Это толстое стальное кольцо, ранее носимое полу-дроу Тираннаром Брутай Маром, покрыто множество пятен и царапин. Кроме своего грубого внешнего вида, оно не имеет никаких отличительных особенностей.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Wisdom:  +6 bonus
-Charisma:  +6 bonus
-Weight: 1 lb.~
+Мудрость: +6
+Харизма: +6
+Вес: 1 фунт~
 //@10184    = ~Nathaniel's Ring of the Ram~ //Without Spell Revisions Installed
-@10185    = ~This ring has been slightly modified by Nathaniel from Kuldahar. Its wearer can use it to cast one of the following spells once per day:
+@10185    = ~Это кольцо было слегка модифицировано Натаниэлем из Кулдахара. Владелец кольца может использовать его для применения одного из следующих заклинаний один раз в день:
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Can cast the spell Knock (at level 10) 1/day
-Can cast the spell Bull's Strength (at level 10) 1/day
-Can Cast the spell Alicorn Lance (at level 10) 1/day
-Weight: 0 lb.~
+Может применять заклинание "Стук" (на уровня заклинателя 10-ого уровня) 1/день
+Может применять заклинание "Сила быка" (на уровня заклинателя 10-ого уровня) 1/день
+Может применять заклинание "Копьё Аликорна" (на уровня заклинателя 10-ого уровня) 1/день
+Вес: 0 фунтов~
 //@10186    = ~Nathaniel's Ring of the Ram~ //With Spell Revisions Installed
-@10187    = ~This ring has been slightly modified by Nathaniel from Kuldahar. Its wearer can use it to cast one of the following spells once per day:
+@10187    = ~Это кольцо было слегка модифицировано Натаниэлем из Кулдахара. Владелец кольца может использовать его для применения одного из следующих заклинаний один раз в день:
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Can cast the spell Knock (at level 10) 1/day
-Can cast the spell Ox's Fortitude (at level 10) 1/day
-Can Cast the spell Alicorn Lance (at level 10) 1/day
-Weight: 0 lb.~
+Может применять заклинание "Стук" (на уровня заклинателя 10-ого уровня) 1/день
+Может применять заклинание "Выносливость вола" (на уровня заклинателя 10-ого уровня) 1/день
+Может применять заклинание "Копьё Аликорна" (на уровня заклинателя 10-ого уровня) 1/день
+Вес: 0 фунтов~
 //@10188    = ~Nathaniel's Ring of the Ram~ //HoF
-@10189    = ~This ring has been slightly modified by Nathaniel from Kuldahar. Its wearer can use it to cast one of the following spells once per day:
+@10189    = ~Это кольцо было слегка модифицировано Натаниэлем из Кулдахара. Владелец кольца может использовать его для применения одного из следующих заклинаний один раз в день:
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Can cast the spell Smashing Wave (at level 20) 1/day
-Can cast the spell Aura of Vitality (at level 20) 1/day
-Can Cast the spell Whirlwind (at level 20) 1/day
-Weight: 0 lb.~
+Может применять заклинание "Сокрушительная волна" (на уровня заклинателя 20-ого уровня) 1/день
+Может применять заклинание "Аура жизненной энергии" (на уровня заклинателя 20-ого уровня) 1/день
+Может применять заклинание "Вихрь" (на уровня заклинателя 20-ого уровня) 1/день
+Вес: 0 фунтов~
 
 
 //@10190    = ~Boots of Speed~
-@10191    = ~These boots have been magically enhanced so that wearer is able to travel at twice the normal speed. They are much prized by those whose profession involves traveling long distances.
+@10191    = ~Магия этих сапог позволяют надевшему их двигаться вдвое быстрее обычного. Такую обувь очень ценят те, чей род занятий предполагает длительные путешествия.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Special: Doubles movement rate
-Weight: 1 lb.~
+Особенности: Скорость перемещения увеличенная вдвое
+Вес: 1 фунт~
 //@10192    = ~Boots of Stealth~
-@10193    = ~In ages past, a king named Rhigaerd was renowned for the spies he kept. So skillful were they, that no nook or cranny escaped their eyes and maps were held for entire castles and towns. Eventually betrayed from within, the tools of their trade were taken and dispersed, ensuring that none could amass such a band again.
+@10193    = ~В давние времена король по имени Ригерд славился своими шпионами. Они были так искусны, что ни один уголок, ни одно укромное место не могли укрыться от их глаз, они составляли карты целых замков и городов. В конце концов, один из шпионов предал остальных, и их снаряжение разошлось по всему свету, так что вряд ли кто-нибудь сможет вновь собрать подобный отряд.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Move Silently skill:  +5
-Weight:  1 lb.~
+Навык "Тихая походка": +5
+Вес: 1 фунт~
 //@10194    = ~Boots of the North~
 //@10195    = ~Item description can remain the same; if new description is needed put it here~
 //@10196    = ~Boots of Avoidance~
@@ -729,55 +730,56 @@ Weight:  1 lb.~
 //@10198    = ~Boots of Grounding~
 //@10199    = ~Item description can remain the same; if new description is needed put it here~
 //@10200    = ~Witherbranch Boots~
-@10201    = ~The edges of these near-rotted leather boots still have dead vines and twigs draped from them. These magical boots were fashioned and enchanted by several members of the Hosttower of the Arcane during their brief crusade against various nature worshippers in the Icewind Dale region and passed along to their agents scouting the region. While the boots were known to cause any plant touching them to wither instantly, it also left a noticeable trail through the wilds of Icewind Dale... a trail that the druids followed in polar bear form and devoured the agents one by one. These boots are all that remain.
+@10201    = ~С этих практически сгнивших кожаных сапог свисают мёртвые ветки и побеги растений. Эти волшебные сапоги были созданы и заколдованы членами Великой башни Тайны для своих агентов в Долине Ледяного Ветра, во время их короткого крестового похода против различных почитателей природы. Из-за того, что эти сапоги заставляют засохнуть любое растение, которого касаются, они оставляли заметный след в Долине... след, по которому шли друиды в форме белых медведей и одного за другим пожирали несчастных агентов. Эти сапоги - всё, что осталось.
 
-These boots kill any vegetation they touch, and they cannot be worn by a ranger or druid.
+Прикосновением убивают любую растительность. Не может использоваться друидами и следопытами.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Wearer is immune to the spells Entangle and Spike Growth.
-Weight:  4 lb.~
+Владелец получает иммунитет к заклинаниям "Запутывание" и "Растущие шипы".
+Вес: 4 фунта~
 //@10202    = ~Yeti Skin Boots~
 //@10203    = ~Item description can remain the same; if new description is needed put it here~
 //@10204    = ~Winter Wolf Boots~
-@10205    = ~Boots are normally hand-made by cobblers. Common boots are made by using a form, but good boots are designed for the foot of an individual. These particular boots have been fashioned from the hide of a  Winter Wolf.
+@10205    = ~Сапоги обычно делаются вручную. Простые сапоги сапожник изготавливает по колодке, но хорошие шьются на заказ по индивидуальной мерке. Эта обувка была изготовлена из шкуры зимнего волка.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Resistance: 2/- Cold Resistance
-Charisma: +1
-Weight:  4~
+Сопротивление: 2/- сопротивления холоду
+Харизма: +1
+Вес: 4 фунта~
 //@10206    = ~Chimandrae's Slippers~
-@10207    = ~Crafted of fine red and black silk, soft cotton, and gold filigree, these exquisite slippers could be worth a large sum of money even without their enchantments. The slippers were enchanted by the burglar and wizard Chimandrae of Black Veils. Chimandrae was legendary throughout the ancient empires of the south. Her powers of trickery, seduction, and acrobatics were praised and cursed with equal frequency. She wore these slippers in her home in case unexpected visitors dropped in. Chimandrae mysteriously disappeared in 742 DR, leaving most of her possessions behind in her large Untherian estate.
+@10207    = ~Изготовленные из тончайшего красного и чёрного шёлка, мягкого хлопка и золотой филиграни, это изысканные тапочки даже без чар, наложенных на них, могли бы стоить изрядную сумму. Они были зачарованы взломщицей-волшебницей Химандре из Чёрных Вуалей. О Химандре ходили легенды во всех древних империях Юга. Её способности к хитрости, соблазнению и различным акробатическим трюкам вызывали как уважение, так и ненависть. Она носила эти тапочки дома на случай появления неожиданных гостей. Химандре таинственным образом исчезла в 742 ЛД, оставив большую часть своего имущества в своём поместье в Унтере.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Dexterity: +5 bonus (stacks with other bonuses to Dexterity)
-Weight: 3 lb.~
-@10208    = ~Chimandrae's Quick Slippers~
-@10209    = ~Crafted of fine red and black silk, soft cotton, and gold filigree, these exquisite slippers could be worth a large sum of money even without their enchantments. The slippers were enchanted by the burglar and wizard Chimandrae of Black Veils. Chimandrae was legendary throughout the ancient empires of the south. Her powers of trickery, seduction, and acrobatics were praised and cursed with equal frequency. She wore these slippers in her home in case unexpected visitors dropped in. Chimandrae mysteriously disappeared in 742 DR, leaving most of her possessions behind in her large Untherian estate.
+Ловкость: +5 (добавляется к другим бонусам к ловкости)
+Вес: 3 фунта~
+@10208    = ~Быстрые тапочки Химандре~
+@10209    = ~Изготовленные из тончайшего красного и чёрного шёлка, мягкого хлопка и золотой филиграни, это изысканные тапочки даже без чар, наложенных на них, могли бы стоить изрядную сумму. Они были зачарованы взломщицей-волшебницей Химандре из Чёрных Вуалей. О Химандре ходили легенды во всех древних империях Юга. Её способности к хитрости, соблазнению и различным акробатическим трюкам вызывали как уважение, так и ненависть. Она носила эти тапочки дома на случай появления неожиданных гостей. Химандре таинственным образом исчезла в 742 ЛД, оставив большую часть своего имущества в своём поместье в Унтере.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Dexterity: +8 bonus (stacks with other bonuses to Dexterity)
-Spellward: Immunity to the spells Slow, Web and Entangle
-Special: Increases movement rate by 50%
-Weight: 0 lb.~
+Ловкость: +8 (добавляется к другим бонусам к ловкости)
+Оберёг: дарует иммунитет к заклинаниям "Паутина", "Запутывание" и "Замедление"
+Особое: увеличивает скорость передвижения на 50%
+
+Вес: 0 фунта~
 //@10210    = ~Shifter's Boots~
-@10211    = ~An unknown assassin who operated in the Moonsea, Thesk, and the Vast, used these boots on many of his missions. His magical footwear made him extremely difficult to capture. Eventually, a league of merchants hired a pair of brother wizards, Dashrim and Balkat of Dragon Falls, to stop the assassin before he worked his way through their high council. Dashrim and Balkat ambushed the assassin and dispelled his enchantments. When they finally killed him, they pulled back the man's mask and found that his face had been horribly disfigured in a fire. Strangely, divination revealed nothing about the man's history or clients. The brothers kept the boots for a few years and eventually sold them. Because they did not know the name of the man they had killed, they simply called the items "Shifter's Boots".
+@10211    = ~Неизвестный убийца, действовавший в Лунном Море, Теске и Васте, использовал эти сапоги на многих своих заданиях. Благодаря магической обуви он был практически неуловим. В конце концов купеческая лига наняла пару братьев-волшебников, Дашрима и Балката с Драконьих Водопадов, чтобы покончить с этим убийцей, пока тот не добрался до их высшего совета. Дашрим и Балкат подстерегли убийцу в засаде и развеяли чары сапог. Когда они убили его и сняли с него маску, то увидели, что лицо убийцы изуродовано огнём. Как это ни было странно, но прорицание ничего не помогло узнать ни о самом этом убийце, ни о его заказчиках. Братья хранили сапоги несколько лет, но в конце концов продали их. Поскольку имени убийцы они не знали, то прозвали сапоги просто "Сапогами Проныры".
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Spell Power: Can cast the spell Blink (at level 10) 1/Day
-Weight: 3 lb.~
+Заклинание: может читать заклинание "Мерцание" (на уровне заклинателя 10-ого уровня) 1 раз в день
+Вес: 3 фунта~
 //@10212    = ~Shifter's Nimble Boots~
-@10213    = ~An unknown assassin who operated in the Moonsea, Thesk, and the Vast, used these boots on many of his missions. His magical footwear made him extremely difficult to capture. Eventually, a league of merchants hired a pair of brother wizards, Dashrim and Balkat of Dragon Falls, to stop the assassin before he worked his way through their high council. Dashrim and Balkat ambushed the assassin and dispelled his enchantments. When they finally killed him, they pulled back the man's mask and found that his face had been horribly disfigured in a fire. Strangely, divination revealed nothing about the man's history or clients. The brothers kept the boots for a few years and eventually sold them. Because they did not know the name of the man they had killed, they simply called the items "Shifter's Nimble Boots".
+@10213    = ~Неизвестный убийца, действовавший в Лунном Море, Теске и Васте, использовал эти сапоги на многих своих заданиях. Благодаря магической обуви он был практически неуловим. В конце концов купеческая лига наняла пару братьев-волшебников, Дашрима и Балката с Драконьих Водопадов, чтобы покончить с этим убийцей, пока тот не добрался до их высшего совета. Дашрим и Балкат подстерегли убийцу в засаде и развеяли чары сапог. Когда они убили его и сняли с него маску, то увидели, что лицо убийцы изуродовано огнём. Как это ни было странно, но прорицание ничего не помогло узнать ни о самом этом убийце, ни о его заказчиках. Братья хранили сапоги несколько лет, но в конце концов продали их. Поскольку имени убийцы они не знали, то прозвали сапоги просто "Лёгкими сапогами Проныры".
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Spell Power: Can cast the spell Blink (at level 30) 1/Day
-Constant Effect: User under the effects of the spell Freedom of Movement while equipped
-Weight: 3 lb.~
+Заклинание: может читать заклинание "Мерцание" (на уровне заклинателя 30-ого уровня) 1 раз в день
+Постоянный эффект: тот, кто обут в сапоги, находится под действием заклинания "Свобода действий"
+Вес: 3 фунта~
 //@10214    = ~Treadlightly Boots~
 @10215    = ~These well-crafted doeskin boots are not magical, but the soles have been padded to reduce the amount of noise the user makes. 
 
