@@ -819,57 +819,57 @@
 //@10227    = ~Item description can remain the same; if new description is needed put it here~
 //@10228    = ~Bracers of Archery~
 //@10229    = ~Item description can remain the same; if new description is needed put it here~
-@10230    = ~Gauntlets of Reckless Swings~
-@10231    = ~'Elander's Gloves of Misplacement'
-With mischief in mind, the impetuous Elander set out to craft these cursed gauntlets to best a rival. It turns out his malice got the best of him, when he mistook these gloves for another pair. 
+@10230    = ~Перчатки безрассудных взмахов~
+@10231    = ~"Перчатки ошибки Эландера"
+Импульсивный Эландер задумал перехитрить своего соперника и создал эти проклятые рукавицы. Однако вышло так, что он перехитрил сам себя, по ошибке перепутав их с другой парой.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Attack Bonus: -5 penalty
-Damage: +5 bonus
-Special:  Can only be removed by a Remove Curse spell
-Weight:  2 lb.~
+Атака: -5
+Урон: +5
+Особенности: может быть снято только с помощью заклинания "Снять проклятие"
+Вес: 2 фунта~
 //@10232    = ~Gauntlets of Weapon Skill~
 //@10233    = ~Item description can remain the same; if new description is needed put it here~
 //@10234    = ~Gauntlets of Weapon Expertise~
 //@10235    = ~Item description can remain the same; if new description is needed put it here~
 //@10236    = ~Bracers of Icelandic Pearl~
-@10237    = ~It is said that these magnificent bracers were constructed in the Spine of the World Mountains, and not so long ago. On the coastline of the Sea of Moving Ice, there dwelled Prashnak, an abjurer -- and a stubborn one at that. Apparently Prashnak was having a great deal of difficulty fending off a relentless scourge of trolls, who no doubt were interested in nothing more than his dug out, well stationed bower. Prashnak used storms of acid to keep the trolls at bay. However the young mage was tiring of the constant attacks, and the trolls were becoming bolder.
+@10237    = ~Говорят, эти замечательные наручи были созданы в горах Хребта Мира, притом совсем недавно. На берегу моря Движущихся Льдов жил Прашнак, маг-отрицатель и довольно упрямый. Серьёзной проблемой для него были постоянные нашествия троллей, которых, без сомнения, привлекало исключительно удобное убежище волшебника. Прашнак отгонял троллей кислотным дождём. Однако нападения начали его утомлять, а тролли всё больше наглели.
 
-After several months of studying the various effects of wilting magic, elemental summoning, and magical methods of frosting, Prashnak was finally ready to try his experiment. After summoning a water elemental, Prashnak evaporated choice bodily components and then froze the hapless creature. This lead to the creation of truly horrific sculptures of ice. The trolls, as simple as they are, took extreme offense to these totems and reportedly fled the area. The experiment a gleaming success, the exultant Prashnak continues his woeful studies to this day. What manner of thief took hold of the bracers is unknown, but they have been missing for several years.
+Потратив несколько месяцев на изучение действия иссушающей магии, призывания элементалей и волшебных методов заморозки, Прашнак осуществил свой эксперимент. Призвав водного элементаля, он испарил из тела несчастного существа часть жидкости и заморозил его. Таким образом он возвёл в окрестностях своего жилища множество ужасных ледяных скульптур. Глуповатые тролли ужасно испугались этих тотемов и, по слухам, вообще сбежали из тех краёв. Увидев, что эксперимент увенчался успехом, Прашнак с новой силой взялся за свои жестокие изыскания и ведёт их по сей день. Какому вору удалось стащить эти наручи, неизвестно, но пропали они всего несколько лет назад.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Armor Class:  +5 (armor)
-Special:
-  Cold and magic damage dealt by the wearer from most sources is increased by 20%
-Weight:  3 lb.~
+Класс защиты: +5 (доспех)
+Особенности:
+  Урон холодом и магией, наносимый владельцем этих наручей из большинства источников, увеличивается на 20%
+Вес: 3 фунта~
 //@10238    = ~Elven Sewn Gloves~
 //@10239    = ~Item description can remain the same; if new description is needed put it here~
 //@10240    = ~Yeti Skin Gloves~
 //@10241    = ~Item description can remain the same; if new description is needed put it here~
 //@10242    = ~Winter Wolf Gloves~
-@10243    = ~These fur lined gloves have been stitched together using the skins of a Winter Wolf.
+@10243    = ~Эти плотные и очень тёплые рукавицы были сшиты из шкуры зимнего волка.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Resistance: 2/- Cold Resistance
-Charisma: +1
-Weight: 1 lb.~
+Сопротивление: 2/- сопротивления холоду
+Харизма: +1
+Вес: 1 фунт~
 //@10244    = ~Brazen Bands~
-@10245    = ~These Brazen Bands are enchanted to draw an enemy's blows to them and cancel their inertia, thereby providing extra protection but without the inconveniences that wearing heavy armor normally entails.
+@10245    = ~Эти наручи зачарованы таким образом, чтобы притягивать к себе удары врагов и поглощать их импульс. Они защищают своего владельца так же, как и кольчуга, не стесняя при этом его движений.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Generic Armor Bonus: +3 
-Weight: 1 lb.~
+Класс защиты: +3 (общий)
+Вес: 1 фунт~
 //@10246    = ~Indomitable Bands~
-@10247    = ~These Indomitable Bands are enchanted to draw an enemy's blows to them and cancel their inertia, thereby providing extra protection but without the inconveniences that wearing heavy armor normally entails.
+@10247    = ~Эти наручи зачарованы таким образом, чтобы притягивать к себе удары врагов и поглощать их импульс. Они защищают своего владельца так же, как и кольчуга, не стесняя при этом его движений.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Generic Armor Bonus: +5
-Weight: 1 lb.~
+Класс защиты: +5 (общий)
+Вес: 1 фунт~
 //@10248    = ~Bands of Focus~
 @10249    = ~In the surviving teachings of the Kamjin-Doh of Kara-Tur, it is written that a true weapon master relies not on leather, chain, or plate, but on honing their skills so that they are never struck at all... and this means a weapon master must know their enemy's movements like the movements of their own hand. But such mastery lies in staying focused upon your enemy even in the heat of battle... and these simple leather armbands are intended to do just that.
 
