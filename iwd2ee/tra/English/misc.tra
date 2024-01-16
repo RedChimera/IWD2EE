@@ -20,3 +20,19 @@ In addition, there is an even higher difficulty, Heart of Fury. This difficulty 
 
 Icewind Dale 2: Enhanced Edition has certain optional components which reduce the bonuses given to Heart of Fury enemies. The bonuses above are assuming no such components are installed.~
 @56005=~Ability Score Drain~
+@56006=~Extra racial bonuses for humans go here. Each effect on this spell will be applied to any human player character right after character creation.~
+@56007=~Extra racial bonuses for aasimars go here. Each effect on this spell will be applied to any aasimar player character right after character creation.~
+@56008=~Extra racial bonuses for tieflings go here. Each effect on this spell will be applied to any tiefling player character right after character creation.~
+@56009=~Extra racial bonuses for moon elves go here. Each effect on this spell will be applied to any moon elf player character right after character creation.~
+@56010=~Extra racial bonuses for drow go here. Each effect on this spell will be applied to any drow player character right after character creation.~
+@56011=~Extra racial bonuses for wild elves go here. Each effect on this spell will be applied to any wild elf player character right after character creation.~
+@56012=~Extra racial bonuses for half-elves go here. Each effect on this spell will be applied to any half-elf player character right after character creation.~
+@56013=~Extra racial bonuses for shield dwarves go here. Each effect on this spell will be applied to any shield dwarf player character right after character creation.~
+@56014=~Extra racial bonuses for gold dwarves go here. Each effect on this spell will be applied to any gold dwarf player character right after character creation.~
+@56015=~Extra racial bonuses for gray dwarves go here. Each effect on this spell will be applied to any gray dwarf player character right after character creation.~
+@56016=~Extra racial bonuses for lightfoot halflings go here. Each effect on this spell will be applied to any lightfoot halfling player character right after character creation.~
+@56017=~Extra racial bonuses for strongheart halflings go here. Each effect on this spell will be applied to any strongheart halfling player character right after character creation.~
+@56018=~Extra racial bonuses for ghostwise halflings go here. Each effect on this spell will be applied to any ghostwise halflings player character right after character creation.~
+@56019=~Extra racial bonuses for rock gnomes go here. Each effect on this spell will be applied to any rock gnome player character right after character creation.~
+@56020=~Extra racial bonuses for deep gnomes go here. Each effect on this spell will be applied to any deep gnome player character right after character creation.~
+@56021=~Extra racial bonuses for half-orcs go here. Each effect on this spell will be applied to any half-orc player character right after character creation.~

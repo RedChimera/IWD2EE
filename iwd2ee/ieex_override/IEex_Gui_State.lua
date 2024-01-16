@@ -3004,6 +3004,8 @@ ex_class_name_strings = {
 }
 ex_current_record_hand = 1
 ex_current_record_actorID = 0
+ex_current_record_weapon_die_number = 0
+ex_current_record_weapon_die_size = 0
 ex_previous_line_was_race = false
 function IEex_Extern_OnUpdateRecordDescription(CScreenCharacter, CGameSprite, CUIControlEditMultiLine, m_plstStrings)
 	IEex_AssertThread(IEex_Thread.Both, true)
@@ -3017,6 +3019,8 @@ function IEex_Extern_OnUpdateRecordDescription(CScreenCharacter, CGameSprite, CU
 		local armoredArcanaFeatCount = IEex_ReadByte(creatureData + 0x781, 0x0)
 		IEex_WriteByte(creatureData + 0x781, math.floor(armoredArcanaFeatCount / ex_armored_arcana_multiplier))
 	end
+	local damageString = IEex_FetchString(39518)
+	local damagePotentialString = IEex_FetchString(41120)
 	local castingFailureString = IEex_FetchString(41390)
 	local armoredArcanaString = IEex_FetchString(36352)
 	local sneakAttackDamageString = IEex_FetchString(24898)
@@ -3744,6 +3748,78 @@ function IEex_Extern_OnUpdateRecordDescription(CScreenCharacter, CGameSprite, CU
 					end
 				end
 			end
+		elseif descPanelNum == 1 and string.match(line, damageString .. ":") then
+			local damageBonus = IEex_ReadSignedWord(creatureData + 0x9A6, 0x0)
+			if damageBonus > 0 then
+				line = line .. string.gsub(IEex_FetchString(ex_tra_55604), "<EXRDVAL1>", damageBonus)
+			elseif damageBonus < 0 then
+				line = line .. string.gsub(IEex_FetchString(ex_tra_55605), "<EXRDVAL1>", math.abs(damageBonus))
+			end
+			local numbersProcessed = 0
+			for w in string.gmatch(line, "%d+") do
+				if numbersProcessed == 0 then
+					ex_current_record_weapon_die_number = w
+				elseif numbersProcessed == 1 then
+					ex_current_record_weapon_die_size = w
+				end
+				numbersProcessed = numbersProcessed + 1
+			end
+			local luckBonus = IEex_ReadSignedWord(creatureData + 0x95C, 0x0)
+			if IEex_GetActorSpellState(targetID, 64) then
+				line = string.gsub(line, "%d+d%d+", ex_current_record_weapon_die_number * ex_current_record_weapon_die_size)
+			elseif luckBonus > 0 then
+				local minimumRoll = 1 + luckBonus
+				if minimumRoll > ex_current_record_weapon_die_size then
+					minimumRoll = ex_current_record_weapon_die_size
+				end
+				if minimumRoll == ex_current_record_weapon_die_size then
+					line = string.gsub(line, "%d+d%d+", ex_current_record_weapon_die_number * ex_current_record_weapon_die_size)
+				else
+					line = line .. string.gsub(IEex_FetchString(ex_tra_55606), "<EXRLVAL1>", minimumRoll)
+				end
+			elseif luckBonus < 0 then
+				local maximumRoll = ex_current_record_weapon_die_size + luckBonus
+				if maximumRoll < 1 then
+					maximumRoll = 1
+				end
+				if maximumRoll == 1 then
+					line = string.gsub(line, "%d+d%d+", ex_current_record_weapon_die_number)
+				else
+					line = line .. string.gsub(IEex_FetchString(ex_tra_55607), "<EXRLVAL1>", maximumRoll)
+				end
+			end
+		elseif string.match(line, damagePotentialString .. ":") then
+			local damageBonus = IEex_ReadSignedWord(creatureData + 0x9A6, 0x0)
+			local numbersProcessed = 0
+			local minimumDamage = 0
+			local maximumDamage = 0
+			for w in string.gmatch(line, "%d+") do
+				if numbersProcessed == 0 then
+					minimumDamage = w
+				elseif numbersProcessed == 1 then
+					maximumDamage = w
+				end
+				numbersProcessed = numbersProcessed + 1
+			end
+			minimumDamage = minimumDamage + damageBonus
+			maximumDamage = maximumDamage + damageBonus
+			local luckBonus = IEex_ReadSignedWord(creatureData + 0x95C, 0x0)
+			if IEex_GetActorSpellState(targetID, 64) then
+				minimumDamage = maximumDamage
+			elseif luckBonus > 0 then
+				local minimumRoll = 1 + luckBonus
+				if minimumRoll > ex_current_record_weapon_die_size then
+					minimumRoll = ex_current_record_weapon_die_size
+				end
+				minimumDamage = minimumDamage + (minimumRoll - 1) * ex_current_record_weapon_die_number
+			elseif luckBonus < 0 then
+				local maximumRoll = ex_current_record_weapon_die_size + luckBonus
+				if maximumRoll < 1 then
+					maximumRoll = 1
+				end
+				maximumDamage = maximumDamage - (ex_current_record_weapon_die_size - maximumRoll) * ex_current_record_weapon_die_number
+			end
+			line = string.gsub(line, "%d+%-%d+", minimumDamage .. "-" .. maximumDamage)
 		elseif string.match(line, criticalHitString .. ":") then
 			local weaponRES = ""
 			local weaponSlot = IEex_ReadByte(creatureData + 0x4BA4, 0x0)

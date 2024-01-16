@@ -832,6 +832,9 @@ function IEex_LevelUp_ExtraFeatListener()
 			end
 		end
 		if share > 0 then
+			if ex_disable_order_multiclass_restrictions then
+				IEex_WriteByte(share + 0x89F, bit.band(IEex_ReadByte(share + 0x89F, 0x0), 0xF3))
+			end
 			if panelID == 54 then
 				if ex_starting_level[1] == -1 then
 					for i = 1, 12, 1 do

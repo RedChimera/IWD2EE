@@ -255,6 +255,7 @@ function IEex_Extern_OnPostCreatureProcessEffectList(creatureData)
 		local unknownSourceEffectsRemaining = false
 		IEex_IterateActorTimedEffects(targetID, function(eData)
 			local theconstantID = IEex_ReadDword(eData + 0x68)
+			local theresource = IEex_ReadLString(eData + 0x30, 8)
 			local thesourceID = IEex_ReadDword(eData + 0x110)
 			if theconstantID > 0 and thesourceID <= 0 then
 				local realSourceID = IEex_Helper_GetBridge("IEex_ConstantID", theconstantID)

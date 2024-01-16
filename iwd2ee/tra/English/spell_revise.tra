@@ -50,12 +50,12 @@ This spell grants a +3 bonus to Will saves and immunity to charm and stun effect
 (Abjuration) 
 Level: Drd 3, Rgr 3
 Range: Sight of Caster
-Duration: 10 rounds
+Duration: 4 rounds
 Casting Time: 2
 Area of Effect: 1 creature
 Saving Throw: None 
 
-Upon completion of this spell, a large hemispherical shell resembling that of a tortoise encases the target creature, shielding it from the outside world. The creature encased can take no action but in turn is impervious to all effects. The tortoise shell has 50 hit points, plus another 50 hit points for every 10 levels the druid has attained.~
+Upon completion of this spell, a large hemispherical shell resembling that of a tortoise encases the target creature, shielding it from the outside world. The creature encased can take no action but in turn is impervious to all effects. The tortoise shell has 50 hit points, plus another 50 hit points for every 10 levels the druid has attained. Tortoise Shell can only affect allies.~
 @1010    = ~Circle of Bones~
 @1011    = ~Circle of Bones 
 (Necromancy)
@@ -1463,7 +1463,7 @@ Upon casting this spell, the caster is able to remove cursed items from the targ
 (Evocation) 
 Level: Sor/Wiz 4
 Range: Sight of Caster
-Duration: 5 rounds
+Duration: 4 rounds
 Casting Time: 1
 Area of Effect: 1 creature
 Saving Throw: None

@@ -3,8 +3,8 @@ COPY ~%mod_folder%/spl/spl_race_revisions~ ~override~
 //COPY ~%mod_folder%/tables/tables_race_revisions/ABRACERQ.2da~ ~override~
 COPY ~%mod_folder%/tables/tables_race_revisions/ABRACEAD.2da~ ~override~
 
-COPY_EXISTING ~USRACEAB.spl~ ~override~
-	LPF ALTER_EFFECT INT_VAR check_headers=1 check_globals=0 match_probability2=100 probability2=0 END
+COPY_EXISTING ~USRCAB60.spl~ ~override~ ~USRCAB61.spl~ ~override~
+	LPF ALTER_EFFECT INT_VAR check_headers=1 check_globals=0 match_opcode=288 match_parameter2=236 match_special=5 probability2=0 END
 
 COPY_EXISTING_REGEXP ~.*\.itm~ ~override~
 	READ_LONG 0x18 us_item_flags
