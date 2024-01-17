@@ -1003,28 +1003,29 @@
 //@10277    = ~Item description can remain the same; if new description is needed put it here~
 //@10278    = ~Girdle of Beatification~
 //@10279    = ~Item description can remain the same; if new description is needed put it here~
-@10280    = ~Fine Girdle of Beatification~
-@10281    = ~Priests of Helm in Berdusk consecrated this belt and gave it to the warrior Thom Wainwright, who had performed a number of great services for the church, including the destruction of the Unseeing Eye and the cult that followed him, the Blinded Acolytes. Thom wore the girdle proudly until he fell into severe debt in his later years. To his undying regret, he auctioned it off to a well-known priest of Mask.
+@10280    = ~Изящный ремень блаженных~
+@10281    = ~Жрецы Хелма в Бердуске освятили этот ремень для воина Тома Вейнрайта в дар за огромные услуги, оказанные их церкви (в частности, он уничтожил Незрячее Око и культ его последователей, Ослеплённых Служителей). Том с гордостью носил его много лет, пока не впал в жестокую нужду. К своему великому сожалению, он был вынужден продать ремень с аукциона известному жрецу Маска.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Wearer is under the effects of a Chant spell while equipped
-Wearer is under the effects of a Bless spell while equipped
-Weight: 2 lb.~
+На владельца пояса накладывается постоянное заклинание "Благословение"
+На владельца пояса накладывается постоянное заклинание "Песнь"
+
+Вес: 2 фунта~
 //@10282    = ~Arcs of Disredain~
-@10283    = ~Disredain was an eccentric wizard who became enthralled with the manipulation of electricity. In addition to the wands he created, Disredain made a number of experimental magic items during a fifteen-year period of frenzied research. This belt was one of the items he did not think highly of. Consisting of large, crescent-shaped slices of mottled copper sitting back to back, the belt is quite thick and unique in appearance. A cleric of Talos named Ylkath wore the Arcs for three decades before he died of old age. His companion, the Umberlant priestess Ashalla of the Jade Tide, kept the belt for barely three years before she was shot dead by pirates that survived one of her nautical attacks. The pirates sold the belt to a fence. Its history past that point is unknown.
+@10283    = ~Дисредейн был эксцентричным волшебником, который увлекался манипуляциями с электричеством. Помимо созданных им жезлов, за пятнадцатилетний период неистовых исследований Дисредейн изготовил несколько экспериментальных магических предметов. Этот пояс был одним из тех предметов, на которые Дисредейн не возлагал особых надежд. Состоящий из больших полумесяцев, сделанных из пятнистой меди и составленных друг за другом, этот пояс достаточно широк и обладает уникальным внешним видом. Жрец Талоса по имени Илкас носил этот пояс в течение тридцати лет, пока не умер от старости. Его спутница, жрица Амберли Ашалла из Нефритового прилива, носила этот пояс почти три года, прежде чем быть застреленной пиратами, пережившими её нападение в море. Пираты продали пояс скупщику, и его дальнейшая судьба не известна.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Electrical damage dealt by wearer from most sources is increased by 20%
-Weight: 3 lb.~
-@10284    = ~Conductive Arcs of Disredain~
-@10285    = ~Disredain was an eccentric wizard who became enthralled with the manipulation of electricity. In addition to the wands he created, Disredain made a number of experimental magic items during a fifteen-year period of frenzied research. This belt was one of the items he did not think highly of. Consisting of large, crescent-shaped slices of mottled copper sitting back to back, the belt is quite thick and unique in appearance. A cleric of Talos named Ylkath wore the Arcs for three decades before he died of old age. His companion, the Umberlant priestess Ashalla of the Jade Tide, kept the belt for barely three years before she was shot dead by pirates that survived one of her nautical attacks. The pirates sold the belt to a fence. Its history past that point is unknown.
+Урон электричеством, наносимый владельцем этого пояса из большинства источников, увеличивается на 20%
+Вес: 3 фунта~
+@10284    = ~Проводящие дуги Дисредейна~
+@10285    = ~Дисредейн был эксцентричным волшебником, который увлекался манипуляциями с электричеством. Помимо созданных им жезлов, за пятнадцатилетний период неистовых исследований Дисредейн изготовил несколько экспериментальных магических предметов. Этот пояс был одним из тех предметов, на которые Дисредейн не возлагал особых надежд. Состоящий из больших полумесяцев, сделанных из пятнистой меди и составленных друг за другом, этот пояс достаточно широк и обладает уникальным внешним видом. Жрец Талоса по имени Илкас носил этот пояс в течение тридцати лет, пока не умер от старости. Его спутница, жрица Амберли Ашалла из Нефритового прилива, носила этот пояс почти три года, прежде чем быть застреленной пиратами, пережившими её нападение в море. Пираты продали пояс скупщику, и его дальнейшая судьба не известна.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Electrical damage dealt by wearer from most sources is increased by 40%
-Weight: 3 lb.~
+Урон электричеством, наносимый владельцем этого пояса из большинства источников, увеличивается на 40%
+Вес: 3 фунта~
 //@10286    = ~Black Goat Girdle~
 @10287    = ~Made by halflings, the Black Goat Girdle is sacred to all of their religious sects. Legends say that the Black Goat appeared to a nameless halfling village that had been sacked by goblins during a terrible winter. The tribe of warriors slew most of the halfling men, burned the fields, and took all of the town's livestock. Broken but not hopeless, the villagers congregated for prayer in the burned chapel at the center of town. Out of the smoke drifting over the edge of town, a black goat appeared with six kids, five black, one white. Over the course of six days, the kids grew, gave birth to more kids, and each previous generation died in the night. The milk, meat, and hide provided by the goats helped the halflings survive through their harsh winter. After the six days of miracles had passed, the town tanner made a belt from the hide of the mother goat that had appeared out of the smoke. Halfling tales often contain stories of halfling heroes wearing the Black Goat Girdle on their adventures, though no one has yet determined exactly where the legend truly originated.
 
