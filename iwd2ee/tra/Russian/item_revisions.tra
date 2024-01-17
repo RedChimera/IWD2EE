@@ -871,69 +871,74 @@
 Класс защиты: +5 (общий)
 Вес: 1 фунт~
 //@10248    = ~Bands of Focus~
-@10249    = ~In the surviving teachings of the Kamjin-Doh of Kara-Tur, it is written that a true weapon master relies not on leather, chain, or plate, but on honing their skills so that they are never struck at all... and this means a weapon master must know their enemy's movements like the movements of their own hand. But such mastery lies in staying focused upon your enemy even in the heat of battle... and these simple leather armbands are intended to do just that.
+@10249    = ~В учениях Камджин-До из Кара-Тура, сохранившихся до наших дней, говорится о том, что настоящий мастер оружия должен полагаться не на кожаные доспехи, кольчугу или панцирь, а на свои отточенные навыки - чтобы его вообще никогда не могли ударить оружием... а это значит, что мастер оружия должен знать движения своего врага, как движения собственной руки. Но это возможно лишь в том случае, если боец способен сохранять сосредоточение на своём враге даже в пылу битвы... Именно с этой целью и были созданы эти простые кожаные наплечники.
 
-Initially used to help in the training of students at the Kamjin-Doh, these Bands of Focus radiate a soft moonlight glow when the light of dusk falls upon them. While worn, they exert a slight calming influence on the mind of the sword saint that wields them, heightening the warrior's perceptions and senses, and allowing them to read the movements of their opponents easier. On the rare occasion when an enemy strikes a sword saint, these bands allow the wielder to shrug off pain (which in the teachings of Kamjin-Doh are called, "distractions") and keep the pain where it belongs - on one's opponent. 
+Первоначально эти наплечники предназначались для учеников, занимающихся Камджин-До. В сумрачном свете от них исходит мягкое серебристое сияние. Если надеть их на руки, то они обостряют восприятие, позволяя лучше следить за действиями противника. Кроме того, они оказывают успокаивающее действие на разум святого меча. А в тех редких случаях, когда врагу удаётся нанести точный удар, браслеты помогают своему владельцу не обращать внимание на боль (которая называется "отвлекающим фактором" в учении Камджин-До), ибо боль должна принадлежать только противнику.
 
-Many of these bands were scattered throughout Faerun in the wake of the destruction of the Kamjin-Doh at the hands of the Master of Razors. It is rumored that the Master of Razors possessed a set of these bands as well, but their location remains a mystery. 
+Многие из этих наплечников были разбросаны по всему Фаэруну после того, как Повелитель Бритв разрушил Камджин-До. Ходят слухи, что даже у самого Повелителя Бритв было подобные наплечники, но их нынешнее местонахождение остаётся загадкой.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage reduction 5/+1
-Focus: Wearer deals maximum damage with each hit
-Weight: 1 lb.
-Minimum Wisdom of 14 Required~
+Особенности:
+ Сопротивление: снижение урона 5/+1
+ Средоточие: носитель этих наплечников наносит максимальный урон при каждом попадании
+Вес: 1 фунт
+Требования: Мудрость 14~
 //@10250    = ~Bands of the Master~
-@10251    = ~When the last kensei of Kamjin-Doh, the Master of Razors, was slain in the fields of western Kara-Tur, these simple leather bands were ripped from his arms... and his arms ripped from his shoulders... as punishment for his destruction of the Kamjin-Doh. The identities of those who defeated him are not known, but the rumors in Kara Tur were that his slayers were the spirits of three sword saints of Kamjin-Doh, returned from death to end the crimes of the renegade kensei.
+@10251    = ~Когда Повелитель Бритв, последний кенсай Камджин-До, был убит на полях западного Кара-Тура, эти кожаные наплечники были сорваны с его рук... а руки сорваны с плеч... такую кару он понёс за уничтожение Камджин-До. Личности тех, кто убил кенсая неизвестны, но в Кара-Туре ходили слухи, что трое святых мечей Камджин-До вернулись из мёртвых, чтобы положить конец преступлениям кенсая-отступника.
 
-It was discovered that these once-simple bands of focus that the Master of Razors had worn as a student had become stained with blood and shame, and no longer shone with the same light as it once had. As the Master lost focus, his bands of focus corroded, almost to rot away as they were wrapped upon his bleeding arms. Nonetheless, these tattered bands still hold the power, strength, and viciousness of the Master of Razors... making the one who wields them far more deadly.
+Эти некогда простые наплечники сосредоточения, которые носил Повелитель, будучи учеником, запятнались кровью и позором и больше не сияют тем же светом, что и раньше. По мере того, как Повелитель терял своё сосредоточение, его наплечники тлели и гнили на его кровоточащих руках. Тем не менее, даже сейчас они хранят в себе силу, мощь и порочность Повелителя Бритв... делая того, кто их носит, гораздо более смертоносным.
 
-If you wear these bands, never forget their purpose, never forget your focus, and never forget the reach of your enemy. Keep these three things in your heart, and they will serve you well in battle.
+Тем, кто станет носить эти наплечники, никогда не следует забывать об их назначении: нужно оставаться сосредоточенным и помнить об досягаемости врага. Если хранить это в своём сердце, эти наплечники сослужат хорошую службу.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Attack Bonus: +3
-Damage Bonus: +3
-Focus: Wearer deals maximum damage with each hit
-Weight: 1 lb.
-Minimum Wisdom of 16 Required~
+Особенности:
+ Атака: +3
+ Урон: +3
+ Средоточие: носитель этих наплечников наносит максимальный урон при каждом попадании
+Вес: 1 фунт
+Требования: Мудрость 16~
 //@10252    = ~The Lions of Arkamadis~
-@10253    = ~Between 910 and 946 DR, the lands east of the Spine of the World mountains were often plagued by the minions of the archmage Arkamadis. Believed to have had contact with Arrakon, the would-be conqueror of Icewind Dale's barbarians, Arkamadis was only slightly less dedicated to dominating the native people that surrounded his tower, Whitestone Talon.
+@10253    = ~С 910 по 946 ЛД земли к востоку от Хребта Мира часто подвергались набегам прислужников архимага Аркамадиса. Об Аркамадисе говорили, что он сотрудничает с Араконом, предполагаемым завоевателем варваров Долины Ледяного Ветра. Однако амбиции Аркамадиса по захвату близлежащих городов, таких как Белокаменный Коготь, ничуть не уступали подобным амбиция Аракона.
 
-Arkamadis wore a pair of bracers during most of his time in the north. Regardless of the disguises he used, he always kept the bracers as an identifying feature. The bracers were made of thick, polished bronze. Though not elaborate, the top of each bracer featured a lion rampant in relief, roaring towards his hands. Arkamadis lost his bracers when dwarves from Citadel Adbar crushed his growing empire and demolished Whitestone Talon with siege engines.
+Большую часть своего прибывания на севере, Аркамадис носил пару наручей. Как бы он ни маскировался, его всегда можно было узнать по этим наручам. Они изготовлены из толстой полированной бронзы, а на верхней части каждого из наручей выгравирован грозный рычащий лев. Аркамадис лишился своих наручи, когда дварфы из Цитадели Адбар разбили его растущую империю и уничтожили Белокаменный Коготь с помощью осадных орудий.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Half the wearer's Strength bonus is added to any spell damage they deal
-Special: Can grant self +6 Strength for 4 rounds 1/Day
-Weight: 1 lb.~
+Особенности:
+ Половина модификатора силы владельца добавляется к урону, наносимому его заклинаниями
+ Может повысить владельцу силу на 6 на 4 раунда один раз в день
+Вес: 1 фунт~
 //@10254    = ~Great Lions of Arkamadis~
-@10255    = ~Between 910 and 946 DR, the lands east of the Spine of the World mountains were often plagued by the minions of the archmage Arkamadis. Believed to have had contact with Arrakon, the would-be conqueror of Icewind Dale's barbarians, Arkamadis was only slightly less dedicated to dominating the native people that surrounded his tower, Whitestone Talon.
+@10255    = ~С 910 по 946 ЛД земли к востоку от Хребта Мира часто подвергались набегам прислужников архимага Аркамадиса. Об Аркамадисе говорили, что он сотрудничает с Араконом, предполагаемым завоевателем варваров Долины Ледяного Ветра. Однако амбиции Аркамадиса по захвату близлежащих городов, таких как Белокаменный Коготь, ничуть не уступали подобным амбиция Аракона.
 
-Arkamadis wore a pair of bracers during most of his time in the north. Regardless of the disguises he used, he always kept the bracers as an identifying feature. The bracers were made of thick, polished bronze. Though not elaborate, the top of each bracer featured a lion rampant in relief, roaring towards his hands. Arkamadis lost his bracers when dwarves from Citadel Adbar crushed his growing empire and demolished Whitestone Talon with siege engines.
+Большую часть своего прибывания на севере, Аркамадис носил пару наручей. Как бы он ни маскировался, его всегда можно было узнать по этим наручам. Они изготовлены из толстой полированной бронзы, а на верхней части каждого из наручей выгравирован грозный рычащий лев. Аркамадис лишился своих наручи, когда дварфы из Цитадели Адбар разбили его растущую империю и уничтожили Белокаменный Коготь с помощью осадных орудий.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Half the wearer's Strength bonus is added to any spell damage they deal
-Special: Can grant self +10 Strength for 5 rounds 1/Day
-Weight: 1 lb.~
+Особенности:
+ Половина модификатора силы владельца добавляется к урону, наносимому его заклинаниями
+ Может повысить владельцу силу на 10 на 5 раунда один раз в день
+Вес: 1 фунт~
 //@10256    = ~Rakavik's Bracers~
-@10257    = ~The invoker Rakavik Savell was a man of few words. He kept company with thugs, brigands, murderers, and criminals of all sorts, men and women who valued strong actions over a silver tongue. Rakavik was a clever man, and devised these bracers knowing that most people assume bracers are for protection. When opponents thought Rakavik was out of spells, he never needed to pull out a wand or staff to make a quick offensive action. He simply made a non-threatening gesture with his arms and activated these polished steel bracers. Despite being over two hundred years old, the large sections of black enamel on the bracers are still dark and shining.
+@10257    = ~Воплотитель Ракавик Савелл не отличался многословностью. Он общался с головорезами, убийцами и преступниками всех сортов, мужчинами и женщинами, ценившими дела выше красивых слов. Ракавик был умен и сделал эти наручи, зная, что большинство считает, что наручи могут служить только для защиты. Когда противники думали, что у Ракавика кончились заклинания и расслаблялись, Ракавику не нужно было тянуться за жезлом или посохом, чтобы атаковать снова. Он просто делал безобидный жест руками, приводя в действие эти чёрные сверкающие наручи. Несмотря на то, что им уже более двухсот лет, большая часть поверхности наручей до сих пор покрыта чёрной, отражающей свет краской.
 
-Rakavik died in 1012 DR when he and his fellows botched an attempted burglary in Suzail. The bracers have passed through many hands since that time.
+Ракавик погиб в 1012 ЛД, когда он и его сообщники не справились ограблением в Сюзейле. С тех пор эти наручи сменили немало хозяев.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Spell Power: Once per day, can cast a more powerful version of Magic Missile. The bracers fire 15 magic missiles at a single target. Each missile deals 1d4+1 damage.~
+Заклинание: владелец может творить более мощную версию заклинания "Волшебная стрела" 1 раз в день. Оно выпускает 15 снарядов в одну цель. Каждый снаряд наносит 1d4+1 урона
+Вес: 1 фунт~
 //@10258    = ~Rakavik's Imbued Bracers~
-@10259    = ~The invoker Rakavik Savell was a man of few words. He kept company with thugs, brigands, murderers, and criminals of all sorts, men and women who valued strong actions over a silver tongue. Rakavik was a clever man, and devised these bracers knowing that most people assume bracers are for protection. When opponents thought Rakavik was out of spells, he never needed to pull out a wand or staff to make a quick offensive action. He simply made a non-threatening gesture with his arms and activated these polished steel bracers. Despite being over two hundred years old, the large sections of black enamel on the bracers are still dark and shining.
+@10259    = ~Воплотитель Ракавик Савелл не отличался многословностью. Он общался с головорезами, убийцами и преступниками всех сортов, мужчинами и женщинами, ценившими дела выше красивых слов. Ракавик был умен и сделал эти наручи, зная, что большинство считает, что наручи могут служить только для защиты. Когда противники думали, что у Ракавика кончились заклинания и расслаблялись, Ракавику не нужно было тянуться за жезлом или посохом, чтобы атаковать снова. Он просто делал безобидный жест руками, приводя в действие эти чёрные сверкающие наручи. Несмотря на то, что им уже более двухсот лет, большая часть поверхности наручей до сих пор покрыта чёрной, отражающей свет краской.
 
-Rakavik died in 1012 DR when he and his fellows botched an attempted burglary in Suzail. The bracers have passed through many hands since that time.
+Ракавик погиб в 1012 ЛД, когда он и его сообщники не справились ограблением в Сюзейле. С тех пор эти наручи сменили немало хозяев.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Spell Power: Once per day, can cast a more powerful version of Magic Missile. The bracers fire 40 magic missiles at a single target. Each missile deals 1d4+1 damage.
-Weight: 1 lb.~
+Заклинание: владелец может творить более мощную версию заклинания "Волшебная стрела" 1 раз в день. Оно выпускает 40 снарядов в одну цель. Каждый снаряд наносит 1d4+1 урона
+Вес: 1 фунт~
 //@10260    = ~Tamjan's Bracers~
 @10261    = ~The Neverwinter wizard Tamjan Baker could have been an excellent mage, or so his teachers said. Unfortunately, Tamjan was called upon repeatedly to assist his father in the expansion of their family bakery. To establish a reputation among the cities of the north, Tamjan would magically preserve the freshness of his father's baked goods as he whisked them away to important events from Luskan to Silverymoon. Tamjan hated assisting his father. It made him the butt of jokes in wizardly circles across the north. Tamjan eventually decided to hire a group of bandits to attack him and his father as they traveled to Luskan. The young mage believed that the attack would scare his father into giving up his outlandish plan to establish bakeries across the north. The bandits became overzealous in the execution of their role. Weeks later, all the Neverwinter scouts found were Tamjan's magical bracers lying in a puddle of slush.
 
