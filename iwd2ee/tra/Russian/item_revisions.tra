@@ -940,64 +940,61 @@
 Заклинание: владелец может творить более мощную версию заклинания "Волшебная стрела" 1 раз в день. Оно выпускает 40 снарядов в одну цель. Каждый снаряд наносит 1d4+1 урона
 Вес: 1 фунт~
 //@10260    = ~Tamjan's Bracers~
-@10261    = ~The Neverwinter wizard Tamjan Baker could have been an excellent mage, or so his teachers said. Unfortunately, Tamjan was called upon repeatedly to assist his father in the expansion of their family bakery. To establish a reputation among the cities of the north, Tamjan would magically preserve the freshness of his father's baked goods as he whisked them away to important events from Luskan to Silverymoon. Tamjan hated assisting his father. It made him the butt of jokes in wizardly circles across the north. Tamjan eventually decided to hire a group of bandits to attack him and his father as they traveled to Luskan. The young mage believed that the attack would scare his father into giving up his outlandish plan to establish bakeries across the north. The bandits became overzealous in the execution of their role. Weeks later, all the Neverwinter scouts found were Tamjan's magical bracers lying in a puddle of slush.
+@10261    = ~Волшебник из Невервинтера по имени Тэмьян Бэйкер мог бы стать отличным магом - так утверждали его наставники. К сожалению, вместо занятий Тэмьяну частенько приходилось помогать отцу в семейной пекарне. От Тэмьяна требовалось магией сохранять свежесть отцовской выпечки. За это изделия пекарни Бэйкеров очень ценили не только в северных городах, но даже в Лускане и Серебристой Луне. Тэмьян же ненавидел помогать отцу - его пекарские достижения служили поводом для насмешек среди волшебников Севера. В конце концов, Тэмьян решил нанять шайку разбойников, чтобы те напали на него и его отца во время их путешествия в Лускан. Юный маг полагал, что налёт испугает отца и отвратит его от мысли основать пекарни по всему Северу. Но, как известно, жизнь любит вносить свои коррективы - бандиты слишком увлеклись отведённой им ролью. Лишь через несколько недель разведчики Невервинтера нашли останки груза, среди которого были и волшебные наручи Тэмьяна.
 
-The bracers are made of fine pinewood and leather with steel reinforcements. They feature very little ornamentation, the graceful curve of the steel being the notable exception.
+Наручи сделаны из сосны и выделанной кожи. Местами они укреплены стальными вставками и почти лишены украшений, если не считать за таковые изящно изогнутый металл.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Deflection Bonus: +2 
-Weight: 1 lb.~
+Класс защиты: +2 (отражение)
+Вес: 1 фунт~
 //@10262    = ~Tamjan's Bolstered Bracers~
-@10263    = ~The Neverwinter wizard Tamjan Baker could have been an excellent mage, or so his teachers said. Unfortunately, Tamjan was called upon repeatedly to assist his father in the expansion of their family bakery. To establish a reputation among the cities of the north, Tamjan would magically preserve the freshness of his father's baked goods as he whisked them away to important events from Luskan to Silverymoon. Tamjan hated assisting his father. It made him the butt of jokes in wizardly circles across the north. Tamjan eventually decided to hire a group of bandits to attack him and his father as they traveled to Luskan. The young mage believed that the attack would scare his father into giving up his outlandish plan to establish bakeries across the north. The bandits became overzealous in the execution of their role. Weeks later, all the Neverwinter scouts found were Tamjan's magical bracers lying in a puddle of slush.
+@10263    = ~Волшебник из Невервинтера по имени Тэмьян Бэйкер мог бы стать отличным магом - так утверждали его наставники. К сожалению, вместо занятий Тэмьяну частенько приходилось помогать отцу в семейной пекарне. От Тэмьяна требовалось магией сохранять свежесть отцовской выпечки. За это изделия пекарни Бэйкеров очень ценили не только в северных городах, но даже в Лускане и Серебристой Луне. Тэмьян же ненавидел помогать отцу - его пекарские достижения служили поводом для насмешек среди волшебников Севера. В конце концов, Тэмьян решил нанять шайку разбойников, чтобы те напали на него и его отца во время их путешествия в Лускан. Юный маг полагал, что налёт испугает отца и отвратит его от мысли основать пекарни по всему Северу. Но, как известно, жизнь любит вносить свои коррективы - бандиты слишком увлеклись отведённой им ролью. Лишь через несколько недель разведчики Невервинтера нашли останки груза, среди которого были и волшебные наручи Тэмьяна.
 
-The bracers are made of fine pinewood and leather with steel reinforcements. They feature very little ornamentation, the graceful curve of the steel being the notable exception.
+Наручи сделаны из сосны и выделанной кожи. Местами они укреплены стальными вставками и почти лишены украшений, если не считать за таковые изящно изогнутый металл.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Deflection Bonus: +6
-Weight: 1 lb.~
+Класс защиты: +6 (отражение)
+Вес: 1 фунт~
 //@10264    = ~Thunder Clap~
-@10265    = ~When a high level monk hits someone, the victims often say it was like getting hit by a bolt of lightning.
+@10265    = ~Когда монах высокого уровня наносит точный удар, жертвы такого удара часто говорят, что это было похоже на удар молнии.
 
-The bracers known as Thunder Clap are a prized possession of the monks that own them. Being that monks rarely use weapons other than their own hands and feet, these bracers offer an edge in battle that is rarely seen in the Realms. These bracers allow the skilled monk to imbue their attacks with lightning. The added force dished out by these bracers has, on several occasions, evened the odds against would be bandits that try to outnumber their monk victims.
+Эти наручи, известные под именем "Раскат грома" являются ценным приобретением для монахов. Поскольку те редко используют оружие, кроме своих рук и ног, эти наручи способны дать столь редкое для монахов преимущество в бою - они усиливают их атаки молниями. Благодаря этому, многие стычки против разбойников заканчивались в пользу монахов, даже против превосходящих сил противника.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Special:
- Shock: Unarmed attacks deal an additional 1d6 electrical damage
-Weight: 1 lb.~
+Особенности
+ Шок: безоружные атаки наносят дополнительно 1d6 урона электричеством
+Вес: 1 фунт~
 //@10266    = ~Force of Lightning~
-@10267    = ~When a high level monk hits someone, the victims often say it was like getting hit by a bolt of lightning.
+@10267    = ~Когда монах высокого уровня наносит точный удар, жертвы такого удара часто говорят, что это было похоже на удар молнии.
 
-The bracers known as Force of Lightning are a prized possession of the monks that own them. Being that monks rarely use weapons other than their own hands and feet, these bracers offer an edge in battle that is rarely seen in the Realms. These bracers allow the skilled monk to imbue their attacks with lightning. The added force dished out by these bracers has, on several occasions, evened the odds against would be bandits that try to outnumber their monk victims.
+Эти наручи, известные под именем "Сила молнии" являются ценным приобретением для монахов. Поскольку те редко используют оружие, кроме своих рук и ног, эти наручи способны дать столь редкое для монахов преимущество в бою - они усиливают их атаки молниями. Благодаря этому, многие стычки против разбойников заканчивались в пользу монахов, даже против превосходящих сил противника.
 
+ПАРАМЕТРЫ:
 
-STATISTICS:
-
-Special:
- Shock: Unarmed attacks deal an additional 2d4 electrical damage
-Weight: 1 lb.~
+Особенности
+ Шок: безоружные атаки наносят дополнительно 2d4 урона электричеством
+Вес: 1 фунт~
 //@10268    = ~Periapt of Wound Closure~
-@10269    = ~This magical stone looks exactly the same as the others of this ilk. The person possessing it need never fear open, bleeding wounds because the periapt prevents them. In addition, the periapt increases the normal rate of healing, and allows normal healing of wounds that would not do so normally.
+@10269    = ~Этот магический камень выглядит точно так же, как и другие голыши, однако его обладатель может не бояться кровоточащих ран - амулет мгновенно останавливает кровь. Кроме того, он ускоряет заживление ран и позволяет нормально заживлять раны, которые бы не зажили обычным способом.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Special: 
-  While equipped it will prevent ongoing blood loss from weapons that cause the Wounding effect.
-  Regenerate 1 HP per 4 rounds
-Weight: 1~
+Особенности:
+ Если предмет используется, его владелец не страдает от кровопотери после ударов оружия с эффектом "Рваные раны".
+ Восстанавливает 1 пункт здоровья каждые 4 раунда
+Вес: 1 фунт~
 //@10270    = ~Periapt of Wound Closure~ //HoF
-@10271    = ~This magical stone looks exactly the same as the others of this ilk. The person possessing it need never fear open, bleeding wounds because the periapt prevents them. In addition, the periapt increases the normal rate of healing, and allows normal healing of wounds that would not do so normally.
+@10271    = ~Этот магический камень выглядит точно так же, как и другие голыши, однако его обладатель может не бояться кровоточащих ран - амулет мгновенно останавливает кровь. Кроме того, он ускоряет заживление ран и позволяет нормально заживлять раны, которые бы не зажили обычным способом.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Special:
-  While equipped it will prevent ongoing blood loss from weapons that cause the Wounding effect.
-  Regenerate 1 HP per 3 seconds
-Weight: 1~
-
-
+Особенности:
+ Если предмет используется, его владелец не страдает от кровопотери после ударов оружия с эффектом "Рваные раны".
+ Восстанавливает 1 пункт здоровья каждые 3 секунды
+Вес: 1 фунт~
 //@10272    = ~Golden Girdle~
 //@10273    = ~Item description can remain the same; if new description is needed put it here~
 //@10274    = ~Girdle of Bluntness~
