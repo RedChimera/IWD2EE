@@ -15,6 +15,10 @@ COPY ~%mod_folder%/spl/spl_creature_revisions~ ~override~
 
 COPY ~%mod_folder%/bam/bam_creature_revisions~ ~override~
 
+ACTION_IF !(MOD_IS_INSTALLED ~iwd2ee.tp2~ ~2~) BEGIN
+	COPY ~%mod_folder%/itm/itm_item_revisions/00CWSHD1.itm~ ~override~
+END
+
 COPY_EXISTING ~31ORCSH0.bcs~ ~override/31ORCSH4.bcs~ ~31ORCSH0.bcs~ ~override/31ORCSH5.bcs~ ~31ORCSH0.bcs~ ~override/30ORCS0.bcs~ ~31ORCSH0.bcs~ ~override/30ORCS1.bcs~ ~31ORCSH0.bcs~ ~override/31ORCS00.bcs~ ~31ORCSH0.bcs~ ~override/31ORCS01.bcs~ ~31ORCSH0.bcs~ ~override/31ORCS03.bcs~ ~31ORCSH0.bcs~ ~override/31ORCS04.bcs~ ~31ORCSH0.bcs~ ~override/31ORCS09.bcs~ ~31ORCSH0.bcs~ ~override/31ORCS10.bcs~
 
 COPY_EXISTING ~30WCHDR0.bcs~ ~override/31ORCS02.bcs~ ~30WCHDR0.bcs~ ~override/31ORCS05.bcs~ ~30WCHDR0.bcs~ ~override/31ORCS06.bcs~ ~30WCHDR0.bcs~ ~override/31ORCS07.bcs~ ~30WCHDR0.bcs~ ~override/31ORCS08.bcs~

@@ -582,3 +582,107 @@ Area of Effect: 15-foot radius
 Saving Throw: Fortitude partial
 
 This spell releases an extremely loud and jarring burst of sound. Creatures in the area of effect take 1d8 sonic damage and must make a Fortitude save or be stunned for 1 round. Deaf creatures are not stunned but still take damage. The caster is unaffected by this spell.~
+@1009    = ~Tortoise Shell
+(Abjuration) 
+Level: Drd 3, Rgr 3
+Range: Sight of Caster
+Duration: 4 rounds
+Casting Time: 2
+Area of Effect: 1 creature
+Saving Throw: None 
+
+Upon completion of this spell, a large hemispherical shell resembling that of a tortoise encases the target creature, shielding it from the outside world. The creature encased can take no action but in turn is impervious to all effects. The tortoise shell has 50 hit points, plus another 50 hit points for every 10 levels the druid has attained. Tortoise Shell can only affect allies.~
+@1679    = ~Otiluke's Resilient Sphere
+(Evocation) 
+Level: Sor/Wiz 4
+Range: Sight of Caster
+Duration: 4 rounds
+Casting Time: 1
+Area of Effect: 1 creature
+Saving Throw: None
+
+When this spell is cast, the result is a globe of shimmering force that encloses the subject creature. The resilient sphere will contain its subject for the duration of the spell. The sphere is completely immune to all damage; the only method of removing the sphere is by the use of a Dispel Magic spell. Hence the creature caught inside the globe is completely safe from all attacks, but at the same time is completely unable to affect the outside world.~
+@529    = ~CLERIC:
+
+The cleric is a generic priest (of any mythos) who tends to the spiritual needs of a community. He is both protector and healer, though he is not totally defensive.
+
+NOTE: Wisdom is the casting statistic for a cleric. It affects their maximum spellcasting level, spell saving throw DCs, and number of bonus spells.
+
+Hit Points per Level: 1-8
+
+Advantages:
+* Proficient with all simple weapons as well as hammers, flails, light armor, medium armor, heavy armor, and shields.
+* Clerics can cast powerful defensive and healing spells.
+* Clerics have the ability to Turn Undead. When this power is invoked, the cleric channels positive or negative energy, which has various effects on undead. The higher the cleric's level and charisma are, the greater his or her chance of success is. If the cleric is good, or a neutral follower of a non-evil deity, their turning causes undead to flee, or destroys them outright if the turn undead roll is high enough. If the cleric is evil, or a neutral follower of an evil deity, their turning causes hostile undead to cower before them, or takes control of the undead if the turn undead roll is high enough, while allied undead are instead bolstered, making them more difficult for enemy clerics to turn. If an allied undead has been turned by an enemy cleric, an evil cleric can dispel the turning with a turning on their own.
+* Clerics receive special powers and spells from their deity.
+* Spontaneous Casting: Clerics can convert their spells to cure (if good or neutral) or inflict (if evil) spells of the nearest level when a player shift-clicks on a spell at the time of casting. The spell clicked is immediately removed from the character's memorized list and cast as the nearest cure or inflict spell of the same level.
+
+Spontaneous Casting Spells:
+1: Cure Light Wounds/Inflict Light Wounds
+2: Cure Moderate Wounds/Inflict Moderate Wounds
+3: Cure Serious Wounds/Inflict Serious Wounds
+4: Cure Critical Wounds/Inflict Critical Wounds
+5: Raise Dead/Slay Living
+6: Heal/Harm
+7: Resurrection/Destruction
+8: Greater Restoration/Energy Drain
+9: Mass Heal/Mass Harm
+
+Disadvantages:
+* Clerics do not have access to many powerful offensive spells.
+* Clerics are weaker in combat than fighters, rangers, paladins, and barbarians.~
+@814    = ~ANIMAL EMPATHY (Cha; Trained Only; Druid, Ranger Only):
+
+Use this skill to keep a guard dog from barking at you, to get a wild bird to land on your outstretched hand, or to keep an owlbear calm while you back off. Any wild creature, including animals as well as animalistic monsters such as wyverns, must make a Will save or be charmed for 1 round per caster level.
+~
+@55717=~This undead has been bolstered and made more difficult to turn~
+@56006=~Extra racial bonuses for humans go here. Each effect on this spell will be applied to any human player character right after character creation.~
+@56007=~Extra racial bonuses for aasimars go here. Each effect on this spell will be applied to any aasimar player character right after character creation.~
+@56008=~Extra racial bonuses for tieflings go here. Each effect on this spell will be applied to any tiefling player character right after character creation.~
+@56009=~Extra racial bonuses for moon elves go here. Each effect on this spell will be applied to any moon elf player character right after character creation.~
+@56010=~Extra racial bonuses for drow go here. Each effect on this spell will be applied to any drow player character right after character creation.~
+@56011=~Extra racial bonuses for wild elves go here. Each effect on this spell will be applied to any wild elf player character right after character creation.~
+@56012=~Extra racial bonuses for half-elves go here. Each effect on this spell will be applied to any half-elf player character right after character creation.~
+@56013=~Extra racial bonuses for shield dwarves go here. Each effect on this spell will be applied to any shield dwarf player character right after character creation.~
+@56014=~Extra racial bonuses for gold dwarves go here. Each effect on this spell will be applied to any gold dwarf player character right after character creation.~
+@56015=~Extra racial bonuses for gray dwarves go here. Each effect on this spell will be applied to any gray dwarf player character right after character creation.~
+@56016=~Extra racial bonuses for lightfoot halflings go here. Each effect on this spell will be applied to any lightfoot halfling player character right after character creation.~
+@56017=~Extra racial bonuses for strongheart halflings go here. Each effect on this spell will be applied to any strongheart halfling player character right after character creation.~
+@56018=~Extra racial bonuses for ghostwise halflings go here. Each effect on this spell will be applied to any ghostwise halflings player character right after character creation.~
+@56019=~Extra racial bonuses for rock gnomes go here. Each effect on this spell will be applied to any rock gnome player character right after character creation.~
+@56020=~Extra racial bonuses for deep gnomes go here. Each effect on this spell will be applied to any deep gnome player character right after character creation.~
+@56021=~Extra racial bonuses for half-orcs go here. Each effect on this spell will be applied to any half-orc player character right after character creation.~
+@4803   = ~This ring is the only part of Veira that remains truly tangible. Bound in death as well as life, the ring never leaves Veira's finger.
+
+Veira remains only partly corporeal so long as she clings to the Material Plane. She can interact with the world around her, but her partially ethereal form has no need for sleep, and she can neither enjoy the pleasure of food or drink, nor can she suffer the pain of illness and injury. If her form is damaged, she can slowly regenerate over time. If her form is destroyed, she can be restored with a sufficient burst of positive energy, such as a Raise Dead spell.
+
+STATISTICS:
+
+Regeneration: 1 hit point per round
+Damage Reduction: 5/+1
+Incorporeal: Veira has a 50% chance to avoid any instance of physical damage that would hit her
+Move Silently: +50
+Resistance: 25/- Cold Resistance
+Resistance: 5/- Acid, Electricity, and Fire Resistance
+Turn Resistance: Counts as 4 levels higher for purposes of resisting Turn Undead
+Immunity to fatigue, poison, disease, bleeding wounds, stun, web, entangle, intoxication, nausea, vampiric touch, energy drain, Stoneskin, Iron Skins, Barkskin, enfeeblement, Otiluke's Resilient Sphere, Tortoise Shell, Horrid Wilting, death magic, petrification, critical hits, and most potions.
+Weight: 0 lb.~
+@4805   = ~This ring is the only part of Veira that remains truly tangible. Bound in death as well as life, the ring never leaves Veira's finger.
+
+Veira remains only partly corporeal so long as she clings to the Material Plane. She can interact with the world around her, but her partially ethereal form has no need for sleep, and she can neither enjoy the pleasure of food or drink, nor can she suffer the pain of illness and injury. If her form is damaged, she can slowly regenerate over time. If her form is destroyed, she can be restored with a sufficient burst of positive energy, such as a Raise Dead spell.
+
+STATISTICS:
+
+Regeneration: 2 hit points per round
+Damage Reduction: 10/+2
+Incorporeal: Veira has a 50% chance to avoid any instance of physical damage that would hit her
+Move Silently: +50
+Resistance: 50/- Cold Resistance
+Resistance: 10/- Acid, Electricity, and Fire Resistance
+Turn Resistance: Counts as 4 levels higher for purposes of resisting Turn Undead
+Immunity to fatigue, poison, disease, bleeding wounds, stun, web, entangle, intoxication, nausea, vampiric touch, energy drain, Stoneskin, Iron Skins, Barkskin, enfeeblement, Otiluke's Resilient Sphere, Tortoise Shell, Horrid Wilting, death magic, petrification, critical hits, and most potions.
+Weight: 0 lb.~
+@55604=~, +<EXRDVAL1> extra damage~
+@55605=~, -<EXRDVAL1> damage penalty~
+@55606=~, minimum die roll of <EXRLVAL1>~
+@55607=~, maximum die roll of <EXRLVAL1>~

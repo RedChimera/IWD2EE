@@ -3,12 +3,8 @@ COPY_EXISTING ~IEex_INI.lua~ ~override~
 	IF_EXISTS
 	BUT_ONLY_IF_IT_CHANGES
 
-COPY_EXISTING ~usraceab.spl~ ~override~
-	LPF ALTER_EFFECT INT_VAR silent=1 check_headers=1 check_globals=0 match_opcode=500 match_special=513 probability2=0 STR_VAR match_resource=~MERACESP~ END
-	LPF ALTER_EFFECT INT_VAR silent=1 check_headers=1 check_globals=0 match_opcode=500 match_special=514 probability2=0 STR_VAR match_resource=~MERACESP~ END
-	LPF ALTER_EFFECT INT_VAR silent=1 check_headers=1 check_globals=0 match_opcode=500 match_special=518 probability2=0 STR_VAR match_resource=~MERACESP~ END
-	LPF ALTER_EFFECT INT_VAR silent=1 check_headers=1 check_globals=0 match_opcode=500 match_special=769 probability2=0 STR_VAR match_resource=~MERACESP~ END
-	IF_EXISTS
+COPY_EXISTING ~usrcab11.spl~ ~override~ ~usrcab12.spl~ ~override~ ~usrcab21.spl~ ~override~ ~usrcab61.spl~ ~override~
+	LPF ALTER_EFFECT INT_VAR silent=1 check_headers=1 check_globals=0 match_opcode=104 probability2=0 END
 
 COPY_EXISTING ~racersmd.2da~ ~override~
 	LPF GET_2DA_ROW INT_VAR numcolumns=12 match_column=0 STR_VAR match=~ELF_DROW~ RET drowrow=matched END

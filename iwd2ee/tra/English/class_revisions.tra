@@ -740,7 +740,7 @@ Hit Points per Level: 1-8
 Advantages:
 * Proficient with all simple weapons as well as hammers, flails, light armor, medium armor, heavy armor, and shields.
 * Clerics can cast powerful defensive and healing spells.
-* Clerics have the ability to Turn Undead. When this power is invoked, the cleric attempts to use the power of his or her patron deity to either terrify (if good or neutral) or control (if evil) a group of undead. The higher the cleric's level and charisma are, the greater his or her chance of success is.
+* Clerics have the ability to Turn Undead. When this power is invoked, the cleric channels positive or negative energy, which has various effects on undead. The higher the cleric's level and charisma are, the greater his or her chance of success is. If the cleric is good, or a neutral follower of a non-evil deity, their turning causes undead to flee, or destroys them outright if the turn undead roll is high enough. If the cleric is evil, or a neutral follower of an evil deity, their turning causes hostile undead to cower before them, or takes control of the undead if the turn undead roll is high enough, while allied undead are instead bolstered, making them more difficult for enemy clerics to turn. If an allied undead has been turned by an enemy cleric, an evil cleric can dispel the turning with a turning on their own.
 * Clerics receive special powers and spells from their deity.
 * Spontaneous Casting: Clerics can convert their spells to cure (if good or neutral) or inflict (if evil) spells of the nearest level when a player shift-clicks on a spell at the time of casting. The spell clicked is immediately removed from the character's memorized list and cast as the nearest cure or inflict spell of the same level.
 
@@ -1906,8 +1906,8 @@ Advantages:
 * +2 to saves against Enchantment magic.
 * Immune to Sleep magic.~
 
-@895    = ~Animal Empathy~
-@896    = ~ANIMAL EMPATHY (Cha; Trained Only; Druid, Ranger Only):
+@813    = ~Animal Empathy~
+@814    = ~ANIMAL EMPATHY (Cha; Trained Only; Druid, Ranger Only):
 
 Use this skill to keep a guard dog from barking at you, to get a wild bird to land on your outstretched hand, or to keep an owlbear calm while you back off. Any wild creature, including animals as well as animalistic monsters such as wyverns, must make a Will save or be charmed for 1 round per caster level.
 ~

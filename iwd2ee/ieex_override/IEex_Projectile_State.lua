@@ -305,7 +305,22 @@ function IEex_Extern_OnPostProjectileCreation(CProjectile, esp)
 		sourceRES = IEex_Helper_GetBridge("IEex_RecordOpcode430Spell", sourceID, "spellRES")
 		IEex_WriteLString(CProjectile + 0x18A, sourceRES, 8)
 	end
-
+	if IEex_GetActorSpellState(sourceID, 216) then
+		IEex_IterateActorEffects(sourceID, function(eData)
+			local theopcode = IEex_ReadDword(eData + 0x10)
+			local theparameter1 = IEex_ReadDword(eData + 0x1C)
+			local theparameter2 = IEex_ReadDword(eData + 0x20)
+			local theresource = IEex_ReadLString(eData + 0x30, 8)
+			local thesavingthrow = IEex_ReadDword(eData + 0x40)
+			local thespecial = IEex_ReadDword(eData + 0x48)
+			if theopcode == 288 and theparameter2 == 216 then
+				if thespecial == 2 then
+					canSneakAttackOnNextHit = true
+					ex_projectile_flags[CProjectile]["Metamagic"] = bit.bor(ex_projectile_flags[CProjectile]["Metamagic"], 0x2000)
+				end
+			end
+		end)
+	end
 	if IEex_GetActorSpellState(sourceID, 251) then
 		local mutatorOpcodeList = {}
 		IEex_IterateActorEffects(sourceID, function(eData)

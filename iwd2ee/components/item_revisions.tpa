@@ -6202,7 +6202,7 @@ COPY_EXISTING ~51barud.dlg~ ~override~ //Barud Barzam (duergar leader) dialogue
 		REPLACE_TEXTUALLY CASE_INSENSITIVE ~GiveItemCreate(\"51Plat10\", ?Protagonist ?, ?0, ?0, ?0)~ ~GiveItemCreate("USRTHF40",Protagonist,0,0,0)~
 	END
 
-STRING_SET_EVALUATE 9254 @12900
+STRING_SET_EVALUATE 9254 @19900
 
 COPY_EXISTING ~53heggr.dlg~ ~override~
 	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ChangeStoreMarkup(\"53Heggr\",126,80,30)~ ~ChangeStoreMarkup("53Heggr",126,50,30)~
