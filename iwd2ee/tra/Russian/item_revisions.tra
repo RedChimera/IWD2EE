@@ -1214,26 +1214,26 @@
  Сопротивление: снижение урона: 10/+2
 Вес: 1 фунт~
 //@10336    = ~Nature's Vengeance~
-@10337    = ~The avengers are members of a special sect within a druidic order. They are devoted to fighting those who defile nature, and these cloaks were sometimes worn by members of their sect when embarking on their crusades against those who had inflicted grievous wounds upon the land. It is reported that several of these cloaks were worn by druids who followed the trail of the Dark Horde many long years ago during their attack on the elven fortress of the Severed Hand. The Horde had felled many trees and laid waste to vast sections of the North while building siege engines, and the avengers declared war on them, attempting to use turn the power of nature against its attackers. Although the avengers were eventually slain by an orcish clan along the Spine of the World, their cloaks remain and occasionally resurface across the North. 
+@10337    = ~Мстители - это особая секта друидов, посвятивших свою жизнь борьбе с теми, кто оскверняет природу. Многие из них надевают такие плащи, отправляясь в бой против тех, кто наносит земле тяжкие раны. Говорят, что такие плащи носили друиды, которые шли по следам орды тьмы, когда та напала на эльфийскую крепость "Отрубленная Рука". Орда срубила множество деревьев и разрушила экосистему огромных участков земли, строя свои осадные машины, так что мстители объявили им войну. Несмотря на то, что эти мстители были в конце концов истреблены в битве с кланом орков у Хребта Мира, их плащи сохранились, и время от времени их можно встретить в разных поселениях Севера.
 
-When worn by a druid, these cloaks have a chance of calling bright fire any enemy who dares to commit violence upon the wearer. It has blinded many a foe... only to have them die with an avenger's blade in their throat. 
+Друид, одетый в такой плащ, получает возможность вызвать опаляющий огонь на любого врага, который нанёс ему урон. Это ослепляло многих врагов... чтобы уже в следующую секунду получить клинком мстителя в горло.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Special:
- Retribution: 25% chance of inflicting the spell Sunscorch whenever the attacking enemy successfully hits wearer of Nature's Vengeance. 
-Weight: 2 lb.~
+Особенности:
+ Возмездие: 25% вероятность использования заклинания "Солнечный ожог" на нанёсшего удар по владельцу плаща.
+Вес: 2 фунта~
 //@10338    = ~Nature's Fury~
-@10339    = ~Arundel rarely lost his temper, but nature itself did when it was struck by the Auril priests and the combined might of the evil that threatened Icewind Dale. It is said that a wind tore through Arundel's home after the events twenty years past and hurled his cloak into the upper branches of the Kuldahar Oak, where it was lashed and beaten by the icy winds for days, and ultimately lifted up and carried upon the storms for nearly a month. When it settled down, it was taken up by a wandering druid, who wore the cloak and used it to crush a sect of Aurilites in the ice shadowed delves of Slow Cedric's Gallop three years ago. Once his task was accomplished, the cloak was taken up by the wind again, and carried northward to be used against those that threaten the Balance once again. 
+@10339    = ~Арундель редко выходил из себя - а вот природа пришла в ярость, когда на неё напали жрецы Аурил и объединённые силы зла, угрожавшие уничтожить Долину Ледяного Ветра. Говорят, что после событий двадцатилетней давности свирепый ветер пронёсся по дому Арунделя и забросил его плащ на самые верхние ветви Дуба Кулдахара, где его много дней били ледяные ветры, а после буря унесла плащ и кружила по небу ещё почти месяц. Когда же плащ наконец опустился на землю, его подобрал странствующий друид, который использовал его, чтобы сокрушить секту аурилитов в холодных, ледяных ущельях Тихого Галопа Седрика три года назад. После этого ветер снова подхватил плащ, чтобы унести его туда, где идёт борьба с теми, кто угрожает Равновесию.
 
-It is intended to avenge those who disrupt the Balance with violence, and to remind aggressors that one may not defeat nature, only anger it. 
+Этот плащ призван отомстить нарушителям Равновесия и напоминает агрессорам, что природу нельзя победить, а можно только разгневать.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Special:
- Retribution: 50% chance of inflicting the spell Sunscorch whenever the attacking enemy successfully hits wearer of Nature's Fury
- Retribution: 10% chance of inflicting the spell Call Lightning whenever the attacking enemy successfully hits wearer of Nature's Fury
-Weight: 2 lb.~
+Особенности:
+ Возмездие: 50% вероятность использования заклинания "Солнечный ожог" на нанёсшего удар по владельцу плаща.
+ Возмездие: 10% вероятность использования заклинания "Вызов молнии" в том случае, если враг нанёс удар по владельцу плаща.
+Вес: 2 фунта~
 //@10340    = ~The Shroud of Bankao~
 @10341    = ~Believed to be the burial shroud of a mysterious eastern warlord, the Shroud of Bankao has been worn by some of the most notorious thugs and murderers on the Sword Coast. Its coarse black fabric has grown coal gray over many years of use. Its last known owner was Polger Carallo, an extortionist who operated in the worst parts of Waterdeep. Polger made his living shaking down the residents of the poor districts of the city. A priest of Bane told Polger that he owed the church a tribute for his success. Polger refused the priest's offer and died at the end of the Banite's morningstar.
 
