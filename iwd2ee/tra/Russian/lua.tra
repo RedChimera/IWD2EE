@@ -310,6 +310,10 @@
 @55601=~Immune~
 @55602=~Absorbed~
 @55603=~ (Lich)~
+@55604=~, +<EXRDVAL1> damage~
+@55605=~, -<EXRDVAL1> damage penalty~
+@55606=~, minimum roll of <EXRLVAL1>~
+@55607=~, maximum roll of <EXRLVAL1>~
 
 @55701=~Spell Failed: Rewind Time had not been initialized to start tracking effects on this character. Now it has, so it should work the next time the character casts the spell.~
 @55702=~Uninjured~
@@ -327,6 +331,7 @@
 @55714=~Currently there are no recorded spells to cast~
 @55715=~The spell~
 @55716=~Cast the spell <EXCCSPELL>~
+@55717=~This undead has been bolstered and made more difficult to turn~
 @55751=~Total Roll: <EXRRTOTAL>\nStored Total: <EXRRRECTOTAL>\n\n~
 @55752=~Unallocated Ability Scores:\n<EXRRUNALLOCATED>\n\n~
 @55753=~Press Z to reroll, X to store, C to recall, and V to reallocate ability scores.\n\n~
