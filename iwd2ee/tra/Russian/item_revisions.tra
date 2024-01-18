@@ -1027,118 +1027,117 @@
 Урон электричеством, наносимый владельцем этого пояса из большинства источников, увеличивается на 40%
 Вес: 3 фунта~
 //@10286    = ~Black Goat Girdle~
-@10287    = ~Made by halflings, the Black Goat Girdle is sacred to all of their religious sects. Legends say that the Black Goat appeared to a nameless halfling village that had been sacked by goblins during a terrible winter. The tribe of warriors slew most of the halfling men, burned the fields, and took all of the town's livestock. Broken but not hopeless, the villagers congregated for prayer in the burned chapel at the center of town. Out of the smoke drifting over the edge of town, a black goat appeared with six kids, five black, one white. Over the course of six days, the kids grew, gave birth to more kids, and each previous generation died in the night. The milk, meat, and hide provided by the goats helped the halflings survive through their harsh winter. After the six days of miracles had passed, the town tanner made a belt from the hide of the mother goat that had appeared out of the smoke. Halfling tales often contain stories of halfling heroes wearing the Black Goat Girdle on their adventures, though no one has yet determined exactly where the legend truly originated.
+@10287    = ~Изготовленный полуросликами, "Ремень Чёрной Козы" является священным для всех их религиозных направлений. Легенды гласят, что Чёрная Коза появилась в безымянной деревне полуросликов, которая была разграблена гоблинами во время ужасной зимы. Племя гоблинских воинов убило большую часть полуросликов-мужчин, сожгло поля и забрало весь скот. Сломленные, но не отчаявшиеся деревенские жители собрались для молитвы в сгоревшей часовне в центре деревне. Из дыма, стелющегося над окраиной деревни, появилась чёрная коза с шестью козлятами - пятью чёрными и одним белым. В течении шести дней козлята росли, приносили ещё приплод и каждое предыдущее поколение умирало ночью. Козье молоко, мясо и шкуры, помогли полуросликам пережить ту суровую зиму. После шести дней таких чудес местный кожевник изготовил ремень из шкуры матери-козы, появившейся из дыма. Сказания полуросликов зачастую содержат рассказы о том, что герои-полурослики, носили "Ремень Чёрной Козы" во время своих путешествий, хотя до сих пор никто не может точно сказать, откуда пошла эта легенда.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Regeneration: Wearer heals 1 hit point every 2 seconds
-Weight: 3 lb.~
+Регенерация: Носящий восстанавливает 1 пункт здоровья каждые 2 секунды
+Вес: 3 фунта~
 //@10288    = ~Blessed Black Goat Girdle~
-@10289    = ~Made by halflings, the Blessed Black Goat Girdle is sacred to all of their religious sects. Legends say that the Blessed Black Goat appeared to a nameless halfling village that had been sacked by goblins during a terrible winter. The tribe of warriors slew most of the halfling men, burned the fields, and took all of the town's livestock. Broken but not hopeless, the villagers congregated for prayer in the burned chapel at the center of town. Out of the smoke drifting over the edge of town, a black goat appeared with six kids, five black, one white. Over the course of six weeks, the kids miraculously grew, gave birth to six more kids, and then died in the night. The milk, meat, and hide provided by the goats helped the halflings survive through their harsh winter. After the six weeks of miracles had passed, the town tanner made a belt from the hide of the mother goat that had appeared out of the smoke. Halfling tales often contain stories of halfling heroes wearing the Blessed Black Goat Girdle on their adventures, though no one has yet determined exactly where the legend truly originated.
+@10289    = ~Изготовленный полуросликами, "Ремень Благословенный Чёрной Козы" является священным для всех их религиозных направлений. Легенды гласят, что Благословенная Чёрная Коза появилась в безымянной деревне полуросликов, которая была разграблена гоблинами во время ужасной зимы. Племя гоблинских воинов убило большую часть полуросликов-мужчин, сожгло поля и забрало весь скот. Сломленные, но не отчаявшиеся деревенские жители собрались для молитвы в сгоревшей часовне в центре деревне. Из дыма, стелющегося над окраиной деревни, появилась чёрная коза с шестью козлятами - пятью чёрными и одним белым. В течении шести дней козлята росли, приносили ещё приплод и каждое предыдущее поколение умирало ночью. Козье молоко, мясо и шкуры, помогли полуросликам пережить ту суровую зиму. После шести дней таких чудес местный кожевник изготовил ремень из шкуры матери-козы, появившейся из дыма. Сказания полуросликов зачастую содержат рассказы о том, что герои-полурослики, носили "Ремень Благословенный Чёрной Козы" во время своих путешествий, хотя до сих пор никто не может точно сказать, откуда пошла эта легенда.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Regeneration: Wearer heals 1 hit point every second
-Saving Throw: +2 bonus
-Weight: 3 lb.~
-@10290    = ~Dragon Belt~
-@10291    = ~A barbarian tribesman by the name of Edhan asked his shaman to enchant this belt for him. Edhan risked his life hunting for young white dragons in the tundra north of Icewind Dale. Though the risk was extreme, the foolhardy barbarian was wealthy beyond what most tribesmen can dream of. As he aged, Edhan lost his edge. The belt helped protect him in his later years. Eventually, an old barbarian of fifty-six winters, Edhan fell victim to a pair of young whites. Barbarians from the Tribe of the Great Wyrm eventually recovered the warrior's body, but chose not to inter his body. They traded his belt away with the rest of his equipment.
+Регенерация: Носящий восстанавливает 1 пункт здоровья каждую секунду
+Спасброски: +2
+Вес: 3 фунта~
+@10290    = ~Пояс дракона~
+@10291    = ~Как-то раз один варвар по имени Эдхан упросил шамана своего племени зачаровать этот пояс. Эдхан рисковал своей жизнью, охотясь на молодых белых драконов в тундре в северной части Долины Ледяного Ветра. Риск был велик, зато со временем безрассудный варвар приобрёл такое богатство, о каком его сородичи могли только мечтать. Время шло, а вместе с ним уходили и силы Эдхана. На склоне лет пояс помогал стареющему охотнику и служил надёжной защитой. В конце концов, старый варвар, дожив до своей пятьдесят шестой зимы, пал жертвой двух молодых белых драконов. Варвары из племени Великого Змия нашли тело охотника лишь через несколько дней, но решили не предавать его земле. Все вещи павшего варвара, включая его пояс, были проданы в дальний края.
 
-The front of the belt features a broad white dragon's chest scale. Leather lined with polar bear fur makes up the rest of the belt.
+Внешняя часть этого пояса сделана из широких чешуек с груди белого дракона, а внутренняя подбита мехом белого медведя. Основой же служит выделанная кожа.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Saving Throw Bonus: +4 to Reflex saves
-Weight: 3 lb.~
-@10292    = ~Warded Dragon Belt~
-@10293    = ~A barbarian tribesman by the name of Edhan asked his shaman to enchant this belt for him. Edhan risked his life hunting for young white dragons in the tundra north of Icewind Dale. Though the risk was extreme, the foolhardy barbarian was wealthy beyond what most tribesmen can dream of. As he aged, Edhan lost his edge. The belt helped protect him in his later years. Eventually, an old barbarian of fifty-six winters, Edhan fell victim to a pair of young whites. Barbarians from the Tribe of the Great Wyrm eventually recovered the warrior's body, but chose not to inter his body. They traded his belt away with the rest of his equipment.
+Спасброски: +4 к спасброскам реакции
+Вес: 3 фунта~
+@10292    = ~Зачарованный пояс дракона~
+@10293    = ~Как-то раз один варвар по имени Эдхан упросил шамана своего племени зачаровать этот пояс. Эдхан рисковал своей жизнью, охотясь на молодых белых драконов в тундре в северной части Долины Ледяного Ветра. Риск был велик, зато со временем безрассудный варвар приобрёл такое богатство, о каком его сородичи могли только мечтать. Время шло, а вместе с ним уходили и силы Эдхана. На склоне лет пояс помогал стареющему охотнику и служил надёжной защитой. В конце концов, старый варвар, дожив до своей пятьдесят шестой зимы, пал жертвой двух молодых белых драконов. Варвары из племени Великого Змия нашли тело охотника лишь через несколько дней, но решили не предавать его земле. Все вещи павшего варвара, включая его пояс, были проданы в дальний края.
 
-The front of the belt features a broad white dragon's chest scale. Leather lined with polar bear fur makes up the rest of the belt.
+Внешняя часть этого пояса сделана из широких чешуек с груди белого дракона, а внутренняя подбита мехом белого медведя. Основой же служит выделанная кожа.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Saving Throw Bonus: +6 to Reflex saves
-Resistance: 15/- Cold Reistance
-Weight: 3 lb.~
+Спасброски: +6 к спасброскам реакции
+Сопротивление: 15/- от холода
+Вес: 3 фунта~
 //@10294    = ~Little Giant~
 //@10295    = ~Item description can remain the same; if new description is needed put it here~
 //@10296    = ~Dwarven Ogre~
-@10297    = ~A masterwork any tailor would be proud of, the Dwarven Ogre is a thick leather belt with a fringe of red dwarven hair and storm giant hair woven together to grant the wearer great strength. Fashioned by the dwarven giant slayer, the Little Giant Hohn Burninghair, the buckle of this belt is actually the petrified eye of a firbolg shaman that Hohn fought during his travels.
+@10297    = ~Любой портной гордился бы такой работой, как Дварфские огр. Это толстый кожаный пояс с бахромой из рыжих дварфских волос и волос горных великанов, сплетённых вместе, дарует своему владельцу невероятную силу. Его изготовил убийца великанов, "Маленький Великан" Хон Огненноволосый. Пряжкой этого пояса является окаменевший глаз шамана фирболга, которого Хон убил во время своих странствий.
 
-Hohn lost this belt when he was attempting to wade across a stream in pursuit of a fleeing verbeeg giant who had made off with one of his ponies. The belt was washed downstream and eventually ended up in the hands of a simple trapper, who traded the ugly thing to a wandering tinker.
+Хон потерял этот пояс, когда пытался перебраться через реку, преследуя убегающего вербига - тот унёс одного из его пони. Пояс сорвало и унесло потоком, и в конечном счёте он оказался в руках простого охотника, который продал необычную вещицу странствующему лудильщику.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Special:
- Strength: +10 bonus
-Weight: 2 lb.~
+Особенности:
+ Сила: +10
+Вес: 2 фунта~
 //@10298    = ~Sash of Shadows~
-@10299    = ~When this sash is tied about the waist, it seems to blend into the folds of one's clothing so as to be almost invisible. These sashes were initially worn by stalkers in the service of Kresselack the Black Wolf on the day he sent them out to search for a location for his final resting place... the sashes were woven to prevent his enemies (and mages in the service of his enemies) from learning of the movements of his stalkers. Once the stalkers had found a tomb worthy of Kresselack, he gave them deaths worthy of their station and took their sashes from them to line the walls of his tomb in the Vale of Shadows. 
+@10299    = ~Если повязать этот кушак вокруг талии, кажется, будто он сливается со складками одежды и становится практически невидимым. Эти кушаки надели ловчие, служащие Кресселаку, Чёрному Волку в тот день, когда он отправил их на поиски его последнего пристанища... кушаки были сделаны для того, чтобы не позволять врагам Чёрного Волка (и магам на службе его врагов) узнавать о передвижениях ловчих. Когда ловчие нашли гробницу, достойную Кресселака, он даровал им смерть, соответствующую занимаемому ими положению и забрал у них кушаки, чтобы украсить ими стены своей гробницы в ущелье Теней.
 
-These sashes were carried from his tomb by fortune seekers many years past, and they have since found their way to remote corners of the North. 
+Эти кушаки были вынесены из захоронения Кресселака искателями приключений много лет назад, и с тех пор их можно найти в самых отдалённых уголках Севера.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Special:
- Generic Armor Bonus: +2
- Shadowed: +10 to Hide skill
- Constant Effect:  Non-detection while equipped.
-Weight: 1 lb.~
+Особенности:
+ Класс защиты: +2 (общий)
+ Слияние с тенью: +10 к навыку "Незаметность"
+ Постоянный эффект: необнаружение при носке.
+Вес: 1 фунт~
 //@10300    = ~Sash of Hidden Shadows~
-@10301    = ~Sashes of shadows are known to have been worn by stalkers in the service of Kresselack the Black Wolf. These stalkers had been tasked to find Kresselack a final resting place, far from prying eyes, where he might die in peace. When the stalkers had succeeded, they and the sashes they wore joined him in his tomb within the Vale of Shadows. When Kresselack's Tomb was plundered by a southern adventuring company many years past, the sashes were carried out of the tomb and distributed throughout the North. This sash, however, is different than the others, and it seems to have carried the essence of the Vale of Shadows with it as it left Kresselack's Tomb. 
+@10301    = ~Известно, что "Кушаки теней" носили ловчие, служащие Кресселаку, Чёрному Волку. У этих ловчих была задача найти последнее пристанище для Кресселака, подальше от любопытных глаз, где он мог бы покоиться с миром. Когда ловчие нашли такое место, они, вместе со своими кушаками, присоединились к Чёрному Волку в его гробнице в ущелье Теней. Когда много лет назад гробница Кресселака была разграблена отрядом искателей приключений с юга, кушаки были вынесены из захоронения и разошлись по всему Северу. Однако, этот конкретный кушак отличается от других: кажется, что он взял с собой частичку сущности ущелья Теней, когда был вынесен из гробницы Кресселака.
 
-When this sash is tied about the waist, it vanishes completely, and the wearer vanishes from the sight of any creature attempting to scry his movements or detect his location. Furthermore, as long as the sash is worn, shadows seem to embrace the character, giving him added abilities to hide in shadows and causing spells that hold or confine to simply slide off his body like rain. 
+Если обмотать этот кушак вокруг талии, он становится полностью невидимым, а его владелец становится необнаружимым для любого существа, пытающегося увидеть его передвижения или местоположение при помощи магического кристалла или заклинаний прорицания. Более того, когда этот кушак надет, кажется, что тени охватывают его владельца, давая ему дополнительную способность скрыться в тенях и заставляя удерживающие или сковывающие заклинания просто соскальзывать с его тела, словно капли дождя.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Special:
- Generic Armor Bonus: +3
- Shadowed: +15 to Hide skill
- Constant Effect:  Non-detection while equipped.
- Constant Effect:  Freedom of Movement while equipped.
-Weight: 1 lb.~
+Особенности:
+ Класс защиты: +3 (общий)
+ Слияние с тенью: +15 к навыку "Незаметность"
+ Постоянный эффект: необнаружение при носке.
+ Постоянный эффект: свобода передвижения при носке.
+Вес: 1 фунт~
 //@10302    = ~Mercykiller's Belt~
-@10303    = ~This belt is broad and thick, crafted from some otherworldly creature's hide and bound with strips of burnished copper. Gleaming eerily from the center of the belt is a circular piece of polished green and cream malachite. The emblem shows, in bas-relief, a fanged, winged serpent with its open mouth facing outward. Small, thick copper loops run between the thick hide and the stone emblem to hold it in place. Two thick steel buckles hold the belt together at the back of the wearer.
+@10303    = ~Этот широкий и толстый пояс вырезан из шкуры какого-то неведомого зверя и укреплён полосками полированной меди. В центре пояса угрожающе поблёскивает круглая эмблема из бело-зелёного малахита. На эмблеме изображена крылатая змея, оскалившая клыки. К ремню эмблема прикреплена с помощью двух небольших медных петель. Пояс застёгивается сзади, с помощью двух стальных пряжек.
 
-Investigation reveals that this belt was made four hundred years ago for Factor Dom, a warden for the outer-planar Mercykillers faction. Known throughout the planes for their vicious definition and application of justice, the Mercykillers are strongest in planar cities like Sigil, the City of Doors.
+Расследование показало, что этот пояс был сделан четыреста лет назад для управляющего по имени Дом, стража фракции "Убийцы Милосердия". Убийцы Милосердия славятся своей приверженностью закону и жестокостью при исполнении наказания. Наибольшим влиянием Убийцы Милосердия во вне-планарных городах, таких как Сигил, Город Дверей.
 
-Dom was a warden of the Prison, Sigil's dumping ground for criminals. He became legendary within the organization after his involvement in the Great Break. Members of the rebellious Free League engineered the only mass escape from the Prison in its history. Over one hundred prisoners managed to get out of the Prison and escape the Lady's Ward, though hundreds more were turned back to their cells or died in their escape. Dom was stripped of his Factor rank in the Mercykillers for failing to stop the revolt. In addition, he spent five years in the Prison himself. When he was set free, he set out on a thirty-year quest to bring every escaped criminal to justice. By the time Dom had captured, killed, or verified as dead eighty of the one hundred criminals, the remaining twenty banded together to evade him.
+Дом был начальником тюрьмы для самых ужасных отбросов Сигила. Имя Дома вошло в легенды после Великого Побега, единственного успешного побега, организованного членами Свободной Лиги. Более сотни заключённых сумело сбежать из тюрьмы, хотя гораздо большее количество было возвращено в камеры или погибло во время побега. За неспособность остановить побег Дом был лишён звания управляющего Убийц Милосердия. Кроме того, он сам пять лет отсидел в тюрьме. Выйдя на свободу, Дом потратил тридцать лет на то, чтобы свершить правосудие над каждым из сбежавших преступников. Когда он поймал или признал мёртвыми восемь десятков сбежавших, оставшиеся решили объединиться для более успешного противостояния Дому.
 
-When Dom reached the age of sixty-seven, he had this belt made for him to augment his failing strength. Three years later, he finally captured the last of the prisoners and brought them, kicking and screaming, all the way back to the cell from which they had escaped thirty years earlier. Dom reported to the current warden, filled out the appropriate paperwork, and fell dead from exhaustion within the hour.
+Когда Дому исполнилось шестьдесят семь, он сделал для себя этот пояс, чтобы восполнить свои слабеющие силы. Три года спустя он, наконец, привёл последних из сбежавших заключённых в те же самые камеры, из которых те сбежали тридцать лет назад. Дом доложил об этом нынешнему начальнику тюрьмы, заполнил все необходимые бумаги и через час упал замертво от истощения.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Strength: +3
-Weight: 3 lb.~
+Сила: +3
+Вес: 3 фунта~
 //@10304    = ~Mercykiller's Belt~ //HoF
-@10305    = ~This belt is broad and thick, crafted from some otherworldly creature's hide and bound with strips of burnished copper. Gleaming eerily from the center of the belt is a circular piece of polished green and cream malachite. The emblem shows, in bas-relief, a fanged, winged serpent with its open mouth facing outward. Small, thick copper loops run between the thick hide and the stone emblem to hold it in place. Two thick steel buckles hold the belt together at the back of the wearer.
+@10305    = ~Этот широкий и толстый пояс вырезан из шкуры какого-то неведомого зверя и укреплён полосками полированной меди. В центре пояса угрожающе поблёскивает круглая эмблема из бело-зелёного малахита. На эмблеме изображена крылатая змея, оскалившая клыки. К ремню эмблема прикреплена с помощью двух небольших медных петель. Пояс застёгивается сзади, с помощью двух стальных пряжек.
 
-Investigation reveals that this belt was made four hundred years ago for Factor Dom, a warden for the outer-planar Mercykillers faction. Known throughout the planes for their vicious definition and application of justice, the Mercykillers are strongest in planar cities like Sigil, the City of Doors.
+Расследование показало, что этот пояс был сделан четыреста лет назад для управляющего по имени Дом, стража фракции "Убийцы Милосердия". Убийцы Милосердия славятся своей приверженностью закону и жестокостью при исполнении наказания. Наибольшим влиянием Убийцы Милосердия во вне-планарных городах, таких как Сигил, Город Дверей.
 
-Dom was a warden of the Prison, Sigil's dumping ground for criminals. He became legendary within the organization after his involvement in the Great Break. Members of the rebellious Free League engineered the only mass escape from the Prison in its history. Over one hundred prisoners managed to get out of the Prison and escape the Lady's Ward, though hundreds more were turned back to their cells or died in their escape. Dom was stripped of his Factor rank in the Mercykillers for failing to stop the revolt. In addition, he spent five years in the Prison himself. When he was set free, he set out on a thirty-year quest to bring every escaped criminal to justice. By the time Dom had captured, killed, or verified as dead eighty of the one hundred criminals, the remaining twenty banded together to evade him.
+Дом был начальником тюрьмы для самых ужасных отбросов Сигила. Имя Дома вошло в легенды после Великого Побега, единственного успешного побега, организованного членами Свободной Лиги. Более сотни заключённых сумело сбежать из тюрьмы, хотя гораздо большее количество было возвращено в камеры или погибло во время побега. За неспособность остановить побег Дом был лишён звания управляющего Убийц Милосердия. Кроме того, он сам пять лет отсидел в тюрьме. Выйдя на свободу, Дом потратил тридцать лет на то, чтобы свершить правосудие над каждым из сбежавших преступников. Когда он поймал или признал мёртвыми восемь десятков сбежавших, оставшиеся решили объединиться для более успешного противостояния Дому.
 
-When Dom reached the age of sixty-seven, he had this belt made for him to augment his failing strength. Three years later, he finally captured the last of the prisoners and brought them, kicking and screaming, all the way back to the cell from which they had escaped thirty years earlier. Dom reported to the current warden, filled out the appropriate paperwork, and fell dead from exhaustion within the hour.
+Когда Дому исполнилось шестьдесят семь, он сделал для себя этот пояс, чтобы восполнить свои слабеющие силы. Три года спустя он, наконец, привёл последних из сбежавших заключённых в те же самые камеры, из которых те сбежали тридцать лет назад. Дом доложил об этом нынешнему начальнику тюрьмы, заполнил все необходимые бумаги и через час упал замертво от истощения.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Strength: +5
-Attack Bonus: +3 vs. chaotic creatures
-Damage Bonus: +3 vs. chaotic creatures
-Weight: 3 lb.~
+Сила: +5
+Атака: +3 против существ с хаотическим мировоззрением
+Урон: +3 против существ с хаотическим мировоззрением
+Вес: 3 фунта~
 //@10306    = ~Sash of the Black Raven~
 //@10307    = ~Item description can remain the same; if new description is needed put it here~
 //@10308    = ~Binding Sash of the Black Raven~
-@10309    = ~The Binding Sash of the Black Raven is rumored to be a symbol of one of the disciples of the Black Raven monastery, a sanctuary located deep within the heart of the Spine of the World Mountains. According to legend, the Black Raven is a near mythical figure in Uthgardt legends, a punishing spirit from the underworld who emerged on the surface world many years ago to teach the barbarians humility and break their arrogance. Described as a dark-skinned man with burning eyes and bloodied chains hanging from his wrists, the stories that circle the Black Raven frequently tell of his epic struggles against slavers and injustice throughout the North and the southern kingdoms. Some historians speculate that the Black Raven may have been a drow or half-drow, but others claim that he was a minor or quasi-deity dedicated to ending slavery and oppression.
+@10309    = ~Говорят, что такие пояса носят ученики монахов в монастыре Чёрного Ворона, затерянного где-то в горах Хребта Мира. В легендах Утгардта Чёрный Ворон предстаёт почти мифической фигурой: это темнокожий мужчина с горящими глазами в окровавленных оковах - мстительный дух, который пришёл из подземного мира, чтобы сломить высокомерие надменных варваров и научить их смирению. На севере и в южных королевствах знают много эпических историй о том, как Чёрный Ворон боролся с рабовладельцами и несправедливостью во всём Фаэруне. Некоторые историки считают, что Чёрный Ворон мог быть дроу или полудроу, но другие утверждают, что он - один из малых божеств или полубожеств, призванный положить конец рабству и угнетению.
 
-This black sash is made of fine silk, perhaps spider silk, and it is worn looped around the waist. While worn, it helps the wearer focus in combat, freeing his mind of all distractions and channeling his inner energies to defeat his foes. When worn by any class other than a monk, it immediately unknots itself and falls to the ground. 
+Этот чёрный пояс сделан из тонкого, возможно паучьего, шелка. В бою он помогает сконцентрироваться и направить всю внутреннюю энергию владельца на победу над врагами. Однако носить его могут только монахи; в противном случае пояс сам развязывается и падает на землю. 
 
+ПАРАМЕТРЫ:
 
-STATISTICS:
-
-Special:
-  +2 Attack Bonus to all attacks
-  Immunity to Charm, Domination, Confusion, Feeblemind, and Fear
-Weight: 0~
+Особенности:
+ Атака: +2
+ Оберёг: дарует иммунитет к заклинаниям очарования, замешательства, замешательства и страха
+Вес: 0 фунтов~
 //@10310    = ~~
 //@10311    = ~~
 
