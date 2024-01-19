@@ -1235,221 +1235,231 @@
  Возмездие: 10% вероятность использования заклинания "Вызов молнии" в том случае, если враг нанёс удар по владельцу плаща.
 Вес: 2 фунта~
 //@10340    = ~The Shroud of Bankao~
-@10341    = ~Believed to be the burial shroud of a mysterious eastern warlord, the Shroud of Bankao has been worn by some of the most notorious thugs and murderers on the Sword Coast. Its coarse black fabric has grown coal gray over many years of use. Its last known owner was Polger Carallo, an extortionist who operated in the worst parts of Waterdeep. Polger made his living shaking down the residents of the poor districts of the city. A priest of Bane told Polger that he owed the church a tribute for his success. Polger refused the priest's offer and died at the end of the Banite's morningstar.
+@10341    = ~Саван Банкао, считающийся похоронным саваном загадочного восточного военачальника, носили самые отъявленные убийцы и головорезы на Побережье Мечей. Грубая чёрная ткань этого одеяния за многие годы использования стала пепельно-серой. Его последним известным владельцем был Полгер Каралло, вымогатель, орудовавший в худших местах Вотердипа. Полгер зарабатывал на жизнь, выбивая золото из жителей бедных районов города. Однажды, жрец Бейна сказал Полгеру, что тот обязан сделать пожертвование его церкви за свою удачливость. Полгер отказался от такого предложения и погиб от моргенштерна бейнита.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Improved Alertness: Wearer is immune to sneak attacks
-Weight: 2 lb.~
+Улучшенная бдительность: носящий это саванн, невосприимчив к скрытой атаке
+Вес: 2 фунта~
 //@10342    = ~Death Shroud of Bankao~
-@10343    = ~Believed to be the burial shroud of a mysterious eastern warlord, the Death Shroud of Bankao has been worn by some of the most notorious thugs and murderers on the Sword Coast. Its coarse black fabric has grown coal gray over many years of use. Its last known owner was Polger Carallo, an extortionist who operated in the worst parts of Waterdeep. Polger made his living shaking down the residents of the poor districts of the city. A priest of Bane told Polger that he owed the church a tribute for his success. Polger refused the priest's offer and died at the end of the Banite's morningstar.
+@10343    = ~Саван смерти Банкао, считающийся похоронным саваном загадочного восточного военачальника, носили самые отъявленные убийцы и головорезы на Побережье Мечей. Грубая чёрная ткань этого одеяния за многие годы использования стала пепельно-серой. Его последним известным владельцем был Полгер Каралло, вымогатель, орудовавший в худших местах Вотердипа. Полгер зарабатывал на жизнь, выбивая золото из жителей бедных районов города. Однажды, жрец Бейна сказал Полгеру, что тот обязан сделать пожертвование его церкви за свою удачливость. Полгер отказался от такого предложения и погиб от моргенштерна бейнита.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Charisma: +6 bonus
-Improved Alertness: Wearer is immune to sneak attacks
-Weight: 2 lb.~
+Харизма: +6
+Улучшенная бдительность: носящий это саванн, невосприимчив к скрытой атаке
+Вес: 2 фунта~
 //@10344    = ~Woodland Cloak~
-@10345    = ~The leaves that fall from the great oak of Kuldahar are surprisingly flexible, much like cloth, and when treated with special druidic magics, can be fashioned as cloaks. When worn, the cloaks make no sound, and they provide the wearer with a minor chameleon effect, allowing them to blend into the natural surroundings and avoid the notice of those that would do the wearer harm. Furthermore, in times of danger, the wearer may wrap the cloak around their body, making their skin as hard as wood and helping to protect them against attack.
+@10345    = ~Листья, что падают с великого дуба Кулдахара, на удивление гибкие, как ткань, а после обработки специальной магией друидов из них можно изготавливать плащи. Такие плащи совершенно бесшумны, и дают носящему эффект маскировки, позволяя тому слиться с окружающей природой и остаться незамеченным для тех, кто может ему навредить. Боле того, во время опасности, владелец плаща может обернуть его вокруг своего тела, сделав свою кожу твёрдой, как дерево, что помогает защититься от нападения.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Special:
- Generic Armor Bonus: +1
- Camouflage: +5 to Hide skill
- Spell Power:  Can cast the spell Barkskin (at level 12) once per day
-Weight: 1 lb.~
+Особенности:
+ Класс защиты: +1 (общий)
+ Слияние с тенью: +5 к навыку "Незаметность"
+ Заклинание: может прочитать заклинание "Кожа-кора" (как заклинатель 12-ого уровня) один раз в день
+Вес: 1 фунт~
 //@10346    = ~Deep Woods Cloak~
-@10347    = ~This enchanted cloak is a powerful garment indeed, and was fashioned by the first Archdruid of Kuldahar, Tolben, many years ago. It is fashioned from the molting bark of the great tree and has been specially enchanted so that it may be worn as a cloak. When worn, this cloaks makes no sound, and provides the wearer with a greater chameleon effect, allowing them to blend into the natural surroundings and avoid the notice of those that would do the wearer harm. Furthermore, in times of danger, the wearer may wrap the cloak around his body, making his skin as hard as the Great Oak itself, making him almost immune to damage.
+@10347    = ~Этот зачарованный плащ - поистине могущественный предмет одежды. Он был изготовлен архидруидом Кулдахара Эверардом много лет назад. Одеяние изготовлено из опавшей коры великого дерева и заколдовано таким образом, что его можно носить на манер плаща. Этот плащ совершенно бесшумен, и дают носящему эффект маскировки, позволяя тому слиться с окружающей природой и остаться незамеченным для тех, кто может ему навредить. Боле того, во время опасности, владелец плаща может обернуть его вокруг своего тела, сделав свою кожу твёрдой, как сам великий дуб, что сделает его почти неуязвимым для нападения.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Special:
- Generic Armor Bonus: +3
- Camouflage: +15 to Hide skill
- Spell Power:  Can cast the spell Ironskin (15 skins) once per day
-Weight: 1 lb.~
+Особенности:
+ Класс защиты: +3 (общий)
+ Слияние с тенью: +15 к навыку "Незаметность"
+ Заклинание: Может прочитать заклинание "Железная кожа" (15 слоёв) один раз в день
+Вес: 1 фунт~
 //@10348    = ~Wandering Hunter's Cloak~
-@10349    = ~Cloaks like this one are painstakingly crafted for the use of the Wandering Village's best young hunters. The soft wolf's fur is enchanted to mask a hunter's scent and help him or her to hide from prey in the shadows.
+@10349    = ~Изготовление таких плащей для лучших молодых охотников Блуждающей Деревни - кропотливая работа. Зачарованная мягкая волчья шерсть перебивает запах охотника и позволяет ему укрыться от глаз добычи в тенях.
 
-STATISTICS:
+ХАРАКТЕРИСТИКА:
 
-Hide skill: +5
-Weight:  3 lb.~
+Особенности:
+ Слияние с тенью: +5 к навыку "Незаметность"
+Вес: 3 фунта~
 //@10350    = ~Wandering Hunter's Cloak~ //HoF
-@10351    = ~Cloaks like this one are painstakingly crafted for the use of the Wandering Village's best young hunters. The soft wolf's fur is enchanted to mask a hunter's scent and help him or her to hide from prey in the shadows.
+@10351    = ~Изготовление таких плащей для лучших молодых охотников Блуждающей Деревни - кропотливая работа. Зачарованная мягкая волчья шерсть перебивает запах охотника и позволяет ему укрыться от глаз добычи в тенях.
 
-STATISTICS:
+ХАРАКТЕРИСТИКА:
 
-Generic Armor Bonus: +2
-Hide skill: +10
-Weight:  3 lb.~
+Особенности:
+ Класс защиты: +2 (общий)
+ Слияние с тенью: +10 к навыку "Незаметность"
+Вес: 3 фунта~
 //@10352    = ~House of Despana Piwafwi~
-@10353    = ~This fine cloak is made from spider silk with amazingly flexible adamantite filigree. The arrow and hexagon glyph of House Despana is featured prominently on the back and the stitching near the hems follows the same arrow pattern. Three small holes, surrounded by almost-vanished bloodstains, sit squarely in the back of the cloak. The cloak used to belong to Malfeem, ill-fated Weapons Master and short-lived Patron of House Despana. Malfeem was the father of Malavon Despana, Master of Rilauven's Sorcere Academy of Magic. Malfeem died in an attack on a rival house fifty years ago. Rumors within Rilauven state that the daughters of House Despana engineered Malfeem's death because he had gained too much influence over their Matron Mother. The cloak has rested in the House Despana treasury since he died. Forty years ago, it was worn for a single night by Matron Despana's new Patron, who fancied himself the finest warrior in Rilauven. The sentimentality of the Matron for Malfeem had not faded, and the Patron was flayed to death on the spot.
+@10353    = ~Этот изящный плащ сшит из паучьего шелка с помощью удивительно гибких адамантитовых нитей. На спине вышит символ дома Деспана: стрела и шестиугольник; такие же символы вышиты и у подола. В самом центре спины видны три маленьких отверстия, окружённые практически полностью выцветшими пятнами крови. Прежде этот плащ принадлежал Мальфиму, злосчастному оружейному мастеру, а впоследствии и патрону дома Деспана. Мальфим - отец Малавона Деспана, магистра Магической академии Рилувена. Мальфим погиб пятьдесят лет назад во время войны с другим Домом. По Рилувену ходили слухи о том, что Мальфима убили его собственные дочери, которые были недовольны тем, что он приобрёл слишком большое влияние на Матрону-мать. После смерти Мальфима его плащ хранился в сокровищнице дома Деспана. Сорок лет назад плащ достали из сокровищницы - всего на один день - по приказу нового патрона Дома, который считал себя лучшим воином в Рилувене. Но оказалось, что чувства Матроны к Мальфиму не угасли, и она приказала содрать кожу с нового патрона дома.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Resistance: 5/- Fire Resistance
-Hide skill: +5
-Weight:  1 lb.~
+Особенности:
+ Сопротивление: 5/- сопротивления огню
+ Слияние с тенью: +5 к навыку "Незаметность"
+Вес: 1 фунт~
 //@10354    = ~House of Despana Piwafwi~ //HoF
-@10355    = ~This fine cloak is made from spider silk with amazingly flexible adamantite filigree. The arrow and hexagon glyph of House Despana is featured prominently on the back and the stitching near the hems follows the same arrow pattern. Three small holes, surrounded by almost-vanished bloodstains, sit squarely in the back of the cloak. The cloak used to belong to Malfeem, ill-fated Weapons Master and short-lived Patron of House Despana. Malfeem was the father of Malavon Despana, Master of Rilauven's Sorcere Academy of Magic. Malfeem died in an attack on a rival house fifty years ago. Rumors within Rilauven state that the daughters of House Despana engineered Malfeem's death because he had gained too much influence over their Matron Mother. The cloak has rested in the House Despana treasury since he died. Forty years ago, it was worn for a single night by Matron Despana's new Patron, who fancied himself the finest warrior in Rilauven. The sentimentality of the Matron for Malfeem had not faded, and the Patron was flayed to death on the spot.
+@10355    = ~Этот изящный плащ сшит из паучьего шелка с помощью удивительно гибких адамантитовых нитей. На спине вышит символ дома Деспана: стрела и шестиугольник; такие же символы вышиты и у подола. В самом центре спины видны три маленьких отверстия, окружённые практически полностью выцветшими пятнами крови. Прежде этот плащ принадлежал Мальфиму, злосчастному оружейному мастеру, а впоследствии и патрону дома Деспана. Мальфим - отец Малавона Деспана, магистра Магической академии Рилувена. Мальфим погиб пятьдесят лет назад во время войны с другим Домом. По Рилувену ходили слухи о том, что Мальфима убили его собственные дочери, которые были недовольны тем, что он приобрёл слишком большое влияние на Матрону-мать. После смерти Мальфима его плащ хранился в сокровищнице дома Деспана. Сорок лет назад плащ достали из сокровищницы - всего на один день - по приказу нового патрона Дома, который считал себя лучшим воином в Рилувене. Но оказалось, что чувства Матроны к Мальфиму не угасли, и она приказала содрать кожу с нового патрона дома.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Resistance: 10/- Fire Resistance
-Hide skill: +15
-Slippery Mind: Wearer gains the rogue ability Slippery Mind
-Weight:  1 lb.~
+Особенности:
+ Сопротивление: 10/- сопротивления огню
+ Слияние с тенью: +15 к навыку "Незаметность"
+ Изворотливый ум: носитель плаща получает способность плутов "Изворотливый ум"
+Вес: 1 фунт~
 
 //@10356    = ~Helmet~
-@10357    = ~This class of open-face helmet, made of reinforced leather or metal, covers most of the head, save the face and neck. These helmets commonly provide protection for the nose. 
+@10357    = ~Шлемы такого полуоткрытого типа обычно сделаны из прочной кожи или металла, покрывают большую часть головы, за исключением лица, и оставляют открытой шею. Как правило, у них есть выступ для защиты носа.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Generic Armor Bonus: +1
-Weight: 2 lb.~
-@10358    = ~This class of decorative helmet, made of reinforced leather or metal, covers the face and head. Eye slits and breathing holes come highly recommended. 
+Класс защиты: +1 (общий)
+Вес: 2 фунта~
+@10358    = ~Декорированные шлемы такого типа, изготовленные из прочной кожи или металла, полностью закрывают лицо и голову. Наличие в шлеме прорезей для глаз и дыхания крайне приветствуется.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Generic Armor Bonus: +1
-Weight: 2 lb.~
+Класс защиты: +1 (общий)
+Вес: 2 фунта~
 //@10359    = ~Yeti Skin Hat~
 //@10360    = ~Item description can remain the same; if new description is needed put it here~
 //@10361    = ~Winter Wolf Hat~
-@10362    = ~This is furry hat crafted from the skin of the Winter Wolf.
+@10362    = ~Эта меховая шапка сделана из густого и тёплого меха зимнего волка.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Special:
-  Resistance: 2/- Cold Resistance 
- Charisma: +1
-Weight: 1 lb.~
+Особенности:
+ Сопротивление: 2/- сопротивления холоду
+ Харизма: +1
+Вес: 1 фунт~
 //@10363    = ~The Black Hands of Shelgoth~
-@10364    = ~Shelgoth, a powerful lich "living" in the wake of Netheril's fall, was a terror to bands of Netherese refugees who wandered around the area near the area once known as Moander's Footstep. His undead warriors and animals were dreadful to behold on their rocky perches. It took the concerted effort of over a hundred invaders to defeat the lich. Once the terror had been dispatched, some arcanists-turned-wizards decided to use the magic-laced skeletal hands in the construction of a helm. Some historians mutter in the margins of their writings that the wizards may have been attempting to construct an item similar to the ill-fated Crown of Horns. The helm's history post-creation is unknown.
+@10364    = ~Шелгот, могущественный лич, "живший" после падения Нетерила, наводил ужас на группы нетерильских беженцев, скитавшихся по земле, некогда называемой "Следом Моандера". Его мёртвые воины и животные наводили ужас на эту скалистую местность. Чтобы победить лича, потребовались согласованные действия более чем сотни воителей. Когда угроза была устранена, некие волшебники решили использовать руки скелета, наполненные магией, в качестве основы для создания шлема. Некоторые историки невнятно упоминают на полях своих писаний, что эти волшебники пытались создать предмет, похожий на злосчастную Корону Рогов. После того, как этот шлем был создан, его дальнейшая история не известна.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Generic Armor Bonus: +1
-Special:  
-  Constant Effect: User under the effects of the spell Death Ward while equipped
-Weight: 1 lb.~
+Класс защиты: +1 (общий)
+Особенности:
+ Постоянный эффект: Экипированный персонаж находится под воздействием заклинания "Ограждение от смерти"
+Вес: 1 фунт~
 //@10365    = ~Horrific Black Hands of Shelgoth~
-@10366    = ~Shelgoth, a powerful lich "living" in the wake of Netheril's fall, was a terror to bands of Netherese refugees who wandered around the area near the area once known as Moander's Footstep. His undead warriors and animals were dreadful to behold on their rocky perches. It took the concerted effort of over a hundred invaders to defeat the lich. Once the terror had been dispatched, some arcanists-turned-wizards decided to use the magic-laced skeletal hands in the construction of a helm. Some historians mutter in the margins of their writings that the wizards may have been attempting to construct an item similar to the ill-fated Crown of Horns. The helm's history post-creation is unknown.
+@10366    = ~Шелгот, могущественный лич, "живший" после падения Нетерила, наводил ужас на группы нетерильских беженцев, скитавшихся по земле, некогда называемой "Следом Моандера". Его мёртвые воины и животные наводили ужас на эту скалистую местность. Чтобы победить лича, потребовались согласованные действия более чем сотни воителей. Когда угроза была устранена, некие волшебники решили использовать руки скелета, наполненные магией, в качестве основы для создания шлема. Некоторые историки невнятно упоминают на полях своих писаний, что эти волшебники пытались создать предмет, похожий на злосчастную Корону Рогов. После того, как этот шлем был создан, его дальнейшая история не известна.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Generic Armor Bonus: +1
-Saving Throw Bonus: +5 to Fortitude saves
-Special:  
-  Constant Effect: User under the effects of the spell Death Ward while equipped
-  Spell Power: Can cast the spell Finger of Death (at level 30) 1/day
-Weight: 1 lb.~
+Класс защиты: +1 (общий)
+Особенности:
+ Спасброски: +5 к спасброскам стойкости
+ Постоянный эффект: Экипированный персонаж находится под воздействием заклинания "Ограждение от смерти"
+ Заклинание: может прочитать заклинание "Перст смерти" (как заклинатель 30-ого уровня) один раз в день
+Вес: 1 фунт~
 //@10367    = ~Dragon's Sight~
-@10368    = ~A small dragon's head has been mounted to the top of this helm, giving the wearer a most fearsome countenance. Within the eye sockets of the dragon's skull are two magical gems that glow ominously, making it appear to watch whoever beholds it.
+@10368    = ~Сверху к шлему прикреплена голова дракончика, придающая его владельцу довольно пугающий вид. В глазницы драконьего черепа вставлены два волшебных драгоценных камня, которые светятся зловещим огнём и словно бы наблюдают за всем, что творится вокруг.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Generic Armor Bonus: +1
-Invisibility Detection: Wearer can see invisible creatures, attack them, and target them with spells. However, this effect does not dispel the invisibility of those creatures.
-Weight:  2 lb.~
+Класс защиты: +1 (общий)
+Особенности:
+ Обнаружение невидимости: Носитель может видеть невидимых существ, атаковать их и направлять на них заклинания. Однако это не развеивает невидимость этих существ для всех остальных.
+Вес: 2 фунта~
 //@10369    = ~Dragon's Gaze~
-@10370    = ~A small dragon's head has been mounted to the top of this helm, giving the wearer a most fearsome countenance. Within the eye sockets of the dragon's skull are two magical gems that glow ominously, making it appear to watch whoever beholds it.
+@10370    = ~Сверху к шлему прикреплена голова дракончика, придающая его владельцу довольно пугающий вид. В глазницы драконьего черепа вставлены два волшебных драгоценных камня, которые светятся зловещим огнём и словно бы наблюдают за всем, что творится вокруг.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Generic Armor Bonus: +1
-Spell Power: Can cast the spell Seven Eyes (at level 30) 1/day
-Invisibility Detection: Wearer can see invisible creatures, attack them, and target them with spells. However, this effect does not dispel the invisibility of those creatures.
-Weight:  2 lb.~
+Класс защиты: +1 (общий)
+Особенности:
+ Заклинание: может прочитать заклинание "Семь глаз" (как заклинатель 30-ого уровня) один раз в день
+ Обнаружение невидимости: Носитель может видеть невидимых существ, атаковать их и направлять на них заклинания. Однако это не развеивает невидимость этих существ для всех остальных.
+Вес: 2 фунта~
 //@10371    = ~School Cap~
-@10372    = ~Worn by wizards and scholars across Faerun, the distinctive small, round school caps come in a variety of colors. The colors often correspond to scholastic colors or the color associated with a particular school of magic. This particular cap was worn by the wizard Vedri of Silverymoon. On a sightseeing tour of Icewind Dale, his skiff capsized on Maer Dualdon. Fishermen later recovered his body. They sold the cap as compensation for sending his body back to his family.
+@10372    = ~Такие традиционно небольшие округлые головные уборы носят волшебники и учёные по всему Фаэруну. Цвет шапочки часто соответствует цветам философского учения или цветам определённой школы магии. Этот головной убор принадлежал волшебнику Ведри из Серебристой Луна. Во время странствий по Долине Ледяного Ветра, лодочка этого мага перевернулась недалеко от Маэр Дуалдона. Позже тело несчастного нашли рыбаки. Они продали эту шапочки в качестве компенсации трат на отправку тела семье.
 
-This particular cap is a faded shade of purple, representing the school of illusion.
+Этот головной убор выкрашен в бледно-фиолетовый цвет, означающий школу иллюзий.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Spell Power: Can cast Reflected Image (at level 10) 1/day
-Weight: 1 lb.~
+Особенности:
+ Заклинание: может прочитать заклинание "Отражённый образ" (как заклинатель 10-ого уровня) один раз в день
+Вес: 1 фунт~
 //@10373    = ~Intriguing School Cap~
-@10374    = ~Worn by wizards and scholars across Faerun, the distinctive small, round school caps come in a variety of colors. The colors often correspond to scholastic colors or the color associated with a particular school of magic. This particular cap was worn by the wizard Vedri of Silverymoon. On a sightseeing tour of Icewind Dale, his skiff capsized on Maer Dualdon. Fishermen later recovered his body. They sold the cap as compensation for sending his body back to his family.
+@10374    = ~Такие традиционно небольшие округлые головные уборы носят волшебники и учёные по всему Фаэруну. Цвет шапочки часто соответствует цветам философского учения или цветам определённой школы магии. Этот головной убор принадлежал волшебнику Ведри из Серебристой Луна. Во время странствий по Долине Ледяного Ветра, лодочка этого мага перевернулась недалеко от Маэр Дуалдона. Позже тело несчастного нашли рыбаки. Они продали эту шапочки в качестве компенсации трат на отправку тела семье.
 
-This particular cap is a faded shade of purple, representing the school of illusion.
+Этот головной убор выкрашен в бледно-фиолетовый цвет, означающий школу иллюзий.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Knowledge (Arcana): +6 
-Spell Power: Can cast Mirror Image (at level 35) 1/day
-Weight: 1 lb.~
+Особенности:
+ Знание (волшебство): +6
+ Заклинание: может прочитать заклинание "Зеркальный образ" (как заклинатель 35-ого уровня) один раз в день
+Вес: 1 фунт~
 //@10375    = ~Swing from the Masts~
 //@10376    = ~Item description can remain the same; if new description is needed put it here~
 //@10377    = ~Crow's Nest~
-@10378    = ~Aeryl Goldenbeard was a particularly flamboyant pirate that sailed the seas off the coast of Amn. He was the captain of the pirate warship, The Bouncing Rhonda; a twenty gun cutter that was considered one of the fastest vessels on the high seas. Those unfortunate merchant ships that crossed paths with The Bouncing Rhonda were never able to outrun the cutter, were summarily boarded and their merchandise stolen. 
+@10378    = ~Среди всех пиратов, которые плавали у берегов Амна, Аэрил Золотая Борода был, пожалуй, одним из самых эпатажных. Он был капитаном боевого корабля "Скачущая Ронда", 20-пушечного куттера, который считался одним из самых быстроходных кораблей в открытом море. Ни одному из несчастных торговых судов, имевших несчастье встретиться со "Скачущей Рондой", не удавалось уйти от неё - их всегда брали на абордаж, а их товары похищались.
 
-Now, the fact that Captain Aeryl Goldenbeard and his hearty men of The Bouncing Rhonda successfully pirated ships was not so unusual. No, the unusual part was that after the men of The Bouncing Rhonda successfully seized a merchant vessel, Captain Aeryl Goldenbeard would jump from the crow's nest, grab a rope in mid flight that was tied to the mast, gallantly swing down and land elegantly upon the deck of the merchant ship. At almost the same time Captain Aeryl Goldenbeard's feet touched the merchant ship's deck, the captured crew took an instant liking to the pirate captain. In fact, it was not uncommon for a majority of the captured crews to beg for a commission on The Bouncing Rhonda. However, the instant the pirate captain and his crew left the merchant ship (along with its cargo), the remaining merchant ship's crew immediately resumed their hatred for the pirate captain.
+В том, что капитан Аэрил Золотая Борода и его команда успешно грабили торговые суда, не было ничего необычного. Необычным было то, что после того, как пираты со "Скачущей Ронды" захватывали торговое судно, капитал Аэрил изящно спускался по верёвке из "Вороньего гнезда" корабля и элегантно приземлялся на палубу торгового судна. Почти в тот же момент команда захваченного корабля мгновенно влюблялась в капитана пиратов - так сильно, что часто моряки умоляли Аэрила принять их в свою команду. Однако, стоило капитану и его команде покинуть захваченный корабль (вместе с товаром), как моряки торгового судна снова проникались ненавистью к пирату.
 
-No one knew why or how Captain Aeryl Goldenbeard managed to charm his victims so well. That is, not until one day, while the good pirate captain was making one of his famous entrances via rope and mast, his colorful bandana flew off his near balding head. The second his foot touched the deck, all the former merchant crews that went along with the pirate ship instantly came to their senses and summarily beat the pirate captain to death. It did not take long for those around to realize that the pirate captain's bandana held magical properties that made him seem more charming. 
+Никто не знал, как Аэрилу удаётся очаровывать своих жертв - пока однажды, во время знаменитого спуска по верёвке, красочная повязка капитана не слетела с его почти лысой головы. Как только ноги Аэрила коснулись палубы, все члены его команды, раньше служившие на торговых судах, пришли в себя и немедленно забили капитана до смерти. Довольно быстро было обнаружено, что это повязка капитана пиратов была зачарована таким образом, чтобы делать её обладателя более обаятельным.
 
-Unfortunately for the remaining pirate and merchant crew, the bandana flew into the sea. However, rumors would pop up from time to time that a particularly dashing swashbuckler had the uncanny ability to charm his way out of trouble and liked to swing from mast ropes - and that he wore a very colorful bandana.
+К сожалению, повязка упала в море - однако время от времени появлялись слухи об особенно лихом, но очень очаровательном разбойнике, способном выпутаться из любой передряги и обожающем спускаться по канатам. И всегда он носил красочную повязку.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Generic Armor Bonus: +3
-Special:
- Charisma: +6 bonus
- Spell Power: Can cast the spell Charm Person twice per day (Will DC 44)
-Weight: 1 lb.~
+Класс защиты: +3 (общий)
+Особенности:
+ Харизма: +6
+ Заклинание: 2 раза в день может использовать заклинание "Очаровать персонажа" (с УС спасброска воли равным 44)
+Вес: 1 фунт~
 //@10379    = ~Wyrm's Maw~
-@10380    = ~Kellem Longeyes was a noted ranger in the town of Bremen, trekking far and wide across the Savage North in pursuit of his prey. Kellem hunted wyverns, drakes, and other wyrms of all sorts, especially those that made to attack the Ten-Towns or their outlying settlements. The grizzled ranger took many trophies - in time, little of his equipment was not adorned with one kind of wyrm or another.
+@10380    = ~Келлем Длинноглазый был знаменитым следопытом из Бремена, выслеживающим добычу по всей территории Дикого Севера. Келлем охотился на виверн, молодых драконов и других змиев - в первую очередь на тех, которые нападали на Десять Городов или другие, более мелкие поселения. Суровый следопыт собрал множество трофеев, так что со временем почти всё его снаряжении было украшено теми или иными частями тел разных змиев.
 
-Kellem's most prized trophy, though, was from Frostmaw, a great white wyrm whose size and ferocity matched that of a true dragon's. While in its death-throes, Frostmaw's jaws and icy breath took Kellem's left eye and ear - for this, the grim ranger swore vengeance on all its cursed ilk. Upon his return to civilization, Kellem had Frostmaw's wide jaws fashioned into an elaborate helm and imbued with the white wyrm's deadly breath. This helm the ranger christened "Wyrm's Maw."
+Но самым ценным трофеем Келлема был огромный белый змий Морозное Брюхо, по размерам и свирепости сопоставимый с драконом. Умирая в судорогах, Морозное Брюхо успел-таки выморозить Келлему левый глаз и откусить левое ухо. За это мрачный следопыт поклялся отомстить всему его проклятому роду. Вернувшись к цивилизации, Келлем сделал из широких челюстей Морозного Брюха замысловатый шлем и пропитал его смертельным дыханием белого змия. Этот шлем следопыт окрестил "Утробой змия".
 
-Alas, in time Kellem grew old as all men do, and one day set out on a dangerous hunt in the peaks of the Spine of the World never to return. Until now, none of his equipment has ever been found.
+Увы, со временем Келлем, как и все люди, состарился и однажды отправился на опасную охоту в горы Хребта Мира, чтобы никогда не вернуться. До сих пор больше ничего из его снаряжения не было найдено.
 
-Kellem's helm is made from thick hide, bone, and heavy gray-white scales. It covers the face and head entirely. Aside from cutting a dashing figure, the helm's bearer may bellow out a roaring blast of deadly cold once per day.
+Шлем Келлема изготовлен из толстой шкуры, кости и тяжёлой бело-серой чешуи. Он полностью закрывает голову и лицо. Помимо грозного вида, шлем даёт его владельцу возможность раз в день выдыхать смертоносный холод.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Generic Armor Bonus:  +2
-Special:
-  White Wyrm's Breath: breathe a cone of frost for 8d8 points of cold damage (Reflex DC 16 + twice wearer's Charisma bonus for half) 1/day
-Weight: 3 lb.~
+Класс защиты: +2 (общий)
+Особенности:
+ Дыхание белого змия: владелец выдыхает конус холода, наносящий 8d8 урона холодом (успешный спасбросок реакции с УС 16 + двойной модификатор владельца шлема позволяет снизить урона вдвое) 1 раз в день
+Вес: 3 фунта~
 //@10381    = ~Great White Wyrm's Maw~
-@10382    = ~Kellem Longeyes was a noted ranger in the town of Bremen, trekking far and wide across the Savage North in pursuit of his prey. Kellem hunted wyverns, drakes, and other wyrms of all sorts, especially those that made to attack the Ten-Towns or their outlying settlements. The grizzled ranger took many trophies - in time, little of equipment was not adorned with one kind of wyrm or another.
+@10382    = ~Келлем Длинноглазый был знаменитым следопытом из Бремена, выслеживающим добычу по всей территории Дикого Севера. Келлем охотился на виверн, молодых драконов и других змиев - в первую очередь на тех, которые нападали на Десять Городов или другие, более мелкие поселения. Суровый следопыт собрал множество трофеев, так что со временем почти всё его снаряжении было украшено теми или иными частями тел разных змиев.
 
-Kellem's most prized trophy, though, was from Frostmaw, a great white wyrm whose size and ferocity matched that of a true dragon's. While in its death-throes, Frostmaw's jaws and icy breath took Kellem's left eye and ear - for this, the grim ranger swore vengeance on all its cursed ilk. Upon his return to civilization, Kellem had Frostmaw's wide jaws fashioned into an elaborate helm and imbued with the white wyrm's deadly breath. This helm the ranger christened "Great White Wyrm's Maw."
+Но самым ценным трофеем Келлема был огромный белый змий Морозное Брюхо, по размерам и свирепости сопоставимый с драконом. Умирая в судорогах, Морозное Брюхо успел-таки выморозить Келлему левый глаз и откусить левое ухо. За это мрачный следопыт поклялся отомстить всему его проклятому роду. Вернувшись к цивилизации, Келлем сделал из широких челюстей Морозного Брюха замысловатый шлем и пропитал его смертельным дыханием белого змия. Этот шлем следопыт окрестил "Утробой великого белого змия".
 
-Alas, in time Kellem grew old as all men do, and one day set out on a dangerous hunt in the peaks of the Spine of the World never to return. Until now, none of his equipment has ever been found.
+Увы, со временем Келлем, как и все люди, состарился и однажды отправился на опасную охоту в горы Хребта Мира, чтобы никогда не вернуться. До сих пор больше ничего из его снаряжения не было найдено.
 
-Kellem's helm is made from thick hide, bone, and heavy gray-white scales. It covers the face and head entirely. Aside from cutting a dashing figure, the helm's bearer may bellow out a roaring blast of deadly cold once per day.
+Шлем Келлема изготовлен из толстой шкуры, кости и тяжёлой бело-серой чешуи. Он полностью закрывает голову и лицо. Помимо грозного вида, шлем даёт его владельцу возможность раз в день выдыхать смертоносный холод.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Generic Armor Bonus:  +4
-Special:
-  Resistance: 15/- Cold Resistance
-  White Wyrm's Breath: breathe a cone of frost for 16d8 points of cold damage (Reflex DC 24 + twice wearer's Charisma bonus for half) 1/day
-Weight: 3 lb.~
+Класс защиты: +4 (общий)
+Особенности:
+ Сопротивление: 15/- к сопротивлению холоду
+ Дыхание белого змия: владелец выдыхает конус холода, наносящий 16d8 урона холодом (успешный спасбросок реакции с УС 24 + двойной модификатор владельца шлема позволяет снизить урона вдвое) 1 раз в день
+Вес: 3 фунта~
 
 //@10383    = ~Wizard Robe of Cold Resistance~
-@10384    = ~Wizard Robes of Cold Resistance are a common sight in the Sword Coast region, especially as one travels north towards Neverwinter and the Icewind Dales. Many young mages receive it as a gift from their instructors upon successfully completing their first five years of study.
+@10384    = ~Волшебные мантии сопротивления холоду нередко встречаются на Побережье Меча, в особенности распространены они к северу, ближе к Невервинтеру и Долине Ледяного Ветра. Многие молодые волшебники получают их от своих преподавателей, отучившись пять лет.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Resistance:  20/- Cold Resistance
-All cold damage dealt by the character is increased by 20%
-Weight:  3 lb.~
+Особенности:
+ Сопротивление: 15/- сопротивления холоду
+ Весь урон холодом, наносимый носителем робы, увеличивается на 20%
+Вес: 3 фунта~
 //@10385    = ~Knave's Robe~
-@10386    = ~A favorite among thief-wizards, the Knave's Robe has been enchanted to shield its wearer from the blades and poisons of any darkened alley.
+@10386    = ~Мантия жулика пользуется популярностью у воров-магов. Её волшебство защищает владельца от клинков и ядов тех, кто может подстерегать его в тёмной подворотне.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Armor Bonus: +3 vs. Slashing
-Armor Bonus: +3 vs. Piercing
-Saving Throw Bonus: +5 on Fortitude saves
-Sneak Casting: The wearer can sneak attack with spells. When the wearer hits a creature from behind with a damaging spell, the spell will deal additional damage equal to the wearer's Sneak Attack damage.
-Weight:  4 lb.~
+Класс защиты: +3 (доспех) против рубящего урона
+Класс защиты: +3 (доспех) против колющего урона
+Спасброски: +5 к спасброскам стойкости
+Скрытое чтение заклинания: Носитель робы может проводить скрытые атаки заклинаниями. Когда он бьет кого-либо повреждающим заклинанием сзади, заклинание наносит дополнительный урон, равный урону от скрытой атаки носителя робы.
+
+Вес: 4 фунта~
 //@10387    = ~Traveler's Robe~
 @10388    = ~This Traveler's Robe has been perfected for use by any rambling, itinerant wizard that travels from town to town. Its enchantments provide protection from the bandit's arrow and from the jealous thief-wizard that lies in ambush with their Fireball.
 
