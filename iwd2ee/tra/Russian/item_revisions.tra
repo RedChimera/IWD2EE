@@ -1461,23 +1461,24 @@
 
 Вес: 4 фунта~
 //@10387    = ~Traveler's Robe~
-@10388    = ~This Traveler's Robe has been perfected for use by any rambling, itinerant wizard that travels from town to town. Its enchantments provide protection from the bandit's arrow and from the jealous thief-wizard that lies in ambush with their Fireball.
+@10388    = ~Мантия путешественника идеально подходит для бродячих волшебников. Она защитит и от разбойничьей стрелы, и от завистливого вора-волшебника, который притаился в засаде с заклинанием "Огненный шар" наготове.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Armor Bonus: +5 vs. missile
-Saving Throw Bonus:  +5 on Reflex saves
-Increased Duration: Wearer's arcane spells last 30% longer
-Weight:  4 lb.~
+Класс защиты: +5 (доспех) против дальнобойного оружия
+Спасброски: +5 к спасброскам реакции
+Увеличенная продолжительность: время действия заклинаний носителя увеличивается на 30%
+
+Вес: 4 фунта~
 //@10389    = ~Adventurer's Robe~
-@10390    = ~This robe has been specially enchanted to meet the eclectic needs of the adventuring wizard. Aside from protecting the wearer from various forms of bludgeoning damage and mind-affecting spells, it also allows the wearer to protect their adventuring party from their own fireballs.
+@10390    = ~Эта мантия была зачарована таким образом, чтобы соответствовать многообразным нуждам странствующего мага. Она защищает владельца не только от различных видов дробящего урона и заклинаний, влияющих на разум, но и также позволяет защитить своих сотоварищей от своих же огненных шаров.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Armor Class:  +5 vs. Bludgeoning
-Saving Throw Bonus:  +5 on Will saves
-Safe Spells: When the wearer casts an area of effect spell, allies make saving throws against the spell with -5 DC and will take no damage on a successful save, or half damage on a failed save.
-Weight:  4 lb.~
+Класс защиты: +5 (доспех) против дробящего оружия
+Спасброски: +5 к спасброскам воли
+Безопасные заклинания: Когда носитель читает заклинание, воздействующее на область, его союзники делают спасброски против этого заклинания с -5 к УС, не получают урона при успешном спасброске и получают лишь половину урона в противном случае.
+Вес: 4 фунта~
 //@10391    = ~Robe of the Good Archmagi~
 @10392    = ~This powerful Wizard Robe offers protection from all forms of physical attack while at the same time increasing one's magical resistance and saving throws. Due to the nature of its enchantment, it can only be worn by those of good alignment.
 
