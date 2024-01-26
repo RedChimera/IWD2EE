@@ -94,7 +94,7 @@
 ПАРАМЕТРЫ:
 
 Особенности:
- Находясь под воздействием заклинания "Каменная кожа", владелец получает 5/- сопротивление физическому урону
+ Находясь под воздействием заклинания "Каменная кожа", владелец получает 5/- сопротивления физическому урону
 Вес: 1 фунт
 Требования: Мудрость 13+~
 //@10042    = ~Druid's Stone of Thorns~
@@ -103,7 +103,7 @@
 ПАРАМЕТРЫ:
 
 Особенности:
- Находясь под воздействием заклинания "Каменная кожа", владелец получает 10/- сопротивление физическому урону, и враги, поражающие владельца в ближнем бою получают 2d4 колющего урона
+ Находясь под воздействием заклинания "Каменная кожа", владелец получает 10/- сопротивления физическому урону, и враги, поражающие владельца в ближнем бою получают 2d4 колющего урона
 Вес: 1 фунт
 Требования: Мудрость 13+~
 //@10044    = ~Eye of the Storm~
@@ -145,7 +145,7 @@
 
 Класс защиты: +3 (общий)
 Особенности:
- Сопротивление: 30/- сопротивление огню
+ Сопротивление: 30/- сопротивления огню
  Весь урон от огня, наносимый владельцем амулета, увеличивается на 30%.
  Заклинание: три раза в день может использовать заклинание "Солнечный огонь" (как заклинатель 15-ого уровня с УС 40)
 Вес: 1 фунт~
@@ -198,7 +198,7 @@
 
 Особенности:
  Ловкость: +8
- Сопротивление: 10/- сопротивление холоду
+ Сопротивление: 10/- сопротивления холоду
 Вес: 1 фунт~
 //@10064    = ~Blood of the Innocent~
 @10065    = ~Бесстрашные, безжалостные и жестокие Повелители Ужаса Бейна распространяют своё полное ненависти учение по всей земле. Наивысшее удовольствие они получают, наблюдая за тем, как их ученики сеют раздоры.
@@ -1446,7 +1446,7 @@
 ПАРАМЕТРЫ:
 
 Особенности:
- Сопротивление: 15/- сопротивления холоду
+ Сопротивление: 20/- сопротивления холоду
  Весь урон холодом, наносимый носителем робы, увеличивается на 20%
 Вес: 3 фунта~
 //@10385    = ~Knave's Robe~
@@ -1480,51 +1480,53 @@
 Безопасные заклинания: Когда носитель читает заклинание, воздействующее на область, его союзники делают спасброски против этого заклинания с -5 к УС, не получают урона при успешном спасброске и получают лишь половину урона в противном случае.
 Вес: 4 фунта~
 //@10391    = ~Robe of the Good Archmagi~
-@10392    = ~This powerful Wizard Robe offers protection from all forms of physical attack while at the same time increasing one's magical resistance and saving throws. Due to the nature of its enchantment, it can only be worn by those of good alignment.
+@10392    = ~Эта мощная магическая мантия защищает владельца от всех видов физических атак, в то же время повышая сопротивление магии и улучшая спасброски. Она зачарована таким образом, что носить её могут только добрые волшебники.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Generic Armor Bonus: +5
-Spell Resistance: +10
-Saving Throw:  +3 bonus
-The wearer's spells gain +3 DC
-Weight:  6 lb.~
+Класс защиты: +5 (общий)
+Сопротивление магии: +10
+Спасброски: +3
+УС заклинаний, прочитанных носителем мантии увеличивается на 3
+Вес: 6 фунтов~
 //@10393    = ~Robe of the Neutral Archmagi~
-@10394    = ~This powerful Wizard Robe offers protection from all forms of physical attack while at the same time increasing one's magical resistance and saving throws. Due to the nature of its enchantment, it can only be worn by those of neutral alignment.
+@10394    = ~Эта мощная магическая мантия защищает владельца от всех видов физических атак, в то же время повышая сопротивление магии и улучшая спасброски. Она зачарована таким образом, что носить её только волшебники нейтрального мировоззрения.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Generic Armor Bonus: +5
-Spell Resistance: +10
-Saving Throw:  +3 bonus
-The wearer's spells gain +3 DC
-Weight:  6 lb.~
+Класс защиты: +5 (общий)
+Сопротивление магии: +10
+Спасброски: +3
+УС заклинаний, прочитанных носителем мантии увеличивается на 3
+Вес: 6 фунтов~
 //@10395    = ~Robe of the Evil Archmagi~
-@10396    = ~This powerful Wizard Robe offers protection from all forms of physical attack while at the same time increasing one's magical resistance and saving throws. Due to the nature of its enchantment, it can only be worn by those of evil alignment.
+@10396    = ~Эта мощная магическая мантия защищает владельца от всех видов физических атак, в то же время повышая сопротивление магии и улучшая спасброски. Она зачарована таким образом, что носить её могут только злые волшебники.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Generic Armor Bonus: +5
-Spell Resistance: +10
-Saving Throw:  +3 bonus
-The wearer's spells gain +3 DC
-Weight:  6 lb.~
+Класс защиты: +5 (общий)
+Сопротивление магии: +10
+Спасброски: +3
+УС заклинаний, прочитанных носителем мантии увеличивается на 3
+Вес: 6 фунтов~
 //@10397    = ~Wizard Robe of Fire Resistance~
-@10398    = ~Due to the extremely volatile nature of most magics, Wizard Robes of Fire Resistance are not uncommon among young acolytes and their wizardly tutors.
+@10398    = ~Из-за огнеопасной природы большинства видов магии многие молодые волшебники и их наставники носят волшебные мантии сопротивления огню.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Resistance:  20/- Fire Resistance
-All fire damage dealt by the character is increased by 20%
-Weight:  3 lb.~
+Особенности:
+ Сопротивление: 20/- сопротивления огню
+ Весь урон огнём, наносимый носителем робы, увеличивается на 20%
+Вес: 3 фунта~
 //@10399    = ~Wizard Robe of Electrical Resistance~
-@10400    = ~While seen with less frequency than some other Wizard Robes, those of Electrical Resistance can hardly be considered a rarity. Some are worn by paranoiacs seeking protection from a ragged mountain storm but many more are worn by mages seeking to protect themselves from the intrigues of others of their kind.
+@10400    = ~Хотя мантии сопротивления электричеству встречаются реже, чем некоторые другие магические мантии, их нельзя назвать редкостью. Порой их носят параноики, опасающиеся гроз в горах, но гораздо чаще их приобретают маги, желающие обезопасить себя от пакостей со стороны собратьев по ремеслу.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Resistance:  20/- Electrical Resistance
-All electrical damage dealt by the character is increased by 20%
-Weight:  3 lb.~
+Особенности:
+ Сопротивление: 20/- сопротивления электричеству
+ Весь урон электричеством, наносимый носителем робы, увеличивается на 20%
+Вес: 3 фунта~
 //@10401    = ~Robe of Enfusing~
 @10402    = ~Since the age of Netheril, wizards have learned to bestow a wide variety of magical properties upon the everyday objects that surround them. A favorite item of such enchantment is the common robe. It is lightweight, affordable, and holds its enchantment well, thereby making it ideal equipment for a wizard.
 
