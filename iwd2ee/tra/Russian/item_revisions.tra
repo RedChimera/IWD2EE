@@ -1597,66 +1597,70 @@
 //@10421    = ~Studded Leather Armor~
 //@10422    = ~Item description can remain the same; if new description is needed put it here~
 //@10423    = ~Studded Leather Armor +1~
-@10424    = ~Studded leather armor has little in common with normal leather armor. While leather armor is a hardened shell, studded leather armor is soft and supple with hundreds of metal rivets affixed. The rivets are so close together that they form a flexible coating of hard metal that turns aside slashing and cutting attacks. The soft leather backing is little more than a means of securing the rivets in place. This suit of armor has been magically enhanced to provide better durability and protection.
+@10424    = ~Клёпаный кожаный доспех имеет мало общего с обычным кожаным доспехом. В то время как последний изготавливают из жёсткой кожи, материал, из которого делают клёпаный кожаный доспех, мягок, пластичен и покрыт сотнями металлических заклёпок. Они расположены так близко друг к другу, что составляют единое гибкое металлическое покрытие, способное отражать рубящие и режущие удары. Мягкая кожаная подкладка лишь удерживает заклёпки на месте. Чары, наложенные на этот доспех, увеличивают его прочность и защитные качества.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Light Armor
-Armor Bonus: +4
-Max Dex Bonus:  +5
-Armor Check Penalty:  -1
-Arcane Spell Failure:  15%
-Weight: 15 lb.~
-@10425    = ~Studded Leather +4: Missile Attractor~
-@10426    = ~This odd-looking suit of studded leather cannot be removed once put on, except under intervention of a magic user. While improving the protection against all melee weapons, this armor actually becomes a target for missile weapons, and hence so does its wearer. The choice is simple, deadly arrows or deadly swords. 
+Лёгкая броня
+Класс защиты: +4 (доспех)
+Максимальный бонус ловкости: +5
+Штраф к проверкам за броню: -1
+Шанс провала заклинания: 15%
+Вес: 15 фунтов~
+@10425    = ~Клёпаный кожаный доспех +4: Притягивающий стрелы~
+@10426    = ~Этот странного вида проклятый доспех из клёпаной кожи нельзя снять без вмешательства волшебника или жреца. Несмотря на то, что он усиливает защиту от любого оружия ближнего боя, он буквально притягивает к себе и, соответственно, к носителю вражеские стрелы. Выбор прост - смерть от стрел или смерть от меча.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Light Armor
-Armor Bonus: +7
-Max Dex Bonus:  +5
-Armor Check Penalty:  -1
-Arcane Spell Failure:  15%
-Special:
-  Armor Class Penalty: -10 vs. missile weapons
-  Cursed: Cannot be removed without a Remove Curse spell
-Weight: 7 lb.~
+Лёгкая броня
+Класс защиты: +7 (доспех)
+Максимальный бонус ловкости: +5
+Штраф к проверкам за броню: -1
+Шанс провала заклинания: 15%
+Особенности:
+ Класс защиты: -10 против метательных атак
+ Проклятье: доспех можно снять только с помощью заклинания "Снять проклятие"
+Вес: 7 фунтов~
 //@10427    = ~Studded Leather Armor +2~
-@10428    = ~Studded leather armor has little in common with normal leather armor. While leather armor is a hardened shell, studded leather armor is soft and supple with hundreds of metal rivets affixed. The rivets are so close together that they form a flexible coating of hard metal that turns aside slashing and cutting attacks. The soft leather backing is little more than a means of securing the rivets in place.This suit of armor has been magically enhanced to provide better durability and protection.
+@10428    = ~Клёпаный кожаный доспех имеет мало общего с обычным кожаным доспехом. В то время как последний изготавливают из жёсткой кожи, материал, из которого делают клёпаный кожаный доспех, мягок, пластичен и покрыт сотнями металлических заклёпок. Они расположены так близко друг к другу, что составляют единое гибкое металлическое покрытие, способное отражать рубящие и режущие удары. Мягкая кожаная подкладка лишь удерживает заклёпки на месте. Чары, наложенные на этот доспех, увеличивают его прочность и защитные качества.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Light Armor
-Armor Bonus: +5
-Max Dex Bonus:  +5
-Armor Check Penalty:  -1
-Arcane Spell Failure:  15%
-Weight: 15 lb.~
-@10429    = ~Mourner's Armor +3~
-@10430    = ~This unique suit of armor is of foreign design, created for a Kara-Turian samurai from the Baika Clan. The armor, crafted from thin, stiff leather, is dyed black, but features the insignia of the plum blossom, the mon of the Baika Clan. It was only worn into battle once, when Baika Himuro fought a hopeless battle against the enemy samurai that flooded into his ancestral estate. It is believed that the enemy clan captured the armor and later traded it for siege equipment.
+Лёгкая броня
+Класс защиты: +5 (доспех)
+Максимальный бонус ловкости: +5
+Штраф к проверкам за броню: -1
+Шанс провала заклинания: 15%
+Вес: 15 фунтов~
+@10429    = ~Доспех плакальщика +3~
+@10430    = ~Этот уникальный экзотический доспех был создан для самурая клана Баика из Кара-Тура. Доспех изготовлен из тонкой и жёсткой кожи, выкрашен в чёрный цвет и украшен изображением цветка сливы, символа клана Баика. Его надевали в бой лишь однажды, когда Баика Химуро вёл безнадёжное сражение с вражескими самураями, атаковавшими его родовое имение. Говорят, вражеский клан завладел доспехом, а потом обменял его на осадные машины.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Light Armor
-Armor Bonus: +5
-Max Dex Bonus:  +6
-Armor Check Penalty:  -0
-Arcane Spell Failure:  10%
-Special: Once donned, this armor cannot be removed without a Remove Curse spell. While it is equipped, the wearer is unaware of his or her current hit points and has a -3 penalty to all thieving skills. However the wearer also gets a +3 bonus to attack and damage.
-Weight: 10 lb.~
-@10431    = ~Leather Armor of the Wilderness +2~
-@10432    = ~Leather armor, despite the popular misconception, is not soft and supple like the leather used to make a ranger's boots or a druid's robe. That kind of leather offers no better protection than common clothing. Magical enchantments enhance the protective abilities of this leather armor.
+Лёгкая броня
+Класс защиты: +5 (доспех)
+Максимальный бонус ловкости: +6
+Штраф к проверкам за броню: -0
+Шанс провала заклинания: 10%
+Особенности: этот доспех можно снять только при помощи заклинания "Снять проклятие". Надевший доспех не может увидеть количество своих пунктов здоровья и получает -3 ко всех воровским навыкам. Зато, он также получает +3 к броскам атаки и урона.
+Вес: 10 фунтов~
+@10431    = ~Кожаный доспех дикой природы +2~
+@10432    = ~Кожаный доспех, вопреки расхожему мнению, делается вовсе не из такой же мягкой и гибкой кожи, которая используется для изготовления сапог для следопыта или мантии для друида. Изделия из такой мягкой кожи защищают не лучше обычной одежды. Магическое зачарование улучшает защитные свойства этого кожаного доспеха.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Light Armor
-Armor Bonus: +4
-Max Dex Bonus:  +6
-Armor Check Penalty:  -0
-Arcane Spell Failure:  10%
-Special:
-  The armor bonus of this armor is increased by 1 for every 10 points of Wilderness Lore the wearer has
-Weight: 10 lb.~
+ПАРАМЕТРЫ:
+
+Лёгкая броня
+Класс защиты: +4 (доспех)
+Максимальный бонус ловкости: +6
+Штраф к проверкам за броню: -0
+Шанс провала заклинания: 10%
+Особенности:
+ Класс брони этого доспеха увеличивается на 1 за каждые 10 единиц навыка "Знание дикой природы" обладателя
+Вес: 10 фунтов~
+Класс защиты: 6
+Вес: 5~
 @10433    = ~Studded Leather Armor of Luck +2~
 @10434    = ~Studded leather armor has little in common with normal leather armor. While leather armor is a hardened shell, studded leather armor is soft and supple with hundreds of metal rivets affixed. The rivets are so close together that they form a flexible coating of hard metal that turns aside slashing and cutting attacks. The soft leather backing is little more than a means of securing the rivets in place. Magical enchantments enhance the protective abilities of this leather armor.
 
