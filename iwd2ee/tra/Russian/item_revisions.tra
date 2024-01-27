@@ -1528,64 +1528,64 @@
  Весь урон электричеством, наносимый носителем робы, увеличивается на 20%
 Вес: 3 фунта~
 //@10401    = ~Robe of Enfusing~
-@10402    = ~Since the age of Netheril, wizards have learned to bestow a wide variety of magical properties upon the everyday objects that surround them. A favorite item of such enchantment is the common robe. It is lightweight, affordable, and holds its enchantment well, thereby making it ideal equipment for a wizard.
+@10402    = ~Ещё во времена Нетерила маги научились придавать магические свойства вещам, которые их окружают. Самым популярным предметом для наложения таких зачарований была обычная мантия. Она лёгкая, дешёвая и хорошо сохраняет зачарование, что делает её идеальным снаряжением для волшебника.
 
-STATISTICS:
-
-Deflection Bonus: +3
-Spellcasting time decreased by 2
-Weight:  4 lb.~
+Класс защиты: +3 (отражение)
+Время чтения заклинаний снижается на 2
+Вес: 4 фунтов~
 //@10403    = ~Master's Robe~
-@10404    = ~Several of these robes were created for the short-lived Michell Academy near Berdusk. The masters of the school wore distinctive robes that enhanced their spellcasting ability. Unfortuntely, Michell and his staff were too arrogant and confrontational for a nearby Loviatan temple. The mistresses of the temple organized an attack on the school that lasted only an hour. Despite the brevity of the battle, some historians claim that the torture inflicted upon the wizards lasted for weeks. This particular robe was worn by Jamal Briars, a professor of alchemy. The Loviatans decided to make a pun of his name; they had air elementals drag the man through thorny briars until he bled to death.
+@10404    = ~Несколько таких мантий было изготовлено для недолго просуществовавшей Академии Мичелла близ Бердуска. Мастера этой школы носили отличительные мантии, усиливавшие их способности к заклинаниями. К несчастью, Мичелл и его соратники слишком заносчиво и неуважительно вели себя по отношению к расположенному рядом храму Ловиатар. Настоятельницы храма организовали нападение на академию, которое длилось всего час. Несмотря на краткость битвы, некоторые историки полагают, что пытка, которым подвергались волшебники, длились неделями. Эту конкретную мантию носил Ямал Чертополох, профессор алхимии. Его имя сыграло с ним злую шутку - решив поиздеваться над профессором, последователи Ловиатар заставили элементалей воздуха таскать профессора по зарослям чертополоха, пока тот не скончался от полученных ран.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Intelligence:  +3
-Charisma:  +3
-Weight:  3 lb.~
+Особенности:
+ Интеллект: +3
+ Харизма: +3
+Вес: 3 фунта~
 //@10405    = ~High Master's Robe~
-@10406    = ~Several of these robes were created for the short-lived Michell Academy near Berdusk. The masters of the school wore distinctive robes that enhanced their spellcasting ability. Unfortuntely, Michell and his staff were too arrogant and confrontational for a nearby Loviatan temple. The mistresses of the temple organized an attack on the school that lasted only an hour. Despite the brevity of the battle, some historians claim that the torture inflicted upon the wizards lasted for weeks. This particular robe was worn by Jamal Briars, a professor of alchemy. The Loviatans decided to make a pun of his name; they had air elementals drag the man through thorny briars until he bled to death.
+@10406    = ~Несколько таких мантий было изготовлено для недолго просуществовавшей Академии Мичелла близ Бердуска. Мастера этой школы носили отличительные мантии, усиливавшие их способности к заклинаниями. К несчастью, Мичелл и его соратники слишком заносчиво и неуважительно вели себя по отношению к расположенному рядом храму Ловиатар. Настоятельницы храма организовали нападение на академию, которое длилось всего час. Несмотря на краткость битвы, некоторые историки полагают, что пытка, которым подвергались волшебники, длились неделями. Эту конкретную мантию носил Ямал Чертополох, профессор алхимии. Его имя сыграло с ним злую шутку - решив поиздеваться над профессором, последователи Ловиатар заставили элементалей воздуха таскать профессора по зарослям чертополоха, пока тот не скончался от полученных ран.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Intelligence:  +6
-Charisma:  +6
-Alchemy:  +10
-Knowledge (Arcana):  +10
-Weight:  3 lb.~
+Особенности:
+ Интеллект: +6
+ Харизма: +6
+ Алхимия: +10
+ Знание (волшебство): +10
+Вес: 3 фунта~
 //@10407    = ~Robe of Absorption~
-@10408    = ~The adventuring sorceress Fain of Five Towers often found herself engaged in melee combat with well-equipped warriors of high skill. She discovered that no matter what protective magic she used, the warriors would eventually penetrate the armor she crafted for herself. Fain decided to craft a robe that would lessen the damage done to her instead of relying on the traditional method of preventing blows from landing. Fain's robe is ragged and patched in many places, having served her well for over twenty years. Fain and her comrades eventually retired. She sold her robe to a more foolhardy wizard who died five years later in the Battle of the Bones.
+@10408    = ~Странствующая колдунья Фаин из Пяти Башен часто вступала в ближний бой с хорошо снаряжёнными воинами, искусными в ближнем бою. Она быстро поняла, что какую бы защитную магию она ни использовала, умелые воины всё равно в конечно счёте пробивали её магические доспехи. Тогда Фаин решила создать мантию, которая бы уменьшала наносимый ей урон, вместо того, чтобы полагаться на традиционные для волшебников методы защиты. Мантия Фаин служила ей верой и правдой более двадцати лет, хотя её и приходилось неоднократно латать. В конце концов Фаин и её соратники ушли на заслуженный отдых, а эту мантию колдунья продала более безрассудному волшебнику, погибшему пять лет спустя в Битве Костей.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage Resistance: 3/- Slashing, Piercing, Bludgeoning, Missile
-Weight:  3 lb.~
+Сопротивление урону: 3/- рубящему, колющему, дробящему и метательному
+Вес: 3 фунта~
 //@10409    = ~Imbued Robe of Absorption~
-@10410    = ~The adventuring sorceress Fain of Five Towers often found herself engaged in melee combat with well-equipped warriors of high skill. She discovered that no matter what protective magic she used, the warriors would eventually penetrate the armor she crafted for herself. Fain decided to craft a robe that would lessen the damage done to her instead of relying on the traditional method of preventing blows from landing. Fain's robe is ragged and patched in many places, having served her well for over twenty years. Fain and her comrades eventually retired. She sold her robe to a more foolhardy wizard who died five years later in the Battle of the Bones.
+@10410    = ~Странствующая колдунья Фаин из Пяти Башен часто вступала в ближний бой с хорошо снаряжёнными воинами, искусными в ближнем бою. Она быстро поняла, что какую бы защитную магию она ни использовала, умелые воины всё равно в конечно счёте пробивали её магические доспехи. Тогда Фаин решила создать мантию, которая бы уменьшала наносимый ей урон, вместо того, чтобы полагаться на традиционные для волшебников методы защиты. Мантия Фаин служила ей верой и правдой более двадцати лет, хотя её и приходилось неоднократно латать. В конце концов Фаин и её соратники ушли на заслуженный отдых, а эту мантию колдунья продала более безрассудному волшебнику, погибшему пять лет спустя в Битве Костей.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage Resistance: 5/- Slashing, Piercing, Bludgeoning, and Missile
-Spell Power: Can cast the spell Iron Body (at level 15) 1/Day
-Weight:  3 lb.~
+Сопротивление урону: 5/- рубящему, колющему, дробящему и метательному
+Заклинание: может читать заклинание "Железное тело" (как заклинатель 15-ого уровня) раз в день
+Вес: 3 фунта~
 //@10411    = ~Phaen's Robe of Rags~
-@10412    = ~Phaen's robe is made of hundreds of ragged strips of cloth, and it looks more like something one would find on a beggar on the streets of Luskan than on a wizard. Despite its mangy appearance, however, a closer examination reveals that some magic has been woven into the cloth itself, so subtle it would be difficult for even an accomplished mage to detect the enchantments. The interior of the robe of rags appears to be lined with the pelt of a great bear, but despite its bulk, it's surprisingly light and warm, and it seems ideally suited to the Targos climate.
+@10412    = ~Мантия Фаэна сшита из сотен потрёпанных лоскутов ткани и больше подходит лусканскому нищему, чем волшебнику. Но если приглядеться внимательнее, то станет ясно, что в саму ткань вплетено множество чар, да так, что даже опытный волшебник не сразу сможет обнаружить их. Подкладка мантии сделана из медвежьей шкуры, но, несмотря на свою громоздкость, мантия удивительно тёплая и лёгкая, и, похоже, идеально подходит для сурового климата Таргоса.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Deflection Bonus: +2 
-Resistance: 5/- Cold Resistance
-Weight:  3 lb.~
+Класс защиты: +2 (отражение)
+Сопротивление: 5/- сопротивления холоду
+Вес: 3 фунта~
 //@10413    = ~Phaen's Tattered Robes~
-@10414    = ~Phaen's robe is made of hundreds of ragged strips of cloth, and it looks more like something one would find on a beggar on the streets of Luskan than on a wizard. Despite its mangy appearance, however, a closer examination reveals that some magic has been woven into the cloth itself, so subtle it would be difficult for even an accomplished mage to detect the enchantments. The interior of the robe of rags appears to be lined with the pelt of a great bear, but despite its bulk, it's surprisingly light and warm, and it seems ideally suited to the Targos climate. 
+@10414    = ~Мантия Фаэна сшита из сотен потрёпанных лоскутов ткани и больше подходит лусканскому нищему, чем волшебнику. Но если приглядеться внимательнее, то станет ясно, что в саму ткань вплетено множество чар, да так, что даже опытный волшебник не сразу сможет обнаружить их. Подкладка мантии сделана из медвежьей шкуры, но, несмотря на свою громоздкость, мантия удивительно тёплая и лёгкая, и, похоже, идеально подходит для сурового климата Таргоса.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Deflection Bonus: +6 
-Resistance: 20/- Cold Resistance
-Resistance: 3/- Piercing Resistance
-Resistance: 3/- Bludgeoning Resistance
-Weight:  3 lb.~
+Класс защиты: +6 (отражение)
+Сопротивление: 20/- сопротивления холоду
+Сопротивление: 3/- сопротивления колющему
+Сопротивление: 3/- сопротивления дробящему
+Вес: 3 фунта~
 
 
 //@10415    = ~Leather Armor~
