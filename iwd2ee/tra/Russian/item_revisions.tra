@@ -1868,81 +1868,80 @@
  Сила: +4
  Телосложение: +4
 Вес: 20 фунтов~
-@10463    = ~Dirty Bits +3~
-@10464    = ~It is often said that a person does not choose a profession, the profession chooses the person. So was the case with Nasty Phil, the local corpse cleaner for the Ten Towns many years ago. Nasty Phil, you see, was no undertaker - no, it was his responsibility, after a party of adventurers dispatched with a monster (or monsters) that was terrorizing a local community, to clean up the mess that was left over. 
+@10463    = ~Грязные кусочки +3~
+@10464    = ~Говорят, что не человек выбирает профессию, а профессия - человека. Так было и с Мерзким Филом, уборщиком трупов в Десяти Городах, жившим много лет назад. Нет, он не был гробовщиком - его обязанностью было убирать всё, что оставалось после боя очередного отряда авантюристов с очередным монстром (или монстрами), терроризировавшим округу.
 
-The truly 'nasty' thing about Phil and the reason he got his nickname was that he relished his job. He specially crafted this armor from the hides of different creatures so that he could delve even deeper into the more gruesome clean-up jobs. In fact, it was not unusual for Nasty Phil to not clean himself after one of his jobs and prance around town covered in stinking, rotting flesh. Bits and pieces of unidentified particles could be seen dangling off Nasty Phil's leather, prompting the locals to name his leather armor, Dirty Bits.
+По-настоящему "мерзкой" чертой Фила и причиной, по которой он получил своё прозвище, было то, что он наслаждался своей работой. Он специально изготовил себе этот доспех из шкур различных созданий, чтобы иметь возможность ещё глубже погружаться в самые жуткие работы по очистке. Вдобавок к этому, для Мерзкого Фила было совершенно обычным не мыться после работы и расхаживать по городу покрытым вонючей, гниющей плотью. С брони Фила свисали кусочки неопознанных частей монстров, из-за чего местные жители и прозвали его кожаные доспехи "Грязными кусочками".
 
-Over time, his leather armor developed immunities to certain things just from absorbing the years of monster mess that was never washed off. Even though Dirty Bits has been cleaned from time to time, it still has bits of unidentified 'stuff' that seem to have fused itself to the armor, helping it to retain its dirty name.
+Со временем этот кожаный доспех приобрёл иммунитет к некоторым вещам, просто впитав в себя многолетние остатки монстров, которые никогда не смывалась. Несмотря на то, что эту броню время от времени чистили, на ней и сейчас остаются налипшие кусочки, неопознанной всячины, оправдывая её "грязное" имя.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Light Armor
-Armor Bonus: +5
-Max Dex Bonus:  +6
-Armor Check Penalty:  -0
-Arcane Spell Failure:  15%
-Special:
-  Resistance: 2/- Poison Resistance
-Weight: 25 lb.~
-@10465    = ~Nasty Bits +5~
-@10466    = ~It is often said that a person does not choose a profession, the profession chooses the person. So was the case with Nasty Phil, the local corpse cleaner for the Ten Towns many years ago. Nasty Phil, you see, was no undertaker - no, it was his responsibility, after a party of adventurers dispatched with a monster (or monsters) that was terrorizing a local community, to clean up the mess that was left over. 
+Лёгкая броня
+Класс защиты: +5 (доспех)
+Максимальный бонус ловкости: +6
+Штраф к проверкам за броню: -0
+Шанс провала заклинания: 15%
+Особенности:
+ Сопротивление: 2/- сопротивления яду
+Вес: 25 фунтов~
+@10465    = ~Мерзкие кусочки +5~
+@10466    = ~Говорят, что не человек выбирает профессию, а профессия - человека. Так было и с Мерзким Филом, уборщиком трупов в Десяти Городах, жившим много лет назад. Нет, он не был гробовщиком - его обязанностью было убирать всё, что оставалось после боя очередного отряда авантюристов с очередным монстром (или монстрами), терроризировавшим округу.
 
-The truly 'nasty' thing about Phil and the reason he got his nickname was that he relished his job. He specially crafted this armor from the hides of different creatures so that he could delve even deeper into the more gruesome clean-up jobs. In fact, it was not unusual for Nasty Phil to not clean himself after one of his jobs and prance around town covered in stinking, rotting flesh. Bits and pieces of unidentified particles could be seen dangling off Nasty Phil's leather, prompting the locals to name his leather armor, Nasty Bits.
+По-настоящему "мерзкой" чертой Фила и причиной, по которой он получил своё прозвище, было то, что он наслаждался своей работой. Он специально изготовил себе этот доспех из шкур различных созданий, чтобы иметь возможность ещё глубже погружаться в самые жуткие работы по очистке. Вдобавок к этому, для Мерзкого Фила было совершенно обычным не мыться после работы и расхаживать по городу покрытым вонючей, гниющей плотью. С брони Фила свисали кусочки неопознанных частей монстров, из-за чего местные жители и прозвали его кожаные доспехи "Мерзкими кусочками".
 
-Over time, his leather armor developed immunities to certain things just from absorbing the years of monster mess that was never washed off. Even though Nasty Bits has been cleaned from time to time, it still has bits of unidentified 'stuff' that seem to have fused itself to the armor, helping it to retain its dirty name.
+Со временем этот кожаный доспех приобрёл иммунитет к некоторым вещам, просто впитав в себя многолетние остатки монстров, которые никогда не смывалась. Несмотря на то, что эту броню время от времени чистили, на ней и сейчас остаются налипшие кусочки, неопознанной всячины, оправдывая её "мерзкое" имя.
 
+ПАРАМЕТРЫ:
 
-STATISTICS:
+Лёгкая броня
+Класс защиты: +7 (доспех)
+Максимальный бонус ловкости: +6
+Штраф к проверкам за броню: -0
+Шанс провала заклинания: 15%
+Особенности:
+ Сопротивление: 5/- сопротивления яду
+ Сопротивление: 10/- сопротивления кислоте
+ Спасброски: +5 к спасброскам стойкости
+Вес: 25 фунтов~
+@10467    = ~Доспех Милтона Шестипалого +2~
+@10468    = ~Изначально "Доспех Милтона Шестипалого" был вполне обычным кожаным клёпаным доспехом, принадлежавшим не менее обычному вору по имени Милтон Шестипалый (прозванному так за шесть пальцев на левой ноге). Милтон состоял в гильдии воров шахтёрского города Мирабар, и ему поручали мелкие кражи кошельков с монетами и драгоценными камнями (если повезёт).
 
-Light Armor
-Armor Bonus: +7
-Max Dex Bonus:  +6
-Armor Check Penalty:  -0
-Arcane Spell Failure:  15%
-Special:
-  Resistance: 5/- Poison Resistance
-  Resistance: 10/- Acid Resistance
-  Saving Throw Bonus: +5 to Fortitude saves
-Weight: 25 lb.~
-@10467    = ~Milton Sixtoes' Armor +2~
-@10468    = ~Milton Sixtoes' Armor started out as very ordinary studded leather armor worn by an even more ordinary thief named Milton Sixtoes (so named since he had six toes on his left foot). Milton belonged to a local thieves guild in the mining city of Mirabar, and thus was tasked with petty thievery of coin purses and the occasional gem.
+Всё было достаточно хорошо по "обычным" стандартам Милтона, пока однажды в его воровскую гильдию не перешёл вор с выдающимися магическими способностями. Глава гильдии назначил нового вора партнёром Милтона, для помощи в его мелких, но прибыльных грязных делах. Милтон, конечно, не мог знать, что его новый партнёр не довольствовался мелким воровством. Именно из-за амбиций последнего Милтон чуть было не попал в неприятности с властями. Работая с напарником, Милтон начал совершать весьма рискованные кражи, причём не по собственной воле. Словно кто-то другой управлял его телом во время таких краж. К счастью, риск всегда оправдывался, но Милтон знал, что однажды удача изменит ему.
 
-All was well enough by Milton's ordinary standards, until one day when a thief of notable magical prowess transferred to Milton's guild. The guild master assigned this new thief to be Milton's partner in crime, aiding him in his petty, but profitable dirty deeds. Little did Milton know that his new partner was not satisfied with petty thievery. In fact, it was his partner's higher ambition that almost got Milton in trouble with the local authorities. During thieving assignments with his new partner, Milton began to perform very risky acts of larceny, and not through his own will. It was as if someone else had control of Milton's body and used him to carry out the acts. Luckily for Milton, he was able to perform the higher risk activities, but he knew that one day his luck would run out.
+Так что, собравшись с силами, Милтон взял себе выходной и отправился к дварфскому кузнецу, держащему лавку в одном из верхних туннелей шахт Мирабара. Там на деньги, заработанные рискованными кражами, он попросил наложить на свой клёпаный доспех чары, защищающие от магии очарования. Дело было сделано - обычный клёпаный доспех Милтона получил тонкую выделку, усиление к броне, и защиту от заклинания "Очаровать персонажа".
 
-So, one day when Milton was feeling more proactive than usual, he took the day off from thieving and ventured to a Dwarven armorsmith who resided in one of the upper Mirabar mining tunnels. There, with his extra earnings from unwillingly performing his more dangerous thieving, he commissioned the dwarf to upgrade his studded leather and give it the power to ward off other's charms. The dwarf complied and ended up upgrading Milton's ordinary studded leather into fine, extra tough studded leather that made the wearer immune to the spell Charm Person.
+Вскоре после того, как Милтон начал носить доспех, он обнаружил, что заклинание очарования на него накладывал именно напарник, заставляя выполнять все эти рискованные кражи. И вот когда напарник в очередной раз попытался это сделать, Милтон подыграл ему, сделав вид, будто очарован, а затем подкрался к партнёру со спины и перерезал ему горло обычным отравленным кинжалом. Милтон был рад вернуться к обычному мелкому воровству, хотя напарников ему с тех пор больше не назначали.
 
-Not long after Milton began wearing the armor, he discovered his new partner was the one who cast the spell Charm Person on him and made him take all the extra risks. The last time his partner tried to charm Milton, he (Milton) played along as if he were charmed, snuck up behind his partner, and slit his throat with an ordinary, poisoned dagger. From then on, Milton was very pleased to go back to ordinary, petty thievery, though no more partners were ever assigned to Milton Sixtoes.
-   
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Light Armor
-Armor Bonus: +5
-Max Dex Bonus:  +5
-Armor Check Penalty:  -1
-Arcane Spell Failure:  15%
-Special:
-  Spellward: Immune to Charm and Domination spells
-Weight: 20 lb.~
-@10469    = ~Milton Sixtoes' Armor of Absolute Self +4~
-@10470    = ~Milton Sixtoes' Armor of Absolute Self started out as very ordinary studded leather armor worn by an even more ordinary thief named Milton Sixtoes (so named since he had six toes on his left foot). Milton belonged to a local thieves guild in the mining city of Mirabar, and thus was tasked with petty thievery of coin purses and the occasional gem.
+Лёгкая броня
+Класс защиты: +5 (доспех)
+Максимальный бонус ловкости: +5
+Штраф к проверкам за броню: -1
+Шанс провала заклинания: 15%
+Особенности:
+ Оберёг: иммунитет к заклинаниям очарования и господства
+Вес: 20 фунтов~
+@10469    = ~Доспех Абсолютного "Я" Милтона Шестипалого +4~
+@10470    = ~Изначально Абсолютное "Я" был вполне обычным кожаным клёпаным доспехом, принадлежавшим не менее обычному вору по имени Милтон Шестипалый (прозванному так за шесть пальцев на левой ноге). Милтон состоял в гильдии воров шахтёрского города Мирабар, и ему поручали мелкие кражи кошельков с монетами и драгоценными камнями (если повезёт).
 
-All was well enough by Milton's ordinary standards, until one day when a thief of notable magical prowess transferred to Milton's guild. The guild master assigned this new thief to be Milton's partner in crime, aiding him in his petty, but profitable dirty deeds. Little did Milton know that his new partner was not satisfied with petty thievery. In fact, it was his partner's higher ambition that almost got Milton in trouble with the local authorities. During thieving assignments with his new partner, Milton began to perform very risky acts of larceny, and not through his own will. It was as if someone else had control of Milton's body and used him to carry out the acts. Luckily for Milton, he was able to perform the higher risk activities, but he knew that one day his luck would run out.
+Всё было достаточно хорошо по "обычным" стандартам Милтона, пока однажды в его воровскую гильдию не перешёл вор с выдающимися магическими способностями. Глава гильдии назначил нового вора партнёром Милтона, для помощи в его мелких, но прибыльных грязных делах. Милтон, конечно, не мог знать, что его новый партнёр не довольствовался мелким воровством. Именно из-за амбиций последнего Милтон чуть было не попал в неприятности с властями. Работая с напарником, Милтон начал совершать весьма рискованные кражи, причём не по собственной воле. Словно кто-то другой управлял его телом во время таких краж. К счастью, риск всегда оправдывался, но Милтон знал, что однажды удача изменит ему.
 
-So, one day when Milton was feeling more proactive than usual, he took the day off from thieving and ventured to a Dwarven armorsmith who resided in one of the upper Mirabar mining tunnels. There, with his extra earnings from unwillingly performing his more dangerous thieving, he commissioned the dwarf to upgrade his studded leather and give it the power to ward off other's charms. The dwarf complied and ended up upgrading Milton's ordinary studded leather into fine, extra tough studded leather that made the wearer immune to just about every spell that affected the mind.
+Так что, собравшись с силами, Милтон взял себе выходной и отправился к дварфскому кузнецу, держащему лавку в одном из верхних туннелей шахт Мирабара. Там на деньги, заработанные рискованными кражами, он попросил наложить на свой клёпаный доспех чары, защищающие от магии очарования. Дело было сделано - обычный клёпаный доспех Милтона получил тонкую выделку, усиление к броне, и защиту от заклинания влияющих на разум.
 
-Not long after Milton began wearing the armor, he discovered his new partner was the one who cast the spell Charm Person on him and made him take all the extra risks. The last time his partner tried to charm Milton, he (Milton) played along as if he were charmed, snuck up behind his partner, and slit his throat with an ordinary, poisoned dagger. From then on, Milton was very pleased to go back to ordinary, petty thievery, though no more partners were ever assigned to Milton Sixtoes.
-   
-STATISTICS:
+Вскоре после того, как Милтон начал носить доспех, он обнаружил, что заклинание очарования на него накладывал именно напарник, заставляя выполнять все эти рискованные кражи. И вот когда напарник в очередной раз попытался это сделать, Милтон подыграл ему, сделав вид, будто очарован, а затем подкрался к партнёру со спины и перерезал ему горло обычным отравленным кинжалом. Милтон был рад вернуться к обычному мелкому воровству, хотя напарников ему с тех пор больше не назначали.
 
-Light Armor
-Armor Bonus: +7
-Max Dex Bonus:  +5
-Armor Check Penalty:  -1
-Arcane Spell Failure:  15%
-Special:
-  Wearer under the effects of the spell Mind Blank
-Weight: 20 lb.~
+ПАРАМЕТРЫ:
+
+Лёгкая броня
+Класс защиты: +7 (доспех)
+Максимальный бонус ловкости: +5
+Штраф к проверкам за броню: -1
+Шанс провала заклинания: 15%
+Особенности:
+ Постоянный эффект: при ношении даёт владельцу эффект заклинания "Очистка разума"
+Вес: 20 фунтов~
 @10471    = ~Zuvembie +2~
 @10472    = ~In order to overcome the overwhelming powers of a necromancer, Mizelle Krillor, a wild elf ranger who resided in the outlining wilderness of Kuldahar, along with the help of an unknown witch doctor, created the studded leather armor known as Zuvembie. 
 
