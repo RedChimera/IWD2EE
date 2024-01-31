@@ -1942,79 +1942,79 @@
 Особенности:
  Постоянный эффект: при ношении даёт владельцу эффект заклинания "Очистка разума"
 Вес: 20 фунтов~
-@10471    = ~Zuvembie +2~
-@10472    = ~In order to overcome the overwhelming powers of a necromancer, Mizelle Krillor, a wild elf ranger who resided in the outlining wilderness of Kuldahar, along with the help of an unknown witch doctor, created the studded leather armor known as Zuvembie. 
+@10471    = ~Зувемби +2~
+@10472    = ~Чтобы преодолеть силу могучего некроманта, Мизель Криллор, дикая эльфийка-следопыт из Кулдахара, с помощью неизвестной знахарки создала клёпаный кожаный доспех, известный как Зувемби.
 
-Cut from the enchanted flesh of a zombie, studded with silver and blessed by the witch doctor, Mizelle donned the unusual armor and immediately felt increased magical resistance. Unfortunately, one of the side effects of Mizelle's new armor was a zombie curse that made her very socially unappealing. However, she was so desperate to destroy the necromancer, she did not care. With the ability to resist the necromancer's death spells, she cut him down with the ferocity of a demon. Soon afterwards, she went to a cleric of Sune and had the cursed armor removed, never to be used again by the wild elf ranger.
+Доспех был скроен из зачарованной кожи и мяса зомби, проклёпан серебром и благословлён знахаркой. Надев его, Мизель сразу почувствовала, как возросло её сопротивление магии. К сожалению, одним из побочных эффектов нового доспеха Мизель стало проклятие зомби, сделавшее её крайне непривлекательной. Однако она так отчаянно хотела уничтожить уничтожить некроманта, что ей было всё равно. Обладая способностью противостоять смертоносным заклинаниям некроманта, она убила его с яростью демона. Вскоре после этого она отправилась к священнику Суны и попросила снять с неё эти проклятые доспехи, чтобы они никогда больше не использовались дикими эльфами-следопытами.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Light Armor
-Armor Bonus: +5
-Max Dex Bonus:  +5
-Armor Check Penalty:  -1
-Arcane Spell Failure:  15%
-Special:
-  Cursed: Once donned, this armor cannot be removed without a Remove Curse spell
-  Charisma: -2 penalty
-  Wearer under the effects of the spell Death Ward
-Weight: 20 lb.~
-@10473    = ~Zuvembie's Impunity +4~
-@10474    = ~In order to overcome the overwhelming powers of a necromancer, Mizelle Krillor, a wild elf ranger who resided in the outlining wilderness of Kuldahar, along with the help of an unknown witch doctor, created the studded leather armor known as Zuvembie's Impunity. 
+Лёгкая броня
+Класс защиты: +5 (доспех)
+Максимальный бонус ловкости: +5
+Штраф к проверкам за броню: -1
+Шанс провала заклинания: 15%
+Особенности:
+ Проклятие: надев этот доспех, его нельзя снять без помощи заклинания "Снять проклятие"
+ Харизма: -2
+ Постоянный эффект: В доспехе персонаж находится под действием эффекта заклинания "Ограждение от смерти"
+Вес: 20 фунтов~
+@10473    = ~Безнаказанность Зувемби +4~
+@10474    = ~Чтобы преодолеть силу могучего некроманта, Мизель Криллор, дикая эльфийка-следопыт из Кулдахара, с помощью неизвестной знахарки создала клёпаный кожаный доспех, известный как "Безнаказанность Зувемби".
 
-Cut from the enchanted flesh of a zombie, studded with silver and blessed by the witch doctor, Mizelle donned the unusual armor and immediately felt increased magical resistance. Unfortunately, one of the side effects of Mizelle's new armor was a zombie curse that made her very socially unappealing. However, she was so desperate to destroy the necromancer, she did not care. With the ability to resist the necromancer's death spells, she cut him down with the ferocity of a demon. Soon afterwards, she went to a cleric of Sune and had the cursed armor removed, never to be used again by the wild elf ranger.
+Доспех был скроен из зачарованной кожи и мяса зомби, проклёпан серебром и благословлён знахаркой. Надев его, Мизель сразу почувствовала, как возросло её сопротивление магии. К сожалению, одним из побочных эффектов нового доспеха Мизель стало проклятие зомби, сделавшее её крайне непривлекательной. Однако она так отчаянно хотела уничтожить уничтожить некроманта, что ей было всё равно. Обладая способностью противостоять смертоносным заклинаниям некроманта, она убила его с яростью демона. Вскоре после этого она отправилась к священнику Суны и попросила снять с неё эти проклятые доспехи, чтобы они никогда больше не использовались дикими эльфами-следопытами.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Light Armor
-Armor Bonus: +7
-Max Dex Bonus:  +5
-Armor Check Penalty:  -0
-Arcane Spell Failure:  15%
-Special:
-  Cursed: Once donned, this armor cannot be removed without a Remove Curse spell. 
-  Charisma: -3 penalty
-  Wearer under the effects of the spell Death Ward
-  Freedom of Movement: The wearer is immune to everything, magical and otherwise, that affects mobility in any way, although can still be hasted.
-Weight: 20 lb.~
-@10475    = ~Interloper +2~
-@10476    = ~One of the greatest skills a scout can have is the ability to sneak about undetected. For many years a scout will hone their craft in the arts of hiding in shadows and moving silently, just so they may attain one of the most valuable resources in the realm - information. 
+Лёгкая броня
+Класс защиты: +7 (доспех)
+Максимальный бонус ловкости: +5
+Штраф к проверкам за броню: -0
+Шанс провала заклинания: 15%
+Особенности:
+ Проклятие: надев этот доспех, его нельзя снять без помощи заклинания "Снять проклятие"
+ Харизма: -3
+ Постоянный эффект: В доспехе персонаж находится под действием эффекта заклинания "Ограждение от смерти"
+ Свобода передвижения: в доспехе персонаж невосприимчив ко всем эффектам, стесняющим движения, как магическим, так и немагическим. При этом его по-прежнему можно ускорить.
+Вес: 20 фунтов~
+@10475    = ~Лазутчик +2~
+@10476    = ~Одно из величайших умений разведчика - способность перемещаться незамеченным. Долгие годы разведчики оттачивают умение прятаться в тени и бесшумно передвигаться, чтобы в нужный момент получить одно из самых ценных сокровищ в королевствах - информацию.
 
-While a skilled scout may be able to slink undetected around a camp of regular soldiers and bandits with ease, the same cannot be said if the camp the scout is observing is protected by detection magics. It is because of this very reason that the armor known as Interloper was created.
+Хотя опытный разведчик может с лёгкостью пробраться в лагерь обычных солдат или разбойников, дело значительно осложняется, если лагерь находится под защитой магии, позволяющей обнаруживать нежелательных гостей. Именно для таких случаев и был создан доспех под названием "Тихий Лазутчик".
 
-Many generations ago, skilled wood elf craftsman perfected a technique that was able to combine powerful non-detection magic into leather armor. Using this armor, wood elf scouts could infiltrate even the most well protected campsites without fear of being discovered by any magical means. Unfortunately, one of the scouts grew careless and was captured as he was spying on a drow raiding party. After days of torturing their prisoner, the drow were able to learn how the scouts were able to infiltrate their camps and even the location of the village at which these special armors were being made. Needless to say, every man, woman and child in that village was ruthlessly slaughtered...except one. This particular Interloper armor managed to survive only because the individual who wore it was away from the wood elf community the day the drow attacked.
+Много поколений назад умелый мастер из лесных эльфов разработал технику, которая позволяла объединить мощную магию против обнаружения с кожаной бронёй. Используя эти доспехи, разведчики лесных эльфов могли проникать даже в самые хорошо защищённые лагеря без опасений быть обнаруженными магией. К несчастью, один из таких разведчиков стал достаточно неосторожным и был схвачен, когда наблюдал за отрядом дроу. После нескольких дней пыток дроу смогли узнали, как разведчикам удавалось подбираться к их лагерям незамеченными, а также выведали местонахождение деревни, где делались эти доспехи. Нет нужды говорить, что все мужчины, женщины и дети в той деревне были безжалостно убиты... кроме одного. Этот конкретный доспех был спасён, потому что носивший его эльф находился далеко от своей деревни в момент нападения дроу.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Light Armor
-Armor Bonus: +5
-Max Dex Bonus:  +5
-Armor Check Penalty:  -1
-Arcane Spell Failure:  15%
-Special:
-  Wearer is under the effect of Nondetection.
-  Move Silently skill: +6
-  The armor bonus of Interloper is increased by 1 for every 10 points of Move Silently the wearer has.
-Weight: 5 lb.~
-@10477    = ~Silent Interloper +3~
-@10478    = ~One of the greatest skills a scout can have is the ability to sneak about undetected. For many years a scout will hone their craft in the arts of hiding in shadows and moving silently, just so they may attain one of the most valuable resources in the realm - information. 
+Лёгкая броня
+Класс защиты: +5 (доспех)
+Максимальный бонус ловкости: +5
+Штраф к проверкам за броню: -1
+Шанс провала заклинания: 15%
+Особенности:
+ Постоянный эффект: надевший доспех находится под постоянным эффектом "Необнаружение"
+ Приглушение: +6 к навыку "Тихая походка"
+ Бонус к классу защиты (броня) этого доспеха увеличивается на 1 за каждые 10 очков в навыке "Тихая походка" носящего его
+Вес: 5 фунтов~
+@10477    = ~Тихий лазутчик +3~
+@10478    = ~Одно из величайших умений разведчика - способность перемещаться незамеченным. Долгие годы разведчики оттачивают умение прятаться в тени и бесшумно передвигаться, чтобы в нужный момент получить одно из самых ценных сокровищ в королевствах - информацию.
 
-While a skilled scout may be able to slink undetected around a camp of regular soldiers and bandits with ease, the same cannot be said if the camp the scout is observing is protected by detection magics. It is because of this very reason that the armor known as Silent Interloper was created.
+Хотя опытный разведчик может с лёгкостью пробраться в лагерь обычных солдат или разбойников, дело значительно осложняется, если лагерь находится под защитой магии, позволяющей обнаруживать нежелательных гостей. Именно для таких случаев и был создан доспех под названием "Тихий Лазутчик".
 
-Many generations ago, skilled wood elf craftsman perfected a technique that was able to combine powerful non-detection magic into leather armor. Using this armor, wood elf scouts could infiltrate even the most well protected campsites without fear of being discovered by any magical means. Unfortunately, one of the scouts grew careless and was captured as he was spying on a drow raiding party. After days of torturing their prisoner, the drow were able to learn how the scouts were able to infiltrate their camps and even the location of the village at which these special armors were being made. Needless to say, every man, woman and child in that village was ruthlessly slaughtered...except one. This particular Silent Interloper armor managed to survive only because the individual who wore it was away from the wood elf community the day the drow attacked.
+Много поколений назад умелый мастер из лесных эльфов разработал технику, которая позволяла объединить мощную магию против обнаружения с кожаной бронёй. Используя эти доспехи, разведчики лесных эльфов могли проникать даже в самые хорошо защищённые лагеря без опасений быть обнаруженными магией. К несчастью, один из таких разведчиков стал достаточно неосторожным и был схвачен, когда наблюдал за отрядом дроу. После нескольких дней пыток дроу смогли узнали, как разведчикам удавалось подбираться к их лагерям незамеченными, а также выведали местонахождение деревни, где делались эти доспехи. Нет нужды говорить, что все мужчины, женщины и дети в той деревне были безжалостно убиты... кроме одного. Этот конкретный доспех был спасён, потому что носивший его эльф находился далеко от своей деревни в момент нападения дроу.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Light Armor
-Armor Bonus: +6
-Max Dex Bonus:  +5
-Armor Check Penalty:  -1
-Arcane Spell Failure:  15%
-Special:
-  Wearer is under the effect of Nondetection.
-  Move Silently skill: +12
-  The armor bonus of Silent Interloper is increased by 1 for every 10 points of Move Silently the wearer has.
-Weight: 15 lb.~
+Лёгкая броня
+Класс защиты: +6 (доспех)
+Максимальный бонус ловкости: +5
+Штраф к проверкам за броню: -1
+Шанс провала заклинания: 15%
+Особенности:
+ Постоянный эффект: надевший доспех находится под постоянным эффектом "Необнаружение"
+ Приглушение: +12 к навыку "Тихая походка"
+ Бонус к классу защиты (броня) этого доспеха увеличивается на 1 за каждые 10 очков в навыке "Тихая походка" носящего его
+Вес: 15 фунтов~
 
 
 //@10479    = ~Shark Skin Armor~
