@@ -2316,266 +2316,262 @@
  Заклинание: снимает усталость со всего отряда раз в день
  Лёгкость: доспехи весят вчетверо меньше, чем другие подобные доспехи
 Вес: 10 фунтов~
-@10529    = ~Chain of Drakkas~
-@10530    = ~Drakkas Ranul was an outcast Moon Elf with a huge chip on his shoulder. At a very young age, Drakkas was kidnapped by a Drow raiding party and brought up by the Drow to be a pit fighter. At first he fought his fellow kidnap victims in the pits. However, over time, his fellow abductees died from their wounds and poor treatment, thus leaving Drakkas alone to eventually fight monsters of the Drow's choosing. Drakkas persevered, fueled by his ever-growing hatred for his captors, the hopes of one day escaping and then taking revenge on his kidnappers.
+@10529    = ~Кольчуга Драккаса~
+@10530    = ~Драккас Ранул был изгнанным лунным эльфов с трудной судьбой. В ранней молодости он был похищен отрядом дроу и воспитан, как боец ямы. Вначале он сражался в ямах с другими похищенными лунными эльфами - своими товарищами по несчастью. Однако со временем, когда все другие лунные эльфы умерли от ран и плохого лечения, Драккас начал драться с чудовищами, которых против него выставляли дроу. Драккас отчаянно сражался во всех боях, подстёгиваемый ненавистью к своим похитителям и надеждой когда-нибудь сбежать и отомстить.
 
-One day Drakkas got his wish - he was able to escape by stealing his jail cell keys from his lazy night guard, and then stealthfully slipping out into the unforgiving Underdark. He managed to steal a couple of scimitars on his way out, which he put to good use while circumventing the twisted corridors of the Underdark. When he emerged on the surface, he immediately sought out his Moon Elf kin. 
+Однажды, мечта Драккаса сбылась - ему удалось сбежать, похитив ключи у нерадивого ночного охранника, и незаметно выскользнув в Андердарк. По дороге ему удалось прихватить пару скимитаров, которые очень пригодились ему в блужданиях по тёмному лабиринту Андердарка. Добравшись до поверхности, он немедленно отправился на поиски своих сородичей.
 
-Unfortunately, when he found his kin, they ostracized him due to his horrendous battle scars. Embittered and outcast, he made it his mission in life to exact the most painful revenge possible on his kidnappers. Drakkas diligently trained in the dark magics, and continued his formidable weapons training as well. When he got to the point where he felt he was ready, he began to sell his services as a mercenary to earn coin and buy better equipment. One thing in particular he eventually wanted was lightweight chain mail that would not interfere with his spell casting. Luck was with him the day he found a Dwarven armorsmith who could accommodate Drakkas' needs. It was not long after until the armor was finished and Drakkas was ready for his mission of revenge. 
+Увы, когда он нашёл соплеменников, те изгнали Драккаса из-за его ужасных боевых шрамов. Ожесточённый и отвергнутый, он решил положить свою жизнь, на то, чтобы максимально болезненно отомстить своим похитителям. Драккас начал усиленно изучать тёмную магии, продолжая в то же время совершенствовать и свои боевые навыки. Когда он почувствовал, что готов, он начал карьеру наёмника, чтобы заработать золота на самое лучшее снаряжение. В частности, ему хотелось иметь лёгкую кольчугу, которая не мешала бы читать заклинания. В конце концов удача снизошла к нему, и он нашёл дварфа-кузнеца, готового выполнить такой заказ. Вскоре кольчуга была готова, и Драккас решил, что настало время приступить к свершению своей мести.
 
-Drakkas disappeared from the people who knew him and utilized his mercenary services, and ventured into the depths of the Underdark, where he was never heard from again. However, his special armor did somehow make it out of the Underdark. No one knows how, but speculation has it that the return of Drakkas' chain mail to the surface world was a subtle message from the Drow. The message, of course, was left to the imagination of the interpreter. 
+Драккас скрылся ото всех, кто его знал и пользовался его услугами, как наёмника, и отправился в глубины Андердарка, где и пропал без следа. Тем не менее, его чудесная кольчуга каким-то непостижимым образом вернулась из Андердарка на поверхность. Как - никому доподлинно неизвестно, но ходят слухи, что возвращение кольчуги, было ничем иным, как сообщением от дроу. Сообщением, которое каждый может толковать по своему.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-No Armor Proficiency Required
-Armor Bonus: +7
-Max Dex Bonus:  None
-Armor Check Penalty:  -0
-Arcane Spell Failure:  0%
-Special:
-  Spellcasting and Thieving abilities can be performed without penalties from wearing armor.
-  Attack Bonus: +2 bonus
-Weight: 5 lb.~
-@10531    = ~Chain of Drakkas' Fury~
-@10532    = ~Drakkas Ranul was an outcast Moon Elf with a huge chip on his shoulder. At a very young age, Drakkas was kidnapped by a Drow raiding party and brought up by the Drow to be a pit fighter. At first he fought his fellow kidnap victims in the pits. However, over time, his fellow abductees died from their wounds and poor treatment, thus leaving Drakkas alone to eventually fight monsters of the Drow's choosing. Drakkas persevered, fueled by his ever-growing hatred for his captors, the hopes of one day escaping and then taking revenge on his kidnappers.
+Не требует специализации в доспехах
+Класс защиты: +7 (доспех)
+Максимальный бонус ловкости: отсутствует
+Штраф к проверкам за броню: -0
+Шанс провала заклинания: 0%
+Особенности:
+ При чтении заклинаний и применении плутовских навыков персонаж не получает штрафов за ношение доспехов
+ Атака: +2
+Вес: 5 фунтов~
+@10531    = ~Кольчуга ярости Драккаса~
+@10532    = ~Драккас Ранул был изгнанным лунным эльфов с трудной судьбой. В ранней молодости он был похищен отрядом дроу и воспитан, как боец ямы. Вначале он сражался в ямах с другими похищенными лунными эльфами - своими товарищами по несчастью. Однако со временем, когда все другие лунные эльфы умерли от ран и плохого лечения, Драккас начал драться с чудовищами, которых против него выставляли дроу. Драккас отчаянно сражался во всех боях, подстёгиваемый ненавистью к своим похитителям и надеждой когда-нибудь сбежать и отомстить.
 
-One day Drakkas got his wish - he was able to escape by stealing his jail cell keys from his lazy night guard, and then stealthfully slipping out into the unforgiving Underdark. He managed to steal a couple of scimitars on his way out, which he put to good use while circumventing the twisted corridors of the Underdark. When he emerged on the surface, he immediately sought out his Moon Elf kin.
+Однажды, мечта Драккаса сбылась - ему удалось сбежать, похитив ключи у нерадивого ночного охранника, и незаметно выскользнув в Андердарк. По дороге ему удалось прихватить пару скимитаров, которые очень пригодились ему в блужданиях по тёмному лабиринту Андердарка. Добравшись до поверхности, он немедленно отправился на поиски своих сородичей.
 
-Unfortunately, when he found his kin, they ostracized him due to his horrendous battle scars. Embittered and outcast, he made it his mission in life to exact the most painful revenge possible on his kidnappers. Drakkas diligently trained in the dark magics, and continued his formidable weapons training as well. When he got to the point where he felt he was ready, he began to sell his services as a mercenary to earn coin and buy better equipment. One thing in particular he eventually wanted was lightweight chain mail that would not interfere with his spell casting. In addition, he wanted his chain mail to actually enhance his fighting abilities. Luck was with him the day he found a Dwarven armorsmith who could accommodate Drakkas' needs. It was not long after until the armor was finished and Drakkas was ready for his mission of revenge. 
+Увы, когда он нашёл соплеменников, те изгнали Драккаса из-за его ужасных боевых шрамов. Ожесточённый и отвергнутый, он решил положить свою жизнь, на то, чтобы максимально болезненно отомстить своим похитителям. Драккас начал усиленно изучать тёмную магии, продолжая в то же время совершенствовать и свои боевые навыки. Когда он почувствовал, что готов, он начал карьеру наёмника, чтобы заработать золота на самое лучшее снаряжение. В частности, ему хотелось иметь лёгкую кольчугу, которая не мешала бы читать заклинания. Кроме того, он хотел, чтобы эта кольчуга усиливала его боевые способности. В конце концов удача снизошла к нему, и он нашёл дварфа-кузнеца, готового выполнить такой заказ. Вскоре кольчуга была готова, и Драккас решил, что настало время приступить к свершению своей мести.
 
-Drakkas disappeared from the people who knew him and utilized his mercenary services, and ventured into the depths of the Underdark, where he was never heard from again. However, his special armor did somehow make it out of the Underdark. No one knows how, but speculation has it that the return of Drakkas' chain mail to the surface world was a subtle message from the Drow. The message, of course, was left to the imagination of the interpreter. 
+Драккас скрылся ото всех, кто его знал и пользовался его услугами, как наёмника, и отправился в глубины Андердарка, где и пропал без следа. Тем не менее, его чудесная кольчуга каким-то непостижимым образом вернулась из Андердарка на поверхность. Как - никому доподлинно неизвестно, но ходят слухи, что возвращение кольчуги, было ничем иным, как сообщением от дроу. Сообщением, которое каждый может толковать по своему.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-No Armor Proficiency Required
-Armor Bonus: +8
-Max Dex Bonus:  None
-Armor Check Penalty:  -0
-Arcane Spell Failure:  0%
-Special:
-  Spellcasting and Thieving abilities can be performed without penalties from wearing armor.
-  Attack Bonus: +3 bonus
-  Speed: 1 additional attack per combat round
-Weight: 5 lb.~
-@10533    = ~Sanctity~
-@10534    = ~Maya Selvinis was a solitary half-elf ranger who lived on the outskirts of Neverwinter. Feeling different and un-whole due to her breeding, she rarely had any interaction with other people except when she was summoned to aid in a crisis. Although she did not care for the company of others, she was more than eager to aid those in peril. However, after helping others, she would quickly return to her solitary ways, despite the general tolerance exhibited by the locals in Neverwinter.
+Не требует специализации в доспехах
+Класс защиты: +8 (доспех)
+Максимальный бонус ловкости: отсутствует
+Штраф к проверкам за броню: -0
+Шанс провала заклинания: 0%
+Особенности:
+ При чтении заклинаний и применении плутовских навыков персонаж не получает штрафов за ношение доспехов
+ Атака: +3
+ Скорость: 1 дополнительная атака в раунд
+Вес: 5 фунтов~
+@10533    = ~Пристанище~
+@10534    = ~Полуэльфийка Майя Сельвинис была одиноким следопытом и жила на окраине Невервинтера. Чувствую себя из-за своего происхождения не такой, как все, она была нелюдимой, за исключением тех случаев, когда её просили о помощи. Хотя общество других существ ей было совершенно не интересно, она всегда была готова помочь тем, кто попал в беду. Однако, оказав помощь, она снова возвращалась к своей уединённой жизни, несмотря на общую терпимость жителей Невервинтера.
 
-One special event that called for her ranger skills came and changed her life forever. An elderly female cleric of Eilistraee came to Maya and asked her aid in tracking down and destroying a demon that was tormenting her flock. Maya eagerly accepted the quest, put on her splint mail armor, secured her sword, and followed the cleric through the woods. After a day's travel, the cleric stopped at a small clearing between four towering trees. In the middle of the clearing was a small pond of water no wider than a yard. The cleric turned to Maya and said that the demon could be seen in the pond. Doubting, Maya approached the pond and peered in. The only thing Maya saw was her own reflection, and she stated that fact rather tersely to the cleric. The cleric smirked a bit and replied by saying that the demon was her reflection. In fact, the cleric pointed out that the demon was responsible for Maya's solitude and self-pity, and that the only one who was concerned about Maya's mixed breeding was Maya.
+Одно из таких событий кардинально изменило жизнь Майи. К ней пришла пожилая жрица Эйлистраи и попросила выследить и убить демона, истязавшего её отару. Майя с охотой взялась за это задание, надела свои чешуйчатые доспехи, взяла меч и пошла вслед за жрицей в лес. После дневного перехода они остановились на опушке лес с небольшим (шириной не больше ярда) прудиком. Жрица обернулась к Майе и сказала, что в этом самом пруду и можно увидеть демона. Усомнившись, Майя подошла к пруду и вгляделась в воду. Единственное, что она увидела, - это её собственное отражение, о чём она довольно резко и сообщила жрице. Та ухмыльнулась в ответ и сказала, что отражение - и есть демон. По сути, жрица указала Майе, что этот "демон" и ответственен за её одиночество и жалость к себе, и единственный, кого заботит смешанное происхождение Майи, - это она сама.
 
-Maya scoffed at the cleric, told her that she did not know what she was talking about, turned and started to head back in the direction they came. The cleric shouted back, which startled Maya, and declared that she understood more than Maya could ever know. It was at that point that the elderly cleric revealed herself to be Maya's mother. Maya again scoffed, stating that her mother died long ago. The cleric bowed her head and replied that yes, she did die, but that she was granted the grace of Eilistaee to seek out Maya and aid her - aid her in destroying the demon of self-pity and solitude. The cleric then went on to say that Maya would never find sanctuary by alienating herself from the company of others, but that sanctuary comes from within. Once Maya could accept who she was, what she was, and the fact that there were many out in the world like her and who were willing to embrace her, then sanctuary would follow her, always. Then, in a brief flash of light, the cleric was gone, leaving Maya to stew with the wisdom of the old cleric - her mother.
+Майя насмешливо посмотрела на жрицу, сказала ей, что та сама не знает, о чём говорит, развернулась и пошла обратно к дому. Тогда жрица закричала вослед, что понимает Майю больше, чем кто-либо другой. Крик был такой резкий, что Майя даже вздрогнула. Когда Майя обернулась, пожилая женщина сказала, что она её мать. Майя только горько рассмеялась и ответила, что её мать умерла давным-давно. Жрица склонила голову и ответила - да, она умерла, но ей была дарована милость Эйлистраи отыскать Майю и помочь ей, помочь разрушить демона жалости к себе и одиночества. Она добавила, что Майя никогда не найдёт убежища в своём отшельничестве, а только во внутреннем покое. Как только Майя сама примет себя такой, какая она есть, и тот факт, что в мире есть много таких же, как она и готовых принять её, тогда "убежище" всегда будет вместе с ней. После этого жрица исчезла в вспышке света, а Майя всё продолжала стоять, обдумывать её слова.
 
-Maya thought on what her mother said, and soon tried to implement her mother's wisdom. After a few months, Maya found her inner sanctuary, and became more powerful because of it. In fact, that power was also absorbed by her splint mail armor. All those who donned Maya's splint mail felt a peace flow through their being. People found their own personal sanctuary within that armor, which soon became known as Sanctity.
+Майя обдумала мудрые слова матери и решила попытаться воплотить их в жизнь. Через несколько месяцев она действительно приняла себя и, вместе с этим, обрела своё внутренне убежище, что придало ей немало новых сил. Отчасти эти силы впитались и в её доспехи. Все, кто впоследствии надевал доспехи Майи, чувствовали, что находят в них своё внутренние убежище, потому вскоре доспехи стали называться "Пристанищем".
 
+ПАРАМЕТРЫ:
 
-STATISTICS:
+Тяжёлый доспех
+Класс защиты: +7 (доспех)
+Максимальный бонус ловкости: +0
+Штраф к проверкам за броню: -7
+Шанс провала заклинания: 40%
+Особенности:
+ Каждый раз, когда владелец этого доспеха получает удар в ближнем бою, есть шанс (5% * модификатор мудрости владельца), что он окажется под защитой заклинания "Святилище" на следующие 3 раунда
+Вес: 40 фунтов~
+@10535    = ~Святость бытия~
+@10536    = ~Полуэльфийка Майя Сельвинис была одиноким следопытом и жила на окраине Невервинтера. Чувствую себя из-за своего происхождения не такой, как все, она была нелюдимой, за исключением тех случаев, когда её просили о помощи. Хотя общество других существ ей было совершенно не интересно, она всегда была готова помочь тем, кто попал в беду. Однако, оказав помощь, она снова возвращалась к своей уединённой жизни, несмотря на общую терпимость жителей Невервинтера.
 
-Heavy Armor
-Armor Bonus: +7
-Max Dex Bonus:  +0
-Armor Check Penalty:  -7
-Arcane Spell Failure:  40%
-Special:
-  Whenever the wearer is hit in melee, there is a chance (5% * the wearer's Wisdom bonus) that the wearer will be protected by Sanctuary for the next 3 rounds
-Weight: 40 lb.~
-@10535    = ~Sanctity of Being~
-@10536    = ~Maya Selvinis was a solitary half-elf ranger who lived on the outskirts of Neverwinter. Feeling different and un-whole due to her breeding, she rarely had any interaction with other people except when she was summoned to aid in a crisis. Although she did not care for the company of others, she was more than eager to aid those in peril. However, after helping others, she would quickly return to her solitary ways, despite the general tolerance exhibited by the locals in Neverwinter.
+Одно из таких событий кардинально изменило жизнь Майи. К ней пришла пожилая жрица Эйлистраи и попросила выследить и убить демона, истязавшего её отару. Майя с охотой взялась за это задание, надела свои чешуйчатые доспехи, взяла меч и пошла вслед за жрицей в лес. После дневного перехода они остановились на опушке лес с небольшим (шириной не больше ярда) прудиком. Жрица обернулась к Майе и сказала, что в этом самом пруду и можно увидеть демона. Усомнившись, Майя подошла к пруду и вгляделась в воду. Единственное, что она увидела, - это её собственное отражение, о чём она довольно резко и сообщила жрице. Та ухмыльнулась в ответ и сказала, что отражение - и есть демон. По сути, жрица указала Майе, что этот "демон" и ответственен за её одиночество и жалость к себе, и единственный, кого заботит смешанное происхождение Майи, - это она сама.
 
-One special event that called for her ranger skills came and changed her life forever. An elderly female cleric of Eilistraee came to Maya and asked her aid in tracking down and destroying a demon that was tormenting her flock. Maya eagerly accepted the quest, put on her splint mail armor, secured her sword, and followed the cleric through the woods. After a day's travel, the cleric stopped at a small clearing between four towering trees. In the middle of the clearing was a small pond of water no wider than a yard. The cleric turned to Maya and said that the demon could be seen in the pond. Doubting, Maya approached the pond and peered in. The only thing Maya saw was her own reflection, and she stated that fact rather tersely to the cleric. The cleric smirked a bit and replied by saying that the demon was her reflection. In fact, the cleric pointed out that the demon was responsible for Maya's solitude and self-pity, and that the only one who was concerned about Maya's mixed breeding was Maya.
+Майя насмешливо посмотрела на жрицу, сказала ей, что та сама не знает, о чём говорит, развернулась и пошла обратно к дому. Тогда жрица закричала вослед, что понимает Майю больше, чем кто-либо другой. Крик был такой резкий, что Майя даже вздрогнула. Когда Майя обернулась, пожилая женщина сказала, что она её мать. Майя только горько рассмеялась и ответила, что её мать умерла давным-давно. Жрица склонила голову и ответила - да, она умерла, но ей была дарована милость Эйлистраи отыскать Майю и помочь ей, помочь разрушить демона жалости к себе и одиночества. Она добавила, что Майя никогда не найдёт убежища в своём отшельничестве, а только во внутреннем покое. Как только Майя сама примет себя такой, какая она есть, и тот факт, что в мире есть много таких же, как она и готовых принять её, тогда "убежище" всегда будет вместе с ней. После этого жрица исчезла в вспышке света, а Майя всё продолжала стоять, обдумывать её слова.
 
-Maya scoffed at the cleric, told her that she did not know what she was talking about, turned and started to head back in the direction they came. The cleric shouted back, which startled Maya, and declared that she understood more than Maya could ever know. It was at that point that the elderly cleric revealed herself to be Maya's mother. Maya again scoffed, stating that her mother died long ago. The cleric bowed her head and replied that yes, she did die, but that she was granted the grace of Eilistaee to seek out Maya and aid her - aid her in destroying the demon of self-pity and solitude. The cleric then went on to say that Maya would never find sanctuary by alienating herself from the company of others, but that sanctuary comes from within. Once Maya could accept who she was, what she was, and the fact that there were many out in the world like her and who were willing to embrace her, then sanctuary would follow her, always. Then, in a brief flash of light, the cleric was gone, leaving Maya to stew with the wisdom of the old cleric - her mother.
+Майя обдумала мудрые слова матери и решила попытаться воплотить их в жизнь. Через несколько месяцев она действительно приняла себя и, вместе с этим, обрела своё внутренне убежище, что придало ей немало новых сил. Отчасти эти силы впитались и в её доспехи. Все, кто впоследствии надевал доспехи Майи, чувствовали, что находят в них своё внутренние убежище, потому вскоре доспехи стали называться "Святостью бытия".
 
-Maya thought on what her mother said, and soon tried to implement her mother's wisdom. After a few months, Maya found her inner sanctuary, and became more powerful because of it. In fact, that power was also absorbed by her splint mail armor. All those who donned Maya's splint mail felt a peace flow through their being. Each person found their own personal sanctuary within that armor, which soon became known as Sanctity of Being.
+ПАРАМЕТРЫ:
 
+Тяжёлый доспех
+Класс защиты: +10 (доспех)
+Максимальный бонус ловкости: +0
+Штраф к проверкам за броню: -7
+Шанс провала заклинания: 40%
+Особенности:
+ Каждый раз, когда владелец этого доспеха получает удар в ближнем бою, есть шанс (10% * модификатор мудрости владельца), что он окажется под защитой заклинания "Святилище" на следующие 3 раунда
+ Оберёг: дарует иммунитет к заклинаниям "Плащ страха", "Ужас" и "Очаровать персонажа"
+Вес: 40 фунтов~
+@10537    = ~Доспехи Тукака Маулера~
+@10538    = ~Талантливый гном-кузнец по имени Бупи Серебряный Молоток изготовил эти доспехи по заказу варвара-полуорка Тукака Маулера. Выкованные из лучших металлов и зачарованные по секретному рецепту Бупи, новые доспехи Тукака более походили на музейный экспонат, чем на боевое снаряжение. Стальные полосы сияли серебром, а каждая заклёпка сверкала, как огранённый алмаз. Когда Тукак надел доспехи, он сразу же почувствовал себя более энергичным и живым. К несчастью для Тукака, эти новые доспехи также сделали его и более самоуверенным, что и привело его к гибели в одной из последующих битв.
 
-STATISTICS:
+Так что будь осторожен, новый владелец доспехов: даже если в них ты почувствуешь себя способным свернуть горы, не забывайся в пылу боя, если хочешь и дальше продолжать носить эти доспехи... живым.
 
-Heavy Armor
-Armor Bonus: +10
-Max Dex Bonus:  +0
-Armor Check Penalty:  -7
-Arcane Spell Failure:  40%
-Special:
-  Whenever the wearer is hit in melee, there is a chance (10% * the wearer's Wisdom bonus) that the wearer will be protected by Sanctuary for the next 3 rounds
-  Spellward:  Immunity to Cloak of Fear, Horror and Charm Person spells
-Weight: 40 lb.~
-@10537    = ~Armor of Tuqak Mauler~
-@10538    = ~A talented, gnome smith, who went by the name of Boopie Silvermallet, made this armor to the exacting specifications of a half-orc barbarian named Tuqak Mauler. Forged from the finest metals and enchanted with Boopie's secret recipe magics, Tuqak's new armor looked more like a museum showpiece rather than practical combat armor. The steel strips shone with a silver brilliance and each rivet sparkled like fresh cut diamonds. When Tuqak put the armor on, he immediately felt more vigorous and alive. Unfortunately for Tuqak, this new armor also made him overconfident, which summarily caused his demise in a later battle. 
+ПАРАМЕТРЫ:
 
-So, wearer be warned - even though you feel like you can take on the world while wearing Tuqak's armor, you will still have to rely on combat skill to carry you through... alive.
+Тяжёлый доспех
+Класс защиты: +11 (доспех)
+Максимальный бонус ловкости: +2
+Штраф к проверкам за броню: -5
+Шанс провала заклинания: 40%
+Особенности:
+ Класс защиты: -8 (общий)
+ Дополнительные пункты здоровья: +80 к максимуму пунктов здоровья
+Вес: 40 фунтов~
+@10539    = ~Доспехи Тукака Маулера Яростного~
+@10540    = ~Талантливый гном-кузнец по имени Бупи Серебряный Молоток изготовил эти доспехи по заказу варвара-полуорка Тукака Маулера. Выкованные из лучших металлов и зачарованные по секретному рецепту Бупи, новые доспехи Тукака более походили на музейный экспонат, чем на боевое снаряжение. Стальные полосы сияли серебром, а каждая заклёпка сверкала, как огранённый алмаз. Когда Тукак надел доспехи, он сразу же почувствовал себя более энергичным и живым. К несчастью для Тукака, эти новые доспехи также сделали его и более самоуверенным, что и привело его к гибели в одной из последующих битв.
 
-STATISTICS:
+Так что будь осторожен, новый владелец доспехов: даже если в них ты почувствуешь себя способным свернуть горы, не забывайся в пылу боя, если хочешь и дальше продолжать носить эти доспехи... живым.
 
-Medium Armor
-Armor Bonus: +11
-Max Dex Bonus:  +2
-Armor Check Penalty:  -5
-Arcane Spell Failure:  40%
-Special:
-  Generic Armor Penalty: -8
-  Hit Point Bonus:  +80 to Max Hit Points
-Weight: 40 lb.~
-@10539    = ~Armor of Tuqak Mauler the Fierce~
-@10540    = ~A talented, gnome smith, who went by the name of Boopie Silvermallet, made this armor to the exacting specifications of a half-orc barbarian named Tuqak Mauler. Forged from the finest metals and enchanted with Boopie's secret recipe magics, Tuqak's new armor looked more like a museum showpiece rather than practical combat armor. The steel strips shone with a silver brilliance and each rivet sparkled like fresh cut diamonds. When Tuqak put the armor on, he immediately felt more vigorous and alive. Unfortunately for Tuqak, this new armor also made him overconfident, which summarily caused his demise in a later battle.
+ПАРАМЕТРЫ:
 
-So, wearer be warned - even though you feel like you can take on the world while wearing Tuqak's armor, you will still have to rely on combat skill to carry you through... alive.
+Тяжёлый доспех
+Класс защиты: +14 (доспех)
+Максимальный бонус ловкости: +2
+Штраф к проверкам за броню: -5
+Шанс провала заклинания: 40%
+Особенности:
+ Класс защиты: -10 (общий)
+ Дополнительные пункты здоровья: +100 к максимуму пунктов здоровья
+ Носитель находится под постоянным действием заклинания "Ограждение от смерти"
+Вес: 40 фунтов~
+@10541    = ~Ледниковая устойчивость~
+@10542    = ~Киндор Ледовый Молот, был могучим воином дварфов, очень любившим холод Долин. Долина Ледяного Ветра была для него не просто домом, она была была частью его самого, частью его души.
 
-STATISTICS:
+Киндор также слыл талантливым кузнецом и ковал как доспехи, так и оружие. Все его изделия так или иначе были связаны с Долиной Ледяного Ветра. Получилось, что, доспехи, выкованные его руками, жили своей жизнью, и жизнь эта оберегала Киндора. Часто во время битвы его доспехи, казалось, использовали холод Долин и наносили ответный удар нападавшим на Киндора.
 
-Medium Armor
-Armor Bonus: +14
-Max Dex Bonus:  +2
-Armor Check Penalty:  -5
-Arcane Spell Failure:  40%
-Special:
-  Generic Armor Penalty: -10
-  Hit Point Bonus:  +100 to Max Hit Points
-  Wearer is under the effects of the spell Death Ward
-Weight: 40 lb.~
-@10541    = ~Glacial Resilience~
-@10542    = ~Kyndor Icehammer was a mighty Dwarven warrior who loved the cold of the Dales. Not only did Kyndor call Icewind Dale his home, but he also had a special connection to the Dales - it was a part of him - not just a part of his body, but of his very soul. 
+Со временем доспехи Киндора получили название "Ледниковая устойчивость", из-за того, что все, кто носил эти доспехи казались непроницаемыми, как ледник и такими же смертельно холодными.
 
-Kyndor was also a remarkable armor and weaponsmith. Everything he forged had some kind of connection to Icewind Dale. In fact, his very armor, forged by his own hands, seemed to have its own life, and that life was very protective of Kyndor. Often times, during battle, his armor seemed to harness the elements of the Dales and retaliate against Kyndor's attackers. 
+ПАРАМЕТРЫ:
 
-Over time, Kyndor's armor attained the nickname of Glacial Resilience, due to the fact that all who wore the armor seemed as impenetrable as a glacier and just as deadly cold.
+Тяжёлый доспех
+Класс защиты: +9 (доспех)
+Максимальный бонус ловкости: +0
+Штраф к проверкам за броню: -7
+Шанс провала заклинания: 40%
+Особенности:
+ Воздаяние: нападающий получает 1d6 урона холодом при успешном попадании по владельцу Ледниковой устойчивости (только в ближнем бою)
+Вес: 40 фунтов~
+@10543    = ~Ледниковый буран~
+@10544    = ~Киндор Ледовый Молот, был могучим воином дварфов, очень любившим холод Долин. Долина Ледяного Ветра была для него не просто домом, она была была частью его самого, частью его души.
 
-STATISTICS:
+Киндор также слыл талантливым кузнецом и ковал как доспехи, так и оружие. Все его изделия так или иначе были связаны с Долиной Ледяного Ветра. Получилось, что, доспехи, выкованные его руками, жили своей жизнью, и жизнь эта оберегала Киндора. Часто во время битвы его доспехи, казалось, использовали холод Долин и наносили ответный удар нападавшим на Киндора.
 
-Heavy Armor
-Armor Bonus: +9
-Max Dex Bonus:  +0
-Armor Check Penalty:  -7
-Arcane Spell Failure:  40%
-Special:
-  Retribution: Attacker suffers 1d6 cold damage per successful hit on wearer of Glacial Resilience (melee only)
-Weight: 40 lb.~
-@10543    = ~Glacial Storm~
-@10544    = ~Kyndor Icehammer was a mighty Dwarven warrior who loved the cold of the Dales. Not only did Kyndor call Icewind Dale his home, but he also had a special connection to the Dales - it was a part of him - not just a part of his body, but of his very soul. 
+Со временем доспехи Киндора получили название "Ледниковый буран", из-за того, что все, кто носил эти доспехи казались непроницаемыми, как ледник и такими же смертельно холодными.
 
-Kyndor was also a remarkable armor and weaponsmith. Everything he forged had some kind of connection to Icewind Dale. In fact, his very armor, forged by his own hands, seemed to have its own life, and that life was very protective of Kyndor. Often times, during battle, his armor seemed to harness the elements of the Dales and retaliate against Kyndor's attackers. 
+ПАРАМЕТРЫ:
 
-Over time, Kyndor's armor attained the nickname of Glacial Storm, due to the fact that all who wore the armor seemed as impenetrable as a glacier and just as deadly cold.
-
-STATISTICS:
-
-Heavy Armor
-Armor Bonus: +11
-Max Dex Bonus:  +0
-Armor Check Penalty:  -7
-Arcane Spell Failure:  40%
-Special:
-  Retribution: Attacker suffers 2d6 cold damage per successful hit on wearer of Glacial Storm (melee only)
-  Resistance:  15/- Cold Resistance
-Weight: 40 lb.~
+Тяжёлый доспех
+Класс защиты: +11 (доспех)
+Максимальный бонус ловкости: +0
+Штраф к проверкам за броню: -7
+Шанс провала заклинания: 40%
+Особенности:
+ Воздаяние: нападающий получает 2d6 урона холодом при успешном попадании по владельцу "Ледникового бурана" (только в ближнем бою)
+ Сопротивление: 15/- сопротивления холоду
+Вес: 2 фунта~
 
 
 //@10545    = ~Half-plate Armor~
 //@10546    = ~Item description can remain the same; if new description is needed put it here~
 //@10547    = ~Plate Mail +1~
-@10548    = ~This armor is a combination of chainmail with metal plates covering vital areas. Buckles and straps hold the whole suit together and distribute the weight, but the armor still hangs more loosely than full plate. In addition, this suit of half-plate mail is enchanted and gives additional bonuses to the wearer's armor class.
+@10548    = ~Латный доспех представляет собой комбинацию кольчужного доспеха с металлическими пластинами, закрывающими жизненно важные области. Ремни и пряжки скрепляют пластины и распределяют вес, но всё равно доспех получается более свободным и уязвимым, чем полный латный. Этот доспех зачарован и даёт своему владельцу дополнительную защиту.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Heavy Armor
-Armor Bonus: +8
-Max Dex Bonus:  +0
-Armor Check Penalty:  -7
-Arcane Spell Failure:  40%
-Weight: 40 lb.~
-@10549    = ~Mithral Field Plate Armor +3~
-@10550    = ~Field plate is actually a more commonly used form of full plate armor. It consists of shaped and fitted metal plates riveted and interlocked to cover the entire body. This suit is made of mithral and has been magically enhanced for added protection and durability.
+Тяжёлый доспех
+Класс защиты: +8 (доспех)
+Максимальный бонус ловкости: +0
+Штраф к проверкам за броню: -7
+Шанс провала заклинания: 40%
+Вес: 40 фунтов~
+@10549    = ~Мифриловый сплошной латный доспех +3~
+@10550    = ~Сплошной латный доспех, на самом деле, - просто более распространённая разновидность полного латного доспеха. Он состоит из гнутых металлических пластин, подогнанных друг к другу и скреплённых так, чтобы закрывать всё тело. Этот доспех сделан из мифрила, и на него наложены чары, увеличивающие прочность доспеха и его защитные свойства.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Medium Armor
-Armor Bonus: +10
-Max Dex Bonus:  +2
-Armor Check Penalty:  -5
-Arcane Spell Failure:  30%
-Weight: 25 lb.~
+Средняя броня
+Класс защиты: +10 (доспех)
+Максимальный бонус ловкости: +2
+Штраф к проверкам за броню: -5
+Шанс провала заклинания: 30%
+Вес: 25 фунтов~
 //@10551    = ~Full Plate Mail +1~
-@10552    = ~Full plate armor is the best armor a warrior can buy, both in appearance and protection. The perfectly fitted interlocking plates are specially angled to deflect arrows and blows, and the entire suit is carefully adorned with rich engraving and embossed detail. With its magical enchantments, this suit of full plate is ideal for warriors.
+@10552    = ~Полный латный доспех - лучшее из того, что может позволить себе воин, как с точки зрения защиты, так и по внешнему виду. Великолепно подогнанные друг к другу металлические пластины расположены под специальным углом, чтобы лучше отражать стрелы и удары, а весь доспех искусно украшен богатой гравировкой и чеканкой. Чары, наложенные на этот доспех, делают его идеальной защитой для воинов.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Heavy Armor
-Armor Bonus: +9
-Max Dex Bonus:  +1
-Armor Check Penalty:  -6
-Arcane Spell Failure:  35%
-Weight: 45 lb.~
+Тяжёлый доспех
+Класс защиты: +9 (доспех)
+Максимальный бонус ловкости: +1
+Штраф к проверкам за броню: -6
+Шанс провала заклинания: 35%
+Вес: 45 фунтов~
 //@10553    = ~1/4 Weight Half-plate~
-@10554    = ~This half-plate armor is fashioned from strips of cured Boring Beetle Shell. It is extremely lightweight.
+@10554    = ~Этот латный доспех выточен из пластин прочного панциря жука-точильщика. Для нательной брони он поразительно лёгкий.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Heavy Armor
-Armor Bonus: +7
-Max Dex Bonus:  +0
-Armor Check Penalty:  -7
-Arcane Spell Failure:  40%
-Weight: 12 lb.~
+Тяжёлый доспех
+Класс защиты: +7 (доспех)
+Максимальный бонус ловкости: +0
+Штраф к проверкам за броню: -7
+Шанс провала заклинания: 40%
+Вес: 12 фунтов~
 //@10555    = ~1/4 Weight Field Plate~
 //@10556    = ~Item description can remain the same; if new description is needed put it here~
-@10557    = ~1/4 Weight Full Plate~
+@10557    = ~Сверхлёгкий полный латный доспех~
 //@10558    = ~Item description can remain the same; if new description is needed put it here~
-@10559    = ~Duergar-Forged Armor +4~
-@10560    = ~Duergar master artisans forged this armor of dull gray steel. Runes cunningly worked into its surface reflect spells as well as blows, and the armor weighs only half as much as a typical suit of plate mail.
+@10559    = ~Дуэргарские доспехи +4~
+@10560    = ~Этот доспех выкован из серой стали дуэргарскими мастерами. Выгравированные на нём хитроумные руны отражают как заклинания, так и удары. При всём этом, доспех весит вдвое легче, чем обычные латы.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Heavy Armor
-Armor Bonus: +11
-Max Dex Bonus:  +0
-Armor Check Penalty:  -6
-Arcane Spell Failure:  40%
-Special:
-  Resistance: 5/- Magic Damage Resistance
-  Light Weight
-Weight: 20 lb.~
-@10561    = ~Duergar-Forged Armor of Warding +6~
-@10562    = ~Duergar master artisans forged this armor of dull gray steel. Runes cunningly worked into its surface reflect spells as well as blows, and the armor weighs only half as much as a typical suit of plate mail.
+Тяжёлый доспех
+Класс защиты: +11 (доспех)
+Максимальный бонус ловкости: +0
+Штраф к проверкам за броню: -6
+Шанс провала заклинания: 40%
+Особенности:
+ Сопротивление: 5/- сопротивления магическому урону
+ Лёгкость: мало весит
+Вес: 20 фунтов~
+@10561    = ~Дуэргарские доспехи оберега +6~
+@10562    = ~Этот доспех выкован из серой стали дуэргарскими мастерами. Выгравированные на нём хитроумные руны отражают как заклинания, так и удары. При всём этом, доспех весит вдвое легче, чем обычные латы.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Heavy Armor
-Armor  Bonus: +13
-Max Dex Bonus:  +0
-Armor Check Penalty:  -6
-Arcane Spell Failure:  40%
-Special:
-  Resistance: 10/- Magic Damage Resistance
-  Spell Resistance: +5
-  Light Weight
-Weight: 20 lb.~
+Тяжёлый доспех
+Класс защиты: +13 (доспех)
+Максимальный бонус ловкости: +0
+Штраф к проверкам за броню: -6
+Шанс провала заклинания: 40%
+Особенности:
+ Сопротивление: 10/- сопротивления магическому урону
+ Сопротивление магии: +5
+ Лёгкость: мало весит
+Вес: 20 фунтов~
 //@10563    = ~Owl's Feather~
-@10564    = ~Usually plate mail is reserved for those strong enough to wear it. It did not matter that there were many fine warriors in the land who could benefit from the extra protection that plate mail could lend them. Those unfortunate enough to be of the slender side were reserved to use nothing heavier than chain mail. That is until a resourceful young armorsmith happened on an owl's feather enchantment that helped her to create plate mail that weighed half as much as regular plate mail. Needless to say, that particular armorsmith became very popular with the slender warriors of the region.
+@10564    = ~Обычно латные доспехи носят только те, кто достаточно силён для этого. Несмотря на то, что существует множество замечательных воинов, которым могла бы пригодиться защита латных доспехов, раньше, тем кто не вышел телосложением, приходилось довольствоваться разве что кольчугой. Так было до тех пор, пока один талантливый юный кузнец не открыл чары совиных перьев, которые помогли ему ковать латные доспехи вдвое легче обычных. Нет нужды говорить, что этот кузнец стал быстро популярен среди худощавых воинов всего региона.
 
+ПАРАМЕТРЫ:
 
-STATISTICS:
+Тяжёлый доспех
+Класс защиты: +8 (доспех)
+Максимальный бонус ловкости: +1
+Штраф к проверкам за броню: -5
+Шанс провала заклинания: 35%
+Особенности:
+ Лёгкость: весит вдвое меньше обычных лат
+Вес: 25 фунтов~
+@10565    = ~Ястребиное перо~
+@10566    = ~Обычно латные доспехи носят только те, кто достаточно силён для этого. Несмотря на то, что существует множество замечательных воинов, которым могла бы пригодиться защита латных доспехов, раньше, тем кто не вышел телосложением, приходилось довольствоваться разве что кольчугой. Так было до тех пор, пока один талантливый юный кузнец не открыл чары ястребиных перьев, которые помогли ему ковать латные доспехи гораздо легче обычных. Нет нужды говорить, что этот кузнец стал быстро популярен среди худощавых воинов всего региона.
 
-Heavy Armor
-Armor Bonus: +8
-Max Dex Bonus:  +1
-Armor Check Penalty:  -5
-Arcane Spell Failure:  35%
-Special:
-  Lightweight: Armor is half normal weight of half-plate mail.
-Weight: 25 lb.~
-@10565    = ~Hawk's Feather~
-@10566    = ~Usually plate mail is reserved for those strong enough to wear it. It does not matter that there were many fine warriors in the land who could benefit from the extra protection that plate mail could lend them. Those unfortunate enough to be of the slender (and weaker) side were reserved to use nothing heavier than chain mail. That is until a resourceful young armorsmith happened on a hawk's feather enchantment that helped her to create plate mail that weighed half as much as regular plate mail. Needless to say, that particular armorsmith became very popular with the slender warriors of the region.
+ПАРАМЕТРЫ:
 
-
-STATISTICS:
-
-Heavy Armor
-Armor Bonus: +10
-Max Dex Bonus:  +1
-Armor Check Penalty:  -5
-Arcane Spell Failure:  35%
-Special:
-  Lightweight: Armor is one fifth normal weight of half-plate mail
-  Strength: +5 
-Weight: 10 lb.~
+Тяжёлый доспех
+Класс защиты: +10 (доспех)
+Максимальный бонус ловкости: +1
+Штраф к проверкам за броню: -5
+Шанс провала заклинания: 35%
+Особенности:
+ Лёгкость: весит в пять раз меньше обычных лат
+ Сила: +5
+Вес: 10 фунтов~
 @10567    = ~Armor of the Clerics of Myrkul~
 @10568    = ~Clerics of Myrkul center their whole existence on endeavors that aid the dead and dying. They make it their responsibility to organize funerals, burials, settling the dead's unfinished affairs and enacting wills.
 
