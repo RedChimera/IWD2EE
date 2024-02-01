@@ -2281,41 +2281,41 @@
  Заклинание: позволяет владельцу раз в день прочитать комбинацию заклинаний "Ярость зверя" и "Кровавая ярость"
  Находясь под действием "Ярости варвара", "Ярости зверя" или "Кровавой ярости", носитель этого доспеха получает 5/- сопротивления всем повреждениям.
 Вес: 25 фунтов~
-@10525    = ~Mercenary's Lot~
-@10526    = ~The mercenary's lot has been a difficult one in the lands of Icewind Dale, for there is little to occupy one's fighting skills in the far north... at least until recently. This armor was worn by a mercenary company called the Silver Band who was driven from the north after a heated debate at the Ten-Towns council (a debate that barred further mercenary service from most of the Ten-Towns for a period not exceeding three seasons). According to the debate, the mercenaries were not seen as effective combatants, and certainly not worth the gold they were paid for their meager weapon skills.
+@10525    = ~Жребий наёмника~
+@10526    = ~Наёмникам в Долине Ледяного Ветра приходится туго, поскольку на дальнем севере не так уж много возможностей применить свои воинские умения... по крайней мере, так было до недавнего времени. Эти же доспехи принадлежали отряду наёмников, называвших себя Серебряной Бандой. После жарких дебатов в совете Десяти Городов их изгнали с северных земель (в ходе дебатов был принят закон о прекращении использования услуг наёмников на территории большей части Десяти Городов после трёх сезонов). Согласно постановлению совета наёмники были сочтены неэффективной боевой силой, не стоящей того золота, что платилось им за "скромные боевые навыки".
 
-In order to pay for their passage back south, the Silver Band was forced to sell several suits of their armor in order to transport their mounts and siege engines, and the Band swore they would never return to the North, even if the region perished under an avalanche of goblins and other freakish monsters. Apparently, their ability to predict the future was not listed in their company annals. 
+При отбытии на юг Серебряной Банде пришлось продать несколько комплектов таких доспехов, чтобы оплатить перевозку лошадей и осадных орудий. Наёмники поклялись, что больше никогда не вернутся на Север, даже если эти земли будут гибнуть под натиском гоблинов и других диких монстров. Очевидно, их способность предсказывать будущее не сохранилась в анналах истории.
 
-This armor is valued in the far north due to its ability to protect the wielder from the elements as well as being light enough to allow for greater freedom of movement. 
+Эти доспехи ценятся на дальнем севере за способность защищать владельца от стихий, а также за небольшой вес, обеспечивающий свободу движений.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Medium Armor
-Armor Bonus: +7
-Max Dex Bonus:  +2
-Armor Check Penalty:  -5
-Arcane Spell Failure:  30%
-Special:
-  Light Weight: Armor weighs half as much as ordinary chainmail
-  Resistance: 10/- Cold Resistance
-Weight: 20 lb.~
-@10527    = ~Mercenary's End~
-@10528    = ~This armor was worn by the commander of a mercenary company called the Silver Band who was driven from the Ten-Towns after a fierce debate on the merits of their weapon skills (and the amount of gold that would change hands in order to see these weapon skills in combat). The commander apparently was killed in a drunken brawl by a warrior with a bizarre title before the rest of his band fled south, and this armor was taken by the local authorities in Bryn Shander. It was since released and has passed through the hands of several merchants in the far north. 
+Средняя броня
+Класс защиты: +7 (доспех)
+Максимальный бонус ловкости: +2
+Штраф к проверкам за броню: -5
+Шанс провала заклинания: 30%
+Особенности:
+ Лёгкость: доспех весит вдвое меньше, чем обычная кольчуга
+ Сопротивление: 10/- сопротивления холоду
+Вес: 20 фунтов~
+@10527    = ~Конец наёмника~
+@10528    = ~Этот доспех носил командир отряда наёмников, известного как Серебряная Банда. Отряд был вынужден уйти из Десяти Городов после ожесточённых дебатов о мастерстве наёмников во владении оружием (и о количестве золота, которое нужно было потратить, чтобы увидеть это мастерство в бою). Судя по всему, командир был убит в пьяной драке воином со странным титулом ещё до того, как вся банда ушла на юг. Эти доспехи были изъяты местными властями в Брин Шандере. С тех пор они прошли через руки нескольких северных купцов.
 
-This armor is valued in the far north due to its ability to protect the wielder from the elements as well as being light enough to allow for greater freedom of movement. Furthermore, the wearer of this armor never tires or becomes exhausted, and he can dispel exhaustion from his entire party once per day.
+Такие доспехи ценятся на дальнем севере за способность защищать владельца от стихий, а также за малый вес, обеспечивающий свободу движений. Кроме того, владелец этих доспехов никогда не устаёт и может снимать усталость со всего своего отряда раз в день.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Medium Armor
-Armor Bonus: +10
-Max Dex Bonus:  +2
-Armor Check Penalty:  -5
-Arcane Spell Failure:  30%
-Special:
-  Resistance: 20/- Cold Resistance
-  Light Weight: Armor weighs 1/4th its normal weight
-  Spell Power: Dispel party fatigue 1/day
-Weight: 10 lb.~
+Средняя броня
+Класс защиты: +10 (доспех)
+Максимальный бонус ловкости: +2
+Штраф к проверкам за броню: -5
+Шанс провала заклинания: 30%
+Особенности:
+ Сопротивление: 20/- сопротивления холоду
+ Заклинание: снимает усталость со всего отряда раз в день
+ Лёгкость: доспехи весят вчетверо меньше, чем другие подобные доспехи
+Вес: 10 фунтов~
 @10529    = ~Chain of Drakkas~
 @10530    = ~Drakkas Ranul was an outcast Moon Elf with a huge chip on his shoulder. At a very young age, Drakkas was kidnapped by a Drow raiding party and brought up by the Drow to be a pit fighter. At first he fought his fellow kidnap victims in the pits. However, over time, his fellow abductees died from their wounds and poor treatment, thus leaving Drakkas alone to eventually fight monsters of the Drow's choosing. Drakkas persevered, fueled by his ever-growing hatred for his captors, the hopes of one day escaping and then taking revenge on his kidnappers.
 
