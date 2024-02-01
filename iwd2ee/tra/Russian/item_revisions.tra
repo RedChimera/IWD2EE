@@ -2018,265 +2018,269 @@
 
 
 //@10479    = ~Shark Skin Armor~
-@10480    = ~Shark skin armor is used almost exclusively by sahuagin. It is the equivalent of leather armor in protection. However, it also adds a bonus of 2/- to fire and acid resistances.
+@10480    = ~Броню из акульей шкуры изготавливают и носят большей частью сахуагины. Защищает она так же, как простой кожаный доспех, но даёт 2/- сопротивления огненному и кислотному урону.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Light Armor
-Armor Bonus: +2
-Max Dex Bonus:  +6
-Armor Check Penalty:  -0
-Arcane Spell Failure:  10%
-Special:
-  Resistance: 2/- Fire Resistance
-  Resistance: 2/- Acid Resistance
-Weight: 20 lb.~
+Лёгкая броня
+Класс защиты: +2 (доспех)
+Максимальный бонус ловкости: +6
+Штраф к проверкам за броню: -0
+Шанс провала заклинания: 10%
+Особенности:
+ Сопротивление: 2/- сопротивления огню
+ Сопротивление: 2/- сопротивления кислоте
+Вес: 20 фунтов~
 //@10481    = ~Shark Skin and Coral Armor~
-@10482    = ~Shark skin and coral armor is used almost exclusively by sahuagin. It is constructed of shark skin with hard coral studs in strategic places. It is the equivalent of studded leather armor in protection. However, it also adds a bonus of 3/- to fire and acid resistances.
+@10482    = ~Броню из акульей шкуры и кораллов изготавливают и носят большей частью сахуагины. Она сшита из кожи акулы, а наиболее уязвимые места на теле дополнительно закрывают твёрдые коралловые вставки. Защищает она так же, как простой доспех из клёпаной кожи, но даёт 3/- сопротивления огненному и кислотному урону.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Light Armor
-Armor Bonus: +3
-Max Dex Bonus:  +5
-Armor Check Penalty:  -1
-Arcane Spell Failure:  15%
-Special:
-  Resistance: 3/- Fire Resistance
-  Resistance: 3/- Acid Resistance
-Weight: 25 lb.~
+Лёгкая броня
+Класс защиты: +3 (доспех)
+Максимальный бонус ловкости: +5
+Штраф к проверкам за броню: -1
+Шанс провала заклинания: 15%
+Особенности:
+ Сопротивление: 3/- сопротивления огню
+ Сопротивление: 3/- сопротивления кислоте
+Вес: 25 фунтов~
 //@10483    = ~Coral Plate Armor~
-@10484    = ~Coral plate armor is used almost exclusively by sahuagin. It is constructed of shark skin with hard coral plates at the shoulders, chest, and wrist. It is the equivalent of plate mail armor in protection. However, it also adds a bonus of 5/- to acid and fire resistances.
+@10484    = ~Коралловый латный доспех изготавливают и носят большей частью сахуагины. Он сделан из акульей кожи с твёрдыми коралловыми пластинами на плечах, груди и запястьях. Защищает она так же, как простой пластинчатый доспех, но даёт 3/- сопротивления огненному и кислотному урону.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Medium Armor
-Armor Bonus: +7
-Max Dex Bonus:  +0
-Armor Check Penalty:  -7
-Arcane Spell Failure:  40%
-Special:
-  Resistance: 5/- Fire Resistance
-  Resistance: 5/- Acid Resistance
-Weight: 50 lb.~
+Средняя броня
+Класс защиты: +7 (доспех)
+Максимальный бонус ловкости: +0
+Штраф к проверкам за броню: -7
+Шанс провала заклинания: 40%
+Особенности:
+ Сопротивление: 5/- сопротивления огню
+ Сопротивление: 5/- сопротивления кислоте
+Вес: 50 фунтов~
 //@10485    = ~Umber Hulk Plate~
-@10486    = ~The hard plates that protect umber hulks are reasonably easy to craft into humanoid armor. This dark suit of armor was fashioned into full plate by duergar smiths. The dark dwarves, skilled in handling umber hulk exoskeletons, cured and reinforced the armor.
+@10486    = ~Из тяжёлых пластин, защищающих бурых увальней, нетрудно изготовить броню для человекообразного существа. Этот тёмный латный доспех создали дуэргары, мастера работы с экзоскелетами. Они также сделали его более прочным.
 
-Heavy Armor
-Armor Bonus: +9
-Armor Bonus: +3 vs. slashing
-Max Dex Bonus:  +1
-Armor Check Penalty:  -6
-Arcane Spell Failure:  35%
-Special:
-  Umber Hulk Protection: Immune to umber hulk gaze and other forms of confusion
-Weight: 40 lb.~
-@10487    = ~Elder Umber Hulk Plate~
-@10488    = ~The hard plates that protect elder umber hulks are reasonably easy to craft into humanoid armor. This dark suit of armor was fashioned into full plate by duergar smiths. The dark dwarves, skilled in handling elder umber hulk exoskeletons, cured and reinforced the armor.
+ПАРАМЕТРЫ:
 
-Heavy Armor
-Armor Bonus: +11
-Armor Bonus: +5 vs. slashing
-Max Dex Bonus:  +1
-Armor Check Penalty:  -6
-Arcane Spell Failure:  35%
-Special:
-  Umber Hulk Protection: Immune to umber hulk gaze and other forms of confusion
-Weight: 30 lb.~
+Тяжёлая броня
+Класс защиты: +9 (доспех)
+Класс защиты: +3 (доспех) дополнительно против рубящих атак
+Максимальный бонус ловкости: +1
+Штраф к проверкам за броню: -6
+Шанс провала заклинания: 35%
+Особенности:
+ Защита бурого увальня: Невосприимчивость к атаке взглядом бурого увальня и других формам замешательства
+Вес: 40 фунтов~
+@10487    = ~Доспех из старшего бурого увальня~
+@10488    = ~Из тяжёлых пластин, защищающих старших бурых увальней, нетрудно изготовить броню для человекообразного существа. Этот тёмный латный доспех создали дуэргары, мастера работы с экзоскелетами. Они также сделали его более прочным.
+
+ПАРАМЕТРЫ:
+
+Тяжёлая броня
+Класс защиты: +11 (доспех)
+Класс защиты: +5 (доспех) дополнительно против рубящих атак
+Максимальный бонус ловкости: +1
+Штраф к проверкам за броню: -6
+Шанс провала заклинания: 35%
+Особенности:
+ Защита бурого увальня: Невосприимчивость к атаке взглядом бурого увальня и других формам замешательства
+Вес: 30 фунтов~
 //@10489    = ~Black Dragon Scale~
-@10490    = ~This armor was crafted by the dwarven smiths and priests of Clan Battlehammer when one of their own, Bruenhal, led a band of heroes in the defeat of a black dragon far to the south. Some dwarves turn up their noses at the thought of wearing armor made from the remains of a dragon, but Bruenhal proudly wore the armor until the end of his days.
+@10490    = ~Доспех изготовили дварфы-жрецы и кузнецы клана Боевого Молота, когда Бруэнхал из этого клана повёл группу героев на юг биться с чёрным драконом и вышел из схватки победителем. Пусть некоторые дварфы воротили носы от доспехов, сделанных из драконьих останков, Бруэнхал гордо носил эту броню до конца своих дней.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Light Armor
-Armor Bonus: +6
-Max Dex Bonus:  +6
-Armor Check Penalty:  -0
-Arcane Spell Failure:  10%
-Resistance:
-  20/-  Acid Resistance
-Weight: 10 lb.~
+Лёгкая броня
+Класс защиты: +6 (доспех)
+Максимальный бонус ловкости: +6
+Штраф к проверкам за броню: -0
+Шанс провала заклинания: 10%
+Сопротивление:
+  20/- Сопротивление кислоте
+Вес: 10 фунтов~
 //@10491    = ~Hide Armor~
-@10492    = ~Hide armor is made from multiple layers of leather armor. Though stiff and hard to move in, it is relatively simple to make and provides a good barrier against cold weather. It is most commonly seen on the warriors and huntsmen of northern barbarian tribes.
+@10492    = ~Доспех из шкуры делается из нескольких слоёв шкур животных. Хотя он жёсток и в нём не очень удобно двигаться, доспех прост в изготовлении и хорошо защищает от холода. Чаще всего его можно увидеть на воинах и охотниках северных варварских племён.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Medium Armor
-Armor Bonus: +4
-Max Dex Bonus:  +4
-Armor Check Penalty:  -3
-Arcane Spell Failure:  20%
-Weight: 25 lb.~
-@10493    = ~Wandering Hunter's Armor +1~
-@10494    = ~Armor like this is painstakingly crafted for the use of the Wandering Village's best young hunters. It is lined with fur of the great white wolves of Fell Wood, and enchanted to resist winter's cold.
+Средняя броня
+Класс защиты: +4 (доспех)
+Максимальный бонус ловкости: +4
+Штраф к проверкам за броню: -3
+Шанс провала заклинания: 20%
+Вес: 25 фунтов~
+@10493    = ~Доспех бродячего охотника +1~
+@10494    = ~Этот доспех изготовлен специально для лучших молодых охотников Блуждающей Деревни. Он обшит шкурами огромных белых волков из Лютого Леса и зачарован для сопротивления зимним морозам.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Medium Armor
-Armor Bonus: +4
-Max Dex Bonus:  +4
-Armor Check Penalty:  -3
-Arcane Spell Failure:  20%
-Special:
-  Resistance: 10/- Cold Resistance
-Weight: 20 lb.~
-@10495    = ~Wandering Hunter's Armor +4~ //HoF
-@10496    = ~Armor like this is painstakingly crafted for the use of the Wandering Village's best young hunters. It is lined with fur of the great white wolves of Fell Wood, and enchanted to resist winter's cold.
+Средняя броня
+Класс защиты: +4 (доспех)
+Максимальный бонус ловкости: +4
+Штраф к проверкам за броню: -3
+Шанс провала заклинания: 20%
+Особенности:
+ Сопротивление: 10/- сопротивления холоду
+Вес: 20 фунтов~
+@10495    = ~Доспех бродячего охотника +4~ //HoF
+@10496    = ~Этот доспех изготовлен специально для лучших молодых охотников Блуждающей Деревни. Он обшит шкурами огромных белых волков из Лютого Леса и зачарован для сопротивления зимним морозам.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Medium Armor
-Armor Bonus: +7
-Max Dex Bonus:  +4
-Armor Check Penalty:  -3
-Arcane Spell Failure:  20%
-Special:
-  Resistance: 20/- Cold Resistance
-Weight: 15 lb.~
+Средняя броня
+Класс защиты: +7 (доспех)
+Максимальный бонус ловкости: +4
+Штраф к проверкам за броню: -3
+Шанс провала заклинания: 20%
+Особенности:
+ Сопротивление: 20/- сопротивления холоду
+Вес: 15 фунтов~
 //@10497    = ~Abishai Hide Armor~
-@10498    = ~There is great mystery surrounding this leather armor. No one knows how or where it came into existence. What is known is that the leather was cut from the hide of an abishai, although it is impossible to tell what color abishai since the armor is colored a deep black. In addition, it has an unusual, very light, vinegary smell.
+@10498    = ~Этот кожаный доспех окутан завесой тайны - никто не ведает, как и откуда он появился. Известно лишь то, что он сделан из шкуры абишая, но невозможно определить, какого цвета был этот абишай, поскольку доспех выкрашен в глубокий чёрный цвет. Кроме того, этот доспех имеет необычный, очень лёгкий, уксусный запах.
 
-Those that have worn the Abishai Hide were bestowed with a slight invulnerability to most weapons.
+Надевая доспех из шкуры абишая, носитель обретает небольшую защиту от большинства типов оружия.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Medium Armor
-Armor Bonus: +4
-Max Dex Bonus:  +4
-Armor Check Penalty:  -3
-Arcane Spell Failure:  20%
-Special:
-  Damage Reduction: 5/good or silver
-Weight: 15 lb.~
-@10499    = ~Cornugon Hide Armor +3~
-@10500    = ~There is great mystery surrounding this leather armor. No one knows how or where it came into existence. What is known is that the leather was cut from the hide of a Cornugon. The armor is colored a deep black and riddled with very tough, barbed scales. In addition, it has an unusual, very light, vinegary smell.
+Средняя броня
+Класс защиты: +4 (доспех)
+Максимальный бонус ловкости: +4
+Штраф к проверкам за броню: -3
+Шанс провала заклинания: 20%
+Особенности:
+ Снижение урона: 5/- снижения урона против доброго и серебряного оружия
+Вес: 15 фунтов~
+@10499    = ~Доспех из шкуры корнугона +3~
+@10500    = ~Этот кожаный доспех окутан завесой тайны - никто не ведает, как и откуда он появился. Известно лишь то, что он сделан из шкуры корнугона. Доспех покрашен в чёрный цвет и усеян прочной, жёсткой и острой чешуёй и имеет необычный, очень лёгкий, уксусный запах.
 
-Those that have worn the Cornugon Hide were bestowed with a rather high invulnerability to most weapons and the ability to slowly regenerate from injuries.
+Тот, кто носит доспех из шкуры корнугона, приобретает повышенное сопротивление к большинству видов оружия и медленно регенерирует здоровье.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Medium Armor
-Armor Bonus: +7
-Max Dex Bonus:  +4
-Armor Check Penalty:  -3
-Arcane Spell Failure:  20%
-Special:
-  Damage Reduction: 10/good or silver
-  Regeneration: User regenerates 1 hit point per round
-Weight: 15 lb.~
+Средняя броня
+Класс защиты: +7 (доспех)
+Максимальный бонус ловкости: +4
+Штраф к проверкам за броню: -3
+Шанс провала заклинания: 20%
+Особенности:
+ Снижение урона: 10/- снижения урона против доброго и серебряного оружия
+ Регенерация: владелец восстанавливает 1 пункт здоровья каждый раунд
+Вес: 15 фунтов~
 
 
 //@10501    = ~Chainmail Armor~
 //@10502    = ~Item description can remain the same; if new description is needed put it here~
 //@10503    = ~Chainmail +1~
-@10504    = ~Chain mail is made of interlocking metal rings. It is always worn over a layer of padded fabric or soft leather to prevent chafing and lessen the impact of blows. A faint blue glow can be seen emanating from the armor.
+@10504    = ~Кольчугу изготавливают из сплетённых друг с другом металлических колец. Её всегда носят поверх подкладки из ткани или мягкой кожи, чтобы предотвратить натирание и смягчить наносимые удары. Этот доспех излучает слабый синий свет.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Medium Armor
-Armor Bonus: +6
-Max Dex Bonus:  +2
-Armor Check Penalty:  -5
-Arcane Spell Failure:  30%
-Weight: 35 lb.~
+Средняя броня
+Класс защиты: +6 (доспех)
+Максимальный бонус ловкости: +2
+Штраф к проверкам за броню: -5
+Шанс провала заклинания: 30%
+Вес: 35 фунтов~
 //@10505    = ~Chainmail +2~
-@10506    = ~Chain mail is made of interlocking metal rings. It is always worn over a layer of padded fabric or soft leather to prevent chafing and lessen the impact of blows. A faint blue glow can be seen emanating from the armor. 
+@10506    = ~Кольчугу изготавливают из сплетённых друг с другом металлических колец. Её всегда носят поверх подкладки из ткани или мягкой кожи, чтобы предотвратить натирание и смягчить наносимые удары. Этот доспех излучает слабый синий свет.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Medium Armor
-Armor Bonus: +7
-Max Dex Bonus:  +2
-Armor Check Penalty:  -5
-Arcane Spell Failure:  30%
-Weight: 35 lb.~
+Средняя броня
+Класс защиты: +7 (доспех)
+Максимальный бонус ловкости: +2
+Штраф к проверкам за броню: -5
+Шанс провала заклинания: 30%
+Вес: 35 фунтов~
 //@10507    = ~Splint Mail~
 //@10508    = ~Item description can remain the same; if new description is needed put it here~
 //@10509    = ~Splint Mail +1~
 //@10510    = ~Item description can remain the same; if new description is needed put it here~
-@10511    = ~Baleful Mail +2~
-@10512    = ~This armor was crafted in 1221 DR by a duergar smith working for a vengeful priest of Bane named Alerri of West Waterdeep. During Alerri's early days in the priesthood, he frequently provoked and attacked agents of Sune. Unfortunately for Alerri, Lady Firehair's followers employed charm magic to cease the Banite's antics. Once he had been charmed, Alerri was commanded to perform all sorts of embarrassing actions in the streets of Waterdeep. After many years, Alerri decided to honor his god of hate by creating a suit of armor that would protect him from charm magic. He communed with the spiritual minions of Bane to discover the materials and rituals necessary for the suit's creation. Following his master's instructions, he murdered thirteen married couples and had their wedding rings woven into the hem of the mail. He then killed thirteen elves and bathed in their blood, uttering prayers for thirteen hours. When he was finished, his armor protected him from the magic of the Sunites and filled him with irrepressible hate. Alerri went on a crusade against the agents of Sune, Llira, and Hanali Celanil for three years. His killing spree ended when elven archers and priests of Corellon Larethian laid a trap for him on a road going north from Waterdeep.
+@10511    = ~Кольчуга бедствий +2~
+@10512    = ~Этот доспех изготовил в 1221 ЛД один мастер-дуэргар, работавший на жреца Бейна по имени Алерри из Западного Вотердипа. Когда жреческая карьера Алерри только начиналась, он нередко провоцировал служителей Суны и бился с ними. К сожалению для него, последователи Огневолосой Госпожи смогли усмирить наглого бейнита с помощью магии. Зачаровав Алерри, они заставили его сделать на улицах Вотердипа немало постыдных вещей. Много лет спустя Алерри решил почтить своего бога ненависти и создать доспех, который защитит его от магии очарования. Призрачные помощники Бейна рассказали ему, какие материалы и ритуалы нужны для такого доспеха. Следуя указаниям своего покровителя, он убил тринадцать семейных пар, а их обручальные кольца вплёл в кольчугу. Затем он убил тринадцать эльфов и выкупался в их крови, вознося молитвы в течение тринадцати часов. Когда всё было завершено, его доспех получил способность защищать его от магии очарования и наполнил Алерри жгучей ненавистью. Три года он безжалостно истреблял служителей Суны, Ллиры и Ханали Селанил. Конец убийствам был положен засадой эльфийских лучников и жрецов Кореллона Ларетиана на пути к северу от Вотердипа.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Medium Armor
-Armor Bonus: +7
-Max Dex Bonus:  +2
-Armor Check Penalty:  -5
-Arcane Spell Failure:  30%
-Special: 
-  Immune to Dire Charm, Charm Person, Confusion, Command, Rigid Thinking, Hold Person, and Greater Command
-   -2 Charisma while worn
-Weight: 40 lb.~
+Средний доспех
+Класс защиты: +7 (доспех)
+Максимальный бонус ловкости: +2
+Штраф к проверкам за броню: -5
+Шанс провала заклинания: 30%
+Особенности:
+ Оберёг: дарует иммунитет к заклинаниям "Дикое очарование", "Очаровать персонажа", "Замешательство", "Повеление", "Застывшее мышление", "Удержание персонажа" и "Великое повеление"
+ Харизма: -2
+Вес: 40 фунтов~
 //@10513    = ~Baleful Mail +4~ //HoF
 //@10514    = ~If we decide to make a HoF version of this item, we should put its description here~
-@10515    = ~Elven Chainmail +1~
-@10516    = ~Woven by the finest of elven craftsmen, this mail feels more akin to cloth than to metal. The armor may be worn by thieves and arcane spellcasters with no penalties.
+@10515    = ~Эльфийская кольчуга +1~
+@10516    = ~Сплетённая искуснейшими эльфийскими мастерами, эта кольчуга как будто сделана из ткани, а не из металла. Её могут носить воры и маги без штрафов.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-No Armor Proficiency Required
-Armor Bonus: +6
-Max Dex Bonus:  None
-Armor Check Penalty:  -0
-Arcane Spell Failure:  0%
-Special:
-  Spellcasting and Thieving abilities can be performed without penalties from wearing armor.
-Weight: 5 lb.~
-@10517    = ~Mail of Life +3~
-@10518    = ~This armor was crafted from meteoric iron by dwarven and elven smiths during the Time of Cooperation. A high priest of Moradin and a high priest of Labelas Enoreth enchanted the armor with its powers. Unfortunately, no elven or dwarven warrior ever wore the chain mail. When troubles arose between the Hand of the Seldarine and Dorn's Deep, the dwarves locked the armor in a vault, refusing to use anything the elves had a hand in creating.
+Не требует специализации в доспехах
+Класс защиты: +6 (доспех)
+Максимальный бонус ловкости: отсутствует
+Штраф к проверкам за броню: -0
+Шанс провала заклинания: 0%
+Особенности:
+ При чтении заклинаний и применении плутовских навыков персонаж не получает штрафов за ношение доспехов.
+Вес: 5 фунтов~
+@10517    = ~Кольчуга жизни +3~
+@10518    = ~Этот доспех из метеоритного железа изготовили кузнецы-эльфы и дварфы во Времена Сотрудничества. Зачаровали его верховный жрец Морадина и верховный жрец Лабеласа Энорета. К сожалению, эту кольчугу ни разу не надел воин - ни дварф, ни эльф. Когда разгорелся конфликт между Рукой Селдарин и пещерами Дорна, дварфы заперли доспех в сокровищнице, отказавшись пользоваться тем, к чему приложили руку эльфы.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Medium Armor
-Armor Bonus: +8
-Max Dex Bonus:  +2
-Armor Check Penalty:  -5
-Arcane Spell Failure:  30%
-Special:
-  Regeneration: Every round, the wearer regains a number of Hit Points equal to their Constitution bonus
-Weight: 15 lb.~
-@10519    = ~Mail of Life +5~ //HoF
-@10520    = ~This armor was crafted from meteoric iron by dwarven and elven smiths during the Time of Cooperation. A high priest of Moradin and a high priest of Labelas Enoreth enchanted the armor with its powers. Unfortunately, no elven or dwarven warrior ever wore the chain mail. When troubles arose between the Hand of the Seldarine and Dorn's Deep, the dwarves locked the armor in a vault, refusing to use anything the elves had a hand in creating.
+Средняя броня
+Класс защиты: +8 (доспех)
+Максимальный бонус ловкости: +2
+Штраф к проверкам за броню: -5
+Шанс провала заклинания: 30%
+Особенности:
+ Регенерация: каждый раунд носящий восстанавливает количество пунктов здоровья, равное его модификатору конституции
+Вес: 15 фунтов~
+@10519    = ~Кольчуга жизни +5~ //HoF
+@10520    = ~Этот доспех из метеоритного железа изготовили кузнецы-эльфы и дварфы во Времена Сотрудничества. Зачаровали его верховный жрец Морадина и верховный жрец Лабеласа Энорета. К сожалению, эту кольчугу ни разу не надел воин - ни дварф, ни эльф. Когда разгорелся конфликт между Рукой Селдарин и пещерами Дорна, дварфы заперли доспех в сокровищнице, отказавшись пользоваться тем, к чему приложили руку эльфы.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Medium Armor
-Armor Bonus: +10
-Max Dex Bonus:  +2
-Armor Check Penalty:  -5
-Arcane Spell Failure:  30%
-Special:
-  Regeneration: Every round, the wearer regains a number of Hit Points equal to their Constitution bonus
-Weight: 10 lb.~
-@10521    = ~Ogien's Scale +3~
-@10522    = ~The great barbarian hero Ogien wore this armor during his many legendary conquests. Ogien was said to be a bear of a man, taller than his fellow barbarians and a good deal wider. It is said by some of the barbarians that Ogien would wrestle with wolves for amusement, and it is known that he was haunted by a prophecy that he would die "under white paws."  When he was killed fighting polar bears on the tundra of Icewind Dale, his armor was buried with him. Despite its power, it is not distinctive in its appearance.
+Средняя броня
+Класс защиты: +10 (доспех)
+Максимальный бонус ловкости: +2
+Штраф к проверкам за броню: -5
+Шанс провала заклинания: 30%
+Особенности:
+ Регенерация: каждый раунд носящий восстанавливает количество пунктов здоровья, равное его модификатору конституции
+Вес: 10 фунтов~
+@10521    = ~Чешуя Огиена +3~
+@10522    = ~Многие свои легендарные подвиги великий герой варваров Огиен совершил в этом доспехе. Говорили, будто Огиен был медведем среди людей, настолько он был выше и шире своих соплеменников. Варвары рассказывают, будто Огиен развлекался, борясь с волками без оружия, а пророчество сулило ему гибель "под белыми лапами". Когда его убили белые медведи, с которыми Огиен бился в тундре Долины Ледяного Ветра, силача по традиции похоронили в броне. Несмотря на свою мощь, доспех на вид совершенно обычный.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Medium Armor
-Armor Bonus: +8
-Max Dex Bonus:  +2
-Armor Check Penalty:  -5
-Arcane Spell Failure:  30%
-Special:
-  Spell Power: Wearer can cast Animal Rage 1/Day
-  While under the effect of Barbarian Rage, Animal Rage, or Blood Rage, the wearer gains 3/- resistance to all damage.
-Weight: 25 lb.~
-@10523    = ~Ogien's Scale +5~ //HoF
-@10524    = ~The great barbarian hero Ogien wore this armor during his many legendary conquests. Ogien was said to be a bear of a man, taller than his fellow barbarians and a good deal wider. It is said by some of the barbarians that Ogien would wrestle with wolves for amusement, and it is known that he was haunted by a prophecy that he would die "under white paws."  When he was killed fighting polar bears on the tundra of Icewind Dale, his armor was buried with him. Despite its power, it is not distinctive in its appearance.
+Средняя броня
+Класс защиты: +8 (доспех)
+Максимальный бонус ловкости: +2
+Штраф к проверкам за броню: -5
+Шанс провала заклинания: 30%
+Особенности:
+ Заклинание: позволяет владельцу раз в день прочитать заклинание "Ярость зверя"
+ Находясь под действием "Ярости варвара", "Ярости зверя" или "Кровавой ярости", носитель этого доспеха получает 3/- сопротивления всем повреждениям.
+Вес: 25 фунтов~
+@10523    = ~Чешуя Огиена +5~ //HoF
+@10524    = ~Многие свои легендарные подвиги великий герой варваров Огиен совершил в этом доспехе. Говорили, будто Огиен был медведем среди людей, настолько он был выше и шире своих соплеменников. Варвары рассказывают, будто Огиен развлекался, борясь с волками без оружия, а пророчество сулило ему гибель "под белыми лапами". Когда его убили белые медведи, с которыми Огиен бился в тундре Долины Ледяного Ветра, силача по традиции похоронили в броне. Несмотря на свою мощь, доспех на вид совершенно обычный.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Medium Armor
-Armor Bonus: +10
-Max Dex Bonus:  +2
-Armor Check Penalty:  -5
-Arcane Spell Failure:  30%
-Special:
-  Spell Power: Wearer can cast a combination of Animal Rage and Blood Rage 1/Day
-  While under the effect of Barbarian Rage, Animal Rage, or Blood Rage, the wearer gains 5/- resistance to all damage.
-Weight: 20 lb.~
+Средняя броня
+Класс защиты: +10 (доспех)
+Максимальный бонус ловкости: +2
+Штраф к проверкам за броню: -5
+Шанс провала заклинания: 30%
+Особенности:
+ Заклинание: позволяет владельцу раз в день прочитать комбинацию заклинаний "Ярость зверя" и "Кровавая ярость"
+ Находясь под действием "Ярости варвара", "Ярости зверя" или "Кровавой ярости", носитель этого доспеха получает 5/- сопротивления всем повреждениям.
+Вес: 25 фунтов~
 @10525    = ~Mercenary's Lot~
 @10526    = ~The mercenary's lot has been a difficult one in the lands of Icewind Dale, for there is little to occupy one's fighting skills in the far north... at least until recently. This armor was worn by a mercenary company called the Silver Band who was driven from the north after a heated debate at the Ten-Towns council (a debate that barred further mercenary service from most of the Ten-Towns for a period not exceeding three seasons). According to the debate, the mercenaries were not seen as effective combatants, and certainly not worth the gold they were paid for their meager weapon skills.
 
