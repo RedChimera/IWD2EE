@@ -2659,120 +2659,121 @@
  Оберёг: дарует иммунитет к заклинаниям "Зловонное облако", "Облако-убийца", "Облако чумы", "Порыв ветра", "Вихрь" и "Торнадо"
  Спасброски: +2 к спасброскам реакции
 Вес: 50 фунтов~
-@10577    = ~Air Genasi Gale Armor~ //Without Spell Revisions Installed
-@10578    = ~There is no debating that Air Genasi make talented fighters, as do most all Genasi. So, it is not surprising that the armor Air Genasi have made carry some of the same innate magical protections as their own bodies.
+@10577    = ~Гейловый доспех генаси воздуха~ //Without Spell Revisions Installed
+@10578    = ~Нет никаких сомнений в том, что из генаси воздуха получаются талантливые бойцы, как, впрочем, и из всех прочих генаси. Потому неудивительно, что доспехи, изготовленные генаси воздуха, обладают такими же магическими защитными свойствами, что и их собственные тела.
 
-Air Genasi Gale Armor not only gives the excellent protection of normal full plate, but also gives its wearer the added protection of fending off most air spells and effects. In addition, the enchanted armor increases the wearer's dexterity as well as their ability to fend off attackers.
+Полный гейловый доспех генаси воздуха не только обеспечивает превосходную защиту обычного полного латного доспеха, но и дополнительно ограждает от большинства воздушных заклинаний и эффектов. Кроме того, зачарованные доспехи повышают ловкость владельца, а также его способность противостоять нападающим.
 
-A fighter wearing Air Genasi Gale Armor is easy to spot since the armor glows a light blue and is decorated with hundreds of finely etched swirls covering every inch of the exquisitely crafted full plate.
+Бойца в гейловом доспехе генаси воздуха легко заметить, поскольку броня испускает светло-голубое сияние и украшена сотнями причудливых вытравленных вихрей, покрывающих каждый дюйм поверхности.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Heavy Armor
-Armor Bonus: +12
-Max Dex Bonus:  +1
-Armor Check Penalty:  -5
-Arcane Spell Failure:  35%
-Special:
-  Spellward: Immunity to Stinking Cloud, Cloudkill, Acid Fog, Suffocate, Cloud of Pestilence, Gust of Wind, Whirlwind and Tornado
-  Saving Throw Bonus:  +6 to Reflex saves
-Weight: 70 lb.~
+Тяжёлая броня
+Класс защиты: +12 (доспех)
+Максимальный бонус ловкости: +1
+Штраф к проверкам за броню: -5
+Шанс провала заклинания: 35%
+Особенности:
+ Оберёг: дарует иммунитет к заклинаниям "Зловонное облако", "Облако-убийца", "Кислотный туман", "Удушение", "Облако чумы", "Порыв ветра", "Вихрь" и "Торнадо"
+ Спасброски: +6 к спасброскам реакции
+Вес: 70 фунтов~
 //@10579    = ~Air Genasi Gale Armor~ //With Spell Revisions Installed
-@10580    = ~There is no debating that Air Genasi make talented fighters, as do most all Genasi. So, it is not surprising that the armor Air Genasi have made carry some of the same innate magical protections as their own bodies.
+@10580    = ~Нет никаких сомнений в том, что из генаси воздуха получаются талантливые бойцы, как, впрочем, и из всех прочих генаси. Потому неудивительно, что доспехи, изготовленные генаси воздуха, обладают такими же магическими защитными свойствами, что и их собственные тела.
 
-Air Genasi Gale Armor not only gives the excellent protection of normal full plate, but also gives its wearer the added protection of fending off most air spells and effects. In addition, the enchanted armor increases the wearer's dexterity as well as their ability to fend off attackers.
+Полный гейловый доспех генаси воздуха не только обеспечивает превосходную защиту обычного полного латного доспеха, но и дополнительно ограждает от большинства воздушных заклинаний и эффектов. Кроме того, зачарованные доспехи повышают ловкость владельца, а также его способность противостоять нападающим.
 
-A fighter wearing Air Genasi Gale Armor is easy to spot since the armor glows a light blue and is decorated with hundreds of finely etched swirls covering every inch of the exquisitely crafted full plate.
+Бойца в гейловом доспехе генаси воздуха легко заметить, поскольку броня испускает светло-голубое сияние и украшена сотнями причудливых вытравленных вихрей, покрывающих каждый дюйм поверхности.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Heavy Armor
-Armor Bonus: +12
-Max Dex Bonus:  +1
-Armor Check Penalty:  -5
-Arcane Spell Failure:  35%
-Special:
-  Spellward: Immunity to Stinking Cloud, Cloudkill, Death Fog, Suffocate, Cloud of Pestilence, Gust of Wind, Whirlwind and Tornado
-  Saving Throw Bonus:  +6 to Reflex saves
-Weight: 70 lb.~
-@10581    = ~Diamond Cut~
-@10582    = ~Plate and full plate are arguably the toughest armor in any realm. However, no one can deny that full plate is susceptible to bludgeoning damage. In fact, most bludgeoning weapons were created with the intention of blowing through full plate armor. 
+Тяжёлая броня
+Класс защиты: +12 (доспех)
+Максимальный бонус ловкости: +1
+Штраф к проверкам за броню: -5
+Шанс провала заклинания: 35%
+Особенности:
+ Оберёг: дарует иммунитет к заклинаниям "Зловонное облако", "Облако-убийца", "Туман смерти", "Удушение", "Облако чумы", "Порыв ветра", "Вихрь" и "Торнадо"
+ Спасброски: +6 к спасброскам реакции
+Вес: 70 фунтов~
+@10581    = ~Алмазная грань~
+@10582    = ~Латный и полный латный доспех - безусловно, самые прочные доспехи в любом королевстве. Однако нельзя отрицать, что полный латный доспех весьма восприимчив к дробящим повреждениям. По сути, большая часть дробящего оружия и была создана для поражения рыцарей, закованных в полные латные доспехи.
 
-With this thought in mind, the armor known as Diamond Cut was forged. No one is exactly sure how Diamond Cut came into existence, but what is known is that the renowned Mirabar armorsmith, Cutter Boomstock, one day unveiled the armor to a well-to-do knight who traveled all the way from Amn. Diamond Cut glistened in the firelight like a thousand diamonds, almost blinding was the intensity of the sheen. And, in a remarkable demonstration, Cutter Boomstock lifted his anvil high in the air and struck the armor. To everyone's amazement, the strike left no mark on the sparkling armor.
-The knight happily took the armor and left Mirabar forever, never to be seen again. However, his armor, Diamond Cut, has been seen from time to time, leading people to speculate that the elaborate knight met an untimely death.
+Для устранения этого печального факта и был выкован доспех, именуемый "Алмазной гранью". Никто точно не знает, как он был создан, но известно, что знаменитый мирабарский кузнец Каттер Бумсток преподнёс его однажды состоятельному рыцарю, ехавшему из Амна. "Алмазная грань" засверкала в свете костра, как тысяча бриллиантов, практически ослепляя своим блеском. Чтобы убедительно продемонстрировать крепость доспеха, Бумсток высоко поднял в воздух свою наковальню и ударил ею по доспеху. К всеобщему изумлению, удар не оставил ни следа на поверхности сверкающих доспехов.
 
-STATISTICS:
+Обрадованный рыцарь взял доспех, уехал из Мирабара, и с тех пор его больше не видели. Доспех же его всплывал то тут, то там время от времени, что вызвало пересуды о преждевременной смерти рыцаря.
 
-Heavy Armor
-Armor Bonus: +10
-Max Dex Bonus:  +1
-Armor Check Penalty:  -5
-Arcane Spell Failure:  35%
-Special:
-  Resistance: 5/- Bludgeoning Resistance
-  Resistance: 3/- Slashing Resistance
-  Resistance: 3/- Piercing Resistance
-  Resistance: 3/- Missile Resistance
-Weight: 50 lb.~
-@10583    = ~Diamond Cutter~
-@10584    = ~Plate and full plate are arguably the toughest armor in any realm. However, no one can deny that full plate is susceptible to bludgeoning damage. In fact, most bludgeoning weapons were created with the intention of blowing through full plate armor.
+ПАРАМЕТРЫ:
 
-With this thought in mind, the armor known as Diamond Cutter was forged. No one is exactly sure how Diamond Cutter came into existence, but what is known is that the renowned Mirabar armorsmith, Cutter Boomstock, one day unveiled the armor to a well-to-do knight who traveled all the way from Amn. Diamond Cutter glistened in the firelight like a thousand diamonds, almost blinding was the intensity of the sheen. And, in a remarkable demonstration, Cutter Boomstock lifted his anvil high in the air and struck the armor. To everyone's amazement, the strike left no mark on the sparkling armor. 
+Тяжёлая броня
+Класс защиты: +10 (доспех)
+Максимальный бонус ловкости: +1
+Штраф к проверкам за броню: -5
+Шанс провала заклинания: 35%
+Особенности:
+ Сопротивление: 5/- сопротивления дробящим повреждениям
+ Сопротивление: 3/- сопротивления рубящим повреждениям
+ Сопротивление: 3/- сопротивления колющим повреждениям
+ Сопротивление: 3/- сопротивления метательным повреждениям
+Вес: 50 фунтов~
+@10583    = ~Алмазный резак~
+@10584    = ~Латный и полный латный доспех - безусловно, самые прочные доспехи в любом королевстве. Однако нельзя отрицать, что полный латный доспех весьма восприимчив к дробящим повреждениям. По сути, большая часть дробящего оружия и была создана для поражения рыцарей, закованных в полные латные доспехи.
 
-The knight happily took the armor and left Mirabar forever, never to be seen again. However, his armor, Diamond Cutter, has been seen from time to time, leading people to speculate that the elaborate knight met an untimely death.
+Для устранения этого печального факта и был выкован доспех, именуемый "Алмазным резаком". Никто точно не знает, как он был создан, но известно, что знаменитый мирабарский кузнец Каттер Бумсток преподнёс его однажды состоятельному рыцарю, ехавшему из Амна. "Алмазный резак" засверкал в свете костра, как тысяча бриллиантов, практически ослепляя своим блеском. Чтобы убедительно продемонстрировать крепость доспеха, Бумсток высоко поднял в воздух свою наковальню и ударил ею по доспеху. К всеобщему изумлению, удар не оставил ни следа на поверхности сверкающих доспехов.
 
-STATISTICS:
+Обрадованный рыцарь взял доспех, уехал из Мирабара, и с тех пор его больше не видели. Доспех же его всплывал то тут, то там время от времени, что вызвало пересуды о преждевременной смерти рыцаря.
 
-Heavy Armor
-Armor Bonus: +13
-Max Dex Bonus:  +1
-Armor Check Penalty:  -5
-Arcane Spell Failure:  35%
-Special:
-  Resistance: 10/- Bludgeoning Resistance
-  Resistance: 5/- Slashing Resistance
-  Resistance: 5/- Piercing Resistance
-  Resistance: 5/- Missile Resistance
-Weight: 50 lb.~
-@10585    = ~Aasimar's Aura~
-@10586    = ~Aasimars are direct offspring from a union between mortal and celestial minion. While normally carrying innate powers, it is not unusual for an Aasimar to don blessed armor. Such is the case for this unique armor known as Aasimar's Aura. The armor shimmers with a silvery glow and is adorned with exquisite blue etchings across the breast. One look at the armor and it is simple to see that it possesses powerful protections.
+ПАРАМЕТРЫ:
 
-Long ago, the Blood War between the Baazetu and the Tanar'ri spilled over to the material plane. Luckily for most of the world, the battle was far away from any major towns or cities. However, this was still no comfort for the Celestial beings that watched over the material plane. So, it was quickly decided to amass as many Celestial and Aasimar beings as possible and drive the Blood War back into its own abyssal planes. However, because of the great numbers of Tanar'ri and Baatezu, the Celestial beings permanently blessed all the Aasimars' armor with Protection from Evil. This spell allowed the Aasimars to get in close to the evil creatures without getting attacked. Once all the Aasimars were in position, the Celestials gave the order to attack, which completely surprised the hordes of Baazetu and Tanar'ri. The ensuing battle raged for days, with high casualties on both sides, but eventually the evil hordes were pushed back into their abyssal planes.
+Тяжёлая броня
+Класс защиты: +13 (доспех)
+Максимальный бонус ловкости: +1
+Штраф к проверкам за броню: -5
+Шанс провала заклинания: 35%
+Особенности:
+ Сопротивление: 10/- сопротивления дробящим повреждениям
+ Сопротивление: 5/- сопротивления рубящим повреждениям
+ Сопротивление: 5/- сопротивления колющим повреждениям
+ Сопротивление: 5/- сопротивления метательным повреждениям
+Вес: 50 фунтов~
+@10585    = ~Аура аасимара~
+@10586    = ~Аасимары - прямые потомки от союза между смертными и небесными созданиями. Хотя обычно аасимары полагаются на свои врождённые способности, нередко они носят и благословлённую броню. Пример такой брони - этот уникальный доспех, именуемый Аурой аасимара. Он мерцает серебристым блеском и украшен изящной синей гравировкой по всей груди. При первом же взгляде на доспех становится ясно, что он обладает мощной защитой.
 
-As a result of the high Aasimar casualties, it was not uncommon for looters to take the armor off the dead. So, from time to time, a set of Aasimar's Aura will pop up in a shop, or on an adventurer who could afford the high purchase price.
+Много лет назад на материальный план прорвалась Кровавая Война между баатезу и танар'ри. К счастью для большей части мира, битва эта произошла вдалеке от крупных городов и поселений. Тем не менее, небесным созданиям, присматривавшим за материальным планом, она доставила немало хлопот. Было решено собрать как можно больше небесных созданий и аасимаров и загнать Кровавую Войну обратно в планы бездны, откуда она и пришла. Однако, поскольку танар'ри и баатезу было слишком много, небесным созданиям пришлось наделить все доспехи аасимаров постоянной защитой от зла. Благодаря этому заклинанию аасимары смогли подобраться вплотную к злым созданиям. Как только все аасимары заняли свои позиции, небесные создания дали сигнал к атаке, которая стала настоящим сюрпризом для орд баатезу и танар'ри. Последовавшая за этим битва бушевала несколько дней, все стороны понесли большие потери, но в конце концов злые орды были изгнаны обратно в свои планы бездны.
 
-STATISTICS:
+Поскольку множество аасимаров полегло на поле боя, часть из их доспехов была добыта мародёрами. Так что время от времени доспех "Аура аасимара" всплывает в магазине или у искателя приключений, которые может позволить себе такую дорогую покупку.
 
-Heavy Armor
-Armor Bonus: +12
-Max Dex Bonus:  +1
-Armor Check Penalty:  -5
-Arcane Spell Failure:  35%
-Special:
-  +2 AC and saving throws vs. evil creatures (stacks with Protection from Evil)
-  Spellward: Immunity to Unholy Blight and Blasphemy
-Weight: 50 lb.~
-@10587    = ~Celestial Aura~
-@10588    = ~Aasimars are direct offspring from a union between mortal and celestial minion. While normally carrying innate powers, it is not unusual for an Aasimar to don blessed armor. Such is the case for this unique armor known as Celestial Aura. The armor shimmers with a silvery glow and is adorned with exquisite blue etchings across the breast. One look at the armor and it is simple to see that it possesses powerful protections. 
+ПАРАМЕТРЫ:
 
-Long ago, the Blood War between the Baatezu and the Tanar'ri spilled over to the material plane. Luckily for most of the world, the battle was far away from any major towns or cities. However, this was still no comfort for the Celestial beings that watched over the material plane. So, it was quickly decided to amass as many Celestial and Aasimar beings as possible and drive the Blood War back into its own abyssal planes. However, because of the great numbers of Tanar'ri and Baatezu, the Celestial beings permanently blessed all the Aasimars' armor with Protection from Evil. In addition, the Celestials made the armor immune to fire damage, as well as improving its resistances to paralyze and death magics, and poison. These spells allowed the Aasimar's to get in close to the evil creatures without getting attacked, and provided enough protection to effectively fight the evil hordes. Once all the Aasimars were in position, the Celestials gave the order to attack, which completely surprised the hordes of Baatezu and Tanar'ri. The ensuing battle raged for days, with high casualties on both sides, but eventually the evil hordes were pushed back into their abyssal planes.
+Тяжёлая броня
+Класс защиты: +12 (доспех)
+Максимальный бонус ловкости: +1
+Штраф к проверкам за броню: -5
+Шанс провала заклинания: 35%
+Особенности:
+ Постоянный эффект: +2 к классу брони и спасброскам против атак злых существ (складывается со эффектами "Защиты от зла")
+ Оберёг: дарует иммунитет к заклинаниям "Дьявольская порча" и "Богохульство"
+Вес: 50 фунтов~
+@10587    = ~Небесная аура~
+@10588    = ~Аасимары - прямые потомки от союза между смертными и небесными созданиями. Хотя обычно аасимары полагаются на свои врождённые способности, нередко они носят и благословлённую броню. Пример такой брони - этот уникальный доспех, именуемый Аурой аасимара. Он мерцает серебристым блеском и украшен изящной синей гравировкой по всей груди. При первом же взгляде на доспех становится ясно, что он обладает мощной защитой.
 
-As a result of the high Aasimar casualties, it was not uncommon for looters to take the armor off the dead. So, from time to time, a set of Celestial Aura will pop up in a shop, or on an adventurer who could afford the high purchase price.
+Много лет назад на материальный план прорвалась Кровавая Война между баатезу и танар'ри. К счастью для большей части мира, битва эта произошла вдалеке от крупных городов и поселений. Тем не менее, небесным созданиям, присматривавшим за материальным планом, она доставила немало хлопот. Было решено собрать как можно больше небесных созданий и аасимаров и загнать Кровавую Войну обратно в планы бездны, откуда она и пришла. Однако, поскольку танар'ри и баатезу было слишком много, небесным созданиям пришлось наделить все доспехи аасимаров постоянной защитой от зла. Благодаря этому заклинанию аасимары смогли подобраться вплотную к злым созданиям. Как только все аасимары заняли свои позиции, небесные создания дали сигнал к атаке, которая стала настоящим сюрпризом для орд баатезу и танар'ри. Последовавшая за этим битва бушевала несколько дней, все стороны понесли большие потери, но в конце концов злые орды были изгнаны обратно в свои планы бездны.
 
-STATISTICS:
+Поскольку множество аасимаров полегло на поле боя, часть из их доспехов была добыта мародёрами. Так что время от времени доспех "Небесная аура" всплывает в магазине или у искателя приключений, которые может позволить себе такую дорогую покупку.
 
-Heavy Armor
-Armor Bonus: +14
-Max Dex Bonus:  +1
-Armor Check Penalty:  -5
-Arcane Spell Failure:  35%
-Special:
-  +4 AC and saving throws vs. evil creatures (stacks with Protection from Evil)
-  Wearer is under the effect of Holy Aura
-  Resistance: 20/- Fire Resistance
-  Saving Throw Bonus: +3 to Fortitude saves
-  Spellward: Immunity to Unholy Blight and Blasphemy
-Weight: 50 lb.~
+ПАРАМЕТРЫ:
+
+Тяжёлая броня
+Класс защиты: +14 (доспех)
+Максимальный бонус ловкости: +1
+Штраф к проверкам за броню: -5
+Шанс провала заклинания: 35%
+Особенности:
+ Постоянный эффект: +4 к классу брони и спасброскам против атак злых существ (складывается со эффектами "Защиты от зла")
+ Постоянный эффект: носитель находится под постоянным эффектом заклинания "Аура святости"
+ Сопротивление: 20/- сопротивления к огню
+ Спасброски: +3 к спасброскам стойкости
+ Оберёг: дарует иммунитет к заклинаниям "Дьявольская порча" и "Богохульство"
+Вес: 50 фунтов~
 
 //@10589    = ~Buckler~
 //@10590    = ~Item description can remain the same; if new description is needed put it here~
@@ -2785,78 +2786,76 @@ Weight: 50 lb.~
 //@10597    = ~Large Shield +1~
 //@10598    = ~Item description can remain the same; if new description is needed put it here~
 //@10599    = ~Tower Shield~
-@10600    = ~This massive shield is nearly as tall as the wielder. Basically, it is a portable wall meant to provide cover. It can provide up to total cover, depending on how far you come out from behind it. A tower shield, however, does not provide cover against targeted spells; a spellcaster can cast a spell on you by targeting the shield you are holding.
+@10600    = ~Этот массивный щит по высоте может быть ростом со своего владельца. По сути, это переносная стена, за которой можно укрыться. Если из-за него не высовываться, вы будете полностью защищены от оружия врага. Однако осадный щит не спасает от заклинаний, так как может быть использован в качестве цели для заклинания.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Shield Bonus: +4
-Special:
-  Attack Penalty: -2
-Armor Check Penalty:  -10
-Arcane Spell Failure:  50%
-Weight: 25 lb.~
+Класс защиты: +4 (щит)
+Штраф к проверкам за броню: -10
+Шанс провала заклинания: 50%
+Особенности:
+ Атака: -2
+Вес: 25 фунтов~
 //@10601    = ~Tower Shield +1~
-@10602    = ~This massive shield is nearly as tall as the wielder. Basically, it is a portable wall meant to provide cover. It can provide up to total cover, depending on how far you come out from behind it. A tower shield, however, does not provide cover against targeted spells; a spellcaster can cast a spell on you by targeting the shield you are holding. This shield has runes scribed onto it that glow eerily in dim light.
+@10602    = ~Этот массивный щит по высоте может быть ростом со своего владельца. По сути, это переносная стена, за которой можно укрыться. Если из-за него не высовываться, вы будете полностью защищены от оружия врага. Однако осадный щит не спасает от заклинаний, так как может быть использован в качестве цели для заклинания. На этот щит нанесены руны, слабо сияющие потусторонним светом.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Shield Bonus: +5
-Special:
-  Attack Penalty: -2
-Armor Check Penalty:  -10
-Arcane Spell Failure:  50%
-Weight: 25 lb.~
+Класс защиты: +5 (щит)
+Штраф к проверкам за броню: -10
+Шанс провала заклинания: 50%
+Особенности:
+ Атака: -2
+Вес: 25 фунтов~
 //@10603    = ~Tower Shield +1, +4 vs. Missiles~
-@10604    = ~Tower shield +1, +4 vs. missiles: This tower shield has been enchanted to protect the wearer against missiles of all types. 
+@10604    = ~Этот башенный щит зачарован, чтобы лучше защищать владельца от всех видов метательного оружия.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Shield Bonus: +5
-Armor Bonus: +4 vs. missile weapons
-Special:
-  Attack Penalty: -2
-Armor Check Penalty:  -10
-Arcane Spell Failure:  50%
-Weight: 12 lb.~
-@10605    = ~Tower Shield of Spell Resistance +2~
-@10606    = ~This massive shield is nearly as tall as the wielder. Basically, it is a portable wall meant to provide cover. It can provide up to total cover, depending on how far you come out from behind it. A tower shield, however, does not provide cover against targeted spells; a spellcaster can cast a spell on you by targeting the shield you are holding. This shield has runes scribed onto it that glow eerily in dim light. 
+Класс защиты: +5 (щит)
+Класс защиты: +4 (щит) дополнительно против метательного оружия
+Штраф к проверкам за броню: -10
+Шанс провала заклинания: 50%
+Особенности:
+ Атака: -2
+Вес: 12 фунтов~
+@10605    = ~Осадный щит сопротивления магии +2~
+@10606    = ~Этот массивный щит по высоте может быть ростом со своего владельца. По сути, это переносная стена, за которой можно укрыться. Если из-за него не высовываться, вы будете полностью защищены от оружия врага. Однако осадный щит не спасает от заклинаний, так как может быть использован в качестве цели для заклинания. На этот щит нанесены руны, слабо сияющие потусторонним светом.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Shield Bonus: +6
-Special:
-  Spell Resistance: Set to 18
-  Attack Penalty: -2
-Armor Check Penalty:  -10
-Arcane Spell Failure:  50%
-Weight: 25 lb.~
-@10607    = ~Tower Shield of Resistance +2~
-@10608    = ~This massive shield is nearly as tall as the wielder. Basically, it is a portable wall meant to provide cover. It can provide up to total cover, depending on how far you come out from behind it. A tower shield, however, does not provide cover against targeted spells; a spellcaster can cast a spell on you by targeting the shield you are holding. This shield has runes scribed onto it that glow eerily in dim light. 
+Класс защиты: +6 (щит)
+Штраф к проверкам за броню: -10
+Шанс провала заклинания: 50%
+Особенности:
+ Атака: -2
+ Сопротивление магии: устанавливается на 18
+Вес: 25 фунтов~
+@10607    = ~Осадный щит сопротивления +2~
+@10608    = ~Этот массивный щит по высоте может быть ростом со своего владельца. По сути, это переносная стена, за которой можно укрыться. Если из-за него не высовываться, вы будете полностью защищены от оружия врага. Однако осадный щит не спасает от заклинаний, так как может быть использован в качестве цели для заклинания. На этот щит нанесены руны, слабо сияющие потусторонним светом.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Shield Bonus: +6
-Special:
-  Resistance: 2/- slashing resistance
-  Resistance: 2/- piercing resistance
-  Resistance: 2/- bludgeoning resistance
-  Resistance: 2/- missile resistance
-  Attack Penalty: -2
-Armor Check Penalty:  -10
-Arcane Spell Failure:  50%
-Weight: 25 lb.~
-@10609    = ~Tower Shield of Magic Force Resistance +3~
-@10610    = ~This massive shield is nearly as tall as the wielder. Basically, it is a portable wall meant to provide cover. It can provide up to total cover, depending on how far you come out from behind it. A tower shield, however, does not provide cover against targeted spells; a spellcaster can cast a spell on you by targeting the shield you are holding. This shield has runes scribed onto it that glow eerily in dim light. 
+Класс защиты: +6 (щит)
+Штраф к проверкам за броню: -10
+Шанс провала заклинания: 50%
+Особенности:
+ Сопротивление: 2/- сопротивления дробящим повреждениям
+ Сопротивление: 2/- сопротивления рубящим повреждениям
+ Сопротивление: 2/- сопротивления колющим повреждениям
+ Сопротивление: 2/- сопротивления метательным повреждениям
+ Атака: -2
+Вес: 25 фунтов~
+@10609    = ~Осадный щит сопротивления магическому урону +3~
+@10610    = ~Этот массивный щит по высоте может быть ростом со своего владельца. По сути, это переносная стена, за которой можно укрыться. Если из-за него не высовываться, вы будете полностью защищены от оружия врага. Однако осадный щит не спасает от заклинаний, так как может быть использован в качестве цели для заклинания. На этот щит нанесены руны, слабо сияющие потусторонним светом.
 
-STATISTICS:
-
-Shield Bonus: +5
-Armor Bonus: +1 vs. missile weapons
-Special:  
-  Resistance: 25/- magic damage resistance
-Armor Check Penalty:  -10
-Arcane Spell Failure:  50%
-Weight: 25 lb.~
+Класс защиты: +5 (щит)
+Класс защиты: +1 (щит) дополнительно против метательного оружия
+Штраф к проверкам за броню: -10
+Шанс провала заклинания: 50%
+Особенности:
+ Сопротивление: 25/- сопротивления магическому урону
+Вес: 25 фунтов~
 @10611    = ~Large Shield of Resilience +2~
 @10612    = ~A large shield is carried in the same manner as a small shield. Its weight prevents the character from using his shield hand for anything other than carrying the large shield. Large shields are usually made of metal, range from 3'-4' in diameter, and can be of any shape, from round to square to a spread dragon's wings. A typical medieval shield resembles a triangle with one point facing downward. This shield has runes scribed onto it that glow eerily in dim light.
 
