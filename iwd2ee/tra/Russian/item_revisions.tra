@@ -2368,7 +2368,7 @@
 
 ПАРАМЕТРЫ:
 
-Тяжёлый доспех
+Тяжёлая броня
 Класс защиты: +7 (доспех)
 Максимальный бонус ловкости: +0
 Штраф к проверкам за броню: -7
@@ -2387,7 +2387,7 @@
 
 ПАРАМЕТРЫ:
 
-Тяжёлый доспех
+Тяжёлая броня
 Класс защиты: +10 (доспех)
 Максимальный бонус ловкости: +0
 Штраф к проверкам за броню: -7
@@ -2403,7 +2403,7 @@
 
 ПАРАМЕТРЫ:
 
-Тяжёлый доспех
+Тяжёлая броня
 Класс защиты: +11 (доспех)
 Максимальный бонус ловкости: +2
 Штраф к проверкам за броню: -5
@@ -2419,7 +2419,7 @@
 
 ПАРАМЕТРЫ:
 
-Тяжёлый доспех
+Тяжёлая броня
 Класс защиты: +14 (доспех)
 Максимальный бонус ловкости: +2
 Штраф к проверкам за броню: -5
@@ -2438,7 +2438,7 @@
 
 ПАРАМЕТРЫ:
 
-Тяжёлый доспех
+Тяжёлая броня
 Класс защиты: +9 (доспех)
 Максимальный бонус ловкости: +0
 Штраф к проверкам за броню: -7
@@ -2455,7 +2455,7 @@
 
 ПАРАМЕТРЫ:
 
-Тяжёлый доспех
+Тяжёлая броня
 Класс защиты: +11 (доспех)
 Максимальный бонус ловкости: +0
 Штраф к проверкам за броню: -7
@@ -2473,7 +2473,7 @@
 
 ПАРАМЕТРЫ:
 
-Тяжёлый доспех
+Тяжёлая броня
 Класс защиты: +8 (доспех)
 Максимальный бонус ловкости: +0
 Штраф к проверкам за броню: -7
@@ -2495,7 +2495,7 @@
 
 ПАРАМЕТРЫ:
 
-Тяжёлый доспех
+Тяжёлая броня
 Класс защиты: +9 (доспех)
 Максимальный бонус ловкости: +1
 Штраф к проверкам за броню: -6
@@ -2506,7 +2506,7 @@
 
 ПАРАМЕТРЫ:
 
-Тяжёлый доспех
+Тяжёлая броня
 Класс защиты: +7 (доспех)
 Максимальный бонус ловкости: +0
 Штраф к проверкам за броню: -7
@@ -2521,7 +2521,7 @@
 
 ПАРАМЕТРЫ:
 
-Тяжёлый доспех
+Тяжёлая броня
 Класс защиты: +11 (доспех)
 Максимальный бонус ловкости: +0
 Штраф к проверкам за броню: -6
@@ -2535,7 +2535,7 @@
 
 ПАРАМЕТРЫ:
 
-Тяжёлый доспех
+Тяжёлая броня
 Класс защиты: +13 (доспех)
 Максимальный бонус ловкости: +0
 Штраф к проверкам за броню: -6
@@ -2550,7 +2550,7 @@
 
 ПАРАМЕТРЫ:
 
-Тяжёлый доспех
+Тяжёлая броня
 Класс защиты: +8 (доспех)
 Максимальный бонус ловкости: +1
 Штраф к проверкам за броню: -5
@@ -2563,7 +2563,7 @@
 
 ПАРАМЕТРЫ:
 
-Тяжёлый доспех
+Тяжёлая броня
 Класс защиты: +10 (доспех)
 Максимальный бонус ловкости: +1
 Штраф к проверкам за броню: -5
@@ -2572,93 +2572,93 @@
  Лёгкость: весит в пять раз меньше обычных лат
  Сила: +5
 Вес: 10 фунтов~
-@10567    = ~Armor of the Clerics of Myrkul~
-@10568    = ~Clerics of Myrkul center their whole existence on endeavors that aid the dead and dying. They make it their responsibility to organize funerals, burials, settling the dead's unfinished affairs and enacting wills.
+@10567    = ~Доспехи священников Миркула~
+@10568    = ~Священники Миркула живут ради того, чтобы помогать мёртвым и умирающим. В их обязанности входит организация похорон, погребений, улаживание незаконченных дел умерших и исполнение завещаний.
 
-Common to these clerics are their amazing plate mail armor that grants them several advantages over necromantic spells such as Paralyze and Death Magic. Clerics of Myrkul may make it their practice to aid in the affairs of the dead, but they have no desire to prematurely die themselves. 
+Среди прочего, эти священники знамениты своими удивительными латными доспехами, дающими им преимущества перед некромантскими заклинаниями наподобие "Паралич" и "Смерть". Пусть жрецы Миркула и помогают мёртвым, но преждевременно умирать самим им совсем не хочется.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Heavy Armor
-Armor Bonus: +9
-Max Dex Bonus:  +0
-Armor Check Penalty:  -6
-Arcane Spell Failure:  40%
-Special:
-  Saving Throw Bonus:  +5 to Fortitude saves
-Weight: 50 lb.~
-@10569    = ~Blessed Armor of the Clerics of Myrkul~
-@10570    = ~Clerics of Myrkul center their whole existence on endeavors that aid the dead and dying. They make it their responsibility to organize funerals, burials, settling the dead's unfinished affairs and enacting wills.
+Тяжёлая броня
+Класс защиты: +9 (доспех)
+Максимальный бонус ловкости: +0
+Штраф к проверкам за броню: -6
+Шанс провала заклинания: 40%
+Особенности:
+ Спасброски: +5 к спасброскам стойкости
+Вес: 50 фунтов~
+@10569    = ~Благословенные доспехи священников Миркула~
+@10570    = ~Священники Миркула живут ради того, чтобы помогать мёртвым и умирающим. В их обязанности входит организация похорон, погребений, улаживание незаконченных дел умерших и исполнение завещаний.
 
-Common to these clerics are their amazing plate mail armor that grants them several advantages over necromantic spells such as Paralyze and Death Magic. Clerics of Myrkul may make it their practice to aid in the affairs of the dead, but they have no desire to prematurely die themselves. 
+Среди прочего, эти священники знамениты своими удивительными латными доспехами, дающими им преимущества перед некромантскими заклинаниями наподобие "Паралич" и "Смерть". Пусть жрецы Миркула и помогают мёртвым, но преждевременно умирать самим им совсем не хочется.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Heavy Armor
-Armor Bonus: +12
-Max Dex Bonus:  +1
-Armor Check Penalty:  -5
-Arcane Spell Failure:  35%
-Special:
-  Saving Throw Bonus:  +7 to Fortitude saves
-Spell Power:  Can cast 5th level Priest Spell Raise Dead once per day.
-Weight: 50 lb.~
-@10571    = ~Plate of the Pit Fiend~
-@10572    = ~No one is certain where the Plate of the Pit Fiend came from, or how it was created. Its spiky red scaled plates radiate a fiery red glow at all times, convincing those who look upon it that the plate mail is certainly otherworldly. 
+Тяжёлая броня
+Класс защиты: +12 (доспех)
+Максимальный бонус ловкости: +1
+Штраф к проверкам за броню: -5
+Шанс провала заклинания: 35%
+Особенности:
+ Спасброски: +7 к спасброскам стойкости
+ Заклинание: позволяют читать заклинание жреца 5-го уровня "Оживление мёртвого" раз в день
+Вес: 50 фунтов~
+@10571    = ~Доспех исчадия ямы~
+@10572    = ~Никто не знает, где и как был создан доспех исчадия ямы. Его красные покрытые чешуёй и шипами пластины постоянно излучают огненно-красное свечение, из-за чего этот латный доспех выглядит совершенно потусторонним.
 
-Those that equip the Plate of the Pit Fiend find that the plate has a deadly natural defense when struck too many times. If an enemy is too successful with their strikes against the wearer of the Plate of the Pit Fiend, the plate will emit an explosive burst of flame in all directions around itself. This flame mortally wounds everyone caught within its wake, except for the wearer of the unusual plate mail.
+Те, кто надевают доспех исчадия ямы, очень скоро обнаруживают, что он обладает смертоносными защитными способностями, которые проявляются, когда по доспеху попадают несколько раз. Этот доспех испускает взрывную вспышку пламени во всех направлениях, если враг слишком часто наносит удары по его обладателю. Такое пламя смертельно ранит всех, кто находится вокруг, кроме самого владельца необычной брони.
 
-It is rumored that the Plate of the Pit Fiend is actually the hide of a Pit Fiend, killed and skinned by someone, or something, more powerful than a Greater Baatezu. If this rumor is true, pray to the gods that the creature capable of killing and skinning a Pit Fiend never comes to the material plane.
+Ходят слухи, что доспех исчадия ямы на самом деле является шкурой исчадия ямы, убитого кем-то даже более могучим, чем высший баатезу. Если эти слухи верны, остаётся лишь молиться богам, чтобы это существо, способное убить и спустить шкуру с исчадия ямы, никогда не появилось на материальном плане.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Heavy Armor
-Armor Bonus: +11
-Max Dex Bonus:  +0
-Armor Check Penalty:  -6
-Arcane Spell Failure:  40%
-Special:
-  Retribution: 10% chance of casting the spell Sunfire whenever the attacking enemy successfully hits wearer of Plate of the Pit Fiend (melee only)
-Weight: 50 lb.~
-@10573    = ~Plate of the Balor~
-@10574    = ~No one is certain where the Plate of the Balor came from, or how it was created. Its smooth, tough red plates radiate a fiery red glow at all times, convincing those who look upon it that the plate mail is certainly otherworldly. 
+Тяжёлая броня
+Класс защиты: +11 (доспех)
+Максимальный бонус ловкости: +0
+Штраф к проверкам за броню: -6
+Шанс провала заклинания: 40%
+Особенности:
+ Воздаяние: с вероятностью 10% при успешном попадании врага по владельцу (только в ближнем бою) творит заклинание "Солнечный огонь"
+Вес: 50 фунтов~
+@10573    = ~Доспех балора~
+@10574    = ~Никто не знает, где и как был создан доспех балора. Его гладкие, прочные красные пластины постоянно излучают огненно-красное свечение, из-за чего этот латный доспех выглядит совершенно потусторонним.
 
-Those that equip the Plate of the Balor find that the plate has a deadly natural defense when struck too many times. If an enemy is too successful with their strikes against the wearer of the Plate of the Balor, the plate will emit an explosive burst of flame in all directions around itself. This flame mortally wounds everyone caught within its wake, except for the wearer of the unusual plate mail.
+Те, кто надевают доспех балора, очень скоро обнаруживают, что он обладает смертоносными защитными способностями, которые проявляются, когда по доспеху попадают несколько раз. Этот доспех испускает взрывную вспышку пламени во всех направлениях, если враг слишком часто наносит удары по его обладателю. Такое пламя смертельно ранит всех, кто находится вокруг, кроме самого владельца необычной брони.
 
-In addition, the plate has been known to send waves of terror upon those that attack its wearer.
+Кроме того, известно, что этот доспех насылает волны ужаса на тех, кто атакует его владельца.
 
-It is rumored that the Plate of the Balor is actually the hide of a Balor, killed and skinned by someone, or something, more powerful than a True Tanar'ri. If this rumor is true, pray to the gods that the creature capable of killing and skinning a Balor never comes to the material plane.
+Ходят слухи, что доспех балора на самом деле является шкурой балора, убитого кем-то даже более могучим, чем истинный танар'ри. Если эти слухи верны, остаётся лишь молиться богам, чтобы это существо, способное убить и спустить шкуру с балора, никогда не появилось на материальном плане.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Heavy Armor
-Armor Bonus: +14
-Max Dex Bonus:  +0
-Armor Check Penalty:  -6
-Arcane Spell Failure:  40%
-Special:
-  Retribution: 10% chance of casting the spell Sunfire whenever the attacking enemy successfully hits wearer of Plate of the Balor.
-  Retribution: 10% chance of casting the spell Cloak of Fear whenever the attacking enemy successfully hits wearer of Plate of the Balor. 
-  Spellward: Immunity to Cloak of Fear, Horror, Charm Person, Dire Charm, and Confusion
-Weight: 50 lb.~
-@10575    = ~Air Genasi Armor~
-@10576    = ~There is no debating that Air Genasi make talented fighters, as do most all Genasi. So, it is not surprising that the armor Air Genasi have made carry some of the same innate magical protections as their own bodies.
+Тяжёлая броня
+Класс защиты: +14 (доспех)
+Максимальный бонус ловкости: +0
+Штраф к проверкам за броню: -6
+Шанс провала заклинания: 40%
+Особенности:
+ Воздаяние: с вероятностью 10% при успешном попадании врага по владельцу творит заклинание "Солнечный огонь"
+ Воздаяние: с вероятностью 10% при успешном попадании врага по владельцу творит заклинание "Плащ страха"
+ Оберёг: дарует иммунитет к заклинаниям "Плащ страха", "Ужас", "Очаровать персонажа", "Дикое очарование" и "Замешательство"
+Вес: 50 фунтов~
+@10575    = ~Доспех генаси воздуха~
+@10576    = ~Нет никаких сомнений в том, что из генаси воздуха получаются талантливые бойцы, как, впрочем, и из всех прочих генаси. Потому неудивительно, что доспехи, изготовленные генаси воздуха, обладают такими же магическими защитными свойствами, что и их собственные тела.
 
-Air Genasi full plate not only gives the excellent protection of normal full plate, but also gives its wearer the added protection of fending off most air spells and effects.
+Полный латный доспех генаси воздуха не только обеспечивает превосходную защиту обычного полного латного доспеха, но и дополнительно ограждает от большинства воздушных заклинаний и эффектов.
 
-A fighter wearing Air Genasi armor is easy to spot since the armor glows a light blue and is decorated with hundreds of finely etched swirls covering every inch of the finely crafted full plate.
+Бойца в доспехе генаси воздуха легко заметить, поскольку броня испускает светло-голубое сияние и украшена сотнями причудливых вытравленных вихрей, покрывающих каждый дюйм поверхности.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Heavy Armor
-Armor Bonus: +9
-Max Dex Bonus:  +1
-Armor Check Penalty:  -5
-Arcane Spell Failure:  35%
-Special:
-  Spellward: Immunity to Stinking Cloud, Cloudkill, Cloud of Pestilence, Gust of Wind, Whirlwind and Tornado
-  Saving Throw Bonus:  +2 to Reflex saves
-Weight: 50 lb.~
+Тяжёлая броня
+Класс защиты: +9 (доспех)
+Максимальный бонус ловкости: +1
+Штраф к проверкам за броню: -5
+Шанс провала заклинания: 35%
+Особенности:
+ Оберёг: дарует иммунитет к заклинаниям "Зловонное облако", "Облако-убийца", "Облако чумы", "Порыв ветра", "Вихрь" и "Торнадо"
+ Спасброски: +2 к спасброскам реакции
+Вес: 50 фунтов~
 @10577    = ~Air Genasi Gale Armor~ //Without Spell Revisions Installed
 @10578    = ~There is no debating that Air Genasi make talented fighters, as do most all Genasi. So, it is not surprising that the armor Air Genasi have made carry some of the same innate magical protections as their own bodies.
 
