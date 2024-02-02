@@ -1975,7 +1975,7 @@
  Проклятие: надев этот доспех, его нельзя снять без помощи заклинания "Снять проклятие"
  Харизма: -3
  Постоянный эффект: В доспехе персонаж находится под действием эффекта заклинания "Ограждение от смерти"
- Свобода передвижения: в доспехе персонаж невосприимчив ко всем эффектам, стесняющим движения, как магическим, так и немагическим. При этом его по-прежнему можно ускорить.
+ Свобода действий: в доспехе персонаж невосприимчив ко всем эффектам, стесняющим движения, как магическим, так и немагическим. При этом его по-прежнему можно ускорить.
 Вес: 20 фунтов~
 @10475    = ~Лазутчик +2~
 @10476    = ~Одно из величайших умений разведчика - способность перемещаться незамеченным. Долгие годы разведчики оттачивают умение прятаться в тени и бесшумно передвигаться, чтобы в нужный момент получить одно из самых ценных сокровищ в королевствах - информацию.
@@ -2849,6 +2849,8 @@
 @10609    = ~Осадный щит сопротивления магическому урону +3~
 @10610    = ~Этот массивный щит по высоте может быть ростом со своего владельца. По сути, это переносная стена, за которой можно укрыться. Если из-за него не высовываться, вы будете полностью защищены от оружия врага. Однако осадный щит не спасает от заклинаний, так как может быть использован в качестве цели для заклинания. На этот щит нанесены руны, слабо сияющие потусторонним светом.
 
+ПАРАМЕТРЫ:
+
 Класс защиты: +5 (щит)
 Класс защиты: +1 (щит) дополнительно против метательного оружия
 Штраф к проверкам за броню: -10
@@ -2856,138 +2858,139 @@
 Особенности:
  Сопротивление: 25/- сопротивления магическому урону
 Вес: 25 фунтов~
-@10611    = ~Large Shield of Resilience +2~
-@10612    = ~A large shield is carried in the same manner as a small shield. Its weight prevents the character from using his shield hand for anything other than carrying the large shield. Large shields are usually made of metal, range from 3'-4' in diameter, and can be of any shape, from round to square to a spread dragon's wings. A typical medieval shield resembles a triangle with one point facing downward. This shield has runes scribed onto it that glow eerily in dim light.
+@10611    = ~Большой щит устойчивости +2~
+@10612    = ~Большой щит носится так же, как и маленький. Однако он тяжелее, и его вес не позволяет обладателю использовать руку, в которой находится щит, для чего-либо ещё. Большие щиты обычно делаются из металла, имеют три-четыре фута в диаметре и могут быть любой формы: от круглой или квадратной до силуэта расправленных крыльев дракона. Типичный средневековый щит представляет собой треугольник, направленный вершиной вниз. На этот щит нанесены руны, слабо сияющие потусторонним светом.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Shield Bonus: +4
-Special:
-  Saving Throw Bonus: +2
-Armor Check Penalty:  -2
-Arcane Spell Failure:  15%
-Weight: 15 lb.~
-@10613    = ~Large Shield of Electrical Resistance +3~
-@10614    = ~A large shield is carried in the same manner as a small shield. Its weight prevents the character from using his shield hand for anything other than carrying the large shield. Large shields are usually made of metal, range from 3'-4' in diameter, and can be of any shape, from round to square to a spread dragon's wings. A typical medieval shield resembles a triangle with one point facing downward. This shield has runes scribed onto it that glow eerily in dim light. 
+Класс защиты: +4 (щит)
+Штраф к проверкам за броню: -2
+Шанс провала заклинания: 15%
+Особенности:
+ Спасброски: +2
+Вес: 15 фунтов~
+@10613    = ~Большой щит электрического сопротивления +3~
+@10614    = ~Большой щит носится так же, как и маленький. Однако он тяжелее, и его вес не позволяет обладателю использовать руку, в которой находится щит, для чего-либо ещё. Большие щиты обычно делаются из металла, имеют три-четыре фута в диаметре и могут быть любой формы: от круглой или квадратной до силуэта расправленных крыльев дракона. Типичный средневековый щит представляет собой треугольник, направленный вершиной вниз. На этот щит нанесены руны, слабо сияющие потусторонним светом.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Shield Bonus: +5
-Special:
-  Resistance: 30/- electrical resistance
-Armor Check Penalty:  -2
-Arcane Spell Failure:  15%
-Weight: 6 lb.~
-@10615    = ~Barbarian Shield +1~
-@10616    = ~A large shield is carried in the same manner as a small shield. Its weight prevents the character from using his shield hand for anything other than carrying the large shield. Large shields are usually made of metal, range from 3'-4' in diameter, and can be of any shape, from round to square to a spread dragon's wings. A typical medieval shield resembles a triangle with one point facing downward. This shield has runes scribed onto it that glow eerily in dim light. 
+Класс защиты: +5 (щит)
+Штраф к проверкам за броню: -2
+Шанс провала заклинания: 15%
+Особенности:
+ Сопротивление: 30/- сопротивления электричеству
+Вес: 6 фунтов~
+@10615    = ~Варварский щит +1~
+@10616    = ~Большой щит носится так же, как и маленький. Однако он тяжелее, и его вес не позволяет обладателю использовать руку, в которой находится щит, для чего-либо ещё. Большие щиты обычно делаются из металла, имеют три-четыре фута в диаметре и могут быть любой формы: от круглой или квадратной до силуэта расправленных крыльев дракона. Типичный средневековый щит представляет собой треугольник, направленный вершиной вниз. На этот щит нанесены руны, слабо сияющие потусторонним светом.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Shield Bonus: +3
-Generic Armor Penalty: -1
-Special:
-  +1 attack and damage
-Armor Check Penalty:  -2
-Arcane Spell Failure:  15%
-Weight: 15 lb.~
-@10617    = ~Small Shield of Invisibility +2~
-@10618    = ~A small shield is usually round and is carried on the forearm, gripped with the shield hand. Its light weight as compared to a large shield allows for greater maneuverability without sacrificing too much in the way of protection. This shield has runes scribed onto it that glow eerily in dim light. 
+Класс защиты: +3 (щит)
+Класс защиты: -1 (общий)
+Штраф к проверкам за броню: -2
+Шанс провала заклинания: 15%
+Особенности:
+ Атака: +1
+ Урон: +1
+Вес: 15 фунтов~
+@10617    = ~Малый щит невидимости +2~
+@10618    = ~Малый щит обычно имеет круглую форму; носят его на предплечье, удерживая за ручку. Его вес, небольшой по сравнению со средним щитом, позволяет владельцу относительно свободно передвигаться, оставаясь под защитой щита. На этот щит нанесены руны, слабо сияющие потусторонним светом.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Shield Bonus: +3
-Armor Bonus: +1 vs. missile weapons
-Special:
-  Spell Power: Can cast the spell Invisibility (at level 10) 1/day
-Armor Check Penalty:  -1
-Arcane Spell Failure:  5%
-Weight: 6 lb.~
-@10619    = ~Small Shield of Freedom +2~
-@10620    = ~A small shield is usually round and is carried on the forearm, gripped with the shield hand. Its light weight as compared to a large shield allows for greater maneuverability without sacrificing too much in the way of protection. This shield has runes scribed onto it that glow eerily in dim light.
+Класс защиты: +3 (щит)
+Класс защиты: +1 против дальнобойного оружия
+Штраф к проверкам за броню: -1
+Шанс провала заклинания: 5%
+Особенности:
+ Заклинание: носитель щита один раз в сутки может прочитать заклинание "Невидимость" как заклинатель десятого уровня
+Вес: 6 фунтов~
+@10619    = ~Малый щит свободы +2~
+@10620    = ~Малый щит обычно имеет круглую форму; носят его на предплечье, удерживая за ручку. Его вес, небольшой по сравнению со средним щитом, позволяет владельцу относительно свободно передвигаться, оставаясь под защитой щита. На этот щит нанесены руны, слабо сияющие потусторонним светом.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Shield Bonus: +3
-Armor Bonus: +1 vs. missile weapons
-Special:
-  Freedom of Movement: The wielder is immune to everything, magical and otherwise, that affects mobility in any way, although they can still be hasted.
-Armor Check Penalty:  -1
-Arcane Spell Failure:  5%
-Weight: 6 lb.~
-@10621    = ~Small Shield of Images~
-@10622    = ~A small shield is usually round and is carried on the forearm, gripped with the shield hand. Its light weight as compared to a large shield allows for greater maneuverability without sacrificing too much in the way of protection. This shield has runes scribed onto it that glow eerily in dim light.
+Класс защиты: +3 (щит)
+Класс защиты: +1 против дальнобойного оружия
+Штраф к проверкам за броню: -1
+Шанс провала заклинания: 5%
+Особенности:
+ Свобода действий: носитель щита невосприимчив ко всем эффектам, стесняющим движения, как магическим, так и немагическим. При этом его по-прежнему можно ускорить.
+Вес: 6 фунтов~
+@10621    = ~Малый щит образов~
+@10622    = ~Малый щит обычно имеет круглую форму; носят его на предплечье, удерживая за ручку. Его вес, небольшой по сравнению со средним щитом, позволяет владельцу относительно свободно передвигаться, оставаясь под защитой щита. На этот щит нанесены руны, слабо сияющие потусторонним светом.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Shield Bonus: +1
-Armor Bonus: +1 vs. missile weapons
-Special:
-  Whenever the wielder takes non-poison damage, there is a 25% chance that they will gain a single image as per Reflected Image
-Armor Check Penalty:  -1
-Arcane Spell Failure:  5%
-Weight: 6 lb.~
-@10623    = ~Buckler of Denial +2~
-@10624    = ~A buckler, also known as a target shield, is a small round shield of wood or metal that fastens to the forearm. Because of it's size it is light and can be worn with very little restriction to movement. This particular buckler is slightly warm to the touch.
+Класс защиты: +1 (щит)
+Класс защиты: +1 против дальнобойного оружия
+Штраф к проверкам за броню: -1
+Шанс провала заклинания: 5%
+Особенности:
+ Каждый раз, когда владелец щита получает урон не от яда, есть 25% шанс, что он получит один образ, как при заклинании "Отражённый образ".
+Вес: 6 фунтов~
+@10623    = ~Баклер отрицания +2~
+@10624    = ~Баклер или кулачный щит - небольшой щит из дерева или металла, который прикрепляется к предплечью. Из-за своих небольших размеров он очень лёгкий и почти не ограничивает движений. Этот баклер слегка тёплый на ощупь.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Shield Bonus: +3
-Special:
-  Spellward: Immunity to the spell Disintegrate
-Armor Check Penalty:  -1
-Arcane Spell Failure:  5%
-Weight:  5 lb.~
+Класс защиты: +3 (щит)
+Штраф к проверкам за броню: -1
+Шанс провала заклинания: 5%
+Особенности:
+ Оберёг: дарует иммунитет к заклинанию "Распыление"
+Вес: 5 фунтов~
 //@10625    = ~Sanctuary Buckler +1~
-@10626    = ~A buckler, also known as a target shield, is a small round shield of wood or metal that fastens to the forearm. Because of it's size it is light and can be worn with very little restriction to movement. This particular buckler is slightly warm to the touch.
+@10626    = ~Баклер или кулачный щит - небольшой щит из дерева или металла, который прикрепляется к предплечью. Из-за своих небольших размеров он очень лёгкий и почти не ограничивает движений. Этот баклер слегка тёплый на ощупь.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Shield Bonus: +2
-Special:
-  Spell Power: Can cast the spell Sanctuary 1/day
-Armor Check Penalty:  -1
-Arcane Spell Failure:  5%
-Weight:  5 lb.~
-@10627    = ~Buckler of Dexterity +3~
-@10628    = ~A buckler, also known as a target shield, is a small round shield of wood or metal that fastens to the forearm. Because of it's size it is light and can be worn with very little restriction to movement. This particular buckler is slightly warm to the touch.
+Класс защиты: +2 (щит)
+Штраф к проверкам за броню: -1
+Шанс провала заклинания: 5%
+Особенности:
+ Заклинание: позволяет владельцу раз в сутки прочитать заклинание "Святилище"
+Вес: 5 фунтов~
+@10627    = ~Баклер ловкости +3~
+@10628    = ~Баклер или кулачный щит - небольшой щит из дерева или металла, который прикрепляется к предплечью. Из-за своих небольших размеров он очень лёгкий и почти не ограничивает движений. Этот баклер слегка тёплый на ощупь.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Shield Bonus: +4
-Special:
-  Dexterity: +3 bonus (stacks with other bonuses to Dexterity)
-Armor Check Penalty:  -1
-Arcane Spell Failure:  5%
-Weight:  5 lb.~
+Класс защиты: +4 (щит)
+Штраф к проверкам за броню: -1
+Шанс провала заклинания: 5%
+Особенности:
+ Ловкость: +3 (складывается с другими бонусами к ловкости)
+Вес: 5 фунтов~
 //@10629    = ~Tower Shield +2~
-@10630    = ~This massive shield is nearly as tall as the wielder. Basically, it is a portable wall meant to provide cover. It can provide up to total cover, depending on how far you come out from behind it. A tower shield, however, does not provide cover against targeted spells; a spellcaster can cast a spell on you by targeting the shield you are holding. This shield has runes scribed onto it that glow eerily in dim light.
+@10630    = ~Этот массивный щит по высоте может быть ростом со своего владельца. По сути, это переносная стена, за которой можно укрыться. Если из-за него не высовываться, вы будете полностью защищены от оружия врага. Однако осадный щит не спасает от заклинаний, так как может быть использован в качестве цели для заклинания. На этот щит нанесены руны, слабо сияющие потусторонним светом.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Shield Bonus: +6
-Special:
-  Attack Penalty: -2
-Armor Check Penalty:  -10
-Arcane Spell Failure:  50%
-Weight: 25 lb.~
+Класс защиты: +6 (щит)
+Штраф к проверкам за броню: -10
+Шанс провала заклинания: 50%
+Особенности:
+ Атака: -2
+Вес: 25 фунтов~
 //@10631    = ~Large Shield +2~
-@10632    = ~A large shield is carried in the same manner as a small shield. Its weight prevents the character from using his shield hand for anything other than carrying the large shield. Large shields are usually made of metal, range from 3'-4' in diameter, and can be of any shape, from round to square to a spread dragon's wings. A typical medieval shield resembles a triangle with one point facing downward. This shield has runes scribed onto it that glow eerily in dim light.
+@10632    = ~Большой щит носится так же, как и маленький. Однако он тяжелее, и его вес не позволяет обладателю использовать руку, в которой находится щит, для чего-либо ещё. Большие щиты обычно делаются из металла, имеют три-четыре фута в диаметре и могут быть любой формы: от круглой или квадратной до силуэта расправленных крыльев дракона. Типичный средневековый щит представляет собой треугольник, направленный вершиной вниз. На этот щит нанесены руны, слабо сияющие потусторонним светом.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Shield Bonus: +4
-Armor Check Penalty:  -2
-Arcane Spell Failure:  15%
-Weight: 15 lb.~
+Класс защиты: +4 (щит)
+Штраф к проверкам за броню: -2
+Шанс провала заклинания: 15%
+Вес: 15 фунтов~
 //@10633    = ~Buckler +1~
-@10634    = ~A buckler, also known as a target shield, is a small round shield of wood or metal that fastens to the forearm. Because of it's size it is light and can be worn with very little restriction to movement. This particular buckler is slightly warm to the touch.
+@10634    = ~Баклер или кулачный щит - небольшой щит из дерева или металла, который прикрепляется к предплечью. Из-за своих небольших размеров он очень лёгкий и почти не ограничивает движений. Этот баклер слегка тёплый на ощупь.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Shield Bonus: +2
-Armor Check Penalty:  -1
-Arcane Spell Failure:  5%
-Weight:  5 lb.~
+Класс защиты: +2 (щит)
+Штраф к проверкам за броню: -1
+Шанс провала заклинания: 5%
+Вес: 5 фунтов~
 @10635    = ~Black Urchin +2~
 @10636    = ~Black Urchin is a shield of duergar manufacture, styled after the infamous blackblood urchins of the Underdark seas: it is of rusty black iron, its face studded with scores of corroded metal spines.
 
