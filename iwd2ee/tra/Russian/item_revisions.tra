@@ -2991,81 +2991,81 @@
 Штраф к проверкам за броню: -1
 Шанс провала заклинания: 5%
 Вес: 5 фунтов~
-@10635    = ~Black Urchin +2~
-@10636    = ~Black Urchin is a shield of duergar manufacture, styled after the infamous blackblood urchins of the Underdark seas: it is of rusty black iron, its face studded with scores of corroded metal spines.
+@10635    = ~Чёрный ёж +2~
+@10636    = ~Чёрный ёж - это щит, изготовленный дуэргарами и стилизованный под чернокровных ежей Андердарка. Он сделан ржавого чёрного железа, и его рабочая сторона утыкана множеством проржавевших металлических шипов.
 
-Each time the shield's bearer is struck in combat, there is a chance that his or her foe - no matter how far away - will be "pricked" by the Black Urchin and infected with its vile toxins.
+Каждый раз, когда владелец щита получает урон в бою, есть шанс, что его противник - независимо от расстояния - получит урон в ответ и будет заражён мерзкими токсинами.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Shield Bonus: +3
-Armor Bonus: +1 vs. missile weapons
-Special:
-  Retribution: 25% chance attacker will succumb to the effects of the spell Poison when struck (Fortitude DC 13)
-Armor Check Penalty:  -1
-Arcane Spell Failure:  15%
-Weight: 6 lb.~
-@10637    = ~Spiny Black Urchin +4~
-@10638    = ~Spiny Black Urchin is a shield of duergar manufacture, styled after the infamous blackblood urchins of the Underdark seas: it is of rusty black iron, its face studded with scores of corroded metal spines.
+Класс защиты: +3 (щит)
+Класс защиты: +1 против дальнобойного оружия
+Штраф к проверкам за броню: -1
+Шанс провала заклинания: 15%
+Особенности:
+ Возмездие: с вероятностью 25% нападавший будет поражён заклинанием "Яд" (УС спасброска стойкости равно 13)
+Вес: 6 фунтов~
+@10637    = ~Колючий чёрный ёж +4~
+@10638    = ~Колючий чёрный ёж - это щит, изготовленный дуэргарами и стилизованный под чернокровных ежей Андердарка. Он сделан ржавого чёрного железа, и его рабочая сторона утыкана множеством проржавевших металлических шипов.
 
-Each time the shield's bearer is struck in combat (melee only), there is a chance that his or her foe - no matter how far away - will be "pricked" by the Spiny Black Urchin and infected with its vile toxins.
+Каждый раз, когда владелец щита получает урон в бою, есть шанс, что его противник - независимо от расстояния - получит урон в ответ и будет заражён мерзкими токсинами.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Shield Bonus: +5
-Armor Bonus: +1 vs. missile weapons
-Special:
-  Retribution: 50% chance attacker will succumb to the effects of the spell Poison when struck (Fortitude DC 27)
-Armor Check Penalty:  -1
-Arcane Spell Failure:  5%
-Weight: 6 lb.~
-@10639    = ~Footman's Folly +1~
-@10640    = ~This small, smooth metal shield has been worn by warriors of the north for decades. For generations, it was given as a badge of honor to particularly valiant soldiers from Neverwinter. Unfortunately, the shield has an unlucky history. Many of its owners believed that the minor magical powers of the shield would protect them against overwhelming odds. The shield failed to live up to proud soldiers' expectations and, by legend, arrived with its current name.
+Класс защиты: +5 (щит)
+Класс защиты: +1 против дальнобойного оружия
+Штраф к проверкам за броню: -1
+Шанс провала заклинания: 5%
+Особенности:
+ Возмездие: с вероятностью 50% нападавший будет поражён заклинанием "Яд" (УС спасброска стойкости равно 27)
+Вес: 6 фунтов~
+@10639    = ~Глупость воина +1~
+@10640    = ~Этот небольшой гладкий металлический щит вот уже много лет носят различные воины севера. На протяжении многих поколений, он вручался в качестве знака почёта особенно доблестным солдатам Невервинтера. К сожалению, у этого щита несчастливая история: многие из его владельцев считали, что слабая магическая сила щита сможет защитить их от непосильных трудностей. Но щит не оправдывал их надежд и из-за этого получил своё нынешнее название.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Shield Bonus: +2
-Armor Bonus: +1 vs. missile weapons
-Armor Check Penalty:  -1
-Arcane Spell Failure:  5%
-Special:
-  Attack Bonus: +1
-Weight: 6 lb.~
-@10641    = ~Footman's Incredibly Ridiculous Folly +3~
-@10642    = ~This small, smooth metal shield has been worn by warriors of the north for decades. For generations, it was given as a badge of honor to particularly valiant soldiers from Neverwinter. Unfortunately, the shield has an unlucky history. Many of its owners believed that the minor magical powers of the shield would protect them against overwhelming odds. The shield failed to live up to proud soldiers' expectations and, by legend, arrived with its current name.
+Класс защиты: +2 (щит)
+Класс защиты: +1 против дальнобойного оружия
+Штраф к проверкам за броню: -1
+Шанс провала заклинания: 5%
+Особенности:
+ Атака: +1
+Вес: 6 фунтов~
+@10641    = ~Невероятная глупость воина +3~
+@10642    = ~Этот небольшой гладкий металлический щит вот уже много лет носят различные воины севера. На протяжении многих поколений, он вручался в качестве знака почёта особенно доблестным солдатам Невервинтера. К сожалению, у этого щита несчастливая история: многие из его владельцев считали, что слабая магическая сила щита сможет защитить их от непосильных трудностей. Но щит не оправдывал их надежд и из-за этого получил своё нынешнее название.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Shield Bonus: +4
-Armor Bonus: +1 vs. missile weapons
-Special: 
-  Attack Bonus: +3
-  Resistance: 5/- Magic Damage Resistance
-Armor Check Penalty:  -1
-Arcane Spell Failure:  5%
-Weight: 6 lb.~
-@10643    = ~Flank of the Virgin +1~
-@10644    = ~It is rare that the residents of the Ten-Towns willingly interfere in the affairs of the native barbarians. Occasionally, the townsmen cannot help but come across a landmark or religious site that the barbarians erected. Twenty years ago, Sammel Colger of Bremen was fishing near the Sea of Moving Ice when he discovered the remnants of a small barbarian ship. He was drawn to a particular piece of the hull that had a colorful painting on the side. As he pulled the wood from the water, a polar bear leapt up from the depths and struck at the young man's head. Instinctively, he pulled the wood towards his face. The bear's huge talons were deflected. Amazingly, the creature slipped and fell back into the cold water. Not hesitating to see what the bear would do, Sammel rushed back to his small ship and returned to Bremen. A priest of Tempus later told the young man that the painting was of a sacrificial virgin. He believed that the small boat must have drifted all the way from Maer Dualdon to the Sea of Moving Ice, where it was smashed to pieces. Sammel had the wood fashioned into a shield, which he took with him on his far-reaching fishing trips until the end of his days.
+Класс защиты: +4 (щит)
+Класс защиты: +1 против дальнобойного оружия
+Особенности:
+ Атака: +3
+ Сопротивление: 5/- сопротивления магическому урону
+Штраф к проверкам за броню: -1
+Шанс провала заклинания: 5%
+Вес: 6 фунтов~
+@10643    = ~Фланг Девы +1~
+@10644    = ~Жители Десяти Городов редко вмешиваются в дела местных варваров по своей воле. Однако, время от времени горожане не могут не наткнуться на воздвигнутые варварами сооружения или священные места. Двадцать лет назад, отправившись порыбачить на Море Движущихся Льдов, Саммель Колгер из Бремена обнаружил остов небольшого варварского корабля. Его внимание привлёк разрисованный обломок корпуса корабля. Когда он вытаскивал этот обломок из воды, из пучин выпрыгнул белый медведь, намереваясь напасть на молодого человека. Тот инстинктивно попробовал заслониться выловленным куском дерева, и смог отвести чудовищные медвежьи когти; медведь же, потеряв равновесие, упал в ледяную воду. Не желая знать, что медведь предпримет дальше, Саммель бросился к своему судёнышку и вернулся в Бремен. Позднее юноша узнал от жреца Темпуса, что на куске дерева была изображена жертвенная дева и что, должно быть, корабль принесло от самого Маэр Дуалдона к берегам Моря Движущихся Льдов, где он и разбился на куски. Саммель сделал из деревянного обломка щит, который он и брал с собой в дальние рыбацкие походы до конца своих дней.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Shield Bonus: +3
-Armor Check Penalty:  -2
-Arcane Spell Failure:  15%
-Special:
-  Dexterity: +2
-Weight: 15 lb.~
-@10645    = ~Blessed Flank of the Virgin +3~
-@10646    = ~It is rare that the residents of the Ten-Towns willingly interfere in the affairs of the native barbarians. Occasionally, the townsmen cannot help but come across a landmark or religious site that the barbarians erected. Twenty years ago, Sammel Colger of Bremen was fishing near the Sea of Moving Ice when he discovered the remnants of a small barbarian ship. He was drawn to a particular piece of the hull that had a colorful painting on the side. As he pulled the wood from the water, a polar bear leapt up from the depths and struck at the young man's head. Instinctively, he pulled the wood towards his face. The bear's huge talons were deflected. Amazingly, the creature slipped and fell back into the cold water. Not hesitating to see what the bear would do, Sammel rushed back to his small ship and returned to Bremen. A priest of Tempus later told the young man that the painting was of a sacrificial virgin. He believed that the small boat must have drifted all the way from Maer Dualdon to the Sea of Moving Ice, where it was smashed to pieces. Sammel had the wood fashioned into a shield, which he took with him on his far-reaching fishing trips until the end of his days.
+Класс защиты: +3 (щит)
+Штраф к проверкам за броню: -2
+Шанс провала заклинания: 15%
+Особенности:
+ Ловкость: +2
+Вес: 15 фунтов~
+@10645    = ~Благословенный фланг Девы +3~
+@10646    = ~Жители Десяти Городов редко вмешиваются в дела местных варваров по своей воле. Однако, время от времени горожане не могут не наткнуться на воздвигнутые варварами сооружения или священные места. Двадцать лет назад, отправившись порыбачить на Море Движущихся Льдов, Саммель Колгер из Бремена обнаружил остов небольшого варварского корабля. Его внимание привлёк разрисованный обломок корпуса корабля. Когда он вытаскивал этот обломок из воды, из пучин выпрыгнул белый медведь, намереваясь напасть на молодого человека. Тот инстинктивно попробовал заслониться выловленным куском дерева, и смог отвести чудовищные медвежьи когти; медведь же, потеряв равновесие, упал в ледяную воду. Не желая знать, что медведь предпримет дальше, Саммель бросился к своему судёнышку и вернулся в Бремен. Позднее юноша узнал от жреца Темпуса, что на куске дерева была изображена жертвенная дева и что, должно быть, корабль принесло от самого Маэр Дуалдона к берегам Моря Движущихся Льдов, где он и разбился на куски. Саммель сделал из деревянного обломка щит, который он и брал с собой в дальние рыбацкие походы до конца своих дней.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Shield Bonus: +5
-Armor Check Penalty:  -2
-Arcane Spell Failure:  15%
-Special:
-  Dexterity: +5
-Weight: 15 lb.~
+Класс защиты: +5 (щит)
+Штраф к проверкам за броню: -2
+Шанс провала заклинания: 15%
+Особенности:
+ Ловкость: +5
+Вес: 15 фунтов~
 @10647    = ~Myo-Myo's Gong +2~
 @10648    = ~Myo-Myo was a famous ghost hunter from T'u Lung in Kara Tur, and made her living by slaying or banishing all manner of demons and foul spirits. Myo-Myo's so-called gong is but one of her many pieces of fantastic equipment, a round black shield ringed with geometric patterns and infused with sacred power by the seven stone monks of Seven Stone Monk Temple. Once per day the shield's bearer may strike his or her weapon against Myo-Myo's gong, the resulting "CLASH!" sending out a wave of spiritual energy that rends at the forms of any evil creatures.
 
