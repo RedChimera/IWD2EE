@@ -3066,156 +3066,156 @@
 Особенности:
  Ловкость: +5
 Вес: 15 фунтов~
-@10647    = ~Myo-Myo's Gong +2~
-@10648    = ~Myo-Myo was a famous ghost hunter from T'u Lung in Kara Tur, and made her living by slaying or banishing all manner of demons and foul spirits. Myo-Myo's so-called gong is but one of her many pieces of fantastic equipment, a round black shield ringed with geometric patterns and infused with sacred power by the seven stone monks of Seven Stone Monk Temple. Once per day the shield's bearer may strike his or her weapon against Myo-Myo's gong, the resulting "CLASH!" sending out a wave of spiritual energy that rends at the forms of any evil creatures.
+@10647    = ~Гонг Мио-Мио +2~
+@10648    = ~Мио-Мио была известной охотницей на привидений из города Т'у Лунга, находящегося в Кара Туре. На жизнь она зарабатывала тем, что истребляла или изгоняла всевозможных демонов и злых духов. Так называемый "Гонг Мио-Мио" - один из немногих предметов её фантастического снаряжения - представляет из себя круглый чёрный щит, поверхность которого покрыта геометрическим узором. Этот щит также напитан силой семи каменных монахов из Монастыря Семи Каменных Монахов. Раз в день владелец щита может ударить своим оружием по "гонгу", в результате чего щит посылает волну духовной энергии, которая может разорвать любые формы злых существ.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Shield Bonus: +4
-Special:
-  Spell Power: Can cast the spell Holy Smite (at level 10) 1/day
-Armor Check Penalty:  -2
-Arcane Spell Failure:  15%
-Weight: 15 lb.~
-@10649    = ~Myo-Myo's Holy Gong +4~
-@10650    = ~Myo-Myo was a famous ghost hunter from T'u Lung in Kara Tur, and made her living by slaying or banishing all manner of demons and foul spirits. Myo-Myo's so-called gong is but one of her many pieces of fantastic equipment, a round black shield ringed with geometric patterns and infused with sacred power by the seven stone monks of Seven Stone Monk Temple. Ten times per day the shield's bearer may strike his or her weapon against Myo-Myo's gong, the resulting "CLASH!" sending out a wave of spiritual energy that rends at the forms of any evil creature.
+Класс защиты: +4 (щит)
+Особенности:
+ Заклинание: владелец может раз в день прочитать заклинание "Святой удар", как заклинатель десятого уровня
+Штраф к проверкам за броню: -2
+Шанс провала заклинания: 15%
+Вес: 15 фунтов~
+@10649    = ~Святой гонг Мио-Мио +4~
+@10650    = ~Мио-Мио была известной охотницей на привидений из города Т'у Лунга, находящегося в Кара Туре. На жизнь она зарабатывала тем, что истребляла или изгоняла всевозможных демонов и злых духов. Так называемый "Гонг Мио-Мио" - один из немногих предметов её фантастического снаряжения - представляет из себя круглый чёрный щит, поверхность которого покрыта геометрическим узором. Этот щит также напитан силой семи каменных монахов из Монастыря Семи Каменных Монахов. Раз в день владелец щита может ударить своим оружием по "гонгу", в результате чего щит посылает волну духовной энергии, которая может разорвать любые формы злых существ.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Shield Bonus: +6
-Special:
-  Spell Power: Can cast the spell Holy Smite (at level 25) 10/day
-Armor Check Penalty:  -2
-Arcane Spell Failure:  15%
-Weight: 15 lb.~
-@10651    = ~Red Fang's Tomb +5~
-@10652    = ~This red iron tower shield reaches nearly from the chin to the toe of the user. It is heavy even for a shield of its size, much of the weight coming from a large sculpted dragon's head set into its face - the head, wrought in the same red metal as the rest of the shield, protrudes almost like a gargoyle from a castle wall.
+Класс защиты: +6 (щит)
+Особенности:
+ Заклинание: владелец может раз в день прочитать заклинание "Святой удар", как заклинатель 25-ого уровня
+Штраф к проверкам за броню: -2
+Шанс провала заклинания: 15%
+Вес: 15 фунтов~
+@10651    = ~Склеп Красного Клыка +5~
+@10652    = ~Этот осадный щит, выкованный из красного железа, доходит до подбородка воина среднего роста. Он тяжёл, даже для щита такого размера - большая часть веса приходится на скульптурную голову дракона, вделанную в рабочую часть щита. Эта голова, выкованная из того же красного железа, что и остальная часть щита, выступает, как горгулья из крепостной стены.
 
-The head is the likeness of Red Fang, one-time mount of a tyrannical warrior-king from a land long ago forgotten. When Red Fang was slain in battle, the warrior-king had the beast's soul bound to this shield so that the faithful dragon could still accompany him into battle. Once per day Red Fang's iron head can breathe a cone of searing flame at the shield-bearer's command.
+Голова дракона сделана по подобию головы Красного Клыка - боевого дракона одного жестокого короля-воин из забытой страны. Когда Красный Клык пал в битве, король заточил душу зверя в этот щит, чтобы верный дракон мог и дальше сопровождать своего господина. Раз в день железная голова Красного Клыка по призыву своего хозяина способна изрыгнуть струю обжигающего пламени.
 
-The warrior-king was eventually slain himself by a trio of brave heroes. Though his shield has been sighted numerous times throughout the realms, his great horned helm and mighty golden axe have yet to be rediscovered.
+В конце концов король-воин был убит троицей отважных героев. Хотя его щит с тех пор неоднократно видели по всем королевствам, его большой рогатый шлем и огромный золотой топор до сих пор не найдены.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Shield Bonus: +9
-Armor Bonus: +1 vs. missile weapons
-Special:
-  Resistance: 20/- fire resistance
-  Red Fang's Breath: Once per day, can breathe fire in a large cone, dealing 10d6 fire damage (Reflex DC 25 for half)
-  Attack Penalty: -2
-Armor Check Penalty:  -10
-Arcane Spell Failure:  50%
-Weight: 30 lb.~
-@10653    = ~The Death-Adder's Dragon Shield +8~
-@10654    = ~This red iron tower shield reaches nearly from the chin to the toe of the user. It is heavy even for a shield of its size, much of the weight coming from a large sculpted dragon's head set into its face - the head, wrought in the same red metal as the rest of the shield, protrudes almost like a gargoyle from a castle wall.
+Класс защиты: +9 (щит)
+Класс защиты: +1 против дальнобойного оружия
+Особенности:
+ Сопротивление: 20/- сопротивления огню
+ Дыхание Красного Клыка: носитель щита может раз в день выдыхать огонь в большом конусе, нанося 10d6 урона огнем (успешный спасбросок реакции с УС 25 позволяет получить лишь половину урона)
+ Атака: -2
+Штраф к проверкам за броню: -10
+Шанс провала заклинания: 50%
+Вес: 30 фунтов~
+@10653    = ~Драконий щит Губителя +8~
+@10654    = ~Этот осадный щит, выкованный из красного железа, доходит до подбородка воина среднего роста. Он тяжёл, даже для щита такого размера - большая часть веса приходится на скульптурную голову дракона, вделанную в рабочую часть щита. Эта голова, выкованная из того же красного железа, что и остальная часть щита, выступает, как горгулья из крепостной стены.
 
-The head is the likeness of Red Fang, one-time mount of a tyrannical warrior-king from a land long ago forgotten. When Red Fang was slain in battle, the warrior-king had the beast's soul bound to this shield so that the faithful dragon could still accompany him into battle. Once per day Red Fang's iron head can breathe a gout of searing flame at the shield-bearer's command.
+Голова дракона сделана по подобию головы Красного Клыка - боевого дракона одного жестокого короля-воин из забытой страны. Когда Красный Клык пал в битве, король заточил душу зверя в этот щит, чтобы верный дракон мог и дальше сопровождать своего господина. Раз в день железная голова Красного Клыка по призыву своего хозяина способна изрыгнуть струю обжигающего пламени.
 
-The warrior-king was eventually slain himself by a trio of brave heroes. Though his shield has been sighted numerous times throughout the realms, his great horned helm and mighty golden axe have yet to be rediscovered.
+В конце концов король-воин был убит троицей отважных героев. Хотя его щит с тех пор неоднократно видели по всем королевствам, его большой рогатый шлем и огромный золотой топор до сих пор не найдены.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Shield Bonus: +12
-Armor Bonus: +1 vs. missile weapons
-Special:
-  Resistance: 30/- fire resistance
-  Red Fang's Breath: Once per day, can breathe fire in a large cone, dealing 25d6 fire damage (Reflex DC 40 for half)
-  Attack Penalty: -2
-Armor Check Penalty:  -10
-Arcane Spell Failure:  50%
-Weight: 30 lb.~
-@10655    = ~Cliffs of Targos +1~
+Класс защиты: +12 (щит)
+Класс защиты: +1 против дальнобойного оружия
+Особенности:
+ Сопротивление: 30/- сопротивления огню
+ Дыхание Красного Клыка: носитель щита может раз в день выдыхать огонь в большом конусе, нанося 25d6 урона огнем (успешный спасбросок реакции с УС 40 позволяет получить лишь половину урона)
+ Атака: -2
+Штраф к проверкам за броню: -10
+Шанс провала заклинания: 50%
+Вес: 30 фунтов~
+@10655    = ~Утёсы Таргоса +1~
 //@10656    = ~Item description can remain the same; if new description is needed put it here~
-@10657    = ~Cliffs over Maer Dualdon +3~
+@10657    = ~Скалы над Маэр Дуалдоном +3~
 //@10658    = ~Item description can remain the same; if new description is needed put it here~
-@10659    = ~Knucklehead +2~
-@10660    = ~This amazing ivory-white buckler has been carved from the head of a giant knucklehead trout. It is sturdy as bone, and light as well, and it makes an effective shield. The craftsmanship of the buckler is truly extraordinary, and the worker's symbol inscribed at the bottom spells out the name, "Apsel."  Due to its natural origins, this buckler may be used by druids.
+@10659    = ~Круглоголовик +2~
+@10660    = ~Этот удивительный баклер цвета слоновой кости был вырезан из черепа огромной круглоголовой форели. Он прочный и лёгкий, а потому очень хорош для активной защиты. Сразу видно, что над этим баклером трудился настоящий мастер. На нижней части щита выбиты сложенные в имя создателя символы: "Апсель". Благодаря своему природному происхождения, этот щит может быть использован друидами.
 
-The temptation to go 'knuck, knuck, knuck' while wearing this shield is extremely high. 
+Трудно устоять перед искушением постучать костяшками пальцев о поверхность этого баклера и вызвать гулкий отзвук.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Shield Bonus:  +3
-Armor Check Penalty:  -1
-Arcane Spell Failure:  5%
-Weight:  2 lb.~
-@10661    = ~Apsel's Rolly-Polly Knuckledheaded Shield +4~
-@10662    = ~This amazing ivory-white buckler has been carved from the head of a giant knucklehead trout. It is sturdy as bone, and light as well, and it makes an effective shield. The craftsmanship of the buckler is truly extraordinary, and the worker's symbol inscribed at the bottom spells out the name, "Apsel."  Due to its natural origins, this buckler may be used by druids.
+Класс защиты: +3 (щит)
+Штраф к проверкам за броню: -1
+Шанс провала заклинания: 5%
+Вес: 2 фунта~
+@10661    = ~Щит Апселя из круглоголовой форели +4~
+@10662    = ~Этот удивительный баклер цвета слоновой кости был вырезан из черепа огромной круглоголовой форели. Он прочный и лёгкий, а потому очень хорош для активной защиты. Сразу видно, что над этим баклером трудился настоящий мастер. На нижней части щита выбиты сложенные в имя создателя символы: "Апсель". Благодаря своему природному происхождения, этот щит может быть использован друидами.
 
-The temptation to go 'knuck, knuck, knuck' while wearing this shield is extremely high. 
+Трудно устоять перед искушением постучать костяшками пальцев о поверхность этого баклера и вызвать гулкий отзвук.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Shield Bonus:  +5
-Armor Check Penalty:  -1
-Arcane Spell Failure:  5%
-Weight:  2 lb.~
-@10663    = ~Sad Giant's Cap +3~
-@10664    = ~This bent-looking buckler was fashioned as a replacement kneecap for a deaf-mute stone giant named Gohji who lived in the Sunset Mountains many decades ago. Gohji was a peaceful sort, avoiding trouble when he could and only occasionally straying from his cave to gather new stones to shore up his home and forage for food. It was during one of his foraging expeditions that he surprised a group of dwarven miners of the Brueghor Clan who were new to the region. Before Gohji could raise his hands to show he meant them no harm, an enchanted warhammer shattered his knee, causing him to plummet to the ground. When the dwarves advanced to finish him off, they were brought up short by the giant's tears and they found they could not bear to kill their now-helpless foe. They brought a healer to mend his wounds, and then took Gohji (now dubbed the "Sad Giant") back to his cave. Over the next several weeks, the dwarves brought him food and forged a magical cap for his knee to help him walk again - they called it the "Sad Giant's Cap," and the friendship between the Brueghor Clan and Gohji was mortared in history. 
+Класс защиты: +5 (щит)
+Штраф к проверкам за броню: -1
+Шанс провала заклинания: 5%
+Вес: 2 фунта~
+@10663    = ~Наколенник грустного гиганта +3~
+@10664    = ~Этот помятый баклер изначально служил наколенником для глухонемого каменного великана по имени Гохджи, который много десятилетий назад жил на склонах Закатных гор. Надо сказать, что Гохджи не был злобным великаном: напротив, он всегда старался избегать неприятностей и лишь иногда выходил из своей пещеры, чтобы набрать камней для укрепления своего дома или раздобыть себе еды. Именно во время одной из таких вылазок великан сильно напугал группу дварфов-шахтёров из клана Бруэгор, недавно прибывших в эту местность. Не успел Гохджи поднять руки в знак мирных намерений, как зачарованный молот разбил ему колено, отчего великан упал на землю. Дварфы двинулись вперёд, чтобы добить поверженного врага, но их остановили слёзы гиганта - они поняли, что не смогут убить беспомощного врага. Вместо этого они привели лекаря, чтобы тот залечил раны, а затем помогли Гохджи (получившему прозвище "Грустный гигант") добраться до его пещеры. В течении следующих недель дварфы приносили великану еду и выковали ему волшебный наколенник, чтобы тот мог снова ходить. Они назвали изделие "наколенником грустного гиганта". С тех пор зародилась дружба между дварфами клана Бруэгор и великаном Гохджи.
 
-Gohji and many of the Brueghor Clan were eventually slain during an invasion of gnolls and ogres into the Sunset Mountains, and the Sad Giant's Cap was pried from his bloody body by the gnolls of the Burning Eye Clan. The cap has resurfaced in the North in the hands of a merchant from Bremen, kept as a novelty, and then was lost again when goblinoids sacked Bremen and advanced south to Targos. 
+В конечно счёте Гохджи и множество дварфов клана Бруэгор были убиты во время вторжения гноллов и огров в Закатные горы. Наколенник был снят с окровавленного тела великана и стал частью добычи гноллов из клана Жгучего Глаза. Позже наколенник попал на север, в руки бременских торговцев, но вновь утерян, когда гоблиноиды напали на Бремен а затем пошли дальше на юг к Таргосу.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Shield Bonus:  +4
-Armor Check Penalty:  -1
-Arcane Spell Failure:  5%
-Weight:  3 lb.~
-@10665    = ~Sad Gohji's Cap +5~
-@10666    = ~This bent-looking buckler was fashioned as a replacement kneecap for a deaf-mute stone giant named Gohji who lived in the Sunset Mountains many decades ago. Gohji was a peaceful sort, avoiding trouble when he could and only occasionally straying from his cave to gather new stones to shore up his home and forage for food. It was during one of his foraging expeditions that he surprised a group of dwarven miners of the Brueghor Clan who were new to the region. Before Gohji could raise his hands to show he meant them no harm, an enchanted warhammer shattered his knee, causing him to plummet to the ground. When the dwarves advanced to finish him off, they were brought up short by the giant's tears and they found they could not bear to kill their now-helpless foe. They brought a healer to mend his wounds, and then took Gohji (now dubbed the "Sad Giant") back to his cave. Over the next several weeks, the dwarves brought him food and forged a magical cap for his knee to help him walk again - they called it the "Sad Gohji's Cap," and the friendship between the Brueghor Clan and Gohji was mortared in history. 
+Класс защиты: +4 (щит)
+Штраф к проверкам за броню: -1
+Шанс провала заклинания: 5%
+Вес: 3 фунта~
+@10665    = ~Наколенник грустного Гохджи +5~
+@10666    = ~Этот помятый баклер изначально служил наколенником для глухонемого каменного великана по имени Гохджи, который много десятилетий назад жил на склонах Закатных гор. Надо сказать, что Гохджи не был злобным великаном: напротив, он всегда старался избегать неприятностей и лишь иногда выходил из своей пещеры, чтобы набрать камней для укрепления своего дома или раздобыть себе еды. Именно во время одной из таких вылазок великан сильно напугал группу дварфов-шахтёров из клана Бруэгор, недавно прибывших в эту местность. Не успел Гохджи поднять руки в знак мирных намерений, как зачарованный молот разбил ему колено, отчего великан упал на землю. Дварфы двинулись вперёд, чтобы добить поверженного врага, но их остановили слёзы гиганта - они поняли, что не смогут убить беспомощного врага. Вместо этого они привели лекаря, чтобы тот залечил раны, а затем помогли Гохджи (получившему прозвище "Грустный гигант") добраться до его пещеры. В течении следующих недель дварфы приносили великану еду и выковали ему волшебный наколенник, чтобы тот мог снова ходить. Они назвали изделие "наколенником грустного гиганта". С тех пор зародилась дружба между дварфами клана Бруэгор и великаном Гохджи.
 
-Gohji and many of the Brueghor Clan were eventually slain during an invasion of gnolls and ogres into the Sunset Mountains, and the Sad Giant's Cap was pried from his bloody body by the gnolls of the Burning Eye Clan. The cap has resurfaced in the North in the hands of a merchant from Bremen, kept as a novelty, and then was lost again when goblinoids sacked Bremen and advanced south to Targos. 
+В конечно счёте Гохджи и множество дварфов клана Бруэгор были убиты во время вторжения гноллов и огров в Закатные горы. Наколенник был снят с окровавленного тела великана и стал частью добычи гноллов из клана Жгучего Глаза. Позже наколенник попал на север, в руки бременских торговцев, но вновь утерян, когда гоблиноиды напали на Бремен а затем пошли дальше на юг к Таргосу.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Shield Bonus:  +6
-Armor Check Penalty:  -1
-Arcane Spell Failure:  5%
-Weight:  3 lb.~
+Класс защиты: +6 (щит)
+Штраф к проверкам за броню: -1
+Шанс провала заклинания: 5%
+Вес: 3 фунта~
 //@10667    = ~Tabard's Shield~
-@10668    = ~This shield bears the symbol of a half-moon on its face, and it is surprisingly light and easy to hold. It is obvious a great deal of care went into its construction, and it looks like it has never seen battle.
+@10668    = ~На этом удивительно лёгком щите нарисован полумесяц. Видно, что щит был выкован с большим старанием и ещё ни разу не бывал в бою.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Shield Bonus: +3
-Armor Bonus:  +1 vs. missile weapons
-Armor Check Penalty:  -2
-Arcane Spell Failure:  15%
-Weight: 10 lb.~
-@10669    = ~Mooncalf's Shield~
-@10670    = ~This shield bears the symbol of a half-moon on its face, and it is surprisingly light and easy to hold. It is obvious a great deal of care went into its construction, and it looks like it has never seen battle.
+Класс защиты: +3 (щит)
+Класс защиты: +1 против дальнобойного оружия
+Штраф к проверкам за броню: -2
+Шанс провала заклинания: 15%
+Вес: 10 фунтов~
+@10669    = ~Щит Лунного Тельца~
+@10670    = ~На этом удивительно лёгком щите нарисован полумесяц. Видно, что щит был выкован с большим старанием и ещё ни разу не бывал в бою.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Shield Bonus: +6
-Armor Bonus:  +1 vs. missile weapons
-Special:  
-  Constant Effect:  User under the effect of the spell Protection from Arrows while equipped
-Armor Check Penalty:  -2
-Arcane Spell Failure:  15%
-Weight: 10 lb.~
-@10671    = ~Shield of Fortitude +2~
-@10672    = ~Duergar master artisans forged this shield of dull gray steel. Invigorating energy pulses through the shield and into the wielder, steeling him or her for battle.
+Класс защиты: +6 (щит)
+Класс защиты: +1 против дальнобойного оружия
+Особенности:
+ Постоянный эффект: на владельца действует эффект заклинания "Защита от стрел"
+Штраф к проверкам за броню: -2
+Шанс провала заклинания: 15%
+Вес: 10 фунтов~
+@10671    = ~Щит стойкости +2~
+@10672    = ~Дуэргарские мастера выковали этот щит из серой стали. Живительная энергия пронизывает щит и передаётся его владельцу, придавая решимости в битве.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Shield Bonus: +4
-Special:
-  Hit Point Bonus: +15 to Max Hit Points
-Armor Check Penalty:  -2
-Arcane Spell Failure:  15%
-Weight: 15 lb.~
-@10673    = ~Shield of Duergar Fortitude +4~
-@10674    = ~Duergar master artisans forged this shield of dull gray steel. Invigorating energy pulses through the shield and into the wielder, steeling him or her for battle.
+Класс защиты: +4 (щит)
+Особенности:
+ Дополнительные пункты здоровья: +15 к максимуму пунктов здоровья
+Штраф к проверкам за броню: -2
+Шанс провала заклинания: 15%
+Вес: 15 фунтов~
+@10673    = ~Щит стойкости дуэргара +4~
+@10674    = ~Дуэргарские мастера выковали этот щит из серой стали. Живительная энергия пронизывает щит и передаётся его владельцу, придавая решимости в битве.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Shield Bonus: +6
-Special:
-  Hit Point Bonus: +30 to Max Hit Points
-Armor Check Penalty:  -2
-Arcane Spell Failure:  15%
-Weight: 15 lb.~
+Класс защиты: +6 (щит)
+Особенности:
+ Дополнительные пункты здоровья: +30 пунктов здоровья
+Штраф к проверкам за броню: -2
+Шанс провала заклинания: 15%
+Вес: 15 фунтов~
 
 
 //@10675    = ~Dagger~
