@@ -3038,11 +3038,11 @@
 
 Класс защиты: +4 (щит)
 Класс защиты: +1 против дальнобойного оружия
+Штраф к проверкам за броню: -1
+Шанс провала заклинания: 5%
 Особенности:
  Атака: +3
  Сопротивление: 5/- сопротивления магическому урону
-Штраф к проверкам за броню: -1
-Шанс провала заклинания: 5%
 Вес: 6 фунтов~
 @10643    = ~Фланг Девы +1~
 @10644    = ~Жители Десяти Городов редко вмешиваются в дела местных варваров по своей воле. Однако, время от времени горожане не могут не наткнуться на воздвигнутые варварами сооружения или священные места. Двадцать лет назад, отправившись порыбачить на Море Движущихся Льдов, Саммель Колгер из Бремена обнаружил остов небольшого варварского корабля. Его внимание привлёк разрисованный обломок корпуса корабля. Когда он вытаскивал этот обломок из воды, из пучин выпрыгнул белый медведь, намереваясь напасть на молодого человека. Тот инстинктивно попробовал заслониться выловленным куском дерева, и смог отвести чудовищные медвежьи когти; медведь же, потеряв равновесие, упал в ледяную воду. Не желая знать, что медведь предпримет дальше, Саммель бросился к своему судёнышку и вернулся в Бремен. Позднее юноша узнал от жреца Темпуса, что на куске дерева была изображена жертвенная дева и что, должно быть, корабль принесло от самого Маэр Дуалдона к берегам Моря Движущихся Льдов, где он и разбился на куски. Саммель сделал из деревянного обломка щит, который он и брал с собой в дальние рыбацкие походы до конца своих дней.
@@ -3072,10 +3072,10 @@
 ПАРАМЕТРЫ:
 
 Класс защиты: +4 (щит)
-Особенности:
- Заклинание: владелец может раз в день прочитать заклинание "Святой удар", как заклинатель десятого уровня
 Штраф к проверкам за броню: -2
 Шанс провала заклинания: 15%
+Особенности:
+ Заклинание: владелец может раз в день прочитать заклинание "Святой удар", как заклинатель десятого уровня
 Вес: 15 фунтов~
 @10649    = ~Святой гонг Мио-Мио +4~
 @10650    = ~Мио-Мио была известной охотницей на привидений из города Т'у Лунга, находящегося в Кара Туре. На жизнь она зарабатывала тем, что истребляла или изгоняла всевозможных демонов и злых духов. Так называемый "Гонг Мио-Мио" - один из немногих предметов её фантастического снаряжения - представляет из себя круглый чёрный щит, поверхность которого покрыта геометрическим узором. Этот щит также напитан силой семи каменных монахов из Монастыря Семи Каменных Монахов. Раз в день владелец щита может ударить своим оружием по "гонгу", в результате чего щит посылает волну духовной энергии, которая может разорвать любые формы злых существ.
@@ -3083,10 +3083,10 @@
 ПАРАМЕТРЫ:
 
 Класс защиты: +6 (щит)
-Особенности:
- Заклинание: владелец может раз в день прочитать заклинание "Святой удар", как заклинатель 25-ого уровня
 Штраф к проверкам за броню: -2
 Шанс провала заклинания: 15%
+Особенности:
+ Заклинание: владелец может раз в день прочитать заклинание "Святой удар", как заклинатель 25-ого уровня
 Вес: 15 фунтов~
 @10651    = ~Склеп Красного Клыка +5~
 @10652    = ~Этот осадный щит, выкованный из красного железа, доходит до подбородка воина среднего роста. Он тяжёл, даже для щита такого размера - большая часть веса приходится на скульптурную голову дракона, вделанную в рабочую часть щита. Эта голова, выкованная из того же красного железа, что и остальная часть щита, выступает, как горгулья из крепостной стены.
@@ -3099,12 +3099,12 @@
 
 Класс защиты: +9 (щит)
 Класс защиты: +1 против дальнобойного оружия
+Штраф к проверкам за броню: -10
+Шанс провала заклинания: 50%
 Особенности:
  Сопротивление: 20/- сопротивления огню
  Дыхание Красного Клыка: носитель щита может раз в день выдыхать огонь в большом конусе, нанося 10d6 урона огнем (успешный спасбросок реакции с УС 25 позволяет получить лишь половину урона)
  Атака: -2
-Штраф к проверкам за броню: -10
-Шанс провала заклинания: 50%
 Вес: 30 фунтов~
 @10653    = ~Драконий щит Губителя +8~
 @10654    = ~Этот осадный щит, выкованный из красного железа, доходит до подбородка воина среднего роста. Он тяжёл, даже для щита такого размера - большая часть веса приходится на скульптурную голову дракона, вделанную в рабочую часть щита. Эта голова, выкованная из того же красного железа, что и остальная часть щита, выступает, как горгулья из крепостной стены.
@@ -3117,12 +3117,12 @@
 
 Класс защиты: +12 (щит)
 Класс защиты: +1 против дальнобойного оружия
+Штраф к проверкам за броню: -10
+Шанс провала заклинания: 50%
 Особенности:
  Сопротивление: 30/- сопротивления огню
  Дыхание Красного Клыка: носитель щита может раз в день выдыхать огонь в большом конусе, нанося 25d6 урона огнем (успешный спасбросок реакции с УС 40 позволяет получить лишь половину урона)
  Атака: -2
-Штраф к проверкам за броню: -10
-Шанс провала заклинания: 50%
 Вес: 30 фунтов~
 @10655    = ~Утёсы Таргоса +1~
 //@10656    = ~Item description can remain the same; if new description is needed put it here~
@@ -3189,10 +3189,10 @@
 
 Класс защиты: +6 (щит)
 Класс защиты: +1 против дальнобойного оружия
-Особенности:
- Постоянный эффект: на владельца действует эффект заклинания "Защита от стрел"
 Штраф к проверкам за броню: -2
 Шанс провала заклинания: 15%
+Особенности:
+ Постоянный эффект: на владельца действует эффект заклинания "Защита от стрел"
 Вес: 10 фунтов~
 @10671    = ~Щит стойкости +2~
 @10672    = ~Дуэргарские мастера выковали этот щит из серой стали. Живительная энергия пронизывает щит и передаётся его владельцу, придавая решимости в битве.
@@ -3200,10 +3200,10 @@
 ПАРАМЕТРЫ:
 
 Класс защиты: +4 (щит)
-Особенности:
- Дополнительные пункты здоровья: +15 к максимуму пунктов здоровья
 Штраф к проверкам за броню: -2
 Шанс провала заклинания: 15%
+Особенности:
+ Дополнительные пункты здоровья: +15 к максимуму пунктов здоровья
 Вес: 15 фунтов~
 @10673    = ~Щит стойкости дуэргара +4~
 @10674    = ~Дуэргарские мастера выковали этот щит из серой стали. Живительная энергия пронизывает щит и передаётся его владельцу, придавая решимости в битве.
@@ -3211,10 +3211,10 @@
 ПАРАМЕТРЫ:
 
 Класс защиты: +6 (щит)
-Особенности:
- Дополнительные пункты здоровья: +30 пунктов здоровья
 Штраф к проверкам за броню: -2
 Шанс провала заклинания: 15%
+Особенности:
+ Дополнительные пункты здоровья: +30 пунктов здоровья
 Вес: 15 фунтов~
 
 
@@ -3227,56 +3227,56 @@
 //@10681    = ~Dagger +2~
 //@10682    = ~Item description can remain the same; if new description is needed put it here~
 //@10683    = ~Dagger +2, Longtooth~
-@10684    = ~Daggers of this type are very uncommon and are mostly used by specialists. They are easily identified as they are much longer than ordinary daggers.
+@10684    = ~Подобные кинжалы встречаются редко, пользуются ими в основном профессионалы. Их отличает длина, существенно большая, чем у обычных кинжалов.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d6 + 2
-Attack Bonus:  +2 
-Enchantment:  +2
-Damage Type:  Piercing
-Special:
-  This weapon can reach out and attack at a range of 10 (a normal dagger has a reach of 0, a long sword has a reach of 1, and a two-handed sword has a reach of 2).
-Weight: 2 lb.
-Feat Requirement:  Simple Weapon, Small Blade
-Type:  One-handed~
+Урон: 1d6+2
+Атака: +2
+Зачарование: +2
+Тип урона: колющий
+Особенности:
+ Это оружие может доставать врага и атаковать, соответственно, на расстоянии 10 (у обычного кинжала, это расстояние - 0, у длинного меча - 1, а у двуручного - 2)
+Вес: 2 фунта
+Необходимая черта: Простое оружие, Короткие клинки
+Тип: одноручное~
 //@10685    = ~Throwing Dagger~
 //@10686    = ~Item description can remain the same; if new description is needed put it here~
 //@10687    = ~Returning Fire Dagger +1~
-@10688    = ~The typical throwing dagger has a pointed, usually double-edged blade, as opposed to a knife, which has a single edge and is a bit shorter than the dagger. Unlike a dagger, this one has a smaller handle and is balanced differently. Runes of power have been etched into the blade and glow ominously.
+@10688    = ~У типичного метательного кинжала лезвие заострённое, двустороннее, в отличие от ножа, имеющего одностороннее и более короткое лезвие. От кинжалов он отличается более короткой рукояткой; кроме того, метательные ножи иначе сбалансированы. На лезвии вытравлены усиливающие руны, которые грозно светятся.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d4 + 1
-Attack Bonus: +1 
-Enchantment:  +1
-Damage Type: Missile (piercing)
-Damage Type: Melee (piercing)
-Special: 
-  Returning: Returns to user
-  Flame: +1d4 fire damage
-Weight: 0 lb.
-Feat Requirement:  Simple Weapon, Small Blade
-Type:  One-handed~
-@10689    = ~Returning Stunning Dagger +2~
-@10690    = ~The typical throwing dagger has a pointed, usually double-edged blade, as opposed to a knife, which has a single edge and is a bit shorter than the dagger. Unlike a dagger, this one has a smaller handle and is balanced differently. Runes of power have been  etched into the blade and glow ominously.
+Урон: 1d4+1
+Атака: +1
+Зачарование: +1
+Тип урона: метательный (колющий)
+Тип урона: ближний бой (колющий)
+Особенности:
+ Возвращение: возвращается к хозяину
+ Пламя: +1d4 очков урона огнём
+Вес: 0 фунтов
+Необходимая черта: Простое оружие, Короткие клинки
+Тип: одноручное~
+@10689    = ~Возвращающийся ошеломляющий кинжал +2~
+@10690    = ~У типичного метательного кинжала лезвие заострённое, двустороннее, в отличие от ножа, имеющего одностороннее и более короткое лезвие. От кинжалов он отличается более короткой рукояткой; кроме того, метательные ножи иначе сбалансированы. На лезвии вытравлены усиливающие руны, которые грозно светятся.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d4 + 2
-Attack Bonus:  +2 
-Enchantment:  +2
-Damage Type: Missile (piercing)
-Damage Type: Melee (piercing)
-Special: 
-  Returning: Returns to user
-  Stunning: 25% chance target is stunned for 1/2 round (Fortitude DC 18).
-Weight: 0 lb.
-Feat Requirement:  Simple Weapon, Small Blade
-Type:  One-handed~
+Урон: 1d4+2
+Атака: +2
+Зачарование: +2
+Тип урона: метательный (колющий)
+Тип урона: ближний бой (колющий)
+Особенности:
+ Возвращение: возвращается к хозяину
+ Ошеломление: с вероятностью 25% ошеломляет цель на 1/2 раунда (успешный спасбросок стойкости с УС 18 отменяет эффект)
+Вес: 0 фунтов
+Необходимая черта: Простое оружие, Короткие клинки
+Тип: одноручное~
 //@10691    = ~Acid Tipped Throwing Dagger~
 //@10692    = ~Item description can remain the same; if new description is needed put it here~
-@10693    = ~Throwing Dagger +2~
+@10693    = ~Метательный кинжал +2~
 //@10694    = ~Item description can remain the same; if new description is needed put it here~
 //@10695    = ~Throwing Dagger +1~
 //@10696    = ~Item description can remain the same; if new description is needed put it here~
@@ -3289,291 +3289,291 @@ Type:  One-handed~
 //@10703    = ~Dagger +3~
 //@10704    = ~Item description can remain the same; if new description is needed put it here~
 //@10705    = ~Viper's Fang +2~
-@10706    = ~The typical dagger has a pointed, usually double-edged blade, as opposed to a knife, which has a single edge and is a bit shorter than the dagger. 
+@10706    = ~У типичного кинжала обычно обоюдоострое лезвие с заточённым концом в отличие от ножа, который имеет одностороннюю заточку и несколько короче.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d4 + 2
-Attack Bonus:  +2 
-Enchantment:  +2
-Damage Type:  Piercing
-Special:
-  Venom: +2 points of poison damage every second for 6 seconds (Fortitude DC 18 + twice the wielder's Dexterity bonus)
-Weight: 1 lb.
-Feat Requirement:  Simple Weapon, Small Blade
-Type:  One-handed~
+Урон: 1d4+2
+Атака: +2
+Зачарование: +2
+Тип урона: колющий
+Особенности:
+ Яд: +2 очка урона ядом каждую секунду в течение 6 секунд (успешный спасбросок стойкости с УС = (18 + двойной модификатор ловкости владельца кинжала) отменяет эффект)
+Вес: 1 фунт
+Необходимая черта: Простое оружие, Короткие клинки
+Тип: одноручное~
 //@10707    = ~Ice Pick +1~
-@10708    = ~The typical dagger has a pointed, usually double-edged blade, as opposed to a knife, which has a single edge and is a bit shorter than the dagger. 
+@10708    = ~У типичного кинжала обычно обоюдоострое лезвие с заточённым концом в отличие от ножа, который имеет одностороннюю заточку и несколько короче.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d4 + 1
-Attack Bonus: +1 
-Enchantment:  +1
-Damage Type:  Piercing
-Special:
-  Frost: +1d6 cold damage
-Weight: 1 lb.
-Feat Requirement:  Simple Weapon, Small Blade
-Type:  One-handed~
-@10709    = ~Vampire's Fang +4~
-@10710    = ~The typical dagger has a pointed, usually double-edged blade, as opposed to a knife, which has a single edge and is a bit shorter than the dagger. 
+Урон: 1d4+1
+Атака: +1
+Зачарование: +1
+Тип урона: колющий
+Особенности:
+ Стужа: +1d6 урона холодом
+Вес: 1 фунт
+Необходимая черта: Простое оружие, Короткие клинки
+Тип: одноручное~
+@10709    = ~Клык вампира +4~
+@10710    = ~У типичного кинжала обычно обоюдоострое лезвие с заточённым концом в отличие от ножа, который имеет одностороннюю заточку и несколько короче.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d4 + 4
-Attack Bonus:  +4
-Enchantment:  +4
-Damage Type:  Piercing
-Special:
-  Vampiric: 2d4 hit points drained from target and temporarily added to wielder (Fortitude DC 30 save for none)
-Weight: 1 lb.
-Feat Requirement:  Simple Weapon, Small Blade
-Type:  One-handed~
-@10711    = ~Dagger of Speed +1~
-@10712    = ~The typical dagger has a pointed, usually double-edged blade, as opposed to a knife, which has a single edge and is a bit shorter than the dagger. 
+Урон: 1d4+4
+Атака: +4
+Зачарование: +4
+Тип урона: колющий
+Особенности:
+ Вампиризм: при попадании в цель отнимет у жертвы 2d4 пункта здоровья и временно передаст их владельцу (успешный спасбросок стойкости с УС 30 отменяет эффект)
+Вес: 1 фунт
+Необходимая черта: Простое оружие, Короткие клинки
+Тип: одноручное~
+@10711    = ~Кинжал скорости +1~
+@10712    = ~У типичного кинжала обычно обоюдоострое лезвие с заточённым концом в отличие от ножа, который имеет одностороннюю заточку и несколько короче.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d4 + 1
-Attack Bonus:  +1
-Enchantment:  +1
-Damage Type:  Piercing
-Special:
-  Speed: 1 additional attack per combat round
-Weight: 1 lb.
-Feat Requirement:  Simple Weapon, Small Blade
-Type:  One-handed~
-@10713    = ~Dagger of Lesser Spell Resistance~
-@10714    = ~The typical dagger has a pointed, usually double-edged blade, as opposed to a knife, which has a single edge and is a bit shorter than the dagger. 
+Урон: 1d4+1
+Атака: +1
+Зачарование: +1
+Тип урона: колющий
+Особенности:
+ Скорость: +1 атака за раунд
+Вес: 1 фунт
+Необходимая черта: Простое оружие, Короткие клинки
+Тип: одноручное~
+@10713    = ~Кинжал малой защиты от магии~
+@10714    = ~У типичного кинжала обычно обоюдоострое лезвие с заточённым концом в отличие от ножа, который имеет одностороннюю заточку и несколько короче.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d4
-Damage Type:  Piercing
-Special:
-  Spell Resistance: Set to 12
-Weight: 1 lb.
-Feat Requirement:  Simple Weapon, Small Blade
-Type:  One-handed~
-@10715    = ~Dagger of Warding +2~
-@10716    = ~Like most typical daggers, this dagger has a pointed,  double-edged blade. It has also been imbued with magical abilities which have increased its usefulness. 
+Урон: 1d4
+Тип урона: колющий
+Особенности:
+ Сопротивлении магии: устанавливается на 12
+Вес: 1 фунт
+Необходимая черта: Простое оружие, Короткие клинки
+Тип: одноручное~
+@10715    = ~Кинжал защиты +2~
+@10716    = ~У этого кинжала характерное для данного вида оружия обоюдоострое лезвие. Впрочем, он обладает некоторыми магическими свойствами и поэтому более эффективен в бою.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d4 + 2
-Attack Bonus:  +2
-Enchantment:  +2
-Damage Type:  Piercing
-Special:
-  Defending: +4 Generic Armor Bonus
-Weight: 1 lb.
-Feat Requirement:  Simple Weapon, Small Blade
-Type:  One-handed~
-@10717    = ~Dagger of Piercing Weakness +5~
-@10718    = ~The typical dagger has a pointed, usually double-edged blade, as opposed to a knife, which has a single edge and is a bit shorter than the dagger.
+Урон: 1d4+2
+Атака: +2
+Зачарование: +2
+Тип урона: колющий
+Особенности:
+ Защитник: класс защиты +4 (общий)
+Вес: 1 фунт
+Необходимая черта: Простое оружие, Короткие клинки
+Тип: одноручное~
+@10717    = ~Кинжал колющего ослабления +5~
+@10718    = ~У типичного кинжала обычно обоюдоострое лезвие с заточённым концом в отличие от ножа, который имеет одностороннюю заточку и несколько короче.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d4 + 5
-Attack Bonus:  +5 
-Enchantment:  +5
-Damage Type:  Piercing
-Special:
-  Piercing Weakness: Each hit lowers piercing resistance by 3 for 2 rounds (cumulative, no save)
-Weight: 1 lb.
-Feat Requirement:  Simple Weapon, Small Blade
-Type:  One-handed~
-@10719    = ~Dagger of the Mind's Eye +3~
-@10720    = ~The typical dagger has a pointed, usually double-edged blade, as opposed to a knife, which has a single edge and is a bit shorter than the dagger. 
+Урон: 1d4+5
+Атака: +5
+Зачарование: +5
+Тип урона: колющий
+Особенности:
+ Колющее ослабление: каждое попадание снижает сопротивление колющему урону жертвы на 3 в течении двух раундов (эффект суммируется)
+Вес: 1 фунт
+Необходимая черта: Простое оружие, Короткие клинки
+Тип: одноручное~
+@10719    = ~Кинжал морока +3~
+@10720    = ~У типичного кинжала обычно обоюдоострое лезвие с заточённым концом в отличие от ножа, который имеет одностороннюю заточку и несколько короче.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d4 + 3
-Attack Bonus:  +3 
-Enchantment:  +3
-Damage Type:  Piercing
-Special:
-  Spell Power: Can cast True Seeing (at level 15) 2/day
-Weight: 1 lb.
-Feat Requirement:  Simple Weapon, Small Blade
-Type:  One-handed~
-//@10721    = ~Vampiric Dagger +1~
-@10722    = ~The typical dagger has a pointed, usually double-edged blade, as opposed to a knife, which has a single edge and is a bit shorter than the dagger. 
+Урон: 1d4+3
+Атака: +3
+Зачарование: +3
+Тип урона: колющий
+Особенности:
+ Заклинание: владелец кинжала может читать заклинание "Истинное видение" (как заклинатель 15-ого уровня) 2 раза в день
+Вес: 1 фунт
+Необходимая черта: Простое оружие, Короткие клинки
+Тип: одноручное~
+//@10721    = ~Кинжал-кровопийца +1~
+@10722    = ~У типичного кинжала обычно обоюдоострое лезвие с заточённым концом в отличие от ножа, который имеет одностороннюю заточку и несколько короче.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d4 + 1
-Attack Bonus:  +1 
-Enchantment:  +1
-Damage Type:  Piercing
-Special:
-  Vampiric: 1d4 hit points drained from target and temporarily added to wielder (Fortitude DC 14 save for none)
-Weight: 1 lb.
-Feat Requirement:  Simple Weapon, Small Blade
-Type:  One-handed~
+Урон: 1d4+1
+Атака: +1
+Зачарование: +1
+Тип урона: колющий
+Особенности:
+ Вампиризм: 1d4 очков отнятого у жертвы здоровья временно передаются владельцу кинжала (успешный спасбросок стойкости с УС 14 отменяет эффект)
+Вес: 1 фунт
+Необходимая черта: Простое оружие, Короткие клинки
+Тип: одноручное~
 //@10723    = ~Venomous Dagger~
-@10724    = ~The typical dagger has a pointed, usually double-edged blade, as opposed to a knife, which has a single edge and is a bit shorter than the dagger. 
+@10724    = ~У типичного кинжала обычно обоюдоострое лезвие с заточённым концом в отличие от ножа, который имеет одностороннюю заточку и несколько короче.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d4
-Damage Type:  Piercing
-Special:
-  Venom: +2 points of poison damage every second for 6 seconds (Fortitude DC 12 + the wielder's Dexterity bonus)
-Weight: 1 lb.
-Feat Requirement:  Simple Weapon, Small Blade
-Type:  One-handed~
+Урон: 1d4
+Тип урона: колющий
+Особенности:
+ Яд: +2 очка урона ядом каждую секунду в течение 6 секунд (успешный спасбросок стойкости с УС = (12 + модификатор ловкости владельца кинжала) отменяет эффект)
+Вес: 1 фунт
+Необходимая черта: Простое оружие, Короткие клинки
+Тип: одноручное~
 //@10725    = ~Final Word~
-@10726    = ~Inscribed upon the blade of this dagger is the word "Enough!"  Judging by the skill of the craftsman and the enchantments on the blade, it may have its origins within some fierce school of debate in Cormyr or elsewhere, perhaps as a way to signal the end of a debate, or to end an argument by other, bloodier, means. When hurled, the dagger's accuracy and swift flight enchantments cause it to fly far and true into whatever target the wielder wishes. It doesn't look to have seen much use or combat, so it may have been intended as a purely ornamental weapon. 
+@10726    = ~На лезвии этого кинжала выгравировано слово "Довольно!". Судя по искусству изготовления и наложенным на кинжал чарам, его могли изготовить в какой-нибудь школе дебатов в Кормире или где-то ещё, и использовать для извещения об окончании дебатов или даже прекращения спора более кровавым способом. При метании этот кинжал далеко летит и попадает точно в цель, благодаря наложенным на него чарам. Не похоже, чтобы этот клинок часто использовался в бою, возможно, он задумывался, как чисто декоративное оружие.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage: 1d4 + 1
-Attack Bonus:  +1 
-Enchantment:  +1
-Damage Type: Missile (piercing)
-Damage Type: Melee (piercing)
-Special:
-  Spell Process:  Target is Silenced for 1 round (no save). This effect only occurs when the dagger is thrown.
-Weight: 0 lb.
-Feat Requirement:  Simple Weapon, Small Blade
-Type:  One-handed~
+Урон: 1d4+1
+Атака: +1
+Зачарование: +1
+Тип урона: метательный (колющий)
+Тип урона: ближний бой (колющий)
+Особенности:
+ Наложение заклинания: при попадании на цель накладывается эффект заклинания "Тишина" на 1 раунд (без спасброска), но только, если кинжал использовался как метательное оружие
+Вес: 0 фунтов
+Необходимая черта: Простое оружие, Короткие клинки
+Тип: одноручное~
 //@10727    = ~Dagger of Closing Arguments~
-@10728    = ~Inscribed upon the blade of this dagger is the word "Enough!"  Judging by the skill of the craftsman and the enchantments on the blade, it may have its origins within some fierce school of debate in Cormyr or elsewhere, perhaps as a way to signal the end of a debate, or to end an argument by other, bloodier, means. When hurled, the dagger's accuracy and swift flight enchantments cause it to fly far and true into whatever target the wielder wishes. It doesn't look to have seen much use or combat, so it may have been intended as a purely ornamental weapon. 
+@10728    = ~На лезвии этого кинжала выгравировано слово "Довольно!". Судя по искусству изготовления и наложенным на кинжал чарам, его могли изготовить в какой-нибудь школе дебатов в Кормире или где-то ещё, и использовать для извещения об окончании дебатов или даже прекращения спора более кровавым способом. При метании этот кинжал далеко летит и попадает точно в цель, благодаря наложенным на него чарам. Не похоже, чтобы этот клинок часто использовался в бою, возможно, он задумывался, как чисто декоративное оружие.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage: 1d4 + 3
-Attack Bonus:  +3 
-Enchantment:  +3
-Damage Type: Missile (piercing)
-Damage Type: Melee (piercing)
-Special:
-  Spell Process:  Target is Silenced for 2 rounds (no save). This effect only occurs when the dagger is thrown.
-Weight: 0 lb.
-Feat Requirement:  Simple Weapon, Small Blade
-Type:  One-handed~
+Урон: 1d4+3
+Атака: +3
+Зачарование: +3
+Тип урона: метательный (колющий)
+Тип урона: ближний бой (колющий)
+Особенности:
+ Наложение заклинания: при попадании на цель накладывается эффект заклинания "Тишина" на 2 раунд (без спасброска), но только, если кинжал использовался как метательное оружие
+Вес: 0 фунтов
+Необходимая черта: Простое оружие, Короткие клинки
+Тип: одноручное~
 //@10729    = ~Poisonfang~
-@10730    = ~Ysha Poisonfang was a minor but very successful assassin. She preferred to strike at her targets from a distance and relied on poison to deal the fatal blow. Ysha was an abused and twisted young woman who enjoyed the suffering of others. She rarely used fast acting poisons and reveled in the screams of agony as her victims slowly perished. After a series of successful assassinations she was given an enchanted dagger by her guild. She promptly named the blade Poisonfang and took the name for her surname as well.
+@10730    = ~Иша Ядовитый Клык была не слишком значительным, но очень успешным наёмным убийцей. Она предпочитала разить свои жертвы издалека и всегда полагалась на яд, чтобы прикончить свои жертвы. При этом Иша не отличалась особой любовью к ближним - она редко использовала быстродействующие яды и наслаждалась криками агонии, когда её жертвы медленно умирали. После серии успешный убийств, гильдия Иши подарила ей зачарованный кинжал. Она сразу же нарекла оружие "Ядовитым клыком", да и себе взяла такое же прозвище.
 
-Poisonfang is a throwing dagger with several enchantments. The weapon's accuracy has been enhanced, it inflicts a slow-acting poison on the victim, and it returns to the user after being thrown.
+"Ядовитый клык" - это зачарованный метательный кинжал. На него наложена магия, повышающая точность броска, поражающая жертвую медленно-действующим ядом и возвращающая кинжал обратно в руку владельца после броска.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d4 + 3
-Attack Bonus:  +3
-Enchantment:  +3
-Damage Type: Missile (piercing)
-Damage Type: Melee (piercing)
-Special: 
-  Returning: Returns to user 
-  Venom: +1 points of poison damage every 2 seconds for 12 seconds (no save)
-Weight: 1 lb.
-Feat Requirement:  Simple Weapon, Small Blade
-Type:  One-handed~
+Урон: 1d4+3
+Атака: +3
+Зачарование: +3
+Тип урона: метательный (колющий)
+Тип урона: ближний бой (колющий)
+Особенности:
+ Возвращение: после броска возвращается в руку владельца 
+ Яд: при попадании наносит 1 пункт урона ядом каждые две секунды в течение 12 секунд (без спасброска)
+Вес: 1 фунт
+Необходимая черта: Простое оружие, Короткие клинки
+Тип: одноручное~
 //@10731    = ~Ysha's Sting~
-@10732    = ~Ysha Poisonfang was a minor but very successful assassin. She preferred to strike at her targets from a distance and relied on poison to deal the fatal blow. Ysha was an abused and twisted young woman who enjoyed the suffering of others. She rarely used fast acting poisons and reveled in the screams of agony as her victims slowly perished. After a series of successful assassinations she was given an enchanted dagger by her guild. She promptly named the blade Ysha's Sting.
+@10732    = ~Иша Ядовитый Клык была не слишком значительным, но очень успешным наёмным убийцей. Она предпочитала разить свои жертвы издалека и всегда полагалась на яд, чтобы прикончить свои жертвы. При этом Иша не отличалась особой любовью к ближним - она редко использовала быстродействующие яды и наслаждалась криками агонии, когда её жертвы медленно умирали. После серии успешный убийств, гильдия Иши подарила ей зачарованный кинжал. Она сразу же нарекла оружие "Жалом Иши", а себе взяла прозвище "Ядовитый Клык".
 
-Ysha's Sting is a throwing dagger with several enchantments. The weapon's accuracy has been enhanced, it inflicts a slow-acting poison on the victim, and it returns to the user after being thrown
+"Жало Иши" - это зачарованный метательный кинжал. На него наложена магия, повышающая точность броска, поражающая жертвую медленно-действующим ядом и возвращающая кинжал обратно в руку владельца после броска.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d4 + 5
-Attack Bonus:  +5
-Enchantment:  +5
-Damage Type: Missile (piercing)
-Damage Type: Melee (piercing)
-Special: 
-  Returning: Returns to user 
-  Venom: +1 points of poison damage every 2 seconds for 18 seconds (no save)
-Weight: 1 lb.
-Feat Requirement:  Simple Weapon, Small Blade
-Type:  One-handed~
+Урон: 1d4+5
+Атака: +5
+Зачарование: +5
+Тип урона: метательный (колющий)
+Тип урона: ближний бой (колющий)
+Особенности:
+ Возвращение: после броска возвращается в руку владельца
+ Яд: при попадании наносит 1 пункт урона ядом каждые две секунды в течение 18 секунд (без спасброска)
+Вес: 1 фунт
+Необходимая черта: Простое оружие, Короткие клинки
+Тип: одноручное~
 //@10733    = ~Goblin Hunter~ //Without Better Racial Enemies Installed
-@10734    = ~This pearl-handled dagger was crafted by the enchantress Elytharra as protection against the frequent goblin raids that plague Icewind Dale. It looks more like a fine, familiar hunting knife than a weapon of war, but its keen edge bites deep into goblin hide. Elytharra claims to have only used the knife on a small number of occasions.
+@10734    = ~Этот кинжал с жемчужной рукоятью был изготовлен чародейкой Элитаррой для обороны от гоблинов, учинявших набеги на Долину Ледяного Ветра. Он скорее напоминает охотничий нож тонкой работы, а не боевое оружие, но его клинок с удивительной лёгкостью пропарывает толстую шкуру гоблинов. По словам самой Элитарры, она пользовалась этим кинжалом считанные разы.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d4, +3 vs. Goblins
-Attack Bonus: +3 vs. Goblins
-Enchantment:  +1
-Damage Type:  Piercing
-Weight:  2 lb.
-Feat Requirement:  Simple Weapon, Small Blade
-Type:  One-handed~
+Урон: 1d4, +3 против гоблинов
+Атака: +3 против гоблинов
+Зачарование: +1
+Тип урона: колющий
+Вес: 2 фунта
+Необходимая черта: Простое оружие, Короткие клинки
+Тип: одноручное~
 //@10735    = ~Goblin Hunter~ //With Better Racial Enemies Installed
-@10736    = ~This pearl-handled dagger was crafted by the enchantress Elytharra as protection against the frequent goblin raids that plague Icewind Dale. It looks more like a fine, familiar hunting knife than a weapon of war, but its keen edge bites deep into goblin hide. Elytharra claims to have only used the knife on a small number of occasions.
+@10736    = ~Этот кинжал с жемчужной рукоятью был изготовлен чародейкой Элитаррой для обороны от гоблинов, учинявших набеги на Долину Ледяного Ветра. Он скорее напоминает охотничий нож тонкой работы, а не боевое оружие, но его клинок с удивительной лёгкостью пропарывает толстую шкуру гоблинов. По словам самой Элитарры, она пользовалась этим кинжалом считанные разы.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d4, +3 vs. Goblinoids and Orcs
-Attack Bonus: +3 vs. Goblinoids and Orcs
-Enchantment:  +1
-Damage Type:  Piercing
-Weight:  2 lb.
-Feat Requirement:  Simple Weapon, Small Blade
-Type:  One-handed~
+Урон: 1d4, +3 против гоблиноидов и орков
+Атака: +3 против гоблиноидов и орков
+Зачарование: +1
+Тип урона: колющий
+Вес: 2 фунта
+Необходимая черта: Простое оружие, Короткие клинки
+Тип: одноручное~
 //@10737    = ~Goblin Slayer~ //Without Better Racial Enemies Installed
-@10738    = ~This pearl-handled dagger was crafted by the enchantress Elytharra as protection against the frequent goblin raids that plague Icewind Dale. It looks more like a fine, familiar hunting knife than a weapon of war, but its keen edge bites deep into goblin hide. Elytharra claims to have only used the knife only on a small number of occasions.
+@10738    = ~Этот кинжал с жемчужной рукоятью был изготовлен чародейкой Элитаррой для обороны от гоблинов, учинявших набеги на Долину Ледяного Ветра. Он скорее напоминает охотничий нож тонкой работы, а не боевое оружие, но его клинок с удивительной лёгкостью пропарывает толстую шкуру гоблинов. По словам самой Элитарры, она пользовалась этим кинжалом считанные разы.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d4 + 3, +6 vs. Goblins
-Attack Bonus:  +3, +6 vs. Goblins
-Enchantment:  +3 
-Damage Type:  Piercing
-Special:
-  Goblin Slaying: Upon hitting a goblin, has a 25% chance to kill the goblin instantly (Fortitude DC 20)
-Weight:  2 lb.
-Feat Requirement:  Simple Weapon, Small Blade
-Type:  One-handed~
+Урон: 1d4+3, +6 против гоблинов
+Атака: +3, +6 против гоблинов
+Зачарование: +3
+Тип урона: колющий
+Особенности:
+ Убийца гоблинов: при попадании в гоблина, есть 25% шанс убить его Мгновенно (успешный спасбросок стойкости с УС 20 отменяет эффект)
+Вес: 2 фунта
+Необходимая черта: Простое оружие, Короткие клинки
+Тип: одноручное~
 //@10739    = ~Goblin Slayer~ //With Better Racial Enemies Installed
-@10740    = ~This pearl-handled dagger was crafted by the enchantress Elytharra as protection against the frequent goblin raids that plague Icewind Dale. It looks more like a fine, familiar hunting knife than a weapon of war, but its keen edge bites deep into goblin hide. Elytharra claims to have only used the knife only on a small number of occasions.
+@10740    = ~Этот кинжал с жемчужной рукоятью был изготовлен чародейкой Элитаррой для обороны от гоблинов, учинявших набеги на Долину Ледяного Ветра. Он скорее напоминает охотничий нож тонкой работы, а не боевое оружие, но его клинок с удивительной лёгкостью пропарывает толстую шкуру гоблинов. По словам самой Элитарры, она пользовалась этим кинжалом считанные разы.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d4 + 3, +6 vs. Goblinoids and Orcs
-Attack Bonus:  +3, +6 vs. Goblinoids and Orcs
-Enchantment:  +3 
-Damage Type:  Piercing
-Special:
-  Goblin Slaying: Upon hitting a goblinoid or orc, has a 25% chance to kill it instantly (Fortitude DC 20)
-Weight:  2 lb.
-Feat Requirement:  Simple Weapon, Small Blade
-Type:  One-handed~
+Урон: 1d4+3, +6 против гоблиноидов и орков
+Атака: +3, +6 против гоблиноидов и орков
+Зачарование: +3
+Тип урона: колющий
+Особенности:
+ Убийца гоблинов: при попадании в гоблиноида или орка, есть 25% шанс убить его Мгновенно (успешный спасбросок стойкости с УС 20 отменяет эффект)
+Вес: 2 фунта
+Необходимая черта: Простое оружие, Короткие клинки
+Тип: одноручное~
 //@10741    = ~Grievance Tear~
-@10742    = ~This unusually heavy silver blade has been enchanted with the tear you obtained from the spirit in the Weeping Widow. The tear apparently still holds some of her anger toward you and anguish over her banishment from the Inn and may be the reason for the weapon's great weight. The hells hath no fury like a spirit banished, it seems, but as long as it gets you a valuable magic weapon in the process, a little spectral fury is a small price to pay.
+@10742    = ~Этот необычно тяжёлый серебряный клинок зачарован слезой, которую вы достали у призрака в "Плачущей вдове". Слеза, видимо, всё ещё хранит в себе гнев призрака по отношению к вам и её печаль, вызванную изгнанием из таверны - возможно, именно поэтому кинжал кажется таким тяжёлым. Ярость духа поистине велика, но с этим можно смириться - в конце концов, магические предметы просто так на дороге не валяются.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d4 + 1, +5 vs. Spectral Undead
-Attack Bonus: +1, +5 vs. Spectral Undead
-Enchantment:  +2
-Damage Type:  Piercing
-Special:
-  Counts as a silver weapon
-  Spectral Force: +1 magic damage per hit
-  Cursed: Once equipped, cannot be unequipped without a Remove Curse spell
-Weight: 5 lb.
-Feat Requirement:  Simple Weapon, Small Blade
-Type:  One-handed~
+Урон: 1d4+1, +5 против призрачной нежити
+Атака: +1, +5 против призрачной нежити
+Зачарование: +2
+Тип урона: колющий
+Особенности:
+ Считается серебряным оружием
+ Спектральная сила: +1 магического урона при попадании
+ Проклятье: из руки этот кинжал можно выпустить только с помощью заклинания "Снять проклятие"
+Вес: 5 фунтов
+Необходимая черта: Простое оружие, Короткие клинки
+Тип: одноручное~
 //@10743    = ~Veira's Grievance~
-@10744    = ~This unusually heavy silver blade has been enchanted with the tear you obtained from the spirit in the Weeping Widow. The tear apparently still holds some of her anger toward you and anguish over her banishment from the Inn and may be the reason for the weapon's great weight. The hells hath no fury like a spirit banished, it seems, but as long as it gets you a valuable magic weapon in the process, a little spectral fury is a small price to pay.
+@10744    = ~Этот необычно тяжёлый серебряный клинок зачарован слезой, которую вы достали у призрака в "Плачущей вдове". Слеза, видимо, всё ещё хранит в себе гнев призрака по отношению к вам и её печаль, вызванную изгнанием из таверны - возможно, именно поэтому кинжал кажется таким тяжёлым. Ярость духа поистине велика, но с этим можно смириться - в конце концов, магические предметы просто так на дороге не валяются.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d4 + 3, +7 vs. Spectral Undead
-Attack Bonus: +3, +7 vs. Spectral Undead
-Enchantment:  +4
-Damage Type:  Piercing
-Special:  
-  Counts as a silver weapon
-  Spectral Force: +3 magic damage per hit
-  Cursed: Once equipped, cannot be unequipped without a Remove Curse spell
-Weight: 5 lb.
-Feat Requirement:  Simple Weapon, Small Blade
-Type:  One-handed~
+Урон: 1d4+3, +7 против призрачной нежити
+Атака: +3, +7 против призрачной нежити
+Зачарование: +4
+Тип урона: колющий
+Особенности:
+ Считается серебряным оружием
+ Спектральная сила: +3 магического урона при попадании
+ Проклятье: из руки этот кинжал можно выпустить только с помощью заклинания "Снять проклятие"
+Вес: 5 фунтов
+Необходимая черта: Простое оружие, Короткие клинки
+Тип: одноручное~
 //@10745    = ~Sorrow's Tear~
 @10746    = ~This ghostly silver blade has been enchanted with the tear you obtained from Veira in the Weeping Widow. The tear apparently still has some of her sorrow and her relief within it, and these emotions have seeped into the blade. When it strikes an opponent, it will transfer that anguish onto them.
 
