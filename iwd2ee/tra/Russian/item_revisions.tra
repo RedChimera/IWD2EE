@@ -3729,64 +3729,65 @@
 //@10770    = ~Item description can remain the same; if new description is needed put it here~
 //@10771    = ~Short Sword +2~
 //@10772    = ~Item description can remain the same; if new description is needed put it here~
-@10773    = ~Short Sword of Backstabbing +3~
-@10774    = ~The Shadow's Blade was created to be the perfect assassin's tool. It is highly sought after by any who settle differences with a blade, and many that possess it do not do so for long.
+@10773    = ~Короткий меч подлых ударов +3~
+@10774    = ~Клинок тени был создан для того, чтобы стать идеальным оружием наёмного убийцы. Он высоко ценится среди тех, кто привык сводить счёты с помощью клинка, но его владельцы, как правило, долго не живут.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d6 + 3
-Attack Bonus:  +3 
-Enchantment:  +3
-Damage Type:  Piercing
-Special:
-  Sneak attacks with this weapon deal an additional 3d6 damage
-Weight: 3 lb.
-Feat Requirement:  Simple Weapon, Small Blade
-Type:  One-handed~
+Урон: 1d6+3
+Атака: +3
+Зачарование: +3
+Тип урона: колющий
+Особенности:
+ Скрытая атака этим оружием наносят дополнительные 3d6 урона
+Вес: 3 фунта
+Необходимая черта: Простое оружие, Короткие клинки
+Тип: одноручное~
 //@10775    = ~Reflective Short Sword +1~
-@10776    = ~The short sword is the first type of sword to come into existence. In the simplest of terms, a short sword can be considered a dagger with a blade so long that it can no longer be called a dagger. The term short sword does not exist in sword classifications. However, it has come to be used to describe a double-edged blade about two feet in length. The sword tip is usually pointed, ideal for thrusting. 
+@10776    = ~Короткий меч - самая древняя разновидность меча. Фактически, короткий меч - это обоюдоострый кинжал, слишком длинный, чтобы его можно было именовать кинжалом. Официальная классификация мечей не включает этот тип, однако в обиходе название "короткий меч" часто употребляется по отношению к обоюдоострым клинкам длиной около двух футов. Кончик обычно заострён, что очень удобно для колющих ударов. На поверхности этого клинка магические символы.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d6 + 1
-Attack Bonus:  +1
-Enchantment:  +1
-Damage Type:  Piercing
-Special:
-  Reflective: On a successful hit with this weapon there is a 25% chance that the wielder will gain the effects of Mirror Image (1 image) for 1 round.
-Weight:  3 lb.
-Feat Requirement:  Simple Weapon, Small Blade
-Type:  One-handed~
-@10777    = ~Wounding Short Sword of Shadows +1~
-@10778    = ~The short sword is the first type of sword to come into existence. In the simplest of terms, a short sword can be considered a dagger with a blade so long that it can no longer be called a dagger. The term short sword does not exist in sword classifications. However, it has come to be used to describe a double-edged blade about two feet in length. The sword tip is usually pointed, ideal for thrusting. 
+Урон: 1d6+1
+Атака: +1
+Зачарование: +1
+Тип урона: колющий
+Особенности:
+ Заклинание: может применяться один раз в день для наложения заклинания "Малый зеркальный образ"
+ Отражающий: при каждой успешной атаке этим оружием есть 25% шанс, что владелец получит один образ, как при заклинании "Отражённый образ" на один раунд
+Вес: 3 фунта
+Необходимая черта: Простое оружие, Короткие клинки
+Тип: одноручное~
+@10777    = ~Ранящий короткий меч теней +1~
+@10778    = ~Короткий меч - самая древняя разновидность меча. Фактически, короткий меч - это обоюдоострый кинжал, слишком длинный, чтобы его можно было именовать кинжалом. Официальная классификация мечей не включает этот тип, однако в обиходе название "короткий меч" часто употребляется по отношению к обоюдоострым клинкам длиной около двух футов. Кончик обычно заострён, что очень удобно для колющих ударов. На поверхности этого клинка магические символы.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d6 + 1
-Attack Bonus:  +1
-Enchantment:  +1
-Damage Type:  Piercing
-Special:
-  Generic Armor Bonus: +1
-  Shadowed: +5 to Hide skill
-  Wounding: Inflicts 2 additional points of damge per round for 10 rounds (Fortitude DC 17)
-Weight:  3 lb.
-Feat Requirement:  Simple Weapon, Small Blade
-Type:  One-handed~
-@10779    = ~Short Sword of Invisibility +2~
-@10780    = ~The short sword is the first type of sword to come into existence. In the simplest of terms, a short sword can be considered a dagger with a blade so long that it can no longer be called a dagger. The term short sword does not exist in sword classifications. However, it has come to be used to describe a double-edged blade about two feet in length. The sword tip is usually pointed, ideal for thrusting. 
+Урон: 1d6+1
+Атака: +1
+Зачарование: +1
+Тип урона: колющий
+Особенности:
+ Класс защиты: +1 (общий)
+ Слияние с тенью: +5 к навыку "Незаметность"
+ Рваные раны: наносит 2 дополнительных пункта урона в раунд в течение 10 раундов (успешный спасбросок стойкости с УС 17 отменяет эффект)
+Вес: 3 фунта
+Необходимая черта: Простое оружие, Короткие клинки
+Тип: одноручное~
+@10779    = ~Короткий меч невидимости +2~
+@10780    = ~Короткий меч - самая древняя разновидность меча. Фактически, короткий меч - это обоюдоострый кинжал, слишком длинный, чтобы его можно было именовать кинжалом. Официальная классификация мечей не включает этот тип, однако в обиходе название "короткий меч" часто употребляется по отношению к обоюдоострым клинкам длиной около двух футов. Кончик обычно заострён, что очень удобно для колющих ударов. На поверхности этого клинка магические символы.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d6 + 2
-Attack Bonus:  +2
-Enchantment:  +2
-Damage Type:  Piercing
-Special:
-  Invisibility: 25% chance per hit to turn the wielder invisible for 1 round
-Weight:  3 lb.
-Feat Requirement:  Simple Weapon, Small Blade
-Type:  One-handed~
+Урон: 1d6+2
+Атака: +2
+Зачарование: +2
+Тип урона: колющий
+Особенности:
+ Невидимость: есть 25% шанс при попадании этим мечом сделать его владельца невидимым на 1 раунд
+Вес: 3 фунта
+Необходимая черта: Простое оружие, Короткие клинки
+Тип: одноручное~
 //@10781    = ~Short Sword +5~
 //@10782    = ~Item description can remain the same; if new description is needed put it here~
 //@10783    = ~Short Sword +4~
@@ -3796,92 +3797,93 @@ Type:  One-handed~
 //@10787    = ~Sure Striking Short Sword +1~
 //@10788    = ~Item description can remain the same; if new description is needed put it here~
 //@10789    = ~Frostblade~
-@10790    = ~The short sword is the first type of sword to come into existence. In the simplest of terms, a short sword can be considered a dagger with a blade so long that it can no longer be called a dagger. The term short sword does not exist in sword classifications. However, it has come to be used to describe a double-edged blade about two feet in length. The sword tip is usually pointed, ideal for thrusting. 
+@10790    = ~Короткий меч - самая древняя разновидность меча. Фактически, короткий меч - это обоюдоострый кинжал, слишком длинный, чтобы его можно было именовать кинжалом. Официальная классификация мечей не включает этот тип, однако в обиходе название "короткий меч" часто употребляется по отношению к обоюдоострым клинкам длиной около двух футов. Кончик обычно заострён, что очень удобно для колющих ударов. На поверхности этого клинка магические символы.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d6
-Enchantment:  +1
-Damage Type:  Piercing
-Special:
-  Frost: +1d4 cold damage
-Weight:  3 lb.
-Feat Requirement:  Simple Weapon, Small Blade
-Type:  One-handed~
+Урон: 1d6
+Зачарование: +1
+Тип урона: колющий
+Особенности:
+ Стужа: +1d4 урона холодом
+Вес: 3 фунта
+Необходимая черта: Простое оружие, Короткие клинки
+Тип: одноручное~
 //@10791    = ~Vampiric Short Sword~
-@10792    = ~The short sword is the first type of sword to come into existence. In the simplest of terms, a short sword can be considered a dagger with a blade so long that it can no longer be called a dagger. The term short sword does not exist in sword classifications. However, it has come to be used to describe a double-edged blade about two feet in length. The sword tip is usually pointed, ideal for thrusting. 
+@10792    = ~Короткий меч - самая древняя разновидность меча. Фактически, короткий меч - это обоюдоострый кинжал, слишком длинный, чтобы его можно было именовать кинжалом. Официальная классификация мечей не включает этот тип, однако в обиходе название "короткий меч" часто употребляется по отношению к обоюдоострым клинкам длиной около двух футов. Кончик обычно заострён, что очень удобно для колющих ударов. На поверхности этого клинка магические символы.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d6
-Damage Type:  Piercing
-Special:
-  Vampiric: 1d4 hit points drained from target and temporarily added to wielder (Fortitude DC 14)
-Weight:  3 lb.
-Feat Requirement:  Simple Weapon, Small Blade
-Type:  One-handed~
-@10793    = ~Fast Short Sword of Sneak Attacks +5~
-@10794    = ~The short sword is the first type of sword to come into existence. In the simplest of terms, a short sword can be considered a dagger with a blade so long that it can no longer be called a dagger. The term short sword does not exist in sword classifications. However, it has come to be used to describe a double-edged blade about two feet in length. The sword tip is usually pointed, ideal for thrusting.
+Урон: 1d6
+Тип урона: колющий
+Особенности:
+ Вампиризм: отнимает у жертвы 1d4 пункта здоровья и временно передаёт их владельцу (успешный спасбросок стойкости с УС 14 отменяет эффект)
+Вес: 3 фунта
+Необходимая черта: Простое оружие, Короткие клинки
+Тип: одноручное~
+@10793    = ~Быстрый короткий меч скрытой атаки +5~
+@10794    = ~Короткий меч - самая древняя разновидность меча. Фактически, короткий меч - это обоюдоострый кинжал, слишком длинный, чтобы его можно было именовать кинжалом. Официальная классификация мечей не включает этот тип, однако в обиходе название "короткий меч" часто употребляется по отношению к обоюдоострым клинкам длиной около двух футов. Кончик обычно заострён, что очень удобно для колющих ударов. На поверхности этого клинка магические символы.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d6 + 5
-Attack Bonus:  +5
-Enchantment:  +5
-Damage Type:  Piercing
-Special:
-  Speed: 1 additional attack per combat round
-  After a sneak attack with this weapon, there is no delay before the target can be sneak attacked again
-Weight:  3 lb.
-Feat Requirement:  Simple Weapon, Small Blade
-Type:  One-handed~
+Урон: 1d6+5
+Атака: +5
+Зачарование: +5
+Тип урона: колющий
+Особенности:
+ Скорость: +1 дополнительная атака в раунд
+ После того как цель атакована скрытой атакой оружием, она может быть атакована снова скрытой атакой без задержки
+ Невидимость: есть 25% шанс при попадании этим мечом сделать его владельца невидимым на 1 раунд
+Вес: 3 фунта
+Необходимая черта: Простое оружие, Короткие клинки
+Тип: одноручное~
 //@10795    = ~Brilliant Short Sword +5~
 //@10796    = ~Item description can remain the same; if new description is needed put it here~
 //@10797    = ~Short Sword of Flurry +3~
 //@10798    = ~Item description can remain the same; if new description is needed put it here~
 //@10799    = ~Bleeding Short Sword +4~
-@10800    = ~The short sword is the first type of sword to come into existence. In the simplest of terms, a short sword can be considered a dagger with a blade so long that it can no longer be called a dagger. The term short sword does not exist in sword classifications. However, it has come to be used to describe a double-edged blade about two feet in length. The sword tip is usually pointed, ideal for thrusting. Inscriptions of power can be seen etched on the surface of the blade.
+@10800    = ~Короткий меч - самая древняя разновидность меча. Фактически, короткий меч - это обоюдоострый кинжал, слишком длинный, чтобы его можно было именовать кинжалом. Официальная классификация мечей не включает этот тип, однако в обиходе название "короткий меч" часто употребляется по отношению к обоюдоострым клинкам длиной около двух футов. Кончик обычно заострён, что очень удобно для колющих ударов. На поверхности этого клинка магические символы.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d6 + 4
-Attack Bonus:  +4 
-Enchantment:  +4
-Damage Type:  Piercing
-Special: 
-  Wounding: Inflicts 4 additional points of damage per round for 10 rounds (Fortitude DC 32)
-Weight:  3 lb.
-Feat Requirement:  Simple Weapon, Small Blade
-Type:  One-handed~
-@10801    = ~Short Sword of the Future +3~
-@10802    = ~The short sword is the first type of sword to come into existence. In the simplest of terms, a short sword can be considered a dagger with a blade so long that it can no longer be called a dagger. The term short sword does not exist in sword classifications. However, it has come to be used to describe a double-edged blade about two feet in length. The sword tip is usually pointed, ideal for thrusting.
+Урон: 1d6+4
+Атака: +4
+Зачарование: +4
+Тип урона: колющий
+Особенности:
+ Рваные раны: наносит 4 две дополнительных единицы урона в раунд в течение 10 раундов (успешный спасбросок стойкости с УС 32 отменяет эффект)
+Вес: 3 фунта
+Необходимая черта: Простое оружие, Короткие клинки
+Тип: одноручное~
+@10801    = ~Короткий меч будущего +3~
+@10802    = ~Короткий меч - самая древняя разновидность меча. Фактически, короткий меч - это обоюдоострый кинжал, слишком длинный, чтобы его можно было именовать кинжалом. Официальная классификация мечей не включает этот тип, однако в обиходе название "короткий меч" часто употребляется по отношению к обоюдоострым клинкам длиной около двух футов. Кончик обычно заострён, что очень удобно для колющих ударов. На поверхности этого клинка магические символы.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d6 + 3
-Attack Bonus:  +3 
-Enchantment:  +3
-Damage Type:  Piercing
-Special:
-  Delayed Damage: Inflicts an additional 3d6 piercing damage 10 rounds later
-Weight:  3 lb.
-Feat Requirement:  Simple Weapon, Small Blade
-Type:  One-handed~
-@10803    = ~Short Sword of Shadows +1~
-@10804    = ~The short sword is the first type of sword to come into existence. In the simplest of terms, a short sword can be considered a dagger with a blade so long that it can no longer be called a dagger. The term short sword does not exist in sword classifications. However, it has come to be used to describe a double-edged blade about two feet in length. The sword tip is usually pointed, ideal for thrusting. 
+Урон: 1d6+3
+Атака: +3
+Зачарование: +3
+Тип урона: колющий
+Особенности:
+ Отложенный урон: наносит дополнительные 3d6 колющих повреждений через 10 раундов
+Вес: 3 фунта
+Необходимая черта: Простое оружие, Короткие клинки
+Тип: одноручное~
+@10803    = ~Короткий меч теней +1~
+@10804    = ~Короткий меч - самая древняя разновидность меча. Фактически, короткий меч - это обоюдоострый кинжал, слишком длинный, чтобы его можно было именовать кинжалом. Официальная классификация мечей не включает этот тип, однако в обиходе название "короткий меч" часто употребляется по отношению к обоюдоострым клинкам длиной около двух футов. Кончик обычно заострён, что очень удобно для колющих ударов. На поверхности этого клинка магические символы.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d6 + 1
-Attack Bonus:  +1
-Enchantment:  +1
-Damage Type:  Piercing
-Special:
-  Generic Armor Bonus: +1
-  Shadowed: +5 to Hide skill
-Weight:  3 lb.
-Feat Requirement:  Simple Weapon, Small Blade
-Type:  One-handed~
+Урон: 1d6+1
+Атака: +1
+Зачарование: +1
+Тип урона: колющий
+Особенности:
+ Класс защиты: +1 (общий)
+ Слияние с тенью: +5 к навыку "Незаметность"
+Вес: 3 фунта
+Необходимая черта: Простое оружие, Короткие клинки
+Тип: одноручное~
 @10805    = ~Lolth's Sting +2~
 @10806    = ~Blades such as this are often gifts to capable assassins in the service of Lolth. The entire weapon is as black as pitch and reflects no light; its grip is textured with a delicate web pattern while hundreds of tiny spiders are engraved along the two-foot blade. The short sword's dark magic not only protects the wielder from the effects of magical webs, but can entangle a target with webs of its own as well.
 
