@@ -3575,151 +3575,150 @@
 Необходимая черта: Простое оружие, Короткие клинки
 Тип: одноручное~
 //@10745    = ~Sorrow's Tear~
-@10746    = ~This ghostly silver blade has been enchanted with the tear you obtained from Veira in the Weeping Widow. The tear apparently still has some of her sorrow and her relief within it, and these emotions have seeped into the blade. When it strikes an opponent, it will transfer that anguish onto them.
+@10746    = ~Этот призрачный серебряный клинок был зачарован слезой, которую вы получили от Вейры в "Плачущей Вдове". Судя по всему, слеза всё ещё хранила ощущения горя и облегчения, и эти эмоции передались клинку. Когда это оружие наносит удар противнику, эта скорбь передаётся и ему.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d4 + 1, +5 vs. Spectral Undead
-Attack Bonus: +1, +5 vs. Spectral Undead
-Enchantment:  +2
-Damage Type:  Piercing
-Special:
-  Counts as a silver weapon
-  Spectral Force: +1 magic damage per hit
-Weight: 5 lb.
-Feat Requirement:  Simple Weapon, Small Blade
-Type:  One-handed~
+Урон: 1d4+1, +5 против призрачной нежити
+Атака: +1, +5 против призрачной нежити
+Зачарование: +2
+Тип урона: колющий
+Особенности:
+ Считается серебряным оружием
+ Спектральная сила: +1 магического урона при попадании
+Вес: 5 фунтов
+Необходимая черта: Простое оружие, Короткие клинки
+Тип: одноручное~
 //@10747    = ~Veira's Sorrow~
-@10748    = ~This ghostly silver blade has been enchanted with the tear you obtained from Veira in the Weeping Widow. The tear apparently still has some of her sorrow and her relief within it, and these emotions have seeped into the blade. When it strikes an opponent, it will transfer that anguish onto them.
+@10748    = ~Этот призрачный серебряный клинок был зачарован слезой, которую вы получили от Вейры в "Плачущей Вдове". Судя по всему, слеза всё ещё хранила ощущения горя и облегчения, и эти эмоции передались клинку. Когда это оружие наносит удар противнику, эта скорбь передаётся и ему.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d4 + 3, +7 vs. Spectral Undead
-Attack Bonus: +3, +7 vs. Spectral Undead
-Enchantment:  +4
-Damage Type:  Piercing
-Special:  
-  Counts as a silver weapon
-  Spectral Force: +3 magic damage per hit
-Weight: 5 lb.
-Feat Requirement:  Simple Weapon, Small Blade
-Type:  One-handed~
+Урон: 1d4+3, +7 против призрачной нежити
+Атака: +3, +7 против призрачной нежити
+Зачарование: +4
+Тип урона: колющий
+Особенности:
+ Считается серебряным оружием
+ Спектральная сила: +3 магического урона при попадании
+Вес: 5 фунтов
+Необходимая черта: Простое оружие, Короткие клинки
+Тип: одноручное~
 //@10749    = ~Lamia's Tongue~
 //@10750    = ~Item description can remain the same; if new description is needed put it here~
 //@10751    = ~The Black Lamia's Tongue~
-@10752    = ~This wicked-looking throwing knife is part of a set of items once belonging to Suhailah el Khaba - the Black Lamia - an infamous sell-sword from Calimport. The unverified rumors regarding her final fate are many, running the gamut from "imprisoned beneath the earth by a vengeful wizard whose niece she'd murdered" to "fell in love with a nobleman from Thay and went into hiding."  What is known for certain is that the murderous woman is long gone and her belongings have been found scattered here and there throughout the realms ever since.
+@10752    = ~Этот жуткий на вид метательный нож - предмет из набора вещей, некогда принадлежавших Сухайле эль Хабе - Чёрной Ламии - знаменитой наёмнице из Калимпорта. О её дальнейшей судьбе ходит множество непроверенных слухов: от "была заточена в недрах земли мстительным волшебником, чью племянницу она когда-то убила" до "влюбилась в дворянина из Тэя и ушла в подполье". Доподлинно известно лишь то, что убийца давно исчезла, а её вещи с тех пор находят разбросанными то там, то тут по всем королевствам.
 
-Forged of dull black steel, the blade is engraved in the fashion of a barbed tongue while the handle is textured with minute scales. Because the enchanted dagger whips back to the thrower's hand once it has struck a solid object, its barbs can do horrendous damage to a target. Many a bravo were felled by Black Lamia's Tongue before coming within ten paces of her, their last breaths escaping through a burbling, crimson hole in their throats.
+Клинок выкован из тусклой чёрной стали, на лезвии выгравирован колючий язык, а рукоять покрыта мельчайшей чешуёй. Этот зачарованный кинжал - очень опасное оружие, учитывая, что его шипы могут нанести серьёзный урон противнику, а сам он возвращается в руку владельца после броска. Многие храбрецы были сражены "Языком Чёрной Ламии", не успев приблизиться к владелице кинжала и на десять шагов, а их последними звуками было бульканье через рваную рану в горле.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d4+2
-Attack Bonus: +2
-Damage Type: Missile (piercing)
-Damage Type: Melee (piercing)
-Special:
-  Barbed: 1d6 additional slashing damage
-  Wounding: Inflicts 1 additional point of damge per round for 10 rounds (Fortitude DC 27)
-  Returning: Returns to wielder
-Weight: 0 lb.
-Feat Requirement:  Simple Weapon, Small Blade
-Type:  One-handed~
+Урон: 1d4+2
+Атака: +2
+Тип урона: метательный (колющий)
+Тип урона: ближний бой (колющий)
+Особенности:
+ Разрубание: 1d6 дополнительного рубящего урона
+ Рваные раны: наносит 1 дополнительного урона в раунд в течение 10 раундов (успешный спасбросок стойкости с УС 27 отменяет эффект)
+ Возвращение: возвращается к владельцу
+Вес: 0 фунтов
+Необходимая черта: Простое оружие, Короткие клинки
+Тип: одноручное~
 //@10753    = ~Sulo's Hook~
-@10754    = ~No one knows where this enchanted parrying dagger first came from, though it gained its fame in the service of the notorious corsair captain "Baron" Sulo of Luskan. When Sulo and crew made to steal the Leberm family jewels from a small transport ship off the coast of Port Llast, they found themselves confronted by a group of experienced adventurers hired on as guards. One in particular fought like a devil, wielding a matched set of finely wrought dueling blades. The unnamed adventurer slew many of Sulo's men and, coming to clash with the corsair captain himself, severed Sulo's left hand. "Baron" Sulo would have died that day were it not for a stray ballista round from the Leberm ship - the enormous spear struck the unlucky swordsman squarely and carried him over the side of Sulo's ship in a flash. All that remained of him was his elaborate parrying blade, left spinning on the deck as if he'd never been there.
+@10754    = ~Никто не знает, откуда впервые появилась эта зачарованная дага, но знаменитой она стала в руках известного капитана корсаров Суло из Лускана по прозвищу Барон. Когда Суло со своей командой решили украсть драгоценности семейства Лебермов с небольшого транспортного судёнышка неподалёку от Порта Лласт, они столкнулись с отрядом опытных искателей приключений, нанятых охранять груз. Один из них бился как сущий дьявол, орудуя превосходными дуэльными клинками. Этот безымянный искатель приключений уложил немало людей из команды Суло, а оказавшись лицом к лицу с самим капитаном, отрубил ему кисть левой руки. Так Барон и погиб бы тот день, если бы не шальной снаряд баллисты с корабля Лебермов. Огромное копьё попало прямо в неудачливого фехтовальщика и снесло его с палубы корабля в мгновение ока. Всё, что от него осталось, - это его искусно сделанная дага, одиноко вращающаяся на палубе в том самом месте, где только что стоял её хозяин.
 
-Sulo elected to graft the swordsman's parrying blade to the stump of his left wrist in the place of a common hook. When Sulo was killed some nine years later, the blade was interned with him in a concealed tomb along with a substantial quantity of gems and coins. Despite the "secret" nature of Sulo's final resting place, the site was quickly plundered and Sulo's Hook passed into hands of other men.
+Суло решил прикрепить эту дагу к культе левого запястья вместо обычного в таких случаях крюка. Когда девятью годами позднее Суло убили, клинок похоронили вместе с ним в тайной могиле, так же, как и большое количество монет и драгоценный камней. Несмотря на всю "тайность" могилы, её быстро разграбили, и Крюк Суло обрёл нового хозяина.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d4 
-Attack Bonus: -2 penalty
-Damage Type:  Piercing
-Special: 
-  Shield Bonus: +4 
-Weight: 1 lb.
-Feat Requirement:  Simple Weapon, Small Blade
-Type:  One-handed~
+Урон: 1d4
+Атака: -2
+Тип урона: колющий
+Особенности:
+ Класс защиты: +4 (щит)
+Вес: 1 фунт
+Необходимая черта: Простое оружие, Короткие клинки
+Тип: одноручное~
 //@10755    = ~"Baron" Sulo's Hook~
-@10756    = ~No one knows where this enchanted parrying dagger first came from, though it gained its fame in the service of the notorious corsair captain "Baron" Sulo of Luskan. When Sulo and crew made to steal the Leberm family jewels from a small transport ship off the coast of Port Llast, they found themselves confronted by a group of experienced adventurers hired on as guards. One in particular fought like a devil, wielding a matched set of finely wrought dueling blades. The unnamed adventurer slew many of Sulo's men and, coming to clash with the corsair captain himself, severed Sulo's left hand. "Baron" Sulo would have died that day were it not for a stray ballista round from the Leberm ship - the enormous spear struck the unlucky swordsman squarely and carried him over the side of Sulo's ship in a flash. All that remained of him was his elaborate parrying blade, left spinning on the deck as if he'd never been there.
+@10756    = ~Никто не знает, откуда впервые появилась эта зачарованная дага, но знаменитой она стала в руках известного капитана корсаров Суло из Лускана по прозвищу Барон. Когда Суло со своей командой решили украсть драгоценности семейства Лебермов с небольшого транспортного судёнышка неподалёку от Порта Лласт, они столкнулись с отрядом опытных искателей приключений, нанятых охранять груз. Один из них бился как сущий дьявол, орудуя превосходными дуэльными клинками. Этот безымянный искатель приключений уложил немало людей из команды Суло, а оказавшись лицом к лицу с самим капитаном, отрубил ему кисть левой руки. Так Барон и погиб бы тот день, если бы не шальной снаряд баллисты с корабля Лебермов. Огромное копьё попало прямо в неудачливого фехтовальщика и снесло его с палубы корабля в мгновение ока. Всё, что от него осталось, - это его искусно сделанная дага, одиноко вращающаяся на палубе в том самом месте, где только что стоял её хозяин.
 
-Sulo elected to graft the swordsman's parrying blade to the stump of his left wrist in the place of a common hook. When Sulo was killed some nine years later, the blade was interned with him in a concealed tomb along with a substantial quantity of gems and coins. Despite the "secret" nature of Sulo's final resting place, the site was quickly plundered and "Baron" Sulo's Hook passed into hands of other men.
+Суло решил прикрепить эту дагу к культе левого запястья вместо обычного в таких случаях крюка. Когда девятью годами позднее Суло убили, клинок похоронили вместе с ним в тайной могиле, так же, как и большое количество монет и драгоценный камней. Несмотря на всю "тайность" могилы, её быстро разграбили, и Крюк Суло обрёл нового хозяина.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d4 + 2
-Attack Bonus: +2
-Enchantment:  +2
-Damage Type:  Piercing
-Special:
-  Shield Bonus: +6 
-  Spell Resistance: +5
-Weight: 1 lb.
-Feat Requirement:  Simple Weapon, Small Blade
-Type:  One-handed~
+Урон: 1d4+2
+Атака: +2
+Зачарование: +2
+Тип урона: колющий
+Особенности:
+ Класс защиты: +6 (щит)
+ Сопротивление магии: +5
+Вес: 1 фунт
+Необходимая черта: Простое оружие, Короткие клинки
+Тип: одноручное~
 //@10757    = ~Wyvern Stinger~
-@10758    = ~This sharp organ was once connected to a wyvern's poison gland. It contains a small amount of unspent poison that could be safely extracted with the proper equipment. It can also be wielded as a weapon.
+@10758    = ~Это острое жало когда-то соединялось с ядовитой железой виверны. В нём ещё осталось немного яда, который можно извлечь при помощи специального приспособления. Также его можно использовать и просто в качестве оружия.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d4
-Damage Type:  Piercing
-Special:
-  Venom: +5 points of poison damage every second for 6 seconds, Fortitude for none (DC 22)
-Weight: 1 lb.
-Feat Requirement:  Simple Weapon, Small Blade
-Type:  One-handed~
+Урон: 1d4
+Тип урона: колющий
+Особенности:
+ Яд: при попадании наносит дополнительно 5 урона ядом каждую секунду в течение 6 секунд, успешный спасбросок стойкости с УС 22 отменяет эффект
+Вес: 1 фунт
+Необходимая черта: Простое оружие, Короткие клинки
+Тип: одноручное~
 //@10759    = ~Wyvern Stinger~ //HoF
-@10760    = ~This sharp organ was once connected to a wyvern's poison gland. It contains a small amount of unspent poison that could be safely extracted with the proper equipment. It can also be wielded as a weapon.
+@10760    = ~Это острое жало когда-то соединялось с ядовитой железой виверны. В нём ещё осталось немного яда, который можно извлечь при помощи специального приспособления. Также его можно использовать и просто в качестве оружия.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d4
-Damage Type:  Piercing
-Special:
-  Venom: +10 points of poison damage every second for 6 seconds, Fortitude save for none (DC 30)
-Weight: 1 lb.
-Feat Requirement:  Simple Weapon, Small Blade
-Type:  One-handed~
+Урон: 1d4
+Тип урона: колющий
+Особенности:
+ Яд: при попадании наносит дополнительно 10 урона ядом каждую секунду в течение 6 секунд, успешный спасбросок стойкости с УС 30 отменяет эффект
+Вес: 1 фунт
+Необходимая черта: Простое оружие, Короткие клинки
+Тип: одноручное~
 //@10761    = ~Xvimian Fang~
-@10762    = ~As gratitude and a show of good faith towards Saablic Tan for joining with the Legion of the Chimera, Isair and Madae gave Saablic the Xvimian Fang dagger.
+@10762    = ~В качестве благодарности и демонстрации расположения к Сааблику Тану за то, что он присоединился к Легиону Химеры, Исаир и Мадея дали Сааблику кинжал "Клык Ксвима".
 
-Forged from the finest metals and enchanted with the darkest magics akin to Xvimian lore, the Xvimian Fang reflects no light from its blackened steel. The blade is so black, in fact, that any details that usually stand out from a curved dagger blade are completely absent. It is as if the blade actually absorbs light. 
+Отлитый из лучших металлов, зачарованный с помощью тёмной магии и вдохновлённый легендами о Ксвиме, чёрный клинок этого кинжала не отражает света. Вообще, клинок настолько чёрен, что всяческие детали, обычно присутствующие на клинках изогнутых кинжалов, здесь не видны. Создаётся впечатление, что клинок поглощает свет.
 
-Saablic Tan always keeps the Xvimian Fang close, not just because the dagger has the awesome power to potentially turn individuals to stone, but because the dagger increased the potency of his acid spells - truly a powerful weapon befitting a powerful wizard.
+Сааблик Тан всегда держит "Клык Ксвима" при себе, не только потому, что кинжал обладает фантастической способностью превращения живых существ в камень при ударе, но и потому, что кинжал повышает интеллект владельца - это действительно мощное оружие, подобающее сильному волшебнику.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d4 + 3
-Attack Bonus:  +3 
-Enchantment:  +3
-Damage Type:  Piercing
-Special:  
-  Spell Process: 5% chance of casting the spell Flesh to Stone on target per hit (Fortitude DC 27)
-  All acid damage dealt by wielder is increased by 30%
-Weight: 1 lb.
-Feat Requirement:  Simple Weapon, Small Blade
-Type:  One-handed~
+Урон: 1d4+3
+Атака: +3
+Зачарование: +3
+Тип урона: колющий
+Особенности:
+ Наложение заклинания: при попадании есть 5% вероятность наложения на цель заклинания "Плоть в камень" (успешный спасбросок стойкости с УС 27 отменяет эффект)
+ Весь урон кислотой, нанесённый владельцем кинжала увеличивается на 30%
+Вес: 1 фунт
+Необходимая черта: Простое оружие, Короткие клинки
+Тип: одноручное~
 //@10763    = ~Xvimian Fang of Despair~
-@10764    = ~As gratitude and a show of good faith towards Saablic Tan for joining with the Legion of the Chimera, Isair and Madae gave Saablic the Xvimian Fang of Despair dagger.
+@10764    = ~В качестве благодарности и демонстрации расположения к Сааблику Тану за то, что он присоединился к Легиону Химеры, Исаир и Мадея дали Сааблику кинжал "Клык безысходности Ксвима".
 
-Forged from the finest metals and enchanted with the darkest magics akin to Xvimian lore, the Xvimian Fang reflects no light from its blackened steel. The blade is so black, in fact, that any details that usually stand out from a curved dagger blade are completely absent. It is as if the blade actually absorbs light. 
+Отлитый из лучших металлов, зачарованный с помощью тёмной магии и вдохновлённый легендами о Ксвиме, чёрный клинок этого кинжала не отражает света. Вообще, клинок настолько чёрен, что всяческие детали, обычно присутствующие на клинках изогнутых кинжалов, здесь не видны. Создаётся впечатление, что клинок поглощает свет.
 
-Saablic Tan always keeps the Xvimian Fang of Despair close, not just because the dagger has the awesome power to potentially turn individuals to stone, or cause eminent hopelessness, when attacked, but because the dagger increased the potency of his acid spells - truly a powerful weapon befitting a powerful wizard.
+Сааблик Тан всегда держит "Клык безысходности Ксвима" при себе, не только потому, что кинжал обладает фантастической способностью превращения живых существ в камень при ударе, но и потому, что кинжал повышает интеллект владельца - это действительно мощное оружие, подобающее сильному волшебнику.
 
+ПАРАМЕТРЫ:
 
-STATISTICS:
-
-Damage:  1d4 + 5
-Attack Bonus:  +5 
-Enchantment:  +5
-Damage Type:  Piercing
-Special:  
-  Spell Process: 10% chance of casting the spell Flesh to Stone on target per hit (Fortitude DC 33)
-  Spell Process:  30% chance of causing hopelessness in the target for 10 rounds (Will DC 31)
-  All acid damage dealt by wielder is increased by 50%
-Weight: 1 lb.
-Feat Requirement:  Simple Weapon, Small Blade
-Type:  One-handed~
+Урон: 1d4+5
+Атака: +5
+Зачарование: +5
+Тип урона: колющий
+Особенности:
+ Наложение заклинания: при попадании есть 10% вероятность наложения на цель заклинания "Плоть в камень" (успешный спасбросок стойкости с УС 33 отменяет эффект)
+ Наложение заклинания: при попадании есть 30% вероятность наложения на цель эффекта безнадёжности на 10 раундов (успешный спасбросок воли с УС 31 отменяет эффект)
+ Весь урон кислотой, нанесённый владельцем кинжала увеличивается на 50%
+Вес: 1 фунт
+Необходимая черта: Простое оружие, Короткие клинки
+Тип: одноручное~
 
 
 //@10765    = ~Short Sword~
