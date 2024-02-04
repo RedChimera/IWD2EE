@@ -3884,144 +3884,144 @@
 Вес: 3 фунта
 Необходимая черта: Простое оружие, Короткие клинки
 Тип: одноручное~
-@10805    = ~Lolth's Sting +2~
-@10806    = ~Blades such as this are often gifts to capable assassins in the service of Lolth. The entire weapon is as black as pitch and reflects no light; its grip is textured with a delicate web pattern while hundreds of tiny spiders are engraved along the two-foot blade. The short sword's dark magic not only protects the wielder from the effects of magical webs, but can entangle a target with webs of its own as well.
+@10805    = ~Жало Лолт +2~
+@10806    = ~Клинки, подобные этому, зачастую дарятся способным убийцам, служащим Лолт. Всё оружие чёрное как смоль и не отражает света; рукоять покрыта тонким узором в виде паутины, а на двухфутовом лезвии выгравированы сотни крохотных паучков. Тёмная магия этого короткого меча не только защищает владельца от магической паутины, но и способна опутать противника собственной паутиной.
 
-An assassin typically uses the weapon to seal a target in a cocoon of silk, stepping away from their thrashing foe to complete the murder with a poisoned dart or wrist-crossbow bolt. Such weapons have also helped many a would-be assassin flee from something that they've backstabbed but failed to kill with a single blow.
+Убийцы, как правило, используют это оружие, чтобы заключить жертву в шёлковый кокон, а затем, отступив от бьющегося врага, завершить убийство отравленным дротиком или арбалетным болтом. Это оружие также помогло многим потенциальным убийцам убежать от жертвы, которую они ударили в спину, но не смогли убить с одного удара.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d6 + 2
-Attack Bonus: +2 
-Enchantment:  +2
-Damage Type:  Piercing
-Special:
-  Lolth's Blessing: Immunity to Web spells
-  Lolth's Curse: 33% chance to Web target (Reflex DC 18)
-Weight: 3 lb.
-Feat Requirement:  Simple Weapon, Small Blade
-Type:  One-handed~
-@10807    = ~Lolth's Cruel Sting +4~
-@10808    = ~Blades such as this are often gifts to capable assassins in the service of Lolth. The entire weapon is as black as pitch and reflects no light; its grip is textured with a delicate web pattern while hundreds of tiny spiders are engraved along the two-foot blade. The short sword's dark magic not only protects the wielder from the effects of magical webs, but can entangle a target with webs of its own as well.
+Урон: 1d6+2
+Атака: +2
+Зачарование: +2
+Тип урона: колющий
+Особенности:
+ Благословение Лолт: иммунитет к заклинаниям паутины
+ Проклятие Лолт: 33% вероятность заключить цель в паутину (успешный спасбросок реакции с УС 18 позволяет избежать эффекта)
+Вес: 3 фунта
+Необходимая черта: Простое оружие, Короткие клинки
+Тип: одноручное~
+@10807    = ~Жестокое жало Лолт +4~
+@10808    = ~Клинки, подобные этому, зачастую дарятся способным убийцам, служащим Лолт. Всё оружие чёрное как смоль и не отражает света; рукоять покрыта тонким узором в виде паутины, а на двухфутовом лезвии выгравированы сотни крохотных паучков. Тёмная магия этого короткого меча не только защищает владельца от магической паутины, но и способна опутать противника собственной паутиной.
 
-An assassin typically uses the weapon to seal a target in a cocoon of silk, stepping away from their thrashing foe to complete the murder with a poisoned dart or wrist-crossbow bolt. Such weapons have also helped many a would-be assassin flee from something that they've backstabbed but failed to kill with a single blow.
+Убийцы, как правило, используют это оружие, чтобы заключить жертву в шёлковый кокон, а затем, отступив от бьющегося врага, завершить убийство отравленным дротиком или арбалетным болтом. Это оружие также помогло многим потенциальным убийцам убежать от жертвы, которую они ударили в спину, но не смогли убить с одного удара.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d6 + 4
-Attack Bonus: +4 
-Enchantment:  +4
-Damage Type:  Piercing
-Special:
-  Lolth's Blessing: Immunity to Web spells
-  Lolth's Curse: 33% chance to Poison (Fortitude DC 32) and Web (Reflex DC 32) target
-Weight: 3 lb.
-Feat Requirement:  Simple Weapon, Small Blade
-Type:  One-handed~
-@10809    = ~Silentkiller +3~
-@10810    = ~The story of Silentkiller is a common tale that may, or may not, be true. The story tells of two brothers who vied for the attention, and throne, of their ailing father. When the elder brother was named king by his dying sire, the younger was furious and vowed to take the throne as his own. To this end he commissioned the making of Silentkiller to aid him in his brother's murder.
+Урон: 1d6+4
+Атака: +4
+Зачарование: +4
+Тип урона: колющий
+Особенности:
+ Благословение Лолт: иммунитет к заклинаниям паутины
+ Проклятие Лолт: 33% вероятность наложить заклинание "Яд" на цель (успешный спасбросок стойкости с УС 32 позволяет избежать эффекта) и заключить цель в паутину (успешный спасбросок реакции с УС 32 позволяет избежать эффекта)
+Вес: 3 фунта
+Необходимая черта: Простое оружие, Короткие клинки
+Тип: одноручное~
+@10809    = ~Тихий убийца +3~
+@10810    = ~История "Тихого убийцы" - это обычная сказка, которая может быть как правдивой, так и нет. В ней рассказывается о двух братьях, боровшихся за внимание и трон своего больного отца. Когда своей последней волей умирающий король передал трон старшему сыну, младший пришёл в ярость и поклялся любой ценой занять трон. Для этого младший сын приказал изготовить "Тихого убийцу", чтобы этот клинок помог ему убить собственного брата.
 
-Many such tales exist throughout the realms and history. Who is to say if they are fact or fiction?  In any case, Silentkiller is indeed a weapon of assassination. The blade grants its wielder the ability to blend into the shadows and move as quiet as a cat stalking its prey.
+Такие истории никому не в новинку, их можно услышать во все времена и во всех королевствах. Кто знает, сколько тут правды, а сколько вымысла? В любом случае, "Тихий убийца" - действенное оружие убийства. Этот клинок наделяет своего владельца способностью сливаться с тенями и двигаться бесшумно, подобно кошке, выслеживающей мышь.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d6 + 3
-Attack Bonus:  +3
-Enchantment:  +3
-Damage Type: Piercing
-Special:
-  Move Silently: +6
-  Hide: +6
-  Backstab: If the wielder attacks from stealth or invisibility and hits a creature in the back with this weapon, it deals an additional 6d6 damage.
-Weight: 3 lb.
-Feat Requirement:  Simple Weapon, Small Blade
-Type:  One-handed~
-@10811    = ~Assassin's Blade +5~
-@10812    = ~The story of Assassin's Blade is a common tale that may, or may not, be true. The story tells of two brothers who vied for the attention, and throne, of their ailing father. When the elder brother was named king by his dying sire, the younger was furious and vowed to take the throne as his own. To this end he commissioned the making of Assassin's Blade to aid him in his brother's murder.
+Урон: 1d6+3
+Атака: +3
+Зачарование: +3
+Тип урона: колющий
+Особенности:
+ Приглушение: +6 к навыку "Тихая походка"
+ Слияние с тенью: +6 к навыку "Незаметность"
+ Удар в спину: если владелец меча атакует из невидимости или скрытности и попадает этим оружием в спину существа, оно наносит дополнительно 6d6 урона
+Вес: 3 фунта
+Необходимая черта: Простое оружие, Короткие клинки
+Тип: одноручное~
+@10811    = ~Клинок убийцы +5~
+@10812    = ~История "Клинка убийцы" - это обычная сказка, которая может быть как правдивой, так и нет. В ней рассказывается о двух братьях, боровшихся за внимание и трон своего больного отца. Когда своей последней волей умирающий король передал трон старшему сыну, младший пришёл в ярость и поклялся любой ценой занять трон. Для этого младший сын приказал изготовить "Клинок убийцы", чтобы этот клинок помог ему убить собственного брата.
 
-Many such tales exist throughout the realms and history. Who is to say if they are fact or fiction?  In any case, Assassin's Blade is indeed a weapon of assassination. The blade grants its wielder the ability to blend into the shadows and move as quiet as a cat stalking its prey.
+Такие истории никому не в новинку, их можно услышать во все времена и во всех королевствах. Кто знает, сколько тут правды, а сколько вымысла? В любом случае, "Клинок убийцы" - действенное оружие убийства. Этот клинок наделяет своего владельца способностью сливаться с тенями и двигаться бесшумно, подобно кошке, выслеживающей мышь.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d6 + 5
-Attack Bonus:  +5
-Enchantment:  +5
-Damage Type: Piercing
-Special:
-  Move Silently: +12
-  Hide: +12
-  Backstab: If the wielder attacks from stealth or invisibility and hits a creature in the back with this weapon, it deals an additional 10d6 damage.
-Weight: 3 lb.
-Feat Requirement:  Simple Weapon, Small Blade
-Type:  One-handed~
-@10813    = ~Thy-Dunag Blade +1~
-@10814    = ~"Thy-Dunag" is an expression used in the distant realms of Kara-Tur to signify "more respect than is due," and this expression has been inscribed upon the hilt of this sword so that it may be seen even while the blade is sheathed. This blade was reputedly given to a local warlord who sought to challenge the shogun, but the shogun was so contemptuous of the warlord's pretensions of being a threat that he invited him to his court and gave him the blade to both insult the man and as a warning for him to know his place. 
+Урон: 1d6+5
+Атака: +5
+Зачарование: +5
+Тип урона: колющий
+Особенности:
+ Приглушение: +12 к навыку "Тихая походка"
+ Слияние с тенью: +12 к навыку "Незаметность"
+ Удар в спину: если владелец меча атакует из невидимости или скрытности и попадает этим оружием в спину существа, оно наносит дополнительно 10d6 урона
+Вес: 3 фунта
+Необходимая черта: Простое оружие, Короткие клинки
+Тип: одноручное~
+@10813    = ~Клинок Тай-дунаг +1~
+@10814    = ~"Тай-дунаг" - выражение, используемое в отдалённых королевствах Кара-Тура и означающее "больше уважения, чем положено". Это выражение начертано на эфесе меча, поэтому видно даже тогда, когда меч находится в ножнах. По слухам, этот клинок был подарен местному военачальнику, рискнувшему бросить вызов сегуну. Сегун настолько презрительно отнёсся к подобному притязанию, что пригласил военачальника ко двору и подарил ему этот клинок, чтобы одновременно и оскорбить наглеца, и указать ему его место.
 
-When drawn, this short, silvered blade has a broad base that tapers to a sharp point, but despite its apparent lightness, it is actually quite heavy. It always looks like it is standing at attention and it has a curious way of drawing the eye in combat, unbalancing and distracting any opponents it meets in combat.
+Этот короткий посеребрённый клинок широк у основания и постепенно сужается до острого кончика, при этом он, несмотря на кажущуюся лёгкость, довольно тяжёл. Обнажённый, он притягивает к себе взгляд, отвлекая противников и мешая им сосредоточиться.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d6 + 1
-Attack Bonus:  +3 
-Enchantment:  +1
-Damage Type:  Piercing
-Special:
-  Counts as a silver weapon
-Weight:  5 lb.
-Feat Requirement:  Simple Weapon, Small Blade
-Type:  One-handed~
-@10815    = ~Shame of Thy-Dunag +3~
-@10816    = ~"Thy-Dunag" is an expression used in the distant realms of Kara-Tur to signify "more respect than is due," and this expression has been inscribed upon the hilt of this sword so that it may be seen even while the blade is sheathed. This blade was reputedly given to a local warlord who sought to challenge the shogun, but the shogun was so contemptuous of the warlord's pretensions of being a threat that he invited him to his court and gave him the blade to both insult the man and as a warning for him to know his place. 
+Урон: 1d6+1
+Атака: +3
+Зачарование: +1
+Тип урона: колющий
+Особенности:
+ Считается серебряным оружием
+Вес: 5 фунтов
+Необходимая черта: Простое оружие, Короткие клинки
+Тип: одноручное~
+@10815    = ~Стыд Тай-дунаг +3~
+@10816    = ~"Тай-дунаг" - выражение, используемое в отдалённых королевствах Кара-Тура и означающее "больше уважения, чем положено". Это выражение начертано на эфесе меча, поэтому видно даже тогда, когда меч находится в ножнах. По слухам, этот клинок был подарен местному военачальнику, рискнувшему бросить вызов сегуну. Сегун настолько презрительно отнёсся к подобному притязанию, что пригласил военачальника ко двору и подарил ему этот клинок, чтобы одновременно и оскорбить наглеца, и указать ему его место.
 
-When drawn, this short, silvered blade has a broad base that tapers to a sharp point, but despite its apparent lightness, it is actually quite heavy. It always looks like it is standing at attention and it has a curious way of drawing the eye in combat, unbalancing and distracting any opponents it meets in combat.
+Этот короткий посеребрённый клинок широк у основания и постепенно сужается до острого кончика, при этом он, несмотря на кажущуюся лёгкость, довольно тяжёл. Обнажённый, он притягивает к себе взгляд, отвлекая противников и мешая им сосредоточиться.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d6 + 3
-Attack Bonus:  +7 
-Enchantment:  +3
-Damage Type:  Piercing
-Special:
-  Counts as a silver weapon
-Weight:  5 lb.
-Feat Requirement:  Simple Weapon, Small Blade
-Type:  One-handed~
-@10817    = ~Letto's Scar +1~
-@10818    = ~This enchanted short sword has been carved from a single piece of shale, its surface smeared with venom drawn from the tongue of a desert serpent. The venom never dries, giving the sword an unhealthy sheen. 
+Урон: 1d6+3
+Атака: +7
+Зачарование: +3
+Тип урона: колющий
+Особенности:
+ Считается серебряным оружием
+Вес: 5 фунтов
+Необходимая черта: Простое оружие, Короткие клинки
+Тип: одноручное~
+@10817    = ~Шрам Летто +1~
+@10818    = ~Этот зачарованный короткий меч вырезан из цельного куска сланца. Его клинок смазан ядом, добытым из зубов пустынной змеи. Яд никогда не высыхает, что придаёт поверхности клинка нездоровый блеск.
 
-This short sword is an evil weapon, said to have caused many lingering deaths over the years. Its name comes from its last known owner, an infamous buccaneer named Letto who preyed on ships traveling upon the Sea of Moving Ice. It is said that he was caught by the Tribe of the Great Whale in the shadow of Hehnhold's Iceberg, where his ship was hacked apart by the barbarians' great axes and the crew set aflame with burning pitch. When the battle was over, only driftwood remained. One of the pieces of his ship's hull found its way south and the wood was used in the construction of one of the rooms in the upper story of the Weeping Widow Inn. The short sword has been buried within the timber for almost thirty or more years, waiting for someone to find it again and use it in Letto's name.
+Этот короткий меч - очень злое оружие; он стал причиной долгой мучительной гибели не одного десятка жертв. Название его происходит от имени последнего владельца, печально известного пирата по имени Летто, который грабил корабли в Море Движущихся Льдов. Поговаривают, что в итоге он был захвачен племенем Великого Кита у айсберга Хехнхольда. Корабль пирата варвары порубили своими топорами в мелкие щепы, а команду облили смолой и подожгли. Когда всё было кончено, от судна остались одни обломки. Один из таких наиболее крупных обломков уплыл в сторону юга и был впоследствии выловлен - это дерево было использовано при постройке одной из комнат верхнего этажа таверны "Плачущая Вдова". Меч скрывался внутри куска дерева более тридцати лет, в ожидании нового хозяина, который пустит оружие в ход в память о гнусном пирате Летто.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d6 + 1
-Attack Bonus:  +1
-Enchantment:  +1
-Damage Type:  slashing
-Special:
-  Unholy: Deals +2d6 damage to good creatures. Counts as an evil-aligned weapon.
-  Venom: 10% chance to poison target, dealing 2 damage per second for 12 seconds (no save)
-  Fortitude Saving Throw: -1 penalty
-Weight: 3 lb.
-Feat Requirement:  Simple Weapon, Small Blade
-Type:  One-handed~
-@10819    = ~Letto's End +5~
-@10820    = ~This enchanted short sword has been carved from a single piece of shale, its surface smeared with venom drawn from the tongue of a desert serpent. The venom never dries, giving the sword an unhealthy sheen. 
+Урон: 1d6+1
+Атака: +1
+Зачарование: +1
+Тип урона: рубящий
+Особенности:
+ Нечестивость: +2d6 урона добрым существам, это оружие считается злым
+ Яд: при попадании жертва с вероятностью 10% будет отравлена, получая 2 урона в секунда в течении 12 секунд (без спасброска)
+ -1 к спасброскам стойкости владельца оружия
+Вес: 3 фунта
+Необходимая черта: Простое оружие, Короткие клинки
+Тип: одноручное~
+@10819    = ~Конец Летто +5~
+@10820    = ~Этот зачарованный короткий меч вырезан из цельного куска сланца. Его клинок смазан ядом, добытым из зубов пустынной змеи. Яд никогда не высыхает, что придаёт поверхности клинка нездоровый блеск.
 
-This short sword is an evil weapon, said to have caused many lingering deaths over the years. Its name comes from its last known owner, an infamous buccaneer named Letto who preyed on ships traveling upon the Sea of Moving Ice. It is said that he was caught by the Tribe of the Great Whale in the shadow of Hehnhold's Iceberg, where his ship was hacked apart by the barbarians' great axes and the crew set aflame with burning pitch. When the battle was over, only driftwood remained. One of the pieces of his ship's hull found its way south and the wood was used in the construction of one of the rooms in the upper story of the Weeping Widow Inn. The short sword has been buried within the timber for almost thirty or more years, waiting for someone to find it again and use it in Letto's name.
+Этот короткий меч - очень злое оружие; он стал причиной долгой мучительной гибели не одного десятка жертв. Название его происходит от имени последнего владельца, печально известного пирата по имени Летто, который грабил корабли в Море Движущихся Льдов. Поговаривают, что в итоге он был захвачен племенем Великого Кита у айсберга Хехнхольда. Корабль пирата варвары порубили своими топорами в мелкие щепы, а команду облили смолой и подожгли. Когда всё было кончено, от судна остались одни обломки. Один из таких наиболее крупных обломков уплыл в сторону юга и был впоследствии выловлен - это дерево было использовано при постройке одной из комнат верхнего этажа таверны "Плачущая Вдова". Меч скрывался внутри куска дерева более тридцати лет, в ожидании нового хозяина, который пустит оружие в ход в память о гнусном пирате Летто.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d6 + 5
-Attack Bonus:  +5
-Enchantment:  +5
-Damage Type:  Slashing
-Special:  
-  Unholy: Deals +3d6 damage to good creatures. Counts as an evil-aligned weapon.
-  Venom: 25% chance to poison target, dealing 2 damage per second for 12 seconds (no save)
-  Immune to Poison while equipped
-Weight: 1 lb.
-Feat Requirement:  Simple Weapon, Small Blade
-Type:  One-handed~
+Урон: 1d6+5
+Атака: +5
+Зачарование: +5
+Тип урона: рубящий
+Особенности:
+ Нечестивость: +3d6 урона добрым существам, это оружие считается злым
+ Яд: при попадании жертва с вероятностью 25% будет отравлена, получая 2 урона в секунда в течении 12 секунд (без спасброска)
+ Оберёг: даёт иммунитет к яду владельцу оружия
+Вес: 1 фунт
+Необходимая черта: Простое оружие, Короткие клинки
+Тип: одноручное~
 
 
 //@10821    = ~Longsword~
