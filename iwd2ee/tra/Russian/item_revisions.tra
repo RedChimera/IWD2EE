@@ -4032,240 +4032,243 @@
 //@10826    = ~Item description can remain the same; if new description is needed put it here~
 //@10827    = ~Longsword +2~
 //@10828    = ~Item description can remain the same; if new description is needed put it here~
-@10829    = ~The Sword of Myrloch Vale +3~
-@10830    = ~It is believed that fae creatures helped create this beautiful sword, and legends say that it was forged in the cool depths of Myrloch, the large lake at the center of Gwynneth in the Moonshaes. The weapon has an unearthly look to it, and it is believed to be quite old. The only individual known to have carried the weapon was a half-elven bard named Daen Winterbrush. It is said by some that after he found the sword, quite by accident, that he was blessed with exceptional creativity and powerful sensitivity to the world around him. He traveled for forty years and is known for some of the most unique, haunting melodies in Faerun. It is believed that Daen eventually became too melancholy at the sights of misery and oppression that he encountered in his travels, and that the fae smiths of the Moonshae Isles welcomed him into the breast of Myrloch.
+@10829    = ~Меч Долины Мирлока +3~
+@10830    = ~По легенде, этот красивый меч помогали делать феи, а выкован он был в ледяных глубинах Мирлока, огромного озера в центре Гвиннета на Муншаях. Это оружие неземного вида считают очень древним. Единственным известным владельцем меча был полуэльф-бард Даэн Зимняя Ветвь. Говорят, будто после того, как он по чистой случайности нашёл меч, в нём пробудились доселе неслыханные таланты и повышенная восприимчивость к окружающему миру. Сорок лет он провёл в странствиях и создал за это время немало мелодий, которые называют самыми поразительными и чарующими во всём Фаэруне. Но в конце концов, как рассказывают, Даэна стали слишком удручать чужие невзгоды и несправедливость, которую он видел повсюду, и он отправился на дно Мирлока к феям-оружейникам.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d8 + 3
-Attack Bonus:  +3 
-Enchantment:  +3
-Damage Type:  Slashing
-Special:
-  Knowledge (Arcana): +20 bonus
-  Deals an additional +1 electrical damage for every 5 points of Knowledge (Arcana) the wielder has
-Weight:  4 lb.
-Feat Requirement:  Martial Weapon, Large Sword
-Type:  One-handed~
+Урон: 1d8+3
+Атака: +3
+Зачарование: +3
+Тип урона: рубящий
+Особенности:
+ Знание (Волшебство): +20
+ Наносит дополнительно +1 электрического урона за каждые 5 пунктов навыка "Знание (Волшебство)" владельца меча
+Вес: 4 фунта
+Необходимая черта: Военное оружие, Большие мечи
+Тип: одноручное~
 //@10831    = ~The Sword of Myrloch Vale +5~ //HoF
 //@10832    = ~If we decide to make a HoF version of this item, we should put its description here~
 //@10833    = ~Moonblade of Selune~
-@10834    = ~The blade of this sword is constructed of a pale white material. It is slightly translucent and appears to glow in dim light. The edge of the blade appears dull and unable to cut even the softest of materials. When used in combat, however, a moonblade is a formidable weapon.
-A moonblade bypasses armor and strikes at a target directly. The weapon drains life force and leaves no visible wounds, unless the creature is undead. Undead suffer terrible wounds from a moonblade. Their substance actually seems to boil away, and they suffer double damage. While the blade is not actually made of silver, it has the exact same effect against lycanthropes as a silver weapon.
-Moonblade's of Selune are the favored weapons of the priestesses of Selune. They are usually granted only to priestesses who serve the church beyond the call of duty. This weapon was given to Emma Moonblade for her unswerving dedication to the church.
+@10834    = ~Клинок этого меча изготовлен из тусклого белого материала. Он полупрозрачен и едва заметно светится. Лезвие клинка кажется тупым и неспособным разрезать даже самые мягкие материалы. Что удивительно, в бою лунный клинок становится грозным оружием.
+Такой меч просто не замечает броню и вонзается прямо в жертву. Он выпивает жизненные силы, не оставляя на теле врага видимых следов. Впрочем, на останках нежити раны видны. Лунный клинок без пощады разит неупокоенных. Мёртвые останки словно вскипают и испаряются, так что нежить получает двойной урон. Хотя этот клинок не сделан из серебра, против ликантропов он действует так же, как и серебряное оружие.
+Лунный клинок Селуны - излюбленное оружие жриц этой богини, но далеко не каждая может его получить - лишь самые верные последовательницы могут рассчитывать на столь ценный дар. Эмма Лунный Клинок получила это оружие за непоколебимую преданность своей церкви.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d8 + 2
-Enchantment:  +2
-Damage Type:  Magic
-Special:
-  Deals double damage to undead
-  Counts as a silver weapon
-  Bypasses armor and shield bonuses
-  Each hit scrambles magic, causing any spell cast by the target in the next round to have a 50% chance of failing
-Weight: 2 lb.
-Feat Requirement:  Simple Weapon, Small Blade
-Type:  One-handed~
+Урон: 1d8+2
+Зачарование: +4
+Тип урона: магический
+Особенности:
+ Двойной урон нежити
+ Считается серебряным оружием
+ Игнорирует бонусы к классу защиты за доспех и щит
+ Каждое попадание в цель искажает магию, в результате чего любое заклинание, произнесенное целью в следующем раунде, с вероятностью 50% не сработает
+Вес: 2 фунта
+Необходимая черта: Военное оружие, Большие мечи
+Тип: одноручное~
 //@10835    = ~Moonblade of Selune +5~
-@10836    = ~The blade of this sword is constructed of a pale white material. It is slightly translucent and appears to glow in dim light. The edge of the blade appears dull and unable to cut even the softest of materials. When used in combat, however, a moonblade is a formidable weapon.
-A moonblade bypasses armor and strikes at a target directly. The weapon drains life force and leaves no visible wounds, unless the creature is undead. Undead suffer terrible wounds from a moonblade. Their substance actually seems to boil away, and they suffer double damage. While the blade is not actually made of silver, it has the exact same effect against lycanthropes as a silver weapon.
-Moonblade's of Selune are the favored weapons of the priestesses of Selune. They are usually granted only to priestesses who serve the church beyond the call of duty. This weapon was given to Emma Moonblade for her unswerving dedication to the church.
+@10836    = ~Клинок этого меча изготовлен из тусклого белого материала. Он полупрозрачен и едва заметно светится. Лезвие клинка кажется тупым и неспособным разрезать даже самые мягкие материалы. Что удивительно, в бою лунный клинок становится грозным оружием.
+Такой меч просто не замечает броню и вонзается прямо в жертву. Он выпивает жизненные силы, не оставляя на теле врага видимых следов. Впрочем, на останках нежити раны видны. Лунный клинок без пощады разит неупокоенных. Мёртвые останки словно вскипают и испаряются, так что нежить получает двойной урон. Хотя этот клинок не сделан из серебра, против ликантропов он действует так же, как и серебряное оружие.
+Лунный клинок Селуны - излюбленное оружие жриц этой богини, но далеко не каждая может его получить - лишь самые верные последовательницы могут рассчитывать на столь ценный дар. Эмма Лунный Клинок получила это оружие за непоколебимую преданность своей церкви.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d8 + 5
-Attack Bonus:  +5
-Enchantment:  +5
-Damage Type:  Magic
-Special:
-  Deals double damage to undead
-  Counts as a silver weapon
-  Bypasses armor and shield bonuses
-  Each hit scrambles magic, causing any spell cast by the target in the next round to have a 50% chance of failing
-Weight: 2 lb.
-Feat Requirement:  Simple Weapon, Small Blade
-Type:  One-handed~
+Урон: 1d8+5
+Атака: +5
+Зачарование: +5
+Тип урона: магический
+Особенности:
+ Двойной урон нежити
+ Считается серебряным оружием
+ Игнорирует бонусы к классу защиты за доспех и щит
+ Каждое попадание в цель искажает магию, в результате чего любое заклинание, произнесенное целью в следующем раунде, с вероятностью 50% не сработает
+Вес: 2 фунта
+Необходимая черта: Военное оружие, Большие мечи
+Тип: одноручное~
 //@10837    = ~Stunning Longsword +2~
-@10838    = ~These swords are usually referred to as doubled-edged swords, war swords, or military swords. In many cases, the longsword has a single-edged blade. There is no single version of the longsword; the design and length vary from culture to culture, and may vary within the same culture depending on the era. Among the most common characteristics of all longswords is their length, which ranges from 35 inches to 47 inches. In the latter case, the blade is known to take up 40 inches of the total length. Most longswords have a double-edged blade and a sharp point at the tip. Despite the tip, the longsword is designed for slashing, not thrusting. 
+@10838    = ~К длинным относят самые разные виды мечей: от боевых клинков наёмников до символов рыцарской знати. Они бывают обоюдоострыми, но нередко затачиваются только с одной стороны. Единства во мнениях о правильной форме длинного меча нет, даже в рамках одной культуры. Один и тот же народ в разные периоды своего развития может создавать клинки разной формы. Впрочем, у всех длинных мечей присутствуют общие черты: они прямые и в длину достигают от 35 до 47 дюймов. В последнем случае длина рабочей части клинка может доходить до 40 дюймов. Самыми распространёнными в Королевствах считаются обоюдоострые длинные мечи с колющим остриём. Впрочем, остриё не так важно - длинный меч славен молодецкими ударами, а не тычками. Чары на этом мече балансируют оружие, поддерживают его остроту и слегка выдают себя призрачным отсветом клинка.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d8 + 2
-Attack Bonus: +2 
-Enchantment:  +2
-Damage Type:  Slashing
-Special:
-  Stunning: 25% chance target is stunned for 1/2 round (Fortitude DC 18)
-Weight: 4 lb.
-Feat Requirement:  Martial Weapon, Large Sword
-Type:  One-handed~
+Урон: 1d8+2
+Атака: +2
+Зачарование: +2
+Тип урона: рубящий
+Особенности:
+ Ошеломление: с вероятностью 25% ошеломляет цель на 1/2 раунда (успешный спасбросок стойкости с УС 18 отменяет эффект)
+Вес: 4 фунта
+Необходимая черта: Военное оружие, Большие мечи
+Тип: одноручное~
 //@10839    = ~Corrosive Frost Longsword +2~
-@10840    = ~These swords are usually referred to as doubled-edged swords, war swords, or military swords. In many cases, the longsword has a single-edged blade. There is no single version of the longsword; the design and length vary from culture to culture, and may vary within the same culture depending on the era. Among the most common characteristics of all longswords is their length, which ranges from 35 inches to 47 inches. In the latter case, the blade is known to take up 40 inches of the total length. Most longswords have a double-edged blade and a sharp point at the tip. Despite the tip, the longsword is designed for slashing, not thrusting. 
+@10840    = ~К длинным относят самые разные виды мечей: от боевых клинков наёмников до символов рыцарской знати. Они бывают обоюдоострыми, но нередко затачиваются только с одной стороны. Единства во мнениях о правильной форме длинного меча нет, даже в рамках одной культуры. Один и тот же народ в разные периоды своего развития может создавать клинки разной формы. Впрочем, у всех длинных мечей присутствуют общие черты: они прямые и в длину достигают от 35 до 47 дюймов. В последнем случае длина рабочей части клинка может доходить до 40 дюймов. Самыми распространёнными в Королевствах считаются обоюдоострые длинные мечи с колющим остриём. Впрочем, остриё не так важно - длинный меч славен молодецкими ударами, а не тычками. Чары на этом мече балансируют оружие, поддерживают его остроту и слегка выдают себя призрачным отсветом клинка.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d8 + 2
-Attack Bonus: +2
-Enchantment:  +2
-Damage Type:  Slashing
-Special:
-  Frost: 50% chance +1d6 cold damage
-  Corrosion: 50% chance +1d6 acid damage
-Weight: 4 lb.
-Feat Requirement:  Martial Weapon, Large Sword
-Type:  One-handed~
+Урон: 1d8+2
+Атака: +2
+Зачарование: +2
+Тип урона: рубящий
+Особенности:
+ Стужа: с вероятностью 50% наносит +1d6 урона холодом
+ Разъедание: с вероятностью 50% наносит +1d6 урона кислотой
+Вес: 4 фунта
+Необходимая черта: Военное оружие, Большие мечи
+Тип: одноручное~
 //@10841    = ~Longsword of Wounding +1~
-@10842    = ~These swords are usually referred to as doubled-edged swords, war swords, or military swords. In many cases, the longsword has a single-edged blade. There is no single version of the longsword; the design and length vary from culture to culture, and may vary within the same culture depending on the era. Among the most common characteristics of all longswords is their length, which ranges from 35 inches to 47 inches. In the latter case, the blade is known to take up 40 inches of the total length. Most longswords have a double-edged blade and a sharp point at the tip. Despite the tip, the longsword is designed for slashing, not thrusting. 
+@10842    = ~К длинным относят самые разные виды мечей: от боевых клинков наёмников до символов рыцарской знати. Они бывают обоюдоострыми, но нередко затачиваются только с одной стороны. Единства во мнениях о правильной форме длинного меча нет, даже в рамках одной культуры. Один и тот же народ в разные периоды своего развития может создавать клинки разной формы. Впрочем, у всех длинных мечей присутствуют общие черты: они прямые и в длину достигают от 35 до 47 дюймов. В последнем случае длина рабочей части клинка может доходить до 40 дюймов. Самыми распространёнными в Королевствах считаются обоюдоострые длинные мечи с колющим остриём. Впрочем, остриё не так важно - длинный меч славен молодецкими ударами, а не тычками. Чары на этом мече балансируют оружие, поддерживают его остроту и слегка выдают себя призрачным отсветом клинка.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d8 + 1
-Attack Bonus: +1
-Enchantment: +1
-Damage Type:  Slashing
-Special:
-  Wounding: Inflicts 1 additional point of damage per round for 10 rounds (Fortitude DC 16)
-Weight: 4 lb.
-Feat Requirement:  Martial Weapon, Large Sword
-Type:  One-handed~
+Урон: 1d8+1
+Атака: +1
+Зачарование: +1
+Тип урона: рубящий
+Особенности:
+ Рваные раны: наносит 1 дополнительный пункт урона в раунд в течение 10 раундов (успешный спасбросок стойкости с УС 16 отменяет эффект)
+Вес: 4 фунта
+Необходимая черта: Военное оружие, Большие мечи
+Тип: одноручное~
 //@10843    = ~Longsword of Electric Fire +1~
 //@10844    = ~Item description can remain the same; if new description is needed put it here~
-@10845    = ~Longsword of Parrying~
-@10846    = ~These swords are usually referred to as doubled-edged swords, war swords, or military swords. In many cases, the longsword has a single-edged blade. There is no single version of the longsword; the design and length vary from culture to culture, and may vary within the same culture depending on the era. Among the most common characteristics of all longswords is their length, which ranges from 35 inches to 47 inches. In the latter case, the blade is known to take up 40 inches of the total length. Most longswords have a double-edged blade and a sharp point at the tip. Despite the tip, the longsword is designed for slashing, not thrusting. 
+@10845    = ~Длинный меча парирования~
+@10846    = ~К длинным относят самые разные виды мечей: от боевых клинков наёмников до символов рыцарской знати. Они бывают обоюдоострыми, но нередко затачиваются только с одной стороны. Единства во мнениях о правильной форме длинного меча нет, даже в рамках одной культуры. Один и тот же народ в разные периоды своего развития может создавать клинки разной формы. Впрочем, у всех длинных мечей присутствуют общие черты: они прямые и в длину достигают от 35 до 47 дюймов. В последнем случае длина рабочей части клинка может доходить до 40 дюймов. Самыми распространёнными в Королевствах считаются обоюдоострые длинные мечи с колющим остриём. Впрочем, остриё не так важно - длинный меч славен молодецкими ударами, а не тычками. Чары на этом мече балансируют оружие, поддерживают его остроту и слегка выдают себя призрачным отсветом клинка.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d8
-Damage Type:  Slashing
-Special:
-  Armor Bonus: +2 vs. slashing
-Weight: 4 lb.
-Feat Requirement:  Martial Weapon, Large Sword
-Type:  One-handed~
+Урон: 1d8
+Тип урона: рубящий
+Особенности:
+ Класс защиты: +2 (доспех) против рубящего урона
+ Рваные раны: наносит 1 дополнительный пункт урона в раунд в течение 10 раундов (успешный спасбросок стойкости с УС 16 отменяет эффект)
+Вес: 4 фунта
+Необходимая черта: Военное оружие, Большие мечи
+Тип: одноручное~
 //@10847    = ~Venomous Longsword~
-@10848    = ~These swords are usually referred to as doubled-edged swords, war swords, or military swords. In many cases, the longsword has a single-edged blade. There is no single version of the longsword; the design and length vary from culture to culture, and may vary within the same culture depending on the era. Among the most common characteristics of all longswords is their length, which ranges from 35 inches to 47 inches. In the latter case, the blade is known to take up 40 inches of the total length. Most longswords have a double-edged blade and a sharp point at the tip. Despite the tip, the longsword is designed for slashing, not thrusting. 
+@10848    = ~К длинным относят самые разные виды мечей: от боевых клинков наёмников до символов рыцарской знати. Они бывают обоюдоострыми, но нередко затачиваются только с одной стороны. Единства во мнениях о правильной форме длинного меча нет, даже в рамках одной культуры. Один и тот же народ в разные периоды своего развития может создавать клинки разной формы. Впрочем, у всех длинных мечей присутствуют общие черты: они прямые и в длину достигают от 35 до 47 дюймов. В последнем случае длина рабочей части клинка может доходить до 40 дюймов. Самыми распространёнными в Королевствах считаются обоюдоострые длинные мечи с колющим остриём. Впрочем, остриё не так важно - длинный меч славен молодецкими ударами, а не тычками. Чары на этом мече балансируют оружие, поддерживают его остроту и слегка выдают себя призрачным отсветом клинка.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d8
-Damage Type:  Slashing
-Special:
-  Venom: +2 points of poison damage every second for 6 seconds (Fortitude DC 12)
-Weight: 4 lb.
-Feat Requirement:  Martial Weapon, Large Sword
-Type:  One-handed~
+Урон: 1d8
+Тип урона: рубящий
+Особенности:
+ Яд: +2 очка урона ядом каждую секунду в течение 6 секунд (успешный спасбросок стойкости с УС 12 отменяет эффект)
+Вес: 4 фунта
+Необходимая черта: Военное оружие, Большие мечи
+Тип: одноручное~
 //@10849    = ~Longsword +5~
 //@10850    = ~Item description can remain the same; if new description is needed put it here~
 //@10851    = ~Longsword +4~
 //@10852    = ~Item description can remain the same; if new description is needed put it here~
 //@10853    = ~Longsword +3~
 //@10854    = ~Item description can remain the same; if new description is needed put it here~
-@10855    = ~Bhaal's Fire +3~
-@10856    = ~These swords are usually referred to as doubled-edged swords, war swords, or military swords. In many cases, the longsword has a single-edged blade. There is no single version of the longsword; the design and length vary from culture to culture, and may vary within the same culture depending on the era. Among the most common characteristics of all longswords is their length, which ranges from 35 inches to 47 inches. In the latter case, the blade is known to take up 40 inches of the total length. Most longswords have a double-edged blade and a sharp point at the tip. Despite the tip, the longsword is designed for slashing, not thrusting. The blade of this sword is covered with all sorts of arcane symbols.
+@10855    = ~Огонь Баала +3~
+@10856    = ~К длинным относят самые разные виды мечей: от боевых клинков наёмников до символов рыцарской знати. Они бывают обоюдоострыми, но нередко затачиваются только с одной стороны. Единства во мнениях о правильной форме длинного меча нет, даже в рамках одной культуры. Один и тот же народ в разные периоды своего развития может создавать клинки разной формы. Впрочем, у всех длинных мечей присутствуют общие черты: они прямые и в длину достигают от 35 до 47 дюймов. В последнем случае длина рабочей части клинка может доходить до 40 дюймов. Самыми распространёнными в Королевствах считаются обоюдоострые длинные мечи с колющим остриём. Впрочем, остриё не так важно - длинный меч славен молодецкими ударами, а не тычками. Чары на этом мече балансируют оружие, поддерживают его остроту и слегка выдают себя призрачным отсветом клинка.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d8 + 3
-Attack Bonus:  +3 
-Enchantment:  +3
-Damage Type:  Slashing
-Special:
-  Flame: +2d4 fire damage
-  Stunning: 25% chance target is stunned for 1/2 round (Fortitude DC 28)
-Weight: 4 lb.
-Feat Requirement:  Martial Weapon, Large Sword
-Type:  One-handed~
+Урон: 1d8+3
+Атака: +3
+Зачарование: +3
+Тип урона: рубящий
+Особенности:
+ Пламя: +2d4 урона огнём
+ Ошеломление: с вероятностью 25% ошеломляет цель на 1/2 раунда (успешный спасбросок стойкости с УС 28 отменяет эффект)
+Вес: 4 фунта
+Необходимая черта: Военное оружие, Большие мечи
+Тип: одноручное~
 //@10857    = ~Flaming Sword of the Defender +5~
-@10858    = ~These swords are usually referred to as doubled-edged swords, war swords, or military swords. In many cases, the longsword has a single-edged blade. There is no single version of the longsword; the design and length vary from culture to culture, and may vary within the same culture depending on the era. Among the most common characteristics of all longswords is their length, which ranges from 35 inches to 47 inches. In the latter case, the blade is known to take up 40 inches of the total length. Most longswords have a double-edged blade and a sharp point at the tip. Despite the tip, the longsword is designed for slashing, not thrusting. 
+@10858    = ~К длинным относят самые разные виды мечей: от боевых клинков наёмников до символов рыцарской знати. Они бывают обоюдоострыми, но нередко затачиваются только с одной стороны. Единства во мнениях о правильной форме длинного меча нет, даже в рамках одной культуры. Один и тот же народ в разные периоды своего развития может создавать клинки разной формы. Впрочем, у всех длинных мечей присутствуют общие черты: они прямые и в длину достигают от 35 до 47 дюймов. В последнем случае длина рабочей части клинка может доходить до 40 дюймов. Самыми распространёнными в Королевствах считаются обоюдоострые длинные мечи с колющим остриём. Впрочем, остриё не так важно - длинный меч славен молодецкими ударами, а не тычками. Чары на этом мече балансируют оружие, поддерживают его остроту и слегка выдают себя призрачным отсветом клинка.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d8 +5
-Attack Bonus:  +5 
-Enchantment:  +5
-Damage Type:  Slashing
-Special:
-  Deflection Bonus: +5
-  Resistance: 25/- Fire Resistance
-  Resistance: 25/- Cold Resistance
-  Flame: +1d6 fire damage
-Weight: 4 lb.
-Feat Requirement:  Martial Weapon, Large Sword
-Type:  One-handed~
+Урон: 1d8+5
+Атака: +5
+Зачарование: +5
+Тип урона: рубящий
+Особенности:
+ Защитник: класс защиты +5 (отражение)
+ Сопротивление: 25/- сопротивления огню
+ Сопротивление: 25/- сопротивления холоду
+ Пламя: +1d6 урона огнём
+Вес: 4 фунта
+Необходимая черта: Военное оружие, Большие мечи
+Тип: одноручное~
 //@10859    = ~Stunning Longsword of Corrosion +3~
-@10860    = ~These swords are usually referred to as doubled-edged swords, war swords, or military swords. In many cases, the longsword has a single-edged blade. There is no single version of the longsword; the design and length vary from culture to culture, and may vary within the same culture depending on the era. Among the most common characteristics of all longswords is their length, which ranges from 35 inches to 47 inches. In the latter case, the blade is known to take up 40 inches of the total length. Most longswords have a double-edged blade and a sharp point at the tip. Despite the tip, the longsword is designed for slashing, not thrusting. 
+@10860    = ~К длинным относят самые разные виды мечей: от боевых клинков наёмников до символов рыцарской знати. Они бывают обоюдоострыми, но нередко затачиваются только с одной стороны. Единства во мнениях о правильной форме длинного меча нет, даже в рамках одной культуры. Один и тот же народ в разные периоды своего развития может создавать клинки разной формы. Впрочем, у всех длинных мечей присутствуют общие черты: они прямые и в длину достигают от 35 до 47 дюймов. В последнем случае длина рабочей части клинка может доходить до 40 дюймов. Самыми распространёнными в Королевствах считаются обоюдоострые длинные мечи с колющим остриём. Впрочем, остриё не так важно - длинный меч славен молодецкими ударами, а не тычками. Чары на этом мече балансируют оружие, поддерживают его остроту и слегка выдают себя призрачным отсветом клинка.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d8 + 3
-Attack Bonus:  +3 
-Enchantment:  +3
-Damage Type:  Slashing
-Special:
-  Corrosion: 50% chance of +3d6 acid damage
-  Stunning: 50% chance target is stunned for 1/2 combat round (Fortitude DC 37)
-Weight: 4 lb.
-Feat Requirement:  Martial Weapon, Large Sword
-Type:  One-handed~
+Урон: 1d8+3
+Атака: +3
+Зачарование: +3
+Тип урона: рубящий
+Особенности:
+ Разъедание: 50% вероятность нанести дополнительно 3d6 урона кислотой
+ Ошеломление: с вероятностью 50% ошеломляет цель на 1/2 раунда (успешный спасбросок стойкости с УС 37 отменяет эффект)
+ Ошеломление: при неудачном спасброске стойкости цель ошеломляется на 1/2 раунда
+Вес: 4 фунта
+Необходимая черта: Военное оружие, Большие мечи
+Тип: одноручное~
 //@10861    = ~Longsword of Acidic Fury~
-@10862    = ~These swords are usually referred to as doubled-edged swords, war swords, or military swords. In many cases, the longsword has a single-edged blade. There is no single version of the longsword; the design and length vary from culture to culture, and may vary within the same culture depending on the era. Among the most common characteristics of all longswords is their length, which ranges from 35 inches to 47 inches. In the latter case, the blade is known to take up 40 inches of the total length. Most longswords have a double-edged blade and a sharp point at the tip. Despite the tip, the longsword is designed for slashing, not thrusting. 
+@10862    = ~К длинным относят самые разные виды мечей: от боевых клинков наёмников до символов рыцарской знати. Они бывают обоюдоострыми, но нередко затачиваются только с одной стороны. Единства во мнениях о правильной форме длинного меча нет, даже в рамках одной культуры. Один и тот же народ в разные периоды своего развития может создавать клинки разной формы. Впрочем, у всех длинных мечей присутствуют общие черты: они прямые и в длину достигают от 35 до 47 дюймов. В последнем случае длина рабочей части клинка может доходить до 40 дюймов. Самыми распространёнными в Королевствах считаются обоюдоострые длинные мечи с колющим остриём. Впрочем, остриё не так важно - длинный меч славен молодецкими ударами, а не тычками. Чары на этом мече балансируют оружие, поддерживают его остроту и слегка выдают себя призрачным отсветом клинка.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d8
-Enchantment:  +5
-Damage Type:  Slashing
-Special:
-  Corrosive Burst: +2d6 acid damage and 10% chance of +2d10 extra acid damage
-  Venom: +2 points of poison damage every second for 6 seconds (Fortitude DC 33)
-  Sure Striking: Weapon is treated as having a +5 enchantment for the purpose of hitting creatures that require magical weapons to hit
-Weight: 4 lb.
-Feat Requirement:  Martial Weapon, Large Sword
-Type:  One-handed~
+Урон: 1d8
+Зачарование: +5
+Тип урона: рубящий
+Особенности:
+ Кислотные брызги: +2d6 урона кислотой и 10% вероятность нанести дополнительно 2d10 урона кислотой
+ Яд: +2 урона ядом каждую секунду в течение 6 секунд (успешный спасбросок стойкости с УС 33 отменяет эффект)
+ Точный удар: для расчёта попадания по существам, которых можно поразить только магическим оружием, это оружие считается зачарованным +5
+Вес: 4 фунта
+Необходимая черта: Военное оружие, Большие мечи
+Тип: одноручное~
 //@10863    = ~Longsword of Frost +5~
-@10864    = ~These swords are usually referred to as doubled-edged swords, war swords, or military swords. In many cases, the longsword has a single-edged blade. There is no single version of the longsword; the design and length vary from culture to culture, and may vary within the same culture depending on the era. Among the most common characteristics of all longswords is their length, which ranges from 35 inches to 47 inches. In the latter case, the blade is known to take up 40 inches of the total length. Most longswords have a double-edged blade and a sharp point at the tip. Despite the tip, the longsword is designed for slashing, not thrusting. 
+@10864    = ~К длинным относят самые разные виды мечей: от боевых клинков наёмников до символов рыцарской знати. Они бывают обоюдоострыми, но нередко затачиваются только с одной стороны. Единства во мнениях о правильной форме длинного меча нет, даже в рамках одной культуры. Один и тот же народ в разные периоды своего развития может создавать клинки разной формы. Впрочем, у всех длинных мечей присутствуют общие черты: они прямые и в длину достигают от 35 до 47 дюймов. В последнем случае длина рабочей части клинка может доходить до 40 дюймов. Самыми распространёнными в Королевствах считаются обоюдоострые длинные мечи с колющим остриём. Впрочем, остриё не так важно - длинный меч славен молодецкими ударами, а не тычками. Чары на этом мече балансируют оружие, поддерживают его остроту и слегка выдают себя призрачным отсветом клинка.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d8 + 5
-Attack Bonus:  +5
-Enchantment:  +5
-Damage Type:  Slashing
-Special:
-  Frost: +1d6 cold damage
-  Slow: Target is slowed for 1 round (Fortitude DC 30)
-Weight: 4 lb.
-Feat Requirement:  Martial Weapon, Large Sword
-Type:  One-handed~
+Урон: 1d8+5
+Атака: +5
+Зачарование: +5
+Тип урона: рубящий
+Особенности:
+ Стужа: +1d6 урона холодом
+ Замедление: при попадании цель замедляется на 1 раунд (успешный спасбросок стойкости с УС 33 отменяет эффект)
+Вес: 4 фунта
+Необходимая черта: Военное оружие, Большие мечи
+Тип: одноручное~
 //@10865    = ~Vampiric Longsword +4~
-@10866    = ~These swords are usually referred to as doubled-edged swords, war swords, or military swords. In many cases, the longsword has a single-edged blade. There is no single version of the longsword; the design and length vary from culture to culture, and may vary within the same culture depending on the era. Among the most common characteristics of all longswords is their length, which ranges from 35 inches to 47 inches. In the latter case, the blade is known to take up 40 inches of the total length. Most longswords have a double-edged blade and a sharp point at the tip. Despite the tip, the longsword is designed for slashing, not thrusting. 
+@10866    = ~К длинным относят самые разные виды мечей: от боевых клинков наёмников до символов рыцарской знати. Они бывают обоюдоострыми, но нередко затачиваются только с одной стороны. Единства во мнениях о правильной форме длинного меча нет, даже в рамках одной культуры. Один и тот же народ в разные периоды своего развития может создавать клинки разной формы. Впрочем, у всех длинных мечей присутствуют общие черты: они прямые и в длину достигают от 35 до 47 дюймов. В последнем случае длина рабочей части клинка может доходить до 40 дюймов. Самыми распространёнными в Королевствах считаются обоюдоострые длинные мечи с колющим остриём. Впрочем, остриё не так важно - длинный меч славен молодецкими ударами, а не тычками. Чары на этом мече балансируют оружие, поддерживают его остроту и слегка выдают себя призрачным отсветом клинка.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d8 + 4
-Attack Bonus:  +4 
-Enchantment:  +4
-Damage Type:  Slashing
-Special:
-  Vampiric: 2d4 hit points drained from target and temporarily added to wielder (Fortitude DC 25)
-Weight: 4 lb.
-Feat Requirement:  Martial Weapon, Large Sword
-Type:  One-handed~
-@10867    = ~Longsword +3: Enforcer~
-@10868    = ~These swords are usually referred to as doubled-edged swords, war swords, or military swords. In many cases, the longsword has a single-edged blade. There is no single version of the longsword; the design and length vary from culture to culture, and may vary within the same culture depending on the era. Among the most common characteristics of all longswords is their length, which ranges from 35 inches to 47 inches. In the latter case, the blade is known to take up 40 inches of the total length. Most longswords have a double-edged blade and a sharp point at the tip. Despite the tip, the longsword is designed for slashing, not thrusting. 
+Урон: 1d8+4
+Атака: +4
+Зачарование: +4
+Тип урона: рубящий
+Особенности:
+ Вампиризм: 2d4 пунктов здоровья вытягивается у цели и временно добавляется владельцу (успешный спасбросок стойкости с УС 25 отменяет эффект)
+Вес: 4 фунта
+Необходимая черта: Военное оружие, Большие мечи
+Тип: одноручное~
+@10867    = ~Длинный меч +3: Усилитель~
+@10868    = ~К длинным относят самые разные виды мечей: от боевых клинков наёмников до символов рыцарской знати. Они бывают обоюдоострыми, но нередко затачиваются только с одной стороны. Единства во мнениях о правильной форме длинного меча нет, даже в рамках одной культуры. Один и тот же народ в разные периоды своего развития может создавать клинки разной формы. Впрочем, у всех длинных мечей присутствуют общие черты: они прямые и в длину достигают от 35 до 47 дюймов. В последнем случае длина рабочей части клинка может доходить до 40 дюймов. Самыми распространёнными в Королевствах считаются обоюдоострые длинные мечи с колющим остриём. Впрочем, остриё не так важно - длинный меч славен молодецкими ударами, а не тычками. Чары на этом мече балансируют оружие, поддерживают его остроту и слегка выдают себя призрачным отсветом клинка.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d8 + 3
-Attack Bonus: +3
-Enchantment: +3
-Damage Type:  Slashing
-Special:
-  Spellblade: Each hit with this sword decreases the wielder's spellcasting time by 1 for 2 rounds (cumulative)
-Weight: 4 lb.
-Feat Requirement:  Martial Weapon, Large Sword
-Type:  One-handed~
+Урон: 1d8+3
+Атака: +3
+Зачарование: +3
+Тип урона: рубящий
+Особенности:
+ Клинок заклинаний: каждое попадание этим мечом уменьшает время произнесения заклинаний владельцем меча на 1 на два раунда (эффект может суммироваться)
+Вес: 4 фунта
+Фактор скорости: 4
+Необходимая черта: Военное оружие, Большие мечи
+Тип: одноручное~
 //@10869    = ~Longsword +1: Bloodletting~
 @10870    = ~These swords are usually referred to as doubled-edged swords, war swords, or military swords. In many cases, the longsword has a single-edged blade. There is no single version of the longsword; the design and length vary from culture to culture, and may vary within the same culture depending on the era. Among the most common characteristics of all longswords is their length, which ranges from 35 inches to 47 inches. In the latter case, the blade is known to take up 40 inches of the total length. Most long swords have a double-edged blade and a sharp point at the tip. Despite the tip, the longsword is designed for slashing, not thrusting. 
 
