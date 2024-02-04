@@ -4081,7 +4081,7 @@
 Особенности:
  Двойной урон нежити
  Считается серебряным оружием
- Игнорирует бонусы к классу защиты за доспех и щит
+ Чистая энергия: игнорирует бонусы к классу защиты за доспех и щит
  Каждое попадание в цель искажает магию, в результате чего любое заклинание, произнесенное целью в следующем раунде, с вероятностью 50% не сработает
 Вес: 2 фунта
 Необходимая черта: Военное оружие, Большие мечи
@@ -4270,297 +4270,298 @@
 Необходимая черта: Военное оружие, Большие мечи
 Тип: одноручное~
 //@10869    = ~Longsword +1: Bloodletting~
-@10870    = ~These swords are usually referred to as doubled-edged swords, war swords, or military swords. In many cases, the longsword has a single-edged blade. There is no single version of the longsword; the design and length vary from culture to culture, and may vary within the same culture depending on the era. Among the most common characteristics of all longswords is their length, which ranges from 35 inches to 47 inches. In the latter case, the blade is known to take up 40 inches of the total length. Most long swords have a double-edged blade and a sharp point at the tip. Despite the tip, the longsword is designed for slashing, not thrusting. 
+@10870    = ~К длинным относят самые разные виды мечей: от боевых клинков наёмников до символов рыцарской знати. Они бывают обоюдоострыми, но нередко затачиваются только с одной стороны. Единства во мнениях о правильной форме длинного меча нет, даже в рамках одной культуры. Один и тот же народ в разные периоды своего развития может создавать клинки разной формы. Впрочем, у всех длинных мечей присутствуют общие черты: они прямые и в длину достигают от 35 до 47 дюймов. В последнем случае длина рабочей части клинка может доходить до 40 дюймов. Самыми распространёнными в Королевствах считаются обоюдоострые длинные мечи с колющим остриём. Впрочем, остриё не так важно - длинный меч славен молодецкими ударами, а не тычками. Чары на этом мече балансируют оружие, поддерживают его остроту и слегка выдают себя призрачным отсветом клинка.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d8 + 1
-Attack Bonus: +1 
-Enchantment:  +1
-Damage Type:  Slashing
-Special:
-  Vampiric: 1d4 hit points drained from target and added to wielder (Fortitude DC 21)
-  Wounding: Inflicts 1 additional point of damge per round for 10 rounds (Fortitude DC 21)
-Weight: 4 lb.
-Feat Requirement:  Martial Weapon, Large Sword
-Type:  One-handed~
+Урон: 1d8+1
+Атака: +1
+Зачарование: +1
+Тип урона: рубящий
+Особенности:
+ Вампиризм: 1d4 пунктов здоровья отнимается у цели и прибавляется владельцу (спасбросок стойкости с УС 21 отменяет эффект)
+ Рваные раны: наносит 1 дополнительное очко урона в раунд в течение 10 раундов (спасбросок стойкости с УС 21 отменяет эффект)
+Вес: 4 фунта
+Необходимая черта: Военное оружие, Большие мечи
+Тип: одноручное~
 //@10871    = ~Lightning Longsword +2~
-@10872    = ~These swords are usually referred to as doubled-edged swords, war swords, or military swords. In many cases, the longsword has a single-edged blade. There is no single version of the longsword; the design and length vary from culture to culture, and may vary within the same culture depending on the era. Among the most common characteristics of all longswords is their length, which ranges from 35 inches to 47 inches. In the latter case, the blade is known to take up 40 inches of the total length. Most longswords have a double-edged blade and a sharp point at the tip. Despite the tip, the longsword is designed for slashing, not thrusting. 
+@10872    = ~К длинным относят самые разные виды мечей: от боевых клинков наёмников до символов рыцарской знати. Они бывают обоюдоострыми, но нередко затачиваются только с одной стороны. Единства во мнениях о правильной форме длинного меча нет, даже в рамках одной культуры. Один и тот же народ в разные периоды своего развития может создавать клинки разной формы. Впрочем, у всех длинных мечей присутствуют общие черты: они прямые и в длину достигают от 35 до 47 дюймов. В последнем случае длина рабочей части клинка может доходить до 40 дюймов. Самыми распространёнными в Королевствах считаются обоюдоострые длинные мечи с колющим остриём. Впрочем, остриё не так важно - длинный меч славен молодецкими ударами, а не тычками. Чары на этом мече балансируют оружие, поддерживают его остроту и слегка выдают себя призрачным отсветом клинка.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d8 + 2
-Attack Bonus:  +2 
-Enchantment:  +2
-Damage Type:  Slashing
-Special:
-  Shock: +1d6 electrical damage
-Weight: 4 lb.
-Feat Requirement:  Martial Weapon, Large Sword
-Type:  One-handed~
+Урон: 1d8+2
+Атака: +2
+Зачарование: +2
+Тип урона: рубящий
+Особенности:
+ Шок: +1d6 урона электричеством
+Вес: 4 фунта
+Необходимая черта: Военное оружие, Большие мечи
+Тип: одноручное~
 //@10873    = ~Longsword of Resistance +1~
-@10874    = ~These swords are usually referred to as doubled-edged swords, war swords, or military swords. In many cases, the longsword has a single-edged blade. There is no single version of the longsword; the design and length vary from culture to culture, and may vary within the same culture depending on the era. Among the most common characteristics of all longswords is their length, which ranges from 35 inches to 47 inches. In the latter case, the blade is known to take up 40 inches of the total length. Most longswords have a double-edged blade and a sharp point at the tip. Despite the tip, the longsword is designed for slashing, not thrusting. 
+@10874    = ~К длинным относят самые разные виды мечей: от боевых клинков наёмников до символов рыцарской знати. Они бывают обоюдоострыми, но нередко затачиваются только с одной стороны. Единства во мнениях о правильной форме длинного меча нет, даже в рамках одной культуры. Один и тот же народ в разные периоды своего развития может создавать клинки разной формы. Впрочем, у всех длинных мечей присутствуют общие черты: они прямые и в длину достигают от 35 до 47 дюймов. В последнем случае длина рабочей части клинка может доходить до 40 дюймов. Самыми распространёнными в Королевствах считаются обоюдоострые длинные мечи с колющим остриём. Впрочем, остриё не так важно - длинный меч славен молодецкими ударами, а не тычками. Чары на этом мече балансируют оружие, поддерживают его остроту и слегка выдают себя призрачным отсветом клинка.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d8 + 1
-Attack Bonus:  +1
-Enchantment:  +1
-Damage Type:  Slashing
-Special:
-  Spell Resistance: Set to 13
-Weight: 4 lb.
-Feat Requirement:  Martial Weapon, Large Sword
-Type:  One-handed~
+Урон: 1d8+1
+Атака: +1
+Зачарование: +1
+Тип урона: рубящий
+Особенности:
+ Сопротивление магии: устанавливается на 13
+Вес: 4 фунта
+Необходимая черта: Военное оружие, Большие мечи
+Тип: одноручное~
 //@10875    = ~Vampiric Long Sword~
-@10876    = ~These swords are usually referred to as doubled-edged swords, war swords, or military swords. In many cases, the longsword has a single-edged blade. There is no single version of the longsword; the design and length vary from culture to culture, and may vary within the same culture depending on the era. Among the most common characteristics of all longswords is their length, which ranges from 35 inches to 47 inches. In the latter case, the blade is known to take up 40 inches of the total length. Most longswords have a double-edged blade and a sharp point at the tip. Despite the tip, the longsword is designed for slashing, not thrusting. 
+@10876    = ~К длинным относят самые разные виды мечей: от боевых клинков наёмников до символов рыцарской знати. Они бывают обоюдоострыми, но нередко затачиваются только с одной стороны. Единства во мнениях о правильной форме длинного меча нет, даже в рамках одной культуры. Один и тот же народ в разные периоды своего развития может создавать клинки разной формы. Впрочем, у всех длинных мечей присутствуют общие черты: они прямые и в длину достигают от 35 до 47 дюймов. В последнем случае длина рабочей части клинка может доходить до 40 дюймов. Самыми распространёнными в Королевствах считаются обоюдоострые длинные мечи с колющим остриём. Впрочем, остриё не так важно - длинный меч славен молодецкими ударами, а не тычками. Чары на этом мече балансируют оружие, поддерживают его остроту и слегка выдают себя призрачным отсветом клинка.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d8
-Damage Type:  Slashing
-Special: 
-  Vampiric: 1d4 hit points drained from target and temporarily added to wielder (Fortitude DC 12)
-Weight: 4 lb.
-Feat Requirement:  Martial Weapon, Large Sword
-Type:  One-handed~
+Урон: 1d8
+Тип урона: рубящий
+Особенности:
+ Вампиризм: 1d4 пунктов здоровья отнимается у цели и временно добавляется владельцу (спасбросок стойкости с УС 12 отменяет эффект)
+Вес: 4 фунта
+Необходимая черта: Военное оружие, Большие мечи
+Тип: одноручное~
 //@10877    = ~Death's Bane~
-@10878    = ~Delnar was a timid mage who never was one for adventure. He spent most of his life in quiet study, living with his mother, trying to learn the art of crafting magical items. Unfortunately, his mother had a habit of interrupting him at crucial points during the enchantment process, often with disastrous results. Death's Bane is another botched attempt by Delnar to construct something of use.
+@10878    = ~Делнар был робким магом, который никогда не любил приключения. Большую часть своей жизни он провёл в спокойной учёбе, живя со своей матерью и пытаясь постичь искусство создания зачарованных предметов. К сожалению, у матери Делнара была привычка отвлекать его в момент зачарования предметов, что частенько приводило к катастрофическим результатам. "Проклятие смерти" - это ещё одна неудачная попытка Делнара создать хоть что-нибудь стоящее.
 
-This weapon is truly an enigma. When used in battle it does little to no damage, instead healing the intended target. It has been given the name 'Death's Bane' because of its inability to slay a target.
+Это оружие - настоящая загадка. При использовании в бою - оно практически не наносит урона, вместо этого исцеляя цель. Этот клинок окрестили "Проклятием смерти" - за неспособность убить атакуемого.
 
-What purpose Delnar originally intended this weapon to serve is unknown. There are some who argue that it functions as intended, while others laugh at the absurdity of this.
+Для каким целей Делнар изначально создавал это оружие, неизвестно. Есть те, кто утверждает, что оружие работает, как и должно, а другие смеются над абсурдностью этих предположений.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Healing: 1d8 + 2
-Attack Bonus:  +2
-Damage Type:  None
-Special:
-  Strength, proficiency, and other damage bonuses add to the healing of this weapon
-  Brilliant Energy: Ignores target's armor and shield bonuses
-Weight: 4 lb.
-Feat Requirement:  Martial Weapon, Large Sword
-Type:  One-handed~
+Исцеление: 1d8+2
+Атака: +4
+Тип урона: нет
+Особенности:
+ Увеличение урона от силы, мастерства и другие увеличения добавляются к показателю исцеления этого оружия
+ Чистая энергия: игнорирует бонусы к классу защиты за доспех и щит
+Вес: 4 фунта
+Необходимая черта: Военное оружие, Большие мечи
+Тип: одноручное~
 //@10879    = ~Delnar's Healing Blade~
-@10880    = ~Delnar was a timid mage who never was one for adventure. He spent most of his life in quiet study, living with his mother, trying to learn the art of crafting magical items. Unfortunately, his mother had a habit of interrupting him at crucial points during the enchantment process, often with disastrous results. Delnar's Healing Blade is another botched attempt by Delnar to construct something of use.
+@10880    = ~Делнар был робким магом, который никогда не любил приключения. Большую часть своей жизни он провёл в спокойной учёбе, живя со своей матерью и пытаясь постичь искусство создания зачарованных предметов. К сожалению, у матери Делнара была привычка отвлекать его в момент зачарования предметов, что частенько приводило к катастрофическим результатам. "Исцеляющий клинок Делнара" - это ещё одна неудачная попытка Делнара создать хоть что-нибудь стоящее.
 
-This weapon is truly an enigma. When used in battle it does little to no damage, instead healing the intended target. It has been given the name 'Delnar's Healing Blade' because of its inability to slay a target.
+Это оружие - настоящая загадка. При использовании в бою - оно практически не наносит урона, вместо этого исцеляя цель. Этот клинок окрестили "Исцеляющим клинком Делнара" - за неспособность убить атакуемого.
 
-What purpose Delnar originally intended this weapon to serve is unknown. There are some who argue that it functions as intended, while others laugh at the absurdity of this.
+Для каким целей Делнар изначально создавал это оружие, неизвестно. Есть те, кто утверждает, что оружие работает, как и должно, а другие смеются над абсурдностью этих предположений.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Healing: 1d8 + 5
-Attack Bonus:  +5
-Damage Type:  None
-Special:
-  Strength, proficiency, and other damage bonuses add to the healing of this weapon
-  Brilliant Energy: Ignores target's armor and shield bonuses
-Weight: 4 lb.
-Feat Requirement:  Martial Weapon, Large Sword
-Type:  One-handed~
-@10881    = ~Dykhast Sword~
-@10882    = ~Ancient dwarven legends tell of a time when the noblest of metals was not dwarven steel, nor meteoric iron, nor mithril, but dykhast - an alloy so strong that a blade's edge would be capable of slicing through adamantine, and with a surface so perfect and gleaming that its shimmering surface could be seen a dragon's flight away. The oldest of dwarves speak of dykhast blades with tears of fond remembrance in their eyes, and callously spit at the mention of the "sundry weak and piddling" metals that today's arms and armor are fashioned from.
+Исцеление: 1d8+5
+Атака: +5
+Тип урона: нет
+Особенности:
+ Увеличение урона от силы, мастерства и другие увеличения добавляются к показателю исцеления этого оружия
+ Чистая энергия: игнорирует бонусы к классу защиты за доспех и щит
+Вес: 4 фунта
+Необходимая черта: Военное оружие, Большие мечи
+Тип: одноручное
+@10881    = ~Меч из дикаста~
+@10882    = ~Древние легенды дварфов рассказывают о временах, когда самым благородным из металлов была не сталь дварфов, не метеоритное железо, и не мифрил, но дикаст - сплав настолько прочный, что заточенная кромка прорезала адамантин, и с такой идеальной и сверкающей поверхностью, что его блеск можно было увидеть на расстоянии полёта дракона. Старейшие дварфы говорят о клинках из дикаста со слезами на глазах, и грубо ругаются при упоминании о "разных хлипких и жалких" металлах, из которых изготавливается современные доспехи и оружие.
 
-There are rumors, though, of an ancient and secret temple called Chogoh Kyn - it is there, the tales say, that blades of dykhast are still made in the fashion of days long past. The price may be high, but for the true connoisseur, there is no matching the glory, the perfection, the utter joy... of dykhast.
+Однако ходят слухи о древнем и тайном храме, называемом Чогох Кын, - именно там, как гласят предания, до сих пор изготавливают клинки из дикаста, как и в былые дни. Цена может быть высока, но для истинного ценителя ничто не сравнится с великолепием и совершенством... дикаста.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d10 + 6
-Attack Bonus: +6
-Enchantment:  +6
-Damage Type:  Slashing
-Special:
-  Keen: Increased chance of a critical hit
-Weight: 1 lb.
-Feat Requirement:  Exotic Weapon, Bastard Sword
-Type:  One-handed~
-@10883    = ~Sword of Gleaming Dykhast~
-@10884    = ~Ancient dwarven legends tell of a time when the noblest of metals was not dwarven steel, nor meteoric iron, nor mithril, but dykhast - an alloy so strong that a blade's edge would be capable of slicing through adamantine, and with a surface so perfect and gleaming that its shimmering surface could be seen a dragon's flight away. The oldest of dwarves speak of dykhast blades with tears of fond remembrance in their eyes, and callously spit at the mention of the "sundry weak and piddling'" metals that today's arms and armor are fashioned from.
+Урон: 1d10+6
+Атака: +6
+Зачарование: +6
+Тип урона: рубящий
+Особенности:
+ Острота: увеличенный шанс нанести критический удар
+Вес: 1 фунт
+Необходимая черта: Экзотическое оружие, Полуторные мечи
+Тип: одноручное~
+@10883    = ~Меч из сверкающего дикаста~
+@10884    = ~Древние легенды дварфов рассказывают о временах, когда самым благородным из металлов была не сталь дварфов, не метеоритное железо, и не мифрил, но дикаст - сплав настолько прочный, что заточенная кромка прорезала адамантин, и с такой идеальной и сверкающей поверхностью, что его блеск можно было увидеть на расстоянии полёта дракона. Старейшие дварфы говорят о клинках из дикаста со слезами на глазах, и грубо ругаются при упоминании о "разных хлипких и жалких" металлах, из которых изготавливается современные доспехи и оружие.
 
-There are rumors, though, of an ancient and secret temple called Chogoh Kyn - it is there, the tales say, that blades of dykhast are still made in the fashion of days long past. The price may be high, but for the true connoisseur, there is no matching the glory, the perfection, the utter joy... of dykhast.
+Однако ходят слухи о древнем и тайном храме, называемом Чогох Кын, - именно там, как гласят предания, до сих пор изготавливают клинки из дикаста, как и в былые дни. Цена может быть высока, но для истинного ценителя ничто не сравнится с великолепием и совершенством... дикаста.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d10 + 12
-Attack Bonus: +12
-Enchantment:  +12
-Damage Type:  Slashing
-Special:
-  Keen: Increased chance of a critical hit
-Weight: 1 lb.
-Feat Requirement:  Exotic Weapon, Bastard Sword
-Type:  One-handed~
+Урон: 1d10+12
+Атака: +12
+Зачарование: +12
+Тип урона: рубящий
+Особенности:
+ Острота: увеличенный шанс нанести критический удар
+Вес: 1 фунт
+Необходимая черта: Экзотическое оружие, Полуторные мечи
+Тип: одноручное~
 //@10885    = ~Heart of <CHARNAME>~
-@10886    = ~You have no idea where this dwarven-forged blade came from, but clearly etched on its blade is "<CHARNAME>."  You're sure you've never seen it before, yet it feels strangely familiar when you hold it in your hand. The blade looks several generations old and bears numerous nicks and scratches, and radiates a faint chill. You have no idea how it came to bear your name.
+@10886    = ~Ты понятия не имеешь, откуда взялся этот клинок дварфской работы, но на нём чётко выбито твоё имя: "<CHARNAME>". Тебе точно раньше не приходилось видеть этот меч, однако он почему-то очень удобно лежит у тебя в руке, словно ты владеешь им уже много лет. Этот меч, похоже, был выкован несколько столетий назад; он весь покрыт щербинами и царапинами. От него исходит лёгкий холодок.
 
-STATISTICS:
 
-Damage:  1d8 + 1
-Attack Bonus:  +1
-Enchantment:  +1
-Damage Type:  Slashing
-Special:
-  Strength: +1
-  Dexterity: +1
-  Constitution: +1
-  Intelligence: +1
-  Wisdom: +1
-  Charisma: +1
-Weight: 3 lb.
-Feat Requirement:  Martial Weapon, Large Sword
-Type:  One-handed~
+ПАРАМЕТРЫ:
+
+Урон: 1d8+1
+Атака: +1
+Зачарование: +1
+Тип урона: рубящий
+Особенности:
+ Сила: +1
+ Ловкость: +1
+ Телосложение: +1
+ Интеллект: +1
+ Мудрость: +1
+ Харизма: +1
+Вес: 3 фунта
+Необходимая черта: Военное оружие, Большие мечи
+Тип: одноручное~
 //@10887    = ~Golden Heart of <CHARNAME>~
-@10888    = ~You have no idea where this dwarven-forged blade came from, but clearly etched on its blade is <CHARNAME>. You're sure you've never seen it before, yet it feels strangely familiar when you hold it in your hand. The blade looks several generations old and bears numerous nicks and scratches, and radiates a faint chill. 
+@10888    = ~Ты понятия не имеешь, откуда взялся этот клинок дварфской работы, но на нём чётко выбито твоё имя: "<CHARNAME>". Тебе точно раньше не приходилось видеть этот меч, однако он почему-то очень удобно лежит у тебя в руке, словно ты владеешь им уже много лет. Этот меч, похоже, был выкован несколько столетий назад; он весь покрыт щербинами и царапинами. От него исходит лёгкий холодок.
 
-This sword was left behind by a previous party when they retook the Severed Hand from the forces of the Chimera, and it has been empowered with all of their wealth and experiences. It was intended for you to aid you in slaughtering your way through the legions.
+Этот меч был оставлен предыдущим отрядом, когда они отбивали Отрубленную Руку у Легиона Химеры, и в него были вложены все их богатства и опыт. Он был предназначен лично для тебя, чтобы помочь проложить путь через орды врагов.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d8 + 5
-Attack Bonus: + 5
-Enchantment:  +5
-Damage Type:  Slashing
-Special:
-  Constant Effect: Freedom of Movement while equipped
-  Constant Effect: Haste while equipped
-  Strength: +2 
-  Dexterity: +2
-  Constitution: +2
-  Intelligence: +2
-  Wisdom: +2
-  Charisma: +2
-Weight: 1 lb.
-Feat Requirement:  Martial Weapon, Large Sword
-Type:  One-handed~
+Урон: 1d8+5
+Атака: +5
+Зачарование: +5
+Тип урона: рубящий
+Особенности:
+ Постоянный эффект: при использовании постоянно действует заклинание "Свобода действий"
+ Постоянный эффект: при использовании постоянно действует заклинание "Спешка"
+ Сила: +2
+ Ловкость: +2
+ Телосложение: +2
+ Интеллект: +2
+ Мудрость: +2
+ Харизма: +2
+Вес: 1 фунта
+Необходимая черта: Военное оружие, Большие мечи
+Тип: одноручное~
 //@10889    = ~Wight's Blade~
-@10890    = ~Barrow wights are distinguished from other, lesser wights in numerous ways. Perhaps most important to the typical adventurer is that the barrow wight generally prefers to wield whatever weapon it carried in life rather than using its life-draining touch in battle.
+@10890    = ~Курганные умертвия имеют множество отличий от других, меньших умертвий. Самым важным для искателя приключений отличием можно признать то, что курганное умертвие в бою предпочитает полагаться не на обычное высасывающее жизнь прикосновение, а на оружие, которым оно сражалось при жизни.
 
-However, in rare instances the seething hatred and unnatural power of a barrow wight somehow seeps into the weapon it carries. Such items can be especially dangerous as the wight's curse is added to whatever enchantments the weapon may already possess. This is one such blade.
+Однако, в редких случаях бурлящая ненависть и сверхъестественная сила курганного умертвия перетекает и в его оружие. Такие предметы могут быть особенно опасны, поскольку к чарам, уже наложенным на оружие, добавляется проклятие умертвия. Этот клинок именно такой.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d8 + 2
-Attack Bonus:  +2
-Enchantment:  +2
-Damage Type:  Slashing
-Special:
-  Energy Drain: -1 to Attack Bonus / -1 to damage, -5 to max hit points (Fortitude DC 16)
-Weight: 4 lb.
-Feat Requirement:  Martial Weapon, Large Sword
-Type:  One-handed~
+Урон: 1d8+2
+Атака: +2
+Зачарование: +2
+Тип урона: рубящий
+Особенности:
+ Отток энергии: при попадании цель получает -1 к атаке, -1 к урону и -5 к максимальному количеству пунктов здоровья (спасбросок стойкости с УС 16 отменяет эффект)
+Вес: 4 фунта
+Необходимая черта: Военное оружие, Большие мечи
+Тип: одноручное~
 //@10891    = ~Barrow Wight's Blade~
-@10892    = ~Barrow wights are distinguished from other, lesser wights in numerous ways. Perhaps most important to the typical adventurer is that the barrow wight generally prefers to wield whatever weapon it carried in life rather than using its life-draining touch in battle.
+@10892    = ~Курганные умертвия имеют множество отличий от других, меньших умертвий. Самым важным для искателя приключений отличием можно признать то, что курганное умертвие в бою предпочитает полагаться не на обычное высасывающее жизнь прикосновение, а на оружие, которым оно сражалось при жизни.
 
-However, in rare instances the seething hatred and unnatural power of a barrow wight somehow seeps into the weapon it carries. Such items can be especially dangerous as the wight's curse is added to whatever enchantments the weapon may already possess. This is one such blade.
+Однако, в редких случаях бурлящая ненависть и сверхъестественная сила курганного умертвия перетекает и в его оружие. Такие предметы могут быть особенно опасны, поскольку к чарам, уже наложенным на оружие, добавляется проклятие умертвия. Этот клинок именно такой.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d8 + 4
-Attack Bonus:  +4 
-Enchantment:  +4
-Damage Type:  Slashing
-Special:
-  Energy Drain: -3 to Attack Bonus / -3 to damage, -15 to max hit points (Fortitude DC 22)
-Weight: 4 lb.
-Feat Requirement:  Martial Weapon, Large Sword
-Type:  One-handed~
+Урон: 1d8+4
+Атака: +4
+Зачарование: +4
+Тип урона: рубящий
+Особенности:
+ Отток энергии: при попадании цель получает -3 к атаке, -3 к урону и -15 к максимальному количеству пунктов здоровья (спасбросок стойкости с УС 22 отменяет эффект)
+Вес: 4 фунта
+Необходимая черта: Военное оружие, Большие мечи
+Тип: одноручное~
 //@10893    = ~"Cera Sumat," Holy Avenger~
-@10894    = ~The holy avenger is the paladin's ultimate weapon against the forces of evil. There are few creatures on the Lower Planes that would not hesitate to confront a holy warrior wielding such a weapon... and this one, perhaps more so than others. Once, it was nothing more than a simple iron sword, but through the courage and faith of one man, it became something more.
+@10894    = ~Святая кара - главное оружие паладинов, созданное для борьбы с силами зла. Немного найдётся существ на Нижних Планах, которые без колебаний встретят святого воина, вооружённым таким оружием... а уж в особенности этим клинком. Когда-то это был всего лишь простой железный меч, но благодаря храбрости и вере одного-единственного воина он стал чем-то большим.
 
-The blade of this holy avenger glows with a soft golden light. Inscribed upon the hilt in flowing gold letters is "Cera Sumat," which translates into "Six, now Silenced."  Cera Sumat earned its name through the labors of elderly duke Kholsa Ehld, a man cresting nearly eighty years of age, who vowed to complete a task that the greatest warriors of three kingdoms feared to do... all because of the weeping of a child. 
+Клинок этого святого мстителя светится неярким золотистым светом. На эфесе струящимися золотыми буквами начертано "Сера Сумат", что переводится как "Шестеро, ныне замолчавшие". Такое имя этот меч заслужил благодаря деяниям старого герцога Хользы Эльда, воина, в возрасте почти восьмидесяти лет поклявшегося выполнить задание, которого страшились величайшие воины трёх королевств... исключительно из-за слёз одного ребёнка.
 
-The times in which Old Duke Ehld lived were ones of great upheaval, and the servitors of Bane were strong, crushing all that stood in their way. Entire kingdoms feared their wrath, and to speak out against them meant death, so many remained silent and turned their eyes from the evils of Bane and his servants. 
+Времена, в которые жил старый герцог Эльд, были временами великих потрясений. Слуги Бейна были сильны, сокрушая всех, кто вставал на их пути. Их гнева боялись целые королевства; слово, сказанное против них, означало смерть, так что многие молчали, делая вид, что не замечают злодейств, творимых Бейном и его прислужниками.
 
-During these dark times, the most terrible of Bane's minions were six who called themselves the Lost Followers. Their souls were storms of avarice and hate, and mighty were the powers at their command. They reveled in strife and tyranny... and for all the blood they shed, it was never enough. 
+В эти тёмные времена самыми ужасными из приспешников Бейна были шестеро, звавшие себя Пропавшими Поборниками. В их душах бушевала алчность и ненависть, а в их власти были могущественные силы. Они упивались раздором и тиранией... и сколько бы крови они ни пролили, им всё было мало.
 
-Together, the Lost Followers brought about the downfall of the Silver Court, slaying its king upon his throne and renaming his once-beautiful nation the Barbed Kingdom. After animating his decapitated corpse and having it march through the streets slaying anyone it could find, they brought a rain of fire down upon the city and the lands around, leaving it a barren wasteland. It is said that they dined in the capital's great hall that night as the land burned, and they raised their wine glasses as the screams of the dying reached their peak. 
+Вместе Пропавшие Поборники низвергли Серебряный Двор, убив короля на его троне и переименовав некогда красивую страну в Шипастое Королевство. Оживив обезглавленный труп монарха, они заставили его пройти по улицам, где тот убивал каждого встреченного. После этого, они обрушили на город и окрестные земли огненный дождь, оставляющий после себя лишь бесплотную пустошь. Говорят, в ту ночь, когда всё горело, они обедали в большом зале гостиницы, и поднимали бокалы с вином, когда крики умирающих звучали особенно громко.
 
-There was only one survivor. In their last act of malice, the Lost Followers left the king's only daughter, barely five years old, alive to reign as "Queen" over the burned kingdom. They called her the Weeping Queen and cast wards about her so that she might never leave the empty capital, and then left her to starve. Their appetite momentarily slaked, the Lost Followers parted ways and went upon their separate roads of damnation, sowing strife in the Bane's Name.
+В городе был только один выживший. В своей непомерной жестокости Пропавшие Поборники оставили в живых девочку, которой едва исполнилось пять лет, чтобы она стала "правительницей" выжженного королевства. Они назвали девочку "Плачущей Королевой", наложили на неё заклятье, не дающее ей покинуть пустую столицу, а затем оставили её умирать от голода. На этом они удовлетворились достигнутым и разошлись в разные стороны, сеять раздор во имя Бейна.
 
-Old Duke Ehld was the first one to cross the wards of the Barbed Kingdom and seek out the Weeping Queen upon her father's throne. When he found the small girl, he approached, kneeled before her, and told her he had come to pledge his life in her service. In stiff, formal words, he said he had brought food and water and apologized for his lateness, but his bones were old and it had taken him some time to reach this place. The near-starving child stared at him as he pledged his worn blade and his honor to seeing that the ones who had done this terrible crime answered for their actions, if his Queen wished it. After a long, stunned silence, the Weeping Queen found the words to thank him.
+Старый герцог Эльд был первым, кто прошёл через охранные заклинания наложенные на Шипастое Королевство и разыскал Плачущую Королеву на троне её отца. Найдя девочку, он подошёл к ней, преклонил колени и сказал, что пришёл отдать свою жизнь ей в услужение. Строгим, официальным тоном, он сообщил, что принёс еду и воду, и извинился за опоздание, посетовав на то, что его старые кости уже не те и ему потребовалось какое-то время, чтобы добраться до этого места. Умирающее с голоду дитя изумлённо смотрело, как Эльд поклялся своим видавшим виды мечом и своей честью, что заставит тех, кто учинил это ужасное преступление, ответить за содеянное, если того пожелает его королева. После долгого молчания Плачущая Королева нашла слова, чтобы поблагодарить старого герцога.
 
-From the moment Ehld left the throne room in search of the Lost Followers, the weeping of the queen ended, and she never wept again. 
+С того момента, как Эльд покинул тронный зал и отправился на поиски Пропавших Поборников, королева перестала плакать и не плакала больше никогда.
 
-Over six years, Ehld traveled the lands of Faerun and across the planes themselves, seeking the Six, and asking them to answer for their crimes. Each scoffed at the old man and his worn-looking blade, only to find him a dangerous opponent... and in the end, the victor. He recorded the events of their death upon a stone set into the pommel of his blade, and there was even regret in his writings that he had not been able to enlighten the Lost Followers to turn from their path before it came to its end.
+Шесть лет Эльд странствовал по землям Фаэруна и даже по другим планам, разыскивая Шестерых и призывая к ответу. Каждый из них насмехался над стариком и его изношенным клинком, но потом обнаруживал в нём грозного соперника. Шесть раз старый герцог выходил победителем из схваток. Хронику смертей злодеев он вёл на камне, вделанном в рукоять его меча, и в этих записях сквозило сожаление о том, что он не смог увести Пропавших Поборников с их порочного пути, прежде чем он подошёл к концу.
 
-When the last of the Six had answered for their crimes upon the edge of the Cera Sumat blade, Ehld returned to the Weeping Queen and laid the blade at her feet. Where once it had been a tarnished blade, it shone as brightly as the sun, and the stone in the pommel was covered with the writing of his journeys. He detached the stone, and set into a chain, and he gave it to the Weeping Queen. Ehld told her to keep the chain to wear as a reminder of the many evils of the world and that they are never far from one's heart... but if one's heart is true and one's path is righteous, one may triumph against any number of evils.
+Когда от Сера Сумат пал последний из Шестерых, Эльд вернулся к Плачущей Королеве и возложил клинок к её ногам. Некогда тусклый, ныне он сиял как солнце, а камень в рукояти был покрыт письменами, повествующими о странствиях герцога. Эльд вынул камень из рукояти меча, подвесил его на цепочку и подарил Плачущей Королеве, чтобы та носила этот медальон, как напоминание о зле, живущем в мире... и о том, что если сердце кого-либо справедливо и путь праведен, ему не страшно никакое зло.
 
-Duke Ehld outlived his queen, living to the age of 107, at which point Ehld took his Cera Sumat and left the Barbed Kingdom... and is said to have traveled north. In time, the Barbed Kingdom rose to its former glory and its name was changed, and with it, the fate of Cera Sumat and the Medallion of the Lost Followers was forgotten... until your arrival in Kuldahar and the medallion and the Holy Avenger were united once again to meet the Lost Followers in battle one final time. 
+Герцог Эльд пережил свою королеву. В возрасте 107 лет, он взял свой клинок и покинул Шипастое Королевство. Говорят, он отправился на север. Со временем Шипастое Королевство обрело былую славу, его название было изменено, а вместе с этим и забылась история о Сера Сумат и Медальоне Пропавших Поборников... до вашего прибытия в Кулдахар, когда медальон был вновь объединён со Святой карой, чтобы встретиться с Пропавшими Поборниками в последней битве.
 
-But the story of Ehld and Cera Sumat was a story of another time, and of the adventures of another hero. This is now your time, and your epic. If your band counts a paladin among its number, then this ancient blade is yours to wield against the forces of evil... 
+Но история Эльда и Сера Сумат - это история другого времени и другого героя. Сейчас настало ваше время и эта история про вас. Если у вас в отряде есть паладин, то этот древний клинок - ваш, чтобы сразиться с силами зла...
 
-And perhaps, if your heart is true, save a land from destruction once again. 
+И, быть может, если ваше сердце справедливо, снова спасти мир от разрушения.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d8 + 5
-Attack Bonus: +5
-Enchantment:  +5
-Damage Type:  Slashing
-Special:
-  Spell Resistance: Set to 26
-  Holy Avenger: +2d6 magic damage against evil creatures. This bonus damage is doubled against fiends and undead. Counts as a good-aligned weapon.
-  Dispelling: Dispel Magic on target with each hit (Will DC 21). Striking an ally dispels magic on them with no save.
-Weight:  5 lb.
-Feat Requirement:  Martial Weapon, Large Sword
-Type:  One-handed~
+Урон: 1d8+5
+Атака: +5
+Зачарование: +5
+Тип урона: рубящий
+Особенности:
+ Сопротивление магии: устанавливается на 26
+ Святая кара: +2d6 против злых существ, этот дополнительный урон удваивается если цель нежить или исчадие, и оружие считается добрым
+ Рассеивание: развеивает магию на цели при попадании (успешный спасбросок воли с УС 21 позволяет избежать эффекта), на союзниках этот эффект срабатывает без спасброска
+Вес: 5 фунтов
+Необходимая черта: Военное оружие, Большие мечи
+Тип: одноручное~
 //@10895    = ~Light of Cera Sumat~
-@10896    = ~The holy avenger is the paladin's ultimate weapon against the forces of evil. There are few creatures on the Lower Planes that would not hesitate to confront a holy warrior wielding such a weapon... and this one, perhaps more so than others. Once, it was nothing more than a simple iron sword, but through the courage and faith of one man, it became something more.
+@10896    = ~Святая кара - главное оружие паладинов, созданное для борьбы с силами зла. Немного найдётся существ на Нижних Планах, которые без колебаний встретят святого воина, вооружённым таким оружием... а уж в особенности этим клинком. Когда-то это был всего лишь простой железный меч, но благодаря храбрости и вере одного-единственного воина он стал чем-то большим.
 
-The blade of this holy avenger glows with a soft golden light. Inscribed upon the hilt in flowing gold letters is "Cera Sumat," which translates into "Six, now Silenced."  Cera Sumat earned its name through the labors of elderly duke Kholsa Ehld, a man cresting nearly eighty years of age, who vowed to complete a task that the greatest warriors of three kingdoms feared to do... all because of the weeping of a child. 
+Клинок этого святого мстителя светится неярким золотистым светом. На эфесе струящимися золотыми буквами начертано "Сера Сумат", что переводится как "Шестеро, ныне замолчавшие". Такое имя этот меч заслужил благодаря деяниям старого герцога Хользы Эльда, воина, в возрасте почти восьмидесяти лет поклявшегося выполнить задание, которого страшились величайшие воины трёх королевств... исключительно из-за слёз одного ребёнка.
 
-The times in which Old Duke Ehld lived were ones of great upheaval, and the servitors of Bane were strong, crushing all that stood in their way. Entire kingdoms feared their wrath, and to speak out against them meant death, so many remained silent and turned their eyes from the evils of Bane and his servants. 
+Времена, в которые жил старый герцог Эльд, были временами великих потрясений. Слуги Бейна были сильны, сокрушая всех, кто вставал на их пути. Их гнева боялись целые королевства; слово, сказанное против них, означало смерть, так что многие молчали, делая вид, что не замечают злодейств, творимых Бейном и его прислужниками.
 
-During these dark times, the most terrible of Bane's minions were six who called themselves the Lost Followers. Their souls were storms of avarice and hate, and mighty were the powers at their command. They reveled in strife and tyranny... and for all the blood they shed, it was never enough. 
+В эти тёмные времена самыми ужасными из приспешников Бейна были шестеро, звавшие себя Пропавшими Поборниками. В их душах бушевала алчность и ненависть, а в их власти были могущественные силы. Они упивались раздором и тиранией... и сколько бы крови они ни пролили, им всё было мало.
 
-Together, the Lost Followers brought about the downfall of the Silver Court, slaying its king upon his throne and renaming his once-beautiful nation the Barbed Kingdom. After animating his decapitated corpse and having it march through the streets slaying anyone it could find, they brought a rain of fire down upon the city and the lands around, leaving it a barren wasteland. It is said that they dined in the capital's great hall that night as the land burned, and they raised their wine glasses as the screams of the dying reached their peak. 
+Вместе Пропавшие Поборники низвергли Серебряный Двор, убив короля на его троне и переименовав некогда красивую страну в Шипастое Королевство. Оживив обезглавленный труп монарха, они заставили его пройти по улицам, где тот убивал каждого встреченного. После этого, они обрушили на город и окрестные земли огненный дождь, оставляющий после себя лишь бесплотную пустошь. Говорят, в ту ночь, когда всё горело, они обедали в большом зале гостиницы, и поднимали бокалы с вином, когда крики умирающих звучали особенно громко.
 
-There was only one survivor. In their last act of malice, the Lost Followers left the king's only daughter, barely five years old, alive to reign as "Queen" over the burned kingdom. They called her the Weeping Queen and cast wards about her so that she might never leave the empty capital, and then left her to starve. Their appetite momentarily slaked, the Lost Followers parted ways and went upon their separate roads of damnation, sowing strife in the Bane's Name.
+В городе был только один выживший. В своей непомерной жестокости Пропавшие Поборники оставили в живых девочку, которой едва исполнилось пять лет, чтобы она стала "правительницей" выжженного королевства. Они назвали девочку "Плачущей Королевой", наложили на неё заклятье, не дающее ей покинуть пустую столицу, а затем оставили её умирать от голода. На этом они удовлетворились достигнутым и разошлись в разные стороны, сеять раздор во имя Бейна.
 
-Old Duke Ehld was the first one to cross the wards of the Barbed Kingdom and seek out the Weeping Queen upon her father's throne. When he found the small girl, he approached, kneeled before her, and told her he had come to pledge his life in her service. In stiff, formal words, he said he had brought food and water and apologized for his lateness, but his bones were old and it had taken him some time to reach this place. The near-starving child stared at him as he pledged his worn blade and his honor to seeing that the ones who had done this terrible crime answered for their actions, if his Queen wished it. After a long, stunned silence, the Weeping Queen found the words to thank him.
+Старый герцог Эльд был первым, кто прошёл через охранные заклинания наложенные на Шипастое Королевство и разыскал Плачущую Королеву на троне её отца. Найдя девочку, он подошёл к ней, преклонил колени и сказал, что пришёл отдать свою жизнь ей в услужение. Строгим, официальным тоном, он сообщил, что принёс еду и воду, и извинился за опоздание, посетовав на то, что его старые кости уже не те и ему потребовалось какое-то время, чтобы добраться до этого места. Умирающее с голоду дитя изумлённо смотрело, как Эльд поклялся своим видавшим виды мечом и своей честью, что заставит тех, кто учинил это ужасное преступление, ответить за содеянное, если того пожелает его королева. После долгого молчания Плачущая Королева нашла слова, чтобы поблагодарить старого герцога.
 
-From the moment Ehld left the throne room in search of the Lost Followers, the weeping of the queen ended, and she never wept again. 
+С того момента, как Эльд покинул тронный зал и отправился на поиски Пропавших Поборников, королева перестала плакать и не плакала больше никогда.
 
-Over six years, Ehld traveled the lands of Faerun and across the planes themselves, seeking the Six, and asking them to answer for their crimes. Each scoffed at the old man and his worn-looking blade, only to find him a dangerous opponent... and in the end, the victor. He recorded the events of their death upon a stone set into the pommel of his blade, and there was even regret in his writings that he had not been able to enlighten the Lost Followers to turn from their path before it came to its end.
+Шесть лет Эльд странствовал по землям Фаэруна и даже по другим планам, разыскивая Шестерых и призывая к ответу. Каждый из них насмехался над стариком и его изношенным клинком, но потом обнаруживал в нём грозного соперника. Шесть раз старый герцог выходил победителем из схваток. Хронику смертей злодеев он вёл на камне, вделанном в рукоять его меча, и в этих записях сквозило сожаление о том, что он не смог увести Пропавших Поборников с их порочного пути, прежде чем он подошёл к концу.
 
-When the last of the Six had answered for their crimes upon the edge of the Cera Sumat blade, Ehld returned to the Weeping Queen and laid the blade at her feet. Where once it had been a tarnished blade, it shone as brightly as the sun, and the stone in the pommel was covered with the writing of his journeys. He detached the stone, and set into a chain, and he gave it to the Weeping Queen. Ehld told her to keep the chain to wear as a reminder of the many evils of the world and that they are never far from one's heart... but if one's heart is true and one's path is righteous, one may triumph against any number of evils.
+Когда от Сера Сумат пал последний из Шестерых, Эльд вернулся к Плачущей Королеве и возложил клинок к её ногам. Некогда тусклый, ныне он сиял как солнце, а камень в рукояти был покрыт письменами, повествующими о странствиях герцога. Эльд вынул камень из рукояти меча, подвесил его на цепочку и подарил Плачущей Королеве, чтобы та носила этот медальон, как напоминание о зле, живущем в мире... и о том, что если сердце кого-либо справедливо и путь праведен, ему не страшно никакое зло.
 
-Duke Ehld outlived his queen, living to the age of 107, at which point Ehld took his Cera Sumat and left the Barbed Kingdom... and is said to have traveled north. In time, the Barbed Kingdom rose to its former glory and its name was changed, and with it, the fate of Cera Sumat and the Medallion of the Lost Followers was forgotten... until your arrival in Kuldahar and the medallion and the Holy Avenger were united once again to meet the Lost Followers in battle one final time.
+Герцог Эльд пережил свою королеву. В возрасте 107 лет, он взял свой клинок и покинул Шипастое Королевство. Говорят, он отправился на север. Со временем Шипастое Королевство обрело былую славу, его название было изменено, а вместе с этим и забылась история о Сера Сумат и Медальоне Пропавших Поборников... до вашего прибытия в Кулдахар, когда медальон был вновь объединён со Святой карой, чтобы встретиться с Пропавшими Поборниками в последней битве.
 
-But the story of Ehld and Cera Sumat was a story of another time, and of the adventures of another hero. This is now your time, and your epic. If your band counts a paladin among its number, then this ancient blade is yours to wield against the forces of evil...
+Но история Эльда и Сера Сумат - это история другого времени и другого героя. Сейчас настало ваше время и эта история про вас. Если у вас в отряде есть паладин, то этот древний клинок - ваш, чтобы сразиться с силами зла...
 
-And perhaps, if your heart is true, save a land from destruction once again.
+И, быть может, если ваше сердце справедливо, снова спасти мир от разрушения.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d8 + 10
-Attack Bonus: +10
-Enchantment:  +10
-Damage Type:  Slashing
-Special:
-  Spell Resistance: Set to 38
-  Holy Avenger: +4d6 magic damage against evil creatures. This bonus damage is doubled against fiends and undead. Counts as a good-aligned weapon.
-  Dispelling: Dispel Magic on target with each hit (Will DC 32). Striking an ally dispels magic on them with no save.
-Weight:  5 lb.
-Feat Requirement:  Martial Weapon, Large Sword
-Type:  One-handed~
+Урон: 1d8+10
+Атака: +10
+Зачарование: +10
+Тип урона: рубящий
+Особенности:
+ Сопротивление магии: устанавливается на 38
+ Святая кара: +4d6 против злых существ, этот дополнительный урон удваивается если цель нежить или исчадие, и оружие считается добрым
+ Рассеивание: развеивает магию на цели при попадании (успешный спасбросок воли с УС 32 позволяет избежать эффекта), на союзниках этот эффект срабатывает без спасброска
+Вес: 5 фунтов
+Необходимая черта: Военное оружие, Большие мечи
+Тип: одноручное~
 
 
 //@10897    = ~Bastard Sword~
 //@10898    = ~Item description can remain the same; if new description is needed put it here~
-@10899    = ~Katana~
-@10900    = ~The katana is a single-edged, slightly curved sword that ends with a chisel point. The katana is perhaps one of the finest swords ever made, the steps to its creation a long and secret process that is more art form than anything else. This blade is an important facet of Kara-Turan culture. To touch or wield a samurai's katana is to insult the samurai and to incite his wrath. For a gaijin, or foreigner, to own such a blade is a rare occurrence. Either the gaijin is a greatly honored friend of an important minister, or the gaijin has murdered a samurai.
+@10899    = ~Катана~
+@10900    = ~Катана — это слегка изогнутый меч с односторонней заточкой и скошенным остриём. Возможно, катана является лучшим из когда-либо существовавших мечей; её создание — долгий, засекреченный процесс, скорее искусство, чем ремесло. Этот клинок — важный аспект культуры Кара-Тура. Коснуться или взять в руки катану самурая значит оскорбить его и привести в ярость. Гайдзину или чужестранцу редко предоставляется возможность завладеть таким мечом. Такой гайдзин — либо очень хороший друг какого-нибудь важного министра, либо просто убил самурая.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d10
-Attack Bonus: +1
-Damage Type:  Slashing
-Weight: 6 lb.
-Feat Requirement:  Exotic Weapon, Bastard Sword
-Type:  One-handed~
+Урон: 1d10
+Атака: +1
+Тип урона: рубящий
+Вес: 6 фунтов
+Необходимая черта: Экзотическое оружие, Полуторные мечи
+Тип: одноручное~
 //@10901    = ~Bastard Sword +1~
 //@10902    = ~Item description can remain the same; if new description is needed put it here~
 //@10903    = ~Bastard Sword +5~
@@ -4575,165 +4576,165 @@ Type:  One-handed~
 //@10912    = ~Item description can remain the same; if new description is needed put it here~
 //@10913    = ~Static Bastard Sword~
 //@10914    = ~Item description can remain the same; if new description is needed put it here~
-@10915    = ~Grand Katana of Heroism +6~
-@10916    = ~To enchant a katana is no simple process. Unlike conventional weapons, the katana is already a near-perfect fighting sword. To improve it usually requires a sacrifice, perhaps a dying samurai might beg a Wu Jen to infuse his fighting spirit into the spirit of the katana. The wielder of an enchanted katana, such as this one, must respect the customs of Kara-Tur and of the samurai who once carried this blade into battle. Not doing so could drastically change one's luck for the worse.
+@10915    = ~Великая катана героизма +6~
+@10916    = ~Зачаровать катану очень нелегко. В отличие от традиционного оружия, катана и так является практически совершенным боевым мечом. Чтобы улучшить её, обычно требуется жертвоприношение — например, умирающий самурай может попросить Ву Джена вселить его воинственный дух в катану. Владелец зачарованной катаны, такой, как эта, должен уважать обычаи Кара-Тура и самурая, который когда-то нёс этот клинок в битву. Отступление от этого условия может крайне отрицательным образом сказаться на удаче владельца катаны.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d20 + 6
-Attack Bonus: +6
-Enchantment:  +6
-Damage Type:  Slashing
-Special:
-  Reach of 2 lengths, rather than 1
-Weight: 5 lb.
-Feat Requirement:  Exotic Weapon, Bastard Sword
-Type:  One-handed~
+Урон: 1d20+6
+Атака: +6
+Зачарование: +6
+Тип урона: рубящий
+Особенности:
+ Может бить цель на расстоянии 2, а не 1
+Вес: 5 фунтов
+Необходимая черта: Экзотическое оружие, Полуторные мечи
+Тип: одноручное~
 //@10917    = ~Miasmic Bastard Sword~
-@10918    = ~Also known as the hand-and-a-half sword, the bastard sword derives its name from the fact that it is halfway between the greatsword and the longsword. The bastard sword has a double-edged blade and a long grip, which can accommodate both hands if preferred. The overall length of the bastard sword ranges between four feet and four feet ten inches. 
+@10918    = ~Полуторный меч, или меч-бастард, называется так потому, что представляет собой нечто среднее между двуручным и длинным мечом. Это обоюдоострый меч с длинной ручкой, который при желании можно держать двумя руками. Общая длина меча - от четырёх футов до четырёх футов десяти дюймов. Этот меч зачарован - им легче управлять и проще поразить врага.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d10
-Enchantment:  +5
-Damage Type:  Slashing
-Special:
-  Corrosive Burst:  +1d6 acid damage and 10% chance of +1d10 extra acid damage
-  Venom: +2 points of poison damage every second for 6 seconds (Fortitude DC 37)
-  Sure Striking: Weapon is treated as having a +5 enchantment for the purpose of hitting creatures that require magical weapons to hit
-  Disease: Deals 4 points of Constitution damage for 4 hours (Fortitude DC 37)
-Weight:  9 lb.
-Feat Requirement:  Exotic Weapon, Bastard Sword
-Type:  One-handed~
-@10919    = ~Bastard Sword +3: Conflagration~
-@10920    = ~Also known as the hand-and-a-half sword, the bastard sword derives its name from the fact that it is halfway between the greatsword and the longsword. The bastard sword has a double-edged blade and a long grip, which can accommodate both hands if preferred. The overall length of the bastard sword ranges between four feet and four feet ten inches. 
+Урон: 1d10
+Зачарование: +5
+Тип урона: рубящий
+Особенности:
+ Кислотные брызги: +1d6 урона кислотой и 10% вероятность нанести дополнительно +1d10 урона кислотой
+ Яд: +2 очка урона ядом каждую секунду в течение 6 секунд (успешный спасбросок стойкости с УС 37 отменяет эффект)
+ Точный удар: для расчёта попадания по существам, которых можно поразить только магическим оружием, это оружие считается зачарованным +5
+ Болезнь: снижает телосложение цели на 4 в течение 4 часов (успешный спасбросок стойкости с УС 37 отменяет эффект)
+Вес: 9 фунтов
+Необходимая черта: Экзотическое оружие, Полуторные мечи
+Тип: одноручное~
+@10919    = ~Полуторный меч +3: Взрыв~
+@10920    = ~Полуторный меч, или меч-бастард, называется так потому, что представляет собой нечто среднее между двуручным и длинным мечом. Это обоюдоострый меч с длинной ручкой, который при желании можно держать двумя руками. Общая длина меча - от четырёх футов до четырёх футов десяти дюймов. Этот меч зачарован - им легче управлять и проще поразить врага.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d10 + 3
-Attack Bonus: +3
-Enchantment:  +3
-Damage Type:  Slashing
-Special:
-  Flame:  +2d6 fire damage
-  Conflagration: Each hit has a 20% chance to instantly release a 10d6 damage fireball on the target (Reflex DC 35 for half)
-Weight:  9 lb.
-Feat Requirement:  Exotic Weapon, Bastard Sword
-Type:  One-handed~
+Урон: 1d10+3
+Атака: +3
+Зачарование: +3
+Тип урона: рубящий
+Особенности:
+ Пламя: +2d6 урна огнём
+ Взрыв: при каждом попадании есть шанс в 20% мгновенно выпустить огненный шар с уроном 10d6 в цель атаки (успешный спасбросок реакции с УС 35 позволяет получить лишь половину урона от огненного шара)
+Вес: 9 фунтов
+Необходимая черта: Экзотическое оружие, Полуторные мечи
+Тип: одноручное~
 //@10921    = ~Bastard Sword +3: Cold Fire~
-@10922    = ~Also known as the hand-and-a-half sword, the bastard sword derives its name from the fact that it is halfway between the greatsword and the longsword. The bastard sword has a double-edged blade and a long grip, which can accommodate both hands if preferred. The overall length of the bastard sword ranges between four feet and four feet ten inches. 
+@10922    = ~Полуторный меч, или меч-бастард, называется так потому, что представляет собой нечто среднее между двуручным и длинным мечом. Это обоюдоострый меч с длинной ручкой, который при желании можно держать двумя руками. Общая длина меча - от четырёх футов до четырёх футов десяти дюймов. Этот меч зачарован - им легче управлять и проще поразить врага.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d10 + 3
-Attack Bonus:  +3 
-Enchantment:  +3
-Damage Type:  Slashing
-Special:
-  Frost: +1d6 Cold damage
-  Flame: +1d6 Fire damage
-  Resistance: 5/- Fire Resistance
-  Resistance: 5/- Cold Resistance
-Weight:  9 lb.
-Feat Requirement:  Exotic Weapon, Bastard Sword
-Type:  One-handed~
+Урон: 1d10+3
+Атака: +3
+Зачарование: +3
+Тип урона: рубящий
+Особенности:
+ Стужа: +1d6 урона холодом
+ Пламя: +1d6 урона огнём
+ Сопротивление: 5/- сопротивление огню
+ Сопротивление: 5/- сопротивление холоду
+Вес: 9 фунтов
+Необходимая черта: Экзотическое оружие, Полуторные мечи
+Тип: одноручное~
 //@10923    = ~Bastard Sword +2: Black Adder~
-@10924    = ~Also known as the hand-and-a-half sword, the bastard sword derives its name from the fact that it is halfway between the greatsword and the longsword. The bastard sword has a double-edged blade and a long grip, which can accommodate both hands if preferred. The overall length of the bastard sword ranges between four feet and four feet ten inches.
+@10924    = ~Полуторный меч, или меч-бастард, называется так потому, что представляет собой нечто среднее между двуручным и длинным мечом. Это обоюдоострый меч с длинной ручкой, который при желании можно держать двумя руками. Общая длина меча - от четырёх футов до четырёх футов десяти дюймов. Этот меч зачарован - им легче управлять и проще поразить врага.
 
-STATISTICS: 
- 
-Damage:  1d10 + 2 
-Attack Bonus:  +2  
-Enchantment:  +2 
-Damage Type:  Slashing 
-Special: 
-  Spell Process: 33% chance per hit of summoning a viper under the wielder's control
-  Venom: +2 points of poison damage every second for 6 seconds (Fortitude DC 24)
-Weight:  9 lb.
-Feat Requirement:  Exotic Weapon, Bastard Sword 
-Type:  One-handed~
-@10925    = ~Bastard Sword of Slashing Weakness +2~
-@10926    = ~Also known as the hand-and-a-half sword, the bastard sword derives its name from the fact that it is halfway between the greatsword and the longsword. The bastard sword has a double-edged blade and a long grip, which can accommodate both hands if preferred. The overall length of the bastard sword ranges between four feet and four feet ten inches. 
+ПАРАМЕТРЫ:
 
-STATISTICS:
+Урон: 1d10+2
+Атака: +2
+Зачарование: +2
+Тип урона: рубящий
+Особенности:
+ Яд: +2 урона ядом каждую секунду в течение 6 секунд (успешный спасбросок стойкости с УС 24 отменяет эффект)
+ Наложение заклинания: при каждом попадании есть шанс в 33% вызвать гадюку (под контролем владельца меча)
+Вес: 9 фунтов
+Необходимая черта: Экзотическое оружие, Полуторные мечи
+Тип: одноручное~
+@10925    = ~Полуторный меч рубящего ослабления +2~
+@10926    = ~Полуторный меч, или меч-бастард, называется так потому, что представляет собой нечто среднее между двуручным и длинным мечом. Это обоюдоострый меч с длинной ручкой, который при желании можно держать двумя руками. Общая длина меча - от четырёх футов до четырёх футов десяти дюймов. Этот меч зачарован - им легче управлять и проще поразить врага.
 
-Damage:  1d10 + 2
-Attack Bonus:  +2 
-Enchantment:  +2
-Damage Type:  Slashing
-Special:
-  Slashing Weakness: Each hit lowers slashing resistance by 1 for 3 rounds (cumulative, no save)
-Weight:  9 lb.
-Feat Requirement:  Exotic Weapon, Bastard Sword
-Type:  One-handed~
+ПАРАМЕТРЫ:
+
+Урон: 1d10+2
+Атака: +2
+Зачарование: +2
+Тип урона: рубящий
+Особенности:
+ Рубящее ослабление: каждое попадание снижает сопротивление рубящему урону жертвы на 1 в течении трёх раундов (эффект суммируется, спасброска нет)
+Вес: 9 фунтов
+Необходимая черта: Экзотическое оружие, Полуторные мечи
+Тип: одноручное~
 //@10927    = ~Fang~
-@10928    = ~This uniquely made Bastard Sword is imbued with an ever present supply of acidic venom. While not poisonous, the venom will burn upon contact if it contacts directly with flesh.
+@10928    = ~В этом уникальном полуторном мече содержится неограниченный запас кислоты. Она не ядовита, но разъедает кожу при контакте с ней.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d10
-Damage Type:  Slashing
-Special: 
-  Corrosion: +1d4 acid damage
-Weight: 10 lb.
-Feat Requirement:  Exotic Weapon, Bastard Sword
-Type:  One-handed~
+Урон: 1d10
+Тип урона: рубящий
+Особенности:
+ Разъедание: +1d4 урона кислотой
+Вес: 10 фунтов
+Необходимая черта: Экзотическое оружие, Полуторные мечи
+Тип: одноручное~
 //@10929    = ~Green Fang~
 //@10930    = ~If we decide to make a HoF version of this item, we should put its description here~
-@10931    = ~Bastard's Son +2~
-@10932    = ~The great warlord of the North, Kresselack the Black Wolf, is said to have sired many children during his long reign, and so it came that one of these, a sickly young man by the name of Thomas, sought out his father after his mother died and bequeathed an ugly sword of iron to Thomas in her legacy. Upon the blade was inscribed "Know thy family," and Thomas took the motto to heart. Bolstered by the sword and his mother's loss, he became determined to find Kresselack - whether out of a need for a new family to belong to or to take revenge on Kresselack for abandoning his mother, it is not known. 
+@10931    = ~Сын бастарда +2~
+@10932    = ~Говорят, что великий военачальник Севера Кресселак Чёрный Волк за время своего долгого правления произвёл на свет множество отпрысков. Вышло так, что один из них, болезненный юноша по имени Томас, разыскал отца после смерти матери, оставившей ему в наследство уродливый железный меч. На лезвии меча была надпись "Знай род свой" и для Томас это стало девизом всей жизни. После потери матери, вооружившись этим мечом, он стал разыскивать Кресселака - то ли из-за потребности обрести семью, то ли, чтобы отомстить Кресселаку за то, что он бросил мать Томаса, - доподлинно неизвестно.
 
-When he found the Black Wolf, Kresselack spurned the young man, claiming that the sickly and weak-looking Thomas shared no blood with him, then ordered him beaten and left beneath the shadow of Kelvin's Cairn to die. After two days in the freezing cold, Thomas was rescued by a tribe of Uthgart barbarians fleeing Kresselack's army. Nursing the man back to health, the barbarians adopted Thomas into their tribe and he eventually became one of their greatest hunters. When he passed away from winter chill many years later, he left his sword to his youngest son to help him find his way in the world.
+Когда он нашёл Чёрного Волка, тот отверг юношу, заявил, что такой доходяга не может быть с ним одной крови, после чего приказал избить и бросить наглеца умирать у подножия Кургана Кельвина. После двух дней, проведённых на морозе, Томас был спасён племенем утгардтских варваров, бежавших от армии Кресселака. Вылечив Томаса, варвары приняли его в племя, и он, в конце концов, стал одним из величайших охотников. Когда много лет спустя он скончался от зимней стужи, Томас оставил свой меч младшему сыну, чтобы тот помог ему свой путь в этом мире.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d10 + 2
-Attack Bonus:  +2 
-Enchantment:  +2
-Damage Type:  Slashing
-Special:
-  Quick: No delay before attacking
-  Cleaving: When this weapon hits, it has a 10% chance of immediately making an additional attack, as if the wielder had just killed a creature with the Cleave feat.
-Weight:  3 lb.
-Feat Requirement:  Exotic Weapon, Bastard Sword
-Type:  One-handed~
-@10933    = ~Know Thy Family +3~
-@10934    = ~The great warlord of the North, Kresselack the Black Wolf, is said to have sired many children during his long reign, and so it came that one of these, a sickly young man by the name of Thomas, sought out his father after his mother died and bequeathed an ugly sword of iron to Thomas in her legacy. Upon the blade was inscribed "Know thy family," and Thomas took the motto to heart. Bolstered by the sword and his mother's loss, he became determined to find Kresselack - whether out of a need for a new family to belong to or to take revenge on Kresselack for abandoning his mother, it is not known. 
- 
-When he found the Black Wolf, Kresselack spurned the young man, claiming that the sickly and weak-looking Thomas shared no blood with him, then ordered him beaten and left beneath the shadow of Kelvin's Cairn to die. After two days in the freezing cold, Thomas was rescued by a tribe of Uthgart barbarians fleeing Kresselack's army. Nursing the man back to health, the barbarians adopted Thomas into their tribe and he eventually became one of their greatest hunters. When he passed away from winter chill many years later, he left his sword to his youngest son to help him find his way in the world.
+Урон: 1d10+2
+Атака: +2
+Зачарование: +2
+Тип урона: рубящий
+Особенности:
+ Быстрота: нет задержки перед атакой
+ Рассечение: при попадании, есть 10% шанс немедленно провести дополнительную атаку, как если бы владелец только что убил существо при наличии черты "Рассечение"
+Вес: 9 фунтов
+Необходимая черта: Экзотическое оружие, Полуторные мечи
+Тип: одноручное~
+@10933    = ~Знай свою семью +3~
+@10934    = ~Говорят, что великий военачальник Севера Кресселак Чёрный Волк за время своего долгого правления произвёл на свет множество отпрысков. Вышло так, что один из них, болезненный юноша по имени Томас, разыскал отца после смерти матери, оставившей ему в наследство уродливый железный меч. На лезвии меча была надпись "Знай род свой" и для Томас это стало девизом всей жизни. После потери матери, вооружившись этим мечом, он стал разыскивать Кресселака - то ли из-за потребности обрести семью, то ли, чтобы отомстить Кресселаку за то, что он бросил мать Томаса, - доподлинно неизвестно.
 
-STATISTICS: 
+Когда он нашёл Чёрного Волка, тот отверг юношу, заявил, что такой доходяга не может быть с ним одной крови, после чего приказал избить и бросить наглеца умирать у подножия Кургана Кельвина. После двух дней, проведённых на морозе, Томас был спасён племенем утгардтских варваров, бежавших от армии Кресселака. Вылечив Томаса, варвары приняли его в племя, и он, в конце концов, стал одним из величайших охотников. Когда много лет спустя он скончался от зимней стужи, Томас оставил свой меч младшему сыну, чтобы тот помог ему свой путь в этом мире.
 
-Damage:  1d10 + 3
-Attack Bonus:  +3
-Enchantment:  +3
-Damage Type:  Slashing
-Special:
-  Quick: No delay before attacking
-  Cleaving: When this weapon hits, it has a 20% chance of immediately making an additional attack, as if the wielder had just killed a creature with the Cleave feat.
-Weight:  3 lb. 
-Feat Requirement:  Exotic Weapon, Bastard Sword 
-Type:  One-handed~
-@10935    = ~Rage of Chaos +3~
-@10936    = ~This weapon is a sight to behold. The blade is crafted of red-gold with a silver edge. The guard is finely polished platinum, and the wire wound hilt is crafted of black adamantine. When drawn, the blade radiates a rainbow of colors. 
-   
-This weapon has been considered quite a blessing by those who wield it. Against lawful creatures it does devastating damage. Rage of Chaos has been known to turn the tide in many a battle. In addition, the victim may lose control of his or her faculties and fly into a state of confusion when struck by the weapon.
+ПАРАМЕТРЫ:
 
-The history of Rage of Chaos is unknown. The weapon has appeared throughout the realms in various battles over the centuries only to be lost once again.
- 
-STATISTICS: 
- 
-Damage: 1d10 + 3 
-Attack Bonus: +3  
-Enchantment:  +3
-Damage Type: Slashing
-Special:
-  Counts as a silver weapon
-  Spell Process: 33% chance per hit to confuse the target for 2 rounds (Will DC 18)
-  Chaotic: +3d6 damage to lawful creatures. Counts as a chaotic-aligned weapon.
-Weight: 8 lb.
-Feat Requirement:  Exotic Weapon, Bastard Sword
-Type:  One-handed~
+Урон: 1d10+3
+Атака: +3
+Зачарование: +3
+Тип урона: рубящий
+Особенности:
+ Быстрота: нет задержки перед атакой
+ Рассечение: при попадании, есть 20% шанс немедленно провести дополнительную атаку, как если бы владелец только что убил существо при наличии черты "Рассечение"
+Вес: 9 фунтов
+Необходимая черта: Экзотическое оружие, Полуторные мечи
+Тип: одноручное~
+@10935    = ~Ярость хаоса +3~
+@10936    = ~Это оружие - настоящее произведение искусства. Клинок выкован из красного золота с серебряной кромкой, гарда сделана из тщательно отполированной платины, а эфес - из чёрного адамантина. От клинка исходит поток света всех цветов радуги.
+
+Это оружие считается благословением для тех, кто им владеет. В бою против законопослушных существ это оружие разит без промаха и наносит сокрушительный урон. Кроме того, при ударе этим оружием жертва может потерять контроль над своими способностями и впасть в замешательство.
+
+О самом мече мало что известно. Оружие появлялось по всем королевствам в различных сражениях на протяжении веков, чтобы затем снова пропасть.
+
+ПАРАМЕТРЫ:
+
+Урон: 1d10+3
+Атака: +3
+Зачарование: +3
+Тип урона: рубящий
+Особенности:
+ Считается серебряным оружием
+ Наложение заклинания: при атаке есть шанс в 33% ошеломить цель на два раунда (успешный спасбросок воли отменяет эффект)
+ Хаос: +3d6 урона законопослушным существам, считается хаотичным оружием
+Вес: 8 фунтов
+Необходимая черта: Экзотическое оружие, Полуторные мечи
+Тип: одноручное~
 @10937    = ~Order's Nemesis +5~
 @10938    = ~This weapon is a sight to behold. The blade is crafted of red-gold with a silver edge. The guard is finely polished platinum, and the wire wound hilt is crafted of black adamantine. When drawn, the blade radiates a rainbow of colors.
    
