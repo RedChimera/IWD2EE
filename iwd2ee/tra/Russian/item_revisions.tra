@@ -5545,182 +5545,182 @@
 Необходимая черта: Простое оружие, Посохи
 Тип: одноручное~
 //@11091    = ~Ryomaru's Harmless Staff~
-@11092    = ~Ryomaru was one of the greatest spies and assassins of the Kumo clan of Kozakura in Kara-Tur, and his Harmless Staff is anything but. Most of its hollowed length consists of a series of compartments holding poisonous powders, spring-loaded darts, weighted chains, jutting spikes, entangling hooks, and various other concealed weapons. When used in combat there is always a chance that one or more of the staff's nasty little "tricks" will be sprung upon an unwary opponent. However, great care must be taken in its use - the weapon can easily harm the casual wielder.
+@11092    = ~Риомару был одним из величайших шпионов и убийц клана Кумо из Козакуры в Кара-Туре. Его оружие получило название "Безвредный посох", хоть и было таким же безвредным, как и сам Риомару. В посохе находится множество отделений, в которых хранятся ядовитые порошки, пружинные дротики, утяжелённые цепи, шипы, опутывающие крючья и другое скрытое оружие. При использовании этого посоха в бою всегда есть шанс, что один из его неприятных "сюрпризов" сработается против противника. Конечно, использовать это оружие следует крайне осторожно - оно может нанести вред и его владельцу.
 
-Ryomaru himself carried the staff on only three missions, eventually leaving it in the care of the Hojori Temple - a Kumo clan front - and moving on to even more cunning and dangerous weapons. When the renowned thief "Chicken" Wu Wei - so named for the falcon tattoo on his chest - burglarized the temple, the Kumo were quick to uncover his involvement and track him back to his homeland in Shou Lung. Wu Wei was forced to flee across the sea to escape their wrath, prompting the dispatch of three more bands of Kumo assassins: one to cross the Eastern Ocean to find Wu Wei, a second to slay the original group that had failed to catch him in Shou Lung, and a third to torture and then execute Wu Wei's every living relative.
+Риомару владел посохом недолго - брал его всего лишь на три задания. После этого убийца оставил своё оружие в храме Ходжори, служившим прикрытием для клана Кумо, а сам переключился на ещё более хитрые и опасные виды оружия. Когда известный вор Ву Вэй "Цыплёнок", прозванный так за татуировку сокола на груди, ограбил храм, бойцы Кумо быстро выяснили личность виновного и выследили его на его родине, в Шу Лане. Ву Вэй был вынужден скрываться от их гнева за морем. Тогда клан Кумо выслал ещё три группы убийц: одна должна была пересечь Восточный океан, чтобы найти самого Ву Вэя, вторая - уничтожить первоначальную группу, которая упустила вора в Шу Лане, а третья - пытать и казнить всех живых родственников Ву Вэя.
 
-"Chicken" Wu Wei retired comfortably on the coast of the Western Heartlands, running a small tobacco shop and only occasionally thinking of his father in Shou Lung, a gambling drunkard who'd beaten Wu Wei's mother and only sister to death when he was a child. When the Kumo assassins at last caught up with Wu Wei, there was naught but a tombstone - the Daring Chicken had sold every last bit of stolen Kumo treasure and died a happy old man.
+Ву Вэй "Цыплёнок" безбедно жил на побережье Западных Срединных Земель, держал маленькую табачную лавку и лишь изредка вспоминал об оставшемся в Шу Лане отце - игроке и пьянчуге, который ещё в далёком детстве вора забил мать и единственную сестру Ву Вэя до смерти. Когда убийцы клана Кумо всё-таки нашли Ву Вэя, он уже покоился под каменным надгробием. Хитрец продал все награбленные сокровища клана Кумо и умер от старости счастливым человеком.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage: 1d6
-Damage Type: Bludgeoning
-Special:
- Three-Jade Mist:
-     15% chance of poisoning struck target (Fortitude DC 18)
-       1% chance of poisoning wielder (Fortitude DC 18)
- Flying Eight Darts:
-      5% chance of inflicting 8d4 Piercing damage
- Iron Octopus:
-      5% chance of inflicting 1d8 Bludgeoning damage
-      1% chance of inflicting 1d8 Bludgeoning damage on wielder
- Sage Closes Fan: 
-     10% chance of inflicting 1d6 Piercing damage
-       1% chance of inflicting 1d6 Piercing damage on wielder
- Bothersome Child:
-       5% chance of stunning struck target for 1 round (Fortitude DC 18)
- Double Happiness:
-     10% chance of inflicting 2d4 Bludgeoning Damage
- Spitting Crone:
-        5% chance of inflicting 1d4 Acid damage
-        1% chance of inflicting 1d4 Acid damage on wielder
- Four Demon Hell Murder:
-        1% chance of casting Slay Living on struck target (Fortitude DC 17)
-Weight: 6 lb.
-Feat Requirement:  Simple Weapon, Quarterstaff
-Type:  Two-handed~
+Урон: 1d6
+Тип урона: дробящий
+Особенности:
+ Нефритовый туман:
+  с 15% вероятностью отравляет поражённую цель (успешный спасбросок стойкости с УС 18 отменяет эффект)
+  с 1% вероятностью отравляет самого владельца оружия (успешный спасбросок стойкости с УС 18 отменяет эффект)
+ Восемь летучих дротиков:
+  с 5% вероятностью наносит 8d4 дополнительного колющего урона
+ Железный спрут:
+  с 5% вероятностью наносит 1d8 дополнительного дробящего урона
+  с 1% вероятностью наносит 1d8 дробящего урона владельцу
+ Мудрец складывает веер: 
+  с 10% вероятностью наносит 1d6 дополнительного колющего урона
+  с 1% вероятностью наносит 1d6 колющего урона самому владельцу
+ Беспокойное дитя:
+  с 5% вероятностью ошеломляет цель (успешный спасбросок стойкости с УС 18 отменяет эффект)
+ Двойная радость:
+  с 10% вероятностью наносит 2d4 дополнительного дробящего урона
+ Плевок старой грымзы:
+  с 5% вероятностью наносит 1d4 дополнительного урона кислотой
+  с 1% вероятностью наносит 1d4 урона кислотой самому владельцу
+ Хватка преисподней:
+  с 1% вероятностью при попадании накладывает на цель заклинание "Убить живого" (успешный спасбросок стойкости с УС 17 отменяет эффект)
+Вес: 6 фунтов
+Необходимая черта: Простое оружие, Посохи
+Тип: двуручное~
 //@11093    = ~Ryomaru's Harmless Tanuki Staff~
-@11094    = ~Ryomaru was one of the greatest spies and assassins of the Kumo clan of Kozakura in Kara-Tur, and his Harmless Staff is anything but. Most of its hollowed length consists of a series of compartments holding poisonous powders, spring-loaded darts, weighted chains, jutting spikes, entangling hooks, and various other concealed weapons. When used in combat there is always a chance that one or more of the staff's nasty little "tricks" will be sprung upon an unwary opponent. However, great care must be taken in its use - the weapon can easily harm the casual wielder.
+@11094    = ~Риомару был одним из величайших шпионов и убийц клана Кумо из Козакуры в Кара-Туре. Его оружие получило название "Безвредный посох", хоть и было таким же безвредным, как и сам Риомару. В посохе находится множество отделений, в которых хранятся ядовитые порошки, пружинные дротики, утяжелённые цепи, шипы, опутывающие крючья и другое скрытое оружие. При использовании этого посоха в бою всегда есть шанс, что один из его неприятных "сюрпризов" сработается против противника. Конечно, использовать это оружие следует крайне осторожно - оно может нанести вред и его владельцу.
 
-Ryomaru himself carried the staff on only three missions, eventually leaving it in the care of the Hojori Temple - a Kumo clan front - and moving on to even more cunning and dangerous weapons. When the renowned thief "Chicken" Wu Wei - so named for the falcon tattoo on his chest - burglarized the temple, the Kumo were quick to uncover his involvement and track him back to his homeland in Shou Lung. Wu Wei was forced to flee across the sea to escape their wrath, prompting the dispatch of three more bands of Kumo assassins: one to cross the Eastern Ocean to find Wu Wei, a second to slay the original group that had failed to catch him in Shou Lung, and a third to torture and then execute Wu Wei's every living relative.
+Риомару владел посохом недолго - брал его всего лишь на три задания. После этого убийца оставил своё оружие в храме Ходжори, служившим прикрытием для клана Кумо, а сам переключился на ещё более хитрые и опасные виды оружия. Когда известный вор Ву Вэй "Цыплёнок", прозванный так за татуировку сокола на груди, ограбил храм, бойцы Кумо быстро выяснили личность виновного и выследили его на его родине, в Шу Лане. Ву Вэй был вынужден скрываться от их гнева за морем. Тогда клан Кумо выслал ещё три группы убийц: одна должна была пересечь Восточный океан, чтобы найти самого Ву Вэя, вторая - уничтожить первоначальную группу, которая упустила вора в Шу Лане, а третья - пытать и казнить всех живых родственников Ву Вэя.
 
-"Chicken" Wu Wei retired comfortably on the coast of the Western Heartlands, running a small tobacco shop and only occasionally thinking of his father in Shou Lung, a gambling drunkard who'd beaten Wu Wei's mother and only sister to death when he was a child. When the Kumo assassins at last caught up with Wu Wei, there was naught but a tombstone - the Daring Chicken had sold every last bit of stolen Kumo treasure and died a happy old man.
+Ву Вэй "Цыплёнок" безбедно жил на побережье Западных Срединных Земель, держал маленькую табачную лавку и лишь изредка вспоминал об оставшемся в Шу Лане отце - игроке и пьянчуге, который ещё в далёком детстве вора забил мать и единственную сестру Ву Вэя до смерти. Когда убийцы клана Кумо всё-таки нашли Ву Вэя, он уже покоился под каменным надгробием. Хитрец продал все награбленные сокровища клана Кумо и умер от старости счастливым человеком.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage: 1d6 + 2
-Attack Bonus: +2 
-Enchantment:  +2
-Damage Type: Bludgeoning
-Special:
-Three-Jade Mist: 
-     20% chance of poisoning struck target (Fortitude DC 24)
-       1% chance of poisoning wielder (Fortitude DC 24)
-Flying Eight Darts:
-     10% chance of inflicting 8d4+8 Piercing damage
-Iron Octopus:
-     10% chance of inflicting 8d2 Bludgeoning damage
-        1% chance of inflicting 8d2 Bludgeoning damage on wielder
-Sage Closes Fan:
-     15% chance of inflicting 1d6 Piercing damage
-        1% chance of inflicting 1d6 Piercing damage on wielder
-Bothersome Child:
-     10% chance of stunning struck target for 1 round (Fortitude DC 24)
-Double Happiness:
-     10% chance of inflicting 2d6 Bludgeoning Damage
-Spitting Crone:
-     10% chance of inflicting 3d4 Acid damage over 2 rounds
-       1% chance of inflicting 3d4 Acid damage on wielder over 2 rounds
-Four Demon Hell Murder:
-     5% chance of casting Slay Living on struck target (Fortitude DC 20)
-Morning Fog:
-     10% to Blind struck target (Fortitude DC 22)
-       1% chance to Blind wielder (Fortitude DC 22)
-Weight: 6 lb.
-Feat Requirement:  Simple Weapon, Quarterstaff
-Type:  Two-handed~
+Урон: 1d6+2
+Атака: +2
+Зачарование: +2
+Тип урона: дробящий
+Особенности:
+ Нефритовый туман:
+  с 20% вероятностью отравляет поражённую цель (успешный спасбросок стойкости с УС 24 отменяет эффект)
+  с 1% вероятностью отравляет самого владельца оружия (успешный спасбросок стойкости с УС 24 отменяет эффект)
+ Восемь летучих дротиков:
+  с 10% вероятностью наносит 8d4+8 дополнительного колющего урона
+ Железный спрут:
+  с 10% вероятностью наносит 8d2 дополнительного дробящего урона
+  с 1% вероятностью наносит 8d2 дробящего урона владельцу
+ Мудрец складывает веер: 
+  с 15% вероятностью наносит 1d6 дополнительного колющего урона
+  с 1% вероятностью наносит 1d6 колющего урона самому владельцу
+ Беспокойное дитя:
+  с 10% вероятностью ошеломляет цель (успешный спасбросок стойкости с УС 24 отменяет эффект)
+ Двойная радость:
+  с 10% вероятностью наносит 2d6 дополнительного дробящего урона
+ Плевок старой грымзы:
+  с 10% вероятностью наносит 3d4 дополнительного урона кислотой
+  с 1% вероятностью наносит 3d4 урона кислотой самому владельцу
+ Хватка преисподней:
+  с 5% вероятностью при попадании накладывает на цель заклинание "Убить живого" (успешный спасбросок стойкости с УС 20 отменяет эффект)
+ Утренний туман:
+  с 10% вероятностью ослепит поражённого врага (успешный спасбросок стойкости с УС 22 отменяет эффект)
+  с 1% вероятностью ослепит самого владельца (успешный спасбросок стойкости с УС 22 отменяет эффект)
+Вес: 6 фунтов
+Необходимая черта: Простое оружие, Посохи
+Тип: двуручное~
 
 
 //@11095    = ~Spear~
 //@11096    = ~Item description can remain the same; if new description is needed put it here~
 //@11097    = ~Spear +1~
 //@11098    = ~Item description can remain the same; if new description is needed put it here~
-@11099    = ~Spear of Sorrows +2~
-@11100    = ~Pergad the Red-Handed was a famous barbarian warrior near Silverymoon in the 11th century, Dale Reckoning. His tribe's battles against hordes of orcs, goblins, and hill giants are legendary throughout the north. Unfortunately for Pergad, the other tribes of the region decided to move south or settle in the cities of the north rather than fight against the seemingly endless waves of foes. Pergad's tribe, the Tribe of Dead Trees, was the last to make a stand. Though Pergad emerged victorious in a series of difficult battles, his tribe dwindled as quickly as the horde grew. At the Battle of Surbrin Shallows in 1014 DR, Pergad's tribe finally came to its end under cruel ogre clubs and giant-hurled rocks. Legend states that when Pergad finally realized that his tribe was doomed, he drove his trusted spear into the Surbrin riverbed, cursing all the goblins who crossed over the water that his people once thrived on. Orcish shamans claim that the spot where his spear penetrated the rock bled for days. A year later, two tribes of goblins were wiped out by a plague that spread among them after they settled in the Surbrin river valley.
+@11099    = ~Копьё скорби +2~
+@11100    = ~Пергад Краснорукий был прославленным воином из варварского рода. Он жил в 11-м столетии по Летоисчислению Долин (ЛД) в землях у Серебристой Луны. Племя Пергада часто сражалось с ордами орков, гоблинов и горных великанов. Воины этого племени вошли в легенды многих народов севера. К сожалению для племени Пергада, другие племена предпочли не воевать с беспрестанно прибывающими недругами, а двинуться на юг или поселиться в городах севера. Племя Пергада, Племя Мёртвых Деревьев, осталось на родине последним. И хотя сам Пергад смог одержать ряд побед в череде тяжких сражений, силы его племени таяли, а орды недругов - росли. В 1014 году ЛД в битве при Сурбринских Мелководьях, племя Пергада, в конце концов, пало под ударами тяжёлых палиц огров и камнями, которые метали горные великаны. Предание гласит, что когда Пергад понял всю тщетность последней битвы, он опустил своё любимое копьё в воды реки Сурбрины и проклял всех гоблинов, что перешли через реку, на берегах которой некогда процветало его гордое племя. Орочьи шаманы рассказывают, что каменистое дно, в которое ударил наконечник копья, кровоточило ещё несколько дней. А год спустя два племени были уничтожены болезнью, которая распространилась среди зеленокожих вскоре после того, как они поселились в долине реки Сурбрины.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d8 + 2
-Attack Bonus:  +2 
-Enchantment:  +2
-Damage Type:  Piercing
-Special:
-  Plague of Sorrows: Each hit inflicts a disease that lowers Strength, Dexterity, and Wisdom by 2 until cured (Fortitude DC 16, cumulative)
-Weight:  2 lb.
-Feat Requirement:  Martial Weapon, Polearm
-Type:  Two-handed~
-@11101    = ~Spear of Great Sorrows +4~
-@11102    = ~Pergad the Red-Handed was a famous barbarian warrior near Silverymoon in the 11th century, Dale Reckoning. His tribe's battles against hordes of orcs, goblins, and hill giants are legendary throughout the north. Unfortunately for Pergad, the other tribes of the region decided to move south or settle in the cities of the north rather than fight against the seemingly endless waves of foes. Pergad's tribe, the Tribe of Dead Trees, was the last to make a stand. Though Pergad emerged victorious in a series of difficult battles, his tribe dwindled as quickly as the horde grew. At the Battle of Surbrin Shallows in 1014 DR, Pergad's tribe finally came to its end under cruel ogre clubs and giant-hurled rocks. Legend states that when Pergad finally realized that his tribe was doomed, he drove his trusted spear into the Surbrin riverbed, cursing all the goblins who crossed over the water that his people once thrived on. Orcish shamans claim that the spot where his spear penetrated the rock bled for days. A year later, two tribes of goblins were wiped out by a plague that spread among them after they settled in the Surbrin river valley.
+Урон: 1d8+2
+Атака: +2
+Зачарование: +2
+Тип урона: колющий
+Особенности:
+ Чума печали: каждое попадание вызывает болезнь, снижающую силу, ловкость и мудрость на 2 до тех пор, пока болезнь не будет вылечена (успешный спасбросок стойкости с УС 16 отменяет эффект, и этот эффект суммируется)
+Вес: 2 фунта
+Необходимая черта: Военное оружие, Древковое
+Тип: двуручное~
+@11101    = ~Копьё великой скорби +4~
+@11102    = ~Пергад Краснорукий был прославленным воином из варварского рода. Он жил в 11-м столетии по Летоисчислению Долин (ЛД) в землях у Серебристой Луны. Племя Пергада часто сражалось с ордами орков, гоблинов и горных великанов. Воины этого племени вошли в легенды многих народов севера. К сожалению для племени Пергада, другие племена предпочли не воевать с беспрестанно прибывающими недругами, а двинуться на юг или поселиться в городах севера. Племя Пергада, Племя Мёртвых Деревьев, осталось на родине последним. И хотя сам Пергад смог одержать ряд побед в череде тяжких сражений, силы его племени таяли, а орды недругов - росли. В 1014 году ЛД в битве при Сурбринских Мелководьях, племя Пергада, в конце концов, пало под ударами тяжёлых палиц огров и камнями, которые метали горные великаны. Предание гласит, что когда Пергад понял всю тщетность последней битвы, он опустил своё любимое копьё в воды реки Сурбрины и проклял всех гоблинов, что перешли через реку, на берегах которой некогда процветало его гордое племя. Орочьи шаманы рассказывают, что каменистое дно, в которое ударил наконечник копья, кровоточило ещё несколько дней. А год спустя два племени были уничтожены болезнью, которая распространилась среди зеленокожих вскоре после того, как они поселились в долине реки Сурбрины.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d8 + 4
-Attack Bonus:  +4 
-Enchantment:  +4
-Damage Type:  Piercing
-Special:
-  Plague of Sorrows: Each hit inflicts a disease that lowers Strength, Dexterity, and Wisdom by 4 until cured (Fortitude DC 30, cumulative)
-Weight:  2 lb.
-Feat Requirement:  Martial Weapon, Polearm
-Type:  Two-handed~
+Урон: 1d8+4
+Атака: +4
+Зачарование: +4
+Тип урона: колющий
+Особенности:
+ Чума печали: каждое попадание вызывает болезнь, снижающую силу, ловкость и мудрость на 4 до тех пор, пока болезнь не будет вылечена (успешный спасбросок стойкости с УС 30 отменяет эффект, и этот эффект суммируется)
+Вес: 2 фунта
+Необходимая черта: Военное оружие, Древковое
+Тип: двуручное~
 //@11103    = ~Spear of Stunning +2~
-@11104    = ~One of man's earliest weapons, dating back to the most primitive of times, the first spears were simply wooden poles or sticks sharpened at one end. When man mastered metals, spearheads were made from iron and steel. Having reached this end, weaponers began experimenting with different types of spear heads, thus leading to the development of certain polearm types. This spear is slightly different though, as it has been imbued with certain magical properties.
+@11104    = ~Копья относятся к самым древним видам оружия, известным ещё в первобытные времена - тогда копьё представляло собой деревянный посох или палку с заострённым концом. С развитием обработки металла наконечники стали изготавливать из железа и стали. Затем мастера-оружейники начали придумывать новые варианты наконечников, лучше приспособленные для конкретных задач, - так появились различные виды древкового оружия. У этого копья есть, благодаря наложенным чарам, магические свойства.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d8 + 2
-Attack Bonus:  +2 
-Enchantment:  +2
-Damage Type:  Piercing
-Special:
-  Stunning: 25% chance target is stunned for 1/2 combat round (Fortitude DC 18)
-Weight: 5 lb.
-Feat Requirement:  Martial Weapon, Polearm
-Type:  Two-handed~
+Урон: 1d8+2
+Атака: +2
+Зачарование: +2
+Тип урона: колющий
+Особенности:
+ Ошеломление: при попадании есть 25% шанс, что цель будет ошеломлена на 1/2 раунда (успешный спасбросок стойкости с УС 18 отменяет эффект)
+Вес: 5 фунтов
+Необходимая черта: Военное оружие, Древковое
+Тип: двуручное~
 //@11105    = ~Spear of Perpetual Bleeding +1~
-@11106    = ~One of man's earliest weapons, dating back to the most primitive of times, the first spears were simply wooden poles or sticks sharpened at one end. When man mastered metals, spearheads were made from iron and steel. Having reached this end, weaponers began experimenting with different types of spear heads, thus leading to the development of certain polearm types. This spear is slightly different though, as it has been imbued with certain magical properties.
+@11106    = ~Копья относятся к самым древним видам оружия, известным ещё в первобытные времена - тогда копьё представляло собой деревянный посох или палку с заострённым концом. С развитием обработки металла наконечники стали изготавливать из железа и стали. Затем мастера-оружейники начали придумывать новые варианты наконечников, лучше приспособленные для конкретных задач, - так появились различные виды древкового оружия. У этого копья есть, благодаря наложенным чарам, магические свойства.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d8 + 1
-Attack Bonus:  +1 
-Enchantment:  +1
-Damage Type:  Piercing
-Special:
-  Perpetual Bleeding: Inflicts 1 additional point of damage per round for 50 rounds (Fortitude DC 15)
-Weight: 5 lb.
-Feat Requirement:  Martial Weapon, Polearm
-Type:  Two-handed~
+Урон: 1d8+1
+Атака: +1
+Зачарование: +1
+Тип урона: колющий
+Особенности:
+ Рваные раны: наносит дополнительно 1 урона в раунд в течение 10 раундов (успешный спасбросок стойкости с УС 15 отменяет эффект)
+Вес: 5 фунтов
+Необходимая черта: Военное оружие, Древковое
+Тип: двуручное~
 //@11107    = ~Lightning Spear~
-@11108    = ~One of man's earliest weapons, dating back to the most primitive of times, the first spears were simply wooden poles or sticks sharpened at one end. When man mastered metals, spearheads were made from iron and steel. Having reached this end, weaponers began experimenting with different types of spear heads, thus leading to the development of certain polearm types. This spear is slightly different though, as it has been imbued with certain magical properties.
+@11108    = ~Копья относятся к самым древним видам оружия, известным ещё в первобытные времена - тогда копьё представляло собой деревянный посох или палку с заострённым концом. С развитием обработки металла наконечники стали изготавливать из железа и стали. Затем мастера-оружейники начали придумывать новые варианты наконечников, лучше приспособленные для конкретных задач, - так появились различные виды древкового оружия. У этого копья есть, благодаря наложенным чарам, магические свойства.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d8
-Damage Type:  Piercing
-Special:
-  Shock: +1d6 electric damage
-Weight: 5 lb.
-Feat Requirement:  Martial Weapon, Polearm
-Type:  Two-handed~
+Урон: 1d8
+Тип урона: колющий
+Особенности:
+ Шок: +1d6 урона электричеством
+Вес: 5 фунтов
+Необходимая черта: Военное оружие, Древковое
+Тип: двуручное~
 //@11109    = ~Fiery Spear +2~
 //@11110    = ~Item description can remain the same; if new description is needed put it here~
 //@11111    = ~Ice Spear +4~
-@11112    = ~One of man's earliest weapons, dating back to the most primitive of times, the first spears were simply wooden poles or sticks sharpened at one end. When man mastered metals, spearheads were made from iron and steel. Having reached this end, weaponers began experimenting with different types of spear heads, thus leading to the development of certain polearm types. This spear is slightly different though, as it has been imbued with certain magical properties.
+@11112    = ~Копья относятся к самым древним видам оружия, известным ещё в первобытные времена - тогда копьё представляло собой деревянный посох или палку с заострённым концом. С развитием обработки металла наконечники стали изготавливать из железа и стали. Затем мастера-оружейники начали придумывать новые варианты наконечников, лучше приспособленные для конкретных задач, - так появились различные виды древкового оружия. У этого копья есть, благодаря наложенным чарам, магические свойства.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d8 + 4
-Attack Bonus:  +4 
-Enchantment:  +4
-Damage Type:  Piercing
-Special:
-  Ice Spear Throwing: This spear can be thrown, taking the form of an Icelance. If it hits, it deals 5d6 cold damage with no save but inflicts no physical damage.
-Weight: 5 lb.
-Feat Requirement:  Martial Weapon, Polearm
-Type:  Two-handed~
+Урон: 1d8+4
+Атака: +4
+Зачарование: +4
+Тип урона: колющий
+Особенности:
+ Метание ледяного копья: это копье можно бросить, как при прочтения заклинания "Ледяное копьё". При попадании оно наносит 5d6 урона холодом без спасброска, но не наносит физического урона
+Вес: 5 фунтов
+Необходимая черта: Военное оружие, Древковое
+Тип: двуручное~
 //@11113    = ~Spear of Wounding~
-@11114    = ~One of man's earliest weapons, dating back to the most primitive of times, the first spears were simply wooden poles or sticks sharpened at one end. When man mastered metals, spearheads were made from iron and steel. Having reached this end, weaponers began experimenting with different types of spear heads, thus leading to the development of certain polearm types. This spear is slightly different though, as it has been imbued with certain magical properties.
+@11114    = ~Копья относятся к самым древним видам оружия, известным ещё в первобытные времена - тогда копьё представляло собой деревянный посох или палку с заострённым концом. С развитием обработки металла наконечники стали изготавливать из железа и стали. Затем мастера-оружейники начали придумывать новые варианты наконечников, лучше приспособленные для конкретных задач, - так появились различные виды древкового оружия. У этого копья есть, благодаря наложенным чарам, магические свойства.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d8
-Damage Type:  Piercing
-Special:
-  Wounding: Inflicts 1 additional point of damge per round for 10 rounds (Fortitude DC 17)
-Weight: 5 lb.
-Feat Requirement:  Martial Weapon, Polearm
-Type:  Two-handed~
+Урон: 1d8
+Тип урона: колющий
+Особенности:
+ Рваные раны: наносит дополнительно 1 урона в раунд в течение 10 раундов (успешный спасбросок стойкости с УС 17 отменяет эффект)
+Вес: 5 фунтов
+Необходимая черта: Военное оружие, Древковое
+Тип: двуручное~
 //@11115    = ~Masterwork Spear~
 //@11116    = ~Item description can remain the same; if new description is needed put it here~
 //@11117    = ~Spear +5~
