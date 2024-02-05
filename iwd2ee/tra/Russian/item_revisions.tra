@@ -4718,7 +4718,7 @@
 @10935    = ~Ярость хаоса +3~
 @10936    = ~Это оружие - настоящее произведение искусства. Клинок выкован из красного золота с серебряной кромкой, гарда сделана из тщательно отполированной платины, а эфес - из чёрного адамантина. От клинка исходит поток света всех цветов радуги.
 
-Это оружие считается благословением для тех, кто им владеет. В бою против законопослушных существ это оружие разит без промаха и наносит сокрушительный урон. Кроме того, при ударе этим оружием жертва может потерять контроль над своими способностями и впасть в замешательство.
+Это оружие считается благословением для тех, кто им владеет. В бою против законопослушных существ это оружие разит без промаха и наносит сокрушительный урон. Известно, что "Ярость хаоса" переломила ход многих битв. Кроме того, при ударе этим оружием жертва может потерять контроль над своими способностями и впасть в замешательство.
 
 О самом мече мало что известно. Оружие появлялось по всем королевствам в различных сражениях на протяжении веков, чтобы затем снова пропасть.
 
@@ -4730,94 +4730,92 @@
 Тип урона: рубящий
 Особенности:
  Считается серебряным оружием
- Наложение заклинания: при атаке есть шанс в 33% ошеломить цель на два раунда (успешный спасбросок воли отменяет эффект)
+ Наложение заклинания: при атаке есть шанс в 33% ошеломить цель на два раунда (успешный спасбросок воли с УС 18 отменяет эффект)
  Хаос: +3d6 урона законопослушным существам, считается хаотичным оружием
 Вес: 8 фунтов
 Необходимая черта: Экзотическое оружие, Полуторные мечи
 Тип: одноручное~
-@10937    = ~Order's Nemesis +5~
-@10938    = ~This weapon is a sight to behold. The blade is crafted of red-gold with a silver edge. The guard is finely polished platinum, and the wire wound hilt is crafted of black adamantine. When drawn, the blade radiates a rainbow of colors.
-   
-This weapon has been considered quite a blessing by those who wield it. Against lawful creatures it does devastating damage. Rage of Chaos has been known to turn the tide in many a battle. In addition, the victim may lose control of his or her faculties and fly into a state of confusion when struck by the weapon. The chaotic powers of the blade also prevent the wielder from being controlled of confused in battle.
- 
-The history of Order's Nemesis is unknown. The weapon has appeared throughout the realms in various battles over the centuries only to be lost once again.
- 
-STATISTICS: 
- 
-Damage: 1d10 + 5
-Attack Bonus: +5
-Enchantment:  +5 
-Damage Type: Slashing
-Special:
-  Counts as a silver weapon
-  Constant Effect: Chaotic Commands while equipped 
-  Spell Process: 50% chance per hit to confuse the target for 2 rounds (Will DC 27)
-  Chaotic: +4d6 damage to lawful creatures. Counts as a chaotic-aligned weapon.
-Weight: 8 lb. 
-Feat Requirement:  Exotic Weapon, Bastard Sword 
-Type:  One-handed~
-@10939    = ~Wroth +1~
-@10940    = ~"It was during Borab the Reaver's sacking of the Blue Citadel that Alemis Peacemaker - youngest son of Earl Marimor Peacemaker, lord of the Blue Citadel - stole into the locked vault his father had thought so well-hidden. There, alone in the cavernous chamber, were Wroth, Hateful, and Furious - the dread sword, axe, and armor of Hurom, ancient ancestor of Alemis, once known as the Bloody Juggernaut before he broke his cursed iron's spell and took the Peacemaker name."
+@10937    = ~Губитель порядка +5~
+@10938    = ~Это оружие - настоящее произведение искусства. Клинок выкован из красного золота с серебряной кромкой, гарда сделана из тщательно отполированной платины, а эфес - из чёрного адамантина. От клинка исходит поток света всех цветов радуги.
 
-"Alemis, a mere boy, donned the fell armor and took Wroth and Hateful in hand. Alone he cut his way through Borab's motley horde of humanoid raiders until he faced the towering half-giant himself, hacking him down and scattering his army to the wind. His family - father, mother, brothers and sisters alike - had all died by then, but Alemis no longer cared. He stalked the realms, eyes ablaze with madness, slaying monsters and brigands wherever he found them. But as the years passed and Alemis found no more of such wheat to thresh, he took to turning his thirsting blades on all who crossed his path... and so, once more, the Bloody Juggernaut had returned."
+Это оружие считается благословением для тех, кто им владеет. В бою против законопослушных существ это оружие разит без промаха и наносит сокрушительный урон. Известно, что "Губитель порядка" переломила ход многих битв. Кроме того, при ударе этим оружием жертва может потерять контроль над своими способностями и впасть в замешательство. Хаотическая сила клинка также предотвращает попытки контролировать его владельца и тот не может впасть в замешательство.
 
-  -- from "Master Pelib's Bedtime Tales"
+О самом мече мало что известно. Оружие появлялось по всем королевствам в различных сражениях на протяжении веков, чтобы затем снова пропасть.
 
-This heavy, unadorned bastard sword of dull gray steel is a cursed thing, only showing its true form when the wielder is wounded in battle. It is then that the hilt sprouts crimson tendrils that bury themselves in the wielder's forearm; drinking his or her blood, the demon-sword opens the three glaring eyes along its twisting, dripping blade and drives the wielder mad with lust for bloodshed.
+ПАРАМЕТРЫ:
 
-Should a warrior carry Wroth along with its brothers Hateful and Furious, his or her soul would be lost to the hell-forged arms and armor. To wield even Wroth alone might be construed as insanity... but there will always be those for whom it may be just the weapon they're looking for.
+Урон: 1d10+5
+Атака: +5
+Зачарование: +5
+Тип урона: рубящий
+Особенности:
+ Считается серебряным оружием
+ Постоянный эффект: на вооружённого этим мечом постоянно действует эффект заклинания "Хаотичные приказы"
+ Наложение заклинания: при атаке есть шанс в 50% ошеломить цель на два раунда (успешный спасбросок воли с УС 27 отменяет эффект)
+ Хаос: +4d6 урона законопослушным существам, считается хаотичным оружием
+Вес: 8 фунтов
+Необходимая черта: Экзотическое оружие, Полуторные мечи
+Тип: одноручное~
+@10939    = ~Гнев +1~
+@10940    = ~"Алемис Миротворец был младшим сыном графа Маримора Миротворца, владыки Синей Цитадели. Во время разграбления Синей Цитадели Борабом Разорителем Алемис пробрался в хорошо защищённую тайную сокровищницу отца. Там, подле стен пещерной залы, лежали три магических предмета: Гнев, Ненависть и Ярость - страшные меч, топор и доспехи Хурома, древнего предка Алемиса. Хуром когда-то был известен под прозвищем Кровавый Джаггернаут, до того, как он разрушил заклятие проклятого железа и взял себе имя Миротворца."
 
-STATISTICS:
+Алемис, совсем ещё мальчишка, облачился в доспехи и взял в руки Гнев и Ненависть. В одиночку он пробивался сквозь войско налётчиков Бораба, пока не столкнулся с самим огромным полувеликаном, зарубил его и развеял остатки его армии по ветру. Его семья: отец, мать братья и сёстры к тому времени все погибли, но Алемиса это уже не волновало. С полными безумия глазами он отправился странствовать по королевствам, истребляя чудовищ и разбойников, где бы он их ни находил. Но шли годы и Алемис перестал находить достаточно злодеев для истребления. Тогда он начал обращать своё жаждущее крови оружие против всех, кто переходил ему дорогу... Так мир узрел возвращение Кровавого Джаггернаута."
 
-Damage:  1d10 + 1
-Attack Bonus: +1 
-Enchantment:  +1
-Damage Type:  Slashing
-Special:
-  Cursed: Can only be unequipped with a Remove Curse spell
-  Wrathful Blood: Wielder has a 25% chance of going berserk for 2 rounds each time he or she takes damage. This berserk state has the following effects:
-    Damage: +6
-    Attack Bonus: +3
-    Attacks per round: +1
-    Movement rate: +3
-    Immunity to sleep, fear, hopelessness, hold, and stun
-    Armor Class: -9
-    Becomes uncontrollable and attacks the nearest creature
-    
-Weight: 10 lb.
-Feat Requirement:  Exotic Weapon, Bastard Sword
-Type:  One-handed~
-@10941    = ~Bloody Wroth +3~
-@10942    = ~"It was during Borab the Reaver's sacking of the Blue Citadel that Alemis Peacemaker - youngest son of Earl Marimor Peacemaker, lord of the Blue Citadel - stole into the locked vault his father had thought so well-hidden. There, alone in the cavernous chamber, were Bloody Wroth, Hateful, and Furious - the dread sword, axe, and armor of Hurom, ancient ancestor of Alemis, once known as the Bloody Juggernaut before he broke his cursed iron's spell and took the Peacemaker name."
+ ...из книги "Сказки на ночь мастера Пелиба"
 
-"Alemis, a mere boy, donned the fell armor and took Bloody Wroth and Hateful in hand. Alone he cut his way through Borab's motley horde of humanoid raiders until he faced the towering half-giant himself, hacking him down and scattering his army to the wind. His family - father, mother, brothers and sisters alike - had all died by then, but Alemis no longer cared. He stalked the realms, eyes ablaze with madness, slaying monsters and brigands wherever he found them. But as the years passed and Alemis found no more of such wheat to thresh, he took to turning his thirsting blades on all who crossed his path... and so, once more, the Bloody Juggernaut had returned."
+Этот тяжёлый, ничем не украшенный полуторный меч сделан из тусклой серой стали. Он проклят и являет свою истинную суть только после того, как владелец оружия получает рану в бою. Стоит пролиться крови хозяина, как по эфесу меча разбегаются багряные сполохи. Подобно хищному вьюнку они впиваются в раны носителя и пьют его кровь. Насытившись, меч-демон открывает три сверкающих глаза, расположенных на извилистом лезвии клинка и сводит своего владельца с ума жаждой кровопролития.
 
-  -- from "Master Pelib's Bedtime Tales"
+Если кто-либо воспользуется всеми тремя проклятыми предметами, он навеки потеряет свою душу. Даже воины, пользующиеся одним лишь Гневом, могут считаться безумцами... но всегда найдутся те, для кого именно это оружие будет желанным приобретением.
 
-This heavy, unadorned bastard sword of dull gray steel is a cursed thing, only showing its true form when the wielder is wounded in battle. It is then that the hilt sprouts crimson tendrils that bury themselves in the wielder's forearm; drinking his or her blood, the demon-sword opens the three glaring eyes along its twisting, dripping blade and drives the wielder mad with lust for bloodshed.
+ПАРАМЕТРЫ:
 
-Should a warrior carry Bloody Wroth along with its brothers Hateful and Furious, his or her soul would be lost to the hell-forged arms and armor. To wield even Bloody Wroth alone might be construed as insanity... but there will always be those for whom it may be just the weapon they're looking for.
+Урон: 1d10+1
+Атака: +1
+Зачарование: +1
+Тип урона: рубящий
+Особенности:
+ Проклятье: расстаться с мечом можно только под действием заклинания "Снять проклятие"
+ Гнев крови: при ранении владелец меча с вероятностью 25% будет ввергнут на два раунда в состояние берсерка, дающее следующие эффекты:
+  Урон: +6
+  Атака: +3
+  Количество атак в раунд: +1
+  Скорость перемещения: +3
+  Невосприимчивость к эффектам сна, страха, безнадёжности, удержания и ошеломления
+  Класс защиты: -9
+  Становится неконтролируемым и атакует ближайшее существо
+Вес: 10 фунтов
+Необходимая черта: Экзотическое оружие, Полуторные мечи
+Тип: одноручное~
+@10941    = ~Кровавый гнев +3~
+@10942    = ~Алемис Миротворец был младшим сыном графа Маримора Миротворца, владыки Синей Цитедели. Во время разграбления Синей Цитадели Борабом Разорителем Алемис пробрался в хорошо защищённую тайную сокровищницу отца. Там, подле стен пещерной залы, лежали три магических предмета: Кровавый гнев, Ненависть и Ярость - страшные меч, топор и доспехи Хурома, древнего предка Алемиса. Хуром когда-то был известен под прозвищем Кровавый Джаггернаут, до того, как он разрушил заклятие проклятого железа и взял себе имя Миротворца."
 
-STATISTICS:
+Алемис, совсем ещё мальчишка, облачился в доспехи и взял в руки Кровавый Гнев и Ненависть. В одиночку он пробивался сквозь войско налётчиков Бораба, пока не столкнулся с самим огромным полувеликаном, зарубил его и развеял остатки его армии по ветру. Его семья: отец, мать братья и сёстры к тому времени все погибли, но Алемиса это уже не волновало. С полными безумия глазами он отправился странствовать по королевствам, истребляя чудовищ и разбойников, где бы он их ни находил. Но шли годы и Алемис перестал находить достаточно злодеев для истребления. Тогда он начал обращать своё жаждущее крови оружие против всех, кто переходил ему дорогу... Так мир узрел возвращение Кровавого Джаггернаута."
 
-Damage:  1d10 + 3
-Attack Bonus: +3 
-Enchantment:  +3
-Damage Type:  Slashing
-Special:
-  Cursed: Can only be unequipped with a Remove Curse spell
-  Wrathful Blood: Wielder has a 50% chance of going berserk for 2 rounds each time he or she takes damage. This berserk state has the following effects:
-    Damage: +12
-    Attack Bonus: +6
-    Attacks per round: +2
-    Movement rate: +6
-    Immunity to sleep, fear, hopelessness, hold, and stun
-    Armor Class: -18
-    Becomes uncontrollable and attacks the nearest creature
-    
-Weight: 10 lb.
-Feat Requirement:  Exotic Weapon, Bastard Sword
-Type:  One-handed~
+ ...из книги "Сказки на ночь мастера Пелиба"
+
+Этот тяжёлый, ничем не украшенный полуторный меч сделан из тусклой серой стали. Он проклят и являет свою истинную суть только после того, как владелец оружия получает рану в бою. Стоит пролиться крови хозяина, как по эфесу меча разбегаются багряные сполохи. Подобно хищному вьюнку они впиваются в раны носителя и пьют его кровь. Насытившись, меч-демон открывает три сверкающих глаза, расположенных на извилистом лезвии клинка и сводит своего владельца с ума жаждой кровопролития.
+
+Если кто-либо воспользуется всеми тремя проклятыми предметами, он навеки потеряет свою душу. Даже воины, пользующиеся одним лишь Кровавым Гневом, могут считаться безумцами... но всегда найдутся те, для кого именно это оружие будет желанным приобретением.
+
+ПАРАМЕТРЫ:
+
+Урон: 1d10+3
+Атака: +3
+Зачарование: +3
+Тип урона: рубящий
+Особенности:
+ Проклятье: расстаться с мечом можно только под действием заклинания "Снять проклятие"
+ Гнев крови: при ранении владелец меча с вероятностью 50% будет ввергнут на два раунда в состояние берсерка, дающее следующие эффекты:
+  Урон: +12
+  Атака: +6
+  Количество атак в раунд: +2
+  Скорость перемещения: +6
+  Невосприимчивость к эффектам сна, страха, безнадёжности, удержания и ошеломления
+  Класс защиты: -18
+  Становится неконтролируемым и атакует ближайшее существо
+Вес: 10 фунтов
+Необходимая черта: Экзотическое оружие, Полуторные мечи
+Тип: одноручное~
 
 
 //@10943    = ~Scimitar~
