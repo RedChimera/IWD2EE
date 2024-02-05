@@ -5731,41 +5731,41 @@
 //@11122    = ~Item description can remain the same; if new description is needed put it here~
 //@11123    = ~Spear +2~
 //@11124    = ~Item description can remain the same; if new description is needed put it here~
-@11125    = ~Impaler +3~
-@11126    = ~Impaler is a beautiful weapon to behold. The spear sports an eighteen inch head with a serrated blade fashioned from adamantine steel. Upon each face of the blade are small openings that appear to lead within the haft of the weapon. The blade is also etched with glowing silver runes. The haft of the weapon measures six feet in length. It is constructed of highly polished oak reinforced with mithril bands along its length. The haft is hollow.
+@11125    = ~Пронзатель +3~
+@11126    = ~Пронзатель - это прекрасное оружие, которое приятно даже просто держать в руках. Копьё увенчано почти восемнадцатидюймовым зазубренным наконечником из адамантиновой стали. На каждой грани наконечника есть небольшие отверстия, ведущие внутрь копью. Вдоль острых граней наконечника вьются изящные серебряные руны. Длина древка этого оружия составляет шесть футов. Оно изготовлено из прекрасно отполированного дуба, укреплённого мифриловыми кольцами. Судя по всему, древко копья полое.
 
-Impaler is  vicious in combat. The spear is a penetration weapon, giving it an increased chance of doing critical damage. It can also impale a creature, dealing massive damage.
+В бою Пронзатель разит без промаха. Это копьё - проникающее оружие, что повышает шанс нанесения критического урона. Оно также может пронзить существо, нанеся ему огромный урон.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d8 +3
-Attack Bonus:  +3 
-Enchantment:  +3
-Damage Type:  Piercing
-Special:  
-  Penetration: Increases chance of scoring a critical hit
-  Impaling: Hit target must make a DC 25 Fortitude save or be impaled, taking an additional 10 piercing damage.
-Weight: 6 lb.
-Feat Requirement:  Martial Weapon, Polearm
-Type:  Two-handed~
-@11127    = ~Blood-Drinking Impaler +5~
-@11128    = ~Blood-Drinking Impaler is a beautiful weapon to behold. The spear sports an eighteen inch head with a serrated blade fashioned from adamantine steel. Upon each face of the blade are small openings that appear to lead within the haft of the weapon. The blade is also etched with glowing silver runes. The haft of the weapon measures six feet in length. It is constructed of highly polished oak reinforced with mithril bands along its length. The haft is hollow.
+Урон: 1d8+3
+Атака: +3
+Зачарование: +3
+Тип урона: колющий
+Особенности:
+ Проникновение: увеличивает вероятность критического попадания
+ Пронзание: цель атаки должна сделать спасбросок стойкости с УС 25 или копьё пронзит её, дополнительно нанеся 10 колющего урона
+Вес: 6 фунтов
+Необходимая черта: Военное оружие, Древковое
+Тип: двуручное~
+@11127    = ~Пьющий жизнь из крови +5~
+@11128    = ~"Пьющий жизнь из крови" - это прекрасное оружие, которое приятно даже просто держать в руках. Копьё увенчано почти восемнадцатидюймовым зазубренным наконечником из адамантиновой стали. На каждой грани наконечника есть небольшие отверстия, ведущие внутрь копью. Вдоль острых граней наконечника вьются изящные серебряные руны. Длина древка этого оружия составляет шесть футов. Оно изготовлено из прекрасно отполированного дуба, укреплённого мифриловыми кольцами. Судя по всему, древко копья полое.
 
-Blood-Drinking Impaler is vicious in combat. The spear is a penetration weapon, giving it an increased chance of doing critical damage. It can also impale a creature, dealing massive damage. In addition, when it impales a creature, it sucks the life out of the creature as a vampiric weapon does.
+В бою "Пьющий жизнь из крови" разит без промаха. Это копьё - проникающее оружие, что повышает шанс нанесения критического урона. Оно также может пронзить существо, нанеся ему огромный урон. Кроме того, когда это копьё пронзает существо, оно высасывает из него жизнь, как это делает вампирическое оружие.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d8 + 5
-Attack Bonus:  +5
-Enchantment:  +5
-Damage Type:  Piercing
-Special:  
-  Penetration: Increases chance of scoring a critical hit
-  Impaling: Hit target must make a DC 30 Fortitude save or be impaled, taking an additional 10 piercing damage.
-  Blood-Drinking: When the spear impales a creature, it also drains 5 hit points from the target and adds them to the wielder for 5 rounds.
-Weight: 6 lb.
-Feat Requirement:  Martial Weapon, Polearm
-Type:  Two-handed~
+Урон: 1d8+5
+Атака: +5
+Зачарование: +5
+Тип урона: колющий
+Особенности:
+ Проникновение: увеличивает вероятность критического попадания
+ Пронзание: цель атаки должна сделать спасбросок стойкости с УС 30 или копьё пронзит её, дополнительно нанеся 10 колющего урона
+ Пьющее кровь: когда копье пронзает существо, оно также отнимает у него 5 пунктов здоровья и добавляет их владельцу на 5 раундов
+Вес: 6 фунтов
+Необходимая черта: Военное оружие, Древковое
+Тип: двуручное~
 //@11129    = ~Nine Paces~
 @11130    = ~This long spear is made of a thick shaft of oak, and it looks like it has been used extensively in hunting arctic boars. It bears numerous sigils and runes along its haft to help it strike straight and true, and when held in a life or death situation, the spear can lash out at an opponent up to five lengths from the wielder, taking the victim down before they can even enter close combat. While the spear seems to confer no wounding enchantments, it does look capable of harming creatures only affected by magic weapons.
 
