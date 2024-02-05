@@ -4820,105 +4820,105 @@
 
 //@10943    = ~Scimitar~
 //@10944    = ~Item description can remain the same; if new description is needed put it here~
-@10945    = ~Scimitar of Acid +2~
-@10946    = ~The scimitar is closely related to the sabre, a single edged curved sword with protective hilt. The blade has a greater curve to it and is tapered to an elongated, sharp point. The origins of the scimitar are largely unknown however they have been very popular in the southern region of the Forgotten Realms. 
+@10945    = ~Скимитар кислоты +2~
+@10946    = ~Скимитар - изогнутый меч с односторонней заточкой и гардой. Это оружие сродни сабле, но его лезвие сильнее изогнуто и заканчивается удлинённым остриём. О происхождении скимитаров известно очень мало, однако на юге королевств они широко распространены. Чары этого скимитара позволяют ему буквально порхать в руке и резать плоть, словно та - лишь зыбкий туман.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d6 + 2
-Attack Bonus: +2 
-Enchantment:  +2
-Damage Type:  Slashing
-Special:
-  Corrosion: +1d6 acid damage
-Weight:  4 lb.
-Feat Requirement:  Martial Weapon, Large Sword
-Type:  One-handed~
-@10947    = ~Scimitar of the Defender +1~
-@10948    = ~The scimitar is closely related to the sabre, a single edged curved sword with protective hilt. The blade has a greater curve to it and is tapered to an elongated, sharp point. The origins of the scimitar are largely unknown however they have been very popular in the southern region of the Forgotten Realms. 
+Урон: 1d6+2
+Атака: +2
+Зачарование: +2
+Тип урона: рубящий
+Особенности:
+ Разъедание: +1d6 урона кислотой
+Вес: 4 фунта
+Необходимая черта: Военное оружие, Большие мечи
+Тип: одноручное~
+@10947    = ~Скимитар защитника +1~
+@10948    = ~Скимитар - изогнутый меч с односторонней заточкой и гардой. Это оружие сродни сабле, но его лезвие сильнее изогнуто и заканчивается удлинённым остриём. О происхождении скимитаров известно очень мало, однако на юге королевств они широко распространены. Чары этого скимитара позволяют ему буквально порхать в руке и резать плоть, словно та - лишь зыбкий туман.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d6 + 1
-Attack Bonus: +1 
-Enchantment:  +1
-Damage Type:  Slashing
-Special:
-  Shield Bonus: +2
-Weight:  4 lb.
-Feat Requirement:  Martial Weapon, Large Sword
-Type:  One-handed~
-//@10949    = ~Scimitar of Entanglement~
-@10950    = ~The scimitar is closely related to the sabre, a single edged curved sword with protective hilt. The blade has a greater curve to it and is tapered to an elongated, sharp point. The origins of the scimitar are largely unknown however they have been very popular in the southern region of the Forgotten Realms. 
+Урон: 1d6+1
+Атака: +1
+Зачарование: +1
+Тип урона: рубящий
+Особенности:
+ Класс защиты: +2 (щит)
+Вес: 4 фунта
+Необходимая черта: Военное оружие, Большие мечи
+Тип: одноручное~
+//@10949    = ~Скимитар запутывания~
+@10950    = ~Скимитар - изогнутый меч с односторонней заточкой и гардой. Это оружие сродни сабле, но его лезвие сильнее изогнуто и заканчивается удлинённым остриём. О происхождении скимитаров известно очень мало, однако на юге королевств они широко распространены. Чары этого скимитара позволяют ему буквально порхать в руке и резать плоть, словно та - лишь зыбкий туман.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d6
-Damage Type:  Slashing
-Special:
-  Spell Power: Can cast the spell Entangle (at level 10) 1/day
-Weight:  4 lb.
-Feat Requirement:  Martial Weapon, Large Sword
-Type:  One-handed~
+Урон: 1d6
+Тип урона: рубящий
+Особенности:
+ Заклинание: владелец оружия может раз в день прочитать заклинание "Запутывание" (как заклинатель десятого уровня)
+Вес: 4 фунта
+Необходимая черта: Военное оружие, Большие мечи
+Тип: одноручное~
 //@10951    = ~Scimitar: Blood Trails~
-@10952    = ~The scimitar is closely related to the sabre, a single edged curved sword with protective hilt. The blade has a greater curve to it and is tapered to an elongated, sharp point. The origins of the scimitar are largely unknown however they have been very popular in the southern region of the Forgotten Realms. 
+@10952    = ~Скимитар - изогнутый меч с односторонней заточкой и гардой. Это оружие сродни сабле, но его лезвие сильнее изогнуто и заканчивается удлинённым остриём. О происхождении скимитаров известно очень мало, однако на юге королевств они широко распространены. Чары этого скимитара позволяют ему буквально порхать в руке и резать плоть, словно та - лишь зыбкий туман.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d6
-Enchantment:  +5
-Damage Type:  Slashing
-Special:
-  Wounding: Inflicts 5 additional points of damage per round for 10 rounds (Fortitude DC 28)
-  Sure Striking: Weapon is treated as having a +5 enchantment for the purpose of hitting creatures that require magical weapons to hit
-  Slashing: +1d6 slashing damage
-Weight:  4 lb.
-Feat Requirement:  Martial Weapon, Large Sword
-Type:  One-handed~
-@10953    = ~Scimitar of Lightning Speed +5~
-@10954    = ~The scimitar is closely related to the sabre, a single edged curved sword with protective hilt. The blade has a greater curve to it and is tapered to an elongated, sharp point. The origins of the scimitar are largely unknown however they have been very popular in the southern region of the Forgotten Realms. 
+Урон: 1d6
+Зачарование: +5
+Тип урона: рубящий
+Особенности:
+ Рваные раны: наносит 5 дополнительных единиц урона в раунд на 10 раундов (успешный спасбросок стойкости с УС 28 отменяет эффект)
+ Точный удар: для расчёта попадания по существам, которых можно поразить только магическим оружием, это оружие считается зачарованным +5
+ Разрубание: +1d6 рубящего урона
+Вес: 4 фунта
+Необходимая черта: Военное оружие, Большие мечи
+Тип: одноручное~
+@10953    = ~Скимитар молниеносности +5~
+@10954    = ~Скимитар - изогнутый меч с односторонней заточкой и гардой. Это оружие сродни сабле, но его лезвие сильнее изогнуто и заканчивается удлинённым остриём. О происхождении скимитаров известно очень мало, однако на юге королевств они широко распространены. Чары этого скимитара позволяют ему буквально порхать в руке и резать плоть, словно та - лишь зыбкий туман.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d6 + 5
-Attack Bonus: +5 
-Enchantment:  +5
-Damage Type:  Slashing
-Special:
-  Lightning Speed: 2 additional attacks per combat round
-  Shock: +2d6 electrical damage
-Weight:  4 lb.
-Feat Requirement:  Martial Weapon, Large Sword
-Type:  One-handed~
+Урон: 1d6+5
+Атака: +5
+Зачарование: +5
+Тип урона: рубящий
+Особенности:
+ Молниеносность: даёт две дополнительные атаки в раунд
+ Шок: +2d6 урона электричеством
+Вес: 4 фунта
+Необходимая черта: Военное оружие, Большие мечи
+Тип: одноручное~
 //@10955    = ~Scimitar of Hell's Fire~
-@10956    = ~The scimitar is closely related to the sabre, a single edged curved sword with protective hilt. The blade has a greater curve to it and is tapered to an elongated, sharp point. The origins of the scimitar are largely unknown however they have been very popular in the southern region of the Forgotten Realms. 
+@10956    = ~Скимитар - изогнутый меч с односторонней заточкой и гардой. Это оружие сродни сабле, но его лезвие сильнее изогнуто и заканчивается удлинённым остриём. О происхождении скимитаров известно очень мало, однако на юге королевств они широко распространены. Чары этого скимитара позволяют ему буквально порхать в руке и резать плоть, словно та - лишь зыбкий туман.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d6
-Enchantment:  +5
-Damage Type:  Slashing
-Special:
-  Flame: +3d6 fire damage
-  Spell Resistance: +10
-  Sure Striking: Weapon is treated as having a +5 enchantment for the purpose of hitting creatures that require magical weapons to hit
-Weight:  4 lb.
-Feat Requirement:  Martial Weapon, Large Sword
-Type:  One-handed~
-@10957    = ~Scimitar +4: Ichor~
-@10958    = ~The scimitar is closely related to the sabre, a single edged curved sword with protective hilt. The blade has a greater curve to it and is tapered to an elongated, sharp point. The origins of the scimitar are largely unknown however they have been very popular in the southern region of the Forgotten Realms. 
+Урон: 1d6
+Зачарование: +5
+Тип урона: рубящий
+Особенности:
+ Пламя: +3d6 урона огнём
+ Сопротивление магии: +10
+ Точный удар: для расчёта попадания по существам, которых можно поразить только магическим оружием, это оружие считается зачарованным +5
+Вес: 4 фунта
+Необходимая черта: Военное оружие, Большие мечи
+Тип: одноручное~
+@10957    = ~Скимитар +4: Ихор~
+@10958    = ~Скимитар - изогнутый меч с односторонней заточкой и гардой. Это оружие сродни сабле, но его лезвие сильнее изогнуто и заканчивается удлинённым остриём. О происхождении скимитаров известно очень мало, однако на юге королевств они широко распространены. Чары этого скимитара позволяют ему буквально порхать в руке и резать плоть, словно та - лишь зыбкий туман.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d6 + 4
-Attack Bonus: +4 
-Enchantment:  +4
-Damage Type:  Slashing
-Special:
-  Black Ichor: 20% chance of +10 points of poison damage every second for 6 seconds (Fortitude DC 27)
-Weight:  4 lb.
-Feat Requirement:  Martial Weapon, Large Sword
-Type:  One-handed~
+Урон: 1d6+4
+Атака: +4
+Зачарование: +4
+Тип урона: рубящий
+Особенности:
+ Чёрный ихор: при попадании есть 20% шанс нанести дополнительно 10 урона ядом в секунду в течении 6 секунд (успешный спасбросок стойкости с УС 27 отменяет эффект)
+Вес: 4 фунта
+Необходимая черта: Военное оружие, Большие мечи
+Тип: одноручное~
 //@10959    = ~Masterwork Scimitar~
 //@10960    = ~Item description can remain the same; if new description is needed put it here~
 //@10961    = ~Scimitar +5~
@@ -4931,77 +4931,77 @@ Type:  One-handed~
 //@10968    = ~Item description can remain the same; if new description is needed put it here~
 //@10969    = ~Scimitar +1~
 //@10970    = ~Item description can remain the same; if new description is needed put it here~
-@10971    = ~Caernach's Sickle +1~
-@10972    = ~The arch-druid Caernach was known to carry a good many enchanted items, most of which he crafted with his own hands. Most famous were his boots, "Breath-of-Life," which left flowers and tiny saplings sprouting from the earth where Caernach strode. Still, the arch-druid's "lesser possessions" were nothing to scoff at - take, for instance, his silver sickle, fashioned to gather sacred mistletoe and the heads of enemies alike. This unusual weapon is actually a cross between a sickle and a proper sword, resembling a scimitar more than anything else. Both the oaken haft and silver blade are engraved with decorative swirls and patterns.
+@10971    = ~Серп Каэрнаха +1~
+@10972    = ~Архидруид Каэрнах прославился своей коллекцией зачарованных вещей, большую часть из которых он изготовил своими руками. Самыми известными были его сапоги "Дыхание жизни" - там где ступали ноги Каэрнаха (одетые в эти сапоги), на земле начинали прорастать цветы и крошечные саженцы. Другие предметы друида, хоть и не были так известны, тоже внушали уважение. Взять, к примеру, этот серебряный серп, созданный для сбора священной омелы и отсекания голов врагов. Это необычное оружие представляет собой нечто среднее между традиционным серпом и мечом, по форме напоминая скимитар. Дубовая рукоять и сам серебряный клинок украшены декоративными узорами и завитками.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d6 + 1
-Attack Bonus: +1
-Enchantment:  +1
-Damage Type:  Slashing
-Special: 
-  Counts as a silver weapon
-  Each hit has a 10% chance to create a Goodberry in the wielder's third quick item slot
-Weight:  4 lb.
-Feat Requirement:  Martial Weapon, Large Sword
-Type:  One-handed~
-@10973    = ~Caernach's Silver Sickle +3~
-@10974    = ~The arch-druid Caernach was known to carry a good many enchanted items, most of which he crafted with his own hands. Most famous were his boots, "Breath-of-Life," which left flowers and tiny saplings sprouting from the earth where Caernach strode. Still, the arch-druid's "lesser possessions" were nothing to scoff at - take, for instance, his silver sickle, fashioned to gather sacred mistletoe and the heads of enemies alike. This unusual weapon is actually a cross between a sickle and a proper sword, resembling a scimitar more than anything else. Both the oaken haft and silver blade are engraved with decorative swirls and patterns.
+Урон: 1d6+1
+Атака: +1
+Зачарование: +1
+Тип урона: рубящий
+Особенности:
+ Считается серебряным оружием
+ При попадании есть 10% шанс создать ягоду (как с помощью одноимённого заклинания) в третьей ячейке для быстрого предмета
+Вес: 4 фунта
+Необходимая черта: Военное оружие, Большие мечи
+Тип: одноручное~
+@10973    = ~Серебряный серп Каэрнаха +3~
+@10974    = ~Архидруид Каэрнах прославился своей коллекцией зачарованных вещей, большую часть из которых он изготовил своими руками. Самыми известными были его сапоги "Дыхание жизни" - там где ступали ноги Каэрнаха (одетые в эти сапоги), на земле начинали прорастать цветы и крошечные саженцы. Другие предметы друида, хоть и не были так известны, тоже внушали уважение. Взять, к примеру, этот серебряный серп, созданный для сбора священной омелы и отсекания голов врагов. Это необычное оружие представляет собой нечто среднее между традиционным серпом и мечом, по форме напоминая скимитар. Дубовая рукоять и сам серебряный клинок украшены декоративными узорами и завитками.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d6 + 3
-Attack Bonus: +3 
-Enchantment:  +3
-Damage Type:  Slashing
-Special: 
-  Counts as a silver weapon
-  Each hit has a 20% chance to create a Goodberry in the wielder's third quick item slot
-Weight:  4 lb.
-Feat Requirement:  Martial Weapon, Large Sword
-Type:  One-handed~
-@10975    = ~Scimitar of Souls +5~
-@10976    = ~In honor of Iyachtu Xvim, Madae had one of her most skilled weapon smiths create Iyachtu Xvim's scimitar, the Scimitar of Souls. When it was complete, she had it put into the hands of Iyachtu Xvim's statue, in the hopes that if one day Iyachtu Xvim materialized as one of his avatars, he would use the weapon she had made for him in battle. The mainstay weapon of Iyachtu Xvim, the Scimitar of Souls has the power to literally suck the life out from its victims. Its large, black polished blade is serrated on the back side of its curve, wraps around the lethal tip, and etches its jagged way one quarter the blade's length down on the sharpened side. 
+Урон: 1d6+3
+Атака: +3
+Зачарование: +3
+Тип урона: рубящий
+Особенности:
+ Считается серебряным оружием
+ При попадании есть 20% шанс создать ягоду (как с помощью одноимённого заклинания) в третьей ячейке для быстрого предмета
+Вес: 4 фунта
+Необходимая черта: Военное оружие, Большие мечи
+Тип: одноручное~
+@10975    = ~Скимитар душ +5~
+@10976    = ~В честь Ийяхту Ксвима Мадея приказала своему лучшему оружейнику выковать оружие Ийяхту, "Скимитар душ". Когда клинок был готов, Мадея вложила его в руки статуи Ийяхту Ксвима, надеясь, что если однажды тот придёт в мир в обличье одного из своих аватаров, то выкованный по её приказу клинок сослужит ему верную службу. "Скимитар душ" - главное оружием Ийяхту; он способен буквально высасывать жизнь из своих жертв. Его большое, чёрное полированное лезвие зазубренно с тыльной стороны; зубцы также идут вдоль четверти длины режущей кромки у наконечника.
 
-The brutal looks and size of the finely forged Scimitar of Souls compliments Iyachtu Xvim's foreboding presence and intimidating scowl. In the hands of Iyachtu Xvim's avatar, even this copy of the original sword would yield the dark god an immense advantage in battle - let alone if a mortal were to wield it. 
+Мрачный вид и размер искусно сработанного "Скимитара душ" очень органично дополняют ощущение зловещего присутствия Ийяхту и его звериный оскал. В руках аватара Ийяхту Ксвима даже эта копия оригинального клинка дала бы тёмному богу огромное преимущество в сражении. Впрочем, это грозное оружие и в руках смертного.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d6 + 5
-Attack Bonus:  +5 
-Enchantment:  +5
-Damage Type:  Slashing
-Special:
-  Keen: Increased chance of scoring a critical hit
-  Dispelling: Dispel Magic on target (Will DC 20)
-  Energy Drain: -2 to Attack Bonus / -2 to damage, -10 to max hit points (Fortitude DC 30)
-  Counts as an evil-aligned weapon
-Weight: 5 lb.
-Feat Requirement:  Martial Weapon, Large Sword
-Type:  One-handed~
-@10977    = ~Scimitar of the Soulless +10~
-@10978    = ~In honor of Iyachtu Xvim, Madae had one of her most skilled weapon smiths create a replica of Iyachtu Xvim's scimitar, the Scimitar of Souls, and called it the Scimitar of the Soulless. When it was complete, she had it put into the hands of Iyachtu Xvim's statue, in the hopes that if one day Iyachtu Xvim materialized as one of his avatars, he would use the weapon she had made for him in battle.
+Урон: 1d6+5
+Атака: +5
+Зачарование: +5
+Тип урона: рубящий
+Особенности:
+ Острота: увеличенный шанс нанести критический удар
+ Рассеивание: "Развеять магию" на цели (успешный спасбросок воли с УС 20 отменяет эффект)
+ Отток энергии: -2 к атаке, -2 к урону, -10 к максимальному количеству пунктов здоровья цели при ударе (успешный спасбросок стойкости с УС 30 отменяет эффект)
+ Оружие считается злым
+Вес: 5 фунтов
+Необходимая черта: Военное оружие, Большие мечи
+Тип: одноручное~
+@10977    = ~Скимитар Бездушия +10~
+@10978    = ~В честь Ийяхту Ксвима Мадея приказала своему лучшему оружейнику выковать копию оружия Ийяхту, "Скимитар душ" и назвала его "Скимитар бездушия". Когда клинок был готов, Мадея вложила его в руки статуи Ийяхту Ксвима, надеясь, что если однажды тот придёт в мир в обличье одного из своих аватаров, то выкованный по её приказу клинок сослужит ему верную службу. 
 
-The mainstay weapon of Iyachtu Xvim, the Scimitar of Souls has the power to literally suck the life out from its victims, as does this replica. Its large, black polished blade is serrated on the back side of its curve, wraps around the lethal tip, and etches its jagged way one quarter the blade's length down the sharpened side. 
+"Скимитар душ" - главное оружием Ийяхту. Он способен буквально высасывать жизнь из своих жертв; таким же свойством обладает и его копия. Большое, чёрное полированное лезвие клинка зазубренно с тыльной стороны; зубцы также идут вдоль четверти длины режущей кромки у наконечника.
 
-The brutal looks and size of the finely forged Scimitar of the Soulless compliments Iyachtu Xvim's foreboding presence and intimidating scowl. In the hands of Iyachtu Xvim's avatar, even this copy of the original sword would yield the dark god an immense advantage in battle - let alone if a mortal were to wield it. 
+Мрачный вид и размер искусно сработанного "Скимитара Бездушия" очень органично дополняют ощущение зловещего присутствия Ийяхту и его звериный оскал. В руках аватара Ийяхту Ксвима даже эта копия оригинального клинка дала бы тёмному богу огромное преимущество в сражении. Впрочем, это грозное оружие и в руках смертного.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d6 + 10
-Attack Bonus:  +10 
-Enchantment:  +10
-Damage Type:  Slashing
-Special:  
-  Keen: Increased chance of scoring a critical hit
-  Dispelling: Dispel Magic on target (Will DC 30)
-  Energy Drain: -4 to Attack Bonus / -4 to damage, -20 to max hit points (Fortitude DC 45)
-  Corrosive: +2d6 acid damage per hit
-  Counts as an evil-aligned weapon
-Weight: 5 lb
-Feat Requirement:  Martial Weapon, Large Sword
-Type:  One-handed~
+Урон: 1d6+10
+Атака: +10
+Зачарование: +10
+Тип урона: рубящий
+Особенности:
+ Острота: увеличенный шанс нанести критический удар
+ Рассеивание: "Развеять магию" на цели (успешный спасбросок воли с УС 30 отменяет эффект)
+ Отток энергии: -4 к атаке, -4 к урону, -20 к максимальному количеству пунктов здоровья цели при ударе (успешный спасбросок стойкости с УС 45 отменяет эффект)
+ Разъедание: +2d6 кислотного урона
+ Оружие считается злым
+Вес: 5 фунтов
+Необходимая черта: Военное оружие, Большие мечи
+Тип: одноручное~
 
 
 //@10979    = ~Greatsword~
