@@ -5019,193 +5019,193 @@
 //@10991    = ~Greatsword +2~
 //@10992    = ~Item description can remain the same; if new description is needed put it here~
 //@10993    = ~Blessed Greatsword +2~
-@10994    = ~The greatsword is a derivative of the longsword. Weaponsmiths have always looked for ways to improve existing weapons. In an effort to improve the longsword, the blade was lengthened. Eventually, the handle had to be extended and two hands became necessary to properly swing the sword. The primary function of greatswords is cleaving mounted knights and breaking up pike formations. This one is particularly good at its job as it has been enchanted with a few magical properties.
+@10994    = ~Двуручный меч - усиленный вариант длинного меча. Оружейники всегда искали возможность улучшить существующее оружие. Улучшая длинный меч, лезвие ещё более удлинили. Пришлось увеличить и рукоятку, и для обращения с мечом теперь требовались две руки. Изначально двуручные мечи применялись в бою против конных рыцарей и для разбивания строя копьеносцев. На этот меч к тому же наложены чары.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  2d6 + 2
-Attack Bonus: +2 
-Enchantment:  +2
-Damage Type:  Slashing
-Special:
-  Constant Effect: Under the effect of the spell Bless
-  Baneward: Protection from the spell Bane and from the negative effects of the spells Chant, Prayer and Recitation
-Weight: 12 lb.
-Feat Requirement:  Martial Weapon, Great Sword
-Type:  Two-handed~
+Урон: 2d6+2
+Атака: +2
+Зачарование: +2
+Тип урона: рубящий
+Особенности:
+ Постоянный эффект: владелец меча находится под постоянным эффектом заклинания "Благословение"
+ Оберёг: дарует иммунитет к заклинанию "Проклятие" и к негативным эффектам заклинаний "Песнь", "Молитва" и "Декламация"
+Вес: 12 фунтов
+Необходимая черта: Военное оружие, Двуручные мечи
+Тип: двуручное~
 //@10995    = ~Greatsword of Flame +1~
 //@10996    = ~Item description can remain the same; if new description is needed put it here~
 //@10997    = ~Sure Strike Greatsword~
 //@10998    = ~Item description can remain the same; if new description is needed put it here~
 //@10999    = ~Greatsword of the Soulless +5~
-@11000    = ~The Slayer Knights of Xvim are considered one of the deadliest warriors in any kingdom. One of the things that makes them so deadly, besides being demon kin, is their skill with their specially forged greatswords; the Greatsword of the Soulless. Being the common weapon of knights, the primary function of greatswords is cleaving mounted knights and breaking up pike formations. However, in the efficient hands of a Slayer Knight of Xvim, this particular greatsword will cleave through the bodies of their targets, and literally suck out the target's lifeblood. The Greatsword of the Soulless is the primary weapon of the Slayer Knights of Xvim.
+@11000    = ~Рыцари-убийцы Ксвима считаются одними из самых смертоносных воинов во всех королевствах. Одна из причин этому, кроме того что в их жилах течёт кровь демонов, - это умение обращаться с выкованными специально для них двуручными мечами, "Двуручными мечами бездушных". Обычное оружие рыцарей, двуручные мечи изначально применялись в бою против латных всадников и для разбивания строя копейщиков. Однако в умелых руках рыцаря-убийцы Ксвима этот двуручный меч просто-таки рассекает тела своих целей и буквально высасывает из них кровь. "Двуручный меч бездушных" - основное оружие рыцарей-убийц Ксвима.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  2d6 + 5
-Attack Bonus:  +5 
-Enchantment:  +5
-Damage Type:  Slashing
-Special:
-  Vampiric: 2d4 hit points drained from target and temporarily added to wielder (Fortitude DC 25)
-  Counts as an evil-aligned weapon
-Weight: 12 lb.
-Feat Requirement:  Martial Weapon, Great Sword
-Type:  Two-handed~
-@11001    = ~Greatsword of Devouring +5~
-@11002    = ~The Slayer Knights of Xvim are considered one of the deadliest warriors in any kingdom. One of the things that makes them so deadly, besides being demon kin, is their skill with their specially forged greatswords; the Greatsword of Devouring. Being the common weapon of knights, the primary function of greatswords is cleaving mounted knights and breaking up pike formations. However, in the efficient hands of a Slayer Knight of Xvim, this particular greatsword will cleave through the bodies of their targets, and literally suck out the target's lifeblood. The Greatsword of Devouring is the primary weapon of the Slayer Knights of Xvim.
+Урон: 2d6+5
+Атака: +5
+Зачарование: +5
+Тип урона: рубящий
+Особенности:
+ Вампиризм: 2d4 пунктов здоровья вытягивается из цели и временно добавляется владельцу (успешный спасбросок стойкости с УС 25 отменяет эффект)
+ Оружие считается злым
+Вес: 12 фунтов
+Необходимая черта: Военное оружие, Двуручные мечи
+Тип: двуручное~
+@11001    = ~Двуручный меч опустошения +5~
+@11002    = ~Рыцари-убийцы Ксвима считаются одними из самых смертоносных воинов во всех королевствах. Одна из причин этому, кроме того что в их жилах течёт кровь демонов, - это умение обращаться с выкованными специально для них двуручными мечами, "Двуручными мечами опустошения". Обычное оружие рыцарей, двуручные мечи изначально применялись в бою против латных всадников и для разбивания строя копейщиков. Однако в умелых руках рыцаря-убийцы Ксвима этот двуручный меч просто-таки рассекает тела своих целей и буквально высасывает из них кровь. "Двуручный меч опустошения" - основное оружие рыцарей-убийц Ксвима.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  2d6 + 5
-Attack Bonus:  +5 
-Enchantment:  +5
-Damage Type:  Slashing
-Special:
-  Vampiric: 3d4 hit points drained from target and temporarily added to wielder (Fortitude DC 35)
-  Counts as an evil-aligned weapon
-Weight: 12 lb.
-Feat Requirement:  Martial Weapon, Great Sword
-Type:  Two-handed~
+Урон: 2d6+5
+Атака: +5
+Зачарование: +5
+Тип урона: рубящий
+Особенности:
+ Вампиризм: 3d4 пунктов здоровья вытягивается из цели и временно добавляется владельцу (успешный спасбросок стойкости с УС 35 отменяет эффект)
+ Оружие считается злым
+Вес: 12 фунтов
+Необходимая черта: Военное оружие, Двуручные мечи
+Тип: двуручное~
 //@11003    = ~Greatsword of Rage +5~
-@11004    = ~The greatsword is a derivative of the longsword. Weaponsmiths have always looked for ways to improve existing weapons. In an effort to improve the longsword, the blade was lengthened. Eventually, the handle had to be extended and two hands became necessary to properly swing the sword. The primary function of greatswords is cleaving mounted knights and breaking up pike formations. This one is particularly good at its job as it has been enchanted with a few magical properties.
+@11004    = ~Двуручный меч - усиленный вариант длинного меча. Оружейники всегда искали возможность улучшить существующее оружие. Улучшая длинный меч, лезвие ещё более удлинили. Пришлось увеличить и рукоятку, и для обращения с мечом теперь требовались две руки. Изначально двуручные мечи применялись в бою против конных рыцарей и для разбивания строя копьеносцев. На этот меч к тому же наложены чары.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  2d6 + 5
-Attack Bonus:  +5 
-Enchantment:  +5
-Damage Type:  Slashing
-Special:
-  Cleaving: When this weapon hits, it has a 20% chance of immediately making an additional attack, as if the wielder had just killed a creature with the Cleave feat.
-Weight: 12 lb.
-Feat Requirement:  Martial Weapon, Great Sword
-Type:  Two-handed~
-@11005    = ~Greatsword of Righteousness~
-@11006    = ~The greatsword is a derivative of the longsword. Weaponsmiths have always looked for ways to improve existing weapons. In an effort to improve the longsword, the blade was lengthened. Eventually, the handle had to be extended and two hands became necessary to properly swing the sword. The primary function of greatswords is cleaving mounted knights and breaking up pike formations. This one is particularly good at its job as it has been enchanted with a few magical properties.
+Урон: 2d6+5
+Атака: +5
+Зачарование: +5
+Тип урона: рубящий
+Особенности:
+ Рассечение: при попадании, есть 20% шанс немедленно провести дополнительную атаку, как если бы владелец меча только что убил существо при наличии черты "Рассечение"
+Вес: 12 фунтов
+Необходимая черта: Военное оружие, Двуручные мечи
+Тип: двуручное~
+@11005    = ~Двуручный меч праведности~
+@11006    = ~Двуручный меч - усиленный вариант длинного меча. Оружейники всегда искали возможность улучшить существующее оружие. Улучшая длинный меч, лезвие ещё более удлинили. Пришлось увеличить и рукоятку, и для обращения с мечом теперь требовались две руки. Изначально двуручные мечи применялись в бою против конных рыцарей и для разбивания строя копьеносцев. На этот меч к тому же наложены чары.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  2d6 + 3
-Attack Bonus:  +3
-Enchantment:  +3
-Damage Type:  Slashing
-Special:
-  Holy: +1d6 damage to evil creatures. Counts as a good-aligned weapon.
-  Lawful: +1d6 damage to chaotic creatures. Counts as a lawful-aligned weapon.
-Weight: 12 lb.
-Feat Requirement:  Martial Weapon, Great Sword
-Type:  Two-handed
-Minimum Strength of 18 Required~
-@11007    = ~Greatsword of Perfection~
-@11008    = ~The greatsword is a derivative of the longsword. Weaponsmiths have always looked for ways to improve existing weapons. In an effort to improve the longsword, the blade was lengthened. Eventually, the handle had to be extended and two hands became necessary to properly swing the sword. The primary function of greatswords is cleaving mounted knights and breaking up pike formations. This one is particularly good at its job as it has been enchanted with a few magical properties.
+Урон: 2d6+3
+Атака: +3
+Зачарование: +3
+Тип урона: рубящий
+Особенности:
+ Святость: +1d6 урона злым существам, оружие считается добрым
+ Закон: +1d6 урона хаотичным существам, оружие считается законным
+Вес: 12 фунтов
+Необходимая черта: Военное оружие, Двуручные мечи
+Тип: двуручное
+Требования: Сила 18~
+@11007    = ~Двуручный меч совершенства~
+@11008    = ~Двуручный меч - усиленный вариант длинного меча. Оружейники всегда искали возможность улучшить существующее оружие. Улучшая длинный меч, лезвие ещё более удлинили. Пришлось увеличить и рукоятку, и для обращения с мечом теперь требовались две руки. Изначально двуручные мечи применялись в бою против конных рыцарей и для разбивания строя копьеносцев. На этот меч к тому же наложены чары.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  2d6
-Enchantment:  +5
-Damage Type:  Slashing
-Special:
-  Perfection: Gains a bonus to attack and damage equal to the sum of the wielder's Dexterity, Constitution, Intelligence, Wisdom, and Charisma bonuses (to a maximum of +20)
-  Sure Striking: Weapon is treated as having a +5 enchantment for the purpose of hitting creatures that require magical weapons to hit
-Weight: 12 lb.
-Feat Requirement:  Martial Weapon, Great Sword
-Type:  Two-handed~
+Урон: 2d6
+Зачарование: +5
+Тип урона: рубящий
+Особенности:
+ Совершенство: Получает бонус к атаке и урону, равный сумме модификаторов ловкости, телосложения, интеллекта, мудрости и харизмы владельца (до максимума в +20)
+ Точный удар: для расчёта попадания по существам, которых можно поразить только магическим оружием, это оружие считается зачарованным +5
+Вес: 12 фунтов
+Необходимая черта: Военное оружие, Двуручные мечи
+Тип: двуручное~
 //@11009    = ~Greatsword: Frost Defender~
-@11010    = ~The greatsword is a derivative of the longsword. Weaponsmiths have always looked for ways to improve existing weapons. In an effort to improve the longsword, the blade was lengthened. Eventually, the handle had to be extended and two hands became necessary to properly swing the sword. The primary function of greatswords is cleaving mounted knights and breaking up pike formations. This one is particularly good at its job as it has been enchanted with a few magical properties.
+@11010    = ~Двуручный меч - усиленный вариант длинного меча. Оружейники всегда искали возможность улучшить существующее оружие. Улучшая длинный меч, лезвие ещё более удлинили. Пришлось увеличить и рукоятку, и для обращения с мечом теперь требовались две руки. Изначально двуручные мечи применялись в бою против конных рыцарей и для разбивания строя копьеносцев. На этот меч к тому же наложены чары.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  2d6
-Enchantment:  +5
-Damage Type:  Slashing
-Special:
-  Deflection Bonus: +5
-  Frost: +2d6 cold damage
-  Resistance: 30/- Cold Resistance
-  Sure Striking: Weapon is treated as having a +5 enchantment for the purpose of hitting creatures that require magical weapons to hit
-Weight: 12 lb.
-Feat Requirement:  Martial Weapon, Great Sword
-Type:  Two-handed
-Minimum Strength of 16 Required~
+Урон: 2d6
+Зачарование: +5
+Тип урона: рубящий
+Особенности:
+ Класс защиты: +5 (отражение)
+ Стужа: +2d6 урона холодом
+ Сопротивление: 30/- сопротивления холоду
+ Точный удар: для расчёта попадания по существам, которых можно поразить только магическим оружием, это оружие считается зачарованным +5
+Вес: 12 фунтов
+Необходимая черта: Военное оружие, Двуручные мечи
+Тип: двуручное
+Требования: Сила 16~
 //@11011    = ~Greatsword of Flame +3~
 //@11012    = ~Item description can remain the same; if new description is needed put it here~
 //@11013    = ~Greatsword of the Defender~
-@11014    = ~The greatsword is a derivative of the longsword. Weaponsmiths have always looked for ways to improve existing weapons. In an effort to improve the longsword, the blade was lengthened. Eventually, the handle had to be extended and two hands became necessary to properly swing the sword. The primary function of greatswords is cleaving mounted knights and breaking up pike formations. This one is particularly good at its job as it has been enchanted with a few magical properties.
+@11014    = ~Двуручный меч - усиленный вариант длинного меча. Оружейники всегда искали возможность улучшить существующее оружие. Улучшая длинный меч, лезвие ещё более удлинили. Пришлось увеличить и рукоятку, и для обращения с мечом теперь требовались две руки. Изначально двуручные мечи применялись в бою против конных рыцарей и для разбивания строя копьеносцев. На этот меч к тому же наложены чары.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  2d6
-Damage Type:  Slashing
-Special:
-  Shield Bonus: +2 
-Weight: 12 lb.
-Feat Requirement:  Martial Weapon, Great Sword
-Type:  Two-handed
-Minimum Strength of 18 Required~
-@11015    = ~Cleaver +1~
+Урон: 2d6
+Тип урона: рубящий
+Особенности:
+ Класс защиты: +2 (щит)
+Вес: 12 фунтов
+Необходимая черта: Военное оружие, Двуручные мечи
+Тип: двуручное
+Требования: Сила 18~
+@11015    = ~Секач +1~
 //@11016    = ~Item description can remain the same; if new description is needed put it here~
-@11017    = ~Dwelnar's Folly +5~
+@11017    = ~Глупость Двелнара +5~
 //@11018    = ~Item description can remain the same; if new description is needed put it here~
 //@11019    = ~Wandering Sky~
-@11020    = ~The saga of Wandering Sky is a tale of hearth and home told by many skalds of the North. The tale exemplifies the persistence and strength of the barbarian spirit.
+@11020    = ~Сага о Странствующем Небе - это история которую рассказывают многие скальды севера. Эта история о стойкости и несгибаемом мужестве варваров.
 
-When the legions of Arakon the Arch-Mage swept across Icewind Dale, the Tribe of the Bear was among the first of the tribes to meet his assault. Overwhelmed by the superior forces, the barbarians fought bravely, but they were no match for Arakon's forces. One of the tribe's eldest hunters and warriors, Hreidgar, was knocked unconscious during the battle, and he awoke to the sky tearing at his face and the remains of his fellows around him. Of his wife and children, there was no trace, and without a word, Hreidgar took up his great sword and followed the path of Arakon's army, determined to reclaim them and avenge the fallen. 
+Когда в Долину Ледяного Ветра вторглись легионы архимага Аракона, племя Медведя одним из первых встретило его натиск. Варвары храбро сражались, но им было не сравниться с превосходящими силами Аракона. Один из старейших охотников и воинов племени, Хрейдгар был оглушён ударом и потерял сознание. Очнувшись, он увидел, что его окружают тела его товарищей. Его жены и детей нигде не было видно, и Хрейдгар, не говоря ни слова, взял свой двуручный меч и пошёл по следу армии Аракона в надежде найти своих родных и отомстить за павших.
 
-Hreidgar was among the first to pledge his blade to the barbarian shaman Jerrod when he united the tribes against Arakon, and he served tirelessly in the great battles ahead, even on the darkest day when Arakon unleashed armies of the hells against Jerrod and the tribes. In every battle, Hreidgar and his greatsword were as one, howling like the wind as he drove his enemies back... and to their deaths. But when Arakon was at last defeated, no trace of Hreidgar's wife and child were to be found. 
+Хрейдгар одним из первых поклялся в верности шаману Джерроду, объединившему племена варваров против Аракона, и он храбро сражался во многих битвах - даже в тот мрачный день, когда Аракон обрушил на войско Джеррода силы ада. И в каждой битве Хрейдгара был единым целым со своим мечем, который завывал словно ветер, обращая врагов в бегство... и отправляя их на тот свет. Но даже после разгрома Аракона Хрейдгару так и не удалось найти жену и детей.
 
-Hreidgar continued his search, and his journey of many years is said to have taken him across the great cliffs of the Reghed Glacier during the Season of Raining Spears, upon the Sea of Moving Ice where he sailed with the Tribe of the Great Whale and fought slavers from the south, and then to his final destination, the small town of Enholm's Point, where he stood with the handful of the town's defenders against the army of Kresselack the Black Wolf. It is said Hreidgar fought so fiercely that Kresselack conceded the field in honor of the warrior - but not before striking the fatal blow that would end the warrior's life.
+Хрейдгар ещё много лет продолжал свои поиски; говорят, что он побывал и на утёсах регедских ледников, и на Море Движущихся Льдов. Оттуда он вместе с Племенем Великого Кита плавал на юг, где сражался с работорговцами. В конце концов судьба привела его в городок Энхольмс-Пойнт, где с горсткой воинов он выступил против армии Кресселака Чёрного Волка. Говорят, что Хрейдгар дрался с такой яростью, что даже Кресселак уступил поле боя в честь воина - но не раньше, чем нанёс тому смертельную рану.
 
-Bleeding from numerous wounds, Hreidgar is said to have wandered north from Enholm's Point, traveling for many miles before collapsing to his knees. With the last of his strength, the old warrior plunged his blade into the ice and said he had finally found what he had been seeking. "Let the sky wander," he proclaimed, "for my travels are done."  
+По преданию, истекающий кровью Хрейдгар покинул Энхольмс-Пойнт и отправился на север. Он прошёл много миль, пока силы не покинули его и он не рухнул на колени. Из последних сил старый воин возил свой клинок в лёд и сказал, что, наконец-то нашёл, что искал. "Пусть небо странствует", - провозгласил он, - "а мой путь окончен."
 
-When the townsfolk of Enholm's Point returned the next day to carry his body away, they found Hreidgar, but his blade had vanished. It is said that the blade now wanders as the sky wanders, finding its way to others with long journeys before them... and guiding them to their final destination, whatever it may be. 
+На следующий день жители Энхольмс-Пойнта нашли тело Хрейдгара - но его клинок исчез. Говорят, что теперь клинок странствует, как странствует небо, находя тех, кому предстоит долгий путь... и направляет их к цели, какой бы она ни была.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage: 2d6 + 1
-Attack Bonus:  +1 
-Enchantment:  +1
-Damage Type:  Slashing
-Special: 
-  Doom: 20% chance per hit to cast Doom on target
-Weight:  12 lb.
-Feat Requirement:  Martial Weapon, Great Sword
-Type:  Two-handed~
+Урон: 2d6+1
+Атака: +1
+Зачарование: +1
+Тип урона: рубящий
+Особенности:
+ Рок: при попадании есть 20% шанс наложить на цель заклинание "Рок"
+Вес: 12 фунтов
+Необходимая черта: Военное оружие, Двуручные мечи
+Тип: двуручное~
 //@11021    = ~Saga of Wandering Sky~
 //@11022    = ~Item description can remain the same; if new description is needed put it here~
 //@11023    = ~Winged Blight~
-@11024    = ~This massive sword, presumably fashioned to be wielded by a person of great strength, is as elegant as it is repulsive. Though coated in metal, its blade has been reinforced with human bones. Furthermore its hilt, and accompanying scabbard, have been stylishly made from tanned human flesh and skin.
+@11024    = ~Этот массивный меч, по-видимому, созданный для кого-то, обладающего большой силы, настолько же элегантен, насколько и омерзителен. Клинок этого меча покрыт металлом, но внутри он армирован человеческими костями. Более того, его рукоять и ножны были мастерски изготовлены из дублёной человеческой плоти и кожи.
 
-Little is known about the origins of this sword, but Mulhorandi aristocrats have passed its rumor from generation to generation. According to legend, whenever a human Mulhorandi woman gave birth to a girl after having been forced into slavery, she would, on the night of the first full moon, pray to the ancient pharaoh Tyrish for guidance. Hearing her prayers, Tyrish would send "floating down from the heavens" this weapon, originally no larger than a stiletto, and the woman would use it to severely disfigure her child. Once the deed was done, the weapon would enlarge slightly before floating away as gracefully as it had arrived. These "marked" children, now deemed undesirable by their male overseers, would be allowed to purchase their freedom, thus sparing them the horrors of slavery. The scars inflicted upon these children - those physical in nature at least - would eventually heal over time.
+О происхождении этого меча известно немного, но легенды о нём передаются из поколения в поколение среди аристократии Мулхоранда. Согласно этим легендам, всякий раз, когда у женщин-рабынь Мулхоранда рождалась девочка, в первую же ночь полнолуния они молили древнего фараона Тириша о помощи. Услышав молитвы, Тириш посылал "спускающееся с небес" оружие, которое изначально было не больше шпильки, и женщины использовали его, чтобы сильно изуродовать своих детей. После того, как дело было сделано, меч немного увеличивался в размерах, а затем уплывал прочь так же грациозно, как и прибыл. Таким "Отмеченным" детям, которых мужчины-рабовладельцы теперь считали нежелательными, разрешалось купить свободу, что спасало их от ужасов рабства. Шрамы, нанесённые этим детям, по крайней мере физические, со временем исчезали.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  2d6 + 2
-Attack Bonus:  +2
-Enchantment:  +2
-Damage Type:  Slashing
-Special 
-  Bane: +3 Attack Bonus vs Humans and +2d6+3 Damage Bonus vs Humans
-Weight:  12 lb.
-Feat Requirement:  Martial Weapon, Great Sword
-Type:  Two-handed~
+Урон: 2d6+2
+Атака: +2
+Зачарование: +2
+Тип урона: рубящий
+Особенности:
+ Губитель: +3 к атаке и +2d6+3 к урону против людей
+Вес: 12 фунтов
+Необходимая черта: Военное оружие, Двуручные мечи
+Тип: двуручное~
 //@11025    = ~Thunder's Shock~
-@11026    = ~This massive sword, fashioned to be wielded by a person of great strength, is as elegant as it is repulsive. Though coated in metal, its blade has been reinforced with human bones. Its hilt, and accompanying scabbard, have been stylishly made from tanned human flesh and skin.
+@11026    = ~Этот массивный меч, по-видимому, созданный для кого-то, обладающего большой силы, настолько же элегантен, насколько и омерзителен. Клинок этого меча покрыт металлом, но внутри он армирован человеческими костями. Более того, его рукоять и ножны были мастерски изготовлены из дублёной человеческой плоти и кожи.
 
-Little is known about the origins of this weapon, but it is rumored to have been passed down from generation to generation by human Mulhorandi woman. According to legend, whenever these women gave birth to a girl while being forced into slavery, they would, on the night of the first full moon, pray to the ancient pharaoh Tyrish for guidance. Hearing their prayers, Tyrish would send "floating down from the heavens" this sword, and the woman would use it to severely disfigure their children. Once the deed was done, the sword would float away as gracefully as it had arrived. These children, now deemed undesirable by their slavers, would be sold for a quick profit, thus sparing them the horrors of slavery.
+О происхождении этого меча известно немного, но легенды о нём передаются из поколения в поколение среди аристократии Мулхоранда. Согласно этим легендам, всякий раз, когда у женщин-рабынь Мулхоранда рождалась девочка, в первую же ночь полнолуния они молили древнего фараона Тириша о помощи. Услышав молитвы, Тириш посылал "спускающееся с небес" оружие, которое изначально было не больше шпильки, и женщины использовали его, чтобы сильно изуродовать своих детей. После того, как дело было сделано, меч немного увеличивался в размерах, а затем уплывал прочь так же грациозно, как и прибыл. Таким "Отмеченным" детям, которых мужчины-рабовладельцы теперь считали нежелательными, разрешалось купить свободу, что спасало их от ужасов рабства. Шрамы, нанесённые этим детям, по крайней мере физические, со временем исчезали.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  2d6 + 5
-Attack Bonus:  +5
-Enchantment:  +5
-Damage Type:  Slashing
-Special 
-  Bane: +3 Attack Bonus vs Humans and +2d6+3 Damage Bonus vs Humans
-  Shocking Burst: +1d6 electrical damage and 10% chance of +1d10 extra electrical damage
-Weight:  12 lb.
-Feat Requirement:  Martial Weapon, Great Sword
-Type:  Two-handed~
+Урон: 2d6+5
+Атака: +5
+Зачарование: +5
+Тип урона: рубящий
+Особенности:
+ Губитель: +3 к атаке и +2d6+3 к урону против людей
+ Разряды: +1d6 урона электричеством и 10% вероятность нанести +1d10 дополнительного электрического урона
+Вес: 12 фунтов
+Необходимая черта: Военное оружие, Двуручные мечи
+Тип: двуручное~
 
 
 //@11027    = ~Quarterstaff~
@@ -5217,120 +5217,120 @@ Type:  Two-handed~
 //@11033    = ~Staff of Nature's Wrath +3~
 //@11034    = ~If we decide to make a HoF version of this item, we should put its description here~
 //@11035    = ~Staff of the Hanged Man's Glee~
-@11036    = ~This grim staff, of a most despicable repute, was originally carved from the wood of Dead Man's Tree: an ancient black willow that stood on the outskirts of a forgotten hamlet of the Moonshae's, from which criminals were hung. All manner of bandits, murderers, rapists, and other worthies were left dangling from its knotty limbs; and all to the delight of the grave-digger Mordigan. For Mordigan, a secret practitioner of the necromantic arts, saw ample opportunity in which to ply his trade. Interring the remains of the evil men within close proximity of the tree, Mordigan called upon the dark powers of the negative material to perform a baleful act upon the black willow. It was given a sort of semi-sentience, and the ability to feed upon the remains of those who had so recently swung from its branches. Black roots descended into rotting flesh; and alarmingly enough, the tortured visages of the slain began to appear in the twisted knots of the black willow's bole before its burning. But, to the surprise of the villagers, the potently ensorcelled staff carved by the hands of the evil Mordigan did indeed prove to be their undoing. And thus did the hanged men of Dead Man's Tree have their revenge.
+@11036    = ~Этот жутковатый посох, пользующийся дурной славой, изготовлен из Дерева Мертвеца, древней чёрной ивы, растущей на границе забытой деревушки на Муншаях. На ней вешали преступников, и на её ветвях качалось множество разбойников, убийц, насильников и прочих нарушителей закона, к вящей радости могильщика Мордигана. Дело в том, что Мордиган тайно изучал некромантию и не мог упустить подобную возможность для совершенствования своих талантов. Останки злодеев он зарывал под самым деревом и затем творил мерзостный ритуал, призывая на чёрную иву тёмные силы с Негативного плана. В результате дерево стало отчасти разумным и научилось питаться останками тех, кто недавно ещё свисал с её ветвей. Чёрные корни пробивали разлагающуюся плоть, и жутким образом на узловатом стволе ивы начали проступать лица казнённых, изуродованные гримасой страдания. Иву было решено сжечь, но Мордиган успел вырезать из неё посох, и, к удивлению жителей деревни, этот посох в самом деле оказался носителем мощных магических свойств, которые и погубили всю деревню. Так совершилась месть висельников с Дерева Мертвеца.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d6 + 1
-Attack Bonus:  +1 
-Enchantment:  +1
-Damage Type:  Bludgeoning
-Special:
-  Control Undead: Can use a variant of Control Undead to take control of all undead creatures within 30 feet for 10 rounds (Will DC 18) once per day
-Weight: 2 lb.
-Feat Requirement:  Simple Weapon, Quarterstaff
-Type:  Two-handed~
-@11037    = ~The Hanged Man's Horrifying Glee~
-@11038    = ~This grim staff, of a most despicable repute, was originally carved from the wood of Dead Man's Tree: an ancient black willow that stood on the outskirts of a forgotten hamlet of the Moonshae's, from which criminals were hung. All manner of bandits, murderers, rapists, and other worthies were left dangling from its knotty limbs; and all to the delight of the grave-digger Mordigan. For Mordigan, a secret practitioner of the necromantic arts, saw ample opportunity in which to ply his trade. Interring the remains of the evil men within close proximity of the tree, Mordigan called upon the dark powers of the negative material to perform a baleful act upon the black willow. It was given a sort of semi-sentience, and the ability to feed upon the remains of those who had so recently swung from its branches. Black roots descended into rotting flesh; and alarmingly enough, the tortured visages of the slain began to appear in the twisted knots of the black willow's bole before its burning. But, to the surprise of the villagers, the potently ensorcelled staff carved by the hands of the evil Mordigan did indeed prove to be their undoing. And thus did the hanged men of Dead Man's Tree have their revenge.
+Урон: 1d6+1
+Атака: +1
+Зачарование: +1
+Тип урона: дробящий
+Особенности:
+ Управление нежитью: Может раз в день использовать вариант заклинания "Управление нежитью", чтобы взять под контроль всю нежить в радиусе 30 футов на 10 раундов (успешный спасбросок воли с УС 18 позволяет избежать этого эффекта)
+Вес: 2 фунта
+Необходимая черта: Простое оружие, Посохи
+Тип: двуручное~
+@11037    = ~Ужасающее ликование повешенных~
+@11038    = ~Этот жутковатый посох, пользующийся дурной славой, изготовлен из Дерева Мертвеца, древней чёрной ивы, растущей на границе забытой деревушки на Муншаях. На ней вешали преступников, и на её ветвях качалось множество разбойников, убийц, насильников и прочих нарушителей закона, к вящей радости могильщика Мордигана. Дело в том, что Мордиган тайно изучал некромантию и не мог упустить подобную возможность для совершенствования своих талантов. Останки злодеев он зарывал под самым деревом и затем творил мерзостный ритуал, призывая на чёрную иву тёмные силы с Негативного плана. В результате дерево стало отчасти разумным и научилось питаться останками тех, кто недавно ещё свисал с её ветвей. Чёрные корни пробивали разлагающуюся плоть, и жутким образом на узловатом стволе ивы начали проступать лица казнённых, изуродованные гримасой страдания. Иву было решено сжечь, но Мордиган успел вырезать из неё посох, и, к удивлению жителей деревни, этот посох в самом деле оказался носителем мощных магических свойств, которые и погубили всю деревню. Так совершилась месть висельников с Дерева Мертвеца.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d6 + 3
-Attack Bonus:  +3
-Enchantment:  +3
-Damage Type:  Bludgeoning
-Special:
-  Control Undead: Can use a variant of Control Undead to take control of all undead creatures within 30 feet for 10 rounds (Will DC 36) once per day
-Weight: 2 lb.
-Feat Requirement:  Simple Weapon, Quarterstaff
-Type:  Two-handed~
-@11039    = ~Bruiser Staff +1~
-@11040    = ~The simplest and humblest of staff weapons, the quarterstaff is a length of wood ranging six to nine feet in length. Masterwork quarterstaffs are made of stout oak and are shod with metal at both ends. This one is particularly special as it has been imbued with magical properties. 
+Урон: 1d6+3
+Атака: +3
+Зачарование: +3
+Тип урона: дробящий
+Особенности:
+ Управление нежитью: Может раз в день использовать вариант заклинания "Управление нежитью", чтобы взять под контроль всю нежить в радиусе 30 футов на 10 раундов (успешный спасбросок воли с УС 36 позволяет избежать этого эффекта)
+Вес: 2 фунта
+Необходимая черта: Простое оружие, Посохи
+Тип: двуручное~
+@11039    = ~Посох силача +1~
+@11040    = ~Простейшее и скромнейшее из шестообразного оружия, боевой посох - это деревянная палка длиной от шести до девяти футов. Боевые посохи высокого качества делаются из крепкого дуба и оковываются металлом с обоих концов. Данный экземпляр несколько отличается от других, поскольку наделён некоторыми магическими свойствами.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d6 + 1
-Attack Bonus: +1 
-Enchantment:  +5
-Damage Type:  Bludgeoning
-Special:
-  Sure Striking: Weapon is treated as having a +5 enchantment for the purpose of hitting creatures that require magical weapons to hit
-  Wounding: Inflicts 2 additional points of damage per round for 10 rounds (Fortitude DC 18)
-  Stunning: 25% chance target is stunned for 1/2 combat round (Fortitude DC 18)
-Weight: 4 lb.
-Feat Requirement:  Simple Weapon, Quarterstaff
-Type:  Two-handed~
+Урон: 1d6+1
+Атака: +1
+Зачарование: +5
+Тип урона: дробящий
+Особенности:
+ Точный удар: для расчёта попадания по существам, которых можно поразить только магическим оружием, это оружие считается зачарованным +5
+ Рваные раны: Наносит 2 дополнительных пункта урона в раунд в течение 10 раундов (успешный спасбросок стойкости с УС 18 отменяет эффект)
+ Ошеломление: при попадании с вероятностью 25% ошеломляет цель на 1/2 раунда (успешный спасбросок стойкости с УС 18 отменяет эффект)
+Вес: 4 фунта
+Необходимая черта: Простое оружие, Посохи
+Тип: двуручное~
 //@11041    = ~Staff of Invisibility +1~
-@11042    = ~The simplest and humblest of staff weapons, the quarterstaff is a length of wood ranging six to nine feet in length. Masterwork quarterstaffs are made of stout oak and are shod with metal at both ends. This one is particularly special as it has been imbued with magical properties. 
+@11042    = ~Простейшее и скромнейшее из шестообразного оружия, боевой посох - это деревянная палка длиной от шести до девяти футов. Боевые посохи высокого качества делаются из крепкого дуба и оковываются металлом с обоих концов. Данный экземпляр несколько отличается от других, поскольку наделён некоторыми магическими свойствами.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d6 + 1
-Attack Bonus: +1 
-Enchantment:  +1
-Damage Type:  Bludgeoning
-Special:
-  Spell Power: Can cast wizard spell Invisibility Sphere (at level 15) 1/day. However, the spell takes three rounds to cast.
-Weight: 4 lb.
-Feat Requirement:  Simple Weapon, Quarterstaff
-Type:  Two-handed~
+Урон: 1d6+1
+Атака: +1
+Зачарование: +1
+Тип урона: дробящий
+Особенности:
+ Заклинание: владелец посоха может читать заклинание "Сфера невидимости" (как заклинатель 15-ого уровня) раз в день, но прочтение этого заклинания занимает три раунда
+Вес: 4 фунта
+Необходимая черта: Простое оружие, Посохи
+Тип: двуручное~
 //@11043    = ~Staff of the Elements +1~
-@11044    = ~The simplest and humblest of staff weapons, the quarterstaff is a length of wood ranging six to nine feet in length. Masterwork quarterstaffs are made of stout oak and are shod with metal at both ends. This one is particularly special as it has been imbued with magical properties. 
+@11044    = ~Простейшее и скромнейшее из шестообразного оружия, боевой посох - это деревянная палка длиной от шести до девяти футов. Боевые посохи высокого качества делаются из крепкого дуба и оковываются металлом с обоих концов. Данный экземпляр несколько отличается от других, поскольку наделён некоторыми магическими свойствами.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d6 + 1
-Attack Bonus: +1 
-Enchantment:  +1
-Damage Type:  Bludgeoning
-Special:
-  Flame: +1 fire damage
-  Frost: +1 cold damage
-  Shock: +1 electrical damage
-Weight: 4 lb.
-Feat Requirement:  Simple Weapon, Quarterstaff
-Type:  Two-handed~
+Урон: 1d6+1
+Атака: +1
+Зачарование: +1
+Тип урона: дробящий
+Особенности:
+ Огонь: +1 урона огнём
+ Стужа: +1 урона холодом
+ Шок: +1 урона электричеством
+Вес: 4 фунта
+Необходимая черта: Простое оружие, Посохи
+Тип: двуручное~
 //@11045    = ~Staff of the Defender +1~
-@11046    = ~The simplest and humblest of staff weapons, the quarterstaff is a length of wood ranging six to nine feet in length. Masterwork quarterstaffs are made of stout oak and are shod with metal at both ends. This one is particularly special as it has been imbued with magical properties. 
+@11046    = ~Простейшее и скромнейшее из шестообразного оружия, боевой посох - это деревянная палка длиной от шести до девяти футов. Боевые посохи высокого качества делаются из крепкого дуба и оковываются металлом с обоих концов. Данный экземпляр несколько отличается от других, поскольку наделён некоторыми магическими свойствами.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d6 + 1
-Attack Bonus:  +1 
-Enchantment:  +1
-Damage Type:  Bludgeoning
-Special:
-  Shield Bonus: +2
-Weight: 4 lb.
-Feat Requirement:  Simple Weapon, Quarterstaff
-Type:  Two-handed~
-@11047    = ~Staff of Water +2~
-@11048    = ~The simplest and humblest of staff weapons, the quarterstaff is a length of wood ranging six to nine feet in length. Masterwork quarterstaffs are made of stout oak and are shod with metal at both ends. This one is particularly special as it has been imbued with magical properties. 
+Урон: 1d6+1
+Атака: +1
+Зачарование: +1
+Тип урона: дробящий
+Особенности:
+ Класс защиты: +2 (щит)
+Вес: 4 фунта
+Необходимая черта: Простое оружие, Посохи
+Тип: двуручное~
+@11047    = ~Посох воды +2~
+@11048    = ~Простейшее и скромнейшее из шестообразного оружия, боевой посох - это деревянная палка длиной от шести до девяти футов. Боевые посохи высокого качества делаются из крепкого дуба и оковываются металлом с обоих концов. Данный экземпляр несколько отличается от других, поскольку наделён некоторыми магическими свойствами.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d6 + 2
-Attack Bonus:  +2
-Enchantment:  +2
-Damage Type:  Bludgeoning
-Special:
-  The spell Smashing Wave deals 50% more damage when cast by the wielder
-  Spell Power: Can cast Smashing Wave (at level 12) once per day
-Weight: 4 lb.
-Feat Requirement:  Simple Weapon, Quarterstaff
-Type:  Two-handed~
-@11049    = ~Lesser Staff of Spell Focus~
-@11050    = ~The simplest and humblest of staff weapons, the quarterstaff is a length of wood ranging six to nine feet in length. Masterwork quarterstaffs are made of stout oak and are shod with metal at both ends. This one is particularly special as it has been imbued with magical properties. 
+Урон: 1d6+2
+Атака: +2
+Зачарование: +2
+Тип урона: дробящий
+Особенности:
+ Заклинание "Сокрушительная волна", прочитанная владельцем посоха наносит на 50% больше урона
+ Заклинание: владелец посоха может читать заклинание "Сокрушительная волна" (как заклинатель 12-ого уровня) раз в день
+Вес: 4 фунта
+Необходимая черта: Простое оружие, Посохи
+Тип: двуручное~
+@11049    = ~Малых посох концентрации на заклинаниях~
+@11050    = ~Простейшее и скромнейшее из шестообразного оружия, боевой посох - это деревянная палка длиной от шести до девяти футов. Боевые посохи высокого качества делаются из крепкого дуба и оковываются металлом с обоих концов. Данный экземпляр несколько отличается от других, поскольку наделён некоторыми магическими свойствами.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d6
-Damage Type:  Bludgeoning
-Special:
-  Spells cast by the wielder gain +1 DC
-Weight: 4 lb.
-Feat Requirement:  Simple Weapon, Quarterstaff
-Type:  Two-handed~
+Урон: 1d6
+Тип урона: дробящий
+Особенности:
+ Заклинания, прочитанные владельцем посоха получают +1 к УС
+Вес: 4 фунта
+Необходимая черта: Простое оружие, Посохи
+Тип: двуручное~
 @11051    = ~Phantom Staff +5~
 //@11052    = ~Item description can remain the same; if new description is needed put it here~
 //@11053    = ~Staff of the Defender +3~
