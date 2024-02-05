@@ -5331,121 +5331,121 @@
 Вес: 4 фунта
 Необходимая черта: Простое оружие, Посохи
 Тип: двуручное~
-@11051    = ~Phantom Staff +5~
+@11051    = ~Призрачный посох +5~
 //@11052    = ~Item description can remain the same; if new description is needed put it here~
 //@11053    = ~Staff of the Defender +3~
-@11054    = ~The simplest and humblest of staff weapons, the quarterstaff is a length of wood ranging six to nine feet in length. Masterwork quarterstaffs are made of stout oak and are shod with metal at both ends. This one is particularly special as it has been imbued with magical properties. 
+@11054    = ~Простейшее и скромнейшее из шестообразного оружия, боевой посох - это деревянная палка длиной от шести до девяти футов. Боевые посохи высокого качества делаются из крепкого дуба и оковываются металлом с обоих концов. Данный экземпляр несколько отличается от других, поскольку наделён некоторыми магическими свойствами.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d6 + 3
-Attack Bonus:  +3 
-Enchantment:  +3
-Damage Type:  Bludgeoning
-Special:
-  Shield Bonus +4 
-Weight: 4 lb.
-Feat Requirement:  Simple Weapon, Quarterstaff
-Type:  Two-handed~
-@11055    = ~Cleric's Staff +2~
-@11056    = ~The simplest and humblest of staff weapons, the quarterstaff is a length of wood ranging six to nine feet in length. Masterwork quarterstaffs are made of stout oak and are shod with metal at both ends. This one is particularly special as it has been imbued with magical properties.
+Урон: 1d6+3
+Атака: +3
+Зачарование: +3
+Тип урона: дробящий
+Особенности:
+ Класс защиты: +4 (щит)
+Вес: 4 фунта
+Необходимая черта: Простое оружие, Посохи
+Тип: двуручное~
+@11055    = ~Посох священника +2~
+@11056    = ~Простейшее и скромнейшее из шестообразного оружия, боевой посох - это деревянная палка длиной от шести до девяти футов. Боевые посохи высокого качества делаются из крепкого дуба и оковываются металлом с обоих концов. Данный экземпляр несколько отличается от других, поскольку наделён некоторыми магическими свойствами.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d6 + 2
-Attack Bonus:  +2 
-Enchantment:  +2
-Damage Type:  Bludgeoning
-Special:
-  Wielder's divine spells last 20% longer
-Weight: 4 lb.
-Feat Requirement:  Simple Weapon, Quarterstaff
-Type:  Two-handed~
-@11057    = ~Staff of Infinite Fire +4~
-@11058    = ~The simplest and humblest of staff weapons, the quarterstaff is a length of wood ranging six to nine feet in length. Masterwork quarterstaffs are made of stout oak and are shod with metal at both ends. This one is particularly special as it has been imbued with magical properties. 
+Урон: 1d6+2
+Атака: +2
+Зачарование: +2
+Тип урона: дробящий
+Особенности:
+ Божественные заклинания владельца посоха действуют на 20% дольше
+Вес: 4 фунта
+Необходимая черта: Простое оружие, Посохи
+Тип: двуручное~
+@11057    = ~Посох бесконечного огня +4~
+@11058    = ~Простейшее и скромнейшее из шестообразного оружия, боевой посох - это деревянная палка длиной от шести до девяти футов. Боевые посохи высокого качества делаются из крепкого дуба и оковываются металлом с обоих концов. Данный экземпляр несколько отличается от других, поскольку наделён некоторыми магическими свойствами.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d6 + 4
-Attack Bonus:  +4
-Enchantment:  +4
-Damage Type:  Bludgeoning
-Special:
-  Infinite Fire: Can shoot out a Fireball that deals 8d6 fire damage (Reflex DC 20 for half). This ability can be used unlimited times per day.
-Weight: 4 lb.
-Feat Requirement:  Simple Weapon, Quarterstaff
-Type:  Two-handed~
+Урон: 1d6+4
+Атака: +4
+Зачарование: +4
+Тип урона: дробящий
+Особенности:
+ Бесконечный огонь: Может выпускать огненный шар, наносящий 8d6 урона огнем (успешный спасбросок реакции с УС 20 позволяет получить только половину урона рефлекс), и эту способность можно использовать неограниченное количество раз в день
+Вес: 4 фунта
+Необходимая черта: Простое оружие, Посохи
+Тип: двуручное~
 //@11059    = ~Staff of Greater Spell Resistance +5~
-@11060    = ~The simplest and humblest of staff weapons, the quarterstaff is a length of wood ranging six to nine feet in length. Masterwork quarterstaffs are made of stout oak and are shod with metal at both ends. This one is particularly special as it has been imbued with magical properties.
+@11060    = ~Простейшее и скромнейшее из шестообразного оружия, боевой посох - это деревянная палка длиной от шести до девяти футов. Боевые посохи высокого качества делаются из крепкого дуба и оковываются металлом с обоих концов. Данный экземпляр несколько отличается от других, поскольку наделён некоторыми магическими свойствами.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d6 + 5
-Attack Bonus:  +5 
-Enchantment:  +5
-Damage Type:  Bludgeoning
-Special:
-  Spell Resistance: +10
-  Lower Resistance: Each hit lowers the target's Spell Resistance by 5 for 10 rounds (Will DC 37, cumulative)
-Weight: 4 lb.
-Feat Requirement:  Simple Weapon, Quarterstaff
-Type:  Two-handed~
-@11061    = ~Staff of Health +3~
-@11062    = ~The simplest and humblest of staff weapons, the quarterstaff is a length of wood ranging six to nine feet in length. Masterwork quarterstaffs are made of stout oak and are shod with metal at both ends. This one is particularly special as it has been imbued with magical properties. 
+Урон: 1d6+5
+Атака: +5
+Зачарование: +5
+Тип урона: дробящий
+Особенности:
+ Сопротивление магии: +10
+ Снижение сопротивления: каждое попадание снижает сопротивление магии цели на 5 на 10 раундов (успешный спасбросок воли с УС 37 позволяет избежать эффекта, эффект суммируется)
+Вес: 4 фунта
+Необходимая черта: Простое оружие, Посохи
+Тип: двуручное~
+@11061    = ~Посох здоровья +3~
+@11062    = ~Простейшее и скромнейшее из шестообразного оружия, боевой посох - это деревянная палка длиной от шести до девяти футов. Боевые посохи высокого качества делаются из крепкого дуба и оковываются металлом с обоих концов. Данный экземпляр несколько отличается от других, поскольку наделён некоторыми магическими свойствами.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d6 + 3
-Attack Bonus:  +3 
-Enchantment:  +3
-Damage Type:  Bludgeoning
-Special:
-  Hit Point Bonus: +40 to max hit points
-Weight: 4 lb.
-Feat Requirement:  Simple Weapon, Quarterstaff
-Type:  Two-handed~
-@11063    = ~Staff of Banishing +2~
-@11064    = ~The simplest and humblest of staff weapons, the quarterstaff is a length of wood ranging six to nine feet in length. Masterwork quarterstaffs are made of stout oak and are shod with metal at both ends. This one is particularly special as it has been imbued with magical properties. 
+Урон: 1d6+3
+Атака: +3
+Зачарование: +3
+Тип урона: дробящий
+Особенности:
+ Дополнительные пункты здоровья: +40 к максимуму пунктов здоровья
+Вес: 4 фунта
+Необходимая черта: Простое оружие, Посохи
+Тип: двуручное~
+@11063    = ~Посох изгнания +2~
+@11064    = ~Простейшее и скромнейшее из шестообразного оружия, боевой посох - это деревянная палка длиной от шести до девяти футов. Боевые посохи высокого качества делаются из крепкого дуба и оковываются металлом с обоих концов. Данный экземпляр несколько отличается от других, поскольку наделён некоторыми магическими свойствами.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d6 + 2
-Attack Bonus:  +2
-Enchantment:  +2
-Damage Type:  Bludgeoning
-Special:
-  Banishing: Banishes summoned creatures on hit (Will DC 26)
-Weight: 4 lb.
-Feat Requirement:  Simple Weapon, Quarterstaff
-Type:  Two-handed~
-@11065    = ~Staff of Magic Vulnerability +1~
-@11066    = ~The simplest and humblest of staff weapons, the quarterstaff is a length of wood ranging six to nine feet in length. Masterwork quarterstaffs are made of stout oak and are shod with metal at both ends. This one is particularly special as it has been imbued with magical properties. 
+Урон: 1d6+3
+Атака: +3
+Зачарование: +3
+Тип урона: дробящий
+Особенности:
+ Изгнание: изгоняет вызванных существ при попадании (успешный спасбросок воли с УС 26 позволяет избежать эффекта)
+Вес: 4 фунта
+Необходимая черта: Простое оружие, Посохи
+Тип: двуручное~
+@11065    = ~Посох уязвимости к магии +1~
+@11066    = ~Простейшее и скромнейшее из шестообразного оружия, боевой посох - это деревянная палка длиной от шести до девяти футов. Боевые посохи высокого качества делаются из крепкого дуба и оковываются металлом с обоих концов. Данный экземпляр несколько отличается от других, поскольку наделён некоторыми магическими свойствами.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d6 + 1
-Attack Bonus:  +1
-Enchantment:  +1
-Damage Type:  Bludgeoning
-Special:
-  Magic Vulnerability: Each hit lowers magic damage resistance by 1 for 3 rounds (cumulative, no save)
-Weight: 4 lb.
-Feat Requirement:  Simple Weapon, Quarterstaff
-Type:  Two-handed~
+Урон: 1d6+1
+Атака: +1
+Зачарование: +1
+Тип урона: дробящий
+Особенности:
+ Уязвимость к магии: каждое попадание снижает сопротивление магии цели на 1 на 3 раунда (спасброска нет и эффект суммируется)
+Вес: 4 фунта
+Необходимая черта: Простое оружие, Посохи
+Тип: двуручное~
 //@11067    = ~Staff of Corrosion~
-@11068    = ~The simplest and humblest of staff weapons, the quarterstaff is a length of wood ranging six to nine feet in length. Masterwork quarterstaffs are made of stout oak and are shod with metal at both ends. This one is particularly special as it has been imbued with magical properties.
+@11068    = ~Простейшее и скромнейшее из шестообразного оружия, боевой посох - это деревянная палка длиной от шести до девяти футов. Боевые посохи высокого качества делаются из крепкого дуба и оковываются металлом с обоих концов. Данный экземпляр несколько отличается от других, поскольку наделён некоторыми магическими свойствами.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d6 + 1
-Attack Bonus:  +1
-Enchantment:  +1
-Damage Type:  Bludgeoning
-Special:
-  Any instance of acid damage from the wielder's spells deals an additional 5 points of damage (for spells that deal acid damage multiple times, this damage is added each time).
-Weight: 4 lb.
-Feat Requirement:  Simple Weapon, Quarterstaff
-Type:  Two-handed~
+Урон: 1d6+1
+Атака: +1
+Зачарование: +1
+Тип урона: дробящее
+Особенности:
+ Кислотный урон от заклинаний владельца посоха наносит дополнительно 5 урона (для заклинаний, наносящих кислотный урон несколько раз, этот урон добавляется каждый раз)
+Вес: 4 фунта
+Необходимая черта: Простое оружие, Посохи
+Тип: двуручное~
 //@11069    = ~Masterwork Quarterstaff~
 //@11070    = ~Item description can remain the same; if new description is needed put it here~
 //@11071    = ~Quarterstaff +5~
@@ -5457,95 +5457,93 @@ Type:  Two-handed~
 //@11077    = ~Quarterstaff +2~
 //@11078    = ~Item description can remain the same; if new description is needed put it here~
 //@11079    = ~Delnar's Delight~
-@11080    = ~Delnar was a timid mage who never was one for adventure. He spent most of his life in quiet study, living with his mother, trying to learn the art of crafting magical items. Unfortunately, his mother had a habit of interrupting him at crucial points during the enchantment process, often with disastrous results. Delnar's Delight is so named because of the lack of interruptions during its construction (and may well be the only item made by Delnar that functions as intended).
+@11080    = ~Делнар был робким магом, который никогда не любил приключения. Большую часть своей жизни он провёл в спокойной учёбе, живя со своей матерью и пытаясь постичь искусство создания зачарованных предметов. К сожалению, у матери Делнара была привычка отвлекать его в момент зачарования предметов, что частенько приводило к катастрофическим результатам. Посох "Отрада Делнара" назван так из-за того, что он был единственным не испорченным настырной мамашей творением волшебника (и единственным предметом, который работал именно так, как и задумывал мастер).
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d8 + 2
-Attack Bonus:  +2 
-Enchantment:  +2
-Damage Type:  Bludgeoning
-Special:
-  Magic damage dealt by wearer from most sources is increased by 30%
-Weight: 4 lb.
-Feat Requirement:  Simple Weapon, Quarterstaff
-Type:  Two-handed~
-@11081    = ~Delnar's Magic Staff~
-@11082    = ~Delnar was a timid mage who never was one for adventure. He spent most of his life in quiet study, living with his mother, trying to learn the art of crafting magical items. Unfortunately, his mother had a habit of interrupting him at crucial points during the enchantment process, often with disastrous results. Delnar's Magic Staff is notable for the lack of interruptions during its construction (and may well be the only item made by Delnar that functions as intended).
+Урон: 1d8+2
+Атака: +2
+Зачарование: +2
+Тип урона: дробящий
+Особенности:
+ Урон магией, наносимый владельцем посоха большинством способов увеличивается на 30%
+Вес: 4 фунта
+Необходимая черта: Простое оружие, Посохи
+Тип: двуручное~
+@11081    = ~Магический посох Делнара~
+@11082    = ~Делнар был робким магом, который никогда не любил приключения. Большую часть своей жизни он провёл в спокойной учёбе, живя со своей матерью и пытаясь постичь искусство создания зачарованных предметов. К сожалению, у матери Делнара была привычка отвлекать его в момент зачарования предметов, что частенько приводило к катастрофическим результатам. "Магический посох Делнара" возможно, единственное не испорченное настырной мамашей творение волшебника (и единственный предмет, который работал именно так, как и задумывал мастер).
 
-STATISTICS:
-
-Damage:  1d8 + 5
-Attack Bonus:  +5
-Enchantment:  +5
-Damage Type:  Bludgeoning
-Special:
-  Magic damage dealt by wearer from most sources is increased by 50%
-Weight: 4 lb.
-Feat Requirement:  Simple Weapon, Quarterstaff
-Type:  Two-handed~
+Урон: 1d8+5
+Атака: +5
+Зачарование: +5
+Тип урона: дробящий
+Особенности:
+ Урон магией, наносимый владельцем посоха большинством способов увеличивается на 50%
+Вес: 4 фунта
+Необходимая черта: Простое оружие, Посохи
+Тип: двуручное~
 //@11083    = ~Phaen's Ironshod Staff~
-@11084    = ~Phaen's oaken staff is capped with two iron bands of iron at the top and bottom, the bottom band carved to resemble the hoof of a horse or satyr, while the top band has been carved into a snarling bear with a spiked collar. The staff carries a minor enchantment that allows the user to strike more accurately and allows the staff to harm creatures immune to normal weapons.
+@11084    = ~Дубовый посох Фаэна с обоих концов окован железными полосами. Нижняя напоминает копыто лошади или сатира, а верхняя сделана в виде ревущего медведя в шипастом ошейнике. На посох наложены чары, которые позволяют наносить более точные удары и, кроме того, поражать существ, неуязвимых для обычного оружия.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d6
-Attack Bonus:  +1 
-Enchantment:  +1
-Damage Type:  Bludgeoning
-Special:
-  Whenever the wielder casts a spell, they gain +1 damage for 3 rounds (cumulative)
-Weight: 3 lb.
-Feat Requirement:  Simple Weapon, Quarterstaff
-Type:  Two-handed~
+Урон: 1d6
+Атака: +1
+Зачарование: +1
+Тип урона: дробящий
+Особенности:
+ Каждый раз, когда владелец посоха произносит заклинание, он получает +1 к урону на 3 раунда (эффект складывается)
+Вес: 3 фунта
+Необходимая черта: Простое оружие, Посохи
+Тип: двуручное~
 //@11085    = ~Iron-Banded Staff~
-@11086    = ~Phaen's oaken staff is capped with two iron bands of iron at the top and bottom, the bottom band carved to resemble the hoof of a horse or satyr, while the top band has been carved into a snarling bear with a spiked collar. The staff carries a minor enchantment that allows the user to strike more accurately and allows the staff to harm creatures immune to normal weapons.
+@11086    = ~Дубовый посох Фаэна с обоих концов окован железными полосами. Нижняя напоминает копыто лошади или сатира, а верхняя сделана в виде ревущего медведя в шипастом ошейнике. На посох наложены чары, которые позволяют наносить более точные удары и, кроме того, поражать существ, неуязвимых для обычного оружия.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d6 + 3
-Attack Bonus:  +5
-Enchantment:  +3
-Damage Type:  Bludgeoning
-Special:
-  Intelligence:  +5
-  Whenever the wielder casts a spell, they gain +2 damage for 3 rounds (cumulative)
-Weight: 3 lb.
-Feat Requirement:  Simple Weapon, Quarterstaff
-Type:  Two-handed~
+Урон: 1d6+3
+Атака: +5
+Зачарование: +3
+Тип урона: дробящий
+Особенности:
+ Интеллект: +5
+ Каждый раз, когда владелец посоха произносит заклинание, он получает +2 к урону на 3 раунда (эффект складывается)
+Вес: 3 фунта
+Необходимая черта: Простое оружие, Посохи
+Тип: двуручное~
 //@11087    = ~Whispering Staff~
-@11088    = ~This ironwood staff was once held by the goblin sorcerer Caballus, and it still bears the stink of his touch. Trails of runes encircle the staff like snakes, and aside from a single minor rune of accuracy and another of wounding, the rest appear to be nonsense syllables and bunk. The staff is surprisingly light and well-balanced for its size, and it can be held easily in one hand. It vanishes momentarily when swung, most likely through some sort of minor illusionary magic.
+@11088    = ~Когда-то этот посох из железного дерева принадлежал Кабаллусу, гоблину-колдуну, и оружие до сих пор хранит запах прикосновений гоблина. Вся поверхность посоха покрыта разными знаками, но кроме малой руны точности и руны ранения, всё остальное - какие-то бессмысленные загогулины. Посох удивительно лёгкий и хорошо сбалансированный, так что его можно держать одной рукой. При взмахе он на мгновение исчезает, скорее всего, благодаря какой-то малой иллюзорной магии.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d6 + 1
-Attack Bonus:  +1
-Enchantment:  +1
-Damage Type:  Bludgeoning
-Special:
-  Sneaky Weapon: This weapon turns invisible for a brief moment when used to attack
-  +1 to Move Silently skill
-  2% chance target is Silenced when struck
-Weight: 3 lb.
-Feat Requirement:  Simple Weapon, Quarterstaff
-Type:  One-handed~
+Урон: 1d6+1
+Атака: +1
+Зачарование: +1
+Тип урона: дробящий
+Особенности:
+ Скрытное оружие: это оружие становится невидимым на короткое время, когда используется для атаки
+ Приглушение: +1 к навыку "Тихая походка"
+ Наложение заклинания: 2% вероятность того, что на цель будет наложено заклинания "Тишина"
+Вес: 3 фунта
+Необходимая черта: Простое оружие, Посохи
+Тип: одноручное~
 //@11089    = ~Caballus' Whispering Staff~
-@11090    = ~This ironwood staff was once held by the goblin sorcerer Caballus, and it still bears the stink of his touch. Trails of runes encircle the staff like snakes, and aside from a single minor rune of accuracy and another of wounding, the rest appear to be nonsense syllables and bunk. The staff is surprisingly light and well-balanced for its size, and it can be held easily in one hand. It vanishes momentarily when swung, most likely through some sort of minor illusionary magic.
+@11090    = ~Когда-то этот посох из железного дерева принадлежал Кабаллусу, гоблину-колдуну, и оружие до сих пор хранит запах прикосновений гоблина. Вся поверхность посоха покрыта разными знаками, но кроме малой руны точности и руны ранения, всё остальное - какие-то бессмысленные загогулины. Посох удивительно лёгкий и хорошо сбалансированный, так что его можно держать одной рукой. При взмахе он на мгновение исчезает, скорее всего, благодаря какой-то малой иллюзорной магии.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d6 + 4
-Attack Bonus:  +3 
-Enchantment:  +3
-Damage Type:  Bludgeoning
-Special:  
-  Sneaky Weapon: This weapon turns invisible for a brief moment when used to attack
-  +10 to Move Silently skill
-  Target is silenced upon successful hit  (Will DC 20)
-  Spell Power: Can cast the spell Invisibility Sphere (at level 20) 1/day
-Weight: 3 lb.
-Feat Requirement:  Simple Weapon, Quarterstaff
-Type:  One-handed~
+Урон: 1d6+4
+Атака: +3
+Зачарование: +3
+Тип урона: дробящий
+Особенности:
+ Скрытное оружие: это оружие становится невидимым на короткое время, когда используется для атаки
+ Приглушение: +10 к навыку "Тихая походка"
+ Наложение заклинания: 2% вероятность того, что на цель будет наложено заклинания "Тишина" (успешный спасбросок воли с УС 20 отменяет эффект)
+ Заклинание: владелец посоха может читать заклинание "Сфера невидимости" (как заклинатель 20-ого уровня) раз в день
+Вес: 3 фунта
+Необходимая черта: Простое оружие, Посохи
+Тип: одноручное~
 //@11091    = ~Ryomaru's Harmless Staff~
 @11092    = ~Ryomaru was one of the greatest spies and assassins of the Kumo clan of Kozakura in Kara-Tur, and his Harmless Staff is anything but. Most of its hollowed length consists of a series of compartments holding poisonous powders, spring-loaded darts, weighted chains, jutting spikes, entangling hooks, and various other concealed weapons. When used in combat there is always a chance that one or more of the staff's nasty little "tricks" will be sprung upon an unwary opponent. However, great care must be taken in its use - the weapon can easily harm the casual wielder.
 
