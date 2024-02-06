@@ -5765,61 +5765,62 @@
 Необходимая черта: Военное оружие, Древковое
 Тип: двуручное~
 //@11129    = ~Nine Paces~
-@11130    = ~This long spear is made of a thick shaft of oak, and it looks like it has been used extensively in hunting arctic boars. It bears numerous sigils and runes along its haft to help it strike straight and true, and when held in a life or death situation, the spear can lash out at an opponent up to five lengths from the wielder, taking the victim down before they can even enter close combat. While the spear seems to confer no wounding enchantments, it does look capable of harming creatures only affected by magic weapons.
+@11130    = ~Это длинное копьё сделано из толстой дубовой ветки, и, похоже, с ним часто охотились на северных кабанов. Древко копья покрыто многочисленными знаками и рунами, которые повышают точность ударов. Кроме того, в бою им можно нанести удар с большого расстояния, ещё до того, как противник успеет вступить в ближний бой. И, хотя на копьё, похоже, не наложено никаких чар для нанесения ран, оно способно причинять вред существам, которые неуязвимы для обычного оружия.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d8
-Attack Bonus:  +1 
-Damage Type:  Piercing
-Special: 
-  Reach of 5 lengths, rather than 3
-  For the purposes of hitting enchanted creatures this weapon is considered a +1 weapon
-Weight: 7 lb.
-Feat Requirement:  Martial Weapon, Polearm
-Type:  Two-handed~
+Урон: 1d8
+Атака: +1
+Тип урона: колющий
+Особенности:
+ Расстояние досягаемости 5, а не 3, как для обычного копья
+ Считается оружием +1 для вычисления поражения существ
+Вес: 7 фунтов
+Необходимая черта: Военное оружие, Древковое
+Тип: двуручное~
 //@11131    = ~Twelve Paces~
-@11132    = ~This long spear is made of a thick shaft of oak, and it looks like it has been used extensively in hunting arctic boars. It bears numerous sigils and runes along its haft to help it strike straight and true, and when held in a life or death situation, the spear can lash out at an opponent up to sever lengths from the wielder, taking the victim down before they can even enter close combat.
+@11132    = ~Это длинное копьё сделано из толстой дубовой ветки, и, похоже, с ним часто охотились на северных кабанов. Древко копья покрыто многочисленными знаками и рунами, которые повышают точность ударов. Кроме того, в бою им можно нанести удар с большого расстояния, ещё до того, как противник успеет вступить в ближний бой.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d8 + 5
-Attack Bonus:  +5
-Enchantment:  +5
-Damage Type:  Piercing
-Special:
-  Reach of 7 lengths, rather than 3
-Weight: 7 lb.
-Feat Requirement:  Martial Weapon, Polearm
-Type:  Two-handed~
+Урон: 1d8+5
+Атака: +5
+Зачарование: +5
+Тип урона: колющий
+Особенности:
+ Расстояние досягаемости 7, а не 3, как для обычного копья
+Вес: 7 фунтов
+Необходимая черта: Военное оружие, Древковое
+Тип: двуручное~
 //@11133    = ~Kyosti's Spear~
-@11134    = ~Kyosti spent many moons working with the artisans of the Wandering Village in the creation of this enchanted hunter's spear. Like the man himself, though the weapon is bereft of extravagant ornamentation it always flies straight and true. Some say that the weapon actually seeks the heart of its target...
+@11134    = ~Киости провёл много лун, работая вместе с ремесленниками Блуждающей Деревни над созданием этого зачарованного охотничьего копья. Подобно самому Киости, это оружие лишено бесполезных украшений, зато всегда летит прямо и метко. Говорят, что это оружие само попадает прямо в сердце жертвы...
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d8 + 2
-Attack Bonus:  +2
-Enchantment:  +2
-Damage Type:  Piercing
-Special:
-  Penetrating: Increases chance of scoring a critical hit
-Weight: 5 lb.
-Feat Requirement:  Martial Weapon, Polearm
-Type:  Two-handed~
+Урон: 1d8+2
+Атака: +2
+Зачарование: +2
+Тип урона: колющий
+Особенности:
+ Проникновение: увеличивает вероятность критического попадания
+Вес: 5 фунтов
+Необходимая черта: Военное оружие, Древковое
+Тип: двуручное~
 //@11135    = ~Kyosti's Hunting Spear~
-@11136    = ~Kyosti spent many moons working with the artisans of the Wandering Village in the creation of this enchanted hunter's spear. Like the man himself, though the weapon is bereft of extravagant ornamentation it always flies straight and true. Some say that the weapon actually seeks the heart of its target...
+@11136    = ~Киости провёл много лун, работая вместе с ремесленниками Блуждающей Деревни над созданием этого зачарованного охотничьего копья. Подобно самому Киости, это оружие лишено бесполезных украшений, зато всегда летит прямо и метко. Говорят, что это оружие само попадает прямо в сердце жертвы...
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d8 + 4
-Attack Bonus:  +4
-Enchantment:  +4
-Damage Type:  Piercing
-  Penetrating: Increases chance of scoring a critical hit
-  Heartseeking: All attacks ignore targets shield and armor bonuses
-Weight: 5 lb.
-Feat Requirement:  Martial Weapon, Polearm
-Type:  Two-handed~
+Урон: 1d8+4
+Атака: +4
+Зачарование: +4
+Тип урона: колющий
+Особенности:
+ Проникновение: увеличивает вероятность критического попадания
+ Искатель сердца: все атаки этим оружием игнорируют бонусы к классу защиты цели за щит и доспех
+Вес: 5 фунтов
+Необходимая черта: Военное оружие, Древковое
+Тип: двуручное~
 
 
 //@11137    = ~Halberd~
@@ -5839,82 +5840,82 @@ Type:  Two-handed~
 //@11151    = ~Keen Halberd of Expertise~
 //@11152    = ~Item description can remain the same; if new description is needed put it here~
 //@11153    = ~Halberd of Corrosive Fire +1~
-@11154    = ~Like others of its type, this halberd consists of a cleaver-like axe blade mounted on a staff approximately six feet in length. It has also been bestowed with a small number of magical properties, however, thus making it more effective in combat. Its keen blade, for instance, will shear through your opponent's flesh to find the bone while its barbed tip will seek out gaps in their armor.
+@11154    = ~Эта алебарда, как и другие, представляет собой клинок вроде лезвия топора, закреплённый на древке длиной около шести футов. Также она обладает некоторыми магическими свойствами и потому более эффективна в бою. Например, её острое лезвие прорезает плоть врага до кости, а зазубренный наконечник находит слабые места в его броне.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d10 + 1
-Attack Bonus: +1 
-Enchantment:  +1
-Damage Type:  Piercing
-Special:
-  Corrosion: +1 acid damage
-  Flame: +1 fire damage
-Weight: 14 lb.
-Feat Requirement:  Martial Weapon, Polearm
-Type:  Two-handed~
+Урон: 1d10+1
+Атака: +1
+Зачарование: +1
+Тип урона: колющий
+Особенности:
+ Разъедание: +1 урона кислотой
+ Пламя: +1 урона огнём
+Вес: 14 фунтов
+Необходимая черта: Военное оружие, Древковое
+Тип: двуручное~
 //@11155    = ~Halberd of Willpower~
-@11156    = ~Like others of its type, this halberd consists of a cleaver-like axe blade mounted on a staff approximately six feet in length. It has also been bestowed with a small number of magical properties, however, thus making it more effective in combat. Its keen blade, for instance, will shear through your opponent's flesh to find the bone while its barbed tip will seek out gaps in their armor.
+@11156    = ~Эта алебарда, как и другие, представляет собой клинок вроде лезвия топора, закреплённый на древке длиной около шести футов. Также она обладает некоторыми магическими свойствами и потому более эффективна в бою. Например, её острое лезвие прорезает плоть врага до кости, а зазубренный наконечник находит слабые места в его броне.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d10
-Damage Type:  Piercing
-Special:
-  Will Saves: +3 bonus
-Weight: 14 lb.
-Feat Requirement:  Martial Weapon, Polearm
-Type:  Two-handed~
+Урон: 1d10
+Тип урона: колющий
+Особенности:
+ Спасброски: +3 к спасбросками воли
+Вес: 14 фунтов
+Необходимая черта: Военное оружие, Древковое
+Тип: двуручное~
 //@11157    = ~Halberd of the North~
 //@11158    = ~Item description can remain the same; if new description is needed put it here~
 //@11159    = ~Infernal Halberd of the Defender~
-@11160    = ~Like others of its type, this halberd consists of a cleaver-like axe blade mounted on a staff approximately six feet in length. It has also been bestowed with a small number of magical properties, however, thus making it more effective in combat. Its keen blade, for instance, will shear through your opponent's flesh to find the bone while its barbed tip will seek out gaps in their armor.
+@11160    = ~Эта алебарда, как и другие, представляет собой клинок вроде лезвия топора, закреплённый на древке длиной около шести футов. Также она обладает некоторыми магическими свойствами и потому более эффективна в бою. Например, её острое лезвие прорезает плоть врага до кости, а зазубренный наконечник находит слабые места в его броне.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d10
-Enchantment:  +5
-Damage Type:  Piercing
-Special:
-  Shield Bonus: +5 
-  Resistance: 35/- Fire Resistance
-  Flaming Burst:  +2d6 fire damage and 10% chance of +2d10 extra fire damage
-  Sure Striking: Weapon is treated as having a +5 enchantment for the purpose of hitting creatures that require magical weapons to hit
-Weight: 14 lb.
-Feat Requirement:  Martial Weapon, Polearm
-Type:  Two-handed~
-@11161    = ~Massive Halberd of Hate~
-@11162    = ~Like others of its type, this halberd consists of a cleaver-like axe blade mounted on a staff approximately six feet in length. It has also been bestowed with a small number of magical properties, however, thus making it more effective in combat. Its keen blade, for instance, will shear through your opponent's flesh to find the bone while its barbed tip will seek out gaps in their armor.
+Урон: 1d10
+Зачарование: +5
+Тип урона: колющий
+Особенности:
+ Класс защиты: +5 (щит)
+ Сопротивление: 35/- сопротивления огню
+ Вспышка пламени: +2d6 урона огнём и 10% вероятность нанести дополнительно 2d10 урона огнём
+ Точный удар: для расчёта попадания по существам, которых можно поразить только магическим оружием, это оружие считается зачарованным +5
+Вес: 14 фунтов
+Необходимая черта: Военное оружие, Древковое
+Тип: двуручное~
+@11161    = ~Тяжёлая алебарда злобы~
+@11162    = ~Эта алебарда, как и другие, представляет собой клинок вроде лезвия топора, закреплённый на древке длиной около шести футов. Также она обладает некоторыми магическими свойствами и потому более эффективна в бою. Например, её острое лезвие прорезает плоть врага до кости, а зазубренный наконечник находит слабые места в его броне.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  2d8 + 4
-Attack Bonus:  +4 
-Enchantment:  +4
-Damage Type:  Piercing
-Special:
-  Evil: +2d6 damage against good creatures
-  Vampiric: 1d4 hit points drained from target and added to wielder (Fortitude DC 22)
-Weight: 28 lb.
-Feat Requirement:  Martial Weapon, Polearm
-Type:  Two-handed
-Minimum Strength of 18 required~
+Урон: 2d8+4
+Атака: +4
+Зачарование: +4
+Тип урона: колющий
+Особенности:
+ Злоба: +2d6 урона против добрых существ
+ Вампиризм: 1d4 пунктов здоровья отнимается у цели и прибавляется владельцу (успешный спасбросок стойкости с УС 22 отменяет эффект)
+Вес: 28 фунтов
+Необходимая черта: Военное оружие, Древковое
+Тип: двуручное
+Требования: Сила 18~
 //@11163    = ~Halberd of Speed +5~
 //@11164    = ~Item description can remain the same; if new description is needed put it here~
-@11165    = ~Halberd of Horror +4~
-@11166    = ~Like others of its type, this halberd consists of a cleaver-like axe blade mounted on a staff approximately six feet in length. It has also been bestowed with a small number of magical properties, however, thus making it more effective in combat. Its keen blade, for instance, will shear through your opponent's flesh to find the bone while its barbed tip will seek out gaps in their armor.
+@11165    = ~Алебарда ужаса +4~
+@11166    = ~Эта алебарда, как и другие, представляет собой клинок вроде лезвия топора, закреплённый на древке длиной около шести футов. Также она обладает некоторыми магическими свойствами и потому более эффективна в бою. Например, её острое лезвие прорезает плоть врага до кости, а зазубренный наконечник находит слабые места в его броне.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d10 + 4
-Attack Bonus:  +4 
-Enchantment:  +4
-Damage Type:  Piercing
-Special:
-  Spell Process: 50% chance target will run in terror for 4 rounds (Will DC 23)
-Weight: 14 lb.
-Feat Requirement:  Martial Weapon, Polearm
-Type:  Two-handed~
+Урон: 1d10+
+Атака: +4
+Зачарование: +4
+Тип урона: колющий
+Особенности:
+ Наложение заклинания: с 50% вероятностью жертва будет убегать в ужасе в течении 4 раундов (спасбросок воли с УС 23 позволяет избежать эффекта)
+Вес: 14 фунтов
+Необходимая черта: Военное оружие, Древковое
+Тип: двуручное~
 //@11167    = ~Flaming Halberd +1~
 @11168    = ~Like others of its type, this halberd consists of a cleaver-like axe blade mounted on a staff approximately six feet in length. It has also been bestowed with a small number of magical properties, however, thus making it more effective in combat. Its keen blade, for instance, will shear through your opponent's flesh to find the bone while its barbed tip will seek out gaps in their armor.
 
