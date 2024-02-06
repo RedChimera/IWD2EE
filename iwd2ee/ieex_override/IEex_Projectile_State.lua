@@ -313,10 +313,11 @@ function IEex_Extern_OnPostProjectileCreation(CProjectile, esp)
 			local theresource = IEex_ReadLString(eData + 0x30, 8)
 			local thesavingthrow = IEex_ReadDword(eData + 0x40)
 			local thespecial = IEex_ReadDword(eData + 0x48)
-			if theopcode == 288 and theparameter2 == 216 then
-				if thespecial == 2 then
-					canSneakAttackOnNextHit = true
-					ex_projectile_flags[CProjectile]["Metamagic"] = bit.bor(ex_projectile_flags[CProjectile]["Metamagic"], 0x2000)
+			if theopcode == 288 then
+				if theparameter2 == 182 then
+					ex_projectile_flags[CProjectile]["Metamagic"] = bit.bor(ex_projectile_flags[CProjectile]["Metamagic"], 0x400)
+				elseif theparameter2 == 216 and thespecial == 2 then
+					ex_projectile_flags[CProjectile]["Metamagic"] = bit.bor(ex_projectile_flags[CProjectile]["Metamagic"], 0x800)
 				end
 			end
 		end)

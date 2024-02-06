@@ -4471,6 +4471,14 @@ COPY_EXISTING ~USHFSTPE.itm~ ~override~
 	SAY NAME2 @12913
 	SAY IDENTIFIED_DESC @12914
 
+COPY_EXISTING ~USROBE17.itm~ ~override~
+	SAY NAME2 @12915
+	SAY IDENTIFIED_DESC @12916
+
+COPY_EXISTING ~USROBE18.itm~ ~override~
+	SAY NAME2 @12917
+	SAY IDENTIFIED_DESC @12918
+
 //General patch changes
 
 /*
@@ -5620,7 +5628,7 @@ COPY_EXISTING ~40BDAWN.sto~ ~override~ //Beodaewn the Werewolf Man store
 
 COPY_EXISTING ~41ZACK1.sto~ ~override~ ~41ZACK2.sto~ ~override~ ~41ZACK3.sto~ ~override~ //Zack Boosenberry stores
 	REMOVE_STORE_ITEM ~00MSTR95~
-	ADD_STORE_ITEM ~USRTHF49~ AFTER ~00HAMM04~ #1 #1 #1 ~IDENTIFIED~ #1 //Staff of Besieging
+//	ADD_STORE_ITEM ~USRTHF49~ AFTER ~00HAMM04~ #1 #1 #1 ~IDENTIFIED~ #1 //Staff of Besieging
 	ADD_STORE_ITEM ~00RTHF64~ BEFORE ~00HAMM04~ #1 #1 #1 ~IDENTIFIED~ #1 //Delnar's Healing Sword
 	ADD_STORE_ITEM ~00MSTR95~ BEFORE ~00HAMM04~ #1 #1 #1 ~IDENTIFIED~ #1 //Morningstar of Thorns
 	ADD_STORE_ITEM ~00RING78~ AFTER ~00RING20~ #1 #1 #1 ~IDENTIFIED~ #1 //Spirit Armor Ring

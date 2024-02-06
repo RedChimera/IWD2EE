@@ -167,7 +167,6 @@ COPY_EXISTING ~IEex_WEIDU.lua~ ~override~
 	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_proficiency_attack *=.*~ ~ex_proficiency_attack = {[0] = -4, [1] = 0, [2] = 2, [3] = 5, [4] = 5, [5] = 5}~
 
 COPY ~%mod_folder%/tables/MONCRATE.2da~ ~override~
-COPY ~%mod_folder%/tables/XPLEVEL.2da~ ~override~
 
 COPY_EXISTING ~IEex_WEIDU.lua~ ~override~
 	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_monk_fist_progression *=.*~ ~ex_monk_fist_progression = {[0] = "00FIST", [1] = "USMFIS01", [2] = "USMFIS02", [3] = "USMFIS03", [4] = "USMFIS04", [5] = "USMFIS05", [6] = "USMFIS06", [7] = "USMFIS07", [8] = "USMFIS08", [9] = "USMFIS09", [10] = "USMFIS10", [11] = "USMFIS11", [12] = "USMFIS12", [13] = "USMFIS13", [14] = "USMFIS14", [15] = "USMFIS15", [16] = "USMFIS16", [17] = "USMFIS17", [18] = "USMFIS18", [19] = "USMFIS19", [20] = "USMFIS20", [21] = "USMFIS21", [22] = "USMFIS22", [23] = "USMFIS23", [24] = "USMFIS24", [25] = "USMFIS25", [26] = "USMFIS26", [27] = "USMFIS27", [28] = "USMFIS28", [29] = "USMFIS29", [30] = "USMFIS30", [31] = "USMFIS31", [32] = "USMFIS32", [33] = "USMFIS33", [34] = "USMFIS34", [35] = "USMFIS35", [36] = "USMFIS36", [37] = "USMFIS37", [38] = "USMFIS38", [39] = "USMFIS39", [40] = "USMFIS40", [41] = "USMFIS41", [42] = "USMFIS42", [43] = "USMFIS43", [44] = "USMFIS44", [45] = "USMFIS45", [46] = "USMFIS46", [47] = "USMFIS47", [48] = "USMFIS48", [49] = "USMFIS49", [50] = "USMFIS50", }~

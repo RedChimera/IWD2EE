@@ -1036,16 +1036,17 @@ COPY_EXISTING ~USVREK.cre~ ~override~
 	WRITE_ASCII dialogue ~USVREK~ #8
 	WRITE_ASCII scriptname ~USVREK~ #32
 	LPF	IWD2_REMOVE_CRE_ITEM STR_VAR item=~RT02_R USAHBB5 USAHBB6~ END
+	LPF IWD2_ADD_CRE_EFFECT INT_VAR opcode=266 target=1 timing=9 parameter1=2 END
 	PATCH_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~0~ BEGIN
 		LPF IWD2_ADD_CRE_EFFECT INT_VAR opcode=500 target=1 timing=9 STR_VAR resource=~MEBARBMV~ effsource=~USBARBMV~ END
 		LPF IWD2_ADD_CRE_EFFECT INT_VAR opcode=86 target=1 timing=9 parameter1=1 STR_VAR effsource=~USSTBA01~ END
 		LPF IWD2_ADD_CRE_EFFECT INT_VAR opcode=87 target=1 timing=9 parameter1=1 STR_VAR effsource=~USSTBA01~ END
 		LPF IWD2_ADD_CRE_EFFECT INT_VAR opcode=88 target=1 timing=9 parameter1=1 STR_VAR effsource=~USSTBA01~ END
-		LPF IWD2_ADD_CRE_EFFECT INT_VAR opcode=89 target=1 timing=9 parameter1=1 STR_VAR effsource=~USSTBA01~ END
+//		LPF IWD2_ADD_CRE_EFFECT INT_VAR opcode=89 target=1 timing=9 parameter1=1 STR_VAR effsource=~USSTBA01~ END
 		LPF IWD2_ADD_CRE_EFFECT INT_VAR opcode=86 target=1 timing=9 parameter1=1 STR_VAR effsource=~USSTBA01~ END
 		LPF IWD2_ADD_CRE_EFFECT INT_VAR opcode=87 target=1 timing=9 parameter1=1 STR_VAR effsource=~USSTBA01~ END
 		LPF IWD2_ADD_CRE_EFFECT INT_VAR opcode=88 target=1 timing=9 parameter1=1 STR_VAR effsource=~USSTBA01~ END
-		LPF IWD2_ADD_CRE_EFFECT INT_VAR opcode=89 target=1 timing=9 parameter1=1 STR_VAR effsource=~USSTBA01~ END
+//		LPF IWD2_ADD_CRE_EFFECT INT_VAR opcode=89 target=1 timing=9 parameter1=1 STR_VAR effsource=~USSTBA01~ END
 	END
 
 COPY_EXISTING ~USVUNA.cre~ ~override~
@@ -1053,6 +1054,7 @@ COPY_EXISTING ~USVUNA.cre~ ~override~
 	WRITE_ASCII dialogue ~USVUNA~ #8
 	WRITE_ASCII scriptname ~USVUNA~ #32
 	LPF	IWD2_REMOVE_CRE_ITEM STR_VAR item=~USAHFI5~ END
+	LPF IWD2_ADD_CRE_EFFECT INT_VAR opcode=266 target=1 timing=9 parameter1=2 END
 
 COPY_EXISTING ~USXHAA.cre~ ~override~
 	SAY BIOGRAPHY @40410
@@ -1061,6 +1063,7 @@ COPY_EXISTING ~USXHAA.cre~ ~override~
 	WRITE_ASCII dialogue ~USXHAA~ #8
 	WRITE_ASCII scriptname ~USXHAA~ #32
 	LPF	IWD2_REMOVE_CRE_ITEM STR_VAR item=~USAHFI3~ END
+	LPF IWD2_ADD_CRE_EFFECT INT_VAR opcode=266 target=1 timing=9 parameter1=2 END
 
 COPY_EXISTING ~USZACK.cre~ ~override~
 	WRITE_ASCII specialscript1 ~USZACKD~ #8

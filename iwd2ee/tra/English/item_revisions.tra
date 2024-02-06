@@ -7770,24 +7770,26 @@ Attack Bonus:  +2
 Enchantment:  +2
 Damage Type:  Bludgeoning
 Special:
-  Dispelling: 25% chance Dispel Magic on target (Will DC 15 + wielder's Strength bonus)
+  Sonic: +1d6 sonic damage
+  Dispelling: 15% chance Dispel Magic on target (Will DC 15 + wielder's Strength bonus)
   Wail: Deafens struck target (Fortitude DC 15 + wielder's Strength bonus)
 Weight: 5 lb.
 Required Feat:  Martial Weapon, Flail
 Type:  One-handed~
-@11535    = ~Skirling Svirfneblin Skull +5~
+@11535    = ~Skirling Svirfneblin Skull +4~
 @11536    = ~The Skirling Svirfneblin Skull, thought to be of deep gnome manufacture, is a flail of notably unusual design: a three-foot long wooden shaft topped with a stone head carved to resemble a skull and crowned with long, glimmering shards of impossibly hard crystal.
 
 When the enchanted crystals strike an object they vibrate and emit a keening wail - these unnatural harmonics can rend magical auras and dispel whatever sorcery surrounds the target. The same ringing tone also has a chance of deafening the target.
 
 STATISTICS:
 
-Damage:  1d8  +5
-Attack Bonus:  +5 
-Enchantment:  +5
+Damage:  1d8  +4
+Attack Bonus:  +4
+Enchantment:  +4
 Damage Type:  Bludgeoning
 Special:
-  Dispelling: 50% chance Dispel Magic on target (Will DC 25 + wielder's Strength bonus)
+  Sonic: +2d6 sonic damage
+  Dispelling: 30% chance Dispel Magic on target (Will DC 25 + wielder's Strength bonus)
   Wail: Deafen struck target (Fortitude DC 25 + wielder's Strength bonus)
 Weight: 5 lb.
 Required Feat:  Martial Weapon, Flail
@@ -7803,10 +7805,10 @@ STATISTICS:
 
 Damage:  1d8
 Attack Bonus:  +1 
-Enchantment;  +1
+Enchantment:  +1
 Damage Type:  Bludgeoning
 Special:
-  For the purposes of hitting enchanted creatures this weapon is considered a +1 weapon
+  Ringing: +1 sonic damage
   Upon hitting a creature, the chimes awaken all party members (if sleeping) and grant them a +1 attack bonus for 1 round (non-cumulative)
   Penalty:  -1 to Move Silently skill
 Weight: 5 lb.
@@ -7815,17 +7817,18 @@ Type:  One-handed~
 //@11539    = ~Black Chimes of the Bell Warden~
 @11540    = ~This heavy flail is composed of an iron rod with three hollow metal tubes secured to it by thin black iron chains. When held, the chimes ring together, as if stirred by the wind, and no amount of padding or wrapping seems to silence the flail's chiming. When swung in combat, the chimes clash like thunder, having a chance of deafening anyone struck by it.
 
-This weapon is all that remains of Slow Cedric's Gallop, a small frontier settlement located in the Southern Pass of the Spine of the World Mountains. The settlement is believed to have been overrun by a tribe of orcs in the great winter of 1170 DR, and when the cold season passed, the settlement and the bodies of the townsfolk had been buried beneath great mountains of snow. When the first travelers braved the Pass in the spring season, they found only the top of the settlement's great stone belltower peeking through the mountainous drifts. This odd-looking flail was found lying upon the tower's bloodied stone floor, surrounded by the frost-dusted bodies of several dead orcs. 
+This weapon is all that remains of Slow Cedric's Gallop, a small frontier settlement located in the Southern Pass of the Spine of the World Mountains. The settlement is believed to have been overrun by a tribe of orcs in the great winter of 1170 DR, and when the cold season passed, the settlement and the bodies of the townsfolk had been buried beneath great mountains of snow. When the first travelers braved the Pass in the spring season, they found only the top of the settlement's great stone belltower peeking through the mountainous drifts. This odd-looking flail was found lying upon the tower's bloodied stone floor, surrounded by the frost-dusted bodies of several dead orcs.
 
 According to tales, the Black Chimes were a symbol of office of the settlement's Bell Warden, whose duty was two-fold - to ring the warning bell when an enemy was sighted in the pass, and after the warning bell had been rung, to defend the pass with his life. It is believed the first Bell Warden of Slow Cedric's Gallop was the original creator of the Black Chimes, an enchanted flail that would ring to warn the town of danger at the same time as he leapt into battle against his foes.
 
 STATISTICS:
 
-Damage:  1d8  +5
-Attack Bonus:  +5
-Enchantment:  +5 
+Damage:  1d8  +3
+Attack Bonus:  +3
+Enchantment:  +3
 Damage Type:  Bludgeoning
-Special:  
+Special:
+  Ringing: +1d6 sonic damage
   Upon hitting a creature, the chimes awaken all party members (if sleeping) and grant them a +3 attack bonus for 1 round (non-cumulative)
   Spellward: Immunity to the spells, Power Word Silence and Silence
 Weight: 5 lb.
@@ -10554,7 +10557,6 @@ STATISTICS:
 Permanent 1/- Slashing Resistance
 Permanent 1/- Piercing Resistance
 Permanent 1/- Bludgeoning Resistance
-Permanent 1/- Missile Resistance
 Weight:  1 lb.~
 //@12121    = ~Potion of Action Transference~
 @12122    = ~Potions are typically found in ceramic, crystal, glass, or metal flasks or vials. Flasks or other containers generally contain enough fluid to provide one person with one complete dose to achieve the effects of the potion. 
@@ -14154,6 +14156,22 @@ Special:
 Weight: 12 lb.
 Feat Requirement:  Martial Weapon, Great Sword
 Type:  Two-handed~
+@12915    = ~Wizard Robe of Acid Resistance~
+@12916    = ~Wizard Robes of Acid Resistance are sometimes worn for protection against monstrous, acidic slimes, but they are more commonly worn for protection against other wizards. Not many acid spells are known amongst mages, but the few that are known are widely used. Like other mage robes, these robes can only be worn by wizards.
+
+STATISTICS:
+
+Resistance:  20/- Acid Resistance
+All acid damage dealt by the character is increased by 20%
+Weight:  3 lb.~
+@12917    = ~Wizard Robe of Force Resistance~
+@12918    = ~Of all the robes of resistance, Wizard Robes of Force Resistance are among the rarest. They are rare not because they are not useful, but because they are much harder to create than other robes of resistance. The name is a misnomer, as these robes are more useful for strengthening magic than for resisting it.
+
+STATISTICS:
+
+Resistance:  20/- Magic Damage Resistance
+All magic damage dealt by the character is increased by 20%
+Weight:  3 lb.~
 @19900    = ~Hrm - you are powerful allies, indeed. More gold and gems to line your pockets, then - also, a suit of plate armor, a warhammer, a helmet, all crafted and enchanted by great duergar artisans. They are well deserved, outsider.~
 @19901    = ~Drink this Rainwater Brew, Ennelia. It should help your condition.~
 @19902    = ~Drink this Sour Draught, Ennelia. It should help your condition.~
