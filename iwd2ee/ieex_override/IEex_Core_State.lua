@@ -266,7 +266,7 @@ function IEex_GetSpriteFeatCount(sprite, featID)
 			return 1
 		else
 			local featCount = IEex_ReadSignedByte(sprite + offset, 0x0)
-			if featCount == -1 then
+			if featCount < 1 then
 				featCount = 1
 				IEex_WriteByte(sprite + offset, featCount)
 			end
@@ -406,15 +406,17 @@ function IEex_Extern_FeatHook(sprite, oldBaseStats, oldDerivedStats)
 	if sprite <= 0 then return end
 	IEex_AssertThread(IEex_Thread.Async, true)
 	local maxID = IEex_Helper_GetBridge("IEex_Feats", "NEW_FEATS_MAXID")
-	for featID = 0, maxID do
-		if IEex_IsFeatTakenInBaseStats(IEex_GetSpriteBaseStats(sprite), featID) then
-			local oldFeatCount = (featID > 74 or IEex_Feats_DefaultMaxPips[featID])
-				and IEex_GetFeatCountFromBaseStats(oldBaseStats, featID)
-				or IEex_GetFeatCountFromBaseStats(oldBaseStats, featID)
-			local newFeatCount = IEex_GetSpriteFeatCount(sprite, featID)
-			if oldFeatCount ~= newFeatCount then
-				for featLevel = oldFeatCount + 1, newFeatCount, 1 do
-					IEex_ApplyResref("FE_"..featID.."_"..featLevel, IEex_GetActorIDShare(sprite))
+	if IEex_GetActiveEngine() == IEex_GetEngineCharacter() then
+		for featID = 0, maxID do
+			if IEex_IsFeatTakenInBaseStats(IEex_GetSpriteBaseStats(sprite), featID) then
+				local oldFeatCount = (featID > 74 or IEex_Feats_DefaultMaxPips[featID])
+					and IEex_GetFeatCountFromBaseStats(oldBaseStats, featID)
+					or IEex_GetFeatCountFromBaseStats(oldBaseStats, featID)
+				local newFeatCount = IEex_GetSpriteFeatCount(sprite, featID)
+				if oldFeatCount ~= newFeatCount then
+					for featLevel = oldFeatCount + 1, newFeatCount, 1 do
+						IEex_ApplyResref("FE_"..featID.."_"..featLevel, IEex_GetActorIDShare(sprite))
+					end
 				end
 			end
 		end
@@ -678,7 +680,7 @@ function IEex_LoadInitial2DAs()
 	local skills2DA = IEex_2DADemand("SKILLS")
 
 	IEex_NEW_SKILLS_SIZE = tonumber(IEex_2DAGetAt(skills2DA, IEex_2DAFindColumn(skills2DA, "ID"), IEex_ReadWord(skills2DA + 0x20, 1) - 1)) + 1
-	print(IEex_NEW_SKILLS_SIZE)
+--	print(IEex_NEW_SKILLS_SIZE)
 end
 
 

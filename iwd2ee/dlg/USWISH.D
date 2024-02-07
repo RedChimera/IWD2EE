@@ -529,32 +529,32 @@ END
 
 IF ~~ THEN BEGIN WishStrength
   SAY @30186
-  IF ~~ THEN DO ~ReallyForceSpellRES("USWSHSTR",Protagonist)~ EXIT
+  IF ~~ THEN DO ~IEex_Lua("IEex_HaveSummonerCast(USWSHSTR,true)")~ EXIT
 END
 
 IF ~~ THEN BEGIN WishDexterity
   SAY @30186
-  IF ~~ THEN DO ~ReallyForceSpellRES("USWSHDEX",Protagonist)~ EXIT
+  IF ~~ THEN DO ~IEex_Lua("IEex_HaveSummonerCast(USWSHDEX,true)")~ EXIT
 END
 
 IF ~~ THEN BEGIN WishConstitution
   SAY @30186
-  IF ~~ THEN DO ~ReallyForceSpellRES("USWSHCON",Protagonist)~ EXIT
+  IF ~~ THEN DO ~IEex_Lua("IEex_HaveSummonerCast(USWSHCON,true)")~ EXIT
 END
 
 IF ~~ THEN BEGIN WishIntelligence
   SAY @30186
-  IF ~~ THEN DO ~ReallyForceSpellRES("USWSHINT",Protagonist)~ EXIT
+  IF ~~ THEN DO ~IEex_Lua("IEex_HaveSummonerCast(USWSHINT,true)")~ EXIT
 END
 
 IF ~~ THEN BEGIN WishWisdom
   SAY @30186
-  IF ~~ THEN DO ~ReallyForceSpellRES("USWSHWIS",Protagonist)~ EXIT
+  IF ~~ THEN DO ~IEex_Lua("IEex_HaveSummonerCast(USWSHWIS,true)")~ EXIT
 END
 
 IF ~~ THEN BEGIN WishCharisma
   SAY @30186
-  IF ~~ THEN DO ~ReallyForceSpellRES("USWSHCHR",Protagonist)~ EXIT
+  IF ~~ THEN DO ~IEex_Lua("IEex_HaveSummonerCast(USWSHCHR,true)")~ EXIT
 END
 
 IF ~~ THEN BEGIN WishItem
@@ -578,7 +578,7 @@ END
 
 IF ~~ THEN BEGIN WishRest
   SAY @30186
-  IF ~~ THEN DO ~ReallyForceSpellRES("USWSHRST",Protagonist)~ EXIT
+  IF ~~ THEN DO ~IEex_Lua("IEex_HaveSummonerCast(USWSHRST,true)")~ EXIT
 END
 
 IF ~~ THEN BEGIN WishEpic

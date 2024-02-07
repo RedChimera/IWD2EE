@@ -3751,16 +3751,18 @@ function IEex_Extern_OnUpdateRecordDescription(CScreenCharacter, CGameSprite, CU
 		elseif descPanelNum == 1 and string.match(line, damageString .. ":") then
 			local damageBonus = IEex_ReadSignedWord(creatureData + 0x9A6, 0x0)
 			if damageBonus > 0 then
+				IEex_SetToken("EXRDVAL1", damageBonus)
 				line = line .. string.gsub(IEex_FetchString(ex_tra_55604), "<EXRDVAL1>", damageBonus)
 			elseif damageBonus < 0 then
+				IEex_SetToken("EXRDVAL1", math.abs(damageBonus))
 				line = line .. string.gsub(IEex_FetchString(ex_tra_55605), "<EXRDVAL1>", math.abs(damageBonus))
 			end
 			local numbersProcessed = 0
 			for w in string.gmatch(line, "%d+") do
 				if numbersProcessed == 0 then
-					ex_current_record_weapon_die_number = w
+					ex_current_record_weapon_die_number = tonumber(w)
 				elseif numbersProcessed == 1 then
-					ex_current_record_weapon_die_size = w
+					ex_current_record_weapon_die_size = tonumber(w)
 				end
 				numbersProcessed = numbersProcessed + 1
 			end
@@ -3771,10 +3773,11 @@ function IEex_Extern_OnUpdateRecordDescription(CScreenCharacter, CGameSprite, CU
 				local minimumRoll = 1 + luckBonus
 				if minimumRoll > ex_current_record_weapon_die_size then
 					minimumRoll = ex_current_record_weapon_die_size
-				end
+				end				 
 				if minimumRoll == ex_current_record_weapon_die_size then
 					line = string.gsub(line, "%d+d%d+", ex_current_record_weapon_die_number * ex_current_record_weapon_die_size)
 				else
+					IEex_SetToken("EXRLVAL1", minimumRoll)
 					line = line .. string.gsub(IEex_FetchString(ex_tra_55606), "<EXRLVAL1>", minimumRoll)
 				end
 			elseif luckBonus < 0 then
@@ -3785,6 +3788,7 @@ function IEex_Extern_OnUpdateRecordDescription(CScreenCharacter, CGameSprite, CU
 				if maximumRoll == 1 then
 					line = string.gsub(line, "%d+d%d+", ex_current_record_weapon_die_number)
 				else
+					IEex_SetToken("EXRLVAL1", maximumRoll)
 					line = line .. string.gsub(IEex_FetchString(ex_tra_55607), "<EXRLVAL1>", maximumRoll)
 				end
 			end
@@ -3795,9 +3799,9 @@ function IEex_Extern_OnUpdateRecordDescription(CScreenCharacter, CGameSprite, CU
 			local maximumDamage = 0
 			for w in string.gmatch(line, "%d+") do
 				if numbersProcessed == 0 then
-					minimumDamage = w
+					minimumDamage = tonumber(w)
 				elseif numbersProcessed == 1 then
-					maximumDamage = w
+					maximumDamage = tonumber(w)
 				end
 				numbersProcessed = numbersProcessed + 1
 			end

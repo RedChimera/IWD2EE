@@ -31,9 +31,14 @@ EXTEND_BOTTOM ~AR6303.bcs~ ~%mod_folder%/baf/USSTSH01.baf~
 
 COMPILE ~%mod_folder%/dlg/USSTSH01.d~
 
-COPY ~%mod_folder%/cre/USSTSHRL.cre~ ~override~
-  SAY NAME1 @4001
-  SAY NAME2 @4001
+COPY_EXISTING ~63RUINL.cre~ ~override/USSTSHRL.cre~
+	SAY NAME1 @4001
+	SAY NAME2 @4001
+	WRITE_ASCII teamscript ~00T02ET~ #8
+	WRITE_ASCII combatscript ~62NORSHC~ #8
+	WRITE_ASCII movementscript ~00T02M~ #8
+	WRITE_ASCII dialogue ~USSTSH01~ #8
+
 COPY ~%mod_folder%/bcs/USSTRL.bcs~ ~override~
 COPY ~%mod_folder%/bcs/USSTSH02.bcs~ ~override~
 COPY ~%mod_folder%/bcs/USSTSH03.bcs~ ~override~

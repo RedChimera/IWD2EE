@@ -84,6 +84,7 @@ ex_no_apr_limit = false
 ex_shadowstep_brightness_max = 180
 ex_full_ability_score_cap = 40
 ex_max_skill_points_saved_for_next_level = 1
+ex_disable_party_hof_bonus_bug = true
 ex_construct_race = 156
 ex_fiend_race = 164
 ex_reanimation_level_check_bonus = 5

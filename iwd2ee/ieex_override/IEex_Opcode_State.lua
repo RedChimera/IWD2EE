@@ -566,7 +566,7 @@ ex_empowerable_opcodes = {[12] = true, [17] = true, [18] = true, [25] = true, [6
 								local thespecial = IEex_ReadDword(eData + 0x48)
 								damageMultiplier = damageMultiplier + theparameter1
 								local theresource = IEex_ReadLString(eData + 0x30, 8)
-								if theresource == "" or theresource == parent_resource then
+								if (theresource == "" or theresource == parent_resource) and (bit.band(thesavingthrow, 0x20000) == 0 or bit.band(thesavingthrow, 0x78000000) == bit.band(parameter3, 0x78000000)) then
 									if bit.band(thesavingthrow, 0x100000) == 0 then
 										damageMultiplier = damageMultiplier + thespecial
 									else
@@ -985,7 +985,9 @@ ex_empowerable_opcodes = {[12] = true, [17] = true, [18] = true, [25] = true, [6
 				end
 --]]
 			elseif ex_empowerable_opcodes[opcode] ~= nil then
-				if opcode == 12 or opcode == 17 or opcode == 18 or opcode == 255 then
+				if opcode == 12 then
+				
+				elseif opcode == 17 or opcode == 18 or opcode == 255 then
 					parameter1 = math.floor(parameter1 * 1.5)
 					IEex_WriteDword(effectData + 0x18, parameter1)
 					dicenumber = math.floor(dicenumber * 1.5)

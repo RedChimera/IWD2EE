@@ -494,6 +494,7 @@ ex_chargen_store_key = IEex_KeyIDS.X
 ex_chargen_recall_key = IEex_KeyIDS.C
 ex_chargen_reallocate_key = IEex_KeyIDS.V
 ex_chargen_ability_buttons_pressed = {[16] = false, [17] = false, [18] = false, [19] = false, [20] = false, [21] = false, [22] = false, [23] = false, [24] = false, [25] = false, [26] = false, [27] = false, }
+ex_chargen_current_actorID = -1
 ex_ability_scores_initialized = false
 ex_extra_feats_granted = false
 ex_extra_skill_points_granted = false
@@ -507,8 +508,9 @@ recordedUnallocatedAbilityScores = {}
 function IEex_Chargen_ExtraFeatListener()
 	local g_pBaldurChitin = IEex_ReadDword(0x8CF6DC)
 	local chargenData = IEex_ReadDword(g_pBaldurChitin + 0x1C64)
-	if chargenData > 0 then
+	if chargenData > 0 and IEex_GetActiveEngine() == chargenData then
 		local actorID = IEex_ReadDword(chargenData + 0x4E2)
+		ex_chargen_current_actorID = actorID
 		local share = IEex_GetActorShare(actorID)
 		if share > 0 then
 			ex_randomizer = math.random(6)
@@ -672,6 +674,29 @@ function IEex_Chargen_ExtraFeatListener()
 				end
 			end
 		end
+	else
+		local share = IEex_GetActorShare(ex_chargen_current_actorID)
+		if share > 0 then
+			local extraFlags = IEex_ReadDword(share + 0x740)
+			local totalLevel = IEex_ReadByte(share + 0x626, 0x0)
+			if bit.band(extraFlags, 0x40) == 0 and totalLevel <= 1 then
+				extraFlags = bit.bor(extraFlags, 0x40)
+				IEex_WriteDword(share + 0x740, extraFlags)
+				local maxID = IEex_Helper_GetBridge("IEex_Feats", "NEW_FEATS_MAXID")
+				for featID = 0, maxID do
+					if IEex_IsFeatTakenInBaseStats(IEex_GetSpriteBaseStats(share), featID) then
+	--					local oldFeatCount = (featID > 74 or IEex_Feats_DefaultMaxPips[featID])
+	--						and IEex_GetFeatCountFromBaseStats(oldBaseStats, featID)
+	--						or IEex_GetFeatCountFromBaseStats(oldBaseStats, featID)
+						local newFeatCount = IEex_GetSpriteFeatCount(share, featID)
+						for featLevel = 1, newFeatCount, 1 do
+							IEex_ApplyResref("FE_"..featID.."_"..featLevel, ex_chargen_current_actorID)
+						end
+					end
+				end
+			end
+		end
+		ex_chargen_current_actorID = -1
 	end
 end
 ex_starting_level = {-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1}
@@ -696,6 +721,11 @@ function IEex_LevelUp_ExtraFeatListener()
 		local actorID = IEex_ReadDword(levelUpData + 0x136)
 		local share = IEex_GetActorShare(actorID)
 		local panelID = IEex_GetEngineCharacterPanelID()
+		if panelID ~= 58 then
+			IEex_WriteByte(levelUpData + 0x304, 27)
+		else
+			IEex_WriteByte(levelUpData + 0x304, 65)
+		end
 		if (panelID <= 0 or panelID == 2) and ex_starting_level[1] ~= -1 then
 			if ex_true_xp ~= -1 then
 				IEex_WriteDword(share + 0x5B4, ex_true_xp)

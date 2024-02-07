@@ -807,6 +807,25 @@ COPY_EXISTING_REGEXP ~50CVENl0\.bcs~ ~override~ ~61PCFLOR\.bcs~ ~override~ //Fix
 		REPLACE_TEXTUALLY EXACT_MATCH ~ClearSpriteEffects(~ ~ApplySpellRES("USDISPEL",~
 	END
 
+COPY_EXISTING ~AR5005.are~ ~override~ //Making it more difficult to skip the trigger that brings out the dragon
+	READ_SHORT 0x6A thenumtriggers
+	READ_LONG 0x6C thetriggersoffset
+	READ_SHORT 0x90 thenumvertices
+	READ_LONG 0x8C theverticesoffset
+	FOR (i = 0; i < thenumtriggers; ++i) BEGIN
+		offset = thetriggersoffset + i * 0xC4
+		READ_ASCII (offset + 0x7C) thetriggerscript
+		PATCH_IF ~%thetriggerscript%~ STRING_EQUAL_CASE ~50PDRAG0~ BEGIN
+			READ_LONG (offset + 0x2C) thefirstvertexindex
+			WRITE_SHORT (theverticesoffset + (thefirstvertexindex + 2) * 0x4) 1254
+			WRITE_SHORT (theverticesoffset + (thefirstvertexindex + 2) * 0x4 + 0x2) 458
+			WRITE_SHORT (theverticesoffset + (thefirstvertexindex + 3) * 0x4) 1379
+			WRITE_SHORT (theverticesoffset + (thefirstvertexindex + 3) * 0x4 + 0x2) 671
+			WRITE_SHORT (offset + 0x24) 458
+			WRITE_SHORT (offset + 0x26) 1379
+		END
+	END
+
 COPY_EXISTING_REGEXP ~52CC[1-8]P[1-6]\.bcs~ ~override~
 	DECOMPILE_AND_PATCH BEGIN
 		REPLACE_TEXTUALLY ~ClearSpriteEffects(.*~ ~~
@@ -922,6 +941,25 @@ COPY_EXISTING ~41ORIA.itm~ ~override~
 COPY_EXISTING ~41HPORIA.bcs~ ~override~ ~41PARES1.bcs~ ~override~
 	DECOMPILE_AND_PATCH BEGIN
 		REPLACE_TEXTUALLY CASE_INSENSITIVE ~SetCreatureAreaFlag(\"OriaEssence\", ?INVULNERABLE.*~ ~~
+	END
+
+COPY_EXISTING ~AR4101.bcs~ ~override~
+	DECOMPILE_AND_PATCH BEGIN
+		REPLACE_TEXTUALLY CASE_INSENSITIVE ~\(!Dead(\"04_Prisoner_02\")[^T]+THEN[^R]+RESPONSE #100\)~ ~Global("US_Temple_Prisoner_Freed_2","AR4101",0)
+\1
+SetGlobal("US_Temple_Prisoner_Freed_2","AR4101",1)~
+		REPLACE_TEXTUALLY CASE_INSENSITIVE ~\(!Dead(\"04_Prisoner_03\")[^T]+THEN[^R]+RESPONSE #100\)~ ~Global("US_Temple_Prisoner_Freed_3","AR4101",0)
+\1
+SetGlobal("US_Temple_Prisoner_Freed_3","AR4101",1)~
+		REPLACE_TEXTUALLY CASE_INSENSITIVE ~\(!Dead(\"04_Prisoner_04\")[^T]+THEN[^R]+RESPONSE #100\)~ ~Global("US_Temple_Prisoner_Freed_4","AR4101",0)
+\1
+SetGlobal("US_Temple_Prisoner_Freed_4","AR4101",1)~
+		REPLACE_TEXTUALLY CASE_INSENSITIVE ~\(!Dead(\"04_Prisoner_05\")[^T]+THEN[^R]+RESPONSE #100\)~ ~Global("US_Temple_Prisoner_Freed_5","AR4101",0)
+\1
+SetGlobal("US_Temple_Prisoner_Freed_5","AR4101",1)~
+		REPLACE_TEXTUALLY CASE_INSENSITIVE ~\(!Dead(\"04_Prisoner_06\")[^T]+THEN[^R]+RESPONSE #100\)~ ~Global("US_Temple_Prisoner_Freed_6","AR4101",0)
+\1
+SetGlobal("US_Temple_Prisoner_Freed_6","AR4101",1)~
 	END
 
 COPY_EXISTING ~41PARES1.bcs~ ~override~
