@@ -6026,47 +6026,47 @@
 //@11192    = ~Item description can remain the same; if new description is needed put it here~
 //@11193    = ~Returning Acid Axe~
 //@11194    = ~Item description can remain the same; if new description is needed put it here~
-@11195    = ~Returning Throwing Axe +3~
-@11196    = ~The handaxe or throwing axe is also known as a hatchet. The axe blade has a sharp steel tip, counterbalanced by a pointed fluke. The short handle has a point on the bottom and the head may have a spike on the top. Runes of power have been etched into the blade to further enhance it.
+@11195    = ~Метательный топор возврата +3~
+@11196    = ~Ручной топор или метательный топор, также известен как томагавк. У этого топора заточенное стальное лезвие, уравновешенное острым зазубренным выступом. Короткая рукоять имеет заострённое основание, а обух тоже может быть увенчан шипом. На лезвии этого топорика выгравированы руны силы.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d6 +3
-Attack Bonus: +3 
-Enchantment: +3
-Damage Type:  Missile (piercing)
-Damage Type: Melee (slashing)
-Special:
-  Returning: Returns to owner
-Weight: 4 lb.
-Required Feat:  Martial Weapon, Axe
-Type:  One-handed~
+Урон: 1d6+3
+Атака: +3
+Зачарование: +3
+Тип урона: метательный (колющий)
+Тип урона: ближний бой (рубящий)
+Особенности:
+ Возвращение: возвращается к хозяину
+Вес: 4 фунта
+Необходимая черта: Военное оружие, Топоры
+Тип: одноручное~
 //@11197    = ~Keen Throwing Axe~
-@11198    = ~The handaxe or throwing axe is also known as a hatchet. The axe blade has a sharp steel tip, counterbalanced by a pointed fluke. The short handle has a point on the bottom and the head may have a spike on the top. Runes of power have been etched into the blade to further enhance it.
+@11198    = ~Ручной топор или метательный топор, также известен как томагавк. У этого топора заточенное стальное лезвие, уравновешенное острым зазубренным выступом. Короткая рукоять имеет заострённое основание, а обух тоже может быть увенчан шипом. На лезвии этого топорика выгравированы руны силы.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d6
-Damage Type:  Missile (piercing)
-Special:
-  Keen: Increases chance of scoring a critical hit, but only when thrown
-Weight: 4 lb.
-Required Feat:  Martial Weapon, Axe
-Type:  One-handed~
+Урон: 1d6
+Тип урона: метательный (колющий)
+Особенности:
+ Острота: увеличенный шанс нанести критический удар, но только при метании
+Вес: 4 фунта
+Необходимая черта: Военное оружие, Топоры
+Тип: одноручное~
 //@11199    = ~Mage Killer Throwing Axe~
-@11200    = ~The handaxe or throwing axe is also known as a hatchet. The axe blade has a sharp steel tip, counterbalanced by a pointed fluke. The short handle has a point on the bottom and the head may have a spike on the top. Runes of power have been etched into the blade to further enhance it.
+@11200    = ~Ручной топор или метательный топор, также известен как томагавк. У этого топора заточенное стальное лезвие, уравновешенное острым зазубренным выступом. Короткая рукоять имеет заострённое основание, а обух тоже может быть увенчан шипом. На лезвии этого топорика выгравированы руны силы.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d6
-Damage Type:  Missile (piercing)
-Damage Type: Melee (slashing)
-Special:
-  Returning: Returns to user
-  Dispelling: 25% chance Dispel Magic on target (Will DC 15)
-Weight: 4 lb.
-Required Feat:  Martial Weapon, Axe
-Type:  One-handed~
+Урон: 1d6
+Тип урона: метательный (колющий)
+Тип урона: ближний бой (рубящий)
+Особенности:
+ Возвращение: возвращается к хозяину
+ Рассеивание: при попадании есть 25% шанс наложить на цель заклинание "Развеять магию" (успешный спасбросок воли с УС 15 отменяет эффект)
+Вес: 4 фунта
+Необходимая черта: Военное оружие, Топоры
+Тип: одноручное~
 //@11201    = ~Returning Throwing Axe~
 //@11202    = ~Item description can remain the same; if new description is needed put it here~
 //@11203    = ~Throwing Axe +1~
@@ -6328,317 +6328,313 @@ Type:  One-handed~
 ПАРАМЕТРЫ:
 
 Метание:
-
 Урон: 2d6+3
 Зачарование: +3
 Тип урона: электрический
 Особенности:
  Возвращение: возвращается к владельцу
  Молния: наносит электрический урон молнией всему, что попадается на пути
- Наносит бонусный электрический урон от силы, мастерства и любого другого бонуса к урону, который получил бы метательный топор
- Успешный спасбросок реакции с УС 20 позволяет избежать половину урона; УС увеличивается на модификатор ловкости владельца топора
+ Наносит дополнительный электрический урон от силы, мастерства и любых других бонусов к урону, который получил бы метательный топор
+ Успешный спасбросок реакции с УС 20 позволяет избежать половины урона; УС увеличивается на модификатор ловкости владельца топора
  Автоматически попадает, но не может нанести критический урон
 
 Ближний бой:
-
 Урон: 1d6 +3
 Атака: +3
 Зачарование: +3
 Тип урона: Рубящий
+
 Вес: 4 фунта
 Необходимая черта: Военное оружие, Топоры
 Тип: одноручное~
-@11259    = ~Stormshifter +5~
-@11260    = ~The Dwarven master smith, Magmar Ironsmelt, created this axe. It is said that he spent his entire life studying various blacksmithing techniques in preparation for creating this axe. Thirty days and thirty nights, Magmar secluded himself in his shop with only the steady ringing of his hammer and the deafening roar of the furnace as company. On the thirtieth night Magmar completed Stormshifter whereupon he promptly fell over dead. Now it is rumored that although the utmost respect was offered by his fellow smiths during his funeral, titters of laughter could be heard behind muffled, closely held conversations. It seems that Magmar's final work was not the great work everyone was expecting, in fact it was rather plain and hardly worthy of a Dwarven forged weapon let alone one forged by a master smith. 
+@11259    = ~Грозобой +5~
+@11260    = ~Этот топор выковал мастер-кузнец дварфов Магмар Железоплав. Говорят, что он посвятил всю свою жизнь изучению различных кузнечных техник, готовясь к созданию этого топора. Тридцать дней и тридцать ночей Магмар провёл у себя в кузнице, и лишь звон молота и рёв горна составляли ему компанию. На тридцатую ночь Магмар закончил "Грозобой" и пал замертво. Поговаривают, что, хотя коллеги-кузнецы оказали своему товарищу большой почёт во время похорон, в разговорах там и тут проскакивали смешки. По-видимому, последняя работа Магмара оказалась вовсе не таким уж и шедевром, какого все ожидали. По правде говоря, она еле тянула на то, чтобы носить гордое название "оружия дварфов", не говоря уже о том, чтобы зваться изделием мастера.
 
-For many years this long forgotten weapon hung upon the walls of Clan Ironsmelt, until one fateful day a horde of goblins invaded. In the final moments of the battle, a lone injured dwarf grabbed Stormshifter in desperation from its purchase and flung it at the approaching horde. To his surprise, Stormshifter transformed into a ball of pure energy and surged thru the throngs of goblins with deadly accuracy. As fast as he could throw the axe it would return, leaving smoldering corpses wherever it traveled. By any rights this should have been a tale of legend, but with any legend there has to be survivors to tell the tale. Unfortunately, Clan Ironsmelt died that day along with that unnamed dwarf.
+Долгие годы это давно забытое оружие на стене в доме клана Железоплавов, пока в один роковой день к дварфам не нагрянула орда гоблинов. В последние мгновения битвы одинокий раненый дварф в отчаянии схватил "Грозобой" и метнул в его подступающих врагов. К его удивлению, "Грозобой" превратился в молнию и пронёсся сквозь толпы гоблинов с убийственной точностью. После каждого броска, топор возвращался обратно, оставляя за собой обугленные трупы гоблинов. По всем правилам, так должна была возникнуть красивая легенда, но в любой легенде должен быть выживший, чтобы рассказать о ней. К несчастью, клан Железоплавов в тот день погиб в полном составе, включая того безымянного дварфа.
 
+ПАРАМЕТРЫ:
 
-STATISTICS:
+Метание:
+Урон: 3d6+5
+Зачарование: +5
+Тип урона: электрический
+Особенности:
+ Возвращение: возвращается к владельцу
+ Шаровая молния: наносит электрический урон всем объектам в радиусе 8 футов от попадания
+ Наносит дополнительный электрический урон от силы, мастерства и любых других бонусов к урону, который получил бы метательный топор
+ Успешный спасбросок реакции с УС 30 позволяет избежать половины урона; УС увеличивается на модификатор ловкости владельца топора
+ Автоматически попадает, но не может нанести критический урон
 
-Thrown:
+Ближний бой:
+Урон: 1d6 +5
+Атака: +5
+Зачарование: +5
+Тип урона: Рубящий
 
-Damage:  3d6+5
-Enchantment:  +5
-Damage Type:  Electrical
-Special:
-  Returning: Returns to user
-  Ball Lightning: Inflicts electrical damage to all enemies within an 8' radius
-  Deals bonus electrical damage from Strength, proficiency, and any other damage bonus a throwing axe would gain
-  Reflex DC 30 for half damage; the DC is increased by the thrower's Dexterity bonus
-  Automatically hits but cannot critically hit
+Вес: 4 фунта
+Необходимая черта: Военное оружие, Топоры
+Тип: одноручное~
+@11261    = ~Визгун +3~
+@11262    = ~Неизвестно, кто и зачем изготовил это оружие. Можно предположить, что неведомый мастер сделал его шутки ради. По виду Визгун обыкновенный метательный топор, но как только рука выпускает его в полёт, топор сразу же издаёт пронзительный крик, направляясь к цели. При удачном попадании, цель получает дополнительный урон звуком.
 
-Melee:
+Конечно, такое оружие не назовёшь изысканным или пригодным для скрытного убийства, но оно даёт своему владельцу иммунитет к заклинаниям тишины.
 
-Damage:  1d6 +5
-Attack Bonus: +5
-Enchantment:  +5
-Damage Type: Slashing
-Weight: 4 lb.
-Required Feat:  Martial Weapon, Axe
-Type:  One-handed~
-@11261    = ~Screamer +3~
-@11262    = ~The origin of this weapon is unknown, but it is believed to be the result of some sort of joke. Screamer appears to be a normal throwing axe. However, once it is released from the hand it actually emits a high piercing "scream" as it travels towards its target. Upon a successful hit, the target will take additional sonic damage.
+ПАРАМЕТРЫ:
 
-Screamer is not a subtle weapon and should never be considered for any kind of stealthy endeavors. The one benefit of Screamer is that it confers immunity to silence spells upon its wielder.
+Урон: 1d6+3
+Атака: +3
+Зачарование: +3
+Тип урона: метательный (колющий)
+Тип урона: ближний бой (рубящий)
+Особенности:
+ Разрубание: с вероятностью 50% наносит дополнительно 1d6 рубящего урона
+ Оберёг: дарует иммунитет к заклинаниям тишины
+ Возвращение: после броска возвращается в руку владельца
+Необходимая черта: Военное оружие, Топоры
+Вес: 1 фунт
+Тип: одноручное~
+@11263    = ~Визжащий топор +5~
+@11264    = ~Неизвестно, кто и зачем изготовил это оружие. Можно предположить, что неведомый мастер сделал его шутки ради. По виду "Визжащий топор" обыкновенный метательный топор, но как только рука выпускает его в полёт, топор сразу же издаёт пронзительный крик, направляясь к цели. При удачном попадании, цель получает дополнительный урон звуком.
 
-STATISTICS:
+Конечно, такое оружие не назовёшь изысканным или пригодным для скрытного убийства, но оно даёт своему владельцу иммунитет к заклинаниям тишины.
 
-Damage: 1d6   +3
-Attack Bonus:  +3 
-Enchantment:  +3
-Damage Type (melee):  Slashing
-Damage Type (thrown):  Missile (piercing)
-Special:  
-  Slashing:  50% chance of +1d6 Slashing damage
-  Spellward: Immunity to silence spells
-  Returning: Returns to wielder
-Weight: 1 lb.
-Required Feat:  Martial Weapon, Axe
-Type:  One-handed~
-@11263    = ~Screaming Axe +5~
-@11264    = ~The origin of this weapon is unknown, but it is believed to be the result of some sort of joke. Screamer appears to be a normal throwing axe. However, once it is released from the hand it actually emits a high piercing "scream" as it travels towards its target. Upon a successful hit, the target will take additional sonic damage.
+ПАРАМЕТРЫ:
 
-"Screaming Axe" is not a subtle weapon and should never be considered for any kind of stealthy endeavors. The one benefit of "Screaming Axe" is that it confers immunity to silence spells upon its wielder.
+Урон: 1d6+5
+Атака: +5
+Зачарование: +5
+Тип урона: метательный (колющий)
+Тип урона: ближний бой (рубящий)
+Особенности:
+ Разрубание: наносит дополнительно 2d6 рубящего урона
+ Оберёг: дарует иммунитет к заклинаниям тишины
+ Возвращение: после броска возвращается в руку владельца
+Необходимая черта: Военное оружие, Топоры
+Вес: 1 фунт
+Тип: одноручное~
+@11265    = ~Герольд мёртвых +3~
+@11266    = ~"Герольд живых" изначально был создан для генерала дварфов. Оружие было наделено способностью исцелять раны и воскрешать павших воинов на поле боя. К несчастью, после одной из схваток в Андердарке оружие попало в руки тёмных эльфов.
 
-STATISTICS:
+Неизвестно, что было сделано, чтобы исказить магию топора, но, побывав в руках дроу, он стал совершенно иным оружием. Теперь топором можно было наносить ужасные раны три раза в день и мгновенное убивать раз в день.
 
-Damage: 1d6 + 5
-Attack Bonus: +5 
-Enchantment:  +5
-Damage Type (melee):  Slashing
-Damage Type (thrown):  Missile (piercing)
-Special:  
-  Slashing: +2d6 Slashing damage
-  Spellward: Immunity to silence spells
-  Returning: Returns to wielder
-Weight: 1 lb.
-Required Feat:  Martial Weapon, Axe
-Type:  One-handed~
-@11265    = ~Deathcaller +3~
-@11266    = ~Lifecaller was originally crafted as a gift for a dwarven general. The weapon was given the ability to heal wounds and raise fallen soldiers on the field of battle. Unfortunately the axe fell into the hands of the drow after an unsuccessful skirmish near the Underdark.
+ПАРАМЕТРЫ:
 
-It is unknown what was done to warp the magic of the axe, but it is not the weapon it once was. The axe can now be used to cause wounds three times per day, and instantly slay a creature once per day.
+Урон: 1d8+3
+Атака: +3
+Тип урона: рубящий
+Особенности:
+ Три раза в день владелец топора может напитать его негативной энергией, чтобы при следующем попадании в течение 3 раундов на цель было наложено заклинание "Нанесение серьёзных ран" (как прочитанное заклинателем десятого уровня)
+ Раз в день владелец топора может напитать его негативной энергией, чтобы при следующем попадании в течение 3 раундов на цель было наложено заклинание "Убить живого" (успешный спасбросок стойкости с УС 20 позволяет избежать эффекта)
+Вес: 3 фунта
+Необходимая черта: Военное оружие, Топоры
+Тип: одноручное~
+@11267    = ~Союзник смерти +5~
+@11268    = ~"Союзник жизни" изначально был создан для генерала дварфов. Оружие было наделено способностью исцелять раны и воскрешать павших воинов на поле боя. К несчастью, после одной из схваток в Андердарке оружие попало в руки тёмных эльфов.
 
-STATISTICS:
+Неизвестно, что было сделано, чтобы исказить магию топора, но, побывав в руках дроу, он стал совершенно иным оружием. Теперь топором можно было наносить ужасные раны три раза в день и мгновенное убивать раз в день.
 
-Damage: 1d8   +3
-Attack Bonus:  +3
-Enchantment:  +3
-Damage Type: Slashing 
-Special:
-  Three times per day, the wielder can imbue Deathcaller with negative energy, causing its next hit within 3 rounds to cast Inflict Serious Wounds (at level 10) on the target.
-  Once per day, the wielder can imbue Deathcaller with negative energy, causing its next hit within 3 rounds to cast Slay Living (Fortitude DC 20) on the target.
-Weight: 3 lb.
-Required Feat:  Martial Weapon, Axe
-Type:  One-handed~
-@11267    = ~Death's Ally +5~
-@11268    = ~Life's Ally was originally crafted as a gift for a dwarven general. The weapon was given the ability to heal wounds and raise fallen soldiers on the field of battle. Unfortunately the axe fell into the hands of the drow after an unsuccessful skirmish near the underdark.
+ПАРАМЕТРЫ:
 
-It is unknown what was done to warp the magic of the axe, but it is not the weapon it once was. The axe can now be used to cause wounds three times per day, and instantly slay a creature once per day.
-STATISTICS:
-
-Damage: 1d8   +5
-Attack Bonus:  +5 
-Enchantment:  +5
-DamageType: Slashing 
-Special:
-  Three times per day, the wielder can imbue Death's Ally with negative energy, causing its next hit within 3 rounds to cast Inflict Critical Wounds (at level 20) on the target.
-  Once per day, the wielder can imbue Death's Ally with negative energy, causing its next hit within 3 rounds to cast Destruction (Fortitude DC 30) on the target.
-Weight: 3 lb.
-Required Feat:  Martial Weapon, Axe
-Type:  One-handed~
-@11269    = ~Training Axe~
+Урон: 1d8+5
+Атака: +5
+Тип урона: рубящий
+Особенности:
+ Три раза в день владелец топора может напитать его негативной энергией, чтобы при следующем попадании в течение 3 раундов на цель было наложено заклинание "Нанесение критических ран" (как прочитанное заклинателем двадцатого уровня)
+ Раз в день владелец топора может напитать его негативной энергией, чтобы при следующем попадании в течение 3 раундов на цель было наложено заклинание "Уничтожение" (успешный спасбросок стойкости с УС 30 позволяет избежать эффекта)
+Вес: 3 фунта
+Необходимая черта: Военное оружие, Топоры
+Тип: одноручное~
+@11269    = ~Тренировочный топор~
 //@11270    = ~Item description can remain the same; if new description is needed put it here~
-@11271    = ~Haft Over Head +1~
+@11271    = ~Топорище вперёд топора +1~
 //@11272    = ~Item description can remain the same; if new description is needed put it here~
-@11273    = ~Dullcobble's Axe +4~
-@11274    = ~There is little doubt that Dullcobble Tweed was the worst carpenter in the history of the profession, and an even worse weaponsmith, but his continual boasts of his great skill and insight eventually caused his fellows to challenge him to make a throwing axe worthy of his boastful claims. Dullcobble, realizing he had to back his proud words, agreed heartily... but inside, he was struck with fear that he would fail the test.
+@11273    = ~Топор Дулкобла +4~
+@11274    = ~Дулкобл Твид, вне сомнений, был худшим плотником за всю историю существования этого ремесла и ещё более скверным кузнецом. Однако его бесконечное хвастовство своим мастерством подвигло его товарищей устроить ему испытание - они предложили ему сделать метательный топор, достойный его хвастливых заявлений. Дулкобл был вынужден согласится, хотя и осознавал, что теперь ему придётся делом подтвердить свои слова... а внутри у него всё сжималось от страха неудачи.
 
-Dullcobble made several attempts to fashion a chopping axe, most of them ending up as cordwood next to his fireplace. In the day before his challenge was to be called due, his only surviving weapon was a lop-sided axe whose haft was widely overbalanced. Realizing that displaying such a weapon would make him the laughing stock of the community, Dullcobble hired a wild mage to take his misshapen axe and turn it into a serviceable weapon. The mage shrugged, took his payment, and promised the axe to Dullcobble on the dawn of the next day. When Dullcobble woke up in the morning, the misshapen axe lay on his doorstep, unchanged, and he had no choice but to take the axe to his challengers... and take his chances. 
+Дулкобл предпринял несколько попыток сделать самый обычный топор, но большинство из таких топоров закончили свою жизни в качестве дров. За день перед испытанием единственным его более-менее сносным оружием был топор с чудовищно несбалансированным лезвием и кривым топорищем. Понимая, что при виде такого оружия его поднимут на смех, Дулкобл нанял дикого мага, чтобы тот сделал из его топора пригодное к использованию оружие. Маг пожал плечами, взял плату и пообещал Дулкоблу, что топор будет готов на рассвете. Проснувшись поутру, Дулкобл увидал на пороге злосчастный топор - точно такой же, каким он был накануне. Ему ничего не оставалось, как отнести этот топор на суд товарищей.
 
-When Dullcobble brought it into the town's meeting hall, the axe's appearance was greeted with derision and laughter. Dullcobble, his face burning, became so angry he threw it at his tormenters - and watched as the haft traveled over the blade's head to smash into a pillar and shatter it, causing the roof to collapse. Dullcobble, slack-jawed with surprise, was knocked unconscious by a falling timber, but the other challengers made it outside without injury.
+Когда Дулкобл принёс топор в ратушу, его встретил громкий смех и остроты. Залившись краской, Дулкобл со злостью метнул топор в обидчиков и с удивлением наблюдал, как топор полетел вперёд топорищем и, ударив по колонне, разбил её, в результате чего обрушилась крыша. У Дулкобла от удивления отвисла челюсть, но тут его ударило балкой по голове, и он потерял сознание. Больше никто не пострадал.
 
-Dullcobble's blow to the head was a serious one, and it turned him into the village idiot - not much of a change from his previous lifestyle. The axe itself was tossed upon a merchant cart headed north, and it was never seen again. Whatever the enchantments the wild mage scrawled on the axe did, it causes the haft to be the first to strike an opponent, doing crushing damage instead of slashing damage. 
+Удар по голове был таким серьёзным, что Дулкобл превратился в деревенского дурачка - не слишком большая перемена, по сравнению с его прежним статусом. Топор же подбросили в купеческую повозку, едущую на север, и с тех пор о нём не было слышно. Неизвестно, какие чары наложил на топор дикий маг, но они заставляют топор разворачивать в воздухе, так, чтобы он летел вперёд топорищем. Таким образом топор наносит дробящий, а не рубящий урон.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d6 + 4
-Attack Bonus:  +4
-Enchantment:  +4
-Damage Type:  Melee (bludgeoning)
-Damage Type:  Missile (bludgeoning)
-Special:
-  Returning: Returns to wielder
-Weight: 3 lb.
-Required Feat:  Martial Weapon, Axe
-Type:  One-handed~
+Урон: 1d6+4
+Атака: +4
+Зачарование: +4
+Тип урона: ближний бой (дробящий)
+Тип урона: метательный (дробящий)
+Особенности:
+ Возвращение: возвращается к владельцу
+Вес: 3 фунта
+Необходимая черта: Военное оружие, Топоры
+Тип: одноручное~
 //@11275    = ~Kegsplitter~
-@11276    = ~This worn-looking axe heralds from Shaengarne Ford, a small logging village to the southwest of Targos that borders the Shaengarne River. Although a fearsome-looking weapon, the axe looks like it was intended more for splitting kegs and chopping wood than for use in actual combat, and it looks like it has seen a healthy amount of use felling trees. 
+@11276    = ~Когда-то этот старый топор принадлежал одному из жителей Шенгарнского Брода, деревушки лесорубов к юго-западу от Таргоса, стоящей на берегу реки Шенгарн. Несмотря на свой устрашающий вид, этот топор выглядит так, словно он предназначен скорее для раскалывания бочонков и колки дров. Похоже, ему пришлось немало потрудиться на этом поприще.
 
-Kegsplitter was most likely sold to the Gallaway Trade Depot in exchange for foodstuffs and supplies to last Shaengarne Ford through the season. While the axe's great size and weight make it slower than a conventional hand-axe, minor wounding and ever-sharp enchantments have been carved into the haft of the axe, allowing it to split kegs and goblins with ease. 
+Скорее всего, кто-то обменял это оружие в лавке Галлавея на провизию и прочие припасы, чтобы продержаться в деревне до конца сезона. Размеры и вес топора делают его медленнее обычного топора в бою, но на его рукояти вырезаны руны, которые хранят лезвие топора всегда острым. Это позволяет топору легко раскалывать и бочки, и головы гоблинов.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d8 + 1, +6 vs. kegs and constructs
-Enchantment:  +1
-Damage Type:  Slashing
-Weight: 9 lb.
-Required Feat:  Martial Weapon, Axe
-Type:  One-handed~
+Урон: 1d8+1, +6 против бочек и конструктов
+Зачарование: +1
+Тип урона: рубящий
+Вес: 9 фунтов
+Необходимая черта: Военное оружие, Топоры
+Тип: одноручное~
 //@11277    = ~Kegsplitter of Shaengarne Ford~
-@11278    = ~This worn-looking axe heralds from Shaengarne Ford, a small logging village to the southwest of Targos that borders the Shaengarne River. Although a fearsome-looking weapon, the axe looks like it was intended more for splitting kegs and chopping wood than for use in actual combat, and it looks like it has seen a healthy amount of use felling trees. 
+@11278    = ~Когда-то этот старый топор принадлежал одному из жителей Шенгарнского Брода, деревушки лесорубов к юго-западу от Таргоса, стоящей на берегу реки Шенгарн. Несмотря на свой устрашающий вид, этот топор выглядит так, словно он предназначен скорее для раскалывания бочонков и колки дров. Похоже, ему пришлось немало потрудиться на этом поприще.
 
-The Kegsplitter of Shaengarne Ford was most likely sold to the Gallaway Trade Depot in exchange for foodstuffs and supplies to last Shaengarne Ford through the season. While the axe's great size and weight make it slower than a conventional hand-axe, minor wounding and ever-sharp enchantments have been carved into the haft of the axe, allowing it to split kegs and goblins with ease. 
+Скорее всего, кто-то обменял это оружие в лавке Галлавея на провизию и прочие припасы, чтобы продержаться в деревне до конца сезона. Размеры и вес топора делают его медленнее обычного топора в бою, но на его рукояти вырезаны руны, которые хранят лезвие топора всегда острым. Это позволяет топору легко раскалывать и бочки, и головы гоблинов.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d8 + 3, +15 vs. kegs and constructs
-Attack Bonus:  +3 
-Enchantment:  +5
-Damage Type:  Slashing
-Special: 
-  Strength: +3
-Weight: 9 lb.
-Required Feat:  Martial Weapon, Axe
-Type:  One-handed~
+Урон: 1d8+3, +15 +6 против бочек и конструктов
+Атака: +3
+Зачарование: +5
+Тип урона: рубящий
+Особенности:
+ Сила: +3
+Вес: 9 фунтов
+Необходимая черта: Военное оружие, Топоры
+Тип: одноручное~
 //@11279    = ~Aurilian Ice Axe~
-@11280    = ~This appears to be a normal handaxe but is made completely from ice. It bears the snowflake-in-lozenge symbol of Auril.
+@11280    = ~Внешне это самый обычный ручной топор, но он сделан полностью изо льда. На рукояти стоит символ Аурила - заключённая в ромб снежинка.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d8+2
-Damage Type:  Cold
-Special:
-  Damage bonuses increase the cold damage of this axe
-Weight: 5 lb.
-Required Feat:  Martial Weapon, Axe
-Type:  One-handed~
+Урон: 1d8+2
+Тип урона: холод
+Особенности:
+ Бонусы к урону увеличивают урон холодом этого топора
+Вес: 5 фунтов
+Необходимая черта: Военное оружие, Топоры
+Тип: одноручное~
 //@11281    = ~Aurilian Ice Axe~ //HoF
-@11282    = ~This appears to be a normal handaxe but is made completely from ice. It bears the snowflake-in-lozenge symbol of Auril.
+@11282    = ~Внешне это самый обычный ручной топор, но он сделан полностью изо льда. На рукояти стоит символ Аурила - заключённая в ромб снежинка.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d8+6
-Attack Bonus:  +3
-Enchantment:  +3
-Damage Type:  Cold
-Special:
-  Damage bonuses increase the cold damage of this axe
-Weight: 5 lb.
-Required Feat:  Martial Weapon, Axe
-Type:  One-handed~
-@11283    = ~Duergar-Forged Axe +2~
-@11284    = ~Duergar master artisans forged this axe of dull gray steel. Its balance is so perfect and its exceptionally sharp blade so well-wrought that magic was surely used in its making.
+Урон: 1d8+6
+Атака: +3
+Зачарование: +3
+Тип урона: холод
+Особенности:
+ Бонусы к урону увеличивают урон холодом этого топора
+Вес: 5 фунтов
+Необходимая черта: Военное оружие, Топоры
+Тип: одноручное~
+@11283    = ~Дуэргарский топор +2~
+@11284    = ~Дуэргарские мастера выковали этот топор из серой стали. Он настолько хорошо сбалансирован, а его исключительно острое лезвие настолько искусно обработано, что становится ясно - при его изготовлении использовалась магия.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d8 + 2
-Attack Bonus:  +2 
-Enchantment:  +2
-Special:
-  Keen: Increases chance of scoring a critical hit
-Damage Type:  Slashing
-Weight: 7 lb.
-Required Feat:  Martial Weapon, Axe
-Type:  One-handed~
-@11285    = ~Duergar-Forged Doom Axe +5~
-@11286    = ~Duergar master artisans forged this axe of dull gray steel. Its balance is so perfect and its exceptionally sharp blade so well-wrought that magic was surely used in its making.
+Урон: 1d8+2
+Атака: +2
+Зачарование: +2
+Тип урона: рубящий
+Особенности:
+ Острота: увеличенный шанс нанести критический удар
+Вес: 7 фунтов
+Необходимая черта: Военное оружие, Топоры
+Тип: одноручное~
+@11285    = ~Дуэргарский топор рока +5~
+@11286    = ~Дуэргарские мастера выковали этот топор из серой стали. Он настолько хорошо сбалансирован, а его исключительно острое лезвие настолько искусно обработано, что становится ясно - при его изготовлении использовалась магия.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d8 + 5
-Attack Bonus:  +5 
-Enchantment:  +5
-Special:
-  Keen: Increases chance of scoring a critical hit
-Damage Type:  Slashing
-Weight: 7 lb.
-Required Feat:  Martial Weapon, Axe
-Type:  One-handed~
-@11287    = ~Scalecleaver +1~ //Without Better Racial Enemies installed
+Урон: 1d8+5
+Атака: +5
+Зачарование: +5
+Особенности:
+ Острота: увеличенный шанс нанести критический удар
+Тип урона: рубящий
+Вес: 7 фунтов
+Необходимая черта: Военное оружие, Топоры
+Тип: одноручное~
+@11287    = ~Рассекатель чешуи +1~ //Without Better Racial Enemies installed
 //@11288    = ~Item description can remain the same; if new description is needed put it here~
 //@11289    = ~Scalecleaver~ //With Better Racial Enemies installed
-@11290    = ~This thin-bladed battleaxe holds a notched but wicked edge. Thousands of years old, the weapon was crafted for use in battles against the throngs of yuan-ti that sought to dominate the world. The styling of the blade is quite different from the axes found in dwarven halls and barbarian hands throughout the north. Throughout its long history, the weapon has killed hundreds of yuan-ti while in the possession of many brave warriors. When the yuan-ti finally had a chance to take the blade from their human adversaries, they seized the opportunity.
+@11290    = ~Этот боевой топор с тонким лезвием имеет зазубренную, но острую кромку. Тысячи лет назад это оружие было изготовлено для битвы с тучами юань-ти, желавшими захватить власть над миром. По внешнему виду это оружие довольно сильно отличается от топоров, которые можно найти в пещерах дварфов или в руках варваров по всему северу. Побывав за свою долгую историю в руках многих отважных воинов, этот топор убил сотни юань-ти. Когда у юань-ти появилась возможность завладеть этим топором, они сразу же ей воспользовались.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d8  +1
-Attack Bonus:  +1 
-Enchantment:  +1
-Special: 
-  Bane: +2 Attack Bonus vs. Yuan-ti and lizardmen, +2d6+2 vs Yuan-ti and lizardmen
-Damage Type:  Slashing
-Weight: 7 lb.
-Required Feat:  Martial Weapon, Axe
-Type:  One-handed~
-@11291    = ~Mighty Scalecleaver +5~ //Without Better Racial Enemies installed
+Урон: 1d8 +1
+Атака: +1
+Зачарование: +1
+Особенности:
+ Губитель: +2 к атаке и +2d6+2 к урону против юань-ти и человекоящеров
+Тип урона: рубящий
+Вес: 7 фунтов
+Необходимая черта: Военное оружие, Топоры
+Тип: одноручное~
+@11291    = ~Могучий рассекатель чешуи +5~ //Without Better Racial Enemies installed
 //@11292    = ~Item description can remain the same; if new description is needed put it here~
 //@11293    = ~Mighty Scalecleaver~ //With Better Racial Enemies installed
-@11294    = ~This thin-bladed battleaxe holds a notched but wicked edge. Thousands of years old, the weapon was crafted for use in battles against the throngs of yuan-ti that sought to dominate the world. The styling of the blade is quite different from the axes found in dwarven halls and barbarian hands throughout the north. Throughout its long history, the weapon has killed hundreds of yuan-ti while in the possession of many brave warriors. When the yuan-ti finally had a chance to take the blade from their human adversaries, they seized the opportunity.
+@11294    = ~Этот боевой топор с тонким лезвием имеет зазубренную, но острую кромку. Тысячи лет назад это оружие было изготовлено для битвы с тучами юань-ти, желавшими захватить власть над миром. По внешнему виду это оружие довольно сильно отличается от топоров, которые можно найти в пещерах дварфов или в руках варваров по всему северу. Побывав за свою долгую историю в руках многих отважных воинов, этот топор убил сотни юань-ти. Когда у юань-ти появилась возможность завладеть этим топором, они сразу же ей воспользовались.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d8 + 5
-Attack Bonus:  +5 
-Enchantment:  +5
-Special: 
-  Bane: +2 Attack Bonus vs. Yuan-ti and lizardmen, +2d6+2 vs Yuan-ti and lizardmen
-Damage type:  Slashing
-Weight: 7 lb.
-Required Feat:  Martial Weapon, Axe
-Type:  One-handed~
+Урон: 1d8+5
+Атака: +5
+Зачарование: +5
+Особенности:
+ Губитель: +2 к атаке и +2d6+2 к урону против юань-ти и человекоящеров
+Тип урона: рубящий
+Вес: 7 фунтов
+Необходимая черта: Военное оружие, Топоры
+Тип: одноручное~
 
 
 //@11295    = ~Greataxe~
 //@11296    = ~Item description can remain the same; if new description is needed put it here~
-@11297    = ~Holy Greataxe of Radiance +5~
-@11298    = ~This mighty weapon consists of a four  to five foot haft with a very heavy blade. The axe may be double-bitted, with blades on both sides of the haft, or it may only have a single blade. It is an unwieldy weapon, but a skilled warrior can strike blows of tremendous strength with it. Dwarven runes have been etched into the giant blade to further enhance the axe.
+@11297    = ~Святой двуручный топор сияния +5~
+@11298    = ~Это мощное оружие представляет собой тяжёлое лезвие, закреплённое на рукояти длиной в несколько футов. Сам топор может иметь одно лезвие, или он может быть двойным, с лезвиями, расположенными по обе стороны древка. Это громоздкое оружие, но в руках умелого воина очень эффективное. Для улучшения боевых качеств на огромном лезвии этого топора выгравированы руны дварфов.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d12 +5
-Attack Bonus:  +5 
-Enchantment:  +5
-Damage Type:  Slashing
-Special:
-  Constant Effect: Wielder is under the effects of the spell Holy Aura
-  Holy: +4d6 damage against evil creatures. Counts as a good-aligned weapon.
-Weight:  20 lb.
-Required Feat:  Martial Weapon, Axe
-Type:  Two-handed
-Minimum Wisdom of 18 Required
-Minimum Charisma of 18 Required~
-@11299    = ~Greataxe of Freezing +5~
-@11300    = ~This mighty weapon consists of a four to five foot haft with a very heavy blade. The axe may be double-bitted, with blades on both sides of the haft, or it may only have a single blade. It is an unwieldy weapon, but a skilled warrior can strike blows of tremendous strength with it. Dwarven runes have been etched into the giant blade to further enhance the axe.
+Урон: 1d12+5
+Атака: +5
+Зачарование: +5
+Тип урона: рубящий
+Особенности:
+ Постоянный эффект: владелец топора постоянно находится под эффектом заклинания "Аура святости"
+ Святость: +4d6 урона против злых существ, оружие считается добрым
+Вес: 20 фунтов
+Необходимая черта: Военное оружие, Топоры
+Тип: двуручное
+Требования: Мудрость 18
+Требования: Сила 18~
+@11299    = ~Двуручный топор заморозки +5~
+@11300    = ~Это мощное оружие представляет собой тяжёлое лезвие, закреплённое на рукояти длиной в несколько футов. Сам топор может иметь одно лезвие, или он может быть двойным, с лезвиями, расположенными по обе стороны древка. Это громоздкое оружие, но в руках умелого воина очень эффективное. Для улучшения боевых качеств на огромном лезвии этого топора выгравированы руны дварфов.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d12 + 5
-Attack Bonus:  +5 
-Enchantment:  +5
-Damage Type:  Slashing
-Special: 
-  Frost: +2d6 cold damage
-  Freezing: 15% chance target is frozen solid (Fortitude DC 40). Even if the save is made, the target still takes 50 cold damage. Cold-using creatures are immune to this effect.
-Weight:  20 lb.
-Required Feat:  Martial Weapon, Axe
-Type:  Two-handed~
+Урон: 1d12+5
+Атака: +5
+Зачарование: +5
+Тип урона: рубящий
+Особенности:
+ Стужа: +2d6 урона холодом
+ Заморозка: при попадании есть 15% шанс, что цель будет вморожена в лёд (успешный спасбросок стойкости с УС 40 отменяет эффект). Даже если спасбросок успешен, цель все равно получает 50 урона холодом. Существа, использующие холод или живущие в холоде, невосприимчивы к этому эффекту.
+Вес: 20 фунтов
+Необходимая черта: Военное оружие, Топоры
+Тип: двуручное~
 //@11301    = ~Greataxe of Blurred Visions +5~
-@11302    = ~This mighty weapon consists of a four to five foot haft with a very heavy blade. The axe may be double-bitted, with blades on both sides of the haft, or it may only have a single blade. It is an unwieldy weapon, but a skilled warrior can strike blows of tremendous strength with it. Dwarven runes have been etched into the giant blade to further enhance the axe.
+@11302    = ~Это мощное оружие представляет собой тяжёлое лезвие, закреплённое на рукояти длиной в несколько футов. Сам топор может иметь одно лезвие, или он может быть двойным, с лезвиями, расположенными по обе стороны древка. Это громоздкое оружие, но в руках умелого воина очень эффективное. Для улучшения боевых качеств на огромном лезвии этого топора выгравированы руны дварфов.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d12 + 5
-Attack Bonus:  +5 
-Enchantment:  +5
-Damage Type:  Slashing
-Special:
-  Keen: Increases chance of scoring a critical hit
-  Spell Process: While equipped, user is under the effects of the spell Blur
-Weight:  20 lb.
-Required Feat:  Martial Weapon, Axe
-Type:  Two-handed~
+Урон: 1d12+5
+Атака: +5
+Зачарование: +5
+Тип урона: рубящий
+Особенности:
+ Острота: увеличенный шанс нанести критический удар
+ Наложение заклинания: при использовании наделяет владельца эффектом заклинания "Размытие"
+Вес: 20 фунтов
+Необходимая черта: Военное оружие, Топоры
+Тип: двуручное~
 //@11303    = ~Greataxe +5~
 //@11304    = ~Item description can remain the same; if new description is needed put it here~
 //@11305    = ~Greataxe +4~
@@ -6650,98 +6646,98 @@ Type:  Two-handed~
 //@11311    = ~Greataxe +1~
 //@11312    = ~Item description can remain the same; if new description is needed put it here~
 //@11313    = ~Greataxe of Digestion +5~
-@11314    = ~This mighty weapon consists of a four to five foot haft with a very heavy blade. The axe may be double-bitted, with blades on both sides of the haft, or it may only have a single blade. It is an unwieldy weapon, but a skilled warrior can strike blows of tremendous strength with it. Dwarven runes have been etched into the giant blade to further enhance the axe.
+@11314    = ~Это мощное оружие представляет собой тяжёлое лезвие, закреплённое на рукояти длиной в несколько футов. Сам топор может иметь одно лезвие, или он может быть двойным, с лезвиями, расположенными по обе стороны древка. Это громоздкое оружие, но в руках умелого воина очень эффективное. Для улучшения боевых качеств на огромном лезвии этого топора выгравированы руны дварфов.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d12 + 5
-Attack Bonus:  +5 
-Enchantment:  +5
-Damage Type:  Slashing
-Special: 
-  Digestion: Each hit deals 6 acid damage over 10 seconds and heals wielder by 6 hit points over that time. There is no Saving Throw.
-Weight:  20 lb.
-Required Feat:  Martial Weapon, Axe
-Type:  Two-handed~
-@11315    = ~Massive Greataxe +5~
-@11316    = ~This mighty weapon consists of a four to five foot haft with a very heavy blade. The axe may be double-bitted, with blades on both sides of the haft, or it may only have a single blade. It is an unwieldy weapon, but a skilled warrior can strike blows of tremendous strength with it. Dwarven runes have been etched into the giant blade to further enhance the axe.
+Урон: 1d12+5
+Атака: +5
+Зачарование: +5
+Тип урона: рубящий
+Особенности:
+ Разъедание: каждое попадание наносит дополнительно 6 урона кислотой в течении 10 секунд и восстанавливает владельцу по 6 пунктов здоровья за то же время (спасбросок отсутсвует)
+Вес: 20 фунтов
+Необходимая черта: Военное оружие, Топоры
+Тип: двуручное~
+@11315    = ~Тяжёлый двуручный топор +5~
+@11316    = ~Это мощное оружие представляет собой тяжёлое лезвие, закреплённое на рукояти длиной в несколько футов. Сам топор может иметь одно лезвие, или он может быть двойным, с лезвиями, расположенными по обе стороны древка. Это громоздкое оружие, но в руках умелого воина очень эффективное. Для улучшения боевых качеств на огромном лезвии этого топора выгравированы руны дварфов.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  2d12 + 10
-Attack Penalty: -10
-Enchantment:  +5
-Damage Type:  Slashing
-Special:
-  Reach of 3 lengths, rather than 2
-Weight:  40 lb.
-Required Feat:  Martial Weapon, Axe
-Type:  Two-handed
-Minimum Strength of 20 Required~
-@11317    = ~Greataxe of Might +4~
-@11318    = ~This mighty weapon consists of a four to five foot haft with a very heavy blade. The axe may be double-bitted, with blades on both sides of the haft, or it may only have a single blade. It is an unwieldy weapon, but a skilled warrior can strike blows of tremendous strength with it. Dwarven runes have been etched into the giant blade to further enhance the axe.
+Урон: 2d12+10
+Атака: -10
+Зачарование: +5
+Тип урона: рубящий
+Особенности:
+ Расстояние досягаемости 3, а не 2, как для обычного двуручного топора
+Вес: 40 фунтов
+Необходимая черта: Военное оружие, Топоры
+Тип: двуручное
+Требования: Сила 20~
+@11317    = ~Двуручный топор мощи +4~
+@11318    = ~Это мощное оружие представляет собой тяжёлое лезвие, закреплённое на рукояти длиной в несколько футов. Сам топор может иметь одно лезвие, или он может быть двойным, с лезвиями, расположенными по обе стороны древка. Это громоздкое оружие, но в руках умелого воина очень эффективное. Для улучшения боевых качеств на огромном лезвии этого топора выгравированы руны дварфов.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d12 + 4
-Attack Bonus:  +4
-Enchantment:  +4
-Damage Type:  Slashing
-Special: 
- Strength: +3 
-Weight:  20 lb.
-Required Feat:  Martial Weapon, Axe
-Type:  Two-handed~
-@11319    = ~Greataxe of Fury +3~
-@11320    = ~This mighty weapon consists of a four to five foot haft with a very heavy blade. The axe may be double-bitted, with blades on both sides of the haft, or it may only have a single blade. It is an unwieldy weapon, but a skilled warrior can strike blows of tremendous strength with it. Dwarven runes have been etched into the giant blade to further enhance the axe.
+Урон: 1d12+4
+Атака: +4
+Зачарование: +4
+Тип урона: рубящий
+Особенности:
+ Сила: +3
+Вес: 20 фунтов
+Необходимая черта: Военное оружие, Топоры
+Тип: двуручное~
+@11319    = ~Двуручный топор ярости +3~
+@11320    = ~Это мощное оружие представляет собой тяжёлое лезвие, закреплённое на рукояти длиной в несколько футов. Сам топор может иметь одно лезвие, или он может быть двойным, с лезвиями, расположенными по обе стороны древка. Это громоздкое оружие, но в руках умелого воина очень эффективное. Для улучшения боевых качеств на огромном лезвии этого топора выгравированы руны дварфов.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d12 + 3
-Attack Bonus:  +3 
-Enchantment:  +3
-Damage Type:  Slashing
-Special: 
-  Piercing: +1d6 piercing damage
-  Bludgeoning: +1d6 bludgeoning damage
-Weight:  20 lb.
-Required Feat:  Martial Weapon, Axe
-Type:  Two-handed~
+Урон: 1d12+3
+Атака: +3
+Зачарование: +3
+Тип урона: рубящий
+Особенности:
+ Протыкание: +1d6 колющего урона
+ Дробление: +1d6 дробящего урона
+Вес: 20 фунтов
+Необходимая черта: Военное оружие, Топоры
+Тип: двуручное~
 //@11321    = ~Masterwork Greataxe~
 //@11322    = ~Item description can remain the same; if new description is needed put it here~
-@11323    = ~Greataxe of Elemental Bursts +2~
-@11324    = ~This mighty weapon consists of a four to five foot haft with a very heavy blade. The axe may be double-bitted, with blades on both sides of the haft, or it may only have a single blade. It is an unwieldy weapon, but a skilled warrior can strike blows of tremendous strength with it. Dwarven runes have been etched into the giant blade to further enhance the axe.
+@11323    = ~Двуручный топор взрыва стихий +2~
+@11324    = ~Это мощное оружие представляет собой тяжёлое лезвие, закреплённое на рукояти длиной в несколько футов. Сам топор может иметь одно лезвие, или он может быть двойным, с лезвиями, расположенными по обе стороны древка. Это громоздкое оружие, но в руках умелого воина очень эффективное. Для улучшения боевых качеств на огромном лезвии этого топора выгравированы руны дварфов.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d12 + 2
-Attack Bonus:  +2 
-Enchantment:  +5
-Damage Type:  Slashing
-Special:
-  Flaming Burst: +1d6 fire damage and 10% chance of +1d10 extra fire damage
-  Frost Burst: +1d6 cold damage and 10% chance of +1d10 extra cold damage
-  Shocking Burst: +1d6 electrical damage and 10% chance of +1d10 extra electrical damage
-  Sure Striking: Weapon is treated as having a +5 enchantment for the purpose of hitting creatures that require magical weapons to hit
-Weight:  20 lb.
-Required Feat:  Martial Weapon, Axe
-Type:  Two-handed
-Minimum Strength of 18 required~
-@11325    = ~Greataxe of Vampiric Burst +4~
-@11326    = ~This mighty weapon consists of a four to five foot haft with a very heavy blade. The axe may be double-bitted, with blades on both sides of the haft, or it may only have a single blade. It is an unwieldy weapon, but a skilled warrior can strike blows of tremendous strength with it.
+Урон: 1d12+2
+Атака: +2
+Зачарование: +5
+Тип урона: рубящий
+Особенности:
+ Вспышка пламени: +1d6 урона огнём и 10% вероятность нанести дополнительно 1d10 урона огнём
+ Ледяное крошево: +1d6 урона холодом и 10% вероятность нанести дополнительно 1d10 пунктов холодом
+ Разряды: +1d6 урона электричеством и 10% вероятность нанести 1d10 дополнительного электрического урона
+ Точный удар: при атаке неуязвимых для обычного оружия существ этот топорик расценивается как оружие с уровнем волшебства +5
+Вес: 20 фунтов
+Необходимая черта: Военное оружие, Топоры
+Тип: двуручное
+Требования: Сила 18~
+@11325    = ~Двуручный топор кровожадного взрыва +4~
+@11326    = ~Это мощное оружие представляет собой тяжёлое лезвие, закреплённое на рукояти длиной в несколько футов. Сам топор может иметь одно лезвие, или он может быть двойным, с лезвиями, расположенными по обе стороны древка. Это громоздкое оружие, но в руках умелого воина очень эффективное. Для улучшения боевых качеств на огромном лезвии этого топора выгравированы руны дварфов.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d12 + 4
-Attack Bonus:  +4 
-Enchantment:  +4
-Damage Type:  Slashing
-Special:
-  Vampiric Burst: 1d4 hit points drained from target and temporarily added to wielder, and 30% chance of draining an additional 3d4 hit points (Fortitude DC 31)
-Weight:  20 lb
-Required Feat:  Martial Weapon, Axe
-Type:  Two-handed
-Minimum Strengh of 18 Required~
+Урон: 1d12+4
+Атака: +4
+Зачарование: +4
+Тип урона: рубящий
+Особенности:
+ Вспышка кровожадности: 1d4 пунктов здоровья вытягивается из цели и временно передаётся владельцу, также есть 30% шанс высасывания дополнительных 3d4 пунктов здоровья (успешный спасбросок стойкости с УС 31 отменяет эффект)
+Вес: 20 фунтов
+Необходимая черта: Военное оружие, Топоры
+Тип: двуручное
+Требования: Сила 18~
 @11327    = ~Backblighter +3~
 @11328    = ~Backblighter is a weapon of incredible manufacturing techniques. The double bearded blade is crafted of the finest steel with a mithril edge. The shaft is hollowed oak with a reinforced steel center. Along the shaft are a series of glowing dwarven runes cast in gold. The weapon is light, fast, and deadly.
 
