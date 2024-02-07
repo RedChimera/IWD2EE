@@ -6281,75 +6281,73 @@ Type:  One-handed~
 Вес: 7 фунтов
 Необходимая черта: Военное оружие, Топоры
 Тип: одноручное~
-@11249    = ~Axe of the Souls +3~
-@11250    = ~The origins of this axe have long been forgotten because every previous owner eventually went insane. This axe has the ability to peer into the very recesses of ones mind as well as that of his enemies. Not only must the user defeat an enemy with brawn, but he must also match wits with the enemy at the same time. Whoever wins this test of wills is rewarded with the life energy of the other. Lose enough times and insanity will soon follow.
+@11249    = ~Топор Душ +3~
+@11250    = ~Происхождение этого топора давно покрыто пеленой забвения, поскольку каждый из обладавших им в конце концов сошёл с ума. Этот топор способен заглянуть в самые глубины разума, как своему владельцу, так и его врагам. Владеющий топором должен не только превзойти врага по силе, но и помериться с ним силой разума. Тот, кто побеждает в этом испытании воли, получает жизненную энергию проигравшего. Если проиграть достаточное количество раз, наступает безумие.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d8  +3
-Attack Bonus:  +3
-Enchantment:  +3
-Damage Type:  Slashing
-Special:
- Cursed: This item requires a Remove Curse spell to be unequipped
- Will Saves: +3 bonus
- Drain Soul: Each hit gives target a -2 Will save penalty and gives wielder a +2 Will save bonus for 10 rounds.
- Insanity: 20% chance wielder or target will become insane (4% chance both will become insane) for 5 rounds (Will DC 24). While insane, a creature goes berserk in combat, its hit points are hidden, it has a -3 Armor Class penalty, and it gains 3/+ physical damage vulnerability.
-Weight: 7 lb.
-Required Feat:  Martial Weapon, Axe
-Type:  One-handed~
-@11251    = ~Soul Stealer +5~
-@11252    = ~The origins of this axe have long been forgotten because every previous owner eventually went insane. This axe has the ability to peer into the very recesses of ones mind as well as that of his enemies. Not only must the user defeat an enemy with brawn, but he must also match wits with the enemy at the same time. Whoever wins this test of wills is rewarded with the life energy of the other. Lose enough times and insanity will soon follow.
+Урон: 1d8+3
+Атака: +3
+Зачарование: +3
+Тип урона: Рубящий
+Особенности:
+ Проклятье: снимается только с помощью заклинания "Снять проклятие"
+ Спасброски: +3 к спасброскам воли
+ Вытягивание души: при каждом попадании цель получает -2 к спасброскам воли, а владелец топора +2 к спасброскам воли на 10 раундов
+ Безумие: при попадании есть 20% шанс, что владелец и/или цель приходят в состояние берсерка (так с шансом в 4% они оба получат это состояние) на 5 раундов (успешный спасбросок воли с УС 24 отменяет эффект); в этом состоянии существо бездумно бросается в бой, его пункты здоровья скрыты и оно получает -3 к классу защиты вместе с 3/+ уязвимости к физическим повреждениям
+Вес: 7 фунтов
+Необходимая черта: Военное оружие, Топоры
+Тип: одноручное~
+@11251    = ~Похититель душ +5~
+@11252    = ~Происхождение этого топора давно покрыто пеленой забвения, поскольку каждый из обладавших им в конце концов сошёл с ума. Этот топор способен заглянуть в самые глубины разума, как своему владельцу, так и его врагам. Владеющий топором должен не только превзойти врага по силе, но и помериться с ним силой разума. Тот, кто побеждает в этом испытании воли, получает жизненную энергию проигравшего. Если проиграть достаточное количество раз, наступает безумие.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d8 + 5
-Attack Bonus:  +5
-Enchantment:  +5
-Damage Type:  Slashing
-Special:
- Cursed: This item requires a Remove Curse spell to be unequipped
- Will Saves: +5 bonus
- Speed: +1 additional attack per combat round
- Drain Soul: Each hit gives target a -3 Will save penalty and gives wielder a +3 Will save bonus for 10 rounds.
- Insanity: 50% chance wielder or target will become insane (25% chance both will become insane) for 5 rounds (Will DC 32). While insane, a creature goes berserk in combat, its hit points are hidden, it has a -5 Armor Class penalty, and it gains 5/+ physical damage vulnerability.
-Weight: 7 lb.
-Required Feat:  Martial Weapon, Axe
-Type:  One-handed~
+Урон: 1d8+5
+Атака: +5
+Зачарование: +5
+Тип урона: Рубящий
+Особенности:
+ Проклятье: снимается только с помощью заклинания "Снять проклятие"
+ Спасброски: +5 к спасброскам воли
+ Скорость: +1 дополнительная атака за раунд
+ Вытягивание души: при каждом попадании цель получает -3 к спасброскам воли, а владелец топора +3 к спасброскам воли на 10 раундов
+ Безумие: при попадании есть 50% шанс, что владелец и/или цель приходят в состояние берсерка (так с шансом в 25% они оба получат это состояние) на 5 раундов (успешный спасбросок воли с УС 32 отменяет эффект); в этом состоянии существо бездумно бросается в бой, его пункты здоровья скрыты и оно получает -5 к классу защиты вместе с 5/+ уязвимости к физическим повреждениям
+Вес: 7 фунтов
+Необходимая черта: Военное оружие, Топоры
+Тип: одноручное~
 //@11253    = ~Balance~
 //@11254    = ~Item description can remain the same; if new description is needed put it here~
 //@11255    = ~Scales of Balance~
 //@11256    = ~Item description can remain the same; if new description is needed put it here~
-@11257    = ~Cloudkiss +3~
-@11258    = ~The Dwarven master smith, Magmar Ironsmelt, created this axe. It is said that he spent his entire life studying various blacksmithing techniques in preparation for creating this axe. Thirty days and thirty nights, Magmar secluded himself in his shop with only the steady ringing of his hammer and the deafening roar of the furnace as company. On the thirtieth night Magmar completed Cloudkiss whereupon he promptly fell over dead. Now it is rumored that although the utmost respect was offered by his fellow smiths during his funeral, titters of laughter could be heard behind muffled, closely held conversations. It seems that Magmar's final work was not the great work everyone was expecting, in fact it was rather plain and hardly worthy of a Dwarven forged weapon let alone one forged by a master smith. 
+@11257    = ~Облачный поцелуй +3~
+@11258    = ~Этот топор выковал мастер-кузнец дварфов Магмар Железоплав. Говорят, что он посвятил всю свою жизнь изучению различных кузнечных техник, готовясь к созданию этого топора. Тридцать дней и тридцать ночей Магмар провёл у себя в кузнице, и лишь звон молота и рёв горна составляли ему компанию. На тридцатую ночь Магмар закончил "Облачный поцелуй" и пал замертво. Поговаривают, что, хотя коллеги-кузнецы оказали своему товарищу большой почёт во время похорон, в разговорах там и тут проскакивали смешки. По-видимому, последняя работа Магмара оказалась вовсе не таким уж и шедевром, какого все ожидали. По правде говоря, она еле тянула на то, чтобы носить гордое название "оружия дварфов", не говоря уже о том, чтобы зваться изделием мастера.
 
-For many years this long forgotten weapon hung upon the walls of Clan Ironsmelt, until one fateful day a horde of goblins invaded. In the final moments of the battle, a lone injured dwarf grabbed Cloudkiss in desperation from its purchase and flung it at the approaching horde. To his surprise, Cloudkiss transformed into a lightning bolt and surged thru the throngs of goblins with deadly accuracy. As fast as he could throw the axe it would return, leaving smoldering corpses wherever it traveled. By any rights this should have been a tale of legend, but with any legend there has to be survivors to tell the tale. Unfortunately, Clan Ironsmelt died that day along with that unnamed dwarf.
+Долгие годы это давно забытое оружие на стене в доме клана Железоплавов, пока в один роковой день к дварфам не нагрянула орда гоблинов. В последние мгновения битвы одинокий раненый дварф в отчаянии схватил "Облачный поцелуй" и метнул в его подступающих врагов. К его удивлению, "Облачный поцелуй" превратился в молнию и пронёсся сквозь толпы гоблинов с убийственной точностью. После каждого броска, топор возвращался обратно, оставляя за собой обугленные трупы гоблинов. По всем правилам, так должна была возникнуть красивая легенда, но в любой легенде должен быть выживший, чтобы рассказать о ней. К несчастью, клан Железоплавов в тот день погиб в полном составе, включая того безымянного дварфа.
 
+ПАРАМЕТРЫ:
 
-STATISTICS:
+Метание:
 
-Thrown:
+Урон: 2d6+3
+Зачарование: +3
+Тип урона: электрический
+Особенности:
+ Возвращение: возвращается к владельцу
+ Молния: наносит электрический урон молнией всему, что попадается на пути
+ Наносит бонусный электрический урон от силы, мастерства и любого другого бонуса к урону, который получил бы метательный топор
+ Успешный спасбросок реакции с УС 20 позволяет избежать половину урона; УС увеличивается на модификатор ловкости владельца топора
+ Автоматически попадает, но не может нанести критический урон
 
-Damage:  2d6  +3
-Enchantment:  +3
-Damage Type:  Electrical
-Special:
-  Returning: Returns to user
-  Lightning: Inflicts electrical damage to all objects in path of lightning bolt
-  Deals bonus electrical damage from Strength, proficiency, and any other damage bonus a throwing axe would gain
-  Reflex DC 20 for half damage; the DC is increased by the thrower's Dexterity bonus
-  Automatically hits but cannot critically hit
+Ближний бой:
 
-
-Melee:
-
-Damage:  1d6  +3
-Attack Bonus:  +3
-Enchantment:  +3
-Damage Type: Slashing
-Weight: 4 lb.
-Required Feat:  Martial Weapon, Axe
-Type:  One-handed~
+Урон: 1d6 +3
+Атака: +3
+Зачарование: +3
+Тип урона: Рубящий
+Вес: 4 фунта
+Необходимая черта: Военное оружие, Топоры
+Тип: одноручное~
 @11259    = ~Stormshifter +5~
 @11260    = ~The Dwarven master smith, Magmar Ironsmelt, created this axe. It is said that he spent his entire life studying various blacksmithing techniques in preparation for creating this axe. Thirty days and thirty nights, Magmar secluded himself in his shop with only the steady ringing of his hammer and the deafening roar of the furnace as company. On the thirtieth night Magmar completed Stormshifter whereupon he promptly fell over dead. Now it is rumored that although the utmost respect was offered by his fellow smiths during his funeral, titters of laughter could be heard behind muffled, closely held conversations. It seems that Magmar's final work was not the great work everyone was expecting, in fact it was rather plain and hardly worthy of a Dwarven forged weapon let alone one forged by a master smith. 
 
