@@ -6964,154 +6964,154 @@
 Вес: 3 фунта
 Необходимая черта: Простое оружие, Булавы
 Тип: одноручное~
-@11365    = ~Unstoppable Club +3~
-@11366    = ~Most clubs are stout, hardwood sticks, narrow at the grip and wider at the end. This simple weapon has been used since mankind first began using tools. Anyone can find a good stout piece of wood and swing it; hence the club's widespread use.
+@11365    = ~Неостановимая палица +3~
+@11366    = ~Большинство палиц - это крепкие дубины из твёрдых пород древесины, узкие в месте хвата и расширяющиеся к другому концу. Это простое оружие стало применяться с тех пор, как разумные существа начали использовать инструменты. Каждый может найти прочный кусок дерева и начать махать им, поэтому такое оружие получило широкое распространение. Впрочем, на эту палицу не пожалели ни заклинаний, ни труда.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d6  +3
-Attack Bonus:  Automatically hits
-Enchantment:  +3
-Damage Type:  Bludgeoning
-Special:
-  Automatically hits but cannot critically hit
-Weight: 3 lb.
-Required Feat:  Simple Weapon, Mace
-Type:  One-handed~
-@11367    = ~Club of Intoxication +4~
-@11368    = ~Most clubs are stout, hardwood sticks, narrow at the grip and wider at the end. This simple weapon has been used since mankind first began using tools. Anyone can find a good stout piece of wood and swing it; hence the club's widespread use.
+Урон: 1d6+3
+Атака: автоматически попадает
+Зачарование: +3
+Тип урона: дробящий
+Особенности:
+ Автоматически попадает, но не может нанести критический урон
+Вес: 3 фунта
+Необходимая черта: Простое оружие, Булавы
+Тип: одноручное~
+@11367    = ~Булава опьянения +4~
+@11368    = ~Большинство палиц - это крепкие дубины из твёрдых пород древесины, узкие в месте хвата и расширяющиеся к другому концу. Это простое оружие стало применяться с тех пор, как разумные существа начали использовать инструменты. Каждый может найти прочный кусок дерева и начать махать им, поэтому такое оружие получило широкое распространение. Впрочем, на эту палицу не пожалели ни заклинаний, ни труда.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d6  +4
-Attack Bonus:  +4 
-Enchantment:  +4
-Damage Type:  Bludgeoning
-Special:
-  Intoxication: Target receives 20 points of intoxication with each hit (Will DC 27). Once a creature reaches 50 points of intoxication, it starts to receive luck penalties, ranging from -2 at 50 points to -12 at 100 points.
-Weight: 3 lb.
-Required Feat:  Simple Weapon, Mace
-Type:  One-handed~
+Урон: 1d6+4
+Атака: +4
+Зачарование: +4
+Тип урона: дробящий
+Особенности:
+ Опьянение: Цель получает 20 пунктов опьянения при каждом попадании (успешный спасбросок воли с УС 27 отменяет эффект); при достижения 50 пунктов опьянения, существо начинает получать штрафы к удаче от -2 при 50 пунктах до -12 при 100 пунктах
+Вес: 3 фунта
+Необходимая черта: Простое оружие, Булавы
+Тип: одноручное~
 //@11369    = ~Club +2~
 //@11370    = ~Item description can remain the same; if new description is needed put it here~
 //@11371    = ~Masterwork Club~
 //@11372    = ~Item description can remain the same; if new description is needed put it here~
-@11373    = ~Cursed Club of Immolation +5~
-@11374    = ~Most clubs are stout, hardwood sticks, narrow at the grip and wider at the end. This simple weapon has been used since mankind first began using tools. Anyone can find a good stout piece of wood and swing it; hence the club's widespread use.
+@11373    = ~Проклятая палица уничтожения +5~
+@11374    = ~Большинство палиц - это крепкие дубины из твёрдых пород древесины, узкие в месте хвата и расширяющиеся к другому концу. Это простое оружие стало применяться с тех пор, как разумные существа начали использовать инструменты. Каждый может найти прочный кусок дерева и начать махать им, поэтому такое оружие получило широкое распространение. Впрочем, на эту палицу не пожалели ни заклинаний, ни труда.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d6  +5
-Attack Bonus:  +5 
-Enchantment:  +5
-Damage Type:  Bludgeoning
-Special:
-  Cursed: Once equipped, cannot be removed without a Remove Curse or Break Enchantment spell
-  Immolation: +5d6 fire damage
-  Self-Immolation: 5d6 fire damage to self on hit
-Weight: 3 lb.
-Required Feat:  Simple Weapon, Mace
-Type:  One-handed~
-@11375    = ~Club of Lightning Strikes +5~
-@11376    = ~Most clubs are stout, hardwood sticks, narrow at the grip and wider at the end. This simple weapon has been used since mankind first began using tools. Anyone can find a good stout piece of wood and swing it; hence the club's widespread use.
+Урон: 1d6+5
+Атака: +5
+Зачарование: +5
+Тип урона: дробящий
+Особенности:
+ Проклятье: снимается только с помощью заклинания "Снять проклятие"
+ Уничтожение: +5d6 урона огнём при попадании
+ Самоуничтожение: 5d6 урона огнём владельцу палицу при попадании
+Вес: 3 фунта
+Необходимая черта: Простое оружие, Булавы
+Тип: одноручное~
+@11375    = ~Палица ударов молнии +5~
+@11376    = ~Большинство палиц - это крепкие дубины из твёрдых пород древесины, узкие в месте хвата и расширяющиеся к другому концу. Это простое оружие стало применяться с тех пор, как разумные существа начали использовать инструменты. Каждый может найти прочный кусок дерева и начать махать им, поэтому такое оружие получило широкое распространение. Впрочем, на эту палицу не пожалели ни заклинаний, ни труда.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d6  +5
-Attack Bonus:  +5 
-Enchantment:  +5
-Damage Type:  Bludgeoning
-Special:
-  Lightning Strike: Each hit has a 20% chance to bring down a lightning bolt on the target, dealing 10d10 electrical damage (Reflex DC 26 for half). This ability only works outdoors.
-Weight: 3 lb.
-Required Feat:  Simple Weapon, Mace
-Type:  One-handed~
+Урон: 1d6+5
+Атака: +5
+Зачарование: +5
+Тип урона: дробящий
+Особенности:
+ Удар молнии: каждое попадание имеет 20% шанс вызывать на цель разряд молнии, наносящий 10d10 электрического урона (успешный спасбросок реакции с УС 26 позволяет снизить урон вдвое); эта способность действует только на открытом воздухе
+Вес: 3 фунта
+Необходимая черта: Простое оружие, Булавы
+Тип: одноручное~
 //@11377    = ~Club +5~
 //@11378    = ~Item description can remain the same; if new description is needed put it here~
 //@11379    = ~Corrosive Club +2~
 //@11380    = ~Item description can remain the same; if new description is needed put it here~
 //@11381    = ~Frost Club~
 //@11382    = ~Item description can remain the same; if new description is needed put it here~
-@11383    = ~Headknocker +3~
-@11384    = ~Headknocker was crafted by the ogress Shavauntea as a "gift" for her husband, Grothak the Stupid. Her hope was that the club could be used to "knock sense into empty head."  Shavauntea was quite surprised to find that the weapon had the opposite effect when she brought it down upon her husband's unsuspecting head. The club was thought to have been destroyed in the battle between the two lovers after Grothak regained his senses. Obviously, this was not the case.
+@11383    = ~Череполом +3~
+@11384    = ~Череполом смастерила женщина-огр Шаванти в "подарок" своему мужу Гротаку Тупому. Она надеялась, что с помощью новой дубины можно будет "вбить хотя бы немного мозгов в пустую голову". Шаванти была очень удивлена, когда обнаружило, что оружие, в момент обрушения оного на голову мужа, произвело обратный эффект. Считалось, что дубинка была уничтожена в драке между супругами после того, как Гротак пришёл в себя. Очевидно, что это не так.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage: 1d6  +3
-Attack Bonus: +3 
-Enchantment:  +3
-Damage Type: Bludgeoning
-Special:  
-  Headknocking: 33% chance target takes +3d6 Bludgeoning damage to the head 
-  Spell Process: 20% chance target becomes Confused for 1 round (Will DC 27)
-Weight: 6 lb.
-Required Feat:  Simple Weapon, Mace
-Type:  One-handed~
-@11385    = ~Club of Confusion +5~
-@11386    = ~The Club of Confusion was crafted by the ogress Shavauntea as a "gift" for her husband, Grothak the Stupid. Her hope was that the club could be used to "knock sense into empty head."  Shavauntea was quite surprised to find that the weapon had the opposite effect when she brought it down upon her husband's unsuspecting head. The club was thought to have been destroyed in the battle between the two lovers after Grothak regained his senses. Obviously, this was not the case.
+Урон: 1d6 +3
+Атака: +3
+Зачарование: +3
+Тип урона: дробящий
+Особенности:
+ Сокрушение: с вероятностью 33% жертва получает дополнительно 3d6 дробящего урона в голову
+ Наложение заклинания: с вероятностью в 20% жертва ошеломляется на 1 раунд (успешный спасбросок воли с УС 27 отменяет эффект)
+Вес: 6 фунтов
+Необходимая черта: Простое оружие, Булавы
+Тип: одноручное~
+@11385    = ~Дубина замешательства +5~
+@11386    = ~"Дубину замешательства" смастерила женщина-огр Шаванти в "подарок" своему мужу Гротаку Тупому. Она надеялась, что с помощью новой дубины можно будет "вбить хотя бы немного мозгов в пустую голову". Шаванти была очень удивлена, когда обнаружило, что оружие, в момент обрушения оного на голову мужа, произвело обратный эффект. Считалось, что дубинка была уничтожена в драке между супругами после того, как Гротак пришёл в себя. Очевидно, что это не так.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage: 1d6  +5
-Attack Bonus: +5 
-Enchantment:  +5
-Damage Type: Bludgeoning
-Special:  
-  Headknocking: 66% chance target takes +3d6 Bludgeoning damage to the head
-  Spell Process: 50% chance target becomes Confused for 1 round (Will DC 33)
-  Impact: Increased chance of scoring a critical hit
-Weight: 6 lb.
-Required Feat:  Simple Weapon, Mace
-Type:  One-handed~
+Урон: 1d6 +5
+Атака: +5
+Зачарование: +5
+Тип урона: дробящий
+Особенности:
+ Сокрушение: с вероятностью в 66% жертва получает дополнительно 3d6 дробящего урона в голову
+ Наложение заклинания: с вероятностью в 50% жертва ошеломляется на 1 раунд (успешный спасбросок воли с УС 33 отменяет эффект)
+ Импульс: увеличивает шанс критического удара
+Вес: 6 фунтов
+Необходимая черта: Простое оружие, Булавы
+Тип: одноручное~
 //@11387    = ~Troll Killer~
-@11388    = ~Most clubs are stout, hardwood sticks, narrow at the grip and wider at the end. This simple weapon has been used since mankind first began using tools. Anyone can find a good stout piece of wood and swing it; hence the club's widespread use. With minute traces of acid along its striking end, coupled with its unusually warm feel, one could surmise that this club would be especially effective against all trolls.
+@11388    = ~Большинство палиц - это крепкие дубины из твёрдых пород древесины, узкие в месте хвата и расширяющиеся к другому концу. Это простое оружие стало применяться с тех пор, как разумные существа начали использовать инструменты. Каждый может найти прочный кусок дерева и начать махать им, поэтому такое оружие получило широкое распространение. Эта палица излучает тепло, а на её толстом конце видны капли кислоты: следовательно, можно предположить, что это оружие должно быть весьма эффективно в бою против троллей.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d6
-Attack Bonus: +5 vs. trolls
-Enchantment:  +1
-Damage Type:  Bludgeoning
-Special:
-  Flame: +1d4 fire damage
-  Corrosion: +1d4 acid damage
-Required Feat:  Simple Weapon, Mace
-Type:  One-handed~
+Урон: 1d6
+Атака: +5 против троллей
+Зачарование: +1
+Тип урона: дробящий
+Особенности:
+ Огонь: +1d4 урона огнём
+ Разъедание: +1d4 очков урона кислотой
+Необходимая черта: Простое оружие, Булавы
+Тип: одноручное~
 //@11389    = ~Memories of Kuldahar~
-@11390    = ~This huge gnarled tree limb is a broken bough from the great tree of Kuldahar, a mighty oak far to the southeast of Targos. The great oak is believed to be a gift of the God of Nature, Silvanus, and it is an awe-inspiring sight, towering hundreds of feet into the sky and providing a great circle of warmth to all who live beneath its sheltering limbs. For many, the tree represents a peaceful symbiosis between town and nature, and the tree is revered as a holy site by druids throughout Faerun.
+@11390    = ~Эта огромная узловатая ветка была отломана от великого дерева Кулдахара, могучего дуба, далеко на юго-востоке от Таргоса. Считается, что этот дуб - дар бога природы, Сильвануса, и он действительно поражает воображение. Огромный дуб вздымается вверх на сотни футов и согревает своим теплом всех, кто живёт в тени его кроны. Для многих он - символ мирного существования цивилизации и природы, а друиды Фаэруна почитают его как реликвию.
 
-When the town of Kuldahar was laid siege by the great evil from the Spine of the World Mountains in the Year of the Cold Soul, 1281 DR, the great tree of Kuldahar was buffeted by the great winds and howling storms blasting the region, causing its circle of warmth to recede and snapping off several limbs from the top of the tree. These limbs were gathered up by the town's residents after the town of Kuldahar was saved, and they were kept in many houses as a symbol of the town's persistence in the face of adversity. Some of these pieces of the great tree have found their way throughout the Ten-Towns, and the limbs still carry some of the warmth and enchantment of the great tree within them, making them powerful weapons. 
+Когда в год Холодной Души, 1281 ЛД, Кулдахар осадили силы зла с Хребта Мира, великое дерево было потревожено сильными ветрами и ураганами, обрушившимися на регион. В результате этого круг тепла под деревом уменьшился, а от самого дуба отломилось несколько сучьев. Эти сучья были собраны жителями Кулдахара и хранились во многих домах, как символ стойкости города перед лицом невзгод. Некоторые из этих частей великого дерева в конечном счёте разошлись по Десяти Городах: в этих сучьях осталась магия великого дуба, и поэтому из них получается мощное оружие. 
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d6 + 1
-Attack Bonus:  +1
-Enchantment:  +1
-Damage Type:  Bludgeoning
-Special:
-  Resistance: 10/- Cold Resistance
-  Lesser Circle of Warmth: All other creatures within 10 feet gain 5/- Cold Resistance
-Weight: 3 lb.
-Required Feat:  Simple Weapon, Mace
-Type:  One-handed~
+Урон: 1d6+1
+Атака: +1
+Зачарование: +1
+Тип урона: дробящий
+Особенности:
+ Сопротивление: 10/- сопротивления холоду
+ Малый круг тепла: все остальные существа в радиусе 10 футов получают 5/- сопротивления холоду
+Вес: 3 фунта
+Необходимая черта: Простое оружие, Булавы
+Тип: одноручное~
 //@11391    = ~Branching Paths of Kuldahar~
-@11392    = ~This huge gnarled tree limb is a broken bough from the great tree of Kuldahar, a mighty oak far to the southeast of Targos. The great oak is believed to be a gift of the God of Nature, Silvanus, and it is an awe-inspiring sight, towering hundreds of feet into the sky and providing a great circle of warmth to all who live beneath its sheltering limbs. For many, the tree represents a peaceful symbiosis between town and nature, and the tree is revered as a holy site by druids throughout Faerun. 
+@11392    = ~Эта огромная узловатая ветка была отломана от великого дерева Кулдахара, могучего дуба, далеко на юго-востоке от Таргоса. Считается, что этот дуб - дар бога природы, Сильвануса, и он действительно поражает воображение. Огромный дуб вздымается вверх на сотни футов и согревает своим теплом всех, кто живёт в тени его кроны. Для многих он - символ мирного существования цивилизации и природы, а друиды Фаэруна почитают его как реликвию.
 
-When the town of Kuldahar was laid siege by the great evil from the Spine of the World Mountains in the Year of the Cold Soul, 1281 DR, the great tree of Kuldahar was buffeted by the great winds and howling storms blasting the region, causing its circle of warmth to recede and snapping off several limbs from the top of the tree. These limbs were gathered up by the town's residents after the town of Kuldahar was saved, and they were kept in many houses as a symbol of the town's persistence in the face of adversity. Some of these pieces of the great tree have found their way throughout the Ten-Towns, and the limbs still carry some of the warmth and enchantment of the great tree within them, making them powerful weapons.
+Когда в год Холодной Души, 1281 ЛД, Кулдахар осадили силы зла с Хребта Мира, великое дерево было потревожено сильными ветрами и ураганами, обрушившимися на регион. В результате этого круг тепла под деревом уменьшился, а от самого дуба отломилось несколько сучьев. Эти сучья были собраны жителями Кулдахара и хранились во многих домах, как символ стойкости города перед лицом невзгод. Некоторые из этих частей великого дерева в конечном счёте разошлись по Десяти Городах: в этих сучьях осталась магия великого дуба, и поэтому из них получается мощное оружие.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d6 + 3
-Attack Bonus:  +3
-Enchantment:  +3
-Damage Type:  Bludgeoning
-Special:
-  Resistance: 20/- Cold Resistance
-  Lesser Circle of Warmth: All other creatures within 10 feet gain 10/- Cold Resistance
-  Damage Reduction: 5/+1
-Weight: 3 lb.
-Required Feat:  Simple Weapon, Mace
-Type:  One-handed~
+Урон: 1d6+3
+Атака: +3
+Зачарование: +3
+Тип урона: дробящий
+Особенности:
+ Сопротивление: 20/- сопротивления холоду
+ Малый круг тепла: все остальные существа в радиусе 10 футов получают 10/- сопротивления холоду
+ Снижение урона: 5/+1
+Вес: 3 фунта
+Необходимая черта: Простое оружие, Булавы
+Тип: одноручное~
 //@11393    = ~Belib's Everlasting Torch~
 //@11394    = ~Item description can remain the same; if new description is needed put it here~
 //@11395    = ~Belib's Amazing Everlasting Torch~
