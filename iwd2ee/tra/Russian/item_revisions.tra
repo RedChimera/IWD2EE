@@ -5907,7 +5907,7 @@
 
 ПАРАМЕТРЫ:
 
-Урон: 1d10+
+Урон: 1d10+4
 Атака: +4
 Зачарование: +4
 Тип урона: колющий
@@ -5917,95 +5917,95 @@
 Необходимая черта: Военное оружие, Древковое
 Тип: двуручное~
 //@11167    = ~Flaming Halberd +1~
-@11168    = ~Like others of its type, this halberd consists of a cleaver-like axe blade mounted on a staff approximately six feet in length. It has also been bestowed with a small number of magical properties, however, thus making it more effective in combat. Its keen blade, for instance, will shear through your opponent's flesh to find the bone while its barbed tip will seek out gaps in their armor.
+@11168    = ~Эта алебарда, как и другие, представляет собой клинок вроде лезвия топора, закреплённый на древке длиной около шести футов. Также она обладает некоторыми магическими свойствами и потому более эффективна в бою. Например, её острое лезвие прорезает плоть врага до кости, а зазубренный наконечник находит слабые места в его броне.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d10 + 1
-Attack Bonus: +1 
-Enchantment:  +1
-Damage Type:  Piercing
-Special:
-  Flame: 25% chance of +2d6 fire damage
-Weight: 14 lb.
-Feat Requirement:  Martial Weapon, Polearm
-Type:  Two-handed~
-@11169    = ~Dredging Claw +1~
-@11170    = ~This halberd has a core of iron within its shaft, and looks like it was intended to hook onto the sides of enemy ships and lock them in place to allow them to be boarded. It is quite light and quick for a halberd, and the hook on the end makes it easy to latch onto structures. It doesn't look like it's seen much combat use, although it would be perfect for lancing goblins from a distance.
+Урон: 1d10+1
+Атака: +1
+Зачарование: +1
+Тип урона: колющий
+Особенности:
+ Пламя: 50% вероятность нанести дополнительно 2d6 урона огнём
+Вес: 14 фунтов
+Необходимая черта: Военное оружие, Древковое
+Тип: двуручное~
+@11169    = ~Копающий коготь +1~
+@11170    = ~У этой алебарды в древко вделан железный сердечник. Судя по всему, она предназначалась для захвата бортов вражеских кораблей и фиксации их перед абордажем. Для алебарды это оружие довольно лёгкое и быстрое, а с помощью крюка на конце можно легко цепляться за карнизы и уступы. Не похоже, чтобы эта алебарда часто использовалась в бою, хотя она отлично походит для боя с гоблинами на расстоянии.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d10 + 1
-Attack Bonus:  +1 
-Enchantment:  +1
-Damage Type:  Piercing
-Special:
-  Quick: No delay before attacking
-Weight: 10 lb.
-Feat Requirement:  Martial Weapon, Polearm
-Type:  Two-handed~
-@11171    = ~Hand of the Buccaneer +4~
-@11172    = ~This halberd has a core of iron within its shaft, and looks like it was intended to hook onto the sides of enemy ships and lock them in place to allow them to be boarded. It is quite light and quick for a halberd, and the hook on the end makes it easy to latch onto structures. It doesn't look like it's seen much combat use, although it would be perfect for lancing goblins from a distance.
+Урон: 1d10+1
+Атака: +1
+Зачарование: +1
+Тип урона: колющий
+Особенности:
+ Быстрота: нет задержки перед атакой
+Вес: 10 фунтов
+Необходимая черта: Военное оружие, Древковое
+Тип: двуручное~
+@11171    = ~Рука буканьера +4~
+@11172    = ~У этой алебарды в древко вделан железный сердечник. Судя по всему, она предназначалась для захвата бортов вражеских кораблей и фиксации их перед абордажем. Для алебарды это оружие довольно лёгкое и быстрое, а с помощью крюка на конце можно легко цепляться за карнизы и уступы. Не похоже, чтобы эта алебарда часто использовалась в бою, хотя она отлично походит для боя с гоблинами на расстоянии.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d10 + 4
-Attack Bonus:  +4
-Enchantment:  +4
-Damage Type:  Piercing
-Special:
-  Quick: No delay before attacking
-  Catching: Hit target must make a DC 33 Reflex save or be immobilized for 1 second
-Weight: 10 lb.
-Feat Requirement:  Martial Weapon, Polearm
-Type:  Two-handed~
-@11173    = ~The Hammer of Lucerne +1~
-@11174    = ~This odd pole-arm appears to be a cross between a halberd and a warhammer, fitted with a four-pronged hammerhead and a long thrusting spike.
+Урон: 1d10+4
+Атака: +4
+Зачарование: +4
+Тип урона: колющий
+Особенности:
+ Быстрота: нет задержки перед атакой
+ Ловля: успешно атакуемая цель должна сделать спасбросок реакции с УС 33 или стать обездвиженной на 1 секунду
+Вес: 10 фунтов
+Необходимая черта: Военное оружие, Древковое
+Тип: двуручное~
+@11173    = ~Люцернский молот +1~
+@11174    = ~Это необычное древковое оружие представляет из себя нечто среднее между алебардой и боевым молотом: оно оснащено и усиленным четырьмя шипами бойком молота, и длинной колющей пикой.
 
-Its creation was the result of a blunder made during the commission of an enchanted item for Lodur the Brave (alternately known as Lodur Iron-Bollocks, Lodur the Foolhardy, and Lodur the Dullard), a powerful but none-to-bright cleric. Lodur had of heard rumors of a mighty long-hafted hammer, possibly wielded by a hero known as Lucerne, or perhaps that's where it was made, which may or may not have had to do with a land or king or deity called Swizaria, or Switzlund, or "something of that nature, I am most certain."
+Такое оружие появилось на свет в результате ошибки, допущенной при заказе этого молота священником по имени Лодур Храбрый (он же Лодур Железнолобый, Лодур Глупый и Лодур Тупоумный). Тот был могущественным, но не слишком сообразительным священнослужителем. Всё началось с того, что до Лодура дошли слухи о могучем молоте с длинной рукояткой, которым скорее всего владел герой по имени Люцерн... а может быть, так назывался город, в котором был сделан этот молот. И всё это могло иметь какое-то отношению к королю, божеству или земле под название Швизцария или Швейзурия, или "что-то в этом роде, я совершенно уверен" - как и сказал сам Лодур, обращаясь в молитве к своему божеству.
 
-"Oh," he had then added, "and pray thee bless it as well... thou dost know, that one where it explodes undead and what-not, so that I might smite things most explosively."
+"О", - добавил он затем, - "и молю тебя благословить его... ты знаешь, чтобы он мог взрывает нежить и прочее, чтобы я мог поражать врагов наиболее взрывчато".
 
-Lodur's fierce demeanor, violent reputation, and sacks of gold begged quiet compliance, and so the dwarven arms-master simply nodded and sent the cleric on his way, promising the weapon in two months' time. The arm-master consulted with his clan's lore-master and sure enough, there *was* word of such a weapon: it came from a trader in Sigil by way of an exceptionally well-traveled plane-walker. The arms-master dutifully copied the weapon's function and form, working runes of power into its haft and head just as Lodur had asked for.
+Свирепый нрав Лодура, репутация жестокого человека и мешки с золотом никак не способствовали желанию спорить с ним, потому оружейник дварфов лишь кивнул, сгрёб монеты и пообещал сделать оружие через два месяца. После этого оружейник посоветовался с хранителем знаний своего клана и, конечно же, о таком оружии было известно - оно попало в королевства от торговца из Сигила, стараниями одного умевшего перемещаться между планами путешественника. Мастер тщательно скопировал устройство и форму оружия, начертав на нём руны силы, как того и просил Лодур.
 
-When Lodur the Brave returned to the dwarven stronghold to pick up his new hammer, he found instead a spiked pole-arm whose use was forbidden by his religion. The cleric ranted and gnashed his teeth and swore up and down the halls of the clan before stomping off in disgust, leaving his payment and the somewhat inappropriately named "Lucerne Hammer" behind.
+Когда Лодур Храбрый вернулся за своим молотом, он обнаружил оружие с шипами, использование коего священникам запрещено. Жрец рассвирепел: он скрежетал зубами и клял на чём свет стоит неумелого дварфа и весь его клан. Затем он в ярости развернулся и ушёл, оставив и странное оружие и золото, уплаченное за него.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d10 + 1
-Attack Bonus:  +1 
-Enchantment:  +1
-Damage Type:  Piercing
-Special:
-  Counts as a good-aligned weapon
-  Disruption: all undead and outsiders struck must make a Fortitude save (DC 14) or be destroyed
-Weight: 15 lb.
-Feat Requirement:  Martial Weapon, Polearm
-Type:  Two-handed~
-@11175    = ~Holy Swizarnian Hammer of Lucerne +3~
-@11176    = ~This odd pole-arm appears to be a cross between a halberd and a warhammer, fitted with a four-pronged hammerhead and a long thrusting spike.
+Урон: 1d10+1
+Атака: +1
+Зачарование: +1
+Тип урона: колющий
+Особенности:
+ Оружие считается добрым
+ Распад: уничтожает нежить или выходцев из иных планов, если те провалят спасбросок стойкости с УС 14
+Вес: 15 фунтов
+Необходимая черта: Военное оружие, Древковое
+Тип: двуручное~
+@11175    = ~Святой Швизцарский люцернский молот +3~
+@11176    = ~Это необычное древковое оружие представляет из себя нечто среднее между алебардой и боевым молотом: оно оснащено и усиленным четырьмя шипами бойком молота, и длинной колющей пикой.
 
-Its creation was the result of a blunder made during the commission of an enchanted item for Lodur the Brave (alternately known as Lodur Iron-Bollocks, Lodur the Foolhardy, and Lodur the Dullard), a powerful but none-to-bright cleric. Lodur had of heard rumors of a mighty long-hafted hammer, possibly wielded by a hero known as Lucerne, or perhaps that's where it was made, which may or may not have had to do with a land or king or deity called Swizaria, or Switzlund, or "something of that nature, I am most certain."
+Такое оружие появилось на свет в результате ошибки, допущенной при заказе этого молота священником по имени Лодур Храбрый (он же Лодур Железнолобый, Лодур Глупый и Лодур Тупоумный). Тот был могущественным, но не слишком сообразительным священнослужителем. Всё началось с того, что до Лодура дошли слухи о могучем молоте с длинной рукояткой, которым скорее всего владел герой по имени Люцерн... а может быть, так назывался город, в котором был сделан этот молот. И всё это могло иметь какое-то отношению к королю, божеству или земле под название Швизцария или Швейзурия, или "что-то в этом роде, я совершенно уверен" - как и сказал сам Лодур, обращаясь в молитве к своему божеству.
 
-"Oh," he had then added, "and pray thee bless it as well... thou dost know, that one where it explodes undead most explosively and what-not, so that I might get my most righteous smite on."
+"О", - добавил он затем, - "и молю тебя благословить его... ты знаешь, чтобы он мог взрывает нежить и прочее, чтобы я мог поражать врагов наиболее взрывчато".
 
-Lodur's fierce demeanor, violent reputation, and sacks of gold begged quiet compliance, and so the dwarven arms-master simply nodded and sent the cleric on his way, promising the weapon in two months' time. The arm-master consulted with his clan's lore-master and sure enough, there *was* word of such a weapon: it came from a trader in Sigil by way of an exceptionally well-traveled plane-walker. The arms-master dutifully copied the weapon's function and form, working runes of power into its haft and head just as Lodur had asked for.
+Свирепый нрав Лодура, репутация жестокого человека и мешки с золотом никак не способствовали желанию спорить с ним, потому оружейник дварфов лишь кивнул, сгрёб монеты и пообещал сделать оружие через два месяца. После этого оружейник посоветовался с хранителем знаний своего клана и, конечно же, о таком оружии было известно - оно попало в королевства от торговца из Сигила, стараниями одного умевшего перемещаться между планами путешественника. Мастер тщательно скопировал устройство и форму оружия, начертав на нём руны силы, как того и просил Лодур.
 
-When Lodur the Brave returned to the dwarven stronghold to pick up his new hammer, he found instead a spiked pole-arm whose use was forbidden by his religion. The cleric ranted and gnashed his teeth and swore up and down the halls of the clan before stomping off in disgust, leaving his payment and the somewhat inappropriately named "Holy Swizarnian Hammer of Lucerne" behind.
+Когда Лодур Храбрый вернулся за своим молотом, он обнаружил оружие с шипами, использование коего священникам запрещено. Жрец рассвирепел: он скрежетал зубами и клял на чём свет стоит неумелого дварфа и весь его клан. Затем он в ярости развернулся и ушёл, оставив и странное оружие и золото, уплаченное за него.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d10 + 3
-Attack Bonus:  +3 
-Enchantment:  +3
-Damage Type:  Piercing
-Special:
-  Counts as a good-aligned weapon
-  Disruption: all undead and outsiders struck must make a Fortitude save (DC 24) or be destroyed
-  Spell Process: 25% chance of casting a variant Holy Smite on target with each successful hit (6d6 magic damage and blindness for one round; Reflex DC 30 for half and to negate blindness)
-Weight: 15 lb.
-Feat Requirement:  Martial Weapon, Polearm
-Type:  Two-handed~
+Урон: 1d10+3
+Атака: +3
+Зачарование: +3
+Тип урона: колющий
+Особенности:
+ Оружие считается добрым
+ Распад: уничтожает нежить или выходцев из иных планов, если те провалят спасбросок стойкости с УС 24
+ Наложение заклинания: при попадании с вероятностью 25% на цель будет наложена вариация заклинания "Святой удар" (6d6 урона магией и слепота на один раунд, успешный спасбросок реакции с УС 30 снижает урон в два раза и отменяет слепоту)
+Вес: 15 фунтов
+Необходимая черта: Военное оружие, Древковое
+Тип: двуручное~
 
 
 //@11177    = ~Battleaxe~
@@ -6077,76 +6077,75 @@ Type:  One-handed~
 //@11208    = ~Item description can remain the same; if new description is needed put it here~
 //@11209    = ~Corrosive Axe +1~
 //@11210    = ~Item description can remain the same; if new description is needed put it here~
-@11211    = ~Axe of the Irritating Glow +1~
-@11212    = ~The most common version of the battleaxe is a stout pole about four feet in length with a single-edged, trumpet-shaped blade mounted on one end. Battleaxes are also called broad axes. 
+@11211    = ~Топор раздражающего сияния +1~
+@11212    = ~Самым распространённым вариантом боевого топора является трапециевидное лезвие, заточенное с одной стороны, сидящее на крепком древке около четырёх футов длиной. Боевые топоры также называют широкими топорами. Этот топор был зачарован.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d8  +1
-Attack Bonus:  +1
-Enchantment:  +1
-Damage Type:  Slashing
-Special:
-  The Irritating Glow: Each hit casts Faerie Fire on the target, giving a non-cumulative -2 AC penalty.
-Weight: 7 lb.
-Required Feat:  Martial Weapon, Axe
-Type:  One-handed~
+Урон: 1d8 +1
+Атака: +1
+Зачарование: +1
+Тип урона: рубящий
+Особенности:
+ Раздражающее сияние: каждое попадание накладывает на цель заклинание "Огонь фей", давая штраф -2 к классу защиты (не суммируется)
+Вес: 7 фунтов
+Необходимая черта: Военное оружие, Топоры
+Тип: одноручное~
 //@11213    = ~Axe of Wounding~
-@11214    = ~The most common version of the battleaxe is a stout pole about four feet in length with a single-edged, trumpet-shaped blade mounted on one end. Battleaxes are also called broad axes. 
+@11214    = ~Самым распространённым вариантом боевого топора является трапециевидное лезвие, заточенное с одной стороны, сидящее на крепком древке около четырёх футов длиной. Боевые топоры также называют широкими топорами. Этот топор был зачарован.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d8
-Damage Type:  Slashing
-Special:
-  Wounding: Inflicts 1 additional point of damage per round for 10 rounds (Fortitude DC 13)
-Weight: 7 lb.
-Required Feat:  Martial Weapon, Axe
-Type:  One-handed~
+Урон: 1d8
+Тип урона: рубящий
+Особенности:
+ Рваные раны: наносит 1 дополнительный пункт урона в раунд в течение 10 раундов (успешный спасбросок стойкости с УС 13 отменяет эффект)
+Вес: 7 фунтов
+Необходимая черта: Военное оружие, Топоры
+Тип: одноручное~
 //@11215    = ~Battleaxe of Decay +5~
-@11216    = ~The most common version of the battleaxe is a stout pole about four feet in length with a single-edged, trumpet-shaped blade mounted on one end. Battleaxes are also called broad axes. 
+@11216    = ~Самым распространённым вариантом боевого топора является трапециевидное лезвие, заточенное с одной стороны, сидящее на крепком древке около четырёх футов длиной. Боевые топоры также называют широкими топорами. Этот топор был зачарован.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d8  +5
-Attack Bonus:  +5 
-Enchantment:  +5
-Damage type:  Slashing
-Special:
-  Decay: Target is under the effects of Dolorous Decay for 5 rounds (Fortitude DC 42)
-  Keen: Increases chance of scoring a critical hit
-  Chaotic: +2d6 damage against lawful creatures. Counts as a chaotic-aligned weapon.
-Weight: 7 lb.
-Required Feat:  Martial Weapon, Axe
-Type:  One-handed~
-@11217    = ~Handaxe of Supreme Speed +5~
-@11218    = ~The handaxe is basically a smaller version of the battleaxe. With a smaller, lighter head and a shortened shaft, the handaxe can be wielded with deadly speed and accuracy. Although it can be wielded as a primary weapon, its lighter size makes it an ideal secondary or off-handed weapon. 
+Урон: 1d8+5
+Атака: +5
+Зачарование: +5
+Тип урона: рубящий
+Особенности:
+ Разложение: цель находится под действием заклинания "Мучительное гниение" в течение 5 раундов (успешный спасбросок стойкости с УС 42 отменяет эффект)
+ Острота: увеличенный шанс нанести критический удар
+ Хаос: +2d6 урона против законопослушных существ, оружие считается хаотичным
+Вес: 7 фунтов
+Необходимая черта: Военное оружие, Топоры
+Тип: одноручное~
+@11217    = ~Ручной топорик абсолютной скорости +5~
+@11218    = ~Ручной топорик - это, по сути, уменьшенный боевой топор. Небольшой лёгкий обух и укороченная рукоять позволяют управляться с ним с невероятной скоростью и точностью. Топорик можно использовать и сам по себе, но его вес и размер делают его идеальным дополнительным оружием.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d6  +5
-Attack Bonus:  +5 
-Enchantment:  +5
-Damage Type:  Slashing
-Special:
-  Speed: +3 attacks per combat round
-Weight: 1 lb.
-Required Feat:  Martial Weapon, Axe
-Type:  One-handed~
+Урон: 1d6+5
+Атака: +5
+Зачарование: +5
+Тип урона: рубящий
+Особенности:
+ Скорость: 3 дополнительные атаки в раунд
+Вес: 1 фунтов
+Необходимая черта: Военное оружие, Топоры
+Тип: одноручное~
 //@11219    = ~Winter Axe +5~
-@11220    = ~The most common version of the battleaxe is a stout pole about four feet in length with a single-edged, trumpet-shaped blade mounted on one end. Battleaxes are also called broad axes. 
+@11220    = ~Самым распространённым вариантом боевого топора является трапециевидное лезвие, заточенное с одной стороны, сидящее на крепком древке около четырёх футов длиной. Боевые топоры также называют широкими топорами. Этот топор был зачарован.
+ПАРАМЕТРЫ:
 
-STATISTICS:
-
-Damage:  1d8  +5
-Attack Bonus:  +5 
-Enchantment:  +5
-Damage Type:  Slashing
-Special:
-  Burst of Harshest Winter: +3d6 cold damage and 15% chance of +3d10 cold damage
-Weight: 7 lb.
-Required Feat:  Martial Weapon, Axe
-Type:  One-handed~
+Урон: 1d8+5
+Атака: +5
+Зачарование: +5
+Тип урона: рубящий
+Особенности:
+ Ледяное крошево: +3d6 урона холодом и 15% вероятность нанести дополнительно 3d10 урона холодом
+Вес: 7 фунтов
+Необходимая черта: Военное оружие, Топоры
+Тип: одноручное~
 @11221    = ~Mass-Slasher +5~
 @11222    = ~The most common version of the battleaxe is a stout pole about four feet in length with a single-edged, trumpet-shaped blade mounted on one end. Battleaxes are also called broad axes. 
 
