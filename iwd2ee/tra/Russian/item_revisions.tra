@@ -6738,121 +6738,122 @@
 Необходимая черта: Военное оружие, Топоры
 Тип: двуручное
 Требования: Сила 18~
-@11327    = ~Backblighter +3~
-@11328    = ~Backblighter is a weapon of incredible manufacturing techniques. The double bearded blade is crafted of the finest steel with a mithril edge. The shaft is hollowed oak with a reinforced steel center. Along the shaft are a series of glowing dwarven runes cast in gold. The weapon is light, fast, and deadly.
+@11327    = ~Бичеватель +3~
+@11328    = ~Бичеватель представляет собой настоящий образец кузнечного мастерства. Эта двойной топор выкована из лучшей стали, с кромкой из мифрила. Древко сделано из дуба и высверлено по всей длине так, чтобы укрепить деревянную рукоятку стальным штырём. На древке вырезаны золотые, мерцающие от магии руны дварфов. Оружие хорошо сбалансировано и с лёгкостью разит врагов наповал.
 
-The weapon was also crafted with two special enchantments. On a successful hit, there is a chance that Backblighter will cast a fear and a slow spell upon the target, causing them to turn their back and slowly flee. This allows devastating attacks from an opponent's rear, thus the weapons name.
+На это оружие также наложены особые заклинания. При попадании есть шанс, что Бичеватель наложит на цель заклинания страха и замедления. Устрашённый враг не способен сражаться и лишь медленно бежит прочь от нанёсшего удар. Поразить такого врага в спину не сложнее, чем огреть бичом измождённого пленника, так что удивляться названию этого боевого топора не стоит.
 
-Backblighter was crafted by the dwarven smith Braegar of Dorn's Deep.
+Бичеватель был создан известным оружейником дварфов из пещер Дорна по имени Браэгар.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage: 1d10 + 3
-Attack Bonus:  +3 
-Enchantment:  +3
-Damage Type: Slashing
-Special:  
-  Quick: No delay before attacking
-  Spell Process: 50% chance target succumbs to Fear (Will DC 17)
-  Spell Process: 50% chance target is Slowed (Will DC 17)
-Weight: 3 lb.
-Required Feat:  Martial Weapon, Axe
-Type:  Two-handed~
-@11329    = ~Coward's Flight +5~
-@11330    = ~Coward's Flight is a weapon of incredible manufacturing techniques. The double bearded blade is crafted of the finest steel with a mithril edge. The shaft is hollowed oak with a reinforced steel center. Along the shaft are a series of glowing dwarven runes cast in gold. The weapon is light, fast, and deadly.
+Урон: 1d10+2
+Атака: +3
+Зачарование: +3
+Тип урона: рубящий
+Особенности:
+ Быстрота: нет задержки перед атакой
+ Наложение заклинания: с вероятностью 50% цель будет испугана (успешный спасбросок воли с УС 17 отменяет эффект)
+ Наложение заклинания: с вероятностью 50% цель будет замедлена (успешный спасбросок волис УС 17  отменяет эффект)
+Необходимая черта: Военное оружие, Топоры
+Вес: 3 фунта
+Тип: двуручное~
+@11329    = ~Бегство труса +5~
+@11330    = ~"Бегство труса" представляет собой настоящий образец кузнечного мастерства. Эта двойной топор выкована из лучшей стали, с кромкой из мифрила. Древко сделано из дуба и высверлено по всей длине так, чтобы укрепить деревянную рукоятку стальным штырём. На древке вырезаны золотые, мерцающие от магии руны дварфов. Оружие хорошо сбалансировано и с лёгкостью разит врагов наповал.
 
-The weapon was also crafted with two special enchantments. On a successful hit, there is a chance that Coward's Flight will cast a fear and a slow spell upon the target, causing them to turn their back and slowly flee. This allows devastating attacks from an opponent's rear, thus the weapons name.
+На это оружие также наложены особые заклинания. При попадании есть шанс, что "Бегство труса" наложит на цель заклинания страха и замедления. Устрашённый враг не способен сражаться и лишь медленно бежит прочь от нанёсшего удар. Поразить такого врага в спину не сложнее, чем огреть бичом измождённого пленника, так что удивляться названию этого боевого топора не стоит.
 
-Coward's Flight was crafted by the dwarven smith Braegar of Dorn's Deep.
+Этот топор был создан известным оружейником дварфов из пещер Дорна по имени Браэгар.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage: 1d10 + 5
-Attack Bonus:  +5 
-Enchantment:  +5
-Damage Type: Slashing 
-Special:  
-  Quick: No delay before attacking
-  Spell Process: 50% chance target succumbs to Fear (Will DC 23)
-  Spell Process: 50% chance target is Slowed (Fortitude DC 23)
-  Keen: Increases chance of scoring a critical hit
-Weight: 3 lb.
-Required Feat:  Martial Weapon, Axe
-Type:  Two-handed~
-@11331    = ~Big Death +1~
-@11332    = ~The gargantuan throwing axe known as Big Death is an orcish weapon through and through. Carried to the final battle of the Hand of Seldarine by the hulking orc warlord Yellow-Toothed Grubrun Foul-Tusks, Big Death had its origins in an ogre mercenary's two-handed battle-axe. After a particular vicious raid on a dwarven mining settlement, Grubrun spied the axe lodged in the skull of a dead dwarven marshal. It seems that an ogre mercenary had impaled himself upon the marshal's spear in a careless charge, but his last act had been to nearly cleave his killer's head in twain and, in trying to wrench the axe free for a second blow, shattering the haft before expiring in a bloody heap.
+Урон: 1d10 +5
+Атака: +5
+Зачарование: +5
+Тип урона: рубящий
+Особенности:
+ Быстрота: нет задержки перед атакой
+ Наложение заклинания: с вероятностью 50% цель будет испугана (успешный спасбросок воли с УС 23 отменяет эффект)
+ Наложение заклинания: с вероятностью 50% цель будет замедлена (успешный спасбросок волис УС 23  отменяет эффект)
+ Острота: увеличенный шанс нанести критический удар
+Необходимая черта: Военное оружие, Топоры
+Вес: 3 фунта
+Тип: двуручное~
+@11331    = ~Большая смерть +1~
+@11332    = ~Огромный метательный топор, известный как "Большая смерть" - оружие орков в полном смысле этого слова. Этот топор, которым в битве за Руку Селдарин орудовал неуклюжий орочий военачальник Желтозубый Грубрун Гнилой Клык, переделан из двуручного боевого топора одного огра-наёмника. После одного жестокого набега на поселение дварфов-рудокопов Грубрун увидел этот топор в черепе мёртвого маршала дварфов. Судя по всему, огр-наёмник в отчаянной атаке наткнулся на копьё маршала, но прежде чем умереть, успел всадить топор маршалу в голову, да ещё и сломать топорище в попытке выдернуть топор для второго удара.
 
-Prying the huge, black cold-iron blade from the base of the dwarf's skull, Grubrun returned to his fortress at Nab-Nurog and had his shaman set to enchanting it. Not having considered fixing the shaft and finding it too heavy and awkward to use in melee, Grubrun deigned to use the weapon as a throwing axe and demanded that it be ensorcelled to return to his hands after being hurled. The warlord found great delight in heaving the enormous weapon about, roaring with glee as Big Death came careening back to him, gleaming and gore-spattered, after lopping some poor enemy in two at the waist.
+С трудом выдернув огромный топор, сделанный из чёрного железа, из черепа дварфа, Грубрун вернулся в свою крепость на Наб-Нуроге и велел шаману племени зачаровать его. Не подумав, починить топорище, и сочтя топор слишком тяжёлым и неудобным для ближнего боя, Грубрун решил пользоваться топором как метательным оружием и потребовал, чтобы он возвращался обратно в руку после броска. Военачальнику доставляло большое удовольствие швыряться таким громадным топором, с ликованием наблюдая, как "Большая смерть" возвращается к нему, сверкая и брызгая кровью, после перерубания врага пополам.
 
-Grubrun Foul-Tusks finally met his end at the final battle of the Hand where he threw Big Death at the elven weapon master Kaylessa; she deftly sidestepped the flying weapon, darted forward, and ran her own blade through the empty-handed orc's belly. Kaylessa was said to have then coolly ducked as Grubrun's own axe came whirling back at him and cleanly severed his head, rotten yellow tusks and all.
+Грубрун Гнилой Клык встретил смерть в решающей битве за Руку, когда бросил "Большую смерть" в эльфийку Кайлессу, оружейного мастера Руки Селдарин. Она изящно уклонилась от летящего оружия, молниеносно бросилась вперёд и всадила клинок в живот безоружного орка. Затем, как говорят, она припала к земле - и в это самое время топор Грубруна вернулся к нему, начисто снеся его голову вместе с жёлтыми клыками и всем прочим.
 
-Big Death is an especially large axe - almost ridiculously so - and is only identifiable as a throwing weapon because its short haft and the manner in which it's weighted. In fact, the axe is so massive that it cannot be thrown with a single hand, requiring the wielder to grip it with both hands and hurl it sidelong with the strength of their entire body.
+"Большая смерть" - это очень большой метательный топор, почти что до абсурда, и его метательную сущность выдаёт лишь короткая рукоять и балансировка. На деле же топор настолько тяжёл, что его невозможно метнуть одной рукой, а нужно брать обеими и раскручивать всем телом.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  2d8 + 1
-Attack Bonus:  -10 
-Enchantment:  +1
-Damage Type: Slashing
-Special:
-  Returning: returns to wielder's hand after being thrown
-  Counts as a cold iron weapon
-Weight: 10 lb.
-Required Feat:  Martial Weapon, Axe
-Type:  Two-handed
-Minimum Strengh of 18 Required~
-@11333    = ~Big Black Flying-Death +3~
-@11334    = ~The gargantuan throwing axe known as Big Black Flying-Death is an orcish weapon through and through. Carried to the final battle of the Hand of Seldarine by the hulking orc warlord Yellow-Toothed Grubrun Foul-Tusks, Big Black Flying-Death had its origins in an ogre mercenary's two-handed battle-axe. After a particular vicious raid on a dwarven mining settlement, Grubrun spied the axe lodged in the skull of a dead dwarven marshal. It seems that an ogre mercenary had impaled himself upon the marshal's spear in a careless charge, but his last act had been to nearly cleave his killer's head in twain and, in trying to wrench the axe free for a second blow, shattering the haft before expiring in a bloody heap.
+Урон: 2d8+1
+Атака: -10
+Зачарование: +1
+Тип урона: рубящий
+Особенности:
+ Возвращение: после броска возвращается к владельцу
+ Считается оружием из холодного железа
+Вес: 10 фунтов
+Необходимая черта: Военное оружие, Топоры
+Тип: двуручное
+Требования: Сила 18~
+@11333    = ~Большая чёрная летучая смерть +3~
+@11334    = ~Огромный метательный топор, известный как "Большая чёрная летучая смерть" - оружие орков в полном смысле этого слова. Этот топор, которым в битве за Руку Селдарин орудовал неуклюжий орочий военачальник Желтозубый Грубрун Гнилой Клык, переделан из двуручного боевого топора одного огра-наёмника. После одного жестокого набега на поселение дварфов-рудокопов Грубрун увидел этот топор в черепе мёртвого маршала дварфов. Судя по всему, огр-наёмник в отчаянной атаке наткнулся на копьё маршала, но прежде чем умереть, успел всадить топор маршалу в голову, да ещё и сломать топорище в попытке выдернуть топор для второго удара.
 
-Prying the huge, black cold-iron blade from the base of the dwarf's skull, Grubrun returned to his fortress at Nab-Nurog and had his shaman set to enchanting it. Not having considered fixing the shaft and finding it too heavy and awkward to use in melee, Grubrun deigned to use the weapon as a throwing axe and demanded that it be ensorcelled to return to his hands after being hurled. The warlord found great delight in heaving the enormous weapon about, roaring with glee as Big Black Flying-Death came careening back to him, gleaming and gore-spattered, after lopping some poor enemy in two at the waist.
+С трудом выдернув огромный топор, сделанный из чёрного железа, из черепа дварфа, Грубрун вернулся в свою крепость на Наб-Нуроге и велел шаману племени зачаровать его. Не подумав, починить топорище, и сочтя топор слишком тяжёлым и неудобным для ближнего боя, Грубрун решил пользоваться топором как метательным оружием и потребовал, чтобы он возвращался обратно в руку после броска. Военачальнику доставляло большое удовольствие швыряться таким громадным топором, с ликованием наблюдая, как "Большая чёрная летучая смерть" возвращается к нему, сверкая и брызгая кровью, после перерубания врага пополам.
 
-Grubrun Foul-Tusks finally met his end at the final battle of the Hand where he threw Big Black Flying-Death at the elven weapon master Kaylessa; she deftly sidestepped the flying weapon, darted forward, and ran her own blade through the empty-handed orc's belly. Kaylessa was said to have then coolly ducked as Grubrun's own axe came whirling back at him and cleanly severed his head, rotten yellow tusks and all.
+Грубрун Гнилой Клык встретил смерть в решающей битве за Руку, когда бросил "Большую чёрную летучую смерть" в эльфийку Кайлессу, оружейного мастера Руки Селдарин. Она изящно уклонилась от летящего оружия, молниеносно бросилась вперёд и всадила клинок в живот безоружного орка. Затем, как говорят, она припала к земле - и в это самое время топор Грубруна вернулся к нему, начисто снеся его голову вместе с жёлтыми клыками и всем прочим.
 
-Big Black Flying-Death is an especially large axe - almost ridiculously so - and is only identifiable as a throwing weapon because its short haft and the manner in which it's weighted. In fact, the axe is so massive that it cannot be thrown with a single hand, requiring the wielder to grip it with both hands and hurl it sidelong with the strength of their entire body.
+"Большая чёрная летучая смерть" - это очень большой метательный топор, почти что до абсурда, и его метательную сущность выдаёт лишь короткая рукоять и балансировка. На деле же топор настолько тяжёл, что его невозможно метнуть одной рукой, а нужно брать обеими и раскручивать всем телом.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  2d10 + 3
-Attack Bonus : -10
-Enchantment:  +3
-Damage Type: Slashing
-Special:
-  Returning: returns to wielder's hand after being thrown
-  Counts as a cold iron weapon
-Weight: 10 lb.
-Required Feat:  Martial Weapon, Axe
-Type:  Two-handed
-Minimum Strengh of 18 Required~
-@11335    = ~Widow-Through +1~
+Урон: 2d10+3
+Атака: -10
+Зачарование: +3
+Тип урона: рубящий
+Особенности:
+ Возвращение: после броска возвращается к владельцу
+ Считается оружием из холодного железа
+Вес: 10 фунтов
+Необходимая черта: Военное оружие, Топоры
+Тип: двуручное
+Требования: Сила 18~
+@11335    = ~Вдоворуб +1~
 //@11336    = ~Item description can remain the same; if new description is needed put it here~
-@11337    = ~Grim Widow-Through +3~
-@11338    = ~Black Donald was a grim man with a twisted sense of humor. Though not quite malicious, he had little regard for human life. When his adventuring band, Winnowing Drake Company, asked him to fell an opponent, he did so without question. In addition to his wiry brawn and even temper, Donald was known for his fastidious care of his weapons and armor. He kept his great axe keen and shining at all times. When he waded into battle, crimson blood flew out in all directions from the gleaming blade. Donald's halfling friend, Tim Rootfield, commented that the axe was so sharp that it would make widows out of half the wives in Faerun. Black Donald smiled at the halfling and said that his blade was sharp enough to cut through the husband and back to village to get the wife on the follow-through.
+@11337    = ~Беспощадный вдоворуб +3~
+@11338    = ~Чёрный Дональд был мрачным человеком с извращённым чувством юмора. Хотя он и не был особо злобным, он мало ценил жизни других. Когда его компания искателей приключений "Веяние Дрейка" просила его устранить человека, он делал это, не задавая вопросов. Дональд был известен не только своей силой и хладнокровностью, но и тем, что тщательно следил за своим оружием и бронёй. Лезвие боевого топора Дональда всегда было наточено до блеска, и, когда он вступал в бой, с этого топора во все стороны летела алая кровь. Друг Дональда полурослик Тим Рутфилд как-то заметил, что топор настолько острый, что мог бы сделать вдовами добрую половину женатых женщин на Фаэруне. Чёрный Дональд усмехнулся в ответ и ответил, что его топор такой острый, что он может прорубить мужа насквозь и дойти до его деревни, чтобы убить и его вдову.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage: 1d12 + 3
-Attack Bonus:  +3 
-Enchantment:  +3
-  Keen: Increases chance of scoring a critical hit
-  Chaotic: +2d6 damage against lawful creatures. Counts as a chaotic-aligned weapon.
-Damage Type:  Slashing
-Weight:  20 lb.
-Required Feat:  Martial Weapon, Axe
-Type:  Two-handed~
+Урон: 1d12+3
+Атака: +3
+Зачарование: +3
+Особенности:
+ Острота: увеличенный шанс нанести критический удар
+ Хаотический: +2d6 урона против законопослушных существ, считается хаотичным оружием
+Тип урона: рубящий
+Вес: 20 фунтов
+Необходимая черта: Военное оружие, Топоры
+Тип: двуручное~
 //@11339    = ~The Executioner's Wife~
 //@11340    = ~Item description can remain the same; if new description is needed put it here~
 //@11341    = ~Tale of the Executioner's Wife~
-@11342    = ~In the filthy port town of Luskan, executions are a daily occurrence and a welcome relief from the monotony of town life. This greataxe was the only possession of the town executioner, who was reported to never let the blade leave his side, giving it the name of the "Tale of the Executioner's Wife."  As the years passed, however, the town executioner eventually found a willing mistress in one of the town's brothels who seemed untroubled by his profession, and he paid her numerous visits over the following months. When the town authorities came to arrest the harlot (who was actually an accomplished thief) for thefts within the city walls, they found the city executioner in her bed and the woman nowhere to be found. The executioner was implicated in her escape, and his own axe was used to behead him in the town square. The execution had a record turnout, and many agreed that the "executioner's wife" had had her final say on his adultery.
+@11342    = ~В грязном портовом городе Лускане казни - зрелище ежедневное, позволяющее отвлечься от однообразия городской жизни. Этот топор был единственной собственностью городского палача, который, по слухам, никогда с ним не расставался, за что топор и прозвали "Историей о жене палача". Со временем, городской палач нашёл себе в одном из городских борделей женщину, которую не смущала его профессия. В следующие несколько месяцев он неоднократно её навещал. Когда городские власти пришли арестовать блудницу (которая была ещё и опытной воровкой) за кражи в городских стенах, они обнаружили в её постели палача; женщины же нигде не было видно. Палача был обвинён в содействии ей при побеге, и обезглавлен на площади его же собственным топором. Казнь собрала рекордное количество зрителей, и многие потом рассказывали о том, как "жена палача" поквиталась со своим неверным "мужем".
 
-Damage:  1d12 + 3
-Attack Bonus:  +3 
-Enchantment:  +3
-Damage Type:  Slashing
-Special:
-  Beheading: 8% chance per hit to instantly kill target (Fortitude DC 35). Undead are immune.
-Weight:  20 lb.
-Required Feat:  Martial Weapon, Axe
-Type:  Two-handed~
+Урон: 1d12+3
+Атака: +3
+Зачарование: +3
+Тип урона: рубящий
+Особенности:
+ Обезглавливание: при попадании есть 8% шанс мгновенно убить цель (успешный спабросок с УС 35 отменяет эффект). Нежить невосприимчива к обезглавливанию.
+Вес: 20 фунтов
+Необходимая черта: Военное оружие, Топоры
+Тип: двуручное~
 
 
 //@11343    = ~Club~
