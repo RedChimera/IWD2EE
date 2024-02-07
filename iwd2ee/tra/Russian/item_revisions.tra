@@ -6146,143 +6146,141 @@ Type:  One-handed~
 Вес: 7 фунтов
 Необходимая черта: Военное оружие, Топоры
 Тип: одноручное~
-@11221    = ~Mass-Slasher +5~
-@11222    = ~The most common version of the battleaxe is a stout pole about four feet in length with a single-edged, trumpet-shaped blade mounted on one end. Battleaxes are also called broad axes. 
+@11221    = ~Массовый кромсатель +5~
+@11222    = ~Самым распространённым вариантом боевого топора является трапециевидное лезвие, заточенное с одной стороны, сидящее на крепком древке около четырёх футов длиной. Боевые топоры также называют широкими топорами. Этот топор был зачарован.
+ПАРАМЕТРЫ:
 
-STATISTICS:
+Урон: 1d8+5
+Атака: +5
+Зачарование: +5
+Тип урона: рубящий
+Особенности:
+ Массовое кромсание: когда топор попадает по существу, все существа на расстоянии до 5 футов от него получают 1d8+5 рубящего урона
+ Владелец топора невосприимчив к массовому кромсанию
+Вес: 7 фунтов
+Необходимая черта: Военное оружие, Топоры
+Тип: одноручное~
+@11223    = ~Боевой топор ужасных ран +5~
+@11224    = ~Самым распространённым вариантом боевого топора является трапециевидное лезвие, заточенное с одной стороны, сидящее на крепком древке около четырёх футов длиной. Боевые топоры также называют широкими топорами. Этот топор был зачарован.
+ПАРАМЕТРЫ:
 
-Damage:  1d8  +5
-Attack Bonus:  +5 
-Enchantment:  +5
-Damage Type:  Slashing
-Special:
-  Mass-Slashing: When the axe hits a creature, all creatures within 5 feet of that creature take 1d8+5 slashing damage
-  Wielder is immune to Mass-Slashing
-Weight: 7 lb.
-Required Feat:  Martial Weapon, Axe
-Type:  One-handed~
-@11223    = ~Battleaxe of Horrid Wounds +5~
-@11224    = ~The most common version of the battleaxe is a stout pole about four feet in length with a single-edged, trumpet-shaped blade mounted on one end. Battleaxes are also called broad axes. 
-
-STATISTICS:
-
-Damage:  1d8  +5
-Attack Bonus:  +5 
-Enchantment:  +5
-Damage Type:  Slashing
-Special:
-  Horrid Wounding: Inflicts 15 additional points of damage per round for 10 rounds (Fortitude DC 30). A creature with a horrid wound cannot receive another for the duration of the effect.
-Weight: 7 lb.
-Required Feat:  Martial Weapon, Axe
-Type:  One-handed~
+Урон: 1d8+5
+Атака: +5
+Зачарование: +5
+Тип урона: рубящий
+Особенности:
+ Ужасные рваные раны: наносит 15 дополнительного урона в раунд в течение 10 раундов (успешный спасбросок стойкости с УС 30 отменяет эффект); существо под этим эффектом, не может получить его снова до истечения срока первого
+Вес: 7 фунтов
+Необходимая черта: Военное оружие, Топоры
+Тип: одноручное~
 //@11225    = ~Battleaxe of Precision +5~
-@11226    = ~The most common version of the battleaxe is a stout pole about four feet in length with a single-edged, trumpet-shaped blade mounted on one end. Battleaxes are also called broad axes. 
+@11226    = ~Самым распространённым вариантом боевого топора является трапециевидное лезвие, заточенное с одной стороны, сидящее на крепком древке около четырёх футов длиной. Боевые топоры также называют широкими топорами. Этот топор был зачарован.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d8  +5
-Attack Bonus:  +20
-Enchantment:  +5
-Damage Type:  Slashing
-Special:
-  Slashing: +1d6 slashing damage
-  Keen: Increases chance of scoring a critical hit
-Weight: 7 lb.
-Required Feat:  Martial Weapon, Axe
-Type:  One-handed~
+Урон: 1d8+5
+Атака: +20
+Зачарование: +5
+Тип урона: рубящий
+Особенности:
+ Разрубание: +1d6 рубящего урона
+ Острота: увеличенный шанс нанести критический удар
+Вес: 7 фунтов
+Необходимая черта: Военное оружие, Топоры
+Тип: одноручное~
 //@11227    = ~Throwing Axe of Shocking Burst~
 //@11228    = ~Item description can remain the same; if new description is needed put it here~
-@11229    = ~Handaxe of Precision~
-@11230    = ~The handaxe is basically a smaller version of the battleaxe. With a smaller, lighter head and a shortened shaft, the handaxe can be wielded with deadly speed and accuracy. Although it can be wielded as a primary weapon, its lighter size makes it an ideal secondary or off-handed weapon.
+@11229    = ~Ручной топорик точности~
+@11230    = ~Ручной топорик - это, по сути, уменьшенный боевой топор. Небольшой лёгкий обух и укороченная рукоять позволяют управляться с ним с невероятной скоростью и точностью. Топорик можно использовать и сам по себе, но его вес и размер делают его идеальным дополнительным оружием.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d6
-Attack Bonus:  +5 
-Damage Type:  Slashing
-Weight: 5 lb.
-Required Feat:  Martial Weapon, Axe
-Type:  One-handed~
+Урон: 1d6
+Атака: +5
+Тип урона: рубящий
+Вес: 5 фунтов
+Необходимая черта: Военное оружие, Топоры
+Тип: одноручное~
 //@11231    = ~Battleaxe +5~
 //@11232    = ~Item description can remain the same; if new description is needed put it here~
 //@11233    = ~Battleaxe +4~
-@11234    = ~Besides its superb craftsmanship, tiny runes of power can be seen etched all along the surface. It's obvious a lot of time and effort went into its creation and although not apparent at first, a slight blue glow can be seen emanating from the runes.
+@11234    = ~Этот топор не только великолепно сделан - он украшен крохотными рунами силы по всей поверхности. Даже трудно представить, сколько времени и труда ушло на изготовление такой вещи. От рун исходит слабое голубое свечение.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d8  +4
-Attack Bonus:  +4 
-Enchantment:  +4
-Damage Type:  Slashing
-Weight: 7 lb.
-Required Feat:  Martial Weapon, Axe
-Type:  One-handed~
+Урон: 1d8+4
+Атака: +4
+Зачарование: +4
+Тип урона: рубящий
+Вес: 7 фунтов
+Необходимая черта: Военное оружие, Топоры
+Тип: одноручное~
 //@11235    = ~Battleaxe +3~
 //@11236    = ~Item description can remain the same; if new description is needed put it here~
-@11237    = ~Battleaxe of Killing Sprees +4~
-@11238    = ~Besides its superb craftsmanship, tiny runes of power can be seen etched all along the surface. It's obvious a lot of time and effort went into its creation and although not apparent at first, a slight blue glow can be seen emanating from the runes.
+@11237    = ~Боевой топор серии убийств +4~
+@11238    = ~Этот топор не только великолепно сделан - он украшен крохотными рунами силы по всей поверхности. Даже трудно представить, сколько времени и труда ушло на изготовление такой вещи. От рун исходит слабое голубое свечение.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d8  +4
-Attack Bonus:  +4
-Enchantment:  +4
-Damage Type:  Slashing
-Special:
-  Killing Spree: After the wielder kills a creature with this axe (the finishing blow must have been dealt by this weapon), the wielder gains +10 damage for 1 round (cumulative)
-Weight: 7 lb.
-Required Feat:  Martial Weapon, Axe
-Type:  One-handed~
+Урон: 1d8+4
+Атака: +4
+Зачарование: +4
+Тип урона: рубящий
+Особенности:
+ Серия убийств: после того, как существо убито этим топором (завершающий удар должен быть нанесен именно им), владелец топора получает +10 урона на 1 раунд (эффект суммируется)
+Вес: 7 фунтов
+Необходимая черта: Военное оружие, Топоры
+Тип: одноручное~
 //@11239    = ~Battleaxe of Burning~
 //@11240    = ~Item description can remain the same; if new description is needed put it here~
 //@11241    = ~Masterwork Throwing Axe~
 //@11242    = ~Item description can remain the same; if new description is needed put it here~
-@11243    = ~Battleaxe of Resistance +5~
-@11244    = ~Besides its superb craftsmanship, tiny runes of power can be seen etched all along the surface. It's obvious a lot of time and effort went into its creation and although not apparent at first, a slight blue glow can be seen emanating from the runes.
+@11243    = ~Боевой топор сопротивления +5~
+@11244    = ~Этот топор не только великолепно сделан - он украшен крохотными рунами силы по всей поверхности. Даже трудно представить, сколько времени и труда ушло на изготовление такой вещи. От рун исходит слабое голубое свечение.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d8  +5
-Attack Bonus:  +5 
-Enchantment:  +5
-Damage Type:  Slashing
-Special: 
-  Resistance: 5/- Slashing Resistance
-  Resistance: 5/- Piercing Resistance
-  Resistance: 5/- Bludgeoning Resistance
-  Resistance: 5/- Missile Resistance
-Weight: 7 lb.
-Required Feat:  Martial Weapon, Axe
-Type:  One-handed~
-@11245    = ~Returning Throwing Axe +4~
-@11246    = ~This throwing axe has not only been finely balanced for use as a missile weapon but has also been the subject of significant magical enhancement. As a result, it is both more damaging and more accurate than any non-magical weapon of a similar style. 
+Урон: 1d8+5
+Атака: +5
+Зачарование: +5
+Тип урона: рубящий
+Особенности:
+ Сопротивление: 5/- сопротивления рубящему урону
+ Сопротивление: 5/- сопротивления дробящему урону
+ Сопротивление: 5/- сопротивления колющему урону
+ Сопротивление: 5/- сопротивления метательному урону
+Вес: 7 фунтов
+Необходимая черта: Военное оружие, Топоры
+Тип: одноручное~
+@11245    = ~Метательный топор возврата +4~
+@11246    = ~Этот метательный топор не только прекрасно сбалансирован для бросков, но и обладает значительным магическим зачарованием. В результате он более точён и наносит больший урон, чем любое не магическое оружие подобного типа.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d6  +4
-Attack Bonus:  +4 
-Enchantment:  +4
-Damage Type (melee):  Slashing
-Damage Type (thrown):  Missile (piercing)
-Special: 
-  Returning: Returns to user's hand once thrown
-Weight: 3 lb.
-Required Feat:  Martial Weapon, Axe
-Type:  One-handed~
-@11247    = ~Battleaxe of Force +2~
-@11248    = ~The most common version of the battleaxe is a stout pole about four feet in length with a single-edged, trumpet-shaped blade mounted on one end. Battleaxes are also called broad axes. 
+Урон: 1d6+4
+Атака: +4
+Зачарование: +4
+Тип урона: метательный (колющий)
+Тип урона: ближний бой (рубящий)
+Особенности:
+ Возвращение: после броска возвращается в руку владельца
+Вес: 3 фунта
+Необходимая черта: Военное оружие, Топоры
+Тип: одноручное~
+@11247    = ~Боевой топор силы +2~
+@11248    = ~Самым распространённым вариантом боевого топора является трапециевидное лезвие, заточенное с одной стороны, сидящее на крепком древке около четырёх футов длиной. Боевые топоры также называют широкими топорами. Этот топор был зачарован.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d8  +2
-Attack Bonus:  +2
-Enchantment:  +2
-Damage Type:  Slashing
-Special:
-  Magic Force: +1d6 magic damage
-Weight: 7 lb.
-Required Feat:  Martial Weapon, Axe
-Type:  One-hande~
+Урон: 1d8+2
+Атака: +2
+Зачарование: +2
+Тип урона: рубящий
+Особенности:
+ Магическая сила: +1d6 урона магией
+Вес: 7 фунтов
+Необходимая черта: Военное оружие, Топоры
+Тип: одноручное~
 @11249    = ~Axe of the Souls +3~
 @11250    = ~The origins of this axe have long been forgotten because every previous owner eventually went insane. This axe has the ability to peer into the very recesses of ones mind as well as that of his enemies. Not only must the user defeat an enemy with brawn, but he must also match wits with the enemy at the same time. Whoever wins this test of wills is rewarded with the life energy of the other. Lose enough times and insanity will soon follow.
 
