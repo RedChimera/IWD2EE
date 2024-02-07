@@ -312,8 +312,8 @@
 @55603=~ (Lich)~
 @55604=~, +<EXRDVAL1> damage~
 @55605=~, -<EXRDVAL1> damage penalty~
-@55606=~, minimum roll of <EXRLVAL1>~
-@55607=~, maximum roll of <EXRLVAL1>~
+@55606=~, minimum roll <EXRLVAL1>~
+@55607=~, maximum roll <EXRLVAL1>~
 
 @55701=~Spell Failed: Rewind Time had not been initialized to start tracking effects on this character. Now it has, so it should work the next time the character casts the spell.~
 @55702=~Uninjured~
