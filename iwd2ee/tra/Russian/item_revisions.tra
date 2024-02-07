@@ -6861,109 +6861,109 @@
 //@11345    = ~Cold Flame Club +2~
 //@11346    = ~Item description can remain the same; if new description is needed put it here~
 //@11347    = ~Stun Club +1~
-@11348    = ~Most clubs are stout, hardwood sticks, narrow at the grip and wider at the end. This simple weapon has been used since mankind first began using tools. Anyone can find a good stout piece of wood and swing it; hence the club's widespread use.
+@11348    = ~Большинство палиц - это крепкие дубины из твёрдых пород древесины, узкие в месте хвата и расширяющиеся к другому концу. Это простое оружие стало применяться с тех пор, как разумные существа начали использовать инструменты. Каждый может найти прочный кусок дерева и начать махать им, поэтому такое оружие получило широкое распространение. Впрочем, на эту палицу не пожалели ни заклинаний, ни труда.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d6 + 1
-Attack Bonus:  +1 
-Enchantment:  +1
-Damage Type:  Bludgeoning
-Special:
-  Stunning: 25% chance target is stunned for 1/2 combat round (Fortitude DC 15)
-Weight:  3 lb.
-Required Feat:  Simple Weapon, Mace
-Type:  One-handed~
+Урон: 1d6+1
+Атака: +1
+Зачарование: +1
+Тип урона: дробящий
+Особенности:
+ Ошеломление: с вероятностью 25% ошеломляет цель на 1/2 раунда (успешный спасбросок стойкости с УС 15 отменяет эффект)
+Вес: 3 фунта
+Необходимая черта: Простое оружие, Булавы
+Тип: одноручное~
 //@11349    = ~Sure Strike Shock Club~
 //@11350    = ~Item description can remain the same; if new description is needed put it here~
-@11351    = ~Club of the Sun~
-@11352    = ~Most clubs are stout, hardwood sticks, narrow at the grip and wider at the end. This simple weapon has been used since mankind first began using tools. Anyone can find a good stout piece of wood and swing it; hence the club's widespread use.
+@11351    = ~Палица солнца~
+@11352    = ~Большинство палиц - это крепкие дубины из твёрдых пород древесины, узкие в месте хвата и расширяющиеся к другому концу. Это простое оружие стало применяться с тех пор, как разумные существа начали использовать инструменты. Каждый может найти прочный кусок дерева и начать махать им, поэтому такое оружие получило широкое распространение. Впрочем, на эту палицу не пожалели ни заклинаний, ни труда.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d6
-Damage Type:  Bludgeoning
-Special:
-  Suncalling: 10% chance per hit to cast Sunscorch (at level 10) on target
-Weight:  3 lb.
-Required Feat:  Simple Weapon, Mace
-Type:  One-handed~
+Урон: 1d6
+Тип урона: дробящий
+Особенности:
+ Призыв солнца: при попадании есть 10% шанс что будет прочитано заклинание "Солнечный ожог" на цель (как заклинателем десятого уровня)
+Вес: 3 фунта
+Необходимая черта: Простое оружие, Булавы
+Тип: одноручное~
 //@11353    = ~Club +1~
 //@11354    = ~Item description can remain the same; if new description is needed put it here~
-@11355    = ~Club of the Ultimate Knockout +5~
-@11356    = ~Most clubs are stout, hardwood sticks, narrow at the grip and wider at the end. This simple weapon has been used since mankind first began using tools. Anyone can find a good stout piece of wood and swing it; hence the club's widespread use.
+@11355    = ~Палица совершенного нокаута +5~
+@11356    = ~Большинство палиц - это крепкие дубины из твёрдых пород древесины, узкие в месте хвата и расширяющиеся к другому концу. Это простое оружие стало применяться с тех пор, как разумные существа начали использовать инструменты. Каждый может найти прочный кусок дерева и начать махать им, поэтому такое оружие получило широкое распространение. Впрочем, на эту палицу не пожалели ни заклинаний, ни труда.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  5d6 + 5
-Attack Bonus:  +5 
-Enchantment:  +5
-Damage Type:  Nonlethal
-Weight:  3 lb.
-Required Feat:  Simple Weapon, Mace
-Type:  One-handed~
+Урон: 5d6+5
+Атака: +5
+Зачарование: +5
+Тип урона: не летальный
+Вес: 3 фунта
+Необходимая черта: Простое оружие, Булавы
+Тип: одноручное~
 //@11357    = ~Club of Destiny +5~
-@11358    = ~Most clubs are stout, hardwood sticks, narrow at the grip and wider at the end. This simple weapon has been used since mankind first began using tools. Anyone can find a good stout piece of wood and swing it; hence the club's widespread use.
+@11358    = ~Большинство палиц - это крепкие дубины из твёрдых пород древесины, узкие в месте хвата и расширяющиеся к другому концу. Это простое оружие стало применяться с тех пор, как разумные существа начали использовать инструменты. Каждый может найти прочный кусок дерева и начать махать им, поэтому такое оружие получило широкое распространение. Впрочем, на эту палицу не пожалели ни заклинаний, ни труда.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d6 + 5
-Attack Bonus:  +5 
-Enchantment:  +5
-Damage Type:  Bludgeoning
-Special:
-  Saving Throws: +5
-Weight: 3 lb.
-Required Feat:  Simple Weapon, Mace
-Type:  One-handed~
+Урон: 1d6+5
+Атака: +5
+Зачарование: +5
+Тип урона: дробящий
+Особенности:
+ Спасброски: +5
+Вес: 3 фунта
+Необходимая черта: Простое оружие, Булавы
+Тип: одноручное~
 //@11359    = ~Club of Enlightenment +5~
-@11360    = ~Most clubs are stout, hardwood sticks, narrow at the grip and wider at the end. This simple weapon has been used since mankind first began using tools. Anyone can find a good stout piece of wood and swing it; hence the club's widespread use.
+@11360    = ~Большинство палиц - это крепкие дубины из твёрдых пород древесины, узкие в месте хвата и расширяющиеся к другому концу. Это простое оружие стало применяться с тех пор, как разумные существа начали использовать инструменты. Каждый может найти прочный кусок дерева и начать махать им, поэтому такое оружие получило широкое распространение. Впрочем, на эту палицу не пожалели ни заклинаний, ни труда.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d6  +5
-Attack Bonus:  +5 
-Enchantment:  +5
-Damage Type:  Bludgeoning
-Special:
-  Strength: +4
-  Dexterity: +4
-  Constitution: +4
-  Intelligence: +4
-  Wisdom: +4
-  Charisma: +4
-Weight: 3 lb.
-Required Feat:  Simple Weapon, Mace
-Type:  One-handed~
+Урон: 1d6+5
+Атака: +5
+Зачарование: +5
+Тип урона: дробящий
+Особенности:
+ Сила: +4
+ Ловкость: +4
+ Телосложение: +4
+ Интеллект: +4
+ Мудрость: +4
+ Харизма: +4
+Вес: 3 фунта
+Необходимая черта: Простое оружие, Булавы
+Тип: одноручное~
 //@11361    = ~Club of Punishing +5~
-@11362    = ~Most clubs are stout, hardwood sticks, narrow at the grip and wider at the end. This simple weapon has been used since mankind first began using tools. Anyone can find a good stout piece of wood and swing it; hence the club's widespread use.
+@11362    = ~Большинство палиц - это крепкие дубины из твёрдых пород древесины, узкие в месте хвата и расширяющиеся к другому концу. Это простое оружие стало применяться с тех пор, как разумные существа начали использовать инструменты. Каждый может найти прочный кусок дерева и начать махать им, поэтому такое оружие получило широкое распространение. Впрочем, на эту палицу не пожалели ни заклинаний, ни труда.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d6  +5
-Attack Bonus:  +5 
-Enchantment:  +5
-Damage Type:  Bludgeoning
-Special:
-  Lawful: +4d6 damage against chaotic creatures. Counts as a lawful-aligned weapon.
-  Spell Power: Can cast Greater Command (at level 30) 3/day
-Weight: 3 lb.
-Required Feat:  Simple Weapon, Mace
-Type:  One-handed~
+Урон: 1d6+5
+Атака: +5
+Зачарование: +5
+Тип урона: дробящий
+Особенности:
+ Закон: +4d6 урона против хаотических существ, оружие считается законопослушным
+ Заклинание: владелец может прочитать заклинания "Великое повеление" раз в день (как заклинатель 30-ого уровня)
+Вес: 3 фунта
+Необходимая черта: Простое оружие, Булавы
+Тип: одноручное~
 //@11363    = ~Club of Dazing +5~
-@11364    = ~Most clubs are stout, hardwood sticks, narrow at the grip and wider at the end. This simple weapon has been used since mankind first began using tools. Anyone can find a good stout piece of wood and swing it; hence the club's widespread use.
+@11364    = ~Большинство палиц - это крепкие дубины из твёрдых пород древесины, узкие в месте хвата и расширяющиеся к другому концу. Это простое оружие стало применяться с тех пор, как разумные существа начали использовать инструменты. Каждый может найти прочный кусок дерева и начать махать им, поэтому такое оружие получило широкое распространение. Впрочем, на эту палицу не пожалели ни заклинаний, ни труда.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d6  +5
-Attack Bonus:  +5 
-Enchantment:  +5
-Damage Type:  Bludgeoning
-Special:
-  Stunning: Fortitude save (DC 37) or target is stunned for 1 second
-Weight: 3 lb.
-Required Feat:  Simple Weapon, Mace
-Type:  One-handed~
+Урон: 1d6 +5
+Атака: +5
+Зачарование: +5
+Тип урона: дробящий
+Особенности:
+ Ошеломление: при неудачном спасброске стойкости с УС 37 цель ошеломляется на 1 секунду
+Вес: 3 фунта
+Необходимая черта: Простое оружие, Булавы
+Тип: одноручное~
 @11365    = ~Unstoppable Club +3~
 @11366    = ~Most clubs are stout, hardwood sticks, narrow at the grip and wider at the end. This simple weapon has been used since mankind first began using tools. Anyone can find a good stout piece of wood and swing it; hence the club's widespread use.
 
