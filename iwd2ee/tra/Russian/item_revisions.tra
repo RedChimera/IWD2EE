@@ -7115,60 +7115,60 @@
 //@11393    = ~Belib's Everlasting Torch~
 //@11394    = ~Item description can remain the same; if new description is needed put it here~
 //@11395    = ~Belib's Amazing Everlasting Torch~
-@11396    = ~Belib the Wary was arguably the best-equipped adventurer the realms had ever known - or would have been, had he ever actually left his home on one. Just one item from his astounding list of enchanted dungeoneering equipment is his Everlasting Torch. A magical lantern fashioned in the shape of an elaborate wooden torch, the item burns with a bright orange flame that cannot be extinguished - whether dunked in water, buried under several feet of rock, or smashed over the head of a soggy marsh-troll, Belib's Everlasting Torch simply will not be put out.
+@11396    = ~Белиб Осторожный был, вероятно, самым снаряжённым искателем приключений за всю историю королевств. Вернее, мог бы им стать, если бы хоть раз на самом деле покинул свой дом. Среди внушительного списка зачарованного снаряжения был и "Вечный факел". Магический фонарь, изготовленный в форме искусного деревянного факела, горит ярким оранжевым пламенем, которое просто невозможно потушить: ни опустив факел в воду, ни засыпав его землёй и камнями, ни треснув им по голове мокрого болотного тролля.
 
-When Belib finally finished the last of his items, he crammed them all into a giant pack - enchanted to hold far more than Belib could normally carry himself, of course - and heaved it onto his shoulders, prepared for the adventure of a lifetime. As Belib crossed the threshold of his dwelling he tripped... and the tiny gnome was instantly crushed beneath his enormous backpack. The bag burst open, its contents scattering across the Waterdeep street where Belib had lived and rapidly vanishing into the hands of various good-for-nothing passersby.
+Когда Белиб доделал последний из своих зачарованных предметов, он сложил их все в большой дорожный мешок (естественно, зачарованный, чтобы Белиб мог его поднять), взвалил его на плечи и приготовился к захватывающим приключениям. Едва Белиб переступил через порог своего жилища, он споткнулся... и маленький гном был мгновенно раздавлен огромным рюкзаком. Мешок порвался, его содержимое рассыпалось на улице Вотердипа, на которой и жил Белиб, и мгновенно было растащено разными прохожими.
 
-Belib's corpse was eventually taken to a temple and raised by a kind-hearted priestess, but by then the last of Belib's enchanted items... and most of the contents of his home... were long gone. Grateful but understandably upset, Belib fashioned a number of unique magical items for the priestess before returning to his family and homeland, forever vanishing from the surface world.
+Тело Белиба отнесли в храм, где сердобольная жрица воскресила его, но к тому времени последние из зачарованных вещей Белиба (как и большая часть содержимого его дома) бесследно исчезли. Благодарный, но, по понятным причинам раздосадованный, Белиб, прежде чем вернуться на родину к семье, изготовил множество уникальных магических предметов для жрицы, после чего навсегда покинул наземный мир.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d6  +2
-Attack Bonus:  +2 
-Enchantment:  +2
-Damage Type:  Bludgeoning
-Special:
-  Flaming Burst:  +2d6 fire damage and 10% chance of +1d10 extra fire damage
-  Ignition: 50% chance to cast Beltyn's Burning Blood on a struck target
-Weight:  5 lb.
-Required Feat:  Simple Weapon, Mace
-Type:  One-handed~
+Урон: 1d6+2
+Атака: +2
+Зачарование: +2
+Тип урона: дробящий
+Особенности:
+ Вспышка пламени: +2d6 урона огнём и 10% вероятность нанести дополнительно 1d10 урона огнём
+ Поджигание: с вероятностью 50% накладывает на поражённую цель заклинание "Горящая кровь Бельтина"
+Вес: 5 фунтов
+Необходимая черта: Простое оружие, Булавы
+Тип: одноручное~
 //@11397    = ~Monkey Paw of Discipline~
-@11398    = ~The neo-orog captain, Sprawg, is the current instructor of general battle tactics for the new Legion of the Chimera recruits. As such, he needed a tool to keep his new recruits submissive and in line. Thus, the Monkey Paw of Discipline was created.
+@11398    = ~Спрог - капитан нео-орогов, является действующим инструктором основ тактики ведения боя для новобранцев Легиона Химеры. Ему был необходим инструмент, чтобы держать новобранцев в повиновении и подчинении. Так была создана "Обезьянья лапа дисциплины" была создана.
 
-The Monkey Paw of Discipline looks exactly like the name describes. It consists mainly of a large, petrified monkey's arm severed at the shoulder. At the shoulder joint, it looks like a one-handed grip was jammed into the bone and magically fused. At the opposite end, the paw is open and is the main dealer of pain. Once someone is smacked with the paw, aside from the considerable damage, there is a chance that the recipient of the discipline will suffer from heightened fear and/or confusion. Once these symptoms wear off, it is not likely that the recipient of the paw's discipline will ever be a problem in the future, especially while class is in session.
+"Обезьянья лапа дисциплины" выглядит именно так, как описывает её название. Большей частью она состоит из крупной, окаменелой руки обезьяны, отрубленной на уровне плеча. В плечевом суставе торчит рукоять, чтобы оружие было удобно держать одной рукой. Похоже, он был вкручен в кость, а затем ещё и магическим образом вплавлен. На другом конце лапа открыта и является главным источником боли. Если кого-то ударить этой лапой, помимо значительного урона, есть шанс, что получатель наказания будет испытывать усиленное чувство страха и/или замешательства. Как только этим симптомы пройдут, получатель дисциплинарного удара вряд ли станет создавать проблемы, особенно во время занятий.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d6  +3
-Attack Bonus:  +3
-Enchantment:  +3 
-Damage Type:  Bludgeoning
-Special:
-  Speed:  One extra attack per round
-  Spell Process: 15% chance of casting the spell Emotion: Fear on target for 5 rounds (Will DC 19)
-  Spell Process:  5% chance of casting the spell Confusion on target for 9 rounds (Will DC 19)
-Weight: 3 lb.
-Required Feat:  Simple Weapon, Mace
-Type:  One-handed~
+Урон: 1d6+3
+Атака: +3
+Зачарование: +3
+Тип урона: дробящий
+Особенности:
+ Скорость: одна дополнительная атака в раунд
+ Наложение заклинания: при попадании есть 15% вероятность наложить на цель заклинание "Эмоция: Страх" на 5 раундов (успешный спасбросок воли с УС 19 отменяет эффект)
+ Наложение заклинания: при попадании есть 5% вероятность наложить на цель заклинание "Замешательство" на 9 раундов (успешный спасбросок воли с УС 19 отменяет эффект)
+Вес: 3 фунта
+Необходимая черта: Простое оружие, Булавы
+Тип: одноручное~
 //@11399    = ~Monkey Paw of Extreme Prejudice~
-@11400    = ~The neo-orog captain, Sprawg, is the current instructor of general battle tactics for the new Legion of the Chimera recruits. As such, he needed a tool to keep his new recruits submissive and in line. Thus, the Monkey Paw of Extreme Prejudice was created.
+@11400    = ~Спрог - капитан нео-орогов, является действующим инструктором основ тактики ведения боя для новобранцев Легиона Химеры. Ему был необходим инструмент, чтобы держать новобранцев в повиновении и подчинении. Так была создана "Обезьянья лапа крайних предрассудков" была создана.
 
-The Monkey Paw of Extreme Prejudice looks exactly like the name describes. It consists mainly of a large, petrified monkey's arm severed at the shoulder. At the shoulder joint, it looks like a one-handed grip was jammed into the bone and magically fused. At the opposite end, the paw is open and is the main dealer of pain. Once someone is smacked with the paw, aside from the considerable damage, there is a chance that the recipient of the discipline will suffer from heightened fear and/or confusion. Once these symptoms wear off, it is not likely that the recipient of the paw's discipline will ever be a problem in the future, especially while class is in session.
+"Обезьянья лапа крайних предрассудков" выглядит именно так, как описывает её название. Большей частью она состоит из крупной, окаменелой руки обезьяны, отрубленной на уровне плеча. В плечевом суставе торчит рукоять, чтобы оружие было удобно держать одной рукой. Похоже, он был вкручен в кость, а затем ещё и магическим образом вплавлен. На другом конце лапа открыта и является главным источником боли. Если кого-то ударить этой лапой, помимо значительного урона, есть шанс, что получатель наказания будет испытывать усиленное чувство страха и/или смятения. Как только этим симптомы пройдут, получатель дисциплинарного удара вряд ли будет создавать проблемы, особенно во время занятий.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d6  +5
-Attack Bonus:  +5
-Enchantment:  +5 
-Damage Type:  Bludgeoning
-Special:
-  Speed:  Two extra attacks per round
-  Spell Process: 20% chance of casting the spell Emotion: Fear on target for 5 rounds (Will DC 26)
-  Spell Process: 10% chance of casting the spell Confusion on target for 9 rounds (Will DC 26)
-Weight: 3 lb.
-Required Feat:  Simple Weapon, Mace
-Type:  One-handed~
+Урон: 1d6+5
+Атака: +5
+Зачарование: +5
+Тип урона: дробящий
+Особенности:
+ Скорость: две дополнительных атаки в раунд
+ Наложение заклинания: при попадании есть 20% вероятность наложить на цель заклинание "Эмоция: Страх" на 5 раундов (успешный спасбросок воли с УС 26 отменяет эффект)
+ Наложение заклинания: при попадании есть 10% вероятность наложить на цель заклинание "Замешательство" на 9 раундов (успешный спасбросок воли с УС 26 отменяет эффект)
+Вес: 3 фунта
+Необходимая черта: Простое оружие, Булавы
+Тип: одноручное~
 
 
 //@11401    = ~Mace~
