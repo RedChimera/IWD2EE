@@ -7177,85 +7177,85 @@
 //@11404    = ~Item description can remain the same; if new description is needed put it here~
 //@11405    = ~Mace +1~
 //@11406    = ~Item description can remain the same; if new description is needed put it here~
-@11407    = ~Mace of Impact +2~
-@11408    = ~The mace is a direct descendant of the basic club, being nothing more than a wooden shaft with an iron head mounted on the end. In this case, the head is pyramidal and seems to glow with an inner blue light, as it sits atop a polished oak shaft. 
+@11407    = ~Булава импульса +2~
+@11408    = ~Булава является прямым потомком простой дубинки. Это деревянный брус с навершием из камня или железа. Навершия могут быть разной формы и иметь шипы, выступы или фланцы. У этой булавы навершие сделано в форме пирамидки и приглушённо сияет синим светом. Рукоять изготовлена из крепкого дуба и тщательно отполирована.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d8  +2
-Attack Bonus:  +2 
-Enchantment:  +2
-Damage Type:  Bludgeoning
-Special:
-  Impact: Increased chance of scoring a critical hit
-Weight: 12 lb.
-Required Feat:  Simple Weapon, Mace
-Type:  One-handed~
+Урон: 1d8+2
+Атака: +2
+Зачарование: +2
+Тип урона: дробящий
+Особенности:
+ Импульс: шанс критического удара увеличен
+Вес: 12 фунтов
+Необходимая черта: Простое оружие, Булавы
+Тип: одноручное~
 //@11409    = ~Mace of Opposing Elements~
 //@11410    = ~Item description can remain the same; if new description is needed put it here~
 //@11411    = ~Sure Strike Mace~
 //@11412    = ~Item description can remain the same; if new description is needed put it here~
-@11413    = ~Mace of Stupendous Stunning +4~
-@11414    = ~The mace is a direct descendant of the basic club, being nothing more than a wooden shaft with an iron head mounted on the end. In this case, the head is pyramidal and seems to glow with an inner blue light, as it sits atop a polished oak shaft. 
+@11413    = ~Булава потрясающего ошеломления +4~
+@11414    = ~Булава является прямым потомком простой дубинки. Это деревянный брус с навершием из камня или железа. Навершия могут быть разной формы и иметь шипы, выступы или фланцы. У этой булавы навершие сделано в форме пирамидки и приглушённо сияет синим светом. Рукоять изготовлена из крепкого дуба и тщательно отполирована.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d8  +4
-Attack Bonus:  +4 
-Enchantment:  +4
-Damage Type:  Bludgeoning
-Special:
-  Stupendous Stunning: 20% chance target is stunned for an entire combat round (Fortitude DC 40)
-Weight: 12 lb.
-Required Feat:  Simple Weapon, Mace
-Type:  One-handed~
-@11415    = ~Mace of Greater Dispelling~
-@11416    = ~The mace is a direct descendant of the basic club, being nothing more than a wooden shaft with an iron head mounted on the end. In this case, the head is pyramidal and seems to glow with an inner blue light, as it sits atop a polished oak shaft. 
+Урон: 1d8+4
+Атака: +4
+Зачарование: +4
+Тип урона: дробящий
+Особенности:
+ Потрясающее ошеломление: при попадании есть 20% шанс, что цель будет оглушена на весь боевой раунд (успешный спасбросок стойкости с УС 40 отменяет эффект)
+Вес: 12 фунтов
+Необходимая черта: Простое оружие, Булавы
+Тип: одноручное~
+@11415    = ~Булава великого рассеивания~
+@11416    = ~Булава является прямым потомком простой дубинки. Это деревянный брус с навершием из камня или железа. Навершия могут быть разной формы и иметь шипы, выступы или фланцы. У этой булавы навершие сделано в форме пирамидки и приглушённо сияет синим светом. Рукоять изготовлена из крепкого дуба и тщательно отполирована.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d8
-Enchantment:  +5
-Damage Type:  Bludgeoning
-Special:
-  Greater Dispelling: Dispel Magic on target (Will DC 38)
-  Sure Striking: Weapon is treated as having a +5 enchantment for the purpose of hitting creatures that require magical weapons to hit
-Weight: 12 lb.
-Required Feat:  Simple Weapon, Mace
-Type:  One-handed~
-@11417    = ~Mace of Holy Smite +1~
-@11418    = ~The mace is a direct descendant of the basic club, being nothing more than a wooden shaft with an iron head mounted on the end. In this case, the head is pyramidal and seems to glow with an inner blue light, as it sits atop a polished oak shaft. 
+Урон: 1d8
+Зачарование: +5
+Тип урона: дробящий
+Особенности:
+ Великое рассеивание: при попадании на цель накладывается заклинание "Развеять магию" (успешный спасбросок воли с УС 40 отменяет эффект)
+ Точный удар: для расчёта попадания по существам, которых можно поразить только магическим оружием, это оружие считается зачарованным +5
+Вес: 12 фунтов
+Необходимая черта: Простое оружие, Булавы
+Тип: одноручное~
+@11417    = ~Булава святого удара +1~
+@11418    = ~Булава является прямым потомком простой дубинки. Это деревянный брус с навершием из камня или железа. Навершия могут быть разной формы и иметь шипы, выступы или фланцы. У этой булавы навершие сделано в форме пирамидки и приглушённо сияет синим светом. Рукоять изготовлена из крепкого дуба и тщательно отполирована.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d8  +1
-Attack Bonus:  +1 
-Enchantment:  +5
-Damage Type:  Bludgeoning
-Special:
-  Counts as a good-aligned weapon
-  Spell Process: 33% chance of casting a variant Holy Smite on target with each successful hit (evil creatures only; 6d6 magic damage and blindness for one round; Reflex DC 30 for half and to negate blindness)
-  Sure Striking: Weapon is treated as having a +5 enchantment for the purpose of hitting creatures that require magical weapons to hit
-Weight: 12 lb.
-Required Feat:  Simple Weapon, Mace
-Type:  One-handed~
-@11419    = ~Fiery Mace of Disruption +3~
-@11420    = ~The mace is a direct descendant of the basic club, being nothing more than a wooden shaft with an iron head mounted on the end. In this case, the head is pyramidal and seems to glow with an inner blue light, as it sits atop a polished oak shaft. 
+Урон: 1d8+1
+Атака: +1
+Зачарование: +5
+Тип урона: дробящий
+Особенности:
+ Оружие считается добрым
+ Наложение заклинания: при попадании есть 33% шанс, что на цель будет наложено заклинания "Святой удар" (работает только против злых существ; 6d6 урона магией и ослепление на один раунд; успешный спасбросок реакции с УС 30 позволяет избежать ослепления и половины урона)
+ Точный удар: при атаке неуязвимых для обычного оружия существ этот топорик расценивается как оружие с уровнем волшебства +5
+Вес: 12 фунтов
+Необходимая черта: Простое оружие, Булавы
+Тип: одноручное~
+@11419    = ~Огненная булава распада +3~
+@11420    = ~Булава является прямым потомком простой дубинки. Это деревянный брус с навершием из камня или железа. Навершия могут быть разной формы и иметь шипы, выступы или фланцы. У этой булавы навершие сделано в форме пирамидки и приглушённо сияет синим светом. Рукоять изготовлена из крепкого дуба и тщательно отполирована.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d8  +3
-Attack Bonus:  +3 
-Enchantment:  +5
-Damage Type:  Bludgeoning
-Special:
-  Counts as a good-aligned weapon
-  Undead Burning: +2d6 fire damage vs. undead
-  Disruption: All undead and outsiders hit by weapon must make a Fortitude save (DC 17) or be destroyed
-  Sure Striking: Weapon is treated as having a +5 enchantment for the purpose of hitting creatures that require magical weapons to hit
-Weight: 12 lb.
-Required Feat:  Simple Weapon, Mace
-Type:  One-handed~
+Урон: 1d8+3
+Атака: +3
+Зачарование: +5
+Тип урона: дробящий
+Особенности:
+ Оружие считается добрым
+ Сжигание нежити: +2d6 урона огнём нежити
+ Распад: при попадании уничтожает нежить или выходцев из иных планов, если те провалят спасбросок стойкости с УС 17
+ Точный удар: при атаке неуязвимых для обычного оружия существ это оружие считается оружием +5
+Вес: 12 фунтов
+Необходимая черта: Простое оружие, Булавы
+Тип: одноручное~
 //@11421    = ~Mace +5~
 //@11422    = ~Item description can remain the same; if new description is needed put it here~
 //@11423    = ~Mace +4~
@@ -7264,76 +7264,77 @@ Type:  One-handed~
 //@11426    = ~Item description can remain the same; if new description is needed put it here~
 //@11427    = ~Mace +2~
 //@11428    = ~Item description can remain the same; if new description is needed put it here~
-@11429    = ~Azure Rod +1~
-@11430    = ~An azure rod is not a unique item, but certainly a rare one. Each is fashioned from a durable silvery-white alloy and capped with a large, softly glowing sphere of lapis lazuli. Intricate designs wind their way around the azure rod's shaft and head, but none serve to indicate who or what might have had a hand in their creation.
+@11429    = ~Лазурный скипетр +1~
+@11430    = ~Лазурный скипетр не уникальная, но, безусловно, довольно редкая вещь. Каждый такой скипетр отлит из прочного серебристо-белого сплава и увенчан большой, мягко светящейся сферой из лазурита. Сложные узоры вьются вокруг древка и навершия лазурного скипетра, но по ним невозможно определить, кто или что могло приложить руку к созданию такого оружия.
 
-An azure rod slowly draws in and collects the power of Goodness itself, using the energy to both harm evil creatures and invigorate the rod's bearer. Oddly enough, though, the rod functions perfectly well in any hand, whether that of the holiest of priests or darkest of scoundrels.
+Лазурный скипетр медленно собирает и втягивает в себя саму силу Добра, используя эту энергию как для нанесения вреда злым существам, так и для придания сил своему владельцу. Однако, как ни странно, скипетр прекрасно работает в любой руке: как святейшего из жрецов, так и коварнейшего из негодяев.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d8  +1
-Attack Bonus:  +1 
-Enchantment:  +1
-Damage Type:  Bludgeoning
-Special:
-  Sacred: +1d6 damage to evil creatures. Counts as a good-aligned weapon.
-  Invigoration: Each hit heals wielder 1d2 hit points
-Weight: 5 lb.
-Required Feat:  Simple Weapon, Mace
-Type:  One-handed~
-@11431    = ~Glowing Azure Rod +3~
-@11432    = ~An azure rod is not a unique item, but certainly a rare one. Each is fashioned from a durable silvery-white alloy and capped with a large, softly glowing sphere of lapis lazuli. Intricate designs wind their way around the azure rod's shaft and head, but none serve to indicate who or what might have had a hand in their creation.
+Урон: 1d8+1
+Атака: +1
+Зачарование: +1
+Тип урона: дробящий
+Особенности:
+ Святость: +1d6 урона злым существам, оружие считается добрым
+ Восстановление: каждое попадание исцеляет владельцу 1d2 пункта здоровья
+Вес: 5 фунтов
+Необходимая черта: Простое оружие, Булавы
+Тип: одноручное~
+@11431    = ~Сияющий лазурный скипетр +3~
+@11432    = ~Лазурный скипетр не уникальная, но, безусловно, довольно редкая вещь. Каждый такой скипетр отлит из прочного серебристо-белого сплава и увенчан большой, мягко светящейся сферой из лазурита. Сложные узоры вьются вокруг древка и навершия лазурного скипетра, но по ним невозможно определить, кто или что могло приложить руку к созданию такого оружия.
 
-An azure rod slowly draws in and collects the power of Goodness itself, using the energy to both harm evil creatures and invigorate the rod's bearer. Oddly enough, though, the rod functions perfectly well in any hand, whether that of the holiest of priests or darkest of scoundrels.
+Лазурный скипетр медленно собирает и втягивает в себя саму силу Добра, используя эту энергию как для нанесения вреда злым существам, так и для придания сил своему владельцу. Однако, как ни странно, скипетр прекрасно работает в любой руке: как святейшего из жрецов, так и коварнейшего из негодяев.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d8  +3
-Attack Bonus:  +3
-Enchantment:  +3
-Damage Type:  Bludgeoning
-Special:
-  Sacred: +2d6 damage to evil creatures. Counts as a good-aligned weapon.
-  Invigoration: Each hit heals wielder 1d8 hit points
-Weight: 5 lb.
-Required Feat:  Simple Weapon, Mace
-Type:  One-handed~
+Урон: 1d8+3
+Атака: +3
+Зачарование: +3
+Тип урона: дробящий
+Особенности:
+ Святость: +2d6 урона злым существам, оружие считается добрым
+ Восстановление: каждое попадание исцеляет владельцу 1d8 пунктов здоровья
+Вес: 5 фунтов
+Необходимая черта: Простое оружие, Булавы
+Тип: одноручное~
 @11433    = ~Clenched Fist +1~
 //@11434    = ~Item description can remain the same; if new description is needed put it here~
 @11435    = ~Iron Hand of Ohanion +3~
 //@11436    = ~Item description can remain the same; if new description is needed put it here~
 //@11437    = ~Moon Maiden's Blessing~
-@11438    = ~Moon Maiden's Blessing appears to be a normal mace. However, against undead the weapon is quite deadly and inflicts additional damage. 
-Little is known of the origins of the mace, but it is believed to be the creation of a priestess of Selune, the goddess of the moon. Selunites deny this pointing out that worshipers of Selune are powerless against undead. Therefore, no priestess of Selune could creature such an item. Scholars argue that this is exactly why the mace was made. To grant the wielder a power over creatures that is not normally given. Of course, this argument fails to explain how the mace could have been created.
+@11438    = ~С виду "Благословение Лунной Девы" - самая обычная булава. Однако, это оружие довольно эффективно против нежити и наносит дополнительный урон.
+О происхождении этой булавы известно немногое, но считается, что она была создана жрицей Селуны, богини Луны. Селуниты же это отрицают, указывая на то, что последователи Селуны бессильны против нежити, следовательно, ни одна жрица Селуны не могла создать подобный предмет. Учёные же возражают, что булава могла быть создана именно по этой причине - чтобы её носитель получил власть над существами, которой он обычно не обладает. Разумеется, этот аргумент не объясняет, как именно булава была создана.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage: 1d8  +2
-Attack Bonus: +2 
-Enchantment:  +4
-Damage Type:  Bludgeoning
-Special: 
-  +2d6 magic damage vs. Undead
-  Counts as a silver weapon
-Weight: 10 lb.
-Required Feat:  Simple Weapon, Mace
-Type:  One-handed~
+Урон: 1d8+2
+Атака: +2
+Зачарование: +4
+Тип урона: дробящий
+Особенности:
+ +2d6 магического урона против нежити
+ Оружие считается серебряным
+Вес: 10 фунтов
+Необходимая черта: Простое оружие, Булавы
+Тип: одноручное~
 //@11439    = ~Selune's Blessing~
-@11440    = ~Selune's Blessing appears to be a normal mace. However, against spectral undead the weapon is quite deadly and inflicts additional damage. 
-Little is known of the origins of the mace, but it is believed to be the creation of a priestess of Selune, the goddess of the moon. Selunites deny this pointing out that worshipers of Selune are powerless against undead. Therefore, no priestess of Selune could creature such an item. Scholars argue that this is exactly why the mace was made. To grant the wielder a power over creatures that is not normally given. Of course, this argument fails to explain how the mace could have been created.
+@11440    = ~С виду "Благословение Селуны" - самая обычная булава. Однако, это оружие довольно эффективно против нежити и наносит дополнительный урон.
 
-STATISTICS:
+О происхождении этой булавы известно немногое, но считается, что она была создана жрицей Селуны, богини Луны. Селуниты же это отрицают, указывая на то, что последователи Селуны бессильны против нежити, следовательно, ни одна жрица Селуны не могла создать подобный предмет. Учёные же возражают, что булава могла быть создана именно по этой причине - чтобы её носитель получил власть над существами, которой он обычно не обладает. Разумеется, этот аргумент не объясняет, как именно булава была создана.
 
-Damage: 1d8  +5
-Attack Bonus: +5 
-Enchantment:  +5
-Damage Type:  Bludgeoning
-Special: 
-  +3d6 magic damage vs. Undead
-  Counts as a silver weapon
-Weight: 10 lb.
-Required Feat:  Simple Weapon, Mace
-Type:  One-handed~
+ПАРАМЕТРЫ:
+
+Урон: 1d8+5
+Атака: +5
+Зачарование: +5
+Тип урона: дробящий
+Особенности:
+ +3d6 магического урона против нежити
+ Оружие считается серебряным
+Вес: 10 фунтов
+Необходимая черта: Простое оружие, Булавы
+Тип: одноручное~
 
 
 //@11441    = ~Morningstar~
@@ -7345,17 +7346,17 @@ Type:  One-handed~
 //@11447    = ~Lightning Star +1~
 //@11448    = ~Item description can remain the same; if new description is needed put it here~
 //@11449    = ~Morningstar of Poisoned Thorns~
-@11450    = ~The morningstar is a wooden shaft topped with a metal head made up of a spiked iron sheath. Morningstars have an overall length of about four feet. This particular one is mounted with a golden head that has been magically enhanced so as to improve performance and escape the malleability of gold. 
+@11450    = ~Моргенштерн, или утренняя звезда, состоит из деревянной рукояти и металлического навершия, снабжённого шипами. Общая длина оружия - около 4 футов. Навершие этого моргенштерна сделано из золота и зачаровано, чтобы избежать деформации драгоценного металла и увеличить эффективность оружия.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d8
-Damage Type:  Bludgeoning
-Special: 
-  Venom: +2 points of poison damage every second for 6 seconds (Fortitude DC 10 + wielder's Strength bonus)
-Weight: 8 lb.
-Required Feat:  Simple Weapon, Mace
-Type:  One-handed~
+Урон: 1d8
+Тип урона: дробящий
+Особенности:
+ Яд: +2 урона ядом каждую секунду в течение 6 секунд (успешный спасбросок стойкости с УС = (10 + модификатор силы владельца оружия) отменяет эффект)
+Вес: 8 фунтов
+Необходимая черта: Простое оружие, Булавы
+Тип: одноручное~
 //@11451    = ~Morningstar of Glory~
 //@11452    = ~Item description can remain the same; if new description is needed put it here~
 //@11453    = ~Morningstar +5~
@@ -7366,49 +7367,49 @@ Type:  One-handed~
 //@11458    = ~Item description can remain the same; if new description is needed put it here~
 //@11459    = ~Morningstar +2~
 //@11460    = ~Item description can remain the same; if new description is needed put it here~
-@11461    = ~Stunning Star of Speed +4~
-@11462    = ~The morningstar is a wooden shaft topped with a metal head made up of a spiked iron sheath. Morningstars have an overall length of about four feet. This particular one is mounted with a golden head that has been magically enhanced so as to improve performance and escape the malleability of gold. 
+@11461    = ~Ошеломляющий моргенштерн скорости +4~
+@11462    = ~Моргенштерн, или утренняя звезда, состоит из деревянной рукояти и металлического навершия, снабжённого шипами. Общая длина оружия - около 4 футов. Навершие этого моргенштерна сделано из золота и зачаровано, чтобы избежать деформации драгоценного металла и увеличить эффективность оружия.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d8  +4
-Attack Bonus:  +4
-Enchantment:  +4
-Damage Type:  Bludgeoning
-Special:
-  Speed: 2 additonal attack per combat round
-  Stunning: 25% chance target is stunned for 1/2 round (Fortitude DC 30)
-Weight: 8 lb.
-Required Feat:  Simple Weapon, Mace
-Type:  One-handed~
-@11463    = ~Star of Quills +2~
-@11464    = ~The morningstar is a wooden shaft topped with a metal head made up of a spiked iron sheath. Morningstars have an overall length of about four feet. This particular one is mounted with a golden head that has been magically enhanced so as to improve performance and escape the malleability of gold. 
+Урон: 1d8+4
+Атака: +4
+Зачарование: +4
+Тип урона: дробящий
+Особенности:
+ Скорость: 2 дополнительные атаки в раунд
+ Ошеломление: при попадании есть 25% шанс ошеломить цель на 1/2 раунда (успешный спасбросок стойкости с УС 30 отменяет эффект)
+Вес: 8 фунтов
+Необходимая черта: Простое оружие, Булавы
+Тип: одноручное~
+@11463    = ~Моргенштерн игл +2~
+@11464    = ~Моргенштерн, или утренняя звезда, состоит из деревянной рукояти и металлического навершия, снабжённого шипами. Общая длина оружия - около 4 футов. Навершие этого моргенштерна сделано из золота и зачаровано, чтобы избежать деформации драгоценного металла и увеличить эффективность оружия.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d8  +2
-Attack Bonus:  +2 
-Enchantment:  +2
-Damage Type:  Bludgeoning
-Special:
-  Wounding: Causes 5 hit points of damage per round for 10 rounds. Multiple wounds are cumulative. (Fortitude DC 20)
-Weight: 8 lb.
-Required Feat:  Simple Weapon, Mace
-Type:  One-handed~
+Урон: 1d8+2
+Атака: +2
+Зачарование: +2
+Тип урона: дробящий
+Особенности:
+ Рваные раны: наносит 5 пунктов урона за раунд в течение 10 раундов. Эффект нескольких ранений складывается (успешный спасбросок стойкости с УС 20 отменяет эффект)
+Вес: 8 фунтов
+Необходимая черта: Простое оружие, Булавы
+Тип: одноручное~
 //@11465    = ~Morningstar of the Eternal +3~
-@11466    = ~The morningstar is a wooden shaft topped with a metal head made up of a spiked iron sheath. Morningstars have an overall length of about four feet. This particular one is mounted with a golden head that has been magically enhanced so as to improve performance and escape the malleability of gold.
+@11466    = ~Моргенштерн, или утренняя звезда, состоит из деревянной рукояти и металлического навершия, снабжённого шипами. Общая длина оружия - около 4 футов. Навершие этого моргенштерна сделано из золота и зачаровано, чтобы избежать деформации драгоценного металла и увеличить эффективность оружия.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d8  +3
-Attack Bonus:  +3 
-Enchantment:  +3
-Damage Type:  Bludgeoning
-Special:
-  Vampiric: 50% chance of 2d4 hit points drained from target and added to wielder (Fortitude DC 19 + wielder's Constitution bonus)
-Weight: 8 lb.
-Required Feat:  Simple Weapon, Mace
-Type:  One-handed~
+Урон: 1d8+3
+Атака: +3
+Зачарование: +3
+Тип урона: дробящий
+Особенности:
+ Вампиризм: при попадании есть 50% шанс вытянуть 2d4 пунктов здоровья у цели и добавить их владельцу (успешный спасбросок стойкости с УС = (19 + модификатор телосложения владельца) отменяет эффект)
+Вес: 8 фунтов
+Необходимая черта: Простое оружие, Булавы
+Тип: одноручное~
 //@11467    = ~Corrosive Star +2~
 //@11468    = ~Item description can remain the same; if new description is needed put it here~
 //@11469    = ~Morningstar of Thorns +1~
