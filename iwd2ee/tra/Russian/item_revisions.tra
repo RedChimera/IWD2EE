@@ -96,7 +96,7 @@
 Особенности:
  Находясь под воздействием заклинания "Каменная кожа", владелец получает 5/- сопротивления физическому урону
 Вес: 1 фунт
-Требования: Мудрость 13+~
+Требования: Мудрость 13~
 //@10042    = ~Druid's Stone of Thorns~
 @10043    = ~Разные виды этих камней песочного цвета изготавливались друидами, следящими за границами пустыни Анаурох, но именно этот камень принадлежал Теону, который, как считается, и организовал слежку за пустыней из-за предзнаменований, полученных им от зимних ветров. Когда Аталаклис Потерянный в конце концов пересёк границы пустыни Анаурох, Теон собрал своих друидов и вступил в бой с Аталаклисом на песках. Несмотря на силу друидских камней, Аталаклис победил всех друидов и превратил их тела в песок, а затем собрал их камни и сложил их в кучу в качестве предупреждения. Он продолжил свой путь на запад, пока его не нашёл старый герцог Хольза Эльд, и они встретились в битве из-за преступлений Аталаклиса против Плачущей Королевы.
 
@@ -105,7 +105,7 @@
 Особенности:
  Находясь под воздействием заклинания "Каменная кожа", владелец получает 10/- сопротивления физическому урону, и враги, поражающие владельца в ближнем бою получают 2d4 колющего урона
 Вес: 1 фунт
-Требования: Мудрость 13+~
+Требования: Мудрость 13~
 //@10044    = ~Eye of the Storm~
 @10045    = ~/*На воющем севере Долины Ледяного Ветра бывает трудно успокоиться перед битвой... или оставаться невозмутимым, будучи окружённым врагами. Эти простые медальоны несут на себе небольшое благословение, которое позволяет солдату обрести спокойствие даже в разгар боя, давая ему шанс оставаться стойким перед лицом будущих испытаний. Эти медальоны высоко ценятся солдатами, имеющими дело с Утгардтом, особенно когда торговля заканчивается неудачей, и кажется, что вот-вот прольётся кровь.
 
@@ -7413,234 +7413,234 @@
 //@11467    = ~Corrosive Star +2~
 //@11468    = ~Item description can remain the same; if new description is needed put it here~
 //@11469    = ~Morningstar of Thorns +1~
-@11470    = ~The morningstar is a wooden shaft topped with a metal head made up of a spiked iron sheath. Morningstars have an overall length of about four feet. This particular one is mounted with a golden head that has been magically enhanced so as to improve performance and escape the malleability of gold. 
+@11470    = ~Моргенштерн, или утренняя звезда, состоит из деревянной рукояти и металлического навершия, снабжённого шипами. Общая длина оружия - около 4 футов. Навершие этого моргенштерна сделано из золота и зачаровано, чтобы избежать деформации драгоценного металла и увеличить эффективность оружия.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d8  +1
-Attack Bonus:  +1
-Enchantment:  +1 
-Damage Type:  Bludgeoning
-Special:
-  Spray Thorns: Once per day, can release thorns which deal 3d10 piercing damage (Reflex DC 18) in a cone.
-Weight: 8 lb.
-Required Feat:  Simple Weapon, Mace
-Type:  One-handed~
+Урон: 1d8+1
+Атака: +1
+Зачарование: +1
+Тип урона: дробящий
+Особенности:
+ Облако шипов: раз в день может выпустить шипы конусом, которые наносят 3d10 колющего урона (успешный спасбросок реакции с УС 18 позволяет избежать урона).
+Вес: 8 фунтов
+Необходимая черта: Простое оружие, Булавы
+Тип: одноручное~
 //@11471    = ~Flaming Star +1~
 //@11472    = ~Item description can remain the same; if new description is needed put it here~
 //@11473    = ~Morningstar of Warding +1~
-@11474    = ~The morningstar is a wooden shaft topped with a metal head made up of a spiked iron sheath. Morningstars have an overall length of about four feet. This particular one is mounted with a golden head that has been magically enhanced so as to improve performance and escape the malleability of gold. 
+@11474    = ~Моргенштерн, или утренняя звезда, состоит из деревянной рукояти и металлического навершия, снабжённого шипами. Общая длина оружия - около 4 футов. Навершие этого моргенштерна сделано из золота и зачаровано, чтобы избежать деформации драгоценного металла и увеличить эффективность оружия.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d8  +1
-Attack Penalty: -1
-Enchantment:  +1
-Damage Type:  Bludgeoning
-Special:
-  Generic Armor Bonus: +2
-Weight: 8 lb.
-Required Feat:  Simple Weapon, Mace
-Type:  One-handed~
-@11475    = ~Morningstar of Misfortune +1~
-@11476    = ~The morningstar is a wooden shaft topped with a metal head made up of a spiked iron sheath. Morningstars have an overall length of about four feet. This particular one is mounted with a golden head that has been magically enhanced so as to improve performance and escape the malleability of gold.
+Урон: 1d8+1
+Атака: +1
+Зачарование: +1
+Тип урона: дробящий
+Особенности:
+ Класс защиты: +2 (общий)
+Вес: 8 фунтов
+Необходимая черта: Простое оружие, Булавы
+Тип: одноручное~
+@11475    = ~Моргенштерн несчастья +1~
+@11476    = ~Моргенштерн, или утренняя звезда, состоит из деревянной рукояти и металлического навершия, снабжённого шипами. Общая длина оружия - около 4 футов. Навершие этого моргенштерна сделано из золота и зачаровано, чтобы избежать деформации драгоценного металла и увеличить эффективность оружия.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d8  +1
-Attack Bonus:  +1 
-Enchantment:  +1
-Damage Type:  Bludgeoning
-Special:
-  Misfortune: Each hit gives the target -1 luck for 3 rounds (cumulative, no save)
-Weight: 8 lb.
-Required Feat:  Simple Weapon, Mace
-Type:  One-handed~
+Урон: 1d8+1
+Атака: +1
+Зачарование: +1
+Тип урона: дробящий
+Особенности:
+ Несчастье: каждое попадание снижает удачу цели на 1 на 3 раунда (складывается, спасброска нет)
+Вес: 8 фунтов
+Необходимая черта: Простое оружие, Булавы
+Тип: одноручное~
 //@11477    = ~Holy Morningstar +1~
-@11478    = ~The morningstar is a wooden shaft topped with a metal head made up of a spiked iron sheath. Morningstars have an overall length of about four feet. This particular one is mounted with a golden head that has been magically enhanced so as to improve performance and escape the malleability of gold.
+@11478    = ~Моргенштерн, или утренняя звезда, состоит из деревянной рукояти и металлического навершия, снабжённого шипами. Общая длина оружия - около 4 футов. Навершие этого моргенштерна сделано из золота и зачаровано, чтобы избежать деформации драгоценного металла и увеличить эффективность оружия.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d8  +1
-Attack Bonus:  +1 
-Enchantment:  +1
-Damage Type:  Bludgeoning
-Special:
-  Holy: +2d6 damage to evil creatures. Counts as a good-aligned weapon.
-Weight: 8 lb.
-Required Feat:  Simple Weapon, Mace
-Type:  One-handed~
-@11479    = ~Morning Glory +2~
-@11480    = ~Morning Glory is a finely crafted weapon. The head is constructed of mithril with blunted steel spikes of a golden color. The haft is fashioned from highly polished oak with a reinforced steel center. The pommel of the weapon is capped with a seal depicting the rising sun. 
+Урон: 1d8+1
+Атака: +1
+Зачарование: +1
+Тип урона: дробящий
+Особенности:
+ Святость: +2d6 урона злым существам, оружие считается добрым
+Вес: 8 фунтов
+Необходимая черта: Простое оружие, Булавы
+Тип: одноручное~
+@11479    = ~Утренняя слава +2~
+@11480    = ~Моргенштерн "Утренняя слава" - изящно сделанное оружие. Шар навершия отлит из мифрила, а затупленные и окрашенные в золото шипы - стальные. Рукоять сработана из тщательно отполированного дуба и укреплена стальным сердечником. На рукояти виден оттиск восходящего солнца.
 
-This was once the favored weapon of a priest of Lathander, the morning lord, the god of renewal and rebirth. It is renowned for its healing abilities. The weapon can cast Restoration thrice per day or Cure Critical Wounds once per day.
+Когда-то этот моргенштерн был излюбленным оружием жреца бога Латандера, Владыки Утра, бога обновления и перерождения. Он славится своими целительными способностями и дарует возможность трижды в день прочесть заклинание "Восстановление" или же раз в день сотворить заклинание "Исцеление критических ран".
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d8  +2
-Attack Bonus:  +2
-Enchantment:  +2
-Damage Type:  Bludgeoning
-Special:
-  Sunscorch and Sunbeam deal 40% more damage when cast by the wielder
-  The wielder's healing spells and abilities heal an additional 20 hit points
-  Spell Power: Can cast Restoration (at level 10) thrice per day
-  Spell Power: Can cast Cure Critical Wounds (at level 20) once per day
-Weight: 8 lb.
-Required Feat:  Simple Weapon, Mace
-Type:  One-handed~
-@11481    = ~Lathander's Gift +5~
-@11482    = ~Lathander's Gift is a finely crafted weapon. The head is constructed of mithril with blunted steel spikes of a golden color. The haft is fashioned from highly polished oak with a reinforced steel center. The pommel of the weapon is capped with a seal depicting the rising sun.
+Урон: 1d8 +2
+Атака: +2
+Зачарование: +2
+Тип урона: дробящий
+Особенности:
+ Заклинания "Солнечный ожог" и "Солнечный луч", прочитанные владельцем оружия наносят на 40% больше урона
+ Целительные заклинания, прочитанные владельцем оружия восстанавливают дополнительно 20 пунктов здоровья
+ Заклинание: владелец оружия может три раза в день прочитать заклинание "Восстановление" (как заклинатель десятого уровня)
+ Заклинание: владелец оружия может три раза в день прочитать заклинание "Исцеление критических ран" (как заклинатель 20-ого уровня)
+Вес: 8 фунтов
+Необходимая черта: Простое оружие, Булавы
+Тип: одноручное~
+@11481    = ~Дар Латандера +5~
+@11482    = ~Моргенштерн "Дар Латандера" - изящно сделанное оружие. Шар навершия отлит из мифрила, а затупленные и окрашенные в золото шипы - стальные. Рукоять сработана из тщательно отполированного дуба и укреплена стальным сердечником. На рукояти виден оттиск восходящего солнца.
 
-This was once the favored weapon of a priest of Lathander, the morning lord, the god of renewal and rebirth. It is renowned for its abilities. The weapon can Heal thrice per day or Greater Shield of Lathander once per day.
+Когда-то этот моргенштерн был излюбленным оружием жреца бога Латандера, Владыки Утра, бога обновления и перерождения. Он славится своими целительными способностями и дарует возможность трижды в день прочесть заклинание "Исцеление" или же раз в день сотворить заклинание "Великий щит Латандера".
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d8  +5
-Attack Bonus:  +5
-Enchantment:  +5
-Damage Type:  Bludgeoning
-Special:
-  Sunscorch and Sunbeam deal 60% more damage when cast by the wielder
-  The wielder's healing spells and abilities heal an additional 30 hit points
-  Spell Power: Can cast Heal (at level 20) thrice per day
-  Spell Power: Can cast Greater Shield of Lathander (at level 30) once per day
-Weight: 8 lb.
-Required Feat:  Simple Weapon, Mace
-Type:  One-handed~
-@11483    = ~Talona's Gift +2~
-@11484    = ~The morningstar is a wooden shaft topped with a metal head made up of a spiked iron sheath. Morningstars have an overall length of about four feet. Some such weapons have a round, oval, or cylindrical shaped head studded with spikes. Extending from most morningstar heads, regardless of design, is a long point for thrusting. 
+Урон: 1d8+5
+Атака: +5
+Зачарование: +5
+Тип урона: дробящий
+Особенности:
+ Заклинания "Солнечный ожог" и "Солнечный луч", прочитанные владельцем оружия наносят на 60% больше урона
+ Целительные заклинания, прочитанные владельцем оружия восстанавливают дополнительно 30 пунктов здоровья
+ Заклинание: владелец оружия может три раза в день прочитать заклинание "Исцеление" (как заклинатель 20-ого уровня)
+ Заклинание: владелец оружия может три раза в день прочитать заклинание "Великий щит Латандера" (как заклинатель 30-ого уровня)
+Вес: 8 фунтов
+Необходимая черта: Простое оружие, Булавы
+Тип: одноручное~
+@11483    = ~Дар Талоны +2~
+@11484    = ~Моргенштерн, или утренняя звезда, состоит из деревянной рукояти и металлического навершия, снабжённого шипами. Общая длина оружия - около 4 футов. Моргенштерн, или утренняя звезда, состоит из деревянной рукояти и металлического навершия, снабжённого шипами. Общая длина оружия - около 4 футов. Навершие может иметь круглую, овальную или цилиндрическую форму, но всегда снабжено шипами и имеет длинную иглу, предназначенную для нанесения колющих ударов.
 
-This particular weapon was apparantly created for use by some Talonite cleric, but was lost over the years. It is now the personal weapon of the bugbear leader, Guthma... until you slew him, that is.
+Это оружие, судя по всему, было создано каким-то жрецом Талоны, но со временем было утеряно. Теперь оно является личным оружием вождя багбиров Гутмы... то есть являлось, пока тот не был убит тобой.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d8  +2
-Attack Bonus:  +2
-Enchantment:  +2
-Damage Type:  Bludgeoning
-Special:
-  Venom: +2 points of poison damage every second for 6 seconds (Fortitude DC 10)
-Weight: 8 lb.
-Required Feat:  Simple Weapon, Mace
-Type:  One-handed~
-@11485    = ~Star of Talona +5~
-@11486    = ~The morningstar is a wooden shaft topped with a metal head made up of a spiked iron sheath. Morningstars have an overall length of about four feet. Some such weapons have a round, oval, or cylindrical shaped head studded with spikes. Extending from most morningstar heads, regardless of design, is a long point for thrusting.
+Урон: 1d8+2
+Атака: +2
+Зачарование: +2
+Тип урона: дробящий
+Особенности:
+ Яд: +2 урона ядом каждую секунду в течение 6 секунд (успешный спасбросок стойкости с УС 10 отменяет эффект)
+Вес: 8 фунтов
+Необходимая черта: Простое оружие, Булавы
+Тип: одноручное~
+@11485    = ~Звезда Талоны +5~
+@11486    = ~Моргенштерн, или утренняя звезда, состоит из деревянной рукояти и металлического навершия, снабжённого шипами. Общая длина оружия - около 4 футов. Моргенштерн, или утренняя звезда, состоит из деревянной рукояти и металлического навершия, снабжённого шипами. Общая длина оружия - около 4 футов. Навершие может иметь круглую, овальную или цилиндрическую форму, но всегда снабжено шипами и имеет длинную иглу, предназначенную для нанесения колющих ударов.
 
-This particular weapon was apparantly created for use by some Talonite cleric, but was lost over the years. It is now the personal weapon of the bugbear leader, Guthma... until you slew him, that is.
+Это оружие, судя по всему, было создано каким-то жрецом Талоны, но со временем было утеряно. Теперь оно является личным оружием вождя багбиров Гутмы... то есть являлось, пока тот не был убит тобой.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d8  +5
-Attack Bonus:  +5
-Enchantment:  +5
-Damage Type:  Bludgeoning
-Special:
-  Vicious Spikes: +2d4 piercing damage
-  Venom: +4 points of poison damage every second for 6 seconds (Fortitude DC 22)
-Weight: 8 lb.
-Required Feat:  Simple Weapon, Mace
-Type:  One-handed~
+Урон: 1d8+5
+Атака: +5
+Зачарование: +5
+Тип урона: дробящий
+Особенности:
+ Жестокие шипы: +2d4 колющего урона
+ Яд: +4 урона ядом каждую секунду в течение 6 секунд (успешный спасбросок стойкости с УС 22 отменяет эффект)
+Вес: 8 фунтов
+Необходимая черта: Простое оружие, Булавы
+Тип: одноручное~
 
 
 //@11487    = ~Flail~
 //@11488    = ~Item description can remain the same; if new description is needed put it here~
 //@11489    = ~Flail +1~
 //@11490    = ~Item description can remain the same; if new description is needed put it here~
-@11491    = ~Skullflail +2~
-@11492    = ~Skullflail, or "The Flail of Teeth" as it is more commonly known, was constructed in 1035 DR for the barbarian warlord Wychgar. During a battle in the northern wastes which became known as Hallowed Pass, Wychgar lost his three brothers to the orc army led by Kraag the Mighty. Wychgar was distraught and during the night he wandered the battlefield looking for their bodies to take away for proper burial. He stumbled across them and was visited by the brothers' spirits who were trapped between the land of the living and the land of the dead. Unable to help them leave he had their souls stored in the flail with the help of a shaman.
+@11491    = ~Цеп Черепов +2~
+@11492    = ~Цеп черепов, также известный как Зубастый цеп, изготовили в 1035 ЛД для варварского военачальника Викгара. Он потерял трёх братьев в битве на северных пустошах, которые теперь называют Священным Перевалом, против армии орков под предводительством Краага Могучего. Снедаемый безграничной печалью, ночами Викгар бродил по полю боя, разыскивая их тела, чтобы похоронить должным образом. Наткнувшись на них, он встретился с духами братьев, которые томились на перепутье между миром живых и мёртвых. Не в силах помочь им, воин с помощью шамана поместил их души в цеп.
 
-The three heads of the flail are his brother's skulls, which are attached to the shaft by silver chains. The three skull-heads grin maniacally at their new life. When the flail is used in combat the three heads bite the target, tearing and rendering flesh.
+Вместо шипованных шаров к рукояти на серебряных цепях подвешены три черепа братьев Викгара. Они жутко скалятся, ухмыляясь своей новой жизни. В бою они больно кусают цель, разрывая плоть.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d8  +2
-Attack Bonus:  +2 
-Enchantment:  +2
-Damage Type:  Bludgeoning
-Special:
-  Biting Skulls: +3d2 piercing damage and 10% chance of +3d4 extra piercing damage
-Weight:  4 lb.
-Required Feat:  Martial Weapon, Flail
-Type:  One-handed~
-@11493    = ~Skullflail +4~ //HoF
-@11494    = ~Skullflail, or "The Flail of Teeth" as it is more commonly known, was constructed in 1035 DR for the barbarian warlord Wychgar. During a battle in the northern wastes which became known as Hallowed Pass, Wychgar lost his three brothers to the orc army led by Kraag the Mighty. Wychgar was distraught and during the night he wandered the battlefield looking for their bodies to take away for proper burial. He stumbled across them and was visited by the brothers' spirits who were trapped between the land of the living and the land of the dead. Unable to help them leave he had their souls stored in the flail with the help of a shaman.
+Урон: 1d8+2
+Атака: +2
+Зачарование: +2
+Тип урона: дробящий
+Особенности:
+ Кусающие черепа: +3d2 колющего урона, и есть 10% шанс нанести дополнительно 3d4 колющего урона
+Вес: 4 фунта
+Необходимая черта: Военное оружие, Цепы
+Тип: одноручное~
+@11493    = ~Цеп Черепов +4~ //HoF
+@11494    = ~Цеп черепов, также известный как Зубастый цеп, изготовили в 1035 ЛД для варварского военачальника Викгара. Он потерял трёх братьев в битве на северных пустошах, которые теперь называют Священным Перевалом, против армии орков под предводительством Краага Могучего. Снедаемый безграничной печалью, ночами Викгар бродил по полю боя, разыскивая их тела, чтобы похоронить должным образом. Наткнувшись на них, он встретился с духами братьев, которые томились на перепутье между миром живых и мёртвых. Не в силах помочь им, воин с помощью шамана поместил их души в цеп.
 
-The three heads of the flail are his brother's skulls, which are attached to the shaft by silver chains. The three skull-heads grin maniacally at their new life. When the flail is used in combat the three heads bite the target, tearing and rendering flesh.
+Вместо шипованных шаров к рукояти на серебряных цепях подвешены три черепа братьев Викгара. Они жутко скалятся, ухмыляясь своей новой жизни. В бою они больно кусают цель, разрывая плоть.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d8  +4
-Attack Bonus:  +4 
-Enchantment:  +4
-Damage Type:  Bludgeoning
-Special:
-  Biting Skulls: +3d4 piercing damage and 30% chance of +3d8 extra piercing damage
-Weight:  4 lb.
-Required Feat:  Martial Weapon, Flail
-Type:  One-handed~
+Урон: 1d8+4
+Атака: +4
+Зачарование: +4
+Тип урона: дробящий
+Особенности:
+ Кусающие черепа: +3d4 колющего урона, и есть 10% шанс нанести дополнительно 3d8 колющего урона
+Вес: 4 фунта
+Необходимая черта: Военное оружие, Цепы
+Тип: одноручное~
 //@11495    = ~Poisoned Blood Flail +2~
-@11496    = ~The flail is a sturdy wooden handle attached to an iron rod, a wooden rod with spikes, or a spiked iron ball. Between the handle and its implement is either a hinge or chain link. The weapon has been enhanced magically, effectively forming a bond between the weapon and its wielder.
+@11496    = ~Цеп - это железный прут, деревянный брус с шипами или металлический шипованный шар, прикреплённый к массивной деревянной рукояти с помощью цепи или петли. Первоначально цеп был орудием для молотьбы зерна. Этот цеп зачарован, а потому лучше слушается своего владельца.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d8  +2
-Attack Bonus:  +2 
-Enchantment:  +2
-Damage Type:  Bludgeoning
-Special:
-  Venom: +2 points of poison damage every second for 6 seconds (Fortitude DC 18 + wielder's Strength bonus)
-  Wounding: +2 additional points of damage per round for 10 rounds (Fortitude DC 18 + wielder's Strength bonus)
-Weight: 5 lb.
-Required Feat:  Martial Weapon, Flail
-Type:  One-handed~
+Урон: 1d8+2
+Атака: +2
+Зачарование: +2
+Тип урона: дробящий
+Особенности:
+ Яд: +2 урона ядом каждую секунду в течение 6 секунд, (успешный спасбросок стойкости с УС = (18 + модификатор силы владельца) отменяет эффект)
+ Рваные раны: наносит 2 дополнительного урона в раунд в течение 10 раундов (успешный спасбросок стойкости с УС = (18 + модификатор силы владельца) отменяет эффект)
+Вес: 5 фунтов
+Необходимая черта: Военное оружие, Цепы
+Тип: одноручное~
 //@11497    = ~Flail of Shocking Cold +2~
 //@11498    = ~Item description can remain the same; if new description is needed put it here~
 //@11499    = ~Stun Flail +1~
-@11500    = ~The flail is a sturdy wooden handle attached to an iron rod, a wooden rod with spikes, or a spiked iron ball. Between the handle and its implement is either a hinge or chain link. The weapon has been enhanced magically, effectively forming a bond between the weapon and its wielder.
+@11500    = ~Цеп - это железный прут, деревянный брус с шипами или металлический шипованный шар, прикреплённый к массивной деревянной рукояти с помощью цепи или петли. Первоначально цеп был орудием для молотьбы зерна. Этот цеп зачарован, а потому лучше слушается своего владельца.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d8  +1
-Attack Bonus:  +1 
-Enchantment:  +1
-Damage Type:  Bludgeoning
-Special:
-  Stunning: 25% chance target is stunned for 1/2 combat round (Fortitude DC 12 + wielder's Strength bonus)
-Weight: 5 lb.
-Required Feat:  Martial Weapon, Flail
-Type:  One-handed~
+Урон: 1d8+1
+Атака: +1
+Зачарование: +1
+Тип урона: дробящий
+Особенности:
+ Ошеломление: при попадании с вероятностью в 25% ошеломляет цель на 1/2 раунда (успешный спасбросок стойкости с УС = (12 + модификатор силы владельца) отменяет эффект)
+Вес: 5 фунтов
+Необходимая черта: Военное оружие, Цепы
+Тип: одноручное~
 //@11501    = ~Flail of the Defender +1~
-@11502    = ~The flail is a sturdy wooden handle attached to an iron rod, a wooden rod with spikes, or a spiked iron ball. Between the handle and its implement is either a hinge or chain link. The weapon has been enhanced magically, effectively forming a bond between the weapon and its wielder.
+@11502    = ~Цеп - это железный прут, деревянный брус с шипами или металлический шипованный шар, прикреплённый к массивной деревянной рукояти с помощью цепи или петли. Первоначально цеп был орудием для молотьбы зерна. Этот цеп зачарован, а потому лучше слушается своего владельца.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d8  +1
-Attack Bonus:  +1 
-Enchantment:  +1
-Damage Type:  Bludgeoning
-Special:
-  Generic Armor Bonus: +1
-  Blunt Defense: +3 Armor Class vs. bludgeoning attacks
-Weight: 5 lb.
-Required Feat:  Martial Weapon, Flail
-Type:  One-handed~
+Урон: 1d8+1
+Атака: +1
+Зачарование: +1
+Тип урона: дробящий
+Особенности:
+ Класс защиты: +1 (общий)
+ Защита от дробящего: +3 к классу защиты против атак дробящим оружием
+Вес: 5 фунтов
+Необходимая черта: Военное оружие, Цепы
+Тип: одноручное~
 //@11503    = ~Flail of Corrosive Spikes~
 //@11504    = ~Item description can remain the same; if new description is needed put it here~
-@11505    = ~Flail of Impact +1~
-@11506    = ~The flail is a sturdy wooden handle attached to an iron rod, a wooden rod with spikes, or a spiked iron ball. Between the handle and its implement is either a hinge or chain link. The weapon has been enhanced magically, effectively forming a bond between the weapon and its wielder.
+@11505    = ~Цеп импульса +1~
+@11506    = ~Цеп - это железный прут, деревянный брус с шипами или металлический шипованный шар, прикреплённый к массивной деревянной рукояти с помощью цепи или петли. Первоначально цеп был орудием для молотьбы зерна. Этот цеп зачарован, а потому лучше слушается своего владельца.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d8  +1
-Attack Bonus:  +1
-Enchantment:  +1
-Damage Type:  Bludgeoning
-Special:
-  Impact: Increased chance of scoring a critical hit
-Weight: 5 lb.
-Required Feat:  Martial Weapon, Flail
-Type:  One-handed~
+Урон: 1d8+1
+Атака: +1
+Зачарование: +1
+Тип урона: дробящий
+Особенности:
+ Импульс: шанс критического удара увеличен
+Вес: 5 фунтов
+Необходимая черта: Военное оружие, Цепы
+Тип: одноручное~
 //@11507    = ~Flail +5~
 //@11508    = ~Item description can remain the same; if new description is needed put it here~
 //@11509    = ~Flail +4~
@@ -7649,90 +7649,90 @@ Type:  One-handed~
 //@11512    = ~Item description can remain the same; if new description is needed put it here~
 //@11513    = ~Flail +2~
 //@11514    = ~Item description can remain the same; if new description is needed put it here~
-@11515    = ~Shattering Flail +5~
-@11516    = ~The flail is a sturdy wooden handle attached to an iron rod, a wooden rod with spikes, or a spiked iron ball. Between the handle and its implement is either a hinge or chain link. The weapon was originally used as a tool for threshing grain. This flail has been enhanced magically. Runes can be seen glowing on every surface.
+@11515    = ~Сокрушающий цеп +5~
+@11516    = ~Цеп - это железный прут, деревянный брус с шипами или металлический шипованный шар, прикреплённый к массивной деревянной рукояти с помощью цепи или петли. Первоначально цеп был орудием для молотьбы зерна. Этот цеп зачарован. По всей его поверхности поблёскивают руны.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d8  +5
-Attack Bonus:  +5
-Enchantment:  +5
-Damage Type:  Bludgeoning
-Special: 
-  Deals x4 damage on a critical hit
-Weight: 5 lb.
-Required Feat:  Martial Weapon, Flail
-Type:  One-handed~
-@11517    = ~Flail of Massive Weight +5~
-@11518    = ~This flail is far heavier than it looks. Most of the weight comes from the ball. The chain is made from adamantine so that it will not break from the weight.
+Урон: 1d8+5
+Атака: +5
+Зачарование: +5
+Тип урона: дробящий
+Особенности:
+ Критический урон увеличен в четыре раза
+Вес: 5 фунтов
+Необходимая черта: Военное оружие, Цепы
+Тип: одноручное~
+@11517    = ~Цеп огромного веса +5~
+@11518    = ~Этот цеп гораздо тяжелее, чем кажется. Большая часть его веса приходится на шар. Цепь сделана из адамантина, чтобы выдерживать такой шар.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d8  +5
-Attack Bonus:  +5 
-Enchantment:  +5
-Damage Type:  Bludgeoning
-Special:
-  Massive Weight: Deals +4d6 bludgeoning damage when swung down on a creature's head; creatures too large to be crushed are unaffected.
-Weight: 120 lb.
-Required Feat:  Martial Weapon, Flail
-Type:  One-handed
-Minimum Strength of 26 Required~
+Урон: 1d8+5
+Атака: +5
+Зачарование: +5
+Тип урона: дробящий
+Особенности:
+ Огромный вес: Наносит +4d6 дробящего урона, когда с размаху обрушивается на голову существа; существа, слишком большие для того чтобы цеп попал им в голову игнорируют этот эффект
+Вес: 120 фунтов
+Необходимая черта: Военное оружие, Цепы
+Тип: одноручное
+Требования: Сила 26~
 //@11519    = ~Flail of the Elements~
 //@11520    = ~Item description can remain the same; if new description is needed put it here~
-@11521    = ~Flail of Bludgeoning Weakness +3~
-@11522    = ~The flail is a sturdy wooden handle attached to an iron rod, a wooden rod with spikes, or a spiked iron ball. Between the handle and its implement is either a hinge or chain link. The weapon has been enhanced magically, effectively forming a bond between the weapon and its wielder.
+@11521    = ~Цеп дробящего ослабления +3~
+@11522    = ~Цеп - это железный прут, деревянный брус с шипами или металлический шипованный шар, прикреплённый к массивной деревянной рукояти с помощью цепи или петли. Первоначально цеп был орудием для молотьбы зерна. Этот цеп зачарован, а потому лучше слушается своего владельца.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d8  +3
-Attack Bonus:  +3 
-Enchantment:  +5
-Damage Type:  Bludgeoning
-Special:
-  Bludgeoning Weakness: Each hit lowers the target's bludgeoning resistance by 3 for 3 rounds (cumulative, no save)
-  Sure Striking: Weapon is treated as having a +5 enchantment for the purpose of hitting creatures that require magical weapons to hit
-Weight: 5 lb.
-Required Feat:  Martial Weapon, Flail
-Type:  One-handed~
+Урон: 1d8+3
+Атака: +3
+Зачарование: +5
+Тип урона: дробящий
+Особенности:
+ Дробящее ослабление: каждое попадание снижает сопротивление дробящему урону жертвы на 3 в течении трёх раундов раундов (эффект суммируется, спасброска нет)
+ Точный удар: для расчёта попадания по существам, которых можно поразить только магическим оружием, это оружие считается зачарованным +5
+Вес: 5 фунтов
+Необходимая черта: Военное оружие, Цепы
+Тип: одноручное~
 //@11523    = ~Masterwork Flail~
 //@11524    = ~Item description can remain the same; if new description is needed put it here~
-@11525    = ~Flail of Veranon +3~
-@11526    = ~Veranon is a priest long forgotten by time. Some say he was human, others demi-human, and still others claim he was of demonic origin. No one knows for sure. The only surviving clue to his identity can be found in his flail.
+@11525    = ~Цеп Веранона +3~
+@11526    = ~Веранон - священник, давно забытый временем. Одни говорят, что он был человеком, другие, что получеловеком, а третьи утверждают, что он был демонического происхождения. Никто не знает этого наверняка. Этот цеп - единственный, сохранившийся ключ к разгадке его личности.
 
-Veranon's flail is a vile looking weapon. The haft is crafted from jet black onyx with a pulsating red core. Fiery runes writhe along the length of the haft, almost as if they have a mind of their own. The haft is capped with a pommel stone, a blood red garnet. The weapon sports two heads, each the visage of an unknown but demonic looking creature. The eyes of the heads glow red and a sulpherous odor seems to emanate from the mouths. The heads appear to be crafted from lumps of coal, and yet are as hard as steel.
+"Цеп Веранона" выглядит жутко. Его рукоять вырезана из угольно чёрного оникса с пульсирующей красной сердцевиной. По всей длине рукояти выбиты огненные руны, мерцающие так, как будто они обладают собственным разумом. В навершии рукояти вделан крупный камень - багровый-красный гранат. У оружия два било: каждое сделано в виде головы неведомой, демонической твари. Глаза этих голов светятся красным, а из пастей тошнотворно воняет серой. Кажется, что эти головы сделаны из кусков угля, но при этом прочностью они не уступают стали.
 
-The weapon can only be wielded by those of evil alignment. In the hands of such an individual, the Flail of Veranon occasionally immolates its intended target. Otherwise it acts as any other flail.
+Это оружие готово служить лишь тем, кто несёт зло. В руках такого существа "Цеп Веранона" способен буквально испепелять врагов. В остальном же этот цеп работает, как и любой другой.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage: 1d8  +3
-Attack Bonus: +3
-Enchantment:  +3 
-Damage Type:  Bludgeoning
-Special:
-  Inferno: 10% chance of dealing +10d6 fire damage (10% chance for each of the two heads)
-Weight: 5 lb.
-Required Feat:  Martial Weapon, Flail
-Type:  One-handed~
-@11527    = ~Flail of the Inferno +5~
-@11528    = ~Veranon is a priest long forgotten by time. Some say he was human, others demi-human, and still others claim he was of demonic origin. No one knows for sure. The only surviving clue to his identity can be found in his flail.
+Урон: 1d8+3
+Атака: +3
+Зачарование: +3
+Тип урона: дробящий
+Особенности:
+ Инферно: есть 10% шанс нанести дополнительно 10d6 урона огнём (10% шанс для каждой из двух голов)
+Вес: 5 фунтов
+Необходимая черта: Военное оружие, Цепы
+Тип: одноручное~
+@11527    = ~Цеп инферно +5~
+@11528    = ~Веранон - священник, давно забытый временем. Одни говорят, что он был человеком, другие, что получеловеком, а третьи утверждают, что он был демонического происхождения. Никто не знает этого наверняка. Этот цеп - единственный, сохранившийся ключ к разгадке его личности.
 
-The Flail of the Inferno is a vile looking weapon. The haft is crafted from jet black onyx with a pulsating red core. Fiery runes writhe along the length of the haft, almost as if they have a mind of their own. The haft is capped with a pommel stone, a blood red garnet. The weapon sports two heads, each the visage of an unknown but demonic looking creature. The eyes of the heads glow red and a sulpherous odor seems to emanate from the mouths. The heads appear to be crafted from lumps of coal, and yet are as hard as steel.
+Цеп инферно выглядит жутко. Его рукоять вырезана из угольно чёрного оникса с пульсирующей красной сердцевиной. По всей длине рукояти выбиты огненные руны, мерцающие так, как будто они обладают собственным разумом. В навершии рукояти вделан крупный камень - багровый-красный гранат. У оружия два било: каждое сделано в виде головы неведомой, демонической твари. Глаза этих голов светятся красным, а из пастей тошнотворно воняет серой. Кажется, что эти головы сделаны из кусков угля, но при этом прочностью они не уступают стали.
 
-The weapon can only be wielded by those of evil alignment. In the hands of such an individual, the Flail of the Inferno occasionally immolates its intended target. Otherwise it acts as any other flail.
+Это оружие готово служить лишь тем, кто несёт зло. В руках такого существа "Цеп инферно" способен буквально испепелять врагов. В остальном же этот цеп работает, как и любой другой.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage: 1d8  +5
-Attack Bonus: +5
-Enchantment:  +5 
-Damage Type:  Bludgeoning
-Special:
-  Inferno: 10% chance of dealing +15d6 fire damage (10% chance for each of the two heads)
-Weight: 5 lb.
-Required Feat:  Martial Weapon, Flail
-Type:  One-handed~
+Урон: 1d8+5
+Атака: +5
+Зачарование: +5
+Тип урона: дробящий
+Особенности:
+ Инферно: есть 10% шанс нанести дополнительно 15d6 урона огнём (10% шанс для каждой из двух голов)
+Вес: 5 фунтов
+Необходимая черта: Военное оружие, Цепы
+Тип: одноручное~
 @11529    = ~The Shackles of Roa +3~
 @11530    = ~Lady Roa was a woman thrice betrayed. First by her lord father, who married her to Duke Sorim for political gain despite knowing that he would relentlessly torment young Roa. Second by her abusive husband the duke, who planted assassins amongst her handmaidens... when Roa visited her dearest brother Remin - a powerful baron - the assassins murdered him as he slept and so his lands passed to the duke. The third and final betrayal was at the hands of her sister Rana, who longed to take the duke, his riches, and eventually the royal crown for her own. Rana entwined herself in a plot with Duke Sorim to slay the king, discredit the true heir as his bastard child with Roa, and thereby steal the throne.
 
