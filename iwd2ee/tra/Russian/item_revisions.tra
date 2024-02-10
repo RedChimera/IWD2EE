@@ -7961,7 +7961,7 @@
 Вес: 7 фунтов
 Необходимая черта: Военное оружие, Молоты
 Тип: одноручное~
-@11567    = ~Молот волшебной силы~
+@11567    = ~Молот урона магией~
 @11568    = ~Боевые молоты обыкновенно изготавливают целиком из стали; этот молот - не исключение. На 18-дюймовой рукояти укреплён боёк, которым можно дробить кости. Волшебные свойства этого молота весьма полезны в бою.
 
 ПАРАМЕТРЫ:
@@ -7969,7 +7969,7 @@
 Урон: 1d8
 Тип урона: дробящий
 Особенности:
- Магическая сила: есть 50% шанс добавить 1d6 урона магией к урону от оружия
+ Урон магией: есть 50% шанс добавить 1d6 урона магией к урону от оружия
 Вес: 7 фунтов
 Необходимая черта: Военное оружие, Молоты
 Тип: одноручное~
@@ -8564,19 +8564,19 @@
 //@11686    = ~Item description can remain the same; if new description is needed put it here~
 //@11687    = ~Shortbow +1~
 //@11688    = ~Item description can remain the same; if new description is needed put it here~
-@11689    = ~Shortbow of Magic Force +1~
-@11690    = ~Shortbows were the first to be developed, although they were not called such. This is more of a default term that refers to anything which is not a long bow. Shortbow staves are about 5 ' feet long on the average. As the years passed, attempts were made to increase bow ranges. Bows were either given longer staves or flexibility was increased with no change to the length. The former resulted in what is now called the longbow. 
+@11689    = ~Короткий лук урона магией +1~
+@11690    = ~Короткие луки - первая разновидность такого оружия. Разумеется, изначально их не называли короткими - лишь сейчас этим словом обозначают луки, которые нельзя назвать длинными. Средняя длина короткого лука - 5 футов. Со временем возникла необходимость увеличить дальность стрельбы, и луки начали совершенствовать, увеличивая либо их гибкость, либо длину, последний вариант как раз привёл к появлению длинных луков.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage: +1 (missile)
-Attack Bonus: +1 
-Special:
-  Magic Force: Arrows fired from this bow deal +1 magic damage
-  Resistance: 5/- Magic Damage Resistance
-Weight: 2 lb.
-Feat Requirement:  Martial Weapon, Bow
-Type:  Two-handed~
+Урон: +1 (метательный)
+Атака: +1
+Особенности:
+ Урона магией: стрелы, выпущенные из этого лука наносят дополнительной 1 урона магией
+ Сопротивление: 5/- сопротивления урону магией
+Вес: 2 фунта
+Необходимая черта: Военное оружие, Луки
+Тип: двуручное~
 @11691    = ~Shortbow of Tripping +2~
 @11692    = ~Shortbows were the first to be developed, although they were not called such. This is more of a default term that refers to anything which is not a long bow. Shortbow staves are about 5 ' feet long on the average. As the years passed, attempts were made to increase bow ranges. Bows were either given longer staves or flexibility was increased with no change to the length. The former resulted in what is now called the longbow. 
 
