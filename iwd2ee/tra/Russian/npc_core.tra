@@ -1171,8 +1171,8 @@
 @40820=~Я чувствую запах дыма и жареного мяса. Подозреваю, что здесь разбили лагерь гоблины или орки. Они, вероятно, не будут в состоянии повышенной боевой готовности, раз это место отдыха, но думаю, что их здесь немало.~
 @40821=~Врек, ты чувствуешь других троллей?~
 @40822=~Тогда зачем его превратили в помойку?~
-@40823=~Это гоблины, Рейдж.~
-@40824=~Ценным может быть не обязательно какое-то сокровище или клад. Возможно, это часть системы снабжения - так они доставляют продовольствие своим войскам. Если это конечная часть этой системы, то это объясняет беспорядок. Но глубже в тоннелях мы можем найти место, через которое доставляют еду... а это ближе к сердцу крепости. Ближе к *лидерам* орды, Рейдж.~
+@40823=~Это гоблины, Рейг.~
+@40824=~Ценным может быть не обязательно какое-то сокровище или клад. Возможно, это часть системы снабжения - так они доставляют продовольствие своим войскам. Если это конечная часть этой системы, то это объясняет беспорядок. Но глубже в тоннелях мы можем найти место, через которое доставляют еду... а это ближе к сердцу крепости. Ближе к *лидерам* орды, Рейг.~
 @40825=~Возможно, это просто сосредоточенный запах гоблинов. Пещеры удерживают запахи, которые выветрились бы, будь мы на поверхности.~
 @40826=~Я просто пытаюсь смотреть на происходящее с оптимизмом.~
 @40827=~Хм. И правда. Это хорошая новость. Думаю, мы движемся в правильном направлении.~
@@ -1448,12 +1448,12 @@
 @41088=~Быстрее. Врек не терпелив.~
 @41089=~Этот Джермси такой раздражительный, но я не думаю, что могу его в этом винить. Должно быть, тяжело видеть, как все это происходит с твоим домом.~
 @41090=~Джермси напоминает мне меня самого, тогда, в доках. Я знаю, что значит чувствовать себя беспомощным и напуганным.~
-@41091=~Отрасти яйца, Рейдж. Ты...~
+@41091=~Будь мужиком, Рейг. Ты...~
 @41092=~Еще одно слово, и я выбью тебе все зубы, головорез... и знай, что я не шучу.~
 @41093=~Я бы хотел утешить или успокоить этого беднягу. Но я не знаю, как это сделать.~
-@41094=~Я тоже. Не вини себя за это, Рейдж.~
+@41094=~Я тоже. Не вини себя за это, Рейг.~
 @41095=~Он успокоится, когда мертвые вернутся в землю.~
-@41096=~Ты никогда не казался мне беспомощным или испуганным, Рейдж. Сердитым, несомненно, но не беспомощным.~
+@41096=~Ты никогда не казался мне беспомощным или испуганным, Рейг. Сердитым, несомненно, но не беспомощным.~
 @41097=~Джермси придется позаботиться о себе самому. У нас есть дела поважнее.~
 @41098=~Хороший совет. Давай закончим на этом.~
 @41099=~Может быть. Но я сомневаюсь. Раньше я думал, что мне станет легче, когда гоблины исчезнут. Но с момента вторжения я всегда чувствовал себя немного беспомощным... Даже когда все до единого враги лежали мертвыми вокруг нас.~
@@ -1493,78 +1493,78 @@
 @41133=~Мы не знаем, так ли это. Исаир и Мадея, возможно, отказались от участия в Кровавой Войне, но у Белхифета все еще могут быть планы на них - даже если они сами об этом не знают.~
 @41134=~Я абишай, <RACE>. Мне не нужен никакой дополнительный стимул для выполнения сделки.~
 @41135=~Меня не волнуют города смертных, но да, я бы предпочел, чтобы они сражались с танар'ри.~
-@41136=~- We must speak with Egenia's spirit -
- - Her words may prove our salvation -
- - If we know how to use them -~
-@41137=~Could you be more specific?~
-@41138=~Our salvation is pretty important to me. We'll see her shortly.~
-@41139=~I've never been good with words.~
-@41140=~I hope Egenia can fight. Another ghost on our side could come in handy.~
-@41141=~- I do not know how -
- - But there is a way to defeat the twins -
- - A way that spares our lives -
- - If not theirs -
- - Egenia is the key -
- - But we must find the lock -~
-@41142=~- Our words may fail us -
- - Warm words lost to cold wind -
- - The twins do not understand -
- - Nor do they wish to -
- - But if we make them -
- - We will find a peace of sorts -
- - Bitter and cold -
- - But peace -~
-@41143=~- Her struggles are over -
- - And her faith forbids war -
- - But words may command armies -
- - And words may stay their hand -~
-@41144=~Finally, someplace warm! I... actually... this is too warm. Damn it! I can already feel sweat on my brow.~
-@41145=~This is a welcome change from Icewind Dale. I wonder what it's like to live here... a whole world as warm as a hearth.~
-@41146=~I am going to have so many tales to tell to my clan. I wonder how many they'll even believe.~
-@41147=~I... I hear so many screams here. I've read that the yuan-ti are torturers, but... My very soul is shaking. I have never been so ready to resort to violence as I am now. We *must* cleanse this insidious temple. We cannot allow a single snake to escape retribution!~
-@41148=~I like your attitude!~
-@41149=~I'm surprised to see you so eager to kill, Sersa. You never struck me as the confrontational type.~
-@41150=~Agreed.~
-@41151=~We must proceed with caution, friend. We are outnumbered here. You might not have been present when we infiltrated the horde fortress and the ice temple, but we learned a long time ago to approach these situations with subtlety.~
-@41152=~Keep your voice down. We are not here to draw a crowd.~
-@41153=~Thank you. But... perhaps we should still be cautious. The snakes could be anywhere. I do not want to be caught off-guard.~
-@41154=~Normally, I'm not. But those voices... they change things. This place leaves no room for hesitation.~
-@41155=~Good. But... perhaps we should still be cautious. The snakes could be anywhere. I do not want to be caught off-guard.~
-@41156=~You're right. I'm sorry. You're more experienced than me, and I'll trust your judgment. But please, we must take action. If we do not bring down this temple, I could not live with myself.~
-@41157=~I'm sorry. I'll be careful. But please, we cannot let this temple stand. I could not live with myself if we did any less.~
-@41158=~I'm having trouble figuring out how to define a human.~
-@41159=~What do you mean?~
-@41160=~I assume the half-breeds here are what prompted this question?~
-@41161=~I'm not sure you can. I'm *part* human, but that's not the word people use for me.~
-@41162=~Really? It always seemed easy to me. A leg or two, some skin, less than seven eyes. Sometimes they come with a mustache.~
-@41163=~It's the half-breeds here. All of them are half-human. They're also yuan-ti, I know, but that doesn't mean their human ancestry is any less real. Their mothers were all from Kuldahar; they were born under the same tree. But here they are, in Dragon's Eye, raised by other yuan-ti and taught to worship an evil snake god.~
-@41164=~Yes. All of them are half-human. They're also yuan-ti, I know, but that doesn't mean their human ancestry is any less real. Their mothers were all from Kuldahar; they were born under the same tree. But here they are, in Dragon's Eye, raised by other yuan-ti and taught to worship an evil snake god.~
-@41165=~That's the strange thing, isn't it? All of these half-breeds are part human, too. Their mothers were all from Kuldahar; they were born under the same tree. But here they are, in Dragon's Eye, raised by other yuan-ti and taught to worship an evil snake god.~
-@41166=~I'm serious. It's starting to bother me, because I don't have a real answer.~
-@41167=~Imagine one of them was brought to Targos as a baby. The green skin would have marked them as different, and they'd probably have gotten teased a lot for it, but they could have grown up alongside my friends and I. I could have had a yuan-ti half-breed as a best friend... or even fallen in love with one. I might have even had a yuan-ti child myself, green skin and all.~
-@41168=~What really makes them different from me? It can't just be skin color. Is it just their upbringing? Is being *raised* by the yuan-ti enough to turn someone evil? Maybe *I* would be fighting for them, if I was raised here, just like those human initiates back in Chult. And if that's true... is it true for the goblins, too? The orcs? Sherincal, the duergar, a *mind flayer?*~
-@41169=~Is it true for Isair and Madae?~
-@41170=~Does it really matter? However they ended up on the side of the Legion, there's no going back now.~
-@41171=~Hard to say. I've wondered what my life would have been like if *I* had been raised by humans. But even after growing up among my kin, here I am, fighting for Targos.~
-@41172=~I don't know. I was raised by humans and ended up on the side of the Ten Towns. Maybe I'd be fighting for the Legion, if I was raised among my kin.~
-@41173=~I've been wondering the same thing. I might not have quite as much yuan-ti blood as the half-breeds here, but seeing so many people here like me, after spending so much of my life as the only one... I don't know what the difference is between me and them. Maybe there isn't one.~
-@41174=~I have yuan-ti blood, too, Reig, and yet here I am, fighting for Targos. The half-breeds here *chose* to fight for an evil cause. Their upbringing is no excuse.~
-@41175=~No one forced the half-breeds to fight for the Legion or the snakes. They're here by choice.~
-@41176=~No one grows up in isolation. Our childhoods might not *dictate* our future, but they do change where we start out, yes. And most people go along with the world they were raised in.~
-@41177=~Maybe. It's hard to pick apart nature from nurture.~
-@41178=~Humans have fought for the Legion, too, Reig. There are humans that grow up in human societies and turn out evil, just like there are drow and duergar and goblinoids who grow up alongside their kin and turn out good. Our backgrounds may influence who we are, but we are not slaves to the worlds we came from.~
-@41179=~I guess not. Maybe I'm just overthinking things. However things got where they are now, we're stuck with it... Besides, even if one of these half-breeds *could* have been on our side, we're never going to know. No time to philosophize when swords are already drawn.~
-@41180=~Right. I shouldn't give the Legion excuses. You grew up the same way as they did, but you turned out different. They could have done the same, but they didn't.~
-@41181=~And I'm glad you did.~
-@41182=~I don't know why I brought it up... I just don't see the same clear lines between us and the enemy that I used to. It's all blurred. Well, I'm glad you ended up where you did. I don't know where we'd be without you.~
-@41183=~Things used to be so much clearer. At the docks, it was simple. But now, I don't know what to think... Maybe I'm overthinking things.~
-@41184=~I guess it doesn't matter. Human or yuan-ti or something else, I'm glad you're with us. I don't know where we'd be without you.~
-@41185=~You're right. They always had a choice. They still do, really... Just like us, actually. There's nothing stopping either of us from just walking away. But here we are. *All* of us chose to fight.~
-@41186=~I don't know about that. I don't think these half-breeds could just walk back to Kuldahar and expect to be treated like any other human. They're rooted here, just like I'm rooted to Targos... *sigh* I'm not sure it makes a difference, though. If any of these half-breeds is good at heart, we'll probably never know it.~
-@41187=~I guess so. It's too late to change things now. But maybe the next time there's a generation of half-breeds... we'll keep them close to home, away from enemy hands. Make sure they turn out right.~
-@41188=~Things used to be so much clearer. But the lines between us and the enemy seem so blurry now. And I don't think we'll have time to sort them out.~
-@41189=~We'll be too busy trying to slash each other's throats.~
-@41190=~That's true. Maybe I should stop giving them excuses... It's too late now, anyway. The lines have been drawn; the war is here.~
+@41136=~- Мы должны поговорить с духом Эгении -
+ - Ее слова могут стать нашим спасением -
+ - Если мы будем знать, как их использовать -~
+@41137=~Ты не могла бы уточнить?~
+@41138=~Наше спасение очень важно для меня. Мы скоро увидимся с ней.~
+@41139=~Красноречивость никогда не была моей сильной стороной.~
+@41140=~Я надеюсь, Эгения умеет сражаться. Еще один призрак на нашей стороне может пригодиться.~
+@41141=~- Я не знаю как -
+ - Но есть способ победить близнецов -
+ - Способ, который сохранит наши жизни -
+ - Но не их -
+ - Эгения - ключ -
+ - Но мы должны найти замок -~
+@41142=~- Наши слова могут нас подвести -
+- Теплые слова потеряны из-за холодного ветра -
+ - Близнецы не понимают -
+ - И не хотят понимать -
+ - Но если мы заставим их -
+ - Мы обретем мир -
+ - Жестокий и холодный -
+ - Но мир -~
+@41143=~- Ее борьба окончена -
+ - И ее вера запрещает войну -
+ - Но слова могут повелевать армиями -
+ - И слова могут остановить руку -~
+@41144=~Наконец-то тепло! Я... вообще-то... здесь слишком тепло. Проклятье! Я уже чувствую пот на лбу.~
+@41145=~Это лучше чем холод в Ледяной Долине. Интересно, каково это - жить здесь... целый мир, такой же теплый, как домашний очаг.~
+@41146=~У меня будет столько историй, которые я смогу рассказать своему клану. Интересно, скольким из них они поверят?~
+@41147=~Я... здесь так много криков. Я слышала, что юань-ти - истязатели, но... Моя душа кричит. Еще никогда я не была так сильно готова прибегнуть к насилию, как сейчас. Мы *должны* очистить этот вероломный храм. Нельзя допустить, чтобы хоть одна змея ушла от возмездия!~
+@41148=~Мне нравится твой настрой!~
+@41149=~Удивительно, что ты так стремишься убивать, Серса. Ты никогда не производила на меня впечатление человека, склонного к агрессии.~
+@41150=~Верно.~
+@41151=~Мы должны действовать осторожно, друг. Мы в меньшинстве. Возможно, тебя и не было с нами, когда мы проникали в крепость орды и ледяной храм, но мы давно научились подходить к таким ситуациям с умом.~
+@41152=~Говори тише. Мы здесь не для того, чтобы привлекать толпу.~
+@41153=~Спасибо. Но... возможно, нам все же стоит быть осторожными. Змеи могут быть где угодно. Я не хочу чтобы меня застали врасплох.~
+@41154=~Обычно это не так. Но эти голоса... они все меняют. Это место не оставляет повода для сомнений.~
+@41155=~Хорошо. Но... возможно, нам все же стоит быть осторожными. Змеи могут быть где угодно. Я не хочу чтобы меня застали врасплох.~
+@41156=~Верно. Прости. Ты опытнее меня, и я доверяю твоему суждению. Но, пожалуйста, нам надо действовать. Если мы не очистим это место, я не смогу жить в ладу с самой собой.~
+@41157=~Извини. Я буду осторожна. Но, пожалуйста, мы не можем обойти это место стороной. Я не смогу жить в ладу с самой собой, если мы оставим все как есть.~
+@41158=~Я пытаюсь понять, кто такой человек.~
+@41159=~Что ты имеешь в виду?~
+@41160=~Полагаю, местные полукровки - это те, кто вызвал этот вопрос?~
+@41161=~Не думаю, что у тебя получится. Я лишь *наполовину* человек, но люди называют меня по-другому.~
+@41162=~Правда? Мне всегда казалось, что это легко. Нога или две, немного кожи, меньше семи глаз. Иногда в комплекте бывают усы.~
+@41163=~Вот возьмем местных полукровок. Все они наполовину люди. Да, они юань-ти, я понимаю, но это не значит, что мы не должны учитывать их человеческое происхождение. Их матери были родом из Кулдахара, они родились под одним деревом. А их дети здесь, в Глазу Дракона, выращены другими юань-ти и научены поклоняться злому змеиному богу.~
+@41164=~Да. Все они наполовину люди. Да, они юань-ти, я понимаю, но это не значит, что мы не должны учитывать их человеческое происхождение. Их матери были родом из Кулдахара, они родились под одним деревом. А их дети здесь, в Глазу Дракона, выращены другими юань-ти и научены поклоняться злому змеиному богу.~
+@41165=~Странно, не так ли? Все эти полукровки тоже наполовину люди. Их матери были родом из Кулдахара, они родились под одним деревом. А их дети здесь, в Глазу Дракона, выращены другими юань-ти и научены поклоняться злому змеиному богу.~
+@41166=~Я серьезно. Это начинает меня беспокоить, потому что у меня нет правильного ответа.~
+@41167=~Представь себе, что одного из них привезли в Таргос еще ребенком. Зеленая кожа отличала бы его от всех остальных, и его, наверняка, часто дразнили бы за это, но он мог бы вырасти рядом со мной и моими друзьями. У меня мог бы быть лучший друг - полукровка юань-ти... или я мог бы даже влюбиться, будь то девушка. Возможно, у меня даже родился бы ребенок юань-ти, с зеленой кожей и все такое.~
+@41168=~Чем же они отличаются от меня? Дело не только в цвете кожи. Воспитанием? Неужели *воспитания* в жестокости достаточно, чтобы кого-либо сделать злым? Возможно, *я* бы тоже сражался за них, если бы меня воспитали здесь, как тех посвященных людей, что были в Чулте. И если это так... может, это относится и к гоблинам? И оркам? Шеринкаль, дуэргарам и *пожирателям разума?*~
+@41169=~Исаиру и Мадее?~
+@41170=~Какая разница? Как бы они ни оказались на стороне Легиона, пути назад нет.~
+@41171=~Трудно сказать. У меня не раз возникали мысли о том, как сложилась бы моя жизнь, если бы меня воспитывали люди. Но даже несмотря на то, что меня воспитали сородичи, я здесь, сражаюсь за Таргос.~
+@41172=~Я не знаю. Меня воспитали люди, и вот, я сражаюсь на стороне Десяти Городов. Возможно, все было бы иначе, если бы меня воспитали сородичи.~
+@41173=~У меня были такие мысли. Может в моей крови и не так много от юань-ти, как у местных полукровок, но видеть здесь столько тех, кто так похож на тебя, после того как большая часть твоей жизни прошла в качестве единственного создания в своем роде. Я не знаю, в чем разница между мной и ними. Может, ее и нет.~
+@41174=~Во мне тоже течет кровь юань-ти, Рейг, и все же я здесь, сражаюсь за Таргос. Местные полукровки *выбрали* борьбу за злое дело. Их воспитание - не оправдание.~
+@41175=~Никто не заставлял полукровок сражаться за Легион или змей. Они здесь по своей воле.~
+@41176=~Никто не растет в одиночестве. Наше детство не может *диктовать* наше будущее, но оно меняет то, с чего мы начинаем, да. И большинство принимает тот мир, в котором они выросли.~
+@41177=~Может быть. Трудно отличить природу от воспитания.~
+@41178=~Люди тоже сражаются за Легион, Рейг. Есть люди, которые выросли в человеческом обществе и стали злыми, точно так же, как дроу, дуэргары и гоблиноиды, которые выросли среди своих сородичей и стали добрыми. Наше происхождение может влиять на то, кем мы станем, но мы не рабы условий, в которых росли....~
+@41179=~Полагаю, что нет. Может быть, я просто слишком много думаю. Как бы ни сложилась ситуация, нам придется с этим смириться... К тому же, даже если бы кто-то из этих полукровок и *мог* быть на нашей стороне, мы никогда этого не узнаем. Не время философствовать, когда мечи уже наготове.~
+@41180=~Верно. Я не должен оправдывать Легион. Тебя воспитывали так же, как и их, но это не помешало тебе измениться. Они могли бы сделать то же самое, но не сделали.~
+@41181=~И я рад, что это случилось.~
+@41182=~Не знаю, почему я заговорил об этом... Просто я больше не вижу четких границ между врагом и нами как раньше. Все размыто. Что ж, я рад, что ты с нами. Не знаю, что бы мы делали без тебя.~
+@41183=~Раньше все было гораздо понятнее. В доках все было просто. Но теперь я не знаю, что думать... Может, я слишком много думаю?~
+@41184=~Полагаю, это не имеет значения. Человек, юань-ти или кто-то другой, я рад, что ты с нами. Не знаю, что бы мы делали без тебя.~
+@41185=~Твоя правда. У них всегда был выбор. Он и сейчас у них есть, в общем-то... Впрочем, как и у нас. Никому ничто не мешает просто уйти. Но мы здесь. *Все* из нас решили сражаться.~
+@41186=~Я ничего не знаю об этом. Но не думаю, что они могут просто вернуться в Кулдахар и рассчитывать на то, что с ними будут обращаться как с другими людьми. Они укоренились здесь, так же как я укоренился в Таргосе... *вздыхает* Впрочем, не думаю, что это что-то меняет. Если кто-то из этих полукровок и добр в душе, мы, скорее всего, никогда об этом не узнаем.~
+@41187=~Полагаю, что так. Сейчас уже слишком поздно что-то менять. Но, может быть, в следующий раз, когда появится новое поколение полукровок... мы будем держать их поближе к дому, подальше от вражеских рук. Убедимся, что они вырастут правильными.~
+@41188=~Раньше все было понятнее. Теперь же границы между нами и врагом кажутся такими размытыми. И я не думаю, что у нас будет время разбираться с этим.~
+@41189=~Мы будем слишком заняты, пытаясь перерезать друг другу глотки.~
+@41190=~Верно. Может, мне стоит перестать оправдывать их... В любом случае, уже слишком поздно. Границы определены; война началась.~
 @41191=~All we can do now is end it.~
 @41192=~- This has happened before -
  - Countless people trapped in these caves -
