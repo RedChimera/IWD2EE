@@ -8236,45 +8236,45 @@
 Необходимая черта: Военное оружие, Молоты
 Тип: одноручное~
 //@11603    = ~Brutal Impact~
-@11604    = ~As one of the perks of being the Tyrannar (high cleric) of the Xvimian faith within the Legion of the Chimera, Brutai Mar received the deadly warhammer, Brutal Impact.
+@11604    = ~Брутай Мар получил смертоносный боевой молот, Зверский Удар, в качестве одного из вознаграждений за звание Тираннара (верховного священнослужителя) ксвимианской веры в Легионе Химеры.
 
-This hammer sports a finely etched shaft with images of Iyachtu Xvim fending off legions of paladins. Its exquisitely crafted mithral hammer is much larger than most warhammers, yet seems no heavier. Like many weapons made with the unholy enchantments of Iyachtu Xvim, the metal of the hammer seems to absorb light into its unending blackness.
+На древке этого молота вытравлено изображение Ийяхту Ксвима, сражающегося с легионами паладинов. Сам же изысканно сделанный молот из мифрила намного больше, чем большинство боевых молотов, но при этом не кажется тяжелее. Подобно многому другому оружию, зачарованному нечестивой магией Ийяхту Ксвима, металл молота будто бы поглощает свет своей безграничной чернотой.
 
-On the few occasions that the Tyrannar Brutai Mar has used his weapon on his foes, Brutai has felt increased strength and improved accuracy. In addition, some of the crushing blows were accompanied by bursts of Xvimian acid - the same acid that flows throw the waters within Severed Hand.
+В тех редких случаях, когда Тираннар Брутай Мар применял это оружие против своих врагов, он чувствовал увеличение силы и меткости. Кроме того, некоторые сокрушительные удары сопровождались всплесками кислоты Ксвима - той самой, что течёт в Отрубленной Руке вместо воды.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d8 + 3
-Attack Bonus:  +3 
-Enchantment:  +3
-Damage Type:  Bludgeoning
-Special:
-  Impact: Increases chance of scoring a critical hit
-  Corrosive Burst: +1d6 acid damage and 10% chance of +2d10 extra acid damage
-  Strength: +3 bonus
-Weight: 7 lb.
-Feat Requirement:  Martial Weapon, Hammer
-Type:  One-handed~
+Урон: 1d8+3
+Атака: +3
+Зачарование: +3
+Тип урона: дробящий
+Особенности:
+ Импульс: Увеличивает вероятность критического удара
+ Кислотные брызги: +1d6 урона кислотой и 10% шанс нанести дополнительно 2d10 урона кислотой
+ Сила: +3
+Вес: 7 фунтов
+Необходимая черта: Военное оружие, Молоты
+Тип: одноручное~
 //@11605    = ~Xvim's Brutal Impact~
-@11606    = ~As one of the perks of being the Tyrannar (high cleric) of the Xvimian faith within the Legion of the Chimera, Brutai Mar received the deadly warhammer, Xvim's Brutal Impact.
+@11606    = ~Брутай Мар получил смертоносный боевой молот, Зверский Удар, в качестве одного из вознаграждений за звание Тираннара (верховного священнослужителя) ксвимианской веры в Легионе Химеры.
 
-This hammer sports a finely etched shaft with images of Iyachtu Xvim fending off legions of paladins. Its exquisitely crafted mithral hammer is much larger than most warhammers, yet seems no heavier. Like many weapons made with the unholy enchantments of Iyachtu Xvim, the metal of the hammer seems to absorb light into its unbearable blackness.
+На древке этого молота вытравлено изображение Ийяхту Ксвима, сражающегося с легионами паладинов. Сам же изысканно сделанный молот из мифрила намного больше, чем большинство боевых молотов, но при этом не кажется тяжелее. Подобно многому другому оружию, зачарованному нечестивой магией Ийяхту Ксвима, металл молота будто бы поглощает свет своей безграничной чернотой.
 
-On the few occasions that the Tyrannar Brutai Mar has used his weapon on his foes, Brutai has felt increased strength and improved accuracy. In addition, some of the crushing blows were accompanied by bursts of Xvimian acid - the same acid that flows throw the waters within Severed Hand.
+В тех редких случаях, когда Тираннар Брутай Мар применял это оружие против своих врагов, он чувствовал увеличение силы и меткости. Кроме того, некоторые сокрушительные удары сопровождались всплесками кислоты Ксвима - той самой, что течёт в Отрубленной Руке вместо воды.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d8 + 5
-Attack Bonus:  +5 
-Enchantment:  +5
-Damage Type:  Bludgeoning
-Special:
-  Impact: Increases chance of scoring a critical hit
-  Corrosive Burst: +2d6 acid damage and 10% chance of +4d10 extra acid damage
-  Strength: +5 bonus
-Weight: 7 lb.
-Feat Requirement:  Martial Weapon, Hammer
-Type:  One-handed~
+Урон: 1d8+5
+Атака: +5
+Зачарование: +5
+Тип урона: дробящий
+Особенности:
+ Импульс: Увеличивает вероятность критического попадания 
+ Кислотные брызги: +2d6 урона кислотой и 10% шанс нанести дополнительно 4d10 урона кислотой
+ Сила: +5
+Вес: 7 фунтов
+Необходимая черта: Военное оружие, Молоты
+Тип: одноручное~
 
 
 //@11607    = ~Throwing Hammer~
@@ -8304,112 +8304,112 @@ Type:  One-handed~
 //@11629    = ~Dart +1~
 //@11630    = ~Item description can remain the same; if new description is needed put it here~
 //@11631    = ~Dart of Stunning~
-@11632    = ~The dart of stunning looks like any other dart other then the fact that it seems to pulse slightly when held in the hand. The true effects can be seen when one strikes an opponent and they fall to the ground stunned.
+@11632    = ~На первый взгляд, ошеломляющий дротик отличается от обычного только тем, что слегка пульсирует в руке. Однако в бою отличия проявляются вполне отчётливо: в случае попадания, дротик ошеломляет жертву, сбивая её с ног.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d4
-Damage Type:  Missile (piercing)
-Special:
-  Stunning: Fortitude save (DC 21) or be stunned for 1 round
-Weight: 0 lb.
-Required Feat:  Simple Weapons, Missile
-Type:  One-handed~
+Урон: 1d4
+Тип урона: метательный (колющий)
+Особенности:
+ Ошеломление: цель ошеломляется на 1 раунд (спасбросок стойкости с УС 21 отменяет эффект)
+Вес: 0 фунтов
+Необходимая черта: Простое оружие, Метательное
+Тип: одноручное~
 //@11633    = ~Dart of Wounding~
-@11634    = ~This dart has many sharp barbs that are designed to rip and tear at any inflicted wounds.
+@11634    = ~Этот дротик покрыт острыми зазубринами, благодаря чему застревает в ране и рвёт плоть.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1D4
-Damage Type:  Missile (piercing)
-Special:
-  Wounding: Inflicts 1 additional point of damage per round for 10 rounds (Fortitude DC 22)
-Weight: 0 lb.
-Required Feat:  Simple Weapons, Missile
-Type:  One-handed~
-@11635    = ~Zilzanzer's Magnificent Dart +5~
-@11636    = ~The eccentric master wizard Zilzanzer, well known for his Ring of the Gorgon, was also the creator of a number of small magical missile weapons. "Zilzanzer's Magnificent Darts" were sold to many of the wizards' colleagues. Unlike many of Zilzanzer's other creations, his darts actually performed as he intended them to. He created a great number of the darts before his untimely demise.
+Урон: 1d4
+Тип урона: метательный (колющий)
+Особенности:
+ Рваные раны: наносит дополнительно 1 урона в раунд в течение 10 раундов (успешный спасбросок УС 22 стойкости отменяет эффект)
+Вес: 0 фунтов
+Необходимая черта: Простое оружие, Метательное
+Тип: одноручное~
+@11635    = ~Великолепный дротик Зильзанзера +5~
+@11636    = ~Великий и эксцентричный волшебник Зильзанзер, хорошо известный благодаря Кольцу Горгоны, помимо этого делал мелкие зачарованные снаряды. "Великолепные дротики Зильзанзера" покупали у волшебника многие его коллеги. В отличие от многих других творений Зильзанзера, дротики работали именно так, как и было задумано. До своей безвременной гибели он успел изготовить довольно много таких дротиков.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage: 1d4 + 5
-Attack Bonus:  +5
-Enchantment:  +5
-Damage Type:  Missile (piercing)
-Special: 
-  Speed: 4 additional attacks per combat round. These attacks can bypass the cap of five attacks per round.
-Weight: 0 lb.
-Required Feat:  Simple Weapons, Missile
-Type:  One-handed~
-@11637    = ~Returning Flurry Dart +1~
-@11638    = ~The dart is a small, easily concealable missile weapon that is thrown rather than fired from a bow or other launcher. Lines of power have been carefully scribed into the shaft of the weapon.
+Урон: 1d4+5
+Атака: +5
+Зачарование: +5
+Тип урона: метательный (колющий)
+Особенности:
+ Скорость: 4 дополнительные атаки в раунд. Общее количество атак может быть больше обычного максимума в пять атак
+Вес: 0 фунтов
+Необходимая черта: Простое оружие, Метательное
+Тип: одноручное~
+@11637    = ~Возвращающийся дротик шквала +1~
+@11638    = ~Дротик - это небольшое метательное оружие, которое легко спрятать и можно бросать без применения других приспособлений. На древке этого дротика аккуратно выведены волшебные письмена.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d4  +1
-Attack Bonus:  +1
-Enchantment:  +1
-Damage Type:  Missile (piercing)
-Special:
-  No Strength bonus to damage (no Dexterity bonus to damage for lightfoot halflings either)
-  Speed: Attacks per round doubled, potentially bypassing the limit of five attacks per round
-  Returning: Returns to user
-Weight: 0 lb.
-Required Feat:  Simple Weapons, Missile
-Type:  One-handed~
+Урон: 1d4+1
+Атака: +1
+Зачарование: +1
+Тип урона: метательный (колющий)
+Особенности:
+ Модификатор силы не добавляется к урону (бонус ловкости к урону для легконогих полуросликов также не добавляется)
+ Скорость: количество атак в раунд удваиваются, потенциально преодолевая максимум в пять атак в раунд
+ Возвращение: дротик возвращается к владельцу
+Вес: 0 фунтов
+Необходимая черта: Простое оружие, Метательное
+Тип: одноручное~
 //@11639    = ~Returning Poison-Tipped Dart~
-@11640    = ~The dart is a small, easily concealable missile weapon that is thrown rather than fired from a bow or other launcher. Lines of power have been carefully scribed into the shaft of the weapon.
+@11640    = ~Дротик - это небольшое метательное оружие, которое легко спрятать и можно бросать без применения других приспособлений. На древке этого дротика аккуратно выведены волшебные письмена.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d4
-Damage Type:  Missile (piercing)
-Special:
- Venom: +2 points of poison damage every second for 6 seconds (Fortitude DC 18)
- Returning: Returns to user
-Weight: 0 lb.
-Required Feat:  Simple Weapons, Missile
-Type:  One-handed~
+Урон: 1d4
+Тип урона: метательный (колющий)
+Особенности:
+ Яд: +2 урона ядом каждую секунду в течение 6 секунд (успешный спасбросок стойкости с УС 18 отменяет эффект)
+ Возвращение: возвращается к владельцу
+Вес: 0 фунтов
+Необходимая черта: Простое оружие, Метательное
+Тип: одноручное~
 //@11641    = ~Flaming Dart +1~
-@11642    = ~The dart is a small, easily concealable missile weapon that is thrown rather than fired from a bow or other launcher. Lines of power have been carefully scribed into the shaft of the weapon.
+@11642    = ~Дротик - это небольшое метательное оружие, которое легко спрятать и можно бросать без применения других приспособлений. На древке этого дротика аккуратно выведены волшебные письмена.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d4  +1
-Attack Bonus:  +1
-Enchantment:  +1
-Damage Type:  Missile (piercing)
-Special:
- Flame: +1d6 fire damage
-Weight: 0 lb.
-Required Feat:  Simple Weapons, Missile
-Type:  One-handed~
+Урон: 1d4+1
+Атака: +1
+Зачарование: +1
+Тип урона: метательный (колющий)
+Особенности:
+ Огонь: +1d6 урона огнём
+Вес: 0 фунтов
+Необходимая черта: Простое оружие, Метательное
+Тип: одноручное~
 //@11643    = ~Returning Frost Dart~
-@11644    = ~The dart is a small, easily concealable missile weapon that is thrown rather than fired from a bow or other launcher. Lines of power have been carefully scribed into the shaft of the weapon.
+@11644    = ~Дротик - это небольшое метательное оружие, которое легко спрятать и можно бросать без применения других приспособлений. На древке этого дротика аккуратно выведены волшебные письмена.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d4
-Damage Type:  Missile (piercing)
-Special:
- Frost: +1d4 cold damage
- Returning: Returns to user
-Weight: 0 lb.
-Required Feat:  Simple Weapons, Missile
-Type:  One-handed~
-@11645    = ~Shock Dart~
-@11646    = ~The dart is a small, easily concealable missile weapon that is thrown rather than fired from a bow or other launcher. Lines of power have been carefully scribed into the shaft of the weapon.
+Урон: 1d4
+Тип урона: метательный (колющий)
+Особенности:
+ Стужа: +1d4 урона холодом
+ Возвращение: возвращается к владельцу
+Вес: 0 фунтов
+Необходимая черта: Простое оружие, Метательное
+Тип: одноручное~
+@11645    = ~Шокирующий дротик~
+@11646    = ~Дротик - это небольшое метательное оружие, которое легко спрятать и можно бросать без применения других приспособлений. На древке этого дротика аккуратно выведены волшебные письмена.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d4
-Damage Type:  Missile (piercing)
-Special:
- Shock: 25% chance +2d6 electric damage
-Weight: 0 lb.
-Required Feat:  Simple Weapons, Missile
-Type:  One-handed~
-@11647    = ~Sure Strike Dart~
+Урон: 1d4
+Тип урона: метательный (колющий)
+Особенности:
+ Шок: с вероятностью в 25% наносит дополнительно 2d6 урона электричеством
+Вес: 0 фунтов
+Необходимая черта: Простое оружие, Метательное
+Тип: одноручное~
+@11647    = ~Дротик меткости~
 //@11648    = ~Item description can remain the same; if new description is needed put it here~
 //@11649    = ~Masterwork Dart~
 //@11650    = ~Item description can remain the same; if new description is needed put it here~
@@ -8421,141 +8421,140 @@ Type:  One-handed~
 //@11656    = ~Item description can remain the same; if new description is needed put it here~
 //@11657    = ~Dart +2~
 //@11658    = ~Item description can remain the same; if new description is needed put it here~
-@11659    = ~Glacial Dart +5~
-@11660    = ~The dart is a small, easily concealable missile weapon that is thrown rather than fired from a bow or other launcher. Tiny silver runes have been carved into the surface to enhance the performance of these darts.
+@11659    = ~Ледяной дротик +5~
+@11660    = ~Дротик - это небольшое метательное оружие, которое легко спрятать и можно бросать без применения других приспособлений. Крошечные серебряные руны, вырезанные на поверхности этого дротика, делают его более смертоносным.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d4  +5
-Attack Bonus:  +5
-Enchantment:  +5
-Damage Type:  Missile (piercing)
-Special:
-  Frost: +1d6 cold damage
-  Freezing: 5% chance target is frozen solid (Fortitude DC 40). Even if the save is made, the target still takes 50 cold damage. Cold-using creatures are immune to this effect.
-Weight: 0 lb.
-Required Feat:  Simple Weapons, Missile
-Type:  One-handed~
-@11661    = ~Glass Dart +1~
+Урон: 1d4+5
+Атака: +5
+Зачарование: +5
+Тип урона: метательный (колющий)
+Особенности:
+ Стужа: +1d6 урона холодом
+ Замораживание: при атаке есть 5% шанс, что цель будет вморожена в лёд насмерть (успешный спасбросок стойкости с УС 40 отменяет эффект). Даже если спасбросок был прокинут, цель все равно получает 50 единиц урона холодом. Существа, использующие холод или живущие в холоде, невосприимчивы к этому эффекту.
+Вес: 0 фунтов
+Необходимая черта: Простое оружие, Метательное
+Тип: одноручное~
+@11661    = ~Стеклянный дротик +1~
 //@11662    = ~Item description can remain the same; if new description is needed put it here~
-@11663    = ~Dart of Infatuation +1~
-@11664    = ~The dart is a small, easily concealable missile weapon that is thrown rather than fired from a bow or other launcher. Tiny silver runes have been carved into the surface to enhance the performance of these darts.
+@11663    = ~Дротик увлечения +1~
+@11664    = ~Дротик - это небольшое метательное оружие, которое легко спрятать и можно бросать без применения других приспособлений. Крошечные серебряные руны, вырезанные на поверхности этого дротика, делают его более смертоносным.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d4  +1
-Attack Bonus:  +1
-Enchantment:  +1
-Damage Type:  Missile (piercing)
-Special:
- Spell Process: Attempts to place target under the effects of a Charm Person spell (Will DC 20)
-Weight: 0 lb.
-Required Feat:  Simple Weapons, Missile
-Type:  One-handed~
-@11665    = ~Dart of Flame +5~
+Урон: 1d4+1
+Атака: +1
+Зачарование: +1
+Тип урона: метательный (колющий)
+Особенности:
+ Наложение заклинания: при попадании на цель накладывается заклинание "Очаровать персонажа" (успешный спасбросок воли с УС 20 отменяет эффект)
+Вес: 0 фунтов
+Необходимая черта: Простое оружие, Метательное
+Тип: одноручное~
+@11665    = ~Дротик пламени +5~
 //@11666    = ~Item description can remain the same; if new description is needed put it here~
-@11667    = ~Keen Dart +5~
-@11668    = ~The dart is a small, easily concealable missile weapon that is thrown rather than fired from a bow or other launcher. Lines of power have been carefully scribed into the shaft of the weapon.
+@11667    = ~Точный дротик +5~
+@11668    = ~Дротик - это небольшое метательное оружие, которое легко спрятать и можно бросать без применения других приспособлений. На древке этого дротика аккуратно выведены волшебные письмена.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d4  +5
-Attack Bonus:  +5
-Enchantment:  +5
-Damage Type:  Missile (piercing)
-Special:
-  Keen: Increased chance of scoring a critical hit on target
-Weight: 0 lb.
-Required Feat:  Simple Weapons, Missile
-Type:  One-handed~
-@11669    = ~Acid-tipped Dart +3~
-@11670    = ~The dart is a small, easily concealable missile weapon that is thrown rather than fired from a bow or other launcher. Lines of power have been carefully scribed into the shaft of the weapon.
+Урон: 1d4+5
+Атака: +5
+Зачарование: +5
+Тип урона: метательный (колющий)
+Особенности:
+ Острота: увеличенный шанс нанести критический удар
+Вес: 0 фунтов
+Необходимая черта: Простое оружие, Метательное
+Тип: одноручное~
+@11669    = ~Дротик с кислотным наконечником +3~
+@11670    = ~Дротик - это небольшое метательное оружие, которое легко спрятать и можно бросать без применения других приспособлений. На древке этого дротика аккуратно выведены волшебные письмена.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d4  +3
-Attack Bonus:  +3
-Enchantment:  +3
-Damage Type:  Missile (piercing)
-Special:
- Corrosion: +1d6 acid damage
-Weight: 0 lb.
-Required Feat:  Simple Weapons, Missile
-Type:  One-handed~
-@11671    = ~Adron's Theorems +1~
-@11672    = ~The sage Adron's passion for arguing was matched only by his love of driving the final point home as forcefully as possible. As a joke, several of his students inscribed many of his theorems and oft-quoted passages on a string of darts and presented it to the aged instructor on the day of his retirement. This proved to be a gift of questionable wisdom, as Adron was quick to anger, and he promptly began to fling the darts at his students - only to find that the theorems had given the darts a sage-like accuracy when making their points. Fortunately for the students, they were as good at dodging darts as they were in dodging their studies, so except for a few pairs of soiled robes, there was little damage done. 
+Урон: 1d4+3
+Атака: +3
+Зачарование: +3
+Тип урона: метательный (колющий)
+Особенности:
+ Разъедание: +1d6 урона кислотой
+Вес: 0 фунтов
+Необходимая черта: Простое оружие, Метательное
+Тип: одноручное~
+@11671    = ~Теоремы Адрона +1~
+@11672    = ~Страсть мудреца Адрона к спорам была сравнима лишь с его стремлением непременно поставить в любом вопросе точку. В день его ухода на пенсию несколько его учеников в качестве шутки подарили престарелому учителю связку дротиков, на которых были написаны его теоремы и ставшие знаменитыми высказывания. Это оказалось не самым мудрым поступком, так как Адрон был быстр на расправу и сразу же начал метать дротики в своих учеников. Как оказалось, написанные на дротиках теоремы придавали тем точность мудрости и способствовали их попаданию в цель. К счастью, его ученики избегали дротиков так же успешно, как и занятий, так что если не считать пары запачканных мантий, ущерб был невелик.
 
-Adron's darts were encased in a special case at the school, only to be stolen as a university prank many years later. Since then, the darts have been sighted throughout the realms, carrying Adron's theorems and quotes wherever they go.
+Дротики Адрона положили в особую шкатулку и выставили в университете в качестве экспоната. Много лет спустя их украл какой-то студент в качестве розыгрыша. С тех пор эти дротики попадаются по всем королевствам, разнося с собою теоремы и цитаты великого мыслителя Адрона.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d4  +1
-Attack Bonus:  +3 
-Enchantment:  +1
-Damage Type:  Missile (piercing)
-Special:  
-  Spell Process: Target succumbs to the effects of Feeblemind when struck (Will DC 6)
-Weight: 0 lb.
-Required Feat:  Simple Weapons, Missile
-Type:  One-handed
-Minimum Intelligence of 16 Required~
-@11673    = ~Adron's Long-winded Theorems +3~
-@11674    = ~The sage Adron's passion for arguing was matched only by his love of driving the final point home as forcefully as possible. As a joke, several of his students inscribed many of his theorems and oft-quoted passages on a string of darts and presented it to the aged instructor on the day of his retirement. This proved to be a gift of questionable wisdom, as Adron was quick to anger, and he promptly began to fling the darts at his students - only to find that the theorems had given the darts a sage-like accuracy when making their points. Fortunately for the students, they were as good at dodging darts as they were in dodging their studies, so except for a few pairs of soiled robes, there was little damage done. 
+Урон: 1d4+1
+Атака: +3
+Зачарование: +1
+Тип урона: метательный (колющий)
+Особенности:
+ Наложение заклинания: цель становится слабоумной (успешный спасбросок воли с УС 6 отменяет эффект)
+Вес: 0 фунтов
+Необходимая черта: Простое оружие, Метательное
+Тип: одноручное
+Требования: Интеллект 26~
+@11673    = ~Запутанные теоремы Адрона +3~
+@11674    = ~Страсть мудреца Адрона к спорам была сравнима лишь с его стремлением непременно поставить в любом вопросе точку. В день его ухода на пенсию несколько его учеников в качестве шутки подарили престарелому учителю связку дротиков, на которых были написаны его теоремы и ставшие знаменитыми высказывания. Это оказалось не самым мудрым поступком, так как Адрон был быстр на расправу и сразу же начал метать дротики в своих учеников. Как оказалось, написанные на дротиках теоремы придавали тем точность мудрости и способствовали их попаданию в цель. К счастью, его ученики избегали дротиков так же успешно, как и занятий, так что если не считать пары запачканных мантий, ущерб был невелик.
 
-Adron's darts were encased in a special case at the school, only to be stolen as a university prank many years later. Since then, the darts have been sighted throughout the realms, carrying Adron's theorems and quotes wherever they go.
+Дротики Адрона положили в особую шкатулку и выставили в университете в качестве экспоната. Много лет спустя их украл какой-то студент в качестве розыгрыша. С тех пор эти дротики попадаются по всем королевствам, разнося с собою теоремы и цитаты великого мыслителя Адрона.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d4  +3
-Attack Bonus:  +5
-Enchantment:  +3
-Damage Type:  Missile (piercing)
-Special:  
-  Spell Process: Target succumbs to the effects of Feeblemind when struck (Will DC 21)
-Weight: 0 lb.
-Required Feat:  Simple Weapons, Missile
-Type:  One-handed
-Minimum Intelligence of 16 Required~
-@11675    = ~Delnar's Dart of Dispelling +3~
-@11676    = ~Delnar was a timid mage who never was one for adventure. He spent most of his life in quiet study, living with his mother, trying to learn the art of crafting magical items. For his first attempt, Delnar decided to create a dart that would be a mage's best friend. The weapon would unerringly strike a target, dispel any magical protection, and then return to its user.
+Урон: 1d4+3
+Атака: +5
+Зачарование: +3
+Тип урона: метательный (колющий)
+Особенности:
+ Наложение заклинания: цель становится слабоумной (успешный спасбросок воли с УС 21 отменяет эффект)
+Вес: 0 фунтов
+Необходимая черта: Простое оружие, Метательное
+Тип: одноручное~
+@11675    = ~Дротик развеивания Делнара +3~
+@11676    = ~Делнар был робким магом, который никогда не любил приключения. Большую часть своей жизни он провёл в спокойной учёбе, живя со своей матерью и пытаясь постичь искусство создания зачарованных предметов. Когда Делнар устал от теории и решился перейти к практике, он первым делом взялся за создание полезного любому магу дротика. Направленный даже неопытной рукой, этот дротик должен бы лететь точно в цель, развеивать любую магическую защиту и возвращаться в руку владельца.
 
-Unfortunately, just as he was placing the final enchantments on the item, Delnar's mother entered into the room, saw the dart, and said "Careful, ye'll put an eye out with that."  Much to his dismay, his mother's words became a part of the enchantment. The dart did seem to work as intended, but occasionally would strike the user blind upon its return.
+К несчастью, во время наложения последних чар на оружие в комнату Делнара вошла его матушка. Завидев дротик, она вскрикнула: "Осторожнее, ты же выколешь себе глаз!" Эти слова вплелись в волшебную формулу и тоже стали частью чар. Дротик действительно работал, как и была задумано, но при возвращении к хозяину так и норовил выколоть тому глаз.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d4  +3
-Attack Bonus:  +3
-Enchantment:  +3
-Damage Type:  Missile (piercing)
-Special: 
-  Dispelling: 50% chance Dispel Magic on target (Will DC 18)
-  Spell Process: 10% chance of blindness on wielder (Fortitude DC 10)
-  Returning: Returns to user
-Weight: 1 lb.
-Required Feat:  Simple Weapons, Missile
-Type:  One-handed~
-@11677    = ~Delnar's Eye Gouger +5~
-@11678    = ~Delnar was a timid mage who never was one for adventure. He spent most of his life in quiet study, living with his mother, trying to learn the art of crafting magical items. For his first attempt, Delnar decided to create a dart that would be a mage's best friend. The weapon would unerringly strike a target, dispel any magical protection, and then return to its user.
+Урон: 1d4+3
+Атака: +3
+Зачарование: +3
+Тип урона: метательный (колющий)
+Особенности:
+ Рассеивание: с вероятностью 50% накладывает заклинание "Развеять магию" на цель (успешный спасбросок воли с УС 18 позволяет воспротивиться развеиванию)
+ Заклинание: с вероятностью 10% ослепляет хозяина (успешный спасбросок стойкости с УС 10 отменяет эффект)
+ Возвращение: после броска возвращается к хозяину
+Вес: 1 фунт
+Необходимая черта: Простое оружие, Метательное
+Тип: одноручное~
+@11677    = ~Глазовыковыриватель Делнара +5~
+@11678    = ~Делнар был робким магом, который никогда не любил приключения. Большую часть своей жизни он провёл в спокойной учёбе, живя со своей матерью и пытаясь постичь искусство создания зачарованных предметов. Когда Делнар устал от теории и решился перейти к практике, он первым делом взялся за создание полезного любому магу дротика. Направленный даже неопытной рукой, этот дротик должен бы лететь точно в цель, развеивать любую магическую защиту и возвращаться в руку владельца.
 
-Unfortunately, just as he was placing the final enchantments on the item, Delnar's mother entered into the room, saw the dart, and said "Careful, ye'll put an eye out with that."  Much to his dismay, his mother's words became a part of the enchantment. The dart did seem to work as intended, but occasionally would strike the user blind upon its return.
+К несчастью, во время наложения последних чар на оружие в комнату Делнара вошла его матушка. Завидев дротик, она вскрикнула: "Осторожнее, ты же выколешь себе глаз!" Эти слова вплелись в волшебную формулу и тоже стали частью чар. Дротик действительно работал, как и была задумано, но при возвращении к хозяину так и норовил выколоть тому глаз.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d4  +5
-Attack Bonus:  +5 
-Enchantment:  +5
-Damage Type:  Missile (piercing)
-Special: 
-  Dispelling: Dispel Magic on target (Will DC 27)
-  Spell Process: 20% chance of blindness on target (Fortitude DC 20)
-  Spell Process: 10% chance of blindness on wielder (Fortitude DC 10)
-  Returning: Returns to user
-Weight: 1 lb.
-Required Feat:  Simple Weapons, Missile
-Type:  One-handed~
-@11679    = ~Plague Dart +1~
+Урон: 1d4 +5
+Атака: +5
+Зачарование: +5
+Тип урона: метательный (колющий)
+Особенности:
+ Рассеивание: при попадании накладывает заклинание "Развеять магию" на цель (успешный спасбросок воли с УС 27 позволяет воспротивиться развеиванию)
+ Наложение заклинания: с вероятностью 20% ослепляет цель (успешный спасбросок стойкости с УС 20 отменяет эффект)
+ Наложение заклинания: с вероятностью 10% ослепляет владельца дротика (успешный спасбросок стойкости с УС 10 отменяет эффект)
+ Возвращение: после броска возвращается к хозяину
+Вес: 1 фунт
+Необходимая черта: Простое оружие, Метательное
+Тип: одноручное~
+@11679    = ~Чумной дротик +1~
 //@11680    = ~Item description can remain the same; if new description is needed put it here~
-@11681    = ~Dire Plague Dart +3~
+@11681    = ~Дротик зловещей чумы +3~
 //@11682    = ~Item description can remain the same; if new description is needed put it here~
 
 
