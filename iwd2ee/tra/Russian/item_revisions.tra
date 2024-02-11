@@ -8747,66 +8747,66 @@
 
 
 //@11725    = ~Composite Shortbow~
-@11726    = ~Composite bows are made from laminated horn, wood, or bone and built with a recurve, meaning that the bow remains bow-shaped even when unstrung.
+@11726    = ~Составные луки делаются из отдельных роговых, деревянных или костяных пластинок. Они изначально склеиваются изогнутыми, поэтому составной лук сохраняет свою форму даже без тетивы.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Special:
-  Composite: Gains Strength bonus to damage, up to a maximum of +1
-Weight: 2 lb.
-Feat Requirement:  Martial Weapon, Bow
-Type:  Two-handed~
+Особенности:
+ Композитный: добавляет модификатор силы к урону, до максимума в +1
+Вес: 2 фунта
+Необходимая черта: Военное оружие, Луки
+Тип: двуручное~
 //@11727    = ~Composite Shortbow +1~
-@11728    = ~Composite bows are made from laminated horn, wood, or bone and built with a recurve, meaning that the bow remains bow-shaped even when unstrung.
+@11728    = ~Составные луки делаются из отдельных роговых, деревянных или костяных пластинок. Они изначально склеиваются изогнутыми, поэтому составной лук сохраняет свою форму даже без тетивы.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  +1 (missile)
-Attack Bonus:  +1
-Special:
-  Composite: Gains Strength bonus to damage, up to a maximum of +2
-Weight: 2 lb.
-Feat Requirement:  Martial Weapon, Bow
-Type:  Two-handed~
-@11729    = ~Composite Shortbow of Haste +5~
-@11730    = ~Composite bows are made from laminated horn, wood, or bone and built with a recurve, meaning that the bow remains bow-shaped even when unstrung.
+Урон: +1 (метательный)
+Атака: +1
+Особенности:
+ Композитный: добавляет модификатор силы к урону, до максимума в +2
+Вес: 2 фунта
+Необходимая черта: Военное оружие, Луки
+Тип: двуручное~
+@11729    = ~Составной короткий лук скорости +5~
+@11730    = ~Составные луки делаются из отдельных роговых, деревянных или костяных пластинок. Они изначально склеиваются изогнутыми, поэтому составной лук сохраняет свою форму даже без тетивы.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage: +6 (missile)
-Attack Bonus: +5
-Special:
-  Composite: Gains Strength bonus to damage, up to a maximum of +6
-  Constant Effect: Wielder is under the effects of the spell Haste
-Weight: 2 lb.
-Feat Requirement:  Martial Weapon, Bow
-Type:  Two-handed~
-//@11731    = ~Composite Shortbow of Resistance~
-@11732    = ~Composite bows are made from laminated horn, wood, or bone and built with a recurve, meaning that the bow remains bow-shaped even when unstrung.
+Урон: +6 (метательный)
+Атака: +5
+Особенности:
+ Композитный: добавляет модификатор силы к урону, до максимума в +6
+ Постоянный эффект: на пользователя лука постоянно действует эффект заклинания "Спешка"
+Вес: 2 фунта
+Необходимая черта: Военное оружие, Луки
+Тип: двуручное~
+//@11731    = ~Составной короткий лук сопротивления~
+@11732    = ~Составные луки делаются из отдельных роговых, деревянных или костяных пластинок. Они изначально склеиваются изогнутыми, поэтому составной лук сохраняет свою форму даже без тетивы.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Special:
-  Composite: Gains Strength bonus to damage, up to a maximum of +1
-  Resistance: 5/- Cold Resistance
-  Resistance: 5/- Fire Resistance
-  Resistance: 3/- Missile Resistance
-Weight: 2 lb.
-Feat Requirement:  Martial Weapon, Bow
-Type:  Two-handed~
-@11733    = ~Composite Shortbow of Dexterity +3~
-@11734    = ~Composite bows are made from laminated horn, wood, or bone and built with a recurve, meaning that the bow remains bow-shaped even when unstrung.
+Особенности:
+ Композитный: добавляет модификатор силы к урону, до максимума в +1
+ Сопротивление: 5/- сопротивления огню
+ Сопротивление: 5/- сопротивления холоду
+ Сопротивление: 3/- сопротивления метательному урону
+Вес: 2 фунта
+Необходимая черта: Военное оружие, Луки
+Тип: двуручное~
+@11733    = ~Составной короткий лук ловкости +3~
+@11734    = ~Составные луки делаются из отдельных роговых, деревянных или костяных пластинок. Они изначально склеиваются изогнутыми, поэтому составной лук сохраняет свою форму даже без тетивы.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  +3 (missile)
-Attack Bonus: +3
-Special:
-  Composite: Gains Strength bonus to damage, up to a maximum of +4
-  Dexterity: +6 bonus
-Weight: 2 lb.
-Feat Requirement:  Martial Weapon, Bow
-Type:  Two-handed~
+Урон: +3 (метательный)
+Атака: +3
+Особенности:
+ Композитный: добавляет модификатор силы к урону, до максимума в +4
+ Ловкость: +6
+Вес: 2 фунта
+Необходимая черта: Военное оружие, Луки
+Тип: двуручное~
 
 
 //@11735    = ~Longbow~
