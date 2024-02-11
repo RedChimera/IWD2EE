@@ -8810,135 +8810,136 @@
 
 
 //@11735    = ~Longbow~
-@11736    = ~The longbow is similar to the shortbow, except that the staff is about as high as the archer is, usually 6 to 6.5 feet. It has two advantages over the shortbow: better range and hence, it is much more accurate.
+@11736    = ~Длинный лук устроен так же, как короткий, с той лишь разницей, что в длину примерно равен росту лучника (6-6,5 футов). Его преимущества над коротким луком - большая дальность и точность стрельбы, хотя он немного медленнее.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  +1 (missile)
-Weight: 3 lb.
-Feat Requirement:  Martial Weapon, Bow
-Type:  Two-handed~
+Урон: +1 (метательный)
+Вес: 3 фунта
+Необходимая черта: Военное оружие, Луки
+Тип: двуручное~
 //@11737    = ~Masterwork Longbow~
-@11738    = ~The longbow is similar to the shortbow, except that the staff is about as high as the archer is, usually 6 to 6.5 feet. It has two advantages over the shortbow: better range and hence, it is much more accurate.
+@11738    = ~Длинный лук устроен так же, как короткий, с той лишь разницей, что в длину примерно равен росту лучника (6-6,5 футов). Его преимущества над коротким луком - большая дальность и точность стрельбы, хотя он немного медленнее.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  +1 (missile)
-Attack Bonus:  +1
-Weight: 3 lb.
-Feat Requirement:  Martial Weapon, Bow
-Type:  Two-handed~
+Урон: +1 (метательный)
+Атака: +1
+Особенности:
+Вес: 3 фунта
+Необходимая черта: Военное оружие, Луки
+Тип: двуручное~
 //@11739    = ~Longbow +1~
-@11740    = ~The longbow is similar to the shortbow, except that the staff is about as high as the archer is, usually 6 to 6.5 feet. It has two advantages over the shortbow: better range and hence, it is much more accurate. This one has been enhanced with magical properties, giving it an air of perfection.
+@11740    = ~Длинный лук устроен так же, как короткий, с той лишь разницей, что в длину примерно равен росту лучника (6-6,5 футов). Его преимущества над коротким луком - большая дальность и точность стрельбы, хотя он немного медленнее. Этот лук усовершенствован с помощью магии.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  +2 (missile)
-Attack Bonus: +1
-Weight: 3 lb.
-Feat Requirement:  Martial Weapon, Bow
-Type:  Two-handed~
+Урон: +2 (метательный)
+Атака: +1
+Вес: 3 фунта
+Необходимая черта: Военное оружие, Луки
+Тип: двуручное~
 //@11741    = ~Longbow +5~
-@11742    = ~The longbow is similar to the shortbow, except that the staff is about as high as the archer is, usually 6 to 6.5 feet. It has two advantages over the shortbow: better range and hence, it is much more accurate. This one has been enhanced with magical properties, giving it an air of perfection.
+@11742    = ~Длинный лук устроен так же, как короткий, с той лишь разницей, что в длину примерно равен росту лучника (6-6,5 футов). Его преимущества над коротким луком - большая дальность и точность стрельбы, хотя он немного медленнее. Этот лук усовершенствован с помощью магии.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  +6 (missile)
-Attack Bonus: +5
-Weight: 3 lb.
-Feat Requirement:  Martial Weapon, Bow
-Type:  Two-handed~
+Урон: +6 (метательный)
+Атака: +5
+Вес: 3 фунта
+Необходимая черта: Военное оружие, Луки
+Тип: двуручное~
 //@11743    = ~Longbow +4~
-@11744    = ~The longbow is similar to the shortbow, except that the staff is about as high as the archer is, usually 6 to 6.5 feet. It has two advantages over the shortbow: better range and hence, it is much more accurate. This one has been enhanced with magical properties, giving it an air of perfection.
+@11744    = ~Длинный лук устроен так же, как короткий, с той лишь разницей, что в длину примерно равен росту лучника (6-6,5 футов). Его преимущества над коротким луком - большая дальность и точность стрельбы, хотя он немного медленнее. Этот лук усовершенствован с помощью магии.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  +5 (missile)
-Attack Bonus: +4
-Weight: 3 lb.
-Feat Requirement:  Martial Weapon, Bow
-Type:  Two-handed~
+Урон: +5 (метательный)
+Атака: +4
+Вес: 3 фунта
+Необходимая черта: Военное оружие, Луки
+Тип: двуручное~
 //@11745    = ~Longbow +3~
-@11746    = ~The longbow is similar to the shortbow, except that the staff is about as high as the archer is, usually 6 to 6.5 feet. It has two advantages over the shortbow: better range and hence, it is much more accurate. This one has been enhanced with magical properties, giving it an air of perfection.
+@11746    = ~Длинный лук устроен так же, как короткий, с той лишь разницей, что в длину примерно равен росту лучника (6-6,5 футов). Его преимущества над коротким луком - большая дальность и точность стрельбы, хотя он немного медленнее. Этот лук усовершенствован с помощью магии.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  +4 (missile)
-Attack Bonus: +3
-Weight: 3 lb.
-Feat Requirement:  Martial Weapon, Bow
-Type:  Two-handed~
+Урон: +4 (метательный)
+Атака: +3
+Вес: 3 фунта
+Необходимая черта: Военное оружие, Луки
+Тип: двуручное~
 //@11747    = ~Longbow +2~
-@11748    = ~The longbow is similar to the shortbow, except that the staff is about as high as the archer is, usually 6 to 6.5 feet. It has two advantages over the shortbow: better range and hence, it is much more accurate. This one has been enhanced with magical properties, giving it an air of perfection.
+@11748    = ~Длинный лук устроен так же, как короткий, с той лишь разницей, что в длину примерно равен росту лучника (6-6,5 футов). Его преимущества над коротким луком - большая дальность и точность стрельбы, хотя он немного медленнее. Этот лук усовершенствован с помощью магии.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  +3 (missile)
-Attack Bonus: +2
-Weight: 3 lb.
-Feat Requirement:  Martial Weapon, Bow
-Type:  Two-handed~
+Урон: +3 (метательный)
+Атака: +2
+Вес: 3 фунта
+Необходимая черта: Военное оружие, Луки
+Тип: двуручное~
 //@11749    = ~Spellward Longbow +2~
-@11750    = ~The longbow is similar to the shortbow, except that the staff is about as high as the archer is, usually 6 to 6.5 feet. It has two advantages over the shortbow: better range and hence, it is much more accurate. This one has been enhanced with magical properties, giving it an air of perfection.
+@11750    = ~Длинный лук устроен так же, как короткий, с той лишь разницей, что в длину примерно равен росту лучника (6-6,5 футов). Его преимущества над коротким луком - большая дальность и точность стрельбы, хотя он немного медленнее. Этот лук усовершенствован с помощью магии.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  +3 (missile)
-Attack Bonus: +2
-Special:
-  Spell Resistance: Set to 15
-  Spellward: Protection from the spells Melf's Acid Arrow and Flame Arrow
-Weight: 3 lb.
-Feat Requirement:  Martial Weapon, Bow
-Type:  Two-handed~
-@11751    = ~Quadruple-Shot Longbow +5~
-@11752    = ~The longbow is similar to the shortbow, except that the staff is about as high as the archer is, usually 6 to 6.5 feet. It has two advantages over the shortbow: better range and hence, it is much more accurate. This one has been enhanced with magical properties, giving it an air of perfection.
+Урон: +3 (метательный)
+Атака: +2
+Особенности:
+ Сопротивление магии: устанавливается в 15
+ Оберёг: дарует иммунитет к заклинаниям "Кислотная стрела Мелфа" и "Огненная стрела"
+Вес: 3 фунта
+Необходимая черта: Военное оружие, Луки
+Тип: двуручное~
+@11751    = ~Длинный лук четверного выстрела +5~
+@11752    = ~Длинный лук устроен так же, как короткий, с той лишь разницей, что в длину примерно равен росту лучника (6-6,5 футов). Его преимущества над коротким луком - большая дальность и точность стрельбы, хотя он немного медленнее. Этот лук усовершенствован с помощью магии.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  +6 (missile)
-Attack Bonus: +5
-Special:
-  The wielder can fire two additional arrows with Manyshot, but all arrows fired in the first volley suffer an additional -10 attack penalty.
-Weight: 3 lb.
-Feat Requirement:  Martial Weapon, Bow
-Type:  Two-handed~
-@11753    = ~Longbow of Grace +1~
-@11754    = ~The longbow is similar to the shortbow, except that the staff is about as high as the archer is, usually 6 to 6.5 feet. It has two advantages over the shortbow: better range and hence, it is much more accurate. This one has been enhanced with magical properties, giving it an air of perfection.
+Урон: +6 (метательный)
+Атака: +5
+Особенности:
+ Владелец лука может выпустить две дополнительные стрелы, используя черту "Множественный выстрел", но все стрелы, выпущенные в первом залпе, получают дополнительно -10 к атаке
+Вес: 3 фунта
+Необходимая черта: Военное оружие, Луки
+Тип: двуручное~
+@11753    = ~Длинный лук грации +1~
+@11754    = ~Длинный лук устроен так же, как короткий, с той лишь разницей, что в длину примерно равен росту лучника (6-6,5 футов). Его преимущества над коротким луком - большая дальность и точность стрельбы, хотя он немного медленнее. Этот лук усовершенствован с помощью магии.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  +2 (missile)
-Attack Bonus: +1
-Special:
-  Spell Power: User may cast Cat's Grace (at level 10; self only) 1/day
-Weight: 3 lb.
-Feat Requirement:  Martial Weapon, Bow
-Type:  Two-handed~
-@11755    = ~Longbow of Electricity +1~
-@11756    = ~The longbow is similar to the shortbow, except that the staff is about as high as the archer is, usually 6 to 6.5 feet. It has two advantages over the shortbow: better range and hence, it is much more accurate. This one has been enhanced with magical properties, giving it an air of perfection.
+Урон: +2 (метательный)
+Атака: +1
+Особенности:
+ Заклинание: владелец лука может прочесть заклинание "Кошачья грация" (как заклинатель десятого уровня, и только на себя) раз в день
+Вес: 3 фунта
+Необходимая черта: Военное оружие, Луки
+Тип: двуручное~
+@11755    = ~Длинный лук электричества +1~
+@11756    = ~Длинный лук устроен так же, как короткий, с той лишь разницей, что в длину примерно равен росту лучника (6-6,5 футов). Его преимущества над коротким луком - большая дальность и точность стрельбы, хотя он немного медленнее. Этот лук усовершенствован с помощью магии.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage: +2 (missile)
-Attack Bonus: +1
-Special:
-  Shock: Arrows fired from this bow deal +1d4 electrical damage
-Weight: 3 lb.
-Feat Requirement:  Martial Weapon, Bow
-Type:  Two-handed~
-@11757    = ~Triple-Shot Longbow +4~
-@11758    = ~The longbow is similar to the shortbow, except that the staff is about as high as the archer is, usually 6 to 6.5 feet. It has two advantages over the shortbow: better range and hence, it is much more accurate. This one has been enhanced with magical properties, giving it an air of perfection.
+Урон: +2 (метательный)
+Атака: +1
+Особенности:
+ Шок: стрелы, выпущенные из этого лука получают дополнительно 1d4 урона электричеством
+Вес: 3 фунта
+Необходимая черта: Военное оружие, Луки
+Тип: двуручное~
+@11757    = ~Длинный лук тройного выстрела +4~
+@11758    = ~Длинный лук устроен так же, как короткий, с той лишь разницей, что в длину примерно равен росту лучника (6-6,5 футов). Его преимущества над коротким луком - большая дальность и точность стрельбы, хотя он немного медленнее. Этот лук усовершенствован с помощью магии.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage: +5 (missile)
-Attack Bonus: +4
-Special:
-  The wielder can fire an additional arrow with Manyshot, but all arrows fired in the first volley suffer an additional -5 attack penalty.
-Weight: 3 lb.
-Feat Requirement:  Martial Weapon, Bow
-Type:  Two-handed~
+Урон: +5 (метательный)
+Атака: +4
+Особенности:
+ Владелец лука может выпустить одну дополнительную стрелу, используя черту "Множественный выстрел", но все стрелы, выпущенные в первом залпе, получают дополнительно -5 к атаке
+Вес: 3 фунта
+Необходимая черта: Военное оружие, Луки
+Тип: двуручное~
 @11759    = ~Flamekiller +1~
 @11760    = ~Rangers in the service of Auril are rare, terrible forces in the north. Echolia was an Aurilite ranger who plagued foragers near the Ice Lakes for over two years. A bane to nomads and merchants alike, Echolia's arrows felled many and drove off even more. A number of druids came north from the High Moor to deal with her, but they found her exceptionally difficult to dislodge from the region. The druids eventually killed the persistent ranger, but only at the cost of several druids' lives. Her bow was recovered and given to a Mielikkan ranger who died a decade later in the Marsh of Chelimber.
 
