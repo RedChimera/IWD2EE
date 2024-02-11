@@ -8337,7 +8337,7 @@
 Зачарование: +5
 Тип урона: метательный (колющий)
 Особенности:
- Скорость: 4 дополнительные атаки в раунд. Общее количество атак может быть больше обычного максимума в пять атак
+ Скорость: 4 дополнительные атаки в раунд; общее количество атак может быть больше обычного максимума в пять атак
 Вес: 0 фунтов
 Необходимая черта: Простое оружие, Метательное
 Тип: одноручное~
@@ -8498,7 +8498,7 @@
 Вес: 0 фунтов
 Необходимая черта: Простое оружие, Метательное
 Тип: одноручное
-Требования: Интеллект 26~
+Требования: Интеллект 16~
 @11673    = ~Запутанные теоремы Адрона +3~
 @11674    = ~Страсть мудреца Адрона к спорам была сравнима лишь с его стремлением непременно поставить в любом вопросе точку. В день его ухода на пенсию несколько его учеников в качестве шутки подарили престарелому учителю связку дротиков, на которых были написаны его теоремы и ставшие знаменитыми высказывания. Это оказалось не самым мудрым поступком, так как Адрон был быстр на расправу и сразу же начал метать дротики в своих учеников. Как оказалось, написанные на дротиках теоремы придавали тем точность мудрости и способствовали их попаданию в цель. К счастью, его ученики избегали дротиков так же успешно, как и занятий, так что если не считать пары запачканных мантий, ущерб был невелик.
 
@@ -8514,7 +8514,8 @@
  Наложение заклинания: цель становится слабоумной (успешный спасбросок воли с УС 21 отменяет эффект)
 Вес: 0 фунтов
 Необходимая черта: Простое оружие, Метательное
-Тип: одноручное~
+Тип: одноручное
+Требования: Интеллект 16~
 @11675    = ~Дротик развеивания Делнара +3~
 @11676    = ~Делнар был робким магом, который никогда не любил приключения. Большую часть своей жизни он провёл в спокойной учёбе, живя со своей матерью и пытаясь постичь искусство создания зачарованных предметов. Когда Делнар устал от теории и решился перейти к практике, он первым делом взялся за создание полезного любому магу дротика. Направленный даже неопытной рукой, этот дротик должен бы лететь точно в цель, развеивать любую магическую защиту и возвращаться в руку владельца.
 
@@ -8577,118 +8578,116 @@
 Вес: 2 фунта
 Необходимая черта: Военное оружие, Луки
 Тип: двуручное~
-@11691    = ~Shortbow of Tripping +2~
-@11692    = ~Shortbows were the first to be developed, although they were not called such. This is more of a default term that refers to anything which is not a long bow. Shortbow staves are about 5 ' feet long on the average. As the years passed, attempts were made to increase bow ranges. Bows were either given longer staves or flexibility was increased with no change to the length. The former resulted in what is now called the longbow. 
+@11691    = ~Короткий лук спотыкания +2~
+@11692    = ~Короткие луки - первая разновидность такого оружия. Разумеется, изначально их не называли короткими - лишь сейчас этим словом обозначают луки, которые нельзя назвать длинными. Средняя длина короткого лука - 5 футов. Со временем возникла необходимость увеличить дальность стрельбы, и луки начали совершенствовать, увеличивая либо их гибкость, либо длину, последний вариант как раз привёл к появлению длинных луков.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage: +2 (missile)
-Attack Bonus: +2 
-Special:
-  Tripping: Target falls down for 1 second (Reflex DC 18)
-Weight: 2 lb.
-Feat Requirement:  Martial Weapon, Bow
-Type:  Two-handed
-Minimum Dexterity of 16 Required~
-@11693    = ~Shortbow of the Agile +1~
-@11694    = ~Shortbows were the first to be developed, although they were not called such. This is more of a default term that refers to anything which is not a long bow. Shortbow staves are about 5 ' feet long on the average. As the years passed, attempts were made to increase bow ranges. Bows were either given longer staves or flexibility was increased with no change to the length. The former resulted in what is now called the longbow. 
+Урон: +2 (метательный)
+Атака: +2
+Особенности:
+ Спотыкание: Цель падает на 1 секунду (успешный спасбросок реакции с УС 18 отменяет эффект)
+Вес: 2 фунта
+Необходимая черта: Военное оружие, Луки
+Тип: двуручное
+Требования: Ловкость 16~
+@11693    = ~Короткий лук ловкости +1~
+@11694    = ~Короткие луки - первая разновидность такого оружия. Разумеется, изначально их не называли короткими - лишь сейчас этим словом обозначают луки, которые нельзя назвать длинными. Средняя длина короткого лука - 5 футов. Со временем возникла необходимость увеличить дальность стрельбы, и луки начали совершенствовать, увеличивая либо их гибкость, либо длину, последний вариант как раз привёл к появлению длинных луков.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage: +1 (missile)
-Attack Bonus: +1 
-Special:
-  Gains Dexterity bonus to damage
-Weight: 2 lb.
-Feat Requirement:  Martial Weapon, Bow
-Type:  Two-handed~
-@11695    = ~Shortbow of Silencing +1~
-@11696    = ~Shortbows were the first to be developed, although they were not called such. This is more of a default term that refers to anything which is not a long bow. Shortbow staves are about 5 ' feet long on the average. As the years passed, attempts were made to increase bow ranges. Bows were either given longer staves or flexibility was increased with no change to the length. The former resulted in what is now called the longbow. 
+Урон: +1 (метательный)
+Атака: +1
+Особенности:
+ Добавляет модификатор ловкости к урону
+Вес: 2 фунта
+Необходимая черта: Военное оружие, Луки
+Тип: двуручное~
+@11695    = ~Короткий лук замолкания +1~
+@11696    = ~Короткие луки - первая разновидность такого оружия. Разумеется, изначально их не называли короткими - лишь сейчас этим словом обозначают луки, которые нельзя назвать длинными. Средняя длина короткого лука - 5 футов. Со временем возникла необходимость увеличить дальность стрельбы, и луки начали совершенствовать, увеличивая либо их гибкость, либо длину, последний вариант как раз привёл к появлению длинных луков.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage: +1 (missile)
-Attack Bonus: +1 
-Special:
-  Silenced: +5 to Move Silently skill
-  Silencing: Arrows fired from this bow have a 50% chance to render the target mute for 1 round on hit (Will DC 15) 
-Weight: 2 lb.
-Feat Requirement:  Martial Weapon, Bow
-Type:  Two-handed~
-@11697    = ~Shortbow of Shadows +1~
-@11698    = ~Shortbows were the first to be developed, although they were not called such. This is more of a default term that refers to anything which is not a long bow. Shortbow staves are about 5 ' feet long on the average. As the years passed, attempts were made to increase bow ranges. Bows were either given longer staves or flexibility was increased with no change to the length. The former resulted in what is now called the longbow. 
+Урон: +1 (метательный)
+Атака: +1
+Особенности:
+ Приглушение: +5 к навыку "Тихая походка"
+ Замолкание: стрелы, выпущенные из этого лука, с вероятностью в 50% при попадании заставляют цель замолкнуть на 1 раунд (успешный спасбросок воли с УС 15 помогает избежать эффекта)
+Вес: 2 фунта
+Необходимая черта: Военное оружие, Луки
+Тип: двуручное~
+@11697    = ~Короткий лук теней +1~
+@11698    = ~Короткие луки - первая разновидность такого оружия. Разумеется, изначально их не называли короткими - лишь сейчас этим словом обозначают луки, которые нельзя назвать длинными. Средняя длина короткого лука - 5 футов. Со временем возникла необходимость увеличить дальность стрельбы, и луки начали совершенствовать, увеличивая либо их гибкость, либо длину, последний вариант как раз привёл к появлению длинных луков.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage: +1 (missile)
-Attack Bonus: +1
-Special:
-  Generic Armor Bonus: +1
-  Shadowed: +5 to Hide skill
-Weight: 2 lb.
-Feat Requirement:  Martial Weapon, Bow
-Type:  Two-handed~
-@11699    = ~Shortbow of Dodging +1~
-@11700    = ~Shortbows were the first to be developed, although they were not called such. This is more of a default term that refers to anything which is not a longbow. Shortbow staves are about 5 ' feet long on the average. As the years passed, attempts were made to increase bow ranges. Bows were either given longer staves or flexibility was increased with no change to the length. The former resulted in what is now called the longbow. 
+Особенности:
+ Класс защиты: +1 (общий)
+ Слияние с тенью: +5 к навыку "Незаметность"
+Вес: 2 фунта
+Необходимая черта: Военное оружие, Луки
+Тип: двуручное~
+@11699    = ~Короткий лук уклонения +1~
+@11700    = ~Короткие луки - первая разновидность такого оружия. Разумеется, изначально их не называли короткими - лишь сейчас этим словом обозначают луки, которые нельзя назвать длинными. Средняя длина короткого лука - 5 футов. Со временем возникла необходимость увеличить дальность стрельбы, и луки начали совершенствовать, увеличивая либо их гибкость, либо длину, последний вариант как раз привёл к появлению длинных луков.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage: +1 (missile)
-Attack Bonus: +1
-Special:
-  Dodging: +4 Armor Class vs. Missiles
-  Mobility: +4 Armor Class vs. Attacks of Opportunity
-Weight: 2 lb.
-Feat Requirement:  Martial Weapon, Bow
-Type:  Two-handed~
-@11701    = ~Rapid Shot Shortbow +1~
-@11702    = ~Shortbows were the first to be developed, although they were not called such. This is more of a default term that refers to anything which is not a long bow. Shortbow staves are about 5 ' feet long on the average. As the years passed, attempts were made to increase bow ranges. Bows were either given longer staves or flexibility was increased with no change to the length. The former resulted in what is now called the longbow.
+Урон: +1 (метательный)
+Атака: +1
+Особенности:
+ Уклонение: +4 к классу защиты против метательных атак
+ Подвижность: +4 к классу защиты против атаки при возможности
+Вес: 2 фунта
+Необходимая черта: Военное оружие, Луки
+Тип: двуручное~
+@11701    = ~Короткий лук быстрого выстрела +1~
+@11702    = ~Короткие луки - первая разновидность такого оружия. Разумеется, изначально их не называли короткими - лишь сейчас этим словом обозначают луки, которые нельзя назвать длинными. Средняя длина короткого лука - 5 футов. Со временем возникла необходимость увеличить дальность стрельбы, и луки начали совершенствовать, увеличивая либо их гибкость, либо длину, последний вариант как раз привёл к появлению длинных луков.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage: +1 (missile)
-Attack Bonus: +1 
-Special:
-  Rapid Shot: 1 extra attack per round, but all attacks have a -2 attack penalty. This ability stacks with the Rapid Shot feat.
-Weight: 2 lb.
-Feat Requirement:  Martial Weapon, Bow
-Type:  Two-handed~
-@11703    = ~Shortbow of the Agile +5~
-@11704    = ~Shortbows were the first to be developed, although they were not called such. This is more of a default term that refers to anything which is not a longbow. Shortbow staves are about 5 ' feet long on the average. As the years passed, attempts were made to increase bow ranges. Bows were either given longer staves or flexibility was increased with no change to the length. The former resulted in what is now called the longbow. 
+Урон: +1 (метательный)
+Атака: +1
+Особенности:
+ Быстрый выстрел: 1 дополнительная атака в раунд, но все атаки получают -2 к атаке. Эту способность можно использовать вместе с чертой "Повторный выстрел"
+Вес: 2 фунта
+Необходимая черта: Военное оружие, Луки
+Тип: двуручное~
+@11703    = ~Короткий лук ловкости +5~
+@11704    = ~Короткие луки - первая разновидность такого оружия. Разумеется, изначально их не называли короткими - лишь сейчас этим словом обозначают луки, которые нельзя назвать длинными. Средняя длина короткого лука - 5 футов. Со временем возникла необходимость увеличить дальность стрельбы, и луки начали совершенствовать, увеличивая либо их гибкость, либо длину, последний вариант как раз привёл к появлению длинных луков.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  +5 (missile)
-Attack Bonus:  +5
-Special:
-  Gains Dexterity bonus to damage
-Weight: 2 lb.
-Feat Requirement:  Martial Weapon, Bow
-Type:  Two-handed~
-@11705    = ~Venomspitter +2~
-@11706    = ~Shortbows were the first to be developed, although they were not called such. This is more of a default term that refers to anything which is not a longbow. Shortbow staves are about 5 ' feet long on the average. As the years passed, attempts were made to increase bow ranges. Bows were either given longer staves or flexibility was increased with no change to the length. The former resulted in what is now called the longbow.
+Урон: +5 (метательный)
+Атака: +5
+Особенности:
+ Добавляет модификатор ловкости к урону
+Вес: 2 фунта
+Необходимая черта: Военное оружие, Луки
+Тип: двуручное~
+@11705    = ~Извергатель яда +2~
+@11706    = ~Короткие луки - первая разновидность такого оружия. Разумеется, изначально их не называли короткими - лишь сейчас этим словом обозначают луки, которые нельзя назвать длинными. Средняя длина короткого лука - 5 футов. Со временем возникла необходимость увеличить дальность стрельбы, и луки начали совершенствовать, увеличивая либо их гибкость, либо длину, последний вариант как раз привёл к появлению длинных луков.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  +2 (missile)
-Attack Bonus:  +2 
-Special:
-  Arrows fired from this bow poison the target, dealing 2 damage per second for 6 seconds (Fortitude DC 18 + twice the wielder's Dexterity bonus)
-Weight: 2 lb.
-Feat Requirement:  Martial Weapon, Bow
-Type:  Two-handed~
-@11707    = ~Shortbow of Sneak Attacking +1~
-@11708    = ~Shortbows were the first to be developed, although they were not called such. This is more of a default term that refers to anything which is not a longbow. Shortbow staves are about 5 ' feet long on the average. As the years passed, attempts were made to increase bow ranges. Bows were either given longer staves or flexibility was increased with no change to the length. The former resulted in what is now called the longbow.
+Урон: +2 (метательный)
+Атака: +2
+Особенности:
+ Стрелы, выпущенные из этого лука, отравляют цель, нанося 2 урона в секунду в течение 6 секунд (успешный спасбросок стойкости с УС = (18 + удвоенный модификатор ловкости) позволяет избежать эффекта)
+Вес: 2 фунта
+Необходимая черта: Военное оружие, Луки
+Тип: двуручное~
+@11707    = ~Короткий лук скрытой атаки +1~
+@11708    = ~Короткие луки - первая разновидность такого оружия. Разумеется, изначально их не называли короткими - лишь сейчас этим словом обозначают луки, которые нельзя назвать длинными. Средняя длина короткого лука - 5 футов. Со временем возникла необходимость увеличить дальность стрельбы, и луки начали совершенствовать, увеличивая либо их гибкость, либо длину, последний вариант как раз привёл к появлению длинных луков.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  +1 (missile)
-Attack Bonus:  +1
-Special:
-  Sneak attacks with this bow deal an additional 1d6 damage
-Weight: 2 lb.
-Feat Requirement:  Martial Weapon, Bow
-Type:  Two-handed~
+Урон: +1 (метательный)
+Атака: +1
+Особенности:
+ Скрытая атака с этим луком наносит дополнительно 1d6 урона
+Вес: 2 фунта
+Необходимая черта: Военное оружие, Луки
+Тип: двуручное~
 //@11709    = ~Shortbow +5~
 //@11710    = ~Item description can remain the same; if new description is needed put it here~
 //@11711    = ~Shortbow +4~
@@ -8697,54 +8696,54 @@ Type:  Two-handed~
 //@11714    = ~Item description can remain the same; if new description is needed put it here~
 //@11715    = ~Shortbow +2~
 //@11716    = ~Item description can remain the same; if new description is needed put it here~
-@11717    = ~Eye of the Hunter +2~
-@11718    = ~This small barbarian bow is foreign to the lands of Icewind Dale, having been made by the distant warrior-priests of Vaasa. Its history is not rich, having been used by the chief hunter of a small tribe for decades. The bow later fell into the hands of invaders after the tribe was wiped out. Its obvious "barbarian" look could be unappealing to stylish urban adventurers. Made of yew and wrapped with thin furs, the bow looks rugged and practical. The grip of the bow has a chipped and faded painting of a large eye on each side.
+@11717    = ~Глаз охотника +2~
+@11718    = ~Этот небольшой варварский лук был изготовлен воинами-жрецами из Ваасы, далеко за пределами земель Долины Ледяного Ветра. История его не слишком примечательна: в течение десятилетий он верно служил главному охотнику небольшого племени. Позднее, после того, как всё племя было перебито, этот лук попал в руки захватчиков. Его очевидный "варварский" вид может не понравиться стильным искателям приключений из больших городов. Сделанный из тиса и обтянутый тонким мехом, этот лук прочен и практичен. На его рукояти с каждой стороны находятся уже выцветшие изображения глаз.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage: +2 (missile), +5 vs. animals
-Attack Bonus: +2, +5 vs. animals
-Weight: 2 lb.
-Feat Requirement:  Martial Weapon, Bow
-Type:  Two-handed~
-@11719    = ~Swift Eye of the Hunter +4~
-@11720    = ~This small barbarian bow is foreign to the lands of Icewind Dale, having been made by the distant warrior-priests of Vaasa. Its history is not rich, having been used by the chief hunter of a small tribe for decades. The bow later fell into the hands of invaders after the tribe was wiped out. Its obvious "barbarian" look could be unappealing to stylish urban adventurers. Made of yew and wrapped with thin furs, the bow looks rugged and practical. The grip of the bow has a chipped and faded painting of a large eye on each side.
+Урон: +2 (метательный), +5 против животных
+Атака: +2, +5 против животных
+Вес: 2 фунт
+Необходимая черта: Военное оружие, Луки
+Тип: двуручное~
+@11719    = ~Быстрый глаз охотника +4~
+@11720    = ~Этот небольшой варварский лук был изготовлен воинами-жрецами из Ваасы, далеко за пределами земель Долины Ледяного Ветра. История его не слишком примечательна: в течение десятилетий он верно служил главному охотнику небольшого племени. Позднее, после того, как всё племя было перебито, этот лук попал в руки захватчиков. Его очевидный "варварский" вид может не понравиться стильным искателям приключений из больших городов. Сделанный из тиса и обтянутый тонким мехом, этот лук прочен и практичен. На его рукояти с каждой стороны находятся уже выцветшие изображения глаз.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  +4 (missile), +10 vs. animals
-Attack Bonus:  +4, +10 vs. animals
-Special:
-  Quick: No delay before attacking
-Weight: 1 lb.
-Feat Requirement:  Martial Weapon, Bow
-Type:  Two-handed~
-@11721    = ~Rabbit Slayer +3~
-@11722    = ~The famed halfling hunter Herrian Smallhill was well known for his ability to fell large numbers of rabbits in a single day. Though Herrian repeatedly was challenged to displays of "real" hunting skill, he always returned to his home near Corm Orp to provide rabbits for his community. A noble elven hunter named Shidan Imraith challenged the halfling to a hunting contest in 1197 DR. When Herrian emerged at the victor, the proud elf became so enraged that he ordered his men to kill the halfling. Though Imraith's house was disgraced for the action and Shidan was brought to justice, Herrian's fine yew bow disappeared.
+Урон: +4 (метательный), +10 против животных
+Атака: +4, +10 против животных
+Особенности:
+ Быстрота: нет задержки перед атакой
+Вес: 1 фунт
+Необходимая черта: Военное оружие, Луки
+Тип: двуручное~
+@11721    = ~Убийца кроликов +3~
+@11722    = ~Прославленный охотник-полурослик Герриан Холмик был знаменит тем, что за день мог убить множество кроликов. Хотя Герриана неоднократно просили продемонстрировать "настоящие" охотничьи умения, он неизменно возвращался в свой домик близ Корм Орпа с кроликами для своей общины. В 1197 ДЛ благородный эльфийский охотник по имени Шидан Имрайт вызвал полурослика на охотничье состязание. Когда Герран вышел победителем, гордый эльф пришёл в такую ярость, что приказал своим людям убить полурослика. И хотя из-за этого поступка дом Имрайт был опозорен, а сам Шидан предстал перед правосудием, прекрасный тисовый лук Герриана исчез.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage: +3 (missile)
-Attack Bonus: +3 
-Special:
-  Speed: 2 extra attacks per round
-  Special: Reduced range compared to other bows
-Weight: 1 lb.
-Feat Requirement:  Martial Weapon, Bow
-Type:  Two-handed~
-@11723    = ~Furious Rabbit Slayer +5~
-@11724    = ~The famed halfling hunter Herrian Smallhill was well known for his ability to fell large numbers of rabbits in a single day. Though Herrian repeatedly was challenged to displays of "real" hunting skill, he always returned to his home near Corm Orp to provide rabbits for his community. A noble elven hunter named Shidan Imraith challenged the halfling to a hunting contest in 1197 DR. When Herrian emerged at the victor, the proud elf became so enraged that he ordered his men to kill the halfling. Though Imraith's house was disgraced for the action and Shidan was brought to justice, Herrian's fine yew bow disappeared.
+Урон: +3 (метательный)
+Атака: +3
+Особенности:
+ Скорость: +2 атака в раунд
+ Уменьшенная дальность по сравнению с другими луками
+Вес: 1 фунт
+Необходимая черта: Военное оружие, Луки
+Тип: двуручное~
+@11723    = ~Яростный убийца кроликов +5~
+@11724    = ~Прославленный охотник-полурослик Герриан Холмик был знаменит тем, что за день мог убить множество кроликов. Хотя Герриана неоднократно просили продемонстрировать "настоящие" охотничьи умения, он неизменно возвращался в свой домик близ Корм Орпа с кроликами для своей общины. В 1197 ДЛ благородный эльфийский охотник по имени Шидан Имрайт вызвал полурослика на охотничье состязание. Когда Герран вышел победителем, гордый эльф пришёл в такую ярость, что приказал своим людям убить полурослика. И хотя из-за этого поступка дом Имрайт был опозорен, а сам Шидан предстал перед правосудием, прекрасный тисовый лук Герриана исчез.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage: +5 (missile)
-Attack Bonus: +5 
-Special:
-  Speed: Attacks per round doubled; this allows the character to exceed the limit of 5 attacks per round
-  Special: Reduced range compared to other bows
-Weight: 1 lb.
-Feat Requirement:  Martial Weapon, Bow
-Type:  Two-handed~
+Урон: +5 (метательный)
+Атака: +5
+Особенности:
+ Скорость: количество атак в раунд удвоено (общее количество атак при этом может быть больше обычного максимума в пять атак)
+ Уменьшенная дальность по сравнению с другими луками
+Вес: 1 фунт
+Необходимая черта: Военное оружие, Луки
+Тип: двуручное~
 
 
 //@11725    = ~Composite Shortbow~
