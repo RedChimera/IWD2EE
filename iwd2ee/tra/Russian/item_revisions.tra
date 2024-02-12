@@ -9021,138 +9021,139 @@
 
 
 //@11771    = ~Composite Longbow~
-@11772    = ~Composite bows are longbows or shortbows whose staves are made from more than one type of material. This gives greater flexibility, and thus better range. These were developed after the normal longbow.
+@11772    = ~Составные луки - это длинные или короткие луки, основания которых сделаны из нескольких материалов. Это придаёт большую гибкость и позволяет стрелам наносить больший урон. Составные длинные луки были созданы на основе обычных длинных луков.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  +1 (missile)
-Special:
-  Composite: Gains Strength bonus to damage, up to a maximum of +1
-Weight: 3 lb.
-Feat Requirement:  Martial Weapon, Bow
-Type:  Two-handed~
+Урон: +1 (метательный)
+Особенности:
+ Композитный: добавляет модификатор силы к урону, до максимума в +1
+Вес: 3 фунта
+Необходимая черта: Военное оружие, Луки
+Тип: двуручное~
 //@11773    = ~Masterwork Composite Longbow~
-@11774    = ~Composite bows are longbows or shortbows whose staves are made from more than one type of material. This gives greater flexibility, and thus better range. These were developed after the normal longbow.
+@11774    = ~Составные луки - это длинные или короткие луки, основания которых сделаны из нескольких материалов. Это придаёт большую гибкость и позволяет стрелам наносить больший урон. Составные длинные луки были созданы на основе обычных длинных луков.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  +1 (missile)
-Attack Bonus:  +1
-Special:
-  Composite: Gains Strength bonus to damage, up to a maximum of +2
-Weight: 3 lb.
-Feat Requirement:  Martial Weapon, Bow
-Type:  Two-handed~
+Урон: +1 (метательный)
+Атака: +1
+Особенности:
+ Композитный: добавляет модификатор силы к урону, до максимума в +2
+Вес: 3 фунта
+Необходимая черта: Военное оружие, Луки
+Тип: двуручное~
 //@11775    = ~Composite Longbow +1~
-@11776    = ~Composite bows are longbows or shortbows whose staves are made from more than one type of material. This gives greater flexibility, and thus better range. These were developed after the normal longbow.
+@11776    = ~Составные луки - это длинные или короткие луки, основания которых сделаны из нескольких материалов. Это придаёт большую гибкость и позволяет стрелам наносить больший урон. Составные длинные луки были созданы на основе обычных длинных луков.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  +2 (missile)
-Attack Bonus:  +1
-Special:
-  Composite: Gains Strength bonus to damage, up to a maximum of +2
-Weight: 3 lb.
-Feat Requirement:  Martial Weapon, Bow
-Type:  Two-handed~
-@11777    = ~Composite Longbow of Holy Power +1~
-@11778    = ~Composite bows are longbows or shortbows whose staves are made from more than one type of material. This gives greater flexibility, and thus better range. These were developed after the normal longbow.
+Урон: +2 (метательный)
+Атака: +1
+Особенности:
+ Композитный: добавляет модификатор силы к урону, до максимума в +2
+Вес: 3 фунта
+Необходимая черта: Военное оружие, Луки
+Тип: двуручное~
+@11777    = ~Составной длинный лук святой силы +1~
+@11778    = ~Составные луки - это длинные или короткие луки, основания которых сделаны из нескольких материалов. Это придаёт большую гибкость и позволяет стрелам наносить больший урон. Составные длинные луки были созданы на основе обычных длинных луков.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  +2 (missile)
-Attack Bonus:  +1
-Special:
-  Composite: Gains Strength bonus to damage, up to a maximum of +2
-  Constant Effect: Wielder is under the effects of the spell Holy Power
-Weight: 9 lb.
-Feat Requirement:  Martial Weapon, Bow
-Type:  Two-handed~
-@11779    = ~Composite Longbow of Point Blank Defense~
-@11780    = ~Composite bows are longbows or shortbows whose staves are made from more than one type of material. This gives greater flexibility, and thus better range. These were developed after the normal longbow. 
+Урон: +2 (метательный)
+Атака: +1
+Особенности:
+ Композитный: добавляет модификатор силы к урону, до максимума в +2
+ Постоянный эффект: владелец лука находится под постоянным эффектом заклинания "Святая сила"
+Вес: 9 фунта
+Необходимая черта: Военное оружие, Луки
+Тип: двуручное~
+@11779    = ~Составной длинный лук защиты в упор~
+@11780    = ~Составные луки - это длинные или короткие луки, основания которых сделаны из нескольких материалов. Это придаёт большую гибкость и позволяет стрелам наносить больший урон. Составные длинные луки были созданы на основе обычных длинных луков.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  +1 (missile)
-Special:
-  Composite: Gains Strength bonus to damage, up to a maximum of +1
-  +2 Armor Class vs. slashing, piercing and bludgeoning attacks
-Weight: 3 lb.
-Feat Requirement:  Martial Weapon, Bow
-Type:  Two-handed~
-@11781    = ~Composite Longbow of Power Shots +4~
-@11782    = ~Composite bows are longbows or shortbows whose staves are made from more than one type of material. This gives greater flexibility, and thus better range. These were developed after the normal longbow. 
+Урон: +1 (метательный)
+Особенности:
+ Композитный: добавляет модификатор силы к урону, до максимума в +1
+ Класс защиты: +2 против рубящих, колющих и дробящих атак
+Вес: 3 фунта
+Необходимая черта: Военное оружие, Луки
+Тип: двуручное~
+@11781    = ~Составной длинный лук мощных выстрелов +4~
+@11782    = ~Составные луки - это длинные или короткие луки, основания которых сделаны из нескольких материалов. Это придаёт большую гибкость и позволяет стрелам наносить больший урон. Составные длинные луки были созданы на основе обычных длинных луков.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  +10 (missile)
-Attack Bonus:  -5
-Special:
-  Composite: Gains Strength bonus to damage, up to a maximum of +10
-Weight: 3 lb.
-Feat Requirement:  Martial Weapon, Bow
-Type:  Two-handed~
-@11783    = ~Composite Longbow of Dodging +2~
-@11784    = ~Composite bows are longbows or shortbows whose staves are made from more than one type of material. This gives greater flexibility, and thus better range. These were developed after the normal longbow. 
+Урон: +10 (метательный)
+Атака: -5
+Особенности:
+ Композитный: добавляет модификатор силы к урону, до максимума в +10
+Вес: 3 фунта
+Необходимая черта: Военное оружие, Луки
+Тип: двуручное~
+@11783    = ~Составной длинный лук уклонения +2~
+@11784    = ~Составные луки - это длинные или короткие луки, основания которых сделаны из нескольких материалов. Это придаёт большую гибкость и позволяет стрелам наносить больший урон. Составные длинные луки были созданы на основе обычных длинных луков.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  +3 (missile)
-Attack Bonus:  +2
-Special:
-  Composite: Gains Strength bonus to damage, up to a maximum of +3
-  Dodging: +4 Armor Class vs. melee attacks
-  The wielder does not provoke attacks of opportunity when firing this bow in melee
-Weight: 9 lb.
-Feat Requirement:  Martial Weapon, Bow
-Type:  Two-handed~
+Урон: +3 (метательный)
+Атака: +2
+Особенности:
+ Композитный: добавляет модификатор силы к урону, до максимума в +3
+ Уклонение: +4 к классу защиты против атак ближнего боя
+ Владелец лука не провоцирует атаки при возможности когда стреляет из этого лука вблизи
+Вес: 9 фунта
+Необходимая черта: Военное оружие, Луки
+Тип: двуручное~
 //@11785    = ~Composite Longbow +5~
-@11786    = ~Composite bows are longbows or shortbows whose staves are made from more than one type of material. This gives greater flexibility, and thus better range. These were developed after the normal longbow.
+@11786    = ~Составные луки - это длинные или короткие луки, основания которых сделаны из нескольких материалов. Это придаёт большую гибкость и позволяет стрелам наносить больший урон. Составные длинные луки были созданы на основе обычных длинных луков.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  +6 (missile)
-Attack Bonus:  +5
-Special:
-  Composite: Gains Strength bonus to damage, up to a maximum of +6
-Weight: 3 lb.
-Feat Requirement:  Martial Weapon, Bow
-Type:  Two-handed~
+Урон: +6 (метательный)
+Атака: +5
+Особенности:
+ Композитный: добавляет модификатор силы к урону, до максимума в +6
+Вес: 3 фунта
+Необходимая черта: Военное оружие, Луки
+Тип: двуручное~
 //@11787    = ~Composite Longbow +4~
-@11788    = ~Composite bows are longbows or shortbows whose staves are made from more than one type of material. This gives greater flexibility, and thus better range. These were developed after the normal longbow.
+@11788    = ~Составные луки - это длинные или короткие луки, основания которых сделаны из нескольких материалов. Это придаёт большую гибкость и позволяет стрелам наносить больший урон. Составные длинные луки были созданы на основе обычных длинных луков.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  +5 (missile)
-Attack Bonus:  +4
-Special:
-  Composite: Gains Strength bonus to damage, up to a maximum of +5
-Weight: 3 lb.
-Feat Requirement:  Martial Weapon, Bow
-Type:  Two-handed~
+Урон: +5 (метательный)
+Атака: +4
+Особенности:
+ Композитный: добавляет модификатор силы к урону, до максимума в +5
+Вес: 3 фунта
+Необходимая черта: Военное оружие, Луки
+Тип: двуручное~
 //@11789    = ~Composite Longbow +3~
-@11790    = ~Composite bows are longbows or shortbows whose staves are made from more than one type of material. This gives greater flexibility, and thus better range. These were developed after the normal longbow.
-STATISTICS:
+@11790    = ~Составные луки - это длинные или короткие луки, основания которых сделаны из нескольких материалов. Это придаёт большую гибкость и позволяет стрелам наносить больший урон. Составные длинные луки были созданы на основе обычных длинных луков.
 
-Damage:  +4 (missile)
-Attack Bonus:  +3
-Special:
-  Composite: Gains Strength bonus to damage, up to a maximum of +4
-Weight: 3 lb.
-Feat Requirement:  Martial Weapon, Bow
-Type:  Two-handed~
+ПАРАМЕТРЫ:
+
+Урон: +4 (метательный)
+Атака: +3
+Особенности:
+ Композитный: добавляет модификатор силы к урону, до максимума в +4
+Вес: 3 фунта
+Необходимая черта: Военное оружие, Луки
+Тип: двуручное~
 //@11791    = ~Composite Longbow +2~
-@11792    = ~Composite bows are longbows or shortbows whose staves are made from more than one type of material. This gives greater flexibility, and thus better range. These were developed after the normal longbow.
+@11792    = ~Составные луки - это длинные или короткие луки, основания которых сделаны из нескольких материалов. Это придаёт большую гибкость и позволяет стрелам наносить больший урон. Составные длинные луки были созданы на основе обычных длинных луков.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  +3 (missile)
-Attack Bonus:  +2
-Special:
-  Composite: Gains Strength bonus to damage, up to a maximum of +3
-Weight: 3 lb.
-Feat Requirement:  Martial Weapon, Bow
-Type:  Two-handed~
+Урон: +3 (метательный)
+Атака: +2
+Особенности:
+ Композитный: добавляет модификатор силы к урону, до максимума в +3
+Вес: 3 фунта
+Необходимая черта: Военное оружие, Луки
+Тип: двуручное~
 @11793    = ~Arc of Gold~
 @11794    = ~It can be argued that the Arc of Gold and its sister, the Mithral Arc, brought about the end of the dwarven-elvish alliance in the North many years past, and led to the destruction of the Severed Hand and the fall of Dorn's Deep. Many tragedies have occurred around these two items, and many are the deaths they caused although no arrow was ever shot from them. 
 
