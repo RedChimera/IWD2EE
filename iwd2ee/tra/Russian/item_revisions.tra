@@ -9224,291 +9224,295 @@
 Вес: 5 фунтов
 Необходимая черта: Простое оружие, Арбалеты
 Тип: двуручное~
-@11805    = ~Light Crossbow of the Mind +2~
-@11806    = ~A crossbow is a bow mounted crosswise on a wooden or metal shaft, the latter called a tiller. The bow is usually made of ash or yew. The crossbow fires a quarrel (also called a bolt). 
+@11805    = ~Лёгкий арбалет разума +2~
+@11806    = ~Лёгкий арбалет бьёт слабее своего старшего собрата, но быстрее перезаряжается. Он представляет собой лук, укреплённый на ложе - деревянной или железной ручке. Сам лук обычно делают из ясеня или тиса. Для стрельбы из арбалета применяют особые стрелы, которые называют болтами. Этот арбалет излучает слабый голубой свет.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage: +2 (missile)
-Attack Bonus:  +6 
-Special:
-  Gains Intelligence bonus to both attack and damage
-Weight: 6 lb.
-Feat Requirement:  Simple Weapon, Crossbow
-Type:  Two-handed~
+Урон: +2 (метательный)
+Атака: +6
+Особенности:
+ Атака и урон получают модификаторы интеллекта
+Вес: 6 фунтов
+Необходимая черта: Простое оружие, Арбалеты
+Тип: двуручное~
 //@11807    = ~Light Crossbow +5~
-@11808    = ~A crossbow is a bow mounted crosswise on a wooden or metal shaft, the latter called a tiller. The bow is usually made of ash or yew. The crossbow fires a quarrel (also called a bolt). 
+@11808    = ~Лёгкий арбалет бьёт слабее своего старшего собрата, но быстрее перезаряжается. Он представляет собой лук, укреплённый на ложе - деревянной или железной ручке. Сам лук обычно делают из ясеня или тиса. Для стрельбы из арбалета применяют особые стрелы, которые называют болтами. Этот арбалет излучает слабый голубой свет.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  +5 (missile)
-Attack Bonus:  +12 
-Weight: 6 lb.
-Feat Requirement:  Simple Weapon, Crossbow
-Type:  Two-handed~
+Урон: +5 (метательный)
+Атака: +12
+Вес: 6 фунтов
+Необходимая черта: Простое оружие, Арбалеты
+Тип: двуручное~
 //@11809    = ~Light Crossbow +4~
-@11810    = ~A crossbow is a bow mounted crosswise on a wooden or metal shaft, the latter called a tiller. The bow is usually made of ash or yew. The crossbow fires a quarrel (also called a bolt). 
+@11810    = ~Лёгкий арбалет бьёт слабее своего старшего собрата, но быстрее перезаряжается. Он представляет собой лук, укреплённый на ложе - деревянной или железной ручке. Сам лук обычно делают из ясеня или тиса. Для стрельбы из арбалета применяют особые стрелы, которые называют болтами. Этот арбалет излучает слабый голубой свет.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  +4 (missile)
-Attack Bonus:  +10
-Weight: 6 lb.
-Feat Requirement:  Simple Weapon, Crossbow
-Type:  Two-handed~
+Урон: +4 (метательный)
+Атака: +10
+Вес: 6 фунтов
+Необходимая черта: Простое оружие, Арбалеты
+Тип: двуручное~
 //@11811    = ~Light Crossbow +3~
-@11812    = ~A crossbow is a bow mounted crosswise on a wooden or metal shaft, the latter called a tiller. The bow is usually made of ash or yew. The crossbow fires a quarrel (also called a bolt). 
+@11812    = ~Лёгкий арбалет бьёт слабее своего старшего собрата, но быстрее перезаряжается. Он представляет собой лук, укреплённый на ложе - деревянной или железной ручке. Сам лук обычно делают из ясеня или тиса. Для стрельбы из арбалета применяют особые стрелы, которые называют болтами. Этот арбалет излучает слабый голубой свет.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  +3 (missile)
-Attack Bonus:  +8 
-Weight: 6 lb.
-Feat Requirement:  Simple Weapon, Crossbow
-Type:  Two-handed~
+Урон: +3 (метательный)
+Атака: +8
+Вес: 6 фунтов
+Необходимая черта: Простое оружие, Арбалеты
+Тип: двуручное~
 //@11813    = ~Light Crossbow +2~
-@11814    = ~A crossbow is a bow mounted crosswise on a wooden or metal shaft, the latter called a tiller. The bow is usually made of ash or yew. The crossbow fires a quarrel (also called a bolt). 
+@11814    = ~Лёгкий арбалет бьёт слабее своего старшего собрата, но быстрее перезаряжается. Он представляет собой лук, укреплённый на ложе - деревянной или железной ручке. Сам лук обычно делают из ясеня или тиса. Для стрельбы из арбалета применяют особые стрелы, которые называют болтами. Этот арбалет излучает слабый голубой свет.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  +2 (missile)
-Attack Bonus:  +6 
-Weight: 6 lb.
-Feat Requirement:  Simple Weapon, Crossbow
-Type:  Two-handed~
-@11815    = ~Light Crossbow of Prayer +1~
-@11816    = ~A crossbow is a bow mounted crosswise on a wooden or metal shaft, the latter called a tiller. The bow is usually made of ash or yew. The crossbow fires a quarrel (also called a bolt).
+Урон: +2 (метательный)
+Атака: +6
+Вес: 6 фунтов
+Необходимая черта: Простое оружие, Арбалеты
+Тип: двуручное~
+@11815    = ~Лёгкий арбалет молитвы +1~
+@11816    = ~Лёгкий арбалет бьёт слабее своего старшего собрата, но быстрее перезаряжается. Он представляет собой лук, укреплённый на ложе - деревянной или железной ручке. Сам лук обычно делают из ясеня или тиса. Для стрельбы из арбалета применяют особые стрелы, которые называют болтами. Этот арбалет излучает слабый голубой свет.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage: +1 (missile)
-Attack Bonus:  +4 
-Special:
-  Positive Magic: Wielder gains the positive effects of the spell Prayer
-  Negative Magic: Bolts fired from this crossbow grant the negative effects of the spell Prayer for 2 rounds (Will DC 23)
-Weight: 6 lb.
-Feat Requirement:  Simple Weapon, Crossbow
-Type:  Two-handed~
-@11817    = ~Light Crossbow of Resistance~
-@11818    = ~A crossbow is a bow mounted crosswise on a wooden or metal shaft, the latter called a tiller. The bow is usually made of ash or yew. The crossbow fires a quarrel (also called a bolt). 
+Урон: +1 (метательный)
+Атака: +4
+Особенности:
+ Положительный эффект: владелец получает положительные эффекты заклинания "Молитва"
+ Отрицательный эффект: болты, выпущенные из этого арбалета, накладывают отрицательные эффекты заклинания "Молитва" на цель на 2 раунда (успешный спасбросок воли с УС 23 отменяет эффект)
+Вес: 6 фунтов
+Необходимая черта: Простое оружие, Арбалеты
+Тип: двуручное~
+@11817    = ~Лёгкий арбалет сопротивления~
+@11818    = ~Лёгкий арбалет бьёт слабее своего старшего собрата, но быстрее перезаряжается. Он представляет собой лук, укреплённый на ложе - деревянной или железной ручке. Сам лук обычно делают из ясеня или тиса. Для стрельбы из арбалета применяют особые стрелы, которые называют болтами. Этот арбалет излучает слабый голубой свет.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Attack Bonus:  +2 
-Special:
-  Resistance: 2/- Slashing Resistance
-  Resistance: 2/- Piercing Resistance
-  Resistance: 2/- Bludgeoning Resistance
-  Resistance: 2/- Missile Resistance
-Weight: 6 lb.
-Feat Requirement:  Simple Weapon, Crossbow
-Type:  Two-handed~
-@11819    = ~Light Crossbow of Luck +5~
-@11820    = ~A crossbow is a bow mounted crosswise on a wooden or metal shaft, the latter called a tiller. The bow is usually made of ash or yew. The crossbow fires a quarrel (also called a bolt). 
+Атака: +2
+Особенности:
+ Сопротивление: 2/- сопротивления рубящему урону
+ Сопротивление: 2/- сопротивления колючему урону
+ Сопротивление: 2/- сопротивления дробящему урону
+ Сопротивление: 2/- сопротивления метательному урону
+Вес: 6 фунтов
+Необходимая черта: Простое оружие, Арбалеты
+Тип: двуручное~
+@11819    = ~Лёгкий арбалет удачи +5~
+@11820    = ~Лёгкий арбалет бьёт слабее своего старшего собрата, но быстрее перезаряжается. Он представляет собой лук, укреплённый на ложе - деревянной или железной ручке. Сам лук обычно делают из ясеня или тиса. Для стрельбы из арбалета применяют особые стрелы, которые называют болтами. Этот арбалет излучает слабый голубой свет.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage: +5 (missile)
-Attack Bonus:  +12 
-Special:
-  Luck: +3
-Weight: 6 lb.
-Feat Requirement:  Simple Weapon, Crossbow
-Type:  Two-handed~
-@11821    = ~Light Crossbow of Accuracy~
-@11822    = ~A crossbow is a bow mounted crosswise on a wooden or metal shaft, the latter called a tiller. The bow is usually made of ash or yew. The crossbow fires a quarrel (also called a bolt).
+Урон: +5 (метательный)
+Атака: +12
+Особенности:
+ Удача: +3
+Вес: 6 фунтов
+Необходимая черта: Простое оружие, Арбалеты
+Тип: двуручное~
+@11821    = ~Лёгкий арбалет точности~
+@11822    = ~Лёгкий арбалет бьёт слабее своего старшего собрата, но быстрее перезаряжается. Он представляет собой лук, укреплённый на ложе - деревянной или железной ручке. Сам лук обычно делают из ясеня или тиса. Для стрельбы из арбалета применяют особые стрелы, которые называют болтами. Этот арбалет излучает слабый голубой свет.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Attack Bonus:  +6
-Weight: 6 lb.
-Feat Requirement:  Simple Weapon, Crossbow
-Type:  Two-handed~
-@11823    = ~Hagnen's Foolishness +1~
-@11824    = ~This light crossbow was named, not by its dwarven designer, Hagnen Odestone, but by his wife Miraenna, who was responsible for stringing the crossbow with dragon gut and then checking its aim and speed of fire. There was apparently no love lost between the couple, and their arguments on everything from maintaining the home to maintaining the accounts were legendary within the clan halls. Shortly after Hagnen was crushed to death in the great quake of 1275 DR, Hagnen's wife proceeded to lay her husband's name (and backlog of uncompleted work) to rest by finishing the last of a series of enchanted weapons that still lay in Hagnen's workshop, cursing each one with Hagnen's name. After finishing the last of his weapons, Miraenna apparently left the dwarven clan home and traveled southwards, gladly ridding herself of the Odestone name and creations. 
+Атака: +6
+Вес: 6 фунтов
+Необходимая черта: Простое оружие, Арбалеты
+Тип: двуручное~
+@11823    = ~Глупость Хагнена +1~
+@11824    = ~Этот лёгкий арбалет был так назван не самим изобретателем, дварфом Хагненом Одестоном, а его женой Мираэнной, которая отвечала за натягивание тетивы из драконьих кишок и проверяла его точность и скорострельность. Эта пара определённо была не самой счастливой и их споры по каждому вопросу - от содержания дома до семейного бюджета - быстро стали легендами в их клане. Вскоре после того, как Хагнен погиб при землетрясении 1275 ЛД, Мираэнна решила оставить себе имя мужа (вместе с ответственностью за неоконченную работу) и стала доделывать последнюю серию зачарованного оружия, которое всё ещё оставалось в мастерской Хагнена, проклиная каждое из них именем Хагнена. Закончив последнее оружие, Мираэнна ушла из дома клана и отправилась на юг, с радостью избавившись и от имени и творений Одестона.
 
-Among Hagnen's other creations is a heavy crossbow that also bears his name - it has been sighted within the North on many occasions.
+Среди других творений Хагнена есть тяжёлый арбалет, который тоже носит его имя - его неоднократно видели на Севере.
 
-Damage:  +1 (missile)
-Attack Bonus:  +4
-Special:
-  Quick: No delay before attacking 
-Weight: 6 lb.
-Feat Requirement:  Simple Weapon, Crossbow
-Type:  Two-handed~
-@11825    = ~Foolishness of Hagnen Odestone +3~
-@11826    = ~This light crossbow was named, not by its dwarven designer, Hagnen Odestone, but by his wife Miraenna, who was responsible for stringing the crossbow with dragon gut and then checking its aim and speed of fire. There was apparently no love lost between the couple, and their arguments on everything from maintaining the home to maintaining the accounts were legendary within the clan halls. Shortly after Hagnen was crushed to death in the great quake of 1275 DR, Hagnen's wife proceeded to lay her husband's name (and backlog of uncompleted work) to rest by finishing the last of a series of enchanted weapons that still lay in Hagnen's workshop, cursing each one with Hagnen's name. After finishing the last of his weapons, Miraenna apparently left the dwarven clan home and traveled southwards, gladly ridding herself of the Odestone name and creations. 
+ПАРАМЕТРЫ:
 
-Among Hagnen's other creations is a heavy crossbow that also bears his name - it has been sighted within the North on many occasions.
+Урон: +1 (дальнобойное)
+Атака: +4
+Особенности:
+ Быстрота: нет задержки перед атакой
+Вес: 6 фунтов
+Необходимая черта: Простое оружие, Арбалеты
+Тип: двуручное~
+@11825    = ~Глупость Хагнена Одестона +3~
+@11826    = ~Этот лёгкий арбалет был так назван не самим изобретателем, дварфом Хагненом Одестоном, а его женой Мираэнной, которая отвечала за натягивание тетивы из драконьих кишок и проверяла его точность и скорострельность. Эта пара определённо была не самой счастливой и их споры по каждому вопросу - от содержания дома до семейного бюджета - быстро стали легендами в их клане. Вскоре после того, как Хагнен погиб при землетрясении 1275 ЛД, Мираэнна решила оставить себе имя мужа (вместе с ответственностью за неоконченную работу) и стала доделывать последнюю серию зачарованного оружия, которое всё ещё оставалось в мастерской Хагнена, проклиная каждое из них именем Хагнена. Закончив последнее оружие, Мираэнна ушла из дома клана и отправилась на юг, с радостью избавившись и от имени и творений Одестона.
 
-Damage:  +3 (missile)
-Attack Bonus:  +8 
-Special:
-  Quick: No delay before shooting
-  Red Dragon Gut: Bolts fired from this crossbow deal an additional 3d8 fire damage (Reflex DC 25 for half)
-Weight: 6 lb.
-Feat Requirement:  Simple Weapon, Crossbow
-Type:  Two-handed~
-@11827    = ~Iron Mary's Reply~
-@11828    = ~"Iron" Mary of Tantras was a woman of stunning beauty and deadly serious resolve. Iron Mary was easily spotted among her dark-haired mercenary company. Not deigning to wear a helmet, she knew her long blonde hair was visible from across a battlefield. Mary was often hired to track down groups of criminals in lawless lands and put an end to their activities. After five years, troublemakers throughout the Moonsea and Inner Sea knew that if Iron Mary was on their heels, they had angered someone of considerable importance. Instead of putting up a proper fight, many outlaws would attempt to surrender. Iron Mary never accepted surrender, so her reply was always a deadly sound blast shot into the ears of the fool who dared to try talking his or her way out of impending doom.
+Среди других творений Хагнена есть тяжёлый арбалет, который тоже носит его имя - его неоднократно видели на Севере.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage: 4d6 (magic; Fortitude DC 20 for half)
-Special:
-  Does not require ammo; attacks in the form of a Shout
-  Automatically hits but cannot critically hit
-  Deals no physical damage; damage bonuses do not increase the damage of this weapon
-  Stunning: All creatures hit by the Shout emitted by this weapon are stunned for 1 second (Fortitude DC 20)
-Weight: 5 lb.
-Feat Requirement:  Simple Weapon, Crossbow
-Type:  Two-handed~
-@11829    = ~Iron Mary's Bold Reply~
-@11830    = ~"Iron" Mary of Tantras was a woman of stunning beauty and deadly serious resolve. Iron Mary was easily spotted among her dark-haired mercenary company. Not deigning to wear a helmet, she knew her long blonde hair was visible from across a battlefield. Mary was often hired to track down groups of criminals in lawless lands and put an end to their activities. After five years, troublemakers throughout the Moonsea and Inner Sea knew that if Iron Mary was on their heels, they had angered someone of considerable importance. Instead of putting up a proper fight, many outlaws would attempt to surrender. Iron Mary never accepted surrender, so her reply was always a deadly sound blast shot into the ears of the fool who dared to try talking his or her way out of impending doom.
+Урон: +3 (дальнобойное)
+Атака: +8
+Особенности:
+ Быстрота: нет задержки перед атакой
+ Брюхо красного дракона: болты, выпущенные из этого арбалета, наносят дополнительно 3d8 урона огнем (спасбросок реакции с УС 25 позволяет снизить урон вдвое)
+Вес: 6 фунтов
+Необходимая черта: Простое оружие, Арбалеты
+Тип: двуручное~
+@11827    = ~Ответ Железной Мэри~
+@11828    = ~"Железная" Мэри из Тантраса обладала неземной красотой и несгибаемой волей. Среди других, обычно темноволосых, наёмников Железную Мэри было легко заметить - она не считала нужным носить шлем и знала, что её длинные светлые волосы хорошо заметны на поле боя. Мэри часто нанимали и для выслеживания разбойничьих банд в землях беззакония, и для того, чтобы положить конец их злодеяниям. Спустя пять лет преступники на землях вокруг Лунного и Внутреннего морей знали, что если Железная Мэри идёт за ними по пятам, они разозлили кого-то очень важного. Вместо того, чтобы дать ей достойный бой, многие злоумышленники пытались сдаться, однако Железная Мэри никогда не принимала капитуляцию. Её ответом всегда был железный болт, пущенный в лоб тому глупцу, который пытался с помощью разговоров избежать неминуемой гибели.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage: 12d6 (magic; Fortitude DC 27 for half)
-Special:
-  Does not require ammo; attacks in the form of a Great Shout
-  Automatically hits but cannot critically hit
-  Deals no physical damage; damage bonuses do not increase the damage of this weapon
-  Stunning: All creatures hit by the Great Shout emitted by this weapon are stunned for 1/2 combat round (Fortitude DC 27)
-Weight: 5 lb.
-Feat Requirement:  Simple Weapon, Crossbow
-Type:  Two-handed~
-@11831    = ~Makavail's Bane +2~
-@11832    = ~This weapon is not named for its user, but rather the person against whom it was used. Makavail was a scheming, lying, manipulative cheat who operated near the city of Westgate on the Lake of Dragons. Among the many enemies he made was a soldier from Teziir named Ricarl of the Mark. Ricarl wanted to get Makavail in trouble without letting his target know it was he who was responsible. When Makavail was exiting Westgate with chests full of stolen goods, Ricarl shot the leg of one of the horses pulling Makavail's wagon. The horse bolted and overturned the wagon. Guards rushed to the scene and discovered what Makavail was up to. He was thrown in prison and died only a year later. He never knew who had fired the fateful bolt that caused his downfall.
+Урон: 4d6 (магией; успешный спасбросок стойкости с УС 20 позволяет снизить урон вдвое)
+Особенности:
+ Не требует боеприпасов, атака производится звуковой волной, похожей на заклинание "Крик"
+ Автоматически попадает, но не может нанести критический удар
+ Не наносит физического урона; бонусы к урону не увеличивает урон от этого оружия
+ Ошеломление: все существа, поражённые эффектом, похожим на заклинание "Крик" ошеломляются на одну секунду (успешный спасбросок стойкости с УС 20 позволяет избежать эффекта)
+Вес: 5 фунтов
+Необходимая черта: Простое оружие, Арбалеты
+Тип: двуручное~
+@11829    = ~Смелый ответ Железной Мэри~
+@11830    = ~"Железная" Мэри из Тантраса обладала неземной красотой и несгибаемой волей. Среди других, обычно темноволосых, наёмников Железную Мэри было легко заметить - она не считала нужным носить шлем и знала, что её длинные светлые волосы хорошо заметны на поле боя. Мэри часто нанимали и для выслеживания разбойничьих банд в землях беззакония, и для того, чтобы положить конец их злодеяниям. Спустя пять лет преступники на землях вокруг Лунного и Внутреннего морей знали, что если Железная Мэри идёт за ними по пятам, они разозлили кого-то очень важного. Вместо того, чтобы дать ей достойный бой, многие злоумышленники пытались сдаться, однако Железная Мэри никогда не принимала капитуляцию. Её ответом всегда был железный болт, пущенный в лоб тому глупцу, который пытался с помощью разговоров избежать неминуемой гибели.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage: +2 (missile)
-Attack Bonus: +6
-Special:
-  Bolts fired from this crossbow give target a -10 penalty to Reflex saves for 2 rounds (cumulative, no save) 
-Weight: 5 lb.
-Feat Requirement:  Simple Weapon, Crossbow
-Type:  Two-handed~
-@11833    = ~Makavail's Swift Bane +4~
-@11834    = ~This weapon is not named for its user, but rather the person against whom it was used. Makavail was a scheming, lying, manipulative cheat who operated near the city of Westgate on the Lake of Dragons. Among the many enemies he made was a soldier from Teziir named Ricarl of the Mark. Ricarl wanted to get Makavail in trouble without letting his target know it was he who was responsible. When Makavail was exiting Westgate with chests full of stolen goods, Ricarl shot the leg of one of the horses pulling Makavail's wagon. The horse bolted and overturned the wagon. Guards rushed to the scene and discovered what Makavail was up to. He was thrown in prison and died only a year later. He never knew who had fired the fateful bolt that caused his downfall.
+Урон: 12d6 (магией; успешный спасбросок стойкости с УС 27 позволяет снизить урон вдвое)
+Особенности:
+ Не требует боеприпасов, атака производится звуковой волной, похожей на заклинание "Великий крик"
+ Автоматически попадает, но не может нанести критический удар
+ Не наносит физического урона; бонусы к урону не увеличивает урон от этого оружия
+ Ошеломление: все существа, поражённые эффектом, похожим на заклинание "Великий крик" ошеломляются на одну половину раунда (успешный спасбросок стойкости с УС 27 позволяет избежать эффекта)
+Вес: 5 фунтов
+Необходимая черта: Простое оружие, Арбалеты
+Тип: двуручное~
+@11831    = ~Погибель Макавейла +2~
+@11832    = ~Это оружие было названо не по имени своего владельца, а в честь того, против кого оно было применено. Макавейл был подлым, лживым, коварным плутом, промышлявшим возле города Западные Врата на Озере Драконов. Он нажил себе множество врагов, среди которых был солдат из Тезиира по имени Рикарл Марк. Рикарл хотел отомстить Макавейлу так, чтобы никто не догадался, что это его рук дело. Когда Макавейл покидал Восточные Врата с набитыми украденным добром сундуками, Рикарл прострелил ногу одной из лошадей, запряжённых в его повозку. Лошадь взбесилась и перевернула повозку. К месту происшествия прибежали стражи и арестовали Макавейла. Он был брошен в тюрьму и умер через год, так и не узнав, кто выпустил ту роковую стрелу, что привела к его гибели.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage: +4 (missile)
-Attack Bonus: +10
-Special:
-  Speed: +1 attack per combat round
-  Bolts fired from this crossbow give target a -15 penalty to Reflex saves for 3 rounds (cumulative, no save) 
-Weight: 5 lb.
-Feat Requirement:  Simple Weapon, Crossbow
-Type:  Two-handed~
+Урон: +2 (метательный)
+Атака: +6
+Особенности:
+ Болты, выпущенные из этого арбалета, ухудшают спасброски реакции цели 10 на 2 раунда (эффект суммируется; спасброска нет)
+Вес: 5 фунтов
+Необходимая черта: Простое оружие, Арбалеты
+Тип: двуручное~
+@11833    = ~Стремительная погибель Макавейла +4~
+@11834    = ~Это оружие было названо не по имени своего владельца, а в честь того, против кого оно было применено. Макавейл был подлым, лживым, коварным плутом, промышлявшим возле города Западные Врата на Озере Драконов. Он нажил себе множество врагов, среди которых был солдат из Тезиира по имени Рикарл Марк. Рикарл хотел отомстить Макавейлу так, чтобы никто не догадался, что это его рук дело. Когда Макавейл покидал Восточные Врата с набитыми украденным добром сундуками, Рикарл прострелил ногу одной из лошадей, запряжённых в его повозку. Лошадь взбесилась и перевернула повозку. К месту происшествия прибежали стражи и арестовали Макавейла. Он был брошен в тюрьму и умер через год, так и не узнав, кто выпустил ту роковую стрелу, что привела к его гибели.
+
+ПАРАМЕТРЫ:
+
+Урон: +4 (метательный)
+Атака: +10
+Особенности:
+ Скорость: одна дополнительная атака за раунд
+ Болты, выпущенные из этого арбалета, ухудшают спасброски реакции цели 15 на 3 раунда (эффект суммируется; спасброска нет)
+Вес: 5 фунтов
+Необходимая черта: Простое оружие, Арбалеты
+Тип: двуручное~
 
 
 //@11835    = ~Heavy Crossbow~
-@11836    = ~A crossbow is a bow mounted crosswise on a wooden or metal shaft, the latter called a tiller. The bow is usually made of ash or yew. The crossbow fires a quarrel (also called a bolt). 
+@11836    = ~Арбалет представляет собой лук, закреплённый плашмя на деревянном или металлическом брусе, который называют ложем. Обычно такие луки делаются из ясеня или тиса. Стреляет арбалет короткой стрелой, которую чаще называют болтом.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  +2 (missile)
-Weight: 9 lb.
-Feat Requirement:  Simple Weapon, Crossbow
-Type:  Two-handed~
+Урон: +2 (метательный)
+Вес: 9 фунтов
+Необходимая черта: Простое оружие, Арбалеты
+Тип: двуручное~
 //@11837    = ~Masterwork Heavy Crossbow~
-@11838    = ~A crossbow is a bow mounted crosswise on a wooden or metal shaft, the latter called a tiller. The bow is usually made of ash or yew. The crossbow fires a quarrel (also called a bolt). 
+@11838    = ~Арбалет представляет собой лук, закреплённый плашмя на деревянном или металлическом брусе, который называют ложем. Обычно такие луки делаются из ясеня или тиса. Стреляет арбалет короткой стрелой, которую чаще называют болтом.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  +2 (missile)
-Attack Bonus: +1 
-Weight: 9 lb.
-Feat Requirement:  Simple Weapon, Crossbow
-Type:  Two-handed~
+Урон: +2 (метательный)
+Атака: +1
+Вес: 9 фунтов
+Необходимая черта: Простое оружие, Арбалеты
+Тип: двуручное~
 //@11839    = ~Heavy Crossbow +1~
-@11840    = ~A crossbow is a bow mounted crosswise on a wooden or metal shaft, the latter called a tiller. The bow is usually made of ash or yew. The crossbow fires a quarrel (also called a bolt). 
+@11840    = ~Арбалет представляет собой лук, закреплённый плашмя на деревянном или металлическом брусе, который называют ложем. Обычно такие луки делаются из ясеня или тиса. Стреляет арбалет короткой стрелой, которую чаще называют болтом. Этот зачарованный арбалет слегка отливает синевой.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  +4 (missile)
-Attack Bonus:  +1 
-Weight: 9 lb.
-Feat Requirement:  Simple Weapon, Crossbow
-Type:  Two-handed~
-@11841    = ~Heavy Crossbow of Missile Weakness +2~
-@11842    = ~A crossbow is a bow mounted crosswise on a wooden or metal shaft, the latter called a tiller. The bow is usually made of ash or yew. The crossbow fires a quarrel (also called a bolt). A slight blue glow can be seen emanating from the crossbar.
+Урон: +4 (метательный)
+Атака: +1
+Вес: 9 фунтов
+Необходимая черта: Простое оружие, Арбалеты
+Тип: двуручное~
+@11841    = ~Тяжелый арбалет метательного ослабления +2~
+@11842    = ~Арбалет представляет собой лук, закреплённый плашмя на деревянном или металлическом брусе, который называют ложем. Обычно такие луки делаются из ясеня или тиса. Стреляет арбалет короткой стрелой, которую чаще называют болтом. Этот зачарованный арбалет слегка отливает синевой.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  +6 (missile)
-Attack Bonus:  +2 
-Special:
-  Missile Weakness: Bolts fired from this crossbow lower the target's Missile Resistance by 6 for 3 rounds (no save; non-cumulative)
-Weight: 9 lb.
-Feat Requirement:  Simple Weapon, Crossbow
-Type:  Two-handed~
+Урон: +6 (метательный)
+Атака: +2
+Особенности:
+ Метательное ослабление: каждое попадание снижает сопротивление метательному урону жертвы на 6 в течении трёх раундов (эффект суммируется; спасбросок отсутствует)
+Вес: 9 фунтов
+Необходимая черта: Простое оружие, Арбалеты
+Тип: двуручное~
 //@11843    = ~Heavy Crossbow +5~
-@11844    = ~A crossbow is a bow mounted crosswise on a wooden or metal shaft, the latter called a tiller. The bow is usually made of ash or yew. The crossbow fires a quarrel (also called a bolt). A slight blue glow can be seen emanating from the crossbar.
+@11844    = ~Арбалет представляет собой лук, закреплённый плашмя на деревянном или металлическом брусе, который называют ложем. Обычно такие луки делаются из ясеня или тиса. Стреляет арбалет короткой стрелой, которую чаще называют болтом. Этот зачарованный арбалет слегка отливает синевой.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  +12 (missile)
-Attack Bonus:  +5 
-Weight: 9 lb.
-Feat Requirement:  Simple Weapon, Crossbow
-Type:  Two-handed~
+Урон: +12 (метательный)
+Атака: +5
+Вес: 9 фунтов
+Необходимая черта: Простое оружие, Арбалеты
+Тип: двуручное~
 //@11845    = ~Heavy Crossbow +4~
-@11846    = ~A crossbow is a bow mounted crosswise on a wooden or metal shaft, the latter called a tiller. The bow is usually made of ash or yew. The crossbow fires a quarrel (also called a bolt). A slight blue glow can be seen emanating from the crossbar.
+@11846    = ~Арбалет представляет собой лук, закреплённый плашмя на деревянном или металлическом брусе, который называют ложем. Обычно такие луки делаются из ясеня или тиса. Стреляет арбалет короткой стрелой, которую чаще называют болтом. Этот зачарованный арбалет слегка отливает синевой.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  +10 (missile)
-Attack Bonus:  +4 
-Weight: 9 lb.
-Feat Requirement:  Simple Weapon, Crossbow
-Type:  Two-handed~
+Урон: +10 (метательный)
+Атака: +4
+Вес: 9 фунтов
+Необходимая черта: Простое оружие, Арбалеты
+Тип: двуручное~
 //@11847    = ~Heavy Crossbow +3~
-@11848    = ~A crossbow is a bow mounted crosswise on a wooden or metal shaft, the latter called a tiller. The bow is usually made of ash or yew. The crossbow fires a quarrel (also called a bolt). A slight blue glow can be seen emanating from the crossbar.
+@11848    = ~Арбалет представляет собой лук, закреплённый плашмя на деревянном или металлическом брусе, который называют ложем. Обычно такие луки делаются из ясеня или тиса. Стреляет арбалет короткой стрелой, которую чаще называют болтом. Этот зачарованный арбалет слегка отливает синевой.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  +8 (missile)
-Attack Bonus:  +3 
-Weight: 9 lb.
-Feat Requirement:  Simple Weapon, Crossbow
-Type:  Two-handed~
+Урон: +8 (метательный)
+Атака: +3
+Вес: 9 фунтов
+Необходимая черта: Простое оружие, Арбалеты
+Тип: двуручное~
 //@11849    = ~Heavy Crossbow +2~
-@11850    = ~A crossbow is a bow mounted crosswise on a wooden or metal shaft, the latter called a tiller. The bow is usually made of ash or yew. The crossbow fires a quarrel (also called a bolt). A slight blue glow can be seen emanating from the crossbar.
+@11850    = ~Арбалет представляет собой лук, закреплённый плашмя на деревянном или металлическом брусе, который называют ложем. Обычно такие луки делаются из ясеня или тиса. Стреляет арбалет короткой стрелой, которую чаще называют болтом. Этот зачарованный арбалет слегка отливает синевой.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  +6 (missile)
-Attack Bonus:  +2 
-Weight: 9 lb.
-Feat Requirement:  Simple Weapon, Crossbow
-Type:  Two-handed~
-@11851    = ~Heavy Crossbow of Stunning +2~
-@11852    = ~A crossbow is a bow mounted crosswise on a wooden or metal shaft, the latter called a tiller. The bow is usually made of ash or yew. The crossbow fires a quarrel (also called a bolt). 
+Урон: +6 (метательный)
+Атака: +2
+Вес: 9 фунтов
+Необходимая черта: Простое оружие, Арбалеты
+Тип: двуручное~
+@11851    = ~Тяжёлый арбалет ошеломления +2~
+@11852    = ~Арбалет представляет собой лук, закреплённый плашмя на деревянном или металлическом брусе, который называют ложем. Обычно такие луки делаются из ясеня или тиса. Стреляет арбалет короткой стрелой, которую чаще называют болтом. Этот зачарованный арбалет слегка отливает синевой.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  +6 (missile)
-Attack Bonus:  +2 
-Special:
-  Stunning: Bolts fired from this crossbow stun target for 1/2 combat round (Fortitude DC 22)
-Weight: 9 lb.
-Feat Requirement:  Simple Weapon, Crossbow
-Type:  Two-handed~
-@11853    = ~Heavy Crossbow of Increasing Accuracy +1~
-@11854    = ~A crossbow is a bow mounted crosswise on a wooden or metal shaft, the latter called a tiller. The bow is usually made of ash or yew. The crossbow fires a quarrel (also called a bolt). 
+Урон: +6 (метательный)
+Атака: +2
+Особенности:
+ Ошеломление: болты, выпущенные из этого арбалета ошеломляют жертву на половину раунда (успешный спасбросок стойкости с УС 22 отменяет эффект)
+Вес: 9 фунтов
+Необходимая черта: Простое оружие, Арбалеты
+Тип: двуручное~
+@11853    = ~Тяжёлый арбалет повышения точности +1~
+@11854    = ~Арбалет представляет собой лук, закреплённый плашмя на деревянном или металлическом брусе, который называют ложем. Обычно такие луки делаются из ясеня или тиса. Стреляет арбалет короткой стрелой, которую чаще называют болтом. Этот зачарованный арбалет слегка отливает синевой.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  +4 (missile)
-Attack Bonus:  +1 
-Special:
-  Increasing Accuracy: Whenever a bolt fired from this crossbow hits a creature, the wielder of the crossbow gains a cumulative +2 attack bonus with ranged weapons for 10 rounds.
-Weight: 9 lb.
-Feat Requirement:  Simple Weapon, Crossbow
-Type:  Two-handed~
+Урон: +4 (метательный)
+Атака: +1
+Особенности:
+ Повышение точности: Когда болт, выпущенный из этого арбалета, попадает в существо, владелец арбалета получает суммируемую прибавку в +2 к атаке оружием дальнего боя на 10 раундов
+Вес: 9 фунтов
+Необходимая черта: Простое оружие, Арбалеты
+Тип: двуручное~
 @11855    = ~Spooky Heavy Crossbow~
 @11856    = ~A crossbow is a bow mounted crosswise on a wooden or metal shaft, the latter called a tiller. The bow is usually made of ash or yew. The crossbow fires a quarrel (also called a bolt). 
 
