@@ -3861,7 +3861,7 @@
 Зачарование: +3
 Тип урона: колющий
 Особенности:
- Отложенный урон: наносит дополнительные 3d6 колющих повреждений через 10 раундов
+ Отложенный урон: наносит дополнительно 3d6 колющего урона 10 раундов
 Вес: 3 фунта
 Необходимая черта: Простое оружие, Короткие клинки
 Тип: одноручное~
@@ -9154,48 +9154,48 @@
 Вес: 3 фунта
 Необходимая черта: Военное оружие, Луки
 Тип: двуручное~
-@11793    = ~Arc of Gold~
-@11794    = ~It can be argued that the Arc of Gold and its sister, the Mithral Arc, brought about the end of the dwarven-elvish alliance in the North many years past, and led to the destruction of the Severed Hand and the fall of Dorn's Deep. Many tragedies have occurred around these two items, and many are the deaths they caused although no arrow was ever shot from them. 
+@11793    = ~Золотая дуга~
+@11794    = ~Можно утверждать, что именно "Золотая Дуга" и её сестра "Мифриловая дуга", привели к концу союза между дварфами и эльфами, существовавшего на Севере много лет назад, а также к уничтожению Отрубленной Руки и падению пещер Дорна. Много трагедий произошло из-за этих двух луков, бесчисленному множеству смертей послужили они, хотя из них и не было выпущено ни одной стрелы.
 
-At the height of the dwarven-elvish alliance in the North, a disagreement arose between the two races over the matter of trading enchanted weapons to the men of the south, who were beginning to establish a foothold in the North. The dwarves were of the opinion that the many great works that had been built through the joint efforts of the dwarves and elves should be offered up to man and the profits used to fill the coffers of both races. This suggestion was not well-received by the elves nor by their leader, the arch-mage Larrel, and the matter was quickly dropped. 
+Во времена расцвета союза эльфов и дварфов, между двумя расами возникли разногласия по поводу продажи зачарованного оружия людям с юга, которые начали укреплять свои позиции на Севере. Дварфы считали, что многочисленные шедевры созданные совместными усилиями дварфов и эльфов должны быть предложены людям, а прибыль сможет наполнить казну обеих рас. Однако ни эльфы, ни их лидер архимаг Ларрел не согласились с этим предложением дварфов, и этот вопрос был вскоре снят с повестки.
 
-However, when the Arc of Gold, one of the items fashioned jointly by dwarven and elven weaponsmiths was found in the hands of an orcish war party not long after the debate in the alliance councils, the elves accused the dwarves of selling the weapons to the goblinoids out of greed. The dwarves, insulted, broke the shafts of their hammers in the middle of the council and broke talks with the elves, returning to their halls in Dorn's Deep and never speaking to them again. The two races, now divided, were soon swallowed by the Dark Horde that was devouring the North beneath its banner. 
+Тем не менее, "Золотая дуга", один из предметов, совместно изготовленных оружейниками дварфов и эльфов, вскоре после этих дебатов был обнаружен в руках боевого отряда орков. Эльфы обвинили дварфов в продаже оружия гоблиноидам из жадности. Оскорблённые дварфы сломали древки своих молотов прямо посреди совета и, вернувшись в залы пещер Дорна, и больше никогда не разговаривали с эльфами. Две расы, теперь разделённые, вскоре были поглощены ордой тьмы, которая быстро заполоняла Север.
 
-At the time of the fall of the Severed Hand, the Arc of Gold was mounted within the halls of Severed Hand as a reminder of the dwarven treachery and dwarven greed. When the Severed Hand fell, the Arc of Gold silently watched as the goblinoids tore apart the elvish defenders and laid waste to tower after tower, until the elvish archmage Larrel, in a desperate measure, brought about the Mythal cataclysm that sealed the fate of the Severed Hand once and for all. 
+Во время падения Отрубленной Руки, "Золотая дуга" была установлена в залах крепости в качестве напоминания о предательстве и жадности дварфов. "Золотая дуга" молча наблюдала, как гоблиноиды разрывают на части эльфийских защитников и захватывают башню за башней, пока эльфийский архимаг Ларрел в отчаянии не вызвал катастрофу мифала, который и решил судьбу Отрубленной Рукой раз и навсегда.
 
-When the Mythal was cast, the Arc of Gold vanished from the halls of the Severed Hand and has not been seen since... until now. 
+Когда заклинание мифала было прочитано, "Золотая дуга" исчезла из залов Отрубленной Руки, и с тех пор её никто не видел... до сих пор.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  +6 (missile)
-Attack Bonus:  +5
-Special:
-  Composite: Gains Strength bonus to damage, up to a maximum of +15
-Weight: 9 lb.
-Feat Requirement:  Martial Weapon, Bow
-Type:  Two-handed
-Minimum Dexterity of 18 Required~
-@11795    = ~Mithral Arc~
-@11796    = ~It can be argued that the Mithral Arc and its brother, the Arc of Gold, brought about the end of the dwarven-elvish alliance in the North many years past, and led to the destruction of the Severed Hand and the fall of Dorn's Deep. Many tragedies have occurred around these two items, and many are the deaths they caused although no arrow was ever shot from them. 
+Урон: +6 (метательный)
+Атака: +5
+Особенности:
+ Композитный: добавляет модификатор силы к урону, до максимума в +15
+Вес: 9 фунтов
+Необходимая черта: Военное оружие, Луки
+Тип: двуручное
+Требования: Ловкость 18~
+@11795    = ~Мифриловая дуга~
+@11796    = ~Можно утверждать, что именно "Мифриловая дуга" и её сестра "Золотая Дуга", привели к концу союза между дварфами и эльфами, существовавшего на Севере много лет назад, а также к уничтожению Отрубленной Руки и падению пещер Дорна. Много трагедий произошло из-за этих двух луков, бесчисленному множеству смертей послужили они, хотя из них и не было выпущено ни одной стрелы.
 
-The Mithral Arc was developed at the height of the dwarven-elvish alliance, and it was one of the many joint items developed by the dwarves and elves of the Severed Hand before the destruction of the Severed Hand and the Fall of Dorn's Deep. Its accuracy was unparalleled, and the dwarves presented it to the elves as a token of goodwill between the races. The string of the bow was said to have been blessed by the elvish archmage Larrel himself, with a range that seemed to rival the horizon. It was mounted in the halls of Severed Hand so that all visitors could see it, and see the achievements the dwarves and elves united could bring about.
+"Мифриловая дуга" была изготовлена во время расцвета союза эльфов и дварфов, и была одним из многих предметов, совместно изготовленных дварфами и эльфами перед разрушением Отрубленной Руки и падением пещер Дорна. По точности этот лук не знал себе равных, и дварфы преподнесли его эльфам в знак дружбы между двумя расами. Говорили, что тетива этого лука была благословлена самим эльфийским архимагом Ларрелем, а стрелы выпущенные из него, казалось, могли достичь горизонта. Дуга была установлена в залах Отрубленной Руки, чтобы все посетители могли увидеть её, и убедиться в том, каких достижений, смогли добиться эльфы и дварфы, объединившись.
 
-When its brother, the Arc of Gold, was discovered in the hands of a band of orcs raiding in the forests north of Severed Hand, the elves became furious and accused the dwarves of selling the relics the two races had jointly crafted to their enemies. The dwarves, enraged by the insult, seized the Mithral Arc and returned to Dorn's Deep, cutting off all contact with the elves. 
+Когда и сестра "Мифриловой дуги", "Золотая дуга", этот лук был обнаружен в руках банды орков, совершающей набеги в лесах к северу от Отрубленной Руки. Эльфы пришли в ярость и обвинили дварфов в продаже совместно изготовленных реликвий врагам. Дварфы, взбешённые таким оскорблением, схватили Мифриловую Дугу и вернулись в пещеры Дорна, разорвав все контакты с эльфами.
 
-It is said that at the moment the alliance disbanded, the string of the Mithral Arc broke with a final twang, and the bow, useless, remained deep within Lower Dorn's Deep, silently watching as the dwarves were slowly driven deeper and deeper into the Deep by the encroaching goblinoid hordes that had begun to swarm down from the North. It was never seen and never taken by the Dark Horde that marched through Dorn's Deep, and the Mithral Arc remained there for countless years in the darkness with the dwarven dead piled around it, still clutching their weapons. 
+Говорят, что в тот самый момент, когда союз распался, тетива "Мифриловой дуги" лопнула с отчаянным звоном, и лук, теперь уже бесполезный, остался в глубине Нижних пещерах Дорна, молча наблюдая, как дварфы медленно отступают всё глубже и глубже в пещеры, загоняемые туда ордой гоблиноидов, надвигающихся с севера. Орда тьмы, прокатившаяся по пещерам Дорна, так и не заметила и, как следствие, не забрала "Мифриловую дугу", и оружие оставалось там, во тьме, бесчисленные годы, а вокруг неё сгрудились мёртвые дварфы, всё ещё сжимающие оружие.
 
-How it came to be here is unknown, but the string of the Mithral Arc is restored and the bow is eager to be used. Perhaps there is hope for the fallen elves and dwarves still... or at least the opportunity to reclaim their once-proud homeland from the half-breed hordes that threaten it. 
+Как этот лук оказался здесь - неизвестно, но тетива "Мифриловой дуги" восстановлена и лук готов к использованию. Возможно, у павших эльфов и дварфов всё ещё есть надежда... или хотя бы возможность отвоевать свою некогда славную родину у гоблинских полчищ, угрожающих ей сейчас.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  +11 (missile)
-Attack Bonus:  +10
-Special:
-  Composite: Gains Strength bonus to damage, up to a maximum of +15
-Weight: 1 lb.
-Feat Requirement:  Martial Weapon, Bow
-Type:  Two-handed
-Minimum Dexterity of 18 Required~
+Урон: +11 (метательный)
+Атака: +10
+Особенности:
+ Композитный: добавляет модификатор силы к урону, до максимума в +15
+Вес: 1 фунтов
+Необходимая черта: Военное оружие, Луки
+Тип: двуручное
+Требования: Ловкость 18~
 
 
 //@11797    = ~Light Crossbow~
@@ -9203,27 +9203,27 @@ Minimum Dexterity of 18 Required~
 //@11799    = ~Masterwork Light Crossbow~
 //@11800    = ~Item description can remain the same; if new description is needed put it here~
 //@11801    = ~Light Crossbow +1~
-@11802    = ~A crossbow is a bow mounted crosswise on a wooden or metal shaft, the latter called a tiller. The bow is usually made of ash or yew. The crossbow fires a quarrel (also called a bolt). 
+@11802    = ~Лёгкий арбалет бьёт слабее своего старшего собрата, но быстрее перезаряжается. Он представляет собой лук, укреплённый на ложе - деревянной или железной ручке. Сам лук обычно делают из ясеня или тиса. Для стрельбы из арбалета применяют особые стрелы, которые называют болтами. Этот арбалет излучает слабый голубой свет.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  +1 (missile)
-Attack Bonus:  +4 
-Weight: 6 lb.
-Feat Requirement:  Simple Weapon, Crossbow
-Type:  Two-handed~
-@11803    = ~Light Crossbow of the Future +1~
-@11804    = ~A short-lived outpost of humans in the Frozen Forest unearthed this weapon, and many others, from the ruins of an ancient settlement deep within that cold land. Never knowing the names of their extinct benefactors, the colonists used these "tools" to carve a large territory for themselves, though in the end it was for naught. Crushed by a superior number of Hobgoblins, these unfortunate souls have joined the ancients in their anonymity. 
+Урон: +1 (метательный)
+Атака: +4
+Вес: 6 фунтов
+Необходимая черта: Простое оружие, Арбалеты
+Тип: двуручное~
+@11803    = ~Лёгкий арбалет будущего +1~
+@11804    = ~Недолго просуществовавший форпост людей в Замёрзшем Лесу откопал это оружие, как и многое другое, среди развалин древнего поселения в глубине этих холодных земель. Колонисты, так и не узнавшие имён своих вымерших благодетелей, использовали эти "инструменты", чтобы расчистить для себя территорию побольше, однако в итоге всё было напрасно. Сокрушённые превышающими силами хобгоблинов, эти бедолаги присоединились к своим предшественникам в забвении.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  +1 (missile)
-Attack Bonus:  +4 
-Special:
-  Delayed Damage: Inflicts an additional 6d6 missile damage 10 rounds later
-Weight: 5 lb.
-Feat Requirement:  Simple Weapon, Crossbow
-Type:  Two-handed~
+Урон: +1 (метательный)
+Атака: +4
+Особенности:
+ Отложенный урон: наносит дополнительно 6d6 колющего урона 10 раундов
+Вес: 5 фунтов
+Необходимая черта: Простое оружие, Арбалеты
+Тип: двуручное~
 @11805    = ~Light Crossbow of the Mind +2~
 @11806    = ~A crossbow is a bow mounted crosswise on a wooden or metal shaft, the latter called a tiller. The bow is usually made of ash or yew. The crossbow fires a quarrel (also called a bolt). 
 
