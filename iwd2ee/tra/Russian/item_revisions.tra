@@ -10663,39 +10663,39 @@ Weight:  3 lb.~
 
 Вес: 2 фунта~
 //@12143    = ~The Merry Shorthorn~
-@12144    = ~The Merry Shorthorn was once owned by the half-elven bard Prophia Copperfire. She took the small instrument everywhere. Despite its rather meager powers, the Merry Shorthorn is among one of the most well traveled magic items in Faerun. It is believed that Prophia took it with her on a number of Elemental Planes, to Elysium and Baator, and from the Spine of the World to the distant reaches of Wa. It entertained pashas in Calimshan, quelled the anger of holy slayers in Zakhara, and bolstered a crew of sailors in the Sea of Fallen Stars. The Merry Shorthorn was lost when Prophia accidentally dropped it somewhere in the great desert Anauroch.
+@12144    = ~Весёлый рожок принадлежал барду-полуэльфу Профии Медное Пламя. Она повсюду брала с собой этот маленький инструмент, и он, невзирая на скромные магические свойства, стал самым опытным путешественником из всех артефактов Фаэруна. Говорят, что вместе с Профией он прошёл от Хребта Мира до дальних земель Ва, побывал и на стихийных планах, и в Элизиуме, и в Бааторе. Звуки рожка развлекали пашей Калимшана, умеряли пыл святых убийц в Захаре и ободряли моряков в море Упавших Звёзд. Профия потеряла весёлый рожок в великой пустыне Анаурох, и с тех пор о нём ничего не было слышно.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-When played, this instrument casts Bless, centered on the player. It lasts for 10 rounds.
-Can be used once per day.
+При игре этот инструмент приносит эффект заклинания "Благословение" на десять раундов, исходящее из играющего
+Может использоваться один раз в день
 
-Weight:  1 lb.~
+Вес: 1 фунт~
 //@12145    = ~Prophia's Merry Shorthorn~
-@12146    = ~The Merry Shorthorn was once owned by the half-elven bard Prophia Copperfire. She took the small instrument everywhere. Despite its rather meager powers, the Merry Shorthorn is among of the most well traveled magic items in Faerun. It is believed that Prophia took it with her on a number of Elemental Planes, to Elysium and Baator, and from the Spine of the World to the distant reaches of Wa. It entertained pashas in Calimshan, quelled the anger of holy slayers in Zakhara, and bolstered a crew of sailors in the Sea of Fallen Stars. The Merry Shorthorn was lost when Prophia accidentally dropped it somewhere in the great desert Anauroch.
+@12146    = ~Весёлый рожок принадлежал барду-полуэльфу Профии Медное Пламя. Она повсюду брала с собой этот маленький инструмент, и он, невзирая на скромные магические свойства, стал самым опытным путешественником из всех артефактов Фаэруна. Говорят, что вместе с Профией он прошёл от Хребта Мира до дальних земель Ва, побывал и на стихийных планах, и в Элизиуме, и в Бааторе. Звуки рожка развлекали пашей Калимшана, умеряли пыл святых убийц в Захаре и ободряли моряков в море Упавших Звёзд. Профия потеряла весёлый рожок в великой пустыне Анаурох, и с тех пор о нём ничего не было слышно.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-When played, this instrument casts Bless, Bane, Prayer, and Recitation all at once, centered on the player.
-Can be used once per day.
+При использовании инструмент одновременно накладывает заклинания "Благословение", "Молитва", "Проклятие" и "Декламация" на область с центром на владельце рожка
+Можно использовать один раз в день
 
-Weight:  1 lb.~
+Вес: 1 фунт~
 //@12147    = ~The Dire Old Lute of Pellon Kay~
-@12148    = ~Pellon Kay would never appear in history books for his musical talents. If it wasn't for his famous lute, no one would have remembered him at all. Born in Sembia and raised in a musical family, Pellon Kay never took his performances seriously. Kay made dozens of enemies everywhere he went because of his acidic wit and appetite for confrontation. Sages believe that Milil frowned upon Pellon's antics, but that Talos found Pellon's attitude to be quite amusing. The avatar of Talos watched Pellon start a fight with over twenty men in a bar one night. As a gift for such destructive entertainment, Talos touched the lute that was laying next to Pellon's unconscious body. After that night, Pellon discovered that he could make men go berserk just by playing his lute in their direction. He took great delight in setting mercenaries and sailors against each other for several weeks. Eventually, Pellon Kay was laid low by a grim-featured warrior with a crossbow who didn't let Pellon get close enough to employ his magical lute. The unknown warrior threw the lute into the Sea of Fallen Stars.
+@12148    = ~Пеллон Кей не был великим музыкантом и вошёл в историю лишь благодаря своей лютне. Он родился в Сембии, вырос в музыкальной семье, однако никогда не относился к своей музыке серьёзно. Кей повсюду заводил врагов из-за своих едких шуток и склонности к ссорам. Мудрецы говорят, что Милил неодобрительно взирал на проделки Пеллона, а вот Талос считал его забавным. Как-то раз аватар Талоса наблюдал, как Пеллон за один вечер подрался в таверне больше чем с двадцатью посетителями. Сие разрушительное выступление Талос решил наградить и прикоснулся к лютне, что валялась рядом с бесчувственным телом музыканта. После той ночи Пеллон обнаружил, что звуки его инструмента могут повергать других в состояние берсерка. Несколько недель он с восторгом стравливал моряков и наёмников. В конце концов Пеллона Кея заткнул один мрачный воин, пристрелив его из арбалета раньше, чем тот успел подойти ближе и сыграть на лютне. Неизвестный воин выбросил инструмент в море Упавших Звёзд.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Can cast the spell Dire Charm once per day (Will DC 25)
+Может применять заклинание "Дикое очарование" один раз в день (успешный спасбросок воли с УС 25 отменяет эффект)
 
-Weight:  2 lb.~
+Вес: 2 фунта~
 //@12149    = ~Strings of Discord~
-@12150    = ~Pellon Kay would never appear in history books for his musical talents. If it wasn't for his famous lute, no one would have remembered him at all. Born in Sembia and raised in a musical family, Pellon Kay never took his performances seriously. Kay made dozens of enemies everywhere he went because of his acidic wit and appetite for confrontation. Sages believe that Milil frowned upon Pellon's antics, but that Talos found Pellon's attitude to be quite amusing. The avatar of Talos watched Pellon start a fight with over twenty men in a bar one night. As a gift for such destructive entertainment, Talos touched the lute that was laying next to Pellon's unconscious body. After that night, Pellon discovered that he could make men go berserk just by playing his lute in their direction. He took great delight in setting mercenaries and sailors against each other for several weeks. Eventually, Pellon Kay was laid low by a grim-featured warrior with a crossbow who didn't let Pellon get close enough to employ his magical lute. The unknown warrior threw the lute into the Sea of Fallen Stars.
+@12150    = ~Пеллон Кей не был великим музыкантом и вошёл в историю лишь благодаря своей лютне. Он родился в Сембии, вырос в музыкальной семье, однако никогда не относился к своей музыке серьёзно. Кей повсюду заводил врагов из-за своих едких шуток и склонности к ссорам. Мудрецы говорят, что Милил неодобрительно взирал на проделки Пеллона, а вот Талос считал его забавным. Как-то раз аватар Талоса наблюдал, как Пеллон за один вечер подрался в таверне больше чем с двадцатью посетителями. Сие разрушительное выступление Талос решил наградить и прикоснулся к лютне, что валялась рядом с бесчувственным телом музыканта. После той ночи Пеллон обнаружил, что звуки его инструмента могут повергать других в состояние берсерка. Несколько недель он с восторгом стравливал моряков и наёмников. В конце концов Пеллона Кея заткнул один мрачный воин, пристрелив его из арбалета раньше, чем тот успел подойти ближе и сыграть на лютне. Неизвестный воин выбросил инструмент в море Упавших Звёзд.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Can cast the spell Dire Charm on all enemies within 20 feet once per day (Will DC 34)
+Один раз в день может использовать заклинание "Дикое очарование" на всех врагов в на расстоянии 20 футов (успешный спасбросок воли с УС 34 отменяет эффект)
 
-Weight:  2 lb.~
+Вес: 2 фунта~
 //@12151    = ~Owain's Lullabye~
 @12152    = ~Owain's Lullabye was created by a disturbed bard named Owain Piper. Piper was a worshipper of Auril, born in the town of Silverymoon and raised to embrace the frigid environment of his homeland. He traveled extensively in the Moonsea, where he met a mage named Pelham of the Moor. Owain and Pelham became good friends and stayed in contact for over a decade. Pelham eventually enchanted Owain's Lullabye for the bard in exchange for a small sum of money. Owain rarely used the instrument in battle, typically employing it when he found late-migrating geese lounging on a lake. He would blow the horn in such a way that the geese heard it as the sound of their cousins heading south for the winter. As the geese would attempt to take flight, Owain's horn would freeze them in mid-stroke, where he would leave them to die.
 
