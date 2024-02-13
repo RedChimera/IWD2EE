@@ -5353,7 +5353,7 @@
 Зачарование: +2
 Тип урона: дробящий
 Особенности:
- Божественные заклинания владельца посоха действуют на 20% дольше
+ Увеличенная длительность: Божественные заклинания владельца посоха действуют на 20% дольше
 Вес: 4 фунта
 Необходимая черта: Простое оружие, Посохи
 Тип: двуручное~
@@ -8573,7 +8573,7 @@
 Урон: +1 (метательный)
 Атака: +1
 Особенности:
- Урона магией: стрелы, выпущенные из этого лука наносят дополнительной 1 урона магией
+ Урон магией: стрелы, выпущенные из этого лука наносят дополнительной 1 урона магией
  Сопротивление: 5/- сопротивления урону магией
 Вес: 2 фунта
 Необходимая черта: Военное оружие, Луки
@@ -9513,281 +9513,281 @@
 Вес: 9 фунтов
 Необходимая черта: Простое оружие, Арбалеты
 Тип: двуручное~
-@11855    = ~Spooky Heavy Crossbow~
-@11856    = ~A crossbow is a bow mounted crosswise on a wooden or metal shaft, the latter called a tiller. The bow is usually made of ash or yew. The crossbow fires a quarrel (also called a bolt). 
+@11855    = ~Тяжёлый арбалет привидения~
+@11856    = ~Арбалет представляет собой лук, закреплённый плашмя на деревянном или металлическом брусе, который называют ложем. Обычно такие луки делаются из ясеня или тиса. Стреляет арбалет короткой стрелой, которую чаще называют болтом. Этот зачарованный арбалет слегка отливает синевой.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  +2 (missile)
-Special:
-  Spooky: Bolts fired from this crossbow have a 25% chance to apply the effects of the spell Spook to the target
-Weight: 9 lb.
-Feat Requirement:  Simple Weapon, Crossbow
-Type:  Two-handed~
-@11857    = ~Heavy Crossbow of Blood +5~
-@11858    = ~A crossbow is a bow mounted crosswise on a wooden or metal shaft, the latter called a tiller. The bow is usually made of ash or yew. The crossbow fires a quarrel (also called a bolt). 
+Урон: +2 (метательный)
+Особенности:
+ Приведение: болты, выпущенные из этого арбалета, с вероятностью 25% накладывают на цель эффект заклинания "Приведения"
+Вес: 9 фунтов
+Необходимая черта: Простое оружие, Арбалеты
+Тип: двуручное~
+@11857    = ~Тяжёлый арбалет крови +5~
+@11858    = ~Арбалет представляет собой лук, закреплённый плашмя на деревянном или металлическом брусе, который называют ложем. Обычно такие луки делаются из ясеня или тиса. Стреляет арбалет короткой стрелой, которую чаще называют болтом. Этот зачарованный арбалет слегка отливает синевой.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  +12 (missile)
-Attack Bonus:  +5 
-Special:
-  Wounding: Bolts from this crossbow cause 5 hit points of damage per round for 10 rounds. Multiple wounds are cumulative. (Fortitude DC 36)
-Weight: 9 lb.
-Feat Requirement:  Simple Weapon, Crossbow
-Type:  Two-handed~
-@11859    = ~Heavy Crossbow of Spell Resistance +5~
-@11860    = ~A crossbow is a bow mounted crosswise on a wooden or metal shaft, the latter called a tiller. The bow is usually made of ash or yew. The crossbow fires a quarrel (also called a bolt). 
+Урон: +12 (метательный)
+Атака: +5
+Особенности:
+ Рваные раны: болты, выпущенные из этого арбалета наносит дополнительно 5 урона в раунд в течение 10 раундов (успешный спасбросок стойкости с УС 36 отменяет эффект); эффект от множества ран суммируется
+Вес: 9 фунтов
+Необходимая черта: Простое оружие, Арбалеты
+Тип: двуручное~
+@11859    = ~Тяжёлый арбалет сопротивления магии +5~
+@11860    = ~Арбалет представляет собой лук, закреплённый плашмя на деревянном или металлическом брусе, который называют ложем. Обычно такие луки делаются из ясеня или тиса. Стреляет арбалет короткой стрелой, которую чаще называют болтом. Этот зачарованный арбалет слегка отливает синевой.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  +12 (missile)
-Attack Bonus:  +5
-Special:
-  Spell Resistance: Set to 25 
-Weight: 9 lb.
-Feat Requirement:  Simple Weapon, Crossbow
-Type:  Two-handed~
-@11861    = ~Geloise +2~
-@11862    = ~A human adventurer from the Dalelands named Arioth Cooper used this heavy crossbow on many of his journeys. Arioth had lived in a small community near the edge of Anauroch, the great desert. When a mysterious force emerged from the sands to destroy the village, Arioth's wife was killed. Through circumstance, Arioth became a wandering mercenary. Over time, Arioth became a great hero and champion for the innocents of Cormyr and the Dalelands, though he shied away from such praise. His worn, heavy crossbow was named after his dead wife, Geloise. When Arioth died of old age, his wishes were that his equipment be sold off at an auction in Essembra, Battledale, and the proceeds given to the citizens of that village.
+Урон: +12 (метательный)
+Атака: +5
+Особенности:
+ Сопротивление магии: устанавливается в 25
+Вес: 9 фунтов
+Необходимая черта: Простое оружие, Арбалеты
+Тип: двуручное~
+@11861    = ~Гелоиза +2~
+@11862    = ~Искатель приключений из Долинных Земель по имени Ариот Купер использовал это тяжёлый арбалет во многих своих путешествиях. Ариот жил в небольшом поселении у окраины великой пустыни Анаурох. Однажды из песков вышла таинственная сила и уничтожила деревню Ариота вместе с его женой. Так что Ариоту пришлось податься в странствующие наёмники. Со временем Ариот стал великим героем и защитником невинных жителей Кормира и Долинных Земель, хотя и не любил, когда его хвалили. Свой потёртый тяжёлый арбалет он назвал в честь своей погибшей жены, Гелоизы. После смерти Ариота от старости, его снаряжение было продано на аукционе в деревне Эссембра в Баттлдейле, а вырученные деньги по его завещанию переданы жителям этой деревни.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage: +6 (missile)
-Attack Bonus: +2
-Special:
-  The wielder's crossbow proficiency bonuses to attack and damage are doubled.
-Weight: 10 lb.
-Feat Requirement:  Simple Weapon, Crossbow
-Type:  Two-handed~
-@11863    = ~Beloved Geloise +5~
-@11864    = ~A human adventurer from the Dalelands named Arioth Cooper used this heavy crossbow on many of his journeys. Arioth had lived in a small community near the edge of Anauroch, the great desert. When a mysterious force emerged from the sands to destroy the village, Arioth's wife was killed. Through circumstance, Arioth became a wandering mercenary. Over time, Arioth became a great hero and champion for the innocents of Cormyr and the Dalelands, though he shied away from such praise. His worn, heavy crossbow was named after his dead wife, Geloise. When Arioth died of old age, his wishes were that his equipment be sold off at an auction in Essembra, Battledale, and the proceeds given to the citizens of that village.
+Урон: +6 (метательный)
+Атака: +3
+Особенности:
+ Бонусы к атаке и защите владельца этого оружия за мастерство в арбалетах удваиваются
+Вес: 10 фунтов
+Необходимая черта: Простое оружие, Арбалеты
+Тип: двуручное~
+@11863    = ~Возлюбленная Гелоиза +5~
+@11864    = ~Искатель приключений из Долинных Земель по имени Ариот Купер использовал это тяжёлый арбалет во многих своих путешествиях. Ариот жил в небольшом поселении у окраины великой пустыни Анаурох. Однажды из песков вышла таинственная сила и уничтожила деревню Ариота вместе с его женой. Так что Ариоту пришлось податься в странствующие наёмники. Со временем Ариот стал великим героем и защитником невинных жителей Кормира и Долинных Земель, хотя и не любил, когда его хвалили. Свой потёртый тяжёлый арбалет он назвал в честь своей погибшей жены, Гелоизы. После смерти Ариота от старости, его снаряжение было продано на аукционе в деревне Эссембра в Баттлдейле, а вырученные деньги по его завещанию переданы жителям этой деревни.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage: +12 (missile)
-Attack Bonus: +5
-Special:
-  The wielder's crossbow proficiency bonuses to attack and damage are tripled.
-Weight: 10 lb.
-Feat Requirement:  Simple Weapon, Crossbow
-Type:  Two-handed~
-@11865    = ~Hagnen's Folly +1~
-@11866    = ~This heavy crossbow was named, not by its dwarven designer, Hagnen Odestone, but by his wife Miraenna, who was responsible for stringing the crossbow with dragon gut and then checking its aim and speed of fire. There was apparently no love lost between the couple, and their arguments on everything from maintaining the home to maintaining the accounts were legendary within the clan halls. Shortly after Hagnen was crushed to death in the great quake of 1275 DR, Hagnen's wife proceeded to lay her husband's name (and backlog of uncompleted work) to rest by finishing the last of a series of enchanted weapons that still lay in Hagnen's workshop, cursing each one with Hagnen's name. After finishing the last of his weapons, Miraenna apparently left the dwarven clan home and traveled southwards, gladly ridding herself of the Odestone name and creations. 
+Урон: +12 (метательный)
+Атака: +5
+Особенности:
+ Бонусы к атаке и защите владельца этого оружия за мастерство в арбалетах утраиваются
+Вес: 10 фунтов
+Необходимая черта: Простое оружие, Арбалеты
+Тип: двуручное~
+@11865    = ~Дурь Хагнена +1~
+@11866    = ~Этот тяжёлый арбалет был так назван не самим изобретателем, дварфом Хагненом Одестоном, а его женой Мираэнной, которая отвечала за натягивание тетивы из драконьих кишок и проверяла его точность и скорострельность. Эта пара определённо была не самой счастливой и их споры по каждому вопросу - от содержания дома до семейного бюджета - быстро стали легендами в их клане. Вскоре после того, как Хагнен погиб при землетрясении 1275 ЛД, Мираэнна решила оставить себе имя мужа (вместе с ответственностью за неоконченную работу) и стала доделывать последнюю серию зачарованного оружия, которое всё ещё оставалось в мастерской Хагнена, проклиная каждое из них именем Хагнена. Закончив последнее оружие, Мираэнна ушла из дома клана и отправилась на юг, с радостью избавившись и от имени и творений Одестона.
 
-Among Hagnen's other creations is a light crossbow that also bears his name - it has been sighted within the North on many occasions. 
+Среди других творений Хагнена есть лёгкий арбалет, который тоже носит его имя - его неоднократно видели на Севере.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  +4 (missile)
-Attack Bonus:  +1
-Special:
-  Quick: No delay before shooting
-Weight: 10 lb.
-Feat Requirement:  Simple Weapon, Crossbow
-Type:  Two-handed~
-@11867    = ~Folly of Hagnen Odestone +3~
-@11868    = ~This heavy crossbow was named, not by its dwarven designer, Hagnen Odestone, but by his wife Miraenna, who was responsible for stringing the crossbow with dragon gut and then checking its aim and speed of fire. There was apparently no love lost between the couple, and their arguments on everything from maintaining the home to maintaining the accounts were legendary within the clan halls. Shortly after Hagnen was crushed to death in the great quake of 1275 DR, Hagnen's wife proceeded to lay her husband's name (and backlog of uncompleted work) to rest by finishing the last of a series of enchanted weapons that still lay in Hagnen's workshop, cursing each one with Hagnen's name. After finishing the last of his weapons, Miraenna apparently left the dwarven clan home and traveled southwards, gladly ridding herself of the Odestone name and creations. 
+Урон: +4 (дальнобойное)
+Атака: +1
+Особенности:
+ Быстрота: нет задержки перед атакой
+Вес: 10 фунтов
+Необходимая черта: Простое оружие, Арбалеты
+Тип: двуручное~
+@11867    = ~Дурь Хагнена Одестона +3~
+@11868    = ~Этот тяжёлый арбалет был так назван не самим изобретателем, дварфом Хагненом Одестоном, а его женой Мираэнной, которая отвечала за натягивание тетивы из драконьих кишок и проверяла его точность и скорострельность. Эта пара определённо была не самой счастливой и их споры по каждому вопросу - от содержания дома до семейного бюджета - быстро стали легендами в их клане. Вскоре после того, как Хагнен погиб при землетрясении 1275 ЛД, Мираэнна решила оставить себе имя мужа (вместе с ответственностью за неоконченную работу) и стала доделывать последнюю серию зачарованного оружия, которое всё ещё оставалось в мастерской Хагнена, проклиная каждое из них именем Хагнена. Закончив последнее оружие, Мираэнна ушла из дома клана и отправилась на юг, с радостью избавившись и от имени и творений Одестона.
 
-Among Hagnen's other creations is a light crossbow that also bears his name - it has been sighted within the North on many occasions.
+Среди других творений Хагнена есть лёгкий арбалет, который тоже носит его имя - его неоднократно видели на Севере.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  +8 (missile)
-Attack Bonus:  +3
-Special:
-  Quick: No delay before shooting
-  Black Dragon Gut: Bolts fired from this crossbow deal an additional 3d8 acid damage (Fortitude DC 25 for half)
-Weight: 10 lb.
-Feat Requirement:  Simple Weapon, Crossbow
-Type:  Two-handed~
-@11869    = ~Iron Arbalest +4~
-@11870    = ~An assassin's greatest ally, besides his skill in his craft, is his weapon. In fact, an assassin is best if his weapon of choice, such as a crossbow, is used at the longest possible range with deadly accuracy. However, even the best of assassins need all the help they can get when it comes to long-range attacks. That is why the Iron Arbalest, and crossbows like it, are usually the best choice for would be assassins. The Iron Arbalest has been enchanted to enhance the assassin's crossbow skill and actually improve their chance to hit their mark. In skilled hands, the Iron Arbalest could drop a mark long before they could ever reach the assassin and exact revenge.
+Урон: +8 (дальнобойное)
+Атака: +3
+Особенности:
+ Быстрота: нет задержки перед атакой
+ Брюхо чёрного дракона: болты, выпущенные из этого арбалета, наносят дополнительно 3d8 урона кислотой (спасбросок реакции с УС 25 позволяет снизить урон вдвое)
+Вес: 10 фунтов
+Необходимая черта: Простое оружие, Арбалеты
+Тип: двуручное~
+@11869    = ~Железный арбалет +4~
+@11870    = ~Лучший союзник наёмного убийцы, не считая его умения, - это его оружие. Более того, для убийцы лучше всего, если его оружие, например арбалет, способно поражать цель на максимальном расстоянии и с наибольшей точностью. Вот почему многие убийцы пользуются подобными железными арбалетами. Это оружие было зачаровано таким образом, чтобы увеличить точность стрельбы. В опытных руках этот арбалет - грозная сила; с ним убийца может поразить цель на значительном расстоянии, не опасаясь быть замеченным.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  +10 (missile)
-Attack Bonus: +4
-Special:
-  Assassin's Eyes: Wielder is under the effect of Executioner's Eyes 
-  Sneak attacks with this crossbow deal an additional 3d6 damage
-Weight: 14 lb.
-Feat Requirement:  Simple Weapon, Crossbow
-Type:  Two-handed~
-@11871    = ~Adamantine Arbalest +6~
-@11872    = ~An assassin's greatest ally, besides his skill in his craft, is his weapon. In fact, an assassin is best if his weapon of choice, such as a crossbow, is used at the longest possible range with deadly accuracy. However, even the best of assassins need all the help they can get when it comes to long-range attacks. That is why the Adamantine Arbalest, and crossbows like it, are usually the best choice for would be assassins. The Adamantine Arbalest has been enchanted to enhance the assassin's crossbow skill and actually improve their chance to hit their mark. In skilled hands, the Adamantine Arbalest could drop a mark long before they could ever reach the assassin and exact revenge. 
+Урон: +10 (метательный)
+Атака: +4
+Особенности:
+ Глаза ассасина: на владельца наложен постоянный эффект заклинания "Глаза палача"
+ Скрытые атаки этим арбалетом наносят дополнительно 3d6 урона
+Вес: 14 фунтов
+Необходимая черта: Простое оружие, Арбалеты
+Тип: двуручное~
+@11871    = ~Адамантиновый арбалет +6~
+@11872    = ~Лучший союзник наёмного убийцы, не считая его умения, - это его оружие. Более того, для убийцы лучше всего, если его оружие, например арбалет, способно поражать цель на максимальном расстоянии и с наибольшей точностью. Вот почему многие убийцы пользуются подобными адамантиновыми арбалетами. Это оружие было зачаровано таким образом, чтобы увеличить точность стрельбы. В опытных руках этот арбалет - грозная сила; с ним убийца может поразить цель на значительном расстоянии, не опасаясь быть замеченным.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  +14 (missile)
-Attack Bonus: +6
-Special:
-  Assassin's Eyes: Wielder is under the effect of Executioner's Eyes
-  Sneak attacks with this crossbow deal an additional 5d6 damage
-Weight: 14 lb.
-Feat Requirement:  Simple Weapon, Crossbow
-Type:  Two-handed~
-@11873    = ~Mailripper +1~
-@11874    = ~An arbalest of dwarven manufacture, Mailripper has been seen in use across Icewind Dale for at least a hundred years. On the rare occasions that groups of dwarves appear on the tundra, they are typically gathered for battle. The leader of the Warcrest clan always kept a keen-eyed warrior armed with Mailripper by his side. The warrior's instructions were simple: shoot the most heavily armored opponent you see approaching the king.
+Урон: +14 (метательный)
+Атака: +6
+Особенности:
+ Глаза ассасина: на владельца наложен постоянный эффект заклинания "Глаза палача"
+ Скрытые атаки этим арбалетом наносят дополнительно 5d6 урона
+Вес: 14 фунтов
+Необходимая черта: Простое оружие, Арбалеты
+Тип: двуручное~
+@11873    = ~Гроза доспехов +1~
+@11874    = ~Этот изготовленный дварфами арбалет под названием "Гроза доспехов" используется в Долине Ледяного Ветра уже не менее сотни лет. В тех редких случаях, когда дварфы появляются в тундре, они, обычно собираются для битвы. Рядом с вождём клана Гребня Войны постоянно находился меткий воин, вооружённый "Грозой доспехов". Инструкции для этого воина были просты: стрелять в самого бронированного противника, который приближается к королю.
 
-When the Warcrest clan was wiped out in a woeful conflict with barbarians, some warriors from Bryn Shander used it for idle target practice before they died en route to Redwaters.
+После того, как клан Гребня Войны был истреблён в кровопролитном сражении с варварами, этот арбалет попал в руки воинов из Брин Шандера, использовавших его для стрельбы ради забавы до тех пор, пока они не погибли на дороге к Красноводью.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage: +4 (missile)
-Attack Bonus: +1 
-Special:
-  Mailripping: Bolts fired from this crossbow destroy all nonmagical armor on the targets they hit
-Weight: 10 lb.
-Feat Requirement:  Simple Weapon, Crossbow
-Type:  Two-handed~
-@11875    = ~Sundering Mailripper +4~
-@11876    = ~An arbalest of dwarven manufacture, Sundering Mailripper has been seen in use across Icewind Dale for at least a hundred years. On the rare occasions that groups of dwarves appear on the tundra, they are typically gathered for battle. The leader of the Warcrest clan always kept a keen-eyed warrior armed with Sundering Mailripper by his side. The warrior's instructions were simple: shoot the most heavily armored opponent you see approaching the king.
+Урон: +4 (метательный)
+Атака: +1
+Особенности:
+ Гроза доспехов: болты, выпущенные из этого арбалета, разрушают все немагические доспехи на целях при попадании
+Вес: 10 фунтов
+Необходимая черта: Простое оружие, Арбалеты
+Тип: двуручное~
+@11875    = ~Подрывающая гроза доспехов +4~
+@11876    = ~Этот изготовленный дварфами арбалет под названием "Защищённая гроза доспехов" используется в Долине Ледяного Ветра уже не менее сотни лет. В тех редких случаях, когда дварфы появляются в тундре, они, обычно собираются для битвы. Рядом с вождём клана Гребня Войны постоянно находился меткий воин, вооружённый "Подрывающей грозой доспехов". Инструкции для этого воина были просты: стрелять в самого бронированного противника, который приближается к королю.
 
-When the Warcrest clan was wiped out in a woeful conflict with barbarians, some warriors from Bryn Shander used it for idle target practice before they died en route to Redwaters.
+После того, как клан Гребня Войны был истреблён в кровопролитном сражении с варварами, этот арбалет попал в руки воинов из Брин Шандера, использовавших его для стрельбы ради забавы до тех пор, пока они не погибли на дороге к Красноводью.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage: +10 (missile)
-Attack Bonus: +4 
-Special:
-  Mailripping: Bolts fired from this crossbow destroy all nonmagical armor on the targets they hit
-  Missile Weakness: Bolts fired from this crossbow lower the target's Missile Resistance by 4 for 3 rounds (no save; cumulative)
-Weight: 10 lb.
-Feat Requirement:  Simple Weapon, Crossbow
-Type:  Two-handed~
+Урон: +10 (метательный)
+Атака: +4
+Особенности:
+ Гроза доспехов: болты, выпущенные из этого арбалета, разрушают все немагические доспехи на целях при попадании
+ Метательное ослабление: болты, выпущенные из этого арбалета снижают сопротивление метательному урону жертвы на 4 в течении трёх раундов (эффект суммируется; спасбросок отсутствует)
+Вес: 10 фунтов
+Необходимая черта: Простое оружие, Арбалеты
+Тип: двуручное~
 //@11877    = ~Doom Bolter~
-@11878    = ~The creation of the diabolical duergar master artisan Dragu Ironbreaker, the doom bolter is a complex and heavy device barely recognizable as some sort of crossbow. Its bow is of a pliant metal alloy, the tiller is covered with an array of gears, levers, springs, and studs, and a cylindrical case of hard leather and a rotating steel shaft sit along the top of the weapon. Despite this, the doom bolter is actually the more simple, easily produced variant of the overly intricate and expensive hell bolter, another of Dragu's inventions.
+@11878    = ~Творение злого ремесленника дуэргаров Драгу Железолома под названием "Роковое решето" - сложное и тяжёлое устройство, в котором с трудом удаётся распознать что-то вроде арбалета. Его лук изготовлен из гибкого металлического сплава, а на рукоятке находятся множество шестерёнок, рычагов, пружин и заклёпок. В верхней части оружия находится пустой цилиндрический футляр из жёсткой кожи и вращающийся стальной вал. Несмотря на всю сложность устройства, "Роковое решето" - это простой вариант ещё более хитроумного и дорогого "Адского решёта", другого изобретения Драгу.
 
-The doom bolter fires twice as quickly as the typical heavy crossbow, spewing a hail of quarrels from the ammunition container affixed along the tiller.
+"Роковое решето" стреляет в два раза быстрее, чем обычный тяжёлый арбалет, выпуская град болтов из ёмкости для боеприпасов, прикреплённой к устройству.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  +4 (missile)
-Attack Bonus: +1 
-Special:
-  Speed: 2 attacks per combat round
-Weight: 18 lb.
-Feat Requirement:  Simple Weapon, Crossbow
-Type:  Two-handed~
+Урон: +4 (метательный)
+Атака: +1
+Особенности:
+ Скорость: 2 атаки в раунд
+Вес: 18 фунтов
+Необходимая черта: Простое оружие, Арбалеты
+Тип: двуручное~
 //@11879    = ~Dragu's Doom Bolter~
-@11880    = ~The creation of the diabolical duergar master artisan Dragu Ironbreaker, the doom bolter is a complex and heavy device barely recognizable as some sort of crossbow. Its bow is of a pliant metal alloy, the tiller is covered with an array of gears, levers, springs, and studs, and a cylindrical case of hard leather and a rotating steel shaft sit along the top of the weapon. Despite this, the doom bolter is actually the more simple, easily produced variant of the overly intricate and expensive hell bolter, another of Dragu's inventions.
+@11880    = ~Творение злого ремесленника дуэргаров Драгу Железолома под названием "Роковое решето" - сложное и тяжёлое устройство, в котором с трудом удаётся распознать что-то вроде арбалета. Его лук изготовлен из гибкого металлического сплава, а на рукоятке находятся множество шестерёнок, рычагов, пружин и заклёпок. В верхней части оружия находится пустой цилиндрический футляр из жёсткой кожи и вращающийся стальной вал. Несмотря на всю сложность устройства, "Роковое решето" - это простой вариант ещё более хитроумного и дорогого "Адского решёта", другого изобретения Драгу.
 
-The doom bolter fires three times as quickly as the typical heavy crossbow, spewing a hail of quarrels from the ammunition container affixed along the tiller.
+"Роковое решето" стреляет в три раза быстрее, чем обычный тяжёлый арбалет, выпуская град болтов из ёмкости для боеприпасов, прикреплённой к устройству.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  +6 (missile)
-Attack Bonus: +2 
-Special:
-  Speed: 3 attacks per combat round
-Weight: 18 lb.
-Feat Requirement:  Simple Weapon, Crossbow
-Type:  Two-handed~
+Урон: +6 (метательный)
+Атака: +2
+Особенности:
+ Скорость: 3 атаки в раунд
+Вес: 18 фунтов
+Необходимая черта: Простое оружие, Арбалеты
+Тип: двуручное~
 //@11881    = ~Hell Bolter~
-@11882    = ~The creation of the diabolical duergar master artisan Dragu Ironbreaker, the hell bolter is a complex and heavy device barely recognizable as some sort of crossbow. Its bow is of a pliant metal alloy, the tiller is covered with an array of gears, levers, springs, and studs, and a cylindrical case of hard leather and a rotating steel shaft sit along the top of the weapon.
+@11882    = ~Творение злого ремесленника дуэргаров Драгу Железолома под названием "Адское решето" - сложное и тяжёлое устройство, в котором с трудом удаётся распознать что-то вроде арбалета. Его лук изготовлен из гибкого металлического сплава, а на рукоятке находятся множество шестерёнок, рычагов, пружин и заклёпок. В верхней части оружия находится пустой цилиндрический футляр из жёсткой кожи и вращающийся стальной вал.
 
-An attempt to create a missile weapon that would allow gray dwarf soldiers to slay many times their number from afar, the hell bolter is an overly complex and terribly expensive device unsuitable for the equipping of an entire army. It is, however, frightfully effective - the hell bolter fires three times as quickly as the typical heavy crossbow, spewing a storm of quarrels from the ammunition container affixed along the tiller.
+Попытка изобрести дальнобойное оружие, способное позволить серым дварфам разить издалека силы противника, превосходящие их по численности, вылилась в создание "Адского решёта" - настолько сложного и дорогого устройства, что его производство в масштабах целой армии просто невозможно. И всё же это устройство невероятно действенно - оно стреляет втрое быстрее обычного тяжёлого арбалета, выпуская град болтов из ёмкости для боеприпасов, прикреплённой к "Адскому решету".
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage: +4 (missile)
-Attack Bonus: +1 
-Special:
-   Speed: 3 attacks per combat round
-Weight: 20 lb.
-Feat Requirement:  Simple Weapon, Crossbow
-Type:  Two-handed~
+Урон: +4 (метательный)
+Атака: +1
+Особенности:
+ Скорость: 3 атаки в раунд
+Вес: 20 фунтов
+Необходимая черта: Простое оружие, Арбалеты
+Тип: двуручное~
 //@11883    = ~Dragu's Hell Bolter~
-@11884    = ~The creation of the diabolical duergar master artisan Dragu Ironbreaker, the hell bolter is a complex and heavy device barely recognizable as some sort of crossbow. Its bow is of a pliant metal alloy, the tiller is covered with an array of gears, levers, springs, and studs, and a cylindrical case of hard leather and a rotating steel shaft sit along the top of the weapon.
+@11884    = ~Творение злого ремесленника дуэргаров Драгу Железолома под названием "Адское решето" - сложное и тяжёлое устройство, в котором с трудом удаётся распознать что-то вроде арбалета. Его лук изготовлен из гибкого металлического сплава, а на рукоятке находятся множество шестерёнок, рычагов, пружин и заклёпок. В верхней части оружия находится пустой цилиндрический футляр из жёсткой кожи и вращающийся стальной вал.
 
-An attempt to create a missile weapon that would allow gray dwarf soldiers to slay many times their number from afar, the hell bolter is an overly complex and terribly expensive device unsuitable for the equipping of an entire army. It is, however, frightfully effective - the hell bolter fires four times as quickly as the typical heavy crossbow, spewing a storm of quarrels from the ammunition container affixed along the tiller.
+Попытка изобрести дальнобойное оружие, способное позволить серым дварфам разить издалека силы противника, превосходящие их по численности, вылилась в создание "Адского решёта" - настолько сложного и дорогого устройства, что его производство в масштабах целой армии просто невозможно. И всё же это устройство невероятно действенно - оно стреляет вчетверо быстрее обычного тяжёлого арбалета, выпуская град болтов из ёмкости для боеприпасов, прикреплённой к "Адскому решету".
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  +6 (missile)
-Attack Bonus: +2 
-Special:
-  Speed: 4 attacks per combat round
-Weight: 20 lb.
-Feat Requirement:  Simple Weapon, Crossbow
-Type:  Two-handed~
+Урон: +6 (метательный)
+Атака: +2
+Особенности:
+ Скорость: 4 атаки в раунд
+Вес: 20 фунтов
+Необходимая черта: Простое оружие, Арбалеты
+Тип: двуручное~
 
 
 //@11885    = ~Sling~
 //@11886    = ~Item description can remain the same; if new description is needed put it here~
 //@11887    = ~Sling +1~
 //@11888    = ~Item description can remain the same; if new description is needed put it here~
-@11889    = ~Sling of Greater Magic Force +1~
-@11890    = ~Slings have existed since the beginning of recorded history. The basic sling consists of a leather or fabric strap with a pouch for holding the missile, however this one has been imbued with a small magical enchantment. The weapon is held by both ends of the strap and twirled around the wielder's head. When top speed is attained, the missile is launched by releasing one of the strap's ends. 
+@11889    = ~Праща сильного урона магией +1~
+@11890    = ~Пращи известны с древнейших времён. Праща обычно представляет собой ремешок из кожи или ткани, снабжённый кармашком, который удерживает снаряд. Пращу берут рукой за оба конца ремешка и раскручивают над головой. Добившись максимальной скорости вращения, один из концов отпускают, выпуская снаряд. Эта праща была зачарована.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  +1 (missile)
-Attack Bonus:  +1 
-Special:
-  Magic Force: Bullets fired from this sling deal +3d6 magic damage
-Weight: 0 lb.
-Feat Requirement:  Simple Weapon, Missile
-Type:  One-handed~
-@11891    = ~Sling of Healing +2~
-@11892    = ~Slings have existed since the beginning of recorded history. The basic sling consists of a leather or fabric strap with a pouch for holding the missile, however this one has been imbued with a small magical enchantment. The weapon is held by both ends of the strap and twirled around the wielder's head. When top speed is attained, the missile is launched by releasing one of the strap's ends. 
+Урон: +1 (метательный)
+Атака: +1
+Особенности:
+ Урон магией: снаряды, выпущенные из этой пращи наносят дополнительной 3d6 урона магией
+Вес: 0 фунтов
+Необходимая черта: Простое оружие, Метательное
+Тип: одноручное~
+@11891    = ~Праща лечения +2~
+@11892    = ~Пращи известны с древнейших времён. Праща обычно представляет собой ремешок из кожи или ткани, снабжённый кармашком, который удерживает снаряд. Пращу берут рукой за оба конца ремешка и раскручивают над головой. Добившись максимальной скорости вращения, один из концов отпускают, выпуская снаряд. Эта праща была зачарована.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  +2 (missile damage)
-Attack Bonus:  +2 
-Special:
-  Spell Power: Can cast Cure Serious Wounds (at level 12) 1/day
-Weight: 0 lb.
-Feat Requirement:  Simple Weapon, Missile
-Type:  One-handed~
+Урон: +2 (метательный)
+Атака: +2
+Особенности:
+ Заклинание: носитель может раз в день читать заклинание "Исцеление серьёзных ран" (как заклинатель 12-ого уровня)
+Вес: 0 фунтов
+Необходимая черта: Простое оружие, Метательное
+Тип: одноручное~
 //@11893    = ~Sling of Pain +5~
 //@11894    = ~Item description can remain the same; if new description is needed put it here~
 //@11895    = ~Sling of Accuracy +5~
-@11896    = ~Slings have existed since the beginning of recorded history. The basic sling consists of a leather or fabric strap with a pouch for holding the missile, however this one has been imbued with a small magical enchantment. The weapon is held by both ends of the strap and twirled around the wielder's head. When top speed is attained, the missile is launched by releasing one of the strap's ends.
+@11896    = ~Пращи известны с древнейших времён. Праща обычно представляет собой ремешок из кожи или ткани, снабжённый кармашком, который удерживает снаряд. Пращу берут рукой за оба конца ремешка и раскручивают над головой. Добившись максимальной скорости вращения, один из концов отпускают, выпуская снаряд. Эта праща была зачарована.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage: +5 (missile)
-Attack Bonus: +7
-Weight: 0 lb.
-Feat Requirement:  Simple Weapon, Missile
-Type:  One-handed~
-@11897    = ~Sling of Holy Might +3~
-@11898    = ~Slings have existed since the beginning of recorded history. The basic sling consists of a leather or fabric strap with a pouch for holding the missile, however this one has been imbued with a small magical enchantment. The weapon is held by both ends of the strap and twirled around the wielder's head. When top speed is attained, the missile is launched by releasing one of the strap's ends. 
+Урон: +5 (метательный)
+Атака: +7
+Вес: 0 фунтов
+Необходимая черта: Простое оружие, Метательное
+Тип: одноручное~
+@11897    = ~Праща священной мощи +3~
+@11898    = ~Пращи известны с древнейших времён. Праща обычно представляет собой ремешок из кожи или ткани, снабжённый кармашком, который удерживает снаряд. Пращу берут рукой за оба конца ремешка и раскручивают над головой. Добившись максимальной скорости вращения, один из концов отпускают, выпуская снаряд. Эта праща была зачарована.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  +3 (missile)
-Attack Bonus:  +3 
-Special:
-  Constant Effect: Wielder is under the effects of Draw Upon Holy Might (at level 6)
-Weight: 0 lb.
-Feat Requirement:  Simple Weapon, Missile
-Type:  One-handed~
-@11899    = ~Sling of the Divine +2~
-@11900    = ~Slings have existed since the beginning of recorded history. The basic sling consists of a leather or fabric strap with a pouch for holding the missile, however this one has been imbued with a small magical enchantment. The weapon is held by both ends of the strap and twirled around the wielder's head. When top speed is attained, the missile is launched by releasing one of the strap's ends. 
+Урон: +3 (метательный)
+Атака: +3
+Особенности:
+ Постоянный эффект: носитель пращи находится под постоянным действием заклинания "Призыв священной мощи" (как, если бы оно было наложено заклинателем шестого уровня)
+Вес: 0 фунтов
+Необходимая черта: Простое оружие, Метательное
+Тип: одноручное~
+@11899    = ~Божественная праща +2~
+@11900    = ~Пращи известны с древнейших времён. Праща обычно представляет собой ремешок из кожи или ткани, снабжённый кармашком, который удерживает снаряд. Пращу берут рукой за оба конца ремешка и раскручивают над головой. Добившись максимальной скорости вращения, один из концов отпускают, выпуская снаряд. Эта праща была зачарована.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage: +2 (missile)
-Attack Bonus: +2 
-Special:
-  Increased Duration: Wielder's divine spells last 25% longer
-Weight: 0 lb.
-Feat Requirement:  Simple Weapon, Missile
-Type:  One-handed~
+Урон: +2 (метательный)
+Атака: +2
+Особенности:
+ Увеличенная длительность: Божественные заклинания владельца пращи действуют на 25% дольше
+Вес: 0 фунтов
+Необходимая черта: Простое оружие, Метательное
+Тип: одноручное~
 //@11901    = ~Sling of Spell Resistance~
-@11902    = ~Slings have existed since the beginning of recorded history. The basic sling consists of a leather or fabric strap with a pouch for holding the missile, however this one has been imbued with a small magical enchantment. The weapon is held by both ends of the strap and twirled around the wielder's head. When top speed is attained, the missile is launched by releasing one of the strap's ends. 
+@11902    = ~Пращи известны с древнейших времён. Праща обычно представляет собой ремешок из кожи или ткани, снабжённый кармашком, который удерживает снаряд. Пращу берут рукой за оба конца ремешка и раскручивают над головой. Добившись максимальной скорости вращения, один из концов отпускают, выпуская снаряд. Эта праща была зачарована.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Special:
-  Spell Resistance: Set to 12
-Weight: 0 lb.
-Feat Requirement:  Simple Weapon, Missile
-Type:  One-handed~
+Особенности:
+ Сопротивление магии: устанавливается в 12
+Вес: 0 фунтов
+Необходимая черта: Простое оружие, Метательное
+Тип: одноручное~
 //@11903    = ~Masterwork Sling~
 //@11904    = ~Item description can remain the same; if new description is needed put it here~
 //@11905    = ~Sling +5~
