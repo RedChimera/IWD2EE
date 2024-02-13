@@ -10443,170 +10443,169 @@
 
 ПАРАМЕТРЫ:
 
-Сопротивление: 25/- дробящему урону электричеству
+Сопротивление: 25/- дробящему урону
 Вес: 1 фунт~
 //@12089    = ~Potion of Invulnerability~
-@12090    = ~This potion confers near-complete invulnerability to all damage. The effects are short-lived, however, lasting for only 2 rounds.
+@12090    = ~Это зелье дает почти полную неуязвимость к любому урону. Однако эффект недолговечен: он длится всего 2 раунда.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Resistance:  100/- Fire Resistance
-Resistance:  100/- Cold Resistance
-Resistance:  100/- Electrical Resistance
-Resistance:  100/- Acid Resistance
-Resistance:  100/- Magic Damage Resistance
-Resistance:  100/- Poison Resistance
-Resistance:  100/- Slashing Resistance
-Resistance:  100/- Piercing Resistance
-Resistance:  100/- Bludgeoning Resistance
-Resistance:  100/- Missile Resistance
-Weight: 1 lb.~
+Сопротивление: 100/- урону огнём
+Сопротивление: 100/- урону холодом
+Сопротивление: 100/- урону электричеством
+Сопротивление: 100/- урону кислотой
+Сопротивление: 100/- урону магией
+Сопротивление: 100/- урону ядом
+Сопротивление: 100/- рубящему урону
+Сопротивление: 100/- колющему урону
+Сопротивление: 100/- дробящему урону
+Сопротивление: 100/- метательному урону
+Вес: 1 фунт~
 //@12091    = ~Thrym Extract~
-@12092    = ~This thick liquid is harvested and distilled from the glands of dead polar worms. It is the substance that helps keep the huge creatures warm in the desolate north. Drinking the liquid straight from the creature's body is almost always fatal, so alchemists attempt to distill the substance until it is relatively safe to consume. Even in its current state, however, it can still be deadly.
+@12092    = ~Эту густую жидкость получают из желёз мёртвых полярных червей. Это вещество помогает огромным существам сохранять тепло на диком севере. Пить эту жидкость непосредственно из тела существа смертельно опасно. После многоступенчатой алхимической очистки вещество можно употреблять, но оно всё же сохраняет часть своих смертоносных свойств.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-User takes 2d8 fire damage on a failed Fortitude save (DC 14) but also gains 40/- cold resistance for 5 rounds.
-Weight: 1 lb.~
+Выпивший получает 2d8 урона огнём (успешный спасбросок стойкости с УС 14 отменяет урон), но получает 40/- сопротивления холоду на 5 раундов
+Вес: 1 фунт~
 //@12093    = ~Potion of Explosions~
-@12094    = ~This potion is a vial of pain as it will explode into a burning ball of fire upon impact. Keep it in a safe place lest ye meet an untimely end.
+@12094    = ~Это зелье представляет собой сосуд боли, поскольку при ударе оно взрывается огненным шаром. Хранить его нужно в надёжном месте, чтобы не встретить преждевременную гибель.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  6D6  (Reflex DC 18 for half)
-Area:  20 ft radius
-Weight: 1 lb.~
+Урон: 6d6 (успешный спасбросок реакции с УС 18 снижает урон вдвое)
+Зона действия: радиус 20 футов
+Вес: 1 фунт~
 //@12095    = ~Flask of Braehg~
-@12096    = ~Braehg is a vile concoction of wild boar's blood mixed with milk and a smattering of rare herbs. Quaffing an entire flask of the stuff at once gives the brave imbiber a burst of physical power... but is nearly certain to sicken them as well. 
+@12096    = ~Брэг - это ядрёная смесь крови вепря с молоком и редкими травами. Храбрец, осушивший фляжку такой смеси залпом, ощущает прилив физических сил... но и подрывает при этом здоровье.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Strength: +2 bonus
-Sickening: -1 Saving Throw penalty
-Duration: 2 hours
-Weight: 1 lb.~
+Сила: +2
+Спасброски: -1 (ухудшение)
+Длительность: 2 часа
+Вес: 1 фунт~
 //@12097    = ~Bottle of Braehg~
-@12098    = ~Braehg is a vile concoction of wild boar's blood mixed with milk and a smattering of rare herbs. Quaffing an entire flask of the stuff at once gives the brave imbiber a burst of physical power... but is nearly certain to sicken them as well. 
+@12098    = ~Брэг - это ядрёная смесь крови вепря с молоком и редкими травами. Храбрец, осушивший фляжку такой смеси залпом, ощущает прилив физических сил... но и подрывает при этом здоровье.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
+Сила: +12
+Спасброски: -3 (ухудшение)
+Длительность: 2 часа
+Вес: 1 фунт~
+@12099    = ~Зелье восстановления~
+@12100    = ~Зелья обычно хранятся в керамических, хрустальных, стеклянных, металлических бутылках или пузырьках. Как правило, каждый сосуд содержит достаточно жидкости для одной дозы, необходимой для достижения эффекта.
 
-Strength: +12
-Sickening: -3 Saving Throw penalty
-Duration: 2 hours
-Weight: 1 lb.~
-@12099    = ~Potion of Restoration~
-@12100    = ~Potions are typically found in ceramic, crystal, glass, or metal flasks or vials. Flasks or other containers generally contain enough fluid to provide one person with one complete dose to achieve the effects of the potion. 
+ПАРАМЕТРЫ:
 
-STATISTICS:
-
-This potion will cure a creature of energy drain and ability score loss.
-Weight: 1 lb.~
+Это зелье исцелит выпившего его от эффектов оттока энергии и вернёт потерянные параметры
+Вес: 1 фунт~
 //@12101    = ~Sanctuary Potion~
-@12102    = ~Potions are typically found in ceramic, crystal, glass, or metal flasks or vials. Flasks or other containers generally contain enough fluid to provide one person with one complete dose to achieve the effects of the potion. 
+@12102    = ~Зелья обычно хранятся в керамических, хрустальных, стеклянных, металлических бутылках или пузырьках. Как правило, каждый сосуд содержит достаточно жидкости для одной дозы, необходимой для достижения эффекта.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-User gains the effects of Sanctuary for 10 rounds
-Weight: 1 lb.~
+Зелье производит эффект, равносильный использованию заклинания "Святилище" на 10 раундов
+Вес: 1 фунт~
 //@12103    = ~Potion of Holy Transference~
-@12104    = ~Potions are typically found in ceramic, crystal, glass, or metal flasks or vials. Flasks or other containers generally contain enough fluid to provide one person with one complete dose to achieve the effects of the potion. 
+@12104    = ~Зелья обычно хранятся в керамических, хрустальных, стеклянных, металлических бутылках или пузырьках. Как правило, каждый сосуд содержит достаточно жидкости для одной дозы, необходимой для достижения эффекта.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Permanent +2 Wisdom
-Permanent -2 Dexterity
-Weight:  1 lb.~
-@12105    = ~Potion of Mind Transference~
-@12106    = ~Potions are typically found in ceramic, crystal, glass, or metal flasks or vials. Flasks or other containers generally contain enough fluid to provide one person with one complete dose to achieve the effects of the potion. 
+Навсегда увеличивает мудрость на 2
+Навсегда уменьшает ловкость на 2
+Вес: 1 фунт~
+@12105    = ~Зелье переноса разума~
+@12106    = ~Зелья обычно хранятся в керамических, хрустальных, стеклянных, металлических бутылках или пузырьках. Как правило, каждый сосуд содержит достаточно жидкости для одной дозы, необходимой для достижения эффекта.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Permanent +2 Intelligence
-Permanent -2 Charisma
-Weight:  1 lb.~
-//@12107    = ~Potion of Life Transference~
-@12108    = ~Potions are typically found in ceramic, crystal, glass, or metal flasks or vials. Flasks or other containers generally contain enough fluid to provide one person with one complete dose to achieve the effects of the potion. 
+Навсегда увеличивает интеллект на 2
+Навсегда уменьшает харизму на 2
+Вес: 1 фунт~
+//@12107    = ~Зелье переноса жизни~
+@12108    = ~Зелья обычно хранятся в керамических, хрустальных, стеклянных, металлических бутылках или пузырьках. Как правило, каждый сосуд содержит достаточно жидкости для одной дозы, необходимой для достижения эффекта.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Permanent +2 Strength
-Permanent -2 Constitution
-Weight:  1 lb.~
-@12109    = ~Potion of Defense~
-@12110    = ~Potions are typically found in ceramic, crystal, glass, or metal flasks or vials. Flasks or other containers generally contain enough fluid to provide one person with one complete dose to achieve the effects of the potion.
+Навсегда увеличивает силу на 2
+Навсегда уменьшает телосложение на 2
+Вес: 1 фунт~
+@12109    = ~Зелье защиты~
+@12110    = ~Зелья обычно хранятся в керамических, хрустальных, стеклянных, металлических бутылках или пузырьках. Как правило, каждый сосуд содержит достаточно жидкости для одной дозы, необходимой для достижения эффекта.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Permanent +1 Generic AC Bonus
-Weight:  1 lb.~
+Навсегда увеличивает класс защиты (общий) на 1
+Вес: 1 фунт~
 //@12111    = ~Potion of Strength Transference~
-@12112    = ~Potions are typically found in ceramic, crystal, glass, or metal flasks or vials. Flasks or other containers generally contain enough fluid to provide one person with one complete dose to achieve the effects of the potion. 
+@12112    = ~Зелья обычно хранятся в керамических, хрустальных, стеклянных, металлических бутылках или пузырьках. Как правило, каждый сосуд содержит достаточно жидкости для одной дозы, необходимой для достижения эффекта.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Permanent +2 Dexterity
-Permanent -2 Strength
-Weight:  1 lb.~
-@12113    = ~Potion of Wisdom Transference~
-@12114    = ~Potions are typically found in ceramic, crystal, glass, or metal flasks or vials. Flasks or other containers generally contain enough fluid to provide one person with one complete dose to achieve the effects of the potion.
+Навсегда увеличивает ловкость на 2
+Навсегда уменьшает силу на 2
+Вес: 1 фунт~
+@12113    = ~Зелье переноса мудрости~
+@12114    = ~Зелья обычно хранятся в керамических, хрустальных, стеклянных, металлических бутылках или пузырьках. Как правило, каждый сосуд содержит достаточно жидкости для одной дозы, необходимой для достижения эффекта.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Permanent +2 Constitution
-Permanent -2 Wisdom
-Weight:  1 lb.~
-@12115    = ~Potion of Resilience~
-@12116    = ~Potions are typically found in ceramic, crystal, glass, or metal flasks or vials. Flasks or other containers generally contain enough fluid to provide one person with one complete dose to achieve the effects of the potion. 
+Навсегда увеличивает телосложение на 2
+Навсегда уменьшает мудрость на 2
+Вес: 1 фунт~
+@12115    = ~Зелье стойкости~
+@12116    = ~Зелья обычно хранятся в керамических, хрустальных, стеклянных, металлических бутылках или пузырьках. Как правило, каждый сосуд содержит достаточно жидкости для одной дозы, необходимой для достижения эффекта.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Permanent +1 to all Saving Throws
-Weight:  1 lb.~
-@12117    = ~Potion of Energy Resistance~
-@12118    = ~Potions are typically found in ceramic, crystal, glass, or metal flasks or vials. Flasks or other containers generally contain enough fluid to provide one person with one complete dose to achieve the effects of the potion. 
+Навсегда увеличивает все спасброски на 1
+Вес: 1 фунт~
+@12117    = ~Зелье сопротивления энергии~
+@12118    = ~Зелья обычно хранятся в керамических, хрустальных, стеклянных, металлических бутылках или пузырьках. Как правило, каждый сосуд содержит достаточно жидкости для одной дозы, необходимой для достижения эффекта.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Permanent 3/- Fire Resistance
-Permanent 3/- Cold Resistance
-Permanent 3/- Electricity Resistance
-Permanent 3/- Acid Resistance
-Permanent 3/- Magic Damage Resistance
-Weight:  1 lb.~
+Навсегда даёт 3/- сопротивления урону огнём
+Навсегда даёт 3/- сопротивления урону холодом
+Навсегда даёт 3/- сопротивления урону электричеством
+Навсегда даёт 3/- сопротивления урону кислотой
+Навсегда даёт 3/- сопротивления урону магией
+Вес: 1 фунт~
 //@12119    = ~Potion of Resistance~
-@12120    = ~Potions are typically found in ceramic, crystal, glass, or metal flasks or vials. Flasks or other containers generally contain enough fluid to provide one person with one complete dose to achieve the effects of the potion. 
+@12120    = ~Зелья обычно хранятся в керамических, хрустальных, стеклянных, металлических бутылках или пузырьках. Как правило, каждый сосуд содержит достаточно жидкости для одной дозы, необходимой для достижения эффекта.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Permanent 1/- Slashing Resistance
-Permanent 1/- Piercing Resistance
-Permanent 1/- Bludgeoning Resistance
-Weight:  1 lb.~
+Навсегда даёт 1/- сопротивления рубящему урону
+Навсегда даёт 1/- сопротивления колющему урону
+Навсегда даёт 1/- сопротивления дробящему урону
+Вес: 1 фунт~
 //@12121    = ~Potion of Action Transference~
-@12122    = ~Potions are typically found in ceramic, crystal, glass, or metal flasks or vials. Flasks or other containers generally contain enough fluid to provide one person with one complete dose to achieve the effects of the potion. 
+@12122    = ~Зелья обычно хранятся в керамических, хрустальных, стеклянных, металлических бутылках или пузырьках. Как правило, каждый сосуд содержит достаточно жидкости для одной дозы, необходимой для достижения эффекта.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Permanent +2 Charisma
-Permanent -2 Dexterity
-Weight:  1 lb.~
+Навсегда увеличивает харизму на 2
+Навсегда уменьшает ловкость на 2
+Вес: 1 фунт~
 //@12123    = ~Potion of Clear Purpose~
-@12124    = ~Very few of these potions were ever manufactured, and the methods by which they were has been lost. Created during the times of Netheril for the upper echelons of the churches, these potions would strip one of fortitude for an increase in priestly abilities.
+@12124    = ~Это очень редкие зелья, и рецепт их изготовления утерян. Во времена Нетерила их делали для верховных служителей церкви. Эти зелья ослабляют здоровье, но усиливают способности жреца.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Permanent +2 Wisdom
-Permanent -2 Constitution
-Weight:  1 lb.~
+Навсегда увеличивает мудрость на 2
+Навсегда уменьшает телосложение на 2
+Вес: 1 фунт~
 //@12125    = ~Venla's Medicine~
-@12126    = ~This potent herbal remedy's most powerful ingredient is the extract of frostrose that you found for Venla. When wholly consumed, this potion restores 50 hit points to the person and removes all traces of poison or disease.
+@12126    = ~Самый важный ингредиент этого эффективного травяного отвара - экстракт морозной розы, которую вы отыскали для Венлы. При употреблении зелье восстанавливает 9 пунктов здоровья персонажа, а заодно устраняет все эффекты отравления и болезней.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Heals 50 HP
-Removes poison and disease
-Weight: 1 lb.~
+Устраняет отравление и болезни
+Восстанавливает 50 пунктов здоровья
+Вес: 1 фунт~
 
 
 //@12127    = ~Bardic Horn of Valhalla~
@@ -10614,21 +10613,21 @@ Weight: 1 lb.~
 //@12129    = ~Raging Winds~
 //@12130    = ~Item description can remain the same; if new description is needed put it here~
 //@12131    = ~The Cittern of War~
-@12132    = ~One of the only musical instruments actively approved of by the church of Tempus, the Cittern of War was constructed by a halfling instrument maker named Relias Blackseed. Priests of Arvoreen the Defender blessed the cittern with its impressive power. Relias never intended to play his magnificent creation. He eventually sold the ruddy instrument to a bard named Gallow Deely. Gallow was a lanky, slender man often found in the company of adventurers. Though ill-suited for battle, Gallow was exceptionally gifted at putting tales of heroism to music. With the aid of the cittern, he helped the Company of Frozen Trees defeat a young green dragon in 1013 DR. His song, commemorating the occasion, was a rollicking tune called "The Fight of Green Thirteen."  It is played in central and western taverns to this day.
+@12132    = ~Кифара войны - один из немногих музыкальных инструментов, которые активно одобряла церковь Темпуса. Инструмент изготовил мастер-полурослик по имени Релиас Чёрное Семя. Жрецы Арворина Защитника освятили кифару, наделив её поразительными силами. Сам Релиас не собирался играть на этом чудесном инструменте, так что в конце концов продал его одному барду, Гэллоу Дили. Худой и долговязый Гэллоу любил общество искателей приключений и пусть в бою от него было мало толку, он слагал великолепные песни о героических подвигах. В 1013 ЛД благодаря своей кифаре он помог команде Замёрзших Древ одолеть молодого зелёного дракона. Гэллоу увековечил это событие в песне под названием "Битва тринадцати зелёных", которая до сих пор нередко звучит в тавернах центральных и западных земель.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-When played, this cittern gives +2 attack, damage, saving throws, and a morale boost to nonhostile creatures within 15 feet. The effects last 10 rounds.
+При использовании эта кифара дает +2 к атаке, урону, спасброскам и боевому духу невраждебных существ в радиусе 15 футов; эффект длится 10 раундов
 
-Weight:  3 lb.~
+Вес: 3 фунта~
 //@12133    = ~Masterwork Cittern of War~
-@12134    = ~One of the only musical instruments actively approved of by the church of Tempus, the Cittern of War was constructed by a halfling instrument maker named Relias Blackseed. Priests of Arvoreen the Defender blessed the cittern with its impressive power. Relias never intended to play his magnificent creation. He eventually sold the ruddy instrument to a bard named Gallow Deely. Gallow was a lanky, slender man often found in the company of adventurers. Though ill-suited for battle, Gallow was exceptionally gifted at putting tales of heroism to music. With the aid of the cittern, he helped the Company of Frozen Trees defeat a young green dragon in 1013 DR. His song, commemorating the occasion, was a rollicking tune called "The Fight of Green Thirteen."  It is played in central and western taverns to this day.
+@12134    = ~Кифара войны - один из немногих музыкальных инструментов, которые активно одобряла церковь Темпуса. Инструмент изготовил мастер-полурослик по имени Релиас Чёрное Семя. Жрецы Арворина Защитника освятили кифару, наделив её поразительными силами. Сам Релиас не собирался играть на этом чудесном инструменте, так что в конце концов продал его одному барду, Гэллоу Дили. Худой и долговязый Гэллоу любил общество искателей приключений и пусть в бою от него было мало толку, он слагал великолепные песни о героических подвигах. В 1013 ЛД благодаря своей кифаре он помог команде Замёрзших Древ одолеть молодого зелёного дракона. Гэллоу увековечил это событие в песне под названием "Битва тринадцати зелёных", которая до сих пор нередко звучит в тавернах центральных и западных земель.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-When played, this cittern gives +4 attack, damage, saving throws, and a morale boost to nonhostile creatures within 15 feet. The effects last 10 rounds.
+При использовании эта кифара дает +4 к атаке, урону, спасброскам и боевому духу невраждебных существ в радиусе 15 футов; эффект длится 10 раундов
 
-Weight:  3 lb.~
+Вес: 3 фунта~
 //@12135    = ~The Unstrung Harp~
 @12136    = ~The instrument of a beatified saint of the church of Ilmater, this harp once belonged to Sephica of Ordulin. Sephica was a bard, but she did not worship the lord of songs, Milil. Instead, she devoted herself to performing ballads to the suffering throngs of Ilmaterians everywhere. She was traveling with a group of Ilmaterian pilgrims when they were attacked by bandits. The bandits killed and severely injured many of the pilgrims, and they cut the strings of Sephica's harp when she tried to soothe the injured travelers. After the bandits had left, Sephica prayed to Ilmater for help in a time of crisis. When she plucked at her harp strings with her eyes closed in prayer, music miraculously poured forth and healed every person who heard it. The next day, the bandits arrived and killed Sephica for healing the pilgrims. Though she was killed, the pilgrims kept the memory of her miracle alive. Their community attempted to have her accepted as an Ilmaterian saint. They succeeded in 1218 DR.
 
@@ -10639,31 +10638,30 @@ This harp can cast Heal 1/Day. It can only be played by a bard of exceptional vi
 Minimum Wisdom of 16 required
 Weight:  3 lb.~
 //@12137    = ~Sephica's Prayer~
-@12138    = ~The instrument of a beatified saint of the church of Ilmater, this harp once belonged to Sephica of Ordulin. Sephica was a bard, but she did not worship the lord of songs, Milil. Instead, she devoted herself to performing ballads to the suffering throngs of Ilmaterians everywhere. She was traveling with a group of Ilmaterian pilgrims when they were attacked by bandits. The bandits killed and severely injured many of the pilgrims, and they cut the strings of Sephica's harp when she tried to soothe the injured travelers. After the bandits had left, Sephica prayed to Ilmater for help in a time of crisis. When she plucked at her harp strings with her eyes closed in prayer, music miraculously poured forth and healed every person who heard it. The next day, the bandits arrived and killed Sephica for healing the pilgrims. Though she was killed, the pilgrims kept the memory of her miracle alive. Their community attempted to have her accepted as an Ilmaterian saint. They succeeded in 1218 DR.
+@12138    = ~Этот инструмент принадлежал Сефике из Ордулина, которую церковь Ильматера впоследствии канонизировала. Бард Сефика не поклонялась богу песни Милилу - она поставила своё искусство на службу страдающим последователям Ильматера. Когда она путешествовала вместе с группой пилигримов Ильматера, на них напали разбойники. Многие пилигримы были убиты или тяжело ранены, но когда Сефика попыталась облегчить их страдания, разбойники перерезали струны на её арфе. Когда злодеи скрылись, Сефика обратилась к Ильматеру с молитвой о помощи в трудный час. Молясь с закрытыми глазами, она прикоснулась к струнам инструмента, и чудесным образом из арфы полилась музыка, исцелив всех, кто её услышал. На следующий день разбойники появились вновь и убили Сефику за то, что она излечила пилигримов. Но память о совершённом ею чуде осталась жить благодаря спутникам барда. Община пилигримов подала прошение о том, чтобы Сефику причислили к лику святых Ильматера. Его удовлетворили в 1218 ЛД.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-This harp can cast Heal or Resurrection 1/Day. It can only be played by a bard of exceptional virtue, wisdom, and talent.
+Арфа позволяет прочесть заклинание "Исцеление" или "Воскрешение" раз в день. Играть на ней может лишь добродетельный бард, наделённый исключительной мудростью и талантом.
 
-Minimum Wisdom of 16 required
-Weight: 3 lb.~
+Требования: Мудрость 16
+Вес: 3 фунта~
 //@12139    = ~Lyre of Progression~
-@12140    = ~The Lyre of Progression was created by the bard Sedini Paletto. Sedini was a teacher of young aspiring bards during difficult times. This instrument, held close at all times, helped Sedini fight off those who would attack him or his students. When Sedini grew old, he passed it on to his best student, Galwen Alaman. Galwen continued teaching for a few years before setting out into the wilderness on a life of adventure. It is believed that he lost the lyre when he accidentally dropped it in a marsh.
+@12140    = ~Лиру прогресса создал бард по имени Седини Палетто. В трудные времена учил он молодых многообещающих музыкантов. Этот инструмент Седини всегда держал при себе и с его помощью отбивался от тех, кто пытался напасть на него или на его учеников. Состарившись, бард подарил лиру Галуэну Аламану, своему лучшему ученику. Несколько лет Галуэн продолжал обучать других, а затем отправился путешествовать по диким местам в поисках приключений. Говорят, он потерял лиру, случайно уронив её в болото.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Luck: +1
-
-Weight:  2 lb.~
+Удача: +1
+Вес: 2 фунта~
 //@12141    = ~Lyre of Inner Focus~
-@12142    = ~The Lyre of Inner Focus was created by the bard Sedini Paletto. Sedini was a teacher of young aspiring bards during difficult times. This instrument, held close at all times, helped Sedini fight off those who would attack him or his students. When Sedini grew old, he passed it on to his best student, Galwen Alaman. Galwen continued teaching for a few years before setting out into the wilderness on a life of adventure. It is believed that he lost the lyre when he accidentally dropped it in a marsh.
+@12142    = ~Лиру сосредоточения создал бард по имени Седини Палетто. В трудные времена учил он молодых многообещающих музыкантов. Этот инструмент Седини всегда держал при себе и с его помощью отбивался от тех, кто пытался напасть на него или на его учеников. Состарившись, бард подарил лиру Галуэну Аламану, своему лучшему ученику. Несколько лет Галуэн продолжал обучать других, а затем отправился путешествовать по диким местам в поисках приключений. Говорят, он потерял лиру, случайно уронив её в болото.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Luck: +2
-Strength: +6
+Удача: +2
+Сила: +6
 
-Weight:  2 lb.~
+Вес: 2 фунта~
 //@12143    = ~The Merry Shorthorn~
 @12144    = ~The Merry Shorthorn was once owned by the half-elven bard Prophia Copperfire. She took the small instrument everywhere. Despite its rather meager powers, the Merry Shorthorn is among one of the most well traveled magic items in Faerun. It is believed that Prophia took it with her on a number of Elemental Planes, to Elysium and Baator, and from the Spine of the World to the distant reaches of Wa. It entertained pashas in Calimshan, quelled the anger of holy slayers in Zakhara, and bolstered a crew of sailors in the Sea of Fallen Stars. The Merry Shorthorn was lost when Prophia accidentally dropped it somewhere in the great desert Anauroch.
 
