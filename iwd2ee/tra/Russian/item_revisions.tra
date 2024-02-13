@@ -9798,75 +9798,75 @@
 //@11910    = ~Item description can remain the same; if new description is needed put it here~
 //@11911    = ~Sling +2~
 //@11912    = ~Item description can remain the same; if new description is needed put it here~
-@11913    = ~Cat-tail +1~
-@11914    = ~This small leather sling has the embossed image of a cat on its back. It was crafted for a small, wily thief from Waterdeep named Pesker the Cat. The spry, energetic man kept the sling tucked into the back of his breeches wherever he went. To onlookers, it often appeared to be a small tail dancing behind him as he skipped along. When Pesker heard the image described to him, he decided to have the cat embossed on the sling's leather. Pesker had to flee enemies in Waterdeep in 1211 DR. He left most of his belongings behind, including this sling.
+@11913    = ~Хвост Кота +1~
+@11914    = ~На оборотной стороне этой небольшой кожаной пращи изображена кошка. Она была изготовлена для хитрого вора из Вотердипа Пескера по прозвищу Кот. Этот энергичный и проворный человек повсюду носил с собой пращу, прикреплённую к своим брюкам. Часто, когда он проносился мимо, со стороны казалось, что у Пескера есть небольшой хвост. Услышав об этом, вор решил нанести на кожаную поверхность пращи изображение кота. В 1211 ЛД Пескеру пришлось сбежать из Вотердипа, бросив большую часть своего имущества, в том числе и эту пращу.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage: +1 (missile)
-Attack Bonus: +1
-Special:
-  Dexterity: +2 bonus (stacks with other bonuses to Dexterity)
-Weight: 0 lb.
-Feat Requirement:  Simple Weapon, Missile
-Type:  One-handed~
-@11915    = ~Nimble Cat-tail +4~
-@11916    = ~This small leather sling has the embossed image of a cat on its back. It was crafted for a small, wily thief from Waterdeep named Pesker the Cat. The spry, energetic man kept the sling tucked into the back of his breeches wherever he went. To onlookers, it often appeared to be a small tail dancing behind him as he skipped along. When Pesker heard the image described to him, he decided to have the cat embossed on the sling's leather. Pesker had to flee enemies in Waterdeep in 1211 DR. He left most of his belongings behind, including this sling.
+Урон: +1 (метательный)
+Атака: +1
+Особенности:
+ Ловкость: +2 (суммируется с другими бонусами к ловкости)
+Вес: 0 фунтов
+Необходимая черта: Простое оружие, Метательное
+Тип: одноручное~
+@11915    = ~Гибкий хвост Кота +4~
+@11916    = ~На оборотной стороне этой небольшой кожаной пращи изображена кошка. Она была изготовлена для хитрого вора из Вотердипа Пескера по прозвищу Кот. Этот энергичный и проворный человек повсюду носил с собой пращу, прикреплённую к своим брюкам. Часто, когда он проносился мимо, со стороны казалось, что у Пескера есть небольшой хвост. Услышав об этом, вор решил нанести на кожаную поверхность пращи изображение кота. В 1211 ЛД Пескеру пришлось сбежать из Вотердипа, бросив большую часть своего имущества, в том числе и эту пращу.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage: +4 (missile)
-Attack Bonus: +4 
-Special:
-  Dexterity: +6 bonus (stacks with other bonuses to Dexterity)
-Weight: 0 lb.
-Feat Requirement:  Simple Weapon, Missile
-Type:  One-handed~
-@11917    = ~Sparrow +3~
-@11918    = ~This leather sling has dyed patterns on its surface that resemble the feathers of a sparrow. It was owned and used by a priestess of Lathander named Galaida. She wandered the Western Heartlands of Faerun tending to the sick and troubled people that lived in those vast expanses of farmland. Though not a pacifist, Galaida disliked battle and sought to avoid it whenever possible. Her light mace and sling were her only two weapons against the bandits, ogres, and villains that occasionally reared their heads in the small villages she visited. Despite all of her goodwill and peaceful intentions, a band of adventurers eventually set an ambush for her in a barn. She was killed quickly and the adventurers escaped into the wilderness.
+Урон: +4 (метательный)
+Атака: +4
+Особенности:
+ Ловкость: +6 (суммируется с другими бонусами к ловкости)
+Вес: 0 фунтов
+Необходимая черта: Простое оружие, Метательное
+Тип: одноручное~
+@11917    = ~Воробей +3~
+@11918    = ~Эта кожаная праща раскрашена под цвет воробьиных перьев. Когда-то она принадлежала жрице Латандера по имени Галайда, которая странствовала по просторам Среднезападных Земель Фаэруна, ухаживая за больными и ранеными. Хотя Галайда и не отвергала насилие, она старалась по возможности его избегать. Её лёгкая булава и праща были единственным оружием против разбойников, огров и других злодеев, которые иногда иногда появлялись в маленький деревеньках этого региона. Галайда не желала никому зла, но, несмотря на это, какая-то шайка подстерегла её однажды в сарае. В неравном бою Галайда погибла, а разбойники скрылись без следа.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  +3 (missile)
-Attack Bonus:  +3
-Special:
-  Gains Wisdom bonus to attack
-Weight: 0 lb.
-Feat Requirement:  Simple Weapon, Missile
-Type:  One-handed~
-@11919    = ~Sun-kissed Sparrow +5~
-@11920    = ~This leather sling has dyed patterns on its surface that resemble the feathers of a sparrow. It was owned and used by a priestess of Lathander named Galaida. She wandered the Western Heartlands of Faerun tending to the sick and troubled people that lived in those vast expanses of farmland. Though not a pacifist, Galaida disliked battle and sought to avoid it whenever possible. Her light mace and sling were her only two weapons against the bandits, ogres, and villains that occasionally reared their heads in the small villages she visited. Despite all of her goodwill and peaceful intentions, a band of adventurers eventually set an ambush for her in a barn. She was killed quickly and the adventurers escaped into the wilderness.
+Урон: +3 (метательный)
+Атака: +3
+Особенности:
+ Добавляет модификатор мудрости к атаке
+Вес: 0 фунтов
+Необходимая черта: Простое оружие, Метательное
+Тип: одноручное~
+@11919    = ~Поцелованный солнцем воробей +5~
+@11920    = ~Эта кожаная праща раскрашена под цвет воробьиных перьев. Когда-то она принадлежала жрице Латандера по имени Галайда, которая странствовала по просторам Среднезападных Земель Фаэруна, ухаживая за больными и ранеными. Хотя Галайда и не отвергала насилие, она старалась по возможности его избегать. Её лёгкая булава и праща были единственным оружием против разбойников, огров и других злодеев, которые иногда иногда появлялись в маленький деревеньках этого региона. Галайда не желала никому зла, но, несмотря на это, какая-то шайка подстерегла её однажды в сарае. В неравном бою Галайда погибла, а разбойники скрылись без следа.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  +5 (missile)
-Attack Bonus:  +5
-Special:
-  Gains Wisdom bonus to attack and damage
-  Spell Power: Can cast the spell Greater Restoration 1/Day
-Weight: 0 lb.
-Feat Requirement:  Simple Weapon, Missile
-Type:  One-handed~
+Урон: +5 (метательный)
+Атака: +5
+Особенности:
+ Добавляет модификатор мудрости к атаке
+ Заклинание: может применять заклинание "Великое восстановление" 1 раз в день
+Вес: 0 фунтов
+Необходимая черта: Простое оружие, Метательное
+Тип: одноручное~
 //@11921    = ~The Left Hand of Darkness~
 //@11922    = ~Item description can remain the same; if new description is needed put it here~
 //@11923    = ~Rol-Sayid's Left Hand of Darkness~
-@11924    = ~To the northeast of the great tree-town of Kuldahar lies the Vale of Shadows, a valley of crypts and tombs where Kresselack the Black Wolf is said to be buried. Almost thirty years past, a band of adventurers entered the Vale of Shadows and returned with many relics and treasures taken from the tombs there. Rol-Sayid's Left Hand of Darkness is one such item, though its true purpose was not realized when it was discovered. Considered nothing more than the cast-off bandage of a mummy, it had been used to wrap a gold necklace lying in one of the sarcophagi in the tombs. 
+@11924    = ~К северу-востоку от великого города-дерева Кулдахара находится ущелье Теней, полное склепов и гробниц, где, по преданию, похоронен Кресселак, Чёрный Волк. Почти тридцать лет назад отряд искателей приключений отправился в это ущелье и вернулся с множеством реликвий и сокровищ, извлечённых из гробниц. Одним из этих сокровищ является "Левая рука тьмы Рол-Сайида" - хотя истинная ценность предмета не была изначально обнаружена. Считавшаяся не более чем старой обмоткой мумии, её использовали, чтобы завернуть в неё золотое ожерелье, найденное в одном из саркофагов. 
 
-The necklace's wrapping was discarded as soon as the band of adventurers returned to Kuldahar, and as they cast it away, the adventurers joked that it could serve some little boy as a sling if need be. One of the children of Kuldahar was quick to pick up on this comment, and he kept the sling both for hunting and as a good luck charm for several years. It is not known if he knew if the wrapping was magical or not, and he attributed the accuracy of the stones cast from it as his own natural ability rather than that of the sling. 
+Вернувшись в Кулдахар, искатели приключений выбросили эту тряпку; при этом один из них пошутил, что в случае необходимости, какой-нибудь мальчишка сможет сделать из неё пращу. Так и вышло: после того, как один из детей Кулдахара услышал это замечание, он в течении нескольких лет использовал "Левую руку тьмы Рол-Сайида" как в качестве пращи для охоты, так и качестве талисмана, приносящего удачу. Неизвестно, знал ли мальчик о волшебных свойствах этой пращи или же он считал, что камни летят так точно исключительно благодаря его способностям.
 
-In truth, Rol-Sayid's Left Hand of Darkness is one of the wrappings from the left hand of one of Kresselack's lieutenants, who had been resurrected as a mummy within the tomb of his lord and served as a guardian against trespassers. When a stone is placed within the wrapping and spun with great force, the stone will fly straight and true at an enemy. Furthermore, as long as the wrapping is held in the hand, the wielder is immune to diseases, both magical and mundane. 
+На самом деле, "Левая рука тьмы Рол-Сайида" - это одна из обёрток с левой руки одного из лейтенантов Кресселака, которого воскресили после смерти в виде мумии и поставили охранять гробницу своего повелителя. Если использовать обёртку в качестве пращи, то снаряды будут лететь точно в цель. Более того, пока владелец держит обмотку в руке, он неуязвим для болезней, как обычных, так и волшебных.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  +5 (missile)
-Attack Bonus:  +5 
-Special: 
-  Wielder is immune to Disease when equipped
-  Spell Power: Can cast the spell Remove Disease 6/day
-  Spell Power: Can cast the spell Symbol of Hopelessness (at level 15) 1/day
-Weight: 0 lb.
-Feat Requirement:  Simple Weapon, Missile
-Type:  One-handed~
+Урон: +5 (метательный)
+Атака: +5
+Особенности:
+ Оберёг: При использовании даёт иммунитет к болезням
+ Заклинание: владелец может творить заклинание "Излечение болезни" 6 раз в день
+ Заклинание: владелец может творить заклинание "Символ безнадёжности" раз в день (как заклинатель 15-ого уровня)
+Вес: 0 фунтов
+Необходимая черта: Простое оружие, Метательное
+Тип: одноручное~
 
 
 //@11925    = ~Arrows~
