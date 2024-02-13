@@ -10629,14 +10629,14 @@
 
 Вес: 3 фунта~
 //@12135    = ~The Unstrung Harp~
-@12136    = ~The instrument of a beatified saint of the church of Ilmater, this harp once belonged to Sephica of Ordulin. Sephica was a bard, but she did not worship the lord of songs, Milil. Instead, she devoted herself to performing ballads to the suffering throngs of Ilmaterians everywhere. She was traveling with a group of Ilmaterian pilgrims when they were attacked by bandits. The bandits killed and severely injured many of the pilgrims, and they cut the strings of Sephica's harp when she tried to soothe the injured travelers. After the bandits had left, Sephica prayed to Ilmater for help in a time of crisis. When she plucked at her harp strings with her eyes closed in prayer, music miraculously poured forth and healed every person who heard it. The next day, the bandits arrived and killed Sephica for healing the pilgrims. Though she was killed, the pilgrims kept the memory of her miracle alive. Their community attempted to have her accepted as an Ilmaterian saint. They succeeded in 1218 DR.
+@12136    = ~Этот инструмент принадлежал Сефике из Ордулина, которую церковь Ильматера впоследствии канонизировала. Бард Сефика не поклонялась богу песни Милилу - она поставила своё искусство на службу страдающим последователям Ильматера. Когда она путешествовала вместе с группой пилигримов Ильматера, на них напали разбойники. Многие пилигримы были убиты или тяжело ранены, но когда Сефика попыталась облегчить их страдания, разбойники перерезали струны на её арфе. Когда злодеи скрылись, Сефика обратилась к Ильматеру с молитвой о помощи в трудный час. Молясь с закрытыми глазами, она прикоснулась к струнам инструмента, и чудесным образом из арфы полилась музыка, исцелив всех, кто её услышал. На следующий день разбойники появились вновь и убили Сефику за то, что она излечила пилигримов. Но память о совершённом ею чуде осталась жить благодаря спутникам барда. Община пилигримов подала прошение о том, чтобы Сефику причислили к лику святых Ильматера. Его удовлетворили в 1218 ЛД.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-This harp can cast Heal 1/Day. It can only be played by a bard of exceptional virtue, wisdom, and talent.
+Арфа позволяет прочесть заклинание "Исцеление" раз в день. Играть на ней может лишь добродетельный бард, наделённый исключительной мудростью и талантом.
 
-Minimum Wisdom of 16 required
-Weight:  3 lb.~
+Требования: Мудрость 16
+Вес: 3 фунта~
 //@12137    = ~Sephica's Prayer~
 @12138    = ~Этот инструмент принадлежал Сефике из Ордулина, которую церковь Ильматера впоследствии канонизировала. Бард Сефика не поклонялась богу песни Милилу - она поставила своё искусство на службу страдающим последователям Ильматера. Когда она путешествовала вместе с группой пилигримов Ильматера, на них напали разбойники. Многие пилигримы были убиты или тяжело ранены, но когда Сефика попыталась облегчить их страдания, разбойники перерезали струны на её арфе. Когда злодеи скрылись, Сефика обратилась к Ильматеру с молитвой о помощи в трудный час. Молясь с закрытыми глазами, она прикоснулась к струнам инструмента, и чудесным образом из арфы полилась музыка, исцелив всех, кто её услышал. На следующий день разбойники появились вновь и убили Сефику за то, что она излечила пилигримов. Но память о совершённом ею чуде осталась жить благодаря спутникам барда. Община пилигримов подала прошение о том, чтобы Сефику причислили к лику святых Ильматера. Его удовлетворили в 1218 ЛД.
 
@@ -10697,123 +10697,121 @@ Weight:  3 lb.~
 
 Вес: 2 фунта~
 //@12151    = ~Owain's Lullabye~
-@12152    = ~Owain's Lullabye was created by a disturbed bard named Owain Piper. Piper was a worshipper of Auril, born in the town of Silverymoon and raised to embrace the frigid environment of his homeland. He traveled extensively in the Moonsea, where he met a mage named Pelham of the Moor. Owain and Pelham became good friends and stayed in contact for over a decade. Pelham eventually enchanted Owain's Lullabye for the bard in exchange for a small sum of money. Owain rarely used the instrument in battle, typically employing it when he found late-migrating geese lounging on a lake. He would blow the horn in such a way that the geese heard it as the sound of their cousins heading south for the winter. As the geese would attempt to take flight, Owain's horn would freeze them in mid-stroke, where he would leave them to die.
+@12152    = ~"Колыбельную Овейна" сделал бард Овейн Дудочник, последователь Аурил. Он родился в Серебристой Луне и страстно любил холод своих родных краёв. В долгих путешествиях по Лунному морю Овейн повстречал мага по имени Пелэм Болотный. Они подружились и общались более десяти лет. За небольшое вознаграждение Пелэм наложил чары на инструмент барда. Овейн редко пользовался этим гобоем в сражениях. Обычно он начинал играть на нём, увидев на каком-нибудь озере поздних перелётных гусей. Звуки "Колыбельной Овейна" казались птицам голосом их сородичей, летящих зимовать на юг. Гуси снимались с места, и бард своим гобоем замораживал их в полёте, оставляя умирать.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-When played, this instrument spews forth a Cone of Cold, dealing 12d6 damage (Reflex DC 20 for half)
+При игре этот инструмент накладывает заклинание "Конус холода", который наносит 12d6 урона холодом (успешный спасбросок реакции с УС 20 позволяет снизить урон вдвое)
 
-Weight:  2 lb.~
+Вес: 2 фунта~
 //@12153    = ~Sweet Auril's Kiss~
-@12154    = ~Sweet Auril's Kiss was created by a disturbed bard named Owain Piper. Piper was a worshipper of Auril, born in the town of Silverymoon and raised to embrace the frigid environment of his homeland. He traveled extensively in the Moonsea, where he met a mage named Pelham of the Moor. Owain and Pelham became good friends and stayed in contact for over a decade. Pelham eventually enchanted Owain's Lullabye for the bard in exchange for a small sum of money. Owain rarely used the instrument in battle, typically employing it when he found late-migrating geese lounging on a lake. He would blow the horn in such a way that the geese heard it as the sound of their cousins heading south for the winter. As the geese would attempt to take flight, Owain's horn would freeze them in mid-stroke, where he would leave them to die.
+@12154    = ~"Сладкий поцелуй Аурил" сделал бард Овейн Дудочник, последователь Аурил. Он родился в Серебристой Луне и страстно любил холод своих родных краёв. В долгих путешествиях по Лунному морю Овейн повстречал мага по имени Пелэм Болотный. Они подружились и общались более десяти лет. За небольшое вознаграждение Пелэм наложил чары на инструмент барда. Овейн редко пользовался этим гобоем в сражениях. Обычно он начинал играть на нём, увидев на каком-нибудь озере поздних перелётных гусей. Звуки "Сладкого поцелуя Аурил" казались птицам голосом их сородичей, летящих зимовать на юг. Гуси снимались с места, и бард своим гобоем замораживал их в полёте, оставляя умирать.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-When played, this instrument spews forth a Cone of Cold, dealing 30d6 damage (Reflex DC 36 for half)
+При игре этот инструмент накладывает заклинание "Конус холода", который наносит 30d6 урона холодом (успешный спасбросок реакции с УС 36 позволяет снизить урон вдвое)
 
-Weight:  2 lb.~
+Вес: 2 фунта~
 //@12155    = ~Viol of the Hollow Men~
-@12156    = ~This instrument is also known as "Tallow's Violin," but that moniker is rarely spoken among musicians, as mentioning the name of Nikolai Tallow is considered bad luck. Nikolai was born in The Vast, near High Haspur, the son of a chandler. Because of the intermittent traffic through the region, Nikolai was introduced to many different cultures. One of the travelers he met was an elven musician named Relev Thinriver. Relev introduced Nikolai to the violin and taught him for several years as he wandered through the area. Relev knew that Nikolai was an incredibly gifted child, with quick fingers, a keen mind, and a passion for all things in the world. Relev also recognized that Nikolai was exceedingly proud and arrogant. In spite of Nikolai's shortcomings, Relev taught him everything he knew.
+@12156    = ~Этот инструмент также носит имя "Скрипка Таллоу", но этого названия музыканты стараются избегать: упоминать имя Николая Таллоу - плохая примета. Николай родился в семье галантерейщика, что жил в Васте, неподалёку от Верхнего Хаспура. Через эту местность проходят оживлённые дороги, и Николаю довелось познакомиться со многими культурами. Среди путешественников, с которыми он общался, был Релев Узкая Речка, эльф-музыкант. Он-то и познакомил Николая со скрипкой и несколько лет, пока исследовал те края, обучал юношу играть на ней. Релев понял, что Николай - невероятно одарённый ребёнок, наделённый ловкостью пальцев, остротой ума и тягой к познанию. При этом эльф сознавал, что Николай необычайно горд и надменен. Невзирая на эти недостатки, Релев передал ему все свои знания.
 
-After Relev was killed by a band of orcs, Nikolai began to practice on his own throughout the Vast. Despite his travels, he always returned to the isolate peaks of his mountain birthplace. He became famed throughout the Vast, the southern Moonsea and Sembia for his incredible talent and passionate performances. Eventually, news of the proud young virtuoso spread to the ears of a nearby thug from Calaunt named Tremble Ghon. When Tremble and his gang traveled through the Elvenblood Pass, they stopped at the Elf in Armor Inn and demanded a performance from Nikolai, who happened to be present and eating dinner with his father at the time.
+После того, Релева убила банда орков, Николай стал путешествовать и играть один. Но из всех своих странствий он непременно возвращался на свою горную родину. По всему Васту, Сембии и южному Лунному морю шла слава о его необыкновенном таланте и страстной манере исполнения. Со временем слухи о юном гордом виртуозе дошли до бандита из Каланта по имени Тремор Гон. И вот Тремор со своей бандой, проходя через перевал Эльфийской Крови, зашли в таверну "Эльф в доспехах", где как раз в это время Николай обедал с отцом, и потребовали, чтобы молодой музыкант сыграл для них.
 
-Nikolai refused to perform for Tremble and his men. He called them stinking oafs and attempted to leave with dignity. Tremble assaulted Nikolai's pride by claiming that Nikolai was afraid of performing because he'd be heckled out of the inn for his incompetence. Nikolai shot back that his skill with the violin was so great that he could raise the dead from their graves. Satisfied with a proposed challenge, Tremble immediately grabbed Nikolai's father and stabbed him in the heart. When a number of other villagers attempted to intervene, they were also killed by the bandits.
+Николай отказался играть для бандитов, обозвал их вонючими тупицами и попытался гордо удалиться. Тогда Тремор заявил, что он не хочет играть, потому что боится, что его вышвырнут из таверны за бездарное исполнение. Гордость Николая была задета, и музыкант ответил, что его талантливая игра способна даже мёртвого поднять из могилы. Тремор тут же принял этот "вызов" - и вонзил нож в сердце отцу Николая. Несколько посетителей таверны бросились на помощь, но бандиты перебили их.
 
-Tremble defiantly stood over Nikolai's dead father and said, "Where's your big mouth now, fiddle player?"  Without a word, Nikolai pulled his violin and bow out from underneath his arms and began to play a melody that none of the residents of High Haspur had ever heard before, and no one in Faerun would ever hear again. Nikolai played with unbridled passion and fervor. Onlookers later remarked that he appeared to be a madman, thrashing about in ways that people didn't think were possible. At the climax of his frenzied piece, Tremble and his gang watched in horror as the souls of the men and women they had just killed rose from their corpses and dove, shrieking, at their murderers. The bandits died horrible deaths, chilled by the shadows of their victims. Nikolai himself continued playing, dancing through the streets and back pastures of his alpine home until every man, woman, child, and beast ever buried in the region rose from its resting place and milled about until Nikolai and his music disappeared into a far off valley, shrouded in a mysterious fog that vanished as quickly as it had appeared.
+Тремор стоял над телом убитого отца юноши и ухмылялся: "Ну что, скрипач, отвечай за свои слова!" Николай без единого слова достал скрипку и смычок и заиграл. То была прекраснейшая мелодия, подобной которой никто не слышал ни до, ни после. Всю свою страсть и пыл вложил он в свою игру. Очевидцы рассказывали, он играл, словно сумасшедший, проделывая с инструментом невозможное. Когда бешеная мелодия достигла кульминации, Тремор и его банда в ужасе увидели, как духи только что убитых ими поднялись из тел и с воплем бросились на своих убийц. Николай же продолжал играть. Танцуя, он шёл по улицам и лугам, и каждый, кто был когда-либо похоронен в этих местах, будь то мужчина, женщина, дитя или зверь, поднимался из могилы и летел за ним. Наконец Николай и его мелодия скрылись в далёкой долине, окутанные загадочным туманом, который пропал так же неожиданно, как и появился.
 
-Legends say that on misty nights, the ghost of Nikolai Tallow returns to his homeland, playing a phantom violin with a host of dancing dead trailing behind him in the moonlight.
+Легенда говорит, что туманными ночами дух Николая приходит в родные места и играет на своей призрачной скрипке, а вокруг него в лунном свете танцуют мертвецы.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-When played, the violin summons three low level shadows, which serve the bard for 1 hour.
-Can be used once per day.
+Позволяет один раз в день вызвать трёх слабых теней, которые служат барду в течении одного часа
 
-Weight:  3 lb.~
+Вес: 3 фунта~
 //@12157    = ~Tallow's Violin~
-@12158    = ~This instrument is also known as "Tallow's Violin," but that moniker is rarely spoken among musicians, as mentioning the name of Nikolai Tallow is considered bad luck. Nikolai was born in The Vast, near High Haspur, the son of a chandler. Because of the intermittent traffic through the region, Nikolai was introduced to many different cultures. One of the travelers he met was an elven musician named Relev Thinriver. Relev introduced Nikolai to the violin and taught him for several years as he wandered through the area. Relev knew that Nikolai was an incredibly gifted child, with quick fingers, a keen mind, and a passion for all things in the world. Relev also recognized that Nikolai was exceedingly proud and arrogant. In spite of Nikolai's shortcomings, Relev taught him everything he knew.
+@12158    = ~Этот инструмент носит имя "Скрипка Таллоу", но этого названия музыканты стараются избегать: упоминать имя Николая Таллоу - плохая примета. Николай родился в семье галантерейщика, что жил в Васте, неподалёку от Верхнего Хаспура. Через эту местность проходят оживлённые дороги, и Николаю довелось познакомиться со многими культурами. Среди путешественников, с которыми он общался, был Релев Узкая Речка, эльф-музыкант. Он-то и познакомил Николая со скрипкой и несколько лет, пока исследовал те края, обучал юношу играть на ней. Релев понял, что Николай - невероятно одарённый ребёнок, наделённый ловкостью пальцев, остротой ума и тягой к познанию. При этом эльф сознавал, что Николай необычайно горд и надменен. Невзирая на эти недостатки, Релев передал ему все свои знания.
 
-After Relev was killed by a band of orcs, Nikolai began to practice on his own throughout the Vast. Despite his travels, he always returned to the isolate peaks of his mountain birthplace. He became famed throughout the Vast, the southern Moonsea and Sembia for his incredible talent and passionate performances. Eventually, news of the proud young virtuoso spread to the ears of a nearby thug from Calaunt named Tremble Ghon. When Tremble and his gang traveled through the Elvenblood Pass, they stopped at the Elf in Armor Inn and demanded a performance from Nikolai, who happened to be present and eating dinner with his father at the time.
+После того, Релева убила банда орков, Николай стал путешествовать и играть один. Но из всех своих странствий он непременно возвращался на свою горную родину. По всему Васту, Сембии и южному Лунному морю шла слава о его необыкновенном таланте и страстной манере исполнения. Со временем слухи о юном гордом виртуозе дошли до бандита из Каланта по имени Тремор Гон. И вот Тремор со своей бандой, проходя через перевал Эльфийской Крови, зашли в таверну "Эльф в доспехах", где как раз в это время Николай обедал с отцом, и потребовали, чтобы молодой музыкант сыграл для них.
 
-Nikolai refused to perform for Tremble and his men. He called them stinking oafs and attempted to leave with dignity. Tremble assaulted Nikolai's pride by claiming that Nikolai was afraid of performing because he'd be heckled out of the inn for his incompetence. Nikolai shot back that his skill with the violin was so great that he could raise the dead from their graves. Satisfied with a proposed challenge, Tremble immediately grabbed Nikolai's father and stabbed him in the heart. When a number of other villagers attempted to intervene, they were also killed by the bandits.
+Николай отказался играть для бандитов, обозвал их вонючими тупицами и попытался гордо удалиться. Тогда Тремор заявил, что он не хочет играть, потому что боится, что его вышвырнут из таверны за бездарное исполнение. Гордость Николая была задета, и музыкант ответил, что его талантливая игра способна даже мёртвого поднять из могилы. Тремор тут же принял этот "вызов" - и вонзил нож в сердце отцу Николая. Несколько посетителей таверны бросились на помощь, но бандиты перебили их.
 
-Tremble defiantly stood over Nikolai's dead father and said, "Where's your big mouth now, fiddle player?"  Without a word, Nikolai pulled his violin and bow out from underneath his arms and began to play a melody that none of the residents of High Haspur had ever heard before, and no one in Faerun would ever hear again. Nikolai played with unbridled passion and fervor. Onlookers later remarked that he appeared to be a madman, thrashing about in ways that people didn't think were possible. At the climax of his frenzied piece, Tremble and his gang watched in horror as the souls of the men and women they had just killed rose from their corpses and dove, shrieking, at their murderers. The bandits died horrible deaths, chilled by the shadows of their victims. Nikolai himself continued playing, dancing through the streets and back pastures of his alpine home until every man, woman, child, and beast ever buried in the region rose from its resting place and milled about until Nikolai and his music disappeared into a far off valley, shrouded in a mysterious fog that vanished as quickly as it had appeared.
+Тремор стоял над телом убитого отца юноши и ухмылялся: "Ну что, скрипач, отвечай за свои слова!" Николай без единого слова достал скрипку и смычок и заиграл. То была прекраснейшая мелодия, подобной которой никто не слышал ни до, ни после. Всю свою страсть и пыл вложил он в свою игру. Очевидцы рассказывали, он играл, словно сумасшедший, проделывая с инструментом невозможное. Когда бешеная мелодия достигла кульминации, Тремор и его банда в ужасе увидели, как духи только что убитых ими поднялись из тел и с воплем бросились на своих убийц. Николай же продолжал играть. Танцуя, он шёл по улицам и лугам, и каждый, кто был когда-либо похоронен в этих местах, будь то мужчина, женщина, дитя или зверь, поднимался из могилы и летел за ним. Наконец Николай и его мелодия скрылись в далёкой долине, окутанные загадочным туманом, который пропал так же неожиданно, как и появился.
 
-Legends say that on misty nights, the ghost of Nikolai Tallow returns to his homeland, playing a phantom violin with a host of dancing dead trailing behind him in the moonlight.
+Легенда говорит, что туманными ночами дух Николая приходит в родные места и играет на своей призрачной скрипке, а вокруг него в лунном свете танцуют мертвецы.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-When played, the violin summons three high level shadows, which serve the bard for 1 hour.
-Can be used once per day.
+Позволяет один раз в день вызвать трёх сильных теней, которые служат барду в течении одного часа
 
-Weight:  3 lb.~
+Вес: 3 фунта~
 //@12159    = ~Retching Serpent~
-@12160    = ~The serpent is a wind instrument. It usually is made of a long, conical wooden tube of over six feet in length that is coiled in much the same way as a snake; thus the name. Six holes along its length help the player alter the pitch in much the same way as a cornet.
+@12160    = ~Эта змея - духовой инструмент. Обычно таких змей делают из длинных конических деревянных трубок длиной более 6 футов, которые закручиваются, словно змеи, отсюда и название инструмента. Шесть отверстий в корпусе инструмента позволяют менять высоту звука - так же, как это происходит при игре на корнете.
 
-This particular instrument produces a low sonorous sound that can be felt to the very bones of all those within range. In the hands of a skilled bard, this instrument can produce a Stinking Cloud and direct it at one's enemies.
+Данный конкретный инструмент производит низкий гулкий звук, который пробирает до костей всех, кто его слышит. В руках искусного барда этот инструмент может создавать заклинание "Зловонное облако" и поражать им врагов.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Cast release a Stinking Cloud 2/day (Fortitude DC 16)
+2 раза в день позволяет применять заклинание "Зловонное облако" (успешный спасбросок стойкости с УС 16 позволяет избегать эффектов облака)
 
-Weight: 5 lb.~
-@12161    = ~Fire-spitting Serpent~
-@12162    = ~The serpent is a wind instrument. It usually is made of a long, conical wooden tube of over six feet in length that is coiled in much the same way as a snake; thus the name. Six holes along its length help the player alter the pitch in much the same way as a cornet.
+Вес: 5 фунтов~
+@12161    = ~Огнедышащая змея~
+@12162    = ~Эта змея - духовой инструмент. Обычно таких змей делают из длинных конических деревянных трубок длиной более 6 футов, которые закручиваются, словно змеи, отсюда и название инструмента. Шесть отверстий в корпусе инструмента позволяют менять высоту звука - так же, как это происходит при игре на корнете.
 
-This particular instrument produces a low sonorous sound that can be felt to the very bones of all those within range. In the hands of a skilled bard, this instrument can produce a Fiery Cloud and direct it at one's enemies.
+Данный конкретный инструмент производит низкий гулкий звук, который пробирает до костей всех, кто его слышит. В руках искусного барда этот инструмент может создавать заклинание "Жгучее облако" и поражать им врагов.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Cast release a Fiery Cloud 2/day (Reflex DC 30 for half)
+2 раза в день позволяет применять заклинание "Жгучее облако" (успешный спасбросок реакции с УС 30 позволяет снизить урон от облака вдвое)
 
-Weight: 5 lb.~
+Вес: 5 фунтов~
 //@12163    = ~Pipes of the Wheezing Dragon~
-@12164    = ~When the venerable (and senile) red dragon Craum Straug wandered into the logging camp of Hornhollow at the edge of Wood of Sharp Teeth, the residents (wisely) fled in fear as the dragon began to belch flames, setting the camp on fire and causing cries of alarm to spread throughout the countryside. After the residents fled, Craum squatted his old bones down upon the blackened buildings, grumbling to himself and snorting flames from his nostrils. 
+@12164    = ~Когда почтенный (и дряхлый) красный дракон Кром Строг забрёл в лагерь лесорубов Хорнхоллоу на окраине Леса Острых Зубов, обитатели лагеря бежали, так так дракон начал изрыгать пламя, поджигая лагерь. Разорив лагерь, Кром улёгся на обгорелые здания, рыча и пуская струи пламени из ноздрёй. 
 
-A few hours and several miles away, the residents of Hornhollow finally decided that someone must go negotiate with the dragon and see what it wanted. When no volunteers were forthcoming, a lottery was conducted - and the loser, a traveling ministrel, Aznee Fraystrings, was given the dangerous task of attempting to deal with the dragon. Aznee had lived out his welcome in the camp many nights previous, and the loggers considered it no great loss if Aznee gained a new home in the dragon's belly.
+Несколько часов спустя лесорубы решили, что нужно вступить в переговоры с драконом и выяснить, что ему нужно. Так как добровольцев не нашлось, бросили жребий - и он выпал бродячему музыканту по имени Азни Порванные Струны. Азни уже давно всем надоел, и поэтому обитатели лагеря были не против, если тот найдёт новый дом в желудке дракона.
 
-Aznee, somewhat absent-minded but of a brave heart, stumbled his way into the camp, and finally mustered the courage to speak with the dragon. During the (now-famous) exchange that followed, Aznee discovered that Craum, who was somewhat far along in dragon years and in none too good health, was suffering the draconic equivalent of a bad cough, and his hacking and wheezing masked his plaintive attempts to try and find someone, anyone, who could help cure his fits of coughing. 
+Придя в лагерь, Азни, немного рассеянный, но храбрый человек, набрался храбрости и заговорил с драконом. В ходе их беседы (которая позднее вошла в легенды) Азни выяснил, что Кром, который был уже довольно стар и слаб здоровьем, страдает от приступов сильного кашля. В лагерь же Кром прилетел в поисках хоть кого-нибудь, кто сможет ему помочь.
 
-Seeing a solution, Aznee offered a cure that helped an elderly uncle of his - a sprig of Maiden's Milk flower, that when crushed and administered in a tea, helped quell coughing in a matter of minutes. Some could undoubtably be found in the forest nearby, Aznee exclaimed, and he set about gathering up several sprigs and preparing them for the dragon. After lumping them into a great pot, he administered the steaming cauldron to the dragon.
+Азни посоветовал дракону лекарство, которое когда-то помогло дяде барда - отвар из растений "молоко девственницы" - травы, будучи измельчённой и добавленной в чай, могла подавить кашель за считанные минуты. Азни заверил Крома, что всё необходимое можно без труда найти в ближайшем лесу, и отправился за травами. Бросив травы в большой котёл, он залил их кипятком и предложил получившийся отвар дракону.
 
-It is suspected that either Craug drank the mixture too fast, or else Aznee had mistaken Bellows Root for Maiden's Milk, but whatever the reason, Craug vomited the mixture back out a few seconds later, setting fire to several acres of the wood and torching poor Aznee where he stood. After this vomitus belch, Craug ran wild for almost an hour, trying to spit out the remainder of the concoction. At the end of his rampage, the venerable red dragon fell over dead, the sudden flurry of activity more than his old bones could stand. 
+Есть подозрения, что либо Кром выпил отвар слишком быстро, или же Азни принял "тошнотворный корень" за "молоко девственницы". Как бы то ни было, но несколько секунд спустя Крог изверг смесь обратно, спалив несколько акров леса и испепелив бедного Азни. После этого дракон ещё час носился по округе пытаясь выплюнуть остатки смеси, а после упал и умер: такое внезапное напряжение оказалось чрезмерным для костей старика.
 
-When the loggers came to break down the dragon a day later, they discovered that Craum's bones still carried echoes of his coughing fits, and his entire skeleton creaked and wheezed, even after death. They struck a deal with a local mage, who bought the dragon's bones and fashioned a series of musical instruments with them, dubbed the "Pipes of the Wheezing Dragon."  These yellow bone pipes are famous throughout the Realms and, when used by a bard, they can be used to spit bursts of flames at opponents. Unfortunately, even when not in use, the pipes tend to creak and wheeze, attracting the attention of anyone nearby and making attempts at stealth and pick pocketing useless. 
+Когда на следующий день лесорубы вернулись в лагерь, они обнаружили, что кости дракона продолжают скрипеть и хрипеть даже после его смерти. Тогда обитатели лагеря продали скелет местному магу, который сделал из костей музыкальный инструмент под названием "Трубки Сопящего Дракона". Эти трубки известны во всех королевствах; в руках барда они могут стрелять во врагов языками пламени. К сожалению, трубки сильно скрипят и хрипят, что сильно затрудняет скрытное перемещение и карманные кражи.
 
-A thin cord made of dragon gut is strung through the pipes, so they can be worn around the neck and can be easily played when danger threatens. The cord looks charred, as if it was burned recently, and is surprisingly tough. 
+Трубки подвешены на шнуре, сделанном из кожи дракона, чтобы их можно было носить на шее и использовать в случае опасности. Ремень удивительно прочный, и выглядит так, словно недавно кто-то опалил его.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Special: 
-  Can cast Burning Hands (at level 5) 3/Day
-  Can cast Agannazar's Scorcher (at level 5) 1/Day
-  Pick Pocket skill: -3
-  Move Silently skill: -3
-  Hide skill: -3
-Weight: 1 lb.~
+Особенности:
+ Заклинание: 3 раза в день можно использовать заклинание "Горящие руки" (как прочитанное заклинателем пятого уровня)
+ Заклинание: 1 раз в день может использовать заклинание "Выстрел Аганназара" (как прочитанное заклинателем пятого уровня)
+ Навык "Карманная кража": -3
+ Навык "Тихая походка": -3
+ Навык "Незаметность": -3
+Вес: 1 фунт~
 //@12165    = ~Craum Straug's Pipes~
-@12166    = ~When the venerable (and senile) red dragon Craum Straug wandered into the logging camp of Hornhollow at the edge of Wood of Sharp Teeth, the residents (wisely) fled in fear as the dragon began to belch flames, setting the camp on fire and causing cries of alarm to spread throughout the countryside. After the residents fled, Craum squatted his old bones down upon the blackened buildings, grumbling to himself and snorting flames from his nostrils. 
+@12166    = ~Когда почтенный (и дряхлый) красный дракон Кром Строг забрёл в лагерь лесорубов Хорнхоллоу на окраине Леса Острых Зубов, обитатели лагеря бежали, так так дракон начал изрыгать пламя, поджигая лагерь. Разорив лагерь, Кром улёгся на обгорелые здания, рыча и пуская струи пламени из ноздрёй. 
 
-A few hours and several miles away, the residents of Hornhollow finally decided that someone must go negotiate with the dragon and see what it wanted. When no volunteers were forthcoming, a lottery was conducted - and the loser, a traveling ministrel, Aznee Fraystrings, was given the dangerous task of attempting to deal with the dragon. Aznee had lived out his welcome in the camp many nights previous, and the loggers considered it no great loss if Aznee gained a new home in the dragon's belly.
+Несколько часов спустя лесорубы решили, что нужно вступить в переговоры с драконом и выяснить, что ему нужно. Так как добровольцев не нашлось, бросили жребий - и он выпал бродячему музыканту по имени Азни Порванные Струны. Азни уже давно всем надоел, и поэтому обитатели лагеря были не против, если тот найдёт новый дом в желудке дракона.
 
-Aznee, somewhat absent-minded but of a brave heart, stumbled his way into the camp, and finally mustered the courage to speak with the dragon. During the (now-famous) exchange that followed, Aznee discovered that Craum, who was somewhat far along in dragon years and in none too good health, was suffering the draconic equivalent of a bad cough, and his hacking and wheezing masked his plaintive attempts to try and find someone, anyone, who could help cure his fits of coughing. 
+Придя в лагерь, Азни, немного рассеянный, но храбрый человек, набрался храбрости и заговорил с драконом. В ходе их беседы (которая позднее вошла в легенды) Азни выяснил, что Кром, который был уже довольно стар и слаб здоровьем, страдает от приступов сильного кашля. В лагерь же Кром прилетел в поисках хоть кого-нибудь, кто сможет ему помочь.
 
-Seeing a solution, Aznee offered a cure that helped an elderly uncle of his - a sprig of Maiden's Milk flower, that when crushed and administered in a tea, helped quell coughing in a matter of minutes. Some could undoubtably be found in the forest nearby, Aznee exclaimed, and he set about gathering up several sprigs and preparing them for the dragon. After lumping them into a great pot, he administered the steaming cauldron to the dragon.
+Азни посоветовал дракону лекарство, которое когда-то помогло дяде барда - отвар из растений "молоко девственницы" - травы, будучи измельчённой и добавленной в чай, могла подавить кашель за считанные минуты. Азни заверил Крома, что всё необходимое можно без труда найти в ближайшем лесу, и отправился за травами. Бросив травы в большой котёл, он залил их кипятком и предложил получившийся отвар дракону.
 
-It is suspected that either Craug drank the mixture too fast, or else Aznee had mistaken Bellows Root for Maiden's Milk, but whatever the reason, Craug vomited the mixture back out a few seconds later, setting fire to several acres of the wood and torching poor Aznee where he stood. After this vomitus belch, Craug ran wild for almost an hour, trying to spit out the remainder of the concoction. At the end of his rampage, the venerable red dragon fell over dead, the sudden flurry of activity more than his old bones could stand. 
+Есть подозрения, что либо Кром выпил отвар слишком быстро, или же Азни принял "тошнотворный корень" за "молоко девственницы". Как бы то ни было, но несколько секунд спустя Крог изверг смесь обратно, спалив несколько акров леса и испепелив бедного Азни. После этого дракон ещё час носился по округе пытаясь выплюнуть остатки смеси, а после упал и умер: такое внезапное напряжение оказалось чрезмерным для костей старика.
 
-When the loggers came to break down the dragon a day later, they discovered that Craum's bones still carried echoes of his coughing fits, and his entire skeleton creaked and wheezed, even after death. They struck a deal with a local mage, who bought the dragon's bones and fashioned a series of musical instruments with them, dubbed the "Pipes of the Wheezing Dragon."  These yellow bone pipes are famous throughout the Realms and, when used by a bard, they can be used to spit bursts of flames at opponents. Unfortunately, even when not in use, the pipes tend to creak and wheeze, attracting the attention of anyone nearby and making attempts at stealth and pick pocketing useless. 
+Когда на следующий день лесорубы вернулись в лагерь, они обнаружили, что кости дракона продолжают скрипеть и хрипеть даже после его смерти. Тогда обитатели лагеря продали скелет местному магу, который сделал из костей музыкальный инструмент под названием "Трубки Крома Строга". Эти трубки известны во всех королевствах; в руках барда они могут стрелять во врагов языками пламени. К сожалению, трубки сильно скрипят и хрипят, что сильно затрудняет скрытное перемещение и карманные кражи.
 
-A thin cord made of dragon gut is strung through the pipes, so they can be worn around the neck and can be easily played when danger threatens. The cord looks charred, as if it was burned recently, and is surprisingly tough.
+Трубки подвешены на шнуре, сделанном из кожи дракона, чтобы их можно было носить на шее и использовать в случае опасности. Ремень удивительно прочный, и выглядит так, словно недавно кто-то опалил его.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Special: 
-  Can cast Flame Arrow (at level 20) 3/Day
-  Can cast Delayed Blast Fireball (at level 25) 1/Day
-  Pick Pocket skill:  -3
-  Move Silently skill:  -3
-  Hide skill: -3
-Weight: 1 lb.~
+Особенности:
+ Заклинание: позволяет творить заклинание "Огненная стрела" (как прочитанное заклинателем 20-ого уровня) три раза в день
+ Заклинание: позволяет творить заклинание "Задержанный взрыв огненного шара" (как прочитанное заклинателем 25-ого уровня) один раз в день
+ Навык "Карманная кража": -3
+ Навык "Тихая походка": -3
+ Навык "Незаметность": -3
+Вес: 1 фунт~
 
 
 //@12167    = ~Protection from Acid~
