@@ -10815,271 +10815,261 @@
 
 
 //@12167    = ~Protection from Acid~
-@12168    = ~A Protection from Acid scroll offers protection to the target from all forms of acid, be they of a natural or magical nature. The effect is not permanent, however, and will wear off after 24 hours.
+@12168    = ~Свиток защиты от кислоты позволяет увеличить уровень защиты цели от разного рода урона кислотой как естественного, так и магического происхождения. Эффект не будет вечным, он пропадает через 24 часа.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Resistance:  50/- Acid Resistance
-Range:  20 ft.
-Area:  1 creature
-Duration:  24 hours~
+Сопротивление: 50/- сопротивления кислоте
+Дальность: 20 футов
+Зона действия: 1 существо
+Длительность: 24 часа~
 //@12169    = ~Protection from Cold~
-@12170    = ~A Protection from Cold scroll offers protection to the target from all forms of cold, be they of a natural or magical nature. This effect is not permanent, however, and will wear off after 24 hours.
+@12170    = ~Свиток защиты от холода позволяет увеличить уровень защиты цели от разного рода урона холодом как естественного, так и магического происхождения. Эффект не будет вечным, он пропадает через 24 часа.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Resistance:  50/- Cold Resistance
-Range:  20 ft.
-Area:  1 creature
-Duration:  24 hours~
+Сопротивление: 50/- сопротивления холоду
+Дальность: 20 футов
+Зона действия: 1 существо
+Длительность: 24 часа~
 //@12171    = ~Protection from Electricity~
-@12172    = ~A Protection from Electricity scroll offers protection to the target from all forms of electrical damage, be it of a natural or magical nature. The effect is not permanent, however, and will wear off after 24 hours.
+@12172    = ~Свиток защиты от электричества позволяет увеличить уровень защиты цели от разного рода урона электричеством как естественного, так и магического происхождения. Эффект не будет вечным, он пропадает через 24 часа.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Resistance:  50/- Electrical Resistance
-Range:  20 ft.
-Area:  1 creature
-Duration:  24 hours~
+Сопротивление: 50/- сопротивления электричеству
+Дальность: 20 футов
+Зона действия: 1 существо
+Длительность: 24 часа~
 //@12173    = ~Protection from Fire~
-@12174    = ~A Protection from Fire scroll offers protection to the target from all forms of fire, even that of magical or elemental nature. The effect is not permanent, however, and will wear off after 24 hours.
+@12174    = ~Свиток защиты от огня позволяет увеличить уровень защиты цели от разного рода урона огнём как естественного, так и магического происхождения. Эффект не будет вечным, он пропадает через 24 часов.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Resistance:  50/- Fire Resistance
-Range:  20 ft.
-Area:  1 creature
-Duration:  24 hours~
+Сопротивление: 50/- сопротивления огню
+Дальность: 20 футов
+Зона действия: 1 существо
+Длительность: 24 часа~
 //@12175    = ~Protection from Magic~
 //@12176    = ~Item description can remain the same; if new description is needed put it here~
 //@12177    = ~Protection from Poison~
-@12178    = ~A Protection from Poison scroll offers protection to the target from all forms of poison, be they of a natural or magical nature. The effect is not permanent, however, and will wear off after 6 hours.
+@12178    = ~Свиток защиты от яда обеспечивает выбранному персонажу защиту от всех форм яда - как магического, так и природного происхождения. Эффект, однако, не вечен и заканчивается через 6 часов.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Special:
-  Recipient is immune to poison and poison damage for the duration
-  Removes poison already in the target's system
-Range:  20 ft.
-Area:  1 creature
-Duration:  6 hours~
+Особенности:
+ Яд не действует на персонажа на время действия свитка
+ Уничтожает любой яд, уже присутствующий в организме
+Дальность: 20 футов
+Зона действия: 1 существо
+Длительность: 6 часов~
 //@12179    = ~Protection from Petrification~
 //@12180    = ~Item description can remain the same; if new description is needed put it here~
 //@12181    = ~Stone to Flesh Scroll~
 //@12182    = ~Item description can remain the same; if new description is needed put it here~
-@12183    = ~Cursed Scroll of Petrification~
-@12184    = ~This scroll appears to be a Protection from Petrification scroll, but it is actually a cursed scroll. When used, it will turn the target to stone if the target fails its Fortitude save. The scroll could potentially be used to curse a monster.
+@12183    = ~Проклятый свиток окаменения~
+@12184    = ~Этот свиток выглядит как свиток "Защита от окаменения", но на самом деле это проклятый свиток. При использовании он превращает цель в камень, если та провалит спасбросок стойкости. Этот свиток может быть использован для проклятия монстра.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Target must make a Fortitude save (DC 25) or be turned to stone.
-Range:  20 ft.
-Area:  1 creature
-Duration: Permanent~
-@12185    = ~Cursed Scroll of Acid Vulnerability~
-@12186    = ~This scroll appears to be a Protection from Acid scroll, but it is actually a cursed scroll. When used, it will grant vulnerability to acid, causing the target to take additional damage from acid attacks. The scroll could potentially be used to curse a monster.
+Цель должна сделать спасбросок стойкости с УС 25 или быть превращённой в камень
+Дальность: 20 футов
+Зона действия: 1 существо
+Длительность: постоянная~
+@12185    = ~Проклятый свиток уязвимости кислоте~
+@12186    = ~Этот свиток выглядит как свиток "Защита от кислоты", но на самом деле это проклятый свиток. При его использовании свиток даёт уязвимость к кислоте, в результате чего цель получает дополнительный урон от атак кислотой. Этот свиток можно использовать для проклятия монстра.
 
-STATISTICS:
+Уязвимость: цель получает двойной урон от кислоты
+Дальность: 20 футов
+Зона действия: 1 существо
+Длительность: 24 часа~
+@12187    = ~Проклятый свиток уязвимости к огню~
+@12188    = ~Этот свиток выглядит как свиток "Защита от огня", но на самом деле это проклятый свиток. При его использовании свиток даёт уязвимость к огню, в результате чего цель получает дополнительный урон от атак огнём. Этот свиток можно использовать для проклятия монстра.
 
-Vulnerability: Target takes double damage from acid
-Range:  20 ft.
-Area:  1 creature
-Duration: 24 hours~
-@12187    = ~Cursed Scroll of Fire Vulnerability~
-@12188    = ~This scroll appears to be a Protection from Fire scroll, but it is actually a cursed scroll. When used, it will grant vulnerability to fire, causing the target to take additional damage from fire attacks. The scroll could potentially be used to curse a monster.
+Уязвимость: цель получает двойной урон от огня
+Дальность: 20 футов
+Зона действия: 1 существо
+Длительность: 24 часа~
+@12189    = ~Проклятый свиток уязвимости к электричеству~
+@12190    = ~Этот свиток выглядит как свиток "Защита от электричества", но на самом деле это проклятый свиток. При его использовании свиток даёт уязвимость к электричеству, в результате чего цель получает дополнительный урон от атак электричеством. Этот свиток можно использовать для проклятия монстра.
 
-STATISTICS:
+Уязвимость: цель получает двойной урон от электричества
+Дальность: 20 футов
+Зона действия: 1 существо
+Длительность: 24 часа~
+@12191    = ~Проклятый свиток окаменения~
+@12192    = ~Этот свиток выглядит как свиток "Защита от окаменения", но на самом деле это проклятый свиток. При использовании он превращает цель в камень, если та провалит спасбросок стойкости. Этот свиток может быть использован для проклятия монстра.
 
-Vulnerability: Target takes double damage from fire
-Range:  20 ft.
-Area:  1 creature
-Duration: 24 hours~
-@12189    = ~Cursed Scroll of Electricity Vulnerability~
-@12190    = ~This scroll appears to be a Protection from Electricity scroll, but it is actually a cursed scroll. When used, it will grant vulnerability to electricity, causing the target to take additional damage from electrical attacks. The scroll could potentially be used to curse a monster.
+ПАРАМЕТРЫ:
 
-STATISTICS:
+Цель должна сделать спасбросок стойкости с УС 25 или быть превращённой в камень
+Дальность: 20 футов
+Зона действия: 1 существо
+Длительность: постоянная~
+@12193    = ~Проклятый свиток яда~
+@12194    = Этот свиток выглядит как свиток "Защита от яда", но на самом деле это проклятый свиток. При использовании он отравляет цель. Этот свиток может быть использован для проклятия монстра.~
 
-Vulnerability: Target takes double damage from electricity
-Range:  20 ft.
-Area:  1 creature
-Duration: 24 hours~
-@12191    = ~Cursed Scroll of Petrification~
-@12192    = ~This scroll appears to be a Protection from Petrification scroll, but it is actually a cursed scroll. When used, it will turn the target to stone if the target fails its Fortitude save. The scroll could potentially be used to curse a monster.
+ПАРАМЕТРЫ:
 
-STATISTICS:
+Цель должна получает 4 урона ядом в секунду на протяжении 30 секунд (спасбросок отсутствует)
+Дальность: 20 футов
+Зона действия: 1 существо
+Длительность: 30 секунд~
+@12195    = ~Проклятый свиток уязвимости к холоду~
+@12196    = ~Этот свиток выглядит как свиток "Защита от холода", но на самом деле это проклятый свиток. При его использовании свиток даёт уязвимость к холоду, в результате чего цель получает дополнительный урон от атак холодом. Этот свиток можно использовать для проклятия монстра.
 
-Target must make a Fortitude save (DC 25) or be turned to stone.
-Range:  20 ft.
-Area:  1 creature
-Duration: Permanent~
-@12193    = ~Cursed Scroll of Poison~
-@12194    = ~This scroll appears to be a Protection from Poison scroll, but it is actually a cursed scroll. When used, it poisons the target. The scroll could potentially be used to curse a monster.
-
-STATISTICS:
-
-Poison: Target takes 4 damage per second for 30 seconds (no save)
-Range:  20 ft.
-Area:  1 creature
-Duration: 30 seconds~
-@12195    = ~Cursed Scroll of Cold Vulnerability~
-@12196    = ~This scroll appears to be a Protection from Cold scroll, but it is actually a cursed scroll. When used, it will grant vulnerability to cold, causing the target to take additional damage from cold attacks. The scroll could potentially be used to curse a monster.
-
-STATISTICS:
-
-Vulnerability: Target takes double damage from cold
-Range:  20 ft.
-Area:  1 creature
-Duration: 24 hours~
+Уязвимость: цель получает двойной урон от холода
+Дальность: 20 футов
+Зона действия: 1 существо
+Длительность: 24 часа~
 
 
 //@12197    = ~Book of the Deserving~
-@12198    = ~This great book details the dogma of Tempus, the Lord of Battles. Inscribed within are the tenets of the order: 
+@12198    = ~В этой толстой книге содержатся постулаты Темпуса, Повелителя Битв. Подробно изложены доктрины ордена:
 
-"Tempus does not win battles - Tempus helps the deserving win battles. War is fair in that it oppresses all sides equally and that in any given battle, a mortal may be slain or become a great leader among his or her companions. War should not be feared, but seen as a natural force, a human force, the storm that civilization brings by its very existence."
+"Темпус не выигрывает битвы - Темпус помогает их выиграть достойным. Война справедлива тем, что равно затрагивает обе стороны, а также тем, что в любой битве смертный может умереть или стать великим предводителем своих соратников. Войны не следует бояться, но следует воспринимать как естественную силу, как силу индивидуумов, как бурю, которую приносит цивилизация самим своим существованием".
 
-This book gains power when the passages within are read aloud by a priest of Tempus, and it allows the priest to call upon his inner strength and use it in the name of war. 
+Если текст читает вслух жрец Темпуса, книга обретает силу, позволяя жрецу воззвать к своей внутренней мощи и применить её во имя войны.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Spell Power: Casts the spell Strength of One (at level 10) once per day
+Заклинание: владелец книги может творить заклинание "Сила Единого" (как заклинатель десятого уровня) раз в день
 
-Weight: 1 lb.~
+Вес: 1 фунт~
 //@12199    = ~Tome of the Lord of Battles~
-@12200    = ~This great book details the dogma of Tempus, the Lord of Battles. Inscribed within are the tenets of the order: 
+@12200    = ~В этой толстой книге содержатся постулаты Темпуса, Повелителя Битв. Подробно изложены доктрины ордена:
 
-"Tempus does not win battles - Tempus helps the deserving win battles. War is fair in that it oppresses all sides equally and that in any given battle, a mortal may be slain or become a great leader among his or her companions. War should not be feared, but seen as a natural force, a human force, the storm that civilization brings by its very existence."
+"Темпус не выигрывает битвы - Темпус помогает их выиграть достойным. Война справедлива тем, что равно затрагивает обе стороны, а также тем, что в любой битве смертный может умереть или стать великим предводителем своих соратников. Войны не следует бояться, но следует воспринимать как естественную силу, как силу индивидуумов, как бурю, которую приносит цивилизация самим своим существованием".
 
-This book gains power when the passages within are read aloud by a priest of Tempus, and it allows the priest to call upon his inner strength and use it in the name of war. 
+Если текст читает вслух жрец Темпуса, книга обретает силу, позволяя жрецу воззвать к своей внутренней мощи и применить её во имя войны.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Spell Power: Grants all allies in a 20-foot radius +6 Strength for 10 rounds once per day
+Заклинание: дарует всем союзникам в радиусе 20 футов +6 к силе на десять раундов раз в день
 
-Weight: 1 lb.~
+Вес: 1 фунт~
 //@12201    = ~Heart of Winter~ //HoF
-@12202    = ~The Heart of Winter is often confused with the legendary Heartstone Gem, a powerful scrying artifact that serves as the heart of the great tree community of Kuldahar. The Heart of Winter is not an object, but an expression frequently used by the Uthgart tribes of the north to refer to a warrior or creature that has rid itself of all except one driving focus - usually revenge or hatred. The expression is often used to describe the barbarian lord, Wylfdene, who returned to lead the barbarian tribes in a campaign against the Ten-Towns in the Year of the Cold Soul (1281 Dale Reckoning). According to legend, Wylfdene claimed to be the reincarnation of the shaman Jerrod, one of the barbarians greatest heroes and the one who sacrificed himself in the final battle against the archmage Arakon many hundreds of years ago. Claiming that his body had become home to Jerrod's spirit, Wylfdene rallied the tribes of the North to war to retake the lands that he claimed had been seized by the southerners of the Ten-Towns. Establishing a great war camp in Bremen's Run, a narrow canyon under the shadow of Kelvin's Cairn, he fought several quick battles against the dwarves and townsfolk of the region until a small band of adventurers arrived in the town of Lonelywood to try to carve out a peace between the Ten-Towns and the barbarians. Their efforts at diplomacy are said to have failed, but they succeeded in defeating Wylfdene and saving the Ten-Towns from destruction. It is believed that these adventurers are the only reason the Ten-Towns exist (and thrive) to this day.
+@12202    = ~Сердце Зимы часто путают с легендарным Камнем-Сердце - мощным артефактом для прорицаний, вокруг которого построена вся жизнь Кулдахара, поселения под Великим Древом. Сердце Зимы же - не предмет, а выражение, часто используемое северными племенами Утгардта для обозначения воина или существа, избавившегося в своих поступках от всех мотивов, кроме одного - как правило, мести или ненависти. Часто так называют называют правителя Вильфдина, объединившего варварские племена ради войны с Десятью Городами в год Холодной Души (1281 год по летоисчислению Долин). По легенде, Вильфдин считал себя воплощением шамана Джеррода, одного из величайших героев варваров, принёсшего себя в жертву в последней битве с архимагом Араконом много веков назад. Заявив, что его тело стало домом для духа Джеррода, Вильфдин сплотил племена севера и повёл их войной на земли, которые, по его словам, были захвачены южанами из Десяти Городов. Разбив большой военный лагерь в Бременском переходе, узком каньоне в тени Кургана Кельвина, он успел провести несколько боевых сражений с дварфами и регулярными войсковыми частями Десяти Городов, в то время как, в Лонливуд прибыл отряд искателей приключений с намерением заключить мир между Десятью Городами и варварами. Мирные переговоры не увенчались успехом, но герои смогли победить Вильфдина, и, тем самым, уберечь Десять Городов от разрушения. Считается, что лишь благодаря этому храброму отряду Десять Городов существуют (и процветают) и по сей день.
 
-What happened to these brave adventurers is unknown. The last known record of them is a sighting of them at the Whistling Gallows Inn in Lonelywood, where they spoke with a halfling traveler who claimed to know of a place where great riches could be found. Shortly after this, the adventurers and the halfling vanished and were never heard from again. 
+Что случилось с отважными искателями приключений - неизвестно. Последнее письменное упоминание о них гласит, что их видели в таверне "Свистящая Виселица" в Лонливуде, где они беседовали с полуросликом, утверждавшим, что знает место, где можно найти большие богатства. Вскоре после этого герои вместе с полуросликом исчезли, и больше о них ничего не было слышно.
 
-After reading the closing chapter of the book above, you notice that the top letter in each of the chapters weave together to form a peculiar summoning spell. When a passage is recited from the book, it allows the reader to inflict the curse of the Heart of Winter upon foes, blinding them with its power or even freezing them where they stand. 
+Прочитав последнюю главу книги, ты замечаешь, что первые буквы глав образуют своеобразное заклинание вызова. При прочтении его вслух владелец книги насылает на врагов проклятие Сердца Зимы, ослепляя и даже замораживая их.
 
-STATISTICS
+ПАРАМЕТРЫ:
 
-Spell Power: Cast Power Word: Blindness (at level 30) 1/Day
-Spell Power: Cast Otiluke's Freezing Sphere (at level 30) 3/Day
+Заклинание: владелец книги может читать заклинание "Слово силы: Ослепить" (как заклинатель 30-ого уровня) 1 раза в день
+Заклинание: владелец книги может читать заклинание "Замораживающая сфера Отилука" (как заклинатель 30-ого уровня) 3 раза в день
 
-Weight: 1 lb.~
+Вес: 1 фунт~
 //@12203    = ~Legends of Icewind Dale~ //HoF
-@12204    = ~The greatest legends can stem from the humblest beginnings, and so it was with the band of adventurers that began their journey in the fishing community of Easthaven thirty years ago, 1281 Dale Reckoning. Meeting in the Winter's Cradle Tavern, this band of southerners had traveled north in search of adventure, and they were the first to join Hrothgar's expedition to investigate the rumor of troubles brewing in the great tree town of Kuldahar to the North, where a mighty oak, towering hundreds of feet high, sheltered a small town beneath its boughs with a life-giving warmth.
+@12204    = ~Самые великие легенды могут начинаться самым обыденным образом. Такова и история группы искателей приключений, которые начали свой путь в рыбацком посёлке Восточная Гавань тридцать лет назад, в 1281 году по летоисчислению Долин. Встретившись в таверне "Зимняя колыбель", южане отправились на север в поисках приключений и стали первыми, кто присоединился к экспедиции Хротгара. Задачей экспедиции было проверить слухи о бедствиях, творящихся на востоке, в селении Кулдахар, расположенном под ветвями огромного векового дуба, излучающего живительное тепло.
 
-The misfortunes plaguing Icewind Dale led to the ambush of Hrothgar's expedition in the windswept Kuldahar Pass... and it left them the only survivors. Pressing on against goblinoid raiders that filled the Pass, the small band finally reached Kuldahar, only to discover the great tree was being threatened by an unknown evil deep within the mountains - if this evil was not stopped, Kuldahar would be destroyed, and the North itself might soon share the town's fate. 
+Едва придя на продуваемый всеми ветрами Кулдахарский перевал, экспедиция Хротгара попала в засаду... в живых остались только эти искатели приключений. Постоянно отражая атаки заполонивших перевал гоблиноидов, маленький отряд наконец-то достиг Кулдахара и узнал, что великому дереву угрожает неведомое зло, исходящее из глубин гор. Если это зло не остановить, Кулдахар будет уничтожен, а вскоре его участь может разделить и весь Север.
 
-The brave band of adventurers searched out this evil, their travels carrying them from the crypts of the Vale of Shadows through the numerous ruins of the North, including the decaying elven fortress of the Severed Hand and the lava-filled caverns of Dragon's Eye. Much of their journey has been lost, but there is no doubt that their efforts led to the salvation of Kuldahar and the Ten-Towns and their deeds are still spoken of in Easthaven and Kuldahar to this day. Hrothgar himself has been laid to rest in a small glen near the town of Kuldahar, in memory of his selflessness in coming to the aid of his neighbor in a time when Easthaven itself was suffering troubles of its own. 
+В поисках зла искателям приключений пришлось пройти немало миль. Их путь пролегал от склепов ущелья Теней через многочисленные руины Севера, включая разрушенную эльфийскую крепость "Отрубленная Рука" и залитые лавой пещеры "Глаз Дракона". Хроники большей части их пути не сохранились до наших дней, но нет сомнения, что именно усилия этой отважной группы привели к спасению Кулдахара и Десяти Городов. Об их приключениях и по сей день рассказывают в Кулдахаре и Восточной Гавани. Сам же Хротгар был похоронен в небольшой долине близ Кулдахара в память о его самоотверженности, когда он пришёл на помощь соседям во то время, как у Восточной Гавани было полно своих собственных бед.
 
-Among their other acts of heroism, the adventurers are credited with the discovery of the location of the tomb of Kresselack the Black Wolf, one of the most infamous of the Northern generals, the discovery of the Severed Hand, and numerous other monasteries and ruins believed lost to time and the snows of the North.
+Помимо всего прочего на счету этих искателей приключений: нахождение могилы Кресселака Чёрного Волка, одного из печально известных генералов Севера, обнаружение Отрубленной Руки и множества других монастырей и руин, считавшихся давно потерянными и погребёнными под снегами Севера.
 
-After reading the closing chapter of the book above, you notice that the top letter in each of the chapters weave together to form a peculiar summoning spell. When a passage is recited from the book, it summons the howling winds of Icewind Dale to the reader's aid.
+Прочитав последнюю главу книги, ты замечаешь, что первые буквы глав образуют своеобразное заклинание вызова. При прочтении его вслух владелец книги призывает себе на помощь суровые ветры Долины Ледяного Ветра.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Spell Power: Cast Whirlwind (at level 30) 1/Day
-Spell Power: Cast Planar Binding: Air Elemental (at level 12) 2/Day
+Заклинание: владелец книги может читать заклинание "Вихрь" (как заклинатель 30-ого уровня) 1 раза в день
+Заклинание: владелец книги может читать заклинание "Планарные узы: элементаль воздуха" (как заклинатель 12-ого уровня) 2 раза в день
 
-Weight: 1 lb.~
+Вес: 1 фунт~
 //@12205    = ~Book of Leaves~
 //@12206    = ~Item description can remain the same; if new description is needed put it here~
 //@12207    = ~Book of Leaves~ //HoF
-@12208    = ~The covers of this heavy book are made of bark, and the pages are made of pressed leaves. It is not clear what is holding this book together, for you see no bindings and no glue along the spine.
+@12208    = ~Обложка этой тяжёлой книги сделана, судя по всему, из коры, а страницы - из прессованных листьев. Не совсем ясно, что скрепляет эту книгу, поскольку на корешке нет ни швов, ни клея.
 
-When this book is held in the hand of a druid and the druid is touching solid ground, a sheath of bark will sprout from the earth and cover the wielder, making his skin as tough as the skin of a great tree. 
- 
-STATISTICS:
+Когда эта книга находится в руках друида и друид при этом касается твёрдой земли - из земли прорастает оболочка из коры, покрывая владельца книги, и делая его кожу такой же прочной, как кора векового дерева.
 
-Spell Power: Casts a more powerful version of the spell Barkskin (+6 AC bonus) 1/Day
-Spell Power: Casts the spell Shambler 1/Day
-Weight: 1~
+ПАРАМЕТРЫ:
+
+Заклинание: владелец книги может читать заклинание "Кожа-кора" (+6 к классу защиты) 1 раз в день
+Заклинание: творит заклинание "Ползун" 1 раз в день
+Вес: 1~
 //@12209    = ~How To Be An Adventurer~
-@12210    = ~This ludicrously huge and heavy book - more a compilation of volumes in a single binding than anything else - claims to be an extensive manual on the "the fine art of adventuring."  Its many chapters include:
+@12210    = ~Эта огромная и тяжёлая книга - скорее подшивка различных томов в одном переплёте - преподносится как исчерпывающее руководство по "высокому искусству приключений". Её многочисленные главы включают:
 
- - Henchmen: Loyal Companions or Seedy Pack-Mules?
- - Making Your Kit Work for *You*
- - 101 Uses for a 10' Pole
- - Catapults: Yes, That's as Far as it Shoots
- - Getting the Most Out of Your Party's Thief
- - Today's Tinderbox - It's Not Just for Lighting Torches
-   Anymore
- - Dungeons to Tackle:
-     - Stinky Pieter's Halls o' Poorly Guarded Gold
-     - The Caves of Soundly Sleeping Monsters
-     - Archmage "Loose-Bowels" Wozley the Milksop's
-       Enchanted Item Warehouse
-     - The Wooden Citadel of Darmos the Old and Crippled
-     - Uncle Fralin's Tool Shed
-     - ...and more!
- - Dungeons To Avoid Like the Crotch-Rot:
-     - The Iron Fortress of Blodax, Devourer of Souls
-     - Dominara the Erinyes' Nine-Layered Brothel of
-       Violent Emasculation (No Slaking... or Slating... allowed)
-     - The Crimson Hell-Pit of One Billion Miserable Deaths
-     - Uncle Fralin's Bedroom
-     - ...and more!
- - Your Lantern and You
- - Twelve Uses for Twelve Iron Spikes
- - 99 Uses for That Little Hammer That Comes With Twelve
-   Iron Spikes
- - Face It, You're Actually "Neutral Evil"
- - The King's Lovely Daughter: Look But Don't Touch
- - Don't Put Your Hand in That Dark Hole
+ - Оруженосцы: верные соратники или вьючные мулы?
+ - Чтобы ваше снаряжение работало на *вас*
+ - 101 способ применения десятифутового шеста
+ - Катапульты: камень узнаётся по полёту
+ - Как выжать максимум из плута в отряде
+ - Современная трутница: уже не только для зажигания факелов
+ - Подземелья для новичков:
+     - Вонючие залы Пьетера с плохо охраняемым золотом
+     - Пещеры с очень крепко спящими чудовищами
+     - Склад зачарованных вещей архимага Возли Молокососа
+       по прозвищу Кишкопускатель
+     - Деревянная Крепость Дармоса Старого и Увечного
+     - Сарай с инструментами дядюшки Фралина
+     - ...и другие!
+ - Подземелья, куда нельзя соваться даже под страхом геморроя:
+     - Железная Крепость Блодакса, Поглотителя Душ
+     - Девятиярусный бордель принудительной кастрации 
+       домины Эринии (без лени... и удовольствий)
+     - Алая бездна миллиарда жалких смертей
+     - Спальня дядюшки Фралина
+     - ...и другие!
+ - Вы и ваш фонарь
+ - Двенадцать применений для двенадцати железных гвоздей
+ - 99 применений для молотка, что шёл в комплекте с
+   двенадцатью гвоздями
+ - Пора признать, на самом деле вы - "нейтрально-злой"
+ - Любимая дочь короля: смотреть, но не трогать
+ - Не суйте руки в эту тёмную дырку
 
-...and over eighty more information-packed chapters covering all aspects of adventuring, from hoarding to spell-casting and bold heroics to arse-saving cowardice.
+...и ещё более восьмидесяти информационно насыщенных глав, охватывающих все аспекты приключений: от сбора кладов до прочтения заклинаний, от смелых подвигов до спасительных трусливых хитростей.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Special:
-  Gives the reader 10,000 Experience Points.
-  Can be used up to six times.
-Weight: 8 lb.~
+Особенности:
+ Даёт прочитавшему 10 000 очков опыта
+ Может быть использована до 6 раз
+Вес: 8 фунтов~
 //@12211    = ~How To Be An Adventurer (2nd Ed.)~
-@12212    = ~This ludicrously huge and heavy book - more a compilation of volumes in a single binding than anything else - claims to be an extensive manual on the "the fine art of adventuring."  Its many chapters include:
+@12212    = ~Эта огромная и тяжёлая книга - скорее подшивка различных томов в одном переплёте - преподносится как исчерпывающее руководство по "высокому искусству приключений". Её многочисленные главы включают:
 
- - Henchmen: Loyal Companions or Seedy Pack-Mules?
- - Making Your Kit Work for *You*
- - 101 Uses for a 10' Pole
- - Catapults: Yes, That's as Far as it Shoots
- - Getting the Most Out of Your Party's Thief
- - Today's Tinderbox - It's Not Just for Lighting Torches
-   Anymore
- - Dungeons to Tackle:
-     - Stinky Pieter's Halls o' Poorly Guarded Gold
-     - The Caves of Soundly Sleeping Monsters
-     - Archmage "Loose-Bowels" Wozley the Milksop's
-       Enchanted Item Warehouse
-     - The Wooden Citadel of Darmos the Old and Crippled
-     - Uncle Fralin's Tool Shed
-     - ...and more!
- - Dungeons To Avoid Like the Crotch-Rot:
-     - The Iron Fortress of Blodax, Devourer of Souls
-     - Dominara the Erinyes' Nine-Layered Brothel of
-       Violent Emasculation (No Slaking... or Slating... allowed)
-     - The Crimson Hell-Pit of One Billion Miserable Deaths
-     - Uncle Fralin's Bedroom
-     - ...and more!
- - Your Lantern and You
- - Twelve Uses for Twelve Iron Spikes
- - 99 Uses for That Little Hammer That Comes With Twelve
-   Iron Spikes
- - Face It, You're Actually "Neutral Evil"
- - The King's Lovely Daughter: Look But Don't Touch
- - Don't Put Your Hand in That Dark Hole
+ - Оруженосцы: верные соратники или вьючные мулы?
+ - Чтобы ваше снаряжение работало на *вас*
+ - 101 способ применения десятифутового шеста
+ - Катапульты: камень узнаётся по полёту
+ - Как выжать максимум из плута в отряде
+ - Современная трутница: уже не только для зажигания факелов
+ - Подземелья для новичков:
+     - Вонючие залы Пьетера с плохо охраняемым золотом
+     - Пещеры с очень крепко спящими чудовищами
+     - Склад зачарованных вещей архимага Возли Молокососа
+       по прозвищу Кишкопускатель
+     - Деревянная Крепость Дармоса Старого и Увечного
+     - Сарай с инструментами дядюшки Фралина
+     - ...и другие!
+ - Подземелья, куда нельзя соваться даже под страхом геморроя:
+     - Железная Крепость Блодакса, Поглотителя Душ
+     - Девятиярусный бордель принудительной кастрации 
+       домины Эринии (без лени... и удовольствий)
+     - Алая бездна миллиарда жалких смертей
+     - Спальня дядюшки Фралина
+     - ...и другие!
+ - Вы и ваш фонарь
+ - Двенадцать применений для двенадцати железных гвоздей
+ - 99 применений для молотка, что шёл в комплекте с
+   двенадцатью гвоздями
+ - Пора признать, на самом деле вы - "нейтрально-злой"
+ - Любимая дочь короля: смотреть, но не трогать
+ - Не суйте руки в эту тёмную дырку
 
-...and over eighty more information-packed chapters covering all aspects of adventuring, from hoarding to spell-casting and bold heroics to arse-saving cowardice.
+...и ещё более восьмидесяти информационно насыщенных глав, охватывающих все аспекты приключений: от сбора кладов до прочтения заклинаний, от смелых подвигов до спасительных трусливых хитростей.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Special:
-  Gives the reader 20,000 Experience Points.
-  Can be used up to six times.
-Weight: 8 lb.~
+Особенности:
+ Даёт прочитавшему 20 000 очков опыта
+ Может быть использована до 6 раз
+Вес: 8 фунтов~
 //@12213    = ~Tome of Deeds Valorous~
 //@12214    = ~Item description can remain the same; if new description is needed put it here~
 //@12215    = ~Masterwork Tome of Deeds Valorous~
