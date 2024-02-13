@@ -5280,7 +5280,7 @@
 Зачарование: +1
 Тип урона: дробящий
 Особенности:
- Огонь: +1 урона огнём
+ Пламя: +1 урона огнём
  Стужа: +1 урона холодом
  Шок: +1 урона электричеством
 Вес: 4 фунта
@@ -7071,7 +7071,7 @@
 Зачарование: +1
 Тип урона: дробящий
 Особенности:
- Огонь: +1d4 урона огнём
+ Пламя: +1d4 урона огнём
  Разъедание: +1d4 очков урона кислотой
 Необходимая черта: Простое оружие, Булавы
 Тип: одноручное~
@@ -8380,7 +8380,7 @@
 Зачарование: +1
 Тип урона: метательный (колющий)
 Особенности:
- Огонь: +1d6 урона огнём
+ Пламя: +1d6 урона огнём
 Вес: 0 фунтов
 Необходимая черта: Простое оружие, Метательное
 Тип: одноручное~
@@ -9964,69 +9964,69 @@
 Вес: 0 фунта
 Оружие: лук~
 //@11947    = ~Arrows of Disruption +2~
-@11948    = ~These arrows were enhanced through magical means when they were created. They appear slightly straighter than the average arrow, almost alive as they effortlessly leave your bow and streak towards their target with deadly accuracy.
+@11948    = ~Эти стрелы, при создании, были зачарованы умелым волшебником. С виду они не слишком отличаются от обычных стрел (разве что более прямые), но, едва сорвавшись с тетивы, они словно оживают и со смертельной точностью летят во врага.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d6  +2
-Attack Bonus:  +2 
-Enchantment:  +2
-Damage Type:  Missile (piercing)
-Special:
-  Disruption: All undead and outsiders hit by weapon must make a Fortitude save (DC 14) or be destroyed
-Weight: 0 lb.
-Launcher:  Bow~
+Урон: 1d6+2
+Атака: +2
+Зачарование: +2
+Тип урона: метательный (колющий)
+Особенности:
+ Распад: при попадании эти стрелы уничтожают нежить или выходцев из иных планов, если те провалят спасбросок стойкости с УС 14
+Вес: 0 фунтов
+Оружие: Лук~
 //@11949    = ~Returning Poison-tipped Arrow~
-@11950    = ~These arrows were enhanced through magical means when they were created. They appear slightly straighter than the average arrow, almost alive as they effortlessly leave your bow and streak towards their target with deadly accuracy.
+@11950    = ~Эта стрела, при создании, были зачарованы умелым волшебником. С виду она не слишком отличаются от обычных стрел (разве что более прямая), но, едва сорвавшись с тетивы, она словно оживают и со смертельной точностью летит во врага.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d6
-Damage Type:  Missile (piercing)
-Special:
-  Venom: +2 points of poison damage every second for 6 seconds (Fortitude DC 22)
-  Returning: Returns to user
-Weight: 0 lb.
-Launcher:  Bow~
-@11951    = ~Keen Arrows +1~
-@11952    = ~These arrows were enhanced through magical means when they were created. They appear slightly straighter than the average arrow, almost alive as they effortlessly leave your bow and streak towards their target with deadly accuracy.
+Урон: 1d6
+Тип урона: метательный (колющий)
+Особенности:
+ Яд: +2 очка урона ядом каждую секунду в течение 6 секунд (успешный спасбросок стойкости с УС 22 отменяет эффект)
+ Возвращение: возвращается к стрелку
+Вес: 0 фунтов
+Оружие: Лук~
+@11951    = ~Острые стрелы +1~
+@11952    = ~Эти стрелы, при создании, были зачарованы умелым волшебником. С виду они не слишком отличаются от обычных стрел (разве что более прямые), но, едва сорвавшись с тетивы, они словно оживают и со смертельной точностью летят во врага.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d6  +1
-Attack Bonus:  +1 
-Enchantment:  +1
-Damage Type:  Missile (piercing)
-Special:
-  Keen: Increased chance of scoring a critical hit on target
-Weight: 0 lb.
-Launcher:  Bow~
+Урон: 1d6+1
+Атака: +1
+Зачарование: +1
+Тип урона: метательный (колющий)
+Особенности:
+ Острота: увеличенный шанс нанести критический удар
+Вес: 0 фунтов
+Оружие: Лук~
 //@11953    = ~Stunning Arrows +1~
-@11954    = ~These arrows were enhanced through magical means when they were created. They appear slightly straighter than the average arrow, almost alive as they effortlessly leave your bow and streak towards their target with deadly accuracy.
+@11954    = ~Эти стрелы, при создании, были зачарованы умелым волшебником. С виду они не слишком отличаются от обычных стрел (разве что более прямые), но, едва сорвавшись с тетивы, они словно оживают и со смертельной точностью летят во врага.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d6  +1
-Attack Bonus:  +1 
-Enchantment:  +1
-Damage Type:  Missile (piercing)
-Special:
-  Stunning: 50% chance target is stunned for 1/2 combat round (Fortitude DC 20)
-Weight: 0 lb.
-Launcher:  Bow~
+Урон: 1d6+1
+Атака: +1
+Зачарование: +1
+Тип урона: метательный (колющий)
+Особенности:
+ Ошеломление: с вероятностью 50% ошеломляют цель на 1/2 раунда (успешный спасбросок стойкости с УС 20 отменяет эффект)
+Вес: 0 фунтов
+Оружие: Лук~
 //@11955    = ~Sure Strike Arrows~
 //@11956    = ~Item description can remain the same; if new description is needed put it here~
 //@11957    = ~Arrows of Lesser Dispelling~
-@11958    = ~These arrows were enhanced through magical means when they were created. They appear slightly straighter than the average arrow, almost alive as they effortlessly leave your bow and streak towards their target with deadly accuracy.
+@11958    = ~Эти стрелы, при создании, были зачарованы умелым волшебником. С виду они не слишком отличаются от обычных стрел (разве что более прямые), но, едва сорвавшись с тетивы, они словно оживают и со смертельной точностью летят во врага.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d6
-Damage Type:  Missile (piercing)
-Special:
-  Dispelling: 25% chance Dispel Magic on target (Will DC 15)
-Weight: 0 lb.
-Launcher:  Bow~
+Урон: 1d6
+Тип урона: метательный (колющий)
+Особенности:
+ Рассеивание: с вероятностью 25% при попадании на цель будет наложено заклинание "Развеять магию" (успешный спасбросок воли с УС 15 отменяет эффект)
+Вес: 0 фунтов
+Оружие: Лук~
 //@11959    = ~Everlast Arrow~
 //@11960    = ~Item description can remain the same; if new description is needed put it here~
 //@11961    = ~Arrows +5~
@@ -10038,44 +10038,44 @@ Launcher:  Bow~
 //@11967    = ~Impact Arrows +1~
 //@11968    = ~Item description can remain the same; if new description is needed put it here~
 //@11969    = ~Hunting Arrows~
-@11970    = ~These arrows have been fitted with a specially designed arrow head. This type of arrow is made in such a way that when an animal is struck, the arrow will slice and widen the wound with each additional movement. This usually causes massive bleeding making it easier for the hunter to track the wounded animal.
+@11970    = ~Эти стрелы венчают широкие, созданные для охоты наконечники. Кроме того после попадании в животное стрела с каждым новым движением рассекает и расширяет рану. В большинстве случаев это вызывает обильное кровотечение, что облегчает задачу охотника по выслеживанию раненого животного.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d6
-Damage Type:  Missile (piercing)
-Special:
-  Wounding: Inflicts 1 additional point of damage per round for 10 rounds (Fortitude DC 22)
-Weight:  0 lb.
-Launcher:  Bow~
+Урон: 1d6
+Тип урона: метательный (колющий)
+Особенности:
+ Рваные раны: наносит 1 дополнительную единицу урона за раунд в течение 10 раундов (успешный спасбросок стойкости с УС 22 отменяет эффект)
+Вес: 0 фунтов
+Оружие: лук~
 //@11971    = ~Target Arrows~
 //@11972    = ~Item description can remain the same; if new description is needed put it here~
-@11973    = ~Alicorn Arrows +3~
-@11974    = ~When one of these powerful arrows is fired, it transforms into an Alicorn Lance. If it hits, it inflicts similar damage and effects to the spell.
+@11973    = ~Стрелы аликорна +3~
+@11974    = ~Каждая из этих мощных стрел, выпущенная из лука, в копье аликорна. При попадании, производятся эффекты, подобные эффектам одноимённого заклинания "Копьё аликорна".
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  3d6
-Attack Bonus:  +3 
-Enchantment:  +3
-Damage Type:  Piercing
-Special:
-  Alicorn Lance: Target is outlined in a silvery radiance for 3 rounds, giving it a -2 Armor Class penalty (no save)
-Weight: 0 lb.
-Launcher:  Bow~
+Урон: 3d6
+Атака: +3
+Зачарование: +3
+Тип урона: метательный (колющий)
+Особенности:
+ Копьё аликорна: при попадании цель обрисовывается серебристым сиянием в течение трёх раундов, что ухудшает её класс защиты на 2 (спасбросок отсутствует)
+Вес: 0 фунтов
+Оружие: Лук~
 //@11975    = ~Sparking Arrows +1~
-@11976    = ~These arrows were enhanced through magical means when they were created. They appear slightly straighter than the average arrow, almost alive as they effortlessly leave your bow and streak towards their target with deadly accuracy.
+@11976    = ~Эти стрелы, при создании, были зачарованы умелым волшебником. С виду они не слишком отличаются от обычных стрел (разве что более прямые), но, едва сорвавшись с тетивы, они словно оживают и со смертельной точностью летят во врага.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d6  +1
-Attack Bonus:  +1 
-Enchantment:  +1
-Damage Type:  Missile (piercing)
-Special: 
-  Shock: +1d6 electrical damage
-Weight: 0 lb.
-Launcher:  Bow~
+Урон: 1d6+1
+Атака: +1
+Зачарование: +1
+Тип урона: метательный (колющий)
+Особенности:
+ Шок: +1d6 урона электричеством
+Вес: 0 фунтов
+Оружие: лук~
 
 
 //@11977    = ~Bolt~
@@ -10087,83 +10087,83 @@ Launcher:  Bow~
 //@11983    = ~Bolt +2~
 //@11984    = ~Item description can remain the same; if new description is needed put it here~
 //@11985    = ~Sparking Bolts +1~
-@11986    = ~This bolt seems to crackle with energy as it is held in the hand. When shot from the crossbow, it seems to leap towards its target leaving behind an electrical sulfuric smell. As it hits there is a crackle as the energy stored is released into the targets wound.
+@11986    = ~Этот болт так и потрескивает от энергии, когда берёшь его в руку. Он устремляется из арбалета к цели, оставляя за собой серный запах. Поразив цель, болт с треском выпускает заключённую в нём энергию в рану.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d8  +1
-Attack Bonus:  +1 
-Enchantment:  +1
-Damage Type:  Missile (piercing)
-Special:  
-  Shock: +1d6 electrical damage 
-Weight:  0 lb.
-Launcher:  Crossbow~
-@11987    = ~Tranquil Bolt +1~
-@11988    = ~These crossbow bolts are easy for magic scholars to recognize because of their purpose and their colorful decoration. The infamous Band of the Key was a group of occultist fighters who dedicated themselves to taking evil magical texts out of the hands of those who would use them to cause harm. The Band favored using crossbows over bows for their ability to remain cocked and ready for long periods of time. The leader of the Band, a thin, mustachioed man named Heglyf, enlisted some Deneirian priests to craft these special bolts in large quantities.
+Урон: 1d8+1
+Атака: +1
+Зачарование: +1
+Тип урона: метательный (колющий)
+Особенности:
+ Шок: +1d6 урона электричеством
+Вес: 0 фунтов
+Оружие: арбалет~
+@11987    = ~Болт молчания +1~
+@11988    = ~Эти болты известны каждому, кто изучает магию, своим назначением и характерной окраской. Группа Ключа, печально известное собрание оккультных воинов, считала своей задачей отбирать магические тексты, содержащие злое волшебство, у тех, кто мог применить их во вред. Арбалеты пользовались у Группы большей популярностью, чем луки, так как их можно дольше держать взведёнными и готовыми к бою. Такие болты для Группы изготавливали в больших количествах жрецы Денейра, которых нанял для этой цели лидер Группы, худой усатый человек по имени Хеглиф. Болты молчания имеют характерное жёлто-зелёное оперение.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d8 + 1
-Attack Bonus:  +1 
-Enchantment:  +1
-Damage Type:  Missile (Piercing)
-Special:  
-  Spell Process: Bolts cast Silence on target, but only for 1 round (Will DC 29)
-Weight:  0 lb.
-Launcher:  Crossbow~
-@11989    = ~Bolts of Nearly Certain Stunning +1~
-@11990    = ~Quarrels or bolts are the ammunition fired by crossbows regardless of the weapon's size. However this bolt has been imbued with a small amount of magical properties which enhances performance in flight, almost as if the bolt was guided towards its target.
+Урон: 1d8+1
+Атака: +1
+Зачарование: +1
+Тип урона: метательный (колющий)
+Особенности:
+ Наложение заклинания: накладывает на цель заклинание "Тишина", но только на один раунд (успешный спасбросок воли с УС 29 отменяет эффект)
+Вес: 0 фунтов
+Оружие: арбалет~
+@11989    = ~Почти всегда ошеломляющие болты +1~
+@11990    = ~Арбалетные стрелы, или "болты", используются для стрельбы из арбалетов всех известных размеров. В отличие от обычных, эти болты наделены магическими свойствами, которые выравнивают полёт, позволяя болту точнее попасть в цель.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d8  +1
-Attack Bonus:  +1 
-Enchantment:  +1
-Damage Type:  Missile (piercing)
-Special:
-  Nearly Certain Stunning: Target is Stunned for 1/2 combat rounds (Fortitude DC 40)
-Weight:  0 lb.
-Launcher:  Crossbow~
+Урон: 1d8+1
+Атака: +1
+Зачарование: +1
+Тип урона: метательный (колющий)
+Особенности:
+ Почти всегда ошеломление: при попадании, цель ошеломляется на 1/2 раунда (успешный спасбросок стойкости с УС 40 отменяет эффект)
+Вес: 0 фунтов
+Оружие: арбалет~
 //@11991    = ~Frost Bolts +1~
-@11992    = ~Quarrels or bolts are the ammunition fired by crossbows regardless of the weapon's size. However this bolt has been imbued with a small amount of magical properties which enhances performance in flight, almost as if the bolt was guided towards its target.
+@11992    = ~Арбалетные стрелы, или "болты", используются для стрельбы из арбалетов всех известных размеров. В отличие от обычных, эти болты наделены магическими свойствами, которые выравнивают полёт, позволяя болту точнее попасть в цель.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d8  +1
-Attack Bonus:  +1 
-Enchantment:  +1
-Damage Type:  Missile (piercing)
-Special: 
-  Frost: +1d6 cold damage
-Weight:  0 lb.
-Launcher:  Crossbow~
+Урон: 1d8+1
+Атака: +1
+Зачарование: +1
+Тип урона: метательный (колющий)
+Особенности:
+ Стужа: +1d6 урона холодом
+Вес: 0 фунтов
+Оружие: арбалет~
 //@11993    = ~Flaming Bolts +1~
-@11994    = ~Quarrels or bolts are the ammunition fired by crossbows regardless of the weapon's size. However this bolt has been imbued with a small amount of magical properties which enhances performance in flight, almost as if the bolt was guided towards its target.
+@11994    = ~Арбалетные стрелы, или "болты", используются для стрельбы из арбалетов всех известных размеров. В отличие от обычных, эти болты наделены магическими свойствами, которые выравнивают полёт, позволяя болту точнее попасть в цель.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d8  +1
-Attack Bonus:  +1 
-Enchantment:  +1
-Damage Type:  Missile (piercing)
-Special: 
-  Flame: +1d6 fire damage
-Weight:  0 lb.
-Launcher:  Crossbow~
+Урон: 1d8+1
+Атака: +1
+Зачарование: +1
+Тип урона: метательный (колющий)
+Особенности:
+ Пламя: +1d6 урона огнём
+Вес: 0 фунтов
+Оружие: арбалет~
 //@11995    = ~Corrosive Bolts +1~
-@11996    = ~Quarrels or bolts are the ammunition fired by crossbows regardless of the weapon's size. However this bolt has been imbued with a small amount of magical properties which enhances performance in flight, almost as if the bolt was guided towards its target.
+@11996    = ~Арбалетные стрелы, или "болты", используются для стрельбы из арбалетов всех известных размеров. В отличие от обычных, эти болты наделены магическими свойствами, которые выравнивают полёт, позволяя болту точнее попасть в цель.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d8  +1
-Attack Bonus:  +1 
-Enchantment:  +1
-Damage Type:  Missile (piercing)
-Special: 
-  Corrosion: +1d6 acid damage
-Weight:  0 lb.
-Launcher:  Crossbow~
+Урон: 1d8+1
+Атака: +1
+Зачарование: +1
+Тип урона: метательный (колющий)
+Особенности:
+ Разъедание: +1d6 урона кислотой
+Вес: 0 фунтов
+Оружие: арбалет~
 //@11997    = ~Bolt +5~
 //@11998    = ~Item description can remain the same; if new description is needed put it here~
 //@11999    = ~Bolt +4~
@@ -10178,99 +10178,100 @@ Launcher:  Crossbow~
 //@12006    = ~Item description can remain the same; if new description is needed put it here~
 //@12007    = ~Bullet +2~
 //@12008    = ~Item description can remain the same; if new description is needed put it here~
-@12009    = ~Force Bullet +3~
-@12010    = ~A popular weapon among priests, Force Bullets allow the user to restrain opponents without causing excessive harm. They are particularly well liked by the churches of Helm, Eldath and Ilmater.
+@12009    = ~Силовой снаряд +3~
+@12010    = ~Силовые снаряды любят использовать жрецы, так как они позволяют сдерживать противника, не нанося ему слишком большого урона. Чаще всего их применяют служители Хелма, Эльдат и Ильматера.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  0
-Attack Bonus:  +3
-Enchantment:  +3
-Special:
-  Target must make a Reflex save (DC 35) or be imprisoned in Otiluke's Resilient Sphere for 10 rounds
-Weight:  0 lb.
-Launcher:  Sling~
+Урон: 0
+Атака: +3
+Зачарование: +3
+Тип урона: метательный (дробящий)
+Особенности:
+ Наложение заклинания: при неудачном спасброске реакции с УС 35 жертва попадает под действие заклинания "Упругая сфера Отилука" на 10 раундов
+Вес: 0 фунтов
+Оружие: Праща~
 //@12011    = ~Returning Flame Bullet +1~
-@12012    = ~Magical currents are embedded inside this bullet so that it seems a little more balanced and lighter as it jumps towards an opponent. 
+@12012    = ~В этом снаряде заключена магическая энергия, поэтому он несколько легче, лучше сбалансирован и словно бы выпрыгивает навстречу врагам.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d4  +1
-Attack Bonus:  +1 
-Enchantment:  +1
-Damage Type:  Missile (bludgeoning)
-Special:
-  Returning: Returns to user
-  Flame: +1d6 fire damage
-Weight: 0 lb.
-Launcher:  Sling~
-@12013    = ~Bullets of Turning +1~
-@12014    = ~Magical currents are embedded inside this bullet so that it seems a little more balanced and lighter as it jumps towards an opponent. 
+Урон: 1d4+1
+Атака: +1
+Зачарование: +1
+Тип урона: метательный (дробящий)
+Особенности:
+ Возвращение: возвращается к владельцу
+ Пламя: +1d6 урона огнём
+Вес: 0 фунтов
+Оружие: Праща~
+@12013    = ~Снаряд изгнание нежити +1~
+@12014    = ~В этом снаряде заключена магическая энергия, поэтому он несколько легче, лучше сбалансирован и словно бы выпрыгивает навстречу врагам.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d4  +1
-Attack Bonus:  +1
-Enchantment:  +1
-Damage Type:  Missile (bludgeoning)
-Special:
-  Turning: Upon hitting an undead creature, this bullet causes the undead to be turned based on the thrower's ability to turn undead.
-Weight: 0 lb.
-Launcher:  Sling~
-@12015    = ~Stun Bullets +1~
-@12016    = ~Magical currents are embedded inside this bullet so that it seems a little more balanced and lighter as it jumps towards an opponent. 
+Урон: 1d4+1
+Атака: +1
+Зачарование: +1
+Тип урона: метательный (дробящий)
+Особенности:
+ Изгнание нежити: при попадании в нежить этот снаряд изгоняет её, как если бы была использована способность "Изгнание нежити" метателя на этой нежити
+Вес: 0 фунтов
+Оружие: праща~
+@12015    = ~Снаряд ошеломления +1~
+@12016    = ~В этом снаряде заключена магическая энергия, поэтому он несколько легче, лучше сбалансирован и словно бы выпрыгивает навстречу врагам.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d4  +1
-Attack Bonus:  +1 
-Enchantment:  +1
-Damage Type:  Missile (bludgeoning)
-Special:
-  Stunning: 50% chance target is stunned for 1/2 combat round (Fortitude DC 15)
-Weight: 0 lb.
-Launcher:  Sling~
-@12017    = ~Bullets of Corrosive Burst +1~
-@12018    = ~Magical currents are embedded inside this bullet so that it seems a little more balanced and lighter as it jumps towards an opponent. 
+Урон: 1d4+1
+Атака: +1
+Зачарование: +1
+Тип урона: метательный (дробящий)
+Особенности:
+ Ошеломление: при попадании с вероятностью 50% цель ошеломляется на 1/2 раунда (успешный спасбросок стойкости с УС 15 отменяет эффект)
+Вес: 0 фунтов
+Оружие: Праща~
+@12017    = ~Снаряд кислотных брызг +1~
+@12018    = ~В этом снаряде заключена магическая энергия, поэтому он несколько легче, лучше сбалансирован и словно бы выпрыгивает навстречу врагам.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d4  +1
-Attack Bonus:  +1 
-Enchantment:  +1
-Damage Type:  Missile (bludgeoning)
-Special:
-  Corrosive Burst:  +1d6 acid damage and 30% chance of +1d10 extra acid damage
-Weight: 0 lb.
-Launcher:  Sling~
-@12019    = ~Bullets of Impact +2~
-@12020    = ~Magical currents are embedded inside this bullet so that it seems a little more balanced and lighter as it jumps towards an opponent. 
+Урон: 1d4+1
+Атака: +1
+Зачарование: +1
+Тип урона: метательный (дробящий)
+Особенности:
+ Кислотные брызги: +1d6 урона кислотой и 30% шанс нанести дополнительно 1d10 урона кислотой
+Вес: 0 фунтов
+Оружие: Праща~
+@12019    = ~Снаряд импульса +2~
+@12020    = ~В этом снаряде заключена магическая энергия, поэтому он несколько легче, лучше сбалансирован и словно бы выпрыгивает навстречу врагам.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d4  +2
-Attack Bonus:  +2 
-Enchantment:  +2
-Damage Type:  Missile (bludgeoning)
-Special:
-  Impact: Increased chance of scoring a critical hit
-Weight: 0 lb.
-Launcher:  Sling~
+Урон: 1d4+2
+Атака: +2
+Зачарование: +2
+Тип урона: метательный (дробящий)
+Особенности:
+ Импульс: шанс критического удара увеличен
+Вес: 0 фунтов
+Оружие: Праща~
 //@12021    = ~Sure Strike Bullets~
 //@12022    = ~Item description can remain the same; if new description is needed put it here~
-@12023    = ~Bullets of Banishing +1~
-@12024    = ~Magical currents are embedded inside this bullet so that it seems a little more balanced and lighter as it jumps towards an opponent. 
+@12023    = ~Снаряд изгнания +1~
+@12024    = ~В этом снаряде заключена магическая энергия, поэтому он несколько легче, лучше сбалансирован и словно бы выпрыгивает навстречу врагам.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d4  +1
-Attack Bonus:  +1 
-Enchantment:  +1
-Damage Type:  Missile (bludgeoning)
-Special:
-  Banishing: Banishes summoned creatures on hit (Will DC 26)
-Weight: 0 lb.
-Launcher:  Sling~
+Урон: 1d4+1
+Атака: +1
+Зачарование: +1
+Тип урона: метательный (дробящий)
+Особенности:
+ Изгнание: изгоняет вызванных существ при попадании (успешный спасбросок воли с УС 26 позволяет избежать эффекта)
+Вес: 0 фунтов
+Оружие: Праща~
 //@12025    = ~Sparking Bullets +1~
 //@12026    = ~Item description can remain the same; if new description is needed put it here~
 //@12027    = ~Frost Bullets +1~
@@ -10288,95 +10289,95 @@ Launcher:  Sling~
 
 
 //@12039    = ~Lamp Oil~
-@12040    = ~This container contains lamp oil, usually used for lanterns and such. This particular container has a rag soaked in oil attached to it so that it can be ignited and thrown at an opponent.
+@12040    = ~В этой ёмкости находится ламповое масло, используемое для фонарей и тому подобных вещей, вместе со смоченной в масле тряпкой, чтобы можно было поджечь масло и метнуть во врага.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage: 4d8 Fire damage to a single opponent (Reflex DC 16 for half)
-Weight: 0 lb.~
+Урон: 4d8 огненного урона одному врагу (успешный спасбросок реакции с УС 16 уменьшает урон в два раза)
+Вес: 0 фунтов~
 //@12041    = ~Lamp Oil~ // HoF
-@12042    = ~This container contains lamp oil, usually used for lanterns and such. This particular container has a rag soaked in oil attached to it so that it can be ignited and thrown at an opponent.
+@12042    = ~В этой ёмкости находится ламповое масло, используемое для фонарей и тому подобных вещей, вместе со смоченной в масле тряпкой, чтобы можно было поджечь масло и метнуть во врага.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage: 10d8 Fire damage to a single opponent (Reflex DC 27 for half)
-Weight: 0 lb.~
+Урон: 10d8 огненного урона одному врагу (успешный спасбросок реакции с УС 27 уменьшает урон в два раза)
+Вес: 0 фунтов~
 //@12043    = ~Flaming Oil~
-@12044    = ~Inside of this glass pot is an expensive mixture of oil and other chemicals. When this mixture is set ablaze, it burns for several seconds at a very hot temperature. Flaming oil is sometimes difficult to use because it takes a long time for the user to properly throw it. Adventurers often carry oil with them to deal with trolls in the unfortunate event that they are encountered.
+@12044    = ~В этой стеклянной ёмкости дорогостоящая смесь масла и других веществ. Если её поджечь, она за несколько секунд сгорает при очень высокой температуре. Горючее масло порой довольно трудно использовать, потому что его не всегда удаётся удачно бросить. Многие искатели приключений держат при себе такую смесь на случай встречи с троллями.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-When thrown at a target, the glass pot breaks, spreading flaming oil over everything within a 5' radius, doing 5d8 points of fire damage (Reflex DC 16 for half)
-Weight: 0 lb.~
+При броске в цель стеклянная ёмкость разбивается, и горящее масло расплёскивается на 5 футов вокруг, нанося 5d8 урона огнём (успешный спасбросок реакции с УС 16 снижает урон вдвое)
+Вес: 0 фунтов~
 //@12045    = ~Flaming Oil~ // HoF
-@12046    = ~Inside of this glass pot is an expensive mixture of oil and other chemicals. When this mixture is set ablaze, it burns for several seconds at a very hot temperature. Flaming oil is sometimes difficult to use because it takes a long time for the user to properly throw it. Adventurers often carry oil with them to deal with trolls in the unfortunate event that they are encountered.
+@12046    = ~В этой стеклянной ёмкости дорогостоящая смесь масла и других веществ. Если её поджечь, она за несколько секунд сгорает при очень высокой температуре. Горючее масло порой довольно трудно использовать, потому что его не всегда удаётся удачно бросить. Многие искатели приключений держат при себе такую смесь на случай встречи с троллями.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-When thrown at a target, the glass pot breaks, spreading flaming oil over everything within a 5' radius, doing 10d8 points of fire damage (Reflex DC 27 for half)
-Weight: 0 lb.~
+При броске в цель стеклянная ёмкость разбивается, и горящее масло расплёскивается на 5 футов вокруг, нанося 10d8 урона огнём (успешный спасбросок реакции с УС 27 снижает урон вдвое)
+Вес: 0 фунтов~
 //@12047    = ~Xainlaphar's Flying Skull~
-@12048    = ~Xainlaphar, a mad Red Wizard of Thay, was known for turning the skulls of his slain enemies into weapons. His most common weapon was known as the "Flying Skull."  In essence, the item is not much different from the spell Skull Trap. Xainlaphar died in 913 DR, long before he had time to use even half of his enchanted skulls. They were claimed by his foes, a paladin and priest of Helm. They intended to destroy the items, but at least forty were stolen by crafty thieves on the way back to Sembia.
+@12048    = ~Ксайнлафар, безумный Красный Волшебник Тэя, прославился тем, что делал из черепов поверженных врагов оружие. Наиболее известны его "Летучие черепа". По своему действию они мало отличаются от заклинания "Череп-ловушка", только применяются не для защиты, а для нападения. Ксайнлафар умер в 913 ЛД, успев использовать меньше половины зачарованных черепов. Оставшиеся забрали себе враги волшебника, жрец Хелма и паладин. Они намеревались уничтожить черепа, но хитрые воры утащили у них на обратном пути в Сембию не меньше сорока штук.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-When thrown, the skull hovers at the target point until a creature comes near it, at which point it explodes for 10d8 magic damage, harming everyone within 10' (Reflex DC 25 for half)
-Weight: 1 lb.~
-@12049    = ~Xainlaphar's Detonating Skull~ // HoF
-@12050    = ~Xainlaphar, a mad Red Wizard of Thay, was known for turning the skulls of his slain enemies into weapons. His most common weapon was known as the "Detonating Skull."  In essence, the item is not much different from the spell Skull Trap. Xainlaphar died in 913 DR, long before he had time to use even half of his enchanted skulls. They were claimed by his foes, a paladin and priest of Helm. They intended to destroy the items, but at least forty were stolen by crafty thieves on the way back to Sembia.
+При броске в цель череп мчится вперёд и взрывается, нанося жертве и всем вокруг в радиусе 10 футов 10d8 урона магией (успешный спасбросок реакции с УС 25 позволяет получить половину урона)
+Вес: 1 фунт~
+@12049    = ~Взрывающийся череп Ксайнлафара~ // HoF
+@12050    = ~Ксайнлафар, безумный Красный Волшебник Тэя, прославился тем, что делал из черепов поверженных врагов оружие. Наиболее известны его "Летучие черепа". По своему действию они мало отличаются от заклинания "Череп-ловушка", только применяются не для защиты, а для нападения. Ксайнлафар умер в 913 ЛД, успев использовать меньше половины зачарованных черепов. Оставшиеся забрали себе враги волшебника, жрец Хелма и паладин. Они намеревались уничтожить черепа, но хитрые воры утащили у них на обратном пути в Сембию не меньше сорока штук.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-When thrown, the skull hovers at the target point until a creature comes near it, at which point it explodes for 20d8 magic damage, harming everyone within 10' (Reflex DC 35 for half)
-Weight: 1 lb.~
+При броске в цель череп мчится вперёд и взрывается, нанося жертве и всем вокруг в радиусе 10 футов 20d8 урона магией (успешный спасбросок реакции с УС 35 позволяет получить половину урона)
+Вес: 1 фунт~
 //@12051    = ~Howling Wolf Charm~
-@12052    = ~This is a smallish, silver wolf's head charm of the sort sometimes fashioned by Rashemen shamans of the Tribe of the Wolf. By gripping the charm tightly and howling towards the heavens, one may summon a fierce gray wolf to aid him or her in battle. Such charms are said to tarnish as their power wanes, and eventually disintegrate into silvery powder when the last of their summoning energy has been consumed.
+@12052    = ~Этот небольшой серебряный талисман выполнен в виде головы воющего волка. Подобные вещицы порой мастерят шаманы племени Волка, обитающего в Рашемене. Если сжать талисман в руке и завыть в небо, можно вызвать яростного серого волка, который будет готов помочь вам в битве. Сила таких талисманов не вечна. Если талисман начинает тускнеть, значит волшебство покидает зачарованную вещь. Когда талисман окажется полностью опустошённым, он рассыпется в серебристую пыль.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-User can expend 1 charge to summon a wolf for 8 rounds. The charm is destroyed after all its charges are expended.
-Weight: 1 lb.~
+Можно потратить 1 заряд, чтобы вызвать волка на 8 раундов; талисман уничтожается после того, как все его заряды будут израсходованы
+Вес: 1 фунт~
 //@12053    = ~Circlet of the Tribe of the Wolf~
-@12054    = ~This is a smallish, silver wolf's head charm of the sort sometimes fashioned by Rashemen shamans of the Tribe of the Wolf. By gripping the charm tightly and howling towards the heavens, one may summon a fierce gray wolf to aid him or her in battle. Such charms are said to tarnish as their power wanes, and eventually disintegrate into silvery powder when the last of their summoning energy has been consumed.
+@12054    = ~Этот небольшой серебряный талисман выполнен в виде головы воющего волка. Подобные вещицы порой мастерят шаманы племени Волка, обитающего в Рашемене. Если сжать талисман в руке и завыть в небо, можно вызвать яростного серого волка, который будет готов помочь вам в битве. Сила таких талисманов не вечна. Если талисман начинает тускнеть, значит волшебство покидает зачарованную вещь. Когда талисман окажется полностью опустошённым, он рассыпется в серебристую пыль.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-User can expend 1 charge to summon a werewolf for 16 rounds. The charm is destroyed after all its charges are expended.
-Weight: 1 lb.~
+Можно потратить 1 заряд, чтобы вызвать вервольфа на 16 раундов; талисман уничтожается после того, как все его заряды будут израсходованы
+Вес: 1 фунт~
 
 
 //@12055    = ~Iron Rations~
 //@12056    = ~Item description can remain the same; if new description is needed put it here~
 //@12057    = ~Iron Rations~ // HoF
-@12058    = ~Unlike normal rations, iron rations contain dried foodstuffs that can be stored for extended periods of time without spoiling. Combined with a ten-foot pole and fifty feet of rope, they round out an old school adventurer's backpack nicely. 
+@12058    = ~В отличие от обычного, этот паёк состоит из высушенных продуктов, которые долго не портятся. Сухой паёк, трёхметровая палка и пятьдесят футов верёвки - вот вам походный комплект искателя приключений "старой школы".
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Heals 15 Hit Points.
-Weight: 1~
+Исцеляет 15 пунктов здоровья
+Вес: 1~
 //@12059    = ~Strange Object~
 //@12060    = ~Item description can remain the same; if new description is needed put it here~
 //@12061    = ~Strange Object~ // HoF
 //@12062    = ~Item description can remain the same; if new description is needed put it here~
 //@12063    = ~Mossy Poultice~
-@12064    = ~The druids of the Moonshae Isles carried these small urns with them as they walked with the war bands of the Moonshae. The urns were reported to carry moss that had grown on the field of battle, and when the poultice was applied to the wounds of warriors and adventurers, it aided their recovery. 
+@12064    = ~Друиды Муншайских островов носили с собой эти маленькие урны во время своих походов с боевыми отрядами островов. В урнах хранился мох, выросший на полях битвы и когда припарки из этого мха прикладывались к ранам воинов и искателей приключений, что значительно ускоряло их исцеление.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Special:
-  Spell Power: Can cast the spell Cure Critical Wounds (at level 20) once per day
-Weight: 2~
+Особенности:
+ Заклинание: владелец может применить заклинание "Исцеление критических ран" (как заклинатель двадцатого уровня) раз в день
+Вес: 2~
 //@12065    = ~Moldy Poultice~
-@12066    = ~The druids of the Moonshae Isles carried these small urns with them as they walked with the war bands of the Moonshae. The urns were reported to carry moss that had grown on the field of battle, and when the poultice was applied to the wounds of warriors and adventurers, it aided their recovery. 
+@12066    = ~Друиды Муншайских островов носили с собой эти маленькие урны во время своих походов с боевыми отрядами островов. В урнах хранился мох, выросший на полях битвы и когда припарки из этого мха прикладывались к ранам воинов и искателей приключений, что значительно ускоряло их исцеление.
 
-This urn looks like it has been left in a cold, dank place too long, for mold has grown across the exterior. This mold, however, is an even more potent version of the poultice it once contained, and given additional enchantments under the light of Selune beneath the Moonshae Isles. It is capable of not only healing wounds, but restoring the breath of life to a fallen warrior. 
+Эта урна выглядит так, будто она слишком долго находилась в холодном и влажном месте, так как её внешняя сторона покрыта плесенью. Однако, эта плесень работает даже лучше, чем та припарка, что изначально была в этой урне, и, благодаря свету Селуны под Муншайскими островами, на неё наложились дополнительные чары. Она не только способна исцелять раны, но даже может вдохнуть жизнь в павшего воина.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Special:
-  Spell Power: Can cast the spell Heal (at level 30) once per day
-  Spell Power: Can cast the spell Resurrection (at level 30) once per day
-Weight: 2 lb.~
+Особенности:
+ Заклинание: владелец может применить заклинание "Исцеление" (как заклинатель 30-ого уровня) раз в день
+ Заклинание: владелец может применить заклинание "Воскрешение" (как заклинатель 30-ого уровня) раз в день
+Вес: 2 фунта~
 //@12067    = ~Dreisbach's Iron Hoop~
 //@12068    = ~Item description can remain the same; if new description is needed put it here~
 //@12069    = ~Geithman's Iron-Ringed Wager~
@@ -10384,66 +10385,66 @@ Weight: 2 lb.~
 //@12071    = ~Oagla'ta's Dead Cat Snack~
 //@12072    = ~Item description can remain the same; if new description is needed put it here~
 //@12073    = ~Oagla'ta's Delicious Dead Cat Snack~ // HoF
-@12074    = ~Half-orcs are well known for their strange dietary tastes, and Oagla'ta is no exception. When Oagla'ta feels hunger pangs, or when she feels a bit on edge, she'll take out her trusty, pungent, slightly gnawed upon dead cat. Horrified onlookers watch in dismay as Oagla'ta chews on the end of the dead cat, much the same way a cow chews its cud. What most people fail to notice, however, is that the cat carcass never seems to deteriorate, even after long periods of chewing. However, it does seem to provide Oagla'ta with some healthful benefit, as she usually seems very refreshed after gnawing on the dead cat snack.
+@12074    = ~Полуорки славятся своими странными кулинарными пристрастиями, и Оагла'та не является исключением из правила. Если Оагла'та проголодалась или нервничает, то она достаёт свою верную, пахучую, слегка обглоданную дохлую кошку и начинает её жевать. Наблюдателям это зрелище может показаться отвратительным, однако очевидно, что жевание дохлой кошки благотворно действует на здоровье и настроение Оагла'ты. Удивительно, но скелет кошки не разваливается даже после продолжительного жевания.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Heals 15 Hit Points.
-Usable 3 times per day.
-Only usable by half-orcs
-Weight: 10~
+Исцеляет 15 пунктов здоровья
+Можно использовать 3 раза в день
+Могут использовать только полуорки
+Вес: 10 фунтов~
 
 
 //@12075    = ~Mummy's Tea~
 //@12076    = ~Item description can remain the same; if new description is needed put it here~
 //@12077    = ~Elven Healing Wine~
-@12078    = ~This bottle of elven wine also has the properties of a healing potion. During one of the elven festivals, the priests of the Seldarine's Hand imbibed too much that day and accidentally added a barrel of elven wine to a mixture that was intended for healing potions. Due to an interaction with the enchantments surrounding the Severed Hand, this bottle has powerful but unpredictable effects.
+@12078    = ~Эта бутылка эльфийского вина также обладает свойствами зелья лечения. На одном из эльфийских праздников жрецы Руки Селдарин перебрали и случайно вылили бочонок эльфийского вина в смесь, заготовленную для лечебных зелий. Из-за взаимодействия с чарами, окружающими Отрубленную Руку, эта бутылка обладает мощными, но непредсказуемыми эффектами.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Heals 1-100 hit points
-Weight: 1 lb.~
+Исцеляет 1-100 пунктов здоровья
+Вес: 1 фунт~
 //@12079    = ~Spirit Essence~
-@12080    = ~This valuable potion is made by capturing and distilling the spirits of trolls. Normally only attempted by powerful necromancers and enchanters, the process results in a powerful healing potion able to instantly regenerate even severe wounds.
+@12080    = ~Это ценное зелье изготовлено из пойманных и очищенных духов троллей. Такое под силу только самым сильным некромантам и чародеям. В результате получается сильное зелье лечения, мгновенно излечивающее даже самые серьёзные раны.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Heals 40 hit points
-Weight: 1 lb.~
+Исцеляет 40 пунктов здоровья
+Вес: 1 фунт~
 //@12081    = ~Spirit Essence~ //HoF
-@12082    = ~This valuable potion is made by capturing and distilling the spirits of trolls. Normally only attempted by powerful necromancers and enchanters, the process results in a powerful healing potion able to instantly regenerate even severe wounds.
+@12082    = ~Это ценное зелье изготовлено из пойманных и очищенных духов троллей. Такое под силу только самым сильным некромантам и чародеям. В результате получается сильное зелье лечения, мгновенно излечивающее даже самые серьёзные раны.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Heals 100 hit points
-Weight: 1 lb.~
+Исцеляет 100 пунктов здоровья
+Вес: 1 фунт~
 
 //@12083    = ~Potion of Heroism~
-@12084    = ~This potion is imbued with a powerful enchantment, which will simulate a temporary increase in level. The effect lasts for 10 turns, making this potion a great ally in a long combat.
+@12084    = ~Это зелье содержит мощные чары, которые словно повышают на время уровень персонажа. Эффект длится 10 ходов, так что это хорошее подспорье в смертельной схватке.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Hit Points:  +20
-Attack Bonus:  +2
-Fortitude Saves: +1
-Reflex Saves: +1
-Will Saves: +1
-Duration:  10 turns
-Weight:  1 lb.~
+Пункты здоровья: +20
+Атака: +2
+Спасбросок стойкости: +1
+Спасбросок реакции: +1
+Спасбросок воли: +1
+Длительность: 10 ходов
+Вес: 1 фунт~
 //@12085    = ~Potion of Invisibility~
-@12086    = ~This potion confers invisibility similar to the second level wizard spell of the same name. Actions involving combat cause termination of the invisible state. Barring combat, the effects will last for 12 hours.
+@12086    = ~Это зелье наделяет невидимостью, подобно одноимённому заклинанию второго уровня. Если персонаж вступит в бой, невидимость пропадёт. Если этого не делать, эффект продлится 12 часов.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Imbiber becomes invisible
-Weight: 1 lb.~
+Выпивший зелье становится невидимым
+Вес: 1 фунт~
 //@12087    = ~Potion of Absorption~
-@12088    = ~This potion, as would be expected, will absorb external attacks once it has been consumed. All blunt attacks made against the imbiber are cushioned, so that only the strongest get through. This effect lasts for 10 rounds.
+@12088    = ~Это зелье после употребления позволяет легче выносить вражеские атаки. Все удары дробящим оружием, за исключением самых сильных, кажутся слабыми тычками. Эффект длится 10 ходов.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Resistance:  25/- Bludgeoning Resistance
-Weight: 1 lb.~
+Сопротивление: 25/- дробящему урону электричеству
+Вес: 1 фунт~
 //@12089    = ~Potion of Invulnerability~
 @12090    = ~This potion confers near-complete invulnerability to all damage. The effects are short-lived, however, lasting for only 2 rounds.
 
