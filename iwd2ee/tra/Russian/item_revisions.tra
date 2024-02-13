@@ -9878,90 +9878,91 @@
 //@11931    = ~Arrows +2~
 //@11932    = ~Item description can remain the same; if new description is needed put it here~
 //@11933    = ~Corrosive Arrows +1~
-@11934    = ~This arrow is coated in acid so that when it strikes an enemy, it will not only pierce its flesh but also begin to eat away at the wound, enlarging and deepening its severity.
+@11934    = ~Эта стрела покрыта кислотой, поэтому, когда она попадает во врага, она не только пронзает его плоть, но и начинает разъедать рану, увеличивая и углубляя её.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d6  +1
-Attack Bonus:  +1 
-Enchantment:  +1
-Damage Type:  Missile (piercing)
-Special:
-  Corrosion: +1d6 acid damage
-Weight: 0 lb.
-Launcher:  Bow~
-@11935    = ~Arrows of Biting +1~
-@11936    = ~The arrow of biting was designed as a deadly compliment to the archer. With the barbed arrow tip coated in a nasty poison that will infiltrate the bloodstream of its victims causing agony and often times, death.
+Урон: 1d6+1
+Атака: +1
+Зачарование: +1
+Тип урона: метательный (колющий)
+Особенности:
+ Разъедание: +1d6 урона кислотой
+Вес: 0 фунтов
+Оружие: лук~
+@11935    = ~Кусачие стрелы +1~
+@11936    = ~Эта стрела - смертоносное дополнение лучника. Её зазубренный наконечник покрыт ядом, который, проникая в кровь, причиняет жертве невыносимые мучения и нередко смерть.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d6  +1
-Attack Bonus:  +1 
-Enchantment:  +1
-Damage Type:  Missile (piercing)
-Special:
-  Venom: +2 points of poison damage every second for 6 seconds (Fortitude DC 16 + twice the archer's Dexterity bonus)
-Weight: 0 lb.
-Launcher:  Bow~
+Урон: 1d6+1
+Атака: +1
+Зачарование: +1
+Тип урона: метательный (колющий)
+Особенности:
+ Яд: +2 урона ядом каждую секунду в течение 6 секунд (успешный спасбросок стойкости с УС = (16 + удвоенный модификатор ловкости) отменяет эффект)
+Вес: 0 фунтов
+Оружие: Лук~
 //@11937    = ~Arrows of Dispelling~
-@11938    = ~The arrow of dispelling will remove the magical enchantments that its victim is surrounded by.
+@11938    = ~Эта стрела снимает магические эффекты, которыми окружена жертва.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d6
-Damage Type:  Missile (piercing)
-Special:  Dispel Magic on target (Will DC 35)
-Weight: 0 lb.
-Launcher:  Bow~
+Урон: 1d6
+Тип урона: метательный (колющий)
+Особенности:
+ Рассеивание: при попадании снимают с жертвы магические эффекты (успешный спасбросок воли с УС 35 отменяет эффект)
+Вес: 0 фунтов
+Оружие: Лук~
 //@11939    = ~Arrows of Flame +1~
-@11940    = ~The arrow of fire is a magical arrow that will burst into flames as it is fired at an enemy. The effect is similar to an arrow doused in oil and set to flame.
+@11940    = ~Эта магическая стрела вспыхивает пламенем при попадании в цель. Эффект примерно такой же, как если бы её окунули в масло и подожгли.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d6  +1
-Attack Bonus:  +1 
-Enchantment:  +1
-Damage Type:  Missile (piercing)
-Special:
-  Flame: +1d6 fire damage
-Weight: 0 lb.
-Launcher:  Bow~
+Урон: 1d6+1
+Атака: +1
+Зачарование: +1
+Тип урона: метательный (колющий)
+Особенности:
+ Пламя: +1d6 очков урона огнём
+Вес: 0 фунтов
+Оружие: Лук~
 //@11941    = ~Frost Arrows +1~
-@11942    = ~The arrow of ice is magically enhanced so as to burst into a rolling ball of ice and cold when fired. When the arrow strikes its victim, a shock of cold will travel through its body, both burning and numbing to the very core.
+@11942    = ~Эта магическая стрела зачарована так, что после выстрела взрывается крутящимся комом льда и холода. Когда стрела поражает свою жертву, ударная волна холода проходит по всему её телу, обжигая и промораживая до самых костей.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d6  +1
-Attack Bonus:  +1 
-Enchantment:  +1
-Damage Type:  Missile (piercing)
-Special:  
-  Frost: +1d6 cold damage
-Weight: 0 lb.
-Launcher:  Bow~
-@11943    = ~Arrows of Piercing +3~
-@11944    = ~The arrow of piercing is long and thin, imbued with magical properties that allow it to 'push' itself through armor, striking out towards the heart of the victim. It deals piercing damage rather than missile damage.
+Урон: 1d6+1
+Атака: +1
+Зачарование: +1
+Тип урона: метательный (колющий)
+Особенности:
+ Стужа: +1d6 очков урона холодом
+Вес: 0 фунтов
+Оружие: Лук~
+@11943    = ~Бронебойные стрелы +3~
+@11944    = ~Эта стрела длинная и тонкая, она обладает мощными магическими свойствами, которые позволяют ей "проталкивать" себя сквозь доспехи, поражая сердце жертвы.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d6+6
-Attack Bonus:  +4 
-Enchantment:  +3
-Damage Type:  Piercing
-Weight: 0 lb.
-Launcher:  Bow~
+Урон: 1d6+6
+Атака: +4
+Зачарование: +3
+Тип урона: метательный (колющий)
+Вес: 0 фунтов
+Оружие: Лук~
 //@11945    = ~Holdfast Arrows~
-@11946    = ~Employed almost exclusively by Eldathyn rangers in the western heartlands of Faerun, Holdfast Arrows are prized for their ability to subdue a target with little harm. The arrows are commonly used on rampaging animals but are quite effective against malicious humanoids. They are typically adorned with blue and green ribbons and flowers to show that they were created by the peacekeepers of Eldath. This makes them somewhat less effective in combat.
+@11946    = ~Стрелы обездвиживания используют преимущественно следопыты-последователи Эльдат, живущие в Срединных Западных землях Фаэруна. Они высоко ценят эти снаряды за способность обезвредить цель, не нанеся ей большого вреда. Чаще всего, с их помощью ловят животных, но и против гуманоидных злоумышленников они достаточно эффективны. Обычно такие стрелы украшены голубыми и зелёными лентами и цветами, чтобы показать, что они созданы миротворцами Эльдат. Это, к сожалению, делает их менее эффективными в бою.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d2 - 1
-Attack Bonus:  +3
-Damage Type:  Missile (piercing)
-Special:
-  Hold Fast: Entangle effect on the target for four rounds (Reflex DC 30)
-Weight:  0 lb.
-Launcher:  Bow~
+Урон: 1d2-1
+Атака: +3
+Тип урона: метательный (колющий)
+Особенности:
+ Удержание: накладывает на жертву эффект заклинания "Запутывание" на 4 раунда (успешный спасбросок реакции с УС 30 отменяет эффект)
+Вес: 0 фунта
+Оружие: лук~
 //@11947    = ~Arrows of Disruption +2~
 @11948    = ~These arrows were enhanced through magical means when they were created. They appear slightly straighter than the average arrow, almost alive as they effortlessly leave your bow and streak towards their target with deadly accuracy.
 
