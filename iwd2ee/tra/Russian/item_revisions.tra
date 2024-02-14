@@ -11204,271 +11204,273 @@
 //@12245    = ~Wand of Summon Monster~
 //@12246    = ~Item description can remain the same; if new description is needed put it here~
 //@12247    = ~Wand of the Heavens~
-@12248    = ~This wand will cause a pillar of flame to shoot out of the sky and strike the target point. The flames will do 9D6 damage to the targets in range, unless the targets make a Reflex save in which case they will take half. The wand only has a certain amount of charges and will be destroyed when they are used.
+@12248    = ~Этот жезл призывает на цель столб огня с небес. Огонь наносит 9d6 урона (успешный спасбросок реакции уменьшает урон вдвое) самой цели и тем, кто оказался рядом. В жезле ограниченное число зарядов; когда они кончатся, жезл рассыпется в прах.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Effect:  Flame Strike
-Damage:  9d6 (Reflex DC 18)
-Range:  120 ft.
-Area:  10 ft radius
-Weight: 1 lb.~
+Эффект: подобен заклинанию "Огненный удар"
+Урон: 9d6 (успешный спасбросок реакции с УС 18 уменьшает урон вдвое)
+Дальность: 120 футов
+Зона действия: радиус 10 футов
+Вес: 1 фунт~
 //@12249    = ~Wand of Trap Detection~
 //@12250    = ~Item description can remain the same; if new description is needed put it here~
 //@12251    = ~Wand of Grease~
-@12252    = ~Elytharra of Neverwinter created this wand to slow and frustrate attackers on those rare occasions when she was called upon to do battle. The wand is a fat piece of knotted driftwood that appears conspicuously mundane.
+@12252    = ~Элитарра из Невервинтера создала этот жезл для тех редких случаев, когда ей приходилось участвовать в бою. С виду этот жезл - обыкновенный кусок сучковатого дрейфующего дерева, но он позволяет замедлять врагов и в буквальном смысле слова лишать их опоры под ногами.
 
-STATISTICS;
+ПАРАМЕТРЫ:
 
-Special:  Can cast Grease (Reflex DC 12)
-Weight: 1 lb.~
-@12253    = ~Wand of Enervation~
-@12254    = ~Wands are 1 1/4 feet long and slender. They are made of ivory, bone, or wood and are usually tipped with something - metal, crystal, stone, etc. They are fragile and tend to break easily. Because of this, they are often kept in cases. 
+Особенности: позволяет прочитать заклинание "Слизь" (успешный спасбросок реакции с УС 12 позволяет избежать эффекта)
+Вес: 1 фунт~
+@12253    = ~Жезл сохранения~
+@12254    = ~Жезлы обычно длинные и тонкие, и имеют длину в один фут с четвертью. Их изготавливают из кости, слоновой кости или дерева и, как правило, покрывают металлом, стеклом, камнем и т.п. Жезлы отличаются повышенной хрупкостью и часто ломаются. Поэтому многие хранят их в футлярах.
 
-Wands are powered by charges, each use costing one or more charges (depending on the item). When a wand runs out of charges, it is consumed and destroyed.
+Жезл содержит несколько зарядов того или иного заклинания, и при каждом применении тратится один или более таких зарядов (в зависимости от вида жезла). Когда заряды заканчиваются, жезл самоуничтожается.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Energy Drain: Drains three levels from the target (Fortitude DC 26)
-Weight: 1 lb.~
-@12255    = ~Lesser Wand of Haste~
-@12256    = ~Wands are 1 1/4 feet long and slender. They are made of ivory, bone, or wood and are usually tipped with something - metal, crystal, stone, etc. They are fragile and tend to break easily. Because of this, they are often kept in cases. 
+Отток энергии: вытягивает три уровня из цели (успешный спасбросок стойкости с УС 26 позволяет избежать эффекта)
+Вес: 1 фунт~
+@12255    = ~Малый жезл спешки~
+@12256    = ~Жезлы обычно длинные и тонкие, и имеют длину в один фут с четвертью. Их изготавливают из кости, слоновой кости или дерева и, как правило, покрывают металлом, стеклом, камнем и т.п. Жезлы отличаются повышенной хрупкостью и часто ломаются. Поэтому многие хранят их в футлярах.
 
-Wands are powered by charges, each use costing one or more charges (depending on the item). When a wand runs out of charges, it is consumed and destroyed.
+Жезл содержит несколько зарядов того или иного заклинания, и при каждом применении тратится один или более таких зарядов (в зависимости от вида жезла). Когда заряды заканчиваются, жезл самоуничтожается.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Can grant the effects of the spell Haste to a creature for 2 rounds
-Weight: 1 lb.~
+Может дать одному существу эффект заклинания "Спешка" на 2 раунда
+Вес: 1 фунт~
 //@12257    = ~Wand of the Dead~
 //@12258    = ~Item description can remain the same; if new description is needed put it here~
 //@12259    = ~Spider Wand~
 //@12260    = ~Item description can remain the same; if new description is needed put it here~
-@12261    = ~Identify Creature Wand~
-@12262    = ~Wands are 1 1/4 feet long and slender. They are made of ivory, bone, or wood and are usually tipped with something - metal, crystal, stone, etc. They are fragile and tend to break easily. Because of this, they are often kept in cases. 
+@12261    = ~Жезл опознания существа~
+@12262    = ~Жезлы обычно длинные и тонкие, и имеют длину в один фут с четвертью. Их изготавливают из кости, слоновой кости или дерева и, как правило, покрывают металлом, стеклом, камнем и т.п. Жезлы отличаются повышенной хрупкостью и часто ломаются. Поэтому многие хранят их в футлярах.
 
-Wands are powered by charges, each use costing one or more charges (depending on the item). When a wand runs out of charges, it is consumed and destroyed.
+Жезл содержит несколько зарядов того или иного заклинания, и при каждом применении тратится один или более таких зарядов (в зависимости от вида жезла). Когда заряды заканчиваются, жезл самоуничтожается.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Can cast the spell Identify Creature
-Weight: 1 lb.~
+Может прочитать заклинание "Опознание существа"
+Вес: 1 фунт~
 //@12263    = ~Wand of Burning Hands~
-@12264    = ~Wands are 1 1/4 feet long and slender. They are made of ivory, bone, or wood and are usually tipped with something - metal, crystal, stone, etc. They are fragile and tend to break easily. Because of this, they are often kept in cases. 
+@12264    = ~Жезлы обычно длинные и тонкие, и имеют длину в один фут с четвертью. Их изготавливают из кости, слоновой кости или дерева и, как правило, покрывают металлом, стеклом, камнем и т.п. Жезлы отличаются повышенной хрупкостью и часто ломаются. Поэтому многие хранят их в футлярах.
 
-Wands are powered by charges, each use costing one or more charges (depending on the item). When a wand runs out of charges, it is consumed and destroyed.
+Жезл содержит несколько зарядов того или иного заклинания, и при каждом применении тратится один или более таких зарядов (в зависимости от вида жезла). Когда заряды заканчиваются, жезл самоуничтожается.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Can cast the spell Burning Hands (5d4 fire damage; Reflex DC 14 for half)
-Weight: 1 lb.~
-@12265    = ~Wand of Armor~
-@12266    = ~Wands are 1 1/4 feet long and slender. They are made of ivory, bone, or wood and are usually tipped with something - metal, crystal, stone, etc. They are fragile and tend to break easily. Because of this, they are often kept in cases. 
+Может прочитать заклинание "Горящие руки" (наносит 5d4 огненного урона, успешный спасбросок реакции с УС 14 позволяет снизить урон вдвое)
+Вес: 1 фунт~
+@12265    = ~Жезла брони~
+@12266    = ~Жезлы обычно длинные и тонкие, и имеют длину в один фут с четвертью. Их изготавливают из кости, слоновой кости или дерева и, как правило, покрывают металлом, стеклом, камнем и т.п. Жезлы отличаются повышенной хрупкостью и часто ломаются. Поэтому многие хранят их в футлярах.
 
-Wands are powered by charges, each use costing one or more charges (depending on the item). When a wand runs out of charges, it is consumed and destroyed.
+Жезл содержит несколько зарядов того или иного заклинания, и при каждом применении тратится один или более таких зарядов (в зависимости от вида жезла). Когда заряды заканчиваются, жезл самоуничтожается.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Grants a creature a +4 generic AC bonus for 6 rounds
-Range: 100 ft.
-Weight: 1 lb.~
-@12267    = ~Elemental Breach Wand~
-@12268    = ~Wands are 1 1/4 feet long and slender. They are made of ivory, bone, or wood and are usually tipped with something - metal, crystal, stone, etc. They are fragile and tend to break easily. Because of this, they are often kept in cases.
+Увеличивает класс защиты (общий) одного существа на 4 на 6 раундов
+Дальность: 100 футов
+Вес: 1 фунт~
+@12267    = ~Жезл разрушения стихий~
+@12268    = ~Жезлы обычно длинные и тонкие, и имеют длину в один фут с четвертью. Их изготавливают из кости, слоновой кости или дерева и, как правило, покрывают металлом, стеклом, камнем и т.п. Жезлы отличаются повышенной хрупкостью и часто ломаются. Поэтому многие хранят их в футлярах.
 
-Wands are powered by charges, each use costing one or more charges (depending on the item). When a wand runs out of charges, it is consumed and destroyed.
+Жезл содержит несколько зарядов того или иного заклинания, и при каждом применении тратится один или более таких зарядов (в зависимости от вида жезла). Когда заряды заканчиваются, жезл самоуничтожается.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Causes a creature to take 30% more fire, cold, electricity, and acid damage for 20 rounds (no save, non-cumulative)
-Range: 100 ft.
-Weight: 1 lb.~
-@12269    = ~Wand of Dazzling Colors~
-@12270    = ~Wands are 1 1/4 feet long and slender. They are made of ivory, bone, or wood and are usually tipped with something - metal, crystal, stone, etc. They are fragile and tend to break easily. Because of this, they are often kept in cases. 
+Существо, на которое наложен эффект жезла, будет получать на 30% больше урона от огня, холода, электричества и кислоты в течение 20 раундов (спасброска нет, эффект не суммируется)
+Дальность: 100 футов
+Вес: 1 фунт~
+@12269    = ~Жезл ослепительных цветов~
+@12270    = ~Жезлы обычно длинные и тонкие, и имеют длину в один фут с четвертью. Их изготавливают из кости, слоновой кости или дерева и, как правило, покрывают металлом, стеклом, камнем и т.п. Жезлы отличаются повышенной хрупкостью и часто ломаются. Поэтому многие хранят их в футлярах.
 
-Wands are powered by charges, each use costing one or more charges (depending on the item). When a wand runs out of charges, it is consumed and destroyed.
+Жезл содержит несколько зарядов того или иного заклинания, и при каждом применении тратится один или более таких зарядов (в зависимости от вида жезла). Когда заряды заканчиваются, жезл самоуничтожается.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Can release a spray of colors, causing any creature in range that sees the colors to be stunned for 1d2 seconds (Will DC 14)
-Weight: 1 lb.~
+Может выпустить цветные брызги, и любое существо в радиусе действия, которое их увидит будет ошеломлено на 1d2 секунды (успешный спасбросок воли с УС 14 позволяет избежать эффекта
+
+Отток энергии: вытягивает три уровня из цели (успешный спасбросок стойкости с УС 26 позволяет избежать эффекта
+Вес: 1 фунт~
 //@12271    = ~Wand of the Spider's Web~
-@12272    = ~Wands are 1 1/4 feet long and slender. They are made of ivory, bone, or wood and are usually tipped with something - metal, crystal, stone, etc. They are fragile and tend to break easily. Because of this, they are often kept in cases. 
+@12272    = ~Жезлы обычно длинные и тонкие, и имеют длину в один фут с четвертью. Их изготавливают из кости, слоновой кости или дерева и, как правило, покрывают металлом, стеклом, камнем и т.п. Жезлы отличаются повышенной хрупкостью и часто ломаются. Поэтому многие хранят их в футлярах.
 
-Wands are powered by charges, each use costing one or more charges (depending on the item). When a wand runs out of charges, it is consumed and destroyed.
+Жезл содержит несколько зарядов того или иного заклинания, и при каждом применении тратится один или более таких зарядов (в зависимости от вида жезла). Когда заряды заканчиваются, жезл самоуничтожается.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Can cast the spell Web (Reflex DC 14)
-Weight: 1 lb.~
-@12273    = ~Wand of Dexterity Bursts~
-@12274    = ~Wands are 1 1/4 feet long and slender. They are made of ivory, bone, or wood and are usually tipped with something - metal, crystal, stone, etc. They are fragile and tend to break easily. Because of this, they are often kept in cases. 
+Может прочитать заклинание "Паутина" (с УС спасброска реакции = 14)
+Вес: 1 фунт~
+@12273    = ~Жезл всплеска ловкости~
+@12274    = ~Жезлы обычно длинные и тонкие, и имеют длину в один фут с четвертью. Их изготавливают из кости, слоновой кости или дерева и, как правило, покрывают металлом, стеклом, камнем и т.п. Жезлы отличаются повышенной хрупкостью и часто ломаются. Поэтому многие хранят их в футлярах.
 
-Wands are powered by charges, each use costing one or more charges (depending on the item). When a wand runs out of charges, it is consumed and destroyed.
+Жезл содержит несколько зарядов того или иного заклинания, и при каждом применении тратится один или более таких зарядов (в зависимости от вида жезла). Когда заряды заканчиваются, жезл самоуничтожается.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Can grant a creature +10 Dexterity for 3 rounds
-Range: 100 ft.
-Weight: 1 lb.~
-@12275    = ~Wand of Images~
-@12276    = ~Wands are 1 1/4 feet long and slender. They are made of ivory, bone, or wood and are usually tipped with something - metal, crystal, stone, etc. They are fragile and tend to break easily. Because of this, they are often kept in cases.
+Увеличивает ловкость одного существа на 10 на 3 раунда
+Дальность: 100 футов
+Вес: 1 фунт~
+@12275    = ~Жезл образов~
+@12276    = ~Жезлы обычно длинные и тонкие, и имеют длину в один фут с четвертью. Их изготавливают из кости, слоновой кости или дерева и, как правило, покрывают металлом, стеклом, камнем и т.п. Жезлы отличаются повышенной хрупкостью и часто ломаются. Поэтому многие хранят их в футлярах.
 
-Wands are powered by charges, each use costing one or more charges (depending on the item). When a wand runs out of charges, it is consumed and destroyed.
+Жезл содержит несколько зарядов того или иного заклинания, и при каждом применении тратится один или более таких зарядов (в зависимости от вида жезла). Когда заряды заканчиваются, жезл самоуничтожается.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Can grant two mirror images to a creature (as per the Mirror Image spell) for 4 rounds
-Range: 100 ft.
-Weight: 1 lb.~
+Даёт два отражённых образа одному существу (как при заклинании "Отражённый образ") на 4 раунда
+Дальность: 100 футов
+Вес: 1 фунт~
 //@12277    = ~Wand of Melf's Acid Arrow~
-@12278    = ~Wands are 1 1/4 feet long and slender. They are made of ivory, bone, or wood and are usually tipped with something - metal, crystal, stone, etc. They are fragile and tend to break easily. Because of this, they are often kept in cases. 
+@12278    = ~Жезлы обычно длинные и тонкие, и имеют длину в один фут с четвертью. Их изготавливают из кости, слоновой кости или дерева и, как правило, покрывают металлом, стеклом, камнем и т.п. Жезлы отличаются повышенной хрупкостью и часто ломаются. Поэтому многие хранят их в футлярах.
 
-Wands are powered by charges, each use costing one or more charges (depending on the item). When a wand runs out of charges, it is consumed and destroyed.
+Жезл содержит несколько зарядов того или иного заклинания, и при каждом применении тратится один или более таких зарядов (в зависимости от вида жезла). Когда заряды заканчиваются, жезл самоуничтожается.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Can cast the spell Melf's Acid Arrow, dealing 2d4 acid damage per round for 3 rounds
-Weight: 1 lb.~
-//@12279    = ~Wand of Enfeeblement~
-@12280    = ~Wands are 1 1/4 feet long and slender. They are made of ivory, bone, or wood and are usually tipped with something - metal, crystal, stone, etc. They are fragile and tend to break easily. Because of this, they are often kept in cases. 
+Может прочитать заклинание "Кислотная стрела Мелфа" (наносит 2d4 кислотного урона в раунд на протяжении трёх раундов)
+Вес: 1 фунт~
+//@12279    = ~Жезл слабости~
+@12280    = ~Жезлы обычно длинные и тонкие, и имеют длину в один фут с четвертью. Их изготавливают из кости, слоновой кости или дерева и, как правило, покрывают металлом, стеклом, камнем и т.п. Жезлы отличаются повышенной хрупкостью и часто ломаются. Поэтому многие хранят их в футлярах.
 
-Wands are powered by charges, each use costing one or more charges (depending on the item). When a wand runs out of charges, it is consumed and destroyed.
+Жезл содержит несколько зарядов того или иного заклинания, и при каждом применении тратится один или более таких зарядов (в зависимости от вида жезла). Когда заряды заканчиваются, жезл самоуничтожается.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Can reduce a creature's Strength by 15 for 4 rounds (Fortitude DC 17)
-Weight: 1 lb.~
+Уменьшает силу существа на 15 на 4 раунда (успешный спасбросок выносливости с УС 17 позволяет избежать эффекта)
+Вес: 1 фунт~
 //@12281    = ~Wand of Entanglement~
-@12282    = ~Wands are 1 1/4 feet long and slender. They are made of ivory, bone, or wood and are usually tipped with something - metal, crystal, stone, etc. They are fragile and tend to break easily. Because of this, they are often kept in cases.
+@12282    = ~Жезлы обычно длинные и тонкие, и имеют длину в один фут с четвертью. Их изготавливают из кости, слоновой кости или дерева и, как правило, покрывают металлом, стеклом, камнем и т.п. Жезлы отличаются повышенной хрупкостью и часто ломаются. Поэтому многие хранят их в футлярах.
 
-Wands are powered by charges, each use costing one or more charges (depending on the item). When a wand runs out of charges, it is consumed and destroyed.
+Жезл содержит несколько зарядов того или иного заклинания, и при каждом применении тратится один или более таких зарядов (в зависимости от вида жезла). Когда заряды заканчиваются, жезл самоуничтожается.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Can entangle a creature for 1 round, immobilizing it (Reflex DC 24)
-Weight: 1 lb.~
+Может опутать одно существо на 1 раунд, обездвижив его (успешный спасбросок реакции с УС 24 позволяет избежать эффекта)
+Вес: 1 фунт~
 //@12283    = ~Wand of Evil Protection~
 //@12284    = ~Item description can remain the same; if new description is needed put it here~
 //@12285    = ~Sunscorch Wand~
-@12286    = ~Wands are 1 1/4 feet long and slender. They are made of ivory, bone, or wood and are usually tipped with something - metal, crystal, stone, etc. They are fragile and tend to break easily. Because of this, they are often kept in cases.
+@12286    = ~Жезлы обычно длинные и тонкие, и имеют длину в один фут с четвертью. Их изготавливают из кости, слоновой кости или дерева и, как правило, покрывают металлом, стеклом, камнем и т.п. Жезлы отличаются повышенной хрупкостью и часто ломаются. Поэтому многие хранят их в футлярах.
 
-Wands are powered by charges, each use costing one or more charges (depending on the item). When a wand runs out of charges, it is consumed and destroyed.
+Жезл содержит несколько зарядов того или иного заклинания, и при каждом применении тратится один или более таких зарядов (в зависимости от вида жезла). Когда заряды заканчиваются, жезл самоуничтожается.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Can cast the spell Sunscorch (at level 10)
-Weight: 1 lb.~
-@12287    = ~Doom Wand~
-@12288    = ~Wands are 1 1/4 feet long and slender. They are made of ivory, bone, or wood and are usually tipped with something - metal, crystal, stone, etc. They are fragile and tend to break easily. Because of this, they are often kept in cases. 
+Может прочитать заклинание "Солнечный ожог" (словно оно прочитано заклинателем десятого уровня)
+Вес: 1 фунт~
+@12287    = ~Жезл рока~
+@12288    = ~Жезлы обычно длинные и тонкие, и имеют длину в один фут с четвертью. Их изготавливают из кости, слоновой кости или дерева и, как правило, покрывают металлом, стеклом, камнем и т.п. Жезлы отличаются повышенной хрупкостью и часто ломаются. Поэтому многие хранят их в футлярах.
 
-Wands are powered by charges, each use costing one or more charges (depending on the item). When a wand runs out of charges, it is consumed and destroyed.
+Жезл содержит несколько зарядов того или иного заклинания, и при каждом применении тратится один или более таких зарядов (в зависимости от вида жезла). Когда заряды заканчиваются, жезл самоуничтожается.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Grants a creature a -2 penalty to saving throws and attack rolls for 10 rounds (no save, cumulative)
-Weight: 1 lb.~
+Уменьшает спосброски одного существа на 2 на 10 раундов (спасбросок отсутствует, эффект суммируется)
+Вес: 1 фунт~
 //@12289    = ~Sanctuary Wand~
-@12290    = ~Wands are 1 1/4 feet long and slender. They are made of ivory, bone, or wood and are usually tipped with something - metal, crystal, stone, etc. They are fragile and tend to break easily. Because of this, they are often kept in cases. 
+@12290    = ~Жезлы обычно длинные и тонкие, и имеют длину в один фут с четвертью. Их изготавливают из кости, слоновой кости или дерева и, как правило, покрывают металлом, стеклом, камнем и т.п. Жезлы отличаются повышенной хрупкостью и часто ломаются. Поэтому многие хранят их в футлярах.
 
-Wands are powered by charges, each use costing one or more charges (depending on the item). When a wand runs out of charges, it is consumed and destroyed.
+Жезл содержит несколько зарядов того или иного заклинания, и при каждом применении тратится один или более таких зарядов (в зависимости от вида жезла). Когда заряды заканчиваются, жезл самоуничтожается.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Can grant the effects of the spell Sanctuary to a creature for 5 rounds
-Range: 100 ft.
-Weight: 1 lb.~
-@12291    = ~Lesser Wand of Spell Resistance~
-@12292    = ~Wands are 1 1/4 feet long and slender. They are made of ivory, bone, or wood and are usually tipped with something - metal, crystal, stone, etc. They are fragile and tend to break easily. Because of this, they are often kept in cases.
+Может наложить эффект заклинания "Святилище" на одно существо на 5 раундов
+Дальность: 100 футов
+Вес: 1 фунт~
+@12291    = ~Малый жезл сопротивления магии~
+@12292    = ~Жезлы обычно длинные и тонкие, и имеют длину в один фут с четвертью. Их изготавливают из кости, слоновой кости или дерева и, как правило, покрывают металлом, стеклом, камнем и т.п. Жезлы отличаются повышенной хрупкостью и часто ломаются. Поэтому многие хранят их в футлярах.
 
-Wands are powered by charges, each use costing one or more charges (depending on the item). When a wand runs out of charges, it is consumed and destroyed.
+Жезл содержит несколько зарядов того или иного заклинания, и при каждом применении тратится один или более таких зарядов (в зависимости от вида жезла). Когда заряды заканчиваются, жезл самоуничтожается.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Can grant a creature +6 Spell Resistance for 10 rounds
-Range: 100 ft.
-Weight: 1 lb.~
+Даёт одному существу +6 к сопротивлению магии на 10 раундов
+Дальность: 100 футов
+Вес: 1 фунт~
 //@12293    = ~Hold Person Wand~
-@12294    = ~Wands are 1 1/4 feet long and slender. They are made of ivory, bone, or wood and are usually tipped with something - metal, crystal, stone, etc. They are fragile and tend to break easily. Because of this, they are often kept in cases. 
+@12294    = ~Жезлы обычно длинные и тонкие, и имеют длину в один фут с четвертью. Их изготавливают из кости, слоновой кости или дерева и, как правило, покрывают металлом, стеклом, камнем и т.п. Жезлы отличаются повышенной хрупкостью и часто ломаются. Поэтому многие хранят их в футлярах.
 
-Wands are powered by charges, each use costing one or more charges (depending on the item). When a wand runs out of charges, it is consumed and destroyed.
+Жезл содержит несколько зарядов того или иного заклинания, и при каждом применении тратится один или более таких зарядов (в зависимости от вида жезла). Когда заряды заканчиваются, жезл самоуничтожается.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Can cast the spell Hold Person (Will DC 13)
-Weight: 1 lb.~
+Может прочитать заклинание "Удержание персонажа" (со спасброском воли = 13)
+Вес: 1 фунт~
 //@12295    = ~Wand of Silence~
-@12296    = ~Wands are 1 1/4 feet long and slender. They are made of ivory, bone, or wood and are usually tipped with something - metal, crystal, stone, etc. They are fragile and tend to break easily. Because of this, they are often kept in cases. 
+@12296    = ~Жезлы обычно длинные и тонкие, и имеют длину в один фут с четвертью. Их изготавливают из кости, слоновой кости или дерева и, как правило, покрывают металлом, стеклом, камнем и т.п. Жезлы отличаются повышенной хрупкостью и часто ломаются. Поэтому многие хранят их в футлярах.
 
-Wands are powered by charges, each use costing one or more charges (depending on the item). When a wand runs out of charges, it is consumed and destroyed.
+Жезл содержит несколько зарядов того или иного заклинания, и при каждом применении тратится один или более таких зарядов (в зависимости от вида жезла). Когда заряды заканчиваются, жезл самоуничтожается.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Can cast the spell Silence (Will DC 14)
-Weight: 1 lb.~
-@12297    = ~Wand of Greater Health~
-@12298    = ~Wands are 1 1/4 feet long and slender. They are made of ivory, bone, or wood and are usually tipped with something - metal, crystal, stone, etc. They are fragile and tend to break easily. Because of this, they are often kept in cases.
+Может прочитать заклинание "Тишина" (со спасброском воли = 14)
+Вес: 1 фунт~
+@12297    = ~Жезл великого здоровья~
+@12298    = ~Жезлы обычно длинные и тонкие, и имеют длину в один фут с четвертью. Их изготавливают из кости, слоновой кости или дерева и, как правило, покрывают металлом, стеклом, камнем и т.п. Жезлы отличаются повышенной хрупкостью и часто ломаются. Поэтому многие хранят их в футлярах.
 
-Wands are powered by charges, each use costing one or more charges (depending on the item). When a wand runs out of charges, it is consumed and destroyed.
+Жезл содержит несколько зарядов того или иного заклинания, и при каждом применении тратится один или более таких зарядов (в зависимости от вида жезла). Когда заряды заканчиваются, жезл самоуничтожается.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Can grant a creature 40 temporary hit points for 4 hours
-Range: 5 ft.
-Weight: 1 lb.~
+Даёт одному существу 40 временных пунктов здоровья на 4 часа
+Дальность: 5 футов
+Вес: 1 фунт~
 //@12299    = ~Wand of Charm~
-@12300    = ~Wands are 1 1/4 feet long and slender. They are made of ivory, bone, or wood and are usually tipped with something - metal, crystal, stone, etc. They are fragile and tend to break easily. Because of this, they are often kept in cases. 
+@12300    = ~Жезлы обычно длинные и тонкие, и имеют длину в один фут с четвертью. Их изготавливают из кости, слоновой кости или дерева и, как правило, покрывают металлом, стеклом, камнем и т.п. Жезлы отличаются повышенной хрупкостью и часто ломаются. Поэтому многие хранят их в футлярах.
 
-Wands are powered by charges, each use costing one or more charges (depending on the item). When a wand runs out of charges, it is consumed and destroyed.
+Жезл содержит несколько зарядов того или иного заклинания, и при каждом применении тратится один или более таких зарядов (в зависимости от вида жезла). Когда заряды заканчиваются, жезл самоуничтожается.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Can cast the spell Charm Person or Animal (Will DC 18)
-Weight: 1 lb.~
+Может прочитать заклинание "Очаровать теплокровного" (со спасброском воли = 18)
+Вес: 1 фунт~
 //@12301    = ~Wand of Dismissal~
-@12302    = ~When this potent wand is pointed at a summoned creature and the command word uttered, the creature must make a Will save to avoid being prematurely dismissed and sent back to its home plane. 
+@12302    = ~При указании этим могучим жезлом на призванное существо и произнесении волшебного слова то существо должно прокинуть спасбросок воли, чтобы не оказаться преждевременно возвращённым на свой родной план. 
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Can cast the spell Dismissal (Will DC 22)
-Weight: 1 lb.~
+Может прочитать заклинание "Возвращение" (со спасброском воли = 22)
+Вес: 1 фунт~
 //@12303    = ~Wand of Alicorn Lance~
-@12304    = ~This wand is carved to look similar to a unicorn's horn. Close inspection reveals that it has actually been made from dense elm wood. The wand smells faintly of rain-drenched soil. When used, the wand duplicates the effects of the priest spell Alicorn Lance.
+@12304    = ~Этот жезл сделан в форме рога единорога. При ближайшем рассмотрении оказывается, что он вырезан из твёрдой древесины вяза. От жезла исходит слабый запах влажной земли. При использовании жезл производит такой же эффект, как и жреческое заклинание "Копьё аликорна".
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Can fire an Alicorn Lance at the target, dealing 4d6 piercing damage with no save and outlining the target in a silvery radiance for 3 rounds, granting a -2 AC penalty.
-Weight: 1 lb.~
+Может выпустить копьё аликорна в цель, причиняя 4d6 колющего урона без спасброска и окутывая цель серебристым сиянием на 3 раунда (что даёт давая штраф -2 к классу защиты)
+Вес: 1 фунт~
 //@12305    = ~Wand of Cure Moderate Wounds~
-@12306    = ~This strangely shaped ivory and gold wand is covered with symbols of Lathander, the god of renewal. The wand becomes blade-like towards the end. A single peacock feather is held within an oval space near the flat tip. When used, the wand duplicates the effects of the priest spell Cure Moderate Wounds.
+@12306    = ~Этот жезл странной формы сделан из золота и слоновой кости, и покрыт символами Латандера, бога возрождения. Конец жезла плоский и острый, словно у клинка. Кроме того, жезл украшен пером павлина. При использовании жезл производит такой же эффект, как и жреческое заклинание "Исцеление умеренных ран".
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Can cast Cure Moderate Wounds (heals 2d8+10 hit points)
-Weight: 1 lb.~
-@12307    = ~Wand of Spell Resistance~
-@12308    = ~Looking like an archetypal wand, this slender black ebony rod is tipped with a gold star similar to the stars found in the holy symbol of Mystra, goddess of magic. When used, the wand grants a creature the ability to resist magic.
+Может использовать заклинание "Исцеление умеренных ран" (исцеляет 2d8+10 пунктов здоровья)
+Вес: 1 фунт~
+@12307    = ~Жезл сопротивления магии~
+@12308    = ~Этот тонкий скипетр сделан из чёрного дерева и украшен золотой звездой, похожей на символ Мистры, богини магии. При использовании жезл даёт существу сопротивление магии.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Can set a creature's Spell Resistance to 24 for 20 rounds. Has no effect on enemies.
-Range: 100 ft.
-Weight: 1 lb.~
+Дарует существу сопротивление магии = 24 на 20 раундов; на врагов этот жезл не действует
+Дальность: 100 футов
+Вес: 1 фунт~
 //@12309    = ~Wand of Remove Paralysis~
-@12310    = ~This wand is striking, being crafted from solid silver. At each end, a small glass globe rests within a four-armed silver prong. When used, the wand duplicates the effects of the priest spell Remove Paralysis, curing paralysis, hold and stun.
+@12310    = ~Этот удивительно красивый жезл сделан из чистого серебра. К обоим концам жезла прикреплено по маленькому стеклянному шару, которые, в свою очередь, увенчаны серебряными четырёхзубыми вилками. При использовании жезл производит такой же эффект, как и жреческое заклинание "Снять паралич", исцеляя паралич, удержание и ошеломление.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Can cast the spell Remove Paralysis
-Weight: 1 lb.~
-@12311    = ~Wand of Bursts of Strength~
-@12312    = ~Wands are 1 1/4 feet long and slender. They are made of ivory, bone, or wood and are usually tipped with something - metal, crystal, stone, etc. They are fragile and tend to break easily. Because of this, they are often kept in cases. 
+Может использовать заклинание "Снять паралич"
+Вес: 1 фунт~
+@12311    = ~Жезл всплеска силы~
+@12312    = ~Жезлы обычно длинные и тонкие, и имеют длину в один фут с четвертью. Их изготавливают из кости, слоновой кости или дерева и, как правило, покрывают металлом, стеклом, камнем и т.п. Жезлы отличаются повышенной хрупкостью и часто ломаются. Поэтому многие хранят их в футлярах.
 
-Wands are powered by charges, each use costing one or more charges (depending on the item). When a wand runs out of charges, it is consumed and destroyed.
+Жезл содержит несколько зарядов того или иного заклинания, и при каждом применении тратится один или более таких зарядов (в зависимости от вида жезла). Когда заряды заканчиваются, жезл самоуничтожается.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Can grant a creature +8 Strength for 2 rounds
-Weight: 1 lb.~
+Увеличивает силу одного существа на 8 на 2 раунда
+Вес: 1 фунт~
 
 
 //@12313    = ~Helmet of Charm Protection~
