@@ -11474,76 +11474,77 @@
 
 
 //@12313    = ~Helmet of Charm Protection~
-@12314    = ~As its name suggests, the Helm of Charm Protection protects its wearer from any magical attempts at emotional manipulation. As a precaution, some high-profile mercenary groups regularly equip their members with such helmets to ensure that they can perform their prescribed duties without external interference.
+@12314    = ~Как и следует из его названия, этот шлем защищает владельца от любых попыток магического подчинения его чувств. Некоторые элитные группы наёмников оснащают своих членов такими шлемами в качестве меры предосторожности, чтобы никакое вмешательство извне не воспрепятствовало выполнению ими своих обязанностей.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Generic Armor Bonus: +1
-Special:
-  Wearer is immune to all charm and domination effects
-Weight: 4 lb.~
+Улучшение класса защиты: нет
+Класс защиты: +1 (общий)
+Особенности:
+ Оберёг: владелец шлема иммунен к любым форма очарования или господства
+Вес: 4 фунта~
 //@12315    = ~Wyvern Poison~
-@12316    = ~This bottle contains the unspent poison that has been extracted from a wyvern's stinger. Now refined by yuan-ti alchemical equipment, the poison can be put on a weapon to make it deadlier. However, given the centrality of poison to yuan-ti, it is possible that this poison serves some other purpose in Dragon's Eye.
+@12316    = ~В этой бутылочке содержится яд, извлечённый из жала виверны. Теперь, очищенный с помощью алхимического оборудования юань-ти, яд может быть нанесен на оружие, чтобы сделать его более смертоносным. Однако, учитывая центральную роль яда в культуре юань-ти, вполне возможно, что в Глазе Дракона этот яд служит для каких-то других целей.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-This poison can be put on a weapon to make the weapon poison creatures on hit for six rounds. When full, the bottle has enough poison for three uses.
+Этот яд можно нанести на оружие, чтобы оно отравляло существ при попадании в течение шести раундов. Полной бутылки хватает на три использования.
 
-Weight: 1 lb.~
+Вес: 1 фунт~
 //@12317    = ~Target Arrows~
-@12318    = ~These are extremely well-made arrows, crafted by the finest fletchers for the purpose of competing in tournaments. Arrows of this type are designed for longer flight and increased accuracy. Unfortunately, they lack any kind of ability to pentrate armor or thick hides.
+@12318    = ~Это чрезвычайно искусно выполненные стрелы. Они изготовлены самыми лучшими оружейниками специально для соревнований. Стрелы этого вида легче, чем обычные, а потому летят дальше и точнее. К сожалению, это же мешает им пробивать доспехи или толстые шкуры.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d4
-Attack Bonus: +5
-Damage Type:  Missile (piercing)
-Weight:  0 lb.
-Launcher:  Bow~
+Урон: 1d4
+Атака: +5
+Тип урона: метательный (колющий)
+Вес: 0 фунтов
+Оружие: лук~
 //@12323    = ~Book of Leaves~
-@12324    = ~The covers of this heavy book are made of bark, and the pages are made of pressed leaves. It is not clear what is holding this book together, for you see no bindings and no glue along the spine.
+@12324    = ~Обложка этой тяжёлой книги сделана, судя по всему, из коры, а страницы - из прессованных листьев. Не совсем ясно, что скрепляет эту книгу, поскольку на корешке нет ни швов, ни клея.
 
-When this book is held in the hand of a druid and the druid is touching solid ground, a sheath of bark will sprout from the earth and cover the wielder, making his skin as tough as the skin of a great tree. 
- 
-STATISTICS:
+Когда эта книга находится в руках друида, и друид при этом касается твёрдой земли - из земли прорастает оболочка из коры, покрывая владельца книги, и делая его кожу такой же прочной, как кора векового дерева.
 
-Spell Power: Can cast the spell Barkskin once per day
-Weight:  1 lb.~
+ПАРАМЕТРЫ:
+
+Заклинание: может читать заклинание "Кожа-кора" раз в день
+Вес: 1 фунт~
 //@12325    = ~Pudu's Blight~
-@12326    = ~Captain Pudu, the Captain of the Guard of the Legion of the Chimera, is undoubtedly a master of overkill. Typical of half-goblins, Pudu felt the need to wield the largest weapon physically possible for the vertically challenged half-breeds, the halberd.
+@12326    = ~Капитан Пуду, капитан стражи Легиона Химеры, несомненно является настоящим мастером чрезмерности во всём. Как это часто бывает среди полугоблинов, Пуду счёл необходимым использовать самое большое оружие, которое физически может использовать низкорослый полукровка - алебарду.
 
-Naturally, not satisfied with any ordinary halberd, Pudu commissioned for particularly nasty weapon enchantments on his weapon of choice. In line with the position Pudu held within the Legion of the Chimera, his new halberd, which he affectionately called Pudu's Blight, caused excessive fire damage on those who were unfortunate enough to be on the receiving end of the red glowing blade. In addition, the halberd has been known to stun the opponent, rendering the target unable to fend off Pudu's attack. An opponent that cannot fight back is indeed Pudu's favorite type of opponent - just don't tell that to Pudu.
+Само собой, Пуду не был удовлетворён обыкновенной алебардой и приказал наложить особо опасные чары на своё оружие. В соответствии с положением, занимаемым Пуду в Легионе Химеры, его новая алебарда, которую он нежно называл "Упадок Пуду", наносила непомерный огненный урон тем несчастным, что попадали под удар раскалённого до красна топора. Более того, алебарда ошеломляла противника, делая его неспособным отразить атаки Пуду. Враг, который не способен защищаться - любимый тип врага капитана Пуду, только не стоит ему об этом говорить.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d10 + 5
-Attack Bonus:  +5
-Enchantment:  +5
-Damage Type:  Piercing
-Special:
-  Stunning: 25% chance target is stunned for 1/2 combat round (Fortitude DC 30)
-  Flaming Burst:  50% chance each hit does +2d6 fire damage and 10% chance of +2d10 extra fire damage
-Weight: 14 lb.
-Feat Requirement:  Martial Weapon, Polearm
-Type:  Two-handed~
+Урон: 1d10+5
+Атака: +5
+Зачарование: +5
+Тип урона: колющий
+Особенности:
+  Ошеломление: 25% вероятность ошеломить цель на 1/2 раунда (успешный спасбросок стойкости с УС 30 отменяет эффект)
+  Вспышка пламени: 50% вероятность нанести дополнительно 2d6 огненного урона при каждом попадании и 10% вероятность нанести дополнительно 2d10 огненного урона
+Вес: 14 фунтов
+Необходимая черта: Военное оружие, Древковое
+Тип: двуручное~
 //@12327    = ~Pudu's Fiery Blight~
-@12328    = ~Captain Pudu, the Captain of the Guard of the Legion of the Chimera, is undoubtedly a master of overkill. Typical of half-goblins, Pudu felt the need to wield the largest weapon physically possible for the vertically challenged half-breeds; the halberd.
+@12328    = ~Капитан Пуду, капитан стражи Легиона Химеры, несомненно является настоящим мастером чрезмерности во всём. Как это часто бывает среди полугоблинов, Пуду счёл необходимым использовать самое большое оружие, которое физически может использовать низкорослый полукровка - алебарду.
 
-Naturally, not satisfied with any ordinary halberd, Pudu commissioned for particularly nasty weapon enchantments on his weapon of choice. In line with the position Pudu held within the Legion of the Chimera, his new halberd, which he affectionately called Pudu's Fiery Blight, caused excessive fire damage on those who were unfortunate enough to be on the receiving end of the red glowing blade. In addition, the halberd has been known to stun the opponent, rendering the target unable to fend off Pudu's attack, and even lower the target's resistances. An opponent that cannot fight back is indeed Pudu's favorite type of opponent - just don't tell that to Pudu.
+Само собой, Пуду не был удовлетворён обыкновенной алебардой и приказал наложить особо опасные чары на своё оружие. В соответствии с положением, занимаемым Пуду в Легионе Химеры, его новая алебарда, которую он нежно называл "Огненный упадок Пуду", наносила непомерный огненный урон тем несчастным, что попадали под удар раскалённого до красна топора. Более того, алебарда ошеломляла противника, делая его неспособным отразить атаки Пуду. Враг, который не способен защищаться - любимый тип врага капитана Пуду, только не стоит ему об этом говорить.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d10 + 9
-Attack Bonus:  +9
-Enchantment:  +9
-Damage Type:  Piercing
-Special:
-  Stunning: 25% chance target is stunned for 1/2 combat round (Fortitude DC 40)
-  Flaming Burst:  +2d6 fire damage and 10% chance of +2d10 extra fire damage
-  Lower Resistance: Each hit lowers the target's Spell Resistance by 2 for 10 rounds (Will DC 40, cumulative)
-Weight: 14 lb.
-Feat Requirement:  Martial Weapon, Polearm
-Type:  Two-handed~
+Урон: 1d10+9
+Атака: +9
+Зачарование: +9
+Тип урона: колющий
+Особенности:
+ Ошеломление: 25% вероятность ошеломление жертвы на 1/2 раунда при проваленном спасброске стойкости с УС 40
+ Вспышка пламени: +2d6 урона огнём и 10% вероятность нанести дополнительно 2d10 урона огнём
+ Снижение сопротивления: каждое попадание снижает сопротивление магии цели на 2 на 10 раундов (успешный спасбросок воли позволяет избежать эффекта, эффект суммируется)
+Вес: 14 фунтов
+Необходимая черта: Военное оружие, Древковое
+Тип: двуручное~
 //@12329    = ~Unholy Halberd of Chaos~
 @12330    = ~Like others of its type, this halberd consists of a cleaver-like axe blade mounted on a staff approximately six feet in length. It has also been bestowed with a small number of magical properties, however, thus making it more effective in combat. Its keen blade, for instance, will shear through your opponent's flesh to find the bone while its barbed tip will seek out gaps in their armor.
 
