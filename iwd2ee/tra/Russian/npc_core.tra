@@ -1775,37 +1775,38 @@
 @41384=~Очень хорошо. Если ты этого хочешь, пусть так и будет.~
 @41385=~Исаир и Мадея выбрали странное место для своего логова. Все здание *пропитано* нестабильной магией. Можно даже увидеть, как она просачивается сквозь стены!~
 @41386=~Насколько нестабильной?~
-@41387=~Any idea what's causing it?~
-@41388=~I hope the place doesn't come crashing down. While we're in it, anyway.~
-@41389=~The Severed Hand used to be a fortress, long ago. I can see why Isair and Madae would choose to set up shop here.~
-@41390=~I'm a bit rusty on my history. Didn't it fall apart because of unstable magic back then?~
-@41391=~I don't know. All I really know is that it used to be the heart of an elven civilization. Does that mean the place is at risk of falling apart again?~
-@41392=~It did. Its leaders created a mythal in an attempt to protect it from an invasion, but something went wrong, and the mythal killed everyone inside. If that mythal is still in place, then the same thing might happen again.~
+@41387=~Есть идеи, чем это вызвано?~
+@41388=~Я надеюсь это место не рухнет. Пока мы в нем, по крайней мере.~
+@41389=~Когда-то давно "Отрубленная рука" была крепостью. Понятно, почему Исаир и Мадея решили устроить здесь свое логово.~
+@41390=~Я немного подзабыл историю. Разве она не разрушилась из-за нестабильной магии?~
+@41391=~Не знаю. Я знаю только то, что когда-то это место было сердцем эльфийской цивилизации. Думаешь, оно может снова обрушиться?~
+@41392=~Так и было. Ее лидеры создали мифал, пытаясь защитить от вторжения, но что-то пошло не так, и мифал убил всех, кто находился внутри. Если он все еще сохранился, тогда то же самое может произойти снова.~
 @41393=~Не знаю. Но думаю, что это место обрушилось давным-давно из-за какой-то магической проблемы. Возможно, проблема все еще осталась.~
 @41394=~Ты хочешь сказать, что это место может снова обрушиться?~
-@41395=~Not really. I think this place fell apart before, though, way back when it was an elven fortress. Some magical problem.~
-@41396=~I wonder if there's some way to bring it down. I guess we could poke around, figure out where the growths are coming from. Maybe learn more about the history? I don't remember much about the Severed Hand, honestly.~
-@41397=~We can probably read about the history somewhere.~
-@41398=~Unstable enchantments are difficult to study safely. We should look for a wizard, or whoever is responsible for creating or maintaining it.~
-@41399=~It would be a well kept secret, I suspect. Isair and Madae might have created these enchantments themselves.~
-@41400=~A nice relaxing read would be very welcome! Makes for a good change of pace from all the killing.~
-@41401=~Good thinking. We should look high up, in one of the towers. Wizards LOVE their towers.~
-@41402=~I hope not. If the twins spend a lot of their time on building the Legion, maybe they've been neglecting the enchantments here.~
-@41403=~That could be good news. Poor maintenance would make it more fragile, and easier to sabotage.~
-@41404=~Let's be careful. I don't want this thing collapsing on us.~
-@41405=~You might be right. Best we learn more about the magic here.~
+@41395=~Неуверен. Думаю, это место обрушивалось и раньше, еще когда было эльфийской крепостью. Какая-то магическая проблема.~
+@41396=~Интересно, есть ли способ его разрушить? Думаю, мы могли бы осмотреться вокруг и выяснить, откуда берутся эти наросты. Может, узнать больше об истории этого места? Честно говоря, я мало что припоминаю об Отрубленной Руке.~
+@41397=~Наверное, мы найдем здесь что почитать об этом.~
+@41398=~Нестабильные чары трудно изучать не подвергая себя опасности. Мы должны разыскать волшебника или того, кто отвечает за их создание или поддержание.~
+@41399=~Полагаю, это хорошо охраняемый секрет. Возможно, Исаир и Мадея сами создали эти чары.~
+@41400=~Приятное расслабляющее чтение было бы очень кстати! Неплохая смена деятельности после всех этих убийств.~
+@41401=~Верно. Надо поискать наверху, в одной из башен. Волшебники ЛЮБЯТ свои башни.~
+@41402=~Надеюсь, что нет. Если у близнецов уходит много времени на создание Легиона, возможно, они не уделили должного внимания здешним чарам.~
+@41403=~Это сыграло бы нам на руку. Плохое обслуживание сделало бы его более неустойчивым и это облегчило бы диверсию.~
+@41404=~Давай будем осторожнее. Не хочу, чтобы все это обвалилось на нас.~
+@41405=~Может и так. Лучше узнать побольше об этой магии.~
 @41406=~Вполне возможно. Эй, все может рухнуть само собой! И проблема будет решена, а?~
 @41407=~Не будь оптимистом. Думаю, Легиону придет конец только тогда, когда близнецы будут мертвы.~
-@41408=~Let's make sure we're out of here before it does.~
-@41409=~Perhaps there's a way to sabotage it.~
+@41408=~Давай позаботимся о том, чтобы выбраться отсюда до того, как это произойдет.~
+@41409=~Может, есть способ поспособствовать этому.~
 @41410=~Да, возможно. Будем надеяться, что они не заметили нашего появления.~
-@41411=~Good thinking! I guess we could poke around, figure out where the growths are coming from. Maybe learn more about the history? I don't remember much about the Severed Hand, honestly.~
-@41412=~That's not good news. Do you know when it might fall apart?~
-@41413=~Not yet, but we can probably read more about its history somewhere. Perhaps we can sabotage it somehow. There must be at least one mage on retainer to maintain whatever enchantments are here, so we should be able to wring some information out of them. Then we can start putting together a plan to tear this place down.~
-@41414=~- Our time is drawing to a close -
- - Isair and Madae are unlikely to see reason -
- - Too much hatred has clouded their vision -
- - And our journey will end in bloodshed -~
+@41411=~Хорошая мысль! Думаю, мы могли бы осмотреться вокруг и выяснить, откуда берутся эти наросты. Может, узнать больше об истории этого места? Честно говоря, я мало что припоминаю об Отрубленной Руке.~
+@41412=~Это не очень хорошие новости. Ты знаешь, когда это может произойти снова?~
+@41413=~Пока нет, но, наверняка, мы можем где-нибудь прочитать больше об истории его происхождения. Думаю, стоит попробовать его испортить. В штате должен быть хотя бы один маг, который контролирует всю здешнюю магию, так что можно попробовать выпытать у него хоть что-нибудь. А затем начать составление плана по разрушению этого места.~
+@41414=~- Наше время подходит к концу -
+ - Исаир и Мадея вряд ли вразумятся -
+ - Слишком много ненависти затуманило их сознание -
+ - И наше путешествие закончится кровопролитием -~
+@41415=~Близнецы сами выбрали свою судьбу. Мы не обязаны щадить их.~
 @41415=~The twins chose their fate. We have no responsibility to try to spare them.~
 @41416=~Good. Isair and Madae have long since earned it.~
 @41417=~I'm not optimistic, but what *would* let us avoid bloodshed?~
@@ -1863,8 +1864,8 @@
  - Any words that could sway them -
  - Even for a moment -
  - Could save our lives -~
-@41441=~The twins have shown themselves very confident, and very convinced of their own ideas. Doubt is not something they will easily feel.~
-@41442=~If we're going to put something in their hearts, a dagger would work much better than "doubt."~
+@41441=~Близнецы показали себя очень уверенными и убежденными в своих взглядах. Вряд ли их можно легко заставить сомневаться.~
+@41442=~Если мы хотим что-то вложить в их сердца, то кинжал сработает гораздо лучше, чем "сомнение".~
 @41443=~~
 @41444=~- Perhaps you are right -
  - The odds of swaying them are slim -
@@ -1877,21 +1878,21 @@
  - Or even appeal to a better part of themselves -
  - A part that still wishes to do good -~
 @41446=~Shaking their confidence doesn't sound realistic. Judging by our few encounters with them, doubt is an alien feeling to them.~
-@41447=~A moral argument would be difficult to make.~
-@41448=~I suppose I could invoke my non-human heritage, try to challenge their claim to be defending people like me. But they might just see me as a traitor for it.~
-@41449=~The closest thing to a bluff I can think of is to pretend the unstable magic I've seen around the Severed Hand is falling apart. But they'd have little reason to trust my words.~
-@41450=~You know, for all of their claims to be defending the half-breeds of the world, I've not really seen them do much to protect anyone. If I challenged them to name something good they've done for the people they claim to represent, do you think that might shake them?~
-@41451=~- It might only provoke them -
- - But perhaps it could distract them instead -
- - Defeating us would require their focus -
- - We could weaken that focus -
- - If we planted a thought inside their minds -
- - A thought they could not shake -~
-@41452=~- They have made their future -
- - They have cast aside ways to make peace -
- - But our future is not yet made -
- - Our choices remain open -~
-@41453=~What other choices do we even have at this point?~
+@41447=~Моральный аргумент будет трудно привести.~
+@41448=~Полагаю, можно было бы сослаться на мое нечеловеческое происхождение, попытаться оспорить их утверждение, что они защищают таких, как я. Но они, скорее всего, просто назовут меня предателем.~
+@41449=~ Самое лучшее, что приходит мне в голову, это сказать, что нестабильная магия, которая была вокруг Отрубленной руки, исчезает. Но у них нет причин мне доверять.~
+@41450=~Знаешь, несмотря на все их заявления о защите полукровок, было не видно, чтобы они хоть кого-то защищали. Если я попрошу их назвать что-нибудь хорошее, что они сделали для тех, кого, по их словам, представляют, как ты думаешь, это сможет помочь?~
+@41451=~- Это сможет их только спровоцировать -
+ - Но, возможно, заодно и отвлечь -
+ - Победа над нами потребует от них сосредоточенности -
+ - Мы могли бы ослабить ее -
+ - Заронив в их сознание мысль -
+ - Мысль, от которой они не смогли бы избавиться -~
+@41452=~- Они сами определили свое будущее -
+ - Они отбросили пути к установлению мира -
+ - Но наше будущее еще не определено -
+ - Наш выбор остается свободным -~
+@41453=~Какой еще выбор?~
 @41454=~I have no intention of changing course. The twins deserve to die. They *need* to die.~
 @41455=~Let's say there's a way to spare the twins. Something that could end the Legion's threat without violence. Would the odds of success be better than simply killing them? If not, should we put all of Icewind Dale in jeopardy just to save two lives?~
 @41456=~I see only one path ahead, Veira, and it ends with victory.~
@@ -1901,32 +1902,32 @@
  - If they are sharp enough to pierce the skin -
  - The smallest tool may turn our defeat into victory -
  - And we must not fail -~
-@41458=~- There may be a way -
- - A way to instill doubt in their hearts -
- - To shake their resolve and buy time -
- - The only question is how -~
-@41459=~- Perhaps not -
- - But words cost us little and could do so much -
- - We must try to find something -
- - Anything -
- - To sway their clouded minds -~
-@41460=~- You are right -
- - But words cost us little and could do so much -
- - We must try to find something -
- - Anything -
- - To sway their clouded minds -~
-@41461=~- Their claims are merely excuses -
- - A way to justify their pursuit of power -
- - But part of them may truly believe in their own words -
- - That part of them will not save them -
- - But it may save us -~
-@41462=~- I pray that you will succeed -
- - We may not save their lives -
- - But perhaps it will spare our own. -~
-@41463=~- A pity that you are right -
- - There may have been a time when we could have changed them -
- - But that was long ago -
- - Long, long ago -~
+@41458=~- Возможно, есть способ -
+ - Способ вложить сомнение в их сердца -
+ - Пошатнуть их решимость и выиграть время -
+ - Вопрос только в том, как -~
+@41459=~- Может и нет -
+ - Но слова стоят мало, а могут сделать так много -
+ - Мы должны попытаться придумать хоть что-то -
+ - Что угодно -
+ - Чтобы поколебать их помраченное сознание -~
+@41460=~- Это правда -
+  - Но слова стоят мало, а могут сделать так много -
+ - Мы должны попытаться придумать хоть что-то -
+ - Что угодно -
+ - Чтобы поколебать их помраченное сознание -~
+@41461=~- Их заявления - всего лишь отговорки -
+ - Способ оправдать свое стремление к власти -
+ - Но какая-то их часть, возможно, и правда верит в эти слова ~
+ - И эта часть не спасёт их -
+ - Но может спасти нас -~
+@41462=~- Я молюсь, чтобы у тебя все получилось -
+ - Возможно, мы не сохраним их жизни -
+ - Зато, спасем свои -~
+@41463=~- Жаль, что это правда -
+ - Возможно, было время, когда мы могли изменить их -
+ - Но это было давно -
+ - Давно, очень давно -~
 @41464=~It looks like we're almost done. Soon enough the Legion will be headless, its allies should disperse, and we will be the saviors of the Ten Towns.~
 @41465=~Exciting, isn't it?~
 @41466=~Assuming we don't die in the process.~
