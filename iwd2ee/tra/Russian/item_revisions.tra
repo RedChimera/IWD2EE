@@ -11073,132 +11073,132 @@
 //@12213    = ~Tome of Deeds Valorous~
 //@12214    = ~Item description can remain the same; if new description is needed put it here~
 //@12215    = ~Masterwork Tome of Deeds Valorous~
-@12216    = ~The Masterwork Tome of Deeds Valorous is filled with many tales of courage, from lyrical tales of noble gallantry to almost chilling accounts of desperate self-sacrifice. The pages and very words themselves are soaked with magic, so that when read aloud they serve to inspire the speaker and nearby companions. Thrice per day one may use the tome to dispel all fear and steel hearts against further trepidation.
+@12216    = ~Шедевральный Фолиант Деяний Славных может поведать немало историй о храбрости - от романтических рассказов о благородной отваге до леденящих душу историй об отчаянном самопожертвовании. Страницы и сами строки наполнены магией, так что при прочтении вслух, они служат вдохновением и для читающего и для его спутников. Трижды в день фолиант может развеивать страх и закалить сердца.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Special:
-  Can cast these spells simultaneously: Remove Fear, Emotion: Hope, Emotion: Rage 3/day
-Weight: 2 lb.~
+Особенности:
+ Заклинание: Творит одновременно заклинания "Снять страх", "Эмоция: Ярость" и "Эмоция: Надежда" 3 раза в день
+Вес: 2 фунта~
 //@12217    = ~Tome of Glorious Exaltation~
 //@12218    = ~Item description can remain the same; if new description is needed put it here~
 //@12219    = ~Masterwork Tome of Glorious Exaltation~
 //@12220    = ~Item description can remain the same; if new description is needed put it here~
 //@12221    = ~Mensel's Obscene Grimoire~
-@12222    = ~Mensel of Cormyr, at one time the Lord of Immersea, was that rare sort of nobleman, a fellow well known to be kind, generous, and humanitarian to a fault. He was much loved by his family, servants, and those that lived upon his lands. Well after the elderly Lord Mensel had passed away in his sleep, a secret vault was found hidden beneath his study. Within the vault Mensel's heirs found a small hoard of treasure... and the Obscene Grimoire.
+@12222    = ~Мензель из Кормира, некогда лорд Иммерсии, был человеком редкого благородства: он был известен своей добротой, щедростью и человеколюбием. Его очень любила его семья, слуги и те, кто жил в его землях. После того, как лорд Мензель скончался на старости лет во сне, под его кабинетом был обнаружен тайник. В тайнике наследники Мензеля нашли немного сокровищ... и "Непристойный гримуар".
 
-Though the origins of the grimoire and the identity of anyone associated with it - save the late Lord Mensel, of course - are still unknown, unwholesome rumors sprang up like mushrooms and still abound after nearly a century. The worst of the scandalous claims involved a seer from Arabel, a pious young man that seemed saddened to explain that Lord Mensel had the grimoire fashioned for himself at great expense and then slew all those involved in its making - an assertion that did no less than bring ruin to Mensel's name and family.
+Хотя происхождение этого гримуара и личности всех, кто с ним связан - кроме покойного лорда Мензеля, разумеется - до сих пор неизвестны, скандальные слухи разрослись, как грибы и продолжают распространятся спустя почти столетие. Так, провидец из Арабела, набожный молодой человек, с грустью рассказывал, что лорд Мензель заказал гримуар за огромные деньги, а потом убил всех, кто участвовал в его создании. Очевидно, что единственная цель такого объяснения - опорочить доброе имя Мензеля и его семьи.
 
-The unsavory book was cast into a temple brazier but, to the astonishment of numerous witnesses, it vanished in a cloud of foul-smelling vapor rather than bursting into flames. Since that day the Obscene Grimoire has appeared in many places, never found intentionally and always disappearing again within a few year's time.
+Нечестивая книга была брошена в храмовую жаровню, но, к изумлению многочисленных свидетелей она исчезла в облаке зловонных испарений, а не загорелась. С того самого дня "Непристойный гримуар" появлялся в самых разных местах, но никогда не был найден специально и всегда исчезал через несколько лет.
 
-The thick, black, leather-bound book is filled with painstakingly detailed woodblock prints, each depicting a gruesome scene of violent perversion. Even the briefest of glances through its disturbing pages is enough to assure the reader that no taboo is left unturned. However, for those willing to carefully peruse the disquieting work, there are dark runes and ritual directions hidden amongst the illumination around each print. Those so inclined are able to use the power of Mensel's Obscene Grimoire to summon a cacofiend, bound to the reader's service, once per day.
+Толстая, чёрная, переплетённая кожей книга содержит в себе множество подробнейших гравюр с изображением ужаснейших извращений. Даже беглого взгляда на её страницы достаточно, чтобы убедить читателя в том, что ни одно табу не осталось нетронутым. Однако более внимательный читатель, взявший за труд поближе разглядеть каждый рисунок, увидит вокруг гравюр тёмные руны с указаниями по ритуалам. Желающие могут использовать тёмную силу "Непристойного Гримуара Мензеля", чтобы один раз вызвать в день какодемона себе на службу.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Special:
-  Using the grimoire casts both Protection From Evil and Cacofiend.
-  The Obscene Grimoire may be used once per day.
-Weight: 2 lb.~
+Особенности:
+ Заклинание: при использовании гримуар творит заклинания "Защита от зла" и "Какодемон"
+ "Непристойный гримуар" можно использовать один раз в день
+Вес: 2 фунта~
 //@12223    = ~Mensel's Vile Grimoire Pervertere~
-@12224    = ~Mensel of Cormyr, at one time the Lord of Immersea, was that rare sort of nobleman, a fellow well known to be kind, generous, and humanitarian to a fault. He was much loved by his family, servants, and those that lived upon his lands. Well after the elderly Lord Mensel had passed away in his sleep, a secret vault was found hidden beneath his study. Within the vault Mensel's heirs found a small hoard of treasure... and the Vile Grimoire Pervertere.
+@12224    = ~Мензель из Кормира, некогда лорд Иммерсии, был человеком редкого благородства: он был известен своей добротой, щедростью и человеколюбием. Его очень любила его семья, слуги и те, кто жил в его землях. После того, как лорд Мензель скончался на старости лет во сне, под его кабинетом был обнаружен тайник. В тайнике наследники Мензеля нашли немного сокровищ... и "Мерзкий гримуар-извращенец".
 
-Though the origins of the grimoire and the identity of anyone associated with it - save the late Lord Mensel, of course - are still unknown, unwholesome rumors sprang up like mushrooms and still abound after nearly a century. The worst of the scandalous claims involved a seer from Arabel, a pious young man that seemed saddened to explain that Lord Mensel had the grimoire fashioned for himself at great expense and then slew all those involved in its making - an assertion that did no less than bring ruin to Mensel's name and family.
+Хотя происхождение этого гримуара и личности всех, кто с ним связан - кроме покойного лорда Мензеля, разумеется - до сих пор неизвестны, скандальные слухи разрослись, как грибы и продолжают распространятся спустя почти столетие. Так, провидец из Арабела, набожный молодой человек, с грустью рассказывал, что лорд Мензель заказал гримуар за огромные деньги, а потом убил всех, кто участвовал в его создании. Очевидно, что единственная цель такого объяснения - опорочить доброе имя Мензеля и его семьи.
 
-The unsavory book was cast into a temple brazier but, to the astonishment of numerous witnesses, it vanished in a cloud of foul-smelling vapor rather than bursting into flames. Since that day the Obscene Grimoire has appeared in many places, never found intentionally and always disappearing again within a few year's time.
+Нечестивая книга была брошена в храмовую жаровню, но, к изумлению многочисленных свидетелей она исчезла в облаке зловонных испарений, а не загорелась. С того самого дня этот непристойный гримуар появлялся в самых разных местах, но никогда не был найден специально и всегда исчезал через несколько лет.
 
-The thick, black, leather-bound book is filled with painstakingly detailed woodblock prints, each depicting a gruesome scene of violent perversion. Even the briefest of glances through its disturbing pages is enough to assure the reader that no taboo is left unturned. However, for those willing to carefully peruse the disquieting work, there are dark runes and ritual directions hidden among the illumination around each print. Those so inclined are able to use the power of Mensel's Vile Grimoire Pervertere to summon a powerful fiend, bound to the reader's service, once per day.
+Толстая, чёрная, переплетённая кожей книга содержит в себе множество подробнейших гравюр с изображением ужаснейших извращений. Даже беглого взгляда на её страницы достаточно, чтобы убедить читателя в том, что ни одно табу не осталось нетронутым. Однако более внимательный читатель, взявший за труд поближе разглядеть каждый рисунок, увидит вокруг гравюр тёмные руны с указаниями по ритуалам. Желающие могут использовать тёмную силу "Мерзкого гримуара-извращенца Мензеля", чтобы один раз в день вызвать могущественное исчадие себе на службу.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Special:
-  Using the grimoire casts both Protection From Evil and Gate.
-  The Mensel's Vile Grimoire Pervertere may be used once per day.
-Weight: 2 lb.~
+Особенности:
+ Заклинание: при использовании гримуар творит заклинания "Защита от зла" и "Врата"
+ "Мерзкий гримуар-извращенец Мензеля" можно использовать один раз в день
+Вес: 2 фунта~
 //@12225    = ~Tome of the Supplicant~
 //@12226    = ~Item description can remain the same; if new description is needed put it here~
 //@12227    = ~Masterwork Tome of the Supplicant~
-@12228    = ~The Masterwork Tome of the Supplicantis a heavy volume whose intricately illuminated vellum pages contain numerous short prayers woven with words of power and calling. One may read aloud from the tome once per day, bestowing favor upon the reader and his or her allies while cursing his or her enemies.
+@12228    = ~Шедевральный Фолиант Просителя - это тяжёлый том с украшенными пергаментными страницами. В нём содержится множество коротких молитв, сложённых из слов силы и призыва. Один раз в день можно читать вслух молитву из этого фолианта, благословляя себя и своих союзников, и проклиная своих врагов.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Special:
-  Spell Power: Can simultaneously cast the spells Prayer, Recitation, and Righteous Wrath of the Faithful 1/day
-Weight: 2 lb.~
-@12229    = ~Tome of Healing Verse~
-@12230    = ~The Tome of Healing Verse is a collection of hymns and lyrical prayers woven with words of healing, penned in the blood of a willing planar. Twice per day a reader may sing a passage aloud, the book's power making his or her voice as fine and clear as radiant crystal, and all nearby allies will be healed.
+Особенности:
+ Заклинание: одновременно творит заклинания "Молитва", "Декламация" и "Праведный гнев верующих" 1 раз в день
+Вес: 2 фунта~
+@12229    = ~Фолиант Исцеляющих Стихов~
+@12230    = ~Фолиант Исцеляющих Стихов - это собрание гимнов и молитв, составленных из слов исцеления, написанных кровью, добровольно отдавшего её планара. Дважды в день читающий может пропеть отрывок из этой книги, и её сила сделает голос владельца чистым, как сияющий хрусталь, а все находящиеся рядом союзники будут исцелены.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Special:
- Spell Power: Can cast the spell Healing Circle (at level 10) 2/day
-Weight: 2 lb.~
-@12231    = ~Masterwork Tome of Healing Verse~
-@12232    = ~The Masterwork Tome of Healing Verse is a collection of hymns and lyrical prayers woven with words of healing, penned in the blood of a willing planar. Twice per day a reader may sing a passage aloud, the book's power making his or her voice as fine and clear as radiant crystal, and all nearby allies will be fully healed.
+Особенности:
+ Заклинание: творит заклинание "Круг исцеления" (словно оно было прочитано заклинателем десятого уровня) 2 раза в день
+Вес: 2 фунта~
+@12231    = ~Шедевральный Фолиант Исцеляющих Стихов~
+@12232    = ~Шедевральный Фолиант Исцеляющих Стихов - это собрание гимнов и молитв, составленных из слов исцеления, написанных кровью, добровольно отдавшего её планара. Дважды в день читающий может пропеть отрывок из этой книги, и её сила сделает голос владельца чистым, как сияющий хрусталь, а все находящиеся рядом союзники будут полностью исцелены.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Special:
- Spell Power: Can cast the spell Mass Heal 2/day
-Weight: 2 lb.~
+Особенности:
+ Заклинание: творит заклинание "Массовое исцеление" 2 раза в день
+Вес: 2 фунта~
 
 
 //@12233    = ~Wand of Fear~
-@12234    = ~A Wand of Fear strikes terror into the heart of any creature within its target area. This panic is not universal, however, as the stout of heart have been known to resist its magic. Like all wands, the Wand of Fear can only be used a limited number of times before it is destroyed.
+@12234    = ~Жезл страха вселяет ужас в сердца тех, кто попал в область его действия. Паника, однако, охватит не всех, ибо сильные духом способны сопротивляться его магии. Как и все жезлы, жезл страха может быть использован ограниченное количество раз, после чего он разрушается.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Special:  Cause enemies to run in fear unless they make a Will save (DC 15)
-Range:  100 ft
-Area:  10 ft radius
-Duration:  15 rounds
-Weight: 1 lb.~
+Особенности: заставляет противников в ужасе спасаться бегством, если они не сделают спасбросок воли с УС 15
+Дальность: 100 футов
+Зона действия: радиус 10 футов
+Длительность: 15 раундов
+Вес: 1 фунт~
 //@12235    = ~Wand of Magic Missiles~
-@12236    = ~When activated, the wand will eject five missiles of magical energy that darts forth and unerringly strike its target. This includes enemy creatures in a melee. The target creature must be seen or otherwise detected to be hit, however, so near-total concealment, such as that offered by arrow slits, can render the spell ineffective. Against a creature, the missiles will inflict a total of 5d4+5 points of damage.
+@12236    = ~При активации этот жезл выстреливает пятью снарядам магической энергии, которые устремляются вперёд и безошибочно поражают цель. В том числе, и вражеских созданий в ближнем бою. Местоположение объекта, однако, должно быть чётко видно или определено другими методами, так что, если существо находится в хорошем укрытии, например, за бойницей, жезл на него не подействует. При попадании все снаряды причинят в сумме 5d4+5 урона магией.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Special:  5 magic missiles will strike target
-Damage:  5d4+5
-Range: 100 ft
-Area:  1 creature
-Weight: 1 lb.~
-@12237    = ~Wand of Paralysis~
-@12238    = ~When used, this wand shoots forth a thin ray of bluish color to a maximum range of 60'. When a creature is touched by the ray, it must make a Will save in order to avoid being stunned for 5 rounds.
+Особенности: атака пятью магическими снарядами
+Урон: 5d4+5
+Дальность: 100 футов
+Зона действия: 1 существо
+Вес: 1 фунт~
+@12237    = ~Жезл парализации~
+@12238    = ~При использовании этот жезл выстреливает вперёд тонким лучом голубого света. Когда луч касается существа, оно должно успешно прокинуть спасбросок воли, чтобы избежать ошеломления на 5 раундов.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Effect:  Target stunned unless a Will save is made (DC 18)
-Range:  100 ft
-Area:  1 creature
-Duration:  5 rounds
-Weight: 1 lb.~
+Эффект: цель будет ошеломлена, если ей не удастся прокинуть спасбросок воли с УС 18
+Дальность: 100 футов
+Зона действия: 1 существо
+Длительность: 5 раундов
+Вес: 1 фунт~
 //@12239    = ~Wand of Fire~
-@12240    = ~The wand will cough forth a huge, burning ball of fire that streaks out to the desired range (to a maximum of 120') and bursts in a fiery, violent blast, just like the fireball spell. The fireball inflicts 6d6 points of damage. The victim(s) must make a Reflex save  to take half damage. The second ability of the wand is akin to the spell 'Agannazar's Scorcher' in that a column of flame will streak towards the victim inflicting 6d6 damage, no save.
+@12240    = ~Из жезла вылетает гигантский горящий шар, устремляющийся в указанную точку и взрывающийся в ней, подобно заклинанию "Огненный шар". Взрыв наносит 6d6 единиц урона и жертвы могут прокинуть спасбросок реакции, чтобы уменьшить урон вдвое. Есть второй вариант использования жезла, который напоминает действие заклинания "Выстрел Аганназара": в цель бьёт огненная струя, которая наносит 6d6 урона. В этом случае спасброска нет.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Ability  1:
-Effect:  Shoots out a Fireball
-Damage:  6d6 (Reflex DC 17)
-Range:  90 ft.
-Area 30 ft radius
+Способность 1:
+Эффект: метает огненный шар
+Урон: 6d6 (успешный спасбросок реакции с УС 17 уменьшает урон вдвое)
+Дальность: 90 футов
+Зона действия: радиус 30 футов
 
-Ability  2:
-Effect:  Agannazar's scorcher
-Damage:  6d6 (no save)
-Range:  90 ft.
-Area:  1 creature
-Weight: 1 lb.~
+Способность 2:
+Эффект: Выстрел Аганназара
+Урон: 6d6 (спасбросок отсутствует)
+Дальность: 90 футов
+Зона действия: 1 существо
+Вес: 1 фунт~
 //@12241    = ~Wand of Lightning~
-@12242    = ~The possessor of the wand can discharge a bolt of lightning. As it passes through a creature, it does 8d6 points of damage, with a Reflex for half damage. When the lightning bolt intersects with a wall it will fizzle out.
+@12242    = ~Жезл позволяет выпускать разряды молнии. Проходя через какое-либо существо, молния наносит 8d6 единиц урона, при успешном спасброске реакции вдвое меньше. Пройдя сквозь объект, разряд продолжит свой путь, отскакивая от всех твёрдых предметов, пока не иссякнет.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Effect:  Lightning bolt
-Damage:  8d6 (Reflex DC 21)
-Range:  100 ft.
-Area:  Path of bolt
-Weight: 1 lb.~
+Эффект: разряд молнии
+Урон: 8d6 (успешный спасбросок реакции с УС 21 снижает урон вдвое)
+Дальность: 100 футов
+Зона действия: траектория молнии
+Вес: 1 фунт~
 //@12243    = ~Wand of Sleep~
 //@12244    = ~Item description can remain the same; if new description is needed put it here~
 //@12245    = ~Wand of Summon Monster~
