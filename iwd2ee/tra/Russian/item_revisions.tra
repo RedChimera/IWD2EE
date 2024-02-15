@@ -11546,92 +11546,92 @@
 Необходимая черта: Военное оружие, Древковое
 Тип: двуручное~
 //@12329    = ~Unholy Halberd of Chaos~
-@12330    = ~Like others of its type, this halberd consists of a cleaver-like axe blade mounted on a staff approximately six feet in length. It has also been bestowed with a small number of magical properties, however, thus making it more effective in combat. Its keen blade, for instance, will shear through your opponent's flesh to find the bone while its barbed tip will seek out gaps in their armor.
+@12330    = ~Эта алебарда, как и другие, представляет собой клинок вроде лезвия топора, закреплённый на древке длиной около шести футов. Также она обладает некоторыми магическими свойствами и потому более эффективна в бою. Например, её острое лезвие прорезает плоть врага до кости, а зазубренный наконечник находит слабые места в его броне.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d10
-Enchantment:  +2
-Damage Type:  Piercing
-Special:
-  Unholy: +2d6 damage vs Good creatures. Counts as an evil-aligned weapon.
-  Chaotic: +2d6 damage vs Lawful creatures. Counts as a chaotic-aligned weapon.
-  Bane: +2 Attack Bonus vs Elves and +2d6+2 vs Elves
-  Vampiric: 1d4 hit points drained from target and added to wielder (Fortitude save for none)
-Weight: 14 lb.
-Feat Requirement:  Martial Weapon, Polearm
-Type:  Two-handed~
-@12413    = ~Storm Shell Amulet~
-@12414    = ~Amulets are usually magical devices that are commonly worn around the neck, suspended from a chain. The type of chain that comes with an amulet generally increases the item's aesthetic value, not its magical properties. Only one amulet can be dangled from the neck.
+Урон: 1d10
+Зачарование: +2
+Тип урона: колющий
+Особенности:
+ Нечестивость: +2d6 урона добрым существам, оружие считается злым
+ Хаос: +2d6 урона законопослушным существам, оружие считается хаотичным
+ Губитель: +2 к атаке и +2d6+2 к урону против эльфов
+ Вампиризм: при ударе забирает у жертвы 1d4 очка здоровья и передаёт их владельцу (успешный спасбросок стойкости отменяет эффект)
+Вес: 14 фунтов
+Необходимая черта: Военное оружие, Древковое
+Тип: двуручное~
+@12413    = ~Амулет оболочки бури~
+@12414    = ~Амулеты - это, как правило, магические предметы, которые обычно носятся на цепочке, надетой на шею. Цепочка исполняет в основном эстетическую роль и к магии отношения не имеет. На шею можно повесить только один амулет.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Constant Effect: Wearer is under the effect of the spell Storm Shell
-Weight: 1 lb.~
-@12415    = ~Amulet of Antimagic~
-@12416    = ~Amulets are usually magical devices that are commonly worn around the neck, suspended from a chain. The type of chain that comes with an amulet generally increases the item's aesthetic value, not its magical properties. Only one amulet can be dangled from the neck.
+Постоянный эффект: тот, кто носит этот амулет находится под постоянным эффектом заклинания "Оболочка бури"
+Вес: 1 фунт~
+@12415    = ~Амулет антимагии~
+@12416    = ~Амулеты - это, как правило, магические предметы, которые обычно носятся на цепочке, надетой на шею. Цепочка исполняет в основном эстетическую роль и к магии отношения не имеет. На шею можно повесить только один амулет.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Spell Power: Can create an Antimagic Shell around the user for 7 rounds 1/day
-Weight: 1 lb.~
-@12417    = ~Necklace of Spell Focus~
-@12418    = ~While magical amulets typically have defensive enchantments, magical necklaces often have offensive powers. This particular necklace makes the wearer's spells harder to resist.
+Заклинание: носитель может создавать антимагическую оболочку вокруг себя на 7 раундов раз в день
+Вес: 1 фунт~
+@12417    = ~Ожерелье концентрации на заклинаниях~
+@12418    = ~Если магические амулеты обычно имеют защитные чары, то магические ожерелья часто наделены атакующими способностями. С этим конкретным ожерельем заклинаниям владельца становится труднее противостоять.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-The wearer's spells gain +3 DC
-Weight: 1 lb.~
-@12419    = ~Amulet of Protection from Great Magic~
-@12420    = ~Amulets are usually magical devices that are commonly worn around the neck, suspended from a chain. The type of chain that comes with an amulet generally increases the item's aesthetic value, not its magical properties. Only one amulet can be dangled from the neck.
+Носитель ожерелья получают +3 к УС своих заклинаний
+Вес: 1 фунт~
+@12419    = ~Амулет защиты от великой магии~
+@12420    = ~Амулеты - это, как правило, магические предметы, которые обычно носятся на цепочке, надетой на шею. Цепочка исполняет в основном эстетическую роль и к магии отношения не имеет. На шею можно повесить только один амулет.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Spellward: Wearer is immune to spells of 8th and 9th level, but not lower level spells.
-Weight: 1 lb.~
-@12421    = ~Amulet of Fantastic Luck~
-@12422    = ~A necklace is a piece of ornamental metal jewelry usually made of silver, gold, platinum, or other precious metal, and adorned with gems. A necklace is always worn on the neck and can be of any length.
+Оберёг: владелец иммунен к заклинаниям уровня 8 и 9, но не к заклинаниям более низкого уровня
+Вес: 1 фунт~
+@12421    = ~Амулет фантастической удачи~
+@12422    = ~Ожерелье - это декоративное металлическое украшение, обычно сделанное из серебра, золота, платины или других драгоценных металлов, и украшенное драгоценными камнями. Ожерелье всегда носят на шее, и оно может быть любой длины.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Luck: +3
-Weight: 1 lb.~
-@12423    = ~Amulet of Protection +5~
-@12424    = ~Amulets are one the most favored items to enchant by wizards because of their ability to be worn without interfering with the delicate rituals of spell casting. This particular amulet has been infused with various magics that are designed to protect the wearer from harm.
+Удача: +3
+Вес: 1 фунт~
+@12423    = ~Амулет защиты +5~
+@12424    = ~Амулет - один из самых удобных предметов для наложения чар; его носят на шее, что никак не мешает тонкому процессу чтения заклинания. Магия этого амулета защищает владельца от вреда.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Generic Armor Bonus: +5
-Saving Throw Bonus: +5
-Weight: 1 lb.~
-@12425    = ~Returning Throwing Axe +5~
-@12426    = ~The handaxe or throwing axe is also known as a hatchet. The axe blade has a sharp steel tip, counterbalanced by a pointed fluke. The short handle has a point on the bottom and the head may have a spike on the top. Runes of power have been etched into the blade to further enhance it.
+Класс защиты: +5 (отражение)
+Спасброски: +5
+Вес: 1 фунт~
+@12425    = ~Метательный топор возвращения +5~
+@12426    = ~Ручной топор или метательный топор, также известен как томагавк. У этого топора заточенное стальное лезвие, уравновешенное острым зазубренным выступом. Короткая рукоять имеет заострённое основание, а обух тоже может быть увенчан шипом. На лезвии этого топорика выгравированы руны силы.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d6  +5
-Attack Bonus:  +5 
-Enchantment:  +5
-Damage Type (melee):  Slashing
-Damage Type (thrown):  Missile (piercing)
-Special:
-  Returning: Returns to user's hand once thrown
-Weight: 4 lb.
-Required Feat:  Martial Weapon, Axe
-Type:  One-handed~
-@12427    = ~Brilliant Energy Bolt +2~
-@12428    = ~Quarrels or bolts are the ammunition fired by crossbows regardless of the weapon's size. However this bolt has been imbued with magical properties which enhances performance in flight, almost as if the bolt was guided towards its target.
+Урон: 1d6+5
+Атака: +5
+Зачарование: +5
+Тип урона: метательный (колющий)
+Тип урона: ближний бой (рубящий)
+Особенности:
+ Возвращение: возвращается к хозяину
+Вес: 4 фунта
+Необходимая черта: Военное оружие, Топоры
+Тип: одноручное~
+@12427    = ~Болт чистой энергии +2~
+@12428    = ~Арбалетные стрелы, или "болты", используются для стрельбы из арбалетов всех известных размеров. В отличие от обычных, эти болты наделены магическими свойствами, которые выравнивают полёт, позволяя болту точнее попасть в цель.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d8  +2
-Attack Bonus:  +2 
-Enchantment:  +2
-Damage Type:  Missile (piercing)
-Special:
-  Brilliant Energy: Bypasses armor and shield bonuses
-Weight:  0 lb.
-Launcher:  Crossbow~
+Урон: 1d8+2
+Атака: +2
+Зачарование: +2
+Тип урона: метательный (колющий)
+Особенности:
+ Чистая энергия: при атаке бонусы к классу защиты цели от доспеха и щита не учитываются
+Вес: 0 фунтов
+Оружие: Арбалет~
 @12429    = ~Boots of Greater Speed~
 @12430    = ~These boots have been magically enhanced so that wearer is able to travel extremely fast, much faster than regular boots of speed. They are much prized by those whose profession involves traveling long distances.
 
