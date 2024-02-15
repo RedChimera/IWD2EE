@@ -11815,106 +11815,106 @@
 ПАРАМЕТРЫ:
 
 Владелец мантии получает 50% сопротивления холоду, и каждый, кто ударяет его, получает 1d6 урона огнём; эти эффекты не суммируются с эффектами заклинания "Огненный щит (красный)"~
-@12467    = ~Ice Dagger +3~
-@12468    = ~The typical throwing dagger has a pointed, usually double-edged blade, as opposed to a knife, which has a single edge and is a bit shorter than the dagger. Unlike a dagger, this one has a smaller handle and is balanced differently. Runes of power have been etched into the blade and glow ominously.
+@12467    = ~Ледяной кинжал +3~
+@12468    = ~У типичного метательного кинжала лезвие заострённое, двустороннее, в отличие от ножа, имеющего одностороннее и более короткое лезвие. От кинжалов он отличается более короткой рукояткой; кроме того, метательные ножи иначе сбалансированы. На лезвии вытравлены усиливающие руны, которые грозно светятся.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  5d4
-Attack Bonus:  +3
-Enchantment:  +3
-Damage Type: Missile (cold)
-Damage Type: Melee (cold)
-Special:
-  Returning: Returns to user
-  When thrown, it takes the form of an Ice Dagger, dealing no physical damage but dealing 5d4 cold damage. If it hits, creatures within 5 feet of the target take 5d4 cold damage (Reflex save for half).
-Weight: 0 lb.
-Feat Requirement:  Simple Weapon, Small Blade
-Type:  One-handed~
-@12469    = ~Dagger of Many Stabs +2~
-@12470    = ~This is an extremely well crafted dagger. Special enchantments have been placed on it to keep the edge from dulling. A person could chip thru stone with this dagger and the edge would still remain razor sharp. There is a slight warmth to the handle and when used, the dagger will adjust its weight and balance to each individual user.
+Урон: 5d4
+Атака: +3
+Зачарование: +3
+Тип урона: метательный (холодом)
+Тип урона: ближний бой (холодом)
+Особенности:
+ Возвращение: возвращается к хозяину
+ При броске, это оружие принимает форму ледяного кинжала, как в случае одноимённого заклинания; в случае попадания, существа в радиусе 5 футов от цели, как и сама цель, получают 5d4 урона холодом (успешный спасбросок реакции позволяет снизить урона вдвое)
+Вес: 0 фунтов
+Необходимая черта: Простое оружие, Короткие клинки
+Тип: одноручное~
+@12469    = ~Кинжал многих ударов +2~
+@12470    = ~Этот кинжал великолепно сработан. На него наложили особые заклинания, чтобы клинок никогда не тупился. Он может разрубить камень и при этом останется острым как бритва. Рукоять его чуть-чуть тёплая на ощупь, а под каждого владельца он сам подбирает свой вес и баланс.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d4 + 2
-Attack Bonus:  +2 
-Enchantment:  +2
-Damage Type: Piercing
-Special:
-  Cleaving: Upon hitting a creature with this dagger, the wielder immediately makes another attack, as if he or she had triggered an extra attack with the Cleave feat.
-Weight: 1 lb.
-Feat Requirement:  Simple Weapon, Small Blade
-Type:  One-handed~
-@12471    = ~Returning Minute Meteor Dart~
-@12472    = ~The dart is a small, easily concealable missile weapon that is thrown rather than fired from a bow or other launcher. Lines of power have been carefully scribed into the shaft of the weapon.
+Урон: 1d4+2
+Атака: +2
+Зачарование: +2
+Тип урона: колющий
+Особенности:
+ Рассечение: при попадании владелец кинжала сразу же производит ещё одну атаку, как если бы он только что убил существо при наличии черты "Рассечение"
+Вес: 1 фунт
+Необходимая черта: Простое оружие, Короткие клинки
+Тип: одноручное~
+@12471    = ~Возвращающийся дротик мелких метеоров~
+@12472    = ~Дротик - это небольшое метательное оружие, которое легко спрятать и можно бросать без применения других приспособлений. На древке этого дротика аккуратно выведены волшебные письмена.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d4  +6
-Attack Bonus:  +5
-Enchantment:  +5
-Damage Type:  Fire
-Special:
-  Speed: Four additional attacks per round
-Weight: 0 lb.
-Required Feat:  Simple Weapons, Missile
-Type:  One-handed~
-@12473    = ~Returning Throwing Hammer +5~
-@12474    = ~Your typical throwing hammer consists of a thick, short handle fitted with a heavy metal head. When thrown these weapons can strike with tremendous force. Often times, enemies who try to block a thrown hammer with a shield will have their arms broken from the impact.
+Урон: 1d4+6
+Атака: +5
+Зачарование: +5
+Тип урона: огненный
+Особенности:
+ Скорость: четыре дополнительные атаки в раунд
+Вес: 0 фунтов
+Необходимая черта: Простое оружие, Метательное
+Тип: одноручное~
+@12473    = ~Метательный молот возврата +5~
+@12474    = ~Типичный метательный молот состоит из толстой, короткой рукояти, увенчанной тяжёлой металлической головкой. При броске, это оружие может наносить удары огромной силы. Часто те, кто пытается блокировать брошенный молот щитом, ломают себе руки от силы такого удара.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d4 + 5
-Attack Bonus:  +5
-Enchantment:  +5
-Damage Type (melee):  Bludgeoning
-Damage Type (thrown):  Missile (bludgeoning)
-Special:
-  Returning: Returns to user
-Weight: 2 lb.
-Feat Requirement:  Martial Weapon, Hammer
-Type:  One-handed~
-@12475    = ~Helmet of Defense +4~
-@12476    = ~This class of decorative helmet, made of reinforced leather or metal, covers the face and head. Eye slits and breathing holes come highly recommended. 
+Урон: 1d4+2
+Атака: +2
+Зачарование: +2
+Тип урона: метательный (дробящий)
+Тип урона: ближний бой (дробящий)
+Особенности:
+ Возвращение: после броска возвращается в руку владельца
+Вес: 2 фунта
+Необходимая черта: Военное оружие, Молоты
+Тип: одноручное~
+@12475    = ~Шлем защиты +4~
+@12476    = ~Декорированные шлемы такого типа, изготовленные из прочной кожи или металла, полностью закрывают лицо и голову. Наличие в шлеме прорезей для глаз и дыхания крайне приветствуется.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Generic Armor Bonus: +5
-Weight: 2 lb.~
-@12477    = ~Executioner Helm~
-@12478    = ~This class of decorative helmet, made of reinforced leather or metal, covers the face and head. Eye slits and breathing holes come highly recommended.
+Класс защиты: +5 (общий)
+Вес: 2 фунта~
+@12477    = ~Шлем палача~
+@12478    = ~Декорированные шлемы такого типа, изготовленные из прочной кожи или металла, полностью закрывают лицо и голову. Наличие в шлеме прорезей для глаз и дыхания крайне приветствуется.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Generic Armor Bonus: +1
-Constant Effect: Wearer is under the effect of the spell Executioner's Eyes
-Weight: 2 lb.~
-@12479    = ~Guardian Dragon Scale~
-@12480    = ~The Kuldahar smith Conlan crafted this armor from the scales of Chahopek, black dragon Guardian of a Crossroads from Kuldahar to Chult. The armor is fantastic, providing defense better than full plate while hampering the wearer no more than leather armor.
+Класс защиты: +1 (общий)
+Постоянный эффект: носитель находится под постоянным эффектом заклинания "Глаза палача"
+Вес: 2 фунта~
+@12479    = ~Доспех из чешуи Хранителя~
+@12480    = ~Кулдахарский кузнец Конлан изготовил эти доспехи из чешуи черного дракона Чахопека, Хранителя Перекрестка из Кулдахара в Чулт. Эти доспехи просто потрясающие, они защищают лучше, чем полный латный доспех, но при этом стесняют движения владельца не больше, чем кожаные доспехи.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Light Armor
-Armor Bonus: +10
-Max Dex Bonus:  +6
-Armor Check Penalty:  -0
-Arcane Spell Failure:  10%
-Resistance:
-  30/-  Acid Resistance
-Weight: 10 lb.~
-@12481    = ~Guardian Dragon Scale~ //HoF
-@12482    = ~The Kuldahar smith Conlan crafted this armor from the scales of Chahopek, black dragon Guardian of a Crossroads from Kuldahar to Chult. The armor is fantastic, providing defense better than full plate while hampering the wearer no more than leather armor.
+Лёгкая броня
+Класс защиты: +10 (доспех)
+Максимальный бонус ловкости: +6
+Штраф к проверкам за броню: -0
+Шанс провала заклинания: 10%
+Сопротивление:
+  30/- Сопротивление кислоте
+Вес: 10 фунтов~
+@12481    = ~Доспех из чешуи Хранителя~ //HoF
+@12482    = ~Кулдахарский кузнец Конлан изготовил эти доспехи из чешуи черного дракона Чахопека, Хранителя Перекрестка из Кулдахара в Чулт. Эти доспехи просто потрясающие, они защищают лучше, чем полный латный доспех, но при этом стесняют движения владельца не больше, чем кожаные доспехи.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Light Armor
-Armor Bonus: +12
-Max Dex Bonus:  +6
-Armor Check Penalty:  -0
-Arcane Spell Failure:  10%
-Resistance:
-  50/-  Acid Resistance
-Weight: 10 lb.~
+Лёгкая броня
+Класс защиты: +12 (доспех)
+Максимальный бонус ловкости: +6
+Штраф к проверкам за броню: -0
+Шанс провала заклинания: 10%
+Сопротивление:
+  50/- Сопротивление кислоте
+Вес: 10 фунтов~
 @12483    = ~Hide Armor of Rage +3~
 @12484    = ~Hide armor is made from multiple layers of leather armor. Though stiff and hard to move in, it is relatively simple to make and provides a good barrier against cold weather. It is most commonly seen on the warriors and huntsmen of northern barbarian tribes.
 
