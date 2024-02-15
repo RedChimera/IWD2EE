@@ -11632,153 +11632,152 @@
  Чистая энергия: при атаке бонусы к классу защиты цели от доспеха и щита не учитываются
 Вес: 0 фунтов
 Оружие: Арбалет~
-@12429    = ~Boots of Greater Speed~
-@12430    = ~These boots have been magically enhanced so that wearer is able to travel extremely fast, much faster than regular boots of speed. They are much prized by those whose profession involves traveling long distances.
+@12429    = ~Сапоги огромной скорости~
+@12430    = ~Магия этих сапог позволяет надевшему их двигаться экстремально быстро, гораздо быстрее чем в обычных сапогах скорости. Такую обувь очень ценят те, чей род занятий предполагает длительные путешествия.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Haste
-Movement rate increased significantly
-Weight: 1 lb.~
-@12431    = ~Bracers of Defense +5~
-@12432    = ~Normally bracers are used to add support and protection to forearm area of the body. However, these bracers have been magically altered so that the wearer receives armor like protection without the constraints of wearing armor. Bracers such as these are highly prized by wizards and sorcerers who must have complete freedom of movement to perform their magical arts.
+Сильно увеличенная скорость перемещения
+Вес: 1 фунт~
+@12431    = ~Наручи защиты +5~
+@12432    = ~Наручи - это часть доспехов, предназначенная для зашиты предплечий. Эти же наручи были зачарованы таким образом, чтобы защищать своего владельца, при этом не стесняя его, как обычная броня. Такие доспехи особенно ценятся колдунами и волшебниками, которым нужна свобода движений для чтения своих заклинаний.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Armor Bonus: +5
-Weight: 2 lb.~
-@12433    = ~Bracers of Defense +8~
-@12434    = ~Normally bracers are used to add support and protection to forearm area of the body. However, these bracers have been magically altered so that the wearer receives armor like protection without the constraints of wearing armor. Bracers such as these are highly prized by wizards and sorcerers who must have complete freedom of movement to perform their magical arts.
+Класс защиты: +5 (доспех)
+Вес: 2 фунта~
+@12433    = ~Наручи защиты +8~
+@12434    = ~Наручи - это часть доспехов, предназначенная для зашиты предплечий. Эти же наручи были зачарованы таким образом, чтобы защищать своего владельца, при этом не стесняя его, как обычная броня. Такие доспехи особенно ценятся колдунами и волшебниками, которым нужна свобода движений для чтения своих заклинаний.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Armor Bonus: +8
-Weight: 2 lb.~
-@12435    = ~Bracers of Defense +10~
-@12436    = ~Normally bracers are used to add support and protection to forearm area of the body. However, these bracers have been magically altered so that the wearer receives armor like protection without the constraints of wearing armor. Bracers such as these are highly prized by wizards and sorcerers who must have complete freedom of movement to perform their magical arts.
+Класс защиты: +8 (доспех)
+Вес: 2 фунта~
+@12435    = ~Наручи защиты +10~
+@12436    = ~Наручи - это часть доспехов, предназначенная для зашиты предплечий. Эти же наручи были зачарованы таким образом, чтобы защищать своего владельца, при этом не стесняя его, как обычная броня. Такие доспехи особенно ценятся колдунами и волшебниками, которым нужна свобода движений для чтения своих заклинаний.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Armor Bonus: +10
-Weight: 2 lb.~
-@12437    = ~Gloves of Death~
-@12438    = ~These gloves were given their name for a good reason. While wearing these gloves, one can point at a creature, and that creature will almost surely die. This effect only functions once per day.
+Класс защиты: +10 (доспех)
+Вес: 2 фунта~
+@12437    = ~Перчатки смерти~
+@12438    = ~Эти перчатки получили свое название не просто так. Надев их, можно указать на существо, и оно почти наверняка умрет. Этот эффект действует только один раз в день.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Spell Power: Once per day, can use a stronger version of Finger of Death. The target must save vs. Fortitude (DC 40) or die instantly; the target takes 50d6+50 damage even if it made the save.
-Weight: 1 lb.~
-@12439    = ~Gauntlets of Extraordinary Specialization~
-@12440    = ~These magical gauntlets turn the wearer into a master of weapons. One who is already a master warrior will become even more skilled.
+Заклинание: один раз в день можно использовать более сильную версию заклинания "Перст смерти". Цель должна сделать спасбросок стойкости с УС 40 или мгновенно умереть; цель получает 50d6+50 урона, даже если спасбросок был удачным
+Вес: 1 фунта~
+@12439    = ~Рукавицы необыкновенного мастерства~
+@12440    = Эти магические рукавицы превращают владельца в мастера владения оружием. Тот, кто уже является опытным воином, становится еще более искусным.
 
-STATISTICS:  
+ПАРАМЕТРЫ:
 
-Attack Bonus: +3
-Damage:  +5 bonus
-Speed: 1 extra attack per round with any weapon 
-Weight:  2 lb.~
-@12441    = ~Heavy Crossbow of Endless Bolts +10~
-@12442    = ~A crossbow is a bow mounted crosswise on a wooden or metal shaft, the latter called a tiller. The bow is usually made of ash or yew. The crossbow fires a quarrel (also called a bolt). A slight blue glow can be seen emanating from the crossbar.
+Атака: +3
+Урон: +5
+Скорость: 1 дополнительная атака в раунд
+Вес: 2 фунта~
+@12441    = ~Тяжёлый арбалет бесконечных болтов +10~
+@12442    = ~Арбалет представляет собой лук, закреплённый плашмя на деревянном или металлическом брусе, который называют ложем. Обычно такие луки делаются из ясеня или тиса. Стреляет арбалет короткой стрелой, которую чаще называют болтом. Этот зачарованный арбалет слегка отливает синевой.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  +22 (missile)
-Attack Bonus:  +10
-Special:
-  This crossbow does not need ammunition. Instead, it fires an infinite supply of +10 bolts.
-Weight: 9 lb.
-Feat Requirement:  Simple Weapon, Crossbow
-Type:  Two-handed~
-@12443    = ~Chainmail +3~
-@12444    = ~Chain mail is made of interlocking metal rings. It is always worn over a layer of padded fabric or soft leather to prevent chafing and lessen the impact of blows. A faint blue glow can be seen emanating from the armor. 
+Урон: +22 (метательный)
+Атака: +10
+Особенности:
+ Этот арбалет не нуждается в боеприпасах; вместо этого у него есть бесконечный запас болтов +10
+Вес: 9 фунтов
+Необходимая черта: Простое оружие, Арбалеты
+Тип: двуручное~
+@12443    = ~Кольчуга +3~
+@12444    = ~Кольчугу изготавливают из сплетённых друг с другом металлических колец. Её всегда носят поверх подкладки из ткани или мягкой кожи, чтобы предотвратить натирание и смягчить наносимые удары. Этот доспех излучает слабый синий свет.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Medium Armor
-Armor Bonus: +8
-Max Dex Bonus:  +2
-Armor Check Penalty:  -5
-Arcane Spell Failure:  30%
-Weight: 25 lb.~
-@12445    = ~Splint Mail +3~
-@12446    = ~Splint mail is a variant of banded mail in which the metal strips are applied vertically to the backing of chain, leather, or cloth rather than horizontally as in banded mail. Since the human body does not swivel in mid-torso as much as it flexes back to front, splint mail is more restrictive in battle. This particular suit of armor has been magically enchanted for increased durability and protection.
+Средняя броня
+Класс защиты: +8 (доспех)
+Максимальный бонус ловкости: +2
+Штраф к проверкам за броню: -5
+Шанс провала заклинания: 30%
+Вес: 25 фунтов~
+@12445    = ~Пластинчатый доспех +3~
+@12446    = ~Пластинчатый доспех состоит из металлических полос, вертикально прикреплённых к к подкладке из колец, кожи или ткани. Поскольку наклонять торс вперёд и назад приходится чаще, чем в стороны, пластинчатый доспех сильно ограничивает движение в бою. Чары, наложенные на доспех, увеличивают его прочность и защитные качества.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Heavy Armor
-Armor Bonus: +9
-Max Dex Bonus:  +0
-Armor Check Penalty:  -7
-Arcane Spell Failure:  40%
-Weight: 32 lb.~
-@12447    = ~Chainmail of Invulnerability +3~
-@12448    = ~Chain mail is made of interlocking metal rings. It is always worn over a layer of padded fabric or soft leather to prevent chafing and lessen the impact of blows. A faint blue glow can be seen emanating from the armor. 
+Тяжёлая броня
+Класс защиты: +9 (доспех)
+Максимальный бонус ловкости: +0
+Штраф к проверкам за броню: -7
+Шанс провала заклинания: 40%
+Вес: 32 фунта~
+@12447    = ~Кольчуга неуязвимости +3~
+@12448    = ~Кольчугу изготавливают из сплетённых друг с другом металлических колец. Её всегда носят поверх подкладки из ткани или мягкой кожи, чтобы предотвратить натирание и смягчить наносимые удары. Этот доспех излучает слабый синий свет.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Medium Armor
-Armor Bonus: +8
-Max Dex Bonus:  +2
-Armor Check Penalty:  -5
-Arcane Spell Failure:  30%
-Special:
-  Constant Effect: Wearer is under the effects of the spell Minor Globe of Invulnerability
-Weight: 25 lb.~
-@12449    = ~Splint Mail of Vitality +5~
-@12450    = ~Splint mail is a variant of banded mail in which the metal strips are applied vertically to the backing of chain, leather, or cloth rather than horizontally as in banded mail. Since the human body does not swivel in mid-torso as much as it flexes back to front, splint mail is more restrictive in battle. This particular suit of armor has been magically enchanted for increased durability and protection.
+Средняя броня
+Класс защиты: +8 (доспех)
+Максимальный бонус ловкости: +2
+Штраф к проверкам за броню: -5
+Шанс провала заклинания: 30%
+Особенности:
+ Постоянный эффект: владелец кольчуги находится под постоянным эффектом заклинания "Малая сфера неуязвимости"
+Вес: 25 фунтов~
+@12449    = ~Пластинчатый доспех жизненной энергии +5~
+@12450    = ~Пластинчатый доспех состоит из металлических полос, вертикально прикреплённых к к подкладке из колец, кожи или ткани. Поскольку наклонять торс вперёд и назад приходится чаще, чем в стороны, пластинчатый доспех сильно ограничивает движение в бою. Чары, наложенные на доспех, увеличивают его прочность и защитные качества.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Heavy Armor
-Armor Bonus: +11
-Max Dex Bonus:  +0
-Armor Check Penalty:  -7
-Arcane Spell Failure:  40%
-Special:
-  Constitution: +4 bonus
-Weight: 32 lb.~
-@12451    = ~Splint Mail of Perfect Health +7~
-@12452    = ~Splint mail is a variant of banded mail in which the metal strips are applied vertically to the backing of chain, leather, or cloth rather than horizontally as in banded mail. Since the human body does not swivel in mid-torso as much as it flexes back to front, splint mail is more restrictive in battle. This particular suit of armor has been magically enchanted for increased durability and protection.
+Тяжёлая броня
+Класс защиты: +11 (доспех)
+Максимальный бонус ловкости: +0
+Штраф к проверкам за броню: -7
+Шанс провала заклинания: 40%
+Особенности:
+ Телосложение: +4
+Вес: 32 фунта~
+@12451    = ~Пластинчатый доспех превосходного здоровья +7~
+@12452    = ~Пластинчатый доспех состоит из металлических полос, вертикально прикреплённых к к подкладке из колец, кожи или ткани. Поскольку наклонять торс вперёд и назад приходится чаще, чем в стороны, пластинчатый доспех сильно ограничивает движение в бою. Чары, наложенные на доспех, увеличивают его прочность и защитные качества.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Heavy Armor
-Armor Bonus: +13
-Max Dex Bonus:  +0
-Armor Check Penalty:  -7
-Arcane Spell Failure:  40%
-Special:
-  Immunity to Poison
-  Immunity to Disease
-  Immunity to Wounding effects
-  Immunity to Energy Drain
-Weight: 28 lb.~
-@12453    = ~Chainmail of Invulnerability +4~
-@12454    = ~Chain mail is made of interlocking metal rings. It is always worn over a layer of padded fabric or soft leather to prevent chafing and lessen the impact of blows. A faint blue glow can be seen emanating from the armor. 
+Тяжёлая броня
+Класс защиты: +13 (доспех)
+Максимальный бонус ловкости: +0
+Штраф к проверкам за броню: -7
+Шанс провала заклинания: 40%
+Особенности:
+ Иммунитет к яду
+ Иммунитет к болезням
+ Иммунитет к эффекту "Рваных ран"
+ Иммунитет к оттоку энергии
+Вес: 32 фунта~
+@12453    = ~Кольчуга неуязвимости +4~
+@12454    = ~Кольчугу изготавливают из сплетённых друг с другом металлических колец. Её всегда носят поверх подкладки из ткани или мягкой кожи, чтобы предотвратить натирание и смягчить наносимые удары. Этот доспех излучает слабый синий свет.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Medium Armor
-Armor Bonus: +9
-Max Dex Bonus:  +2
-Armor Check Penalty:  -5
-Arcane Spell Failure:  30%
-Special:
-  Constant Effect: Wearer is under the effects of the spell Globe of Invulnerability
-Weight: 20 lb.~
-@12455    = ~Chainmail of Retaliation +5~
-@12456    = ~Chain mail is made of interlocking metal rings. It is always worn over a layer of padded fabric or soft leather to prevent chafing and lessen the impact of blows. A faint blue glow can be seen emanating from the armor.
+Средняя броня
+Класс защиты: +9 (доспех)
+Максимальный бонус ловкости: +2
+Штраф к проверкам за броню: -5
+Шанс провала заклинания: 30%
+Особенности:
+ Постоянный эффект: владелец кольчуги находится под постоянным эффектом заклинания "Сфера неуязвимости"
+Вес: 20 фунтов~
+@12455    = ~Кольчука возмездия +5~
+@12456    = ~Кольчугу изготавливают из сплетённых друг с другом металлических колец. Её всегда носят поверх подкладки из ткани или мягкой кожи, чтобы предотвратить натирание и смягчить наносимые удары. Этот доспех излучает слабый синий свет.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Medium Armor
-Armor Bonus: +10
-Max Dex Bonus:  +2
-Armor Check Penalty:  -5
-Arcane Spell Failure:  30%
-Special:
-  Retaliation: Whenever wearer is hit by a melee attack, he or she automatically makes an additional melee attack against a nearby enemy.
-Weight: 15 lb.~
+Средняя броня
+Класс защиты: +10 (доспех)
+Максимальный бонус ловкости: +2
+Штраф к проверкам за броню: -5
+Шанс провала заклинания: 30%
+Особенности:
+ Возмездие: когда владелец кольчуги получает удар в ближнем бою, он автоматически проводит дополнительную атаку ближнего боя по ближайшему противнику
+Вес: 15 фунтов~
 @12457    = ~Cloak of Protection +3~
 @12458    = ~This simple cloak has been imbued with some small magical properties to help protect its wearer. It does so by affecting both saving throws and armor class. It is ideal for wizards and others who cannot wear bulkier or more restrictive types of armor.
 
