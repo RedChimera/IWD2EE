@@ -2465,7 +2465,7 @@
 //@10545    = ~Half-plate Armor~
 //@10546    = ~Item description can remain the same; if new description is needed put it here~
 //@10547    = ~Plate Mail +1~
-@10548    = ~Латный доспех представляет собой комбинацию кольчужного доспеха с металлическими пластинами, закрывающими жизненно важные области. Ремни и пряжки скрепляют пластины и распределяют вес, но всё равно доспех получается более свободным и уязвимым, чем полный латный. Этот доспех зачарован и даёт своему владельцу дополнительную защиту.
+@10548    = ~Этот доспех представляет собой комбинацию кольчужного доспеха с металлическими пластинами, закрывающими жизненно важные области. Ремни и пряжки скрепляют пластины и распределяют вес, но всё равно доспех получается более свободным и уязвимым, чем полный латный. Этот доспех зачарован и даёт своему владельцу дополнительную защиту.
 
 ПАРАМЕТРЫ:
 
@@ -11899,8 +11899,8 @@
 Максимальный бонус ловкости: +6
 Штраф к проверкам за броню: -0
 Шанс провала заклинания: 10%
-Сопротивление:
-  30/- Сопротивление кислоте
+Особенности:
+ Сопротивление: 30/- Сопротивление кислоте
 Вес: 10 фунтов~
 @12481    = ~Доспех из чешуи Хранителя~ //HoF
 @12482    = ~Кулдахарский кузнец Конлан изготовил эти доспехи из чешуи черного дракона Чахопека, Хранителя Перекрестка из Кулдахара в Чулт. Эти доспехи просто потрясающие, они защищают лучше, чем полный латный доспех, но при этом стесняют движения владельца не больше, чем кожаные доспехи.
@@ -11912,176 +11912,177 @@
 Максимальный бонус ловкости: +6
 Штраф к проверкам за броню: -0
 Шанс провала заклинания: 10%
-Сопротивление:
-  50/- Сопротивление кислоте
+Особенности:
+ Сопротивление: 50/- Сопротивление кислоте
 Вес: 10 фунтов~
-@12483    = ~Hide Armor of Rage +3~
-@12484    = ~Hide armor is made from multiple layers of leather armor. Though stiff and hard to move in, it is relatively simple to make and provides a good barrier against cold weather. It is most commonly seen on the warriors and huntsmen of northern barbarian tribes.
+@12483    = ~Доспех из шкур ярости +3~
+@12484    = ~Доспех из шкуры делается из нескольких слоёв шкур животных. Хотя он жёсток и в нём не очень удобно двигаться, доспех прост в изготовлении и хорошо защищает от холода. Чаще всего его можно увидеть на воинах и охотниках северных варварских племён.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Medium Armor
-Armor Bonus: +7
-Max Dex Bonus:  +4
-Armor Check Penalty:  -3
-Arcane Spell Failure:  20%
-Special:
-  Constant Effect: Wearer is under effects similar to the spell Emotion: Rage (+2 attack, +4 damage, +2 Will saves, -2 Armor Class penalty)
-Weight: 10 lb.~
-@12485    = ~Hide Armor of Great Vitality +5~
-@12486    = ~Hide armor is made from multiple layers of leather armor. Though stiff and hard to move in, it is relatively simple to make and provides a good barrier against cold weather. It is most commonly seen on the warriors and huntsmen of northern barbarian tribes.
+Средняя броня
+Класс защиты: +7 (доспех)
+Максимальный бонус ловкости: +4
+Штраф к проверкам за броню: -3
+Шанс провала заклинания: 20%
+Особенности:
+ Постоянный эффект: носитель постоянно находится под эффектом, похожим на эффект заклинания "Эмоция: Ярость" (+2 к атаке, +4 к урону, +2 к спасброскам воли, -2 к классу защиты)
+Вес: 10 фунтов~
+@12485    = ~Доспех из шкур великого здоровья +5~
+@12486    = ~Доспех из шкуры делается из нескольких слоёв шкур животных. Хотя он жёсток и в нём не очень удобно двигаться, доспех прост в изготовлении и хорошо защищает от холода. Чаще всего его можно увидеть на воинах и охотниках северных варварских племён.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Medium Armor
-Armor Bonus: +9
-Max Dex Bonus:  +4
-Armor Check Penalty:  -3
-Arcane Spell Failure:  20%
-Special:
-  Constitution: +8 bonus
-Weight: 5 lb.~
-@12487    = ~Greater Shadowed Leather Armor +3~
-@12488    = ~Leather armor, despite the popular misconception, is not soft and supple like the leather used to make a ranger's boots or a druid's robe. That kind of leather offers no better protection than common clothing. Magical enchantments enhance the protective abilities of this leather armor.
+Средняя броня
+Класс защиты: +9 (доспех)
+Максимальный бонус ловкости: +4
+Штраф к проверкам за броню: -3
+Шанс провала заклинания: 20%
+Особенности:
+ Телосложение: +8
+Вес: 5 фунтов~
+@12487    = ~Кожаный доспех великой тени +3~
+@12488    = ~Кожаный доспех, вопреки расхожему мнению, делается вовсе не из такой же мягкой и гибкой кожи, которая используется для изготовления сапог для следопыта или мантии для друида. Изделия из такой мягкой кожи защищают не лучше обычной одежды. Магическое зачарование улучшает защитные свойства этого кожаного доспеха.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Light Armor
-Armor Bonus: +5
-Max Dex Bonus:  +6
-Armor Check Penalty:  -0
-Arcane Spell Failure:  10%
-Special:
-  Generic Armor Bonus: +3
-  Shadowed: +15 to Hide skill
-Weight: 5 lb.~
-@12489    = ~Leather Armor of Invisibility +4~
-@12490    = ~At first glance this appears to be an ordinary suit of leather armor, a closer inspection reveals subtle clues of various arcane enhancements. The rivets holding the various pieces together shine brightly as if polished. The leather pieces are soft and supple to the touch, but instantly become rigid when struck with a heavy blow. And when worn, the creaking and stretching noises normally associated with such armors are mysteriously absent.
+Лёгкая броня
+Класс защиты: +5 (доспех)
+Максимальный бонус ловкости: +6
+Штраф к проверкам за броню: -0
+Шанс провала заклинания: 10%
+Особенности:
+ Класс защиты: +3 (общий)
+ Слияние с тенью: +15 к навыку "Незаметность"
+Вес: 5 фунтов~
+@12489    = ~Кожаный доспех невидимости +4~
+@12490    = ~На первый взгляд это обычный кожаный доспех, но если рассмотреть его поближе, можно заметить следы магических чар. Заклёпки, скрепляющие части, сияют, будто полированные. Кожа на ощупь мягкая и гибкая, но при сильном ударе мгновенно становится прочной и жёсткой. А ещё по какой-то загадочной причине доспех не издаёт никакого скрипа и шуршания, характерных для подобной брони.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Medium Armor
-Armor Bonus: +6
-Max Dex Bonus:  +6
-Armor Check Penalty:  -0
-Arcane Spell Failure:  10%
-Special:
-  When wearer takes damage, he or she has a 50% chance to turn invisible for 7 rounds.
-Weight: 3 lb.~
-@12491    = ~Studded Leather Armor of Swiftness +5~
-@12492    = ~Studded leather armor has little in common with normal leather armor. While leather armor is a hardened shell, studded leather armor is soft and supple with hundreds of metal rivets affixed. The rivets are so close together that they form a flexible coating of hard metal that turns aside slashing and cutting attacks. The soft leather backing is little more than a means of securing the rivets in place. Magical enchantments enhance the protective abilities of this leather armor.
+Лёгкая броня
+Класс защиты: +6 (доспех)
+Максимальный бонус ловкости: +6
+Штраф к проверкам за броню: -0
+Шанс провала заклинания: 10%
+Особенности:
+ Когда носитель получает урон, у него есть 50% шанс стать невидимым на 7 раундов
+Вес: 10 фунтов~
+@12491    = ~Клёпанный кожаный доспех быстроты +5~
+@12492    = ~Клёпаный кожаный доспех имеет мало общего с обычным кожаным доспехом. В то время как последний изготавливают из жёсткой кожи, материал, из которого делают клёпаный кожаный доспех, мягок, пластичен и покрыт сотнями металлических заклёпок. Они расположены так близко друг к другу, что составляют единое гибкое металлическое покрытие, способное отражать рубящие и режущие удары. Мягкая кожаная подкладка лишь удерживает заклёпки на месте. Чары, наложенные на этот доспех, увеличивают его прочность и защитные качества.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Light Armor
-Armor Bonus: +8
-Max Dex Bonus:  +5
-Armor Check Penalty:  -1
-Arcane Spell Failure:  15%
-Special:
-  Movement Rate doubled
-Weight: 4 lb.~
-@12493    = ~Studded Leather Armor of Limitless Speed +6~
-@12494    = ~Studded leather armor has little in common with normal leather armor. While leather armor is a hardened shell, studded leather armor is soft and supple with hundreds of metal rivets affixed. The rivets are so close together that they form a flexible coating of hard metal that turns aside slashing and cutting attacks. The soft leather backing is little more than a means of securing the rivets in place. Magical enchantments enhance the protective abilities of this leather armor.
+Лёгкая броня
+Класс защиты: +8 (доспех)
+Максимальный бонус ловкости: +5
+Штраф к проверкам за броню: -1
+Шанс провала заклинания: 15%
+Особенности:
+ Скорость перемещения удваивается
+Вес: 4 фунтов~
+@12493    = ~Клёпанный кожаный доспех бесконечной скорости +6~
+@12494    = ~Клёпаный кожаный доспех имеет мало общего с обычным кожаным доспехом. В то время как последний изготавливают из жёсткой кожи, материал, из которого делают клёпаный кожаный доспех, мягок, пластичен и покрыт сотнями металлических заклёпок. Они расположены так близко друг к другу, что составляют единое гибкое металлическое покрытие, способное отражать рубящие и режущие удары. Мягкая кожаная подкладка лишь удерживает заклёпки на месте. Чары, наложенные на этот доспех, увеличивают его прочность и защитные качества.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Light Armor
-Armor Bonus: +9
-Max Dex Bonus:  +5
-Armor Check Penalty:  -1
-Arcane Spell Failure:  15%
-Special:
-  Speed: 1 additional attack per round
-Weight: 4 lb.~
-@12495    = ~Leather Armor of Epic Avoidance +6~
-@12496    = ~At first glance this appears to be an ordinary suit of leather armor, a closer inspection reveals subtle clues of various arcane enhancements. The rivets holding the various pieces together shine brightly as if polished. The leather pieces are soft and supple to the touch, but instantly become rigid when struck with a heavy blow. And when worn, the creaking and stretching noises normally associated with such armors are mysteriously absent.
+Лёгкая броня
+Класс защиты: +9 (доспех)
+Максимальный бонус ловкости: +5
+Штраф к проверкам за броню: -1
+Шанс провала заклинания: 15%
+Особенности:
+ Скорость: 1 дополнительная атака в раунд
+Вес: 4 фунтов~
+@12495    = ~Кожаный доспех эпического уклонения +6~
+@12496    = ~На первый взгляд это обычный кожаный доспех, но если рассмотреть его поближе, можно заметить следы магических чар. Заклёпки, скрепляющие части, сияют, будто полированные. Кожа на ощупь мягкая и гибкая, но при сильном ударе мгновенно становится прочной и жёсткой. А ещё по какой-то загадочной причине доспех не издаёт никакого скрипа и шуршания, характерных для подобной брони.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Light Armor
-Armor Bonus: +8
-Max Dex Bonus:  +6
-Armor Check Penalty:  -0
-Arcane Spell Failure:  10%
-Special:
-  Epic Avoidance: The wearer has a 50% chance to automatically dodge any instance of non-poison damage. If this damage came from a weapon attack, all on-hit effects of that attack are avoided as well.
-Weight: 2 lb.~
-@12497    = ~Heroic Full Plate +1~
-@12498    = ~Full plate armor is the best armor a warrior can buy, both in appearance and protection. The perfectly fitted interlocking plates are specially angled to deflect arrows and blows, and the entire suit is carefully adorned with rich engraving and embossed detail. With its magical enchantments, this suit of full plate is ideal for warriors.
+Лёгкая броня
+Класс защиты: +8 (доспех)
+Максимальный бонус ловкости: +6
+Штраф к проверкам за броню: -0
+Шанс провала заклинания: 10%
+Особенности:
+ Эпическое уклонение: у владельца есть 50% шанс автоматически уклониться от любого неядовитого урона; если урон должен был быть нанесен оружием, то все эффекты от удара также будут предотвращены
+Вес: 2 фунта~
+@12497    = ~Героические полные латы +1~
+@12498    = ~Полный латный доспех - лучшее из того, что может позволить себе воин, как с точки зрения защиты, так и по внешнему виду. Великолепно подогнанные друг к другу металлические пластины расположены под специальным углом, чтобы лучше отражать стрелы и удары, а весь доспех искусно украшен богатой гравировкой и чеканкой. Чары, наложенные на этот доспех, делают его идеальной защитой для воинов.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Heavy Armor
-Armor Bonus: +9
-Max Dex Bonus:  +1
-Armor Check Penalty:  -6
-Arcane Spell Failure:  35%
-Special:
-  When below 50% HP, wearer gains the effects of Heroic Inspiration, as if he or she possessed the feat.
-Weight: 45 lb.~
-@12499    = ~Half-Plate of Expertise +4~
-@12500    = ~This armor is a combination of chainmail with metal plates covering vital areas. Buckles and straps hold the whole suit together and distribute the weight, but the armor still hangs more loosely than full plate. In addition, this suit of half-plate mail is enchanted and gives additional bonuses to the wearer's armor class.
+Тяжёлая броня
+Класс защиты: +9 (доспех)
+Максимальный бонус ловкости: +1
+Штраф к проверкам за броню: -6
+Шанс провала заклинания: 35%
+Особенности:
+ Когда у владельца меньше 50% пунктов здоровья, он получает эффекты черты "Героическое вдохновения", как если бы эта черта у него была
+Вес: 45 фунтов~
+@12499    = ~Полулаты блокирования +4~
+@12500    = ~Этот доспех представляет собой комбинацию кольчужного доспеха с металлическими пластинами, закрывающими жизненно важные области. Ремни и пряжки скрепляют пластины и распределяют вес, но всё равно доспех получается более свободным и уязвимым, чем полный латный. Этот доспех зачарован и даёт своему владельцу дополнительную защиту.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Heavy Armor
-Armor Bonus:  +11
-Max Dex Bonus:  +0
-Armor Check Penalty:  -7
-Arcane Spell Failure:  40%
-Special:
-  Generic Armor Bonus: +5
-  Attack Penalty: -5
-Weight: 40 lb.~
-@12501    = ~Half-Plate of Holy Power +3~
-@12502    = ~This armor is a combination of chainmail with metal plates covering vital areas. Buckles and straps hold the whole suit together and distribute the weight, but the armor still hangs more loosely than full plate. In addition, this suit of half-plate mail is enchanted and gives additional bonuses to the wearer's armor class.
+Тяжёлая броня
+Класс защиты: +11 (доспех)
+Максимальный бонус ловкости: +0
+Штраф к проверкам за броню: -7
+Шанс провала заклинания: 40%
+Особенности:
+ Класс защиты: +5 (общий)
+ Атака: -5 (ухудшение)
+Вес: 40 фунтов~
+@12501    = ~Полулаты святой силы +3~
+@12502    = ~Этот доспех представляет собой комбинацию кольчужного доспеха с металлическими пластинами, закрывающими жизненно важные области. Ремни и пряжки скрепляют пластины и распределяют вес, но всё равно доспех получается более свободным и уязвимым, чем полный латный. Этот доспех зачарован и даёт своему владельцу дополнительную защиту.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Heavy Armor
-Armor Bonus:  +10
-Max Dex Bonus:  +0
-Armor Check Penalty:  -7
-Arcane Spell Failure:  40%
-Special:
-  Constant Effect: Wearer is under the effects of the spell Holy Power
-Weight: 40 lb.~
-@12503    = ~Full Plate +5~
-@12504    = ~Full plate armor is the best armor a warrior can buy, both in appearance and protection. The perfectly fitted interlocking plates are specially angled to deflect arrows and blows, and the entire suit is carefully adorned with rich engraving and embossed detail. With its magical enchantments, this suit of full plate is ideal for warriors.
+Тяжёлая броня
+Класс защиты: +10 (доспех)
+Максимальный бонус ловкости: +0
+Штраф к проверкам за броню: -7
+Шанс провала заклинания: 40%
+Особенности:
+ Постоянный эффект: носитель находится под постоянным эффектом заклинания "Святая сила"
+Вес: 40 фунтов~
+@12503    = ~Полные латы +5~
+@12504    = ~Полный латный доспех - лучшее из того, что может позволить себе воин, как с точки зрения защиты, так и по внешнему виду. Великолепно подогнанные друг к другу металлические пластины расположены под специальным углом, чтобы лучше отражать стрелы и удары, а весь доспех искусно украшен богатой гравировкой и чеканкой. Чары, наложенные на этот доспех, делают его идеальной защитой для воинов.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Heavy Armor
-Armor Bonus: +13
-Max Dex Bonus:  +1
-Armor Check Penalty:  -6
-Arcane Spell Failure:  35%
-Weight: 30 lb.~
-@12505    = ~Impenetrable Full Plate +6~
-@12506    = ~Full plate armor is the best armor a warrior can buy, both in appearance and protection. The perfectly fitted interlocking plates are specially angled to deflect arrows and blows, and the entire suit is carefully adorned with rich engraving and embossed detail. With its magical enchantments, this suit of full plate is ideal for warriors.
+Тяжёлая броня
+Класс защиты: +13 (доспех)
+Максимальный бонус ловкости: +1
+Штраф к проверкам за броню: -6
+Шанс провала заклинания: 35%
+Вес: 30 фунтов~
+@12505    = ~Непробиваемые полные латы +6~
+@12506    = ~Полный латный доспех - лучшее из того, что может позволить себе воин, как с точки зрения защиты, так и по внешнему виду. Великолепно подогнанные друг к другу металлические пластины расположены под специальным углом, чтобы лучше отражать стрелы и удары, а весь доспех искусно украшен богатой гравировкой и чеканкой. Чары, наложенные на этот доспех, делают его идеальной защитой для воинов.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Heavy Armor
-Armor Bonus: +14
-Max Dex Bonus:  +1
-Armor Check Penalty:  -6
-Arcane Spell Failure:  35%
-Special:
-  Damage Reduction 15/+3
-Weight: 35 lb.~
-@12507    = ~Full Plate +10~
-@12508    = ~Full plate armor is the best armor a warrior can buy, both in appearance and protection. The perfectly fitted interlocking plates are specially angled to deflect arrows and blows, and the entire suit is carefully adorned with rich engraving and embossed detail. With its magical enchantments, this suit of full plate is ideal for warriors.
+Тяжёлая броня
+Класс защиты: +14 (доспех)
+Максимальный бонус ловкости: +1
+Штраф к проверкам за броню: -6
+Шанс провала заклинания: 35%
+Особенности:
+ Снижение урона: 15/+3
+ Постоянный эффект: носитель находится под постоянным эффектом заклинания "Святая сила"
+Вес: 35 фунтов~
+@12507    = ~Полные латы +10~
+@12508    = ~Полный латный доспех - лучшее из того, что может позволить себе воин, как с точки зрения защиты, так и по внешнему виду. Великолепно подогнанные друг к другу металлические пластины расположены под специальным углом, чтобы лучше отражать стрелы и удары, а весь доспех искусно украшен богатой гравировкой и чеканкой. Чары, наложенные на этот доспех, делают его идеальной защитой для воинов.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Heavy Armor
-Armor Bonus: +18
-Max Dex Bonus:  +1
-Armor Check Penalty:  -6
-Arcane Spell Failure:  35%
-Weight: 15 lb.~
+Тяжёлая броня
+Класс защиты: +18 (доспех)
+Максимальный бонус ловкости: +1
+Штраф к проверкам за броню: -6
+Шанс провала заклинания: 35%
+Вес: 15 фунтов~
 @12509    = ~Ring of Protection +6~
 @12510    = ~This magical ring provides the wearer with amazing protection.
 
