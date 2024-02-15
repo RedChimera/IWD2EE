@@ -11778,43 +11778,43 @@
 Особенности:
  Возмездие: когда владелец кольчуги получает удар в ближнем бою, он автоматически проводит дополнительную атаку ближнего боя по ближайшему противнику
 Вес: 15 фунтов~
-@12457    = ~Cloak of Protection +3~
-@12458    = ~This simple cloak has been imbued with some small magical properties to help protect its wearer. It does so by affecting both saving throws and armor class. It is ideal for wizards and others who cannot wear bulkier or more restrictive types of armor.
+@12457    = ~Накидка защиты +3~
+@12458    = ~Эта простая накидка обладает небольшими защитными магическими свойствами. Она улучшает класс защиты и спасброски. Такие накидки хороши для магов и других персонажей, которые не могут носить тяжёлые доспехи.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Deflection Bonus:  +3 
-Saving Throw:  +3 bonus
-Weight:  3 lb.~
-@12459    = ~Cloak of Protection +4~
-@12460    = ~This simple cloak has been imbued with some small magical properties to help protect its wearer. It does so by affecting both saving throws and armor class. It is ideal for wizards and others who cannot wear bulkier or more restrictive types of armor.
+Класс защиты: +3 (отражение)
+Спасброски: +3
+Вес: 3 фунта~
+@12459    = ~Накидка защиты +4~
+@12460    = ~Эта простая накидка обладает небольшими защитными магическими свойствами. Она улучшает класс защиты и спасброски. Такие накидки хороши для магов и других персонажей, которые не могут носить тяжёлые доспехи.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Deflection Bonus:  +4 
-Saving Throw:  +4 bonus
-Weight:  3 lb.~
-@12461    = ~Improved Cloak of Displacement~
-@12462    = ~The Improved Cloak of Displacement is a magical item that causes subtle shifts in the image of its wearer. It has the power to actually shift an individual's image by as much as six inches in any direction from their actual location. Aside from being an effective defense in combat situations, it has also been the cause of serious eyestrain amongst fellow party members.
+Класс защиты: +4 (отражение)
+Спасброски: +4
+Вес: 3 фунта~
+@12461    = ~Улучшенная накидка смещения~
+@12462    = ~Улучшенная накидка смещения - магический предмет, вызывающий небольшой сдвиг видимого образа своего владельца. Образ может смещаться на расстояние до шести дюймов в любую сторону от реального местоположения объекта. Плащ даёт эффективную защиту в бою, но также может стать причиной серьёзного перенапряжения глаз у соратников.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Constant Effect: Wearer is under the effects of the spell Blur
-Weight:  3 lb.~
-@12463    = ~Cloak of Protection +5~
-@12464    = ~This simple cloak has been imbued with some small magical properties to help protect its wearer. It does so by affecting both saving throws and armor class. It is ideal for wizards and others who cannot wear bulkier or more restrictive types of armor. 
+Постоянный эффект: носитель находится под постоянным эффектом заклинания "Размытие"
+Вес: 3 фунта~
+@12463    = ~Накидка защиты +5~
+@12464    = ~Эта простая накидка обладает небольшими защитными магическими свойствами. Она улучшает класс защиты и спасброски. Такие накидки хороши для магов и других персонажей, которые не могут носить тяжёлые доспехи.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Deflection Bonus:  +5 
-Saving Throw:  +5 bonus
-Weight:  3 lb.~
-@12465    = ~Mantle of Hell's Furnace~
-@12466    = ~An extremely vivid piece of clothing, the Mantle of Hell's Furnace was woven from the beards of fiery azer. It was worn by a high priest of Kossuth named Ullabem for fifteen years before he was killed fighting a priestess of Istishia. When the priestess attempted to destroy it, efreet allies of Ullabem tracked her down and killed her. One of the efreeti kept the cloak until it was requested of him by a clever thief who summoned the genie out of an enchanted block of sandalwood.
+Класс защиты: +5 (отражение)
+Спасброски: +5
+Вес: 3 фунта~
+@12465    = ~Мантия адской печи~
+@12466    = ~Яркая мантия адской печи была изготовлена из бород пламенных азеров. Верховный жрец Коссута по имени Уллабем носил её в течение пятнадцати лет, пока не погиб в схватке с жрицей Ишитии. Когда она попыталась уничтожить мантию, ифриты, состоявшие в союзе с Уллабемом, выследили её и убили. Один из ифритов сохранил артефакт, но затем он перешёл к одному хитроумному вору, который смог вызвать этого джинна из магического куска сандалового дерева.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-The wearer has 50% Cold Resistance, and anyone who hits the wearer in melee takes 1d6 fire damage. These effects do not stack with Fire Shield (Red).~
+Владелец мантии получает 50% сопротивления холоду, и каждый, кто ударяет его, получает 1d6 урона огнём; эти эффекты не суммируются с эффектами заклинания "Огненный щит (красный)"~
 @12467    = ~Ice Dagger +3~
 @12468    = ~The typical throwing dagger has a pointed, usually double-edged blade, as opposed to a knife, which has a single edge and is a bit shorter than the dagger. Unlike a dagger, this one has a smaller handle and is balanced differently. Runes of power have been etched into the blade and glow ominously.
 
