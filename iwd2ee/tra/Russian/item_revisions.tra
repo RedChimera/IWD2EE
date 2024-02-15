@@ -12083,43 +12083,41 @@
 Штраф к проверкам за броню: -6
 Шанс провала заклинания: 35%
 Вес: 15 фунтов~
-@12509    = ~Ring of Protection +6~
-@12510    = ~This magical ring provides the wearer with amazing protection.
+@12509    = ~Кольцо защиты +6~
+@12510    = ~Это магическое кольцо отлично защищает своего владельца.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Deflection Bonus:  +6 
-Weight: 0 lb.~
-@12511    = ~Ring of Mass Invisibility~
-@12512    = ~A ring is a small band of precious metal that is used as jewelry. Some rare rings have had enchantments placed upon them that confer various magical abilities. These rings are highly sought after, especially by those of the adventuring profession. For no apparent reason, this ring feels warm to the touch.
+Класс защиты: +6 (отражение)
+Вес: 0 фунтов~
+@12511    = ~Кольцо массовой невидимости~
+@12512    = ~Кольцо - это небольшая полоска драгоценного металла, используемая как украшение. Изредка встречаются кольца, которые зачарованы и обладают различными магическими свойствами. Такие кольца очень высоко ценятся, особенно среди искателей приключений. Это кольцо тёплое на ощупь.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Spell Power: Can instantly cast the spell Mass Invisibility 3/Day
-Weight: 0 lb.~
-@12513    = ~Ring of Extraordinary Regeneration~
-@12514    = ~A ring is a small band of precious metal that is used as jewelry. Some rare rings have had enchantments placed upon them that confer various magical abilities. These rings are highly sought after, especially by those of the adventuring profession. For no apparent reason, this ring feels warm to the touch.
+Заклинание: может читать заклинание "Массовая невидимость" 3 раза в день
+Вес: 0 фунтов~
+@12513    = ~Кольцо невероятной регенерации~
+@12514    = ~Кольцо - это небольшая полоска драгоценного металла, используемая как украшение. Изредка встречаются кольца, которые зачарованы и обладают различными магическими свойствами. Такие кольца очень высоко ценятся, особенно среди искателей приключений. Это кольцо тёплое на ощупь.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
+Регенерация: восстанавливает 1 пункт здоровья в секунду
+Вес: 0 фунтов~
+@12515    = ~Телепортирующее кольцо из оникса~
+@12516    = ~Это зачарованное кольцо из оникса, которым обычно пользуются элитные дроу, позволяет владельцу телепортироваться по своему желанию, на небольшие расстояния. Кольцо неестественно подвижное - эффект телепортации активируется легким поворотом кольца.
 
-Regeneration: User regenerates 1 hit point per second
-Weight: 0 lb.~
-@12515    = ~Onyx Ring of Teleportation~
-@12516    = ~Commonly used by elite drow, this enchanted onyx ring allows the wearer to teleport at will, but only short distances. The ring is unnaturally flexible, and the teleportation effect is activated by slightly twisting the ring.
+ПАРАМЕТРЫ:
 
-STATISTICS:
+Заклинание: может читать заклинание "Дверь измерений" по желанию
+Вес: 0 фунтов~
+@12517    = ~Кольцо защиты +8~
+@12518    = ~Это магическое кольцо отлично защищает своего владельца.
 
+ПАРАМЕТРЫ:
 
-Spell Power: Can cast Dimension Door at will
-Weight: 0 lb.~
-@12517    = ~Ring of Protection +8~
-@12518    = ~This magical ring provides the wearer with amazing protection.
-
-STATISTICS:
-
-Deflection Bonus:  +8
-Weight: 0 lb.~
+Класс защиты: +8 (отражение)
+Вес: 0 фунтов~
 @12519    = ~Black Blade Ring~
 @12520    = ~A ring is a small band of precious metal that is used as jewelry. Some rare rings have had enchantments placed upon them that confer various magical abilities. These rings are highly sought after, especially by those of the adventuring profession. For no apparent reason, this ring feels warm to the touch.
 
