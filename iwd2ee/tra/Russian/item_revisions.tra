@@ -12118,20 +12118,20 @@
 
 Класс защиты: +8 (отражение)
 Вес: 0 фунтов~
-@12519    = ~Black Blade Ring~
-@12520    = ~A ring is a small band of precious metal that is used as jewelry. Some rare rings have had enchantments placed upon them that confer various magical abilities. These rings are highly sought after, especially by those of the adventuring profession. For no apparent reason, this ring feels warm to the touch.
+@12519    = ~Кольцо чёрного клинка~
+@12520    = ~Кольцо - это небольшая полоска драгоценного металла, используемая как украшение. Изредка встречаются кольца, которые зачарованы и обладают различными магическими свойствами. Такие кольца очень высоко ценятся, особенно среди искателей приключений. Это кольцо тёплое на ощупь.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Spell Power: Can cast Black Blade of Disaster (lasting 30 rounds) 1/Day
-Weight: 0 lb.~
-@12521    = ~Ring of Maximizing~
-@12522    = ~A ring is a small band of precious metal that is used as jewelry. Some rare rings have had enchantments placed upon them that confer various magical abilities. These rings are highly sought after, especially by those of the adventuring profession. For no apparent reason, this ring feels warm to the touch.
+Заклинание: носитель может читать заклинание "Чёрный клинок несчастья" (который действует 30 раундов) раз в день
+Вес: 0 фунтов~
+@12521    = ~Кольцо максимизирования~
+@12522    = ~Кольцо - это небольшая полоска драгоценного металла, используемая как украшение. Изредка встречаются кольца, которые зачарованы и обладают различными магическими свойствами. Такие кольца очень высоко ценятся, особенно среди искателей приключений. Это кольцо тёплое на ощупь.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Maximizing: Casting a spell with the Maximize Spell feat only uses a spell slot one level higher.
-Weight: 0 lb.~
+Максимизация: При произнесении заклинания с чертой "Максимизированное заклинание" используется слот заклинания только на один уровень выше
+Вес: 0 фунтов~
 @12523    = ~Robe of Fire Mastery~
 @12524    = ~Since the age of Netheril, wizards have learned to bestow a wide variety of magical properties upon the everyday objects that surround them. A favorite item of such enchantment is the common robe. It is lightweight, affordable, and holds its enchantment well, thereby making it ideal equipment for a wizard.
 
