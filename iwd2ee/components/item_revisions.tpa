@@ -6242,7 +6242,9 @@ COPY_EXISTING ~60conla2.dlg~ ~override~ //Conlan dialogue
 	END
 
 COPY_EXISTING ~60jerms2.dlg~ ~override~ //Jermsy dialogue
-	REPLACE_TEXTUALLY CASE_INSENSITIVE ~00RTHF51~ ~00RTHF54~
+	DECOMPILE_AND_PATCH BEGIN
+		REPLACE_TEXTUALLY CASE_INSENSITIVE ~GiveItemCreate(\"00RTHF51\", ?Protagonist, ?1, ?0, ?0)~ ~GiveItemCreate("00RTHF54",Protagonist,1,1,1)~
+	END
 
 COPY_EXISTING ~61pyros.dlg~ ~override~ //Lord Pyros dialogue
 	REPLACE_TEXTUALLY CASE_INSENSITIVE ~00Potn24~ ~00Potn23~

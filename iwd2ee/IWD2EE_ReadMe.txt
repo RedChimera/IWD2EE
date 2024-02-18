@@ -9,9 +9,55 @@ If you are using any mods other than IWD2EE, you should also install the IWD2EE 
 
 Icewind Dale 2: Enhanced Edition is a compilation of tweaks and fixes for Icewind Dale 2, enhancing the game in a variety of ways. Classes, spells, items, creatures, and encounters are made more interesting. IWD2EE changes over 300 spells and over 1,000 items, and it adds over 90 new spells, almost 200 new items, over 30 new feats, and several NPCs that can join the party. The mod fixes many of the big issues with the original Icewind Dale 2: you no longer have to do large amounts of backtracking to complete certain areas, enemies in Heart of Fury Mode are empowered in interesting ways rather than just having lots of HP, and you can revise the experience system so you won't get zero experience for killing enemies late in the game.
 
-The big changes described above are only applied if you install certain components - Class Revisions, Spell Revisions, Item Revisions and Creature Revisions are the biggest ones. But there is also a core component to IWD2EE, which is installed the first time you install any one of IWD2EE's components (even one like the New GUI component that doesn't change gameplay on its own).
+The big changes described above are only applied if you install certain components - Class Revisions, Spell Revisions, Item Revisions and Creature Revisions are the biggest ones. It is highly recommended that you install these.
 
---Core Features--
+Components:
+
+1. IWD2EE Core
+2. Class Revisions
+3. Looser Alignment Restrictions for Classes
+4. Spell Revisions
+5. Spell Focus Feats for All Schools
+6. Item Revisions
+7. Creature Revisions
+8. Better XP Progression
+9. More Interesting Alternative to the Palisade Quests
+10. Add Additional Ways to Progress Through Certain Areas
+11. Faster Wandering Village
+12. Faster Dragon's Eye
+13. Shorten the Dragon's Eye time loop questline to a single battle
+14. Add more scrolls to the game
+15. Revised Creature Immunities
+16. More Accurate Saving Throws for Enemies
+17. Revise Critical Hit Immunity
+18. Better Racial Enemies for Rangers
+19. Cosmetic Tweaks
+20. More Persuasion Options
+21. NPC Core
+22. NPCs start with experience
+23. New GUI
+24. Looping Main Theme
+25. Revised Battle Square
+26. Minor Damage Resistance for Armor and Shields
+27. Race Revisions
+28. Enemies give the same amount of experience regardless of the party's level
+29. Adjust encounter level-scaling
+30. Reduce enemy HP bonuses in Heart of Fury Mode
+31. Reduce enemy attack bonuses in Heart of Fury Mode
+32. Reduce enemy saving throw bonuses in Heart of Fury Mode
+33. Weaken allied summoned creatures in Heart of Fury Mode
+34. Have the party start with experience in Heart of Fury Mode
+35. Reduce the delay between sneak attacks
+36. Increase the level cap
+37. Always learn spells from scrolls successfully
+38. Add attacks of opportunity to the game
+39. Change the way ability scores are assigned at character creation
+40. Add more traps
+41. Add key bindings for automating buffing
+
+--IWD2EE Core--
+
+The core component must be installed for any other component to be installed. It includes various quality of life changes.
 
 * Load times are much faster.
 * IWD2EE includes built-in widescreen compatibility, making the Widescreen Mod unnecessary. DO NOT INSTALL THE WIDESCREEN MOD WITH IWD2EE; IT WILL CRASH THE GAME. When you start IWD2EE, a menu opens that lets you set the game to a higher resolution. Note that higher resolution settings do not apply to menus; they only apply when you load a save game.
@@ -25,52 +71,10 @@ The big changes described above are only applied if you install certain componen
 * The character record screen includes a Reform Party button.
 * The options screen includes a button to access the new IEex Options menu (currently it includes an option to alter the fog of war so that it doesn't flicker).
 * If a party member has enough experience to level up multiple times, you can choose how many times they level up at a time. This also allows you to divide the level ups among multiple classes (though you'll have to go through the level up process once for each class).
+* Scrolls are highlighted in green when a wizard is selected who doesn't know the spell.
 * If you do not have the vanilla option to rest until healed enabled, characters heal a number of HP equal to their level on rest, rather than only healing 1 HP.
 * As long as you have the console enabled in IWD2's normal config menu, cheat keys will be enabled automatically without needing to enter a command. 
 * For modders, IWD2EE includes several new opcodes, and offers the ability to run Lua code in-game via the console or various hooks (and some of the new opcodes can call custom Lua functions), as well as a limited ability to modify the GUI. This opens up many possibilities for modding.
-
-Components:
-
-1. Class Revisions
-2. Looser Alignment Restrictions for Classes
-3. Spell Revisions
-4. Spell Focus Feats for All Schools
-5. Item Revisions
-6. Creature Revisions
-7. Better XP Progression
-8. More Interesting Alternative to the Palisade Quests
-9. Add Additional Ways to Progress Through Certain Areas
-10. Faster Wandering Village
-11. Faster Dragon's Eye
-12. Shorten the Dragon's Eye time loop questline to a single battle
-13. Add more scrolls to the game
-14. Revised Creature Immunities
-15. More Accurate Saving Throws for Enemies
-16. Revise Critical Hit Immunity
-17. Better Racial Enemies for Rangers
-18. Cosmetic Tweaks
-19. More Persuasion Options
-20. NPC Core
-21. NPCs start with experience
-22. New GUI
-23. Looping Main Theme
-24. Revised Battle Square
-25. Minor Damage Resistance for Armor and Shields
-26. Race Revisions
-27. Enemies give the same amount of experience regardless of the party's level
-28. Adjust encounter level-scaling
-29. Reduce enemy HP bonuses in Heart of Fury Mode
-30. Reduce enemy attack bonuses in Heart of Fury Mode
-31. Reduce enemy saving throw bonuses in Heart of Fury Mode
-32. Weaken allied summoned creatures in Heart of Fury Mode
-33. Have the party start with experience in Heart of Fury Mode
-34. Reduce the delay between sneak attacks
-35. Increase the level cap
-36. Always learn spells from scrolls successfully
-37. Add attacks of opportunity to the game
-38. Change the way ability scores are assigned at character creation
-39. Add more traps
-40. Add key bindings for automating buffing
 
 --Class Revisions--
 

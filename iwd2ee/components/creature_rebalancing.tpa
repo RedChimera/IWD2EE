@@ -4328,7 +4328,7 @@ COPY_EXISTING ~62SPBLD.cre~ ~override~
 		LPF	IWD2_CRE_SPELL INT_VAR num=2 STR_VAR class=~bard~ resource=~USWI151~ END
 		LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~bard~ resource=~SPWI512~ END
 		LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~bard~ resource=~SPWI613~ END
-		LPF	IWD2_CRE_SPELL INT_VAR num=2 STR_VAR class=~bard~ resource=~USWI753~ END
+//		LPF	IWD2_CRE_SPELL INT_VAR num=2 STR_VAR class=~bard~ resource=~USWI753~ END
 	END
 	PATCH_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~0~ BEGIN
 		READ_LONG feats1 ulgiash

@@ -121,6 +121,10 @@ COPY ~%mod_folder%/tables/SPONCAST.2da~ ~override~
 COPY ~%mod_folder%/tables/LISTSPLL.2da~ ~override~
 COPY ~%mod_folder%/tables/LISTMAGE.2da~ ~override~
 
+// Reducing the cost of Raise Dead at temples
+
+COPY ~%mod_folder%/tables/RAISDEAD.2da~ ~override~
+
 // BAMs previously used for Animate Zombie
 
 COPY ~%mod_folder%/bam/USAZB01A.bam~ ~override~

@@ -21,3 +21,5 @@ ACTION_IF NOT MOD_IS_INSTALLED ~iwd2ee.tp2~ ~0~ BEGIN
 	COPY ~%mod_folder%/tables/tables_xp_cap~ ~override~
 
 END
+
+COPY ~%mod_folder%/tables/XPLEVEL.2da~ ~override~

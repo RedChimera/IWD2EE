@@ -1,6 +1,35 @@
 SILENT
 COPY ~%mod_folder%/usInitialModifications.txt~ ~override~
 
+ACTION_IF NOT FILE_EXISTS ~./aqrit.cfg~ AND NOT FILE_EXISTS ~./ddraw.ini~ BEGIN
+/*
+	PRINT @94
+	ACTION_READLN ~input~
+	OUTER_WHILE !(IS_AN_INT %input%) OR (input != 1 AND input != 2) BEGIN
+		ACTION_READLN ~input~
+	END
+*/
+	UNINSTALL ~ddrawfix.tp2~ ~0~
+	UNINSTALL ~ddrawfix.tp2~ ~1~
+	UNINSTALL ~ddrawfix.tp2~ ~2~
+//			ACTION_IF input = 1 BEGIN
+		COPY ~%mod_folder%/ddrawfix~ ~./~
+//				ACTION_MATCH ~%WEIDU_OS%~ WITH
+//				  win32
+//				  BEGIN
+		    AT_NOW ~rmdir "Shaders" /s /q & xcopy "%mod_folder%\ddrawfix\Shaders" "Shaders" /i /s /e~ EXACT
+		    AT_UNINSTALL ~rmdir "Shaders" /s /q~ EXACT
+//				  END
+//				  DEFAULT
+		    // This supposes osx works as unix but I actually don't know
+//				    AT_NOW ~rm -Rf Shaders && cp -r "%mod_folder%/ddrawfix/Shaders" .~ EXACT
+//				    AT_UNINSTALL ~rm -Rf Shaders~ EXACT
+//				END
+//			END ELSE ACTION_IF input = 2 BEGIN
+//				INCLUDE ~%mod_folder%/components/ddrawfix2.tpa~
+//			END
+END
+
  //Files in this folder may be used in multiple components and shouldn't affect the game unless a component is installed that uses the file.
 COPY ~%mod_folder%/initial~ ~override~
 
