@@ -12151,7 +12151,7 @@
  Сопротивление магии: +5
  Время чтения всех заклинаний уменьшается на 4
 Вес: 6 фунта~
-@12527    = ~Щит энктропии +3~
+@12527    = ~Щит энтропии +3~
 @12528    = ~Большой щит носится так же, как и маленький. Однако он тяжелее, и его вес не позволяет обладателю использовать руку, в которой находится щит, для чего-либо ещё. Большие щиты обычно делаются из металла, имеют три-четыре фута в диаметре и могут быть любой формы: от круглой или квадратной до силуэта расправленных крыльев дракона. Типичный средневековый щит представляет собой треугольник, направленный вершиной вниз. На этот щит нанесены руны, слабо сияющие потусторонним светом.
 
 ПАРАМЕТРЫ:
@@ -12178,129 +12178,129 @@
  Сопротивление: 10/- сопротивления магическому урону
  Атака: -2
 Вес: 15 фунтов~
-@12531    = ~Tower Shield of Spell Resistance +5~
-@12532    = ~This massive shield is nearly as tall as the wielder. Basically, it is a portable wall meant to provide cover. It can provide up to total cover, depending on how far you come out from behind it. A tower shield, however, does not provide cover against targeted spells; a spellcaster can cast a spell on you by targeting the shield you are holding. This shield has runes scribed onto it that glow eerily in dim light. 
+@12531    = ~Осадный щит сопротивления магии +5~
+@12532    = ~Этот массивный щит по высоте может быть ростом со своего владельца. По сути, это переносная стена, за которой можно укрыться. Если из-за него не высовываться, вы будете полностью защищены от оружия врага. Однако осадный щит не спасает от заклинаний, так как может быть использован в качестве цели для заклинания. На этот щит нанесены руны, слабо сияющие потусторонним светом.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Shield Bonus: +9
-Special:
-  Spell Resistance: Set to 24
-  Attack Penalty: -2
-Armor Check Penalty:  -10
-Arcane Spell Failure:  50%
-Weight: 25 lb.~
-@12533    = ~Large Shield of Health +5~
-@12534    = ~A large shield is carried in the same manner as a small shield. Its weight prevents the character from using his shield hand for anything other than carrying the large shield. Large shields are usually made of metal, range from 3'-4' in diameter, and can be of any shape, from round to square to a spread dragon's wings. A typical medieval shield resembles a triangle with one point facing downward. This shield has runes scribed onto it that glow eerily in dim light. 
+Класс защиты: +9 (щит)
+Штраф к проверкам за броню: -10
+Шанс провала заклинания: 50%
+Особенности:
+ Сопротивление магии: устанавливается на 24
+ Атака: -2
+Вес: 25 фунтов~
+@12533    = ~Большой щит здоровья +5~
+@12534    = ~Большой щит носится так же, как и маленький. Однако он тяжелее, и его вес не позволяет обладателю использовать руку, в которой находится щит, для чего-либо ещё. Большие щиты обычно делаются из металла, имеют три-четыре фута в диаметре и могут быть любой формы: от круглой или квадратной до силуэта расправленных крыльев дракона. Типичный средневековый щит представляет собой треугольник, направленный вершиной вниз. На этот щит нанесены руны, слабо сияющие потусторонним светом.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Shield Bonus: +7
-Special:
-  Hit Point Bonus: +50 to Max Hit Points
-Armor Check Penalty:  -2
-Arcane Spell Failure:  15%
-Weight: 6 lb.~
-@12535    = ~Luckler +5~
-@12536    = ~A buckler, also known as a target shield, is a small round shield of wood or metal that fastens to the forearm. Because of it's size it is light and can be worn with very little restriction to movement. This particular buckler is slightly warm to the touch.
+Класс защиты: +7 (щит)
+Штраф к проверкам за броню: -2
+Шанс провала заклинания: 15%
+Особенности:
+ Пункты здоровья: +50 к максимальному количеству пунктов здоровья
+Вес: 6 фунтов~
+@12535    = ~Везунчик +5~
+@12536    = ~Баклер или кулачный щит - небольшой щит из дерева или металла, который прикрепляется к предплечью. Из-за своих небольших размеров он очень лёгкий и почти не ограничивает движений. Этот баклер слегка тёплый на ощупь.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Shield Bonus:  +6
-Special:
-  Luck: +2
-Armor Check Penalty:  -1
-Arcane Spell Failure:  5%
-Weight:  1 lb.~
-@12537    = ~Haste Shield +5~
-@12538    = ~A small shield is usually round and is carried on the forearm, gripped with the shield hand. Its light weight as compared to a large shield allows for greater maneuverability without sacrificing too much in the way of protection. This shield has runes scribed onto it that glow eerily in dim light. 
+Класс защиты: +6 (щит)
+Штраф к проверкам за броню: -1
+Шанс провала заклинания: 5%
+Особенности:
+ Удача: +2
+Вес: 1 фунт~
+@12537    = ~Щит спешки +5~
+@12538    = ~Малый щит обычно имеет круглую форму; носят его на предплечье, удерживая за ручку. Его вес, небольшой по сравнению со средним щитом, позволяет владельцу относительно свободно передвигаться, оставаясь под защитой щита. На этот щит нанесены руны, слабо сияющие потусторонним светом.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Shield Bonus: +6
-Armor Bonus:  +1 vs. missile weapons
-Special:
-  Constant Effect: Bearer is under the effects of the spell Haste
-Armor Check Penalty:  -1
-Arcane Spell Failure:  5%
-Weight: 3 lb.~
-@12539    = ~Aegis Shield +6~
-@12540    = ~A large shield is carried in the same manner as a small shield. Its weight prevents the character from using his shield hand for anything other than carrying the large shield. Large shields are usually made of metal, range from 3'-4' in diameter, and can be of any shape, from round to square to a spread dragon's wings. A typical medieval shield resembles a triangle with one point facing downward. This shield has runes scribed onto it that glow eerily in dim light. 
+Класс защиты: +6 (щит)
+Класс защиты: +1 против дальнобойного оружия
+Штраф к проверкам за броню: -1
+Шанс провала заклинания: 5%
+Особенности:
+ Постоянный эффект: Носитель щита находится под постоянным эффектом заклинания "Спешка"
+Вес: 3 фунта~
+@12539    = ~Щит Эгиды +6~
+@12540    = ~Большой щит носится так же, как и маленький. Однако он тяжелее, и его вес не позволяет обладателю использовать руку, в которой находится щит, для чего-либо ещё. Большие щиты обычно делаются из металла, имеют три-четыре фута в диаметре и могут быть любой формы: от круглой или квадратной до силуэта расправленных крыльев дракона. Типичный средневековый щит представляет собой треугольник, направленный вершиной вниз. На этот щит нанесены руны, слабо сияющие потусторонним светом.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Shield Bonus: +8
-Special:
-  Spell Power: Can cast Aegis once per day
-Armor Check Penalty:  -2
-Arcane Spell Failure:  15%
-Weight: 6 lb.~
-@12541    = ~Tower Shield of Resistance +6~
-@12542    = ~This massive shield is nearly as tall as the wielder. Basically, it is a portable wall meant to provide cover. It can provide up to total cover, depending on how far you come out from behind it. A tower shield, however, does not provide cover against targeted spells; a spellcaster can cast a spell on you by targeting the shield you are holding. This shield has runes scribed onto it that glow eerily in dim light. 
+Класс защиты: +8 (щит)
+Штраф к проверкам за броню: -2
+Шанс провала заклинания: 15%
+Особенности:
+ Заклинание: владелец щита может читать заклинание "Эгида" раз в день
+Вес: 6 фунтов~
+@12541    = ~Осадный щит сопротивления +6~
+@12542    = ~Этот массивный щит по высоте может быть ростом со своего владельца. По сути, это переносная стена, за которой можно укрыться. Если из-за него не высовываться, вы будете полностью защищены от оружия врага. Однако осадный щит не спасает от заклинаний, так как может быть использован в качестве цели для заклинания. На этот щит нанесены руны, слабо сияющие потусторонним светом.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Shield Bonus: +10
-Special:
-  Resistance: 5/- Slashing Resistance
-  Resistance: 5/- Piercing Resistance
-  Resistance: 5/- Bludgeoning Resistance
-  Resistance: 5/- Missile Resistance
-  Resistance: 5/- Fire Resistance
-  Resistance: 5/- Cold Resistance
-  Resistance: 5/- Electrical Resistance
-  Resistance: 5/- Acid Resistance
-  Resistance: 5/- Magic Damage Resistance
-  Resistance: 5/- Poison Resistance
-  Attack Penalty: -2
-Armor Check Penalty:  -10
-Arcane Spell Failure:  50%
-Weight: 10 lb.~
-@12543    = ~Large Shield of the Sun +6~
-@12544    = ~A large shield is carried in the same manner as a small shield. Its weight prevents the character from using his shield hand for anything other than carrying the large shield. Large shields are usually made of metal, range from 3'-4' in diameter, and can be of any shape, from round to square to a spread dragon's wings. A typical medieval shield resembles a triangle with one point facing downward. This shield has runes scribed onto it that glow eerily in dim light. 
+Класс защиты: +10 (щит)
+Штраф к проверкам за броню: -10
+Шанс провала заклинания: 50%
+Особенности:
+ Сопротивление: 5/- рубящему урону
+ Сопротивление: 5/- колющему урону
+ Сопротивление: 5/- дробящему урону
+ Сопротивление: 5/- метательному урону
+ Сопротивление: 5/- огню
+ Сопротивление: 5/- холоду
+ Сопротивление: 5/- электричеству
+ Сопротивление: 5/- кислоте
+ Сопротивление: 5/- урону магией
+ Сопротивление: 5/- яду
+ Атака: -2
+Вес: 10 фунтов~
+@12543    = ~Большой щит солнца +6~
+@12544    = ~Большой щит носится так же, как и маленький. Однако он тяжелее, и его вес не позволяет обладателю использовать руку, в которой находится щит, для чего-либо ещё. Большие щиты обычно делаются из металла, имеют три-четыре фута в диаметре и могут быть любой формы: от круглой или квадратной до силуэта расправленных крыльев дракона. Типичный средневековый щит представляет собой треугольник, направленный вершиной вниз. На этот щит нанесены руны, слабо сияющие потусторонним светом.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Shield Bonus: +8
-Special:
-  Whenever a creature hits the bearer of this shield, the shield casts Sunscorch on that creature.
-Armor Check Penalty:  -2
-Arcane Spell Failure:  15%
-Weight: 4 lb.
-Minimum Wisdom of 18 Required
-Minimum Charisma of 18 Required~
-@12545    = ~Sling of Boulders +5~
-@12546    = ~The wondrous Sling of Boulders throws boulders instead of bullets. Although the sling is light, it is almost impossible to swing, as if there is a boulder in it already.
+Класс защиты: +8 (щит)
+Штраф к проверкам за броню: -2
+Шанс провала заклинания: 15%
+Особенности:
+ Когда какое-либо существо попадает по владельцу щита, на него читается заклинание "Солнечный ожог"
+Вес: 4 фунта
+Требования: Мудрость 18
+Требования: Харизма 18~
+@12545    = ~Праща валунов +5~
+@12546    = ~Эта чудесная праща метает валуны вместо снарядов. Хотя сама праща легкая, ее почти невозможно раскрутить, как будто в ней уже лежит валун.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  6d10 +5 (bludgeoning)
-Attack Bonus:  +5 
-Enchantment:  +5 
-Special:
-  Attacks per round set to 1
-  This sling does not use bullets. Instead, it throws an unlimited supply of boulders.
-Feat Requirement:  Simple Weapon, Missile
-Type:  One-handed
-Weight: 0 lb.
-Minimum Strength of 25 Required~
-@12547    = ~Katana~
-@12548    = ~The katana is a single-edged, slightly curved sword that ends with a chisel point. The katana is perhaps one of the finest swords ever made, the steps to its creation a long and secret process that is more art form than anything else. This blade is an important facet of Kara-Turan culture. To touch or wield a samurai's katana is to insult the samurai and to incite his wrath. For a gaijin, or foreigner, to own such a blade is a rare occurrence. Either the gaijin is a greatly honored friend of an important minister, or the gaijin has murdered a samurai.~
-@12549    = ~Slaying Blade~
-@12550    = ~To enchant a katana is no simple process. Unlike conventional weapons, the katana is already a near-perfect fighting sword. To improve it usually requires a sacrifice, perhaps a dying samurai might beg a Wu Jen to infuse his fighting spirit into the spirit of the katana. The wielder of an enchanted katana, such as this one, must respect the customs of Kara-Tur and of the samurai who once carried this blade into battle. Not doing so could drastically change one's luck for the worse.
+Урон: 6d10+5 (дробящий)
+Атака: +5
+Зачарование: +5
+Особенности:
+ Количество атак в раунд устанавливается на 1
+ Эта праща не использует снаряды, вместо этого у нее имеется бесконечный запас валунов
+Вес: 0 фунтов
+Необходимая черта: Простое оружие, Метательное
+Тип: одноручное
+Требования: Сила 25~
+@12547    = ~Катана~
+@12548    = ~Катана — это слегка изогнутый меч с односторонней заточкой и скошенным остриём. Возможно, катана является лучшим из когда-либо существовавших мечей; её создание — долгий, засекреченный процесс, скорее искусство, чем ремесло. Этот клинок — важный аспект культуры Кара-Тура. Коснуться или взять в руки катану самурая значит оскорбить его и привести в ярость. Гайдзину или чужестранцу редко предоставляется возможность завладеть таким мечом. Такой гайдзин — либо очень хороший друг какого-нибудь важного министра, либо просто убил самурая.~
+@12549    = ~Убийственный клинок~
+@12550    = ~Зачаровать катану очень нелегко. В отличие от традиционного оружия, катана и так является практически совершенным боевым мечом. Чтобы улучшить её, обычно требуется жертвоприношение — например, умирающий самурай может попросить Ву Джена вселить его воинственный дух в катану. Владелец зачарованной катаны, такой, как эта, должен уважать обычаи Кара-Тура и самурая, который когда-то нёс этот клинок в битву. Отступление от этого условия может крайне отрицательным образом сказаться на удаче владельца катаны.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d12 + 6
-Attack Bonus: +6
-Enchantment:  +6
-Damage Type:  Slashing
-Special:
-  Slaying: With each hit, target must make a Fortitude save (DC 20 + wielder's Dexterity bonus) or die instantly
-  Keen: Increases chance of scoring a critical hit
-Weight: 1 lb.
-Feat Requirement:  Exotic Weapon, Bastard Sword
-Type:  One-handed~
+Урон: 1d12+6
+Атака: +6
+Зачарование: +6
+Тип урона: рубящий
+Особенности:
+ Убийство: при каждом попадании цель должна сделать спасбросок стойкости (с УС = 20 + модификатор ловкости владельца) или умереть
+ Острота: увеличенный шанс нанести критический удар
+Вес: 1 фунтов
+Необходимая черта: Экзотическое оружие, Полуторные мечи
+Тип: одноручное~
 @12551    = ~Executioner's Greatsword +5~
 @12552    = ~The greatsword is a derivative of the longsword. Weaponsmiths have always looked for ways to improve existing weapons. In an effort to improve the longsword, the blade was lengthened. Eventually, the handle had to be extended and two hands became necessary to properly swing the sword. The primary function of greatswords is cleaving mounted knights and breaking up pike formations. This one is particularly good at its job as it has been enchanted with a few magical properties.
 
