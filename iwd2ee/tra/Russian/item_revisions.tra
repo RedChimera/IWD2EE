@@ -9902,7 +9902,7 @@
 Особенности:
  Яд: +2 урона ядом каждую секунду в течение 6 секунд (успешный спасбросок стойкости с УС = (16 + удвоенный модификатор ловкости) отменяет эффект)
 Вес: 0 фунтов
-Оружие: Лук~
+Оружие: лук~
 //@11937    = ~Arrows of Dispelling~
 @11938    = ~Эта стрела снимает магические эффекты, которыми окружена жертва.
 
@@ -9913,7 +9913,7 @@
 Особенности:
  Рассеивание: при попадании снимают с жертвы магические эффекты (успешный спасбросок воли с УС 35 отменяет эффект)
 Вес: 0 фунтов
-Оружие: Лук~
+Оружие: лук~
 //@11939    = ~Arrows of Flame +1~
 @11940    = ~Эта магическая стрела вспыхивает пламенем при попадании в цель. Эффект примерно такой же, как если бы её окунули в масло и подожгли.
 
@@ -9926,7 +9926,7 @@
 Особенности:
  Пламя: +1d6 очков урона огнём
 Вес: 0 фунтов
-Оружие: Лук~
+Оружие: лук~
 //@11941    = ~Frost Arrows +1~
 @11942    = ~Эта магическая стрела зачарована так, что после выстрела взрывается крутящимся комом льда и холода. Когда стрела поражает свою жертву, ударная волна холода проходит по всему её телу, обжигая и промораживая до самых костей.
 
@@ -9939,7 +9939,7 @@
 Особенности:
  Стужа: +1d6 очков урона холодом
 Вес: 0 фунтов
-Оружие: Лук~
+Оружие: лук~
 @11943    = ~Бронебойные стрелы +3~
 @11944    = ~Эта стрела длинная и тонкая, она обладает мощными магическими свойствами, которые позволяют ей "проталкивать" себя сквозь доспехи, поражая сердце жертвы.
 
@@ -9950,7 +9950,7 @@
 Зачарование: +3
 Тип урона: метательный (колющий)
 Вес: 0 фунтов
-Оружие: Лук~
+Оружие: лук~
 //@11945    = ~Holdfast Arrows~
 @11946    = ~Стрелы обездвиживания используют преимущественно следопыты-последователи Эльдат, живущие в Срединных Западных землях Фаэруна. Они высоко ценят эти снаряды за способность обезвредить цель, не нанеся ей большого вреда. Чаще всего, с их помощью ловят животных, но и против гуманоидных злоумышленников они достаточно эффективны. Обычно такие стрелы украшены голубыми и зелёными лентами и цветами, чтобы показать, что они созданы миротворцами Эльдат. Это, к сожалению, делает их менее эффективными в бою.
 
@@ -9975,7 +9975,7 @@
 Особенности:
  Распад: при попадании эти стрелы уничтожают нежить или выходцев из иных планов, если те провалят спасбросок стойкости с УС 14
 Вес: 0 фунтов
-Оружие: Лук~
+Оружие: лук~
 //@11949    = ~Returning Poison-tipped Arrow~
 @11950    = ~Эта стрела, при создании, были зачарованы умелым волшебником. С виду она не слишком отличаются от обычных стрел (разве что более прямая), но, едва сорвавшись с тетивы, она словно оживают и со смертельной точностью летит во врага.
 
@@ -9987,7 +9987,7 @@
  Яд: +2 очка урона ядом каждую секунду в течение 6 секунд (успешный спасбросок стойкости с УС 22 отменяет эффект)
  Возвращение: возвращается к стрелку
 Вес: 0 фунтов
-Оружие: Лук~
+Оружие: лук~
 @11951    = ~Острые стрелы +1~
 @11952    = ~Эти стрелы, при создании, были зачарованы умелым волшебником. С виду они не слишком отличаются от обычных стрел (разве что более прямые), но, едва сорвавшись с тетивы, они словно оживают и со смертельной точностью летят во врага.
 
@@ -10000,7 +10000,7 @@
 Особенности:
  Острота: увеличенный шанс нанести критический удар
 Вес: 0 фунтов
-Оружие: Лук~
+Оружие: лук~
 //@11953    = ~Stunning Arrows +1~
 @11954    = ~Эти стрелы, при создании, были зачарованы умелым волшебником. С виду они не слишком отличаются от обычных стрел (разве что более прямые), но, едва сорвавшись с тетивы, они словно оживают и со смертельной точностью летят во врага.
 
@@ -10013,7 +10013,7 @@
 Особенности:
  Ошеломление: с вероятностью 50% ошеломляют цель на 1/2 раунда (успешный спасбросок стойкости с УС 20 отменяет эффект)
 Вес: 0 фунтов
-Оружие: Лук~
+Оружие: лук~
 //@11955    = ~Sure Strike Arrows~
 //@11956    = ~Item description can remain the same; if new description is needed put it here~
 //@11957    = ~Arrows of Lesser Dispelling~
@@ -10026,7 +10026,7 @@
 Особенности:
  Рассеивание: с вероятностью 25% при попадании на цель будет наложено заклинание "Развеять магию" (успешный спасбросок воли с УС 15 отменяет эффект)
 Вес: 0 фунтов
-Оружие: Лук~
+Оружие: лук~
 //@11959    = ~Everlast Arrow~
 //@11960    = ~Item description can remain the same; if new description is needed put it here~
 //@11961    = ~Arrows +5~
@@ -10062,7 +10062,7 @@
 Особенности:
  Копьё аликорна: при попадании цель обрисовывается серебристым сиянием в течение трёх раундов, что ухудшает её класс защиты на 2 (спасбросок отсутствует)
 Вес: 0 фунтов
-Оружие: Лук~
+Оружие: лук~
 //@11975    = ~Sparking Arrows +1~
 @11976    = ~Эти стрелы, при создании, были зачарованы умелым волшебником. С виду они не слишком отличаются от обычных стрел (разве что более прямые), но, едва сорвавшись с тетивы, они словно оживают и со смертельной точностью летят во врага.
 
@@ -10190,7 +10190,7 @@
 Особенности:
  Наложение заклинания: при неудачном спасброске реакции с УС 35 жертва попадает под действие заклинания "Упругая сфера Отилука" на 10 раундов
 Вес: 0 фунтов
-Оружие: Праща~
+Оружие: праща~
 //@12011    = ~Returning Flame Bullet +1~
 @12012    = ~В этом снаряде заключена магическая энергия, поэтому он несколько легче, лучше сбалансирован и словно бы выпрыгивает навстречу врагам.
 
@@ -10204,7 +10204,7 @@
  Возвращение: возвращается к владельцу
  Пламя: +1d6 урона огнём
 Вес: 0 фунтов
-Оружие: Праща~
+Оружие: праща~
 @12013    = ~Снаряд изгнание нежити +1~
 @12014    = ~В этом снаряде заключена магическая энергия, поэтому он несколько легче, лучше сбалансирован и словно бы выпрыгивает навстречу врагам.
 
@@ -10230,7 +10230,7 @@
 Особенности:
  Ошеломление: при попадании с вероятностью 50% цель ошеломляется на 1/2 раунда (успешный спасбросок стойкости с УС 15 отменяет эффект)
 Вес: 0 фунтов
-Оружие: Праща~
+Оружие: праща~
 @12017    = ~Снаряд кислотных брызг +1~
 @12018    = ~В этом снаряде заключена магическая энергия, поэтому он несколько легче, лучше сбалансирован и словно бы выпрыгивает навстречу врагам.
 
@@ -10243,7 +10243,7 @@
 Особенности:
  Кислотные брызги: +1d6 урона кислотой и 30% шанс нанести дополнительно 1d10 урона кислотой
 Вес: 0 фунтов
-Оружие: Праща~
+Оружие: праща~
 @12019    = ~Снаряд импульса +2~
 @12020    = ~В этом снаряде заключена магическая энергия, поэтому он несколько легче, лучше сбалансирован и словно бы выпрыгивает навстречу врагам.
 
@@ -10256,7 +10256,7 @@
 Особенности:
  Импульс: шанс критического удара увеличен
 Вес: 0 фунтов
-Оружие: Праща~
+Оружие: праща~
 //@12021    = ~Sure Strike Bullets~
 //@12022    = ~Item description can remain the same; if new description is needed put it here~
 @12023    = ~Снаряд изгнания +1~
@@ -10271,7 +10271,7 @@
 Особенности:
  Изгнание: изгоняет вызванных существ при попадании (успешный спасбросок воли с УС 26 позволяет избежать эффекта)
 Вес: 0 фунтов
-Оружие: Праща~
+Оружие: праща~
 //@12025    = ~Sparking Bullets +1~
 //@12026    = ~Item description can remain the same; if new description is needed put it here~
 //@12027    = ~Frost Bullets +1~
@@ -11289,9 +11289,9 @@
 
 ПАРАМЕТРЫ:
 
-Может выпустить цветные брызги, и любое существо в радиусе действия, которое их увидит будет ошеломлено на 1d2 секунды (успешный спасбросок воли с УС 14 позволяет избежать эффекта
+Может выпустить цветные брызги, и любое существо в радиусе действия, которое их увидит будет ошеломлено на 1d2 секунды (успешный спасбросок воли с УС 14 позволяет избежать эффекта)
 
-Отток энергии: вытягивает три уровня из цели (успешный спасбросок стойкости с УС 26 позволяет избежать эффекта
+Отток энергии: вытягивает три уровня из цели (успешный спасбросок стойкости с УС 26 позволяет избежать эффекта)
 Вес: 1 фунт~
 //@12271    = ~Wand of the Spider's Web~
 @12272    = ~Жезлы обычно длинные и тонкие, и имеют длину в один фут с четвертью. Их изготавливают из кости, слоновой кости или дерева и, как правило, покрывают металлом, стеклом, камнем и т.п. Жезлы отличаются повышенной хрупкостью и часто ломаются. Поэтому многие хранят их в футлярах.
@@ -11631,7 +11631,7 @@
 Особенности:
  Чистая энергия: при атаке бонусы к классу защиты цели от доспеха и щита не учитываются
 Вес: 0 фунтов
-Оружие: Арбалет~
+Оружие: арбалет~
 @12429    = ~Сапоги огромной скорости~
 @12430    = ~Магия этих сапог позволяет надевшему их двигаться экстремально быстро, гораздо быстрее чем в обычных сапогах скорости. Такую обувь очень ценят те, чей род занятий предполагает длительные путешествия.
 
@@ -12222,7 +12222,7 @@
 Штраф к проверкам за броню: -1
 Шанс провала заклинания: 5%
 Особенности:
- Постоянный эффект: Носитель щита находится под постоянным эффектом заклинания "Спешка"
+ Постоянный эффект: носитель щита находится под постоянным эффектом заклинания "Спешка"
 Вес: 3 фунта~
 @12539    = ~Щит Эгиды +6~
 @12540    = ~Большой щит носится так же, как и маленький. Однако он тяжелее, и его вес не позволяет обладателю использовать руку, в которой находится щит, для чего-либо ещё. Большие щиты обычно делаются из металла, имеют три-четыре фута в диаметре и могут быть любой формы: от круглой или квадратной до силуэта расправленных крыльев дракона. Типичный средневековый щит представляет собой треугольник, направленный вершиной вниз. На этот щит нанесены руны, слабо сияющие потусторонним светом.
@@ -12301,225 +12301,225 @@
 Вес: 1 фунтов
 Необходимая черта: Экзотическое оружие, Полуторные мечи
 Тип: одноручное~
-@12551    = ~Executioner's Greatsword +5~
-@12552    = ~The greatsword is a derivative of the longsword. Weaponsmiths have always looked for ways to improve existing weapons. In an effort to improve the longsword, the blade was lengthened. Eventually, the handle had to be extended and two hands became necessary to properly swing the sword. The primary function of greatswords is cleaving mounted knights and breaking up pike formations. This one is particularly good at its job as it has been enchanted with a few magical properties.
+@12551    = ~Двуручный меч палача +5~
+@12552    = ~Двуручный меч - усиленный вариант длинного меча. Оружейники всегда искали возможность улучшить существующее оружие. Улучшая длинный меч, лезвие ещё более удлинили. Пришлось увеличить и рукоятку, и для обращения с мечом теперь требовались две руки. Изначально двуручные мечи применялись в бою против конных рыцарей и для разбивания строя копьеносцев. На этот меч к тому же наложены чары.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  2d6 + 5
-Attack Bonus:  +5 
-Enchantment:  +5
-Damage Type:  Slashing
-Special:
-  Will critically hit on a roll of 12-20
-Weight: 12 lb.
-Feat Requirement:  Martial Weapon, Great Sword
-Type:  Two-handed~
-@12553    = ~Acid Arrows +4~
-@12554    = ~This arrow is coated in acid so that when it strikes an enemy, it will not only pierce its flesh but also begin to eat away at the wound, enlarging and deepening its severity.
+Урон: 2d6+5
+Атака: +5
+Зачарование: +5
+Тип урона: рубящий
+Особенности:
+ Наносит критический урон, если при броске атаки выпало 12-20
+Вес: 12 фунтов
+Необходимая черта: Военное оружие, Двуручные мечи
+Тип: двуручное~
+@12553    = ~Едкие стрелы +4~
+@12554    = ~Эта стрела покрыта кислотой, поэтому при попадании в противника она не только пронзает его плоть, но и разъедают рану, увеличивая тяжесть ранения.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d6  +4
-Attack Bonus:  +4
-Enchantment:  +4
-Damage Type:  Missile (piercing)
-Special:
-  Corrosion: +1d4 acid damage, and an additional +2d4 acid damage over the following 2 rounds
-Weight: 0 lb.
-Launcher:  Bow~
-@12555    = ~Mighty Arrows +3~
-@12556    = ~These arrows were enhanced through magical means when they were created. They appear slightly straighter then the average arrow, almost alive as they effortlessly leave your bow and streak towards their target with deadly accuracy.
+Урон: 1d6+4
+Атака: +4
+Зачарование: +4
+Тип урона: метательный (колющий)
+Особенности:
+ Разъедание: +1d4 урона кислотой и в дополнение 2d4 урона кислотой в следующие два раунда
+Вес: 0 фунтов
+Оружие: лук~
+@12555    = ~Мощные стрелы +3~
+@12556    = ~Эти стрелы, при создании, были зачарованы умелым волшебником. С виду они не слишком отличаются от обычных стрел (разве что более прямые), но, едва сорвавшись с тетивы, они словно оживают и со смертельной точностью летят во врага.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d6 + 3
-Attack Bonus:  +3 
-Enchantment:  +3
-Damage Type:  Missile (piercing)
-Special:
-  Gains Strength bonus to damage
-Weight: 0 lb.
-Launcher:  Bow~
-@12557    = ~Everlast Arrow +5~
-@12558    = ~These arrows were enhanced through magical means when they were created. They appear slightly straighter then the average arrow, almost alive as they effortlessly leave your bow and streak towards their target with deadly accuracy.
+Урон: 1d6+3
+Атака: +3
+Зачарование: +3
+Тип урона: метательный (колющий)
+Особенности:
+ Добавляет модификатор силы к урону
+Вес: 0 фунтов
+Оружие: лук~
+@12557    = ~Вечная стрела +5~
+@12558    = ~Эта стрела, при создании, была зачарованы умелым волшебником. С виду она не слишком отличается от обычных стрел (разве что более прямая), но, едва сорвавшись с тетивы, она словно оживает и со смертельной точностью летит во врага.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d6 + 5
-Attack Bonus:  +5 
-Enchantment:  +5
-Damage Type:  Missile (piercing)
-Special:
-  Returning: Arrow returns to the user
-Weight: 0 lb.
-Launcher:  Bow~
-@12559    = ~Arrow of Detonation~
-@12560    = ~These very rare arrows explode in fireballs on hit, dealing damage to nearby creatures as well.
+Урон: 1d6+5
+Атака: +5
+Зачарование: +5
+Тип урона: метательный (колющий)
+Особенности:
+ Возвращение: стрела возвращается к владельцу
+Вес: 0 фунтов
+Оружие: лук~
+@12559    = ~Взрывающаяся стрела~
+@12560    = ~Эти очень редкие стрелы взрываются огненными шарами при попадании, нанося урон и ближайшим существам.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  6d6 (Reflex DC 24 for half)
-Attack Bonus:  Automatically hits
-Enchantment:  +5
-Damage Type:  Fire
-Special:
-  Explodes on hit and deals damage to all creatures within 20 feet
-Weight: 0 lb.
-Launcher:  Bow~
-@12561    = ~Returning Keen Arrow of Strength +5~
-@12562    = ~These arrows were enhanced through magical means when they were created. They appear slightly straighter then the average arrow, almost alive as they effortlessly leave your bow and streak towards their target with deadly accuracy.
+Урон: 6d6 (успешный спасбросок реакции с УС 24 позволяет снизить урон вдвое)
+Атака: автоматически попадает
+Зачарование: +5
+Тип урона: огненный
+Особенности:
+ Взрывается при попадании и наносит урон всем существам в радиусе 20 футов
+Вес: 0 фунтов
+Оружие: лук~
+@12561    = ~Возвращающаяся острая стрела силы +5~
+@12562    = ~Эта стрела, при создании, была зачарованы умелым волшебником. С виду она не слишком отличается от обычных стрел (разве что более прямая), но, едва сорвавшись с тетивы, она словно оживает и со смертельной точностью летит во врага.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d6 + 5
-Attack Bonus:  +5 
-Enchantment:  +5
-Damage Type:  Missile (piercing)
-Special:
-  Returning: Arrow returns to the user
-  Keen: Increases chance of scoring a critical hit
-  Gains Strength bonus to damage
-Weight: 0 lb.
-Launcher:  Bow~
-@12563    = ~Negative Energy Bolt +4~
-@12564    = ~Quarrels or bolts are the ammunition fired by crossbows regardless of the weapon's size. However this bolt has been imbued with magical properties which enhances performance in flight, almost as if the bolt was guided towards its target.
+Урон: 1d6+5
+Атака: +5
+Зачарование: +5
+Тип урона: метательный (колющий)
+Особенности:
+ Возвращение: стрела возвращается к владельцу
+ Острота: увеличенный шанс нанести критический удар
+ Добавляет модификатор силы к урону
+Вес: 0 фунтов
+Оружие: лук~
+@12563    = ~Болт негативной энергии +4~
+@12564    = ~Арбалетные стрелы, или "болты", используются для стрельбы из арбалетов всех известных размеров. В отличие от обычных, эти болты наделены магическими свойствами, которые выравнивают полёт, позволяя болту точнее попасть в цель.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d8  +4
-Attack Bonus:  +4 
-Enchantment:  +4
-Damage Type:  Missile (piercing)
-Special:
-  Energy Drain: -2 to Attack Bonus / -2 to damage, -10 to max hit points (Fortitude DC 29) 
-Weight:  0 lb.
-Launcher:  Crossbow~
-@12565    = ~Heavy Bolt +4~
-@12566    = ~This bolt is heavier than most bolts, but its impressive enchantments allow it to fly flawlessly nonetheless.
+Урон: 1d8+4
+Атака: +4
+Зачарование: +4
+Тип урона: метательный (колющий)
+Особенности:
+ Отток энергии: при попадании цель получает -2 к атаке, -2 к урону и -10 к максимальному количеству пунктов здоровья (успешный спасбросок стойкости с УС 29 позволяет избежать эффекта)
+Вес: 0 фунтов
+Оружие: арбалет~
+@12565    = ~Тяжёлый болт +4~
+@12566    = ~Этот болт тяжелее большинства болтов, но, несмотря на это, он всё равно безупречно летит в цель, благодаря его уникальному зачарованию.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  2d8  +4
-Attack Bonus:  +4 
-Enchantment:  +4
-Damage Type:  Missile (piercing)
-Weight:  1 lb.
-Launcher:  Crossbow~
-@12567    = ~Bolt of Lightning~
-@12568    = ~These very rare bolts turn into lightning bolts on hit, skewering lines of creatures.
+Урон: 2d8+4
+Атака: +4
+Зачарование: +4
+Тип урона: метательный (колющий)
+Вес: 1 фунтов
+Оружие: арбалет~
+@12567    = ~Болт молний~
+@12568    = ~Эти очень редкие болты при попадании превращаются в молнии, поражающие множество существ.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  6d6 (Reflex DC 26 for half)
-Enchantment:  +5
-Damage Type:  Electrical
-Special:
-  Turns into a lightning bolt when fired and deals damage to all creatures in its path
-Weight:  0 lb.
-Launcher:  Crossbow~
-@12569    = ~Returning Keen Bolt +5~
-@12570    = ~Quarrels or bolts are the ammunition fired by crossbows regardless of the weapon's size. However this bolt has been imbued with magical properties which enhances performance in flight, almost as if the bolt was guided towards its target.
+Урон: 6d6 (успешный спасбросок реакции с УС 24 позволяет снизить урон вдвое)
+Зачарование: +5
+Тип урона: электрический
+Особенности:
+ При выстреле превращается в молнию и наносит урон всем существам на своем пути
+Вес: 0 фунтов
+Оружие: арбалет~
+@12569    = ~Возвращающийся острый болт +5~
+@12570    = ~Арбалетные стрелы, или "болты", используются для стрельбы из арбалетов всех известных размеров. В отличие от обычных, эти болты наделены магическими свойствами, которые выравнивают полёт, позволяя болту точнее попасть в цель.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d8  +5
-Attack Bonus:  +5 
-Enchantment:  +5
-Damage Type:  Missile (piercing)
-Special:
-  Returning: Bolt returns to user
-  Keen: Increases chance of scoring a critical hit
-Weight:  0 lb.
-Launcher:  Crossbow~
-@12571    = ~Greater Vampiric Bullet +3~
-@12572    = ~Magical currents are embedded inside this bullet so that it seems a little more balanced and lighter as it jumps towards an opponent. 
+Урон: 1d8+5
+Атака: +5
+Зачарование: +5
+Тип урона: метательный (колющий)
+Особенности:
+ Возвращение: стрела возвращается к владельцу
+ Острота: увеличенный шанс нанести критический удар
+Вес: 0 фунтов
+Оружие: арбалет~
+@12571    = ~Снаряд великого вампиризма +3~
+@12572    = ~В этом снаряде заключена магическая энергия, поэтому он несколько легче, лучше сбалансирован и словно бы выпрыгивает навстречу врагам.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d4  +3
-Attack Bonus:  +3 
-Enchantment:  +3
-Damage Type:  Missile (bludgeoning)
-Special:
-  Vampiric: 2d4 hit points drained from target and temporarily added to wielder (Fortitude DC 24)
-Weight: 0 lb.
-Launcher:  Sling~
-@12573    = ~Brilliant Returning Bullet +5~
-@12574    = ~Magical currents are embedded inside this bullet so that it seems a little more balanced and lighter as it jumps towards an opponent. 
+Урон: 1d4+3
+Атака: +3
+Зачарование: +3
+Тип урона: метательный (дробящий)
+Особенности:
+ Вампиризм: при ударе забирает у жертвы 2d4 очка здоровья и временно добавляет их владельцу (успешный спасбросок стойкости с УС 24 отменяет эффект)
+Вес: 0 фунтов
+Оружие: праща~
+@12573    = ~Возвращающийся снаряд чистой энергии +5~
+@12574    = ~В этом снаряде заключена магическая энергия, поэтому он несколько легче, лучше сбалансирован и словно бы выпрыгивает навстречу врагам.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d4  +5
-Attack Bonus:  +5 
-Enchantment:  +5
-Damage Type:  Missile (bludgeoning)
-Special:
-  Returning: Bullet returns to user
-  Brilliant Energy: Bypasses armor and shield bonuses
-Weight: 0 lb.
-Launcher:  Sling~
-@12575    = ~Flail of Ages +5~
-@12576    = ~A trail of destruction has followed this flail through history, leading straight back to the original owners. The flail was the creation of the warlike rakshasa, a race of vengeful spirits that crave human meat, and used as an adaptable weapon that could suit any battle. During a particularly violent hunt, the flail was lost, only to be returned when they used their affinity for magic to locate its powerful aura. They discovered that the weapon had found its way into the hands of a great human warrior, and the battle that followed was truly splendid. They have since used the item as bait countless times, "losing" it again and again. Powerful items gravitate toward powerful people, and powerful people yield the most glorious battles.
+Урон: 1d4+5
+Атака: +5
+Зачарование: +5
+Тип урона: метательный (дробящий)
+Особенности:
+ Возвращение: снаряд возвращается к владельцу
+ Чистая энергия: при атаке бонусы к классу защиты цели от доспеха и щита не учитываются
+Вес: 0 фунтов
+Оружие: праща~
+@12575    = ~Цеп Веков +5~
+@12576    = ~След разрушений тянется за этим предметом сквозь всю его историю, и по нему без труда можно найти первоначальных владельцев. Цеп был создан воинственными ракшасами, расой мстительных духов, вечно жаждущих человеческого мяса, и использовался в качестве универсального оружия, применимого в битвах любого рода. Во время одной особенно жестокой охоты артефакт был потерян — только для того, чтобы снова вернуться, как только ракшасы использовали своё чутьё на магию, чтобы найти его по мощной ауре. Они обнаружили, что цеп попал в руки к величайшему воителю людей, и битва, которая за этим последовала, была поистине великолепной. С тех пор они бесчисленное множество раз использовали цеп как приманку, снова и снова "теряя" его. Могучие предметы притягивают могущественных смертных, а могущественных смертных ждут самые славные битвы.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d8  +5
-Attack Bonus:  +5
-Enchantment:  +5
-Damage Type:  Bludgeoning
-Special:
-  Constant Effect: User is under effect of the spell Freedom of Movement while equipped
-  Flame: +2 fire damage
-  Frost: +2 cold damage
-  Shock: +2 electric damage
-  Corrosion: +2 acid damage
-  Poison: +2 poison damage
-Weight: 5 lb.
-Required Feat:  Martial Weapon, Flail
-Type:  One-handed~
-@12577    = ~The Spear of White Ash +3~
-@12578    = ~Consecrated by Malarite priests hundreds of years ago, this spear was used on High Hunts in preparation for their bloody feasts. It was last in the hands of Old Hunter Wellin, who is believed to have died when he foolishly hunted dryads near the Cloakwood. The weapon is made from a single piece of ash wood topped with a cruel spearhead.
+Урон: 1d8+5
+Атака: +5
+Зачарование: +5
+Тип урона: дробящий
+Особенности:
+ Постоянный эффект: носитель оружия находится под постоянным эффектом заклинания "Свобода действий"
+ Пламя: +2 урона огнём
+ Стужа: +2 урона холодом
+ Шок: +2 урона электричеством
+ Разъедание: +2 урона кислотой
+ Яд: +2 урона ядом
+Вес: 5 фунтов
+Необходимая черта: Военное оружие, Цепы
+Тип: одноручное~
+@12577    = ~Копьё белого ясеня +3~
+@12578    = ~Созданное жрецами Малара сотни лет назад, это копьё использовалось в Высокой Охоте - части их кровавого ритуала. Последним оно побывало в руках Старого Охотника Веллина, который погиб, глупо погнавшись за дриадами близ Клоаквуда. Это оружие сделано из целого куска ясеня и завершается вычурным наконечником.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d8 + 3
-Attack Bonus:  +3 
-Enchantment:  +3
-Damage Type:  Piercing
-Special:
-  Piercing Enhancement: While this spear is equipped, any piercing damage dealt by the wielder's spells or abilities is increased by 40%. This does not increase the damage from this spear.
-Weight: 5 lb.
-Feat Requirement:  Martial Weapon, Polearm
-Type:  Two-handed~
-@12579    = ~Sharpened Spear of White Ash +5~
-@12580    = ~Consecrated by Malarite priests hundreds of years ago, this spear was used on High Hunts in preparation for their bloody feasts. It was last in the hands of Old Hunter Wellin, who is believed to have died when he foolishly hunted dryads near the Cloakwood. The weapon is made from a single piece of ash wood topped with a cruel spearhead.
+Урон: 1d8+3
+Атака: +3
+Зачарование: +3
+Тип урона: колющий
+Особенности:
+ Усиление прокола: пока это копье экипировано, любой колющий урон, наносимый заклинаниями или способностями владельца, увеличивается на 40%; это не увеличивает урон от самого копья
+Вес: 5 фунтов
+Необходимая черта: Простое оружие, Копья
+Тип: двуручное~
+@12579    = ~Заострённое копьё белого ясеня +5~
+@12580    = ~Созданное жрецами Малара сотни лет назад, это копьё использовалось в Высокой Охоте - части их кровавого ритуала. Последним оно побывало в руках Старого Охотника Веллина, который погиб, глупо погнавшись за дриадами близ Клоаквуда. Это оружие сделано из целого куска ясеня и завершается вычурным наконечником.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d8 + 5
-Attack Bonus:  +5
-Enchantment:  +5
-Damage Type:  Piercing
-Special:
-  Piercing Enhancement: While this spear is equipped, any piercing damage dealt by the wielder's spells or abilities is increased by 100%. This does not increase the damage from this spear.
-Weight: 5 lb.
-Feat Requirement:  Martial Weapon, Polearm
-Type:  Two-handed~
-@12581    = ~Katana of Focus +5~
-@12582    = ~To enchant a katana is no simple process. Unlike conventional weapons, the katana is already a near-perfect fighting sword. To improve it usually requires a sacrifice, perhaps a dying samurai might beg a Wu Jen to infuse his fighting spirit into the spirit of the katana. The wielder of an enchanted katana, such as this one, must respect the customs of Kara-Tur and of the samurai who once carried this blade into battle. Not doing so could drastically change one's luck for the worse.
+Урон: 1d8+5
+Атака: +5
+Зачарование: +5
+Тип урона: колющий
+Особенности:
+ Усиление прокола: пока это копье экипировано, любой колющий урон, наносимый заклинаниями или способностями владельца, увеличивается на 100%; это не увеличивает урон от самого копья
+Вес: 5 фунтов
+Необходимая черта: Простое оружие, Копья
+Тип: двуручное~
+@12581    = ~Катана концентрации +5~
+@12582    = ~Зачаровать катану очень нелегко. В отличие от традиционного оружия, катана и так является практически совершенным боевым мечом. Чтобы улучшить её, обычно требуется жертвоприношение — например, умирающий самурай может попросить Ву Джена вселить его воинственный дух в катану. Владелец зачарованной катаны, такой, как эта, должен уважать обычаи Кара-Тура и самурая, который когда-то нёс этот клинок в битву. Отступление от этого условия может крайне отрицательным образом сказаться на удаче владельца катаны.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  15
-Attack Bonus: +5
-Enchantment:  +5
-Damage Type:  Slashing
-Special:
-  Kai: Wielder deals maximum damage with each hit
-Weight: 1 lb.
-Feat Requirement:  Exotic Weapon, Bastard Sword
-Type:  One-handed~
+Урон: 15
+Атака: +5
+Зачарование: +5
+Тип урона: рубящий
+Особенности:
+ Каи: владелец катаны наносит максимальный урон при каждом попадании
+Вес: 1 фунтов
+Необходимая черта: Экзотическое оружие, Полуторные мечи
+Тип: одноручное~
 @12583    = ~Greater Staff of the Elements~
 @12584    = ~The simplest and humblest of staff weapons, the quarterstaff is a length of wood ranging six to nine feet in length. Masterwork quarterstaffs are made of stout oak and are shod with metal at both ends. This one is particularly special as it has been imbued with magical properties.
 
