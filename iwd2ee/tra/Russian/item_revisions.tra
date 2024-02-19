@@ -12562,25 +12562,25 @@
 Не требует черт для ношения
 Класс защиты: +8
 Максимальный бонус ловкости: отсутствует
-Штраф к проверкам за броню: 0
+Штраф к проверкам за броню: -0
 Шанс провала заклинания: 0%
 Особенности:
  Заклинания могут быть прочитаны и воровские навыки применены без штрафов от ношения доспехов
 Вес: 9 фунтов~
-@12591    = ~Exquisite Black Swan Armor +5~
-@12592    = ~This armor was made by the dwarven smith Karador and an elven enchanter known as Elameth of Five Trees. During the time of cooperation between the Hand of the Seldarine and Dorn's Deep, many wondrous items were produced. This suit of armor was one of them. Exceptionally light and beautiful, the armor was originally worn by a female elven marshal in the Severed Hand, which is why the orcs didn't take it when they sacked the towers. The armor was later stolen from the Hand by Maiden Ilmadia.
+@12591    = ~Изысканный доспех чёрного лебедя +5~
+@12592    = ~Этот доспех изготовили дварф-кузнец Карадор и эльфийский чародей Эламет из Пяти Деревьев. Много чудесных вещей увидели свет во времена союза между Рукой Селдарин и пещерами Дорна. Одной их них был этот доспех. Чрезвычайно лёгкая и красивая, эта броня принадлежала эльфийской военачальнице из Отрубленной Руки, поэтому орки не забрали её, когда разграбили башни. Впоследствии доспех украла из Руки Дева Ильмадия.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-No Armor Proficiency Required
-Armor Bonus: +12
-Max Dex Bonus:  None
-Armor Check Penalty:  -0
-Arcane Spell Failure:  0%
-Special:
-  Charisma: +5
-  Spellcasting and Thieving abilities can be performed without penalties from wearing armor.
-Weight: 1 lb.~
+Не требует черт для ношения
+Класс защиты: +12
+Максимальный бонус ловкости: отсутствует
+Штраф к проверкам за броню: -0
+Шанс провала заклинания: 0%
+Особенности:
+ Харизма: +5
+ Заклинания могут быть прочитаны и воровские навыки применены без штрафов от ношения доспехов
+Вес: 1 фунт~
 @12593    = ~Celestial Fury +3~
 @12594    = ~To enchant a katana is no simple process. Unlike conventional weapons, the katana is already a near-perfect fighting sword. To improve it usually requires a sacrifice, perhaps a dying samurai might beg a Wu Jen to infuse his fighting spirit into the spirit of the katana. The wielder of an enchanted katana, such as this one, must respect the customs of Kara-Tur and of the samurai who once carried this blade into battle. Not doing so could drastically change one's luck for the worse.
 
