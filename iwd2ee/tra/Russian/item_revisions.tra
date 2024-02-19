@@ -12520,52 +12520,53 @@
 Вес: 1 фунтов
 Необходимая черта: Экзотическое оружие, Полуторные мечи
 Тип: одноручное~
-@12583    = ~Greater Staff of the Elements~
-@12584    = ~The simplest and humblest of staff weapons, the quarterstaff is a length of wood ranging six to nine feet in length. Masterwork quarterstaffs are made of stout oak and are shod with metal at both ends. This one is particularly special as it has been imbued with magical properties.
+@12583    = ~Великий посох стихий~
+@12584    = ~Простейшее и скромнейшее из шестообразного оружия, боевой посох - это деревянная палка длиной от шести до девяти футов. Боевые посохи высокого качества делаются из крепкого дуба и оковываются металлом с обоих концов. Данный экземпляр несколько отличается от других, поскольку наделён некоторыми магическими свойствами.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d6
-Damage Type:  Bludgeoning
-Special:
-  Flaming Burst: +1d6 fire damage and 25% chance of +2d10 extra fire damage
-  Frost Burst: +1d6 cold damage and 25% chance of +2d10 extra cold damage
-  Shocking Burst: +1d6 electrical damage and 25% chance of +2d10 extra electrical damage
-  Corrosive Burst: +1d6 acid damage and 25% chance of +2d10 extra acid damage
-Weight: 4 lb.
-Feat Requirement:  Simple Weapon, Quarterstaff
-Type:  Two-handed~
-@12585    = ~Ring of Thex~
-@12586    = ~This ornate silver ring is set with a single red stone of an unknown type. The ring is believed to have been created by an adventuring mage named Thex. Thex claimed she was tired of sitting back and flinging spells at enemies while the rest of her adventuring party was able to get into the thick of battle. She felt that the ring would allow her to become what she chose to call a Battlemage. The Ring of Thex was the crowning achievement of her short career.
+Урон: 1d6
+Тип урона: дробящий
+Особенности:
+ Вспышка пламени: +1d6 урона огнём и 25% вероятность нанести дополнительно 2d10 урона огнём
+ Ледяное крошево: +1d6 урона льдом и 25% вероятность нанести дополнительно 2d10 урона льдом
+ Кислотные брызги: +1d6 урона кислотой и 25% вероятность нанести дополнительно 2d10 урона кислотой
+ Разряды: +1d6 урона электричеством и 25% вероятность нанести дополнительно 2d10 урона электричеством
+Вес: 4 фунта
+Необходимая черта: Простое оружие, Посохи
+Тип: двуручное~
+@12585    = ~Кольцо Фикс~
+@12586    = ~Это богато украшенное серебряное кольцо с красным камнем неизвестного типа. Говорят, что кольцо было создано странствующей женщиной-магом Фикс. Она утверждала, что ей по горло надоело сидеть за спинами своих товарищей и швырять во врагов заклятья, в то время как остальные могут находиться в гуще боя. Она считала, что это кольцо позволит ей стать настоящим боевым магом. Кольцо Фикс стало вершиной ее короткой карьеры.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Cursed: While equipped, cannot be removed without a spell that removes curses
-Constant Effect: User under the effects of the spell Tenser's Transformation while equipped
+Проклятье: это кольцо можно снять только с помощью заклинания "Снять проклятие"
+Постоянный эффект: носитель оружия находится под постоянным эффектом заклинания "Преобразование Тензера"
 
-Weight: 0 lb.~
+Вес: 0 фунтов~
 //@12587    = ~Sabotaged Histachii Brew~
-@12588    = ~This liquid, specially prepared by one of the yuan-ti priestesses, is the concoction of yuan-ti venom and various herbs and roots, including the modified mandrake root that you planted.
+@12588    = ~Эта жидкость, специально приготовленная одной из жриц юань-ти, представляет собой смесь яда юань-ти и настоев различных кореньев и трав, включая также и подменённый вами модифицированный корень мандрагоры.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-This enchanted broth transforms anyone who ingests it into a special yuan-ti histachii for a period of four hours. While transformed, the imbiber maintains mental clarity and control over their facilities, but is otherwise indistinguishable from regular histachii.
+Этот волшебный отвар на четыре часа превращает любого, кто его выпьет, в хистачи юань-ти. Выпивший зелье сохраняет ясность рассудка и может контролировать свои действия, но внешне совершенно неотличим от хистачи юань-ти.
 
-In addition, even after the transformation ends, the imbiber's skin remains harder than normal, having retained a small portion of the transmutation to scales. This grants a permanent, non-cumulative +1 generic Armor Class bonus.
-Weight: 1 lb.~
-@12589    = ~Black Swan Armor +1~
-@12590    = ~This armor was made by the dwarven smith Karador and an elven enchanter known as Elameth of Five Trees. During the time of cooperation between the Hand of the Seldarine and Dorn's Deep, many wondrous items were produced. This suit of armor was one of them. Exceptionally light and beautiful, the armor was originally worn by a female elven marshal in the Severed Hand, which is why the orcs didn't take it when they sacked the towers. The armor was later stolen from the Hand by Maiden Ilmadia.
+Кроме того, даже после окончания превращения, кожа принявшего остается более твердой, чем обычно, поскольку она изменялась в чешую. Это дает постоянный, не накапливающийся бонус +1 к классу брони (общий).
 
-STATISTICS:
+Вес: 1 фунт~
+@12589    = ~Доспех чёрного лебедя +1~
+@12590    = ~Этот доспех изготовили дварф-кузнец Карадор и эльфийский чародей Эламет из Пяти Деревьев. Много чудесных вещей увидели свет во времена союза между Рукой Селдарин и пещерами Дорна. Одной их них был этот доспех. Чрезвычайно лёгкая и красивая, эта броня принадлежала эльфийской военачальнице из Отрубленной Руки, поэтому орки не забрали её, когда разграбили башни. Впоследствии доспех украла из Руки Дева Ильмадия.
 
-No Armor Proficiency Required
-Armor Bonus: +8
-Max Dex Bonus:  None
-Armor Check Penalty:  -0
-Arcane Spell Failure:  0%
-Special:
-  Spellcasting and Thieving abilities can be performed without penalties from wearing armor.
-Weight: 9 lb.~
+ПАРАМЕТРЫ:
+
+Не требует черт для ношения
+Класс защиты: +8
+Максимальный бонус ловкости: отсутствует
+Штраф к проверкам за броню: 0
+Шанс провала заклинания: 0%
+Особенности:
+ Заклинания могут быть прочитаны и воровские навыки применены без штрафов от ношения доспехов
+Вес: 9 фунтов~
 @12591    = ~Exquisite Black Swan Armor +5~
 @12592    = ~This armor was made by the dwarven smith Karador and an elven enchanter known as Elameth of Five Trees. During the time of cooperation between the Hand of the Seldarine and Dorn's Deep, many wondrous items were produced. This suit of armor was one of them. Exceptionally light and beautiful, the armor was originally worn by a female elven marshal in the Severed Hand, which is why the orcs didn't take it when they sacked the towers. The armor was later stolen from the Hand by Maiden Ilmadia.
 
