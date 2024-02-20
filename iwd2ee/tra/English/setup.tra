@@ -1,4 +1,5 @@
 //TRA num 1-100
+@0    = ~IWD2EE Core~
 @1    = ~Class Revisions~
 @2    = ~Looser Alignment Restrictions~
 @3    = ~Spell Revisions~
@@ -92,18 +93,7 @@
 @91   = ~More Persuasion Options~
 @92   = ~Add Additional Ways to Progress Through Certain Areas~
 @93   = ~Point buy - Increasing an ability score above a certain value requires extra points, and they cannot be decreased below 8 (like in Neverwinter Nights)~
-@98   = ~Did you move, rename or copy your IWD2 game folder? This will cause a lot of bugs in-game because the game doesn't know where the new game folder is.
-
-To fix this, open the file icewind2.ini in Notepad or another text editor, and find the lines that say something like this:
-
-[Alias]
-HD0:=C:\Program Files (x86)\Black Isle\Icewind Dale II
-CD1:=C:\Program Files (x86)\Black Isle\Icewind Dale II\Data\
-CD2:=C:\Program Files (x86)\Black Isle\Icewind Dale II\CD2\
-
-(It will say a different file path if you downloaded the game from GOG.)
-
-You need to edit these lines to point to the new directory where you're playing IWD2EE.~
+@98   = ~You must first install the core component.~
 @99   = ~The Widescreen Mod is not compatible with IWD2EE and will crash the game if installed with IWD2EE. Please uninstall it. IWD2EE already allows you to increase the game's resolution; you do not need the Widescreen Mod.~
 @100  = ~IWD2EE was not uninstalled properly; the files from the previous installation are still in the override folder.
 Installing IWD2EE again without removing those files would corrupt various files.
