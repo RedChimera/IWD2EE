@@ -12709,42 +12709,42 @@
 
 Спасброски воли: +10
 Вес: 1 фунт~
-@12617    = ~Ring of the Divine~
-@12618    = ~A ring is a small band of precious metal that is used as jewelry. Some rare rings have had enchantments placed upon them that confer various magical abilities. These rings are highly sought after, especially by those of the adventuring profession. For no apparent reason, this ring feels warm to the touch.
+@12617    = ~Кольцо божественности~
+@12618    = ~Кольцо - это небольшая полоска драгоценного металла, используемая как украшение. Изредка встречаются кольца, которые зачарованы и обладают различными магическими свойствами. Такие кольца очень высоко ценятся, особенно среди искателей приключений. Это кольцо тёплое на ощупь.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Wearer's divine spells last 40% longer
-Weight: 0 lb.~
-@12619    = ~Field Plate of Force Immunity +8~
-@12620    = ~Field plate is actually a more commonly used form of full plate armor. It consists of shaped and fitted metal plates riveted and interlocked to cover the entire body. This suit is made of adamantite and has been magically enhanced for added protection and durability.
+Жреческие заклинания владельца кольца длятся на 40% дольше
+Вес: 0 фунтов~
+@12619    = ~Сплошной латный доспех иммунитета к магическому урону +8~
+@12620    = ~Сплошной латный доспех, на самом деле, - просто более распространённая разновидность полного латного доспеха. Он состоит из гнутых металлических пластин, подогнанных друг к другу и скреплённых так, чтобы закрывать всё тело. Этот доспех сделан из мифрила, и на него наложены чары, увеличивающие прочность доспеха и его защитные свойства.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Heavy Armor
-Armor Bonus: +15
-Max Dex Bonus:  +1
-Armor Check Penalty:  -6
-Arcane Spell Failure:  35%
-Special:
-  Wearer is immune to magic damage
-Weight: 25 lb.~
-@12621    = ~Helmet of Defense +6~
-@12622    = ~This class of decorative helmet, made of reinforced leather or metal, covers the face and head. Eye slits and breathing holes come highly recommended.
+Тяжёлая броня
+Класс защиты: +15 (доспех)
+Максимальный бонус ловкости: +1
+Штраф к проверкам за броню: -6
+Шанс провала заклинания: 35%
+Особенности:
+ Носитель доспеха неуязвим для урона магией
+Вес: 25 фунтов~
+@12621    = ~Шлем защиты +6~
+@12622    = ~Декорированные шлемы такого типа, изготовленные из прочной кожи или металла, полностью закрывают лицо и голову. Наличие в шлеме прорезей для глаз и дыхания крайне приветствуется.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Generic Armor Bonus: +7
-Weight: 2 lb.~
-@12623    = ~Gauntlets of Slow Force~
-@12624    = ~These magical gauntlets make the wearer's attacks slower but much more powerful and accurate.
+Класс защиты: +7 (общий)
+Вес: 2 фунта~
+@12623    = ~Рукавицы медлительной силы~
+@12624    = ~Эти магические рукавицы делают атаки своего владельца медленнее, но гораздо мощнее и точнее.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Attack Bonus: +5
-Damage:  +10 bonus
-Slow: -1 attack per round with any weapon
-Weight:  2 lb.~
+Атака: +5
+Урон: +10
+Медлительность: -1 атака в раунд любым оружием
+Вес: 2 фунта~
 @12625    = ~Brilliant Keen Arrows +5~
 @12626    = ~These arrows were enhanced through magical means when they were created. They appear slightly straighter than the average arrow, almost alive as they effortlessly leave your bow and streak towards their target with deadly accuracy.
 
