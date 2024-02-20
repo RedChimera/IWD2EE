@@ -784,7 +784,7 @@ STATISTICS:
 Resistance:  20/- Magic Damage Resistance
 All magic damage dealt by the character is increased by 20%
 Weight:  3 lb.~
-@38359     = ~Glibness
+@38359    = ~Glibness
 (Enchantment)
 Level: Brd 3
 Range: Caster
@@ -794,3 +794,16 @@ Area of Effect: Caster
 Saving Throw: None
 
 This spell greatly increases the character's ability to fool others. For the duration, the character's Bluff skill is increased by 15.~
+@816    = ~ABJURER:
+
+A wizard that specializes in magic that protects, blocks, or banishes.
+
+Advantages:
+* Abjurers can memorize an additional spell per spell level they know.
+* Abjuration spells cast by an abjurer gain +2 DC.
+* Abjuration wizard spells cast by an abjurer last 20% longer.
+
+Disadvantages:
+* Abjurers cannot learn spells from the Evocation school.~
+@0    = ~IWD2EE Core~
+@98   = ~You must first install the core component.~
