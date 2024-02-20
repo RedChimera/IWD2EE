@@ -6128,7 +6128,7 @@
 Тип урона: рубящий
 Особенности:
  Скорость: 3 дополнительные атаки в раунд
-Вес: 1 фунтов
+Вес: 1 фунт
 Необходимая черта: Военное оружие, Топоры
 Тип: одноручное~
 //@11219    = ~Winter Axe +5~
@@ -9192,7 +9192,7 @@
 Атака: +10
 Особенности:
  Композитный: добавляет модификатор силы к урону, до максимума в +15
-Вес: 1 фунтов
+Вес: 1 фунт
 Необходимая черта: Военное оружие, Луки
 Тип: двуручное
 Требования: Ловкость 18~
@@ -12298,7 +12298,7 @@
 Особенности:
  Убийство: при каждом попадании цель должна сделать спасбросок стойкости (с УС = 20 + модификатор ловкости владельца) или умереть
  Острота: увеличенный шанс нанести критический удар
-Вес: 1 фунтов
+Вес: 1 фунт
 Необходимая черта: Экзотическое оружие, Полуторные мечи
 Тип: одноручное~
 @12551    = ~Двуручный меч палача +5~
@@ -12404,7 +12404,7 @@
 Атака: +4
 Зачарование: +4
 Тип урона: метательный (колющий)
-Вес: 1 фунтов
+Вес: 1 фунт
 Оружие: арбалет~
 @12567    = ~Болт молний~
 @12568    = ~Эти очень редкие болты при попадании превращаются в молнии, поражающие множество существ.
@@ -12517,7 +12517,7 @@
 Тип урона: рубящий
 Особенности:
  Каи: владелец катаны наносит максимальный урон при каждом попадании
-Вес: 1 фунтов
+Вес: 1 фунт
 Необходимая черта: Экзотическое оружие, Полуторные мечи
 Тип: одноручное~
 @12583    = ~Великий посох стихий~
@@ -12581,102 +12581,104 @@
  Харизма: +5
  Заклинания могут быть прочитаны и воровские навыки применены без штрафов от ношения доспехов
 Вес: 1 фунт~
-@12593    = ~Celestial Fury +3~
-@12594    = ~To enchant a katana is no simple process. Unlike conventional weapons, the katana is already a near-perfect fighting sword. To improve it usually requires a sacrifice, perhaps a dying samurai might beg a Wu Jen to infuse his fighting spirit into the spirit of the katana. The wielder of an enchanted katana, such as this one, must respect the customs of Kara-Tur and of the samurai who once carried this blade into battle. Not doing so could drastically change one's luck for the worse.
+@12593    = ~Небесная ярость +3~
+@12594    = ~Зачаровать катану очень нелегко. В отличие от традиционного оружия, катана и так является практически совершенным боевым мечом. Чтобы улучшить её, обычно требуется жертвоприношение — например, умирающий самурай может попросить Ву Джена вселить его воинственный дух в катану. Владелец зачарованной катаны, такой, как эта, должен уважать обычаи Кара-Тура и самурая, который когда-то нёс этот клинок в битву. Отступление от этого условия может крайне отрицательным образом сказаться на удаче владельца катаны.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d10 + 3
-Attack Bonus: +3
-Enchantment:  +3
-Damage Type:  Slashing
-Special:
-  Shocking Burst: +1d6 electrical damage and 5% chance of +20 extra electrical damage
-Weight: 3 lb.
-Feat Requirement:  Exotic Weapon, Bastard Sword
-Type:  One-handed~
-@12595    = ~Heavenly Fury +5~
-@12596    = ~To enchant a katana is no simple process. Unlike conventional weapons, the katana is already a near-perfect fighting sword. To improve it usually requires a sacrifice, perhaps a dying samurai might beg a Wu Jen to infuse his fighting spirit into the spirit of the katana. The wielder of an enchanted katana, such as this one, must respect the customs of Kara-Tur and of the samurai who once carried this blade into battle. Not doing so could drastically change one's luck for the worse.
+Урон: 1d10+3
+Атака: +3
+Зачарование: +3
+Тип урона: рубящий
+Особенности:
+ Разряды: +1d6 электрического урона и 5% вероятность нанести дополнительно 20 урона электричеством
+Вес: 3 фунта
+Необходимая черта: Экзотическое оружие, Полуторные мечи
+Тип: одноручное~
+@12595    = ~Райская ярость +5~
+@12596    = ~Зачаровать катану очень нелегко. В отличие от традиционного оружия, катана и так является практически совершенным боевым мечом. Чтобы улучшить её, обычно требуется жертвоприношение — например, умирающий самурай может попросить Ву Джена вселить его воинственный дух в катану. Владелец зачарованной катаны, такой, как эта, должен уважать обычаи Кара-Тура и самурая, который когда-то нёс этот клинок в битву. Отступление от этого условия может крайне отрицательным образом сказаться на удаче владельца катаны.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d10 + 5
-Attack Bonus: +5
-Enchantment:  +5
-Damage Type:  Slashing
-Special:
-  Flaming Burst: +1d6 fire damage and 10% chance of +20 extra fire damage
-  Shocking Burst: +1d6 electrical damage and 10% chance of +20 extra electrical damage
-Weight: 3 lb.
-Feat Requirement:  Exotic Weapon, Bastard Sword
-Type:  One-handed~
-@12597    = ~Large Shield +3~
-@12598    = ~A large shield is carried in the same manner as a small shield. Its weight prevents the character from using his shield hand for anything other than carrying the large shield. Large shields are usually made of metal, range from 3'-4' in diameter, and can be of any shape, from round to square to a spread dragon's wings. A typical medieval shield resembles a triangle with one point facing downward. This shield has runes scribed onto it that glow eerily in dim light.
+Урон: 1d10+5
+Атака: +5
+Зачарование: +5
+Тип урона: рубящий
+Особенности:
+ Вспышка пламени: +1d6 урона огнём и 10% вероятность нанести дополнительно 20 урона огнём
+ Разряды: +1d6 электрического урона и 10% вероятность нанести дополнительно 20 урона электричеством
+Вес: 3 фунта
+Необходимая черта: Экзотическое оружие, Полуторные мечи
+Тип: одноручное~
+@12597    = ~Большой щит +3~
+@12598    = ~Большой щит носится так же, как и маленький. Однако он тяжелее, и его вес не позволяет обладателю использовать руку, в которой находится щит, для чего-либо ещё. Большие щиты обычно делаются из металла, имеют три-четыре фута в диаметре и могут быть любой формы: от круглой или квадратной до силуэта расправленных крыльев дракона. Типичный средневековый щит представляет собой треугольник, направленный вершиной вниз. На этот щит нанесены руны, слабо сияющие потусторонним светом.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Shield Bonus: +5
-Armor Check Penalty:  -2
-Arcane Spell Failure:  15%
-Weight: 9 lb.~
-@12599    = ~Tower Shield +5~
-@12600    = ~This massive shield is nearly as tall as the wielder. Basically, it is a portable wall meant to provide cover. It can provide up to total cover, depending on how far you come out from behind it. A tower shield, however, does not provide cover against targeted spells; a spellcaster can cast a spell on you by targeting the shield you are holding. This shield has runes scribed onto it that glow eerily in dim light.
+Класс защиты: +5 (щит)
+Штраф к проверкам за броню: -2
+Шанс провала заклинания: 15%
+Вес: 9 фунтов~
+@12599    = ~Осадный щит +5~
+@12600    = ~Этот массивный щит по высоте может быть ростом со своего владельца. По сути, это переносная стена, за которой можно укрыться. Если из-за него не высовываться, вы будете полностью защищены от оружия врага. Однако осадный щит не спасает от заклинаний, так как может быть использован в качестве цели для заклинания. На этот щит нанесены руны, слабо сияющие потусторонним светом.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Shield Bonus: +9
-Special:
-  Attack Penalty: -2
-Armor Check Penalty:  -10
-Arcane Spell Failure:  50%
-Weight: 10 lb.~
-@12601    = ~Death Armor +3~
-@12602    = ~Splint mail is a variant of banded mail in which the metal strips are applied vertically to the backing of chain, leather, or cloth rather than horizontally as in banded mail. Since the human body does not swivel in mid-torso as much as it flexes back to front, splint mail is more restrictive in battle. This particular suit of armor has been magically enchanted for increased durability and protection.
+Класс защиты: +9 (щит)
+Штраф к проверкам за броню: -10
+Шанс провала заклинания: 50%
+Особенности:
+ Атака: -2
+Вес: 10 фунтов~
+@12601    = ~Доспехи смерти +3~
+@12602    = ~Пластинчатый доспех состоит из металлических полос, вертикально прикреплённых к к подкладке из колец, кожи или ткани. Поскольку наклонять торс вперёд и назад приходится чаще, чем в стороны, пластинчатый доспех сильно ограничивает движение в бою. Чары, наложенные на доспех, увеличивают его прочность и защитные качества.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Heavy Armor
-Armor Bonus: +9
-Max Dex Bonus:  +0
-Armor Check Penalty:  -7
-Arcane Spell Failure:  40%
-Special:
-  Constant Effect: Wearer is under the effects of the spell Death Armor
-Weight: 32 lb.~
-@12603    = ~Helmet of Defense +2~
-@12604    = ~This class of decorative helmet, made of reinforced leather or metal, covers the face and head. Eye slits and breathing holes come highly recommended.
+Тяжёлая броня
+Класс защиты: +9 (доспех)
+Максимальный бонус ловкости: +0
+Штраф к проверкам за броню: -7
+Шанс провала заклинания: 40%
+Особенности:
+ Постоянный эффект: носитель этой брони находится под постоянным эффектом заклинания "Доспехи смерти"
+Вес: 32 фунтов~
+@12603    = ~Шлем защиты +2~
+@12604    = ~Декорированные шлемы такого типа, изготовленные из прочной кожи или металла, полностью закрывают лицо и голову. Наличие в шлеме прорезей для глаз и дыхания крайне приветствуется.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Generic Armor Bonus: +3
-Weight: 2 lb.~
-@12605    = ~Ring of the Intelligent Combatant~
-@12606    = ~A ring is a small band of precious metal that is used as jewelry. Some rare rings have had enchantments placed upon them that confer various magical abilities. These rings are highly sought after, especially by those of the adventuring profession. For no apparent reason, this ring feels warm to the touch.
+Класс защиты: +3 (общий)
+Улучшение класса защиты: нет
+Вес: 2 фунта~
+@12605    = ~Кольцо интеллектуального бойца~
+@12606    = ~Кольцо - это небольшая полоска драгоценного металла, используемая как украшение. Изредка встречаются кольца, которые зачарованы и обладают различными магическими свойствами. Такие кольца очень высоко ценятся, особенно среди искателей приключений. Это кольцо тёплое на ощупь.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Attack Bonus: +3
-Weight: 0 lb.
-Minimum Intelligence of 15 Required~
-@12607    = ~Ring of Quickening~
-@12608    = ~A ring is a small band of precious metal that is used as jewelry. Some rare rings have had enchantments placed upon them that confer various magical abilities. These rings are highly sought after, especially by those of the adventuring profession. For no apparent reason, this ring feels warm to the touch.
+Атака: +3
+Вес: 0 фунтов
+Требования: Интеллект 15~
+@12607    = ~Кольцо ускорения~
+@12608    = ~Кольцо - это небольшая полоска драгоценного металла, используемая как украшение. Изредка встречаются кольца, которые зачарованы и обладают различными магическими свойствами. Такие кольца очень высоко ценятся, особенно среди искателей приключений. Это кольцо тёплое на ощупь.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Quickening: Casting a spell with the Quicken Spell feat only uses a spell slot one level higher.
-Weight: 0 lb.~
-@12609    = ~Heavy Crossbow of Destruction +6~
-@12610    = ~A crossbow is a bow mounted crosswise on a wooden or metal shaft, the latter called a tiller. The bow is usually made of ash or yew. The crossbow fires a quarrel (also called a bolt). A slight blue glow can be seen emanating from the crossbar.
+Ускорение: при чтении заклинания с чертой "Ускоренное заклинание" слот заклинания только на один уровень выше
+Вес: 0 фунтов~
+@12609    = ~Тяжёлый арбалет уничтожения +6~
+@12610    = ~Арбалетом называется лук, укреплённый на ложе - деревянной или железной ручке. Сам лук обычно делают из ясеня или тиса. Для стрельбы из арбалета применяют особые стрелы, которые называют болтами. Этот арбалет излучает слабый голубой свет.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  +14 (missile)
-Attack Bonus:  +6
-Special:
-  Destruction: Bolts fired from this crossbow have a 25% chance of casting Destruction on the target (Fortitude DC 32)
-Weight: 9 lb.
-Feat Requirement:  Simple Weapon, Crossbow
-Type:  Two-handed~
+Урон: +14 (метательный)
+Атака: +6
+Класс защиты: +1
+Особенности:
+ Уничтожение: болты, выпущенные из этого арбалета, с вероятностью в 25% накладывают на цель заклинание "Уничтожение" (с УС спасброска стойкости = 32)
+Вес: 9 фунтов
+Необходимая черта: Простое оружие, Арбалеты
+Тип: двуручное~
 @12611    = ~Cloak of Acid Immunity~
 @12612    = ~The Cloak of Acid Immunity is among the greatest bulwarks against corrosion. While worn, the wearer's body and equipment become unaffected by all but the most potent acids and bases.
 
