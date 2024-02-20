@@ -12745,75 +12745,75 @@
 Урон: +10
 Медлительность: -1 атака в раунд любым оружием
 Вес: 2 фунта~
-@12625    = ~Brilliant Keen Arrows +5~
-@12626    = ~These arrows were enhanced through magical means when they were created. They appear slightly straighter than the average arrow, almost alive as they effortlessly leave your bow and streak towards their target with deadly accuracy.
+@12625    = ~Сияющие острые стрелы +5~
+@12626    = ~Эти стрелы, при создании, были зачарованы умелым волшебником. С виду они не слишком отличаются от обычных стрел (разве что более прямые), но, едва сорвавшись с тетивы, они словно оживают и со смертельной точностью летят во врага.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d6  +5
-Attack Bonus:  +5
-Enchantment:  +5
-Damage Type:  Missile (piercing)
-Special:
-  Keen: Increased chance of scoring a critical hit on target
-  Brilliant Energy: Bypasses armor and shield bonuses
-Weight: 0 lb.
-Launcher:  Bow~
-@12627    = ~Arrows of Deadly Venom +2~
-@12628    = ~The arrow of biting was designed as a deadly compliment to the archer. With the barbed arrow tip coated in a nasty poison that will infiltrate the bloodstream of its victims causing agony and often times, death.
+Урон: 1d6+5
+Атака: +5
+Зачарование: +5
+Тип урона: метательный (колющий)
+Особенности:
+ Острота: увеличенный шанс нанести критический удар
+ Чистая энергия: при атаке бонусы к классу защиты цели от доспеха и щита не учитываются
+Вес: 0 фунтов
+Оружие: лук~
+@12627    = ~Стрелы смертельного яда +2~
+@12628    = ~Эта стрела - смертоносное дополнение лучника. Её зазубренный наконечник покрыт ядом, который, проникая в кровь, причиняет жертве невыносимые мучения и нередко смерть.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d6  +2
-Attack Bonus:  +2
-Enchantment:  +2
-Damage Type:  Missile (piercing)
-Special:
-  Venom: +4 points of poison damage every second for 12 seconds (Fortitude DC 31)
-Weight: 0 lb.
-Launcher:  Bow~
-@12629    = ~Xvimian Acid Arrows +5~
-@12630    = ~This arrow is coated in acid so that when it strikes an enemy, it will not only pierce its flesh but also begin to eat away at the wound, enlarging and deepening its severity.
+Урон: 1d6+2
+Атака: +2
+Зачарование: +2
+Тип урона: метательный (колющий)
+Особенности:
+ Яд: +4 урона ядом каждую секунду в течение 12 секунд (успешный спасбросок стойкости с УС 31 отменяет эффект)
+Вес: 0 фунтов
+Оружие: лук~
+@12629    = ~Кислотная стрела Ксвима +5~
+@12630    = ~Эта стрела покрыта кислотой, поэтому, когда она попадает во врага, она не только пронзает его плоть, но и начинает разъедать рану, увеличивая и углубляя её.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d6  +5
-Attack Bonus:  +5
-Enchantment:  +5
-Damage Type:  Missile (piercing)
-Special:
-  Corrosion: +2d4 acid damage, and an additional +4d4 acid damage over the following 2 rounds
-Weight: 0 lb.
-Launcher:  Bow~
-@12631    = ~Executioner Arrows +5~
-@12632    = ~These arrows were enhanced through magical means when they were created. They appear slightly straighter then the average arrow, almost alive as they effortlessly leave your bow and streak towards their target with deadly accuracy.
+Урон: 1d6+5
+Атака: +5
+Зачарование: +5
+Тип урона: метательный (колющий)
+Особенности:
+ Разъедание: +2d4 урона кислотой и дополнительно 4d4 урона кислотой в следующие 2 раунда
+Вес: 0 фунтов
+Оружие: лук~
+@12631    = ~Стрелы палача +5~
+@12632    = ~Эти стрелы, при создании, были зачарованы умелым волшебником. С виду они не слишком отличаются от обычных стрел (разве что более прямые), но, едва сорвавшись с тетивы, они словно оживают и со смертельной точностью летят во врага.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d6 + 5
-Attack Bonus:  +5 
-Enchantment:  +5
-Damage Type:  Slashing
-Special:
-  Keen: Increased chance of scoring a critical hit on target
-  Deals x4 damage on a critical hit
-Weight: 0 lb.
-Launcher:  Bow~
-@12633    = ~Vorpal Throwing Axe +5~
-@12634    = ~The handaxe or throwing axe is also known as a hatchet. The axe blade has a sharp steel tip, counterbalanced by a pointed fluke. The short handle has a point on the bottom and the head may have a spike on the top. Runes of power have been etched into the blade to further enhance it.
+Урон: 1d6+5
+Атака: +5
+Зачарование: +5
+Тип урона: метательный (колющий)
+Особенности:
+ Острота: увеличенный шанс нанести критический удар
+ Наносит x4 урона при критическом попадании
+Вес: 0 фунтов
+Оружие: лук~
+@12633    = ~Вострый метательный топор +5~
+@12634    = ~Ручной топор или метательный топор, также известен как томагавк. У этого топора заточенное стальное лезвие, уравновешенное острым зазубренным выступом. Короткая рукоять имеет заострённое основание, а обух тоже может быть увенчан шипом. На лезвии этого топорика выгравированы руны силы.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d6  +5
-Attack bonus:  +5
-Enchantment:  +5
-Damage Type (melee):  Slashing
-Damage Type (thrown):  Slashing
-Special:
-  Beheading: With each axe thrown, there is a 12% chance the target will be decapitated (Fortitude DC 28). Undead are immune. This effect only occurs if the axe is thrown.
-Weight: 4 lb.
-Required Feat:  Martial Weapon, Axe
-Type:  One-handed~
+Урон: 1d6+5
+Атака: +5
+Зачарование: +5
+Тип урона: метательный (рубящий)
+Тип урона: ближний бой (рубящий)
+Особенности:
+ Обезглавливание: при каждом броске топора есть 12% шанс, что цель будет обезглавлена (успешный спасбросок стойкости с УС 28 отменяет эффект); это работает, только если топор был брошен и нежить не восприимчива к этому эффекту
+Вес: 4 фунта
+Необходимая черта: Военное оружие, Топоры
+Тип: одноручное~
 @12635    = ~Bolts of Irrestible Slowing +3~
 @12636    = ~Quarrels or bolts are the ammunition fired by crossbows regardless of the weapon's size. However this bolt has been imbued with magical properties which enhances performance in flight, almost as if the bolt was guided towards its target.
 
