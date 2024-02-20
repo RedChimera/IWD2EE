@@ -12679,36 +12679,36 @@
 Вес: 9 фунтов
 Необходимая черта: Простое оружие, Арбалеты
 Тип: двуручное~
-@12611    = ~Cloak of Acid Immunity~
-@12612    = ~The Cloak of Acid Immunity is among the greatest bulwarks against corrosion. While worn, the wearer's body and equipment become unaffected by all but the most potent acids and bases.
+@12611    = ~Плащ иммунитета к кислоте~
+@12612    = ~Плащ иммунитета к кислоте - один из лучших способов защиты от кислотного воздействия. При его ношении тело и снаряжение владельца не подвержены воздействию любых кислот и щелочей, кроме самых сильных.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Wearer is immune to acid damage
-Weight:  3 lb.~
-@12613    = ~Hide Armor of Elemental Resistance +5~
-@12614    = ~Hide armor is made from multiple layers of leather armor. Though stiff and hard to move in, it is relatively simple to make and provides a good barrier against cold weather. It is most commonly seen on the warriors and huntsmen of northern barbarian tribes.
+Носитель невосприимчив к урону кислотой
+Вес: 3 фунта~
+@12613    = ~Доспех из шкуры сопротивления стихиям +5~
+@12614    = ~Доспех из шкуры делается из нескольких слоёв шкур животных. Хотя он жёсток и в нём не очень удобно двигаться, доспех прост в изготовлении и хорошо защищает от холода. Чаще всего его можно увидеть на воинах и охотниках северных варварских племён.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Medium Armor
-Armor Bonus: +9
-Max Dex Bonus:  +4
-Armor Check Penalty:  -3
-Arcane Spell Failure:  20%
-Special:
-  Resistance: 40/- Fire Resistance
-  Resistance: 40/- Cold Resistance
-  Resistance: 40/- Electrical Resistance
-  Resistance: 40/- Acid Resistance
-Weight: 10 lb.~
-@12615    = ~Amulet of Willpower~
-@12616    = ~Amulets are some of the most favored items to enchant by wizards because of their ability to be worn without interfering with the delicate rituals of spell casting. This particular amulet increases the wearer's ability to shrug off harmful mental effects.
+Средняя броня
+Класс защиты: +9 (доспех)
+Максимальный бонус ловкости: +4
+Штраф к проверкам за броню: -3
+Шанс провала заклинания: 20%
+Особенности:
+ Сопротивление: 40/- сопротивления огню
+ Сопротивление: 40/- сопротивления холоду
+ Сопротивление: 40/- сопротивления электричеству
+ Сопротивление: 40/- сопротивления кислоте
+Вес: 10 фунтов~
+@12615    = ~Амулет силы воли~
+@12616    = ~Амулеты - одни из самых любимых волшебниками предметов для зачарования, поскольку они, при ношении, не мешают сложным ритуалам произнесения заклинаний. Этот амулет увеличивает способность владельца сопротивляться вредным ментальным воздействиям.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Will Saving Throw: +10
-Weight: 1 lb.~
+Спасброски воли: +10
+Вес: 1 фунт~
 @12617    = ~Ring of the Divine~
 @12618    = ~A ring is a small band of precious metal that is used as jewelry. Some rare rings have had enchantments placed upon them that confer various magical abilities. These rings are highly sought after, especially by those of the adventuring profession. For no apparent reason, this ring feels warm to the touch.
 
