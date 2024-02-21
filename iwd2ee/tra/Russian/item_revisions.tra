@@ -10439,7 +10439,7 @@
 Выпивший зелье становится невидимым
 Вес: 1 фунт~
 //@12087    = ~Potion of Absorption~
-@12088    = ~Это зелье после употребления позволяет легче выносить вражеские атаки. Все удары дробящим оружием, за исключением самых сильных, кажутся слабыми тычками. Эффект длится 10 ходов.
+@12088    = ~Это зелье после употребления позволяет легче выносить вражеские атаки. Все удары дробящим оружием, за исключением самых сильных, кажутся слабыми тычками. Эффект длится 10 раундов.
 
 ПАРАМЕТРЫ:
 
@@ -12814,258 +12814,256 @@
 Вес: 4 фунта
 Необходимая черта: Военное оружие, Топоры
 Тип: одноручное~
-@12635    = ~Bolts of Irrestible Slowing +3~
-@12636    = ~Quarrels or bolts are the ammunition fired by crossbows regardless of the weapon's size. However this bolt has been imbued with magical properties which enhances performance in flight, almost as if the bolt was guided towards its target.
+@12635    = ~Болты непреодолимого замедления +3~
+@12636    = ~Арбалетные стрелы, или "болты", используются для стрельбы из арбалетов всех известных размеров. В отличие от обычных, эти болты наделены магическими свойствами, которые выравнивают полёт, позволяя болту точнее попасть в цель.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d8  +3
-Attack Bonus:  +3
-Enchantment:  +3
-Damage Type:  Missile (piercing)
-Special:
-  Slowing: Target is slowed for 1 round on hit (no save)
-Weight:  0 lb.
-Launcher:  Crossbow~
-@12637    = ~Magic Splitting Bolts +5~
-@12638    = ~Quarrels or bolts are the ammunition fired by crossbows regardless of the weapon's size. However this bolt has been imbued with magical properties which enhances performance in flight, almost as if the bolt was guided towards its target.
+Урон: 1d8+3
+Атака: +3
+Зачарование: +3
+Тип урона: метательный (колющий)
+Особенности:
+ Замедление: цель становится замедленной на один раунд при попадании (спасбросок отсутствует)
+Вес: 0 фунтов
+Оружие: арбалет~
+@12637    = ~Волшебные болты разделения +5~
+@12638    = ~Арбалетные стрелы, или "болты", используются для стрельбы из арбалетов всех известных размеров. В отличие от обычных, эти болты наделены магическими свойствами, которые выравнивают полёт, позволяя болту точнее попасть в цель.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d8  +5
-Attack Bonus:  +5
-Enchantment:  +5
-Damage Type:  Missile (piercing)
-Special:
-  Magic Force: +1d4+1 magic damage
-  Splitting: When fired, these bolts split into two bolts; each will deal full damage
-Weight:  0 lb.
-Launcher:  Crossbow~
-@12639    = ~Bullets of Shattering +5~
-@12640    = ~Magical currents are embedded inside this bullet so that it seems a little more balanced and lighter as it jumps towards an opponent.
+Урон: 1d8+5
+Атака: +5
+Зачарование: +5
+Тип урона: метательный (колющий)
+Особенности:
+ Урон магией: +1d4+1 урона магией
+ Разделение: при выстреле изначальный болт разделяется на два болта, каждый из которых наносит полный урон
+Вес: 0 фунтов
+Оружие: арбалет~
+@12639    = ~Снаряды сокрушения +5~
+@12640    = ~В этом снаряде заключена магическая энергия, поэтому он несколько легче, лучше сбалансирован и словно бы выпрыгивает навстречу врагам.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d4  +5
-Attack Bonus:  +5 
-Enchantment:  +5
-Damage Type:  Missile (bludgeoning)
-Special:
-  Deals x3 damage on a critical hit
-Weight: 0 lb.
-Launcher:  Sling~
-@12641    = ~Boulders +2~
-@12642    = ~These bullets, when launched, transform into large boulders in mid-flight, while retaining the same speed they had when launched. As a result, they strike with tremendous force.
+Урон: 1d4+5
+Атака: +5
+Зачарование: +5
+Тип урона: метательный (дробящий)
+Особенности:
+ Наносит x3 урона при критическом попадании
+Вес: 0 фунтов
+Оружие: праща~
+@12641    = ~Валуны +2~
+@12642    = ~После запуска, в середине полёта, эти снаряды превращаются в большие валуны, сохраняя при этом скорость снаряда. В результате они наносят удары огромной силы.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  6d10
-Attack Bonus:  -10
-Enchantment:  +2
-Damage Type:  Bludgeoning
-Special:
-  Transforms into a boulder when launched
-  Impact: Increased chance of scoring a critical hit on target
-Weight: 0 lb.
-Launcher:  Sling~
-@12643    = ~Throwing Daggers of Terrible Luck +5~
-@12644    = ~The typical throwing dagger has a pointed, usually double-edged blade, as opposed to a knife, which has a single edge and is a bit shorter than the dagger. Unlike a dagger, this one has a smaller handle and is balanced differently. Runes of power have been  etched into the blade and glow ominously.
+Урон: 6d10
+Атака: -10
+Зачарование: +2
+Тип урона: дробящий
+Особенности:
+ После запуска превращается в валун
+ Импульс: увеличивает вероятность критического попадания
+Вес: 0 фунтов
+Оружие: праща~
+@12643    = ~Метательные кинжалы несчастья +5~
+@12644    = ~У типичного метательного кинжала лезвие заострённое, двустороннее, в отличие от ножа, имеющего одностороннее и более короткое лезвие. От кинжалов он отличается более короткой рукояткой; кроме того, метательные ножи иначе сбалансированы. На лезвии вытравлены усиливающие руны, которые грозно светятся.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d4 + 5
-Attack Bonus:  +5
-Enchantment:  +5
-Damage Type: Missile (piercing)
-Damage Type: Melee (piercing)
-Special:
-  Misfortune: Each hit gives the target -2 luck for 3 rounds (cumulative, no save). This effect only occurs if the dagger is thrown.
-Weight: 0 lb.
-Feat Requirement:  Simple Weapon, Small Blade
-Type:  One-handed~
-@12645    = ~Dwarven Thrower +3~
-@12646    = ~This hammer - not to be confused with the elven made Dwarf Thrower - is only usable by dwarves. In the capable hands of a dwarven warrior the hammer may be thrown at an opponent. The magic in the hammer draws it back to the hand of its wielder. Against giants and ogres the hammer does an additional +7 damage, due to the special hatred that dwarves hold against these races.
+Урон: 1d4+5
+Атака: +5
+Зачарование: +5
+Тип урона: метательный (колющий)
+Тип урона: ближний бой (колющий)
+Особенности:
+ Несчастье: каждое попадание снижает удачу цели на 2 на 3 раунда (складывается, спасброска нет); этот эффект срабатывает только, если кинжал метнуть
+Вес: 0 фунтов
+Необходимая черта: Простое оружие, Короткие клинки
+Тип: одноручное~
+@12645    = ~Дварфский метатель +3~
+@12646    = ~Этот молот (не путать с Метателем дварфов, изготовленным эльфами) могут использовать только дварфы. Умелые руки воина дварфов способны метнуть молот в противника, а магия молота вернёт его обратно в руку хозяина. Великанам и ограм оружие причиняет дополнительно 7 пунктов урона, поскольку дварфы испытывают к этим расам особую ненависть.
 
-Unlike most anti-giant weapons, which are designed to hit giants in the legs and trip them, this particular Dwarven Thrower was intended to hit giants in the head. For this reason, the hammer is enchanted to fly farther than a typical throwing hammer.
+В отличие от большинства видов оружия против великанов, предназначенного для того, чтобы бить великанов по ногам и валить их на землю, этот Дварфский метатель предназначен для поражения великанов в голову. По этой причине молот зачарован так, чтобы лететь дальше, чем обычный метательный молот.
 
+ПАРАМЕТРЫ:
 
-STATISTICS:
+Урон: 2d8+3, +7 (дополнительно) против великанов
+Атака: +3
+Зачарование: +3
+Тип урона: метательный (дробящий)
+Тип урона: ближний бой (дробящий)
+Особенности:
+ Возвращение: после броска возвращается в руку владельца
+ Дальность метания составляет 30 футов (вместо обычных 10)
+Вес: 2 фунта
+Необходимая черта: Военное оружие, Молоты
+Тип: одноручное~
+@12647    = ~Дварфский метатель +5~
+@12648    = ~Этот молот (не путать с Метателем дварфов, изготовленным эльфами) могут использовать только дварфы. Умелые руки воина дварфов способны метнуть молот в противника, а магия молота вернёт его обратно в руку хозяина. Великанам и ограм оружие причиняет дополнительно 7 пунктов урона, поскольку дварфы испытывают к этим расам особую ненависть.
 
-Damage:  2d8 + 3, + an additional 7 vs. giants
-Attack Bonus:  +3
-Enchantment:  +3
-Damage Type (melee):  Bludgeoning
-Damage Type (thrown):  Missile (bludgeoning)
-Special:
-  Returning: Returns to user
-  Range of 30 feet rather than 10
-Weight: 2 lb.
-Feat Requirement:  Martial Weapon, Hammer
-Type:  One-handed~
-@12647    = ~Dwarven Thrower +5~
-@12648    = ~This hammer - not to be confused with the elven made Dwarf Thrower - is only usable by dwarves. In the capable hands of a dwarven warrior the hammer may be thrown at an opponent. The magic in the hammer draws it back to the hand of its wielder. Against giants and ogres the hammer does an additional +7 damage, due to the special hatred that dwarves hold against these races.
+В отличие от большинства видов оружия против великанов, предназначенного для того, чтобы бить великанов по ногам и валить их на землю, этот Дварфский метатель предназначен для поражения великанов в голову. По этой причине молот зачарован так, чтобы лететь дальше, чем обычный метательный молот.
 
-Unlike most anti-giant weapons, which are designed to hit giants in the legs and trip them, this particular Dwarven Thrower was intended to hit giants in the head. For this reason, the hammer is enchanted to fly farther than a typical throwing hammer.
+ПАРАМЕТРЫ:
 
+Урон: 2d8+5, +7 (дополнительно) против великанов
+Атака: +5
+Зачарование: +5
+Тип урона: метательный (дробящий)
+Тип урона: ближний бой (дробящий)
+Особенности:
+ Возвращение: после броска возвращается в руку владельца
+ Импульс: увеличивает вероятность критического попадания
+ Дальность метания составляет 30 футов (вместо обычных 10)
+Вес: 2 фунта
+Необходимая черта: Военное оружие, Молоты
+Тип: одноручное~
+@12649    = ~Зелье великого восстановления~
+@12650    = ~Зелья обычно хранятся в керамических, хрустальных, стеклянных, металлических бутылках или пузырьках. Как правило, каждый сосуд содержит достаточно жидкости для одной дозы, необходимой для достижения эффекта.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  2d8 + 5, + an additional 7 vs. giants
-Attack Bonus:  +5
-Enchantment:  +5
-Damage Type (melee):  Bludgeoning
-Damage Type (thrown):  Missile (bludgeoning)
-Special:
-  Returning: Returns to user
-  Impact: Increased chance of scoring a critical hit on target
-  Range of 30 feet rather than 10
-Weight: 2 lb.
-Feat Requirement:  Martial Weapon, Hammer
-Type:  One-handed~
-@12649    = ~Potion of Greater Restoration~
-@12650    = ~Potions are typically found in ceramic, crystal, glass, or metal flasks or vials. Flasks or other containers generally contain enough fluid to provide one person with one complete dose to achieve the effects of the potion.
-
-STATISTICS:
-
-This potion will heal 5d8+25 hit points and cure a creature of all of the following ailments: energy drain, feeblemind, any form of insanity such as confusion or berserk states of mind, charm, domination, hopelessness, despair, panic, and artificially induced sleep.
-Weight: 1 lb.~
+Это зелье исцелит вылечит 5d8+25 пунктов здоровья и исцелит от множества недугов: оттока энергии, слабоумия, всех видов наведённого безумия, таких как замешательство или состояние берсерка, очарования, подчинения; избавит от от чувства безнадёжности, отчаяния и паники; пробудит от навеянного сна
+Вес: 1 фунт~
 //@12651    = ~Elven Healing Wine~
-@12652    = ~This bottle of elven wine also has the properties of a healing potion. During one of the elven festivals, the priests of the Seldarine's Hand imbibed too much that day and accidentally added a barrel of elven wine to a mixture that was intended for healing potions. Due to an interaction with the enchantments surrounding the Severed Hand, this bottle has powerful but unpredictable effects.
+@12652    = ~Эта бутылка эльфийского вина также обладает свойствами зелья лечения. На одном из эльфийских праздников жрецы Руки Селдарин перебрали и случайно вылили бочонок эльфийского вина в смесь, заготовленную для лечебных зелий. Из-за взаимодействия с чарами, окружающими Отрубленную Руку, эта бутылка обладает мощными, но непредсказуемыми эффектами.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Heals 2-200 hit points
-Weight: 1 lb.~
+Исцеляет 2-200 пунктов здоровья
+Вес: 1 фунт~
 //@12653    = ~Potion of Heroism~
-@12654    = ~This potion is imbued with a powerful enchantment, which will simulate a temporary increase in level. The effect lasts for 10 turns, making this potion a great ally in a long combat.
+@12654    = ~Это зелье содержит мощные чары, которые словно повышают на время уровень персонажа. Эффект длится 10 ходов, так что это хорошее подспорье в смертельной схватке.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Hit Points:  +60
-Attack Bonus:  +6
-Attacks per round: +1
-Fortitude Saves: +3
-Reflex Saves: +2
-Will Saves: +2
-Duration:  10 turns
-Weight:  1 lb.~
-@12655    = ~Potion of Improved Invisibility~
-@12656    = ~This potion confers Improved Invisibility similar to the fourth-level wizard spell of the same name. The drinker can attack or cast spells while remaining partially invisible. The effects will last for 1 hour.
+Пункты здоровья: +60
+Атака: +6
+Количество атак в раунд: +1
+Спасбросок стойкости: +3
+Спасбросок реакции: +2
+Спасбросок воли: +2
+Длительность: 10 ходов
+Вес: 1 фунт~
+@12655    = ~Зелье улучшенной невидимости~
+@12656    = ~Это зелье наделяет улучшенной невидимостью, подобно одноимённому заклинанию четвёртого уровня. Выпивший это зелье может атаковать или произносить заклинания, оставаясь частично невидимым. Эффект длится 1 час.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Imbiber gains the effects of Improved Invisibility
-Weight: 1 lb.~
+Выпивший зелье попадает под эффект, подобный заклинанию "Улучшенная невидимость"
+Вес: 1 фунт~
 //@12657    = ~Potion of Absorption~
-@12658    = ~This potion, as would be expected, will absorb external attacks once it has been consumed. All blunt attacks made against the imbiber are cushioned, so that only the strongest get through. This effect lasts for 10 rounds.
+@12658    = ~Это зелье после употребления позволяет легче выносить вражеские атаки. Все удары дробящим оружием, за исключением самых сильных, кажутся слабыми тычками. Эффект длится 10 раундов.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Resistance:  50/- Bludgeoning Resistance
-Weight: 1 lb.~
+Сопротивление: 50/- дробящему урону
+Вес: 1 фунт~
 //@12659    = ~Potion of Invulnerability~
-@12660    = ~This potion confer near-complete invulnerability to all damage. The effects are short-lived, however, lasting for only 3 rounds.
+@12660    = ~Это зелье дает почти полную неуязвимость к любому урону. Однако эффект недолговечен: он длится всего 3 раунда.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Resistance:  100/- Fire Resistance
-Resistance:  100/- Cold Resistance
-Resistance:  100/- Electrical Resistance
-Resistance:  100/- Acid Resistance
-Resistance:  100/- Magic Damage Resistance
-Resistance:  100/- Poison Resistance
-Resistance:  100/- Slashing Resistance
-Resistance:  100/- Piercing Resistance
-Resistance:  100/- Bludgeoning Resistance
-Resistance:  100/- Missile Resistance
-Weight: 1 lb.~
+Сопротивление: 100/- урону огнём
+Сопротивление: 100/- урону холодом
+Сопротивление: 100/- урону электричеством
+Сопротивление: 100/- урону кислотой
+Сопротивление: 100/- урону магией
+Сопротивление: 100/- урону ядом
+Сопротивление: 100/- рубящему урону
+Сопротивление: 100/- колющему урону
+Сопротивление: 100/- дробящему урону
+Сопротивление: 100/- метательному урону
+Вес: 1 фунт~
 //@12661    = ~Thrym Extract~
-@12662    = ~This thick liquid is harvested and distilled from the glands of dead polar worms. It is the substance that helps keep the huge creatures warm in the desolate north. Drinking the liquid straight from the creature's body is almost always fatal, so alchemists attempt to distill the substance until it is relatively safe to consume. Even in its current state, however, it can still be deadly.
+@12662    = ~Эту густую жидкость получают из желёз мёртвых полярных червей. Это вещество помогает огромным существам сохранять тепло на диком севере. Пить эту жидкость непосредственно из тела существа смертельно опасно. После многоступенчатой алхимической очистки вещество можно употреблять, но оно всё же сохраняет часть своих смертоносных свойств.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-User takes 2d8 fire damage on a failed Fortitude save (DC 22) but also gains 80/- cold resistance for 5 rounds.
-Weight: 1 lb.~
+Выпивший получает 2d8 урона огнём (успешный спасбросок стойкости с УС 22 отменяет урон), но получает 80/- сопротивления холоду на 5 раундов
+Вес: 1 фунт~
 //@12663    = ~Potion of Explosions~
-@12664    = ~This potion is a vial of pain as it will explode into a burning ball of fire upon impact. Keep it in a safe place lest ye meet an untimely end.
+@12664    = ~Это зелье представляет собой сосуд боли, поскольку при ударе оно взрывается огненным шаром. Хранить его нужно в надёжном месте, чтобы не встретить преждевременную гибель.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  15d6  (Reflex DC 30 for half)
-Area:  20 ft radius
-Weight: 1 lb.~
+Урон: 15d6 (успешный спасбросок реакции с УС 30 снижает урон вдвое)
+Зона действия: радиус 20 футов
+Вес: 1 фунт~
 //@12665    = ~Protection from Acid~
-@12666    = ~A Protection from Acid scroll offers protection to the target from all forms of acid, be they of a natural or magical nature. The effect is not permanent, however, and will wear off after 24 hours.
+@12666    = ~Свиток защиты от кислоты позволяет увеличить уровень защиты цели от разного рода урона кислотой как естественного, так и магического происхождения. Эффект не будет вечным, он пропадает через 24 часа.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Resistance:  100/- Acid Resistance
-Range:  20 ft.
-Area:  1 creature
-Duration:  24 hours~
+Сопротивление: 100/- сопротивления кислоте
+Дальность: 20 футов
+Зона действия: 1 существо
+Длительность: 24 часа~
 //@12667    = ~Protection from Cold~
-@12668    = ~A Protection from Cold scroll offers protection to the target from all forms of cold, be they of a natural or magical nature. This effect is not permanent, however, and will wear off after 24 hours.
+@12668    = ~Свиток защиты от холода позволяет увеличить уровень защиты цели от разного рода урона холодом как естественного, так и магического происхождения. Эффект не будет вечным, он пропадает через 24 часа.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Resistance:  100/- Cold Resistance
-Range:  20 ft.
-Area:  1 creature
-Duration:  24 hours~
+Сопротивление: 100/- сопротивления холоду
+Дальность: 20 футов
+Зона действия: 1 существо
+Длительность: 24 часа~
 //@12669    = ~Protection from Electricity~
-@12670    = ~A Protection from Electricity scroll offers protection to the target from all forms of electrical damage, be it of a natural or magical nature. The effect is not permanent, however, and will wear off after 24 hours.
+@12670    = ~Свиток защиты от электричества позволяет увеличить уровень защиты цели от разного рода урона электричеством как естественного, так и магического происхождения. Эффект не будет вечным, он пропадает через 24 часа.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Resistance:  100/- Electrical Resistance
-Range:  20 ft.
-Area:  1 creature
-Duration:  24 hours~
+Сопротивление: 100/- сопротивления электричеству
+Дальность: 20 футов
+Зона действия: 1 существо
+Длительность: 24 часа~
 //@12671    = ~Protection from Fire~
-@12672    = ~A Protection from Fire scroll offers protection to the target from all forms of fire, even that of magical or elemental nature. The effect is not permanent, however, and will wear off after 24 hours.
+@12672    = ~Свиток защиты от огня позволяет увеличить уровень защиты цели от разного рода урона огнём как естественного, так и магического происхождения. Эффект не будет вечным, он пропадает через 24 часов.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Resistance:  100/- Fire Resistance
-Range:  20 ft.
-Area:  1 creature
-Duration:  24 hours~
-@12673    = ~Bracers of Concentration~
-@12674    = ~Normally bracers are used to add support and protection to forearm area of the body. However, these bracers have been magically altered to protect the mind rather than the body. A spellcaster who wears these bracers can more easily maintain their focus on the spell they are casting. Even searing pain will not always interrupt the wearer of these bracers.
+Сопротивление: 100/- сопротивления огню
+Дальность: 20 футов
+Зона действия: 1 существо
+Длительность: 24 часа~
+@12673    = ~Наручи концентрации~
+@12674    = ~Наручи - это часть доспехов, предназначенная для зашиты предплечий. Однако эти наручи были магически изменены, чтобы защищать не тело, но разум. Заклинателю, носящему эти наручи, легче сохранять концентрацию на заклинании, которое он произносит. Даже непереносимая боль не всегда сможет помешать заклинателю прочитать своё заклинание.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Concentration Skill: +15
-Weight: 2 lb.~
-@12675    = ~Joril's Dagger +3~
-@12676    = ~Joril was a powerful frost giant that lived with his clan in the Spine of the World. His magic dagger was lost when he was killed by a band of adventurers. Eventually the dagger wound up in the town of Kuldahar where it was reforged so that it could be used as a two-handed sword.
+Концентрация: +15
+Вес: 2 фунта~
+@12675    = ~Кинжал Джорила +3~
+@12676    = ~Джорил был могучим морозным великаном, который жил со своим племенем у Хребта Мира. Его волшебный кинжал был потерян, когда Джорил был убит группой искателей приключений. В конце концов оружие всплыло в Кулдахаре, где и было перековано в двуручный меч.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  4d4 + 3
-Attack Bonus:  +3
-Enchantment:  +3
-Damage Type: Piercing
-Special:
-  Counts as a dagger and can be used with Weapon Finesse despite being two-handed
-Weight: 12 lb.
-Feat Requirement:  Simple Weapon, Small Blade
-Type:  Two-handed~
-@12677    = ~Joril's Dagger +5~
-@12678    = ~Joril was a powerful frost giant that lived with his clan in the Spine of the World. His magic dagger was lost when he was killed by a band of adventurers. Eventually the dagger wound up in the town of Kuldahar where it was reforged so that it could be used as a two-handed sword.
+Урон: 4d4+3
+Атака: +3
+Зачарование: +3
+Тип урона: колющий
+Особенности:
+ Это оружие считается кинжалом и может быть использован с чертой "ФЕХТОВАНИЕ" несмотря на то, что оно является двуручным
+Вес: 12 фунтов
+Необходимая черта: Простое оружие, Короткие клинки
+Тип: двуручное~
+@12677    = ~Кинжал Джорила +5~
+@12678    = ~Джорил был могучим морозным великаном, который жил со своим племенем у Хребта Мира. Его волшебный кинжал был потерян, когда Джорил был убит группой искателей приключений. В конце концов оружие всплыло в Кулдахаре, где и было перековано в двуручный меч.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  4d4 + 5
-Attack Bonus:  +5
-Enchantment:  +5
-Damage Type: Piercing
-Special:
-  Frost: +1d6 cold damage
-  Counts as a dagger and can be used with Weapon Finesse despite being two-handed
-Weight: 12 lb.
-Feat Requirement:  Simple Weapon, Small Blade
-Type:  Two-handed~
+Урон: 4d4+5
+Атака: +5
+Зачарование: +5
+Тип урона: колющий
+Особенности:
+ Стужа: +1d6 урона холодом
+ Это оружие считается кинжалом и может быть использован с чертой "ФЕХТОВАНИЕ" несмотря на то, что оно является двуручным
+Вес: 12 фунтов
+Необходимая черта: Простое оружие, Короткие клинки
+Тип: двуручное~
 @12679    = ~Swiftest Crossbow +5~
 @12680    = ~A short-lived outpost of humans in the Frozen Forest unearthed this weapon, and many others, from the ruins of an ancient settlement deep within that cold land. Never knowing the names of their extinct benefactors, the colonists used these "tools" to carve a large territory for themselves, though in the end it was for naught. Crushed by a superior number of Hobgoblins, these unfortunate souls have joined the ancients in their anonymity.
 
