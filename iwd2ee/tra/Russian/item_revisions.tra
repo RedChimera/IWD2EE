@@ -13064,125 +13064,126 @@
 Вес: 12 фунтов
 Необходимая черта: Простое оружие, Короткие клинки
 Тип: двуручное~
-@12679    = ~Swiftest Crossbow +5~
-@12680    = ~A short-lived outpost of humans in the Frozen Forest unearthed this weapon, and many others, from the ruins of an ancient settlement deep within that cold land. Never knowing the names of their extinct benefactors, the colonists used these "tools" to carve a large territory for themselves, though in the end it was for naught. Crushed by a superior number of Hobgoblins, these unfortunate souls have joined the ancients in their anonymity.
+@12679    = ~Быстрейший арбалет +5~
+@12680    = ~Недолго просуществовавший форпост людей в Замёрзшем Лесу откопал это оружие, как и многое другое, среди развалин древнего поселения в глубине этих холодных земель. Колонисты, так и не узнавшие имён своих вымерших благодетелей, использовали эти "инструменты", чтобы расчистить для себя территорию побольше, однако в итоге всё было напрасно. Сокрушённые превышающими силами хобгоблинов, эти бедолаги присоединились к своим предшественникам в забвении.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  +5 (missile)
-Attack Bonus:  +12
-Special:
-  Speed: 5 attacks per round
-Weight: 5 lb.
-Feat Requirement:  Simple Weapon, Crossbow
-Type:  Two-handed~
-@12681    = ~Cloak of Iron~
-@12682    = ~Slightly more literal than the typical cloak of iron, this strange metallic cloak increases the power of the spell Iron Skins.
+Урон: +5 (метательный)
+Атака: +12
+Особенности:
+ 5 дополнительных атак за раунд
+Вес: 5 фунтов
+Необходимая черта: Простое оружие, Арбалеты
+Тип: двуручное~
+@12681    = ~Плащ железа~
+@12682    = ~Чуть более иносказательный, чем настоящий плащ из железа, этот странный металлический плащ увеличивает силу заклинания "Железная кожа".
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-The wearer gains an additional 30/- resistance to slashing, piercing, and bludgeoning damage as long as they are under the effect of the spell Iron Skins.
-Weight:  9 lb.~
-@12683    = ~Necklace of Combat Stealth~
-@12684    = ~While magical amulets typically have defensive enchantments, magical necklaces often have offensive powers. This particular necklace allows the wearer to repeatedly hide in plain sight, provided they are already good at hiding.
+Носитель плаща получает дополнительно 30/- сопротивления рубящему, колющему и дробящему урону пока на него действует заклинание "Железная кожа"
+Вес: 9 фунтов~
+@12683    = ~Ожерелье боевой невидимости~
+@12684    = ~В то время, как магические амулеты обычно имеют защитные чары, магические ожерелья часто обладают атакующими свойствами. Это ожерелье позволяет своему владельцу многократно скрываться от посторонних глаз, если он является мастером маскировки, конечно.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Every round, the wearer makes a DC 40 Hide check. If successful, the wearer becomes invisible for 1 round.
-Weight: 1 lb.~
-@12685    = ~Rogue's Buckler +3~
-@12686    = ~A buckler, also known as a target shield, is a small round shield of wood or metal that fastens to the forearm. Because of it's size it is light and can be worn with very little restriction to movement. This particular buckler is slightly warm to the touch.
+Каждый раунд носитель ожерелья делает проверку навыка "Незаметность" с УС 40. В случае успеха он становится невидимым на 1 раунд
+Вес: 1 фунт~
+@12685    = ~Баклер мошенника +3~
+@12686    = ~Баклер или кулачный щит - небольшой щит из дерева или металла, который прикрепляется к предплечью. Из-за своих небольших размеров он очень лёгкий и почти не ограничивает движений. Этот баклер слегка тёплый на ощупь.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Shield Bonus:  +4
-Special:
-  The bearer's Dexterity bonus is added to the shield bonus of this shield.
-Armor Check Penalty:  -1
-Arcane Spell Failure:  5%
-Weight:  2 lb.~
-@12687    = ~Shield of the Hand +12~
-@12688    = ~Made during the golden age between the elves of the Seldarine's Hand and the dwarves of Dorn's Deep. Etched with elven runes across its face, this shield was made from some of the strongest metals to ever come from Dorn's Deep. Any bearer of this shield is confident in the fact that this shield will deflect any blow brought upon it. The shield is almost weightless and not at all cumbersome to use, comparable to a buckler.
+Класс защиты: +4 (щит)
+Штраф к проверкам за броню: -1
+Шанс провала заклинания: 5%
+Особенности:
+ Класс защиты этого щита увеличивается на модификатор ловкости его владельца
+Вес: 2 фунта~
+@12687    = ~Щит Руки +12~
+@12688    = ~Этот щит был создан в золотой век сотрудничества между эльфами Руки Селдарин и дварфами пещер Дорна. Он изготовлен из самых прочных металлов пещер Дорна, а лицевую сторону украшают эльфийские руны. Обладатель этого щита может не сомневаться: он отразит любой удар. Этот щит почти невесом и совсем не ощущается громоздким при использовании. По этим характеристикам его можно сравнить с баклером.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Shield Bonus:  +16
-Armor Bonus:  +1 vs. missile weapons
-Armor Check Penalty:  -1
-Arcane Spell Failure:  5%
-Weight:  1 lb.~
-@12689    = ~Boots of Striding~
-@12690    = ~These boots have been magically enchanted to increase the wearer's constitution.
+Класс защиты: +16 (щит)
+Класс защиты: +1 (доспех) дополнительно
+Штраф к проверкам за броню: -1
+Шанс провала заклинания: 5%
+Вес: 1 фунт~
+@12689    = ~Сапоги верховой езды~
+@12690    = ~Эти сапоги были магически зачарованы, чтобы увеличить телосложение владельца.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Constitution: +4
-Weight: 1 lb.~
-@12691    = ~Tortoise Shell Amulet~
-@12692    = ~Amulets are usually magical devices that are commonly worn around the neck, suspended from a chain. The type of chain that comes with an amulet generally increases the item's aesthetic value, not its magical properties. Only one amulet can be dangled from the neck.
+Телосложение: +4
+Вес: 1 фунт~
+@12691    = ~Амулет черепашьего панциря~
+@12692    = ~Амулеты - это, как правило, магические предметы, которые обычно носятся на цепочке, надетой на шею. Цепочка исполняет в основном эстетическую роль и к магии отношения не имеет. На шею можно повесить только один амулет.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Spell Power: At will, can surround the wearer with a Tortoise Shell, which incapacitates the wearer for the next round but blocks the first damaging effect that would hit the wearer during that time.
-Weight: 1 lb.
-Minimum Wisdom of 16 Required~
+Заклинание: по желанию владелец может окружить себя черепашьим панцирем, который обездвиживает его в течении следующего раунда, но блокирует первый повреждающий эффект, который должен был бы нанести урон владельцу в этом раунде.
+Вес: 1 фунт
+Требования: Мудрость 16~
 //@12693    = ~Bracers of Icelandic Pearl~ //HoF version
-@12694    = ~It is said that these magnificent bracers were constructed in the Spine of the World Mountains, and not so long ago. On the coastline of the Sea of Moving Ice, there dwelled Prashnak, an abjurer -- and a stubborn one at that. Apparently Prashnak was having a great deal of difficulty fending off a relentless scourge of trolls, who no doubt were interested in nothing more than his dug out, well stationed bower. Prashnak used storms of acid to keep the trolls at bay. However the young mage was tiring of the constant attacks, and the trolls were becoming bolder.
+@12694    = ~Говорят, эти замечательные наручи были созданы в горах Хребта Мира, притом совсем недавно. На берегу моря Движущихся Льдов жил Прашнак, маг-отрицатель и довольно упрямый. Серьёзной проблемой для него были постоянные нашествия троллей, которых, без сомнения, привлекало исключительно удобное убежище волшебника. Прашнак отгонял троллей кислотным дождём. Однако нападения начали его утомлять, а тролли всё больше наглели.
 
-After several months of studying the various effects of wilting magic, elemental summoning, and magical methods of frosting, Prashnak was finally ready to try his experiment. After summoning a water elemental, Prashnak evaporated choice bodily components and then froze the hapless creature. This lead to the creation of truly horrific sculptures of ice. The trolls, as simple as they are, took extreme offense to these totems and reportedly fled the area. The experiment a gleaming success, the exultant Prashnak continues his woeful studies to this day. What manner of thief took hold of the bracers is unknown, but they have been missing for several years.
+Потратив несколько месяцев на изучение действия иссушающей магии, призывания элементалей и волшебных методов заморозки, Прашнак осуществил свой эксперимент. Призвав водного элементаля, он испарил из тела несчастного существа часть жидкости и заморозил его. Таким образом он возвёл в окрестностях своего жилища множество ужасных ледяных скульптур. Глуповатые тролли ужасно испугались этих тотемов и, по слухам, вообще сбежали из тех краёв. Увидев, что эксперимент увенчался успехом, Прашнак с новой силой взялся за свои жестокие изыскания и ведёт их по сей день. Какому вору удалось стащить эти наручи, неизвестно, но пропали они всего несколько лет назад.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Armor Class:  +10 (armor)
-Special:  
-  Cold and magic damage dealt by the wearer from most sources is increased by 40%
-Weight:  3 lb.~
-@12695    = ~Chainmail of the Shield +2~
-@12696    = ~Chain mail is made of interlocking metal rings. It is always worn over a layer of padded fabric or soft leather to prevent chafing and lessen the impact of blows. A faint blue glow can be seen emanating from the armor.
+Класс защиты: +10 (доспех)
+Особенности:
+ Урон холодом и магией, наносимый владельцем этих наручей из большинства источников, увеличивается на 40%
+Вес: 3 фунта~
+@12695    = ~Кольчуга щита +2~
+@12696    = ~Кольчугу изготавливают из сплетённых друг с другом металлических колец. Её всегда носят поверх подкладки из ткани или мягкой кожи, чтобы предотвратить натирание и смягчить наносимые удары. Этот доспех излучает слабый синий свет.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Medium Armor
-Armor Bonus: +7
-Max Dex Bonus:  +2
-Armor Check Penalty:  -5
-Arcane Spell Failure:  30%
-Special:
-  Shield Bonus: +5
-Weight: 30 lb.~
-@12697    = ~Chainmail of Solid Endurance +5~
-@12698    = ~Chain mail is made of interlocking metal rings. It is always worn over a layer of padded fabric or soft leather to prevent chafing and lessen the impact of blows. A faint blue glow can be seen emanating from the armor.
+Средняя броня
+Класс защиты: +7 (доспех)
+Максимальный бонус ловкости: +2
+Штраф к проверкам за броню: -5
+Шанс провала заклинания: 30%
+Особенности:
+ Класс защиты: +5 (щит)
+Вес: 30 фунтов~
+@12697    = ~Кольчуга повышенной выносливости +5~
+@12698    = ~Кольчугу изготавливают из сплетённых друг с другом металлических колец. Её всегда носят поверх подкладки из ткани или мягкой кожи, чтобы предотвратить натирание и смягчить наносимые удары. Этот доспех излучает слабый синий свет.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Medium Armor
-Armor Bonus: +10
-Max Dex Bonus:  +2
-Armor Check Penalty:  -5
-Arcane Spell Failure:  30%
-Special:
-  Wearer gains additional physical damage resistance equal to their Constitution bonus
-Weight: 25 lb.~
-@12699    = ~Strange Sphere~
-@12700    = ~This sphere, colored half-red and half-blue, radiates powerful magic.~
-@12701    = ~Greater Scarlet-Blue Ioun Stone~
-@12702    = ~This is an ioun stone - its powers are activated by placing the stone above one's head, causing it to float there until removed. This scarlet-blue sphere makes the wearer significantly more intelligent.
+Средняя броня
+Класс защиты: +10 (доспех)
+Максимальный бонус ловкости: +2
+Штраф к проверкам за броню: -5
+Шанс провала заклинания: 30%
+Особенности:
+ Владелец кольчуги получает дополнительное сопротивление физическому урону, равное его модификатору конституции
+ Класс защиты: +5 (щит)
+Вес: 25 фунтов~
+@12699    = ~Странная сфера~
+@12700    = ~Эта сфера, окрашенная поровну в красный и синий цвета, излучает мощную магию.~
+@12701    = ~Большой красно-голубой камень иоун~
+@12702    = ~Сила этого камня иоун активируется, если поместить его над головой - он будет там парить, пока его не уберут. Эта красно-голубая сфера делает своего владельца значительно более сообразительным.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Intelligence: +8
-Weight: 1 lb.~
-@12703    = ~Large Shield of Perfect Blocking +5~
-@12704    = ~A large shield is carried in the same manner as a small shield. Its weight prevents the character from using his shield hand for anything other than carrying the large shield. Large shields are usually made of metal, range from 3'-4' in diameter, and can be of any shape, from round to square to a spread dragon's wings. A typical medieval shield resembles a triangle with one point facing downward. This shield has runes scribed onto it that glow eerily in dim light.
+Интеллект: +8
+Вес: 1 фунт~
+@12703    = ~Большой щит превосходного блокирования +5~
+@12704    = ~Большой щит носится так же, как и маленький. Однако он тяжелее, и его вес не позволяет обладателю использовать руку, в которой находится щит, для чего-либо ещё. Большие щиты обычно делаются из металла, имеют три-четыре фута в диаметре и могут быть любой формы: от круглой или квадратной до силуэта расправленных крыльев дракона. Типичный средневековый щит представляет собой треугольник, направленный вершиной вниз. На этот щит нанесены руны, слабо сияющие потусторонним светом.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Shield Bonus: +7
-Special:
-  Every second, there is a 20% chance that any damage dealt to the character during that second will be prevented
-Armor Check Penalty:  -2
-Arcane Spell Failure:  15%
-Weight: 6 lb.~
+Класс защиты: +7 (щит)
+Штраф к проверкам за броню: -2
+Шанс провала заклинания: 15%
+Особенности:
+ Каждую секунду есть 20% шанс, что любой урон, нанесенный персонажу в течение этой секунды, будет предотвращен
+Вес: 6 фунтов~
 @12705    = ~Gauntlets of Assassination~
 @12706    = ~Gauntlets are armored gloves. They can be made of leather, metal plates, or chain mail. Every suit of armor is assumed to include gauntlets of an appropriate type. Magical gauntlets tend to be finer, lighter, and more easily worn than normal varieties.
 
