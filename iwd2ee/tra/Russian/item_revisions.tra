@@ -13184,82 +13184,84 @@
 Особенности:
  Каждую секунду есть 20% шанс, что любой урон, нанесенный персонажу в течение этой секунды, будет предотвращен
 Вес: 6 фунтов~
-@12705    = ~Gauntlets of Assassination~
-@12706    = ~Gauntlets are armored gloves. They can be made of leather, metal plates, or chain mail. Every suit of armor is assumed to include gauntlets of an appropriate type. Magical gauntlets tend to be finer, lighter, and more easily worn than normal varieties.
+@12705    = ~Рукавицы убийства~
+@12706    = ~Рукавицы - это усиленные перчатки. Их делают из кожи, металлических пластин или колец. Каждый доспех должен включать в себя рукавицы соответствующего типа. В отличие от обычных, магические рукавицы, как правило, тоньше, легче и меньше стесняют движения.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-If the wearer attacks a creature from stealth or invisibility, the wearer gains +5 to attack and damage for the next round (including on the first hit)
-Weight:  1 lb.~
-@12707    = ~Greater Gauntlets of Assassination~
-@12708    = ~Gauntlets are armored gloves. They can be made of leather, metal plates, or chain mail. Every suit of armor is assumed to include gauntlets of an appropriate type. Magical gauntlets tend to be finer, lighter, and more easily worn than normal varieties.
+Если владелец рукавиц скрыт или невидим и он атакует другое существо, то он получает +5 к атаке и урону на следующий раунд (в том числе и для первого удара из скрытности/невидимости).
+Вес: 1 фунт~
+@12707    = ~Большие рукавицы убийства~
+@12708    = ~Рукавицы - это усиленные перчатки. Их делают из кожи, металлических пластин или колец. Каждый доспех должен включать в себя рукавицы соответствующего типа. В отличие от обычных, магические рукавицы, как правило, тоньше, легче и меньше стесняют движения.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-If the wearer attacks a creature from stealth or invisibility, the wearer gains +10 to attack and damage for the next round (including on the first hit)
-Weight:  1 lb.~
-@12709    = ~Boots of Stealthy Speed~
-@12710    = ~These boots make the wearer move much faster, but only while hiding or invisible. This magical increase in speed will not cause the wearer's footsteps to be louder.
+Если владелец рукавиц скрыт или невидим и он атакует другое существо, то он получает +10 к атаке и урону на следующий раунд (в том числе и для первого удара из скрытности/невидимости)
+Вес: 1 фунт~
+@12709    = ~Сапоги скрытой скорости~
+@12710    = ~Эти ботинки помогают своему владельцу двигаться гораздо быстрее, но только когда он скрыт или невидим. Это магическое увеличение скорости не делает шаги владельца сапог громче.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Special: Triples movement rate while invisible or in stealth
-Weight: 1 lb.~
+Если владелец рукавиц скрыт или невидим, его скорость перемещения утраивается
+Вес: 1 фунт~
 
 //@12711    = ~Yeti Skin Gloves~
-@12712    = ~These fur lined gloves have been stitched together using the skins of a Yeti.~
-@12713    = ~Gloves of Rage~
-@12714    = ~Enchanted by one of the greatest barbarian shamans, these gloves increase the effectiveness of the wearer's berserk sprees.
+@12712    = ~Эти плотные и очень тёплые рукавицы были сшиты из шкуры йети.~
+@12713    = ~Перчатки ярости~
+@12714    = ~Зачарованные одним из величайших варварских шаманов, эти перчатки повышают эффективность состояния берсерка у их владельца.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Special: While under the effect of Barbarian Rage, Animal Rage, or Blood Rage, the wearer gains an additional attack per round.
-Weight:  1 lb.~
-@12715    = ~Bracers of Improved Expertise~
-@12716    = ~Normally bracers are used to add support and protection to forearm area of the body. However, these bracers have been magically altered so that the wearer receives armor like protection without the constraints of wearing armor. Bracers such as these are highly prized by wizards and sorcerers who must have complete freedom of movement to perform their magical arts.
+Особенности:
+ Находясь под действием ярости варвара, ярости зверя или кровавой ярости, владелец перчаток получает дополнительную атаку в раунд
+Вес: 1 фунт~
+@12715    = ~Наручи продвинутого блокирования~
+@12716    = ~Наручи - это часть доспехов, предназначенная для зашиты предплечий. Эти же наручи были зачарованы таким образом, чтобы защищать своего владельца, при этом не стесняя его, как обычная броня. Такие доспехи особенно ценятся колдунами и волшебниками, которым нужна свобода движений для чтения своих заклинаний.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Special: The wearer receives double the bonuses and penalties from Expertise
-Weight: 2 lb.~
-@12717    = ~Strange Stone~
-@12718    = ~This stone radiates powerful magic.~
-@12719    = ~Greater Dusty Rose Ioun Stone~
-@12720    = ~This is an ioun stone - its powers are activated by placing the stone above one's head, causing it to float there until removed. This dusty rose ellipsoid makes the wearer harder to hit in combat.
+Особенности:
+ Владелец наручей получает двойные бонусы и штрафы от черты "Блокирование"
+Вес: 2 фунта~
+@12717    = ~Странный камень~
+@12718    = ~Этот камень излучает мощную магию.~
+@12719    = ~Большой дымчато-розовый камень иоун~
+@12720    = ~Сила этого камня иоун активируется, если поместить его над головой - он будет там парить, пока его не уберут. Этот дымчато-розовый камень делает своего владельца менее уязвимым в бою.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Generic Armor Bonus: +10
-Weight: 1 lb.~
-@12721    = ~Staff of Goblin Summoning +1~
-@12722    = ~The simplest and humblest of staff weapons, the quarterstaff is a length of wood ranging six to nine feet in length. Masterwork quarterstaffs are made of stout oak and are shod with metal at both ends. This one is particularly special as it has been imbued with magical properties.
+Класс защиты: +10 (общий)
+Вес: 1 фунт~
+@12721    = ~Посох вызывания гоблинов +1~
+@12722    = ~Простейшее и скромнейшее из шестообразного оружия, боевой посох - это деревянная палка длиной от шести до девяти футов. Боевые посохи высокого качества делаются из крепкого дуба и оковываются металлом с обоих концов. Данный экземпляр несколько отличается от других, поскольку наделён некоторыми магическими свойствами.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d6 + 1
-Attack Bonus:  +1 
-Enchantment:  +1
-Damage Type:  Bludgeoning
-Special:
-  Goblin Summoning: Each hit with this staff summons a goblin under the wielder's control for 10 rounds
-Weight: 4 lb.
-Feat Requirement:  Simple Weapon, Quarterstaff
-Type:  Two-handed
-Minimum Intelligence of 13 Required~
-@12723    = ~Vampiric Hunting Spear +3~
-@12724    = ~One of man's earliest weapons, dating back to the most primitive of times, the first spears were simply wooden poles or sticks sharpened at one end. When man mastered metals, spearheads were made from iron and steel. Having reached this end, weaponers began experimenting with different types of spear heads, thus leading to the development of certain polearm types. This spear is slightly different though, as it has been imbued with certain magical properties.
+Урон: 1d6+1
+Атака: +1
+Зачарование: +1
+Тип урона: дробящий
+Особенности:
+ Вызов гоблина: Каждое попадание этим посохом вызывает гоблина, который остаётся под контролем владельца посоха на 10 раундов
+Вес: 4 фунта
+Необходимая черта: Простое оружие, Посохи
+Тип: двуручное
+Требования: Интеллект 13~
+@12723    = ~Вампирическое охотничье копье +3~
+@12724    = ~Копья относятся к самым древним видам оружия, известным ещё в первобытные времена - тогда копьё представляло собой деревянный посох или палку с заострённым концом. С развитием обработки металла наконечники стали изготавливать из железа и стали. Затем мастера-оружейники начали придумывать новые варианты наконечников, лучше приспособленные для конкретных задач, - так появились различные виды древкового оружия. У этого копья есть, благодаря наложенным чарам, магические свойства.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d8 + 3
-Attack Bonus:  +3
-Enchantment:  +3
-Damage Type:  Piercing
-Special:
-  Vampiric Hunting: The wielder is healed 4d8 Hit Points whenever they kill a creature with this spear (this weapon must have dealt the killing blow to the creature)
-Weight: 5 lb.
-Feat Requirement:  Martial Weapon, Polearm
-Type:  Two-handed~
+Урон: 1d8+3
+Атака: +3
+Зачарование: +3
+Тип урона: колющий
+Особенности:
+ Вампирическая охота: Владелец исцеляется на 4d8 пунктов здоровья, когда убивает какое-либо существо этим копьем (это оружие должно нанести смертельный удар по существу).
+Вес: 5 фунтов
+Необходимая черта: Военное оружие, Древковое
+Тип: двуручное~
 @12725    = ~Studded Leather of Safe Stealth +5~
 @12726    = ~Studded leather armor has little in common with normal leather armor. While leather armor is a hardened shell, studded leather armor is soft and supple with hundreds of metal rivets affixed. The rivets are so close together that they form a flexible coating of hard metal that turns aside slashing and cutting attacks. The soft leather backing is little more than a means of securing the rivets in place. Magical enchantments enhance the protective abilities of this leather armor.
 
