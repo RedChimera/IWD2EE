@@ -13262,222 +13262,224 @@
 Вес: 5 фунтов
 Необходимая черта: Военное оружие, Древковое
 Тип: двуручное~
-@12725    = ~Studded Leather of Safe Stealth +5~
-@12726    = ~Studded leather armor has little in common with normal leather armor. While leather armor is a hardened shell, studded leather armor is soft and supple with hundreds of metal rivets affixed. The rivets are so close together that they form a flexible coating of hard metal that turns aside slashing and cutting attacks. The soft leather backing is little more than a means of securing the rivets in place. Magical enchantments enhance the protective abilities of this leather armor.
+@12725    = ~Клёпаная кожа надёжной незаметности +5~
+@12726    = ~Клёпаный кожаный доспех имеет мало общего с обычным кожаным доспехом. В то время как последний изготавливают из жёсткой кожи, материал, из которого делают клёпаный кожаный доспех, мягок, пластичен и покрыт сотнями металлических заклёпок. Они расположены так близко друг к другу, что составляют единое гибкое металлическое покрытие, способное отражать рубящие и режущие удары. Мягкая кожаная подкладка лишь удерживает заклёпки на месте. Чары, наложенные на этот доспех, увеличивают его прочность и защитные качества.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Light Armor
-Armor Bonus: +8
-Max Dex Bonus:  +5
-Armor Check Penalty:  -1
-Arcane Spell Failure:  15%
-Special:
-  While fully invisible or in stealth, the wearer gains 30/- resistance to all damage.
-Weight: 4 lb.~
-@12727    = ~Dire-Hammer of Knockback +5~
-@12728    = ~Like others of its type, this warhammer is made entirely of steel, with a bone-crushing hammer mounted upon an 18" shaft. It has also been bestowed with a small number of magical properties, however, thus making it more effective in combat.
+Лёгкая броня
+Класс защиты: +8 (доспех)
+Максимальный бонус ловкости: +5
+Штраф к проверкам за броню: -1
+Шанс провала заклинания: 15%
+Особенности:
+ Если владелец брони скрыт или невидим, он получает 30/- сопротивления любому урону
+Вес: 4 фунта~
+@12727    = ~Зловещий молот отбрасывания +5~
+@12728    = ~Боевые молоты обыкновенно изготавливают целиком из стали; этот молот - не исключение. На 18-дюймовой рукояти укреплён боёк, которым можно дробить кости. Волшебные свойства этого молота весьма полезны в бою.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d10 + 5
-Attack Bonus:  +5
-Enchantment:  +5
-Damage Type:  Bludgeoning
-Special:
-  Knockback: Target is knocked back with each hit
-Weight: 11 lb.
-Feat Requirement:  Martial Weapon, Hammer
-Type:  One-handed~
-@12729    = ~Ring of Greater Entanglement~
-@12730    = ~A ring is a small band of precious metal that is used as jewelry. Some rare rings have had enchantments placed upon them that confer various magical abilities. These rings are highly sought after, especially by those of the adventuring profession. For no apparent reason, this ring feels warm to the touch.
+Урон: 1d10+5
+Атака: +5
+Зачарование: +5
+Тип урона: дробящий
+Особенности:
+ Отбрасывание: цель отбрасывается назад при каждом ударе
+Вес: 11 фунтов
+Необходимая черта: Военное оружие, Молоты
+Тип: одноручное~
+@12729    = ~Кольцо большого запутывания~
+@12730    = ~Кольцо - это небольшая полоска драгоценного металла, используемая как украшение. Изредка встречаются кольца, которые зачарованы и обладают различными магическими свойствами. Такие кольца очень высоко ценятся, особенно среди искателей приключений. Это кольцо тёплое на ощупь.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-The save DC of the spell Entangle is increased by 6 when cast by the wearer
-Weight: 0 lb.~
-@12731    = ~Gloves of Frost~
-@12732    = ~Gauntlets are armored gloves. They can be made of leather, metal plates, or chain mail. Every suit of armor is assumed to include gauntlets of an appropriate type. Magical gauntlets tend to be finer, lighter, and more easily worn than normal varieties.
+Когда владелец этого кольца читает заклинание "Запутывание", УС этого заклинания увеличивается на 6
+Вес: 0 фунтов~
+@12731    = ~Рукавицы мороза~
+@12732    = ~Рукавицы - это усиленные перчатки. Их делают из кожи, металлических пластин или колец. Каждый доспех должен включать в себя рукавицы соответствующего типа. В отличие от обычных, магические рукавицы, как правило, тоньше, легче и меньше стесняют движения.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-The spells Frost Fingers, Chill Touch, and Lich Touch deal 50% more damage and have +4 DC
-The wearer's unarmed attacks deal +1d4 cold damage
-Weight:  1 lb.~
-@12733    = ~Gauntlets of Torm~
-@12734    = ~Gauntlets are armored gloves. They can be made of leather, metal plates, or chain mail. Every suit of armor is assumed to include gauntlets of an appropriate type. Magical gauntlets tend to be finer, lighter, and more easily worn than normal varieties.
+Заклинания "Ледяные пальцы", "Леденящее прикосновение" и "Прикосновение лича" наносят на 50% больше урона и получают +4 к УС
+Безоружные атаки владельца этих рукавиц наносят дополнительно 1d4 урона холодом
+Вес: 1 фунт~
+@12733    = ~Рукавицы Торма~
+@12734    = ~Рукавицы - это усиленные перчатки. Их делают из кожи, металлических пластин или колец. Каждый доспех должен включать в себя рукавицы соответствующего типа. В отличие от обычных, магические рукавицы, как правило, тоньше, легче и меньше стесняют движения.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-The extra damage from Smite Evil is increased by 60%
-Weight:  1 lb.~
-@12735    = ~Bracers of Stunning Attacks~
-@12736    = ~Normally bracers are used to add support and protection to forearm area of the body. However, these magical bracers are meant for offense, making stunning attacks more effective.
+Дополнительный урон от способности "Сокрушить зло" увеличивается на 60%
+Вес: 1 фунт~
+@12735    = ~Наручи ошеломляющих атак~
+@12736    = ~Наручи - это часть доспехов, предназначенная для зашиты предплечий. Однако эти магические наручи предназначены для нападения, делая ошеломляющие атаки более эффективными.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Special: The wearer's Stunning Attacks gain +2 save DC
-Weight: 2 lb.~
-@12737    = ~Ammo Belt~
-@12738    = ~This shoulder belt is ideally suited for holding sling bullets, darts, arrows, bolts, throwing daggers, throwing axes, or throwing hammers.
+Особенности:
+ Ошеломляющие атаки владельца наручей получают +2 к УС
+Вес: 2 фунта~
+@12737    = ~Перевязь для амуниции~
+@12738    = ~Этот наплечный ремень идеален для хранения снарядов, дротиков, стрел, арбалетных болтов, метательных кинжалов, топоров и молотов.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Weight: 2 lb.~
-@12739    = ~Robe of Summoning~
-@12740    = ~Since the age of Netheril, wizards have learned to bestow a wide variety of magical properties upon the everyday objects that surround them. A favorite item of such enchantment is the common robe. It is lightweight, affordable, and holds its enchantment well, thereby making it ideal equipment for a wizard.
+Вес: 2~
+@12739    = ~Мантия призывания~
+@12740    = ~Ещё во времена Нетерила маги научились придавать магические свойства вещам, которые их окружают. Самым популярным предметом для наложения таких зачарований была обычная мантия. Она лёгкая, дешёвая и хорошо сохраняет зачарование, что делает её идеальным снаряжением для волшебника.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-The wearer's summoning spells summon twice as many creatures
-Weight:  3 lb.~
-@12741    = ~Greater Ring of the Elements~
-@12742    = ~A ring is a small band of precious metal that is used as jewelry. Some rare rings have had enchantments placed upon them that confer various magical abilities. These rings are highly sought after, especially by those of the adventuring profession. For no apparent reason, this ring feels warm to the touch.
+Заклинания призывания владельца робы вызывают в два раза больше существ
+Вес: 3 фунта~
+@12741    = ~Большое кольцо стихий~
+@12742    = ~Кольцо - это небольшая полоска драгоценного металла, используемая как украшение. Изредка встречаются кольца, которые зачарованы и обладают различными магическими свойствами. Такие кольца очень высоко ценятся, особенно среди искателей приключений. Это кольцо тёплое на ощупь.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
+Урон от атак холодом, огнём, электричеством и кислотой, наносимых владельцем этого кольца увеличивается на 40%
+Вес: 0 фунтов~
+@12743    = ~Посох исцеления~
+@12744    = ~Простейшее и скромнейшее из шестообразного оружия, боевой посох - это деревянная палка длиной от шести до девяти футов. Боевые посохи высокого качества делаются из крепкого дуба и оковываются металлом с обоих концов. Данный экземпляр несколько отличается от других, поскольку наделён некоторыми магическими свойствами.
 
-Fire, cold, electric, and acid damage dealt by the wearer is increased by 40%
-Weight: 0 lb.~
-@12743    = ~Staff of Curing~
-@12744    = ~The simplest and humblest of staff weapons, the quarterstaff is a length of wood ranging six to nine feet in length. Masterwork quarterstaffs are made of stout oak and are shod with metal at both ends. This one is particularly special as it has been imbued with magical properties.
+ПАРАМЕТРЫ:
 
-STATISTICS:
+Урон: 1d6+1
+Атака: +1
+Зачарование: +1
+Тип урона: дробящий
+Особенности:
+ Исцеляющие заклинания владельца посоха восстанавливают на 50% больше пунктов здоровья
+Вес: 4 фунта
+Необходимая черта: Простое оружие, Посохи
+Тип: двуручное~
+@12745    = ~Посох великого исцеления~
+@12746    = ~Простейшее и скромнейшее из шестообразного оружия, боевой посох - это деревянная палка длиной от шести до девяти футов. Боевые посохи высокого качества делаются из крепкого дуба и оковываются металлом с обоих концов. Данный экземпляр несколько отличается от других, поскольку наделён некоторыми магическими свойствами.
 
-Damage:  1d6 + 1
-Attack Bonus:  +1 
-Enchantment:  +1
-Damage Type:  Bludgeoning
-Special:
-  The wielder's healing spells and abilities heal 50% more hit points
-Weight: 4 lb.
-Feat Requirement:  Simple Weapon, Quarterstaff
-Type:  Two-handed~
-@12745    = ~Staff of Greater Healing~
-@12746    = ~The simplest and humblest of staff weapons, the quarterstaff is a length of wood ranging six to nine feet in length. Masterwork quarterstaffs are made of stout oak and are shod with metal at both ends. This one is particularly special as it has been imbued with magical properties.
+ПАРАМЕТРЫ:
 
-STATISTICS:
+Урон: 1d6+3
+Атака: +3
+Зачарование: +3
+Тип урона: дробящий
+Особенности:
+ Исцеляющие заклинания владельца посоха восстанавливают на 100% больше пунктов здоровья
+Вес: 4 фунта
+Необходимая черта: Простое оружие, Посохи
+Тип: двуручное~
+@12747    = ~Эликсир непроницаемости~
+@12748    = ~Зелья обычно хранятся в керамических, хрустальных, стеклянных, металлических бутылках или пузырьках. Как правило, каждый сосуд содержит достаточно жидкости для одной дозы, необходимой для достижения эффекта.
 
-Damage:  1d6 + 3
-Attack Bonus:  +3
-Enchantment:  +3
-Damage Type:  Bludgeoning
-Special:
-  The wielder's healing spells and abilities heal 100% more hit points
-Weight: 4 lb.
-Feat Requirement:  Simple Weapon, Quarterstaff
-Type:  Two-handed~
-@12747    = ~Impervious Elixir~
-@12748    = ~Potions are typically found in ceramic, crystal, glass, or metal flasks or vials. Flasks or other containers generally contain enough fluid to provide one person with one complete dose to achieve the effects of the potion.
+ПАРАМЕТРЫ:
 
-STATISTICS:
+Выпивший этот эликсир навсегда получает иммунитет к критическим ударам
+Вес: 1 фунт~
+@12749    = ~Мантия Намджи~
+@12750    = ~Волшебник из Теска по имени Намджи изготовил для себя такую могущественную мантию. Она не наделяет владельца никакими сопротивлениями, но тем не менее крайне полезна для заклинателей, часто попадающих в опасные ситуации. Сам Намджи был боевым магом, который безрассудно бросался в самую гущу сражения и в восторге крушил окружающих его врагов заклинаниями. Самым опасным считались "Горящие руки Намджи", его вариант широко известных "Горящих рук".
 
-The drinker permanently becomes immune to critical hits
-Weight:  1 lb.~
-@12749    = ~Namji's Robe~
-@12750    = ~A wizard from Thesk named Namji was the creator of this powerful robe. While it does not impart a host of magical resistances to the wearer, it is extremely useful for spellcasters who find themselves in dangerous situations often. Namji himself was a reckless battle wizard who delighted in hurling spells from the midst of the fray. He was feared for his use of Namji's Burning Hands, an adaptation of the common Burning Hands spell.
+ПАРАМЕТРЫ:
 
-STATISTICS:
+Особенности:
+ Регенерация: владелец восстанавливает 2 пункта здоровья в раунд
+ Регенеративное заклинание: владелец восстанавливает 3 пункта здоровья каждый раз, когда произносит заклинание
+Вес: 3 фунта~
+@12751    = ~Мантия регенерации Намджи~
+@12752    = ~Волшебник из Теска по имени Намджи изготовил для себя такую могущественную мантию. Она не наделяет владельца никакими сопротивлениями, но тем не менее крайне полезна для заклинателей, часто попадающих в опасные ситуации. Сам Намджи был боевым магом, который безрассудно бросался в самую гущу сражения и в восторге крушил окружающих его врагов заклинаниями. Самым опасным считались "Горящие руки Намджи", его вариант широко известных "Горящих рук".
 
-Regeneration: Regain 2 hit points per round
-Regenerative Casting: The wearer regains 3 hit points whenever they cast a spell
-Weight:  3 lb.~
-@12751    = ~Namji's Regenerative Robe~
-@12752    = ~A wizard from Thesk named Namji was the creator of this powerful robe. While it does not impart a host of magical resistances to the wearer, it is extremely useful for spellcasters who find themselves in dangerous situations often. Namji himself was a reckless battle wizard who delighted in hurling spells from the midst of the fray. He was feared for his use of Namji's Burning Hands, an adaptation of the common Burning Hands spell.
+ПАРАМЕТРЫ:
 
-STATISTICS:
+Особенности:
+ Регенерация: владелец восстанавливает 3 пункта здоровья в раунд
+ Регенеративное заклинание: владелец восстанавливает 6 пунктов здоровья каждый раз, когда произносит заклинание
+Вес: 3 фунта~
+@12753    = ~Эпические пояс продления~
+@12754    = ~Пояса обычно представляют собой широкие полосы из кожи или другого материала, которые можно застегнуть на талии. Большая часть поясов используется в чисто практических целях - чтобы поддерживать штаны, но, как и другие элементы одежды, они могут быть декоративными.
 
-Regeneration: Regain 3 hit points per round
-Regenerative Casting: The wearer regains 6 hit points whenever they cast a spell
-Weight:  3 lb.~
-@12753    = ~Epic Belt of Extension~
-@12754    = ~Belts are usually wide bands of leather or some other material  that can be fastened around the waist. Most belts are used for the practical purpose of holding up ones pants, but like most articles of clothing they can also be used for ornamental purposes.
+ПАРАМЕТРЫ:
 
-STATISTICS:
+Заклинания владельца пояса длятся в два раза дольше
+Вес: 3 фунта~
+@12755    = ~Малая роба максимизации~
+@12756    = ~Ещё во времена Нетерила маги научились придавать магические свойства вещам, которые их окружают. Самым популярным предметом для наложения таких зачарований была обычная мантия. Она лёгкая, дешёвая и хорошо сохраняет зачарование, что делает её идеальным снаряжением для волшебника.
 
-The wearer's spells last twice as long
-Weight: 3 lb.~
-@12755    = ~Lesser Robe of Maximizing~
-@12756    = ~Since the age of Netheril, wizards have learned to bestow a wide variety of magical properties upon the everyday objects that surround them. A favorite item of such enchantment is the common robe. It is lightweight, affordable, and holds its enchantment well, thereby making it ideal equipment for a wizard.
+ПАРАМЕТРЫ:
 
-STATISTICS:
+Максимизация: заклинания первого уровня, прочитанные владельцем робы, наносят максимальный урон
+Вес: 3 фунта~
+@12757    = ~Кольцо Овна~
+@12758    = ~Это кольцо, также известное как Сокрушитель башен, повинуясь единому слову высвобождает фантастические и смертоносные силы. Когда оно приводится в действие, из него вырывается заряд силы в форме, смутно напоминающей очертания барана. Эта сила может сметать противников со стен, разрушать ворота замков или крушить врагов, но урон оно наносит в любом случае.
 
-Maximizing: The wearer's 1st-level spells deal maximum damage.
-Weight: 3 lb.~
-@12757    = ~Ring of the Ram~
-@12758    = ~Also known as the Breaker of Castles, with one word, this ring can unleash fantastic and deadly powers. When it is triggered, a barely discernible, ram-like shape billows forth from the ring. This force can potentially knock opponents off of walls, destroy castle gates, or crush enemies, but it is damaging as well in its own right.
+ПАРАМЕТРЫ:
 
-STATISTICS:
+Заклинание: один раз в день владелец кольца может нанести 15d6 дробящего урона от удара по одному существу, отталкивая его от себя
+Вес: 0 фунтов~
+@12759    = ~Роба максимизации~
+@12760    = ~Ещё во времена Нетерила маги научились придавать магические свойства вещам, которые их окружают. Самым популярным предметом для наложения таких зачарований была обычная мантия. Она лёгкая, дешёвая и хорошо сохраняет зачарование, что делает её идеальным снаряжением для волшебника.
 
-Spell Power: Once per day, the wearer may deal 15d6 bludgeoning damage to one creature, pushing them away from the wearer.
-Weight: 0 lb.~
-@12759    = ~Robe of Maximizing~
-@12760    = ~Since the age of Netheril, wizards have learned to bestow a wide variety of magical properties upon the everyday objects that surround them. A favorite item of such enchantment is the common robe. It is lightweight, affordable, and holds its enchantment well, thereby making it ideal equipment for a wizard.
+ПАРАМЕТРЫ:
 
-STATISTICS:
+Максимизация: заклинания третьего уровня и ниже, прочитанные владельцем робы, наносят максимальный урон
+Вес: 3 фунта~
+@12761    = ~Великая роба максимизации~
+@12762    = ~Ещё во времена Нетерила маги научились придавать магические свойства вещам, которые их окружают. Самым популярным предметом для наложения таких зачарований была обычная мантия. Она лёгкая, дешёвая и хорошо сохраняет зачарование, что делает её идеальным снаряжением для волшебника.
 
-Maximizing: The wearer's spells of 3rd-level or lower deal maximum damage.
-Weight: 3 lb.~
-@12761    = ~Greater Robe of Maximizing~
-@12762    = ~Since the age of Netheril, wizards have learned to bestow a wide variety of magical properties upon the everyday objects that surround them. A favorite item of such enchantment is the common robe. It is lightweight, affordable, and holds its enchantment well, thereby making it ideal equipment for a wizard.
+ПАРАМЕТРЫ:
 
-STATISTICS:
+Максимизация: заклинания пятого уровня и ниже, прочитанные владельцем робы, наносят максимальный урон
+Вес: 3 фунта~
+@12763    = ~Осадный щит +8~
+@12764    = ~Этот массивный щит по высоте может быть ростом со своего владельца. По сути, это переносная стена, за которой можно укрыться. Если из-за него не высовываться, вы будете полностью защищены от оружия врага. Однако осадный щит не спасает от заклинаний, так как может быть использован в качестве цели для заклинания. На этот щит нанесены руны, слабо сияющие потусторонним светом.
 
-Maximizing: The wearer's spells of 5th-level or lower deal maximum damage.
-Weight: 3 lb.~
-@12763    = ~Tower Shield +8~
-@12764    = ~This massive shield is nearly as tall as the wielder. Basically, it is a portable wall meant to provide cover. It can provide up to total cover, depending on how far you come out from behind it. A tower shield, however, does not provide cover against targeted spells; a spellcaster can cast a spell on you by targeting the shield you are holding. This shield has runes scribed onto it that glow eerily in dim light.
+ПАРАМЕТРЫ:
 
-STATISTICS:
+Класс защиты: +10 (щит)
+Класс защиты: +1 (доспех, дополнительно) против дальнобойного оружия
+Штраф к проверкам за броню: -10
+Шанс провала заклинания: 50%
+Вес: 7 фунтов~
+@12765    = ~Посох осады~
+@12766    = ~Подобные посохи очень любят маги-отрицатели. Этот посох изготовил волшебник по имени Гальф Крошка, человек чрезвычайно малого роста. Он не желал оказаться в таком положении, чтобы зависеть только от своих физических возможностей. Посох помогал ему брать верх в магических поединках. Гальф погиб, когда неосторожно отправился за ибенийскими грибами в рощу, населённую шустриками. Несколько лет эти злые феи хранили посох, пока проходивший мимо отряд искателей приключений не перебил монстров и не забрал артефакт.
 
-Shield Bonus: +10
-Armor Bonus:  +1 vs. missile weapons
-Armor Check Penalty:  -10
-Arcane Spell Failure:  50%
-Weight: 7 lb.~
-@12765    = ~Staff of Besieging~
-@12766    = ~A favorite among abjurers, this particular staff was created by a wizard named Gulph the Tiny. A diminutive human mage, Gulph didn't want to be stuck in a situation where he would have to rely on his physical abilities. This staff helped him have the upper hand in magical duels. Gulph met his end when he foolishly went looking for Ibenian Mushrooms in a grove full of quicklings. The staff remained among the quicklings for several years until a passing party of adventurers slaughtered the evil fae creatures and took the staff as their own.
+ПАРАМЕТРЫ:
 
-STATISTICS:
+Урон: 1d6+1
+Атака: +1
+Зачарование: +1
+Тип урона: дробящий
+Особенности:
+ Посох даёт +6 к УС заклинаний школы отречения (таким, как "Развеять магию", "Удалить магию", "Охранный символ")
+Вес: 4 фунта
+Необходимая черта: Простое оружие, Посохи
+Тип: двуручное~
+@12767    = ~Посох великой осады~
+@12768    = ~Подобные посохи очень любят маги-отрицатели. Этот посох изготовил волшебник по имени Гальф Крошка, человек чрезвычайно малого роста. Он не желал оказаться в таком положении, чтобы зависеть только от своих физических возможностей. Посох помогал ему брать верх в магических поединках. Гальф погиб, когда неосторожно отправился за ибенийскими грибами в рощу, населённую шустриками. Несколько лет эти злые феи хранили посох, пока проходивший мимо отряд искателей приключений не перебил монстров и не забрал артефакт.
 
-Damage:  1d6 + 1
-Attack Bonus:  +1 
-Enchantment:  +1
-Damage Type:  Bludgeoning
-Special:
-  The wielder's abjuration spells gain +6 DC (such as Dispel Magic, Remove Magic, and Glyph of Warding)
-Weight: 4 lb.
-Feat Requirement:  Simple Weapon, Quarterstaff
-Type:  Two-handed~
-@12767    = ~Staff of Greater Besieging~
-@12768    = ~A favorite among abjurers, this particular staff was created by a wizard named Gulph the Tiny. A diminutive human mage, Gulph didn't want to be stuck in a situation where he would have to rely on his physical abilities. This staff helped him have the upper hand in magical duels. Gulph met his end when he foolishly went looking for Ibenian Mushrooms in a grove full of quicklings. The staff remained among the quicklings for several years until a passing party of adventurers slaughtered the evil fae creatures and took the staff as their own.
+ПАРАМЕТРЫ:
 
-STATISTICS:
+Урон: 1d6+3
+Атака: +3
+Зачарование: +3
+Тип урона: дробящий
+Особенности:
+ Посох даёт +9 к УС заклинаний школы отречения (таким, как "Развеять магию", "Удалить магию", "Охранный символ")
+Вес: 4 фунта
+Необходимая черта: Простое оружие, Посохи
+Тип: двуручное~
+@12769    = ~Накидка защиты +10~
+@12770    = ~Эта простая накидка обладает небольшими защитными магическими свойствами. Она улучшает класс защиты и спасброски. Такие накидки хороши для магов и других персонажей, которые не могут носить тяжёлые доспехи.
 
-Damage:  1d6 + 3
-Attack Bonus:  +3
-Enchantment:  +3
-Damage Type:  Bludgeoning
-Special:
-  The wielder's abjuration spells gain +9 DC (such as Dispel Magic, Remove Magic, and Glyph of Warding)
-Weight: 4 lb.
-Feat Requirement:  Simple Weapon, Quarterstaff
-Type:  Two-handed~
-@12769    = ~Cloak of Protection +10~
-@12770    = ~This simple cloak has been imbued with some small magical properties to help protect its wearer. It does so by affecting both saving throws and armor class. It is ideal for wizards and others who cannot wear bulkier or more restrictive types of armor.
+ПАРАМЕТРЫ:
 
-STATISTICS:
+Класс защиты: +10 (отражение)
+Спасброски: +10
+Вес: 3 фунта~
+@12771    = ~Плащ вихря~
+@12772    = ~Плащ можно сделать любой возможной формы и практически из любой ткани. Самая распространённая форма - это круглый кусок материи с отверстием для головы посередине, свободно ниспадающий с плеч и скреплённый у подбородка цепочкой, брошью, шнурком или булавкой.
 
-Deflection Bonus:  +10
-Saving Throw:  +10 bonus
-Weight:  3 lb.~
-@12771    = ~Whirlwind Cloak~
-@12772    = ~The cloak can be made in every possible shape with just about every type of fabric. The most common forms are a circular piece of fabric with a hole in the center for the head, and fabric draped from neck, connected by a chain, brooch, cord, or pins.
-
-STATISTICS:
+ПАРАМЕТРЫ:
 
 When the wearer performs a Whirlwind Attack or casts Steel Wind Strike, they can still make their full number of attacks in the following round.
-Weight:  1 lb.~
+Вес: 1 фунт~
 @12773    = ~Ring of Protection +10~
 @12774    = ~This magical ring provides the wearer with amazing protection.
 
