@@ -13775,80 +13775,80 @@
 Постоянный эффект: носитель крыльев находится под постоянным эффектом заклинания "Свобода действий"
 Постоянный эффект: носитель крыльев находится под постоянным эффектом заклинания "Спешка"
 Вес: 1 фунт~
-@12841    = ~Staff of Power~
-@12842    = ~A wizard's staff is far more than just a gilded walking stick, most being enchanted to an impressive degree. This one is no exception, and whoever the previous owner was, they were powerful indeed. It enables a wizard to better escape hostile magic and avoid physical blows, and empowers the wizard's own spells.
+@12841    = ~Посох могущества~
+@12842    = ~Посох волшебника - это не просто позолоченная прогулочная трость, большинство из них сильно зачарованы. Этот - не исключение, и кто бы ни был его предыдущим владельцем, он был очень сильным магом . С помощью этого посоха волшебник может лучше уклоняться от враждебной магии, избегать физических ударов, а также усиливать свои собственные заклинания.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d6 + 2
-Attack Bonus:  +2
-Enchantment:  +2
-Damage Type:  Bludgeoning
-Special:
-  Generic Armor Bonus: +2
-  Saving Throws: +2
-  Spells cast by the wielder gain +2 DC
-  Spell Power: Can cast the spell Cone of Cold (at level 12)
-  Spell Power: Can cast the spell Globe of Invulnerability (at level 12)
-Weight: 4 lb.
-Feat Requirement:  Simple Weapon, Quarterstaff
-Type:  Two-handed~
-@12843    = ~Staff of the Magi~
+Урон: 1d6+2
+Атака: +2
+Зачарование: +2
+Тип урона: дробящий
+Особенности:
+ Класс защиты: +2 (общий)
+ Спасброски: +2
+ Заклинания, прочитанные владельцем посоха получают +2 к УС
+ Заклинание: владелец посоха может прочитать заклинание "Конус холода" (как заклинатель 12-ого уровня)
+ Заклинание: владелец посоха может прочитать заклинание "Сфера неуязвимости" (как заклинатель 12-ого уровня)
+Вес: 4 фунта
+Необходимая черта: Простое оружие, Посохи
+Тип: двуручное~
+@12843    = ~Посох магов~
 @12844    = ~~
-@12845    = ~The Icon of Power +3~
-@12846    = ~The temple of Loviatar in the Vale of Wailing Women, called the Black Spires of the Maiden, has always enjoyed the freedom from good-aligned churches that so many other evil temples long for. However, the large temple requires a huge body of standing soldiers to protect it from attackers and spies. The head of the temple guard is known as the Whip of Obedience. He used to be traditionally equipped with a magical halberd called the Icon of Power. When the temple guards saw the Icon pass them on their rounds, they took a little more care in their duties. Unfortunately for the Whip, a clever human thief from Elturel decided to capture the Icon as a personal challenge. The thief, whose name is still unknown, succeeded at his task and sold the Icon to the church of Bane. The Banites held the Icon out of contempt for the late Whip's incompetence. Eventually, the Icon was lost when the desert temple where it was held, the Obsidian Chapel, was sacked by Bedine raiders.
+@12845    = ~Знак власти +3~
+@12846    = ~Чёрным Шпилям Девы, храму Ловиатар в Долине Плакальщиц, церкви добра всегда предоставляли такую свободу, о которой другие тёмные культы только мечтают. Но крупному храму для защиты от нападений и шпионажа требуется большая постоянная армия. Главу храмовой стражи звали Кнут Повиновения. По традиции в его вооружение входил Знак власти, магическая алебарда. Видя Знак во время обходов командира, стражники преисполнялись большего уважения к своим обязанностям. К несчастью для Кнута, один хитрый человек-вор из Элтурела задумал доказать своё мастерство, украв алебарду. Ему удалось осуществить свои планы, и вор, чьё имя не сохранилось в истории, продал Знак церкви Бейна. Жрецы Бейна хранили артефакт в знак своего презрения к Кнуту. Знак власти был утерян, когда Обсидиановую Часовню, пустынный храм, где хранилась алебарда, разграбили бандиты из Бедина.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d10 + 3
-Attack Bonus:  +3
-Enchantment:  +3
-Damage Type:  Piercing
-Special:
-  Sadistic: +3d6 magic damage against foes in pain
-  Spell Power: User may cast Symbol of Pain 1/day
-  Spellward: Immune to the spell Symbol of Pain
-Weight: 14 lb.
-Feat Requirement:  Simple Weapon, Polearm
-Type:  Two-handed~
-@12847    = ~The Icon of Pain +5~
-@12848    = ~The temple of Loviatar in the Vale of Wailing Women, called the Black Spires of the Maiden, has always enjoyed the freedom from good-aligned churches that so many other evil temples long for. However, the large temple requires a huge body of standing soldiers to protect it from attackers and spies. The head of the temple guard is known as the Whip of Obedience. He used to be traditionally equipped with a magical halberd called the Icon of Pain. When the temple guards saw the Icon pass them on their rounds, they took a little more care in their duties. Unfortunately for the Whip, a clever human thief from Elturel decided to capture the Icon as a personal challenge. The thief, whose name is still unknown, succeeded at his task and sold the Icon to the church of Bane. The Banites held the Icon out of contempt for the late Whip's incompetence. Eventually, the Icon was lost when the desert temple where it was held, the Obsidian Chapel, was sacked by Bedine raiders.
+Урон: 1d10+3
+Атака: +3
+Зачарование: +3
+Тип урона: колющий
+Особенности:
+ Садизм: +3d6 урона магией против врагов, испытывающих боль
+ Заклинание: может раз в день прочитать заклинание "Символ боли"
+ Оберёг: владелец оружия не восприимчив к заклинанию "Символ боли"
+Вес: 14 фунтов
+Необходимая черта: Военное оружие, Древковое
+Тип: двуручное~
+@12847    = ~Знак боли +5~
+@12848    = ~Чёрным Шпилям Девы, храму Ловиатар в Долине Плакальщиц, церкви добра всегда предоставляли такую свободу, о которой другие тёмные культы только мечтают. Но крупному храму для защиты от нападений и шпионажа требуется большая постоянная армия. Главу храмовой стражи звали Кнут Повиновения. По традиции в его вооружение входил Знак власти, магическая алебарда. Видя Знак во время обходов командира, стражники преисполнялись большего уважения к своим обязанностям. К несчастью для Кнута, один хитрый человек-вор из Элтурела задумал доказать своё мастерство, украв алебарду. Ему удалось осуществить свои планы, и вор, чьё имя не сохранилось в истории, продал Знак церкви Бейна. Жрецы Бейна хранили артефакт в знак своего презрения к Кнуту. Знак власти был утерян, когда Обсидиановую Часовню, пустынный храм, где хранилась алебарда, разграбили бандиты из Бедина.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d10 + 5
-Attack Bonus:  +5
-Enchantment:  +5
-Damage Type:  Piercing
-Special:
-  Sadistic: +4d6 magic damage against foes in pain
-  Spell Power: User may cast Symbol of Pain 3/day
-  Spellward: Immune to the spell Symbol of Pain
-Weight: 14 lb.
-Feat Requirement:  Simple Weapon, Polearm
-Type:  Two-handed~
-@12849    = ~Robe of the Watcher~
-@12850    = ~Made for a dark elf wizard from Rilauven, the Robe of the Watcher is recognized among drow as a sign of great power. It is traditionally worn by the most talented practitioner of divination magic in Rilauven's academy of sorcery. Malavon was awarded the robe when he was still in good graces with his city. He imbued it with additional enchantments to synergize with his personal spells.
+Урон: 1d10+3
+Атака: +3
+Зачарование: +3
+Тип урона: колющий
+Особенности:
+ Садизм: +4d6 урона магией против врагов, испытывающих боль
+ Заклинание: может прочитать заклинание "Символ боли" три раза в день
+ Оберёг: владелец оружия не восприимчив к заклинанию "Символ боли"
+Вес: 14 фунтов
+Необходимая черта: Военное оружие, Древковое
+Тип: двуручное~
+@12849    = ~Мантия наблюдателя~
+@12850    = ~Мантию наблюдателя изготовили для одного волшебника-дроу из Рилувена. У тёмных эльфов она считается знаком огромной силы и власти; обычно её получает самый талантливый прорицатель в Рилувенской академии волшебства. Эта мантия досталась Малавону, когда он был ещё в хороших отношениях с родным городом. Он наделил ее дополнительными чарами, чтобы она сочеталась с его персональными заклинаниями.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Generic Armor Bonus:  +4
-Spell Resistance: +8
-Immunity to blindness and confusion
-Spell Power: Can cast True Seeing 1/day
-When cast by the wearer, the spells Malavon's Rage and Malavon's Corrosive Fog do not harm allies
-Weight:  3 lb.~
-@12851    = ~Robe of the Dark Watcher~
-@12852    = ~Made for a dark elf wizard from Rilauven, the Robe of the Watcher is recognized among drow as a sign of great power. It is traditionally worn by the most talented practitioner of divination magic in Rilauven's academy of sorcery. Malavon was awarded the robe when he was still in good graces with his city. He imbued it with additional enchantments to synergize with his personal spells.
+Класс защиты: +4 (общий)
+Сопротивление магии: +8
+Владелец не восприимчив к слепоте и замешательству
+Может читать заклинание "Истинное видение" раз в день
+Прочитанные владельцем мантии заклинания "Едкий туман Малавона" и "Ярость Малавона" не причиняют вреда союзникам
+Вес: 3 фунтов~
+@12851    = ~Мантия тёмного наблюдателя~
+@12852    = ~Мантию наблюдателя изготовили для одного волшебника-дроу из Рилувена. У тёмных эльфов она считается знаком огромной силы и власти; обычно её получает самый талантливый прорицатель в Рилувенской академии волшебства. Эта мантия досталась Малавону, когда он был ещё в хороших отношениях с родным городом. Он наделил ее дополнительными чарами, чтобы она сочеталась с его персональными заклинаниями.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Generic Armor Bonus:  +6
-Spell Resistance: +12
-Immunity to blindness and confusion
-Spell Power: Can cast True Seeing 1/day
-When cast by the wearer, the spells Malavon's Rage and Malavon's Corrosive Fog deal maximum damage and do not harm allies
-Weight:  3 lb.~
+Класс защиты: +6 (общий)
+Сопротивление магии: +12
+Владелец не восприимчив к слепоте и замешательству
+Может читать заклинание "Истинное видение" раз в день
+Прочитанные владельцем мантии заклинания "Едкий туман Малавона" и "Ярость Малавона" не причиняют вреда союзникам
+Вес: 3 фунтов~
 @12853    = ~Boots of Perfect Speed~
 @12854    = ~These boots have been magically enhanced so that wearer is able to travel extremely fast, much faster than regular boots of speed. They are much prized by those whose profession involves traveling long distances.
 
