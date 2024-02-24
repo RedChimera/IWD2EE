@@ -13531,7 +13531,7 @@
 Зачарование: +2
 Тип урона: рубящий
 Особенности:
- Малакар отражает первый колющий урон в каждом раунде
+ Малакар отклоняет первый колющий урон в каждом раунде
 Вес: 4 фунта
 Необходимая черта: Экзотическое оружие, Полуторные мечи
 Тип: одноручное~
@@ -13543,90 +13543,90 @@
 Зачарование: +5
 Тип урона: рубящий
 Особенности:
- Малакар отражает первый колющий урон в каждом раунде
+ Малакар отклоняет первый колющий урон в каждом раунде
 Вес: 4 фунта
 Необходимая черта: Экзотическое оружие, Полуторные мечи
 Тип: одноручное~
-@12789    = ~Greater Shield of Reflection +6~
-@12790    = ~A large shield is carried in the same manner as a small shield. Its weight prevents the character from using his shield hand for anything other than carrying the large shield. Large shields are usually made of metal, range from 3'-4' in diameter, and can be of any shape, from round to square to a spread dragon's wings. A typical medieval shield resembles a triangle with one point facing downward. This shield has runes scribed onto it that glow eerily in dim light.
+@12789    = ~Большой щит отражения +6~
+@12790    = ~Большой щит носится так же, как и маленький. Однако он тяжелее, и его вес не позволяет обладателю использовать руку, в которой находится щит, для чего-либо ещё. Большие щиты обычно делаются из металла, имеют три-четыре фута в диаметре и могут быть любой формы: от круглой или квадратной до силуэта расправленных крыльев дракона. Типичный средневековый щит представляет собой треугольник, направленный вершиной вниз. На этот щит нанесены руны, слабо сияющие потусторонним светом.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Shield Bonus: +8
-Special:
-  The first instance of physical damage that would hit the character each round is reflected back at the source. If the damage was from an attack, any on-hit effects of the attack are also reflected.
-Armor Check Penalty:  -2
-Arcane Spell Failure:  15%
-Weight: 8 lb.~
-@12791    = ~Staff of Widening~
-@12792    = ~The simplest and humblest of staff weapons, the quarterstaff is a length of wood ranging six to nine feet in length. Masterwork quarterstaffs are made of stout oak and are shod with metal at both ends. This one is particularly special as it has been imbued with magical properties.
+Класс защиты: +8 (щит)
+Штраф к проверкам за броню: -2
+Шанс провала заклинания: 15%
+Особенности:
+ Первый физический урон, который должен был бы нанести урон владельцу щита каждый раунд, отражается обратно к его источнику; если урон был нанесен атакой, то отражаются и все эффекты атаки
+Вес: 8 фунтов~
+@12791    = ~Посох расширения~
+@12792    = ~Простейшее и скромнейшее из шестообразного оружия, боевой посох - это деревянная палка длиной от шести до девяти футов. Боевые посохи высокого качества делаются из крепкого дуба и оковываются металлом с обоих концов. Данный экземпляр несколько отличается от других, поскольку наделён некоторыми магическими свойствами.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d6 + 3
-Attack Bonus:  +3
-Enchantment:  +3
-Damage Type:  Bludgeoning
-Special:
-  Widening: The area of effect of the wielder's spells is increased by 50%
-Weight: 4 lb.
-Feat Requirement:  Simple Weapon, Quarterstaff
-Type:  Two-handed~
-@12793    = ~Translocation Scimitar +2~
-@12794    = ~The scimitar is closely related to the sabre, a single edged curved sword with protective hilt. The blade has a greater curve to it and is tapered to an elongated, sharp point. The origins of the scimitar are largely unknown however they have been very popular in the southern region of the Forgotten Realms.
+Урон: 1d6+3
+Атака: +3
+Зачарование: +3
+Тип урона: дробящий
+Особенности:
+ Расширение: область действия заклинаний владельца посоха увеличивается на 50%
+Вес: 4 фунта
+Необходимая черта: Простое оружие, Посохи
+Тип: двуручное~
+@12793    = ~Перемещающий скимитар +2~
+@12794    = ~Скимитар - изогнутый меч с односторонней заточкой и гардой. Это оружие сродни сабле, но его лезвие сильнее изогнуто и заканчивается удлинённым остриём. О происхождении скимитаров известно очень мало, однако на юге королевств они широко распространены.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d6 + 2
-Attack Bonus: +2 
-Enchantment:  +2
-Damage Type:  Slashing
-Special:
-  Can attack any creature in sight
-  Each attack teleports the wielder to the target
-Weight:  4 lb.
-Feat Requirement:  Martial Weapon, Large Sword
-Type:  One-handed~
-@12795    = ~Potion of Physical Enhancement~
-@12796    = ~Potions are typically found in ceramic, crystal, glass, or metal flasks or vials. Flasks or other containers generally contain enough fluid to provide one person with one complete dose to achieve the effects of the potion.
+Урон: 1d6+2
+Атака: +2
+Зачарование: +2
+Тип урона: рубящий
+Особенности:
+ Может атаковать любое существо в пределах видимости
+ Каждая атака перемещаешь владельца оружия к цели атаки
+Вес: 4 фунта
+Необходимая черта: Военное оружие, Большие мечи
+Тип: одноручное~
+@12795    = ~Зелье физического улучшения~
+@12796    = ~Зелья обычно хранятся в керамических, хрустальных, стеклянных, металлических бутылках или пузырьках. Как правило, каждый сосуд содержит достаточно жидкости для одной дозы, необходимой для достижения эффекта.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Permanent +1 Strength
-Permanent +1 Dexterity
-Permanent +1 Constitution
-Weight:  1 lb.~
-@12797    = ~Potion of Mental Enhancement~
-@12798    = ~Potions are typically found in ceramic, crystal, glass, or metal flasks or vials. Flasks or other containers generally contain enough fluid to provide one person with one complete dose to achieve the effects of the potion.
+Сила: +1 (навсегда)
+Ловкость: +1 (навсегда)
+Телосложение: +1 (навсегда)
+Вес: 1 фунт~
+@12797    = ~Зелье ментального улучшения~
+@12798    = ~Зелья обычно хранятся в керамических, хрустальных, стеклянных, металлических бутылках или пузырьках. Как правило, каждый сосуд содержит достаточно жидкости для одной дозы, необходимой для достижения эффекта.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Permanent +1 Intelligence
-Permanent +1 Wisdom
-Permanent +1 Charisma
-Weight:  1 lb.~
-@12799    = ~Mantle of Hell's Furnace~
-@12800    = ~An extremely vivid piece of clothing, the Mantle of Hell's Furnace was woven from the beards of fiery azer. It was worn by a high priest of Kossuth named Ullabem for fifteen years before he was killed fighting a priestess of Istishia. When the priestess attempted to destroy it, efreet allies of Ullabem tracked her down and killed her. One of the efreeti kept the cloak until it was requested of him by a clever thief who summoned the genie out of an enchanted block of sandalwood.
+Интеллект: +1 (навсегда)
+Мудрость: +1 (навсегда)
+Харизма: +1 (навсегда)
+Вес: 1 фунт~
+@12799    = ~Мантия адской печи~
+@12800    = ~Яркая мантия адской печи была изготовлена из бород пламенных азеров. Верховный жрец Коссута по имени Уллабем носил её в течение пятнадцати лет, пока не погиб в схватке с жрицей Ишитии. Когда она попыталась уничтожить мантию, ифриты, состоявшие в союзе с Уллабемом, выследили её и убили. Один из ифритов сохранил артефакт, но затем он перешёл к одному хитроумному вору, который смог вызвать этого джинна из магического куска сандалового дерева.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-The wearer has 50% Cold Resistance, and anyone who hits the wearer in melee takes 1d6+5 fire damage. These effects do not stack with Fire Shield (Red).~
-@12801    = ~Mantle of the Coming Storm~
-@12802    = ~Worn by the Aurilite priestess Lysan in the past, this seemingly threadbare robe had become "dormant" upon her command, so as not to expose herself as a priestess of Auril. When as much as a single snowflake falls upon the robe, it transforms into a scintillating cloak of white that allows the wielder to float above snow drifts and walk through even raging rivers with ease. Most merchants will not wish to purchase this item, or will do so at a very low price, as they see it as a sacred item of Auril the Frost-Maiden and likely to attract her followers... and her displeasure.
+Владелец мантии имеет 50% сопротивления холоду, и каждый, кто попадает в него в ближнем бою, получает 1d6+5 урона огнем; эти эффекты не суммируются с эффектами заклинания "Огненный щит (красный)"
+@12801    = ~Накидка скорой бури~
+@12802    = ~Носимая жрицей Аурил по имени Лисан, эта мантия "впадала в спячку" по желанию своей хозяйки, чтобы не выдать в ней жрицу Аурил. Когда хотя бы одна снежинка касается этой мантии, она обращается в белоснежную накидку, которая позволяет облачённому в неё перелетать сугробы и без труда преодолевать даже бушующие реки. Вряд ли кто-то из купцов хорошо заплатит за эту вещь, если вообще захочет купить её - это священный предмет Аурил, Ледяной Девы, и он может привлечь внимание её последователей и вызвать немилость самой богини.
 
-Created during the ceremonies of the Coming Storm (the onset of winter) to Auril, these cloaks are specially created to resist flames. They also surround the wearer in an aura of cold, chilling any foe that would attack them.
+Такие мантии создают во время ритуала Скорой Бури, отмечающего приход зимы и помогают последователям Аурил противостоять огню. Они также окружают своего владельца аурой холода, сковывая любого врага, который может напасть на него.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-The wearer has 50% Fire Resistance, and anyone who hits the wearer in melee takes 1d6 cold damage. These effects do not stack with Fire Shield (Blue).~
-@12803    = ~Mantle of the Coming Storm~
-@12804    = ~Worn by the Aurilite priestess Lysan in the past, this seemingly threadbare robe had become "dormant" upon her command, so as not to expose herself as a priestess of Auril. When as much as a single snowflake falls upon the robe, it transforms into a scintillating cloak of white that allows the wielder to float above snow drifts and walk through even raging rivers with ease. Most merchants will not wish to purchase this item, or will do so at a very low price, as they see it as a sacred item of Auril the Frost-Maiden and likely to attract her followers... and her displeasure.
+Владелец мантии имеет 50% сопротивления огню, и каждый, кто попадает в него в ближнем бою, получает 1d6 урона холодом; эти эффекты не суммируются с эффектами заклинания "Огненный щит (синий)"~
+@12803    = ~Накидка скорой бури~
+@12804    = ~Носимая жрицей Аурил по имени Лисан, эта мантия "впадала в спячку" по желанию своей хозяйки, чтобы не выдать в ней жрицу Аурил. Когда хотя бы одна снежинка касается этой мантии, она обращается в белоснежную накидку, которая позволяет облачённому в неё перелетать сугробы и без труда преодолевать даже бушующие реки. Вряд ли кто-то из купцов хорошо заплатит за эту вещь, если вообще захочет купить её - это священный предмет Аурил, Ледяной Девы, и он может привлечь внимание её последователей и вызвать немилость самой богини.
 
-Created during the ceremonies of the Coming Storm (the onset of winter) to Auril, these cloaks are specially created to resist flames. They also surround the wearer in an aura of cold, chilling any foe that would attack them.
+Такие мантии создают во время ритуала Скорой Бури, отмечающего приход зимы и помогают последователям Аурил противостоять огню. Они также окружают своего владельца аурой холода, сковывая любого врага, который может напасть на него.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-The wearer has 50% Fire Resistance, and anyone who hits the wearer in melee takes 1d6+5 cold damage. These effects do not stack with Fire Shield (Blue).~
+Владелец мантии имеет 50% сопротивления огню, и каждый, кто попадает в него в ближнем бою, получает 1d6+5 урона холодом; эти эффекты не суммируются с эффектами заклинания "Огненный щит (синий)"~
 @12805    = ~Bracers of Blinding Strike~
 @12806    = ~Knight Wesic of the Most Noble Order of the Radiant Heart often said, "Attack swiftly and your enemy will be so overwhelmed that the battle will be yours." He lived this principle through these bracers. Before engaging in righteous battle, he would unlock the magic of the Blinding Strike and quickly rush at his enemy. More often than not, his opponent would fall within the first few seconds of battle.
 
