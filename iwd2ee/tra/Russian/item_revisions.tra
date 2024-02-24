@@ -2097,7 +2097,7 @@
   20/- Сопротивление кислоте
 Вес: 10 фунтов~
 //@10491    = ~Hide Armor~
-@10492    = ~Доспех из шкуры делается из нескольких слоёв шкур животных. Хотя он жёсток и в нём не очень удобно двигаться, доспех прост в изготовлении и хорошо защищает от холода. Чаще всего его можно увидеть на воинах и охотниках северных варварских племён.
+@10492    = ~Доспех из шкур делается из нескольких слоёв шкур животных. Хотя он жёсток и в нём не очень удобно двигаться, доспех прост в изготовлении и хорошо защищает от холода. Чаще всего его можно увидеть на воинах и охотниках северных варварских племён.
 
 ПАРАМЕТРЫ:
 
@@ -11916,7 +11916,7 @@
  Сопротивление: 50/- Сопротивление кислоте
 Вес: 10 фунтов~
 @12483    = ~Доспех из шкур ярости +3~
-@12484    = ~Доспех из шкуры делается из нескольких слоёв шкур животных. Хотя он жёсток и в нём не очень удобно двигаться, доспех прост в изготовлении и хорошо защищает от холода. Чаще всего его можно увидеть на воинах и охотниках северных варварских племён.
+@12484    = ~Доспех из шкур делается из нескольких слоёв шкур животных. Хотя он жёсток и в нём не очень удобно двигаться, доспех прост в изготовлении и хорошо защищает от холода. Чаще всего его можно увидеть на воинах и охотниках северных варварских племён.
 
 ПАРАМЕТРЫ:
 
@@ -11929,7 +11929,7 @@
  Постоянный эффект: носитель постоянно находится под эффектом, похожим на эффект заклинания "Эмоция: Ярость" (+2 к атаке, +4 к урону, +2 к спасброскам воли, -2 к классу защиты)
 Вес: 10 фунтов~
 @12485    = ~Доспех из шкур великого здоровья +5~
-@12486    = ~Доспех из шкуры делается из нескольких слоёв шкур животных. Хотя он жёсток и в нём не очень удобно двигаться, доспех прост в изготовлении и хорошо защищает от холода. Чаще всего его можно увидеть на воинах и охотниках северных варварских племён.
+@12486    = ~Доспех из шкур делается из нескольких слоёв шкур животных. Хотя он жёсток и в нём не очень удобно двигаться, доспех прост в изготовлении и хорошо защищает от холода. Чаще всего его можно увидеть на воинах и охотниках северных варварских племён.
 
 ПАРАМЕТРЫ:
 
@@ -12664,7 +12664,7 @@
 
 ПАРАМЕТРЫ:
 
-Ускорение: при чтении заклинания с чертой "Ускоренное заклинание" слот заклинания только на один уровень выше
+Ускорение: при чтении заклинания с чертой "Ускоренное заклинание" используется слот заклинания только на один уровень выше
 Вес: 0 фунтов~
 @12609    = ~Тяжёлый арбалет уничтожения +6~
 @12610    = ~Арбалетом называется лук, укреплённый на ложе - деревянной или железной ручке. Сам лук обычно делают из ясеня или тиса. Для стрельбы из арбалета применяют особые стрелы, которые называют болтами. Этот арбалет излучает слабый голубой свет.
@@ -12686,8 +12686,8 @@
 
 Носитель невосприимчив к урону кислотой
 Вес: 3 фунта~
-@12613    = ~Доспех из шкуры сопротивления стихиям +5~
-@12614    = ~Доспех из шкуры делается из нескольких слоёв шкур животных. Хотя он жёсток и в нём не очень удобно двигаться, доспех прост в изготовлении и хорошо защищает от холода. Чаще всего его можно увидеть на воинах и охотниках северных варварских племён.
+@12613    = ~Доспех из шкур сопротивления стихиям +5~
+@12614    = ~Доспех из шкур делается из нескольких слоёв шкур животных. Хотя он жёсток и в нём не очень удобно двигаться, доспех прост в изготовлении и хорошо защищает от холода. Чаще всего его можно увидеть на воинах и охотниках северных варварских племён.
 
 ПАРАМЕТРЫ:
 
@@ -13627,152 +13627,154 @@
 ПАРАМЕТРЫ:
 
 Владелец мантии имеет 50% сопротивления огню, и каждый, кто попадает в него в ближнем бою, получает 1d6+5 урона холодом; эти эффекты не суммируются с эффектами заклинания "Огненный щит (синий)"~
-@12805    = ~Bracers of Blinding Strike~
-@12806    = ~Knight Wesic of the Most Noble Order of the Radiant Heart often said, "Attack swiftly and your enemy will be so overwhelmed that the battle will be yours." He lived this principle through these bracers. Before engaging in righteous battle, he would unlock the magic of the Blinding Strike and quickly rush at his enemy. More often than not, his opponent would fall within the first few seconds of battle.
+@12805    = ~Наручи ослепляющего удара~
+@12806    = ~Рыцарь Уэзик из Благороднейшего Ордена Лучезарного Сердца частенько говаривал: "Нападай быстро, не давая противнику опомниться, и ты выиграешь сражение". Этот принцип он воплотил в наручах. Прежде чем вступить в праведную битву, он высвобождал магию Ослепляющего удара и немедленно обрушивался на врага. Чаще всего его противники погибали в первые несколько секунд битвы.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Spell Power: Once per day, the wearer can gain 10 additional attacks per round and increase their movement speed to the maximum for 3 rounds.
-Weight:  1 lb.~
-@12807    = ~Bracers of Blinding Strike~
-@12808    = ~Knight Wesic of the Most Noble Order of the Radiant Heart often said, "Attack swiftly and your enemy will be so overwhelmed that the battle will be yours." He lived this principle through these bracers. Before engaging in righteous battle, he would unlock the magic of the Blinding Strike and quickly rush at his enemy. More often than not, his opponent would fall within the first few seconds of battle.
+Заклинание: раз в день владелец наручей может получить 10 дополнительных атак в раунд и увеличить скорость передвижения до максимальной на 3 раунда
+Вес: 1 фунт~
+@12807    = ~Наручи ослепляющего удара~
+@12808    = ~Рыцарь Уэзик из Благороднейшего Ордена Лучезарного Сердца частенько говаривал: "Нападай быстро, не давая противнику опомниться, и ты выиграешь сражение". Этот принцип он воплотил в наручах. Прежде чем вступить в праведную битву, он высвобождал магию Ослепляющего удара и немедленно обрушивался на врага. Чаще всего его противники погибали в первые несколько секунд битвы.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Spell Power: Once per day, the wearer can gain 15 additional attacks per round and increase their movement speed to the maximum for 3 rounds.
-Weight:  1 lb.~
-@12809    = ~Amulet of Safe Casting~
-@12810    = ~Amulets are some of the most favored items to enchant by wizards because of their ability to be worn without interfering with the delicate rituals of spell casting. This amulet shapes the wearer's spells in such a way that they do not harm allies.
+Заклинание: раз в день владелец наручей может получить 15 дополнительных атак в раунд и увеличить скорость передвижения до максимальной на 3 раунда
+Вес: 1 фунт~
+@12809    = ~Амулет безопасных заклинаний~
+@12810    = ~Амулеты - одни из самых любимых волшебниками предметов для зачарования, поскольку они, при ношении, не мешают сложным ритуалам произнесения заклинаний. Этот амулет формирует заклинания владельца таким образом, чтобы они не вредили союзникам.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Safe Spells: The wearer's spells do not harm allies.
-Weight: 1 lb.~
-@12811    = ~Ring of Persistence~
-@12812    = ~A ring is a small band of precious metal that is used as jewelry. Some rare rings have had enchantments placed upon them that confer various magical abilities. These rings are highly sought after, especially by those of the adventuring profession. For no apparent reason, this ring feels warm to the touch.
+Безопасные заклинания: Заклинания владельца амулета не вредят союзникам
+Вес: 1 фунт~
+@12811    = ~Кольцо устойчивости~
+@12812    = ~Кольцо - это небольшая полоска драгоценного металла, используемая как украшение. Изредка встречаются кольца, которые зачарованы и обладают различными магическими свойствами. Такие кольца очень высоко ценятся, особенно среди искателей приключений. Это кольцо тёплое на ощупь.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Persistence: Casting a spell with the Persistent Spell feat uses up a spell slot five levels higher rather than six levels higher
-Weight: 0 lb.~
-@12813    = ~Ring of Greater Persistence~
-@12814    = ~A ring is a small band of precious metal that is used as jewelry. Some rare rings have had enchantments placed upon them that confer various magical abilities. These rings are highly sought after, especially by those of the adventuring profession. For no apparent reason, this ring feels warm to the touch.
+Устойчивость: при чтении заклинания с чертой "Устойчивое заклинание" используется слот заклинания на 5 уровней выше (вместо на 6, как обычно)
+Вес: 0 фунтов~
+@12813    = ~Кольцо великой устойчивости~
+@12814    = ~Кольцо - это небольшая полоска драгоценного металла, используемая как украшение. Изредка встречаются кольца, которые зачарованы и обладают различными магическими свойствами. Такие кольца очень высоко ценятся, особенно среди искателей приключений. Это кольцо тёплое на ощупь.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Persistence: Casting a spell with the Persistent Spell feat uses up a spell slot four levels higher rather than six levels higher
-Weight: 0 lb.~
-@12815    = ~Cloak of Reflection~
-@12816    = ~The cloak can be made in every possible shape with just about every type of fabric. The most common forms are a circular piece of fabric with a hole in the center for the head, and fabric draped from neck, connected by a chain, brooch, cord, or pins.
+Устойчивость: при чтении заклинания с чертой "Устойчивое заклинание" используется слот заклинания на 4 уровня выше (вместо на 6, как обычно)
+Вес: 0 фунтов~
+@12815    = ~Плащ отражения~
+@12816    = ~Плащ можно сделать любой возможной формы и практически из любой ткани. Самая распространённая форма - это круглый кусок материи с отверстием для головы посередине, свободно ниспадающий с плеч и скреплённый у подбородка цепочкой, брошью, шнурком или булавкой.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-All electrical damage that would be dealt to the wearer is instead reflected back to the source
-Weight: 3 lb.~
-@12817    = ~Dusty Rose Ioun Stone~
-@12818    = ~This is an ioun stone - its powers are activated by placing the stone above one's head, causing it to float there until removed. This dusty rose ellipsoid makes the wearer harder to hit in combat.
+Весь электрический урон, который должен нанести урон владельцу плаща вместо этого отражается к своему источнику.
+Вес: 3 фунта~
+@12817    = ~Дымчато-розовый камень иоун~
+@12818    = ~Сила этого камня иоун активируется, если поместить его над головой - он будет там парить, пока его не уберут. Этот дымчато-розовый камень делает своего владельца менее уязвимым в бою.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Generic Armor Bonus: +2
-Weight: 1 lb.~
-@12819    = ~Greater Pale Green Ioun Stone~
-@12820    = ~This is an ioun stone - its powers are activated by placing the stone above one's head, causing it to float there until removed. This pale green ellipsoid greatly increases the wearer's combat skill.
+Класс защиты: +2 (общий)
+Вес: 1 фунт~
+@12819    = ~Большой бледно-зелёный камень иоун~
+@12820    = ~Сила этого камня иоун активируется, если поместить его над головой - он будет там парить, пока его не уберут. Этот бледно-зеленый эллипсоид значительно повышает боевые навыки своего владельца.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Attack Bonus: +4
-Critical Threat Range: +4
-These effects stack with Executioner's Eyes
-Weight: 1 lb.~
-@12821    = ~Helmet of Defense +8~
-@12822    = ~This class of decorative helmet, made of reinforced leather or metal, covers the face and head. Eye slits and breathing holes come highly recommended.
+Атака: +4
+Диапазон критической угрозы: +4
+Эти эффекты могут складываться с эффектами заклинания "Глаза палача"
+Вес: 1 фунт~
+@12821    = ~Шлем защиты +8~
+@12822    = ~Декорированные шлемы такого типа, изготовленные из прочной кожи или металла, полностью закрывают лицо и голову. Наличие в шлеме прорезей для глаз и дыхания крайне приветствуется.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Generic Armor Bonus: +9
-Weight: 2 lb.~
-@12823    = ~Helmet of Merciless Gaze~
-@12824    = ~This class of decorative helmet, made of reinforced leather or metal, covers the face and head. Eye slits and breathing holes come highly recommended.
+Класс защиты: +9 (общий)
+Вес: 2 фунта~
+@12823    = ~Шлем беспощадного взгляда~
+@12824    = ~Декорированные шлемы такого типа, изготовленные из прочной кожи или металла, полностью закрывают лицо и голову. Наличие в шлеме прорезей для глаз и дыхания крайне приветствуется.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Generic Armor Bonus: +1
-Merciless Gaze: If the wearer is attacking a creature within line of sight, that creature takes 2 magic damage per second.
-Weight: 2 lb.~
-@12825    = ~Amulet of Defensive Regeneration~
-@12826    = ~Amulets are usually magical devices that are commonly worn around the neck, suspended from a chain. The type of chain that comes with an amulet generally increases the item's aesthetic value, not its magical properties. Only one amulet can be dangled from the neck.
+Класс защиты: +1 (общий)
+Беспощадный взгляд: если владелец шлема атакует существо, находящееся в пределах прямой видимости, то оно получает 2 урона магией в секунду
+Вес: 2 фунта~
+@12825    = ~Амулет защитной регенерации~
+@12826    = ~Амулеты - это, как правило, магические предметы, которые обычно носятся на цепочке, надетой на шею. Цепочка исполняет в основном эстетическую роль и к магии отношения не имеет. На шею можно повесить только один амулет.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Defensive Regeneration: Wearer regains 2d4 hit points each time they take damage
-Weight: 1 lb.~
-@12827    = ~Reliance~
-@12828    = ~The halfling warrior Ket Stillpond was known as an upright man who kept his wits about him at all times. Bards sing about the various near-death experiences he escaped from in the simple, if long-winded, tune, "The One Hundred Lives of Ket the Keen."  He was also known for two of the weapons he carried. One was his short sword, Bloodfarmer. The other was his dagger, Reliance. It is said that Ket kept this dagger on his person for all of his days, never turning it over to any man, nor keeping it out of arm's reach at any time. The dagger is cursed, and Ket's unwillingness to set it aside likely stemmed from the curse. He was actually kicked out of the Cormyrean royal court for his stubborn insistence on keeping Reliance, unbound, by his side. After he died, Ket's extremely large family decided to donate the dagger to the church of Arvoreen. The church later gave it to a promising young halfling warrior. The warrior was killed later when he turned over the dagger (after using magic to remove the cursed item) upon entering a seemingly friendly camp. His hosts turned out to be a pack of bandits. They killed the poor halfling on the spot.
+Защитная регенерация: владелец амулета восстанавливает 2d4 пункта здоровья каждый раз когда получает урон
+Вес: 1 фунт~
+@12827    = ~Надёжность~
+@12828    = ~Воин-полурослик Кет Тихий Омут прославился прямотой и хладнокровием. Барды рассказывают обо всех ситуациях, когда ему чудом удалось избежать гибели, в длинной и простой песне под названием "Сто жизней Кета-ловкача". Широко известны было и его оружие: короткий меч "Кровавый жнец" и кинжал "Надёжность". Говорят, что кинжал Кет всегда держал при себе, никому не доверяя его. Этот кинжал проклят, и нежелание Кета расставаться с ним скорее всего связано с этим проклятием. Однажды его даже выгнали с приёма при дворе в Кормире, потому что он упорно отказывался снять с пояса обнажённый кинжал. Когда Кет умер, его огромное семейство решило поднести "Надёжность" в дар церкви Арворина. Впоследствии жрецы вручили кинжал молодому и многообещающему воину-полурослику. Он встретил свою смерть, когда согласился оставить кинжал у входа в лагерь (после того, как с помощью магии смог снять с себя проклятую вещь), мирный на вид. На самом деле это был лагерь банды разбойников, и они тут же прикончили беднягу полурослика.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d4 + 5
-Attack Bonus:  +5 
-Enchantment:  +5
-Damage Type: Piercing
-Special: Can only be removed by a Remove Curse spell
-Weight: 1 lb.
-Feat Requirement:  Simple Weapon, Small Blade
-Type:  One-handed~
-@12829    = ~Reliance~ //HoF
-@12830    = ~The halfling warrior Ket Stillpond was known as an upright man who kept his wits about him at all times. Bards sing about the various near-death experiences he escaped from in the simple, if long-winded, tune, "The One Hundred Lives of Ket the Keen."  He was also known for two of the weapons he carried. One was his short sword, Bloodfarmer. The other was his dagger, Reliance. It is said that Ket kept this dagger on his person for all of his days, never turning it over to any man, nor keeping it out of arm's reach at any time. The dagger is cursed, and Ket's unwillingness to set it aside likely stemmed from the curse. He was actually kicked out of the Cormyrean royal court for his stubborn insistence on keeping Reliance, unbound, by his side. After he died, Ket's extremely large family decided to donate the dagger to the church of Arvoreen. The church later gave it to a promising young halfling warrior. The warrior was killed later when he turned over the dagger (after using magic to remove the cursed item) upon entering a seemingly friendly camp. His hosts turned out to be a pack of bandits. They killed the poor halfling on the spot.
+Урон: 1d4+5
+Атака: +5
+Зачарование: +5
+Тип урона: колющий
+Особенности:
+ Проклятие: взяв этот доспех, от него нельзя избавиться без помощи заклинания "Снять проклятие"
+Вес: 1
+Необходимая черта: Простое оружие, Короткие клинки
+Тип: одноручное~
+@12829    = ~Надёжность~ //HoF
+@12830    = ~Воин-полурослик Кет Тихий Омут прославился прямотой и хладнокровием. Барды рассказывают обо всех ситуациях, когда ему чудом удалось избежать гибели, в длинной и простой песне под названием "Сто жизней Кета-ловкача". Широко известны было и его оружие: короткий меч "Кровавый жнец" и кинжал "Надёжность". Говорят, что кинжал Кет всегда держал при себе, никому не доверяя его. Этот кинжал проклят, и нежелание Кета расставаться с ним скорее всего связано с этим проклятием. Однажды его даже выгнали с приёма при дворе в Кормире, потому что он упорно отказывался снять с пояса обнажённый кинжал. Когда Кет умер, его огромное семейство решило поднести "Надёжность" в дар церкви Арворина. Впоследствии жрецы вручили кинжал молодому и многообещающему воину-полурослику. Он встретил свою смерть, когда согласился оставить кинжал у входа в лагерь (после того, как с помощью магии смог снять с себя проклятую вещь), мирный на вид. На самом деле это был лагерь банды разбойников, и они тут же прикончили беднягу полурослика.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d4 + 10
-Attack Bonus:  +10
-Enchantment:  +10
-Damage Type: Piercing
-Special: Can only be removed by a Remove Curse spell
-Weight: 1 lb.
-Feat Requirement:  Simple Weapon, Small Blade
-Type:  One-handed~
-@12831    = ~Lesser Dusty Rose Ioun Stone~
-@12832    = ~This is an ioun stone - its powers are activated by placing the stone above one's head, causing it to float there until removed. This dusty rose ellipsoid makes the wearer harder to hit in combat.
+Урон: 1d4+10
+Атака: +10
+Зачарование: +10
+Тип урона: колющий
+Особенности:
+ Проклятие: взяв этот доспех, от него нельзя избавиться без помощи заклинания "Снять проклятие"
+Вес: 1
+Необходимая черта: Простое оружие, Короткие клинки
+Тип: одноручное~
+@12831    = ~Малый дымчато-розовый камень иоун~
+@12832    = ~Сила этого камня иоун активируется, если поместить его над головой - он будет там парить, пока его не уберут. Этот дымчато-розовый камень делает своего владельца менее уязвимым в бою.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Generic Armor Bonus: +1
-Weight: 1 lb.~
-@12833    = ~Hide Armor +1~
-@12834    = ~Hide armor is made from multiple layers of leather armor. Though stiff and hard to move in, it is relatively simple to make and provides a good barrier against cold weather. It is most commonly seen on the warriors and huntsmen of northern barbarian tribes.
+Класс защиты: +1 (общий)
+Вес: 1 фунт~
+@12833    = ~Доспех их шкур +1~
+@12834    = ~Доспех из шкур делается из нескольких слоёв шкур животных. Хотя он жёсток и в нём не очень удобно двигаться, доспех прост в изготовлении и хорошо защищает от холода. Чаще всего его можно увидеть на воинах и охотниках северных варварских племён.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Medium Armor
-Armor Bonus: +5
-Max Dex Bonus:  +4
-Armor Check Penalty:  -3
-Arcane Spell Failure:  20%
-Weight: 20 lb.~
-@12835    = ~Wings~
-@12836    = ~These soft and feathered wings seem to be fashioned in a celestial design. Upon closer inspection they turn out to be dummies worn on two satin ribbons attached to their base. The wings do seem to move with their bearer in a way that defies their supposed mechanism.
+Средняя броня
+Класс защиты: +5 (доспех)
+Максимальный бонус ловкости: +4
+Штраф к проверкам за броню: -3
+Шанс провала заклинания: 20%
+Вес: 20 фунтов~
+@12835    = ~Крылья~
+@12836    = ~Эти мягкие крылья из перьев кажутся сделаны одним из небесных созданий. При ближайшем рассмотрении они оказываются полыми внутри, и их можно надеть на плечи, просунув руки в петли за атласных лент, прикреплённых к основанию крыльев. Кажется, что крылья двигаются вместе со своим носителем, что невозможно объяснить с точки зрения физики.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Weight: 1 lb.~
-@12837    = ~Wings of Flying~
-@12838    = ~These soft and feathered wings seem to be fashioned in a celestial design. Upon being fastened to a creature's back, the wings give the creature the power to fly.
+Вес: 1 фунт~
+@12837    = ~Крылья полёта~
+@12838    = ~Эти мягкие крылья из перьев кажутся сделаны одним из небесных созданий. Когда крылья прикреплены к спине существа, они дают ему возможность летать.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Flight: Wearer gains the ability to fly while outdoors
-Weight: 1 lb.~
-@12839    = ~Wings of Flying~
-@12840    = ~These soft and feathered wings seem to be fashioned in a celestial design. Upon being fastened to a creature's back, the wings give the creature the power to fly.
+Полёт: носитель крыльев получает возможность летать на открытом воздухе
+Вес: 1 фунт~
+@12839    = ~Крылья полёта~
+@12840    = ~Эти мягкие крылья из перьев кажутся сделаны одним из небесных созданий. Когда крылья прикреплены к спине существа, они дают ему возможность летать.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Flight: Wearer gains the ability to fly while outdoors
-Constant Effect: Freedom of Movement while equipped
-Constant Effect: Haste while equipped
-Weight: 1 lb.~
+Полёт: носитель крыльев получает возможность летать на открытом воздухе
+Постоянный эффект: носитель крыльев находится под постоянным эффектом заклинания "Свобода действий"
+Постоянный эффект: носитель крыльев находится под постоянным эффектом заклинания "Спешка"
+Вес: 1 фунт~
 @12841    = ~Staff of Power~
 @12842    = ~A wizard's staff is far more than just a gilded walking stick, most being enchanted to an impressive degree. This one is no exception, and whoever the previous owner was, they were powerful indeed. It enables a wizard to better escape hostile magic and avoid physical blows, and empowers the wizard's own spells.
 
