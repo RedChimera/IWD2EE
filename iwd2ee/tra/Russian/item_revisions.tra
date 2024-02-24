@@ -13523,34 +13523,30 @@
 
 Владелец кольца регенерирует 0.5% от своего максимального количества пунктов здоровья (округляется вниз) каждую секунду
 Вес: 0 фунтов~
-@12785    = ~Malakar +2~
-@12786    = ~This sleek katana radiates magical energy when carried. The Malakar, or "Dueling Steel," was used by a less-than-honorable samurai during duels against other samurai. As if of its own volition, it will swoop down and deflect the slashing attacks of other weapons. It is perfect for the warrior concerned about defense as well as offense.
+@12785    = ~Малакар +2~
+@12786    = ~Эта лоснящаяся катана излучает магическую энергию, когда её берут в руки. Малакар или "Дуэльная сталь" использовалась не-столь-благородными самураями в поединках с другими самураями. Как будто обладая собственным разумом, она пикирует, отражая рубящие атаки другого оружия. Идеальное оружие для воителя, озабоченного не только нападением, но и защитой.
 
-STATISTICS:
+Урон: 1d10+2
+Атака: +2
+Зачарование: +2
+Тип урона: рубящий
+Особенности:
+ Малакар отражает первый колющий урон в каждом раунде
+Вес: 4 фунта
+Необходимая черта: Экзотическое оружие, Полуторные мечи
+Тип: одноручное~
+@12787    = ~Малакар +5~
+@12788    = ~Эта лоснящаяся катана излучает магическую энергию, когда её берут в руки. Малакар или "Дуэльная сталь" использовалась не-столь-благородными самураями в поединках с другими самураями. Как будто обладая собственным разумом, она пикирует, отражая рубящие атаки другого оружия. Идеальное оружие для воителя, озабоченного не только нападением, но и защитой.
 
-Damage:  1d10 + 2
-Attack Bonus: +2
-Enchantment:  +2
-Damage Type:  Slashing
-Special:
-  Malakar deflects the first instance of slashing damage that would hit the wielder each round
-Weight: 4 lb.
-Feat Requirement:  Exotic Weapon, Bastard Sword
-Type:  One-handed~
-@12787    = ~Malakar +5~
-@12788    = ~This sleek katana radiates magical energy when carried. The Malakar, or "Dueling Steel," was used by a less-than-honorable samurai during duels against other samurai. As if of its own volition, it will swoop down and deflect the slashing attacks of other weapons. It is perfect for the warrior concerned about defense as well as offense.
-
-STATISTICS:
-
-Damage:  1d10 + 5
-Attack Bonus: +5
-Enchantment:  +5
-Damage Type:  Slashing
-Special:
-  Malakar deflects the first instance of slashing damage that would hit the wielder each round
-Weight: 4 lb.
-Feat Requirement:  Exotic Weapon, Bastard Sword
-Type:  One-handed~
+Урон: 1d10+5
+Атака: +5
+Зачарование: +5
+Тип урона: рубящий
+Особенности:
+ Малакар отражает первый колющий урон в каждом раунде
+Вес: 4 фунта
+Необходимая черта: Экзотическое оружие, Полуторные мечи
+Тип: одноручное~
 @12789    = ~Greater Shield of Reflection +6~
 @12790    = ~A large shield is carried in the same manner as a small shield. Its weight prevents the character from using his shield hand for anything other than carrying the large shield. Large shields are usually made of metal, range from 3'-4' in diameter, and can be of any shape, from round to square to a spread dragon's wings. A typical medieval shield resembles a triangle with one point facing downward. This shield has runes scribed onto it that glow eerily in dim light.
 
