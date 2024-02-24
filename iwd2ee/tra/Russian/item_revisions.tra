@@ -13478,50 +13478,51 @@
 
 ПАРАМЕТРЫ:
 
-When the wearer performs a Whirlwind Attack or casts Steel Wind Strike, they can still make their full number of attacks in the following round.
+Когда владелец плаща выполняет вихревую атаку или удар стального ветра, он всё равно может совершить полное количество обычных атак в следующем раунде.
 Вес: 1 фунт~
-@12773    = ~Ring of Protection +10~
-@12774    = ~This magical ring provides the wearer with amazing protection.
+@12773    = ~Кольцо защиты +10~
+@12774    = ~Это магическое кольцо великолепно защищает своего владельца.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Deflection Bonus:  +10
-Weight: 0 lb.~
-@12775    = ~Belt of Perfect Immunity~
-@12776    = ~Belts are usually wide bands of leather or some other material  that can be fastened around the waist. Most belts are used for the practical purpose of holding up ones pants, but like most articles of clothing they can also be used for ornamental purposes.
+Класс защиты: +10 (отражение)
+Вес: 0 фунтов~
+@12775    = ~Пояс превосходного иммунитета~
+@12776    = ~Пояса обычно представляют собой широкие полосы из кожи или другого материала, которые можно застегнуть на талии. Большая часть поясов используется в чисто практических целях - чтобы поддерживать штаны, но, как и другие элементы одежды, они могут быть декоративными.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-The wearer is immune to charm, domination, fear, hopelessness, hold, paralysis, stun, sleep, berserk, feeblemindedness, petrification, instant death, blindness, deafness, silence, casting failure, poison, disease, wounding effects, fatigue, intoxication, knockdown, enfeeblement, nausea, and energy drain.
-Weight: 3 lb.~
-@12777    = ~Robe of Epic Illusions~
-@12778    = ~Since the age of Netheril, wizards have learned to bestow a wide variety of magical properties upon the everyday objects that surround them. A favorite item of such enchantment is the common robe. It is lightweight, affordable, and holds its enchantment well, thereby making it ideal equipment for a wizard.
+Владелец плаща имеет не подвержен эффектам очарования, подчинения, страха, безнадёжности, удержания, паралича, ошеломления, сна, берсерка, слабоумия, окаменения, мгновенной смерти, слепоты, глухоты, тишины, провала при чтении заклинания, ядов, болезней, ранений, усталости, опьянения, сбивания с ног, слабости,тошноты и оттока энергии.
+Вес: 3 фунта~
+@12777    = ~Мантия эпических иллюзий~
+@12778    = ~Ещё во времена Нетерила маги научились придавать магические свойства вещам, которые их окружают. Самым популярным предметом для наложения таких зачарований была обычная мантия. Она лёгкая, дешёвая и хорошо сохраняет зачарование, что делает её идеальным снаряжением для волшебника.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-The wearer's illusion spells gain +10 DC
-Weight:  3 lb.~
-@12779    = ~Girdle of the Poisoner~
-@12780    = ~Girdles are generally similar to belts. Unlike belts, girdles are not used to hold up pants and dungarees, but to carry pouches, scabbards, and the like.
+Заклинания иллюзий владельца мантии получают +10 к УС
+Вес: 3 фунта~
+@12779    = ~Ремень отравителя~
+@12780    = ~Ремни очень похожи на пояса, но, в отличие от них, они не просто поддерживают штаны, а позволяют носить на талии кошельки, ножны и так далее.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-All poison damage dealt by the character is increased by 50%
-Weight:  2 lb.~
-@12781    = ~Gargoyle Boots~
-@12782    = ~Legend holds that the Mage who created this magical footwear trapped the spirit of an actual gargoyle within these boots. Unfortunately, they couldn't protect the nameless wizard from the vengeance of the gargoyle's mate.
+Весь урон ядом, наносимый владельцем ремня увеличивается на 50%
+Вес: 2 фунта~
+@12781    = ~Ботинки горгульи~
+@12782    = ~Легенда гласит, что маг, который создал эту волшебную обувь, заключил в неё дух настоящей горгульи. К сожалению, они не спасли неизвестного волшебника от мести дружка горгульи.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Special: If the wearer stands still for 6 seconds without doing anything, they gain a single skin of Stoneskin (absorbing the next 10 points of physical damage from a +4 or lower weapon) for 8 hours
-Weight: 3 lb.~
-@12783    = ~Ring of Life~
-@12784    = ~A ring is a small band of precious metal that is used as jewelry. Some rare rings have had enchantments placed upon them that confer various magical abilities. These rings are highly sought after, especially by those of the adventuring profession. For no apparent reason, this ring feels warm to the touch.
+Особенности:
+ Если владелец обуви стоит неподвижно в течение 6 секунд, ничего не предпринимая, он получает один слой кожи, подобно эффекту заклинания "Каменная кожа" (она поглощает следующие 10 пунктов физического урона от оружия +4 или ниже) на 8 часов
+Вес: 3 фунта~
+@12783    = ~Кольцо жизни~
+@12784    = ~Кольцо - это небольшая полоска драгоценного металла, используемая как украшение. Изредка встречаются кольца, которые зачарованы и обладают различными магическими свойствами. Такие кольца очень высоко ценятся, особенно среди искателей приключений. Это кольцо тёплое на ощупь.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Wearer regenerates .5% of their max HP (rounded down) each second
-Weight:  0 lb.~
+Владелец кольца регенерирует 0.5% от своего максимального количества пунктов здоровья (округляется вниз) каждую секунду
+Вес: 0 фунтов~
 @12785    = ~Malakar +2~
 @12786    = ~This sleek katana radiates magical energy when carried. The Malakar, or "Dueling Steel," was used by a less-than-honorable samurai during duels against other samurai. As if of its own volition, it will swoop down and deflect the slashing attacks of other weapons. It is perfect for the warrior concerned about defense as well as offense.
 
