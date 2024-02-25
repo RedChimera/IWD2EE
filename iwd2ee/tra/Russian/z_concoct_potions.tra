@@ -248,8 +248,9 @@
 
 Снижение урона: 15/+3
 Вес: 1 фунт~
-@4732     = ~Haunted Ether~
-@4733     = ~Both complex engineering and mystical study are necessary to create this bottle of enchanted gas. The alchemist must first invest in a fractional distillation column to collect the necessary gas from the atmosphere. Once the gas is collected, it must be infused with one or more hostile spirits. Reciting blasphemies in a graveyard is sufficient if the alchemist is well-versed in Abyssal or is familiar with the teachings of the most popular deity among the dead; otherwise the alchemist must resort to graverobbing, and conduct various illegal and unpleasant rituals with exhumed corpses.
+@4732     = ~Эфир с привидениями~
+@4733     = ~Для создания этого зачарованного газа понадобились как сложные инженерные, так и магические исследования. Сначала алхимик должен вложить деньги в ректификационную колонну, чтобы собрать необходимый газ из атмосферы. После того как газ будет собран, в нём нужно растворить одного или нескольких враждебных духов.  
+Both complex engineering and mystical study are necessary to create this bottle of enchanted gas. The alchemist must first invest in a fractional distillation column to collect the necessary gas from the atmosphere. Once the gas is collected, it must be infused with one or more hostile spirits. Reciting blasphemies in a graveyard is sufficient if the alchemist is well-versed in Abyssal or is familiar with the teachings of the most popular deity among the dead; otherwise the alchemist must resort to graverobbing, and conduct various illegal and unpleasant rituals with exhumed corpses.
 
 If the alchemist successfully enrages the local spirits, he or she may bind them to the collected gas. Delivering repeated electrical charges to the imprisoned spirits will gradually disorient them, allowing the bottle to be thrown just like a grenade. When the bottle shatters, the spirits will lash out at the closest living creatures they can find, dealing 4d12 magic damage with a Fortitude save for half and inflicting fear on any victim who fails a Will save.
 
