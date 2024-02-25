@@ -113,85 +113,85 @@
 Эффект заклинания "Глаза палача" на 10 раундов (+4 к атаке и +4 к диапазону критической угрозы)
 Вес: 1 фунт.~
 @4714     = ~Дымовая бомба~
-@4715     = ~Anyone can start a fire and produce a small cloud of smoke, but creating a burst of smoke in one swift movement takes some art.  This small canister of concentrated smoke will quickly create an obscuring cloud when broken, hiding the user for 1d3+3 seconds depending on air currents and other factors.
+@4715     = ~Каждый может разжечь костер и создать небольшое облако дыма, но создание облака дыма одним быстрым движением требует определенного искусства. Небольшая канистра с концентрированным дымом, разбившись, быстро образует непроглядное облако, скрывающее пользователя на 1d3+3 секунды в зависимости от воздушных потоков и других факторов.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Invisibility for 1d3+3 seconds
-Weight: 1 lb.~
+Невидимость на 1d3+3 секунды
+Вес: 1 фунт.~
 @54714     = ~Дымовая бомба~
-@54715     = ~Anyone can start a fire and produce a small cloud of smoke, but creating a burst of smoke in one swift movement takes some art.  This small canister of concentrated smoke will quickly create an obscuring cloud when broken, hiding the user for 1d3+3 seconds depending on air currents and other factors.
+@54715     = ~Каждый может разжечь костер и создать небольшое облако дыма, но создание облака дыма одним быстрым движением требует определенного искусства. Небольшая канистра с концентрированным дымом, разбившись, быстро образует непроглядное облако, скрывающее пользователя на 1d3+3 секунды в зависимости от воздушных потоков и других факторов.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Invisibility for 1d3+3 seconds
-Weight: 1 lb.~
-@4716     = ~Bitter Tonic~
-@4717     = ~This potion is a highly concentrated reddish mixture made from roots, clay, crushed pearls and oyster shells, blood, and alcohol.  The solution empowers the drinker's constitution and resilience, granting a +4 bonus to all Fortitude saves for 1 hour.
+Невидимость на 1d3+3 секунды
+Вес: 1 фунт.~
+@4716     = ~Горький тоник~
+@4717     = ~Это зелье представляет собой высококонцентрированную красноватую смесь из корней, глины, толченого жемчуга, устричных раковин, крови и спирта. Раствор усиливает выносливость и стойкость пьющего, давая +4 ко всем спасброскам стойкости в течение часа.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-+4 to Fortitude saves
-Weight: 1 lb.~
-@54716     = ~Bitter Tonic~
-@54717     = ~This potion is a highly concentrated reddish mixture made from roots, clay, crushed pearls and oyster shells, blood, and alcohol.  The solution empowers the drinker's constitution and resilience, granting a +8 bonus to all Fortitude saves for 1 hour.
+Спасброски: +4 к спасброскам стойкости
+Вес: 1 фунт.~
+@54716     = ~Горький тоник~
+@54717     = ~Это зелье представляет собой высококонцентрированную красноватую смесь из корней, глины, толченого жемчуга, устричных раковин, крови и спирта. Раствор усиливает выносливость и стойкость пьющего, давая +8 ко всем спасброскам стойкости в течение часа.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-+8 to Fortitude saves
-Weight: 1 lb.~
-@4718     = ~Brine Solution~
-@4719     = ~This potion, a small piece of a dolphin's brain suspended in whale oil and brine with quicksilver and greenstone as catalysts, is capable of enhancing the user's mental abilities.  Most of the dolphin brain's latent power goes to waste, since the workings of the mind are still poorly understood and the method behind this concoction is fairly crude, but the brine will banish all distractions from the user's mind, granting a +4 bonus to all Will saves for 1 hour.
+Спасброски: +8 к спасброскам стойкости
+Вес: 1 фунт.~
+@4718     = ~Раствор рассола~
+@4719     = ~Это зелье, представляющее собой небольшой кусочек мозга дельфина, подвешенный в китовом жире и рассоле с добавлением ртути и зеленого камня в качестве катализатора, способно усилить умственные способности пользователя. Большая часть скрытой силы мозга дельфина пропадает впустую, поскольку работа разума все еще плохо изучена, а метод приготовления этого зелья довольно груб, но рассол убирает все отвлекающие факторы из разума пользователя, давая бонус +4 ко всем спасброскам воли на 1 час.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-+4 to Will saves
-Weight: 1 lb.~
-@54718     = ~Brine Solution~
-@54719     = ~This potion, a small piece of a dolphin's brain suspended in whale oil and brine with quicksilver and greenstone as catalysts, is capable of enhancing the user's mental abilities.  Most of the dolphin brain's latent power goes to waste, since the workings of the mind are still poorly understood and the method behind this concoction is fairly crude, but the brine will banish all distractions from the user's mind, granting a +8 bonus to all Will saves for 1 hour.
+Спасброски: +4 к спасброскам воли
+Вес: 1 фунт.~
+@54718     = ~Раствор рассола~
+@54719     = ~Это зелье, представляющее собой небольшой кусочек мозга дельфина, подвешенный в китовом жире и рассоле с добавлением ртути и зеленого камня в качестве катализатора, способно усилить умственные способности пользователя. Большая часть скрытой силы мозга дельфина пропадает впустую, поскольку работа разума все еще плохо изучена, а метод приготовления этого зелья довольно груб, но рассол убирает все отвлекающие факторы из разума пользователя, давая бонус +8 ко всем спасброскам воли на 1 час.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-+8 to Will saves
-Weight: 1 lb.~
-@4720     = ~Pressurized Gas~
-@4721     = ~This bottle of highly pressurized toxins will explode when it is shattered, flooding the area with a cloud of noxious gas.  Any breathing creature who is caught in the cloud is confronted with a nauseating stench that sinks deep into their nostrils and sticks in the back of their throat, suffering 5 poison damage per round for 5 rounds.  Every round the victim remains in the cloud, it must make a Fortitude save to avoid being poisoned.
+Спасброски: +8 к спасброскам воли
+Вес: 1 фунт.~
+@4720     = ~Сжатый газ~
+@4721     = ~Эта бутылка с токсинами под высоким давлением взрывается, когда ее разбивают, заливая все вокруг облаком ядовитого газа. Любое дышащее существо, попавшее в облако, сталкивается с тошнотворным зловонием, которое проникает глубоко в ноздри и оседает в гортани, получая 5 урона ядом в раунд в течение 5 раундов. Каждый раунд, пока жертва остается в облаке, она должна делать спасбросок стойкости, чтобы избежать отравления.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-5 poison damage per round for 5 rounds (Fortitude DC 15 negates)
-Dissipates after 10 rounds
-Weight: 1 lb.~
-@54720     = ~Pressurized Gas~
-@54721     = ~This bottle of highly pressurized toxins will explode when it is shattered, flooding the area with a cloud of noxious gas.  Any breathing creature who is caught in the cloud is confronted with a nauseating stench that sinks deep into their nostrils and sticks in the back of their throat, suffering 10 poison damage per round for 5 rounds.  Every round the victim remains in the cloud, it must make a Fortitude save to avoid being poisoned.
+5 урона ядом в раунд на протяжении 5 раундов (успешный спасбросок стойкости с УС 15 отменяет эффект)
+Облако яда рассеивается через 10 раундов
+Вес: 1 фунт.~
+@54720     = ~Сжатый газ~
+@54721     = ~Эта бутылка с токсинами под высоким давлением взрывается, когда ее разбивают, заливая все вокруг облаком ядовитого газа. Любое дышащее существо, попавшее в облако, сталкивается с тошнотворным зловонием, которое проникает глубоко в ноздри и оседает в гортани, получая 10 урона ядом в раунд в течение 5 раундов. Каждый раунд, пока жертва остается в облаке, она должна делать спасбросок стойкости, чтобы избежать отравления.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-10 poison damage per round for 5 rounds (Fortitude DC 25 negates)
-Dissipates after 10 rounds
-Weight: 1 lb.~
-@4722     = ~Burning Oil~
-@4723     = ~Simple to make but expensive to produce, this mixture of blackpowder and highly refined oil and gas will ignite when it breaks against a target.  As soon as the bottle hits the ground, a small capsule of pure sodium and another capsule of water will break open.  The sodium catches fire on contact with the water, setting the rest of the mixture alight.
+10 урона ядом в раунд на протяжении 5 раундов (успешный спасбросок стойкости с УС 25 отменяет эффект)
+Облако яда рассеивается через 10 раундов
+Вес: 1 фунт.~
+@4722     = ~Горючее масло~
+@4723     = ~Простая в изготовлении, но дорогая в производстве смесь черного пороха и очищенных масла и газа воспламеняется, когда разбивается о цель. Как только бутылка падает на землю, две капсулы (с чистым натрием и водой) разбиваются. Натрий загорается при контакте с водой, поджигая остальную смесь.
 
-A weak grenade inside the bottle then causes the flaming oil to expand rapidly, spreading the flame across all creatures within a 30 foot radius.  Anyone caught inside the burst will suffer 6d6 points of damage with a Reflex save (DC 15) for half.
+Слабая бомба внутри бутылки взрывается, заставляя пылающее масло быстро распространяться так, что пламя охватывает всех существ в радиусе 30 футов. Любой, кто окажется в зоне поражения, получит 6d6 урона, или половину при успешном спасброске реакции (с УС 15).
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-6d6 fire damage (Reflex DC 15 for 1/2 damage)
-Area of Effect: 30-foot radius
-Range: 40'
-Weight: 1 lb.~
-@54722     = ~Burning Oil~
-@54723     = ~Simple to make but expensive to produce, this mixture of blackpowder and highly refined oil and gas will ignite when it breaks against a target.  As soon as the bottle hits the ground, a small capsule of pure sodium and another capsule of water will break open.  The sodium catches fire on contact with the water, setting the rest of the mixture alight.
+6d6 урона огнём (спасбросок реакции с УС 15, чтобы получить только половину урона)
+Зона действия: радиус в 30 футов
+Дальность: 40 футов
+Вес: 1 фунт.~
+@54722     = ~Горючее масло~
+@54723     = ~Простая в изготовлении, но дорогая в производстве смесь черного пороха и очищенных масла и газа воспламеняется, когда разбивается о цель. Как только бутылка падает на землю, две капсулы (с чистым натрием и водой) разбиваются. Натрий загорается при контакте с водой, поджигая остальную смесь.
 
-A weak grenade inside the bottle then causes the flaming oil to expand rapidly, spreading the flame across all creatures within a 30 foot radius.  Anyone caught inside the burst will suffer 12d6 points of damage with a Reflex save (DC 25) for half.
+Слабая бомба внутри бутылки взрывается, заставляя пылающее масло быстро распространяться так, что пламя охватывает всех существ в радиусе 30 футов. Любой, кто окажется в зоне поражения, получит 12d6 урона, или половину при успешном спасброске реакции (с УС 25).
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-12d6 fire damage (Reflex DC 25 for 1/2 damage)
-Area of Effect: 30-foot radius
-Range: 40'
-Weight: 1 lb.~
+12d6 урона огнём (спасбросок реакции с УС 25, чтобы получить только половину урона)
+Зона действия: радиус в 30 футов
+Дальность: 40 футов
+Вес: 1 фунт.~
 @4724     = ~Musk Wine~
 @4725     = ~Brewed from fermented plums and the musk of several animals (usually cattle, oxen, horses, donkeys, and buffalo), this strong wine has a peculiar noxious scent despite its sweet taste.  Taken with a bit of Ankheg acid and some lime (the base, not the fruit) to neutralize the acid, this potion grants the drinker +6 to Strength for 10 rounds.
 
