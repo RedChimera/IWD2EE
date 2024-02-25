@@ -1,123 +1,125 @@
 @4700     = ~Дождевое пиво~
-@4701     = ~Cheap, efficient, and crude, this potion is a mix of rainwater, clay, ash, and roots from several plants.  This modest brew will restore 2d6 hit points to the drinker.
+@4701     = ~Дешевое, эффективное и простое, это зелье представляет собой смесь дождевой воды, глины, золы и корней каких-то растений. Это скромное варево восстанавливает 2d6 пунктов здоровья.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Heals 2d6 hit points
-Weight: 1 lb.~
-@54700     = ~Rainwater Brew~
-@54701     = ~Cheap, efficient, and crude, this potion is a mix of rainwater, clay, ash, and roots from several plants.  This modest brew will restore 5d6 hit points to the drinker.
+Восстанавливает 2d6 пунктов здоровья
+Вес: 1 фунт.~
+@54700     = ~Дождевое пиво~
+@54701     = ~Дешевое, эффективное и простое, это зелье представляет собой смесь дождевой воды, глины, золы и корней каких-то растений. Это скромное варево восстанавливает 5d6 пунктов здоровья.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Heals 5d6 hit points
-Weight: 1 lb.~
+Восстанавливает 5d6 пунктов здоровья
+Вес: 1 фунт.~
 @4702     = ~Кислое разливное~
-@4703     = ~Potent potions require less common ingredients, and this brew is no exception. Animal fat, bile, dried leaves, and fermented meat comprise this foul-smelling concoction, but a dying friend will not complain. This brew will restore 4d8 hit points to whoever is desperate enough to drink it.
+@4703     = ~Для мощных зелий требуются не самые распространенные ингредиенты, и это варево - не исключение. Животный жир, желчь, сушеные листья и перебродившее мясо входят в состав этого дурно пахнущего снадобья, но умирающий друг не станет жаловаться. Это варево восстанавливает 4d8 пунктов здоровья тому, кто достаточно отчаян, чтобы выпить его.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Heals 4d8 hit points
-Weight: 1 lb.~
-@54702     = ~Sour Draught~
-@54703     = ~Potent potions require less common ingredients, and this brew is no exception. Animal fat, bile, dried leaves, and fermented meat comprise this foul-smelling concoction, but a dying friend will not complain. This brew will restore 10d8 hit points to whoever is desperate enough to drink it.
+Восстанавливает 4d8 пунктов здоровья
+Вес: 1 фунт.~
+@54702     = ~Кислое разливное~
+@54703     = ~Для мощных зелий требуются не самые распространенные ингредиенты, и это варево - не исключение. Животный жир, желчь, сушеные листья и перебродившее мясо входят в состав этого дурно пахнущего снадобья, но умирающий друг не станет жаловаться. Это варево восстанавливает 10d8 пунктов здоровья тому, кто достаточно отчаян, чтобы выпить его.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Heals 10d8 hit points
-Weight: 1 lb.~
-@4704     = ~Sweet Elixir~
-@4705     = ~One might mistake this sweet drink for white wine, but the gentle bite in the flavor comes not from alcohol, but transmuted quartz. Drinking this potion can soothe nearly any ailment, from common infection to lethal venom to an ugly hangover. The quartz binds to toxic substances and turns them into harmless salt, curing poison, disease, and intoxication. In case that is not enough to heal the sickly adventurer, the horse tears in the syrup will also restore 1d4 hit points to the user.
+Восстанавливает 10d8 пунктов здоровья
+Вес: 1 фунт.~
+@4704     = ~Сладкий эликсир~
+@4705     = ~Этот сладкий напиток можно принять за белое вино, но нежный привкус исходит не от алкоголя, а от трансмутированного кварца. Выпив это снадобье, можно избавиться практически от любого недуга - от обычной инфекции до смертельного яда и жуткого похмелья. Кварц превращает токсичные вещества в безвредную соль, излечивая яд, болезни и интоксикацию. Если этого недостаточно, чтобы исцелить заболевшего искателя приключений, лошадиные слезы в составе эликсира также восстанавливают 1d4 пунктов здоровья.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Cures poison and disease
-Heals 1d4 hit points
-Weight: 1 lb.~
-@54704     = ~Sweet Elixir~
-@54705     = ~One might mistake this sweet drink for white wine, but the gentle bite in the flavor comes not from alcohol, but transmuted quartz. Drinking this potion can soothe nearly any ailment, from common infection to lethal venom to an ugly hangover. The quartz binds to toxic substances and turns them into harmless salt, curing poison, disease, and intoxication. In case that is not enough to heal the sickly adventurer, the horse tears in the syrup will also restore 4d4 hit points to the user.
+Излечивает яды и болезни
+Восстанавливает 1d4 пункта здоровья
+Вес: 1 фунт.~
+@54704     = ~Сладкий эликсир~
+@54705     = ~Этот сладкий напиток можно принять за белое вино, но нежный привкус исходит не от алкоголя, а от трансмутированного кварца. Выпив это снадобье, можно избавиться практически от любого недуга - от обычной инфекции до смертельного яда и жуткого похмелья. Кварц превращает токсичные вещества в безвредную соль, излечивая яд, болезни и интоксикацию. Если этого недостаточно, чтобы исцелить заболевшего искателя приключений, лошадиные слезы в составе эликсира также восстанавливают 4d4 пунктов здоровья.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Cures poison and disease
-Heals 4d4 hit points
-Weight: 1 lb.~
-@4706     = ~Electric Gel~
-@4707     = ~This pale bluish gel emits a strange hum in its tightly-sealed brass container.  When imbibed, the gel absorbs electrical damage, granting the user a 20/- resistance to all forms of electricity.  The effect lasts for 10 rounds or until dispelled.
+Излечивает яды и болезни
+Восстанавливает 4d4 пункта здоровья
+Вес: 1 фунт.~
+@4706     = ~Электрогель~
+@4707     = ~Этот бледно-голубоватый гель издает странное гудение в плотно закрытом латунном контейнере. После использования гель поглощает электрический урон, давая пользователю 20/- сопротивления всем видам электрического урона. Эффект длится 10 раундов или пока не будет рассеян.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Resistance: 20/- Electrical Resistance~
-@54706     = ~Electric Gel~
-@54707     = ~This pale bluish gel emits a strange hum in its tightly-sealed brass container.  When imbibed, the gel absorbs electrical damage, granting the user a 50/- resistance to all forms of electricity.  The effect lasts for 10 rounds or until dispelled.
+Сопротивление: 20/- сопротивления электричеству
+Вес: 1 фунт.~
+@54706     = ~Электрогель~
+@54707     = ~Этот бледно-голубоватый гель издает странное гудение в плотно закрытом латунном контейнере. После использования гель поглощает электрический урон, давая пользователю 50/- сопротивления всем видам электрического урона. Эффект длится 10 раундов или пока не будет рассеян.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Resistance: 50/- Electrical Resistance~
-@4708     = ~Radiant Philter~
-@4709     = ~A viscous liquid shimmers inside this tiny bottle. Brewed in a wax jar and leached through strips of magical parchment, this mixture of saltpeter, olive oil, chopped lizards, lye, mint leaves, and cinnamon can shield the user's skin from extreme heat.
+Сопротивление: 50/- сопротивления электричеству
+Вес: 1 фунт.~
+@4708     = ~Сияющее зелье~
+@4709     = ~В этом крошечном флаконе мерцает вязкая жидкость. Приготовленная в восковой банке и пропущенная через магический пергамента, эта смесь из селитры, оливкового масла, рубленых ящериц, щелочи, листьев мяты и корицы способна защитить кожу пользователя от сильного жара.
 
-By pouring the vial onto one's arm and speaking the command word, the user spreads a radiant prismatic liquid across his or her body, granting 20/- resistance to all forms of fire damage. The liquid is enchanted to cling to the user's skin, but the effect will wear off after 10 rounds.
+Вылив пузырек на руку и произнеся командное слово, пользователь распространяет по телу сияющую жидкость, дающую 20/- сопротивления всем видам огненного урона. Жидкость зачарована так, чтобы прилипать к коже и оставаться на ней, но она испаряется через 10 раундов.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Resistance: 20/- Fire Resistance
-Weight: 1 lb.~
-@54708     = ~Radiant Philter~
-@54709     = ~A viscous liquid shimmers inside this tiny bottle. Brewed in a wax jar and leached through strips of magical parchment, this mixture of saltpeter, olive oil, chopped lizards, lye, mint leaves, and cinnamon can shield the user's skin from extreme heat.
+Сопротивление: 20/- сопротивления огню
+Вес: 1 фунт.~
+@54708     = ~Сияющее зелье~
+@54709     = ~В этом крошечном флаконе мерцает вязкая жидкость. Приготовленная в восковой банке и пропущенная через магический пергамента, эта смесь из селитры, оливкового масла, рубленых ящериц, щелочи, листьев мяты и корицы способна защитить кожу пользователя от сильного жара.
 
-By pouring the vial onto one's arm and speaking the command word, the user spreads a radiant prismatic liquid across his or her body, granting 50/- resistance to all forms of fire damage. The liquid is enchanted to cling to the user's skin, but the effect will wear off after 10 rounds.
+Вылив пузырек на руку и произнеся командное слово, пользователь распространяет по телу сияющую жидкость, дающую 50/- сопротивления всем видам огненного урона. Жидкость зачарована так, чтобы прилипать к коже и оставаться на ней, но она испаряется через 10 раундов.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Resistance: 50/- Fire Resistance
-Weight: 1 lb.~
-@4710     = ~Black Mania~
-@4711     = ~Not all potions are exactly medical.  Some alchemists turn their talents to producing narcotics, and make their living by peddling addictive poisons to the idle and restless.  This black oil is a modified version of one such narcotic.  When drunk Black Mania will induce a violent state of confusion, granting the user a +5 bonus to damage rolls and +3 to melee attack rolls at the cost of a -3 penalty to AC and missile attacks.  Further, the user goes berserk for 10 rounds and his or her hit points are hidden for the duration of the effect.
+Сопротивление: 50/- сопротивления огню
+Вес: 1 фунт.~
+@4710     = ~Чёрная мания~
+@4711     = ~Не все зелья являются лекарственными. Некоторые алхимики занимаются производством наркотиков и зарабатывают на жизнь, продавая яды, вызывающие привыкание, праздным и неугомонным людям. Это черное масло - модифицированная версия одного из таких наркотиков. При употреблении "Черная мания" вызывает состояние буйного помешательства, давая пользователю бонус +5 к броскам урона и +3 к броскам атаки в ближнем бою за счет ухудшения на 3 класса брони и метательных атак. Кроме того, пользователь впадает в состояние берсерка на 10 раундов, а его пункты здоровья скрыты на время действия всех этих эффектов.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-+3 to melee attacks
-+5 to damage
--3 AC
--3 to missile attacks
-User goes berserk while in combat
-Hit points hidden
-Weight: 1 lb.~
-@54710     = ~Black Mania~
-@54711     = ~Not all potions are exactly medical.  Some alchemists turn their talents to producing narcotics, and make their living by peddling addictive poisons to the idle and restless.  This black oil is a modified version of one such narcotic.  When drunk Black Mania will induce a violent state of confusion, granting the user a +10 bonus to damage rolls and +5 to melee attack rolls at the cost of a -10 penalty to AC and -5 to missile attacks.  Further, the user goes berserk for 10 rounds and his or her hit points are hidden for the duration of the effect.
+Атака: +3 (ближний бой)
+Урон: +5
+Класс защиты: -3
+Атака: -3 (метательная)
+Пользователь впадает в состояние берсерка
+Пункты здоровья скрыты
+Вес: 1 фунт.~
+@54710     = ~Чёрная мания~
+@54711     = ~Не все зелья являются лекарственными. Некоторые алхимики занимаются производством наркотиков и зарабатывают на жизнь, продавая яды, вызывающие привыкание, праздным и неугомонным людям. Это черное масло - модифицированная версия одного из таких наркотиков. При употреблении "Черная мания" вызывает состояние буйного помешательства, давая пользователю бонус +10 к броскам урона и +5 к броскам атаки в ближнем бою за счет ухудшения на 10 класса брони и на 5 метательных атак. Кроме того, пользователь впадает в состояние берсерка на 10 раундов, а его пункты здоровья скрыты на время действия всех этих эффектов.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-+5 to melee attacks
-+10 to damage
--10 AC
--5 to missile attacks
-User goes berserk while in combat
-Hit points hidden
-Weight: 1 lb.~
-@4712     = ~Bonemeal Eyedrops~
-@4713     = ~Made with a pinch of bonemeal, tomato or carrot juice, distilled water, a few drops of the user's own blood, and an eyeball from a bird of prey, this reddish solution can improve the user's eyesight. Aside from a light burning sensation, the user will suddenly find the world vastly more detailed, granting a +3 bonus to all ranged attacks.  The eyedrops burn slightly, and so the user will gradually cry away the fluid, losing its benefits after 1 hour has passed.
+Атака: +5 (ближний бой)
+Урон: +10
+Класс защиты: -10
+Атака: -5 (метательная)
+Пользователь впадает в состояние берсерка
+Пункты здоровья скрыты
+Вес: 1 фунт.~
+@4712     = ~Глазные капли из костной муки~
+@4713     = ~Приготовленный из щепотки костной муки, томатного или морковного сока, дистиллированной воды, нескольких капель собственной крови пользователя этого средства и глазного яблока хищной птицы, этот красноватый раствор способен улучшить зрение. Помимо легкого жжения, пользователь внезапно обнаружит, что мир стал гораздо более детализированным, и получит бонус +3 ко всем атакам дальнего боя. Эти глазные капли слегка жгут, поэтому слезящиеся глаза будут постепенно вымывать жидкость, и по истечении 1 часа эффект улучшения зрения сойдёт на нет.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-+3 Attack Bonus (ranged weapons only)
-Weight: 1 lb.~
-@54712     = ~Bonemeal Eyedrops~
-@54713     = ~Made with a pinch of bonemeal, tomato or carrot juice, distilled water, a few drops of the user's own blood, and an eyeball from a bird of prey, this reddish solution can improve the user's eyesight. Aside from a light burning sensation, the user will suddenly gain magical insight into the weaknesses of other creatures.  The eyedrops burn slightly, and so the user will gradually cry away the fluid, losing its benefits after 10 rounds have passed.
+Атака: +3 (метательная)
+Вес: 1 фунт.~
+@54712     = ~Глазные капли из костной муки~
+@54713     = ~Приготовленный из щепотки костной муки, томатного или морковного сока, дистиллированной воды, нескольких капель собственной крови пользователя этого средства и глазного яблока хищной птицы, этот красноватый раствор способен улучшить зрение. Помимо легкого жжения, пользователь внезапно обретёт магическое понимание слабых мест других существ. Эти глазные капли слегка жгут, поэтому слезящиеся глаза будут постепенно вымывать жидкость, и по истечении 10 раундов эффект улучшения зрения сойдёт на нет.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Executioner's Eyes for 10 rounds (+4 attack bonus, +4 critical threat range)
-Weight: 1 lb.~
-@4714     = ~Smoke Bomb~
+Эффект заклинания "Глаза палача" на 10 раундов (+4 к атаке и +4 к диапазону критической угрозы)
+Вес: 1 фунт.~
+@4714     = ~Дымовая бомба~
 @4715     = ~Anyone can start a fire and produce a small cloud of smoke, but creating a burst of smoke in one swift movement takes some art.  This small canister of concentrated smoke will quickly create an obscuring cloud when broken, hiding the user for 1d3+3 seconds depending on air currents and other factors.
 
 STATISTICS:
 
 Invisibility for 1d3+3 seconds
 Weight: 1 lb.~
-@54714     = ~Smoke Bomb~
+@54714     = ~Дымовая бомба~
 @54715     = ~Anyone can start a fire and produce a small cloud of smoke, but creating a burst of smoke in one swift movement takes some art.  This small canister of concentrated smoke will quickly create an obscuring cloud when broken, hiding the user for 1d3+3 seconds depending on air currents and other factors.
 
 STATISTICS:
