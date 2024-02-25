@@ -13199,7 +13199,7 @@
 Если владелец рукавиц скрыт или невидим и он атакует другое существо, то он получает +10 к атаке и урону на следующий раунд (в том числе и для первого удара из скрытности/невидимости)
 Вес: 1 фунт~
 @12709    = ~Сапоги скрытой скорости~
-@12710    = ~Эти ботинки помогают своему владельцу двигаться гораздо быстрее, но только когда он скрыт или невидим. Это магическое увеличение скорости не делает шаги владельца сапог громче.
+@12710    = ~Эти сапоги помогают своему владельцу двигаться гораздо быстрее, но только когда он скрыт или невидим. Это магическое увеличение скорости не делает шаги владельца сапог громче.
 
 ПАРАМЕТРЫ:
 
@@ -13849,357 +13849,361 @@
 Может читать заклинание "Истинное видение" раз в день
 Прочитанные владельцем мантии заклинания "Едкий туман Малавона" и "Ярость Малавона" не причиняют вреда союзникам
 Вес: 3 фунтов~
-@12853    = ~Boots of Perfect Speed~
-@12854    = ~These boots have been magically enhanced so that wearer is able to travel extremely fast, much faster than regular boots of speed. They are much prized by those whose profession involves traveling long distances.
+@12853    = ~Сапоги непревзойдённой скорости~
+@12854    = ~Магия этих сапог позволяет надевшему их двигаться экстремально быстро, гораздо быстрее чем в обычных сапогах скорости. Такую обувь очень ценят те, чей род занятий предполагает длительные путешествия.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Constant Effect: Improved Haste while equipped
-Constant Effect: Teleport Step while equipped
-Weight: 1 lb.~
-@12855    = ~Boots of Arcane Evasion~
-@12856    = ~These boots grant the wearer the ability to dodge spells that normally cannot be dodged.
+Постоянный эффект: владелец сапог находится под постоянным эффектом заклинания "Улучшенная спешка"
+Постоянный эффект: владелец сапог находится под постоянным эффектом заклинания "Телепортирующий шаг"
+Вес: 1 фунт~
+@12855    = ~Сапоги уклонения от магии~
+@12856    = ~Эти сапоги дают своему владельцу способность уклоняться от заклинаний, от которых обычно невозможно уклониться.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Arcane Evasion: If the wearer would be hit by an evocation or conjuration spell that normally deals damage without a save (such as Magic Missile, Melf's Acid Arrow or Ice Storm), the wearer can make a Reflex save for half damage. This works with Evasion or Improved Evasion.
-Weight: 1 lb.~
-@12857    = ~Boots of Mobile Regeneration~
-@12858    = ~Boots are normally hand-made by cobblers. Common boots are made by using a form, but good boots are designed for the foot of an individual.
+Уклонение от магии: Если владелец сапог попадает под заклинание, которое обычно наносит урон без спасброска (например, "Магический снаряд", "Кислотная стрела Мелфа" или "Ледяной шторм"), он может сделать спасбросок реакции, и получить лишь половину урона в случае успеха; это сочетается с чертами "Уклонение" и "Улучшенное уклонение"
+Вес: 1 фунт~
+@12857    = ~Сапоги подвижной регенерации~
+@12858    = ~Сапоги обычно делаются вручную. Простые сапоги сапожник изготавливает по колодке, но хорошие шьются на заказ по индивидуальной мерке.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Mobile Regeneration: While moving, the wearer regenerates 1 HP per second.
-Weight: 1 lb.~
-@12859    = ~Boots of Greater Dodging~
-@12860    = ~Boots are normally hand-made by cobblers. Common boots are made by using a form, but good boots are designed for the foot of an individual.
+Подвижная регенерация: во время движения владелец сапог восстанавливает 1 пункт здоровья в секунду
+Вес: 1 фунт~
+@12859    = ~Сапоги великого избегания~
+@12860    = ~Сапоги обычно делаются вручную. Простые сапоги сапожник изготавливает по колодке, но хорошие шьются на заказ по индивидуальной мерке.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Generic Armor Bonus: +8
-Weight: 1 lb.~
-@12861    = ~Earplugs~
-@12862    = ~This is a pair of earplugs made of beeswax. The main practical application of earplugs is to protect against monsters such as harpies or sirens that sing magical songs in combat.
+Класс брони: +8 (общий)
+Вес: 1 фунт~
+@12861    = ~Затычки для ушей~
+@12862    = ~Это пара затычек для ушей, сделанных из пчелиного воска. Основное их практическое применение - это защита от монстров, таких как гарпии или сирены, которые поют магические песни во время боя.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-While equipped, the wearer is effectively deaf, which gives them a 20% chance of spell failure, but also makes them immune to sound-based spells and abilities such as Shout and harpy wails.
-Weight: 0 lb.~
-@12863    = ~Large Shield +4~
-@12864    = ~A large shield is carried in the same manner as a small shield. Its weight prevents the character from using his shield hand for anything other than carrying the large shield. Large shields are usually made of metal, range from 3'-4' in diameter, and can be of any shape, from round to square to a spread dragon's wings. A typical medieval shield resembles a triangle with one point facing downward. This shield has runes scribed onto it that glow eerily in dim light.
+Когда затычки для ушей экипированы, их обладатель практические ничего не слышит; он имеет 20% шанс на то, что его заклинания не сработают, но также он становится невосприимчивым к звуковым заклинаниям и способностям, таким как заклинание "Крик" или вопли гарпий
+Вес: 0 фунтов~
+@12863    = ~Большой щит +4~
+@12864    = ~Большой щит носится так же, как и маленький. Однако он тяжелее, и его вес не позволяет обладателю использовать руку, в которой находится щит, для чего-либо ещё. Большие щиты обычно делаются из металла, имеют три-четыре фута в диаметре и могут быть любой формы: от круглой или квадратной до силуэта расправленных крыльев дракона. Типичный средневековый щит представляет собой треугольник, направленный вершиной вниз. На этот щит нанесены руны, слабо сияющие потусторонним светом.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Shield Bonus: +6
-Armor Check Penalty:  -2
-Arcane Spell Failure:  15%
-Weight: 7 lb.~
-@12865    = ~Large Shield +5~
-@12866    = ~A large shield is carried in the same manner as a small shield. Its weight prevents the character from using his shield hand for anything other than carrying the large shield. Large shields are usually made of metal, range from 3'-4' in diameter, and can be of any shape, from round to square to a spread dragon's wings. A typical medieval shield resembles a triangle with one point facing downward. This shield has runes scribed onto it that glow eerily in dim light.
+Класс защиты: +6 (щит)
+Штраф к проверкам за броню: -2
+Шанс провала заклинания: 15%
+Вес: 7 фунтов~
+@12865    = ~Большой щит +5~
+@12866    = ~Большой щит носится так же, как и маленький. Однако он тяжелее, и его вес не позволяет обладателю использовать руку, в которой находится щит, для чего-либо ещё. Большие щиты обычно делаются из металла, имеют три-четыре фута в диаметре и могут быть любой формы: от круглой или квадратной до силуэта расправленных крыльев дракона. Типичный средневековый щит представляет собой треугольник, направленный вершиной вниз. На этот щит нанесены руны, слабо сияющие потусторонним светом.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Shield Bonus: +7
-Armor Check Penalty:  -2
-Arcane Spell Failure:  15%
-Weight: 6 lb.~
-@12867    = ~Tower Shield +3~
-@12868    = ~This massive shield is nearly as tall as the wielder. Basically, it is a portable wall meant to provide cover. It can provide up to total cover, depending on how far you come out from behind it. A tower shield, however, does not provide cover against targeted spells; a spellcaster can cast a spell on you by targeting the shield you are holding. This shield has runes scribed onto it that glow eerily in dim light.
+Класс защиты: +7 (щит)
+Штраф к проверкам за броню: -2
+Шанс провала заклинания: 15%
+Вес: 6 фунтов~
+@12867    = ~Осадный щит +3~
+@12868    = ~Этот массивный щит по высоте может быть ростом со своего владельца. По сути, это переносная стена, за которой можно укрыться. Если из-за него не высовываться, вы будете полностью защищены от оружия врага. Однако осадный щит не спасает от заклинаний, так как может быть использован в качестве цели для заклинания. На этот щит нанесены руны, слабо сияющие потусторонним светом.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Shield Bonus: +7
-Special:
-  Attack Penalty: -2
-Armor Check Penalty:  -10
-Arcane Spell Failure:  50%
-Weight: 16 lb.~
-@12869    = ~Tower Shield +4~
-@12870    = ~This massive shield is nearly as tall as the wielder. Basically, it is a portable wall meant to provide cover. It can provide up to total cover, depending on how far you come out from behind it. A tower shield, however, does not provide cover against targeted spells; a spellcaster can cast a spell on you by targeting the shield you are holding. This shield has runes scribed onto it that glow eerily in dim light.
+Класс защиты: +7 (щит)
+Штраф к проверкам за броню: -10
+Шанс провала заклинания: 50%
+Особенности:
+ Атака: -2
+Вес: 16 фунтов~
+@12869    = ~Осадный щит +4~
+@12870    = ~Этот массивный щит по высоте может быть ростом со своего владельца. По сути, это переносная стена, за которой можно укрыться. Если из-за него не высовываться, вы будете полностью защищены от оружия врага. Однако осадный щит не спасает от заклинаний, так как может быть использован в качестве цели для заклинания. На этот щит нанесены руны, слабо сияющие потусторонним светом.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Shield Bonus: +8
-Special:
-  Attack Penalty: -2
-Armor Check Penalty:  -10
-Arcane Spell Failure:  50%
-Weight: 13 lb.~
-@12871    = ~Gloves of Flame~
-@12872    = ~Gauntlets are armored gloves. They can be made of leather, metal plates, or chain mail. Every suit of armor is assumed to include gauntlets of an appropriate type. Magical gauntlets tend to be finer, lighter, and more easily worn than normal varieties.
+Класс защиты: +8 (щит)
+Штраф к проверкам за броню: -10
+Шанс провала заклинания: 50%
+Особенности:
+ Атака: -2
+Вес: 13 фунтов~
+@12871    = ~Рукавицы пламени~
+@12872    = ~Рукавицы - это усиленные перчатки. Их делают из кожи, металлических пластин или колец. Каждый доспех должен включать в себя рукавицы соответствующего типа. В отличие от обычных, магические рукавицы, как правило, тоньше, легче и меньше стесняют движения.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-The spell Burning Hands deals 50% more damage and has +4 DC
-The wearer's unarmed attacks deal +1d4 fire damage
-Weight:  1 lb.~
-@12873    = ~Flail of Flame +2~
-@12874    = ~The flail is a sturdy wooden handle attached to an iron rod, a wooden rod with spikes, or a spiked iron ball. Between the handle and its implement is either a hinge or chain link. The weapon has been enhanced magically, effectively forming a bond between the weapon and its wielder.
+Заклинание "Горящие руки" наносит на 50% больше урона и получает +4 к УС
+Безоружные атаки владельца этих рукавиц наносят дополнительно 1d4 урона огнём
+Вес: 1 фунт~
+@12873    = ~Цеп пламени +2~
+@12874    = ~Цеп - это железный прут, деревянный брус с шипами или металлический шипованный шар, прикреплённый к массивной деревянной рукояти с помощью цепи или петли. Первоначально цеп был орудием для молотьбы зерна. Этот цеп зачарован. По всей его поверхности поблёскивают руны.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d8  +2
-Attack Bonus:  +2 
-Enchantment:  +2
-Damage Type:  Bludgeoning
-Special:
-  Flame: +1d6 fire damage
-Weight: 5 lb.
-Required Feat:  Martial Weapon, Flail
-Type:  One-handed~
-@12875    = ~Improved Staff of Power~
-@12876    = ~A wizard's staff is far more than just a gilded walking stick, most being enchanted to an impressive degree. This one is no exception, and whoever the previous owner was, they were powerful indeed. It enables a wizard to better escape hostile magic and avoid physical blows, and empowers the wizard's own spells.
+Урон: 1d8+2
+Атака: +2
+Зачарование: +2
+Тип урона: дробящий
+Особенности:
+ Пламя: +1d6 урона огнём
+Вес: 5 фунтов
+Необходимая черта: Военное оружие, Цепы
+Тип: одноручное~
+@12875    = ~Улучшенный посох могущества~
+@12876    = ~Посох волшебника - это не просто позолоченная прогулочная трость, большинство из них сильно зачарованы. Этот - не исключение, и кто бы ни был его предыдущим владельцем, он был очень сильным магом . С помощью этого посоха волшебник может лучше уклоняться от враждебной магии, избегать физических ударов, а также усиливать свои собственные заклинания.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d6 + 3
-Attack Bonus:  +3
-Enchantment:  +3
-Damage Type:  Bludgeoning
-Special:
-  Generic Armor Bonus: +3
-  Saving Throws: +3
-  Spells cast by the wielder gain +3 DC
-  Spell Power: Can cast the spell Otiluke's Freezing Sphere (at level 20)
-  Spell Power: Can cast the spell Globe of Invulnerability (at level 20)
-Weight: 4 lb.
-Feat Requirement:  Simple Weapon, Quarterstaff
-Type:  Two-handed~
-@12877    = ~Scepter of Tyranny~
-@12878    = ~Owned and enchanted by an archetypical priest of Bane, the Scepter of Tyranny was at the forefront of many terrible battles. Archendros of Bane was a snide, malicious man of almost perfect mental and physical abilities. He could be found leading groups of impressionable young fighters, rogues, and other assorted thugs in press gangs wandering Waterdeep. Faced with opposition, Archendros would simply employ the power of the black and red scepter and urge his minions into the retreating crowds. The charismatic Banite was eventually killed in battle by a priest of Torm and his paladin comrades.
+Урон: 1d6+3
+Атака: +3
+Зачарование: +3
+Тип урона: дробящий
+Особенности:
+ Класс защиты: +3 (общий)
+ Спасброски: +3
+ Заклинания, прочитанные владельцем посоха получают +3 к УС
+ Заклинание: владелец посоха может прочитать заклинание "Замораживающая сфера Отилука" (как заклинатель 20-ого уровня)
+ Заклинание: владелец посоха может прочитать заклинание "Сфера неуязвимости" (как заклинатель 20-ого уровня)
+Вес: 4 фунта
+Необходимая черта: Простое оружие, Посохи
+Тип: двуручное~
+@12877    = ~Скипетр тирании~
+@12878    = ~Этот скипетр, зачарованный типичным жрецом Бейна, повидал вместе с хозяином немало ужасных сражений. Аркендрос, служитель Бейна, был коварен и зол, но обладал выдающимися умственными и физическими способностями. Нередко он собирал под своим началом отряды из молодых воинов, легко поддающихся внушению, плутов и разнообразных бандитов и нагонял страх на весь Вотердип. Встречая отпор, Аркендрос обращался к силам красно-чёрного скипетра, и его подручные бросались в бой. Харизматичного жреца в конце концов прикончил в сражении жрец Торма и его товарищи-паладины.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d6  +3
-Attack Bonus:  +3
-Enchantment:  +3
-Damage Type:  Bludgeoning
-Special:
-  Charisma: +3
-  The wielder's enchantment spells gain +2 DC
-Weight: 3 lb.
-Required Feat:  Simple Weapon, Mace
-Type:  One-handed
-Minimum Wisdom of 13 required~
-@12879    = ~Scepter of Domination~
-@12880    = ~Owned and enchanted by an archetypical priest of Bane, the Scepter of Tyranny was at the forefront of many terrible battles. Archendros of Bane was a snide, malicious man of almost perfect mental and physical abilities. He could be found leading groups of impressionable young fighters, rogues, and other assorted thugs in press gangs wandering Waterdeep. Faced with opposition, Archendros would simply employ the power of the black and red scepter and urge his minions into the retreating crowds. The charismatic Banite was eventually killed in battle by a priest of Torm and his paladin comrades.
+Урон: 1d8+3
+Атака: +3
+Зачарование: +3
+Тип урона: дробящий
+Особенности:
+ Харизма: +3
+ Заклинания школы чародейства, прочитанные владельцем скипетра получают +2 к УС
+Вес: 3 фунта
+Необходимая черта: Простое оружие, Булавы
+Тип: одноручное
+Требования: Мудрость 13~
+@12879    = ~Скипетр подчинения~
+@12880    = ~Этот скипетр, зачарованный типичным жрецом Бейна, повидал вместе с хозяином немало ужасных сражений. Аркендрос, служитель Бейна, был коварен и зол, но обладал выдающимися умственными и физическими способностями. Нередко он собирал под своим началом отряды из молодых воинов, легко поддающихся внушению, плутов и разнообразных бандитов и нагонял страх на весь Вотердип. Встречая отпор, Аркендрос обращался к силам красно-чёрного скипетра, и его подручные бросались в бой. Харизматичного жреца в конце концов прикончил в сражении жрец Торма и его товарищи-паладины.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d6  +5
-Attack Bonus:  +5
-Enchantment:  +5
-Damage Type:  Bludgeoning
-Special:
-  Charisma: +5
-  The wielder's enchantment spells gain +3 DC
-Weight: 3 lb.
-Required Feat:  Simple Weapon, Mace
-Type:  One-handed
-Minimum Wisdom of 13 required~
-@12881    = ~Tome of the Dedicated Specialist~
-@12882    = ~The text in this tome shifts and changes depending on which person is reading it, though only a wizard will see any text at all. For any specialist wizard, this text contains great magical knowledge, but it comes with an unbreakable curse: the wizard must forever rely on the spells they learned in the book, foregoing all others.
+Урон: 1d8+5
+Атака: +5
+Зачарование: +5
+Тип урона: дробящий
+Особенности:
+ Харизма: +5
+ Заклинания школы чародейства, прочитанные владельцем скипетра получают +3 к УС
+Вес: 3 фунта
+Необходимая черта: Простое оружие, Булавы
+Тип: одноручное
+Требования: Мудрость 13~
+@12881    = ~Фолиант узкого специалиста~
+@12882    = ~Текст в этом фолианте меняется в зависимости от того, кто его читает, но только волшебник может увидеть хоть какой-то текст. Для любого мага-специалиста этот текст содержит огромные магические знания, но на него наложено нерушимое проклятие: волшебник должен всегда полагаться только на заклинания, которые он выучил из этой книги, отказываясь от всех остальных.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Special:
-  A specialist wizard who reads this book learns every wizard spell of their school, but cannot cast wizard spells of any other school.
-Weight: 8 lb.~
-@12883    = ~Silvered Masterwork Spear~
-@12884    = ~One of man's earliest weapons, dating back to the most primitive of times, the first spears were simply wooden poles or sticks sharpened at one end. When man mastered metals, spearheads were made from iron and steel. Having reached this end, weaponers began experimenting with different types of spear heads, thus leading to the development of certain polearm types. This particular spear has a head of silver, making it effective against lycanthropes and devils.
+Особенности:
+ Маг-специалист, прочитавший эту книгу, изучает все заклинания своей школы, но не может произносить заклинания никакой другой школы
+Вес: 8 футов~
+@12883    = ~Посеребрённое отличное копьё~
+@12884    = ~Копья относятся к самым древним видам оружия, известным ещё в первобытные времена - тогда копьё представляло собой деревянный посох или палку с заострённым концом. С развитием обработки металла наконечники стали изготавливать из железа и стали. Затем мастера-оружейники начали придумывать новые варианты наконечников, лучше приспособленные для конкретных задач, - так появились различные виды древкового оружия. У этого копья серебряный наконечник, что делает его эффективным против ликантропов и дьяволов.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d8
-Attack Bonus: +1 
-Damage Type:  Piercing
-Special:
-  Counts as a silver weapon
-Weight: 6 lb.
-Feat Requirement:  Martial Weapon, Polearm
-Type:  Two-handed~
-@12885    = ~Rogue's Cowl~
-@12886    = ~This dark brown cowl is meant to be worn on the head and over the shoulders as a broad hood. It was crafted by the gnomish rogue and illusionist Brein Chestnut. Brein used the cowl on his own adventures for several years before his childhood sweetheart convinced him to settle down. He gave the cowl to his nephew, Chirchet, who in turn sold the item for a large stretch of farmland.
+Урон: 1d8
+Атака: +1
+Тип урона: колющий
+Особенности:
+ Оружие считается серебряным
+Вес: 6 фунтов
+Необходимая черта: Военное оружие, Древковое
+Тип: двуручное~
+@12885    = ~Капюшон Плута~
+@12886    = ~Этот тёмно-коричневый головной убор закрывает голову и плечи как капюшон. Его изготовил гном Брин Каштан, вор и иллюзионист. Капюшон несколько лет сопровождал его в приключениях, пока давняя спутница жизни не убедила Брина осесть. Тогда он подарил головной убор своему племяннику Чирчету, который отдал артефакт в обмен на большой земельный участок.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Generic Armor Bonus: +2
-Hide in Shadows: +4
-Move Silently: +4
-Weight: 2 lb.~
-@12887    = ~Rogue's Cowl~
-@12888    = ~This dark brown cowl is meant to be worn on the head and over the shoulders as a broad hood. It was crafted by the gnomish rogue and illusionist Brein Chestnut. Brein used the cowl on his own adventures for several years before his childhood sweetheart convinced him to settle down. He gave the cowl to his nephew, Chirchet, who in turn sold the item for a large stretch of farmland.
+Класс защиты: +2 (общий)
+Навык "Скрыться в тенях": +4
+Навык "Тихая походка": +4
+Вес: 2 фунта~
+@12887    = ~Капюшон Плута~
+@12888    = ~Этот тёмно-коричневый головной убор закрывает голову и плечи как капюшон. Его изготовил гном Брин Каштан, вор и иллюзионист. Капюшон несколько лет сопровождал его в приключениях, пока давняя спутница жизни не убедила Брина осесть. Тогда он подарил головной убор своему племяннику Чирчету, который отдал артефакт в обмен на большой земельный участок.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Generic Armor Bonus: +4
-Hide in Shadows: +8
-Move Silently: +8
-Weight: 2 lb.~
-@12889    = ~Goblin Arrows~
-@12890    = ~These arrows are known less for their damaging power than they are for their annoying summoning power. Invented by a black-hearted gnome named Turbar Talinbar, the Goblin Arrows are commonly found in the quivers of mischievous halflings and elves. Several adventuring companies use the Goblin Arrows before launching any major attacks.
+Класс защиты: +4 (общий)
+Навык "Скрыться в тенях": +8
+Навык "Тихая походка": +8
+Вес: 2 фунта~
+@12889    = ~Гоблинские стрелы~
+@12890    = ~Эти стрелы отличает не столько пробивная мощь, сколько раздражающие свойства призывания. Их изобрёл зловредный гном по имени Турбар Талинбар. Нередко ими пользуются озорные полурослики и эльфы. Некоторые отряды искателей приключений любят выпустить во врага несколько гоблинских стрел, прежде чем начать серьёзную атаку.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d6 + 1
-Attack Bonus:  +1 
-Enchantment:  +1
-Damage Type:  Missile (piercing)
-Special:
-  On a successful hit, a goblin is summoned next to the target for 10 rounds
-Weight: 0 lb.
-Launcher:  Bow~
-@12891    = ~Full Plate Mail~
-@12892    = ~Full plate armor is the best armor a warrior can buy, both in appearance and protection. The perfectly fitted interlocking plates are specially angled to deflect arrows and blows, and the entire suit is carefully adorned with rich engraving and embossed detail.
+Урон: 1d6+1
+Атака: +1
+Зачарование: +1
+Тип урона: метательный (колющий)
+Особенности:
+ При успешном попадании рядом с целью появляется гоблин на 10 раундов
+Вес: 0
+Оружие: лук~
+@12891    = ~Полные латы~
+@12892    = ~Полный латный доспех - лучшее из того, что может позволить себе воин, как с точки зрения защиты, так и по внешнему виду. Великолепно подогнанные друг к другу металлические пластины расположены под специальным углом, чтобы лучше отражать стрелы и удары, а весь доспех искусно украшен богатой гравировкой и чеканкой. Чары, наложенные на этот доспех, делают его идеальной защитой для воинов.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Heavy Armor
-Armor Bonus: +8
-Max Dex Bonus:  +1
-Armor Check Penalty:  -6
-Arcane Spell Failure:  35%
-Weight: 68 lb.~
-@12893    = ~Cradle of Mielikki~
-@12894    = ~A lesser-known weapon, historically only used by rangers serving Mielikki, this blade has a very humble and simple background. The Cradle of Mielikki was originally blessed by a triumvirate of druids for a ranger named Kell Pathwalker. Kell led a peaceful life, fending off the occasional orc or goblin who might wander into his lands. When he died of old age, the druids had no one to pass the blade on to. The oldest of them, Bimon, held onto the scimitar, but never used it in battle. When Bimon and his associates left their grove for an extended period of time, a wandering mercenary robbed the hollow tree of its riches. He carried the scimitar north to the Spine of the World, where he died of exposure.
+Тяжёлая броня
+Класс защиты: +8 (доспех)
+Максимальный бонус ловкости: +1
+Штраф к проверкам за броню: -6
+Шанс провала заклинания: 35%
+Вес: 68 фунтов~
+@12893    = ~Колыбель Миеликки~
+@12894    = ~Это малоизвестное оружие, которым пользовались только следопыты - последователи Миеликки. Происхождение его - очень простое и скромное. Колыбель Миеликки создали для следопыта по имени Келл Первопроходец; благословил этот меч триумвират друидов. Келл жил мирно, порой отбивая нападение орка или гоблина, что забредали на его земли. Когда он умер от старости, друидам некому было передать клинок. Старший из них, Бимон, хранил чудесный скимитар, но ни разу не пользовался им в бою. Когда Бимон и его товарищи надолго оставили свою рощу, один странствующий наёмник обнаружил дерево с дуплом, в котором друиды хранили свои сокровища, и всё оттуда выгреб. Он унёс скимитар на север, к Хребту Мира, где и замёрз насмерть.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d6 + 1
-Attack Bonus: +1 
-Enchantment:  +1
-Damage Type:  Slashing
-Special:
-  The chance to critically hit with this weapon is increased by 5%. If the wielder is dual-wielding, this bonus applies to the other weapon as well.
-Weight:  4 lb.
-Feat Requirement:  Martial Weapon, Large Sword
-Type:  One-handed~
-@12895    = ~Cradle of Mielikki~
-@12896    = ~A lesser-known weapon, historically only used by rangers serving Mielikki, this blade has a very humble and simple background. The Cradle of Mielikki was originally blessed by a triumvirate of druids for a ranger named Kell Pathwalker. Kell led a peaceful life, fending off the occasional orc or goblin who might wander into his lands. When he died of old age, the druids had no one to pass the blade on to. The oldest of them, Bimon, held onto the scimitar, but never used it in battle. When Bimon and his associates left their grove for an extended period of time, a wandering mercenary robbed the hollow tree of its riches. He carried the scimitar north to the Spine of the World, where he died of exposure.
+Урон: 1d6+1
+Атака: +1
+Зачарование: +1
+Тип урона: рубящий
+Особенности:
+ Шанс нанести критический удар этим оружием увеличивается на 5%; если владелец этого оружия держит и второе оружие в руках, этот бонус распространяется и на него
+Вес: 4 фунта
+Необходимая черта: Военное оружие, Большие мечи
+Тип: одноручное~
+@12895    = ~Колыбель Миеликки~
+@12896    = ~Это малоизвестное оружие, которым пользовались только следопыты - последователи Миеликки. Происхождение его - очень простое и скромное. Колыбель Миеликки создали для следопыта по имени Келл Первопроходец; благословил этот меч триумвират друидов. Келл жил мирно, порой отбивая нападение орка или гоблина, что забредали на его земли. Когда он умер от старости, друидам некому было передать клинок. Старший из них, Бимон, хранил чудесный скимитар, но ни разу не пользовался им в бою. Когда Бимон и его товарищи надолго оставили свою рощу, один странствующий наёмник обнаружил дерево с дуплом, в котором друиды хранили свои сокровища, и всё оттуда выгреб. Он унёс скимитар на север, к Хребту Мира, где и замёрз насмерть.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d6 + 3
-Attack Bonus: +3
-Enchantment:  +3
-Damage Type:  Slashing
-Special:
-  The chance to critically hit with this weapon is increased by 10%. If the wielder is dual-wielding, this bonus applies to the other weapon as well.
-Weight:  4 lb.
-Feat Requirement:  Martial Weapon, Large Sword
-Type:  One-handed~
-@12897    = ~Presio's Dagger~
-@12898    = ~This dagger once belonged to Presio, a priestess of Talona, goddess of disease and poison. Presio is unlikely to have ever used it for anything other than ceremonies, due to the restrictions of her faith. Presio was given the dagger as a gift upon attaining the rank of Most Debilitating Holiness.
+Урон: 1d6+3
+Атака: +3
+Зачарование: +3
+Тип урона: рубящий
+Особенности:
+ Шанс нанести критический удар этим оружием увеличивается на 10%; если владелец этого оружия держит и второе оружие в руках, этот бонус распространяется и на него
+Вес: 4 фунта
+Необходимая черта: Военное оружие, Большие мечи
+Тип: одноручное~
+@12897    = ~Кинжал Пресио~
+@12898    = ~Этот кинжал когда-то принадлежал Пресио, жрице Талоны, богини болезней и яда. Вряд ли Пресио использовала его где-то помимо церемоний, так как культ Талоны ограничивает применение такого оружия. Пресио получила этот кинжал в дар, получив звание Самого Болезнетворного Святейшества.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d6 + 2
-Attack Bonus:  +2 
-Enchantment:  +2
-Damage Type:  Piercing
-Special:
-  When cast by the wielder, the spells Mold Touch, Cloud of Pestilence, Contagion, Poison, Dolorous Decay and Cloudkill get +5 DC.
-Weight: 2 lb.
-Feat Requirement:  Simple Weapon, Small Blade
-Type:  One-handed~
-@12899    = ~Presio's Dagger~
-@12900    = ~This dagger once belonged to Presio, a priestess of Talona, goddess of disease and poison. Presio is unlikely to have ever used it for anything other than ceremonies, due to the restrictions of her faith. Presio was given the dagger as a gift upon attaining the rank of Most Debilitating Holiness.
+Урон: 1d6+2
+Атака: +2
+Зачарование: +2
+Тип урона: колющий
+Особенности:
+ Когда заклинатель произносит такие заклинания, как "Прикосновение плесени", "Облако чумы", "Инфекция", "Яд", "Мучительное гниение" и "Облако-убийца", они получают +5 к УС
+Вес: 2 фунта
+Необходимая черта: Простое оружие, Короткие клинки
+Тип: одноручное~
+@12899    = ~Кинжал Пресио~
+@12900    = ~Этот кинжал когда-то принадлежал Пресио, жрице Талоны, богини болезней и яда. Вряд ли Пресио использовала его где-то помимо церемоний, так как культ Талоны ограничивает применение такого оружия. Пресио получила этот кинжал в дар, получив звание Самого Болезнетворного Святейшества.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d6 + 3
-Attack Bonus:  +3
-Enchantment:  +3
-Damage Type:  Piercing
-Special:
-  When cast by the wielder, the spells Mold Touch, Cloud of Pestilence, Contagion, Poison, Dolorous Decay and Cloudkill get +7 DC.
-Weight: 2 lb.
-Feat Requirement:  Simple Weapon, Small Blade
-Type:  One-handed~
+Урон: 1d6+3
+Атака: +3
+Зачарование: +3
+Тип урона: колющий
+Особенности:
+ Когда заклинатель произносит такие заклинания, как "Прикосновение плесени", "Облако чумы", "Инфекция", "Яд", "Мучительное гниение" и "Облако-убийца", они получают +7 к УС
+Вес: 2 фунта
+Необходимая черта: Простое оружие, Короткие клинки
+Тип: одноручное~
 //@12901    = ~Gauntlets of Infernal Damnation~
-@12902    = ~Cursed by a malefic priestess of Beshaba, goddess of bad luck, these hard black leather gloves affix themselves to whoever tries them on.  Despite the extremely nasty nature of the gloves, wealthy adventurers sometimes buy the distinctive gauntlets to place in their treasure hordes, waiting for a greedy thief to try them on.
+@12902    = ~Зловредная жрица Бешабы прокляла эти жёсткие перчатки из чёрной кожи. Они намертво прирастают к надевшему их. Но несмотря на отвратительную природу этих перчаток, богатые искатели приключений иногда покупают такие и хранят вместе со своими сокровищами, ожидая, что какой-нибудь жадный вор примерит их.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Constant Effect: Wearer is under the effect of Shroud of Flame
-Special: Can only be removed by a Remove Curse spell~
+Постоянный эффект: владелец перчаток находится под постоянным эффектом заклинания "Саван пламени"
+Проклятие: перчатки можно снять только с помощью заклинания "Снять проклятие"~
 //@12903    = ~Bone Talisman~
-@12904    = ~Bone talismans are highly coveted among practitioners of necromancy.  The charm is created from a piece of bone taken from the remains of a slain vampire.  Usually fashioned into a necklace or ring, the fey magic contained within the talisman enables the wearer to drain the life force from any living creature he or she touches.
+@12904    = ~Этот талисман сделан из кости убитого вампира. Такие талисманы высоко ценят некроманты. Кость обычно вставляют в кольцо или ожерелье, получая артефакт, который позволяет одним прикосновением забирать жизненные силы у любого живого существа.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Special: When cast by the wearer, Larloch's Minor Drain drains an additional 10 hit points, and Vampiric Touch drains an additional 20 hit points
-Spell Power: Can cast the spell Vampiric Touch (at level 10) once per day~
+Заклинание "Малый отток Ларлоха" отнимает дополнительно 10 пунктов здоровья, а "Прикосновение вампира" - 20
+Заклинание: владелец талисмана может читать заклинание "Прикосновение вампира" (как заклинатель десятого уровня) раз в день
+Вес: 3 фунта~
 //@12905    = ~Bone Talisman~
-@12906    = ~Bone talismans are highly coveted among practitioners of necromancy.  The charm is created from a piece of bone taken from the remains of a slain vampire.  Usually fashioned into a necklace or ring, the fey magic contained within the talisman enables the wearer to drain the life force from any living creature he or she touches.
+@12906    = ~Этот талисман сделан из кости убитого вампира. Такие талисманы высоко ценят некроманты. Кость обычно вставляют в кольцо или ожерелье, получая артефакт, который позволяет одним прикосновением забирать жизненные силы у любого живого существа.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Special: When cast by the wearer, Larloch's Minor Drain drains an additional 15 hit points, and Vampiric Touch drains an additional 30 hit points
-Spell Power: Can cast the spell Vampiric Touch (at level 10) once per day~
-@12907    = ~Potion of Draconic Strength~
-@12908    = ~This potion was brewed from the pale yolk found in the white wyrm's egg, combined with some reagents from Imphraili's lab. Though it came at the cost of the future wyrm hatchling's life, the potion grants the strength of a fully grown white wyrm, whose might exceeds that of many giants. This strength lasts for 30 rounds.
+Заклинание "Малый отток Ларлоха" отнимает дополнительно 15 пунктов здоровья, а "Прикосновение вампира" - 30
+Заклинание: владелец талисмана может читать заклинание "Прикосновение вампира" (как заклинатель десятого уровня) раз в день
+Вес: 3 фунта~
+@12907    = ~Зелье драконьей силы~
+@12908    = ~Это зелье было приготовлено из желтка яйца белого змия, с помощью реагентов из лаборатории Имфраили. Хотя за это пришлось заплатить жизнью будущего дракона, зелье дарует силу полностью выросшего белого змия, чья мощь превосходит великанов. Этот эффект длится 30 раундов.
 
-Strength: +12
-Cold Resistance: 50/-~
-@12909    = ~Potion of Draconic Strength~
-@12910    = ~This potion was brewed from the pale yolk found in the white wyrm's egg, combined with some reagents from Imphraili's lab. Though it came at the cost of the future wyrm hatchling's life, the potion grants the strength of a fully grown white wyrm, whose might exceeds that of many giants. This strength lasts for 30 rounds.
+Сила: +12
+Сопротивление холоду: 50/-~
+@12909    = ~Зелье драконьей силы~
+@12910    = ~Это зелье было приготовлено из желтка яйца белого змия, с помощью реагентов из лаборатории Имфраили. Хотя за это пришлось заплатить жизнью будущего дракона, зелье дарует силу полностью выросшего белого змия, чья мощь превосходит великанов. Этот эффект длится 30 раундов.
 
-Strength: +24
-Cold Resistance: 100/-~
-@12911    = ~Pikeman's End~
-@12912    = ~This notched and tarnished blade once saw a great deal of service in the employ of Kath Tahl, a warlord and bandit who roamed the countryside of the western heartlands.  Kath was fond of destroying peasant militias to send a warning to other communities.  He used this sword to that end.  When the nervous defenders tried to form a line of pikes, Kath and other heavily armored men would wade into the fray, hacking their weapons apart and breaking their formation.  Once the villagers had been sent into disarray, his men would fall in with cavalry and take what they wanted.  Kath eventually met his end when a rival warlord, Marhap the Blackbeard, destroyed Kath's army.
+Сила: +24
+Сопротивление холоду: 100/-~
+@12911    = ~Конец копейщика~
+@12912    = ~Этот клинок, зазубренный и потерявший блеск, когда-то верно служил Кату Тахлу, воителю и бандиту, который орудовал в деревнях западных областей. В качестве предупреждения соседним поселениям Кат обычно уничтожал крестьянские ополчения. В этом деле он и находил применение своему мечу. Пока защитники с копьями и пиками нервно пытались построиться, Кат и его тяжеловооружённые воины бросались на несчастных, ломая их оружие и разбивая строй. Когда сопротивление было разбито, в бой вступала конница Ката, и бандиты беспрепятственно могли грабить деревню. В конце концов Кат погиб, когда его войско уничтожил более сильный соперник, Мархал Чернобородый.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  2d6 + 3
-Attack Bonus:  +3 
-Enchantment:  +3
-Damage Type:  Slashing
-Special:
-  Pikeman's End deflects the first instance of piercing (melee) damage that would hit the wielder each round
-Weight: 12 lb.
-Feat Requirement:  Martial Weapon, Great Sword
-Type:  Two-handed~
-@12913    = ~Pikeman's Ruin~
-@12914    = ~This notched and tarnished blade once saw a great deal of service in the employ of Kath Tahl, a warlord and bandit who roamed the countryside of the western heartlands.  Kath was fond of destroying peasant militias to send a warning to other communities.  He used this sword to that end.  When the nervous defenders tried to form a line of pikes, Kath and other heavily armored men would wade into the fray, hacking their weapons apart and breaking their formation.  Once the villagers had been sent into disarray, his men would fall in with cavalry and take what they wanted.  Kath eventually met his end when a rival warlord, Marhap the Blackbeard, destroyed Kath's army.
+Урон: 2d6+3
+Атака: +3
+Зачарование: +3
+Тип урона: рубящий
+Особенности:
+ Этот меч каждый раунд отклоняет первую колющую атаку (ближнего боя), которая должна бы попасть во владельца меч
+Вес: 12 фунтов
+Необходимая черта: Военное оружие, Двуручные мечи
+Тип: двуручное~
+@12913    = ~Могила копейщика~
+@12914    = ~Этот клинок, зазубренный и потерявший блеск, когда-то верно служил Кату Тахлу, воителю и бандиту, который орудовал в деревнях западных областей. В качестве предупреждения соседним поселениям Кат обычно уничтожал крестьянские ополчения. В этом деле он и находил применение своему мечу. Пока защитники с копьями и пиками нервно пытались построиться, Кат и его тяжеловооружённые воины бросались на несчастных, ломая их оружие и разбивая строй. Когда сопротивление было разбито, в бой вступала конница Ката, и бандиты беспрепятственно могли грабить деревню. В конце концов Кат погиб, когда его войско уничтожил более сильный соперник, Мархал Чернобородый.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  2d6 + 6
-Attack Bonus:  +6
-Enchantment:  +6
-Damage Type:  Slashing
-Special:
-  Pikeman's Ruin reflects the first instance of piercing (melee) damage that would hit the wielder each round back at the source
-Weight: 12 lb.
-Feat Requirement:  Martial Weapon, Great Sword
-Type:  Two-handed~
-@12915    = ~Wizard Robe of Acid Resistance~
-@12916    = ~Wizard Robes of Acid Resistance are sometimes worn for protection against monstrous, acidic slimes, but they are more commonly worn for protection against other wizards. Not many acid spells are known amongst mages, but the few that are known are widely used. Like other mage robes, these robes can only be worn by wizards.
+Урон: 2d6+6
+Атака: +6
+Зачарование: +6
+Тип урона: рубящий
+Особенности:
+ Этот меч каждый раунд отражает обратно к источнику первую колющую атаку (ближнего боя), которая должна бы попасть во владельца меч
+Вес: 12 фунтов
+Необходимая черта: Военное оружие, Двуручные мечи
+Тип: двуручное~
+@12915    = ~Мантия сопротивления кислоте~
+@12916    = ~Такие робы иногда надевают для защиты от чудовищных кислотных слизей, но чаще всего их носят для защиты от других волшебников. Среди магов известно не так много кислотных заклинаний, но те немногие, что известны, широко используются. Как и другие мантии, эти мантии могут носить только волшебники.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Resistance:  20/- Acid Resistance
-All acid damage dealt by the character is increased by 20%
-Weight:  3 lb.~
-@12917    = ~Wizard Robe of Force Resistance~
-@12918    = ~Of all the robes of resistance, Wizard Robes of Force Resistance are among the rarest. They are rare not because they are not useful, but because they are much harder to create than other robes of resistance. The name is a misnomer, as these robes are more useful for strengthening magic than for resisting it.
+Особенности:
+ Сопротивление: 20/- сопротивления кислоте
+ Весь урон кислотой, наносимый носителем робы, увеличивается на 20%
+Вес: 3 фунта~
+@12917    = ~Мантия сопротивления урону магией~
+@12918    = ~Среди всех мантий сопротивления, эти - одни из самых редких. Они редки не потому, что бесполезны, а потому, что их гораздо сложнее создать, чем другие мантии сопротивления. Их название не совсем верно, так как эти мантии полезны в основном для усиления магического урона, чем для сопротивления ему.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Resistance:  20/- Magic Damage Resistance
-All magic damage dealt by the character is increased by 20%
-Weight:  3 lb.~
-@19900    = ~Hrm - you are powerful allies, indeed. More gold and gems to line your pockets, then - also, a suit of plate armor, a warhammer, a helmet, all crafted and enchanted by great duergar artisans. They are well deserved, outsider.~
-@19901    = ~Drink this Rainwater Brew, Ennelia. It should help your condition.~
-@19902    = ~Drink this Sour Draught, Ennelia. It should help your condition.~
-@19903    = ~This rainwater brew may help - drink it down.~
-@19904    = ~Perhaps a sour draught can help your wounds.~
-@19905    = ~This rainwater brew may help - drink it down.~
-@19906    = ~Perhaps a sour draught can help your wounds.~
-@19907    = ~Malakar deflected a slashing attack~
-@19908    = ~Avoided damage~
-@19909    = ~Pikeman's End deflected a piercing attack~
-@19910    = ~We used Imphraili's notes to complete her theoretical experiment regarding the transfusion of a modified Sanguis Anima into one's own bloodstream.  The process was difficult and painful but left our alchemist strangely invigorated.~
-@19911    = ~We used the white wyrm's egg to form a magical liquid which was then mixed into the alchemist's bloodstream.  The process cooled the blood, making them resistant to cold but more vulnerable to heat.~
+Особенности:
+ Сопротивление: 20/- сопротивления урону магией
+ Весь урон магией, наносимый носителем робы, увеличивается на 20%
+Вес: 3 фунта~
+@19900    = ~Хм, вы и в самом деле полезные союзники. А значит, в ваших карманах должно найтись место для нового золота и драгоценных камней! Кроме того, вот вам латы, боевой молот и шлем - всё изготовлено и зачарованно великими дуэргарскими мастерами. Воистину, вы их заслужили.~
+@19901    = ~Эннелия, выпей дождевое пиво. Оно должно тебе помочь.~
+@19902    = ~Эннелия, выпей кислое разливное. Оно должно тебе помочь.~
+@19903    = ~У меня есть дождевое пиво. Пей, оно должно помочь.~
+@19904    = ~Может, с твоими ранами справится кислое разливное?~
+@19905    = ~У меня есть дождевое пиво. Пей, оно должно помочь.~
+@19906    = ~Может, с твоими ранами справится кислое разливное?~
+@19907    = ~Малакар отклонил рубящую атаку~
+@19908    = ~Урон был предотвращён~
+@19909    = ~Конец копейщика отклонил колющую атаку~
+@19910    = ~С помощью записей Имфраили мы завершили её теоретический эксперимент по переливанию видоизменённой Сангвис Анима в чью-то кровь. Процесс был сложный и болезненный, но наш алхимик получил странный заряд бодрости.~
+@19911    = ~Мы использовали яйцо белого змия для создания волшебного зелья, которое затем было введено в кровь нашего алхимика. Это зелье увеличило сопротивление холоду, но при этом увеличило и уязвимость к огню.~

@@ -1,4 +1,4 @@
-@4700     = ~Rainwater Brew~
+@4700     = ~Дождевое пиво~
 @4701     = ~Cheap, efficient, and crude, this potion is a mix of rainwater, clay, ash, and roots from several plants.  This modest brew will restore 2d6 hit points to the drinker.
 
 STATISTICS:
@@ -12,7 +12,7 @@ STATISTICS:
 
 Heals 5d6 hit points
 Weight: 1 lb.~
-@4702     = ~Sour Draught~
+@4702     = ~Кислое разливное~
 @4703     = ~Potent potions require less common ingredients, and this brew is no exception. Animal fat, bile, dried leaves, and fermented meat comprise this foul-smelling concoction, but a dying friend will not complain. This brew will restore 4d8 hit points to whoever is desperate enough to drink it.
 
 STATISTICS:
