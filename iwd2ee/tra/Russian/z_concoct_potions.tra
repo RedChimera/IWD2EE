@@ -496,62 +496,61 @@
 
 При употреблении восстанавливает 150 пунктов здоровья нежити и наносит 150 урона всем другим существам
 Вес: 1 фунт~
-@4756     = ~Moldy Poultice~
-@4757     = ~This poultice is a small jar of very fertile soil topped with a lush green moss. An alchemist must take special care when cultivating this moss, constantly making sure it has just the right amount of water and nutrients to thrive. Singing lullabies, burning incense, and paying compliments to the moss are all critical parts of the process.
+@4756     = ~Плесневелая припарка~
+@4757     = ~Эта припарка представляет собой небольшую банку с очень плодородной почвой, покрытой пышным зеленым мхом. Алхимик должен проявлять особую заботу при выращивании этого мха, постоянно следя за тем, чтобы он получал необходимое количество воды и питательных веществ для процветания. Пение колыбельных песен, воскурение благовоний и комплименты мху - все это важные составляющие процесса.
 
-Nurtured with love and blessed with plenty of exposure to moonlight, this moss will develop a faint glow. If the alchemist has treated it well, the moss will gladly spend its precious energy to bring a dead creature back to life.
+Если ухаживать за мхом с любовью и почаще освещать его лунным светом, он начнет слабо светиться. Если алхимик хорошо с ним обращался, мох с радостью потратит свою драгоценную энергию, чтобы вернуть к жизни мертвое существо.
 
-Its power spent and its personality sacrificed for the sake of the alchemist's fallen comrade, the moss will lose its glow. The user is well advised to throw the moss away--keeping it around tends to make one somber, and the moss wouldn't want its best friend to be sad.
+Когда его сила израсходована, а личность принесена в жертву ради павшего товарища алхимика, мох теряет свое свечение. После этого рекомендуется выбросить его - так как присутствие мёртвого мха рядом заставляет грустить, а мох не хотел бы, чтобы его лучший друг грустил.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Resurrects one creature
-Makes the user sigh and look wistfully into the distance every now and then
-Weight: 1 lb.
-~
-@4758     = ~(sighs and looks wistfully into the distance)~
-@4759     = ~Beetle Grease~
-@4760     = ~Most people would object to slathering their bodies with grease made from smashed beetles. Adventurers with no such objections will gain a +4 bonus to their Reflex saves for 1 hour when applying this grease to their skin.
+Воскрешает одно существо
+Заставляет пользователя время от времени вздыхать и смотреть вдаль с тоской
+Вес: 1 фунт~
+@4758     = ~(вздыхает и с тоской смотрит вдаль)~
+@4759     = ~Слизь жуков~
+@4760     = ~Большинство не желает смазывать своё тело слизью, полученный из раздавленных жуков. Искатели приключений, которые не побрезгуют нанести эту слизь на свою кожу, получат бонус +4 к спасброскам реакции на 1 час.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-+4 to Reflex saves
-Weight: 1 lb.~
-@54759     = ~Beetle Grease~
-@54760     = ~Most people would object to slathering their bodies with grease made from smashed beetles. Adventurers with no such objections will gain a +8 bonus to their Reflex saves for 1 hour when applying this grease to their skin.
+Спасброски: +4 к спасброскам реакции
+Вес: 1 фунт~
+@54759     = ~Слизь жуков~
+@54760     = ~Большинство не желает смазывать своё тело слизью, полученный из раздавленных жуков. Искатели приключений, которые не побрезгуют нанести эту слизь на свою кожу, получат бонус +8 к спасброскам реакции на 1 час.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-+8 to Reflex saves
-Weight: 1 lb.~
-@4761     = ~Beholder Sauce~
-@4762     = ~Comprised of the blood, lymph, tears, and eyeball juice of a (preferably) dead beholder, this tangy sauce will temporarily numb the user's eyes so that they can be transmuted into several blobby stalks.  Aside from blurry vision and no small amount of discomfort, this potion allows any spellcaster to begin casting a new spell as soon as he or she finishes casting the previous one, eliminating the normal delay between spellcasting.  This allows the user to cast more than one spell in a single round, though the character cannot benefit from reductions in casting time.  After 2 rounds, the user's eyes will return to their normal form and the effect of the potion will wear off.
+Спасброски: +8 к спасброскам реакции
+Вес: 1 фунт~
+@4761     = ~Соус созерцателя~
+@4762     = ~Состоящий из крови, лимфы, слез и раздавленного глазного яблока созерцателя (желательно мертвого), этот терпкий соус заставляет глаза пользователя временно онеметь, и после этого трансформирует их в шаровидные стебли.  Помимо размытого зрения и небольшого дискомфорта, это зелье позволяет любому заклинателю начать произносить новое заклинание, как только он закончит произносить предыдущее, устраняя обычную задержку между заклинаниями. Это позволяет произнести более одного заклинания за один раунд, хотя эффекты сокращения времени произнесения заклинания и не работают. Через 2 раунда глаза пользователя вернутся в свою обычную форму, и эффект зелья исчезнет.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Improved Alacrity
-Weight: 1 lb.~
-@54761     = ~Beholder Sauce~
-@54762     = ~Comprised of the blood, lymph, tears, and eyeball juice of a (preferably) dead beholder, this tangy sauce will temporarily numb the user's eyes so that they can be transmuted into several blobby stalks.  Aside from blurry vision and no small amount of discomfort, this potion allows any spellcaster to begin casting a new spell as soon as he or she finishes casting the previous one, eliminating the normal delay between spellcasting.  This allows the user to cast more than one spell in a single round, though the character cannot benefit from reductions in casting time.  After 3 rounds, the user's eyes will return to their normal form and the effect of the potion will wear off.
+накладывает эффект заклинания "Улучшенная проворность"
+Вес: 1 фунт~
+@54761     = ~Соус созерцателя~
+@54762     = ~Состоящий из крови, лимфы, слез и раздавленного глазного яблока созерцателя (желательно мертвого), этот терпкий соус заставляет глаза пользователя временно онеметь, и после этого трансформирует их в шаровидные стебли.  Помимо размытого зрения и небольшого дискомфорта, это зелье позволяет любому заклинателю начать произносить новое заклинание, как только он закончит произносить предыдущее, устраняя обычную задержку между заклинаниями. Это позволяет произнести более одного заклинания за один раунд, хотя эффекты сокращения времени произнесения заклинания и не работают. Через 3 раунда глаза пользователя вернутся в свою обычную форму, и эффект зелья исчезнет.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Improved Alacrity
-Weight: 1 lb.~
-@4763     = ~Coral Balm~
-@4764     = ~By tearing off chunks from a coral reef, crushing the coral into powder, and mixing it with sea cucumber paste, an alchemist may create a bluish balm.  When smeared over the user's body, the balm will expand into a powerful shield,  trapping the user inside but protecting them from all forms of attack.  The shield will absorb 100 hit points before shattering.
+накладывает эффект заклинания "Улучшенная проворность"
+Вес: 1 фунт~
+@4763     = ~Коралловый бальзам~
+@4764     = ~Оторвав куски от кораллового рифа, измельчив их в порошок и смешав с пастой из морских огурцов, алхимик может создать голубоватый бальзам. Если намазать бальзам на тело, он превратится в мощный щит, удерживающий пользователя внутри, но защищающий его от всех видов атак.  Щит поглощает 100 пунктов повреждения, прежде чем разрушится.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Tortoise Shell (100 hit points)
-Weight: 1 lb.~
-@54763     = ~Coral Balm~
-@54764     = ~By tearing off chunks from a coral reef, crushing the coral into powder, and mixing it with sea cucumber paste, an alchemist may create a bluish balm.  When smeared over the user's body, the balm will expand into a powerful shield,  trapping the user inside but protecting them from all forms of attack.  The shield will absorb 400 hit points before shattering.
+накладывает эффект заклинания "Черепаший панцирь" (100 пунктов урона)
+Вес: 1 фунт~
+@54763     = ~Коралловый бальзам~
+@54764     = ~Оторвав куски от кораллового рифа, измельчив их в порошок и смешав с пастой из морских огурцов, алхимик может создать голубоватый бальзам. Если намазать бальзам на тело, он превратится в мощный щит, удерживающий пользователя внутри, но защищающий его от всех видов атак.  Щит поглощает 100 пунктов повреждения, прежде чем разрушится.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Tortoise Shell (400 hit points)
-Weight: 1 lb.~
+накладывает эффект заклинания "Черепаший панцирь" (400 пунктов урона)
+Вес: 1 фунт~
 @4765     = ~Feyr Secretion~
 @4766     = ~This bottle contains a purplish goo secreted by a feyr's skin.  A series of magical enchantments transforms the goo into a powerful potion capable of bestowing an ethereal state on the drinker.  All enemy attacks have a 50% chance of failing outright, as per the Blink spell.  The user's attacks and spells, however, also suffer a 20% chance of failure.  The effects last for 10 rounds.
 
