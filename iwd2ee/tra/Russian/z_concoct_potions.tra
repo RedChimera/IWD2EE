@@ -396,46 +396,52 @@
 Вес: 0 фунтов
 Необходимая черта: Простое оружие, Метательное
 Тип: одноручное~
-@4746     = ~Fairy Oil~
-@4747     = ~Fey creatures are tricky to find and harder to catch, but an alchemist who manages to capture enough of them can steal those powers, if only for a short time. The liquid itself is nothing more than peat and crushed buttercups mixed with olive oil, but if the alchemist can convince a group of fairies to bestow the oil with their magic--or if the alchemist mixes the oil with the fairies' blood and powdered bones--this potion will enshroud the drinker with a small cloud of illusory magic similar to the Mirror Image spell.
+@4746     = ~Масло фей~
+@4747     = ~Фей сложно найти и еще сложнее поймать, но алхимик, которому удастся поймать достаточное их количество, может использовать их силы, хоть и на короткое время. Основа этой жидкости представляет собой торф и измельченные лютики, смешанные с оливковым маслом, но если алхимику удастся убедить группу фей наделить это масло своей магией - или если алхимик смешает масло с кровью фей и их измельченными костями - в результате получится вот это зелье. При использовании, оно окутает выпившего его небольшим облаком иллюзорной магии, похожей на заклинание "Зеркальный Образ".
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Mirror Image (4 images)
-Weight: 1 lb.~
-@54746     = ~Fairy Oil~
-@54747     = ~Fey creatures are tricky to find and harder to catch, but an alchemist who manages to capture enough of them can steal those powers, if only for a short time. The liquid itself is nothing more than peat and crushed buttercups mixed with olive oil, but if the alchemist can convince a group of fairies to bestow the oil with their magic--or if the alchemist mixes the oil with the fairies' blood and powdered bones--this potion will enshroud the drinker with a small cloud of illusory magic similar to the Mirror Image spell.
+Отражённый образ (4 образа)
+Вес: 1 фунт~
+@54746     = ~Масло фей~
+@54747     = ~Фей сложно найти и еще сложнее поймать, но алхимик, которому удастся поймать достаточное их количество, может использовать их силы, хоть и на короткое время. Основа этой жидкости представляет собой торф и измельченные лютики, смешанные с оливковым маслом, но если алхимику удастся убедить группу фей наделить это масло своей магией - или если алхимик смешает масло с кровью фей и их измельченными костями - в результате получится вот это зелье. При использовании, оно окутает выпившего его небольшим облаком иллюзорной магии, похожей на заклинание "Зеркальный Образ".
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Mirror Image (8 images)
-Weight: 1 lb.~
-@4748     = ~Magnetic Fluid~
-@4749     = ~Despite its viscous nature, this fluid is actually an alloy of chromium and iron, kept in its liquid form by powerful transmutations. By heating and cooling the alloy in the presence of magnets and using a magical fire to burn other rare metals in its presence, an alchemist can add a powerful magnetic field to the liquid alloy which only activates when the fluid is drunk. The magnetic field is incredibly dangerous to the drinker, as it pulls weapons directly to the drinker's body, imposing a -5 penalty to hit, damage, and AC as well as a -10 penalty to all forms of physical damage.
+Отражённый образ (8 образов)
+Вес: 1 фунт~
+@4748     = ~Магнитная жидкость~
+@4749     = ~Несмотря на свою вязкую природу, эта жидкость на самом деле представляет собой сплав хрома и железа, сохраняющийся в жидком виде благодаря мощным трансмутациям. Нагревая и охлаждая сплав в поле сильных магнитов и используя магический огонь, чтобы сжечь в нем редкие металлы, алхимик может добавить к жидкому сплаву мощное магнитное поле, которое активируется только тогда, когда эту жидкость выпивают. Магнитное поле невероятно опасно для выпившего, поскольку оно притягивает любые железные предметы прямо к телу пьющего, накладывая штраф -5 к атаке, урону и классу защиты, а также штраф -10 ко всем сопротивлениям физическому урону.
 
-However, the drinker can will this magnetic field to produce a violent backlash against his or her attackers that inflicts 10d4 crushing damage with every strike.  The field will dissipate after 10 rounds.
+Однако, пользователь может усилием воли заставить это магнитное поле вызвать яростную ответную реакцию против нападающих, которая нанесёт 10d4 дробящего урона в ответ на каждый удар. Это магнитное поле рассеивается через 10 раундов.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Magnetic Backlash: Attackers suffer 10d4 crushing damage per hit
--5 Attack Bonus
--5 Attack Damage
--5 AC
--10 Slashing, Crushing, Piercing, and Missile Resistance
-Weight: 1 lb.~
-@54748     = ~Magnetic Fluid~
-@54749     = ~Despite its viscous nature, this fluid is actually an alloy of chromium and iron, kept in its liquid form by powerful transmutations. By heating and cooling the alloy in the presence of magnets and using a magical fire to burn other rare metals in its presence, an alchemist can add a powerful magnetic field to the liquid alloy which only activates when the fluid is drunk. The magnetic field is incredibly dangerous to the drinker, as it pulls weapons directly to the drinker's body, imposing a -5 penalty to hit, damage, and AC as well as a -15 penalty to all forms of physical damage.
+Магнитная отдача: атакующие получают 10d4 дробящего урона при попадании по использовавшему это зелье
+Атака: -5
+Урон: -5
+Класс защиты: -5
+Сопротивление рубящему урону: -10
+Сопротивление колющему урону: -10
+Сопротивление дробящему урону: -10
+Сопротивление метательному урону: -10
+Вес: 1 фунт~
+@54748     = ~Магнитная жидкость~
+@54749     = ~Несмотря на свою вязкую природу, эта жидкость на самом деле представляет собой сплав хрома и железа, сохраняющийся в жидком виде благодаря мощным трансмутациям. Нагревая и охлаждая сплав в поле сильных магнитов и используя магический огонь, чтобы сжечь в нем редкие металлы, алхимик может добавить к жидкому сплаву мощное магнитное поле, которое активируется только тогда, когда эту жидкость выпивают. Магнитное поле невероятно опасно для выпившего, поскольку оно притягивает любые железные предметы прямо к телу пьющего, накладывая штраф -5 к атаке, урону и классу защиты, а также штраф -15 ко всем сопротивлениям физическому урону.
 
-However, the drinker can will this magnetic field to produce a violent backlash against his or her attackers that inflicts 15d4 crushing damage with every strike.  The field will dissipate after 10 rounds.
+Однако, пользователь может усилием воли заставить это магнитное поле вызвать яростную ответную реакцию против нападающих, которая нанесёт 15d4 дробящего урона в ответ на каждый удар. Это магнитное поле рассеивается через 10 раундов.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Magnetic Backlash: Attackers suffer 15d4 crushing damage per hit
--5 Attack Bonus
--5 Attack Damage
--5 AC
--15 Slashing, Crushing, Piercing, and Missile Resistance
-Weight: 1 lb.~
+Магнитная отдача: атакующие получают 15d4 дробящего урона при попадании по использовавшему это зелье
+Атака: -5
+Урон: -5
+Класс защиты: -5
+Сопротивление рубящему урону: -15
+Сопротивление колющему урону: -15
+Сопротивление дробящему урону: -15
+Сопротивление метательному урону: -15
+Вес: 1 фунт~
 @4750     = ~Burning Syrup~
 @4751     = ~This thick reddish syrup, composed of the nectar and sap of several flowers and trees, burns with anti-magic energy. By pouring the syrup over a magical item and then destroying it, an alchemist may infuse the syrup with disruptive forces. This may require destroying multiple magical items depending on their power.
 
