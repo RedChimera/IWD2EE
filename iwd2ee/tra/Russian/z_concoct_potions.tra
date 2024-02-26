@@ -442,60 +442,60 @@
 Сопротивление дробящему урону: -15
 Сопротивление метательному урону: -15
 Вес: 1 фунт~
-@4750     = ~Burning Syrup~
-@4751     = ~This thick reddish syrup, composed of the nectar and sap of several flowers and trees, burns with anti-magic energy. By pouring the syrup over a magical item and then destroying it, an alchemist may infuse the syrup with disruptive forces. This may require destroying multiple magical items depending on their power.
+@4750     = ~Жгучий сироп~
+@4751     = ~Этот густой красноватый сироп, состоящий из нектара и сока нескольких цветов и деревьев, мерцает антимагической энергией. Вылив исходный сироп на магический предмет, который затем будет уничтожен, алхимик может наделить конечный продукт разрушительными силами. Может потребоваться уничтожить несколько магических предметов в зависимости от их силы.
 
-When drunk, the syrup creates an anti-magic field around the user's body, automatically dispelling all dispellable effects (both positive and negative) as well as granting 15/- spell resistance for 10 rounds. The field also interferes with the user's own spells, if any, increasing spell failure by 25%.
+Когда сироп выпит, он создает вокруг тела пользователя антимагическое поле, автоматически рассеивающее все рассеиваемые эффекты (как положительные, так и отрицательные), а также дающее 15 сопротивления магии на 10 раундов. Поле также влияет на заклинания, произносимые самим пользователем, увеличивая шанс провала заклинаний на 25%.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Dispels all dispellable effects on the drinker
-Resistance: 15/- Spell Resistance
-25% Spell Failure
-Weight: 1 lb.~
-@54750     = ~Burning Syrup~
-@54751     = ~This thick reddish syrup, composed of the nectar and sap of several flowers and trees, burns with anti-magic energy. By pouring the syrup over a magical item and then destroying it, an alchemist may infuse the syrup with disruptive forces. This may require destroying multiple magical items depending on their power.
+Развеивает все развеиваемые эффекты
+Сопротивление магии: устанавливается на 15
+25% шанс провала заклинаний
+Вес: 1 фунт~
+@54750     = ~Жгучий сироп~
+@54751     = ~Этот густой красноватый сироп, состоящий из нектара и сока нескольких цветов и деревьев, мерцает антимагической энергией. Вылив исходный сироп на магический предмет, который затем будет уничтожен, алхимик может наделить конечный продукт разрушительными силами. Может потребоваться уничтожить несколько магических предметов в зависимости от их силы.
 
-When drunk, the syrup creates an anti-magic field around the user's body, automatically dispelling all dispellable effects (both positive and negative) as well as granting 30/- spell resistance for 10 rounds. The field also interferes with the user's own spells, if any, increasing spell failure by 50%.
+Когда сироп выпит, он создает вокруг тела пользователя антимагическое поле, автоматически рассеивающее все рассеиваемые эффекты (как положительные, так и отрицательные), а также дающее 30 сопротивления магии на 10 раундов. Поле также влияет на заклинания, произносимые самим пользователем, увеличивая шанс провала заклинаний на 50%.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Dispels all dispellable effects on the drinker
-Resistance: 30/- Spell Resistance
-50% Spell Failure
-Weight: 1 lb.~
-@4752     = ~Snake Lymph~
-@4753     = ~Yuan-ti alchemists use a special blend of venom and assorted herbs to transform humanoid captives into histachii slaves. The process is irreversible and destroys the victim's mind, but it grants them unusual powers that make them helpful servants for their Yuan-ti masters.
+Развеивает все развеиваемые эффекты
+Сопротивление магии: устанавливается на 30
+50% шанс провала заклинаний
+Вес: 1 фунт~
+@4752     = ~Змеиная лимфа~
+@4753     = ~Алхимики юань-ти используют особую смесь яда и различных трав, чтобы превратить пленных гуманоидов в рабов-хистачи. Процесс необратим и разрушает разум жертв, но наделяет их необычными способностями, которые делают их полезными слугами для своих хозяев-юань-ти.
 
-Much of the science is unknown to humanoids, but an Alchemist may concoct a special version of the histachii brew from Yuan-ti lymph and mandrake root that will grant the drinker some limited resistance to poison. For 1 hour after the lymph is drunk, the user will enjoy 6/- poison resistance.
+Большая часть этого процесса неизвестна гуманоидам, но алхимик может приготовить особую версию отвара хистачи из лимфы юань-ти и корня мандрагоры, которое наделяет выпившего ограниченной устойчивостью к ядам. В течение 1 часа после того, как это зелье будет выпито, пользователь получит 6/- сопротивления яду.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Resistance: 6/- Poison Resistance
-Weight: 1 lb.~
-@54752     = ~Snake Lymph~
-@54753     = ~Yuan-ti alchemists use a special blend of venom and assorted herbs to transform humanoid captives into histachii slaves. The process is irreversible and destroys the victim's mind, but it grants them unusual powers that make them helpful servants for their Yuan-ti masters.
+Сопротивление: 6/- сопротивления яду
+Вес: 1 фунт~
+@54752     = ~Змеиная лимфа~
+@54753     = ~Алхимики юань-ти используют особую смесь яда и различных трав, чтобы превратить пленных гуманоидов в рабов-хистачи. Процесс необратим и разрушает разум жертв, но наделяет их необычными способностями, которые делают их полезными слугами для своих хозяев-юань-ти.
 
-Much of the science is unknown to humanoids, but an Alchemist may concoct a special version of the histachii brew from Yuan-ti lymph and mandrake root that will grant the drinker some limited resistance to poison. For 1 hour after the lymph is drunk, the user will enjoy 30/- poison resistance.
+Большая часть этого процесса неизвестна гуманоидам, но алхимик может приготовить особую версию отвара хистачи из лимфы юань-ти и корня мандрагоры, которое наделяет выпившего ограниченной устойчивостью к ядам. В течение 1 часа после того, как это зелье будет выпито, пользователь получит 30/- сопротивления яду.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Resistance: 30/- Poison Resistance
-Weight: 1 lb.~
-@4754     = ~Vampire Milk~
-@4755     = ~This freezing bottle of bluish liquid is a mix of flour, blueberries, fine cheeses, and the breast milk of a slain vampire, wight, or bodak. Partly fermented and treated with lime and salt, this potion becomes a bitter fluid indistinguishable from paint. The concoction carries a large amount of negative energy with it, and it would be fatal to most living creatures. Undead, however, could drink it to restore health. This healing is similar to that of a vampire's regeneration: it will close mortal wounds and regrow lost body parts, but it will not restore lost blood.
+Сопротивление: 30/- сопротивления яду
+Вес: 1 фунт~
+@4754     = ~Молоко вампира~
+@4755     = ~В этой ледяной на ощупь бутылке с синеватой жидкостью смешаны мука, черника, изысканные сыры и грудное молоко убитого вампира, умертвия или бодака. Частично перебродив и будучи обработанным известью и солью, это зелье превращается в горькую жидкость, неотличимую от краски. Зелье несет в себе большое количество негативной энергии, и для большинства живых существ оно смертельно. Однако нежить может выпить его, чтобы восстановить здоровье. Это исцеление похоже на регенерацию вампира: оно закрывает смертельные раны и отращивает утраченные части тела, но не восстанавливает потерянную кровь.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Heals 60 hit points to undead, deals 60 damage to anyone else
-Weight: 1 lb.~
-@54754     = ~Vampire Milk~
-@54755     = ~This freezing bottle of bluish liquid is a mix of flour, blueberries, fine cheeses, and the breast milk of a slain vampire, wight, or bodak. Partly fermented and treated with lime and salt, this potion becomes a bitter fluid indistinguishable from paint. The concoction carries a large amount of negative energy with it, and it would be fatal to most living creatures. Undead, however, could drink it to restore health. This healing is similar to that of a vampire's regeneration: it will close mortal wounds and regrow lost body parts, but it will not restore lost blood.
+При употреблении восстанавливает 60 пунктов здоровья нежити и наносит 60 урона всем другим существам
+Вес: 1 фунт~
+@54754     = ~Молоко вампира~
+@54755     = ~В этой ледяной на ощупь бутылке с синеватой жидкостью смешаны мука, черника, изысканные сыры и грудное молоко убитого вампира, умертвия или бодака. Частично перебродив и будучи обработанным известью и солью, это зелье превращается в горькую жидкость, неотличимую от краски. Зелье несет в себе большое количество негативной энергии, и для большинства живых существ оно смертельно. Однако нежить может выпить его, чтобы восстановить здоровье. Это исцеление похоже на регенерацию вампира: оно закрывает смертельные раны и отращивает утраченные части тела, но не восстанавливает потерянную кровь.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Heals 150 hit points to undead, deals 150 damage to anyone else
-Weight: 1 lb.~
+При употреблении восстанавливает 150 пунктов здоровья нежити и наносит 150 урона всем другим существам
+Вес: 1 фунт~
 @4756     = ~Moldy Poultice~
 @4757     = ~This poultice is a small jar of very fertile soil topped with a lush green moss. An alchemist must take special care when cultivating this moss, constantly making sure it has just the right amount of water and nutrients to thrive. Singing lullabies, burning incense, and paying compliments to the moss are all critical parts of the process.
 
