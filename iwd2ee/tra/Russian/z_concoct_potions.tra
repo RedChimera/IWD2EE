@@ -566,192 +566,192 @@
 Накладывает эффект заклинания "Мерцание" на 20 раундов
 Вес: 1 фунт~
 @4767     = ~Желе огненной саламандры~
-@4768     = ~Являясь пряной смесью кофе и крови огненной саламандры, этот студенистый состав воздвигает вокруг пьющего стену пламени, уменьшая все повреждения от холода в два раза и нанося 1d6+10 урона огнём всем атакующим. Эффект длится 10 раундов или пока не будет рассеян.
+@4768     = ~Являясь пряной смесью кофе и крови огненной саламандры, этот студенистый состав воздвигает вокруг выпившего это зелье стену пламени, уменьшая все повреждения от холода в два раза и нанося 1d6+10 урона огнём всем атакующим. Эффект длится 10 раундов или пока не будет рассеян.
 
 ПАРАМЕТРЫ:
 
 Накладывает эффект заклинания "Огненный щит (красный)"
 Вес: 1 фунт~
 @54767     = ~Желе огненной саламандры~
-@54768     = ~Являясь пряной смесью кофе и крови огненной саламандры, этот студенистый состав воздвигает вокруг пьющего стену пламени, уменьшая все повреждения от холода в два раза и нанося 1d6+20 урона огнём всем атакующим. Эффект длится 10 раундов или пока не будет рассеян.
+@54768     = ~Являясь пряной смесью кофе и крови огненной саламандры, этот студенистый состав воздвигает вокруг выпившего это зелье стену пламени, уменьшая все повреждения от холода в два раза и нанося 1d6+20 урона огнём всем атакующим. Эффект длится 10 раундов или пока не будет рассеян.
 
 ПАРАМЕТРЫ:
 
 Накладывает эффект заклинания "Огненный щит (красный)"
 Вес: 1 фунт~
-@4769     = ~Frost Salamander Jelly~
-@4770     = ~A minty jelly composed of gum arabic and the blood of a frost salamander, this gelatinous compound will erect a wall of frost around the drinker, decreasing all fire damage by half and inflicting 1d6+10 cold damage to all attackers.  The effect lasts for 10 rounds or until dispelled.
+@4769     = ~Желе ледяной саламандры~
+@4770     = ~Являясь пряной смесью кофе и крови ледяной саламандры, это пряное желе воздвигает вокруг выпившего это зелье стену льда, уменьшая все повреждения от огня в два раза и нанося 1d6+10 урона холодом всем атакующим. Эффект длится 10 раундов или пока не будет рассеян.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Fire Shield, Blue
-Weight: 1 lb.~
-@54769     = ~Frost Salamander Jelly~
-@54770     = ~A minty jelly composed of gum arabic and the blood of a frost salamander, this gelatinous compound will erect a wall of frost around the drinker, decreasing all fire damage by half and inflicting 1d6+20 cold damage to all attackers.  The effect lasts for 10 rounds or until dispelled.
+Накладывает эффект заклинания "Огненный щит (синий)"
+Вес: 1 фунт~
+@54769     = ~Желе ледяной саламандры~
+@54770     = ~Являясь пряной смесью кофе и крови ледяной саламандры, это пряное желе воздвигает вокруг выпившего это зелье стену льда, уменьшая все повреждения от огня в два раза и нанося 1d6+20 урона холодом всем атакующим. Эффект длится 10 раундов или пока не будет рассеян.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Fire Shield, Blue
-Weight: 1 lb.~
-@4771     = ~Fish Lubricant~
-@4772     = ~Fish oil, sesame oil, a unique set of enchantments, and very fine ash make up this greasy lubricant.  When the user applies this oil to the skin and activates the command word, the lubricant will begin to vibrate faintly.  Any attempt hinder the user's movement will fail so long as the lubricant is active, which will last for 10 rounds or until dispelled.
+Накладывает эффект заклинания "Огненный щит (синий)"
+Вес: 1 фунт~
+@4771     = ~Рыбная смазка~
+@4772     = ~Рыбий жир, кунжутное масло, уникальный набор наложенных заклинаний и очень мелкий пепел входят в состав этой смазки. Когда пользователь наносит его на кожу и активирует командное слово, смазка начинает слабо вибрировать. Любые попытки помешать движению пользователя будут безуспешны, пока действует смазка (в течении 10 раундов или пока эффект не будет рассеян).
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Freedom of Movement
-Weight: 1 lb.~
-@54771     = ~Fish Lubricant~
-@54772     = ~Fish oil, sesame oil, a unique set of enchantments, and very fine ash make up this greasy lubricant.  When the user applies this oil to the skin and activates the command word, the lubricant will begin to vibrate faintly.  Any attempt hinder the user's movement will fail so long as the lubricant is active, which will last for 1 hour or until dispelled.
+Накладывает эффект заклинания "Свобода действий"
+Вес: 1 фунт~
+@54771     = ~Рыбная смазка~
+@54772     = ~Рыбий жир, кунжутное масло, уникальный набор наложенных заклинаний и очень мелкий пепел входят в состав этой смазки. Когда пользователь наносит его на кожу и активирует командное слово, смазка начинает слабо вибрировать. Любые попытки помешать движению пользователя будут безуспешны, пока действует смазка (в течении одного часа или пока эффект не будет рассеян).
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Freedom of Movement
-Weight: 1 lb.~
-@4773     = ~Fizzy Drink~
-@4774     = ~This bubbly concoction of fruit juice and ostrich brains will give a rush of energy to the drinker.  For ten rounds after imbibing this sugary drink, the user will move and attack at an accelerated rate, gaining a +4 bonus to movement rate and speed factor, and gaining +1 casting speed.
+Накладывает эффект заклинания "Свобода действий"
+Вес: 1 фунт~
+@4773     = ~Шипучий напиток~
+@4774     = ~Этот шипучий коктейль из фруктового сока и страусиных мозгов подарит выпившему его прилив энергии. В течение десяти раундов после употребления этого сладкого напитка пользователь будет двигаться и атаковать с ускорением, получая +4 к скорости передвижения, фактору скорости оружия, а также +1 к скорости прочтения заклинаний.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-+4 Movement Rate
-+4 Speed Factor
-+1 Casting Speed
-Weight: 1 lb.~
-@54773     = ~Fizzy Drink~
-@54774     = ~This bubbly concoction of fruit juice and ostrich brains will give a rush of energy to the drinker.  For ten rounds after imbibing this sugary drink, the user will move and attack at an accelerated rate, gaining a +4 bonus to movement rate and speed factor, and gaining +2 casting speed.
+Скорость передвижения: +4
+Фактор скорости: +4
+Скорость произнесения заклинаний: +1
+Вес: 1 фунт~
+@54773     = ~Шипучий напиток~
+@54774     = ~Этот шипучий коктейль из фруктового сока и страусиных мозгов подарит выпившему его прилив энергии. В течение десяти раундов после употребления этого сладкого напитка пользователь будет двигаться и атаковать с ускорением, получая +10 к скорости передвижения, фактору скорости оружия, а также +2 к скорости прочтения заклинаний.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-+10 Movement Rate
-+10 Speed Factor
-+2 Casting Speed
-Weight: 1 lb.~
-@4775     = ~Ghoul Powder~
-@4776     = ~This fine bluish-gray dust, made from the powdered skin and flesh of a ghoul or wight, gives off a very faint glow.  Snorting the powder will result in a painful headache as well as a powerful enchantment through the user's body.  For 10 rounds after huffing this magical powder, the user will gain a 20/- resistance to all forms of cold damage.
+Скорость передвижения: +10
+Фактор скорости: +10
+Скорость произнесения заклинаний: +2
+Вес: 1 фунт~
+@4775     = ~Порошок упыря~
+@4776     = ~Эта мелкая голубовато-серая пыль, изготовленная из измельченной в порошок кожи и плоти упыря или пожирателя, испускает очень слабое свечение. Вдыхание порошка вызывает мучительную головную боль, но и мощные чары распространяются по телу вдохнувшего. В течение 10 раундов после вдыхания этого магического порошка пользователь получит 20/- сопротивления всем формам урона холодом.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Resistance: 20/- Cold Resistance
-Weight: 1 lb.~
-@54775     = ~Ghoul Powder~
-@54776     = ~This fine bluish-gray dust, made from the powdered skin and flesh of a ghoul or wight, gives off a very faint glow.  Snorting the powder will result in a painful headache as well as a powerful enchantment through the user's body.  For 10 rounds after huffing this magical powder, the user will gain a 50/- resistance to all forms of cold damage.
+Сопротивление: 20/- сопротивления холоду
+Вес: 1 фунт~
+@54775     = ~Порошок упыря~
+@54776     = ~Эта мелкая голубовато-серая пыль, изготовленная из измельченной в порошок кожи и плоти упыря или пожирателя, испускает очень слабое свечение. Вдыхание порошка вызывает мучительную головную боль, но и мощные чары распространяются по телу вдохнувшего. В течение 10 раундов после вдыхания этого магического порошка пользователь получит 50/- сопротивления всем формам урона холодом.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Resistance: 50/- Cold Resistance
-Weight: 1 lb.~
-@4777     = ~Golden Bubbles~
-@4778     = ~Good luck is hard to come by, but for those who know how to generate it, fortune can come from almost anywhere.  This bubbly solution is a mix of gold flakes, lemon juice, ground pearls, and powdered goat hooves.  Anyone who drinks this potion will experience a rush of euphoria and supreme confidence in everything, as well as a +2 luck bonus for 10 rounds.
+Сопротивление: 50/- сопротивления холоду
+Вес: 1 фунт~
+@4777     = ~Золотистые пузырьки~
+@4778     = ~Удачу трудно найти, но для тех, кто умеет ее создавать, она может "найтись" практически мгновенно. Этот пузырящийся раствор представляет собой смесь золотых хлопьев, лимонного сока, молотого жемчуга и порошка из козьих копыт. Любой, кто выпьет это зелье, испытает прилив эйфории и крайней уверенности во всем, что выльется в бонус +2 к удаче на 10 раундов.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-+2 Luck
-Weight: 1 lb.~
-@54777     = ~Golden Bubbles~
-@54778     = ~Good luck is hard to come by, but for those who know how to generate it, fortune can come from almost anywhere.  This bubbly solution is a mix of gold flakes, lemon juice, ground pearls, and powdered goat hooves.  Anyone who drinks this potion will experience a rush of euphoria and supreme confidence in everything, as well as a +4 luck bonus for 10 rounds.
+Удача: +2
+Вес: 1 фунт~
+@54777     = ~Золотистые пузырьки~
+@54778     = ~Удачу трудно найти, но для тех, кто умеет ее создавать, она может "найтись" практически мгновенно. Этот пузырящийся раствор представляет собой смесь золотых хлопьев, лимонного сока, молотого жемчуга и порошка из козьих копыт. Любой, кто выпьет это зелье, испытает прилив эйфории и крайней уверенности во всем, что выльется в бонус +4 к удаче на 10 раундов.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-+4 Luck
-Weight: 1 lb.~
-@4779     = ~Ogre Bile~
-@4780     = ~This sickly translucent liquid is a mixture of green slime, common salt, and bile from the gut of an ogre.  Anyone who forces him or herself to drink this foul potion will gain 25 temporary hit points for 8 hours.  Any damage the user suffers will first come from the temporary hit points.
+Удача: +4
+Вес: 1 фунт~
+@4779     = ~Желчь огра~
+@4780     = ~Эта тошнотворная полупрозрачная жидкость представляет собой смесь зеленой слизи, поваренной соли и желчи из кишечника огра. Любой, кто заставит себя выпить это мерзкое зелье, получит 25 временных пунктов здоровья на 8 часов.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-+25 Maximum Hit Points
-Weight: 1 lb.~
-@54779     = ~Ogre Bile~
-@54780     = ~This sickly translucent liquid is a mixture of green slime, common salt, and bile from the gut of an ogre.  Anyone who forces him or herself to drink this foul potion will gain 100 temporary hit points for 8 hours.  Any damage the user suffers will first come from the temporary hit points.
++25 к максимальному количеству пунктов здоровья
+Вес: 1 фунт~
+@54779     = ~Желчь огра~
+@54780     = ~Эта тошнотворная полупрозрачная жидкость представляет собой смесь зеленой слизи, поваренной соли и желчи из кишечника огра. Любой, кто заставит себя выпить это мерзкое зелье, получит 100 временных пунктов здоровья на 8 часов.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-+100 Maximum Hit Points
-Weight: 1 lb.~
-@4781     = ~Oil of Speed~
-@4782     = ~A pale oil made from crushed pearls, shark teeth, and rabbit's blood, this potion will quickly spread through the user's body.  The oil will dramatically improve the user's movement and attack rates, granting Haste as per the mage spell for 10 rounds.
++100 к максимальному количеству пунктов здоровья
+Вес: 1 фунт~
+@4781     = ~Масло скорости~
+@4782     = ~Белое масло, состоящее из толченого жемчуга, акульих зубов и крови зайца быстро распространяется по телу пользователя. Масло значительно повышает скорость передвижения и атаки, наделяя эффектом заклинанием "Спешка" на 10 раундов.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Haste
-Weight: 1 lb.~
-@54781     = ~Oil of Speed~
-@54782     = ~A pale oil made from crushed pearls, shark teeth, and rabbit's blood, this potion will quickly spread through the user's body.  The oil will dramatically improve the user's movement and attack rates, granting Improved Haste for 5 rounds.
+Накладывает эффект заклинания "Спешка"
+Вес: 1 фунт~
+@54781     = ~Масло скорости~
+@54782     = ~Белое масло, состоящее из толченого жемчуга, акульих зубов и крови зайца быстро распространяется по телу пользователя. Масло значительно повышает скорость передвижения и атаки, наделяя эффектом заклинанием "Улучшенная спешка" на 5 раундов.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Improved Haste
-Weight: 1 lb.~
-@4783     = ~Potion of Clarity~
-@4784     = ~This potion is a pleasant-smelling concoction of olive oil spiked with powdered nereid nose and crushed lapis lazuli.  Drinking this odd-tasting potion will temporarily grant the user immunity to most mind-affect spells, including charm, domination, feeblemind, fear, and confusion effects for 10 rounds.
+Накладывает эффект заклинания "Улучшенная спешка"
+Вес: 1 фунт~
+@4783     = ~Зелье чистоты~
+@4784     = ~Это зелье представляет собой приятно пахнущий состав из оливкового масла, приправленного порошком из носа нереид и толченым лазуритом. Выпив это странное на вкус зелье, пользователь на 10 раундов временно получает иммунитет к большинству заклинаний, влияющих на разум, включая эффекты очарования, подчинения, слабоумия, страха и замешательства.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Immunity to charm, domination, feeblemind, fear, and confusion
-Weight: 1 lb.~
-@54783     = ~Potion of Clarity~
-@54784     = ~This potion is a pleasant-smelling concoction of olive oil spiked with powdered nereid nose and crushed lapis lazuli.  Drinking this odd-tasting potion will temporarily grant the user immunity to most mind-affect spells, including charm, domination, feeblemind, fear, confusion, hopelessness, and stun effects for 15 rounds.
+Невосприимчивость к эффектам очарования, подчинения, слабоумия, страха и замешательства
+Вес: 1 фунт~
+@54783     = ~Зелье чистоты~
+@54784     = ~Это зелье представляет собой приятно пахнущий состав из оливкового масла, приправленного порошком из носа нереид и толченым лазуритом. Выпив это странное на вкус зелье, пользователь на 15 раундов временно получает иммунитет к большинству заклинаний, влияющих на разум, включая эффекты очарования, подчинения, слабоумия, страха и замешательства, безнадёжности и ошеломления.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Immunity to charm, domination, feeblemind, fear, confusion, hopelessness, and stun
-Weight: 1 lb.~
-@4785     = ~Treant Sap~
-@4786     = ~Hardened treant sap mixed with holy water and mashed peas sits inside this firm wooden container.  The hard sap must be chewed thoroughly unless it is heated before consumption.  The sap turns the user's skin to a stiff, woody substance, granting a +4 natural bonus to AC for 1 hour.
+Невосприимчивость к эффектам очарования, подчинения, слабоумия, страха, замешательства, безнадёжности и ошеломления
+Вес: 1 фунт~
+@4785     = ~Сок трента~
+@4786     = ~В этом прочном деревянном сосуде находится застывший сок трентов, смешанный со святой водой и гороховым пюре. Затвердевший сок придётся долго пережевывать, если перед употреблением его не подогреть. Сок превращает кожу пользователя в жесткую, древесную субстанцию, дающую +4 к классу защиты на 1 час.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Barkskin (+4 AC)
-Weight: 1 lb.~
-@54785     = ~Treant Sap~
-@54786     = ~Hardened treant sap mixed with holy water and mashed peas sits inside this firm wooden container.  The hard sap must be chewed thoroughly unless it is heated before consumption.  The sap turns the user's skin to a stiff, woody substance, granting a +7 natural bonus to AC for 1 hour.
+Накладывает эффект заклинания "Кожа-кора" (+4 к классу защиты)
+Вес: 1 фунт~
+@54785     = ~Сок трента~
+@54786     = ~В этом прочном деревянном сосуде находится застывший сок трентов, смешанный со святой водой и гороховым пюре. Затвердевший сок придётся долго пережевывать, если перед употреблением его не подогреть. Сок превращает кожу пользователя в жесткую, древесную субстанцию, дающую +7 к классу защиты на 1 час.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Barkskin (+7 AC)
-Weight: 1 lb.~
-@4787     = ~Troll Serum~
-@4788     = ~Made of concentrated troll blood leeched through perforated otyugh skin, this sour mixture will temporarily grant the drinker the regenerative abilities of a troll.  For 10 rounds after imbibing this potion, the drinker will heal 5 hit points every round.
+Накладывает эффект заклинания "Кожа-кора" (+7 к классу защиты)
+Вес: 1 фунт~
+@4787     = ~Сыворотка тролля~
+@4788     = ~Сделанная из концентрированной крови тролля, процеженной через продырявленную кожу отиуга, эта кислая смесь временно наделяет выпившего регенеративными способностями тролля. В течение 10 раундов после употребления этого зелья выпивший будет восстанавливать 5 пунктов здоровья каждый раунд.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Regenerates 5 hit points per round
-Weight: 1 lb.~
-@54787     = ~Troll Serum~
-@54788     = ~Made of concentrated troll blood leeched through perforated otyugh skin, this sour mixture will temporarily grant the drinker the regenerative abilities of a troll.  For 10 rounds after imbibing this potion, the drinker will heal 10 hit points every round.
+Даёт регенерацию 5 пунктов здоровья в раунд
+Вес: 1 фунт~
+@54787     = ~Сыворотка тролля~
+@54788     = ~Сделанная из концентрированной крови тролля, процеженной через продырявленную кожу отиуга, эта кислая смесь временно наделяет выпившего регенеративными способностями тролля. В течение 10 раундов после употребления этого зелья выпивший будет восстанавливать 5 пунктов здоровья каждый раунд.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Regenerates 10 hit points per round
-Weight: 1 lb.~
-@4789     = ~Zombie Slime~
-@4790     = ~This chunky soup is a mixture of chopped elf hair and the foul slime drained from the corpse of a slime zombie.  Drinking this sickly concoction will grant the user 20/- acid resistance for 10 rounds.
+Даёт регенерацию 10 пунктов здоровья в раунд
+Вес: 1 фунт~
+@4789     = ~Слизь зомби~
+@4790     = ~Этот густой суп представляет собой смесь измельченных волос эльфа и мерзкой слизи, вытекающей из трупа зомби. Выпив это тошнотворное снадобье, пользователь получает 20/- сопротивления кислоте на 10 раундов.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Resistance: 20/- Acid Resistance
-Weight: 1 lb.~
-@54789     = ~Zombie Slime~
-@54790     = ~This chunky soup is a mixture of chopped elf hair and the foul slime drained from the corpse of a slime zombie.  Drinking this sickly concoction will grant the user 50/- acid resistance for 10 rounds.
+Сопротивление: 20/- сопротивления кислоте
+Вес: 1 фунт~
+@54789     = ~Слизь зомби~
+@54790     = ~Этот густой суп представляет собой смесь измельченных волос эльфа и мерзкой слизи, вытекающей из трупа зомби. Выпив это тошнотворное снадобье, пользователь получает 50/- сопротивления кислоте на 10 раундов.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Resistance: 50/- Acid Resistance
-Weight: 1 lb.~
-@4791     = ~Vial of Vipers~
-@4792     = ~A curious experimental blend, this vial of green sludge will twist the drinker's innards and use his or her own intestines to incubate a den of magically-generated vipers. Every round for six rounds, the drinker will vomit out a fully-grown viper that he or she may control telepathically.
+Сопротивление: 50/- сопротивления кислоте
+Вес: 1 фунт~
+@4791     = ~Флакон с гадюками~
+@4792     = ~Являясь любопытной экспериментальной смесью, этот пузырек зеленого оттенка вывернет внутренности пьющего и превратит его кишки в логово магически созданных гадюк. Каждый раунд в течение шести раундов выпивший будет извергать полностью выросшую гадюку, которой он сможет управлять телепатически.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Vipergout for 6 rounds
-Weight: 1 lb.~
-@54791     = ~Vial of Vipers~
-@54792     = ~A curious experimental blend, this vial of green sludge will twist the drinker's innards and use his or her own intestines to incubate a den of magically-generated vipers. Every round for twelve rounds, the drinker will vomit out a fully-grown viper that he or she may control telepathically.
+Накладывает эффект заклинания "Поток змей" на 6 раундов
+Вес: 1 фунт~
+@54791     = ~Флакон с гадюками~
+@54792     = ~Являясь любопытной экспериментальной смесью, этот пузырек зеленого оттенка вывернет внутренности пьющего и превратит его кишки в логово магически созданных гадюк. Каждый раунд в течение двенадцати раундов выпивший будет извергать полностью выросшую гадюку, которой он сможет управлять телепатически.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Vipergout for 12 rounds
-Weight: 1 lb.~
-@4793     = ~Concoct Potions~
-@4794     = ~Begin.~
-@4795     = ~Exit.~
-@4796     = ~You may not concoct potions when enemies are nearby.~
+Накладывает эффект заклинания "Поток змей" на 12 раундов
+Вес: 1 фунт~
+@4793     = ~Приготовление зелий~
+@4794     = ~Начать.~
+@4795     = ~Закончить.~
+@4796     = ~Вы не можете готовить зелья, когда неподалёку находятся враги.~
