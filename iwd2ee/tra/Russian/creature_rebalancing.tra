@@ -1,70 +1,70 @@
 //TRA num range
 
 
-@20001=~Cold damage dealt increased by 50%~
-@20002=~Cold damage dealt increased by 100%~
-@20003=~Cold damage dealt increased by 150%~
-@20004=~Cold damage dealt increased by 200%~
-@20005=~Scales enhanced (Armor Bonus +15)~
-@20006=~Protected by Epic Mage Armor (Armor Bonus +20)~
-@20007=~Protected by Epic Warding (Damage Reduction 50/+10)~
-@20008=~Singing Battlesong: Bladesong - Extra Attacks Per Round and Combat Bonuses~
-@20009=~Greater Death Armor~
-@20010=~Applies Soul Eater with each hit~
+@20001=~Урон холодом увеличен на 50%~
+@20002=~Урон холодом увеличен на 100%~
+@20003=~Урон холодом увеличен на 150%~
+@20004=~Урон холодом увеличен на 200%~
+@20005=~Усиление чешуи (класс защиты (доспех) +15)~
+@20006=~Под защитой эпических доспехов мага (класс защиты (доспех) +20)~
+@20007=~Под защитой эпической опеки (50/+10 снижения урона)~
+@20008=~Исполнение боевой песни: Песнь клинка - дополнительные атаки в раунд и боевые улучшения~
+@20009=~Великие доспехи смерти~
+@20010=~"Пожиратель душ" применяется при каждом попадании~
 
-@21001=~Ruin~
-@21002=~Greater Ruin~
+@21001=~Разорение~
+@21002=~Великое разорение~
 @21003=~Эпическая опека~
 @21004=~Эпические доспехи мага~
 @21005=~Взрыв враждебности~
 @21006=~Мор~
-@21007=~Mass Destruction~
+@21007=~Массовое уничтожение~
 @21008=~Шторм Ксвима~
 @21009=~Массовый отток энергии~
-@21010=~Thought of Death~
-@21011=~Living Lightning~
+@21010=~Размышление о смерти~
+@21011=~Живая молния~
 @21012=~Сотворить зимнюю тьму~
 @21013=~Метель враждебности~
 @21014=~Множество снарядов~
 @21015=~Пожирающее души оружие~
-@21016=~Improved Haste~
+@21016=~Улучшенная спешка~
 
-@21152=~Hunter's Mark~
-@21651=~Sseth's Venom~
-@21652=~Sseth's Scales~
-@21751=~Auril's Whirlwind~
-@21752=~Greater Snakebite~
-@21851=~Utter Hatred~
-@21852=~Storm of Sseth~
-@21951=~Auril's Blessing~
-@21952=~Mass Harm~
-@22651=~Hellish Snowball Swarm~
-@22751=~Stygian Ice Storm~
-@22754=~Greater Death Armor~
-@22851=~Greater Trollish Fortitude~
+@21152=~Метка охотника~
+@21651=~Яд Ссета~
+@21652=~Чешуя Ссета~
+@21751=~Вихрь Аурил~
+@21752=~Великий укус змеи~
+@21851=~Неистовая ненависть~
+@21852=~Буря Ссета~
+@21951=~Благословение Аурил~
+@21952=~Массовый вред~
+@22651=~Адский снегопад~
+@22751=~Стигийская ледяная буря~
+@22754=~Великие доспехи смерти~
+@22851=~Великая стойкость тролля~
 
-@23001=~Shadow of the Void~
-@23002=~Blightfire~
-@23003=~It's difficult to tell but this badly burned note was carefully written on a piece of fine parchment. It reads as follows:
+@23001=~Тень пустоты~
+@23002=~Огонь порчи~
+@23003=~Эта записка была написана на куске тонкого пергамента и, хотя она сильно обгорела, текст ещё можно разобрать. В ней написано следующее:
 
-Thagro:
+Тагро,
 
-Once you've read this message distribute it to your workers:
+Как только ты прочтёшь это послание, распространи его среди своих рабочих:
 
-The queen has been acting strangely as of late - I believe her mating season may be approaching. Ergo, from now on keep all males away from her until further notice. Have her guard the blockade if you'd like.
+В последнее время королева ведёт себя странно, и я полагаю, что приближается её сезон спаривания. Поэтому отныне не подпускай к ней самцов вплоть до особого распоряжения. Если хочешь, можешь отправить её охранять баррикаду.
 
-Regarding the males, keep training them to dig through the ice. We'll need to excavate larger areas while Nickademus regains his strength so he can build Legionnaire outposts. Always remember to keep them well rested and well fed; otherwise they'll be useless to us, and may pose a serious threat. Feel free to train one of them to attack or follow you if you feel in need of protection.
+Кстати о самцах: продолжай учить их долбить лёд. Нам придётся раскапывать большие пространства, пока Никадем будет восстанавливать силы, чтобы строить аванпосты для Легиона. Не забывай вдоволь кормить их и давай им отдохнуть, иначе они могут представлять опасность для нас. Если хочешь, можешь обучить одного из них ходить за тобой или защищать тебя.
 
-Furthermore, my DELICATE crystal golems are rather expensive and are NOT sources of your amusement!  If I catch ANY of your stormsisters launching rocks at them again you'll have to answer to me personally!
+Кроме того, мои ХРУПКИЕ хрустальные големы стоят очень дорого - и они служат НЕ для того, чтобы развлекать тебя! Если я ещё раз увижу, как твои штормовые сёстры швыряют в големов камнями, тебе придётся лично отвечать за это передо мной!
 
-One last thing - stay alert!  According to Sherincal, those Malarite bastards failed us at Shaengarne River, so opposition may strike at any moment.
+И ещё: будь начеку. По словам Шеринкаль - эти ублюдки-малариты потерпели поражение у Шенгарна, так что враг может напасть в любой момент.
 
-In Auril's name,
+Слава Аурил,
 
-Oria.
+Ория.
 
-Weight:  0 lb.~
-@23004=~Greater Wraith~
+Вес: 0 фунтов~
+@23004=~Великий дух~
 @23005=~Marilith~
 @23006=~Greater Marilith~
 @23007=~Greater Gelugon~
@@ -151,7 +151,7 @@ Weight:  0 lb.~
 @24002=~Call Slayer Knights~
 @24003=~Call Gelugon~
 @24004=~Greater Pain~
-@24005=~Bladesong - Extra Attack and Combat Bonuses~
+@24005=~Песнь клинка - дополнительные атаки в раунд и боевые улучшения~
 @24006=~Animate Restless Dead~
 @24007=~Nightmare~
 @24008=~Greater Nightmare~
