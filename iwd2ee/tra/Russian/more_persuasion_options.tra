@@ -430,7 +430,7 @@
 @6327 = ~... Нет. Нет, это глупо.~
 @6328=~You act as if there were any difference.  Would it be all right if I killed them now, sister?~
 @6329 = ~Мне это уже надоело. Ничего, если я убью их прямо сейчас, сестра?~
-@6330=~Gullible people who serve their own oppressors.  Would it be all right if I killed them now, sister?~
+@6330 = ~Доверчивый народ, который служит своим угнетателям. Ничего, если я убью их прямо сейчас, сестра?~
 @6331=~If the humans treated us as equals, then there would be many more of us.  Madae and I have seen just how deep intolerance runs in human society.  You just refuse to see it.  Would it be all right if I killed them now, sister?~
 @6332=~That was all it took.  One brief glance without context, and they already knew everything they cared to know.  Madae and I have seen just how deep intolerance runs in human society, and there is no justification for it, no matter how much you want to excuse it.  Would it be all right if I killed them now, sister?~
 @6333 = ~Довольно всей этой чепухи. Десять Городов почти повержены. Отрубленная рука во власти Легиона, и их падение - лишь вопрос времени. Ничего, если я убью их прямо сейчас, сестра?~
@@ -456,7 +456,7 @@
 @6353 = ~Наш вид не будет в безопасности до тех пор, пока жива ваша "цивилизация". Люди порабощали полукровок Фаэруна с начала истории. Мы давно поняли, что "человечество" не потерпит "мирного сосуществования" с нами, поэтому просто обязаны выбить их с насиженного места и занять трон сами.~
 @6354 = ~Но зачем вам оседать здесь? Люди уже контролируют эту территорию. Тем не менее, есть много других мест, где Легион и другие ваши сородичи могли бы обосноваться. Например, незаселенные земли в Чулте, острова за морем, где огромные водные просторы отгородили бы вас от "человечества"... Вы могли бы даже отправиться в Захару и обустроить свой дом там. Правда это наихудшее место, какое только можно выбрать для поселения.~
 @6355 = ~Иными словами, вы просто пытаетесь заменить одну несправедливость другой.~
-@6356=~I am a drow myself, and I could not disagree with you more.~
+@6356 = ~Я - дроу, и не соглашусь с вами.~
 @6357=~I myself am a half-orc, and I couldn't disagree with you more.~
 @6358=~I am a tiefling-from a human's perspective, nothing more than a cousin of a cambion-and I could not disagree with you more.~
 @6359 = ~Ты предлагаешь нам освоить земли, которые "человечству" совсем не нужны. Жить нищими изгоями в заброшенной пустоши - это не та жизнь, к которой мы стремимся. Мы имеем все права на Долину Ледяного Ветра и Фаэрун в целом; мы родились здесь.~
@@ -469,8 +469,8 @@
 @6366 = ~Вы так и не ответили на мой вопрос - что вы *сделали* для тех, кого якобы защищаете?~
 @6367 = ~Исаир, я начинаю уставать от этих напыщенных наемников.~
 @6368 = ~Вы не можете этого сделать! Вам просто нечего ответить! Легион Химеры не освобождает никого - Легион лишь прикрытие, чтобы укрепить вашу власть.~
-@6369=~Then I would question your intelligence.  Only a fool would fail to realize how humanity truly feels about your existence.~
-@6370=~It's true I've experienced some bigotry because of my race, but that hardly represents what humanity is really like.~
+@6369 = ~Тогда я сомневаюсь в твоей разумности. Только дурак не увидит, как "человечество" на самом деле относится к таким как ты.~
+@6370 = ~Это правда, мне приходилось сталкиваться с предрассудками из-за моей расы, но это вряд ли отражает отношение всего "человечества".~
 @6371=~Madae, I am the hero of Targos.  When I arrived on the docks, they did not turn me away or attack me on sight.  They welcomed me, despite the color of my skin.~
 @6372=~Madae, I am the hero of Targos.  When I arrived on the docks, they did not attack me, even though they had already fought many orcs before me.  They welcomed me to fight the goblins.~
 @6373=~Madae, I am the hero of Targos.  They did not reject me for my heritage; they embraced me for my skills.~
@@ -494,7 +494,7 @@
 @6391=~A... a long time, Isair.  A very long time.~
 @6392=~Yes.  I think it would be.~
 @6393=~Isair? I... urgh...~
-@6394=~We've met those like you before.  Gullible people who refuse to notice the dagger pressed against their throat.~
+@6394 = ~Мы уже встречали таких, как ты. Доверчивый народ, который не замечает кинжала у горла.~
 @6395 = ~Почему этот наемник читает нам лекцию о том, где нам жить?~
 @6396 = ~До того как мы пришли сюда, Отрубленная Рука лежала в руинах и была населена лишь свирепыми духами. Почему мы должны мириться с тем, что живем на костях эльфов?~
 @6397 = ~А почему мы должны слушать тебя, наемник? Ты мешаешь нам уже долгое время.~
