@@ -1,9 +1,9 @@
 //TRA num range @4000 to @4500
 
-@4000 = ~Ice Wall Fault~
-@4001 = ~Ruinlord Argos Val~
-@4002 = ~"Begin contest.  Obtain three consecutive squares for victory. Obtain more squares for greater rewards. Achieve victory in all ranks for Battle Square mastery."~
-@4003 = ~Although Targos is in a vulnerable state, you have managed to slaughter the entire goblin tribe that was attacking it.~
+@4000 = ~Пролом в ледяной стене~
+@4001 = ~Лорд-разрушитель Аргос Вал~
+@4002 = ~"Состязание начинается. Для победы нужно захватить три квадрата в ряд. Чтобы получить большую награду, нужно захватить больше квадратов. Для получения звания мастера нужно добиться победы в каждом уровне мастерства."~
+@4003 = ~Хотя Таргос всё ещё находится в уязвимом состоянии, вам удалось уничтожить целое племя гоблинов, нападавшее на него.~
 @4004 = ~The main fortress gates are closed and barred. It would require a battering ram or other siege engine to attempt to get them open, though a Knock spell could also bash them down.~
 @4005 = ~This door seems very secure. A key will most likely be needed to gain access, unless there is an exceptionally skilled lockpicker in the party.~
 @4006 = ~This strange door does not budge. Written on it in calligraphy are the words, "Only by the will of the High Priest shalt thou pass."~
