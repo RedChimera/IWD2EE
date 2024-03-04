@@ -22,123 +22,124 @@ Advantages:
 Disadvantages:
 * Rangers gain feats at a slower rate than fighters.
 * Rangers do not start with proficiency in heavy armor.~
-@10384    = ~Wizard Robes of Cold Resistance are a common sight in the Sword Coast region, especially as one travels north towards Neverwinter and the Icewind Dales. Many young mages receive it as a gift from their instructors upon successfully completing their first five years of study.
+@10384    = ~Волшебные мантии сопротивления холоду нередко встречаются на Побережье Меча, в особенности распространены они к северу, ближе к Невервинтеру и Долине Ледяного Ветра. Многие молодые волшебники получают их от своих преподавателей, отучившись пять лет.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Resistance:  20/- Cold Resistance
-All cold damage dealt by the character is increased by 20%
-Weight:  3 lb.~
-@10717    = ~Dagger of Twin Flame +5~
-@10718    = ~The typical dagger has a pointed, usually double-edged blade, as opposed to a knife, which has a single edge and is a bit shorter than the dagger.
+Особенности:
+ Сопротивление: 20/- сопротивления холоду
+ Весь урон холодом, наносимый носителем робы, увеличивается на 20%
+Вес: 3 фунта~
+@10717    = ~Кинжал двойного пламени +5~
+@10718    = ~У типичного кинжала обычно обоюдоострое лезвие с заточённым концом в отличие от ножа, который имеет одностороннюю заточку и несколько короче.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d4 + 5
-Attack Bonus:  +5 
-Enchantment:  +5
-Damage Type:  Piercing
-Special:
-  Twin Flame: Deals +1d6 fire damage. If the character is dual wielding, their other weapon also deals +1d6 fire damage.
-Weight: 1 lb.
-Feat Requirement:  Simple Weapon, Small Blade
-Type:  One-handed~
-@10809    = ~Silentkiller +3~
-@10810    = ~The story of Silentkiller is a common tale that may, or may not, be true. The story tells of two brothers who vied for the attention, and throne, of their ailing father. When the elder brother was named king by his dying sire, the younger was furious and vowed to take the throne as his own. To this end he commissioned the making of Silentkiller to aid him in his brother's murder.
+Урон: 1d4+5
+Атака: +5
+Зачарование: +5
+Тип урона: колющий
+Особенности:
+ Двойное пламя: +1d6 урона огнем; если персонаж вооружён двумя оружиями, его второе оружие также наносит дополнительно 1d6 урона огнем
+Вес: 1 фунт
+Необходимая черта: Простое оружие, Короткие клинки
+Тип: одноручное~
+@10809    = ~Тихий убийца +3~
+@10810    = ~История "Тихого убийцы" - это обычная сказка, которая может быть как правдивой, так и нет. В ней рассказывается о двух братьях, боровшихся за внимание и трон своего больного отца. Когда своей последней волей умирающий король передал трон старшему сыну, младший пришёл в ярость и поклялся любой ценой занять трон. Для этого младший сын приказал изготовить "Тихого убийцу", чтобы этот клинок помог ему убить собственного брата.
 
-Many such tales exist throughout the realms and history. Who is to say if they are fact or fiction?  In any case, Silentkiller is indeed a weapon of assassination. The blade grants its wielder the ability to blend into the shadows and move as quiet as a cat stalking its prey.
+Такие истории никому не в новинку, их можно услышать во все времена и во всех королевствах. Кто знает, сколько тут правды, а сколько вымысла? В любом случае, "Тихий убийца" - действенное оружие убийства. Этот клинок наделяет своего владельца способностью сливаться с тенями и двигаться бесшумно, подобно кошке, выслеживающей мышь.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d6 + 3
-Attack Bonus:  +3
-Enchantment:  +3
-Damage Type: Piercing
-Special:
-  Move Silently: +6
-  Hide: +6
-  True Backstab: If the wielder attacks from stealth or invisibility and hits a creature in the back with this weapon, it deals an additional 6d6 damage.
-Weight: 3 lb.
-Feat Requirement:  Simple Weapon, Small Blade
-Type:  One-handed~
-@10811    = ~Assassin's Blade +5~
-@10812    = ~The story of Assassin's Blade is a common tale that may, or may not, be true. The story tells of two brothers who vied for the attention, and throne, of their ailing father. When the elder brother was named king by his dying sire, the younger was furious and vowed to take the throne as his own. To this end he commissioned the making of Assassin's Blade to aid him in his brother's murder.
+Урон: 1d6+3
+Атака: +3
+Зачарование: +3
+Тип урона: колющий
+Особенности:
+ Приглушение: +6 к навыку "Тихая походка"
+ Слияние с тенью: +6 к навыку "Незаметность"
+ Удар в спину: если владелец меча атакует из невидимости или скрытности и попадает этим оружием в спину существа, оно наносит дополнительно 6d6 урона
+Вес: 3 фунта
+Необходимая черта: Простое оружие, Короткие клинки
+Тип: одноручное~
+@10811    = ~Клинок убийцы +5~
+@10812    = ~История "Клинка убийцы" - это обычная сказка, которая может быть как правдивой, так и нет. В ней рассказывается о двух братьях, боровшихся за внимание и трон своего больного отца. Когда своей последней волей умирающий король передал трон старшему сыну, младший пришёл в ярость и поклялся любой ценой занять трон. Для этого младший сын приказал изготовить "Клинок убийцы", чтобы этот клинок помог ему убить собственного брата.
 
-Many such tales exist throughout the realms and history. Who is to say if they are fact or fiction?  In any case, Assassin's Blade is indeed a weapon of assassination. The blade grants its wielder the ability to blend into the shadows and move as quiet as a cat stalking its prey.
+Такие истории никому не в новинку, их можно услышать во все времена и во всех королевствах. Кто знает, сколько тут правды, а сколько вымысла? В любом случае, "Клинок убийцы" - действенное оружие убийства. Этот клинок наделяет своего владельца способностью сливаться с тенями и двигаться бесшумно, подобно кошке, выслеживающей мышь.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d6 + 5
-Attack Bonus:  +5
-Enchantment:  +5
-Damage Type: Piercing
-Special:
-  Move Silently: +12
-  Hide: +12
-  True Backstab: If the wielder attacks from stealth or invisibility and hits a creature in the back with this weapon, it deals an additional 10d6 damage.
-Weight: 3 lb.
-Feat Requirement:  Simple Weapon, Small Blade
-Type:  One-handed~
-@11386    = ~The Club of Confusion was crafted by the ogress Shavauntea as a "gift" for her husband, Grothak the Stupid. Her hope was that the club could be used to "knock sense into empty head."  Shavauntea was quite surprised to find that the weapon had the opposite effect when she brought it down upon her husband's unsuspecting head. The club was thought to have been destroyed in the battle between the two lovers after Grothak regained his senses. Obviously, this was not the case.
+Урон: 1d6+5
+Атака: +5
+Зачарование: +5
+Тип урона: колющий
+Особенности:
+ Приглушение: +12 к навыку "Тихая походка"
+ Слияние с тенью: +12 к навыку "Незаметность"
+ Верный удар в спину: если владелец меча атакует из невидимости или скрытности и попадает этим оружием в спину существа, оно наносит дополнительно 10d6 урона
+Вес: 3 фунта
+Необходимая черта: Простое оружие, Короткие клинки
+Тип: одноручное~
+@11386    = ~"Дубину замешательства" смастерила женщина-огр Шаванти в "подарок" своему мужу Гротаку Тупому. Она надеялась, что с помощью новой дубины можно будет "вбить хотя бы немного мозгов в пустую голову". Шаванти была очень удивлена, когда обнаружило, что оружие, в момент обрушения оного на голову мужа, произвело обратный эффект. Считалось, что дубинка была уничтожена в драке между супругами после того, как Гротак пришёл в себя. Очевидно, что это не так.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage: 1d6  +5
-Attack Bonus: +5 
-Enchantment:  +5
-Damage Type: Bludgeoning
-Special:  
-  Headknocking: 66% chance target takes +3d6 Bludgeoning damage to the head
-  Spell Process: 50% chance target becomes Confused for 1 round (Will DC 33)
-  Impact: Increased chance of scoring a critical hit
-Weight: 6 lb.
-Required Feat:  Simple Weapon, Mace
-Type:  One-handed~
-@12268    = ~Wands are 1 1/4 feet long and slender. They are made of ivory, bone, or wood and are usually tipped with something - metal, crystal, stone, etc. They are fragile and tend to break easily. Because of this, they are often kept in cases.
+Урон: 1d6+5
+Атака: +5
+Зачарование: +5
+Тип урона: дробящий
+Особенности:
+ Сокрушение: с вероятностью в 66% жертва получает дополнительно 3d6 дробящего урона в голову
+ Наложение заклинания: с вероятностью в 50% жертва ошеломляется на 1 раунд (успешный спасбросок воли с УС 33 отменяет эффект)
+ Импульс: увеличивает шанс критического удара
+Вес: 6 фунтов
+Необходимая черта: Простое оружие, Булавы
+Тип: одноручное~
+@12268    = ~Жезлы обычно длинные и тонкие, и имеют длину в один фут с четвертью. Их изготавливают из кости, слоновой кости или дерева и, как правило, покрывают металлом, стеклом, камнем и т.п. Жезлы отличаются повышенной хрупкостью и часто ломаются. Поэтому многие хранят их в футлярах.
 
-Wands are powered by charges, each use costing one or more charges (depending on the item). When a wand runs out of charges, it is consumed and destroyed.
+Жезл содержит несколько зарядов того или иного заклинания, и при каждом применении тратится один или более таких зарядов (в зависимости от вида жезла). Когда заряды заканчиваются, жезл самоуничтожается.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Causes a creature to take 30% more fire, cold, electricity, and acid damage for 20 rounds (no save, non-cumulative)
-Range: 100 ft.
-Weight: 1 lb.~
-@12639    = ~Bullets of Shattering +5~
-@12640    = ~Magical currents are embedded inside this bullet so that it seems a little more balanced and lighter as it jumps towards an opponent.
+Существо, на которое наложен эффект жезла, будет получать на 30% больше урона от огня, холода, электричества и кислоты в течение 20 раундов (спасброска нет, эффект не суммируется)
+Дальность: 100 футов
+Вес: 1 фунт~
+@12639    = ~Снаряды сокрушения +5~
+@12640    = ~В этом снаряде заключена магическая энергия, поэтому он несколько легче, лучше сбалансирован и словно бы выпрыгивает навстречу врагам.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d4  +5
-Attack Bonus:  +5 
-Enchantment:  +5
-Damage Type:  Missile (bludgeoning)
-Special:
-  Deals x3 damage on a critical hit
-Weight: 0 lb.
-Launcher:  Sling~
-@35653     = ~Repulsion~
-@36653     = ~Repulsion
-(Abjuration)
-Level: Brd 7, Clr 6, Sor/Wiz 7, Helm 5
-Range: Caster
-Duration: 3 rounds
-Casting Time: 6
-Area of Effect: 20-foot radius
-Saving Throw: Fortitude negates
+Урон: 1d4+5
+Атака: +5
+Зачарование: +5
+Тип урона: метательный (дробящий)
+Особенности:
+ Наносит в три раза больше урона при критическом попадании
+Вес: 0 фунтов
+Оружие: праща~
+@35653     = ~Отталкивание~
+@36653     = ~Отталкивание
+(Отречение)
+Уровень: бард 7, священник 6, колдун/волшебник 7, жрец Хелма 5
+Дальность: колдующий
+Длительность: 3 раунда
+Время чтения: 6
+Зона действия: радиус 20 футов
+Спасбросок: стойкости, отменяет
 
-This spell grants the caster an aura that repels nearby enemies, sending them hurtling away from the caster. Any enemy that comes within the area of effect must make a Fortitude save with -5 DC or be knocked back.~
+Это заклинание наделяет заклинателя аурой, которая отталкивает ближайших врагов, отбрасывая их от заклинателя. Любой враг, оказавшийся в зоне действия заклинания, должен сделать спасбросок стойкости с -5 к УС или быть отброшенным назад.~
 @55716=~Cast the spell <EXCCSPELL>~
-@1010    = ~Circle of Bones~
-@1011    = ~Circle of Bones 
-(Necromancy)
-Level: Clr 3
-Range: Caster
-Duration: 3 rounds
-Casting Time: 3
-Area of Effect: 3-foot radius
-Saving Throw: None
+@1010    = ~Костяной круг~
+@1011    = ~Костяной круг 
+(Некромантия)
+Уровень: священник 3
+Дальность: колдующий
+Длительность: 3 раунда
+Время чтения: 3
+Зона действия: радиус 3 фута
+Спасбросок: нет
 
-This spell conjures forth a barrier of floating bones that spin rapidly around the caster. Anyone entering their path takes 2d6 bludgeoning damage and 2d6 slashing damage per round. This spell does not provoke an attack of opportunity.~
+Вокруг заклинателя начинает быстро вращаться барьер из костей. Любой, кто окажется у них на пути, каждый раунд получает 2d6 дробящего и 2d6 рубящего урона. Это заклинание не провоцирует атаку при возможности.~
 @1016    = ~Poison~
 @1017    = ~Poison 
 (Necromancy) 
@@ -686,104 +687,106 @@ Weight: 0 lb.~
 @55605=~, -<EXRDVAL1> damage penalty~
 @55606=~, minimum die roll of <EXRLVAL1>~
 @55607=~, maximum die roll of <EXRLVAL1>~
-@11533    = ~The Skirling Skull +2~
-@11534    = ~The Skirling Skull, thought to be of deep gnome manufacture, is a flail of notably unusual design: a three-foot long wooden shaft topped with a stone head carved to resemble a skull and crowned with long, glimmering shards of impossibly hard crystal.
+@11533    = ~Вопящий череп +2~
+@11534    = ~Предположительно, "Вопящий череп" был создан мастерами из рода подземных гномов. Этот цеп можно легко узнать по его необычному виду: к трехфутовой деревянной рукоятке цепью прикреплено било в виде массивного камня, вырезанного в форме черепа, с торчащими из него длинными, мерцающими осколками невероятно твёрдого хрусталя.
 
-When the enchanted crystals strike an object they vibrate and emit a keening wail - these unnatural harmonics can rend magical auras and dispel whatever sorcery surrounds the target. The same ringing tone also has a chance of deafening the target.
+Когда оружие поражает цель, кристаллы начинают вибрировать и издают пронзительный визг. Эти неестественные гармоники способны разрушить магические ауры и рассеять любые заклинания, наложенные на цель. Этот же визг может оглушить жертву удара.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d8  +2
-Attack Bonus:  +2
-Enchantment:  +2
-Damage Type:  Bludgeoning
-Special:
-  Sonic: +1d6 sonic damage
-  Dispelling: 15% chance Dispel Magic on target (Will DC 15 + wielder's Strength bonus)
-  Wail: Deafens struck target (Fortitude DC 15 + wielder's Strength bonus)
-Weight: 5 lb.
-Required Feat:  Martial Weapon, Flail
-Type:  One-handed~
-@11535    = ~Skirling Svirfneblin Skull +4~
-@11536    = ~The Skirling Svirfneblin Skull, thought to be of deep gnome manufacture, is a flail of notably unusual design: a three-foot long wooden shaft topped with a stone head carved to resemble a skull and crowned with long, glimmering shards of impossibly hard crystal.
+Урон: 1d8+2
+Атака: +2
+Зачарование: +2
+Тип урона: дробящий
+Особенности:
+ Громкий: +1d6 урона звуком
+ Рассеивание: при попадании с вероятностью в 15% на цель будет наложено заклинание "Развеять магию" (успешный спасбросок воли с УС = (15 + модификатор силы владельца) отменяет эффект)
+ Завывание: оглушает цель при попадании (успешный спасбросок стойкости с УС = (15 + модификатор силы владельца) отменяет эффект)
+Вес: 5 фунтов
+Необходимая черта: Военное оружие, Цепы
+Тип: одноручное~
+@11535    = ~Вопящий череп свирфнеблинов +4~
+@11536    = ~Предположительно, "Вопящий череп свирфнеблинов" был создан мастерами из рода подземных гномов. Этот цеп можно легко узнать его по необычному виду: к трехфутовой деревянной рукоятке цепью прикреплено било в виде массивного камня, вырезанного в форме черепа, с торчащими из него длинными, мерцающими осколками невероятно твёрдого хрусталя.
 
-When the enchanted crystals strike an object they vibrate and emit a keening wail - these unnatural harmonics can rend magical auras and dispel whatever sorcery surrounds the target. The same ringing tone also has a chance of deafening the target.
+Когда оружие поражает цель, кристаллы начинают вибрировать и издают пронзительный визг. Эти неестественные гармоники способны разрушить магические ауры и рассеять любые заклинания, наложенные на цель. Этот же визг может оглушить жертву удара.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d8  +4
-Attack Bonus:  +4
-Enchantment:  +4
-Damage Type:  Bludgeoning
-Special:
-  Sonic: +2d6 sonic damage
-  Dispelling: 30% chance Dispel Magic on target (Will DC 25 + wielder's Strength bonus)
-  Wail: Deafen struck target (Fortitude DC 25 + wielder's Strength bonus)
-Weight: 5 lb.
-Required Feat:  Martial Weapon, Flail
-Type:  One-handed~
-@11538    = ~This heavy flail is composed of an iron rod with three hollow metal tubes secured to it by thin black iron chains. When held, the chimes ring together, as if stirred by the wind, and no amount of padding or wrapping seems to silence the flail's chiming. When swung in combat, the chimes clash like thunder, having a chance of deafening anyone struck by it.
+Урон: 1d8+4
+Атака: +4
+Зачарование: +4
+Тип урона: дробящий
+Особенности:
+ Громкий: +2d6 урона звуком
+ Рассеивание: при попадании с вероятностью в 30% на цель будет наложено заклинание "Развеять магию" (успешный спасбросок воли с УС = (25 + модификатор силы владельца) отменяет эффект)
+ Завывание: оглушает цель при попадании (успешный спасбросок стойкости с УС = (25 + модификатор силы владельца) отменяет эффект)
+Вес: 5 фунтов
+Необходимая черта: Военное оружие, Цепы
+Тип: одноручное~
+@11538    = ~Этот тяжёлый цеп состоит из железного скипетра и прикреплённых к нему тонкими цепями из чёрного железа трёх пустотелых трубок. Когда цеп держат в руке, трубки тихо звенят, как колокольчики на ветру и никакие обмотки не могут заглушить этот звон. В бою же цеп грохочет ударами грома, и каждый, кто получает от него удар, может быть оглушён.
 
-This weapon is all that remains of Slow Cedric's Gallop, a small frontier settlement located in the Southern Pass of the Spine of the World Mountains. The settlement is believed to have been overrun by a tribe of orcs in the great winter of 1170 DR, and when the cold season passed, the settlement and the bodies of the townsfolk had been buried beneath great mountains of snow. When the first travelers braved the Pass in the spring season, they found only the top of the settlement's great stone belltower peeking through the mountainous drifts. This odd-looking flail was found lying upon the tower's bloodied stone floor, surrounded by the frost-dusted bodies of several dead orcs. 
+Это оружие - всё, что осталось от Тихого Галопа Седрика, небольшого приграничного поселения, расположенного на южном перевале гор Хребта Мира. Считается, что это поселение было захвачено племенем орков в 1170 ЛД во время великой зимы. Когда холода отступили, поселение и тела его жителей были погребены под огромными горами снега. Когда первые путешественники отважились пройти через этот перевал весной, они обнаружили только вершину верхушку каменной колокольни, одиноко торчавшей на фоне горного рельефа. Странно выглядевший цеп был найден на окровавленном каменном полу башни; вокруг валялись обмороженные трупы орков. 
 
-According to tales, the Black Chimes were a symbol of office of the settlement's Bell Warden, whose duty was two-fold - to ring the warning bell when an enemy was sighted in the pass, and after the warning bell had been rung, to defend the pass with his life. It is believed the first Bell Warden of Slow Cedric's Gallop was the original creator of the Black Chimes, an enchanted flail that would ring to warn the town of danger at the same time as he leapt into battle against his foes.
+Согласно преданиям, Чёрные Колокольчики служили символом смотрителем колокола, у которого было две обязанности - бить в набат, когда на перевале появлялся враг, и потом защищать перевал от врагов, даже ценой собственной жизни. Считается что первый смотритель колокола в Тихом Галопе Седрика и создал Чёрные Колокольчики, зачарованный цеп, который своим звоном предупреждал бы жителей деревеньки об опасности, одновременно сокрушая черепа врагов. 
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d8
-Attack Bonus:  +1 
-Enchantment:  +1
-Damage Type:  Bludgeoning
-Special:
-  Ringing: +1 sonic damage
-  Upon hitting a creature, the chimes awaken all party members (if sleeping) and grant them a +1 attack bonus for 1 round (non-cumulative)
-  Penalty:  -1 to Move Silently skill
-Weight: 5 lb.
-Required Feat:  Martial Weapon, Flail
-Type:  One-handed~
-@11540    = ~This heavy flail is composed of an iron rod with three hollow metal tubes secured to it by thin black iron chains. When held, the chimes ring together, as if stirred by the wind, and no amount of padding or wrapping seems to silence the flail's chiming. When swung in combat, the chimes clash like thunder, having a chance of deafening anyone struck by it.
+Урон: 1d8
+Атака: +1
+Зачарование: +1
+Тип урона: дробящий
+Особенности:
+ Звон: +1 урона звуком
+ При попадании по любому существу, колокольчики пробуждают всех членов группу (если они спят) и дают +1 к атаке на 1 раунд (эффект не складывается)
+ -1 к навыку "Тихая походка"
+Вес: 5 фунтов
+Необходимая черта: Военное оружие, Цепы
+Тип: одноручное~
+@11540    = ~Этот тяжёлый цеп состоит из железного скипетра и прикреплённых к нему тонкими цепями из чёрного железа трёх пустотелых трубок. Когда цеп держат в руке, трубки тихо звенят, как колокольчики на ветру и никакие обмотки не могут заглушить этот звон. В бою же цеп грохочет ударами грома, и каждый, кто получает от него удар, может быть оглушён.
 
-This weapon is all that remains of Slow Cedric's Gallop, a small frontier settlement located in the Southern Pass of the Spine of the World Mountains. The settlement is believed to have been overrun by a tribe of orcs in the great winter of 1170 DR, and when the cold season passed, the settlement and the bodies of the townsfolk had been buried beneath great mountains of snow. When the first travelers braved the Pass in the spring season, they found only the top of the settlement's great stone belltower peeking through the mountainous drifts. This odd-looking flail was found lying upon the tower's bloodied stone floor, surrounded by the frost-dusted bodies of several dead orcs. 
+Это оружие - всё, что осталось от Тихого Галопа Седрика, небольшого приграничного поселения, расположенного на южном перевале гор Хребта Мира. Считается, что это поселение было захвачено племенем орков в 1170 ЛД во время великой зимы. Когда холода отступили, поселение и тела его жителей были погребены под огромными горами снега. Когда первые путешественники отважились пройти через этот перевал весной, они обнаружили только вершину верхушку каменной колокольни, одиноко торчавшей на фоне горного рельефа. Странно выглядевший цеп был найден на окровавленном каменном полу башни; вокруг валялись обмороженные трупы орков. 
 
-According to tales, the Black Chimes were a symbol of office of the settlement's Bell Warden, whose duty was two-fold - to ring the warning bell when an enemy was sighted in the pass, and after the warning bell had been rung, to defend the pass with his life. It is believed the first Bell Warden of Slow Cedric's Gallop was the original creator of the Black Chimes, an enchanted flail that would ring to warn the town of danger at the same time as he leapt into battle against his foes.
+Согласно преданиям, Чёрные Колокольчики служили символом смотрителем колокола, у которого было две обязанности - бить в набат, когда на перевале появлялся враг, и потом защищать перевал от врагов, даже ценой собственной жизни. Считается что первый смотритель колокола в Тихом Галопе Седрика и создал Чёрные Колокольчики, зачарованный цеп, который своим звоном предупреждал бы жителей деревеньки об опасности, одновременно сокрушая черепа врагов. 
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Damage:  1d8  +3
-Attack Bonus:  +3
-Enchantment:  +3
-Damage Type:  Bludgeoning
-Special:
-  Ringing: +1d6 sonic damage
-  Upon hitting a creature, the chimes awaken all party members (if sleeping) and grant them a +3 attack bonus for 1 round (non-cumulative)
-  Spellward: Immunity to the spells, Power Word Silence and Silence
-Weight: 5 lb.
-Required Feat:  Martial Weapon, Flail
-Type:  One-handed~
-@12120    = ~Potions are typically found in ceramic, crystal, glass, or metal flasks or vials. Flasks or other containers generally contain enough fluid to provide one person with one complete dose to achieve the effects of the potion.
+Урон: 1d8+3
+Атака: +3
+Зачарование: +3
+Тип урона: дробящий
+Особенности:
+ Звон: +1d6 урона звуком
+ При попадании по любому существу, колокольчики пробуждают всех членов группу (если они спят) и дают +3 к атаке на 1 раунд (эффект не складывается)
+ Оберёг: дарует иммунитет к заклинаниям "Слово силы: Тишина" и "Тишина"
+Вес: 5 фунтов
+Необходимая черта: Военное оружие, Цепы
+Тип: одноручное~
+@12120    = ~Зелья обычно хранятся в керамических, хрустальных, стеклянных, металлических бутылках или пузырьках. Как правило, каждый сосуд содержит достаточно жидкости для одной дозы, необходимой для достижения эффекта.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Permanent 1/- Slashing Resistance
-Permanent 1/- Piercing Resistance
-Permanent 1/- Bludgeoning Resistance
-Weight:  1 lb.~
-@12915    = ~Wizard Robe of Acid Resistance~
-@12916    = ~Wizard Robes of Acid Resistance are sometimes worn for protection against monstrous, acidic slimes, but they are more commonly worn for protection against other wizards. Not many acid spells are known amongst mages, but the few that are known are widely used. Like other mage robes, these robes can only be worn by wizards.
+Навсегда даёт 1/- сопротивления рубящему урону
+Навсегда даёт 1/- сопротивления колющему урону
+Навсегда даёт 1/- сопротивления дробящему урону
+Вес: 1 фунт~
+@12915    = ~Мантия сопротивления кислоте~
+@12916    = ~Такие робы иногда надевают для защиты от чудовищных кислотных слизей, но чаще всего их носят для защиты от других волшебников. Среди магов известно не так много кислотных заклинаний, но те немногие, что известны, широко используются. Как и другие мантии, эти мантии могут носить только волшебники.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Resistance:  20/- Acid Resistance
-All acid damage dealt by the character is increased by 20%
-Weight:  3 lb.~
-@12917    = ~Wizard Robe of Force Resistance~
-@12918    = ~Of all the robes of resistance, Wizard Robes of Force Resistance are among the rarest. They are rare not because they are not useful, but because they are much harder to create than other robes of resistance. The name is a misnomer, as these robes are more useful for strengthening magic than for resisting it.
+Особенности:
+ Сопротивление: 20/- сопротивления кислоте
+ Весь урон кислотой, наносимый носителем робы, увеличивается на 20%
+Вес: 3 фунта~
+@12917    = ~Мантия сопротивления урону магией~
+@12918    = ~Среди всех мантий сопротивления, эти - одни из самых редких. Они редки не потому, что бесполезны, а потому, что их гораздо сложнее создать, чем другие мантии сопротивления. Их название не совсем верно, так как эти мантии полезны в основном для усиления магического урона, чем для сопротивления ему.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Resistance:  20/- Magic Damage Resistance
-All magic damage dealt by the character is increased by 20%
-Weight:  3 lb.~
+Особенности:
+ Сопротивление: 20/- сопротивления урону магией
+ Весь урон магией, наносимый носителем робы, увеличивается на 20%
+Вес: 3 фунта~
 @38359    = ~Glibness
 (Enchantment)
 Level: Brd 3
