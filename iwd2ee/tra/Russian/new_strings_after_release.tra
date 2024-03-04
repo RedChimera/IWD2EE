@@ -641,53 +641,53 @@ Disadvantages:
 
 Use this skill to keep a guard dog from barking at you, to get a wild bird to land on your outstretched hand, or to keep an owlbear calm while you back off. Any wild creature, including animals as well as animalistic monsters such as wyverns, must make a Will save or be charmed for 1 round per caster level.
 ~
-@55717=~This undead has been bolstered and made more difficult to turn~
-@56006=~Extra racial bonuses for humans go here. Each effect on this spell will be applied to any human player character right after character creation.~
-@56007=~Extra racial bonuses for aasimars go here. Each effect on this spell will be applied to any aasimar player character right after character creation.~
-@56008=~Extra racial bonuses for tieflings go here. Each effect on this spell will be applied to any tiefling player character right after character creation.~
-@56009=~Extra racial bonuses for moon elves go here. Each effect on this spell will be applied to any moon elf player character right after character creation.~
-@56010=~Extra racial bonuses for drow go here. Each effect on this spell will be applied to any drow player character right after character creation.~
-@56011=~Extra racial bonuses for wild elves go here. Each effect on this spell will be applied to any wild elf player character right after character creation.~
-@56012=~Extra racial bonuses for half-elves go here. Each effect on this spell will be applied to any half-elf player character right after character creation.~
-@56013=~Extra racial bonuses for shield dwarves go here. Each effect on this spell will be applied to any shield dwarf player character right after character creation.~
-@56014=~Extra racial bonuses for gold dwarves go here. Each effect on this spell will be applied to any gold dwarf player character right after character creation.~
-@56015=~Extra racial bonuses for gray dwarves go here. Each effect on this spell will be applied to any gray dwarf player character right after character creation.~
-@56016=~Extra racial bonuses for lightfoot halflings go here. Each effect on this spell will be applied to any lightfoot halfling player character right after character creation.~
-@56017=~Extra racial bonuses for strongheart halflings go here. Each effect on this spell will be applied to any strongheart halfling player character right after character creation.~
-@56018=~Extra racial bonuses for ghostwise halflings go here. Each effect on this spell will be applied to any ghostwise halflings player character right after character creation.~
-@56019=~Extra racial bonuses for rock gnomes go here. Each effect on this spell will be applied to any rock gnome player character right after character creation.~
-@56020=~Extra racial bonuses for deep gnomes go here. Each effect on this spell will be applied to any deep gnome player character right after character creation.~
-@56021=~Extra racial bonuses for half-orcs go here. Each effect on this spell will be applied to any half-orc player character right after character creation.~
-@4803   = ~This ring is the only part of Veira that remains truly tangible. Bound in death as well as life, the ring never leaves Veira's finger.
+@55717=~Эта нежить была усилена и её сложнее изгнать~
+@56006=~Здесь находятся дополнительные расовые бонусы для людей. Каждый из этих эффектов применится к любому человеку сразу же после создания персонажа.~
+@56006=~Здесь находятся дополнительные расовые бонусы для аасимаров. Каждый из этих эффектов применится к любому аасимару сразу же после создания персонажа.~
+@56008=~Здесь находятся дополнительные расовые бонусы для тифлингов. Каждый из этих эффектов применится к любому тифлингу сразу же после создания персонажа.~
+@56009=~Здесь находятся дополнительные расовые бонусы для лунных эльфов. Каждый из этих эффектов применится к любому лунному эльфу сразу же после создания персонажа.~
+@56010=~Здесь находятся дополнительные расовые бонусы для дроу. Каждый из этих эффектов применится к любому дроу сразу же после создания персонажа.~
+@56011=~Здесь находятся дополнительные расовые бонусы для диких эльфов. Каждый из этих эффектов применится к любому дикому эльфу сразу же после создания персонажа.~
+@56012=~Здесь находятся дополнительные расовые бонусы для полуэльфов. Каждый из этих эффектов применится к любому полуэльфу сразу же после создания персонажа.~
+@56013=~Здесь находятся дополнительные расовые бонусы для дварфов щита. Каждый из этих эффектов применится к любому дварфу щита сразу же после создания персонажа.~
+@56014=~Здесь находятся дополнительные расовые бонусы для золотых дварфов. Каждый из этих эффектов применится к любому золотому дварфу сразу же после создания персонажа.~
+@56015=~Здесь находятся дополнительные расовые бонусы для серых дварфов. Каждый из этих эффектов применится к любому серому дварфу сразу же после создания персонажа.~
+@56016=~Здесь находятся дополнительные расовые бонусы для легконогих полуросликов. Каждый из этих эффектов применится к любому легконогому полурослику сразу же после создания персонажа.~
+@56017=~Здесь находятся дополнительные расовые бонусы для крепких полуросликов. Каждый из этих эффектов применится к любому крепкому полурослику сразу же после создания персонажа.~
+@56018=~Здесь находятся дополнительные расовые бонусы для скрытных полуросликов. Каждый из этих эффектов применится к любому скрытному полурослику сразу же после создания персонажа.~
+@56019=~Здесь находятся дополнительные расовые бонусы для скальных гномов. Каждый из этих эффектов применится к любому скальному гному сразу же после создания персонажа.~
+@56020=~Здесь находятся дополнительные расовые бонусы для глубинных гномов. Каждый из этих эффектов применится к любому глубинному гному сразу же после создания персонажа.~
+@56021=~Здесь находятся дополнительные расовые бонусы для полуорков. Каждый из этих эффектов применится к любому полуорку сразу же после создания персонажа.~
+@4803   = ~Это кольцо - единственная часть Вейры, которая остается по-настоящему материальной. Связанное как со смертью, так и с жизнью, кольцо никогда не покидает пальца Вейры.
 
-Veira remains only partly corporeal so long as she clings to the Material Plane. She can interact with the world around her, but her partially ethereal form has no need for sleep, and she can neither enjoy the pleasure of food or drink, nor can she suffer the pain of illness and injury. If her form is damaged, she can slowly regenerate over time. If her form is destroyed, she can be restored with a sufficient burst of positive energy, such as a Raise Dead spell.
+Вейра остается лишь частично материальной, пока находится на Материальном Плане. Она может взаимодействовать с окружающим миром, но ее частично бесплотная форма не нуждается во сне, не может получать удовольствие от еды и питья, а также испытывать боль от болезней и травм. Если ее форма получит повреждения, со временем она медленно восстановится. Если ее форма будет разрушена, она может быть возрождена с помощью достаточного всплеска позитивной энергии, например, заклинанием "Оживление мёртвого".
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Regeneration: 1 hit point per round
-Damage Reduction: 5/+1
-Incorporeal: Veira has a 50% chance to avoid any instance of physical damage that would hit her
-Move Silently: +50
-Resistance: 25/- Cold Resistance
-Resistance: 5/- Acid, Electricity, and Fire Resistance
-Turn Resistance: Counts as 4 levels higher for purposes of resisting Turn Undead
-Immunity to fatigue, poison, disease, bleeding wounds, stun, web, entangle, intoxication, nausea, vampiric touch, energy drain, Stoneskin, Iron Skins, Barkskin, enfeeblement, Otiluke's Resilient Sphere, Tortoise Shell, Horrid Wilting, death magic, petrification, critical hits, and most potions.
-Weight: 0 lb.~
-@4805   = ~This ring is the only part of Veira that remains truly tangible. Bound in death as well as life, the ring never leaves Veira's finger.
+Регенерация: восстанавливает 1 пункт здоровья каждый раунд
+Снижение урона: 5/+1
+Бесплотность: Вейра с вероятностью 50% избегает любого физического урона, который мог бы быть получен
+Навык "Тихая походка": +50
+Сопротивление: 25/- сопротивление холоду
+Сопротивление: 5/- сопротивление кислоте, электричеству и огню
+Сопротивление изгнанию: считается на 4 уровня выше для проверок изгнания нежити, направленного против нее
+Иммунитет к усталости, яду, болезням, рваным ранам, ошеломлению, паутине, запутыванию, опьянению, тошноте, прикосновению вампира, оттоку энергии, слабости, смертельной магии, критическим ударам, большинству зелий, а также к заклинаниям "Каменная кожа", "Железная кожа", "Кожа-кора", "Упругая сфера Отилука", "Черепаший панцирь" и "Жуткое увядание"
+Вес: 0 фунтов~
+@4805   = ~Это кольцо - единственная часть Вейры, которая остается по-настоящему материальной. Связанное как со смертью, так и с жизнью, кольцо никогда не покидает пальца Вейры.
 
-Veira remains only partly corporeal so long as she clings to the Material Plane. She can interact with the world around her, but her partially ethereal form has no need for sleep, and she can neither enjoy the pleasure of food or drink, nor can she suffer the pain of illness and injury. If her form is damaged, she can slowly regenerate over time. If her form is destroyed, she can be restored with a sufficient burst of positive energy, such as a Raise Dead spell.
+Вейра остается лишь частично материальной, пока находится на Материальном Плане. Она может взаимодействовать с окружающим миром, но ее частично бесплотная форма не нуждается во сне, не может получать удовольствие от еды и питья, а также испытывать боль от болезней и травм. Если ее форма получит повреждения, со временем она медленно восстановится. Если ее форма будет разрушена, она может быть возрождена с помощью достаточного всплеска позитивной энергии, например, заклинанием "Оживление мёртвого".
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Regeneration: 2 hit points per round
-Damage Reduction: 10/+2
-Incorporeal: Veira has a 50% chance to avoid any instance of physical damage that would hit her
-Move Silently: +50
-Resistance: 50/- Cold Resistance
-Resistance: 10/- Acid, Electricity, and Fire Resistance
-Turn Resistance: Counts as 4 levels higher for purposes of resisting Turn Undead
-Immunity to fatigue, poison, disease, bleeding wounds, stun, web, entangle, intoxication, nausea, vampiric touch, energy drain, Stoneskin, Iron Skins, Barkskin, enfeeblement, Otiluke's Resilient Sphere, Tortoise Shell, Horrid Wilting, death magic, petrification, critical hits, and most potions.
-Weight: 0 lb.~
+Регенерация: восстанавливает 2 пункта здоровья каждый раунд
+Снижение урона: 10/+2
+Бесплотность: Вейра с вероятностью 50% избегает любого физического урона, который мог бы быть получен
+Навык "Тихая походка": +50
+Сопротивление: 50/- сопротивление холоду
+Сопротивление: 10/- сопротивление кислоте, электричеству и огню
+Сопротивление изгнанию: считается на 4 уровня выше для проверок изгнания нежити, направленного против нее
+Иммунитет к усталости, яду, болезням, рваным ранам, ошеломлению, паутине, запутыванию, опьянению, тошноте, прикосновению вампира, оттоку энергии, слабости, смертельной магии, критическим ударам, большинству зелий, а также к заклинаниям "Каменная кожа", "Железная кожа", "Кожа-кора", "Упругая сфера Отилука", "Черепаший панцирь" и "Жуткое увядание"
+Вес: 0 фунтов~
 @55604=~, +<EXRDVAL1> extra damage~
 @55605=~, -<EXRDVAL1> damage penalty~
 @55606=~, minimum die roll of <EXRLVAL1>~
