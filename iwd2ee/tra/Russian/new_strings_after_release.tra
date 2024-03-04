@@ -151,28 +151,28 @@ Disadvantages:
 Спасбросок: стойкости, отменяет
 
 Это заклинание даёт прочитавшему его возможность отравить своего противника одним касанием. За яд наносит 2 единицы урона в секунду в течении 30 секунд, а затем перестаёт действовать на жертву. За каждые 6 уровней заклинателя, яд наносит дополнительный пункт урона в секунду, до максимума в 7 единиц урона в секунду на 30-м уровне. Успешный спасбросок стойкости нейтрализует воздействие. Это заклинание не провоцирует атаку при возможности.~
-@1022    = ~Circle of Blades~
-@1023    = ~Circle of Blades
-(Evocation)
-Level: Clr 6, Pal 5, Helm 6, Tempus 6
-Range: Caster
-Duration: 2 rounds
-Casting Time: 9
-Area of Effect: 3-foot radius
-Saving Throw: Reflex half
+@1022    = ~Круг клинков~
+@1023    = ~Круг клинков
+(Проявление)
+Уровень: священник 6, паладин 5, жрец Хелма 6, жрец Темпуса 6
+Дальность: колдующий
+Длительность: 2 раунда
+Время чтения: 9
+Зона действия: радиус 3 фута
+Спасбросок: реакции, половина урона
 
-This spell conjures forth a wall of circling, razor-sharp blades that whirl and flash around the caster. Any creature attempting to pass through the blade barrier suffers 10d8 points of damage, with a successful Reflex save for half damage. This spell does not provoke an attack of opportunity.~
-@1024    = ~Spiritual Wrath~
-@1025    = ~Spiritual Wrath 
-(Evocation)
-Level: Clr 6, Pal 6, Helm 7, Tempus 6
-Range: Sight of Caster
-Duration: Instantaneous
-Casting Time: 2
-Area of Effect: Special
-Saving Throw: Reflex half
+Это заклинание создаёт стену из острых как бритва, вращающихся лезвий, окружающих заклинателя неподвижным барьером. Любое существо, которое попытается преодолеть барьер из лезвий, получит 10d8 единиц урона. Успешный спасбросок реакции уменьшает повреждения вдвое. Это заклинание не провоцирует атаку при возможности.~
+@1024    = ~Духовный гнев~
+@1025    = ~Духовный гнев
+(Проявление)
+Уровень: священник 6, паладин 6, жрец Хелма 7, жрец Темпуса 6
+Дальность: обзор колдующего
+Длительность: мгновенно
+Время чтения: 2
+Зона действия: особая
+Спасбросок: реакции, половина урона
 
-Upon completion of this spell, the caster becomes a focus of spiritual energy, which then shoots out from the caster in four directions, like lightning bolts. The caster specifies the direction of one of the bolts and the other bolts shoot opposite and perpendicular to that direction, completing a cross-shaped pattern. All creatures in the bolts' path take 5d20 points of magic damage, with a Reflex save for half. Creatures of the same moral alignment (good, neutral, evil) as the caster are unaffected by the spell. This spell does not provoke an attack of opportunity.~
+В теле жреца концентрируется духовная мощь, которая затем вылетает в четырёх направлениях, как разряды молнии. Заклинатель задаёт направление для одного из разрядов, а остальные летят перпендикулярно и в противоположном направлении, образуя крест. Любое существо на пути у разряда получает 5d20 очков урона магией (вдвое меньше при успешном спасброске). Существа, разделяющие с заклинателем мировоззрение (добрые, нейтральные, злые), не подвержены действию заклинания. Это заклинание не провоцирует атаку при возможности.~
 @1136    = ~Malavon's Rage~
 @1137    = ~Malavon's Rage
 (Evocation)
