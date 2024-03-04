@@ -792,16 +792,17 @@ Use this skill to keep a guard dog from barking at you, to get a wild bird to la
  Сопротивление: 20/- сопротивления урону магией
  Весь урон магией, наносимый носителем робы, увеличивается на 20%
 Вес: 3 фунта~
-@38359    = ~Glibness
-(Enchantment)
-Level: Brd 3
-Range: Caster
-Duration: 10 rounds/level
-Casting Time: 3
-Area of Effect: Caster
-Saving Throw: None
+@37359    = ~Бойкость~
+@38359    = ~Бойкость
+(Чародейство)
+Уровень: бард 3
+Дальность: колдующий
+Длительность: 10 раундов/уровень
+Время чтения:  3
+Зона действия: колдующий
+Спасбросок: нет
 
-This spell greatly increases the character's ability to fool others. For the duration, the character's Bluff skill is increased by 15.~
+Это заклинание значительно увеличивает способность персонажа обманывать других. На время действия заклинания навык "Блеф" персонажа увеличивается на 15.~
 @816    = ~ABJURER:
 
 A wizard that specializes in magic that protects, blocks, or banishes.
