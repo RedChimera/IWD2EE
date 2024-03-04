@@ -173,19 +173,19 @@ Disadvantages:
 Спасбросок: реакции, половина урона
 
 В теле жреца концентрируется духовная мощь, которая затем вылетает в четырёх направлениях, как разряды молнии. Заклинатель задаёт направление для одного из разрядов, а остальные летят перпендикулярно и в противоположном направлении, образуя крест. Любое существо на пути у разряда получает 5d20 очков урона магией (вдвое меньше при успешном спасброске). Существа, разделяющие с заклинателем мировоззрение (добрые, нейтральные, злые), не подвержены действию заклинания. Это заклинание не провоцирует атаку при возможности.~
-@1136    = ~Malavon's Rage~
-@1137    = ~Malavon's Rage
-(Evocation)
-Level: Sor/Wiz 7
-Range: Caster
-Duration: Instantaneous
-Casting Time: 1
-Area of Effect: 15-foot radius
-Saving Throw: Reflex half
+@1136    = ~Ярость Малавона~
+@1137    = ~Ярость Малавона
+(Проявление)
+Уровень: колдун/волшебник 7
+Дальность: колдующий
+Длительность: мгновенно
+Время чтения: 1
+Зона действия: радиус 15 футов
+Спасбросок: реакции, половина урона
 
-Malavon's Rage was created by the dark elf sorcerer Malavon. It shoots darts of pure energy out from the caster's body in all directions, harming friend and foe alike. The small wedges of magic do 25d4 points of piercing damage to everything caught in their path (Reflex save with +2 DC for half). This spell is especially useful when a mage is surrounded by enemies, and it will not provoke an attack of opportunity.
+Это заклинание разработал маг-дроу Малавон. Из тела заклинателя во всех направлениях вылетают стрелы чистой энергии, поражающие и друзей, и врагов. Эти энергетические стрелы наносят 25d4 единиц колющего урона любой цели, что окажется у них на пути. Удачный спасбросок реакции снижает урон на 50%. Заклинание особенно эффективно, если маг оказался окружён врагами, и оно не провоцирует атаку при возможности.
 
-Like most spells created by drow, Malavon's Rage was designed to bypass spell resistance, as drow often fight enemies that resist magic... such as other drow.~
+Как и большинство заклинаний, созданных дроу, "Ярость Малавона" была разработана, чтобы игнорировать сопротивление магии, поскольку дроу часто сражаются с врагами, имеющими сопротивление магии... например, с другими дроу.~
 @1623    = ~Animal Rage~
 @1624    = ~Animal Rage
 (Enchantment)
