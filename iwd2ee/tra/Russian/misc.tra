@@ -1,38 +1,38 @@
-@56000=~We got in through magical means.~
-@56001=~Do you require my services once again?~
-@56002=~Yes, please rejoin the party.~
-@56003=~Not at this time.~
-@56004=~This slider controls the difficulty level to be used in combat. From left to right, the settings are as follows:
+@56000 = ~Мы попали сюда с помощью магии.~
+@56001 = ~Ты вновь нуждаешься в моих услугах?~
+@56002 = ~Да, пожалуйста, вернись в группу.~
+@56003 = ~Не сейчас.~
+@56004 = ~Этот ползунок контролирует уровень сложности боёв. Слева направо, настройки следующие:
 
-* Very Easy: Enemies have a -4 penalty to attack and saving throws, and the party takes half damage.
+* ОЧЕНЬ ЛЕГКО: враги получают штраф -4 к атаке и спасброскам, а группа получает половину урона.
 
-* Easy: Enemies have a -2 penalty to attack and saving throws, and the party takes three quarter damage.
+* ЛЕГКО: враги имеют штраф -2 к атаке и спасброскам, а группа получает три четверти урона.
 
-* Normal: This setting has no changes; Icewind Dale 2: Enhanced Edition was balanced for this difficulty.
+* БАЗОВЫЕ ПРАВИЛА: этот параметр не изменился; "Долина Ледяного Ветра II: Расширенное Издание" была сбалансирована для этой сложности.
 
-* Hard: Enemies have a +3 attack bonus and deal 50% more damage to the party.
+* ТЯЖЕЛО: враги получают бонус +3 к атаке и наносят на 50% больше урона.
 
-* Insane: Enemies have a +9 attack bonus and deal double damage to the party.
+* БЕЗУМНО: враги получают бонус +9 к атаке и наносят двойной урон.
 
-In addition, there is an even higher difficulty, Heart of Fury. This difficulty setting can be accessed by opening Config.exe, selecting the "Heart of Fury Mode" option, and starting a new game.
+Кроме того, существует еще более высокая сложность, - "Сердце ярости". Доступ к этой сложности можно получить, открыв Config.exe, выбрать опцию "Сердце ярости" и начать новую игру.
 
-* Heart of Fury: Enemies have triple their base HP plus another 80 HP, +10 to all ability scores, +12 levels in each of their classes, +9 attack, +5 saving throws, deal double damage to the party, and have +10 challenge rating. Many magical items throughout the game are replaced with more powerful versions.
+* СЕРДЦЕ ЯРОСТИ: враги имеют втрое больше базовых HP плюс дополнительные 80 HP, получают +10 ко всем навыкам, +12 к уровню в каждом из классов, +9 к атаке, +5 к спасброскам, наносят двойной урон группе и получают +10 к уровню сложности. Многие магические предметы в игре заменяются более мощными версиями.
 
-Icewind Dale 2: Enhanced Edition has certain optional components which reduce the bonuses given to Heart of Fury enemies. The bonuses above are assuming no such components are installed.~
-@56005=~Ability Score Drain~
-@56006=~Extra racial bonuses for humans go here. Each effect on this spell will be applied to any human player character right after character creation.~
-@56007=~Extra racial bonuses for aasimars go here. Each effect on this spell will be applied to any aasimar player character right after character creation.~
-@56008=~Extra racial bonuses for tieflings go here. Each effect on this spell will be applied to any tiefling player character right after character creation.~
-@56009=~Extra racial bonuses for moon elves go here. Each effect on this spell will be applied to any moon elf player character right after character creation.~
-@56010=~Extra racial bonuses for drow go here. Each effect on this spell will be applied to any drow player character right after character creation.~
-@56011=~Extra racial bonuses for wild elves go here. Each effect on this spell will be applied to any wild elf player character right after character creation.~
-@56012=~Extra racial bonuses for half-elves go here. Each effect on this spell will be applied to any half-elf player character right after character creation.~
-@56013=~Extra racial bonuses for shield dwarves go here. Each effect on this spell will be applied to any shield dwarf player character right after character creation.~
-@56014=~Extra racial bonuses for gold dwarves go here. Each effect on this spell will be applied to any gold dwarf player character right after character creation.~
-@56015=~Extra racial bonuses for gray dwarves go here. Each effect on this spell will be applied to any gray dwarf player character right after character creation.~
-@56016=~Extra racial bonuses for lightfoot halflings go here. Each effect on this spell will be applied to any lightfoot halfling player character right after character creation.~
-@56017=~Extra racial bonuses for strongheart halflings go here. Each effect on this spell will be applied to any strongheart halfling player character right after character creation.~
-@56018=~Extra racial bonuses for ghostwise halflings go here. Each effect on this spell will be applied to any ghostwise halflings player character right after character creation.~
-@56019=~Extra racial bonuses for rock gnomes go here. Each effect on this spell will be applied to any rock gnome player character right after character creation.~
-@56020=~Extra racial bonuses for deep gnomes go here. Each effect on this spell will be applied to any deep gnome player character right after character creation.~
-@56021=~Extra racial bonuses for half-orcs go here. Each effect on this spell will be applied to any half-orc player character right after character creation.~
+В "Долине Ледяного Ветра II: Расширенное Издание" есть некоторые дополнительные компоненты, уменьшающие бонусы, которые враги получают в Сердце ярости. Указанные выше бонусы предполагают, что эти компоненты не установлены.~
+@56005 = ~Очки параметров вытянуты~
+@56006 = ~Здесь находятся дополнительные расовые бонусы для людей. Каждый эффект этих чар применится к любому человеку сразу же после создания персонажа.~
+@56006 = ~Здесь находятся дополнительные расовые бонусы для аасимаров. Каждый эффект этих чар применится к любому аасимару сразу же после создания персонажа.~
+@56008 = ~Здесь находятся дополнительные расовые бонусы для тифлингов. Каждый эффект этих чар применится к любому тифлингу сразу же после создания персонажа.~
+@56009 = ~Здесь находятся дополнительные расовые бонусы для лунных эльфов. Каждый эффект этих чар применится к любому лунному эльфу сразу же после создания персонажа.~
+@56010 = ~Здесь находятся дополнительные расовые бонусы для дроу. Каждый эффект этих чар применится к любому дроу сразу же после создания персонажа.~
+@56011 = ~Здесь находятся дополнительные расовые бонусы для диких эльфов. Каждый эффект этих чар применится к любому дикому эльфу сразу же после создания персонажа.~
+@56012 = ~Здесь находятся дополнительные расовые бонусы для полуэльфов. Каждый эффект этих чар применится к любому полуэльфу сразу же после создания персонажа.~
+@56013 = ~Здесь находятся дополнительные расовые бонусы для дварфов щита. Каждый эффект этих чар применится к любому дварфу щита сразу же после создания персонажа.~
+@56014 = ~Здесь находятся дополнительные расовые бонусы для золотых дварфов. Каждый эффект этих чар применится к любому золотому дварфу сразу же после создания персонажа.~
+@56015 = ~Здесь находятся дополнительные расовые бонусы для серых дварфов. Каждый эффект этих чар применится к любому серому дварфу сразу же после создания персонажа.~
+@56016 = ~Здесь находятся дополнительные расовые бонусы для легконогих полуросликов. Каждый эффект этих чар применится к любому легконогому полурослику сразу же после создания персонажа.~
+@56017 = ~Здесь находятся дополнительные расовые бонусы для крепких полуросликов. Каждый эффект этих чар применится к любому крепкому полурослику сразу же после создания персонажа.~
+@56018 = ~Здесь находятся дополнительные расовые бонусы для скрытных полуросликов. Каждый эффект этих чар применится к любому скрытному полурослику сразу же после создания персонажа.~
+@56019 = ~Здесь находятся дополнительные расовые бонусы для скальных гномов. Каждый эффект этих чар применится к любому скальному гному сразу же после создания персонажа.~
+@56020 = ~Здесь находятся дополнительные расовые бонусы для глубинных гномов. Каждый эффект этих чар применится к любому глубинному гному сразу же после создания персонажа.~
+@56021 = ~Здесь находятся дополнительные расовые бонусы для полуорков. Каждый эффект этих чар применится к любому полуорку сразу же после создания персонажа.~
