@@ -140,17 +140,17 @@ Disadvantages:
 Спасбросок: нет
 
 Вокруг заклинателя начинает быстро вращаться барьер из костей. Любой, кто окажется у них на пути, каждый раунд получает 2d6 дробящего и 2d6 рубящего урона. Это заклинание не провоцирует атаку при возможности.~
-@1016    = ~Poison~
-@1017    = ~Poison 
-(Necromancy) 
-Level: Clr 4, Drd 3
-Range: Touch
-Duration: 30 seconds
-Casting Time: 7
-Area of Effect: 1 creature
-Saving Throw: Fortitude negates
+@1016    = ~Яд~
+@1017    = ~Яд
+(Некромантия)
+Уровень: священник 4, друид 3
+Дальность: прикосновение
+Длительность: 30 секунд
+Время чтения: 7
+Зона действия: 1 существо
+Спасбросок: стойкости, отменяет
 
-This spell grants the caster the ability to touch a creature and instantly poison them. The poison deals 2 damage per second for 30 seconds, then dissipates from the target's body. For every 6 caster levels, the poison deals another point of damage per second, up to a maximum of 7 damage per second at level 30. A successful Fortitude save negates any effect. This spell does not provoke an attack of opportunity.~
+Это заклинание даёт прочитавшему его возможность отравить своего противника одним касанием. За яд наносит 2 единицы урона в секунду в течении 30 секунд, а затем перестаёт действовать на жертву. За каждые 6 уровней заклинателя, яд наносит дополнительный пункт урона в секунду, до максимума в 7 единиц урона в секунду на 30-м уровне. Успешный спасбросок стойкости нейтрализует воздействие. Это заклинание не провоцирует атаку при возможности.~
 @1022    = ~Circle of Blades~
 @1023    = ~Circle of Blades
 (Evocation)
