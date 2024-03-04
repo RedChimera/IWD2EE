@@ -247,46 +247,44 @@ Disadvantages:
 Спасбросок: реакции, половина урона
 
 Это заклинание использует связь Селуны с лунным светом и магией, чтобы вызвать струю светящихся сфер. Заклинание наносит 1d6 магического урона за уровень заклинателя (до максимума в 5d6) каждому существу, оказавшемуся на его пути. Существа могут сделать спасбросок реакции, чтобы получить половину урона. Это заклинание не провоцирует атаку при возможности.~
-@31409     = ~Cloak of Fear~
-@32409     = ~Cloak of Fear
-(Conjuration)
-Level: Clr 4, Bane 4
-Range: Caster
-Duration: 6 rounds
-Casting Time: 6
-Area of Effect: Caster
-Saving Throw: Will negates
+@31409     = ~Плащ страха~
+@32409     = ~Плащ страха
+(Призывание)
+Уровень: священник 4, жрец Бейна 4
+Дальность: колдующий
+Длительность: 6 раундов
+Время чтения: 6
+Зона действия: колдующий
+Спасбросок: воли, отменяет
 
-Cloak of Fear bestows the caster with an aura of fear in a 5-foot radius.  All enemies that enter the cloak's area of effect must make a Will save or flee in panic for 1 round, and must continue to make Will saves twice a round as long as they are in the cloak of fear's area of effect.  The aura does not affect undead creatures. This spell does not provoke an attack of opportunity.~
-@33519     = ~Sunfire~
-@34519     = ~Sunfire
-(Evocation) 
-Level: Sor/Wiz 5
-Range: Caster
-Duration: Instantaneous
-Casting Time: 3
-Area of Effect: 30-foot radius
-Saving Throw: Reflex half
+У заклинателя появляется аура страха, действующая в радиусе 5 футов. Все попадающие в зону действия плаща страха и провалившие спасбросок воли существа в панике убегают в течение 1 раунда, а также должны повторять спасбросок воли дважды в раунд, пока они находятся в зоне действия заклинания. Нежить влиянию ауры не подвержена. Это заклинание не провоцирует атаку при возможности.~
+@33519     = ~Солнечный огонь~
+@34519     = ~Солнечный огонь
+(Проявление)
+Уровень: колдун/волшебник 5
+Дальность: колдующий
+Длительность: мгновенно
+Время чтения: 3
+Зона действия: радиус 30 футов
+Спасбросок: реакции, половина урона
 
-A sunfire is an explosive burst of flame similar to a fireball, but centered on the caster.  All creatures in the area of effect except for the caster are burned for 1d6 fire damage per caster level (15d6 maximum, 12d6 minimum).  A successful Reflex save halves the damage.  This spell blinds drow and gray dwarves if a Fortitude save is failed. This spell does not provoke an attack of opportunity.~
-@55377=~This character's body has been destroyed. A Resurrection spell will be needed to bring them back to life; Raise Dead will not suffice.~
-@55378=~This character's soul has been captured. The vessel for their soul must be destroyed before they can be brought back to life.~
-@4837   = ~As a cornugon, Xhaan is innately resistant to spells and elemental damage. His thick hide and extraplanar biology also grants him immunity to poison and disease and the ability to regenerate from his wounds. As a baatezu, he feels no fear, and minor charms are useless on his alien mind.
+Солнечный огонь это взрывающаяся вспышка огня, подобная огненному шару, но с фокусом на колдующем. Все существа в зоне действия кроме колдующего получают 1d6 урона огнём на уровень колдующего (минимум - 12d6 урона, максимум - 15d6 урона). Успешный спасбросок реакции снижает урон наполовину. Это заклинание ослепляет дроу и серых дварфов при провале спасброска стойкости. Это заклинание не провоцирует атаки при возможности.~
+@55377=~Тело этого персонажа было разрушено. Чтобы вернуть его к жизни, потребуется заклинание "Воскрешение"; заклинание "Оживление мёртвого" не сработает.~
+@55378=~Душа этого персонажа была захвачена. Сосуд с его душой должен быть уничтожен, прежде чем его можно будет вернуть к жизни.~
+@4837 = ~Будучи корнугоном, Ксаан обладает врожденной устойчивостью к заклинаниям и стихийному урону. Его толстая шкура и экстрапланарная природа дают ему иммунитет к ядам и болезням, а также способность регенерировать после ранений. Являясь баатезу, он также не испытывает страха, и слабые заклинания не могут повлиять на его его экстрапланарный разум.
 
-STATISTICS:
-
-Armor Bonus: +24
-Max Dex Bonus: None
-Special:
- Resistance: 10/- Acid Resistance
- Resistance: 100/- Fire Resistance
- Resistance: 10/- Cold Resistance
- Resistance: 36/- Spell Resistance
- Damage Reduction: 15/good or silver
- Regeneration: Regenerates 10 hit points per round
- Immunity to disease, poison, charm, and fear effects
- Can see perfectly even in magical darkness
-Weight: 0 lb.~
+Класс защиты: +24 (доспех)
+Максимальный бонус ловкости: отсутствует
+Особенности:
+ Сопротивление: 10/- сопротивления кислоте
+ Сопротивление: 100/- сопротивления огню
+ Сопротивление: 50/- сопротивления холоду
+ Сопротивление: 36/- сопротивления магическому урону
+ Снижение урона: 15/- снижения урона против не доброго или не серебряного оружия
+ Регенерация: восстанавливает 10 пунктов здоровья в раунд
+ Иммунитет к болезням, яду, очарованию, и страху
+ Может превосходно видеть даже в магической темноте
+Вес: 0 фунтов~
 @523    = ~WIZARD:
 
 The wizard strives to be a master of magical energies, shaping them and casting them as spells. To do so, he studies strange tongues and obscure facts and devotes much of his time to magical research. A wizard must rely on knowledge and wit to survive. Wizards are rarely seen adventuring without a retinue of fighters and men-at-arms. Because there are different types (or schools) of magic, there are different types of wizards. However, the most common sort studies all types of magic and learns a wide variety of spells. His broad range makes him well suited to the demands of adventuring.
