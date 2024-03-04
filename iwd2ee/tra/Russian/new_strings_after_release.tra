@@ -521,86 +521,93 @@ When taken a second time, the feat also allows you to automatically dodge the fi
 STATISTICS:
 
 Weight: 1~
-@1105    = ~Shout
-(Evocation)
-Level: Brd 3, Sor/Wiz 4, Oghma 4
-Range: Close (30 ft. long, 10 ft. diameter)
-Duration: Instantaneous
-Casting Time: 1
-Area: 30-feet long, 10-foot diameter
-Saving Throw: Fortitude partial
+@1105    = ~Крик
+(Проявление)
+Уровень: бард 3, колдун/волшебник 4, жрец Огмы 4
+Дальность: малая (30 футов длины, 10 футов ширины)
+Длительность: мгновенно
+Время чтения: 1
+Зона действия: 30-футовый конус с раструбом 10 футов
+Спасбросок: стойкости, особый
 
-The caster emits an ear-splitting yell that deafens and damages creatures in its path. Any creature within the area of effect is deafened for 5 rounds, stunned for 2 rounds, and takes 5d6 points of sonic damage. A successful save negates the deafness and stun and reduces the damage by half. A deafened creature has a 50% chance of resisting this spell.~
-@1145    = ~Lich Touch
-(Necromancy)
-Level: Sor/Wiz 6
-Range: Touch
-Duration: 1 round/level 
-Casting Time: 6
-Area of Effect: Caster
-Saving Throw: Fortitude half
+Голос заклинателя становится невероятно мощным, и он может издаёт пронзительный вопль, который оглушает и повреждает существ на своём пути. Любое существо в зоне действия эффекта глохнет на 5 раундов, ошеломляется на 2 раунда и получает 5d6 урона звуком. Успешный спасбросок стойкости спасает от ошеломления и глухоты и уменьшает полученный урон в два раза. Глухие существа имеют 50% шанс избежать действия этого заклинания.~
+@1144    = ~Прикосновение лича~
+@1145    = ~Прикосновение лича
+(Некромантия)
+Уровень: колдун/волшебник 6
+Дальность: прикосновение 
+Длительность: 1 раунд/уровень
+Время чтения: 6
+Зона действия: колдующий
+Спасбросок: стойкости, половина урона
 
-This spell confers the powers of a lich's touch. The wizard's hands are imbued with a chilling force of negative energy, allowing the caster to deal 3d10+5 cold damage (plus damage bonuses from Strength, proficiencies, spells, items and other effects) with each hit and paralyze living victims for 10 rounds on a failed Fortitude save. The attack uses the Simple Weapon: Small Blade/Touch Attack proficiency.~
-@1497    = ~Eagle's Splendor
-(Transmutation)
-Level: Brd 2, Drd 2, Pal 2, Sor/Wiz 2, Oghma 1
-Range: Caster
-Duration: 1 hour / level
-Casting Time: 1 
-Target: Creature touched
-Saving Throw: None 
+Руки заклинателя обретают силу прикосновения лича. Они излучают зелёный свет негативной энергии, который наносит 3d10+5 урона холодом цели, которую успешно атаковал заклинатель (к тому же учитываются бонусы от силы, черт, заклинаний, предметов и другие эффекты) и парализует цель на 10 раундов, если жертва провалит спасбросок стойкости. При атаке используется черта "Простое оружие, Короткие клинки/Атака касанием".~
+@1496    = ~Величие орла~
+@1497    = ~Величие орла
+(Преобразование)
+Уровень: бард 2, друид 2, паладин 2, колдун/волшебник 2, жрец Огмы 1
+Дальность: колдующий
+Длительность: 1 час/уровень
+Время чтения: 1
+Цель: существо, до которого дотронулись
+Спасбросок: нет
 
-The transmutated creature becomes more poised, articulate, and personally forceful. The spell grants +4 to Charisma, adding the usual benefits of Charisma-based skills and abilities.~
-@1622    = ~Great Shout
-(Evocation)
-Level: Brd 6, Sor/Wiz 8, Oghma 7
-Range: Caster
-Duration: Instantaneous 
-Casting Time: 2 
-Area of Effect: 30-feet long, 10-foot diameter
-Saving Throw: Fortitude half
+Видоизменённое существо становится более хладнокровным, расчётливым и сильным духом. Заклинание увеличивает Харизму на 4, добавляя обычные преимущества основанных на харизме навыков и способностей.~
+@1621    = ~Великий крик~
+@1622    = ~Великий крик
+(Проявление)
+Уровень: бард 6, колдун/волшебник 8, жрец Огмы 7
+Дальность: колдующий
+Длительность: мгновенно
+Время чтения: 1
+Зона действия: 30-футовый конус с раструбом 10 футов
+Спасбросок: стойкости, половина урона
 
-Upon uttering the Great Shout, the caster releases a stunning force from their mouth in a 30-foot long, 10-foot diameter cone. Creatures within the area of effect take 10d10 sonic damage with a Fortitude save for half. Those who fail the save are stunned for 5 rounds and deafened for 10 rounds. Deafened creatures have a 25% chance of resisting this spell.~
-@34623     = ~Mass Haste
-(Transmutation)
-Level: Brd 6, Sor/Wiz 6
-Range: Sight of Caster
-Duration: 3 rounds + 1 round/level 
-Casting Time: 3
-Area of Effect: 20-foot radius
-Saving Throw: None
+Заклинатель издаёт поразительно громкий крик, который распространяется конусом длиной в 30 футов с раструбом 10 футов в самой дальней точке. Существа в зоне действия получают 10d10 урона звуком, который снижается вполовину при успешном спасброске стойкости. При неудачном спасброске эти существа также ошеломляются на 5 раундов и глохнут на 10. Заклинатель также сам получает урон 2d10, ошеломляется на 1 раунд и глохнет на два при провале спасброска (с -5 к УС). Это заклинание игнорирует сопротивление и иммунитет к магии. Глухие существа имеют 25% шанс не подвергнуться воздействия этого заклинания.~
+@33623     = ~Массовая спешка~
+@34623     = ~Массовая спешка
+(Преобразование)
+Уровень: бард 6, колдун/волшебник 6
+Дальность: обзор колдующего
+Длительность: 3 раунда + 1 раунд/уровень
+Время чтения: 3
+Зона действия: радиус 20 футов
+Спасбросок: нет
 
-Mass Haste grants the effects of the 3rd-level spell Haste to all allies in the area of effect. Those allies gain +4 AC and an extra attack per round, and move twice as fast. These effects do not stack with the 3rd-level spell. Mass Haste dispels Slow effects.~
-@38252     = ~Sound Burst
-(Evocation)
-Level: Brd 2
-Range: Sight of Caster
-Duration: 1 round
-Casting Time: 2
-Area of Effect: 15-foot radius
-Saving Throw: Fortitude partial
+Это заклинание даёт эффект заклинания третьего уровня "Спешка" на всех союзников в области действия заклинания. Они получают дополнительную атаку, бонус к классу защиты +4 и передвигается с вдвое большей скоростью перемещения. Эффект этого заклинания не складывается с аналогичным эффектом от заклинания "Спешка" третьего уровня. Массовая спешка развеивает эффекты заклинания "Замедление".~
+@37252     = ~Взрыв звука~
+@38252     = ~Взрыв звука
+(Проявление)
+Уровень: бард 2
+Дальность: обзор колдующего
+Длительность: 1 раунд
+Время чтения:  2
+Зона действия: радиус 15 футов
+Спасбросок: стойкости, особый
 
-This spell releases an extremely loud and jarring burst of sound. Creatures in the area of effect take 1d8 sonic damage and must make a Fortitude save or be stunned for 1 round. Deaf creatures are not stunned but still take damage. The caster is unaffected by this spell.~
-@1009    = ~Tortoise Shell
-(Abjuration) 
-Level: Drd 3, Rgr 3
-Range: Sight of Caster
-Duration: 4 rounds
-Casting Time: 2
-Area of Effect: 1 creature
-Saving Throw: None 
+Это заклинание издает чрезвычайно громкий и пронзительный звук. Существа в зоне действия получают 1d8 звукового урона и должны прокинуть спасбросок стойкости или быть ошеломлёнными на 1 раунд. Глухие существа не ошеломляются, но все равно получают урон. На заклинателя это заклинание не действует.~
+@1008    = ~Черепаший панцирь~
+@1009    = ~Черепаший панцирь 
+(Отречение)
+Уровень: друид 3, следопыт 3
+Дальность: обзор колдующего
+Длительность: 4 раунда
+Время чтения: 2
+Зона действия: 1 существо
+Спасбросок: нет
 
-Upon completion of this spell, a large hemispherical shell resembling that of a tortoise encases the target creature, shielding it from the outside world. The creature encased can take no action but in turn is impervious to all effects. The tortoise shell has 50 hit points, plus another 50 hit points for every 10 levels the druid has attained. Tortoise Shell can only affect allies.~
-@1679    = ~Otiluke's Resilient Sphere
-(Evocation) 
-Level: Sor/Wiz 4
-Range: Sight of Caster
-Duration: 4 rounds
-Casting Time: 1
-Area of Effect: 1 creature
-Saving Throw: None
+После применения данного заклинания цель закрывает большая защитная полусфера, похожая на панцирь черепахи. Существо, оказавшееся внутри полусферы, не может совершать действий, но при этом остаётся неуязвимым для атак врага. Сфера может принять на себя 50 единиц урона и дополнительно 50 единиц урона за каждые 10 уровней друида или следопыта. Это заклинание может действовать только на союзников.~
+@1678    = ~Упругая сфера Отилука~
+@1679    = ~Упругая сфера Отилука
+(Проявление)
+Уровень: колдун/волшебник 4
+Дальность: обзор колдующего
+Длительность: 4 раундов
+Время чтения: 1
+Зона действия: 1 существо
+Спасбросок: нет
 
-When this spell is cast, the result is a globe of shimmering force that encloses the subject creature. The resilient sphere will contain its subject for the duration of the spell. The sphere is completely immune to all damage; the only method of removing the sphere is by the use of a Dispel Magic spell. Hence the creature caught inside the globe is completely safe from all attacks, but at the same time is completely unable to affect the outside world.~
+Это заклинание создаёт сферу искрящейся энергии, которая окружает выбранное существо. Упругая сфера будет сдерживать существо в течение всего времени действия заклинания. Она абсолютно нечувствительна к любому повреждению, и единственный способ убрать её - использовать заклинание "Развеять магию". Существо в этой сфере находится в полной безопасности от всех внешних воздействий, но в то же время совершенно неспособно влиять на внешний мир.~
 @529    = ~CLERIC:
 
 The cleric is a generic priest (of any mythos) who tends to the spiritual needs of a community. He is both protector and healer, though he is not totally defensive.
