@@ -197,56 +197,56 @@ Disadvantages:
 Спасбросок: особый
 
 Это заклинание наделяет выбранное существо свирепостью зверя. Существо получает +4 к силе, +4 к телосложению, +20% к скорости передвижения и +2 ко всем спасброскам. Однако, во время действия Ярости Зверя, существо теряет способность применять заклинания. Персонажем можно нормально управлять, пока в пределах видимости не появятся враги; после этого персонаж немедленно переходит в ближний бой, используя всё, что находится в руках. В каждом раунде есть 5% вероятность, что жертва впадёт в неистовство и начнёт атаковать как врагов, так и друзей. Союзники автоматически попадают под воздействие этого заклинания, а враги могут сделать спасбросок воли, чтобы избежать эффекта. Это заклинание не провоцирует атаку при возможности.~
-@1680    = ~Color Spray~
-@1681    = ~Color Spray 
-(Illusion)
-Level: Brd 1, Sor/Wiz 1
-Range: Caster
-Duration: Instantaneous
-Casting Time: 1
-Area of Effect: 5' x 20' x 20' wedge 
-Saving Throw: Will negates
+@1680    = ~Цветные брызги~
+@1681    = ~Цветные брызги
+(Иллюзия)
+Уровень: бард 1, колдун/волшебник 1
+Дальность: колдующий
+Длительность: мгновенно
+Время чтения: 1
+Зона действия: треугольник со сторонами 5, 20 и 20 футов
+Спасбросок: воли, отменяет
 
-This spell creates a vivid, fan-shaped spray of clashing colors to spring forth from the caster's hand. The spell affects each creature caught in the area of effect according to its hit dice:
+Это заклинание создаёт яркий конус цветных брызг, вырывающийся из рук колдующего. Заклинание действует на всех оказавшихся в зоне действия существ. Тем не менее, эффект заклинания разнится в зависимости от уровня здоровья жертвы:
 
-Up to 2: Unconscious for 5 rounds
-3 or 4: Blinded for 3 rounds
-5 or more: Stunned for 1 round
+До 2: падает без сознания на 5 раундов
+3 или 4: ослепление на 3 раунда
+5 или выше: ошеломление на 1 раунд
 
-A successful Will save with +2 DC will negate the effect. Blind creatures are not affected by color spray. This spell does not provoke an attack of opportunity.~
-@1893     = ~Burning Hands~
-@1894     = ~Burning Hands
-(Transmutation)
-Level: Drd 1, Sor/Wiz 1
-Range: Caster
-Duration: Instantaneous 
-Casting Time: 1 
-Area of Effect: Burst of flames 10ft. long, centered on caster's hands
-Saving Throw: Reflex half
+Успешный спасбросок воли с +2 к УС позволяет избежать эффекта заклинания. Заклинание не действует на слепых существ и не провоцирует атаку при возможности.~
+@1893     = ~Горящие руки~
+@1894     = ~Горящие руки
+(Преобразование)
+Уровень: друид 1, колдун/волшебник 1
+Дальность: колдующий
+Длительность: мгновенно
+Время чтения: 1
+Зона действия: струи пламени длиной по 10 футов из рук колдующего
+Спасбросок: реакции, половина урона
 
-When the wizard casts this spell, a jet of searing flame shoots from his fingertips. The flame jets are five feet in length and spread out in a horizontal arc of about 120 degrees in front of the wizard. Any creature in the area of effect suffers 1d4 points of damage per caster level (maximum of 5d4). A successful Reflex save halves the damage. This spell does not provoke an attack of opportunity.~
-@31117     = ~Frost Fingers~
-@32117     = ~Frost Fingers
-(Transmutation)
-Level: Drd 1
-Range: Caster
-Duration: Instantaneous
-Casting Time: 1
-Area of Effect: 5-foot long, 120 degree arc
-Saving Throw: Reflex half
+Кончики пальцев заклинателя исторгают струи огня длиной около 10 футов. Эти струи расходятся в горизонтальной плоскости перед заклинателем под углом примерно в 120 градусов. Любое существо в зоне действия заклинания получает по 1d4 очка урона на каждый уровень заклинателя (до максимума в 5d4). При успешном спасброске реакции жертва получает только половину урона. Это заклинание не провоцирует атаку при возможности.~
+@31117     = ~Ледяные пальцы~
+@32117     = ~Ледяные пальцы
+(Преобразование)
+Уровень: друид 1
+Дальность: колдующий
+Длительность: мгновенно
+Время чтения: 1
+Зона действия: 5-футовый конус с углом раствора 120 градусов
+Спасбросок: реакции, половина урона
 
-Upon completion of this spell, chilling frost emanates from the caster's hands in the shape of a wedge in front of them.  Any creature caught in the area of effect suffers 1d3 + 1 cold damage per caster level, to a maximum of 1d3 + 10 cold damage.  In addition, the creature is slowed for 2 rounds.  A successful Reflex save halves the damage and negates the slow effect. This spell does not provoke an attack of opportunity.~
-@31226     = ~Moon Motes~
-@32226     = ~Moon Motes
-(Conjuration) 
-Level: Drd 2, Selune 1
-Range: Caster
-Duration: Instantaneous
-Casting Time: 3
-Area of Effect: 5' x 20' x 20' cone
-Saving Throw: Reflex half
+Колдующий создаёт перед собой клинообразную область жуткого холода. Существо, оказавшееся в зоне поражения, получает 1d3 + 1 урона холодом на уровень колдующего (вплоть до 1d3 + 10). Кроме того, существо замедляется на 2 раунда. Успешный спасбросок реакции уменьшает урон вдвое и отменяет эффект замедления. Это заклинание не провоцирует атаку при возможности.~
+@31226     = ~Лунные мотыльки~
+@32226     = ~Лунные мотыльки
+(Призывание)
+Уровень: друид 2, жрец Селуны 1
+Дальность: колдующий
+Длительность: мгновенная
+Время чтения: 3
+Зона действия: конус с раствором 5 футов и длиной стороны 20 футов
+Спасбросок: реакции, половина урона
 
-This spell calls upon Selune's connection with moonlight and magic to invoke a spray of glowing spheres. The spell causes 1d6 magic damage per level (max 5d6) to every creature caught in its path. Creatures can make a Reflex save for half damage. This spell does not provoke an attack of opportunity.~
+Это заклинание использует связь Селуны с лунным светом и магией, чтобы вызвать струю светящихся сфер. Заклинание наносит 1d6 магического урона за уровень заклинателя (до максимума в 5d6) каждому существу, оказавшемуся на его пути. Существа могут сделать спасбросок реакции, чтобы получить половину урона. Это заклинание не провоцирует атаку при возможности.~
 @31409     = ~Cloak of Fear~
 @32409     = ~Cloak of Fear
 (Conjuration)
