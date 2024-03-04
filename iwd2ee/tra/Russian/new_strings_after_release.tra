@@ -446,11 +446,11 @@ This ability allows a non-evil ally to bear far more pain but also suffer more p
 Спасбросок: стойкости, половина урона
 
 Едкий туман Малавона - еще одно заклинание, созданное магом-дроу Малавоном. Оно создает огромное облако кислотного тумана, который держится долгое время. Каждый раунд любое существо, попавшее в туман, получает 12d6 урона кислотой (успешный спасбросок стойкости позволяет снизить урон в два раза), и скорость его передвижения уменьшается вдвое (спасбросок против этого эффекта не действует). Сопротивление магии существа, попавшего в туман не влияет на это заклинание.~
-@19910    = ~We used Imphraili's notes to complete her theoretical experiment regarding the transfusion of a modified Sanguis Anima into one's own bloodstream.  The process was difficult and painful but left our alchemist strangely invigorated.~
-@19911    = ~We used the white wyrm's egg to form a magical liquid which was then mixed into the alchemist's bloodstream.  The process cooled the blood, making them resistant to cold but more vulnerable to heat.~
-@56005    = ~Ability Score Drain~
-@55370    = ~sonic~
-@55603    = ~ (Lich)~
+@19910    = ~С помощью записей Имфраили мы завершили её теоретический эксперимент по переливанию видоизменённой Сангвис Анима в чью-то кровь. Процесс был сложный и болезненный, но наш алхимик получил странный заряд бодрости.~
+@19911    = ~Мы использовали яйцо белого змия для создания волшебного зелья, которое затем было введено в кровь нашего алхимика. Это зелье увеличило сопротивление холоду, но при этом увеличило и уязвимость к огню.~
+@56005    = ~Пункты параметров вытянуты~
+@55370    = ~звук~
+@55603    = ~(Лич)~
 @316    = ~KNOCKDOWN:
 
 You are trained to knock down or trip enemies in melee combat.
