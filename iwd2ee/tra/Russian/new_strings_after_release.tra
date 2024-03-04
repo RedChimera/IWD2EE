@@ -343,29 +343,29 @@ Advantages:
 
 Disadvantages:
 * Starts with no proficiencies in armor and is very poor at melee combat.~
-@55761=~Arcane Spell Selection: Level 1~
-@55762=~Arcane Spell Selection: Level 2~
-@55763=~Arcane Spell Selection: Level 3~
-@55764=~Arcane Spell Selection: Level 4~
-@55765=~Arcane Spell Selection: Level 5~
-@55766=~Arcane Spell Selection: Level 6~
-@55767=~Arcane Spell Selection: Level 7~
-@55768=~Arcane Spell Selection: Level 8~
-@55769=~Arcane Spell Selection: Level 9~
-@55770=~Reset Spells~
-@55771=~You cannot learn more than 24 spells of a single spell level.~
-@55772=~You may choose <EXWLNUM> spells to put in your spell book.~
-@55773=~You may choose up to 1 spell you know, which is at least 2 levels lower than the highest spell level you can cast, and replace it with a different spell of the same level.~
-@55774=~You may choose up to <EXWLNUM> spells you know, which are at least 2 levels lower than the highest spell level you can cast, and replace them with different spells of the same level.~
-@55781=~Spell Replacement: Level 1~
-@55782=~Spell Replacement: Level 2~
-@55783=~Spell Replacement: Level 3~
-@55784=~Spell Replacement: Level 4~
-@55785=~Spell Replacement: Level 5~
-@55786=~Spell Replacement: Level 6~
-@55787=~Spell Replacement: Level 7~
-@55788=~Spell Replacement: Level 8~
-@55789=~Spell Replacement: Level 9~
+@55761=~Выбор заклинаний волшебника: Уровень 1~
+@55762=~Выбор заклинаний волшебника: Уровень 2~
+@55763=~Выбор заклинаний волшебника: Уровень 3~
+@55764=~Выбор заклинаний волшебника: Уровень 4~
+@55765=~Выбор заклинаний волшебника: Уровень 5~
+@55766=~Выбор заклинаний волшебника: Уровень 6~
+@55767=~Выбор заклинаний волшебника: Уровень 7~
+@55768=~Выбор заклинаний волшебника: Уровень 8~
+@55769=~Выбор заклинаний волшебника: Уровень 9~
+@55770=~Сбросить заклинания~
+@55771=~Нельзя выучить более 24-х заклинаний на уровень заклинаний.~
+@55772=~Можно выбрать <EXWLNUM> заклинан(ий/ее) для книги заклинаний.~
+@55773=~Можно выбрать максимум одно известное заклинание, которое как минимум на 2 уровня ниже самого высокого уровня заклинаний, которые вы можете прочитать, и заменить его другим заклинанием того же уровня.~
+@55774=~Можно выбрать до <EXWLNUM> известных заклинаний, котоые как минимум на 2 уровня ниже самого высокого уровня заклинаний, которые вы можете прочитать, и заменить его другими заклинанием того же уровня.~
+@55781=~Замена заклинания: Уровень 1~
+@55782=~Замена заклинания: Уровень 2~
+@55783=~Замена заклинания: Уровень 3~
+@55784=~Замена заклинания: Уровень 4~
+@55785=~Замена заклинания: Уровень 5~
+@55786=~Замена заклинания: Уровень 6~
+@55787=~Замена заклинания: Уровень 7~
+@55788=~Замена заклинания: Уровень 8~
+@55789=~Замена заклинания: Уровень 9~
 @1871     = ~Bless~
 @1872     = ~Bless
 (Conjuration)
