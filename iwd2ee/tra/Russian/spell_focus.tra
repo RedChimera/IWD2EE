@@ -1,33 +1,34 @@
 //TRA num range @121 to @145
-@121    = ~Spell Focus, Enchantment/Illusion~
-@122    = ~SPELL FOCUS, ENCHANTMENT/ILLUSION:
+@121    = ~Любимые школы магии - Чародейство/Иллюзия~
+@122    = ~ЛЮБИМЫЕ ШКОЛЫ МАГИИ - ЧАРОДЕЙСТВО/ИЛЛЮЗИЯ:
 
-Your spells with these schools are more potent than normal.
+Заклинания этих школ даются вам лучше прочих.
 
-Benefit: Add +2 to the Difficulty Class for all saving throws against spells from these schools of magic.
+Действие: добавьте +2 к уровню сложности всех спасбросков против ваших заклинаний этих школ магии.
 
-Special: You can take this feat a second time in Icewind Dale II to give yourself Greater Spell Focus in this school, which provides a +4 bonus.~
-@123    = ~Spell Focus, Evocation/Conjuration~
-@124    = ~SPELL FOCUS, EVOCATION/CONJURATION:
+Особые условия: в игре Долина Ледяного Ветра II вы можете взять эту черту дважды, доведя её до "Самых любимых школ магии", увеличивая, тем самым, УС заклинаний на 4.~
+@123    = ~Любимые школы магии - Проявление/Призывание~
+@124    = ~ЛЮБИМЫЕ ШКОЛЫ МАГИИ - ПРОЯВЛЕНИЕ/ПРИЗЫВАНИЕ:
 
-Your spells with these schools are more potent than normal.
+Заклинания этих школ даются вам лучше прочих.
 
-Benefit: Add +2 to the Difficulty Class for all saving throws against spells from these schools of magic.
+Действие: добавьте +2 к уровню сложности всех спасбросков против ваших заклинаний этих школ магии.
 
-Special: You can take this feat a second time in Icewind Dale II to give yourself Greater Spell Focus in this school, which provides a +4 bonus.~
-@125    = ~Spell Focus, Necromancy/Divination~
-@126    = ~SPELL FOCUS, NECROMANCY/DIVINATION:
+Особые условия: в игре Долина Ледяного Ветра II вы можете взять эту черту дважды, доведя её до "Самых любимых школ магии", увеличивая, тем самым, УС заклинаний на 4.~
+@125    = ~Любимые школы магии - Некромантия/Прорицание~
+@126    = ~ЛЮБИМЫЕ ШКОЛЫ МАГИИ - НЕКРОМАНТИЯ/ПРОРИЦАНИЕ:
 
-Your spells with these schools are more potent than normal.
+Заклинания этих школ даются вам лучше прочих.
 
-Benefit: Add +2 to the Difficulty Class for all saving throws against spells from these schools of magic.
+Действие: добавьте +2 к уровню сложности всех спасбросков против ваших заклинаний этих школ магии.
 
-Special: You can take this feat a second time in Icewind Dale II to give yourself Greater Spell Focus in this school, which provides a +4 bonus.~
-@127    = ~Spell Focus, Transmutation/Abjuration~
-@128    = ~SPELL FOCUS, TRANSMUTATION/ABJURATION:
+Особые условия: в игре Долина Ледяного Ветра II вы можете взять эту черту дважды, доведя её до "Самых любимых школ магии", увеличивая, тем самым, УС заклинаний на 4.~
+@127    = ~Любимые школы магии - Преобразование/Отречение~
+@128    = ~ЛЮБИМЫЕ ШКОЛЫ МАГИИ - ПРЕОБРАЗОВАНИЕ/ОТРЕЧЕНИЕ:
 
-Your spells with these schools are more potent than normal.
+Заклинания этих школ даются вам лучше прочих.
 
-Benefit: Add +2 to the Difficulty Class for all saving throws against spells from these schools of magic.
+Действие: добавьте +2 к уровню сложности всех спасбросков против ваших заклинаний этих школ магии.
 
-Special: You can take this feat a second time in Icewind Dale II to give yourself Greater Spell Focus in this school, which provides a +4 bonus.~
+Особые условия: в игре Долина Ледяного Ветра II вы можете взять эту черту дважды, доведя её до "Самых любимых школ магии", увеличивая, тем самым, УС заклинаний на 4.~
+
