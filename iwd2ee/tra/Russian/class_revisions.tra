@@ -2385,21 +2385,21 @@ With this ability, the monk can regain hit points equal to their monk level time
 @998    = ~~
 @999    = ~~
 
-@4700     = ~Rainwater Brew~
-@4701     = ~Cheap, efficient, and crude, this potion is a mix of rainwater, clay, ash, and roots from several plants. This modest brew will restore 2d6 hit points to the drinker.
+@4700     = ~Дождевое пиво~
+@4701     = ~Дешевое, эффективное и простое, это зелье представляет собой смесь дождевой воды, глины, золы и корней каких-то растений. Это скромное варево восстанавливает 2d6 пунктов здоровья.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Heals 2d6 hit points
-Weight: 1 lb.~
-@4702     = ~Sour Draught~
-@4703     = ~Potent potions require less common ingredients, and this brew is no exception. Animal fat, bile, dried leaves, and fermented meat comprise this foul-smelling concoction, but a dying friend will not complain. This brew will restore 4d8 hit points to whoever is desperate enough to drink it.
+Восстанавливает 2d6 пунктов здоровья
+Вес: 1 фунт~
+@4702     = ~Кислое разливное~
+@4703     = ~Для мощных зелий требуются не самые распространенные ингредиенты, и это варево - не исключение. Животный жир, желчь, сушеные листья и перебродившее мясо входят в состав этого дурно пахнущего снадобья, но умирающий друг не станет жаловаться. Это варево восстанавливает 4d8 пунктов здоровья тому, кто достаточно отчаян, чтобы выпить его.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Heals 4d8 hit points
-Weight: 1 lb.~
-@4704     = ~Sweet Elixir~
+Восстанавливает 4d8 пунктов здоровья
+Вес: 1 фунт~
+@4704     = ~Сладкий эликсир~
 @4705     = ~One might mistake this sweet drink for white wine, but the gentle bite in the flavor comes not from alcohol, but transmuted quartz. Drinking this potion can soothe nearly any ailment, from common infection to lethal venom to an ugly hangover. The quartz binds to toxic substances and turns them into harmless salt, curing poison, disease, and intoxication. In case that is not enough to heal the sickly adventurer, the horse tears in the syrup will also restore 1d4 hit points to the user.
 
 STATISTICS:
