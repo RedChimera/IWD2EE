@@ -128,7 +128,7 @@ Disadvantages:
 Спасбросок: стойкости, отменяет
 
 Это заклинание наделяет заклинателя аурой, которая отталкивает ближайших врагов, отбрасывая их от заклинателя. Любой враг, оказавшийся в зоне действия заклинания, должен сделать спасбросок стойкости с -5 к УС или быть отброшенным назад.~
-@55716=~Cast the spell <EXCCSPELL>~
+@55716=~Прочитать заклинание "<EXCCSPELL>"~
 @1010    = ~Костяной круг~
 @1011    = ~Костяной круг 
 (Некромантия)
@@ -151,142 +151,140 @@ Disadvantages:
 Спасбросок: стойкости, отменяет
 
 Это заклинание даёт прочитавшему его возможность отравить своего противника одним касанием. За яд наносит 2 единицы урона в секунду в течении 30 секунд, а затем перестаёт действовать на жертву. За каждые 6 уровней заклинателя, яд наносит дополнительный пункт урона в секунду, до максимума в 7 единиц урона в секунду на 30-м уровне. Успешный спасбросок стойкости нейтрализует воздействие. Это заклинание не провоцирует атаку при возможности.~
-@1022    = ~Circle of Blades~
-@1023    = ~Circle of Blades
-(Evocation)
-Level: Clr 6, Pal 5, Helm 6, Tempus 6
-Range: Caster
-Duration: 2 rounds
-Casting Time: 9
-Area of Effect: 3-foot radius
-Saving Throw: Reflex half
+@1022    = ~Круг клинков~
+@1023    = ~Круг клинков
+(Проявление)
+Уровень: священник 6, паладин 5, жрец Хелма 6, жрец Темпуса 6
+Дальность: колдующий
+Длительность: 2 раунда
+Время чтения: 9
+Зона действия: радиус 3 фута
+Спасбросок: реакции, половина урона
 
-This spell conjures forth a wall of circling, razor-sharp blades that whirl and flash around the caster. Any creature attempting to pass through the blade barrier suffers 10d8 points of damage, with a successful Reflex save for half damage. This spell does not provoke an attack of opportunity.~
-@1024    = ~Spiritual Wrath~
-@1025    = ~Spiritual Wrath 
-(Evocation)
-Level: Clr 6, Pal 6, Helm 7, Tempus 6
-Range: Sight of Caster
-Duration: Instantaneous
-Casting Time: 2
-Area of Effect: Special
-Saving Throw: Reflex half
+Это заклинание создаёт стену из острых как бритва, вращающихся лезвий, окружающих заклинателя неподвижным барьером. Любое существо, которое попытается преодолеть барьер из лезвий, получит 10d8 единиц урона. Успешный спасбросок реакции уменьшает повреждения вдвое. Это заклинание не провоцирует атаку при возможности.~
+@1024    = ~Духовный гнев~
+@1025    = ~Духовный гнев
+(Проявление)
+Уровень: священник 6, паладин 6, жрец Хелма 7, жрец Темпуса 6
+Дальность: обзор колдующего
+Длительность: мгновенно
+Время чтения: 2
+Зона действия: особая
+Спасбросок: реакции, половина урона
 
-Upon completion of this spell, the caster becomes a focus of spiritual energy, which then shoots out from the caster in four directions, like lightning bolts. The caster specifies the direction of one of the bolts and the other bolts shoot opposite and perpendicular to that direction, completing a cross-shaped pattern. All creatures in the bolts' path take 5d20 points of magic damage, with a Reflex save for half. Creatures of the same moral alignment (good, neutral, evil) as the caster are unaffected by the spell. This spell does not provoke an attack of opportunity.~
-@1136    = ~Malavon's Rage~
-@1137    = ~Malavon's Rage
-(Evocation)
-Level: Sor/Wiz 7
-Range: Caster
-Duration: Instantaneous
-Casting Time: 1
-Area of Effect: 15-foot radius
-Saving Throw: Reflex half
+В теле жреца концентрируется духовная мощь, которая затем вылетает в четырёх направлениях, как разряды молнии. Заклинатель задаёт направление для одного из разрядов, а остальные летят перпендикулярно и в противоположном направлении, образуя крест. Любое существо на пути у разряда получает 5d20 очков урона магией (вдвое меньше при успешном спасброске). Существа, разделяющие с заклинателем мировоззрение (добрые, нейтральные, злые), не подвержены действию заклинания. Это заклинание не провоцирует атаку при возможности.~
+@1136    = ~Ярость Малавона~
+@1137    = ~Ярость Малавона
+(Проявление)
+Уровень: колдун/волшебник 7
+Дальность: колдующий
+Длительность: мгновенно
+Время чтения: 1
+Зона действия: радиус 15 футов
+Спасбросок: реакции, половина урона
 
-Malavon's Rage was created by the dark elf sorcerer Malavon. It shoots darts of pure energy out from the caster's body in all directions, harming friend and foe alike. The small wedges of magic do 25d4 points of piercing damage to everything caught in their path (Reflex save with +2 DC for half). This spell is especially useful when a mage is surrounded by enemies, and it will not provoke an attack of opportunity.
+Это заклинание разработал маг-дроу Малавон. Из тела заклинателя во всех направлениях вылетают стрелы чистой энергии, поражающие и друзей, и врагов. Эти энергетические стрелы наносят 25d4 единиц колющего урона любой цели, что окажется у них на пути. Удачный спасбросок реакции снижает урон на 50%. Заклинание особенно эффективно, если маг оказался окружён врагами, и оно не провоцирует атаку при возможности.
 
-Like most spells created by drow, Malavon's Rage was designed to bypass spell resistance, as drow often fight enemies that resist magic... such as other drow.~
-@1623    = ~Animal Rage~
-@1624    = ~Animal Rage
-(Enchantment)
-Level: Drd 4, Rgr 3
-Range: Sight of Caster
-Duration: 10 rounds
-Casting Time: 1
-Area of Effect: 1 creature
-Saving Throw: Special
+Как и большинство заклинаний, созданных дроу, "Ярость Малавона" была разработана, чтобы игнорировать сопротивление магии, поскольку дроу часто сражаются с врагами, имеющими сопротивление магии... например, с другими дроу.~
+@1623    = ~Ярость Зверя~
+@1624    = ~Ярость Зверя
+(Чародейство)
+Уровень: друид 4, следопыт 3
+Дальность: прикосновение
+Длительность: 10 раундов
+Время чтения: 8
+Зона действия: 1 существо
+Спасбросок: особый
 
-This spell imbues the target creature with animal ferocity. The target creature gains +4 strength, +4 constitution, +20% movement, and +2 to all saving throws. The target loses the ability to cast spells while Animal Rage is in effect. He or she can be controlled normally unless enemies are within sight, at which time the target immediately attacks in melee, using whatever is in hand. There is a 5% chance per round that the target will go berserk, attacking friend and foe alike. Allies are automatically affected, while enemies may make a Will save to avoid the effects.~
-@1680    = ~Color Spray~
-@1681    = ~Color Spray 
-(Illusion)
-Level: Brd 1, Sor/Wiz 1
-Range: Caster
-Duration: Instantaneous
-Casting Time: 1
-Area of Effect: 5' x 20' x 20' wedge 
-Saving Throw: Will negates
+Это заклинание наделяет выбранное существо свирепостью зверя. Существо получает +4 к силе, +4 к телосложению, +20% к скорости передвижения и +2 ко всем спасброскам. Однако, во время действия Ярости Зверя, существо теряет способность применять заклинания. Персонажем можно нормально управлять, пока в пределах видимости не появятся враги; после этого персонаж немедленно переходит в ближний бой, используя всё, что находится в руках. В каждом раунде есть 5% вероятность, что жертва впадёт в неистовство и начнёт атаковать как врагов, так и друзей. Союзники автоматически попадают под воздействие этого заклинания, а враги могут сделать спасбросок воли, чтобы избежать эффекта. Это заклинание не провоцирует атаку при возможности.~
+@1680    = ~Цветные брызги~
+@1681    = ~Цветные брызги
+(Иллюзия)
+Уровень: бард 1, колдун/волшебник 1
+Дальность: колдующий
+Длительность: мгновенно
+Время чтения: 1
+Зона действия: треугольник со сторонами 5, 20 и 20 футов
+Спасбросок: воли, отменяет
 
-This spell creates a vivid, fan-shaped spray of clashing colors to spring forth from the caster's hand. The spell affects each creature caught in the area of effect according to its hit dice:
+Это заклинание создаёт яркий конус цветных брызг, вырывающийся из рук колдующего. Заклинание действует на всех оказавшихся в зоне действия существ. Тем не менее, эффект заклинания разнится в зависимости от уровня здоровья жертвы:
 
-Up to 2: Unconscious for 5 rounds
-3 or 4: Blinded for 3 rounds
-5 or more: Stunned for 1 round
+До 2: падает без сознания на 5 раундов
+3 или 4: ослепление на 3 раунда
+5 или выше: ошеломление на 1 раунд
 
-A successful Will save with +2 DC will negate the effect. Blind creatures are not affected by color spray. This spell does not provoke an attack of opportunity.~
-@1893     = ~Burning Hands~
-@1894     = ~Burning Hands
-(Transmutation)
-Level: Drd 1, Sor/Wiz 1
-Range: Caster
-Duration: Instantaneous 
-Casting Time: 1 
-Area of Effect: Burst of flames 10ft. long, centered on caster's hands
-Saving Throw: Reflex half
+Успешный спасбросок воли с +2 к УС позволяет избежать эффекта заклинания. Заклинание не действует на слепых существ и не провоцирует атаку при возможности.~
+@1893     = ~Горящие руки~
+@1894     = ~Горящие руки
+(Преобразование)
+Уровень: друид 1, колдун/волшебник 1
+Дальность: колдующий
+Длительность: мгновенно
+Время чтения: 1
+Зона действия: струи пламени длиной по 10 футов из рук колдующего
+Спасбросок: реакции, половина урона
 
-When the wizard casts this spell, a jet of searing flame shoots from his fingertips. The flame jets are five feet in length and spread out in a horizontal arc of about 120 degrees in front of the wizard. Any creature in the area of effect suffers 1d4 points of damage per caster level (maximum of 5d4). A successful Reflex save halves the damage. This spell does not provoke an attack of opportunity.~
-@31117     = ~Frost Fingers~
-@32117     = ~Frost Fingers
-(Transmutation)
-Level: Drd 1
-Range: Caster
-Duration: Instantaneous
-Casting Time: 1
-Area of Effect: 5-foot long, 120 degree arc
-Saving Throw: Reflex half
+Кончики пальцев заклинателя исторгают струи огня длиной около 10 футов. Эти струи расходятся в горизонтальной плоскости перед заклинателем под углом примерно в 120 градусов. Любое существо в зоне действия заклинания получает по 1d4 очка урона на каждый уровень заклинателя (до максимума в 5d4). При успешном спасброске реакции жертва получает только половину урона. Это заклинание не провоцирует атаку при возможности.~
+@31117     = ~Ледяные пальцы~
+@32117     = ~Ледяные пальцы
+(Преобразование)
+Уровень: друид 1
+Дальность: колдующий
+Длительность: мгновенно
+Время чтения: 1
+Зона действия: 5-футовый конус с углом раствора 120 градусов
+Спасбросок: реакции, половина урона
 
-Upon completion of this spell, chilling frost emanates from the caster's hands in the shape of a wedge in front of them.  Any creature caught in the area of effect suffers 1d3 + 1 cold damage per caster level, to a maximum of 1d3 + 10 cold damage.  In addition, the creature is slowed for 2 rounds.  A successful Reflex save halves the damage and negates the slow effect. This spell does not provoke an attack of opportunity.~
-@31226     = ~Moon Motes~
-@32226     = ~Moon Motes
-(Conjuration) 
-Level: Drd 2, Selune 1
-Range: Caster
-Duration: Instantaneous
-Casting Time: 3
-Area of Effect: 5' x 20' x 20' cone
-Saving Throw: Reflex half
+Колдующий создаёт перед собой клинообразную область жуткого холода. Существо, оказавшееся в зоне поражения, получает 1d3 + 1 урона холодом на уровень колдующего (вплоть до 1d3 + 10). Кроме того, существо замедляется на 2 раунда. Успешный спасбросок реакции уменьшает урон вдвое и отменяет эффект замедления. Это заклинание не провоцирует атаку при возможности.~
+@31226     = ~Лунные мотыльки~
+@32226     = ~Лунные мотыльки
+(Призывание)
+Уровень: друид 2, жрец Селуны 1
+Дальность: колдующий
+Длительность: мгновенная
+Время чтения: 3
+Зона действия: конус с раствором 5 футов и длиной стороны 20 футов
+Спасбросок: реакции, половина урона
 
-This spell calls upon Selune's connection with moonlight and magic to invoke a spray of glowing spheres. The spell causes 1d6 magic damage per level (max 5d6) to every creature caught in its path. Creatures can make a Reflex save for half damage. This spell does not provoke an attack of opportunity.~
-@31409     = ~Cloak of Fear~
-@32409     = ~Cloak of Fear
-(Conjuration)
-Level: Clr 4, Bane 4
-Range: Caster
-Duration: 6 rounds
-Casting Time: 6
-Area of Effect: Caster
-Saving Throw: Will negates
+Это заклинание использует связь Селуны с лунным светом и магией, чтобы вызвать струю светящихся сфер. Заклинание наносит 1d6 магического урона за уровень заклинателя (до максимума в 5d6) каждому существу, оказавшемуся на его пути. Существа могут сделать спасбросок реакции, чтобы получить половину урона. Это заклинание не провоцирует атаку при возможности.~
+@31409     = ~Плащ страха~
+@32409     = ~Плащ страха
+(Призывание)
+Уровень: священник 4, жрец Бейна 4
+Дальность: колдующий
+Длительность: 6 раундов
+Время чтения: 6
+Зона действия: колдующий
+Спасбросок: воли, отменяет
 
-Cloak of Fear bestows the caster with an aura of fear in a 5-foot radius.  All enemies that enter the cloak's area of effect must make a Will save or flee in panic for 1 round, and must continue to make Will saves twice a round as long as they are in the cloak of fear's area of effect.  The aura does not affect undead creatures. This spell does not provoke an attack of opportunity.~
-@33519     = ~Sunfire~
-@34519     = ~Sunfire
-(Evocation) 
-Level: Sor/Wiz 5
-Range: Caster
-Duration: Instantaneous
-Casting Time: 3
-Area of Effect: 30-foot radius
-Saving Throw: Reflex half
+У заклинателя появляется аура страха, действующая в радиусе 5 футов. Все попадающие в зону действия плаща страха и провалившие спасбросок воли существа в панике убегают в течение 1 раунда, а также должны повторять спасбросок воли дважды в раунд, пока они находятся в зоне действия заклинания. Нежить влиянию ауры не подвержена. Это заклинание не провоцирует атаку при возможности.~
+@33519     = ~Солнечный огонь~
+@34519     = ~Солнечный огонь
+(Проявление)
+Уровень: колдун/волшебник 5
+Дальность: колдующий
+Длительность: мгновенно
+Время чтения: 3
+Зона действия: радиус 30 футов
+Спасбросок: реакции, половина урона
 
-A sunfire is an explosive burst of flame similar to a fireball, but centered on the caster.  All creatures in the area of effect except for the caster are burned for 1d6 fire damage per caster level (15d6 maximum, 12d6 minimum).  A successful Reflex save halves the damage.  This spell blinds drow and gray dwarves if a Fortitude save is failed. This spell does not provoke an attack of opportunity.~
-@55377=~This character's body has been destroyed. A Resurrection spell will be needed to bring them back to life; Raise Dead will not suffice.~
-@55378=~This character's soul has been captured. The vessel for their soul must be destroyed before they can be brought back to life.~
-@4837   = ~As a cornugon, Xhaan is innately resistant to spells and elemental damage. His thick hide and extraplanar biology also grants him immunity to poison and disease and the ability to regenerate from his wounds. As a baatezu, he feels no fear, and minor charms are useless on his alien mind.
+Солнечный огонь это взрывающаяся вспышка огня, подобная огненному шару, но с фокусом на колдующем. Все существа в зоне действия кроме колдующего получают 1d6 урона огнём на уровень колдующего (минимум - 12d6 урона, максимум - 15d6 урона). Успешный спасбросок реакции снижает урон наполовину. Это заклинание ослепляет дроу и серых дварфов при провале спасброска стойкости. Это заклинание не провоцирует атаки при возможности.~
+@55377=~Тело этого персонажа было разрушено. Чтобы вернуть его к жизни, потребуется заклинание "Воскрешение"; заклинание "Оживление мёртвого" не сработает.~
+@55378=~Душа этого персонажа была захвачена. Сосуд с его душой должен быть уничтожен, прежде чем его можно будет вернуть к жизни.~
+@4837 = ~Будучи корнугоном, Ксаан обладает врожденной устойчивостью к заклинаниям и стихийному урону. Его толстая шкура и экстрапланарная природа дают ему иммунитет к ядам и болезням, а также способность регенерировать после ранений. Являясь баатезу, он также не испытывает страха, и слабые заклинания не могут повлиять на его его экстрапланарный разум.
 
-STATISTICS:
-
-Armor Bonus: +24
-Max Dex Bonus: None
-Special:
- Resistance: 10/- Acid Resistance
- Resistance: 100/- Fire Resistance
- Resistance: 10/- Cold Resistance
- Resistance: 36/- Spell Resistance
- Damage Reduction: 15/good or silver
- Regeneration: Regenerates 10 hit points per round
- Immunity to disease, poison, charm, and fear effects
- Can see perfectly even in magical darkness
-Weight: 0 lb.~
+Класс защиты: +24 (доспех)
+Максимальный бонус ловкости: отсутствует
+Особенности:
+ Сопротивление: 10/- сопротивления кислоте
+ Сопротивление: 100/- сопротивления огню
+ Сопротивление: 50/- сопротивления холоду
+ Сопротивление: 36/- сопротивления магическому урону
+ Снижение урона: 15/- снижения урона против не доброго или не серебряного оружия
+ Регенерация: восстанавливает 10 пунктов здоровья в раунд
+ Иммунитет к болезням, яду, очарованию, и страху
+ Может превосходно видеть даже в магической темноте
+Вес: 0 фунтов~
 @523    = ~WIZARD:
 
 The wizard strives to be a master of magical energies, shaping them and casting them as spells. To do so, he studies strange tongues and obscure facts and devotes much of his time to magical research. A wizard must rely on knowledge and wit to survive. Wizards are rarely seen adventuring without a retinue of fighters and men-at-arms. Because there are different types (or schools) of magic, there are different types of wizards. However, the most common sort studies all types of magic and learns a wide variety of spells. His broad range makes him well suited to the demands of adventuring.
@@ -345,114 +343,114 @@ Advantages:
 
 Disadvantages:
 * Starts with no proficiencies in armor and is very poor at melee combat.~
-@55761=~Arcane Spell Selection: Level 1~
-@55762=~Arcane Spell Selection: Level 2~
-@55763=~Arcane Spell Selection: Level 3~
-@55764=~Arcane Spell Selection: Level 4~
-@55765=~Arcane Spell Selection: Level 5~
-@55766=~Arcane Spell Selection: Level 6~
-@55767=~Arcane Spell Selection: Level 7~
-@55768=~Arcane Spell Selection: Level 8~
-@55769=~Arcane Spell Selection: Level 9~
-@55770=~Reset Spells~
-@55771=~You cannot learn more than 24 spells of a single spell level.~
-@55772=~You may choose <EXWLNUM> spells to put in your spell book.~
-@55773=~You may choose up to 1 spell you know, which is at least 2 levels lower than the highest spell level you can cast, and replace it with a different spell of the same level.~
-@55774=~You may choose up to <EXWLNUM> spells you know, which are at least 2 levels lower than the highest spell level you can cast, and replace them with different spells of the same level.~
-@55781=~Spell Replacement: Level 1~
-@55782=~Spell Replacement: Level 2~
-@55783=~Spell Replacement: Level 3~
-@55784=~Spell Replacement: Level 4~
-@55785=~Spell Replacement: Level 5~
-@55786=~Spell Replacement: Level 6~
-@55787=~Spell Replacement: Level 7~
-@55788=~Spell Replacement: Level 8~
-@55789=~Spell Replacement: Level 9~
-@1871     = ~Bless~
-@1872     = ~Bless
-(Conjuration)
-Level: Clr 1, Pal 1, Tempus 1
-Range: Sight of Caster
-Duration: 1 minute / level
-Casting Time: 2
-Area of Effect: 25-foot radius
-Saving Throw: None 
+@55761=~Выбор заклинаний волшебника: Уровень 1~
+@55762=~Выбор заклинаний волшебника: Уровень 2~
+@55763=~Выбор заклинаний волшебника: Уровень 3~
+@55764=~Выбор заклинаний волшебника: Уровень 4~
+@55765=~Выбор заклинаний волшебника: Уровень 5~
+@55766=~Выбор заклинаний волшебника: Уровень 6~
+@55767=~Выбор заклинаний волшебника: Уровень 7~
+@55768=~Выбор заклинаний волшебника: Уровень 8~
+@55769=~Выбор заклинаний волшебника: Уровень 9~
+@55770=~Сбросить заклинания~
+@55771=~Нельзя выучить более 24-х заклинаний на уровень заклинаний.~
+@55772=~Можно выбрать <EXWLNUM> заклинан(ий/ее) для книги заклинаний.~
+@55773=~Можно выбрать максимум одно известное заклинание, которое как минимум на 2 уровня ниже самого высокого уровня заклинаний, которые вы можете прочитать, и заменить его другим заклинанием того же уровня.~
+@55774=~Можно выбрать до <EXWLNUM> известных заклинаний, котоые как минимум на 2 уровня ниже самого высокого уровня заклинаний, которые вы можете прочитать, и заменить его другими заклинанием того же уровня.~
+@55781=~Замена заклинания: Уровень 1~
+@55782=~Замена заклинания: Уровень 2~
+@55783=~Замена заклинания: Уровень 3~
+@55784=~Замена заклинания: Уровень 4~
+@55785=~Замена заклинания: Уровень 5~
+@55786=~Замена заклинания: Уровень 6~
+@55787=~Замена заклинания: Уровень 7~
+@55788=~Замена заклинания: Уровень 8~
+@55789=~Замена заклинания: Уровень 9~
+@1871     = ~Благословение~
+@1872     = ~Благословение
+(Призывание)
+Уровень: священник 1, паладин 1, жрец Темпуса 1
+Дальность: обзор колдующего
+Длительность: 1 минута/уровень
+Время чтения: 2
+Зона действия: радиус 25 футов
+Спасбросок: нет
 
-Upon uttering this spell, the caster raises the attack bonus and saving throws of allied creatures in the area of effect by +1. Bless counters and dispels Bane.~
-@1873     = ~Bane~
-@1874     = ~Bane
-(Enchantment)
-Level: Clr 1, Bane 1
-Range: Sight of Caster
-Duration: 1 minute / level
-Casting Time: 2
-Area of Effect: 25-foot radius
-Saving Throw: None
+По прочтении этого заклинания колдующий повышает увеличивает атаку и спасброски союзных существ в зоне действия на один. Благословение отменяет эффекты заклинания "Проклятие".~
+@1873     = ~Проклятие~
+@1874     = ~Проклятие
+(Чародейство)
+Уровень: священник 1, жрец Бейна 1
+Дальность: обзор колдующего
+Длительность: 1 минута/уровень
+Время чтения: 2
+Зона действия: радиус 25 футов
+Спасбросок: воли, отменяет
 
-Bane is the reverse of Bless, and lowers the attack bonus and saving throws of enemy creatures in the area of effect by 1 for the duration of the spell. Bane counters and dispels Bless.~
+"Проклятие" является противоположностью заклинания "Благословение". Она понижает атаку и спасброски вражеских существ в зоне действия на один в течение действия заклинания. Проклятие отменяет эффекты заклинания "Благословения".~
 @214    = ~Ilmater's Endurance
 
 This ability allows a non-evil ally to bear far more pain but also suffer more pain, granting them a +20 Constitution bonus and a -3 vulnerability to physical damage for 8 hours.~
-@31802     = ~Mass Heal~
-@32802     = ~Mass Heal
-(Conjuration)
-Level: Clr 8, Drd 9, Lathander 9
-Range: Sight of Caster
-Duration: Instantaneous
-Casting Time: 9
-Area of Effect: 20-foot radius
-Saving Throw: None
+@31802     = ~Массовое исцеление~
+@32802     = ~Массовое исцеление
+(Призывание)
+Уровень: священник 8, друид 9, жрец Латандера 9
+Дальность: обзор колдующего
+Длительность: мгновенно
+Время чтения: 9
+Зона действия: радиус 20 футов
+Спасбросок: нет
 
-Mass Heal wipes away disease and injury from all living allies in the area of effect. It cures blindness, diseases, feeblemind and restores the targets to maximum hit points if they have been injured. Enemy undead in the area of effect suffer the effects of a Harm spell if the caster succeeds on a ranged touch attack roll for each one.~
-@35952     = ~Mass Harm~
-@36952     = ~Mass Harm
-(Necromancy)
-Level: Clr 9
-Range: Sight of Caster
-Duration: Instantaneous
-Casting Time: 9
-Area of Effect: 20-foot radius
-Saving Throw: Fortitude negates
+"Массовое исцеление" исцеляет всех живых союзников в зоне действия заклинания от болезней и травм. Заклинание лечит слепоту, болезни, слабость и восстанавливает количество пунктов здоровья цели до максимума. Вражеская нежить в зоне действия эффекта получает эффект заклинания "Вред", если заклинателю удается выполнить дистанционную атака касанием для каждой из них.~
+@35952     = ~Массовый вред~
+@36952     = ~Массовый вред
+(Некромантия)
+Уровень: священник 9
+Дальность: обзор колдующего
+Длительность: мгновенно
+Время чтения:  9
+Зона действия: радиус 20 футов
+Спасбросок: стойкости, отменяет
 
-Mass Harm releases destructive negative energy upon all living enemies in the area of effect. The caster makes ranged touch attacks against each of those creatures; each one that get hit must Save vs. Fortitude or lose all but one hit point. The DC is the same as that of the 6th-level Harm spell. Allied undead in the area of effect are instead healed to full health as per a Heal spell.~
-@1126    = ~Iron Body~
-@1127    = ~Iron Body 
-(Transmutation)
-Level: Sor/Wiz 8, Helm 8
-Range: Caster
-Duration: 1 round / level
-Casting Time: 8
-Area of Effect: Caster
-Saving Throw: None
+Это заклинание выпускает разрушительную негативную энергию на всех живых врагов в зоне действия эффекта. Заклинатель наносит дистанционные атаки касанием по каждому из этих существ. При попадании, каждое из них должно сделать успешный спасбросок стойкости или потерять все пункты здоровья, кроме одного. УС такой же, как у заклинания "Вред" 6-го уровня. Союзная нежить в зоне действия эффекта целиком восстанавливает здоровье, как при использовании заклинания "Исцеление".~
+@1126    = ~Железное тело~
+@1127    = ~Железное тело
+(Преобразование)
+Уровень: колдун/волшебник 8, жрец Хелма 8
+Дальность: колдующий
+Длительность: 1 раундов/уровень
+Время чтения: 8
+Зона действия: колдующий
+Спасбросок: нет
 
-This spell transforms the caster's body into living iron, granting him several powerful resistances and abilities. While the spell is in effect, the caster has 15/- resistance to fire, cold, and all forms of physical damage, but also +15 vulnerability to electricity. Spells that affect respiration or the physiology of the caster are ignored completely, such as poison, blindness, deafness, and disease to name a few, and the caster becomes too heavy to knock back with spells like Gust of Wind, Throw or Repulsion. In addition, the caster gains a +8 bonus to strength and constitution and a -8 dexterity penalty. Unfortunately, the caster's movement becomes slow and awkward under the weight of his new body, setting his movement rate to half its normal rate, and he receives a -2 penalty to casting speed.~
-@1857    = ~Death Fog~
-@1858    = ~Death Fog
-(Transmutation)
-Level: Sor/Wiz 6
-Range: Sight of Caster 
-Duration: 10 rounds
-Casting Time: 6
-Area of Effect: 15-foot radius
-Saving Throw: None
+Тело заклинателя превращается в живое железо и становится таким же крепким и устойчивым к урону. На время действия заклинания колдующий получает 15/- сопротивления огню, холоду и всем формам физического урона, но +15 уязвимости к электричеству. Заклинания, влияющие на дыхание или физиологические процессы заклинателя, к примеру, "Яд", "Слепота", "Оглушение" или "Болезнь", не действуют, а сам заклинатель становится слишком тяжёлым, чтобы его можно было отбросить такими заклинаниями, как "Порыв ветра", "Бросок" или "Отталкивание". Кроме того заклинатель получает +8 к Силе, -8 к Ловкости. К сожалению, движения заклинателя становятся медленными и неловкими: скорость его передвижения снижается вдвое, и он получает -2 к скорости чтения заклинаний.~
+@1857    = ~Туман смерти~
+@1858    = ~Туман смерти
+(Преобразование)
+Уровень: колдун/волшебник 6
+Дальность: обзор колдующего
+Длительность: 10 раундов
+Время чтения: 6
+Зона действия: радиус 15 футов
+Спасбросок: нет
 
-This spell brings forth a billowing cloud of acidic fog. The thick fog limits movement to 50% of a creature's current movement rate. In addition, all creatures caught within the fog take 3d6 points of acid damage per round.~
-@37955     = ~Malavon's Corrosive Fog~
-@38955     = ~Malavon's Corrosive Fog
-(Conjuration)
-Level: Sor/Wiz 9
-Range: Sight of Caster
-Duration: 30 rounds
-Casting Time: 12
-Area of Effect: 40-foot radius
-Saving Throw: Fortitude half
+Это заклинание создаёт клубящееся облако кислотного тумана. Густой туман ограничивает передвижение до 50% от текущей скорости передвижения существа. Кроме того, каждый раунд, пока существо находится в облаке, оно получает 3d6 кислотного урона.~
+@37955     = ~Едкий туман Малавона~
+@38955     = ~Едкий туман Малавона
+(Призывание)
+Уровень: колдун/волшебник 9
+Дальность: обзор колдующего
+Длительность: 30 раундов
+Время чтения:  12
+Зона действия: радиус 40 футов
+Спасбросок: стойкости, половина урона
 
-Malavon's Corrosive Fog is another spell created by the dark elf sorcerer Malavon. It creates an enormous cloud of acid fog that lingers for a long time. Each round, any creature in the fog takes 12d6 acid damage (Fortitude save for half), and their movement rate is halved (there is no save against the movement penalty). The target's Spell Resistance, if any, does not affect this spell.~
-@19910    = ~We used Imphraili's notes to complete her theoretical experiment regarding the transfusion of a modified Sanguis Anima into one's own bloodstream.  The process was difficult and painful but left our alchemist strangely invigorated.~
-@19911    = ~We used the white wyrm's egg to form a magical liquid which was then mixed into the alchemist's bloodstream.  The process cooled the blood, making them resistant to cold but more vulnerable to heat.~
-@56005    = ~Ability Score Drain~
-@55370    = ~sonic~
-@55603    = ~ (Lich)~
+Едкий туман Малавона - еще одно заклинание, созданное магом-дроу Малавоном. Оно создает огромное облако кислотного тумана, который держится долгое время. Каждый раунд любое существо, попавшее в туман, получает 12d6 урона кислотой (успешный спасбросок стойкости позволяет снизить урон в два раза), и скорость его передвижения уменьшается вдвое (спасбросок против этого эффекта не действует). Сопротивление магии существа, попавшего в туман не влияет на это заклинание.~
+@19910    = ~С помощью записей Имфраили мы завершили её теоретический эксперимент по переливанию видоизменённой Сангвис Анима в чью-то кровь. Процесс был сложный и болезненный, но наш алхимик получил странный заряд бодрости.~
+@19911    = ~Мы использовали яйцо белого змия для создания волшебного зелья, которое затем было введено в кровь нашего алхимика. Это зелье увеличило сопротивление холоду, но при этом увеличило и уязвимость к огню.~
+@56005    = ~Пункты параметров вытянуты~
+@55370    = ~звук~
+@55603    = ~(Лич)~
 @316    = ~KNOCKDOWN:
 
 You are trained to knock down or trip enemies in melee combat.
@@ -523,86 +521,93 @@ When taken a second time, the feat also allows you to automatically dodge the fi
 STATISTICS:
 
 Weight: 1~
-@1105    = ~Shout
-(Evocation)
-Level: Brd 3, Sor/Wiz 4, Oghma 4
-Range: Close (30 ft. long, 10 ft. diameter)
-Duration: Instantaneous
-Casting Time: 1
-Area: 30-feet long, 10-foot diameter
-Saving Throw: Fortitude partial
+@1105    = ~Крик
+(Проявление)
+Уровень: бард 3, колдун/волшебник 4, жрец Огмы 4
+Дальность: малая (30 футов длины, 10 футов ширины)
+Длительность: мгновенно
+Время чтения: 1
+Зона действия: 30-футовый конус с раструбом 10 футов
+Спасбросок: стойкости, особый
 
-The caster emits an ear-splitting yell that deafens and damages creatures in its path. Any creature within the area of effect is deafened for 5 rounds, stunned for 2 rounds, and takes 5d6 points of sonic damage. A successful save negates the deafness and stun and reduces the damage by half. A deafened creature has a 50% chance of resisting this spell.~
-@1145    = ~Lich Touch
-(Necromancy)
-Level: Sor/Wiz 6
-Range: Touch
-Duration: 1 round/level 
-Casting Time: 6
-Area of Effect: Caster
-Saving Throw: Fortitude half
+Голос заклинателя становится невероятно мощным, и он может издаёт пронзительный вопль, который оглушает и повреждает существ на своём пути. Любое существо в зоне действия эффекта глохнет на 5 раундов, ошеломляется на 2 раунда и получает 5d6 урона звуком. Успешный спасбросок стойкости спасает от ошеломления и глухоты и уменьшает полученный урон в два раза. Глухие существа имеют 50% шанс избежать действия этого заклинания.~
+@1144    = ~Прикосновение лича~
+@1145    = ~Прикосновение лича
+(Некромантия)
+Уровень: колдун/волшебник 6
+Дальность: прикосновение 
+Длительность: 1 раунд/уровень
+Время чтения: 6
+Зона действия: колдующий
+Спасбросок: стойкости, половина урона
 
-This spell confers the powers of a lich's touch. The wizard's hands are imbued with a chilling force of negative energy, allowing the caster to deal 3d10+5 cold damage (plus damage bonuses from Strength, proficiencies, spells, items and other effects) with each hit and paralyze living victims for 10 rounds on a failed Fortitude save. The attack uses the Simple Weapon: Small Blade/Touch Attack proficiency.~
-@1497    = ~Eagle's Splendor
-(Transmutation)
-Level: Brd 2, Drd 2, Pal 2, Sor/Wiz 2, Oghma 1
-Range: Caster
-Duration: 1 hour / level
-Casting Time: 1 
-Target: Creature touched
-Saving Throw: None 
+Руки заклинателя обретают силу прикосновения лича. Они излучают зелёный свет негативной энергии, который наносит 3d10+5 урона холодом цели, которую успешно атаковал заклинатель (к тому же учитываются бонусы от силы, черт, заклинаний, предметов и другие эффекты) и парализует цель на 10 раундов, если жертва провалит спасбросок стойкости. При атаке используется черта "Простое оружие, Короткие клинки/Атака касанием".~
+@1496    = ~Величие орла~
+@1497    = ~Величие орла
+(Преобразование)
+Уровень: бард 2, друид 2, паладин 2, колдун/волшебник 2, жрец Огмы 1
+Дальность: колдующий
+Длительность: 1 час/уровень
+Время чтения: 1
+Цель: существо, до которого дотронулись
+Спасбросок: нет
 
-The transmutated creature becomes more poised, articulate, and personally forceful. The spell grants +4 to Charisma, adding the usual benefits of Charisma-based skills and abilities.~
-@1622    = ~Great Shout
-(Evocation)
-Level: Brd 6, Sor/Wiz 8, Oghma 7
-Range: Caster
-Duration: Instantaneous 
-Casting Time: 2 
-Area of Effect: 30-feet long, 10-foot diameter
-Saving Throw: Fortitude half
+Видоизменённое существо становится более хладнокровным, расчётливым и сильным духом. Заклинание увеличивает Харизму на 4, добавляя обычные преимущества основанных на харизме навыков и способностей.~
+@1621    = ~Великий крик~
+@1622    = ~Великий крик
+(Проявление)
+Уровень: бард 6, колдун/волшебник 8, жрец Огмы 7
+Дальность: колдующий
+Длительность: мгновенно
+Время чтения: 1
+Зона действия: 30-футовый конус с раструбом 10 футов
+Спасбросок: стойкости, половина урона
 
-Upon uttering the Great Shout, the caster releases a stunning force from their mouth in a 30-foot long, 10-foot diameter cone. Creatures within the area of effect take 10d10 sonic damage with a Fortitude save for half. Those who fail the save are stunned for 5 rounds and deafened for 10 rounds. Deafened creatures have a 25% chance of resisting this spell.~
-@34623     = ~Mass Haste
-(Transmutation)
-Level: Brd 6, Sor/Wiz 6
-Range: Sight of Caster
-Duration: 3 rounds + 1 round/level 
-Casting Time: 3
-Area of Effect: 20-foot radius
-Saving Throw: None
+Заклинатель издаёт поразительно громкий крик, который распространяется конусом длиной в 30 футов с раструбом 10 футов в самой дальней точке. Существа в зоне действия получают 10d10 урона звуком, который снижается вполовину при успешном спасброске стойкости. При неудачном спасброске эти существа также ошеломляются на 5 раундов и глохнут на 10. Заклинатель также сам получает урон 2d10, ошеломляется на 1 раунд и глохнет на два при провале спасброска (с -5 к УС). Это заклинание игнорирует сопротивление и иммунитет к магии. Глухие существа имеют 25% шанс не подвергнуться воздействия этого заклинания.~
+@33623     = ~Массовая спешка~
+@34623     = ~Массовая спешка
+(Преобразование)
+Уровень: бард 6, колдун/волшебник 6
+Дальность: обзор колдующего
+Длительность: 3 раунда + 1 раунд/уровень
+Время чтения: 3
+Зона действия: радиус 20 футов
+Спасбросок: нет
 
-Mass Haste grants the effects of the 3rd-level spell Haste to all allies in the area of effect. Those allies gain +4 AC and an extra attack per round, and move twice as fast. These effects do not stack with the 3rd-level spell. Mass Haste dispels Slow effects.~
-@38252     = ~Sound Burst
-(Evocation)
-Level: Brd 2
-Range: Sight of Caster
-Duration: 1 round
-Casting Time: 2
-Area of Effect: 15-foot radius
-Saving Throw: Fortitude partial
+Это заклинание даёт эффект заклинания третьего уровня "Спешка" на всех союзников в области действия заклинания. Они получают дополнительную атаку, бонус к классу защиты +4 и передвигается с вдвое большей скоростью перемещения. Эффект этого заклинания не складывается с аналогичным эффектом от заклинания "Спешка" третьего уровня. Массовая спешка развеивает эффекты заклинания "Замедление".~
+@37252     = ~Взрыв звука~
+@38252     = ~Взрыв звука
+(Проявление)
+Уровень: бард 2
+Дальность: обзор колдующего
+Длительность: 1 раунд
+Время чтения:  2
+Зона действия: радиус 15 футов
+Спасбросок: стойкости, особый
 
-This spell releases an extremely loud and jarring burst of sound. Creatures in the area of effect take 1d8 sonic damage and must make a Fortitude save or be stunned for 1 round. Deaf creatures are not stunned but still take damage. The caster is unaffected by this spell.~
-@1009    = ~Tortoise Shell
-(Abjuration) 
-Level: Drd 3, Rgr 3
-Range: Sight of Caster
-Duration: 4 rounds
-Casting Time: 2
-Area of Effect: 1 creature
-Saving Throw: None 
+Это заклинание издает чрезвычайно громкий и пронзительный звук. Существа в зоне действия получают 1d8 звукового урона и должны прокинуть спасбросок стойкости или быть ошеломлёнными на 1 раунд. Глухие существа не ошеломляются, но все равно получают урон. На заклинателя это заклинание не действует.~
+@1008    = ~Черепаший панцирь~
+@1009    = ~Черепаший панцирь 
+(Отречение)
+Уровень: друид 3, следопыт 3
+Дальность: обзор колдующего
+Длительность: 4 раунда
+Время чтения: 2
+Зона действия: 1 существо
+Спасбросок: нет
 
-Upon completion of this spell, a large hemispherical shell resembling that of a tortoise encases the target creature, shielding it from the outside world. The creature encased can take no action but in turn is impervious to all effects. The tortoise shell has 50 hit points, plus another 50 hit points for every 10 levels the druid has attained. Tortoise Shell can only affect allies.~
-@1679    = ~Otiluke's Resilient Sphere
-(Evocation) 
-Level: Sor/Wiz 4
-Range: Sight of Caster
-Duration: 4 rounds
-Casting Time: 1
-Area of Effect: 1 creature
-Saving Throw: None
+После применения данного заклинания цель закрывает большая защитная полусфера, похожая на панцирь черепахи. Существо, оказавшееся внутри полусферы, не может совершать действий, но при этом остаётся неуязвимым для атак врага. Сфера может принять на себя 50 единиц урона и дополнительно 50 единиц урона за каждые 10 уровней друида или следопыта. Это заклинание может действовать только на союзников.~
+@1678    = ~Упругая сфера Отилука~
+@1679    = ~Упругая сфера Отилука
+(Проявление)
+Уровень: колдун/волшебник 4
+Дальность: обзор колдующего
+Длительность: 4 раундов
+Время чтения: 1
+Зона действия: 1 существо
+Спасбросок: нет
 
-When this spell is cast, the result is a globe of shimmering force that encloses the subject creature. The resilient sphere will contain its subject for the duration of the spell. The sphere is completely immune to all damage; the only method of removing the sphere is by the use of a Dispel Magic spell. Hence the creature caught inside the globe is completely safe from all attacks, but at the same time is completely unable to affect the outside world.~
+Это заклинание создаёт сферу искрящейся энергии, которая окружает выбранное существо. Упругая сфера будет сдерживать существо в течение всего времени действия заклинания. Она абсолютно нечувствительна к любому повреждению, и единственный способ убрать её - использовать заклинание "Развеять магию". Существо в этой сфере находится в полной безопасности от всех внешних воздействий, но в то же время совершенно неспособно влиять на внешний мир.~
 @529    = ~CLERIC:
 
 The cleric is a generic priest (of any mythos) who tends to the spiritual needs of a community. He is both protector and healer, though he is not totally defensive.
@@ -636,57 +641,57 @@ Disadvantages:
 
 Use this skill to keep a guard dog from barking at you, to get a wild bird to land on your outstretched hand, or to keep an owlbear calm while you back off. Any wild creature, including animals as well as animalistic monsters such as wyverns, must make a Will save or be charmed for 1 round per caster level.
 ~
-@55717=~This undead has been bolstered and made more difficult to turn~
-@56006=~Extra racial bonuses for humans go here. Each effect on this spell will be applied to any human player character right after character creation.~
-@56007=~Extra racial bonuses for aasimars go here. Each effect on this spell will be applied to any aasimar player character right after character creation.~
-@56008=~Extra racial bonuses for tieflings go here. Each effect on this spell will be applied to any tiefling player character right after character creation.~
-@56009=~Extra racial bonuses for moon elves go here. Each effect on this spell will be applied to any moon elf player character right after character creation.~
-@56010=~Extra racial bonuses for drow go here. Each effect on this spell will be applied to any drow player character right after character creation.~
-@56011=~Extra racial bonuses for wild elves go here. Each effect on this spell will be applied to any wild elf player character right after character creation.~
-@56012=~Extra racial bonuses for half-elves go here. Each effect on this spell will be applied to any half-elf player character right after character creation.~
-@56013=~Extra racial bonuses for shield dwarves go here. Each effect on this spell will be applied to any shield dwarf player character right after character creation.~
-@56014=~Extra racial bonuses for gold dwarves go here. Each effect on this spell will be applied to any gold dwarf player character right after character creation.~
-@56015=~Extra racial bonuses for gray dwarves go here. Each effect on this spell will be applied to any gray dwarf player character right after character creation.~
-@56016=~Extra racial bonuses for lightfoot halflings go here. Each effect on this spell will be applied to any lightfoot halfling player character right after character creation.~
-@56017=~Extra racial bonuses for strongheart halflings go here. Each effect on this spell will be applied to any strongheart halfling player character right after character creation.~
-@56018=~Extra racial bonuses for ghostwise halflings go here. Each effect on this spell will be applied to any ghostwise halflings player character right after character creation.~
-@56019=~Extra racial bonuses for rock gnomes go here. Each effect on this spell will be applied to any rock gnome player character right after character creation.~
-@56020=~Extra racial bonuses for deep gnomes go here. Each effect on this spell will be applied to any deep gnome player character right after character creation.~
-@56021=~Extra racial bonuses for half-orcs go here. Each effect on this spell will be applied to any half-orc player character right after character creation.~
-@4803   = ~This ring is the only part of Veira that remains truly tangible. Bound in death as well as life, the ring never leaves Veira's finger.
+@55717=~Эта нежить была усилена и её сложнее изгнать~
+@56006=~Здесь находятся дополнительные расовые бонусы для людей. Каждый из этих эффектов применится к любому человеку сразу же после создания персонажа.~
+@56006=~Здесь находятся дополнительные расовые бонусы для аасимаров. Каждый из этих эффектов применится к любому аасимару сразу же после создания персонажа.~
+@56008=~Здесь находятся дополнительные расовые бонусы для тифлингов. Каждый из этих эффектов применится к любому тифлингу сразу же после создания персонажа.~
+@56009=~Здесь находятся дополнительные расовые бонусы для лунных эльфов. Каждый из этих эффектов применится к любому лунному эльфу сразу же после создания персонажа.~
+@56010=~Здесь находятся дополнительные расовые бонусы для дроу. Каждый из этих эффектов применится к любому дроу сразу же после создания персонажа.~
+@56011=~Здесь находятся дополнительные расовые бонусы для диких эльфов. Каждый из этих эффектов применится к любому дикому эльфу сразу же после создания персонажа.~
+@56012=~Здесь находятся дополнительные расовые бонусы для полуэльфов. Каждый из этих эффектов применится к любому полуэльфу сразу же после создания персонажа.~
+@56013=~Здесь находятся дополнительные расовые бонусы для дварфов щита. Каждый из этих эффектов применится к любому дварфу щита сразу же после создания персонажа.~
+@56014=~Здесь находятся дополнительные расовые бонусы для золотых дварфов. Каждый из этих эффектов применится к любому золотому дварфу сразу же после создания персонажа.~
+@56015=~Здесь находятся дополнительные расовые бонусы для серых дварфов. Каждый из этих эффектов применится к любому серому дварфу сразу же после создания персонажа.~
+@56016=~Здесь находятся дополнительные расовые бонусы для легконогих полуросликов. Каждый из этих эффектов применится к любому легконогому полурослику сразу же после создания персонажа.~
+@56017=~Здесь находятся дополнительные расовые бонусы для крепких полуросликов. Каждый из этих эффектов применится к любому крепкому полурослику сразу же после создания персонажа.~
+@56018=~Здесь находятся дополнительные расовые бонусы для скрытных полуросликов. Каждый из этих эффектов применится к любому скрытному полурослику сразу же после создания персонажа.~
+@56019=~Здесь находятся дополнительные расовые бонусы для скальных гномов. Каждый из этих эффектов применится к любому скальному гному сразу же после создания персонажа.~
+@56020=~Здесь находятся дополнительные расовые бонусы для глубинных гномов. Каждый из этих эффектов применится к любому глубинному гному сразу же после создания персонажа.~
+@56021=~Здесь находятся дополнительные расовые бонусы для полуорков. Каждый из этих эффектов применится к любому полуорку сразу же после создания персонажа.~
+@4803   = ~Это кольцо - единственная часть Вейры, которая остается по-настоящему материальной. Связанное как со смертью, так и с жизнью, кольцо никогда не покидает пальца Вейры.
 
-Veira remains only partly corporeal so long as she clings to the Material Plane. She can interact with the world around her, but her partially ethereal form has no need for sleep, and she can neither enjoy the pleasure of food or drink, nor can she suffer the pain of illness and injury. If her form is damaged, she can slowly regenerate over time. If her form is destroyed, she can be restored with a sufficient burst of positive energy, such as a Raise Dead spell.
+Вейра остается лишь частично материальной, пока находится на Материальном Плане. Она может взаимодействовать с окружающим миром, но ее частично бесплотная форма не нуждается во сне, не может получать удовольствие от еды и питья, а также испытывать боль от болезней и травм. Если ее форма получит повреждения, со временем она медленно восстановится. Если ее форма будет разрушена, она может быть возрождена с помощью достаточного всплеска позитивной энергии, например, заклинанием "Оживление мёртвого".
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Regeneration: 1 hit point per round
-Damage Reduction: 5/+1
-Incorporeal: Veira has a 50% chance to avoid any instance of physical damage that would hit her
-Move Silently: +50
-Resistance: 25/- Cold Resistance
-Resistance: 5/- Acid, Electricity, and Fire Resistance
-Turn Resistance: Counts as 4 levels higher for purposes of resisting Turn Undead
-Immunity to fatigue, poison, disease, bleeding wounds, stun, web, entangle, intoxication, nausea, vampiric touch, energy drain, Stoneskin, Iron Skins, Barkskin, enfeeblement, Otiluke's Resilient Sphere, Tortoise Shell, Horrid Wilting, death magic, petrification, critical hits, and most potions.
-Weight: 0 lb.~
-@4805   = ~This ring is the only part of Veira that remains truly tangible. Bound in death as well as life, the ring never leaves Veira's finger.
+Регенерация: восстанавливает 1 пункт здоровья каждый раунд
+Снижение урона: 5/+1
+Бесплотность: Вейра с вероятностью 50% избегает любого физического урона, который мог бы быть получен
+Навык "Тихая походка": +50
+Сопротивление: 25/- сопротивление холоду
+Сопротивление: 5/- сопротивление кислоте, электричеству и огню
+Сопротивление изгнанию: считается на 4 уровня выше для проверок изгнания нежити, направленного против нее
+Иммунитет к усталости, яду, болезням, рваным ранам, ошеломлению, паутине, запутыванию, опьянению, тошноте, прикосновению вампира, оттоку энергии, слабости, смертельной магии, критическим ударам, большинству зелий, а также к заклинаниям "Каменная кожа", "Железная кожа", "Кожа-кора", "Упругая сфера Отилука", "Черепаший панцирь" и "Жуткое увядание"
+Вес: 0 фунтов~
+@4805   = ~Это кольцо - единственная часть Вейры, которая остается по-настоящему материальной. Связанное как со смертью, так и с жизнью, кольцо никогда не покидает пальца Вейры.
 
-Veira remains only partly corporeal so long as she clings to the Material Plane. She can interact with the world around her, but her partially ethereal form has no need for sleep, and she can neither enjoy the pleasure of food or drink, nor can she suffer the pain of illness and injury. If her form is damaged, she can slowly regenerate over time. If her form is destroyed, she can be restored with a sufficient burst of positive energy, such as a Raise Dead spell.
+Вейра остается лишь частично материальной, пока находится на Материальном Плане. Она может взаимодействовать с окружающим миром, но ее частично бесплотная форма не нуждается во сне, не может получать удовольствие от еды и питья, а также испытывать боль от болезней и травм. Если ее форма получит повреждения, со временем она медленно восстановится. Если ее форма будет разрушена, она может быть возрождена с помощью достаточного всплеска позитивной энергии, например, заклинанием "Оживление мёртвого".
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Regeneration: 2 hit points per round
-Damage Reduction: 10/+2
-Incorporeal: Veira has a 50% chance to avoid any instance of physical damage that would hit her
-Move Silently: +50
-Resistance: 50/- Cold Resistance
-Resistance: 10/- Acid, Electricity, and Fire Resistance
-Turn Resistance: Counts as 4 levels higher for purposes of resisting Turn Undead
-Immunity to fatigue, poison, disease, bleeding wounds, stun, web, entangle, intoxication, nausea, vampiric touch, energy drain, Stoneskin, Iron Skins, Barkskin, enfeeblement, Otiluke's Resilient Sphere, Tortoise Shell, Horrid Wilting, death magic, petrification, critical hits, and most potions.
-Weight: 0 lb.~
-@55604=~, +<EXRDVAL1> extra damage~
-@55605=~, -<EXRDVAL1> damage penalty~
-@55606=~, minimum die roll of <EXRLVAL1>~
-@55607=~, maximum die roll of <EXRLVAL1>~
+Регенерация: восстанавливает 2 пункта здоровья каждый раунд
+Снижение урона: 10/+2
+Бесплотность: Вейра с вероятностью 50% избегает любого физического урона, который мог бы быть получен
+Навык "Тихая походка": +50
+Сопротивление: 50/- сопротивление холоду
+Сопротивление: 10/- сопротивление кислоте, электричеству и огню
+Сопротивление изгнанию: считается на 4 уровня выше для проверок изгнания нежити, направленного против нее
+Иммунитет к усталости, яду, болезням, рваным ранам, ошеломлению, паутине, запутыванию, опьянению, тошноте, прикосновению вампира, оттоку энергии, слабости, смертельной магии, критическим ударам, большинству зелий, а также к заклинаниям "Каменная кожа", "Железная кожа", "Кожа-кора", "Упругая сфера Отилука", "Черепаший панцирь" и "Жуткое увядание"
+Вес: 0 фунтов~
+@55604=~, +<EXRDVAL1> урон(а)~
+@55605=~, -<EXRDVAL1> урон(а)~
+@55606=~, минимальный бросок <EXRLVAL1>~
+@55607=~, максимальный бросок <EXRLVAL1>~
 @11533    = ~Вопящий череп +2~
 @11534    = ~Предположительно, "Вопящий череп" был создан мастерами из рода подземных гномов. Этот цеп можно легко узнать по его необычному виду: к трехфутовой деревянной рукоятке цепью прикреплено било в виде массивного камня, вырезанного в форме черепа, с торчащими из него длинными, мерцающими осколками невероятно твёрдого хрусталя.
 
@@ -787,16 +792,17 @@ Weight: 0 lb.~
  Сопротивление: 20/- сопротивления урону магией
  Весь урон магией, наносимый носителем робы, увеличивается на 20%
 Вес: 3 фунта~
-@38359    = ~Glibness
-(Enchantment)
-Level: Brd 3
-Range: Caster
-Duration: 10 rounds/level
-Casting Time: 3
-Area of Effect: Caster
-Saving Throw: None
+@37359    = ~Бойкость~
+@38359    = ~Бойкость
+(Чародейство)
+Уровень: бард 3
+Дальность: колдующий
+Длительность: 10 раундов/уровень
+Время чтения:  3
+Зона действия: колдующий
+Спасбросок: нет
 
-This spell greatly increases the character's ability to fool others. For the duration, the character's Bluff skill is increased by 15.~
+Это заклинание значительно увеличивает способность персонажа обманывать других. На время действия заклинания навык "Блеф" персонажа увеличивается на 15.~
 @816    = ~ABJURER:
 
 A wizard that specializes in magic that protects, blocks, or banishes.
