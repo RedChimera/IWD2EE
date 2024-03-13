@@ -1,27 +1,27 @@
 //All new strings that have been added to IWD2EE after translations have begun should
 // be put in here to make them easier for translators to find.
-@539    = ~RANGER:
+@539    = ~СЛЕДОПЫТ:
 
-The ranger is a warrior and a woodsman. He is skilled with weapons and is knowledgeable in the ways of the forest. The ranger often protects and guides lost travelers and honest peasant-folk. A ranger needs to be strong and wise to the ways of nature to live a full life.
+Следопыт - это умелый охотник и лесник, хорошо владеющий оружием, прекрасно ориентирующийся в лесу. Следопыты часто приходят на выручку заблудившимся путешественникам и крестьянам. Чтобы дожить до старости, следопыту нужно быть сильным и отменно знать природу.
 
-NOTE: Wisdom is the casting statistic for a ranger. It affects their maximum spellcasting level, spell saving throw DCs, and number of bonus spells.
+ПРИМЕЧАНИЕ: за заклинания у следопытов отвечает параметр мудрость. Она влияет на максимальный уровень заклинаний, уровень сложности спасбросков от заклинаний следопыта и количество дополнительных заклинаний.
 
-Hit Points per Level: 1-10
+Пунктов здоровья на уровень: 1-10
 
-Advantages:
-* Proficient with all simple and martial weapons, light armor, medium armor, and shields.
-* Rangers may select a Favored Enemy at first level. They gain +1 to attack and +4 to damage against creatures of that race type. Rangers gain an additional Favored Enemy every five levels, and the attack bonus against previous Favored Enemies increases by 1.
-* Rangers can fight with two weapons as if they had the feats Ambidexterity and Two-Weapon Fighting if they are wearing light or no armor only.
-* 2nd level: Spellcasting. Rangers gain the ability to cast spells.
-* 6th level: The ranger can take the Whirlwind Attack feat provided they meet the Dexterity requirement, ignoring all other requirements.
-* 6th level: Set Natural Snare. This ability sets a trap that, which triggered by an enemy, ensnares all enemies within 20 feet for 5 rounds on a failed Reflex save. The save DC is 6 plus the ranger's Wilderness Lore skill. The ranger gains an additional use of Set Natural Snare every 6 levels after 6.
-* 7th level: Woodland Stride. The ranger becomes immune to Entangle, Web, and Spike Growth.
-* 9th level: The ranger can take the Improved Two-Weapon Fighting and Manyshot feats, even if they don't meet the prerequisites.
-* 15th level: The ranger can take the Improved Two-Weapon Fighting and Manyshot feats a second time, which no other class can do.
+Преимущества:
+* Изначально владеет всем простым и воинским оружием, умеет носить лёгкие и средние доспехи, а также пользоваться щитом.
+* На первом уровне следопыты могут выбрать предпочитаемого (заклятого) врага. Против существ выбранного типа они будут получать +1 к атаке и +4 к урону. Дополнительного заклятого врага следопыты выбирают каждые пять уровней, а бонус атаки против предыдущего врага увеличивается на 1.
+* Если на следопыте надет лёгкий доспех или же вообще нет доспеха, он может сражаться с оружием в обеих руках, как если бы у него были черты "Амбидекстрия" и "Бой с оружием в обеих руках".
+* 2-й уровень: Чтение заклинаний. Следопыт получает способность читать заклинания.
+* 6-й уровень: следопыт может взять черту "Ураганная атака" при условии, что он удовлетворяет требованиям ловкости. Остальные требования игнорируются.
+* 6-й уровень: Установка природного силка. Эта способность позволяет устанавливать ловушку, которая, будучи спровоцированной противником, опутывает всех врагов в радиусе 20 футов на 5 раундов при неудачном спасброске реакции. Сложность спасброска равна 6 плюс уровень навыка "Знание дикой природы". После 6 уровня следопыт получает дополнительное использование навыка каждые 6 уровней.
+* 7-й уровень: Лесной шаг. Следопыт становится невосприимчивым к заклинаниям "Паутина", "Запутывание" и "Рост шипов".
+* 9-й уровень: следопыт может взять черты "Улучшенный бой с оружием в обеих руках" и "Множественный выстрел", даже если он не соответствуют требованиям.
+* 15-й уровень: следопыт может взять черты "Улучшенный бой с оружием в обеих руках" и "Множественный выстрел" во второй раз, чего не может сделать ни один другой класс.
 
-Disadvantages:
-* Rangers gain feats at a slower rate than fighters.
-* Rangers do not start with proficiency in heavy armor.~
+Недостатки:
+* Следопыты получают черты медленнее, чем бойцы.
+* Изначально следопыты не умеют носить тяжёлые доспехи.~
 @10384    = ~Волшебные мантии сопротивления холоду нередко встречаются на Побережье Меча, в особенности распространены они к северу, ближе к Невервинтеру и Долине Ледяного Ветра. Многие молодые волшебники получают их от своих преподавателей, отучившись пять лет.
 
 ПАРАМЕТРЫ:
@@ -285,64 +285,64 @@ Disadvantages:
  Иммунитет к болезням, яду, очарованию, и страху
  Может превосходно видеть даже в магической темноте
 Вес: 0 фунтов~
-@523    = ~WIZARD:
+@523    = ~ВОЛШЕБНИК:
 
-The wizard strives to be a master of magical energies, shaping them and casting them as spells. To do so, he studies strange tongues and obscure facts and devotes much of his time to magical research. A wizard must rely on knowledge and wit to survive. Wizards are rarely seen adventuring without a retinue of fighters and men-at-arms. Because there are different types (or schools) of magic, there are different types of wizards. However, the most common sort studies all types of magic and learns a wide variety of spells. His broad range makes him well suited to the demands of adventuring.
+Волшебник стремится стать мастером магических энергий, формируя их и превращая в заклинания. Для этого он изучает странные языки и малопонятные факты и посвящает большую часть своего времени магическим исследованиям. Чтобы выжить, волшебник должен полагаться на знания и смекалку. Волшебников редко можно встретить в приключениях без свиты бойцов и вооружённых людей. Поскольку существуют различные виды (или школы) магии, то и волшебники бывают разные. Однако, в большинстве своём волшебники изучают все виды магии и владеют широким спектром заклинаний. Благодаря своей разносторонним способностям волшебник прекрасно справляется с трудностями в приключениях.
 
-Note: To cast a spell, a wizard must have an Intelligence equal to or greater than the spells level plus 10. Intelligence is the casting statistic for a wizard.  It affects their maximum spellcasting level, spell saving throw DCs, and number of bonus spells.
+ПРИМЕЧАНИЕ: чтобы произнести заклинание, волшебник должен обладать интеллектом, равным или превышающим уровень заклинания плюс 10. Интеллект - это главная характеристика волшебника. Он влияет на максимальный уровень заклинаний, сложность спасбросков против заклинаний волшебника и количество дополнительных заклинаний.
 
-Hit Points per Level: 1-4
+Пунктов здоровья на уровень: 1-4
 
-Advantages:
-* Proficient with all simple weapons except for simple missile weapons.
-* Receives a bonus feat every five levels in addition to the normal feats given to all character classes every three levels.
-* If the character does not specialize in a school of magic, they gain a +1 bonus to the DC of all their spells.
-* Learns two new spells each time they level up, and can also learn spells from scrolls.
+Преимущества:
+* Владеет всеми видами простого оружия, кроме простого метательного.
+* Получает дополнительную черту каждые пять уровней в дополнение к обычным чертам, которые даются всем классам персонажей каждые три уровня.
+* Если персонаж не специализируется на какой-либо школе магии, он получает бонус +1 к УС спасбросков всех своих заклинаний.
+* Изучает два новых заклинания при каждом повышении уровня, а также может изучать заклинания из свитков.
 
-Disadvantages:
-* Starts with no proficiencies in armor and is a very poor at melee combat.~
-@527    = ~BARD:
+Недостатки:
+* Не умеет носить доспехи и плохо сражается в ближнем бою.~
+@527    = ~БАРД:
 
-The bard's strength is his pleasant and charming personality. With it and his wits he makes his way through the world. A bard is a talented musician and a walking storehouse of gossip, tall tales, and lore. He learns a little bit about everything that crosses his path; he is a jack-of-all-trades but master of none. While many bards are scoundrels, their stories and songs are welcome almost everywhere.
+Сила барда - в его приятной и обаятельной личности. С помощью неё и своей смекалки он прокладывает себе путь в этом мире. Бард - талантливый музыкант и ходячий кладезь сплетен, небылиц и преданий. Он узнаёт понемногу обо всём, что встречается на его пути; он мастер на все руки, но не мастер ни в одном деле. Хотя многие барды - негодяи, их историям и песням рады почти везде.
 
-Hit Points per Level: 1-6
+Пунктов здоровья на уровень: 1-6
 
-Advantages:
-* Proficient with all simple weapons, light armor, medium armor, and shields. The bard is also proficient with large swords.
-* Gains one point in Armored Arcana, reducing arcane spell failure by 35%.
-* +1 to Alchemy, Knowledge (Arcana) and Spellcraft.
-* 2nd level: Spellcasting. Bards gain the ability to cast arcane spells.
-* 7th level: The bard may replace one of their known spells with another spell of the same level. They may do this once again every 3 levels after level 7. The bard can only replace spells at least two spell levels below the highest spell level they can cast (e.g. only a 1st-level spell when the bard reaches 7th level), though they can replace 7th-level spells starting at level 25, and 8th-level spells starting at level 28.
-* Many rogue like skills are class skills of the Bard.
-* Bard Songs. Bards have the ability to sing melodies that have magical effects on creatures within thirty feet. As they advance in level, they gain additional songs. The songs are described in detail below.
-* 1st level: The Tale of Curran Strongheart. When played, all the bard's allies gain +1 attack bonus, +1 damage, and immunity to fear and hopelessness. The attack and damage bonuses increase by 1 at levels 10, 25 and 40.
-* 3th level: The Song of Kaudies. When played, the bard's allies are immune to harmful sound-based spells and abilities, including Command, Silence, Greater Command, Holy Word, Blasphemy, Power Word: Sleep, Sound Burst, Shout, Power Word: Silence, Power Word: Stun, Power Word: Blind, Great Shout, Wail of the Banshee, Power Word: Kill, harpy wails, and the enemy-only effects of Chant, Prayer, and Recitation.
-* 5th level: Tymora's Melody. When played, Tymora's Melody gives the bard's allies +1 luck, +1 saving throws, and +2 to their Knowledge(arcana), Alchemy, and rogue skills. At levels 15 and 35, this song grants an additional +1 to luck and saving throws and +2 to skill checks.
-* 9th level: The Siren's Yearning. When played, every creature that hears the song suffers a cumulative -1 penalty to their Will saves for 10 rounds and must make a Will save or be entralled, unable to take action for one round or until they take damage. The Will save DC is equal to the bard's level. Thus, a level 15 bard's song has a DC of 15.
-* 13th level: The War Chant of Sith. When played, the bard's allies gain a +2 generic armor bonus, physical damage resistance of 3/-, and they regenerate 3 points of damage per round in combat. At levels 28 and 45, this song grants an additional +2 to AC, 3/- physical damage resistance, 3 hit points healed per round.
-* 20th level: The Ballad of Three Heroes. When played, the bard's allies gain +5 spell resistance, 5/- resistance to all forms of magical damage, and the effects of the Tale of Curran Strongheart, Tymora's Melody, and the War Chant of Sith. At levels 30 and 50, this song grants an additional +5 spell resistance and 5/- resistance to magical damage.
+Преимущества:
+* Владеет всеми видами простого оружия, умеет носить лёгкую и среднюю броню, а также пользоваться щитами. Бард также владеет большими мечами.
+* Получает один ранг в черте "Колдовство в доспехах", уменьшающей провал магических заклинаний на 35%.
+* +1 к навыкам "Алхимия", "Знание (Волшебство)" и "Колдовство".
+* 2-й уровень: владение заклинаниями. Барды получают способность произносить магические заклинания.
+* 7-й уровень: бард может заменить одно из своих известных заклинаний другим заклинанием того же уровня. После 7-го уровня он может делать это ещё раз за каждые 3 уровня. Бард может заменить заклинания только на два уровня ниже самого высокого уровня заклинаний, которые он может произнести (например, только заклинание 1-го уровня, когда бард достигает 7-го уровня), хотя он может заменить заклинания 7-го уровня, начиная с 25-го уровня, и заклинания 8-го уровня, начиная с 28-го уровня.
+* Многие навыки плутов являются классовыми навыками барда.
+* Песни бардов. Барды умеют петь мелодии, которые оказывают магическое воздействие на существ в радиусе тридцати футов. По мере повышения уровня они получают дополнительные песни. Песни подробно описаны ниже.
+* 1-й уровень: Сага о Курране Храброе Сердце. При исполнении все союзники барда получают +1 к атаке, +1 к урону и иммунитет к страху и чувству безнадёжности. Бонусы к атаке и урону увеличиваются на 1 на уровнях 10, 25 и 40.
+* 3-й уровень: Песня Каудиес. Когда бард играет эту песню, его союзники получают иммунитет к негативным заклинаниям и способностям, основанным на звуке, включая "Повеление", "Тишина", "Великое повеление", "Святое слово", "Богохульство", "Слово силы: Усыпить", "Взрыв звука", "Крик", "Слово силы: Тишина", "Слово силы: Ошеломить", "Слово силы: Ослепить", "Великий крик", "Вопль банши", "Слово силы: Убить", воплям гарпий, а также к негативным эффектам заклинаний "Песнь", "Молитва", и "Декламация".
+* 5-й уровень: Мелодия Тиморы. При исполнении "Мелодии Тиморы" союзники барда получают +1 к удаче, +1 к спасброскам и +2 к навыкам "Знание (Волшебство)", "Алхимия" и навыкам плута. На уровнях 15 и 35 эта песня даёт дополнительно +1 к удаче и спасброскам, а также +2 к проверке умений.
+* 9-й уровень: Стон Сирены. При исполнении песни каждое существо, услышавшее её, получает штраф -1 к спасброскам воли в течение 10 раундов (штраф суммируется со временем) и должно сделать спасбросок воли, иначе оказывается очарованным и не может предпринимать никаких действий, пока не пройдёт десять раундов или пока оно не получит урон. УС спасброска воли равен уровню барда. Так, УС спасброска песни барда 15-го уровня равен 15.
+* 13-й уровень: Боевая песнь Ситта. При исполнении этой песни союзники барда получают общий бонус к классу защиты +2, 3/- сопротивления физическому урону и восстанавливают 3 пункта урона за раунд в бою. На уровнях 28 и 45 эта песня даёт дополнительно +2 к классу защиты, 3/- сопротивления физическому урону, 3 пункта здоровья исцеления в раунд.
+* 20-й уровень: Баллада о трёх героях. При исполнении этой песни союзники барда получают +5 к сопротивлению магии, 5/- сопротивления всем видам магического урона, а также эффекты песен "Сага о Курране Храброе Сердце", "Мелодия Тиморы" и "Боевая песнь Ситта". На уровнях 30 и 50 эта песня даёт дополнительные +5 к сопротивлению магии и 5/- сопротивления магическому урону.
 
-A bard cannot benefit the party with more than one song at once. But if the party has multiple bards, the effects of each bard's song will stack. Summoned creatures do not benefit from bard songs.
+Бард не может играть более одной песни одновременно. Но если в партии есть несколько бардов, эффекты песен каждого из них будут суммироваться. Призванные существа не подвергаются эффектам песен барда.
 
-* 30th level: The bard can now do other actions while singing a bard song.
+* 30-й уровень: бард теперь может выполнять другие действия во время исполнения бардовской песни.
 
-Disadvantages:
-* Bards are not as effective in hand-to-hand combat as warriors or priests.
-* Bards have slower access to spells than a wizard or priest.~
-@569    = ~SORCERER:
+Недостатки:
+* Барды не так эффективны в рукопашном бою, как воины или священники.
+* Барды изучают заклинаниям медленнее, чем волшебники или священники.~
+@569    = ~КОЛДУН:
 
-Sorcerers are practitioners of magic who were born with the innate ability to cast spells. It is thought that the blood of some powerful creature flows through their veins; perhaps they even are the spawn of dragons walking in humanoid form. Regardless, the Sorcerer's magic is intuitive rather than logical. They know fewer spells than wizards, and acquire spells more slowly, but they can cast spells more often and have no need to select and prepare spells ahead of time. Sorcerers cannot specialize in magic the way wizards do. Other than these differences, a Sorcerer is very similar to the wizard.
+Колдуны - пользователи магии с врождённой способностью к чтению заклинаний. Считается, что в их жилах течёт кровь какого-то могущественного создания; может статься, что они - потомки драконов, способных принимать человекоподобную форму. Как бы там ни было, магия колдуна скорее основана на интуиции, чем на логике. Они знают меньше заклинаний, чем волшебники, и получают новые медленнее, но могут читать их чаще и не должны выбирать и подготавливать заклинания заранее. Колдуны не могут специализироваться в школах магии, как это делают волшебники. В остальном эти два класса очень похожи.
 
-NOTE: A sorcerer does NOT learn spells from scrolls. He chooses new spells with each level. Charisma is the casting statistic for a sorcerer. It affects their maximum spellcasting level, spell saving throw DCs, and number of bonus spells.
+ПРИМЕЧАНИЕ: колдун НЕ заучивает заклинания со свитков. Он выбирает новые заклинания при переходе на следующий уровень. Способность колдуна к чтению заклинаний определяется харизмой. Она влияет на максимальный уровень заклинаний, УС заклинаний колдуна и количество дополнительных заклинаний.
 
-Hit Points per Level: 1-4
+Пунктов здоровья на уровень: 1-4
 
-Advantages:
-* Proficient with all simple weapons.
-* 6th level: The sorcerer may replace one of their known spells with another spell of the same level. They may do this once again every 2 levels after level 6. The sorcerer can only replace spells at least two spell levels below the highest spell level they can cast (e.g. only a 1st-level spell when the sorcerer reaches 6th level), though they can replace 8th-level spells starting at level 20, and 9th-level spells starting at level 22.
+Преимущества:
+* Умеет обращаться со всем простым оружием.
+* 6-й уровень: колдун может заменить одно из своих известных заклинаний другим заклинанием того же уровня. После 6-го уровня он может делать это ещё раз каждые 2 уровня. Колдун может заменить заклинания только на два уровня ниже самого высокого уровня заклинаний, которые он может произнести (например, только заклинание 1-го уровня, когда колдун достигает 6-го уровня), так, он может заменить заклинания 8-го уровня, начиная с 20-го уровня, и заклинания 9-го уровня, начиная с 22-го уровня.
 
-Disadvantages:
-* Starts with no proficiencies in armor and is very poor at melee combat.~
+Недостатки:
+* Начинает игру, не умея носить броню. Очень слаб в ближнем бою.~
 @55761=~Выбор заклинаний волшебника: Уровень 1~
 @55762=~Выбор заклинаний волшебника: Уровень 2~
 @55763=~Выбор заклинаний волшебника: Уровень 3~
@@ -388,9 +388,9 @@ Disadvantages:
 Спасбросок: воли, отменяет
 
 "Проклятие" является противоположностью заклинания "Благословение". Она понижает атаку и спасброски вражеских существ в зоне действия на один в течение действия заклинания. Проклятие отменяет эффекты заклинания "Благословения".~
-@214    = ~Ilmater's Endurance
+@214    = ~Стойкость Ильматера
 
-This ability allows a non-evil ally to bear far more pain but also suffer more pain, granting them a +20 Constitution bonus and a -3 vulnerability to physical damage for 8 hours.~
+Эта способность позволяет не злому союзнику вытерпеть больше боли, но боль при этом наносит больше страданий. Союзник получает бонус +20 к телосложению и -3 уязвимости к физическому урону на 8 часов.~
 @31802     = ~Массовое исцеление~
 @32802     = ~Массовое исцеление
 (Призывание)
@@ -451,76 +451,76 @@ This ability allows a non-evil ally to bear far more pain but also suffer more p
 @56005    = ~Пункты параметров вытянуты~
 @55370    = ~звук~
 @55603    = ~(Лич)~
-@316    = ~KNOCKDOWN:
+@316    = ~СБИВАНИЕ С НОГ:
 
-You are trained to knock down or trip enemies in melee combat.
+Вы обучены сбивать с ног или ставить подножки врагам в ближнем бою.
 
-Prerequisite: Base attack bonus +6 or higher
+Требования: базовый бонус атаки +6 или выше
 
-Benefit: You gain an ability that lets you knock down or trip an adjacent creature. The ability can be used once per round. If your Dexterity is higher than your Strength, you attempt to trip the target, which must make a Reflex save (DC 5 + half your base attack bonus + your Dexterity modifier) or fall down for 4 seconds. Otherwise, you try to knock down your target, which must make a Fortitude save (DC 5 + half your base attack bonus + your Strength modifier) or fall down for 4 seconds. The DC gets -4 for each time someone has tried to knock down or trip the target in the past 10 rounds. It also gets -4 if the target has more than two legs or is otherwise more stable than a normal humanoid (such as a dwarf). Creatures larger than you cannot be knocked down tripped. The time spent to perform this ability causes the character to have one fewer attack in the following round.
+Действие: вы получаете способность, позволяющую сбить с ног или поставить подножку находящемуся рядом существу. Способность можно использовать один раз в раунд. Если ваша ловкость выше вашей силы, вы пытаетесь поставить подножку цели, которая должна прокинуть спасбросок реакции (УС = 5 + половина вашего базового бонуса атаки + ваш модификатор ловкости) или упасть на 4 секунды. Если ваша сила выше вашей ловкости, вы пытаетесь сбить цель с ног, которая должна прокинуть спасбросок стойкости (УС = 5 + половина вашего базового бонуса атаки + ваш модификатор силы) или упасть на 4 секунды. Каждый раз, когда кто-то пытается сбить цель с ног или поставить цели подножку, вне зависимости от успеха действия, сложность спасброска против этой способности уменьшается на -4 в течение 10 раундов. Сложность спасброска также уменьшается на -4, если у цели больше двух ног или она более устойчива, чем обычный гуманоид (например, целью является дварф). Существа крупнее вас не могут споткнуться или быть сбитыми с ног. Из-за потраченного на применение способности времени, ваш персонаж совершает на одну атаку меньше в следующем раунде.
 
-This feat may be taken twice. When taken a second time, the feat is Improved Knockdown, which and adds a +2 bonus to the DC, and allows you knock down or trip creatures one size category larger than you (creatures whose circle has no more than twice the radius of your circle).~
-@389    = ~LICHDOM:
+Вы можете взять эту черту до 2 раз. Второй ступенью этой черты является "Улучшенное сбивание с ног", которое добавляет +2 к сложности спасброска против черты, а также позволяет сбивать с ног или ставить подножки существам на размер больше вашего (существам, радиус круга которых, не более чем в два раза превышает радиус вашего круга).~
+@389    = ~ТЁМНОЕ ПРИЗВАНИЕ:
 
-After endless dark research, you have finally achieved immortality... so long as your phylactery survives.
+После бесконечных тёмных исследований вы наконец-то добились бессмертия... до тех пор, пока существует ваша филактерия.
 
-Prerequisite: To start taking ranks in this feat, you need two ranks in Spell Focus: Necromancy, 12 levels of wizard or sorcerer or 10 levels of necromancer, and evil alignment. To take the final rank, you need 20 levels of wizard or sorcerer or 18 levels of necromancer.
+Требования: чтобы начать получать ранги в этой черте, вам нужно иметь два ранга в "Любимая школа магии - Некромантия", 12 уровней в классе волшебника или колдуна или 10 уровней в классе некроманта, а также злое мировоззрение. Для того, чтобы взять финальный ранг черты, потребуется 20 уровней в классе волшебника или колдуна или 18 уровней в классе некроманта.
 
-Benefit: Even after you meet the initial requirements, you must take this feat five times for it to have any benefit (this represents the long hours of evil research necessary to achieve lichdom). Once you do, you become a lich and gain these effects:
-* +5 generic armor bonus.
-* +2 Intelligence, Wisdom and Charisma.
-* Immune to cold, electricity, poison, disease, bleeding, fatigue, sleep, fear, hopelessness, charm, confusion, feeblemind, paralysis, stun, energy drain, instant death, petrification, polymorph effects, critical hits, and sneak attacks.
-* 5/- resistance to slashing and piercing damage, damage reduction 5/+1.
-* +8 bonus to Hide, Move Silently, and Search.
-* You can be turned, but count as 4 levels higher against turning effects.
-* You take damage from Cure Wounds spells and healing potions but are healed by Inflict Wounds spells.
-* Your unarmed attacks are replaced with a Lich Touch, which deals 3d10+5 cold damage and paralyzes the target for 10 rounds on a failed save (same DC as the spell Lich Touch).
-* You have an aura of fear; any enemy within 20 feet that is at least 5 levels lower than you must make a Will save (DC 10 + Charisma/Intelligence modifier) or run away for 1 round.
-* You gain a phylactery which stores your life force. If you die, you will be automatically revived after 8 hours. However, if all party members die, the enemies will destroy your phylactery and the game will be over.~
-@390    = ~LICHDOM:
+Действие: даже после того, как вы выполните начальные требования, вы должны взять эту черту пять раз, чтобы она начала приносить пользу (это отражает долгие часы исследований, необходимых для достижения результатов на тёмном поприще). Как только вы это сделаете, вы станете личем и получите следующие эффекты:
+* Общий бонус к классу защиты +5.
+* +2 к интеллекту, мудрости и харизме.
+* Невосприимчивость к холоду, электричеству, яду, болезням, кровотечению, усталости, сонливости, страху, чувству безнадёжности, очарованию, замешательству, слабоумию, параличу, ошеломлению, оттоку энергии, мгновенной смерти, окаменению, эффектам превращения, критическим попаданиям и скрытым атакам.
+* 5/- сопротивления колющему и режущему урону, 5/+1 снижения урона.
+* +8 к навыкам "Незаметность", "Тихая походка" и "Поиск".
+* Вы уязвимыми к эффектам изгнания, но считаетесь на 4 уровня выше для сопротивления указанным эффектам.
+* Вы получаете урон от заклинаний лечения ран и зелий исцеления, но исцеляетесь от заклинаний нанесения ран.
+* Ваши безоружные атаки заменяются на "Прикосновение лича", которое наносит 3d10+5 урона холодом и парализует цель на 10 раундов при неудачном спасброске (УС спасброска аналогичен заклинанию "Прикосновение лича").
+* Вы окутаны аурой страха; любой враг в радиусе 20 футов, ниже вас как минимум на 5 уровней, должен сделать спасбросок воли (УС 10 + модификатор харизмы/интеллекта) или убежать на 1 раунд.
+* Вы получаете филактерию, хранящую вашу жизненную силу. Если вы умрёте, то автоматически возродитесь через 8 часов. Однако если все члены вашей группы погибнут, враги уничтожат вашу филактерию, и игра будет окончена.~
+@390    = ~ТЁМНОЕ ПРИЗВАНИЕ:
 
-After endless dark research, you have finally achieved immortality... so long as your phylactery survives.
+После бесконечных тёмных исследований вы наконец-то добились бессмертия... до тех пор, пока существует ваша филактерия.
 
-Prerequisite: To start taking ranks in this feat, you need two ranks in Spell Focus: Necromancy, 12 levels of wizard or sorcerer or 10 levels of necromancer, and evil alignment. To take the final rank, you need 20 levels of wizard or sorcerer or 18 levels of necromancer.
+Требования: чтобы начать получать ранги в этой черте, вам нужно иметь два ранга в "Любимая школа магии - Некромантия", 12 уровней в классе волшебника или колдуна или 10 уровней в классе некроманта, а также злое мировоззрение. Для того, чтобы взять финальный ранг черты, потребуется 20 уровней в классе волшебника или колдуна или 18 уровней в классе некроманта.
 
-Benefit: Even after you meet the initial requirements, you must take this feat five times for it to have any benefit (this represents the long hours of evil research necessary to achieve lichdom). Once you do, you become a lich and gain these effects:
-* +5 armor bonus.
-* +2 Intelligence, Wisdom and Charisma.
-* Immune to cold, electricity, poison, disease, bleeding, fatigue, sleep, fear, hopelessness, charm, confusion, feeblemind, paralysis, stun, energy drain, instant death, petrification, and polymorph effects.
-* 5/- resistance to slashing and piercing damage, damage reduction 5/+1.
-* +8 bonus to Hide, Move Silently, and Search.
-* You can be turned, but count as 4 levels higher against turning effects.
-* You take damage from Cure Wounds spells and healing potions but are healed by Inflict Wounds spells.
-* Your unarmed attacks are replaced with a Lich Touch, which deals 3d10+5 cold damage and paralyzes the target for 10 rounds on a failed save (same DC as the spell Lich Touch).
-* You have an aura of fear; any enemy within 20 feet that is at least 5 levels lower than you must make a Will save (DC 10 + Charisma/Intelligence modifier) or run away for 1 round.
-* You gain a phylactery which stores your life force. If you die, you will be automatically revived after 8 hours. However, if all party members die, the enemies will destroy your phylactery and the game will be over.~
-@704    = ~GRAPPLE:
+Действие: даже после того, как вы выполните начальные требования, вы должны взять эту черту пять раз, чтобы она начала приносить пользу (это отражает долгие часы исследований, необходимых для достижения результатов на тёмном поприще). Как только вы это сделаете, вы станете личем и получите следующие эффекты:
+* Общий бонус к классу защиты +5.
+* +2 к интеллекту, мудрости и харизме.
+* Невосприимчивость к холоду, электричеству, яду, болезням, кровотечению, усталости, сонливости, страху, чувству безнадёжности, очарованию, замешательству, слабоумию, параличу, ошеломлению, оттоку энергии, мгновенной смерти, окаменению, эффектам превращения.
+* 5/- сопротивления колющему и режущему урону, 5/+1 снижения урона.
+* Бонус +8 к навыкам "Незаметность", "Тихая походка" и "Поиск".
+* Вы уязвимыми к эффектам изгнания, но считаетесь на 4 уровня выше для сопротивления указанным эффектам.
+* Вы получаете урон от заклинаний лечения ран и зелий исцеления, но исцеляетесь от заклинаний нанесения ран.
+* Ваши безоружные атаки заменяются на "Прикосновение лича", которое наносит 3d10+5 урона холодом и парализует цель на 10 раундов при неудачном спасброске (УС спасброска аналогичен заклинанию "Прикосновение лича").
+* Вы окутаны аурой страха; любой враг в радиусе 20 футов, ниже вас как минимум на 5 уровней, должен сделать спасбросок воли (УС 10 + модификатор харизмы/интеллекта) или убежать на 1 раунд.
+* Вы получаете филактерию, хранящую вашу жизненную силу. Если вы умрёте, то автоматически возродитесь через 8 часов. Однако если все члены вашей группы погибнут, враги уничтожат вашу филактерию, и игра будет окончена.~
+@704    = ~ЗАХВАТ:
 
-While anyone can grapple something, you have the skill to grapple even a hostile creature in the midst of combat.
+Пускай любой может схватить что-то, но вы можете схватить даже враждебное существо в разгар боя.
 
-Benefit: You gain an ability that lets you grab an adjacent creature. The ability can be used once per round. The target must make a Reflex save (DC 12 + half your level + your Strength or Dexterity modifier (whichever is higher)) or be grappled by you for 2 rounds. While grappled, the creature gets a -4 attack penalty, a 50% chance of spell failure, and cannot move away from you. If you move, you may pull the creature along with you.
+Действие: вы можете схватить соседнее существо. Способность можно использовать один раз в раунд. Цель должна сделать спасбросок реакции (УС = 12 + половина вашего уровня + ваш модификатор силы или ловкости (в зависимости от того, что выше)). При провале спасброска цель будет схвачена вами на 2 раунда. Когда существо схвачено, оно получает штраф к атаке -4, её заклинания с вероятностью 50% будут провалены, а сама цель не может от вас отойти. При движении вы также будете тянуть цель за собой.
 
-To grapple, you must have at least one hand free. The save gains +4 DC if you have both hands free. It gets -4 DC for each time someone has tried to grapple the target in the past 10 rounds. If you grapple an ally or a paralyzed, stunned, sleeping, or knocked down creature, there is no save. Creatures larger than you cannot be grappled.~
-@730    = ~DODGE:
+Чтобы схватить цель, у вас должна быть свободна хотя бы одна рука. Сложность спасброска против захвата увеличивается на +4, если у вас свободны обе руки. Сложность спасброска уменьшается на -4 за каждую попытку схватить цель в течение последних 10 раундов. Спасбросок не совершается, если вы хватаете союзника или парализованное, ошеломлённое, спящее или сбитое с ног существо. Существа крупнее вас не могут быть захвачены.~
+@730    = ~УКЛОНЕНИЕ:
 
-You are adept at dodging blows.
+Вы умеете ловко уклоняться от ударов.
 
-Prerequisite: Dex 13+. Taking the feat a second time requires Dex 25+, Improved Evasion, and Defensive Roll.
+Требования: ловкость 13+. Для получения второго ранга черты требуется ловкость 25+, а также черты "Улучшенное уклонение" и "Защитный перекат".
 
-Benefit: You receive a +1 dodge bonus to armor class against attacks from an opponent.
+Действие: вы получаете +1 к классу защиты (уклонение) против атак противника.
 
-When taken a second time, the feat also allows you to automatically dodge the first attack that would hit you each round.~
-@890    = ~Dodged the attack~
-@891    = ~Which lich appearance would you like to use?~
-@892    = ~Black lich.~
-@893    = ~White lich.~
-@894    = ~I will keep my original appearance.~
-@895    = ~Lich Phylactery~
-@896    = ~This is your phylactery. If you die, your soul retreats to your phylactery, which will create a new body for you and revive you after 8 hours. However, if all party members die, the enemies will destroy your phylactery and the game will be over.
+На втором ранге черты вы к тому же автоматически уклоняетесь от первой попавшей в вас атаки в каждом раунде.~
+@890    = ~Получилось избежать атаки~
+@891    = ~Какой облик лича вы бы хотели использовать?~
+@892    = ~Чёрный лич.~
+@893    = ~Белый лич.~
+@894    = ~Я оставлю свой первоначальный внешний вид.~
+@895    = ~Филактерия Лича~
+@896    = ~Это ваша филактерия. Если вы умрёте, ваша душа отправится в филактерию, которая создаст для вас новое тело и возродит вас через 8 часов. Однако, если все члены партии погибнут, враги уничтожат вашу филактерию, и игра будет окончена.
 
-STATISTICS:
+ПАРАМЕТРЫ:
 
-Weight: 1~
+Вес: 1~
 @1105    = ~Крик
 (Проявление)
 Уровень: бард 3, колдун/волшебник 4, жрец Огмы 4
@@ -601,38 +601,38 @@ Weight: 1~
 Спасбросок: нет
 
 Это заклинание создаёт сферу искрящейся энергии, которая окружает выбранное существо. Упругая сфера будет сдерживать существо в течение всего времени действия заклинания. Она абсолютно нечувствительна к любому повреждению, и единственный способ убрать её - использовать заклинание "Развеять магию". Существо в этой сфере находится в полной безопасности от всех внешних воздействий, но в то же время совершенно неспособно влиять на внешний мир.~
-@529    = ~CLERIC:
+@529    = ~СВЯЩЕННИК:
 
-The cleric is a generic priest (of any mythos) who tends to the spiritual needs of a community. He is both protector and healer, though he is not totally defensive.
+Священник - это служитель культа (любого божества), который удовлетворяет духовные потребности общества. Он и защищает, и исцеляет, но его обязанности не ограничиваются только этими заботами.
 
-NOTE: Wisdom is the casting statistic for a cleric. It affects their maximum spellcasting level, spell saving throw DCs, and number of bonus spells.
+ПРИМЕЧАНИЕ: способность священника читать заклинания определяется мудростью. Эта характеристика влияет на его максимальный уровень заклинаний, уровень сложности спасбросков от заклинаний священника и количество дополнительных заклинаний.
 
-Hit Points per Level: 1-8
+Пунктов здоровья на уровень: 1-8
 
-Advantages:
-* Proficient with all simple weapons as well as hammers, flails, light armor, medium armor, heavy armor, and shields.
-* Clerics can cast powerful defensive and healing spells.
-* Clerics have the ability to Turn Undead. When this power is invoked, the cleric channels positive or negative energy, which has various effects on undead. The higher the cleric's level and charisma are, the greater his or her chance of success is. If the cleric is good, or a neutral follower of a non-evil deity, their turning causes undead to flee, or destroys them outright if the turn undead roll is high enough. If the cleric is evil, or a neutral follower of an evil deity, their turning causes hostile undead to cower before them, or takes control of the undead if the turn undead roll is high enough, while allied undead are instead bolstered, making them more difficult for enemy clerics to turn. If an allied undead has been turned by an enemy cleric, an evil cleric can dispel the turning with a turning on their own.
-* Clerics receive special powers and spells from their deity.
-* Spontaneous Casting: Clerics can convert their spells to cure (if good or neutral) or inflict (if evil) spells of the nearest level when a player shift-clicks on a spell at the time of casting. The spell clicked is immediately removed from the character's memorized list and cast as the nearest cure or inflict spell of the same level.
+Преимущества:
+* Владеет всеми видами простого оружия, а также молотом и цепом, умеет носить лёгкую, среднюю и тяжёлую броню, а также пользоваться щитами.
+* Священники могут читать мощные защитные и исцеляющие заклинания.
+* Священники обладают способностью "Изгнание нежити". При вызове этой способности он направляет положительную или отрицательную энергии, которая оказывает различные эффекты на нежить. Чем выше уровень священника и его харизма, тем выше его шанс на успех. Если священник добрый или нейтральный последователь незлого божества, способность обращает нежить в бегство или уничтожает её при высоком значении броска способности. Если священник злой или нейтральный последователь злого божества, способность заставляет враждебную нежить бежать или позволяет священнику взять её под контроль при высоком значении броска способности. Союзная нежить при активации способности получает усиление, и вражеским священникам становится сложнее на неё воздействовать. Если союзная нежить попала под воздействие вражеского "Изгнания нежити", то злой священник может развеять действие вражеского "Изгнания нежити" своим собственным.
+* Священники получают особые силы и заклинания от своего божества.
+* Спонтанное чтение заклинаний: священники могут превращать любые заклинания в ближайшие по уровню целительные (если священник добрый) или наносящие урон (если священник злой). Это достигается путём щелчка по заклинанию левой кнопкой мыши с зажатой клавишей Shift во время чтения заклинания. Соответствующее заклинание немедленно удаляется из списка запомненных и читается как ближайшее целительное или наносящее урон заклинание того же уровня. Если для данного уровня недоступно никаких целительных или наносящих урон заклинаний, используется самое сильное заклинание более низких уровней.
 
-Spontaneous Casting Spells:
-1: Cure Light Wounds/Inflict Light Wounds
-2: Cure Moderate Wounds/Inflict Moderate Wounds
-3: Cure Serious Wounds/Inflict Serious Wounds
-4: Cure Critical Wounds/Inflict Critical Wounds
-5: Raise Dead/Slay Living
-6: Heal/Harm
-7: Resurrection/Destruction
-8: Greater Restoration/Energy Drain
-9: Mass Heal/Mass Harm
+Заклинания спонтанного чтения:
+1: Исцеление лёгких ран/Нанесение лёгких ран
+2: Исцеление средних ран/Нанесение средних ран
+3: Исцеление серьёзных ран/Нанесение серьёзных ран
+4: Исцеление критических ран/Нанесение критических ран
+5: Оживление мёртвого/Убить живого
+6: Исцеление/Вред
+7: Воскрешение/Уничтожение
+8: Великое восстановление/Отток энергии
+9: Массовое исцеление/Массовый вред
 
-Disadvantages:
-* Clerics do not have access to many powerful offensive spells.
-* Clerics are weaker in combat than fighters, rangers, paladins, and barbarians.~
-@814    = ~ANIMAL EMPATHY (Cha; Trained Only; Druid, Ranger Only):
+Недостатки:
+* Священники не могут использовать многие мощные атакующие заклинания.
+* Священники в бою слабее, чем бойцы, следопыты, паладины и варвары.~
+@814    = ~ПОНИМАНИЕ ЖИВОТНЫХ (Харизма; только с обучением; только друиды и следопыты):
 
-Use this skill to keep a guard dog from barking at you, to get a wild bird to land on your outstretched hand, or to keep an owlbear calm while you back off. Any wild creature, including animals as well as animalistic monsters such as wyverns, must make a Will save or be charmed for 1 round per caster level.
+Используйте этот навык, чтобы цепные псы не лаяли на вас, дикие птицы садились к вам на руки, а совомедведь не пытался вас сожрать. Любое дикое существо, включая животных, а также звероподобных монстров, таких как виверны, должно сделать спасбросок воли или быть зачарованным на 1 раунд за каждый уровень заклинателя.
 ~
 @55717=~Эта нежить была усилена и её сложнее изгнать~
 @56006=~Здесь находятся дополнительные расовые бонусы для людей. Каждый из этих эффектов применится к любому человеку сразу же после создания персонажа.~
@@ -795,16 +795,16 @@ Use this skill to keep a guard dog from barking at you, to get a wild bird to la
 Спасбросок: нет
 
 Это заклинание значительно увеличивает способность персонажа обманывать других. На время действия заклинания навык "Блеф" персонажа увеличивается на 15.~
-@816    = ~ABJURER:
+@816    = ~ОТРИЦАТЕЛЬ: 
 
-A wizard that specializes in magic that protects, blocks, or banishes.
+Волшебник, специализирующийся в защитной магии.
 
-Advantages:
-* Abjurers can memorize an additional spell per spell level they know.
-* Abjuration spells cast by an abjurer gain +2 DC.
-* Abjuration wizard spells cast by an abjurer last 20% longer.
+Преимущества:
+* Может запоминать по 1 дополнительному заклинанию на каждый круг заклинаний.
+* Заклинания соответствующей школы получают +2 к сложности спасбросков.
+* Заклинания соответствующей школы волшебника длятся на 20% дольше.
 
-Disadvantages:
-* Abjurers cannot learn spells from the Evocation school.~
+Недостатки:
+* Не может изучать заклинания школы Проявления.~
 @0    = ~IWD2EE Core~
 @98   = ~You must first install the core component.~
