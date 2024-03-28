@@ -44,7 +44,24 @@ LANGUAGE   ~English~
            ~iwd2ee/tra/English/more_persuasion_options.tra~
            ~iwd2ee/tra/English/new_strings_after_release.tra~
 
-
+LANGUAGE   ~Russian~
+           ~Russian~
+           ~iwd2ee/tra/Russian/setup.tra~
+           ~iwd2ee/tra/Russian/class_revisions.tra~
+           ~iwd2ee/tra/Russian/loose_alignment.tra~
+           ~iwd2ee/tra/Russian/spell_revise.tra~
+           ~iwd2ee/tra/Russian/spell_focus.tra~
+           ~iwd2ee/tra/Russian/item_revisions.tra~
+           ~iwd2ee/tra/Russian/creature_rebalancing.tra~
+           ~iwd2ee/tra/Russian/faster_areas.tra~
+           ~iwd2ee/tra/Russian/z_concoct_potions.tra~
+		   ~iwd2ee/tra/Russian/npc_core.tra~
+           ~iwd2ee/tra/Russian/revised_battle_square.tra~
+           ~iwd2ee/tra/Russian/lua.tra~
+           ~iwd2ee/tra/Russian/racial_enemies.tra~
+           ~iwd2ee/tra/Russian/misc.tra~
+           ~iwd2ee/tra/Russian/more_persuasion_options.tra~
+           ~iwd2ee/tra/Russian/new_strings_after_release.tra~
 
 //IWD2EE Core
 BEGIN @0 DESIGNATED 1000 //
