@@ -1,5 +1,0 @@
-//Some translators have asked to revise vanilla IWD2 strings. If you would like to do this, put the revised strings here.
-// The TRA reference number of the strings should be equal to 100000 + the original strref number. So if you want to modify
-// string number 35473, write:
-// @135473=~~
-// and put the revised string in between the ~'s.
