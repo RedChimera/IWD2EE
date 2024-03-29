@@ -2525,5 +2525,23 @@ function IEex_EnableCodeProtection()
 	IEex_Free(temp)
 end
 
+function IEex_DisableRDataProtection()
+	local temp = IEex_Malloc(0x4)
+	-- 0x40 = PAGE_EXECUTE_READWRITE
+	-- 0x847000 = Start of .rdata section in memory.
+	-- 0x5E000 = Size of .rdata section in memory.
+	IEex_DllCall("Kernel32", "VirtualProtect", {temp, 0x40, 0x5E000, 0x847000}, nil, 0x0)
+	IEex_Free(temp)
+end
+
+function IEex_EnableRDataProtection()
+	local temp = IEex_Malloc(0x4)
+	-- 0x20 = PAGE_EXECUTE_READ
+	-- 0x847000 = Start of .rdata section in memory.
+	-- 0x5E000 = Size of .rdata section in memory.
+	IEex_DllCall("Kernel32", "VirtualProtect", {temp, 0x20, 0x5E000, 0x847000}, nil, 0x0)
+	IEex_Free(temp)
+end
+
 -- Assembly Macros
 dofile("override/IEex_Mac.lua")
