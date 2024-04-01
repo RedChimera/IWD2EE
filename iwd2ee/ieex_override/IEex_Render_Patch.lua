@@ -252,6 +252,15 @@
 			]]},
 		}))
 
+	------------------------------------------------------------------------------
+	-- Decrease the maximum time it takes for a creature to become visible from --
+	-- 6 AI updates (~400 milliseconds) to 1 AI update (~66.6 milliseconds)     --
+	------------------------------------------------------------------------------
+
+	IEex_DisableRDataProtection()
+	-- CGameObject::VISIBLE_DELAY
+	IEex_WriteByte(0x84C50F, 1)
+	IEex_EnableRDataProtection()
 
 	IEex_EnableCodeProtection()
 
