@@ -390,6 +390,21 @@
 		]]},
 	}))
 
+	------------------------------------------------------------------
+	-- Only reroll saving throws / probabilities if time is flowing --
+	------------------------------------------------------------------
+
+	IEex_HookBeforeCall(0x72DF5A, [[
+
+		!mov_eax_[dword] #8CF6DC ; g_pBaldurChitin ;
+		!mov_eax_[eax+dword] #1C54 ; m_pObjectGame ;
+		!cmp_byte:[eax+dword]_byte #1B7C 0 ; m_worldTime.m_active ;
+		!jnz_dword >call
+
+		!xor_edi_edi
+		!jmp_dword :72DFC3
+	]])
+
 	IEex_EnableCodeProtection()
 
 end)()
