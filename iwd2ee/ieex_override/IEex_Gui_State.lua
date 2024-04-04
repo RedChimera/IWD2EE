@@ -3007,6 +3007,7 @@ ex_current_record_actorID = 0
 ex_current_record_weapon_die_number = 0
 ex_current_record_weapon_die_size = 0
 ex_previous_line_was_race = false
+ex_current_record_on_weapon_statistics = false
 function IEex_Extern_OnUpdateRecordDescription(CScreenCharacter, CGameSprite, CUIControlEditMultiLine, m_plstStrings)
 	IEex_AssertThread(IEex_Thread.Both, true)
 	local creatureData = CGameSprite
@@ -3032,6 +3033,9 @@ function IEex_Extern_OnUpdateRecordDescription(CScreenCharacter, CGameSprite, CU
 	local monkWisdomBonusString = ex_str_925
 	local mainhandString = IEex_FetchString(734)
 	local offhandString = IEex_FetchString(733)
+	local strengthString = IEex_FetchString(1145)
+	local dexterityString = IEex_FetchString(1151)
+	local proficiencyString = IEex_FetchString(32561)
 	local raceString = IEex_FetchString(1048)
 	local baseString = IEex_FetchString(31353)
 	local rangedString = IEex_FetchString(41123)
@@ -3039,7 +3043,8 @@ function IEex_Extern_OnUpdateRecordDescription(CScreenCharacter, CGameSprite, CU
 	local criticalHitString = IEex_FetchString(41122)
 	local favoredClassString = IEex_FetchString(40310)
 	local lookForClassNames = (descPanelNum == 0)
-	IEex_IterateCPtrList(m_plstStrings, function(lineEntry)
+	ex_current_record_on_weapon_statistics = false
+	IEex_IterateCPtrListNode(m_plstStrings, function(lineEntry, node)
 		local line = IEex_ReadString(IEex_ReadDword(lineEntry + 0x4))
 
 		if string.match(line, mainhandString) or string.match(line, rangedString) then
@@ -3749,6 +3754,7 @@ function IEex_Extern_OnUpdateRecordDescription(CScreenCharacter, CGameSprite, CU
 				end
 			end
 		elseif descPanelNum == 1 and string.match(line, damageString .. ":") then
+			ex_current_record_on_weapon_statistics = true
 			local damageBonus = IEex_ReadSignedWord(creatureData + 0x9A6, 0x0)
 			if damageBonus > 0 then
 				IEex_SetToken("EXRDVAL1", damageBonus)
@@ -3790,6 +3796,117 @@ function IEex_Extern_OnUpdateRecordDescription(CScreenCharacter, CGameSprite, CU
 				else
 					IEex_SetToken("EXRLVAL1", maximumRoll)
 					line = line .. string.gsub(IEex_FetchString(ex_tra_55607), "<EXRLVAL1>", maximumRoll)
+				end
+			end
+		elseif descPanelNum == 1 and (string.match(line, strengthString .. ":") or string.match(line, proficiencyString .. ":")) and ex_current_record_on_weapon_statistics then
+			local strengthBonus = math.floor((IEex_GetActorStat(targetID, 36) - 10) / 2)
+			local dexterityBonus = math.floor((IEex_GetActorStat(targetID, 40) - 10) / 2)
+			if dexterityBonus > strengthBonus then
+				local finesseBonus = math.floor(dexterityBonus / 2)
+				local race = IEex_ReadByte(creatureData + 0x26, 0x0)
+				local subrace = IEex_GetActorStat(targetID, 93)
+				local hasWeaponFinesse = (bit.band(IEex_ReadDword(creatureData + 0x764), 0x80) > 0)
+				if hasWeaponFinesse or (race == 5 and subrace == 0) then
+					local weaponSlot = IEex_ReadByte(creatureData + 0x4BA4, 0x0)
+					local weaponHeader = IEex_ReadByte(creatureData + 0x4BA6, 0x0)
+					if ex_current_record_hand == 1 then
+						local weaponRES = IEex_GetItemSlotRES(targetID, weaponSlot)
+						local weaponWrapper = IEex_DemandRes(weaponRES, "ITM")
+						if weaponWrapper:isValid() then
+							local itemData = weaponWrapper:getData()
+							local itemType = IEex_ReadWord(itemData + 0x1C, 0x0)
+							local numHeaders = IEex_ReadSignedWord(itemData + 0x68, 0x0)
+							if weaponHeader >= numHeaders then
+								weaponHeader = 0
+							end
+							local headerType = IEex_ReadByte(itemData + 0x82 + weaponHeader * 0x38, 0x0)
+							local headerFlags = IEex_ReadDword(itemData + 0xA8 + weaponHeader * 0x38)
+							if bit.band(IEex_ReadDword(itemData + 0x18), 0x2) > 0 then
+								strengthBonus = math.floor(strengthBonus * 1.5)
+							end
+							local finesseDifference = finesseBonus - strengthBonus
+							if bit.band(headerFlags, 0x1) > 0 then
+								if finesseDifference > 0 and ((hasWeaponFinesse and ex_weapon_finesse_damage_bonus and (itemType == 16 or itemType == 19)) or (race == 5 and subrace == 0 and ex_lightfoot_halfling_thrown_dexterity_bonus_to_damage and headerType == 2 and itemType ~= 5 and itemType ~= 15 and itemType ~= 27 and itemType ~= 31) or ((race == 2 or race == 183) and ex_elf_large_sword_weapon_finesse and ex_weapon_finesse_damage_bonus and (itemType == 20))) then
+									if string.match(line, strengthString .. ":") then
+										line = string.gsub(line, "%p%d+", "+" .. finesseBonus)
+										line = string.gsub(line, strengthString, dexterityString)
+									elseif string.match(line, proficiencyString .. ":") then
+										local proficiencyBonus = tonumber(string.match(line, "%d+"))
+										if string.match(line, "%-") then
+											proficiencyBonus = proficiencyBonus * -1
+										end
+										if strengthBonus == 0 then
+											if proficiencyBonus == finesseDifference then
+												line = string.gsub(line, proficiencyString, dexterityString)
+											else
+												line = string.gsub(line, proficiencyString, dexterityString .. "/" .. proficiencyString)
+											end
+										else
+											proficiencyBonus = proficiencyBonus - finesseDifference
+											if proficiencyBonus == 0 then
+												IEex_RemoveEntryFromCPtrList(m_plstStrings, node)
+											elseif proficiencyBonus > 0 then
+												line = string.gsub(line, "%p%d+", "+" .. proficiencyBonus)
+											else
+												line = string.gsub(line, "%p%d+", proficiencyBonus)
+											end
+										end
+									end
+								end
+							end
+						end
+						weaponWrapper:free()
+					elseif ex_current_record_hand == 2 and hasWeaponFinesse and weaponSlot >= 43 and weaponSlot <= 49 then
+						weaponSlot = weaponSlot + 1
+						local offhandRES = IEex_GetItemSlotRES(targetID, weaponSlot)
+						local offhandWrapper = IEex_DemandRes(offhandRES, "ITM")
+						if offhandWrapper:isValid() then
+							local itemData = offhandWrapper:getData()
+							local itemType = IEex_ReadWord(itemData + 0x1C, 0x0)
+							local numHeaders = IEex_ReadSignedWord(itemData + 0x68, 0x0)
+							if numHeaders > 0 then
+								local headerType = IEex_ReadByte(itemData + 0x82, 0x0)
+								local headerFlags = IEex_ReadDword(itemData + 0xA8)
+								if headerType == 1 and bit.band(headerFlags, 0x1) > 0 then
+									local offhandStrengthBonus = math.floor(strengthBonus / 2)
+									if offhandStrengthBonus == 0 and strengthBonus == 1 then
+										offhandStrengthBonus = 1
+									end
+									local finesseDifference = finesseBonus - offhandStrengthBonus
+									if finesseDifference > 0 and ex_weapon_finesse_damage_bonus and (itemType == 16 or itemType == 19 or ((race == 2 or race == 183) and ex_elf_large_sword_weapon_finesse and (itemType == 20))) then
+										if string.match(line, strengthString .. ":") then
+											line = string.gsub(line, "%p%d+", "+" .. finesseBonus)
+											line = string.gsub(line, strengthString, dexterityString)
+										elseif string.match(line, proficiencyString .. ":") then
+
+											local proficiencyBonus = tonumber(string.match(line, "%d+"))
+											if string.match(line, "%-") then
+												proficiencyBonus = proficiencyBonus * -1
+											end
+											if strengthBonus == 0 then
+												IEex_DS(proficiencyBonus .. " vs " .. finesseDifference)
+												if proficiencyBonus == finesseDifference then
+													line = string.gsub(line, proficiencyString, dexterityString)
+												else
+													line = string.gsub(line, proficiencyString, dexterityString .. "/" .. proficiencyString)
+												end
+											else
+												proficiencyBonus = proficiencyBonus - finesseDifference
+												if proficiencyBonus == 0 then
+													IEex_RemoveEntryFromCPtrList(m_plstStrings, node)
+												elseif proficiencyBonus > 0 then
+													line = string.gsub(line, "%p%d+", "+" .. proficiencyBonus)
+												else
+													line = string.gsub(line, "%p%d+", proficiencyBonus)
+												end
+											end
+										end
+									end
+								end
+							end
+						end
+						offhandWrapper:free()
+					end
 				end
 			end
 		elseif string.match(line, damagePotentialString .. ":") then

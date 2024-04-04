@@ -169,7 +169,7 @@ Special:
  Resistance: 100/- Fire Resistance
  Resistance: 50/- Cold Resistance
  Resistance: 18/- Spell Resistance
- Damage Reduction: 5/good or silver
+ Damage Reduction: 5/good, chaotic or silver
  Regeneration: Regenerates 1 hit point per round
  Immunity to disease, poison, charm, and fear effects
  Can see perfectly even in magical darkness
@@ -186,7 +186,7 @@ Special:
  Resistance: 100/- Fire Resistance
  Resistance: 50/- Cold Resistance
  Resistance: 26/- Spell Resistance
- Damage Reduction: 10/good or silver
+ Damage Reduction: 10/good, chaotic or silver
  Regeneration: Regenerates 2 hit points per round
  Immunity to disease, poison, charm, and fear effects
  Can see perfectly even in magical darkness
@@ -212,8 +212,8 @@ Feat Requirement: Simple Weapon, Touch Attack
 Type: One-handed~
 @4832   = ~Xhaan's Claw~
 @4833   = ~Xhaan prefers to fight with his claws, as he has had no need for weapons in the countless lifetimes he has lived in the Nine Hells. He may still use a shield or a weapon in his off hand, but he uses his claws as his primary attack. Now that Xhaan has been promoted to a cornugon, his claw attacks are more powerful.
- 
-STATISTICS: 
+
+STATISTICS:
  
 Damage: 2d6 +5
 Attack Bonus: +5
@@ -222,7 +222,7 @@ Damage Type: Slashing
 Special:
  Counts as evil-aligned and lawful-aligned for purposes of overcoming damage reduction
  Infernal Wound: Inflicts 4 additional point of damge per round for 10 rounds (no save)
-Weight: 0 lb. 
+Weight: 0 lb.
 Feat Requirement: Simple Weapon, Touch Attack
 Type: One-handed~
 @4834   = ~Cornugon Hide~
@@ -237,7 +237,7 @@ Special:
  Resistance: 100/- Fire Resistance
  Resistance: 10/- Cold Resistance
  Resistance: 24/- Spell Resistance
- Damage Reduction: 10/good or silver
+ Damage Reduction: 10/good, chaotic or silver
  Regeneration: Regenerates 5 hit point per round
  Immunity to disease, poison, charm, and fear effects
  Can see perfectly even in magical darkness
@@ -254,7 +254,7 @@ Special:
  Resistance: 100/- Fire Resistance
  Resistance: 10/- Cold Resistance
  Resistance: 36/- Spell Resistance
- Damage Reduction: 15/good or silver
+ Damage Reduction: 15/good, chaotic or silver
  Regeneration: Regenerates 10 hit points per round
  Immunity to disease, poison, charm, and fear effects
  Can see perfectly even in magical darkness

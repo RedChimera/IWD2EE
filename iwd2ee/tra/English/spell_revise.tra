@@ -6,12 +6,12 @@
 (Enchantment) 
 Level: Clr 1, Talos 1, Bard 2
 Range: Sight of Caster
-Duration: 2 rounds / level
+Duration: 10 rounds / level
 Casting Time: 4
 Area of Effect: 1 creature
 Saving Throw: None
 
-This spell causes a feeling of doom to overwhelm the target. For the duration of the spell the target receives a -2 penalty to attack bonus and saving throws. Multiple Doom spells stack, giving the target additional penalties.~
+This spell causes a feeling of doom to overwhelm the target. For the duration of the spell the target receives a -2 penalty to attack bonus and saving throws.~
 @1002    = ~Chant~
 @1003    = ~Chant
 (Conjuration) 
@@ -2610,8 +2610,8 @@ Launcher:  Bow~
 @30067=~Imbued Spell~
 @30068=~Deva~
 @30069=~Stunning Mace of Disruption +3~
-@30070=~Damage from non-evil weapon reduced by 10~
-@30071=~Damage from non-evil weapon reduced by 15~
+@30070=~10 damage resisted from non-evil, non-chaotic weapon~
+@30071=~15 damage resisted from non-evil, non-chaotic weapon~
 @30072=~Mislead Clone~
 @30073=~Spellstaff (Grease)~
 @30074=~Spellstaff (Mage Armor)~
@@ -4412,7 +4412,7 @@ Casting Time: 4
 Area of Effect: 20-foot radius
 Saving Throw: Fortitude negates
 
-This spell creates magical darkness in the area of effect. Creatures without darkvision must make a Fortitude saving throw or be effectively blinded. Creatures with darkvision aren't blinded, but even they have only a limited ability to see through magical darkness, getting a -4 attack penalty on a failed save. Creatures with superior 120 foot darkvision (e.g. drow, gray dwarves or deep gnomes) only get a -2 attack penalty. Devils and creatures immune to blindness are unaffected.~
+This spell creates magical darkness in the area of effect. Creatures without darkvision must make a Fortitude saving throw with +3 DC or be effectively blinded. Creatures with darkvision aren't blinded, but even they have only a limited ability to see through magical darkness, getting a -4 attack penalty on a failed save. Creatures with superior 120 foot darkvision (e.g. drow, gray dwarves or deep gnomes) only get a -2 attack penalty. Devils and creatures immune to blindness are unaffected.~
 @37351     = ~Clairvoyance~
 @38351     = ~Clairvoyance
 (Divination)

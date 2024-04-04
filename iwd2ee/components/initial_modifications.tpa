@@ -200,6 +200,8 @@ COPY_EXISTING ~IEex_TRA.lua~ ~override~
 	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_tra_55716 *=.*~ ~ex_tra_55716 = %ex_tra_55716%~
 	ex_tra_55717 = RESOLVE_STR_REF(@55717)
 	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_tra_55717 *=.*~ ~ex_tra_55717 = %ex_tra_55717%~
+	ex_tra_55718 = RESOLVE_STR_REF(@55718)
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_tra_55718 *=.*~ ~ex_tra_55718 = %ex_tra_55718%~
 	ex_tra_55770 = RESOLVE_STR_REF(@55770)
 	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_tra_55770 *=.*~ ~ex_tra_55770 = %ex_tra_55770%~
 	ex_tra_55771 = RESOLVE_STR_REF(@55771)
@@ -704,7 +706,6 @@ COPY_EXISTING ~IEex_TRA.lua~ ~override~
 	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_whirla *=.*~ ~ex_whirla = {%ex_whirla1%,%ex_whirla2%,%ex_whirla3%,%ex_whirla4%,%ex_whirla5%,%ex_whirla6%,%ex_whirla7%,%ex_whirla8%,%ex_whirla9%,%ex_whirla10%,%ex_whirla11%,%ex_whirla12%,%ex_whirla13%,%ex_whirla14%,%ex_whirla15%,%ex_whirla16%,%ex_whirla17%,%ex_whirla18%,%ex_whirla19%,%ex_whirla20%,%ex_whirla21%,%ex_whirla22%,%ex_whirla23%,%ex_whirla24%,%ex_whirla25%,%ex_whirla26%,%ex_whirla27%,%ex_whirla28%,%ex_whirla29%,%ex_whirla30%,%ex_whirla31%,%ex_whirla32%,%ex_whirla33%,%ex_whirla34%,%ex_whirla35%,%ex_whirla36%,%ex_whirla37%,%ex_whirla38%,%ex_whirla39%,%ex_whirla40%}~
 
 STRING_SET_EVALUATE 32702 @980
-STRING_SET_EVALUATE 32703 @983
 STRING_SET_EVALUATE 34007 @23048
 
 STRING_SET 8794 @56005
@@ -1150,6 +1151,13 @@ REPLACE_TEXTUALLY CASE_INSENSITIVE EXACT_MATCH ~PartyHasItem("60Stele5")
   OpenState("AR6050_IntPillar5",FALSE)~ ~OpenState("AR6050_IntPillar5",FALSE)
   PartyHasItem("60STELE5")~
 END
+
+COPY_EXISTING ~60SPLFX.bcs~ override
+	DECOMPILE_AND_PATCH BEGIN
+		REPLACE_TEXTUALLY CASE_INSENSITIVE ~\(ActionOverride(Player\)\([1-6]\)\(,ChangeStat(Player[1-6],RESISTPOISON,5,ADD))\)~ ~\1\2\3
+ActionOverride(Player\2,ApplySpellRES("USREST",Player\2))~
+		REPLACE_TEXTUALLY CASE_INSENSITIVE ~RestUntilHealed()~ ~~
+	END
 
 COPY_EXISTING_REGEXP ~.*\.bcs~ override
 	REPLACE_TEXTUALLY CASE_SENSITIVE ~TR[%WNL%%MNL%%LNL%%TAB% ]*86 \([0-9]+\) \([0-9]+\)[^T]*TR~ ~TR

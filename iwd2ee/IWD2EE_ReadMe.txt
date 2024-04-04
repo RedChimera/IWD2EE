@@ -11,6 +11,11 @@ Icewind Dale 2: Enhanced Edition is a compilation of tweaks and fixes for Icewin
 
 The big changes described above are only applied if you install certain components - Class Revisions, Spell Revisions, Item Revisions and Creature Revisions are the biggest ones. It is highly recommended that you install these.
 
+Languages:
+
+English
+Russian
+
 Components:
 
 1. IWD2EE Core
@@ -405,6 +410,8 @@ This component makes killing enemies give the same amount of experience no matte
 
 Icewind Dale 2 encounters often have additional enemies for a higher-level party. This component has two options: you can make it so you always fight at least the version of the encounter meant for a medium-level party, or you can make it so you always fight the version meant for a high-level party. The higher-level versions of encounters usually just have a couple more enemies or in some cases have tougher versions of enemies; they aren't impossible for a lower-level party to complete.
 
+Note that this component does almost nothing in a Heart of Fury playthrough or a solo run, because in those playthroughs your character(s) are usually high enough level to trigger the high-level encounters anyway.
+
 --Reduce the HP bonuses of creatures in Heart of Fury Mode--
 
 Enemies in Heart of Fury Mode normally have absolutely ridiculous HP: goblins in the prologue have 157 HP, and the frost spiders in Chapter 2 have 452 HP! This component reduces the HP on creatures in Heart of Fury Mode. This component is designed for a party starting HoF at a low level. It is balanced such that enemies early on will have way less HP than in the original HoF, but enemies later on won't have that much less HP. This will make Heart of Fury Mode easier, but also much less tedious (and Creature Revisions makes Heart of Fury Mode more challenging to make up for it).
@@ -586,6 +593,8 @@ Chris Dix (She/Her) - aka @semiticgoddess - was the one who started the IWD2EE p
 @kjeron created many WeiDU functions that are used in IWD2EE's installation to modify IWD2 files.
 
 @CamDawg revised some of IWD2EE's WeiDU files to run faster.
+
+@paladin, klichko86, and rytomen translated IWD2EE into Russian.
 
 Andrii Shafetov - aka @ashafetov - created IWD2EE's new main menu screen and the starting screens for the prologue and first two chapters.
 

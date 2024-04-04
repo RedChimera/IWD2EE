@@ -116,14 +116,14 @@ Weight:  0 lb.~
 @23053=~10 damage resisted from non-good weapon~
 @23054=~15 damage resisted from non-good weapon~
 @23055=~20 damage resisted from non-good weapon~
-@23056=~5 damage resisted from non-good, non-silver weapon~
-@23057=~10 damage resisted from non-good, non-silver weapon~
-@23058=~15 damage resisted from non-good, non-silver weapon~
-@23059=~20 damage resisted from non-good, non-silver weapon~
-@23060=~5 damage resisted from non-good, non-cold-iron weapon~
-@23061=~10 damage resisted from non-good, non-cold-iron weapon~
-@23062=~15 damage resisted from non-good, non-cold-iron weapon~
-@23063=~20 damage resisted from non-good, non-cold-iron weapon~
+@23056=~5 damage resisted from non-good, non-chaotic, non-silver weapon~
+@23057=~10 damage resisted from non-good, non-chaotic, non-silver weapon~
+@23058=~15 damage resisted from non-good, non-chaotic, non-silver weapon~
+@23059=~20 damage resisted from non-good, non-chaotic, non-silver weapon~
+@23060=~5 damage resisted from non-good, non-lawful, non-cold-iron weapon~
+@23061=~10 damage resisted from non-good, non-lawful, non-cold-iron weapon~
+@23062=~15 damage resisted from non-good, non-lawful, non-cold-iron weapon~
+@23063=~20 damage resisted from non-good, non-lawful, non-cold-iron weapon~
 @23064=~YOU KNOW MY NAME?!~
 @23065=~Aeij-Kllenzr't, I invoke your true name, Caged Fury, and command you to come out from the altar and face us in battle!~
 @23066=~Yes, I do, apparently.  Farewell.~
@@ -146,6 +146,8 @@ Weight:  0 lb.~
 @23083=~Mohrg Touch~
 @23084=~Dretch~
 @23085=~Dretch Claw~
+@23086=~Scimitar of Ghastly Ichor~
+@23087=~Morningstar of Xvimian Fury~
 
 
 @24002=~Call Slayer Knights~
@@ -167,3 +169,4 @@ Weight:  0 lb.~
 @24020=~Chilling Gaze~
 @24032=~Charge~
 @24033=~Gore~
+@24034=~Plant Growth~

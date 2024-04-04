@@ -2122,7 +2122,7 @@ Max Dex Bonus:  +4
 Armor Check Penalty:  -3
 Arcane Spell Failure:  20%
 Special:
-  Damage Reduction: 5/good or silver
+  Damage Reduction: 5/good, chaotic or silver
 Weight: 15 lb.~
 @10499    = ~Cornugon Hide Armor +3~
 @10500    = ~There is great mystery surrounding this leather armor. No one knows how or where it came into existence. What is known is that the leather was cut from the hide of a Cornugon. The armor is colored a deep black and riddled with very tough, barbed scales. In addition, it has an unusual, very light, vinegary smell.
@@ -2137,7 +2137,7 @@ Max Dex Bonus:  +4
 Armor Check Penalty:  -3
 Arcane Spell Failure:  20%
 Special:
-  Damage Reduction: 10/good or silver
+  Damage Reduction: 10/good, chaotic or silver
   Regeneration: User regenerates 1 hit point per round
 Weight: 15 lb.~
 
@@ -10550,7 +10550,7 @@ Permanent 3/- Acid Resistance
 Permanent 3/- Magic Damage Resistance
 Weight:  1 lb.~
 //@12119    = ~Potion of Resistance~
-@12120    = ~Potions are typically found in ceramic, crystal, glass, or metal flasks or vials. Flasks or other containers generally contain enough fluid to provide one person with one complete dose to achieve the effects of the potion. 
+@12120    = ~Potions are typically found in ceramic, crystal, glass, or metal flasks or vials. Flasks or other containers generally contain enough fluid to provide one person with one complete dose to achieve the effects of the potion.
 
 STATISTICS:
 

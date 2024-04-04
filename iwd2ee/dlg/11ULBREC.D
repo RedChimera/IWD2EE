@@ -468,6 +468,7 @@ END
 
 IF WEIGHT #7 ~  Global("31bugGut_Dead","GLOBAL",0)
 Global("Fortress_Quest","GLOBAL",1)
+!Global("USGUTHMA_FRIEND","GLOBAL",1)
 ~ THEN BEGIN 63
   SAY #11773
   IF ~  GlobalGT("Know_Ennelia","GLOBAL",0)

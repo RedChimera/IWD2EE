@@ -205,7 +205,7 @@ COPY_EXISTING ~00FIST.itm~ ~override/USFISTIN.itm~
 	SAY NAME1 @923
 	SAY NAME2 @923
 	READ_LONG 0x18 theitemflags
-	theitemflags|=0x10000
+	theitemflags|=0x40
 	WRITE_LONG 0x18 theitemflags
 	WRITE_ASCII 0x3A ~USFISTIN~ #8
 	READ_LONG 0x60 theenchantment
@@ -224,7 +224,7 @@ OUTER_FOR (i = 0; i <= 5; ++i) BEGIN
 			SAY NAME1 @923
 			SAY NAME2 @923
 			READ_LONG 0x18 theitemflags
-			theitemflags|=0x10000
+			theitemflags|=0x40
 			WRITE_LONG 0x18 theitemflags
 			WRITE_ASCII 0x3A ~USFISTIN~ #8
 			READ_LONG 0x60 theenchantment

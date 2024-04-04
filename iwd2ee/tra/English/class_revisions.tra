@@ -258,9 +258,9 @@ You are trained to knock down or trip enemies in melee combat.
 
 Prerequisite: Base attack bonus +6 or higher
 
-Benefit: You gain an ability that lets you knock down or trip an adjacent creature. The ability can be used once per round. If your Dexterity is higher than your Strength, you attempt to trip the target, which must make a Reflex save (DC 5 + half your base attack bonus + your Dexterity modifier) or fall down for 4 seconds. Otherwise, you try to knock down your target, which must make a Fortitude save (DC 5 + half your base attack bonus + your Strength modifier) or fall down for 4 seconds. The DC gets -4 for each time someone has tried to knock down or trip the target in the past 10 rounds. It also gets -4 if the target has more than two legs or is otherwise more stable than a normal humanoid (such as a dwarf). Creatures larger than you cannot be knocked down tripped. The time spent to perform this ability causes the character to have one fewer attack in the following round.
+Benefit: You gain an ability that lets you knock down or trip an adjacent creature. The ability can be used once per round. If your Dexterity is higher than your Strength, you attempt to trip the target, which must make a Reflex save (DC 5 + half your base attack bonus + your Dexterity modifier) or fall down for 4 seconds. Otherwise, you try to knock down your target, which must make a Fortitude save (DC 5 + half your base attack bonus + your Strength modifier) or fall down for 4 seconds. The DC gets -4 for each time someone has tried to knock down or trip the target in the past 10 rounds. It also gets -4 if the target has more than two legs or is otherwise more stable than a normal humanoid (such as a dwarf). Creatures larger than you cannot be knocked down or tripped. The time spent to perform this ability causes the character to have one fewer attack in the following round.
 
-This feat may be taken twice. When taken a second time, the feat is Improved Knockdown, which and adds a +2 bonus to the DC, and allows you knock down or trip creatures one size category larger than you (creatures whose circle has no more than twice the radius of your circle).~
+This feat may be taken twice. When taken a second time, the feat is Improved Knockdown, which adds a +2 bonus to the DC, and allows you knock down or trip creatures one size category larger than you (creatures whose circle has up to twice the radius of your circle).~
 @317    = ~Light Armor Mastery~
 @318    = ~LIGHT ARMOR MASTERY:
 
@@ -824,21 +824,21 @@ Level 1-3: 2 attacks per round
 Level 4-6: 3 attacks
 Level 7-9: 4 attacks
 Level 10-12: 5 attacks
-Level 13-15: 6 attacks, exceeding the normal attacks per round limit. For every 3 levels after 13, the monk gains another attack per round.
+Level 13-15: 6 attacks. For every 3 levels after 13, the monk gains another attack per round.
 
 * Monk Weapons: The monk can wield quarterstaves, daggers, throwing daggers, and darts with very few penalties (one fewer attack per round than with fists, but the monk will still get an extra attack per round every 3 levels).
 
-* As the monk increases in levels, the damage his fists inflicts does as well:
+* As the monk increases in levels, the damage their fists inflicts does as well:
 
-Level 1-3: 1d6
-Level 4-7: 1d8
-Level 8-9: 1d8+1
-Level 10-11: 1d8+2
-Level 12-15: 1d8+3
-Level 16-20: 1d8+4
-Level 21-30: 1d8+5
+Level 1-2: 1d6
+Level 3-4: 1d8
+Level 5-7: 1d8+1
+Level 8-10: 1d8+2
+Level 11-13: 1d8+3
+Level 14-16: 1d8+4
+Level 17+: 1d8+5
 
-* Ki Strike: At level 8, the monk's unarmed attack is empowered with ki. The unarmed strike damage from such an attack can deal damage to a creature with damage reduction, such as a wight, as if the blow were made with a weapon with an enhancement bonus equal to the monk's damage bonus. Thus, a level 12 monk's fists strike as a +3 weapon.
+* Ki Strike: At level 5, the monk's unarmed attack is empowered with ki, and gains +1 enchantment with corresponding bonuses to attack and damage. This enchantment bonus increases by +1 every 3 levels after level 5, up to +5 at level 17.
 * A monk's natural armor class starts at 10, and then increases by +1 at 5th level and every 5 levels thereafter.
 * When not wearing armor (robes are acceptable) a monk adds their Wisdom bonus to their AC in the same manner as their Dexterity bonus. If the monk is shapeshifted, they will only gain this benefit if their monk level is greater than or equal to the minimum level required to shapeshift into that form.
 * Stunning Attacks: When this ability is used, all of the monk's unarmed attacks in the next round force the victim to make a Fortitude save (DC 10 + Wisdom modifier + half the monk's level) or be stunned for 1 round. A monk can make a stunning attack 1/day/level.
@@ -846,15 +846,15 @@ Level 21-30: 1d8+5
 * 2nd level: Deflect Arrows. The monk gains the Deflect Arrows feat, yielding a +1 miscellanous bonus against missile weapons. In addition, the monk automatically blocks the first instance of missile damage that would hit them each round. The monk must have a hand free to block missiles this way.
 * 3rd level: Fast Movement. The monk moves 10 feet faster than a normal character (normal movement speed is 30 feet), but only as long as the monk is not encumbered or wearing armor. The monk gains another 10 feet of movement every 3 levels thereafter.
 * 3rd level: Still Mind. The monk gains a +2 bonus to saving throws against spells and effects from the Enchantment school.
-* 5th level: Purity of Body. The monk gains control over his body's immune system. He gains immunity to all diseases.
+* 5th level: Purity of Body. The monk gains control over their body's immune system. They gain immunity to all diseases.
 * 7th level: Wholeness of Body. The monk can regain hit points equal to their monk level times their Wisdom modifier once each day per seven levels.
 * 9th level: Improved Evasion. The monk gains the Improved Evasion feat that is normally only available to rogues.
 * 10th level: Abundant Step. The monk may teleport to any location in sight once per day.
-* 11th level: Diamond Body. The monk is in such control of his own metabolism that he gains immunity to poison of all kinds.
-* 13th level: Diamond Soul. The monk gains spell resistance. His spell resistance equals his level + 10. In order to affect the monk with a spell, a spellcaster must roll the monk's spell resistance or higher on 1d20 + the spellcaster's level.
+* 11th level: Diamond Body. The monk is in such control of their own metabolism that they gain immunity to poison of all kinds.
+* 13th level: Diamond Soul. The monk gains spell resistance. Their spell resistance equals their level + 10. In order to affect the monk with a spell, a spellcaster must roll the monk's spell resistance or higher on 1d20 + the spellcaster's level.
 * 15th level: Quivering Palm. This terrifying attack allows the monk to set up vibrations within the body of another creature that can be fatal. The next time the monk hits a creature with an unarmed attack, the target dies unless it makes a Fortitude saving throw (DC 10 + Wisdom modifier + half the monk's level). Constructs and undead cannot be affected. The monk gains an additional use of Quivering Palm every six levels thereafter.
 * 19th level: Empty Body. The monk can assume an incorporeal state for 5 rounds a number of times a day equal to their level divided by 2. While incorporeal, the monk can move through walls, and half the attacks that hit the monk deal no physical damage. The monk's unarmed attacks will ignore armor and shield bonuses.
-* 20th level: Perfect Self. The monk has tuned his body with skill and quasi-magical abilities to the point that he becomes a magical creature. He is forevermore treated as an outsider (extraplanar creature) rather than as a humanoid. For instance, charm person does not affect him. Additionally, the monk gains damage reduction 20/+1. This means that the monk ignores (instantly regenerates) the first 20 points of damage from any attack unless the damage is dealt by a weapon with a +1 enhancement bonus (or better), by a spell, or by a form of energy (fire, cold, etc.). As an outsider, a 20th level monk is subject to spells that repel enchanted creatures, such as protection from law.
+* 20th level: Perfect Self. The monk has tuned their body with skill and quasi-magical abilities to the point that they become a magical creature. They are forevermore treated as an outsider (extraplanar creature) rather than as a humanoid. For instance, charm person does not affect them. Additionally, the monk gains damage reduction 20/+1. This means that the monk ignores (instantly regenerates) the first 20 points of damage from any attack unless the damage is dealt by a weapon with a +1 enhancement bonus (or better), by a spell, or by a form of energy (fire, cold, etc.). As an outsider, a 20th level monk is subject to spells that repel enchanted creatures, such as protection from law.
 
 Disadvantages:
 * Loses many bonuses if wearing armor and/or using weapons.~

@@ -31,6 +31,8 @@ EXTEND_BOTTOM ~AR6303.bcs~ ~%mod_folder%/baf/USSTSH01.baf~
 
 COMPILE ~%mod_folder%/dlg/USSTSH01.d~
 
+COMPILE ~%mod_folder%/dlg/USDLPMOD.d~
+
 COPY_EXISTING ~63RUINL.cre~ ~override/USSTSHRL.cre~
 	SAY NAME1 @4001
 	SAY NAME2 @4001

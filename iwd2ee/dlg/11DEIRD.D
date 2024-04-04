@@ -309,6 +309,23 @@ END
 
 IF WEIGHT #7 ~  GlobalGT("Know_Deirdre","GLOBAL",0)
 GlobalGT("Goblin_Palisade_Quest","GLOBAL",0)
+Global("USGUTHMA_FRIEND","GLOBAL",1)
+Global("D_Congrats","GLOBAL",0)
+~ THEN BEGIN 35
+  SAY @6000
+  IF ~  Global("Dock_Goblin_Quest","GLOBAL",1)
+Global("Know_Deirdre_Store","GLOBAL",0)
+~ THEN REPLY @6001 DO ~SetGlobal("D_Congrats", "GLOBAL", 1)~ GOTO 9
+  IF ~  Global("Know_Deirdre_Store","GLOBAL",1)
+~ THEN REPLY @6002 DO ~SetGlobal("D_Congrats", "GLOBAL", 1)~ GOTO 9
+  IF ~  Global("Know_Deirdre_Store","GLOBAL",0)
+~ THEN REPLY #15740 DO ~SetGlobal("D_Congrats", "GLOBAL", 1)~ GOTO 10
+  IF ~~ THEN REPLY @6003 DO ~SetGlobal("D_Congrats", "GLOBAL", 1)~ GOTO 10
+  IF ~~ THEN REPLY #15723 DO ~SetGlobal("D_Congrats", "GLOBAL", 1)~ EXIT
+END
+
+IF WEIGHT #8 ~  GlobalGT("Know_Deirdre","GLOBAL",0)
+GlobalGT("Goblin_Palisade_Quest","GLOBAL",0)
 Global("31bugGut_Dead","GLOBAL",0)
 Global("Fortress_Quest","GLOBAL",1)
 ~ THEN BEGIN 31
@@ -341,7 +358,7 @@ Global("Know_Deirdre_Store","GLOBAL",0)
   IF ~~ THEN REPLY #28446 EXIT
 END
 
-IF WEIGHT #8 ~  GlobalGT("Know_Deirdre","GLOBAL",0)
+IF WEIGHT #9 ~  GlobalGT("Know_Deirdre","GLOBAL",0)
 GlobalGT("Goblin_Palisade_Quest","GLOBAL",0)
 Global("31bugGut_Dead","GLOBAL",1)
 Global("D_Congrats","GLOBAL",0)
@@ -361,7 +378,7 @@ StartStore("11Deird", Protagonist)~ EXIT
   IF ~~ THEN REPLY #15723 DO ~SetGlobal("D_Congrats", "GLOBAL", 1)~ EXIT
 END
 
-IF WEIGHT #9 ~  GlobalGT("Know_Deirdre","GLOBAL",0)
+IF WEIGHT #10 ~  GlobalGT("Know_Deirdre","GLOBAL",0)
 GlobalGT("Goblin_Palisade_Quest","GLOBAL",0)
 Global("31bugGut_Dead","GLOBAL",1)
 Global("D_Congrats","GLOBAL",1)
@@ -377,23 +394,6 @@ Global("Know_Deirdre_Store","GLOBAL",0)
   IF ~  Global("Know_Deirdre_Store","GLOBAL",1)
 ~ THEN REPLY #30301 DO ~StartStore("11Deird", Protagonist)~ EXIT
   IF ~~ THEN REPLY #15723 EXIT
-END
-
-IF WEIGHT #10 ~  GlobalGT("Know_Deirdre","GLOBAL",0)
-GlobalGT("Goblin_Palisade_Quest","GLOBAL",0)
-Global("USGUTHMA_FRIEND","GLOBAL",1)
-Global("D_Congrats","GLOBAL",0)
-~ THEN BEGIN 35
-  SAY @6000
-  IF ~  Global("Dock_Goblin_Quest","GLOBAL",1)
-Global("Know_Deirdre_Store","GLOBAL",0)
-~ THEN REPLY @6001 DO ~SetGlobal("D_Congrats", "GLOBAL", 1)~ GOTO 9
-  IF ~  Global("Know_Deirdre_Store","GLOBAL",1)
-~ THEN REPLY @6002 DO ~SetGlobal("D_Congrats", "GLOBAL", 1)~ GOTO 9
-  IF ~  Global("Know_Deirdre_Store","GLOBAL",0)
-~ THEN REPLY #15740 DO ~SetGlobal("D_Congrats", "GLOBAL", 1)~ GOTO 10
-  IF ~~ THEN REPLY @6003 DO ~SetGlobal("D_Congrats", "GLOBAL", 1)~ GOTO 10
-  IF ~~ THEN REPLY #15723 DO ~SetGlobal("D_Congrats", "GLOBAL", 1)~ EXIT
 END
 
 IF WEIGHT #11 ~  GlobalGT("Know_Deirdre","GLOBAL",0)

@@ -6,7 +6,10 @@ IEex_KeyIDS = {
 	["BACKSPACE"] = 8,
 	["TAB"] = 9,
 	["ENTER"] = 13,
+	["PAUSE"] = 19,
+	["CAPS_LOCK"] = 27,
 	["ESC"] = 27,
+	["ESCAPE"] = 27,
 	["SPACE_BAR"] = 32,
 	["PAGE_UP"] = 33,
 	["PAGE_DOWN"] = 34,
@@ -17,6 +20,7 @@ IEex_KeyIDS = {
 	["RIGHT"] = 39,
 	["DOWN"] = 40,
 	["PRINT_SCREEN"] = 44,
+	["INSERT"] = 45,
 	["DELETE"] = 46,
 	["0"] = 48,
 	["1"] = 49,
@@ -54,6 +58,7 @@ IEex_KeyIDS = {
 	["X"] = 88,
 	["Y"] = 89,
 	["Z"] = 90,
+	["WINDOWS"] = 91,
 	["NUMPAD0"] = 96,
 	["NUMPAD1"] = 97,
 	["NUMPAD2"] = 98,
@@ -64,6 +69,10 @@ IEex_KeyIDS = {
 	["NUMPAD7"] = 103,
 	["NUMPAD8"] = 104,
 	["NUMPAD9"] = 105,
+	["NUMPAD*"] = 106,
+	["NUMPAD+"] = 107,
+	["NUMPAD-"] = 109,
+	["NUMPAD/"] = 111,
 	["F1"] = 112,
 	["F2"] = 113,
 	["F3"] = 114,
@@ -76,6 +85,8 @@ IEex_KeyIDS = {
 	["F10"] = 121,
 	["F11"] = 122,
 	["F12"] = 123,
+	["NUM_LOCK"] = 144,
+	["SCROLL_LOCK"] = 145,
 	["LEFT_SHIFT"] = 160,
 	["RIGHT_SHIFT"] = 161,
 	["LEFT_CTRL"] = 162,
@@ -83,6 +94,14 @@ IEex_KeyIDS = {
 	["LEFT_ALT"] = 164,
 	["RIGHT_ALT"] = 165,
 	["LEFT_SHIFT"] = 166,
+	[";"] = 186,
+	[","] = 188,
+	["."] = 190,
+	["/"] = 191,
+	["`"] = 192,
+	["["] = 219,
+	["]"] = 221,
+	["'"] = 222,
 }
 
 ---------------------------
@@ -363,7 +382,7 @@ ex_buff_recorded_list = {{}, {}, {}, {}, {}, {}, }
 function IEex_BuffRecordingListener(key)
 --	if IEex_IsKeyDown(IEex_KeyIDS.LEFT_ALT) or IEex_IsKeyDown(IEex_KeyIDS.RIGHT_ALT) then
 	if ex_enable_autobuffing_keys then
-		if key == 221 then
+		if key == ex_autobuffing_key_delete then
 			IEex_SetGlobal("EX_Recording_Buffs", 0)
 			IEex_DisplayString(IEex_FetchString(ex_tra_55707))
 			for i = 0, 5, 1 do
@@ -376,15 +395,37 @@ function IEex_BuffRecordingListener(key)
 					end
 				end)
 			end
-		elseif key == 219 then
+		elseif key == ex_autobuffing_key_record then
 			if IEex_GetGlobal("EX_Recording_Buffs") == 0 then
 				IEex_SetGlobal("EX_Recording_Buffs", 1)
 				IEex_DisplayString(IEex_FetchString(ex_tra_55708))
+				local foundRecordedBuff = false
+				for i = 0, 5, 1 do
+					local recordedBuffs = {}
+					local actorID = IEex_GetActorIDPortrait(i)
+					IEex_IterateActorEffects(actorID, function(eData)
+						local theopcode = IEex_ReadDword(eData + 0x10)
+						local theparent_resource = IEex_ReadLString(eData + 0x94, 8)
+						if theopcode == 0 and theparent_resource == "EXBUFFRC" and IEex_ReadDword(eData + 0x114) ~= 1 then
+							foundRecordedBuff = true
+						end
+					end)
+				end
+				if foundRecordedBuff then
+					for k, v in pairs(IEex_KeyIDS) do
+						if k == ex_autobuffing_key_record then
+							IEex_SetToken("EXRCKEYRECORD", k)
+						elseif k == ex_autobuffing_key_delete then
+							IEex_SetToken("EXRCKEYDELETE", k)
+						end
+					end
+					IEex_DisplayString(IEex_FetchString(ex_tra_55718))
+				end
 			else
 				IEex_SetGlobal("EX_Recording_Buffs", 0)
 				IEex_DisplayString(IEex_FetchString(ex_tra_55709))
 			end
-		elseif key == 186 then
+		elseif key == ex_autobuffing_key_activate then
 			local tick = IEex_GetGameTick()
 			if IEex_GetGlobal("EX_Recording_Buffs") == 0 and tick > IEex_GetGlobal("EX_Recording_Reactivate_Tick") then
 				IEex_SetGlobal("EX_Recording_Reactivate_Tick", tick + ex_buff_reactivate_cooldown * 15)
@@ -1532,6 +1573,28 @@ function IEex_AbilityScoreCapListener()
 	end
 end
 
+function IEex_ItemUseFixListener()
+	local actorID = IEex_GetActorIDSelected()
+	if not ex_item_use_resource[actorID] then return end
+	local creatureData = IEex_GetActorShare(actorID)
+	if creatureData <= 0 then 
+		ex_item_use_resource[actorID] = nil
+		return
+	end
+	local actionData = creatureData + 0x476
+	local actionID = IEex_GetActionID(actionData)
+	if actionID ~= 34 then
+		ex_item_use_resource[actorID] = nil
+		return
+	end
+	local itemSlot = IEex_GetActionInt1(actionData)
+	local slotData = IEex_ReadDword(creatureData + 0x4AD8 + itemSlot * 0x4)
+	if slotData <= 0 or IEex_ReadLString(slotData + 0xC, 0x8) ~= ex_item_use_resource[actorID] then
+		IEex_SetActionID(actionData, 0)
+		ex_item_use_resource[actorID] = nil
+	end
+end
+
 ex_reform_party_button_added = 1
 ex_reroll_buttons_added = 0
 function IEex_AddButtonListener()
@@ -1639,6 +1702,7 @@ function IEex_Key_RegisterInputListeners()
 --	IEex_AddKeyReleasedListener("IEex_Chargen_RerollListener")
 	IEex_AddInputStateListener("IEex_AddButtonListener")
 	IEex_AddInputStateListener("IEex_DeathwatchListener")
+	IEex_AddInputStateListener("IEex_ItemUseFixListener")
 	IEex_AddInputStateListener("IEex_AbilityScoreCapListener")
 	IEex_AddInputStateListener("IEex_Chargen_ExtraFeatListener")
 	IEex_AddInputStateListener("IEex_LevelUp_ExtraFeatListener")

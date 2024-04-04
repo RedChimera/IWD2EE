@@ -6,6 +6,11 @@ Icewind Dale 2: Enhanced Edition is a compilation of tweaks and fixes for Icewin
 
 The big changes described above are only applied if you install certain components - Class Revisions, Spell Revisions, Item Revisions and Creature Revisions are the biggest ones. It is highly recommended that you install these.
 
+## Languages
+
+- English
+- Russian
+
 ## Installation
 
 1. Unzip all files into your IWD2 folder.
@@ -413,6 +418,8 @@ This component makes killing enemies give the same amount of experience no matte
 ## Adjust encounter level-scaling
 
 Icewind Dale 2 encounters often have additional enemies for a higher-level party. This component has two options: you can make it so you always fight at least the version of the encounter meant for a medium-level party, or you can make it so you always fight the version meant for a high-level party. The higher-level versions of encounters usually just have a couple more enemies or in some cases have tougher versions of enemies; they aren't impossible for a lower-level party to complete.
+
+Note that this component does almost nothing in a Heart of Fury playthrough or a solo run, because in those playthroughs your character(s) are usually high enough level to trigger the high-level encounters anyway.
 
 ## Reduce the HP bonuses of creatures in Heart of Fury Mode
 

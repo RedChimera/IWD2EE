@@ -167,7 +167,7 @@ Global("US_Xhaan_Promise","GLOBAL",1)
 Or(2)
 CheckStatGT(Protagonist,15,INT)
 CheckSkillGT(Protagonist,8,Diplomacy)
-~ THEN REPLY @40102 GOTO XhaanAsk1
+~ THEN REPLY @40101 GOTO XhaanAsk1
   IF ~  GlobalLT("41XhaanMindQuest","GLOBAL",2)
 !Global("CagedFury_dead","GLOBAL",1)
 ~ THEN REPLY #33336 DO ~SetGlobal("41XhaanMindQuest", "GLOBAL", 2)~ JOURNAL #31584 GOTO 7

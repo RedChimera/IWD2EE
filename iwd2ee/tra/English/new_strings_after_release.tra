@@ -270,22 +270,6 @@ Saving Throw: Reflex half
 A sunfire is an explosive burst of flame similar to a fireball, but centered on the caster.  All creatures in the area of effect except for the caster are burned for 1d6 fire damage per caster level (15d6 maximum, 12d6 minimum).  A successful Reflex save halves the damage.  This spell blinds drow and gray dwarves if a Fortitude save is failed. This spell does not provoke an attack of opportunity.~
 @55377=~This character's body has been destroyed. A Resurrection spell will be needed to bring them back to life; Raise Dead will not suffice.~
 @55378=~This character's soul has been captured. The vessel for their soul must be destroyed before they can be brought back to life.~
-@4837   = ~As a cornugon, Xhaan is innately resistant to spells and elemental damage. His thick hide and extraplanar biology also grants him immunity to poison and disease and the ability to regenerate from his wounds. As a baatezu, he feels no fear, and minor charms are useless on his alien mind.
-
-STATISTICS:
-
-Armor Bonus: +24
-Max Dex Bonus: None
-Special:
- Resistance: 10/- Acid Resistance
- Resistance: 100/- Fire Resistance
- Resistance: 10/- Cold Resistance
- Resistance: 36/- Spell Resistance
- Damage Reduction: 15/good or silver
- Regeneration: Regenerates 10 hit points per round
- Immunity to disease, poison, charm, and fear effects
- Can see perfectly even in magical darkness
-Weight: 0 lb.~
 @523    = ~WIZARD:
 
 The wizard strives to be a master of magical energies, shaping them and casting them as spells. To do so, he studies strange tongues and obscure facts and devotes much of his time to magical research. A wizard must rely on knowledge and wit to survive. Wizards are rarely seen adventuring without a retinue of fighters and men-at-arms. Because there are different types (or schools) of magic, there are different types of wizards. However, the most common sort studies all types of magic and learns a wide variety of spells. His broad range makes him well suited to the demands of adventuring.
@@ -807,3 +791,182 @@ Disadvantages:
 * Abjurers cannot learn spells from the Evocation school.~
 @0    = ~IWD2EE Core~
 @98   = ~You must first install the core component.~
+@535    = ~MONK:
+
+Monks are warriors who pursue perfection through contemplation as well as action. They are versatile fighters, especially skilled in combat without weapons or armor. Though monks cannot cast spells, they have a unique magic of their own. They channel a subtle energy, called ki, which allows them to perform amazing feats. The monk's best-known feat is their ability to stun an opponent with an unarmed blow.
+
+NOTE: Multiclassed monks ONLY use their monk levels when determining their number of attacks when fighting unarmed.
+
+Hit Points per Level: 1-8
+
+Advantages:
+* The monk attacks at a faster rate than other characters while unarmed:
+
+Level 1-3: 2 attacks per round
+Level 4-6: 3 attacks
+Level 7-9: 4 attacks
+Level 10-12: 5 attacks
+Level 13-15: 6 attacks. For every 3 levels after 13, the monk gains another attack per round.
+
+* Monk Weapons: The monk can wield quarterstaves, daggers, throwing daggers, and darts with very few penalties (one fewer attack per round than with fists, but the monk will still get an extra attack per round every 3 levels).
+
+* As the monk increases in levels, the damage their fists inflicts does as well:
+
+Level 1-2: 1d6
+Level 3-4: 1d8
+Level 5-7: 1d8+1
+Level 8-10: 1d8+2
+Level 11-13: 1d8+3
+Level 14-16: 1d8+4
+Level 17+: 1d8+5
+
+* Ki Strike: At level 5, the monk's unarmed attack is empowered with ki, and gains +1 enchantment with corresponding bonuses to attack and damage. This enchantment bonus increases by +1 every 3 levels after level 5, up to +5 at level 17.
+* A monk's natural armor class starts at 10, and then increases by +1 at 5th level and every 5 levels thereafter.
+* When not wearing armor (robes are acceptable) a monk adds their Wisdom bonus to their AC in the same manner as their Dexterity bonus. If the monk is shapeshifted, they will only gain this benefit if their monk level is greater than or equal to the minimum level required to shapeshift into that form.
+* Stunning Attacks: When this ability is used, all of the monk's unarmed attacks in the next round force the victim to make a Fortitude save (DC 10 + Wisdom modifier + half the monk's level) or be stunned for 1 round. A monk can make a stunning attack 1/day/level.
+* Evasion: Monks have the ability to evade damage from area of effect spells. Whenever a monk makes a successful Reflex save against an area effect spell that allows a reflex save for half damage, he or she takes no damage.
+* 2nd level: Deflect Arrows. The monk gains the Deflect Arrows feat, yielding a +1 miscellanous bonus against missile weapons. In addition, the monk automatically blocks the first instance of missile damage that would hit them each round. The monk must have a hand free to block missiles this way.
+* 3rd level: Fast Movement. The monk moves 10 feet faster than a normal character (normal movement speed is 30 feet), but only as long as the monk is not encumbered or wearing armor. The monk gains another 10 feet of movement every 3 levels thereafter.
+* 3rd level: Still Mind. The monk gains a +2 bonus to saving throws against spells and effects from the Enchantment school.
+* 5th level: Purity of Body. The monk gains control over their body's immune system. They gain immunity to all diseases.
+* 7th level: Wholeness of Body. The monk can regain hit points equal to their monk level times their Wisdom modifier once each day per seven levels.
+* 9th level: Improved Evasion. The monk gains the Improved Evasion feat that is normally only available to rogues.
+* 10th level: Abundant Step. The monk may teleport to any location in sight once per day.
+* 11th level: Diamond Body. The monk is in such control of their own metabolism that they gain immunity to poison of all kinds.
+* 13th level: Diamond Soul. The monk gains spell resistance. Their spell resistance equals their level + 10. In order to affect the monk with a spell, a spellcaster must roll the monk's spell resistance or higher on 1d20 + the spellcaster's level.
+* 15th level: Quivering Palm. This terrifying attack allows the monk to set up vibrations within the body of another creature that can be fatal. The next time the monk hits a creature with an unarmed attack, the target dies unless it makes a Fortitude saving throw (DC 10 + Wisdom modifier + half the monk's level). Constructs and undead cannot be affected. The monk gains an additional use of Quivering Palm every six levels thereafter.
+* 19th level: Empty Body. The monk can assume an incorporeal state for 5 rounds a number of times a day equal to their level divided by 2. While incorporeal, the monk can move through walls, and half the attacks that hit the monk deal no physical damage. The monk's unarmed attacks will ignore armor and shield bonuses.
+* 20th level: Perfect Self. The monk has tuned their body with skill and quasi-magical abilities to the point that they become a magical creature. They are forevermore treated as an outsider (extraplanar creature) rather than as a humanoid. For instance, charm person does not affect them. Additionally, the monk gains damage reduction 20/+1. This means that the monk ignores (instantly regenerates) the first 20 points of damage from any attack unless the damage is dealt by a weapon with a +1 enhancement bonus (or better), by a spell, or by a form of energy (fire, cold, etc.). As an outsider, a 20th level monk is subject to spells that repel enchanted creatures, such as protection from law.
+
+Disadvantages:
+* Loses many bonuses if wearing armor and/or using weapons.~
+@55718=~Note: Currently you already have spells recorded. Any new actions you record will be added to the existing recording. If you would like to record spells from scratch, press <EXRCKEYDELETE> to delete the previous recording, then press <EXRCKEYRECORD> to start again.~
+@23086=~Scimitar of Ghastly Ichor~
+@23087=~Morningstar of Xvimian Fury~
+@24034=~Plant Growth~
+@23056=~5 damage resisted from non-good, non-chaotic, non-silver weapon~
+@23057=~10 damage resisted from non-good, non-chaotic, non-silver weapon~
+@23058=~15 damage resisted from non-good, non-chaotic, non-silver weapon~
+@23059=~20 damage resisted from non-good, non-chaotic, non-silver weapon~
+@23060=~5 damage resisted from non-good, non-lawful, non-cold-iron weapon~
+@23061=~10 damage resisted from non-good, non-lawful, non-cold-iron weapon~
+@23062=~15 damage resisted from non-good, non-lawful, non-cold-iron weapon~
+@23063=~20 damage resisted from non-good, non-lawful, non-cold-iron weapon~
+@4823   = ~As a white abishai, Xhaan is innately resistant to spells and elemental damage. His thick hide and extraplanar biology also grants him immunity to poison and disease and the ability to regenerate from his wounds. As a baatezu, he feels no fear, and minor charms are useless on his alien mind.
+
+STATISTICS:
+
+Armor Bonus: +5
+Max Dex Bonus: None
+Special:
+ Resistance: 10/- Acid Resistance
+ Resistance: 100/- Fire Resistance
+ Resistance: 50/- Cold Resistance
+ Resistance: 18/- Spell Resistance
+ Damage Reduction: 5/good, chaotic or silver
+ Regeneration: Regenerates 1 hit point per round
+ Immunity to disease, poison, charm, and fear effects
+ Can see perfectly even in magical darkness
+Weight: 0 lb.~
+@4825   = ~As a white abishai, Xhaan is innately resistant to spells and elemental damage. His thick hide and extraplanar biology also grants him immunity to poison and disease and the ability to regenerate from his wounds. As a baatezu, he feels no fear, and minor charms are useless on his alien mind.
+
+STATISTICS:
+
+Armor Bonus: +9
+Max Dex Bonus: None
+Special:
+ Resistance: 10/- Acid Resistance
+ Resistance: 100/- Fire Resistance
+ Resistance: 50/- Cold Resistance
+ Resistance: 26/- Spell Resistance
+ Damage Reduction: 10/good, chaotic or silver
+ Regeneration: Regenerates 2 hit points per round
+ Immunity to disease, poison, charm, and fear effects
+ Can see perfectly even in magical darkness
+Weight: 0 lb.~
+@4835   = ~As a cornugon, Xhaan is innately resistant to spells and elemental damage. His thick hide and extraplanar biology also grants him immunity to poison and disease and the ability to regenerate from his wounds. As a baatezu, he feels no fear, and minor charms are useless on his alien mind.
+
+STATISTICS:
+
+Armor Bonus: +18
+Max Dex Bonus: None
+Special:
+ Resistance: 10/- Acid Resistance
+ Resistance: 100/- Fire Resistance
+ Resistance: 10/- Cold Resistance
+ Resistance: 24/- Spell Resistance
+ Damage Reduction: 10/good, chaotic or silver
+ Regeneration: Regenerates 5 hit point per round
+ Immunity to disease, poison, charm, and fear effects
+ Can see perfectly even in magical darkness
+Weight: 0 lb.~
+@4837   = ~As a cornugon, Xhaan is innately resistant to spells and elemental damage. His thick hide and extraplanar biology also grants him immunity to poison and disease and the ability to regenerate from his wounds. As a baatezu, he feels no fear, and minor charms are useless on his alien mind.
+
+STATISTICS:
+
+Armor Bonus: +24
+Max Dex Bonus: None
+Special:
+ Resistance: 10/- Acid Resistance
+ Resistance: 100/- Fire Resistance
+ Resistance: 10/- Cold Resistance
+ Resistance: 36/- Spell Resistance
+ Damage Reduction: 15/good, chaotic or silver
+ Regeneration: Regenerates 10 hit points per round
+ Immunity to disease, poison, charm, and fear effects
+ Can see perfectly even in magical darkness
+Weight: 0 lb.~
+@10498    = ~There is great mystery surrounding this leather armor. No one knows how or where it came into existence. What is known is that the leather was cut from the hide of an abishai, although it is impossible to tell what color abishai since the armor is colored a deep black. In addition, it has an unusual, very light, vinegary smell.
+
+Those that have worn the Abishai Hide were bestowed with a slight invulnerability to most weapons.
+
+STATISTICS:
+
+Medium Armor
+Armor Bonus: +4
+Max Dex Bonus:  +4
+Armor Check Penalty:  -3
+Arcane Spell Failure:  20%
+Special:
+  Damage Reduction: 5/good, chaotic or silver
+Weight: 15 lb.~
+@10500    = ~There is great mystery surrounding this leather armor. No one knows how or where it came into existence. What is known is that the leather was cut from the hide of a Cornugon. The armor is colored a deep black and riddled with very tough, barbed scales. In addition, it has an unusual, very light, vinegary smell.
+
+Those that have worn the Cornugon Hide were bestowed with a rather high invulnerability to most weapons and the ability to slowly regenerate from injuries.
+
+STATISTICS:
+
+Medium Armor
+Armor Bonus: +7
+Max Dex Bonus:  +4
+Armor Check Penalty:  -3
+Arcane Spell Failure:  20%
+Special:
+  Damage Reduction: 10/good, chaotic or silver
+  Regeneration: User regenerates 1 hit point per round
+Weight: 15 lb.~
+@38256     = ~Darkness
+(Illusion)
+Level: Brd 2, Clr 2, Sor/Wiz 2
+Range: Sight of Caster
+Duration: 4 rounds
+Casting Time: 4
+Area of Effect: 20-foot radius
+Saving Throw: Fortitude negates
+
+This spell creates magical darkness in the area of effect. Creatures without darkvision must make a Fortitude saving throw with +3 DC or be effectively blinded. Creatures with darkvision aren't blinded, but even they have only a limited ability to see through magical darkness, getting a -4 attack penalty on a failed save. Creatures with superior 120 foot darkvision (e.g. drow, gray dwarves or deep gnomes) only get a -2 attack penalty. Devils and creatures immune to blindness are unaffected.~
+@1001    = ~Doom
+(Enchantment) 
+Level: Clr 1, Talos 1, Bard 2
+Range: Sight of Caster
+Duration: 10 rounds / level
+Casting Time: 4
+Area of Effect: 1 creature
+Saving Throw: None
+
+This spell causes a feeling of doom to overwhelm the target. For the duration of the spell the target receives a -2 penalty to attack bonus and saving throws.~
+@6403=~I heard about your actions at the fortress.  I'm skeptical about the deal you've struck, but at the very least you've bought us some time.~
+@6404=~I consider it Ulbrec's attempt to keep from paying us our due.  We're here for all the gold owed us, Shawford, not words.~
+@6405=~We came for payment for our work at the fortress, Shawford... and any of the other missions you have yet to pay us for.~
+@30070=~10 damage resisted from non-evil, non-chaotic weapon~
+@30071=~15 damage resisted from non-evil, non-chaotic weapon~

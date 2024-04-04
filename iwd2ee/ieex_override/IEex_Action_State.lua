@@ -327,6 +327,14 @@ function EXAPPLSP(actionData, creatureData)
 	local sourceID = IEex_GetActorIDShare(creatureData)
 	if actionID == 31 or actionID == 95 or actionID == 191 or actionID == 192 then
 		local targetID = IEex_GetActionObjectID(actionData)
+		if actionID == 191 or actionID == 192 then
+			for i = 0, 5, 1 do
+				local currentID = IEex_GetActorIDPortrait(i)
+				if currentID == sourceID and ex_party_cast_counter[i + 1] ~= nil then
+					IEex_WriteWord(creatureData + 0x54E8, ex_party_cast_counter[i + 1])
+				end
+			end
+		end
 		local spellRES = IEex_GetActorSpellRES(sourceID)
 		local casterClass = IEex_ReadByte(creatureData + 0x530, 0x0)
 		local casterDomain = IEex_ReadByte(creatureData + 0x531, 0x0)

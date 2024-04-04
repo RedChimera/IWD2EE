@@ -338,8 +338,7 @@ END
 
 IF ~~ THEN BEGIN 41
   SAY @6026
-  IF ~~ THEN REPLY #1487 DO ~SetGlobal("30Enneli_Nodes","GLOBAL", 2)
-SetGlobal("Braston_Ennelia_Leave", "GLOBAL", 1)~ EXIT
+  IF ~~ THEN REPLY #1487 DO ~SetDialog("")~ EXIT
 END
 
 IF ~~ THEN BEGIN 42

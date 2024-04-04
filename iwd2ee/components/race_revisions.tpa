@@ -59,6 +59,17 @@ COPY_EXISTING ~IEex_WEIDU.lua~ ~override~
 	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_elf_large_sword_weapon_finesse *=.*~ ~ex_elf_large_sword_weapon_finesse = true~
 	REPLACE_TEXTUALLY CASE_INSENSITIVE ~ex_lightfoot_halfling_thrown_dexterity_bonus_to_damage *=.*~ ~ex_lightfoot_halfling_thrown_dexterity_bonus_to_damage = true~
 
+ACTION_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~36~ BEGIN
+	COPY_EXISTING ~11VEIRA.CRE~ ~override~ ~USVEIR.CRE~ ~override~
+		WRITE_BYTE spellfocusnecromancy 2
+
+	COPY_EXISTING ~10BLACK.cre~ ~override~ ~12BLACK.cre~ ~override~ ~USGEOF.cre~ ~override~
+		WRITE_BYTE proficiencysmallblade 2
+
+	COPY_EXISTING ~50PAIRI.CRE~ ~override~ ~USPAIR.CRE~ ~override~
+		WRITE_BYTE spellfocusenchantment 2
+END
+
 COPY_EXISTING ~help04.2da~ ~override~
   COUNT_2DA_COLS num_cols
   READ_2DA_ENTRIES_NOW rows num_cols

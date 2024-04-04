@@ -165,6 +165,8 @@ USRAKSHF	USRAKSH1
 USCWHFBE	USCWBEBI
 USCWHFMH	USCWMOHR
 USCWHFAY	USCWAYET
+USCWHFI1	63CWISA1
+USCWHFM1	63CWMAD1
 USAHBB1		No_Drop
 USAHBB2		USABBB02
 USAHBB3		USABBB02
@@ -2256,6 +2258,30 @@ COPY_EXISTING_REGEXP ~.*\.spl~ ~override~
 		END
 	END
 	UNLESS ~EXDAMAGE~
+	BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING_REGEXP ~.*\.spl~ ~override~
+	READ_LONG 0x18 thespellflags
+	READ_LONG 0x64 headeroffset
+	READ_SHORT 0x68 numheaders
+	READ_LONG 0x6A effectoffset
+	READ_SHORT (headeroffset + 0x26) theprojectile
+	READ_SHORT (headeroffset + 0x28 * (numheaders - 1) + 0x1E) lastheadernumeffects
+	READ_SHORT (headeroffset + 0x28 * (numheaders - 1) + 0x20) lastheaderfirsteffectindex
+	numeffects = lastheadernumeffects + lastheaderfirsteffectindex
+	offset = effectoffset
+	doaddeffect = 0
+	FOR (i = 0; i < numeffects; ++i) BEGIN
+		READ_SHORT offset theopcode
+		PATCH_IF theopcode = 111 BEGIN
+			doaddeffect = 1
+		END
+		offset = offset + 0x30
+	END
+	PATCH_IF doaddeffect = 1 BEGIN
+		LPF CLONE_EFFECT INT_VAR match_opcode=111 opcode=500 STR_VAR resource=~MEOFFANI~ insert=~below~ END
+	END
+	UNLESS ~MEOFFANI~
 	BUT_ONLY_IF_IT_CHANGES
 
 COPY_EXISTING_REGEXP ~.*\.itm~ ~override~

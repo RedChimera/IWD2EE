@@ -5,36 +5,105 @@
 
 COMPILE ~%mod_folder%/dlg/31BUGGUT.d~
 COMPILE ~%mod_folder%/dlg/30ENNELI.d~
+COMPILE ~%mod_folder%/dlg/11DEIRD.d~
 COMPILE ~%mod_folder%/dlg/11ULBREC.d~
-STRING_SET 635 ~We have found the ranger Braston in the bowels of the Horde Fortress.~
-STRING_SET 6187 ~Lord Ulbrec heard of our success in infiltrating the horde fortress and dealing with the bugbear chieftain, Guthma.  He thanked us for our efforts and gave us our next mission, which should prove somewhat less strenuous than the other suicide missions we've already taken.  He asked us to speak to Oswald Fiddlebender and have him ferry us to the Western Pass to rendezvous with the reinforcements from Neverwinter.~
-STRING_SET 36624 ~The heroes have returned!  Targos is saved!~
+STRING_SET 635 @6406
+STRING_SET 6187 @6407
+STRING_SET 36624 @6408
 // Note for @semiticgod: Guthma's death is also referenced in 11CAHLH0.bcs, but seems to be dependent on Guthma actually being dead. Same goes for 11DENHA1.bcs, 10THOMF0.bcs, 1100THMF.bcs, 1200THMF.bcs, and 12SOLDR0.bcs.
+
+<<<<<<<< .../script.baf
+
+IF
+	Global("USGUTHMA_FRIEND","GLOBAL",1)
+	Global("30BRASTO_ESCAPE","GLOBAL",0)
+	Global("31brasto_Dead","GLOBAL",0)
+	Global("31bugGut_Dead","GLOBAL",0)
+	Global("US_KILL_BRASTON","GLOBAL",0)
+THEN
+	RESPONSE #100
+		SetGlobal("US_KILL_BRASTON","GLOBAL",1)
+END
+
+>>>>>>>>
+EXTEND_TOP ~ar3100.bcs~ ~.../script.baf~ EVAL
+
+<<<<<<<< .../script.baf
+
+IF
+	Global("USGUTHMA_FRIEND","GLOBAL",1)
+	Global("30BRASTO_ESCAPE","GLOBAL",0)
+	Global("31brasto_Dead","GLOBAL",0)
+	Global("31bugGut_Dead","GLOBAL",0)
+	Global("US_KILL_BRASTON","GLOBAL",1)
+THEN
+	RESPONSE #100
+		Kill(Myself)
+END
+
+>>>>>>>>
+EXTEND_TOP ~3101BRSC.bcs~ ~.../script.baf~ EVAL
+
+<<<<<<<< .../script.baf
+
+IF
+	Global("USGUTHMA_FRIEND","GLOBAL",1)
+	Global("SAID_GOODBYE","LOCALS",0)
+	!Global("BRASTON_ENNELIA_LEAVE","GLOBAL",0)
+	!Allegiance(Myself,ENEMY)
+	!See([ENEMY],0)
+	See([PC],0)
+THEN
+	RESPONSE #100
+		SetGlobal("SAID_GOODBYE","LOCALS",1)
+		FaceObject(LastSeenBy(Myself))
+		Wait(1)
+END
+
+>>>>>>>>
+EXTEND_TOP ~30ENNLVE.bcs~ ~.../script.baf~ EVAL
+
+COPY_EXISTING ~00T01T.bcs~ ~override/USGUTN01.bcs~ ~00T02T.bcs~ ~override/USGUTN02.bcs~ ~00T03T.bcs~ ~override/USGUTN03.bcs~ ~00T04T.bcs~ ~override/USGUTN04.bcs~ ~00T05T.bcs~ ~override/USGUTN05.bcs~ ~00T06T.bcs~ ~override/USGUTN06.bcs~
+
+COPY_EXISTING ~11GHILL0.bcs~ ~override~
+	DECOMPILE_AND_PATCH BEGIN
+		REPLACE_TEXTUALLY CASE_INSENSITIVE ~\([^!]\)Global(\"31bugGut_Dead\",\"GLOBAL\",0)~ ~\1Global("31bugGut_Dead","GLOBAL",0)
+!Global("USGUTHMA_FRIEND","GLOBAL",1)~
+		REPLACE_TEXTUALLY CASE_INSENSITIVE ~!Global(\"31bugGut_Dead\",\"GLOBAL\",0)~ ~Or(2)
+!Global("31bugGut_Dead","GLOBAL",0)
+Global("USGUTHMA_FRIEND","GLOBAL",1)~
+	END
+
+EXTEND_TOP_REGEXP ~USGUTN0[1-6]\.bcs~ ~override/USGUTNEU.bcs~
+
+COPY_EXISTING ~ar3101.are~ ~override~
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~00T0\([1-6]\)T..~ ~USGUTN0\1~
+	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR match_cre_file=~31BUGJAI~ script_special1=~USGUTNEU~ END
+	LPF ALTER_AREA_ACTOR_IWD2 STR_VAR match_cre_file=~31ORCOLD~ script_team=~USGUTNEU~ END
 
 ACTION_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~4~ BEGIN
 
 COPY_EXISTING ~30ENNELI.dlg~ ~override~
-	DECOMPILE_DLG_TO_D
-	REPLACE_TEXTUALLY CASE_INSENSITIVE ~GiveItemCreate(\"RMIW_02\",Protagonist, ?1, ?1, ?0)~ ~GiveItemCreate("00RTHF13",Protagonist,1,1,0)~
-
-	REPLACE_TEXTUALLY CASE_INSENSITIVE ~PartyHasItem(\"00POTN03\")~ ~False()~
-
-	REPLACE_TEXTUALLY CASE_INSENSITIVE ~PartyHasItem(\"00POTN04\")~ ~Or(2)
-	PartyHasItem("00POTN04")
-	PartyHasItem("USHFPN04")~
-	REPLACE_TEXTUALLY CASE_INSENSITIVE ~TakePartyItemNum(\"00Potn04\", ?1)~ ~TakePartyItemNum("00Potn04",1)
-TakePartyItemNum("USHFPN04",1)~
-	REPLACE_TEXTUALLY CASE_INSENSITIVE ~UseItem(\"00Potn04\", ?Myself)~ ~UseItem("00Potn04",Myself)
-UseItem("USHFPN04",Myself)~
-
-	REPLACE_TEXTUALLY CASE_INSENSITIVE ~PartyHasItem(\"00POTN05\")~ ~Or(2)
-	PartyHasItem("00POTN05")
-	PartyHasItem("USHFPN05")~
-	REPLACE_TEXTUALLY CASE_INSENSITIVE ~TakePartyItemNum(\"00Potn05\", ?1)~ ~TakePartyItemNum("00Potn05",1)
-TakePartyItemNum("USHFPN05",1)~
-	REPLACE_TEXTUALLY CASE_INSENSITIVE ~UseItem(\"00Potn05\", ?Myself)~ ~UseItem("00Potn05",Myself)
-UseItem("USHFPN05",Myself)~
-	COMPILE_D_TO_DLG
-	LPF CONVERT_DLG_TO_IWD2_FORMAT END
+	DECOMPILE_AND_PATCH BEGIN
+		REPLACE_TEXTUALLY CASE_INSENSITIVE ~GiveItemCreate(\"RMIW_02\",Protagonist, ?1, ?1, ?0)~ ~GiveItemCreate("00RTHF13",Protagonist,1,1,0)~
+	
+		REPLACE_TEXTUALLY CASE_INSENSITIVE ~PartyHasItem(\"00POTN03\")~ ~False()~
+	
+		REPLACE_TEXTUALLY CASE_INSENSITIVE ~PartyHasItem(\"00POTN04\")~ ~Or(2)
+		PartyHasItem("00POTN04")
+		PartyHasItem("USHFPN04")~
+		REPLACE_TEXTUALLY CASE_INSENSITIVE ~TakePartyItemNum(\"00Potn04\", ?1)~ ~TakePartyItemNum("00Potn04",1)
+	TakePartyItemNum("USHFPN04",1)~
+		REPLACE_TEXTUALLY CASE_INSENSITIVE ~UseItem(\"00Potn04\", ?Myself)~ ~UseItem("00Potn04",Myself)
+	UseItem("USHFPN04",Myself)~
+	
+		REPLACE_TEXTUALLY CASE_INSENSITIVE ~PartyHasItem(\"00POTN05\")~ ~Or(2)
+		PartyHasItem("00POTN05")
+		PartyHasItem("USHFPN05")~
+		REPLACE_TEXTUALLY CASE_INSENSITIVE ~TakePartyItemNum(\"00Potn05\", ?1)~ ~TakePartyItemNum("00Potn05",1)
+	TakePartyItemNum("USHFPN05",1)~
+		REPLACE_TEXTUALLY CASE_INSENSITIVE ~UseItem(\"00Potn05\", ?Myself)~ ~UseItem("00Potn05",Myself)
+	UseItem("USHFPN05",Myself)~
+	END
 
 END

@@ -142,6 +142,14 @@ COPY_EXISTING ~USCWMOHR.itm~ ~override~ ~USHFCWMH.itm~ ~override~
 	SAY NAME1 @23083
 	SAY NAME2 @23083
 
+COPY_EXISTING ~63CWISA1.itm~ ~override~ ~USHFCWI1.itm~ ~override~
+	SAY NAME1 @23086
+	SAY NAME2 @23086
+
+COPY_EXISTING ~63CWMAD1.itm~ ~override~ ~USHFCWM1.itm~ ~override~
+	SAY NAME1 @23087
+	SAY NAME2 @23087
+
 COPY_EXISTING ~USCWDRCH.itm~ ~override~
 	SAY NAME1 @23085
 	SAY NAME2 @23085
@@ -212,6 +220,10 @@ COPY_EXISTING ~uses015.spl~ ~override~
 COPY_EXISTING ~uses016.spl~ ~override~
 	SAY NAME1 @21016
 	SAY NAME2 @21016
+
+COPY_EXISTING ~spin257.spl~ ~override~
+	WRITE_SHORT 0x22 9
+	WRITE_BYTE 0x25 7
 
 COPY_EXISTING ~usmantl3.spl~ ~override~
 	SAY NAME1 @37752
@@ -320,6 +332,14 @@ COPY_EXISTING ~usms032.spl~ ~override~
 COPY_EXISTING ~usms033.spl~ ~override~
 	SAY NAME1 @24033
 	SAY NAME2 @24033
+
+COPY_EXISTING ~usms035.spl~ ~override~
+	SAY NAME1 @37256
+	SAY NAME2 @37256
+
+COPY_EXISTING ~usms037.spl~ ~override~
+	SAY NAME1 @24034
+	SAY NAME2 @24034
 
 ACTION_IF NOT MOD_IS_INSTALLED ~iwd2ee.tp2~ ~2~ BEGIN
 
@@ -2178,19 +2198,43 @@ COPY_EXISTING ~50LIMHA.cre~ ~override~ ~50LIMHA2.cre~ ~override~
 		LPF IWD2_ADD_CRE_EFFECT INT_VAR opcode=288 target=0 timing=9 parameter2=231 savingthrow=0x40000 END
 	END
 
+COPY_EXISTING_REGEXP ~50ZOM.*\.cre~ ~override~
+	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelfighter=10 STR_VAR updatehp=~average~ END
+	WRITE_BYTE strength 20
+	WRITE_BYTE constitution 16
+	WRITE_BYTE proficiencysmallblade 4
+	READ_LONG feats1 ulgiash
+	ulgiash|=0x2000000
+	WRITE_LONG feats1 ulgiash
+	READ_LONG feats2 ulgiash
+	ulgiash|=0x2000000
+	WRITE_LONG feats2 ulgiash
+	PATCH_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~0~ BEGIN
+		LPF IWD2_ADD_CRE_EFFECT INT_VAR opcode=187 target=0 timing=1 parameter1=1 STR_VAR effvar= EVAL ~ME_GRAPPLE~ END
+	END
+	LPF	IWD2_ADD_CRE_ITEM INT_VAR equip=1 STR_VAR item=~USCWISZ1~ slot=~weapon1~ mode=~replace~ END
+
+COPY_EXISTING ~USISAZOM.cre~ ~override~
+	READ_LONG feats1 ulgiash
+	ulgiash|=0x2000000
+	WRITE_LONG feats1 ulgiash
+	PATCH_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~0~ BEGIN
+		LPF IWD2_ADD_CRE_EFFECT INT_VAR opcode=187 target=0 timing=1 parameter1=1 STR_VAR effvar= EVAL ~ME_GRAPPLE~ END
+	END
+
 COPY_EXISTING ~50TREDA.cre~ ~override~
 	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelfighter=10 STR_VAR updatehp=~max~ END
 	WRITE_SHORT currenthp 150
 	WRITE_SHORT maxhp 150
 	WRITE_SHORT armorclass 10
-	WRITE_BYTE slashingresistance 5
-	WRITE_BYTE piercingresistance 10
-	WRITE_BYTE bludgeoningresistance 15
-	WRITE_BYTE missileresistance 5
-	WRITE_BYTE coldresistance 10
-	WRITE_BYTE electricityresistance 10
-	WRITE_BYTE acidresistance 10
-	WRITE_BYTE magicdamageresistance 10
+	WRITE_BYTE slashingresistance 0
+	WRITE_BYTE piercingresistance 5
+	WRITE_BYTE bludgeoningresistance 10
+	WRITE_BYTE missileresistance 0
+	WRITE_BYTE coldresistance 5
+	WRITE_BYTE electricityresistance 5
+	WRITE_BYTE acidresistance 5
+	WRITE_BYTE magicdamageresistance 0
 	WRITE_BYTE proficiencysmallblade 3
 	WRITE_BYTE challengerating 11
 	READ_LONG feats2 ulgiash
@@ -2208,20 +2252,26 @@ COPY_EXISTING ~50TREDE.cre~ ~override~
 	WRITE_BYTE intelligence 19
 	WRITE_BYTE wisdom 33
 	WRITE_BYTE charisma 35
-	WRITE_BYTE slashingresistance 10
-	WRITE_BYTE piercingresistance 20
-	WRITE_BYTE bludgeoningresistance 25
-	WRITE_BYTE missileresistance 5
+	WRITE_BYTE slashingresistance 5
+	WRITE_BYTE piercingresistance 10
+	WRITE_BYTE bludgeoningresistance 15
+	WRITE_BYTE missileresistance 0
 	WRITE_BYTE spellresistance 29
-	WRITE_BYTE coldresistance 20
-	WRITE_BYTE electricityresistance 20
-	WRITE_BYTE acidresistance 20
-	WRITE_BYTE magicdamageresistance 20
+	WRITE_BYTE coldresistance 5
+	WRITE_BYTE electricityresistance 5
+	WRITE_BYTE acidresistance 5
+	WRITE_BYTE magicdamageresistance 0
 	WRITE_BYTE proficiencysmallblade 3
 	WRITE_BYTE challengerating 30
+	READ_LONG feats1 ulgiash
+	ulgiash|=0x2000000
+	WRITE_LONG feats1 ulgiash
 	READ_LONG feats2 ulgiash
 	ulgiash|=0x2000000
 	WRITE_LONG feats2 ulgiash
+	PATCH_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~0~ BEGIN
+		LPF IWD2_ADD_CRE_EFFECT INT_VAR opcode=187 target=0 timing=1 parameter1=1 STR_VAR effvar= EVAL ~ME_GRAPPLE~ END
+	END
 	LPF	IWD2_ADD_CRE_ITEM INT_VAR equip=1 STR_VAR item=~USCWTRE4~ slot=~weapon1~ mode=~replace~ END
 
 COPY_EXISTING ~50TREDG.cre~ ~override~
@@ -2231,19 +2281,25 @@ COPY_EXISTING ~50TREDG.cre~ ~override~
 	WRITE_SHORT armorclass 10
 	WRITE_BYTE strength 33
 	WRITE_BYTE constitution 26
-	WRITE_BYTE slashingresistance 5
-	WRITE_BYTE piercingresistance 15
-	WRITE_BYTE bludgeoningresistance 20
-	WRITE_BYTE missileresistance 5
-	WRITE_BYTE coldresistance 15
-	WRITE_BYTE electricityresistance 15
-	WRITE_BYTE acidresistance 15
-	WRITE_BYTE magicdamageresistance 15
+	WRITE_BYTE slashingresistance 0
+	WRITE_BYTE piercingresistance 5
+	WRITE_BYTE bludgeoningresistance 10
+	WRITE_BYTE missileresistance 0
+	WRITE_BYTE coldresistance 5
+	WRITE_BYTE electricityresistance 5
+	WRITE_BYTE acidresistance 5
+	WRITE_BYTE magicdamageresistance 0
 	WRITE_BYTE proficiencysmallblade 3
 	WRITE_BYTE challengerating 15
+	READ_LONG feats1 ulgiash
+	ulgiash|=0x2000000
+	WRITE_LONG feats1 ulgiash
 	READ_LONG feats2 ulgiash
 	ulgiash|=0x2000000
 	WRITE_LONG feats2 ulgiash
+	PATCH_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~0~ BEGIN
+		LPF IWD2_ADD_CRE_EFFECT INT_VAR opcode=187 target=0 timing=1 parameter1=1 STR_VAR effvar= EVAL ~ME_GRAPPLE~ END
+	END
 	LPF	IWD2_ADD_CRE_ITEM INT_VAR equip=1 STR_VAR item=~USCWHFT2~ slot=~weapon1~ mode=~replace~ END
 
 COPY_EXISTING ~41RWYVER.cre~ ~override~ ~41WYVERN.cre~ ~override~
@@ -3272,13 +3328,13 @@ COPY_EXISTING ~53ELDERB.cre~ ~override~
 	ulgiash|=0x11
 	WRITE_LONG feats3 ulgiash
 	WRITE_BYTE intelligence 30
-	WRITE_BYTE slashingresistance 20
-	WRITE_BYTE piercingresistance 20
-	WRITE_BYTE missileresistance 15
-	WRITE_BYTE fireresistance 50
-	WRITE_BYTE coldresistance 50
-	WRITE_BYTE electricityresistance 50
-	WRITE_BYTE acidresistance 50
+	WRITE_BYTE slashingresistance 10
+	WRITE_BYTE piercingresistance 10
+	WRITE_BYTE missileresistance 5
+	WRITE_BYTE fireresistance 10
+	WRITE_BYTE coldresistance 10
+	WRITE_BYTE electricityresistance 10
+	WRITE_BYTE acidresistance 10
 	WRITE_BYTE magicdamageresistance 10
 	WRITE_BYTE spellresistance 30
 	WRITE_BYTE skillconcentration 30
@@ -4363,6 +4419,7 @@ COPY_EXISTING ~62KRATU.cre~ ~override~
 
 COPY_EXISTING ~62MDARF.cre~ ~override~
 	LPF SET_CLASS_LEVELS_IWD2 INT_VAR newlevelwizard=20 END
+	WRITE_BYTE general 4
 	WRITE_BYTE skillconcentration 23
 	WRITE_BYTE skillspellcraft 23
 	WRITE_BYTE challengerating 21
@@ -6147,6 +6204,8 @@ COPY_EXISTING ~63ISARN.cre~ ~override~ ~63ISARN2.cre~ ~override~
 		WRITE_LONG feats1 ulgiash
 		LPF IWD2_ADD_CRE_EFFECT INT_VAR opcode=288 target=0 timing=9 parameter2=231 savingthrow=0x40000 END
 	END
+	LPF	IWD2_ADD_CRE_ITEM INT_VAR equip=1 STR_VAR item=~USCWHFI1~ slot=~weapon1~ mode=~replace~ END
+	LPF	IWD2_ADD_CRE_ITEM INT_VAR equip=0 STR_VAR item=~USCWHFI1~ slot=~shield1~ mode=~replace~ END
 
 COPY_EXISTING ~63ISARN.cre~ ~override~
 	LPF	IWD2_REMOVE_SPELLS_KNOWN STR_VAR class=~wizard~ END
@@ -6215,6 +6274,8 @@ COPY_EXISTING ~63ISAIR.cre~ ~override~ ~63ISAIR2.cre~ ~override~
 		WRITE_LONG feats1 ulgiash
 		LPF IWD2_ADD_CRE_EFFECT INT_VAR opcode=288 target=0 timing=9 parameter2=231 savingthrow=0x40000 END
 	END
+	LPF	IWD2_ADD_CRE_ITEM INT_VAR equip=1 STR_VAR item=~USCWHFI1~ slot=~weapon1~ mode=~replace~ END
+	LPF	IWD2_ADD_CRE_ITEM INT_VAR equip=0 STR_VAR item=~USCWHFI1~ slot=~shield1~ mode=~replace~ END
 
 COPY_EXISTING ~63ISAIR.cre~ ~override~
 	LPF	IWD2_REMOVE_SPELLS_KNOWN STR_VAR class=~wizard~ END
@@ -6288,6 +6349,7 @@ COPY_EXISTING ~63MADAN.cre~ ~override~ ~63MADAN2.cre~ ~override~
 		WRITE_LONG feats1 ulgiash
 		LPF IWD2_ADD_CRE_EFFECT INT_VAR opcode=288 target=0 timing=9 parameter2=231 savingthrow=0x40000 END
 	END
+	LPF	IWD2_ADD_CRE_ITEM INT_VAR equip=1 STR_VAR item=~USCWHFM1~ slot=~weapon1~ mode=~replace~ END
 
 COPY_EXISTING ~63MADAN.cre~ ~override~
 	LPF	IWD2_REMOVE_SPELLS_KNOWN STR_VAR class=~cleric~ END
@@ -6336,6 +6398,7 @@ COPY_EXISTING ~63MADAE.cre~ ~override~ ~63MADAE2.cre~ ~override~
 		WRITE_LONG feats1 ulgiash
 		LPF IWD2_ADD_CRE_EFFECT INT_VAR opcode=288 target=0 timing=9 parameter2=231 savingthrow=0x40000 END
 	END
+	LPF	IWD2_ADD_CRE_ITEM INT_VAR equip=1 STR_VAR item=~USCWHFM1~ slot=~weapon1~ mode=~replace~ END
 
 COPY_EXISTING ~63MADAE.cre~ ~override~
 	LPF	IWD2_REMOVE_SPELLS_KNOWN STR_VAR class=~cleric~ END
@@ -7034,6 +7097,8 @@ USRAKSHF	USRAKSH1
 USCWHFBE	USCWBEBI
 USCWHFMH	USCWMOHR
 USCWHFAY	USCWAYET
+USCWHFI1	63CWISA1
+USCWHFM1	63CWMAD1
 ~
 UNLESS ~USCWHFMO~
 
@@ -7099,6 +7164,8 @@ USRAKSHF	USRAKSH2
 USCWHFBE	USHFCWBE
 USCWHFMH	USHFCWMH
 USCWHFAY	USHFCWAY
+USCWHFI1	USHFCWI1
+USCWHFM1	USHFCWM1
 ~
 UNLESS ~USCWHFMO~
 
@@ -7174,18 +7241,20 @@ COPY_EXISTING_REGEXP ~.*\.cre~ ~override~
 <<<<<<<< .../script.baf
 IF
 	Global("SH_Teleported_To_6303","GLOBAL",2)
+	Global("TEAM_2","MYAREA",1)
 	Global("US_Party_Dispel_Final","GLOBAL",0)
 	Difficulty(NORMAL,GREATER_THAN)
+	!InCutsceneMode()
 THEN
 	RESPONSE #100
 		SetGlobal("US_Party_Dispel_Final","GLOBAL",1)
-		Wait(1)
-		ApplySpellRES("USDISPEA",Player1)
-		ApplySpellRES("USDISPEA",Player2)
-		ApplySpellRES("USDISPEA",Player3)
-		ApplySpellRES("USDISPEA",Player4)
-		ApplySpellRES("USDISPEA",Player5)
-		ApplySpellRES("USDISPEA",Player6)
+		ActionOverride("Buvai_deNaly",ForceSpellPointRES("USDISPEE",[1052.584]))  // No such index
+		ActionOverride(Player1,ReallyForceSpellRES("USDISPEA",Player1))  // No such index
+		ActionOverride(Player2,ReallyForceSpellRES("USDISPEA",Player2))  // No such index
+		ActionOverride(Player3,ReallyForceSpellRES("USDISPEA",Player3))  // No such index
+		ActionOverride(Player4,ReallyForceSpellRES("USDISPEA",Player4))  // No such index
+		ActionOverride(Player5,ReallyForceSpellRES("USDISPEA",Player5))  // No such index
+		ActionOverride(Player6,ReallyForceSpellRES("USDISPEA",Player6))  // No such index
 END
 
 >>>>>>>>

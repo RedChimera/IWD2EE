@@ -332,6 +332,7 @@
 @55715=~The spell~
 @55716=~Cast the spell <EXCCSPELL>~
 @55717=~This undead has been bolstered and made more difficult to turn~
+@55718=~Note: Currently you already have spells recorded. Any new actions you record will be added to the existing recording. If you would like to record spells from scratch, press <EXRCKEYDELETE> to delete the previous recording, then press <EXRCKEYRECORD> to start again.~
 @55751=~Total Roll: <EXRRTOTAL>\nStored Total: <EXRRRECTOTAL>\n\n~
 @55752=~Unallocated Ability Scores:\n<EXRRUNALLOCATED>\n\n~
 @55753=~Press Z to reroll, X to store, C to recall, and V to reallocate ability scores.\n\n~

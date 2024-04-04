@@ -526,8 +526,9 @@ COPY_EXISTING ~10BLACK.cre~ ~override~ ~12BLACK.cre~ ~override~
 	WRITE_BYTE skillsearch 2
 	WRITE_BYTE challengerating 3
 	WRITE_LONG feats1 0x8
-	WRITE_LONG feats2 0x3E00080
+	WRITE_LONG feats2 0x3E10080
 	WRITE_LONG feats3 0x80
+	WRITE_BYTE 0x171 1
 	WRITE_BYTE proficiencyaxe 0
 	WRITE_BYTE proficiencybastardsword 0
 	WRITE_BYTE proficiencybow 1
@@ -536,9 +537,12 @@ COPY_EXISTING ~10BLACK.cre~ ~override~ ~12BLACK.cre~ ~override~
 	WRITE_BYTE proficiencyhammer 0
 	WRITE_BYTE proficiencygreatsword 0
 	WRITE_BYTE proficiencylargesword 0
-	WRITE_BYTE proficiencycrossbow 2
-	WRITE_BYTE proficiencysmallblade 2
+	WRITE_BYTE proficiencycrossbow 1
+	WRITE_BYTE proficiencysmallblade 1
 	WRITE_BYTE armorproficiency 2
+	PATCH_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~0~ BEGIN
+		LPF IWD2_ADD_CRE_EFFECT INT_VAR opcode=288 target=2 timing=9 parameter1=4 parameter2=231 savingthrow=0x20000 STR_VAR effsource=~FE_48_1~ END
+	END
 	LPF	IWD2_ADD_CRE_ITEM INT_VAR equip=0 STR_VAR item=~00LEAT04~ slot=~armor~ mode=~replace~ END
 	LPF	IWD2_ADD_CRE_ITEM INT_VAR equip=0 STR_VAR item=~00SWDS02~ slot=~weapon1~ mode=~replace~ END
 	LPF	IWD2_ADD_CRE_ITEM INT_VAR equip=1 STR_VAR item=~00BWHX01~ slot=~weapon2~ mode=~replace~ END
@@ -554,10 +558,10 @@ COPY_EXISTING ~10REIG.cre~ ~override~
 	WRITE_BYTE fortitudesave 3
 	WRITE_BYTE reflexsave 2
 	WRITE_BYTE willsave 5
-	WRITE_BYTE strength 16
+	WRITE_BYTE strength 17
 	WRITE_BYTE dexterity 13
 	WRITE_BYTE constitution 16
-	WRITE_BYTE intelligence 11
+	WRITE_BYTE intelligence 13
 	WRITE_BYTE wisdom 12
 	WRITE_BYTE charisma 8
 	WRITE_BYTE skillconcentration 1
@@ -566,8 +570,10 @@ COPY_EXISTING ~10REIG.cre~ ~override~
 	WRITE_BYTE alignment 33
 	READ_LONG feats1 ulgiash
 	ulgiash|=0x80000
+	ulgiash&=0xFFFFFFEF
 	PATCH_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~0~ BEGIN
 		ulgiash|=0x40000
+		WRITE_BYTE proficiencybastardsword 1
 	END
 	WRITE_LONG feats1 ulgiash
 	READ_LONG feats2 ulgiash
@@ -612,7 +618,7 @@ COPY_EXISTING ~11VEIRA.cre~ ~override~
 	WRITE_LONG classmask 1024
 	WRITE_LONG kit 0x100 //Diviner
 	WRITE_LONG feats1 0
-	WRITE_LONG feats2 0x43E40000
+	WRITE_LONG feats2 0x43E00000
 	WRITE_LONG feats3 0x10
 	WRITE_BYTE proficiencyaxe 0
 	WRITE_BYTE proficiencybow 0
@@ -663,6 +669,7 @@ COPY_EXISTING ~20EMMA.cre~ ~override~
 		WRITE_BYTE proficiencylargesword 1
 	END
 	WRITE_LONG feats3 0
+	WRITE_BYTE 0x170 1
 	WRITE_BYTE spellfocusenchantment 2
 	WRITE_BYTE spellfocusevocation 0
 	WRITE_BYTE spellfocusnecromancy 0
@@ -677,6 +684,9 @@ COPY_EXISTING ~20EMMA.cre~ ~override~
 	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~cleric~ resource=~SPPR308~ END
 	LPF	IWD2_CRE_SPELL INT_VAR num=2 STR_VAR class=~cleric~ resource=~SPPR401~ END
 	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~cleric~ resource=~SPPR304~ END
+	PATCH_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~0~ BEGIN
+		LPF IWD2_ADD_CRE_EFFECT INT_VAR opcode=288 target=2 timing=9 parameter1=4 parameter2=231 savingthrow=0x40000 STR_VAR effsource=~FE_9_1~ END
+	END
 	PATCH_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~2~ BEGIN
 		LPF	IWD2_CRE_SPELL INT_VAR num=1 forcelevel=1 STR_VAR class=~domain~ resource=~SPPR116~ END
 		LPF	IWD2_CRE_SPELL INT_VAR num=1 forcelevel=1 STR_VAR class=~domain~ resource=~SPPR226~ END
@@ -797,21 +807,24 @@ COPY_EXISTING ~41XHAAN.cre~ ~override~
 	WRITE_LONG classmask 512
 	WRITE_LONG kit 0
 	WRITE_BYTE spellfocusenchantment 0
-	WRITE_BYTE spellfocusevocation 1
+	WRITE_BYTE spellfocusevocation 2
 	WRITE_BYTE spellfocusnecromancy 0
 	WRITE_BYTE spellfocustransmutation 0
 	WRITE_BYTE spellpenetration 1
+	WRITE_BYTE proficiencysmallblade 2
 	WRITE_BYTE enchantmentlevel 0
 	READ_LONG feats1 ulgiash
-	ulgiash|=0x1
 	PATCH_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~0~ BEGIN
 		ulgiash|=0x40000
+		WRITE_BYTE proficiencybastardsword 1
+		LPF IWD2_ADD_CRE_EFFECT INT_VAR opcode=190 target=2 timing=9 parameter1=4 STR_VAR effsource=~FE_32_1~ END
+		LPF IWD2_ADD_CRE_EFFECT INT_VAR opcode=288 target=2 timing=9 parameter1=1 parameter2=193 special=2 STR_VAR effsource=~FE_32_1~ END
 	END
 	ulgiash&=0xFFFFFDFF
 	WRITE_LONG feats1 ulgiash
 	READ_LONG feats2 ulgiash
-	ulgiash|=0x20000000
-	ulgiash&=0x27FFFFFF
+	ulgiash|=0x20000001
+	ulgiash&=0x27FBFFFF
 	WRITE_LONG feats2 ulgiash
 	READ_LONG feats3 ulgiash
 	ulgiash|=0x1
@@ -881,10 +894,11 @@ COPY_EXISTING ~41ZACK.cre~ ~override~
 	WRITE_SHORT class2 9
 	WRITE_LONG classmask 1024
 	WRITE_LONG kit 0x400 //Illusionist
-	WRITE_LONG feats1 0x11008
-	WRITE_LONG feats2 0x13F00080
+	WRITE_LONG feats1 0x8
+	WRITE_LONG feats2 0x13E00081
 	WRITE_LONG feats3 0
-	WRITE_BYTE spellfocusenchantment 1
+	WRITE_BYTE armorproficiency 1
+	WRITE_BYTE spellfocusenchantment 2
 	WRITE_BYTE spellfocusevocation 0
 	WRITE_BYTE spellfocusnecromancy 0
 	WRITE_BYTE spellfocustransmutation 0
@@ -904,6 +918,10 @@ COPY_EXISTING ~41ZACK.cre~ ~override~
 	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~SPWI212~ END
 	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~wizard~ resource=~SPWI223~ END
 	LPF	IWD2_CRE_SPELL INT_VAR num=0 STR_VAR class=~wizard~ resource=~SPWI224~ END
+	PATCH_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~0~ BEGIN
+		LPF IWD2_ADD_CRE_EFFECT INT_VAR opcode=190 target=2 timing=9 parameter1=4 STR_VAR effsource=~FE_32_1~ END
+		LPF IWD2_ADD_CRE_EFFECT INT_VAR opcode=288 target=2 timing=9 parameter1=1 parameter2=193 special=2 STR_VAR effsource=~FE_32_1~ END
+	END
 	PATCH_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~2~ BEGIN
 		LPF	IWD2_CRE_SPELL INT_VAR num=2 STR_VAR class=~wizard~ resource=~SPWI121~ END
 	END

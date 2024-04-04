@@ -396,6 +396,52 @@ function IEex_GetAtCPtrListIndex(CPtrList, index)
 	return IEex_ReadDword(pNode + 0x8)
 end
 
+function IEex_IterateCPtrListNode(CPtrList, func)
+	local m_pNext = IEex_ReadDword(CPtrList + 0x4)
+	while m_pNext ~= 0x0 do
+		if IEex_ReadDword(m_pNext + 0x8) > 0 and func(IEex_ReadDword(m_pNext + 0x8), m_pNext) then
+			break
+		end
+		m_pNext = IEex_ReadDword(m_pNext)
+	end
+end
+
+function IEex_RemoveEntryFromCPtrList(CPtrList, node)
+	local m_pNodeHead = IEex_ReadDword(CPtrList + 0x4)
+	local m_pNodeTail = IEex_ReadDword(CPtrList + 0x8)
+	if m_pNodeHead == node and m_pNodeTail == node then return end
+	local m_pNext = m_pNodeHead
+	while m_pNext ~= 0x0 do
+		if m_pNext == node then
+			if m_pNodeHead == node then
+				IEex_WriteDword(CPtrList + 0x4, IEex_ReadDword(m_pNext))
+			else
+				IEex_WriteDword(IEex_ReadDword(m_pNext + 0x4), IEex_ReadDword(m_pNext))
+			end
+			if m_pNodeTail == node then
+				IEex_WriteDword(CPtrList + 0x8, IEex_ReadDword(m_pNext + 0x4))
+			else
+				IEex_WriteDword(IEex_ReadDword(m_pNext) + 0x4, IEex_ReadDword(m_pNext + 0x4))
+			end
+		end
+		m_pNext = IEex_ReadDword(m_pNext)
+	end
+--[[
+	m_pNext = m_pNodeTail
+	while m_pNext ~= 0x0 do
+		if m_pNext == node then
+			if m_pNodeTail == node then
+				IEex_WriteDword(CPtrList + 0x8, IEex_ReadDword(m_pNext + 0x4))
+			else
+				IEex_WriteDword(IEex_ReadDword(m_pNext) + 0x4, IEex_ReadDword(m_pNext + 0x4))
+			end
+		end
+		m_pNext = IEex_ReadDword(m_pNext + 0x4)
+	end
+--]]
+	IEex_WriteDword(CPtrList + 0xC, IEex_ReadDword(CPtrList + 0xC) - 1)
+end
+
 function IEex_SetCRect(CRect, left, top, right, bottom)
 	if left then IEex_WriteDword(CRect, left) end
 	if top then IEex_WriteDword(CRect + 0x4, top) end
