@@ -1532,11 +1532,11 @@ function IEex_Extern_UI_ButtonLClick(CUIControlButton)
 
 	local worldHandler = {
 		[0] = {
-			[15] = IEex_CScreenWorld_OnQuicklootButtonLClick(),
+			[15] = IEex_CScreenWorld_OnQuicklootButtonLClick,
 		},
 --[[
 		[22] = {
-			[15] = IEex_CScreenWorld_OnQuicklootButtonLClick(),
+			[15] = IEex_CScreenWorld_OnQuicklootButtonLClick,
 		},
 --]]
 		[IEex_WorldScreenSpellInfoPanelID] = {
