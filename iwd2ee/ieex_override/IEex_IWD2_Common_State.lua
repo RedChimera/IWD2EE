@@ -13,6 +13,11 @@ function IEex_GetEngineOptions()
 	return IEex_ReadDword(g_pBaldurChitin + 0x1C78)
 end
 
+function IEex_GetEngineStore()
+	local g_pBaldurChitin = IEex_ReadDword(0x8CF6DC)
+	return IEex_ReadDword(g_pBaldurChitin + 0x1C8C)
+end
+
 function IEex_GetEngineWorld()
 	local g_pBaldurChitin = IEex_ReadDword(0x8CF6DC)
 	return IEex_ReadDword(g_pBaldurChitin + 0x1C88)

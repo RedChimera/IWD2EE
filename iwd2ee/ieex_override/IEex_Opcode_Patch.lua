@@ -73,6 +73,26 @@
 
 	IEex_WriteAssembly(0x4B524C, {"!jmp_dword :4B5277 !repeat(2,!nop)"})
 
+	-----------------------------------------------------------------------------------------------------------------------
+	-- Transform op206 / op290 with:                                                                                     --
+	--     Timing mode = 0 (Instant/Limited)                                                                             --
+	--     Duration = 0                                                                                                  --
+	-- into:                                                                                                             --
+	--     Timing mode = 0x1000 (EXPIRE)                                                                                 --
+	--     Duration = m_pObjectGame->m_worldTime.m_gameTime + 1                                                          --
+	--                                                                                                                   --
+	-- This causes the effect to remain for the entirety of the current game time, persisting for (potentially) multiple --
+	-- effect list passes, instead of being removed after one effect list pass. This fixes a bug where pausing during    --
+	-- the tick a spell is being applied causes op206 / op290 style immunity gates to be non-functional.                 --
+	-----------------------------------------------------------------------------------------------------------------------
+
+	IEex_HookRestore(0x4A30A9, 0, 8, {[[
+		!push_registers_iwd2
+		!mov_ecx_esi
+		!call >IEex_Helper_ResolveEffectHook
+		!pop_registers_iwd2
+	]]})
+
 	-----------------
 	-- New Opcodes --
 	-----------------
