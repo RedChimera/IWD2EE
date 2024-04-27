@@ -1,9 +1,45 @@
 
 IEex_Debug_CompressTime = false
-IEex_Debug_Stutter = false
-IEex_Debug_LoadTimes = false
-IEex_Debug_LogPanelInvalidations = false
 IEex_Debug_LogButtonInvalidations = false
+IEex_Debug_LogPanelInvalidations = false
+IEex_Debug_Stutter = false
+IEex_Debug_UpdateLoadTimes = false
+IEex_Debug_UpdateTimes = false
+
+function IEex_Debug_WriteTracePatches()
+
+	if not IEex_Debug_UpdateLoadTimes and not IEex_Debug_UpdateTimes then
+		return
+	end
+
+	local parseLargeLua = function(fileName)
+		local file, fileErr = io.open(fileName, "r")
+		if file == nil then
+			print("File error: \n" .. fileErr)
+			return false
+		end
+		for line in file:lines() do
+			local code, loadErr = loadstring(line)
+			if loadErr then
+				print("Loadstring error: \n" .. loadErr)
+				return false
+			end
+			code()
+		end
+		file:close()
+	end
+
+	parseLargeLua("override/IEex_Trace.lua")
+
+	if IEex_Debug_UpdateTimes then
+		IEex_Helper_RegisterTrace("CChitin_AsynchronousUpdate", 0x78F0E0, 66) -- AI
+		IEex_Helper_RegisterTrace("CChitin_SynchronousUpdate", 0x790B70, 33)  -- Render
+	end
+
+	if IEex_Debug_UpdateLoadTimes then
+		IEex_Helper_RegisterTrace("CInfGame_LoadGame", 0x5AB190, 0)
+	end
+end
 
 (function()
 
@@ -52,28 +88,6 @@ IEex_Debug_LogButtonInvalidations = false
 			!pop_all_registers_iwd2
 		]]})
 		IEex_EnableCodeProtection()
-	end
-
-	if IEex_Debug_LoadTimes then
-
-		local parseLargeLua = function(fileName)
-			local file, fileErr = io.open(fileName, "r")
-			if file == nil then
-				print("File error: \n" .. fileErr)
-				return false
-			end
-			for line in file:lines() do
-				local code, loadErr = loadstring(line)
-				if loadErr then
-					print("Loadstring error: \n" .. loadErr)
-					return false
-				end
-				code()
-			end
-			file:close()
-		end
-
-		parseLargeLua("override/IEex_Trace.lua")
 	end
 
 	if IEex_Debug_LogPanelInvalidations then

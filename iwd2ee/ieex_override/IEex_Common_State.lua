@@ -1604,7 +1604,7 @@ function IEex_AttemptHook(address, hookPart, attemptRestorePart, expectedBytes)
 		local checkAddress = address
 		for _, expectedByte in ipairs(expectedBytes) do
 			if IEex_ReadByte(checkAddress, 0) ~= expectedByte then
-				IEex_MessageBox("Unexpected byte during IEex_AttemptHook at "..IEex_ToHex(address).." ("..IEex_ToHex(checkAddress)..") - not tracing.")
+				print("[?] Unexpected byte during IEex_AttemptHook at "..IEex_ToHex(address).." ("..IEex_ToHex(checkAddress)..") - not tracing.")
 				return
 			end
 			checkAddress = checkAddress + 1

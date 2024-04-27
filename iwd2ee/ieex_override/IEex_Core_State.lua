@@ -1025,6 +1025,9 @@ function IEex_WriteDelayedPatches()
 	IEex_WriteByte(0x764313 + 4, IEex_NEW_SKILLS_SIZE)
 	IEex_WriteByte(0x7644C6 + 2, IEex_NEW_SKILLS_SIZE)
 
+	-- This needs to come after all other patches... even the delayed ones
+	IEex_Debug_WriteTracePatches()
+
 	IEex_EnableCodeProtection()
 
 end
