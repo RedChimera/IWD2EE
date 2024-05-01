@@ -1143,6 +1143,12 @@
 	]]})
 	IEex_Helper_DefineAddress("CVidCell::RenderIconOriginal", IEex_Label("CVidCell::RenderIconOriginal"))
 
+	----------------------------------------
+	-- Allow elves to be raised by stores --
+	----------------------------------------
+
+	IEex_WriteAssembly(0x67E7E2, {"!jmp_byte"})
+
 
 	IEex_EnableCodeProtection()
 
