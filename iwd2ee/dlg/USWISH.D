@@ -411,7 +411,6 @@ IF ~~ THEN BEGIN WishCastSpell8
   IF ~~ THEN REPLY @30361 DO ~IEex_Lua("IEex_HaveSummonerCast(1726)")~ EXIT
   IF ~~ THEN REPLY @30362 DO ~IEex_Lua("IEex_HaveSummonerCast(1715)")~ EXIT
   IF ~~ THEN REPLY @30363 DO ~IEex_Lua("IEex_HaveSummonerCast(1728)")~ EXIT
-  IF ~~ THEN REPLY @30364 DO ~IEex_Lua("IEex_HaveSummonerCast(6855)")~ EXIT
 END
 
 IF ~~ THEN BEGIN WishOneTime
@@ -745,6 +744,24 @@ IEex_Lua("IEex_HaveSummonerCast(10015)")~ EXIT
   IF ~IsPlayerNumber(Protagonist,6)
 Global("US_Wish_Epic_015_P6","GLOBAL",0)~ THEN REPLY @30184 DO ~SetGlobal("US_Wish_Epic_015_P6","GLOBAL",1)
 IEex_Lua("IEex_HaveSummonerCast(10015)")~ EXIT
+  IF ~IsPlayerNumber(Protagonist,1)
+Global("US_Wish_Epic_018_P1","GLOBAL",0)~ THEN REPLY @30364 DO ~SetGlobal("US_Wish_Epic_018_P1","GLOBAL",1)
+IEex_Lua("IEex_HaveSummonerCast(10018)")~ EXIT
+  IF ~IsPlayerNumber(Protagonist,2)
+Global("US_Wish_Epic_018_P2","GLOBAL",0)~ THEN REPLY @30364 DO ~SetGlobal("US_Wish_Epic_018_P2","GLOBAL",1)
+IEex_Lua("IEex_HaveSummonerCast(10018)")~ EXIT
+  IF ~IsPlayerNumber(Protagonist,3)
+Global("US_Wish_Epic_018_P3","GLOBAL",0)~ THEN REPLY @30364 DO ~SetGlobal("US_Wish_Epic_018_P3","GLOBAL",1)
+IEex_Lua("IEex_HaveSummonerCast(10018)")~ EXIT
+  IF ~IsPlayerNumber(Protagonist,4)
+Global("US_Wish_Epic_018_P4","GLOBAL",0)~ THEN REPLY @30364 DO ~SetGlobal("US_Wish_Epic_018_P4","GLOBAL",1)
+IEex_Lua("IEex_HaveSummonerCast(10018)")~ EXIT
+  IF ~IsPlayerNumber(Protagonist,5)
+Global("US_Wish_Epic_018_P5","GLOBAL",0)~ THEN REPLY @30364 DO ~SetGlobal("US_Wish_Epic_018_P5","GLOBAL",1)
+IEex_Lua("IEex_HaveSummonerCast(10018)")~ EXIT
+  IF ~IsPlayerNumber(Protagonist,6)
+Global("US_Wish_Epic_018_P6","GLOBAL",0)~ THEN REPLY @30364 DO ~SetGlobal("US_Wish_Epic_018_P6","GLOBAL",1)
+IEex_Lua("IEex_HaveSummonerCast(10018)")~ EXIT
   IF ~IsPlayerNumber(Protagonist,1)
 Global("US_Wish_Epic_008_P1","GLOBAL",0)~ THEN REPLY @30185 DO ~SetGlobal("US_Wish_Epic_008_P1","GLOBAL",1)
 IEex_Lua("IEex_HaveSummonerCast(10008)")~ EXIT

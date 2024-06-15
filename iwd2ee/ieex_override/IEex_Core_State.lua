@@ -161,6 +161,17 @@ function IEex_Extern_CSpell_UsableBySprite(CSpell, sprite)
 		--IEex_MessageBox(message)
 		return true
 	end
+	
+	if ex_listspll[resref] then
+		local spellLevel = ex_listspll[resref][7]
+		if spellLevel > 0 then
+			local spellsOffset = sprite + 0x4888 + 0x1C * (spellLevel - 1)
+			local spellsKnown = math.floor((IEex_ReadDword(spellsOffset + 0x4) - IEex_ReadDword(spellsOffset)) / 16)
+			if spellsKnown >= 24 then
+				return false
+			end
+		end
+	end
 
 	local itemResRef = resWrapper:getResRef()
 	local itemRes = resWrapper:getRes()

@@ -76,8 +76,8 @@ USRT12_V		RMEW_08	RMIW_08	RARM_08	RSHD_08	RRNG_08	RMSC_08	EOL
 USRT13_V		RMEW_08	RMIW_08	RARM_08	RSHD_08	RRNG_08	RMSC_08	EOL
 USRT14_V		RMEW_09	RMIW_09	RARM_09	RSHD_09	RRNG_09	RMSC_09	EOL
 USRT15_V		RMEW_10	RMIW_10	RARM_10	RSHD_10	RRNG_10	RMSC_10	EOL
-USRT16_V	00ax1h84	00ax1h87	00ax2h93	00Club89	USDagg59	USArow59	USRing57	USPlat59	USBwlx59	EOL
-USRT17_V	00ax1h85	00ax2h94	00Club88	USSwdT59	USLeat59	USBrac57	USBwhx57	USBoot60	USClck58	USShld52	EOL
+USRT16_V	00ax1h84	00ax1h87	00ax2h93	00Club89	USDagg59	USArow59	USRing57	USPlat59	USBwlx59	USIoun58	EOL
+USRT17_V	00ax1h85	00ax2h94	00Club88	USSwdT59	USLeat59	USBrac57	USBwhx57	USClck58	USShld52	EOL
 USRT18_V	00ax1h83	00ax2h85	USFlal59	USPlat58	USShld52	USBelt58	USIoun59	00SwdT96	USRing60	EOL
 USRT19_V	00ax2h86	00Club86	USSwdK59	USChan59	USBelt59	USRing58	USRobe59	USStaf59	USShld60	EOL																						
 
@@ -133,11 +133,11 @@ RSHD_02	00Shld17	00Shld88	00Shld94	00Shld95	00Shld97	00Shld98	EOL
 RSHD_03	00Shld85	00Shld86	00Shld91	USShld40	USShld44	EOL																																					
 RSHD_04	00Shld88	00Shld92	00Shld96	USShld41	USShld46	EOL																																								
 RSHD_05	00Shld87	00Shld89	USShld42	USShld47	EOL																																								
-RSHD_06	USShld45	USShld48	USShld49	EOL																																											
+RSHD_06	USShld48	USShld49	EOL																																											
 RSHD_07	USShld50	USShld51	EOL																																											
 RSHD_08	USShld53	USShld55	EOL																																											
 RSHD_09	USShld56	USShld57	EOL																																										
-RSHD_10	USShld54	USShld58	EOL																																											
+RSHD_10	USShld45	USShld54	USShld58	EOL																																											
 RSHD_11																																												
 RSHD_12	USShld59	EOL																																													
 RSHD_13	USShld52	EOL																																											
@@ -197,14 +197,14 @@ RMSC_01	00Brac02	00Brac09	00Clck01	00Helm07	USBrac35	EOL
 RMSC_02	00Brac03	00Brac05	00Belt02	00Belt03	00Belt04	USBoot44	USBrac36	USBrac37	USBrac44	USIoun45	USRobe41	EOL																																			
 RMSC_03	00Brac04	00Brac10	00Clck02	USBrac45	USHelm45	EOL																																							
 RMSC_04	00Boot01	USBoot45	USBrac46	USBrac47	EOL																																								
-RMSC_05	00Boot01	00Robe99	USBelt45	USBrac43	USClck40	USClck48	USHelm50	EOL																																									
-RMSC_06	00Robe05	00Robe06	00Robe07	USBoot59	USBrac50	USClck50	USRobe47	EOL																																									
-RMSC_07	USBoot46	USBrac52	USClck52	USClck55	USHelm55	USPerm50	USRobe56	EOL																																									
-RMSC_08	USBoot52	USBrac54	USBrac55	USClck53	USHelm51	USIoun52	EOL																																								
-RMSC_09	USClck51	USHelm56	USRobe53	USRobe54	EOL																																									
-RMSC_10	USBrac59	USClck56	USIoun58	EOL																																							
-RMSC_11																																											
-RMSC_12	USBoot60	USBrac57	USClck58	EOL																																											
+RMSC_05	00Boot01	00Robe99	USBelt45	USBrac43	USClck40	USClck48	EOL																																									
+RMSC_06	00Robe05	00Robe06	00Robe07	USBoot59	USBrac50	USClck50	USHelm50	USRobe47	EOL																																									
+RMSC_07	USBoot46	USBrac52	USClck52	USClck55	USPerm50	USRobe56	EOL																																									
+RMSC_08	USBoot52	USBrac54	USBrac55	USClck53	USHelm51	USHelm55	USIoun52	EOL																																								
+RMSC_09	USClck51	USRobe53	USRobe54	EOL																																									
+RMSC_10	USBrac59	USClck56	USHelm56	EOL																																							
+RMSC_11	USIoun58																																											
+RMSC_12	USBrac57	USClck58	EOL																																											
 RMSC_13	USBelt58	USIoun59	EOL																																											
 RMSC_14	USRobe59	EOL																																											
 					

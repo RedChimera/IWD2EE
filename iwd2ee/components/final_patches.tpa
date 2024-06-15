@@ -223,6 +223,7 @@ COPY_EXISTING_REGEXP ~.*\.itm~ ~override~
 	READ_SHORT 0x18 theitemflags
 	READ_SHORT 0x1C thecategory
 	READ_ASCII 0x22 theappearance (2)
+	READ_SHORT 0x22 theappearancenumber
 	PATCH_IF (~%theappearance%~ STRING_EQUAL_CASE ~2A~) OR (~%theappearance%~ STRING_EQUAL_CASE ~3A~) OR (~%theappearance%~ STRING_EQUAL_CASE ~4A~) BEGIN
 		LPF ADD_ITEM_EQEFFECT INT_VAR opcode=288 target=1 timing=2 parameter1=thecategory parameter2=241 savingthrow=(theitemflags << 16) special=1 STR_VAR resource=~USEQTYPE~ END
 	END ELSE PATCH_IF thecategory = 67 BEGIN
@@ -262,7 +263,7 @@ COPY_EXISTING_REGEXP ~.*\.itm~ ~override~
 			PATCH_IF isranged = 1 BEGIN
 				LPF ADD_ITEM_EQEFFECT INT_VAR opcode=288 target=1 timing=2 parameter1=thecategory parameter2=241 savingthrow=(theitemflags << 16) special=4 STR_VAR resource=~USEQTYPE~ END
 			END ELSE PATCH_IF ismelee = 1 BEGIN
-				PATCH_IF (~%theappearance%~ STRING_EQUAL_CASE ~  ~) BEGIN
+				PATCH_IF theappearancenumber = 0 OR theappearancenumber = 0x2020 BEGIN
 					LPF ADD_ITEM_EQEFFECT INT_VAR opcode=288 target=1 timing=2 parameter1=thecategory parameter2=241 savingthrow=(theitemflags << 16) special=6 STR_VAR resource=~USEQTYPE~ END
 				END ELSE BEGIN
 					LPF ADD_ITEM_EQEFFECT INT_VAR opcode=288 target=1 timing=2 parameter1=thecategory parameter2=241 savingthrow=(theitemflags << 16) special=5 STR_VAR resource=~USEQTYPE~ END
@@ -272,7 +273,7 @@ COPY_EXISTING_REGEXP ~.*\.itm~ ~override~
 			END
 		END
 	END
-	PATCH_IF (((theitemflags BAND 0x00000002) = 0x00000002) AND ismelee = 1 AND NOT (~%theappearance%~ STRING_EQUAL_CASE ~  ~)) OR thecategory = 41 OR thecategory = 47 OR thecategory = 49 OR thecategory = 53 BEGIN
+	PATCH_IF (((theitemflags BAND 0x00000002) = 0x00000002) AND ismelee = 1 AND theappearancenumber != 0 AND theappearancenumber != 0x2020) OR thecategory = 41 OR thecategory = 47 OR thecategory = 49 OR thecategory = 53 BEGIN
 		LPF ADD_ITEM_EQEFFECT INT_VAR opcode=500 target=1 timing=0 special=1 STR_VAR resource=~MEMONKAN~ END
 	END
 	UNLESS ~USEQTYPE~

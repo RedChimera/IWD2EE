@@ -1467,10 +1467,13 @@ IEex_MutatorOpcodeFunctions["MEBOULSH"] = {
 			local damageBonus = IEex_ReadSignedByte(originatingEffectData + 0x18, 0x0)
 			local dicesize = IEex_ReadByte(originatingEffectData + 0x19, 0x0)
 			local dicenumber = IEex_ReadByte(originatingEffectData + 0x1A, 0x0)
+			local luck = 0
+--[[
 			local luck = IEex_GetActorStat(actorID, 32)
 			if IEex_GetActorSpellState(actorID, 64) then
 				luck = 255
 			end
+--]]
 			for i = 1, dicenumber, 1 do
 				local diceRoll = math.random(dicesize) + luck
 				if diceRoll > dicesize then

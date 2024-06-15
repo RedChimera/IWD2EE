@@ -821,7 +821,7 @@ function IEex_LevelUp_ExtraFeatListener()
 					IEex_SetPanelActive(newWizardSpellsPanel, true)
 					IEex_SetEngineScrollbarFocus(screenCharacter, IEex_GetControlFromPanel(newWizardSpellsPanel, 31))
 					IEex_PanelInvalidate(newWizardSpellsPanel)
-				elseif (ex_class_level_up["class"] == 2 and ex_bard_spell_replacement_on_level_up and IEex_GetActorStat(actorID, 97) >= ex_bard_spell_replacement_levels_behind + 2) or (ex_class_level_up["class"] == 10 and ex_sorcerer_spell_replacement_on_level_up and IEex_GetActorStat(actorID, 105) >= ex_sorcerer_spell_replacement_levels_behind + 1) then
+				elseif (ex_class_level_up["class"] == 2 and ex_bard_spell_replacement_on_level_up and IEex_GetActorStat(actorID, 97) >= ex_bard_spell_replacement_levels_behind + 1) or (ex_class_level_up["class"] == 10 and ex_sorcerer_spell_replacement_on_level_up and IEex_GetActorStat(actorID, 105) >= ex_sorcerer_spell_replacement_levels_behind + 1) then
 					ex_alternate_spell_menu_class = ex_class_level_up["class"]
 					ex_menu_num_wizard_spells_remaining = 0
 					ex_menu_in_second_replacement_step = false
@@ -834,6 +834,9 @@ function IEex_LevelUp_ExtraFeatListener()
 							ex_menu_num_wizard_spells_remaining = ex_menu_num_wizard_spells_remaining + ex_bard_spell_replacement_progression[i]
 						end
 						replacementCasterLevel = classLevel - ex_bard_spell_replacement_levels_behind
+						if classLevel == 7 and replacementCasterLevel <= 1 then
+							replacementCasterLevel = 2
+						end
 						maxSpell2DA = IEex_2DADemand("MXSPLBRD")
 					else
 						classLevel = IEex_GetActorStat(actorID, 105)

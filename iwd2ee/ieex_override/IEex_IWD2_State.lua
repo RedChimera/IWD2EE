@@ -6989,6 +6989,8 @@ ex_animation_vidcells = {
 [0xF000] = {0x40E, 0x4E8, 0x5C2, 0x69C, 0x776, 0x850, 0x92A, 0xA04, 0xADE, 0xBB8, 0xC92, 0xD6C, 0xE46, 0xF20, 0xFFA, 0x10D4, 0x11AE, 0x1288, 0x1362, 0x143C, 0x1516, 0x15F0, 0x16CA, 0x17A4, 0x187E, 0x1958, 0x1A32, 0x1B0C, 0x1C16, 0x1CF0, 0x1DCA, 0x1EA4, 0x1F7E, 0x2058, 0x2132, 0x220C, 0x22E6, 0x23C0, 0x249A, 0x2574, 0x264E, 0x2728, 0x2802, 0x28DC, 0x29B6, 0x2A90, 0x2B6A, 0x2C44, 0x2D1E, 0x2DF8, 0x2ED2, 0x2FAC, 0x3086, 0x3160, 0x323A, 0x3314},
 }
 ex_animation_size = {[61395] = {48, 5, 7, }, [57976] = {48, 5, 10, }, [25872] = {16, 3, 9, }, [29696] = {16, 3, 8, }, [29952] = {16, 3, 6, }, [59545] = {36, 5, 7, }, [61213] = {24, 3, 7, }, [60313] = {24, 3, 7, }, [58504] = {24, 3, 11, }, [24848] = {16, 3, 9, }, [28672] = {16, 3, 7, }, [24592] = {16, 3, 9, }, [61411] = {12, 3, 7, }, [58248] = {16, 3, 4, }, [29184] = {24, 3, 10, }, [25104] = {16, 3, 9, }, [20739] = {16, 3, 9, }, [24852] = {16, 3, 9, }, [29473] = {16, 3, 7, }, [20483] = {16, 3, 9, }, [24596] = {16, 3, 9, }, [59528] = {24, 3, 7, }, [21251] = {16, 3, 9, }, [32256] = {24, 3, 10, }, [60329] = {24, 3, 7, }, [25108] = {16, 3, 9, }, [58520] = {16, 3, 7, }, [30976] = {24, 3, 2, }, [61427] = {64, 7, 7, }, [31232] = {24, 3, 5, }, [58008] = {24, 3, 7, }, [32516] = {36, 7, 13, }, [17920] = {16, 3, 0, }, [18176] = {16, 3, 0, }, [31236] = {24, 3, 5, }, [17408] = {16, 3, 0, }, [32520] = {24, 3, 4, }, [17664] = {16, 3, 0, }, [32553] = {16, 3, 9, }, [63384] = {16, 3, 7, }, [59337] = {24, 3, 7, }, [58280] = {24, 3, 4, }, [58924] = {24, 3, 7, }, [16384] = {16, 3, 0, }, [24835] = {16, 3, 9, }, [29456] = {24, 3, 10, }, [16640] = {16, 3, 0, }, [20755] = {16, 3, 9, }, [24579] = {16, 3, 9, }, [60427] = {36, 5, 9, }, [25347] = {16, 3, 9, }, [21267] = {16, 3, 9, }, [32528] = {16, 3, 10, }, [59320] = {24, 3, 9, }, [4610] = {72, 5, 14, }, [59353] = {16, 3, 7, }, [62731] = {48, 3, 7, }, [18432] = {16, 3, 0, }, [4096] = {36, 5, 8, }, [4097] = {36, 5, 8, }, [18192] = {16, 3, 0, }, [59609] = {24, 3, 7, }, [17424] = {16, 3, 0, }, [32536] = {24, 3, 8, }, [62491] = {24, 3, 7, }, [20736] = {16, 3, 9, }, [62747] = {48, 3, 7, }, [20480] = {16, 3, 9, }, [21248] = {16, 3, 9, }, [24851] = {16, 3, 9, }, [29472] = {24, 3, 10, }, [16656] = {16, 3, 0, }, [20992] = {16, 3, 9, }, [58386] = {16, 3, 7, }, [60459] = {24, 3, 7, }, [25363] = {16, 3, 9, }, [29187] = {24, 3, 10, }, [59592] = {28, 3, 7, }, [57362] = {16, 3, 7, }, [59385] = {24, 3, 7, }, [60467] = {48, 5, 7, }, [32515] = {16, 3, 11, }, [60401] = {16, 3, 7, }, [50688] = {16, 3, 6, }, [50944] = {16, 3, 5, }, [30979] = {24, 3, 2, }, [50432] = {16, 3, 8, }, [49664] = {12, 3, 10, }, [49920] = {12, 3, 4, }, [59641] = {16, 3, 7, }, [49152] = {16, 3, 8, }, [49408] = {12, 3, 4, }, [25602] = {16, 3, 9, }, [59368] = {24, 3, 7, }, [20752] = {16, 3, 9, }, [51712] = {16, 3, 6, }, [51968] = {16, 3, 6, }, [59244] = {24, 3, 7, }, [32523] = {28, 3, 15, }, [59426] = {16, 3, 7, }, [51456] = {16, 3, 6, }, [21264] = {16, 3, 9, }, [50704] = {16, 3, 6, }, [60681] = {24, 3, 7, }, [50960] = {16, 3, 5, }, [54272] = {16, 3, 8, }, [25346] = {16, 3, 9, }, [58418] = {16, 3, 7, }, [16641] = {16, 3, 0, }, [60491] = {24, 3, 7, }, [25090] = {16, 3, 9, }, [59624] = {28, 3, 7, }, [53248] = {16, 3, 8, }, [60392] = {16, 3, 7, }, [54016] = {16, 3, 8, }, [53760] = {16, 3, 8, }, [51728] = {16, 3, 6, }, [51216] = {16, 3, 5, }, [51472] = {16, 3, 6, }, [60697] = {24, 3, 7, }, [60507] = {24, 3, 7, }, [57344] = {24, 3, 7, }, [29698] = {16, 3, 8, }, [58376] = {16, 3, 7, }, [59144] = {24, 3, 7, }, [57608] = {48, 5, 7, }, [61465] = {16, 3, 5, }, [58120] = {16, 3, 7, }, [24850] = {16, 3, 9, }, [59458] = {16, 3, 7, }, [20481] = {16, 3, 9, }, [24594] = {16, 3, 9, }, [21249] = {16, 3, 9, }, [25362] = {16, 3, 9, }, [29186] = {24, 3, 10, }, [20993] = {16, 3, 9, }, [25106] = {16, 3, 9, }, [59400] = {16, 3, 7, }, [60168] = {24, 3, 7, }, [57938] = {36, 3, 7, }, [59160] = {24, 3, 7, }, [57624] = {48, 5, 7, }, [32514] = {36, 5, 8, }, [61481] = {16, 3, 15, }, [58136] = {16, 3, 7, }, [57880] = {36, 3, 7, }, [62216] = {48, 3, 5, }, [30978] = {24, 3, 2, }, [58268] = {16, 3, 4, }, [60952] = {24, 3, 7, }, [59672] = {16, 3, 7, }, [32518] = {16, 3, 11, }, [59416] = {16, 3, 7, }, [60184] = {24, 3, 7, }, [32551] = {16, 3, 9, }, [60217] = {36, 3, 7, }, [58664] = {36, 3, 7, }, [58408] = {16, 3, 7, }, [32768] = {24, 3, 5, }, [33024] = {16, 3, 5, }, [24833] = {16, 3, 9, }, [32548] = {16, 3, 9, }, [58153] = {16, 3, 7, }, [20753] = {16, 3, 9, }, [61976] = {24, 3, 6, }, [59936] = {24, 3, 7, }, [59553] = {16, 3, 7, }, [57929] = {24, 3, 7, }, [20497] = {16, 3, 9, }, [59577] = {16, 3, 7, }, [61726] = {24, 3, 5, }, [21265] = {16, 3, 9, }, [25089] = {16, 3, 9, }, [61710] = {16, 3, 5, }, [60337] = {24, 3, 0, }, [21009] = {16, 3, 9, }, [24837] = {16, 3, 9, }, [61224] = {24, 3, 13, }, [16642] = {16, 3, 0, }, [60200] = {24, 3, 7, }, [32559] = {16, 3, 9, }, [24581] = {16, 3, 9, }, [31491] = {16, 3, 15, }, [31488] = {16, 3, 15, }, [25349] = {16, 3, 9, }, [36864] = {24, 5, 6, }, [60712] = {24, 3, 7, }, [58457] = {16, 3, 7, }, [25093] = {16, 3, 9, }, [59225] = {24, 3, 7, }, [60365] = {24, 3, 7, }, [57656] = {48, 5, 7, }, [58217] = {16, 3, 7, }, [58201] = {16, 3, 7, }, [57400] = {16, 3, 7, }, [58168] = {16, 3, 3, }, [32257] = {24, 3, 10, }, [57912] = {36, 3, 7, }, [60936] = {24, 3, 7, }, [58299] = {16, 3, 4, }, [59192] = {24, 3, 7, }, [59176] = {24, 3, 7, }, [8960] = {24, 3, 7, }, [58441] = {16, 3, 7, }, [50176] = {12, 3, 4, }, [31235] = {24, 3, 5, }, [31234] = {24, 3, 5, }, [51200] = {16, 3, 5, }, [32531] = {24, 3, 13, }, [59448] = {16, 3, 7, }, [20498] = {16, 3, 9, }, [59481] = {16, 3, 7, }, [20737] = {16, 3, 9, }, [29953] = {16, 3, 6, }, [61448] = {16, 3, 5, }, [25603] = {16, 3, 9, }, [40960] = {24, 3, 8, }, [59656] = {16, 3, 7, }, [60241] = {16, 3, 5, }, [60376] = {16, 3, 7, }, [58489] = {16, 3, 7, }, [62475] = {24, 3, 7, }, [57424] = {64, 5, 9, }, [57672] = {36, 5, 7, }, [24849] = {16, 3, 9, }, [4609] = {72, 5, 14, }, [61347] = {16, 3, 7, }, [58184] = {16, 3, 3, }, [59512] = {24, 3, 7, }, [24593] = {16, 3, 9, }, [20482] = {16, 3, 9, }, [57961] = {24, 3, 7, }, [25361] = {16, 3, 9, }, [29185] = {24, 3, 10, }, [46592] = {16, 3, 0, }, [24595] = {16, 3, 9, }, [25105] = {16, 3, 9, }, [59249] = {16, 3, 7, }, [46080] = {16, 3, 0, }, [16402] = {16, 3, 0, }, [46336] = {16, 3, 0, }, [57416] = {64, 7, 7, }, [16658] = {16, 3, 0, }, [20994] = {16, 3, 9, }, [45824] = {16, 3, 0, }, [60265] = {16, 3, 5, }, [45056] = {24, 5, 0, }, [46096] = {16, 3, 0, }, [45312] = {24, 5, 0, }, [24853] = {16, 3, 9, }, [25345] = {16, 3, 9, }, [61264] = {16, 3, 0, }, [32513] = {16, 3, 8, }, [59688] = {16, 3, 7, }, [29442] = {36, 3, 10, }, [24580] = {16, 3, 9, }, [4608] = {72, 5, 14, }, [63370] = {16, 3, 7, }, [61363] = {24, 3, 7, }, [25605] = {16, 3, 9, }, [30977] = {24, 3, 2, }, [21008] = {16, 3, 9, }, [24578] = {16, 3, 9, }, [25088] = {16, 3, 9, }, [31233] = {24, 3, 5, }, [16896] = {16, 3, 0, }, [46608] = {16, 3, 0, }, [60233] = {16, 3, 7, }, [32517] = {16, 3, 11, }, [24834] = {16, 3, 9, }, [59265] = {16, 3, 7, }, [16386] = {16, 3, 0, }, [46352] = {16, 3, 0, }, [45568] = {16, 3, 0, }, [45584] = {16, 3, 0, }, [16400] = {16, 3, 0, }, [45840] = {16, 3, 0, }, [60281] = {16, 3, 5, }, [41216] = {24, 5, 6, }, [57378] = {16, 3, 7, }, [20496] = {16, 3, 9, }, [58472] = {24, 3, 11, }, [25856] = {16, 3, 9, }, [61280] = {16, 3, 0, }, [24832] = {16, 3, 9, }, [20738] = {16, 3, 9, }, [21250] = {16, 3, 9, }, [25109] = {16, 3, 9, }, [32554] = {24, 3, 5, }, [24576] = {16, 3, 9, }, [57448] = {24, 3, 7, }, [25360] = {16, 3, 9, }, [25344] = {16, 3, 9, }, [24597] = {16, 3, 9, }, [46848] = {16, 3, 0, }, [20754] = {16, 3, 9, }, [57993] = {24, 3, 7, }, [63354] = {16, 3, 7, }, [32522] = {28, 3, 15, }, [20499] = {16, 3, 9, }, [24836] = {16, 3, 9, }, [29697] = {16, 3, 8, }, [59281] = {16, 3, 7, }, [21266] = {16, 3, 9, }, [32558] = {36, 5, 9, }, [59496] = {24, 3, 7, }, [57896] = {36, 3, 7, }, [21010] = {16, 3, 9, }, [25348] = {16, 3, 9, }, [61197] = {24, 3, 7, }, [57690] = {36, 5, 7, }, [30208] = {16, 3, 6, }, [25092] = {16, 3, 9, }, [24577] = {16, 3, 9, }, [59308] = {24, 3, 7, }, [61296] = {16, 3, 0, }, [32519] = {24, 3, 13, }, [61379] = {36, 3, 7, }, [61329] = {16, 3, 10, }, [61961] = {24, 3, 6, }, [32562] = {24, 3, 9, }, [58653] = {36, 3, 7, }, }
+ex_new_animation_size = {[58520] = {16, 3, 9, }, [59337] = {24, 3, 9, }, [59368] = {24, 3, 9, }, [60265] = {16, 3, 9, }, [60281] = {16, 3, 9, }, [60681] = {24, 3, 9, }, }
+
 ex_modified_default_animations = {[57976] = true, }
 function MEENLARG(effectData, creatureData, isSpecialCall)
 	if not isSpecialCall then return end
@@ -17163,6 +17165,7 @@ ex_attopp_timer = {}
 ex_attopp_repeat_timer = {}
 ex_attopp_casting = {}
 ex_attopp_target = {}
+ex_attopp_range = {}
 ex_attopp_opportunist = {}
 
 function IEex_CheckMonkAttackBonus(creatureData)
@@ -17744,7 +17747,11 @@ function MEAPRBON(effectData, creatureData)
 		end)
 	end
 
-	if IEex_ReadByte(animationData + 0x7, 0x0) ~= 9 then
+	if IEex_ReadByte(animationData + 0x6, 0x0) ~= 9 or IEex_ReadByte(animationData + 0x7, 0x0) ~= 9 then
+		local animation = IEex_ReadDword(creatureData + 0x5C4)
+		if ex_new_animation_size[animation] then
+			movementRate = movementRate + ex_new_animation_size[animation][3] - ex_animation_size[animation][3]
+		end
 		local addMovementList = {}
 		local setMovement = -1
 		local multiplyMovementList = {}
@@ -18280,12 +18287,14 @@ function IEex_ExtraAttacks(creatureData)
 			local tick = IEex_GetGameTick()
 			if headerType ~= 1 or not IEex_IsSprite(actionTargetID, false) then
 				ex_attopp_target[targetID] = nil
+				ex_attopp_range[targetID] = nil
 			else
 				if ex_attopp_repeat_timer[targetID] == nil then
 					ex_attopp_repeat_timer[targetID] = {}
 				end
 				if IEex_GetDistance(targetX, targetY, actionTargetX, actionTargetY) <= range * 20 + 40 then
 					ex_attopp_target[targetID] = actionTargetID
+					ex_attopp_range[targetID] = range
 					local animationSequence = IEex_ReadByte(IEex_GetActorShare(actionTargetID) + 0x50F4, 0x0)
 					local actionTargetHasRangedWeapon = false
 					if animationSequence == 0 or animationSequence == 8 or animationSequence == 11 or animationSequence == 12 or animationSequence == 13 then
@@ -18352,7 +18361,7 @@ function IEex_ExtraAttacks(creatureData)
 						end
 					end
 				else
-					if ex_attopp_target[targetID] == actionTargetID and not ignoreFleeingOpportunity and (ex_attopp_repeat_timer[targetID][actionTargetID] == nil or tick - ex_attopp_repeat_timer[targetID][actionTargetID] >= 30) then
+					if ex_attopp_target[targetID] == actionTargetID and not ignoreFleeingOpportunity and (ex_attopp_repeat_timer[targetID][actionTargetID] == nil or tick - ex_attopp_repeat_timer[targetID][actionTargetID] >= 30) and ex_attopp_range[targetID] == range then
 						if ex_attopp_count[targetID] == nil or (ex_attopp_timer[targetID] ~= nil and tick - ex_attopp_timer[targetID] >= 100) then
 							ex_attopp_count[targetID] = 0
 							ex_attopp_timer[targetID] = tick
@@ -18365,10 +18374,12 @@ function IEex_ExtraAttacks(creatureData)
 						end
 					end
 					ex_attopp_target[targetID] = nil
+					ex_attopp_range[targetID] = nil
 				end
 			end
 		else
 			ex_attopp_target[targetID] = nil
+			ex_attopp_range[targetID] = nil
 		end
 	end
 	if ex_record_attacks_made[targetID] == nil then
@@ -18984,6 +18995,12 @@ function IEex_ExtraAttacks(creatureData)
 ["source_id"] = targetID
 })
 --]]
+		IEex_ApplyEffectToActor(targetID, {
+["opcode"] = 136,
+["target"] = 2,
+["timing"] = 1,
+["source_id"] = targetID
+})
 		IEex_ApplyEffectToActor(actionTargetID, {
 ["opcode"] = 500,
 ["target"] = 2,
@@ -26198,10 +26215,13 @@ function MEDEFLEC(originatingEffectData, effectData, creatureData)
 		previous_attacks_deflected["" .. targetID] = {}
 	end
 	if opcode == 12 and effectRES == "IEEX_DAM" and ((damage_type == 0 and bit.band(types_blocked, 0x2000) > 0) or (damage_type ~= 0 and bit.band(types_blocked, damage_type) > 0)) and ((bit.band(savingthrow, 0x10000) > 0 and delay ~= 0) or (bit.band(savingthrow, 0x10000) == 0 and doDeflect)) then
+		if bit.band(savingthrow, 0x400000) > 0 and damage < IEex_ReadSignedWord(creatureData + 0x5C0, 0x0) then return false end
 --		effectRES = IEex_ReadLString(effectData + 0x6C, 8)
 		effectRES = "IEEX_DAM"
 		previous_attacks_deflected["" .. targetID][effectRES] = IEex_GetGameTick()
+		IEex_DS("aga")
 	elseif bit.band(savingthrow, 0x80000) > 0 and previous_attacks_deflected["" .. targetID]["IEEX_DAM"] == IEex_GetGameTick() and restype == 2 then
+		IEex_DS("ugu")
 		isOnHitEffect = true
 	end
 	if opcode ~= 12 and isOnHitEffect == false then return false end
@@ -26237,8 +26257,7 @@ function MEDEFLEC(originatingEffectData, effectData, creatureData)
 --		if hasArmor or ((spriteHands - handsUsed) < 2) then return false end
 		if ((spriteHands - handsUsed) < 1) then return false end
 	end
-	if bit.band(savingthrow, 0x400000) > 0 and damage < IEex_ReadSignedWord(creatureData + 0x5C0, 0x0) then return false end
-	
+	if opcode == 12 and bit.band(savingthrow, 0x400000) > 0 and damage < IEex_ReadSignedWord(creatureData + 0x5C0, 0x0) then return false end
 	if bit.band(savingthrow, 0x800000) > 0 then
 		local stateValue = bit.bor(IEex_ReadDword(creatureData + 0x5BC), IEex_ReadDword(creatureData + 0x920))
 		if bit.band(stateValue, 0xFE9) ~= 0 then return false end

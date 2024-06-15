@@ -9,6 +9,7 @@ The big changes described above are only applied if you install certain componen
 ## Languages
 
 - English
+- Italian
 - Russian
 
 ## Installation

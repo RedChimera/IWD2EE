@@ -1,0 +1,1143 @@
+//All new strings that have been added to IWD2EE after translations have begun should
+// be put in here to make them easier for translators to find.
+@539=~RANGER:
+Il ranger e' un cacciatore e uomo dei boschi abile con le armi ed esperto nel seguire tracce e nei segreti dei boschi. Il ranger spesso protegge e guida i viaggiatori perduti e gli onesti popolani. Un ranger deve essere forte e saggio nelle vie della natura per vivere una vita piena.
+NOTA: La Saggezza e' la caratteristica utilizzata per determinare le capacita' magiche di un ranger. Influenza il loro massimo livello di lancio la CD dei tiri salvezza degli incantesimi e il numero di incantesimi bonus.
+Punti ferita per livello: 1-10
+Vantaggi:
+* Competente con tutte le armi semplici e da guerra armature leggere armature medie e scudi.
+* I ranger possono scegliere un nemico prescelto al primo livello. Ottengono un bonus di +1 al danno contro le creature di quel tipo. I ranger ottengono un ulteriore nemico prescelto ogni cinque livelli e il bonus contro i precedenti nemici prescelti sale di 1.
+* I ranger possono combattere con due armi come se avessero i talenti Ambidestria e Combattere con Due Armi se indossano armature leggere o nessuna armatura.
+* 2° livello: Lanciare Incantesimi. I Ranger acquisiscono la capacita' di lanciare incantesimi.
+* 6° livello: Il ranger puo' acquisire il talento Attacco Turbinante purche' soddisfi i requisiti di Destrezza ignorando tutti gli altri requisiti.
+* 6° livello: Disporre Trappole Naturali. Questa capacita' prepara una trappola che attivata da un nemico intrappola tutti i nemici entro 20 piedi per 5 round se falliscono il Tiro Salvezza su Riflessi. La CD del tiro salvezza e' 6 piu' l'abilita' Conoscenza delle Terre Selvagge del ranger. Il ranger ottiene un uso addizionale in Disporre Trappole Naturali ogni 6 livelli dopo il 6.
+* 7° livello: Passo nel Bosco. Il ranger diventa immune a Intralciare Ragnatela e Crescita di Spine.
+* 9° livello: Il ranger puo' acquisire i talenti Combattere con Due Armi Migliorato e Lanci Multipli anche se non soddisfa i prerequisiti.
+* 15° livello: Il ranger puo' acquisire i talenti Combattere con Due Armi Migliorato e Lanci Multipli una seconda volta cosa che nessun'altra classe puo' fare.
+Svantaggi:
+* I ranger guadagnano talenti piu' lentamente dei guerrieri.
+* I ranger cominciano senza la competenza nelle armature pesanti.~
+@10384=~La Tunica del Mago della Resistenza al Freddo e' un oggetto comune nella regione della Costa della Spada specialmente viaggiando verso Neverwinter e la Valle del Vento Gelido. Molti giovani maghi la ricevono in dono dai loro istruttori quando hanno completato i loro primi cinque anni di studio.
+
+STATISTICHE:
+
+Resistenza: 20/- Resistenza al Freddo
+Tutti i danni da freddo inflitti dal personaggio aumentano del 20%
+Peso: 135 Kg~
+@10717=~Pugnale delle Fiamme Gemelle +5~
+@10718=~Un tipico pugnale e' normalmente dotato di una lama aguzza a doppio taglio a differenza di un coltello che possiede una singola lama ed e' leggermente piu' corto di un pugnale.
+
+STATISTICHE:
+
+Danno: 1d4 +5
+Attacco Base: +5
+Incantamento: +5
+Tipo di Danno: Perforante
+Speciale:
+Fiamme Gemelle: Infligge +1d6 danni da fuoco. Se il personaggio impugna due armi anche l'altra arma infligge +1d6 danni da fuoco.
+Peso: 045 Kg
+Talenti Richiesti: Armi Semplici Lama Piccola
+Tipo: A una mano~
+@10809=~Assassino Silente +3~
+@10810=~La storia di Assassino Silente e' una storia assai diffusa che potrebbe essere o non essere vera. La storia narra di due fratelli che rivaleggiavano per l'attenzione e per il trono del loro padre morente. Quando il maggiore venne nominato re dal sovrano morente il minore infuriato giuro' vendetta e promise di prendersi il trono con le sue forze. A tale scopo commissiono' la creazione di Assassino Silente per assassinare il fratello.
+Esistono molte storie di questo tipo in tutti i reami e in vari periodi storici. Chi puo' dire se si tratta di leggende o di realta'? In ogni caso Assassino Silente e' davvero un'arma ideale per gli assassini. L'arma conferisce a chi la impugna la capacita' di fondersi nelle ombre e di muoversi silenziosamente come un gatto che segue la sua preda.
+
+STATISTICHE:
+
+Danno: 1d6 +3
+Attacco Base: +3
+Incantamento: +3
+Tipo di Danno: Perforante
+Speciale:
+Muoversi Silenziosamente: +6
+Nascondersi: +6
+Pugnalata alle Spalle: Se chi la impugna attacca mentre e' nascosto o invisibile e colpisce una creatura alla schiena con quest'arma infligge 6d6 danni aggiuntivi.
+Peso: 135 Kg
+Talenti Richiesti: Armi Semplici Lama Piccola
+Tipo: A una mano~
+@10811=~Lama dell'Assassino +5~
+@10812=~La storia di Lama dell'Assassino e' una storia assai diffusa che potrebbe essere o non essere vera. La storia narra di due fratelli che rivaleggiavano per l'attenzione e per il trono del loro padre morente. Quando il maggiore venne nominato re dal sovrano morente il minore infuriato giuro' vendetta e promise di prendersi il trono con le sue forze. A tale scopo commissiono' la creazione di Lama dell'Assassino per assassinare il fratello.
+Esistono molte storie di questo tipo in tutti i reami e in vari periodi storici. Chi puo' dire se si tratta di leggende o di realta'? In ogni caso Lama dell'Assassino e' davvero un'arma ideale per gli assassini. L'arma conferisce a chi la impugna la capacita' di fondersi nelle ombre e di muoversi silenziosamente come un gatto che segue la sua preda.
+
+STATISTICHE:
+
+Danno: 1d6 +5
+Attacco Base: +5
+Incantamento: +5
+Tipo di Danno: Perforante
+Speciale:
+Muoversi Silenziosamente: +12
+Nascondersi: +12
+Pugnalata alle Spalle: Se chi la impugna attacca mentre e' nascosto o invisibile e colpisce una creatura alla schiena con quest'arma infligge 10d6 danni aggiuntivi.
+Peso: 135 Kg
+Talenti Richiesti: Armi Semplici Lama Piccola
+Tipo: A una mano~
+@11386=~La Mazza della Confusione e' stata costruita dall'orchessa Shavauntea come "regalo" per suo marito Grothak lo Stupido. La sua speranza era che la mazza potesse "mettere un po' di buon senso dentro la sua testa vuota".
+Shavauntea rimase sorpresa che l'arma avesse l'effetto opposto quando La calo' pesantemente sulla testa di suo marito che non sospettava nulla. La mazza venne creduta distrutta nella battaglia tra i due amanti dopo che Grothak riprese i sensi. Ovviamente non e' cosi'.
+
+STATISTICHE:
+
+Danno: 1D6 +5
+Attacco Base: +5
+Incantamento: +5
+Tipo di danno: Contundente
+Speciale:
+Contundente: 66% di probabilita' che il bersaglio subisca +3d6 danni contundenti
+Incantesimi: 50% di possibilita' che il bersaglio diventi Confuso per 1 round (Volonta' CD 33)
+Impatto: Aumenta le possibilita' di mettere a segno un colpo critico
+Peso: 27 Kg
+Talenti Richiesti: Armi Semplici Mazza
+Tipo: A una mano~
+@12268=~Le bacchette sono lunghe circa 35 cm e sono sottili. Sono di avorio o legno e hanno normalmente la punta ricoperta di qualche materiale come metallo cristallo pietra ecc. Sono fragili e si rompono facilmente spesso vengono conservate in apposite custodie.
+Le bacchette sono alimentate da cariche e ogni utilizzo costa una o piu' cariche (a seconda dell'oggetto). Quando una bacchetta esaurisce le cariche non e' piu' possibile utilizzarla e viene distrutta.
+
+STATISTICHE:
+
+Fa si' che una creatura subisca il 30% in piu' di danni da fuoco freddo elettricita' e acido per 20 round (nessun tiro salvezza non cumulativo)
+Raggio di Azione: 30 metri
+Peso: 045 Kg~
+@12639=~Proiettili Distruttivi +5~
+@12640=~Strane correnti magiche sono state intrappolate all'interno di questo proiettile e sembrano averlo reso leggermente piu' bilanciato e leggero quando sfreccia contro un avversario.
+
+STATISTICHE:
+
+Danno: 1d4 +5
+Attacco Base: +5
+Incantamento: +5
+Tipo di Danno: Da lancio (contundente)
+Speciale:
+Infligge danni tripli in caso di colpo critico
+Peso: 0
+Dispositivo: Fionda~
+@35653=~Repulsione~
+@36653=~Repulsione
+(Abiurazione)
+Livello: Chr 6 Str/Mag 7 Helm 5
+Raggio di Azione: Incantatore
+Durata: 3 round
+Tempo di Lancio: 6
+Area di Effetto: Raggio di 6 m
+Tiro Salvezza: Tempra nega
+
+Questo incantesimo conferisce all'incantatore un'aura che respinge i nemici vicini scagliandoli lontano dall'incantatore. Qualsiasi nemico che entra nell'area d'effetto deve effettuare un tiro salvezza sulla Tempra con CD -5 o essere respinto.~
+@55716=~Lancia l'incantesimo <EXCCSPELL>~
+@1010=~Cerchio di Ossa~
+@1011=~Circolo di ossa
+(Necromanzia)
+Livello: Chr 3
+Raggio di Azione: Incantatore
+Durata: 3 round
+Tempo di Lancio: 3
+Area di Effetto: Raggio di 90 cm
+Tiro Salvezza: Nessuno
+
+Questo incantesimo evoca una barriera di ossa fluttuanti che ruotano rapidamente attorno all'incantatore. Chiunque si avvicini al suo cammino subisce 2d6 danni contundenti e 2d6 danni taglienti per round. Questo incantesimo non provoca attacchi di opportunita'.~
+@1016=~Veleno~
+@1017=~Veleno
+(Necromanzia)
+Livello: Chr 4 Drd 3
+Raggio di Azione: Contatto
+Durata: 30 secondi
+Tempo di Lancio: 7
+Area di Effetto: 1 creatura
+Tiro Salvezza: Tempra nega
+
+Questo incantesimo conferisce all'incantatore la capacita' di toccare una creatura e avvelenarla istantaneamente. Il veleno infligge 2 danni al secondo per 30 secondi quindi si dissipa dal corpo del bersaglio. Per ogni 6 livelli dell'incantatore il veleno infligge un altro punto di danno al secondo fino a un massimo di 7 danni al secondo al livello 30. Un tiro salvezza sulla Tempra effettuato con successo nega qualsiasi effetto. Questo incantesimo non provoca attacchi di opportunita'.~
+@1022=~Cerchio di Lame~
+@1023=~Cerchio di Lame
+(Invocazione)
+Livello: Chr 6 Pal 5 Helm 6 Tempus 6
+Raggio di Azione: Incantatore
+Durata: 2 round
+Tempo di Lancio: 9
+Area di Effetto: 90 cm. di raggio
+Tiro Salvezza: Riflessi dimezza
+
+Questo incantesimo evoca un muro di lame circolari e affilate come rasoi che vorticano e lampeggiano attorno all'incantatore. Qualsiasi creatura che tenti di attraversare la barriera di lame subisce 10d8 danni con un tiro salvezza sui Riflessi effettuato con successo per dimezzare i danni. Questo incantesimo non provoca attacchi di opportunita'.~
+@1024=~Ira spirituale~
+@1025=~Ira spirituale
+(Invocazione)
+Livello: Drd 6 Pal 6 Helm 7 Tempus 6
+Raggio di Azione: Visuale dell'incantatore
+Durata: Istantanea
+Tempo di Lancio: 2
+Area di Effetto: Speciale
+Tiro Salvezza: Riflessi dimezza
+
+Al completamento di questo incantesimo l'incantatore diventa un centro di energia spirituale che poi si irradia dall'incantatore in quattro direzioni come fulmini. L'incantatore specifica la direzione di uno dei dardi e gli altri dardi sparano in direzione opposta e perpendicolare a quella direzione completando uno schema a forma di croce. Tutte le creature nel percorso dei dardi subiscono 5d20 danni magici con un tiro salvezza sui Riflessi dimezzato. Le creature dello stesso allineamento morale (buono neutrale malvagio) dell'incantatore non sono influenzate dall'incantesimo. Questo incantesimo non provoca attacchi di opportunita'.~
+@1136=~Ira di Malavon~
+@1137=~Ira di Malavon
+(Invocazione)
+Livello: Str/Mag 7
+Raggio di Azione: Incantatore
+Durata: Istantanea
+Tempo di Lancio: 1
+Area di Effetto: Raggio di 45 m
+Tiro Salvezza: Riflessi dimezza
+
+La Furia di Malavon e' stata creata dallo stregone elfo oscuro Malavon. Spara dardi di pura energia dal corpo dell'incantatore in tutte le direzioni ferendo allo stesso modo amici e nemici. I piccoli cunei magici infliggono 25d4 danni perforanti a tutto cio' che si trova sul loro cammino (tiro salvezza sui Riflessi con CD +2 per dimezzare). Questo incantesimo e' particolarmente utile quando un mago e' circondato da nemici e non provoca attacchi di opportunita'.
+Come la maggior parte degli incantesimi creati dai drow l'Ira di Malavon e' stata progettata per aggirare la resistenza agli incantesimi poiche' i drow spesso combattono nemici che resistono alla magia... come gli altri drow.~
+@1623=~Ira animale~
+@1624=~Ira animale
+(Ammaliamento)
+Livello: Drd 4 Rgr 3
+Raggio di Azione: Contatto
+Durata: 10 round
+Tempo di Lancio: 1
+Area di Effetto: 1 creatura
+Tiro Salvezza: Speciale
+
+Questo incantesimo infonde nella creatura bersaglio una ferocia animale. La creatura bersaglio ottiene +4 forza +4 costituzione +20% movimento e +2 a tutti i tiri salvezza. Il bersaglio perde la capacita' di lanciare incantesimi mentre Rabbia Animale e' attiva. Lui o lei puo' essere controllato normalmente a meno che i nemici non siano in vista momento in cui il bersaglio attacca immediatamente in mischia usando qualunque cosa abbia in mano. C'e' una probabilita' del 5% per round che il bersaglio diventi furioso attaccando allo stesso modo amici e nemici. Gli alleati vengono automaticamente colpiti mentre i nemici possono effettuare un tiro salvezza sulla Volonta' per evitare gli effetti.~
+@1680=~Spruzzo Colorato~
+@1681=~Spruzzo colorato
+(Illusione)
+Livello: Brd 1 Str/Mag 1
+Raggio di Azione: Incantatore
+Durata: Istantanea
+Tempo di Lancio: 1
+Area di Effetto: Ventaglio 15 m x 6 m x 6 m
+Tiro Salvezza: Volonta' nega
+
+Questo incantesimo crea un vivido spruzzo di colori contrastanti a forma di ventaglio che scaturisce dalla mano dell'incantatore. L'incantesimo influenza ogni creatura nell'area d'effetto in base ai suoi dadi vita:
+Fino a 2: Privo di sensi per 5 round
+3 o 4: Accecato per 3 round
+5 o piu': Stordito per 1 round
+Un tiro salvezza sulla Volonta' effettuato con successo con +2 CD annullera' l'effetto. Le creature cieche non sono influenzate dagli spruzzi di colore. Questo incantesimo non provoca attacchi di opportunita'.~
+@1893=~Mani Brucianti~
+@1894=~Mani brucianti
+(Trasmutazione)
+Livello: Drd 1 Str/Mag 1
+Raggio di Azione: Incantatore
+Durata: Istantanea
+Tempo di Lancio: 1
+Area di Effetto: Esplosione di fiamme lunga 3 m centrata sulle mani dell'incantatore
+Tiro Salvezza: Riflessi dimezza
+
+Quando l'incantatore lancia questo incantesimo un flusso di fiamme ardenti viene proiettato dalle sue dita. Il flusso di fuoco e' lungo 15 m e si diffonde in un arco orizzontale di circa 120 gradi davanti all'incantatore. Qualsiasi creatura nell'area di effetto subisce 1d4 punti di danno per livello dell'incantatore (massimo 5d4). Un tiro salvezza sui Riflessi riuscito dimezza il danno.~
+@31117=~Dita Gelide~
+@32117=~Dita gelide
+(Trasmutazione)
+Livello: Drd 1
+Raggio di Azione: Incantatore
+Durata: Istantanea
+Tempo di Lancio: 1
+Area di Effetto: Arco di 120 gradi lungo 15 m
+Tiro Salvezza: Riflessi dimezza
+
+Al completamento di questo incantesimo un profondo gelo emana dalle mani dell'incantatore sotto forma di un cuneo di fronte a lui. Qualsiasi creatura sorpresa nell'area d'effetto subisce 1d3 +1 danno da freddo per livello dell'incantatore fino a un massimo di 1d3 +10 danni da freddo. Inoltre la creatura viene rallentata per 2 round. Un tiro salvezza sui Riflessi effettuato con successo dimezza il danno e nega l'effetto di lentezza. Questo incantesimo non provoca attacchi di opportunita'.~
+@31226=~Moti Lunari~
+@32226=~Moti Lunari
+(Evocazione)
+Livello: Drd 2 Seline 1
+Raggio di Azione: Incantatore
+Durata: Istantanea
+Tempo di Lancio: 3
+Area di Effetto: Cono di 15 x 6 x 6
+Tiro Salvezza: Riflessi dimezza
+
+Questo incantesimo fa appello alla connessione di Selune con la luce della luna e la magia per invocare uno spruzzo di sfere luminose. L'incantesimo provoca 1d6 danni magici per livello (massimo 5d6) a ogni creatura che incontra sul suo cammino. Le creature possono effettuare un tiro salvezza sui Riflessi per dimezzare i danni. Questo incantesimo non provoca attacchi di opportunita'.~
+@31409=~Manto di Paura~
+@32409=~Manto di paura
+(Evocazione)
+Livello: Chr 4 Bane 4
+Raggio di Azione: Incantatore
+Durata: 6 round
+Tempo di Lancio: 6
+Area di Effetto: Incantatore
+Tiro Salvezza: Volonta' nega
+
+Manto di Paura conferisce all'incantatore un'aura di paura in un raggio di 15 metri. Tutti i nemici che entrano nell'area d'effetto del mantello devono effettuare un tiro salvezza sulla Volonta' o fuggire in preda al panico per 1 round e devono continuare a effettuare tiri salvezza sulla Volonta' due volte per round fintanto che si trovano nell'area d'effetto del mantello della paura. L'aura non ha effetto sulle creature non morte. Questo incantesimo non provoca attacchi di opportunita'.~
+@33519=~Fuoco solare~
+@34519=~Fuoco solare
+(Invocazione)
+Livello: Str/Mag 5
+Raggio di Azione: Incantatore
+Durata: Istantanea
+Tempo di Lancio: 3
+Area di Effetto: Raggio di 9 m
+Tiro Salvezza: Riflessi dimezza
+
+Fuoco Solare crea un'esplosione di fiamme simile a una palla di fuoco ma centrata sull'incantatore. Tutte le creature nell'area d'effetto tranne l'incantatore vengono bruciate subendo 1d6 danni da fuoco per livello dell'incantatore (15d6 massimo 12d6 minimo). Un tiro salvezza sui Riflessi effettuato con successo dimezza il danno. Questo incantesimo acceca i drow e i nani grigi se un tiro salvezza sulla Tempra viene fallito. Questo incantesimo non provoca attacchi di opportunita'.~
+@55377=~Il corpo di questo personaggio e' stato distrutto. Sara' necessario un incantesimo di Resurrezione per riportarlo in vita. Rianimare Morti non sara' sufficiente.~
+@55378=~L'anima di questo personaggio e' stata catturata. Il contenitore della loro anima deve essere distrutto prima che possa essere riportato in vita.~
+@523=~MAGO:
+Il mago cerca di diventare un maestro delle energie magiche plasmandole e lanciandole come incantesimi. Per farlo studia lingue strane e fatti oscuri e dedica molto del suo tempo alla ricerca magica. Un mago deve affidarsi alla conoscenza e all'arguzia per sopravvivere. Raramente si vedono maghi avventurarsi senza un seguito di combattenti e uomini d'arme. Poiche' esistono diversi tipi (o scuole) di magia esistono diversi tipi di maghi. Tuttavia il tipo piu' comune studia tutti i tipi di magia e impara un'ampia varieta' di incantesimi. La sua ampia gamma lo rende adatto alle esigenze dell'avventura.
+Nota: Per lanciare un incantesimo un mago deve possedere un'Intelligenza pari o superiore al livello dell'incantesimo piu' 10. L'Intelligenza e' la statistica di lancio di un mago.  Influisce sul livello massimo di incantesimo sulle prove di tiro salvezza e sul numero di incantesimi bonus.
+Punti ferita per livello: 1-4
+
+Vantaggi:
+* Competente con tutte le armi semplici tranne le armi da lancio semplici.
+* Riceve un talento bonus ogni cinque livelli in aggiunta ai talenti normali dati a tutte le classi di personaggi ogni tre livelli.
+* Se il personaggio non e' specializzato in una scuola di magia ottiene un bonus di +1 alla CD di tutti i suoi incantesimi.
+* Impara due nuovi incantesimi ogni volta che salgono di livello e puo' anche imparare incantesimi dalle pergamene.
+
+Svantaggi:
+* Inizia senza alcuna competenza nelle armature ed e' molto carente nel combattimento corpo a corpo.~
+@527=~BARDO:
+La forza del bardo e' nella sua piacevole e affascinante personalita'. Grazie ad essa e la propria astuzia si fa strada nel mondo. Un bardo e' un musico di talento e una raccolta vivente di chiacchiere favole e conoscenze. Apprende un po' di tutto cio' che attraversa la sua strada; e' un tuttofare ma maestro di nulla. Sebbene molti bardi siano malfattori le loro storie e canzoni sono ben accette quasi ovunque.
+Punti ferita per livello: 1-6
+
+Vantaggi:
+* Competente con tutte le armi semplici armature leggere armature medie e scudi. Il bardo e' competente anche con le spade grandi.
+* Guadagna un punto in Incantesimi in Armatura riducendo il fallimento degli incantesimi arcani del 35%.
+* +1 ad Alchimia Conoscenze (Arcane) e Sapienza Magica.
+* 2° livello: Incantesimi. I bardi acquisiscono la capacita' di lanciare incantesimi arcani.
+* 7° livello: Il bardo puo' sostituire uno dei suoi incantesimi conosciuti con un altro dello stesso livello. Puo' farlo ancora una volta ogni 3 livelli dopo il livello 7. Il bardo puo' sostituire solo incantesimi almeno due livelli di incantesimo sotto il livello di incantesimo piu' alto che puo' lanciare (ad esempio solo un incantesimo di 1° livello quando il bardo raggiunge il 7° livello) anche se puo' sostituire gli incantesimi di 7° livello a partire dal livello 25 e gli incantesimi di 8° livello a partire dal livello 28.
+* Molte abilita' da ladro sono abilita' di classe del Bardo.
+*Canzone del Bardo. I bardi hanno la capacita' di cantare melodie che hanno effetti magici sulle creature entro dieci metri. Man mano che avanzano di livello ottengono brani aggiuntivi. Le canzoni sono descritte in dettaglio di seguito.
+* 1° livello: La storia di Curran Cuoresaldo. Quando viene suonata tutti gli alleati del bardo ottengono +1 Attacco Base +1 danno e immunita' alla paura e alla disperazione. Attacco Base e danno aumentano di 1 ai livelli 10 25 e 40.
+* 3° livello: La Canzone di Kaudies. Quando viene suonata gli alleati del bardo sono immuni agli incantesimi e alle abilita' dannosi basati sul suono tra cui Comando Silenzio Comando Superiore Parola Sacra Blasfemia Parola del Potere: Dormire Esplosione Sonora Grido Parola del Potere: Silenzio Parola del Potere: Stordire Parola del potere: Accecare Grido Potente Lamento della banshee Parola del potere: uccisione Canto dell'arpia e gli effetti riservati ai nemici di Canto Preghiera e Recitazione.
+* 5° livello: Melodia di Tymora. Quando viene suonata la Melodia di Tymora da' agli alleati del bardo +1 fortuna +1 tiri salvezza e +2 alle loro Conoscenze (arcane) Alchimia e Abilita' da Ladro. Ai livelli 15 e 35 questa canzone garantisce un ulteriore +1 alla fortuna e ai tiri salvezza e un +2 alle prove di abilita'.
+* 9° livello: Lo Struggimento della Sirena. Quando viene suonata ogni creatura che ascolta la canzone subisce una penalita' cumulativa di -1 ai tiri salvezza sulla Volonta' per 10 round e deve effettuare un tiro salvezza sulla Volonta' o verra' intrappolata incapace di agire per un round o finche' non subisce danni. La CD del tiro salvezza sulla Volonta' e' pari al livello del bardo. Quindi il canto di un bardo di livello 15 ha una CD di 15.
+* 13° livello: Il Canto di Guerra di Sith. Quando viene suonata gli alleati del bardo ottengono un bonus di armatura generico +2 una resistenza al danno fisico di 3/- e rigenerano 3 punti di danno per round in combattimento. Ai livelli 28 e 45 questa canzone garantisce un ulteriore +2 alla CA 3/- resistenza ai danni fisici 3 punti ferita curati per round.
+*20° livello: La Ballata dei Tre Eroi. Gli alleati del bardo ottengono +5 resistenza agli incantesimi 5/- resistenza a tutte le forme di danno magico e gli effetti del Racconto di Curran Cuoresaldo della Melodia di Tymora e del Canto di Guerra di Sith. Ai livelli 30 e 50 questa canzone garantisce +5 resistenza agli incantesimi aggiuntiva e resistenza 5/- ai danni magici.
+Un bardo non puo' avvantaggiare il gruppo con piu' di una canzone alla volta. Ma se il gruppo ha piu' bardi gli effetti della canzone di ciascun bardo si accumuleranno. Le creature evocate non beneficiano della Canzone del Bardo.
+* 30° livello: Il bardo ora puo' compiere altre azioni mentre canta una Canzone del Bardo.
+
+Svantaggi:
+* I bardi non sono altrettanto abili in combattimento corpo a corpo come i combattenti o i sacerdoti.
+* I bardi accedono agli incantesimi piu' lentamente di un mago o di un chierico.~
+@569=~STREGONE:
+Gli stregoni sono praticanti di magia nati con la capacita' innata di lanciare incantesimi. Si pensa che il sangue di qualche potente creatura scorra nelle loro vene; forse sono la progenie stessa degli dei o addirittura draghi che camminano in forma umana. Comunque sia la magia degli stregoni e' intuitiva piuttosto che logica. Conoscono meno incantesimi dei maghi e li acquisiscono piu' lentamente ma possono lanciarli piu' spesso e non devono selezionare e preparare gli incantesimi in anticipo. Gli stregoni non possono specializzarsi nelle scuole di magia come fanno i maghi. Oltre a queste differenze gli stregoni sono molto simili ai maghi.
+NOTA: Uno stregone NON puo' apprendere incantesimi dalle pergamene. Sceglie nuovi incantesimi ad ogni passaggio di livello. Il Carisma e' la caratteristica utilizzata per determinare le capacita' magiche di uno stregone. Influenza il loro massimo livello di lancio la CD dei tiri salvezza degli incantesimi e il numero di incantesimi bonus.
+Punti ferita per livello: 1-4
+
+Vantaggi:
+* Competente con tutte le armi semplici.
+* 6° livello: Lo stregone puo' sostituire uno dei suoi incantesimi conosciuti con un altro dello stesso livello. Puo' farlo ancora una volta ogni 2 livelli dopo il livello 6. Lo stregone puo' sostituire solo gli incantesimi almeno due livelli di incantesimo sotto il livello di incantesimo piu' alto che puo' lanciare (ad esempio solo un incantesimo di 1° livello quando lo stregone raggiunge il 6° livello) sebbene non puo' sostituire gli incantesimi di 8° livello a partire dal livello 20 e gli incantesimi di 9° livello a partire dal livello 22.
+
+Svantaggi:
+* Comincia senza competenze nelle armature ed e' molto carente nel combattimento in mischia.~
+@55761=~Selezione Degli Incantesimi Arcani: Livello 1~
+@55762=~Selezione Degli Incantesimi Arcani: Livello 2~
+@55763=~Selezione Degli Incantesimi Arcani: Livello 3~
+@55764=~Selezione Degli Incantesimi Arcani: Livello 4~
+@55765=~Selezione Degli Incantesimi Arcani: Livello 5~
+@55766=~Selezione Degli Incantesimi Arcani: Livello 6~
+@55767=~Selezione Degli Incantesimi Arcani: Livello 7~
+@55768=~Selezione Degli Incantesimi Arcani: Livello 8~
+@55769=~Selezione Degli Incantesimi Arcani: Livello 9~
+@55770=~Reimposta gli Incantesimi~
+@55771=~Non puoi imparare piu' di 24 incantesimi per singolo livello di incantesimo.~
+@55772=~Puoi scegliere gli incantesimi <EXWLNUM> da inserire nel tuo libro degli incantesimi.~
+@55773=~Puoi scegliere fino a 1 incantesimo che conosci che sia almeno 2 livelli inferiore al livello di incantesimo piu' alto che puoi lanciare e sostituirlo con un incantesimo diverso dello stesso livello.~
+@55774=~Puoi scegliere fino a <EXWLNUM> incantesimi che conosci che sono almeno 2 livelli inferiori al livello di incantesimo piu' alto che puoi lanciare e sostituirli con incantesimi diversi dello stesso livello.~
+@55781=~Sostituzione degli Incantesimi: livello 1~
+@55782=~Sostituzione degli Incantesimi: livello 2~
+@55783=~Sostituzione degli Incantesimi: livello 3~
+@55784=~Sostituzione degli Incantesimi: livello 4~
+@55785=~Sostituzione degli Incantesimi: livello 5~
+@55786=~Sostituzione degli Incantesimi: livello 6~
+@55787=~Sostituzione degli Incantesimi: livello 7~
+@55788=~Sostituzione degli Incantesimi: livello 8~
+@55789=~Sostituzione degli Incantesimi: livello 9~
+@1871=~Benedizione~
+@1872=~Benedizione
+(Evocazione)
+Livello: Chr 1 Pal 1 Tempus 1
+Raggio di Azione: Visuale dell'incantatore
+Durata: 1 minuto per livello
+Tempo di Lancio: 1 round
+Area di Effetto: Raggio di 75 m
+Tiro Salvezza: Nessuno
+
+Dopo aver pronunciato questo incantesimo l'incantatore aumenta di +1 l'Attacco Base e i tiri salvezza delle creature alleate nell'area d'effetto. Benedizione contrasta e disperde Anatema.~
+@1873=~Anatema~
+@1874=~Anatema
+(Ammaliamento)
+Livello: Chr 1 Bane 1
+Raggio di Azione: Visuale dell'incantatore
+Durata: 1 minuto per livello
+Tempo di Lancio: 2 round
+Area di Effetto: 75 m di raggio
+Tiro Salvezza: Nessuno
+
+Anatema e' l'opposto di Benedizione e riduce di 1 l'Attacco Base e i tiri salvezza delle creature nemiche nell'area di effetto per la durata dell'incantesimo. Contrasta e dissolve Benedizione.~
+@214=~Resistenza di Ilmater
+Quest'abilita' consente a un alleato non malvagio di sopportare molto piu' dolore ma anche di soffrire di piu' garantendogli un bonus di Costituzione +20 e una vulnerabilita' di -3 ai danni fisici per 8 ore.~
+@31802=~Guarigione di Massa~
+@32802=~Guarigione di massa
+(Evocazione)
+Livello: Chr 8 Drd 9 Lathander 9
+Raggio di Azione: Visuale dell'incantatore
+Durata: Istantanea
+Tempo di Lancio: 9
+Area di Effetto: Raggio di 6 metri
+Tiro Salvezza: Nessuno
+
+Guarigione di Massa spazza via malattie e ferite da tutti gli alleati viventi nell'area d'effetto. Cura la cecita' le malattie e la debolezza mentale e ripristina i punti ferita massimi dei bersagli se sono stati feriti. I non morti nemici nell'area d'effetto subiscono gli effetti di un incantesimo Danno se l'incantatore riesce in un tiro per colpire di contatto a distanza per ciascuno di essi.~
+@35952=~Danno di Massa~
+@36952=~Danno di massa
+(Necromanzia)
+Livello: Chr 9
+Raggio di Azione: Visuale dell'incantatore
+Durata: Istantanea
+Tempo di Lancio: 9
+Area di Effetto: Raggio di 6 m
+Tiro Salvezza: Tempra nega
+
+Danno di Massa rilascia energia negativa distruttiva su tutti i nemici viventi nell'area d'effetto. L'incantatore effettua attacchi di contatto a distanza contro ciascuna di quelle creature; ognuna che viene colpito deve effettuare un Tiro Salvezza contro Tempra o perdere tutti i punti ferita tranne uno. La CD e' la stessa dell'incantesimo Danno di 6° livello. I non morti alleati nell'area d'effetto vengono invece curati fino alla massima salute come con un incantesimo di Guarigione.~
+@1126=~Corpo di ferro~
+@1127=~Corpo di ferro
+(Trasmutazione)
+Livello: Str/Mag 8 Helm 8
+Raggio di Azione: Incantatore
+Durata: 1 round per livello
+Tempo di Lancio: 8
+Area di Effetto: Incantatore
+Tiro Salvezza: Nessuno
+
+Questo incantesimo trasforma il corpo dell'incantatore in ferro vivo conferendogli diverse potenti resistenze e abilita'. Mentre l'incantesimo e' in effetto l'incantatore ha una resistenza di 15/- al fuoco al freddo e a tutte le forme di danno fisico ma anche una vulnerabilita' di +15 all'elettricita'. Gli incantesimi che influenzano la respirazione o la fisiologia dell'incantatore vengono ignorati completamente come veleno cecita' sordita' e malattie per citarne alcuni e l'incantatore diventa troppo pesante per respingerlo con incantesimi come Folata di vento Lancio o Repulsione. Inoltre l'incantatore ottiene un bonus di +8 alla forza e alla costituzione e una penalita' di -8 alla destrezza. Sfortunatamente il movimento dell'incantatore diventa lento e goffo sotto il peso del suo nuovo corpo portando la sua velocita' di movimento alla meta' della sua velocita' normale e riceve una penalita' di -2 alla velocita' di lancio.~
+@1857=~Nebbia Mortale~
+@1858=~Nebbia Mortale
+(Trasmutazione)
+Livello: Str/Mag 6
+Raggio d'azione: Visuale dell'incantatore
+Durata: 10 round
+Tempo di lancio: 6
+Area d'effetto: Raggio di 45 metri
+Tiro-salvezza: Nessuno
+
+Questo incantesimo genera una nube fluttuante di nebbia acida. La fitta nebbia limita il movimento al 50% della velocita' di movimento attuale di una creatura. Inoltre tutte le creature intrappolate nella nebbia subiscono 3d6 danni da acido per round.~
+@37955=~Nebbia Corrosiva di Malavon~
+@38955=~Nebbia corrosiva di Malavon
+(Evocazione)
+Livello: Str/Mag 9
+Raggio di Azione: Visuale dell'incantatore
+Durata: 30 round
+Tempo di Lancio: 12
+Area di Effetto: Raggio di 12 m
+Tiro Salvezza: Tempra dimezza
+
+La Nebbia Corrosiva di Malavon e' un altro incantesimo creato dallo stregone elfo oscuro Malavon. Crea un'enorme nuvola di nebbia acida che permane a lungo. Ogni round qualsiasi creatura nella nebbia subisce 12d6 danni da acido (tiro salvezza sulla Tempra dimezza) e la sua velocita' di movimento viene dimezzata (non e' previsto alcun tiro salvezza contro la penalita' al movimento). La Resistenza agli Incantesimi del bersaglio se presente non influenza questo incantesimo.~
+@19910=~Abbiamo utilizzato gli appunti di Imphraili per completare il suo esperimento teorico riguardante la trasfusione di un Sanguis Anima modificato nel proprio flusso sanguigno. Il processo fu difficile e doloroso ma lascio' il nostro alchimista stranamente rinvigorito.~
+@19911=~Abbiamo usato l'uovo del dragone bianco per formare un liquido magico che e' stato poi mescolato nel flusso sanguigno dell'alchimista. Il processo raffreddava il sangue rendendolo resistente al freddo ma piu' vulnerabile al calore.~
+@56005=~Risucchio dei Punti Caratteristica~
+@55370=~sonico~
+@55603=~(Lich)~
+@316=~ATTERRAMENTO:
+
+Sei addestrato ad abbattere o far inciampare i nemici nel combattimento corpo a corpo.
+
+Prerequisiti: Attacco Base bonus +6 o superiore
+
+Benefici: ottieni un'abilita' che ti permette di abbattere o sbilanciare una creatura adiacente. L'abilita' puo' essere utilizzata una volta per round. Se la tua Destrezza e' superiore alla tua Forza tenti di sbilanciare il bersaglio che deve effettuare un tiro salvezza sui Riflessi (CD 5 +meta' del tuo Attacco Base +il tuo modificatore di Destrezza) o cadere per 4 secondi. Altrimenti provi ad abbattere il tuo bersaglio che deve effettuare un tiro salvezza sulla Tempra (CD 5 +meta' del tuo Attacco Base +il tuo modificatore di Forza) o cadere per 4 secondi. La CD diventa -4 per ogni volta che qualcuno ha tentato di abbattere o sbilanciare il bersaglio negli ultimi 10 round. Prende anche -4 se il bersaglio ha piu' di due gambe o e' comunque piu' stabile di un normale umanoide (come un nano). Le creature piu' grandi di te non possono essere abbattute e fatte inciampare. Il tempo impiegato per eseguire questa capacita' fa si' che il personaggio abbia un attacco in meno nel round successivo.
+Questo talento puo' essere acquisito due volte. Quando viene acquisito una seconda volta il talento e' Atterramento Migliorato che aggiunge un bonus +2 alla CD e ti consente di abbattere o sbilanciare creature di una categoria di taglia piu' grandi della tua (creature il cui cerchio non ha piu' del doppio del raggio della tua taglia). cerchio).~
+@389=~FORMA DEL LICH:
+
+Dopo infinite ricerche oscure hai finalmente raggiunto l'immortalita'... finche' il tuo filatterio sopravvivera'.
+
+Prerequisiti: per iniziare a prendere gradi in questo talento sono necessari due gradi in Incantesimo Focalizzato: Necromanzia 12 livelli da mago o stregone o 10 livelli da negromante e allineamento malvagio. Per raggiungere il grado finale sono necessari 20 livelli da mago o stregone oppure 18 livelli da negromante.
+
+Benefici: Anche dopo aver soddisfatto i requisiti iniziali e' necessario prendere questo talento cinque volte affinche' abbia qualche beneficio (questo rappresenta le lunghe ore di ricerca sul male necessarie per raggiungere la Forma del Lich). Una volta fatto diventi un lich e ottieni questi effetti:
+* +5 bonus di armatura generica.
+* +2 Intelligenza Saggezza e Carisma.
+* Immune a freddo elettricita' veleno malattia sanguinamento fatica sonno paura disperazione fascino confusione regressione mentale paralisi stordimento risucchio di energia morte istantanea pietrificazione effetti di metamorfosi colpi critici e attacchi furtivi.
+* 5/- resistenza ai danni taglienti e perforanti riduzione del danno 5/+1.
+* Bonus +8 a Nascondersi Muoversi Silenziosamente e Cercare.
+* Puoi essere scacciato ma conta come 4 livelli piu' alti contro gli effetti normali.
+* Subisci danni dagli incantesimi Cura Ferite e dalle pozioni curative ma vieni guarito dagli incantesimi Infliggi Ferite.
+* I tuoi attacchi senz'armi vengono sostituiti con un Tocco del Lich che infligge 3d10+5 danni da freddo e paralizza il bersaglio per 10 round se fallisce il Tiro Salvezza (stessa CD dell'incantesimo Tocco del Lich).
+* Possiedi un'aura di paura; qualsiasi nemico entro 20 piedi che sia almeno 5 livelli inferiore al tuo deve effettuare un tiro salvezza sulla Volonta' (CD 10 +modificatore di Carisma/Intelligenza) o scappare per 1 round.
+* Ottieni un filatterio che immagazzina la tua forza vitale. Se muori verrai rianimato automaticamente dopo 8 ore. Tuttavia se tutti i membri del gruppo muoiono i nemici distruggeranno il tuo filatterio e il gioco finira'.~
+@390=~FORMA DEL LICH:
+
+Dopo infinite ricerche oscure hai finalmente raggiunto l'immortalita'... finche' il tuo filatterio sopravvivera'.
+
+Prerequisiti: per iniziare a prendere gradi in questo talento sono necessari due gradi in Incantesimo Focalizzato: Necromanzia 12 livelli da mago o stregone o 10 livelli da negromante e allineamento malvagio. Per raggiungere il grado finale sono necessari 20 livelli da mago o stregone oppure 18 livelli da negromante.
+
+Benefici: Anche dopo aver soddisfatto i requisiti iniziali e' necessario prendere questo talento cinque volte affinche' abbia qualche beneficio (questo rappresenta le lunghe ore di ricerca sul male necessarie per raggiungere la Forma del Lich). Una volta fatto diventi un lich e ottieni questi effetti:
+* +5 bonus di armatura.
+* +2 Intelligenza Saggezza e Carisma.
+* Immune a freddo elettricita' veleno malattia sanguinamento fatica sonno paura disperazione fascino confusione regressione mentale paralisi stordimento risucchio di energia morte istantanea pietrificazione effetti di metamorfosi.
+* 5/- resistenza ai danni taglienti e perforanti riduzione del danno 5/+1.
+* Bonus +8 a Nascondersi Muoversi Silenziosamente e Cercare.
+* Puoi essere scacciato ma conta come 4 livelli piu' alti contro gli effetti normali.
+* Subisci danni dagli incantesimi Cura Ferite e dalle pozioni curative ma vieni guarito dagli incantesimi Infliggi Ferite.
+* I tuoi attacchi senz'armi vengono sostituiti con un Tocco del Lich che infligge 3d10+5 danni da freddo e paralizza il bersaglio per 10 round se fallisce il Tiro Salvezza (stessa CD dell'incantesimo Tocco del Lich).
+* Possiedi un'aura di paura; qualsiasi nemico entro 20 piedi che sia almeno 5 livelli inferiore al tuo deve effettuare un tiro salvezza sulla Volonta' (CD 10 +modificatore di Carisma/Intelligenza) o scappare per 1 round.
+* Ottieni un filatterio che immagazzina la tua forza vitale. Se muori verrai rianimato automaticamente dopo 8 ore. Tuttavia se tutti i membri del gruppo muoiono i nemici distruggeranno il tuo filatterio e il gioco finira'.~
+@704=~PRESA:
+
+Anche se chiunque puo' afferrare qualcosa tu hai l'abilita' di afferrare anche una creatura ostile nel bel mezzo del combattimento.
+
+Benefici: ottieni un'abilita' che ti permette di afferrare una creatura adiacente. L'abilita' puo' essere utilizzata una volta per round. Il bersaglio deve effettuare un Tiro Salvezza su Riflessi (CD 12 +meta' del tuo livello +il tuo modificatore di Forza o Destrezza (quale sia il piu' alto)) o essere afferrato da te per 2 round. Mentre e' afferrata la creatura subisce una penalita' di -4 all'attacco una probabilita' del 50% di fallimento dell'incantesimo e non puo' allontanarsi da te. Se ti muovi puoi trascinare la creatura con te.
+Per effettuare una presa devi avere almeno una mano libera. Il tiro salvezza ottiene +4 CD se hai entrambe le mani libere. Riceve -4 CD per ogni volta che qualcuno ha tentato di afferrare il bersaglio negli ultimi 10 round. Se si afferra un alleato o una creatura paralizzata stordita addormentata o atterrata non e' possibile effettuare alcun tiro salvezza. Le creature piu' grandi di te non possono essere afferrate.~
+@730=~SCHIVARE:
+
+Il personaggio e' abile nello schivare i colpi.
+
+Prerequisiti: Des 13+. Accettare il talento una seconda volta richiede Destrezza 25+ Eludere Migliorato e Rullata Difensiva.
+
+Benefici: Il personaggio riceve un bonus di schivare +1 alla Classe Armatura contro gli attacchi di un avversario.
+Se preso una seconda volta il talento ti consente anche di schivare automaticamente il primo attacco che ti colpirebbe in ogni round.~
+@890=~Attacco schivato~
+@891=~Quale aspetto del lich vorresti usare?~
+@892=~Lich nero.~
+@893=~Lich bianco.~
+@894=~Manterro' il mio aspetto originale.~
+@895=~Filatterio del Lich~
+@896=~Questo e' il tuo filatterio. Se muori la tua anima si rifugia nel tuo filatterio che creera' un nuovo corpo per te e ti fara' rivivere dopo 8 ore. Tuttavia se tutti i membri del gruppo muoiono i nemici distruggeranno il tuo filatterio e il gioco finira'.
+
+STATISTICHE:
+
+Peso: 1~
+@1105=~Grido
+(Invocazione)
+Livello: Brd 4 Str/Mag 4 Oghma 4
+Raggio di Azione: Vicino (lungo 9 m diametro 3 m)
+Durata: Istantanea
+Tempo di Lancio: 1
+Area di Effetto: Cono di 9 m diametro 3 m
+Tiro Salvezza: Tempra parziale
+
+L'incantatore emette un urlo atroce che assorda e danneggia le creature sul suo cammino. Qualsiasi creatura all'interno dell'area d'effetto viene assordata per 5 round stordita per 2 round e subisce 5d6 danni sonori. Un Tiro Salvezza riuscito nega la sordita' e lo stordimento e riduce il danno della meta'. Una creatura assordata ha una probabilita' del 50% di resistere a questo incantesimo.~
+@1145=~Tocco del lich
+(Necromanzia)
+Livello: Str/Mag 6
+Raggio di Azione: Contatto
+Durata: 1 round per livello
+Tempo di Lancio: 6
+Area di Effetto: Incantatore
+Tiro Salvezza: Tempra dimezza
+
+Questo incantesimo conferisce i poteri del tocco di un lich. Le mani del mago sono permeate da una forza agghiacciante di energia negativa che consente all'incantatore di infliggere 3d10+5 danni da freddo (piu' bonus ai danni derivanti da Forza competenze incantesimi oggetti e altri effetti) con ogni colpo e paralizzare le vittime viventi per 10 round successivi fallendo un tiro salvezza sulla Tempra. L'attacco utilizza la competenza Armi Semplici Lama piccola/Attacco di contatto.~
+@1497=~Splendore dell'aquila
+(Trasmutazione)
+Livello: Brd 2 Drd 2 Pal 2 Str/Mag 2 Oghma 1
+Raggio di Azione: Incantatore
+Durata: 1 ora per livello
+Tempo di lancio: 1
+Bersaglio: Creatura toccata
+Tiro Salvezza: Nessuno
+
+La creatura trasmutata diventa piu' equilibrata articolata e personalmente forte. L'incantesimo conferisce +4 al Carisma aggiungendo i consueti benefici dei talenti e delle abilita' basate sul Carisma.~
+@1622=~Grido potente
+(Invocazione)
+Livello: Brd 6 Str/Mag 8 Oghma 7
+Raggio di Azione: Incantatore
+Durata: Istantanea
+Tempo di Lancio: 2
+Area di Effetto: Lungo 9 m diametro di 3 m
+Tiro Salvezza: Tempra dimezza
+
+Dopo aver pronunciato Grido Potente l'incantatore rilascia una forza stordente dalla bocca in un cono lungo 9 metri e con un diametro di 3 metri. Le creature all'interno dell'area d'effetto subiscono 10d10 danni sonori con un tiro salvezza sulla Tempra dimezzato. Chi fallisce il Tiro Salvezza rimane stordito per 5 round e assordato per 10 round. Le creature assordate hanno una probabilita' del 25% di resistere a questo incantesimo.~
+@34623=~Velocita' di massa
+(Trasmutazione)
+Livello: Brd 6 Str/Mag 6
+Raggio di Azione: Visuale dell'incantatore
+Durata: 3 round +1 round per livello
+Tempo di Lancio: 3
+Area di Effetto: Raggio di 6 m
+Tiro Salvezza: Nessuno
+
+Velocita' di massa conferisce gli effetti dell'incantesimo di 3° livello Velocita' a tutti gli alleati nell'area d'effetto. Questi alleati ottengono +4 CA e un attacco extra per round e si muovono due volte piu' velocemente. Questi effetti non si cumulano con gli incantesimi di 3° livello. La fretta di massa dissolve gli effetti di lentezza.~
+@38252=~Scoppio sonoro
+(Evocazione)
+Livello: Brd 2
+Raggio di Azione: Visuale dell'incantatore
+Durata: 1 round
+Tempo di Lancio: 2
+Area di Effetto: Raggio di 45 m
+Tiro Salvezza: Tempra parziale
+
+Questo incantesimo rilascia un'esplosione sonora estremamente forte e stridente. Le creature nell'area d'effetto subiscono 1d8 danni sonori e devono effettuare un tiro salvezza sulla Tempra o rimanere stordite per 1 round. Le creature sorde non vengono stordite ma subiscono comunque danni. L'incantatore non e' influenzato da questo incantesimo.~
+@1009=~Guscio di tartaruga
+(Abiurazione)
+Livello: Drd 3 Rgr 3
+Raggio di Azione: Visuale dell'incantatore
+Durata: 4 round
+Tempo di Lancio: 2
+Area di Effetto: 1 creatura
+Tiro Salvezza: Nessuno
+
+Al completamento di questo incantesimo un grande guscio emisferico simile a quello di una tartaruga avvolge la creatura bersaglio proteggendola dal mondo esterno. La creatura rinchiusa non puo' compiere alcuna azione ma a sua volta e' impermeabile a tutti gli effetti. Il guscio della tartaruga ha 50 punti ferita piu' altri 50 punti ferita per ogni 10 livelli raggiunti dal druido. Il guscio di tartaruga puo' influenzare solo gli alleati.~
+@1679=~Sfera elastica di Otiluke
+(Invocazione)
+Livello: Str/Mag 4
+Raggio di Azione: Visuale dell'incantatore
+Durata: 4 round
+Tempo di Lancio: 1
+Area di Effetto: 1 creatura
+Tiro Salvezza: Nessuno
+
+Quando questo incantesimo viene lanciato il risultato e' un globo di forza scintillante che racchiude la creatura soggetta. La sfera resiliente conterra' il suo soggetto per tutta la durata dell'incantesimo. La sfera e' completamente immune a tutti i danni; l'unico metodo per rimuovere la sfera e' tramite l'uso di un incantesimo Dissolvi Magie. Quindi la creatura catturata all'interno del globo e' completamente al sicuro da tutti gli attacchi ma allo stesso tempo e' completamente incapace di influenzare il mondo esterno.~
+@529=~CHIERICO:
+Il chierico e' un generico sacerdote (di qualunque divinita') che si prende cura dei bisogni spirituali di una comunita'. E' sia protettore che guaritore sebbene non sia totalmente sulla difensiva.
+NOTA: la saggezza e' la statistica di lancio per un chierico. Influisce sul livello massimo di lancio degli incantesimi sulle CD dei tiri salvezza degli incantesimi e sul numero di incantesimi bonus.
+Punti ferita per livello: 1-8
+
+Vantaggi:
+* Competente con tutte le armi semplici nonche' con martelli mazzafrusti armature leggere armature medie armature pesanti e scudi.
+* I chierici possono lanciare potenti incantesimi difensivi e curativi.
+* I chierici hanno la capacita' di scacciare i non morti. Quando questo potere viene invocato il chierico tenta di usare il potere della sua divinita' protettrice per terrorizzare (se buono o neutrale) o controllare (se malvagio) un gruppo di non morti. Piu' alti sono il livello e il carisma del chierico maggiori sono le sue possibilita' di successo.
+* I chierici ricevono poteri speciali e incantesimi dalla loro divinita'.
+* * Lancio spontaneo: i chierici possono convertire i loro incantesimi curativi (se buoni o neutrali) o ostili (se malvagi) in incantesimi del livello piu' vicino quando un giocatore fa clic con il tasto Maiusc su un incantesimo al momento del lancio. L'incantesimo selezionato viene immediatamente rimosso dall'elenco memorizzato del personaggio e lanciato come l'incantesimo curativo o ostile piu' vicino dello stesso livello.
+Incantesimi Lanciati Spontaneamente:
+1: Cura ferite leggere/Infliggi ferite leggere
+2: Cura ferite moderate/Infliggi ferite moderate
+3: Cura ferite gravi/Infliggi ferite gravi
+4 : Cura ferite critiche/Infliggi ferite critiche
+5: Risuscita morti/Distruggere viventi
+6: Guarigione/Danno
+7: Resurrezione/Distruzione
+8: Ristorare superiore/Risucchio di energia
+9: Guarigione di Massa/Danno di massa
+
+Svantaggi:
+* I chierici non hanno accesso a molti potenti incantesimi offensivi.
+* I chierici sono piu' deboli in combattimento rispetto ai guerrieri ai ranger ai paladini e ai barbari.~
+@814=~EMPATIA ANIMALE (Car; Solo con addestramento; Solo Druido e Ranger):
+
+Usa questa abilita' per impedire a un cane da guardia di abbaiarti contro per far atterrare un uccello selvatico sulla tua mano tesa o per mantenere calmo un orsogufo mentre indietreggi. Qualsiasi creatura selvaggia inclusi gli animali e i mostri animaleschi come le viverne deve effettuare un tiro salvezza sulla Volonta' o essere affascinata per 1 round per livello dell'incantatore.~
+@55717=~Questo non morto e' stato potenziato e reso piu' difficile da scacciare~
+@56006=~I bonus razziali extra per gli umani si trovano qui. Ogni effetto di questo incantesimo verra' applicato a qualsiasi personaggio giocante umano subito dopo la creazione del personaggio.~
+@56007=~I bonus razziali extra per gli aasimar si trovano qui. Ogni effetto di questo incantesimo verra' applicato a qualsiasi personaggio giocante aasimar subito dopo la creazione del personaggio.~
+@56008=~I bonus razziali extra per i tiefling si trovano qui. Ogni effetto di questo incantesimo verra' applicato a qualsiasi personaggio giocante tiefling subito dopo la creazione del personaggio.~
+@56009=~I bonus razziali extra per gli elfi della luna si trovano qui. Ogni effetto di questo incantesimo verra' applicato a qualsiasi personaggio giocante elfo della luna subito dopo la creazione del personaggio.~
+@56010=~I bonus razziali extra per i drow si trovano qui. Ogni effetto di questo incantesimo verra' applicato a qualsiasi personaggio giocante drow subito dopo la creazione del personaggio.~
+@56011=~I bonus razziali extra per gli elfi selvaggi si trovano qui. Ogni effetto di questo incantesimo verra' applicato a qualsiasi personaggio giocante elfo selvaggio subito dopo la creazione del personaggio.~
+@56012=~I bonus razziali extra per i mezzelfi si trovano qui. Ogni effetto di questo incantesimo verra' applicato a qualsiasi personaggio giocante mezzelfo subito dopo la creazione del personaggio.~
+@56013=~I bonus razziali extra per i nani degli scudi si trovano qui. Ogni effetto di questo incantesimo verra' applicato a qualsiasi personaggio giocante nano dello scudo subito dopo la creazione del personaggio.~
+@56014=~I bonus razziali extra per i nani dorati si trovano qui. Ogni effetto di questo incantesimo verra' applicato a qualsiasi personaggio giocante nano dorato subito dopo la creazione del personaggio.~
+@56015=~I bonus razziali extra per i nani grigi si trovano qui. Ogni effetto di questo incantesimo verra' applicato a qualsiasi personaggio giocante nano grigio subito dopo la creazione del personaggio.~
+@56016=~I bonus razziali extra per gli halfling piedelesto si trovano qui. Ogni effetto di questo incantesimo verra' applicato a qualsiasi personaggio giocante halfling piedelesto subito dopo la creazione del personaggio.~
+@56017=~I bonus razziali extra per gli halfling cuoreforte si trovano qui. Ogni effetto di questo incantesimo verra' applicato a qualsiasi personaggio giocante halfling cuoreforte subito dopo la creazione del personaggio.~
+@56018=~I bonus razziali extra per gli halfling degli spiriti si trovano qui. Ogni effetto di questo incantesimo verra' applicato a qualsiasi personaggio giocante halfling degli spiriti subito dopo la creazione del personaggio.~
+@56019=~I bonus razziali extra per gli gnomi delle rocce si trovano qui. Ogni effetto di questo incantesimo verra' applicato a qualsiasi personaggio giocante dello Gnomo delle Rocce subito dopo la creazione del personaggio.~
+@56020=~I bonus razziali extra per gli gnomi delle profondita' si trovano qui. Ogni effetto di questo incantesimo verra' applicato a qualsiasi personaggio giocante come gnomo delle profondita' subito dopo la creazione del personaggio.~
+@56021=~I bonus razziali extra per i mezzorchi si trovano qui. Ogni effetto di questo incantesimo verra' applicato a qualsiasi personaggio giocante mezzorco subito dopo la creazione del personaggio.~
+@4803=~Questo anello e' l'unica parte di Veira che rimane veramente tangibile. Legato nella morte cosi' come nella vita l'anello non lascia mai il dito di Veira.
+Veira rimane corporea solo in parte finche' resta aggrappata al Piano Materiale. Puo' interagire con il mondo che la circonda ma la sua forma parzialmente eterea non ha bisogno di dormire e non puo' ne' godere del piacere del cibo o delle bevande ne' soffrire il dolore di malattie e ferite. Se la sua forma e' danneggiata puo' rigenerarsi lentamente nel tempo. Se la sua forma viene distrutta puo' essere ripristinata con un'esplosione sufficiente di energia positiva come un incantesimo Rianimare Morti.
+
+STATISTICHE:
+
+Rigenerazione: 1 punto ferita per round
+Riduzione del Danno: 5/+1
+Incorporeo: Veira ha una probabilita' del 50% di evitare qualsiasi istanza di danno fisico che la colpirebbe
+Muoversi Silenziosamente: +50
+Resistenza: 25/- Resistenza al freddo
+Resistenza: 5/- Resistenza all'acido all'elettricita' e al fuoco
+Resistenza allo Scacciare: conta come 4 livelli piu' alti ai fini di resistere a Scacciare Non Morti
+Immunita' a fatica veleno malattia ferite sanguinanti stordimento ragnatela intralciare intossicazione nausea tocco vampirico risucchio di energia Pelle di Pietra Pelli di Ferro Pelle Coriacea indebolimento Sfera Elastica di Otiluke Guscio di Tartaruga Orrido Avvizzimento magia della morte pietrificazione colpi critici e la maggior parte delle pozioni.
+Peso: 0~
+@4805=~Questo anello e' l'unica parte di Veira che rimane veramente tangibile. Legato nella morte cosi' come nella vita l'anello non lascia mai il dito di Veira.
+Veira rimane corporea solo in parte finche' resta aggrappata al Piano Materiale. Puo' interagire con il mondo che la circonda ma la sua forma parzialmente eterea non ha bisogno di dormire e non puo' ne' godere del piacere del cibo o delle bevande ne' soffrire il dolore di malattie e ferite. Se la sua forma e' danneggiata puo' rigenerarsi lentamente nel tempo. Se la sua forma viene distrutta puo' essere ripristinata con un'esplosione sufficiente di energia positiva come un incantesimo Rianimare Morti.
+
+STATISTICHE:
+
+Rigenerazione: 2 punto ferita per round
+Riduzione del Danno: 10/+2
+Incorporeo: Veira ha una probabilita' del 50% di evitare qualsiasi istanza di danno fisico che la colpirebbe
+Muoversi Silenziosamente: +50
+Resistenza: 50/- Resistenza al freddo
+Resistenza: 10/- Resistenza all'acido all'elettricita' e al fuoco
+Resistenza allo Scacciare: conta come 4 livelli piu' alti ai fini di resistere a Scacciare Non Morti
+Immunita' a fatica veleno malattia ferite sanguinanti stordimento ragnatela intralciare intossicazione nausea tocco vampirico risucchio di energia Pelle di Pietra Pelli di Ferro Pelle Coriacea indebolimento Sfera Elastica di Otiluke Guscio di Tartaruga Orrido Avvizzimento magia della morte pietrificazione colpi critici e la maggior parte delle pozioni.
+Peso: 0~
+@55604=~ +<EXRDVAL1> danno aggiuntivo~
+@55605=~ -<EXRDVAL1> penalita' per danni~
+@55606=~ tiro di dado minimo di <EXRLVAL1>~
+@55607=~ tiro di dado massimo di <EXRLVAL1>~
+@11533=~Il Teschio Urlante +2~
+@11534=~Il Teschio Urlante probabilmente costruito dagli gnomi delle profondita' e' un mazzafrusto dall'aspetto estremamente insolito: un'asta di legno lunga 90 cm sormontata da una testa di pietra scolpita a forma di teschio e costellata di schegge scintillanti di cristallo durissimo.
+Quando i cristalli incantati colpiscono un oggetto vibrano ed emettono un lamento straziante: queste armoniche innaturali possono lacerare le aure magiche e dissipare qualunque stregoneria circondi il bersaglio. Lo stesso tono di chiamata ha anche la possibilita' di assordare il bersaglio.
+
+STATISTICHE:
+
+Danno: 1d8 +2
+Attacco Base: +2
+Incantamento: +2
+Tipo di Danno: Contundente
+Speciale:
+Sonico: +1d6 danni sonori
+Dissolvenza: 15% possibilita' di lanciare Dissolvi Magie sul bersaglio (Volonta' CD 15 + bonus Forza di chi lo impugna)
+Piangente: Assorda il bersaglio colpito (Tempra CD 15 + bonus di Forza di chi lo impugna)
+Peso: 225 Kg
+Talenti Richiesti: Armi da guerra Mazzafrusto
+Tipo: A una mano~
+@11535=~Teschio Urlante di Svirfneblin +4~
+@11536=~Il Teschio Urlante Svirfneblin probabilmente costruito dagli gnomi delle profondita' e' un mazzafrusto dall'aspetto estremamente insolito: un'asta di legno lunga 90 cm sormontata da una testa di pietra scolpita a forma di teschio e costellata di schegge scintillanti di cristallo durissimo.
+Quando i cristalli incantati colpiscono un oggetto vibrano ed emettono un lamento straziante: queste armoniche innaturali possono lacerare le aure magiche e dissipare qualunque stregoneria circondi il bersaglio. Lo stesso tono di chiamata ha anche la possibilita' di assordare il bersaglio.
+
+STATISTICHE:
+
+Danno: 1d8 +4
+Attacco Base: +4
+Incantamento: +4
+Tipo di Danno: Contundente
+Speciale:
+Sonico: +2d6 danni sonori
+Dissolvente: 30% possibilita' di lanciare Dissolvi Magie sul bersaglio (Volonta' CD 25 + bonus Forza di chi lo impugna)
+Piangente: Assordante colpisce il bersaglio (Tempra CD 25 + bonus di Forza di chi lo impugna)
+Peso: 225 Kg
+Talenti Richiesti: Armi da guerra Mazzafrusto
+Tipo: A una mano~
+@11538=~Questo mazzafrusto pesante e' composto di una barra di ferro con tre tubi di metallo vuoti assicurati alla barra da sottili catene di ferro nero. Quando viene preso in mano i tubi vuoti rintoccano come agitati dal vento e sembra che il mazzafrusto non possa essere messo a tacere ne' imbottendolo ne' avvolgendolo. Quando viene brandito in combattimento i tubi risuonano come un tuono in grado di assordare chiunque ne sia colpito.
+Questa arma e' tutto quello che rimane del Lento Galoppo di Cedric un piccolo insediamento di frontiera situato nel Passo Meridionale delle montagne del Dorso del Mondo. Si crede che l'insediamento sia stato distrutto da una tribu' di orchi nel grande inverno del 1170 CV e al giungere della stagione fredda l'insediamento e i corpi degli abitanti furono seppelliti sotto grandi montagne di neve. Quando i primi viaggiatori sfidarono il passo in primavera trovarono solo la cima del grande campanile di pietra dell'insediamento che spuntava attraverso i mucchi di neve. Questo strano mazzafrusto fu trovato sul pavimento di pietra insanguinato della torre circondato dai cadaveri coperti dal gelo di numerosi orchi.
+Secondo la tradizione i Rintocchi Oscuri erano un simbolo della carica del Guardiano delle Campane dell'insediamento che aveva due compiti: suonare la campana di allarme quando un nemico veniva avvistato nel passo e poi difendere il passo con la sua vita. Si crede che il primo Guardiano della Campana del Lento Galoppo di Cedric fosse il creatore dei Rintocchi Oscuri un mazzafrusto incantato che suonava per avvertire la citta' del pericolo proprio mentre lui si gettava in battaglia contro i suoi nemici.
+
+STATISTICHE:
+
+Danno: 1d8
+Attacco Base: +1
+Incantamento: +1
+Tipo di Danno: Contundente
+Speciale:
+Sonico: +1 danno sonoro
+Dopo aver colpito una creatura i rintocchi svegliano tutti i membri del gruppo (se dormono) e garantiscono loro un bonus di attacco +1 per 1 round (non cumulativo)
+Penalita': -1 a Muoversi Silenziosamente
+Peso: 225 Kg
+Talenti Richiesti: Armi da Guerra Mazzafrusto
+Tipo: A una Mano~
+@11540=~Questo mazzafrusto pesante e' composto di una barra di ferro con tre tubi di metallo vuoti assicurati alla barra da sottili catene di ferro nero. Quando viene preso in mano i tubi vuoti rintoccano come agitati dal vento e sembra che il mazzafrusto non possa essere messo a tacere ne' imbottendolo ne' avvolgendolo. Quando viene brandito in combattimento i tubi risuonano come un tuono in grado di assordare chiunque ne sia colpito.
+Questa arma e' tutto quello che rimane del Lento Galoppo di Cedric un piccolo insediamento di frontiera situato nel Passo Meridionale delle montagne del Dorso del Mondo. Si crede che l'insediamento sia stato distrutto da una tribu' di orchi nel grande inverno del 1170 CV e al giungere della stagione fredda l'insediamento e i corpi degli abitanti furono seppelliti sotto grandi montagne di neve. Quando i primi viaggiatori sfidarono il passo in primavera trovarono solo la cima del grande campanile di pietra dell'insediamento che spuntava attraverso i mucchi di neve. Questo strano mazzafrusto fu trovato sul pavimento di pietra insanguinato della torre circondato dai cadaveri coperti dal gelo di numerosi orchi.
+Secondo la tradizione i Rintocchi Oscuri erano un simbolo della carica del Guardiano delle Campane dell'insediamento che aveva due compiti: suonare la campana di allarme quando un nemico veniva avvistato nel passo e poi difendere il passo con la sua vita. Si crede che il primo Guardiano della Campana del Lento Galoppo di Cedric fosse il creatore dei Rintocchi Oscuri un mazzafrusto incantato che suonava per avvertire la citta' del pericolo proprio mentre lui si gettava in battaglia contro i suoi nemici.
+
+STATISTICHE:
+
+Danno: 1d8 +3
+Attacco Base: +3
+Incantamento: +3
+Tipo di Danno: Contundente
+Speciale:
+Sonico: +1d6 danni sonori
+Dopo aver colpito una creatura i rintocchi svegliano tutti i membri del gruppo (se dormono) e garantiscono loro un bonus di attacco +3 per 1 round (non cumulativo)
+Interdizione agli Incantesimi: Immunita' agli incantesimi Parola di potere Silenzio e Silenzio
+Peso: 225 Kg
+Talenti Richiesti: Armi da Guerra Mazzafrusto
+Tipo: A una Mano~
+@12120=~Le pozioni solitamente vengono conservate in flaconi di ceramica cristallo vetro o in fiasche di metallo. Sia le fiasche che gli altri contenitori contengono generalmente abbastanza fluido per provvedere ad una persona con una dose completa in grado di trasmettere gli effetti della pozione.
+
+STATISTICHE:
+
+Permanente 1/- Resistenza ai danni taglienti
+Permanente 1/- Resistenza ai danni perforanti
+Permanente 1/- Resistenza ai danni contundenti
+Peso: 045 Kg~
+@12915=~Tunica da Mago della Resistenza all'Acido~
+@12916=~Le tuniche da mago della resistenza all'acido vengono talvolta indossate per proteggersi dalle mostruose melme acide ma sono piu' comunemente indossate per proteggersi da altri maghi. Non si conoscono molti incantesimi acidi tra i maghi ma i pochi conosciuti sono ampiamente utilizzati. Come le altre tuniche magiche possono essere indossate solo dai maghi.
+
+STATISTICHE:
+
+Resistenza: 20/- Resistenza all'acido
+Tutti i danni da acido inflitti dal personaggio aumentano del 20%
+Peso: 135 Kg~
+@12917=~Tunica del Mago di Resistenza alla Forza~
+@12918=~Di tutte le tuniche del mago della resistenza quelle della resistenza alla forza sono tra le piu' rare. Sono rare non perche' non siano utili ma perche' sono molto piu' difficili da creare rispetto a tutte le altre. Il nome e' improprio poiche' queste vesti sono piu' utili per rafforzare la magia che per resisterle.
+
+STATISTICHE:
+
+Resistenza: 20/- Resistenza ai danni magici
+Tutti i danni magici inflitti dal personaggio aumentano del 20%
+Peso: 135 Kg~
+@38359=~Disinvoltura
+(Trasmutazione)
+Livello: Brd 3
+Raggio di Azione: Incantatore
+Durata: 10 round per livello
+Tempo di Lancio: 3
+Area di Effetto: Incantatore
+Tiro Salvezza: Nessuno
+Questo incantesimo aumenta notevolmente la capacita' del personaggio di ingannare gli altri. Per tutta la durata l'abilita' Raggirare del personaggio aumenta di 15.~
+@816=~ABIURATORE:
+Un mago che si specializza nella magia che protegge blocca o bandisce.
+
+Vantaggi:
+* Gli abiuratori possono memorizzare un incantesimo aggiuntivo per livello di incantesimo che conoscono.
+* Gli incantesimi di abiurazione lanciati da un abiuratore guadagnano +2 CD.
+* Gli incantesimi arcani di abiurazione lanciati da un abiuratore durano il 20% in piu'.
+
+Svantaggi:
+* Gli abiuratori non possono imparare gli incantesimi della scuola di Invocazione.~
+@0=~IWD2EE Core~
+@98=~E' necessario prima installare il componente principale.~
+@535=~MONACO:
+I monaci sono combattenti che cercano la perfezione tramite la meditazione e l'azione. Sono guerrieri versatili particolarmente abili nel combattimento senz'armi e armature. Sebbene i monaci non possano lanciare incantesimi possiedono delle particolari capacita' magiche. Possono canalizzare un'energia impercettibile chiamata ki che gli permette di compiere azioni stupefacenti. Il talento piu' conosciuto di un monaco e' la sua capacita' di stordire un avversario con un colpo senz'armi.
+NOTA: I monaci multiclasse usano SOLO i loro livelli da monaco per determinare il numero di attacchi quando combattono senz'armi.
+Punti ferita per livello: 1-8
+
+Vantaggi:
+* Il monaco attacca piu' velocemente degli altri personaggi mentre e' disarmato:
+Livello 1-3: 2 attacchi per round
+Livello 4-6: 3 attacchi
+Livello 7-9: 4 attacchi
+Livello 10-12: 5 attacchi
+Livello 13-15: 6 attacchi superando i normali attacchi per limite rotondo. Per ogni 3 livelli dopo il 13 il monaco guadagna un altro attacco per round.
+* Armi del monaco: il monaco puo' impugnare bastoni pugnali pugnali da lancio e dardi con pochissime penalita' (un attacco in meno per round rispetto ai pugni ma il monaco ricevera' comunque un attacco extra per round ogni 3 livelli).
+* Man mano che il monaco aumenta di livello aumentano anche i danni inflitti dai suoi pugni:
+Livello 1-3: 1d6
+Livello 4-7: 1d8
+Livello 8- 9: 1d8+1
+Livello 10-11: 1d8+2
+Livello 12-15: 1d8+3
+Livello 16-20: 1d8+4
+Livello 21-30: 1d8+5
+* Colpo Ki: al livello 8 l'attacco senz'armi del monaco e' potenziato dal ki. Il danno del colpo senz'armi derivante da un tale attacco puo' infliggere danni a una creatura con riduzione del danno come un wight come se il colpo fosse stato sferrato con un'arma con un bonus di potenziamento pari al bonus di danno del monaco. Pertanto i pugni di un monaco di livello 12 colpiscono come un'arma +3.
+* La classe dell'armatura naturale di un monaco inizia da 10 per poi aumentare di +1 al 5° livello e successivamente ogni 5 livelli.
+* Quando non indossa l'armatura (le vesti sono accettabili) un monaco aggiunge il suo bonus di Saggezza alla sua CA allo stesso modo del suo bonus di Destrezza. Se il monaco e' mutaforma otterra' questo beneficio solo se il suo livello da monaco e' maggiore o uguale al livello minimo richiesto per mutaforma in quella forma.
+* Pugno Stordente: quando viene utilizzata questa capacita' tutti gli attacchi senz'armi del monaco nel round successivo costringono la vittima a effettuare un tiro salvezza sulla Tempra (CD 10 +modificatore di Saggezza +meta' del livello del monaco) o rimane stordita per 1 round. Un monaco puo' effettuare un pugno stordente 1 giorno per livello.
+* Eludere: i monaci hanno la capacita' di eludere i danni degli incantesimi ad area di effetto. Ogni volta che un monaco effettua con successo un Tiro Salvezza sui Riflessi contro un incantesimo ad effetto ad area che consente un Tiro Salvezza sui Riflessi per dimezzare i danni non subisce danni.
+* 2° livello: Deviare Frecce. Il monaco ottiene il talento Deviare le Frecce che gli conferisce un bonus vario di +1 contro le armi da tiro. Inoltre il monaco blocca automaticamente il primo danno da missile che lo colpirebbe ogni round. Il monaco deve avere una mano libera per bloccare i missili in questo modo.
+* 3° livello: Movimento Veloce. Il monaco si muove 3 metri piu' velocemente di un personaggio normale (la velocita' di movimento normale e' di 9 metri) ma solo finche' il monaco non e' ingombrato o indossa un'armatura. Successivamente il Monaco guadagna altri 3 metri di movimento ogni 3 livelli.
+* 3° livello: Mente Lucida. Il monaco ottiene un bonus di +2 ai tiri salvezza contro incantesimi ed effetti della scuola di Ammaliamento.
+* 5° livello: Purezza del Corpo. Il monaco acquisisce il controllo sul sistema immunitario del suo corpo. Ottiene l'immunita' a tutte le malattie.
+* 7° livello: Integrita' del Corpo. Il monaco puo' recuperare punti ferita pari al suo livello da monaco moltiplicato per il suo modificatore di Saggezza 1 volta al giorno ogni sette livelli.
+* 9° livello: Eludere Migliorato. Il monaco ottiene il talento Eludere Migliorato che normalmente e' disponibile solo ai ladri.
+* 10° livello: Passo Abbondante. Il monaco puo' teletrasportarsi in qualsiasi luogo in vista 1 volta al giorno.
+* 11° livello: Corpo Adamantino. Il monaco ha un tale controllo del proprio metabolismo da acquisire l'immunita' a veleni di ogni tipo.
+* 13° livello: Anima Adamantina. Il monaco ottiene resistenza agli incantesimi. La sua resistenza agli incantesimi e' pari al suo livello +10. Per influenzare il monaco con un incantesimo un incantatore deve tirare la resistenza agli incantesimi del monaco o un valore superiore su 1d20 +il livello dell'incantatore.
+* 15° livello: Palmo Tremante. Questo attacco terrificante consente al monaco di creare vibrazioni nel corpo di un'altra creatura che possono essere fatali. La prossima volta che il monaco colpisce una creatura con un attacco senz'armi il bersaglio muore a meno che non effettui un tiro salvezza sulla Tempra (CD 10 +modificatore di Saggezza +meta' del livello del monaco). I costrutti e i non morti non possono essere influenzati. Il monaco ottiene un utilizzo aggiuntivo di Palmo Tremante ogni sei livelli successivi.
+* 19° livello: Corpo Vuoto. Il monaco puo' assumere uno stato incorporeo per 5 round un numero di volte al giorno pari al suo livello diviso 2. Mentre e' incorporeo il monaco puo' muoversi attraverso i muri e meta' degli attacchi che lo colpiscono non infliggono danni fisici. Gli attacchi senz'armi del monaco ignoreranno i bonus di armatura e scudo.
+* 20° livello: Perfezione Interiore. Il monaco ha messo a punto il suo corpo con abilita' e capacita' quasi magiche al punto da diventare una creatura magica. Viene trattato per sempre come un esterno (creatura extraplanare) piuttosto che come un umanoide. Ad esempio affascinare una persona non la influenza. Inoltre il monaco ottiene riduzione del danno 20/+1. Cio' significa che il monaco ignora (rigenera istantaneamente) i primi 20 punti di danno di qualsiasi attacco a meno che il danno non venga inflitto da un'arma con bonus di potenziamento +1 (o migliore) da un incantesimo o da una forma di energia (fuoco  freddo ecc.). In quanto Esterno un Monaco di 20° livello e' soggetto a incantesimi che respingono le creature incantate come la protezione dalla legge.
+
+Svantaggi:
+* Perde molti bonus se indossa un'armatura e/o si usa armi.~
+@55718=~Nota: attualmente hai gia' degli incantesimi registrati. Qualsiasi nuova azione registrata verra' aggiunta alla registrazione esistente. Se desideri registrare gli incantesimi da zero premi <EXRCKEYDELETE> per eliminare la registrazione precedente quindi premi <EXRCKEYRECORD> per ricominciare.~
+@23086=~Scimitarra dell'Icore Spettrale~
+@23087=~Morningstar dell'Ira Xvimiana~
+@24034=~Crescita delle Piante~
+@23056=~5 danni resistiti da un'arma non buona non caotica e non argento~
+@23057=~10 danni resistiti da un'arma non buona non caotica e non argento~
+@23058=~15 danni resistiti da un'arma non buona non caotica e non argento~
+@23059=~20 danni resistiti da un'arma non buona non caotica e non argento~
+@23060=~5 danni resistiti da un'arma non buona non legale e non di ferro freddo~
+@23061=~10 danni resistiti da un'arma non buona non legale e non di ferro freddo~
+@23062=~15 danni resistiti da un'arma non buona non legale e non di ferro freddo~
+@23063=~20 danni resistiti da un'arma non buona non legale e non di ferro freddo~
+@4823=~Essendo un abishai bianco Xhaan e' innatamente resistente agli incantesimi e ai danni elementali. La sua spessa pelle e la sua biologia extraplanare gli garantiscono anche l'immunita' al veleno e alle malattie e la capacita' di rigenerarsi dalle ferite. Come baatezu non prova paura e gli incantesimi minori sono inutili nella sua mente aliena.
+
+STATISTICHE:
+
+Bonus armatura: +5
+Bonus Massimo di Destrezza:  Nessuno
+Speciale:
+Resistenza: 10/- Resistenza all'acido
+Resistenza: 100/- Resistenza al fuoco
+Resistenza: 50/- Resistenza al freddo
+Resistenza: 18/- Resistenza agli incantesimi
+Riduzione del danno: 10/bene o argento
+Rigenerazione: rigenera 5 punti ferita per round
+Immunita' alle malattie  effetti di veleno fascino e paura
+Puo' vedere perfettamente anche nell'oscurita' magica
+Peso: 0.~
+@4825=~Essendo un abishai bianco Xhaan e' innatamente resistente agli incantesimi e ai danni elementali. La sua spessa pelle e la sua biologia extraplanare gli garantiscono anche l'immunita' al veleno e alle malattie e la capacita' di rigenerarsi dalle ferite. Come baatezu non prova paura e gli incantesimi minori sono inutili nella sua mente aliena.
+
+STATISTICHE:
+
+Bonus armatura: +9
+Bonus Massimo di Destrezza:  Nessuno
+Speciale:
+Resistenza: 10/- Resistenza all'acido
+Resistenza: 100/- Resistenza al fuoco
+Resistenza: 50/- Resistenza al freddo
+Resistenza: 26/- Resistenza agli incantesimi
+Riduzione del danno: 10/bene o argento
+Rigenerazione: rigenera 2 punti ferita per round
+Immunita' alle malattie  effetti di veleno fascino e paura
+Puo' vedere perfettamente anche nell'oscurita' magica
+Peso: 0.~
+@4835=~In quanto cornugon Xhaan e' innatamente resistente agli incantesimi e ai danni elementali. La sua spessa pelle e la sua biologia extraplanare gli garantiscono anche l'immunita' al veleno e alle malattie e la capacita' di rigenerarsi dalle ferite. Come baatezu non prova paura e gli incantesimi minori sono inutili nella sua mente aliena.
+
+STATISTICHE:
+
+Bonus armatura: +18
+Bonus Massimo di Destrezza:  Nessuno
+Speciale:
+Resistenza: 10/- Resistenza all'acido
+Resistenza: 100/- Resistenza al fuoco
+Resistenza: 10/- Resistenza al freddo
+Resistenza: 24/- Resistenza agli incantesimi
+Riduzione del danno: 10/bene o argento
+Rigenerazione: rigenera 5 punti ferita per round
+Immunita' alle malattie  effetti di veleno fascino e paura
+Puo' vedere perfettamente anche nell'oscurita' magica
+Peso: 0.~
+@4837=~In quanto cornugon Xhaan e' innatamente resistente agli incantesimi e ai danni elementali. La sua spessa pelle e la sua biologia extraplanare gli garantiscono anche l'immunita' al veleno e alle malattie e la capacita' di rigenerarsi dalle ferite. Come baatezu non prova paura e gli incantesimi minori sono inutili nella sua mente aliena.
+
+STATISTICHE:
+
+Bonus armatura: +24
+Bonus Massimo di Destrezza:  Nessuno
+Speciale:
+Resistenza: 10/- Resistenza all'acido
+Resistenza: 100/- Resistenza al fuoco
+Resistenza: 10/- Resistenza al freddo
+Resistenza: 36/- Resistenza agli incantesimi
+Riduzione del danno: 15/bene o argento
+Rigenerazione: rigenera 10 punti ferita per round
+Immunita' alle malattie  effetti di veleno fascino e paura
+Puo' vedere perfettamente anche nell'oscurita' magica
+Peso: 0.~
+@10498=~Su questa armatura di cuoio c'e' un alone di grande mistero. Nessuno puo' dire con precisione come e dove sia stata creata. Quello che si sa e' che e' stata creata lavorando la pelle di un Cornugan. L'armatura e' nera e ricoperta di scaglie robuste e appuntite. Inoltre emana un leggero odore d'acido.
+Chi indossa la Pelle del Cornogon gode di una limitata forma di invulnerabilita' alle armi non magiche e dell'abilita' di rigenerare le proprie ferite.
+
+STATISTICHE:
+
+Armatura Media
+Bonus all'Armatura: +4
+Bonus Massimo di Destrezza: : +4
+Penalita' di Armatura alla Prova: -2
+Fallimento degli Incantesimi Arcani: 20%
+Speciale:
+Riduzione del danno: 10/+2
+Rigenerazione: Chi la usa recupera 1 punto ferita ogni 10 round di combattimento
+Peso: 675 Kg~
+@10500=~Su questa armatura di cuoio c'e' un alone di grande mistero. Nessuno puo' dire con precisione come e dove sia stata creata. Quello che si sa e' che e' stata creata lavorando la pelle di un Cornugan. L'armatura e' nera e ricoperta di scaglie robuste e appuntite. Inoltre emana un leggero odore d'acido.
+Chi indossa la Pelle del Cornugon gode di una limitata forma di invulnerabilita' alle armi non magiche e dell'abilita' di rigenerare le proprie ferite.
+
+STATISTICHE:
+
+Armatura Media
+Bonus all'Armatura: +7
+Bonus Massimo di Destrezza: : +4
+Penalita' di Armatura alla Prova: -2
+Fallimento degli Incantesimi Arcani: 20%
+Speciale:
+Riduzione del danno: 10/ bene o argento
+Rigenerazione: Chi la indossa recupera 1 punto ferita ogni round
+Peso: 675 Kg~
+@38256=~Oscurita'
+(Illusione)
+Livello: Brd 2 Chr 2 Str/Mag 2
+Raggio di Azione: Visuale dell'incantatore
+Durata: 4 round
+Tempo di Lancio: 4
+Area di Effetto: Raggio di 6 m
+Tiro Salvezza: Tempra nega
+Questo incantesimo crea oscurita' magica nell'area d'effetto. Le creature prive di scurovisione devono effettuare un tiro salvezza sulla Tempra o essere effettivamente accecate. Le creature dotate di scurovisione non sono accecate ma anche loro hanno solo una capacita' limitata di vedere attraverso l'oscurita' magica subendo una penalita' di -4 all'attacco se falliscono il Tiro Salvezza. Le creature con scurovisione superiore a 36 metri (ad esempio elfi scuri nani grigi o gnomi delle profondita') ricevono solo una penalita' di -2 all'attacco. I diavoli e le creature immuni alla cecita' non vengono influenzati.~
+@1001=~Devastazione
+(Ammaliamento)
+Livello: Chr 1 Talos 1 Brd 2
+Raggio di Azione: Visuale dell'incantatore
+Durata: 2 round per livello
+Tempo di Lancio: 4 round
+Area di Effetto: 1 creatura
+Tiro Salvezza: Nessuno
+Questo incantesimo fa si' che un sentimento di rovina travolga il bersaglio. Per la durata dell'incantesimo il bersaglio riceve una penalita' di -2 al Bonus d'Attacco e ai tiri salvezza. Piu' incantesimi di Destino si cumulano conferendo al bersaglio penalita' aggiuntive.~
+@6403=~Ho sentito delle tue azioni alla fortezza. Sono scettico sull'accordo che hai stretto ma almeno ci hai fatto guadagnare un po' di tempo.~
+@6404=~Lo considero il tentativo di Ulbrec di evitare di pagarci quello che ci deve. Siamo qui per tutto l'oro che ci deve Shawford. Non per le parole.~
+@6405=~Siamo venuti per essere pagati per il nostro lavoro alla fortezza a Shawford... e per tutte le altre missioni per le quali devi ancora pagarci.~
+@30070=~10 danni resistiti da un'arma non malvagia e non caotica~
+@30071=~15 danni resistiti da un'arma non malvagia e non caotica~
+
+//STRINGS THAT STILL NEED TRANSLATION
+
+@1031    = ~Mist of Eldath
+(Conjuration) [Good]
+Level: Drd 7, Ilmater 8
+Range: Sight of Caster
+Duration: 1 round
+Casting Time: 1 round
+Area of Effect: 10-foot radius
+Saving Throw: None
+
+This spell blankets the area of effect with a green mist - any living, non-hostile creature within the mist will be cured of disease, poison, and healed of 80 points of damage. This spell cannot be cast by evil characters.~
+@1697    = ~Power Word: Blind
+(Divination)
+Level: Brd 7, Sor/Wiz 8, Tempus 7, Bane 8
+Range: Sight of Caster
+Duration: Special
+Casting Time: 0
+Area of Effect: 10-foot radius
+Saving Throw: None
+
+This spell blinds enemy creatures within the area of effect. The duration of the blindness depends on the Hit Dice of the creature. Creatures of 9 or less Hit Dice are blinded permanently, while those having 10 or greater Hit Dice are blinded for 3 rounds. A creature cannot be affected by this spell more than once per 8 hours. This spell has no effect on deaf creatures.~
+@38154     = ~Simple Summoning
+(Conjuration)
+Level: Brd 2, Clr 2, Sor/Wiz 1
+Range: Sight of Caster
+Duration: Instantaneous
+Casting Time: 1
+Area of Effect: 1 creature
+Saving Throw: Will negates
+
+Simple Summoning summons the target of the spell. The target is instantly teleported to the caster's side, if it fails a Will save. Unlike most other summoning spells, Simple Summoning gives no control over the creature. This spell could either be used to rescue an ally (e.g. if the ally was paralyzed and being attacked by enemies), or to transport an enemy into a vulnerable position. Allies are affected with no save. Creatures and objects that are part of a structure (e.g. support beams) are unaffected.~
+@1872     = ~Bless
+(Conjuration)
+Level: Clr 1, Pal 1, Tempus 1
+Range: Sight of Caster
+Duration: 10 rounds / level
+Casting Time: 2
+Area of Effect: 25-foot radius
+Saving Throw: None
+
+Upon uttering this spell, the caster raises the attack bonus and saving throws of allied creatures in the area of effect by +1. Bless counters and dispels Bane.~
+@1874     = ~Bane
+(Enchantment)
+Level: Clr 1, Bane 1
+Range: Sight of Caster
+Duration: 10 rounds / level
+Casting Time: 2
+Area of Effect: 25-foot radius
+Saving Throw: None
+
+Bane is the reverse of Bless, and lowers the attack bonus and saving throws of enemy creatures in the area of effect by 1 for the duration of the spell. Bane counters and dispels Bless.~
+@1898     = ~Shillelagh
+(Transmutation)
+Level: Drd 1, Rgr 1
+Range: Caster
+Duration: 5 rounds + 1 round/level
+Casting Time: 2
+Area of Effect: Caster
+Saving Throw: None 
+
+This spell creates a magical cudgel that has a +1 attack bonus and inflicts 1d10+1 bludgeoning damage per strike. The enchantment, attack and damage bonuses of the Shillelagh increase to +2 at level 6, +3 at level 9, +4 at level 12, and +5 at level 15. The Shillelagh also gains the character's Wisdom bonus to attack and damage instead of Strength if their Wisdom is higher. The Shillelagh uses the Simple Weapon: Mace proficiency.~
+@32107     = ~Protection from Evil
+(Abjuration) [Good]
+Level: Clr 1, Pal 1, Sor/Wiz 1
+Range: Touch
+Duration: 10 rounds / level
+Casting Time: 1
+Area of Effect: 1 creature
+Saving Throw: None
+
+This spell forms a magic barrier around the target creature, granting a +2 generic bonus to AC and saving throws against attacks, spells and abilities from evil creatures. In additions, the creature is immune to charm and domination effects. Summoned fiends will not attack their summoner or their summoner's allies if their summoner has Protection from Evil.~
+@32408     = ~Magic Circle Against Evil
+(Abjuration) [Good]
+Level: Clr 4, Pal 4, Sor/Wiz 4, Ilmater 3
+Range: Caster
+Duration: 10 rounds / level
+Casting Time: 7
+Area of Effect: 10-foot radius
+Saving Throw: None
+
+When this spell is cast, all creatures within a 10' radius are affected individually by Protection from Evil, giving them +2 AC and +2 to Saving Throws against evil creatures, as well as immunity to charm and domination effects from such creatures.~
+@32523     = ~Static Charge
+(Transmutation)
+Level: Drd 5, Rgr 6, Talos 4
+Duration: 50 rounds
+Casting Time: 1 round
+Area of Effect: Sight of Caster
+Saving Throw: Reflex half
+
+Static Charge is similar to Call Lightning except it can be used indoors. Upon completion of this spell an enemy creature within the area of effect is fried by a static discharge for 1d8 electricity damage per caster level, to a maximum of 16d8 electricity damage. A successful Reflex save with +4 DC halves the damage. Once released the static charge will build up again on the caster, discharging once per 5 rounds for the duration of the spell.~
+@32704     = ~Creeping Doom
+(Conjuration)
+Level: Drd 7
+Range: Sight of Caster
+Duration: 1 round / level
+Casting Time: 10
+Area of Effect: Special
+Saving Throw: None
+
+Creeping Doom summons a horde of insects composed of various small beetles, spiders and other creatures.  The swarm is capable of dealing devastating damage in a short period of time but is in turn fragile and easily killed.~
+@1063    = ~Impervious Sanctity of Mind
+(Abjuration)
+Level: Clr 7, Ilmater 7, Helm 7
+Range: Sight of Caster
+Duration: 10 rounds/level
+Casting Time: 2
+Area of Effect: 1 creature
+Saving Throw: None
+
+This spell steels the target's mind against any outside influence. Charm, Command, Confusion, Dominate Person, Fear, Feeblemind, Hold, Sleep, Stun, Hopelessness and any psionic attack directed at the target will fail as long as this spell is in effect.~
+@34101     = ~Grease
+(Conjuration) 
+Level: Brd 1, Sor/Wiz 1
+Range: Sight of Caster 
+Duration: 10 rounds
+Casting Time: 1
+Area of Effect: 5-foot radius 
+Saving Throw: Reflex half 
+
+A Grease spell covers the ground with a slippery layer of a fatty, greasy nature. Any creature entering the area or caught in it when the spell is cast must make a Reflex save every round or have their movement rate slowed to a crawl as long as they are in the area of effect. Those who successfully save still move at half their normal speed while in the area covered by grease.~
+@34206     = ~Invisibility
+(Illusion) 
+Level: Brd 2, Rgr 2, Sor/Wiz 2
+Range: Touch
+Duration: 10 rounds / level
+Casting Time: 2
+Area of Effect: 1 creature
+Saving Throw: None 
+
+This spell turns a creature invisible and makes it undetectable by normal vision or darkvision. The spell remains in effect until the duration has expired, it is magically broken or dispelled, or until the recipient talks to or attacks any creature. Thus the invisible being can open doors, eat, climb stairs, etc., but if he attacks or casts a spell, he immediately becomes visible (although the invisibility enables him to attack first).~
+@1750    = ~Stinking Cloud
+(Necromancy) 
+Level Sor/Wiz 3
+Range: Medium
+Duration: 10 rounds
+Casting Time: 2 
+Area of Effect: 30-foot radius
+Saving Throw: Fortitude negates
+
+Stinking Cloud creates a billowing mass of noxious vapors up to 30 feet away from the wizard. Any living creature caught within the cloud must roll a successful Fortitude save with -2 DC or become nauseated, making them unable to attack, cast spells, concentrate on spells, and so on. These effects last for as long as the character remains in the cloud.~
+@34311     = ~Protection from Arrows
+(Abjuration) 
+Level: Sor/Wiz 2, Helm 3
+Range: Touch
+Duration: 10 rounds / level
+Casting Time: 3
+Area of Effect: 1 creature
+Saving Throw: None
+
+This spell grants the target a damage reduction of 10/+1 against missiles for the duration of the spell.  The damage reduction increases with the level of the caster to 10/+2 at 5th level, 10/+3 at 10th, 10/+4 at 15th, and 10/+5 at 20th.~
+@34321     = ~Invisibility Sphere
+(Illusion) 
+Level: Brd 3, Sor/Wiz 3, Mask 3
+Range: Caster
+Duration: 10 rounds / level
+Casting Time: 10
+Area of Effect: 10-foot radius
+Saving Throw: None 
+
+This spell causes all creatures within 10' of the caster to vanish from sight and be undetectable by normal vision or even darkvision.  Of course, the invisible creature is not magically silenced, and certain other conditions can render the creature detectable. Even allies cannot see the invisible creature or his gear, unless these allies can normally see invisible things or employ magic to do so.  Items dropped or put down by the invisible creature become visible, items picked up disappear if tucked into the clothing or pouches worn by the creature. The spell remains in effect until it is magically broken or dispelled, until the wizard or recipient cancels it, until the recipient attacks any creature, or until the duration has expired. Thus the invisible being can open doors, talk, eat, climb stairs, etc., but if he attacks, he immediately becomes visible, although the invisibility enables him to attack first.~
+@38455     = ~Polymorph Self
+(Transmutation)
+Level: Sor/Wiz 4
+Range: Caster
+Duration: 10 rounds / level
+Casting Time: 4
+Area of Effect: Caster
+Saving Throw: None
+
+Polymorph Self allows the caster to assume the form of a creature of moderate power. While in another form, the caster has its Strength, Dexterity, Constitution, base Armor Class, resistances, immunities, attacks, and special abilities. The caster can polymorph into one of the following forms:
+
+* Fomorian Giant (can throw boulders at long range)
+* Troll (regenerates 1 HP per second)
+* Umber Hulk (nearby enemies must make Will save each round or be confused)
+* Wyvern (can fly, and each hit poisons the target on a failed Fortitude save)~
+@38955     = ~Malavon's Corrosive Fog
+(Conjuration)
+Level: Sor/Wiz 9
+Range: Sight of Caster
+Duration: 20 rounds
+Casting Time: 12
+Area of Effect: 40-foot radius
+Saving Throw: Fortitude half
+
+Malavon's Corrosive Fog is another spell created by the dark elf sorcerer Malavon. It creates an enormous cloud of acid fog that lingers for a long time. Each round, any creature in the fog takes 12d6 acid damage (Fortitude save for half), and their movement rate is halved (there is no save against the movement penalty). The target's Spell Resistance, if any, does not affect this spell.~
+@389    = ~LICHDOM:
+
+After endless dark research, you have finally achieved immortality... so long as your phylactery survives.
+
+Prerequisite: To start taking ranks in this feat, you need two ranks in Spell Focus: Necromancy, 12 levels of wizard or sorcerer or 10 levels of necromancer, and evil alignment. To take the final rank, you need 20 levels of wizard or sorcerer or 18 levels of necromancer.
+
+Benefit: Even after you meet the initial requirements, you must take this feat five times for it to have any benefit (this represents the long hours of evil research necessary to achieve lichdom). Once you do, you become a lich and gain these effects:
+* +5 generic armor bonus.
+* +2 Intelligence, Wisdom and Charisma.
+* Immune to cold, electricity, poison, disease, bleeding, fatigue, sleep, fear, hopelessness, charm, confusion, feeblemind, paralysis, stun, energy drain, instant death, petrification, harmful polymorph effects (Polymorph Self still works), critical hits, and sneak attacks.
+* 5/- resistance to slashing and piercing damage, damage reduction 5/+1.
+* +8 bonus to Hide, Move Silently, and Search.
+* You can be turned, but count as 4 levels higher against turning effects.
+* You take damage from Cure Wounds spells and healing potions but are healed by Inflict Wounds spells.
+* Your unarmed attacks are replaced with a Lich Touch, which deals 3d10+5 cold damage and paralyzes the target for 10 rounds on a failed save (same DC as the spell Lich Touch).
+* You have an aura of fear; any enemy within 20 feet that is at least 5 levels lower than you must make a Will save (DC 10 + Charisma/Intelligence modifier) or run away for 1 round.
+* You gain a phylactery which stores your life force. If you die, you will be automatically revived after 8 hours. However, if all party members die, the enemies will destroy your phylactery and the game will be over.~
+@390    = ~LICHDOM:
+
+After endless dark research, you have finally achieved immortality... so long as your phylactery survives.
+
+Prerequisite: To start taking ranks in this feat, you need two ranks in Spell Focus: Necromancy, 12 levels of wizard or sorcerer or 10 levels of necromancer, and evil alignment. To take the final rank, you need 20 levels of wizard or sorcerer or 18 levels of necromancer.
+
+Benefit: Even after you meet the initial requirements, you must take this feat five times for it to have any benefit (this represents the long hours of evil research necessary to achieve lichdom). Once you do, you become a lich and gain these effects:
+* +5 armor bonus.
+* +2 Intelligence, Wisdom and Charisma.
+* Immune to cold, electricity, poison, disease, bleeding, fatigue, sleep, fear, hopelessness, charm, confusion, feeblemind, paralysis, stun, energy drain, instant death, petrification, and harmful polymorph effects (Polymorph Self still works).
+* 5/- resistance to slashing and piercing damage, damage reduction 5/+1.
+* +8 bonus to Hide, Move Silently, and Search.
+* You can be turned, but count as 4 levels higher against turning effects.
+* You take damage from Cure Wounds spells and healing potions but are healed by Inflict Wounds spells.
+* Your unarmed attacks are replaced with a Lich Touch, which deals 3d10+5 cold damage and paralyzes the target for 10 rounds on a failed save (same DC as the spell Lich Touch).
+* You have an aura of fear; any enemy within 20 feet that is at least 5 levels lower than you must make a Will save (DC 10 + Charisma/Intelligence modifier) or run away for 1 round.
+* You gain a phylactery which stores your life force. If you die, you will be automatically revived after 8 hours. However, if all party members die, the enemies will destroy your phylactery and the game will be over.~

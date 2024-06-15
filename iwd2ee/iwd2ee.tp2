@@ -44,6 +44,25 @@ LANGUAGE   ~English~
            ~iwd2ee/tra/English/more_persuasion_options.tra~
            ~iwd2ee/tra/English/new_strings_after_release.tra~
 
+LANGUAGE   ~Italian~
+           ~Italian~
+           ~iwd2ee/tra/Italian/setup.tra~
+           ~iwd2ee/tra/Italian/class_revisions.tra~
+           ~iwd2ee/tra/Italian/loose_alignment.tra~
+           ~iwd2ee/tra/Italian/spell_revise.tra~
+           ~iwd2ee/tra/Italian/spell_focus.tra~
+           ~iwd2ee/tra/Italian/item_revisions.tra~
+           ~iwd2ee/tra/Italian/creature_rebalancing.tra~
+           ~iwd2ee/tra/Italian/faster_areas.tra~
+           ~iwd2ee/tra/Italian/z_concoct_potions.tra~
+		   ~iwd2ee/tra/Italian/npc_core.tra~
+           ~iwd2ee/tra/Italian/revised_battle_square.tra~
+           ~iwd2ee/tra/Italian/lua.tra~
+           ~iwd2ee/tra/Italian/racial_enemies.tra~
+           ~iwd2ee/tra/Italian/misc.tra~
+           ~iwd2ee/tra/Italian/more_persuasion_options.tra~
+           ~iwd2ee/tra/Italian/new_strings_after_release.tra~
+
 LANGUAGE   ~Russian~
            ~Russian~
            ~iwd2ee/tra/Russian/setup.tra~

@@ -808,9 +808,6 @@
 * Не может изучать заклинания школы Проявления.~
 @0    = ~IWD2EE Core~
 @98   = ~You must first install the core component.~
-
-//STRINGS THAT STILL NEED TRANSLATION
-
 @535    = ~МОНАХ:
 
 Монахи - воины, достигающие совершенства не только через боевой опыт, но и с помощью медитаций. Это универсальные бойцы, особенно искушённые в сражениях без оружия и доспехов. Хотя монахи не могут читать заклинания, они обладают собственной уникальной магией и способны направлять энергию души, именуемую "ки", что позволяет им совершать изумительные вещи. Наиболее известная способность монахов - ошеломить противника при ударе голыми руками. 
@@ -993,3 +990,224 @@
 @6408=~Герои вернулись! Таргос спасён!~
 @30070=~10 пунктов урона снижено от не злого и не хаотичного оружия~
 @30071=~15 пунктов урона снижено от не злого и не хаотичного оружия~
+
+//STRINGS THAT STILL NEED TRANSLATION
+
+@1031    = ~Mist of Eldath
+(Conjuration) [Good]
+Level: Drd 7, Ilmater 8
+Range: Sight of Caster
+Duration: 1 round
+Casting Time: 1 round
+Area of Effect: 10-foot radius
+Saving Throw: None
+
+This spell blankets the area of effect with a green mist - any living, non-hostile creature within the mist will be cured of disease, poison, and healed of 80 points of damage. This spell cannot be cast by evil characters.~
+@1697    = ~Power Word: Blind
+(Divination)
+Level: Brd 7, Sor/Wiz 8, Tempus 7, Bane 8
+Range: Sight of Caster
+Duration: Special
+Casting Time: 0
+Area of Effect: 10-foot radius
+Saving Throw: None
+
+This spell blinds enemy creatures within the area of effect. The duration of the blindness depends on the Hit Dice of the creature. Creatures of 9 or less Hit Dice are blinded permanently, while those having 10 or greater Hit Dice are blinded for 3 rounds. A creature cannot be affected by this spell more than once per 8 hours. This spell has no effect on deaf creatures.~
+@38154     = ~Simple Summoning
+(Conjuration)
+Level: Brd 2, Clr 2, Sor/Wiz 1
+Range: Sight of Caster
+Duration: Instantaneous
+Casting Time: 1
+Area of Effect: 1 creature
+Saving Throw: Will negates
+
+Simple Summoning summons the target of the spell. The target is instantly teleported to the caster's side, if it fails a Will save. Unlike most other summoning spells, Simple Summoning gives no control over the creature. This spell could either be used to rescue an ally (e.g. if the ally was paralyzed and being attacked by enemies), or to transport an enemy into a vulnerable position. Allies are affected with no save. Creatures and objects that are part of a structure (e.g. support beams) are unaffected.~
+@1872     = ~Bless
+(Conjuration)
+Level: Clr 1, Pal 1, Tempus 1
+Range: Sight of Caster
+Duration: 10 rounds / level
+Casting Time: 2
+Area of Effect: 25-foot radius
+Saving Throw: None
+
+Upon uttering this spell, the caster raises the attack bonus and saving throws of allied creatures in the area of effect by +1. Bless counters and dispels Bane.~
+@1874     = ~Bane
+(Enchantment)
+Level: Clr 1, Bane 1
+Range: Sight of Caster
+Duration: 10 rounds / level
+Casting Time: 2
+Area of Effect: 25-foot radius
+Saving Throw: None
+
+Bane is the reverse of Bless, and lowers the attack bonus and saving throws of enemy creatures in the area of effect by 1 for the duration of the spell. Bane counters and dispels Bless.~
+@1898     = ~Shillelagh
+(Transmutation)
+Level: Drd 1, Rgr 1
+Range: Caster
+Duration: 5 rounds + 1 round/level
+Casting Time: 2
+Area of Effect: Caster
+Saving Throw: None 
+
+This spell creates a magical cudgel that has a +1 attack bonus and inflicts 1d10+1 bludgeoning damage per strike. The enchantment, attack and damage bonuses of the Shillelagh increase to +2 at level 6, +3 at level 9, +4 at level 12, and +5 at level 15. The Shillelagh also gains the character's Wisdom bonus to attack and damage instead of Strength if their Wisdom is higher. The Shillelagh uses the Simple Weapon: Mace proficiency.~
+@32107     = ~Protection from Evil
+(Abjuration) [Good]
+Level: Clr 1, Pal 1, Sor/Wiz 1
+Range: Touch
+Duration: 10 rounds / level
+Casting Time: 1
+Area of Effect: 1 creature
+Saving Throw: None
+
+This spell forms a magic barrier around the target creature, granting a +2 generic bonus to AC and saving throws against attacks, spells and abilities from evil creatures. In additions, the creature is immune to charm and domination effects. Summoned fiends will not attack their summoner or their summoner's allies if their summoner has Protection from Evil.~
+@32408     = ~Magic Circle Against Evil
+(Abjuration) [Good]
+Level: Clr 4, Pal 4, Sor/Wiz 4, Ilmater 3
+Range: Caster
+Duration: 10 rounds / level
+Casting Time: 7
+Area of Effect: 10-foot radius
+Saving Throw: None
+
+When this spell is cast, all creatures within a 10' radius are affected individually by Protection from Evil, giving them +2 AC and +2 to Saving Throws against evil creatures, as well as immunity to charm and domination effects from such creatures.~
+@32523     = ~Static Charge
+(Transmutation)
+Level: Drd 5, Rgr 6, Talos 4
+Duration: 50 rounds
+Casting Time: 1 round
+Area of Effect: Sight of Caster
+Saving Throw: Reflex half
+
+Static Charge is similar to Call Lightning except it can be used indoors. Upon completion of this spell an enemy creature within the area of effect is fried by a static discharge for 1d8 electricity damage per caster level, to a maximum of 16d8 electricity damage. A successful Reflex save with +4 DC halves the damage. Once released the static charge will build up again on the caster, discharging once per 5 rounds for the duration of the spell.~
+@32704     = ~Creeping Doom
+(Conjuration)
+Level: Drd 7
+Range: Sight of Caster
+Duration: 1 round / level
+Casting Time: 10
+Area of Effect: Special
+Saving Throw: None
+
+Creeping Doom summons a horde of insects composed of various small beetles, spiders and other creatures.  The swarm is capable of dealing devastating damage in a short period of time but is in turn fragile and easily killed.~
+@1063    = ~Impervious Sanctity of Mind
+(Abjuration)
+Level: Clr 7, Ilmater 7, Helm 7
+Range: Sight of Caster
+Duration: 10 rounds/level
+Casting Time: 2
+Area of Effect: 1 creature
+Saving Throw: None
+
+This spell steels the target's mind against any outside influence. Charm, Command, Confusion, Dominate Person, Fear, Feeblemind, Hold, Sleep, Stun, Hopelessness and any psionic attack directed at the target will fail as long as this spell is in effect.~
+@34101     = ~Grease
+(Conjuration) 
+Level: Brd 1, Sor/Wiz 1
+Range: Sight of Caster 
+Duration: 10 rounds
+Casting Time: 1
+Area of Effect: 5-foot radius 
+Saving Throw: Reflex half 
+
+A Grease spell covers the ground with a slippery layer of a fatty, greasy nature. Any creature entering the area or caught in it when the spell is cast must make a Reflex save every round or have their movement rate slowed to a crawl as long as they are in the area of effect. Those who successfully save still move at half their normal speed while in the area covered by grease.~
+@34206     = ~Invisibility
+(Illusion) 
+Level: Brd 2, Rgr 2, Sor/Wiz 2
+Range: Touch
+Duration: 10 rounds / level
+Casting Time: 2
+Area of Effect: 1 creature
+Saving Throw: None 
+
+This spell turns a creature invisible and makes it undetectable by normal vision or darkvision. The spell remains in effect until the duration has expired, it is magically broken or dispelled, or until the recipient talks to or attacks any creature. Thus the invisible being can open doors, eat, climb stairs, etc., but if he attacks or casts a spell, he immediately becomes visible (although the invisibility enables him to attack first).~
+@1750    = ~Stinking Cloud
+(Necromancy) 
+Level Sor/Wiz 3
+Range: Medium
+Duration: 10 rounds
+Casting Time: 2 
+Area of Effect: 30-foot radius
+Saving Throw: Fortitude negates
+
+Stinking Cloud creates a billowing mass of noxious vapors up to 30 feet away from the wizard. Any living creature caught within the cloud must roll a successful Fortitude save with -2 DC or become nauseated, making them unable to attack, cast spells, concentrate on spells, and so on. These effects last for as long as the character remains in the cloud.~
+@34311     = ~Protection from Arrows
+(Abjuration) 
+Level: Sor/Wiz 2, Helm 3
+Range: Touch
+Duration: 10 rounds / level
+Casting Time: 3
+Area of Effect: 1 creature
+Saving Throw: None
+
+This spell grants the target a damage reduction of 10/+1 against missiles for the duration of the spell.  The damage reduction increases with the level of the caster to 10/+2 at 5th level, 10/+3 at 10th, 10/+4 at 15th, and 10/+5 at 20th.~
+@34321     = ~Invisibility Sphere
+(Illusion) 
+Level: Brd 3, Sor/Wiz 3, Mask 3
+Range: Caster
+Duration: 10 rounds / level
+Casting Time: 10
+Area of Effect: 10-foot radius
+Saving Throw: None 
+
+This spell causes all creatures within 10' of the caster to vanish from sight and be undetectable by normal vision or even darkvision.  Of course, the invisible creature is not magically silenced, and certain other conditions can render the creature detectable. Even allies cannot see the invisible creature or his gear, unless these allies can normally see invisible things or employ magic to do so.  Items dropped or put down by the invisible creature become visible, items picked up disappear if tucked into the clothing or pouches worn by the creature. The spell remains in effect until it is magically broken or dispelled, until the wizard or recipient cancels it, until the recipient attacks any creature, or until the duration has expired. Thus the invisible being can open doors, talk, eat, climb stairs, etc., but if he attacks, he immediately becomes visible, although the invisibility enables him to attack first.~
+@38455     = ~Polymorph Self
+(Transmutation)
+Level: Sor/Wiz 4
+Range: Caster
+Duration: 10 rounds / level
+Casting Time: 4
+Area of Effect: Caster
+Saving Throw: None
+
+Polymorph Self allows the caster to assume the form of a creature of moderate power. While in another form, the caster has its Strength, Dexterity, Constitution, base Armor Class, resistances, immunities, attacks, and special abilities. The caster can polymorph into one of the following forms:
+
+* Fomorian Giant (can throw boulders at long range)
+* Troll (regenerates 1 HP per second)
+* Umber Hulk (nearby enemies must make Will save each round or be confused)
+* Wyvern (can fly, and each hit poisons the target on a failed Fortitude save)~
+@38955     = ~Malavon's Corrosive Fog
+(Conjuration)
+Level: Sor/Wiz 9
+Range: Sight of Caster
+Duration: 20 rounds
+Casting Time: 12
+Area of Effect: 40-foot radius
+Saving Throw: Fortitude half
+
+Malavon's Corrosive Fog is another spell created by the dark elf sorcerer Malavon. It creates an enormous cloud of acid fog that lingers for a long time. Each round, any creature in the fog takes 12d6 acid damage (Fortitude save for half), and their movement rate is halved (there is no save against the movement penalty). The target's Spell Resistance, if any, does not affect this spell.~
+@389    = ~LICHDOM:
+
+After endless dark research, you have finally achieved immortality... so long as your phylactery survives.
+
+Prerequisite: To start taking ranks in this feat, you need two ranks in Spell Focus: Necromancy, 12 levels of wizard or sorcerer or 10 levels of necromancer, and evil alignment. To take the final rank, you need 20 levels of wizard or sorcerer or 18 levels of necromancer.
+
+Benefit: Even after you meet the initial requirements, you must take this feat five times for it to have any benefit (this represents the long hours of evil research necessary to achieve lichdom). Once you do, you become a lich and gain these effects:
+* +5 generic armor bonus.
+* +2 Intelligence, Wisdom and Charisma.
+* Immune to cold, electricity, poison, disease, bleeding, fatigue, sleep, fear, hopelessness, charm, confusion, feeblemind, paralysis, stun, energy drain, instant death, petrification, harmful polymorph effects (Polymorph Self still works), critical hits, and sneak attacks.
+* 5/- resistance to slashing and piercing damage, damage reduction 5/+1.
+* +8 bonus to Hide, Move Silently, and Search.
+* You can be turned, but count as 4 levels higher against turning effects.
+* You take damage from Cure Wounds spells and healing potions but are healed by Inflict Wounds spells.
+* Your unarmed attacks are replaced with a Lich Touch, which deals 3d10+5 cold damage and paralyzes the target for 10 rounds on a failed save (same DC as the spell Lich Touch).
+* You have an aura of fear; any enemy within 20 feet that is at least 5 levels lower than you must make a Will save (DC 10 + Charisma/Intelligence modifier) or run away for 1 round.
+* You gain a phylactery which stores your life force. If you die, you will be automatically revived after 8 hours. However, if all party members die, the enemies will destroy your phylactery and the game will be over.~
+@390    = ~LICHDOM:
+
+After endless dark research, you have finally achieved immortality... so long as your phylactery survives.
+
+Prerequisite: To start taking ranks in this feat, you need two ranks in Spell Focus: Necromancy, 12 levels of wizard or sorcerer or 10 levels of necromancer, and evil alignment. To take the final rank, you need 20 levels of wizard or sorcerer or 18 levels of necromancer.
+
+Benefit: Even after you meet the initial requirements, you must take this feat five times for it to have any benefit (this represents the long hours of evil research necessary to achieve lichdom). Once you do, you become a lich and gain these effects:
+* +5 armor bonus.
+* +2 Intelligence, Wisdom and Charisma.
+* Immune to cold, electricity, poison, disease, bleeding, fatigue, sleep, fear, hopelessness, charm, confusion, feeblemind, paralysis, stun, energy drain, instant death, petrification, and harmful polymorph effects (Polymorph Self still works).
+* 5/- resistance to slashing and piercing damage, damage reduction 5/+1.
+* +8 bonus to Hide, Move Silently, and Search.
+* You can be turned, but count as 4 levels higher against turning effects.
+* You take damage from Cure Wounds spells and healing potions but are healed by Inflict Wounds spells.
+* Your unarmed attacks are replaced with a Lich Touch, which deals 3d10+5 cold damage and paralyzes the target for 10 rounds on a failed save (same DC as the spell Lich Touch).
+* You have an aura of fear; any enemy within 20 feet that is at least 5 levels lower than you must make a Will save (DC 10 + Charisma/Intelligence modifier) or run away for 1 round.
+* You gain a phylactery which stores your life force. If you die, you will be automatically revived after 8 hours. However, if all party members die, the enemies will destroy your phylactery and the game will be over.~

@@ -179,8 +179,8 @@ Saving Throw: Fortitude partial
 
 This spell causes a local tremor to rip through the ground. Every creature within sight of the caster suffer 10d6 points of bludgeoning damage and must make a Fortitude save or be knocked unconscious for 5 rounds. Unconscious creatures can be struck automatically and will not wake up when damaged. This spell bypasses spell resistance.~
 @1030    = ~Mist of Eldath~
-@1031    = ~Mist of Eldath 
-(Evocation) [Good]
+@1031    = ~Mist of Eldath
+(Conjuration) [Good]
 Level: Drd 7, Ilmater 8
 Range: Sight of Caster
 Duration: 1 round
@@ -188,7 +188,7 @@ Casting Time: 1 round
 Area of Effect: 10-foot radius
 Saving Throw: None
 
-This spell blankets the area of effect with a green mist - any creature within the mist will be cured of disease, poison, and healed of 50 points of damage.~
+This spell blankets the area of effect with a green mist - any living, non-hostile creature within the mist will be cured of disease, poison, and healed of 80 points of damage.~
 @1032    = ~Larloch's Minor Drain~
 @1033    = ~Larloch's Minor Drain 
 (Necromancy)
@@ -375,16 +375,16 @@ Saving Throw: Will negates
 
 This spell conjures forth a glyph imbued with magical power that channels its effects through any enemy creatures capable of seeing it. Creatures affected will be overwhelmed by hopelessness and become unresponsive, refusing to defend themselves or their allies. A successful Will save will resist the effects. Undead, constructs, and blinded creatures are unaffected.~
 @1062    = ~Impervious Sanctity of Mind~
-@1063    = ~Impervious Sanctity of Mind 
+@1063    = ~Impervious Sanctity of Mind
 (Abjuration)
 Level: Clr 7, Ilmater 7, Helm 7
-Range: Caster
+Range: Sight of Caster
 Duration: 10 rounds/level
-Casting Time: 7
-Area of Effect: Caster
+Casting Time: 2
+Area of Effect: 1 creature
 Saving Throw: None
 
-This spell steels the caster's mind against any outside influence. Charm, Command, Confusion, Dominate Person, Fear, Feeblemind, Hold, Sleep, Stun, Hopelessness and any psionic attack directed at the caster will fail as long as this spell is in effect.~
+This spell steels the target's mind against any outside influence. Charm, Command, Confusion, Dominate Person, Fear, Feeblemind, Hold, Sleep, Stun, Hopelessness and any psionic attack directed at the target will fail as long as this spell is in effect.~
 @1064    = ~Greater Restoration~
 @1065    = ~Greater Restoration 
 (Necromancy)
@@ -1576,8 +1576,7 @@ Casting Time: 0
 Area of Effect: 10-foot radius
 Saving Throw: None
 
-This spell blinds enemy creatures within the area of effect. The duration of the blindness depends on the Hit Dice of the creature. Creatures of 9 or less Hit Dice are blinded permanently, those greater than 9 HD but less than 20 are blinded for 1d4 +1 minutes, while those having 20 or greater Hit Dice are blinded for 1d4+1 rounds. This spell has no effect on deaf creatures.
-~
+This spell blinds enemy creatures within the area of effect. The duration of the blindness depends on the Hit Dice of the creature. Creatures of 9 or less Hit Dice are blinded permanently, while those having 10 or greater Hit Dice are blinded for 3 rounds. A creature cannot be affected by this spell more than once per 8 hours. This spell has no effect on deaf creatures.~
 @1698    = ~Blindness~
 @1699    = ~Blindness
 (Illusion)
@@ -1631,7 +1630,7 @@ This spell eliminates the interval between spellcasting, allowing the caster to 
 ~
 @1718    = ~Blur~
 @1719    = ~Blur 
-(Illusion)  
+(Illusion)
 Level: Brd 2, Sor/Wiz 2, Mask 2
 Range: Caster
 Duration: 10 rounds / level 
@@ -1639,7 +1638,7 @@ Casting Time: 2
 Area of Effect: Caster
 Saving Throw: None
 
-Blur causes the wizard's body to become blurred, shifting and wavering. This distortion gives the caster's attackers a 20% miss chance when trying to hit him.~
+Blur causes the wizard's body to become blurred, shifting and wavering. This distortion gives the caster's attackers a 20% miss chance when trying to hit them.~
 @1720    = ~Dispel Illusions~
 @1721    = ~Dispel Illusions
 (Divination)
@@ -1761,13 +1760,12 @@ This spell evaporates moisture from the bodies of every living creature within t
 (Necromancy) 
 Level Sor/Wiz 3
 Range: Medium
-Duration: 1 round/level
+Duration: 10 rounds
 Casting Time: 2 
 Area of Effect: 30-foot radius
 Saving Throw: Fortitude negates
 
-Stinking Cloud creates a billowing mass of noxious vapors up to 30 feet away from the wizard. Any living creature caught within the cloud must roll a successful Fortitude save with -2 DC or become nauseated, making them unable to attack, cast spells, concentrate on spells, and so on. These effects last for as long as the character remains in the cloud.
-~
+Stinking Cloud creates a billowing mass of noxious vapors up to 30 feet away from the wizard. Any living creature caught within the cloud must roll a successful Fortitude save with -2 DC or become nauseated, making them unable to attack, cast spells, concentrate on spells, and so on. These effects last for as long as the character remains in the cloud.~
 
 @1755    = ~Unholy Blight~
 @1756    = ~Unholy Blight 
@@ -2169,10 +2167,10 @@ This spell heals all friendly living creatures within the area of effect by 2d8 
 (Conjuration)
 Level: Clr 1, Pal 1, Tempus 1
 Range: Sight of Caster
-Duration: 1 minute / level
+Duration: 10 rounds / level
 Casting Time: 2
 Area of Effect: 25-foot radius
-Saving Throw: None 
+Saving Throw: None
 
 Upon uttering this spell, the caster raises the attack bonus and saving throws of allied creatures in the area of effect by +1. Bless counters and dispels Bane.~
 @1873     = ~Bane~
@@ -2180,7 +2178,7 @@ Upon uttering this spell, the caster raises the attack bonus and saving throws o
 (Enchantment)
 Level: Clr 1, Bane 1
 Range: Sight of Caster
-Duration: 1 minute / level
+Duration: 10 rounds / level
 Casting Time: 2
 Area of Effect: 25-foot radius
 Saving Throw: None
@@ -2311,10 +2309,10 @@ With this spell, the caster causes a blazing ray of red-hot fire to spring forth
 When cast as a ranger spell, this spell creates a Flame Blade in each hand.~
 @1897     = ~Shillelagh~
 @1898     = ~Shillelagh
-(Transmutation) 
+(Transmutation)
 Level: Drd 1, Rgr 1
 Range: Caster
-Duration: 10 rounds / level
+Duration: 5 rounds + 1 round/level
 Casting Time: 2
 Area of Effect: Caster
 Saving Throw: None 
@@ -3007,10 +3005,10 @@ This spell enhances the caster's sling bullets. Any bullet the caster throws wil
 @32107     = ~Protection from Evil
 (Abjuration) [Good]
 Level: Clr 1, Pal 1, Sor/Wiz 1
-Range: Touch 
-Duration: 1 minute/level
+Range: Touch
+Duration: 10 rounds / level
 Casting Time: 1
-Area of Effect: 1 creature 
+Area of Effect: 1 creature
 Saving Throw: None
 
 This spell forms a magic barrier around the target creature, granting a +2 generic bonus to AC and saving throws against attacks, spells and abilities from evil creatures. In additions, the creature is immune to charm and domination effects. Summoned fiends will not attack their summoner or their summoner's allies if their summoner has Protection from Evil.~
@@ -3199,7 +3197,7 @@ This spell enables the caster to invade the mind of the target creature, allowin
 (Abjuration) [Good]
 Level: Clr 4, Pal 4, Sor/Wiz 4, Ilmater 3
 Range: Caster
-Duration: 1 minute/level
+Duration: 10 rounds / level
 Casting Time: 7
 Area of Effect: 10-foot radius
 Saving Throw: None
@@ -3286,7 +3284,7 @@ Chaotic Commands renders a creature immune to magical commands. Charm, Dominate 
 @32523     = ~Static Charge
 (Transmutation)
 Level: Drd 5, Rgr 6, Talos 4
-Duration: 5 turns
+Duration: 50 rounds
 Casting Time: 1 round
 Area of Effect: Sight of Caster
 Saving Throw: Reflex half
@@ -3325,6 +3323,16 @@ Area of Effect: 1 creature
 Saving Throw: Fortitude negates
 
 Dolorous decay is a rotting and withering of the body that spreads quickly and painfully throughout the afflicted creature.  Afflicted creatures take 1 point of damage per second and are slowed for 1 round per level.  The target creature can resist the disease with a successful Fortitude save at +8 DC.~
+@32704     = ~Creeping Doom
+(Conjuration)
+Level: Drd 7
+Range: Sight of Caster
+Duration: 1 round / level
+Casting Time: 10
+Area of Effect: Special
+Saving Throw: None
+
+Creeping Doom summons a horde of insects composed of various small beetles, spiders and other creatures.  The swarm is capable of dealing devastating damage in a short period of time but is in turn fragile and easily killed.~
 @31727     = ~Contagious Fear~
 @32727     = ~Contagious Fear
 (Necromancy)
@@ -3391,6 +3399,16 @@ Area of Effect: Special
 Saving Throw: None 
 
 This spell summons one or more creatures of nature who will aid the caster for the duration of the spell.  The type of creatures that come is random.  The creatures summoned are more powerful than creatures summoned by lesser versions of this spell.~
+@34101     = ~Grease
+(Conjuration) 
+Level: Brd 1, Sor/Wiz 1
+Range: Sight of Caster 
+Duration: 10 rounds
+Casting Time: 1
+Area of Effect: 5-foot radius 
+Saving Throw: Reflex half 
+
+A Grease spell covers the ground with a slippery layer of a fatty, greasy nature. Any creature entering the area or caught in it when the spell is cast must make a Reflex save every round or have their movement rate slowed to a crawl as long as they are in the area of effect. Those who successfully save still move at half their normal speed while in the area covered by grease.~
 @33104     = ~Charm Person~
 @34104     = ~Charm Person
 (Enchantment)
@@ -3414,6 +3432,16 @@ Area of Effect: 1 creature
 Saving Throw: None
 
 Upon completion of this spell, the caster hurls a magical shard of ice imbued with deep freezing cold, dealing 1d4 cold damage to the target creature per caster level (5d4 maximum). Other creatures within 5 feet also take the same amount of damage, except that they may make a Reflex save for half damage.~
+@34206     = ~Invisibility
+(Illusion) 
+Level: Brd 2, Rgr 2, Sor/Wiz 2
+Range: Touch 
+Duration: 10 rounds / level
+Casting Time: 2
+Area of Effect: 1 creature
+Saving Throw: None 
+
+This spell turns a creature invisible and makes it undetectable by normal vision or darkvision. The spell remains in effect until the duration has expired, it is magically broken or dispelled, or until the recipient talks to or attacks any creature. Thus the invisible being can open doors, eat, climb stairs, etc., but if he attacks or casts a spell, he immediately becomes visible (although the invisibility enables him to attack first).~
 @33209     = ~Luck~
 @34209     = ~Luck
 (Enchantment) 
@@ -3449,6 +3477,16 @@ Area of Effect: Special
 Saving Throw: Will negates 
 
 This spell holds 1-4 humans, demihumans, or humanoid creatures immobile for a short duration. The Hold Person spell affects any bipedal human, demihuman, or humanoid of man size or smaller, including dwarves, elves, gnolls, gnomes, goblins, half-elves, halflings, half-orcs, hobgoblins, humans, lizard men, orcs, troglodytes, and others. Thus, a 10th-level fighter could be held, while an ogre could not. The effect selects the enemies closest to the target and holds them. Enemies making their Will saves are totally unaffected by the spell. Undead creatures cannot be held. Held creatures cannot move or speak, but they remain aware of events around them and can use abilities not requiring motion or speech. Being held does not prevent the worsening of the subject's condition due to wounds, disease, or poison.  A successful Will save negates any effect.~
+@34311     = ~Protection from Arrows
+(Abjuration) 
+Level: Sor/Wiz 2, Helm 3
+Range: Touch 
+Duration: 10 rounds / level
+Casting Time: 3
+Area of Effect: 1 creature
+Saving Throw: None 
+
+This spell grants the target a damage reduction of 10/+1 against missiles for the duration of the spell.  The damage reduction increases with the level of the caster to 10/+2 at 5th level, 10/+3 at 10th, 10/+4 at 15th, and 10/+5 at 20th.~
 @33312     = ~Slow~
 @34312     = ~Slow
 (Transmutation) 
@@ -3471,6 +3509,16 @@ Area of Effect: 1 creature
 Saving Throw: Will negates
 
 This spell is similar to the Charm Person spell. However, the affected creature goes into a berserk state, wanting no one to harm his master (the spell caster). Thus, the creature will fight enemies of the caster, even former allies. Dire Charm can affect both humanoids and giants.~
+@34321     = ~Invisibility Sphere
+(Illusion) 
+Level: Brd 3, Sor/Wiz 3, Mask 3
+Range: Caster
+Duration: 10 rounds / level
+Casting Time: 10
+Area of Effect: 10-foot radius
+Saving Throw: None 
+
+This spell causes all creatures within 10' of the caster to vanish from sight and be undetectable by normal vision or even darkvision.  Of course, the invisible creature is not magically silenced, and certain other conditions can render the creature detectable. Even allies cannot see the invisible creature or his gear, unless these allies can normally see invisible things or employ magic to do so.  Items dropped or put down by the invisible creature become visible, items picked up disappear if tucked into the clothing or pouches worn by the creature. The spell remains in effect until it is magically broken or dispelled, until the wizard or recipient cancels it, until the recipient attacks any creature, or until the duration has expired. Thus the invisible being can open doors, talk, eat, climb stairs, etc., but if he attacks, he immediately becomes visible, although the invisibility enables him to attack first.~
 @33322     = ~Melf's Minute Meteors~
 @34322     = ~Melf's Minute Meteors
 (Evocation)
@@ -4275,15 +4323,15 @@ Saving Throw: None
 This spell summons an angelic deva to assist the party. The deva has a variety of priest spells, can fly, and wields a mace that forces creatures it hits to make a Fortitude save or be stunned. The party can only summon one deva per 8 hours. This spell may only be cast by good characters.~
 @37151     = ~True Strike~
 @38151     = ~True Strike
-(Divination) 
+(Divination)
 Level: Brd 1, Pal 1, Rgr 1, Sor/Wiz 1
 Range: Caster
-Duration: 9 seconds
+Duration: 1 round
 Casting Time: 1
 Area of Effect: Caster
 Saving Throw: None
 
-The True Strike spell gives the caster incredible insights into his or her enemies' weaknesses, but only for an extremely short duration. For 9 seconds, the caster gains a +20 attack bonus.~
+The True Strike spell gives the caster incredible insights into his or her enemies' weaknesses, but only for an extremely short duration. For 1 round, the caster gains a +20 attack bonus.~
 @37152     = ~Reflect Attack~
 @38152     = ~Reflect Attack
 (Abjuration)
@@ -4299,15 +4347,13 @@ After this spell is cast, the next instance of physical damage the caster would 
 @38154     = ~Simple Summoning
 (Conjuration)
 Level: Brd 2, Clr 2, Sor/Wiz 1
-Range: 1000 ft.
+Range: Sight of Caster
 Duration: Instantaneous
 Casting Time: 1
 Area of Effect: 1 creature
-Saving Throw: None
+Saving Throw: Will negates
 
-Simple Summoning summons the target of the spell. The target is instantly teleported to the caster's side. Unlike most other summoning spells, Simple Summoning gives no control over the creature. This spell could either be used to rescue an ally (e.g. if the ally was paralyzed and being attacked by enemies), or to transport an enemy into a vulnerable position. Creatures and objects that are part of a structure (e.g. support beams) are unaffected.
-
-Simple Summoning can be cast on any creature the party sees, even one outside of the caster's visual range.~
+Simple Summoning summons the target of the spell. The target is instantly teleported to the caster's side, if it fails a Will save. Unlike most other summoning spells, Simple Summoning gives no control over the creature. This spell could either be used to rescue an ally (e.g. if the ally was paralyzed and being attacked by enemies), or to transport an enemy into a vulnerable position. Allies are affected with no save. Creatures and objects that are part of a structure (e.g. support beams) are unaffected.~
 @37155     = ~Deathwatch~
 @38155     = ~Deathwatch
 (Necromancy)
@@ -4571,7 +4617,7 @@ This spell copies a spell that another creature is casting, allowing the bard to
 (Transmutation)
 Level: Sor/Wiz 4
 Range: Caster
-Duration: 1 minute/level
+Duration: 10 rounds / level
 Casting Time: 4
 Area of Effect: Caster
 Saving Throw: None
@@ -5079,7 +5125,7 @@ Living Lightning is essentially a spell that repeatedly casts itself. When cast,
 (Conjuration)
 Level: Sor/Wiz 9
 Range: Sight of Caster
-Duration: 30 rounds
+Duration: 20 rounds
 Casting Time: 12
 Area of Effect: 40-foot radius
 Saving Throw: Fortitude half

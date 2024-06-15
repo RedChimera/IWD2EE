@@ -27,6 +27,25 @@ LANGUAGE   ~English~
            ~iwd2ee/tra/English/misc.tra~
            ~iwd2ee/tra/English/more_persuasion_options.tra~
 
+LANGUAGE   ~Italian~
+           ~Italian~
+           ~iwd2ee_mod_compatibility_patch/tra/Italian/setup.tra~
+           ~iwd2ee/tra/Italian/class_revisions.tra~
+           ~iwd2ee/tra/Italian/loose_alignment.tra~
+           ~iwd2ee/tra/Italian/spell_revise.tra~
+           ~iwd2ee/tra/Italian/spell_focus.tra~
+           ~iwd2ee/tra/Italian/item_revisions.tra~
+           ~iwd2ee/tra/Italian/creature_rebalancing.tra~
+           ~iwd2ee/tra/Italian/faster_areas.tra~
+           ~iwd2ee/tra/Italian/z_concoct_potions.tra~
+		   ~iwd2ee/tra/Italian/npc_core.tra~
+           ~iwd2ee/tra/Italian/revised_battle_square.tra~
+           ~iwd2ee/tra/Italian/lua.tra~
+           ~iwd2ee/tra/Italian/racial_enemies.tra~
+           ~iwd2ee/tra/Italian/misc.tra~
+           ~iwd2ee/tra/Italian/more_persuasion_options.tra~
+           ~iwd2ee/tra/Italian/new_strings_after_release.tra~
+
 
 BEGIN @1 REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~usInitialModifications.txt~ @98 FORBID_COMPONENT ~widescreen.tp2~ ~0~ @99 DESIGNATED 0
 
@@ -2291,6 +2310,7 @@ COPY_EXISTING_REGEXP ~.*\.itm~ ~override~
 	READ_SHORT 0x18 theitemflags
 	READ_SHORT 0x1C thecategory
 	READ_ASCII 0x22 theappearance (2)
+	READ_SHORT 0x22 theappearancenumber
 	PATCH_IF (~%theappearance%~ STRING_EQUAL_CASE ~2A~) OR (~%theappearance%~ STRING_EQUAL_CASE ~3A~) OR (~%theappearance%~ STRING_EQUAL_CASE ~4A~) BEGIN
 		LPF ADD_ITEM_EQEFFECT INT_VAR opcode=288 target=1 timing=2 parameter1=thecategory parameter2=241 savingthrow=(theitemflags << 16) special=1 STR_VAR resource=~USEQTYPE~ END
 	END ELSE PATCH_IF thecategory = 67 BEGIN
@@ -2330,7 +2350,7 @@ COPY_EXISTING_REGEXP ~.*\.itm~ ~override~
 			PATCH_IF isranged = 1 BEGIN
 				LPF ADD_ITEM_EQEFFECT INT_VAR opcode=288 target=1 timing=2 parameter1=thecategory parameter2=241 savingthrow=(theitemflags << 16) special=4 STR_VAR resource=~USEQTYPE~ END
 			END ELSE PATCH_IF ismelee = 1 BEGIN
-				PATCH_IF (~%theappearance%~ STRING_EQUAL_CASE ~  ~) BEGIN
+				PATCH_IF theappearancenumber = 0 OR theappearancenumber = 0x2020 BEGIN
 					LPF ADD_ITEM_EQEFFECT INT_VAR opcode=288 target=1 timing=2 parameter1=thecategory parameter2=241 savingthrow=(theitemflags << 16) special=6 STR_VAR resource=~USEQTYPE~ END
 				END ELSE BEGIN
 					LPF ADD_ITEM_EQEFFECT INT_VAR opcode=288 target=1 timing=2 parameter1=thecategory parameter2=241 savingthrow=(theitemflags << 16) special=5 STR_VAR resource=~USEQTYPE~ END
@@ -2340,7 +2360,7 @@ COPY_EXISTING_REGEXP ~.*\.itm~ ~override~
 			END
 		END
 	END
-	PATCH_IF (((theitemflags BAND 0x00000002) = 0x00000002) AND ismelee = 1 AND NOT (~%theappearance%~ STRING_EQUAL_CASE ~  ~)) OR thecategory = 41 OR thecategory = 47 OR thecategory = 49 OR thecategory = 53 BEGIN
+	PATCH_IF (((theitemflags BAND 0x00000002) = 0x00000002) AND ismelee = 1 AND theappearancenumber != 0 AND theappearancenumber != 0x2020) OR thecategory = 41 OR thecategory = 47 OR thecategory = 49 OR thecategory = 53 BEGIN
 		LPF ADD_ITEM_EQEFFECT INT_VAR opcode=500 target=1 timing=0 special=1 STR_VAR resource=~MEMONKAN~ END
 	END
 	UNLESS ~USEQTYPE~

@@ -17,6 +17,78 @@ COPY ~%mod_folder%/bam/bam_creature_revisions~ ~override~
 
 ACTION_IF !(MOD_IS_INSTALLED ~iwd2ee.tp2~ ~2~) BEGIN
 	COPY ~%mod_folder%/itm/itm_item_revisions/00CWSHD1.itm~ ~override~
+
+	COPY_EXISTING ~uses001.spl~ ~override~
+		SAY NAME1 @21001
+		SAY NAME2 @21001
+	
+	COPY_EXISTING ~uses002.spl~ ~override~
+		SAY NAME1 @21002
+		SAY NAME2 @21002
+	
+	COPY_EXISTING ~uses003.spl~ ~override~
+		SAY NAME1 @21003
+		SAY NAME2 @21003
+		LPF ALTER_EFFECT INT_VAR silent=1 check_headers=1 check_globals=1 match_opcode=139 match_parameter1=20007 parameter1=RESOLVE_STR_REF(@20007) END
+	
+	COPY_EXISTING ~uses004.spl~ ~override~
+		SAY NAME1 @21004
+		SAY NAME2 @21004
+		LPF ALTER_EFFECT INT_VAR silent=1 check_headers=1 check_globals=1 match_opcode=139 match_parameter1=20006 parameter1=RESOLVE_STR_REF(@20006) END
+	
+	COPY_EXISTING ~uses005.spl~ ~override~
+		SAY NAME1 @21005
+		SAY NAME2 @21005
+	
+	COPY_EXISTING ~uses006.spl~ ~override~
+		SAY NAME1 @21006
+		SAY NAME2 @21006
+	
+	COPY_EXISTING ~uses007.spl~ ~override~
+		SAY NAME1 @21007
+		SAY NAME2 @21007
+	
+	COPY_EXISTING ~uses008.spl~ ~override~
+		SAY NAME1 @21008
+		SAY NAME2 @21008
+	
+	COPY_EXISTING ~uses009.spl~ ~override~
+		SAY NAME1 @21009
+		SAY NAME2 @21009
+	
+	COPY_EXISTING ~uses010.spl~ ~override~
+		SAY NAME1 @21010
+		SAY NAME2 @21010
+	
+	COPY_EXISTING ~uses011.spl~ ~override~
+		SAY NAME1 @21011
+		SAY NAME2 @21011
+	
+	COPY_EXISTING ~uses012.spl~ ~override~
+		SAY NAME1 @21012
+		SAY NAME2 @21012
+	
+	COPY_EXISTING ~uses013.spl~ ~override~
+		SAY NAME1 @21013
+		SAY NAME2 @21013
+	
+	COPY_EXISTING ~uses014.spl~ ~override~
+		SAY NAME1 @21014
+		SAY NAME2 @21014
+	
+	COPY_EXISTING ~uses015.spl~ ~override~
+		SAY NAME1 @21015
+		SAY NAME2 @21015
+		LPF ALTER_EFFECT INT_VAR silent=1 check_headers=1 check_globals=1 match_opcode=139 match_parameter1=20010 parameter1=RESOLVE_STR_REF(@20010) END
+	
+	COPY_EXISTING ~uses016.spl~ ~override~
+		SAY NAME1 @21016
+		SAY NAME2 @21016
+	
+	COPY_EXISTING ~uses018.spl~ ~override~
+		SAY NAME1 @37855
+		SAY NAME2 @37855
+
 END
 
 COPY_EXISTING ~31ORCSH0.bcs~ ~override/31ORCSH4.bcs~ ~31ORCSH0.bcs~ ~override/31ORCSH5.bcs~ ~31ORCSH0.bcs~ ~override/30ORCS0.bcs~ ~31ORCSH0.bcs~ ~override/30ORCS1.bcs~ ~31ORCSH0.bcs~ ~override/31ORCS00.bcs~ ~31ORCSH0.bcs~ ~override/31ORCS01.bcs~ ~31ORCSH0.bcs~ ~override/31ORCS03.bcs~ ~31ORCSH0.bcs~ ~override/31ORCS04.bcs~ ~31ORCSH0.bcs~ ~override/31ORCS09.bcs~ ~31ORCSH0.bcs~ ~override/31ORCS10.bcs~
@@ -153,73 +225,6 @@ COPY_EXISTING ~63CWMAD1.itm~ ~override~ ~USHFCWM1.itm~ ~override~
 COPY_EXISTING ~USCWDRCH.itm~ ~override~
 	SAY NAME1 @23085
 	SAY NAME2 @23085
-
-COPY_EXISTING ~uses001.spl~ ~override~
-	SAY NAME1 @21001
-	SAY NAME2 @21001
-
-COPY_EXISTING ~uses002.spl~ ~override~
-	SAY NAME1 @21002
-	SAY NAME2 @21002
-
-COPY_EXISTING ~uses003.spl~ ~override~
-	SAY NAME1 @21003
-	SAY NAME2 @21003
-	LPF ALTER_EFFECT INT_VAR silent=1 check_headers=1 check_globals=1 match_opcode=139 match_parameter1=20007 parameter1=RESOLVE_STR_REF(@20007) END
-
-COPY_EXISTING ~uses004.spl~ ~override~
-	SAY NAME1 @21004
-	SAY NAME2 @21004
-	LPF ALTER_EFFECT INT_VAR silent=1 check_headers=1 check_globals=1 match_opcode=139 match_parameter1=20006 parameter1=RESOLVE_STR_REF(@20006) END
-
-COPY_EXISTING ~uses005.spl~ ~override~
-	SAY NAME1 @21005
-	SAY NAME2 @21005
-
-COPY_EXISTING ~uses006.spl~ ~override~
-	SAY NAME1 @21006
-	SAY NAME2 @21006
-
-COPY_EXISTING ~uses007.spl~ ~override~
-	SAY NAME1 @21007
-	SAY NAME2 @21007
-
-COPY_EXISTING ~uses008.spl~ ~override~
-	SAY NAME1 @21008
-	SAY NAME2 @21008
-
-COPY_EXISTING ~uses009.spl~ ~override~
-	SAY NAME1 @21009
-	SAY NAME2 @21009
-
-COPY_EXISTING ~uses010.spl~ ~override~
-	SAY NAME1 @21010
-	SAY NAME2 @21010
-
-COPY_EXISTING ~uses011.spl~ ~override~
-	SAY NAME1 @21011
-	SAY NAME2 @21011
-
-COPY_EXISTING ~uses012.spl~ ~override~
-	SAY NAME1 @21012
-	SAY NAME2 @21012
-
-COPY_EXISTING ~uses013.spl~ ~override~
-	SAY NAME1 @21013
-	SAY NAME2 @21013
-
-COPY_EXISTING ~uses014.spl~ ~override~
-	SAY NAME1 @21014
-	SAY NAME2 @21014
-
-COPY_EXISTING ~uses015.spl~ ~override~
-	SAY NAME1 @21015
-	SAY NAME2 @21015
-	LPF ALTER_EFFECT INT_VAR silent=1 check_headers=1 check_globals=1 match_opcode=139 match_parameter1=20010 parameter1=RESOLVE_STR_REF(@20010) END
-
-COPY_EXISTING ~uses016.spl~ ~override~
-	SAY NAME1 @21016
-	SAY NAME2 @21016
 
 COPY_EXISTING ~spin257.spl~ ~override~
 	WRITE_SHORT 0x22 9

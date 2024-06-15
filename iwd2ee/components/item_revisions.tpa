@@ -4624,6 +4624,12 @@ COPY_EXISTING_REGEXP ~.*\.itm~ ~override~
 	WRITE_BYTE 0x2b us_kit_unusability_2
 	WRITE_BYTE 0x2d us_kit_unusability_3
 	WRITE_BYTE 0x2f us_kit_unusability_4
+
+	PATCH_IF ((us_item_flags BAND 0x00000800) = 0x00000800) BEGIN
+		us_item_flags|=0x1
+		us_item_flags&=0xFFFFF7FF
+		WRITE_LONG 0x18 us_item_flags
+	END
 	BUT_ONLY_IF_IT_CHANGES
 
 COPY_EXISTING ~USWI961Z.itm~ ~override~
@@ -5659,7 +5665,6 @@ COPY_EXISTING ~00BASHS3.sto~ ~override~ //Avarine Decanter genie store
 	ADD_STORE_ITEM ~00WAND43~ AFTER ~00WAND44~ #50 #1 #1 ~IDENTIFIED~ #1 //Wand of Spell Resistance
 	ADD_STORE_ITEM ~USCLCK40~ AFTER ~00BELT03~ #1 #1 #1 ~IDENTIFIED~ #1 //Cloak of Protection +3
 	ADD_STORE_ITEM ~USBRAC47~ AFTER ~00BOOT01~ #1 #1 #1 ~IDENTIFIED~ #1 //Bracers of Armor +5
-	ADD_STORE_ITEM ~USRTHF53~ AFTER ~USBRAC47~ #1 #1 #1 ~IDENTIFIED~ #1 //Bracers of Blinding Strike
 	ADD_STORE_ITEM ~00RTHF73~ AFTER ~00BRAC10~ #1 #1 #1 ~IDENTIFIED~ #1 //Cleaver
 	ADD_STORE_ITEM ~00RTHF58~ AFTER ~00RTHF73~ #1 #1 #1 ~IDENTIFIED~ #1 //Iron Mary crossbow
 //	ADD_STORE_ITEM ~00AROW07~ AFTER ~00POTN01~ #1 #1 #1 ~IDENTIFIED~ #30 //Arrow of Dispelling
@@ -5857,6 +5862,7 @@ COPY_EXISTING ~63RIKI.sto~ ~override~ //Severed Hand thief store
 	ADD_STORE_ITEM ~USAROW52~ AFTER ~00AROW94~ #1 #1 #1 ~IDENTIFIED~ #9 //Arrows of Detonation
 	ADD_STORE_ITEM ~USBOLT52~ AFTER ~00BOLT99~ #1 #1 #1 ~IDENTIFIED~ #9 //Bolts of Lightning
 	ADD_STORE_ITEM ~USCLCK51~ AFTER ~00CLCK03~ #1 #1 #1 ~IDENTIFIED~ #1 //Improved Cloak of Displacement
+	ADD_STORE_ITEM ~USRTHF53~ BEFORE ~USCLCK51~ #1 #1 #1 ~IDENTIFIED~ #1 //Bracers of Blinding Strike
 	REMOVE_STORE_ITEM ~00AROW92~
 	REMOVE_STORE_ITEM ~00AROW93~
 	REMOVE_STORE_ITEM ~00BOLT97~

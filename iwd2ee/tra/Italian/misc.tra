@@ -1,0 +1,38 @@
+@56000=~Siamo entrati con mezzi magici.~
+@56001=~Hai nuovamente bisogno dei miei servigi?~
+@56002=~Si', unisciti nuovamente a noi grazie.~
+@56003=~Non al momento.~
+@56004=~Questo cursore controlla il livello di difficolta' da utilizzare in combattimento. Da sinistra a destra le impostazioni sono le seguenti:
+
+* Molto facile: i nemici hanno una penalita' di -4 agli attacchi e ai tiri salvezza e il gruppo subisce la meta' dei danni.
+
+* Facile: i nemici hanno una penalita' di -2 agli attacchi e ai tiri salvezza e il gruppo subisce tre quarti di danno.
+
+* Normale: questa impostazione non ha modifiche; Icewind Dale 2: Enhanced Edition e' stato bilanciato per questa difficolta'.
+
+* Difficile: i nemici hanno un bonus di attacco di +3 e infliggono il 50% di danni in piu' al gruppo.
+
+* Folle: i nemici hanno un bonus di attacco di +9 e infliggono danni doppi al gruppo.
+
+Inoltre c'e' una difficolta' ancora piu' alta Cuore Furente. E' possibile accedere a questa impostazione di difficolta' aprendo Config.exe selezionando l'opzione "Modalita' Cuore Furente" e avviando un nuovo gioco.
+
+* Cuore Furente: i nemici hanno il triplo dei loro PF base piu' altri 80 PF +10 a tutti i punteggi di caratteristica +12 livelli in ciascuna delle loro classi +9 attacco +5 tiri salvezza infliggono danni doppi al gruppo e hai un grado di sfida di +10. Molti oggetti magici nel gioco vengono sostituiti con versioni piu' potenti.
+
+Icewind Dale 2: Enhanced Edition ha alcuni componenti opzionali che riducono i bonus dati ai nemici di Cuore Furente. I bonus di cui sopra presuppongono che tali componenti non siano installati.~
+@56005=~Risucchio dei Punti Caratteristica~
+@56006=~I bonus razziali extra per gli umani si trovano qui. Ogni effetto di questo incantesimo verra' applicato a qualsiasi personaggio giocante umano subito dopo la creazione del personaggio.~
+@56007=~I bonus razziali extra per gli aasimar si trovano qui. Ogni effetto di questo incantesimo verra' applicato a qualsiasi personaggio giocante aasimar subito dopo la creazione del personaggio.~
+@56008=~I bonus razziali extra per i tiefling si trovano qui. Ogni effetto di questo incantesimo verra' applicato a qualsiasi personaggio giocante tiefling subito dopo la creazione del personaggio.~
+@56009=~I bonus razziali extra per gli elfi della luna si trovano qui. Ogni effetto di questo incantesimo verra' applicato a qualsiasi personaggio giocante elfo della luna subito dopo la creazione del personaggio.~
+@56010=~I bonus razziali extra per i drow si trovano qui. Ogni effetto di questo incantesimo verra' applicato a qualsiasi personaggio giocante drow subito dopo la creazione del personaggio.~
+@56011=~I bonus razziali extra per gli elfi selvaggi si trovano qui. Ogni effetto di questo incantesimo verra' applicato a qualsiasi personaggio giocante elfo selvaggio subito dopo la creazione del personaggio.~
+@56012=~I bonus razziali extra per i mezzelfi si trovano qui. Ogni effetto di questo incantesimo verra' applicato a qualsiasi personaggio giocante mezzelfo subito dopo la creazione del personaggio.~
+@56013=~I bonus razziali extra per i nani degli scudi si trovano qui. Ogni effetto di questo incantesimo verra' applicato a qualsiasi personaggio giocante nano dello scudo subito dopo la creazione del personaggio.~
+@56014=~I bonus razziali extra per i nani dorati si trovano qui. Ogni effetto di questo incantesimo verra' applicato a qualsiasi personaggio giocante nano dorato subito dopo la creazione del personaggio.~
+@56015=~I bonus razziali extra per i nani grigi si trovano qui. Ogni effetto di questo incantesimo verra' applicato a qualsiasi personaggio giocante nano grigio subito dopo la creazione del personaggio.~
+@56016=~I bonus razziali extra per gli halfling piedelesto si trovano qui. Ogni effetto di questo incantesimo verra' applicato a qualsiasi personaggio giocante halfling piedelesto subito dopo la creazione del personaggio.~
+@56017=~I bonus razziali extra per gli halfling cuoreforte si trovano qui. Ogni effetto di questo incantesimo verra' applicato a qualsiasi personaggio giocante halfling cuoreforte subito dopo la creazione del personaggio.~
+@56018=~I bonus razziali extra per gli halfling degli spiriti si trovano qui. Ogni effetto di questo incantesimo verra' applicato a qualsiasi personaggio giocante halfling degli spiriti subito dopo la creazione del personaggio.~
+@56019=~I bonus razziali extra per gli gnomi delle rocce si trovano qui. Ogni effetto di questo incantesimo verra' applicato a qualsiasi personaggio giocante dello Gnomo delle Rocce subito dopo la creazione del personaggio.~
+@56020=~I bonus razziali extra per gli gnomi delle profondita' si trovano qui. Ogni effetto di questo incantesimo verra' applicato a qualsiasi personaggio giocante come gnomo delle profondita' subito dopo la creazione del personaggio.~
+@56021=~I bonus razziali extra per i mezzorchi si trovano qui. Ogni effetto di questo incantesimo verra' applicato a qualsiasi personaggio giocante mezzorco subito dopo la creazione del personaggio.~

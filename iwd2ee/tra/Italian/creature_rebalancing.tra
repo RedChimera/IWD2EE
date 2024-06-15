@@ -1,0 +1,172 @@
+//TRA num range
+
+
+@20001=~Il danno da freddo inflitto e' aumentato del 50%~
+@20002=~Il danno da freddo inflitto e' aumentato del 100%~
+@20003=~Il danno da freddo inflitto e' aumentato del 150%~
+@20004=~Il danno da freddo inflitto e' aumentato del 200%~
+@20005=~Scaglie Potenziate (bonus armatura +15)~
+@20006=~Protetto da Armatura Magica Epica (bonus armatura +20)~
+@20007=~Protetto da Protezione Epica (riduzione del danno 50/+10)~
+@20008=~Canto di Battaglia: Cantalama - Attacchi Extra Per Round e Bonus di Combattimento~
+@20009=~Armatura della Morte Superiore~
+@20010=~Applica Divora Anima a ogni colpo~
+
+@21001=~Rovina~
+@21002=~Rovina Superiore~
+@21003=~Protezione Epica~
+@21004=~Armatura Magica Epica~
+@21005=~Esplosione dell'Animus~
+@21006=~Pestilenza~
+@21007=~Distruzione di Massa~
+@21008=~Tempesta Xvimiana~
+@21009=~Risucchio d'Energia di Massa~
+@21010=~Pensiero della Morte~
+@21011=~Fulmine Vivente~
+@21012=~Crea Wight invernale~
+@21013=~Tempesta dell'Animus~
+@21014=~Molti Missili~
+@21015=~Arma Mangia-anime~
+@21016=~Velocita' Potenziata~
+
+@21152=~Marchio del Cacciatore~
+@21651=~Veleno di Sseth~
+@21652=~Scaglie di Sseth~
+@21751=~Turbine di Auril~
+@21752=~Morso del Serpente Superiore~
+@21851=~Odio Totale~
+@21852=~Tempesta di Sseth~
+@21951=~Benedizione di Auril~
+@21952=~Danno di Massa~
+@22651=~Sciame Infernale di Palle di Neve~
+@22751=~Tempesta di Ghiaccio di Stygia~
+@22754=~Armatura della Morte Superiore~
+@22851=~Tempra del Troll Superiore~
+
+@23001=~Ombra del Vuoto~
+@23002=~Fuoco della Rovina~
+@23003=~E' difficile esserne sicuri ma questo biglietto gravemente bruciato e' stato scritto con cura su un pezzo di pregiata pergamena. Si legge come segue:
+
+Thagro:
+
+Una volta letto questo messaggio distribuiscilo ai tuoi lavoratori:
+La regina si e' comportata in modo strano ultimamente - credo la sua stagione degli amori potrebbe avvicinarsi. Ergo d'ora in poi tieni tutti i maschi lontani da lei fino a nuovo ordine. Chiedile di sorvegliare il blocco se vuoi.
+Per quanto riguarda i maschi continua ad addestrarli a scavare nel ghiaccio. Dovremo scavare aree piu' grandi mentre Nickademus
+riacquista le forze per poter costruire avamposti dei legionari. Ricordatevi sempre di mantenerli ben riposati e ben nutriti; altrimenti saranno inutili per noi e potrebbero rappresentare una seria minaccia. Sentiti libero di addestrare uno di loro ad attaccarti o seguirti se ritieni di aver bisogno di protezione.
+Inoltre i miei DELICATI golem di cristallo sono piuttosto costosi e NON sono fonte di tuo divertimento! Se sorprendero' di nuovo QUALCUNA delle tue Sorelle Tempesta a lanciargli contro delle pietre dovrai risponderne personalmente a me!
+Un'ultima cosa: stai attento! Secondo Sherincal quei bastardi malariti ci hanno deluso a Shaengarne River quindi l'opposizione potrebbe colpire in qualsiasi momento.
+In nome di Auril
+
+Oria.
+
+Peso: 0 Kg~
+
+
+
+
+@23004=~Wraith Superiore~
+@23005=~Marilith~
+@23006=~Marilith Superiore~
+@23007=~Gelugon Superiore~
+@23008=~Strega Orca~
+@23009=~Wight Imbevuto~
+@23010=~Arpia Immonda~
+@23011=~Arpia Infernale~
+@23012=~Cavaliere di Ghiaccio Nero~
+@23013=~Wight invernale~
+@23014=~Golem di Adamantite~
+@23015=~Fomorian Superiore~
+@23016=~Narinian~
+@23017=~Larva Onirica~
+@23018=~Lama Marilith~
+@23019=~Folle bestia! Non ti diro' il mio nome! Ritorniamo con te ai fuochi ardenti dei Nove Inferi!~
+@23020=~Si' sei un gelugon. Sei secondo in potere solo ai formidabili demoni della fossa dei baatezu. I gelugon provengono dagli strati ghiacciati di Stygia e Cania nei Nove Inferi. Dal tuo colorito piu' chiaro capisco che sei di Cania. I tuoi compiti principali includono lo spionaggio e l'essere guardie d'e'lite. Se dimostrerai di essere un formidabile gelugon cosa che sono sicuro che tu sia ti verra' dato l'onore di essere gettato nell'Abisso del Gelo Infernale per 1001 giorni allora...~
+@23021=~Da quello che posso dire sei un diavolo. Credo che i diavoli vengano dai Nove Inferi. Perche' e' rilevante?~
+@23022=~Devo dire che non ho mai incontrato un mortale cosi' informato sulla Guerra del Sangue e sugli abitanti di Baator. Lo rispetto. In effetti ti lascero' vivere come ricompensa per la tua straordinaria conoscenza. Adesso ho delle cose di cui devo occuparmi. Addio <CHARNAME> ma sappi che se ci incontreremo di nuovo ti consumero'.~
+@23023=~Tipico eroe mortale. Oh beh comunque mi stava venendo un po' di fame. Gentili diavoli dopo di voi...~
+@23024=~Spadone del Cavaliere della Morte~
+@23025=~Hmph. Era il capo ma Vrek lo sconfisse in battaglia. Ora prende in giro il capo. Vrek governa qui adesso!~
+@23026=~Elementale del Fuoco Enorme~
+@23027=~Elementale del Fuoco Anziano~
+@23028=~Elementale della Terra Enorme~
+@23029=~Elementale dell'Acqua Enorme~
+@23030=~Elementale dell'Acqua Superiore~
+@23031=~Elementale dell'Acqua Anziano~
+@23032=~BASTA!~
+@23033=~Combatti in modo impressionante mortale. Hai inferto un duro colpo alla mia essenza. Ci vorra' del tempo prima che io possa manifestare nuovamente il mio avatar.~
+@23034=~Combattete in modo impressionante mortali. Avete inferto un duro colpo alla mia essenza. Ci vorra' del tempo prima che io possa manifestare nuovamente il mio avatar.~
+@23035=~MA NON PENSARE CHE LA FARAI FRANCA CON QUESTO! TI ODIO E QUANDO MI RICEVERÒ TI CERCHERÒ PER OTTENERE LA MIA VENDETTA!~
+@23036=~Hai sconfitto l'avatar di un dio uno dei nemici piu' potenti esistenti. Ben fatto.~
+@23037=~All'inizio nella loro grande rabbia dissero che mi avrebbero fatto a pezzi per un simile insulto. Poi quando hanno ripreso un po' la calma hanno deciso di rinchiudermi qui al buio e torturarmi con le illusioni create da quell'orribile mostro! C'erano volte in cui avrei desiderato che mi avessero fatto a pezzi...~
+@23038=~Abbiamo liberato uno gnomo di nome Puddy Talltale dalle torture di una creatura da incubo. Anche se siamo riusciti ad aprire la porta della sua prigione ci ha detto che non se ne sarebbe andato fino a quando non trovera' un modo sicuro per tornare a Bryn Shander. Abbiamo promesso di aiutarlo in quanto siamo stati concordi che non sopravvivera' a lungo da solo nelle gelide Valli.~
+@23039=~Rimettiti in sesto! Guarda il mostro e' morto! Non sono un'illusione!~
+@23040=~Bastone del Potere~
+@23041=~Divora Cervello~
+@23042=~Ombra Superiore~
+@23043=~10 danni resistiti da un'arma non d'argento~
+@23044=~15 danni resistiti da un'arma non d'argento~
+@23045=~20 danni resistiti da un'arma non d'argento~
+@23046=~Aeij-Kllenzr't~
+@23047=~Golem di Ghiaccio~
+@23048=~L'abishai bianco stringe i suoi affamati occhi di zaffiro esaminandoti dalla testa ai piedi. Le sue labbra si curvano in quello che potrebbe essere un ghigno crudele ma non dice nulla.~
+@23049=~Pungiglione di Viverna~
+@23050=~Soffio del Dragone Bianco~
+@23051=~Viverna Superiore~
+@23052=~5 danni resistiti da un'arma non buona~
+@23053=~10 danni resistiti da un'arma non buona~
+@23054=~15 danni resistiti da un'arma non buona~
+@23055=~20 danni resistiti da un'arma non buona~
+@23056=~5 danni resistiti da un'arma non buona non caotica e non argento~
+@23057=~10 danni resistiti da un'arma non buona non caotica e non argento~
+@23058=~15 danni resistiti da un'arma non buona non caotica e non argento~
+@23059=~20 danni resistiti da un'arma non buona non caotica e non argento~
+@23060=~5 danni resistiti da un'arma non buona non legale e non di ferro freddo~
+@23061=~10 danni resistiti da un'arma non buona non legale e non di ferro freddo~
+@23062=~15 danni resistiti da un'arma non buona non legale e non di ferro freddo~
+@23063=~20 danni resistiti da un'arma non buona non legale e non di ferro freddo~
+@23064=~SAI COME MI CHIAMO?!~
+@23065=~Aeij-Kllenzr't invoco il tuo vero nome Furia Incatenata e ti comando di uscire dall'altare e affrontarci in battaglia!~
+@23066=~Si' lo so a quanto pare. Addio.~
+@23067=~*QUESTO* E' TUTTO QUELLO CHE SEI DISPOSTO A FARE CON IL MIO VERO NOME? OTTIMO! E' TEMPO DI UNA DIMOSTRAZIONE DEL MIO POTERE!~
+@23068=~CHI SEI *TU* PER PARLARE AD UNA DEA IN QUEL MODO?! PUNIRÒ LA TUA PRESUNZIONE PROPRIO QUI E ORA!~
+@23069=~Hai sconfitto Aeij-Kllenzr't bandendolo dall'altare di Auril.~
+@23070=~Quando Aeij-Kllenzr't muore senti un'ondata di energia attraverso i vostri corpi che ti conferisce un'esplosione di salute e vitalita' e ulteriore resistenza agli attacchi elettrici.~
+@23071=~Abbiamo trovato uno degli altari di Auril in una stanza appartata al piano inferiore del tempio di ghiaccio. L'altare conteneva lo spirito di una tempesta chiamato Aeij-Kllenzr't che fingeva di essere Auril e noi lo abbiamo bandito invocando il suo vero nome Furia Ingabbiata.~
+@23072=~Artiglio di Abishai~
+@23073=~Respiro del Lupo Invernale~
+@23074=~15 danni resistiti tranne che da un'arma perforante di buon allineamento~
+@23075=~20 danni resistiti tranne che da un'arma perforante di allineamento buono~
+@23076=~Bebilith~
+@23077=~Morso del Bebilith~
+@23078=~Spada del Cavaliere della Morte~
+@23079=~Demone della Fossa~
+@23080=~Morso del Diavolo della Fossa~
+@23081=~Bacio di Sseth~
+@23082=~Mohrg~
+@23083=~Tocco di Mohrg~
+@23084=~Dretch~
+@23085=~Artiglio di Dretch~
+@23086=~Scimitarra dell'Icore Spettrale~
+@23087=~Morningstar dell'Ira Xvimiana~
+
+
+@24002=~Evoca Cavaliere Uccisore~
+@24003=~Evoca Gelugon~
+@24004=~Dolore Superiore~
+@24005=~Cantalama - Attacco Extra e Bonus di Combattimento~
+@24006=~Morti Irrequieti Animati~
+@24007=~Incubo~
+@24008=~Incubo Superiore~
+@24009=~Rimuovere~
+@24011=~Peggior Incubo~
+@24012=~Punire il Bene~
+@24013=~Punire Xvimian~
+@24014=~Ossa Gelide Animate~
+@24015=~Divoratore d'Anime Maligno~
+@24016=~Palla di Fuoco Infernale~
+@24018=~Resistenza Elettrica Ridotta~
+@24019=~Crescita della Spina Oscura~
+@24020=~Sguardo Raggelante~
+@24032=~Carica~
+@24033=~Sangue~
+@24034=~Crescita delle Piante~

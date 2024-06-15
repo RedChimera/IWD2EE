@@ -1389,7 +1389,6 @@ COPY ~%mod_folder%/itm/USHARM26.itm~ ~override~
 COPY ~%mod_folder%/itm/USHARM28.itm~ ~override~
 COPY ~%mod_folder%/itm/USHARM30.itm~ ~override~
 
-
 // patching most magical weapons to work with Weapon Finesse by changing their category to "Small Swords"
 
 COPY_EXISTING_REGEXP ~CHILLT.itm~ ~override~ ~DESTRUC.itm~ ~override~ ~GTOUCH.itm~ ~override~ ~HARM.itm~ ~override~ ~ICW[0-9][0-9].itm~ ~override~ ~ILW[0-9][0-9].itm~ ~override~ ~IMW[0-9][0-9].itm~ ~override~ ~ISW[0-9][0-9].itm~ ~override~ ~LTOUCH.itm~ ~override~ ~SHOCKG[0-9][0-9].itm~ ~override~ ~SNAKEBI.itm~ ~override~ ~USSTDEST.itm~ ~override~ ~USSTHARM.itm~ ~override~ ~USSTSL02.itm~ ~override~
@@ -1876,6 +1875,10 @@ COPY_EXISTING ~sppr616.spl~ ~override~
 	SAY UNIDENTIFIED_DESC @32616
 	SAY IDENTIFIED_DESC @32616
 
+COPY_EXISTING ~sppr704.spl~ ~override~
+	SAY UNIDENTIFIED_DESC @32704
+	SAY IDENTIFIED_DESC @32704
+
 COPY_EXISTING ~sppr727.spl~ ~override~
 	SAY NAME1 @31727
 	SAY NAME2 @31727
@@ -1917,6 +1920,10 @@ COPY_EXISTING ~sppr950.spl~ ~override~
 	SAY UNIDENTIFIED_DESC @32950
 	SAY IDENTIFIED_DESC @32950
 
+COPY_EXISTING ~spwi101.spl~ ~override~
+	SAY UNIDENTIFIED_DESC @34101
+	SAY IDENTIFIED_DESC @34101
+
 COPY_EXISTING ~spwi104.spl~ ~override~
 	SAY NAME1 @33104
 	SAY NAME2 @33104
@@ -1928,6 +1935,14 @@ COPY_EXISTING ~spwi122.spl~ ~override~
 	SAY NAME2 @33122
 	SAY UNIDENTIFIED_DESC @34122
 	SAY IDENTIFIED_DESC @34122
+
+COPY_EXISTING ~spwi201.spl~ ~override~
+	SAY UNIDENTIFIED_DESC @1719
+	SAY IDENTIFIED_DESC @1719
+
+COPY_EXISTING ~spwi206.spl~ ~override~
+	SAY UNIDENTIFIED_DESC @34206
+	SAY IDENTIFIED_DESC @34206
 
 COPY_EXISTING ~spwi209.spl~ ~override~
 	SAY NAME1 @33209
@@ -1961,6 +1976,10 @@ COPY_EXISTING ~uswi306d.spl~ ~override~
 		LPF ALTER_EFFECT INT_VAR header=i silent=1 check_headers=1 check_globals=0 duration=((i + 1) * 3) END
 	END
 
+COPY_EXISTING ~spwi311.spl~ ~override~
+	SAY UNIDENTIFIED_DESC @34311
+	SAY IDENTIFIED_DESC @34311
+
 COPY_EXISTING ~spwi312.spl~ ~override~
 	SAY NAME1 @33312
 	SAY NAME2 @33312
@@ -1972,6 +1991,10 @@ COPY_EXISTING ~spwi316.spl~ ~override~
 	SAY NAME2 @33316
 	SAY UNIDENTIFIED_DESC @34316
 	SAY IDENTIFIED_DESC @34316
+
+COPY_EXISTING ~spwi321.spl~ ~override~
+	SAY UNIDENTIFIED_DESC @34321
+	SAY IDENTIFIED_DESC @34321
 
 COPY_EXISTING ~spwi322.spl~ ~override~
 	SAY NAME1 @33322
@@ -3473,6 +3496,81 @@ COPY ~%mod_folder%/bam/USCOLDA.bam~ ~override~
 COPY ~%mod_folder%/bam/USCOLDB.bam~ ~override~
 COPY ~%mod_folder%/bam/USCOLDC.bam~ ~override~
 
+ACTION_IF !(MOD_IS_INSTALLED ~iwd2ee.tp2~ ~5~) BEGIN
+
+	COPY_EXISTING ~uses001.spl~ ~override~
+		SAY NAME1 @21001
+		SAY NAME2 @21001
+	
+	COPY_EXISTING ~uses002.spl~ ~override~
+		SAY NAME1 @21002
+		SAY NAME2 @21002
+	
+	COPY_EXISTING ~uses003.spl~ ~override~
+		SAY NAME1 @21003
+		SAY NAME2 @21003
+		LPF ALTER_EFFECT INT_VAR silent=1 check_headers=1 check_globals=1 match_opcode=139 match_parameter1=20007 parameter1=RESOLVE_STR_REF(@20007) END
+	
+	COPY_EXISTING ~uses004.spl~ ~override~
+		SAY NAME1 @21004
+		SAY NAME2 @21004
+		LPF ALTER_EFFECT INT_VAR silent=1 check_headers=1 check_globals=1 match_opcode=139 match_parameter1=20006 parameter1=RESOLVE_STR_REF(@20006) END
+	
+	COPY_EXISTING ~uses005.spl~ ~override~
+		SAY NAME1 @21005
+		SAY NAME2 @21005
+	
+	COPY_EXISTING ~uses006.spl~ ~override~
+		SAY NAME1 @21006
+		SAY NAME2 @21006
+	
+	COPY_EXISTING ~uses007.spl~ ~override~
+		SAY NAME1 @21007
+		SAY NAME2 @21007
+	
+	COPY_EXISTING ~uses008.spl~ ~override~
+		SAY NAME1 @21008
+		SAY NAME2 @21008
+	
+	COPY_EXISTING ~uses009.spl~ ~override~
+		SAY NAME1 @21009
+		SAY NAME2 @21009
+	
+	COPY_EXISTING ~uses010.spl~ ~override~
+		SAY NAME1 @21010
+		SAY NAME2 @21010
+	
+	COPY_EXISTING ~uses011.spl~ ~override~
+		SAY NAME1 @21011
+		SAY NAME2 @21011
+	
+	COPY_EXISTING ~uses012.spl~ ~override~
+		SAY NAME1 @21012
+		SAY NAME2 @21012
+	
+	COPY_EXISTING ~uses013.spl~ ~override~
+		SAY NAME1 @21013
+		SAY NAME2 @21013
+	
+	COPY_EXISTING ~uses014.spl~ ~override~
+		SAY NAME1 @21014
+		SAY NAME2 @21014
+	
+	COPY_EXISTING ~uses015.spl~ ~override~
+		SAY NAME1 @21015
+		SAY NAME2 @21015
+		LPF ALTER_EFFECT INT_VAR silent=1 check_headers=1 check_globals=1 match_opcode=139 match_parameter1=20010 parameter1=RESOLVE_STR_REF(@20010) END
+	
+	COPY_EXISTING ~uses016.spl~ ~override~
+		SAY NAME1 @21016
+		SAY NAME2 @21016
+	
+	COPY_EXISTING ~uses018.spl~ ~override~
+		SAY NAME1 @37855
+		SAY NAME2 @37855
+
+END
+
 COPY_EXISTING ~sppr504.spl~ ~override~ ~sppr712.spl~ ~override~ ~uspr355.spl~ ~override~ ~uswi866d.spl~ ~override~
 	LPF CLONE_EFFECT INT_VAR multi_match=1 opcode=172 timing=9 STR_VAR resource=~USBLINKT~ insert=~last~ END
 	LPF CLONE_EFFECT INT_VAR multi_match=1 opcode=172 timing=9 STR_VAR resource=~USJUMP~ insert=~last~ END
@@ -4359,7 +4457,7 @@ COPY_EXISTING ~60CHEAP.sto~ ~override~
 	ADD_STORE_ITEM ~USWI957Z~ #1 #1 #0 ~IDENTIFIED~ #1
 	ADD_STORE_ITEM ~USWI954Z~ #1 #1 #0 ~IDENTIFIED~ #1
 	ADD_STORE_ITEM ~USWI960Z~ #1 #1 #0 ~IDENTIFIED~ #1
-	ADD_STORE_ITEM ~USWI855Z~ #1 #1 #0 ~IDENTIFIED~ #1
+//	ADD_STORE_ITEM ~USWI855Z~ #1 #1 #0 ~IDENTIFIED~ #1
 	ADD_STORE_ITEM ~USWI859Z~ #1 #1 #0 ~IDENTIFIED~ #1
 	ADD_STORE_ITEM ~USWI761Z~ #1 #1 #0 ~IDENTIFIED~ #1
 	ADD_STORE_ITEM ~USWI760Z~ #1 #1 #0 ~IDENTIFIED~ #1

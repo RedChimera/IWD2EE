@@ -14,6 +14,7 @@ The big changes described above are only applied if you install certain componen
 Languages:
 
 English
+Italian
 Russian
 
 Components:
@@ -593,6 +594,8 @@ Chris Dix (She/Her) - aka @semiticgoddess - was the one who started the IWD2EE p
 @kjeron created many WeiDU functions that are used in IWD2EE's installation to modify IWD2 files.
 
 @CamDawg revised some of IWD2EE's WeiDU files to run faster.
+
+@Improbabile68 translated IWD2EE into Italian.
 
 @paladin, klichko86, and rytomen translated IWD2EE into Russian.
 

@@ -1,0 +1,702 @@
+@4700=~Infuso di Acqua Piovana~
+@4701=~Economica efficiente e rozza questa pozione e' un mix di acqua piovana argilla cenere e radici di diverse piante. Questa modesta bevanda ripristinera' 2d6 punti ferita a chi la beve.
+
+STATISTICHE
+
+Cura 2d6 punti ferita
+Peso: 045 Kg~
+@54700=~Infuso di Acqua Piovana~
+@54701=~Economica efficiente e rozza questa pozione e' un mix di acqua piovana argilla cenere e radici di diverse piante. Questa modesta bevanda ripristinera' 5d6 punti ferita a chi la beve.
+
+STATISTICHE
+
+Cura 5d6 punti ferita
+Peso: 045 Kg~
+@4702=~Birra Aspra~
+@4703=~Pozioni potenti richiedono ingredienti rari e questa miscela non fa eccezione. Grasso animale bile foglie essiccate e carne fermentata compongono questa miscela dall'odore disgustoso ma un amico morente non si lamentera'. Questa miscela ripristinera' 4d8 punti ferita a chiunque sia abbastanza disperato da berla.
+
+STATISTICHE
+
+Cura 4d8 punti ferita
+Peso: 0,45 kg~
+@54702=~Birra Aspra~
+@54703=~Pozioni potenti richiedono ingredienti rari e questa miscela non fa eccezione. Grasso animale bile foglie essiccate e carne fermentata compongono questa miscela dall'odore disgustoso ma un amico morente non si lamentera'. Questa miscela ripristinera' 10d8 punti ferita a chiunque sia abbastanza disperato da berla.
+
+STATISTICHE
+
+Cura 10d8 punti ferita
+Peso: 0,45 kg~
+@4704=~Elisir Dolce~
+@4705=~Si potrebbe confondere questa bevanda dolce con il vino bianco ma il sapore delicato del sapore non deriva dall'alcol ma dal quarzo trasmutato. Bere questa pozione puo' lenire quasi ogni disturbo dalle comuni infezioni al veleno letale fino ai brutti postumi di una sbornia. Il quarzo si lega alle sostanze tossiche e le trasforma in sale innocuo curando veleni malattie e intossicazioni. Nel caso in cui cio' non sia sufficiente a curare l'avventuriero malaticcio le lacrime del cavallo nello sciroppo ripristineranno anche 1d4 punti ferita.
+
+STATISTICHE
+
+Cura veleno e malattie
+Cura 1d4 punti ferita
+Peso: 0,45 kg~
+@54704=~Elisir Dolce~
+@54705=~Si potrebbe confondere questa bevanda dolce con il vino bianco ma il sapore delicato del sapore non deriva dall'alcol ma dal quarzo trasmutato. Bere questa pozione puo' lenire quasi ogni disturbo dalle comuni infezioni al veleno letale fino ai brutti postumi di una sbornia. Il quarzo si lega alle sostanze tossiche e le trasforma in sale innocuo curando veleni malattie e intossicazioni. Nel caso in cui cio' non sia sufficiente a curare l'avventuriero malaticcio le lacrime del cavallo nello sciroppo ripristineranno anche 4d4 punti ferita.
+
+STATISTICHE
+
+Cura veleno e malattie
+Cura 4d4 punti ferita
+Peso: 0,45 kg~
+@4706=~Gel Elettrico~
+@4707=~Questo gel bluastro pallido emette uno strano ronzio nel suo contenitore di ottone ben sigillato. Quando viene assorbito il gel rimuove i danni elettrici garantendo a chi lo utilizza una resistenza di 20/- a tutte le forme di elettricita'. L'effetto dura 10 round o finche' non viene dissolto.
+
+STATISTICHE
+
+Resistenza: 20/- Resistenza elettrica~
+@54706=~Gel Elettrico~
+@54707=~Questo gel bluastro pallido emette uno strano ronzio nel suo contenitore di ottone ben sigillato. Quando viene assorbito il gel rimuove i danni elettrici garantendo a chi lo utilizza una resistenza di 50/- a tutte le forme di elettricita'. L'effetto dura 10 round o finche' non viene dissolto.
+
+STATISTICHE
+
+Resistenza: 50/- Resistenza elettrica~
+@4708=~Filtro Radiante~
+@4709=~Un liquido viscoso brilla all'interno di questa piccola bottiglia. Prodotta in un barattolo di cera e filtrata attraverso strisce di pergamena magica questa miscela di salnitro olio d'oliva lucertole tritate liscivia foglie di menta e cannella puo' proteggere la pelle di chi la utilizza dal calore estremo.
+Versando la fiala sul proprio braccio e pronunciando la parola di comando l'utilizzatore sparge un liquido prismatico radioso sul proprio corpo conferendogli una resistenza del 20/- a tutte le forme di danno da fuoco. Il liquido e' incantato in modo da aderire alla pelle dell'utilizzatore ma l'effetto svanisce dopo 10 round.
+
+STATISTICHE
+
+Resistenza: 20/- Resistenza al fuoco
+Peso: 045Kg~
+@54708=~Filtro Radiante~
+@54709=~Un liquido viscoso brilla all'interno di questa piccola bottiglia. Prodotta in un barattolo di cera e filtrata attraverso strisce di pergamena magica questa miscela di salnitro olio d'oliva lucertole tritate liscivia foglie di menta e cannella puo' proteggere la pelle di chi la utilizza dal calore estremo.
+Versando la fiala sul proprio braccio e pronunciando la parola di comando l'utilizzatore sparge un liquido prismatico radioso sul proprio corpo conferendogli una resistenza del 20/- a tutte le forme di danno da fuoco. Il liquido e' incantato in modo da aderire alla pelle dell'utilizzatore ma l'effetto svanisce dopo 10 round.
+
+STATISTICHE
+
+Resistenza: 50/- Resistenza al fuoco
+Peso: 045Kg~
+@4710=~Mania Nera~
+@4711=~Non tutte le pozioni sono esattamente medicamentose. Alcuni alchimisti dedicano il loro talento alla produzione di narcotici e si guadagnano da vivere spacciando veleni che creano dipendenza agli oziosi e agli irrequieti. Questo olio nero e' una versione modificata di uno di questi narcotici. Quando si e' ubriachi Mania Nera induce un violento stato di confusione garantendo a chi la beve un bonus di +5 ai tiri per i danni e +3 ai tiri per colpire in mischia al costo di una penalita' di -3 alla CA e agli attacchi con armi da lancio. Inoltre diventa furioso per 10 round e i suoi punti ferita vengono nascosti per la durata dell'effetto.
+
+STATISTICHE
+
++3 agli attacchi corpo a corpo
++5 ai danni
+-3 CA
+-3 agli attacchi missilistici
+Chi la beve diventa berserk
+Colpisci punti nascosti
+Peso: 045 Kg~
+@54710=~Mania Nera~
+@54711=~Non tutte le pozioni sono esattamente medicamentose. Alcuni alchimisti dedicano il loro talento alla produzione di narcotici e si guadagnano da vivere spacciando veleni che creano dipendenza agli oziosi e agli irrequieti. Questo olio nero e' una versione modificata di uno di questi narcotici. Quando si e' ubriachi Mania Nera induce un violento stato di confusione garantendo a chi la beve un bonus di +5 ai tiri per i danni e +10 ai tiri per colpire in mischia al costo di una penalita' di -10 alla CA e agli attacchi con armi da lancio. Inoltre diventa furioso per 10 round e i suoi punti ferita vengono nascosti per la durata dell'effetto.
+
+STATISTICHE
+
++5 agli attacchi corpo a corpo
++10 ai danni
+-10 CA
+-5 agli attacchi missilistici
+Chi la beve diventa berserk
+Colpisci punti nascosti
+Peso: 045 Kg~
+@4712=~Collirio di Farina d'Ossa~
+@4713=~Realizzata con un pizzico di farina di ossa succo di pomodoro o carota acqua distillata alcune gocce del sangue dell'utilizzatore e un bulbo oculare di un uccello rapace questa soluzione rossastra puo' migliorare la vista di chi la utilizza. A parte una leggera sensazione di bruciore chi l'usa trovera' improvvisamente il mondo molto piu' dettagliato garantendo un bonus di +3 a tutti gli attacchi a distanza. Il collirio brucia leggermente quindi l'utente eliminera' gradualmente il fluido piangendo perdendo i suoi benefici dopo 1 ora.
+
+STATISTICHE
+
++3 Bonus Attacco (solo armi a distanza)
+Peso: 0,45 kg~
+@54712=~Collirio di Farina d'Ossa~
+@54713=~Realizzata con un pizzico di farina di ossa succo di pomodoro o carota acqua distillata alcune gocce del sangue dell'utilizzatore e un bulbo oculare di un uccello rapace questa soluzione rossastra puo' migliorare la vista di chi la utilizza. A parte una leggera sensazione di bruciore l'utente acquisira' improvvisamente una visione magica dei punti deboli delle altre creature. Il collirio brucia leggermente quindi l'utente eliminera' gradualmente il fluido piangendo perdendo i suoi benefici dopo che sono trascorsi 10 round.
+
+STATISTICHE
+
+Occhi del Boia per 10 round (+4 bonus di attacco +4 portata di minaccia critica)
+Peso: 0,45 kg~
+@4714=~Bomba Fumogena~
+@4715=~Chiunque puo' accendere un fuoco e produrre una piccola nuvola di fumo ma creare un'esplosione di fumo con un movimento rapido richiede un po' di arte. Questo piccolo contenitore di fumo concentrato creera' rapidamente una nuvola oscurante quando viene spezzato nascondendo l'utilizzatore per 1d3+3 secondi a seconda delle correnti d'aria e di altri fattori.
+
+STATISTICHE
+
+Invisibilita' per 1d3+3 secondi
+Peso: 045Kg~
+@54714=~Bomba Fumogena~
+@54715=~Chiunque puo' accendere un fuoco e produrre una piccola nuvola di fumo ma creare un'esplosione di fumo con un movimento rapido richiede un po' di arte. Questo piccolo contenitore di fumo concentrato creera' rapidamente una nuvola oscurante quando viene spezzato nascondendo l'utilizzatore per 1d3+3 secondi a seconda delle correnti d'aria e di altri fattori.
+
+STATISTICHE
+
+Invisibilita' per 1d3+3 secondi
+Peso: 045Kg~
+@4716=~Tonico Amaro~
+@4717=~Questa pozione e' una miscela rossastra altamente concentrata composta da radici argilla perle e gusci di ostriche frantumati sangue e alcol. La soluzione potenzia la costituzione e la resilienza del bevitore garantendo un bonus di +4 a tutti i tiri salvezza sulla Tempra per 1 ora.
+
+STATISTICHE
+
++4 ai tiri salvezza sulla Tempra
+Peso: 0,45 kg~
+@54716=~Tonico Amaro~
+@54717=~Questa pozione e' una miscela rossastra altamente concentrata composta da radici argilla perle e gusci di ostriche frantumati sangue e alcol. La soluzione potenzia la costituzione e la resilienza del bevitore garantendo un bonus di +8 a tutti i tiri salvezza sulla Tempra per 1 ora.
+
+STATISTICHE
+
++8 ai tiri salvezza sulla Tempra
+Peso: 0,45 kg~
+@4718=~Salamoia~
+@4719=~Questa pozione un piccolo pezzo di cervello di delfino sospeso in olio di balena e salamoia con mercurio e pietra verde come catalizzatori e' in grado di migliorare le capacita' mentali di chi la utilizza. La maggior parte del potere latente del cervello del delfino va sprecato dal momento che il funzionamento della mente e' ancora poco compreso e il metodo alla base di questa miscela e' piuttosto rozzo ma la salamoia bandira' tutte le distrazioni dalla mente di chi la usa garantendo un bonus di +4 a tutti i Tiri Salvezza sulla volonta' per 1 ora.
+
+STATISTICHE
+
++4 ai salvataggi su Volonta'
+Peso: 045 Kg~
+@54718=~Salamoia~
+@54719=~Questa pozione un piccolo pezzo di cervello di delfino sospeso in olio di balena e salamoia con mercurio e pietra verde come catalizzatori e' in grado di migliorare le capacita' mentali di chi la utilizza. La maggior parte del potere latente del cervello del delfino va sprecato dal momento che il funzionamento della mente e' ancora poco compreso e il metodo alla base di questa miscela e' piuttosto rozzo ma la salamoia bandira' tutte le distrazioni dalla mente di chi la usa garantendo un bonus di +8 a tutti i Tiri Salvezza sulla volonta' per 1 ora.
+
+STATISTICHE
+
++8 ai salvataggi su Volonta'
+Peso: 045 Kg~
+@4720=~Gas Pressurizzato~
+@4721=~Questa bottiglia di tossine altamente pressurizzate esplodera' quando verra' frantumata inondando l'area con una nuvola di gas nocivo. Qualsiasi creatura che respira e venga intrappolata nella nuvola si confronta con un fetore nauseante che penetra in profondita' nelle sue narici e si attacca alla parte posteriore della gola subendo 5 danni da veleno per round per 5 round. Per ogni round in cui la vittima rimane nella nuvola deve effettuare un tiro salvezza sulla Tempra per evitare di essere avvelenata.
+
+STATISTICHE
+
+5 danni da veleno per round per 5 round (Tempra CD 15 nega)
+Si dissipa dopo 10 round
+Peso: 045 Kg~
+@54720=~Gas Pressurizzato~
+@54721=~Questa bottiglia di tossine altamente pressurizzate esplodera' quando verra' frantumata inondando l'area con una nuvola di gas nocivo. Qualsiasi creatura che respira e venga intrappolata nella nuvola si confronta con un fetore nauseante che penetra in profondita' nelle sue narici e si attacca alla parte posteriore della gola subendo 10 danni da veleno per round per 5 round. Per ogni round in cui la vittima rimane nella nuvola deve effettuare un tiro salvezza sulla Tempra per evitare di essere avvelenata.
+
+STATISTICHE
+
+10 danni da veleno per round per 5 round (Tempra CD 25 nega)
+Si dissipa dopo 10 round
+Peso: 045 Kg~
+@4722=~Olio Ardente~
+@4723=~Semplice da realizzare ma costosa da produrre questa miscela di polvere nera petrolio e gas altamente raffinati si accende quando si infrange contro un bersaglio. Non appena la bottiglia tocca terra una piccola capsula di sodio puro e un'altra capsula d'acqua si aprono. Il sodio prende fuoco a contatto con l'acqua incendiando il resto della miscela.
+Una debole granata all'interno della bottiglia fa si' che l'olio fiammeggiante si espanda rapidamente diffondendo la fiamma su tutte le creature entro un raggio di 9 metri. Chiunque venga catturato all'interno dell'esplosione subira' 6d6 danni con un tiro salvezza sui Riflessi (CD 25) per dimezzare.
+
+STATISTICHE
+
+6d6 danni da fuoco (Riflessi CD 25 per 1/2 danno)
+Area di Effetto: Raggio di 9 metri
+Raggio di Azione: 12 metri
+Peso: 045 Kg~
+@54722=~Olio Ardente~
+@54723=~Semplice da realizzare ma costosa da produrre questa miscela di polvere nera petrolio e gas altamente raffinati si accende quando si infrange contro un bersaglio. Non appena la bottiglia tocca terra una piccola capsula di sodio puro e un'altra capsula d'acqua si aprono. Il sodio prende fuoco a contatto con l'acqua incendiando il resto della miscela.
+Una debole granata all'interno della bottiglia fa si' che l'olio fiammeggiante si espanda rapidamente diffondendo la fiamma su tutte le creature entro un raggio di 9 metri. Chiunque venga catturato all'interno dell'esplosione subira' 12d6 danni con un tiro salvezza sui Riflessi (CD 25) per dimezzare.
+
+STATISTICHE
+
+12d6 danni da fuoco (Riflessi CD 25 per 1/2 danno)
+Area di Effetto: Raggio di 9 metri
+Raggio di Azione: 12 metri
+Peso: 045 Kg~
+@4724=~Vino Muschiato~
+@4725=~Prodotto con prugne fermentate e muschio di diversi animali (solitamente bovini buoi cavalli asini e bufali) questo vino forte ha un peculiare profumo nocivo nonostante il suo sapore dolce. Preso con un po' di acido Ankheg e un po' di lime (la base non il frutto) per neutralizzare l'acido questa pozione garantisce a chi la beve +6 alla Forza per 10 round.
+
+STATISTICHE
+
++6 Forza
+Peso: 045 Kg~
+@54724=~Vino Muschiato~
+@54725=~Prodotto con prugne fermentate e muschio di diversi animali (solitamente bovini buoi cavalli asini e bufali) questo vino forte ha un peculiare profumo nocivo nonostante il suo sapore dolce. Preso con un po' di acido Ankheg e un po' di lime (la base non il frutto) per neutralizzare l'acido questa pozione garantisce a chi la beve +12 alla Forza per 10 round.
+
+STATISTICHE
+
++12 Forza
+Peso: 045 Kg~
+@4726=~Succo di Fanghiglia~
+@4727=~Questa pozione una miscela aspra di succo di lime veleno di scorpione peperoni e qualche goccia di sangue di nano o gnomo garantira' a chi la beve 20/- resistenza al danno magico per 10 round livellando le probabilita' contro i nemici che lanciano incantesimi.
+
+STATISTICHE
+
+Resistenza: 20/- Resistenza al danno magico
+Peso: 045 Kg~
+@54726=~Succo di Fanghiglia~
+@54727=~Questa pozione una miscela aspra di succo di lime veleno di scorpione peperoni e qualche goccia di sangue di nano o gnomo garantira' a chi la beve 50/- resistenza al danno magico per 10 round livellando le probabilita' contro i nemici che lanciano incantesimi.
+
+STATISTICHE
+
+Resistenza: 50/- Resistenza al danno magico
+Peso: 045 Kg~
+@4728=~Fiala di Scaglie~
+@4729=~Composta da ruggine in polvere gusci di scarabeo farina di ossa e corteccia di quercia questa miscela a base alcolica evoca una barriera di scaglie metalliche frastagliate sulla pelle dell'utilizzatore. Queste pelli di ferro assorbiranno i successivi 1-6 colpi che colpirebbero il bevitore nei successivi 10 round.
+
+STATISTICHE
+
+Il bevitore ottiene 1d6 pelli di ferro come per l'incantesimo Pelli di Ferro
+Peso: 045 Kg~
+@54728=~Fiala di Scaglie~
+@54729=~Composta da ruggine in polvere gusci di scarabeo farina di ossa e corteccia di quercia questa miscela a base alcolica evoca una barriera di scaglie metalliche frastagliate sulla pelle dell'utilizzatore. Queste pelli di ferro assorbiranno i successivi 3-18 colpi che colpirebbero il bevitore nei successivi 10 round.
+
+STATISTICHE
+
+Il bevitore ottiene 3d6 pelli di ferro come per l'incantesimo Pelli di Ferro
+Peso: 045 Kg~
+@4730=~Ectoplasma Raffinato~
+@4731=~Polvere di cimitero acqua piovana pure' di merli o di nottambuli e il sangue essiccato di un bambino piccolo sono solo i primi ingredienti necessari per preparare questa pozione amara e terrosa. Per completare la miscela un alchimista deve estrarre l'ectoplasma da un fantasma o uno spettro uccidendo uno spirito errante o raschiando il materiale dalla gola di un medium negromante o rabdomante che entra in contatto con i morti. Lasciata fuori di notte per 1-7 giorni (a seconda della luce lunare disponibile) questa pozione induce nel bevitore uno stato parzialmente spettrale garantendogli una quasi immunita' alle armi comuni. Per 10 round dopo aver assorbito questa pozione amara chi la usa ignora i primi 15 punti di danno inflitti da qualsiasi arma con un incantesimo inferiore a +2.
+
+STATISTICHE
+
+10/+2 Riduzione del danno
+Peso: 045 Kg~
+@54730=~Ectoplasma Raffinato~
+@54731=~Polvere di cimitero acqua piovana pure' di merli o di nottambuli e il sangue essiccato di un bambino piccolo sono solo i primi ingredienti necessari per preparare questa pozione amara e terrosa. Per completare la miscela un alchimista deve estrarre l'ectoplasma da un fantasma o uno spettro uccidendo uno spirito errante o raschiando il materiale dalla gola di un medium negromante o rabdomante che entra in contatto con i morti. Lasciata fuori di notte per 1-7 giorni (a seconda della luce lunare disponibile) questa pozione induce nel bevitore uno stato parzialmente spettrale garantendogli una quasi immunita' alle armi comuni. Per 10 round dopo aver assorbito questa pozione amara chi la usa ignora i primi 15 punti di danno inflitti da qualsiasi arma con un incantesimo inferiore a +3.
+
+STATISTICHE
+
+15/+3 Riduzione del danno
+Peso: 045 Kg~
+@4732=~Etere Infestato~
+@4733=~Per creare questa bottiglia di gas incantato sono necessari sia un'ingegneria complessa che uno studio mistico. L'alchimista deve prima investire in una colonna di distillazione frazionata per raccogliere il gas necessario dall'atmosfera. Una volta raccolto il gas deve essere infuso con uno o piu' spiriti ostili. Recitare blasfemie in un cimitero e' sufficiente se l'alchimista e' esperto con l'Abissale o ha familiarita' con gli insegnamenti della divinita' piu' popolare tra i morti. Altrimenti l'alchimista deve ricorrere al saccheggio delle tombe e condurre vari rituali illegali e spiacevoli con i cadaveri riesumati.
+Se l'alchimista riesce a far infuriare gli spiriti locali puo' legarli al gas raccolto. Fornire ripetute cariche elettriche agli spiriti imprigionati li disorientera' gradualmente permettendo alla bottiglia di essere lanciata proprio come una granata. Quando la bottiglia si frantuma gli spiriti si scagliano contro le creature viventi piu' vicine che riescono a trovare infliggendo 4d12 danni magici con un tiro salvezza sulla Tempra per dimezzare e infliggendo paura a qualsiasi vittima che fallisce un tiro salvezza sulla Volonta'.
+
+STATISTICHE
+
+4d12 danni da magia
+Paura per 5 round tiro salvezza sulla Volonta' nega
+Peso: 045 Kg~
+@4734=~Bacchetta di Tendine Elfico~
+@4735=~Questa bacchetta unta molle e occasionalmente nervosa composta principalmente da tendini delle gambe di elfi e mezzelfi puo' fornire un dardo di energia necromantica a qualsiasi bersaglio vivente. La vittima subisce 12d4 danni da veleno ma puo' tentare un tiro salvezza sulla Tempra per dimezzarlo.
+
+STATISTICHE
+
+12d4 danni da veleno tiro salvezza sulla Tempra per dimezzare
+Peso: 045 Kg~
+@4736=~Liquore Torbido~
+@4737=~Con gli ingredienti giusti un abile alchimista puo' alterare la natura stessa di un essere vivente. Sciogliendo salgemma e succo di rana in una soluzione a base alcolica e aggiungendo i resti di un cervo o di un'antilope digeriti nello stomaco di un coccodrillo un alchimista puo' preparare una pozione fumosa che trasmuta il corpo di chi la beve in uno stato semiliquido.
+Il bevitore conserva tutte le sue normali funzioni ma lo stato liquido attutisce l'impatto degli attacchi nemici garantendo una resistenza 13- a tutte le forme di danno fisico per 10 round.
+
+STATISTICHE
+
+Resistenza: 3/- Resistenza ai danni taglienti perforanti contundenti e da lancio
+Peso: 045 Kg~
+@54736=~Liquore Torbido~
+@54737=~Con gli ingredienti giusti un abile alchimista puo' alterare la natura stessa di un essere vivente. Sciogliendo salgemma e succo di rana in una soluzione a base alcolica e aggiungendo i resti di un cervo o di un'antilope digeriti nello stomaco di un coccodrillo un alchimista puo' preparare una pozione fumosa che trasmuta il corpo di chi la beve in uno stato semiliquido.
+Il bevitore conserva tutte le sue normali funzioni ma lo stato liquido attutisce l'impatto degli attacchi nemici garantendo una resistenza 13- a tutte le forme di danno fisico per 10 round.
+
+STATISTICHE
+
+Resistenza: 10/- Resistenza ai danni taglienti perforanti contundenti e da lancio
+Peso: 045 Kg~
+@4738=~Nettare di Sangue~
+@4739=~Contrariamente a quanto ci si potrebbe aspettare da una pozione chiamata "Nettare di Sangue" questa miscela rosso intenso e aromatizzata al sangue non contiene infatti alcun nettare. E' principalmente sangue.
+Dolcificata con miele e succo di mela e preparata con ginseng e piume di colibri' questa pozione conferisce a chi la beve +2 a tutti i punteggi di caratteristica per 1 ora.
+
+STATISTICHE
+
++2 Forza
++2 Destrezza
++2 Costituzione
++2 Intelligenza
++2 Saggezza
++2 Carisma
+Peso: 045 Kg~
+@54738=~Nettare di Sangue~
+@54739=~Contrariamente a quanto ci si potrebbe aspettare da una pozione chiamata "Nettare di Sangue" questa miscela rosso intenso e aromatizzata al sangue non contiene infatti alcun nettare. E' principalmente sangue.
+Dolcificata con miele e succo di mela e preparata con ginseng e piume di colibri' questa pozione conferisce a chi la beve +2 a tutti i punteggi di caratteristica per 1 ora.
+
+STATISTICHE
+
++2 Forza
++2 Destrezza
++2 Costituzione
++2 Intelligenza
++2 Saggezza
++2 Carisma
+Peso: 045 Kg~
+@4740=~Icore Purificato~
+@4741=~L'icore puo' provenire da molte fonti ma la fonte piu' conveniente e' il flusso sanguigno di una Progenie di Bhaal. Nel suo stato inalterato il sangue e' poco diverso da qualsiasi altro: estrarre il suo vero potere e' un processo complesso.
+Innanzitutto l'Alchimista deve condurre ricerche sulla divinita' genitrice e progettare un rituale per attivare il potenziale nascosto dell'icore. Da li' l'essenza deve essere filtrata mediante sanguisuga del sangue con bende di mummia distillazione e precipitazione in una centrifuga producendo un liquido dorato dall'odore dolciastro... o nel caso dell'icore di divinita' malvagie una mistura disgustosa di grasso e polvere grossolana.
+Il consumo della sostanza risultante e' solitamente fatale; l'icore purificato deve essere diluito e adattato al sistema dell'utente per avere un effetto positivo. Il metodo esatto dipende dall'utente e richiede ricerche e test intensivi per scoprirlo. Se l'utente e' fortunato il metodo potrebbe essere innocuo come schiacciare alcune perle e mescolare l'icore con succo di zucca e burro per produrre una pozione dal sapore strano ma perfettamente bevibile.
+Se l'utente e' sfortunato la somministrazione della dose potrebbe richiedere la vivisezione.
+Indipendentemente dal metodo il risultato finale e' una violenta torsione del tratto digestivo e la diffusione dell'icore attraverso il corpo dell'utilizzatore. Il processo e' immensamente doloroso ed estenuante abbassa permanentemente la Costituzione dell'utente di 1 e infligge 10d10 danni da veleno con un tiro salvezza contro morte a -4 per dimezzare i danni. Se l'utente sopravvive al processo guadagna +1 a Forza Destrezza Intelligenza Saggezza e Carisma poiche' l'icore divino pervade il suo sistema.
+Se l'utente muore nel processo puo' riprovare dopo essere stato resuscitato ma una volta che il tentativo ha successo ulteriori dosi non avranno alcun effetto sul personaggio infuso.
+Genio Alchemico: Un Alchimista puo' modificare la ricetta per alleggerire il peso del proprio sistema annullando la penalita' alla Costituzione e resistendo completamente al danno.
+
+STATISTICHE
+
++1 Forza Destrezza Intelligenza Saggezza e Carisma
+-1 Costituzione
+Durata: Permanente
+Peso: 045 Kg~
+@4742=~Plasma~
+@4743=~All'interno di questo piccolo contenitore di vetro ronza un gas blu scoppiettante. Raccogliendo energia da varie fonti e trasferendo il potere latente in un gas inerte un alchimista puo' creare una forma di plasma sicura e utile.
+Chi la utilizza deve aprire la bottiglia e inspirare profondamente trattenendo il gas nei polmoni finche' il plasma non viene assorbito nel flusso sanguigno. Il plasma aggiunge un potenziamento speciale a ogni colpo effettuato dall'utente in combattimento aumentando tutti i danni da attacco di 4 punti. Tuttavia il plasma si dissipa rapidamente e gli effetti svaniscono entro 10 round.
+
+STATISTICHE
+
++4 ai danni non magici
+Peso: 045 Kg~
+@54742=~Plasma~
+@54743=~All'interno di questo piccolo contenitore di vetro ronza un gas blu scoppiettante. Raccogliendo energia da varie fonti e trasferendo il potere latente in un gas inerte un alchimista puo' creare una forma di plasma sicura e utile.
+Chi la utilizza deve aprire la bottiglia e inspirare profondamente trattenendo il gas nei polmoni finche' il plasma non viene assorbito nel flusso sanguigno. Il plasma aggiunge un potenziamento speciale a ogni colpo effettuato dall'utilizzatore in combattimento aumentando tutti i danni da attacco di 6 punti. Tuttavia il plasma si dissipa rapidamente e gli effetti svaniscono entro 10 round.
+
+STATISTICHE
+
++6 ai danni non magici
+Peso: 045 Kg~
+@4744=~Vapore di Palude~
+@4745=~Una miscela di magia misteriosa e gas nocivi questa bottiglia di fumoso vapore verdastro e' densa di incantesimi. Il gas in se' non e' altro che semplice aria e acqua estratte da una palude ma gli incantesimi sono piu' complessi. La bottiglia e' rivestita con residui di fuochi fatui uccisi e funghi tossici e del gas intriso delle anime dei treant caduti.
+Chi la impugna puo' lanciare la bottiglia in modo molto simile a una granata ignorando qualsiasi bonus di armatura o scudo che il bersaglio puo' possedere. Qualsiasi creatura abbastanza sfortunata da toccare i fumi subira' una penalita' cumulativa di -3 alle resistenze agli incantesimi e all'energia man mano che l'incantesimo si insinua nel suo organismo rendendola vulnerabile agli incantesimi ostili. L'effetto e' comunque di breve durata e svanisce dopo cinque round.
+
+STATISTICHE
+
+Danno: 1d4
+Tipo di Danno:  Da lancio  (Contundente)
+Speciale: -3 Resistenza agli incantesimi e -3 Resistenza ai danni da fuoco freddo elettricita' e acido (cumulativa) per 5 round.
+Peso: 0
+Talenti Richiesti: Armi Semplici da Lancio
+Tipo:  A una mano~
+@54744=~Vapore di Palude~
+@54745=~Una miscela di magia misteriosa e gas nocivi questa bottiglia di fumoso vapore verdastro e' densa di incantesimi. Il gas in se' non e' altro che semplice aria e acqua estratte da una palude ma gli incantesimi sono piu' complessi. La bottiglia e' rivestita con residui di fuochi fatui uccisi e funghi tossici e del gas intriso delle anime dei treant caduti.
+Chi la impugna puo' lanciare la bottiglia in modo molto simile a una granata ignorando qualsiasi bonus di armatura o scudo che il bersaglio puo' possedere. Qualsiasi creatura abbastanza sfortunata da toccare i fumi subira' una penalita' cumulativa di -5 alle resistenze agli incantesimi e all'energia man mano che l'incantesimo si insinua nel suo organismo rendendola vulnerabile agli incantesimi ostili. L'effetto e' comunque di breve durata e svanisce dopo cinque round.
+
+STATISTICHE
+
+Danno: 1d3
+Tipo di Danno:  Da lancio  (Contundente)
+Speciale: -5 Resistenza agli incantesimi e -5 Resistenza ai danni da fuoco freddo elettricita' e acido (cumulativa) per 5 round.
+Peso: 0
+Talenti Richiesti: Armi Semplici da Lancio
+Tipo:  A una mano~
+@4746=~Olio delle Fate~
+@4747=~Le creature fatate sono difficili da trovare e piu' difficili da catturare ma un alchimista che riesce a catturarne un numero sufficiente puo' rubare quei poteri anche se solo per un breve periodo. Il liquido in se' non e' altro che torba e ranuncoli tritati mescolati con olio d'oliva ma se l'alchimista riesce a convincere un gruppo di fate a conferire l'olio con la loro magia... o se l'alchimista mescola l'olio con il sangue delle fate e le ossa in polvere... questa pozione avvolgera' chi la beve con una piccola nuvola di magia illusoria simile all'incantesimo Immagine lllusoria.
+
+STATISTICHE
+
+Immagini Illusorie (4 immagini)
+Peso: 045 Kg~
+@54746=~Olio delle Fate~
+@54747=~Le creature fatate sono difficili da trovare e piu' difficili da catturare ma un alchimista che riesce a catturarne un numero sufficiente puo' rubare quei poteri anche se solo per un breve periodo. Il liquido in se' non e' altro che torba e ranuncoli tritati mescolati con olio d'oliva ma se l'alchimista riesce a convincere un gruppo di fate a conferire l'olio con la loro magia... o se l'alchimista mescola l'olio con il sangue delle fate e le ossa in polvere... questa pozione avvolgera' chi la beve con una piccola nuvola di magia illusoria simile all'incantesimo Immagine lllusoria.
+
+STATISTICHE
+
+Immagini Illusorie (8 immagini)
+Peso: 045 Kg~
+@4748=~Fluido Magnetico~
+@4749=~Nonostante la sua natura viscosa questo fluido e' in realta' una lega di cromo e ferro mantenuta nella sua forma liquida attraverso potenti trasmutazioni. Riscaldando e raffreddando la lega in presenza di magneti e utilizzando un fuoco magico per bruciare altri metalli rari in sua presenza un alchimista puo' aggiungere un potente campo magnetico alla lega liquida che si attiva solo quando il fluido viene bevuto. Il campo magnetico e' incredibilmente pericoloso per chi beve poiche' attira le armi direttamente verso il corpo del bevitore imponendo una penalita' di -5 al colpo al danno e alla CA nonche' una penalita' di -10 a tutte le forme di danno fisico.
+Tuttavia chi la beve puo' controllare questo campo magnetico per produrre un violento contraccolpo contro i suoi aggressori che infligge 10d4 danni da contundenti ad ogni colpo. Il campo si dissolvera' dopo 10 round.
+
+STATISTICHE
+
+Contraccolpo magnetico: gli attaccanti subiscono 10d4 danni contundenti per colpo
+-5 Bonus d'attacco
+-5 Danni da attacco
+-5 AC
+-10 Taglienti  Contundenti o perforanti e resistenza ai proiettili
+Peso: 045 Kg~
+@54748=~Fluido Magnetico~
+@54749=~Nonostante la sua natura viscosa questo fluido e' in realta' una lega di cromo e ferro mantenuta nella sua forma liquida attraverso potenti trasmutazioni. Riscaldando e raffreddando la lega in presenza di magneti e utilizzando un fuoco magico per bruciare altri metalli rari in sua presenza un alchimista puo' aggiungere un potente campo magnetico alla lega liquida che si attiva solo quando il fluido viene bevuto. Il campo magnetico e' incredibilmente pericoloso per chi beve poiche' attira le armi direttamente verso il corpo del bevitore imponendo una penalita' di -5 al colpo al danno e alla CA nonche' una penalita' di -10 a tutte le forme di danno fisico.
+Tuttavia chi la beve puo' controllare questo campo magnetico per produrre un violento contraccolpo contro i suoi aggressori che infligge 10d4 danni da contundenti ad ogni colpo. Il campo si dissolvera' dopo 10 round.
+
+STATISTICHE
+
+Contraccolpo magnetico: gli attaccanti subiscono 15d4 danni contundenti per colpo
+-5 Bonus d'attacco
+-5 Danni da attacco
+-5 AC
+-15 Taglienti  Contundenti o perforanti e resistenza ai proiettili
+~
+@4750=~Sciroppo Bruciante~
+@4751=~Questo denso sciroppo rossastro composto dal nettare e dalla linfa di diversi fiori e alberi brucia con energia anti-magica. Versando lo sciroppo su un oggetto magico e poi distruggendolo un alchimista puo' infondere nello sciroppo forze dirompenti. Cio' potrebbe richiedere la distruzione di piu' oggetti magici a seconda del loro potere.
+Quando bevuto lo sciroppo crea un campo anti-magia attorno al corpo di chi lo utilizza disperdendo automaticamente tutti gli effetti dissolvibili (sia positivi che negativi) e garantendo 15/- resistenza agli incantesimi per 10 round. Il campo interferisce anche con gli incantesimi dell'utente se presenti aumentando il fallimento degli incantesimi del 25%.
+
+STATISTICHE
+
+Dissolve tutti gli effetti dissolvibili sul bevitore
+Resistenza: 15/- Resistenza agli incantesimi
+25% Fallimento degli incantesimi
+Peso: 045 Kg~
+@54750=~Sciroppo Bruciante~
+@54751=~Questo denso sciroppo rossastro composto dal nettare e dalla linfa di diversi fiori e alberi brucia con energia anti-magica. Versando lo sciroppo su un oggetto magico e poi distruggendolo un alchimista puo' infondere nello sciroppo forze dirompenti. Cio' potrebbe richiedere la distruzione di piu' oggetti magici a seconda del loro potere.
+Quando bevuto lo sciroppo crea un campo anti-magia attorno al corpo di chi lo utilizza disperdendo automaticamente tutti gli effetti dissolvibili (sia positivi che negativi) e garantendo 15/- resistenza agli incantesimi per 10 round. Il campo interferisce anche con gli incantesimi dell'utente se presenti aumentando il fallimento degli incantesimi del 50%.
+
+STATISTICHE
+
+Dissolve tutti gli effetti dissolvibili sul bevitore
+Resistenza: 30/- Resistenza agli incantesimi
+50% Fallimento degli incantesimi
+Peso: 045 Kg~
+@4752=~Linfa di Serpente~
+@4753=~Gli alchimisti Yuan-ti utilizzano una speciale miscela di veleno ed erbe assortite per trasformare i prigionieri umanoidi in schiavi histachii. Il processo e' irreversibile e distrugge la mente della vittima ma conferisce loro poteri insoliti che li rendono servi utili per i loro padroni Yuan-ti.
+Gran parte della scienza e' sconosciuta agli umanoidi ma un Alchimista puo' inventare una versione speciale della miscela histachii dalla linfa Yuan-ti e dalla radice di mandragora che garantira' a chi la beve una resistenza limitata al veleno. Per 1 ora dopo che la linfa e' stata bevuta l'utilizzatore godra' di una resistenza al veleno pari a 6/-.
+
+STATISTICHE
+
+Resistenza: 6/- Resistenza al veleno
+Peso: 045 Kg~
+@54752=~Linfa di Serpente~
+@54753=~Gli alchimisti Yuan-ti utilizzano una speciale miscela di veleno ed erbe assortite per trasformare i prigionieri umanoidi in schiavi histachii. Il processo e' irreversibile e distrugge la mente della vittima ma conferisce loro poteri insoliti che li rendono servi utili per i loro padroni Yuan-ti.
+Gran parte della scienza e' sconosciuta agli umanoidi ma un Alchimista puo' inventare una versione speciale della miscela histachii dalla linfa Yuan-ti e dalla radice di mandragora che garantira' a chi la beve una resistenza limitata al veleno. Per 1 ora dopo che la linfa e' stata bevuta l'utilizzatore godra' di una resistenza al veleno pari a 30/-.
+
+STATISTICHE
+
+Resistenza: 30/- Resistenza al veleno
+Peso: 045 Kg~
+@4754=~Latte di Vampiro~
+@4755=~Questa bottiglia ghiacciata di liquido bluastro e' un mix di farina mirtilli formaggi pregiati e il latte materno di un vampiro un wight o un bodak ucciso. Parzialmente fermentata e trattata con lime e sale questa pozione diventa un fluido amaro indistinguibile dalla vernice. La miscela porta con se' una grande quantita' di energia negativa e sarebbe fatale per la maggior parte delle creature viventi. I non morti tuttavia potrebbero berla per ripristinare la salute. Questa guarigione e' simile a quella della rigenerazione di un vampiro: rimarginera' le ferite mortali e fara' ricrescere le parti del corpo perdute ma non ripristinera' il sangue perduto.
+
+STATISTICHE
+
+Cura 60 punti ferita ai non morti infligge 60 danni a chiunque altro
+Peso: 045 Kg~
+@54754=~Latte di Vampiro~
+@54755=~Questa bottiglia ghiacciata di liquido bluastro e' un mix di farina mirtilli formaggi pregiati e il latte materno di un vampiro un wight o un bodak ucciso. Parzialmente fermentata e trattata con lime e sale questa pozione diventa un fluido amaro indistinguibile dalla vernice. La miscela porta con se' una grande quantita' di energia negativa e sarebbe fatale per la maggior parte delle creature viventi. I non morti tuttavia potrebbero berla per ripristinare la salute. Questa guarigione e' simile a quella della rigenerazione di un vampiro: rimarginera' le ferite mortali e fara' ricrescere le parti del corpo perdute ma non ripristinera' il sangue perduto.
+
+STATISTICHE
+
+Cura 150 punti ferita ai non morti infligge 150 danni a chiunque altro
+Peso: 045 Kg~
+@4756=~Poltiglia di Muschio~
+@4757=~Questo impiastro e' un piccolo vasetto di terreno molto fertile sormontato da un muschio verde lussureggiante. Un alchimista deve prestare particolare attenzione quando coltiva questo muschio assicurandosi costantemente che abbia la giusta quantita' di acqua e sostanze nutritive per prosperare. Cantare ninne nanne bruciare incenso e fare complimenti al muschio sono tutte parti cruciali del processo.
+Coltivato con amore e benedetto da abbondante esposizione alla luce lunare questo muschio sviluppera' un debole bagliore. Se l'alchimista lo ha trattato bene spendera' volentieri la sua preziosa energia per riportare in vita una creatura morta.
+Con il potere esaurito e la personalita' sacrificata per il bene del compagno caduto dell'alchimista il muschio perdera' il suo splendore. Dopo l'uso e' bene buttarlo via: tenerlo in giro tende a rattristare le persone e il muschio non vorrebbe che il suo migliore amico fosse triste.
+
+STATISTICHE
+
+Resuscita una creatura
+Fa sospirare chi l'usa che guardera' malinconicamente in lontananza di tanto in tanto
+Peso: 045 Kg~
+@4758=~(sospira e guarda malinconicamente lontano)~
+@4759=~Grasso di Scarabeo~
+@4760=~La maggior parte delle persone si opporrebbe a spalmare il proprio corpo con il grasso ricavato dagli scarabei schiacciati. Gli avventurieri senza tali obiezioni otterranno un bonus di +4 ai loro tiri salvezza sui Riflessi per 1 ora quando applicano questo grasso sulla loro pelle.
+
+STATISTICHE
+
++4 ai tiri salvezza sui Riflessi
+Peso: 045 Kg~
+@54759=~Grasso di Scarabeo~
+@54760=~La maggior parte delle persone si opporrebbe a spalmare il proprio corpo con il grasso ricavato dagli scarabei schiacciati. Gli avventurieri senza tali obiezioni otterranno un bonus di +8 ai loro tiri salvezza sui Riflessi per 1 ora quando applicano questo grasso sulla loro pelle.
+
+STATISTICHE
+
++8 ai tiri salvezza sui Riflessi
+Peso: 0,45 kg~
+@4761=~Salsa di Beholder~
+@4762=~Composta dal sangue dalla linfa dalle lacrime e dal succo del bulbo oculare di un beholder (preferibilmente) morto questa salsa piccante intorpidira' temporaneamente gli occhi dell'utilizzatore in modo che possano essere trasmutati in diversi gambi informi. A parte la visione offuscata e non poco disagio questa pozione consente a qualsiasi incantatore di iniziare a lanciare un nuovo incantesimo non appena finisce di lanciare quello precedente eliminando il normale ritardo tra i lanci degli incantesimi. Cio' consente all'utente di lanciare piu' di un incantesimo in un singolo round sebbene il personaggio non possa beneficiare di riduzioni del tempo di lancio. Dopo 2 round gli occhi dell'utilizzatore torneranno alla loro forma normale e l'effetto della pozione svanira'.
+
+STATISTICHE
+
+Alacrita' Potenziata
+Peso: 045 Kg~
+@54761=~Salsa di Beholder~
+@54762=~Composta dal sangue dalla linfa dalle lacrime e dal succo del bulbo oculare di un beholder (preferibilmente) morto questa salsa piccante intorpidira' temporaneamente gli occhi dell'utilizzatore in modo che possano essere trasmutati in diversi gambi informi. A parte la visione offuscata e non poco disagio questa pozione consente a qualsiasi incantatore di iniziare a lanciare un nuovo incantesimo non appena finisce di lanciare quello precedente eliminando il normale ritardo tra i lanci degli incantesimi. Cio' consente all'utente di lanciare piu' di un incantesimo in un singolo round sebbene il personaggio non possa beneficiare di riduzioni del tempo di lancio. Dopo 3 round gli occhi dell'utilizzatore torneranno alla loro forma normale e l'effetto della pozione svanira'.
+
+STATISTICHE
+
+Alacrita' Potenziata
+Peso: 045 Kg~
+@4763=~Balsamo di Corallo~
+@4764=~Strappando pezzi da una barriera corallina frantumando il corallo in polvere e mescolandolo con pasta di cetriolo di mare un alchimista puo' creare un balsamo bluastro. Quando viene spalmato su di un corpo il balsamo si espande in un potente scudo intrappolando chi lo utilizza all'interno ma proteggendolo da ogni forma di attacco. Lo scudo assorbira' 100 punti ferita prima di frantumarsi.
+
+STATISTICHE
+
+Guscio di Tartaruga (100 punti ferita)
+Peso: 045 Kg~
+@54763=~Balsamo di Corallo~
+@54764=~Strappando pezzi da una barriera corallina frantumando il corallo in polvere e mescolandolo con pasta di cetriolo di mare un alchimista puo' creare un balsamo bluastro. Quando viene spalmato su di un corpo il balsamo si espande in un potente scudo intrappolando chi lo utilizza all'interno ma proteggendolo da ogni forma di attacco. Lo scudo assorbira' 400 punti ferita prima di frantumarsi.
+
+STATISTICHE
+
+Guscio di Tartaruga (400 punti ferita)
+Peso: 045 Kg~
+@4765=~Secrezione di Feyr~
+@4766=~Questa bottiglia contiene una sostanza appiccicosa violacea secreta dalla pelle di un feyr. Una serie di incantesimi magici trasformano la sostanza appiccicosa in una potente pozione capace di conferire uno stato etereo a chi la beve. Tutti gli attacchi nemici hanno una probabilita' del 50% di fallire completamente come per l'incantesimo Traslazione. Gli attacchi e gli incantesimi dell'utilizzatore tuttavia subiscono anche una probabilita' del 20% di fallimento. Gli effetti durano 10 round.
+
+STATISTICHE
+
+Intermittenza per 10 round
+Peso: 045 Kg~
+@54765=~Secrezione di Feyr~
+@54766=~Questa bottiglia contiene una sostanza appiccicosa violacea secreta dalla pelle di un feyr. Una serie di incantesimi magici trasformano la sostanza appiccicosa in una potente pozione capace di conferire uno stato etereo a chi la beve. Tutti gli attacchi nemici hanno una probabilita' del 50% di fallire completamente come per l'incantesimo Traslazione. Gli attacchi e gli incantesimi dell'utilizzatore tuttavia subiscono anche una probabilita' del 20% di fallimento. Gli effetti durano 20 round.
+
+STATISTICHE
+
+Intermittenza per 20 round
+Peso: 045 Kg~
+@4767=~Gelatina di Salamandra del Fuoco~
+@4768=~Un mix piccante di gomma arabica e sangue di salamandra pezzata questo composto gelatinoso erigera' un muro di fiamme attorno a chi lo beve dimezzando tutti i danni da freddo e infliggendo 1d6+10 danni da fuoco a tutti gli attaccanti. L'effetto dura 10 round o finche' non viene dissolto.
+
+STATISTICHE
+
+Scudo di fuoco rosso
+Peso: 045 Kg~
+@54767=~Gelatina di Salamandra del Fuoco~
+@54768=~Un mix piccante di gomma arabica e sangue di salamandra pezzata questo composto gelatinoso erigera' un muro di fiamme attorno a chi lo beve dimezzando tutti i danni da freddo e infliggendo 1d6+20 danni da fuoco a tutti gli attaccanti. L'effetto dura 10 round o finche' non viene dissolto.
+
+STATISTICHE
+
+Scudo di fuoco rosso
+Peso: 045 Kg~
+@4769=~Gelatina di Salamandra del Gelo~
+@4770=~Una gelatina di menta composta da gomma arabica e sangue di una salamandra gelata. Questo composto gelatinoso erigera' un muro di brina attorno a chi lo beve diminuendo della meta' tutti i danni da fuoco e infliggendo 1d6+10 danni da freddo a tutti gli attaccanti. L'effetto dura 10 round o finche' non viene dissolto.
+
+STATISTICHE
+
+Scudo di fuoco Blu
+Peso: 045 Kg~
+@54769=~Gelatina di Salamandra del Gelo~
+@54770=~Una gelatina di menta composta da gomma arabica e sangue di una salamandra gelata. Questo composto gelatinoso erigera' un muro di brina attorno a chi lo beve diminuendo della meta' tutti i danni da fuoco e infliggendo 1d6+20 danni da freddo a tutti gli attaccanti. L'effetto dura 10 round o finche' non viene dissolto.
+
+STATISTICHE
+
+Scudo di fuoco Blu
+Peso: 045 Kg~
+@4771=~Lubrificante Ittico~
+@4772=~Olio di pesce olio di sesamo una serie unica di incantesimi e cenere finissima compongono questo grasso. Quando l'utente lo applica sulla pelle e attiva la parola di comando il lubrificante iniziera' a vibrare debolmente. Qualsiasi tentativo di ostacolare i movimenti dell'utilizzatore fallira' finche' il lubrificante sara' attivo il che durera' per 10 ore o finche' non verra' dissolto.
+
+STATISTICHE
+
+Liberta' di Movimento
+Peso: 045 Kg~
+@54771=~Lubrificante Ittico~
+@54772=~Olio di pesce olio di sesamo una serie unica di incantesimi e cenere finissima compongono questo grasso. Quando l'utente lo applica sulla pelle e attiva la parola di comando il lubrificante iniziera' a vibrare debolmente. Qualsiasi tentativo di ostacolare i movimenti dell'utilizzatore fallira' finche' il lubrificante sara' attivo il che durera' per 1 ora o finche' non verra' dissolto.
+
+STATISTICHE
+
+Liberta' di Movimento
+Peso: 045 Kg~
+@4773=~Bevanda Gassata~
+@4774=~Questa miscela frizzante di succo di frutta e cervello di struzzo dara' una scarica di energia a chi la beve. Per dieci round dopo aver bevuto questa bevanda zuccherata l'utente si muovera' e attacchera' a una velocita' accelerata ottenendo un bonus di +4 alla velocita' di movimento e al fattore velocita' e ottenendo +1 velocita' di lancio.
+
+STATISTICHE
+
++4 Velocita' di movimento
++4 Fattore velocita'
++1 Velocita' di lancio
+Peso: 045 Kg~
+@54773=~Bevanda Gassata~
+@54774=~Questa miscela frizzante di succo di frutta e cervello di struzzo dara' una scarica di energia a chi la beve. Per dieci round dopo aver bevuto questa bevanda zuccherata l'utente si muovera' e attacchera' a una velocita' accelerata ottenendo un bonus di +10 alla velocita' di movimento e al fattore velocita' e ottenendo +2 velocita' di lancio.
+
+STATISTICHE
+
++10 Velocita' di movimento
++10 Fattore velocita'
++2  Velocita' di lancio
+Peso: 045 Kg~
+@4775=~Polvere di Ghoul~
+@4776=~Questa sottile polvere grigio-bluastra ricavata dalla pelle in polvere e dalla carne di un ghoul o di uno spettro emana un debole bagliore. Sniffare la polvere provochera' un doloroso mal di testa e un potente incantesimo attraverso il corpo di chi lo utilizza. Per 10 round dopo aver inalato questa polvere magica l'utente otterra' una resistenza di 20/- a tutte le forme di danno da freddo.
+
+STATISTICHE
+
+Resistenza: 20/- Resistenza al freddo
+Peso: 045 Kg~
+@54775=~Polvere di Ghoul~
+@54776=~Questa sottile polvere grigio-bluastra ricavata dalla pelle in polvere e dalla carne di un ghoul o di uno spettro emana un debole bagliore. Sniffare la polvere provochera' un doloroso mal di testa e un potente incantesimo attraverso il corpo di chi lo utilizza. Per 10 round dopo aver inalato questa polvere magica l'utente otterra' una resistenza di 50/- a tutte le forme di danno da freddo.
+
+STATISTICHE
+
+Resistenza: 50/- Resistenza al freddo
+Peso: 045 Kg~
+@4777=~Bolle Dorate~
+@4778=~La buona fortuna e' difficile da trovare ma per coloro che sanno come generarla la fortuna puo' arrivare quasi ovunque. Questa soluzione frizzante e' un mix di scaglie d'oro succo di limone perle macinate e zoccoli di capra in polvere. Chiunque beva questa pozione sperimentera' un'ondata di euforia e suprema fiducia in tutto oltre a un bonus di fortuna di +2 per 10 round.
+
+STATISTICHE
+
++2 Fortuna
+Peso: 045 Kg~
+@54777=~Bolle Dorate~
+@54778=~La buona fortuna e' difficile da trovare ma per coloro che sanno come generarla la fortuna puo' arrivare quasi ovunque. Questa soluzione frizzante e' un mix di scaglie d'oro succo di limone perle macinate e zoccoli di capra in polvere. Chiunque beva questa pozione sperimentera' un'ondata di euforia e suprema fiducia in tutto oltre a un bonus di fortuna di +4 per 10 round.
+
+STATISTICHE
+
++4 Fortuna
+Peso: 045 Kg~
+@4779=~Bile dell'Orco~
+@4780=~Questo liquido malsano e traslucido e' una miscela di melma verde sale comune e bile proveniente dall'intestino di un orco. Chiunque si obblighi a bere questa ripugnante pozione guadagnera' 25 punti ferita temporanei per 8 ore. Qualsiasi danno subito dall'utente proverra' innanzitutto dai punti ferita temporanei.
+
+STATISTICHE
+
++25 punti ferita massimi
+Peso: 045 Kg~
+@54779=~Bile dell'Orco~
+@54780=~Questo liquido malsano e traslucido e' una miscela di melma verde sale comune e bile proveniente dall'intestino di un orco. Chiunque si obblighi a bere questa ripugnante pozione guadagnera' 100 punti ferita temporanei per 8 ore. Qualsiasi danno subito dall'utente proverra' innanzitutto dai punti ferita temporanei.
+
+STATISTICHE
+
++100 punti ferita massimi
+Peso: 045 Kg~
+@4781=~Olio di Velocita'~
+@4782=~Un olio pallido fatto con perle frantumate denti di squalo e sangue di coniglio questa pozione si diffondera' rapidamente nel corpo di chi la usa. L'olio migliorera' notevolmente il movimento e la velocita' di attacco di chi la beve garantendo rapidita' come previsto dall'incantesimo del mago per 10 round.
+
+STATISTICHE
+
+Velocita'
+Peso: 045 Kg~
+@54781=~Olio di Velocita'~
+@54782=~Un olio pallido fatto con perle frantumate denti di squalo e sangue di coniglio questa pozione si diffondera' rapidamente nel corpo di chi la usa. L'olio migliorera' notevolmente il movimento e la velocita' di attacco di chi la beve garantendo rapidita' come previsto dall'incantesimo del mago per 5 round.
+
+STATISTICHE
+
+Velocita'
+Peso: 045 Kg~
+@4783=~Pozione di Chiarezza~
+@4784=~Questa pozione e' una miscela dall'odore gradevole di olio d'oliva arricchito con naso di nereide in polvere e lapislazzuli tritati. Bere questa pozione dal sapore strano garantira' temporaneamente l'immunita' alla maggior parte degli incantesimi di influenza mentale inclusi fascino dominazione regressione mentale paura confusione disperazione ed effetti di stordimento per 10 round.
+
+STATISTICHE
+
+Immunita' al fascino alla dominazione alla regressione mentale alla paura alla confusione alla disperazione e allo stordimento
+Peso: 0,45 kg~
+@54783=~Pozione di Chiarezza~
+@54784=~Questa pozione e' una miscela dall'odore gradevole di olio d'oliva arricchito con naso di nereide in polvere e lapislazzuli tritati. Bere questa pozione dal sapore strano garantira' temporaneamente l'immunita' alla maggior parte degli incantesimi di influenza mentale inclusi fascino dominazione regressione mentale paura confusione disperazione ed effetti di stordimento per 15 round.
+
+STATISTICHE
+
+Immunita' al fascino alla dominazione alla regressione mentale alla paura alla confusione alla disperazione e allo stordimento
+Peso: 0,45 kg~
+@4785=~Linfa di Treant~
+@4786=~La linfa di treant indurita mescolata con acqua santa e pure' di piselli si trova all'interno di questo solido contenitore di legno. Il tenace intruglio deve essere masticato accuratamente a meno che non venga riscaldato prima del consumo. La linfa trasforma la pelle dell'utilizzatore in una sostanza rigida e legnosa garantendo bonus naturale +4 alla CA per 1 ora.
+
+STATISTICHE
+
+Pelle Coriacea (+4 CA)
+Peso: 045 Kg~
+@54785=~Linfa di Treant~
+@54786=~La linfa di treant indurita mescolata con acqua santa e pure' di piselli si trova all'interno di questo solido contenitore di legno. Il tenace intruglio deve essere masticato accuratamente a meno che non venga riscaldato prima del consumo. La linfa trasforma la pelle dell'utilizzatore in una sostanza rigida e legnosa garantendo bonus naturale +7 alla CA per 1 ora.
+
+STATISTICHE
+
+Pelle Coriacea (+7 CA)
+Peso: 045 Kg~
+@4787=~Siero dei Troll~
+@4788=~Realizzata con sangue di troll concentrato filtrato attraverso la pelle perforata dell'otyugh questa miscela acida garantisce temporaneamente a chi la beve le capacita' rigenerative di un troll. Per 10 round dopo aver assorbito questa pozione il bevitore guarira' 5 punti ferita ogni round.
+
+STATISTICHE
+
+Rigenera 5 punti ferita per round
+Peso: 0,45 kg~
+@54787=~Siero dei Troll~
+@54788=~Realizzata con sangue di troll concentrato filtrato attraverso la pelle perforata dell'otyugh questa miscela acida garantisce temporaneamente a chi la beve le capacita' rigenerative di un troll. Per 10 round dopo aver assorbito questa pozione il bevitore guarira' 10 punti ferita ogni round.
+
+STATISTICHE
+
+Rigenera 10 punti ferita per round
+Peso: 0,45 kg~
+@4789=~Melma di Zombi~
+@4790=~Questa zuppa grossolana e' una miscela di peli di elfo tritati e melma ripugnante drenata dal cadavere di uno zombi viscido. Bere questa mistura nauseante garantira' all'utilizzatore una resistenza all'acido pari a 20/- per 10 round.
+
+STATISTICHE
+
+Resistenza: 20/- Resistenza agli acidi
+Peso: 0,45 kg~
+@54789=~Melma di Zombi~
+@54790=~Questa zuppa grossolana e' una miscela di peli di elfo tritati e melma ripugnante drenata dal cadavere di uno zombi viscido. Bere questa mistura nauseante garantira' all'utilizzatore una resistenza all'acido pari a 50/- per 10 round.
+
+STATISTICHE
+
+Resistenza: 50/- Resistenza agli acidi
+Peso: 0,45 kg~
+@4791=~Fiala di Vipere~
+@4792=~Una curiosa miscela sperimentale questa fiala di melma verde torcera' le viscere di chi la beve e utilizzera' i suoi stessi intestini per incubare un covo di vipere generate magicamente. Ogni round per sei round chi la beve vomitera' una vipera adulta che potra' controllare telepaticamente.
+
+STATISTICHE
+
+Flusso di Vipere per 6 round
+Peso: 045 Kg~
+@54791=~Fiala di Vipere~
+@54792=~Una curiosa miscela sperimentale questa fiala di melma verde torcera' le viscere di chi la beve e utilizzera' i suoi stessi intestini per incubare un covo di vipere generate magicamente. Ogni round per dodici round chi la beve vomitera' una vipera adulta che potra' controllare telepaticamente.
+
+STATISTICHE
+
+Flusso di Vipere per 12 round
+Peso: 045 Kg~
+@4793=~Prepara Pozioni~
+@4794=~Comincia.~
+@4795=~Termina.~
+@4796=~Non puoi preparare pozioni quando i nemici sono nelle vicinanze.~

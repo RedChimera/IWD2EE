@@ -1,0 +1,388 @@
+@55000=~Livello~
+@55001=~Barbaro~
+@55002=~Bardo~
+@55003=~Chierico~
+@55004=~Druido~
+@55005=~Guerriero~
+@55006=~Monaco~
+@55007=~Paladino~
+@55008=~Ranger~
+@55009=~Ladro~
+@55010=~Stregone~
+@55011=~Mago~
+@55012=~Punti-ferita:~
+@55013=~Classe Armatura:~
+@55014=~CA Contro Danni Taglienti:~
+@55015=~CA Contro Danni Perforanti:~
+@55016=~CA Contro Danni Contundenti:~
+@55017=~CA Contro Armi da Lancio:~
+@55018=~Bonus d'Attacco:~
+@55019=~Attacchi per Round:~
+@55020=~Punti Caratteristica:~
+@55021=~Forza:~
+@55022=~Destrezza:~
+@55023=~Costituzione:~
+@55024=~Intelligenza:~
+@55025=~Saggezza:~
+@55026=~Carisma:~
+@55027=~Resistenza ai Danni Taglienti:~
+@55028=~Resistenza ai Danni Perforanti:~
+@55029=~Resistenza ai Danni Contundenti:~
+@55030=~Resistenza alle Armi Da Lancio:~
+@55031=~Resistenza al Fuoco:~
+@55032=~Resistenza al Freddo:~
+@55033=~Resistenza Elettrica:~
+@55034=~Resistenza all'acido:~
+@55035=~Resistenza al Veleno:~
+@55036=~Resistenza ai Danni Magici:~
+@55037=~Resistenza agli Incantesimi:~
+@55038=~Riduzione del Danno:~
+@55039=~Tiri-salvezza:~
+@55040=~Tempra:~
+@55041=~Riflessi:~
+@55042=~Volonta':~
+@55043=~Abilita' di Concentrazione:~
+@55044=~Immagini Illusorie Rimanenti:~
+@55045=~Danni Rimanenti a Pelle di Pietra:~
+@55046=~Tempo di Lancio Ridotto di:~
+@55047=~Danno da attacco furtivo:~
+@55048=~<EXICNAME> lancia incantesimi arcani come se <EXICVAL1> fosse di livello superiore~
+@55049=~<EXICNAME> lancia incantesimi arcani con <EXICVAL1>% della durata normale~
+@55050=~<EXICNAME> lancia incantesimi divini come se <EXICVAL1> fosse di livello superiore~
+@55051=~<EXICNAME> lancia incantesimi divini con <EXICVAL1>% della durata normale~
+@55052=~<EXICNAME> puo' estendere gli incantesimi fino al livello <EXICVAL1>~
+@55053=~<EXICNAME> puo' massimizzare gli incantesimi fino al livello <EXICVAL1>~
+@55054=~<EXICNAME> puo' velocizzare incantesimi fino al livello <EXICVAL1>~
+@55055=~<EXICNAME> puo' proteggere incantesimi fino al livello <EXICVAL1>~
+@55056=~<EXICNAME> puo' lanciare piu' di un incantesimo per round~
+@55057=~<EXICNAME> puo' vedere creature invisibili~
+@55058=~<EXICNAME> e' protetto dai colpi critici~
+@55059=~<EXICNAME> e' protetto dagli attacchi furtivi~
+@55060=~<EXICNAME> infligge il massimo danno con ogni colpo~
+@55061=~<EXICNAME> puo' attaccare furtivamente a ogni colpo~
+@55062=~<EXICNAME> non puo' essere ridotto al di sotto di <EXICVAL1> HP~
+@55063=~Immunita':~
+@55064=~furioso~
+@55065=~charme~
+@55066=~danno~
+@55067=~guarigione~
+@55068=~invisibilita'~
+@55069=~fallimento morale~
+@55070=~paura~
+@55071=~veleno~
+@55072=~silenzio~
+@55073=~sonno~
+@55074=~lentezza~
+@55075=~stordito~
+@55076=~dissolvente~
+@55077=~fallimento dell'incantesimo~
+@55078=~accecare~
+@55079=~regressione mentale~
+@55080=~malattia~
+@55081=~sordita'~
+@55082=~fatica~
+@55083=~intossicazione~
+@55084=~paralisi~
+@55085=~teletrasporto~
+@55086=~confusione~
+@55087=~pietrificazione~
+@55088=~polimorfismo~
+@55089=~Intralciare~
+@55090=~Ragnatela~
+@55091=~Unto~
+@55092=~presa~
+@55093=~penalita' di movimento~
+@55094=~effetti vampirici~
+@55095=~Sangue Bruciante di Beltyn~
+@55096=~aure delle salamandre~
+@55097=~sguardo degli umber hulk~
+@55098=~Ira animale~
+@55099=~Sfera al vetriolo~
+@55100=~canto dell'arpia~
+@55101=~sguardo dello sciacallo mannaro~
+@55102=~disperazione~
+@55103=~nausea~
+@55104=~indebolimento~
+@55105=~dominio~
+@55106=~Sfera Elastica di Otiluke~
+@55107=~ferimento~
+@55108=~atterramento~
+@55109=~morte istantanea~
+@55110=~Blocca Non Morti~
+@55111=~Controllare Non Morti~
+@55112=~esilio~
+@55113=~risucchio di energia~
+@55114=~<EXICNAME> non puo' essere ruotato~
+@55115=~Pelli di Ferro Rimanenti:~
+@55116=~Guardia Nera~
+@55180=~ 1 immagine rimanente~
+@55181=~ <EXASVAL3> immagini rimanenti~
+@55182=~ 1 danno rimanente~
+@55183=~ <EXASVAL3> danno rimanente~
+@55184=~ 1 pelle rimanente~
+@55185=~ <EXASVAL3> pelli rimanenti~
+@55186=~ 1 tiro rimanente~
+@55187=~ <EXASVAL3> tiri rimanenti~
+@55190=~Incantesimi attivi su <EXASNAME>:~
+@55191=~<EXASVAL1> - rimane un secondo~
+@55192=~<EXASVAL1> - <EXASVAL2> secondi rimanenti~
+@55193=~<EXASVAL1> - rimane un turno~
+@55194=~<EXASVAL1> - <EXASVAL2> turni rimanenti~
+@55195=~<EXASVAL1> - rimane un'ora~
+@55196=~<EXASVAL1> - <EXASVAL2> ore rimanenti~
+@55197=~<EXASVAL1> - rimane un giorno~
+@55198=~<EXASVAL1> - <EXASVAL2> giorni rimanenti~
+
+@55301=~<EXWHACTION1>: <EXWHROLL1> <EXWHBONUS1> = <EXWHTOTAL1> : <EXWHHITMISS1>~
+@55302=~<EXWHACTION2>: <EXWHROLL2> <EXWHBONUS2> = <EXWHTOTAL2> : <EXWHHITMISS2>~
+@55303=~<EXWHACTION3>: <EXWHROLL3> <EXWHBONUS3> = <EXWHTOTAL3> : <EXWHHITMISS3>~
+@55304=~<EXWHACTION4>: <EXWHROLL4> <EXWHBONUS4> = <EXWHTOTAL4> : <EXWHHITMISS4>~
+@55305=~<EXWHACTION5>: <EXWHROLL5> <EXWHBONUS5> = <EXWHTOTAL5> : <EXWHHITMISS5>~
+@55306=~<EXWHACTION6>: <EXWHROLL6> <EXWHBONUS6> = <EXWHTOTAL6> : <EXWHHITMISS6>~
+@55307=~<EXWHACTION7>: <EXWHROLL7> <EXWHBONUS7> = <EXWHTOTAL7> : <EXWHHITMISS7>~
+@55308=~<EXWHACTION8>: <EXWHROLL8> <EXWHBONUS8> = <EXWHTOTAL8> : <EXWHHITMISS8>~
+@55309=~<EXWHACTION9>: <EXWHROLL9> <EXWHBONUS9> = <EXWHTOTAL9> : <EXWHHITMISS9>~
+@55310=~<EXWHACTION10>: <EXWHROLL10> <EXWHBONUS10> = <EXWHTOTAL10> : <EXWHHITMISS10>~
+@55311=~<EXWHACTION11>: <EXWHROLL11> <EXWHBONUS11> = <EXWHTOTAL11> : <EXWHHITMISS11>~
+@55312=~<EXWHACTION12>: <EXWHROLL12> <EXWHBONUS12> = <EXWHTOTAL12> : <EXWHHITMISS12>~
+@55313=~<EXWHACTION13>: <EXWHROLL13> <EXWHBONUS13> = <EXWHTOTAL13> : <EXWHHITMISS13>~
+@55314=~<EXWHACTION14>: <EXWHROLL14> <EXWHBONUS14> = <EXWHTOTAL14> : <EXWHHITMISS14>~
+@55315=~<EXWHACTION15>: <EXWHROLL15> <EXWHBONUS15> = <EXWHTOTAL15> : <EXWHHITMISS15>~
+@55316=~<EXWHACTION16>: <EXWHROLL16> <EXWHBONUS16> = <EXWHTOTAL16> : <EXWHHITMISS16>~
+@55317=~<EXWHACTION17>: <EXWHROLL17> <EXWHBONUS17> = <EXWHTOTAL17> : <EXWHHITMISS17>~
+@55318=~<EXWHACTION18>: <EXWHROLL18> <EXWHBONUS18> = <EXWHTOTAL18> : <EXWHHITMISS18>~
+@55319=~<EXWHACTION19>: <EXWHROLL19> <EXWHBONUS19> = <EXWHTOTAL19> : <EXWHHITMISS19>~
+@55320=~<EXWHACTION20>: <EXWHROLL20> <EXWHBONUS20> = <EXWHTOTAL20> : <EXWHHITMISS20>~
+@55321=~<EXWHACTION21>: <EXWHROLL21> <EXWHBONUS21> = <EXWHTOTAL21> : <EXWHHITMISS21>~
+@55322=~<EXWHACTION22>: <EXWHROLL22> <EXWHBONUS22> = <EXWHTOTAL22> : <EXWHHITMISS22>~
+@55323=~<EXWHACTION23>: <EXWHROLL23> <EXWHBONUS23> = <EXWHTOTAL23> : <EXWHHITMISS23>~
+@55324=~<EXWHACTION24>: <EXWHROLL24> <EXWHBONUS24> = <EXWHTOTAL24> : <EXWHHITMISS24>~
+@55325=~<EXWHACTION25>: <EXWHROLL25> <EXWHBONUS25> = <EXWHTOTAL25> : <EXWHHITMISS25>~
+@55326=~<EXWHACTION26>: <EXWHROLL26> <EXWHBONUS26> = <EXWHTOTAL26> : <EXWHHITMISS26>~
+@55327=~<EXWHACTION27>: <EXWHROLL27> <EXWHBONUS27> = <EXWHTOTAL27> : <EXWHHITMISS27>~
+@55328=~<EXWHACTION28>: <EXWHROLL28> <EXWHBONUS28> = <EXWHTOTAL28> : <EXWHHITMISS28>~
+@55329=~<EXWHACTION29>: <EXWHROLL29> <EXWHBONUS29> = <EXWHTOTAL29> : <EXWHHITMISS29>~
+@55330=~<EXWHACTION30>: <EXWHROLL30> <EXWHBONUS30> = <EXWHTOTAL30> : <EXWHHITMISS30>~
+@55331=~<EXWHACTION31>: <EXWHROLL31> <EXWHBONUS31> = <EXWHTOTAL31> : <EXWHHITMISS31>~
+@55332=~<EXWHACTION32>: <EXWHROLL32> <EXWHBONUS32> = <EXWHTOTAL32> : <EXWHHITMISS32>~
+@55333=~<EXWHACTION33>: <EXWHROLL33> <EXWHBONUS33> = <EXWHTOTAL33> : <EXWHHITMISS33>~
+@55334=~<EXWHACTION34>: <EXWHROLL34> <EXWHBONUS34> = <EXWHTOTAL34> : <EXWHHITMISS34>~
+@55335=~<EXWHACTION35>: <EXWHROLL35> <EXWHBONUS35> = <EXWHTOTAL35> : <EXWHHITMISS35>~
+@55336=~<EXWHACTION36>: <EXWHROLL36> <EXWHBONUS36> = <EXWHTOTAL36> : <EXWHHITMISS36>~
+@55337=~<EXWHACTION37>: <EXWHROLL37> <EXWHBONUS37> = <EXWHTOTAL37> : <EXWHHITMISS37>~
+@55338=~<EXWHACTION38>: <EXWHROLL38> <EXWHBONUS38> = <EXWHTOTAL38> : <EXWHHITMISS38>~
+@55339=~<EXWHACTION39>: <EXWHROLL39> <EXWHBONUS39> = <EXWHTOTAL39> : <EXWHHITMISS39>~
+@55340=~<EXWHACTION40>: <EXWHROLL40> <EXWHBONUS40> = <EXWHTOTAL40> : <EXWHHITMISS40>~
+/*
+@55301=~Attacchi <EXWHNAME1> con <EXWHWEAP1> : <EXWHHITMISS1>~
+@55302=~Attacchi <EXWHNAME2> con <EXWHWEAP2> : <EXWHHITMISS2>~
+@55303=~Attacchi <EXWHNAME3> con <EXWHWEAP3> : <EXWHHITMISS3>~
+@55304=~Attacchi <EXWHNAME4> con <EXWHWEAP4> : <EXWHHITMISS4>~
+@55305=~Attacchi <EXWHNAME5> con <EXWHWEAP5> : <EXWHHITMISS5>~
+@55306=~Attacchi <EXWHNAME6> con <EXWHWEAP6> : <EXWHHITMISS6>~
+@55307=~Attacchi <EXWHNAME7> con <EXWHWEAP7> : <EXWHHITMISS7>~
+@55308=~Attacchi <EXWHNAME8> con <EXWHWEAP8> : <EXWHHITMISS8>~
+@55309=~Attacchi <EXWHNAME9> con <EXWHWEAP9> : <EXWHHITMISS9>~
+@55310=~Attacchi <EXWHNAME10> con <EXWHWEAP10> : <EXWHHITMISS10>~
+@55311=~Attacchi <EXWHNAME11> con <EXWHWEAP11> : <EXWHHITMISS11>~
+@55312=~Attacchi <EXWHNAME12> con <EXWHWEAP12> : <EXWHHITMISS12>~
+@55313=~Attacchi <EXWHNAME13> con <EXWHWEAP13> : <EXWHHITMISS13>~
+@55314=~Attacchi <EXWHNAME14> con <EXWHWEAP14> : <EXWHHITMISS14>~
+@55315=~Attacchi <EXWHNAME15> con <EXWHWEAP15> : <EXWHHITMISS15>~
+@55316=~Attacchi <EXWHNAME16> con <EXWHWEAP16> : <EXWHHITMISS16>~
+@55317=~Attacchi <EXWHNAME17> con <EXWHWEAP17> : <EXWHHITMISS17>~
+@55318=~Attacchi <EXWHNAME18> con <EXWHWEAP18> : <EXWHHITMISS18>~
+@55319=~Attacchi <EXWHNAME19> con <EXWHWEAP19> : <EXWHHITMISS19>~
+@55320=~Attacchi <EXWHNAME20> con <EXWHWEAP20> : <EXWHHITMISS20>~
+@55321=~Attacchi <EXWHNAME21> con <EXWHWEAP21> : <EXWHHITMISS21>~
+@55322=~Attacchi <EXWHNAME22> con <EXWHWEAP22> : <EXWHHITMISS22>~
+@55323=~Attacchi <EXWHNAME23> con <EXWHWEAP23> : <EXWHHITMISS23>~
+@55324=~Attacchi <EXWHNAME24> con <EXWHWEAP24> : <EXWHHITMISS24>~
+@55325=~Attacchi <EXWHNAME25> con <EXWHWEAP25> : <EXWHHITMISS25>~
+@55326=~Attacchi <EXWHNAME26> con <EXWHWEAP26> : <EXWHHITMISS26>~
+@55327=~Attacchi <EXWHNAME27> con <EXWHWEAP27> : <EXWHHITMISS27>~
+@55328=~Attacchi <EXWHNAME28> con <EXWHWEAP28> : <EXWHHITMISS28>~
+@55329=~Attacchi <EXWHNAME29> con <EXWHWEAP29> : <EXWHHITMISS29>~
+@55330=~Attacchi <EXWHNAME30> con <EXWHWEAP30> : <EXWHHITMISS30>~
+@55331=~Attacchi <EXWHNAME31> con <EXWHWEAP31> : <EXWHHITMISS31>~
+@55332=~Attacchi <EXWHNAME32> con <EXWHWEAP32> : <EXWHHITMISS32>~
+@55333=~Attacchi <EXWHNAME33> con <EXWHWEAP33> : <EXWHHITMISS33>~
+@55334=~Attacchi <EXWHNAME34> con <EXWHWEAP34> : <EXWHHITMISS34>~
+@55335=~Attacchi <EXWHNAME35> con <EXWHWEAP35> : <EXWHHITMISS35>~
+@55336=~Attacchi <EXWHNAME36> con <EXWHWEAP36> : <EXWHHITMISS36>~
+@55337=~Attacchi <EXWHNAME37> con <EXWHWEAP37> : <EXWHHITMISS37>~
+@55338=~Attacchi <EXWHNAME38> con <EXWHWEAP38> : <EXWHHITMISS38>~
+@55339=~Attacchi <EXWHNAME39> con <EXWHWEAP39> : <EXWHHITMISS39>~
+@55340=~Attacchi <EXWHNAME40> con <EXWHWEAP40> : <EXWHHITMISS40>~
+*/
+@55351=~5 danni resistiti da un'arma non magica~
+@55352=~10 danni resistiti da un'arma con meno di +2 incantesimo~
+@55353=~15 danni resistiti da un'arma con meno di +3 incantesimo~
+@55354=~20 danni resistiti da un'arma con meno di +4 incantesimo~
+@55355=~25 danni resistiti da un'arma con meno di +5 incantesimo~
+@55356=~30 danni resistiti da un'arma con meno di +6 incantesimo~
+@55357=~35 danni resistiti da un'arma con meno di +7 incantesimo~
+@55358=~40 danni resistiti da un'arma con meno di +8 incantesimo~
+@55359=~45 danni resistiti da un'arma con meno di +9 incantesimo~
+@55360=~50 danni resistiti da un'arma con meno di +10 incantesimo~
+@55370=~sonico~
+@55371=~magia~
+@55372=~energia positiva~
+@55373=~energia negativa~
+@55374=~psichico~
+@55375=~Tiro per colpire del Tocco~
+@55376=~Tiro per colpire dell'Attacco a Distanza~
+@55377=~Il corpo di questo personaggio e' stato distrutto. Sara' necessario un incantesimo di Resurrezione per riportarlo in vita. Rianimare Morti non sara' sufficiente.~
+@55378=~L'anima di questo personaggio e' stata catturata. Il contenitore della loro anima deve essere distrutto prima che possa essere riportato in vita.~
+@55379=~Questo personaggio non puo' essere rianimato ma puo' essere resuscitato tramite una magia piu' potente.~
+@55380=~Questo personaggio non puo' essere rianimato o resuscitato.~
+@55381=~Questo personaggio e' morto da troppo tempo per essere resuscitato da quell'incantesimo.~
+@55382=~Incantesimi interrotti: mano secondaria in uso.~
+@55383=~L'attacco non e' riuscito a colpire a causa della differenza d'altezza~
+@55384=~Danni evitati grazie alla forma eterea~
+@55385=~Danni evitati grazie alla forma incorporea~
+@55386=~fuoco~
+@55387=~fuoco sacro~
+@55390=~Utilizzo del Talento: Combattere alla Cieca - Successo~
+@55391=~Utilizzo del Talento: Combattere alla Cieca - Fallimento~
+@55392=~Mancato a causa dell'occultamento.~
+@55395=~Attacco di Opportunita'~
+@55398=~Colpisci~
+@55399=~Colpo mancato~
+
+@55401=~<EXSSFULL1>~
+@55402=~<EXSSFULL2>~
+@55431=~<EXSSREGAINEDLOSTAND><EXSSNUMSPELLS> <EXSSLEVELORNAME> incantesimo~
+@55432=~<EXSSREGAINEDLOSTAND><EXSSNUMSPELLS> <EXSSLEVELORNAME> incantesimi~
+@55453=~Riacquistato~
+@55454=~Perduto~
+@55455=~e~
+@55460=~Lancia con lo slot incantesimo <EXMMLEVEL>~
+@55461=~1° livello~
+@55462=~2° livello~
+@55463=~3° livello~
+@55464=~4° livello~
+@55465=~5° livello~
+@55466=~6° livello~
+@55467=~7° livello~
+@55468=~8° livello~
+@55469=~9° livello~
+@55470=~10° livello~
+@55471=~11° livello~
+@55472=~12° livello~
+@55473=~13° livello~
+@55474=~14° livello~
+@55475=~15° livello~
+@55476=~16° livello~
+@55477=~17° livello~
+@55478=~18° livello~
+@55479=~19° livello~
+@55480=~20° livello~
+@55481=~Incantesimo Contrastato~
+@55482=~Non hai un incantesimo memorizzato che possa contrastarlo.~
+@55483=~Tenta di contrastare l'incantesimo di <EXCSNAM1>~
+@55484=~Controincantesimo fallito: <EXCSNAM1> non sta lanciando un incantesimo~
+@55491=~Metamagia fallita: non hai alcun incantesimo di <EXMMLEVEL> o superiore memorizzato~
+@55492=~Metamagia fallita: non hai alcun incantesimo di <EXMMLEVEL> o superiore rimanente~
+@55493=~Metamagia fallita: l'incantesimo risultante e' di livello troppo alto~
+
+@55500=~<EXACVAL1> non e' un incantesimo valido per Contingenza Curativa~
+@55580=~Copia Incantesimo fallito: <EXCPNAM1> non sta lanciando un incantesimo~
+@55581=~Copia Incantesimo non riuscito: <EXCPVAL1> e' di livello troppo alto per poter essere copiato~
+@55582=~Copia Incantesimo non riuscito: <EXCPVAL1> non puo' essere copiato~
+@55583=~<EXCPVAL1> copiato con Copia incantesimo~
+@55584=~<EXACVAL1> e' di livello troppo alto per essere conservato in un Bastone Magico~
+@55585=~Le abilita' innate non possono essere conservate in un Bastone Magico~
+@55586=~<EXACVAL1> puo' essere lanciato solo sull'incantatore e quindi non puo' essere immagazzinato in un Bastone Magico~
+@55587=~<EXACVAL1> non puo' essere conservato in un Bastone Magico~
+@55588=~<EXACVAL1> e' stato immagazzinato in un Bastone Magico per essere rilasciato attaccando con esso~
+@55590=~Un incantesimo di quella scuola e' gia' stato memorizzato nel sequenziatore~
+@55591=~<EXACVAL1> e' di livello troppo alto per Infusione di Abilita' Magiche~
+@55592=~<EXACVAL1> non funziona con Infusione di Abilita' Magiche~
+@55593=~Questo personaggio e' stato impregnato di <EXACVAL1>. Puo' lanciarlo una volta~
+@55594=~<EXACVAL1> non puo' essere memorizzato con Canto Magico~
+@55595=~<EXACVAL1> e' stato memorizzato in questo personaggio per essere rilasciato occasionalmente quando il bardo canta la sua canzone da bardo~
+@55596=~<EXACVAL1> non puo' essere memorizzato in questo sequenziatore~
+@55597=~<EXACVAL1> e' stato memorizzato nel sequenziatore~
+@55598=~L'incantesimo <EXACVAL1> e' stato immagazzinato in questo personaggio per essere rilasciato alle giuste condizioni~
+@55599=~Contingenza attivata~
+
+@55601=~Immune~
+@55602=~Assorbito~
+@55603=~(Lich)~
+@55604=~ +<EXRDVAL1> danno~
+@55605=~ -<EXRDVAL1> penalita' per danni~
+@55606=~ tiro minimo di <EXRLVAL1>~
+@55607=~ tiro massimo di <EXRLVAL1>~
+
+@55701=~Incantesimo Fallito: il tempo di ricarica non e' stato inizializzato per iniziare a tracciare gli effetti su questo personaggio. Ora e' cosi' quindi dovrebbe funzionare la prossima volta che il personaggio lancia l'incantesimo.~
+@55702=~Illeso~
+@55703=~Ferito lievemente~
+@55704=~Ferito~
+@55705=~Ferito Gravemente~
+@55706=~Quasi Morto~
+@55707=~Registrazione cancellata~
+@55708=~Registrazione di incantesimi~
+@55709=~Registrazione terminata~
+@55710=~Registrazione attivata~
+@55711=~Registrato <EXRCSPELL>~
+@55712=~Registrato <EXRCSPELL> mirato a <EXRCTARGET>~
+@55713=~<EXRCSPELL> non e' stato registrato; deve prendere di mira un membro del gruppo o un punto~
+@55714=~Al momento non ci sono incantesimi registrati da lanciare~
+@55715=~L'incantesimo~
+@55716=~Lancia l'incantesimo <EXCCSPELL>~
+@55717=~Questo non morto e' stato potenziato e reso piu' difficile da scacciare~
+@55718=~Nota: attualmente hai gia' degli incantesimi registrati. Qualsiasi nuova azione registrata verra' aggiunta alla registrazione esistente. Se desideri registrare gli incantesimi da zero premi <EXRCKEYDELETE> per eliminare la registrazione precedente quindi premi <EXRCKEYRECORD> per ricominciare.~
+@55751=~Totale Lancio: <EXRRTOTAL>\nTotale memorizzato: <EXRRRECTOTAL>\n\n~
+@55752=~Punteggi di abilita' non assegnati:\n<EXRRUNALLOCATED>\n\n~
+@55753=~Premi Z per rilanciare X per memorizzare C per richiamare e V per ridistribuire i punteggi di caratteristica.\n\n~
+@55754=~Premi Z per rilanciare X per memorizzare e C per richiamare.\n\n~
+@55755=~Fai clic sul pulsante PIU su un punteggio di caratteristica per assegnare il numero rimanente piu' alto a quel punteggio di caratteristica. Fare clic sul pulsante MENO per annullare l'assegnazione del numero.\n\n~
+@55756=~Prossimo Punteggio di Abilita'~
+@55757=~Rilancia~
+@55758=~Conserva~
+@55759=~Richiama~
+@55760=~Rialloca~
+@55761=~Selezione Degli Incantesimi Arcani: Livello 1~
+@55762=~Selezione Degli Incantesimi Arcani: Livello 2~
+@55763=~Selezione Degli Incantesimi Arcani: Livello 3~
+@55764=~Selezione Degli Incantesimi Arcani: Livello 4~
+@55765=~Selezione Degli Incantesimi Arcani: Livello 5~
+@55766=~Selezione Degli Incantesimi Arcani: Livello 6~
+@55767=~Selezione Degli Incantesimi Arcani: Livello 7~
+@55768=~Selezione Degli Incantesimi Arcani: Livello 8~
+@55769=~Selezione Degli Incantesimi Arcani: Livello 9~
+@55770=~Reimposta gli Incantesimi~
+@55771=~Non puoi imparare piu' di 24 incantesimi per singolo livello di incantesimo.~
+@55772=~Puoi scegliere gli incantesimi <EXWLNUM> da inserire nel tuo libro degli incantesimi.~
+@55773=~Puoi scegliere fino a 1 incantesimo che conosci che sia almeno 2 livelli inferiore al livello di incantesimo piu' alto che puoi lanciare e sostituirlo con un incantesimo diverso dello stesso livello.~
+@55774=~Puoi scegliere fino a <EXWLNUM> incantesimi che conosci che sono almeno 2 livelli inferiori al livello di incantesimo piu' alto che puoi lanciare e sostituirli con incantesimi diversi dello stesso livello.~
+@55781=~Sostituzione degli Incantesimi: livello 1~
+@55782=~Sostituzione degli Incantesimi: livello 2~
+@55783=~Sostituzione degli Incantesimi: livello 3~
+@55784=~Sostituzione degli Incantesimi: livello 4~
+@55785=~Sostituzione degli Incantesimi: livello 5~
+@55786=~Sostituzione degli Incantesimi: livello 6~
+@55787=~Sostituzione degli Incantesimi: livello 7~
+@55788=~Sostituzione degli Incantesimi: livello 8~
+@55789=~Sostituzione degli Incantesimi: livello 9~
+
+@55801=~Svuotare Tasche ha avuto successo e il ladro non e' stato rilevato~
+@55802=~Svuotare Tasche ha avuto successo ma il ladro e' stato rilevato~
+@55803=~Svuotare Tasche e' fallito ma il ladro non e' stato rilevato~
+@55804=~Svuotare Tasche e' fallito e il ladro e' stato rilevato~
+@55805=~Svuotare Tasche e' fallito perche' il bersaglio non ha nulla da rubare ma non sei stato rilevato~
+@55806=~Svuotare Tasche e' fallito perche' il bersaglio non ha nulla da rubare e sei stato rilevato~
+@55807=~Svuotare Tasche e' fallito perche' il bersaglio non ha nulla che tu possa rubare con il tuo attuale livello di abilita' ma non sei stato rilevato~
+@55808=~Svuotare Tasche e' fallito perche' il bersaglio non ha nulla che tu possa rubare con il tuo attuale livello di abilita' e sei stato rilevato~
+@55809=~Svuotare Tasche e' fallito perche' il bersaglio non ha nulla che tu possa rubare con il tuo attuale livello di abilita'~
+@55810=~Il meccanismo che lo fa funzionare non ha una serratura convenzionale ma potrebbe essere comunque possibile abbatterlo.~
+@55811=~Questa porta e' troppo robusta per essere aperta con la forza ma la serratura puo' comunque essere forzata.~
+@55812=~Questo contenitore e' troppo robusto per essere aperto con la forza ma la serratura puo' comunque essere forzata.~
+@55813=~Questa porta non ha una serratura convenzionale ed e' troppo robusta per essere aperta con la forza ma un incantesimo Scassinare puo' comunque aprirla.~
+@55814=~Questo contenitore non ha una serratura convenzionale ed e' troppo robusto per essere aperto con la forza ma un incantesimo Scassinare puo' comunque aprirlo.~
+
+@55901=~Opzioni IEex~
+@55902=~Nebbia di Guerra Trasparente~
+@55903=~Sostituisce la nebbia di guerra con una versione che utilizza la trasparenza. Cio' risolve lo sfarfallio causato dall'implementazione vanilla.~
+@55904=~Riforma Gruppo~
