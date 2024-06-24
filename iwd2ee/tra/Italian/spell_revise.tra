@@ -80,13 +80,13 @@ Tiro Salvezza: Tempra dimezza
 
 
 Questo incantesimo infetta la creatura bersaglio con una muffa marrone a rapida diffusione. Se la creatura infetta fallisce un tiro salvezza sulla Tempra con CD +3 la creatura subisce i seguenti danni:
-1° round: 4d6 danni
-2° round: 3d6 danni
-3° round: 2d6 danni
-4° round: 1d6 danni
+1' round: 4d6 danni
+2' round: 3d6 danni
+3' round: 2d6 danni
+4' round: 1d6 danni
 Se il tiro salvezza riesce il danno viene ridotto:
-1° round: 2d6 danni
-2° round: 1d6 danni
+1' round: 2d6 danni
+2' round: 1d6 danni
 Ad ogni round successivo al primo la creatura piu' vicina entro tre metri dalla vittima deve effettuare un tiro salvezza sulla Tempra o verra' infettata dalla muffa a piena forza. Questo processo continua finche' la muffa non riesce a infettare in tempo un ospite adatto. Le creature gia' sotto l'effetto della muffa non possono contrarla nuovamente. La muffa marrone muore rapidamente una volta scaduto l'incantesimo. Questo incantesimo non provoca attacchi di opportunita'.~
 @1014=~Armonia Difensiva~
 @1015=~Armonia difensiva
@@ -197,7 +197,7 @@ Tempo di Lancio: 1
 Area di Effetto: 1 creatura
 Tiro Salvezza: Nessuno
 
-Con questo incantesimo il mago risucchia la forza vitale da un bersaglio e la aggiunge alla propria sottraendo 2d4 punti ferita alla vittima. Per ogni 3 livelli dell'incantatore dopo il livello 1 la quantita' risucchiata aumenta di 1d4 fino a 5d4 al 10° livello. I punti ferita extra scompariranno tra un'ora.~
+Con questo incantesimo il mago risucchia la forza vitale da un bersaglio e la aggiunge alla propria sottraendo 2d4 punti ferita alla vittima. Per ogni 3 livelli dell'incantatore dopo il livello 1 la quantita' risucchiata aumenta di 1d4 fino a 5d4 al 10' livello. I punti ferita extra scompariranno tra un'ora.~
 @1034=~Orrore~
 @1035=~Orrore
 (Necromanzia)
@@ -242,12 +242,12 @@ Area di Effetto: Incantatore
 Tiro Salvezza: Nessuno
 
 Questo incantesimo evoca sette sfere magiche che fluttuano in un anello sopra la testa dell'incantatore. Ogni occhio ha un'abilita' difensiva e offensiva anche se una volta utilizzato l'occhio perdera' il suo potere. Se un occhio viene speso o distrutto puo' essere sostituito rilanciando Sette Occhi. I poteri di ciascun occhio sono descritti di seguito.
-Occhio della Mente - Questa sfera protegge l'incantatore dagli attacchi mentali come fascino emozione e paura. L'occhio puo' essere speso come l'incantesimo del mago di 1° livello Charme.
-Occhio della Spada - Questo occhio devia il primo attacco fisico dannoso che colpisce l'incantatore. L'occhio puo' essere speso come l'incantesimo del mago di 1° livello Dardo Incantato (5 dardi).
-Occhio del Mago - Questo occhio assorbe una manifestazione di danni da fuoco elettricita' freddo o acido. L'occhio puo' anche essere speso come l'incantesimo del mago di 3° livello Fulmine (4d8 danni).
+Occhio della Mente - Questa sfera protegge l'incantatore dagli attacchi mentali come fascino emozione e paura. L'occhio puo' essere speso come l'incantesimo del mago di 1' livello Charme.
+Occhio della Spada - Questo occhio devia il primo attacco fisico dannoso che colpisce l'incantatore. L'occhio puo' essere speso come l'incantesimo del mago di 1' livello Dardo Incantato (5 dardi).
+Occhio del Mago - Questo occhio assorbe una manifestazione di danni da fuoco elettricita' freddo o acido. L'occhio puo' anche essere speso come l'incantesimo del mago di 3' livello Fulmine (4d8 danni).
 Occhio del Veleno - Questo occhio ferma qualsiasi attacco o effetto che potrebbe avvelenare l'incantatore. L'occhio puo' anche essere usato per avvelenare una creatura infliggendo 30 punti danno in un periodo di 30 secondi.
 Occhio dello Spirito - Questo occhio blocca un attacco magico di morte istantanea (Incantesimo di morte Dito della Morte Parola del Potere: Uccidere Distruggere Viventi Distruzione). Il mago puo' invece scegliere di spendere il potere dell'occhio in modo simile a un Raggio di Indebolimento riducendo la forza di un bersaglio di -10 riducendo la sua possibilita' di colpire e il danno che infligge.
-Occhio della Tempra - Questo occhio blocca un effetto di stordimento sordita' cecita' o silenzio. In alternativa puo' essere speso come incantesimo da mago di 4° livello Grido.
+Occhio della Tempra - Questo occhio blocca un effetto di stordimento sordita' cecita' o silenzio. In alternativa puo' essere speso come incantesimo da mago di 4' livello Grido.
 Occhio di Pietra - Questo occhio protegge l'incantatore da un singolo attacco di pietrificazione. Puo' anche essere usato come l'incantesimo Blocca Persone.~
 @1042=~Tempesta di Pioggia~
 @1043=~Tempesta di pioggia
@@ -642,7 +642,7 @@ Tempo di Lancio: 5
 Area di Effetto: Raggio di 6 m
 Tiro Salvezza: Volonta' nega
 
-Gli effetti di questo incantesimo sono identici in tutto e per tutto all'incantesimo Confusione di 4° livello. Le vittime vagano come se fossero stordite a volte allontanandosi o talvolta attaccando amici o nemici. Le vittime di livello superiore a 4 hanno diritto a un tiro salvezza sulla Volonta' con CD +2 per resistere all'effetto. L'incantesimo dura per la durata o finche' non viene lanciato con successo un dissolvi magie.~
+Gli effetti di questo incantesimo sono identici in tutto e per tutto all'incantesimo Confusione di 4' livello. Le vittime vagano come se fossero stordite a volte allontanandosi o talvolta attaccando amici o nemici. Le vittime di livello superiore a 4 hanno diritto a un tiro salvezza sulla Volonta' con CD +2 per resistere all'effetto. L'incantesimo dura per la durata o finche' non viene lanciato con successo un dissolvi magie.~
 @1112=~Sudario di Fiamme~
 @1113=~Sudario di fiamme
 (Invocazione)
@@ -698,7 +698,7 @@ Tempo di Lancio: 6
 Area di Effetto: 1 creatura
 Tiro Salvezza: Tempra nega
 
-Questo incantesimo trasforma una creatura vivente in pietra se fallisce il tiro salvezza sulla Tempra. Gli effetti di questo incantesimo possono essere invertiti con l'incantesimo del mago di 6° livello Pietra in Carne. Questo incantesimo non ha effetto sui non morti o sulle creature accecate.~
+Questo incantesimo trasforma una creatura vivente in pietra se fallisce il tiro salvezza sulla Tempra. Gli effetti di questo incantesimo possono essere invertiti con l'incantesimo del mago di 6' livello Pietra in Carne. Questo incantesimo non ha effetto sui non morti o sulle creature accecate.~
 @1122=~Parola del Potere: Silenzio~
 @1123=~Parola del potere: silenzio
 (Evocazione)
@@ -947,7 +947,7 @@ Questo incantesimo conferisce alla creatura colpita un'immunita' alla magia che 
 (Necromanzia)
 Livello: Chr 4 Drd 5 Pal 4 Helm 4
 Raggio di Azione: Contatto
-Durata: 10 minuti per livello
+Durata: 10 turni per livello
 Tempo di Lancio: 5 round
 Area di Effetto: 1 creatura
 Tiro Salvezza: Nessuno
@@ -986,7 +986,7 @@ L'Aura Sacra non puo' essere lanciata da personaggi malvagi.~
 STATISTICHE:
 
 Chi la beve diventa protetto dell'incantesimo Globo Minore dell'Invulnerabilita'
-Peso: 045 Kg~
+Peso: 0,45 Kg~
 @1544=~Simbolo di Dolore~
 @1545=~Simbolo di dolore
 (Tutte)
@@ -1088,9 +1088,9 @@ Area di Effetto: Speciale
 Tiro Salvezza: Nessuno
 
 Questo incantesimo evoca un grande ragno che viene messo sotto il controllo telepatico dell'incantatore. C'e' una probabilita' del 20% di evocare 2 ragni. Il tipo di ragno che appare dipende dal livello dell'incantatore:
-7° : Ragno Gigante
-9° : Ragno Intermittente
-12° +: Ragno Spadaccino~
+7' : Ragno Gigante
+9' : Ragno Intermittente
+12' +: Ragno Spadaccino~
 @1563=~Evoca Vermeiena~
 @1564=~Evoca vermeiena
 (Evocazione)
@@ -1211,7 +1211,7 @@ Tempo di Lancio: 3
 Area di Effetto: 1 Creatura
 Tiro Salvezza: Riflessi dimezza
 
-Questo incantesimo consente all'incantatore di scagliare frecce infuocate contro i suoi nemici. Ogni dardo infligge 4-24 punti di danno da fuoco. Se la creatura supera un tiro salvezza sui Riflessi viene inflitta solo la meta' del danno da fuoco. L'incantatore puo' lanciare un dardo ogni quattro livelli di esperienza (due dardi all'8° livello tre al 12° livello ecc.). Flame Arrow ignora la resistenza agli incantesimi.~
+Questo incantesimo consente all'incantatore di scagliare frecce infuocate contro i suoi nemici. Ogni dardo infligge 4-24 punti di danno da fuoco. Se la creatura supera un tiro salvezza sui Riflessi viene inflitta solo la meta' del danno da fuoco. L'incantatore puo' lanciare un dardo ogni quattro livelli di esperienza (due dardi all'8' livello tre al 12' livello ecc.). Flame Arrow ignora la resistenza agli incantesimi.~
 @1631=~Barriera Elementale Minore~
 @1632=~Barriera elementale minore
 (Abiurazione)
@@ -1255,7 +1255,7 @@ Tempo di Lancio: 4
 Area di Effetto: Speciale
 Tiro Salvezza: Riflessi dimezza
 
-Questo incantesimo evoca una sfera di acido smeraldino splendente che l'incantatore puo' dirigere per colpire qualsiasi bersaglio nel raggio d'azione. Quando raggiunge il bersaglio la sfera esplode e inonda la vittima di un potente acido. La vittima subisce 1d4 danni da acido per livello dell'incantatore fino a un massimo di 12d4 danni (Riflessi dimezza). Dopo il danno iniziale la vittima deve effettuare un tiro salvezza sui Riflessi ogni round che ridurra' il danno per quel round della meta' e fermera' anche qualsiasi ulteriore danno da acido. Se non ha successo la vittima continua a subire danni da acido nei round successivi subendo due dadi di danno in meno ogni round. Ad esempio un mago di 8° livello infligge 8d4 danni con questo incantesimo al primo round 6d4 al secondo round 4d4 al terzo round 2d4 al quarto round e l'incantesimo termina al quinto round. Ad ogni round la vittima ha diritto a un tiro salvezza sui Riflessi per evitare ulteriori danni nei round rimanenti.
+Questo incantesimo evoca una sfera di acido smeraldino splendente che l'incantatore puo' dirigere per colpire qualsiasi bersaglio nel raggio d'azione. Quando raggiunge il bersaglio la sfera esplode e inonda la vittima di un potente acido. La vittima subisce 1d4 danni da acido per livello dell'incantatore fino a un massimo di 12d4 danni (Riflessi dimezza). Dopo il danno iniziale la vittima deve effettuare un tiro salvezza sui Riflessi ogni round che ridurra' il danno per quel round della meta' e fermera' anche qualsiasi ulteriore danno da acido. Se non ha successo la vittima continua a subire danni da acido nei round successivi subendo due dadi di danno in meno ogni round. Ad esempio un mago di 8' livello infligge 8d4 danni con questo incantesimo al primo round 6d4 al secondo round 4d4 al terzo round 2d4 al quarto round e l'incantesimo termina al quinto round. Ad ogni round la vittima ha diritto a un tiro salvezza sui Riflessi per evitare ulteriori danni nei round rimanenti.
 La sfera al vetriolo spruzza anche acido in un raggio di 15 metri attorno al bersaglio primario. Qualsiasi creatura all'interno del raggio dello spruzzo deve effettuare un tiro salvezza sui Riflessi o subire un colpo da spruzzo che infligge 1d4 danni ogni cinque livelli dell'incantatore. I colpi da spruzzo non causano danni continui.
 Sfera al Vetriolo supera la resistenza agli incantesimi.~
 @1639=~Giusta Ira del Fedele~
@@ -1290,7 +1290,7 @@ Tempo di Lancio: 4
 Area di Effetto: Incantatore
 Tiro Salvezza: Nessuno
 
-Questo incantesimo crea una sfera magica immobile e debolmente scintillante attorno all'incantatore che impedisce a qualsiasi effetto di incantesimo di 1° 2° o 3° livello di influenzare l'incantatore. Cio' include abilita' innate ed effetti derivanti dai dispositivi. Tuttavia qualsiasi tipo di incantesimo puo' essere lanciato fuori dalla sfera magica senza penalita' e gli incantesimi strettamente difensivi del mago che hanno un impatto solo su chi l'ha lanciato come Immagini Illusorie possono comunque essere lanciati (gli incantesimi non difensivi e quelli che possono essere lanciati su altri personaggi come Armatura della Morte e Protezione dal Male verranno bloccati). Il globo puo' essere abbattuto da un incantesimo Dissolvi Magie riuscito.~
+Questo incantesimo crea una sfera magica immobile e debolmente scintillante attorno all'incantatore che impedisce a qualsiasi effetto di incantesimo di 1' 2' o 3' livello di influenzare l'incantatore. Cio' include abilita' innate ed effetti derivanti dai dispositivi. Tuttavia qualsiasi tipo di incantesimo puo' essere lanciato fuori dalla sfera magica senza penalita' e gli incantesimi strettamente difensivi del mago che hanno un impatto solo su chi l'ha lanciato come Immagini Illusorie possono comunque essere lanciati (gli incantesimi non difensivi e quelli che possono essere lanciati su altri personaggi come Armatura della Morte e Protezione dal Male verranno bloccati). Il globo puo' essere abbattuto da un incantesimo Dissolvi Magie riuscito.~
 @1655=~Globo d'Invulnerabilita'~
 @1656=~Globo d'Invulnerabilita'
 (Abiurazione)
@@ -1301,7 +1301,7 @@ Tempo di Lancio: 6
 Area di Effetto: Incantatore
 Tiro Salvezza: Nessuno
 
-Questo incantesimo e' simile all'incantesimo arcano di 4° livello Globo Minore dell'Invulnerabilita' tranne per il fatto che protegge l'incantatore anche dagli incantesimi di 4° e 5° livello.~
+Questo incantesimo e' simile all'incantesimo arcano di 4' livello Globo Minore dell'Invulnerabilita' tranne per il fatto che protegge l'incantatore anche dagli incantesimi di 4' e 5' livello.~
 @1657=~Evoca Animali~
 @1658=~Evoca animali
 (Evocazione)
@@ -1334,7 +1334,7 @@ Tempo di Lancio: 1
 Area di Effetto: 1 creatura
 Tiro Salvezza: Volonta' Nega
 
-Un incantesimo Spauracchio consente al mago di sfruttare le paure naturali per far si' che la creatura bersaglio percepisca l'incantatore come qualcuno o qualcosa di ostile che poi sembra avanzare verso di lei in modo minaccioso. Se la creatura non supera un tiro salvezza sulla Volonta' va nel panico. La CD ottiene +1 ogni due livelli di esperienza dell'incantatore fino a un massimo di +6 al 12° livello. Sebbene l'incantatore non insegua effettivamente la creatura in fuga lo fa un fantasma della sua stessa mente. Non ha effetto sui non morti.~
+Un incantesimo Spauracchio consente al mago di sfruttare le paure naturali per far si' che la creatura bersaglio percepisca l'incantatore come qualcuno o qualcosa di ostile che poi sembra avanzare verso di lei in modo minaccioso. Se la creatura non supera un tiro salvezza sulla Volonta' va nel panico. La CD ottiene +1 ogni due livelli di esperienza dell'incantatore fino a un massimo di +6 al 12' livello. Sebbene l'incantatore non insegua effettivamente la creatura in fuga lo fa un fantasma della sua stessa mente. Non ha effetto sui non morti.~
 @1663=~Protezione dall'Energia Magica~
 @1664=~Protezione dall'energia magica
 (Abiurazione)
@@ -1528,7 +1528,7 @@ Tempo di Lancio: 0
 Area di Effetto: Raggio di 3 metri
 Tiro Salvezza: Nessuno
 
-Questo incantesimo acceca le creature nemiche all'interno dell'area d'effetto. La durata della cecita' dipende dai Dadi Vita della creatura. Le creature con 9 o meno Dadi Vita vengono accecate permanentemente quelle con piu' di 9 DV ma inferiori a 20 vengono accecate per 1d4+1 minuti mentre quelle con 20 o piu' Dadi Vita vengono accecate per 1d4+1 round. Questo incantesimo non ha effetto sulle creature sorde.~
+Questo incantesimo acceca le creature nemiche all'interno dell'area d'effetto. La durata della cecita' dipende dai Dadi Vita della creatura. Le creature con 9 o meno Dadi Vita vengono accecate permanentemente quelle con piu' di 9 DV ma inferiori a 20 vengono accecate per 1d4+1 turni mentre quelle con 20 o piu' Dadi Vita vengono accecate per 1d4+1 round. Questo incantesimo non ha effetto sulle creature sorde.~
 @1698=~Accecare~
 @1699=~Accecare
 (Illusione)
@@ -2117,7 +2117,7 @@ Tempo di Lancio: 5 round
 Area di Effetto: Speciale
 Tiro Salvezza: Riflessi dimezza
 
-Questo incantesimo crea un seme esplosivo ogni cinque livelli (2 al 10° livello 3 al 15° livello ecc...) che puo' essere lanciato dall'incantatore. Quando vengono lanciati i semi esplodono infliggendo 4d6 danni da fuoco a tutto cio' che si trova in un raggio di 45 metri. I Semi di Fuoco usano la competenza Armi Semplici Da Lancio e ottengono bonus ai danni basati su Forza competenza oggetti incantesimi e altre fonti. Le creature possono effettuare un tiro salvezza sui Riflessi per dimezzare i danni. La CD del tiro salvezza sui Riflessi e' 16 +i bonus di Saggezza e Incantesimo Focalizzato.~
+Questo incantesimo crea un seme esplosivo ogni cinque livelli (2 al 10' livello 3 al 15' livello ecc...) che puo' essere lanciato dall'incantatore. Quando vengono lanciati i semi esplodono infliggendo 4d6 danni da fuoco a tutto cio' che si trova in un raggio di 45 metri. I Semi di Fuoco usano la competenza Armi Semplici Da Lancio e ottengono bonus ai danni basati su Forza competenza oggetti incantesimi e altre fonti. Le creature possono effettuare un tiro salvezza sui Riflessi per dimezzare i danni. La CD del tiro salvezza sui Riflessi e' 16 +i bonus di Saggezza e Incantesimo Focalizzato.~
 @1879=~Ragnatela~
 @1880=~Ragnatela
 (Evocazione)
@@ -2161,7 +2161,7 @@ Tempo di Lancio: 1 round
 Area di Effetto: Incantatore
 Tiro Salvezza: Nessuno
 
-Questo incantesimo fornisce all'incantatore una riduzione del danno di 10/- ai danni contundenti perforanti e taglienti. Questo bonus di resistenza si applica solo ad un numero di attacchi pari a 1 attacco ogni 2 livelli dell'incantatore fino a un massimo di 8 dopodiche' l'incantesimo si dissipa. Questo incantesimo non e' cumulativo con se stesso o con magie simili (come l'incantesimo da mago di 4° livello Pelle di Pietra).~
+Questo incantesimo fornisce all'incantatore una riduzione del danno di 10/- ai danni contundenti perforanti e taglienti. Questo bonus di resistenza si applica solo ad un numero di attacchi pari a 1 attacco ogni 2 livelli dell'incantatore fino a un massimo di 8 dopodiche' l'incantesimo si dissipa. Questo incantesimo non e' cumulativo con se stesso o con magie simili (come l'incantesimo da mago di 4' livello Pelle di Pietra).~
 @1887=~Raggio di Indebolimento~
 @1888=~Raggio di indebolimento
 (Necromanzia)
@@ -2183,7 +2183,7 @@ Tempo di Lancio: 4
 Area di Effetto: Speciale
 Tiro Salvezza: Riflessi dimezza
 
-Questo incantesimo evoca una sfera di acido smeraldino splendente che l'incantatore puo' dirigere per colpire qualsiasi bersaglio nel raggio d'azione. Quando raggiunge il bersaglio la sfera esplode e inonda la vittima di un potente acido. La vittima subisce 1d4 danni da acido per livello dell'incantatore fino a un massimo di 12d4 danni (Riflessi dimezza). Dopo il danno iniziale la vittima deve effettuare un tiro salvezza sui Riflessi ogni round che ridurra' il danno per quel round della meta' e fermera' anche qualsiasi ulteriore danno da acido. Se non ha successo la vittima continua a subire danni da acido nei round successivi subendo due dadi di danno in meno ogni round. Ad esempio un mago di 8° livello infligge 8d4 danni con questo incantesimo al primo round 6d4 al secondo round 4d4 al terzo round 2d4 al quarto round e l'incantesimo termina al quinto round. Ad ogni round la vittima ha diritto a un tiro salvezza sui Riflessi per evitare ulteriori danni nei round rimanenti. La sfera al vetriolo spruzza inoltre acido in un raggio di 15 metri attorno al bersaglio primario. Qualsiasi creatura all'interno del raggio dello spruzzo deve effettuare un tiro salvezza sui Riflessi o subire un colpo da schianto che infligge 1d4 danni ogni cinque livelli dell'incantatore. Gli spruzzi non causano danni continui.~
+Questo incantesimo evoca una sfera di acido smeraldino splendente che l'incantatore puo' dirigere per colpire qualsiasi bersaglio nel raggio d'azione. Quando raggiunge il bersaglio la sfera esplode e inonda la vittima di un potente acido. La vittima subisce 1d4 danni da acido per livello dell'incantatore fino a un massimo di 12d4 danni (Riflessi dimezza). Dopo il danno iniziale la vittima deve effettuare un tiro salvezza sui Riflessi ogni round che ridurra' il danno per quel round della meta' e fermera' anche qualsiasi ulteriore danno da acido. Se non ha successo la vittima continua a subire danni da acido nei round successivi subendo due dadi di danno in meno ogni round. Ad esempio un mago di 8' livello infligge 8d4 danni con questo incantesimo al primo round 6d4 al secondo round 4d4 al terzo round 2d4 al quarto round e l'incantesimo termina al quinto round. Ad ogni round la vittima ha diritto a un tiro salvezza sui Riflessi per evitare ulteriori danni nei round rimanenti. La sfera al vetriolo spruzza inoltre acido in un raggio di 15 metri attorno al bersaglio primario. Qualsiasi creatura all'interno del raggio dello spruzzo deve effettuare un tiro salvezza sui Riflessi o subire un colpo da schianto che infligge 1d4 danni ogni cinque livelli dell'incantatore. Gli spruzzi non causano danni continui.~
 @1891=~Circuito Elettrico di Gedlee~
 @1892=~Circuito elettrico di Gedlee
 (Invocazione)
@@ -2669,14 +2669,14 @@ Questa capacita' puo' essere utilizzata come azione gratuita.~
 @30187=~E lo avrai.~
 @30188=~Ricco diventerai!~
 @30189=~...~
-@30190=~...di 1° livello denominato...~
-@30191=~...di 2° livello denominato...~
-@30192=~...di 3° livello denominato...~
-@30193=~...di 4° livello denominato...~
-@30194=~...di 5° livello denominato...~
-@30195=~...di 6° livello denominato...~
-@30196=~...di 7° livello denominato...~
-@30197=~...di 8° livello denominato...~
+@30190=~...di 1' livello denominato...~
+@30191=~...di 2' livello denominato...~
+@30192=~...di 3' livello denominato...~
+@30193=~...di 4' livello denominato...~
+@30194=~...di 5' livello denominato...~
+@30195=~...di 6' livello denominato...~
+@30196=~...di 7' livello denominato...~
+@30197=~...di 8' livello denominato...~
 @30198=~... Guardiano della Morte.~
 @30199=~... Unto.~
 @30200=~... Identifica Creatura.~
@@ -2955,7 +2955,7 @@ Tempo di Lancio: 5
 Area di Effetto: 1 creatura
 Tiro Salvezza: Nessuno
 
-Pelle di corteccia fa si' che la pelle di una creatura diventi dura come la corteccia garantendo un bonus generico alla CA +3 (+4 al 6° livello e +5 al 12° livello) per la durata dell'incantesimo.~
+Pelle di corteccia fa si' che la pelle di una creatura diventi dura come la corteccia garantendo un bonus generico alla CA +3 (+4 al 6' livello e +5 al 12' livello) per la durata dell'incantesimo.~
 @31212=~Rallenta Veleno~
 @32212=~Rallenta Veleno
 (Evocazione)
@@ -2978,8 +2978,8 @@ Tempo di Lancio: 5
 Area di Effetto: Incantatore
 Tiro Salvezza: Nessuno
 
-L'incantatore invoca il proprio dio affinche' gli conceda il potere per un breve periodo. La Forza la Destrezza e la Costituzione dell'incantatore aumentano di 1 punto ogni 3 livelli dell'incantatore. Un incantatore di terzo livello vedrebbe le sue abilita' aumentate di 1 mentre un incantatore di 12° livello vedrebbe le sue abilita' aumentate di 4.
-Invocare la Sacra Potenza e' particolarmente efficace se lanciato come incantesimo da paladino. I paladini lanciano questo incantesimo al loro pieno livello dell'incantatore piu' 6 (quindi un paladino di 9° livello vedrebbe le sue abilita' aumentate di 5).~
+L'incantatore invoca il proprio dio affinche' gli conceda il potere per un breve periodo. La Forza la Destrezza e la Costituzione dell'incantatore aumentano di 1 punto ogni 3 livelli dell'incantatore. Un incantatore di terzo livello vedrebbe le sue abilita' aumentate di 1 mentre un incantatore di 12' livello vedrebbe le sue abilita' aumentate di 4.
+Invocare la Sacra Potenza e' particolarmente efficace se lanciato come incantesimo da paladino. I paladini lanciano questo incantesimo al loro pieno livello dell'incantatore piu' 6 (quindi un paladino di 9' livello vedrebbe le sue abilita' aumentate di 5).~
 @31226=~Moti Lunari~
 @32226=~Moti Lunari
 (Evocazione)
@@ -3298,7 +3298,7 @@ Tempo di Lancio: 1
 Area di Effetto: 1 creatura
 Tiro Salvezza: Volonta' nega
 
-Questo incantesimo influenza ogni singola persona su cui viene lanciato. Il termine persona include qualsiasi essere umano bipede semiumano o umanoide di taglia umana o inferiore come brownie driadi nani elfi gnoll gnomi goblin mezzelfi halfling mezzorchi hobgoblin umani coboldi  lucertoloidi nixie orchi folletti folletti trogloditi e altri. Pertanto un guerriero di 10° livello potrebbe essere affascinato ma un orco no. La persona effettua un tiro salvezza sulla Volonta' per evitare l'effetto. Se il destinatario dell'incantesimo fallisce il suo tiro salvezza considera l'incantatore come un amico fidato e un alleato da ascoltare e proteggere. L'incantatore puo' dargli degli ordini e l'individuo affascinato li eseguira' il piu' rapidamente possibile.
+Questo incantesimo influenza ogni singola persona su cui viene lanciato. Il termine persona include qualsiasi essere umano bipede semiumano o umanoide di taglia umana o inferiore come brownie driadi nani elfi gnoll gnomi goblin mezzelfi halfling mezzorchi hobgoblin umani coboldi  lucertoloidi nixie orchi folletti folletti trogloditi e altri. Pertanto un guerriero di 10' livello potrebbe essere affascinato ma un orco no. La persona effettua un tiro salvezza sulla Volonta' per evitare l'effetto. Se il destinatario dell'incantesimo fallisce il suo tiro salvezza considera l'incantatore come un amico fidato e un alleato da ascoltare e proteggere. L'incantatore puo' dargli degli ordini e l'individuo affascinato li eseguira' il piu' rapidamente possibile.
 Se l'incantatore ferisce o tenta di ferire la persona affascinata con qualche azione palese o se un incantesimo di dissolvi magie viene lanciato con successo sulla persona affascinata l'incantesimo charme viene spezzato. Se due o piu' effetti di charme influenzano simultaneamente una creatura quello piu' recente ha la precedenza. Da notare che il soggetto ha piena memoria degli eventi accaduti mentre era affascinato. Infine non e' possibile far si' che una creatura affascinata lasci l'area in cui e' stata affascinata.~
 @33122=~Pugnale di Ghiaccio~
 @34122=~Pugnale di ghiaccio
@@ -3344,7 +3344,7 @@ Tempo di Lancio: 3
 Area di Effetto: Speciale
 Tiro Salvezza: Volonta' nega
 
-Questo incantesimo mantiene immobili 1-4 umani semiumani o creature umanoidi per un breve periodo. L'incantesimo Blocca Persone colpisce qualsiasi umano bipede semiumano o umanoide di taglia umana o inferiore inclusi nani elfi gnoll gnomi goblin mezzelfi halfling mezzorchi hobgoblin umani lucertoloidi orchi trogloditi  e altri. Pertanto un guerriero di 10° livello potrebbe essere trattenuto mentre un orco no. L'effetto seleziona i nemici piu' vicini al bersaglio e li trattiene. I nemici che effettuano i loro tiri salvezza sulla Volonta' non sono assolutamente influenzati dall'incantesimo. Le creature non morte non possono essere trattenute. Le creature trattenute non possono muoversi o parlare ma rimangono consapevoli degli eventi intorno a loro e possono usare abilita' che non richiedono movimento o parola. Essere trattenuto non impedisce il peggioramento delle condizioni del soggetto a causa di ferite malattie o veleno. Un tiro salvezza sulla Volonta' effettuato con successo annulla qualsiasi effetto.~
+Questo incantesimo mantiene immobili 1-4 umani semiumani o creature umanoidi per un breve periodo. L'incantesimo Blocca Persone colpisce qualsiasi umano bipede semiumano o umanoide di taglia umana o inferiore inclusi nani elfi gnoll gnomi goblin mezzelfi halfling mezzorchi hobgoblin umani lucertoloidi orchi trogloditi  e altri. Pertanto un guerriero di 10' livello potrebbe essere trattenuto mentre un orco no. L'effetto seleziona i nemici piu' vicini al bersaglio e li trattiene. I nemici che effettuano i loro tiri salvezza sulla Volonta' non sono assolutamente influenzati dall'incantesimo. Le creature non morte non possono essere trattenute. Le creature trattenute non possono muoversi o parlare ma rimangono consapevoli degli eventi intorno a loro e possono usare abilita' che non richiedono movimento o parola. Essere trattenuto non impedisce il peggioramento delle condizioni del soggetto a causa di ferite malattie o veleno. Un tiro salvezza sulla Volonta' effettuato con successo annulla qualsiasi effetto.~
 @33312=~Lentezza~
 @34312=~Lentezza
 (Trasmutazione)
@@ -3534,7 +3534,7 @@ Tempo di Lancio: 3
 Area di Effetto: Raggio di 6 m
 Tiro Salvezza: Nessuno
 
-Velocita' di massa conferisce gli effetti dell'incantesimo di 3° livello Velocita' a tutti gli alleati nell'area d'effetto. Questi alleati ottengono +4 CA e un attacco extra per round e si muovono due volte piu' velocemente. Questi effetti non si cumulano con gli incantesimi di 3° livello. La fretta di massa dissolve gli effetti di lentezza.~
+Velocita' di massa conferisce gli effetti dell'incantesimo di 3' livello Velocita' a tutti gli alleati nell'area d'effetto. Questi alleati ottengono +4 CA e un attacco extra per round e si muovono due volte piu' velocemente. Questi effetti non si cumulano con gli incantesimi di 3' livello. La fretta di massa dissolve gli effetti di lentezza.~
 @33627=~Legame Planare: Elementale del Fuoco~
 @34627=~Legame planare: elementale del fuoco
 (Evocazione)
@@ -3622,7 +3622,7 @@ Tempo di Lancio: 1 round
 Area di Effetto: Speciale
 Tiro Salvezza: Nessuno
 
-Piu' potente della variante di 7° livello lanciare questo incantesimo evoca un demone delirante chiamato glabrezu. Questo demone attacchera' i nemici dell'incantatore se l'incantatore e' protetto dal male ma attacchera' il gruppo se l'incantatore perde quella protezione. Solo i maghi disperati o con tendenze suicide usano questo incantesimo.~
+Piu' potente della variante di 7' livello lanciare questo incantesimo evoca un demone delirante chiamato glabrezu. Questo demone attacchera' i nemici dell'incantatore se l'incantatore e' protetto dal male ma attacchera' il gruppo se l'incantatore perde quella protezione. Solo i maghi disperati o con tendenze suicide usano questo incantesimo.~
 @33905=~Portale~
 @34905=~Portale
 (Evocazione)
@@ -3810,7 +3810,7 @@ Tempo di Lancio: 8
 Area di Effetto: Speciale
 Tiro Salvezza: Nessuno
 
-Contingenza Curativa memorizza un incantesimo di guarigione o cura in una creatura che verra' automaticamente lanciato su quella creatura quando ne avra' bisogno. Dopo aver lanciato questo incantesimo l'incantatore deve tentare di lanciare un altro incantesimo di 4° livello o inferiore su una creatura che puo' vedere. Invece di essere lanciato l'incantesimo viene immagazzinato nella creatura per 8 ore (spendendo un utilizzo dell'incantesimo).
+Contingenza Curativa memorizza un incantesimo di guarigione o cura in una creatura che verra' automaticamente lanciato su quella creatura quando ne avra' bisogno. Dopo aver lanciato questo incantesimo l'incantatore deve tentare di lanciare un altro incantesimo di 4' livello o inferiore su una creatura che puo' vedere. Invece di essere lanciato l'incantesimo viene immagazzinato nella creatura per 8 ore (spendendo un utilizzo dell'incantesimo).
 Se l'incantesimo memorizzato era un incantesimo di guarigione verra' lanciato automaticamente quando alla creatura rimane meno del 40% dei suoi punti ferita massimi. Se l'incantesimo immagazzinato cura un disturbo di stato (ad esempio Rimuovi paralisi o Neutralizza veleno) verra' lanciato quando la creatura e' affetta da un disturbo che puo' curare.
 L'incantatore puo' lanciare questo incantesimo piu' volte su creature diverse ma una singola creatura non puo' avere piu' di un incantesimo immagazzinato contemporaneamente.
 E' possibile immagazzinare i seguenti incantesimi: Cura Ferite Leggere Scaccia Paura Rallenta Veleno Cura ferite moderate Spezza incantesimo Rimuovi Paralisi Cura malattia Esaltazione Cura Ferite Gravi Neutralizza Veleno Ristorare e Cura Ferite Critiche.~
@@ -3961,7 +3961,7 @@ Tempo di Lancio: 3
 Area di Effetto: Incantatore
 Tiro Salvezza: Nessuno
 
-Questo incantesimo permette al lanciatore di ricordarsi 2 incantesimi lanciati in precedenza. Se non e' stato ancora lanciato alcun incantesimo non succede nulla. Ricordo Meraviglioso non puo' richiamare incantesimi di 6° livello o superiore.~
+Questo incantesimo permette al lanciatore di ricordarsi 2 incantesimi lanciati in precedenza. Se non e' stato ancora lanciato alcun incantesimo non succede nulla. Ricordo Meraviglioso non puo' richiamare incantesimi di 6' livello o superiore.~
 @35655=~Quadrello della Gloria~
 @36655=~Quadrello della gloria
 (Invocazione)
@@ -3987,7 +3987,7 @@ Tempo di Lancio: 1
 Area di Effetto: Incantatore
 Tiro Salvezza: Nessuno
 
-Questo incantesimo aumenta drasticamente la velocita' di attacco del ranger. Per tutta la durata il ranger attacca il doppio delle volte per round. I bonus di attacco continueranno a diminuire per gli attacchi oltre il 5°.
+Questo incantesimo aumenta drasticamente la velocita' di attacco del ranger. Per tutta la durata il ranger attacca il doppio delle volte per round. I bonus di attacco continueranno a diminuire per gli attacchi oltre il 5'.
 Sebbene i ranger normalmente lancino incantesimi a meta' del loro livello di incantatore Velocita' Suprema verra' lanciato al livello di incantatore effettivo del ranger.~
 @35657=~Punizione Esplosiva~
 @36657=~Punizione esplosiva
@@ -4091,7 +4091,7 @@ Tempo di Lancio: 9
 Area di Effetto: Raggio di 6 m
 Tiro Salvezza: Tempra nega
 
-Danno di Massa rilascia energia negativa distruttiva su tutti i nemici viventi nell'area d'effetto. L'incantatore effettua attacchi di contatto a distanza contro ciascuna di quelle creature; ognuna che viene colpito deve effettuare un Tiro Salvezza contro Tempra o perdere tutti i punti ferita tranne uno. La CD e' la stessa dell'incantesimo Danno di 6° livello. I non morti alleati nell'area d'effetto vengono invece curati fino alla massima salute come con un incantesimo di Guarigione.~
+Danno di Massa rilascia energia negativa distruttiva su tutti i nemici viventi nell'area d'effetto. L'incantatore effettua attacchi di contatto a distanza contro ciascuna di quelle creature; ognuna che viene colpito deve effettuare un Tiro Salvezza contro Tempra o perdere tutti i punti ferita tranne uno. La CD e' la stessa dell'incantesimo Danno di 6' livello. I non morti alleati nell'area d'effetto vengono invece curati fino alla massima salute come con un incantesimo di Guarigione.~
 @35953=~Eruzione Vulcanica~
 @36953=~Eruzione Vulcanica
 (Invocazione)
@@ -4114,10 +4114,10 @@ Area di Effetto: Raggio di 75 metri
 Tiro Salvezza: Riflessi dimezza
 
 Questo incantesimo evoca una nube temporalesca divina che rilascia torrenti dannosi sulle creature nell'area d'effetto. Ad ogni round la natura della tempesta e' diversa:
-1° round: Tempesta di Fuoco - Infligge 1d6 danni da fuoco per livello (max 20d6) con un tiro salvezza sui Riflessi il danno e' dimezzato.
-2° round: Tempesta Acida - Infligge 3d6 danni da acido per round per 1 round ogni 3 livelli (max 24d6 e 8 round). Un tiro salvezza sui Riflessi dimezza il numero di round.
-3° round: Tempesta di Fulmini - Infligge 12d10 danni da elettricita' con un tiro salvezza sui Riflessi con +4 CD per dimezzare.
-4° round: Tempesta di Ghiaccio - Infligge 4d6 danni contundenti e 4d6 danni da freddo senza tiro salvezza.~
+1' round: Tempesta di Fuoco - Infligge 1d6 danni da fuoco per livello (max 20d6) con un tiro salvezza sui Riflessi il danno e' dimezzato.
+2' round: Tempesta Acida - Infligge 3d6 danni da acido per round per 1 round ogni 3 livelli (max 24d6 e 8 round). Un tiro salvezza sui Riflessi dimezza il numero di round.
+3' round: Tempesta di Fulmini - Infligge 12d10 danni da elettricita' con un tiro salvezza sui Riflessi con +4 CD per dimezzare.
+4' round: Tempesta di Ghiaccio - Infligge 4d6 danni contundenti e 4d6 danni da freddo senza tiro salvezza.~
 @35955=~Resurrezione Contingente~
 @36955=~Resurrezione Contingente
 (Evocazione)
@@ -4472,7 +4472,7 @@ Area di Effetto: Speciale
 Tiro Salvezza: Speciale
 
 Lancia un incantesimo arcano casuale di qualsiasi livello compreso tra 1 e 8  sulla creatura bersaglio. La natura dell'incantesimo dipende dal bersaglio. Se il bersaglio e' un nemico subira' un incantesimo ostile ma se il bersaglio e' un alleato ricevera' un incantesimo benefico. Le restrizioni sul bersaglio vengono rispettate  (un incantesimo che influenza solo l'incantatore non verra' lanciato a meno che il bersaglio non sia l'incantatore).
-Il vantaggio principale di Lancio del Caos e' che l'incantesimo casuale ha maggiori probabilita' di essere superiore al livello 4 che inferiore (poiche' ci sono piu' livelli sopra il 4°). Lo svantaggio e' che l'incantesimo potrebbe non essere utile nella situazione.~
+Il vantaggio principale di Lancio del Caos e' che l'incantesimo casuale ha maggiori probabilita' di essere superiore al livello 4 che inferiore (poiche' ci sono piu' livelli sopra il 4'). Lo svantaggio e' che l'incantesimo potrebbe non essere utile nella situazione.~
 @37551=~Ruba Magie~
 @38551=~Ruba magie
 (Trasmutazione)
@@ -4483,7 +4483,7 @@ Tempo di Lancio: 5
 Area di Effetto: 1 creatura
 Tiro Salvezza: Nessuno
 
-Questo incantesimo ruba gli incantesimi memorizzati dal bersaglio e garantisce i suoi slot incantesimo all'incantatore. L'incantatore effettua un tiro per Svuotare Tasche sommando il suo livello dell'incantatore (e qualsiasi normale bonus per Svuotare Tasche). Per ogni 10 punti del tiro totale il bersaglio perde un incantesimo memorizzato di 5° livello o inferiore e l'incantatore recupera un incantesimo di 4° livello o inferiore (dando priorita' agli incantesimi di livello piu' alto che possono essere persi o recuperati in questo modo) . Non e' previsto alcun tiro salvezza sebbene la resistenza agli incantesimi possa impedire il furto.~
+Questo incantesimo ruba gli incantesimi memorizzati dal bersaglio e garantisce i suoi slot incantesimo all'incantatore. L'incantatore effettua un tiro per Svuotare Tasche sommando il suo livello dell'incantatore (e qualsiasi normale bonus per Svuotare Tasche). Per ogni 10 punti del tiro totale il bersaglio perde un incantesimo memorizzato di 5' livello o inferiore e l'incantatore recupera un incantesimo di 4' livello o inferiore (dando priorita' agli incantesimi di livello piu' alto che possono essere persi o recuperati in questo modo) . Non e' previsto alcun tiro salvezza sebbene la resistenza agli incantesimi possa impedire il furto.~
 @37552=~Forma Fantasma~
 @38552=~Forma fantasma
 (Trasmutazione)
@@ -4560,7 +4560,7 @@ Tempo di Lancio: 10
 Area di Effetto: Speciale
 Tiro Salvezza: Nessuno
 
-Canto Magico permette al bardo di immagazzinare un incantesimo che ha la possibilita' di essere lanciato automaticamente ogni round in cui il bardo canta la sua canzone da bardo. Immediatamente dopo aver lanciato questo incantesimo il bardo dovrebbe tentare di lanciare un altro incantesimo di 1° livello. Invece di essere lanciato questo incantesimo verra' immagazzinato (spendendo un utilizzo dell'incantesimo).
+Canto Magico permette al bardo di immagazzinare un incantesimo che ha la possibilita' di essere lanciato automaticamente ogni round in cui il bardo canta la sua canzone da bardo. Immediatamente dopo aver lanciato questo incantesimo il bardo dovrebbe tentare di lanciare un altro incantesimo di 1' livello. Invece di essere lanciato questo incantesimo verra' immagazzinato (spendendo un utilizzo dell'incantesimo).
 Ad ogni round per la durata se il bardo sta cantando una canzone da bardo c'e' una possibilita' (1% per livello da bardo) che l'incantesimo venga lanciato su ogni creatura influenzata dalla canzone del bardo. Anche gli incantesimi con un raggio d'azione dell'Incantatore possono prendere di mira altre creature in questo modo. L'incantesimo puo' potenzialmente essere attivato piu' volte nel corso di molti round.~
 @37655=~Suono Vacuo~
 @38655=~Suono Vacuo
@@ -4583,7 +4583,7 @@ Tempo di Lancio: 10
 Area di Effetto: Speciale
 Tiro Salvezza: Nessuno
 
-Questo incantesimo consente all'incantatore di immagazzinare un incantesimo in un bastone che lancera' l'incantesimo ogni volta che viene utilizzato per attaccare una creatura. Immediatamente dopo aver lanciato questo incantesimo l'incantatore dovrebbe tentare di lanciare un incantesimo di 1° livello che possa prendere di mira un punto o una creatura diversa dall'incantatore (o uno che dia all'incantatore un'arma per effettuare un attacco di contatto contro una creatura). Invece di essere lanciato questo incantesimo verra' immagazzinato in un Bastone Magico brandito dall'incantatore.
+Questo incantesimo consente all'incantatore di immagazzinare un incantesimo in un bastone che lancera' l'incantesimo ogni volta che viene utilizzato per attaccare una creatura. Immediatamente dopo aver lanciato questo incantesimo l'incantatore dovrebbe tentare di lanciare un incantesimo di 1' livello che possa prendere di mira un punto o una creatura diversa dall'incantatore (o uno che dia all'incantatore un'arma per effettuare un attacco di contatto contro una creatura). Invece di essere lanciato questo incantesimo verra' immagazzinato in un Bastone Magico brandito dall'incantatore.
 Il bastone magico ha un numero di cariche pari al livello dell'incantatore. Ogni volta che l'incantatore attacca con il bastone viene utilizzata una carica per lanciare l'incantesimo immagazzinato sul bersaglio. L'incantesimo immagazzinato viene sempre lanciato con un livello dell'incantatore pari a 10 indipendentemente dal livello effettivo dell'incantatore. Il bastone ha una gittata pari alla gittata dell'incantesimo non infligge danni fisici e colpisce automaticamente (a meno che l'incantesimo immagazzinato non sia uno come Presa Folgorante che richiede un tiro per colpire nel qual caso il bastone richiede un tiro per colpire).~
 @37657=~Congelare gli Inanimati~
 @38657=~Congelare gli Inanimati
@@ -4678,7 +4678,7 @@ Tempo di Lancio: 15
 Area di Effetto: Speciale
 Tiro Salvezza: Nessuno
 
-Sequenziatore di Incantesimi consente all'incantatore di immagazzinare tre incantesimi da rilasciare in seguito. Dopo averlo lanciato l'incantatore deve tentare di lanciare fino a tre incantesimi di 4° livello o inferiore. Invece di essere lanciati quegli incantesimi vengono immagazzinati nel sequenziatore (spendendo un utilizzo di ciascun incantesimo). L'incantatore ottiene quindi l'abilita' innata "Rilascia Sequenziatore di Incantesimi". Usare quell'abilita' lancia immediatamente tutti e tre gli incantesimi sul bersaglio dell'abilita'.
+Sequenziatore di Incantesimi consente all'incantatore di immagazzinare tre incantesimi da rilasciare in seguito. Dopo averlo lanciato l'incantatore deve tentare di lanciare fino a tre incantesimi di 4' livello o inferiore. Invece di essere lanciati quegli incantesimi vengono immagazzinati nel sequenziatore (spendendo un utilizzo di ciascun incantesimo). L'incantatore ottiene quindi l'abilita' innata "Rilascia Sequenziatore di Incantesimi". Usare quell'abilita' lancia immediatamente tutti e tre gli incantesimi sul bersaglio dell'abilita'.
 Gli incantesimi con un raggio di "Incantatore" verranno lanciati sull'incantatore indipendentemente dal bersaglio dell'abilita'. Gli incantesimi con portata limitata falliranno se il bersaglio e' fuori dalla portata dell'incantesimo.~
 @37759=~Simpatia~
 @38759=~Simpatia
@@ -4724,7 +4724,7 @@ Tempo di Lancio: 7
 Area di Effetto: Speciale
 Tiro Salvezza: Riflessi dimezza
 
-Questo incantesimo anima due scheletri che possono essere fatti esplodere a comando per infliggere danni. Quando uno scheletro usa la sua capacita' speciale o lo scheletro subisce danni il suo teschio esplode come una trappola del teschio infliggendo 10d6 danni taglienti a tutte le creature entro 15 piedi (tiro salvezza sui Riflessi dimezza) e lo scheletro viene distrutto. Al 24° livello l'incantesimo anima tre scheletri invece di due. Le trappole per scheletri non possono essere lanciate da personaggi buoni.~
+Questo incantesimo anima due scheletri che possono essere fatti esplodere a comando per infliggere danni. Quando uno scheletro usa la sua capacita' speciale o lo scheletro subisce danni il suo teschio esplode come una trappola del teschio infliggendo 10d6 danni taglienti a tutte le creature entro 15 piedi (tiro salvezza sui Riflessi dimezza) e lo scheletro viene distrutto. Al 24' livello l'incantesimo anima tre scheletri invece di due. Le trappole per scheletri non possono essere lanciate da personaggi buoni.~
 @37763=~Respingi Incantesimo~
 @38763=~Respingi incantesimo
 (Abiurazione)
@@ -4756,7 +4756,7 @@ Tempo di Lancio: 2
 Area di Effetto: 1 Creatura
 Tiro Salvezza: Nessuno
 
-Simile al risucchio di energia di un wight di uno wraith ma molto piu' potente questo incantesimo risucchia piu' livelli da una creatura. Il bersaglio perde un livello ogni tre livelli dell'incantatore fino a un risucchio di energia massimo di 16 livelli per un incantatore di 48° livello. L'effetto e' permanente finche' non viene curato con un incantesimo di Ristorarne. Questo incantesimo non ha effetto sui non morti o sui costrutti.~
+Simile al risucchio di energia di un wight di uno wraith ma molto piu' potente questo incantesimo risucchia piu' livelli da una creatura. Il bersaglio perde un livello ogni tre livelli dell'incantatore fino a un risucchio di energia massimo di 16 livelli per un incantatore di 48' livello. L'effetto e' permanente finche' non viene curato con un incantesimo di Ristorarne. Questo incantesimo non ha effetto sui non morti o sui costrutti.~
 @37853=~Schiavizzare~
 @38853=~Schiavizzare
 (Ammaliamento)
@@ -4800,7 +4800,7 @@ Tempo di Lancio: 2
 Area di Effetto: Incantatore
 Tiro Salvezza: Nessuno
 
-Trappola per Incantesimi assorbe gli incantesimi ostili in arrivo e garantisce i relativi slot incantesimo all'incantatore. Mentre e' attiva se l'incantatore viene colpito da un incantesimo dannoso quell'incantesimo viene annullato e l'incantatore riacquista un incantesimo lanciato in precedenza di livello inferiore o uguale a quello dell'incantesimo assorbito. Anche gli incantesimi recuperati in questo modo devono essere di 7° livello o inferiore anche se l'incantesimo assorbito era di livello superiore al 7°. Trappola per Incantesimi puo' assorbire un totale di 18 livelli di incantesimo prima di terminare anche se finche' rimane almeno un livello di incantesimo l'incantesimo successivo verra' assorbito. Non assorbe gli incantesimi lanciati dagli alleati. Non assorbe nemmeno Dissolvi Magie sebbene non possa essere dissolto da solo.~
+Trappola per Incantesimi assorbe gli incantesimi ostili in arrivo e garantisce i relativi slot incantesimo all'incantatore. Mentre e' attiva se l'incantatore viene colpito da un incantesimo dannoso quell'incantesimo viene annullato e l'incantatore riacquista un incantesimo lanciato in precedenza di livello inferiore o uguale a quello dell'incantesimo assorbito. Anche gli incantesimi recuperati in questo modo devono essere di 7' livello o inferiore anche se l'incantesimo assorbito era di livello superiore al 7'. Trappola per Incantesimi puo' assorbire un totale di 18 livelli di incantesimo prima di terminare anche se finche' rimane almeno un livello di incantesimo l'incantesimo successivo verra' assorbito. Non assorbe gli incantesimi lanciati dagli alleati. Non assorbe nemmeno Dissolvi Magie sebbene non possa essere dissolto da solo.~
 @37857=~Legame Arcano~
 @38857=~Legame arcano
 (Ammaliamento)
@@ -4977,7 +4977,7 @@ Tempo di Lancio: 3
 Area di Effetto: 1 creatura
 Tiro Salvezza: Nessuno
 
-Questo incantesimo accelera drasticamente il movimento e la velocita' di attacco del bersaglio. Per la durata il bersaglio ottiene +8 CA si muove a velocita' quadruplicata e attacca il doppio delle volte per round. I Attacco Base continueranno a diminuire per gli attacchi oltre il 5°. Questo effetto non si cumula con la Rapidita'.~
+Questo incantesimo accelera drasticamente il movimento e la velocita' di attacco del bersaglio. Per la durata il bersaglio ottiene +8 CA si muove a velocita' quadruplicata e attacca il doppio delle volte per round. I Attacco Base continueranno a diminuire per gli attacchi oltre il 5'. Questo effetto non si cumula con la Rapidita'.~
 @37959=~Fermare il Tempo~
 @38959=~Fermare il Tempo
 (Trasmutazione)
@@ -5010,7 +5010,7 @@ Tempo di Lancio: 15
 Area di Effetto: Speciale
 Tiro Salvezza: Nessuno
 
-Il Sequenziatore Eclettico puo' essere lanciato solo da maghi generalisti. Permette all'incantatore di immagazzinare otto incantesimi da rilasciare in seguito. Dopo averlo lanciato l'incantatore deve tentare di lanciare fino a otto incantesimi di 7° livello o inferiore ognuno dei quali deve essere di una scuola diversa. Invece di essere lanciati quegli incantesimi vengono immagazzinati nel sequenziatore (spendendo un utilizzo di ciascun incantesimo). L'incantatore ottiene quindi l'abilita' innata "Rilascia il Sequenziatore Eclettico". Usare quell'abilita' lancia immediatamente tutti gli otto incantesimi sul bersaglio dell'abilita'.
+Il Sequenziatore Eclettico puo' essere lanciato solo da maghi generalisti. Permette all'incantatore di immagazzinare otto incantesimi da rilasciare in seguito. Dopo averlo lanciato l'incantatore deve tentare di lanciare fino a otto incantesimi di 7' livello o inferiore ognuno dei quali deve essere di una scuola diversa. Invece di essere lanciati quegli incantesimi vengono immagazzinati nel sequenziatore (spendendo un utilizzo di ciascun incantesimo). L'incantatore ottiene quindi l'abilita' innata "Rilascia il Sequenziatore Eclettico". Usare quell'abilita' lancia immediatamente tutti gli otto incantesimi sul bersaglio dell'abilita'.
 Gli incantesimi con un raggio di "Incantatore" verranno lanciati sull'incantatore indipendentemente dal bersaglio dell'abilita'. Gli incantesimi con portata limitata falliranno se il bersaglio e' fuori dalla portata dell'incantesimo.~
 @37962=~Desiderio~
 @38962=~Desiderio
@@ -5023,7 +5023,7 @@ Area di Effetto: Speciale
 Tiro Salvezza: Speciale
 
 Desiderio e' tra gli incantesimi piu' potenti che un mago o uno stregone possano lanciare. Semplicemente parlando ad alta voce puo' alterare la realta' per adattarla a se' stesso. Anche un incantesimo Desiderio tuttavia ha i suoi limiti.
-Nel lanciare Desiderio l'incantatore ha due scelte iniziali. La prima scelta e' duplicare un incantesimo da mago di 8° livello o inferiore (incluso uno della scuola opposta di un mago specializzato) che prendera' di mira l'incantatore. L'altra scelta e' esprimere un desiderio piu' potente e irripetibile. Ci sono diverse scelte per un desiderio una tantum:
+Nel lanciare Desiderio l'incantatore ha due scelte iniziali. La prima scelta e' duplicare un incantesimo da mago di 8' livello o inferiore (incluso uno della scuola opposta di un mago specializzato) che prendera' di mira l'incantatore. L'altra scelta e' esprimere un desiderio piu' potente e irripetibile. Ci sono diverse scelte per un desiderio una tantum:
 * Aumenta permanentemente uno dei punteggi di caratteristica dell'incantatore di 1 (c'e' un desiderio una tantum separato per ogni punteggio di caratteristica).
 *Crea un potente oggetto magico.
 * Crea 100.000 monete d'oro.

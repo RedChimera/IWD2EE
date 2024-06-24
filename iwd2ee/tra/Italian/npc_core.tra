@@ -21,7 +21,7 @@ Resistenza: 25/- Resistenza al freddo
 Resistenza: 5/- Resistenza all'acido all'elettricita' e al fuoco
 Resistenza allo Scacciare: conta come 4 livelli piu' alti ai fini di resistere a Scacciare Non Morti
 Immunita' a fatica veleno malattia ferite sanguinanti stordimento ragnatela intralciare intossicazione nausea tocco vampirico risucchio di energia Pelle di Pietra Pelli di Ferro Pelle Coriacea indebolimento Sfera Elastica di Otiluke Guscio di Tartaruga Orrido Avvizzimento magia della morte pietrificazione colpi critici e la maggior parte delle pozioni.
-Peso: 0~
+Peso: 0 Kg~
 @4804=~Anello Nuziale di Veira~
 @4805=~Questo anello e' l'unica parte di Veira che rimane veramente tangibile. Legato nella morte cosi' come nella vita l'anello non lascia mai il dito di Veira.
 Veira rimane corporea solo in parte finche' resta aggrappata al Piano Materiale. Puo' interagire con il mondo che la circonda ma la sua forma parzialmente eterea non ha bisogno di dormire e non puo' ne' godere del piacere del cibo o delle bevande ne' soffrire il dolore di malattie e ferite. Se la sua forma e' danneggiata puo' rigenerarsi lentamente nel tempo. Se la sua forma viene distrutta puo' essere ripristinata con un'esplosione sufficiente di energia positiva come un incantesimo Rianimare Morti.
@@ -36,7 +36,7 @@ Resistenza: 50/- Resistenza al freddo
 Resistenza: 10/- Resistenza all'acido all'elettricita' e al fuoco
 Resistenza allo Scacciare: conta come 4 livelli piu' alti ai fini di resistere a Scacciare Non Morti
 Immunita' a fatica veleno malattia ferite sanguinanti stordimento ragnatela intralciare intossicazione nausea tocco vampirico risucchio di energia Pelle di Pietra Pelli di Ferro Pelle Coriacea indebolimento Sfera Elastica di Otiluke Guscio di Tartaruga Orrido Avvizzimento magia della morte pietrificazione colpi critici e la maggior parte delle pozioni.
-Peso: 0~
+Peso: 0 Kg~
 @4806=~Artiglio di Vrek~
 @4807=~Vrek preferisce usare i suoi artigli seghettati in combattimento trovando goffe nella sua presa le armi convenzionali progettate per le mani umanoidi. Vrek puo' comunque usare uno scudo o un'arma nella mano secondaria ma usa gli artigli come attacco principale. Gli artigli di Vrek colpiscono come armi +1 ai fini di superare la riduzione del danno.
 
@@ -101,7 +101,7 @@ Incantamento: +1
 Tipo di Danno: Da Lancio (perforante)
 Speciale:
 Ritornante: Ritorna in mano a chi ha lanciato l'arma
-Peso: 135 Kg
+Peso: 1,35 Kg
 Talenti Richiesti: Armi da Guerra Ascia
 Tipo: A una mano~
 @4816=~Ascia da Lancio di Vunarg~
@@ -118,7 +118,7 @@ Incantamento: +5
 Tipo di Danno: Da Lancio (perforante)
 Speciale:
 Ritornante: Ritorna in mano a chi ha lanciato l'arma
-Peso: 135 Kg
+Peso: 1,35 Kg
 Talenti Richiesti: Armi da Guerra Ascia
 Tipo: A una mano~
 @4818=~Artiglio di Xhaan~
@@ -167,7 +167,7 @@ Riduzione del danno: 10/bene o argento
 Rigenerazione: rigenera 5 punti ferita per round
 Immunita' alle malattie  effetti di veleno fascino e paura
 Puo' vedere perfettamente anche nell'oscurita' magica
-Peso: 0.~
+Peso: 0 Kg~
 @4824=~Pelle di Abishai~
 @4825=~Essendo un abishai bianco Xhaan e' innatamente resistente agli incantesimi e ai danni elementali. La sua spessa pelle e la sua biologia extraplanare gli garantiscono anche l'immunita' al veleno e alle malattie e la capacita' di rigenerarsi dalle ferite. Come baatezu non prova paura e gli incantesimi minori sono inutili nella sua mente aliena.
 
@@ -184,7 +184,7 @@ Riduzione del danno: 10/bene o argento
 Rigenerazione: rigenera 2 punti ferita per round
 Immunita' alle malattie  effetti di veleno fascino e paura
 Puo' vedere perfettamente anche nell'oscurita' magica
-Peso: 0.~
+Peso: 0 Kg~
 @4826=~Veleno di Aocha~
 @4827=~Veleno di Aocha~
 @4828=~Veleno di Aocha~
@@ -235,7 +235,7 @@ Riduzione del danno: 10/bene o argento
 Rigenerazione: rigenera 5 punti ferita per round
 Immunita' alle malattie  effetti di veleno fascino e paura
 Puo' vedere perfettamente anche nell'oscurita' magica
-Peso: 0.~
+Peso: 0 Kg~
 @4836=~Pelle di Cornugon~
 @4837=~In quanto cornugon Xhaan e' innatamente resistente agli incantesimi e ai danni elementali. La sua spessa pelle e la sua biologia extraplanare gli garantiscono anche l'immunita' al veleno e alle malattie e la capacita' di rigenerarsi dalle ferite. Come baatezu non prova paura e gli incantesimi minori sono inutili nella sua mente aliena.
 
@@ -252,7 +252,7 @@ Riduzione del danno: 15/bene o argento
 Rigenerazione: rigenera 10 punti ferita per round
 Immunita' alle malattie  effetti di veleno fascino e paura
 Puo' vedere perfettamente anche nell'oscurita' magica
-Peso: 0.~
+Peso: 0 Kg~
 @4860=~Evoca Aocha~
 @4861=~Evoca Aocha
 Per 10 round per livello Zack Boosenburry puo' chiamare in battaglia la sua fedele cavalcatura Aocha. Aocha e' un grande ragno peloso ed e' molto piu' dolce e coccoloso di quanto ci si potrebbe aspettare (o desiderare) ma in combattimento non e' meno pericolosa dei suoi parenti selvaggi. E' innatamente immune agli effetti della ragnatela e possiede un potente veleno e correra' volentieri in difesa di Zack nei momenti di pericolo.
@@ -504,14 +504,14 @@ Usando questa abilita' Xhaan si teletrasporta in qualsiasi luogo in vista. Quest
 @40211=~Puoi andare.~
 @40212=~...~
 @40213=~Avremmo dovuto ucciderti quando ti abbiamo incontrato. E' ora di rimediare!~
-@40214=~Mi hai separato per decine di miglia dalla mia tribu' solo per poi abbandonarmi!? Ti faro' a pezzi per questo feccia!~
-@40215=~Aspettare! Sei ancora nella festa. Mi dispiace.~
+@40214=~Mi hai separato per decine di miglia dalla mia tribu' solo per poi abbandonarmi!? Ti faro' a pezzi per questo, feccia!~
+@40215=~Aspetta! Sei ancora nel gruppo. Mi dispiace.~
 @40216=~Vedremo...~
 @40217=~Se la nostra alleanza e' finita allora me ne andro' mortale. Devo ancora vendicarmi e non aspettero' che tu ritorni da me.~
 @40218=~Aspetta ho cambiato idea. La nostra alleanza e' ancora valida.~
-@40219=~Buona partenza.~
+@40219=~Buon viaggio.~
 @40220=~E' stato un errore allearsi con te. Difenditi!~
-@40221=~Peccato che non mi vuoi piu' alla festa. Stavo iniziando a divertirmi qui.~
+@40221=~Peccato che non mi vuoi piu' nel gruppo. Stavo iniziando a divertirmi con voi.~
 @40222=~In realta' puoi restare. Vieni.~
 @40223=~Va bene; potremmo tornare a prenderti piu' tardi.~
 @40224=~Perche' te ne andresti senza di me? Per favore lasciami venire!~
