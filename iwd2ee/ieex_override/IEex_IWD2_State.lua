@@ -1201,7 +1201,7 @@ function IEex_CompareActorAllegiances(actorID1, actorID2)
 	local ea2 = IEex_ReadByte(creatureData2 + 0x24, 0x0)
 	if ((ea1 >= 2 and ea1 <= 30) and (ea2 >= 200)) or ((ea1 >= 200) and (ea2 >= 2 and ea2 <= 30)) then
 		return -1
-	elseif ((ea1 >= 2 and ea1 <= 30) and (ea2 >= 2 and ea2 <= 30)) or ((ea1 >= 200) and (ea2 >= 200)) then
+	elseif ((ea1 >= 2 and ea1 <= 30) and (ea2 >= 2 and ea2 <= 30)) or ((ea1 >= 200) and (ea2 >= 200)) or creatureData1 == creatureData2 then
 		return 1
 	else
 		return 0
@@ -12884,6 +12884,7 @@ special - Determines the lowest spell level that can be restored (1 - 9).
 
 function EXMODMEM(effectData, creatureData)
 	if IEex_CheckForEffectRepeat(effectData, creatureData) then return end
+	IEex_WriteDword(effectData + 0x110, 1)
 	local sourceID = IEex_ReadDword(effectData + 0x10C)
 	local targetID = IEex_GetActorIDShare(creatureData)
 	local modifyRemaining = IEex_ReadDword(effectData + 0x18)
@@ -26219,9 +26220,7 @@ function MEDEFLEC(originatingEffectData, effectData, creatureData)
 --		effectRES = IEex_ReadLString(effectData + 0x6C, 8)
 		effectRES = "IEEX_DAM"
 		previous_attacks_deflected["" .. targetID][effectRES] = IEex_GetGameTick()
-		IEex_DS("aga")
 	elseif bit.band(savingthrow, 0x80000) > 0 and previous_attacks_deflected["" .. targetID]["IEEX_DAM"] == IEex_GetGameTick() and restype == 2 then
-		IEex_DS("ugu")
 		isOnHitEffect = true
 	end
 	if opcode ~= 12 and isOnHitEffect == false then return false end
@@ -31810,6 +31809,61 @@ function IEex_HaveSummonerCast(spellNumber, isInstant)
 ["casterlvl"] = casterlvl,
 ["source_id"] = summonerID
 })
+	end
+end
+
+function IEex_RemoveMemorizedSpellRES(spellRES, BCSObject, casterType)
+	local sourceID = IEex_Lua_ActorID
+	local sourceData = IEex_GetActorShare(sourceID)
+	local checkID = IEex_GetBCSObjectID(IEex_Lua_ActorID, BCSObject)
+	if not IEex_IsSprite(checkID, false) then return false end
+	local modifyRemaining = 1
+	local maxLevel = 9
+	local minLevel = 0
+	local casterTypes = {}
+	if casterType then
+		casterTypes = {casterType}
+	else
+		casterTypes = {1, 2, 3, 4, 5, 6, 7, 8}
+	end
+	local spells = IEex_FetchSpellInfo(checkID, casterTypes)
+	for i = maxLevel, minLevel, -1 do
+		for cType, levelList in pairs(spells) do
+			if #levelList >= i then
+				local levelI = levelList[i]
+				if levelI then
+					local maxCastable = levelI[1]
+					local sorcererCastableCount = levelI[2]
+					local levelISpells = levelI[3]
+					if #levelISpells > 0 then
+						if cType == 1 or cType == 6 then
+							local matchSpellFound = true
+							matchSpellFound = false
+							for i2, spell in ipairs(levelISpells) do
+								if spellRES == spell["resref"] then
+									matchSpellFound = true
+								end
+							end
+							if matchSpellFound then
+								if modifyRemaining > 0 then
+									modifyRemaining = modifyRemaining - 1
+									IEex_AlterSpellInfo(checkID, cType, i, "", 0, -1)
+								end
+							end
+						else
+							for i2, spell in ipairs(levelISpells) do
+								if spellRES == spell["resref"] then
+									if modifyRemaining > 0 then
+										modifyRemaining = modifyRemaining - 1
+										IEex_AlterSpellInfo(checkID, cType, i, spell["resref"], 0, -1)
+									end
+								end
+							end
+						end
+					end
+				end
+			end
+		end
 	end
 end
 

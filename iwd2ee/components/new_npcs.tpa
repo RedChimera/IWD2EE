@@ -661,11 +661,11 @@ COPY_EXISTING ~20EMMA.cre~ ~override~
 	WRITE_LONG kit 0x20000 //Silverstar of Selune
 	WRITE_LONG feats1 0x208
 	PATCH_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~4~ BEGIN
-		WRITE_LONG feats2 0x13F00000
+		thefeats2 = 0x13F00000
 		WRITE_BYTE proficiencysmallblade 2
 	END
 	ELSE BEGIN
-		WRITE_LONG feats2 0x13F00800
+		thefeats2 = 0x13F00800
 		WRITE_BYTE proficiencylargesword 1
 	END
 	WRITE_LONG feats3 0
@@ -676,34 +676,39 @@ COPY_EXISTING ~20EMMA.cre~ ~override~
 	WRITE_BYTE spellfocustransmutation 0
 	LPF	IWD2_REMOVE_CRE_ITEM STR_VAR item=~RT02_M~ END
 	LPF	IWD2_REMOVE_SPELLS_KNOWN STR_VAR class=~cleric~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~cleric~ resource=~SPPR102~ END
 	LPF	IWD2_CRE_SPELL INT_VAR num=3 STR_VAR class=~cleric~ resource=~SPPR107~ END
-	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~cleric~ resource=~SPPR108~ END
 	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~cleric~ resource=~SPPR109~ END
 	LPF	IWD2_CRE_SPELL INT_VAR num=2 STR_VAR class=~cleric~ resource=~SPWI306~ END
-	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~cleric~ resource=~SPPR214~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~cleric~ resource=~SPPR213~ END
 	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~cleric~ resource=~SPPR308~ END
-	LPF	IWD2_CRE_SPELL INT_VAR num=2 STR_VAR class=~cleric~ resource=~SPPR401~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~cleric~ resource=~SPPR311~ END
+	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~cleric~ resource=~SPPR401~ END
 	LPF	IWD2_CRE_SPELL INT_VAR num=1 STR_VAR class=~cleric~ resource=~SPPR304~ END
 	PATCH_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~0~ BEGIN
+		thefeats2|=0x500
+		WRITE_BYTE proficiencyflail 1
+		WRITE_BYTE proficiencyhammer 1
 		LPF IWD2_ADD_CRE_EFFECT INT_VAR opcode=288 target=2 timing=9 parameter1=4 parameter2=231 savingthrow=0x40000 STR_VAR effsource=~FE_9_1~ END
 	END
+	WRITE_LONG feats2 thefeats2
 	PATCH_IF MOD_IS_INSTALLED ~iwd2ee.tp2~ ~2~ BEGIN
-		LPF	IWD2_CRE_SPELL INT_VAR num=1 forcelevel=1 STR_VAR class=~domain~ resource=~SPPR116~ END
+		LPF	IWD2_CRE_SPELL INT_VAR num=0 forcelevel=1 STR_VAR class=~domain~ resource=~SPPR116~ END
 		LPF	IWD2_CRE_SPELL INT_VAR num=1 forcelevel=1 STR_VAR class=~domain~ resource=~SPPR226~ END
-		LPF	IWD2_CRE_SPELL INT_VAR num=1 forcelevel=2 STR_VAR class=~domain~ resource=~SPPR318~ END
+		LPF	IWD2_CRE_SPELL INT_VAR num=0 forcelevel=2 STR_VAR class=~domain~ resource=~SPPR318~ END
 		LPF	IWD2_CRE_SPELL INT_VAR num=1 forcelevel=2 STR_VAR class=~domain~ resource=~SPWI413~ END
 		LPF	IWD2_CRE_SPELL INT_VAR num=1 forcelevel=3 STR_VAR class=~domain~ resource=~SPPR423~ END
-		LPF	IWD2_CRE_SPELL INT_VAR num=1 forcelevel=3 STR_VAR class=~domain~ resource=~SPWI299~ END
+		LPF	IWD2_CRE_SPELL INT_VAR num=0 forcelevel=3 STR_VAR class=~domain~ resource=~SPWI299~ END
 	END
 	ELSE BEGIN
-		LPF	IWD2_CRE_SPELL INT_VAR num=1 forcelevel=1 STR_VAR class=~domain~ resource=~SPPR109~ END
+		LPF	IWD2_CRE_SPELL INT_VAR num=0 forcelevel=1 STR_VAR class=~domain~ resource=~SPPR109~ END
 		LPF	IWD2_CRE_SPELL INT_VAR num=1 forcelevel=1 STR_VAR class=~domain~ resource=~SPPR116~ END
-		LPF	IWD2_CRE_SPELL INT_VAR num=1 forcelevel=2 STR_VAR class=~domain~ resource=~SPPR216~ END
+		LPF	IWD2_CRE_SPELL INT_VAR num=0 forcelevel=2 STR_VAR class=~domain~ resource=~SPPR216~ END
 		LPF	IWD2_CRE_SPELL INT_VAR num=1 forcelevel=2 STR_VAR class=~domain~ resource=~SPPR226~ END
 		LPF	IWD2_CRE_SPELL INT_VAR num=1 forcelevel=3 STR_VAR class=~domain~ resource=~SPPR306~ END
-		LPF	IWD2_CRE_SPELL INT_VAR num=1 forcelevel=3 STR_VAR class=~domain~ resource=~SPPR318~ END
+		LPF	IWD2_CRE_SPELL INT_VAR num=0 forcelevel=3 STR_VAR class=~domain~ resource=~SPPR318~ END
 	END
-	LPF	IWD2_REMOVE_SPELLS_MEMORIZED STR_VAR class=~domain~ END
+//	LPF	IWD2_REMOVE_SPELLS_MEMORIZED STR_VAR class=~domain~ END
 	LPF GIVE_CORRECT_DIVINE_SPELLS END
 	LPF	IWD2_CRE_ABILITY INT_VAR num=1 STR_VAR resource=~SPIN268~ END
 	LPF	IWD2_CRE_ABILITY INT_VAR num=1 STR_VAR resource=~SPIN269~ END
