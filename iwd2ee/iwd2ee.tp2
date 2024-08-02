@@ -81,6 +81,25 @@ LANGUAGE   ~Russian~
            ~iwd2ee/tra/Russian/misc.tra~
            ~iwd2ee/tra/Russian/more_persuasion_options.tra~
            ~iwd2ee/tra/Russian/new_strings_after_release.tra~
+		   
+LANGUAGE   ~French~
+           ~French~
+           ~iwd2ee/tra/French/setup.tra~
+           ~iwd2ee/tra/French/class_revisions.tra~
+           ~iwd2ee/tra/French/loose_alignment.tra~
+           ~iwd2ee/tra/French/spell_revise.tra~
+           ~iwd2ee/tra/French/spell_focus.tra~
+           ~iwd2ee/tra/French/item_revisions.tra~
+           ~iwd2ee/tra/French/creature_rebalancing.tra~
+           ~iwd2ee/tra/French/faster_areas.tra~
+           ~iwd2ee/tra/French/z_concoct_potions.tra~
+		   ~iwd2ee/tra/French/npc_core.tra~
+           ~iwd2ee/tra/French/revised_battle_square.tra~
+           ~iwd2ee/tra/French/lua.tra~
+           ~iwd2ee/tra/French/racial_enemies.tra~
+           ~iwd2ee/tra/French/misc.tra~
+           ~iwd2ee/tra/French/more_persuasion_options.tra~
+           ~iwd2ee/tra/French/new_strings_after_release.tra~
 
 //IWD2EE Core
 BEGIN @0 DESIGNATED 1000 //
