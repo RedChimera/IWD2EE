@@ -77,7 +77,7 @@ Temps d’incantation : 6
 Zone d’effet : 1 créature
 Jet de sauvegarde : Vigueur, 1/2 dégâts
 
-Ce sort contamine la créature touchée en la couvrant d’une moisissure brune. Si la créature infectée échoue à un jet de Vigueur avec +3 DD (Degré de Difficulté), elle subit les dégâts suivants :
+Ce sort contamine la créature touchée en la couvrant d’une moisissure brune. Si la créature infectée échoue à un jet de Vigueur avec +3 au Degré de Difficulté, elle subit les dégâts suivants :
 
 1er round : 4d6 dégâts
 2ème round : 3d6 dégâts
@@ -279,7 +279,7 @@ Temps d’incantation : 3
 Zone d’effet : rayon de 4,5 mètres (15 pieds) 
 Jet de sauvegarde : Volonté annule
 
-Ce sort annule les effets magiques affectant toute créature comprise dans la zone d’effet, qu’il s’agisse des effets des sorts, des potions ou des objets magiques. A noter qu’il n’affecte pas les objets eux-mêmes ; il se contente de neutraliser leur effet. Les créatures ennemies ont droit à un jet de Volonté avec +5 DD (Degré de Difficulté), les alliés étant quant à eux automatiquement affectés.~
+Ce sort annule les effets magiques affectant toute créature comprise dans la zone d’effet, qu’il s’agisse des effets des sorts, des potions ou des objets magiques. A noter qu’il n’affecte pas les objets eux-mêmes ; il se contente de neutraliser leur effet. Les créatures ennemies ont droit à un jet de Volonté avec +5 au Degré de Difficulté, les alliés étant quant à eux automatiquement affectés.~
 @1046 = ~Guérison des maladies~
 @1047 = ~Guérison des maladies 
 (Abjuration)
@@ -362,7 +362,7 @@ Temps d’incantation : 5
 Zone d’effet : 1 créature
 Jet de sauvegarde : Aucun
 
-Ce sort guérit instantanément toutes les blessures et maladies du sujet, ainsi que la cécité et la débilité. Le sujet retrouve tous les points de vie qu’il avait perdus. S’il est utilisé sur une créature mort-vivante, il agira à la place comme un sort de dégâts, réduisant le mort-vivant à 1 point de vie si le lanceur réussit un jet d’attaque de contact et que le mort-vivant échoue à un jet de Vigueur avec +2 DD (Degré de Difficulté). Ce sort ne provoque pas d’attaque d’opportunité lorsqu’il est utilisé pour blesser des morts-vivants hostiles.~
+Ce sort guérit instantanément toutes les blessures et maladies du sujet, ainsi que la cécité et la débilité. Le sujet retrouve tous les points de vie qu’il avait perdus. S’il est utilisé sur une créature mort-vivante, il agira à la place comme un sort de dégâts, réduisant le mort-vivant à 1 point de vie si le lanceur réussit un jet d’attaque de contact et que le mort-vivant échoue à un jet de Vigueur avec +2 au Degré de Difficulté. Ce sort ne provoque pas d’attaque d’opportunité lorsqu’il est utilisé pour blesser des morts-vivants hostiles.~
 @1060 = ~Symbole du désespoir~
 @1061 = ~Symbole du désespoir
 (Divination)
@@ -517,7 +517,7 @@ Temps d’incantation : 3
 Zone d’effet : Spéciale
 Jet de sauvegarde : Réflexes, 1/2 dégâts
 
-En lançant ce sort, le sorcier libère une décharge électrique puissante qui inflige 1d8 points de dégâts par niveau du lanceur de sorts à chaque créature située dans sa zone d’effet (dégâts maximum de 10d8). Un jet de Réflexes réussi avec +4 DD (Degré de Difficulté) réduit ces dégâts de moitié. Lorsque l’éclair rencontre un mur, il se transforme en pluie d’étincelles inoffensive.~
+En lançant ce sort, le sorcier libère une décharge électrique puissante qui inflige 1d8 points de dégâts par niveau du lanceur de sorts à chaque créature située dans sa zone d’effet (dégâts maximum de 10d8). Un jet de Réflexes réussi avec +4 au Degré de Difficulté réduit ces dégâts de moitié. Lorsque l’éclair rencontre un mur, il se transforme en pluie d’étincelles inoffensive.~
 @1086 = ~Toucher vampirique~
 @1087 = ~Toucher vampirique 
 (Nécromancie) 
@@ -638,7 +638,7 @@ Temps d’incantation : 5
 Zone d’effet : 1 créature
 Jet de sauvegarde : Volonté annule
 
-Le sort de domination permet au lanceur de contrôler les actions de toute créature tant que le sort est en vigueur. Ce contrôle est maintenu par un lien télépathique entre le lanceur et la victime. Cette dernière a droit à un jet de Volonté à +2 DD (Degré de Difficulté) pour se prémunir de l’effet de Domination..~
+Le sort de domination permet au lanceur de contrôler les actions de toute créature tant que le sort est en vigueur. Ce contrôle est maintenu par un lien télépathique entre le lanceur et la victime. Cette dernière a droit à un jet de Volonté à +2 au Degré de Difficulté pour se prémunir de l’effet de Domination..~
 @1108	= ~Immobilisation de monstre~
 @1109	= ~Immobilisation de monstre
 (Enchantement)
@@ -660,7 +660,7 @@ Temps d’incantation : 5
 Zone d’effet : Rayon de 6 mètres (20 pieds)
 Jet de sauvegarde : Volonté annule
 
-Ce sort est absolument identique à Confusion. Les victimes errent au hasard et se mettent parfois à s’en aller ou à attaquer quiconque se trouve à proximité. Si la victime est de niveau 4 ou moins, elle n’a aucune défense. Au-delà, elle a droit à un jet de Volonté à +2 de DD (Degré de Difficulté). L’enchantement dure comme indiqué, à moins qu’on ne le dissipe prématurément.~
+Ce sort est absolument identique à Confusion. Les victimes errent au hasard et se mettent parfois à s’en aller ou à attaquer quiconque se trouve à proximité. Si la victime est de niveau 4 ou moins, elle n’a aucune défense. Au-delà, elle a droit à un jet de Volonté à +2 de Degré de Difficulté. L’enchantement dure comme indiqué, à moins qu’on ne le dissipe prématurément.~
 @1112	= ~Linceul de flammes~
 @1113	= ~Linceul de flammes
 (Évocation)
@@ -739,7 +739,7 @@ Temps d’incantation : 0
 Zone d’effet : 1 créature
 Jet de sauvegarde : Spécial
 
-Mot de pouvoir : Étourdissement est un autre mot de pouvoir. Les créatures avec moins de 50 points de vie sont étourdies pendant 4 à 16 rounds, celles avec 51 à 100 points de vie sont étourdies pendant 2 à 8 rounds, celles avec 101 à 150 points de vie sont étourdies pendant 1 à 4 rounds et celles avec plus de 151 points de vie doivent réussir un jet de Volonté avec +2 DD (Degré de Difficulté) ou être étourdi pendant un round. Le sort prend en compte les points de vie actuels de la créature, et non leur maximum, donc même les créatures les plus coriaces peuvent être affectées par ce sort si elles sont blessées. Ce sort n’a aucun effet sur les créatures sourdes.~
+Mot de pouvoir : Étourdissement est un autre mot de pouvoir. Les créatures avec moins de 50 points de vie sont étourdies pendant 4 à 16 rounds, celles avec 51 à 100 points de vie sont étourdies pendant 2 à 8 rounds, celles avec 101 à 150 points de vie sont étourdies pendant 1 à 4 rounds et celles avec plus de 151 points de vie doivent réussir un jet de Volonté avec +2 au Degré de Difficulté ou être étourdi pendant un round. Le sort prend en compte les points de vie actuels de la créature, et non leur maximum, donc même les créatures les plus coriaces peuvent être affectées par ce sort si elles sont blessées. Ce sort n’a aucun effet sur les créatures sourdes.~
 @1126 = ~Corps de Fer~
 @1127 = ~Corps de fer 
 (Transmutation)
@@ -805,7 +805,7 @@ Temps d’incantation : 1
 Zone d’effet : Rayon de 4,5 mètres (15 pieds)
 Jet de sauvegarde : Réflexes, 1/2 dégâts
 
-La Rage de Malavon a été créée par le sorcier elfe noir Malavon. Elle projette des dards d’énergie pure à partir du corps du lanceur dans toutes les directions, blessant amis et ennemis. Les barbillons magiques infligent 25d4 points de dégâts perforants à tout ce qui se trouve sur leur passage. Un jet de Réflexes avec +2 au DD (Degré de Difficulté) permet de réduire les dégâts de moitié. Ce sort est particulièrement utile lorsque le lanceur est entouré d’ennemis et ne provoquera pas d’attaque d’opportunité.
+La Rage de Malavon a été créée par le sorcier elfe noir Malavon. Elle projette des dards d’énergie pure à partir du corps du lanceur dans toutes les directions, blessant amis et ennemis. Les barbillons magiques infligent 25d4 points de dégâts perforants à tout ce qui se trouve sur leur passage. Un jet de Réflexes avec +2 au Degré de Difficulté permet de réduire les dégâts de moitié. Ce sort est particulièrement utile lorsque le lanceur est entouré d’ennemis et ne provoquera pas d’attaque d’opportunité.
 
 Comme la plupart des sorts créés par les drows, la Rage de Malavon est conçue pour contourner la résistance à la magie, car les drows combattent souvent des ennemis résistants à la magie... comme d’autres drows.~
 @1138	= ~Écorchement~
@@ -829,7 +829,7 @@ Temps d’incantation : 0
 Zone d’effet : 1 créature
 Jet de sauvegarde : Vigueur partiel
 
-Mot de pouvoir : Mort est le mot de pouvoir le plus mortel. Dès que le mot est prononcé, la victime est instantanément tuée si elle échoue à un jet de Vigueur avec +4 au DD (Degré de Difficulté). Si elle a 100 points de vie ou moins, elle ne bénéficie même pas d’un jet de sauvegarde. Ce sort n’a aucun effet sur les créatures sourdes.~
+Mot de pouvoir : Mort est le mot de pouvoir le plus mortel. Dès que le mot est prononcé, la victime est instantanément tuée si elle échoue à un jet de Vigueur avec +4 au Degré de Difficulté. Si elle a 100 points de vie ou moins, elle ne bénéficie même pas d’un jet de sauvegarde. Ce sort n’a aucun effet sur les créatures sourdes.~
 @1142	= ~Plainte d’outre-tombe~
 @1143	= ~Plainte d’outre-tombe
 (Nécromancie)
@@ -840,7 +840,7 @@ Temps d’incantation : 9
 Zone d’effet : Rayon de 9 mètres (30 pieds)
 Jet de sauvegarde : Vigueur annule
 
-Le lanceur émet un cri terrible qui tue les créatures qui l’entendent (à l’exception du lanceur). Le sort affecte jusqu’à une créature par niveau du lanceur. Un jet de Vigueur réussi avec -4 au DD (Degré de Difficulté) empêche les effets.~
+Le lanceur émet un cri terrible qui tue les créatures qui l’entendent (à l’exception du lanceur). Le sort affecte jusqu’à une créature par niveau du lanceur. Un jet de Vigueur réussi avec -4 au Degré de Difficulté empêche les effets.~
 @1144	= ~Toucher de Liche~
 @1145	= ~Toucher de Liche
 (Nécromancie)
@@ -929,7 +929,7 @@ Temps d’incantation : 6
 Zone d’effet : Spécial
 Jet de sauvegarde : Vigueur annule l’effet à l’impact
 
-Quand il lance ce sort, le lanceur ouvre un portail magique appelant une wiverne à son secours. La wiverne restera sous le contrôle du magicien et vivra et mourra à son commandement jusqu’à l’expiration de la durée du sort. Le DD (Degré de Difficulté) du poison de l’aiguillon de la wiverne est égal au DD de ce sort tel que lancé par le lanceur.~
+Quand il lance ce sort, le lanceur ouvre un portail magique appelant une wiverne à son secours. La wiverne restera sous le contrôle du magicien et vivra et mourra à son commandement jusqu’à l’expiration de la durée du sort. Le Degré de Difficulté du poison de l’aiguillon de la wiverne est égal au Degré de Difficulté de ce sort tel que lancé par le lanceur.~
 @1510	= ~Épée de Mordenkainen~
 @1511	= ~Épée de Mordenkainen
 (Évocation)L’épée de Mor
@@ -1033,7 +1033,7 @@ Temps d’incantation : 1 round
 Zone d’effet : Rayon de 9 mètres (30 pieds)
 Jet de sauvegarde : Vigueur annule
 
-Ce sort fait apparaître un symbole magique affectant toutes les créatures qui le voient. Toute créature vivante mourra instantanément en voyant le symbole en cas d’échec à un jet de sauvegarde de Vigueur avec -6 DD (Degré de Difficulté). Ce sort n’a aucun effet sur les créatures aveugles.~
+Ce sort fait apparaître un symbole magique affectant toutes les créatures qui le voient. Toute créature vivante mourra instantanément en voyant le symbole en cas d’échec à un jet de sauvegarde de Vigueur avec -6 au Degré de Difficulté. Ce sort n’a aucun effet sur les créatures aveugles.~
 
 @1548	= ~Symbole d’étourdissement~
 @1549	= ~Symbole d’étourdissement
@@ -1132,7 +1132,7 @@ Temps d’incantation : 4
 Zone d’effet : Spéciale
 Jet de sauvegarde : Vigueur annule l’effet au toucher
 
-Ce sort invoque un charognard muté de taille énorme qui est sous le contrôle du lanceur. Comme un charognard normal, il dispose de 8 attaques par round et chaque attaque paralyse la cible si elle rate un jet de sauvegarde de Vigueur. Le DD (Degré de Difficulté) est égal au DD de ce sort lancé par le lanceur.~
+Ce sort invoque un charognard muté de taille énorme qui est sous le contrôle du lanceur. Comme un charognard normal, il dispose de 8 attaques par round et chaque attaque paralyse la cible si elle rate un jet de sauvegarde de Vigueur. Le Degré de Difficulté est égal au Degré de Difficulté de ce sort lancé par le lanceur.~
 @1565	= ~Invisibilité de masse~
 @1566	= ~Invisibilité de masse
 (Illusion)
@@ -1312,7 +1312,7 @@ Temps d’incantation : 1 round
 Zone d’effet : Vue du lanceur de sorts
 Jet de sauvegarde : Réflexes, 1/2 dégâts
 
-Ce sort ne peut être lancé qu’en extérieur, sans quoi il ne fonctionne pas. Une fois l’incantation achevée, le personnage peut appeler la foudre, au rythme d’un éclair tous les 5 rounds. Le sort a une durée de 5 rounds par niveau de lanceur. Chaque éclair inflige 2d10 points de dégâts électriques plus 1d10 par niveau (maximum de 12d10 au niveau 10). Un jet de Réflexes réussi avec +4 DD (Degré de Difficulté) réduit les dégâts de moitié. L’éclair frappe verticalement n’importe quel ennemi du lanceur. Le lanceur ne choisit pas les cibles du sort, bien que l’éclair n’atteigne aucun de ses alliés.~
+Ce sort ne peut être lancé qu’en extérieur, sans quoi il ne fonctionne pas. Une fois l’incantation achevée, le personnage peut appeler la foudre, au rythme d’un éclair tous les 5 rounds. Le sort a une durée de 5 rounds par niveau de lanceur. Chaque éclair inflige 2d10 points de dégâts électriques plus 1d10 par niveau (maximum de 12d10 au niveau 10). Un jet de Réflexes réussi avec +4 au Degré de Difficulté réduit les dégâts de moitié. L’éclair frappe verticalement n’importe quel ennemi du lanceur. Le lanceur ne choisit pas les cibles du sort, bien que l’éclair n’atteigne aucun de ses alliés.~
 
 @1653	= ~Globe d’invulnérabilité partielle~
 @1654	= ~Globe d’invulnérabilité partielle
@@ -1372,7 +1372,7 @@ Temps d’incantation : 1
 Zone d’effet : 1 créature
 Jet de sauvegarde : Volonté annule
 
-Épouvante permet au lanceur de jouer sur les peurs naturelles pour faire percevoir à la créature cible le lanceur de sorts comme quelqu’un ou quelque chose d’hostile qui semble alors avancer vers elle de manière menaçante. Si la créature ne réussit pas un jet de sauvegarde de Volonté, elle panique. Le DD (Degré de Difficulté) augmente de +1 tous les deux niveaux du lanceur, jusqu’à un maximum de +6 au niveau 12. Bien que le lanceur ne poursuive pas réellement la créature en fuite, un fantôme issu de son propre esprit le fait. Épouvante n’affecte pas les morts-vivants.~
+Épouvante permet au lanceur de jouer sur les peurs naturelles pour faire percevoir à la créature cible le lanceur de sorts comme quelqu’un ou quelque chose d’hostile qui semble alors avancer vers elle de manière menaçante. Si la créature ne réussit pas un jet de sauvegarde de Volonté, elle panique. Le Degré de Difficulté augmente de +1 tous les deux niveaux du lanceur, jusqu’à un maximum de +6 au niveau 12. Bien que le lanceur ne poursuive pas réellement la créature en fuite, un fantôme issu de son propre esprit le fait. Épouvante n’affecte pas les morts-vivants.~
 
 @1663	= ~Protection contre l’énergie magique~
 @1664	= ~Protection contre l’énergie magique
@@ -1486,7 +1486,7 @@ Jusqu’à 2 DV : Inconscient pendant 5 rounds
 3 ou 4 DV : Aveuglé pendant 3 rounds
 5 DV ou plus : Étourdi pendant 1 round
 
-Un jet de sauvegarde de Volonté réussi avec +2 DD (Degré de Difficulté) annule l’effet. Les créatures aveugles ne sont pas affectées par le jet de couleurs. Ce sort ne provoque pas d’attaque d’opportunité.~
+Un jet de sauvegarde de Volonté réussi avec +2 au Degré de Difficulté annule l’effet. Les créatures aveugles ne sont pas affectées par le jet de couleurs. Ce sort ne provoque pas d’attaque d’opportunité.~
 @1682	= ~Lance d’alicorne~
 @1683	= ~Lance d’alicorne
 (Évocation)
@@ -1564,7 +1564,7 @@ Temps d’incantation : 5
 Zone d’effet : 1 créature
 Jet de sauvegarde : Vigueur partiel
 
-Le sort transforme une créature en poussière. Lorsqu’il est lancé, une boule d’énergie verte jaillit du lanceur vers la cible, qui sera désintégrée à moins qu’elle ne réussisse un jet de sauvegarde de Vigueur avec +2 DD (Degré de Difficulté). Si la victime réussit son jet de sauvegarde, elle ne subit que 5d6 points de dégâts magiques. Si elle échoue, elle subira 2d6 points de dégâts magiques par niveau de lanceur de sorts (maximum 40d6). Un membre du groupe tué par ce sort ne peut pas être ressuscité avec Rappel à la vie, mais peut être ramené à la vie avec Résurrection. Ce sort fonctionne sur les créatures mortes-vivantes.~
+Le sort transforme une créature en poussière. Lorsqu’il est lancé, une boule d’énergie verte jaillit du lanceur vers la cible, qui sera désintégrée à moins qu’elle ne réussisse un jet de sauvegarde de Vigueur avec +2 au Degré de Difficulté. Si la victime réussit son jet de sauvegarde, elle ne subit que 5d6 points de dégâts magiques. Si elle échoue, elle subira 2d6 points de dégâts magiques par niveau de lanceur de sorts (maximum 40d6). Un membre du groupe tué par ce sort ne peut pas être ressuscité avec Rappel à la vie, mais peut être ramené à la vie avec Résurrection. Ce sort fonctionne sur les créatures mortes-vivantes.~
 @1696	= ~Mot de pouvoir : Cécité~
 @1697	= ~Mot de pouvoir : Cécité
 (Divination)
@@ -1754,7 +1754,7 @@ Temps d’incantation : 2
 Zone d’effet : Rayon de 9 mètres (30 pieds)
 Jet de sauvegarde : Vigueur annule
 
-Nuage nauséabond crée une masse de vapeurs nauséabondes jusqu’à 9 mètres (30 pieds) du lanceur. Toute créature vivante prise dans le nuage doit réussir un jet de Vigueur avec -2 DD (Degré de Difficulté) ou devenir nauséeuse, ce qui les empêche d’attaquer, de lancer des sorts, de se concentrer sur des sorts, etc. Ces effets durent tant que le personnage reste dans le nuage.~
+Nuage nauséabond crée une masse de vapeurs nauséabondes jusqu’à 9 mètres (30 pieds) du lanceur. Toute créature vivante prise dans le nuage doit réussir un jet de Vigueur avec -2 au Degré de Difficulté ou devenir nauséeuse, ce qui les empêche d’attaquer, de lancer des sorts, de se concentrer sur des sorts, etc. Ces effets durent tant que le personnage reste dans le nuage.~
 @1755	= ~Ténèbres infernales~
 @1756	= ~Ténèbres infernales
 (Évocation) [Mal]
@@ -1788,7 +1788,7 @@ Temps d’incantation : 1 round
 Zone d’effet : 1 créature
 Jet de sauvegarde : Vigueur annule
 
-Ce sort imprègne les mains du lanceur d’énergie négative destructrice qui se libère lorsqu’une attaque de contact réussie est effectuée. Cette attaque inflige des dégâts magiques égaux à tous les points de vie actuels de la cible -1 en cas d’échec du jet de Vigueur (avec +2 DD (Degré de Difficulté)). S’il est utilisé sur une créature morte-vivante, il agit à la place comme un sort de Guérison suprême, la guérissant complètement sans nécessiter une attaque de contact pour toucher. Ce sort ne provoque pas d’attaque d’opportunité lorsqu’il est utilisé pour blesser les vivants.~
+Ce sort imprègne les mains du lanceur d’énergie négative destructrice qui se libère lorsqu’une attaque de contact réussie est effectuée. Cette attaque inflige des dégâts magiques égaux à tous les points de vie actuels de la cible -1 en cas d’échec du jet de Vigueur (avec +2 au Degré de Difficulté). S’il est utilisé sur une créature morte-vivante, il agit à la place comme un sort de Guérison suprême, la guérissant complètement sans nécessiter une attaque de contact pour toucher. Ce sort ne provoque pas d’attaque d’opportunité lorsqu’il est utilisé pour blesser les vivants.~
 @1762	= ~Lame de glace~
 @1763	= ~Lame de glace
 (Évocation)
@@ -1799,7 +1799,7 @@ Temps d’incantation : 4
 Zone d’effet : Lanceur
 Jet de sauvegarde : Réflexes
 
-Ce sort crée un rayon de froid intense qui jaillit de la main du lanceur, prenant la forme d’un cimeterre et utilisé comme tel. La lame est une arme +2. Elle inflige 2d6+2 dégâts de froid et ignore les bonus d’armure et de bouclier, et la victime doit réussir un jet de Réflexes ou être ralentie pendant 2 rounds. Le DD (Degré de Difficulté) du jet de Réflexes est égal à 12 plus les bonus de Sagesse et d’école de prédilection du lanceur. La Lame de glace profite du don Maniement des Armes de guerre, Grande épée, et bénéficie des bonus à l’attaque et aux dégâts provenant de la Force, des dons, des sorts, des objets et d’autres effets.
+Ce sort crée un rayon de froid intense qui jaillit de la main du lanceur, prenant la forme d’un cimeterre et utilisé comme tel. La lame est une arme +2. Elle inflige 2d6+2 dégâts de froid et ignore les bonus d’armure et de bouclier, et la victime doit réussir un jet de Réflexes ou être ralentie pendant 2 rounds. Le Degré de Difficulté du jet de Réflexes est égal à 12 plus les bonus de Sagesse et d’école de prédilection du lanceur. La Lame de glace profite du don Maniement des Armes de guerre, Grande épée, et bénéficie des bonus à l’attaque et aux dégâts provenant de la Force, des dons, des sorts, des objets et d’autres effets.
 
 Lorsqu’il est lancé en tant que rôdeur, ce sort crée une Lame de glace dans chaque main.~
 @1764	= ~Masse d’armes des Météores~
@@ -1871,7 +1871,7 @@ Temps d’incantation : 1 round
 Zone d’effet : 1 créature
 Jet de sauvegarde : Vigueur partielle
 
-Ce sort imprègne les mains du lanceur avec une force divine qui sera libérée lors d’une attaque de contact réussie. Cette attaque détruit instantanément la cible, la réduisant en petits morceaux. Un jet de sauvegarde de Vigueur avec +2 DD (Degré de Difficulté) est permis, et en cas de succès, la cible subit 10d6 dégâts magiques au lieu d’être détruite. Destruction peut même détruire les morts-vivants et les constructions. Notez qu’un personnage frappé par un sort de Destruction ne peut être relevé avec un sort de Rappel à la vie ; un sort de Résurrection plus puissant sera nécessaire pour restaurer le corps d’un personnage. Ce sort ne provoque pas d’attaque d’opportunité.~
+Ce sort imprègne les mains du lanceur avec une force divine qui sera libérée lors d’une attaque de contact réussie. Cette attaque détruit instantanément la cible, la réduisant en petits morceaux. Un jet de sauvegarde de Vigueur avec +2 au Degré de Difficulté est permis, et en cas de succès, la cible subit 10d6 dégâts magiques au lieu d’être détruite. Destruction peut même détruire les morts-vivants et les constructions. Notez qu’un personnage frappé par un sort de Destruction ne peut être relevé avec un sort de Rappel à la vie ; un sort de Résurrection plus puissant sera nécessaire pour restaurer le corps d’un personnage. Ce sort ne provoque pas d’attaque d’opportunité.~
 @1775	= ~Contrôle des morts-vivants~
 @1776	= ~Contrôle des morts-vivants
 (Nécromancie)
@@ -2059,7 +2059,7 @@ Jusqu’à 2 : Inconscient pendant 5 rounds
 3 ou 4 : Aveuglé pendant 3 rounds
 5 ou plus : Étourdi pendant 1 round
 
-Un jet de sauvegarde réussi contre les Réflexes avec +4 DD (Degré de Difficulté) annule l’effet. Les créatures aveugles ne sont pas affectées par le Vapeur colorée.~
+Un jet de sauvegarde réussi contre les Réflexes avec +4 au Degré de Difficulté annule l’effet. Les créatures aveugles ne sont pas affectées par le Vapeur colorée.~
 
 @1857	= ~Brume acide~
 @1858	= ~Brume acide
@@ -2191,7 +2191,7 @@ Temps d’incantation : 5
 Zone d’effet : Spécial
 Jet de sauvegarde : Réflexes, 1/2 dégâts
 
-Ce sort crée une graine explosive tous les cinq niveaux (2 au niveau 10, 3 au niveau 15, etc.), qui peut être lancée par le lanceur. Lorsque lancées, les graines explosent et infligent 4d6 points de dégâts de feu à tout ce qui se trouve dans un rayon de 4,5 mètres (15 pieds). Les Semences de feu utilisent le don Maniement des armes courantes : Projectiles et gagnent des bonus de dégâts basés sur la Force, les dons, les objets, les sorts et d’autres sources. Les créatures peuvent faire un jet de Réflexes pour réduire de moitié les dégâts. Le DD (Degré de Difficulté) du jet de Réflexes est de 16 + les bonus de Sagesse et d’efficacité des sorts.~
+Ce sort crée une graine explosive tous les cinq niveaux (2 au niveau 10, 3 au niveau 15, etc.), qui peut être lancée par le lanceur. Lorsque lancées, les graines explosent et infligent 4d6 points de dégâts de feu à tout ce qui se trouve dans un rayon de 4,5 mètres (15 pieds). Les Semences de feu utilisent le don Maniement des armes courantes : Projectiles et gagnent des bonus de dégâts basés sur la Force, les dons, les objets, les sorts et d’autres sources. Les créatures peuvent faire un jet de Réflexes pour réduire de moitié les dégâts. Le Degré de Difficulté du jet de Réflexes est de 16 + les bonus de Sagesse et d’efficacité des sorts.~
 
 @1879 	= ~Toile d’araignée~
 @1880 	= ~Toile d’araignée
@@ -2203,7 +2203,7 @@ Temps d’incantation : 2
 Zone d’effet : rayon de 4,5 mètres (15 pieds)
 Jet de sauvegarde : Réflexes annule
 
-Toile d’araignée crée une masse de filaments collants et résistants, semblables à des toiles d’araignées mais beaucoup plus grands et plus solides. Les créatures dans la zone d’effet qui échouent un jet de Réflexes avec un DD (Degré de Difficulté) de -2 subissent une pénalité de -2 à la classe d’armure et aux jets d’attaque, ont 50% de chance d’échouer leurs sorts, et ne peuvent pas se déplacer.~
+Toile d’araignée crée une masse de filaments collants et résistants, semblables à des toiles d’araignées mais beaucoup plus grands et plus solides. Les créatures dans la zone d’effet qui échouent un jet de Réflexes avec un Degré de Difficulté de -2 subissent une pénalité de -2 à la classe d’armure et aux jets d’attaque, ont 50% de chance d’échouer leurs sorts, et ne peuvent pas se déplacer.~
 @1881 	= ~Nuage incendiaire~
 @1882 	= ~Nuage incendiaire
 (Invocation)
@@ -2250,7 +2250,7 @@ Temps d’incantation : 2
 Zone d’effet : 1 créature
 Jet de sauvegarde : Vigueur annule
 
-Grâce à ce sort, le lanceur affaiblit un adversaire, réduisant sa force et donc les attaques qui en dépendent. La force de la victime est réduite de 15 pour la durée du sort, sauf si un jet de sauvegarde de vigueur (avec +4 DD (Degré de Difficulté)) est réussi. Toutes les pénalités associées à une force réduite s’appliquent. Les effets de ce sort ne sont pas cumulables grâce à des lancements répétés.~
+Grâce à ce sort, le lanceur affaiblit un adversaire, réduisant sa force et donc les attaques qui en dépendent. La force de la victime est réduite de 15 pour la durée du sort, sauf si un jet de sauvegarde de vigueur (avec +4 au Degré de Difficulté) est réussi. Toutes les pénalités associées à une force réduite s’appliquent. Les effets de ce sort ne sont pas cumulables grâce à des lancements répétés.~
 
 @1889 	= ~Sphère acide~
 @1890 	= ~Sphère acide
@@ -2324,7 +2324,7 @@ Temps d’incantation : 4
 Zone d’effet : 1 créature
 Jet de sauvegarde : Vigueur annule
 
-Ce sort provoque une maladie majeure et affaiblit une créature. L’individu affecté est immédiatement frappé de symptômes douloureux et distrayants : furoncles, lésions, abcès suintants, etc. La force, la dextérité et la constitution sont réduites de 4. La créature affectée est également ralentie. Ces effets persistent jusqu’à ce que le personnage reçoive un sort de guérison des maladies. Lancer Contagion sur la même créature plusieurs fois aggrave la maladie. Un jet de sauvegarde de vigueur (avec +8 DD (Degré de Difficulté)) annulera les effets.~
+Ce sort provoque une maladie majeure et affaiblit une créature. L’individu affecté est immédiatement frappé de symptômes douloureux et distrayants : furoncles, lésions, abcès suintants, etc. La force, la dextérité et la constitution sont réduites de 4. La créature affectée est également ralentie. Ces effets persistent jusqu’à ce que le personnage reçoive un sort de guérison des maladies. Lancer Contagion sur la même créature plusieurs fois aggrave la maladie. Un jet de sauvegarde de vigueur (avec +8 au Degré de Difficulté) annulera les effets.~
 
 @1901 	= ~Puissance divine~
 @1902 	= ~Puissance divine
@@ -3164,7 +3164,7 @@ Temps d’incantation : 2
 Zone d’effet : 1 créature
 Jet de sauvegarde : Volonté annule
 
-La victime de ce sort éprouve d’énormes problèmes à faire appel à sa magie.  Chaque fois qu’elle tente de lancer un sort, son incantation a 50% de chances d’échouer. Les créatures peuvent effectuer un jet de sauvegarde de Volonté (avec +8 DD (Degré de Difficulté)) pour éviter l’effet.~
+La victime de ce sort éprouve d’énormes problèmes à faire appel à sa magie.  Chaque fois qu’elle tente de lancer un sort, son incantation a 50% de chances d’échouer. Les créatures peuvent effectuer un jet de sauvegarde de Volonté (avec +8 au Degré de Difficulté) pour éviter l’effet.~
 
 @31326 	= ~Protection contre l’énergie négative~
 @32326 	= ~Protection contre l’énergie négative
@@ -3212,7 +3212,7 @@ Temps d’incantation : 4
 Zone d’effet : 1 créature
 Jet de sauvegarde : Volonté annule
 
-Ce sort permet au lanceur d’envahir l’esprit de la créature ciblée, permettant au lanceur de forcer la créature à effectuer les actions qu’il désire. La créature cible résiste aux effets si elle réussit un jet de sauvegarde de Volonté avec +2 DD (Degré de Difficulté). Tant qu’une créature est dominée de cette manière, son esprit est embrouillé et ses pensées sont entravées - le lancement de sorts est impossible et les bonus d’attaque sont effectués avec une pénalité de -2.~
+Ce sort permet au lanceur d’envahir l’esprit de la créature ciblée, permettant au lanceur de forcer la créature à effectuer les actions qu’il désire. La créature cible résiste aux effets si elle réussit un jet de sauvegarde de Volonté avec +2 au Degré de Difficulté. Tant qu’une créature est dominée de cette manière, son esprit est embrouillé et ses pensées sont entravées - le lancement de sorts est impossible et les bonus d’attaque sont effectués avec une pénalité de -2.~
 
 @31408 	= ~Cercle magique contre le mal~
 @32408 	= ~Cercle magique contre le mal
@@ -3319,7 +3319,7 @@ Temps d’incantation : 1 round
 Zone d’effet : Vue du lanceur de sorts
 Jet de sauvegarde : Réflexes, 1/2 dégâts
 
-Electricité statique est similaire à Appel de la foudre sauf qu’il peut être utilisé en intérieur. Une fois le sort terminé, une créature ennemie dans la zone d’effet est frappée par une charge d’électricité statique infligeant 1d8 points de dégâts électriques par niveau de lanceur, jusqu’à un maximum de 16d8 points de dégâts électriques. Un jet de Réflexes réussi avec +4 DD (Degré de Difficulté) réduit les dégâts de moitié. Une fois libérée, l’électricité statique se reforme sur le lanceur, se déchargeant toutes les 5 rounds pendant la durée du sort.~
+Electricité statique est similaire à Appel de la foudre sauf qu’il peut être utilisé en intérieur. Une fois le sort terminé, une créature ennemie dans la zone d’effet est frappée par une charge d’électricité statique infligeant 1d8 points de dégâts électriques par niveau de lanceur, jusqu’à un maximum de 16d8 points de dégâts électriques. Un jet de Réflexes réussi avec +4 au Degré de Difficulté réduit les dégâts de moitié. Une fois libérée, l’électricité statique se reforme sur le lanceur, se déchargeant toutes les 5 rounds pendant la durée du sort.~
 
 @31602 	= ~Invocation d’alliés naturels VI~
 @32602 	= ~Invocation d’alliés naturels VI
@@ -3343,7 +3343,7 @@ Temps d’incantation : 6
 Zone d’effet : 1 créature
 Jet de sauvegarde : Réflexes, 1/2 dégâts
 
-Ce sort permet au lanceur de jeter une sphère brillante sur sa cible. À l’impact, elle explose en une lumière aveuglante, infligeant 9d12 points de dégâts de feu. Un jet de Réflexes réussi évite la cécité et réduit les dégâts de moitié. Les Drows et les nains gris (duergars) doivent réussir leur jet de Réflexes contre la cécité avec +4 DD (Degré de Difficulté). Les créatures mortes-vivantes sont particulièrement vulnérables à ce sort puisque les dégâts qu’ils subissent sont doublés..~
+Ce sort permet au lanceur de jeter une sphère brillante sur sa cible. À l’impact, elle explose en une lumière aveuglante, infligeant 9d12 points de dégâts de feu. Un jet de Réflexes réussi évite la cécité et réduit les dégâts de moitié. Les Drows et les nains gris (duergars) doivent réussir leur jet de Réflexes contre la cécité avec +4 au Degré de Difficulté. Les créatures mortes-vivantes sont particulièrement vulnérables à ce sort puisque les dégâts qu’ils subissent sont doublés..~
 
 @31616 	= ~Infection~
 @32616 	= ~Infection
@@ -3355,7 +3355,7 @@ Temps d’incantation : 2
 Zone d’effet : 1 créature
 Jet de sauvegarde : Vigueur annule
 
-Comme son nom l’indique, ce sort transmet une terrible infection qui gagne rapidement tout l’organisme de la victime. Les créatures affectées subissent 1 point de dégâts par seconde et sont ralenties pendant 1 round par niveau. La créature cible peut résister à la maladie en réussissant un jet de Vigueur avec +8 DD (Degré de Difficulté).~
+Comme son nom l’indique, ce sort transmet une terrible infection qui gagne rapidement tout l’organisme de la victime. Les créatures affectées subissent 1 point de dégâts par seconde et sont ralenties pendant 1 round par niveau. La créature cible peut résister à la maladie en réussissant un jet de Vigueur avec +8 au Degré de Difficulté.~
 
 @32704 	= ~Fatalité rampante
 (Invocation)
@@ -3542,7 +3542,7 @@ Temps d’incantation : 3
 Zone d’effet : Rayon de 6 mètres (20 pieds)
 Jet de sauvegarde : Volonté annule
 
-Une créature affectée par Lenteur perd une attaque par round (mais ne peut tomber en dessous de 1 attaque par round), souffre d’un malus de –4 à la classe d’armure, et se déplace à la moitié de sa vitesse de base. Un jet de Volonté réussi avec +4 DD (Degré de Difficulté) annule les effets. Lenteur dissipe les sorts Hâte, Hâte de groupe et Hâte améliorée.~
+Une créature affectée par Lenteur perd une attaque par round (mais ne peut tomber en dessous de 1 attaque par round), souffre d’un malus de –4 à la classe d’armure, et se déplace à la moitié de sa vitesse de base. Un jet de Volonté réussi avec +4 au Degré de Difficulté annule les effets. Lenteur dissipe les sorts Hâte, Hâte de groupe et Hâte améliorée.~
 
 @33316 	= ~Charme funeste~
 @34316 	= ~Charme funeste
@@ -3663,7 +3663,7 @@ Temps d’incantation : 5
 Zone d’effet : 1 créature
 Jet de sauvegarde : Volonté annule
 
-Comme son nom l’indique, ce sort transforme la victime en débile profond. La victime peut effectuer un jet de sauvegarde de Volonté avec +4 DD (Degré de Difficulté) pour résister à l’abrutissement. Les créatures affectées par le sort ne peuvent pas lancer de sorts.~
+Comme son nom l’indique, ce sort transforme la victime en débile profond. La victime peut effectuer un jet de sauvegarde de Volonté avec +4 au Degré de Difficulté pour résister à l’abrutissement. Les créatures affectées par le sort ne peuvent pas lancer de sorts.~
 
 @33514 	= ~Contrat : élémentaire de feu~
 @34514 	= ~Contrat : élémentaire de feu
@@ -4195,7 +4195,7 @@ Temps d’incantation : 6
 Zone d’effet : Rayon de 6 mètres (20 pieds)
 Jet de sauvegarde : Vigueur annule
 
-Ce sort confère au lanceur une aura qui repousse les ennemis proches, les projetant loin du lanceur. Tout ennemi qui entre dans la zone d’effet doit réussir un jet de sauvegarde de Vigueur avec -5 DD (Degré de Difficulté) ou être repoussé.~
+Ce sort confère au lanceur une aura qui repousse les ennemis proches, les projetant loin du lanceur. Tout ennemi qui entre dans la zone d’effet doit réussir un jet de sauvegarde de Vigueur avec -5 au Degré de Difficulté ou être repoussé.~
 
 @35654 	= ~Souvenir merveilleux~
 @36654 	= ~Souvenir merveilleux
@@ -4332,7 +4332,7 @@ Temps d’incantation : 9
 Zone d’effet : Lanceur
 Jet de sauvegarde : Aucun
 
-Ce sort invoque la puissance d’Auril pour amplifier les sorts de froid du lanceur. Pendant la durée du sort, les dégâts de froid infligés par le lanceur sont augmentés de 50%, ou de 100% s’il est lancé au niveau 30 ou plus. De plus, le sort Cône de froid a un +4 DD (Degré de Difficulté) et une zone d’effet beaucoup plus grande, tout comme le souffle glacé de la métamorphose en loup des glaces.~
+Ce sort invoque la puissance d’Auril pour amplifier les sorts de froid du lanceur. Pendant la durée du sort, les dégâts de froid infligés par le lanceur sont augmentés de 50%, ou de 100% s’il est lancé au niveau 30 ou plus. De plus, le sort Cône de froid a un +4 au Degré de Difficulté et une zone d’effet beaucoup plus grande, tout comme le souffle glacé de la métamorphose en loup des glaces.~
 @35952 	= ~Mise à mal de groupe~
 @36952 	= ~Mise à mal de groupe
 (Nécromancie)
@@ -4343,7 +4343,7 @@ Temps d’incantation : 9
 Zone d’effet : Rayon de 6 mètres (20 ft)
 Jet de sauvegarde : Vigueur annule
 
-Mise à mal de groupe libère une énergie négative destructrice sur tous les ennemis vivants dans la zone d’effet. Le lanceur effectue des attaques de contact à distance contre chacune de ces créatures ; chacune d’elles touchée doit réussir un jet de sauvegarde de Vigueur ou perdre tous ses points de vie sauf un. Le DD (Degré de Difficulté) est le même que celui du sort Mise à mal de niveau 6. Les morts-vivants alliés dans la zone d’effet sont au contraire soignés complètement comme par un sort Guérison.~
+Mise à mal de groupe libère une énergie négative destructrice sur tous les ennemis vivants dans la zone d’effet. Le lanceur effectue des attaques de contact à distance contre chacune de ces créatures ; chacune d’elles touchée doit réussir un jet de sauvegarde de Vigueur ou perdre tous ses points de vie sauf un. Le Degré de Difficulté est le même que celui du sort Mise à mal de niveau 6. Les morts-vivants alliés dans la zone d’effet sont au contraire soignés complètement comme par un sort Guérison.~
 @35953 	= ~Éruption volcanique~
 @36953 	= ~Éruption volcanique
 (Évocation)
@@ -4369,7 +4369,7 @@ Ce sort invoque un nuage orageux divin qui libère des torrents de dégâts sur les
 
 1er round : Tempête de feu - Inflige 1d6 points de dégâts de feu par niveau (max 20d6) avec un jet de Réflexes réussi pour la moitié des dégâts.
 2e round : Tempête d’acide - Inflige 3d6 points de dégâts d’acide par round pendant 1 round tous les 3 niveaux du lanceur (max 24d6 et 8 rounds). Un jet de Réflexes réussi réduit de moitié le nombre de rounds.
-3e round : Tempête de foudre - Inflige 12d10 points de dégâts d’électricité avec un jet de Réflexes avec +4 DD (Degré de Difficulté) pour la moitié des dégâts.
+3e round : Tempête de foudre - Inflige 12d10 points de dégâts d’électricité avec un jet de Réflexes avec +4 au Degré de Difficulté pour la moitié des dégâts.
 4e round : Tempête de glace - Inflige 4d6 points de dégâts contondants et 4d6 points de dégâts de froid sans jet de sauvegarde.~
 @35955 	= ~Résurrection contingente~
 @36955 	= ~Résurrection contingente
@@ -4543,7 +4543,7 @@ Temps d’incantation : 4
 Zone d’effet : Rayon de 6 mètres (20 pieds)
 Jet de sauvegarde : Vigueur annule
 
-Ce sort crée une obscurité magique dans la zone d’effet. Les créatures sans vision dans le noir doivent réussir un jet de Vigueur avec +3 DD (Degré de Difficulté) ou être effectivement aveuglées. Les créatures avec vision dans le noir ne sont pas aveuglées, mais même elles ont une capacité limitée à voir à travers l’obscurité magique, subissant une pénalité de -4 aux attaques en cas d’échec au jet de sauvegarde. Les créatures avec une vision supérieure à 36 mètres (120 pieds) (par exemple, les drows, les nains gris ou les gnomes des profondeurs) subissent seulement une pénalité de -2 aux attaques. Les diables et les créatures immunisées à l’aveuglement ne sont pas affectés.~
+Ce sort crée une obscurité magique dans la zone d’effet. Les créatures sans vision dans le noir doivent réussir un jet de Vigueur avec +3 au Degré de Difficulté ou être effectivement aveuglées. Les créatures avec vision dans le noir ne sont pas aveuglées, mais même elles ont une capacité limitée à voir à travers l’obscurité magique, subissant une pénalité de -4 aux attaques en cas d’échec au jet de sauvegarde. Les créatures avec une vision supérieure à 36 mètres (120 pieds) (par exemple, les drows, les nains gris ou les gnomes des profondeurs) subissent seulement une pénalité de -2 aux attaques. Les diables et les créatures immunisées à l’aveuglement ne sont pas affectés.~
 @37351 	= ~Clairvoyance~
 @38351 	= ~Clairvoyance
 (Divination)
@@ -4565,7 +4565,7 @@ Temps d’incantation : 5
 Zone d’effet : Rayon de 4,5 mètres (15 pieds)
 Jet de sauvegarde : Volonté annule
 
-Dissipation de la magie sélective est similaire au sort Dissipation de la magie, sauf qu’il n’affecte que les ennemis. Lorsqu’elle est lancée, elle dissipe la plupart des effets magiques dans la zone d’effet sur les ennemis qui échouent à un jet de Volonté à +5 DD (Degré de Difficulté).~
+Dissipation de la magie sélective est similaire au sort Dissipation de la magie, sauf qu’il n’affecte que les ennemis. Lorsqu’elle est lancée, elle dissipe la plupart des effets magiques dans la zone d’effet sur les ennemis qui échouent à un jet de Volonté à +5 au Degré de Difficulté.~
 @37353 	= ~Lancer~
 @38353 	= ~Lancer
 (Transmutation)
@@ -4677,7 +4677,7 @@ Temps d’incantation : 4
 Zone d’effet : 1 créature
 Jet de sauvegarde : Volonté ou Vigueur annule
 
-Assassin imaginaire fait en sorte que la cible soit frappée par une incarnation de ses pires cauchemars. La cible peut effectuer un jet de Volonté pour ne pas croire à l’illusion. En cas d’échec, elle doit effectuer un jet de Vigueur ou mourir. Même en cas de réussite au jet de Vigueur, elle subit tout de même 3d6 points de dégâts magiques. Si la cible était déjà paniquée lorsqu’elle a été touchée par ce sort, le DD (Degré de Difficulté) des deux jets est augmenté de 6.~
+Assassin imaginaire fait en sorte que la cible soit frappée par une incarnation de ses pires cauchemars. La cible peut effectuer un jet de Volonté pour ne pas croire à l’illusion. En cas d’échec, elle doit effectuer un jet de Vigueur ou mourir. Même en cas de réussite au jet de Vigueur, elle subit tout de même 3d6 points de dégâts magiques. Si la cible était déjà paniquée lorsqu’elle a été touchée par ce sort, le Degré de Difficulté des deux jets est augmenté de 6.~
 
 @37453 	= ~Festin macabre~
 @38453 	= ~Festin macabre
@@ -4689,7 +4689,7 @@ Temps d’incantation : 4
 Zone d’effet : Lanceur
 Jet de sauvegarde : Spécial
 
-Ce sort permet au lanceur d’invoquer des morts-vivants en tuant d’autres créatures. Pendant la durée de ce sort, chaque fois que le lanceur tue une créature, une goule se lève pour festoyer sur les restes. Cette goule servira le lanceur pendant 8 heures. Une goule ne sera invoquée que si le lanceur a infligé le coup fatal à la créature; si le lanceur a blessé la créature mais qu’un autre membre du groupe l’a achevée, le lanceur n’obtiendra pas de goule. Le toucher paralysant des goules utilise le DD (Degré de Difficulté) de ce sort tel que lancé par le lanceur. Festin macabre ne peut pas être lancé par des personnages d’alignement bon.~
+Ce sort permet au lanceur d’invoquer des morts-vivants en tuant d’autres créatures. Pendant la durée de ce sort, chaque fois que le lanceur tue une créature, une goule se lève pour festoyer sur les restes. Cette goule servira le lanceur pendant 8 heures. Une goule ne sera invoquée que si le lanceur a infligé le coup fatal à la créature; si le lanceur a blessé la créature mais qu’un autre membre du groupe l’a achevée, le lanceur n’obtiendra pas de goule. Le toucher paralysant des goules utilise le Degré de Difficulté de ce sort tel que lancé par le lanceur. Festin macabre ne peut pas être lancé par des personnages d’alignement bon.~
 
 @37454 	= ~Copie de sort~
 @38454 	= ~Copie de sort
@@ -4935,7 +4935,7 @@ Temps d’incantation : 4
 Zone d’effet : Spéciale
 Jet de sauvegarde : Réflexes, 1/2 dégâts
 
-Ce sort lance une rafale de petits éclairs sur la cible. Un éclair est lancé par niveau, chacun infligeant 1d8 dégâts électriques (jet de sauvegarde : Réflexes avec +4 DD pour la moitié des dégâts) à toutes les créatures sur son passage. Les éclairs rebondissent sur les murs, pouvant potentiellement toucher plusieurs fois la même créature par éclair.~
+Ce sort lance une rafale de petits éclairs sur la cible. Un éclair est lancé par niveau, chacun infligeant 1d8 dégâts électriques (jet de sauvegarde : Réflexes avec +4 au Degré de Difficulté pour la moitié des dégâts) à toutes les créatures sur son passage. Les éclairs rebondissent sur les murs, pouvant potentiellement toucher plusieurs fois la même créature par éclair.~
 
 @37756 	= ~Réanimation~
 @38756 	= ~Réanimation
@@ -4985,7 +4985,7 @@ Temps d’incantation : 7
 Zone d’effet : Spécial
 Jet de sauvegarde : Volonté annule
 
-Ce sort fait apparaître un objet magique qui incite les créatures qui le voient à vouloir s’en approcher. Toute créature non alliée qui voit cet objet magique doit réussir un jet de sauvegarde de Volonté (avec -3 DD) chaque round ou être obligée, pendant ce round, de marcher vers l’objet sans rien faire d’autre. Toute créature immunisée contre les effets de charme est également immunisée contre cet effet.~
+Ce sort fait apparaître un objet magique qui incite les créatures qui le voient à vouloir s’en approcher. Toute créature non alliée qui voit cet objet magique doit réussir un jet de sauvegarde de Volonté (avec -3 au Degré de Difficulté) chaque round ou être obligée, pendant ce round, de marcher vers l’objet sans rien faire d’autre. Toute créature immunisée contre les effets de charme est également immunisée contre cet effet.~
 
 @37760 	= ~Saut temporel~
 @38760 	= ~Saut temporel
@@ -5047,7 +5047,7 @@ Temps d’incantation : 5
 Zone d’effet : 1 créature
 Jet de sauvegarde : Volonté annule
 
-Ce sort vole les effets des sorts de la cible et les confère au lanceur. Si la cible échoue un jet de sauvegarde de Volonté à +5 DD (Degré de Difficulté), tous les effets dissipables sur elle (comme Image miroir ou Peau de pierre) sont dissipés et le lanceur obtient ces effets pour leur durée restante. Les effets des objets et les capacités innées ne peuvent pas être volés. Si un allié est ciblé, il est affecté sans jet de sauvegarde.~
+Ce sort vole les effets des sorts de la cible et les confère au lanceur. Si la cible échoue un jet de sauvegarde de Volonté à +5 au Degré de Difficulté, tous les effets dissipables sur elle (comme Image miroir ou Peau de pierre) sont dissipés et le lanceur obtient ces effets pour leur durée restante. Les effets des objets et les capacités innées ne peuvent pas être volés. Si un allié est ciblé, il est affecté sans jet de sauvegarde.~
 
 @37852 	= ~Absorption d’énergie~
 @38852 	= ~Absorption d’énergie
@@ -5071,7 +5071,7 @@ Temps d’incantation : 8
 Zone d’effet : 1 créature
 Jet de sauvegarde : Volonté annule
 
-Ce sort permet au lanceur de prendre le contrôle complet et permanent d’une autre créature. La cible doit réussir un jet de sauvegarde de Volonté avec +4 DD (Degré de Difficulté). Si elle échoue, elle est dominée par le lanceur jusqu’à sa mort ou jusqu’à ce que l’effet soit dissipé. Esclavage peut même affecter les morts-vivants et les constructions.~
+Ce sort permet au lanceur de prendre le contrôle complet et permanent d’une autre créature. La cible doit réussir un jet de sauvegarde de Volonté avec +4 au Degré de Difficulté. Si elle échoue, elle est dominée par le lanceur jusqu’à sa mort ou jusqu’à ce que l’effet soit dissipé. Esclavage peut même affecter les morts-vivants et les constructions.~
 
 @37854 	= ~Armée d’images~
 @38854 	= ~Armée d’images
@@ -5131,7 +5131,7 @@ Temps d’incantation : 3
 Zone d’effet : Rayon de 6 mètres (20 pieds)
 Jet de sauvegarde : Réflexes, 1/2 dégâts
 
-Ce sort lance une boule de feu qui explose en d’autres boules de feu. Après l’explosion de la Métaboule de feu, chaque créature dans la zone d’effet est touchée par une boule de feu distincte avec sa propre zone d’effet. Chacune des boules de feu secondaires inflige 3d6 dégâts de feu (jet de Réflexes avec -5 DD (Degré de Difficulté) réussi pour ne subir que la moitié des dégâts). Ce sort est extrêmement efficace lorsqu’il est lancé sur de nombreuses créatures regroupées.~
+Ce sort lance une boule de feu qui explose en d’autres boules de feu. Après l’explosion de la Métaboule de feu, chaque créature dans la zone d’effet est touchée par une boule de feu distincte avec sa propre zone d’effet. Chacune des boules de feu secondaires inflige 3d6 dégâts de feu (jet de Réflexes avec -5 au Degré de Difficulté réussi pour ne subir que la moitié des dégâts). Ce sort est extrêmement efficace lorsqu’il est lancé sur de nombreuses créatures regroupées.~
 
 @37859 	= ~Toupie irrésistible d’Otto~
 @38859 	= ~Toupie irrésistible d’Otto
@@ -5213,7 +5213,7 @@ Temps d’incantation : 4
 Zone d’effet : 1 créature
 Jet de sauvegarde : Vigueur annule
 
-Contrairement aux sorts de métamorphose inférieurs, Véritable métamorphose peut transformer une créature en objet inanimé. Si la cible échoue à un jet de sauvegarde de Vigueur avec +4 DD (Degré de Difficulté), elle est transformée en tonneau. Sous forme de tonneau, la cible ne peut rien faire, mais son équipement peut toujours être trouvé à l’intérieur du tonneau lorsqu’il est ouvert. L’effet dure jusqu’à dissipation.
+Contrairement aux sorts de métamorphose inférieurs, Véritable métamorphose peut transformer une créature en objet inanimé. Si la cible échoue à un jet de sauvegarde de Vigueur avec +4 au Degré de Difficulté, elle est transformée en tonneau. Sous forme de tonneau, la cible ne peut rien faire, mais son équipement peut toujours être trouvé à l’intérieur du tonneau lorsqu’il est ouvert. L’effet dure jusqu’à dissipation.
 
 Si Véritable métamorphose est lancé sur une créature pétrifiée, il a pour effet le sort Transmutation de la pierre en chair.~
 @37952 	= ~Invisibilité parfaite~
@@ -5248,7 +5248,7 @@ Temps d’incantation : 10
 Zone d’effet : créatures aléatoires dans un rayon de 6 mètres (20 pieds)
 Jet de sauvegarde : Réflexes, 1/2 dégâts
 
-Éclair vivant est essentiellement un sort qui se lance de façon répétée. Lorsqu’il est lancé, un éclair jaillit du lanceur, ciblant un ennemi aléatoire dans un rayon de 6 mètres (20 pieds) (s’il n’y a pas d’ennemis dans un rayon de 6 mètres (20 pieds) du lanceur, rien ne se passe immédiatement). L’éclair inflige 10d8 dégâts, avec un jet de Réflexes à +4 DD (Degré de Difficulté) réussi pour réduire de moitié les dégâts. Par la suite, à chaque round durant la durée du sort, un autre éclair est lancé, sans nécessiter d’action supplémentaire du lanceur.~
+Éclair vivant est essentiellement un sort qui se lance de façon répétée. Lorsqu’il est lancé, un éclair jaillit du lanceur, ciblant un ennemi aléatoire dans un rayon de 6 mètres (20 pieds) (s’il n’y a pas d’ennemis dans un rayon de 6 mètres (20 pieds) du lanceur, rien ne se passe immédiatement). L’éclair inflige 10d8 dégâts, avec un jet de Réflexes à +4 au Degré de Difficulté réussi pour réduire de moitié les dégâts. Par la suite, à chaque round durant la durée du sort, un autre éclair est lancé, sans nécessiter d’action supplémentaire du lanceur.~
 @37955 	= ~Brouillard corrosif de Malavon~
 @38955 	= ~Brouillard corrosif de Malavon
 (Invocation)
@@ -5270,7 +5270,7 @@ Temps d’incantation : 5
 Zone d’effet : Spécial
 Jet de sauvegarde : Réflexes, 1/2 dégâts
 
-Ce sort enveloppe le lanceur dans une spirale de foudre, libérant des éclairs dans toutes les directions. Huit éclairs sont libérés par niveau du lanceur (quatre à la fois), chacun infligeant 1d8 dégâts électriques (jet de Réflexes à +4 DD (Degré de Difficulté) réussi pour réduire de moitié les dégâts). La Spirale de foudre inflige des dégâts nettement plus importants aux créatures proches du lanceur.~
+Ce sort enveloppe le lanceur dans une spirale de foudre, libérant des éclairs dans toutes les directions. Huit éclairs sont libérés par niveau du lanceur (quatre à la fois), chacun infligeant 1d8 dégâts électriques (jet de Réflexes à +4 au Degré de Difficulté réussi pour réduire de moitié les dégâts). La Spirale de foudre inflige des dégâts nettement plus importants aux créatures proches du lanceur.~
 
 @37957 	= ~Vision omnisciente de groupe~
 @38957 	= ~Vision omnisciente de groupe

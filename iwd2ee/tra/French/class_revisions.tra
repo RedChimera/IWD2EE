@@ -49,7 +49,7 @@ Prérequis : 5 niveaux de druide~
 @186	= ~Forme animale : Fatalité rampante~
 @187	= ~FORME ANIMALE, FATALITÉ RAMPANTE :
 
-Le druide acquiert la capacité de se transformer en une masse consciente de scarabées et d'insectes volants. Les insectes sont faciles à écraser et sont vulnérables au feu et à d'autres formes de dégâts magiques, mais les armes perforantes sont presque inutiles contre l'essaim. Le druide peut coordonner les insectes pour piquer ensemble, attaquant les adversaires à distance. Les créatures touchées doivent réussir un jet de sauvegarde de Volonté ou être distraites et recevoir 50% d'échec des sorts. Le DD du jet de sauvegarde de Volonté augmente en fonction du niveau du druide. Sous cette forme, le druide est en vol et donc protégé contre Graisse, Toile d'araignée, Enchevêtrement, Croissance d'épines, Rochers épineux et Tremblement de terre.
+Le druide acquiert la capacité de se transformer en une masse consciente de scarabées et d'insectes volants. Les insectes sont faciles à écraser et sont vulnérables au feu et à d'autres formes de dégâts magiques, mais les armes perforantes sont presque inutiles contre l'essaim. Le druide peut coordonner les insectes pour piquer ensemble, attaquant les adversaires à distance. Les créatures touchées doivent réussir un jet de sauvegarde de Volonté ou être distraites et recevoir 50% d'échec des sorts. Le Degré de Difficulté du jet de sauvegarde de Volonté augmente en fonction du niveau du druide. Sous cette forme, le druide est en vol et donc protégé contre Graisse, Toile d'araignée, Enchevêtrement, Croissance d'épines, Rochers épineux et Tremblement de terre.
 
 Prérequis : 5 niveaux de druide~
 @188	= ~Forme animale : Sylvanien~
@@ -139,13 +139,13 @@ Tant que cette capacité est active, vous gagnez une attaque supplémentaire par r
 En utilisant cette capacité, le prêtre peut faire fuir une ou plusieurs créatures mortes-vivantes en vue. Plus le niveau du prêtre et le bonus de Charisme sont élevés, plus le niveau des morts-vivants qu'il peut repousser est élevé. Si le prêtre est de beaucoup plus haut niveau que les morts-vivants, ils seront détruits (si le prêtre est d’alignement bon ou un adorateur neutre d'une divinité non maléfique) ou soumis au contrôle du prêtre (si le prêtre est maléfique, ou un adorateur neutre d'une divinité maléfique).~
 @227	= ~Forme animale : loup arctique
 
-Le druide se transforme en loup des glaces. Sous forme de loup des glaces, le druide est immunisé au froid et peut attaquer une fois par round avec le souffle glacé du loup des glaces, qui inflige 4d4 dégâts de froid (jet de Réflexes avec DD de 10 pour la moitié des dégâts). Tous les 5 niveaux par la suite, les dégâts du souffle augmentent de 2d4 et le DD du jet de sauvegarde augmente de 5.~
+Le druide se transforme en loup des glaces. Sous forme de loup des glaces, le druide est immunisé au froid et peut attaquer une fois par round avec le souffle glacé du loup des glaces, qui inflige 4d4 dégâts de froid (jet de Réflexes avec un Degré de Difficulté de 10 pour la moitié des dégâts). Tous les 5 niveaux par la suite, les dégâts du souffle augmentent de 2d4 et le Degré de Difficulté du jet de sauvegarde augmente de 5.~
 @228	= ~Forme animale : Ours polaire
 
 Le druide se transforme en ours polaire. Sous forme d'ours polaire, le druide gagne une attaque supplémentaire par round par rapport à sa forme naturelle. Tous les 3 niveaux par la suite, la forme d'ours polaire gagne +1 en Force, en Dextérité et en Constitution, et les dégâts de ses attaques augmentent.~
 @229	= ~Forme animale : Vipère géante
 
-Le druide se transforme en vipère géante. Sous forme de vipère géante, les attaques du Druide empoisonnent la cible, infligeant 2 dégâts par seconde pendant 6 secondes (jet de Vigueur avec DD de 15). Tous les 3 niveaux par la suite, la forme de vipère géante gagne +1 en Force, Dextérité et Constitution, +1 à la classe d’armre, et le DD (Degré de Difficulté) du jet de sauvegarde contre son poison augmente de 3.~
+Le druide se transforme en vipère géante. Sous forme de vipère géante, les attaques du Druide empoisonnent la cible, infligeant 2 dégâts par seconde pendant 6 secondes (jet de Vigueur avec un Degré de Difficulté de 15). Tous les 3 niveaux par la suite, la forme de vipère géante gagne +1 en Force, Dextérité et Constitution, +1 à la classe d’armre, et le Degré de Difficulté du jet de sauvegarde contre son poison augmente de 3.~
 @230	= ~Forme élémentaire : Salamandre
 
 Le druide se transforme en salamandre. Sous forme de salamandre, le Druide est immunisé au feu, vulnérable au froid, et émet une aura de chaleur extrême qui inflige 2d6 dégâts de feu aux créatures proches par round. Tous les 5 niveaux par la suite, les dégâts de l'aura de feu de la forme de salamandre augmentent de 1d6.~
@@ -154,7 +154,7 @@ Le druide se transforme en salamandre. Sous forme de salamandre, le Druide est i
 Le druide se transforme en salamandre de givre. Sous forme de salamandre de givre, le Druide est immunisé au froid, vulnénable au feu, et émet une aura de froid extrême qui inflige 2d6 dégâts de froid aux créatures proches par round. Tous les 5 niveaux par la suite, les dégâts de l'aura de froid de la forme de salamandre de givre augmentent de 1d6.~
 @232	= ~Forme animale : Tertre errant
 
-Le druide se transforme en tertre errant. Sous forme de tertre errant, le Druide est immunisé à l'électricité, résistant aux dégâts contondants, et a 50% de chance avec chaque attaque d'engloutir la cible (jet de Vigueur avec DD de 17), l'immobilisant, l'aveuglant et infligeant 3d4 dégâts supplémentaires pendant le round suivant. Tous les 3 niveaux par la suite, la forme de tertre errant gagne +1 en Force, +2 en Constitution, la chance d'engloutir augmente de 10%, et le DD (Degré de Difficulté) du jet de sauvegarde contre elle augmente de 3.~
+Le druide se transforme en tertre errant. Sous forme de tertre errant, le Druide est immunisé à l'électricité, résistant aux dégâts contondants, et a 50% de chance avec chaque attaque d'engloutir la cible (jet de Vigueur avec un Degré de Difficulté de 17), l'immobilisant, l'aveuglant et infligeant 3d4 dégâts supplémentaires pendant le round suivant. Tous les 3 niveaux par la suite, la forme de tertre errant gagne +1 en Force, +2 en Constitution, la chance d'engloutir augmente de 10%, et le Degré de Difficulté du jet de sauvegarde contre elle augmente de 3.~
 @233	= ~Forme élémentaire : Élémentaire de feu
 
 Le druide se transforme en élémentaire de feu. Sous forme d'élémentaire de feu, le druide est immunisé au feu, vulnérable au froid, et a une réduction des dégâts de 5/+1. Il a une attaque de moins par round par rapport à la forme naturelle du druide, mais il inflige des dégâts élevés par coup. Tous les 5 niveaux par la suite, la forme d'élémentaire de feu gagne +2 en Force, +1 en Dextérité, +2 en Constitution, les dégâts de ses attaques augmentent, et sa réduction des dégâts augmente (jusqu'à 10/+2, puis 15/+3, puis 20/+4).~
@@ -172,7 +172,7 @@ Le druide se transforme en élémentaire d'air. Sous forme d'élémentaire d'air, le
 Le druide se transforme en chien esquiveur. La forme de chien esquiveur n'est pas efficace en combat, mais le druide est sous l'effet de Clignotement (50% de chance d'éviter toute attaque physique dirigée contre lui), et il ou elle acquiert la capacité de se téléporter à volonté sur de courtes distances. La distance à laquelle le druide peut se téléporter en forme de chien esquiveur augmente en fonction du niveau.~
 @238	= ~Forme animale : Fatalité rampante
 
-Le druide se transforme en une masse consciente de scarabées et d'insectes volants. Les insectes sont faciles à écraser et sont vulnérables au feu et à d'autres formes de dégâts magiques, mais les armes perforantes sont presque inutiles contre l'essaim. Le druide peut coordonner les insectes pour piquer ensemble, attaquant les adversaires à distance. Les créatures touchées doivent réussir un jet de sauvegarde de Volonté ou être distraites et subir 50% d'échec des sorts. Le DD (Degré de Difficulté) du jet de sauvegarde de Volonté augmente en fonction du niveau du druide. Sous cette forme, le druide est en vol et donc protégé contre Graisse, Toile d'araignée, Enchevêtrement, Croissance d'épines, Pierres acérées et Séisme.~
+Le druide se transforme en une masse consciente de scarabées et d'insectes volants. Les insectes sont faciles à écraser et sont vulnérables au feu et à d'autres formes de dégâts magiques, mais les armes perforantes sont presque inutiles contre l'essaim. Le druide peut coordonner les insectes pour piquer ensemble, attaquant les adversaires à distance. Les créatures touchées doivent réussir un jet de sauvegarde de Volonté ou être distraites et subir 50% d'échec des sorts. Le Degré de Difficulté du jet de sauvegarde de Volonté augmente en fonction du niveau du druide. Sous cette forme, le druide est en vol et donc protégé contre Graisse, Toile d'araignée, Enchevêtrement, Croissance d'épines, Pierres acérées et Séisme.~
 @239	= ~Forme animale : Scarabée rhinocéros
 
 Le druide se transforme en un énorme scarabée rhinocéros. Sous cette forme, le druide a deux attaques de moins par round (minimum de 1), mais il gagne une résistance de 5/- aux dégâts physiques. Cette résistance augmente de 5/- tous les 5 niveaux, jusqu'à un maximum de 25/- au niveau 28.~
@@ -240,7 +240,7 @@ Vos capacités à mains nues sont particulièrement efficaces.
 
 Prérequis : Attaque étourdissante ou Saisie
 
-Avantage : Les capacités Saisie, Attaque étourdissante et Paume vibratoire gagnent +2 DD (Degré de Difficulté). Ce don peut être pris jusqu'à cinq fois.~
+Avantage : Les capacités Saisie, Attaque étourdissante et Paume vibratoire gagnent +2 au Degré de Difficulté. Ce don peut être pris jusqu'à cinq fois.~
 @313	= ~Kensai~
 @314	= ~KENSAI:
 
@@ -258,9 +258,9 @@ Vous êtes formé à renverser ou faire trébucher les ennemis en combat rapproché.
 
 Prérequis : Bonus de base à l'attaque de +6 ou plus
 
-Avantage : Vous gagnez une capacité qui vous permet de renverser ou faire trébucher une créature adjacente. La capacité peut être utilisée une fois par round. Si votre Dextérité est supérieure à votre Force, vous tentez de faire trébucher la cible, qui doit réussir un jet de sauvegarde de Réflexes (DD 5 + la moitié de votre bonus de base à l'attaque + votre modificateur de Dextérité) sous peine de tomber pendant 4 secondes. Si votre Force est supérieure à votre Dextérité, vous essayez de renverser votre cible, qui doit réussir un jet de sauvegarde de Vigueur (DD 5 + la moitié de votre bonus de base à l'attaque + votre modificateur de Force) sous peine de tomber pendant 4 secondes. Le DD (Degré de Difficulté) est réduit de 4 pour chaque tentative de renversement sur la cible dans les 10 derniers rounds. Ce DD est également réduit de 4 si la cible a plus de deux jambes ou est par nature plus stable qu'un humanoïde normal (un nain par exemple). Les créatures plus grandes que vous ne peuvent pas être renversées ou déséquilibrées. Le temps passé à effectuer cette capacité à pour conséquence une attaque de moins au round suivant.
+Avantage : Vous gagnez une capacité qui vous permet de renverser ou faire trébucher une créature adjacente. La capacité peut être utilisée une fois par round. Si votre Dextérité est supérieure à votre Force, vous tentez de faire trébucher la cible, qui doit réussir un jet de sauvegarde de Réflexes (Degré de Difficulté de 5 + la moitié de votre bonus de base à l'attaque + votre modificateur de Dextérité) sous peine de tomber pendant 4 secondes. Si votre Force est supérieure à votre Dextérité, vous essayez de renverser votre cible, qui doit réussir un jet de sauvegarde de Vigueur (Degré de Difficulté de 5 + la moitié de votre bonus de base à l'attaque + votre modificateur de Force) sous peine de tomber pendant 4 secondes. Le Degré de Difficulté est réduit de 4 pour chaque tentative de renversement sur la cible dans les 10 derniers rounds. Ce Degré de Difficulté est également réduit de 4 si la cible a plus de deux jambes ou est par nature plus stable qu'un humanoïde normal (un nain par exemple). Les créatures plus grandes que vous ne peuvent pas être renversées ou déséquilibrées. Le temps passé à effectuer cette capacité à pour conséquence une attaque de moins au round suivant.
 
-Ce don peut être pris deux fois. Lorsqu'il est pris une deuxième fois, le don devient Renversement amélioré, ce qui ajoute un bonus de +2 au DD (Degré de Difficulté), et permet de renverser ou faire trébucher des créatures d'une catégorie de taille supérieure (créatures dont le cercle a jusqu'à deux fois le rayon du vôtre).~
+Ce don peut être pris deux fois. Lorsqu'il est pris une deuxième fois, le don devient Renversement amélioré, ce qui ajoute un bonus de +2 au Degré de Difficulté, et permet de renverser ou faire trébucher des créatures d'une catégorie de taille supérieure (créatures dont le cercle a jusqu'à deux fois le rayon du vôtre).~
 @317	= ~Maîtrise des armures légères~
 @318	= ~MAÎTRISE DES ARMURES LÉGÈRES:
 
@@ -368,7 +368,7 @@ Votre rage de barbare est terrifiante à voir.
 
 Prérequis : Rage de grand berserker, Intimidation 18 ou plus
 
-Avantage : Pendant que vous êtes en rage, les ennemis dans un rayon de 1,8 mètres (6 pieds) autour de vous doivent réussir un jet de Volonté (DD 5 + 1/2 de votre compétence Intimidation) ou fuir pendant 3 rounds.~
+Avantage : Pendant que vous êtes en rage, les ennemis dans un rayon de 1,8 mètres (6 pieds) autour de vous doivent réussir un jet de Volonté (Degré de Difficulté de 5 + 1/2 de votre compétence Intimidation) ou fuir pendant 3 rounds.~
 @337	= ~Défense à Deux Armes~
 @338	= ~DÉFENSE À DEUX ARMES :
 
@@ -394,9 +394,9 @@ En combat au corps à corps, vous êtes doué pour utiliser la ruse afin de prendre
 
 Prérequis : Bluff 4 ou plus
 
-Avantage: Vous gagnez une capacité qui vous permet de feinter une créature adjacente. La capacité peut être utilisée une fois par round. La cible doit réussir un jet de sauvegarde de Volonté (DD 10 + votre compétence Bluff). Le DD est réduit de -4 pour toutes les fois où quelqu'un a essayé de feinter la cible au cours des 10 derniers rounds. En cas d'échec, pendant 4 secondes, la cible perd son bonus de Dextérité à la classe d’armure, et elle subit des pénalités supplémentaires à la classe d'armure et aux jets d'attaque égales à un tiers de votre compétence Bluff, arrondi à l'entier inférieur.
+Avantage: Vous gagnez une capacité qui vous permet de feinter une créature adjacente. La capacité peut être utilisée une fois par round. La cible doit réussir un jet de sauvegarde de Volonté (Degré de Difficulté de 10 + votre compétence Bluff). Le Degré de Difficulté est réduit de -4 pour toutes les fois où quelqu'un a essayé de feinter la cible au cours des 10 derniers rounds. En cas d'échec, pendant 4 secondes, la cible perd son bonus de Dextérité à la classe d’armure, et elle subit des pénalités supplémentaires à la classe d'armure et aux jets d'attaque égales à un tiers de votre compétence Bluff, arrondi à l'entier inférieur.
 
-Ce don peut être pris deux fois. Lorsqu'il est pris une deuxième fois, le don devient Feinte améliorée, qui vous permet de feinter en tant qu'action libre une fois par round. Après avoir feinté pour la première fois dans un round, vous pouvez utiliser une autre capacité ou lancer un sort avant la fin du round. Feinte améliorée ajoute également +2 au DD du jet de sauvegarde.~
+Ce don peut être pris deux fois. Lorsqu'il est pris une deuxième fois, le don devient Feinte améliorée, qui vous permet de feinter en tant qu'action libre une fois par round. Après avoir feinté pour la première fois dans un round, vous pouvez utiliser une autre capacité ou lancer un sort avant la fin du round. Feinte améliorée ajoute également +2 au Degré de Difficulté du jet de sauvegarde.~
 
 @343	= ~Attaque Tourbillon~
 @344	= ~ATTAQUE TOURBILLON :
@@ -611,7 +611,7 @@ Vous vous êtes entraîné en tant qu'assassin. Vous savez comment effectuer des at
 
 Prérequis : 1 niveau de roublard, Alchimie, Discrétion et Déplacement Silencieux 4 ou plus, alignement mauvais
 
-Avantage : Vos attaques sournoises deviennent des attaques mortelles, qui paralysent également la cible pendant un round en cas d'échec d’un jet de Vigueur (DD 10 + la moitié de votre niveau de roublard + votre modificateur de Dextérité).
+Avantage : Vos attaques sournoises deviennent des attaques mortelles, qui paralysent également la cible pendant un round en cas d'échec d’un jet de Vigueur (Degré de Difficulté de 10 + la moitié de votre niveau de roublard + votre modificateur de Dextérité).
 
 Vous gagnez également une utilisation de la capacité Arme empoisonnée. Prendre le don Arme empoisonnée vous donne une seconde utilisation de cette capacité.
 
@@ -643,8 +643,8 @@ Avantage : Même après avoir rempli les conditions initiales, vous devez prendre 
 * +8 de bonus à Discrétion, Déplacement Silencieux et Fouille.
 * Vous pouvez être repoussé, mais comptez comme 4 niveaux de plus contre les effets de repoussement.
 * Vous subissez des dégâts des sorts de soins et des potions de soins mais êtes soigné par les sorts de blessures.
-* Vos attaques à mains nues sont remplacées par une Attaque de la Liche, qui inflige 3d10+5 dégâts de froid et paralyse la cible pendant 10 rounds en cas d'échec du jet de sauvegarde (même DD que le sort Toucher de la Liche).
-* Vous êtes entouré d’une aura de peur ; tout ennemi dans un rayon de 6 mètres (20 pieds) qui est au moins de 5 niveaux inférieur à vous doit réussir un jet de sauvegarde de Volonté (DD 10 + modificateur de Charisme/Intelligence) ou fuir pendant 1 round.
+* Vos attaques à mains nues sont remplacées par une Attaque de la Liche, qui inflige 3d10+5 dégâts de froid et paralyse la cible pendant 10 rounds en cas d'échec du jet de sauvegarde (même Degré de Difficulté que le sort Toucher de la Liche).
+* Vous êtes entouré d’une aura de peur ; tout ennemi dans un rayon de 6 mètres (20 pieds) qui est au moins de 5 niveaux inférieur à vous doit réussir un jet de sauvegarde de Volonté (Degré de Difficulté de 10 + modificateur de Charisme/Intelligence) ou fuir pendant 1 round.
 * Vous gagnez un phylactère qui stocke votre force vitale. Si vous mourrez, vous serez automatiquement réanimé après 8 heures. Cependant, si tous les membres du groupe meurent, les ennemis détruiront votre phylactère et la partie sera terminée.~
 @390	= ~VOIE DE LA LICHE :
 
@@ -660,22 +660,22 @@ Avantage : Même après avoir rempli les conditions initiales, vous devez prendre 
 * +8 de bonus à Discrétion, Déplacement Silencieux et Fouille.
 * Vous pouvez être repoussé, mais comptez comme 4 niveaux de plus contre les effets de repoussement.
 * Vous subissez des dégâts des sorts de soins et des potions de soins mais êtes soigné par les sorts de blessures.
-* Vos attaques à mains nues sont remplacées par une Attaque de la Liche, qui inflige 3d10+5 dégâts de froid et paralyse la cible pendant 10 rounds en cas d'échec du jet de sauvegarde (même DD que le sort Toucher de la Liche).
-* Vous êtes entouré d’une aura de peur ; tout ennemi dans un rayon de 6 mètres (20 pieds) qui est au moins de 5 niveaux inférieur à vous doit réussir un jet de sauvegarde de Volonté (DD 10 + modificateur de Charisme/Intelligence) ou fuir pendant 1 round.
+* Vos attaques à mains nues sont remplacées par une Attaque de la Liche, qui inflige 3d10+5 dégâts de froid et paralyse la cible pendant 10 rounds en cas d'échec du jet de sauvegarde (même Degré de Difficulté que le sort Toucher de la Liche).
+* Vous êtes entouré d’une aura de peur ; tout ennemi dans un rayon de 6 mètres (20 pieds) qui est au moins de 5 niveaux inférieur à vous doit réussir un jet de sauvegarde de Volonté (Degré de Difficulté de 10 + modificateur de Charisme/Intelligence) ou fuir pendant 1 round.
 * Vous gagnez un phylactère qui stocke votre force vitale. Si vous mourrez, vous serez automatiquement réanimé après 8 heures. Cependant, si tous les membres du groupe meurent, les ennemis détruiront votre phylactère et la partie sera terminée.~
 @522	= ~Magicien~
 @523	= ~MAGICIEN :
 
 Le magicien est passé maître dans l'art de manipuler les énergies magiques et de les utiliser sous forme de sortilèges. Il doit pour cela étudier des langues ésotériques et des tomes obscurs, passant le plus clair de son temps à effectuer des recherches. La survie d'un magicien repose sur son intelligence et ses connaissances. Il part rarement à l'aventure sans être encadré par des guerriers ou des hommes d'armes. Il existe plusieurs écoles de magie qui forment donc différents types de magiciens. Toutefois, le généraliste étudie toutes les sortes de magie et a accès à une grande variété de sorts. C'est donc bien souvent un compagnon plein de ressources.
 
-Remarque : pour lancer un sort, le magicien doit avoir un niveau d'intelligence égal ou supérieur à celui du sort. L'intelligence est la caractéristique qui détermine chez les magiciens le niveau de magie maximal, le DD des jets de sauvegarde contre les sorts et le nombre de sorts supplémentaires.
+Remarque : pour lancer un sort, le magicien doit avoir un niveau d'intelligence égal ou supérieur à celui du sort. L'intelligence est la caractéristique qui détermine chez les magiciens le niveau de magie maximal, le Degré de Difficulté des jets de sauvegarde contre les sorts et le nombre de sorts supplémentaires.
 
 Points de vie par niveau : 1-4
 
 Avantages :
 * Compétent avec toutes les armes simples sauf les armes à projectiles.
 * Reçoit un don supplémentaire tous les 5 niveaux, en plus des dons normaux attribués à toutes les autres classes tous les 3 niveaux.
-* Si le personnage ne se spécialise pas dans une école de magie, il gagne un bonus de +1 au DD (Degré de Difficulté) de tous ses sorts.
+* Si le personnage ne se spécialise pas dans une école de magie, il gagne un bonus de +1 au Degré de Difficulté de tous ses sorts.
 * Apprend deux nouveaux sorts à chaque fois qu'il monte de niveau, et peut également apprendre des sorts à partir de parchemins.
 
 Désavantages :
@@ -721,7 +721,7 @@ Avantages :
 * Niveau 1 : Le Récit de Curran Strongheart. Lorsqu'il est joué, tous les alliés du barde gagnent +1 au jet d'attaque, +1 aux dégâts et une immunité à la peur et au désespoir. Les bonus d'attaque et de dégâts augmentent de 1 aux niveaux 10, 25 et 40.
 * Niveau 3 : La Chanson des Kaudies. Lorsqu'elle est jouée, les alliés du barde sont immunisés contre les sorts et capacités nuisibles basés sur le son, y compris Injonction, Silence, Injonction suprême, Mot de pouvoir : Sommeil, Explosion sonore, Cri, Mot de pouvoir : Silence, Mot de pouvoir étourdissant, Mot de pouvoir : Cécité, Grand Cri, Plainte d'outre-tombe, Mot de pouvoir : Mort, cri de harpie, et les effets réservés aux ennemis de Cantique, Prière et Récitation.
 * Niveau 5 : La Mélodie de Tymora. Lorsqu'elle est jouée, la Mélodie de Tymora donne aux alliés du barde +1 à la chance, +1 aux jets de sauvegarde et +2 à leurs compétences en Connaissances (Mystères), en Alchimie et en Roublardise. Aux niveaux 15 et 35, cette chanson accorde un +1 supplémentaire à la chance et aux jets de sauvegarde et +2 aux tests de compétence.
-* Niveau 9 : L'Appel de la Sirène. Lorsqu'il est joué, chaque créature qui entend la chanson subit une pénalité cumulative de -1 à ses jets de sauvegarde de Volonté pendant 10 rounds et doit réussir un jet de sauvegarde de Volonté ou être enchantée, incapable d'agir pendant un round ou jusqu'à ce qu'elle subisse des dégâts. Le DD (Degré de Difficulté) du jet de sauvegarde de Volonté est égal au niveau du barde. Ainsi, la chanson d'un barde de niveau 15 a un DD de 15.
+* Niveau 9 : L'Appel de la Sirène. Lorsqu'il est joué, chaque créature qui entend la chanson subit une pénalité cumulative de -1 à ses jets de sauvegarde de Volonté pendant 10 rounds et doit réussir un jet de sauvegarde de Volonté ou être enchantée, incapable d'agir pendant un round ou jusqu'à ce qu'elle subisse des dégâts. Le Degré de Difficulté du jet de sauvegarde de Volonté est égal au niveau du barde. Ainsi, la chanson d'un barde de niveau 15 a un Degré de Difficulté de 15.
 * Niveau 13 : Hymne guerrier de Sith. Lorsque le barde interprète ce chant, ses alliés gagnent un bonus générique de +2 à l’armure, 3/- de résistance aux dégâts et 3 points de vie sont régénérés par round de combat. Aux niveaux 28 et 45, cette chanson accorde des bonus supplémentaires de +2 à la classe d’armur, de résistance aux dégâts physiques de 3/- et de 3 points de vie soignés par round.
 * Niveau 20 : La Ballade des Trois Héros. Lorsqu'elle est jouée, les alliés du barde gagnent une résistance aux sorts de +5, une résistance de 5/- à toutes les formes de dégâts magiques, et les effets du Récit de Curran Strongheart, de la Mélodie de Tymora et de l’Hymne guerrier de Sith. Aux niveaux 30 et 50, cette chanson accorde en supplément une résistance aux sorts de +5 et une résistance de 5/- aux dégâts magiques.
 
@@ -737,7 +737,7 @@ Désavantages:
 
 Le prêtre a pour devoir de répondre aux soins spirituels d’une communauté. C’est un protecteur et un guérisseur, même s’il n’est pas uniquement défensif.
 
-REMARQUE : la sagesse est la caractéristique qui affecte chez les prêtres le niveau de magie maximal, le DD des jets de sauvegarde contre les sorts et le nombre de sorts supplémentaires.
+REMARQUE : la sagesse est la caractéristique qui affecte chez les prêtres le niveau de magie maximal, le Degré de Difficulté des jets de sauvegarde contre les sorts et le nombre de sorts supplémentaires.
 
 Points de vie par niveau : 1-8
 
@@ -768,7 +768,7 @@ Inconvénients :
 
 Le druide sert la cause de la nature et de la neutralité ; il vit en osmose avec sa communauté. Il utilise ses pouvoirs spéciaux pour se protéger et préserver l’équilibre du monde.
 
-REMARQUE : la sagesse est la caractéristique qui détermine chez les druides le niveau de magie maximal, le DD des jets de sauvegarde contre les sorts et le nombre de sorts supplémentaires.
+REMARQUE : la sagesse est la caractéristique qui détermine chez les druides le niveau de magie maximal, le Degré de Difficulté des jets de sauvegarde contre les sorts et le nombre de sorts supplémentaires.
 
 Points de vie par niveau : 1-8
 
@@ -777,15 +777,15 @@ Avantages :
 * Les druides peuvent lancer de puissants sorts offensifs et de soins.
 * Niveau 2 : Déplacement facilité en forêt. Le druide devient immunisé aux sorts Enchevêtrement, Toile d'araignée et Croissance d'épines.
 * Au niveau 5, les druides commencent à obtenir les capacités de Forme animale, qui leur permettent de se transformer en animaux, bêtes magiques, élémentaires et autres formes. À des niveaux plus élevés, les druides obtiennent des options supplémentaires pour les formes et peuvent utiliser la Forme animale plusieurs fois par jour.
-* Niveau 5 : Forme animale : loup arctique. Le druide gagne la capacité de se transformer en loup des glaces. En forme de loup des glaces, le druide est immunisé au froid et peut attaquer une fois par round avec le souffle givré du loup des glaces, infligeant 4d4 points de dégâts de froid (Jet de Réflexes de DD 10 pour la moitié des dégâts). Tous les 5 niveaux suivants, les dégâts du souffle augmentent de 2d4 et le DD du jet de sauvegarde augmente de 5.
+* Niveau 5 : Forme animale : loup arctique. Le druide gagne la capacité de se transformer en loup des glaces. En forme de loup des glaces, le druide est immunisé au froid et peut attaquer une fois par round avec le souffle givré du loup des glaces, infligeant 4d4 points de dégâts de froid (Jet de Réflexes de Degré de Difficulté de 10 pour la moitié des dégâts). Tous les 5 niveaux suivants, les dégâts du souffle augmentent de 2d4 et le Degré de Difficulté du jet de sauvegarde augmente de 5.
 * Niveau 5 : Le druide est d'un niveau suffisant pour choisir deux dons spéciaux : Forme animale : Chien esquiveur, et Forme animale : fatalité rampante.
 * Niveau 7 : Forme animale : ours polaire. En forme d'ours polaire, le druide gagne une attaque supplémentaire par round par rapport à sa forme naturelle. Tous les 3 niveaux suivants, la forme d'ours polaire gagne +1 en Force, Dextérité et Constitution, et ses dégâts d'attaque augmentent.
 * Niveau 8 : Le druide est d'un niveau suffisant pour choisir un autre don spécial : Forme animale : Scarabée rhinocéros.
-* Niveau 9 : Forme animale : vipère géante. Sous forme de vipère géante, les attaques du Druide empoisonnent la cible, infligeant 2 dégâts par seconde pendant 6 secondes (jet de Vigueur avec DD de 15). Tous les 3 niveaux par la suite, la forme de vipère géante gagne +1 en Force, Dextérité et Constitution, +1 à la classe d’armre, et le DD (Degré de Difficulté) du jet de sauvegarde contre son poison augmente de 3.
+* Niveau 9 : Forme animale : vipère géante. Sous forme de vipère géante, les attaques du Druide empoisonnent la cible, infligeant 2 dégâts par seconde pendant 6 secondes (jet de Vigueur avec un Degré de Difficulté de 15). Tous les 3 niveaux par la suite, la forme de vipère géante gagne +1 en Force, Dextérité et Constitution, +1 à la classe d’armre, et le Degré de Difficulté du jet de sauvegarde contre son poison augmente de 3.
 * Niveau 9 : Immunité au poison. Le druide devient immunisé à toutes les formes de poison.
 * Niveau 11 : Forme élémentaire : salamandre. En forme de salamandre, le druide est immunisé au feu, vulnérable au froid, et rayonne d’une aura de chaleur extrême qui inflige 2d6 points de dégâts de feu aux créatures proches par round. Tous les 5 niveaux suivants, les dégâts de l'aura de feu de la forme de salamandre augmentent de 1d6.
 * Niveau 11 : Forme élémentaire : Salamandre de givre. En forme de salamandre de givre, le druide est immunisé au froid, vulnérable au feu, et rayonne d’une aura de froid extrême qui inflige 2d6 points de dégâts de froid aux créatures proches par round. Tous les 5 niveaux suivants, les dégâts de l'aura de froid de la forme de salamandre de givre augmentent de 1d6.
-* Niveau 13 : Forme animale : tertre errant. Sous forme de tertre errant, le Druide est immunisé à l'électricité, résistant aux dégâts contondants, et a 50% de chance avec chaque attaque d'engloutir la cible (jet de Vigueur avec DD de 17), l'immobilisant, l'aveuglant et infligeant 3d4 dégâts supplémentaires pendant le round suivant. Tous les 3 niveaux par la suite, la forme de tertre errant gagne +1 en Force, +2 en Constitution, la chance d'engloutir augmente de 10%, et le DD (Degré de Difficulté) du jet de sauvegarde contre elle augmente de 3.
+* Niveau 13 : Forme animale : tertre errant. Sous forme de tertre errant, le Druide est immunisé à l'électricité, résistant aux dégâts contondants, et a 50% de chance avec chaque attaque d'engloutir la cible (jet de Vigueur avec un Degré de Difficulté de 17), l'immobilisant, l'aveuglant et infligeant 3d4 dégâts supplémentaires pendant le round suivant. Tous les 3 niveaux par la suite, la forme de tertre errant gagne +1 en Force, +2 en Constitution, la chance d'engloutir augmente de 10%, et le Degré de Difficulté du jet de sauvegarde contre elle augmente de 3.
 * Niveau 15 : Forme élémentaire : Élémentaire de feu. Sous forme d'élémentaire de feu, le druide est immunisé au feu, vulnérable au froid, et a une réduction des dégâts de 5/+1. Il a une attaque de moins par round par rapport à la forme naturelle du druide, mais il inflige des dégâts élevés par coup. Tous les 5 niveaux par la suite, la forme d'élémentaire de feu gagne +2 en Force, +1 en Dextérité, +2 en Constitution, les dégâts de ses attaques augmentent, et sa réduction des dégâts augmente (jusqu'à 10/+2, puis 15/+3, puis 20/+4).
 * Niveau 15 : Forme élémentaire : Élémentaire de terre. Sous forme d'élémentaire de terre, le druide a une résistance aux dégâts physiques de 5/- ainsi qu'une réduction des dégâts de 5/+1. Il a une attaque de moins par round par rapport à la forme naturelle du druide, mais il inflige des dégâts élevés par coup. De plus, chaque fois que le druide est sur un sol en pierre, il peut s'y enfouir pour éviter les attaques et en sortir pour attaquer ou lancer un sort. Tous les 5 niveaux par la suite, la forme d'élémentaire de terre gagne +2 en Force, +1 en Dextérité, +2 en Constitution, les dégâts de ses attaques augmentent, et sa réduction des dégâts augmente (jusqu'à 10/+2, puis 15/+3, puis 20/+4).
 * Niveau 15 : Forme élémentaire : Élémentaire d'eau. Sous forme d'élémentaire d'eau, le druide est immunisé au feu et à l'acide, vulnérable à l'électricité, et a une réduction des dégâts de 5/+1. Il a une attaque de moins par round par rapport à la forme naturelle du druide, mais il inflige des dégâts élevés par coup. Tous les 5 niveaux par la suite, la forme d'élémentaire d'eau gagne +2 en Force, +1 en Dextérité, +2 en Constitution, les dégâts de ses attaques augmentent, et sa réduction des dégâts augmente (jusqu'à 10/+2, puis 15/+3, puis 20/+4).
@@ -848,7 +848,7 @@ Niveau 17+ : 1d8+5
 * Ki : Au niveau 5, l'attaque à mains nues du moine est imprégnée de ki, et gagne un enchantement de +1 avec des bonus correspondants à l'attaque et aux dégâts. Ce bonus d'enchantement augmente de +1 tous les 3 niveaux après le niveau 5, jusqu'à +5 au niveau 17.
 * La classe d'armure naturelle d'un moine commence à 10 et augmente d'un point au niveau 5, puis d'un point supplémentaire tous les 5 niveaux.
 * Lorsqu'un moine ne porte pas d'armure (les robes sont acceptées), il peut ajouter son bonus de Sagesse à sa classe d’armure, comme pour son bonus de Dextérité. Si le moine change de forme, il ne bénéficiera de cet avantage que si son niveau de moine est supérieur ou égal au niveau minimum requis pour se transformer en cette forme.
-* Attaques Étourdissantes : Lorsque cette capacité est utilisée, toutes les attaques à mains nues du moine au prochain round forcent la victime à effectuer un jet de sauvegarde de Vigueur (DD 10 + modificateur de Sagesse + moitié du niveau du moine) ou être étourdie pour 1 round. Un moine peut porter une attaque étourdissante par jour et par niveau.
+* Attaques Étourdissantes : Lorsque cette capacité est utilisée, toutes les attaques à mains nues du moine au prochain round forcent la victime à effectuer un jet de sauvegarde de Vigueur (Degré de Difficulté de 10 + modificateur de Sagesse + moitié du niveau du moine) ou être étourdie pour 1 round. Un moine peut porter une attaque étourdissante par jour et par niveau.
 * Esquive totale : un moine peut éviter les dégâts des sorts à zone d'effet. Pour ce faire, il doit réussir un jet de Réflexes contre un sort à zone d'effet autorisant la réduction des dégâts par jet de Réflexes.
 * 2ème niveau : Parade de projectiles. Le moine acquiert le don de Parade de projectiles, offrant un bonus de +1 aux jets contre les armes à projectiles. De plus, à chaque round, le moine bloque automatiquement la première instance de dégâts de projectiles qui aurait dû le toucher. Le moine doit avoir une main libre pour parer les projectiles de cette manière.
 * 3ème niveau : Déplacement accéléré. Le moine se déplace 3 mètres (10 pieds) plus vite qu'un personnage normal (la vitesse de déplacement normale est de 9 mètres (30 pieds)), mais seulement tant que le moine n'est pas encombré ou ne porte pas d'armure. Le moine gagne 3 mètres (10 pieds) de mouvement supplémentaires tous les 3 niveaux par la suite.
@@ -859,7 +859,7 @@ Niveau 17+ : 1d8+5
 * 10ème niveau : Pas chassé. Le moine peut se téléporter vers n'importe quel endroit en vue une fois par jour.
 * 11ème niveau : Corps de diamant. Le moine maîtrise parfaitement son propre métabolisme, au point d'être immunisé contre tous les poisons.
 * 13ème niveau :  me de diamant. Le moine acquiert la Résistance aux Sorts. Sa résistance à la magie est égale à son niveau + 10. Pour affecter le moine avec un sort, un lanceur de sorts doit obtenir la résistance à la magie du moine ou plus sur 1d20 + niveau du lanceur de sorts.
-* 15ème niveau : Paume vibratoire. Cette redoutable attaque permet au moine de provoquer des vibrations parfois fatales dans le corps d'une créature ennemie. La prochaine fois que le moine touche une créature avec une attaque à mains nues, la cible meurt à moins de réussir un jet de sauvegarde de Vigueur (DD 10 + modificateur de Sagesse + moitié du niveau du moine). Les créatures artificielles, les limons, les plantes, les élémentaires et les morts-vivants ne peuvent pas être affectés. Le moine obtient une utilisation supplémentaire de Paume vibratoire tous les 6 niveaux par la suite.
+* 15ème niveau : Paume vibratoire. Cette redoutable attaque permet au moine de provoquer des vibrations parfois fatales dans le corps d'une créature ennemie. La prochaine fois que le moine touche une créature avec une attaque à mains nues, la cible meurt à moins de réussir un jet de sauvegarde de Vigueur (Degré de Difficulté de 10 + modificateur de Sagesse + moitié du niveau du moine). Les créatures artificielles, les limons, les plantes, les élémentaires et les morts-vivants ne peuvent pas être affectés. Le moine obtient une utilisation supplémentaire de Paume vibratoire tous les 6 niveaux par la suite.
 * 19ème niveau : Désertion de l’âme. En utilisant cette capacité, le moine peut supporter un état éthéré pendant 5 rounds. Pendant qu’il est sous cette forme, le moine peut traverser les murs, et la moitié des attaques qui le touchent ne lui infligent aucun dégât physique. Les attaques à mains nues du moine ignorent les bonus d’armure et de bouclier.
 * 20ème niveau : Perfection de l'être. Le corps du moine dispose de compétences quasi surnaturelles qui en font une créature magique. Il est alors traité davantage comme une créature extraplanaire que comme un humanoïde. Par exemple, Charme-personne ne l'affecte plus. De plus, le moine obtient une réduction des dégâts de 20/+1. Cela signifie qu'il évite (par régénération instantanée) les 20 premiers points de dégâts infligés par toute attaque, sauf si elle est portée par une arme dotée d'un bonus d'altération de +1 (ou plus), par un sort ou par une forme d'énergie (feu, froid, etc.). De par son statut de créature extraplanaire, le moine de niveau 20 est sujet aux sorts qui repoussent les créatures enchantées (comme la Protection contre la Loi).
 
@@ -871,7 +871,7 @@ Désavantages :
 
 Un paladin est un guerrier intrépide et pur, un modèle de bonté et de loyauté. Comme le guerrier, le paladin est un homme de combat. Cependant, il vit pour des idéaux de droiture, de justice, d’honnêteté, de piété et de chevalerie. Il est un exemple vivant de ces vertus afin que les autres puissent profiter de ses actions et de son enseignement.
 
-REMARQUE : la Sagesse est la caractéristique qui détermine chez un paladin le niveau de magie maximal, le DD des jets de sauvegarde contre les sorts et le nombre de sorts supplémentaires.
+REMARQUE : la Sagesse est la caractéristique qui détermine chez un paladin le niveau de magie maximal, le Degré de Difficulté des jets de sauvegarde contre les sorts et le nombre de sorts supplémentaires.
 
 Points de vie par niveau : 1-10
 
@@ -894,7 +894,7 @@ Désavantages :
 
 Le rôdeur est un guerrier et un forestier. Il est adroit dans le maniement des armes et compétent dans l’observation et la connaissance de la nature. Il lui arrive souvent de protéger et de guider les voyageurs égarés et les honnêtes paysans. Pour vivre longtemps, un rôdeur doit être fort et connaître les voies de la nature.
 
-REMARQUE : La Sagesse est la caractéristique de lancement de sorts pour un rôdeur. Elle affecte le niveau de magie maximal, le DD des jets de sauvegarde contre les sorts et le nombre de sorts supplémentaires.
+REMARQUE : La Sagesse est la caractéristique de lancement de sorts pour un rôdeur. Elle affecte le niveau de magie maximal, le Degré de Difficulté des jets de sauvegarde contre les sorts et le nombre de sorts supplémentaires.
 
 Points de vie par niveau : 1-10
 
@@ -904,7 +904,7 @@ Avantages :
 * Sans armure ou avec une armure légère, les rôdeurs peuvent combattre avec deux armes comme s'ils possédaient les dons Ambidextrie et Combat à 2 armes.
 * 2ème niveau : Lancement de sorts. Les rôdeurs acquièrent la capacité de lancer des sorts.
 * 6ème niveau : Le rôdeur peut obtenir le don Attaque Tourbillon s'il remplit les conditions de Dextérité, en ignorant toutes les autres conditions.
-* 6ème niveau : Collets Naturels. Cette capacité pose un piège qui, lorsqu'il est déclenché par un ennemi, piège tous les ennemis dans un rayon de 6 mètres (20 pieds) pendant 5 rounds en cas d'échec au jet de sauvegarde de Réflexes. Le DD du jet est de 6 + la compétence Sens de la nature du rôdeur. Le rôdeur gagne une utilisation supplémentaire de Collets Naturels tous les 6 niveaux après le niveau 6.
+* 6ème niveau : Collets Naturels. Cette capacité pose un piège qui, lorsqu'il est déclenché par un ennemi, piège tous les ennemis dans un rayon de 6 mètres (20 pieds) pendant 5 rounds en cas d'échec au jet de sauvegarde de Réflexes. Le Degré de Difficulté du jet est de 6 + la compétence Sens de la nature du rôdeur. Le rôdeur gagne une utilisation supplémentaire de Collets Naturels tous les 6 niveaux après le niveau 6.
 * 7ème niveau : Déplacement facilité en forêt. Le rôdeur devient immunisé à Enchevêtrement, Toile et Croissance d'épines.
 * 9ème niveau : Le rôdeur peut obtenir les dons Combat à Deux Armes Amélioré et Feu Nourri, même s'il ne remplit pas les conditions préalables.
 * 15ème niveau : Le rôdeur peut obtenir les dons Combat à Deux Armes Amélioré et Feu Nourri une seconde fois, ce qu'aucune autre classe ne peut faire.
@@ -1035,8 +1035,8 @@ Avantages :
 Les membres de l'Ordre Ancien ne vénèrent aucune divinité spécifique, mais sont férus de débats philosophiques et d'introspection.
 
 Avantages :
-* 2ème niveau : Le moine ajoute de nouveau son bonus de Sagesse au DD (Degré de Difficulté) de l'Attaque étourdissante.
-* 18ème niveau : Le moine ajoute de nouveau son bonus de Sagesse au DD (Degré de Difficulté) de la Paume vibratoire.~
+* 2ème niveau : Le moine ajoute de nouveau son bonus de Sagesse au Degré de Difficulté de l'Attaque étourdissante.
+* 18ème niveau : Le moine ajoute de nouveau son bonus de Sagesse au Degré de Difficulté de la Paume vibratoire.~
 @564	= ~MOINE DE L'ORDRE DES ESTROPIÉS :
 
 Les membres de l'Ordre des Estropiés vénèrent Ilmater, le dieu de la souffrance. Ils s'efforcent de supporter la douleur de leur entraînement ainsi que de celle des autres.
@@ -1062,7 +1062,7 @@ Avantages :
 
 Les ensorceleurs pratiquent la magie et possèdent un don inné pour les sorts. On dit que le sang de puissantes créatures coule dans leurs veines et qu’ils seraient les descendants de dragons ayant pris une forme humanoïde. Quoi qu’il en soit, la magie des ensorceleurs repose davantage sur l’intuition que sur la logique. Leur connaissance des sorts est moins étendue et plus difficile à acquérir que celle des magiciens, mais ils peuvent en lancer plus souvent et n’ont pas besoin de les préparer à l’avance. Les ensorceleurs ne peuvent pas se spécialiser dans un domaine de magie, contrairement aux magiciens. Ce sont là les seules différences qui permettent de distinguer les ensorceleurs des magiciens.
 
-REMARQUE : un ensorceleur ne peut PAS apprendre les sorts sur des parchemins. Il choisit de nouveaux sorts à chaque niveau. Le charisme est la caractéristique la plus importante pour un ensorceleur : il affecte son niveau d’incantation, le DD de ses jets de sort et le nombre de sorts supplémentaires.
+REMARQUE : un ensorceleur ne peut PAS apprendre les sorts sur des parchemins. Il choisit de nouveaux sorts à chaque niveau. Le charisme est la caractéristique la plus importante pour un ensorceleur : il affecte son niveau d’incantation, le Degré de Difficulté de ses jets de sort et le nombre de sorts supplémentaires.
 
 Points de vie par niveau : 1-4
 
@@ -1377,7 +1377,7 @@ Vous avez appris l'art rarement enseigné de l’empoisonneur. Vous êtes formé pour
 
 Prérequis : 1 niveau de roublard, Alchimie 8 ou plus
 
-Avantage : Une fois par jour, vous pouvez enduire vos armes de poison. Pendant 5 rounds, chaque coup que vous portez avec une arme (y compris les armes de jet) empoisonnera la cible à moins qu'elle ne réussisse un jet de Vigueur (DD 6 + votre compétence en Alchimie). Si elle est empoisonnée, la cible subit 12 dégâts de poison sur les 6 secondes suivantes.~
+Avantage : Une fois par jour, vous pouvez enduire vos armes de poison. Pendant 5 rounds, chaque coup que vous portez avec une arme (y compris les armes de jet) empoisonnera la cible à moins qu'elle ne réussisse un jet de Vigueur (Degré de Difficulté de 6 + votre compétence en Alchimie). Si elle est empoisonnée, la cible subit 12 dégâts de poison sur les 6 secondes suivantes.~
 @701	= ~ATTAQUE HANDICAPANTE :
 
 Lorsque vous réalisez une attaque sournoise, vous êtes capable de porter un coup dévastateur qui affaiblit un ennemi.
@@ -1397,9 +1397,9 @@ Avantage : Permet au roublard de sacrifier 1d6 points de dégâts d'attaque sourno
 
 Bien que n'importe qui puisse attraper quelque chose, vous avez la faculté de saisir une créature hostile en plein combat.
 
-Avantage : Vous gagnez une capacité qui vous permet de saisir une créature adjacente. Cette capacité peut être utilisée une fois par round. La cible doit réussir un jet de Réflexes (DD 12 + la moitié de votre niveau + votre modificateur de Force ou de Dextérité (le plus élevé)) ou être saisi par vous pendant 2 rounds. Pendant ce temps, la créature subit une pénalité de -4 aux attaques, 50% de chances d'échouer ses incantations et ne peut pas s'éloigner de vous. Si vous vous déplacez, vous pouvez entraîner la créature avec vous.
+Avantage : Vous gagnez une capacité qui vous permet de saisir une créature adjacente. Cette capacité peut être utilisée une fois par round. La cible doit réussir un jet de Réflexes (Degré de Difficulté de 12 + la moitié de votre niveau + votre modificateur de Force ou de Dextérité (le plus élevé)) ou être saisi par vous pendant 2 rounds. Pendant ce temps, la créature subit une pénalité de -4 aux attaques, 50% de chances d'échouer ses incantations et ne peut pas s'éloigner de vous. Si vous vous déplacez, vous pouvez entraîner la créature avec vous.
 
-Pour pouvoir saisir, vous devez avoir au moins une main libre. Le DD du jet de sauvegarde augmente de +4 si vous avez les deux mains libres. Il diminue de -4 chaque fois que quelqu'un a essayé de saisir la cible au cours des 10 derniers rounds. Si vous saisissez un allié ou une créature paralysée, étourdie, endormie ou à terre, il n'y a pas de jet de sauvegarde. Les créatures plus grandes que vous ne peuvent pas être saisies.~
+Pour pouvoir saisir, vous devez avoir au moins une main libre. Le Degré de Difficulté du jet de sauvegarde augmente de +4 si vous avez les deux mains libres. Il diminue de -4 chaque fois que quelqu'un a essayé de saisir la cible au cours des 10 derniers rounds. Si vous saisissez un allié ou une créature paralysée, étourdie, endormie ou à terre, il n'y a pas de jet de sauvegarde. Les créatures plus grandes que vous ne peuvent pas être saisies.~
 
 @705	= ~SECRETS DES ARCANES :
 
@@ -1596,7 +1596,7 @@ Vous savez comment frapper les adversaires dans des zones vulnérables.
 
 Prérequis : Dex 13+, Sag 13+, bonus de base à l'attaque de +8 ou plus.
 
-Avantage : Lorsque vous attaquez avec Attaque Étourdissante, cela oblige un ennemi frappé par votre attaque à mains nues à réaliser un jet de Vigueur (DD 10 + la moitié de votre niveau + modificateur de Sag), en plus d'infliger des dégâts normalement. Si le défenseur échoue à son jet de sauvegarde, il est étourdi pendant 1 round. Un personnage déjà étourdi ne peut pas agir et sera touché automatiquement. Vous pouvez tenter une attaque étourdissante une fois par jour tous les quatre niveaux atteints.~
+Avantage : Lorsque vous attaquez avec Attaque Étourdissante, cela oblige un ennemi frappé par votre attaque à mains nues à réaliser un jet de Vigueur (Degré de Difficulté de 10 + la moitié de votre niveau + modificateur de Sag), en plus d'infliger des dégâts normalement. Si le défenseur échoue à son jet de sauvegarde, il est étourdi pendant 1 round. Un personnage déjà étourdi ne peut pas agir et sera touché automatiquement. Vous pouvez tenter une attaque étourdissante une fois par jour tous les quatre niveaux atteints.~
 @730	= ~ESQUIVE :
 
 Vous êtes passé maître dans l'art d'éviter les coups.
@@ -1762,7 +1762,7 @@ Avantages :
 * +4 au bonus d’esquive contre les géants.
 * +2 aux jets de sauvegarde contre les illusions.
 * +2 aux tests d'Alchimie.
-* Les sorts d'illusion du personnage bénéficient de +2 au DD (cumulable avec École de prédilection).
+* Les sorts d'illusion du personnage bénéficient de +2 au Degré de Difficulté (cumulable avec École de prédilection).
 
 Désavantages :
 * -2 en Force.
@@ -1788,7 +1788,7 @@ Avantages :
 * Connaissance de la pierre : bonus racial de +2 aux tests de Fouille.
 * Bonus racial de +2 aux tests de Discrétion, qui passe à +4 dans les zones sombres souterraines.
 * Vision dans le noir.
-* Les sorts d'illusion du personnage bénéficient de +2 au DD (cumulable avec École de prédilection).
+* Les sorts d'illusion du personnage bénéficient de +2 au Degré de Difficulté (cumulable avec École de prédilection).
 
 Désavantages :
 * -2 en Force.
@@ -1807,7 +1807,7 @@ Avantages :
 * Connaissance de la pierre : +2 bonus racial aux jets de Fouille sur les maçonneries spéciales (murs coulissants, portes secrètes, pièges et construction nouvelle).
 * Bonus racial de +2 aux jets de sauvegarde contre le poison.
 * Bonus racial de +2 aux jets de sauvegarde contre les sorts et les effets magiques.
-* Les tentatives de renversement contre les nains voient leur DD réduit de 4, car les nains sont particulièrement solides sur leurs appuis.
+* Les tentatives de renversement contre les nains voient leur Degré de Difficulté réduit de 4, car les nains sont particulièrement solides sur leurs appuis.
 * Bonus d'esquive de +4 contre les géants.
 * Bonus racial de +1 aux jets d'attaque contre les Orques et les Gobelinoïdes (gobelins, hobgobelins et gobelours).
 * Compétent avec les haches et les marteaux.
@@ -1829,7 +1829,7 @@ Avantages :
 * Connaissance de la pierre : bonus racial de +2 aux jets de Fouille sur les maçonneries spéciales (murs coulissants, portes secrètes, pièges et constructions nouvelles).
 * Bonus racial de +2 aux jets de sauvegarde contre le poison.
 * Bonus racial de +2 aux jets de sauvegarde contre les sorts et les effets magiques.
-* Les tentatives de renversement contre les nains voient leur DD réduit de 4, car les nains sont particulièrement solides sur leurs appuis.
+* Les tentatives de renversement contre les nains voient leur Degré de Difficulté réduit de 4, car les nains sont particulièrement solides sur leurs appuis.
 * Bonus d'esquive de +4 contre les géants.
 * Bonus racial de +1 aux jets d'attaque contre les aberrations (étranges créatures vivant dans l'Ombre-Terre).
 * Compétent avec les haches et les marteaux.
@@ -1851,7 +1851,7 @@ Avantages :
 * Bonus racial de +2 aux jets de sauvegarde contre le poison.
 * Bonus racial de +2 aux jets de sauvegarde contre les sorts et les effets magiques.
 * Bonus racial de +4 aux tests de Déplacement silencieux. Les Nains gris excellent dans l'art du déplacement furtif.
-* Les tentatives de renversement contre les nains voient leur DD réduit de 4, car les nains sont particulièrement solides sur leurs appuis.
+* Les tentatives de renversement contre les nains voient leur Degré de Difficulté réduit de 4, car les nains sont particulièrement solides sur leurs appuis.
 * Bonus d'esquive de +4 contre les géants.
 * Immunité contre la paralysie (toujours vulnérable aux attaques d'étourdissement).
 * Sort Invisibilité 1 fois par jour.
@@ -1906,7 +1906,7 @@ Un magicien qui se spécialise dans la magie qui protège, bloque ou bannit.
 
 Avantages :
 * Les abjurateurs peuvent mémoriser un sort supplémentaire par niveau de sort..
-* Les sorts d'Abjuration lancés par un abjurateur gagnent +2 DD.
+* Les sorts d'Abjuration lancés par un abjurateur gagnent +2 au Degré de Difficulté.
 * Les sorts de magicien d'Abjuration lancés par un abjurateur durent 20% plus longtemps.
 
 Désavantages :
@@ -1919,7 +1919,7 @@ Un magicien qui se spécialise dans la création de créatures et d'objets pour les
 
 Avantages :
 * Les invocateurs peuvent mémoriser un sort supplémentaire par niveau de sort.
-* Les sorts d'Invocation lancés par un invocateur gagnent +2 DD.
+* Les sorts d'Invocation lancés par un invocateur gagnent +2 au Degré de Difficulté.
 * Les sorts de magicien d'Invocation lancés par un invocateur durent 20% plus longtemps.
 
 Désavantages :
@@ -1932,7 +1932,7 @@ Un magicien qui se spécialise dans la détection et les magies de divination.
 
 Avantages :
 * Les divinateurs peuvent mémoriser un sort supplémentaire par niveau de sort.
-* Les sorts de Divination lancés par un divinateur gagnent +2 DD.
+* Les sorts de Divination lancés par un divinateur gagnent +2 au Degré de Difficulté.
 * Les sorts de magicien de Divination lancés par un divinateur durent 20% plus longtemps.
 
 Désavantages :
@@ -1945,7 +1945,7 @@ Un magicien spécialisé dans la manipulation de l'esprit des êtres sensibles.
 
 Avantages :
 * Les enchanteurs peuvent mémoriser un sort supplémentaire par niveau de sort.
-* Les sorts d'Enchantement lancés par un enchanteur gagnent +2 DD.
+* Les sorts d'Enchantement lancés par un enchanteur gagnent +2 au Degré de Difficulté.
 * Les sorts de magicien d'Enchantement lancés par un enchanteur durent 20% plus longtemps.
 
 Désavantages :
@@ -1958,7 +1958,7 @@ Un magicien qui se spécialise dans la manipulation de l'énergie et la création d
 
 Avantages :
 * Les évocateurs peuvent mémoriser un sort supplémentaire par niveau de sort.
-* Les sorts d'Évocation lancés par un évocateur gagnent +2 DD.
+* Les sorts d'Évocation lancés par un évocateur gagnent +2 au Degré de Difficulté.
 * Les sorts de magicien d'Évocation lancés par un évocateur durent 20% plus longtemps.
 
 Désavantages :
@@ -1971,7 +1971,7 @@ Un magicien qui se spécialise dans la création d'illusions pour confondre et tro
 
 Avantages :
 * Les illusionnistes peuvent mémoriser un sort supplémentaire par niveau de sort.
-* Les sorts d'Illusion lancés par un illusionniste gagnent +2 DD.
+* Les sorts d'Illusion lancés par un illusionniste gagnent +2 au Degré de Difficulté.
 * Les sorts de magicien d'Illusion lancés par un illusionniste durent 20% plus longtemps.
 
 Désavantages :
@@ -1984,7 +1984,7 @@ Un magicien qui se spécialise dans la magie liée à la mort.
 
 Avantages :
 * Les nécromanciens peuvent mémoriser un sort supplémentaire par niveau de sort.
-* Les sorts de Nécromancie lancés par un nécromancien gagnent +2 DD.
+* Les sorts de Nécromancie lancés par un nécromancien gagnent +2 au Degré de Difficulté.
 * Les sorts de magicien de Nécromancie lancés par un nécromancien durent 20% plus longtemps.
 
 Désavantages :
@@ -1997,7 +1997,7 @@ Un magicien qui se spécialise dans la magie qui altère la réalité physique.
 
 Avantages :
 * Les transmutateurs peuvent mémoriser un sort supplémentaire par niveau de sort.
-* Les sorts de Transmutation lancés par un transmutateur gagnent +2 DD.
+* Les sorts de Transmutation lancés par un transmutateur gagnent +2 au Degré de Difficulté.
 * Les sorts de magicien de Transmutation lancés par un transmutateur durent 20% plus longtemps.
 
 Désavantages :
@@ -2259,29 +2259,29 @@ Poids : 1~
 @940	= ~Les compétences représentent une variété d'aptitudes, et vous vous améliorez à mesure que vous montez de niveau. Vous avez reçu des points de compétence à distribuer parmi vos compétences.~
 @941	= ~Saisie
 
-Cette capacité peut être utilisée une fois par round. La cible doit faire un jet de sauvegarde de Réflexes (DD 12 + la moitié de votre niveau + votre modificateur de Force ou de Dextérité (le plus élevé des deux)) ou être saisie par vous pendant 2 rounds. Pendant qu'elle est saisie, la créature subit une pénalité de -4 aux attaques, 50% de chance d'échec pour les sorts, et ne peut pas s'éloigner de vous. Si vous vous déplacez, vous pouvez tirer la créature avec vous.
+Cette capacité peut être utilisée une fois par round. La cible doit faire un jet de sauvegarde de Réflexes (Degré de Difficulté de 12 + la moitié de votre niveau + votre modificateur de Force ou de Dextérité (le plus élevé des deux)) ou être saisie par vous pendant 2 rounds. Pendant qu'elle est saisie, la créature subit une pénalité de -4 aux attaques, 50% de chance d'échec pour les sorts, et ne peut pas s'éloigner de vous. Si vous vous déplacez, vous pouvez tirer la créature avec vous.
 
-Pour saisir, vous devez avoir au moins une main libre. Le jet de sauvegarde gagne +4 DD si vous avez les deux mains libres. Il obtient -4 DD pour chaque fois que quelqu'un a tenté de saisir la cible au cours des 10 derniers rounds. Si vous saisissez un allié ou une créature paralysée, étourdie, endormie ou renversée, il n'y a pas de jet de sauvegarde. Les créatures plus grandes que vous ne peuvent pas être saisies.~
+Pour saisir, vous devez avoir au moins une main libre. Le jet de sauvegarde gagne +4 au Degré de Difficulté si vous avez les deux mains libres. Il obtient -4 au Degré de Difficulté pour chaque fois que quelqu'un a tenté de saisir la cible au cours des 10 derniers rounds. Si vous saisissez un allié ou une créature paralysée, étourdie, endormie ou renversée, il n'y a pas de jet de sauvegarde. Les créatures plus grandes que vous ne peuvent pas être saisies.~
 @942	= ~Préparer des potions
 
 Cette capacité peut être utilisée une fois par round. Elle fait apparaître un menu qui vous permet de dépenser des ressources pour créer des potions. Tous les 2 points d'Alchimie au-dessus de 10, vous pouvez créer une plus grande variété de potions.~
 @943	= ~Arme empoisonnée
 
-Vous enduisez vos armes de poison. Pendant 5 rounds, chaque coup que vous portez avec n'importe quelle arme (y compris les armes à distance) empoisonne la cible à moins qu'elle ne réussisse un jet de Vigueur (DD 6 + votre compétence d'Alchimie). Si elle est empoisonnée, la cible subit 12 points de dégâts de poison sur les 6 secondes suivantes.~
+Vous enduisez vos armes de poison. Pendant 5 rounds, chaque coup que vous portez avec n'importe quelle arme (y compris les armes à distance) empoisonne la cible à moins qu'elle ne réussisse un jet de Vigueur (Degré de Difficulté de 6 + votre compétence d'Alchimie). Si elle est empoisonnée, la cible subit 12 points de dégâts de poison sur les 6 secondes suivantes.~
 @944	= ~Renversement
 
-Cette capacité peut être utilisée une fois par round. Si votre Dextérité est supérieure à votre Force, vous tentez de faire trébucher la cible, qui doit faire un jet de sauvegarde de Réflexes (DD 5 + la moitié de votre bonus d'attaque de base + votre modificateur de Dextérité) sous peine de tomber à terre pendant 4 secondes. Sinon, si votre Force est supérieure à votre Dextérité, vous essayez de renverser votre cible, qui doit faire un jet de sauvegarde de Vigueur (DD 5 + la moitié de votre bonus d'attaque de base + votre modificateur de Force) sous peine de tomber à terre pendant 4 secondes. Le DD est réduit de 4 à chaque fois que quelqu'un a tenté de renverser ou de faire trébucher la cible au cours des 10 derniers rounds. Il est également réduit de 4 si la cible a plus de deux jambes ou est autrement plus stable qu'un humanoïde normal (comme un nain). Les créatures plus grandes que vous ne peuvent pas être renversées ou déséquilibrées. Le temps nécessaire pour exécuter cette capacité vous fait perdre une attaque au round suivant.~
+Cette capacité peut être utilisée une fois par round. Si votre Dextérité est supérieure à votre Force, vous tentez de faire trébucher la cible, qui doit faire un jet de sauvegarde de Réflexes (Degré de Difficulté de 5 + la moitié de votre bonus d'attaque de base + votre modificateur de Dextérité) sous peine de tomber à terre pendant 4 secondes. Sinon, si votre Force est supérieure à votre Dextérité, vous essayez de renverser votre cible, qui doit faire un jet de sauvegarde de Vigueur (Degré de Difficulté de 5 + la moitié de votre bonus d'attaque de base + votre modificateur de Force) sous peine de tomber à terre pendant 4 secondes. Le Degré de Difficulté est réduit de 4 à chaque fois que quelqu'un a tenté de renverser ou de faire trébucher la cible au cours des 10 derniers rounds. Il est également réduit de 4 si la cible a plus de deux jambes ou est autrement plus stable qu'un humanoïde normal (comme un nain). Les créatures plus grandes que vous ne peuvent pas être renversées ou déséquilibrées. Le temps nécessaire pour exécuter cette capacité vous fait perdre une attaque au round suivant.~
 @945	= ~Feinte
 
-Cette capacité peut être utilisée une fois par round. La cible doit faire un jet de sauvegarde de Volonté (DD 10 + votre compétence de Bluff). Le DD est réduit de 4 chaque fois que quelqu'un a tenté de feinter la cible au cours des 10 derniers rounds. En cas d'échec, pendant 4 secondes, la cible perd son bonus de Dextérité à la classe d’armure et subit des pénalités supplémentaires à la classe d'armure et aux jets d'attaque égales à un tiers de votre compétence de Bluff, arrondies à l'inférieur.~
+Cette capacité peut être utilisée une fois par round. La cible doit faire un jet de sauvegarde de Volonté (Degré de Difficulté de 10 + votre compétence de Bluff). Le Degré de Difficulté est réduit de 4 chaque fois que quelqu'un a tenté de feinter la cible au cours des 10 derniers rounds. En cas d'échec, pendant 4 secondes, la cible perd son bonus de Dextérité à la classe d’armure et subit des pénalités supplémentaires à la classe d'armure et aux jets d'attaque égales à un tiers de votre compétence de Bluff, arrondies à l'inférieur.~
 @946	= ~Renversement amélioré~
 @947	= ~Renversement amélioré
 
-Cette capacité peut être utilisée une fois par round. Si votre Dextérité est supérieure à votre Force, vous tentez de faire trébucher la cible, qui doit faire un jet de sauvegarde de Réflexes (DD 7 + la moitié de votre bonus d'attaque de base + votre modificateur de Dextérité) sous peine de tomber à terre pendant 4 secondes. Sinon, si votre Force est supérieure à votre Dextérité, vous essayez de renverser votre cible, qui doit faire un jet de sauvegarde de Vigueur (DD 7 + la moitié de votre bonus d'attaque de base + votre modificateur de Force) sous peine de tomber à terre pendant 4 secondes. Le DD est réduit de 4 pour chaque fois que quelqu'un a tenté de renverser ou de faire trébucher la cible au cours des 10 derniers rounds. Il est également réduit de 4 si la cible a plus de deux jambes ou est autrement plus stable qu'un humanoïde normal (comme un nain). Les créatures plus grandes qu'une catégorie de taille par rapport à vous (dont le cercle est plus de deux fois plus grand que votre cercle) ne peuvent pas être renversées ou déséquilibrées. Le temps nécessaire pour exécuter cette capacité vous fait perdre une attaque au round suivant.~
+Cette capacité peut être utilisée une fois par round. Si votre Dextérité est supérieure à votre Force, vous tentez de faire trébucher la cible, qui doit faire un jet de sauvegarde de Réflexes (Degré de Difficulté de 7 + la moitié de votre bonus d'attaque de base + votre modificateur de Dextérité) sous peine de tomber à terre pendant 4 secondes. Sinon, si votre Force est supérieure à votre Dextérité, vous essayez de renverser votre cible, qui doit faire un jet de sauvegarde de Vigueur (Degré de Difficulté de 7 + la moitié de votre bonus d'attaque de base + votre modificateur de Force) sous peine de tomber à terre pendant 4 secondes. Le Degré de Difficulté est réduit de 4 pour chaque fois que quelqu'un a tenté de renverser ou de faire trébucher la cible au cours des 10 derniers rounds. Il est également réduit de 4 si la cible a plus de deux jambes ou est autrement plus stable qu'un humanoïde normal (comme un nain). Les créatures plus grandes qu'une catégorie de taille par rapport à vous (dont le cercle est plus de deux fois plus grand que votre cercle) ne peuvent pas être renversées ou déséquilibrées. Le temps nécessaire pour exécuter cette capacité vous fait perdre une attaque au round suivant.~
 @948	= ~Feinte améliorée~
 @949	= ~Feinte améliorée
 
-Cette capacité peut être utilisée une fois par round. La cible doit faire un jet de sauvegarde de Volonté (DD 12 + votre compétence de Bluff). Le DD est réduit de 4 chaque fois que quelqu'un a tenté de feinter la cible au cours des 10 derniers rounds. En cas d'échec, pendant 4 secondes, la cible perd son bonus de Dextérité à la classe d’armure et subit des pénalités supplémentaires à la classe d'armure et aux jets d'attaque égales à un tiers de votre compétence de Bluff, arrondies à l'inférieur. La feinte améliorée peut être utilisée comme une action libre une fois par round.~
+Cette capacité peut être utilisée une fois par round. La cible doit faire un jet de sauvegarde de Volonté (Degré de Difficulté de 12 + votre compétence de Bluff). Le Degré de Difficulté est réduit de 4 chaque fois que quelqu'un a tenté de feinter la cible au cours des 10 derniers rounds. En cas d'échec, pendant 4 secondes, la cible perd son bonus de Dextérité à la classe d’armure et subit des pénalités supplémentaires à la classe d'armure et aux jets d'attaque égales à un tiers de votre compétence de Bluff, arrondies à l'inférieur. La feinte améliorée peut être utilisée comme une action libre une fois par round.~
 @950	= ~Attaque Tourbillon
 
 Cette capacité peut être utilisée une fois par round. Vous faites une attaque avec chacune de vos armes contre tous les ennemis proches, renonçant à toutes les autres attaques pour le round. Le rayon de l'attaque dépend de la portée de votre arme.~
@@ -2351,16 +2351,16 @@ Cette capacité crée des ténèbres magiques dans la zone d'effet. Les créatures sa
 Cette capacité fait disparaître le personnage qui devient indétectable à la vision normale ou à l'infravision. Le sort reste actif jusqu'à ce que 10 minutes par niveau se soient écoulées ou tant qu’il n’est pas rompu ou dissipé par magie, à moins que le mage ou le bénéficiaire ne l'annule, que ce dernier n’attaque ou ne parle à une créature. L'être invisible peut ouvrir les portes, parler, manger, monter les escaliers, etc. Mais s'il attaque, il devient immédiatement visible, bien que l'invisibilité lui permette de porter le premier coup.~
 @973	= ~Collets Naturels
 
-Cette capacité place un piège qui, lorsqu'il est déclenché par un ennemi, piège tous les ennemis dans un rayon de 6 mètres (20 pieds) pendant 5 rounds en cas d'échec d'un jet de Réflexes. Le DD du jet de sauvegarde est de 6 plus la compétence Sens de la nature du rôdeur.~
+Cette capacité place un piège qui, lorsqu'il est déclenché par un ennemi, piège tous les ennemis dans un rayon de 6 mètres (20 pieds) pendant 5 rounds en cas d'échec d'un jet de Réflexes. Le Degré de Difficulté du jet de sauvegarde est de 6 plus la compétence Sens de la nature du rôdeur.~
 @974	= ~Attaques Dévastatrices
 
 Toutes les attaques infligent des dégâts maximaux pendant 5 rounds. Si vous avez 12 niveaux ou plus de guerrier, vous gagnez également un bonus d'attaque de +4 et une augmentation de la plage de critique de +4 pendant la durée de l'effet.~
 @975	= ~Attaque Étourdissante
 
-Lorsqu'elle est utilisée, toutes les attaques à mains nues du personnage au prochain round obligent la victime à réussir un jet de sauvegarde de Vigueur (DD 10 + modificateur de Sagesse + moitié du niveau de moine du personnage) sous peine d’être étourdie pendant 1 round.~
+Lorsqu'elle est utilisée, toutes les attaques à mains nues du personnage au prochain round obligent la victime à réussir un jet de sauvegarde de Vigueur (Degré de Difficulté de 10 + modificateur de Sagesse + moitié du niveau de moine du personnage) sous peine d’être étourdie pendant 1 round.~
 @976	= ~Paume Vibratoire
 
-Cette attaque terrifiante permet au moine de créer des vibrations à l'intérieur du corps d'une autre créature qui peuvent être fatales. La prochaine fois que le moine touche une créature avec une attaque à mains nues, la cible meurt à moins qu'elle ne réussisse un jet de sauvegarde de Vigueur (DD 10 + modificateur de Sagesse + moitié du niveau de moine). Les constructions et les morts-vivants ne peuvent pas être affectés.~
+Cette attaque terrifiante permet au moine de créer des vibrations à l'intérieur du corps d'une autre créature qui peuvent être fatales. La prochaine fois que le moine touche une créature avec une attaque à mains nues, la cible meurt à moins qu'elle ne réussisse un jet de sauvegarde de Vigueur (Degré de Difficulté de 10 + modificateur de Sagesse + moitié du niveau de moine). Les constructions et les morts-vivants ne peuvent pas être affectés.~
 @977	= ~Rage de Berserker
 
 En entrant en rage, le barbare gagne +4 en Force et Constitution (qui se cumulent avec d'autres bonus à la Force et à la Constitution), ainsi qu'une pénalité de -2 à la classe d’armure, +2 aux jets de sauvegarde de Volonté, et une immunité contre la peur, l'étourdissement, le sommeil, la confusion, l'inconscience, la paralysie, la débilité et le désespoir. La rage dure 3 rounds + un nombre de rounds égal au bonus de Constitution (nouvellement augmentée) du barbare. Après la rage, le barbare sera fatigué pendant trois rounds, ce qui lui donne une pénalité de -2 en Force et en Dextérité.~
@@ -2497,7 +2497,7 @@ Poids : 1 lb (0,45 kg)
 @4722 	= ~Huile Enflammée~
 @4723 	= ~Simple à fabriquer mais coûteuse à produire, ce mélange de poudre noire, d'huile et gaz hautement raffinés s'enflamme lorsqu'il se brise contre une cible. Dès que la bouteille touche le sol, une petite capsule de sodium pur et une autre capsule d'eau s'ouvrent. Le sodium prend feu au contact de l'eau, enflammant le reste du mélange.
 
-Une faible grenade à l'intérieur de la bouteille provoque alors une expansion rapide de l'huile enflammée, répandant la flamme sur toutes les créatures dans un rayon de 30 pieds (9 mètres). Toute personne prise dans l'explosion subira 4d6 points de dégâts avec un jet de Réflexes (DD 15) pour la moitié des dégâts.
+Une faible grenade à l'intérieur de la bouteille provoque alors une expansion rapide de l'huile enflammée, répandant la flamme sur toutes les créatures dans un rayon de 30 pieds (9 mètres). Toute personne prise dans l'explosion subira 4d6 points de dégâts avec un jet de Réflexes (Degré de Difficulté de 15) pour la moitié des dégâts.
 
 STATISTIQUES :
 
@@ -2555,7 +2555,7 @@ Poids : 1 lb (0,45 kg)
 
 STATISTIQUES :
 
-12d4 dégâts de poison, jet de sauvegarde de Vigueur pour la moitié
+12d4 dégâts de poison, jet de sauvegarde de Vigueur pour la moitié des dégâts
 Poids : 1 lb (0,45 kg)
 ~
 @4736 	= ~Liqueur Trouble~
@@ -2843,6 +2843,8 @@ STATISTIQUES :
 Flot de vipères pour 6 rounds
 Poids : 1 lb (0,45 kg)
 ~
+
+
 
 
 
