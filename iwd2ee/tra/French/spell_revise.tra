@@ -3,7 +3,7 @@
 
 @1000 = ~Funeste destin~
 @1001 = ~Funeste destin
-(Enchantement) 
+(Enchantement)
 Niveau : Prê 1, Talos 1, Barde 2
 Portée : Vue du lanceur de sorts
 Durée : 10 rounds / niveau
@@ -14,24 +14,24 @@ Jet de sauvegarde : Aucun
 Ce sort provoque un sentiment de malheur qui submerge la cible. Pendant toute la durée du sort, la cible reçoit un malus de -2 au bonus d’attaque et aux jets de sauvegarde.~
 @1002 = ~Cantique~
 @1003 = ~Cantique
-(Invocation) 
+(Invocation)
 Niveau : Prê 2, Tempus 2
 Portée : Lanceur
 Durée : 10 rounds
-Temps d’incantation : 1 round 
+Temps d’incantation : 1 round
 Zone d’effet : rayon de 9 mètres (30 pieds)
-Jet de sauvegarde : Aucun 
+Jet de sauvegarde : Aucun
 
 Cantique permet au prêtre d’attirer une faveur spéciale sur lui-même et ses compagnons, tout en nuisant à ses ennemis. Grâce à ce sort, tous les alliés du prêtre compris dans la zone d’effet bénéficient d’un bonus de +1 aux jets d’attaque, de dégâts et de sauvegarde, tandis que ses ennemis, eux, subissent un malus de –1 aux mêmes jets. Plusieurs Cantiques ne sont pas cumulables. Le sort requiert une certaine concentration de la part du prêtre dont la vitesse de déplacement est réduite de moitié.~
 @1004 = ~Baie magique~
 @1005 = ~Baie magique
-(Transmutation) 
+(Transmutation)
 Niveau : Dru 1
 Portée : Lanceur
 Durée : 1 jour / niveau
-Temps d’incantation : 1 
+Temps d’incantation : 1
 Zone d’effet : 4 grappes
-Jet de sauvegarde : Aucun 
+Jet de sauvegarde : Aucun
 
 Ce sort crée 4 grappes de baies magiques que le personnage peut transporter ou donner à un allié. Chacune d’elles soigne 1d4+5 points de vie quand on les mange. Les baies ne se conservent qu’un jour par niveau du lanceur, il est donc préférable de ne pas les conserver trop longtemps.~
 @1006 = ~Bouclier mental~
@@ -42,22 +42,22 @@ Portée : Vue du lanceur de sorts
 Durée : 5 tours
 Temps d’incantation : 2
 Zone d’effet : 1 créature
-Jet de sauvegarde : Aucun 
+Jet de sauvegarde : Aucun
 
 Ce sort confère un bonus de +3 aux jets de Volonté et une immunité aux effets de charme et d’étourdissement pendant toute la durée du sort.~
 @1008 = ~Carapace de tortue~
 @1009 = ~Carapace de tortue
-(Abjuration) 
+(Abjuration)
 Niveau : Dru 3, Rôd 3
 Portée : Vue du lanceur de sorts
 Durée : 4 rounds
 Temps d’incantation : 2
 Zone d’effet : 1 créature
-Jet de sauvegarde : Aucun 
+Jet de sauvegarde : Aucun
 
 Une carapace rigide ressemblant à celle d’une tortue se forme autour du sujet, lequel se retrouve alors complètement isolé du monde extérieur (il ne peut plus rien faire, mais plus personne ne peut non plus l’affecter). La carapace a 50 points de vie, plus 50 points de vie supplémentaires tous les 10 niveaux atteints par le druide. L’écaille de tortue ne peut affecter que les alliés.~
 @1010 = ~Cercle d’ossements~
-@1011 = ~Cercle d’ossements 
+@1011 = ~Cercle d’ossements
 (Nécromancie)
 Niveau : Prê 3
 Portée : Lanceur
@@ -68,7 +68,7 @@ Jet de sauvegarde : Aucun
 
 Ce sort fait apparaître une barrière d’ossements tourbillonnants autour du prêtre. Quiconque tente de la franchir subit 2d6 points de dégâts contondants plus 2d6 points de dégâts tranchants par round. Ce sort ne provoque pas d’attaque d’opportunité.~
 @1012 = ~Moisissure~
-@1013 = ~Moisissure 
+@1013 = ~Moisissure
 (Transmutation)
 Niveau : Dru 3
 Portée : Contact
@@ -91,7 +91,7 @@ Si le jet de sauvegarde est réussi, les dégâts sont réduits :
 
 Chaque round après le premier, la créature la plus proche dans un rayon de 3 mètres doit réussir un jet de Vigueur sous peine d’être contaminée à son tour. Le processus se poursuit jusqu’à ce que la moisissure soit incapable d’infecter un nouvel hôte dans le temps imparti. Les créatures déjà affectées ne peuvent l’être une nouvelle fois. La moisissure brune disparaît rapidement au terme de la durée du sort. Ce sort ne provoque pas d’attaque d’opportunité.~
 @1014 = ~Harmonie défensive~
-@1015 = ~Harmonie défensive 
+@1015 = ~Harmonie défensive
 (Enchantement) [Loi]
 Niveau : Prê 4, Pal 4,  Heaum 4
 Portée : Lanceur
@@ -102,8 +102,8 @@ Jet de sauvegarde : Aucun
 
 L’harmonie défensive permet à un groupe de créatures d’agir comme une seule unité pour une seule bataille ou rencontre, améliorant ainsi la coordination de leurs attaques et tactiques. Cet effet est toujours centré sur le lanceur mais affecte tous ceux qui se trouvent dans un rayon de 3 mètres. Tout le monde peut s’éloigner une fois l’incantation achevée, sans pour autant perdre le bénéfice du sort. Tant que le sort est actif, chaque créature affectée bénéficie d’un bonus générique de +4 à la classe d’armure. Le sort dure pendant 6 rounds, à moins qu’il ne soit dissipé prématurément.~
 @1016 = ~Empoisonnement~
-@1017 = ~Empoisonnement 
-(Nécromancie) 
+@1017 = ~Empoisonnement
+(Nécromancie)
 Niveau : Prê 4, Dru 3
 Portée : Contact
 Durée : 30 secondes
@@ -113,7 +113,7 @@ Jet de sauvegarde : la Vigueur annule
 
 Ce sort donne au lanceur la possibilité de toucher une créature et de l’empoisonner instantanément. Le poison inflige 2 dégâts par seconde pendant 30 secondes, puis se dissipe du corps de la cible. Tous les 6 niveaux de lanceur de sorts, le poison inflige un point de dégâts supplémentaire par seconde, jusqu’à un maximum de 7 dégâts par seconde au niveau 30. Un jet de sauvegarde de Vigueur réussie annule tout effet. Ce sort ne provoque pas d’attaque d’opportunité.~
 @1018 = ~Bouclier de Lathandre~
-@1019 = ~Bouclier de Lathandre 
+@1019 = ~Bouclier de Lathandre
 (Invocation) [Bon]
 Niveau : Prê 4, Pal 4, Lathandre 4
 Portée : Contact
@@ -124,7 +124,7 @@ Jet de sauvegarde : Aucun
 
 Ce sort confère à la cible un bonus de résistance aux dégâts de 15/- aux dégâts contondants, tranchants, perçants, de feu, de froid, d’acide et d’électricité pendant toute la durée du sort.~
 @1020 = ~Vague destructrice~
-@1021 = ~Vague destructrice 
+@1021 = ~Vague destructrice
 (Évocation)
 Niveau : Dru 5, Rôd 5
 Portée : 12 mètres (40 pieds)
@@ -146,7 +146,7 @@ Jet de sauvegarde : Réflexes, 1/2 dégâts
 
 Ce sort invoque un mur de lames acérées tournoyantes autour du mage, créant ainsi une barrière de protection. Toute créature tentant de franchir ce mur de lames subit 10d8 points de dégâts. Un jet de Réflexes réussi réduit les dégâts de moitié. Ce sort ne provoque pas d’attaque d’opportunité.~
 @1024 = ~Colère spirituelle~
-@1025 = ~Colère spirituelle 
+@1025 = ~Colère spirituelle
 (Évocation)
 Niveau : Prê 6, Pal 6, Heaum 7, Tempus 6
 Portée : Vue du lanceur de sorts
@@ -155,9 +155,9 @@ Temps d’incantation : 2
 Zone d’effet : Spéciale
 Jet de sauvegarde : Réflexes, 1/2 dégâts
 
-À la fin de ce sort, le lanceur de sorts devient un foyer d’énergie spirituelle, qui jaillit ensuite du lanceur dans quatre directions, comme des éclairs. Le lanceur précise la direction de l’un des éclairs et les autres éclairs partent à l’opposé et perpendiculairement à cette direction, complétant ainsi un motif en forme de croix. Toutes les créatures sur le chemin des éclairs subissent 5d20 points de dégâts magiques, avec un jet de Réflexes pour la moitié. des dégâts. Les créatures du même alignement moral (bon, neutre, mauvais) que le lanceur ne sont pas affectées par le sort. Ce sort ne provoque pas d’attaque d’opportunité.~
+À la fin de ce sort, le lanceur de sorts devient un foyer d’énergie spirituelle, qui jaillit ensuite du lanceur dans quatre directions, comme des éclairs. Le lanceur précise la direction de l’un des éclairs et les autres éclairs partent à l’opposé et perpendiculairement à cette direction, complétant ainsi un motif en forme de croix. Toutes les créatures sur le chemin des éclairs subissent 5d20 points de dégâts magiques, avec un jet de Réflexes pour la moitié des dégâts. Les créatures du même alignement moral (bon, neutre, mauvais) que le lanceur ne sont pas affectées par le sort. Ce sort ne provoque pas d’attaque d’opportunité.~
 @1026 = ~Tourbillon~
-@1027 = ~Tourbillon 
+@1027 = ~Tourbillon
 (Évocation)
 Niveau : Dru 8, Talos 6
 Portée : Vue du lanceur de sorts
@@ -168,7 +168,7 @@ Jet de sauvegarde : Réflexes, partiel
 
 Ce sort génère un petit tourbillon à proximité du personnage, qui peut l’envoyer n’importe où dans son champ de vision. Une fois que le tourbillon atteint sa destination, le lanceur perd le contrôle et le tourbillon vole au hasard, blessant aussi bien ses amis que ses ennemis. Le lanceur est immunisé contre son propre sort. Si une créature est prise sur le chemin du tourbillon, elle subit 3d8 de dégâts contondants, 3d8 de dégâts tranchants et doit réussir un jet de Réflexe sous peine d’être étourdie pendant 5 rounds. Ce sort contourne la résistance à la magie.~
 @1028 = ~Séisme~
-@1029 = ~Séisme 
+@1029 = ~Séisme
 (Transmutation)
 Niveau : Dru 8,  Ens/Mag 9, Talos 7
 Portée : Lanceur
@@ -190,30 +190,30 @@ Jet de sauvegarde : Aucun
 
 Une brume verte baigne la zone d’effet. Elle soigne les maladies, guérit du poison et soigne 80 points de vie à toute créature vivante et non hostile baignant dans la brume.~
 @1032 = ~Absorption mineure de Larloch~
-@1033 = ~Absorption mineure de Larloch 
+@1033 = ~Absorption mineure de Larloch
 (Nécromancie)
 Niveau :  Ens/Mag 1
 Portée : Vue du lanceur de sorts
 Durée : 1 heure
-Temps d’incantation : 1 
+Temps d’incantation : 1
 Zone d’effet : 1 créature
-Jet de sauvegarde : Aucun 
+Jet de sauvegarde : Aucun
 
 Grâce à ce sort, le lanceur absorbe la force vitale de sa cible et l’ajoute à la sienne. La victime perd 2d4 points de vie, que le lanceur récupère aussitôt. Tous les 3 niveaux de lanceur de sorts après le niveau 1, la quantité drainée augmente de 1d4, jusqu’à 5d4 au niveau 10. Dans le cas où cela lui permet de dépasser son maximum, il perd les points de vie en excédent au bout d’une heure.~
 @1034 = ~Horreur~
-@1035 = ~Horreur 
-(Nécromancie) 
+@1035 = ~Horreur
+(Nécromancie)
 Niveau : Bard 2, Ens/Mag 2, Bane 2
 Portée : Vue du lanceur de sorts
 Durée : 4 rounds
-Temps d’incantation : 2 
+Temps d’incantation : 2
 Zone d’effet : rayon de 4,5 mètres (15 pieds)
-Jet de sauvegarde : Volonté annule 
+Jet de sauvegarde : Volonté annule
 
-Tous les ennemis dans la zone d’effet doivent effectuer un jet de Volonté ou fuir terrorisés. Certaines créatures, comme les morts-vivants, sont immunisées contre ce sort.~
+Tous les ennemis dans la zone d’effet doivent effectuer un jet de Volonté sous peine de fuir terrorisés. Certaines créatures, comme les morts-vivants, sont immunisées contre ce sort.~
 @1036 = ~Mot de pouvoir : Sommeil~
 @1037 = ~Mot de pouvoir : Sommeil
-(Divination) 
+(Divination)
 Niveau : Bard 2, Ens/Mag 2
 Portée : Vue du lanceur de sorts
 Durée : 3 rounds
@@ -224,7 +224,7 @@ Jet de sauvegarde : Aucun
 Lorsqu’un lanceur fait appel à ce sort, il plonge sa cible dans un sommeil similaire à un coma. La créature doit réussir un jet de Volonté pour ne pas s’endormir. Elle se réveille si on l’attaque. Ce sort n’a aucun effet sur les créatures sourdes.~
 @1038 = ~Armure de la Mort~
 @1039 = ~Armure de la mort
-(Nécromancie) 
+(Nécromancie)
 Niveau :  Ens/Mag 2, Clerc 2, Talos 2
 Portée : Lanceur
 Durée : 1 round/niveau
@@ -234,7 +234,7 @@ Jet de sauvegarde : Aucun
 
 Au terme de l’incantation, le jeteur de sorts se retrouve entouré d’une aura d’énergie noire et crépitante issue du Plan négatif. L’armure endommage tout adversaire qui frappe le lanceur, lui infligeant 1d6 + 2 points de dégâts par 2 niveaux du lanceur (maximum de 1d6 + 5). Les autres créatures non vivantes telles que les créatures artificielles et les golems ne sont pas affectées.~
 @1040 = ~Sept yeux~
-@1041 = ~Sept yeux 
+@1041 = ~Sept yeux
 (Abjuration)
 Niveau :  Ens/Mag 7,  Heaum 8
 Portée : Lanceur
@@ -259,7 +259,7 @@ Oeil de Courage - Cet œil bloque les effets d’étourdissement, de surdité, de céc
 
 Oeil de Pierre – Cet œil protège le lanceur d’une seule attaque de pétrification. Il peut également être utilisé comme sort Immobilisation des personnes.~
 @1042 = ~Déluge~
-@1043 = ~Déluge 
+@1043 = ~Déluge
 (Évocation)
 Niveau : Dru 2
 Portée : Vue du lanceur de sorts
@@ -270,18 +270,18 @@ Jet de sauvegarde : Réflexes, 1/2 dégâts
 
 Ce sort, qui ne peut être lancé qu’en extérieur, provoque une pluie magique qui sature la zone d’effet. La pluie confère une résistance de 5/- au feu mais une faiblesse de -5 aux dégâts de froid et d’électricité, et inflige 2d3 points de dégâts magiques à toutes les créatures liées au froid ou au feu. De plus, toutes les créatures prises dans la zone d’effet sont frappées par des décharges de foudre infligeant 2d6 dégâts électriques. Ils sont réduits de moitié en cas de jet de Réflexes réussi. Ce sort annule également les effets des sorts Lame de feu et Linceul de Flammes et éteint les auras des salamandres.~
 @1044 = ~Dissipation de la magie~
-@1045 = ~Dissipation de la magie 
-(Abjuration) 
+@1045 = ~Dissipation de la magie
+(Abjuration)
 Niveau : Bard 3, Prê 3, Dru 4, Pal 3,  Ens/Mag 3, Oghma 3
 Portée : Vue du lanceur de sorts
-Durée : instantanée 
+Durée : instantanée
 Temps d’incantation : 3
-Zone d’effet : rayon de 4,5 mètres (15 pieds) 
+Zone d’effet : rayon de 4,5 mètres (15 pieds)
 Jet de sauvegarde : Volonté annule
 
 Ce sort annule les effets magiques affectant toute créature comprise dans la zone d’effet, qu’il s’agisse des effets des sorts, des potions ou des objets magiques. A noter qu’il n’affecte pas les objets eux-mêmes ; il se contente de neutraliser leur effet. Les créatures ennemies ont droit à un jet de Volonté avec +5 au Degré de Difficulté, les alliés étant quant à eux automatiquement affectés.~
 @1046 = ~Guérison des maladies~
-@1047 = ~Guérison des maladies 
+@1047 = ~Guérison des maladies
 (Abjuration)
 Niveau : Bard 3, Prê 3, Dru 3, Rôd 3
 Portée : Contact
@@ -292,7 +292,7 @@ Jet de sauvegarde : Aucun
 
 Quand un personnage malade bénéficie de ce sort, il est immédiatement guéri et il récupère 5 points de vie.~
 @1048 = ~Exaltation~
-@1049 = ~Exaltation 
+@1049 = ~Exaltation
 (Abjuration)
 Niveau : Prê 3,  Heaum 3
 Portée : Contact
@@ -303,7 +303,7 @@ Jet de sauvegarde : Aucun
 
 Ce sort permet à un prêtre d’aider et de protéger n’importe quel être. D’un simple contact, le prêtre fait disparaître les effets de la peur, de la fatigue, de la débilité, de l’inconscience, de l’alcool, de la confusion et de la rage sanguinaire. De plus, le sujet est protégé contre les sorts et les attaques provoquant ces effets jusqu’au terme de la durée indiquée.~
 @1050 = ~Lame de lune~
-@1051 = ~Lame de lune 
+@1051 = ~Lame de lune
 (Évocation)
 Niveau : Dru 3, Rôd 3, Séluné 2
 Portée : Lanceur
@@ -323,16 +323,16 @@ Lorsqu’il est lancé en tant que rôdeur, ce sort crée une lame de lune dans chaqu
 @1053 = ~Neutraliser le poison
 (Invocation)
 Niveau : Bard 4, Prê 4, Dru 3, Pal 4, Rôd 3
-Portée : Contact 
+Portée : Contact
 Durée : 3 rounds
-Temps d’incantation : 1 
+Temps d’incantation : 1
 Zone d’effet : 1 créature
-Jet de sauvegarde : Aucun 
+Jet de sauvegarde : Aucun
 
 Ce sort neutralise immédiatement tout poison dans le corps d’une créature, met fin à toute hémorragie et soigne 4d6 points de vie. De plus, la cible gagne une résistance au poison de 2/- pendant 3 rounds.~
 @1054 = ~Force du champion~
-@1055 = ~Force du champion 
-(Transmutation) 
+@1055 = ~Force du champion
+(Transmutation)
 Niveau : Prê 5, Pal 4, Tempus 5
 Portée : Vue du lanceur de sorts
 Durée : 1 round / niveau
@@ -342,7 +342,7 @@ Jet de sauvegarde : Aucun
 
 Le lanceur fait appel à la force de son dieu pour la transférer à la cible du sort, transformant celui-ci en champion de sa cause. La cible gagne +12 Force pendant toute la durée du sort. Cependant, le sort nécessite de la concentration de la part du lanceur ; jusqu’à la fin de la durée, le lanceur ne peut plus lancer de sorts.~
 @1056 = ~Fleau d’insectes~
-@1057 = ~Fleau d’insectes 
+@1057 = ~Fleau d’insectes
 (Invocation)
 Niveau : Dru 5, Rôd 5
 Portée : Vue du lanceur de sorts
@@ -353,7 +353,7 @@ Jet de sauvegarde : partiel
 
 Ce sort fait apparaître une nuée d’insectes rampants, volants et bondissants. Toutes les créatures comprises dans la zone d’effet perdent 1 point de vie par round, il leur est impossible de jeter le moindre sort sauf à réussir un jet de sauvegarde de Volonté, auquel cas il y a tout de même 50% d’échec des sorts. Les créatures qui fuient la nuée seront toujours poursuivies par les insectes pendant 5 rounds. Les morts-vivants et les constructions ne sont pas affectés par la nuée d’insectes, tout comme les créatures sous les effets du Bouclier de Feu.~
 @1058 = ~Guérison suprême~
-@1059 = ~Guérison suprême 
+@1059 = ~Guérison suprême
 (Invocation)
 Niveau : Prê 6, Dru 7, Lathandre 6
 Portée : Contact
@@ -386,7 +386,7 @@ Jet de sauvegarde : Aucun
 
 Ce sort protège l’esprit du personnage contre toutes les influences extérieures, ce qui l’immunise contre les attaques psioniques, ainsi que les sorts de type charme, injonction, confusion, domination, terreur, débilité, immobilisation, sommeil et désespoir.~
 @1064 = ~Restauration suprême~
-@1065 = ~Restauration suprême 
+@1065 = ~Restauration suprême
 (Nécromancie)
 Niveau : Prê 8, Dru 9, Lathandre 7
 Portée : Contact
@@ -397,14 +397,14 @@ Jet de sauvegarde : Aucun
 
 Ce sort soignera tous les points de vie et guérira une créature de presque toutes les maladies : absorption d’énergie, paralysie, immobilisation, étourdissement, ralentissement, pétrification, affaiblissement, douleur, saignement, poison, maladie, dégâts d’acide au fil du temps, cécité, surdité, silence, débilité, toute forme de folie telle que la confusion ou la rage de berserker, le charme, la domination, le désespoir, la terreur et le sommeil artificiellement provoqué.~
 @1066 = ~Aura de vitalité~
-@1067 = ~Aura de vitalité 
-(Transmutation) 
+@1067 = ~Aura de vitalité
+(Transmutation)
 Niveau : Dru 7, Lathandre 8
 Portée : Lanceur
 Durée : 2 rounds/niveau
 Temps d’incantation : 2
 Zone d’effet : rayon de 6 mètres (20 pieds)
-Jet de sauvegarde : Aucun 
+Jet de sauvegarde : Aucun
 
 Au terme de l’incantation, le jeteur de sorts libère une vague d’énergie communiquant une grande vigueur à tous ses alliés contenus dans la zone d’effet, ce qui leur permet d’accomplir des exploits physiques dépassant de beaucoup leurs capacités normales. Cela se traduit par un bonus de +4 en Force, Dextérité et Constitution jusqu’au terme de la durée indiquée.~
 @1068 = ~Bouclier~
@@ -413,14 +413,14 @@ Au terme de l’incantation, le jeteur de sorts libère une vague d’énergie communi
 Niveau :  Ens/Mag 1
 Portée : Lanceur
 Durée : 10 rounds/niveau
-Temps d’incantation : 1 
+Temps d’incantation : 1
 Zone d’effet : lanceur de sorts
 Jet de sauvegarde : Aucun
 
 Ce sort fait apparaître une barrière invisible devant le lancer. Bouclier immunise contre le sort Projectile magique. Il confère également un bonus de bouclier de +4 à la classe d’armure.~
 @1070 = ~Armure de mage~
 @1071 = ~Armure de mage
-(Invocation) 
+(Invocation)
 Niveau : Bard 1,  Ens/Mag 1
 Portée : Contact
 Durée : 1 heure/niveau
@@ -431,11 +431,11 @@ Jet de sauvegarde : Aucun
 Ce sort permet au personnage de générer un champ de force magique qui le protège aussi efficacement qu’une armure d’écailles (Bonus d’armure : +4). Il se cumule avec le bonus de Dextérité et de bouclier à la classe d’armure. Le sort d’armure n’entrave pas le mouvement et n’ajoute aucun poids ou encombrement, et n’empêche pas non plus le lancement de sorts. Il dure jusqu’au terme de la durée indiquée, à moins qu’on ne le dissipe prématurément.~
 @1072 = ~Sommeil~
 @1073 = ~Sommeil
-(Enchantement) 
+(Enchantement)
 Niveau : Bard 1, Rôd 2,  Ens/Mag 1, Mask 1
 Portée : Vue du lanceur de sorts
-Durée : 4 rounds 
-Temps d’incantation : 1 
+Durée : 4 rounds
+Temps d’incantation : 1
 Zone d’effet : rayon de 4,5 mètres (15 pieds)
 Jet de sauvegarde : Volonté annule
 
@@ -453,11 +453,11 @@ Jet de sauvegarde : Spécial
 Lorsque le lanceur termine ce sort, une lueur bleue entoure sa main. Cette énergie attaque la force vitale de toute créature touchée par le lanceur (aucun jet d’attaque n’est requis). La créature touchée subit 1d6 dégâts de froid par niveau (max 5d6) et reçoit un malus d’attaque de -3 pendant 10 rounds après avoir été touchée. Si la créature est un mort-vivant, celle-ci se retrouve paniquée (Volonté annule) pendant 10 rounds (par contre, le sort ne lui inflige aucun dégât ni malus au jet d’attaque). Ce sort ne provoque pas d’attaque d’opportunité.~
 @1076 = ~Orbe Chromatique~
 @1077 = ~Orbe Chromatique
-(Évocation) 
+(Évocation)
 Niveau : Bard 1, Ens/Mag 1
 Portée : Vue du lanceur de sorts
 Durée : Spéciale
-Temps d’incantation : 1 
+Temps d’incantation : 1
 Zone d’effet : 1 créature
 Jet de sauvegarde : Réflexes annule
 
@@ -475,29 +475,29 @@ Niveau 9 : 1d3 dégâts de feu, de froid, d’acide, de magie et d’électricité ; céc
 
 Niveau 11 : 1d3 dégâts de feu, de froid, d’acide, de magie et d’électricité ; cécité pendant cinq rounds, étourdissement pendant un round~
 @1078 = ~Force du taureau~
-@1079 = ~Force du taureau 
+@1079 = ~Force du taureau
 (Transmutation)
 Niveau : Bard 2, Prê 2, Pal 2,  Ens/Mag 2, Lathandre 2
 Portée : Contact
 Durée : 1 heure / niveau
 Temps d’incantation : 1 round
 Zone d’effet : 1 créature
-Jet de sauvegarde : Aucun 
+Jet de sauvegarde : Aucun
 
 Ce sort accorde à la créature ciblée un bonus de Force de +4 pour la durée du sort.~
 @1080 = ~Incinérateur d’Agannazar~
-@1081 = ~Incinérateur d’Agannazar 
-(Évocation) 
+@1081 = ~Incinérateur d’Agannazar
+(Évocation)
 Niveau :  Ens/Mag 2, Lathandre 3
 Portée : Vue du lanceur de sorts
 Durée : 1 round
 Temps d’incantation : 2
-Zone d’effet : jet de 60cm (2 pieds) de large sur 18,3 mètres (60 pieds) de long. 
+Zone d’effet : jet de 60cm (2 pieds) de large sur 18,3 mètres (60 pieds) de long.
 Jet de sauvegarde : Réflexes, 1/2 dégâts
 
 Ce sort génère un jet de flammes qui jaillit de la main du magicien vers la cible de son choix. Le feu continu inflige 3d6 points de dégâts sans possibilité de jet de sauvegarde, et ce à deux reprises au cours du même round (la cible subit donc un total de 6d6 points de dégâts). Tous ceux qui se trouvent entre le lanceur de sorts et sa cible subissent 2d8 points de dégâts mais ont droit à un jet de Réflexes pour réduire ce total de moitié.~
 @1082 = ~Bâton décuplé~
-@1083 = ~Bâton décuplé 
+@1083 = ~Bâton décuplé
 (Évocation)
 Niveau :  Ens/Mag 2
 Portée : Lanceur
@@ -513,14 +513,14 @@ Ce sort crée un bâton de force dans la main du lanceur qui peut être utilisé com
 Niveau :  Ens/Mag 3, Talos 3
 Portée : Ligne de vue
 Durée : instantanée
-Temps d’incantation : 3 
+Temps d’incantation : 3
 Zone d’effet : Spéciale
 Jet de sauvegarde : Réflexes, 1/2 dégâts
 
 En lançant ce sort, le sorcier libère une décharge électrique puissante qui inflige 1d8 points de dégâts par niveau du lanceur de sorts à chaque créature située dans sa zone d’effet (dégâts maximum de 10d8). Un jet de Réflexes réussi avec +4 au Degré de Difficulté réduit ces dégâts de moitié. Lorsque l’éclair rencontre un mur, il se transforme en pluie d’étincelles inoffensive.~
 @1086 = ~Toucher vampirique~
-@1087 = ~Toucher vampirique 
-(Nécromancie) 
+@1087 = ~Toucher vampirique
+(Nécromancie)
 Niveau :  Ens/Mag 3
 Portée : Contact
 Durée : Spéciale
@@ -530,11 +530,11 @@ Jet de sauvegarde : Aucun
 
 Ce sort confère aux mains du lanceur la capacité de drainer la vie, en prenant 1d6 points de vie par niveau à une victime vivante et en l’accordant au lanceur (maximum 10d6), tous les points de vie supérieurs au total maximum normal du lanceur étant traités comme des points de vie supplémentaires temporaires. . Les points de vie temporaires disparaissent au bout d’une heure. Ce sort ne provoque pas d’attaque d’opportunité.~
 @1088 = ~Lance de glace~
-@1089 = ~Lance de glace 
+@1089 = ~Lance de glace
 (Évocation)
 Niveau : Dru 3,  Ens/Mag 3
 Portée : Vue du lanceur de sorts
-Durée : instantanée 
+Durée : instantanée
 Temps d’incantation : 3
 Zone d’effet : 1 créature
 Jet de sauvegarde : Vigueur, partiel
@@ -553,28 +553,28 @@ Jet de sauvegarde : Réflexes, 1/2 dégâts
 Ce sort crée une lance de force, s’étendant du lanceur jusqu’à un point spécifié à 18,3 mètres (60 pieds) de distance. Toutes les créatures sur le chemin de la lance subissent 5d4 points de dégâts contondants, +2 points de dégâts par niveau du lanceur (maximum de +50). Les victimes peuvent effectuer un jet de Réflexes pour la moitié des dégâts.~
 @1092 = ~Tempête de grêle~
 @1093 = ~Tempête de grêle
-(Évocation) 
+(Évocation)
 Niveau : Dru 4,  Ens/Mag 4
 Portée : Vue du lanceur de sorts
 Durée : instantanée
-Temps d’incantation : 4 
+Temps d’incantation : 4
 Zone d’effet : rayon de 6 mètres (20 pieds)
-Jet de sauvegarde : Aucun 
+Jet de sauvegarde : Aucun
 
 Lorsque ce sort est lancé, des éclats de glace s’abattent sur toutes les cibles dans la zone d’effet, infligeant 4d6 points de dégâts contondants et 4d6 points de dégâts de froid.~
 @1094 = ~Invisibilité suprême~
-@1095 = ~Invisibilité suprême 
+@1095 = ~Invisibilité suprême
 (Illusion)
 Niveau : Bard 5, Rôd 4,  Ens/Mag 4, Mask 4
-Portée : Contact 
+Portée : Contact
 Durée : 1 round / niveau
-Temps d’incantation : 4 
+Temps d’incantation : 4
 Zone d’effet : 1 créature
 Jet de sauvegarde : Aucun
 
 Ce sort est similaire à Invisibilité, mais son bénéficiaire est capable d’attaquer (au corps à corps, à distance ou à l’aide de sorts) sans pour autant redevenir visible. Notez que certains signes (reflet, zone trouble, etc.) permettent parfois aux ennemis observateurs de le repérer. Il n’est possible de remarquer ces infimes détails que si on les recherche activement (une fois que le personnage invisible a fait connaître sa présence).~
 @1096 = ~Armure spirituelle~
-@1097 = ~Armure spirituelle 
+@1097 = ~Armure spirituelle
 (Nécromancie)
 Niveau : Bard 4,  Ens/Mag 4
 Portée : Contact
@@ -596,7 +596,7 @@ Jet de sauvegarde : Aucun
 
 Ce sort crée une émotion de rage dans la zone d’effet. Toutes les créatures affectées par le sort gagnent +2 en Force, +2 en Constitution, +1 aux jets de Volonté et un malus de -1 à la classe d’armure. Ces bonus et malus ne se cumulent pas avec la rage barbare, mais ils se cumulent avec d’autres bonus de Force et de Constitution. Émotion : rage ne peut pas être active sur une créature en même temps qu’Émotion : espoir.~
 @1100 = ~Émotion : Terreur~
-@1101 = ~Émotion : Terreur 
+@1101 = ~Émotion : Terreur
 (Enchantement)
 Niveau : Bard 3,  Ens/Mag 4
 Portée : Vue du lanceur de sorts
@@ -730,7 +730,7 @@ Jet de sauvegarde : Aucun
 
 Ce sort permet au lanceur de prononcer l’un des mots de pouvoir. Lorsqu’il est prononcé, Mot de pouvoir : Silence peut être invoqué contre toute créature à portée, l’empêchant d’incanter pendant 4 rounds. Il n’y a pas de jet de sauvegarde.~
 @1124 = ~Mot de pouvoir : Étourdissement~
-@1125 = ~Mot de pouvoir : Étourdissement 
+@1125 = ~Mot de pouvoir : Étourdissement
 (Divination)
 Niveau : Bard 6,  Ens/Mag 7, Oghma 6, Tempus 8
 Portée : Vue du lanceur de sorts
@@ -739,9 +739,10 @@ Temps d’incantation : 0
 Zone d’effet : 1 créature
 Jet de sauvegarde : Spécial
 
-Mot de pouvoir : Étourdissement est un autre mot de pouvoir. Les créatures avec moins de 50 points de vie sont étourdies pendant 4 à 16 rounds, celles avec 51 à 100 points de vie sont étourdies pendant 2 à 8 rounds, celles avec 101 à 150 points de vie sont étourdies pendant 1 à 4 rounds et celles avec plus de 151 points de vie doivent réussir un jet de Volonté avec +2 au Degré de Difficulté ou être étourdi pendant un round. Le sort prend en compte les points de vie actuels de la créature, et non leur maximum, donc même les créatures les plus coriaces peuvent être affectées par ce sort si elles sont blessées. Ce sort n’a aucun effet sur les créatures sourdes.~
+Mot de pouvoir : Étourdissement est un autre mot de pouvoir. Les créatures avec moins de 50 points de vie sont étourdies pendant 4 à 16 rounds, celles avec 51 à 100 points de vie sont étourdies pendant 2 à 8 rounds, celles avec 101 à 150 points de vie sont étourdies pendant 1 à 4 rounds et celles avec plus de 151 points de vie doivent réussir un jet de Volonté avec +2 au Degré de Difficulté sous peine d'être étourdi pendant un round. Le sort prend en compte les points de vie actuels de la créature, et non leur maximum, donc même les créatures les plus coriaces peuvent être affectées par ce sort si elles sont blessées. Ce sort n’a aucun effet sur les créatures sourdes.~
+
 @1126 = ~Corps de Fer~
-@1127 = ~Corps de fer 
+@1127 = ~Corps de fer
 (Transmutation)
 Niveau :  Ens/Mag 8,  Heaum 8
 Portée : Lanceur
@@ -753,10 +754,10 @@ Jet de sauvegarde : Aucun
 Ce sort transforme le corps du lanceur en fer vivant, lui conférant plusieurs résistances et capacités puissantes. Tant que le sort est en vigueur, le lanceur a une résistance de 15/- au feu, au froid et à toutes formes de dégâts physiques, mais aussi une vulnérabilité de +15 à l’électricité. Les sorts qui affectent la respiration ou la physiologie du lanceur sont complètement ignorés, comme le poison, la cécité, la surdité et la maladie pour n’en nommer que quelques-uns, et le lanceur devient trop lourd pour être repoussé avec des sorts comme Rafale de vent, Lancer ou Répulsion. De plus, le lanceur gagne un bonus de +8 en force et en constitution et un malus de -8 en dextérité. Malheureusement, le mouvement du lanceur devient lent et gênant sous le poids de son nouveau corps, ce qui réduit sa vitesse de déplacement à la moitié de sa vitesse normale, et il reçoit une pénalité de -2 à la vitesse d’incantation.~
 @1128 = ~Lame Noire de Destruction~
 @1129 = ~Lame Noire de Destruction
-(Invocation) 
+(Invocation)
 Niveau :  Ens/Mag 9, Mask 9
 Portée : Lanceur
-Durée : 1 round/niveau 
+Durée : 1 round/niveau
 Temps d’incantation : 9
 Zone d’effet : Spéciale
 Jet de sauvegarde : Spécial
@@ -1001,7 +1002,7 @@ Une radiance divine brillante entoure les sujets, les protégeant des attaques, l
 Premièrement, les créatures protégées gagnent un bonus de parade de +4 à la Classe d’Armure et un bonus de +4 à tous les jets de sauvegarde.
 Deuxièmement, les créatures protégées gagnent une résistance aux sorts de +10 et une résistance de 5/- à toutes les formes de dégâts magiques.
 Troisièmement, l’abjuration protège les créatures contre les sorts de charme et de domination.
-Quatrièmement, toute créature d’alignement mauvais qui frappe (en mêlée uniquement) ceux protégés par l’Aura divine doit réussir un jet de sauvegarde de Vigueur ou être aveuglée pendant 3 rounds.
+Quatrièmement, toute créature d’alignement mauvais qui frappe (en mêlée uniquement) ceux protégés par l’Aura divine doit réussir un jet de sauvegarde de Vigueur sous peine d'être aveuglée pendant 3 rounds.
 L’Aura divine ne peut pas être lancée par des personnages mauvais.~
 @1522	= ~Potion de Globe d’invulnérabilité partielle~
 @1523	= ~Les potions se trouvent généralement dans des flacons ou des fioles en céramique, cristal, verre ou métal. Les flacons ou autres récipients contiennent généralement suffisamment de liquide pour fournir à une personne une dose complète afin d’obtenir les effets de la potion.
@@ -1220,7 +1221,7 @@ Temps d’incantation : 2
 Zone d’effet : 9 mètres de long, 3 mètres de diamètre (30 pieds de long, 10 pieds de diamètre)
 Jet de sauvegarde : Vigueur, 1/2 dégâts
 
-En proférant le Grand cri, le lanceur libère une force étourdissante de sa bouche sous forme de cône de 9 mètres de long et 3 mètres de diamètre. Les créatures dans la zone d’effet subissent 10d10 points de dégâts sonores avec un jet de Vigueur pour la moitié. Celles qui échouent au jet de sauvegarde sont étourdies pendant 5 rounds et assourdies pendant 10 rounds. Les créatures assourdies ont 25% de chances de résister à ce sort.~
+En proférant le Grand cri, le lanceur libère une force étourdissante de sa bouche sous forme de cône de 9 mètres de long et 3 mètres de diamètre. Les créatures dans la zone d’effet subissent 10d10 points de dégâts sonores avec un jet de Vigueur pour la moitié des dégâts. Celles qui échouent au jet de sauvegarde sont étourdies pendant 5 rounds et assourdies pendant 10 rounds. Les créatures assourdies ont 25% de chances de résister à ce sort.~
 @1623	= ~Rage animale~
 @1624	= ~Rage animale
 (Enchantement)
@@ -1231,7 +1232,8 @@ Temps d’incantation : 8
 Zone d’effet : 1 créature
 Jet de sauvegarde : Spécial
 
-Ce sort imprègne la créature ciblée de férocité animale. La créature ciblée gagne +4 en Force, +4 en Constitution, +20% de mouvement, et +2 à tous les jets de sauvegarde. La cible perd la capacité de lancer des sorts pendant la durée de Rage animale. Elle peut être contrôlée normalement sauf si des ennemis sont en vue, auquel cas la cible attaque immédiatement en mêlée avec ce qu’elle a sous la main. Il y a 5% de chance par round que la cible devienne furieuse, attaquant amis et ennemis sans distinction. Les alliés sont automatiquement affectés, tandis que les ennemis peuvent effectuer un jet de Volonté pour éviter les effets. Ce sort ne provoque pas d’attaque d’opportunité lorsqu’il est lancé sur un ennemi.~
+Ce sort imprègne la créature ciblée de férocité animale. La créature ciblée gagne +4 en Force, +4 en Constitution, +20% de mouvement, et +2 à tous les jets de sauvegarde. La cible perd la capacité de lancer des sorts pendant la durée de Rage animale. Elle peut être contrôlée normalement sauf si des ennemis sont en vue, auquel cas la cible attaque immédiatement en mêlée avec ce qu’elle a sous la main. Il y a 5% de chance par round que la cible devienne incontrôlable, attaquant amis et ennemis sans distinction. Les alliés sont automatiquement affectés, tandis que les ennemis peuvent effectuer un jet de Volonté pour éviter les effets. Ce sort ne provoque pas d’attaque d’opportunité lorsqu’il est lancé sur un ennemi.~
+
 @1629	= ~Flèche enflammée~
 @1630	= ~Flèche enflammée
 (Invocation)
@@ -1286,7 +1288,7 @@ Temps d’incantation : 4
 Zone d’effet : Spéciale
 Jet de sauvegarde : Réflexes, 1/2 dégâts
 
-Cette incantation fait apparaître une sphère d’acide vert émeraude, que le personnage peut lancer sur la cible de son choix. La sphère explose et inonde d’acide la créature choisie. Celle-ci perd 1d4 points de vie par niveau du mage, jusqu’à un maximum de 12d4 (jet de Réflexes pour la moitié). Après l’assaut initial, la victime peut tenter de réussir un jet de Réflexes pour réduire de moitié les dégâts du round et interrompre le processus. En cas d’échec, l’acide continue de la ronger round après round, les dégâts diminuant de deux dés par round. Par exemple, un mage de niveau 8 inflige 8d4 points de dégâts grâce à ce sort. Si la victime rate son jet de sauvegarde, elle perd 6d4 pv lors du deuxième round, 4d4 pendant le troisième, et 2d4 au cours du quatrième. Chaque round, la victime a droit à un nouveau jet de sauvegarde ; dès qu’elle en réussit un, les dégâts s’arrêtent.
+Cette incantation fait apparaître une sphère d’acide vert émeraude, que le personnage peut lancer sur la cible de son choix. La sphère explose et inonde d’acide la créature choisie. Celle-ci perd 1d4 points de vie par niveau du mage, jusqu’à un maximum de 12d4 (jet de Réflexes pour la moitié des dégâts). Après l’assaut initial, la victime peut tenter de réussir un jet de Réflexes pour réduire de moitié les dégâts du round et interrompre le processus. En cas d’échec, l’acide continue de la ronger round après round, les dégâts diminuant de deux dés par round. Par exemple, un mage de niveau 8 inflige 8d4 points de dégâts grâce à ce sort. Si la victime rate son jet de sauvegarde, elle perd 6d4 pv lors du deuxième round, 4d4 pendant le troisième, et 2d4 au cours du quatrième. Chaque round, la victime a droit à un nouveau jet de sauvegarde ; dès qu’elle en réussit un, les dégâts s’arrêtent.
 
 La sphère acide éclabousse également l’acide dans un rayon de 1,5 mètre (5 pieds) autour de la cible principale. Toutes les créatures dans le rayon d’éclaboussure doivent réussir un jet de Réflexes ou subir un coup d’éclaboussure qui inflige 1d4 points de dégâts par tranche de cinq niveaux du lanceur. Les coups d’éclaboussure ne causent pas de dégâts continus.
 
@@ -1542,7 +1544,7 @@ Temps d’incantation : 5
 Zone d’effet : Lanceur
 Jet de sauvegarde : Vigueur annule
 
-Ce sort transforme les mains et les bras du lanceur en serpents pouvant être utilisés en combat, attaquant deux fois par round. Chaque attaque inflige 1d3 points de dégâts perforants et la cible doit réussir un jet de sauvegarde de Vigueur ou être empoisonnée - le poison paralyse et inflige 6 points de dégâts de poison par round pendant les 4 rounds suivants.~
+Ce sort transforme les mains et les bras du lanceur en serpents pouvant être utilisés en combat, attaquant deux fois par round. Chaque attaque inflige 1d3 points de dégâts perforants et la cible doit réussir un jet de sauvegarde de Vigueur sous peine d'être empoisonnée - le poison paralyse et inflige 6 points de dégâts de poison par round pendant les 4 rounds suivants.~
 @1692	= ~Retraite expéditive~
 @1693	= ~Retraite expéditive
 (Transmutation)
@@ -1799,7 +1801,7 @@ Temps d’incantation : 4
 Zone d’effet : Lanceur
 Jet de sauvegarde : Réflexes
 
-Ce sort crée un rayon de froid intense qui jaillit de la main du lanceur, prenant la forme d’un cimeterre et utilisé comme tel. La lame est une arme +2. Elle inflige 2d6+2 dégâts de froid et ignore les bonus d’armure et de bouclier, et la victime doit réussir un jet de Réflexes ou être ralentie pendant 2 rounds. Le Degré de Difficulté du jet de Réflexes est égal à 12 plus les bonus de Sagesse et d’école de prédilection du lanceur. La Lame de glace profite du don Maniement des Armes de guerre, Grande épée, et bénéficie des bonus à l’attaque et aux dégâts provenant de la Force, des dons, des sorts, des objets et d’autres effets.
+Ce sort crée un rayon de froid intense qui jaillit de la main du lanceur, prenant la forme d’un cimeterre et utilisé comme tel. La lame est une arme +2. Elle inflige 2d6+2 dégâts de froid et ignore les bonus d’armure et de bouclier, et la victime doit réussir un jet de Réflexes sous peine d'être ralentie pendant 2 rounds. Le Degré de Difficulté du jet de Réflexes est égal à 12 plus les bonus de Sagesse et d’école de prédilection du lanceur. La Lame de glace profite du don Maniement des Armes de guerre, Grande épée, et bénéficie des bonus à l’attaque et aux dégâts provenant de la Force, des dons, des sorts, des objets et d’autres effets.
 
 Lorsqu’il est lancé en tant que rôdeur, ce sort crée une Lame de glace dans chaque main.~
 @1764	= ~Masse d’armes des Météores~
@@ -1813,8 +1815,8 @@ Zone d’effet : Lanceur
 Jet de sauvegarde : Aucun
 
 Ce sort crée une masse d’armes magique (1d6) bénéficiant d’un bonus de +4 aux jets d’attaque et de dégâts, mais considérée comme une arme +6 pour déterminer ce qu’elle peut toucher. Elle inflige 3d6 points de dégâts magiques supplémentaires contre toutes les formes de créatures non naturelles. Pour les besoins de la réduction des dégâts, elle est considérée comme une arme en fer froid, infligeant un maximum de dégâts aux démons. La Masse d’armes des Météores profite du don Maniement des Armes courantes, Masse.~
-@1767    = ~Animation de squelette/zombie~
-@1768    = ~Ce parchemin contient la connaissance de deux sorts, Animation de squelette et Animation de zombi :
+@1767	= ~Animation de squelette/zombie~
+@1768	= ~Ce parchemin contient la connaissance de deux sorts, Animation de squelette et Animation de zombi :
 
 Animation de squelette
 (Nécromancie)
@@ -1839,8 +1841,8 @@ Jet de sauvegarde : Aucun
 Ce sort fait surgir un zombie mort depuis longtemps du fond de la terre et le réanime pour servir le lanceur. Plus le niveau du lanceur est élevé, plus le zombie invoqué par ce sort est puissant.
 
 AVERTISSEMENT : À des niveaux plus élevés, les seigneurs zombis et les noyés putrescents en décomposition invoqués par ce sort ont des auras surnaturelles puissantes. Les effets de leurs auras peuvent nuire à vos propres membres du groupe s’ils tombent dans la zone d’effet.~
-@1769    = ~Barrière élémentaire~
-@1770    = ~Barrière élémentaire
+@1769	= ~Barrière élémentaire~
+@1770	= ~Barrière élémentaire
 (Abjuration)
 Niveau : Bard 8, Prê 8, Dru 7, Ens/Mag 8
 Portée : Contact
@@ -1850,8 +1852,8 @@ Zone d’effet : 1 créature
 Jet de sauvegarde : Aucun
 
 Ce sort confère au bénéficiaire une quasi-immunité aux dégâts élémentaires. Pendant la durée, la cible bénéficie d’une résistance 100/- contre les dégâts de feu, de froid, d’électricité et d’acide.~
-@1771    = ~Mur de lune~
-@1772    = ~Mur de lune
+@1771	= ~Mur de lune~
+@1772	= ~Mur de lune
 (Évocation)
 Niveau : Dru 4, Séluné 5
 Portée : Vue du lanceur de sorts
@@ -2758,18 +2760,18 @@ Cette capacité peut être utilisée comme une action libre.~
 //Les chaînes ci-dessous correspondent à des noms de sorts épiques ; ils devraient avoir le même nom que dans créature_rebalancing.tra (plage TRA @21001 - @21099) mais avec la ponctuation ajoutée.
 @30176=~... Explosion mentale.~
 @30177=~... Blizzard du cœur.~
-@30178=~... Créez Winterwight.~
+@30178=~... Créez un nécrophage d’hiver.~
 @30179=~... Armure de mage épique.~
 @30180=~... Protection épique.~
 @30181=~... De nombreux missiles.~
-@30182=~... Drainage massif d’énergie.~
+@30182=~... Absorption massive d’énergie.~
 @30183=~... Peste.~
-@30184=~... Arme dévorante d’âme.~
+@30184=~... Arme dévoreuse d’âme.~
 @30185=~... Tempête Xvimienne.~
 
 @30186=~Alors vous le ferez.~
 @30187=~Alors vous l’aurez.~
-@30188=~Tu seras riche !~
+@30188=~Vous serez riche !~
 @30189=~...~
 @30190=~... de niveau 1 appelé...~
 @30191=~... du niveau 2 appelé...~
@@ -3639,7 +3641,7 @@ Temps d’incantation : 5
 Zone d’effet : Rayon de 4,5 mètres (15 pieds)
 Jet de sauvegarde : Vigueur partiel
 
-Ce sort fait apparaître un nuage de fumée jaunâtre, si toxique qu’il tue automatiquement toutes les créatures de 4 Dés de Vie ou moins, sans jet de sauvegarde. Les créatures ayant au plus la moitié des Dés de Vie du niveau du lanceur de sorts (arrondi au supérieur) doivent réussir un jet de sauvegarde de Vigueur ou être tuées. Retenir son souffle n’a aucun effet sur la létalité du sort. Les créatures dans le nuage qui ne meurent pas subissent 1d10 points de dégâts de poison chaque round sans jet de sauvegarde.~
+Ce sort fait apparaître un nuage de fumée jaunâtre, si toxique qu’il tue automatiquement toutes les créatures de 4 Dés de Vie ou moins, sans jet de sauvegarde. Les créatures ayant au plus la moitié des Dés de Vie du niveau du lanceur de sorts (arrondi au supérieur) doivent réussir un jet de sauvegarde de Vigueur sous peine d'être tuées. Retenir son souffle n’a aucun effet sur la létalité du sort. Les créatures dans le nuage qui ne meurent pas subissent 1d10 points de dégâts de poison chaque round sans jet de sauvegarde.~
 
 @33504 	= ~Cône de froid~
 @34504 	= ~Cône de froid
@@ -4195,7 +4197,7 @@ Temps d’incantation : 6
 Zone d’effet : Rayon de 6 mètres (20 pieds)
 Jet de sauvegarde : Vigueur annule
 
-Ce sort confère au lanceur une aura qui repousse les ennemis proches, les projetant loin du lanceur. Tout ennemi qui entre dans la zone d’effet doit réussir un jet de sauvegarde de Vigueur avec -5 au Degré de Difficulté ou être repoussé.~
+Ce sort confère au lanceur une aura qui repousse les ennemis proches, les projetant loin du lanceur. Tout ennemi qui entre dans la zone d’effet doit réussir un jet de sauvegarde de Vigueur avec -5 au Degré de Difficulté sous peine d’être repoussé.~
 
 @35654 	= ~Souvenir merveilleux~
 @36654 	= ~Souvenir merveilleux
@@ -4320,7 +4322,7 @@ Une obscurité malveillante entoure les sujets, les protégeant des attaques, leur
 Premièrement, les créatures protégées bénéficient d’un bonus de déviation de +4 à la classe d’armure et d’un bonus de +4 à tous les jets de sauvegarde.
 Deuxièmement, la créature protégée gagne +10 en résistance aux sorts et une résistance de 5/- à toutes les formes de dégâts magiques.
 Troisièmement, l’abjuration protège les créatures contre les sorts de charme et de domination.
-Quatrièmement, toute créature d’alignement bon qui frappe (au corps à corps seulement) ceux protégés par l’Aura Impie doit réussir un jet de sauvegarde de Vigueur ou être aveuglée pendant 3 rounds.
+Quatrièmement, toute créature d’alignement bon qui frappe (au corps à corps seulement) ceux protégés par l’Aura Impie doit réussir un jet de sauvegarde de Vigueur sous peine d'être aveuglée pendant 3 rounds.
 L’Aura impie ne peut être lancée que par des personnages d’alignement mauvais.~
 @35951 	= ~Bénédiction d’Auril~
 @36951 	= ~Bénédiction d’Auril
@@ -4543,7 +4545,7 @@ Temps d’incantation : 4
 Zone d’effet : Rayon de 6 mètres (20 pieds)
 Jet de sauvegarde : Vigueur annule
 
-Ce sort crée une obscurité magique dans la zone d’effet. Les créatures sans vision dans le noir doivent réussir un jet de Vigueur avec +3 au Degré de Difficulté ou être effectivement aveuglées. Les créatures avec vision dans le noir ne sont pas aveuglées, mais même elles ont une capacité limitée à voir à travers l’obscurité magique, subissant une pénalité de -4 aux attaques en cas d’échec au jet de sauvegarde. Les créatures avec une vision supérieure à 36 mètres (120 pieds) (par exemple, les drows, les nains gris ou les gnomes des profondeurs) subissent seulement une pénalité de -2 aux attaques. Les diables et les créatures immunisées à l’aveuglement ne sont pas affectés.~
+Ce sort crée une obscurité magique dans la zone d’effet. Les créatures sans vision dans le noir doivent réussir un jet de Vigueur avec +3 au Degré de Difficulté sous peine d'être effectivement aveuglées. Les créatures avec vision dans le noir ne sont pas aveuglées, mais même elles ont une capacité limitée à voir à travers l’obscurité magique, subissant une pénalité de -4 aux attaques en cas d’échec au jet de sauvegarde. Les créatures avec une vision supérieure à 36 mètres (120 pieds) (par exemple, les drows, les nains gris ou les gnomes des profondeurs) subissent seulement une pénalité de -2 aux attaques. Les diables et les créatures immunisées à l’aveuglement ne sont pas affectés.~
 @37351 	= ~Clairvoyance~
 @38351 	= ~Clairvoyance
 (Divination)
@@ -4717,7 +4719,7 @@ Transformation permet au lanceur de prendre la forme d’une créature de puissance
 
 * Géant fomorien (peut lancer des rochers à longue portée)
 * Troll (régénère 1 PV par seconde)
-* Ombre des roches (les ennemis à proximité doivent réussir un jet de Volonté chaque round ou être confus)
+* Ombre des roches (les ennemis à proximité doivent réussir un jet de Volonté chaque round sous peine d'être confus)
 * Wiverne (peut voler, et chaque coup empoisonne la cible en cas d’échec de jet de Vigueur)~
 
 @37456 	= ~Transfert de sorts~
@@ -4985,7 +4987,7 @@ Temps d’incantation : 7
 Zone d’effet : Spécial
 Jet de sauvegarde : Volonté annule
 
-Ce sort fait apparaître un objet magique qui incite les créatures qui le voient à vouloir s’en approcher. Toute créature non alliée qui voit cet objet magique doit réussir un jet de sauvegarde de Volonté (avec -3 au Degré de Difficulté) chaque round ou être obligée, pendant ce round, de marcher vers l’objet sans rien faire d’autre. Toute créature immunisée contre les effets de charme est également immunisée contre cet effet.~
+Ce sort fait apparaître un objet magique qui incite les créatures qui le voient à vouloir s’en approcher. Toute créature non alliée qui voit cet objet magique doit réussir un jet de sauvegarde de Volonté (avec -3 au Degré de Difficulté) chaque round sous peine d'être obligée, pendant ce round, de marcher vers l’objet sans rien faire d’autre. Toute créature immunisée contre les effets de charme est également immunisée contre cet effet.~
 
 @37760 	= ~Saut temporel~
 @38760 	= ~Saut temporel
@@ -5374,3 +5376,5 @@ Tout personnage qui connaît le sort Lien d’âme (ou tout démon, qu’il connaisse l
 * Restaurer complètement les charges d’un objet magique dans l’inventaire du personnage (les objets donnant des bonus permanents ne peuvent pas être rechargés).
 
 Les morts-vivants, les constructions, les créatures invoquées et les créatures avec moins de 13 DV ne sont pas affectés par Lien d’âme. Ce sort ne provoque pas d’attaque d’opportunité lorsqu’il est lancé sur un ennemi. Il ne peut être lancé que par des personnages d’alignement mauvais.~
+
+

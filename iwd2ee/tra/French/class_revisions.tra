@@ -49,7 +49,7 @@ Prérequis : 5 niveaux de druide~
 @186	= ~Forme animale : Fatalité rampante~
 @187	= ~FORME ANIMALE, FATALITÉ RAMPANTE :
 
-Le druide acquiert la capacité de se transformer en une masse consciente de scarabées et d'insectes volants. Les insectes sont faciles à écraser et sont vulnérables au feu et à d'autres formes de dégâts magiques, mais les armes perforantes sont presque inutiles contre l'essaim. Le druide peut coordonner les insectes pour piquer ensemble, attaquant les adversaires à distance. Les créatures touchées doivent réussir un jet de sauvegarde de Volonté ou être distraites et recevoir 50% d'échec des sorts. Le Degré de Difficulté du jet de sauvegarde de Volonté augmente en fonction du niveau du druide. Sous cette forme, le druide est en vol et donc protégé contre Graisse, Toile d'araignée, Enchevêtrement, Croissance d'épines, Rochers épineux et Tremblement de terre.
+Le druide acquiert la capacité de se transformer en une masse consciente de scarabées et d'insectes volants. Les insectes sont faciles à écraser et sont vulnérables au feu et à d'autres formes de dégâts magiques, mais les armes perforantes sont presque inutiles contre l'essaim. Le druide peut coordonner les insectes pour piquer ensemble, attaquant les adversaires à distance. Les créatures touchées doivent réussir un jet de sauvegarde de Volonté sous peine d'être distraites et recevoir 50% d'échec des sorts. Le Degré de Difficulté du jet de sauvegarde de Volonté augmente en fonction du niveau du druide. Sous cette forme, le druide est en vol et donc protégé contre Graisse, Toile d'araignée, Enchevêtrement, Croissance d'épines, Rochers épineux et Tremblement de terre.
 
 Prérequis : 5 niveaux de druide~
 @188	= ~Forme animale : Sylvanien~
@@ -172,7 +172,7 @@ Le druide se transforme en élémentaire d'air. Sous forme d'élémentaire d'air, le
 Le druide se transforme en chien esquiveur. La forme de chien esquiveur n'est pas efficace en combat, mais le druide est sous l'effet de Clignotement (50% de chance d'éviter toute attaque physique dirigée contre lui), et il ou elle acquiert la capacité de se téléporter à volonté sur de courtes distances. La distance à laquelle le druide peut se téléporter en forme de chien esquiveur augmente en fonction du niveau.~
 @238	= ~Forme animale : Fatalité rampante
 
-Le druide se transforme en une masse consciente de scarabées et d'insectes volants. Les insectes sont faciles à écraser et sont vulnérables au feu et à d'autres formes de dégâts magiques, mais les armes perforantes sont presque inutiles contre l'essaim. Le druide peut coordonner les insectes pour piquer ensemble, attaquant les adversaires à distance. Les créatures touchées doivent réussir un jet de sauvegarde de Volonté ou être distraites et subir 50% d'échec des sorts. Le Degré de Difficulté du jet de sauvegarde de Volonté augmente en fonction du niveau du druide. Sous cette forme, le druide est en vol et donc protégé contre Graisse, Toile d'araignée, Enchevêtrement, Croissance d'épines, Pierres acérées et Séisme.~
+Le druide se transforme en une masse consciente de scarabées et d'insectes volants. Les insectes sont faciles à écraser et sont vulnérables au feu et à d'autres formes de dégâts magiques, mais les armes perforantes sont presque inutiles contre l'essaim. Le druide peut coordonner les insectes pour piquer ensemble, attaquant les adversaires à distance. Les créatures touchées doivent réussir un jet de sauvegarde de Volonté sous peine d'être distraites et subir 50% d'échec des sorts. Le Degré de Difficulté du jet de sauvegarde de Volonté augmente en fonction du niveau du druide. Sous cette forme, le druide est en vol et donc protégé contre Graisse, Toile d'araignée, Enchevêtrement, Croissance d'épines, Pierres acérées et Séisme.~
 @239	= ~Forme animale : Scarabée rhinocéros
 
 Le druide se transforme en un énorme scarabée rhinocéros. Sous cette forme, le druide a deux attaques de moins par round (minimum de 1), mais il gagne une résistance de 5/- aux dégâts physiques. Cette résistance augmente de 5/- tous les 5 niveaux, jusqu'à un maximum de 25/- au niveau 28.~
@@ -368,7 +368,7 @@ Votre rage de barbare est terrifiante à voir.
 
 Prérequis : Rage de grand berserker, Intimidation 18 ou plus
 
-Avantage : Pendant que vous êtes en rage, les ennemis dans un rayon de 1,8 mètres (6 pieds) autour de vous doivent réussir un jet de Volonté (Degré de Difficulté de 5 + 1/2 de votre compétence Intimidation) ou fuir pendant 3 rounds.~
+Avantage : Pendant que vous êtes en rage, les ennemis dans un rayon de 1,8 mètres (6 pieds) autour de vous doivent réussir un jet de Volonté (Degré de Difficulté de 5 + 1/2 de votre compétence Intimidation) sous peine de fuir pendant 3 rounds.~
 @337	= ~Défense à Deux Armes~
 @338	= ~DÉFENSE À DEUX ARMES :
 
@@ -644,7 +644,7 @@ Avantage : Même après avoir rempli les conditions initiales, vous devez prendre 
 * Vous pouvez être repoussé, mais comptez comme 4 niveaux de plus contre les effets de repoussement.
 * Vous subissez des dégâts des sorts de soins et des potions de soins mais êtes soigné par les sorts de blessures.
 * Vos attaques à mains nues sont remplacées par une Attaque de la Liche, qui inflige 3d10+5 dégâts de froid et paralyse la cible pendant 10 rounds en cas d'échec du jet de sauvegarde (même Degré de Difficulté que le sort Toucher de la Liche).
-* Vous êtes entouré d’une aura de peur ; tout ennemi dans un rayon de 6 mètres (20 pieds) qui est au moins de 5 niveaux inférieur à vous doit réussir un jet de sauvegarde de Volonté (Degré de Difficulté de 10 + modificateur de Charisme/Intelligence) ou fuir pendant 1 round.
+* Vous êtes entouré d’une aura de peur ; tout ennemi dans un rayon de 6 mètres (20 pieds) qui est au moins de 5 niveaux inférieur à vous doit réussir un jet de sauvegarde de Volonté (Degré de Difficulté de 10 + modificateur de Charisme/Intelligence) sous peine de fuir pendant 1 round.
 * Vous gagnez un phylactère qui stocke votre force vitale. Si vous mourrez, vous serez automatiquement réanimé après 8 heures. Cependant, si tous les membres du groupe meurent, les ennemis détruiront votre phylactère et la partie sera terminée.~
 @390	= ~VOIE DE LA LICHE :
 
@@ -661,7 +661,7 @@ Avantage : Même après avoir rempli les conditions initiales, vous devez prendre 
 * Vous pouvez être repoussé, mais comptez comme 4 niveaux de plus contre les effets de repoussement.
 * Vous subissez des dégâts des sorts de soins et des potions de soins mais êtes soigné par les sorts de blessures.
 * Vos attaques à mains nues sont remplacées par une Attaque de la Liche, qui inflige 3d10+5 dégâts de froid et paralyse la cible pendant 10 rounds en cas d'échec du jet de sauvegarde (même Degré de Difficulté que le sort Toucher de la Liche).
-* Vous êtes entouré d’une aura de peur ; tout ennemi dans un rayon de 6 mètres (20 pieds) qui est au moins de 5 niveaux inférieur à vous doit réussir un jet de sauvegarde de Volonté (Degré de Difficulté de 10 + modificateur de Charisme/Intelligence) ou fuir pendant 1 round.
+* Vous êtes entouré d’une aura de peur ; tout ennemi dans un rayon de 6 mètres (20 pieds) qui est au moins de 5 niveaux inférieur à vous doit réussir un jet de sauvegarde de Volonté (Degré de Difficulté de 10 + modificateur de Charisme/Intelligence) sous peine de fuir pendant 1 round.
 * Vous gagnez un phylactère qui stocke votre force vitale. Si vous mourrez, vous serez automatiquement réanimé après 8 heures. Cependant, si tous les membres du groupe meurent, les ennemis détruiront votre phylactère et la partie sera terminée.~
 @522	= ~Magicien~
 @523	= ~MAGICIEN :
@@ -673,7 +673,7 @@ Remarque : pour lancer un sort, le magicien doit avoir un niveau d'intelligence 
 Points de vie par niveau : 1-4
 
 Avantages :
-* Compétent avec toutes les armes simples sauf les armes à projectiles.
+* Compétent avec toutes les armes courantes sauf les armes à projectiles.
 * Reçoit un don supplémentaire tous les 5 niveaux, en plus des dons normaux attribués à toutes les autres classes tous les 3 niveaux.
 * Si le personnage ne se spécialise pas dans une école de magie, il gagne un bonus de +1 au Degré de Difficulté de tous ses sorts.
 * Apprend deux nouveaux sorts à chaque fois qu'il monte de niveau, et peut également apprendre des sorts à partir de parchemins.
@@ -721,7 +721,7 @@ Avantages :
 * Niveau 1 : Le Récit de Curran Strongheart. Lorsqu'il est joué, tous les alliés du barde gagnent +1 au jet d'attaque, +1 aux dégâts et une immunité à la peur et au désespoir. Les bonus d'attaque et de dégâts augmentent de 1 aux niveaux 10, 25 et 40.
 * Niveau 3 : La Chanson des Kaudies. Lorsqu'elle est jouée, les alliés du barde sont immunisés contre les sorts et capacités nuisibles basés sur le son, y compris Injonction, Silence, Injonction suprême, Mot de pouvoir : Sommeil, Explosion sonore, Cri, Mot de pouvoir : Silence, Mot de pouvoir étourdissant, Mot de pouvoir : Cécité, Grand Cri, Plainte d'outre-tombe, Mot de pouvoir : Mort, cri de harpie, et les effets réservés aux ennemis de Cantique, Prière et Récitation.
 * Niveau 5 : La Mélodie de Tymora. Lorsqu'elle est jouée, la Mélodie de Tymora donne aux alliés du barde +1 à la chance, +1 aux jets de sauvegarde et +2 à leurs compétences en Connaissances (Mystères), en Alchimie et en Roublardise. Aux niveaux 15 et 35, cette chanson accorde un +1 supplémentaire à la chance et aux jets de sauvegarde et +2 aux tests de compétence.
-* Niveau 9 : L'Appel de la Sirène. Lorsqu'il est joué, chaque créature qui entend la chanson subit une pénalité cumulative de -1 à ses jets de sauvegarde de Volonté pendant 10 rounds et doit réussir un jet de sauvegarde de Volonté ou être enchantée, incapable d'agir pendant un round ou jusqu'à ce qu'elle subisse des dégâts. Le Degré de Difficulté du jet de sauvegarde de Volonté est égal au niveau du barde. Ainsi, la chanson d'un barde de niveau 15 a un Degré de Difficulté de 15.
+* Niveau 9 : L'Appel de la Sirène. Lorsqu'il est joué, chaque créature qui entend la chanson subit une pénalité cumulative de -1 à ses jets de sauvegarde de Volonté pendant 10 rounds et doit réussir un jet de sauvegarde de Volonté sous peine d'être enchantée, incapable d'agir pendant un round ou jusqu'à ce qu'elle subisse des dégâts. Le Degré de Difficulté du jet de sauvegarde de Volonté est égal au niveau du barde. Ainsi, la chanson d'un barde de niveau 15 a un Degré de Difficulté de 15.
 * Niveau 13 : Hymne guerrier de Sith. Lorsque le barde interprète ce chant, ses alliés gagnent un bonus générique de +2 à l’armure, 3/- de résistance aux dégâts et 3 points de vie sont régénérés par round de combat. Aux niveaux 28 et 45, cette chanson accorde des bonus supplémentaires de +2 à la classe d’armur, de résistance aux dégâts physiques de 3/- et de 3 points de vie soignés par round.
 * Niveau 20 : La Ballade des Trois Héros. Lorsqu'elle est jouée, les alliés du barde gagnent une résistance aux sorts de +5, une résistance de 5/- à toutes les formes de dégâts magiques, et les effets du Récit de Curran Strongheart, de la Mélodie de Tymora et de l’Hymne guerrier de Sith. Aux niveaux 30 et 50, cette chanson accorde en supplément une résistance aux sorts de +5 et une résistance de 5/- aux dégâts magiques.
 
@@ -848,7 +848,7 @@ Niveau 17+ : 1d8+5
 * Ki : Au niveau 5, l'attaque à mains nues du moine est imprégnée de ki, et gagne un enchantement de +1 avec des bonus correspondants à l'attaque et aux dégâts. Ce bonus d'enchantement augmente de +1 tous les 3 niveaux après le niveau 5, jusqu'à +5 au niveau 17.
 * La classe d'armure naturelle d'un moine commence à 10 et augmente d'un point au niveau 5, puis d'un point supplémentaire tous les 5 niveaux.
 * Lorsqu'un moine ne porte pas d'armure (les robes sont acceptées), il peut ajouter son bonus de Sagesse à sa classe d’armure, comme pour son bonus de Dextérité. Si le moine change de forme, il ne bénéficiera de cet avantage que si son niveau de moine est supérieur ou égal au niveau minimum requis pour se transformer en cette forme.
-* Attaques Étourdissantes : Lorsque cette capacité est utilisée, toutes les attaques à mains nues du moine au prochain round forcent la victime à effectuer un jet de sauvegarde de Vigueur (Degré de Difficulté de 10 + modificateur de Sagesse + moitié du niveau du moine) ou être étourdie pour 1 round. Un moine peut porter une attaque étourdissante par jour et par niveau.
+* Attaques Étourdissantes : Lorsque cette capacité est utilisée, toutes les attaques à mains nues du moine au prochain round forcent la victime à effectuer un jet de sauvegarde de Vigueur (Degré de Difficulté de 10 + modificateur de Sagesse + moitié du niveau du moine) sous peine d'être étourdie pour 1 round. Un moine peut porter une attaque étourdissante par jour et par niveau.
 * Esquive totale : un moine peut éviter les dégâts des sorts à zone d'effet. Pour ce faire, il doit réussir un jet de Réflexes contre un sort à zone d'effet autorisant la réduction des dégâts par jet de Réflexes.
 * 2ème niveau : Parade de projectiles. Le moine acquiert le don de Parade de projectiles, offrant un bonus de +1 aux jets contre les armes à projectiles. De plus, à chaque round, le moine bloque automatiquement la première instance de dégâts de projectiles qui aurait dû le toucher. Le moine doit avoir une main libre pour parer les projectiles de cette manière.
 * 3ème niveau : Déplacement accéléré. Le moine se déplace 3 mètres (10 pieds) plus vite qu'un personnage normal (la vitesse de déplacement normale est de 9 mètres (30 pieds)), mais seulement tant que le moine n'est pas encombré ou ne porte pas d'armure. Le moine gagne 3 mètres (10 pieds) de mouvement supplémentaires tous les 3 niveaux par la suite.
@@ -1316,7 +1316,7 @@ Normal : Un personnage qui utilise une arme hors de sa compétence (donc sans un 
 @686	= ~Maniement des Armes courantes, Petite Lame/À Mains Nues~
 @687	= ~MANIEMENT DES ARMES COURANTES, PETITE LAME/À MAINS NUES :
 
-Vous savez comment utiliser les petites lames telles que les dagues et les épées courtes et combattre à mains nues, avec des armes naturelles, et avec des attaques de contact magiques au corps à corps qui nécessitent un jet d'attaque comme Blessure légère ou Décharge électrique.
+Vous savez comment utiliser les petites lames telles que les dagues et les épées courtes et combattre à mains nues, avec des armes naturelles, et avec des attaques de contact magiques au corps à corps qui nécessitent un jet d'attaque comme Blessures légères ou Décharge électrique.
 
 Avantage : vous lancez normalement vos jets d'attaque avec l'arme. Deux rangs de ce don est Arme de prédilection, qui confère un bonus de +2 aux jets d'attaque et de dégâts. Trois rangs dans ce don est Spécialisation martiale, qui confère  un bonus de +5 aux jets d'attaque et de dégâts. Seuls les personnages ayant quatre niveaux ou plus de guerrier peuvent prendre Spécialisation martiale.
 
@@ -1397,7 +1397,7 @@ Avantage : Permet au roublard de sacrifier 1d6 points de dégâts d'attaque sourno
 
 Bien que n'importe qui puisse attraper quelque chose, vous avez la faculté de saisir une créature hostile en plein combat.
 
-Avantage : Vous gagnez une capacité qui vous permet de saisir une créature adjacente. Cette capacité peut être utilisée une fois par round. La cible doit réussir un jet de Réflexes (Degré de Difficulté de 12 + la moitié de votre niveau + votre modificateur de Force ou de Dextérité (le plus élevé)) ou être saisi par vous pendant 2 rounds. Pendant ce temps, la créature subit une pénalité de -4 aux attaques, 50% de chances d'échouer ses incantations et ne peut pas s'éloigner de vous. Si vous vous déplacez, vous pouvez entraîner la créature avec vous.
+Avantage : Vous gagnez une capacité qui vous permet de saisir une créature adjacente. Cette capacité peut être utilisée une fois par round. La cible doit réussir un jet de Réflexes (Degré de Difficulté de 12 + la moitié de votre niveau + votre modificateur de Force ou de Dextérité (le plus élevé)) sous peine d'être saisi par vous pendant 2 rounds. Pendant ce temps, la créature subit une pénalité de -4 aux attaques, 50% de chances d'échouer ses incantations et ne peut pas s'éloigner de vous. Si vous vous déplacez, vous pouvez entraîner la créature avec vous.
 
 Pour pouvoir saisir, vous devez avoir au moins une main libre. Le Degré de Difficulté du jet de sauvegarde augmente de +4 si vous avez les deux mains libres. Il diminue de -4 chaque fois que quelqu'un a essayé de saisir la cible au cours des 10 derniers rounds. Si vous saisissez un allié ou une créature paralysée, étourdie, endormie ou à terre, il n'y a pas de jet de sauvegarde. Les créatures plus grandes que vous ne peuvent pas être saisies.~
 
@@ -1585,7 +1585,7 @@ Avantage : vous lancez normalement vos jets d'attaque avec l'arme. Deux rangs de
 Normal : Un personnage qui utilise une arme hors de sa compétence (donc sans un seul rang de ce don) subit une pénalité de -4 aux jets d'attaque.~
 @728	= ~MANIEMENT DES ARMES COURANTES, PETITE LAME/À MAINS NUES :
 
-Vous comprenez comment utiliser les petites lames telles que les dagues et les épées courtes, ainsi que comment combattre à mains nues, avec des armes naturelles et avec des attaques de contact magiques au corps à corps qui nécessitent un jet d'attaque, telles que Blessure légère ou Décharge électrique.
+Vous comprenez comment utiliser les petites lames telles que les dagues et les épées courtes, ainsi que comment combattre à mains nues, avec des armes naturelles et avec des attaques de contact magiques au corps à corps qui nécessitent un jet d'attaque, telles que Blessures légères ou Décharge électrique.
 
 Avantage : vous lancez normalement vos jets d'attaque avec l'arme. Deux rangs de ce don est Arme de prédilection, ce qui confère +1 à l'attaque. Un Guerrier de niveau 4 peut prendre un troisième rang dans ce don pour la Spécialisation martiale, ce qui confère +2 aux dégâts. Un Guerrier de niveau 8 peut prendre un quatrième rang dans ce don pour l’Arme de prédilection supérieure, ce qui confère un autre +1 à l'attaque. Un Guerrier de niveau 12 peut prendre un cinquième rang dans ce don pour la Spécialisation martiale supérieure, ce qui confère un autre +2 aux dégâts.
 
@@ -1897,7 +1897,7 @@ Avantages :
 @813 = ~Empathie avec les animaux~
 @814 = ~EMPATHIE AVEC LES ANIMAUX (Cha ; Entraînement requis ; Druide, Rôdeur uniquement) :
 
-Utilisez cette compétence pour empêcher un chien de garde d'aboyer, demander à un oiseau de se poser sur votre main ou calmer un ours-hibou pendant que vous battez en retraite. Toute créature sauvage, y compris les animaux ainsi que les monstres animaux tels que les wyverns, doit réussir un jet de Volonté ou être charmée pendant 1 round par niveau de lanceur.~
+Utilisez cette compétence pour empêcher un chien de garde d'aboyer, demander à un oiseau de se poser sur votre main ou calmer un ours-hibou pendant que vous battez en retraite. Toute créature sauvage, y compris les animaux ainsi que les monstres animaux tels que les wyverns, doit réussir un jet de Volonté sous peine d'être charmée pendant 1 round par niveau de lanceur.~
 
 @815 = ~Abjurateur~
 @816 = ~ABJURATEUR :
@@ -2259,7 +2259,7 @@ Poids : 1~
 @940	= ~Les compétences représentent une variété d'aptitudes, et vous vous améliorez à mesure que vous montez de niveau. Vous avez reçu des points de compétence à distribuer parmi vos compétences.~
 @941	= ~Saisie
 
-Cette capacité peut être utilisée une fois par round. La cible doit faire un jet de sauvegarde de Réflexes (Degré de Difficulté de 12 + la moitié de votre niveau + votre modificateur de Force ou de Dextérité (le plus élevé des deux)) ou être saisie par vous pendant 2 rounds. Pendant qu'elle est saisie, la créature subit une pénalité de -4 aux attaques, 50% de chance d'échec pour les sorts, et ne peut pas s'éloigner de vous. Si vous vous déplacez, vous pouvez tirer la créature avec vous.
+Cette capacité peut être utilisée une fois par round. La cible doit faire un jet de sauvegarde de Réflexes (Degré de Difficulté de 12 + la moitié de votre niveau + votre modificateur de Force ou de Dextérité (le plus élevé des deux)) sous peine d'être saisie par vous pendant 2 rounds. Pendant qu'elle est saisie, la créature subit une pénalité de -4 aux attaques, 50% de chance d'échec pour les sorts, et ne peut pas s'éloigner de vous. Si vous vous déplacez, vous pouvez tirer la créature avec vous.
 
 Pour saisir, vous devez avoir au moins une main libre. Le jet de sauvegarde gagne +4 au Degré de Difficulté si vous avez les deux mains libres. Il obtient -4 au Degré de Difficulté pour chaque fois que quelqu'un a tenté de saisir la cible au cours des 10 derniers rounds. Si vous saisissez un allié ou une créature paralysée, étourdie, endormie ou renversée, il n'y a pas de jet de sauvegarde. Les créatures plus grandes que vous ne peuvent pas être saisies.~
 @942	= ~Préparer des potions
@@ -2342,10 +2342,10 @@ Lorsqu'elle est appliquée sur un individu malade, cette capacité le guérit imméd
 En utilisant cette capacité, le paladin tentera de châtier le mal avec sa prochaine attaque de mêlée. Il ajoute son modificateur de Charisme (si positif) à son jet d'attaque et inflige un nombre de d4 supplémentaires égal à son niveau de paladin + son modificateur de Charisme, à condition que la cible soit maléfique.~
 @970	= ~Soleil ardent
 
-À l'achèvement de cette capacité, un rayon brillant de chaleur brûlante descend du ciel et brûle la créature cible pour 1d6 + 1 dégâts de feu par niveau du lanceur (jusqu'à un maximum de 1d6 + 15). Les créatures mortes-vivantes et les monstres vulnérables à la lumière vive subissent 1d6 + 2 dégâts de feu par niveau du lanceur (jusqu'à un maximum de 1d6 + 30). Les victimes doivent réussir un jet de sauvegarde de Vigueur ou être aveuglées pendant 3 rounds. Les drows et les duergars sont aveuglés par le sort pendant 3 rounds (sans jet de sauvegarde).~
+À l'achèvement de cette capacité, un rayon brillant de chaleur brûlante descend du ciel et brûle la créature cible pour 1d6 + 1 dégâts de feu par niveau du lanceur (jusqu'à un maximum de 1d6 + 15). Les créatures mortes-vivantes et les monstres vulnérables à la lumière vive subissent 1d6 + 2 dégâts de feu par niveau du lanceur (jusqu'à un maximum de 1d6 + 30). Les victimes doivent réussir un jet de sauvegarde de Vigueur sous peine d'être aveuglées pendant 3 rounds. Les drows et les duergars sont aveuglés par le sort pendant 3 rounds (sans jet de sauvegarde).~
 @971	= ~Ténèbres
 
-Cette capacité crée des ténèbres magiques dans la zone d'effet. Les créatures sans vision dans le noir doivent réussir un jet de sauvegarde de Vigueur ou être effectivement aveuglées. Les créatures avec vision dans le noir ne sont pas aveuglées, mais même elles ont une capacité limitée à voir à travers les ténèbres magiques, obtenant une pénalité d'attaque de -4 en cas d'échec du jet de sauvegarde. Les créatures avec une vision dans le noir supérieure à 36 mètres (120 pieds) (par exemple les drows, duergars ou gnomes des profondeurs) n'ont qu'une pénalité d'attaque de -2. Les diables et les créatures immunisées contre la cécité ne sont pas affectés.~
+Cette capacité crée des ténèbres magiques dans la zone d'effet. Les créatures sans vision dans le noir doivent réussir un jet de sauvegarde de Vigueur sous peine d'être effectivement aveuglées. Les créatures avec vision dans le noir ne sont pas aveuglées, mais même elles ont une capacité limitée à voir à travers les ténèbres magiques, obtenant une pénalité d'attaque de -4 en cas d'échec du jet de sauvegarde. Les créatures avec une vision dans le noir supérieure à 36 mètres (120 pieds) (par exemple les drows, duergars ou gnomes des profondeurs) n'ont qu'une pénalité d'attaque de -2. Les diables et les créatures immunisées contre la cécité ne sont pas affectés.~
 @972	= ~Invisibilité
 
 Cette capacité fait disparaître le personnage qui devient indétectable à la vision normale ou à l'infravision. Le sort reste actif jusqu'à ce que 10 minutes par niveau se soient écoulées ou tant qu’il n’est pas rompu ou dissipé par magie, à moins que le mage ou le bénéficiaire ne l'annule, que ce dernier n’attaque ou ne parle à une créature. L'être invisible peut ouvrir les portes, parler, manger, monter les escaliers, etc. Mais s'il attaque, il devient immédiatement visible, bien que l'invisibilité lui permette de porter le premier coup.~
@@ -2843,10 +2843,4 @@ STATISTIQUES :
 Flot de vipères pour 6 rounds
 Poids : 1 lb (0,45 kg)
 ~
-
-
-
-
-
-
 

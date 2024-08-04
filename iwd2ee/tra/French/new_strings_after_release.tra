@@ -29,7 +29,7 @@ STATISTIQUES :
 
 Résistance :  20/- de résistance au froid
 Augmente de 20% tous les dégâts de froid infligés par le personnage
-Poids : 3 lb~
+Poids : 3 lb (1,36 kg)~
 
 @10717	= ~Dague de Flammes Jumelles +5~
 @10718	= ~La dague diffère du couteau par sa lame, qui est à la fois pointue, un peu plus grande et à double tranchant.
@@ -43,8 +43,8 @@ Type de dégâts : Perforants
 Spécial :
  Flammes jumelles : +1d6 de dégâts du feu. Si le personnage combat à deux armes, son autre arme bénéficie également de +1d6 de dégâts du feu.
 Poids : 1 lb (0,45 kg)
-Compétence : armes courantes, petite lame/à mains nues
-Type d'arme : arme à une main~
+Compétence : arme courante, petite lame/à mains nues
+Type d'arme : à une main~
 
 @10809	= ~Tueuse du Silence +3~
 @10810	= ~L’histoire de Tueuse du Silence est connue de tous, mais il est difficile de dire si elle est véridique ou non. Elle évoque deux frères qui se disputaient le trône de leur père malade. Quand l’aîné fut nommé roi par le monarque mourant, le cadet, fou de rage, jura de s’emparer du trône. Il fit forger cette épée afin de tuer son frère.
@@ -62,8 +62,8 @@ Spécial :
  Discrétion : +6
  Véritable attaque sournoise : si le porteur attaque depuis l'ombre ou alors qu'il est invisible, et s'il frappe sa victime dans le dos avec cette arme, les dégâts infligés sont augmentés de 6d6.
 Poids : 3 lb (1,36 kg)
-Compétence : armes courantes, petite lame/à mains nues
-Type d'arme : arme à une main~
+Compétence : arme courante, petite lame/à mains nues
+Type d'arme : à une main~
 @10811	= ~Lame de l'Assassin +5~
 @10812	= ~L'histoire de la Lame de l'Assassin est connue de tous, mais il est difficile de dire si elle est véridique ou non. Elle évoque deux frères qui se disputaient le trône de leur père malade. Quand l'aîné fut nommé roi par le monarque mourant, le cadet, fou de rage, jura de s'emparer du trône. Il fit forger cette lame afin de tuer son frère.
 
@@ -80,8 +80,8 @@ Spécial :
  Discrétion : +12
  Véritable attaque sournoise : si le porteur attaque depuis l'ombre ou alors qu'il est invisible, et s'il frappe sa victime dans le dos avec cette arme, les dégâts infligés sont augmentés de 10d6.
 Poids : 3 lb (1,36 kg)
-Compétence : armes courantes, petite lame/à mains nues
-Type d'arme : arme à une main~
+Compétence : arme courante, petite lame/à mains nues
+Type d'arme : à une main~
 
 @11386	= ~Le gourdin de confusion a été conçu par l’ogresse Shavauntea pour "l’offrir" à son mari, Grothak l’Idiot. Elle espérait que cette arme pourrait servir à "insuffler un peu d’intelligence dans cette tête vide". Shavauntea fut assez surprise de constater que l’arme avait l’effet opposé à celui escompté, lorsqu’elle frappa à l'improviste sur la tête de son mari. On pensait que ce gourdin avait été détruit au cours de la lutte qui avait opposé les deux amoureux lorsque Grothak eut repris connaissance. Ce n’est apparemment pas le cas.
 
@@ -96,8 +96,8 @@ Spécial :
  Sort : 50% de chances pour que la cible soit en proie à la Confusion pendant 1 round (jet de Volonté de DD 33)
  Impact : Augmente les chances d'infliger un coup critique
 Poids : 3 lb (1,36 kg)
-Compétence : armes courantes, masse
-Type d'arme : arme à une main~
+Compétence : arme courante, masse
+Type d'arme : à une main~
 
 @12268	= ~Les baguettes mesurent en général 40 à 50 cm. Faites d'ivoire, d'os ou de bois, elles sont fragiles. Leurs extrémités sont souvent renforcées par du métal, du cristal ou de la pierre. En général, elles sont conservées dans des boîtes de bois précieux.
 
