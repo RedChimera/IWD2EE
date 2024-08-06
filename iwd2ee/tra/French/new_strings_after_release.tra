@@ -107,7 +107,7 @@ STATISTIQUES :
 
 Augmente de 30% les dégâts du feu, de froid, d'électricité et d’acide pendant 20 rounds (pas de sauvegarde, non cumulable).
 Portée : 30 mètres (100 pieds)
-Poids : 1 lb (0,45 kg)~
+Poids : 1 lb (0,45 kg)
 @12639	= ~Billes de la Dévastation +5~
 @12640	= ~Cette bille a été imprégnée d'énergie magique, ce qui la rend un peu plus équilibrée et légère.
 
@@ -316,12 +316,12 @@ Avantages :
 * Niveau 7 : Le barde peut remplacer un de ses sorts connus par un autre sort du même niveau. Il peut le faire une fois de plus tous les 3 niveaux après le niveau 7. Le barde ne peut remplacer des sorts qu'au moins deux niveaux de sort en dessous du niveau de sort le plus élevé qu'il peut lancer (par exemple, seulement un sort de niveau 1 lorsque le barde atteint le niveau 7), bien qu'il puisse remplacer des sorts de niveau 7 à partir du niveau 25, et des sorts de niveau 8 à partir du niveau 28.
 * De nombreuses compétences de roublard sont également des compétences de barde.
 * Chants du barde. Les bardes peuvent interpréter des mélodies qui produisent des effets magiques sur les créatures dans un rayon de 9 mètres (30 pieds). Plus ils gagnent de niveaux, plus leur répertoire musical est étendu. Voici un descriptif de ces chants.
-* Niveau 1 : La Légende de Curran Strongheart. Lorsqu'il est joué, tous les alliés du barde gagnent +1 au jet d'attaque, +1 aux dégâts et une immunité à la peur et au désespoir. Les bonus d'attaque et de dégâts augmentent de 1 aux niveaux 10, 25 et 40.
+* Niveau 1 : Le Récit de Curran Cœurvaillant. Lorsqu'il est joué, tous les alliés du barde gagnent +1 au jet d'attaque, +1 aux dégâts et une immunité à la peur et au désespoir. Les bonus d'attaque et de dégâts augmentent de 1 aux niveaux 10, 25 et 40.
 * Niveau 3 : La Chanson des Kaudies. Lorsqu'elle est jouée, les alliés du barde sont immunisés contre les sorts et capacités nuisibles basés sur le son, y compris Injonction, Silence, Injonction suprême, Mot de pouvoir : Sommeil, Explosion sonore, Cri, Mot de pouvoir : Silence, Mot de pouvoir : Étourdissement, Mot de pouvoir : Cécité, Grand Cri, Plainte d'outre-tombe, Mot de pouvoir : Mort, Cri de Harpie, et les effets réservés aux ennemis comme Cantique, Prière et Récitation.
 * Niveau 5 : La Mélodie de Tymora. Lorsqu'elle est jouée, la Mélodie de Tymora donne aux alliés du barde +1 à la chance, +1 aux jets de sauvegarde et +2 à leurs compétences en Connaissances (Mystères), en Alchimie et en Roublardise (compétences de roublard). Aux niveaux 15 et 35, cette chanson accorde un +1 supplémentaire à la chance et aux jets de sauvegarde et +2 aux tests de compétence.
 * Niveau 9 : L'Appel de la Sirène. Lorsqu'il est joué, chaque créature qui entend la chanson subit une pénalité cumulative de -1 à ses jets de sauvegarde de Volonté pendant 10 rounds et doit réussir un jet de sauvegarde de Volonté sous peine d'être enchantée, incapable d'agir pendant un round ou jusqu'à ce qu'elle subisse des dégâts. Le Degré de Difficulté du jet de sauvegarde de Volonté est égal au niveau du barde. Ainsi, la chanson d'un barde de niveau 15 a un DD de 15.
 * Niveau 13 : Hymne guerrier de Sith. Lorsque le barde interprète ce chant, ses alliés gagnent un bonus générique de +2 à la classe d’armure, 3/- de résistance aux dégâts et 3 points de vie sont régénérés par round de combat. Aux niveaux 28 et 45, cette chanson accorde des bonus supplémentaires de +2 à la classe d’armure, de résistance aux dégâts physiques de 3/- et de 3 points de vie soignés par round.
-* Niveau 20 : La Ballade des Trois Héros. Lorsqu'elle est jouée, les alliés du barde gagnent une résistance aux sorts de +5, une résistance de 5/- à toutes les formes de dégâts magiques, et les effets du Récit de Curran Strongheart, de la Mélodie de Tymora et de l’Hymne guerrier de Sith. Aux niveaux 30 et 50, cette chanson accorde en supplément une résistance aux sorts de +5 et une résistance de 5/- aux dégâts magiques.
+* Niveau 20 : La Ballade des Trois Héros. Lorsqu'elle est jouée, les alliés du barde gagnent une résistance aux sorts de +5, une résistance de 5/- à toutes les formes de dégâts magiques, et les effets du Récit de Curran Cœurvaillant, de la Mélodie de Tymora et de l’Hymne guerrier de Sith. Aux niveaux 30 et 50, cette chanson accorde en supplément une résistance aux sorts de +5 et une résistance de 5/- aux dégâts magiques.
 
 Un barde ne peut pas faire bénéficier le groupe de plus d'une chanson à la fois. Mais si le groupe a plusieurs bardes, les effets de la chanson de chaque barde se cumulent. Les créatures invoquées ne bénéficient pas des chansons des bardes.
 
@@ -878,7 +878,7 @@ Niveau 17+ : 1d8+5
 * Esquive totale : un moine peut éviter les dégâts des sorts à zone d'effet. Pour ce faire, il doit réussir un jet de Réflexes contre un sort à zone d'effet autorisant la réduction des dégâts par jet de Réflexes.
 * 2ème niveau : Parade de projectiles. Le moine acquiert le don Parade de projectiles, offrant un bonus de +1 aux jets contre les armes à projectiles. De plus, à chaque round, le moine bloque automatiquement la première source de dégâts de projectiles qui aurait dû le toucher. Le moine doit avoir une main libre pour parer les projectiles de cette manière.
 * 3ème niveau : Déplacement accéléré. Le moine se déplace de 3 mètres (10 pieds) plus vite qu'un personnage normal (la vitesse de déplacement normale est de 9 mètres (30 pieds)), mais seulement tant que le moine n'est pas encombré ou ne porte pas d'armure. Le moine gagne 3 mètres (10 pieds) de mouvement supplémentaires tous les 3 niveaux par la suite.
-* 3ème niveau : Sérénité. Le moine obtient un bonus de +2 aux jets de sauvegarde contre les sorts et les effets de l'école d'Enchantement.
+* 3ème niveau : Sérénité. Le moine obtient un bonus de +2 aux jets de sauvegarde contre les sorts et les effets de l'école d'enchantement.
 * 5ème niveau : Pureté physique. Le moine maîtrise son système immunitaire. Il est immunisé contre toutes les maladies.
 * 7ème niveau : Plénitude physique. Le moine peut récupérer des points de vie égaux à son niveau de moine multiplié par son modificateur de Sagesse une fois par jour tous les 7 niveaux.
 * 9ème niveau : Esquive surnaturelle. Le moine acquiert le don d'Esquive surnaturelle, habituellement réservé aux roublards.

@@ -2,8 +2,8 @@
 
 //Class abilities @146 to 189  and @897 - @999 (with gaps)
 //Class/race descriptions @524 to @830 (with gaps)
-@146	= ~Ilmater : toucher apaisant~
-@147	= ~Ilmater : toucher apaisant~
+@146	= ~Ilmater : Toucher apaisant~
+@147	= ~Ilmater : Toucher apaisant~
 @148	= ~Massue de blaireau-garou~
 @149	= ~Croc de vipère~
 @150	= ~Griffe de crochorreur~
@@ -14,20 +14,20 @@
 @155	= ~Épée à deux mains de foudre +3~
 @156	= ~Griffe de dragon~
 @157	= ~Branche de sylvanien~
-@158	= ~Fatalité rampante~
+@158	= ~Fatalité Rampante~
 @159	= ~Pseudopode de tertre errant~
-@160	= ~Forme animale : blaireau-garou~
-@161	= ~Forme animale : vipère~
-@162	= ~Forme animale : crochorreur~
-@163	= ~Forme animale : scarabée rhinocéros~
-@164	= ~Forme animale : feu follet~
-@165	= ~Forme animale : demi-dragon blanc~
-@166	= ~Forme animale : demi-dragon rouge~
-@167	= ~Forme animale : demi-dragon bleu~
-@168	= ~Forme de dragon : dragon noir~
-@169	= ~Forme animale : sylvanien~
-@170	= ~Forme animale : fatalité rampante~
-@171	= ~Forme animale : tertre errant~
+@160	= ~Forme animale : Blaireau-garou~
+@161	= ~Forme animale : Vipère~
+@162	= ~Forme animale : Crochorreur~
+@163	= ~Forme animale : Scarabée rhinocéros~
+@164	= ~Forme animale : Feu follet~
+@165	= ~Forme animale : Demi-dragon blanc~
+@166	= ~Forme animale : Demi-dragon rouge~
+@167	= ~Forme animale : Demi-dragon bleu~
+@168	= ~Forme de dragon : Dragon noir~
+@169	= ~Forme animale : Sylvanien~
+@170	= ~Forme animale : Fatalité rampante~
+@171	= ~Forme animale : Tertre errant~
 @172	= ~Blaireau-garou~
 @173	= ~Vipère~
 @174	= ~Crochorreur~
@@ -60,7 +60,7 @@ Grands, forts et résistants, les sylvaniens ou tréants sont des arbres massifs e
 Prérequis : 8 niveaux de druide~
 @190	= ~Talos : Bénédiction de Talos~
 @191	= ~Tempus : Maîtrise de Tempus~
-@192	= ~Forme animale : loup arctique~
+@192	= ~Forme animale : Loup arctique~
 @193	= ~Forme animale : Ours polaire~
 @194	= ~Forme animale : Vipère géante~
 @195	= ~Forme élémentaire : Salamandre~
@@ -131,13 +131,13 @@ Tant que cette capacité est active, vos attaques sournoises infligent 1d6 points
 @224	= ~Coup de Jarnac
 
 Tant que cette capacité est active, vos attaques sournoises infligent 2d6 de dégâts en moins mais réduisent la vitesse de déplacement de la cible de 50% pendant 10 rounds (pas de sauvegarde). Cette capacité peut être activée ou désactivée à volonté en tant qu'action libre.~
-@225	= ~Tir rapide
+@225	= ~Tir Rapide
 
-Tant que cette capacité est active, vous gagnez une attaque supplémentaire par round avec toute arme à distance autre qu'une arbalète. Cette attaque est faite avec votre bonus d'attaque maxumum. Cependant, toutes vos attaques subissent une pénalité de -2. Cette capacité peut être activée ou désactivée à volonté en tant qu'action libre.~
+Tant que cette capacité est active, vous gagnez une attaque supplémentaire par round avec toute arme à distance autre qu'une arbalète. Cette attaque est faite avec votre bonus d'attaque maximum. Cependant, toutes vos attaques subissent une pénalité de -2. Cette capacité peut être activée ou désactivée à volonté en tant qu'action libre.~
 @226	= ~Renvoi des morts-vivants
 
 En utilisant cette capacité, le prêtre peut faire fuir une ou plusieurs créatures mortes-vivantes en vue. Plus le niveau du prêtre et le bonus de Charisme sont élevés, plus le niveau des morts-vivants qu'il peut repousser est élevé. Si le prêtre est de beaucoup plus haut niveau que les morts-vivants, ils seront détruits (si le prêtre est d’alignement bon ou un adorateur neutre d'une divinité non maléfique) ou soumis au contrôle du prêtre (si le prêtre est maléfique, ou un adorateur neutre d'une divinité maléfique).~
-@227	= ~Forme animale : loup arctique
+@227	= ~Forme animale : Loup arctique
 
 Le druide se transforme en loup des glaces. Sous forme de loup des glaces, le druide est immunisé au froid et peut attaquer une fois par round avec le souffle glacé du loup des glaces, qui inflige 4d4 dégâts de froid (jet de Réflexes avec un Degré de Difficulté de 10 pour la moitié des dégâts). Tous les 5 niveaux par la suite, les dégâts du souffle augmentent de 2d4 et le Degré de Difficulté du jet de sauvegarde augmente de 5.~
 @228	= ~Forme animale : Ours polaire
@@ -228,7 +228,7 @@ Avantage : Vos attaques sournoises infligent 1d6 dégâts supplémentaires. Ce don 
 
 Vous êtes un expert en combat à deux armes. Vous pouvez attaquer encore plus rapidement grâce à elles.
 
-Prérequis : Dex 17+, Ambidextrie, Combat à deux armes, Bonus de base à l'attaque de+16 ou plus ; prendre ce don une seconde fois nécessite 15 niveaux de rôdeur.
+Prérequis : Dex 17+, Ambidextrie, Combat à deux armes, Bonus de base à l'attaque de +16 ou plus ; prendre ce don une seconde fois nécessite 15 niveaux de rôdeur.
 
 Avantage : Lorsque vous maniez deux armes, vous obtenez une deuxième attaque par round avec l'arme secondaire (à -5 de bonus d'attaque). Si vous avez deux rangs dans ce don, vous obtenez une troisième attaque par round avec elle (à -10 de bonus d'attaque).
 
@@ -276,7 +276,9 @@ Votre maîtrise de la magie de force a donné des résultats impressionnants.
 
 Prérequis : Vous devez être capable de lancer des sorts de 4e niveau et avoir une compétence en Connaissance des sorts de 10 ou plus.
 
-Avantage : Confère une résistance aux dégâts magiques de 5 (permanente), et une augmentation de 20% à tous les dégâts magiques infligés.~
+Avantage : Confère une résistance aux dégâts magiques de force de 5 (permanente), et une augmentation de 20% à tous les dégâts magiques de force infligés.
+
+Remarque : La magie de force se retrouve dans les sorts comme Projectile magique, Projectiles de force de Mordenkainen, Tempête suprême de projectiles d’Isaac, Flétrissure, Mise à mal ou Blessures légères.~
 @321	= ~Quintessence des sorts~
 @322	= ~MÉTAMAGIE, QUINTESSENCE DES SORTS:
 
@@ -345,7 +347,7 @@ Ce don peut être pris jusqu'à quatre fois. Chaque fois, vous devenez capable de 
 3 points : jusqu'aux sorts de 6e niveau
 4 points : jusqu'aux sorts de 8e niveau~
 
-@331	= ~Maîtrise du Bouclier~
+@331	= ~Maîtrise du bouclier~
 @332	= ~MAÎTRISE DU BOUCLIER :
 
 Vous êtes particulièrement habile dans le maniement des boucliers.
@@ -369,7 +371,7 @@ Votre rage de barbare est terrifiante à voir.
 Prérequis : Rage de grand berserker, Intimidation 18 ou plus
 
 Avantage : Pendant que vous êtes en rage, les ennemis dans un rayon de 1,8 mètres (6 pieds) autour de vous doivent réussir un jet de Volonté (Degré de Difficulté de 5 + 1/2 de votre compétence Intimidation) sous peine de fuir pendant 3 rounds.~
-@337	= ~Défense à Deux Armes~
+@337	= ~Défense à deux armes~
 @338	= ~DÉFENSE À DEUX ARMES :
 
 Vous êtes doué pour parer les attaques tout en maniant deux armes.
@@ -398,7 +400,7 @@ Avantage: Vous gagnez une capacité qui vous permet de feinter une créature adjac
 
 Ce don peut être pris deux fois. Lorsqu'il est pris une deuxième fois, le don devient Feinte améliorée, qui vous permet de feinter en tant qu'action libre une fois par round. Après avoir feinté pour la première fois dans un round, vous pouvez utiliser une autre capacité ou lancer un sort avant la fin du round. Feinte améliorée ajoute également +2 au Degré de Difficulté du jet de sauvegarde.~
 
-@343	= ~Attaque Tourbillon~
+@343	= ~Attaque tourbillon~
 @344	= ~ATTAQUE TOURBILLON :
 
 Vous pouvez effectuer une attaque tournoyante pour frapper plusieurs ennemis autour de vous.
@@ -452,7 +454,7 @@ Vous pouvez maximiser la puissance de vos sorts.
 Prérequis : La capacité de lancer des sorts de niveau 4.
 
 Avantage : Vous gagnez la capacité Quintessence des sorts, utilisable à volonté comme une action libre. L'utiliser fait que votre prochain sort inflige des dégâts maximaux et soigne le nombre maximal de points de vie, mais nécessite également un emplacement de sort de trois niveaux plus haut.~
-@355	= ~Sort Persistant~
+@355	= ~Sort persistant~
 @356	= ~MÉTAMAGIE, SORT PERSISTANT :
 
 Vous pouvez augmenter la durée de vos sorts à 8 heures complètes.
@@ -493,7 +495,7 @@ Vous pouvez faire en sorte que vos sorts affectent une zone plutôt qu'une seule 
 Prérequis : La capacité de lancer des sorts de niveau 6.
 
 Avantage : Vous gagnez la capacité Sort de groupe, utilisable à volonté comme une action libre. L'utiliser fait en sorte que votre prochain sort affecte toutes les créatures dans un rayon de 6 mètres (20 pieds) autour de la cible, mais nécessite un emplacement de sort de cinq niveaux plus haut. Même les sorts qui n'affectent normalement que le lanceur peuvent désormais affecter d'autres créatures. Sort de groupe remplace la zone d'effet normale du sort, il doit donc être utilisé uniquement avec des sorts qui ciblent normalement une seule créature.~
-@365	= ~Feu Nourri~
+@365	= ~Feu nourri~
 @366	= ~FEU NOURRI :
 
 Vous pouvez tirer plusieurs flèches simultanément sur une cible proche.
@@ -545,10 +547,10 @@ En vous déplaçant, vous être plus efficace pour esquiver les attaques.
 Prérequis : Dex 13+, Esquive
 
 Avantage : En vous déplaçant, vous gagnez un bonus de classe d'armure de +4. Ce bonus est doublé contre les attaques d'opportunité dues à un déplacement hors de la portée de l'arme d'un ennemi.~
-@373	= ~Roulade Défensive~
+@373	= ~Roulade défensive~
 @374	= ~ROULADE DÉFENSIVE :
 
-En cas de coup dur, vous pouvez rouler pour éviter une mort presque certaine.
+En cas de coup dur, vous pouvez faire une roulade pour éviter une mort presque certaine.
 
 Prérequis : 10 niveaux de roublard
 
@@ -568,7 +570,7 @@ Vous savez comment tirer parti d’un ennemi distrait par un allié pour porter une
 Prérequis : 10 niveaux de roublard
 
 Avantage : Si un allié touche un ennemi en mêlée pendant que vous attaquez également cet ennemi en mêlée, vous pouvez effectuer une attaque d'opportunité contre cet ennemi.~
-@378	= ~Réduction des Dégâts~
+@378	= ~Réduction des dégâts~
 @379	= ~RÉDUCTION DES DÉG TS :
 
 Vous pouvez encaisser une partie des dégâts des attaques.
@@ -587,8 +589,8 @@ Condition préalable: Dex 23+
 
 Avantage: Vous gagnez la capacité de Vitesse éblouissante, qui vous confère les effets de Hâte améliorée pendant 5 rounds. Vous gagnez +8 à la classe d’armure, vos attaques par round sont doublées, et vous vous déplacez beaucoup plus vite. Les bonus d'attaque continueront à baisser pour les attaques supplémentaires.~
 
-@382	= ~Capacité de Sort Avancé~
-@383	= ~CAPACITÉ DE SORT AVANCÉE :
+@382	= ~Lancement de sorts supérieurs~
+@383	= ~LANCEMENT DE SORTS SUPÉRIEURS :
 
 Vous pouvez lancer des sorts de niveau supérieur à ce qui est normalement autorisé pour votre classe.
 
@@ -718,12 +720,12 @@ Avantages :
 * Niveau 7 : Le barde peut remplacer un de ses sorts connus par un autre sort du même niveau. Il peut le faire une fois de plus tous les 3 niveaux après le niveau 7. Le barde ne peut remplacer des sorts qu'au moins deux niveaux de sort en dessous du niveau de sort le plus élevé qu'il peut lancer (par exemple, seulement un sort de niveau 1 lorsque le barde atteint le niveau 7), bien qu'il puisse remplacer des sorts de niveau 7 à partir du niveau 25, et des sorts de niveau 8 à partir du niveau 28.
 * De nombreuses compétences de roublard sont des compétences de classe pour le barde.
 * Chants du barde. Les bardes peuvent interpréter des mélodies qui produisent des effets magiques sur les créatures dans un rayon de 9 mètres (30 pieds). Plus ils gagnent de niveaux, plus leur répertoire musical est étendu. Voici un descriptif de ces chants.
-* Niveau 1 : Le Récit de Curran Strongheart. Lorsqu'il est joué, tous les alliés du barde gagnent +1 au jet d'attaque, +1 aux dégâts et une immunité à la peur et au désespoir. Les bonus d'attaque et de dégâts augmentent de 1 aux niveaux 10, 25 et 40.
+* Niveau 1 : Le Récit de Curran Cœurvaillant. Lorsqu'il est joué, tous les alliés du barde gagnent +1 au jet d'attaque, +1 aux dégâts et une immunité à la peur et au désespoir. Les bonus d'attaque et de dégâts augmentent de 1 aux niveaux 10, 25 et 40.
 * Niveau 3 : La Chanson des Kaudies. Lorsqu'elle est jouée, les alliés du barde sont immunisés contre les sorts et capacités nuisibles basés sur le son, y compris Injonction, Silence, Injonction suprême, Mot de pouvoir : Sommeil, Explosion sonore, Cri, Mot de pouvoir : Silence, Mot de pouvoir étourdissant, Mot de pouvoir : Cécité, Grand Cri, Plainte d'outre-tombe, Mot de pouvoir : Mort, cri de harpie, et les effets réservés aux ennemis de Cantique, Prière et Récitation.
 * Niveau 5 : La Mélodie de Tymora. Lorsqu'elle est jouée, la Mélodie de Tymora donne aux alliés du barde +1 à la chance, +1 aux jets de sauvegarde et +2 à leurs compétences en Connaissances (Mystères), en Alchimie et en Roublardise. Aux niveaux 15 et 35, cette chanson accorde un +1 supplémentaire à la chance et aux jets de sauvegarde et +2 aux tests de compétence.
 * Niveau 9 : L'Appel de la Sirène. Lorsqu'il est joué, chaque créature qui entend la chanson subit une pénalité cumulative de -1 à ses jets de sauvegarde de Volonté pendant 10 rounds et doit réussir un jet de sauvegarde de Volonté sous peine d'être enchantée, incapable d'agir pendant un round ou jusqu'à ce qu'elle subisse des dégâts. Le Degré de Difficulté du jet de sauvegarde de Volonté est égal au niveau du barde. Ainsi, la chanson d'un barde de niveau 15 a un Degré de Difficulté de 15.
 * Niveau 13 : Hymne guerrier de Sith. Lorsque le barde interprète ce chant, ses alliés gagnent un bonus générique de +2 à l’armure, 3/- de résistance aux dégâts et 3 points de vie sont régénérés par round de combat. Aux niveaux 28 et 45, cette chanson accorde des bonus supplémentaires de +2 à la classe d’armur, de résistance aux dégâts physiques de 3/- et de 3 points de vie soignés par round.
-* Niveau 20 : La Ballade des Trois Héros. Lorsqu'elle est jouée, les alliés du barde gagnent une résistance aux sorts de +5, une résistance de 5/- à toutes les formes de dégâts magiques, et les effets du Récit de Curran Strongheart, de la Mélodie de Tymora et de l’Hymne guerrier de Sith. Aux niveaux 30 et 50, cette chanson accorde en supplément une résistance aux sorts de +5 et une résistance de 5/- aux dégâts magiques.
+* Niveau 20 : La Ballade des Trois Héros. Lorsqu'elle est jouée, les alliés du barde gagnent une résistance aux sorts de +5, une résistance de 5/- à toutes les formes de dégâts magiques, et les effets du Récit de Curran Cœurvaillant, de la Mélodie de Tymora et de l’Hymne guerrier de Sith. Aux niveaux 30 et 50, cette chanson accorde en supplément une résistance aux sorts de +5 et une résistance de 5/- aux dégâts magiques.
 
 Un barde ne peut pas faire bénéficier le groupe de plus d'une chanson à la fois. Mais si le groupe a plusieurs bardes, les effets de la chanson de chaque barde se cumulent. Les créatures invoquées ne bénéficient pas des chansons des bardes.
 
@@ -852,7 +854,7 @@ Niveau 17+ : 1d8+5
 * Esquive totale : un moine peut éviter les dégâts des sorts à zone d'effet. Pour ce faire, il doit réussir un jet de Réflexes contre un sort à zone d'effet autorisant la réduction des dégâts par jet de Réflexes.
 * 2ème niveau : Parade de projectiles. Le moine acquiert le don de Parade de projectiles, offrant un bonus de +1 aux jets contre les armes à projectiles. De plus, à chaque round, le moine bloque automatiquement la première instance de dégâts de projectiles qui aurait dû le toucher. Le moine doit avoir une main libre pour parer les projectiles de cette manière.
 * 3ème niveau : Déplacement accéléré. Le moine se déplace 3 mètres (10 pieds) plus vite qu'un personnage normal (la vitesse de déplacement normale est de 9 mètres (30 pieds)), mais seulement tant que le moine n'est pas encombré ou ne porte pas d'armure. Le moine gagne 3 mètres (10 pieds) de mouvement supplémentaires tous les 3 niveaux par la suite.
-* 3ème niveau : Sérénité. Le moine obtient un bonus de +2 aux jets de sauvegarde contre les sorts et les effets de l'école d'Enchantement.
+* 3ème niveau : Sérénité. Le moine obtient un bonus de +2 aux jets de sauvegarde contre les sorts et les effets de l'école d'enchantement.
 * 5ème niveau : Pureté physique. Le moine maîtrise son système immunitaire. Il est immunisé contre toutes les maladies.
 * 7ème niveau : Plénitude physique. Le moine peut récupérer des points de vie égaux à son niveau de moine multiplié par son modificateur de Sagesse une fois par jour tous les 7 niveaux.
 * 9ème niveau : Esquive surnaturelle. Le moine acquiert le don d'Esquive surnaturelle, habituellement réservé aux roublards.
@@ -976,7 +978,7 @@ Les prêtres du Dieu de la Guerre sont présents partout où il y a des conflits da
 
 Avantages :
 
-* Obtient automatiquement les dons « Maniement des Armes de guerre, Hache » et « Arme de prédilection, Hache » (qui correspond à 2 points dans le maniement des haches).
+* Obtient automatiquement les dons “Maniement des Armes de guerre, Hache” et “Arme de prédilection, Hache” (qui correspond à 2 points dans le maniement des haches).
 * Force de Tempus 1 fois par jour (le bénéficiaire gagne +6 à l'attaque et aux dégâts avec toutes les armes pendant 3 rounds)~
 
 @546	= ~SENTINELLE DE HEAUM :
@@ -1795,7 +1797,7 @@ Désavantages :
 * -4 en Charisme.
 Ajustement de niveau +3 : un Svirfnebelin est légèrement plus puissant que les autres races de Féérune et gagne des niveaux à un rythme plus lent (environ - 3 niveaux).
 ~
-@803	= ~Main d’écu~
+@803	= ~Nain d’écu~
 @804	= ~NAIN D'ÉCU :
 
 Les Nains d’écu sont petits et trapus, ce qui permet de les identifier facilement. Leurs pommettes sont rubicondes, leurs yeux et leurs cheveux foncés. Leur attitude renfrognée et taciturne vient en grande partie de la lente érosion de leurs royaumes au fil des siècles. Les Nains d’écu sont des bêtes de somme et n’accordent que peu de temps aux amusements. Ils apprécient la bière et l’hydromel, mais sont surtout attirés par l’or.
@@ -1899,18 +1901,18 @@ Avantages :
 
 Utilisez cette compétence pour empêcher un chien de garde d'aboyer, demander à un oiseau de se poser sur votre main ou calmer un ours-hibou pendant que vous battez en retraite. Toute créature sauvage, y compris les animaux ainsi que les monstres animaux tels que les wyverns, doit réussir un jet de Volonté sous peine d'être charmée pendant 1 round par niveau de lanceur.~
 
-@815 = ~Abjurateur~
+@815 = ~abjurateur~
 @816 = ~ABJURATEUR :
 
 Un magicien qui se spécialise dans la magie qui protège, bloque ou bannit.
 
 Avantages :
 * Les abjurateurs peuvent mémoriser un sort supplémentaire par niveau de sort..
-* Les sorts d'Abjuration lancés par un abjurateur gagnent +2 au Degré de Difficulté.
-* Les sorts de magicien d'Abjuration lancés par un abjurateur durent 20% plus longtemps.
+* Les sorts d'abjuration lancés par un abjurateur gagnent +2 au Degré de Difficulté.
+* Les sorts de magicien d'abjuration lancés par un abjurateur durent 20% plus longtemps.
 
 Désavantages :
-* Les abjurateurs ne peuvent pas apprendre les sorts de l'école d'Évocation.~
+* Les abjurateurs ne peuvent pas apprendre les sorts de l'école d'évocation.~
 
 @817 = ~Invocateur~
 @818 = ~INVOCATEUR :
@@ -1919,24 +1921,24 @@ Un magicien qui se spécialise dans la création de créatures et d'objets pour les
 
 Avantages :
 * Les invocateurs peuvent mémoriser un sort supplémentaire par niveau de sort.
-* Les sorts d'Invocation lancés par un invocateur gagnent +2 au Degré de Difficulté.
-* Les sorts de magicien d'Invocation lancés par un invocateur durent 20% plus longtemps.
+* Les sorts d'invocation lancés par un invocateur gagnent +2 au Degré de Difficulté.
+* Les sorts de magicien d'invocation lancés par un invocateur durent 20% plus longtemps.
 
 Désavantages :
-* Les invocateurs ne peuvent pas apprendre les sorts de l'école de Nécromancie.~
+* Les invocateurs ne peuvent pas apprendre les sorts de l'école de nécromancie.~
 
-@819 = ~Divinateur~
-@820 = ~DIVINATEUR :
+@819 = ~Devin~
+@820 = ~DEVIN :
 
 Un magicien qui se spécialise dans la détection et les magies de divination.
 
 Avantages :
-* Les divinateurs peuvent mémoriser un sort supplémentaire par niveau de sort.
-* Les sorts de Divination lancés par un divinateur gagnent +2 au Degré de Difficulté.
-* Les sorts de magicien de Divination lancés par un divinateur durent 20% plus longtemps.
+* Les devins peuvent mémoriser un sort supplémentaire par niveau de sort.
+* Les sorts de divination lancés par un devin gagnent +2 au Degré de Difficulté.
+* Les sorts de magicien de divination lancés par un devin durent 20% plus longtemps.
 
 Désavantages :
-* Les divinateurs ne peuvent pas apprendre les sorts de l'école d'Illusion.~
+* Les devins ne peuvent pas apprendre les sorts de l'école d'illusion.~
 
 @821 = ~Enchanteur~
 @822 = ~ENCHANTEUR :
@@ -1945,8 +1947,8 @@ Un magicien spécialisé dans la manipulation de l'esprit des êtres sensibles.
 
 Avantages :
 * Les enchanteurs peuvent mémoriser un sort supplémentaire par niveau de sort.
-* Les sorts d'Enchantement lancés par un enchanteur gagnent +2 au Degré de Difficulté.
-* Les sorts de magicien d'Enchantement lancés par un enchanteur durent 20% plus longtemps.
+* Les sorts d'enchantement lancés par un enchanteur gagnent +2 au Degré de Difficulté.
+* Les sorts de magicien d'enchantement lancés par un enchanteur durent 20% plus longtemps.
 
 Désavantages :
 * Les enchanteurs ne peuvent pas apprendre les sorts de l'école de Transmutation.~
@@ -1958,11 +1960,11 @@ Un magicien qui se spécialise dans la manipulation de l'énergie et la création d
 
 Avantages :
 * Les évocateurs peuvent mémoriser un sort supplémentaire par niveau de sort.
-* Les sorts d'Évocation lancés par un évocateur gagnent +2 au Degré de Difficulté.
-* Les sorts de magicien d'Évocation lancés par un évocateur durent 20% plus longtemps.
+* Les sorts d'évocation lancés par un évocateur gagnent +2 au Degré de Difficulté.
+* Les sorts de magicien d'évocation lancés par un évocateur durent 20% plus longtemps.
 
 Désavantages :
-* Les évocateurs ne peuvent pas apprendre les sorts de l'école d'Abjuration.~
+* Les évocateurs ne peuvent pas apprendre les sorts de l'école d'abjuration.~
 
 @825 = ~Illusionniste~
 @826 = ~ILLUSIONNISTE :
@@ -1971,11 +1973,11 @@ Un magicien qui se spécialise dans la création d'illusions pour confondre et tro
 
 Avantages :
 * Les illusionnistes peuvent mémoriser un sort supplémentaire par niveau de sort.
-* Les sorts d'Illusion lancés par un illusionniste gagnent +2 au Degré de Difficulté.
-* Les sorts de magicien d'Illusion lancés par un illusionniste durent 20% plus longtemps.
+* Les sorts d'illusion lancés par un illusionniste gagnent +2 au Degré de Difficulté.
+* Les sorts de magicien d'illusion lancés par un illusionniste durent 20% plus longtemps.
 
 Désavantages :
-* Les illusionnistes ne peuvent pas apprendre les sorts de l'école de Divination.~
+* Les illusionnistes ne peuvent pas apprendre les sorts de l'école de divination.~
 
 @827 = ~Nécromancien~
 @828 = ~NÉCROMANCIEN :
@@ -1984,8 +1986,8 @@ Un magicien qui se spécialise dans la magie liée à la mort.
 
 Avantages :
 * Les nécromanciens peuvent mémoriser un sort supplémentaire par niveau de sort.
-* Les sorts de Nécromancie lancés par un nécromancien gagnent +2 au Degré de Difficulté.
-* Les sorts de magicien de Nécromancie lancés par un nécromancien durent 20% plus longtemps.
+* Les sorts de nécromancie lancés par un nécromancien gagnent +2 au Degré de Difficulté.
+* Les sorts de magicien de nécromancie lancés par un nécromancien durent 20% plus longtemps.
 
 Désavantages :
 * Les nécromanciens ne peuvent pas apprendre les sorts de l'école d'Invocation.~
@@ -2001,7 +2003,7 @@ Avantages :
 * Les sorts de magicien de Transmutation lancés par un transmutateur durent 20% plus longtemps.
 
 Désavantages :
-* Les transmutateurs ne peuvent pas apprendre les sorts de l'école d'Enchantement.~
+* Les transmutateurs ne peuvent pas apprendre les sorts de l'école d'enchantement.~
 
 @831 = ~AASIMAR :
 
@@ -2046,7 +2048,7 @@ Classe de prédilection : Magicien (pour les hommes) ou prêtresse (pour les femme
 
 Avantages :
 * +2 en Dextérité.
-* +2 en bonus racial aux jets de sauvegarde contre la magie d'Enchantement.
+* +2 en bonus racial aux jets de sauvegarde contre la magie d'enchantement.
 * +2 en bonus racial aux jets de Volonté contre les sorts et capacités magiques.
 * +2 en bonus racial aux tests de Fouille, et fouille automatiquement les pièges même sans utiliser activement la compétence Fouille.
 * +2 aux tests de Fouille.

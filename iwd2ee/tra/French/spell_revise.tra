@@ -229,7 +229,7 @@ Niveau :  Ens/Mag 2, Clerc 2, Talos 2
 Portée : Lanceur
 Durée : 1 round/niveau
 Temps d’incantation : 2
-Zone d’effet : lanceur de sorts
+Zone d’effet : Lanceur
 Jet de sauvegarde : Aucun
 
 Au terme de l’incantation, le jeteur de sorts se retrouve entouré d’une aura d’énergie noire et crépitante issue du Plan négatif. L’armure endommage tout adversaire qui frappe le lanceur, lui infligeant 1d6 + 2 points de dégâts par 2 niveaux du lanceur (maximum de 1d6 + 5). Les autres créatures non vivantes telles que les créatures artificielles et les golems ne sont pas affectées.~
@@ -240,7 +240,7 @@ Niveau :  Ens/Mag 7,  Heaum 8
 Portée : Lanceur
 Durée : 20 rounds
 Temps d’incantation : 7
-Zone d’effet : Lanceur de sorts
+Zone d’effet : Lanceur
 Jet de sauvegarde : Aucun
 
 Ce sort évoque sept orbes magiques qui flottent en anneau au-dessus de la tête du lanceur. Chaque œil a une capacité défensive et offensive, mais une fois l’un ou l’autre utilisé, l’œil perd son pouvoir. Si un œil est dépensé ou détruit, il peut être remplacé en relançant le sort. Les pouvoirs de chaque œil sont décrits ci-dessous.
@@ -414,7 +414,7 @@ Niveau :  Ens/Mag 1
 Portée : Lanceur
 Durée : 10 rounds/niveau
 Temps d’incantation : 1
-Zone d’effet : lanceur de sorts
+Zone d’effet : Lanceur
 Jet de sauvegarde : Aucun
 
 Ce sort fait apparaître une barrière invisible devant le lancer. Bouclier immunise contre le sort Projectile magique. Il confère également un bonus de bouclier de +4 à la classe d’armure.~
@@ -503,10 +503,10 @@ Niveau :  Ens/Mag 2
 Portée : Lanceur
 Durée : 10 rounds
 Temps d’incantation : 10
-Zone d’effet : Lanceur de sorts
+Zone d’effet : Lanceur
 Jet de sauvegarde : Aucun
 
-Ce sort crée un bâton de force dans la main du lanceur qui peut être utilisé comme une arme, en utilisant la compétence d’arme Arme simple : Bâton. Le bâton inflige 1d10 dégâts contondants par coup et frappe comme une arme +1, bien qu’il n’ait aucun bonus d’attaque. Le bâton draine également 1d10 points de vie supplémentaires par coup et soigne le porteur d’autant de points de vie.~
+Ce sort crée un bâton de force dans la main du lanceur qui peut être utilisé comme une arme, profitant du don Maniement des Armes courantes, Bâton. Le bâton inflige 1d10 dégâts contondants par coup et frappe comme une arme +1, bien qu’il n’ait aucun bonus d’attaque. Le bâton draine également 1d10 points de vie supplémentaires par coup et soigne le porteur d’autant de points de vie.~
 @1084 = ~Éclair~
 @1085 = ~Éclair
 (Évocation)
@@ -748,7 +748,7 @@ Niveau :  Ens/Mag 8,  Heaum 8
 Portée : Lanceur
 Durée : 1 round / niveau
 Temps d’incantation : 8
-Zone d’effet : lanceur de sorts
+Zone d’effet : Lanceur
 Jet de sauvegarde : Aucun
 
 Ce sort transforme le corps du lanceur en fer vivant, lui conférant plusieurs résistances et capacités puissantes. Tant que le sort est en vigueur, le lanceur a une résistance de 15/- au feu, au froid et à toutes formes de dégâts physiques, mais aussi une vulnérabilité de +15 à l’électricité. Les sorts qui affectent la respiration ou la physiologie du lanceur sont complètement ignorés, comme le poison, la cécité, la surdité et la maladie pour n’en nommer que quelques-uns, et le lanceur devient trop lourd pour être repoussé avec des sorts comme Rafale de vent, Lancer ou Répulsion. De plus, le lanceur gagne un bonus de +8 en force et en constitution et un malus de -8 en dextérité. Malheureusement, le mouvement du lanceur devient lent et gênant sous le poids de son nouveau corps, ce qui réduit sa vitesse de déplacement à la moitié de sa vitesse normale, et il reçoit une pénalité de -2 à la vitesse d’incantation.~
@@ -933,7 +933,7 @@ Jet de sauvegarde : Vigueur annule l’effet à l’impact
 Quand il lance ce sort, le lanceur ouvre un portail magique appelant une wiverne à son secours. La wiverne restera sous le contrôle du magicien et vivra et mourra à son commandement jusqu’à l’expiration de la durée du sort. Le Degré de Difficulté du poison de l’aiguillon de la wiverne est égal au Degré de Difficulté de ce sort tel que lancé par le lanceur.~
 @1510	= ~Épée de Mordenkainen~
 @1511	= ~Épée de Mordenkainen
-(Évocation)L’épée de Mor
+(Évocation)
 Niveau : Ens/Mag 7
 Portée : Vue du lanceur de sorts
 Durée : 1 round/niveau
@@ -1459,7 +1459,7 @@ Temps d’incantation : 0
 Zone d’effet : Spéciale
 Jet de sauvegarde : Aucun
 
-Lorsqu’il lance ce sort, le lanceur est capable de retirer les objets maudits de la cible. Rompre l’Enchantement dissipe également tous les sorts de l’école de l’Enchantement, que leurs effets soient positifs ou négatifs.~
+Lorsqu’il lance ce sort, le lanceur est capable de retirer les objets maudits de la cible. Rompre l'enchantement dissipe également tous les sorts de l’école de l'enchantement, que leurs effets soient positifs ou négatifs.~
 
 @1678	= ~Sphère d’isolement d’Otiluke~
 @1679	= ~Sphère d’isolement d’Otiluke
@@ -1617,10 +1617,10 @@ Notez que lorsqu’un parchemin de ce sort est utilisé, son pouvoir et sa portée s
 @1717	= ~Célérité améliorée
 (Universel)
 Niveau : Ens/Mag 9, Prê 9, Dru 9
-Portée : Lanceur de sorts
+Portée : Lanceur
 Durée : 3 rounds
 Temps d’incantation : 1 round
-Zone d’effet : Lanceur de sorts
+Zone d’effet : Lanceur
 Jet de sauvegarde : Aucun
 
 Ce sort élimine l’intervalle entre les lancements de sorts, permettant au lanceur de commencer un nouveau sort dès qu’il ou elle termine de lancer le précédent. Un lanceur de sorts sous les effets de la Célérité améliorée peut lancer plusieurs sorts en l’espace d’un seul round, mais la concentration requise impose une pénalité de -3 à la vitesse d’incantation pour la durée du sort.~
@@ -1628,10 +1628,10 @@ Ce sort élimine l’intervalle entre les lancements de sorts, permettant au lanceu
 @1719	= ~Flou
 (Illusion)
 Niveau : Bard 2, Ens/Mag 2, Mask 2
-Portée : Lanceur de sorts
+Portée : Lanceur
 Durée : 10 rounds/niveau
 Temps d’incantation : 2
-Zone d’effet : Lanceur de sorts
+Zone d’effet : Lanceur
 Jet de sauvegarde : Aucun
 
 Grâce à ce sort, la silhouette du personnage devient indistincte et plus difficile à toucher. Cette distorsion donne aux attaquants du lanceur 20% de chances de rater leur cible.~
@@ -1639,7 +1639,7 @@ Grâce à ce sort, la silhouette du personnage devient indistincte et plus diffici
 @1721	= ~Dissipation des illusions
 (Divination)
 Niveau : Prê 3, Ens/Mag 3, Bard 3, Dru 4
-Portée : Lanceur de sorts
+Portée : Lanceur
 Durée : Instantanée
 Temps d’incantation : 2
 Zone d’effet : Vue du lanceur de sorts
@@ -3942,7 +3942,7 @@ Temps d’incantation : 5
 Zone d’effet : 1 créature
 Jet de sauvegarde : Aucun
 
-Ce sort crée une connexion mystique entre le lanceur et la cible afin que certaines de leurs blessures soient transférées au lanceur. Chaque fois que la cible subit des dégâts, elle ne subit que la moitié des dégâts ; l’autre moitié est subie par le lanceur. Les dégâts ne sont répartis de cette manière que si le lanceur et la cible peuvent se voir.~
+Ce sort crée une connexion mystique entre le lanceur et la cible afin que certaines de ses blessures soient transférées au lanceur. Chaque fois que la cible subit des dégâts, elle ne subit que la moitié des dégâts ; l’autre moitié est subie par le lanceur. Les dégâts ne sont répartis de cette manière que si le lanceur et la cible peuvent se voir.~
 @35255 	= ~Rafale de vent~
 @36255 	= ~Rafale de vent
 (Évocation)
