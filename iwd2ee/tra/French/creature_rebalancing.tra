@@ -1,0 +1,173 @@
+//TRA num range
+
+
+@20001=~Dégâts de froid infligés augmentés de 50%~
+@20002=~Dégâts de froid infligés augmentés de 100%~
+@20003=~Dégâts de froid infligés augmentés de 150%~
+@20004=~Dégâts de froid infligés augmentés de 200%~
+@20005=~Écailles renforcées (Bonus d'armure +15)~
+@20006=~Protection : Armure de mage épique (Bonus d'armure +20)~
+@20007=~Protection : Protection épique (Réduction de dégâts 50/+10)~
+@20008=~Chant de bataille : Chant des lames - Attaques supplémentaires par round et bonus de combat~
+@20009=~Armure de mort supérieure~
+@20010=~Applique Dévoreur d'âmes à chaque coup~
+
+@21001=~Ruine~
+@21002=~Ruine supérieure~
+@21003=~Protection épique~
+@21004=~Armure de mage épique~
+@21005=~Explosion animique~
+@21006=~Pestilence~
+@21007=~Destruction de masse~
+@21008=~Tempête xvimienne~
+@21009=~Absorption d’énergie de masse~
+@21010=~Pensée de mort~
+@21011=~Eclair vivant~
+@21012=~Créer un Winterwight~
+@21013=~Blizzard du cœur~
+@21014=~Nombreux projectiles~
+@21015=~Arme dévorante d’âme~
+@21016=~Hâte améliorée~
+
+@21152=~Marque du chasseur~
+@21651=~Venin de Sseth~
+@21652=~Écailles de Sseth~
+@21751=~Tornade d'Auril~
+@21752=~Morsure de serpent supérieure~
+@21851=~Haine absolue~
+@21852=~Tempête de Sseth~
+@21951=~Bénédiction d'Auril~
+@21952=~Mise à mal de groupe~
+@22651=~Essaim de boules de neige infernales~
+@22751=~Tempête de verglas stygienne~
+@22754=~Armure de mort supérieure~
+@22851=~Robustesse trollesque supérieure~
+
+@23001=~Ombre du néant~
+@23002=~Feu flétrissant~
+@23003=~Difficile à dire, mais cette note gravement brûlée a été soigneusement écrite sur un morceau de parchemin fin. Elle se lit comme suit :
+
+Thagro :
+
+Une fois ce message lu, distribuez-le à vos ouvriers :
+
+La reine se comporte étrangement ces derniers temps. J'estime que sa saison des amours doit approcher. Ergo, à dater de ce jour, ne laissez plus aucun mâle s'en approcher jusqu'à nouvel ordre. Chargez-la de garder le barrage, si vous voulez.
+
+En ce qui concerne les mâles, qu'ils continuent à s'entraîner à creuser la glace. Nous aurons besoin de creuser davantage lorsque Nickademus aura retrouvé ses forces. Il pourra ainsi construire les avant-postes des légionnaires. N'oubliez pas de bien les nourrir et de les laisser se reposer ; sinon, ils ne nous seront d'aucune utilité, voire ils pourraient même devenir dangereux. N'hésitez pas à entraîner l'un d'entre eux à vous attaquer ou à vous suivre si vous pensez avoir besoin de protection.
+
+De plus, mes DÉLICATS golems de cristal ont coûté assez cher et ne sont PAS là pour vous amuser. Si j'apprends qu'un de vos touche-givre leur a encore jeté des pierres, vous aurez à m'en répondre personnellement.
+
+Une dernière chose : restez sur vos gardes. D'après Sherincal, ces moins que rien de Malarites ont échoué au Shaengarne. Ils pourraient attaquer d'un moment à l'autre.
+
+Au nom d'Aurile,
+
+Oria.
+
+Poids :  0 lb.~
+
+@23004=~Ame-en-peine Supérieure~
+@23005=~Marilith~
+@23006=~Marilith Supérieure~
+@23007=~Gélugon Supérieur~
+@23008=~Sorcière Orque~
+@23009=~Nécrophage doté de pouvoirs magiques~
+@23010=~Harpie Abominable~
+@23011=~Harpie Diabolique~
+@23012=~Chevalier de Glace Noire~
+@23013=~Nécrophage d’Hiver~
+@23014=~Golem d'adamantium~
+@23015=~Fomorian supérieur~
+@23016=~Narinien~
+@23017=~Larve Onirique~
+@23018=~Lame de Marilith~
+@23019=~Immonde créature ! Je ne te dirai pas mon nom ! Retourne dans les flammes brûlantes des Neuf Enfers !~
+@23020=~Oui, tu es un gélugon. Tu n’es surpassé en pouvoir que par les formidables seigneurs des fosses. Les gélugons sont originaires des strates glacées de Stygia et Cania, dans les Neuf Enfers. Je peux dire grâce à ta pâleur que tu viens de Cania. On vous attribue généralement un rôle d'espion ou de garde d'élite. Et si tu fais la preuve de ta puissance en tant que gélugon, ce dont je ne doute pas, tu auras l'insigne honneur d'être jeté dans la Fosse de Flammes pendant mille et un jours, puis...~
+@23021=~D'après ce que je peux dire, tu es un diable. Les diables viennent des Neuf Enfers, si je ne m'abuse. Pourquoi est-ce si important ?~
+@23022=~Je dois dire que jamais je n'ai rencontré de mortel connaissant aussi bien la Guerre Sanglante et les habitants de Baator. Cela mérite le respect. Pour te récompenser de ton savoir, je vais te laisser la vie sauve. Maintenant, j'ai beaucoup à faire. Au revoir, <CHARNAME>, mais sache que si nos chemins se croisent à nouveau, je te pulvériserai.~
+@23023=~Comme tous les héros mortels. En tout cas, je commençais à avoir faim. Après vous, gentils-diables...~
+@23024=~Espadon de Chevalier de la Mort~
+@23025=~Humpf. Lui ancien chef, mais Vrek le battre au combat. Lui se moquer de chef maintenant. C'est Vrek le chef, ici maintenant !~
+@23026=~Élémentaire de feu colossal~
+@23027=~Patriarche élémentaire de feu~
+@23028=~Élémentaire de terre colossal~
+@23029=~Élémentaire d'eau colossal~
+@23030=~Élémentaire d'eau supérieur~
+@23031=~Patriarche élémentaire d'eau~
+@23032=~CA SUFFIT !~
+@23033=~Vous vous battez de manière impressionnante, mortel. Vous avez porté un coup modéré à mon essence. Il me faudra un certain temps avant de pouvoir manifester à nouveau mon avatar.~
+@23034=~Vous combattez de manière impressionnante, mortels. Vous avez porté un coup modéré à mon essence. Il me faudra du temps avant de pouvoir manifester à nouveau mon avatar.~
+@23035=~MAIS NE CROYEZ PAS VOUS EN TIRER COMME CA ! JE VOUS HAIS ET QUAND JE RÉCUPÉRERAI, JE VOUS CHERCHERAI POUR ME VENGER !~
+@23036=~Vous avez vaincu l'avatar d'un dieu, l'un des plus puissants ennemis qui soit. Bravo.~
+@23037=~Au début, ils étaient furieux et voulaient me mettre en pièces pour l’affront que je leur avais fait. Ils se sont finalement calmés et ont décidé de m’enfermer ici, dans l’obscurité, et de me torturer à l’aide d’illusions. Parfois, j’aurais préféré être mort...~
+@23038=~Nous avons libéré un gnome du nom de Puddy Hautelégende, qui était torturé par un créature cauchemardesque. Bien que nous ayons déverrouillé la porte de sa cellule, il a refusé de partir tant qu'on ne lui aurait pas trouvé un passage sécurisé. Nous lui avons promis de le ramener chez lui à Bryn Shander, estimant qu'il ne pourrait pas survivre seul dans les Vaux glacés.~
+@23039=~Bon sang, reprenez-vous ! Regardez, le monstre est mort ! Je ne suis pas une illusion !~
+@23040=~Bâton de Pouvoir~
+@23041=~Dévorer le cerveau~
+@23042=~Ombres Majeures~
+@23043=~10 points de dégâts résistés des armes non argentées~
+@23044=~15 points de dégâts résistés des armes non argentées~
+@23045=~20 points de dégâts résistés des armes non argentées~
+@23046=~Aaij-Kllenzr't~
+@23047=~Golem de glace~
+@23048=~L'abishaï blanc plisse ses yeux de saphir pour vous examiner de la tête aux pieds. Ses lèvres se retroussent en un simulacre de sourire cruel, mais aucun son ne sort de sa bouche.~
+@23049=~Pique-Wivernes~
+@23050=~Souffle du Dracosire Blanc~
+@23051=~Grande Wiverne~
+@23052=~5 points de dégâts résistés des armes qui ne sont pas d'alignement bon~
+@23053=~10 points de dégâts résistés des armes qui ne sont pas d'alignement bon~
+@23054=~15 points de dégâts résistés des armes qui ne sont pas d'alignement bon~
+@23055=~20 points de dégâts résistés des armes qui ne sont pas d'alignement bon~
+@23056=~5 points de dégâts résistés des armes ni bonnes, ni chaotiques, ni argentées~
+@23057=~10 points de dégâts résistés des armes ni bonnes, ni chaotiques , ni argentées~
+@23058=~15 points de dégâts résistés des armes ni bonnes, ni chaotiques , ni argentées~
+@23059=~20 points de dégâts résistés des armes ni bonnes, ni chaotiques , ni argentées~
+@23060=~5 points de dégâts résistés des armes ni bonnes, ni loyales , ni en fer froid~
+@23061=~10 points de dégâts résistés des armes ni bonnes, ni loyales , ni en fer froid~
+@23062=~15 points de dégâts résistés des armes ni bonnes, ni loyales , ni en fer froid~
+@23063=~20 points de dégâts résistés des armes ni bonnes, ni loyales , ni en fer froid~
+@23064=~TU CONNAIS MON NOM ?!~
+@23065=~Aeij-Kllenzr't, j'invoque ton vrai nom, "Fureur Emprisonnée", et je t'ordonne de sortir de ton autel et de nous affronter.~
+@23066=~Oui, apparemment. Au revoir.~
+@23067=~C'EST *TOUT* CE QUE TU ES CAPABLE DE FAIRE AVEC MON VRAI NOM ? TRÈS BIEN ! JE VAIS TE FAIRE UNE DÉMONSTRATION DE MA PUISSANCE !~
+@23068=~QUI ES-*TU* POUR T’ADRESSER AINSI À UNE DÉESSE ? JE VAIS CH TIER TON ORGUEIL SUR-LE-CHAMP !~
+@23069=~Vous avez vaincu Aeij-Kllenzr't, le bannissant ainsi de l'autel d'Aurile.~
+@23070=~En mourant, Aeij-Kllenzr't vous insuffle une vague d'énergie qui régénère votre organisme et augmente votre vitalité, et vous offre une meilleure résistance aux attaques électriques.~
+@23071=~Nous avons découvert l'un des autels d'Aurile dans une pièce isolée au niveau inférieur du temple de glace. L'autel renfermait un esprit des tempêtes, Aaij-Kllenzr't. Il voulait se faire passer pour Aurile mais nous l'avons banni en prononçant son véritable nom, "Fureur Emprisonnée".~
+@23072=~Griffe d'Abishaï~
+@23073=~Souffle du Loup Arctique~
+@23074=~15 points de dégâts résistés, sauf contre une arme perforante d’alignement bon~
+@23075=~20 points de dégâts résistés, sauf contre une arme perforante d’alignement bon~
+@23076=~Bébilith~
+@23077=~Morsure de bébilith~
+@23078=~Epée de Chevalier de la Mort~
+@23079=~Diantrefosse~
+@23080=~Morsure de Diantrefosse~
+@23081=~Baiser de Sseth~
+@23082=~Mohrg~
+@23083=~Toucher du Mohrg~
+@23084=~Dretch~
+@23085=~Griffe de Dretch~
+@23086=~Cimeterre d'Ichor Spectral~
+@23087=~Morgenstern de la Fureur de Xvim~
+
+
+@24002=~Appeler les Croisés~
+@24003=~Appeler un Gélugon~
+@24004=~Douleur Intense~
+@24005=~Chant des lames - Attaque supplémentaire et bonus de combat~
+@24006=~Animation des Morts Sans Repos~
+@24007=~Cauchemar~
+@24008=~Cauchemar supérieur~
+@24009=~Dissipation de la magie sélective~
+@24011=~Cauchemar terrifiant~
+@24012=~Châtiment du Bien~
+@24013=~Châtiment de Xvim~
+@24014=~Animation des Ossements Froids~
+@24015=~Destruction d'âme infernale~
+@24016=~Boule de Feu Infernale~
+@24018=~Réduire la Résistance à l'Électricité~
+@24019=~Croissance d'Épines Ténébreuses~
+@24020=~Regard Glaçant~
+@24032=~Charge~
+@24033=~Effets Sanglants~
+@24034=~Croissance Végétale~
