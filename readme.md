@@ -11,7 +11,7 @@ The big changes described above are only applied if you install certain componen
 - English
 - Italian
 - Russian
-- French
+- French ([WIP](https://www.baldursgateworld.fr/viewtopic.php?t=34553&sid=b24abd0f58b4f7decfbad3c231d700e3))
 
 ## Installation
 

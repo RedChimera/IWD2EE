@@ -49,7 +49,14 @@ Prérequis : Force 13+, don Attaque en puissance. Pour acquérir le deuxième rang 
 
 Avantage : si vous infligez suffisamment de dégâts avec une arme de mêlée pour tuer votre cible, vous obtenez une attaque supplémentaire immédiate au corps à corps contre une autre créature à proximité. Vous ne pouvez pas vous déplacer avant de faire cette attaque supplémentaire. L'attaque se fait avec la même arme et au même bonus que l'attaque qui a tué la créature précédente. Ce don peut être acquis à deux reprises pour pouvoir profiter de Succession d'enchaînements, qui ne limite plus le nombre de fois où vous pouvez l'utiliser par round.~
 
-Système métrique ou américain entre parenthèses pour les poids et distances ?
+//40223: “Augmentation des dégâts” feat doesn’t exist. It’s “Attaque en puissance”.
+@57009=~Utilisez le don Attaque en puissance sur les cibles aux armures légères pour les vaincre rapidement, mais n'oubliez pas de diminuer sa puissance ou de la désactiver face à des ennemis mieux protégés.~
+
+//40224: “Augmentation des dégâts” feat doesn’t exist. It’s “Attaque en puissance”.
+@57010=~Les cibles impuissantes peuvent être touchées automatiquement. Utilisez le don Attaque en puissance ou Tir rapide pour leur infliger des dégâts plus importants.~
+
+//35794: “Augmentation des dégâts” feat doesn’t exist. It’s “Attaque en puissance”.
+@57011=~Augmentation des dégâts~
 
 
 
