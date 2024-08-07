@@ -1,10 +1,10 @@
 //TRA num range @4000 to @4500
 
-@4000 = ~Ice Wall Fault~
-@4001 = ~Ruinlord Argos Val~
-@4002 = ~"Begin contest.  Obtain three consecutive squares for victory. Obtain more squares for greater rewards. Achieve victory in all ranks for Battle Square mastery."~
-@4003 = ~Although Targos is in a vulnerable state, you have managed to slaughter the entire goblin tribe that was attacking it.~
-@4004 = ~The main fortress gates are closed and barred. It would require a battering ram or other siege engine to attempt to get them open, though a Knock spell could also bash them down.~
-@4005 = ~This door seems very secure. A key will most likely be needed to gain access, unless there is an exceptionally skilled lockpicker in the party.~
-@4006 = ~This strange door does not budge. Written on it in calligraphy are the words, "Only by the will of the High Priest shalt thou pass."~
-@4007 = ~As you approach the archway Sseth's Eye suddenly stares at you and you begin to feel the overwhelming compulsion to walk away from it. You may be able to resist this compulsion with magic that protects against mind-affecting spells, though it would have to be an especially powerful spell.~
+@4000 = ~Faille du Mur de Glace~
+@4001 = ~Seigneur de Ruine Argos Val~
+@4002 = ~"Commencez la compétition. Obtenez trois cases consécutives pour la victoire. Obtenez plus de cases pour de plus grandes récompenses. Terminez tous les niveaux pour devenir maître du Champ de Bataille."~
+@4003 = ~Bien que Targos soit encore vulnérable, vous avez réussi à massacrer toute la tribu gobeline qui l'attaquait.~
+@4004 = ~Les portes principales de la forteresse sont fermées et barrées. Il faudrait un bélier ou une autre machine de siège pour tenter de les ouvrir, bien qu'un sort de Déblocage puisse également les défoncer.~
+@4005 = ~Cette porte semble très sûre. Une clé sera très probablement nécessaire pour y accéder, à moins qu'il n'y ait un crocheteur exceptionnellement doué dans le groupe.~
+@4006 = ~Cette étrange porte ne bouge pas. On peut y lire, écrit en calligraphie, les mots suivants : "Seule la volonté du Grand Prêtre te laissera passer."~
+@4007 = ~En approchant de l'arche, l'Œil de Sseth vous fixe soudainement et vous ressentez une envie irrésistible de vous en éloigner. Vous pourriez être en mesure de résister à cette envie grâce à une magie qui protège contre les sorts affectant l'esprit, bien que cela nécessiterait un sort particulièrement puissant.~
