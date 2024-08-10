@@ -39,7 +39,7 @@ Ce sort crée 4 grappes de baies magiques que le personnage peut transporter ou d
 (Abjuration)
 Niveau : Prê 2, Heaum 2
 Portée : Vue du lanceur de sorts
-Durée : 5 tours
+Durée : 5 rounds
 Temps d’incantation : 2
 Zone d’effet : 1 créature
 Jet de sauvegarde : Aucun
@@ -183,8 +183,8 @@ Ce sort déclenche un séisme qui fissure le sol. Chaque créature en vue du lanceu
 (Invocation) [Bon]
 Niveau : Dru 7, Ilmater 8
 Portée : Vue du lanceur de sorts
-Durée : 1 tour
-Temps d’incantation : 1 tour
+Durée : 1 round
+Temps d’incantation : 1 round
 Zone d’effet : rayon de 3 mètres (10 pieds)
 Jet de sauvegarde : Aucun
 
@@ -307,7 +307,7 @@ Ce sort permet à un prêtre d’aider et de protéger n’importe quel être. D’un simp
 (Évocation)
 Niveau : Dru 3, Rôd 3, Séluné 2
 Portée : Lanceur
-Durée : 10 tours
+Durée : 10 rounds
 Temps d’incantation : 6
 Zone d’effet : Lanceur
 Jet de sauvegarde : Aucun
@@ -584,8 +584,8 @@ Zone d’effet : 1 créature
 Jet de sauvegarde : Aucun
 
 Ce sort crée une barrière intangible qui entoure le personnage et se nourrit de sa force vitale. Elle ne pèse rien et ne gêne aucunement les déplacements ou les incantations. Le sort confère un bonus de +8 à la classe d’armure. De plus, le personnage bénéficie d’un bonus de +3 à tous ses jets de Réflexes. Néanmoins, lorsque le sort expire, le lanceur perd 3d6 points de vie, qui ont servi à alimenter l’armure.~
-@1098 = ~Émotion : rage~
-@1099 = ~Émotion : rage
+@1098 = ~Émotion : Rage~
+@1099 = ~Émotion : Rage
 (Enchantement)
 Niveau : Bard 2,  Ens/Mag 3, Séluné 4
 Portée : Vue du lanceur de sorts
@@ -594,7 +594,7 @@ Temps d’incantation : 4
 Zone d’effet : rayon de 3 mètres (10 pieds)
 Jet de sauvegarde : Aucun
 
-Ce sort crée une émotion de rage dans la zone d’effet. Toutes les créatures affectées par le sort gagnent +2 en Force, +2 en Constitution, +1 aux jets de Volonté et un malus de -1 à la classe d’armure. Ces bonus et malus ne se cumulent pas avec la rage barbare, mais ils se cumulent avec d’autres bonus de Force et de Constitution. Émotion : rage ne peut pas être active sur une créature en même temps qu’Émotion : espoir.~
+Ce sort crée une émotion de rage dans la zone d’effet. Toutes les créatures affectées par le sort gagnent +2 en Force, +2 en Constitution, +1 aux jets de Volonté et un malus de -1 à la classe d’armure. Ces bonus et malus ne se cumulent pas avec la rage barbare, mais ils se cumulent avec d’autres bonus de Force et de Constitution. Émotion : Rage ne peut pas être active sur une créature en même temps qu’Émotion : Espoir.~
 @1100 = ~Émotion : Terreur~
 @1101 = ~Émotion : Terreur
 (Enchantement)
@@ -606,8 +606,8 @@ Zone d’effet : créatures vivantes dans un rayon de 4,5 mètres (15 pieds)
 Jet de sauvegarde : Volonté annule
 
 Ce sort génère une violente terreur dans la zone indiquée. Toutes les créatures affectées s’enfuient pendant 10 rounds~
-@1102	= ~Émotion : espoir~
-@1103	= ~Émotion : espoir
+@1102	= ~Émotion : Espoir~
+@1103	= ~Émotion : Espoir
 (Enchantement)
 Niveau : Bard 3, Ens/Mag 4, Ilmater 4, Séluné 4
 Portée : Vue du lanceur de sorts
@@ -616,7 +616,7 @@ Temps d’incantation : 4
 Zone d’effet : Créatures vivantes dans un rayon de 4,5 mètres (15 pieds)
 Jet de sauvegarde : Aucun
 
-Ce sort génère un grand espoir dans la zone indiquée. Toutes les créatures affectées bénéficient d’un regain de moral, qui se traduit par un bonus de +2 à leurs tests de compétence, jets d’attaque, de dégâts et de sauvegarde. Émotion : espoir ne peut pas être actif sur une créature en même temps qu’Émotion : rage.~
+Ce sort génère un grand espoir dans la zone indiquée. Toutes les créatures affectées bénéficient d’un regain de moral, qui se traduit par un bonus de +2 à leurs tests de compétence, jets d’attaque, de dégâts et de sauvegarde. Émotion : Espoir ne peut pas être actif sur une créature en même temps qu’Émotion : Rage.~
 @1104	= ~Cri~
 @1105	= ~Cri
 (Évocation)
@@ -1412,8 +1412,8 @@ Jet de sauvegarde : Aucun
 
 La Téléportation locale de Lutzaen permet au lanceur de téléporter son groupe à un autre endroit dans la même zone. Le point ciblé peut être n’importe où dans la zone, même si le lanceur ne peut pas le voir. Comme la distance de téléportation est relativement courte, il n’y a aucune chance que la téléportation échoue.~
 
-@1670	= ~Émotion : désespoir~
-@1671	= ~Émotion : désespoir
+@1670	= ~Émotion : Désespoir~
+@1671	= ~Émotion : Désespoir
 (Enchantement)
 Niveau : Bard 3, Ens/Mag 4, Bane 4, Mask 4
 Portée : Vue du lanceur de sorts
@@ -2712,13 +2712,13 @@ Cette gemme a une âme emprisonnée à l’intérieur par la magie noire. Une personne
 @30140=~Bonus d’attaque - Moment de prescience~
 @30141=~Bonus d’attaque - Moment de prescience
 
-L’utilisation de cette capacité permet au personnage de bénéficier d’un bonus d’attaque de +25 pendant 1 tour. Une seule des trois capacités Moment de prescience peut être utilisée.
+L’utilisation de cette capacité permet au personnage de bénéficier d’un bonus d’attaque de +25 pendant 1 round. Une seule des trois capacités Moment de prescience peut être utilisée.
 
 Cette capacité peut être utilisée comme une action libre.~
 @30142=~Bonus de classe d’armure - Moment de prescience~
 @30143=~Bonus de classe d’armure - Moment de prescience
 
-L’utilisation de cette capacité permet au personnage de bénéficier d’un bonus de +25 à la classe d’armre pendant 1 tour. Une seule des trois capacités Moment de prescience peut être utilisée.
+L’utilisation de cette capacité permet au personnage de bénéficier d’un bonus de +25 à la classe d’armre pendant 1 round. Une seule des trois capacités Moment de prescience peut être utilisée.
 
 Cette capacité peut être utilisée comme une action libre.~
 @30144=~Bonus de jet de sauvegarde - Moment de prescience~
@@ -2822,7 +2822,7 @@ Cette capacité peut être utilisée comme une action libre.~
 @30235=~... Animation de zombi.~
 @30236=~... Clignotement.~
 @30237=~... Dissipation de la magie.~
-@30238=~... Émotion : rage.~
+@30238=~... Émotion : Rage.~
 @30239=~... Agrandissement de créature.~
 @30240=~... Boule de feu.~
 @30241=~... Vol.~
@@ -2843,7 +2843,7 @@ Cette capacité peut être utilisée comme une action libre.~
 @30256=~... Rompre l’enchantement.~
 @30257=~... Invocation de charognard.~
 @30258=~... Confusion.~
-@30259=~... Émotion : terreur.~
+@30259=~... Émotion : Terreur.~
 @30260=~... Bouclier de feu (bleu).~
 @30261=~... Bouclier de feu (rouge).~
 @30262=~... Festin macabre.~
@@ -3250,7 +3250,7 @@ Temps d’incantation : 7
 Zone d’effet : rayon de 6 mètres (20 pieds)
 Jet de sauvegarde : Vigueur annule
 
-Ce sort transforme l’air en brume gris vert à 6 mètres (20 pieds) à la ronde. Le lanceur et les créatures non-vivantes sont immunisés aux effets du nuage. Quant aux autres, chaque round d’exposition à cet air infecté entraîne une perte de 4 points de Force, de Dextérité et de Constitution. Les créatures dans la zone affectée doivent réussir un jet de Vigueur chaque round pour éviter les effets du nuage. Les effets durent 1 tour. Nuage de pestilence ne peut être lancé que par des personnages d’alignement mauvais.~
+Ce sort transforme l’air en brume gris vert à 6 mètres (20 pieds) à la ronde. Le lanceur et les créatures non-vivantes sont immunisés aux effets du nuage. Quant aux autres, chaque round d’exposition à cet air infecté entraîne une perte de 4 points de Force, de Dextérité et de Constitution. Les créatures dans la zone affectée doivent réussir un jet de Vigueur chaque round pour éviter les effets du nuage. Les effets durent 1 round. Nuage de pestilence ne peut être lancé que par des personnages d’alignement mauvais.~
 
 @31423 	= ~Mur de lune~
 @32423 	= ~Mur de lune

@@ -422,14 +422,14 @@ Vous êtes capable de reproduire les composantes verbales et gestuelles des sorts
 Prérequis : Cha 13+, Forme animale.
 
 Avantage : Vous pouvez lancer des sorts sous n'importe quelle forme métamorphosée. Cependant, la difficulté de reproduire les composantes verbales et gestuelles vous donne un malus de +4 au temps d'incantation (vous pouvez toujours lancer des sorts sans pénalité sous votre forme naturelle).~
-@347	= ~Contre-sort~
-@348	= ~CONTRE-SORT :
+@347	= ~Contresort~
+@348	= ~CONTRESORT :
 
 Vous savez comment annuler le sort d'un adversaire en dépensant le même sort.
 
 Prérequis : La capacité de lancer des sorts de niveau 2.
 
-Avantage : Vous gagnez la capacité Contre-sort, utilisable une fois par round. Si vous l'utilisez sur un ennemi lanceur de sorts lorsqu'il lance un sort que vous avez également mémorisé, vous pouvez dépenser une utilisation de ce sort pour contrer le sort de l'ennemi, le faisant échouer.~
+Avantage : Vous gagnez la capacité Contresort, utilisable une fois par round. Si vous l'utilisez sur un ennemi lanceur de sorts lorsqu'il lance un sort que vous avez également mémorisé, vous pouvez dépenser une utilisation de ce sort pour contrer le sort de l'ennemi, le faisant échouer.~
 @349	= ~Extension d'effet~
 @350	= ~MÉTAMAGIE, EXTENSION D'EFFET :
 
@@ -2212,7 +2212,7 @@ Désavantages :
 @895	= ~Philactère de liche~
 @896	= ~Ceci est votre philactère. Si vous mourrez, votre âme se réfugie dans votre philactère, qui créera un nouveau corps pour vous et vous ressuscitera après 8 heures. Cependant, si tous les membres du groupe meurent, les ennemis détruiront votre philactère et le jeu sera terminé.
 
-STATISTIQUES :
+PARAMÈTRES :
 
 Poids : 1~
 @897	= ~La Chanson des Kaudies - Résistant aux attaques sonores~
@@ -2240,7 +2240,7 @@ Poids : 1~
 @919	= ~Saisie~
 @920	= ~Attaque Tourbillon~
 @921	= ~A dévié un projectile~
-@922	= ~Contre-sort~
+@922	= ~Contresort~
 @923	= ~Attaque incorporelle~
 @924	= ~A esquivé l'attaque via Roulade défensive~
 @925	= ~Bonus de Sagesse du moine~
@@ -2291,7 +2291,7 @@ Cette capacité peut être utilisée une fois par round. Vous faites une attaque av
 @952	= ~Attaque Tourbillon Améliorée
 
 Cette capacité peut être utilisée une fois par round. Vous faites une attaque avec chacune de vos armes contre tous les ennemis proches, renonçant à toutes les autres attaques pour le round. Le rayon de l'attaque est égal à la portée de votre arme plus 1,5 mètre (5 pieds).~
-@953	= ~Contre-sort
+@953	= ~Contresort
 
 Cette capacité peut être utilisée une fois par round. Si vous l'utilisez sur un lanceur de sorts ennemi lorsqu'il lance un sort que vous avez également mémorisé, vous pouvez dépenser une utilisation de ce sort pour contrer le sort de l'ennemi, le faisant échouer.~
 @954	= ~Imposition des mains
@@ -2402,7 +2402,7 @@ Avec cette capacité, le moine peut récupérer des points de vie égaux à son nivea
 @4700 	= ~Breuvage d’Eau de Pluie~
 @4701 	= ~Peu coûteuse, efficace et rudimentaire, cette potion est un mélange d'eau de pluie, d'argile, de cendres et de racines de plusieurs plantes. Ce modeste breuvage restaurera 2d6 points de vie au buveur.
 
-STATISTIQUES :
+PARAMÈTRES :
 
 Soigne 2d6 points de vie
 Poids : 1 lb (0,45 kg)
@@ -2410,7 +2410,7 @@ Poids : 1 lb (0,45 kg)
 @4702 	= ~Brouet Aigre~
 @4703 	= ~Les potions puissantes nécessitent des ingrédients moins communs, et ce breuvage ne fait pas exception. Graisse animale, bile, feuilles séchées et viande fermentée composent cette concoction à l'odeur nauséabonde, mais un ami mourant ne s’en plaindra pas. Ce breuvage restaurera 4d8 points de vie à quiconque est assez désespéré pour le boire.
 
-STATISTIQUES :
+PARAMÈTRES :
 
 Soigne 4d8 points de vie
 Poids : 1 lb (0,45 kg)
@@ -2418,7 +2418,7 @@ Poids : 1 lb (0,45 kg)
 @4704 	= ~Élixir Doux~
 @4705 	= ~On pourrait prendre cette boisson douce pour du vin blanc, mais la légère amertume de son goût ne provient pas de l'alcool, mais de quartz transmuté. Boire cette potion peut apaiser presque tous les maux, qu'il s'agisse d'une infection courante, d'un venin mortel ou d'une vilaine gueule de bois. Le quartz se lie aux substances toxiques et les transforme en sel inoffensif, guérissant ainsi les poisons, les maladies et l'intoxication. Si cela ne suffit pas à soigner l'aventurier malade, les larmes de cheval dans le sirop restaurent également 1d4 points de vie à l'utilisateur.
 
-STATISTIQUES :
+PARAMÈTRES :
 
 Guérit les poisons et les maladies
 Soigne 1d4 points de vie
@@ -2427,7 +2427,7 @@ Poids : 1 lb (0,45 kg)
 @4706 	= ~Gel Électrique~
 @4707 	= ~Ce gel bleuâtre pâle émet un étrange bourdonnement dans son récipient en laiton hermétiquement fermé. Lorsqu'il est ingéré, le gel absorbe les dégâts électriques, conférant à l'utilisateur une résistance de 5/- à toutes les formes d'électricité. L'effet dure 10 rounds ou jusqu'à ce qu'il soit dissipé.
 
-STATISTIQUES :
+PARAMÈTRES :
 
 Résistance : 5/- Résistance à l'Électricité pendant 10 rounds
 ~
@@ -2436,7 +2436,7 @@ Résistance : 5/- Résistance à l'Électricité pendant 10 rounds
 
 En versant la fiole sur son bras et en prononçant le mot de commande, l'utilisateur étend un liquide prismatique rayonnant sur son corps, lui conférant une résistance de 5/- à toutes les formes de dégâts de feu. Le liquide est enchanté pour adhérer à la peau de l'utilisateur, mais l'effet disparaît après 10 rounds.
 
-STATISTIQUES :
+PARAMÈTRES :
 
 Résistance : 5/- Résistance au Feu pendant 10 rounds
 Poids : 1 lb (0,45 kg)
@@ -2444,7 +2444,7 @@ Poids : 1 lb (0,45 kg)
 @4710 	= ~Manie Noire~
 @4711 	= ~Toutes les potions ne sont pas forcément médicinales. Certains alchimistes utilisent leurs talents pour produire des narcotiques et vivent de la vente de poisons addictifs aux oisifs et aux agités. Cette huile noire est une version modifiée de l'un de ces narcotiques. Lorsque la Manie Noire est bue, elle induit un état de confusion violent, accordant à l'utilisateur un bonus de +3 aux jets d'attaque au corps à corps et aux jets de dégâts, au prix d'un malus de -3 à la classe d’armure et aux attaques à distance. De plus, l'utilisateur devient enragé pendant 10 rounds et ses points de vie sont cachés pendant toute la durée de l'effet.
 
-STATISTIQUES :
+PARAMÈTRES :
 
 +3 aux attaques au corps à corps
 +3 aux dégâts
@@ -2458,7 +2458,7 @@ Poids : 1 lb (0,45 kg)
 @4712 	= ~Gouttes Oculaires à la Poudre d’Os~
 @4713 	= ~Préparées avec une pincée de poudre d'os, du jus de tomate ou de carotte, de l'eau distillée, quelques gouttes du sang de l'utilisateur et un œil de rapace, cette solution rougeâtre peut améliorer la vue de l'utilisateur. En plus d'une légère sensation de brûlure, l'utilisateur trouvera soudain le monde beaucoup plus détaillé, ce qui lui confère un bonus de +3 à tous les jets d'attaque à distance. Les gouttes brûlent légèrement, et l'utilisateur finit par pleurer le fluide, perdant ses bénéfices après 10 rounds.
 
-STATISTIQUES :
+PARAMÈTRES :
 
 +3 Bonus d'Attaque (uniquement pour les armes à distance) pendant 10 rounds
 Poids : 1 lb (0,45 kg)
@@ -2466,7 +2466,7 @@ Poids : 1 lb (0,45 kg)
 @4714 	= ~Bombe Fumigène~
 @4715 	= ~N'importe qui peut allumer un feu et produire un petit nuage de fumée, mais créer un nuage de fumée en un mouvement rapide demande un certain art. Ce petit récipient de fumée concentrée créera rapidement un nuage dissimulant l'utilisateur pendant 1d3+3 secondes selon les courants d'air et autres facteurs.
 
-STATISTIQUES :
+PARAMÈTRES :
 
 Invisibilité pendant 1d3+3 secondes
 Poids : 1 lb (0,45 kg)
@@ -2474,7 +2474,7 @@ Poids : 1 lb (0,45 kg)
 @4716 	= ~Tonique Amer~
 @4717 	= ~Cette potion est un mélange concentré rougeâtre composé de racines, d'argile, de perles broyées et de coquilles d'huîtres, de sang, d'alcool, et d'une petite quantité d'eaux usées. La solution renforce la constitution et la résistance du buveur, lui accordant un bonus de +4 à tous les jets de sauvegarde de Vigueur pendant 10 rounds.
 
-STATISTIQUES :
+PARAMÈTRES :
 
 +4 aux jets de sauvegarde de Vigueur pendant 10 rounds
 Poids : 1 lb (0,45 kg)
@@ -2482,7 +2482,7 @@ Poids : 1 lb (0,45 kg)
 @4718 	= ~Solution Salée~
 @4719 	= ~Cette potion, un petit morceau de cerveau de dauphin suspendu dans de l'huile de baleine et de la saumure avec du vif-argent et de la pierre verte comme catalyseurs, est capable d'améliorer les capacités mentales de l'utilisateur. La majeure partie de la puissance latente du cerveau de dauphin est gaspillée, car le fonctionnement de l'esprit est encore mal compris et la méthode derrière cette concoction est assez rudimentaire, mais la saumure bannira toutes les distractions de l'esprit de l'utilisateur, accordant un bonus de +4 à tous les jets de sauvegarde de Volonté.
 
-STATISTIQUES :
+PARAMÈTRES :
 
 +4 aux jets de sauvegarde de Volonté pendant 10 rounds
 Poids : 1 lb (0,45 kg)
@@ -2490,7 +2490,7 @@ Poids : 1 lb (0,45 kg)
 @4720 	= ~Gaz Sous Pression~
 @4721 	= ~Cette bouteille de toxines hautement pressurisées explosera lorsqu'elle sera brisée, inondant la zone d'un nuage de gaz nauséabond. Toute créature qui respire prise dans le nuage est confrontée à une odeur nauséabonde qui s'incruste profondément dans leurs narines et leur colle à la gorge, subissant 5 points de dégâts de poison par round pendant 5 rounds. Chaque round où la victime reste dans le nuage, elle doit réussir un jet de sauvegarde de Vigueur pour éviter d'être empoisonnée.
 
-STATISTIQUES :
+PARAMÈTRES :
 
 5 dégâts de poison par round pendant 5 rounds
 Se dissipe après 10 rounds
@@ -2501,7 +2501,7 @@ Poids : 1 lb (0,45 kg)
 
 Une faible grenade à l'intérieur de la bouteille provoque alors une expansion rapide de l'huile enflammée, répandant la flamme sur toutes les créatures dans un rayon de 30 pieds (9 mètres). Toute personne prise dans l'explosion subira 4d6 points de dégâts avec un jet de Réflexes (Degré de Difficulté de 15) pour la moitié des dégâts.
 
-STATISTIQUES :
+PARAMÈTRES :
 
 4d6 dégâts de feu (Jet de Réflexes pour 1/2 dégâts)
 Zone d'effet : Rayon de 9 mètres (30 pieds)
@@ -2511,7 +2511,7 @@ Poids : 1 lb (0,45 kg)
 @4724 	= ~Vin de Musc~
 @4725 	= ~Préparé à partir de prunes fermentées et de musc de plusieurs animaux (généralement du bétail, des bœufs, des chevaux, des ânes et des buffles), ce vin fort a une odeur nauséabonde particulière malgré son goût sucré. Pris avec un peu d'acide d'Ankheg et de la chaux (la base, pas le fruit) pour neutraliser l'acide, cette potion accorde au buveur +6 en Force pendant 10 rounds.
 
-STATISTIQUES :
+PARAMÈTRES :
 
 +6 Force pendant 10 rounds
 Poids : 1 lb (0,45 kg)
@@ -2519,7 +2519,7 @@ Poids : 1 lb (0,45 kg)
 @4726 	= ~Jus de Citron Vert~
 @4727 	= ~Cette potion, un mélange acide de jus de citron vert, de venin de scorpion, de piments et de quelques gouttes de sang de nain ou de gnome, accordera au buveur une résistance aux sorts de 5/- pendant 10 rounds, équilibrant ainsi les chances contre les ennemis lanceurs de sorts.
 
-STATISTIQUES :
+PARAMÈTRES :
 
 Résistance : 5/- Résistance aux sorts pendant 10 rounds
 Poids : 1 lb (0,45 kg)
@@ -2527,7 +2527,7 @@ Poids : 1 lb (0,45 kg)
 @4728 	= ~Fiole d’Écailles~
 @4729 	= ~Composée de rouille en poudre, de carapaces de scarabées, de poudre d'os et d'écorce de chêne, cette mixture à base d'alcool invoque une barrière d'écailles métalliques tranchantes sur la peau de l'utilisateur. Pendant 10 rounds, le buveur bénéficie d'un bonus générique de +2 à la classe d’armure, frustrant les tentatives d'un adversaire de lui faire du mal.
 
-STATISTIQUES :
+PARAMÈTRES :
 
 +2 à la classe d’armure pendant 10 rounds
 Poids : 1 lb (0,45 kg)
@@ -2535,7 +2535,7 @@ Poids : 1 lb (0,45 kg)
 @4730 	= ~Ectoplasme Raffiné~
 @4731 	= ~Poussière de cimetière, eau de pluie, merles écrasés ou vers de terre, et le sang séché d'un petit enfant ne sont que les premiers ingrédients nécessaires pour préparer cette potion amère et terreuse. Pour compléter le breuvage, un alchimiste doit extraire l'ectoplasme d'un fantôme ou spectre, soit en tuant un esprit errant, soit en grattant la matière de la gorge d'un médium, nécromancien ou devin contactant les morts. Laisser cette potion dehors la nuit pendant 1 à 7 jours (selon la lumière de la lune disponible) la mettra dans un état partiellement spectral, conférant à l'utilisateur une quasi-immunité aux armes ordinaires. Pendant 10 rounds après avoir bu cette potion amère, l'utilisateur ignore les premiers 10 points de dégâts de toute arme avec un enchantement inférieur à +2.
 
-STATISTIQUES :
+PARAMÈTRES :
 
 Résistance : 10/+2 Réduction des Dégâts pendant 10 rounds
 Poids : 1 lb (0,45 kg)
@@ -2545,7 +2545,7 @@ Poids : 1 lb (0,45 kg)
 
 Si l'alchimiste réussit à enrager les esprits locaux, il ou elle peut les lier au gaz collecté. En infligeant des décharges électriques répétées aux esprits emprisonnés, ils seront progressivement désorientés, permettant à la bouteille d'être lancée comme une grenade. Lorsque la bouteille se brise, les esprits attaqueront les créatures vivantes les plus proches qu'ils peuvent trouver, infligeant 4d12 dégâts magiques avec un jet de sauvegarde de Vigueur pour réduire de moitié les dégâts et infligeant la peur à toute victime qui échoue un jet de sauvegarde de Volonté.
 
-STATISTIQUES :
+PARAMÈTRES :
 
 4d12 dégâts magiques
 Peur pendant 5 rounds, jet de sauvegarde de Volonté pour annuler
@@ -2555,7 +2555,7 @@ Poids : 1 lb (0,45 kg)
 @4734 	= ~Baguette de Tendon Elfique~
 @4735 	= ~Cette baguette grasse, spongieuse et parfois agitée, composée principalement de tendons de jambes d'elfes et de demi-elfes, peut délivrer un trait d'énergie nécromantique à toute cible vivante. La victime subit 12d4 points de dégâts de poison, mais peut tenter un jet de sauvegarde de Vigueur pour réduire les dégâts de moitié.
 
-STATISTIQUES :
+PARAMÈTRES :
 
 12d4 dégâts de poison, jet de sauvegarde de Vigueur pour la moitié des dégâts
 Poids : 1 lb (0,45 kg)
@@ -2565,7 +2565,7 @@ Poids : 1 lb (0,45 kg)
 
 Le buveur conserve toutes ses fonctions normales, mais l'état liquide amortit l'impact des attaques ennemies, accordant une résistance de 1/- à toutes les formes de dégâts physiques.
 
-STATISTIQUES :
+PARAMÈTRES :
 
 Résistance : 1/- Résistance aux dégâts tranchants, contondants, perforants et aux projectiles pendant 10 rounds
 Poids : 1 lb (0,45 kg)
@@ -2575,7 +2575,7 @@ Poids : 1 lb (0,45 kg)
 
 Sucrée avec du miel et du jus de pomme, et brassée avec du ginseng et des plumes de colibri, cette potion accorde au buveur un bonus de +2 à toutes les caractéristiques pendant 10 rounds.
 
-STATISTIQUES :
+PARAMÈTRES :
 
 +2 Force
 +2 Dextérité
@@ -2600,7 +2600,7 @@ Si l'utilisateur meurt au cours du processus, il ou elle peut réessayer après av
 
 Génie Alchimique : Un alchimiste peut ajuster la recette pour alléger le fardeau sur son système, annulant la pénalité de Constitution et résistant entièrement aux dégâts.
 
-STATISTIQUES :
+PARAMÈTRES :
 
 +1 Force, Dextérité, Intelligence, Sagesse, et Charisme
 -1 Constitution
@@ -2612,7 +2612,7 @@ Poids : 1 lb (0,45 kg)
 
 L'utilisateur doit ouvrir la bouteille et inhaler profondément, en gardant le gaz dans ses poumons jusqu'à ce que le plasma arrive dans le sang. Le plasma ajoute un bonus spécial à chaque coup porté par l'utilisateur au combat, augmentant de 2 points tous les dégâts d'attaque. Cependant, le plasma se dissipe rapidement et ses effets disparaissent après 10 rounds.
 
-STATISTIQUES :
+PARAMÈTRES :
 
 +2 dégâts d'attaque pendant 10 rounds
 Poids : 1 lb (0,45 kg)
@@ -2622,7 +2622,7 @@ Poids : 1 lb (0,45 kg)
 
 Le porteur peut lancer la bouteille comme une grenade, contournant tout bonus d'armure ou de bouclier que la cible pourrait posséder. Toute créature malheureusement touchée par les fumées subira un malus cumulatif de -1 à la résistance aux sorts à mesure que l'enchantement s'infiltre dans son système, la rendant vulnérable aux sorts hostiles. L'effet est de courte durée et disparaîtra après trois rounds.
 
-STATISTIQUES :
+PARAMÈTRES :
 
 Dégâts : 1d4
 Type de dégâts : Projectiles (perforants)
@@ -2634,7 +2634,7 @@ Type : À une main
 @4746 	= ~Huile de Fée~
 @4747 	= ~Les créatures féeriques sont difficiles à trouver et encore plus à capturer, mais un alchimiste qui parvient à en capturer suffisamment peut en voler les pouvoirs, ne serait-ce que pour un temps limité. Le liquide lui-même n'est rien de plus que de la tourbe et des boutons d'or écrasés mélangés à de l'huile d'olive, mais si l'alchimiste peut convaincre un groupe de fées d'imprégner l'huile de leur magie – ou si l'alchimiste mélange l'huile avec le sang et les os en poudre des fées – cette potion enveloppera le buveur d'un petit nuage de magie illusoire semblable au sort Image miroir.
 
-STATISTIQUES :
+PARAMÈTRES :
 
 Image miroir
 Poids : 1 lb (0,45 kg)
@@ -2644,7 +2644,7 @@ Poids : 1 lb (0,45 kg)
 
 Cependant, le buveur peut forcer ce champ magnétique à produire une violente réaction contre ses assaillants qui inflige 10d4 points de dégâts contondants à chaque coup. Le champ se dissipera après 10 rounds.
 
-STATISTIQUES :
+PARAMÈTRES :
 
 Réaction Magnétique : Les assaillants subissent 10d4 dégâts contondants par coup
 -5 bonus d'attaque
@@ -2660,7 +2660,7 @@ Poids : 1 lb (0,45 kg)
 
 Lorsqu'il est bu, le sirop crée un champ d’anti-magie autour du corps de l'utilisateur, dissipant automatiquement tous les effets dissipables (à la fois positifs et négatifs) et accordant une résistance aux sorts de 10/- pour 10 rounds. Le champ interfère également avec les propres sorts de l'utilisateur, augmentant l'échec de sorts de 25%.
 
-STATISTIQUES :
+PARAMÈTRES :
 
 Dissipe tous les effets dissipables sur le buveur
 Résistance : 10/- Résistance aux sorts
@@ -2673,7 +2673,7 @@ Poids : 1 lb (0,45 kg)
 
 Une grande partie de la science est inconnue des humanoïdes, mais un alchimiste peut concocter une version spéciale du brouet histaksii à partir de lymphe de yuan-ti et de racine de mandragore, qui conférera au buveur une résistance limitée au poison. Pendant 10 rounds après avoir bu la lymphe, l'utilisateur bénéficiera d'une résistance de 1/- aux dégâts de poison, réduisant la plupart des formes de poison à la moitié de leur potentiel normal.
 
-STATISTIQUES :
+PARAMÈTRES :
 
 Résistance : 1/- Résistance au poison pendant 10 rounds
 Poids : 1 lb (0,45 kg)
@@ -2683,7 +2683,7 @@ Poids : 1 lb (0,45 kg)
 
 Une fois que l'utilisateur s'est adapté aux toxines, cependant, il ou elle peut utiliser l'énergie négative contenue dans le lait de vampire pour refermer ses blessures. Cette potion amère guérit 6d10 points de vie par bouteille.
 
-STATISTIQUES :
+PARAMÈTRES :
 
 Soigne 6d10 points de vie
 Poids : 1 lb (0,45 kg)
@@ -2695,7 +2695,7 @@ Nourrie avec amour et bénie par une exposition abondante à la lumière de la lune
 
 Une fois son pouvoir dépensé et sa personnalité sacrifiée pour le bien du camarade tombé de l'alchimiste, la mousse perdra sa lueur. Il est conseillé à l'utilisateur de jeter la mousse – la conserver tend à rendre mélancolique, et la mousse ne voudrait pas que son meilleur ami soit triste.
 
-STATISTIQUES :
+PARAMÈTRES :
 
 Ressuscite une créature
 Fait soupirer l'utilisateur et lui donne un air nostalgique de temps à autre
@@ -2705,7 +2705,7 @@ Poids : 1 lb (0,45 kg)
 @4759 	= ~Graisse de Scarabée~
 @4760 	= ~La plupart des gens s'opposeraient à enduire leur corps de graisse faite à partir de scarabées écrasés. Les aventuriers qui n'ont pas de telles objections bénéficieront d'un bonus de +4 à leurs jets de sauvegarde de Réflexes pendant 10 rounds lorsqu'ils appliquent cette graisse sur leur peau.
 
-STATISTIQUES :
+PARAMÈTRES :
 
 +4 aux jets de sauvegarde de Réflexes pendant 10 rounds
 Poids : 1 lb (0,45 kg)
@@ -2713,7 +2713,7 @@ Poids : 1 lb (0,45 kg)
 @4761 	= ~Sauce de Tyrannoeil~
 @4762 	= ~Composée du sang, de la lymphe, des larmes et du jus d'yeux d'un tyrannoeil (de préférence mort), cette sauce piquante engourdira temporairement les yeux de l'utilisateur afin qu'ils puissent être transmutés en plusieurs tiges globuleuses. Mis à part une vision floue et un certain inconfort, cette potion permet à tout lanceur de sorts de commencer à lancer un nouveau sort dès qu'il ou elle a fini de lancer le précédent, éliminant le délai normal entre les incantations. Cela permet à l'utilisateur de lancer plus d'un sort par round, bien que chacun subira une pénalité de -3 à la vitesse d'incantation. Après 2 rounds, les yeux de l'utilisateur récupéreront leur forme normale et l'effet de la potion s'estompera.
 
-STATISTIQUES :
+PARAMÈTRES :
 
 Hâte améliorée
 -3 à la vitesse d'incantation
@@ -2723,7 +2723,7 @@ Poids : 1 lb (0,45 kg)
 @4763 	= ~Baume de Corail~
 @4764 	= ~En arrachant des morceaux d'un récif corallien, en les écrasant en poudre et en les mélangeant à de la pâte de concombre de mer, un alchimiste peut créer un baume bleuté. Lorsqu'il est appliqué sur le corps de l'utilisateur, le baume se dilate pour former un bouclier puissant, piégeant l'utilisateur à l'intérieur mais le protégeant de toutes formes d'attaque. Le bouclier absorbe 100 points de vie avant de se briser.
 
-STATISTIQUES :
+PARAMÈTRES :
 
 Carapace de Tortue (100 points de vie)
 Poids : 1 lb (0,45 kg)
@@ -2731,7 +2731,7 @@ Poids : 1 lb (0,45 kg)
 @4765 	= ~Sécrétion de Fihyr~
 @4766 	= ~Cette bouteille contient une boue pourpre secrétée par la peau d'un fihyr. Une série d'enchantements magiques transforme la boue en une potion puissante capable de conférer un état éthéré au buveur. Toutes les attaques ennemies ont 50% de chances d'échouer complètement, comme avec le sort Clignotement. Cependant, les attaques et sorts de l'utilisateur subiront également 20% de chances d'échec. Les effets durent 10 rounds.
 
-STATISTIQUES :
+PARAMÈTRES :
 
 Clignotement
 20% d’échec des sorts
@@ -2742,7 +2742,7 @@ Poids : 1 lb (0,45 kg)
 @4767 	= ~Gelée de Salamandre de Feu~
 @4768 	= ~Un mélange épicé de gomme arabique et de sang de salamandre de feu, ce composé gélatineux érigera un mur de flammes autour du buveur, réduisant de moitié tous les dégâts de froid et infligeant 1d6+10 dégâts de feu à tous les attaquants. L'effet dure 10 rounds ou jusqu'à ce qu'il soit dissipé.
 
-STATISTIQUES :
+PARAMÈTRES :
 
 Bouclier de feu (rouge)
 Poids : 1 lb (0,45 kg)
@@ -2750,7 +2750,7 @@ Poids : 1 lb (0,45 kg)
 @4769 	= ~Gelée de Salamandre de Givre~
 @4770 	= ~Une gelée mentholée composée de gomme arabique et de sang de salamandre de givre, ce composé gélatineux érigera un mur de givre autour du buveur, réduisant de moitié tous les dégâts de feu et infligeant 1d6+10 dégâts de froid à tous les attaquants. L'effet dure 10 rounds ou jusqu'à ce qu'il soit dissipé.
 
-STATISTIQUES :
+PARAMÈTRES :
 
 Bouclier de feu (bleu) pendant 10 rounds
 Poids : 1 lb (0,45 kg)
@@ -2758,7 +2758,7 @@ Poids : 1 lb (0,45 kg)
 @4771 	= ~Lubrifiant de Poisson~
 @4772 	= ~L'huile de poisson, l'huile de sésame, un ensemble unique d'enchantements et des cendres très fines composent ce lubrifiant graisseux. Lorsque l'utilisateur applique cette huile sur la peau et active le mot de commande, le lubrifiant commencera à vibrer faiblement. Toute tentative d'entraver le mouvement de l'utilisateur échouera tant que le lubrifiant est actif, ce qui durera 10 rounds ou jusqu'à ce qu'il soit dissipé.
 
-STATISTIQUES :
+PARAMÈTRES :
 
 Liberté de Mouvement
 Poids : 1 lb (0,45 kg)
@@ -2766,7 +2766,7 @@ Poids : 1 lb (0,45 kg)
 @4773 	= ~Boisson Pétillante~
 @4774 	= ~Cette concoction pétillante de jus de fruits et de cerveaux d'autruche donnera un coup de fouet au buveur. Pendant dix rounds après avoir bu cette boisson sucrée, l'utilisateur se déplacera et attaquera à une vitesse accélérée, gagnant un bonus de +4 à la vitesse de déplacement et au facteur de vitesse.
 
-STATISTIQUES :
+PARAMÈTRES :
 
 +4 Vitesse de Déplacement
 +4 Facteur de Vitesse
@@ -2776,7 +2776,7 @@ Poids : 1 lb (0,45 kg)
 @4775 	= ~Poudre de Goule~
 @4776 	= ~Cette fine poussière gris-bleuâtre, faite à partir de la peau et de la chair en poudre d'une goule ou d'un revenant, émet une faible lueur. Renifler cette poudre entraînera un mal de tête douloureux ainsi qu'un puissant enchantement traversant le corps de l'utilisateur. Pendant 10 rounds après avoir reniflé cette poudre magique, l'utilisateur bénéficiera d'une résistance de 5/- à toutes les formes de dégâts de froid.
 
-STATISTIQUES :
+PARAMÈTRES :
 
 Résistance : 5/- Résistance au froid pendant 10 rounds
 Poids : 1 lb (0,45 kg)
@@ -2784,7 +2784,7 @@ Poids : 1 lb (0,45 kg)
 @4777 	= ~Bulles Dorées~
 @4778 	= ~La chance est difficile à obtenir, mais pour ceux qui savent comment la générer, la fortune peut venir de presque n'importe où. Cette solution pétillante est un mélange de paillettes d'or, de jus de citron, de perles broyées et de sabots de chèvre en poudre. Quiconque boit cette potion ressentira une poussée d'euphorie et une confiance suprême en tout, ainsi qu'un bonus de chance de +1 pendant 10 rounds.
 
-STATISTIQUES :
+PARAMÈTRES :
 
 +1 Chance pendant 10 rounds
 Poids : 1 lb (0,45 kg)
@@ -2792,7 +2792,7 @@ Poids : 1 lb (0,45 kg)
 @4779 	= ~Bile d'Ogre~
 @4780 	= ~Ce liquide translucide et maladif est un mélange de limon vert, de sel commun et de bile tirée de l'estomac d'un ogre. Quiconque s'oblige à boire cette potion infâme gagne 25 points de vie temporaires pendant 10 rounds. Tout dommage subi par l'utilisateur sera d'abord prélevé sur les points de vie temporaires.
 
-STATISTIQUES :
+PARAMÈTRES :
 
 +25 Points de Vie Maximum pendant 10 rounds
 Poids : 1 lb (0,45 kg)
@@ -2800,7 +2800,7 @@ Poids : 1 lb (0,45 kg)
 @4781 	= ~Huile de Hâte~
 @4782 	= ~Une huile pâle faite de perles broyées, de dents de requin et de sang de lapin, cette potion se répand rapidement dans le corps de l'utilisateur. L'huile améliore considérablement les mouvements et le rythme des attaques de l'utilisateur, accordant la rapidité comme par le sort de mage Hâte pendant 10 rounds.
 
-STATISTIQUES :
+PARAMÈTRES :
 
 Hâte pendant 10 rounds
 Poids : 1 lb (0,45 kg)
@@ -2808,7 +2808,7 @@ Poids : 1 lb (0,45 kg)
 @4783 	= ~Potion de Clarté~
 @4784 	= ~Cette potion est une concoction à l'odeur agréable d'huile d'olive mélangée avec du nez de néréide en poudre et du lapis-lazuli concassé. Boire cette potion au goût étrange accordera temporairement à l'utilisateur une immunité contre la plupart des sorts affectant l'esprit, y compris charme, domination, débilité, terreur, et confusion pendant 10 rounds.
 
-STATISTIQUES :
+PARAMÈTRES :
 
 Immunité contre charme, domination, débilité, terreur, et confusion pendant 10 rounds
 Poids : 1 lb (0,45 kg)
@@ -2816,7 +2816,7 @@ Poids : 1 lb (0,45 kg)
 @4785 	= ~Sève de Sylvanien~
 @4786 	= ~De la sève de tréant durcie mélangée à de l'eau bénite et à des pois écrasés est contenue dans ce récipient en bois solide. La sève dure doit être mâchée soigneusement à moins qu'elle ne soit chauffée avant consommation. La sève transforme la peau de l'utilisateur en une substance rigide et ligneuse, accordant un bonus de +3 à la classe d'armure pour 10 rounds.
 
-STATISTIQUES :
+PARAMÈTRES :
 
 Écorce (+3 à la classe d'armure) pendant 10 rounds
 Poids : 1 lb (0,45 kg)
@@ -2824,7 +2824,7 @@ Poids : 1 lb (0,45 kg)
 @4787 	= ~Sérum de Troll~
 @4788 	= ~Fait de sang de troll concentré filtré à travers de la peau perforée d'otyugh, ce mélange aigre accordera temporairement au buveur les capacités régénératrices d'un troll. Pendant 10 rounds après avoir bu cette potion, le buveur récupérera 5 points de vie à chaque round.
 
-STATISTIQUES :
+PARAMÈTRES :
 
 Régénère 5 points de vie par round pendant 10 rounds
 Poids : 1 lb (0,45 kg)
@@ -2832,7 +2832,7 @@ Poids : 1 lb (0,45 kg)
 @4789 	= ~Bave de Zombi~
 @4790 	= ~Cette soupe grumeleuse est un mélange de cheveux d'elfe hachés et de la bave nauséabonde drainée du cadavre d'un zombi limoneux. Boire cette concoction malodorante conférera à l'utilisateur une résistance de 5/- aux dégâts d'acide pendant 10 rounds.
 
-STATISTIQUES :
+PARAMÈTRES :
 
 Résistance : 5/- Résistance à l'acide pendant 10 rounds
 Poids : 1 lb (0,45 kg)
@@ -2840,7 +2840,7 @@ Poids : 1 lb (0,45 kg)
 @4791 	= ~Fiole de Vipères~
 @4792 	= ~Un mélange expérimental curieux, cette fiole de boue verte tordra les entrailles du buveur et utilisera ses intestins pour incuber une couvée de vipères générées magiquement. Chaque round pendant six rounds, le buveur vomira une vipère adulte qu'il ou elle pourra contrôler télépathiquement.
 
-STATISTIQUES :
+PARAMÈTRES :
 
 Flot de vipères pour 6 rounds
 Poids : 1 lb (0,45 kg)
