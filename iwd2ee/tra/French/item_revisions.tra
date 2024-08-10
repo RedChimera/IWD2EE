@@ -48,10 +48,10 @@ PARAMÈTRES :
 
 Chance : +2
 Poids : 0~
-//@10034	= ~Echarpe en peau de yéti~
-//@10035	= ~Item description can remain the same; if new description is needed put it here~
-//@10036	= ~Echarpe en loup des glaces~
-@10037	= ~Cette écharpe est faite avec la fourrure d'un loup des glaces.
+//@10032	= ~Echarpe en peau de yéti~
+//@10033	= ~Item description can remain the same; if new description is needed put it here~
+//@10034	= ~Echarpe en loup des glaces~
+@10035	= ~Cette écharpe est faite avec la fourrure d'un loup des glaces.
 
 PARAMÈTRES :
 
@@ -3586,7 +3586,7 @@ PARAMÈTRES :
 Dégâts : 1d4 +1
 Bonus d'attaque : +1
 Enchantement : +1
-Type de dégâts : projectile (perforants)
+Type de dégâts : Projectile (perforants)
 Type de dégâts : corps à corps (perforants)
 Spécial :
  Boomerang : revient à son utilisateur
@@ -3602,7 +3602,7 @@ PARAMÈTRES :
 Dégâts : 1d4 +2
 Bonus d'attaque : +2
 Enchantement : +2
-Type de dégâts : projectile (perforants)
+Type de dégâts : Projectile (perforants)
 Type de dégâts : corps à corps (perforants)
 Spécial :
  Etourdissement : 25% de chances que la cible soit étourdie pendant 1/2 round (jet de vigueur DD 18).
@@ -3768,7 +3768,7 @@ PARAMÈTRES :
 Dégâts : 1d4 +1
 Bonus d'attaque : +1
 Enchantement : +1
-Type de dégâts : projectile (perforants)
+Type de dégâts : Projectile (perforants)
 Type de dégâts : corps à corps (perforants)
 Spécial :
  Sort : la cible est frappée par le sort Silence pendant 1 round (pas de jet de sauvegarde). Ce sort ne se déclenche que lorsque la dague est lancée.
@@ -3784,7 +3784,7 @@ PARAMÈTRES :
 Dégâts : 1d4 +3
 Bonus d'attaque : +3
 Enchantement : +3
-Type de dégâts : projectile (perforants)
+Type de dégâts : Projectile (perforants)
 Type de dégâts : corps à corps (perforants)
 Spécial :
  Sort : la cible est frappée par le sort Silence pendant 2 rounds (pas de jet de sauvegarde). Cet effet ne se déclenche que lorsque la dague est lancée.
@@ -3801,7 +3801,7 @@ PARAMÈTRES :
 Dégâts : 1d4 +3
 Bonus d'attaque : +3
 Enchantement : +3
-Type de dégâts : projectile (perforants)
+Type de dégâts : Projectile (perforants)
 Type de dégâts : corps à corps (perforants)
 Spécial :
  Boomerang : revient vers l'envoyeur
@@ -3819,7 +3819,7 @@ PARAMÈTRES :
 Dégâts : 1d4 +5
 Bonus d'attaque : +5
 Enchantement : +5
-Type de dégâts : projectile (perforants)
+Type de dégâts : Projectile (perforants)
 Type de dégâts : corps à corps (perforants)
 Spécial :
  Boomerang : revient vers l'envoyeur
@@ -3952,7 +3952,7 @@ PARAMÈTRES :
 
 Dégâts : 1d4+2
 Bonus d'attaque : +2
-Type de dégâts : projectile (perforants)
+Type de dégâts : Projectile (perforants)
 Type de dégâts : corps à corps (perforants)
 Spécial :
  Barbelée : +1d6 points supplémentaires de dégâts tranchants
@@ -5991,6 +5991,180 @@ Spécial :
 Poids : 2,27 kg (5 lb)
 Compétence : Arme de guerre, arme d'hast
 Type d'arme : À deux mains~
+//@11105    = ~Lance de Saignement Eternel +1~
+@11106    = ~L'une des premières armes de l'humanité, qui n'est autre qu'un bout de bois dont l'une des extrémités a été taillée en pointe. L'apparition de la métallurgie a permis d'ajouter une tête de fer ou d'acier à la lance. Les expérimentations des forgerons entraînèrent ensuite la création de diverses variants et l'apparition des armes d'hast. Cette lance doit sa particularité aux enchantements qui ont été lancés sur elle.
+
+PARAMETRES :
+
+Dégâts : 1d8 +1
+Bonus d’attaque : +1
+Enchantement : +1
+Type de dégâts : Perforants
+Spécial :
+  Saignement perpétuel : inflige 1 point de dégâts supplémentaire par round pendant 50 rounds (DD de Vigueur de 15)
+Poids : 2,27 kg (5 lb)
+Compétence : arme de guerre, arme d’hast
+Type d’arme : à deux mains~
+//@11107    = ~Lance de Foudre~
+@11108    = ~L’une des premières armes de l’humanité, qui n’est autre qu’un bout de bois dont l’une des extrémités a été taillée en pointe. L’apparition de la métallurgie a permis d’ajouter une tête de fer ou d’acier à la lance. Les expérimentations des forgerons entraînèrent ensuite la création de diverses variantes et l'apparition des armes d'hast. Cette lance doit sa particularité aux enchantements qui ont été lancés sur elle.
+
+PARAMETRES :
+
+Dégâts : 1d8
+Type de dégâts : Perforants
+Spécial :
+  Décharge : +1d6 de dégâts électriques
+Poids : 2,27 kg (5 lb)
+Compétence : arme de guerre, arme d'hast
+Type d'arme : à deux mains~
+//@11109    = ~Lance ardente +2~
+//@11110    = ~Vous pouvez conserver la description de l'objet, si vous n'avez pas besoin de la modifier.~
+//@11111    = ~Lance de Glace +4~
+@11112    = ~L’une des premières armes de l’humanité, qui n’est autre qu’un bout de bois dont l’une des extrémités a été taillée en pointe. L’apparition de la métallurgie a permis d’ajouter une tête de fer ou d’acier à la lance. A ce point, les armuriers commencèrent à expérimenter différents types de tête menant ainsi à la création de certaines autres armes d’hast. Cette lance doit sa particularité aux enchantements qui ont été lancés sur elle.
+
+PARAMÈTRES :
+
+Dégâts : 1d8 +4
+Bonus d’attaque : +4
+Enchantement : +4
+Type de dégâts : Perforants
+Spécial :
+  Lancer de Lance de Glace : cette lance peut être lancée, prenant la forme d’une Lance de glace. Si elle touche, elle inflige 5d6 dégâts de froid sans jet de sauvegarde mais n’inflige aucun dégât physique.
+Poids : 2,27 kg (5 lb)
+Compétence : arme de guerre, arme d’hast
+Type d’arme : à deux mains~
+//@11113    = ~Lance sanglante~
+@11114    = ~L’une des premières armes de l’humanité, qui n’est autre qu’un bout de bois dont l’une des extrémités a été taillée en pointe. L’apparition de la métallurgie a permis d’ajouter une tête de fer ou d’acier à la lance. Les expérimentations des forgerons entraînèrent ensuite la création de diverses variantes et l'apparition des armes d'hast. Cette lance doit sa particularité aux enchantements qui ont été lancés sur elle.
+
+PARAMÈTRES :
+
+Dégâts : 1d8
+Type de dégâts : Perforants
+Spécial :
+ Sanglante : inflige 1 point de dégât supplémentaire par round pendant 10 rounds (DD de Vigueur de 17)
+Poids : 2,27 kg (5 lb)
+Compétence : arme de guerre, arme d’hast
+Type d’arme : à deux mains~
+//@11115    = ~Lance de maître~
+//@11116    = ~Vous pouvez conserver la description de l'objet, si vous n'avez pas besoin de la modifier.~
+//@11117    = ~Lance +5~
+//@11118    = ~Vous pouvez conserver la description de l'objet, si vous n'avez pas besoin de la modifier.~
+//@11119    = ~Lance +4~
+//@11120    = ~Vous pouvez conserver la description de l'objet, si vous n'avez pas besoin de la modifier.~
+//@11121    = ~Lance +3~
+//@11122    = ~Vous pouvez conserver la description de l'objet, si vous n'avez pas besoin de la modifier.~
+//@11123    = ~Lance +2~
+//@11124    = ~Vous pouvez conserver la description de l'objet, si vous n'avez pas besoin de la modifier.~
+@11125    = ~Empaleuse +3~
+@11126    = ~Empaleuse est une splendide lance dotée d’une pointe en adamantium de plus de 40 centimètres de long aux tranchants en dents de scie. Des deux côtés de la lame, qui s’orne de runes argentées, deux trous semblent mener au centre du manche en chêne poli, ce dernier étant creux et renforcé par des bandes de mithril sur toute sa longueur.
+
+Empaleuse est une arme redoutable. Elle augmente les chances de réussir un coup critique et peut empaler une créature, lui infligeant ainsi des dégâts considérables.
+
+PARAMETRES :
+
+Dégâts : 1d8 +3
+Bonus d'attaque : +3
+Enchantement : +3
+Type de dégâts : Perforants
+Spécial :  
+  Pénétration : chances de coups critiques augmentées
+  Empalement : la cible touchée doit réussir un jet de sauvegarde de Vigueur avec un DD de 25 sous peine d’être empalée et de subir 10 points de dégâts perforants supplémentaires.
+Poids : 2,72 kg (6 lb)
+Compétence : arme de guerre, arme d'hast
+Type d'arme : à deux mains~
+@11127    = ~Empaleuse Sanguinaire +5~
+@11128    = ~Empaleuse Sanguinaire est une splendide lance dotée d'une pointe en adamantium de plus de 40 centimètres de long aux tranchants en dents de scie. Des deux côtés de la lame, qui s'orne de runes argentées, deux trous semblent mener au centre du manche en chêne poli, ce dernier étant creux et renforcé par des bandes de mithril sur toute sa longueur.
+
+Empaleuse Sanguinaire est une arme redoutable. Elle augmente les chances de réussir un coup critique et peut empaler une créature, lui infligeant ainsi des dégâts considérables et absorbant son énergie vitale.
+
+PARAMETRES :
+
+Dégâts : 1d8 + 5
+Bonus d'attaque : +5
+Enchantement : +5
+Type de dégâts : Perforants
+Spécial :  
+  Pénétration : chances de coups critiques augmentées
+  Empalement : la cible touchée doit réussir un jet de sauvegarde de Vigueur avec un DD de 30 sous peine d’être empalée et de subir 10 points de dégâts perforants supplémentaires.
+  Sanguinaire : lorsqu’elle empale une créature, la lance lui draine 5 points de vie, qui sont temporairement ajoutés à ceux de son porteur pendant 5 rounds.
+Poids : 2,72 kg (6 lb)
+Compétence : arme de guerre, arme d'hast
+Type d'arme : à deux mains~
+//@11129    = ~Neuf Pas~
+@11130    = ~Cette longue lance est faite de chêne particulièrement épais et semble avoir longtemps servi à chasser le sanglier arctique. Elle porte nombre de runes le long de son manche pour aider son porteur à frapper juste et, dans une situation critique, peut s'allonger considérablement pour atteindre l'adversaire avant qu'il puisse arriver au corps-à-corps. Bien que cette lance ne semble pas posséder d'enchantements lui permettant d'infliger des dégâts supplémentaires, elle peut toutefois blesser des créatures uniquement affectées par des armes magiques.
+
+PARAMETRES :
+
+Dégâts : 1d8
+Bonus d'attaque : +1
+Type de dégâts : Perforants
+Spécial :
+  Longueur de 5 au lieu de 3.
+  Considérée comme une arme +1 pour toucher des créatures enchantées
+Poids : 3,18 kg (7 lb)
+Compétence : arme de guerre, arme d'hast
+Type d'arme : à deux mains~
+//@11131    = ~Douze Pas~
+@11132    = ~Cette longue lance est faite de chêne particulièrement épais et semble avoir longtemps servi à chasser le sanglier arctique. Elle porte nombre de runes le long de son manche pour aider son porteur à frapper juste et, dans une situation critique, peut s'allonger considérablement pour atteindre l'adversaire avant qu'il puisse arriver au corps-à-corps. 
+
+PARAMETRES :
+
+Dégâts : 1d8 +5
+Bonus d'attaque : +5
+Enchantement : +5
+Type de dégâts : Perforants
+Spécial :
+  Longueur de 7 au lieu de 3
+Poids : 3,18 kg (7 lb)
+Compétence : arme de guerre, arme d’hast
+Type d’arme : à deux mains~
+//@11133    = ~Lance de Kyosti~
+@11134    = ~Kyosti passa de nombreuses lunes à créer cette lance enchantée avec l'aide des artisans du Village Itinérant. Cette arme est à son image : simple, mais diaboliquement efficace. Certains disent même qu'elle cherche le coeur de sa cible...
+
+PARAMETRES :
+
+Dégâts : 1d8 +2
+Bonus d'attaque : +2
+Enchantement : +2
+Type de dégâts : Perforants
+Spécial :
+ Pénétration : chances de coups critiques augmentées
+Poids : 2,27 kg (5 lb)
+Compétence : arme de guerre, arme d'hast
+Type d'arme : à deux mains~
+//@11135    = ~Lance de chasse de Kyosti~
+@11136    = ~Kyosti passa de nombreuses lunes à créer cette lance enchantée avec l'aide des artisans du Village Itinérant. Cette arme est à son image : simple, mais diaboliquement efficace. Certains disent même qu'elle cherche le cœur de sa cible...
+
+PARAMÈTRES :
+
+Dégâts : 1d8 +4
+Bonus d’attaque : +4
+Enchantement : +4
+Type de dégâts : Perforants
+  Pénétration : chances de coups critiques augmentées
+  Cherche-cœur : les attaques ne tiennent pas compte de l'armure ou du bouclier de la cible.
+Poids : 2,27 kg (5 lb)
+Compétence : arme de guerre, arme d’hast
+Type d’arme : à deux mains~
+
+
+//@11137    = ~Halberd~
+//@11138    = ~Item description can remain the same; if new description is needed put it here~
+//@11139    = ~Masterwork Halberd~
+//@11140    = ~Item description can remain the same; if new description is needed put it here~
+//@11141    = ~Halberd +1~
+//@11142    = ~Item description can remain the same; if new description is needed put it here~
+//@11143    = ~Halberd +2~
+//@11144    = ~Item description can remain the same; if new description is needed put it here~
+//@11145    = ~Halberd +5~
+//@11146    = ~Item description can remain the same; if new description is needed put it here~
+//@11147    = ~Halberd +4~
+//@11148    = ~Item description can remain the same; if new description is needed put it here~
+//@11149    = ~Halberd +3~
+//@11150    = ~Item description can remain the same; if new description is needed put it here~
+//@11151    = ~Keen Halberd of Expertise~
+//@11152    = ~Item description can remain the same; if new description is needed put it here~
+//@11153    = ~Halberd of Corrosive Fire +1~
 @11154    = ~La hallebarde est composée d’une lame de hache montée à l’extrémité d’un bâton de près de deux mètres de long. Des propriétés magiques lui ont été conférées, de façon à améliorer ses performances en combat. Sa large lame a pour mission de trancher les chairs à la recherche des os de l'ennemi, alors que son crochet sert à découvrir les failles de son armure.
 
 PARAMÈTRES :
@@ -6184,7 +6358,7 @@ PARAMÈTRES :
 Dégâts : 1d6 +3
 Bonus d’attaque : +3
 Enchantement : +3
-Type de dégâts : projectile (perforants)
+Type de dégâts : Projectile (perforants)
 Type de dégâts : corps à corps (tranchant)
 Spécial :
   Boomerang : revient à son utilisateur
@@ -6197,7 +6371,7 @@ Type d'arme : À une main~
 PARAMÈTRES :
 
 Dégâts : 1d6
-Type de dégâts : projectile (perforants)
+Type de dégâts : Projectile (perforants)
 Spécial :
  Acérée : chances de coups critiques augmentées, mais uniquement si lancée
 Poids : 1,81 kg (4 lb)
@@ -6209,7 +6383,7 @@ Type d'arme : À une main~
 PARAMÈTRES :
 
 Dégâts : 1d6
-Type de dégâts : projectile (perforants)
+Type de dégâts : Projectile (perforants)
 Type de dégâts : corps à corps (tranchant)
 Spécial :
   Boomerang : revient à son utilisateur
@@ -8509,7 +8683,7 @@ Type d'arme : À une main~
 PARAMÈTRES :
 
 Dégâts : 1d4
-Type de dégâts : projectile (perforant)
+Type de dégâts : Projectile (perforant)
 Spécial : Jet de Vigueur (DD de 21) réussi ou étourdi pendant 1 round
 Poids : 0
 Compétence : Arme courante, projectile
@@ -8520,7 +8694,7 @@ Type d'arme : À une main~
 PARAMÈTRES :
 
 Dégâts : 1d4
-Type de dégâts : projectile (perforant)
+Type de dégâts : Projectile (perforant)
 Spécial :
   Hémorragie : inflige 1 point de dégâts supplémentaire par round pendant 10 rounds (jet de vigueur avec un DD de 22 pour annuler).
 Poids : 0
@@ -8534,7 +8708,7 @@ PARAMÈTRES :
 Dégâts : 1d4 + 5
 Bonus d’attaque : +5
 Enchantement : +5
-Type de dégâts : projectile (perforants)
+Type de dégâts : Projectile (perforants)
 Spécial :
   Vitesse : 4 attaques supplémentaires par round de combat. Ces attaques peuvent ignorer le plafond de cinq attaques par round.
 Poids : 0 
@@ -8548,7 +8722,7 @@ PARAMÈTRES :
 Dégâts : 1d4  +1
 Bonus d’attaque : +1
 Enchantement : +1
-Type de dégâts : projectile (perforants)
+Type de dégâts : Projectile (perforants)
 Spécial :
   Aucun bonus de Force aux dégâts (pas de bonus de Dextérité aux dégâts pour les halfelins pieds-légers non plus)
   Vitesse : nombre d’attaques par round doublé, pouvant ignorer la limite de cinq attaques par round
@@ -8562,7 +8736,7 @@ Type d’arme : à une main~
 PARAMÈTRES :
 
 Dégâts : 1d4
-Type de dégâts : projectile (perforants)
+Type de dégâts : Projectile (perforants)
 Spécial :
   Venin : +2 points de dégâts du poison par seconde pendant 6 secondes (DD de Vigueur de 18)
   Retour : revient à son utilisateur
@@ -8577,7 +8751,7 @@ PARAMÈTRES :
 Dégâts : 1d4  +1
 Bonus d’attaque : +1
 Enchantement : +1
-Type de dégâts : projectile (perforants)
+Type de dégâts : Projectile (perforants)
 Spécial :
   Flammes : +1d6 de dégâts du feu
 Poids : 0
@@ -8589,7 +8763,7 @@ Type d’arme : à une main~
 PARAMÈTRES :
 
 Dégâts : 1d4
-Type de dégâts : projectile (perforants)
+Type de dégâts : Projectile (perforants)
 Spécial :
  Froid : +1d4 de dégâts du froid
  Retour : revient à son utilisateur
@@ -8602,7 +8776,7 @@ Type d'arme : À une main~
 PARAMÈTRES :
 
 Dégâts : 1d4
-Type de dégâts : projectile (perforants)
+Type de dégâts : Projectile (perforants)
 Spécial :
   Décharge : 25% de chances d'infliger +2d6 de dégâts électriques
 Poids : 0
@@ -8628,7 +8802,7 @@ PARAMÈTRES :
 Dégâts : 1d4 +5
 Bonus d'attaque : +5
 Enchantement : +5
-Type de dégâts : projectile (perforants)
+Type de dégâts : Projectile (perforants)
 Spécial :
  Froid : +1d6 de dégâts du froid
  Congélation : 5 % de chances que la cible soit gelée (jet de Vigueur avec un DD de 40). Même en cas de réussite du jet de sauvegarde, la cible subit tout de même 50 points de dégâts du froid. Les créatures utilisant le froid sont immunisées contre cet effet.
@@ -8645,7 +8819,7 @@ PARAMÈTRES :
 Dégâts : 1d4 +1
 Bonus d'attaque : +1
 Enchantement : +1
-Type de dégâts : projectile (perforant)
+Type de dégâts : Projectile (perforant)
 Spécial :
  Sort : Place la cible sous les effets d'un sort de charme (DD de Volonté de 20)
 Poids : 0
@@ -8661,7 +8835,7 @@ PARAMÈTRES :
 Dégâts : 1d4 +5
 Bonus d'attaque : +5
 Enchantement : +5
-Type de dégâts : projectile (perforants)
+Type de dégâts : Projectile (perforants)
 Spécial :
   Acérée : augmente les chances d’infliger un coup critique
 Poids : 0
@@ -8675,7 +8849,7 @@ PARAMÈTRES :
 Dégâts : 1d4 +3
 Bonus d'attaque : +3
 Enchantement : +3
-Type de dégâts : projectile (perforants)
+Type de dégâts : Projectile (perforants)
 Spécial :
  Corrosion : +1d6 de dégâts d'acide
 Poids : 0
@@ -8691,7 +8865,7 @@ PARAMÈTRES :
 Dégâts : 1d4  +1
 Bonus d’attaque : +3
 Enchantement : +1
-Type de dégâts : projectile (perforants)
+Type de dégâts : Projectile (perforants)
 Spécial :
   Sort : la cible subit les effets de Débilité (DD de Volonté de 6)
 Poids : 0
@@ -8708,7 +8882,7 @@ PARAMÈTRES :
 Dégâts : 1d4  +3
 Bonus d’attaque : +5
 Enchantement : +3
-Type de dégâts : projectile (perforants)
+Type de dégâts : Projectile (perforants)
 Spécial :
   Sort : la cible subit les effets de Débilité (DD de Volonté de 21)
 Poids : 0
@@ -8726,7 +8900,7 @@ PARAMÈTRES :
 Dégâts : 1d4 + 2
 Bonus d’attaque : +2
 Enchantement : +2
-Type de dégâts : projectile (perforants)
+Type de dégâts : Projectile (perforants)
 Spécial :
   Dissipation de la magie : 50 % de chances de lancer Dissipation de la magie sur la cible (jet de volonté pour y résister)
   Sort : 10 % de chances de lancer Cécité sur le porteur (jet de vigueur pour y résister)
@@ -8744,7 +8918,7 @@ PARAMÈTRES :
 Dégâts : 1d4 + 5
 Bonus d’attaque : +5
 Enchantement : +5
-Type de dégâts : projectile (perforants)
+Type de dégâts : Projectile (perforants)
 Spécial :
   Dissipation de la magie : 90% de chances de lancer Dissipation de la magie sur la cible (jet de volonté pour y résister)
   Sort : 5 % de chances de lancer Cécité sur le porteur (jet de vigueur pour y résister)
@@ -9898,7 +10072,11 @@ Poids : 9,07 kg (20 lb)
 Compétence : Arme courante, arbalète
 Type d'arme : À deux mains~
 
-//@11889 = ~Fronde de Force Magique Supérieure +1~
+//@11885    = ~Sling~
+//@11886    = ~Item description can remain the same; if new description is needed put it here~
+//@11887    = ~Sling +1~
+//@11888    = ~Item description can remain the same; if new description is needed put it here~
+@11889 = ~Fronde de Force Magique Supérieure +1~
 @11890 = ~Les frondes existent depuis la nuit des temps. La fronde commune est composée d’une double lanière de cuir et d’une bourse servant de réceptacle à un projectile. On tient la fronde par l’extrémité des deux lanières et on la fait tourner au-dessus de sa tête pour donner de la puissance. Il suffit alors de relâcher une des lanières pour projeter la bille. 
 
 PARAMÈTRES :
@@ -10064,7 +10242,7 @@ PARAMÈTRES :
 Dégâts : 1d6
 Bonus d'attaque : +1
 Enchantement : +1
-Type de dégâts : projectile (perforant)
+Type de dégâts : Projectile (perforant)
 Spécial : +1d6 de dégâts d'acide
 Poids : 0
 Lanceur : arc~
@@ -10076,7 +10254,7 @@ PARAMÈTRES :
 Dégâts : 1d6 + 1
 Bonus d'attaque : +1
 Enchantement : +1
-Type de dégâts : projectile (perforants)
+Type de dégâts : Projectile (perforants)
 Spécial :
   Venin : +2 points de dégâts de poison par seconde pendant 6 secondes (DD de Vigueur de 16 + deux fois le bonus de Dextérité de l’archer)
 Poids : 0
@@ -10087,7 +10265,7 @@ Lanceur : arc~
 PARAMÈTRES :
 
 Dégâts : 1d6
-Type de dégâts : projectile (perforants)
+Type de dégâts : Projectile (perforants)
 Spécial : Lance Dissipation de la magie sur la cible (DD de Volonté de 35).
 Poids : 0
 Arme utilisée : arc~
@@ -10099,7 +10277,7 @@ PARAMÈTRES :
 Dégâts : 1d6 + 1
 Bonus d’attaque : +1
 Enchantement : +1
-Type de dégâts : projectile (perforants)
+Type de dégâts : Projectile (perforants)
 Spécial : +1D6 de dégâts de feu
 Poids : 0
 Arme utilisée : arc~
@@ -10111,7 +10289,7 @@ PARAMÈTRES :
 Dégâts : 1d6
 Bonus d'attaque : +1
 Enchantement : +1
-Type de dégâts : projectile (perforant)
+Type de dégâts : Projectile (perforant)
 Spécial :
  Froid : +1d6 de dégâts du froid
 Poids : 0
@@ -10134,7 +10312,7 @@ PARAMÈTRES :
 
 Dégâts : 1d2 -1
 Bonus d'attaque : +3
-Type de dégâts : projectile (perforants)
+Type de dégâts : Projectile (perforants)
 Spécial :
   Immobilisation : effet d'Enchevêtrement sur la cible pendant quatre rounds (DD de Réflexes de 30)
 Poids : 0
@@ -10147,7 +10325,7 @@ PARAMÈTRES :
 Dégâts : 1d6 +2
 Bonus d’attaque : +2
 Enchantement : +2
-Type de dégâts : projectile (perforants)
+Type de dégâts : Projectile (perforants)
 Spécial :
  Disruption : les morts-vivants et les extérieurs touchés par cette arme doivent réussir un jet de Vigueur (à –4) pour ne pas être anéantis.
 Poids : 0
@@ -10158,7 +10336,7 @@ Arme utilisée : arc~
 PARAMÈTRES :
 
 Dégâts : 1d6
-Type de dégâts : projectile (perforants)
+Type de dégâts : Projectile (perforants)
 Spécial :
  Venin : +2 points de dégâts du poison par seconde pendant 6 secondes (jet de Vigueur pour annuler) (DD de Vigueur de 22)
  Boomerang : revient à son utilisateur
@@ -10172,7 +10350,7 @@ PARAMÈTRES :
 Dégâts : 1d6 +1
 Bonus d'attaque : +1
 Enchantement : +1
-Type de dégâts : projectile (perforants)
+Type de dégâts : Projectile (perforants)
 Spécial :
  Acérées : augmente les chances d’infliger un coup critique
 Poids : 0
@@ -10185,7 +10363,7 @@ PARAMÈTRES :
 Dégâts : 1d6 +1
 Bonus d'attaque : +1
 Enchantement : +1
-Type de dégâts : projectile (perforants)
+Type de dégâts : Projectile (perforants)
 Spécial :
  Etourdissement : 50% de chances que la cible soit étourdie pour 1/2 round de combat (DD de Vigueur de 20)
 Poids : 0
@@ -10198,7 +10376,7 @@ Arme utilisée : arc~
 PARAMÈTRES :
 
 Dégâts : 1d6
-Type de dégâts : projectile (perforants)
+Type de dégâts : Projectile (perforants)
 Spécial :
  Dissipation : 25% de chances de lancer le sort Dissipation de la magie sur la cible (jet de volonté pour annuler) (DD de Volonté de 15)
 Poids : 0
@@ -10219,7 +10397,7 @@ Arme utilisée : arc~
 PARAMÈTRES :
 
 Dégâts : 1d6
-Type de dégâts : projectile (perforant)
+Type de dégâts : Projectile (perforant)
 Spécial :
   Hémorragie : inflige 1 point de dégâts supplémentaire par round pendant 10 rounds (jet de Vigueur pour annuler) (DD de Vigueur de 22).
 Poids : 0
@@ -10247,7 +10425,7 @@ PARAMÈTRES :
 Dégâts : 1d6
 Bonus d'attaque : +1
 Enchantement : +1
-Type de dégâts : projectile (perforant)
+Type de dégâts : Projectile (perforant)
 Spécial :
  Décharge : +1d6 de dégâts d'électricité
 Poids : 0
@@ -10269,7 +10447,7 @@ PARAMÈTRES :
 Dégâts : 1d8
 Bonus d'attaque : +1
 Enchantement : +1
-Type de dégâts : projectile (perforant)
+Type de dégâts : Projectile (perforant)
 Spécial :
  Décharge : +1d6 de dégâts d'électricité
 Poids : 0
@@ -10282,7 +10460,7 @@ PARAMÈTRES :
 Dégâts : 1d8 +1
 Bonus d’attaque : +1
 Enchantement : +1
-Type de dégâts : projectile (perforants)
+Type de dégâts : Projectile (perforants)
 Spécial :
   Sort : les carreaux lancent le sort Silence sur la cible pendant 1 round (DD de Volonté de 29).
 Poids : 0
@@ -10295,7 +10473,7 @@ PARAMÈTRES :
 Dégâts : 1d8  +1
 Bonus d’attaque : +1
 Enchantement : +1
-Type de dégâts : projectile (perforants)
+Type de dégâts : Projectile (perforants)
 Spécial :
   Étourdissement Quasi Certain : La cible est étourdie pendant 1/2 round de combat (DD de Vigueur de 40)
 Poids : 0
@@ -10308,7 +10486,7 @@ PARAMÈTRES :
 Dégâts : 1d8 
 Bonus d’attaque : +1
 Enchantement : +1
-Type de dégâts : projectile (perforant)
+Type de dégâts : Projectile (perforant)
 Spécial :
   Froid : +1d6 de dégâts du froid
 Poids : 0
@@ -10321,7 +10499,7 @@ PARAMÈTRES :
 Dégâts : 1d8 
 Bonus d’attaque : +1
 Enchantement : +1
-Type de dégâts : projectile (perforant)
+Type de dégâts : Projectile (perforant)
 Spécial :
   Flammes : +1d6 de dégâts du feu
 Poids : 0
@@ -10334,7 +10512,7 @@ PARAMÈTRES :
 Dégâts : 1d8 
 Bonus d’attaque : +1
 Enchantement : +1
-Type de dégâts : projectile (perforant)
+Type de dégâts : Projectile (perforant)
 Spécial :
   Corrosion : +1d6 de dégâts d'acide
 Poids : 0
@@ -10372,7 +10550,7 @@ PARAMÈTRES :
 Dégâts : 1d4 +1
 Bonus d'attaque : +1
 Enchantement : +1
-Type de dégâts : projectile (contondants)
+Type de dégâts : Projectile (contondants)
 Spécial :
   Boomerang : revient à son utilisateur
   Flammes : +1d6 de dégâts du feu
@@ -10386,7 +10564,7 @@ PARAMÈTRES :
 Dégâts : 1d4 +1
 Bonus d'attaque : +1
 Enchantement : +1
-Type de dégâts : projectile (contondants)
+Type de dégâts : Projectile (contondants)
 Spécial :
   Renvoi des morts-vivants : lorsqu'il touche une créature morte-vivante, ce projectile la force à subir un Renvoi des morts-vivants, comme si le lanceur venait de tenter de la repousser.
 Poids : 0
@@ -10399,7 +10577,7 @@ PARAMÈTRES :
 Dégâts : 1d4 +1
 Bonus d'attaque : +1
 Enchantement : +1
-Type de dégâts : projectile (contondants)
+Type de dégâts : Projectile (contondants)
 Spécial :
   Étourdissement : 50% de chances que la cible soit étourdie pour 1/2 round de combat (DD de Vigueur de 15)
 Poids : 0
@@ -10412,7 +10590,7 @@ PARAMÈTRES :
 Dégâts : 1d4 +1
 Bonus d'attaque : +1
 Enchantement : +1
-Type de dégâts : projectile (contondants)
+Type de dégâts : Projectile (contondants)
 Spécial :
   Corrosion : +1d6 de dégâts d'acide et 30% de chances d'infliger 1d10 de dégâts d'acide supplémentaires
 Poids : 0
@@ -10425,7 +10603,7 @@ PARAMÈTRES :
 Dégâts : 1d4 + 2
 Bonus d'attaque : +2
 Enchantement : +2
-Type de dégâts : projectile (contondants)
+Type de dégâts : Projectile (contondants)
 Spécial :
   Impact : Augmente les chances d’infliger un coup critique
 Poids : 0
@@ -10440,7 +10618,7 @@ PARAMÈTRES :
 Dégâts : 1d4 +1
 Bonus d’attaque : +1
 Enchantement : +1
-Type de dégâts : projectile (contondants)
+Type de dégâts : Projectile (contondants)
 Spécial :
   Bannissement : bannit les créatures invoquées en cas de coup au but (DD de Volonté de 26)
 Poids : 0
@@ -10587,7 +10765,7 @@ PARAMÈTRES :
 Soigne 100 points de vie
 Poids : 0,45 kg (1 lb)~
 //@12083	= ~Potion d'Héroïsme~
-@12084	= ~Cette potion a reçu un enchantement très puissant qui simule une augmentation temporaire du niveau de son utilisateur. Ses effets durent 10 tours, ce qui fait de cette potion une arme très puissante au cours des combats difficiles.
+@12084	= ~Cette potion a reçu un enchantement très puissant qui simule une augmentation temporaire du niveau de son utilisateur. Ses effets durent 10 rounds, ce qui fait de cette potion une arme très puissante au cours des combats difficiles.
 
 PARAMÈTRES :
 
@@ -10596,7 +10774,7 @@ Bonus d’attaque : +2
 Jets de Vigueur : +1
 Jets de Réflexes : +1
 Jets de Volonté : +1
-Durée : 10 tours
+Durée : 10 rounds
 Poids : 0,45 kg (1 lb)~
 //@12085	= ~Potion d'Invisibilité~
 @12086	= ~Cette potion rend invisible de la même manière que le sort de magicien de deuxième niveau qui porte le même nom. Tout combat met fin à l'invisibilité. Sinon, les effets durent 12 heures.
@@ -11659,7 +11837,7 @@ PARAMÈTRES :
 
 Dégâts : 1d4
 Bonus d’attaque : +5
-Type de dégâts : projectile (perforant)
+Type de dégâts : Projectile (perforant)
 Poids : 0
 Lanceur : arc~
 //@12323	= ~Livre de Feuilles~
@@ -11788,7 +11966,7 @@ PARAMÈTRES :
 Dégâts : 1d8 + 2
 Bonus d’attaque : +2
 Enchantement : +2
-Type de dégâts : projectile (perforants)
+Type de dégâts : Projectile (perforants)
 Spécial :
  Énergie pure : ne tient pas compte des bonus d’armure ou de bouclier
 Poids : 0
@@ -11986,7 +12164,7 @@ PARAMÈTRES :
 Dégâts : 5d4
 Bonus d'attaque : +3
 Enchantement : +3
-Type de dégâts : projectile (froid)
+Type de dégâts : Projectile (froid)
 Type de dégâts : corps à corps (froid)
 Spécial :
   Retour : revient à son utilisateur
@@ -12485,7 +12663,7 @@ PARAMÈTRES :
 Dégâts : 1d6 + 4
 Bonus d’attaque : +4
 Enchantement : +4
-Type de dégâts : projectile (perforant)
+Type de dégâts : Projectile (perforant)
 Spécial :
   Corrosion : +1d4 de dégâts d'acide et +2d4 de dégâts d'acide supplémentaires au cours des 2 rounds suivants.
 Poids : 0
@@ -12498,7 +12676,7 @@ PARAMÈTRES :
 Dégâts : 1d6 + 3
 Bonus d'attaque : +3
 Enchantement : +3
-Type de dégâts : projectile (perforant)
+Type de dégâts : Projectile (perforant)
 Spécial :
  Bénéficie du bonus de Force aux dégâts
 Poids : 0
@@ -12511,7 +12689,7 @@ PARAMÈTRES :
 Dégâts : 1d6 + 5
 Bonus d’attaque : +5
 Enchantement : +5
-Type de dégâts : projectile (perforant)
+Type de dégâts : Projectile (perforant)
 Spécial :
   Boomerang : La flèche revient vers l’archer.
 Poids : 0
@@ -12537,7 +12715,7 @@ PARAMÈTRES :
 Dégâts : 1d6 + 5
 Bonus d’attaque : +5
 Enchantement : +5
-Type de dégâts : projectile (perforant)
+Type de dégâts : Projectile (perforant)
 Spécial :
   Boomerang : la flèche revient à son utilisateur.
   Acérée : augmente les chances d’infliger un coup critique
@@ -12552,7 +12730,7 @@ PARAMÈTRES :
 Dégâts : 1d8 + 4
 Bonus d'attaque : +4
 Enchantement : +4
-Type de dégâts : projectile (perforants)
+Type de dégâts : Projectile (perforants)
 Spécial :
   Absorption d’énergie : -2 au bonus d’attaque/ -2 aux dégâts, -10 au maximum de PV (DD de Vigueur de 29)
 Poids : 0
@@ -12565,7 +12743,7 @@ PARAMÈTRES :
 Dégâts : 2d8 + 4
 Bonus d'attaque : +4
 Enchantement : +4
-Type de dégâts : projectile (perforants)
+Type de dégâts : Projectile (perforants)
 Poids : 0,45 kg (1 lb)
 Arme utilisée : arbalète~
 @12567	= ~Carreau de Foudre~
@@ -12588,7 +12766,7 @@ PARAMÈTRES :
 Dégâts : 1d8 +5
 Bonus d’attaque : +5
 Enchantement : +5
-Type de dégâts : projectile (perforant)
+Type de dégâts : Projectile (perforant)
 Spécial :
   Boomerang : le carreau revient vers l’utilisateur.
   Acéré : chances de coups critiques augmentées
@@ -12602,7 +12780,7 @@ PARAMÈTRES :
 Dégâts : 1d4 +3
 Bonus d’attaque : +3
 Enchantement : +3
-Type de dégâts : projectile (contondants)
+Type de dégâts : Projectile (contondants)
 Spécial :
   Vampirique : 2d4 points de vie drainés de la cible et temporairement ajoutés à ceux du porteur (DD de Vigueur de 24)
 Poids : 0
@@ -12615,7 +12793,7 @@ PARAMÈTRES :
 Dégâts : 1d4 +5
 Bonus d’attaque : +5
 Enchantement : +5
-Type de dégâts : projectile (contondants)
+Type de dégâts : Projectile (contondants)
 Spécial :
   Retour : revient à son utilisateur
   Énergie pure : ne tient pas compte des bonus d’armure ou de bouclier
@@ -12914,7 +13092,7 @@ PARAMÈTRES :
 Dégâts : 1d6 +5
 Bonus d’attaque : +5
 Enchantement : +5
-Type de dégâts : projectile (perforant)
+Type de dégâts : Projectile (perforant)
 Spécial :
   Acérées : chances de coups critiques augmentées
   Énergie pure : ne tient pas compte des bonus d’armure ou de bouclier
@@ -12928,7 +13106,7 @@ PARAMÈTRES :
 Dégâts : 1d6 +2
 Bonus d'attaque : +2
 Enchantement : +2
-Type de dégâts : projectile (perforants)
+Type de dégâts : Projectile (perforants)
 Spécial :
  Venin : +4 points de dégâts du poison par seconde pendant 12 secondes (DD de Vigueur de 31).
 Poids : 0
@@ -12941,7 +13119,7 @@ PARAMÈTRES :
 Dégâts : 1d6 +5
 Bonus d’attaque : +5
 Enchantement : +5
-Type de dégâts : projectile (perforant)
+Type de dégâts : Projectile (perforant)
 Spécial :
   Corrosion : +2d4 de dégâts d’acide et +4d4 de dégâts d’acide supplémentaires au cours des 2 rounds suivants.
 Poids : 0
@@ -12983,7 +13161,7 @@ PARAMÈTRES :
 Dégâts : 1d8 +3
 Bonus d’attaque : +3
 Enchantement : +3
-Type de dégâts : projectile (perforants)
+Type de dégâts : Projectile (perforants)
 Spécial :
   Ralentissement : la cible est frappée de Lenteur pendant 1 round en cas de coup au but (pas de jet de sauvegarde)
 Poids : 0
@@ -12996,7 +13174,7 @@ PARAMÈTRES :
 Dégâts : 1d8 +5
 Bonus d’attaque : +5
 Enchantement : +5
-Type de dégâts : projectile (perforants)
+Type de dégâts : Projectile (perforants)
 Spécial :
  Force magique : +1d4+1 de dégâts magiques
  Fendage : une fois tirés, ces carreaux se scindent en deux ; chacun d’eux inflige l’intégralité des dégâts.
@@ -13010,7 +13188,7 @@ PARAMÈTRES :
 Dégâts : 1d4 +5
 Bonus d’attaque : +5
 Enchantement : +5
-Type de dégâts : projectile (contondants)
+Type de dégâts : Projectile (contondants)
 Spécial :
  Inflige 3 fois les dégâts lors d’un coup critique
 Poids : 0
@@ -13037,7 +13215,7 @@ PARAMÈTRES :
 Dégâts : 1d4 +5
 Bonus d'attaque : +5
 Enchantement : +5
-Type de dégâts : projectile (perforants)
+Type de dégâts : Projectile (perforants)
 Type de dégâts : corps à corps (perforants)
 Spécial :
   Malchance : chaque coup au but donne à la cible un malus de chance de -2 pendant 3 rounds (cumulable, sans jet de sauvegarde). Cet effet ne se produit que si la dague est lancée.
@@ -13096,7 +13274,7 @@ PARAMÈTRES :
 Soigne de 2 à 200 points de vie
 Poids : 0,45 kg (1 lb)~
 //@12653 = ~Potion d'Héroïsme~
-@12654 = ~Cette potion a reçu un enchantement très puissant qui simule une augmentation temporaire du niveau de son utilisateur. Ses effets durent 10 tours, ce qui fait de cette potion une arme très puissante au cours des combats difficiles.
+@12654 = ~Cette potion a reçu un enchantement très puissant qui simule une augmentation temporaire du niveau de son utilisateur. Ses effets durent 10 rounds, ce qui fait de cette potion une arme très puissante au cours des combats difficiles.
 
 PARAMÈTRES :
 
@@ -13106,7 +13284,7 @@ Attaques par round : +1
 Jets de Vigueur : +3
 Jets de Réflexes : +2
 Jets de Volonté : +2
-Durée : 10 tours
+Durée : 10 rounds
 Poids : 0,45 kg (1 lb)~
 @12655 = ~Potion d’Invisibilité suprême~
 @12656 = ~Cette potion confère une Invisibilité suprême similaire au sort de mage de quatrième niveau du même nom. Le buveur peut attaquer ou lancer des sorts tout en restant partiellement invisible. Les effets durent 1 heure.
@@ -14202,7 +14380,7 @@ PARAMÈTRES :
 Dégâts : 1d6 +1
 Bonus d’attaque : +1
 Enchantement : +1
-Type de dégâts : projectile (perforant)
+Type de dégâts : Projectile (perforant)
 Spécial :
   Un coup au but invoque un gobelin à côté de la cible pendant 10 rounds
 Poids : 0
