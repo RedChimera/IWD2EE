@@ -353,7 +353,7 @@ function IEex_IsWorldScreenAcceptingInput()
 			IEex_IsBitUnset(m_inputMode, 1)                 -- (m_pObjectGame->m_gameSave.m_inputMode & 2) == 0
 			or IEex_ReadDword(pUIManager) ~= 0              -- or m_bHidden
 			or IEex_ReadDword(pUIManager + 0x14) == 0x0     -- or m_controlCaptured == nullptr
-			or IEex_ByteDword(pUIManager + 0x2C) ~= 2       -- or m_inputCaptured ~= 2
+			or IEex_ReadByte(pUIManager + 0x2C) ~= 2        -- or m_inputCaptured ~= 2
 		)
 		and
 		(
