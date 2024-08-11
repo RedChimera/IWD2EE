@@ -1698,6 +1698,7 @@ function IEex_AddButtonListener()
 end
 
 function IEex_Key_RegisterInputListeners()
+	if IEex_Vanilla then return end
 	IEex_AddKeyPressedListener("IEex_BuffRecordingListener")
 	IEex_AddKeyPressedListener("IEex_ExtraCheatKeysListener")
 	IEex_AddKeyPressedListener("IEex_ArcaneSightListener")

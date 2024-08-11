@@ -1,4 +1,16 @@
 
+--------------------
+-- /START Options --
+--------------------
+
+-- This option disables most of IWD2:EE's functionality / engine patches, only leaving the widescreen and FPS uncap code
+-- enabled, as well as some very minor convenience patches. This is intended for debugging the vanilla game with IEex.
+IEex_Vanilla = false
+
+------------------
+-- /END Options --
+------------------
+
 function IEex_Reload()
 
 	IEex_AssertThread(IEex_Thread.Async, true)
@@ -55,7 +67,9 @@ end
 
 dofile("override/IEex_TRA.lua")
 dofile("override/IEex_WEIDU.lua")
-dofile("override/IEex_INI.lua")
+if not IEex_Vanilla then
+	dofile("override/IEex_INI.lua")
+end
 
 dofile("override/IEex_Bridge.lua")
 dofile("override/IEex_IWD2_Common_State.lua")
@@ -74,12 +88,11 @@ dofile("override/IEex_Dev_State.lua")
 dofile("override/IEex_FakeInputRoutine.lua")
 dofile("override/IEex_UncapFPS.lua")
 
-
-
-
-for module, tf in pairs(IEex_Modules) do
-	if tf then
-		dofile("override/" .. module .. ".lua")
+if not IEex_Vanilla then
+	for module, tf in pairs(IEex_Modules) do
+		if tf then
+			dofile("override/" .. module .. ".lua")
+		end
 	end
 end
 

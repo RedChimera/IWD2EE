@@ -458,30 +458,33 @@
 	-- Fix non-player animations crashing when leveling up --
 	---------------------------------------------------------
 
-	local animationChangeCall = 0x5E676C
-	local animationChangeHook = IEex_WriteAssemblyAuto({[[
+	if not IEex_Vanilla then
 
-		!push_ecx
+		local animationChangeCall = 0x5E676C
+		local animationChangeHook = IEex_WriteAssemblyAuto({[[
 
-		!mov_ecx_ebp
-		!call :45B730
-		!mov_ecx_eax
-		!call :45B690
-		!movzx_eax_ax
+			!push_ecx
 
-		!pop_ecx
+			!mov_ecx_ebp
+			!call :45B730
+			!mov_ecx_eax
+			!call :45B690
+			!movzx_eax_ax
 
-		!cmp_eax_dword #6000
-		!jb_dword :5E67F5
+			!pop_ecx
 
-		!cmp_eax_dword #6313
-		!ja_dword :5E67F5
+			!cmp_eax_dword #6000
+			!jb_dword :5E67F5
 
-		!call :447AD0
-		!jmp_dword ]], {animationChangeCall + 0x5, 4, 4}, [[
+			!cmp_eax_dword #6313
+			!ja_dword :5E67F5
 
-	]]})
-	IEex_WriteAssembly(animationChangeCall, {"!jmp_dword", {animationChangeHook, 4, 4}})
+			!call :447AD0
+			!jmp_dword ]], {animationChangeCall + 0x5, 4, 4}, [[
+
+		]]})
+		IEex_WriteAssembly(animationChangeCall, {"!jmp_dword", {animationChangeHook, 4, 4}})
+	end
 
 	---------------------------------------------------------
 	-- Debug Console should execute Lua if not using cheat --
@@ -517,203 +520,215 @@
 	-- Feats should apply our spells when taken --
 	----------------------------------------------
 
-	local featHookName = "IEex_Extern_FeatHook"
-	local featHookNameAddress = IEex_Malloc(#featHookName + 1)
-	IEex_WriteString(featHookNameAddress, featHookName)
+	if not IEex_Vanilla then
 
-	local hasMetStunningAttackRequirements = 0x71E4D2
-	local featsHook = IEex_WriteAssemblyAuto({[[
+		local featHookName = "IEex_Extern_FeatHook"
+		local featHookNameAddress = IEex_Malloc(#featHookName + 1)
+		IEex_WriteString(featHookNameAddress, featHookName)
 
-		!push_registers
+		local hasMetStunningAttackRequirements = 0x71E4D2
+		local featsHook = IEex_WriteAssemblyAuto({[[
 
-		!push_dword ]], {featHookNameAddress, 4}, [[
-		!push_dword *_g_lua_async
-		!call >_lua_getglobal
-		!add_esp_byte 08
+			!push_registers
 
-		; Current share ;
-		!push_esi
-		!fild_[esp]
-		!sub_esp_byte 04
-		!fstp_qword:[esp]
-		!push_dword *_g_lua_async
-		!call >_lua_pushnumber
-		!add_esp_byte 0C
+			!push_dword ]], {featHookNameAddress, 4}, [[
+			!push_dword *_g_lua_async
+			!call >_lua_getglobal
+			!add_esp_byte 08
 
-		; Old base stats ;
-		!push_edi
-		!fild_[esp]
-		!sub_esp_byte 04
-		!fstp_qword:[esp]
-		!push_dword *_g_lua_async
-		!call >_lua_pushnumber
-		!add_esp_byte 0C
+			; Current share ;
+			!push_esi
+			!fild_[esp]
+			!sub_esp_byte 04
+			!fstp_qword:[esp]
+			!push_dword *_g_lua_async
+			!call >_lua_pushnumber
+			!add_esp_byte 0C
 
-		; Old derived stats ;
-		!push_[esp+byte] 40
-		!fild_[esp]
-		!sub_esp_byte 04
-		!fstp_qword:[esp]
-		!push_dword *_g_lua_async
-		!call >_lua_pushnumber
-		!add_esp_byte 0C
+			; Old base stats ;
+			!push_edi
+			!fild_[esp]
+			!sub_esp_byte 04
+			!fstp_qword:[esp]
+			!push_dword *_g_lua_async
+			!call >_lua_pushnumber
+			!add_esp_byte 0C
 
-		!push_byte 00
-		!push_byte 00
-		!push_byte 03
-		!push_dword *_g_lua_async
-		!call >_lua_pcall
-		!add_esp_byte 10
-		!push_dword *_g_lua_async
-		!call >IEex_CheckCallError
+			; Old derived stats ;
+			!push_[esp+byte] 40
+			!fild_[esp]
+			!sub_esp_byte 04
+			!fstp_qword:[esp]
+			!push_dword *_g_lua_async
+			!call >_lua_pushnumber
+			!add_esp_byte 0C
 
-		!pop_registers
+			!push_byte 00
+			!push_byte 00
+			!push_byte 03
+			!push_dword *_g_lua_async
+			!call >_lua_pcall
+			!add_esp_byte 10
+			!push_dword *_g_lua_async
+			!call >IEex_CheckCallError
 
-		!call :763150
-		!jmp_dword ]], {hasMetStunningAttackRequirements + 0x5, 4, 4}, [[
+			!pop_registers
 
-	]]})
-	IEex_WriteAssembly(hasMetStunningAttackRequirements, {"!jmp_dword", {featsHook, 4, 4}})
+			!call :763150
+			!jmp_dword ]], {hasMetStunningAttackRequirements + 0x5, 4, 4}, [[
+
+		]]})
+		IEex_WriteAssembly(hasMetStunningAttackRequirements, {"!jmp_dword", {featsHook, 4, 4}})
+	end
 
 	-------------------------------------------------------------------------
 	-- Unequipping item should properly trigger Opcode OnRemove() function --
 	-------------------------------------------------------------------------
 
-	local unequipSpriteGlobal = IEex_Malloc(0x4)
-	IEex_WriteDword(unequipSpriteGlobal, 0x0)
+	if not IEex_Vanilla then
 
-	local fixUnequipOnRemove1 = 0x4E8F04
-	local fixUnequipOnRemove1Hook = IEex_WriteAssemblyAuto({[[
-		!mov_[dword]_edi ]], {unequipSpriteGlobal, 4}, [[
-		!call :4C0830 ; CGameEffectList_RemoveMatchingEffect() ;
-		!mov_[dword]_dword ]], {unequipSpriteGlobal, 4}, [[ #0
-		!jmp_dword ]], {fixUnequipOnRemove1 + 0x5, 4, 4}, [[
-	]]})
-	IEex_WriteAssembly(fixUnequipOnRemove1, {"!jmp_dword", {fixUnequipOnRemove1Hook, 4, 4}})
+		local unequipSpriteGlobal = IEex_Malloc(0x4)
+		IEex_WriteDword(unequipSpriteGlobal, 0x0)
 
-	local fixUnequipOnRemove2 = 0x4C0870
-	local fixUnequipOnRemove2Hook = IEex_WriteAssemblyAuto({[[
+		local fixUnequipOnRemove1 = 0x4E8F04
+		local fixUnequipOnRemove1Hook = IEex_WriteAssemblyAuto({[[
+			!mov_[dword]_edi ]], {unequipSpriteGlobal, 4}, [[
+			!call :4C0830 ; CGameEffectList_RemoveMatchingEffect() ;
+			!mov_[dword]_dword ]], {unequipSpriteGlobal, 4}, [[ #0
+			!jmp_dword ]], {fixUnequipOnRemove1 + 0x5, 4, 4}, [[
+		]]})
+		IEex_WriteAssembly(fixUnequipOnRemove1, {"!jmp_dword", {fixUnequipOnRemove1Hook, 4, 4}})
 
-		!call :7FB3E3 ; CPtrList::RemoveAt() ;
+		local fixUnequipOnRemove2 = 0x4C0870
+		local fixUnequipOnRemove2Hook = IEex_WriteAssemblyAuto({[[
 
-		!cmp_[dword]_byte ]], {unequipSpriteGlobal, 4}, [[ 00
-		!je_dword ]], {fixUnequipOnRemove2 + 0x5, 4, 4}, [[
+			!call :7FB3E3 ; CPtrList::RemoveAt() ;
 
-		!push_all_registers_iwd2
-		!push_[dword] ]], {unequipSpriteGlobal, 4}, [[
-		!mov_ecx_edi
-		!mov_eax_[ecx]
-		!call_[eax+byte] 24
-		!pop_all_registers_iwd2
-		!jmp_dword ]], {fixUnequipOnRemove2 + 0x5, 4, 4}, [[
+			!cmp_[dword]_byte ]], {unequipSpriteGlobal, 4}, [[ 00
+			!je_dword ]], {fixUnequipOnRemove2 + 0x5, 4, 4}, [[
 
-	]]})
-	IEex_WriteAssembly(fixUnequipOnRemove2, {"!jmp_dword", {fixUnequipOnRemove2Hook, 4, 4}})
+			!push_all_registers_iwd2
+			!push_[dword] ]], {unequipSpriteGlobal, 4}, [[
+			!mov_ecx_edi
+			!mov_eax_[ecx]
+			!call_[eax+byte] 24
+			!pop_all_registers_iwd2
+			!jmp_dword ]], {fixUnequipOnRemove2 + 0x5, 4, 4}, [[
+
+		]]})
+		IEex_WriteAssembly(fixUnequipOnRemove2, {"!jmp_dword", {fixUnequipOnRemove2Hook, 4, 4}})
+	end
 
 	-------------------------------------------------------------
 	-- Spell writability is now determined by scroll usability --
 	-------------------------------------------------------------
 
-	local writableCheckAddress = 0x54AA40
-	local writableCheckHook = IEex_WriteAssemblyAuto({[[
+	if not IEex_Vanilla then
 
-		!push_registers_iwd2
+		local writableCheckAddress = 0x54AA40
+		local writableCheckHook = IEex_WriteAssemblyAuto({[[
 
-		; push sprite ;
-		!push_[esp+byte] 1C
-		; push CSpell ;
-		!push_ecx
+			!push_registers_iwd2
 
-		!call >IEex_GetLuaState
-		!mov_ebx_eax
+			; push sprite ;
+			!push_[esp+byte] 1C
+			; push CSpell ;
+			!push_ecx
 
-		!push_dword ]], {IEex_WriteStringAuto("IEex_Extern_CSpell_UsableBySprite"), 4}, [[
-		!push_ebx
-		!call >_lua_getglobal
-		!add_esp_byte 08
+			!call >IEex_GetLuaState
+			!mov_ebx_eax
 
-		; CSpell ;
-		!fild_[esp]
-		!sub_esp_byte 04
-		!fstp_qword:[esp]
-		!push_ebx
-		!call >_lua_pushnumber
-		!add_esp_byte 0C
+			!push_dword ]], {IEex_WriteStringAuto("IEex_Extern_CSpell_UsableBySprite"), 4}, [[
+			!push_ebx
+			!call >_lua_getglobal
+			!add_esp_byte 08
 
-		; sprite ;
-		!fild_[esp]
-		!sub_esp_byte 04
-		!fstp_qword:[esp]
-		!push_ebx
-		!call >_lua_pushnumber
-		!add_esp_byte 0C
+			; CSpell ;
+			!fild_[esp]
+			!sub_esp_byte 04
+			!fstp_qword:[esp]
+			!push_ebx
+			!call >_lua_pushnumber
+			!add_esp_byte 0C
 
-		!push_byte 00
-		!push_byte 01
-		!push_byte 02
-		!push_ebx
-		!call >_lua_pcall
-		!add_esp_byte 10
-		!push_ebx
-		!call >IEex_CheckCallError
+			; sprite ;
+			!fild_[esp]
+			!sub_esp_byte 04
+			!fstp_qword:[esp]
+			!push_ebx
+			!call >_lua_pushnumber
+			!add_esp_byte 0C
 
-		!push_byte FF
-		!push_ebx
-		!call >_lua_toboolean
-		!add_esp_byte 08
+			!push_byte 00
+			!push_byte 01
+			!push_byte 02
+			!push_ebx
+			!call >_lua_pcall
+			!add_esp_byte 10
+			!push_ebx
+			!call >IEex_CheckCallError
 
-		!push_eax
+			!push_byte FF
+			!push_ebx
+			!call >_lua_toboolean
+			!add_esp_byte 08
 
-		!push_byte FE
-		!push_ebx
-		!call >_lua_settop
-		!add_esp_byte 08
+			!push_eax
 
-		!pop_eax
+			!push_byte FE
+			!push_ebx
+			!call >_lua_settop
+			!add_esp_byte 08
 
-		!pop_registers_iwd2
-		!ret_word 04 00
+			!pop_eax
 
-	]]})
-	IEex_WriteAssembly(writableCheckAddress, {"!jmp_dword", {writableCheckHook, 4, 4}})
+			!pop_registers_iwd2
+			!ret_word 04 00
+
+		]]})
+		IEex_WriteAssembly(writableCheckAddress, {"!jmp_dword", {writableCheckHook, 4, 4}})
+	end
 
 	-----------------------------------------------------
 	-- SPECIAL_1 and TEAM scripts should be persistent --
 	-----------------------------------------------------
 
-	-- 0x71DB62 - SPECIAL_1
-	IEex_HookJumpNoReturn(0x71DB62, {[[
+	if not IEex_Vanilla then
 
-		!mov_ecx_[eax]
-		!mov_[esp+byte]_ecx 10
-		!mov_ecx_[eax+byte] 04
-		!mov_[esp+byte]_ecx 14
+		-- 0x71DB62 - SPECIAL_1
+		IEex_HookJumpNoReturn(0x71DB62, {[[
 
-		!add_esi_dword #750
-		!push_esi
-		!lea_ecx_[esp+byte] 14
+			!mov_ecx_[eax]
+			!mov_[esp+byte]_ecx 10
+			!mov_ecx_[eax+byte] 04
+			!mov_[esp+byte]_ecx 14
 
-		!jmp_dword :71DCCC
+			!add_esi_dword #750
+			!push_esi
+			!lea_ecx_[esp+byte] 14
 
-	]]})
+			!jmp_dword :71DCCC
 
-	-- 0x71DBB3 - TEAM
-	IEex_HookJumpNoReturn(0x71DBB3, {[[
+		]]})
 
-		!mov_eax_[esp+byte] 5C
+		-- 0x71DBB3 - TEAM
+		IEex_HookJumpNoReturn(0x71DBB3, {[[
 
-		!mov_ecx_[eax]
-		!mov_[esp+byte]_ecx 10
-		!mov_ecx_[eax+byte] 04
-		!mov_[esp+byte]_ecx 14
+			!mov_eax_[esp+byte] 5C
 
-		!add_esi_dword #748
-		!push_esi
-		!lea_ecx_[esp+byte] 14
+			!mov_ecx_[eax]
+			!mov_[esp+byte]_ecx 10
+			!mov_ecx_[eax+byte] 04
+			!mov_[esp+byte]_ecx 14
 
-		!jmp_dword :71DCCC
+			!add_esi_dword #748
+			!push_esi
+			!lea_ecx_[esp+byte] 14
 
-	]]})
+			!jmp_dword :71DCCC
+
+		]]})
+	end
 
 	--------------------------------------------------------
 	-- NPC Core: Engine should tolerate non-standard NPCs --
@@ -724,200 +739,212 @@
 	--   Pull out-of-bounds race strings from B3RACEST.2DA --
 	---------------------------------------------------------
 
-	IEex_HookJump(0x544DFA, 0, {[[
+	if not IEex_Vanilla then
 
-		!ja_dword >extended_race
-		!jmp_dword >jmp_fail
+		IEex_HookJump(0x544DFA, 0, {[[
 
-		@extended_race
-		!push_registers_iwd2
+			!ja_dword >extended_race
+			!jmp_dword >jmp_fail
 
-		; race ;
-		!push_ecx
+			@extended_race
+			!push_registers_iwd2
 
-		!call >IEex_GetLuaState
-		!mov_ebx_eax
+			; race ;
+			!push_ecx
 
-		!push_dword ]], {IEex_WriteStringAuto("IEex_Extern_CRuleTables_GetRaceName"), 4}, [[
-		!push_ebx
-		!call >_lua_getglobal
-		!add_esp_byte 08
+			!call >IEex_GetLuaState
+			!mov_ebx_eax
 
-		; race ;
-		!fild_[esp]
-		!sub_esp_byte 04
-		!fstp_qword:[esp]
-		!push_ebx
-		!call >_lua_pushnumber
-		!add_esp_byte 0C
+			!push_dword ]], {IEex_WriteStringAuto("IEex_Extern_CRuleTables_GetRaceName"), 4}, [[
+			!push_ebx
+			!call >_lua_getglobal
+			!add_esp_byte 08
 
-		!push_byte 00
-		!push_byte 01
-		!push_byte 01
-		!push_ebx
-		!call >_lua_pcall
-		!add_esp_byte 10
-		!push_ebx
-		!call >IEex_CheckCallError
-		!test_eax_eax
-		!jz_dword >ok
-		!mov_eax ]], {ex_tra_5000, 4}, [[
-		!jmp_dword >error
+			; race ;
+			!fild_[esp]
+			!sub_esp_byte 04
+			!fstp_qword:[esp]
+			!push_ebx
+			!call >_lua_pushnumber
+			!add_esp_byte 0C
 
-		@ok
-		!push_byte FF
-		!push_ebx
-		!call >_lua_tonumber
-		!add_esp_byte 08
-		!call >__ftol2_sse
-		!push_eax
-		!push_byte FE
-		!push_ebx
-		!call >_lua_settop
-		!add_esp_byte 08
-		!pop_eax
+			!push_byte 00
+			!push_byte 01
+			!push_byte 01
+			!push_ebx
+			!call >_lua_pcall
+			!add_esp_byte 10
+			!push_ebx
+			!call >IEex_CheckCallError
+			!test_eax_eax
+			!jz_dword >ok
+			!mov_eax ]], {ex_tra_5000, 4}, [[
+			!jmp_dword >error
 
-		@error
-		!pop_registers_iwd2
-		!jmp_dword :545009
+			@ok
+			!push_byte FF
+			!push_ebx
+			!call >_lua_tonumber
+			!add_esp_byte 08
+			!call >__ftol2_sse
+			!push_eax
+			!push_byte FE
+			!push_ebx
+			!call >_lua_settop
+			!add_esp_byte 08
+			!pop_eax
 
-	]]})
+			@error
+			!pop_registers_iwd2
+			!jmp_dword :545009
+
+		]]})
+	end
 
 	------------------------------------------------------------
 	-- InfScreenCharacter_InitLevelupClassSelectionButtons(): --
 	--   Allow out-of-bounds races to take levels             --
 	------------------------------------------------------------
 
-	IEex_WriteAssembly(0x5E8CE1, {"!ja_dword :5E8D11"})
+	if not IEex_Vanilla then
+		IEex_WriteAssembly(0x5E8CE1, {"!ja_dword :5E8D11"})
+	end
 
 	-----------------------------------------------------
 	-- Action JoinParty(): Should correctly set up NPC --
 	-----------------------------------------------------
 
-	IEex_HookBeforeCall(0x72958F, {[[
+	if not IEex_Vanilla then
 
-		!push_all_registers_iwd2
+		IEex_HookBeforeCall(0x72958F, {[[
 
-		!sub_esp_byte 04
-		!mov_eax_esp
-		!push_byte FF
-		!push_eax
-		!push_byte 00
-		!mov_edi_[esi+byte] 5C
-		!push_edi
-		!mov_ebx_[dword] #8CF6DC ; g_pBaldurhitin ;
-		!mov_ebx_[ebx+dword] #1C54 ; m_pObjectGame ;
-		!add_ebx_dword #372C ; CGameObjectArray ;
-		!mov_ecx_ebx
-		!call :599C70 ; CGameObjectArray_GetDeny ;
+			!push_all_registers_iwd2
 
-		!pop_ecx
-		!xor_edx_edx
+			!sub_esp_byte 04
+			!mov_eax_esp
+			!push_byte FF
+			!push_eax
+			!push_byte 00
+			!mov_edi_[esi+byte] 5C
+			!push_edi
+			!mov_ebx_[dword] #8CF6DC ; g_pBaldurhitin ;
+			!mov_ebx_[ebx+dword] #1C54 ; m_pObjectGame ;
+			!add_ebx_dword #372C ; CGameObjectArray ;
+			!mov_ecx_ebx
+			!call :599C70 ; CGameObjectArray_GetDeny ;
 
-		@button_loop
-		!push_byte 00
-		!push_edx
-		!call :594120 ; CGameSprite_SetButtonType ;
-		!inc_edx
-		!cmp_edx_byte 09
-		!jne_dword >button_loop
+			!pop_ecx
+			!xor_edx_edx
 
-		!call :724610 ; CGameSprite_AssignDefaultButtons ;
+			@button_loop
+			!push_byte 00
+			!push_edx
+			!call :594120 ; CGameSprite_SetButtonType ;
+			!inc_edx
+			!cmp_edx_byte 09
+			!jne_dword >button_loop
 
-		!push_byte FF
-		!push_byte 00
-		!push_edi
-		!mov_ecx_ebx
-		!call :59A010 ; CGameObjectArray_UndoDeny ;
+			!call :724610 ; CGameSprite_AssignDefaultButtons ;
 
-		!mov_byte:[esi+dword]_byte #4C52 01 ; m_bGlobal ;
+			!push_byte FF
+			!push_byte 00
+			!push_edi
+			!mov_ecx_ebx
+			!call :59A010 ; CGameObjectArray_UndoDeny ;
 
-		!pop_all_registers_iwd2
+			!mov_byte:[esi+dword]_byte #4C52 01 ; m_bGlobal ;
 
-	]]})
+			!pop_all_registers_iwd2
+
+		]]})
+	end
 
 	------------------------------------------------------
 	-- Action LeaveParty(): Should correctly set up NPC --
 	------------------------------------------------------
 
-	IEex_HookBeforeCall(0x7295F7, {[[
-		!mov_byte:[esi+dword]_byte #4C52 00 ; m_bGlobal ;
-	]]})
+	if not IEex_Vanilla then
+		IEex_HookBeforeCall(0x7295F7, {[[
+			!mov_byte:[esi+dword]_byte #4C52 00 ; m_bGlobal ;
+		]]})
+	end
 
 	---------------------------------------------------------
 	-- CGameSprite_GetRacialFavoredClass():                --
 	--   Pull out-of-bounds racial classes from B3RACE.2DA --
 	---------------------------------------------------------
 
-	IEex_HookJump(0x7645A9, 0, {[[
+	if not IEex_Vanilla then
 
-		!ja_dword >extended_race
-		!jmp_dword >jmp_fail
+		IEex_HookJump(0x7645A9, 0, {[[
 
-		@extended_race
-		!push_eax
-		!push_ebx
-		!push_ecx
-		!push_edx
-		!push_ebp
-		!push_esi
+			!ja_dword >extended_race
+			!jmp_dword >jmp_fail
 
-		; race ;
-		!inc_eax
-		!push_eax
+			@extended_race
+			!push_eax
+			!push_ebx
+			!push_ecx
+			!push_edx
+			!push_ebp
+			!push_esi
 
-		!call >IEex_GetLuaState
-		!mov_ebx_eax
+			; race ;
+			!inc_eax
+			!push_eax
 
-		!push_dword ]], {IEex_WriteStringAuto("IEex_Extern_CGameSprite_GetRacialFavoredClass"), 4}, [[
-		!push_ebx
-		!call >_lua_getglobal
-		!add_esp_byte 08
+			!call >IEex_GetLuaState
+			!mov_ebx_eax
 
-		; race ;
-		!fild_[esp]
-		!sub_esp_byte 04
-		!fstp_qword:[esp]
-		!push_ebx
-		!call >_lua_pushnumber
-		!add_esp_byte 0C
+			!push_dword ]], {IEex_WriteStringAuto("IEex_Extern_CGameSprite_GetRacialFavoredClass"), 4}, [[
+			!push_ebx
+			!call >_lua_getglobal
+			!add_esp_byte 08
 
-		!push_byte 00
-		!push_byte 01
-		!push_byte 01
-		!push_ebx
-		!call >_lua_pcall
-		!add_esp_byte 10
-		!push_ebx
-		!call >IEex_CheckCallError
-		!test_eax_eax
-		!jz_dword >ok
-		!mov_edi #1
-		!jmp_dword >error
+			; race ;
+			!fild_[esp]
+			!sub_esp_byte 04
+			!fstp_qword:[esp]
+			!push_ebx
+			!call >_lua_pushnumber
+			!add_esp_byte 0C
 
-		@ok
-		!push_byte FF
-		!push_ebx
-		!call >_lua_tonumber
-		!add_esp_byte 08
-		!call >__ftol2_sse
-		!push_eax
-		!push_byte FE
-		!push_ebx
-		!call >_lua_settop
-		!add_esp_byte 08
-		!pop_edi
+			!push_byte 00
+			!push_byte 01
+			!push_byte 01
+			!push_ebx
+			!call >_lua_pcall
+			!add_esp_byte 10
+			!push_ebx
+			!call >IEex_CheckCallError
+			!test_eax_eax
+			!jz_dword >ok
+			!mov_edi #1
+			!jmp_dword >error
 
-		@error
-		!pop_esi
-		!pop_ebp
-		!pop_edx
-		!pop_ecx
-		!pop_ebx
-		!pop_eax
-		!jmp_dword :7646B7
+			@ok
+			!push_byte FF
+			!push_ebx
+			!call >_lua_tonumber
+			!add_esp_byte 08
+			!call >__ftol2_sse
+			!push_eax
+			!push_byte FE
+			!push_ebx
+			!call >_lua_settop
+			!add_esp_byte 08
+			!pop_edi
 
-	]]})
+			@error
+			!pop_esi
+			!pop_ebp
+			!pop_edx
+			!pop_ecx
+			!pop_ebx
+			!pop_eax
+			!jmp_dword :7646B7
+		]]})
+	end
 
 	----------------------------------------------------------------------------
 	-- Run CtrlAltDelete:EnableCheatKeys() by default if Cheats are turned on --
@@ -949,47 +976,50 @@
 	-- Inventory shouldn't crash if character has non-standard animation --
 	-----------------------------------------------------------------------
 
-	IEex_HookRestore(0x62EFA1, 0, 6, {[[
+	if not IEex_Vanilla then
 
-		!push_eax
+		IEex_HookRestore(0x62EFA1, 0, 6, {[[
 
-		!mov_eax_edi
-		!and_eax_dword #F000
-		!cmp_eax_dword #5000
-		!je_dword >character_animation
-		!cmp_eax_dword #6000
-		!jne_dword >skip
+			!push_eax
 
-		@character_animation
-		!mov_eax_edi
-		!and_eax_dword #F00
-		!cmp_eax_dword #400
-		!jne_dword >no_skip
+			!mov_eax_edi
+			!and_eax_dword #F000
+			!cmp_eax_dword #5000
+			!je_dword >character_animation
+			!cmp_eax_dword #6000
+			!jne_dword >skip
 
-		!mov_eax_edi
-		!and_eax_byte 0F
-		!cmp_eax_byte 01
-		!je_dword >no_skip
-		!cmp_eax_byte 05
-		!ja_dword >no_skip
+			@character_animation
+			!mov_eax_edi
+			!and_eax_dword #F00
+			!cmp_eax_dword #400
+			!jne_dword >no_skip
 
-		; The following use the OLD character animation type, (which is invalid for this flag):
-			  0x6400 <unlisted>
-			  0x6402 MONK
-			  0x6403 Skeleton (BG)
-			  0x6404 <unlisted>
-			  0x6405 Doom Guard
-		;
+			!mov_eax_edi
+			!and_eax_byte 0F
+			!cmp_eax_byte 01
+			!je_dword >no_skip
+			!cmp_eax_byte 05
+			!ja_dword >no_skip
 
-		@skip
-		!pop_eax
-		!jmp_dword >return_skip
+			; The following use the OLD character animation type, (which is invalid for this flag):
+				0x6400 <unlisted>
+				0x6402 MONK
+				0x6403 Skeleton (BG)
+				0x6404 <unlisted>
+				0x6405 Doom Guard
+			;
 
-		@no_skip
-		!pop_eax
-		; fall through to restore/return ;
+			@skip
+			!pop_eax
+			!jmp_dword >return_skip
 
-	]]})
+			@no_skip
+			!pop_eax
+			; fall through to restore/return ;
+
+		]]})
+	end
 
 	IEex_EnableCodeProtection()
 
