@@ -1210,6 +1210,9 @@
 			!jmp_dword >IEex_Helper_CVidCell_RenderIconOverride
 		]]})
 		IEex_Helper_DefineAddress("CVidCell::RenderIconOriginal", IEex_Label("CVidCell::RenderIconOriginal"))
+	else
+		-- Silence warning from IEexHelper.dll when running in vanilla mode
+		IEex_Helper_DefineAddress("CVidCell::RenderIconOriginal", -1)
 	end
 
 	----------------------------------------
