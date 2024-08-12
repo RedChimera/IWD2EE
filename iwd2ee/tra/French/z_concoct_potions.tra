@@ -1,739 +1,741 @@
-@4700     = ~Rainwater Brew~
-@4701     = ~Cheap, efficient, and crude, this potion is a mix of rainwater, clay, ash, and roots from several plants.  This modest brew will restore 2d6 hit points to the drinker.
+@4700     = ~Breuvage d’Eau de Pluie~
+@4701     = ~Peu coûteuse, efficace et rudimentaire, cette potion est un mélange d’eau de pluie, d’argile, de cendres et de racines de plusieurs plantes. Ce modeste breuvage restaurera 2d6 points de vie au buveur.
 
-STATISTICS:
+STATISTIQUES :
 
-Heals 2d6 hit points
-Weight: 1 lb.~
-@54700     = ~Rainwater Brew~
-@54701     = ~Cheap, efficient, and crude, this potion is a mix of rainwater, clay, ash, and roots from several plants.  This modest brew will restore 5d6 hit points to the drinker.
+Soigne 2d6 points de vie
+Poids : 0,45 kg (1 lb)~
+@54700     = ~Breuvage d’Eau de Pluie~
+@54701     = ~Peu coûteuse, efficace et rudimentaire, cette potion est un mélange d’eau de pluie, d’argile, de cendres et de racines de plusieurs plantes. Ce modeste breuvage restaurera 5d6 points de vie au buveur.
 
-STATISTICS:
+STATISTIQUES :
 
-Heals 5d6 hit points
-Weight: 1 lb.~
-@4702     = ~Sour Draught~
-@4703     = ~Potent potions require less common ingredients, and this brew is no exception. Animal fat, bile, dried leaves, and fermented meat comprise this foul-smelling concoction, but a dying friend will not complain. This brew will restore 4d8 hit points to whoever is desperate enough to drink it.
+Soigne 5d6 points de vie
+Poids : 0,45 kg (1 lb)~
+@4702     = ~Brouet Aigre~
+@4703     = ~Les potions puissantes nécessitent des ingrédients moins communs, et ce breuvage ne fait pas exception. Graisse animale, bile, feuilles séchées et viande fermentée composent cette concoction à l’odeur nauséabonde, mais un ami mourant ne s’en plaindra pas. Ce breuvage restaurera 4d8 points de vie à quiconque est assez désespéré pour le boire.
 
-STATISTICS:
+STATISTIQUES :
 
-Heals 4d8 hit points
-Weight: 1 lb.~
-@54702     = ~Sour Draught~
-@54703     = ~Potent potions require less common ingredients, and this brew is no exception. Animal fat, bile, dried leaves, and fermented meat comprise this foul-smelling concoction, but a dying friend will not complain. This brew will restore 10d8 hit points to whoever is desperate enough to drink it.
+Soigne 4d8 points de vie
+Poids : 0,45 kg (1 lb)~
+@54702     = ~Brouet Aigre~
+@54703     = ~Les potions puissantes nécessitent des ingrédients moins communs, et ce breuvage ne fait pas exception. Graisse animale, bile, feuilles séchées et viande fermentée composent cette concoction à l’odeur nauséabonde, mais un ami mourant ne s’en plaindra pas. Ce breuvage restaurera 10d8 points de vie à quiconque est assez désespéré pour le boire.
 
-STATISTICS:
+STATISTIQUES :
 
-Heals 10d8 hit points
-Weight: 1 lb.~
-@4704     = ~Sweet Elixir~
-@4705     = ~One might mistake this sweet drink for white wine, but the gentle bite in the flavor comes not from alcohol, but transmuted quartz. Drinking this potion can soothe nearly any ailment, from common infection to lethal venom to an ugly hangover. The quartz binds to toxic substances and turns them into harmless salt, curing poison, disease, and intoxication. In case that is not enough to heal the sickly adventurer, the horse tears in the syrup will also restore 1d4 hit points to the user.
+Soigne 10d8 points de vie
+Poids : 0,45 kg (1 lb)~
+@4704     = ~Élixir Doux~
+@4705     = ~On pourrait prendre cette boisson douce pour du vin blanc, mais la légère amertume de son goût ne provient pas de l’alcool, mais de quartz transmuté. Boire cette potion peut apaiser presque tous les maux, qu’il s’agisse d’une infection courante, d’un venin mortel ou d’une vilaine gueule de bois. Le quartz se lie aux substances toxiques et les transforme en sel inoffensif, guérissant ainsi les poisons, les maladies et l’intoxication. Si cela ne suffit pas à soigner l’aventurier malade, les larmes de cheval dans le sirop restaurent également 1d4 points de vie à l’utilisateur.
 
-STATISTICS:
+STATISTIQUES :
 
-Cures poison and disease
-Heals 1d4 hit points
-Weight: 1 lb.~
-@54704     = ~Sweet Elixir~
-@54705     = ~One might mistake this sweet drink for white wine, but the gentle bite in the flavor comes not from alcohol, but transmuted quartz. Drinking this potion can soothe nearly any ailment, from common infection to lethal venom to an ugly hangover. The quartz binds to toxic substances and turns them into harmless salt, curing poison, disease, and intoxication. In case that is not enough to heal the sickly adventurer, the horse tears in the syrup will also restore 4d4 hit points to the user.
+Guérit les poisons et les maladies
+Soigne 1d4 points de vie
+Poids : 0,45 kg (1 lb)~
+@54704     = ~Élixir Doux~
+@54705     = ~On pourrait prendre cette boisson douce pour du vin blanc, mais la légère amertume de son goût ne provient pas de l’alcool, mais de quartz transmuté. Boire cette potion peut apaiser presque tous les maux, qu’il s’agisse d’une infection courante, d’un venin mortel ou d’une vilaine gueule de bois. Le quartz se lie aux substances toxiques et les transforme en sel inoffensif, guérissant ainsi les poisons, les maladies et l’intoxication. Si cela ne suffit pas à soigner l’aventurier malade, les larmes de cheval dans le sirop restaurent également 4d4 points de vie à l’utilisateur.
 
-STATISTICS:
+STATISTIQUES :
 
-Cures poison and disease
-Heals 4d4 hit points
-Weight: 1 lb.~
-@4706     = ~Electric Gel~
-@4707     = ~This pale bluish gel emits a strange hum in its tightly-sealed brass container.  When imbibed, the gel absorbs electrical damage, granting the user a 20/- resistance to all forms of electricity.  The effect lasts for 10 rounds or until dispelled.
+Guérit les poisons et les maladies
+Soigne 4d4 points de vie
+Poids : 0,45 kg (1 lb)~
+@4706     = ~Gel Électrique~
+@4707     = ~Ce gel bleuâtre pâle émet un étrange bourdonnement dans son récipient en laiton hermétiquement fermé. Lorsqu’il est ingéré, le gel absorbe les dégâts électriques, conférant à l’utilisateur une résistance de 20/- à toutes les formes d’électricité. L’effet dure 10 rounds ou jusqu’à ce qu’il soit dissipé.
 
-STATISTICS:
+STATISTIQUES :
 
-Resistance: 20/- Electrical Resistance~
-@54706     = ~Electric Gel~
-@54707     = ~This pale bluish gel emits a strange hum in its tightly-sealed brass container.  When imbibed, the gel absorbs electrical damage, granting the user a 50/- resistance to all forms of electricity.  The effect lasts for 10 rounds or until dispelled.
+Résistance : 20/- de résistance à l’électricité~
+@54706     = ~Gel Électrique~
+@54707     = ~Ce gel bleuâtre pâle émet un étrange bourdonnement dans son récipient en laiton hermétiquement fermé. Lorsqu’il est ingéré, le gel absorbe les dégâts électriques, conférant à l’utilisateur une résistance de 50/- à toutes les formes d’électricité. L’effet dure 10 rounds ou jusqu’à ce qu’il soit dissipé.
 
-STATISTICS:
+STATISTIQUES :
 
-Resistance: 50/- Electrical Resistance~
-@4708     = ~Radiant Philter~
-@4709     = ~A viscous liquid shimmers inside this tiny bottle. Brewed in a wax jar and leached through strips of magical parchment, this mixture of saltpeter, olive oil, chopped lizards, lye, mint leaves, and cinnamon can shield the user's skin from extreme heat.
+Résistance : 50/- de résistance à l’électricité~
+@4708     = ~Philtre Radieux~
+@4709     = ~Un liquide visqueux scintille à l’intérieur de cette petite bouteille. Préparée dans un pot en cire et filtrée à travers des bandes de parchemin magique, cette mixture de salpêtre, huile d’olive, lézards hachés, soude caustique, feuilles de menthe et cannelle peut protéger la peau de l’utilisateur contre une chaleur extrême.
 
-By pouring the vial onto one's arm and speaking the command word, the user spreads a radiant prismatic liquid across his or her body, granting 20/- resistance to all forms of fire damage. The liquid is enchanted to cling to the user's skin, but the effect will wear off after 10 rounds.
+En versant la fiole sur son bras et en prononçant le mot de commande, l’utilisateur étend un liquide prismatique rayonnant sur son corps, lui conférant une résistance de 20/- à toutes les formes de dégâts de feu. Le liquide est enchanté pour adhérer à la peau de l’utilisateur, mais l’effet disparaît après 10 rounds.
 
-STATISTICS:
+STATISTIQUES :
 
-Resistance: 20/- Fire Resistance
-Weight: 1 lb.~
-@54708     = ~Radiant Philter~
-@54709     = ~A viscous liquid shimmers inside this tiny bottle. Brewed in a wax jar and leached through strips of magical parchment, this mixture of saltpeter, olive oil, chopped lizards, lye, mint leaves, and cinnamon can shield the user's skin from extreme heat.
+Résistance : 20/- de résistance au feu
+Poids : 0,45 kg (1 lb)~
+@54708     = ~Philtre Radieux~
+@54709     = ~Un liquide visqueux scintille à l’intérieur de cette petite bouteille. Préparée dans un pot en cire et filtrée à travers des bandes de parchemin magique, cette mixture de salpêtre, huile d’olive, lézards hachés, soude caustique, feuilles de menthe et cannelle peut protéger la peau de l’utilisateur contre une chaleur extrême.
 
-By pouring the vial onto one's arm and speaking the command word, the user spreads a radiant prismatic liquid across his or her body, granting 50/- resistance to all forms of fire damage. The liquid is enchanted to cling to the user's skin, but the effect will wear off after 10 rounds.
+En versant la fiole sur son bras et en prononçant le mot de commande, l’utilisateur étend un liquide prismatique rayonnant sur son corps, lui conférant une résistance de 50/- à toutes les formes de dégâts de feu. Le liquide est enchanté pour adhérer à la peau de l’utilisateur, mais l’effet disparaît après 10 rounds.
 
-STATISTICS:
+STATISTIQUES :
 
-Resistance: 50/- Fire Resistance
-Weight: 1 lb.~
-@4710     = ~Black Mania~
-@4711     = ~Not all potions are exactly medical.  Some alchemists turn their talents to producing narcotics, and make their living by peddling addictive poisons to the idle and restless.  This black oil is a modified version of one such narcotic.  When drunk Black Mania will induce a violent state of confusion, granting the user a +5 bonus to damage rolls and +3 to melee attack rolls at the cost of a -3 penalty to AC and missile attacks.  Further, the user goes berserk for 10 rounds and his or her hit points are hidden for the duration of the effect.
+Résistance : 50/- de résistance au feu
+Poids : 0,45 kg (1 lb)~
+@4710     = ~Manie Noire~
+@4711     = ~Toutes les potions ne sont pas forcément médicinales. Certains alchimistes utilisent leurs talents pour produire des narcotiques et vivent de la vente de poisons addictifs aux oisifs et aux agités. Cette huile noire est une version modifiée de l’un de ces narcotiques. Lorsque la Manie Noire est bue, elle induit un état de confusion violent, accordant à l’utilisateur un bonus de +5 aux jets de dégâts et +3 aux jets d’attaque au corps à corps, au prix d’un malus de -3 à la classe d’armure et aux attaques à distance. De plus, l’utilisateur devient enragé pendant 10 rounds et ses points de vie sont cachés pendant toute la durée de l’effet.
 
-STATISTICS:
+STATISTIQUES :
 
-+3 to melee attacks
-+5 to damage
--3 AC
--3 to missile attacks
-User goes berserk while in combat
-Hit points hidden
-Weight: 1 lb.~
-@54710     = ~Black Mania~
-@54711     = ~Not all potions are exactly medical.  Some alchemists turn their talents to producing narcotics, and make their living by peddling addictive poisons to the idle and restless.  This black oil is a modified version of one such narcotic.  When drunk Black Mania will induce a violent state of confusion, granting the user a +10 bonus to damage rolls and +5 to melee attack rolls at the cost of a -10 penalty to AC and -5 to missile attacks.  Further, the user goes berserk for 10 rounds and his or her hit points are hidden for the duration of the effect.
++3 aux attaques au corps à corps
++5 aux dégâts
+-3 à la classe d’armure
+-3 aux attaques à distance
+L’utilisateur devient berserk au combat.
+Points de vie cachés
+Poids : 0,45 kg (1 lb)~
+@54710     = ~Manie Noire~
+@54711     = ~Toutes les potions ne sont pas forcément médicinales. Certains alchimistes utilisent leurs talents pour produire des narcotiques et vivent de la vente de poisons addictifs aux oisifs et aux agités. Cette huile noire est une version modifiée de l’un de ces narcotiques. Lorsque la Manie Noire est bue, elle induit un état de confusion violent, accordant à l’utilisateur un bonus de +10 aux jets de dégâts et +5 aux jets d’attaque au corps à corps, au prix d’un malus de -10 à la classe d’armure et de -5 aux attaques à distance. De plus, l’utilisateur devient enragé pendant 10 rounds et ses points de vie sont cachés pendant toute la durée de l’effet.
 
-STATISTICS:
+STATISTIQUES :
 
-+5 to melee attacks
-+10 to damage
--10 AC
--5 to missile attacks
-User goes berserk while in combat
-Hit points hidden
-Weight: 1 lb.~
-@4712     = ~Bonemeal Eyedrops~
-@4713     = ~Made with a pinch of bonemeal, tomato or carrot juice, distilled water, a few drops of the user's own blood, and an eyeball from a bird of prey, this reddish solution can improve the user's eyesight. Aside from a light burning sensation, the user will suddenly find the world vastly more detailed, granting a +3 bonus to all ranged attacks.  The eyedrops burn slightly, and so the user will gradually cry away the fluid, losing its benefits after 1 hour has passed.
++5 aux attaques au corps à corps
++10 aux dégâts
+-10 à la classe d’armure
+-5 aux attaques à distance
+L’utilisateur devient berserk au combat.
+Points de vie cachés
+Poids : 0,45 kg (1 lb)~
+@4712     = ~Gouttes Oculaires à la Poudre d’Os~
+@4713     = ~Préparées avec une pincée de poudre d’os, du jus de tomate ou de carotte, de l’eau distillée, quelques gouttes du sang de l’utilisateur et un œil de rapace, cette solution rougeâtre peut améliorer la vue de l’utilisateur. En plus d’une légère sensation de brûlure, l’utilisateur trouvera soudain le monde beaucoup plus détaillé, ce qui lui confère un bonus de +3 à tous les jets d’attaque à distance. Les gouttes brûlent légèrement, et l’utilisateur finit par pleurer le fluide, perdant ses bénéfices après 1 heure.
 
-STATISTICS:
+STATISTIQUES :
 
-+3 Attack Bonus (ranged weapons only)
-Weight: 1 lb.~
-@54712     = ~Bonemeal Eyedrops~
-@54713     = ~Made with a pinch of bonemeal, tomato or carrot juice, distilled water, a few drops of the user's own blood, and an eyeball from a bird of prey, this reddish solution can improve the user's eyesight. Aside from a light burning sensation, the user will suddenly gain magical insight into the weaknesses of other creatures.  The eyedrops burn slightly, and so the user will gradually cry away the fluid, losing its benefits after 10 rounds have passed.
++3 au bonus d’attaque (armes à distance uniquement)
+Poids : 0,45 kg (1 lb)~
+@54712     = ~Gouttes Oculaires à la Poudre d’Os~
+@54713     = ~Préparées avec une pincée de poudre d’os, du jus de tomate ou de carotte, de l’eau distillée, quelques gouttes du sang de l’utilisateur et un œil de rapace, cette solution rougeâtre peut améliorer la vue de l’utilisateur. En plus d’une légère sensation de brûlure, l’utilisateur gagnera soudainement une perception magique des faiblesses des autres créatures. Les gouttes brûlent légèrement, et l’utilisateur finit par pleurer le fluide, perdant ses bénéfices après 10 rounds.
 
-STATISTICS:
+STATISTIQUES :
 
-Executioner's Eyes for 10 rounds (+4 attack bonus, +4 critical threat range)
-Weight: 1 lb.~
-@4714     = ~Smoke Bomb~
-@4715     = ~Anyone can start a fire and produce a small cloud of smoke, but creating a burst of smoke in one swift movement takes some art.  This small canister of concentrated smoke will quickly create an obscuring cloud when broken, hiding the user for 1d3+3 seconds depending on air currents and other factors.
+Expertise de bourreau pendant 10 rounds (+4 au bonus d’attaque, +4 à la plage de critique)
+Poids : 0,45 kg (1 lb)~
+@4714     = ~Bombe Fumigène~
+@4715     = ~N’importe qui peut allumer un feu et produire un petit nuage de fumée, mais créer un nuage de fumée en un mouvement rapide demande un certain art. Ce petit récipient de fumée concentrée créera rapidement un nuage dissimulant l’utilisateur pendant 1d3+3 secondes selon les courants d’air et autres facteurs.
 
-STATISTICS:
+STATISTIQUES :
 
-Invisibility for 1d3+3 seconds
-Weight: 1 lb.~
-@54714     = ~Smoke Bomb~
-@54715     = ~Anyone can start a fire and produce a small cloud of smoke, but creating a burst of smoke in one swift movement takes some art.  This small canister of concentrated smoke will quickly create an obscuring cloud when broken, hiding the user for 1d3+3 seconds depending on air currents and other factors.
+Invisibilité pendant 1d3+3 secondes
+Poids : 0,45 kg (1 lb)~
+@54714     = ~Bombe Fumigène~
+@54715     = ~N’importe qui peut allumer un feu et produire un petit nuage de fumée, mais créer un nuage de fumée en un mouvement rapide demande un certain art. Ce petit récipient de fumée concentrée créera rapidement un nuage dissimulant l’utilisateur pendant 1d3+3 secondes selon les courants d’air et autres facteurs.
 
-STATISTICS:
+STATISTIQUES :
 
-Invisibility for 1d3+3 seconds
-Weight: 1 lb.~
-@4716     = ~Bitter Tonic~
-@4717     = ~This potion is a highly concentrated reddish mixture made from roots, clay, crushed pearls and oyster shells, blood, and alcohol.  The solution empowers the drinker's constitution and resilience, granting a +4 bonus to all Fortitude saves for 1 hour.
+Invisibilité pendant 1d3+3 secondes
+Poids : 0,45 kg (1 lb)~
+@4716     = ~Tonique Amer~
+@4717     = ~Cette potion est un mélange concentré rougeâtre composé de racines, d’argile, de perles broyées et de coquilles d’huîtres, de sang et d’alcool.  La solution renforce la constitution et la résistance du buveur, lui accordant un bonus de +4 à tous les jets de sauvegarde de Vigueur pendant 1 heure.
 
-STATISTICS:
+STATISTIQUES :
 
-+4 to Fortitude saves
-Weight: 1 lb.~
-@54716     = ~Bitter Tonic~
-@54717     = ~This potion is a highly concentrated reddish mixture made from roots, clay, crushed pearls and oyster shells, blood, and alcohol.  The solution empowers the drinker's constitution and resilience, granting a +8 bonus to all Fortitude saves for 1 hour.
++4 aux jets de sauvegarde de Vigueur pendant 1 heure
+Poids : 0,45 kg (1 lb)~
+@54716     = ~Tonique Amer~
+@54717     = ~Cette potion est un mélange concentré rougeâtre composé de racines, d’argile, de perles broyées et de coquilles d’huîtres, de sang et d’alcool.  La solution renforce la constitution et la résistance du buveur, lui accordant un bonus de +8 à tous les jets de sauvegarde de Vigueur pendant 1 heure.
 
-STATISTICS:
+STATISTIQUES :
 
-+8 to Fortitude saves
-Weight: 1 lb.~
-@4718     = ~Brine Solution~
-@4719     = ~This potion, a small piece of a dolphin's brain suspended in whale oil and brine with quicksilver and greenstone as catalysts, is capable of enhancing the user's mental abilities.  Most of the dolphin brain's latent power goes to waste, since the workings of the mind are still poorly understood and the method behind this concoction is fairly crude, but the brine will banish all distractions from the user's mind, granting a +4 bonus to all Will saves for 1 hour.
++8 aux jets de sauvegarde de Vigueur pendant 1 heure
+Poids : 0,45 kg (1 lb)~
+@4718     = ~Solution Salée~
+@4719     = ~Cette potion, un petit morceau de cerveau de dauphin suspendu dans de l’huile de baleine et de la saumure avec du vif-argent et de la pierre verte comme catalyseurs, est capable d’améliorer les capacités mentales de l’utilisateur. La majeure partie de la puissance latente du cerveau de dauphin est gaspillée, car le fonctionnement de l’esprit est encore mal compris et la méthode derrière cette concoction est assez rudimentaire, mais la saumure bannira toutes les distractions de l’esprit de l’utilisateur, accordant un bonus de +4 à tous les jets de sauvegarde de Volonté pendant 1 heure.
 
-STATISTICS:
+STATISTIQUES :
 
-+4 to Will saves
-Weight: 1 lb.~
-@54718     = ~Brine Solution~
-@54719     = ~This potion, a small piece of a dolphin's brain suspended in whale oil and brine with quicksilver and greenstone as catalysts, is capable of enhancing the user's mental abilities.  Most of the dolphin brain's latent power goes to waste, since the workings of the mind are still poorly understood and the method behind this concoction is fairly crude, but the brine will banish all distractions from the user's mind, granting a +8 bonus to all Will saves for 1 hour.
++4 aux jets de sauvegarde de Volonté pendant 1 heure
+Poids : 0,45 kg (1 lb)~
+@54718     = ~Solution Salée~
+@54719     = ~Cette potion, un petit morceau de cerveau de dauphin suspendu dans de l’huile de baleine et de la saumure avec du vif-argent et de la pierre verte comme catalyseurs, est capable d’améliorer les capacités mentales de l’utilisateur. La majeure partie de la puissance latente du cerveau de dauphin est gaspillée, car le fonctionnement de l’esprit est encore mal compris et la méthode derrière cette concoction est assez rudimentaire, mais la saumure bannira toutes les distractions de l’esprit de l’utilisateur, accordant un bonus de +8 à tous les jets de sauvegarde de Volonté pendant 1 heure.
 
-STATISTICS:
+STATISTIQUES :
 
-+8 to Will saves
-Weight: 1 lb.~
-@4720     = ~Pressurized Gas~
-@4721     = ~This bottle of highly pressurized toxins will explode when it is shattered, flooding the area with a cloud of noxious gas.  Any breathing creature who is caught in the cloud is confronted with a nauseating stench that sinks deep into their nostrils and sticks in the back of their throat, suffering 5 poison damage per round for 5 rounds.  Every round the victim remains in the cloud, it must make a Fortitude save to avoid being poisoned.
++8 aux jets de sauvegarde de Volonté pendant 1 heure
+Poids : 0,45 kg (1 lb)~
+@4720     = ~Gaz Sous Pression~
+@4721     = ~Cette bouteille de toxines hautement pressurisées explosera lorsqu’elle sera brisée, inondant la zone d’un nuage de gaz nauséabond. Toute créature qui respire prise dans le nuage est confrontée à une odeur nauséabonde qui s’incruste profondément dans leurs narines et leur colle à la gorge, subissant 5 points de dégâts de poison par round pendant 5 rounds. Chaque round où la victime reste dans le nuage, elle doit réussir un jet de sauvegarde de Vigueur pour éviter d’être empoisonnée.
 
-STATISTICS:
+STATISTIQUES :
 
-5 poison damage per round for 5 rounds (Fortitude DC 15 negates)
-Dissipates after 10 rounds
-Weight: 1 lb.~
-@54720     = ~Pressurized Gas~
-@54721     = ~This bottle of highly pressurized toxins will explode when it is shattered, flooding the area with a cloud of noxious gas.  Any breathing creature who is caught in the cloud is confronted with a nauseating stench that sinks deep into their nostrils and sticks in the back of their throat, suffering 10 poison damage per round for 5 rounds.  Every round the victim remains in the cloud, it must make a Fortitude save to avoid being poisoned.
+5 points de dégâts de poison par round pendant 5 rounds (un jet de Vigueur de DD de 15 annule)
+Se dissipe après 10 rounds
+Poids : 0,45 kg (1 lb)~
+@54720     = ~Gaz Sous Pression~
+@54721     = ~Cette bouteille de toxines hautement pressurisées explosera lorsqu’elle sera brisée, inondant la zone d’un nuage de gaz nauséabond. Toute créature qui respire prise dans le nuage est confrontée à une odeur nauséabonde qui s’incruste profondément dans leurs narines et leur colle à la gorge, subissant 10 points de dégâts de poison par round pendant 5 rounds. Chaque round où la victime reste dans le nuage, elle doit réussir un jet de sauvegarde de Vigueur pour éviter d’être empoisonnée.
 
-STATISTICS:
+STATISTIQUES :
 
-10 poison damage per round for 5 rounds (Fortitude DC 25 negates)
-Dissipates after 10 rounds
-Weight: 1 lb.~
-@4722     = ~Burning Oil~
-@4723     = ~Simple to make but expensive to produce, this mixture of blackpowder and highly refined oil and gas will ignite when it breaks against a target.  As soon as the bottle hits the ground, a small capsule of pure sodium and another capsule of water will break open.  The sodium catches fire on contact with the water, setting the rest of the mixture alight.
+10 points de dégâts de poison par round pendant 5 rounds (un jet de Vigueur de DD de 25 annule)
+Se dissipe après 10 rounds
+Poids : 0,45 kg (1 lb)~
+@4722     = ~Huile Enflammée~
+@4723     = ~Simple à fabriquer mais coûteuse à produire, ce mélange de poudre noire, d’huile et gaz hautement raffinés s’enflamme lorsqu’il se brise contre une cible. Dès que la bouteille touche le sol, une petite capsule de sodium pur et une autre capsule d’eau s’ouvrent. Le sodium prend feu au contact de l’eau, enflammant le reste du mélange.
 
-A weak grenade inside the bottle then causes the flaming oil to expand rapidly, spreading the flame across all creatures within a 30 foot radius.  Anyone caught inside the burst will suffer 6d6 points of damage with a Reflex save (DC 15) for half.
+Une faible grenade à l’intérieur de la bouteille provoque alors une expansion rapide de l’huile enflammée, répandant la flamme sur toutes les créatures dans un rayon de 9 mètres (30 pieds). Toute personne prise dans l’explosion subira 6d6 points de dégâts avec un jet de Réflexes (DD de 15) pour la moitié des dégâts.
 
-STATISTICS:
+STATISTIQUES :
 
-6d6 fire damage (Reflex DC 15 for 1/2 damage)
-Area of Effect: 30-foot radius
-Range: 40'
-Weight: 1 lb.~
-@54722     = ~Burning Oil~
-@54723     = ~Simple to make but expensive to produce, this mixture of blackpowder and highly refined oil and gas will ignite when it breaks against a target.  As soon as the bottle hits the ground, a small capsule of pure sodium and another capsule of water will break open.  The sodium catches fire on contact with the water, setting the rest of the mixture alight.
+6d6 points de dégâts de feu (jet de Réflexes de DD de 15 pour la moitié des dégâts)
+Zone d’effet : rayon de 9 mètres (30 pieds)
+Portée : 12 m (40 pieds)
+Poids : 0,45 kg (1 lb)~
+@54722     = ~Huile Enflammée~
+@54723     = ~Simple à fabriquer mais coûteuse à produire, ce mélange de poudre noire, d’huile et gaz hautement raffinés s’enflamme lorsqu’il se brise contre une cible. Dès que la bouteille touche le sol, une petite capsule de sodium pur et une autre capsule d’eau s’ouvrent. Le sodium prend feu au contact de l’eau, enflammant le reste du mélange.
 
-A weak grenade inside the bottle then causes the flaming oil to expand rapidly, spreading the flame across all creatures within a 30 foot radius.  Anyone caught inside the burst will suffer 12d6 points of damage with a Reflex save (DC 25) for half.
+Une faible grenade à l’intérieur de la bouteille provoque alors une expansion rapide de l’huile enflammée, répandant la flamme sur toutes les créatures dans un rayon de 9 mètres. Toute personne prise dans l’explosion subira 12d6 points de dégâts avec un jet de Réflexes (DD de 25) pour la moitié des dégâts.
 
-STATISTICS:
+STATISTIQUES :
 
-12d6 fire damage (Reflex DC 25 for 1/2 damage)
-Area of Effect: 30-foot radius
-Range: 40'
-Weight: 1 lb.~
-@4724     = ~Musk Wine~
-@4725     = ~Brewed from fermented plums and the musk of several animals (usually cattle, oxen, horses, donkeys, and buffalo), this strong wine has a peculiar noxious scent despite its sweet taste.  Taken with a bit of Ankheg acid and some lime (the base, not the fruit) to neutralize the acid, this potion grants the drinker +6 to Strength for 10 rounds.
+12d6 points de dégâts de feu (jet de Réflexes de DD de 25 pour la moitié des dégâts)
+Zone d’effet : rayon de 9 mètres (30 pieds)
+Portée : 12 m (40 pieds)
+Poids : 0,45 kg (1 lb)~
+@4724     = ~Vin de Musc~
+@4725     = ~Préparé à partir de prunes fermentées et de musc de plusieurs animaux (généralement du bétail, des bœufs, des chevaux, des ânes et des buffles), ce vin fort a une odeur nauséabonde particulière malgré son goût sucré. Pris avec un peu d’acide d’Ankheg et de la chaux (la base, pas le fruit) pour neutraliser l’acide, cette potion accorde au buveur +6 en Force pendant 10 rounds.
 
-STATISTICS:
+STATISTIQUES :
 
-+6 Strength
-Weight: 1 lb.~
-@54724     = ~Musk Wine~
-@54725     = ~Brewed from fermented plums and the musk of several animals (usually cattle, oxen, horses, donkeys, and buffalo), this strong wine has a peculiar noxious scent despite its sweet taste.  Taken with a bit of Ankheg acid and some lime (the base, not the fruit) to neutralize the acid, this potion grants the drinker +12 to Strength for 10 rounds.
++6 en Force pendant 10 rounds
+Poids : 0,45 kg (1 lb)~
+@54724     = ~Vin de Musc~
+@54725     = ~Préparé à partir de prunes fermentées et de musc de plusieurs animaux (généralement du bétail, des bœufs, des chevaux, des ânes et des buffles), ce vin fort a une odeur nauséabonde particulière malgré son goût sucré. Pris avec un peu d’acide d’Ankheg et de la chaux (la base, pas le fruit) pour neutraliser l’acide, cette potion accorde au buveur +12 en Force pendant 10 rounds.
 
-STATISTICS:
+STATISTIQUES :
 
-+12 Strength
-Weight: 1 lb.~
-@4726     = ~Lime Juice~
-@4727     = ~This potion, a tart mix of lime juice, scorpion venom, peppers, and a few drops of dwarf or gnome blood, will grant the drinker 20/- magic damage resistance for 10 rounds, evening the odds against spellcasting foes.
++12 en Force pendant 10 rounds
+Poids : 0,45 kg (1 lb)~
+@4726     = ~Jus de Citron Vert~
+@4727     = ~Cette potion, un mélange acide de jus de citron vert, de venin de scorpion, de piments et de quelques gouttes de sang de nain ou de gnome, accordera au buveur une résistance aux dégâts magiques de 20/- pendant 10 rounds, équilibrant ainsi les chances contre les ennemis lanceurs de sorts.
 
-STATISTICS:
+STATISTIQUES :
 
-Resistance: 20/- Magic Damage Resistance
-Weight: 1 lb.~
-@54726     = ~Lime Juice~
-@54727     = ~This potion, a tart mix of lime juice, scorpion venom, peppers, and a few drops of dwarf or gnome blood, will grant the drinker 50/- magic damage resistance for 10 rounds, evening the odds against spellcasting foes.
+Résistance : 20/- Résistance aux Dégâts Magiques pendant 10 rounds
+Poids : 0,45 kg (1 lb)~
+@54726     = ~Jus de Citron Vert~
+@54727     = ~Cette potion, un mélange acide de jus de citron vert, de venin de scorpion, de piments et de quelques gouttes de sang de nain ou de gnome, accordera au buveur une résistance aux dégâts magiques de 50/- pendant 10 rounds, équilibrant ainsi les chances contre les ennemis lanceurs de sorts.
 
-STATISTICS:
+STATISTIQUES :
 
-Resistance: 50/- Magic Damage Resistance
-Weight: 1 lb.~
-@4728     = ~Vial of Scales~
-@4729     = ~Composed of powdered rust, beetle shells, bonemeal, and oak bark, this alcohol-based mixture conjures a barrier of jagged metal scales over the user's skin. These iron skins will absorb the next 1-6 blows that would hit the drinker in the next 10 rounds.
+Résistance : 50/- Résistance aux Dégâts Magiques pendant 10 rounds
+Poids : 0,45 kg (1 lb)~
+@4728     = ~Fiole d’Écailles~
+@4729     = ~Composée de rouille en poudre, de carapaces de scarabées, de poudre d’os et d’écorce de chêne, cette mixture à base d’alcool invoque une barrière d’écailles métalliques tranchantes sur la peau de l’utilisateur. Ces peaux de fer absorberont les 1 à 6 prochains coups qui auraient dû toucher le buveur au cours des 10 prochains rounds.
 
-STATISTICS:
+STATISTIQUES :
 
-Drinker gains 1d6 iron skins, as per the Iron Skins spell
-Weight: 1 lb.~
-@54728     = ~Vial of Scales~
-@54729     = ~Composed of powdered rust, beetle shells, bonemeal, and oak bark, this alcohol-based mixture conjures a barrier of jagged metal scales over the user's skin. These iron skins will absorb the next 3-18 blows that would hit the drinker in the next 10 rounds.
+Le buveur gagne 1d6 peaux de fer, comme avec le sort Peau de fer.
+Poids : 0,45 kg (1 lb)~
+@54728     = ~Fiole d’Écailles~
+@54729     = ~Composée de rouille en poudre, de carapaces de scarabées, de poudre d’os et d’écorce de chêne, cette mixture à base d’alcool invoque une barrière d’écailles métalliques tranchantes sur la peau de l’utilisateur. Ces peaux de fer absorberont les 3 à 18 prochains coups qui auraient dû toucher le buveur au cours des 10 prochains rounds.
 
-STATISTICS:
+STATISTIQUES :
 
-Drinker gains 3d6 iron skins, as per the Iron Skins spell
-Weight: 1 lb.~
-@4730     = ~Refined Ectoplasm~
-@4731     = ~Graveyard dust, rainwater, mashed blackbirds or nightcrawlers, and the dried blood of a small child are only the first ingredients needed to brew this bitter, earthy potion. To complete the brew, an alchemist must extract the ectoplasm from a ghost or specter, whether by killing a wandering spirit or scraping the material from the throat of a medium, necromancer, or diviner contacting the dead. Left out at night over the course of 1-7 days (depending on the available moonlight), this potion will put the drinker in a partially spectral state, granting him or her near-immunity to mundane weapons.  For 10 rounds after imbibing this bitter potion, the user ignores the first 10 points of damage from any weapon with an enchantment below +2.
+Le buveur gagne 3d6 peaux de fer, comme avec le sort Peau de fer.
+Poids : 0,45 kg (1 lb)~
+@4730     = ~Ectoplasme Raffiné~
+@4731     = ~Poussière de cimetière, eau de pluie, merles écrasés ou vers de terre, et le sang séché d’un petit enfant ne sont que les premiers ingrédients nécessaires pour préparer cette potion amère et terreuse. Pour compléter le breuvage, un alchimiste doit extraire l’ectoplasme d’un fantôme ou spectre, soit en tuant un esprit errant, soit en grattant la matière de la gorge d’un médium, nécromancien ou devin contactant les morts. Laisser cette potion dehors la nuit pendant 1 à 7 jours (selon la lumière de la lune disponible) la mettra dans un état partiellement spectral, conférant à l’utilisateur une quasi-immunité aux armes ordinaires. Pendant 10 rounds après avoir bu cette potion amère, l’utilisateur ignore les premiers 10 points de dégâts de toute arme avec un enchantement inférieur à +2.
 
-STATISTICS:
+STATISTIQUES :
 
-10/+2 Damage Reduction
-Weight: 1 lb.~
-@54730     = ~Refined Ectoplasm~
-@54731     = ~Graveyard dust, rainwater, mashed blackbirds or nightcrawlers, and the dried blood of a small child are only the first ingredients needed to brew this bitter, earthy potion. To complete the brew, an alchemist must extract the ectoplasm from a ghost or specter, whether by killing a wandering spirit or scraping the material from the throat of a medium, necromancer, or diviner contacting the dead. Left out at night over the course of 1-7 days (depending on the available moonlight), this potion will put the drinker in a partially spectral state, granting him or her near-immunity to mundane weapons.  For 10 rounds after imbibing this bitter potion, the user ignores the first 15 points of damage from any weapon with an enchantment below +3.
+Réduction des dégâts de 10/+2 pendant 10 rounds
+Poids : 0,45 kg (1 lb)~
+@54730     = ~Ectoplasme Raffiné~
+@54731     = ~Poussière de cimetière, eau de pluie, merles écrasés ou vers de terre, et le sang séché d’un petit enfant ne sont que les premiers ingrédients nécessaires pour préparer cette potion amère et terreuse. Pour compléter le breuvage, un alchimiste doit extraire l’ectoplasme d’un fantôme ou spectre, soit en tuant un esprit errant, soit en grattant la matière de la gorge d’un médium, nécromancien ou devin contactant les morts. Laisser cette potion dehors la nuit pendant 1 à 7 jours (selon la lumière de la lune disponible) la mettra dans un état partiellement spectral, conférant à l’utilisateur une quasi-immunité aux armes ordinaires. Pendant 10 rounds après avoir bu cette potion amère, l’utilisateur ignore les premiers 15 points de dégâts de toute arme avec un enchantement inférieur à +3.
 
-STATISTICS:
+STATISTIQUES :
 
-15/+3 Damage Reduction
-Weight: 1 lb.~
-@4732     = ~Haunted Ether~
-@4733     = ~Both complex engineering and mystical study are necessary to create this bottle of enchanted gas. The alchemist must first invest in a fractional distillation column to collect the necessary gas from the atmosphere. Once the gas is collected, it must be infused with one or more hostile spirits. Reciting blasphemies in a graveyard is sufficient if the alchemist is well-versed in Abyssal or is familiar with the teachings of the most popular deity among the dead; otherwise the alchemist must resort to graverobbing, and conduct various illegal and unpleasant rituals with exhumed corpses.
+Réduction des dégâts de 15/+3 pendant 10 rounds
+Poids : 0,45 kg (1 lb)~
+@4732     = ~Éther Hanté~
+@4733     = ~Il faut à la fois une ingénierie complexe et une étude mystique pour créer cette bouteille de gaz enchanté. L’alchimiste doit d’abord investir dans une colonne de distillation fractionnée pour collecter le gaz nécessaire dans l’atmosphère. Une fois le gaz collecté, il doit être imprégné d’un ou de plusieurs esprits hostiles. Réciter des blasphèmes dans un cimetière est suffisant si l’alchimiste est bien versé dans l’abyssal ou s’il connaît les enseignements de la divinité la plus populaire parmi les morts ; sinon, l’alchimiste doit se tourner vers le pillage de tombes et mener divers rituels illégaux et désagréables avec des cadavres exhumés.
 
-If the alchemist successfully enrages the local spirits, he or she may bind them to the collected gas. Delivering repeated electrical charges to the imprisoned spirits will gradually disorient them, allowing the bottle to be thrown just like a grenade. When the bottle shatters, the spirits will lash out at the closest living creatures they can find, dealing 4d12 magic damage with a Fortitude save for half and inflicting fear on any victim who fails a Will save.
+Si l’alchimiste réussit à enrager les esprits locaux, il ou elle peut les lier au gaz collecté. En infligeant des décharges électriques répétées aux esprits emprisonnés, ils seront progressivement désorientés, permettant à la bouteille d’être lancée comme une grenade. Lorsque la bouteille se brise, les esprits attaqueront les créatures vivantes les plus proches qu’ils peuvent trouver, infligeant 4d12 dégâts magiques avec un jet de sauvegarde de Vigueur pour réduire de moitié les dégâts et infligeant la peur à toute victime qui échoue un jet de sauvegarde de Volonté.
 
-STATISTICS:
+STATISTIQUES :
 
-4d12 magic damage
-Fear for 5 rounds, Will save negates
-Weight: 1 lb.
+4d12 de dégâts magiques
+Peur pendant 5 rounds, jet de sauvegarde de Volonté pour annuler
+Poids : 0,45 kg (1 lb)
 ~
-@4734     = ~Elf Tendon Wand~
-@4735     = ~This greasy, squishy, and occasionally twitchy wand, composed primarily of leg tendons from elves and half-elves, can deliver a bolt of necromantic energy to any living target.  The victim suffers 12d4 poison damage, but may attempt a Fortitude save for half.
+@4734     = ~Baguette de Tendon Elfique~
+@4735     = ~Cette baguette grasse, spongieuse et parfois agitée, composée principalement de tendons de jambes d’elfes et de demi-elfes, peut délivrer un trait d’énergie nécromantique à toute cible vivante. La victime subit 12d4 points de dégâts de poison, mais peut tenter un jet de sauvegarde de Vigueur pour réduire de moitié les dégâts.
 
-STATISTICS:
+STATISTIQUES :
 
-12d4 poison damage, Fortitude save for half
-Weight: 1 lb.
+12d4 dégâts de poison, jet de sauvegarde de Vigueur pour la moitié des dégâts
+Poids : 0,45 kg (1 lb)
 ~
-@4736     = ~Murky Liquor~
-@4737     = ~With the right ingredients, a skilled alchemist can alter the very nature of a living being. By dissolving rock salt and frog juice in an alcohol-based solution and adding the remains of a deer or antelope digested in a crocodile's stomach, an alchemist can concoct a smoky potion that transmutes the drinker's body into a semi-liquid state.
+@4736     = ~Liqueur Trouble~
+@4737     = ~Avec les bons ingrédients, un alchimiste habile peut altérer la nature même d’un être vivant. En dissolvant du sel gemme et du jus de grenouille dans une solution alcoolisée, et en y ajoutant les restes d’un cerf ou d’une antilope digérés dans l’estomac d’un crocodile, un alchimiste peut concocter une potion fumante qui transmute le corps du buveur en un état semi-liquide.
 
-The drinker retains all of their normal functions, but the liquid state cushions the impact of enemy attacks, granting a 3/- resistance to all forms of physical damage for 10 rounds.
+Le buveur conserve toutes ses fonctions normales, mais l’état liquide amortit l’impact des attaques ennemies, accordant une résistance de 3/- à toutes les formes de dégâts physiques pendant 10 rounds.
 
-STATISTICS:
+STATISTIQUES :
 
-3/- Slashing Resistance
-3/- Crushing Resistance
-3/- Piercing Resistance
-3/- Missile Resistance
-Weight: 1 lb.~
-@54736     = ~Murky Liquor~
-@54737     = ~With the right ingredients, a skilled alchemist can alter the very nature of a living being. By dissolving rock salt and frog juice in an alcohol-based solution and adding the remains of a deer or antelope digested in a crocodile's stomach, an alchemist can concoct a smoky potion that transmutes the drinker's body into a semi-liquid state.
+3/- Résistance aux dégâts tranchants
+3/- Résistance aux dégâts contondants
+3/- Résistance aux dégâts perforants
+3/- Résistance aux projectiles
+Poids : 0,45 kg (1 lb)~
+@54736     = ~Liqueur Trouble~
+@54737     = ~Avec les bons ingrédients, un alchimiste habile peut altérer la nature même d’un être vivant. En dissolvant du sel gemme et du jus de grenouille dans une solution alcoolisée, et en y ajoutant les restes d’un cerf ou d’une antilope digérés dans l’estomac d’un crocodile, un alchimiste peut concocter une potion fumante qui transmute le corps du buveur en un état semi-liquide.
 
-The drinker retains all of their normal functions, but the liquid state cushions the impact of enemy attacks, granting a 10/- resistance to all forms of physical damage for 10 rounds.
+Le buveur conserve toutes ses fonctions normales, mais l’état liquide amortit l’impact des attaques ennemies, accordant une résistance de 10/- à toutes les formes de dégâts physiques pendant 10 rounds.
 
-STATISTICS:
+STATISTIQUES :
 
-10/- Slashing Resistance
-10/- Crushing Resistance
-10/- Piercing Resistance
-10/- Missile Resistance
-Weight: 1 lb.~
-@4738     = ~Blood Nectar~
-@4739     = ~Contrary to what one might expect from a potion called "Blood Nectar," this deep red, blood-flavored concoction does not, in fact, contain any nectar. It is primarily blood.
+10/- Résistance aux dégâts tranchants
+10/- Résistance aux dégâts contondants
+10/- Résistance aux dégâts perforants
+10/- Résistance aux projectiles
+Poids : 0,45 kg (1 lb)~
+@4738     = ~Nectar de Sang~
+@4739     = ~Contrairement à ce que l’on pourrait attendre d’une potion appelée "Nectar de Sang", cette concoction rouge foncé, au goût de sang, ne contient en réalité aucun nectar. Elle est principalement composée de sang.
 
-Sweetened with honey and apple juice and brewed with ginseng and hummingbird feathers, this potion grants the drinker +2 to all ability scores for 1 hour.
+Sucrée avec du miel et du jus de pomme, et brassée avec du ginseng et des plumes de colibri, cette potion accorde au buveur +2 à toutes les caractéristiques pendant 1 heure.
 
-STATISTICS:
+STATISTIQUES :
 
-+2 Strength
-+2 Dexterity
-+2 Constitution
-+2 Intelligence
-+2 Wisdom
-+2 Charisma
-Weight: 1 lb.~
-@54738     = ~Blood Nectar~
-@54739     = ~Contrary to what one might expect from a potion called "Blood Nectar," this deep red, blood-flavored concoction does not, in fact, contain any nectar. It is primarily blood.
++2 en Force
++2 en Dextérité
++2 en Constitution
++2 en Intelligence
++2 en Sagesse
++2 en Charisme
+Poids : 0,45 kg (1 lb)~
+@54738     = ~Nectar de Sang~
+@54739     = ~Contrairement à ce que l’on pourrait attendre d’une potion appelée "Nectar de Sang", cette concoction rouge foncé, au goût de sang, ne contient en réalité aucun nectar. Elle est principalement composée de sang.
 
-Sweetened with honey and apple juice and brewed with ginseng and hummingbird feathers, this potion grants the drinker +6 to all ability scores for 1 hour.
+Sucrée avec du miel et du jus de pomme, et brassée avec du ginseng et des plumes de colibri, cette potion accorde au buveur +6 à toutes les caractéristiques pendant 1 heure.
 
-STATISTICS:
+STATISTIQUES :
 
-+6 Strength
-+6 Dexterity
-+6 Constitution
-+6 Intelligence
-+6 Wisdom
-+6 Charisma
-Weight: 1 lb.~
-@4740     = ~Purified Ichor~
-@4741     = ~Ichor can come from many sources, but the most convenient source is the bloodstream of a Bhaalspawn. In its unaltered state, the blood is little different from any other--extracting its true power is a complex process.
++6 en Force
++6 en Dextérité
++6 en Constitution
++6 en Intelligence
++6 en Sagesse
++6 en Charisme
+Poids : 0,45 kg (1 lb)~
+@4740     = ~Ichor Purifié~
+@4741     = ~L’ichor peut provenir de nombreuses sources, mais la source la plus pratique est le sang d’un Enfant de Bhaal. À l’état brut, ce sang n’est pas différent de tout autre -- en extraire la véritable puissance est un processus complexe.
 
-First, the Alchemist must conduct research into the parent deity and design a ritual to activate the hidden potential of the ichor. From there, the essence must be filtered out by leeching the blood with mummy wrappings, distillation, and precipitation in a centrifuge, producing a sweet-smelling golden liquid... or, in the case of ichor from evil deities, a foul mixture of grease and coarse dust.
+D’abord, l’alchimiste doit mener des recherches sur la divinité parentale et concevoir un rituel pour activer le potentiel caché de l’ichor. Ensuite, l’essence doit être extraite en léchant le sang avec des bandages de momie, distillée et précipitée dans une centrifugeuse, produisant un liquide doré à l’odeur douce... ou, dans le cas d’ichor provenant de divinités maléfiques, un mélange nauséabond de graisse et de poussière grossière.
 
-Consuming the resulting substance is usually fatal; the purified ichor must be diluted and adapted to the user's system to have any positive effect. The exact method depends on the user, and requires intensive research and testing to discover. If the user is lucky, the method might be as harmless as crushing up some pearls and mixing the ichor with pumpkin juice and butter to produce an odd-flavored but perfectly drinkable potion.
+La consommation de cette substance est généralement fatale ; l’ichor purifié doit être dilué et adapté au système de l’utilisateur pour avoir un effet positif. La méthode exacte dépend de l’utilisateur et nécessite des recherches et des tests intensifs pour être découverte. Si l’utilisateur est chanceux, la méthode pourrait être aussi inoffensive que de broyer des perles et de mélanger l’ichor avec du jus de citrouille et du beurre pour produire une potion étrange mais parfaitement buvable.
 
-If the user is unlucky, administering the dose might require vivisection.
+Si l’utilisateur est malchanceux, l’administration de la dose pourrait nécessiter une vivisection.
 
-Regardless of the method, the final result is a violent twisting of the digestive tract and the spread of the ichor through the user's body. The process is immensely painful and draining, permanently lowering the user's Constitution by 1 and dealing 10d10 poison damage with a save vs. death at -4 for half damage. If the user survives the process, he or she gains +1 to Strength, Dexterity, Intelligence, Wisdom, and Charisma as the divine ichor suffuses their system.
+Quelle que soit la méthode, le résultat final est une torsion violente du tube digestif et la diffusion de l’ichor dans le corps de l’utilisateur. Le processus est extrêmement douloureux et épuisant, réduisant de manière permanente la Constitution de l’utilisateur de 1 point et infligeant 10d10 points de dégâts de poison avec un jet de sauvegarde contre la mort à -4 pour réduire les dégâts de moitié. Si l’utilisateur survit au processus, il ou elle gagne +1 en Force, en Dextérité, en Intelligence, en Sagesse et en Charisme à mesure que l’ichor divin imprègne son système.
 
-If the user dies in the process, he or she may try again after being resurrected, but once the attempt is successful, further doses will have no affected on the imbued character.
+Si l’utilisateur meurt au cours du processus, il ou elle peut réessayer après avoir été ressuscité, mais une fois la tentative réussie, d’autres doses n’auront aucun effet sur le personnage imprégné.
 
-Alchemical Genius: An Alchemist may tweak the recipe to ease the burden on their system, negating the Constitution penalty and resisting the damage entirely.
+Génie Alchimique : Un alchimiste peut ajuster la recette pour alléger le fardeau sur son système, annulant la pénalité de Constitution et résistant entièrement aux dégâts.
 
-STATISTICS:
+STATISTIQUES :
 
-+1 Strength, Dexterity, Intelligence, Wisdom, and Charisma
++1 Force, Dextérité, Intelligence, Sagesse et Charisme
 -1 Constitution
-Duration: Permanent
-Weight: 1 lb.
+Durée : Permanente
+Poids : 0,45 kg (1 lb)
 ~
 @4742     = ~Plasma~
-@4743     = ~A crackling blue gas buzzes inside this small glass container. By collecting energy from various sources and transferring the latent power to an inert gas, an alchemist may create a safe and useful form of plasma.
+@4743     = ~Un gaz bleu crépitant bourdonne à l’intérieur de ce petit récipient en verre. En collectant l’énergie de diverses sources et en transférant la puissance latente dans un gaz inerte, un alchimiste peut créer une forme de plasma sûre et utile.
 
-The user must open the bottle and inhale deeply, holding the gas in their lungs until the plasma is absorbed into the bloodstream. The plasma adds a special boost to every strike the user makes in combat, increasing all attack damage by 4 points. The plasma quickly dissipates, however, and the effects will vanish within 10 rounds.
+L’utilisateur doit ouvrir la bouteille et inhaler profondément, en gardant le gaz dans ses poumons jusqu’à ce que le plasma arrive dans le sang. Le plasma ajoute un bonus spécial à chaque coup porté par l’utilisateur au combat, augmentant de 4 points tous les dégâts d’attaque. Cependant, le plasma se dissipe rapidement et ses effets disparaissent après 10 rounds.
 
-STATISTICS:
+STATISTIQUES :
 
-+4 Attack Damage
-Weight: 1 lb.~
++4 aux Dégâts d’Attaque pendant 10 rounds
+Poids : 0,45 kg (1 lb)~
 @54742     = ~Plasma~
-@54743     = ~A crackling blue gas buzzes inside this small glass container. By collecting energy from various sources and transferring the latent power to an inert gas, an alchemist may create a safe and useful form of plasma.
+@54743     = ~Un gaz bleu crépitant bourdonne à l’intérieur de ce petit récipient en verre. En collectant l’énergie de diverses sources et en transférant la puissance latente dans un gaz inerte, un alchimiste peut créer une forme de plasma sûre et utile.
 
-The user must open the bottle and inhale deeply, holding the gas in their lungs until the plasma is absorbed into the bloodstream. The plasma adds a special boost to every strike the user makes in combat, increasing all attack damage by 6 points. The plasma quickly dissipates, however, and the effects will vanish within 10 rounds.
+L’utilisateur doit ouvrir la bouteille et inhaler profondément, en gardant le gaz dans ses poumons jusqu’à ce que le plasma arrive dans le sang. Le plasma ajoute un bonus spécial à chaque coup porté par l’utilisateur au combat, augmentant de 6 points tous les dégâts d’attaque. Cependant, le plasma se dissipe rapidement et ses effets disparaissent après 10 rounds.
 
-STATISTICS:
+STATISTIQUES :
 
-+6 Attack Damage
-Weight: 1 lb.~
-@4744     = ~Bog Vapor~
-@4745     = ~A blend of eldritch magic and noxious gases, this bottle of smoky greenish vapor is dense with enchantments. The gas itself is nothing but simple air and water extracted from a bog, but the enchantments are more complex. The bottle is lined with residue from slain Will o' Wisps and toxic mushrooms, and the gas imbued with the souls of fallen treants.
++6 aux Dégâts d’Attaque pendant 10 rounds
+Poids : 0,45 kg (1 lb)~
+@4744     = ~Vapeur des Marais~
+@4745     = ~Un mélange de magie étrange et de gaz toxiques, cette bouteille de vapeur verdâtre et fumante est imprégnée d’enchantements. Le gaz lui-même n’est rien de plus que de l’air et de l’eau extraits d’un marais, mais les enchantements sont plus complexes. La bouteille est enduite de résidus de feux follets abattus et de champignons toxiques, et le gaz est imprégné des âmes de tréants défunts.
 
-The wielder may throw the bottle much like a grenade, bypassing any armor or shield bonuses the target may possess. Any creature unfortunate enough to touch the fumes will suffer a cumulative -3 penalty to spell and energy resistances as the enchantment seeps into their system, rendering them vulnerable to hostile spells. The effect is short-lived, however, and will wear off after five rounds.
+Le porteur peut lancer la bouteille comme une grenade, contournant tout bonus d’armure ou de bouclier que la cible pourrait posséder. Toute créature malheureusement touchée par les fumées subira un malus cumulatif de -3 à la résistance aux sorts et à l’énergie à mesure que l’enchantement s’infiltre dans son système, la rendant vulnérable aux sorts hostiles. L’effet est de courte durée et disparaîtra après 5 rounds.
 
-STATISTICS:
+STATISTIQUES :
 
-Damage:  1d3
-Damage Type:  Missile (bludgeoning)
-Special:  -3 Spell Resistance and -3 resistance to fire, cold, electricity, and acid damage (cumulative) for 5 rounds
-Weight: 0 lb.
-Required Feat:  Simple Weapons, Missile
-Type:  One-handed~
-@54744     = ~Bog Vapor~
-@54745     = ~A blend of eldritch magic and noxious gases, this bottle of smoky greenish vapor is dense with enchantments. The gas itself is nothing but simple air and water extracted from a bog, but the enchantments are more complex. The bottle is lined with residue from slain Will o' Wisps and toxic mushrooms, and the gas imbued with the souls of fallen treants.
+Dégâts : 1d3
+Type de dégâts : projectile (contondants)
+Spécial : -3 Résistance aux sorts et -3 en résistance au feu, au froid, à l’électricité et aux dégâts d’acide (cumulable) pendant 5 rounds
+Poids : 0
+Compétence : arme courante, projectile
+Type d’arme : à une main~
+@54744     = ~Vapeur des Marais~
+@54745     = ~Un mélange de magie étrange et de gaz toxiques, cette bouteille de vapeur verdâtre et fumante est imprégnée d’enchantements. Le gaz lui-même n’est rien de plus que de l’air et de l’eau extraits d’un marais, mais les enchantements sont plus complexes. La bouteille est enduite de résidus de feux follets abattus et de champignons toxiques, et le gaz est imprégné des âmes de tréants défunts.
 
-The wielder may throw the bottle much like a grenade, bypassing any armor or shield bonuses the target may possess. Any creature unfortunate enough to touch the fumes will suffer a cumulative -5 penalty to spell and energy resistances as the enchantment seeps into their system, rendering them vulnerable to hostile spells. The effect is short-lived, however, and will wear off after five rounds.
+Le porteur peut lancer la bouteille comme une grenade, contournant tout bonus d’armure ou de bouclier que la cible pourrait posséder. Toute créature malheureusement touchée par les fumées subira un malus cumulatif de -5 à la résistance aux sorts et à l’énergie à mesure que l’enchantement s’infiltre dans son système, la rendant vulnérable aux sorts hostiles. L’effet est de courte durée et disparaîtra après 5 rounds.
 
-STATISTICS:
+STATISTIQUES :
 
-Damage:  1d3
-Damage Type:  Missile (bludgeoning)
-Special:  -5 Spell Resistance and -5 resistance to fire, cold, electricity, and acid damage (cumulative) for 5 rounds
-Weight: 0 lb.
-Required Feat:  Simple Weapons, Missile
-Type:  One-handed~
-@4746     = ~Fairy Oil~
-@4747     = ~Fey creatures are tricky to find and harder to catch, but an alchemist who manages to capture enough of them can steal those powers, if only for a short time. The liquid itself is nothing more than peat and crushed buttercups mixed with olive oil, but if the alchemist can convince a group of fairies to bestow the oil with their magic--or if the alchemist mixes the oil with the fairies' blood and powdered bones--this potion will enshroud the drinker with a small cloud of illusory magic similar to the Mirror Image spell.
+Dégâts : 1d3
+Type de dégâts : projectile (contondants)
+Spécial : -5 Résistance aux sorts et -5 en résistance au feu, au froid, à l’électricité et aux dégâts d’acide (cumulable) pendant 5 rounds
+Poids : 0
+Compétence : arme courante, projectile
+Type d’arme : à une main~
+@4746     = ~Huile de Fée~
+@4747     = ~Les créatures féeriques sont difficiles à trouver et encore plus à capturer, mais un alchimiste qui parvient à en capturer suffisamment peut en voler les pouvoirs, ne serait-ce que pour un temps limité. Le liquide lui-même n’est rien de plus que de la tourbe et des boutons d’or écrasés mélangés à de l’huile d’olive, mais si l’alchimiste peut convaincre un groupe de fées d’imprégner l’huile de leur magie – ou si l’alchimiste mélange l’huile avec le sang et les os en poudre des fées – cette potion enveloppera le buveur d’un petit nuage de magie illusoire semblable au sort Image miroir.
 
-STATISTICS:
+STATISTIQUES :
 
-Mirror Image (4 images)
-Weight: 1 lb.~
-@54746     = ~Fairy Oil~
-@54747     = ~Fey creatures are tricky to find and harder to catch, but an alchemist who manages to capture enough of them can steal those powers, if only for a short time. The liquid itself is nothing more than peat and crushed buttercups mixed with olive oil, but if the alchemist can convince a group of fairies to bestow the oil with their magic--or if the alchemist mixes the oil with the fairies' blood and powdered bones--this potion will enshroud the drinker with a small cloud of illusory magic similar to the Mirror Image spell.
+Image Miroir (4 images)
+Poids : 0,45 kg (1 lb)~
+@54746     = ~Huile de Fée~
+@54747     = ~Les créatures féeriques sont difficiles à trouver et encore plus à capturer, mais un alchimiste qui parvient à en capturer suffisamment peut en voler les pouvoirs, ne serait-ce que pour un temps limité. Le liquide lui-même n’est rien de plus que de la tourbe et des boutons d’or écrasés mélangés à de l’huile d’olive, mais si l’alchimiste peut convaincre un groupe de fées d’imprégner l’huile de leur magie – ou si l’alchimiste mélange l’huile avec le sang et les os en poudre des fées – cette potion enveloppera le buveur d’un petit nuage de magie illusoire semblable au sort Image miroir.
 
-STATISTICS:
+STATISTIQUES :
 
-Mirror Image (8 images)
-Weight: 1 lb.~
-@4748     = ~Magnetic Fluid~
-@4749     = ~Despite its viscous nature, this fluid is actually an alloy of chromium and iron, kept in its liquid form by powerful transmutations. By heating and cooling the alloy in the presence of magnets and using a magical fire to burn other rare metals in its presence, an alchemist can add a powerful magnetic field to the liquid alloy which only activates when the fluid is drunk. The magnetic field is incredibly dangerous to the drinker, as it pulls weapons directly to the drinker's body, imposing a -5 penalty to hit, damage, and AC as well as a -10 penalty to all forms of physical damage.
+Image Miroir (8 images)
+Poids : 0,45 kg (1 lb)~
+@4748     = ~Fluide Magnétique~
+@4749     = ~Malgré sa nature visqueuse, ce fluide est en réalité un alliage de chrome et de fer, maintenu à l’état liquide par de puissantes transmutations. En chauffant et refroidissant l’alliage en présence d’aimants et en utilisant un feu magique pour brûler d’autres métaux rares en sa présence, un alchimiste peut ajouter un puissant champ magnétique au liquide allié qui ne s’active que lorsque le fluide est bu. Le champ magnétique est incroyablement dangereux pour le buveur, car il attire les armes directement sur le corps du buveur, imposant un malus de -5 aux jets d’attaque, de dégâts et à la classe d’armure ainsi qu’un malus de -10 à toutes les formes de dégâts physiques.
 
-However, the drinker can will this magnetic field to produce a violent backlash against his or her attackers that inflicts 10d4 crushing damage with every strike.  The field will dissipate after 10 rounds.
+Cependant, le buveur peut forcer ce champ magnétique à produire une violente réaction contre ses assaillants qui inflige 10d4 points de dégâts contondants à chaque coup. Le champ se dissipera après 10 rounds.
 
-STATISTICS:
+STATISTIQUES :
 
-Magnetic Backlash: Attackers suffer 10d4 crushing damage per hit
--5 Attack Bonus
--5 Attack Damage
--5 AC
--10 Slashing, Crushing, Piercing, and Missile Resistance
-Weight: 1 lb.~
-@54748     = ~Magnetic Fluid~
-@54749     = ~Despite its viscous nature, this fluid is actually an alloy of chromium and iron, kept in its liquid form by powerful transmutations. By heating and cooling the alloy in the presence of magnets and using a magical fire to burn other rare metals in its presence, an alchemist can add a powerful magnetic field to the liquid alloy which only activates when the fluid is drunk. The magnetic field is incredibly dangerous to the drinker, as it pulls weapons directly to the drinker's body, imposing a -5 penalty to hit, damage, and AC as well as a -15 penalty to all forms of physical damage.
+Réaction Magnétique : Les assaillants subissent 10d4 dégâts contondants par coup
+-5 au bonus d’attaque
+-5 aux dégâts d’attaque
+-5 à la classe d’armure
+-10 Résistance aux dégâts tranchants, contondants, perforants, et aux projectiles
+Se dissipe après 10 rounds
+Poids : 0,45 kg (1 lb)~
+@54748     = ~Fluide Magnétique~
+@54749     = ~Malgré sa nature visqueuse, ce fluide est en réalité un alliage de chrome et de fer, maintenu à l’état liquide par de puissantes transmutations. En chauffant et refroidissant l’alliage en présence d’aimants et en utilisant un feu magique pour brûler d’autres métaux rares en sa présence, un alchimiste peut ajouter un puissant champ magnétique au liquide allié qui ne s’active que lorsque le fluide est bu. Le champ magnétique est incroyablement dangereux pour le buveur, car il attire les armes directement sur le corps du buveur, imposant un malus de -5 aux jets d’attaque, de dégâts et à la classe d’armure ainsi qu’un malus de -15 à toutes les formes de dégâts physiques.
 
-However, the drinker can will this magnetic field to produce a violent backlash against his or her attackers that inflicts 15d4 crushing damage with every strike.  The field will dissipate after 10 rounds.
+Cependant, le buveur peut forcer ce champ magnétique à produire une violente réaction contre ses assaillants qui inflige 15d4 points de dégâts contondants à chaque coup. Le champ se dissipera après 10 rounds.
 
-STATISTICS:
+STATISTIQUES :
 
-Magnetic Backlash: Attackers suffer 15d4 crushing damage per hit
--5 Attack Bonus
--5 Attack Damage
--5 AC
--15 Slashing, Crushing, Piercing, and Missile Resistance
-Weight: 1 lb.~
-@4750     = ~Burning Syrup~
-@4751     = ~This thick reddish syrup, composed of the nectar and sap of several flowers and trees, burns with anti-magic energy. By pouring the syrup over a magical item and then destroying it, an alchemist may infuse the syrup with disruptive forces. This may require destroying multiple magical items depending on their power.
+Réaction Magnétique : Les assaillants subissent 15d4 dégâts contondants par coup
+-5 au bonus d’attaque
+-5 aux dégâts d’attaque
+-5 à la classe d’armure
+-15 Résistance aux dégâts tranchants, contondants, perforants, et aux projectiles
+Se dissipe après 10 rounds
+Poids : 0,45 kg (1 lb)~
+@4750     = ~Sirop Ardant~
+@4751     = ~Ce sirop épais et rougeâtre, composé du nectar et de la sève de plusieurs fleurs et arbres, brûle d’une énergie d’anti-magie. En versant le sirop sur un objet magique, puis en le détruisant, un alchimiste peut infuser le sirop de forces perturbatrices. Cela peut nécessiter de détruire plusieurs objets magiques en fonction de leur puissance.
 
-When drunk, the syrup creates an anti-magic field around the user's body, automatically dispelling all dispellable effects (both positive and negative) as well as granting 15/- spell resistance for 10 rounds. The field also interferes with the user's own spells, if any, increasing spell failure by 25%.
+Lorsqu’il est bu, le sirop crée un champ d’anti-magie autour du corps de l’utilisateur, dissipant automatiquement tous les effets dissipables (à la fois positifs et négatifs) et accordant une résistance aux sorts de 15/- pour 10 rounds. Le champ interfère également avec les propres sorts de l’utilisateur, augmentant l’échec de sorts de 25%.
 
-STATISTICS:
+STATISTIQUES :
 
-Dispels all dispellable effects on the drinker
-Resistance: 15/- Spell Resistance
-25% Spell Failure
-Weight: 1 lb.~
-@54750     = ~Burning Syrup~
-@54751     = ~This thick reddish syrup, composed of the nectar and sap of several flowers and trees, burns with anti-magic energy. By pouring the syrup over a magical item and then destroying it, an alchemist may infuse the syrup with disruptive forces. This may require destroying multiple magical items depending on their power.
+Dissipe tous les effets dissipables sur le buveur
+Résistance : 15/- Résistance aux sorts pendant 10 rounds
+25% d’échec des sorts pendant 10 rounds
+Poids : 0,45 kg (1 lb)~
+@54750     = ~Sirop Ardant~
+@54751     = ~Ce sirop épais et rougeâtre, composé du nectar et de la sève de plusieurs fleurs et arbres, brûle d’une énergie d’anti-magie. En versant le sirop sur un objet magique, puis en le détruisant, un alchimiste peut infuser le sirop de forces perturbatrices. Cela peut nécessiter de détruire plusieurs objets magiques en fonction de leur puissance.
 
-When drunk, the syrup creates an anti-magic field around the user's body, automatically dispelling all dispellable effects (both positive and negative) as well as granting 30/- spell resistance for 10 rounds. The field also interferes with the user's own spells, if any, increasing spell failure by 50%.
+Lorsqu’il est bu, le sirop crée un champ d’anti-magie autour du corps de l’utilisateur, dissipant automatiquement tous les effets dissipables (à la fois positifs et négatifs) et accordant une résistance aux sorts de 30/- pour 10 rounds. Le champ interfère également avec les propres sorts de l’utilisateur, augmentant l’échec de sorts de 50%.
 
-STATISTICS:
+STATISTIQUES :
 
-Dispels all dispellable effects on the drinker
-Resistance: 30/- Spell Resistance
-50% Spell Failure
-Weight: 1 lb.~
-@4752     = ~Snake Lymph~
-@4753     = ~Yuan-ti alchemists use a special blend of venom and assorted herbs to transform humanoid captives into histachii slaves. The process is irreversible and destroys the victim's mind, but it grants them unusual powers that make them helpful servants for their Yuan-ti masters.
+Dissipe tous les effets dissipables sur le buveur
+Résistance : 30/- Résistance aux sorts pendant 10 rounds
+50% d’échec des sorts pendant 10 rounds
+Poids : 0,45 kg (1 lb)~
+@4752     = ~Lymphe de Serpent~
+@4753     = ~Les alchimistes yuan-ti utilisent un mélange spécial de venin et d’herbes diverses pour transformer les captifs humanoïdes en esclaves histachii. Le processus est irréversible et détruit l’esprit de la victime, mais il leur confère des pouvoirs inhabituels qui en font des serviteurs utiles pour leurs maîtres yuan-ti.
 
-Much of the science is unknown to humanoids, but an Alchemist may concoct a special version of the histachii brew from Yuan-ti lymph and mandrake root that will grant the drinker some limited resistance to poison. For 1 hour after the lymph is drunk, the user will enjoy 6/- poison resistance.
+Une grande partie de la science est inconnue des humanoïdes, mais un alchimiste peut concocter une version spéciale du brouet histaksii à partir de lymphe de yuan-ti et de racine de mandragore, qui conférera au buveur une résistance limitée au poison. Pendant 1 heure après avoir bu la lymphe, l’utilisateur bénéficiera d’une résistance de 6/- aux dégâts de poison.
 
-STATISTICS:
+STATISTIQUES :
 
-Resistance: 6/- Poison Resistance
-Weight: 1 lb.~
-@54752     = ~Snake Lymph~
-@54753     = ~Yuan-ti alchemists use a special blend of venom and assorted herbs to transform humanoid captives into histachii slaves. The process is irreversible and destroys the victim's mind, but it grants them unusual powers that make them helpful servants for their Yuan-ti masters.
+Résistance : 6/- Résistance au poison pendant 1 heure
+Poids : 0,45 kg (1 lb)~
+@54752     = ~Lymphe de Serpent~
+@54753     = ~Les alchimistes yuan-ti utilisent un mélange spécial de venin et d’herbes diverses pour transformer les captifs humanoïdes en esclaves histachii. Le processus est irréversible et détruit l’esprit de la victime, mais il leur confère des pouvoirs inhabituels qui en font des serviteurs utiles pour leurs maîtres yuan-ti.
 
-Much of the science is unknown to humanoids, but an Alchemist may concoct a special version of the histachii brew from Yuan-ti lymph and mandrake root that will grant the drinker some limited resistance to poison. For 1 hour after the lymph is drunk, the user will enjoy 30/- poison resistance.
+Une grande partie de la science est inconnue des humanoïdes, mais un alchimiste peut concocter une version spéciale du brouet histaksii à partir de lymphe de yuan-ti et de racine de mandragore, qui conférera au buveur une résistance limitée au poison. Pendant 1 heure après avoir bu la lymphe, l’utilisateur bénéficiera d’une résistance de 30/- aux dégâts de poison.
 
-STATISTICS:
+STATISTIQUES :
 
-Resistance: 30/- Poison Resistance
-Weight: 1 lb.~
-@4754     = ~Vampire Milk~
-@4755     = ~This freezing bottle of bluish liquid is a mix of flour, blueberries, fine cheeses, and the breast milk of a slain vampire, wight, or bodak. Partly fermented and treated with lime and salt, this potion becomes a bitter fluid indistinguishable from paint. The concoction carries a large amount of negative energy with it, and it would be fatal to most living creatures. Undead, however, could drink it to restore health. This healing is similar to that of a vampire's regeneration: it will close mortal wounds and regrow lost body parts, but it will not restore lost blood.
+Résistance : 30/- Résistance au poison pendant 1 heure
+Poids : 0,45 kg (1 lb)~
+@4754     = ~Lait de Vampire~
+@4755     = ~Cette bouteille glaciale de liquide bleuâtre est un mélange de farine, de myrtilles, de fromages fins, et de lait maternel d’un vampire, d’un revenant ou d’un bodak tué. Partiellement fermentée et traitée avec de la chaux et du sel, cette potion devient un liquide amer indiscernable de la peinture. La concoction porte une grande quantité d’énergie négative, ce qui la rendrait fatale à la plupart des créatures vivantes. Cependant, les morts-vivants pourraient la boire pour restaurer leur santé. Cette guérison est similaire à la régénération d’un vampire : elle refermera les blessures mortelles et fera repousser les membres perdus, mais elle ne restaurera pas le sang perdu.
 
-STATISTICS:
+STATISTIQUES :
 
-Heals 60 hit points to undead, deals 60 damage to anyone else
-Weight: 1 lb.~
-@54754     = ~Vampire Milk~
-@54755     = ~This freezing bottle of bluish liquid is a mix of flour, blueberries, fine cheeses, and the breast milk of a slain vampire, wight, or bodak. Partly fermented and treated with lime and salt, this potion becomes a bitter fluid indistinguishable from paint. The concoction carries a large amount of negative energy with it, and it would be fatal to most living creatures. Undead, however, could drink it to restore health. This healing is similar to that of a vampire's regeneration: it will close mortal wounds and regrow lost body parts, but it will not restore lost blood.
+Soigne 60 points de vie aux morts-vivants, inflige 60 points de dégâts à toute autre créature
+Poids : 0,45 kg (1 lb)~
+@54754     = ~Lait de Vampire~
+@54755     = ~Cette bouteille glaciale de liquide bleuâtre est un mélange de farine, de myrtilles, de fromages fins, et de lait maternel d’un vampire, d’un revenant ou d’un bodak tué. Partiellement fermentée et traitée avec de la chaux et du sel, cette potion devient un liquide amer indiscernable de la peinture. La concoction porte une grande quantité d’énergie négative, ce qui la rendrait fatale à la plupart des créatures vivantes. Cependant, les morts-vivants pourraient la boire pour restaurer leur santé. Cette guérison est similaire à la régénération d’un vampire : elle refermera les blessures mortelles et fera repousser les membres perdus, mais elle ne restaurera pas le sang perdu.
 
-STATISTICS:
+STATISTIQUES :
 
-Heals 150 hit points to undead, deals 150 damage to anyone else
-Weight: 1 lb.~
-@4756     = ~Moldy Poultice~
-@4757     = ~This poultice is a small jar of very fertile soil topped with a lush green moss. An alchemist must take special care when cultivating this moss, constantly making sure it has just the right amount of water and nutrients to thrive. Singing lullabies, burning incense, and paying compliments to the moss are all critical parts of the process.
+Soigne 150 points de vie aux morts-vivants, inflige 150 points de dégâts à toute autre créature
+Poids : 0,45 kg (1 lb)~
+@4756     = ~Cataplasme Moisi~
+@4757     = ~Ce cataplasme est un petit pot de terre très fertile recouvert de mousse verte luxuriante. Un alchimiste doit prendre soin de cultiver cette mousse, en s’assurant constamment qu’elle reçoit juste la bonne quantité d’eau et de nutriments pour prospérer. Chanter des berceuses, brûler de l’encens et complimenter la mousse sont tous des éléments critiques du processus.
 
-Nurtured with love and blessed with plenty of exposure to moonlight, this moss will develop a faint glow. If the alchemist has treated it well, the moss will gladly spend its precious energy to bring a dead creature back to life.
+Nourrie avec amour et bénie par une exposition abondante à la lumière de la lune, cette mousse développera une faible lueur. Si l’alchimiste l’a bien traitée, la mousse sacrifiera volontiers son énergie précieuse pour ramener à la vie une créature morte.
 
-Its power spent and its personality sacrificed for the sake of the alchemist's fallen comrade, the moss will lose its glow. The user is well advised to throw the moss away--keeping it around tends to make one somber, and the moss wouldn't want its best friend to be sad.
+Une fois son pouvoir dépensé et sa personnalité sacrifiée pour le bien du camarade tombé de l’alchimiste, la mousse perdra sa lueur. Il est conseillé à l’utilisateur de jeter la mousse – la conserver tend à rendre mélancolique, et la mousse ne voudrait pas que son meilleur ami soit triste.
 
-STATISTICS:
+STATISTIQUES :
 
-Resurrects one creature
-Makes the user sigh and look wistfully into the distance every now and then
-Weight: 1 lb.
+Ressuscite une créature
+Fait soupirer l’utilisateur et lui donne un air nostalgique de temps à autre
+Poids : 0,45 kg (1 lb)
 ~
-@4758     = ~(sighs and looks wistfully into the distance)~
-@4759     = ~Beetle Grease~
-@4760     = ~Most people would object to slathering their bodies with grease made from smashed beetles. Adventurers with no such objections will gain a +4 bonus to their Reflex saves for 1 hour when applying this grease to their skin.
+@4758     = ~(soupire et regarde au loin d’un air nostalgique)~
+@4759     = ~Graisse de Scarabée~
+@4760     = ~La plupart des gens s’opposeraient à enduire leur corps de graisse faite à partir de scarabées écrasés. Les aventuriers qui n’ont pas de telles objections bénéficieront d’un bonus de +4 à leurs jets de sauvegarde de Réflexes pendant 1 heure lorsqu’ils appliquent cette graisse sur leur peau.
 
-STATISTICS:
+STATISTIQUES :
 
-+4 to Reflex saves
-Weight: 1 lb.~
-@54759     = ~Beetle Grease~
-@54760     = ~Most people would object to slathering their bodies with grease made from smashed beetles. Adventurers with no such objections will gain a +8 bonus to their Reflex saves for 1 hour when applying this grease to their skin.
++4 aux jets de sauvegarde de Réflexes pendant 1 heure
+Poids : 0,45 kg (1 lb)~
+@54759     = ~Graisse de Scarabée~
+@54760     = ~La plupart des gens s’opposeraient à enduire leur corps de graisse faite à partir de scarabées écrasés. Les aventuriers qui n’ont pas de telles objections bénéficieront d’un bonus de +8 à leurs jets de sauvegarde de Réflexes pendant 1 heure lorsqu’ils appliquent cette graisse sur leur peau.
 
-STATISTICS:
+STATISTIQUES :
 
-+8 to Reflex saves
-Weight: 1 lb.~
-@4761     = ~Beholder Sauce~
-@4762     = ~Comprised of the blood, lymph, tears, and eyeball juice of a (preferably) dead beholder, this tangy sauce will temporarily numb the user's eyes so that they can be transmuted into several blobby stalks.  Aside from blurry vision and no small amount of discomfort, this potion allows any spellcaster to begin casting a new spell as soon as he or she finishes casting the previous one, eliminating the normal delay between spellcasting.  This allows the user to cast more than one spell in a single round, though the character cannot benefit from reductions in casting time.  After 2 rounds, the user's eyes will return to their normal form and the effect of the potion will wear off.
++8 aux jets de sauvegarde de Réflexes pendant 1 heure
+Poids : 0,45 kg (1 lb)~
+@4761     = ~Sauce de Tyrannoeil~
+@4762     = ~Composée du sang, de la lymphe, des larmes et du jus d’yeux d’un tyrannoeil (de préférence mort), cette sauce piquante engourdira temporairement les yeux de l’utilisateur afin qu’ils puissent être transmutés en plusieurs tiges globuleuses. Mis à part une vision floue et un certain inconfort, cette potion permet à tout lanceur de sorts de commencer à lancer un nouveau sort dès qu’il ou elle a fini de lancer le précédent, éliminant le délai normal entre les incantations. Cela permet à l’utilisateur de lancer plus d’un sort par round, bien que le personnage ne puisse pas bénéficier de la réduction du temps d’incantation. Après 2 rounds, les yeux de l’utilisateur récupéreront leur forme normale et l’effet de la potion s’estompera.
 
-STATISTICS:
+STATISTIQUES :
 
-Improved Alacrity
-Weight: 1 lb.~
-@54761     = ~Beholder Sauce~
-@54762     = ~Comprised of the blood, lymph, tears, and eyeball juice of a (preferably) dead beholder, this tangy sauce will temporarily numb the user's eyes so that they can be transmuted into several blobby stalks.  Aside from blurry vision and no small amount of discomfort, this potion allows any spellcaster to begin casting a new spell as soon as he or she finishes casting the previous one, eliminating the normal delay between spellcasting.  This allows the user to cast more than one spell in a single round, though the character cannot benefit from reductions in casting time.  After 3 rounds, the user's eyes will return to their normal form and the effect of the potion will wear off.
+Promptitude améliorée pendant 2 rounds
+Poids : 0,45 kg (1 lb)~
+@54761     = ~Sauce de Tyrannoeil~
+@54762     = ~Composée du sang, de la lymphe, des larmes et du jus d’yeux d’un tyrannoeil (de préférence mort), cette sauce piquante engourdira temporairement les yeux de l’utilisateur afin qu’ils puissent être transmutés en plusieurs tiges globuleuses. Mis à part une vision floue et un certain inconfort, cette potion permet à tout lanceur de sorts de commencer à lancer un nouveau sort dès qu’il ou elle a fini de lancer le précédent, éliminant le délai normal entre les incantations. Cela permet à l’utilisateur de lancer plus d’un sort par round, bien que le personnage ne puisse pas bénéficier de la réduction du temps d’incantation. Après 3 rounds, les yeux de l’utilisateur récupéreront leur forme normale et l’effet de la potion s’estompera.
 
-STATISTICS:
+STATISTIQUES :
 
-Improved Alacrity
-Weight: 1 lb.~
-@4763     = ~Coral Balm~
-@4764     = ~By tearing off chunks from a coral reef, crushing the coral into powder, and mixing it with sea cucumber paste, an alchemist may create a bluish balm.  When smeared over the user's body, the balm will expand into a powerful shield,  trapping the user inside but protecting them from all forms of attack.  The shield will absorb 100 hit points before shattering.
+Promptitude améliorée pendant 3 rounds
+Poids : 0,45 kg (1 lb)~
+@4763     = ~Baume de Corail~
+@4764     = ~En arrachant des morceaux d’un récif corallien, en les écrasant en poudre et en les mélangeant à de la pâte de concombre de mer, un alchimiste peut créer un baume bleuté. Lorsqu’il est appliqué sur le corps de l’utilisateur, le baume se dilate pour former un bouclier puissant, piégeant l’utilisateur à l’intérieur mais le protégeant de toutes formes d’attaque. Le bouclier absorbe 100 points de vie avant de se briser.
 
-STATISTICS:
+STATISTIQUES :
 
-Tortoise Shell (100 hit points)
-Weight: 1 lb.~
-@54763     = ~Coral Balm~
-@54764     = ~By tearing off chunks from a coral reef, crushing the coral into powder, and mixing it with sea cucumber paste, an alchemist may create a bluish balm.  When smeared over the user's body, the balm will expand into a powerful shield,  trapping the user inside but protecting them from all forms of attack.  The shield will absorb 400 hit points before shattering.
+Carapace de Tortue (100 points de vie)
+Poids : 0,45 kg (1 lb)~
+@54763     = ~Baume de Corail~
+@54764     = ~En arrachant des morceaux d’un récif corallien, en les écrasant en poudre et en les mélangeant à de la pâte de concombre de mer, un alchimiste peut créer un baume bleuté. Lorsqu’il est appliqué sur le corps de l’utilisateur, le baume se dilate pour former un bouclier puissant, piégeant l’utilisateur à l’intérieur mais le protégeant de toutes formes d’attaque. Le bouclier absorbe 400 points de vie avant de se briser.
 
-STATISTICS:
+STATISTIQUES :
 
-Tortoise Shell (400 hit points)
-Weight: 1 lb.~
-@4765     = ~Feyr Secretion~
-@4766     = ~This bottle contains a purplish goo secreted by a feyr's skin.  A series of magical enchantments transforms the goo into a powerful potion capable of bestowing an ethereal state on the drinker.  All enemy attacks have a 50% chance of failing outright, as per the Blink spell.  The user's attacks and spells, however, also suffer a 20% chance of failure.  The effects last for 10 rounds.
+Carapace de Tortue (400 points de vie)
+Poids : 0,45 kg (1 lb)~
+@4765     = ~Sécrétion de Feyr~
+@4766     = ~Cette bouteille contient une boue pourpre secrétée par la peau d’un fihyr. Une série d’enchantements magiques transforme la boue en une potion puissante capable de conférer un état éthéré au buveur. Toutes les attaques ennemies ont 50% de chances d’échouer complètement, comme avec le sort Clignotement. Cependant, les attaques et sorts de l’utilisateur subiront également 20% de chances d’échec. Les effets durent 10 rounds.
 
-STATISTICS:
+STATISTIQUES :
 
-Blink for 10 rounds
-Weight: 1 lb.~
-@54765     = ~Feyr Secretion~
-@54766     = ~This bottle contains a purplish goo secreted by a feyr's skin.  A series of magical enchantments transforms the goo into a powerful potion capable of bestowing an ethereal state on the drinker.  All enemy attacks have a 50% chance of failing outright, as per the Blink spell.  The user's attacks and spells, however, also suffer a 20% chance of failure.  The effects last for 20 rounds.
+Clignotement pendant 10 rounds
+Poids : 0,45 kg (1 lb)~
+@54765     = ~Sécrétion de Feyr~
+@54766     = ~Cette bouteille contient une boue pourpre secrétée par la peau d’un fihyr. Une série d’enchantements magiques transforme la boue en une potion puissante capable de conférer un état éthéré au buveur. Toutes les attaques ennemies ont 50% de chances d’échouer complètement, comme avec le sort Clignotement. Cependant, les attaques et sorts de l’utilisateur subiront également 20% de chances d’échec. Les effets durent 20 rounds.
 
-STATISTICS:
+STATISTIQUES :
 
-Blink for 20 rounds
-Weight: 1 lb.~
-@4767     = ~Fire Salamander Jelly~
-@4768     = ~A spicy mix of gum arabic and the blood of a fire salamander, this gelatinous compound will erect a wall of flame around the drinker, decreasing all cold damage by half and inflicting 1d6+10 fire damage to all attackers.  The effect lasts for 10 rounds or until dispelled.
+Clignotement pendant 20 rounds
+Poids : 0,45 kg (1 lb)~
+@4767     = ~Gelée de Salamandre de Feu~
+@4768     = ~Un mélange épicé de gomme arabique et de sang de salamandre de feu, ce composé gélatineux érigera un mur de flammes autour du buveur, réduisant de moitié tous les dégâts de froid et infligeant 1d6+10 dégâts de feu à tous les attaquants. L’effet dure 10 rounds ou jusqu’à ce qu’il soit dissipé.
 
-STATISTICS:
+STATISTIQUES :
 
-Fire Shield, Red
-Weight: 1 lb.~
-@54767     = ~Fire Salamander Jelly~
-@54768     = ~A spicy mix of gum arabic and the blood of a fire salamander, this gelatinous compound will erect a wall of flame around the drinker, decreasing all cold damage by half and inflicting 1d6+20 fire damage to all attackers.  The effect lasts for 10 rounds or until dispelled.
+Bouclier de feu (rouge) pendant 10 rounds
+Poids : 0,45 kg (1 lb)~
+@54767     = ~Gelée de Salamandre de Feu~
+@54768     = ~Un mélange épicé de gomme arabique et de sang de salamandre de feu, ce composé gélatineux érigera un mur de flammes autour du buveur, réduisant de moitié tous les dégâts de froid et infligeant 1d6+20 dégâts de feu à tous les attaquants. L’effet dure 10 rounds ou jusqu’à ce qu’il soit dissipé.
 
-STATISTICS:
+STATISTIQUES :
 
-Fire Shield, Red
-Weight: 1 lb.~
-@4769     = ~Frost Salamander Jelly~
-@4770     = ~A minty jelly composed of gum arabic and the blood of a frost salamander, this gelatinous compound will erect a wall of frost around the drinker, decreasing all fire damage by half and inflicting 1d6+10 cold damage to all attackers.  The effect lasts for 10 rounds or until dispelled.
+Bouclier de feu (rouge) pendant 10 rounds
+Poids : 0,45 kg (1 lb)~
+@4769     = ~Gelée de Salamandre de Givre~
+@4770     = ~Une gelée mentholée composée de gomme arabique et de sang de salamandre de givre, ce composé gélatineux érigera un mur de givre autour du buveur, réduisant de moitié tous les dégâts de feu et infligeant 1d6+10 dégâts de froid à tous les attaquants. L’effet dure 10 rounds ou jusqu’à ce qu’il soit dissipé.
 
-STATISTICS:
+STATISTIQUES :
 
-Fire Shield, Blue
-Weight: 1 lb.~
-@54769     = ~Frost Salamander Jelly~
-@54770     = ~A minty jelly composed of gum arabic and the blood of a frost salamander, this gelatinous compound will erect a wall of frost around the drinker, decreasing all fire damage by half and inflicting 1d6+20 cold damage to all attackers.  The effect lasts for 10 rounds or until dispelled.
+Bouclier de feu (bleu) pendant 10 rounds
+Poids : 0,45 kg (1 lb)~
+@54769     = ~Gelée de Salamandre de Givre~
+@54770     = ~Une gelée mentholée composée de gomme arabique et de sang de salamandre de givre, ce composé gélatineux érigera un mur de givre autour du buveur, réduisant de moitié tous les dégâts de feu et infligeant 1d6+20 dégâts de froid à tous les attaquants. L’effet dure 10 rounds ou jusqu’à ce qu’il soit dissipé.
 
-STATISTICS:
+STATISTIQUES :
 
-Fire Shield, Blue
-Weight: 1 lb.~
-@4771     = ~Fish Lubricant~
-@4772     = ~Fish oil, sesame oil, a unique set of enchantments, and very fine ash make up this greasy lubricant.  When the user applies this oil to the skin and activates the command word, the lubricant will begin to vibrate faintly.  Any attempt hinder the user's movement will fail so long as the lubricant is active, which will last for 10 rounds or until dispelled.
+Bouclier de feu (bleu) pendant 10 rounds
+Poids : 0,45 kg (1 lb)~
+@4771     = ~Lubrifiant de Poisson~
+@4772     = ~L’huile de poisson, l’huile de sésame, un ensemble unique d’enchantements et des cendres très fines composent ce lubrifiant graisseux. Lorsque l’utilisateur applique cette huile sur la peau et active le mot de commande, le lubrifiant commencera à vibrer faiblement. Toute tentative d’entraver le mouvement de l’utilisateur échouera tant que le lubrifiant est actif, ce qui durera 10 rounds ou jusqu’à ce qu’il soit dissipé.
 
-STATISTICS:
+STATISTIQUES :
 
-Freedom of Movement
-Weight: 1 lb.~
-@54771     = ~Fish Lubricant~
-@54772     = ~Fish oil, sesame oil, a unique set of enchantments, and very fine ash make up this greasy lubricant.  When the user applies this oil to the skin and activates the command word, the lubricant will begin to vibrate faintly.  Any attempt hinder the user's movement will fail so long as the lubricant is active, which will last for 1 hour or until dispelled.
+Liberté de mouvement
+Poids : 0,45 kg (1 lb)~
+@54771     = ~Lubrifiant de Poisson~
+@54772     = ~L’huile de poisson, l’huile de sésame, un ensemble unique d’enchantements et des cendres très fines composent ce lubrifiant graisseux. Lorsque l’utilisateur applique cette huile sur la peau et active le mot de commande, le lubrifiant commencera à vibrer faiblement. Toute tentative d’entraver le mouvement de l’utilisateur échouera tant que le lubrifiant est actif, ce qui durera 1 heure ou jusqu’à ce qu’il soit dissipé.
 
-STATISTICS:
+STATISTIQUES :
 
-Freedom of Movement
-Weight: 1 lb.~
-@4773     = ~Fizzy Drink~
-@4774     = ~This bubbly concoction of fruit juice and ostrich brains will give a rush of energy to the drinker.  For ten rounds after imbibing this sugary drink, the user will move and attack at an accelerated rate, gaining a +4 bonus to movement rate and speed factor, and gaining +1 casting speed.
+Liberté de mouvement
+Poids : 0,45 kg (1 lb)~
+@4773     = ~Boisson Pétillante~
+@4774     = ~Cette concoction pétillante de jus de fruits et de cerveaux d’autruche donnera un coup de fouet au buveur. Pendant dix rounds après avoir bu cette boisson sucrée, l’utilisateur se déplacera et attaquera à une vitesse accélérée, gagnant un bonus de +4 à la vitesse de déplacement et au facteur de vitesse, et un bonus de +1 à la vitesse d’incantation.
 
-STATISTICS:
+STATISTIQUES :
 
-+4 Movement Rate
-+4 Speed Factor
-+1 Casting Speed
-Weight: 1 lb.~
-@54773     = ~Fizzy Drink~
-@54774     = ~This bubbly concoction of fruit juice and ostrich brains will give a rush of energy to the drinker.  For ten rounds after imbibing this sugary drink, the user will move and attack at an accelerated rate, gaining a +4 bonus to movement rate and speed factor, and gaining +2 casting speed.
++4 à la Vitesse de Déplacement
++4 au Facteur de Vitesse
++1 à la Vitesse d’incantation
+Poids : 0,45 kg (1 lb)~
+@54773     = ~Boisson Pétillante~
+@54774     = ~Cette concoction pétillante de jus de fruits et de cerveaux d’autruche donnera un coup de fouet au buveur. Pendant dix rounds après avoir bu cette boisson sucrée, l’utilisateur se déplacera et attaquera à une vitesse accélérée, gagnant un bonus de +10 à la vitesse de déplacement et au facteur de vitesse, et un bonus de +2 à la vitesse d’incantation.
 
-STATISTICS:
+STATISTIQUES :
 
-+10 Movement Rate
-+10 Speed Factor
-+2 Casting Speed
-Weight: 1 lb.~
-@4775     = ~Ghoul Powder~
-@4776     = ~This fine bluish-gray dust, made from the powdered skin and flesh of a ghoul or wight, gives off a very faint glow.  Snorting the powder will result in a painful headache as well as a powerful enchantment through the user's body.  For 10 rounds after huffing this magical powder, the user will gain a 20/- resistance to all forms of cold damage.
++10 à la Vitesse de Déplacement
++10 au Facteur de Vitesse
++2 à la Vitesse d’incantation
+Poids : 0,45 kg (1 lb)~
+@4775     = ~Poudre de Goule~
+@4776     = ~Cette fine poussière gris-bleuâtre, faite à partir de la peau et de la chair en poudre d’une goule ou d’un revenant, émet une faible lueur. Renifler cette poudre entraînera un mal de tête douloureux ainsi qu’un puissant enchantement traversant le corps de l’utilisateur. Pendant 10 rounds après avoir reniflé cette poudre magique, l’utilisateur bénéficiera d’une résistance de 20/- à toutes les formes de dégâts de froid.
 
-STATISTICS:
+STATISTIQUES :
 
-Resistance: 20/- Cold Resistance
-Weight: 1 lb.~
-@54775     = ~Ghoul Powder~
-@54776     = ~This fine bluish-gray dust, made from the powdered skin and flesh of a ghoul or wight, gives off a very faint glow.  Snorting the powder will result in a painful headache as well as a powerful enchantment through the user's body.  For 10 rounds after huffing this magical powder, the user will gain a 50/- resistance to all forms of cold damage.
+Résistance : 20/- de résistance au froid pendant 10 rounds
+Poids : 0,45 kg (1 lb)~
+@54775     = ~Poudre de Goule~
+@54776     = ~Cette fine poussière gris-bleuâtre, faite à partir de la peau et de la chair en poudre d’une goule ou d’un revenant, émet une faible lueur. Renifler cette poudre entraînera un mal de tête douloureux ainsi qu’un puissant enchantement traversant le corps de l’utilisateur. Pendant 10 rounds après avoir reniflé cette poudre magique, l’utilisateur bénéficiera d’une résistance de 50/- à toutes les formes de dégâts de froid.
 
-STATISTICS:
+STATISTIQUES :
 
-Resistance: 50/- Cold Resistance
-Weight: 1 lb.~
-@4777     = ~Golden Bubbles~
-@4778     = ~Good luck is hard to come by, but for those who know how to generate it, fortune can come from almost anywhere.  This bubbly solution is a mix of gold flakes, lemon juice, ground pearls, and powdered goat hooves.  Anyone who drinks this potion will experience a rush of euphoria and supreme confidence in everything, as well as a +2 luck bonus for 10 rounds.
+Résistance : 50/- de résistance au froid pendant 10 rounds
+Poids : 0,45 kg (1 lb)~
+@4777     = ~Bulles Dorées~
+@4778     = ~La chance est difficile à obtenir, mais pour ceux qui savent comment la générer, la fortune peut venir de presque n’importe où. Cette solution pétillante est un mélange de paillettes d’or, de jus de citron, de perles broyées et de sabots de chèvre en poudre. Quiconque boit cette potion ressentira une poussée d’euphorie et une confiance suprême en tout, ainsi qu’un bonus de chance de +2 pendant 1 heure.
 
-STATISTICS:
+STATISTIQUES :
 
-+2 Luck
-Weight: 1 lb.~
-@54777     = ~Golden Bubbles~
-@54778     = ~Good luck is hard to come by, but for those who know how to generate it, fortune can come from almost anywhere.  This bubbly solution is a mix of gold flakes, lemon juice, ground pearls, and powdered goat hooves.  Anyone who drinks this potion will experience a rush of euphoria and supreme confidence in everything, as well as a +4 luck bonus for 10 rounds.
++2 Chance pendant 1 heure
+Poids : 0,45 kg (1 lb)~
+@54777     = ~Bulles Dorées~
+@54778     = ~La chance est difficile à obtenir, mais pour ceux qui savent comment la générer, la fortune peut venir de presque n’importe où. Cette solution pétillante est un mélange de paillettes d’or, de jus de citron, de perles broyées et de sabots de chèvre en poudre. Quiconque boit cette potion ressentira une poussée d’euphorie et une confiance suprême en tout, ainsi qu’un bonus de chance de +4 pendant 1 heure.
 
-STATISTICS:
+STATISTIQUES :
 
-+4 Luck
-Weight: 1 lb.~
-@4779     = ~Ogre Bile~
-@4780     = ~This sickly translucent liquid is a mixture of green slime, common salt, and bile from the gut of an ogre.  Anyone who forces him or herself to drink this foul potion will gain 25 temporary hit points for 8 hours.  Any damage the user suffers will first come from the temporary hit points.
++4 Chance pendant 1 heure
+Poids : 0,45 kg (1 lb)~
+@4779     = ~Bile d’Ogre~
+@4780     = ~Ce liquide translucide et maladif est un mélange de limon vert, de sel commun et de bile tirée de l’estomac d’un ogre. Quiconque s’oblige à boire cette potion infâme gagne 25 points de vie temporaires pendant 8 heures. Tout dommage subi par l’utilisateur sera d’abord prélevé sur les points de vie temporaires.
 
-STATISTICS:
+STATISTIQUES :
 
-+25 Maximum Hit Points
-Weight: 1 lb.~
-@54779     = ~Ogre Bile~
-@54780     = ~This sickly translucent liquid is a mixture of green slime, common salt, and bile from the gut of an ogre.  Anyone who forces him or herself to drink this foul potion will gain 100 temporary hit points for 8 hours.  Any damage the user suffers will first come from the temporary hit points.
++25 Points de Vie Maximum pendant 8 heures
+Poids : 0,45 kg (1 lb)~
+@54779     = ~Bile d’Ogre~
+@54780     = ~Ce liquide translucide et maladif est un mélange de limon vert, de sel commun et de bile tirée de l’estomac d’un ogre. Quiconque s’oblige à boire cette potion infâme gagne 100 points de vie temporaires pendant 8 heures. Tout dommage subi par l’utilisateur sera d’abord prélevé sur les points de vie temporaires.
 
-STATISTICS:
+STATISTIQUES :
 
-+100 Maximum Hit Points
-Weight: 1 lb.~
-@4781     = ~Oil of Speed~
-@4782     = ~A pale oil made from crushed pearls, shark teeth, and rabbit's blood, this potion will quickly spread through the user's body.  The oil will dramatically improve the user's movement and attack rates, granting Haste as per the mage spell for 10 rounds.
++100 Points de Vie Maximum pendant 8 heures
+Poids : 0,45 kg (1 lb)~
+@4781     = ~Huile de Rapidité~
+@4782     = ~Une huile pâle faite de perles broyées, de dents de requin et de sang de lapin, cette potion se répand rapidement dans le corps de l’utilisateur. L’huile améliore considérablement les mouvements et le rythme des attaques de l’utilisateur, accordant la Hâte comme avec le sort de mage pendant 10 rounds.
 
-STATISTICS:
+STATISTIQUES :
 
-Haste
-Weight: 1 lb.~
-@54781     = ~Oil of Speed~
-@54782     = ~A pale oil made from crushed pearls, shark teeth, and rabbit's blood, this potion will quickly spread through the user's body.  The oil will dramatically improve the user's movement and attack rates, granting Improved Haste for 5 rounds.
+Hâte pendant 10 rounds
+Poids : 0,45 kg (1 lb)~
+@54781     = ~Huile de Rapidité~
+@54782     = ~Une huile pâle faite de perles broyées, de dents de requin et de sang de lapin, cette potion se répand rapidement dans le corps de l’utilisateur. L’huile améliore considérablement les mouvements et le rythme des attaques de l’utilisateur, accordant la Hâte améliorée pendant 5 rounds.
 
-STATISTICS:
+STATISTIQUES :
 
-Improved Haste
-Weight: 1 lb.~
-@4783     = ~Potion of Clarity~
-@4784     = ~This potion is a pleasant-smelling concoction of olive oil spiked with powdered nereid nose and crushed lapis lazuli.  Drinking this odd-tasting potion will temporarily grant the user immunity to most mind-affect spells, including charm, domination, feeblemind, fear, and confusion effects for 10 rounds.
+Hâte améliorée pendant 5 rounds
+Poids : 0,45 kg (1 lb)~
+@4783     = ~Potion de Clarté~
+@4784     = ~Cette potion est une concoction à l’odeur agréable d’huile d’olive mélangée avec du nez de néréide en poudre et du lapis-lazuli concassé. Boire cette potion au goût étrange accordera temporairement à l’utilisateur une immunité contre la plupart des sorts affectant l’esprit, y compris charme, domination, débilité, terreur, et confusion pendant 10 rounds.
 
-STATISTICS:
+STATISTIQUES :
 
-Immunity to charm, domination, feeblemind, fear, and confusion
-Weight: 1 lb.~
-@54783     = ~Potion of Clarity~
-@54784     = ~This potion is a pleasant-smelling concoction of olive oil spiked with powdered nereid nose and crushed lapis lazuli.  Drinking this odd-tasting potion will temporarily grant the user immunity to most mind-affect spells, including charm, domination, feeblemind, fear, confusion, hopelessness, and stun effects for 15 rounds.
+Immunité au charme, à la domination, à la débilité, à la terreur et à la confusion pendant 10 rounds
+Poids : 0,45 kg (1 lb)~
+@54783     = ~Potion de Clarté~
+@54784     = ~Cette potion est une concoction à l’odeur agréable d’huile d’olive mélangée avec du nez de néréide en poudre et du lapis-lazuli concassé. Boire cette potion au goût étrange accordera temporairement à l’utilisateur une immunité contre la plupart des sorts affectant l’esprit, y compris les effets de charme, domination, débilité, terreur, confusion, désespoir, et étourdissement pendant 15 rounds.
 
-STATISTICS:
+STATISTIQUES :
 
-Immunity to charm, domination, feeblemind, fear, confusion, hopelessness, and stun
-Weight: 1 lb.~
-@4785     = ~Treant Sap~
-@4786     = ~Hardened treant sap mixed with holy water and mashed peas sits inside this firm wooden container.  The hard sap must be chewed thoroughly unless it is heated before consumption.  The sap turns the user's skin to a stiff, woody substance, granting a +4 natural bonus to AC for 1 hour.
+Immunité au charme, à la domination, à la débilité, à la peur, à la confusion, au désespoir et à l’étourdissement pendant 15 rounds
+Poids : 0,45 kg (1 lb)~
+@4785     = ~Sève de Sylvanien~
+@4786     = ~De la sève de tréant durcie mélangée à de l’eau bénite et à des pois écrasés est contenue dans ce récipient en bois solide. La sève dure doit être mâchée soigneusement à moins qu’elle ne soit chauffée avant consommation. La sève transforme la peau de l’utilisateur en une substance rigide et ligneuse, accordant un bonus naturel de +4 à la classe d’armure pendant 1 heure.
 
-STATISTICS:
+STATISTIQUES :
 
-Barkskin (+4 AC)
-Weight: 1 lb.~
-@54785     = ~Treant Sap~
-@54786     = ~Hardened treant sap mixed with holy water and mashed peas sits inside this firm wooden container.  The hard sap must be chewed thoroughly unless it is heated before consumption.  The sap turns the user's skin to a stiff, woody substance, granting a +7 natural bonus to AC for 1 hour.
+Peau d’écorce (+4 CA)
+Poids : 0,45 kg (1 lb)~
+@54785     = ~Sève de Sylvanien~
+@54786     = ~De la sève de tréant durcie mélangée à de l’eau bénite et à des pois écrasés est contenue dans ce récipient en bois solide. La sève dure doit être mâchée soigneusement à moins qu’elle ne soit chauffée avant consommation. La sève transforme la peau de l’utilisateur en une substance rigide et ligneuse, accordant un bonus naturel de +7 à la classe d’armure pendant 1 heure.
 
-STATISTICS:
+STATISTIQUES :
 
-Barkskin (+7 AC)
-Weight: 1 lb.~
-@4787     = ~Troll Serum~
-@4788     = ~Made of concentrated troll blood leeched through perforated otyugh skin, this sour mixture will temporarily grant the drinker the regenerative abilities of a troll.  For 10 rounds after imbibing this potion, the drinker will heal 5 hit points every round.
+Peau d’écorce (+7 CA)
+Poids : 0,45 kg (1 lb)~
+@4787     = ~Sérum de Troll~
+@4788     = ~Fait de sang de troll concentré filtré à travers de la peau perforée d’otyugh, ce mélange aigre accordera temporairement au buveur les capacités régénératrices d’un troll. Pendant 10 rounds après avoir bu cette potion, le buveur récupérera 5 points de vie à chaque round.
 
-STATISTICS:
+STATISTIQUES :
 
-Regenerates 5 hit points per round
-Weight: 1 lb.~
-@54787     = ~Troll Serum~
-@54788     = ~Made of concentrated troll blood leeched through perforated otyugh skin, this sour mixture will temporarily grant the drinker the regenerative abilities of a troll.  For 10 rounds after imbibing this potion, the drinker will heal 10 hit points every round.
+Régénère 5 points de vie par round
+Poids : 0,45 kg (1 lb)~
+@54787     = ~Sérum de Troll~
+@54788     = ~Fait de sang de troll concentré filtré à travers de la peau perforée d’otyugh, ce mélange aigre accordera temporairement au buveur les capacités régénératrices d’un troll. Pendant 10 rounds après avoir bu cette potion, le buveur récupérera 10 points de vie à chaque round.
 
-STATISTICS:
+STATISTIQUES :
 
-Regenerates 10 hit points per round
-Weight: 1 lb.~
-@4789     = ~Zombie Slime~
-@4790     = ~This chunky soup is a mixture of chopped elf hair and the foul slime drained from the corpse of a slime zombie.  Drinking this sickly concoction will grant the user 20/- acid resistance for 10 rounds.
+Régénère 10 points de vie par round
+Poids : 0,45 kg (1 lb)~
+@4789     = ~Bave de Zombi~
+@4790     = ~Cette soupe grumeleuse est un mélange de cheveux d’elfe hachés et de la bave nauséabonde drainée du cadavre d’un zombi limoneux. Boire cette concoction malodorante conférera à l’utilisateur une résistance de 20/- aux dégâts d’acide pendant 10 rounds.
 
-STATISTICS:
+STATISTIQUES :
 
-Resistance: 20/- Acid Resistance
-Weight: 1 lb.~
-@54789     = ~Zombie Slime~
-@54790     = ~This chunky soup is a mixture of chopped elf hair and the foul slime drained from the corpse of a slime zombie.  Drinking this sickly concoction will grant the user 50/- acid resistance for 10 rounds.
+Résistance : 20/- de résistance à l’acide
+Poids : 0,45 kg (1 lb)~
+@54789     = ~Bave de Zombi~
+@54790     = ~Cette soupe grumeleuse est un mélange de cheveux d’elfe hachés et de la bave nauséabonde drainée du cadavre d’un zombi limoneux. Boire cette concoction malodorante conférera à l’utilisateur une résistance de 50/- aux dégâts d’acide pendant 10 rounds.
 
-STATISTICS:
+STATISTIQUES :
 
-Resistance: 50/- Acid Resistance
-Weight: 1 lb.~
-@4791     = ~Vial of Vipers~
-@4792     = ~A curious experimental blend, this vial of green sludge will twist the drinker's innards and use his or her own intestines to incubate a den of magically-generated vipers. Every round for six rounds, the drinker will vomit out a fully-grown viper that he or she may control telepathically.
+Résistance : 50/- de résistance à l’acide
+Poids : 0,45 kg (1 lb)~
+@4791     = ~Fiole de Vipères~
+@4792     = ~Un mélange expérimental curieux, cette fiole de boue verte tordra les entrailles du buveur et utilisera ses intestins pour incuber une couvée de vipères générées magiquement. Chaque round pendant six rounds, le buveur vomira une vipère adulte qu’il ou elle pourra contrôler télépathiquement.
 
-STATISTICS:
+STATISTIQUES :
 
-Vipergout for 6 rounds
-Weight: 1 lb.~
-@54791     = ~Vial of Vipers~
-@54792     = ~A curious experimental blend, this vial of green sludge will twist the drinker's innards and use his or her own intestines to incubate a den of magically-generated vipers. Every round for twelve rounds, the drinker will vomit out a fully-grown viper that he or she may control telepathically.
+Flot de vipères pendant 6 rounds
+Poids : 0,45 kg (1 lb)~
+@54791     = ~Fiole de Vipères~
+@54792     = ~Un mélange expérimental curieux, cette fiole de boue verte tordra les entrailles du buveur et utilisera ses intestins pour incuber une couvée de vipères générées magiquement. Chaque round pendant 12 rounds, le buveur vomira une vipère adulte qu’il ou elle pourra contrôler télépathiquement.
 
-STATISTICS:
+STATISTIQUES :
 
-Vipergout for 12 rounds
-Weight: 1 lb.~
-@4793     = ~Concoct Potions~
-@4794     = ~Begin.~
-@4795     = ~Exit.~
-@4796     = ~You may not concoct potions when enemies are nearby.~
+Flot de vipères pendant 12 rounds
+Poids : 0,45 kg (1 lb)~
+@4793     = ~Préparer des potions~
+@4794     = ~Commencer.~
+@4795     = ~Quitter.~
+@4796     = ~Vous ne pouvez pas préparer de potions lorsque des ennemis sont à proximité.~
