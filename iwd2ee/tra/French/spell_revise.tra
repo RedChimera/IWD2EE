@@ -144,7 +144,7 @@ Temps d’incantation : 9
 Zone d’effet : rayon de 1 mètre (3 pieds)
 Jet de sauvegarde : Réflexes, 1/2 dégâts
 
-Ce sort invoque un mur de lames acérées tournoyantes autour du mage, créant ainsi une barrière de protection. Toute créature tentant de franchir ce mur de lames subit 10d8 points de dégâts. Un jet de Réflexes réussi réduit les dégâts de moitié. Ce sort ne provoque pas d’attaque d’opportunité.~
+Ce sort invoque un mur de lames acérées tournoyantes autour du lanceur, créant ainsi une barrière de protection. Toute créature tentant de franchir ce mur de lames subit 10d8 points de dégâts. Un jet de Réflexes réussi réduit les dégâts de moitié. Ce sort ne provoque pas d’attaque d’opportunité.~
 @1024 = ~Colère spirituelle~
 @1025 = ~Colère spirituelle
 (Évocation)
@@ -245,19 +245,19 @@ Jet de sauvegarde : Aucun
 
 Ce sort évoque sept orbes magiques qui flottent en anneau au-dessus de la tête du lanceur. Chaque œil a une capacité défensive et offensive, mais une fois l’un ou l’autre utilisé, l’œil perd son pouvoir. Si un œil est dépensé ou détruit, il peut être remplacé en relançant le sort. Les pouvoirs de chaque œil sont décrits ci-dessous.
 
-Oeil du Mental - Cet orbe protège le lanceur contre les attaques mentales, telles que le charme, l’émotion et la peur. L’œil peut être dépensé en tant que sort de mage de 1er niveau Charme-personne.
+Oeil de l’Esprit - Cet orbe protège le lanceur contre les attaques mentales, telles que le charme, l’émotion et la peur. L’œil peut être dépensé en tant que sort de mage de 1er niveau Charme-personne.
 
 Oeil de l’Épée - Cet œil dévie la première attaque physique qui frappe le lanceur. L’œil peut être dépensé comme le sort de mage de 1er niveau Projectile magique (5 projectiles).
 
 Oeil du Mage - Cet œil absorbe une manifestation de dégâts de feu, d’électricité, de froid ou d’acide. L’œil peut également être dépensé avec le sort de sorcier de niveau 3, Éclair (4d8 dégâts).
 
-Oeil de Venin - Cet œil arrête toute attaque ou effet qui pourrait empoisonner le lanceur. L’œil peut également être utilisé pour empoisonner une créature, infligeant 30 points de dégâts sur une période de 30 secondes.
+Oeil du Venin - Cet œil arrête toute attaque ou effet qui pourrait empoisonner le lanceur. L’œil peut également être utilisé pour empoisonner une créature, infligeant 30 points de dégâts sur une période de 30 secondes.
 
-Oeil de l’Esprit - Cet œil bloque une attaque magique de mort instantanée (Symbole de mort, Doigt de Mort, Mot de pouvoir : Mort, Plainte d’outre-tombe, Destruction). Le sorcier peut plutôt choisir de dépenser la puissance de l’œil de la même manière qu’un rayon d’affaiblissement, réduisant ainsi la force d’une cible de -10, réduisant ainsi ses chances de toucher et les dégâts qu’elle inflige.
+Oeil de l’ me - Cet œil bloque une attaque magique de mort instantanée (Symbole de mort, Doigt de Mort, Mot de pouvoir : Mort, Plainte d’outre-tombe, Destruction). Le sorcier peut plutôt choisir de dépenser la puissance de l’œil de la même manière qu’un rayon d’affaiblissement, réduisant ainsi la force d’une cible de -10, réduisant ainsi ses chances de toucher et les dégâts qu’elle inflige.
 
-Oeil de Courage - Cet œil bloque les effets d’étourdissement, de surdité, de cécité ou de silence. Il peut également être dépensé comme sort de mage de niveau 4, Cri.
+Oeil de la Résistance - Cet œil bloque les effets d’étourdissement, de surdité, de cécité ou de silence. Il peut également être dépensé comme sort de mage de niveau 4, Cri.
 
-Oeil de Pierre – Cet œil protège le lanceur d’une seule attaque de pétrification. Il peut également être utilisé comme sort Immobilisation des personnes.~
+Oeil de la Pierre – Cet œil protège le lanceur d’une seule attaque de pétrification. Il peut également être utilisé comme sort Immobilisation de personne.~
 @1042 = ~Déluge~
 @1043 = ~Déluge
 (Évocation)
@@ -739,7 +739,7 @@ Temps d’incantation : 0
 Zone d’effet : 1 créature
 Jet de sauvegarde : Spécial
 
-Mot de pouvoir : Étourdissement est un autre mot de pouvoir. Les créatures avec moins de 50 points de vie sont étourdies pendant 4 à 16 rounds, celles avec 51 à 100 points de vie sont étourdies pendant 2 à 8 rounds, celles avec 101 à 150 points de vie sont étourdies pendant 1 à 4 rounds et celles avec plus de 151 points de vie doivent réussir un jet de Volonté avec +2 au Degré de Difficulté sous peine d'être étourdi pendant un round. Le sort prend en compte les points de vie actuels de la créature, et non leur maximum, donc même les créatures les plus coriaces peuvent être affectées par ce sort si elles sont blessées. Ce sort n’a aucun effet sur les créatures sourdes.~
+Mot de pouvoir : Étourdissement est un autre mot de pouvoir. Les créatures avec moins de 50 points de vie sont étourdies pendant 4 à 16 rounds, celles avec 51 à 100 points de vie sont étourdies pendant 2 à 8 rounds, celles avec 101 à 150 points de vie sont étourdies pendant 1 à 4 rounds et celles avec plus de 151 points de vie doivent réussir un jet de Volonté avec +2 au Degré de Difficulté sous peine d’être étourdi pendant un round. Le sort prend en compte les points de vie actuels de la créature, et non leur maximum, donc même les créatures les plus coriaces peuvent être affectées par ce sort si elles sont blessées. Ce sort n’a aucun effet sur les créatures sourdes.~
 
 @1126 = ~Corps de Fer~
 @1127 = ~Corps de fer
@@ -1002,7 +1002,7 @@ Une radiance divine brillante entoure les sujets, les protégeant des attaques, l
 Premièrement, les créatures protégées gagnent un bonus de parade de +4 à la Classe d’Armure et un bonus de +4 à tous les jets de sauvegarde.
 Deuxièmement, les créatures protégées gagnent une résistance aux sorts de +10 et une résistance de 5/- à toutes les formes de dégâts magiques.
 Troisièmement, l’abjuration protège les créatures contre les sorts de charme et de domination.
-Quatrièmement, toute créature d’alignement mauvais qui frappe (en mêlée uniquement) ceux protégés par l’Aura divine doit réussir un jet de sauvegarde de Vigueur sous peine d'être aveuglée pendant 3 rounds.
+Quatrièmement, toute créature d’alignement mauvais qui frappe (en mêlée uniquement) ceux protégés par l’Aura divine doit réussir un jet de sauvegarde de Vigueur sous peine d’être aveuglée pendant 3 rounds.
 L’Aura divine ne peut pas être lancée par des personnages mauvais.~
 @1522	= ~Potion de Globe d’invulnérabilité partielle~
 @1523	= ~Les potions se trouvent généralement dans des flacons ou des fioles en céramique, cristal, verre ou métal. Les flacons ou autres récipients contiennent généralement suffisamment de liquide pour fournir à une personne une dose complète afin d’obtenir les effets de la potion.
@@ -1199,7 +1199,7 @@ Temps d’incantation : Action libre
 Zone d’effet : 1 créature
 Jet de sauvegarde : Aucun
 
-Tour de translocation permet au lanceur d’échanger sa place avec une autre créature - il n’y a pas de jet de sauvegarde. Tous les projectiles ou projectiles magiques en cours de vol dirigés vers le lanceur sont redirigés vers la cible, tandis que les projectiles dirigés vers la cible sont redirigés vers le lanceur. Tour de translocation peut être lancé sur n’importe quelle créature vue par le groupe, même si le lanceur ne la voit pas. Les entités ou objets faisant partie d’un ensemble plus grand telles que les poutres de soutien (d'un barrage ou d'un pont par exemple) ne sont pas affectés par ce sort.~
+Tour de translocation permet au lanceur d’échanger sa place avec une autre créature - il n’y a pas de jet de sauvegarde. Tous les projectiles ou projectiles magiques en cours de vol dirigés vers le lanceur sont redirigés vers la cible, tandis que les projectiles dirigés vers la cible sont redirigés vers le lanceur. Tour de translocation peut être lancé sur n’importe quelle créature vue par le groupe, même si le lanceur ne la voit pas. Les entités ou objets faisant partie d’un ensemble plus grand telles que les poutres de soutien (d’un barrage ou d’un pont par exemple) ne sont pas affectés par ce sort.~
 @1591	= ~Rayon de soleil~
 @1592	= ~Rayon de soleil
 (Évocation)
@@ -1398,7 +1398,7 @@ Temps d’incantation : 0
 Zone d’effet : Spécial
 Jet de sauvegarde : Aucun
 
-Ce sort permet au lanceur de changer de position avec une autre créature - il n’y a pas de jet de sauvegarde. Les entités ou objets faisant partie d’un ensemble plus grand telles que les poutres de soutien (d'un barrage ou d'un pont par exemple) ne sont pas affectés par ce sort.~
+Ce sort permet au lanceur de changer de position avec une autre créature - il n’y a pas de jet de sauvegarde. Les entités ou objets faisant partie d’un ensemble plus grand telles que les poutres de soutien (d’un barrage ou d’un pont par exemple) ne sont pas affectés par ce sort.~
 
 @1667	= ~Téléportation locale de Lutzaen~
 @1668	= ~Téléportation locale de Lutzaen
@@ -1459,7 +1459,7 @@ Temps d’incantation : 0
 Zone d’effet : Spéciale
 Jet de sauvegarde : Aucun
 
-Lorsqu’il lance ce sort, le lanceur est capable de retirer les objets maudits de la cible. Rompre l'enchantement dissipe également tous les sorts de l’école de l'enchantement, que leurs effets soient positifs ou négatifs.~
+Lorsqu’il lance ce sort, le lanceur est capable de retirer les objets maudits de la cible. Rompre l’enchantement dissipe également tous les sorts de l’école de l’enchantement, que leurs effets soient positifs ou négatifs.~
 
 @1678	= ~Sphère d’isolement d’Otiluke~
 @1679	= ~Sphère d’isolement d’Otiluke
@@ -1544,7 +1544,7 @@ Temps d’incantation : 5
 Zone d’effet : Lanceur
 Jet de sauvegarde : Vigueur annule
 
-Ce sort transforme les mains et les bras du lanceur en serpents pouvant être utilisés en combat, attaquant deux fois par round. Chaque attaque inflige 1d3 points de dégâts perforants et la cible doit réussir un jet de sauvegarde de Vigueur sous peine d'être empoisonnée - le poison paralyse et inflige 6 points de dégâts de poison par round pendant les 4 rounds suivants.~
+Ce sort transforme les mains et les bras du lanceur en serpents pouvant être utilisés en combat, attaquant deux fois par round. Chaque attaque inflige 1d3 points de dégâts perforants et la cible doit réussir un jet de sauvegarde de Vigueur sous peine d’être empoisonnée - le poison paralyse et inflige 6 points de dégâts de poison par round pendant les 4 rounds suivants.~
 @1692	= ~Retraite expéditive~
 @1693	= ~Retraite expéditive
 (Transmutation)
@@ -1801,7 +1801,7 @@ Temps d’incantation : 4
 Zone d’effet : Lanceur
 Jet de sauvegarde : Réflexes
 
-Ce sort crée un rayon de froid intense qui jaillit de la main du lanceur, prenant la forme d’un cimeterre et utilisé comme tel. La lame est une arme +2. Elle inflige 2d6+2 dégâts de froid et ignore les bonus d’armure et de bouclier, et la victime doit réussir un jet de Réflexes sous peine d'être ralentie pendant 2 rounds. Le Degré de Difficulté du jet de Réflexes est égal à 12 plus les bonus de Sagesse et d’école de prédilection du lanceur. La Lame de glace profite du don Maniement des Armes de guerre, Grande épée, et bénéficie des bonus à l’attaque et aux dégâts provenant de la Force, des dons, des sorts, des objets et d’autres effets.
+Ce sort crée un rayon de froid intense qui jaillit de la main du lanceur, prenant la forme d’un cimeterre et utilisé comme tel. La lame est une arme +2. Elle inflige 2d6+2 dégâts de froid et ignore les bonus d’armure et de bouclier, et la victime doit réussir un jet de Réflexes sous peine d’être ralentie pendant 2 rounds. Le Degré de Difficulté du jet de Réflexes est égal à 12 plus les bonus de Sagesse et d’école de prédilection du lanceur. La Lame de glace profite du don Maniement des Armes de guerre, Grande épée, et bénéficie des bonus à l’attaque et aux dégâts provenant de la Force, des dons, des sorts, des objets et d’autres effets.
 
 Lorsqu’il est lancé en tant que rôdeur, ce sort crée une Lame de glace dans chaque main.~
 @1764	= ~Masse d’armes des Météores~
@@ -3641,7 +3641,7 @@ Temps d’incantation : 5
 Zone d’effet : Rayon de 4,5 mètres (15 pieds)
 Jet de sauvegarde : Vigueur partiel
 
-Ce sort fait apparaître un nuage de fumée jaunâtre, si toxique qu’il tue automatiquement toutes les créatures de 4 Dés de Vie ou moins, sans jet de sauvegarde. Les créatures ayant au plus la moitié des Dés de Vie du niveau du lanceur de sorts (arrondi au supérieur) doivent réussir un jet de sauvegarde de Vigueur sous peine d'être tuées. Retenir son souffle n’a aucun effet sur la létalité du sort. Les créatures dans le nuage qui ne meurent pas subissent 1d10 points de dégâts de poison chaque round sans jet de sauvegarde.~
+Ce sort fait apparaître un nuage de fumée jaunâtre, si toxique qu’il tue automatiquement toutes les créatures de 4 Dés de Vie ou moins, sans jet de sauvegarde. Les créatures ayant au plus la moitié des Dés de Vie du niveau du lanceur de sorts (arrondi au supérieur) doivent réussir un jet de sauvegarde de Vigueur sous peine d’être tuées. Retenir son souffle n’a aucun effet sur la létalité du sort. Les créatures dans le nuage qui ne meurent pas subissent 1d10 points de dégâts de poison chaque round sans jet de sauvegarde.~
 
 @33504 	= ~Cône de froid~
 @34504 	= ~Cône de froid
@@ -4322,7 +4322,7 @@ Une obscurité malveillante entoure les sujets, les protégeant des attaques, leur
 Premièrement, les créatures protégées bénéficient d’un bonus de déviation de +4 à la classe d’armure et d’un bonus de +4 à tous les jets de sauvegarde.
 Deuxièmement, la créature protégée gagne +10 en résistance aux sorts et une résistance de 5/- à toutes les formes de dégâts magiques.
 Troisièmement, l’abjuration protège les créatures contre les sorts de charme et de domination.
-Quatrièmement, toute créature d’alignement bon qui frappe (au corps à corps seulement) ceux protégés par l’Aura Impie doit réussir un jet de sauvegarde de Vigueur sous peine d'être aveuglée pendant 3 rounds.
+Quatrièmement, toute créature d’alignement bon qui frappe (au corps à corps seulement) ceux protégés par l’Aura Impie doit réussir un jet de sauvegarde de Vigueur sous peine d’être aveuglée pendant 3 rounds.
 L’Aura impie ne peut être lancée que par des personnages d’alignement mauvais.~
 @35951 	= ~Bénédiction d’Auril~
 @36951 	= ~Bénédiction d’Auril
@@ -4439,7 +4439,7 @@ Temps d’incantation : 1
 Zone d’effet : 1 créature
 Jet de sauvegarde : Volonté annule
 
-Simple invocation invoque la cible du sort. La cible est instantanément téléportée à côté du lanceur si elle échoue à un jet de Volonté. Contrairement à la plupart des autres sorts d’invocation, Simple invocation ne donne aucun contrôle sur la créature. Ce sort peut être utilisé soit pour secourir un allié (par exemple, si l’allié est paralysé et attaqué par des ennemis), soit pour transporter un ennemi dans une position où il se retrouverait désavantagé. Les alliés sont affectés sans jet de sauvegarde. Les entités ou objets faisant partie d’un ensemble plus grand telles que les poutres de soutien (d'un barrage ou d'un pont par exemple) ne sont pas affectés par ce sort.~
+Simple invocation invoque la cible du sort. La cible est instantanément téléportée à côté du lanceur si elle échoue à un jet de Volonté. Contrairement à la plupart des autres sorts d’invocation, Simple invocation ne donne aucun contrôle sur la créature. Ce sort peut être utilisé soit pour secourir un allié (par exemple, si l’allié est paralysé et attaqué par des ennemis), soit pour transporter un ennemi dans une position où il se retrouverait désavantagé. Les alliés sont affectés sans jet de sauvegarde. Les entités ou objets faisant partie d’un ensemble plus grand telles que les poutres de soutien (d’un barrage ou d’un pont par exemple) ne sont pas affectés par ce sort.~
 @37155 	= ~Lucidité funeste~
 @38155 	= ~Lucidité funeste
 (Nécromancie)
@@ -4545,7 +4545,7 @@ Temps d’incantation : 4
 Zone d’effet : Rayon de 6 mètres (20 pieds)
 Jet de sauvegarde : Vigueur annule
 
-Ce sort crée une obscurité magique dans la zone d’effet. Les créatures sans vision dans le noir doivent réussir un jet de Vigueur avec +3 au Degré de Difficulté sous peine d'être effectivement aveuglées. Les créatures avec vision dans le noir ne sont pas aveuglées, mais même elles ont une capacité limitée à voir à travers l’obscurité magique, subissant une pénalité de -4 aux attaques en cas d’échec au jet de sauvegarde. Les créatures avec une vision supérieure à 36 mètres (120 pieds) (par exemple, les drows, les nains gris ou les gnomes des profondeurs) subissent seulement une pénalité de -2 aux attaques. Les diables et les créatures immunisées à l’aveuglement ne sont pas affectés.~
+Ce sort crée une obscurité magique dans la zone d’effet. Les créatures sans vision dans le noir doivent réussir un jet de Vigueur avec +3 au Degré de Difficulté sous peine d’être effectivement aveuglées. Les créatures avec vision dans le noir ne sont pas aveuglées, mais même elles ont une capacité limitée à voir à travers l’obscurité magique, subissant une pénalité de -4 aux attaques en cas d’échec au jet de sauvegarde. Les créatures avec une vision supérieure à 36 mètres (120 pieds) (par exemple, les drows, les nains gris ou les gnomes des profondeurs) subissent seulement une pénalité de -2 aux attaques. Les diables et les créatures immunisées à l’aveuglement ne sont pas affectés.~
 @37351 	= ~Clairvoyance~
 @38351 	= ~Clairvoyance
 (Divination)
@@ -4719,7 +4719,7 @@ Transformation permet au lanceur de prendre la forme d’une créature de puissance
 
 * Géant fomorien (peut lancer des rochers à longue portée)
 * Troll (régénère 1 PV par seconde)
-* Ombre des roches (les ennemis à proximité doivent réussir un jet de Volonté chaque round sous peine d'être confus)
+* Ombre des roches (les ennemis à proximité doivent réussir un jet de Volonté chaque round sous peine d’être confus)
 * Wiverne (peut voler, et chaque coup empoisonne la cible en cas d’échec de jet de Vigueur)~
 
 @37456 	= ~Transfert de sorts~
@@ -4987,7 +4987,7 @@ Temps d’incantation : 7
 Zone d’effet : Spécial
 Jet de sauvegarde : Volonté annule
 
-Ce sort fait apparaître un objet magique qui incite les créatures qui le voient à vouloir s’en approcher. Toute créature non alliée qui voit cet objet magique doit réussir un jet de sauvegarde de Volonté (avec -3 au Degré de Difficulté) chaque round sous peine d'être obligée, pendant ce round, de marcher vers l’objet sans rien faire d’autre. Toute créature immunisée contre les effets de charme est également immunisée contre cet effet.~
+Ce sort fait apparaître un objet magique qui incite les créatures qui le voient à vouloir s’en approcher. Toute créature non alliée qui voit cet objet magique doit réussir un jet de sauvegarde de Volonté (avec -3 au Degré de Difficulté) chaque round sous peine d’être obligée, pendant ce round, de marcher vers l’objet sans rien faire d’autre. Toute créature immunisée contre les effets de charme est également immunisée contre cet effet.~
 
 @37760 	= ~Saut temporel~
 @38760 	= ~Saut temporel
