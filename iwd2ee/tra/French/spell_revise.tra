@@ -233,8 +233,8 @@ Zone d’effet : Lanceur
 Jet de sauvegarde : Aucun
 
 Au terme de l’incantation, le jeteur de sorts se retrouve entouré d’une aura d’énergie noire et crépitante issue du Plan négatif. L’armure endommage tout adversaire qui frappe le lanceur, lui infligeant 1d6 + 2 points de dégâts par 2 niveaux du lanceur (maximum de 1d6 + 5). Les autres créatures non vivantes telles que les créatures artificielles et les golems ne sont pas affectées.~
-@1040 = ~Sept yeux~
-@1041 = ~Sept yeux
+@1040 = ~Cercle d’yeux~
+@1041 = ~Cercle d’yeux
 (Abjuration)
 Niveau :  Ens/Mag 7,  Heaum 8
 Portée : Lanceur
@@ -1007,7 +1007,7 @@ L’Aura divine ne peut pas être lancée par des personnages mauvais.~
 @1522	= ~Potion de Globe d’invulnérabilité partielle~
 @1523	= ~Les potions se trouvent généralement dans des flacons ou des fioles en céramique, cristal, verre ou métal. Les flacons ou autres récipients contiennent généralement suffisamment de liquide pour fournir à une personne une dose complète afin d’obtenir les effets de la potion.
 
-STATISTIQUES :
+PARAMÈTRES :
 
 Utilisateur sous les effets du sort Globe d’invulnérabilité partielle
 Poids : 450g (1 lb).~
@@ -2097,7 +2097,7 @@ Temps d’incantation : 1
 Zone d’effet : 1 créature
 Jet de sauvegarde : Aucun
 
-En lançant ce sort et en posant sa main sur une créature vivante, le lanceur soigne de 1d8 points de dégâts +1 par niveau de lanceur de sorts (jusqu’à 1d8+30). Les créatures mortes-vivantes subiront des dégâts magiques au lieu d’être soignées. Ce sort nécessite un jet d’attaque de contact réussi s’il est lancé sur une créature morte-vivante. Il ne provoquera pas d’attaque d’opportunité s’il est lancé pour endommager des ennemis morts-vivants.~
+En lançant ce sort et en posant sa main sur une créature vivante, le lanceur soigne de 1d8 points de vie +1 par niveau de lanceur de sorts (jusqu’à 1d8+30). Les créatures mortes-vivantes subiront des dégâts magiques au lieu d’être soignées. Ce sort nécessite un jet d’attaque de contact réussi s’il est lancé sur une créature morte-vivante. Il ne provoquera pas d’attaque d’opportunité s’il est lancé pour endommager des ennemis morts-vivants.~
 
 @1863 	= ~Soins modérés~
 @1864 	= ~Soins modérés
@@ -2109,7 +2109,7 @@ Temps d’incantation : 1
 Zone d’effet : 1 créature
 Jet de sauvegarde : Aucun
 
-En lançant ce sort et en posant sa main sur une créature vivante, le lanceur soigne de 2d8 points de dégâts +2 par niveau de lanceur de sorts (jusqu’à 2d8+60). Les créatures mortes-vivantes subiront des dégâts magiques au lieu d’être soignées. Ce sort nécessite un jet d’attaque de contact réussi s’il est lancé sur une créature morte-vivante. Il ne provoquera pas d’attaque d’opportunité s’il est lancé pour endommager des ennemis morts-vivants.~
+En lançant ce sort et en posant sa main sur une créature vivante, le lanceur soigne de 2d8 points de vie +2 par niveau de lanceur de sorts (jusqu’à 2d8+60). Les créatures mortes-vivantes subiront des dégâts magiques au lieu d’être soignées. Ce sort nécessite un jet d’attaque de contact réussi s’il est lancé sur une créature morte-vivante. Il ne provoquera pas d’attaque d’opportunité s’il est lancé pour endommager des ennemis morts-vivants.~
 
 @1865 	= ~Soins importants~
 @1866 	= ~Soins importants
@@ -2121,7 +2121,7 @@ Temps d’incantation : 2
 Zone d’effet : 1 créature
 Jet de sauvegarde : Aucun
 
-En lançant ce sort et en posant sa main sur une créature vivante, le lanceur soigne de 3d8 points de dégâts +3 par niveau de lanceur de sorts (jusqu’à 3d8+90). Les créatures mortes-vivantes subiront des dégâts magiques au lieu d’être soignées. Ce sort nécessite un jet d’attaque de contact réussi s’il est lancé sur une créature morte-vivante. Il ne provoquera pas d’attaque d’opportunité s’il est lancé pour endommager des ennemis morts-vivants.~
+En lançant ce sort et en posant sa main sur une créature vivante, le lanceur soigne de 3d8 points de vie +3 par niveau de lanceur de sorts (jusqu’à 3d8+90). Les créatures mortes-vivantes subiront des dégâts magiques au lieu d’être soignées. Ce sort nécessite un jet d’attaque de contact réussi s’il est lancé sur une créature morte-vivante. Il ne provoquera pas d’attaque d’opportunité s’il est lancé pour endommager des ennemis morts-vivants.~
 
 @1867 	= ~Soins critiques~
 @1868 	= ~Soins critiques
@@ -2133,7 +2133,7 @@ Temps d’incantation : 2
 Zone d’effet : 1 créature
 Jet de sauvegarde : Aucun
 
-En lançant ce sort et en posant sa main sur une créature vivante, le lanceur soigne de 4d8 points de dégâts +4 par niveau de lanceur de sorts (jusqu’à 4d8+120). Les créatures mortes-vivantes subiront des dégâts magiques au lieu d’être soignées. Ce sort nécessite un jet d’attaque de contact réussi s’il est lancé sur une créature morte-vivante. Il ne provoquera pas d’attaque d’opportunité s’il est lancé pour endommager des ennemis morts-vivants.~
+En lançant ce sort et en posant sa main sur une créature vivante, le lanceur soigne de 4d8 points de vie +4 par niveau de lanceur de sorts (jusqu’à 4d8+120). Les créatures mortes-vivantes subiront des dégâts magiques au lieu d’être soignées. Ce sort nécessite un jet d’attaque de contact réussi s’il est lancé sur une créature morte-vivante. Il ne provoquera pas d’attaque d’opportunité s’il est lancé pour endommager des ennemis morts-vivants.~
 
 @1869 	= ~Cercle de soins~
 @1870 	= ~Cercle de soins
@@ -2145,7 +2145,7 @@ Temps d’incantation : 3
 Zone d’effet : rayon de 9 mètres (30 pieds)
 Jet de sauvegarde : Aucun
 
-Ce sort soigne toutes les créatures vivantes alliées dans la zone d’effet de 2d8 points de dégâts +2 par niveau de lanceur de sorts (jusqu’à +60). Les créatures mortes-vivantes ennemies dans la zone d’effet subissent la même quantité de dégâts magiques, bien que le lanceur doive réussir un jet d’attaque à distance de contact pour chaque créature morte-vivante affectée.~
+Ce sort soigne toutes les créatures vivantes alliées dans la zone d’effet de 2d8 points de vie +2 par niveau de lanceur de sorts (jusqu’à +60). Les créatures mortes-vivantes ennemies dans la zone d’effet subissent la même quantité de dégâts magiques, bien que le lanceur doive réussir un jet d’attaque à distance de contact pour chaque créature morte-vivante affectée.~
 
 @1871 	= ~Bénédiction~
 @1872 	= ~Bénédiction
@@ -2448,7 +2448,7 @@ Ce sort confère au lanceur un bonus de 5/- à toutes les résistances aux dégâts, 
 @30012=~Carquois d’abondance +1~
 @30013=~Ce carquois a été créé par le sort Carquois d’abondance. Il contient une quantité illimitée de flèches +1.
 
-STATISTIQUES :
+PARAMÈTRES :
 
 Dégâts : 1d6 + 1
 Bonus d’attaque : +1
@@ -2461,7 +2461,7 @@ Lanceur : Arc~
 @30014=~Carquois d’Abondance +2~
 @30015=~Ce carquois a été créé par le sort Carquois d’Abondance. Il contient une quantité illimitée de flèches +2.
 
-STATISTIQUES :
+PARAMÈTRES :
 
 Dégâts : 1d6 + 2
 Bonus d’attaque : +2
@@ -2474,7 +2474,7 @@ Lanceur : Arc~
 @30016=~Carquois d’Abondance +3~
 @30017=~Ce carquois a été créé par le sort Carquois d’Abondance. Il contient une quantité illimitée de flèches +3.
 
-STATISTIQUES :
+PARAMÈTRES :
 
 Dégâts : 1d6 + 3
 Bonus d’attaque : +3
@@ -2487,7 +2487,7 @@ Lanceur : Arc~
 @30018=~Carquois d’Abondance +4~
 @30019=~Ce carquois a été créé par le sort Carquois d’Abondance. Il contient une quantité illimitée de flèches +4.
 
-STATISTIQUES :
+PARAMÈTRES :
 
 Dégâts : 1d6 + 4
 Bonus d’attaque : +4
@@ -2500,7 +2500,7 @@ Lanceur : Arc~
 @30020=~Carquois d’Abondance +5~
 @30021=~Ce carquois a été créé par le sort Carquois d’Abondance. Il contient une quantité illimitée de flèches +5.
 
-STATISTIQUES :
+PARAMÈTRES :
 
 Dégâts : 1d6 + 5
 Bonus d’attaque : +5
@@ -2513,7 +2513,7 @@ Lanceur : Arc~
 @30022=~Carquois d’Abondance +6~
 @30023=~Ce carquois a été créé par le sort Carquois d’Abondance. Il contient une quantité illimitée de flèches +6.
 
-STATISTIQUES :
+PARAMÈTRES :
 
 Dégâts : 1d6 + 6
 Bonus d’attaque : +6
@@ -2526,7 +2526,7 @@ Lanceur : Arc~
 @30024=~Carquois d’Abondance +7~
 @30025=~Ce carquois a été créé par le sort Carquois d’Abondance. Il contient une quantité illimitée de flèches +7.
 
-STATISTIQUES :
+PARAMÈTRES :
 
 Dégâts : 1d6 + 7
 Bonus d’attaque : +7
@@ -2539,7 +2539,7 @@ Lanceur : Arc~
 @30026=~Carquois d’Abondance +8~
 @30027=~Ce carquois a été créé par le sort Carquois d’Abondance. Il contient une quantité illimitée de flèches +8.
 
-STATISTIQUES :
+PARAMÈTRES :
 
 Dégâts : 1d6 + 8
 Bonus d’attaque : +8
@@ -2552,7 +2552,7 @@ Lanceur : Arc~
 @30028=~Carquois d’Abondance +9~
 @30029=~Ce carquois a été créé par le sort Carquois d’Abondance. Il contient une quantité illimitée de flèches +9.
 
-STATISTIQUES :
+PARAMÈTRES :
 
 Dégâts : 1d6 + 9
 Bonus d’attaque : +9
@@ -2565,7 +2565,7 @@ Lanceur : Arc~
 @30030=~Carquois d’Abondance +10~
 @30031=~Ce carquois a été créé par le sort Carquois d’Abondance. Il contient une quantité illimitée de flèches +10.
 
-STATISTIQUES :
+PARAMÈTRES :
 
 Dégâts : 1d6 + 10
 Bonus d’attaque : +10
@@ -2591,7 +2591,7 @@ Lanceur : Arc~
 @30045=~Rage~
 @30046=~Espoir~
 @30047=~Protégé par Égide~
-@30048=~Créées par le sort Baie magique, ces baies soigneront 1d4+5 points de dégâts pour chaque grappe de baies consommées.~
+@30048=~Créées par le sort Baie magique, ces baies soigneront 1d4+5 points de vie pour chaque grappe de baies consommées.~
 @30049=~Attaque renvoyée~
 @30050=~Protégé par Piège à sorts~
 @30051=~Libérer le séquenceur de sorts~
@@ -2759,12 +2759,12 @@ Cette capacité peut être utilisée comme une action libre.~
 @30175=~... pour lancer un sort épique appelé...~
 //Les chaînes ci-dessous correspondent à des noms de sorts épiques ; ils devraient avoir le même nom que dans créature_rebalancing.tra (plage TRA @21001 - @21099) mais avec la ponctuation ajoutée.
 @30176=~... Explosion mentale.~
-@30177=~... Blizzard du cœur.~
-@30178=~... Créez un nécrophage d’hiver.~
-@30179=~... Armure de mage épique.~
+@30177=~... Tourmente spirituelle.~
+@30178=~... Création d’un Nécrophage d’hiver.~
+@30179=~... Armure épique de mage.~
 @30180=~... Protection épique.~
-@30181=~... De nombreux missiles.~
-@30182=~... Absorption massive d’énergie.~
+@30181=~... Salve de projectiles.~
+@30182=~... Absorption d’énergie de masse.~
 @30183=~... Peste.~
 @30184=~... Arme dévoreuse d’âme.~
 @30185=~... Tempête Xvimienne.~
@@ -2774,13 +2774,13 @@ Cette capacité peut être utilisée comme une action libre.~
 @30188=~Vous serez riche !~
 @30189=~...~
 @30190=~... de niveau 1 appelé...~
-@30191=~... du niveau 2 appelé...~
-@30192=~... du niveau 3 appelé...~
-@30193=~... du niveau 4 appelé...~
-@30194=~... du niveau 5 appelé...~
-@30195=~... du niveau 6 appelé...~
-@30196=~... du niveau 7 appelé...~
-@30197=~... du niveau 8 appelé...~
+@30191=~... de niveau 2 appelé...~
+@30192=~... de niveau 3 appelé...~
+@30193=~... de niveau 4 appelé...~
+@30194=~... de niveau 5 appelé...~
+@30195=~... de niveau 6 appelé...~
+@30196=~... de niveau 7 appelé...~
+@30197=~... de niveau 8 appelé...~
 //Les chaînes ci-dessous correspondent à des noms de sorts ; ils devraient avoir le même nom que dans spell_revise.tra (si vous ne trouvez pas le sort dans spell_revise.tra, utilisez le nom du jeu vanilla) mais avec la ponctuation ajoutée.
 @30198=~... Lucidité funeste.~
 @30199=~... Graisse.~
@@ -2919,7 +2919,7 @@ Cette capacité peut être utilisée comme une action libre.~
 @30332=~... Épée de Mordenkainen.~
 @30333=~... Omniprésence.~
 @30334=~... Répulsion.~
-@30335=~... Sept yeux.~
+@30335=~... Cercle d’yeux.~
 @30336=~... Squelettes piégés.~
 @30337=~... Saut temporel.~
 @30338=~... Séquenceur de sorts.~
