@@ -1,5 +1,5 @@
-//36161 : Adds a carriage return before "REMARQUE" + initial cap it + “chargement”->”de recharge”
-@57000 =~TIR RAPIDE :
+//36161 : Adds a carriage return before "REMARQUE" + initial cap it + misinterpretation
+@57000	=~TIR RAPIDE :
 
 Le personnage utilise ses armes à distance à une cadence stupéfiante.
 
@@ -7,57 +7,106 @@ Prérequis : Dex 13+
 
 Avantage : le personnage a droit à une attaque supplémentaire par round avec son arme à distance. Cette attaque se fait avec son bonus maximum, mais chaque attaque (la supplémentaire et les attaques normales) subit une pénalité de -2.
 
-Remarque : ce don n'augmente pas le temps de recharge des arbalètes.~
+Remarque : ce don ne profite pas aux arbalètes car il n’améliore pas leur temps de réarmement.~
 
 //37657: Feat name change
-@57001=~Aqua mortis~
+@57001	=~Aqua mortis~
 //37665: Feat description name change
-@57002=~AQUA MORTIS :
-Le personnage a développé une grande maîtrise de la magie de l'acide avec des résultats impressionnants.
+@57002	=~AQUA MORTIS :
+Le personnage a développé une grande maîtrise de la magie de l’acide avec des résultats impressionnants.
 
-Prérequis : le personnage doit pouvoir lancer des sorts de niveau 4 et disposer d'un niveau de Connaissance des sorts de 10 au minimum.
+Prérequis : le personnage doit pouvoir lancer des sorts de niveau 4 et disposer d’un niveau de Connaissance des sorts de 10 au minimum.
 
-Avantage : procure 5 points de résistance à l'acide (permanent) et un bonus de 20% aux dégâts causés par l'acide.~
+Avantage : procure 5 points de résistance à l’acide (permanent) et un bonus de 20% aux dégâts causés par l’acide.~
 
 //36208: Fix original translation
-@57003=~COMBAT EN AVEUGLE :
+@57003	=~COMBAT EN AVEUGLE :
 
 Le personnage sait se battre sans avoir besoin de voir ses adversaires.
 
-Avantage : chaque fois que vous manquez votre ennemi en raison de son camouflage lors d'un combat au corps à corps, vous pouvez relancer une fois votre jet d’attaque pour savoir si vous le touchez finalement. Un ennemi invisible ne bénéficie d'aucun bonus au jet d'attaque pour vous toucher en mêlée. Autrement dit, vous ne perdez pas votre bonus positif de Dextérité à la classe d'armure, et l'ennemi ne bénéficie pas du bonus habituel de +2. Cependant, les bonus de l'ennemi invisible s'appliquent toujours pour les attaques à distance.~
+Avantage : chaque fois que vous manquez votre ennemi en raison de son camouflage lors d’un combat au corps à corps, vous pouvez relancer une fois votre jet d’attaque pour savoir si vous le touchez finalement. Un ennemi invisible ne bénéficie d’aucun bonus au jet d’attaque pour vous toucher en mêlée. Autrement dit, vous ne perdez pas votre bonus positif de Dextérité à la classe d’armure, et l’ennemi ne bénéficie pas du bonus habituel de +2. Cependant, les bonus de l’ennemi invisible s’appliquent toujours pour les attaques à distance.~
 
 
 //26266: “Ballade” into “Le Récit” + better tooltip + translation of Curran’s lastname
-@57004=~Le Récit de Curran Cœurvaillant - immunité contre la terreur et le désespoir, et bonus d’attaque~
+@57004	=~Le Récit de Curran Cœurvaillant - immunité contre la terreur et le désespoir, et bonus d’attaque~
 
 //26868: “Ballade” into “Le Récit” + translation of Curran’s lastname
-@57005=~Le Récit de Curran Cœurvaillant~
+@57005	=~Le Récit de Curran Cœurvaillant~
 
 //32182: “Ballade” into “Le Récit” + translation of Curran’s lastname
-@57006=~Le barde entonne un chant approprié à la situation : par ordre de priorité, "Le Récit de Curran Cœurvaillant" si un PJ est effrayé, "L'Appel de la Sirène" si le barde voit des ennemis et que les PJ sont en bonne santé, "L'Hymne guerrier de Sith" ou "La Ballade des Trois Héros" si le barde voit des ennemis et enfin "La Mélodie de Tymora" si le barde ne voit aucun ennemi.
-Remarque : le barde n'attaque pas, ne lance pas de sorts et ne s'enfuit pas si ce script est actif.~
+@57006	=~Le barde entonne un chant approprié à la situation : par ordre de priorité, "Le Récit de Curran Cœurvaillant" si un PJ est effrayé, "L’Appel de la Sirène" si le barde voit des ennemis et que les PJ sont en bonne santé, "L’Hymne guerrier de Sith" ou "La Ballade des Trois Héros" si le barde voit des ennemis et enfin "La Mélodie de Tymora" si le barde ne voit aucun ennemi.
+Remarque : le barde n’attaque pas, ne lance pas de sorts et ne s’enfuit pas si ce script est actif.~
 
 //10117:  ”Wizard Robe of Cold Resistance” has been mistranslated by “Vous copiez le sort dans votre livre de mage”. An index error at the time, no doubt.
-@57007=~Robe de mage de Résistance au Froid~
+@57007	=~Robe de mage de Résistance au Froid~
 
 //37250: “Augmentation des dégâts” feat doesn’t exist. It’s “Attaque en puissance”. + easier to understand
-@57008=~ENCHAÎNEMENT :
+@57008	=~ENCHAÎNEMENT :
 
 Le personnage peut porter un série de coups puissants.
 
-Prérequis : Force 13+, don Attaque en puissance. Pour acquérir le deuxième rang de ce don, il faut impérativement disposer d'un bonus de base à l'attaque d'au moins +4.
+Prérequis : Force 13+, don Attaque en puissance. Pour acquérir le deuxième rang de ce don, il faut impérativement disposer d’un bonus de base à l’attaque d’au moins +4.
 
-Avantage : si vous infligez suffisamment de dégâts avec une arme de mêlée pour tuer votre cible, vous obtenez une attaque supplémentaire immédiate au corps à corps contre une autre créature à proximité. Vous ne pouvez pas vous déplacer avant de faire cette attaque supplémentaire. L'attaque se fait avec la même arme et au même bonus que l'attaque qui a tué la créature précédente. Ce don peut être acquis à deux reprises pour pouvoir profiter de Succession d'enchaînements, qui ne limite plus le nombre de fois où vous pouvez l'utiliser par round.~
+Avantage : si vous infligez suffisamment de dégâts avec une arme de mêlée pour tuer votre cible, vous obtenez une attaque supplémentaire immédiate au corps à corps contre une autre créature à proximité. Vous ne pouvez pas vous déplacer avant de faire cette attaque supplémentaire. L’attaque se fait avec la même arme et au même bonus que l’attaque qui a tué la créature précédente. Ce don peut être acquis à deux reprises pour pouvoir profiter de Succession d’enchaînements, qui ne limite plus le nombre de fois où vous pouvez l’utiliser par round.~
 
 //40223: “Augmentation des dégâts” feat doesn’t exist. It’s “Attaque en puissance”.
-@57009=~Utilisez le don Attaque en puissance sur les cibles aux armures légères pour les vaincre rapidement, mais n'oubliez pas de diminuer sa puissance ou de la désactiver face à des ennemis mieux protégés.~
+@57009	=~Utilisez le don Attaque en puissance sur les cibles aux armures légères pour les vaincre rapidement, mais n’oubliez pas de diminuer sa puissance ou de la désactiver face à des ennemis mieux protégés.~
 
 //40224: “Augmentation des dégâts” feat doesn’t exist. It’s “Attaque en puissance”.
-@57010=~Les cibles impuissantes peuvent être touchées automatiquement. Utilisez le don Attaque en puissance ou Tir rapide pour leur infliger des dégâts plus importants.~
+@57010	=~Les cibles impuissantes peuvent être touchées automatiquement. Utilisez le don Attaque en puissance ou Tir rapide pour leur infliger des dégâts plus importants.~
 
 //35794: “Augmentation des dégâts” feat doesn’t exist. It’s “Attaque en puissance”.
-@57011=~Augmentation des dégâts~
+@57011	=~Augmentation des dégâts~
 
+//10344: “Sorts de prêtre en bonus” Mistake in the stats panel.
+@57012	=~Sorts bonus~
 
+//40996: Typo “ave”
+@57013	=~Savez-vous pourquoi la grande prêtresse Oria se drape dans ses voiles aussi pudiquement qu’une momie au déniaisage d’un nécromancien ? Il paraît qu’elle a fracassé le crâne d’un pauvre chaman avec son bâton… il a eu le malheur de la frôler dans le hall.~
 
+//5790: Better translation
+@57014	=~Protection contre la mort
+(Nécromancie)
+Niveau : Prê 4, Dru 5, Pal 4, Heaum 4
+Portée : toucher
+Durée : 10 minutes par niveau
+Temps d’incantation : 1 round
+Zone d’effet : 1 créature
+Jet de sauvegarde : aucun
 
+Ce sort protège contre tous les sorts causant la mort d’un seul coup, comme Désintégration, Mot de pouvoir : Mort, Doigt de mort ou tout autre sort de mort.~
+
+//25018: Changing <TYPE> to make the combat log sentences more correct in French.
+@57015	=~de poison~
+
+//25019:
+@57016	=~de magie~
+
+//25020:
+@57017	=~de projectile~
+
+//25021:
+@57018	=~tranchants~
+
+//25022:
+@57019	=~perforants~
+
+//25023:
+@57020	=~contondants~
+
+//25024:
+@57021	=~de feu~
+
+//25025:
+@57022	=~d’électricité~
+
+//25026:
+@57023	=~de froid~
+
+//25027:
+@57024	=~d’acide~
+
+//14450: “Au jour d’aujourd’hui” fix
+@57025	=~Le spectacle du monastère du Corbeau Noir a dû sembler étrange à nos aventuriers. Pendant qu’Oncle Oswald évacuait les gens de Kuldahar vers le nord et l’est, les mercenaires venant de Targos arrivaient en ce lieu insolite. Aujourd’hui, je n’ai toujours pas compris ces moines ou leur philosophie. Même Iselore parlait d’eux en termes confus, comme si son ordre druidique et cet ordre monastique étaient si proches... mais en même temps si différents... qu’ils étaient devenus totalement étrangers l’un à l’autre.
+
+Les moines du Corbeau Noir vivent toujours dans les montagnes, leurs rangs grossissant ou se vidant au fil des ans. J’ai observé leur plateau de loin, je les ai vus s’entraîner, éviter chaque flocon de neige qui tombait. Aujourd’hui, les moines semblent satisfaits, même si cela n’a pas toujours été le cas, de laisser leur monde secret et silencieux à l’écart de la politique et de la guerre.~
