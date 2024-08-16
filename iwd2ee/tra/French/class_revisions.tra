@@ -131,7 +131,7 @@ Tant que cette capacité est active, vos attaques sournoises infligent 1d6 points
 @224	= ~Coup de Jarnac
 
 Tant que cette capacité est active, vos attaques sournoises infligent 2d6 de dégâts en moins mais réduisent la vitesse de déplacement de la cible de 50% pendant 10 rounds (pas de sauvegarde). Cette capacité peut être activée ou désactivée à volonté en tant qu'action libre.~
-@225	= ~Tir Rapide
+@225	= ~Tir rapide
 
 Tant que cette capacité est active, vous gagnez une attaque supplémentaire par round avec toute arme à distance autre qu'une arbalète. Cette attaque est faite avec votre bonus d'attaque maximum. Cependant, toutes vos attaques subissent une pénalité de -2. Cette capacité peut être activée ou désactivée à volonté en tant qu'action libre.~
 @226	= ~Renvoi des morts-vivants
@@ -407,9 +407,9 @@ Vous pouvez effectuer une attaque tournoyante pour frapper plusieurs ennemis aut
 
 Prérequis : Dex 13+, Int 13+, Expertise du combat, Esquive, Mobilité, Élan offensif, bonus d'attaque de base de 4 ou plus. Prendre le don une seconde fois nécessite 21+ Dex. Prendre le don une troisième fois nécessite 25+ Dex et 30 niveaux de rôdeur.
 
-Avantage : Vous gagnez la capacité Attaque Tourbillon, utilisable une fois par round. En utilisant la capacité, vous effectuez une attaque avec chacune de vos armes contre chaque ennemi proche, renonçant à toutes les autres attaques pour le round. Le rayon de l'attaque dépend de la portée de votre arme.
+Avantage : Vous gagnez la capacité Attaque tourbillon, utilisable une fois par round. En utilisant la capacité, vous effectuez une attaque avec chacune de vos armes contre chaque ennemi proche, renonçant à toutes les autres attaques pour le round. Le rayon de l'attaque dépend de la portée de votre arme.
 
-Lorsqu'il est pris une seconde fois, le don devient Attaque Tourbillon Améliorée, ce qui augmente le rayon de l'attaque de 1,5 mètres (5 pieds).
+Lorsqu'il est pris une seconde fois, le don devient Attaque tourbillon améliorée, ce qui augmente le rayon de l'attaque de 1,5 mètres (5 pieds).
 
 Lorsqu'il est pris une troisième fois, le don devient Attaque Tourbillon Automatique, ce qui permet au personnage d'attaquer dans une zone d'effet avec chaque attaque de mêlée qu'il effectue.
 
@@ -500,9 +500,9 @@ Avantage : Vous gagnez la capacité Sort de groupe, utilisable à volonté comme un
 
 Vous pouvez tirer plusieurs flèches simultanément sur une cible proche.
 
-Prérequis : Dex 17+, Tir Rapide, Tir de précision, Bonus d'attaque de base +16 ou plus ; prendre le don une seconde fois nécessite 15 niveaux de rôdeur
+Prérequis : Dex 17+, Tir rapide, Tir de précision, Bonus d'attaque de base +16 ou plus ; prendre le don une seconde fois nécessite 15 niveaux de rôdeur
 
-Avantage : Lorsque vous avez Tir Rapide activé et que vous attaquez avec un arc pour la première fois dans un round, vous tirez deux flèches au lieu d'une. Chacune de ces attaques est un jet d'attaque séparé avec une pénalité de -5. Si vous avez deux rangs dans ce don, vous tirez trois flèches au lieu d'une, chacune avec une pénalité de -10.
+Avantage : Lorsque vous avez Tir rapide activé et que vous attaquez avec un arc pour la première fois dans un round, vous tirez deux flèches au lieu d'une. Chacune de ces attaques est un jet d'attaque séparé avec une pénalité de -5. Si vous avez deux rangs dans ce don, vous tirez trois flèches au lieu d'une, chacune avec une pénalité de -10.
 
 Spécial : Un personnage avec 9 niveaux de rôdeur peut prendre le premier rang de ce don (et peut prendre le deuxième rang au niveau 15) même s'il ne remplit pas les prérequis.~
 @367	= ~Attaques réflexes~
@@ -620,7 +620,7 @@ Vous gagnez également une utilisation de la capacité Arme empoisonnée. Prendre l
 Cependant, vous ne gagnez que 2 + votre modificateur d'Intelligence points de compétence par niveau de roublard après le premier.
 
 Spécial : Vous ne pouvez prendre ce don qu'en tant que personnage de niveau 1.~
-@386	= ~Guérison Rapide~
+@386	= ~Guérison rapide~
 @387	= ~GUÉRISON RAPIDE :
 
 Vous guérissez vos blessures très rapidement.
@@ -908,8 +908,8 @@ Avantages :
 * 6ème niveau : Le rôdeur peut obtenir le don Attaque Tourbillon s'il remplit les conditions de Dextérité, en ignorant toutes les autres conditions.
 * 6ème niveau : Collets Naturels. Cette capacité pose un piège qui, lorsqu'il est déclenché par un ennemi, piège tous les ennemis dans un rayon de 6 mètres (20 pieds) pendant 5 rounds en cas d'échec au jet de sauvegarde de Réflexes. Le Degré de Difficulté du jet est de 6 + la compétence Sens de la nature du rôdeur. Le rôdeur gagne une utilisation supplémentaire de Collets Naturels tous les 6 niveaux après le niveau 6.
 * 7ème niveau : Déplacement facilité en forêt. Le rôdeur devient immunisé à Enchevêtrement, Toile et Croissance d'épines.
-* 9ème niveau : Le rôdeur peut obtenir les dons Combat à Deux Armes Amélioré et Feu Nourri, même s'il ne remplit pas les conditions préalables.
-* 15ème niveau : Le rôdeur peut obtenir les dons Combat à Deux Armes Amélioré et Feu Nourri une seconde fois, ce qu'aucune autre classe ne peut faire.
+* 9ème niveau : Le rôdeur peut obtenir les dons Combat à deux armes amélioré et Feu Nourri, même s'il ne remplit pas les conditions préalables.
+* 15ème niveau : Le rôdeur peut obtenir les dons Combat à deux armes amélioré et Feu Nourri une seconde fois, ce qu'aucune autre classe ne peut faire.
 
 Désavantages :
 * Les rôdeurs gagnent des dons à un rythme plus lent que les guerriers.
@@ -1208,7 +1208,7 @@ Avantage : Vous bénéficiez d'un bonus de +3 à tous les jets de sauvegarde de Vig
 Le personnage est doté d'une volonté à toute épreuve.
 
 Avantage : Vous bénéficiez d'un bonus de +3 à tous les jets de sauvegarde de Volonté.~
-@673	= ~REFLEXES SURHUMAINS :
+@673	= ~RÉFLEXES SURHUMAINS :
 
 Vous avez des réflexes plus rapides que la normale.
 
@@ -1332,7 +1332,7 @@ Prérequis : Nain gris (duergar) ou demi-orque
 Avantage : Vous obtenez un bonus de +4 aux jets de sauvegarde de Vigueur contre le poison. De plus, chaque seconde où vous devriez subir des dégâts de poison, les dégâts sont réduits de 1.
 
 Spécial : Vous ne pouvez prendre ce don qu'en tant que personnage de niveau 1.~
-@689	= ~Forme animale Améliorée~
+@689	= ~Forme animale améliorée~
 @690	= ~FORME ANIMALE AMÉLIORÉE :
 
 Vous pouvez utiliser votre capacité de Forme animale plus souvent et plus efficacement.
@@ -1340,7 +1340,7 @@ Vous pouvez utiliser votre capacité de Forme animale plus souvent et plus effica
 Prérequis : 3 niveaux de druide
 
 Avantage : Vous gagnez une utilisation supplémentaire de Forme animale par jour. Vous comptez également comme ayant 3 niveaux de plus pour déterminer la puissance de votre forme transformée, bien que cela ne vous donne pas accès à de nouvelles formes plus tôt. Ce don peut être pris jusqu'à trois fois.~
-@691	= ~Rage Améliorée~
+@691	= ~Rage améliorée~
 @692	= ~RAGE AMÉLIORÉE :
 
 Vous pouvez invoquer votre rage de berserker plus souvent et plus puissamment.
@@ -1348,7 +1348,7 @@ Vous pouvez invoquer votre rage de berserker plus souvent et plus puissamment.
 Prérequis : 1 niveau de barbare
 
 Avantage : Vous gagnez une utilisation supplémentaire de Rage de berserker par jour. Vous gagnez également un bonus supplémentaire de +1 en Force et Constitution pendant la rage ; ces bonus se cumulent avec les bonus existants de l'effet de rage. Ce don peut être pris jusqu'à trois fois.~
-@693	= ~Frappe Améliorée~
+@693	= ~Frappe améliorée~
 @694	= ~FRAPPE AMÉLIORÉE :
 
 Vous pouvez utiliser votre capacité Châtiment du mal plus souvent et avec une plus grande puissance.
@@ -1356,7 +1356,7 @@ Vous pouvez utiliser votre capacité Châtiment du mal plus souvent et avec une pl
 Prérequis : 2 niveaux de paladin
 
 Avantage : Vous gagnez une utilisation supplémentaire de Châtiment du mal par jour. De plus, un nombre de d4 supplémentaires égal à votre niveau de paladin + votre modificateur de Charisme est encore ajouté aux dégâts de Châtiment du mal. Ce don peut être pris jusqu'à trois fois.~
-@695	= ~Renvoi Amélioré~
+@695	= ~Renvoi amélioré~
 @696	= ~RENVOI AMÉLIORÉ :
 
 Vous pouvez utiliser votre capacité de Renvoi des Morts-Vivants plus souvent et contrôler ou affecter des morts-vivants plus puissants.
@@ -2287,8 +2287,8 @@ Cette capacité peut être utilisée une fois par round. La cible doit faire un jet
 @950	= ~Attaque Tourbillon
 
 Cette capacité peut être utilisée une fois par round. Vous faites une attaque avec chacune de vos armes contre tous les ennemis proches, renonçant à toutes les autres attaques pour le round. Le rayon de l'attaque dépend de la portée de votre arme.~
-@951	= ~Attaque Tourbillon Améliorée~
-@952	= ~Attaque Tourbillon Améliorée
+@951	= ~Attaque tourbillon améliorée~
+@952	= ~Attaque tourbillon améliorée
 
 Cette capacité peut être utilisée une fois par round. Vous faites une attaque avec chacune de vos armes contre tous les ennemis proches, renonçant à toutes les autres attaques pour le round. Le rayon de l'attaque est égal à la portée de votre arme plus 1,5 mètre (5 pieds).~
 @953	= ~Contresort
