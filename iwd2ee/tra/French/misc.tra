@@ -1,22 +1,22 @@
 @56000=~Nous sommes entrés par des moyens magiques.~
-@56001=~Avez-vous de nouveau besoin de mes services ?~
+@56001=~Avez-vous de nouveau besoin de mes services ?~
 @56002=~Oui, veuillez rejoindre le groupe.~
 @56003=~Pas pour le moment.~
-@56004=~Ce curseur contrôle le niveau de difficulté à utiliser en combat. De gauche à droite, les paramètres sont les suivants :
+@56004=~Ce curseur contrôle le niveau de difficulté à utiliser en combat. De gauche à droite, les paramètres sont les suivants :
 
-* Très facile : Les ennemis ont un malus de -4 aux jets d’attaque et de sauvegarde, et le groupe subit la moitié des dégâts.
+* Très facile : Les ennemis ont un malus de -4 aux jets d’attaque et de sauvegarde, et le groupe subit la moitié des dégâts.
 
-* Facile : Les ennemis ont un malus de -2 aux jets d’attaque et de sauvegarde, et le groupe subit les trois quarts des dégâts.
+* Facile : Les ennemis ont un malus de -2 aux jets d’attaque et de sauvegarde, et le groupe subit les trois quarts des dégâts.
 
-* Normal : Ce paramètre n’a aucun changement ; Icewind Dale 2 : Enhanced Edition a été équilibré pour ce niveau de difficulté.
+* Normal : Ce paramètre n’a aucun changement ; Icewind Dale 2 : Enhanced Edition a été équilibré pour ce niveau de difficulté.
 
-* Difficile : Les ennemis ont un bonus d’attaque de +3 et infligent 50% de dégâts supplémentaires au groupe.
+* Difficile : Les ennemis ont un bonus d’attaque de +3 et infligent 50% de dégâts supplémentaires au groupe.
 
-* Très difficile : Les ennemis ont un bonus d’attaque de +9 et infligent le double de dégâts au groupe.
+* Très difficile : Les ennemis ont un bonus d’attaque de +9 et infligent le double de dégâts au groupe.
 
 De plus, il existe une difficulté encore plus élevée, Cœur de furie. Ce paramètre de difficulté est accessible en ouvrant Config.exe, en sélectionnant l’option “Mode Cœur de furie” et en commençant une nouvelle partie.
 
-* Cœur de furie : Les ennemis ont le triple de leurs Points de Vie de base plus 80 PV supplémentaires, +10 à toutes les valeurs de caractéristiques, +12 niveaux dans chacune de leurs classes, +9 en attaque, +5 aux jets de sauvegarde, infligent le double de dégâts au groupe et ont +10 au facteur de difficulté (challenge rating). Tout au long du jeu, de nombreux objets magiques sont remplacés par des versions plus puissantes.
+* Cœur de furie : Les ennemis ont le triple de leurs Points de Vie de base plus 80 PV supplémentaires, +10 à toutes les valeurs de caractéristiques, +12 niveaux dans chacune de leurs classes, +9 en attaque, +5 aux jets de sauvegarde, infligent le double de dégâts au groupe et ont +10 au facteur de difficulté (challenge rating). Tout au long du jeu, de nombreux objets magiques sont remplacés par des versions plus puissantes.
 
 Icewind Dale 2: Enhanced Edition a certains modules optionnels qui réduisent les bonus accordés aux ennemis du mode Cœur de furie. Les bonus ci-dessus supposent qu’aucun module de ce type n’est installé.~
 @56005=~Absorption d’une Valeur de Caractéristique~
