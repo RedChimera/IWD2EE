@@ -1,81 +1,81 @@
 @4700 	= ~Breuvage d’Eau de Pluie~
 @4701 	= ~Peu coûteuse, efficace et rudimentaire, cette potion est un mélange d’eau de pluie, d’argile, de cendres et de racines de plusieurs plantes. Ce modeste breuvage restaurera 2d6 points de vie au buveur.
 
-PARAMÈTRES :
+PARAMÈTRES :
 
 Soigne 2d6 points de vie
-Poids : 0,45 kg (1 lb)~
+Poids : 0,45 kg (1 lb)~
 @54700 	= ~Breuvage d’Eau de Pluie~
 @54701 	= ~Peu coûteuse, efficace et rudimentaire, cette potion est un mélange d’eau de pluie, d’argile, de cendres et de racines de plusieurs plantes. Ce modeste breuvage restaurera 5d6 points de vie au buveur.
 
-PARAMÈTRES :
+PARAMÈTRES :
 
 Soigne 5d6 points de vie
-Poids : 0,45 kg (1 lb)~
+Poids : 0,45 kg (1 lb)~
 @4702 	= ~Brouet Aigre~
 @4703 	= ~Les potions puissantes nécessitent des ingrédients moins communs, et ce breuvage ne fait pas exception. Graisse animale, bile, feuilles séchées et viande fermentée composent cette concoction à l’odeur nauséabonde, mais un ami mourant ne s’en plaindra pas. Ce breuvage restaurera 4d8 points de vie à quiconque est assez désespéré pour le boire.
 
-PARAMÈTRES :
+PARAMÈTRES :
 
 Soigne 4d8 points de vie
-Poids : 0,45 kg (1 lb)~
+Poids : 0,45 kg (1 lb)~
 @54702 	= ~Brouet Aigre~
 @54703 	= ~Les potions puissantes nécessitent des ingrédients moins communs, et ce breuvage ne fait pas exception. Graisse animale, bile, feuilles séchées et viande fermentée composent cette concoction à l’odeur nauséabonde, mais un ami mourant ne s’en plaindra pas. Ce breuvage restaurera 10d8 points de vie à quiconque est assez désespéré pour le boire.
 
-PARAMÈTRES :
+PARAMÈTRES :
 
 Soigne 10d8 points de vie
-Poids : 0,45 kg (1 lb)~
+Poids : 0,45 kg (1 lb)~
 @4704 	= ~Élixir Sucré~
 @4705 	= ~On pourrait prendre cette boisson sucrée pour du vin blanc, mais la légère amertume de son goût ne provient pas de l’alcool, mais de quartz transmuté. Boire cette potion peut apaiser presque tous les maux, qu’il s’agisse d’une infection courante, d’un venin mortel ou d’une vilaine gueule de bois. Le quartz se lie aux substances toxiques et les transforme en sel inoffensif, guérissant ainsi les poisons, les maladies et l’intoxication. Si cela ne suffit pas à soigner l’aventurier malade, les larmes de cheval dans le sirop restaurent également 1d4 points de vie à l’utilisateur.
 
-PARAMÈTRES :
+PARAMÈTRES :
 
 Guérit les poisons et les maladies
 Soigne 1d4 points de vie
-Poids : 0,45 kg (1 lb)~
+Poids : 0,45 kg (1 lb)~
 @54704 	= ~Élixir Sucré~
 @54705 	= ~On pourrait prendre cette boisson sucrée pour du vin blanc, mais la légère amertume de son goût ne provient pas de l’alcool, mais de quartz transmuté. Boire cette potion peut apaiser presque tous les maux, qu’il s’agisse d’une infection courante, d’un venin mortel ou d’une vilaine gueule de bois. Le quartz se lie aux substances toxiques et les transforme en sel inoffensif, guérissant ainsi les poisons, les maladies et l’intoxication. Si cela ne suffit pas à soigner l’aventurier malade, les larmes de cheval dans le sirop restaurent également 4d4 points de vie à l’utilisateur.
 
-PARAMÈTRES :
+PARAMÈTRES :
 
 Guérit les poisons et les maladies
 Soigne 4d4 points de vie
-Poids : 0,45 kg (1 lb)~
+Poids : 0,45 kg (1 lb)~
 @4706 	= ~Gel Électrique~
 @4707 	= ~Ce gel bleuâtre pâle émet un étrange bourdonnement dans son récipient en laiton hermétiquement fermé. Lorsqu’il est ingéré, le gel absorbe les dégâts électriques, conférant à l’utilisateur une résistance de 20/- à toutes les formes d’électricité. L’effet dure 10 rounds ou jusqu’à ce qu’il soit dissipé.
 
-PARAMÈTRES :
+PARAMÈTRES :
 
-Résistance : 20/- de résistance à l’électricité~
+20/- de résistance à l’électricité pendant 10 rounds~
 @54706 	= ~Gel Électrique~
 @54707 	= ~Ce gel bleuâtre pâle émet un étrange bourdonnement dans son récipient en laiton hermétiquement fermé. Lorsqu’il est ingéré, le gel absorbe les dégâts électriques, conférant à l’utilisateur une résistance de 50/- à toutes les formes d’électricité. L’effet dure 10 rounds ou jusqu’à ce qu’il soit dissipé.
 
-PARAMÈTRES :
+PARAMÈTRES :
 
-Résistance : 50/- de résistance à l’électricité~
+50/- de résistance à l’électricité pendant 10 rounds~
 @4708 	= ~Philtre Radieux~
 @4709 	= ~Un liquide visqueux scintille à l’intérieur de cette petite bouteille. Préparée dans un pot en cire et filtrée à travers des bandes de parchemin magique, cette mixture de salpêtre, huile d’olive, lézards hachés, soude caustique, feuilles de menthe et cannelle peut protéger la peau de l’utilisateur contre une chaleur extrême.
 
 En versant la fiole sur son bras et en prononçant le mot de commande, l’utilisateur étend un liquide prismatique rayonnant sur son corps, lui conférant une résistance de 20/- à toutes les formes de dégâts de feu. Le liquide est enchanté pour adhérer à la peau de l’utilisateur, mais l’effet disparaît après 10 rounds.
 
-PARAMÈTRES :
+PARAMÈTRES :
 
-Résistance : 20/- de résistance au feu
-Poids : 0,45 kg (1 lb)~
+20/- de résistance au feu pendant 10 rounds
+Poids : 0,45 kg (1 lb)~
 @54708 	= ~Philtre Radieux~
 @54709 	= ~Un liquide visqueux scintille à l’intérieur de cette petite bouteille. Préparée dans un pot en cire et filtrée à travers des bandes de parchemin magique, cette mixture de salpêtre, huile d’olive, lézards hachés, soude caustique, feuilles de menthe et cannelle peut protéger la peau de l’utilisateur contre une chaleur extrême.
 
 En versant la fiole sur son bras et en prononçant le mot de commande, l’utilisateur étend un liquide prismatique rayonnant sur son corps, lui conférant une résistance de 50/- à toutes les formes de dégâts de feu. Le liquide est enchanté pour adhérer à la peau de l’utilisateur, mais l’effet disparaît après 10 rounds.
 
-PARAMÈTRES :
+PARAMÈTRES :
 
-Résistance : 50/- de résistance au feu
-Poids : 0,45 kg (1 lb)~
+50/- de résistance au feu pendant 10 rounds
+Poids : 0,45 kg (1 lb)~
 @4710 	= ~Manie Noire~
 @4711 	= ~Toutes les potions ne sont pas forcément médicinales. Certains alchimistes utilisent leurs talents pour produire des narcotiques et vivent de la vente de poisons addictifs aux oisifs et aux agités. Cette huile noire est une version modifiée de l’un de ces narcotiques. Lorsque la Manie Noire est bue, elle induit un état de confusion violent, accordant à l’utilisateur un bonus de +5 aux jets de dégâts et +3 aux jets d’attaque au corps à corps, au prix d’un malus de -3 à la classe d’armure et aux attaques à distance. De plus, l’utilisateur devient enragé pendant 10 rounds et ses points de vie sont cachés pendant toute la durée de l’effet.
 
-PARAMÈTRES :
+PARAMÈTRES :
 
 +3 aux attaques au corps à corps
 +5 aux dégâts
@@ -83,11 +83,12 @@ PARAMÈTRES :
 -3 aux attaques à distance
 L’utilisateur devient berserk au combat.
 Points de vie cachés
-Poids : 0,45 kg (1 lb)~
+Se dissipe après 10 rounds
+Poids : 0,45 kg (1 lb)~
 @54710 	= ~Manie Noire~
 @54711 	= ~Toutes les potions ne sont pas forcément médicinales. Certains alchimistes utilisent leurs talents pour produire des narcotiques et vivent de la vente de poisons addictifs aux oisifs et aux agités. Cette huile noire est une version modifiée de l’un de ces narcotiques. Lorsque la Manie Noire est bue, elle induit un état de confusion violent, accordant à l’utilisateur un bonus de +10 aux jets de dégâts et +5 aux jets d’attaque au corps à corps, au prix d’un malus de -10 à la classe d’armure et de -5 aux attaques à distance. De plus, l’utilisateur devient enragé pendant 10 rounds et ses points de vie sont cachés pendant toute la durée de l’effet.
 
-PARAMÈTRES :
+PARAMÈTRES :
 
 +5 aux attaques au corps à corps
 +10 aux dégâts
@@ -95,206 +96,207 @@ PARAMÈTRES :
 -5 aux attaques à distance
 L’utilisateur devient berserk au combat.
 Points de vie cachés
-Poids : 0,45 kg (1 lb)~
+Se dissipe après 10 rounds
+Poids : 0,45 kg (1 lb)~
 @4712 	= ~Gouttes Oculaires à la Poudre d’Os~
 @4713 	= ~Préparées avec une pincée de poudre d’os, du jus de tomate ou de carotte, de l’eau distillée, quelques gouttes du sang de l’utilisateur et un œil de rapace, cette solution rougeâtre peut améliorer la vue de l’utilisateur. En plus d’une légère sensation de brûlure, l’utilisateur trouvera soudain le monde beaucoup plus détaillé, ce qui lui confère un bonus de +3 à tous les jets d’attaque à distance. Les gouttes brûlent légèrement, et l’utilisateur finit par pleurer le fluide, perdant ses bénéfices après 1 heure.
 
-PARAMÈTRES :
+PARAMÈTRES :
 
-+3 au bonus d’attaque (armes à distance uniquement)
-Poids : 0,45 kg (1 lb)~
++3 au bonus d’attaque (armes à distance uniquement) pendant 1 heure
+Poids : 0,45 kg (1 lb)~
 @54712 	= ~Gouttes Oculaires à la Poudre d’Os~
 @54713 	= ~Préparées avec une pincée de poudre d’os, du jus de tomate ou de carotte, de l’eau distillée, quelques gouttes du sang de l’utilisateur et un œil de rapace, cette solution rougeâtre peut améliorer la vue de l’utilisateur. En plus d’une légère sensation de brûlure, l’utilisateur gagnera soudainement une perception magique des faiblesses des autres créatures. Les gouttes brûlent légèrement, et l’utilisateur finit par pleurer le fluide, perdant ses bénéfices après 10 rounds.
 
-PARAMÈTRES :
+PARAMÈTRES :
 
 Expertise de bourreau pendant 10 rounds (+4 au bonus d’attaque, +4 à la plage de critique)
-Poids : 0,45 kg (1 lb)~
+Poids : 0,45 kg (1 lb)~
 @4714 	= ~Bombe Fumigène~
 @4715 	= ~N’importe qui peut allumer un feu et produire un petit nuage de fumée, mais créer un nuage de fumée en un mouvement rapide demande un certain art. Ce petit récipient de fumée concentrée créera rapidement un nuage dissimulant l’utilisateur pendant 1d3+3 secondes selon les courants d’air et autres facteurs.
 
-PARAMÈTRES :
+PARAMÈTRES :
 
 Invisibilité pendant 1d3+3 secondes
-Poids : 0,45 kg (1 lb)~
+Poids : 0,45 kg (1 lb)~
 @54714 	= ~Bombe Fumigène~
 @54715 	= ~N’importe qui peut allumer un feu et produire un petit nuage de fumée, mais créer un nuage de fumée en un mouvement rapide demande un certain art. Ce petit récipient de fumée concentrée créera rapidement un nuage dissimulant l’utilisateur pendant 1d3+3 secondes selon les courants d’air et autres facteurs.
 
-PARAMÈTRES :
+PARAMÈTRES :
 
 Invisibilité pendant 1d3+3 secondes
-Poids : 0,45 kg (1 lb)~
+Poids : 0,45 kg (1 lb)~
 @4716 	= ~Tonique Amer~
 @4717 	= ~Cette potion est un mélange concentré rougeâtre composé de racines, d’argile, de perles broyées et de coquilles d’huîtres, de sang et d’alcool.  La solution renforce la constitution et la résistance du buveur, lui accordant un bonus de +4 à tous les jets de sauvegarde de Vigueur pendant 1 heure.
 
-PARAMÈTRES :
+PARAMÈTRES :
 
 +4 aux jets de sauvegarde de Vigueur pendant 1 heure
-Poids : 0,45 kg (1 lb)~
+Poids : 0,45 kg (1 lb)~
 @54716 	= ~Tonique Amer~
 @54717 	= ~Cette potion est un mélange concentré rougeâtre composé de racines, d’argile, de perles broyées et de coquilles d’huîtres, de sang et d’alcool.  La solution renforce la constitution et la résistance du buveur, lui accordant un bonus de +8 à tous les jets de sauvegarde de Vigueur pendant 1 heure.
 
-PARAMÈTRES :
+PARAMÈTRES :
 
 +8 aux jets de sauvegarde de Vigueur pendant 1 heure
-Poids : 0,45 kg (1 lb)~
+Poids : 0,45 kg (1 lb)~
 @4718 	= ~Solution Salée~
 @4719 	= ~Cette potion, un petit morceau de cerveau de dauphin suspendu dans de l’huile de baleine et de la saumure avec du vif-argent et de la pierre verte comme catalyseurs, est capable d’améliorer les capacités mentales de l’utilisateur. La majeure partie de la puissance latente du cerveau de dauphin est gaspillée, car le fonctionnement de l’esprit est encore mal compris et la méthode derrière cette concoction est assez rudimentaire, mais la saumure bannira toutes les distractions de l’esprit de l’utilisateur, accordant un bonus de +4 à tous les jets de sauvegarde de Volonté pendant 1 heure.
 
-PARAMÈTRES :
+PARAMÈTRES :
 
 +4 aux jets de sauvegarde de Volonté pendant 1 heure
-Poids : 0,45 kg (1 lb)~
+Poids : 0,45 kg (1 lb)~
 @54718 	= ~Solution Salée~
 @54719 	= ~Cette potion, un petit morceau de cerveau de dauphin suspendu dans de l’huile de baleine et de la saumure avec du vif-argent et de la pierre verte comme catalyseurs, est capable d’améliorer les capacités mentales de l’utilisateur. La majeure partie de la puissance latente du cerveau de dauphin est gaspillée, car le fonctionnement de l’esprit est encore mal compris et la méthode derrière cette concoction est assez rudimentaire, mais la saumure bannira toutes les distractions de l’esprit de l’utilisateur, accordant un bonus de +8 à tous les jets de sauvegarde de Volonté pendant 1 heure.
 
-PARAMÈTRES :
+PARAMÈTRES :
 
 +8 aux jets de sauvegarde de Volonté pendant 1 heure
-Poids : 0,45 kg (1 lb)~
+Poids : 0,45 kg (1 lb)~
 @4720 	= ~Gaz Sous Pression~
 @4721 	= ~Cette bouteille de toxines hautement pressurisées explosera lorsqu’elle sera brisée, inondant la zone d’un nuage de gaz nauséabond. Toute créature qui respire prise dans le nuage est confrontée à une odeur nauséabonde qui s’incruste profondément dans leurs narines et leur colle à la gorge, subissant 5 points de dégâts de poison par round pendant 5 rounds. Chaque round où la victime reste dans le nuage, elle doit réussir un jet de sauvegarde de Vigueur pour éviter d’être empoisonnée.
 
-PARAMÈTRES :
+PARAMÈTRES :
 
-5 points de dégâts de poison par round pendant 5 rounds (un jet de Vigueur de DD de 15 annule)
-Se dissipe après 10 rounds
-Poids : 0,45 kg (1 lb)~
+5 points de dégâts de poison par round pendant 5 rounds (un jet de Vigueur au DD de 15 annule)
+Poids : 0,45 kg (1 lb)~
 @54720 	= ~Gaz Sous Pression~
 @54721 	= ~Cette bouteille de toxines hautement pressurisées explosera lorsqu’elle sera brisée, inondant la zone d’un nuage de gaz nauséabond. Toute créature qui respire prise dans le nuage est confrontée à une odeur nauséabonde qui s’incruste profondément dans leurs narines et leur colle à la gorge, subissant 10 points de dégâts de poison par round pendant 5 rounds. Chaque round où la victime reste dans le nuage, elle doit réussir un jet de sauvegarde de Vigueur pour éviter d’être empoisonnée.
 
-PARAMÈTRES :
+PARAMÈTRES :
 
-10 points de dégâts de poison par round pendant 5 rounds (un jet de Vigueur de DD de 25 annule)
-Se dissipe après 10 rounds
-Poids : 0,45 kg (1 lb)~
+10 points de dégâts de poison par round pendant 5 rounds (un jet de Vigueur au DD de 25 annule)
+Poids : 0,45 kg (1 lb)~
 @4722 	= ~Huile Enflammée~
 @4723 	= ~Simple à fabriquer mais coûteuse à produire, ce mélange de poudre noire, d’huile et gaz hautement raffinés s’enflamme lorsqu’il se brise contre une cible. Dès que la bouteille touche le sol, une petite capsule de sodium pur et une autre capsule d’eau s’ouvrent. Le sodium prend feu au contact de l’eau, enflammant le reste du mélange.
 
 Une faible grenade à l’intérieur de la bouteille provoque alors une expansion rapide de l’huile enflammée, répandant la flamme sur toutes les créatures dans un rayon de 9 mètres (30 pieds). Toute personne prise dans l’explosion subira 6d6 points de dégâts avec un jet de Réflexes (DD de 15) pour la moitié des dégâts.
 
-PARAMÈTRES :
+PARAMÈTRES :
 
-6d6 points de dégâts de feu (jet de Réflexes de DD de 15 pour la moitié des dégâts)
-Zone d’effet : rayon de 9 mètres (30 pieds)
-Portée : 12 m (40 pieds)
-Poids : 0,45 kg (1 lb)~
+6d6 points de dégâts de feu (jet de Réflexes au DD de 15 pour la moitié des dégâts)
+Zone d’effet : rayon de 9 mètres (30 pieds)
+Portée : 12 m (40 pieds)
+Poids : 0,45 kg (1 lb)~
 @54722 	= ~Huile Enflammée~
 @54723 	= ~Simple à fabriquer mais coûteuse à produire, ce mélange de poudre noire, d’huile et gaz hautement raffinés s’enflamme lorsqu’il se brise contre une cible. Dès que la bouteille touche le sol, une petite capsule de sodium pur et une autre capsule d’eau s’ouvrent. Le sodium prend feu au contact de l’eau, enflammant le reste du mélange.
 
 Une faible grenade à l’intérieur de la bouteille provoque alors une expansion rapide de l’huile enflammée, répandant la flamme sur toutes les créatures dans un rayon de 9 mètres. Toute personne prise dans l’explosion subira 12d6 points de dégâts avec un jet de Réflexes (DD de 25) pour la moitié des dégâts.
 
-PARAMÈTRES :
+PARAMÈTRES :
 
-12d6 points de dégâts de feu (jet de Réflexes de DD de 25 pour la moitié des dégâts)
-Zone d’effet : rayon de 9 mètres (30 pieds)
-Portée : 12 m (40 pieds)
-Poids : 0,45 kg (1 lb)~
+12d6 points de dégâts de feu (jet de Réflexes au DD de 25 pour la moitié des dégâts)
+Zone d’effet : rayon de 9 mètres (30 pieds)
+Portée : 12 m (40 pieds)
+Poids : 0,45 kg (1 lb)~
 @4724 	= ~Vin de Musc~
 @4725 	= ~Préparé à partir de prunes fermentées et de musc de plusieurs animaux (généralement du bétail, des bœufs, des chevaux, des ânes et des buffles), ce vin fort a une odeur nauséabonde particulière malgré son goût sucré. Pris avec un peu d’acide d’Ankheg et de la chaux (la base, pas le fruit) pour neutraliser l’acide, cette potion accorde au buveur +6 en Force pendant 10 rounds.
 
-PARAMÈTRES :
+PARAMÈTRES :
 
 +6 en Force pendant 10 rounds
-Poids : 0,45 kg (1 lb)~
+Poids : 0,45 kg (1 lb)~
 @54724 	= ~Vin de Musc~
 @54725 	= ~Préparé à partir de prunes fermentées et de musc de plusieurs animaux (généralement du bétail, des bœufs, des chevaux, des ânes et des buffles), ce vin fort a une odeur nauséabonde particulière malgré son goût sucré. Pris avec un peu d’acide d’Ankheg et de la chaux (la base, pas le fruit) pour neutraliser l’acide, cette potion accorde au buveur +12 en Force pendant 10 rounds.
 
-PARAMÈTRES :
+PARAMÈTRES :
 
 +12 en Force pendant 10 rounds
-Poids : 0,45 kg (1 lb)~
+Poids : 0,45 kg (1 lb)~
 @4726 	= ~Jus de Citron Vert~
 @4727 	= ~Cette potion, un mélange acide de jus de citron vert, de venin de scorpion, de piments et de quelques gouttes de sang de nain ou de gnome, accordera au buveur une résistance aux dégâts magiques de 20/- pendant 10 rounds, augmentant ainsi ses chances contre les ennemis lanceurs de sorts.
 
-PARAMÈTRES :
+PARAMÈTRES :
 
-Résistance : 20/- Résistance aux Dégâts Magiques pendant 10 rounds
-Poids : 0,45 kg (1 lb)~
+Résistance : 20/- de résistance aux Dégâts Magiques pendant 10 rounds
+Poids : 0,45 kg (1 lb)~
 @54726 	= ~Jus de Citron Vert~
 @54727 	= ~Cette potion, un mélange acide de jus de citron vert, de venin de scorpion, de piments et de quelques gouttes de sang de nain ou de gnome, accordera au buveur une résistance aux dégâts magiques de 50/- pendant 10 rounds, augmentant ainsi ses chances contre les ennemis lanceurs de sorts.
 
-PARAMÈTRES :
+PARAMÈTRES :
 
-Résistance : 50/- Résistance aux Dégâts Magiques pendant 10 rounds
-Poids : 0,45 kg (1 lb)~
+Résistance : 50/- de résistance aux Dégâts Magiques pendant 10 rounds
+Poids : 0,45 kg (1 lb)~
 @4728 	= ~Fiole d’Écailles~
-@4729 	= ~Composée de rouille en poudre, de carapaces de scarabées, de poudre d’os et d’écorce de chêne, cette mixture à base d’alcool invoque une barrière d’écailles métalliques tranchantes sur la peau de l’utilisateur. Ces peaux de fer absorberont les 1 à 6 prochains coups qui auraient dû toucher le buveur au cours des 10 prochains rounds.
+@4729 	= ~Composée de rouille en poudre, de carapaces de scarabées, de poudre d’os et d’écorce de chêne, cette mixture à base d’alcool invoque une barrière d’écailles métalliques tranchantes sur la peau de l’utilisateur. Ces couches de peau de fer absorberont les 1 à 6 prochains coups qui auraient dû toucher le buveur au cours des 10 prochains rounds.
 
-PARAMÈTRES :
+PARAMÈTRES :
 
-Le buveur gagne 1d6 peaux de fer, comme avec le sort Peau de fer.
-Poids : 0,45 kg (1 lb)~
+Le buveur gagne 1d6 couches de peau de fer, comme avec le sort Peau de fer, pendant 10 rounds
+Poids : 0,45 kg (1 lb)~
 @54728 	= ~Fiole d’Écailles~
-@54729 	= ~Composée de rouille en poudre, de carapaces de scarabées, de poudre d’os et d’écorce de chêne, cette mixture à base d’alcool invoque une barrière d’écailles métalliques tranchantes sur la peau de l’utilisateur. Ces peaux de fer absorberont les 3 à 18 prochains coups qui auraient dû toucher le buveur au cours des 10 prochains rounds.
+@54729 	= ~Composée de rouille en poudre, de carapaces de scarabées, de poudre d’os et d’écorce de chêne, cette mixture à base d’alcool invoque une barrière d’écailles métalliques tranchantes sur la peau de l’utilisateur. Ces couches de peau de fer absorberont les 3 à 18 prochains coups qui auraient dû toucher le buveur au cours des 10 prochains rounds.
 
-PARAMÈTRES :
+PARAMÈTRES :
 
-Le buveur gagne 3d6 peaux de fer, comme avec le sort Peau de fer.
-Poids : 0,45 kg (1 lb)~
+Le buveur gagne 3d6 couches de peau de fer, comme avec le sort Peau de fer, pendant 10 rounds
+Poids : 0,45 kg (1 lb)~
 @4730 	= ~Ectoplasme Raffiné~
 @4731 	= ~Poussière de cimetière, eau de pluie, merles écrasés ou vers de terre, et le sang séché d’un petit enfant ne sont que les premiers ingrédients nécessaires pour préparer cette potion amère et terreuse. Pour compléter le breuvage, un alchimiste doit extraire l’ectoplasme d’un fantôme ou spectre, soit en tuant un esprit errant, soit en grattant la matière de la gorge d’un médium, nécromancien ou devin contactant les morts. Laisser cette potion dehors la nuit pendant 1 à 7 jours (selon la lumière de la lune disponible) la mettra dans un état partiellement spectral, conférant à l’utilisateur une quasi-immunité aux armes ordinaires. Pendant 10 rounds après avoir bu cette potion amère, l’utilisateur ignore les premiers 10 points de dégâts de toute arme avec un enchantement inférieur à +2.
 
-PARAMÈTRES :
+PARAMÈTRES :
 
 Réduction des dégâts de 10/+2 pendant 10 rounds
-Poids : 0,45 kg (1 lb)~
+Poids : 0,45 kg (1 lb)~
 @54730 	= ~Ectoplasme Raffiné~
 @54731 	= ~Poussière de cimetière, eau de pluie, merles écrasés ou vers de terre, et le sang séché d’un petit enfant ne sont que les premiers ingrédients nécessaires pour préparer cette potion amère et terreuse. Pour compléter le breuvage, un alchimiste doit extraire l’ectoplasme d’un fantôme ou spectre, soit en tuant un esprit errant, soit en grattant la matière de la gorge d’un médium, nécromancien ou devin contactant les morts. Laisser cette potion dehors la nuit pendant 1 à 7 jours (selon la lumière de la lune disponible) la mettra dans un état partiellement spectral, conférant à l’utilisateur une quasi-immunité aux armes ordinaires. Pendant 10 rounds après avoir bu cette potion amère, l’utilisateur ignore les premiers 15 points de dégâts de toute arme avec un enchantement inférieur à +3.
 
-PARAMÈTRES :
+PARAMÈTRES :
 
 Réduction des dégâts de 15/+3 pendant 10 rounds
-Poids : 0,45 kg (1 lb)~
+Poids : 0,45 kg (1 lb)~
 @4732 	= ~Éther Hanté~
-@4733 	= ~Il faut à la fois une ingénierie complexe et une étude mystique pour créer cette bouteille de gaz enchanté. L’alchimiste doit d’abord investir dans une colonne de distillation fractionnée pour collecter le gaz nécessaire dans l’atmosphère. Une fois le gaz collecté, il doit être imprégné d’un ou de plusieurs esprits hostiles. Réciter des blasphèmes dans un cimetière est suffisant si l’alchimiste est bien versé dans l’abyssal ou s’il connaît les enseignements de la divinité la plus populaire parmi les morts ; sinon, l’alchimiste doit se tourner vers le pillage de tombes et mener divers rituels illégaux et désagréables avec des cadavres exhumés.
+@4733 	= ~Il faut à la fois une ingénierie complexe et une étude mystique pour créer cette bouteille de gaz enchanté. L’alchimiste doit d’abord investir dans une colonne de distillation fractionnée pour collecter le gaz nécessaire dans l’atmosphère. Une fois le gaz collecté, il doit être imprégné d’un ou de plusieurs esprits hostiles. Réciter des blasphèmes dans un cimetière est suffisant si l’alchimiste est bien versé dans l’abyssal ou s’il connaît les enseignements de la divinité la plus populaire parmi les morts ; sinon, l’alchimiste doit se tourner vers le pillage de tombes et mener divers rituels illégaux et désagréables avec des cadavres exhumés.
 
 Si l’alchimiste réussit à enrager les esprits locaux, il ou elle peut les lier au gaz collecté. En infligeant des décharges électriques répétées aux esprits emprisonnés, ils seront progressivement désorientés, permettant à la bouteille d’être lancée comme une grenade. Lorsque la bouteille se brise, les esprits attaqueront les créatures vivantes les plus proches qu’ils peuvent trouver, infligeant 4d12 dégâts magiques avec un jet de sauvegarde de Vigueur pour réduire de moitié les dégâts et infligeant la peur à toute victime qui échoue un jet de sauvegarde de Volonté.
 
-PARAMÈTRES :
+PARAMÈTRES :
 
 4d12 de dégâts magiques
-Peur pendant 5 rounds, jet de sauvegarde de Volonté pour annuler
-Poids : 0,45 kg (1 lb)
+Peur pendant 5 rounds, jet de sauvegarde de Volonté annule
+Poids : 0,45 kg (1 lb)
 ~
 @4734 	= ~Baguette de Tendon Elfique~
 @4735 	= ~Cette baguette grasse, spongieuse et parfois agitée, composée principalement de tendons de jambes d’elfes et de demi-elfes, peut délivrer un trait d’énergie nécromantique à toute cible vivante. La victime subit 12d4 points de dégâts de poison, mais peut tenter un jet de sauvegarde de Vigueur pour réduire de moitié les dégâts.
 
-PARAMÈTRES :
+PARAMÈTRES :
 
 12d4 dégâts de poison, jet de sauvegarde de Vigueur pour la moitié des dégâts
-Poids : 0,45 kg (1 lb)
+Poids : 0,45 kg (1 lb)
 ~
 @4736 	= ~Liqueur Trouble~
 @4737 	= ~Avec les bons ingrédients, un alchimiste habile peut altérer la nature même d’un être vivant. En dissolvant du sel gemme et du jus de grenouille dans une solution alcoolisée, et en y ajoutant les restes d’un cerf ou d’une antilope digérés dans l’estomac d’un crocodile, un alchimiste peut concocter une potion fumante qui transmute le corps du buveur en un état semi-liquide.
 
 Le buveur conserve toutes ses fonctions normales, mais l’état liquide amortit l’impact des attaques ennemies, accordant une résistance de 3/- à toutes les formes de dégâts physiques pendant 10 rounds.
 
-PARAMÈTRES :
+PARAMÈTRES :
 
-3/- Résistance aux dégâts tranchants
-3/- Résistance aux dégâts contondants
-3/- Résistance aux dégâts perforants
-3/- Résistance aux projectiles
-Poids : 0,45 kg (1 lb)~
+3/- de résistance aux dégâts tranchants
+3/- de résistance aux dégâts contondants
+3/- de résistance aux dégâts perforants
+3/- de résistance aux projectiles
+Se dissipe après 10 rounds
+Poids : 0,45 kg (1 lb)~
 @54736 	= ~Liqueur Trouble~
 @54737 	= ~Avec les bons ingrédients, un alchimiste habile peut altérer la nature même d’un être vivant. En dissolvant du sel gemme et du jus de grenouille dans une solution alcoolisée, et en y ajoutant les restes d’un cerf ou d’une antilope digérés dans l’estomac d’un crocodile, un alchimiste peut concocter une potion fumante qui transmute le corps du buveur en un état semi-liquide.
 
 Le buveur conserve toutes ses fonctions normales, mais l’état liquide amortit l’impact des attaques ennemies, accordant une résistance de 10/- à toutes les formes de dégâts physiques pendant 10 rounds.
 
-PARAMÈTRES :
+PARAMÈTRES :
 
-10/- Résistance aux dégâts tranchants
-10/- Résistance aux dégâts contondants
-10/- Résistance aux dégâts perforants
-10/- Résistance aux projectiles
-Poids : 0,45 kg (1 lb)~
+10/- de résistance aux dégâts tranchants
+10/- de résistance aux dégâts contondants
+10/- de résistance aux dégâts perforants
+10/- de résistance aux projectiles
+Se dissipe après 10 rounds
+Poids : 0,45 kg (1 lb)~
 @4738 	= ~Nectar de Sang~
 @4739 	= ~Contrairement à ce que l’on pourrait attendre d’une potion appelée "Nectar de Sang", cette concoction rouge foncé, au goût de sang, ne contient en réalité aucun nectar. Elle est principalement composée de sang.
 
 Sucrée avec du miel et du jus de pomme, et brassée avec du ginseng et des plumes de colibri, cette potion accorde au buveur +2 à toutes les caractéristiques pendant 1 heure.
 
-PARAMÈTRES :
+PARAMÈTRES :
 
 +2 en Force
 +2 en Dextérité
@@ -302,13 +304,14 @@ PARAMÈTRES :
 +2 en Intelligence
 +2 en Sagesse
 +2 en Charisme
-Poids : 0,45 kg (1 lb)~
+Se dissipe après 1 heure
+Poids : 0,45 kg (1 lb)~
 @54738 	= ~Nectar de Sang~
 @54739 	= ~Contrairement à ce que l’on pourrait attendre d’une potion appelée "Nectar de Sang", cette concoction rouge foncé, au goût de sang, ne contient en réalité aucun nectar. Elle est principalement composée de sang.
 
 Sucrée avec du miel et du jus de pomme, et brassée avec du ginseng et des plumes de colibri, cette potion accorde au buveur +6 à toutes les caractéristiques pendant 1 heure.
 
-PARAMÈTRES :
+PARAMÈTRES :
 
 +6 en Force
 +6 en Dextérité
@@ -316,13 +319,14 @@ PARAMÈTRES :
 +6 en Intelligence
 +6 en Sagesse
 +6 en Charisme
-Poids : 0,45 kg (1 lb)~
+Se dissipe après 1 heure
+Poids : 0,45 kg (1 lb)~
 @4740 	= ~Ichor Purifié~
 @4741 	= ~L’ichor peut provenir de nombreuses sources, mais la source la plus pratique est le sang d’un Enfant de Bhaal. À l’état brut, ce sang n’est pas différent de tout autre -- en extraire la véritable puissance est un processus complexe.
 
 D’abord, l’alchimiste doit mener des recherches sur la divinité parentale et concevoir un rituel pour activer le potentiel caché de l’ichor. Ensuite, l’essence doit être extraite en léchant le sang avec des bandages de momie, distillée et précipitée dans une centrifugeuse, produisant un liquide doré à l’odeur douce... ou, dans le cas d’ichor provenant de divinités maléfiques, un mélange nauséabond de graisse et de poussière grossière.
 
-La consommation de cette substance est généralement fatale ; l’ichor purifié doit être dilué et adapté au système de l’utilisateur pour avoir un effet positif. La méthode exacte dépend de l’utilisateur et nécessite des recherches et des tests intensifs pour être découverte. Si l’utilisateur est chanceux, la méthode pourrait être aussi inoffensive que de broyer des perles et de mélanger l’ichor avec du jus de citrouille et du beurre pour produire une potion étrange mais parfaitement buvable.
+La consommation de cette substance est généralement fatale ; l’ichor purifié doit être dilué et adapté au système de l’utilisateur pour avoir un effet positif. La méthode exacte dépend de l’utilisateur et nécessite des recherches et des tests intensifs pour être découverte. Si l’utilisateur est chanceux, la méthode pourrait être aussi inoffensive que de broyer des perles et de mélanger l’ichor avec du jus de citrouille et du beurre pour produire une potion étrange mais parfaitement buvable.
 
 Si l’utilisateur est malchanceux, l’administration de la dose pourrait nécessiter une vivisection.
 
@@ -330,155 +334,157 @@ Quelle que soit la méthode, le résultat final est une torsion violente du tube d
 
 Si l’utilisateur meurt au cours du processus, il ou elle peut réessayer après avoir été ressuscité, mais une fois la tentative réussie, d’autres doses n’auront aucun effet sur le personnage imprégné.
 
-Génie Alchimique : Un alchimiste peut ajuster la recette pour alléger le fardeau sur son système, annulant la pénalité de Constitution et résistant entièrement aux dégâts.
+Génie Alchimique : Un alchimiste peut ajuster la recette pour alléger le fardeau sur son système, annulant la pénalité de Constitution et résistant entièrement aux dégâts.
 
-PARAMÈTRES :
+PARAMÈTRES :
 
 +1 Force, Dextérité, Intelligence, Sagesse et Charisme
 -1 Constitution
-Durée : Permanente
-Poids : 0,45 kg (1 lb)
+Durée : Permanente
+Poids : 0,45 kg (1 lb)
 ~
 @4742 	= ~Plasma~
 @4743 	= ~Un gaz bleu crépitant bourdonne à l’intérieur de ce petit récipient en verre. En collectant l’énergie de diverses sources et en transférant la puissance latente dans un gaz inerte, un alchimiste peut créer une forme de plasma sûre et utile.
 
 L’utilisateur doit ouvrir la bouteille et inhaler profondément, en gardant le gaz dans ses poumons jusqu’à ce que le plasma arrive dans le sang. Le plasma ajoute un bonus spécial à chaque coup porté par l’utilisateur au combat, augmentant de 4 points tous les dégâts d’attaque. Cependant, le plasma se dissipe rapidement et ses effets disparaissent après 10 rounds.
 
-PARAMÈTRES :
+PARAMÈTRES :
 
 +4 aux Dégâts d’Attaque pendant 10 rounds
-Poids : 0,45 kg (1 lb)~
+Poids : 0,45 kg (1 lb)~
 @54742 	= ~Plasma~
 @54743 	= ~Un gaz bleu crépitant bourdonne à l’intérieur de ce petit récipient en verre. En collectant l’énergie de diverses sources et en transférant la puissance latente dans un gaz inerte, un alchimiste peut créer une forme de plasma sûre et utile.
 
 L’utilisateur doit ouvrir la bouteille et inhaler profondément, en gardant le gaz dans ses poumons jusqu’à ce que le plasma arrive dans le sang. Le plasma ajoute un bonus spécial à chaque coup porté par l’utilisateur au combat, augmentant de 6 points tous les dégâts d’attaque. Cependant, le plasma se dissipe rapidement et ses effets disparaissent après 10 rounds.
 
-PARAMÈTRES :
+PARAMÈTRES :
 
 +6 aux Dégâts d’Attaque pendant 10 rounds
-Poids : 0,45 kg (1 lb)~
+Poids : 0,45 kg (1 lb)~
 @4744 	= ~Vapeur des Marais~
 @4745 	= ~Un mélange de magie étrange et de gaz toxiques, cette bouteille de vapeur verdâtre et fumante est imprégnée d’enchantements. Le gaz lui-même n’est rien de plus que de l’air et de l’eau extraits d’un marais, mais les enchantements sont plus complexes. La bouteille est enduite de résidus de feux follets abattus et de champignons toxiques, et le gaz est imprégné des âmes de tréants défunts.
 
 Le porteur peut lancer la bouteille comme une grenade, contournant tout bonus d’armure ou de bouclier que la cible pourrait posséder. Toute créature malheureusement touchée par les fumées subira un malus cumulatif de -3 à la résistance aux sorts et à l’énergie à mesure que l’enchantement s’infiltre dans son système, la rendant vulnérable aux sorts hostiles. L’effet est de courte durée et disparaîtra après 5 rounds.
 
-PARAMÈTRES :
+PARAMÈTRES :
 
-Dégâts : 1d3
-Type de dégâts : projectile (contondants)
-Spécial : -3 Résistance aux sorts et -3 en résistance au feu, au froid, à l’électricité et aux dégâts d’acide (cumulable) pendant 5 rounds
-Poids : 0
-Compétence : arme courante, projectile
-Type d’arme : à une main~
+Dégâts : 1d3
+Type de dégâts : projectile (contondants)
+Spécial : -3 à la résistance aux sorts et -3 à la résistance au feu, au froid, à l’électricité et aux dégâts d’acide (cumulable) pendant 5 rounds
+Poids : 0
+Compétence : arme courante, projectile
+Type d’arme : à une main
+Se dissipe après 5 rounds~
 @54744 	= ~Vapeur des Marais~
 @54745 	= ~Un mélange de magie étrange et de gaz toxiques, cette bouteille de vapeur verdâtre et fumante est imprégnée d’enchantements. Le gaz lui-même n’est rien de plus que de l’air et de l’eau extraits d’un marais, mais les enchantements sont plus complexes. La bouteille est enduite de résidus de feux follets abattus et de champignons toxiques, et le gaz est imprégné des âmes de tréants défunts.
 
 Le porteur peut lancer la bouteille comme une grenade, contournant tout bonus d’armure ou de bouclier que la cible pourrait posséder. Toute créature malheureusement touchée par les fumées subira un malus cumulatif de -5 à la résistance aux sorts et à l’énergie à mesure que l’enchantement s’infiltre dans son système, la rendant vulnérable aux sorts hostiles. L’effet est de courte durée et disparaîtra après 5 rounds.
 
-PARAMÈTRES :
+PARAMÈTRES :
 
-Dégâts : 1d3
-Type de dégâts : projectile (contondants)
-Spécial : -5 Résistance aux sorts et -5 en résistance au feu, au froid, à l’électricité et aux dégâts d’acide (cumulable) pendant 5 rounds
-Poids : 0
-Compétence : arme courante, projectile
-Type d’arme : à une main~
+Dégâts : 1d3
+Type de dégâts : projectile (contondants)
+Spécial : -5 à la résistance aux sorts et -5 à la résistance au feu, au froid, à l’électricité et aux dégâts d’acide (cumulable) pendant 5 rounds
+Poids : 0
+Compétence : arme courante, projectile
+Type d’arme : à une main
+Se dissipe après 5 rounds~
 @4746 	= ~Huile de Fée~
 @4747 	= ~Les créatures féeriques sont difficiles à trouver et encore plus à capturer, mais un alchimiste qui parvient à en capturer suffisamment peut en voler les pouvoirs, ne serait-ce que pour un temps limité. Le liquide lui-même n’est rien de plus que de la tourbe et des boutons d’or écrasés mélangés à de l’huile d’olive, mais si l’alchimiste peut convaincre un groupe de fées d’imprégner l’huile de leur magie – ou si l’alchimiste mélange l’huile avec le sang et les os en poudre des fées – cette potion enveloppera le buveur d’un petit nuage de magie illusoire semblable au sort Image miroir.
 
-PARAMÈTRES :
+PARAMÈTRES :
 
-Image Miroir (4 images)
-Poids : 0,45 kg (1 lb)~
+Image Miroir (4 images) pendant 10 rounds
+Poids : 0,45 kg (1 lb)~
 @54746 	= ~Huile de Fée~
 @54747 	= ~Les créatures féeriques sont difficiles à trouver et encore plus à capturer, mais un alchimiste qui parvient à en capturer suffisamment peut en voler les pouvoirs, ne serait-ce que pour un temps limité. Le liquide lui-même n’est rien de plus que de la tourbe et des boutons d’or écrasés mélangés à de l’huile d’olive, mais si l’alchimiste peut convaincre un groupe de fées d’imprégner l’huile de leur magie – ou si l’alchimiste mélange l’huile avec le sang et les os en poudre des fées – cette potion enveloppera le buveur d’un petit nuage de magie illusoire semblable au sort Image miroir.
 
-PARAMÈTRES :
+PARAMÈTRES :
 
-Image Miroir (8 images)
-Poids : 0,45 kg (1 lb)~
+Image Miroir (8 images) pendant 10 rounds
+Poids : 0,45 kg (1 lb)~
 @4748 	= ~Fluide Magnétique~
 @4749 	= ~Malgré sa nature visqueuse, ce fluide est en réalité un alliage de chrome et de fer, maintenu à l’état liquide par de puissantes transmutations. En chauffant et refroidissant l’alliage en présence d’aimants et en utilisant un feu magique pour brûler d’autres métaux rares en sa présence, un alchimiste peut ajouter un puissant champ magnétique au liquide allié qui ne s’active que lorsque le fluide est bu. Le champ magnétique est incroyablement dangereux pour le buveur, car il attire les armes directement sur le corps du buveur, imposant un malus de -5 aux jets d’attaque, de dégâts et à la classe d’armure ainsi qu’un malus de -10 à toutes les formes de dégâts physiques.
 
 Cependant, le buveur peut forcer ce champ magnétique à produire une violente réaction contre ses assaillants qui inflige 10d4 points de dégâts contondants à chaque coup. Le champ se dissipera après 10 rounds.
 
-PARAMÈTRES :
+PARAMÈTRES :
 
-Réaction Magnétique : Les assaillants subissent 10d4 dégâts contondants par coup
+Réaction Magnétique : Les assaillants subissent 10d4 dégâts contondants par coup
 -5 au bonus d’attaque
 -5 aux dégâts d’attaque
 -5 à la classe d’armure
--10 Résistance aux dégâts tranchants, contondants, perforants, et aux projectiles
+-10 à la résistance aux dégâts tranchants, contondants, perforants, et aux projectiles
 Se dissipe après 10 rounds
-Poids : 0,45 kg (1 lb)~
+Poids : 0,45 kg (1 lb)~
 @54748 	= ~Fluide Magnétique~
 @54749 	= ~Malgré sa nature visqueuse, ce fluide est en réalité un alliage de chrome et de fer, maintenu à l’état liquide par de puissantes transmutations. En chauffant et refroidissant l’alliage en présence d’aimants et en utilisant un feu magique pour brûler d’autres métaux rares en sa présence, un alchimiste peut ajouter un puissant champ magnétique au liquide allié qui ne s’active que lorsque le fluide est bu. Le champ magnétique est incroyablement dangereux pour le buveur, car il attire les armes directement sur le corps du buveur, imposant un malus de -5 aux jets d’attaque, de dégâts et à la classe d’armure ainsi qu’un malus de -15 à toutes les formes de dégâts physiques.
 
 Cependant, le buveur peut forcer ce champ magnétique à produire une violente réaction contre ses assaillants qui inflige 15d4 points de dégâts contondants à chaque coup. Le champ se dissipera après 10 rounds.
 
-PARAMÈTRES :
+PARAMÈTRES :
 
-Réaction Magnétique : Les assaillants subissent 15d4 dégâts contondants par coup
+Réaction Magnétique : Les assaillants subissent 15d4 dégâts contondants par coup
 -5 au bonus d’attaque
 -5 aux dégâts d’attaque
 -5 à la classe d’armure
 -15 Résistance aux dégâts tranchants, contondants, perforants, et aux projectiles
 Se dissipe après 10 rounds
-Poids : 0,45 kg (1 lb)~
+Poids : 0,45 kg (1 lb)~
 @4750 	= ~Sirop Ardant~
 @4751 	= ~Ce sirop épais et rougeâtre, composé du nectar et de la sève de plusieurs fleurs et arbres, brûle d’une énergie d’anti-magie. En versant le sirop sur un objet magique, puis en le détruisant, un alchimiste peut infuser le sirop de forces perturbatrices. Cela peut nécessiter de détruire plusieurs objets magiques en fonction de leur puissance.
 
 Lorsqu’il est bu, le sirop crée un champ d’anti-magie autour du corps de l’utilisateur, dissipant automatiquement tous les effets dissipables (à la fois positifs et négatifs) et accordant une résistance aux sorts de 15/- pour 10 rounds. Le champ interfère également avec les propres sorts de l’utilisateur, augmentant l’échec de sorts de 25%.
 
-PARAMÈTRES :
+PARAMÈTRES :
 
 Dissipe tous les effets dissipables sur le buveur
-Résistance : 15/- Résistance aux sorts pendant 10 rounds
+15/- de résistance aux sorts pendant 10 rounds
 25% d’échec des sorts pendant 10 rounds
-Poids : 0,45 kg (1 lb)~
+Poids : 0,45 kg (1 lb)~
 @54750 	= ~Sirop Ardant~
 @54751 	= ~Ce sirop épais et rougeâtre, composé du nectar et de la sève de plusieurs fleurs et arbres, brûle d’une énergie d’anti-magie. En versant le sirop sur un objet magique, puis en le détruisant, un alchimiste peut infuser le sirop de forces perturbatrices. Cela peut nécessiter de détruire plusieurs objets magiques en fonction de leur puissance.
 
 Lorsqu’il est bu, le sirop crée un champ d’anti-magie autour du corps de l’utilisateur, dissipant automatiquement tous les effets dissipables (à la fois positifs et négatifs) et accordant une résistance aux sorts de 30/- pour 10 rounds. Le champ interfère également avec les propres sorts de l’utilisateur, augmentant l’échec de sorts de 50%.
 
-PARAMÈTRES :
+PARAMÈTRES :
 
 Dissipe tous les effets dissipables sur le buveur
-Résistance : 30/- Résistance aux sorts pendant 10 rounds
+30/- de résistance aux sorts pendant 10 rounds
 50% d’échec des sorts pendant 10 rounds
-Poids : 0,45 kg (1 lb)~
+Poids : 0,45 kg (1 lb)~
 @4752 	= ~Lymphe de Serpent~
 @4753 	= ~Les alchimistes yuan-ti utilisent un mélange spécial de venin et d’herbes diverses pour transformer les captifs humanoïdes en esclaves histachii. Le processus est irréversible et détruit l’esprit de la victime, mais il leur confère des pouvoirs inhabituels qui en font des serviteurs utiles pour leurs maîtres yuan-ti.
 
 Une grande partie de la science est inconnue des humanoïdes, mais un alchimiste peut concocter une version spéciale du brouet histaksii à partir de lymphe de yuan-ti et de racine de mandragore, qui conférera au buveur une résistance limitée au poison. Pendant 1 heure après avoir bu la lymphe, l’utilisateur bénéficiera d’une résistance de 6/- aux dégâts de poison.
 
-PARAMÈTRES :
+PARAMÈTRES :
 
-Résistance : 6/- Résistance au poison pendant 1 heure
-Poids : 0,45 kg (1 lb)~
+6/- de résistance au poison pendant 1 heure
+Poids : 0,45 kg (1 lb)~
 @54752 	= ~Lymphe de Serpent~
 @54753 	= ~Les alchimistes yuan-ti utilisent un mélange spécial de venin et d’herbes diverses pour transformer les captifs humanoïdes en esclaves histachii. Le processus est irréversible et détruit l’esprit de la victime, mais il leur confère des pouvoirs inhabituels qui en font des serviteurs utiles pour leurs maîtres yuan-ti.
 
 Une grande partie de la science est inconnue des humanoïdes, mais un alchimiste peut concocter une version spéciale du brouet histaksii à partir de lymphe de yuan-ti et de racine de mandragore, qui conférera au buveur une résistance limitée au poison. Pendant 1 heure après avoir bu la lymphe, l’utilisateur bénéficiera d’une résistance de 30/- aux dégâts de poison.
 
-PARAMÈTRES :
+PARAMÈTRES :
 
-Résistance : 30/- Résistance au poison pendant 1 heure
-Poids : 0,45 kg (1 lb)~
+30/- de résistance au poison pendant 1 heure
+Poids : 0,45 kg (1 lb)~
 @4754 	= ~Lait de Vampire~
-@4755 	= ~Cette bouteille glaciale de liquide bleuâtre est un mélange de farine, de myrtilles, de fromages fins, et de lait maternel d’un vampire, d’un revenant ou d’un bodak tué. Partiellement fermentée et traitée avec de la chaux et du sel, cette potion devient un liquide amer indiscernable de la peinture. La concoction porte une grande quantité d’énergie négative, ce qui la rendrait fatale à la plupart des créatures vivantes. Cependant, les morts-vivants pourraient la boire pour restaurer leur santé. Cette guérison est similaire à la régénération d’un vampire : elle refermera les blessures mortelles et fera repousser les membres perdus, mais elle ne restaurera pas le sang perdu.
+@4755 	= ~Cette bouteille glaciale de liquide bleuâtre est un mélange de farine, de myrtilles, de fromages fins, et de lait maternel d’un vampire, d’un revenant ou d’un bodak tué. Partiellement fermentée et traitée avec de la chaux et du sel, cette potion devient un liquide amer indiscernable de la peinture. La concoction porte une grande quantité d’énergie négative, ce qui la rendrait fatale à la plupart des créatures vivantes. Cependant, les morts-vivants pourraient la boire pour restaurer leur santé. Cette guérison est similaire à la régénération d’un vampire : elle refermera les blessures mortelles et fera repousser les membres perdus, mais elle ne restaurera pas le sang perdu.
 
-PARAMÈTRES :
+PARAMÈTRES :
 
 Soigne 60 points de vie aux morts-vivants, inflige 60 points de dégâts à toute autre créature
-Poids : 0,45 kg (1 lb)~
+Poids : 0,45 kg (1 lb)~
 @54754 	= ~Lait de Vampire~
-@54755 	= ~Cette bouteille glaciale de liquide bleuâtre est un mélange de farine, de myrtilles, de fromages fins, et de lait maternel d’un vampire, d’un revenant ou d’un bodak tué. Partiellement fermentée et traitée avec de la chaux et du sel, cette potion devient un liquide amer indiscernable de la peinture. La concoction porte une grande quantité d’énergie négative, ce qui la rendrait fatale à la plupart des créatures vivantes. Cependant, les morts-vivants pourraient la boire pour restaurer leur santé. Cette guérison est similaire à la régénération d’un vampire : elle refermera les blessures mortelles et fera repousser les membres perdus, mais elle ne restaurera pas le sang perdu.
+@54755 	= ~Cette bouteille glaciale de liquide bleuâtre est un mélange de farine, de myrtilles, de fromages fins, et de lait maternel d’un vampire, d’un revenant ou d’un bodak tué. Partiellement fermentée et traitée avec de la chaux et du sel, cette potion devient un liquide amer indiscernable de la peinture. La concoction porte une grande quantité d’énergie négative, ce qui la rendrait fatale à la plupart des créatures vivantes. Cependant, les morts-vivants pourraient la boire pour restaurer leur santé. Cette guérison est similaire à la régénération d’un vampire : elle refermera les blessures mortelles et fera repousser les membres perdus, mais elle ne restaurera pas le sang perdu.
 
-PARAMÈTRES :
+PARAMÈTRES :
 
 Soigne 150 points de vie aux morts-vivants, inflige 150 points de dégâts à toute autre créature
-Poids : 0,45 kg (1 lb)~
+Poids : 0,45 kg (1 lb)~
 @4756 	= ~Cataplasme Moisi~
 @4757 	= ~Ce cataplasme est un petit pot de terre très fertile recouvert de mousse verte luxuriante. Un alchimiste doit prendre soin de cultiver cette mousse, en s’assurant constamment qu’elle reçoit juste la bonne quantité d’eau et de nutriments pour prospérer. Chanter des berceuses, brûler de l’encens et complimenter la mousse sont tous des éléments critiques du processus.
 
@@ -486,256 +492,259 @@ Nourrie avec amour et bénie par une exposition abondante à la lumière de la lune
 
 Une fois son pouvoir dépensé et sa personnalité sacrifiée pour le bien du camarade tombé de l’alchimiste, la mousse perdra sa lueur. Il est conseillé à l’utilisateur de jeter la mousse – la conserver tend à rendre mélancolique, et la mousse ne voudrait pas que son meilleur ami soit triste.
 
-PARAMÈTRES :
+PARAMÈTRES :
 
 Ressuscite une créature
 Fait soupirer l’utilisateur et lui donne un air nostalgique de temps à autre
-Poids : 0,45 kg (1 lb)
+Poids : 0,45 kg (1 lb)
 ~
 @4758 	= ~(soupire et regarde au loin d’un air nostalgique)~
 @4759 	= ~Graisse de Scarabée~
 @4760 	= ~La plupart des gens s’opposeraient à enduire leur corps de graisse faite à partir de scarabées écrasés. Les aventuriers qui n’ont pas de telles objections bénéficieront d’un bonus de +4 à leurs jets de sauvegarde de Réflexes pendant 1 heure lorsqu’ils appliquent cette graisse sur leur peau.
 
-PARAMÈTRES :
+PARAMÈTRES :
 
 +4 aux jets de sauvegarde de Réflexes pendant 1 heure
-Poids : 0,45 kg (1 lb)~
+Poids : 0,45 kg (1 lb)~
 @54759 	= ~Graisse de Scarabée~
 @54760 	= ~La plupart des gens s’opposeraient à enduire leur corps de graisse faite à partir de scarabées écrasés. Les aventuriers qui n’ont pas de telles objections bénéficieront d’un bonus de +8 à leurs jets de sauvegarde de Réflexes pendant 1 heure lorsqu’ils appliquent cette graisse sur leur peau.
 
-PARAMÈTRES :
+PARAMÈTRES :
 
 +8 aux jets de sauvegarde de Réflexes pendant 1 heure
-Poids : 0,45 kg (1 lb)~
+Poids : 0,45 kg (1 lb)~
 @4761 	= ~Sauce de Tyrannoeil~
 @4762 	= ~Composée du sang, de la lymphe, des larmes et du jus d’yeux d’un tyrannoeil (de préférence mort), cette sauce piquante engourdira temporairement les yeux de l’utilisateur afin qu’ils puissent être transmutés en plusieurs tiges globuleuses. Mis à part une vision floue et un certain inconfort, cette potion permet à tout lanceur de sorts de commencer à lancer un nouveau sort dès qu’il ou elle a fini de lancer le précédent, éliminant le délai normal entre les incantations. Cela permet à l’utilisateur de lancer plus d’un sort par round, bien que le personnage ne puisse pas bénéficier de la réduction du temps d’incantation. Après 2 rounds, les yeux de l’utilisateur récupéreront leur forme normale et l’effet de la potion s’estompera.
 
-PARAMÈTRES :
+PARAMÈTRES :
 
 Célérité améliorée pendant 2 rounds
-Poids : 0,45 kg (1 lb)~
+Poids : 0,45 kg (1 lb)~
 @54761 	= ~Sauce de Tyrannoeil~
 @54762 	= ~Composée du sang, de la lymphe, des larmes et du jus d’yeux d’un tyrannoeil (de préférence mort), cette sauce piquante engourdira temporairement les yeux de l’utilisateur afin qu’ils puissent être transmutés en plusieurs tiges globuleuses. Mis à part une vision floue et un certain inconfort, cette potion permet à tout lanceur de sorts de commencer à lancer un nouveau sort dès qu’il ou elle a fini de lancer le précédent, éliminant le délai normal entre les incantations. Cela permet à l’utilisateur de lancer plus d’un sort par round, bien que le personnage ne puisse pas bénéficier de la réduction du temps d’incantation. Après 3 rounds, les yeux de l’utilisateur récupéreront leur forme normale et l’effet de la potion s’estompera.
 
-PARAMÈTRES :
+PARAMÈTRES :
 
 Célérité améliorée pendant 3 rounds
-Poids : 0,45 kg (1 lb)~
+Poids : 0,45 kg (1 lb)~
 @4763 	= ~Baume de Corail~
 @4764 	= ~En arrachant des morceaux d’un récif corallien, en les écrasant en poudre et en les mélangeant à de la pâte de concombre de mer, un alchimiste peut créer un baume bleuté. Lorsqu’il est appliqué sur le corps de l’utilisateur, le baume se dilate pour former un bouclier puissant, piégeant l’utilisateur à l’intérieur mais le protégeant de toutes formes d’attaque. Le bouclier absorbe 100 points de vie avant de se briser.
 
-PARAMÈTRES :
+PARAMÈTRES :
 
 Carapace de Tortue (100 points de vie)
-Poids : 0,45 kg (1 lb)~
+Poids : 0,45 kg (1 lb)~
 @54763 	= ~Baume de Corail~
 @54764 	= ~En arrachant des morceaux d’un récif corallien, en les écrasant en poudre et en les mélangeant à de la pâte de concombre de mer, un alchimiste peut créer un baume bleuté. Lorsqu’il est appliqué sur le corps de l’utilisateur, le baume se dilate pour former un bouclier puissant, piégeant l’utilisateur à l’intérieur mais le protégeant de toutes formes d’attaque. Le bouclier absorbe 400 points de vie avant de se briser.
 
-PARAMÈTRES :
+PARAMÈTRES :
 
 Carapace de Tortue (400 points de vie)
-Poids : 0,45 kg (1 lb)~
+Poids : 0,45 kg (1 lb)~
 @4765 	= ~Sécrétion de Feyr~
 @4766 	= ~Cette bouteille contient une boue pourpre secrétée par la peau d’un fihyr. Une série d’enchantements magiques transforme la boue en une potion puissante capable de conférer un état éthéré au buveur. Toutes les attaques ennemies ont 50% de chances d’échouer complètement, comme avec le sort Clignotement. Cependant, les attaques et sorts de l’utilisateur subiront également 20% de chances d’échec. Les effets durent 10 rounds.
 
-PARAMÈTRES :
+PARAMÈTRES :
 
 Clignotement pendant 10 rounds
-Poids : 0,45 kg (1 lb)~
+Poids : 0,45 kg (1 lb)~
 @54765 	= ~Sécrétion de Feyr~
 @54766 	= ~Cette bouteille contient une boue pourpre secrétée par la peau d’un fihyr. Une série d’enchantements magiques transforme la boue en une potion puissante capable de conférer un état éthéré au buveur. Toutes les attaques ennemies ont 50% de chances d’échouer complètement, comme avec le sort Clignotement. Cependant, les attaques et sorts de l’utilisateur subiront également 20% de chances d’échec. Les effets durent 20 rounds.
 
-PARAMÈTRES :
+PARAMÈTRES :
 
 Clignotement pendant 20 rounds
-Poids : 0,45 kg (1 lb)~
+Poids : 0,45 kg (1 lb)~
 @4767 	= ~Gelée de Salamandre de Feu~
 @4768 	= ~Un mélange épicé de gomme arabique et de sang de salamandre de feu, ce composé gélatineux érigera un mur de flammes autour du buveur, réduisant de moitié tous les dégâts de froid et infligeant 1d6+10 dégâts de feu à tous les attaquants. L’effet dure 10 rounds ou jusqu’à ce qu’il soit dissipé.
 
-PARAMÈTRES :
+PARAMÈTRES :
 
 Bouclier de feu (rouge) pendant 10 rounds
-Poids : 0,45 kg (1 lb)~
+Poids : 0,45 kg (1 lb)~
 @54767 	= ~Gelée de Salamandre de Feu~
 @54768 	= ~Un mélange épicé de gomme arabique et de sang de salamandre de feu, ce composé gélatineux érigera un mur de flammes autour du buveur, réduisant de moitié tous les dégâts de froid et infligeant 1d6+20 dégâts de feu à tous les attaquants. L’effet dure 10 rounds ou jusqu’à ce qu’il soit dissipé.
 
-PARAMÈTRES :
+PARAMÈTRES :
 
 Bouclier de feu (rouge) pendant 10 rounds
-Poids : 0,45 kg (1 lb)~
+Poids : 0,45 kg (1 lb)~
 @4769 	= ~Gelée de Salamandre de Givre~
 @4770 	= ~Une gelée mentholée composée de gomme arabique et de sang de salamandre de givre, ce composé gélatineux érigera un mur de givre autour du buveur, réduisant de moitié tous les dégâts de feu et infligeant 1d6+10 dégâts de froid à tous les attaquants. L’effet dure 10 rounds ou jusqu’à ce qu’il soit dissipé.
 
-PARAMÈTRES :
+PARAMÈTRES :
 
 Bouclier de feu (bleu) pendant 10 rounds
-Poids : 0,45 kg (1 lb)~
+Poids : 0,45 kg (1 lb)~
 @54769 	= ~Gelée de Salamandre de Givre~
 @54770 	= ~Une gelée mentholée composée de gomme arabique et de sang de salamandre de givre, ce composé gélatineux érigera un mur de givre autour du buveur, réduisant de moitié tous les dégâts de feu et infligeant 1d6+20 dégâts de froid à tous les attaquants. L’effet dure 10 rounds ou jusqu’à ce qu’il soit dissipé.
 
-PARAMÈTRES :
+PARAMÈTRES :
 
 Bouclier de feu (bleu) pendant 10 rounds
-Poids : 0,45 kg (1 lb)~
+Poids : 0,45 kg (1 lb)~
 @4771 	= ~Lubrifiant de Poisson~
 @4772 	= ~L’huile de poisson, l’huile de sésame, un ensemble unique d’enchantements et des cendres très fines composent ce lubrifiant graisseux. Lorsque l’utilisateur applique cette huile sur la peau et active le mot de commande, le lubrifiant commencera à vibrer faiblement. Toute tentative d’entraver le mouvement de l’utilisateur échouera tant que le lubrifiant est actif, ce qui durera 10 rounds ou jusqu’à ce qu’il soit dissipé.
 
-PARAMÈTRES :
+PARAMÈTRES :
 
-Liberté de mouvement
-Poids : 0,45 kg (1 lb)~
+Liberté de mouvement pendant 10 rounds
+Poids : 0,45 kg (1 lb)~
 @54771 	= ~Lubrifiant de Poisson~
 @54772 	= ~L’huile de poisson, l’huile de sésame, un ensemble unique d’enchantements et des cendres très fines composent ce lubrifiant graisseux. Lorsque l’utilisateur applique cette huile sur la peau et active le mot de commande, le lubrifiant commencera à vibrer faiblement. Toute tentative d’entraver le mouvement de l’utilisateur échouera tant que le lubrifiant est actif, ce qui durera 1 heure ou jusqu’à ce qu’il soit dissipé.
 
-PARAMÈTRES :
+PARAMÈTRES :
 
-Liberté de mouvement
-Poids : 0,45 kg (1 lb)~
+Liberté de mouvement pendant 10 rounds
+Poids : 0,45 kg (1 lb)~
 @4773 	= ~Boisson Pétillante~
 @4774 	= ~Cette concoction pétillante de jus de fruits et de cerveaux d’autruche donnera un coup de fouet au buveur. Pendant dix rounds après avoir bu cette boisson sucrée, l’utilisateur se déplacera et attaquera à une vitesse accélérée, gagnant un bonus de +4 à la vitesse de déplacement et au facteur de vitesse, et un bonus de +1 à la vitesse d’incantation.
 
-PARAMÈTRES :
+PARAMÈTRES :
 
 +4 à la Vitesse de Déplacement
 +4 au Facteur de Vitesse
 +1 à la Vitesse d’incantation
-Poids : 0,45 kg (1 lb)~
+Se dissipe après 10 rounds
+Poids : 0,45 kg (1 lb)~
 @54773 	= ~Boisson Pétillante~
 @54774 	= ~Cette concoction pétillante de jus de fruits et de cerveaux d’autruche donnera un coup de fouet au buveur. Pendant dix rounds après avoir bu cette boisson sucrée, l’utilisateur se déplacera et attaquera à une vitesse accélérée, gagnant un bonus de +10 à la vitesse de déplacement et au facteur de vitesse, et un bonus de +2 à la vitesse d’incantation.
 
-PARAMÈTRES :
+PARAMÈTRES :
 
 +10 à la Vitesse de Déplacement
 +10 au Facteur de Vitesse
 +2 à la Vitesse d’incantation
-Poids : 0,45 kg (1 lb)~
+Se dissipe après 10 rounds
+Poids : 0,45 kg (1 lb)~
 @4775 	= ~Poudre de Goule~
 @4776 	= ~Cette fine poussière gris-bleuâtre, faite à partir de la peau et de la chair en poudre d’une goule ou d’un revenant, émet une faible lueur. Renifler cette poudre entraînera un mal de tête douloureux ainsi qu’un puissant enchantement traversant le corps de l’utilisateur. Pendant 10 rounds après avoir reniflé cette poudre magique, l’utilisateur bénéficiera d’une résistance de 20/- à toutes les formes de dégâts de froid.
 
-PARAMÈTRES :
+PARAMÈTRES :
 
-Résistance : 20/- de résistance au froid pendant 10 rounds
-Poids : 0,45 kg (1 lb)~
+20/- de résistance au froid pendant 10 rounds
+Poids : 0,45 kg (1 lb)~
 @54775 	= ~Poudre de Goule~
 @54776 	= ~Cette fine poussière gris-bleuâtre, faite à partir de la peau et de la chair en poudre d’une goule ou d’un revenant, émet une faible lueur. Renifler cette poudre entraînera un mal de tête douloureux ainsi qu’un puissant enchantement traversant le corps de l’utilisateur. Pendant 10 rounds après avoir reniflé cette poudre magique, l’utilisateur bénéficiera d’une résistance de 50/- à toutes les formes de dégâts de froid.
 
-PARAMÈTRES :
+PARAMÈTRES :
 
-Résistance : 50/- de résistance au froid pendant 10 rounds
-Poids : 0,45 kg (1 lb)~
+50/- de résistance au froid pendant 10 rounds
+Poids : 0,45 kg (1 lb)~
 @4777 	= ~Bulles Dorées~
 @4778 	= ~La chance est difficile à obtenir, mais pour ceux qui savent comment la générer, la fortune peut venir de presque n’importe où. Cette solution pétillante est un mélange de paillettes d’or, de jus de citron, de perles broyées et de sabots de chèvre en poudre. Quiconque boit cette potion ressentira une poussée d’euphorie et une confiance suprême en tout, ainsi qu’un bonus de chance de +2 pendant 1 heure.
 
-PARAMÈTRES :
+PARAMÈTRES :
 
 +2 Chance pendant 1 heure
-Poids : 0,45 kg (1 lb)~
+Poids : 0,45 kg (1 lb)~
 @54777 	= ~Bulles Dorées~
 @54778 	= ~La chance est difficile à obtenir, mais pour ceux qui savent comment la générer, la fortune peut venir de presque n’importe où. Cette solution pétillante est un mélange de paillettes d’or, de jus de citron, de perles broyées et de sabots de chèvre en poudre. Quiconque boit cette potion ressentira une poussée d’euphorie et une confiance suprême en tout, ainsi qu’un bonus de chance de +4 pendant 1 heure.
 
-PARAMÈTRES :
+PARAMÈTRES :
 
 +4 Chance pendant 1 heure
-Poids : 0,45 kg (1 lb)~
+Poids : 0,45 kg (1 lb)~
 @4779 	= ~Bile d’Ogre~
 @4780 	= ~Ce liquide translucide et maladif est un mélange de limon vert, de sel commun et de bile tirée de l’estomac d’un ogre. Quiconque s’oblige à boire cette potion infâme gagne 25 points de vie temporaires pendant 8 heures. Tout dommage subi par l’utilisateur sera d’abord prélevé sur les points de vie temporaires.
 
-PARAMÈTRES :
+PARAMÈTRES :
 
 +25 Points de Vie Maximum pendant 8 heures
-Poids : 0,45 kg (1 lb)~
+Poids : 0,45 kg (1 lb)~
 @54779 	= ~Bile d’Ogre~
 @54780 	= ~Ce liquide translucide et maladif est un mélange de limon vert, de sel commun et de bile tirée de l’estomac d’un ogre. Quiconque s’oblige à boire cette potion infâme gagne 100 points de vie temporaires pendant 8 heures. Tout dommage subi par l’utilisateur sera d’abord prélevé sur les points de vie temporaires.
 
-PARAMÈTRES :
+PARAMÈTRES :
 
 +100 Points de Vie Maximum pendant 8 heures
-Poids : 0,45 kg (1 lb)~
+Poids : 0,45 kg (1 lb)~
 @4781 	= ~Huile de Rapidité~
 @4782 	= ~Une huile pâle faite de perles broyées, de dents de requin et de sang de lapin, cette potion se répand rapidement dans le corps de l’utilisateur. L’huile améliore considérablement les mouvements et le rythme des attaques de l’utilisateur, accordant la Hâte comme avec le sort de mage pendant 10 rounds.
 
-PARAMÈTRES :
+PARAMÈTRES :
 
 Hâte pendant 10 rounds
-Poids : 0,45 kg (1 lb)~
+Poids : 0,45 kg (1 lb)~
 @54781 	= ~Huile de Rapidité~
 @54782 	= ~Une huile pâle faite de perles broyées, de dents de requin et de sang de lapin, cette potion se répand rapidement dans le corps de l’utilisateur. L’huile améliore considérablement les mouvements et le rythme des attaques de l’utilisateur, accordant la Hâte améliorée pendant 5 rounds.
 
-PARAMÈTRES :
+PARAMÈTRES :
 
 Hâte améliorée pendant 5 rounds
-Poids : 0,45 kg (1 lb)~
+Poids : 0,45 kg (1 lb)~
 @4783 	= ~Potion de Clarté~
 @4784 	= ~Cette potion est une concoction à l’odeur agréable d’huile d’olive mélangée avec du nez de néréide en poudre et du lapis-lazuli concassé. Boire cette potion au goût étrange accordera temporairement à l’utilisateur une immunité contre la plupart des sorts affectant l’esprit, y compris charme, domination, débilité, terreur, et confusion pendant 10 rounds.
 
-PARAMÈTRES :
+PARAMÈTRES :
 
 Immunité au charme, à la domination, à la débilité, à la terreur et à la confusion pendant 10 rounds
-Poids : 0,45 kg (1 lb)~
+Poids : 0,45 kg (1 lb)~
 @54783 	= ~Potion de Clarté~
 @54784 	= ~Cette potion est une concoction à l’odeur agréable d’huile d’olive mélangée avec du nez de néréide en poudre et du lapis-lazuli concassé. Boire cette potion au goût étrange accordera temporairement à l’utilisateur une immunité contre la plupart des sorts affectant l’esprit, y compris les effets de charme, domination, débilité, terreur, confusion, désespoir, et étourdissement pendant 15 rounds.
 
-PARAMÈTRES :
+PARAMÈTRES :
 
 Immunité au charme, à la domination, à la débilité, à la peur, à la confusion, au désespoir et à l’étourdissement pendant 15 rounds
-Poids : 0,45 kg (1 lb)~
+Poids : 0,45 kg (1 lb)~
 @4785 	= ~Sève de Sylvanien~
 @4786 	= ~De la sève de tréant durcie mélangée à de l’eau bénite et à des pois écrasés est contenue dans ce récipient en bois solide. La sève dure doit être mâchée soigneusement à moins qu’elle ne soit chauffée avant consommation. La sève transforme la peau de l’utilisateur en une substance rigide et ligneuse, accordant un bonus naturel de +4 à la classe d’armure pendant 1 heure.
 
-PARAMÈTRES :
+PARAMÈTRES :
 
 Peau d’écorce (+4 CA)
-Poids : 0,45 kg (1 lb)~
+Poids : 0,45 kg (1 lb)~
 @54785 	= ~Sève de Sylvanien~
 @54786 	= ~De la sève de tréant durcie mélangée à de l’eau bénite et à des pois écrasés est contenue dans ce récipient en bois solide. La sève dure doit être mâchée soigneusement à moins qu’elle ne soit chauffée avant consommation. La sève transforme la peau de l’utilisateur en une substance rigide et ligneuse, accordant un bonus naturel de +7 à la classe d’armure pendant 1 heure.
 
-PARAMÈTRES :
+PARAMÈTRES :
 
-Peau d’écorce (+7 CA)
-Poids : 0,45 kg (1 lb)~
+Peau d’écorce (+7 CA) pendant 1 heure
+Poids : 0,45 kg (1 lb)~
 @4787 	= ~Sérum de Troll~
 @4788 	= ~Fait de sang de troll concentré filtré à travers de la peau perforée d’otyugh, ce mélange aigre accordera temporairement au buveur les capacités régénératrices d’un troll. Pendant 10 rounds après avoir bu cette potion, le buveur récupérera 5 points de vie à chaque round.
 
-PARAMÈTRES :
+PARAMÈTRES :
 
-Régénère 5 points de vie par round
-Poids : 0,45 kg (1 lb)~
+Régénère 5 points de vie par round pendant 10 rounds
+Poids : 0,45 kg (1 lb)~
 @54787 	= ~Sérum de Troll~
 @54788 	= ~Fait de sang de troll concentré filtré à travers de la peau perforée d’otyugh, ce mélange aigre accordera temporairement au buveur les capacités régénératrices d’un troll. Pendant 10 rounds après avoir bu cette potion, le buveur récupérera 10 points de vie à chaque round.
 
-PARAMÈTRES :
+PARAMÈTRES :
 
-Régénère 10 points de vie par round
-Poids : 0,45 kg (1 lb)~
+Régénère 10 points de vie par round pendant 10 rounds
+Poids : 0,45 kg (1 lb)~
 @4789 	= ~Bave de Zombi~
 @4790 	= ~Cette soupe grumeleuse est un mélange de cheveux d’elfe hachés et de la bave nauséabonde drainée du cadavre d’un zombi limoneux. Boire cette concoction malodorante conférera à l’utilisateur une résistance de 20/- aux dégâts d’acide pendant 10 rounds.
 
-PARAMÈTRES :
+PARAMÈTRES :
 
-Résistance : 20/- de résistance à l’acide
-Poids : 0,45 kg (1 lb)~
+20/- de résistance à l’acide pendant 10 rounds
+Poids : 0,45 kg (1 lb)~
 @54789 	= ~Bave de Zombi~
 @54790 	= ~Cette soupe grumeleuse est un mélange de cheveux d’elfe hachés et de la bave nauséabonde drainée du cadavre d’un zombi limoneux. Boire cette concoction malodorante conférera à l’utilisateur une résistance de 50/- aux dégâts d’acide pendant 10 rounds.
 
-PARAMÈTRES :
+PARAMÈTRES :
 
-Résistance : 50/- de résistance à l’acide
-Poids : 0,45 kg (1 lb)~
+50/- de résistance à l’acide pendant 10 rounds
+Poids : 0,45 kg (1 lb)~
 @4791 	= ~Fiole de Vipères~
 @4792 	= ~Un mélange expérimental curieux, cette fiole de boue verte tordra les entrailles du buveur et utilisera ses intestins pour incuber une couvée de vipères générées magiquement. Chaque round pendant six rounds, le buveur vomira une vipère adulte qu’il ou elle pourra contrôler télépathiquement.
 
-PARAMÈTRES :
+PARAMÈTRES :
 
 Flot de vipères pendant 6 rounds
-Poids : 0,45 kg (1 lb)~
+Poids : 0,45 kg (1 lb)~
 @54791 	= ~Fiole de Vipères~
 @54792 	= ~Un mélange expérimental curieux, cette fiole de boue verte tordra les entrailles du buveur et utilisera ses intestins pour incuber une couvée de vipères générées magiquement. Chaque round pendant 12 rounds, le buveur vomira une vipère adulte qu’il ou elle pourra contrôler télépathiquement.
 
-PARAMÈTRES :
+PARAMÈTRES :
 
 Flot de vipères pendant 12 rounds
-Poids : 0,45 kg (1 lb)~
+Poids : 0,45 kg (1 lb)~
 @4793 	= ~Préparer des potions~
 @4794 	= ~Commencer.~
 @4795 	= ~Quitter.~
 @4796 	= ~Vous ne pouvez pas préparer de potions lorsque des ennemis sont à proximité.~
+
