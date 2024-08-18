@@ -26,6 +26,7 @@ Le personnage sait se battre sans avoir besoin de voir ses adversaires.
 
 Avantage : chaque fois que vous manquez votre ennemi en raison de son camouflage lors d’un combat au corps à corps, vous pouvez relancer une fois votre jet d’attaque pour savoir si vous le touchez finalement. Un ennemi invisible ne bénéficie d’aucun bonus au jet d’attaque pour vous toucher en mêlée. Autrement dit, vous ne perdez pas votre bonus positif de Dextérité à la classe d’armure, et l’ennemi ne bénéficie pas du bonus habituel de +2. Cependant, les bonus de l’ennemi invisible s’appliquent toujours pour les attaques à distance.~
 
+
 //26266: “Ballade” into “Le Récit” + better tooltip + translation of Curran’s lastname
 @57004	=~Le Récit de Curran Cœurvaillant - immunité contre la terreur et le désespoir, et bonus d’attaque~
 
@@ -51,11 +52,11 @@ Avantage : si vous infligez suffisamment de dégâts avec une arme de mêlée pour t
 //40223: “Augmentation des dégâts” feat doesn’t exist. It’s “Attaque en puissance”.
 @57009	=~Utilisez le don Attaque en puissance sur les cibles aux armures légères pour les vaincre rapidement, mais n’oubliez pas de diminuer sa puissance ou de la désactiver face à des ennemis mieux protégés.~
 
-//40224: “Augmentation des dégâts” feat doesn’t exist. It’s “Attaque en puissance”.
-@57010	=~Les cibles impuissantes peuvent être touchées automatiquement. Utilisez le don Attaque en puissance ou Tir rapide pour leur infliger des dégâts plus importants.~
+//40224: “Augmentation des dégâts” feat doesn’t exist. It’s “Attaque en puissance”. + easier to understand 
+@57010	=~Les cibles impuissantes peuvent être touchées automatiquement. Utilisez donc les dons Attaque en puissance ou Tir rapide pour maximiser les dégâts que vous leur infligez.~
 
 //35794: “Augmentation des dégâts” feat doesn’t exist. It’s “Attaque en puissance”.
-@57011	=~Augmentation des dégâts~
+@57011	=~Attaque en puissance~
 
 //10344: “Sorts de prêtre en bonus” Mistake in the stats panel.
 @57012	=~Sorts bonus~
@@ -110,7 +111,7 @@ Ce sort protège contre tous les sorts causant la mort d’un seul coup, comme Dési
 
 Les moines du Corbeau Noir vivent toujours dans les montagnes, leurs rangs grossissant ou se vidant au fil des ans. J’ai observé leur plateau de loin, je les ai vus s’entraîner, éviter chaque flocon de neige qui tombait. Aujourd’hui, les moines semblent satisfaits, même si cela n’a pas toujours été le cas, de laisser leur monde secret et silencieux à l’écart de la politique et de la guerre.~
 
-//125: Wrong name
+//125: Wrong name. It was “Coulon” for some reason
 @57026	=~Forge de Conlan~
 
 //17817:
@@ -121,3 +122,4 @@ Les moines du Corbeau Noir vivent toujours dans les montagnes, leurs rangs gross
 
 //17937:
 @57029	=~Cette clé en fer appartenait à Conlan, forgeron de Kuldahar.~
+
