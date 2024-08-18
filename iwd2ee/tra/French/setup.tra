@@ -19,27 +19,27 @@
 @17 = ~Main Tranch‚e plus rapide~
 @18 = ~Plus de potions pour Oswald~
 @19 = ~Ajouter plus de parchemins au jeu~
-@20 = ~R‚sistances et immunit‚s des cr‚atures remani‚es~
+@20 = ~R‚sistances et immunit‚s des cr‚atures revues~
 @21 = ~Correction du son de la m‚tamorphose (… installer uniquement si votre druide ‚met des sons ‚tranges aprŠs la m‚tamorphose ; sinon, inutile)~
-@22 = ~Jets de sauvegarde plus pr‚cis pour les ennemis~
-@23 = ~Repenser l'immunit‚ aux coups critiques~
+@22 = ~Jets de sauvegarde plus justes pour les ennemis~
+@23 = ~Revoir l'immunit‚ aux coups critiques~
 @24 = ~Mode Mort subite~
 @25 = ~Meilleurs ennemis raciaux pour les r“deurs~
 @26 = ~Retouches cosm‚tiques~
 @27 = ~Option d'intimidation de Xuki~
 @28 = ~Option non violente concernant Isair et Madae~
-@29 = ~Raccourcir la s‚rie de quˆtes de la boucle temporelle de l'Oil du Dragon … une seule bataille~
+@29 = ~Raccourcir la s‚rie de quˆtes de la boucle temporelle de l'Oeil du Dragon … une seule bataille~
 @30 = ~Soudoyer Limha~
 @31 = ~Soudoyer Mirabel et Majrash~
-@32 = ~Diplomatie concernant Guthma~
+@32 = ~Diplomatie avec Guthma~
 @33 = ~Duper Harshom~
 @34 = ~Intimider Torak~
 @35 = ~Intimider le G‚anc‚phale~
 @36 = ~Duper Thorasskus~
 @37 = ~Duper Thvara~
-@38 = ~Composant principale des PNJ~
+@38 = ~Composant principale des compagnons~
 @39 = ~Am‚liorations cosm‚tiques de l'interface graphique et nouveaux ‚crans de chargement~
-@40 = ~Champ de Bataille remani‚~
+@40 = ~Champ de Bataille du Temple de Glace remani‚~
 @41 = ~R‚sistance aux d‚gƒts mineurs pour les armures et les boucliers~
 @42 = ~Correction du script ChangeAIScript~
 @43 = ~Remaniement des races~
@@ -58,23 +58,23 @@
 @56 = ~Les morts-vivants, les constructions, les objets, les ‚l‚mentaires et les vases deviennent immunis‚s aux coups critiques ; toutes les autres cr‚atures deviennent vuln‚rables aux coups critiques~
 @57 = ~Toutes les cr‚atures deviennent vuln‚rables aux coups critiques~
 @58 = ~Les PNJ gagnent de l'exp‚rience lorsqu'ils rejoignent le groupe pour correspondre … l'exp‚rience du groupe~
-@59 = ~Faire en sorte que le groupe commence le jeu avec une exp‚rience suppl‚mentaire en mode Cour de Furie~
+@59 = ~Faire en sorte que le groupe commence le jeu avec plus d'exp‚rience en mode Cour de Furie~
 @60 = ~Commencer avec un total de 36 000 points d'exp‚rience r‚partis entre les membres du groupe, assez pour qu'un groupe de six personnages commence au niveau 4 (recommand‚ si vous avez install‚ certains des composants qui affaiblissent les cr‚atures du mode Cour de Furie)~
 @61 = ~Commencer avec un total de 90 000 points d'exp‚rience r‚partis entre les membres du groupe, assez pour qu'un groupe de six personnages commence au niveau 6~
 @62 = ~Commencer avec un total de 270 000 points d'exp‚rience r‚partis entre les membres du groupe, assez pour qu'un groupe de six personnages commence au niveau 10~
 @63 = ~R‚duire le d‚lai aprŠs une attaque sournoise avant que la cr‚ature puisse … nouveau ˆtre victime d'une attaque sournoise~
-@64 = ~Remanier les ‚coles oppos‚es pour les magiciens sp‚cialistes~
+@64 = ~Revoir les ‚coles oppos‚es pour les magiciens sp‚cialistes~
 @65 = ~Le supprimer~
 @66 = ~Le r‚duire … 1 round~
 @67 = ~ThŠme principal en boucle~
 @68 = ~Les PNJ commencent avec l'exp‚rience moyenne du reste du groupe~
 @69 = ~Les PNJ commencent avec un cinquiŠme de l'exp‚rience totale du reste du groupe (ainsi, l'XP de d‚part des PNJ ne d‚pendra pas de la taille du groupe)~
-@70 = ~Augmenter le niveau maximum~
+@70 = ~Ajuster le niveau maximum~
 @71 = ~L'augmenter … 40~
 @72 = ~L'augmenter … 50~
 @73 = ~Permettre aux aasimars, tieffelins, drows, duergars et svirfnebelins de monter en niveau aussi vite que les autres races (pas d'ajustement de niveau) mais les affaiblir au niveau de puissance des autres races~
-@74 = ~Repenser l'ajustement de niveau des races~
-@75 = ~Toujours apprendre les sorts des parchemins avec succŠs~
+@74 = ~Revoir l'ajustement de niveau des races~
+@75 = ~Toujours apprendre avec succŠs les sorts provenant de parchemins~
 @76 = ~Chaque membre du groupe commence le mode Cour de Furie avec 28 000 points d'exp‚rience, assez pour atteindre le niveau 8~
 @77 = ~Chaque membre du groupe commence le mode Cour de Furie avec 78 000 points d'exp‚rience, assez pour atteindre le niveau 13 (recommand‚)~
 @78 = ~Chaque membre du groupe commence le mode Cour de Furie avec 28 000 points d'exp‚rience, assez pour atteindre le niveau 8 (recommand‚)~
@@ -89,17 +89,15 @@
 @87 = ~Lancer les d‚s pour les caract‚ristiques - Boutons Plus/Moins activ‚s (comme dans Baldur's Gate)~
 @88 = ~Ajout de nombreux objets … chaque zone du jeu ; cela pourrait prendre un certain temps...~
 @89 = ~Ajouter plus de piŠges~
-@90 = ~Ajouter des raccourcis clavier pour automatiser l'application des buffs (voir le fichier readme pour plus d'informations)~
+@90 = ~Ajouter des raccourcis clavier pour automatiser l'application de buffs (voir le fichier readme pour plus d'informations)~
 @91 = ~Plus d'options de persuasion~
-@92 = ~Ajouter des moyens suppl‚mentaires de progresser dans certaines zones~
+@92 = ~Ajouter des moyens de progresser dans certaines zones~
 @93 = ~Achat de points - Augmenter une valeur de caract‚ristique au-del… d'une certaine valeur n‚cessite des points suppl‚mentaires, et elle ne peut pas ˆtre inf‚rieure … 8 (comme dans Neverwinter Nights)~
-@98 = ~Vous devez d'abord installer le composant principal.~
-@99 = ~Le Widescreen Mod n'est pas compatible avec IWD2EE et fera planter le jeu s'il est install‚ avec IWD2EE. Veuillez le d‚sinstaller. IWD2EE vous permet d‚j… d'augmenter la r‚solution du jeu ; vous n'avez pas besoin du mod Widescreen Mod.~
+@98 = ~Vous devez d'abord installer le noyau d'IWD2EE.~
+@99 = ~Le Widescreen Mod n'est pas compatible avec IWD2EE et fera planter le jeu s'il est aussi install‚. Veuillez le d‚sinstaller. IWD2EE vous permet d‚j… d'augmenter la r‚solution du jeu ; vous n'avez pas besoin du Widescreen Mod.~
 @100 = ~IWD2EE n'a pas ‚t‚ d‚sinstall‚ correctement ; les fichiers de l'installation pr‚c‚dente sont toujours dans le dossier override.
-Installation d'IWD2EE … nouveau sans supprimer ces fichiers corromprerait divers fichiers.
+Installer IWD2EE une nouvelle fois sans supprimer ces fichiers pourrait corrompre divers fichiers.
 Pour installer IWD2EE, proc‚dez comme suit :
 1. D‚sinstallez tous vos autres mods.
 2. Ensuite, allez dans le dossier ® override ¯ et supprimez tout ce qu'il contient.
 3. R‚installez vos mods, y compris IWD2EE.~
-
-
