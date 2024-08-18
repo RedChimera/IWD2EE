@@ -15,10 +15,11 @@ Les changements majeurs décrits ci-dessus ne sont appliqués que si vous instal
 
 ## Langues :
 
-Anglais
-Italien
-Russe
-Français
+- Anglais
+- Italien
+- Russe
+- Français ([y contribuer](https://www.baldursgateworld.fr/viewtopic.php?t=34553&sid=b24abd0f58b4f7decfbad3c231d700e3))
+
 
 ## Composants :
 
@@ -37,32 +38,32 @@ Français
 13. [Raccourcir la série de quêtes de la boucle temporelle de l'Œil du Dragon à une seule bataille](#13-raccourcir-la-serie-de-quetes-de-la-boucle-temporelle-de-loeil-du-dragon-a-une-seule-bataille)
 14. [Ajouter plus de parchemins au jeu](#14-ajouter-plus-de-parchemins-au-jeu)
 15. [Résistances et immunités des créatures revues à la baisse](#15-resistances-et-immunites-des-creatures-revues-a-la-baisse)
-16. Jets de sauvegarde des ennemis ajustés à un niveau normal
-16. [Changer l’immunité aux coups critiques](#16-changer-limmunite-aux-coups-critiques)
-17. [Meilleurs ennemis raciaux pour les rôdeurs](#17-meilleurs-ennemis-raciaux-pour-les-rodeurs)
-18. [Débloque tous les choix de couleur pour chaque race](#18-debloque-tous-les-choix-de-couleur-pour-chaque-race)
-19. [Plus d’options de persuasion](#19-plus-doptions-de-persuasion)
-20. [Composant principal des compagnons](#20-composant-principal-des-compagnons)
-21. [Les compagnons commencent avec de l’expérience en rejoignant le groupe](#21-les-compagnons-commencent-avec-de-lexperience-en-rejoignant-le-groupe)
-22. [Améliorations cosmétiques de l’interface graphique et nouveaux écrans de chargement (incomplet)](#22-ameliorations-cosmetiques-de-linterface-graphique-et-nouveaux-ecrans-de-chargement-incomplet)
-23. [Thème principal en boucle](#23-theme-principal-en-boucle)
-24. [Champ de Bataille du Temple de Glace remanié](#24-champ-de-bataille-du-temple-de-glace-remanie)
-25. [Résistance mineure aux dégâts pour les armures et les boucliers](#25-resistance-mineure-aux-degats-pour-les-armures-et-les-boucliers)
-26. [Remaniement des races](#26-remaniement-des-races)
-27. [Les ennemis donnent la même quantité d’expérience quel que soit le niveau du groupe](#27-les-ennemis-donnent-la-meme-quantite-dexperience-quel-que-soit-le-niveau-du-groupe)
-28. [Ajuster le niveau des rencontres (difficulté++)](#28-ajuster-le-niveau-des-rencontres-difficulte)
-29. [Réduire les bonus aux PV des créatures en mode Cœur de Furie](#29-reduire-les-bonus-aux-pv-des-creatures-en-mode-coeur-de-furie)
-30. [Réduire les bonus à l’attaque des créatures en mode Cœur de Furie](#30-reduire-les-bonus-a-lattaque-des-creatures-en-mode-coeur-de-furie)
-31. [Réduire les bonus aux jets de sauvegarde des créatures en mode Cœur de Furie](#31-reduire-les-bonus-aux-jets-de-sauvegarde-des-creatures-en-mode-coeur-de-furie)
-32. [Supprimer les bonus aux valeurs de caractéristiques des créatures alliées invoquées en mode Cœur de Furie](#32-supprimer-les-bonus-de-valeurs-de-caracteristiques-des-creatures-alliees-invoquees-en-mode-coeur-de-furie)
-33. [Faire en sorte que le groupe commence le jeu avec plus d’expérience en mode Cœur de Furie](#33-faire-en-sorte-que-le-groupe-commence-le-jeu-avec-plus-dexperience-en-mode-coeur-de-furie)
-34. [Réduire le délai entre chaque attaque sournoise](#34-reduire-le-delai-entre-chaque-attaque-sournoise)
-35. [Ajuster le niveau maximum](#35-ajuster-le-niveau-maximum)
-36. [Toujours apprendre avec succès les sorts provenant de parchemins](#36-toujours-apprendre-avec-succes-les-sorts-provenant-de-parchemins)
-37. [Ajouter les attaques d’opportunité au jeu](#37-ajouter-les-attaques-dopportunite-au-jeu)
-38. [Changer la façon dont les valeurs de caractéristiques sont attribuées à la création du personnage](#38-changer-la-facon-dont-les-valeurs-de-caracteristiques-sont-attribuees-a-la-creation-du-personnage)
-39. [Ajouter plus de pièges](#39-ajouter-plus-de-pieges)
-40. [Ajouter des raccourcis clavier pour automatiser l’application de buffs](#40-ajouter-des-raccourcis-clavier-pour-automatiser-lapplication-de-buffs)
+16. [Jets de sauvegarde des ennemis ajustés à un niveau normal](#16-jets-de-sauvegarde-des-ennemis-ajustes-a-un-niveau-normal)
+17. [Changer l’immunité aux coups critiques](#17-changer-limmunite-aux-coups-critiques)
+18. [Meilleurs ennemis raciaux pour les rôdeurs](#18-meilleurs-ennemis-raciaux-pour-les-rodeurs)
+19. [Débloque tous les choix de couleur pour chaque race](#19-debloque-tous-les-choix-de-couleur-pour-chaque-race)
+20. [Plus d’options de persuasion](#20-plus-doptions-de-persuasion)
+21. [Composant principal des compagnons](#21-composant-principal-des-compagnons)
+22. [Les compagnons commencent avec de l’expérience en rejoignant le groupe](#22-les-compagnons-commencent-avec-de-lexperience-en-rejoignant-le-groupe)
+23. [Améliorations cosmétiques de l’interface graphique et nouveaux écrans de chargement (incomplet)](#23-ameliorations-cosmetiques-de-linterface-graphique-et-nouveaux-ecrans-de-chargement-incomplet)
+24. [Thème principal en boucle](#24-theme-principal-en-boucle)
+25. [Champ de Bataille du Temple de Glace remanié](#25-champ-de-bataille-du-temple-de-glace-remanie)
+26. [Résistance mineure aux dégâts pour les armures et les boucliers](#26-resistance-mineure-aux-degats-pour-les-armures-et-les-boucliers)
+27. [Remaniement des races](#27-remaniement-des-races)
+28. [Les ennemis donnent la même quantité d’expérience quel que soit le niveau du groupe](#28-les-ennemis-donnent-la-meme-quantite-dexperience-quel-que-soit-le-niveau-du-groupe)
+29. [Ajuster le niveau des rencontres (difficulté++)](#29-ajuster-le-niveau-des-rencontres-difficulte)
+30. [Réduire les bonus aux PV des créatures en mode Cœur de Furie](#30-reduire-les-bonus-aux-pv-des-creatures-en-mode-coeur-de-furie)
+31. [Réduire les bonus à l’attaque des créatures en mode Cœur de Furie](#31-reduire-les-bonus-a-lattaque-des-creatures-en-mode-coeur-de-furie)
+32. [Réduire les bonus aux jets de sauvegarde des créatures en mode Cœur de Furie](#32-reduire-les-bonus-aux-jets-de-sauvegarde-des-creatures-en-mode-coeur-de-furie)
+33. [Supprimer les bonus aux valeurs de caractéristiques des créatures alliées invoquées en mode Cœur de Furie](#33-supprimer-les-bonus-de-valeurs-de-caracteristiques-des-creatures-alliees-invoquees-en-mode-coeur-de-furie)
+34. [Faire en sorte que le groupe commence le jeu avec plus d’expérience en mode Cœur de Furie](#34-faire-en-sorte-que-le-groupe-commence-le-jeu-avec-plus-dexperience-en-mode-coeur-de-furie)
+35. [Réduire le délai entre chaque attaque sournoise](#35-reduire-le-delai-entre-chaque-attaque-sournoise)
+36. [Ajuster le niveau maximum](#36-ajuster-le-niveau-maximum)
+37. [Toujours apprendre avec succès les sorts provenant de parchemins](#37-toujours-apprendre-avec-succes-les-sorts-provenant-de-parchemins)
+38. [Tout le monde peut effectuer des attaques d'opportunité](#38-tout-le-monde-peut-effectuer-des-attaques-dopportunite)
+39. [Changer la façon dont les valeurs de caractéristiques sont attribuées à la création du personnage](#39-changer-la-facon-dont-les-valeurs-de-caracteristiques-sont-attribuees-a-la-creation-du-personnage)
+40. [Ajouter plus de pièges](#40-ajouter-plus-de-pieges)
+41. [Ajouter des raccourcis clavier pour automatiser l’application de buffs](#41-ajouter-des-raccourcis-clavier-pour-automatiser-lapplication-de-buffs)
 
 
 ### 1. Noyau d’IWD2EE
@@ -307,7 +308,7 @@ Ce composant ajuste tous les jets de sauvegarde des ennemis dans le jeu, les ren
 
 Le jeu de base accorde l'immunité aux coups critiques à des ennemis qui ne devraient pas l'avoir, y compris les fiélons et certains ennemis aléatoires. Ce composant a deux options : soit vous pouvez donner l'immunité aux coups critiques à tous les morts-vivants, constructions, objets, élémentaires et vases et la retirer à toutes les autres créatures, soit vous pouvez rendre toutes les créatures vulnérables aux coups critiques.
 
-### 18. Meilleurs ennemis raciaux pour les rôdeurs--
+### 18. Meilleurs ennemis raciaux pour les rôdeurs
 
 Dans le jeu de base, de nombreux choix d’ennemis raciaux n’étaient tout simplement pas très utiles. Obtenir des bonus contre les yuan-ti et les morts-vivants était tout simplement plus intéressant que d'obtenir des bonus contre les gobelours et les crochorreurs. Ce composant permet au joueur de choisir parmi un nouvel ensemble d’ennemis raciaux :
 
@@ -328,11 +329,11 @@ Yuan-ti
 Trolls
 Dragons
 
-### 19. Modifications cosmétiques--
+### 19. Débloque tous les choix de couleur pour chaque race
 
 Actuellement, ce composant permet à n'importe quelle race de choisir n'importe laquelle des couleurs disponibles lors de la création du personnage.
 
-### 20. Plus d'options de persuasion--
+### 20. Plus d’options de persuasion
 
 Ce composant ajoute plus d’opportunités dans le jeu d’utiliser les compétences Bluff, Diplomatie, Intimidation et autres dans le dialogue.
 
@@ -351,13 +352,13 @@ SPOILERS CI-DESSOUS
 * Dans la Main Tranchée, un nouveau personnage se trouve dans la salle du trône. Un membre du groupe avec une compétence de Bluff incroyablement élevée peut les convaincre de rappeler Isair et Madae à la Main Tranchée et de vous accorder une audience, déclenchant la bataille finale plus tôt que la normale.
 * Enfin, ce composant ajoute pas moins de cinq chemins de dialogues différents pour vous sortir du combat de boss final. Ils nécessitent généralement que le personnage qui parle soit très compétent dans plusieurs compétences de persuasion.
 
-### 21. Noyau des PNJ--
+### 21. Composant principal des compagnons
 
 Ce composant permet à plusieurs PNJ existants de rejoindre le groupe : le guerrier Reig, le roublard Geoffrey le Noir, la devineresse Veira, la prêtresse Emma Lamelune, le troll Vrek Griffe-Vile, le gobelin Vunarg, le roublard/illusionniste Zack Boosenburry, l’abishaï Xhaan, l’ensorceleuse Pairi, et le moine Sersa.
 
 Les PNJ ont des dialogues et des interjections, mais la valeur de production des PNJ d’IWD2EE est nettement inférieure à celle du précédent mod PNJ d’IWD2.
 
-### 22. Les PNJ commencent avec de l’expérience en rejoignant le groupe pour correspondre à l’expérience du groupe--
+### 22. Les compagnons commencent avec de l’expérience en rejoignant le groupe
 
 Les PNJ commencent avec l’expérience moyenne des autres membres du groupe. La seconde fait en sorte qu’ils commencent avec un cinquième de l’expérience totale du groupe.
 
@@ -365,27 +366,27 @@ Le but de la deuxième option est d’empêcher certaines exploitations liées a
 
 La première option est recommandée si vous ne prévoyez pas de faire d'exploitations d’expérience comme celle-ci.
 
-### 23. Nouvelle interface graphique--
+### 23. Améliorations cosmétiques de l’interface graphique et nouveaux écrans de chargement (incomplet)
 
 Ce composant ajoute actuellement un nouvel écran de menu principal et de nouveaux écrans de chapitre. Il n’y a pas de nouveaux boutons, mais l’interface graphique devrait être plus belle.
 
-### 24. Thème principal en boucle--
+### 24. Thème principal en boucle
 
 Normalement, le thème principal d’IWD2 ne se répète pas. Après 1 minute, il se termine et vous passez le reste de la création du personnage sans musique. Ce composant modifie le thème principal pour qu’il se répète.
 
-### 25. Place du combat révisée--
+### 25. Champ de Bataille du Temple de Glace remanié
 
-Pour obtenir toutes les récompenses de la Place du combat, il faut normalement mener 25 batailles par rang, soit un total de 250 batailles. Même si les membres du groupe sont suffisamment puissants pour gagner toutes les batailles, cela reste très fastidieux.
+Pour obtenir toutes les récompenses du Champ de Bataille, il faut normalement mener 25 batailles par niveau, soit un total de 250 batailles. Même si les membres du groupe sont suffisamment puissants pour gagner toutes les batailles, cela reste très fastidieux.
 
-Ce composant fait en sorte qu’il suffit de terminer un rang une seule fois (avec 3 cases ou plus) pour obtenir la récompense principale de ce rang. Pour obtenir toutes les récompenses, 30 batailles suffiront au lieu de 250.
+Ce composant fait en sorte qu’il suffit de terminer un niveau une seule fois (avec 3 cases ou plus) pour obtenir la récompense principale de ce niveau. Pour obtenir toutes les récompenses, 30 batailles suffiront au lieu de 250.
 
-De plus, ce composant vous permet de retourner à la Place du combat et de la terminer dans le Chapitre 5, lorsque vous revenez au Temple de Glace pour demander la faveur de Nickademus.
+De plus, ce composant vous permet de retourner à la Champ de Bataille et de la terminer dans le Chapitre 5, lorsque vous revenez au Temple de Glace pour demander la faveur de Nickademus.
 
-### 26. Résistance aux dégâts mineure pour les armures et les boucliers--
+### 26. Résistance mineure aux dégâts pour les armures et les boucliers
 
 Inspiré par le composant similaire de Weimer de IWD2-Ease, ce composant modifie toutes les armures et tous les boucliers du jeu afin qu’ils confèrent une résistance aux dégâts physiques égale à la moitié de leur bonus de classe d’armure, arrondi à l’inférieur.
 
-### 27. Remaniement des races--
+### 27. Remaniement des races
 
 Révisions des races modifie diverses races et sous-races, leur conférant les capacités qu’elles sont censées avoir dans le jeu de rôle papier :
 * Les humains obtiennent 4 points de compétence supplémentaires au niveau 1 au lieu de 2.
@@ -403,63 +404,63 @@ Révisions des races confère également quelques nouvelles capacités à certai
 * Les halfelins pieds-légers peuvent ajouter la moitié de leur modificateur de Dextérité plutôt que leur modificateur de Force aux dégâts d’une fronde ou d’une arme de jet (si le premier est plus élevé).
 * Les halfelins vifs-esprits gagnent 1,5 fois leur bonus de Force aux dégâts avec les frondes et les armes de jet, comme avec les armes à deux mains. De plus, leur pénalité de caractéristique est appliquée à l'Intelligence plutôt qu'à la Force.
 
-### 28. Les ennemis donnent la même quantité d'expérience quel que soit le niveau du groupe--
+### 28. Les ennemis donnent la même quantité d’expérience quel que soit le niveau du groupe
 
 Ce composant fait que tuer des ennemis donne la même quantité d’expérience quel que soit le niveau du groupe. De cette façon, la montée de niveau ne s'accompagne pas de la frustration que les ennemis donnent moins d'expérience, et il n'y a aucune raison de retarder la montée de niveau pour augmenter le gain d'expérience. Il y a deux options : soit vous pouvez faire en sorte que les ennemis donnent une expérience égale à 25 * leur FP (un groupe de six personnages atteindra environ le niveau 15 à la fin du jeu), soit vous pouvez faire en sorte qu'elle soit égale à 35 * leur FP (un groupe de six personnages atteindra environ le niveau 18 à la fin du jeu).
 
-### 29. Ajuster la mise à l’échelle du niveau des rencontres--
+### 29. Ajuster le niveau des rencontres (difficulté++)
 
 Les rencontres d'Icewind Dale 2 ont souvent des ennemis supplémentaires pour un groupe de niveau supérieur. Ce composant a deux options : vous pouvez faire en sorte de toujours combattre au moins la version de la rencontre destinée à un groupe de niveau moyen, ou vous pouvez faire en sorte de toujours combattre la version destinée à un groupe de haut niveau. Les versions de niveau supérieur des rencontres ont généralement juste quelques ennemis de plus ou, dans certains cas, des versions plus coriaces des ennemis ; elles ne sont pas impossibles à terminer pour un groupe de niveau inférieur.
 
 Notez que ce composant ne fait presque rien dans une partie Cœur de Furie ou une partie en solo, car dans ces modes, vos personnages sont généralement d'un niveau suffisamment élevé pour déclencher de toute façon les rencontres de haut niveau.
 
-### 30. Réduire les bonus de PV des créatures en mode Cœur de Furie--
+### 30. Réduire les bonus aux PV des créatures en mode Cœur de Furie
 
 Les ennemis en mode Cœur de Furie ont normalement des PV absolument ridicules : les gobelins du prologue ont 157 PV, et les araignées de givre du Chapitre 2 ont 452 PV ! Ce composant réduit les PV des créatures en mode Cœur de Furie. Ce composant est conçu pour un groupe commençant le mode Cœur de Furie à un niveau bas. Il est équilibré de manière à ce que les ennemis en début de partie aient beaucoup moins de PV que dans le mode Cœur de Furie d'origine, mais les ennemis plus tard dans le jeu n’auront pas beaucoup moins de PV. Cela rendra le mode Cœur de Furie plus facile, mais aussi beaucoup moins fastidieux (et Révisions des créatures rend le mode Cœur de Furie plus difficile pour compenser).
 
-### 31. Réduire les bonus d’attaque des ennemis en mode Cœur de Furie--
+### 31. Réduire les bonus à l’attaque des créatures en mode Cœur de Furie
 
 Les ennemis en mode Cœur de Furie ont des bonus d'attaque si élevés qu'il leur est presque impossible de rater sauf sur un 1. Ce composant donne aux créatures en dehors du groupe un malus d'attaque de -9 en mode Cœur de Furie. Ils auront toujours des bonus d'attaque plus élevés que dans le mode de difficulté suivant, mais ce ne sera pas aussi extrême.
 
-### 32. Réduire les bonus de jets de sauvegarde des créatures en mode Cœur de Furie--
+### 32. Réduire les bonus aux jets de sauvegarde des créatures en mode Cœur de Furie
 
 Au début du mode Cœur de Furie, il peut être très difficile de faire échouer les jets de sauvegarde des ennemis si vous commencez avec un groupe de bas niveau. Ce composant donne un petit malus de jets de sauvegarde aux créatures en dehors du groupe en mode Cœur de Furie.
 
-### 33. Supprimer les bonus de caractéristiques des créatures alliées invoquées en mode Cœur de Furie--
+### 33. Supprimer les bonus aux valeurs de caractéristiques des créatures alliées invoquées en mode Cœur de Furie
 
 En mode Cœur de Furie, les créatures alliées invoquées obtiennent également des bonus du mode Cœur de Furie, et comme vous atteignez un niveau élevé plus rapidement, les créatures invoquées peuvent être assez surpuissantes. Ce composant fait en sorte que les créatures invoquées ne gagnent pas les +10 habituels à toutes les caractéristiques que les créatures obtiennent en mode Cœur de Furie (à l'exception de +10 en Constitution, ce qui devrait au moins en faire des sacs à PV décents), à moins qu'elles ne soient invoquées par un ennemi.
 
-### 34. Faire en sorte que le groupe commence avec plus d’expérience en mode Cœur de Furie--
+### 34. Faire en sorte que le groupe commence le jeu avec plus d’expérience en mode Cœur de Furie
 
 Le début du mode Cœur de Furie est absolument brutal si vous commencez au niveau 1 - même avec certains de ces composants installés qui affaiblissent les créatures en mode Cœur de Furie. Ce composant donne à chaque membre du groupe un peu d’expérience au début du jeu. L'expérience avec laquelle chaque personnage commence est la même quelle que soit la taille du groupe. Vous avez le choix de la quantité d’expérience avec laquelle commencer.
 
-### 35. Réduire le délai après une attaque sournoise avant que la créature ne puisse être attaquée à nouveau--
+### 35. Réduire le délai entre chaque attaque sournoise
 
 Normalement, une fois qu’un roublard attaque une créature avec une attaque sournoise, cette créature devient immunisée contre les attaques sournoises pendant environ 3 rounds. Ce composant peut soit supprimer cette immunité, permettant à la créature d’être à nouveau attaquée furtivement immédiatement, soit réduire sa durée à 1 round.
 
-### 36. Augmenter le niveau maximum--
+### 36. Ajuster le niveau maximum
 
 Ce composant augmente le niveau maximum à 40 ou à 50 (au choix). Vous n’atteindrez un niveau aussi élevé que si vous jouez en solo ou en mode Cœur de Furie avec un petit groupe.
 
-### 36. Toujours apprendre les sorts des parchemins avec succès--
+### 37. Toujours apprendre avec succès les sorts provenant de parchemins
 
 Ce composant permet à tous les magiciens d’apprendre avec succès les sorts des parchemins 100 % du temps.
 
-### 37. Tout le monde peut effectuer des attaques d’opportunité--
+### 38. Tout le monde peut effectuer des attaques d'opportunité
 
 Ce composant permet aux personnages de faire des attaques d’opportunité au corps à corps dans certaines conditions : si l’ennemi sort de votre portée de mêlée, s’il effectue une attaque à distance ou s’il lance un sort.
 
-### 38. Changer la façon dont les valeurs de caractéristiques sont attribuées à la création du personnage--
+### 39. Changer la façon dont les valeurs de caractéristiques sont attribuées à la création du personnage
 
 Ce composant a trois options. Deux d’entre elles vous permettent de lancer des dés pour les caractéristiques au lieu d’utiliser le système de points normal d’IWD2. La première ne vous permet pas d’augmenter ou de diminuer les caractéristiques avec les boutons plus/moins, mais vous pouvez choisir la caractéristique à laquelle chaque nombre tiré aux dés est affecté (comme dans The Temple of Elemental Evil). Le deuxième sous-composant vous permet d’utiliser les boutons plus/moins.
 
 Le troisième sous-composant vous permet d’utiliser le système de points de Neverwinter Nights, où l’augmentation d’une caractéristique au-delà d’une certaine valeur nécessite de dépenser des points supplémentaires, et le minimum pour une caractéristique est de 8.
 
-### 39. Ajouter plus de pièges--
+### 40. Ajouter des pièges
 
-Ce composant ajoute plus de pièges au jeu et rend certains pièges existants un peu plus dangereux. Ne vous inquiétez pas ; cela ne devrait pas transformer IWD2 en Tour de Durlag. Le but est d’ajouter des rebondissements aux rencontres existantes et de rendre les compétences de désamorçage de pièges plus utiles.
+Ce composant ajoute des pièges au jeu et rend certains pièges existants un peu plus dangereux. Ne vous inquiétez pas ; cela ne devrait pas transformer IWD2 en Tour de Durlag. Le but est d’ajouter des rebondissements aux rencontres existantes et de rendre la compétence de désamorçage de pièges plus utiles.
 
-### 40. Ajouter des raccourcis clavier pour automatiser les buffs--
+### 41. Ajouter des raccourcis clavier pour automatiser l’application de buffs
 
 Ce composant ajoute un système très juste d’automatisation des buffs.
 
@@ -471,41 +472,41 @@ Appuyer sur la touche " ] " effacera l’enregistrement jusqu’à ce que vous e
 
 Ce système ne triche en aucune façon ; les sorts ne sont pas lancés instantanément et vous ne pouvez pas lancer plus d’un sort par round à moins d’avoir Promptitude améliorée. Cependant, cela devrait tout de même accélérer quelque peu les buffs et les rendre moins pénibles pour le joueur. Une fois les sorts enregistrés, vous n’avez qu’à appuyer sur ";" sans avoir à faire défiler les listes de sorts.
 
-Notes de compatibilité :
+Notes de compatibilité
 
---Mod Grand écran--
+Mod Grand écran
 
 Le Mod Grand écran N’EST PAS COMPATIBLE et FERA PLANTER LE JEU s’il est utilisé avec IWD2EE. IWD2EE inclut un moyen intégré pour définir la résolution du jeu, vous n’avez donc pas besoin du Mod Grand écran.
 
---Tweaks Anthology--
+Tweaks Anthology
 
 Tweaks Anthology a des composants compatibles avec IWD2EE (si un composant ne fonctionne pas dans IWD2, il n’y aura pas d’option pour l’installer).
 
---1 Pixel Productions--
+1 Pixel Productions
 
 1 Pixel Productions semble provoquer des plantages fréquents lorsqu’il est installé avec IWD2EE. IWD2EE inclut déjà la plupart des nouvelles animations d’armes de 1PP (ajouter celles-ci ne nécessite pas de patcher l’exe, ce qui est donc moins risqué).
 
---IWD2 PNJ--
+IWD2 PNJ
 
 Le mod IWD2 PNJ est compatible avec IWD2EE.
 
---Light of Selune--
+Light of Selune
 
 Light of Selune est compatible avec IWD2EE, mais il modifie bon nombre des mêmes objets que IWD2EE.
 
---Tactics4IWD2--
+Tactics4IWD2
 
 Non recommandé, car les Révisions des Créatures d’IWD2EE donnent déjà des améliorations significatives aux ennemis et à l’IA des lanceurs de sorts. Ce mod a de nombreux objets, sorts et créatures révisés qui remplaceront les changements d’IWD2EE.
 
---Undead Targos--
+Undead Targos
 
 Inutile car IWD2EE inclut déjà un moyen de raccourcir la série de quêtes de Targos tout en rendant la bataille de la Palissade plus difficile.
 
---Marchand supplémentaire pour IWD2--
+Marchand supplémentaire pour IWD2
 
 Le mod Marchand supplémentaire est compatible avec IWD2EE. Il convient toutefois de noter que le mod contient des anachronismes ; il fait référence aux événements de Baldur’s Gate 2 même si Icewind Dale 2 commence plus de 50 ans avant Baldur’s Gate 1.
 
---IWD2-Ease--
+IWD2-Ease
 
 Voici une liste des composants d’IWD2-Ease qui indique quels composants sont compatibles avec IWD2EE et lesquels ne le sont pas.
 
@@ -577,8 +578,6 @@ Inutile car IWD2EE inclut déjà un composant qui réduit considérablement le t
 
 Trésor aléatoire :
 Compatible, mais non recommandé, car il pourrait vous donner une arme surpuissante dès le début du jeu.
-
-
 
 
 Crédits
